@@ -1,0 +1,1300 @@
+/* ── Skill Tree (Wiskundevaardigheden) ─────────────────────────
+ *  Dark-theme styles extracted from economie-skill-tree.jsx.
+ *  CSS custom properties (--st-*) allow per-layer theming.
+ * ──────────────────────────────────────────────────────────── */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono&display=swap');
+
+/* ── Reset ──────────────────────────────────────────────────── */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ── Base ───────────────────────────────────────────────────── */
+body {
+    background: #0f1729;
+    font-family: 'DM Sans', system-ui, sans-serif;
+    color: #f8fafc;
+    -webkit-text-size-adjust: 100%;
+}
+
+/* ── Animations ─────────────────────────────────────────────── */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25%      { transform: translateX(-6px); }
+    75%      { transform: translateX(6px); }
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@keyframes starPop {
+    0%   { transform: scale(0) rotate(-20deg); opacity: 0; }
+    60%  { transform: scale(1.3) rotate(5deg); opacity: 1; }
+    100% { transform: scale(1) rotate(0deg); opacity: 1; }
+}
+@keyframes nodeGlow {
+    0%, 100% { box-shadow: 0 0 8px var(--st-glow); }
+    50%      { box-shadow: 0 0 18px var(--st-glow); }
+}
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50%      { opacity: 0.6; }
+}
+
+/* ── Tree view: Legend ──────────────────────────────────────── */
+.st-legend {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    display: flex;
+    gap: 12px;
+    font-size: 0.65rem;
+    color: #94a3b8;
+    z-index: 10;
+}
+.st-legend span {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+.st-view-toggle {
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 6px;
+    color: #94a3b8;
+    font-size: 0.65rem;
+    padding: 3px 8px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background 0.2s;
+}
+.st-view-toggle:hover {
+    background: #334155;
+    color: #e2e8f0;
+}
+
+/* ── Tree view: Header ──────────────────────────────────────── */
+.st-header {
+    padding: 24px 16px 8px;
+    text-align: center;
+}
+.st-header h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #f8fafc;
+    letter-spacing: -0.02em;
+    margin: 0;
+}
+.st-header .st-subtitle {
+    color: #64748b;
+    font-size: 0.8rem;
+    margin-top: 4px;
+}
+.st-header .st-progress-summary {
+    margin-top: 10px;
+    font-size: 0.75rem;
+    color: #94a3b8;
+}
+
+/* ── Tree view: Layers ──────────────────────────────────────── */
+.st-layers {
+    padding: 12px 12px 80px;
+}
+.st-layer {
+    margin-bottom: 16px;
+}
+.st-layer-title {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    margin-bottom: 8px;
+    padding-left: 4px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.st-layer-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+/* ── Skill cards ────────────────────────────────────────────── */
+.st-skill-card {
+    padding: 10px 14px;
+    border-radius: 12px;
+    font-size: 0.78rem;
+    font-weight: 500;
+    cursor: pointer;
+    text-align: left;
+    max-width: 180px;
+    line-height: 1.3;
+    transition: all 0.2s ease;
+    position: relative;
+    font-family: inherit;
+    border: none;
+    outline: none;
+}
+.st-skill-card:disabled {
+    cursor: default;
+}
+.st-skill-card.st-locked {
+    opacity: 0.7;
+}
+.st-skill-card.st-mastered-5 {
+    border: 2px solid #fbbf24 !important;
+}
+.st-skill-card.st-new-skill {
+    animation: nodeGlow 2.5s ease-in-out infinite;
+}
+.st-skill-card .st-skill-id {
+    font-size: 0.6rem;
+    font-weight: 700;
+    opacity: 0.5;
+    margin-bottom: 2px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.st-skill-card .st-prereq-hint {
+    font-size: 0.55rem;
+    opacity: 0.7;
+    margin-bottom: 1px;
+}
+.st-skill-card .st-stars {
+    margin-top: 4px;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+}
+.st-skill-card .st-stars .st-star-on {
+    color: #fbbf24;
+}
+.st-skill-card .st-stars .st-star-off {
+    color: #334155;
+}
+.st-skill-card .st-tap-hint {
+    margin-top: 4px;
+    font-size: 0.65rem;
+    opacity: 0.6;
+}
+
+/* ── Exercise view ──────────────────────────────────────────── */
+.st-exercise {
+    min-height: 100vh;
+    background: #0f1729;
+    padding: 16px;
+}
+
+/* Exercise header */
+.st-ex-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+.st-back-btn {
+    background: none;
+    border: none;
+    color: #94a3b8;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 4px;
+}
+.st-ex-header .st-ex-skill-id {
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+.st-ex-header .st-ex-skill-name {
+    font-size: 0.95rem;
+    color: #f8fafc;
+    font-weight: 600;
+}
+.st-ex-header .st-step-counter {
+    font-size: 0.75rem;
+    color: #64748b;
+}
+
+/* Progress bar */
+.st-progress-bar {
+    height: 4px;
+    background: #1e293b;
+    border-radius: 2px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+.st-progress-fill {
+    height: 100%;
+    border-radius: 2px;
+    transition: width 0.4s ease;
+}
+
+/* Context box */
+.st-context {
+    background: #111827;
+    border: 1px solid #1e293b;
+    border-radius: 12px;
+    padding: 14px 16px;
+    margin-bottom: 16px;
+    font-size: 0.85rem;
+    color: #cbd5e1;
+    line-height: 1.5;
+    white-space: pre-line;
+}
+
+/* Completed steps */
+.st-completed-step {
+    background: #0d1f0d;
+    border: 1px solid #166534;
+    border-radius: 10px;
+    padding: 10px 14px;
+    margin-bottom: 8px;
+    font-size: 0.8rem;
+}
+.st-completed-step .st-cs-label {
+    color: #6ee7b7;
+    font-weight: 500;
+    margin-bottom: 2px;
+}
+.st-completed-step .st-cs-answer {
+    color: #86efac;
+}
+
+/* Current step card */
+.st-step-card {
+    background: #1e293b;
+    border-radius: 12px;
+    padding: 16px;
+    border: 1px solid #334155;
+    transition: border-color 0.3s ease;
+}
+.st-step-card.st-correct {
+    border: 2px solid #22c55e;
+}
+.st-step-card.st-wrong {
+    border: 2px solid #ef4444;
+    animation: shake 0.4s ease;
+}
+.st-step-card .st-question {
+    color: #e2e8f0;
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+    line-height: 1.4;
+    font-weight: 500;
+}
+
+/* Input row */
+.st-input-row {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 10px;
+}
+.st-minus-btn {
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #475569;
+    background: #1e293b;
+    color: #94a3b8;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: 'DM Mono', monospace;
+}
+.st-minus-btn:disabled {
+    opacity: 0.4;
+}
+.st-answer-input {
+    flex: 1;
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 1px solid #475569;
+    background: #0f172a;
+    color: #f8fafc;
+    font-size: 1rem;
+    outline: none;
+    font-family: 'DM Mono', monospace;
+}
+.st-check-btn, .st-finish-btn {
+    padding: 10px 18px;
+    border-radius: 8px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.st-check-btn:disabled {
+    opacity: 0.6;
+    cursor: default;
+}
+.st-finish-btn {
+    background: #166534;
+    color: #dcfce7;
+}
+
+/* Feedback */
+.st-wrong-msg {
+    color: #f87171;
+    font-size: 0.8rem;
+    margin-bottom: 8px;
+}
+
+/* Help row (hint + uitleg buttons) */
+.st-help-row {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+/* Hint */
+.st-hint-btn {
+    background: none;
+    border: 1px solid #854d0e;
+    border-radius: 8px;
+    color: #fbbf24;
+    padding: 6px 12px;
+    font-size: 0.78rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* Uitleg button */
+.st-uitleg-btn {
+    background: none;
+    border: 1px solid #1e6434;
+    border-radius: 8px;
+    color: #86efac;
+    padding: 6px 12px;
+    font-size: 0.78rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-family: inherit;
+}
+.st-hint-box {
+    background: #1a1500;
+    border: 1px solid #854d0e;
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-size: 0.8rem;
+    color: #fde68a;
+    margin-top: 4px;
+}
+
+/* Explanation */
+.st-expl-box {
+    background: #052e16;
+    border: 1px solid #166534;
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-size: 0.82rem;
+    color: #bbf7d0;
+    margin-top: 10px;
+}
+
+/* Score tracker */
+.st-score-tracker {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 16px;
+    font-size: 0.75rem;
+    color: #64748b;
+}
+.st-score-perfect {
+    color: #fbbf24;
+}
+.st-streak {
+    color: #f97316;
+    font-weight: 600;
+    animation: fadeIn 0.3s ease;
+}
+
+/* ── Result card (inline, replaces star overlay) ────────────── */
+.st-result-card {
+    background: #111827;
+    border: 1px solid #1e293b;
+    border-radius: 16px;
+    padding: 32px 24px;
+    margin: 40px auto;
+    max-width: 400px;
+    text-align: center;
+    animation: fadeIn 0.5s ease;
+}
+.st-result-stars {
+    font-size: 2.5rem;
+    margin-bottom: 12px;
+    letter-spacing: 4px;
+}
+.st-result-stars .st-star-on {
+    display: inline-block;
+}
+.st-result-message {
+    color: #f8fafc;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+.st-result-details {
+    color: #64748b;
+    font-size: 0.8rem;
+    margin-bottom: 4px;
+}
+.st-result-progress {
+    color: #fbbf24;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.st-result-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.st-btn-back, .st-btn-retry {
+    padding: 10px 18px;
+    border-radius: 10px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-family: inherit;
+    border: none;
+}
+.st-btn-back {
+    background: #1e293b;
+    color: #94a3b8;
+    border: 1px solid #334155;
+}
+.st-btn-retry {
+    background: #166534;
+    color: #dcfce7;
+}
+
+/* ── Reset button ───────────────────────────────────────────── */
+.st-reset-btn {
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 10px;
+    padding: 8px 12px;
+    color: #64748b;
+    cursor: pointer;
+    font-size: 0.7rem;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-family: inherit;
+}
+
+/* ── Inline SVG icons (replace lucide-react) ────────────────── */
+.st-icon {
+    display: inline-flex;
+    vertical-align: middle;
+}
+.st-icon svg {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* ── Dependency tree overlay ───────────────────────────────────── */
+@keyframes slideUp {
+    from { transform: translateY(100%); }
+    to   { transform: translateY(0); }
+}
+
+.st-dep-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    animation: fadeIn 0.2s ease;
+}
+.st-dep-container {
+    background: #0f1729;
+    border-top: 1px solid #1e293b;
+    border-radius: 16px 16px 0 0;
+    max-height: 75vh;
+    overflow-y: auto;
+    padding: 14px;
+    animation: slideUp 0.3s ease;
+    -webkit-overflow-scrolling: touch;
+}
+.st-dep-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #1e293b;
+}
+.st-dep-header h2 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #f8fafc;
+    flex: 1;
+    margin: 0;
+}
+.st-dep-close {
+    background: none;
+    border: none;
+    color: #94a3b8;
+    cursor: pointer;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    font-family: inherit;
+}
+.st-skill-icons {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+.st-info-btn,
+.st-dep-btn {
+    color: #e2e8f0;
+    opacity: 0.8;
+    cursor: pointer;
+    padding: 2px 3px;
+    border-radius: 4px;
+    transition: opacity 0.2s;
+    flex-shrink: 0;
+    line-height: 1;
+    display: inline-flex;
+    align-items: center;
+}
+.st-info-btn:hover,
+.st-info-btn:active,
+.st-dep-btn:hover,
+.st-dep-btn:active {
+    opacity: 1;
+}
+.st-dep-graph {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-height: 50vh;
+}
+.st-dep-node {
+    cursor: pointer;
+}
+.st-dep-node:hover rect {
+    filter: brightness(1.3);
+}
+.st-dep-node-disabled {
+    cursor: default;
+    opacity: 0.5;
+}
+.st-dep-node-disabled:hover rect {
+    filter: none;
+}
+.st-dep-tree-btn {
+    cursor: pointer;
+}
+.st-dep-tree-btn:hover {
+    opacity: 1 !important;
+}
+.st-dep-edge {
+    fill: none;
+    stroke-width: 1.5;
+}
+.st-dep-legend {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    font-size: 0.65rem;
+    color: #64748b;
+    margin-top: 8px;
+    padding-bottom: 4px;
+}
+.st-dep-info-btn {
+    cursor: pointer;
+}
+.st-dep-info-btn:hover {
+    opacity: 1 !important;
+}
+
+/* ── Info popup overlay ────────────────────────────────────── */
+.st-info-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    animation: fadeIn 0.15s ease;
+}
+.st-info-container {
+    background: #111827;
+    border: 1px solid #1e293b;
+    border-radius: 14px;
+    padding: 18px;
+    max-width: 340px;
+    width: 100%;
+    animation: fadeIn 0.2s ease;
+}
+.st-info-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+.st-info-skill-id {
+    font-size: 0.65rem;
+    font-weight: 700;
+    opacity: 0.5;
+    text-transform: uppercase;
+}
+.st-info-close {
+    margin-left: auto;
+    background: none;
+    border: none;
+    color: #64748b;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 2px 6px;
+    font-family: inherit;
+}
+.st-info-desc {
+    color: #cbd5e1;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    margin-bottom: 14px;
+}
+.st-info-preview {
+    background: #0f172a;
+    border: 1px solid #1e293b;
+    border-radius: 10px;
+    padding: 12px;
+    margin-bottom: 10px;
+}
+.st-info-preview-label {
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #64748b;
+    margin-bottom: 6px;
+    letter-spacing: 0.05em;
+}
+.st-info-preview-context {
+    font-size: 0.78rem;
+    color: #94a3b8;
+    line-height: 1.4;
+    margin-bottom: 6px;
+    white-space: pre-line;
+}
+.st-info-preview-q {
+    font-size: 0.82rem;
+    color: #e2e8f0;
+    font-weight: 500;
+}
+.st-info-stars {
+    text-align: center;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    margin-top: 4px;
+}
+
+/* ── Explanation overlay ───────────────────────────────────── */
+.st-expl-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 150;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    animation: fadeIn 0.2s ease;
+}
+.st-expl-container {
+    position: relative;
+    background: #0f1729;
+    border-top: 1px solid #1e293b;
+    border-radius: 16px 16px 0 0;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 16px;
+    animation: slideUp 0.3s ease;
+    -webkit-overflow-scrolling: touch;
+}
+.st-expl-fade {
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+    background: linear-gradient(to bottom, transparent, #0f1729);
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+    margin-top: -40px;
+}
+.st-expl-container.st-scrolled-bottom .st-expl-fade {
+    opacity: 0;
+}
+.st-expl-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #1e293b;
+}
+.st-expl-header h2 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #f8fafc;
+    flex: 1;
+    margin: 0;
+}
+.st-expl-back {
+    background: none;
+    border: none;
+    color: #94a3b8;
+    cursor: pointer;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    font-family: inherit;
+}
+.st-expl-section {
+    margin-bottom: 14px;
+    border-radius: 10px;
+    padding: 12px 14px;
+}
+.st-expl-section-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 6px;
+}
+.st-expl-text {
+    font-size: 0.82rem;
+    line-height: 1.55;
+    color: #cbd5e1;
+}
+
+/* Section types */
+.st-expl-uitleg {
+    background: #111827;
+    border: 1px solid #1e293b;
+}
+.st-expl-uitleg .st-expl-section-label {
+    color: #7cb9e8;
+}
+.st-expl-formule {
+    background: #0f172a;
+    border-left: 3px solid #7cb9e8;
+}
+.st-expl-formule .st-expl-section-label {
+    color: #7cb9e8;
+}
+.st-expl-formula-box {
+    font-family: 'DM Mono', Consolas, monospace;
+    font-size: 0.85rem;
+    color: #e2e8f0;
+    line-height: 1.6;
+    white-space: pre-line;
+}
+.st-expl-voorbeeld {
+    background: #0d1a2d;
+    border: 1px solid #1e3a5f;
+}
+.st-expl-voorbeeld .st-expl-section-label {
+    color: #60a5fa;
+}
+.st-expl-tip {
+    background: #1a1500;
+    border: 1px solid #854d0e;
+}
+.st-expl-tip .st-expl-section-label {
+    color: #fbbf24;
+}
+.st-expl-valkuil {
+    background: #1a0f0f;
+    border: 1px solid #7f1d1d;
+}
+.st-expl-valkuil .st-expl-section-label {
+    color: #f87171;
+}
+.st-expl-check {
+    background: #052e16;
+    border: 1px solid #166534;
+}
+.st-expl-check .st-expl-section-label {
+    color: #86efac;
+}
+
+/* ── Near-miss encouragement ──────────────────────────────── */
+.st-near-miss {
+    color: #fbbf24;
+    font-size: 0.82rem;
+    font-weight: 500;
+    margin-bottom: 16px;
+    padding: 8px 14px;
+    background: rgba(251, 191, 36, 0.08);
+    border: 1px solid rgba(251, 191, 36, 0.2);
+    border-radius: 8px;
+    animation: fadeIn 0.5s ease;
+}
+
+/* ── Next skill button ────────────────────────────────────── */
+.st-btn-next {
+    padding: 10px 18px;
+    border-radius: 10px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-family: inherit;
+    border: none;
+    background: #1e40af;
+    color: #dbeafe;
+}
+
+/* ── Mastery card (5/5 stars) ─────────────────────────────── */
+.st-mastery-card {
+    border: 2px solid #fbbf24 !important;
+    position: relative;
+    overflow: hidden;
+}
+
+/* ── Confetti animation ───────────────────────────────────── */
+@keyframes confettiFall {
+    0% {
+        transform: translateY(-20px) translateX(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(350px) translateX(var(--drift, 30px)) rotate(720deg);
+        opacity: 0;
+    }
+}
+.st-confetti-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 1;
+}
+.st-confetti-piece {
+    position: absolute;
+    top: -8px;
+    width: 6px;
+    height: 10px;
+    border-radius: 2px;
+    animation: confettiFall 2s ease-out forwards;
+}
+
+/* ── Goal banner ──────────────────────────────────────────── */
+.st-goal-banner {
+    padding: 0 12px 12px;
+}
+.st-goal-prompt {
+    color: #64748b;
+    font-size: 0.75rem;
+    text-align: center;
+    padding: 10px 16px;
+    background: #111827;
+    border: 1px dashed #334155;
+    border-radius: 10px;
+}
+.st-goal-section-title {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    color: #f59e0b;
+    margin-bottom: 6px;
+    padding-left: 2px;
+}
+.st-goal-card {
+    background: #111827;
+    border: 1px solid #f59e0b40;
+    border-radius: 10px;
+    padding: 10px 14px;
+    margin-bottom: 6px;
+    position: relative;
+}
+.st-goal-card-achieved {
+    border-color: #166534;
+    background: #0d1f0d;
+}
+.st-goal-name {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #f8fafc;
+    padding-right: 24px;
+}
+.st-goal-name-id {
+    font-size: 0.6rem;
+    font-weight: 700;
+    opacity: 0.5;
+    margin-right: 4px;
+}
+.st-goal-remove {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: none;
+    border: none;
+    color: #64748b;
+    cursor: pointer;
+    font-size: 0.8rem;
+    padding: 2px 6px;
+    font-family: inherit;
+}
+.st-goal-bar {
+    height: 4px;
+    background: #1e293b;
+    border-radius: 2px;
+    margin: 6px 0 4px;
+    overflow: hidden;
+}
+.st-goal-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #f59e0b, #fbbf24);
+    border-radius: 2px;
+    transition: width 0.4s ease;
+}
+.st-goal-info {
+    font-size: 0.7rem;
+    color: #94a3b8;
+    display: flex;
+    justify-content: space-between;
+}
+.st-goal-next-hint {
+    font-size: 0.68rem;
+    color: #64748b;
+    margin-top: 2px;
+}
+
+/* Goal path visualization */
+.st-goal-path {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4px;
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px solid #1e293b;
+}
+.st-goal-step {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 3px 8px;
+    border-radius: 6px;
+    font-size: 0.65rem;
+    background: #1e293b;
+    color: #94a3b8;
+    border: 1px solid #334155;
+}
+.st-goal-step-done {
+    background: #052e16;
+    border-color: #166534;
+    color: #86efac;
+}
+.st-goal-step-actionable {
+    background: #1a1500;
+    border-color: #854d0e;
+    color: #fbbf24;
+    cursor: pointer;
+    font-family: inherit;
+}
+.st-goal-step-actionable:hover {
+    background: #2a2500;
+    border-color: #a16207;
+}
+.st-goal-step-target {
+    border-color: #f59e0b;
+    font-weight: 600;
+}
+.st-goal-step-id {
+    font-weight: 700;
+    opacity: 0.7;
+    font-size: 0.6rem;
+}
+.st-goal-step-name {
+    max-width: 90px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.st-goal-step-check {
+    color: #22c55e;
+    font-weight: 700;
+}
+.st-goal-step-stars {
+    opacity: 0.6;
+    font-size: 0.6rem;
+}
+.st-goal-step-arrow {
+    color: #475569;
+    font-size: 0.6rem;
+}
+
+.st-goal-achieved-text {
+    color: #22c55e;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+/* ── Goal path highlighting on skill cards ────────────────── */
+.st-on-goal-path {
+    border-left: 3px solid #f59e0b !important;
+}
+.st-goal-skill {
+    animation: nodeGlow 2.5s ease-in-out infinite;
+    --st-glow: rgba(245, 158, 11, 0.4);
+}
+.st-goal-icon {
+    font-size: 0.55rem;
+    margin-left: 4px;
+}
+
+/* ── Goal button in dependency overlay ────────────────────── */
+.st-goal-set-btn {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #f59e0b;
+    background: rgba(245, 158, 11, 0.1);
+    color: #fbbf24;
+    font-weight: 600;
+    font-size: 0.85rem;
+    cursor: pointer;
+    margin: 8px 0;
+    font-family: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+.st-goal-set-btn:disabled {
+    opacity: 0.4;
+    cursor: default;
+}
+
+/* ── Goal progress on result screen ───────────────────────── */
+.st-result-goal {
+    background: #111827;
+    border: 1px solid rgba(245, 158, 11, 0.25);
+    border-radius: 10px;
+    padding: 12px 16px;
+    margin: 12px auto;
+    max-width: 400px;
+    animation: fadeIn 0.5s ease;
+}
+.st-result-goal-title {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #f8fafc;
+    margin-bottom: 6px;
+}
+.st-result-goal-next {
+    font-size: 0.72rem;
+    color: #94a3b8;
+    margin-top: 4px;
+}
+
+/* ── Multiple choice mode ────────────────────────────────── */
+.st-mc-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+.st-mc-option {
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1.5px solid #475569;
+    background: #1e293b;
+    color: #f8fafc;
+    font-size: 0.9rem;
+    font-weight: 500;
+    font-family: 'DM Mono', monospace;
+    cursor: pointer;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: all 0.15s ease;
+    -webkit-tap-highlight-color: transparent;
+}
+.st-mc-option:active {
+    transform: scale(0.97);
+}
+.st-mc-option.st-mc-correct {
+    background: #166534;
+    border-color: #22c55e;
+    color: #dcfce7;
+}
+.st-mc-option.st-mc-wrong {
+    background: #7f1d1d;
+    border-color: #ef4444;
+    color: #fecaca;
+    animation: shake 0.4s ease;
+}
+.st-mc-option.st-mc-faded {
+    opacity: 0.35;
+    pointer-events: none;
+}
+.st-mc-option:disabled {
+    cursor: default;
+}
+
+/* ── Order mode ──────────────────────────────────────────── */
+.st-order-bank {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 16px;
+    min-height: 44px;
+}
+.st-order-block {
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: 1.5px solid #475569;
+    background: #1e293b;
+    color: #f8fafc;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    -webkit-tap-highlight-color: transparent;
+}
+.st-order-block:active {
+    transform: scale(0.97);
+}
+.st-order-block.st-placed {
+    opacity: 0.25;
+    pointer-events: none;
+}
+.st-order-chain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    margin-bottom: 12px;
+}
+.st-order-placed {
+    padding: 10px 16px;
+    border-radius: 10px;
+    border: 1.5px solid #22c55e;
+    background: #0d1f0d;
+    color: #dcfce7;
+    font-size: 0.85rem;
+    cursor: pointer;
+    width: 100%;
+    max-width: 400px;
+    transition: all 0.15s ease;
+}
+.st-order-placed:hover {
+    opacity: 0.8;
+}
+.st-order-arrow {
+    color: #64748b;
+    font-size: 1rem;
+    padding: 2px 0;
+}
+
+/* ── Error mode (find the error) ────────────────────────── */
+.st-error-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+.st-error-card {
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1.5px solid #475569;
+    background: #1e293b;
+    color: #f8fafc;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    -webkit-tap-highlight-color: transparent;
+}
+.st-error-card:active {
+    transform: scale(0.98);
+}
+.st-error-num {
+    font-weight: 700;
+    color: #94a3b8;
+    margin-right: 6px;
+}
+.st-error-card.st-error-found {
+    background: #7f1d1d;
+    border-color: #ef4444;
+    color: #fecaca;
+}
+.st-error-card.st-error-ok {
+    border-color: #22c55e;
+    opacity: 0.6;
+}
+.st-error-card.st-error-wrong {
+    border-color: #ef4444;
+    animation: shake 0.4s ease;
+}
+.st-error-card[data-disabled] {
+    cursor: default;
+}
+
+/* ── Goal achievement celebration ─────────────────────────── */
+.st-goal-achieved-card {
+    background: #111827;
+    border: 2px solid #22c55e;
+    border-radius: 16px;
+    padding: 32px 24px;
+    margin: 16px auto;
+    max-width: 400px;
+    text-align: center;
+    animation: fadeIn 0.5s ease;
+    position: relative;
+    overflow: hidden;
+}
+.st-goal-achieved-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #f8fafc;
+    margin-bottom: 4px;
+}
+.st-goal-achieved-name {
+    font-size: 0.9rem;
+    color: #22c55e;
+    font-weight: 500;
+    margin-bottom: 16px;
+}

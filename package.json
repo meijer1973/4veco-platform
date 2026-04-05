@@ -1,0 +1,16 @@
+{
+  "name": "4veco-platform",
+  "version": "1.0.0",
+  "description": "Build tools and game engines for 4veco economics education modules",
+  "scripts": {
+    "test": "jest",
+    "deploy:m3": "node scripts/deploy.js ../\"3. Module 3 - Markt en overheid\""
+  },
+  "type": "commonjs",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^30.3.0"
+  }
+}
