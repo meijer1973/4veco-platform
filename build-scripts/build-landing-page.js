@@ -37,7 +37,43 @@ const HIDE_TASK_ROWS = false;
 // The folder and files remain intact; remove the id from this set to restore
 const HIDDEN_PARAGRAFEN = new Set(["3.2.4"]);
 
-const PARAGRAAF_DATA = [
+// ── Module auto-detection ─────────────────────────────────────────────
+// Scan MODULE_ROOT for chapter folders (X.Y Hoofdstuk...) to determine
+// which module we're building. This filters all config to only that module.
+function detectModulePrefix() {
+  const entries = fs.readdirSync(MODULE_BASE, { withFileTypes: true });
+  const chapterPattern = /^(\d+)\.\d+\s+Hoofdstuk/;
+  const moduleNrs = new Set();
+  for (const e of entries) {
+    if (e.isDirectory()) {
+      const m = e.name.match(chapterPattern);
+      if (m) moduleNrs.add(m[1]);
+    }
+  }
+  if (moduleNrs.size === 0) {
+    console.error("ERROR: No chapter folders found in", MODULE_BASE);
+    process.exit(1);
+  }
+  if (moduleNrs.size > 1) {
+    console.warn("WARNING: Multiple modules detected:", [...moduleNrs].join(", "), "— using first");
+  }
+  return [...moduleNrs][0]; // e.g., "3" or "1"
+}
+
+const MODULE_NR = detectModulePrefix();
+
+// ── Module metadata ───────────────────────────────────────────────────
+const MODULE_NAMES = {
+  "1": "Schaarste, geld en handel",
+  "2": "Vraag en aanbod",
+  "3": "Markt en overheid",
+};
+const MODULE_NAME = MODULE_NAMES[MODULE_NR] || `Module ${MODULE_NR}`;
+
+console.log(`Detected module: ${MODULE_NR} (${MODULE_NAME})`);
+
+// ── All paragraph data (multi-module registry) ────────────────────────
+const ALL_PARAGRAAF_DATA = [
   { id: "3.1.1", name: "Markt en marktstructuur", chapter: "3.1", chapterName: "Markten", chapterFull: "Hoofdstuk 1 \u2013 Markten", domain: "teal" },
   { id: "3.1.2", name: "Marktvormen", chapter: "3.1", chapterName: "Markten", chapterFull: "Hoofdstuk 1 \u2013 Markten", domain: "teal" },
   { id: "3.1.3", name: "Toepassen", chapter: "3.1", chapterName: "Markten", chapterFull: "Hoofdstuk 1 \u2013 Markten", domain: "teal" },
@@ -62,7 +98,11 @@ const PARAGRAAF_DATA = [
   { id: "3.5.2", name: "Naar het examen", chapter: "3.5", chapterName: "Afsluiting", chapterFull: "Hoofdstuk 5 \u2013 Afsluiting", domain: "purple" },
   // Module 1: Schaarste, geld en handel
   { id: "1.1.1", name: "Kiezen is kostbaar", chapter: "1.1", chapterName: "Voor niks gaat de zon op", chapterFull: "Hoofdstuk 1 \u2013 Voor niks gaat de zon op", domain: "teal" },
+  { id: "1.1.2", name: "Kiezen of delen", chapter: "1.1", chapterName: "Voor niks gaat de zon op", chapterFull: "Hoofdstuk 1 \u2013 Voor niks gaat de zon op", domain: "teal" },
 ];
+
+// ── Filter to active module only ──────────────────────────────────────
+const PARAGRAAF_DATA = ALL_PARAGRAAF_DATA.filter(p => p.id.startsWith(MODULE_NR + "."));
 
 const DOMAIN_COLORS = {
   teal:  { main: "#17A2B8", light: "#E8F8FB", dark: "#117A8B" },
@@ -72,7 +112,7 @@ const DOMAIN_COLORS = {
   purple: { main: "#7D3C98", light: "#F4ECF7", dark: "#6C3483" },
 };
 
-const CHAPTER_FOLDERS = {
+const ALL_CHAPTER_FOLDERS = {
   "3.1": "3.1 Hoofdstuk 1 - Markten",
   "3.2": "3.2 Hoofdstuk 2 - Marktvormen en hun marktevenwicht",
   "3.3": "3.3 Hoofdstuk 3 - Overheid",
@@ -81,8 +121,20 @@ const CHAPTER_FOLDERS = {
   "1.1": "1.1 Hoofdstuk 1 - Voor niks gaat de zon op",
 };
 
-const CHAPTER_ORDER = ["3.1", "3.2", "3.3", "3.4", "3.5", "1.1"];
-const CHAPTER_NUMBERS = { "3.1": "1", "3.2": "2", "3.3": "3", "3.4": "4", "3.5": "5", "1.1": "1" };
+const ALL_CHAPTER_NUMBERS = { "3.1": "1", "3.2": "2", "3.3": "3", "3.4": "4", "3.5": "5", "1.1": "1" };
+
+// Filter to active module
+const CHAPTER_FOLDERS = {};
+const CHAPTER_NUMBERS = {};
+const CHAPTER_ORDER = [];
+for (const [key, val] of Object.entries(ALL_CHAPTER_FOLDERS)) {
+  if (key.startsWith(MODULE_NR + ".")) {
+    CHAPTER_FOLDERS[key] = val;
+    CHAPTER_NUMBERS[key] = ALL_CHAPTER_NUMBERS[key];
+    CHAPTER_ORDER.push(key);
+  }
+}
+CHAPTER_ORDER.sort();
 
 // ═══════════════════════════════════════════════════════════════════════════
 // SECTION RULES
@@ -277,7 +329,7 @@ function renderNav(resolvedMap, pageType, currentId) {
 
   // Module link
   const isModuleActive = pageType === "module";
-  html += `    <a class="nav-module${isModuleActive ? " active" : ""}" href="${navLink("module")}">Module 3: Markt en overheid</a>\n`;
+  html += `    <a class="nav-module${isModuleActive ? " active" : ""}" href="${navLink("module")}">Module ${MODULE_NR}: ${MODULE_NAME}</a>\n`;
 
   for (const ch of CHAPTER_ORDER) {
     const paragrafen = grouped[ch];
@@ -684,8 +736,8 @@ function renderModulePage(resolvedMap) {
   let bodyHTML = `
 <header class="hero">
   <div class="hero-inner">
-    <span class="hero-badge">Module 3</span>
-    <h1>Markt en overheid</h1>
+    <span class="hero-badge">Module ${MODULE_NR}</span>
+    <h1>${MODULE_NAME}</h1>
     <p class="hero-sub">Praktische Economie VWO 4</p>
   </div>
 </header>
@@ -711,9 +763,9 @@ function renderModulePage(resolvedMap) {
 
   bodyHTML += `
 </main>
-<footer>Economie VWO 4 &middot; Module 3: Markt en overheid</footer>`;
+<footer>Economie VWO 4 &middot; Module ${MODULE_NR}: ${MODULE_NAME}</footer>`;
 
-  return pageShell("Module 3 \u2013 Markt en overheid", dc, navHTML, bodyHTML);
+  return pageShell(`Module ${MODULE_NR} \u2013 ${MODULE_NAME}`, dc, navHTML, bodyHTML);
 }
 
 // ═══════════════════════════════════════════════════════════════════════════
@@ -732,7 +784,7 @@ function renderChapterPage(chapterId, resolvedMap) {
   <div class="hero-inner">
     <span class="hero-badge">Hoofdstuk ${chNum}</span>
     <h1>${first.chapterName}</h1>
-    <p class="hero-sub">Module 3 \u2013 Markt en overheid</p>
+    <p class="hero-sub">Module ${MODULE_NR} \u2013 ${MODULE_NAME}</p>
   </div>
 </header>
 <main>`;
@@ -754,7 +806,7 @@ function renderChapterPage(chapterId, resolvedMap) {
 
   bodyHTML += `
 </main>
-<footer>Economie VWO 4 &middot; Module 3: Markt en overheid</footer>`;
+<footer>Economie VWO 4 &middot; Module ${MODULE_NR}: ${MODULE_NAME}</footer>`;
 
   return pageShell(`${first.chapterFull} \u2013 Lesmateriaal`, dc, navHTML, bodyHTML);
 }
@@ -905,7 +957,7 @@ function renderParagraafPage(paragraaf, files, resolvedMap) {
 
   bodyHTML += `
 </main>
-<footer>Economie VWO 4 &middot; Module 3: Markt en overheid</footer>`;
+<footer>Economie VWO 4 &middot; Module ${MODULE_NR}: ${MODULE_NAME}</footer>`;
 
   return pageShell(`${paragraaf.id} ${paragraaf.name} \u2013 Lesmateriaal`, dc, navHTML, bodyHTML);
 }
