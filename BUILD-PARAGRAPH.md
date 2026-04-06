@@ -309,7 +309,53 @@ Scripts built for specific paragraphs in earlier work. Useful as examples but no
 
 ---
 
-## 6. Quality rules (learned from production)
+## 6. Validation
+
+After building, run the paragraph validator:
+
+```bash
+node scripts/validate-paragraph.js "<path-to-paragraph-folder>"
+```
+
+This checks:
+- All 23 required files exist
+- All .docx files are valid zip archives
+- Presentation > 100KB (has graphs)
+- All .html files have content (not empty shells)
+- Quiz has difficulty-3 per category
+- Game data files exist in shared/
+- Reasoning CSV source exists
+
+**A paragraph is not done until the validator passes with 0 errors.**
+
+---
+
+## 7. Pedagogical approach by paragraph type
+
+| Paragraph type | Approach | Example |
+|----------------|----------|---------|
+| **Intro** (first in chapter) | Narrative-first: use named characters, everyday situations, concrete-to-abstract | Lisa choosing between phone/festival/savings |
+| **Calculation** (formulas) | Formula-first: worked examples, step-by-step, graph-heavy | Budget line: B = p₁q₁ + p₂q₂ |
+| **Toepassen** (review) | Cross-topic synthesis, comparison tables, exam-style | Marktvormen vergelijkingstabel |
+
+The default is **narrative-first** — students connect with stories before abstractions. Only switch to formula-first when the paragraph is primarily about calculation skills.
+
+---
+
+## 8. Build script requirement
+
+**Every scripted-manual file MUST have its build script saved** in `build-scripts/` with naming convention `mN-XYZ-<type>.js` (e.g., `m1-111-presentatie.js`).
+
+This ensures:
+- Any file can be regenerated after corrections
+- Other agents can study the script to understand the build approach
+- The paragraph is reproducible, not a one-shot output
+
+If a build script is not saved, the paragraph build is **incomplete**.
+
+---
+
+## 9. Quality rules (learned from production)
 
 | Rule | Why |
 |------|-----|
@@ -322,3 +368,7 @@ Scripts built for specific paragraphs in earlier work. Useful as examples but no
 | Samenvatting uses table-based infographic layout | Paragraph-based layout doesn't match the reference |
 | CHAPTER_NUMBERS must be updated alongside CHAPTER_FOLDERS | Otherwise navigation shows "Hundefined" |
 | Filter `~$` temp files in directory scans | Office lock files get picked up as real content otherwise |
+| Run `validate-paragraph.js` before declaring done | Catches missing files, corrupted docx, empty presentations |
+| Save all build scripts in `build-scripts/` | Without scripts, the paragraph can't be regenerated or improved |
+| Intro paragraphs: narrative-first approach | Students connect with stories (Lisa, Tom) before abstractions |
+| Register paragraph AND run deploy | Without deploy, game shells and landing pages are missing — students can't navigate |

@@ -60,6 +60,8 @@ const PARAGRAAF_DATA = [
   { id: "3.4.6", name: "Toepassen", chapter: "3.4", chapterName: "Internationale markten", chapterFull: "Hoofdstuk 4 \u2013 Internationale markten", domain: "green" },
   { id: "3.5.1", name: "Afsluiting", chapter: "3.5", chapterName: "Afsluiting", chapterFull: "Hoofdstuk 5 \u2013 Afsluiting", domain: "purple" },
   { id: "3.5.2", name: "Naar het examen", chapter: "3.5", chapterName: "Afsluiting", chapterFull: "Hoofdstuk 5 \u2013 Afsluiting", domain: "purple" },
+  // Module 1: Schaarste, geld en handel
+  { id: "1.1.1", name: "Kiezen is kostbaar", chapter: "1.1", chapterName: "Voor niks gaat de zon op", chapterFull: "Hoofdstuk 1 \u2013 Voor niks gaat de zon op", domain: "teal" },
 ];
 
 const DOMAIN_COLORS = {
@@ -76,10 +78,11 @@ const CHAPTER_FOLDERS = {
   "3.3": "3.3 Hoofdstuk 3 - Overheid",
   "3.4": "3.4 Hoofdstuk 4 - Internationale markten",
   "3.5": "3.5 Hoofdstuk 5 - Afsluiting",
+  "1.1": "1.1 Hoofdstuk 1 - Voor niks gaat de zon op",
 };
 
-const CHAPTER_ORDER = ["3.1", "3.2", "3.3", "3.4", "3.5"];
-const CHAPTER_NUMBERS = { "3.1": "1", "3.2": "2", "3.3": "3", "3.4": "4", "3.5": "5" };
+const CHAPTER_ORDER = ["3.1", "3.2", "3.3", "3.4", "3.5", "1.1"];
+const CHAPTER_NUMBERS = { "3.1": "1", "3.2": "2", "3.3": "3", "3.4": "4", "3.5": "5", "1.1": "1" };
 
 // ═══════════════════════════════════════════════════════════════════════════
 // SECTION RULES
