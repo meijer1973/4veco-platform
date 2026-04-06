@@ -90,6 +90,11 @@ const LEREN_PATTERNS = [/presentatie\.pptx$/i, /uitleg vaardigheden\.docx$/i, /y
 const OEFENEN_DIRS = ["basisopgaven", "middenopgaven", "verrijkingsopgaven", "begeleide inoefening"];
 const DELETE_PATTERNS = [/^desktop\.ini$/i, /\.zip$/i, /\.tmp$/i];
 
+// Filter out Office temp/lock files (~$...) and other junk from directory listings
+function cleanDir(files) {
+  return files.filter(f => !f.startsWith("~$") && !f.startsWith("."));
+}
+
 // ═══════════════════════════════════════════════════════════════════════════
 // FOLDER DISCOVERY
 // ═══════════════════════════════════════════════════════════════════════════
@@ -163,7 +168,7 @@ function scanFiles(paragraafPath) {
   const oDir = path.join(paragraafPath, "3. Oefenen");
 
   if (fs.existsSync(vDir)) {
-    const vFiles = fs.readdirSync(vDir);
+    const vFiles = cleanDir(fs.readdirSync(vDir));
     for (const f of vFiles) {
       if (/instapquiz\.html$/i.test(f)) result.voorbereiden.instapquiz = f;
       else if (/nieuws-detective\.html$/i.test(f)) result.voorbereiden.nieuwsdetective = f;
@@ -177,7 +182,7 @@ function scanFiles(paragraafPath) {
     }
   }
   if (fs.existsSync(lDir)) {
-    const lFiles = fs.readdirSync(lDir);
+    const lFiles = cleanDir(fs.readdirSync(lDir));
     for (const f of lFiles) {
       if (/presentatie\.pptx$/i.test(f)) result.leren.presentatie = f;
       else if (/uitleg vaardigheden\.html$/i.test(f)) result.leren.vaardigheden = f;
@@ -193,7 +198,7 @@ function scanFiles(paragraafPath) {
   }
   if (fs.existsSync(oDir)) {
     // Scan for interactive exercise HTML files directly in the oefenen dir
-    for (const f of fs.readdirSync(oDir)) {
+    for (const f of cleanDir(fs.readdirSync(oDir))) {
       if (/redeneer-spel\.html$/i.test(f)) result.oefenen.redeneerSpel = f;
       else if (/wiskundevaardigheden\.html$/i.test(f)) result.oefenen.wiskundevaardigheden = f;
     }
@@ -201,7 +206,7 @@ function scanFiles(paragraafPath) {
     const scanExerciseDir = (subDir) => {
       const full = path.join(oDir, subDir);
       if (!fs.existsSync(full)) return null;
-      const files = fs.readdirSync(full);
+      const files = cleanDir(fs.readdirSync(full));
       const docxFiles = files.filter(f => f.endsWith(".docx"));
       const vragen = docxFiles.find(f => /vragen\.docx$/i.test(f) && !/antwoorden/i.test(f));
       const antwoorden = docxFiles.find(f => /antwoorden\.docx$/i.test(f));
