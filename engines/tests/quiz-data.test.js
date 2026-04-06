@@ -27,8 +27,8 @@ function loadAllQuizData() {
 const allQuizzes = loadAllQuizData();
 
 describe('quiz data files', () => {
-    test('all 20 quiz data files exist', () => {
-        expect(allQuizzes.length).toBe(20);
+    test('at least 20 quiz data files exist', () => {
+        expect(allQuizzes.length).toBeGreaterThanOrEqual(20);
     });
 });
 

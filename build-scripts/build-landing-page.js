@@ -58,6 +58,8 @@ const PARAGRAAF_DATA = [
   { id: "3.4.4", name: "Internationale productieketens", chapter: "3.4", chapterName: "Internationale markten", chapterFull: "Hoofdstuk 4 \u2013 Internationale markten", domain: "green" },
   { id: "3.4.5", name: "Internationaal handelsbeleid", chapter: "3.4", chapterName: "Internationale markten", chapterFull: "Hoofdstuk 4 \u2013 Internationale markten", domain: "green" },
   { id: "3.4.6", name: "Toepassen", chapter: "3.4", chapterName: "Internationale markten", chapterFull: "Hoofdstuk 4 \u2013 Internationale markten", domain: "green" },
+  { id: "3.5.1", name: "Afsluiting", chapter: "3.5", chapterName: "Afsluiting", chapterFull: "Hoofdstuk 5 \u2013 Afsluiting", domain: "purple" },
+  { id: "3.5.2", name: "Naar het examen", chapter: "3.5", chapterName: "Afsluiting", chapterFull: "Hoofdstuk 5 \u2013 Afsluiting", domain: "purple" },
 ];
 
 const DOMAIN_COLORS = {
@@ -65,6 +67,7 @@ const DOMAIN_COLORS = {
   blue:  { main: "#1A5276", light: "#EBF5FB", dark: "#154360" },
   amber: { main: "#E67E22", light: "#FEF5E7", dark: "#BA6A1C" },
   green: { main: "#1E8449", light: "#E8F8F0", dark: "#186A3B" },
+  purple: { main: "#7D3C98", light: "#F4ECF7", dark: "#6C3483" },
 };
 
 const CHAPTER_FOLDERS = {
@@ -72,10 +75,11 @@ const CHAPTER_FOLDERS = {
   "3.2": "3.2 Hoofdstuk 2 - Marktvormen en hun marktevenwicht",
   "3.3": "3.3 Hoofdstuk 3 - Overheid",
   "3.4": "3.4 Hoofdstuk 4 - Internationale markten",
+  "3.5": "3.5 Hoofdstuk 5 - Afsluiting",
 };
 
-const CHAPTER_ORDER = ["3.1", "3.2", "3.3", "3.4"];
-const CHAPTER_NUMBERS = { "3.1": "1", "3.2": "2", "3.3": "3", "3.4": "4" };
+const CHAPTER_ORDER = ["3.1", "3.2", "3.3", "3.4", "3.5"];
+const CHAPTER_NUMBERS = { "3.1": "1", "3.2": "2", "3.3": "3", "3.4": "4", "3.5": "5" };
 
 // ═══════════════════════════════════════════════════════════════════════════
 // SECTION RULES

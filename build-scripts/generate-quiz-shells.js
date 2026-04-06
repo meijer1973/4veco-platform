@@ -26,13 +26,13 @@ function findQuizDataFiles() {
 
 // Find the HTML file path for a given paragraph number
 function findQuizHtmlPath(parNr) {
-    // Walk the directory tree to find the instapquiz file matching this parNr
-    function walk(dir) {
+    // First try to find an existing instapquiz file
+    function walkForExisting(dir) {
         const entries = fs.readdirSync(dir, { withFileTypes: true });
         for (const entry of entries) {
             const fullPath = path.join(dir, entry.name);
             if (entry.isDirectory()) {
-                const result = walk(fullPath);
+                const result = walkForExisting(fullPath);
                 if (result) return result;
             } else if (entry.name.includes('instapquiz') && entry.name.endsWith('.html') && entry.name.includes(parNr)) {
                 return fullPath;
@@ -40,7 +40,28 @@ function findQuizHtmlPath(parNr) {
         }
         return null;
     }
-    return walk(MODULE_ROOT);
+    const existing = walkForExisting(MODULE_ROOT);
+    if (existing) return existing;
+
+    // No existing file — find the paragraph directory and create path in 1. Voorbereiden/
+    function walkForDir(dir) {
+        const entries = fs.readdirSync(dir, { withFileTypes: true });
+        for (const entry of entries) {
+            if (entry.isDirectory() && entry.name.startsWith(parNr + ' ')) {
+                const nameMatch = entry.name.match(/- (.+)$/);
+                const parName = nameMatch ? nameMatch[1] : parNr;
+                const voorbereidenDir = path.join(dir, entry.name, '1. Voorbereiden');
+                if (!fs.existsSync(voorbereidenDir)) fs.mkdirSync(voorbereidenDir, { recursive: true });
+                return path.join(voorbereidenDir, parNr + ' ' + parName + ' \u2013 instapquiz.html');
+            }
+            if (entry.isDirectory()) {
+                const result = walkForDir(path.join(dir, entry.name));
+                if (result) return result;
+            }
+        }
+        return null;
+    }
+    return walkForDir(MODULE_ROOT);
 }
 
 // Generate HTML shell for a quiz

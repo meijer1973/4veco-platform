@@ -43,6 +43,8 @@ const PARAGRAPHS = [
     { parNr:'3.4.4', name:'Internationale productieketens', skills:['F1','F2','F3','F4','F7','B8','B9','B10','B11'] },
     { parNr:'3.4.5', name:'Internationaal handelsbeleid', skills:['F1','F2','F3','F4','F7','F5','B1','B8','B9','B10','B11','S1','S5','E4','E6'] },
     { parNr:'3.4.6', name:'Toepassen', skills:['F1','F2','F3','F4','F7','F5','B1','B8','B9','B10','B11','S1','S5','E4','E6'] },
+    { parNr:'3.5.1', name:'Afsluiting', skills:null }, // all skills — full review
+    { parNr:'3.5.2', name:'Naar het examen', skills:null }, // all skills — exam level
 ];
 
 // ── Compute which skills are new per paragraph ───────────────────────

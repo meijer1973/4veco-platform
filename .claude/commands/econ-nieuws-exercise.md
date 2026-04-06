@@ -32,7 +32,7 @@ A short, printable handout (2 pages) that opens the lesson by connecting the par
 
 ```
 ┌─────────────────────────────────┐
-│  Headline (navy, 28pt bold)     │
+│  Headline (navy, 16pt bold)     │
 │                                 │
 │  ┌─────────────────────────────┐│
 │  │     VISUAL / GRAPH          ││
@@ -158,13 +158,14 @@ const CW_TIGHT = 9638; // content width in DXA
 
 | Element | Font | Size | Color |
 |---------|------|------|-------|
-| Headline | Arial Bold | 28pt (size 56 half-pts) | navy #1E2761 |
-| Article text | Arial | 20pt (size 40) | dark #2D3748 |
-| Source | Arial Italic | 16pt (size 32) | gray #718096 |
-| Question label (a, b, c) | Arial Bold | 20pt (size 40) | domain color |
-| Question text | Arial | 20pt (size 40) | dark #2D3748 |
-| Answer label | Arial Bold | 20pt (size 40) | domain color |
-| Answer text | Arial | 20pt (size 40) | dark #2D3748 |
+| Headline | Arial Bold | 16pt (size 32 half-pts) | navy #1E2761 |
+| Article text | Arial | 11pt (size 22) | dark #2D3748 |
+| Source | Arial Italic | 9pt (size 18) | gray #718096 |
+| Question label (a, b, c) | Arial Bold | 11pt (size 22) | domain color |
+| Question text | Arial | 11pt (size 22) | dark #2D3748 |
+| Answer label | Arial Bold | 11pt (size 22) | domain color |
+| Answer text | Arial | 11pt (size 22) | dark #2D3748 |
+| Domain banner title | Arial Bold | 12pt (size 24) | domain dark |
 
 ### Domain colors per chapter
 
@@ -210,10 +211,10 @@ async function buildNieuws(config) {
   const pngBuf = await svgToPng(config.svg, config.svgRenderWidth || 720);
 
   // 2. Build document:
-  //    - Headline (28pt bold navy)
+  //    - Headline (16pt bold navy)
   //    - Image (full content width, 482pt)
-  //    - Article paragraphs (20pt)
-  //    - Source (16pt italic gray)
+  //    - Article paragraphs (11pt)
+  //    - Source (9pt italic gray)
   //    - Domain banner "Vragen"
   //    - Questions (a, b, c... with domain-colored labels)
   //    - [PAGE BREAK]
