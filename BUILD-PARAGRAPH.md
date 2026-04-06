@@ -1,225 +1,253 @@
 # How to Build a Complete Paragraph
 
-Master recipe for building a new paragraph from scratch. Follow every step — skipping steps causes broken output that requires user feedback to catch.
+From raw exercises to finished interactive lesson page. This document is the single source of truth for the paragraph production process.
 
 ---
 
-## Prerequisites
+## 1. Definition of Done
 
-Before starting, you need:
-- [ ] The **book content** read (exercises, answers, theory from the source textbook)
-- [ ] The **chapter folder** must exist in the module repo (e.g., `3.5 Hoofdstuk 5 - Afsluiting/`)
-- [ ] The **paragraph name** and number (e.g., `3.5.1`, `Afsluiting`)
-- [ ] The **domain** for this paragraph: `economics` or `math-economics` (for reasoning game)
-- [ ] Skills loaded: read `econ-pptx-templates`, `econ-word-templates`, `economic-graph`, `econ-didactiek` before writing any content
+A complete paragraph has **23 files** plus an index.html. Every file listed as required MUST exist before the paragraph is considered done.
+
+| # | File | Section | Required | Builder | Source input | Output type |
+|---|------|---------|----------|---------|--------------|-------------|
+| 1 | `X.Y.Z [Naam] – instapquiz.html` | 1. Voorbereiden | Yes | `generate-quiz-shells.js` (auto) | `shared/questions/X.Y.Z.js` | Generated |
+| 2 | `X.Y.Z [Naam] – nieuws-detective.html` | 1. Voorbereiden | Yes | `build-newsdetective-shells.js` (auto) | `shared/newsdetective/X.Y.Z.js` | Generated |
+| 3 | `X.Y.Z [Naam] – uitleg voorkennis.docx` | 1. Voorbereiden | Yes | Adapt `template-B_voorkennis.js` | Book content + domain knowledge | Scripted-manual |
+| 4 | `X.Y.Z [Naam] – uitleg voorkennis.html` | 1. Voorbereiden | Yes | `convert_voorkennis.py` | File #3 (.docx) | Converted |
+| 5 | `Lees dit als je niet weet hoe je moet beginnen met deze les.docx` | 1. Voorbereiden | Yes | Copy | Static file (identical in every paragraph) | Static |
+| 6 | `X.Y.Z [Naam] – presentatie.pptx` | 2. Leren | Yes | Adapt `pptx-351-afsluiting.js` | Book content + SVG graphs | Scripted-manual |
+| 7 | `X.Y.Z [Naam] – uitleg vaardigheden.docx` | 2. Leren | Yes | Adapt `template-A_vaardigheden.js` | Book content + domain knowledge | Scripted-manual |
+| 8 | `X.Y.Z [Naam] – uitleg vaardigheden.html` | 2. Leren | Yes | `convert_vaardigheden.py` | File #7 (.docx) | Converted |
+| 9 | `X.Y.Z [Naam] – nieuws met visual.docx` | 2. Leren | Yes | Adapt `nieuws-351-352-afsluiting.js` | Recent Dutch news + SVG visual | Scripted-manual |
+| 10 | `X.Y.Z [Naam] – samenvatting.docx` | 2. Leren | Yes | Adapt `samenvatting-351-352-rebuild.js` | Key concepts from paragraph | Scripted-manual |
+| 11 | `X.Y.Z [Naam] – youtube-videos.html` | 2. Leren | Yes | Write directly | 3 real YouTube video IDs | Manual |
+| 12 | `X.Y.Z [Naam] – redeneer-spel.html` | 3. Oefenen | Yes | `build-reasoning-engine.js` (auto) | `shared/reasoning/X.Y.Z.js` | Generated |
+| 13 | `X.Y.Z [Naam] – wiskundevaardigheden.html` | 3. Oefenen | Yes | `build-skilltree-shells.js` (auto) | PARAGRAPHS array in script | Generated |
+| 14 | `begeleide inoefening – vragen.docx` | 3. Oefenen/begeleide inoefening | Yes | Adapt `inoefening-351-afsluiting.js` | Exercises with scaffolding | Scripted-manual |
+| 15 | `begeleide inoefening – antwoorden.docx` | 3. Oefenen/begeleide inoefening | Yes | Same script as #14 | Same | Scripted-manual |
+| 16 | `begeleide inoefening.html` | 3. Oefenen/begeleide inoefening | Yes | `convert_begeleide_inoefening.py` | Files #14 + #15 | Converted |
+| 17 | `basis – vragen.docx` | 3. Oefenen/basisopgaven | Yes | Adapt `opgaven-351-afsluiting.js` | Exercises (8-10 questions) | Scripted-manual |
+| 18 | `basis – antwoorden.docx` | 3. Oefenen/basisopgaven | Yes | Same script as #17 | Same | Scripted-manual |
+| 19 | `midden – vragen.docx` | 3. Oefenen/middenopgaven | Yes | Same script as #17 | Exercises (6-8 questions) | Scripted-manual |
+| 20 | `midden – antwoorden.docx` | 3. Oefenen/middenopgaven | Yes | Same script as #17 | Same | Scripted-manual |
+| 21 | `verrijking – vragen.docx` | 3. Oefenen/verrijkingsopgaven | Yes | Same script as #17 | Exercises (4-6 questions) | Scripted-manual |
+| 22 | `verrijking – antwoorden.docx` | 3. Oefenen/verrijkingsopgaven | Yes | Same script as #17 | Same | Scripted-manual |
+| 23 | `index.html` | Root | Yes | `build-landing-page.js` (auto) | Scans folder contents | Generated |
+
+### Output type definitions
+
+| Type | Meaning | Human effort |
+|------|---------|--------------|
+| **Generated** | Fully automated from data files. deploy.js handles this. | Create the data file only. |
+| **Converted** | Automated transformation of an existing .docx to .html. | Run the converter after creating the .docx. |
+| **Scripted-manual** | A Node.js script generates the file, but the script must be written per-paragraph with paragraph-specific content. Copy a reference script, replace the content section. | Write economics content, adapt a reference script, run it. |
+| **Manual** | Written by hand (no generator). | Create the file directly. |
+| **Static** | Identical copy in every paragraph. | Copy from an existing paragraph. |
 
 ---
 
-## Step 1: Register the paragraph
+## 2. Input contract
 
-Update these 4 files in the **platform repo** (`4veco-platform/`):
+These are the raw inputs needed to build one paragraph. They must exist BEFORE running any builder.
 
-### 1a. `build-scripts/build-landing-page.js`
-- Add entry to `PARAGRAAF_DATA` array (~line 40)
-- If new chapter: add to `CHAPTER_FOLDERS`, `CHAPTER_ORDER`, `CHAPTER_NUMBERS`, and `DOMAIN_COLORS`
+### A. Game data files (→ `shared/` in module repo)
 
-### 1b. `build-scripts/build-skilltree-shells.js`
-- Add entry to `PARAGRAPHS` array (~line 25) with skill IDs
-- Review paragraphs: use `skills: null` (all skills) for Toepassen/Afsluiting paragraphs
+| Input | Location | Format | Who creates it |
+|-------|----------|--------|----------------|
+| Quiz questions | `shared/questions/X.Y.Z.js` | JS: `var QUIZ_DATA = { meta, categories, questions }` | Agent writes the JS file. 15 questions, 3-4 categories, at least one difficulty:3 per category. |
+| Reasoning questions | `source-data/module-N/reasoning/X.Y.Z.csv` | Semicolon-delimited CSV, 15 rows, 5 modes | Agent writes CSV, then runs `build-reasoning-questions.js` to produce JS. |
+| Newsdetective data | `shared/newsdetective/X.Y.Z.js` | JS: `var NEWS_DETECTIVE_DATA = { meta, article, rounds }` | Agent writes the JS file. Real Dutch news, 4 rounds. |
+| Skilltree config | Entry in `build-skilltree-shells.js` PARAGRAPHS array | JS object: `{ parNr, name, skills }` | Agent adds to array. Data file auto-generated. |
 
-### 1c. `engines/tests/skilltree-data.test.js`
-- Add paragraph number to `expectedFiles` array (~line 146)
+### B. Rich document content (→ paragraph folders in module repo)
 
-### 1d. `engines/theme.js` (only for new chapters)
-- Add chapter color entry to `DOMAIN_COLORS`
+These have **no pre-existing source data files**. The raw input is:
+- The textbook ("Praktische Economie 2020 antwoorden VWO M3 gestructureerd.docx")
+- The paragraph's learning goals and concepts
+- Recent Dutch news (for nieuws met visual)
+- Real YouTube videos (for youtube-videos)
+
+The agent reads the textbook, understands the economics, and writes the content into paragraph-specific build scripts. This is the **scripted-manual** pattern:
+
+```
+Agent reads textbook → Agent writes build script with content → Script generates .docx/.pptx
+```
+
+### C. Registration entries (→ platform repo config files)
+
+| Config file | What to add | When |
+|-------------|-------------|------|
+| `build-scripts/build-landing-page.js` | PARAGRAAF_DATA entry | Every new paragraph |
+| `build-scripts/build-landing-page.js` | CHAPTER_FOLDERS, CHAPTER_ORDER, CHAPTER_NUMBERS, DOMAIN_COLORS | Only for new chapters |
+| `build-scripts/build-skilltree-shells.js` | PARAGRAPHS entry | Every new paragraph |
+| `engines/tests/skilltree-data.test.js` | expectedFiles entry | Every new paragraph |
+| `engines/theme.js` | DOMAIN_COLORS entry | Only for new chapters |
 
 ---
 
-## Step 2: Create folder structure
+## 3. End-to-end workflow
 
-In the **module repo**:
+This is the production sequence for one paragraph. Follow in order.
 
+### Phase 1: Register (5 min)
+1. Add paragraph to `build-landing-page.js` PARAGRAAF_DATA
+2. Add paragraph to `build-skilltree-shells.js` PARAGRAPHS
+3. Add paragraph to `skilltree-data.test.js` expectedFiles
+4. If new chapter: add to CHAPTER_FOLDERS, CHAPTER_ORDER, CHAPTER_NUMBERS, DOMAIN_COLORS, theme.js
+
+### Phase 2: Create folder structure (1 min)
 ```bash
-PAR="3.X Hoofdstuk X - Name/3.X.Y Paragraaf Y - Name"
 MODULE="../3. Module 3 - Markt en overheid"
-mkdir -p "$MODULE/$PAR/1. Voorbereiden"
-mkdir -p "$MODULE/$PAR/2. Leren"
-mkdir -p "$MODULE/$PAR/3. Oefenen/basisopgaven"
-mkdir -p "$MODULE/$PAR/3. Oefenen/middenopgaven"
-mkdir -p "$MODULE/$PAR/3. Oefenen/verrijkingsopgaven"
-mkdir -p "$MODULE/$PAR/3. Oefenen/begeleide inoefening"
+PAR="$MODULE/3.X Hoofdstuk X - Name/3.X.Y Paragraaf Y - Name"
+mkdir -p "$PAR/1. Voorbereiden" "$PAR/2. Leren"
+mkdir -p "$PAR/3. Oefenen/basisopgaven" "$PAR/3. Oefenen/middenopgaven"
+mkdir -p "$PAR/3. Oefenen/verrijkingsopgaven" "$PAR/3. Oefenen/begeleide inoefening"
+cp "$MODULE/3.1 Hoofdstuk 1 - Markten/3.1.1 Paragraaf 1 - Markt en marktstructuur/1. Voorbereiden/Lees dit als je niet weet hoe je moet beginnen met deze les.docx" "$PAR/1. Voorbereiden/"
 ```
 
----
+### Phase 3: Create game data files (30 min)
+1. Write `shared/questions/X.Y.Z.js` — quiz data (15 questions)
+2. Write `source-data/module-N/reasoning/X.Y.Z.csv` — reasoning CSV
+3. Run: `MODULE_ROOT="$MODULE" node build-scripts/build-reasoning-questions.js X.Y.Z <domain> source-data/module-N/reasoning/X.Y.Z.csv`
+4. Write `shared/newsdetective/X.Y.Z.js` — newsdetective data
 
-## Step 3: Create game data files
+### Phase 4: Create rich documents (bulk of the work)
+For each document type, copy the reference script, replace the content, run it.
 
-These go in the **module repo** `shared/` directory. Auto-detected by deploy.js.
+| Document | Reference script | Output location |
+|----------|-----------------|-----------------|
+| Uitleg voorkennis | `template-B_voorkennis.js` | `1. Voorbereiden/` |
+| Uitleg vaardigheden | `template-A_vaardigheden.js` | `2. Leren/` |
+| Presentatie | `pptx-351-afsluiting.js` | `2. Leren/` |
+| Nieuws met visual | `nieuws-351-352-afsluiting.js` | `2. Leren/` |
+| Samenvatting | `samenvatting-351-352-rebuild.js` | `2. Leren/` |
+| YouTube videos | Write HTML directly | `2. Leren/` |
+| Begeleide inoefening | `inoefening-351-afsluiting.js` | `3. Oefenen/begeleide inoefening/` |
+| Opgavensets (3 levels) | `opgaven-351-afsluiting.js` | `3. Oefenen/{basis,midden,verrijking}opgaven/` |
 
-### 3a. Quiz data (`shared/questions/X.Y.Z.js`)
-- 15 questions, 3-4 categories, ascending difficulty (1-3)
-- **CRITICAL**: Every category MUST have at least one `difficulty: 3` question (test will fail otherwise)
-- Format: `var QUIZ_DATA = { meta, categories, questions: [{ category, difficulty, q, options, answer, rationale }] }`
-- Colors: use chapter domain color scheme
+Run each with: `NODE_PATH="$(npm root -g)" node <script>.js`
 
-### 3b. Reasoning data
-- Create CSV in `source-data/module-3/reasoning/X.Y.Z.csv` (semicolon-delimited)
-- 15 questions across all 5 modes (0-4), 3-4 structure types
-- Run: `MODULE_ROOT="$MODULE" node build-scripts/build-reasoning-questions.js X.Y.Z <domain> source-data/module-3/reasoning/X.Y.Z.csv`
-- Domain: `economics` (verbal) or `math-economics` (calculations)
-
-### 3c. Newsdetective data (`shared/newsdetective/X.Y.Z.js`)
-- Use REAL Dutch news (NOS, RTL, etc.) from last 12 months with verifiable sourceUrl
-- 4 rounds: concept, chain, model, spotError (in that order)
-- Format: `var NEWS_DETECTIVE_DATA = { meta, article, rounds }`
-
-### 3d. Skilltree config
-- Auto-generated by `build-skilltree-shells.js` from the PARAGRAPHS array — no manual file needed
-
----
-
-## Step 4: Generate documents
-
-Create paragraph-specific build scripts in `build-scripts/`. Each generates .docx or .pptx files.
-
-### 4a. Uitleg voorkennis (→ `1. Voorbereiden/`)
-- Adapt `template-B_voorkennis.js`
-- Font sizes: body 11pt, banners 12pt (see econ-word-templates)
-- Run: `NODE_PATH="$(npm root -g)" node build-scripts/voorkennis-XYZ-name.js`
-
-### 4b. Uitleg vaardigheden (→ `2. Leren/`)
-- Adapt `template-A_vaardigheden.js`
-- Same font size rules
-
-### 4c. Presentatie (→ `2. Leren/`)
-- **MUST contain at least 3 SVG→PNG economic graphs** (V/A diagram, cost curves, surplus, etc.)
-- **Present theory with worked examples — NEVER exercise instructions**
-- Use `pptx-351-afsluiting.js` as the reference implementation (approved style)
-- SVG→PNG pipeline: `sharp(Buffer.from(svg)).resize(720).png().toBuffer()`
-- Embed graphs as base64 PNG in slides
-- Purple for H5, or appropriate chapter color
-- Min 15 slides, 18pt+ font, one idea per slide
-
-### 4d. Nieuws met visual (→ `2. Leren/`)
-- Follow `econ-nieuws-exercise` skill exactly
-- **Font sizes**: headline 16pt, body 11pt, source 9pt, questions 11pt, banner 12pt
-- **MUST include real SVG→PNG visual** (bar chart, V/A diagram, flowchart — NOT a text placeholder)
-- Image: full content width (482pt), height from aspect ratio
-- 2-page layout: page 1 = article + visual + questions, page 2 = answers
-- Domain banners for "Vragen" and "Antwoordmodel"
-
-### 4e. Samenvatting (→ `2. Leren/`)
-- **TABLE-BASED infographic layout** — NOT paragraph-based
-- Use `build-infographic-311.js` or `samenvatting-351-352-rebuild.js` as reference
-- Color-coded domain sections, colorBorder() system
-- Content width 10466 DXA, margins 720
-
-### 4f. YouTube videos (→ `2. Leren/`)
-- Static HTML file with 3 video cards
-- Use real YouTube video IDs that exist
-- Match the card layout from existing youtube-videos.html files
-
-### 4g. Begeleide inoefening (→ `3. Oefenen/begeleide inoefening/`)
-- Uses `lib-begeleide-inoefening.js` library
-- Generates both vragen.docx and antwoorden.docx
-- 6-8 guided exercises with scaffolding (denkstappen, hints, formules)
-
-### 4h. Opgavensets (→ `3. Oefenen/basis|midden|verrijking/`)
-- 3 levels: basis (8-10 vragen), midden (6-8), verrijking (4-6)
-- Each level: vragen.docx + antwoorden.docx = 6 files total
-- Ascending difficulty across levels
-
----
-
-## Step 5: HTML conversions
-
-Convert .docx → .html for the interactive web versions:
-
+### Phase 5: Convert docx → html (2 min)
 ```bash
-cd 4veco-platform
-python build-scripts/convert_voorkennis.py "$MODULE/path/to/paragraph"
-python build-scripts/convert_vaardigheden.py "$MODULE/path/to/paragraph"
-python build-scripts/convert_begeleide_inoefening.py "$MODULE/path/to/paragraph"
+python build-scripts/convert_voorkennis.py "$PAR"
+python build-scripts/convert_vaardigheden.py "$PAR"
+python build-scripts/convert_begeleide_inoefening.py "$PAR"
 ```
 
-Each converter auto-detects the .docx file in the paragraph folder and generates the .html alongside it.
-
----
-
-## Step 6: Copy static files
-
+### Phase 6: Deploy (2 min)
 ```bash
-cp "$MODULE/3.1 Hoofdstuk 1 - Markten/3.1.1 Paragraaf 1 - Markt en marktstructuur/1. Voorbereiden/Lees dit als je niet weet hoe je moet beginnen met deze les.docx" "$MODULE/path/to/paragraph/1. Voorbereiden/"
-```
-
----
-
-## Step 7: Deploy
-
-```bash
-cd 4veco-platform
 node scripts/deploy.js "$MODULE"
 ```
+This runs ONLY the automated layer: engine copy, game shell generation, landing pages, link check, data tests. It does NOT build rich documents.
 
-This copies engines, regenerates all HTML shells (quiz, reasoning, skilltree, newsdetective), rebuilds all landing pages, and runs verification (link checker + data tests).
-
----
-
-## Step 8: Verify
-
-### 8a. File count
-A complete paragraph has **23 files** (excluding index.html):
-
-| Section | Files | Count |
-|---------|-------|-------|
-| 1. Voorbereiden | instapquiz.html, nieuws-detective.html, uitleg voorkennis (.docx + .html), Lees dit.docx | 5 |
-| 2. Leren | presentatie.pptx, uitleg vaardigheden (.docx + .html), nieuws met visual.docx, samenvatting.docx, youtube-videos.html | 6 |
-| 3. Oefenen | redeneer-spel.html, wiskundevaardigheden.html, begeleide inoefening (vragen + antwoorden .docx + .html), basis (2), midden (2), verrijking (2) | 11 |
-| Root | index.html | 1 |
-| **Total** | | **23 + index** |
-
-### 8b. Browser test
-- Open localhost, navigate to the paragraph
-- All 4 game types load and function
-- All section cards appear in the landing page
-
-### 8c. Document test
-- Open each .docx and .pptx in Word/PowerPoint — they must open without errors
-- Check font sizes are correct (body 11pt, not 20pt or 28pt)
-- Check presentations have graphs (not text-only)
-
-### 8d. Data tests
-```bash
-cd 4veco-platform
-MODULE_ROOT="$MODULE" npx jest --testPathPatterns "engines/tests/.*-data\.test\.js" --no-coverage
-```
+### Phase 7: Verify
+- [ ] File count: 23 files + index.html
+- [ ] All .docx/.pptx open in Word/PowerPoint without errors
+- [ ] Presentatie has ≥3 economic graphs, presents theory (no exercise instructions)
+- [ ] Nieuws met visual has embedded SVG→PNG chart, font sizes 16/11/9pt
+- [ ] Samenvatting uses table-based infographic layout
+- [ ] Browser: all 4 games load, all section cards appear in landing page
+- [ ] Data tests pass: `MODULE_ROOT="$MODULE" npx jest --testPathPatterns "engines/tests/.*-data\.test\.js"`
 
 ---
 
-## Common Mistakes (learned from Chapter 5)
+## 4. Script classification
 
-| Mistake | Correct approach |
-|---------|-----------------|
-| Supply curve with negative Y-intercept (P = 2Q - 40) | Always use positive Y-intercept (P = Q + 10). Curve must start on Y-axis. |
-| Presentations with exercise instructions ("maak opgave X") | Present theory with worked examples and graphs. Never tell students to do exercises. |
-| Font sizes 28pt/20pt in nieuws met visual | Use 16pt headline, 11pt body, 9pt source (match reference 3.1.1) |
-| Missing difficulty-3 quiz questions | Every category needs at least one difficulty: 3 question |
-| Forgot CHAPTER_NUMBERS when adding chapter | Update CHAPTER_NUMBERS alongside CHAPTER_FOLDERS and CHAPTER_ORDER |
-| Text placeholder instead of real graph in nieuws | Always use SVG→Sharp→PNG pipeline for embedded visuals |
-| Samenvatting as paragraphs | Use TABLE-BASED infographic layout with colorBorder() system |
-| Producer surplus on wrong side of supply curve | PS triangle: vertices at (supply Y-intercept on Y-axis), (equilibrium), (p* on Y-axis) |
+### Platform generators (reusable, run by deploy.js)
+Fully automated from data files. deploy.js runs these.
+
+| Script | Reads from | Writes to |
+|--------|-----------|-----------|
+| `generate-quiz-shells.js` | `shared/questions/*.js` | `1. Voorbereiden/*.html` |
+| `build-newsdetective-shells.js` | `shared/newsdetective/*.js` | `1. Voorbereiden/*.html` |
+| `build-reasoning-engine.js` | `shared/reasoning/*.js` | `3. Oefenen/*.html` |
+| `build-skilltree-shells.js` | PARAGRAPHS array + `engines/skilltree/base-elements.js` | `shared/skilltree/*.js` + `3. Oefenen/*.html` |
+| `build-landing-page.js` | Scans folder contents | `index.html` at 3 levels |
+| `build-reasoning-questions.js` | CSV file (manual arg) | `shared/reasoning/*.js` |
+
+### Reusable converters (run manually after .docx creation)
+
+| Script | Input | Output |
+|--------|-------|--------|
+| `convert_voorkennis.py` | `uitleg voorkennis.docx` in paragraph folder | `uitleg voorkennis.html` alongside |
+| `convert_vaardigheden.py` | `uitleg vaardigheden.docx` in paragraph folder | `uitleg vaardigheden.html` alongside |
+| `convert_begeleide_inoefening.py` | `begeleide inoefening – vragen.docx` + `antwoorden.docx` | `begeleide inoefening.html` alongside |
+
+### Reference implementations (copy + adapt for each paragraph)
+These are paragraph-specific scripts that serve as templates. Copy one, change the content section (marked with `════`), update the output path, run.
+
+| Script | What it builds | Copy for new paragraph |
+|--------|---------------|----------------------|
+| `template-B_voorkennis.js` | `uitleg voorkennis.docx` | Yes — adapt content section |
+| `template-A_vaardigheden.js` | `uitleg vaardigheden.docx` | Yes — adapt content section |
+| `pptx-351-afsluiting.js` | `presentatie.pptx` (with SVG graphs) | Yes — new slides + graphs |
+| `nieuws-351-352-afsluiting.js` | `nieuws met visual.docx` (with SVG chart) | Yes — new article + chart |
+| `samenvatting-351-352-rebuild.js` | `samenvatting.docx` (table-based) | Yes — new content |
+| `inoefening-351-afsluiting.js` | `begeleide inoefening` (vragen + antwoorden) | Yes — new exercises |
+| `opgaven-351-afsluiting.js` | `opgavensets` (3 levels × 2 docs) | Yes — new exercises |
+| `lib-begeleide-inoefening.js` | Shared library used by inoefening scripts | No — import, don't copy |
+
+### Paragraph-specific productions (archival, not templates)
+Scripts built for specific paragraphs in earlier work. Useful as examples but not the primary reference.
+
+| Script | Paragraph |
+|--------|-----------|
+| `pptx-321-marktevenwicht.js` | 3.2.1 |
+| `pptx-322-volkomen-concurrentie.js` | 3.2.2 |
+| `pptx-323-monopolie.js` | 3.2.3 |
+| `build-311-basisopgaven.js` | 3.1.1 |
+| `build-infographic-311.js` | 3.1.1 |
+
+### Utility scripts
+
+| Script | Purpose |
+|--------|---------|
+| `extract-quiz-data.js` | Extract quiz data from old HTML files |
+| `restyle-instapquiz.js` | Restyle legacy quiz files |
+| `extract-all-antwoorden.py` | Extract answers from textbook |
+| `fix-emoji.py` | Fix emoji encoding |
+| `prompt-youtube-videos.md` | Prompt template for finding YouTube videos |
 
 ---
 
-## Reference implementations
+## 5. What deploy.js does and does NOT do
 
-| File type | Best reference script | Key features |
-|-----------|----------------------|--------------|
-| Presentatie with graphs | `pptx-351-afsluiting.js` | SVG→PNG pipeline, 4 graphs, cards, flow chains |
-| Uitleg voorkennis | `template-B_voorkennis.js` | Domain banners, formula boxes, checklist |
-| Uitleg vaardigheden | `template-A_vaardigheden.js` | Per-skill pages, summary schema |
-| Nieuws met visual | `nieuws-351-352-afsluiting.js` | Real SVG→PNG, correct font sizes, domain banners |
-| Samenvatting | `samenvatting-351-352-rebuild.js` | Table-based infographic, colorBorder() |
-| Begeleide inoefening | `inoefening-351-afsluiting.js` | Uses lib-begeleide-inoefening.js |
-| Opgavensets | `opgaven-351-afsluiting.js` | 3 levels, vragen + antwoorden |
-| Chapter summary | `samenvatting-h5-afsluiting.js` | 9-section aanpak-samenvattingen format |
+### deploy.js handles (automated layer):
+- Copy engine files (JS/CSS) from `engines/` → `shared/`
+- Generate skilltree data + HTML shells
+- Generate reasoning game HTML shells
+- Generate quiz HTML shells
+- Generate newsdetective HTML shells
+- Rebuild all landing pages (index.html at paragraph/chapter/module level)
+- Run link checker
+- Run data validation tests
+
+### deploy.js does NOT handle (manual layer):
+- Presentatie (.pptx) — must run paragraph-specific pptx script
+- Uitleg voorkennis (.docx) — must run adapted template-B script
+- Uitleg vaardigheden (.docx) — must run adapted template-A script
+- Nieuws met visual (.docx) — must run adapted nieuws script
+- Samenvatting (.docx) — must run adapted samenvatting script
+- YouTube videos (.html) — must write manually
+- Begeleide inoefening (.docx) — must run adapted inoefening script
+- Opgavensets (.docx) — must run adapted opgaven script
+- HTML conversions (.docx → .html) — must run Python converters
+- Static file copy ("Lees dit...") — must copy manually
+
+**In short:** deploy.js builds the interactive shell. The rich teaching documents require paragraph-specific work before deploying.
+
+---
+
+## 6. Quality rules (learned from production)
+
+| Rule | Why |
+|------|-----|
+| Supply curves must have positive Y-intercept | P = 2Q - 40 creates a gap at the Q-axis and implies negative prices |
+| PS triangle: vertices at supply Y-intercept, equilibrium, p* on Y-axis | Prevents surplus on wrong side of curve |
+| Presentations: theory + worked examples, NEVER exercise instructions | The teacher decides when students practice |
+| Every presentation must have ≥3 SVG→PNG economic graphs | Students need repeated exposure to abstract visuals |
+| Font sizes in docx: headline 16pt, body 11pt, source 9pt | Matches reference documents; the old 28/20/16pt was too large |
+| Every quiz category needs ≥1 difficulty:3 question | Data validation test requires this for the mastery system |
+| Samenvatting uses table-based infographic layout | Paragraph-based layout doesn't match the reference |
+| CHAPTER_NUMBERS must be updated alongside CHAPTER_FOLDERS | Otherwise navigation shows "Hundefined" |
+| Filter `~$` temp files in directory scans | Office lock files get picked up as real content otherwise |

@@ -38,10 +38,13 @@ node scripts/deploy.js "../3. Module 3 - Markt en overheid"
 npm run deploy:m3
 ```
 
-De deploy doet:
+De deploy doet (alleen de **geautomatiseerde laag**):
 1. Kopieert engine files → `<module>/shared/`
-2. Runt alle generators (skilltree, reasoning, quiz, newsdetective, landing pages)
-3. Verificatie: link checker + data tests
+2. Genereert game shells (skilltree, reasoning, quiz, newsdetective)
+3. Herbouwt alle landing pages (index.html)
+4. Verificatie: link checker + data tests
+
+**deploy.js bouwt NIET:** presentaties, uitleg-documenten, nieuws met visual, samenvattingen, begeleide inoefening, opgavensets, youtube-videos, of HTML-conversies. Die vereisen paragraph-specifieke scripts — zie `BUILD-PARAGRAPH.md` voor het complete proces.
 
 ### Schalen naar Module 4
 ```bash
