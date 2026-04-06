@@ -140,6 +140,26 @@ The scaffold defines reserved zones that later elements must respect. By placing
 
 ---
 
+## PART 1C: ECONOMIC CORRECTNESS RULES
+
+These rules prevent common economic errors in graphs.
+
+### Supply curves
+- Supply curves MUST have a **positive Y-intercept** (the curve starts on the Y-axis above the origin)
+- NEVER use functions like `P = 2Q - 40` where the supply curve enters through the Q-axis (creates a white gap and implies negative prices at low quantities)
+- Good example: `P = Q + 10` (Y-intercept at P=10) or `P = 0.5Q + 20` (Y-intercept at P=20)
+
+### Surplus areas
+- **CS (consumentensurplus)**: triangle between demand Y-intercept, equilibrium, and P* on Y-axis. Always ABOVE the price line.
+- **PS (producentensurplus)**: triangle between supply Y-intercept, equilibrium, and P* on Y-axis. Always BELOW the price line, above the supply curve.
+- Both triangles share the equilibrium point and P* on the Y-axis as two of their three vertices.
+
+### Deadweight loss
+- DWL is always a triangle pointing toward the efficient equilibrium
+- At monopoly: DWL between monopoly Q, efficient Q, and the intersection of the curves
+
+---
+
 ## PART 2: COLOR PALETTE
 
 Use the shared project palette. Never use random colors.

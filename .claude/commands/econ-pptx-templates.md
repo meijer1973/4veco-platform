@@ -32,6 +32,19 @@ Reusable PptxGenJS code for building professional, visually consistent economics
 
 ---
 
+## MANDATORY: CONTENT RULES
+
+**Presentaties presenteren THEORIE met uitgewerkte voorbeelden.** Ze geven NOOIT expliciete instructies over opgaven ("maak opgave X", "doe oefening Y"). De docent bepaalt zelf wanneer leerlingen gaan oefenen.
+
+**Regels:**
+- Presenteer theorie met concrete voorbeelden en uitwerkingen
+- Gebruik grafieken om abstracte concepten visueel te maken
+- Geef nooit opdrachten of oefening-instructies op de dia's
+- Elke presentatie moet minimaal 3 SVG→PNG grafieken bevatten
+- Gebruik `pptx-351-afsluiting.js` als referentie-implementatie voor stijl en structuur
+
+---
+
 ## DESIGN SYSTEM: SHARED WITH WORD TEMPLATES
 
 The core principle is **visual unity** — a student should recognise the same color system, the same box types, and the same domain groupings whether they open a Word document or a PowerPoint slide.
@@ -56,6 +69,10 @@ const C = {
   dGreen:     "1E8449",
   dGreenLt:   "E8F8F0",
   dGreenDk:   "186A3B",
+  // ── Domain 4: Afsluiting (purple family) ──
+  dPurple:    "7D3C98",
+  dPurpleLt:  "F4ECF7",
+  dPurpleDk:  "6C3483",
   // ── Base colors ──
   navy:       "1E2761",   // dark backgrounds (title slide, summary slide)
   white:      "FFFFFF",

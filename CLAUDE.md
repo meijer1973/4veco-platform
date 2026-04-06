@@ -49,6 +49,28 @@ node scripts/deploy.js "../4. Module 4 - [Naam]"
 ```
 Zelfde engines, zelfde base-elements, andere content data.
 
+## Een nieuwe paragraaf bouwen
+
+Volg **`BUILD-PARAGRAPH.md`** voor het complete stappenplan. Dit is de master-recipe voor het bouwen van een volledige paragraaf (23 bestanden) inclusief registratie, data-aanmaak, documentgeneratie, en verificatie.
+
+### Registratie-checklist (4 bestanden bijwerken)
+Bij elke nieuwe paragraaf moeten deze 4 bestanden worden bijgewerkt:
+1. `build-scripts/build-landing-page.js` → PARAGRAAF_DATA + (bij nieuw hoofdstuk) CHAPTER_FOLDERS, CHAPTER_ORDER, CHAPTER_NUMBERS, DOMAIN_COLORS
+2. `build-scripts/build-skilltree-shells.js` → PARAGRAPHS array
+3. `engines/tests/skilltree-data.test.js` → expectedFiles array
+4. `engines/theme.js` → DOMAIN_COLORS (alleen bij nieuw hoofdstuk)
+
+### Referentie-implementaties
+| Bestandstype | Referentiescript |
+|--------------|-----------------|
+| Presentatie met grafieken | `pptx-351-afsluiting.js` |
+| Nieuws met visual | `nieuws-351-352-afsluiting.js` |
+| Samenvatting (infographic) | `samenvatting-351-352-rebuild.js` |
+| Uitleg voorkennis | `template-B_voorkennis.js` |
+| Uitleg vaardigheden | `template-A_vaardigheden.js` |
+| Begeleide inoefening | `inoefening-351-afsluiting.js` |
+| Opgavensets | `opgaven-351-afsluiting.js` |
+
 ## Build scripts met MODULE_ROOT
 
 Alle build scripts accepteren `MODULE_ROOT` als env var. Zonder die var schrijven ze naar hun parent directory (backward-compatible).
