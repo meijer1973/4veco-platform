@@ -2,6 +2,12 @@
 
 Platform-repo voor het genereren van lesmateriaal voor **Praktische Economie VWO 4**. Bevat game engines, build scripts, source data en skills. De gegenereerde output wordt gedeployed naar aparte module-repo's.
 
+## Eerst lezen
+
+- Gebruik [BUILD-PARAGRAPH.md](C:\Projects\4veco\4veco-platform\BUILD-PARAGRAPH.md) als de end-to-end handleiding voor het bouwen van een complete paragraaf.
+- Gebruik `AGENTS.md` voor repo-overzicht, architectuur, deployregels en kwaliteitsstandaard.
+- Gebruik `build-scripts/README.md` voor het onderscheid tussen platform generators, converters, reference implementations en utilities.
+
 ## Structuur
 
 ```
@@ -24,7 +30,7 @@ Platform-repo voor het genereren van lesmateriaal voor **Praktische Economie VWO
 │   ├── check-links.js          ← Verifieert alle interne links
 │   ├── verify-deployment.sh    ← Post-push verificatie
 │   └── pre-push-hook.js        ← Git hook
-├── .Codex/commands/           ← Skills (didactiek, templates, grafieken)
+├── skills/                     ← Shared skills (didactiek, templates, grafieken) — for Claude, Codex, and any agent
 └── package.json                ← Jest voor tests
 ```
 
@@ -42,6 +48,28 @@ De deploy doet:
 1. Kopieert engine files → `<module>/shared/`
 2. Runt alle generators (skilltree, reasoning, quiz, newsdetective, landing pages)
 3. Verificatie: link checker + data tests
+
+### Belangrijk: scope van deploy
+
+`deploy.js` bouwt alleen de **automated layer**:
+- engine-copy
+- quiz/newsdetective/reasoning/skilltree shells
+- landing pages
+- link checks
+- data tests
+
+`deploy.js` bouwt **niet** automatisch:
+- presentaties
+- uitleg voorkennis
+- uitleg vaardigheden
+- nieuws met visual
+- samenvattingen
+- begeleide inoefeningen
+- opgavensets
+- YouTube-video pagina's
+- docx → html conversies
+
+Voor de volledige paragraaf-productie: volg [BUILD-PARAGRAPH.md](C:\Projects\4veco\4veco-platform\BUILD-PARAGRAPH.md).
 
 ### Schalen naar Module 4
 ```bash
@@ -69,6 +97,8 @@ MODULE_ROOT="../3. Module 3 - Markt en overheid" node build-scripts/build-skillt
 | `template-B_voorkennis.js` | `uitleg voorkennis.docx` |
 | `pptx-template_presentatie.js` | Presentatie `.pptx` |
 
+Let op: deze tabel is niet de volledige paragraph workflow. Veel rijke assets gebruiken reference scripts of converters buiten `deploy.js`. Zie [BUILD-PARAGRAPH.md](C:\Projects\4veco\4veco-platform\BUILD-PARAGRAPH.md) voor de complete productieketen.
+
 ---
 
 ## Modelgebruik
@@ -85,7 +115,7 @@ MODULE_ROOT="../3. Module 3 - Markt en overheid" node build-scripts/build-skillt
 
 ## Skills — Automatische trigger-regels
 
-Skills staan in `.Codex/commands/`. Ze worden automatisch geladen op basis van de taak.
+Skills staan in `skills/`. Ze worden automatisch geladen op basis van de taak.
 
 | Taak | Laad deze skills |
 |------|-----------------|
@@ -187,6 +217,11 @@ Beschikbare modules: `pptxgenjs`, `sharp`, `docx`, `pdf-lib`, `marked`, `graphvi
 
 ### Python
 Module `python-docx` voor het lezen van bestaande Word-bestanden.
+
+De Python converters in `build-scripts/` zijn een vast onderdeel van de workflow voor:
+- `uitleg voorkennis.docx` → `uitleg voorkennis.html`
+- `uitleg vaardigheden.docx` → `uitleg vaardigheden.html`
+- `begeleide inoefening` docx-bestanden → interactieve HTML
 
 ---
 
