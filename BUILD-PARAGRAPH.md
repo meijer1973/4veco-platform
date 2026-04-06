@@ -59,19 +59,90 @@ These are the raw inputs needed to build one paragraph. They must exist BEFORE r
 | Newsdetective data | `shared/newsdetective/X.Y.Z.js` | JS: `var NEWS_DETECTIVE_DATA = { meta, article, rounds }` | Agent writes the JS file. Real Dutch news, 4 rounds. |
 | Skilltree config | Entry in `build-skilltree-shells.js` PARAGRAPHS array | JS object: `{ parNr, name, skills }` | Agent adds to array. Data file auto-generated. |
 
-### B. Rich document content (→ paragraph folders in module repo)
+### B. Rich document content — per-asset production specs
 
-These have **no pre-existing source data files**. The raw input is:
-- The textbook ("Praktische Economie 2020 antwoorden VWO M3 gestructureerd.docx")
-- The paragraph's learning goals and concepts
-- Recent Dutch news (for nieuws met visual)
-- Real YouTube videos (for youtube-videos)
+Each scripted-manual asset follows the same pattern: **read source → write build script with content → run script → get .docx/.pptx**. But the raw input, the extraction process, and the reusable vs custom split differ per asset. Here is the exact spec for each.
 
-The agent reads the textbook, understands the economics, and writes the content into paragraph-specific build scripts. This is the **scripted-manual** pattern:
+#### Presentatie (.pptx)
+| | |
+|---|---|
+| **Raw input** | Textbook paragraph: concepts, formulas, worked examples. Read via python-docx. |
+| **Agent process** | Extract 5-8 key concepts. For each: write a theory slide + design an SVG graph that visualises it. |
+| **Reference script** | `pptx-351-afsluiting.js` — copy, replace slide content + SVG graph functions. |
+| **Reusable (don't change)** | Slide masters (TITLE_DARK, CONTENT), color palette, `svgToPng()`, `drawCard()`, `flowChain()`, `addContentSlide()`. |
+| **Custom (must write)** | Slide sequence, text content per slide, SVG graph code per concept, speaker notes. |
+| **Skills to read first** | `econ-pptx-templates` + `economic-graph` |
+| **Hard rules** | Theory + worked examples only, NEVER exercise instructions. Min 3 SVG→PNG graphs. Min 18pt font. |
 
-```
-Agent reads textbook → Agent writes build script with content → Script generates .docx/.pptx
-```
+#### Uitleg voorkennis (.docx)
+| | |
+|---|---|
+| **Raw input** | Prerequisite knowledge: what must students already know from earlier paragraphs? Identify by reading the textbook exercises — which concepts do they assume? |
+| **Agent process** | List 5-7 prerequisite concepts. For each: write definition, formula (if any), worked example, tip, checklist item. Assign each to a domain (wiskunde/economisch/grafisch). |
+| **Reference script** | `template-B_voorkennis.js` — copy, replace content between `════` markers. |
+| **Reusable** | Entire document scaffold: domainBanner, formulaBox, tipBox, warningBox, checkBox, summarySchema, visualTOC, domainLegend. |
+| **Custom** | Content sections only (text between ════ markers). |
+| **Skills** | `econ-explainer-docs` + `econ-word-templates` |
+
+#### Uitleg vaardigheden (.docx)
+| | |
+|---|---|
+| **Raw input** | Skills taught in this paragraph. Identify from textbook learning goals and exercise types. |
+| **Agent process** | List 5-7 skills. For each: write a full page with waarom/hoe/voorbeeld/tip/check/summary. Assign domains. |
+| **Reference script** | `template-A_vaardigheden.js` — copy, replace content between ════ markers. |
+| **Reusable** | Entire document scaffold (same components as voorkennis). |
+| **Custom** | Content sections only. |
+| **Skills** | `econ-explainer-docs` + `econ-word-templates` |
+
+#### Nieuws met visual (.docx)
+| | |
+|---|---|
+| **Raw input** | A real, recent Dutch news article (NOS, RTL, Volkskrant, etc.) related to the paragraph topic. Must have a verifiable sourceUrl. |
+| **Agent process** | Write 80-word summary → design SVG chart/graph that teaches a concept from the article → write 5 questions (ascending difficulty) + answer key. |
+| **Reference script** | `nieuws-351-352-afsluiting.js` — copy, replace article content + SVG function + questions/answers. |
+| **Reusable** | Document scaffold (headline, ImageRun, banners, Q&A format), `svgToPng()`, `domainBanner()`. |
+| **Custom** | Article text, SVG chart code, questions, answers, source URL. |
+| **Skills** | `econ-nieuws-exercise` + `economic-graph` |
+| **Hard rules** | Font sizes 16/11/9pt. Real SVG→PNG chart, NOT text placeholder. sourceUrl required. |
+
+#### Samenvatting (.docx)
+| | |
+|---|---|
+| **Raw input** | The paragraph's key concepts, terms, formulas — distilled from the textbook and from the other documents you've already built for this paragraph. |
+| **Agent process** | Create a one-page visual summary using a table grid layout with domain-colored sections. |
+| **Reference script** | `samenvatting-351-352-rebuild.js` — copy, replace content cells. |
+| **Reusable** | Table infrastructure: `colorBorder()`, domain color system, content width constants. |
+| **Custom** | Content cells, concept groupings, which colors map to which sections. |
+| **Hard rule** | TABLE-BASED infographic layout. Never use paragraph-based layout. |
+
+#### Begeleide inoefening (vragen.docx + antwoorden.docx)
+| | |
+|---|---|
+| **Raw input** | Textbook exercises for this paragraph + worked solutions from the answer key docx. |
+| **Agent process** | Select 6-8 exercises. For each: write the question, add scaffolding (denkstappen, hints, formule-herinneringen), write the full solution. |
+| **Reference script** | `inoefening-351-afsluiting.js` — copy, replace exercise content. |
+| **Reusable** | `lib-begeleide-inoefening.js` library (import, don't copy) + script scaffold. |
+| **Custom** | Exercise questions, scaffolding text, worked solutions. |
+| **Skills** | `econ-word-templates` + `econ-didactiek` |
+
+#### Opgavensets — basis, midden, verrijking (6 .docx files)
+| | |
+|---|---|
+| **Raw input** | Textbook exercises, graded by difficulty. Basis = knowledge recall. Midden = application. Verrijking = analysis/evaluation. |
+| **Agent process** | Write questions at 3 levels (basis 8-10, midden 6-8, verrijking 4-6) + full answer models for each. |
+| **Reference script** | `opgaven-351-afsluiting.js` — copy, replace exercise content. Generates all 6 files. |
+| **Reusable** | Document scaffold (headers, numbering, answer formatting). |
+| **Custom** | All questions and answers. |
+
+#### YouTube videos (.html)
+| | |
+|---|---|
+| **Raw input** | None. This is a manual search task. |
+| **Agent process** | Search YouTube for 3 Dutch-language VWO economics videos matching the paragraph topic. Verify video IDs exist. |
+| **Reference** | Copy HTML structure from any existing `youtube-videos.html` file. |
+| **Reusable** | Card layout HTML/CSS. |
+| **Custom** | Video IDs, titles, channel names, descriptions. |
+| **Design note** | Manual by design. No generator exists or is planned. `prompt-youtube-videos.md` has search guidance. |
 
 ### C. Registration entries (→ platform repo config files)
 
