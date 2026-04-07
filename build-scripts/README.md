@@ -1,35 +1,127 @@
 # Build Scripts
 
-Reusable Node.js scripts for generating lesson materials. Each script implements a specific template from the `skills/` folder and can be adapted for any paragraph by changing the content data section.
+This folder contains all production scripts used to turn source material into the rich paragraph outputs that appear in the module repos.
 
-## Purpose
+If you want to build a complete paragraph from scratch, start with [BUILD-PARAGRAPH.md](C:\Projects\4veco\4veco-platform\BUILD-PARAGRAPH.md). This README explains how the scripts in `build-scripts/` are grouped and how to use that grouping.
 
-When a task runs and produces scripts that can be reused for similar tasks, those scripts go here. This avoids rebuilding from scratch every time we generate materials for a new paragraph.
+## Script Types
 
-## How to use
+There are four script categories in this folder.
 
-1. Copy the relevant script for your document type
-2. Change the **content data section** (marked with `════` separators) — this is where paragraph-specific text lives
-3. Update the **output path** to point to the correct paragraph folder
-4. Run with: `NODE_PATH="$(npm root -g)" node <script>.js`
+### 1. Platform Generators
 
-## Available scripts
+These are reusable scripts that generate the automated layer. They are the scripts that `scripts/deploy.js` relies on.
 
-| Script | Template | Generates |
-|--------|----------|-----------|
-| `template-B_voorkennis.js` | econ-word-templates Template B | `X.X.X [Naam] – uitleg voorkennis.docx` |
-| `template-A_vaardigheden.js` | econ-word-templates Template A | `X.X.X [Naam] – uitleg vaardigheden.docx` |
-| `pptx-template_presentatie.js` | econ-pptx-templates | `X.X.X [Naam] – presentatie.pptx` |
+| Script | Purpose |
+|--------|---------|
+| `generate-quiz-shells.js` | Build quiz HTML shells from quiz data files |
+| `build-newsdetective-shells.js` | Build nieuws-detective HTML shells |
+| `build-reasoning-engine.js` | Build reasoning game HTML shells |
+| `build-reasoning-questions.js` | Convert reasoning CSV into `shared/reasoning/*.js` |
+| `build-skilltree-shells.js` | Build skilltree data + HTML shells |
+| `build-landing-page.js` | Build `index.html` at paragraph/chapter/module level |
+
+Use these when:
+- the source already exists as structured data
+- the output should be fully reproducible
+- the step belongs to the automated layer
+
+### 2. Converters
+
+These transform rich `.docx` source files into interactive HTML variants.
+
+| Script | Input | Output |
+|--------|-------|--------|
+| `convert_voorkennis.py` | `uitleg voorkennis.docx` | `uitleg voorkennis.html` |
+| `convert_vaardigheden.py` | `uitleg vaardigheden.docx` | `uitleg vaardigheden.html` |
+| `convert_begeleide_inoefening.py` | vragen + antwoorden `.docx` | `begeleide inoefening.html` |
+
+Use these after the corresponding `.docx` has already been produced.
+
+### 3. Reference Implementations
+
+These are the most important scripts for rich paragraph production outside the automated layer. They are not fully generic generators, but they are the intended reference points to copy and adapt for a new paragraph.
+
+| Script | Builds |
+|--------|--------|
+| `template-B_voorkennis.js` | `uitleg voorkennis.docx` |
+| `template-A_vaardigheden.js` | `uitleg vaardigheden.docx` |
+| `pptx-template_presentatie.js` | basic presentation template |
+| `pptx-351-afsluiting.js` | strong presentation reference with SVG graphs |
+| `nieuws-351-352-afsluiting.js` | `nieuws met visual.docx` |
+| `samenvatting-351-352-rebuild.js` | paragraph `samenvatting.docx` |
+| `inoefening-351-afsluiting.js` | begeleide inoefening docs |
+| `opgaven-351-afsluiting.js` | basis/midden/verrijking opgavensets |
+| `lib-begeleide-inoefening.js` | shared library used by inoefening scripts |
+
+Use these when:
+- the asset is rich, paragraph-specific, and content-heavy
+- you need a proven scaffold instead of starting from zero
+- the file is built by "copy script, replace content section, run script"
+
+### 4. Paragraph-Specific or Utility Scripts
+
+These are useful examples, migrations, or maintenance helpers, but they are not the main source of truth for new work.
+
+Examples:
+- `pptx-321-marktevenwicht.js`
+- `pptx-322-volkomen-concurrentie.js`
+- `pptx-323-monopolie.js`
+- `build-311-basisopgaven.js`
+- `build-infographic-311.js`
+- `extract-quiz-data.js`
+- `restyle-instapquiz.js`
+- `extract-all-antwoorden.py`
+- `fix-emoji.py`
+- `prompt-youtube-videos.md`
+
+## How To Use This Folder
+
+### If you are building the automated layer
+
+Run:
+
+```bash
+node scripts/deploy.js "../3. Module 3 - Markt en overheid"
+```
+
+This handles:
+- engine copy
+- shell generation
+- landing pages
+- validation
+
+### If you are building a complete paragraph
+
+Follow [BUILD-PARAGRAPH.md](C:\Projects\4veco\4veco-platform\BUILD-PARAGRAPH.md), then use scripts from this folder in this order:
+
+1. Create or update structured game data
+2. Run platform generators
+3. Build rich `.docx` / `.pptx` assets from reference implementations
+4. Run converters for HTML versions
+5. Run `deploy.js`
+6. Verify output
 
 ## Conventions
 
-- Scripts are named `template-{letter}_{doctype}.js` for Word documents
-- Scripts are named `pptx-template_{doctype}.js` for PowerPoint
-- The content data section is clearly separated from the template infrastructure
-- All scripts self-verify: they check the output directory exists and report file size
-- All scripts use the shared color palette and component library from the skills
+- Reusable scripts should include a `HOW TO ADAPT` header.
+- Paragraph-specific content should live in clearly marked content sections.
+- Shared libraries should be imported, not copied.
+- Scripts that are good starting points for new paragraphs should say so explicitly in their header comments.
+- If a script is archival or paragraph-specific, say that explicitly in the header comments.
 
-## Notes
+## Scope Reminder
 
-- The nieuws (Template C) script was not preserved but follows the same pattern — the key components are `titleBlock()`, `QUESTION_NUMBERING`, tight margins (`PAGE_TIGHT`), and image extraction from existing docx
-- Opgaven files use custom styles from the textbook source and don't currently need build scripts
+`deploy.js` does not build the full rich paragraph by itself.
+
+It does not create:
+- presentaties
+- uitleg voorkennis docx
+- uitleg vaardigheden docx
+- nieuws met visual
+- samenvattingen
+- begeleide inoefeningen
+- opgavensets
+- YouTube pages
+
+Those still require paragraph-specific content work first, using the reference implementations listed above.
