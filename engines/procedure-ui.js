@@ -195,6 +195,13 @@
     if (!proc) return;
     var html = "";
 
+    // Show procedure image if provided
+    if (proc.image) {
+      html += '<div class="p-procedure-image">';
+      html += '<img src="' + proc.image + '" alt="' + escapeHtml(proc.imageAlt || proc.title) + '">';
+      html += '</div>';
+    }
+
     proc.steps.forEach(function (step, si) {
       // Arrow before each step (except first)
       if (si > 0) {
