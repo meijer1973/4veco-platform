@@ -21,18 +21,19 @@ A complete paragraph has **23 files** plus an index.html. Every file listed as r
 | 9 | `X.Y.Z [Naam] – nieuws met visual.docx` | 2. Leren | Yes | Adapt `nieuws-351-352-afsluiting.js` | Recent Dutch news + SVG visual | Scripted-manual |
 | 10 | `X.Y.Z [Naam] – samenvatting.docx` | 2. Leren | Yes | Adapt `samenvatting-351-352-rebuild.js` | Key concepts from paragraph | Scripted-manual |
 | 11 | `X.Y.Z [Naam] – youtube-videos.html` | 2. Leren | Yes | Write directly | 3 real YouTube video IDs | Manual |
-| 12 | `X.Y.Z [Naam] – redeneer-spel.html` | 3. Oefenen | Yes | `build-reasoning-engine.js` (auto) | `shared/reasoning/X.Y.Z.js` | Generated |
-| 13 | `X.Y.Z [Naam] – wiskundevaardigheden.html` | 3. Oefenen | Yes | `build-skilltree-shells.js` (auto) | PARAGRAPHS array in script | Generated |
-| 14 | `begeleide inoefening – vragen.docx` | 3. Oefenen/begeleide inoefening | Yes | Adapt `inoefening-351-afsluiting.js` | Exercises with scaffolding | Scripted-manual |
-| 15 | `begeleide inoefening – antwoorden.docx` | 3. Oefenen/begeleide inoefening | Yes | Same script as #14 | Same | Scripted-manual |
-| 16 | `begeleide inoefening.html` | 3. Oefenen/begeleide inoefening | Yes | `convert_begeleide_inoefening.py` | Files #14 + #15 | Converted |
-| 17 | `basis – vragen.docx` | 3. Oefenen/basisopgaven | Yes | Adapt `opgaven-351-afsluiting.js` | Exercises (8-10 questions) | Scripted-manual |
-| 18 | `basis – antwoorden.docx` | 3. Oefenen/basisopgaven | Yes | Same script as #17 | Same | Scripted-manual |
-| 19 | `midden – vragen.docx` | 3. Oefenen/middenopgaven | Yes | Same script as #17 | Exercises (6-8 questions) | Scripted-manual |
-| 20 | `midden – antwoorden.docx` | 3. Oefenen/middenopgaven | Yes | Same script as #17 | Same | Scripted-manual |
-| 21 | `verrijking – vragen.docx` | 3. Oefenen/verrijkingsopgaven | Yes | Same script as #17 | Exercises (4-6 questions) | Scripted-manual |
-| 22 | `verrijking – antwoorden.docx` | 3. Oefenen/verrijkingsopgaven | Yes | Same script as #17 | Same | Scripted-manual |
-| 23 | `index.html` | Root | Yes | `build-landing-page.js` (auto) | Scans folder contents | Generated |
+| 12 | `X.Y.Z [Naam] – stappenplan.html` | 2. Leren | Yes | `build-procedure-shells.js` (auto) | `shared/procedure/X.Y.Z.js` | Generated |
+| 13 | `X.Y.Z [Naam] – redeneer-spel.html` | 3. Oefenen | Yes | `build-reasoning-engine.js` (auto) | `shared/reasoning/X.Y.Z.js` | Generated |
+| 14 | `X.Y.Z [Naam] – wiskundevaardigheden.html` | 3. Oefenen | Yes | `build-skilltree-shells.js` (auto) | PARAGRAPHS array in script | Generated |
+| 15 | `begeleide inoefening – vragen.docx` | 3. Oefenen/begeleide inoefening | Yes | Adapt `inoefening-351-afsluiting.js` | Exercises with scaffolding | Scripted-manual |
+| 16 | `begeleide inoefening – antwoorden.docx` | 3. Oefenen/begeleide inoefening | Yes | Same script as #15 | Same | Scripted-manual |
+| 17 | `begeleide inoefening.html` | 3. Oefenen/begeleide inoefening | Yes | `convert_begeleide_inoefening.py` | Files #15 + #16 | Converted |
+| 18 | `basis – vragen.docx` | 3. Oefenen/basisopgaven | Yes | Adapt `opgaven-351-afsluiting.js` | Exercises (8-10 questions) | Scripted-manual |
+| 19 | `basis – antwoorden.docx` | 3. Oefenen/basisopgaven | Yes | Same script as #18 | Same | Scripted-manual |
+| 20 | `midden – vragen.docx` | 3. Oefenen/middenopgaven | Yes | Same script as #18 | Exercises (6-8 questions) | Scripted-manual |
+| 21 | `midden – antwoorden.docx` | 3. Oefenen/middenopgaven | Yes | Same script as #18 | Same | Scripted-manual |
+| 22 | `verrijking – vragen.docx` | 3. Oefenen/verrijkingsopgaven | Yes | Same script as #18 | Exercises (4-6 questions) | Scripted-manual |
+| 23 | `verrijking – antwoorden.docx` | 3. Oefenen/verrijkingsopgaven | Yes | Same script as #18 | Same | Scripted-manual |
+| 24 | `index.html` | Root | Yes | `build-landing-page.js` (auto) | Scans folder contents | Generated |
 
 ### Output type definitions
 
@@ -57,6 +58,7 @@ These are the raw inputs needed to build one paragraph. They must exist BEFORE r
 | Quiz questions | `shared/questions/X.Y.Z.js` | JS: `var QUIZ_DATA = { meta, categories, questions }` | Agent writes the JS file. 15 questions, 3-4 categories, at least one difficulty:3 per category. |
 | Reasoning questions | `source-data/module-N/reasoning/X.Y.Z.csv` | Semicolon-delimited CSV, 15 rows, 5 modes | Agent writes CSV, then runs `build-reasoning-questions.js` to produce JS. |
 | Newsdetective data | `shared/newsdetective/X.Y.Z.js` | JS: `var NEWS_DETECTIVE_DATA = { meta, article, rounds }` | Agent writes the JS file. Real Dutch news, 4 rounds. |
+| Procedure data | `shared/procedure/X.Y.Z.js` | JS: `var PROCEDURE_DATA = { meta, procedures }` | Agent writes the JS file. Steps aligned with uitleg vaardigheden. |
 | Skilltree config | Entry in `build-skilltree-shells.js` PARAGRAPHS array | JS object: `{ parNr, name, skills }` | Agent adds to array. Data file auto-generated. |
 
 ### B. Rich document content — per-asset production specs
@@ -231,6 +233,7 @@ Fully automated from data files. deploy.js runs these.
 |--------|-----------|-----------|
 | `generate-quiz-shells.js` | `shared/questions/*.js` | `1. Voorbereiden/*.html` |
 | `build-newsdetective-shells.js` | `shared/newsdetective/*.js` | `1. Voorbereiden/*.html` |
+| `build-procedure-shells.js` | `shared/procedure/*.js` | `2. Leren/*.html` |
 | `build-reasoning-engine.js` | `shared/reasoning/*.js` | `3. Oefenen/*.html` |
 | `build-skilltree-shells.js` | PARAGRAPHS array + `engines/skilltree/base-elements.js` | `shared/skilltree/*.js` + `3. Oefenen/*.html` |
 | `build-landing-page.js` | Scans folder contents | `index.html` at 3 levels |
@@ -289,6 +292,7 @@ Scripts built for specific paragraphs in earlier work. Useful as examples but no
 - Generate reasoning game HTML shells
 - Generate quiz HTML shells
 - Generate newsdetective HTML shells
+- Generate procedure (stappenplan) HTML shells
 - Rebuild all landing pages (index.html at paragraph/chapter/module level)
 - Run link checker
 - Run data validation tests

@@ -50,6 +50,7 @@ function copyEngines() {
         'reasoning-engine.js', 'reasoning-ui.js', 'reasoning.css',
         'skilltree-engine.js', 'skilltree-ui.js', 'skilltree.css',
         'newsdetective-engine.js', 'newsdetective-ui.js', 'newsdetective.css',
+        'procedure-engine.js', 'procedure-ui.js', 'procedure.css',
         'theme.js'
     ];
 
@@ -97,6 +98,7 @@ function runBuildScripts() {
         { name: 'Reasoning engine shells', cmd: 'node build-scripts/build-reasoning-engine.js' },
         { name: 'Quiz shells', cmd: 'node build-scripts/generate-quiz-shells.js' },
         { name: 'News detective shells', cmd: 'node build-scripts/build-newsdetective-shells.js' },
+        { name: 'Procedure shells', cmd: 'node build-scripts/build-procedure-shells.js' },
         { name: 'Landing pages', cmd: 'node build-scripts/build-landing-page.js' },
     ];
 
