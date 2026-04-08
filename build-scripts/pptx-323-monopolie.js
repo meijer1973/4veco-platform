@@ -12,6 +12,7 @@ const PptxGenJS = require("pptxgenjs");
 const sharp = require("sharp");
 const fs = require("fs");
 const path = require("path");
+const { saveSvgFiles } = require("./lib-svg-save");
 
 // ═══════════════════════════════════════════════════════════════════════════
 // COLOR PALETTE
@@ -273,10 +274,13 @@ async function build() {
   addTitleMaster(pres);
   addContentMaster(pres);
 
-  const [g7Buf, g8Buf] = await Promise.all([
-    svgToPng(buildMonopolyMOeqMKSVG()),
-    svgToPng(buildMonopolyProfitCSSVG()),
-  ]);
+  const svgEntries = [
+    { name: "monopoly-mo-eq-mk", svg: buildMonopolyMOeqMKSVG() },
+    { name: "monopoly-profit-cs", svg: buildMonopolyProfitCSSVG() },
+  ];
+  const [g7Buf, g8Buf] = await Promise.all(
+    svgEntries.map(e => svgToPng(e.svg))
+  );
   const g7 = pngToBase64(g7Buf);
   const g8 = pngToBase64(g8Buf);
 
@@ -545,6 +549,7 @@ async function build() {
 
   await pres.writeFile({ fileName: outFile });
   console.log("Saved:", outFile);
+  saveSvgFiles(svgEntries, outDir);
   const stats = fs.statSync(outFile);
   console.log("Size:", (stats.size / 1024).toFixed(1), "KB");
   console.log("Slides: 11 (9 original + 2 graphs)");
