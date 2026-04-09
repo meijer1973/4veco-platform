@@ -48,6 +48,7 @@ const PARAGRAPHS = [
     // Module 1: Schaarste, geld en handel
     { parNr:'1.1.1', name:'Kiezen is kostbaar', skills:['F1','F2','F3','F4','F7'] },
     { parNr:'1.1.2', name:'Kiezen of delen', skills:['F1','F2','F3','F4'] },
+    { parNr:'1.1.3', name:'Toepassen', skills:['F1','F2','F3','F4','F7'] },
 ];
 
 // ── Compute which skills are new per paragraph ───────────────────────

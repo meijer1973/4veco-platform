@@ -99,6 +99,7 @@ const ALL_PARAGRAAF_DATA = [
   // Module 1: Schaarste, geld en handel
   { id: "1.1.1", name: "Kiezen is kostbaar", chapter: "1.1", chapterName: "Voor niks gaat de zon op", chapterFull: "Hoofdstuk 1 \u2013 Voor niks gaat de zon op", domain: "teal" },
   { id: "1.1.2", name: "Kiezen of delen", chapter: "1.1", chapterName: "Voor niks gaat de zon op", chapterFull: "Hoofdstuk 1 \u2013 Voor niks gaat de zon op", domain: "teal" },
+  { id: "1.1.3", name: "Toepassen", chapter: "1.1", chapterName: "Voor niks gaat de zon op", chapterFull: "Hoofdstuk 1 \u2013 Voor niks gaat de zon op", domain: "teal" },
 ];
 
 // ── Filter to active module only ──────────────────────────────────────
