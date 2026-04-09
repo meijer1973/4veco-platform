@@ -13,6 +13,7 @@ and hidden answer reveals.
 import sys, io, os, glob, html as html_mod, re
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 from docx import Document
+from docx.oxml.ns import qn as _qn
 
 DOMAIN_MAP = {
     'Wiskundig':        ('wiskunde',   '#1A5276', '#EBF5FB', '#154360'),
@@ -70,6 +71,19 @@ def parse_bi_document(docx_path, is_answers=False):
             if para_index < len(doc.paragraphs):
                 p = doc.paragraphs[para_index]
                 para_index += 1
+
+                # Dual coding: detect asset images via alt-text convention
+                for run in p.runs:
+                    blips = run._element.findall('.//' + _qn('a:blip'))
+                    if blips:
+                        drawing = run._element.find('.//' + _qn('wp:inline'))
+                        if drawing is not None:
+                            docPr = drawing.find(_qn('wp:docPr'))
+                            if docPr is not None:
+                                descr = docPr.get('descr', '')
+                                if descr.startswith('asset:'):
+                                    stream.append(('asset_image', descr[6:]))
+
                 text = p.text.strip()
                 if not text:
                     continue
@@ -196,6 +210,7 @@ def merge_vragen_antwoorden(vragen_stream, antwoorden_stream):
                 'text': '',
                 'fill_in': [],
                 'helpers': [],
+                'images': [],
                 'answer': None,
                 'uitleg': None,
             }
@@ -209,7 +224,9 @@ def merge_vragen_antwoorden(vragen_stream, antwoorden_stream):
             continue  # skip the heading, samenvatting table follows
 
         if current_question:
-            if etype == 'paragraph':
+            if etype == 'asset_image':
+                current_question['images'].append(edata)
+            elif etype == 'paragraph':
                 if not current_question['text']:
                     current_question['text'] = edata
                 else:
@@ -221,7 +238,9 @@ def merge_vragen_antwoorden(vragen_stream, antwoorden_stream):
                 # Could be fill-in template or formula reminder
                 current_question['fill_in'].append(edata)
         elif current_opgave:
-            if etype == 'context_box':
+            if etype == 'asset_image':
+                current_opgave.setdefault('images', []).append(edata)
+            elif etype == 'context_box':
                 current_opgave['context'].append(edata)
             elif etype == 'paragraph':
                 current_opgave['intro'].append(edata)
@@ -426,13 +445,18 @@ def generate_html(opgaven, samenvatting, para_number, para_name):
           </details>
 '''
 
+            # Dual coding: scaffold images
+            images_html = ''
+            for img_name in q.get('images', []):
+                images_html += f'          <figure class="asset-figure"><img src="../../_assets/{esc(img_name)}.svg" alt="{esc(img_name)}" class="asset-svg"></figure>\n'
+
             questions_html += f'''
         <div class="question-card" id="{q['id']}">
           <div class="question-header">
             <div class="question-label">{esc(q['label'])}</div>
             <div class="question-text">{esc(q['text'])}</div>
           </div>
-{fill_in}{helpers}{answer_html}        </div>
+{fill_in}{helpers}{images_html}{answer_html}        </div>
 '''
 
         opgave_sections += f'''
@@ -638,6 +662,13 @@ def generate_html(opgaven, samenvatting, para_number, para_name):
   .answer-toggle[open] summary::before {{ transform: rotate(90deg); }}
   .answer-toggle[open] summary {{ background: #D4E6F1; }}
   .answer-content {{ padding: 1rem 1.2rem; border-top: 1px solid #D6EAF8; }}
+  .asset-figure {{
+    text-align: center; margin: 0.8rem 0 1rem;
+  }}
+  .asset-svg {{
+    max-width: 100%; height: auto; border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  }}
   .answer-box {{
     background: #F0FFF0; border: 1px solid #C8E6C9; border-radius: 6px;
     padding: 0.8rem 1rem; margin-bottom: 0.6rem; font-family: Consolas, 'Courier New', monospace;

@@ -307,7 +307,7 @@ h1, h2, h3 { font-family: 'Poppins', Arial, sans-serif; }
 /* --- Option Card --- */
 .p-option-card {
   background: #fff;
-  border: 2px solid var(--p-border);
+  border: 2px solid #cbd5e0;
   border-radius: 12px;
   padding: 12px 14px;
   font-size: 13px;
@@ -319,6 +319,7 @@ h1, h2, h3 { font-family: 'Poppins', Arial, sans-serif; }
   flex: 1 1 0;
   min-width: 160px;
   max-width: 260px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
 }
 .p-option-card:hover:not(.p-disabled) {
   border-color: #cbd5e1;

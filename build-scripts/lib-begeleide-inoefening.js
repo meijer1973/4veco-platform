@@ -320,7 +320,7 @@ function embedAssetFromPath(imgPath, width, height) {
     alignment: AlignmentType.CENTER,
     children: [new ImageRun({
       data: buf, transformation: { width, height }, type: ext === 'jpg' ? 'jpg' : 'png',
-      altText: { title: imgPath.split(/[/\\]/).pop(), description: 'asset', name: imgPath.split(/[/\\]/).pop() },
+      altText: { title: imgPath.split(/[/\\]/).pop(), description: 'asset:' + imgPath.split(/[/\\]/).pop().replace(/\.[^.]+$/, ''), name: imgPath.split(/[/\\]/).pop() },
     })],
   });
 }
