@@ -47,6 +47,7 @@ const PARAGRAPHS = [
     { parNr:'3.5.2', name:'Naar het examen', skills:null }, // all skills — exam level
     // Module 1: Schaarste, geld en handel
     { parNr:'1.1.1', name:'Kiezen is kostbaar', skills:['F1','F2','F3','F4','F7'] },
+    { parNr:'1.1.2', name:'Kiezen of delen', skills:['F1','F2','F3','F4'] },
 ];
 
 // ── Compute which skills are new per paragraph ───────────────────────
