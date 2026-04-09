@@ -215,6 +215,110 @@ if (fs.existsSync(samPath)) {
   }
 }
 
+// ── Dual coding check ───────────────────────────────────────────────
+
+console.log('\n── Dual coding (images in documents) ──');
+
+const assetsDir = path.join(PAR, '_assets');
+if (fs.existsSync(assetsDir)) {
+  const svgs = fs.readdirSync(assetsDir).filter(f => f.endsWith('.svg'));
+  const pngs = fs.readdirSync(assetsDir).filter(f => f.endsWith('.png'));
+  if (svgs.length > 0) {
+    pass(`_assets/ has ${svgs.length} SVG(s) and ${pngs.length} PNG(s)`);
+  } else {
+    warn(`_assets/ exists but has no SVG files`);
+  }
+} else {
+  warn(`No _assets/ folder — paragraph has no shared visuals (dual coding missing)`);
+}
+
+// Check that key docx files have embedded images (dual coding)
+function countDocxImages(docxPath) {
+  try {
+    const AdmZip = require('adm-zip');
+    const zip = new AdmZip(docxPath);
+    const docXml = zip.readAsText('word/document.xml');
+    return (docXml.match(/<a:blip/g) || []).length;
+  } catch (e) {
+    return -1; // adm-zip not available
+  }
+}
+
+const dualCodingDocs = [
+  { path: `2. Leren/${prefix} – uitleg vaardigheden.docx`, label: 'Vaardigheden', minImages: 1 },
+  { path: `1. Voorbereiden/${prefix} – uitleg voorkennis.docx`, label: 'Voorkennis', minImages: 0 },
+  { path: `2. Leren/${prefix} – samenvatting.docx`, label: 'Samenvatting', minImages: 0 },
+];
+
+for (const doc of dualCodingDocs) {
+  const fullPath = path.join(PAR, doc.path);
+  if (fs.existsSync(fullPath)) {
+    const imgCount = countDocxImages(fullPath);
+    if (imgCount === -1) {
+      // adm-zip not available, skip
+    } else if (imgCount >= doc.minImages && imgCount > 0) {
+      pass(`${doc.label}: ${imgCount} embedded image(s) (dual coding ✓)`);
+    } else if (doc.minImages > 0 && imgCount === 0) {
+      fail(`${doc.label}: NO embedded images — dual coding missing`);
+    } else if (imgCount === 0) {
+      warn(`${doc.label}: no embedded images — consider adding visuals`);
+    }
+  }
+}
+
+// Check begeleide inoefening vragen has scaffold images
+const biVragenPath = path.join(PAR, `3. Oefenen/begeleide inoefening/${prefix} – begeleide inoefening – vragen.docx`);
+if (fs.existsSync(biVragenPath)) {
+  const imgCount = countDocxImages(biVragenPath);
+  if (imgCount === -1) {
+    // adm-zip not available
+  } else if (imgCount > 0) {
+    pass(`Begeleide inoefening vragen: ${imgCount} scaffold image(s) (dual coding ✓)`);
+  } else {
+    warn(`Begeleide inoefening vragen: no scaffold images — weaker students need visual support`);
+  }
+}
+
+// ── Unified experience check ────────────────────────────────────────
+
+console.log('\n── Unified experience ──');
+
+const procedurePath = path.join(sharedDir, 'procedure', `${parNr}.js`);
+if (fs.existsSync(procedurePath)) {
+  try {
+    const code = fs.readFileSync(procedurePath, 'utf8');
+    const fn = new Function(code + '\nreturn PROCEDURE_DATA;');
+    const data = fn();
+    const procs = data.procedures || [];
+    pass(`Stappenplan: ${procs.length} procedure(s) defined`);
+    // Check each procedure has proper step labels
+    for (const proc of procs) {
+      const steps = (proc.steps || []).filter(s => s.type === 'choose');
+      const hasLabels = steps.every(s => s.label && s.label.includes('Stap'));
+      if (!hasLabels) {
+        warn(`Procedure "${proc.title}": step labels should include "Stap N — description" for unified experience`);
+      }
+    }
+  } catch (e) {
+    fail(`Procedure data parse error: ${e.message}`);
+  }
+}
+
+// Check _paragraph-plan.md exists
+const planPath = path.join(PAR, '_paragraph-plan.md');
+if (fs.existsSync(planPath)) {
+  const plan = fs.readFileSync(planPath, 'utf8');
+  const hasProcedures = plan.includes('Procedure-stappen-plan') || plan.includes('procedure-stappen');
+  const hasVisuelen = plan.includes('Visuelen-toewijzing') || plan.includes('visuelen-toewijzing');
+  const hasTerminologie = plan.includes('Terminologie') || plan.includes('terminologie');
+  if (hasProcedures) { pass('Plan has procedure-stappen-plan (unified experience)'); }
+  else { warn('Plan missing procedure-stappen-plan section'); }
+  if (hasVisuelen) { pass('Plan has visuelen-toewijzing (dual coding)'); }
+  else { warn('Plan missing visuelen-toewijzing section'); }
+  if (hasTerminologie) { pass('Plan has terminologie table'); }
+  else { warn('Plan missing terminologie table'); }
+}
+
 // ── Summary ──────────────────────────────────────────────────────────
 
 console.log('\n══════════════════════════════════════════');

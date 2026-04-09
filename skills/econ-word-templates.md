@@ -831,9 +831,43 @@ async function buildBegeleideInoefeningSplit(paragraafNr, onderwerp, headerText,
 
 ---
 
-## PART 5: SVG → PNG FOR WORD
+## PART 5: DUAL CODING — EMBEDDING VISUALS IN WORD
 
-When embedding graphs or visuals in Word, use this pipeline:
+### Preferred approach: embed pre-built PNGs from `_assets/`
+
+Use `lib-svg-utils.js` for SVG→PNG conversion during Phase 4b. Then embed the PNGs in Word documents using the `embedAssetImage` helper (already in template-A and template-B):
+
+```javascript
+const { ImageRun } = require("docx");
+
+function embedAssetImage(assetsDir, filename, width, height) {
+  const imgPath = path.join(assetsDir, filename + ".png");
+  if (!fs.existsSync(imgPath)) return null;
+  const buf = fs.readFileSync(imgPath);
+  return new Paragraph({
+    spacing: { before: 120, after: 120 },
+    alignment: AlignmentType.CENTER,
+    children: [new ImageRun({
+      data: buf, transformation: { width, height }, type: "png",
+      altText: { title: filename, description: "asset:" + filename, name: filename },
+    })],
+  });
+}
+```
+
+**Critical: the `asset:` alt-text convention.** Set `description: "asset:<filename>"` on every embedded image. The Python HTML converters detect this and inject `<img src="../_assets/<filename>.svg">` — so students see vector graphics in the browser and raster in Word.
+
+### Begeleide inoefening: scaffoldImage vs afterAnswerImage
+
+`lib-begeleide-inoefening.js` supports two image types per deelvraag:
+- `scaffoldImage: { path, width, height }` — shown in **both** vragen and antwoorden (visual scaffolding for weaker students)
+- `afterAnswerImage: { path, width, height }` — shown **only** in antwoorden (graph showing correct answer)
+
+Every exercise that asks students to draw, describe, or interpret a graph MUST have a `scaffoldImage`.
+
+### Legacy: inline SVG→PNG
+
+For cases where you need to generate a graph inline (not from `_assets/`):
 
 ```javascript
 async function svgToPngBuffer(svgString, w = 1400, h = 700) {

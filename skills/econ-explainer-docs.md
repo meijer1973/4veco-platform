@@ -11,9 +11,14 @@ Recipe for building two types of explainer documents per paragraph:
 
 These documents make the classroom presentation self-readable. They add the context, examples, and explanations that a teacher would normally give orally.
 
+**Design principles (see AGENTS.md):**
+- **Dual coding**: Every section that explains a concept with a graphical component MUST embed the matching graph from `_assets/`. Use `ImageRun` with `altText: { description: 'asset:<filename>' }`. The HTML converter will detect this and inject the SVG version. Students should see the same visuals here that they see in the presentation.
+- **Unified experience**: Follow the exact step sequences from the `_paragraph-plan.md` procedure-stappen-plan. The approach is the constant across all formats.
+
 **Always read first:**
 - `econ-word-templates` — for all component code (domainBanner, formulaBox, tipBox, summarySchema, etc.)
 - `economic-graph` — for any embedded SVG visuals
+- `_paragraph-plan.md` — for terminology, visuals assignment, and procedure steps
 
 ---
 
