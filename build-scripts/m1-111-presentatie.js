@@ -12,6 +12,7 @@ const PptxGenJS = require("pptxgenjs");
 const sharp = require("sharp");
 const fs = require("fs");
 const path = require("path");
+const { saveSvgFiles } = require("./lib-svg-save");
 
 const C = {
   primary: "17A2B8", primaryDk: "117A8B", primaryLt: "E8F8FB",
@@ -185,11 +186,14 @@ async function build() {
   addTitleMaster(pres);
   addContentMaster(pres);
 
-  const [g1Buf, g2Buf, g3Buf] = await Promise.all([
-    svgToPng(buildSchaarseSVG()),
-    svgToPng(buildKBAsvg()),
-    svgToPng(buildProdFactorenSVG()),
-  ]);
+  const svgEntries = [
+    { name: "schaarste", svg: buildSchaarseSVG() },
+    { name: "kba", svg: buildKBAsvg() },
+    { name: "productiefactoren", svg: buildProdFactorenSVG() },
+  ];
+  const [g1Buf, g2Buf, g3Buf] = await Promise.all(
+    svgEntries.map(e => svgToPng(e.svg))
+  );
   const g1 = pngToBase64(g1Buf);
   const g2 = pngToBase64(g2Buf);
   const g3 = pngToBase64(g3Buf);
@@ -319,6 +323,7 @@ async function build() {
   if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { recursive: true });
   await pres.writeFile({ fileName: outFile });
   console.log("Saved:", outFile);
+  saveSvgFiles(svgEntries, outDir);
   const stats = fs.statSync(outFile);
   console.log("Size:", (stats.size / 1024).toFixed(1), "KB, Slides: 12 (incl. 3 graphs)");
 }

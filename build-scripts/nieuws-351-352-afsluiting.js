@@ -26,6 +26,7 @@
 const fs = require("fs");
 const path = require("path");
 const sharp = require("sharp");
+const { saveSvgFiles } = require("./lib-svg-save");
 const {
   Document, Packer, Paragraph, TextRun, Table, TableRow, TableCell,
   ImageRun, Header, Footer, AlignmentType, BorderStyle, WidthType,
@@ -406,6 +407,7 @@ async function buildNieuws(doc) {
   if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { recursive: true });
   fs.writeFileSync(doc.outputPath, buf);
   console.log(`Created: ${doc.outputPath} (${buf.length} bytes)`);
+  saveSvgFiles([{ name: doc.nr + "-nieuws-visual", svg: doc.svg }], outDir);
 }
 
 // ══════════════════════════════════════════════════════════════════════

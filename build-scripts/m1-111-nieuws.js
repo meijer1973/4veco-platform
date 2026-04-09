@@ -6,6 +6,7 @@
  */
 const fs = require("fs");
 const path = require("path");
+const { saveSvgFiles } = require("./lib-svg-save");
 const sharp = require("sharp");
 const {
   Document, Packer, Paragraph, TextRun, Table, TableRow, TableCell,
@@ -90,7 +91,8 @@ const OUTPUT_FILE = path.join(OUTPUT_DIR, "1.1.1 Kiezen is kostbaar \u2013 nieuw
 
 (async () => {
   try {
-    const pngBuf = await svgToPng(svgTimeBudget(), 720);
+    const timeBudgetSvg = svgTimeBudget();
+    const pngBuf = await svgToPng(timeBudgetSvg, 720);
     const IMG_HEIGHT_PT = Math.round(IMG_WIDTH_PT * (200 / 720));
     const children = [];
     children.push(headlinePara("Steeds meer Nederlanders werken liever minder uren"));
@@ -134,6 +136,7 @@ const OUTPUT_FILE = path.join(OUTPUT_DIR, "1.1.1 Kiezen is kostbaar \u2013 nieuw
     if (!fs.existsSync(OUTPUT_DIR)) fs.mkdirSync(OUTPUT_DIR, { recursive: true });
     fs.writeFileSync(OUTPUT_FILE, buf);
     console.log(`SUCCESS: ${OUTPUT_FILE} (${buf.length} bytes)`);
+    saveSvgFiles([{ name: "time-budget", svg: timeBudgetSvg }], OUTPUT_DIR);
   } catch (err) {
     console.error("ERROR:", err);
     process.exit(1);

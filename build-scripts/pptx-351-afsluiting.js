@@ -19,6 +19,7 @@ const PptxGenJS = require("pptxgenjs");
 const sharp = require("sharp");
 const fs = require("fs");
 const path = require("path");
+const { saveSvgFiles } = require("./lib-svg-save");
 
 // ═══════════════════════════════════════════════════════════════════════════
 // COLOR PALETTE
@@ -591,12 +592,15 @@ async function build() {
   addContentMaster(pres);
 
   // Generate graph PNGs
-  const [g1Buf, g2Buf, g3Buf, g4Buf] = await Promise.all([
-    svgToPng(buildVAEquilibriumSVG()),
-    svgToPng(buildVCvsMonopolieSVG()),
-    svgToPng(buildTaxEffectSVG()),
-    svgToPng(buildComparativeAdvantageSVG()),
-  ]);
+  const svgEntries = [
+    { name: "va-equilibrium", svg: buildVAEquilibriumSVG() },
+    { name: "vc-vs-monopolie", svg: buildVCvsMonopolieSVG() },
+    { name: "tax-effect", svg: buildTaxEffectSVG() },
+    { name: "comparative-advantage", svg: buildComparativeAdvantageSVG() },
+  ];
+  const [g1Buf, g2Buf, g3Buf, g4Buf] = await Promise.all(
+    svgEntries.map(e => svgToPng(e.svg))
+  );
   const g1 = pngToBase64(g1Buf);
   const g2 = pngToBase64(g2Buf);
   const g3 = pngToBase64(g3Buf);
@@ -1058,6 +1062,7 @@ async function build() {
 
   await pres.writeFile({ fileName: outFile });
   console.log("Presentation saved to:", outFile);
+  saveSvgFiles(svgEntries, outDir);
 
   const stats = fs.statSync(outFile);
   console.log("File size:", (stats.size / 1024).toFixed(1), "KB");

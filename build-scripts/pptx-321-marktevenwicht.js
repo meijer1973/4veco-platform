@@ -12,6 +12,7 @@ const PptxGenJS = require("pptxgenjs");
 const sharp = require("sharp");
 const fs = require("fs");
 const path = require("path");
+const { saveSvgFiles } = require("./lib-svg-save");
 
 // ═══════════════════════════════════════════════════════════════════════════
 // COLOR PALETTE
@@ -374,11 +375,14 @@ async function build() {
   addContentMaster(pres);
 
   // Generate graph PNGs
-  const [g1Buf, g2Buf, g3Buf] = await Promise.all([
-    svgToPng(buildVAEquilibriumSVG()),
-    svgToPng(buildMOComparisonSVG()),
-    svgToPng(buildLaborMarketSVG()),
-  ]);
+  const svgEntries = [
+    { name: "va-equilibrium", svg: buildVAEquilibriumSVG() },
+    { name: "mo-comparison", svg: buildMOComparisonSVG() },
+    { name: "labor-market", svg: buildLaborMarketSVG() },
+  ];
+  const [g1Buf, g2Buf, g3Buf] = await Promise.all(
+    svgEntries.map(e => svgToPng(e.svg))
+  );
   const g1 = pngToBase64(g1Buf);
   const g2 = pngToBase64(g2Buf);
   const g3 = pngToBase64(g3Buf);
@@ -711,6 +715,7 @@ async function build() {
 
   await pres.writeFile({ fileName: outFile });
   console.log("Saved:", outFile);
+  saveSvgFiles(svgEntries, outDir);
   const stats = fs.statSync(outFile);
   console.log("Size:", (stats.size / 1024).toFixed(1), "KB");
   console.log("Slides: 16 (13 original + 3 graphs)");
