@@ -62,6 +62,7 @@ function generateShell(parNr, parName) {
     <link rel="stylesheet" href="${sharedPath}/newsdetective.css">
 </head>
 <body>
+<a class="back-to-overview" href="../index.html">&larr; Terug naar overzicht</a>
 <div class="nd-app" id="nd-app"></div>
 
 <script src="${sharedPath}/theme.js"></script>

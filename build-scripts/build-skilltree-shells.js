@@ -110,6 +110,7 @@ function generateHTML(parNr, parName, sharedPath) {
     <link rel="stylesheet" href="${sharedPath}/skilltree.css">
 </head>
 <body>
+    <a class="back-to-overview" href="../index.html">&larr; Terug naar overzicht</a>
     <div id="skilltree-app"></div>
     <script src="${sharedPath}/skilltree/base-elements.js"></script>
     <script src="${sharedPath}/skilltree/${parNr}.js"></script>

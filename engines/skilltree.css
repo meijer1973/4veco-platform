@@ -12,6 +12,19 @@
     box-sizing: border-box;
 }
 
+/* ── Back link ─────────────────────────────────────────────── */
+.back-to-overview {
+    display: block;
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-size: 0.82rem;
+    color: rgba(248,250,252,0.6);
+    text-decoration: none;
+    padding: 0.5rem 1.2rem;
+    background: #0a0f1e;
+    transition: color 0.15s;
+}
+.back-to-overview:hover { color: #f8fafc; }
+
 /* ── Base ───────────────────────────────────────────────────── */
 body {
     background: #0f1729;

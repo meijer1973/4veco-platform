@@ -44,12 +44,21 @@ h1, h2, h3 { font-family: 'Poppins', sans-serif; color: #0f172a; }
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     z-index: 10;
     flex-shrink: 0;
     border-bottom: 4px solid var(--domain-primary);
 }
 
 .header h1 { color: white; font-size: 22px; margin: 0; }
+
+.back-to-overview {
+    width: 100%; display: block;
+    font-size: 0.8rem; color: rgba(255,255,255,0.7);
+    text-decoration: none; margin-bottom: 0.4rem;
+    transition: color 0.15s;
+}
+.back-to-overview:hover { color: #fff; }
 
 .header .par-badge {
     background: var(--domain-primary);

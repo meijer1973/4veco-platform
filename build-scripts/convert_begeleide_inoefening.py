@@ -529,6 +529,14 @@ def generate_html(opgaven, samenvatting, para_number, para_name):
   }}
   .hero::before {{ content: ""; position: absolute; top: 0; left: 0; right: 0; height: 5px; background: var(--accent); }}
   .hero-inner {{ max-width: 860px; margin: 0 auto; }}
+  .back-link {{
+    display: inline-flex; align-items: center; gap: 0.35rem;
+    font-size: 0.82rem; color: rgba(255,255,255,0.7);
+    text-decoration: none; margin-bottom: 0.6rem;
+    transition: color 0.15s;
+  }}
+  .back-link:hover {{ color: #fff; }}
+  .back-link svg {{ width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 2; }}
   .hero-badge {{
     display: inline-block; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.2);
     padding: 0.25rem 0.85rem; border-radius: 4px; font-size: 0.85rem; color: rgba(255,255,255,0.85);
@@ -685,6 +693,7 @@ def generate_html(opgaven, samenvatting, para_number, para_name):
   <div class="content">
     <header class="hero">
       <div class="hero-inner">
+        <a class="back-link" href="../../index.html"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg> Terug naar overzicht</a>
         <span class="hero-badge">{para_number} &middot; Begeleide inoefening</span>
         <h1>{esc(para_name)} &mdash; Begeleide inoefening</h1>
         <p class="hero-sub">Oefeningen met denkstappen, formule-herinneringen en hints.</p>

@@ -464,6 +464,13 @@ function sharedCSS(dc) {
     height: 5px; background: var(--domain);
   }
   .hero-inner { max-width: 860px; margin: 0 auto; }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 0.35rem;
+    font-size: 0.82rem; color: rgba(255,255,255,0.7);
+    margin-bottom: 0.6rem; transition: color 0.15s;
+  }
+  .back-link:hover { color: #fff; }
+  .back-link svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 2; }
   .hero-badge {
     display: inline-block; background: rgba(255,255,255,0.12);
     border: 1px solid rgba(255,255,255,0.2); padding: 0.25rem 0.85rem;
@@ -782,6 +789,7 @@ function renderChapterPage(chapterId, resolvedMap) {
   let bodyHTML = `
 <header class="hero">
   <div class="hero-inner">
+    <a class="back-link" href="../index.html"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg> Module ${MODULE_NR}</a>
     <span class="hero-badge">Hoofdstuk ${chNum}</span>
     <h1>${first.chapterName}</h1>
     <p class="hero-sub">Module ${MODULE_NR} \u2013 ${MODULE_NAME}</p>
@@ -919,6 +927,7 @@ function renderParagraafPage(paragraaf, files, resolvedMap) {
   let bodyHTML = `
 <header class="hero">
   <div class="hero-inner">
+    <a class="back-link" href="../index.html"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg> ${paragraaf.chapterFull}</a>
     <span class="hero-badge">Paragraaf ${paragraaf.id}</span>
     <h1>${paragraaf.name}</h1>
     <p class="hero-sub">${paragraaf.chapterFull}</p>

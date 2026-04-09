@@ -43,6 +43,21 @@
     --nd-radius-sm: 6px;
 }
 
+/* ── Back link ──────────────────────────────────────────────────────── */
+
+.back-to-overview {
+    display: block;
+    font-family: var(--nd-font);
+    font-size: 0.82rem;
+    color: var(--nd-text-secondary);
+    text-decoration: none;
+    padding: 0.6rem 1.2rem;
+    background: var(--nd-navy);
+    color: rgba(255,255,255,0.7);
+    transition: color 0.15s;
+}
+.back-to-overview:hover { color: #fff; }
+
 /* ── Base ────────────────────────────────────────────────────────────── */
 
 .nd-app {

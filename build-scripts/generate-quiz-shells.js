@@ -100,6 +100,7 @@ function generateShell(parNr) {
 <body>
 <div class="app-container">
     <div class="header">
+        <a class="back-to-overview" href="../index.html">&larr; Terug naar overzicht</a>
         <h1><span class="par-badge">${escapeHtml(meta.parNr)}</span> ${escapeHtml(meta.parName)} – Instapquiz</h1>
         <div class="stats-bar" id="game-stats" style="display: none;">
             <div><i class="fa-solid fa-star"></i> Score: <span id="score-display">0</span></div>

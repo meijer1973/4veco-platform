@@ -75,6 +75,7 @@ function generateShell(parNr, parName) {
 <body>
 <div class="r-app">
     <div class="r-header">
+        <a class="back-to-overview" href="../index.html">&larr; Terug naar overzicht</a>
         <h1><span class="par-badge">${escapeHtml(parNr)}</span> ${escapeHtml(parName)} \u2013 Redeneer-spel</h1>
     </div>
 
