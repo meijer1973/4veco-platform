@@ -132,9 +132,22 @@ def parse_document(docx_path):
                 all_elements.append(('formula_box', text))
             continue
 
-    # Parse paragraphs for headings and text
+    # Parse paragraphs for headings, text, and asset images (dual coding)
+    from docx.oxml.ns import qn as _qn
     para_elements = []
     for p in doc.paragraphs:
+        # Check for embedded asset images (dual coding convention: descr="asset:<filename>")
+        for run in p.runs:
+            blips = run._element.findall('.//' + _qn('a:blip'))
+            if blips:
+                drawing = run._element.find('.//' + _qn('wp:inline'))
+                if drawing is not None:
+                    docPr = drawing.find(_qn('wp:docPr'))
+                    if docPr is not None:
+                        descr = docPr.get('descr', '')
+                        if descr.startswith('asset:'):
+                            asset_name = descr[6:]  # strip "asset:" prefix
+                            para_elements.append(('asset_image', asset_name))
         text = p.text.strip()
         if not text:
             continue
@@ -263,7 +276,7 @@ def build_sections_from_doc(docx_path):
     toc_set = set(toc_items)
 
     # Build a unified stream of elements (paragraphs + tables in document order)
-    from docx.oxml.ns import qn
+    from docx.oxml.ns import qn as _qn
     body = doc.element.body
 
     stream = []
@@ -277,6 +290,19 @@ def build_sections_from_doc(docx_path):
             if para_index < len(doc.paragraphs):
                 p = doc.paragraphs[para_index]
                 para_index += 1
+
+                # Dual coding: detect asset images via alt-text convention
+                for run in p.runs:
+                    blips = run._element.findall('.//' + _qn('a:blip'))
+                    if blips:
+                        drawing = run._element.find('.//' + _qn('wp:inline'))
+                        if drawing is not None:
+                            docPr = drawing.find(_qn('wp:docPr'))
+                            if docPr is not None:
+                                descr = docPr.get('descr', '')
+                                if descr.startswith('asset:'):
+                                    stream.append(('asset_image', descr[6:]))
+
                 text = p.text.strip()
                 if not text:
                     continue
@@ -572,6 +598,8 @@ def generate_html(data, para_number, para_name):
             elif etype == 'formula_box':
                 lines = edata.replace('\n', '<br>\n            ')
                 content_html += f'        <div class="formula-box">\n            {lines}\n        </div>\n'
+            elif etype == 'asset_image':
+                content_html += f'        <figure class="asset-figure">\n          <img src="../_assets/{esc(edata)}.svg" alt="{esc(edata)}" class="asset-svg">\n        </figure>\n'
             elif etype in ('callout_kernregel', 'callout_letop', 'callout_controle', 'callout_tip'):
                 content_html += render_callout(etype, edata)
             elif etype == 'samenvatting':
@@ -797,6 +825,14 @@ def generate_html(data, para_number, para_name):
     padding: 1rem 1.2rem; margin-bottom: 1rem;
     font-family: Consolas, 'Courier New', monospace; font-size: 0.88rem;
     line-height: 1.8; color: var(--dark); border-left: 4px solid #A0AEC0;
+  }}
+
+  .asset-figure {{
+    text-align: center; margin: 1rem 0 1.2rem;
+  }}
+  .asset-svg {{
+    max-width: 100%; height: auto; border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
   }}
 
   .callout {{

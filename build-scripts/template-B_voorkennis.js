@@ -30,6 +30,8 @@ const {
 } = require("docx");
 
 // ─── Dual coding: embed pre-built PNGs from _assets/ ───
+// Alt-text convention: "asset:<filename>" lets HTML converters detect these
+// images and replace them with <img src="_assets/<filename>.svg"> in the HTML output.
 function embedAssetImage(assetsDir, filename, width, height) {
   const imgPath = path.join(assetsDir, filename + ".png");
   if (!fs.existsSync(imgPath)) return null;
@@ -37,7 +39,10 @@ function embedAssetImage(assetsDir, filename, width, height) {
   return new Paragraph({
     spacing: { before: 120, after: 120 },
     alignment: AlignmentType.CENTER,
-    children: [new ImageRun({ data: buf, transformation: { width, height }, type: "png" })],
+    children: [new ImageRun({
+      data: buf, transformation: { width, height }, type: "png",
+      altText: { title: filename, description: "asset:" + filename, name: filename },
+    })],
   });
 }
 

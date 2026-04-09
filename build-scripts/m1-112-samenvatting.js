@@ -114,7 +114,10 @@ function embedAssetImage(filename, width, height) {
   return new Paragraph({
     spacing: { before: 120, after: 120 },
     alignment: AlignmentType.CENTER,
-    children: [new ImageRun({ data: buf, transformation: { width, height }, type: 'png' })],
+    children: [new ImageRun({
+      data: buf, transformation: { width, height }, type: 'png',
+      altText: { title: filename, description: 'asset:' + filename, name: filename },
+    })],
   });
 }
 
