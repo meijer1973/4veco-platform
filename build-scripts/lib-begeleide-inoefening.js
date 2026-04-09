@@ -16,7 +16,7 @@ const fs = require("fs");
 const {
   Document, Packer, Paragraph, TextRun, Table, TableRow, TableCell,
   Header, Footer, AlignmentType, HeadingLevel, BorderStyle, WidthType,
-  ShadingType, PageNumber, PageBreak, LevelFormat,
+  ShadingType, PageNumber, PageBreak, LevelFormat, ImageRun,
 } = require("docx");
 
 // ── Page Setup (A4) ──
@@ -304,6 +304,27 @@ function answerSpace(lineCount = 3) {
   return lines;
 }
 
+/**
+ * Embed an image asset as a centered paragraph.
+ * @param {string} imgPath - Absolute path to the image file
+ * @param {number} width - Display width in px
+ * @param {number} height - Display height in px
+ * @returns {Paragraph|null} - Paragraph with embedded image, or null if file not found
+ */
+function embedAssetFromPath(imgPath, width, height) {
+  if (!fs.existsSync(imgPath)) return null;
+  const buf = fs.readFileSync(imgPath);
+  const ext = imgPath.split('.').pop();
+  return new Paragraph({
+    spacing: { before: 120, after: 120 },
+    alignment: AlignmentType.CENTER,
+    children: [new ImageRun({
+      data: buf, transformation: { width, height }, type: ext === 'jpg' ? 'jpg' : 'png',
+      altText: { title: imgPath.split(/[/\\]/).pop(), description: 'asset', name: imgPath.split(/[/\\]/).pop() },
+    })],
+  });
+}
+
 // ── Summary Schema ──
 function summarySchema(rows, domainColor) {
   const col1W = Math.round(CW * 0.28);
@@ -547,6 +568,10 @@ async function buildBegeleideInoefening(paragraafNr, onderwerp, headerText, oefe
 
       if (includeAnswers && dv.antwoord) {
         children.push(answerBox(dv.antwoord));
+        if (dv.afterAnswerImage) {
+          const img = embedAssetFromPath(dv.afterAnswerImage.path, dv.afterAnswerImage.width, dv.afterAnswerImage.height);
+          if (img) children.push(img);
+        }
         children.push(sp(40));
         if (dv.uitleg) { children.push(uitlegBox(dv.uitleg)); }
       } else if (!includeAnswers && dv.invulformaat) {
@@ -623,4 +648,5 @@ module.exports = {
   domainBanner, formulaBox, tipBox, warningBox, checkBox,
   denkstapBox, hintBox, formuleHerinneringBox, answerBox, uitlegBox, answerSpace,
   summarySchema, domainLegend, titleBlock, makeHeader, makeFooter,
+  embedAssetFromPath,
 };

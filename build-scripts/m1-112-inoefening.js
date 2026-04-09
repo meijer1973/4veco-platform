@@ -13,6 +13,9 @@ const {
 const PARAGRAAF_NR = "1.1.2";
 const ONDERWERP = "Kiezen of delen";
 const HEADER_TEXT = "Paragraaf 1.1.2 Kiezen of delen";
+const ASSETS_DIR = path.resolve(__dirname,
+  "../../module one claude/1.1 Hoofdstuk 1 - Voor niks gaat de zon op/1.1.2 Paragraaf 2 - Kiezen of delen/_assets"
+);
 const OUTPUT_DIR = path.resolve(__dirname,
   "../../module one claude/1.1 Hoofdstuk 1 - Voor niks gaat de zon op/1.1.2 Paragraaf 2 - Kiezen of delen/3. Oefenen/begeleide inoefening"
 );
@@ -155,6 +158,7 @@ const oefeningen = [
           [{ text: "Verbind A en B met een rechte lijn: dit is de budgetlijn.", bold: true }],
           "Alle punten op de lijn zijn combinaties waarvoor de consument precies €60 uitgeeft.",
         ],
+        afterAnswerImage: { path: path.join(ASSETS_DIR, 'budgetlijn-basis.png'), width: 450, height: 225 },
         uitleg: "De budgetlijn is altijd een rechte lijn (lineair). De helling is −p₁/p₂ = −5/15 = −⅓. Dit betekent: voor elk extra goed 1 moet je ⅓ goed 2 opgeven.",
       },
     ],
@@ -202,6 +206,7 @@ const oefeningen = [
           "De helling (−p₁/p₂ = −4/8 = −½) verandert niet, want de prijzen zijn gelijk gebleven.",
           "De consument kan nu van beide goederen méér kopen: de koopkracht is gestegen.",
         ],
+        afterAnswerImage: { path: path.join(ASSETS_DIR, 'budgetlijn-verschuiving.png'), width: 450, height: 225 },
         uitleg: "Bij een inkomensstijging verschuift de budgetlijn evenwijdig naar buiten. Bij een inkomensdaling schuift hij naar binnen. De richting (helling) van de lijn verandert niet, want die hangt alleen af van de prijsverhouding p₁/p₂.",
       },
     ],
@@ -250,6 +255,7 @@ const oefeningen = [
           [{ text: "De budgetlijn kantelt naar buiten vanuit het snijpunt (0, 5) op de q₂-as.", bold: true }],
           "De helling verandert: van −10/20 = −½ naar −5/20 = −¼. Goed 1 is relatief goedkoper geworden.",
         ],
+        afterAnswerImage: { path: path.join(ASSETS_DIR, 'budgetlijn-prijseffect.png'), width: 450, height: 225 },
         uitleg: "Bij een prijsverandering kantelt de budgetlijn. Het snijpunt van het goed waarvan de prijs verandert, verschuift. Het andere snijpunt blijft op zijn plaats. Bij een prijsdaling kantelt de lijn naar buiten; bij een prijsstijging naar binnen.",
       },
     ],

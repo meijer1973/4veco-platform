@@ -7,7 +7,7 @@ process.env.NODE_PATH = NODE_PATH;
 require("module").Module._initPaths();
 
 var docx = require("docx");
-var Document = docx.Document, Packer = docx.Packer, Paragraph = docx.Paragraph, TextRun = docx.TextRun;
+var Document = docx.Document, Packer = docx.Packer, Paragraph = docx.Paragraph, TextRun = docx.TextRun, ImageRun = docx.ImageRun;
 var Table = docx.Table, TableRow = docx.TableRow, TableCell = docx.TableCell;
 var WidthType = docx.WidthType, AlignmentType = docx.AlignmentType, HeadingLevel = docx.HeadingLevel;
 var BorderStyle = docx.BorderStyle, ShadingType = docx.ShadingType;
@@ -45,6 +45,22 @@ function answerSpace(n) {
   return out;
 }
 function question(label, text) { return new Paragraph({ spacing: { after: 80 }, children: [new TextRun({ text: label + "  ", bold: true, font: "Arial", size: 22, color: CL.dark }), new TextRun({ text: text, font: "Arial", size: 22, color: CL.dark })] }); }
+
+var ASSETS_DIR = path.resolve(BASE_DIR, '..', '_assets');
+function embedAsset(filename, width, height) {
+  var imgPath = path.join(ASSETS_DIR, filename);
+  if (!fs.existsSync(imgPath)) return null;
+  var buf = fs.readFileSync(imgPath);
+  var ext = filename.split('.').pop();
+  return new Paragraph({
+    spacing: { before: 120, after: 120 },
+    alignment: AlignmentType.CENTER,
+    children: [new ImageRun({
+      data: buf, transformation: { width: width, height: height }, type: ext === 'jpg' ? 'jpg' : 'png',
+      altText: { title: filename, description: 'asset:' + filename.replace(/\.[^.]+$/, ''), name: filename },
+    })]
+  });
+}
 
 // ====================================================================
 // BASISOPGAVEN (10 vragen)
@@ -130,7 +146,7 @@ function buildMidden(ans) {
   if (ans) ch.push(answerBox(["15 \u00b7 q\u2081 + 45 \u00b7 q\u2082 = 180 (met q\u2081 = aantal T-shirts, q\u2082 = aantal broeken)."])); else ch.push.apply(ch, answerSpace(2));
   ch.push(sp(80));
   ch.push(question("b", "Bereken de snijpunten met de assen."));
-  if (ans) ch.push(answerBox(["q\u2081-as: 180 / 15 = 12 T-shirts, punt (12, 0).", "q\u2082-as: 180 / 45 = 4 broeken, punt (0, 4)."])); else ch.push.apply(ch, answerSpace(3));
+  if (ans) { ch.push(answerBox(["q\u2081-as: 180 / 15 = 12 T-shirts, punt (12, 0).", "q\u2082-as: 180 / 45 = 4 broeken, punt (0, 4)."])); var img1b = embedAsset('budgetlijn-basis.png', 450, 225); if (img1b) ch.push(img1b); } else ch.push.apply(ch, answerSpace(3));
   ch.push(sp(80));
   ch.push(question("c", "Lars koopt 6 T-shirts. Hoeveel broeken kan hij maximaal nog kopen?"));
   if (ans) ch.push(answerBox(["Uitgaven T-shirts: 6 \u00d7 \u20AC15 = \u20AC90. Resterend budget: \u20AC180 \u2212 \u20AC90 = \u20AC90.", "Maximaal broeken: \u20AC90 / \u20AC45 = 2 broeken."])); else ch.push.apply(ch, answerSpace(3));
@@ -153,7 +169,7 @@ function buildMidden(ans) {
   if (ans) ch.push(answerBox(["q\u2081-as: 180 / 10 = 18 T-shirts (was 12). q\u2082-as: 180 / 45 = 4 broeken (onveranderd)."])); else ch.push.apply(ch, answerSpace(3));
   ch.push(sp(80));
   ch.push(question("b", "Beschrijf wat er met de budgetlijn gebeurt. Rond welk punt kantelt de lijn?"));
-  if (ans) ch.push(answerBox(["De budgetlijn kantelt naar buiten rond het snijpunt (0, 4) op de q\u2082-as. Het snijpunt met de q\u2081-as verschuift van (12, 0) naar (18, 0). T-shirts zijn relatief goedkoper geworden ten opzichte van broeken."])); else ch.push.apply(ch, answerSpace(4));
+  if (ans) { ch.push(answerBox(["De budgetlijn kantelt naar buiten rond het snijpunt (0, 4) op de q\u2082-as. Het snijpunt met de q\u2081-as verschuift van (12, 0) naar (18, 0). T-shirts zijn relatief goedkoper geworden ten opzichte van broeken."])); var img3b = embedAsset('budgetlijn-prijseffect.png', 450, 225); if (img3b) ch.push(img3b); } else ch.push.apply(ch, answerSpace(4));
   ch.push(sp(200));
 
   // Opgave 4: Gecombineerde verandering
@@ -170,7 +186,7 @@ function buildMidden(ans) {
   ch.push(h2d("Opgave 5", CL.green));
   ch.push(p("Eva heeft een weekbudget van \u20AC150 voor eten (\u20AC10/maaltijd) en entertainment (\u20AC30/activiteit)."));
   ch.push(question("a", "Teken de budgetlijn (beschrijf de snijpunten en de helling)."));
-  if (ans) ch.push(answerBox(["Snijpunt q\u2081-as (maaltijden): 150/10 = 15, punt (15, 0).", "Snijpunt q\u2082-as (entertainment): 150/30 = 5, punt (0, 5).", "Helling = \u221210/30 = \u2212\u2153."])); else ch.push.apply(ch, answerSpace(4));
+  if (ans) { ch.push(answerBox(["Snijpunt q\u2081-as (maaltijden): 150/10 = 15, punt (15, 0).", "Snijpunt q\u2082-as (entertainment): 150/30 = 5, punt (0, 5).", "Helling = \u221210/30 = \u2212\u2153."])); var img5a = embedAsset('budgetlijn-basis.png', 450, 225); if (img5a) ch.push(img5a); } else ch.push.apply(ch, answerSpace(4));
   ch.push(sp(80));
   ch.push(question("b", "Eva krijgt een kortingskaart: entertainment kost nu \u20AC20 per activiteit. Beschrijf het effect op de budgetlijn."));
   if (ans) ch.push(answerBox(["De budgetlijn kantelt naar buiten rond het snijpunt (15, 0) op de q\u2081-as. Nieuw snijpunt q\u2082-as: 150/20 = 7,5. De helling verandert van \u2212\u2153 naar \u221210/20 = \u2212\u00bd."])); else ch.push.apply(ch, answerSpace(4));
@@ -194,7 +210,7 @@ function buildVerrijking(ans) {
   if (ans) ch.push(answerBox(["Gewerkte uren = 40 \u2212 V. Inkomen Y = 18 \u00d7 (40 \u2212 V) = 720 \u2212 18V.", "Of: Y + 18V = 720. Dit is de budgetvergelijking met 'prijs' van vrije tijd = \u20AC18."])); else ch.push.apply(ch, answerSpace(4));
   ch.push(sp(80));
   ch.push(question("b", "Bereken de snijpunten. Wat betekenen ze economisch?"));
-  if (ans) ch.push(answerBox(["V-as (alleen vrije tijd): V = 40 uur, Y = \u20AC0. Nadia werkt niet en heeft geen inkomen.", "Y-as (alleen werken): V = 0, Y = 40 \u00d7 \u20AC18 = \u20AC720. Nadia werkt alle 40 uur.", "De budgetlijn toont de afruil tussen inkomen en vrije tijd."])); else ch.push.apply(ch, answerSpace(5));
+  if (ans) { ch.push(answerBox(["V-as (alleen vrije tijd): V = 40 uur, Y = \u20AC0. Nadia werkt niet en heeft geen inkomen.", "Y-as (alleen werken): V = 0, Y = 40 \u00d7 \u20AC18 = \u20AC720. Nadia werkt alle 40 uur.", "De budgetlijn toont de afruil tussen inkomen en vrije tijd."])); var imgV1b = embedAsset('arbeidsmarkt-vrije-tijd.png', 450, 225); if (imgV1b) ch.push(imgV1b); } else ch.push.apply(ch, answerSpace(5));
   ch.push(sp(80));
   ch.push(question("c", "Wat zijn de opofferingskosten van 1 uur vrije tijd? En van 5 uur extra vrije tijd?"));
   if (ans) ch.push(answerBox(["Opofferingskosten van 1 uur vrije tijd = \u20AC18 (het misgelopen uurloon).", "Opofferingskosten van 5 uur extra vrije tijd = 5 \u00d7 \u20AC18 = \u20AC90 misgelopen inkomen."])); else ch.push.apply(ch, answerSpace(4));
