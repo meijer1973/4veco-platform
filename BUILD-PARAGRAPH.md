@@ -183,7 +183,44 @@ cp "$MODULE/3.1 Hoofdstuk 1 - Markten/3.1.1 Paragraaf 1 - Markt en marktstructuu
 4. Write `shared/newsdetective/X.Y.Z.js` — newsdetective data
 
 ### Phase 4: Create rich documents (bulk of the work)
-For each document type, copy the reference script, replace the content, run it.
+
+Phase 4 has three sub-phases. The planning step ensures terminology consistency and visual reuse across all 8 documents.
+
+#### Phase 4a — Plan (15 min)
+
+Read the textbook paragraph and answer key thoroughly, then create the paragraph plan.
+
+1. Copy `build-scripts/template-paragraph-plan.md` → `<paragraph-folder>/_paragraph-plan.md`
+2. Fill in every section:
+   - **Kernconcepten**: 5-8 key concepts with definitions, formulas, graph types
+   - **Visuelen-plan**: every SVG visual needed, with filename, graph type, which builders use it, and parameters (e.g. curve equations)
+   - **Presentatie-outline**: slide sequence with visual references
+   - **Nieuws-plan**: article choice + chart type
+   - **Samenvatting-concepten**: complete concept checklist (cross-check against kernconcepten)
+   - **Terminologie**: use/don't-use table for consistent Dutch economics terms across all documents
+   - **Opgaven-verdeling**: exercise distribution across basis/midden/verrijking
+   - **Vaardigheden & Voorkennis**: quick reference for the uitleg-builders
+
+This plan is the **single source of truth** for all builders. Every builder reads it before starting.
+
+#### Phase 4b — Build shared visuals (20 min)
+
+Build all SVG graphics listed in the visuelen-plan, so they can be reused across documents.
+
+1. Create `<paragraph-folder>/_assets/` subfolder
+2. For each visual in the visuelen-plan:
+   - Write the SVG following the `economic-graph` skill spec
+   - Render to PNG via `lib-svg-utils.js`: `const { svgToPng } = require('./lib-svg-utils')`
+   - Save both `.svg` and `.png` to `_assets/` (e.g. `_assets/va-equilibrium.svg`, `_assets/va-equilibrium.png`)
+3. Optionally save the asset-builder script as `build-scripts/mN-XYZ-build-assets.js`
+4. Quality-check all PNGs before proceeding — verify economic correctness and readability
+
+#### Phase 4c — Build documents
+
+For each document type, copy the reference script, replace the content, run it. Each builder should:
+- Read `_paragraph-plan.md` for its outline, terminology, and concept coverage
+- Read pre-built PNGs from `_assets/` instead of generating SVGs inline
+- Use `const { svgToPng, pngToBase64, GRAPH_COLORS } = require('./lib-svg-utils')` instead of inline copies
 
 | Document | Reference script | Output location |
 |----------|-----------------|-----------------|
@@ -212,11 +249,14 @@ node scripts/deploy.js "$MODULE"
 This runs ONLY the automated layer: engine copy, game shell generation, landing pages, link check, data tests. It does NOT build rich documents.
 
 ### Phase 7: Verify
+- [ ] `_paragraph-plan.md` exists and all sections are filled in
+- [ ] `_assets/` folder has PNGs matching every entry in the visuelen-plan
 - [ ] File count: 23 files + index.html
 - [ ] All .docx/.pptx open in Word/PowerPoint without errors
 - [ ] Presentatie has ≥3 economic graphs, presents theory (no exercise instructions)
 - [ ] Nieuws met visual has embedded SVG→PNG chart, font sizes 16/11/9pt
 - [ ] Samenvatting uses table-based infographic layout
+- [ ] Terminology is consistent across all documents (check against terminologie table in plan)
 - [ ] Browser: all 4 games load, all section cards appear in landing page
 - [ ] Data tests pass: `MODULE_ROOT="$MODULE" npx jest --testPathPatterns "engines/tests/.*-data\.test\.js"`
 
@@ -372,3 +412,6 @@ If a build script is not saved, the paragraph build is **incomplete**.
 | Save all build scripts in `build-scripts/` | Without scripts, the paragraph can't be regenerated or improved |
 | Intro paragraphs: narrative-first approach | Students connect with stories (Lisa, Tom) before abstractions |
 | Register paragraph AND run deploy | Without deploy, game shells and landing pages are missing — students can't navigate |
+| Create `_paragraph-plan.md` before building documents | Ensures terminology consistency and concept coverage across all 8 documents |
+| Build shared visuals in `_assets/` before Phase 4c | One graph, many documents — fix once instead of fixing in 3 separate scripts |
+| Use `lib-svg-utils.js` instead of inline `svgToPng()` | The same function was copy-pasted in 8 scripts — import the shared library instead |

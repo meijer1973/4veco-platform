@@ -14,6 +14,12 @@
  * - Update the DOCUMENTS content sections (search for ════)
  * - Change OUTPUT_BASE for a different module
  * - Swap SVG functions for different chart types
+ *
+ * NOTE FOR NEW PARAGRAPHS: This script predates the Phase 4a/4b/4c workflow.
+ * New paragraph scripts should:
+ *   - Read _paragraph-plan.md for article choice and chart type
+ *   - Read pre-built PNG from _assets/ instead of generating SVG inline
+ *   - Use: const { svgToPng, pngToBase64, GRAPH_COLORS } = require('./lib-svg-utils')
  * ══════════════════════════════════════════════════════════════════════
  */
 

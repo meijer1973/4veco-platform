@@ -53,6 +53,8 @@ These are the most important scripts for rich paragraph production outside the a
 | `inoefening-351-afsluiting.js` | begeleide inoefening docs |
 | `opgaven-351-afsluiting.js` | basis/midden/verrijking opgavensets |
 | `lib-begeleide-inoefening.js` | shared library used by inoefening scripts |
+| `lib-svg-utils.js` | shared SVG→PNG pipeline + graph color palette (used by all visual builders) |
+| `template-paragraph-plan.md` | planning template — copy into paragraph folder as `_paragraph-plan.md` during Phase 4a |
 
 Use these when:
 - the asset is rich, paragraph-specific, and content-heavy
@@ -97,10 +99,12 @@ Follow [BUILD-PARAGRAPH.md](C:\Projects\4veco\4veco-platform\BUILD-PARAGRAPH.md)
 
 1. Create or update structured game data
 2. Run platform generators
-3. Build rich `.docx` / `.pptx` assets from reference implementations
-4. Run converters for HTML versions
-5. Run `deploy.js`
-6. Verify output
+3. **Phase 4a**: Create `_paragraph-plan.md` (copy `template-paragraph-plan.md`, fill in concepts/visuals/terminology)
+4. **Phase 4b**: Build shared visuals in `_assets/` using `lib-svg-utils.js`
+5. **Phase 4c**: Build rich `.docx` / `.pptx` assets from reference implementations, reading from plan + `_assets/`
+6. Run converters for HTML versions
+7. Run `deploy.js`
+8. Verify output
 
 ## Conventions
 

@@ -5,6 +5,12 @@
  * tax/subsidy deadweight loss, comparative advantage PPF).
  *
  * Run: NODE_PATH="$(npm root -g)" node build-scripts/pptx-351-afsluiting.js
+ *
+ * NOTE FOR NEW PARAGRAPHS: This script predates the Phase 4a/4b/4c workflow.
+ * New paragraph scripts should:
+ *   - Read _paragraph-plan.md for slide outline and terminology
+ *   - Read pre-built PNGs from _assets/ instead of generating SVGs inline
+ *   - Use: const { svgToPng, pngToBase64, GRAPH_COLORS } = require('./lib-svg-utils')
  */
 process.env.NODE_PATH = "C:/Users/meije/AppData/Roaming/npm/node_modules";
 require("module").Module._initPaths();
