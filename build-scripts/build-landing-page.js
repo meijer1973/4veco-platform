@@ -215,7 +215,7 @@ function restructureFolder(paragraafPath, paragraaf) {
 function scanFiles(paragraafPath) {
   const result = {
     voorbereiden: { instapquiz: null, voorkennis: null, leesdit: null, nieuwsdetective: null },
-    leren: { presentatie: null, vaardigheden: null, youtube: null, nieuws: null, samenvatting: null },
+    leren: { presentatie: null, vaardigheden: null, stappenplan: null, youtube: null, nieuws: null, samenvatting: null },
     oefenen: { redeneerSpel: null, wiskundevaardigheden: null, begeleide: null, basis: null, midden: null, verrijking: null },
   };
   const vDir = path.join(paragraafPath, "1. Voorbereiden");
@@ -244,6 +244,7 @@ function scanFiles(paragraafPath) {
       else if (/youtube.videos\.html$/i.test(f)) result.leren.youtube = f;
       else if (/nieuws met visual\.docx$/i.test(f)) result.leren.nieuws = f;
       else if (/samenvatting\.docx$/i.test(f)) result.leren.samenvatting = f;
+      else if (/stappenplan\.html$/i.test(f)) result.leren.stappenplan = f;
     }
     // Fallback to .docx if no .html version found
     if (!result.leren.vaardigheden) {
@@ -645,6 +646,7 @@ const ICONS = {
   hamburger: '<line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>',
   puzzle:    '<path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44A2.5 2.5 0 0 1 2 17.5v-1A2.5 2.5 0 0 1 6.44 14H12" fill="none" stroke="currentColor" stroke-width="2"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44A2.5 2.5 0 0 0 22 17.5v-1a2.5 2.5 0 0 0-4.44-2.5H12" fill="none" stroke="currentColor" stroke-width="2"/>',
   layers:    '<path d="M12 2L2 7l10 5 10-5-10-5z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M2 17l10 5 10-5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M2 12l10 5 10-5" fill="none" stroke="currentColor" stroke-width="2"/>',
+  steps:     '<line x1="12" y1="2" x2="12" y2="22"/><polyline points="8 6 12 2 16 6"/><circle cx="12" cy="8" r="2" fill="currentColor" stroke="none"/><circle cx="12" cy="14" r="2" fill="currentColor" stroke="none"/><circle cx="12" cy="20" r="2" fill="currentColor" stroke="none"/>',
 };
 
 // ═══════════════════════════════════════════════════════════════════════════
@@ -867,6 +869,7 @@ function renderParagraafPage(paragraaf, files, resolvedMap) {
   const lerenCards = [
     files.leren.presentatie ? card(encPath([lP, files.leren.presentatie]), ICONS.monitor, "Presentatie", "De les-presentatie met kernpunten", "pptx") : "",
     files.leren.vaardigheden ? card(encPath([lP, files.leren.vaardigheden]), ICONS.doc, "Uitleg vaardigheden", "Stap-voor-stap uitleg van de lesstof", ext(files.leren.vaardigheden)) : "",
+    files.leren.stappenplan ? card(encPath([lP, files.leren.stappenplan]), ICONS.steps, "Stappenplan", "Oefen de stappen van elke vaardigheid", "html") : "",
     files.leren.youtube ? card(encPath([lP, files.leren.youtube]), ICONS.play, "YouTube-video\u2019s", "Video-uitleg bij de stof", "html") : "",
     files.leren.nieuws ? card(encPath([lP, files.leren.nieuws]), ICONS.newspaper, "Nieuws", "Actueel artikel met verwerkingsvragen", "docx") : "",
     files.leren.samenvatting ? card(encPath([lP, files.leren.samenvatting]), ICONS.check, "Samenvatting", "Overzicht van deze paragraaf", "docx") : "",
