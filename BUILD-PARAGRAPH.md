@@ -122,12 +122,13 @@ Each scripted-manual asset follows the same pattern: **read source → write bui
 #### Begeleide inoefening (vragen.docx + antwoorden.docx)
 | | |
 |---|---|
-| **Raw input** | Textbook exercises for this paragraph + worked solutions from the answer key docx. |
-| **Agent process** | Select 6-8 exercises. For each: write the question, add scaffolding (denkstappen, hints, formule-herinneringen), write the full solution. |
+| **Raw input** | Textbook exercises for this paragraph + worked solutions from the answer key docx. Extract any textbook graphs for reuse. |
+| **Agent process** | Select 6-8 exercises. For each: write the question, add scaffolding (denkstappen, hints, formule-herinneringen), write the full solution. **Critical: add visual scaffolding (scaffoldImage) for exercises involving graphs, budget lines, or other visual concepts.** This document is used heavily by students who find the material difficult — graphical support is essential, not optional. |
 | **Reference script** | `inoefening-351-afsluiting.js` — copy, replace exercise content. |
-| **Reusable** | `lib-begeleide-inoefening.js` library (import, don't copy) + script scaffold. |
-| **Custom** | Exercise questions, scaffolding text, worked solutions. |
+| **Reusable** | `lib-begeleide-inoefening.js` library (import, don't copy) + script scaffold. Supports `scaffoldImage` (shown in both vragen and antwoorden) and `afterAnswerImage` (shown in antwoorden only). |
+| **Custom** | Exercise questions, scaffolding text, worked solutions, scaffold images from `_assets/`. |
 | **Skills** | `econ-word-templates` + `econ-didactiek` |
+| **Hard rule** | Every exercise that asks students to draw, describe, or interpret a graph MUST have a `scaffoldImage` from `_assets/`. This is dual coding applied to scaffolding — weaker students need visual anchors alongside text-based denkstappen. |
 
 #### Opgavensets — basis, midden, verrijking (6 .docx files)
 | | |
@@ -429,3 +430,4 @@ If a build script is not saved, the paragraph build is **incomplete**.
 | Create `_paragraph-plan.md` before building documents | Ensures terminology consistency and concept coverage across all 8 documents |
 | Build shared visuals in `_assets/` before Phase 4c | One graph, many documents — fix once instead of fixing in 3 separate scripts |
 | Use `lib-svg-utils.js` instead of inline `svgToPng()` | The same function was copy-pasted in 8 scripts — import the shared library instead |
+| Begeleide inoefening MUST have `scaffoldImage` for graph exercises | This document is scaffolding for weaker students — visual support is essential, not optional |

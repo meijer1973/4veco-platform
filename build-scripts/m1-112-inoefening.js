@@ -135,6 +135,7 @@ const oefeningen = [
           "Snijpunt q₂-as: stel q₁ = 0 → q₂ = B / p₂",
         ],
         formuleHerinnering: ["q₁ = B / p₁", "q₂ = B / p₂"],
+        scaffoldImage: { path: path.join(ASSETS_DIR, 'budgetlijn-basis.png'), width: 400, height: 200 },
         answerLines: 4,
         antwoord: [
           [{ text: "Snijpunt q₁-as: ", bold: true }, { text: "q₁ = 60 / 5 = 12 → punt (12, 0)" }],
@@ -181,6 +182,7 @@ const oefeningen = [
           "Vergelijk de uitkomsten",
         ],
         formuleHerinnering: ["q₁ = B / p₁", "q₂ = B / p₂"],
+        scaffoldImage: { path: path.join(ASSETS_DIR, 'budgetlijn-verschuiving.png'), width: 400, height: 200 },
         invulformaat: [
           "Oud (B = 48):  q₁ = 48/4 = ........   q₂ = 48/8 = ........",
           "Nieuw (B = 72): q₁ = 72/4 = ........   q₂ = 72/8 = ........",
@@ -229,6 +231,7 @@ const oefeningen = [
           "Welk snijpunt verandert en welk niet?",
         ],
         formuleHerinnering: ["q₁ = B / p₁", "q₂ = B / p₂"],
+        scaffoldImage: { path: path.join(ASSETS_DIR, 'budgetlijn-prijseffect.png'), width: 400, height: 200 },
         invulformaat: [
           "Oud:   q₁ = 100/10 = ........   q₂ = 100/20 = ........",
           "Nieuw: q₁ = 100/5  = ........   q₂ = 100/20 = ........",
@@ -277,6 +280,7 @@ const oefeningen = [
           "Los het aantal uren op",
         ],
         formuleHerinnering: ["Aantal uren = Budget / uurloon"],
+        scaffoldImage: { path: path.join(ASSETS_DIR, 'arbeidsmarkt-vrije-tijd.png'), width: 400, height: 200 },
         invulformaat: [
           "Aantal uren = €120 / €15 = ........",
         ],

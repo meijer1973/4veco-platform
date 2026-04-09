@@ -566,6 +566,14 @@ async function buildBegeleideInoefening(paragraafNr, onderwerp, headerText, oefe
       if (dv.formuleHerinnering) { children.push(formuleHerinneringBox(dv.formuleHerinnering)); children.push(sp()); }
       if (dv.warning) { children.push(warningBox(dv.warning)); children.push(sp()); }
 
+      // Dual coding: visual scaffolding image — shown in BOTH vragen and antwoorden
+      // This helps weaker students by providing a visual anchor alongside the text scaffolding
+      if (dv.scaffoldImage) {
+        const scaffImg = embedAssetFromPath(dv.scaffoldImage.path, dv.scaffoldImage.width, dv.scaffoldImage.height);
+        if (scaffImg) children.push(scaffImg);
+        children.push(sp());
+      }
+
       if (includeAnswers && dv.antwoord) {
         children.push(answerBox(dv.antwoord));
         if (dv.afterAnswerImage) {
