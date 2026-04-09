@@ -19,7 +19,7 @@ require("module").Module._initPaths();
 const {
   Document, Packer, Paragraph, TextRun, Table, TableRow, TableCell,
   WidthType, AlignmentType, HeadingLevel, BorderStyle, ShadingType,
-  Header, Footer, PageNumber, LevelFormat, PageBreak,
+  Header, Footer, PageNumber, LevelFormat, PageBreak, ImageRun,
 } = require("docx");
 
 const OUT_DIR = "C:\\Projects\\4veco\\module one claude\\1.1 Hoofdstuk 1 - Voor niks gaat de zon op\\1.1.2 Paragraaf 2 - Kiezen of delen\\2. Leren";
@@ -347,6 +347,19 @@ function checklistItem(text) {
   });
 }
 
+// ─── Embed asset image ───
+function embedAssetImage(filename, width, height) {
+  const assetsDir = path.resolve(OUT_DIR, '..', '_assets');
+  const imgPath = path.join(assetsDir, filename + '.png');
+  if (!fs.existsSync(imgPath)) return null;
+  const buf = fs.readFileSync(imgPath);
+  return new Paragraph({
+    spacing: { before: 120, after: 120 },
+    alignment: AlignmentType.CENTER,
+    children: [new ImageRun({ data: buf, transformation: { width, height }, type: 'png' })],
+  });
+}
+
 // ════════════════════════════════════════════════════
 // SKILLS DATA (Visual TOC)
 // ════════════════════════════════════════════════════
@@ -447,6 +460,10 @@ children.push(summarySchema([
   ["Verband met", "\u2192 Vaardigheid 1 (budgetvergelijking) en 3 (snijpunten berekenen)"],
 ], DOMAINS.grafisch.color));
 
+// ── Embedded graph: budgetlijn-basis ──
+const imgSkill2 = embedAssetImage('budgetlijn-basis', 500, 250);
+if (imgSkill2) children.push(imgSkill2);
+
 // ════════════════════════════════════════════════════
 // SKILL 3 — Snijpunten met assen berekenen
 // ════════════════════════════════════════════════════
@@ -517,6 +534,10 @@ children.push(summarySchema([
   ["Verband met", "\u2192 Vaardigheid 3 (snijpunten berekenen) en 5 (prijsverandering)"],
 ], DOMAINS.economisch.color));
 
+// ── Embedded graph: budgetlijn-verschuiving ──
+const imgSkill4 = embedAssetImage('budgetlijn-verschuiving', 500, 250);
+if (imgSkill4) children.push(imgSkill4);
+
 // ════════════════════════════════════════════════════
 // SKILL 5 — Effect prijsverandering op budgetlijn
 // ════════════════════════════════════════════════════
@@ -550,6 +571,10 @@ children.push(summarySchema([
   ["Tekenstrategie", "Vast snijpunt eerst, dan nieuw snijpunt, verbind"],
   ["Verband met", "\u2192 Vaardigheid 3 (snijpunten berekenen) en 4 (inkomensverandering)"],
 ], DOMAINS.economisch.color));
+
+// ── Embedded graph: budgetlijn-prijseffect ──
+const imgSkill5 = embedAssetImage('budgetlijn-prijseffect', 500, 250);
+if (imgSkill5) children.push(imgSkill5);
 
 // ════════════════════════════════════════════════════
 // SKILL 6 — Opofferingskosten vrije tijd berekenen

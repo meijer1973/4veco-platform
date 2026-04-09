@@ -8,7 +8,7 @@ const fs = require("fs");
 const path = require("path");
 const {
   Document, Packer, Paragraph, TextRun, Table, TableRow, TableCell,
-  AlignmentType, BorderStyle, WidthType, ShadingType,
+  AlignmentType, BorderStyle, WidthType, ShadingType, ImageRun,
 } = require("docx");
 
 const PAGE = { size: { width: 11906, height: 16838 }, margin: { top: 720, right: 720, bottom: 720, left: 720 } };
@@ -104,6 +104,20 @@ function fullWidthCard(content, accentColor, bgColor) {
   });
 }
 
+const SAMENV_OUT_DIR = "C:\\Projects\\4veco\\module one claude\\1.1 Hoofdstuk 1 - Voor niks gaat de zon op\\1.1.2 Paragraaf 2 - Kiezen of delen\\2. Leren";
+
+function embedAssetImage(filename, width, height) {
+  const assetsDir = path.resolve(SAMENV_OUT_DIR, '..', '_assets');
+  const imgPath = path.join(assetsDir, filename + '.png');
+  if (!fs.existsSync(imgPath)) return null;
+  const buf = fs.readFileSync(imgPath);
+  return new Paragraph({
+    spacing: { before: 120, after: 120 },
+    alignment: AlignmentType.CENTER,
+    children: [new ImageRun({ data: buf, transformation: { width, height }, type: 'png' })],
+  });
+}
+
 async function build() {
   const children = [];
 
@@ -132,6 +146,11 @@ async function build() {
       ], C.teal, C.tealLt, C.tealDk),
     ] })],
   }));
+
+  // ── Embedded graph: budgetlijn-basis ──
+  const imgBudgetlijn = embedAssetImage('budgetlijn-basis', 500, 250);
+  if (imgBudgetlijn) children.push(imgBudgetlijn);
+
   children.push(sp(80));
 
   // -- Budgetvergelijking (amber) --

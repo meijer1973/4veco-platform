@@ -8,6 +8,34 @@ Platform-repo voor het genereren van lesmateriaal voor **Praktische Economie VWO
 - Gebruik `AGENTS.md` voor repo-overzicht, architectuur, deployregels en kwaliteitsstandaard.
 - Gebruik `build-scripts/README.md` voor het onderscheid tussen platform generators, converters, reference implementations en utilities.
 
+## Design Principles
+
+These two principles are the DNA of every product this platform produces — lesson materials, textbooks, assessments, and any future format. Every builder, skill, and template must follow them.
+
+### 1. Dual Coding (Paivio/Mayer)
+
+Every document that explains a concept must pair text with a visual aid. Information is retained better when it arrives through both verbal (text/speech) and visual (graph/diagram/color) channels.
+
+**Rules:**
+- Explainer documents (voorkennis, vaardigheden) embed relevant graphs from `_assets/` — not just the presentatie
+- Samenvatting includes key concept graphs alongside text cells
+- Exercises reference or include graphs where the concept involves graphical reasoning
+- The same graph that appears in the presentatie should appear (at appropriate size) in the vaardigheden doc that teaches the same skill
+- Domain color coding (blauw/amber/groen) provides visual recognition without reading
+- Formula boxes in monospace provide visual distinction from running text
+
+### 2. Unified Student Experience
+
+A student working through all materials for one paragraph should feel like they're following one coherent lesson, not 8 independent documents. The core anchor is **consistent procedures and approaches** — the same method, the same steps, the same reasoning structure everywhere. Products and numbers may vary by context, but the approach must be identical.
+
+**Rules:**
+- **Same procedure steps**: If a skill has 3 steps in the vaardigheden doc, the stappenplan game must use those exact 3 steps (same labels, same order, same reasoning). The procedure is the constant; the context can change.
+- **Same approach to solving**: If the vaardigheden teaches "step 1: vul q₂=0 in, step 2: vul q₁=0 in, step 3: verbind", then every document that references snijpunten calculation follows that same approach.
+- **Same visuals reinforcing the approach**: The graph from the presentatie should reappear in the vaardigheden explanation of the same skill — so students see the visual anchor for the procedure they're learning.
+- **Same terminology**: Enforced via the `_paragraph-plan.md` terminologie table.
+
+**How to enforce:** The `_paragraph-plan.md` contains a **procedure-stappen-plan** that defines the canonical step sequence for each skill. All builders — vaardigheden, stappenplan game, presentatie, inoefening — must follow these exact steps. A **visuelen-toewijzing** table maps each visual to every builder that must embed it.
+
 ## Structuur
 
 ```

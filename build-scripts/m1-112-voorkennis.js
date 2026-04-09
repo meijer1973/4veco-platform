@@ -19,7 +19,7 @@ require("module").Module._initPaths();
 const {
   Document, Packer, Paragraph, TextRun, Table, TableRow, TableCell,
   WidthType, AlignmentType, HeadingLevel, BorderStyle, ShadingType,
-  Header, Footer, PageNumber, LevelFormat, PageBreak,
+  Header, Footer, PageNumber, LevelFormat, PageBreak, ImageRun,
 } = require("docx");
 
 const OUT_DIR = "C:\\Projects\\4veco\\module one claude\\1.1 Hoofdstuk 1 - Voor niks gaat de zon op\\1.1.2 Paragraaf 2 - Kiezen of delen\\1. Voorbereiden";
@@ -347,6 +347,19 @@ function checklistItem(text) {
   });
 }
 
+// ─── Embed asset image ───
+function embedAssetImage(filename, width, height) {
+  const assetsDir = path.resolve(OUT_DIR, '..', '_assets');
+  const imgPath = path.join(assetsDir, filename + '.png');
+  if (!fs.existsSync(imgPath)) return null;
+  const buf = fs.readFileSync(imgPath);
+  return new Paragraph({
+    spacing: { before: 120, after: 120 },
+    alignment: AlignmentType.CENTER,
+    children: [new ImageRun({ data: buf, transformation: { width, height }, type: 'png' })],
+  });
+}
+
 // ════════════════════════════════════════════════════
 // CHAPTER DATA
 // ════════════════════════════════════════════════════
@@ -453,6 +466,10 @@ children.push(summarySchema([
   ["Snijpunt y-as", "Vul x = 0 in om het snijpunt met de y-as te vinden"],
   ["Snijpunt x-as", "Vul y = 0 in om het snijpunt met de x-as te vinden"],
 ], VK_DOMAINS.grafisch.color));
+
+// ── Embedded graph: budgetlijn-basis ──
+const imgCh3 = embedAssetImage('budgetlijn-basis', 500, 250);
+if (imgCh3) children.push(imgCh3);
 
 // ════════════════════════════════════════════════════
 // CHAPTER 4 — Schaarste en keuze

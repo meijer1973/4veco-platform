@@ -142,7 +142,9 @@ Leerlingen kunnen maar een beperkte hoeveelheid nieuwe informatie tegelijk verwe
 3. Bouw complexiteit pas op als de basis staat
 4. Combineer tekst en beeld (dual coding) — niet tekst óf beeld, maar samen
 
-### 2.3 Dual Coding (Paivio/Mayer)
+### 2.3 Dual Coding (Paivio/Mayer) — Platform Design Principle
+
+> **Dit is een overkoepelend ontwerpprincipe van het hele platform.** Zie ook AGENTS.md § Design Principles. Dual coding geldt voor alle producten: lesmateriaal, werkboeken, toetsen, en toekomstige formats.
 
 Informatie wordt beter onthouden als het via twee kanalen binnenkomt: verbaal (tekst/spraak) en visueel (beeld/diagram/kleur). Dit geldt voor alle niveaus.
 
@@ -151,6 +153,11 @@ Informatie wordt beter onthouden als het via twee kanalen binnenkomt: verbaal (t
 - Grafieken naast tekstuele uitleg → twee paden naar hetzelfde concept
 - Stroomdiagrammen voor redeneerkettingen → visuele structuur voor causale logica
 - Formuleboxen in monospace → visueel onderscheid van lopende tekst
+- Uitleg-documenten (voorkennis, vaardigheden) bevatten dezelfde grafieken als de presentatie — via `_assets/` en `ImageRun`
+- Elke vaardigheid die een grafische component heeft, wordt ondersteund met een bijpassende grafiek uit `_assets/`
+
+**Unified Experience (aanvulling op dual coding):**
+Dezelfde procedure (stappen, aanpak, redeneerstructuur) wordt in elk format op dezelfde manier uitgelegd. De context (producten, getallen) mag variëren, maar de aanpak is het anker. Als de vaardigheden-uitleg 3 stappen voorschrijft, volgen de presentatie, het stappenplan-spel en de samenvatting dezelfde 3 stappen. Zie `_paragraph-plan.md` → procedure-stappen-plan.
 
 ### 2.4 Positieve framing
 

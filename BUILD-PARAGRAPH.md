@@ -2,6 +2,8 @@
 
 From raw exercises to finished interactive lesson page. This document is the single source of truth for the paragraph production process.
 
+> **Before you start:** Read the **Design Principles** section in [AGENTS.md](AGENTS.md#design-principles). Two principles govern everything: **Dual Coding** (every concept pairs text with a visual) and **Unified Student Experience** (same procedures and approaches across all formats). These are non-negotiable.
+
 ---
 
 ## 1. Definition of Done
@@ -202,6 +204,8 @@ Read the textbook paragraph and answer key thoroughly, then create the paragraph
    - **Terminologie**: use/don't-use table for consistent Dutch economics terms across all documents
    - **Opgaven-verdeling**: exercise distribution across basis/midden/verrijking
    - **Vaardigheden & Voorkennis**: quick reference for the uitleg-builders
+   - **Procedure-stappen-plan** (unified experience): for each skill, the exact step labels and sequence. This is the canonical approach — all builders (vaardigheden, stappenplan game, presentatie) must follow these steps. Products/numbers may vary by context, but the approach is fixed.
+   - **Visuelen-toewijzing** (dual coding): for each visual in `_assets/`, which builders embed it — not just the presentatie. Every document that explains a concept with a matching visual must include it.
 
 This plan is the **single source of truth** for all builders. Every builder reads it before starting.
 
@@ -223,6 +227,8 @@ For each document type, copy the reference script, replace the content, run it. 
 - Read `_paragraph-plan.md` for its outline, terminology, and concept coverage
 - Read pre-built PNGs from `_assets/` instead of generating SVGs inline
 - Use `const { svgToPng, pngToBase64, GRAPH_COLORS } = require('./lib-svg-utils')` instead of inline copies
+- **Dual coding**: embed every visual listed in the visuelen-toewijzing for this builder (use `ImageRun` in docx scripts)
+- **Unified experience**: follow the exact step sequence from the procedure-stappen-plan — same labels, same order, same approach. The stappenplan game procedures must mirror vaardigheden skill steps exactly.
 
 | Document | Reference script | Output location |
 |----------|-----------------|-----------------|
@@ -259,6 +265,9 @@ This runs ONLY the automated layer: engine copy, game shell generation, landing 
 - [ ] Nieuws met visual has embedded SVG→PNG chart, font sizes 16/11/9pt
 - [ ] Samenvatting uses table-based infographic layout
 - [ ] Terminology is consistent across all documents (check against terminologie table in plan)
+- [ ] **Dual coding**: vaardigheden and voorkennis .docx files contain embedded graphs from `_assets/` (not text-only)
+- [ ] **Unified experience**: stappenplan game procedures use the same step labels and sequence as vaardigheden skills
+- [ ] **Visuelen-toewijzing**: every visual listed for a builder in the plan is actually embedded in that builder's output
 - [ ] Browser: all 4 games load, all section cards appear in landing page
 - [ ] Data tests pass: `MODULE_ROOT="$MODULE" npx jest --testPathPatterns "engines/tests/.*-data\.test\.js"`
 

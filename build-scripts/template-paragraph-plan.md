@@ -100,3 +100,25 @@ Quick reference for the uitleg-builders.
 **Vaardigheden** (5-7 skills): [skill 1], [skill 2], ...
 
 Optional graphs needed for these documents: [list or "geen"].
+
+---
+
+## Procedure-stappen-plan (unified experience)
+
+> **Critical**: This defines the canonical step sequence for each skill. ALL builders (vaardigheden, stappenplan game, presentatie, inoefening) must follow these exact steps. Products and numbers may vary by context, but the approach is fixed.
+
+| Vaardigheid | Stap 1 | Stap 2 | Stap 3 | Gebruikt door |
+|---|---|---|---|---|
+| [skill 1] | [step label + approach] | [step label + approach] | [step label + approach] | vaardigheden, stappenplan, presentatie |
+| [skill 2] | | | | |
+
+---
+
+## Visuelen-toewijzing (dual coding)
+
+> **Critical**: Every document that explains a concept with a matching visual MUST embed it. Not just the presentatie.
+
+| Visual | presentatie | vaardigheden | voorkennis | samenvatting |
+|---|---|---|---|---|
+| `[filename].png` | slide [N] | skill [N] ([name]) | sectie [N] ([name]) | cel [N] |
+| | | | | |

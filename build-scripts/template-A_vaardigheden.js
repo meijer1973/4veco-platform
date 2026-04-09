@@ -28,8 +28,20 @@ require("module").Module._initPaths();
 const {
   Document, Packer, Paragraph, TextRun, Table, TableRow, TableCell,
   WidthType, AlignmentType, HeadingLevel, BorderStyle, ShadingType,
-  Header, Footer, PageNumber, LevelFormat, PageBreak,
+  Header, Footer, PageNumber, LevelFormat, PageBreak, ImageRun,
 } = require("docx");
+
+// ─── Dual coding: embed pre-built PNGs from _assets/ ───
+function embedAssetImage(assetsDir, filename, width, height) {
+  const imgPath = path.join(assetsDir, filename + ".png");
+  if (!fs.existsSync(imgPath)) return null;
+  const buf = fs.readFileSync(imgPath);
+  return new Paragraph({
+    spacing: { before: 120, after: 120 },
+    alignment: AlignmentType.CENTER,
+    children: [new ImageRun({ data: buf, transformation: { width, height }, type: "png" })],
+  });
+}
 
 // ─── Unicode colon (U+F03A) ───
 const UC = "\uF03A";
