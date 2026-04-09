@@ -8,7 +8,7 @@ From raw exercises to finished interactive lesson page. This document is the sin
 
 ## 1. Definition of Done
 
-A complete paragraph has **23 files** plus an index.html. Every file listed as required MUST exist before the paragraph is considered done.
+A complete paragraph has **24 files** plus an index.html. Every file listed as required MUST exist before the paragraph is considered done.
 
 | # | File | Section | Required | Builder | Source input | Output type |
 |---|------|---------|----------|---------|--------------|-------------|
@@ -185,6 +185,7 @@ cp "$MODULE/3.1 Hoofdstuk 1 - Markten/3.1.1 Paragraaf 1 - Markt en marktstructuu
 2. Write `source-data/module-N/reasoning/X.Y.Z.csv` — reasoning CSV
 3. Run: `MODULE_ROOT="$MODULE" node build-scripts/build-reasoning-questions.js X.Y.Z <domain> source-data/module-N/reasoning/X.Y.Z.csv`
 4. Write `shared/newsdetective/X.Y.Z.js` — newsdetective data
+5. Write `shared/procedure/X.Y.Z.js` — procedure/stappenplan data. Steps MUST align with the vaardigheden skills (same labels, same order). See procedure-stappen-plan in the paragraph plan.
 
 ### Phase 4: Create rich documents (bulk of the work)
 
@@ -259,7 +260,7 @@ This runs ONLY the automated layer: engine copy, game shell generation, landing 
 ### Phase 7: Verify
 - [ ] `_paragraph-plan.md` exists and all sections are filled in
 - [ ] `_assets/` folder has PNGs matching every entry in the visuelen-plan
-- [ ] File count: 23 files + index.html
+- [ ] File count: 24 files + index.html
 - [ ] All .docx/.pptx open in Word/PowerPoint without errors
 - [ ] Presentatie has ≥3 economic graphs, presents theory (no exercise instructions)
 - [ ] Nieuws met visual has embedded SVG→PNG chart, font sizes 16/11/9pt

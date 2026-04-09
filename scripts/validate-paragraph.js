@@ -7,7 +7,7 @@
  *   node scripts/validate-paragraph.js "../module one claude/1.1 Hoofdstuk 1 - Voor niks gaat de zon op/1.1.1 Paragraaf 1 - Kiezen is kostbaar"
  *
  * Checks:
- *   - All 23 required files exist
+ *   - All 24 required files exist
  *   - All .docx files are valid zip archives
  *   - All .pptx files > 100KB (non-empty)
  *   - All .html files > 500 bytes and contain actual content
@@ -70,6 +70,7 @@ const required = [
   { path: `2. Leren/${prefix} – nieuws met visual.docx`, type: 'docx' },
   { path: `2. Leren/${prefix} – samenvatting.docx`, type: 'docx' },
   { path: `2. Leren/${prefix} – youtube-videos.html`, type: 'html' },
+  { path: `2. Leren/${prefix} – stappenplan.html`, type: 'html' },
   { path: `3. Oefenen/${prefix} – redeneer-spel.html`, type: 'html' },
   { path: `3. Oefenen/${prefix} – wiskundevaardigheden.html`, type: 'html' },
   { path: `3. Oefenen/begeleide inoefening/${prefix} – begeleide inoefening – vragen.docx`, type: 'docx' },
@@ -143,6 +144,7 @@ const gameData = [
   { path: `newsdetective/${parNr}.js`, label: 'Newsdetective data' },
   { path: `reasoning/${parNr}.js`, label: 'Reasoning data (JS)' },
   { path: `skilltree/${parNr}.js`, label: 'Skilltree data' },
+  { path: `procedure/${parNr}.js`, label: 'Procedure/stappenplan data' },
 ];
 
 for (const gd of gameData) {
