@@ -544,7 +544,7 @@
             html += '<button class="st-hint-btn" id="st-hint">' + iconLightbulb() + ' Hint</button>';
         }
         if (engine.hasExplanation(state.skillId)) {
-            html += '<button class="st-uitleg-btn" id="st-uitleg">' + iconBook() + ' Uitleg</button>';
+            html += '<button class="st-explanation-btn" id="st-explanation">' + iconBook() + ' Uitleg</button>';
         }
         html += '</div>';
         if (showHint) {
@@ -671,7 +671,7 @@
             });
         }
 
-        var uitlegBtn = document.getElementById('st-uitleg');
+        var uitlegBtn = document.getElementById('st-explanation');
         if (uitlegBtn) {
             uitlegBtn.addEventListener('click', function () {
                 var state = engine.getExerciseState();

@@ -251,7 +251,7 @@ function buildWaterverbruikVergelijking() {
 // ─────────────────────────────────────────────────────────────────────────────
 // GRAPH 3: Budgetlijn gecombineerd (budget + price change)
 // ─────────────────────────────────────────────────────────────────────────────
-function buildBudgetlijnGecombineerd() {
+function buildBudgetLineGecombineerd() {
   const maxX = 180, maxY = 30;
   const stepX = 30, stepY = 5;
 
@@ -341,7 +341,7 @@ async function main() {
   const graphs = [
     { name: "schaarste-samenhang",      builder: buildSchaarseSamenhang },
     { name: "waterverbruik-vergelijking", builder: buildWaterverbruikVergelijking },
-    { name: "budgetlijn-gecombineerd",  builder: buildBudgetlijnGecombineerd },
+    { name: "budgetlijn-gecombineerd",  builder: buildBudgetLineGecombineerd },
     { name: "arbeidsmarkt-vacatures",   builder: buildArbeidsmarktVacatures },
   ];
 

@@ -949,11 +949,11 @@ const LEVELS = [
       console.log(`OK: ${path.basename(vragenFile)} (${vragenBuf.length} bytes)`);
 
       // Antwoorden
-      const antwoordenFile = path.join(dir, `${PREFIX} \u2013 ${level.name} \u2013 antwoorden.docx`);
-      const antwoordenDoc = createDoc(level.buildFn, true, headerText);
-      const antwoordenBuf = await Packer.toBuffer(antwoordenDoc);
-      fs.writeFileSync(antwoordenFile, antwoordenBuf);
-      console.log(`OK: ${path.basename(antwoordenFile)} (${antwoordenBuf.length} bytes)`);
+      const answersFile = path.join(dir, `${PREFIX} \u2013 ${level.name} \u2013 antwoorden.docx`);
+      const answersDoc = createDoc(level.buildFn, true, headerText);
+      const answersBuf = await Packer.toBuffer(answersDoc);
+      fs.writeFileSync(answersFile, answersBuf);
+      console.log(`OK: ${path.basename(answersFile)} (${answersBuf.length} bytes)`);
     }
 
     console.log("\nDone! All 6 documents for 3.5.1 Afsluiting created.");

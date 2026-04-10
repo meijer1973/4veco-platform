@@ -381,8 +381,8 @@ body {
     gap: 6px;
 }
 
-/* Uitleg button */
-.st-uitleg-btn {
+/* Explanation button */
+.st-explanation-btn {
     background: none;
     border: 1px solid #1e6434;
     border-radius: 8px;

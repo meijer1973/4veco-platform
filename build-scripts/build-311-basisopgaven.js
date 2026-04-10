@@ -32,7 +32,7 @@ const UC = "\uF03A";
 
 const OUT_DIR = `C:\\Users\\meije\\Documents\\0. claude - under construction\\3. Module 3 ${UC} Markt en overheid\\3.1 Hoofdstuk 1 ${UC} Markten\\3.1.1 Paragraaf 1 ${UC} Markt en marktstructuur\\basisopgaven`;
 const VRAGEN_FILE = path.join(OUT_DIR, "3.1.1 Paragraaf 1 - Markt en marktstructuur \u2013 basis \u2013 vragen.docx");
-const ANTWOORDEN_FILE = path.join(OUT_DIR, "3.1.1 Paragraaf 1 - Markt en marktstructuur \u2013 basis \u2013 antwoorden.docx");
+const ANSWERS_FILE = path.join(OUT_DIR, "3.1.1 Paragraaf 1 - Markt en marktstructuur \u2013 basis \u2013 antwoorden.docx");
 
 // ─── Page setup ───
 const PAGE = { size: { width: 11906, height: 16838 }, margin: { top: 1440, right: 1440, bottom: 1440, left: 1440 } };
@@ -480,11 +480,11 @@ function createDoc(includeAnswers) {
     console.log("  Size:", vragenBuf.length, "bytes");
 
     // Build antwoorden document
-    const antwoordenDoc = createDoc(true);
-    const antwoordenBuf = await Packer.toBuffer(antwoordenDoc);
-    fs.writeFileSync(ANTWOORDEN_FILE, antwoordenBuf);
-    console.log("SUCCESS: Antwoorden written to", ANTWOORDEN_FILE);
-    console.log("  Size:", antwoordenBuf.length, "bytes");
+    const answersDoc = createDoc(true);
+    const answersBuf = await Packer.toBuffer(answersDoc);
+    fs.writeFileSync(ANSWERS_FILE, answersBuf);
+    console.log("SUCCESS: Antwoorden written to", ANSWERS_FILE);
+    console.log("  Size:", answersBuf.length, "bytes");
 
     console.log("\nDone! Both documents created successfully.");
   } catch (err) {

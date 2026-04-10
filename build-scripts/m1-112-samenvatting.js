@@ -151,8 +151,8 @@ async function build() {
   }));
 
   // ── Embedded graph: budgetlijn-basis ──
-  const imgBudgetlijn = embedAssetImage('budgetlijn-basis', 500, 250);
-  if (imgBudgetlijn) children.push(imgBudgetlijn);
+  const imgBudgetLine = embedAssetImage('budgetlijn-basis', 500, 250);
+  if (imgBudgetLine) children.push(imgBudgetLine);
 
   children.push(sp(80));
 

@@ -13,22 +13,22 @@ Reusable PptxGenJS code for building professional, visually consistent economics
 
 ## MANDATORY: GRAPHS IN EVERY PRESENTATION
 
-**Grafieken zijn een essentieel onderdeel van economieonderwijs.** Ze zijn abstract en moeilijk voor leerlingen, dus hoe vaker ze worden getoond, hoe beter. Bij het maken van elke presentatie MOET je actief controleren waar grafieken kunnen worden toegevoegd.
+**Graphs are an essential part of economics education.** They are abstract and difficult for students, so the more often they are shown, the better. When creating any presentation you MUST actively check where graphs can be added.
 
-**Regels:**
-- Analyseer bij elke presentatie welke economische concepten baat hebben bij een grafiek (V/A-diagrammen, kostencurves, surplusgebieden, verschuivingen, monopoliegrafieken, etc.)
-- Voeg grafiekdia's toe op eigen dia's — proppen op bestaande dia's maakt het te druk
-- Gebruik de `economic-graph` skill voor SVG-specificaties en de SVG → Sharp → PNG pipeline
-- Patroon: eerst de tekstdia met uitleg, dan een aparte dia met de grafiek die het concept visualiseert
-- Splits liever een dia in twee (tekst + grafiek apart) dan dat je een grafiek weglaat
-- Je hebt GEEN extra prompt van de gebruiker nodig om grafieken toe te voegen — dit is standaard
+**Rules:**
+- For each presentation, analyze which economic concepts benefit from a graph (S/D diagrams, cost curves, surplus areas, shifts, monopoly graphs, etc.)
+- Add graph slides on their own slides — cramming them onto existing slides makes it too busy
+- Use the `economic-graph` skill for SVG specifications and the SVG → Sharp → PNG pipeline
+- Pattern: first the text slide with explanation, then a separate slide with the graph that visualizes the concept
+- Prefer splitting a slide in two (text + graph separate) over leaving out a graph
+- You do NOT need an extra user prompt to add graphs — this is the default
 
-**Typische grafieken per onderwerp:**
-- Marktevenwicht: V/A-diagram met evenwichtspunt
-- Volkomen concurrentie: kostencurves (MK, GTK) met prijslijn, winstrechthoek, CS/PS driehoeken
-- Monopolie: V + MO (dubbele helling) + MK, p* op vraaglijn, winstrechthoek + CS
-- Arbeidsmarkt: V/A met loon/arbeid assen, verschuivingen
-- Internationale handel: comparatief voordeel, PPF, handelswinsten
+**Typical graphs per topic:**
+- Market equilibrium: S/D diagram with equilibrium point
+- Perfect competition: cost curves (MC, ATC) with price line, profit rectangle, CS/PS triangles
+- Monopoly: D + MR (double slope) + MC, p* on demand curve, profit rectangle + CS
+- Labour market: S/D with wage/labour axes, shifts
+- International trade: comparative advantage, PPF, gains from trade
 
 ---
 

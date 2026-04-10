@@ -117,7 +117,7 @@ function axes(xLabel, yLabel) {
 // ─────────────────────────────────────────────────────────────────────────────
 // GRAPH 1: Budgetlijn basis
 // ─────────────────────────────────────────────────────────────────────────────
-function buildBudgetlijnBasis() {
+function buildBudgetLineBasis() {
   const maxX = 18, maxY = 3;
   const stepX = 3, stepY = 1;
 
@@ -160,7 +160,7 @@ function buildBudgetlijnBasis() {
 // ─────────────────────────────────────────────────────────────────────────────
 // GRAPH 2: Budgetlijn verschuiving (parallel shift)
 // ─────────────────────────────────────────────────────────────────────────────
-function buildBudgetlijnVerschuiving() {
+function buildBudgetLineVerschuiving() {
   const maxX = 27, maxY = 5;
   const stepX = 3, stepY = 1;
 
@@ -201,7 +201,7 @@ function buildBudgetlijnVerschuiving() {
 // ─────────────────────────────────────────────────────────────────────────────
 // GRAPH 3: Budgetlijn prijseffect (pivot)
 // ─────────────────────────────────────────────────────────────────────────────
-function buildBudgetlijnPrijseffect() {
+function buildBudgetLinePrijseffect() {
   const maxX = 12, maxY = 6;
   const stepX = 2, stepY = 1;
 
@@ -244,7 +244,7 @@ function buildBudgetlijnPrijseffect() {
 // ─────────────────────────────────────────────────────────────────────────────
 // GRAPH 4: Arbeidsmarkt / vrije tijd
 // ─────────────────────────────────────────────────────────────────────────────
-function buildArbeidsmarktVrijeTijd() {
+function buildLabourMarketFreeTime() {
   const maxX = 24, maxY = 288;
   const stepX = 4, stepY = 48;
 
@@ -295,10 +295,10 @@ async function main() {
   }
 
   const graphs = [
-    { name: "budgetlijn-basis", builder: buildBudgetlijnBasis },
-    { name: "budgetlijn-verschuiving", builder: buildBudgetlijnVerschuiving },
-    { name: "budgetlijn-prijseffect", builder: buildBudgetlijnPrijseffect },
-    { name: "arbeidsmarkt-vrije-tijd", builder: buildArbeidsmarktVrijeTijd },
+    { name: "budgetlijn-basis", builder: buildBudgetLineBasis },
+    { name: "budgetlijn-verschuiving", builder: buildBudgetLineVerschuiving },
+    { name: "budgetlijn-prijseffect", builder: buildBudgetLinePrijseffect },
+    { name: "arbeidsmarkt-vrije-tijd", builder: buildLabourMarketFreeTime },
   ];
 
   for (const { name, builder } of graphs) {

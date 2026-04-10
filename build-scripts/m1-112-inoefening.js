@@ -36,23 +36,23 @@ const oefeningen = [
       {
         label: "Vraag 1a — Budgetvergelijking",
         vraagText: "Stel de budgetvergelijking op voor deze consument.",
-        denkstappen: [
+        thinkingSteps: [
           "De budgetvergelijking luidt: p₁ · q₁ + p₂ · q₂ = B",
           "Vul de gegeven waarden in voor p₁, p₂ en B",
         ],
         hint: "De budgetvergelijking geeft alle combinaties van q₁ en q₂ waarvoor de consument precies zijn hele budget uitgeeft.",
-        formuleHerinnering: ["Budgetvergelijking: p₁ · q₁ + p₂ · q₂ = B"],
+        formulaReminder: ["Budgetvergelijking: p₁ · q₁ + p₂ · q₂ = B"],
         answerLines: 3,
         antwoord: [
           "Budgetvergelijking: p₁ · q₁ + p₂ · q₂ = B",
           [{ text: "Invullen: 4 · q₁ + 8 · q₂ = 48", bold: true }],
         ],
-        uitleg: "De budgetvergelijking laat zien hoeveel je maximaal kunt kopen als je je hele budget besteedt. Elke combinatie (q₁, q₂) die aan deze vergelijking voldoet, ligt op de budgetlijn.",
+        explanation: "De budgetvergelijking laat zien hoeveel je maximaal kunt kopen als je je hele budget besteedt. Elke combinatie (q₁, q₂) die aan deze vergelijking voldoet, ligt op de budgetlijn.",
       },
       {
         label: "Vraag 1b — Combinaties controleren",
         vraagText: "Controleer of de combinatie q₁ = 6, q₂ = 3 op de budgetlijn ligt.",
-        denkstappen: [
+        thinkingSteps: [
           "Vul q₁ = 6 en q₂ = 3 in de budgetvergelijking in",
           "Kijk of de uitkomst gelijk is aan B = 48",
         ],
@@ -61,7 +61,7 @@ const oefeningen = [
           "4 · 6 + 8 · 3 = 24 + 24 = 48 ✓",
           [{ text: "Ja, deze combinatie ligt precies op de budgetlijn.", bold: true }],
         ],
-        uitleg: "Als de uitkomst gelijk is aan B, dan ligt het punt op de budgetlijn. Is het kleiner, dan houdt de consument geld over (punt onder de lijn). Is het groter, dan is het niet betaalbaar (punt boven de lijn).",
+        explanation: "Als de uitkomst gelijk is aan B, dan ligt het punt op de budgetlijn. Is het kleiner, dan houdt de consument geld over (punt onder de lijn). Is het groter, dan is het niet betaalbaar (punt boven de lijn).",
       },
     ],
   },
@@ -77,12 +77,12 @@ const oefeningen = [
       {
         label: "Vraag 2a — Snijpunt met de q₁-as",
         vraagText: "Bereken het snijpunt van de budgetlijn met de q₁-as (horizontale as).",
-        denkstappen: [
+        thinkingSteps: [
           "Op de q₁-as geldt: q₂ = 0 (je koopt alleen goed 1)",
           "Vul q₂ = 0 in de budgetvergelijking in en los q₁ op",
         ],
         hint: "Het snijpunt met de q₁-as vind je door q₂ = 0 te stellen: q₁ = B / p₁.",
-        formuleHerinnering: ["Snijpunt q₁-as: q₁ = B / p₁", "Snijpunt q₂-as: q₂ = B / p₂"],
+        formulaReminder: ["Snijpunt q₁-as: q₁ = B / p₁", "Snijpunt q₂-as: q₂ = B / p₂"],
         invulformaat: [
           "q₂ = 0, dus: p₁ · q₁ = B",
           "10 · q₁ = 120",
@@ -94,12 +94,12 @@ const oefeningen = [
           [{ text: "q₁ = 120 / 10 = 12", bold: true }],
           "Snijpunt met de q₁-as: (12, 0) — de consument kan maximaal 12 stuks van goed 1 kopen.",
         ],
-        uitleg: "Dit snijpunt geeft het maximum aantal van goed 1 dat de consument kan kopen als hij niets van goed 2 koopt.",
+        explanation: "Dit snijpunt geeft het maximum aantal van goed 1 dat de consument kan kopen als hij niets van goed 2 koopt.",
       },
       {
         label: "Vraag 2b — Snijpunt met de q₂-as",
         vraagText: "Bereken het snijpunt van de budgetlijn met de q₂-as (verticale as).",
-        denkstappen: [
+        thinkingSteps: [
           "Op de q₂-as geldt: q₁ = 0 (je koopt alleen goed 2)",
           "Vul q₁ = 0 in de budgetvergelijking in en los q₂ op",
         ],
@@ -114,7 +114,7 @@ const oefeningen = [
           [{ text: "q₂ = 120 / 20 = 6", bold: true }],
           "Snijpunt met de q₂-as: (0, 6) — de consument kan maximaal 6 stuks van goed 2 kopen.",
         ],
-        uitleg: "Met de twee snijpunten (12, 0) en (0, 6) kun je de budgetlijn tekenen als een rechte lijn.",
+        explanation: "Met de twee snijpunten (12, 0) en (0, 6) kun je de budgetlijn tekenen als een rechte lijn.",
       },
     ],
   },
@@ -130,11 +130,11 @@ const oefeningen = [
       {
         label: "Vraag 3a — Snijpunten bepalen",
         vraagText: "Bereken de twee snijpunten met de assen.",
-        denkstappen: [
+        thinkingSteps: [
           "Snijpunt q₁-as: stel q₂ = 0 → q₁ = B / p₁",
           "Snijpunt q₂-as: stel q₁ = 0 → q₂ = B / p₂",
         ],
-        formuleHerinnering: ["q₁ = B / p₁", "q₂ = B / p₂"],
+        formulaReminder: ["q₁ = B / p₁", "q₂ = B / p₂"],
         scaffoldImage: { path: path.join(ASSETS_DIR, 'budgetlijn-basis.png'), width: 400, height: 200 },
         answerLines: 4,
         antwoord: [
@@ -145,7 +145,7 @@ const oefeningen = [
       {
         label: "Vraag 3b — Beschrijf de budgetlijn",
         vraagText: "Beschrijf hoe je de budgetlijn tekent in een assenstelsel. Wat zet je op elke as en welke punten verbind je?",
-        denkstappen: [
+        thinkingSteps: [
           "Kies welk goed op welke as komt",
           "Zet de snijpunten in het assenstelsel",
           "Trek een rechte lijn tussen de snijpunten",
@@ -160,7 +160,7 @@ const oefeningen = [
           "Alle punten op de lijn zijn combinaties waarvoor de consument precies €60 uitgeeft.",
         ],
         afterAnswerImage: { path: path.join(ASSETS_DIR, 'budgetlijn-basis.png'), width: 450, height: 225 },
-        uitleg: "De budgetlijn is altijd een rechte lijn (lineair). De helling is −p₁/p₂ = −5/15 = −⅓. Dit betekent: voor elk extra goed 1 moet je ⅓ goed 2 opgeven.",
+        explanation: "De budgetlijn is altijd een rechte lijn (lineair). De helling is −p₁/p₂ = −5/15 = −⅓. Dit betekent: voor elk extra goed 1 moet je ⅓ goed 2 opgeven.",
       },
     ],
   },
@@ -176,12 +176,12 @@ const oefeningen = [
       {
         label: "Vraag 4a — Oude en nieuwe snijpunten",
         vraagText: "Bereken de snijpunten met de assen voor zowel het oude als het nieuwe budget.",
-        denkstappen: [
+        thinkingSteps: [
           "Bereken eerst de snijpunten bij B = 48",
           "Bereken daarna de snijpunten bij B = 72",
           "Vergelijk de uitkomsten",
         ],
-        formuleHerinnering: ["q₁ = B / p₁", "q₂ = B / p₂"],
+        formulaReminder: ["q₁ = B / p₁", "q₂ = B / p₂"],
         scaffoldImage: { path: path.join(ASSETS_DIR, 'budgetlijn-verschuiving.png'), width: 400, height: 200 },
         invulformaat: [
           "Oud (B = 48):  q₁ = 48/4 = ........   q₂ = 48/8 = ........",
@@ -196,7 +196,7 @@ const oefeningen = [
       {
         label: "Vraag 4b — Beschrijf de verschuiving",
         vraagText: "Beschrijf wat er met de budgetlijn gebeurt als het budget stijgt van €48 naar €72.",
-        denkstappen: [
+        thinkingSteps: [
           "Veranderen de prijzen? (nee → de helling blijft gelijk)",
           "Wat verandert er wel? (het budget → de lijn schuift)",
           "In welke richting schuift de lijn?",
@@ -209,7 +209,7 @@ const oefeningen = [
           "De consument kan nu van beide goederen méér kopen: de koopkracht is gestegen.",
         ],
         afterAnswerImage: { path: path.join(ASSETS_DIR, 'budgetlijn-verschuiving.png'), width: 450, height: 225 },
-        uitleg: "Bij een inkomensstijging verschuift de budgetlijn evenwijdig naar buiten. Bij een inkomensdaling schuift hij naar binnen. De richting (helling) van de lijn verandert niet, want die hangt alleen af van de prijsverhouding p₁/p₂.",
+        explanation: "Bij een inkomensstijging verschuift de budgetlijn evenwijdig naar buiten. Bij een inkomensdaling schuift hij naar binnen. De richting (helling) van de lijn verandert niet, want die hangt alleen af van de prijsverhouding p₁/p₂.",
       },
     ],
   },
@@ -225,12 +225,12 @@ const oefeningen = [
       {
         label: "Vraag 5a — Oude en nieuwe snijpunten",
         vraagText: "Bereken de snijpunten met de assen voor de oude én de nieuwe situatie.",
-        denkstappen: [
+        thinkingSteps: [
           "Bij de oude situatie: p₁ = 10, p₂ = 20, B = 100",
           "Bij de nieuwe situatie: p₁ = 5, p₂ = 20, B = 100",
           "Welk snijpunt verandert en welk niet?",
         ],
-        formuleHerinnering: ["q₁ = B / p₁", "q₂ = B / p₂"],
+        formulaReminder: ["q₁ = B / p₁", "q₂ = B / p₂"],
         scaffoldImage: { path: path.join(ASSETS_DIR, 'budgetlijn-prijseffect.png'), width: 400, height: 200 },
         invulformaat: [
           "Oud:   q₁ = 100/10 = ........   q₂ = 100/20 = ........",
@@ -245,7 +245,7 @@ const oefeningen = [
       {
         label: "Vraag 5b — Wat gebeurt er met de budgetlijn?",
         vraagText: "Beschrijf wat er met de budgetlijn gebeurt als de prijs van goed 1 daalt.",
-        denkstappen: [
+        thinkingSteps: [
           "Welk snijpunt is veranderd? Welk niet?",
           "Wat betekent dat voor de vorm van de verschuiving?",
           "Is dit een evenwijdige verschuiving of iets anders?",
@@ -259,7 +259,7 @@ const oefeningen = [
           "De helling verandert: van −10/20 = −½ naar −5/20 = −¼. Goed 1 is relatief goedkoper geworden.",
         ],
         afterAnswerImage: { path: path.join(ASSETS_DIR, 'budgetlijn-prijseffect.png'), width: 450, height: 225 },
-        uitleg: "Bij een prijsverandering kantelt de budgetlijn. Het snijpunt van het goed waarvan de prijs verandert, verschuift. Het andere snijpunt blijft op zijn plaats. Bij een prijsdaling kantelt de lijn naar buiten; bij een prijsstijging naar binnen.",
+        explanation: "Bij een prijsverandering kantelt de budgetlijn. Het snijpunt van het goed waarvan de prijs verandert, verschuift. Het andere snijpunt blijft op zijn plaats. Bij een prijsdaling kantelt de lijn naar buiten; bij een prijsstijging naar binnen.",
       },
     ],
   },
@@ -275,11 +275,11 @@ const oefeningen = [
       {
         label: "Vraag 6a — Benodigde werkuren",
         vraagText: "Bereken hoeveel uur Sophie moet werken om een budget van €120 te hebben.",
-        denkstappen: [
+        thinkingSteps: [
           "Budget = uurloon × aantal uren",
           "Los het aantal uren op",
         ],
-        formuleHerinnering: ["Aantal uren = Budget / uurloon"],
+        formulaReminder: ["Aantal uren = Budget / uurloon"],
         scaffoldImage: { path: path.join(ASSETS_DIR, 'arbeidsmarkt-vrije-tijd.png'), width: 400, height: 200 },
         invulformaat: [
           "Aantal uren = €120 / €15 = ........",
@@ -288,12 +288,12 @@ const oefeningen = [
         antwoord: [
           [{ text: "Aantal uren = €120 / €15 = 8 uur", bold: true }],
         ],
-        uitleg: "Sophie moet 8 uur werken voor een budget van €120. Die 8 uur kan ze niet aan iets anders besteden — dat zijn de opofferingskosten in tijd.",
+        explanation: "Sophie moet 8 uur werken voor een budget van €120. Die 8 uur kan ze niet aan iets anders besteden — dat zijn de opofferingskosten in tijd.",
       },
       {
         label: "Vraag 6b — Opofferingskosten in tijd",
         vraagText: "Sophie koopt een boek van €45 van haar verdiende budget. Bereken hoeveel uur ze hiervoor heeft moeten werken.",
-        denkstappen: [
+        thinkingSteps: [
           "Prijs van het boek = €45",
           "Uurloon = €15",
           "Hoeveel uur werken staat gelijk aan €45?",
@@ -304,7 +304,7 @@ const oefeningen = [
           [{ text: "Sophie heeft 3 uur van haar vrije tijd opgegeven voor het boek.", bold: true }],
           "De opofferingskosten van het boek zijn 3 uur vrije tijd.",
         ],
-        uitleg: "Je kunt de prijs van goederen ook uitdrukken in tijd. Dit maakt de opofferingskosten tastbaar: het boek 'kost' 3 uur van Sophies leven.",
+        explanation: "Je kunt de prijs van goederen ook uitdrukken in tijd. Dit maakt de opofferingskosten tastbaar: het boek 'kost' 3 uur van Sophies leven.",
       },
     ],
   },
@@ -320,11 +320,11 @@ const oefeningen = [
       {
         label: "Vraag 7a — Opofferingskosten van vrije tijd",
         vraagText: "Bereken de opofferingskosten van 2 uur vrije tijd bij bijbaan A en bij bijbaan B.",
-        denkstappen: [
+        thinkingSteps: [
           "Wat geeft Mark op als hij 2 uur vrije tijd neemt in plaats van te werken?",
           "Bereken het misgelopen loon voor beide bijbanen",
         ],
-        formuleHerinnering: ["Opofferingskosten vrije tijd = misgelopen uren × uurloon"],
+        formulaReminder: ["Opofferingskosten vrije tijd = misgelopen uren × uurloon"],
         invulformaat: [
           "Bijbaan A: 2 uur × €10 = €........",
           "Bijbaan B: 2 uur × €12 = €........",
@@ -338,7 +338,7 @@ const oefeningen = [
       {
         label: "Vraag 7b — Vergelijking",
         vraagText: "Bij welke bijbaan zijn de opofferingskosten van vrije tijd hoger? Leg uit waarom.",
-        denkstappen: [
+        thinkingSteps: [
           "Vergelijk de opofferingskosten uit vraag 7a",
           "Wat is de relatie tussen uurloon en opofferingskosten van vrije tijd?",
         ],
@@ -348,12 +348,12 @@ const oefeningen = [
           "Hoe hoger het uurloon, hoe meer je misloopt als je niet werkt.",
           "De opofferingskosten van vrije tijd stijgen dus met het uurloon: vrije tijd wordt 'duurder' naarmate je meer kunt verdienen.",
         ],
-        uitleg: "Dit is een belangrijk economisch inzicht: mensen met een hoger uurloon hebben hogere opofferingskosten van vrije tijd. Dat verklaart waarom hoogbetaalden soms minder vrije tijd nemen — de 'prijs' van hun vrije tijd is hoger.",
+        explanation: "Dit is een belangrijk economisch inzicht: mensen met een hoger uurloon hebben hogere opofferingskosten van vrije tijd. Dat verklaart waarom hoogbetaalden soms minder vrije tijd nemen — de 'prijs' van hun vrije tijd is hoger.",
       },
       {
         label: "Vraag 7c — Budgetvergelijking met arbeid-vrije-tijd",
         vraagText: "Mark kiest bijbaan B (€12/uur) en werkt 14 uur. Bereken zijn weekbudget en het aantal uren vrije tijd.",
-        denkstappen: [
+        thinkingSteps: [
           "Weekbudget = uurloon × gewerkte uren",
           "Vrije tijd = beschikbare uren − gewerkte uren",
         ],
@@ -367,7 +367,7 @@ const oefeningen = [
           [{ text: "Vrije tijd = 20 − 14 = 6 uur", bold: true }],
           "Mark ruilt 14 uur vrije tijd in voor €168 inkomen. De opofferingskosten van die €168 zijn 14 uur vrije tijd.",
         ],
-        uitleg: "De keuze tussen werken en vrije tijd is een budgetlijnprobleem: op de ene as staat inkomen (€), op de andere as vrije tijd (uren). Meer werken = meer geld, maar minder vrije tijd.",
+        explanation: "De keuze tussen werken en vrije tijd is een budgetlijnprobleem: op de ene as staat inkomen (€), op de andere as vrije tijd (uren). Meer werken = meer geld, maar minder vrije tijd.",
       },
     ],
   },

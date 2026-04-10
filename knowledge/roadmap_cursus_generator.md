@@ -1,87 +1,87 @@
-# Roadmap: Geautomatiseerde Cursus-Blauwdruk Generator
-## Claude Code plan voor herhaalbare productie van economie-cursusmateriaal
+# Roadmap: Automated Course Blueprint Generator
+## Claude Code plan for repeatable production of economics course material
 
 ---
 
-## Architectuuroverzicht
+## Architecture overview
 
-Het systeem heeft drie lagen:
+The system has three layers:
 
-**Laag 1: Skills** — Herbruikbare kennisbestanden die Claude Code leest vóór het genereren. Deze bevatten de ontwerpfilosofie, templates en domeinkennis.
+**Layer 1: Skills** — Reusable knowledge files that Claude Code reads before generating. These contain the design philosophy, templates, and domain knowledge.
 
-**Laag 2: Inputspecificatie** — Een gestructureerd invoerbestand dat de gebruiker invult om een specifiek cursusjaar te definiëren (domeinen, niveau, aantal lessen, toetsstructuur, etc.)
+**Layer 2: Input specification** — A structured input file that the user fills in to define a specific course year (domains, level, number of lessons, assessment structure, etc.)
 
-**Laag 3: Generatorscripts** — Python-scripts die Claude Code uitvoert om de daadwerkelijke producten te genereren (blauwdruk-markdown, PDF, uiteindelijk lesmateriaal).
+**Layer 3: Generator scripts** — Python scripts that Claude Code executes to generate the actual products (blueprint markdown, PDF, eventually lesson materials).
 
 ---
 
-## Laag 1: Te bouwen skills
+## Layer 1: Skills to build
 
 ### Skill 1: `course-blueprint-design` (SKILL.md)
 
-Bevat de ontwerpfilosofie uit het ontwerpproces. Dit is het "hoe te denken"-bestand dat Claude Code leest vóór het genereren van een blauwdruk.
+Contains the design philosophy from the design process. This is the "how to think" file that Claude Code reads before generating a blueprint.
 
-**Inhoud:**
-- Opgave-eerst ontwerpprincipe (elke paragraaf begint met een doelopgave)
-- Slanke paragrafen / rijke consolidatie principe
-- De gelijkmatige-moeilijkheidseis (geen paragraaf > 1 les)
-- Bouwsteen-opbouwregels (nooit X introduceren vóór Y)
-- Moeilijkheidsbeoordelingssysteem (⬜/🟨/🟥 met definities)
-- Het toetsritme (klein halverwege boek, groot einde boek)
-- Differentiëren-vóór-wiskunde aanpak
-- Context- en motivatierichtlijnen
-- Het paragraafstructuursjabloon (doelopgave → leerdoelen → moeilijkheidsnotities)
-- Regels voor consolidatieparagrafen (examenachtige bronnen, geen nieuwe theorie)
-- Bufferstrategie (lichter laatste boek)
+**Contents:**
+- Exercise-first design principle (each paragraph starts with a target exercise)
+- Lean paragraphs / rich consolidation principle
+- The even-difficulty requirement (no paragraph > 1 lesson)
+- Building-block sequencing rules (never introduce X before Y)
+- Difficulty rating system (⬜/🟨/🟥 with definitions)
+- The assessment rhythm (small test halfway through book, large test end of book)
+- Differentiate-before-mathematics approach
+- Context and motivation guidelines
+- The paragraph structure template (target exercise -> learning objectives -> difficulty notes)
+- Rules for consolidation paragraphs (exam-style sources, no new theory)
+- Buffer strategy (lighter final book)
 
 ### Skill 2: `economics-domain-knowledge` (SKILL.md)
 
-Bevat wat elk domein van het Nederlandse economie-examenprogramma daadwerkelijk inhoudt, hoe moeilijk elk onderwerp is, en voorkennis-ketens.
+Contains what each domain of the Dutch economics exam programme actually entails, how difficult each topic is, and prerequisite chains.
 
-**Inhoud:**
-- Volledige domeinkaart (D t/m I) met subdomeinen en eindtermen
-- Moeilijkheidsbeoordelingen per onderwerp op basis van de analyse (bijv. "monopolie-winstmaximalisatie is de zwaarste individuele les")
-- Voorkennis-ketens (welke onderwerpen vereisen welke voorkennis)
-- Veelvoorkomende misconcepties per onderwerp (verschuiving vs. beweging, indexpunten vs. procenten, etc.)
-- Vereiste vaardigheden per onderwerp (verbaal, grafisch, rekenkundig — uit syllabus)
-- Typisch aantal lessen per onderwerp op VWO- vs. HAVO-niveau
-- Sleutelformules en wanneer ze voor het eerst worden geïntroduceerd
-- Differentiëervereisten per onderwerp
+**Contents:**
+- Complete domain map (D through I) with sub-domains and attainment targets
+- Difficulty ratings per topic based on the analysis (e.g. "monopoly profit maximisation is the hardest individual lesson")
+- Prerequisite chains (which topics require which prior knowledge)
+- Common misconceptions per topic (shift vs. movement, index points vs. percentages, etc.)
+- Required skills per topic (verbal, graphical, computational — from the syllabus)
+- Typical number of lessons per topic at VWO vs. HAVO level
+- Key formulas and when they are first introduced
+- Differentiation requirements per topic
 
 ### Skill 3: `course-output-templates` (SKILL.md)
 
-Sjablonen voor de daadwerkelijke outputdocumenten.
+Templates for the actual output documents.
 
-**Inhoud:**
-- Blauwdruk-markdownsjabloon (de structuur die we gebruikten)
-- Ontwerpoverwegingen-sjabloon (het intro-onderdeel)
-- Paragraafsjabloon (doelopgave + leerdoelen + moeilijkheidsnotities)
-- Consolidatieparagraaf-sjabloon
-- Toetsvoorbereidingshoofdstuk-sjabloon
-- Aanbevelingen-sectionsjabloon
-- PDF-opmaakspecificaties (kleuren, banners, lettertypen)
+**Contents:**
+- Blueprint markdown template (the structure we used)
+- Design considerations template (the introductory section)
+- Paragraph template (target exercise + learning objectives + difficulty notes)
+- Consolidation paragraph template
+- Test preparation chapter template
+- Recommendations section template
+- PDF formatting specifications (colors, banners, fonts)
 
 ---
 
-## Laag 2: Inputspecificatie
+## Layer 2: Input specification
 
-Een YAML-bestand dat de gebruiker invult. Claude Code leest dit als de "opdracht."
+A YAML file that the user fills in. Claude Code reads this as the "assignment."
 
 ```yaml
 # course-spec.yaml
 course_name: "Economie VWO 5"
-level: "vwo"  # of "havo"
+level: "vwo"  # or "havo"
 year: "5"
 
-# Structuur
+# Structure
 books: 4
-chapters_per_book: 5  # 4 theorie + 1 toetsvoorbereiding
-paragraphs_per_chapter: 4  # 3 theorie + 1 consolidatie
+chapters_per_book: 5  # 4 theory + 1 test preparation
+paragraphs_per_chapter: 4  # 3 theory + 1 consolidation
 exceptions: 
   - book: 1
     chapter: 4
     extra_theory_paragraphs: 1
-    reason: "marginale analyse gesplitst"
+    reason: "marginal analysis split"
 
 # Timing
 lessons_per_week: 2
@@ -89,7 +89,7 @@ school_weeks: 36
 lesson_duration_minutes: 60
 homework_minutes: 30
 
-# Toetsen
+# Assessments
 test_structure:
   small_test:
     duration_minutes: 45
@@ -100,11 +100,11 @@ test_structure:
     placement: "end of book"
     count_per_book: 1
 
-# Inhoud - welke domeinen worden behandeld
+# Content — which domains are covered
 domains:
   - id: "D"
     name: "Markt"
-    weight: "heavy"  # hoeveel boeken toewijzen
+    weight: "heavy"  # how many books to allocate
     subdomeinen:
       - "D1: Vraag en aanbod"
       - "D2: Marktstructuur"
@@ -120,7 +120,7 @@ domains:
     subdomeinen:
       - "Inflatie en koopkracht"
 
-# Wat opnemen/uitsluiten
+# What to include/exclude
 include:
   - "comparatief voordeel en handel"
   - "basisinflatie en prijsindexcijfers"
@@ -131,173 +131,173 @@ exclude:
   - "IS-MB-GA model"
   - "Keynesiaans kruis"
 
-# In te bouwen grondslagen
+# Foundations to build in
 foundations:
   - "procentberekeningen"
   - "indexcijfers"
   - "grafieken lezen en tekenen"
   - "basisdifferentiëren (alleen kwadratisch)"
 
-# Niveau-aanpassingen (vergeleken met referentie-VWO-cursus)
+# Level adjustments (compared to reference VWO course)
 level_adjustments:
-  # Voor HAVO-aanpassing:
-  # - "vereenvoudig elasticiteit tot alleen prijselasticiteit"
-  # - "laat algebraïsche vraagfunctieaggregatie vallen"
-  # - "geef formules in plaats van ze af te leiden"
-  # - "beperk monopolieberekening tot alleen grafisch"
+  # For HAVO adaptation:
+  # - "simplify elasticity to price elasticity only"
+  # - "drop algebraic demand function aggregation"
+  # - "provide formulas instead of deriving them"
+  # - "limit monopoly calculation to graphical only"
 
-# Ontwerp-overrides
+# Design overrides
 design_overrides:
   - "elasticiteit: alleen eenvoudige formule (%ΔQ / %ΔP)"
   - "differentiëren: alleen machtsregel op kwadratische functies"
   - "prijsdiscriminatie: gecombineerde vraagcurve wordt gegeven"
 
-# Uitvoertaal
+# Output language
 language: "nl"
 ```
 
 ---
 
-## Laag 3: Generatorscripts
+## Layer 3: Generator scripts
 
 ### Script 1: `generate_blueprint.py`
 
 **Input:** course-spec.yaml + skills
-**Output:** Volledige blauwdruk-markdown
+**Output:** Complete blueprint markdown
 
-**Wat het doet:**
-1. Leest de cursusspecificatie
-2. Leest de domeinkennis-skill om onderwerpsvolgorde en moeilijkheid te bepalen
-3. Leest de ontwerpprincipes-skill
-4. Roept de Claude API aan om de blauwdruk in stadia te genereren:
-   - Stadium 1: Boekniveau-overzicht (welke onderwerpen in welk boek)
-   - Stadium 2: Hoofdstukniveau-overzicht (welke onderwerpen in welk hoofdstuk)
-   - Stadium 3: Paragraafniveau-detail (doelopgaven, leerdoelen, moeilijkheidsnotities)
-   - Stadium 4: Consolidatieparagrafen en toetsvoorbereidingshoofdstukken
-   - Stadium 5: Aanbevelingen-sectie
-   - Stadium 6: Ontwerpoverwegingen-intro
-5. Assembleert tot één markdown-bestand
+**What it does:**
+1. Reads the course specification
+2. Reads the domain knowledge skill to determine topic ordering and difficulty
+3. Reads the design principles skill
+4. Calls the Claude API to generate the blueprint in stages:
+   - Stage 1: Book-level overview (which topics in which book)
+   - Stage 2: Chapter-level overview (which topics in which chapter)
+   - Stage 3: Paragraph-level detail (target exercises, learning objectives, difficulty notes)
+   - Stage 4: Consolidation paragraphs and test preparation chapters
+   - Stage 5: Recommendations section
+   - Stage 6: Design considerations intro
+5. Assembles into a single markdown file
 
-**Waarom gefaseerd:** Een enkele prompt die 1300+ regels produceert verliest samenhang. Gefaseerde generatie met de spec en eerdere stadia als context houdt elke aanroep gefocust.
+**Why staged:** A single prompt producing 1300+ lines loses coherence. Staged generation with the spec and previous stages as context keeps each call focused.
 
 ### Script 2: `generate_pdf.py`
 
-**Input:** Blauwdruk-markdown
-**Output:** Opgemaakt PDF
+**Input:** Blueprint markdown
+**Output:** Formatted PDF
 
-**Wat het doet:**
-- Parsed de markdownstructuur
-- Past het opmaaksjabloon toe (banners, moeilijkheidsbalken, opgaveblokken)
-- Genereert gepagineerd A4-PDF met paginanummering
-- Dit is in essentie het script dat we al schreven, geparametriseerd voor taal en opmaak
+**What it does:**
+- Parses the markdown structure
+- Applies the formatting template (banners, difficulty bars, exercise blocks)
+- Generates paginated A4 PDF with page numbering
+- This is essentially the script we already wrote, parameterised for language and formatting
 
 ### Script 3: `validate_blueprint.py`
 
-**Input:** Blauwdruk-markdown + course-spec.yaml
-**Output:** Validatierapport
+**Input:** Blueprint markdown + course-spec.yaml
+**Output:** Validation report
 
-**Wat het controleert:**
-- Totaal aantal lessen past binnen beschikbare weken
-- Geen paragraaf is beoordeeld als 🟥 zonder mitigatienotitie
-- Alle voorkennis-ketens worden gerespecteerd (onderwerp X komt vóór onderwerp Y)
-- Elke theorieparagraaf heeft: doelopgave, leerdoelen, moeilijkheidsnotities
-- Elke consolidatieparagraaf noemt examenachtig bronmateriaal
-- Toetsentiming is consistent met spec
-- Geen concept wordt gebruikt vóórdat het is geïntroduceerd
+**What it checks:**
+- Total number of lessons fits within available weeks
+- No paragraph is rated 🟥 without a mitigation note
+- All prerequisite chains are respected (topic X comes before topic Y)
+- Every theory paragraph has: target exercise, learning objectives, difficulty notes
+- Every consolidation paragraph mentions exam-style source material
+- Assessment timing is consistent with spec
+- No concept is used before it has been introduced
 
 ### Script 4: `adapt_blueprint.py`
 
-**Input:** Bestaande blauwdruk + aanpassingsspec
-**Output:** Aangepaste blauwdruk voor ander niveau/jaar
+**Input:** Existing blueprint + adaptation spec
+**Output:** Adapted blueprint for different level/year
 
-**Wat het doet:**
-- Neemt een VWO-blauwdruk en genereert een HAVO-versie, of
-- Neemt een jaar-5-blauwdruk en genereert een jaar-6-blauwdruk
-- Past niveau-aanpassingen toe uit de spec (vereenvoudig berekeningen, laat algebraïsche afleidingen vallen, voeg scaffolding toe)
-- Herberekent moeilijkheidsbeoordelingen
-- Past doelopgaven aan op het juiste niveau
-
----
-
-## Bouwvolgorde
-
-### Fase 1: Fundament (skills bouwen)
-
-| Stap | Taak | Output |
-|------|------|--------|
-| 1 | `course-blueprint-design/SKILL.md` aanmaken | Ontwerpprincipes geëxtraheerd uit het ontwerpproces |
-| 2 | `economics-domain-knowledge/SKILL.md` aanmaken | Domeinkennis gecodeerd uit onderzoek |
-| 3 | `course-output-templates/SKILL.md` aanmaken | Markdown/PDF-sjablonen geformaliseerd |
-
-### Fase 2: Kerngenerator
-
-| Stap | Taak | Output |
-|------|------|--------|
-| 4 | YAML-inputspecificatieschema aanmaken met gedocumenteerd voorbeeld | `course-spec-template.yaml` |
-| 5 | `generate_blueprint.py` bouwen met gefaseerde Claude API-aanroepen | Werkend blauwdruk-generatorscript |
-| 6 | `generate_pdf.py` bouwen (aanpassen van bestaand script) | Werkend PDF-generatorscript |
-| 7 | End-to-end testen: spec → blauwdruk → PDF voor de handmatig gebouwde cursus | Validatie dat output overeenkomt met handmatig product |
-
-### Fase 3: Kwaliteitsborging
-
-| Stap | Taak | Output |
-|------|------|--------|
-| 8 | `validate_blueprint.py` bouwen | Werkend validatiescript |
-| 9 | Validatie uitvoeren op handmatig gebouwde blauwdruk om te kalibreren | Gekalibreerde validatieregels |
-| 10 | Eventuele issues oplossen die de validator vindt | Verbeterde blauwdruk + validator |
-
-### Fase 4: Aanpassing
-
-| Stap | Taak | Output |
-|------|------|--------|
-| 11 | `adapt_blueprint.py` bouwen | Werkend aanpassingsscript |
-| 12 | Testen: HAVO-aanpassing genereren uit VWO-blauwdruk | HAVO-blauwdruk |
-| 13 | Testen: jaar-6-blauwdruk genereren met andere domeinen | Jaar-6-blauwdruk |
-
-### Fase 5: Workflow-integratie
-
-| Stap | Taak | Output |
-|------|------|--------|
-| 14 | Masterscript `build_course.sh` aanmaken dat alles koppelt: spec → blauwdruk → validatie → PDF | Eén-commando workflow |
-| 15 | Volledige workflow documenteren in README | Gebruikersdocumentatie |
+**What it does:**
+- Takes a VWO blueprint and generates a HAVO version, or
+- Takes a year-5 blueprint and generates a year-6 blueprint
+- Applies level adjustments from the spec (simplify calculations, drop algebraic derivations, add scaffolding)
+- Recalculates difficulty ratings
+- Adapts target exercises to the appropriate level
 
 ---
 
-## Gebruikersworkflow
+## Build order
+
+### Phase 1: Foundation (build skills)
+
+| Step | Task | Output |
+|------|------|--------|
+| 1 | Create `course-blueprint-design/SKILL.md` | Design principles extracted from the design process |
+| 2 | Create `economics-domain-knowledge/SKILL.md` | Domain knowledge encoded from research |
+| 3 | Create `course-output-templates/SKILL.md` | Markdown/PDF templates formalised |
+
+### Phase 2: Core generator
+
+| Step | Task | Output |
+|------|------|--------|
+| 4 | Create YAML input specification schema with documented example | `course-spec-template.yaml` |
+| 5 | Build `generate_blueprint.py` with staged Claude API calls | Working blueprint generator script |
+| 6 | Build `generate_pdf.py` (adapt from existing script) | Working PDF generator script |
+| 7 | End-to-end test: spec -> blueprint -> PDF for the manually built course | Validation that output matches manual product |
+
+### Phase 3: Quality assurance
+
+| Step | Task | Output |
+|------|------|--------|
+| 8 | Build `validate_blueprint.py` | Working validation script |
+| 9 | Run validation on manually built blueprint to calibrate | Calibrated validation rules |
+| 10 | Fix any issues the validator finds | Improved blueprint + validator |
+
+### Phase 4: Adaptation
+
+| Step | Task | Output |
+|------|------|--------|
+| 11 | Build `adapt_blueprint.py` | Working adaptation script |
+| 12 | Test: generate HAVO adaptation from VWO blueprint | HAVO blueprint |
+| 13 | Test: generate year-6 blueprint with different domains | Year-6 blueprint |
+
+### Phase 5: Workflow integration
+
+| Step | Task | Output |
+|------|------|--------|
+| 14 | Create master script `build_course.sh` that chains everything: spec -> blueprint -> validation -> PDF | Single-command workflow |
+| 15 | Document complete workflow in README | User documentation |
+
+---
+
+## User workflow
 
 ```
-1. Gebruiker kopieert course-spec-template.yaml
-2. Gebruiker vult in: niveau, domeinen, include/exclude, aanpassingen
-3. Gebruiker voert uit: claude-code build_course.sh course-spec.yaml
+1. User copies course-spec-template.yaml
+2. User fills in: level, domains, include/exclude, adjustments
+3. User runs: claude-code build_course.sh course-spec.yaml
 4. Claude Code:
-   - Leest skills
-   - Leest spec
-   - Genereert blauwdruk (gefaseerd)
-   - Valideert
-   - Genereert PDF
-   - Presenteert output + validatierapport
-5. Gebruiker reviewt, geeft commentaar
-6. Gebruiker voert opnieuw uit met aanpassingen of bewerkt de blauwdruk direct
+   - Reads skills
+   - Reads spec
+   - Generates blueprint (staged)
+   - Validates
+   - Generates PDF
+   - Presents output + validation report
+5. User reviews, provides feedback
+6. User re-runs with adjustments or edits the blueprint directly
 ```
 
 ---
 
-## Kernbesluit: Hoeveel Intelligentie Zit in Skills vs. Generator
+## Key decision: How much intelligence lives in skills vs. generator
 
-De skills moeten **alle domeinkennis en ontwerpregels** bevatten. Het generatorscript moet **alleen de orkestratie-logica** bevatten (spec lezen, Claude gefaseerd aanroepen, output assembleren). Dit betekent:
+The skills should contain **all domain knowledge and design rules**. The generator script should contain **only the orchestration logic** (read spec, call Claude in stages, assemble output). This means:
 
-| Wijziging | Wat wordt bijgewerkt |
-|-----------|---------------------|
-| Nieuw syllabusjaar | Domeinkennis-skill |
-| Andere ontwerpfilosofie | Ontwerpprincipes-skill |
-| Nieuw outputformaat | Nieuw sjabloon + generatorscript |
-| Generatorscripts zelf | Veranderen zelden |
+| Change | What gets updated |
+|--------|-------------------|
+| New syllabus year | Domain knowledge skill |
+| Different design philosophy | Design principles skill |
+| New output format | New template + generator script |
+| Generator scripts themselves | Change rarely |
 
-Deze scheiding betekent dat een docent de domeinkennis-skill zelf kan bijwerken (het is gewoon een markdown-bestand dat onderwerpen en hun moeilijkheid beschrijft) zonder code aan te raken.
+This separation means that a teacher can update the domain knowledge skill themselves (it is just a markdown file describing topics and their difficulty) without touching code.
 
 ---
 
-## Mappenstructuur
+## Directory structure
 
 ```
 /mnt/skills/user/
@@ -329,13 +329,13 @@ Deze scheiding betekent dat een docent de domeinkennis-skill zelf kan bijwerken 
 
 ---
 
-## Relatie tot Bestaande Skills
+## Relationship to existing skills
 
-Dit systeem bouwt voort op en werkt samen met de bestaande skills:
+This system builds on and works alongside the existing skills:
 
-- **`econ-didactiek`**: Bevat didactische principes → wordt aangevuld door `course-blueprint-design` met specifieke blauwdruk-ontwerpregels
-- **`econ-word-templates`**: Produceert Word-lesmateriaal → kan in de toekomst worden aangestuurd door de blauwdruk (blauwdruk definieert WAT, Word-templates produceren HOE)
-- **`econ-pptx-templates`**: Idem voor presentaties
-- **`economic-graph`**: Produceert grafieken → kan worden aangeroepen vanuit lesmateriaal dat door de blauwdruk wordt gespecificeerd
+- **`econ-didactiek`**: Contains didactic principles -> is supplemented by `course-blueprint-design` with specific blueprint design rules
+- **`econ-word-templates`**: Produces Word lesson materials -> can in the future be driven by the blueprint (blueprint defines WHAT, Word templates produce HOW)
+- **`econ-pptx-templates`**: Same for presentations
+- **`economic-graph`**: Produces graphs -> can be called from lesson materials specified by the blueprint
 
-De blauwdruk is het "wat" (welke inhoud, in welke volgorde, op welk niveau); de bestaande skills zijn het "hoe" (hoe de inhoud eruitziet als concreet lesmateriaal).
+The blueprint is the "what" (which content, in which order, at which level); the existing skills are the "how" (what the content looks like as concrete lesson materials).

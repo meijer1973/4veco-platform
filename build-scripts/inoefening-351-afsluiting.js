@@ -43,7 +43,7 @@ const oefeningen = [
       {
         label: "Vraag 1a — Kenmerken benoemen",
         vraagText: "Benoem de vier kenmerken van marktstructuur die je in deze casus kunt herkennen.",
-        denkstappen: [
+        thinkingSteps: [
           "Hoeveel aanbieders zijn er? Zijn het er veel of weinig?",
           "Zijn de producten homogeen of heterogeen?",
           "Is er sprake van toe- en uittredingsbarrières?",
@@ -57,12 +57,12 @@ const oefeningen = [
           [{ text: "3. Toetredingsbarrières: ", bold: true }, { text: "hoog (Skal-keurmerk, boerderijcontracten)" }],
           [{ text: "4. Prijszettingsmacht: ", bold: true }, { text: "ja, vanwege productdifferentiatie en beperkt aantal aanbieders" }],
         ],
-        uitleg: "Bij weinig aanbieders met heterogene producten en hoge toetredingsbarrières is sprake van een heterogeen oligopolie.",
+        explanation: "Bij weinig aanbieders met heterogene producten en hoge toetredingsbarrières is sprake van een heterogeen oligopolie.",
       },
       {
         label: "Vraag 1b — Marktvorm bepalen",
         vraagText: "Welke marktvorm past het best bij deze markt? Onderbouw je antwoord.",
-        denkstappen: [
+        thinkingSteps: [
           "Combineer de vier kenmerken uit vraag 1a.",
           "Vergelijk met het schema van marktvormen.",
           "Let op: weinig aanbieders + heterogeen product = welke marktvorm?",
@@ -72,7 +72,7 @@ const oefeningen = [
           [{ text: "Marktvorm: ", bold: true }, { text: "heterogeen oligopolie" }],
           "Er zijn weinig aanbieders (4 grote met 85% marktaandeel), het product is heterogeen (eigen smaak/verpakking), er zijn hoge toetredingsbarrières en de producenten hebben prijszettingsmacht.",
         ],
-        uitleg: "Het onderscheid met monopolistische concurrentie zit in het aantal aanbieders: bij monopolistische concurrentie zijn er veel aanbieders, bij oligopolie weinig. De 85% concentratie bij slechts 4 bedrijven wijst duidelijk op oligopolie.",
+        explanation: "Het onderscheid met monopolistische concurrentie zit in het aantal aanbieders: bij monopolistische concurrentie zijn er veel aanbieders, bij oligopolie weinig. De 85% concentratie bij slechts 4 bedrijven wijst duidelijk op oligopolie.",
       },
     ],
   },
@@ -92,12 +92,12 @@ const oefeningen = [
       {
         label: "Vraag 2a — Evenwichtsprijs",
         vraagText: "Bereken de evenwichtsprijs.",
-        denkstappen: [
+        thinkingSteps: [
           "In evenwicht geldt: Qv = Qa",
           "Stel de twee functies aan elkaar gelijk.",
           "Los op naar p.",
         ],
-        formuleHerinnering: ["Evenwicht: Qv = Qa"],
+        formulaReminder: ["Evenwicht: Qv = Qa"],
         invulformaat: [
           "800 − 20p = −200 + 30p",
           "........  = ........",
@@ -109,12 +109,12 @@ const oefeningen = [
           "1000 = 50p",
           [{ text: "p = 20", bold: true }],
         ],
-        uitleg: "Je stelt vraag gelijk aan aanbod en lost op naar p. Alle Q-termen verdwijnen.",
+        explanation: "Je stelt vraag gelijk aan aanbod en lost op naar p. Alle Q-termen verdwijnen.",
       },
       {
         label: "Vraag 2b — Evenwichtshoeveelheid",
         vraagText: "Bereken de evenwichtshoeveelheid.",
-        denkstappen: [
+        thinkingSteps: [
           "Vul de evenwichtsprijs in bij de vraag- of aanbodfunctie.",
           "Controleer door ook in de andere functie in te vullen.",
         ],
@@ -125,7 +125,7 @@ const oefeningen = [
           "Controle: Qa = −200 + 30 × 20 = −200 + 600 = 400 ✓",
           [{ text: "Q* = 400", bold: true }],
         ],
-        uitleg: "Invullen in beide functies geeft dezelfde hoeveelheid — dat is de controle dat je goed hebt gerekend.",
+        explanation: "Invullen in beide functies geeft dezelfde hoeveelheid — dat is de controle dat je goed hebt gerekend.",
       },
     ],
   },
@@ -145,12 +145,12 @@ const oefeningen = [
       {
         label: "Vraag 3a — Consumentensurplus (CS)",
         vraagText: "Bereken het consumentensurplus.",
-        denkstappen: [
+        thinkingSteps: [
           "Bepaal de maximale betalingsbereidheid (het snijpunt van de vraagcurve met de p-as: Q = 0).",
           "Het CS is de driehoek boven de evenwichtsprijs en onder de vraagcurve.",
           "Gebruik: CS = ½ × basis × hoogte",
         ],
-        formuleHerinnering: [
+        formulaReminder: [
           "CS = ½ × Q* × (p_max − p*)",
           "p_max = snijpunt vraagcurve met p-as (Q = 0)",
         ],
@@ -165,17 +165,17 @@ const oefeningen = [
           "CS = ½ × 400 × 20",
           [{ text: "CS = 4.000", bold: true }],
         ],
-        uitleg: "Het consumentensurplus is het verschil tussen wat consumenten maximaal willen betalen en wat ze werkelijk betalen, over alle eenheden.",
+        explanation: "Het consumentensurplus is het verschil tussen wat consumenten maximaal willen betalen en wat ze werkelijk betalen, over alle eenheden.",
       },
       {
         label: "Vraag 3b — Producentensurplus (PS)",
         vraagText: "Bereken het producentensurplus.",
-        denkstappen: [
+        thinkingSteps: [
           "Bepaal de minimale aanbodprijs (snijpunt aanbodcurve met p-as: Q = 0).",
           "Het PS is de driehoek onder de evenwichtsprijs en boven de aanbodcurve.",
           "Gebruik: PS = ½ × basis × hoogte",
         ],
-        formuleHerinnering: [
+        formulaReminder: [
           "PS = ½ × Q* × (p* − p_min)",
           "p_min = snijpunt aanbodcurve met p-as (Q = 0)",
         ],
@@ -190,7 +190,7 @@ const oefeningen = [
           "PS = ½ × 400 × 13⅓",
           [{ text: "PS = 2.666⅔ (≈ 2.667)", bold: true }],
         ],
-        uitleg: "Het producentensurplus is het verschil tussen de ontvangen prijs en de minimale prijs waarvoor producenten willen leveren.",
+        explanation: "Het producentensurplus is het verschil tussen de ontvangen prijs en de minimale prijs waarvoor producenten willen leveren.",
       },
     ],
   },
@@ -211,7 +211,7 @@ const oefeningen = [
       {
         label: "Vraag 4a — Nieuwe aanbodfunctie",
         vraagText: "Stel de nieuwe aanbodfunctie op na invoering van de accijns.",
-        denkstappen: [
+        thinkingSteps: [
           "De producent ontvangt de marktprijs p, maar moet €4 per stuk afdragen.",
           "De netto-opbrengst voor de producent is (p − 4).",
           "Vervang p in de oude aanbodfunctie door (p − 4).",
@@ -226,12 +226,12 @@ const oefeningen = [
           "Qa_nieuw = −200 + 30p − 120",
           [{ text: "Qa_nieuw = −320 + 30p", bold: true }],
         ],
-        uitleg: "De aanbodcurve verschuift omhoog (naar links) met €4: producenten willen pas leveren bij een hogere marktprijs om dezelfde netto-opbrengst te behouden.",
+        explanation: "De aanbodcurve verschuift omhoog (naar links) met €4: producenten willen pas leveren bij een hogere marktprijs om dezelfde netto-opbrengst te behouden.",
       },
       {
         label: "Vraag 4b — Nieuw evenwicht",
         vraagText: "Bereken de nieuwe evenwichtsprijs en -hoeveelheid.",
-        denkstappen: [
+        thinkingSteps: [
           "Stel de vraagfunctie gelijk aan de nieuwe aanbodfunctie.",
           "Los op naar p (dit is de consumentenprijs).",
           "Bereken Q door in te vullen.",
@@ -249,16 +249,16 @@ const oefeningen = [
           [{ text: "Q_nieuw = 352", bold: true }],
           [{ text: "p_producent = 22,40 − 4 = 18,40", bold: true }],
         ],
-        uitleg: "De consument betaalt €2,40 meer (van €20 naar €22,40) en de producent ontvangt €1,60 minder (van €20 naar €18,40). De belastingdruk wordt verdeeld: 60% voor de consument, 40% voor de producent. Dit komt door de relatieve elasticiteiten van vraag en aanbod.",
+        explanation: "De consument betaalt €2,40 meer (van €20 naar €22,40) en de producent ontvangt €1,60 minder (van €20 naar €18,40). De belastingdruk wordt verdeeld: 60% voor de consument, 40% voor de producent. Dit komt door de relatieve elasticiteiten van vraag en aanbod.",
       },
       {
         label: "Vraag 4c — Belastingopbrengst en welvaartsverlies",
         vraagText: "Bereken de belastingopbrengst voor de overheid en het welvaartsverlies (deadweight loss).",
-        denkstappen: [
+        thinkingSteps: [
           "Belastingopbrengst = accijns × nieuwe hoeveelheid",
           "Welvaartsverlies = ½ × accijns × (Q_oud − Q_nieuw)",
         ],
-        formuleHerinnering: [
+        formulaReminder: [
           "Belastingopbrengst = t × Q_nieuw",
           "Welvaartsverlies = ½ × t × ΔQ",
         ],
@@ -272,7 +272,7 @@ const oefeningen = [
           "Welvaartsverlies = ½ × 4 × (400 − 352) = ½ × 4 × 48",
           [{ text: "Welvaartsverlies = €96", bold: true }],
         ],
-        uitleg: "Het welvaartsverlies ontstaat doordat 48 eenheden niet meer verhandeld worden die bij het oude evenwicht wel een positief surplus opleverden. Dit is de driehoek tussen de vraag- en aanbodcurve, tussen Q = 352 en Q = 400.",
+        explanation: "Het welvaartsverlies ontstaat doordat 48 eenheden niet meer verhandeld worden die bij het oude evenwicht wel een positief surplus opleverden. Dit is de driehoek tussen de vraag- en aanbodcurve, tussen Q = 352 en Q = 400.",
       },
     ],
   },
@@ -293,7 +293,7 @@ const oefeningen = [
       {
         label: "Vraag 5a — Absoluut voordeel",
         vraagText: "Welk land heeft een absoluut voordeel bij de productie van kaas? En bij wijn?",
-        denkstappen: [
+        thinkingSteps: [
           "Absoluut voordeel = het land dat het product met minder arbeidsuren kan maken.",
           "Vergelijk de kosten per product.",
         ],
@@ -302,16 +302,16 @@ const oefeningen = [
           [{ text: "Kaas: ", bold: true }, { text: "Nederland (2 uur < 5 uur) — absoluut voordeel" }],
           [{ text: "Wijn: ", bold: true }, { text: "Frankrijk (5 uur < 6 uur) — absoluut voordeel" }],
         ],
-        uitleg: "Je vergelijkt simpelweg de productiekosten per product. Het land met de lagere kosten heeft het absolute voordeel.",
+        explanation: "Je vergelijkt simpelweg de productiekosten per product. Het land met de lagere kosten heeft het absolute voordeel.",
       },
       {
         label: "Vraag 5b — Alternatieve kosten",
         vraagText: "Bereken de alternatieve kosten van 1 eenheid kaas in beide landen, uitgedrukt in eenheden wijn.",
-        denkstappen: [
+        thinkingSteps: [
           "Alternatieve kosten kaas = hoeveel wijn moet je opgeven om 1 kaas te maken?",
           "Gebruik de verhouding: kosten kaas / kosten wijn",
         ],
-        formuleHerinnering: [
+        formulaReminder: [
           "Alternatieve kosten kaas (in wijn) = arbeidsuren kaas / arbeidsuren wijn",
         ],
         invulformaat: [
@@ -322,12 +322,12 @@ const oefeningen = [
           [{ text: "Nederland: ", bold: true }, { text: "AK kaas = 2/6 = ⅓ eenheid wijn" }],
           [{ text: "Frankrijk: ", bold: true }, { text: "AK kaas = 5/5 = 1 eenheid wijn" }],
         ],
-        uitleg: "Nederland heeft lagere alternatieve kosten voor kaas (⅓ < 1), dus Nederland heeft een comparatief voordeel bij kaas.",
+        explanation: "Nederland heeft lagere alternatieve kosten voor kaas (⅓ < 1), dus Nederland heeft een comparatief voordeel bij kaas.",
       },
       {
         label: "Vraag 5c — Specialisatieadvies",
         vraagText: "Welk land moet zich specialiseren in welk product? Waarom levert handel voordeel op?",
-        denkstappen: [
+        thinkingSteps: [
           "Het land met de laagste alternatieve kosten heeft het comparatief voordeel.",
           "Elk land specialiseert in het product waarvoor het comparatief voordeel heeft.",
           "Door handel kunnen beide landen meer consumeren dan in autarkie.",
@@ -338,7 +338,7 @@ const oefeningen = [
           [{ text: "Frankrijk: ", bold: true }, { text: "specialiseert in wijn (AK wijn = 1 kaas < 3 kaas)" }],
           "Door specialisatie en handel kunnen beide landen buiten hun eigen productiemogelijkhedencurve consumeren. De ruilvoet moet liggen tussen de alternatieve kosten van beide landen: tussen ⅓ en 1 eenheid wijn per eenheid kaas.",
         ],
-        uitleg: "Comparatief voordeel (David Ricardo) toont aan dat handel voordelig is zolang de alternatieve kosten verschillen — zelfs als één land bij beide producten een absoluut voordeel heeft.",
+        explanation: "Comparatief voordeel (David Ricardo) toont aan dat handel voordelig is zolang de alternatieve kosten verschillen — zelfs als één land bij beide producten een absoluut voordeel heeft.",
       },
     ],
   },
@@ -359,12 +359,12 @@ const oefeningen = [
       {
         label: "Vraag 6a — Monopolie-evenwicht",
         vraagText: "Bereken de winstmaximaliserende prijs en hoeveelheid van de monopolist.",
-        denkstappen: [
+        thinkingSteps: [
           "De monopolist maximaliseert winst waar MO = MK.",
           "Bereken Q uit MO = MK.",
           "Vul Q in de vraagfunctie in om p te vinden.",
         ],
-        formuleHerinnering: [
+        formulaReminder: [
           "Winstmaximum: MO = MK",
           "MO = 100 − 4Q",
           "MK = 20",
@@ -381,12 +381,12 @@ const oefeningen = [
           "p = 100 − 2 × 20 = 100 − 40",
           [{ text: "p_monopolie = 60", bold: true }],
         ],
-        uitleg: "De monopolist produceert minder en vraagt een hogere prijs dan bij volkomen concurrentie, omdat MO < p bij dalende vraagcurve.",
+        explanation: "De monopolist produceert minder en vraagt een hogere prijs dan bij volkomen concurrentie, omdat MO < p bij dalende vraagcurve.",
       },
       {
         label: "Vraag 6b — Volkomen concurrentie-evenwicht",
         vraagText: "Bereken prijs en hoeveelheid bij volkomen concurrentie op dezelfde markt.",
-        denkstappen: [
+        thinkingSteps: [
           "Bij volkomen concurrentie geldt: p = MK.",
           "Stel de vraagfunctie gelijk aan MK.",
           "Los op naar Q en p.",
@@ -403,17 +403,17 @@ const oefeningen = [
           [{ text: "Q_vc = 40", bold: true }],
           [{ text: "p_vc = 20 (= MK)", bold: true }],
         ],
-        uitleg: "Bij volkomen concurrentie wordt er meer geproduceerd (40 vs. 20) tegen een lagere prijs (€20 vs. €60). Dit is allocatief efficiënt.",
+        explanation: "Bij volkomen concurrentie wordt er meer geproduceerd (40 vs. 20) tegen een lagere prijs (€20 vs. €60). Dit is allocatief efficiënt.",
       },
       {
         label: "Vraag 6c — Welvaartsverlies berekenen",
         vraagText: "Bereken het welvaartsverlies (deadweight loss) door de monopolie.",
-        denkstappen: [
+        thinkingSteps: [
           "Het welvaartsverlies is de driehoek tussen Q_monopolie en Q_vc.",
           "De bovenkant is de vraagcurve, de onderkant is de MK-lijn.",
           "Gebruik: DWL = ½ × (p_monopolie − MK) × (Q_vc − Q_monopolie)",
         ],
-        formuleHerinnering: [
+        formulaReminder: [
           "DWL = ½ × (p_mon − MK) × (Q_vc − Q_mon)",
         ],
         invulformaat: [
@@ -426,7 +426,7 @@ const oefeningen = [
           "DWL = ½ × 40 × 20",
           [{ text: "DWL = 400", bold: true }],
         ],
-        uitleg: "Dit welvaartsverlies ontstaat doordat de monopolist 20 eenheden minder produceert dan bij volkomen concurrentie. Voor die eenheden was de betalingsbereidheid hoger dan de productiekosten, maar ze worden niet verhandeld. Dit is de reden dat de overheid soms ingrijpt bij monopolies.",
+        explanation: "Dit welvaartsverlies ontstaat doordat de monopolist 20 eenheden minder produceert dan bij volkomen concurrentie. Voor die eenheden was de betalingsbereidheid hoger dan de productiekosten, maar ze worden niet verhandeld. Dit is de reden dat de overheid soms ingrijpt bij monopolies.",
       },
     ],
   },
@@ -458,18 +458,18 @@ async function main() {
   const vragenBuf = await buildBegeleideInoefening(
     PARAGRAAF_NR, ONDERWERP, HEADER_TEXT, oefeningen, samenvattendSchema, false
   );
-  const antwoordenBuf = await buildBegeleideInoefening(
+  const answersBuf = await buildBegeleideInoefening(
     PARAGRAAF_NR, ONDERWERP, HEADER_TEXT, oefeningen, samenvattendSchema, true
   );
 
   const vragenPath = path.join(OUTPUT_DIR, "3.5.1 Afsluiting \u2013 begeleide inoefening \u2013 vragen.docx");
-  const antwoordenPath = path.join(OUTPUT_DIR, "3.5.1 Afsluiting \u2013 begeleide inoefening \u2013 antwoorden.docx");
+  const answersPath = path.join(OUTPUT_DIR, "3.5.1 Afsluiting \u2013 begeleide inoefening \u2013 antwoorden.docx");
 
   fs.writeFileSync(vragenPath, vragenBuf);
-  fs.writeFileSync(antwoordenPath, antwoordenBuf);
+  fs.writeFileSync(answersPath, answersBuf);
 
   console.log(`  Vragen:      ${vragenPath} (${(vragenBuf.length / 1024).toFixed(0)} KB)`);
-  console.log(`  Antwoorden:  ${antwoordenPath} (${(antwoordenBuf.length / 1024).toFixed(0)} KB)`);
+  console.log(`  Antwoorden:  ${answersPath} (${(answersBuf.length / 1024).toFixed(0)} KB)`);
   console.log("\nDone!");
 }
 

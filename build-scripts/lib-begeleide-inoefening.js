@@ -204,7 +204,7 @@ function checkBox(text) {
 }
 
 // ── Scaffolding Boxes ──
-function denkstapBox(lines) {
+function thinkingStepBox(lines) {
   return new Table({
     width: { size: CW, type: WidthType.DXA },
     columnWidths: [CW],
@@ -235,7 +235,7 @@ function hintBox(text) {
   return tipBox(text, C.purple, C.lightPurple, "\u25B6 Hint:");
 }
 
-function formuleHerinneringBox(lines) {
+function formulaReminderBox(lines) {
   return new Table({
     width: { size: CW, type: WidthType.DXA },
     columnWidths: [CW],
@@ -286,7 +286,7 @@ function answerBox(lines) {
   });
 }
 
-function uitlegBox(text) {
+function explanationBox(text) {
   return tipBox(text, C.dBlue, C.dBlueLt, "\u25B6 Uitleg:");
 }
 
@@ -468,15 +468,15 @@ function makeFooter() {
  *   deelvragen: [{
  *     label: "Vraag 2a — Leid MK af",
  *     vraagText: "The actual question text",   // optional, for displaying question
- *     denkstappen: ["step 1", "step 2"],       // optional
+ *     thinkingSteps: ["step 1", "step 2"],     // optional
  *     hint: "A short nudge",                   // optional
- *     formuleHerinnering: ["MK = TK'"],        // optional
+ *     formulaReminder: ["MK = TK'"],           // optional
  *     invulformaat: "MK = ............",        // optional, vragen-doc only
  *     antwoord: [                               // antwoorden-doc only
  *       "line 1",
  *       [{ text: "MK: ", bold: true }, { text: "0,5Q" }],
  *     ],
- *     uitleg: "Why this answer is correct",     // antwoorden-doc only
+ *     explanation: "Why this answer is correct",// antwoorden-doc only
  *     answerLines: 3,                           // nr of answer lines if no invulformaat
  *     warning: "Common mistake text",           // optional warning box
  *   }],
@@ -529,18 +529,18 @@ async function buildBegeleideInoefening(paragraafNr, onderwerp, headerText, oefe
   }));
   children.push(p("In dit document vind je verschillende soorten hulpkaders:"));
   children.push(sp());
-  children.push(denkstapBox(["Stappen die je kunt volgen om tot het antwoord te komen"]));
+  children.push(thinkingStepBox(["Stappen die je kunt volgen om tot het antwoord te komen"]));
   children.push(sp(60));
   children.push(hintBox("Een korte hint die je op weg helpt"));
   children.push(sp(60));
-  children.push(formuleHerinneringBox(["Formules die je nodig hebt voor de opgave"]));
+  children.push(formulaReminderBox(["Formules die je nodig hebt voor de opgave"]));
   children.push(sp(60));
   children.push(warningBox("Iets waar je extra op moet letten"));
   children.push(sp(60));
   if (includeAnswers) {
     children.push(answerBox(["Het uitgewerkte antwoord"]));
     children.push(sp(60));
-    children.push(uitlegBox("Waarom dit het goede antwoord is \u2014 de redenering erachter"));
+    children.push(explanationBox("Waarom dit het goede antwoord is \u2014 de redenering erachter"));
     children.push(sp(60));
   }
   children.push(checkBox("Een controle-check om te zien of je op de goede weg zit"));
@@ -561,9 +561,9 @@ async function buildBegeleideInoefening(paragraafNr, onderwerp, headerText, oefe
         children.push(p(dv.vraagText));
       }
       children.push(sp(40));
-      if (dv.denkstappen) { children.push(denkstapBox(dv.denkstappen)); children.push(sp()); }
+      if (dv.thinkingSteps) { children.push(thinkingStepBox(dv.thinkingSteps)); children.push(sp()); }
       if (dv.hint) { children.push(hintBox(dv.hint)); children.push(sp()); }
-      if (dv.formuleHerinnering) { children.push(formuleHerinneringBox(dv.formuleHerinnering)); children.push(sp()); }
+      if (dv.formulaReminder) { children.push(formulaReminderBox(dv.formulaReminder)); children.push(sp()); }
       if (dv.warning) { children.push(warningBox(dv.warning)); children.push(sp()); }
 
       // Dual coding: visual scaffolding image — shown in BOTH vragen and antwoorden
@@ -581,7 +581,7 @@ async function buildBegeleideInoefening(paragraafNr, onderwerp, headerText, oefe
           if (img) children.push(img);
         }
         children.push(sp(40));
-        if (dv.uitleg) { children.push(uitlegBox(dv.uitleg)); }
+        if (dv.explanation) { children.push(explanationBox(dv.explanation)); }
       } else if (!includeAnswers && dv.invulformaat) {
         // Show invulformaat lines in Consolas
         const invulLines = Array.isArray(dv.invulformaat) ? dv.invulformaat : [dv.invulformaat];
@@ -629,22 +629,22 @@ async function buildBegeleideInoefening(paragraafNr, onderwerp, headerText, oefe
  */
 async function buildBegeleideInoefeningSplit(paragraafNr, onderwerp, headerText, oefeningen, samenvattendSchema, outputDir) {
   const vragen = await buildBegeleideInoefening(paragraafNr, onderwerp, headerText, oefeningen, samenvattendSchema, false);
-  const antwoorden = await buildBegeleideInoefening(paragraafNr, onderwerp, headerText, oefeningen, samenvattendSchema, true);
+  const answers = await buildBegeleideInoefening(paragraafNr, onderwerp, headerText, oefeningen, samenvattendSchema, true);
 
   if (!fs.existsSync(outputDir)) {
     fs.mkdirSync(outputDir, { recursive: true });
   }
 
   const vragenPath = `${outputDir}/${paragraafNr} Begeleide Inoefening - Vragen.docx`;
-  const antwoordenPath = `${outputDir}/${paragraafNr} Begeleide Inoefening - Vragen & Antwoorden.docx`;
+  const answersPath = `${outputDir}/${paragraafNr} Begeleide Inoefening - Vragen & Antwoorden.docx`;
 
   fs.writeFileSync(vragenPath, vragen);
-  fs.writeFileSync(antwoordenPath, antwoorden);
+  fs.writeFileSync(answersPath, answers);
 
   console.log(`  Vragen:      ${vragenPath} (${(vragen.length / 1024).toFixed(0)} KB)`);
-  console.log(`  Antwoorden:  ${antwoordenPath} (${(antwoorden.length / 1024).toFixed(0)} KB)`);
+  console.log(`  Antwoorden:  ${answersPath} (${(answers.length / 1024).toFixed(0)} KB)`);
 
-  return { vragenPath, antwoordenPath };
+  return { vragenPath, answersPath };
 }
 
 module.exports = {
@@ -654,7 +654,7 @@ module.exports = {
   // Export components for direct use if needed
   sp, p, rp, h2d,
   domainBanner, formulaBox, tipBox, warningBox, checkBox,
-  denkstapBox, hintBox, formuleHerinneringBox, answerBox, uitlegBox, answerSpace,
+  thinkingStepBox, hintBox, formulaReminderBox, answerBox, explanationBox, answerSpace,
   summarySchema, domainLegend, titleBlock, makeHeader, makeFooter,
   embedAssetFromPath,
 };

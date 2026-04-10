@@ -1,12 +1,12 @@
 # 4veco Platform — Build Tools & Game Engines
 
-Platform-repo voor het genereren van lesmateriaal voor **Praktische Economie VWO 4**. Bevat game engines, build scripts, source data en skills. De gegenereerde output wordt gedeployed naar aparte module-repo's.
+Platform repo for generating lesson materials for **Praktische Economie VWO 4**. Contains game engines, build scripts, source data, and skills. Generated output is deployed to separate module repos.
 
-## Eerst lezen
+## Read first
 
-- Gebruik [BUILD-PARAGRAPH.md](C:\Projects\4veco\4veco-platform\BUILD-PARAGRAPH.md) als de end-to-end handleiding voor het bouwen van een complete paragraaf.
-- Gebruik `AGENTS.md` voor repo-overzicht, architectuur, deployregels en kwaliteitsstandaard.
-- Gebruik `build-scripts/README.md` voor het onderscheid tussen platform generators, converters, reference implementations en utilities.
+- Use [BUILD-PARAGRAPH.md](C:\Projects\4veco\4veco-platform\BUILD-PARAGRAPH.md) as the end-to-end guide for building a complete paragraph.
+- Use `AGENTS.md` for repo overview, architecture, deploy rules, and quality standards.
+- Use `build-scripts/README.md` for the distinction between platform generators, converters, reference implementations, and utilities.
 
 ## Design Principles
 

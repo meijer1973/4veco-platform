@@ -5,12 +5,12 @@
 
 ---
 
-## Kernconcepten
+## Key concepts
 
 List the 5-8 key concepts that this paragraph teaches. Every builder draws from this list.
 
-| # | Concept | Definitie (1 zin) | Formule | Grafiektype nodig |
-|---|---------|-------------------|---------|-------------------|
+| # | Concept | Definition (1 sentence) | Formula | Graph type needed |
+|---|---------|------------------------|---------|-------------------|
 | 1 | | | | |
 | 2 | | | | |
 | 3 | | | | |
@@ -19,11 +19,11 @@ List the 5-8 key concepts that this paragraph teaches. Every builder draws from 
 
 ---
 
-## Visuelen-plan
+## Visuals plan
 
 List every SVG visual needed across all builders. Each visual is built once in Phase 4b and stored in `_assets/`.
 
-| Bestandsnaam | Grafiektype (economic-graph.md) | Gebruikt door | Beschrijving | Parameters |
+| Filename | Graph type (economic-graph.md) | Used by | Description | Parameters |
 |---|---|---|---|---|
 | `va-equilibrium` | A. Supply & Demand | presentatie (slide N), nieuws | ... | V: p = ..., A: p = ... |
 | | | | | |
@@ -32,93 +32,93 @@ List every SVG visual needed across all builders. Each visual is built once in P
 
 ---
 
-## Presentatie-outline
+## Presentation outline
 
-Slide sequence for the presentation. Each theory slide should reference a visual from the visuelen-plan.
+Slide sequence for the presentation. Each theory slide should reference a visual from the visuals plan.
 
-1. **Titelslide**: [paragraaftitel]
-2. **Theorie**: [concept] — visual: `[bestandsnaam].png`
-3. **Theorie**: [concept] — visual: `[bestandsnaam].png`
-4. **Theorie**: [concept] — visual: `[bestandsnaam].png`
+1. **Title slide**: [paragraph title]
+2. **Theory**: [concept] — visual: `[filename].png`
+3. **Theory**: [concept] — visual: `[filename].png`
+4. **Theory**: [concept] — visual: `[filename].png`
 5. ...
 
 Minimum: 3 slides with SVG graphs. Theory + worked examples only, never exercise instructions.
 
 ---
 
-## Nieuws-plan
+## News plan
 
 | | |
 |---|---|
-| **Artikel** | [titel, bron, URL] |
-| **Samenvatting** | [80 woorden max] |
-| **Visual** | `[bestandsnaam]` uit visuelen-plan |
-| **Grafiektype** | [bar chart / line chart / supply-demand / ...] |
-| **Vragen (5)** | [korte omschrijving, oplopende moeilijkheid] |
+| **Article** | [title, source, URL] |
+| **Summary** | [80 words max] |
+| **Visual** | `[filename]` from visuals plan |
+| **Graph type** | [bar chart / line chart / supply-demand / ...] |
+| **Questions (5)** | [brief description, increasing difficulty] |
 
 ---
 
-## Samenvatting-concepten
+## Summary concepts
 
-Complete list of concepts, terms, and formulas that the samenvatting infographic must cover. Cross-check against kernconcepten — nothing should be missing.
+Complete list of concepts, terms, and formulas that the "samenvatting" infographic must cover. Cross-check against key concepts — nothing should be missing.
 
 - [ ] [concept 1]
 - [ ] [concept 2]
-- [ ] [formule 1]
+- [ ] [formula 1]
 - [ ] ...
 
 ---
 
-## Terminologie
+## Terminology
 
 Consistent term usage across all 8 documents. When in doubt, prefer the textbook's exact wording.
 
-| Term | Gebruik overal | Niet gebruiken |
+| Term | Use everywhere | Do not use |
 |---|---|---|
 | | | |
 | | | |
 
 ---
 
-## Opgaven-verdeling
+## Exercise distribution
 
 How exercises are distributed across the three difficulty levels.
 
-| Niveau | Aantal | Onderwerpen | Vraagtype |
+| Level | Count | Topics | Question type |
 |---|---|---|---|
-| **Basis** (8-10) | | kennis-recall: ... | meerkeuzevragen, invulvragen |
-| **Midden** (6-8) | | toepassing: ... | berekeningsvragen, grafiekvragen |
-| **Verrijking** (4-6) | | analyse/evaluatie: ... | open vragen, casussen |
+| **Basic** (8-10) | | knowledge recall: ... | multiple choice, fill-in-the-blank |
+| **Intermediate** (6-8) | | application: ... | calculation questions, graph questions |
+| **Enrichment** (4-6) | | analysis/evaluation: ... | open questions, case studies |
 
 ---
 
-## Vaardigheden & Voorkennis
+## Skills & prior knowledge
 
-Quick reference for the uitleg-builders.
+Quick reference for the "uitleg" builders.
 
-**Voorkennis** (5-7 prerequisites): [concept 1], [concept 2], ...
-**Vaardigheden** (5-7 skills): [skill 1], [skill 2], ...
+**Prior knowledge** (5-7 prerequisites): [concept 1], [concept 2], ...
+**Skills** (5-7 skills): [skill 1], [skill 2], ...
 
-Optional graphs needed for these documents: [list or "geen"].
+Optional graphs needed for these documents: [list or "none"].
 
 ---
 
-## Procedure-stappen-plan (unified experience)
+## Procedure step plan (unified experience)
 
-> **Critical**: This defines the canonical step sequence for each skill. ALL builders (vaardigheden, stappenplan game, presentatie, inoefening) must follow these exact steps. Products and numbers may vary by context, but the approach is fixed.
+> **Critical**: This defines the canonical step sequence for each skill. ALL builders ("vaardigheden", "stappenplan" game, presentatie, "inoefening") must follow these exact steps. Products and numbers may vary by context, but the approach is fixed.
 
-| Vaardigheid | Stap 1 | Stap 2 | Stap 3 | Gebruikt door |
+| Skill | Step 1 | Step 2 | Step 3 | Used by |
 |---|---|---|---|---|
 | [skill 1] | [step label + approach] | [step label + approach] | [step label + approach] | vaardigheden, stappenplan, presentatie |
 | [skill 2] | | | | |
 
 ---
 
-## Visuelen-toewijzing (dual coding)
+## Visual assignment (dual coding)
 
 > **Critical**: Every document that explains a concept with a matching visual MUST embed it. Not just the presentatie.
 
 | Visual | presentatie | vaardigheden | voorkennis | samenvatting |
 |---|---|---|---|---|
-| `[filename].png` | slide [N] | skill [N] ([name]) | sectie [N] ([name]) | cel [N] |
+| `[filename].png` | slide [N] | skill [N] ([name]) | section [N] ([name]) | cell [N] |
 | | | | | |

@@ -36,7 +36,7 @@ const oefeningen = [
       {
         label: "Vraag 1a \u2014 Schaarste identificeren",
         vraagText: "Leg uit waarom water in deze situatie een schaars goed is. Gebruik het begrip schaarste.",
-        denkstappen: [
+        thinkingSteps: [
           "Wat is het schaarse middel?",
           "Welke behoeften concurreren om dit middel?",
           "Waarom is er een keuze nodig?",
@@ -47,12 +47,12 @@ const oefeningen = [
           "Water is schaars omdat de beschikbare hoeveelheid schoon water beperkt is (middel), terwijl er meerdere concurrerende behoeften zijn: drinkwater, landbouw, industrie en textielproductie.",
           [{ text: "De behoeften overtreffen het aanbod, waardoor er gekozen moet worden hoe het water wordt verdeeld.", bold: true }],
         ],
-        uitleg: "Schaarste betekent niet dat iets zeldzaam is, maar dat de middelen beperkt zijn ten opzichte van de behoeften. Water is er wel, maar niet genoeg voor alle toepassingen.",
+        explanation: "Schaarste betekent niet dat iets zeldzaam is, maar dat de middelen beperkt zijn ten opzichte van de behoeften. Water is er wel, maar niet genoeg voor alle toepassingen.",
       },
       {
         label: "Vraag 1b \u2014 Gevolg van schaarste",
         vraagText: "Welke keuze moeten overheden en bedrijven maken als gevolg van de schaarste aan water?",
-        denkstappen: [
+        thinkingSteps: [
           "Wie moet er kiezen?",
           "Waaruit moeten ze kiezen?",
         ],
@@ -62,7 +62,7 @@ const oefeningen = [
           "Bedrijven moeten kiezen tussen waterintensieve productie (katoen) of alternatieven (polyester, recycling).",
           [{ text: "Elke keuze heeft opofferingskosten: water dat naar textiel gaat, kan niet naar landbouw.", bold: true }],
         ],
-        uitleg: "Schaarste dwingt tot keuzes. De opofferingskosten van watergebruik in de textielindustrie zijn het water dat niet beschikbaar is voor andere toepassingen.",
+        explanation: "Schaarste dwingt tot keuzes. De opofferingskosten van watergebruik in de textielindustrie zijn het water dat niet beschikbaar is voor andere toepassingen.",
       },
     ],
   },
@@ -78,11 +78,11 @@ const oefeningen = [
       {
         label: "Vraag 2a \u2014 Opofferingskosten in geld",
         vraagText: "Bereken de opofferingskosten van 4 uur vrije tijd (sporten) voor Sophie.",
-        denkstappen: [
+        thinkingSteps: [
           "Wat geeft Sophie op als ze 4 uur niet werkt?",
           "Bereken het misgelopen inkomen",
         ],
-        formuleHerinnering: ["Opofferingskosten vrije tijd = misgelopen uren \u00D7 uurloon"],
+        formulaReminder: ["Opofferingskosten vrije tijd = misgelopen uren \u00D7 uurloon"],
         invulformaat: [
           "Opofferingskosten = ........ uur \u00D7 \u20AC........ = \u20AC........",
         ],
@@ -91,24 +91,24 @@ const oefeningen = [
           [{ text: "Opofferingskosten = 4 uur \u00D7 \u20AC15 = \u20AC60", bold: true }],
           "Sophie mist \u20AC60 aan inkomen door te kiezen voor vrije tijd.",
         ],
-        uitleg: "De opofferingskosten zijn het inkomen dat Sophie misloopt. Het uurloon is de 'prijs' van vrije tijd.",
+        explanation: "De opofferingskosten zijn het inkomen dat Sophie misloopt. Het uurloon is de 'prijs' van vrije tijd.",
       },
       {
         label: "Vraag 2b \u2014 Nettobaten",
         vraagText: "Sophie waardeert 4 uur sporten op \u20AC80 (in termen van gezondheid en plezier). Bereken de nettobaten van haar keuze om te sporten.",
-        denkstappen: [
+        thinkingSteps: [
           "Baten = waarde van sporten",
           "Kosten = opofferingskosten (misgelopen inkomen)",
           "Nettobaten = baten \u2212 kosten",
         ],
-        formuleHerinnering: ["Nettobaten = baten \u2212 kosten"],
+        formulaReminder: ["Nettobaten = baten \u2212 kosten"],
         answerLines: 3,
         antwoord: [
           "Baten sporten: \u20AC80. Kosten (opofferingskosten): \u20AC60.",
           [{ text: "Nettobaten = \u20AC80 \u2212 \u20AC60 = \u20AC20 (positief)", bold: true }],
           "Omdat de nettobaten positief zijn, is sporten een rationele keuze.",
         ],
-        uitleg: "Nettobaten helpen om te beoordelen of een keuze de moeite waard is. Positieve nettobaten betekenen dat de baten groter zijn dan de kosten.",
+        explanation: "Nettobaten helpen om te beoordelen of een keuze de moeite waard is. Positieve nettobaten betekenen dat de baten groter zijn dan de kosten.",
       },
     ],
   },
@@ -124,7 +124,7 @@ const oefeningen = [
       {
         label: "Vraag 3a \u2014 Schaarste",
         vraagText: "Leg uit waarom er in deze situatie sprake is van schaarste. Gebruik de drieslag: begrip \u2192 definitie \u2192 toepassing.",
-        denkstappen: [
+        thinkingSteps: [
           "Noem het begrip en geef de definitie",
           "Koppel aan concrete feiten uit de tekst",
         ],
@@ -135,12 +135,12 @@ const oefeningen = [
           [{ text: "Definitie: ", bold: true }, { text: "Middelen zijn beperkt ten opzichte van behoeften." }],
           [{ text: "Toepassing: ", bold: true }, { text: "Het budget van \u20AC2 miljoen (middel) is niet voldoende om alle wensen van de bewoners (\u20AC2,9 miljoen aan behoeften) te vervullen. Er is \u20AC0,9 miljoen tekort, dus de gemeente moet kiezen." }],
         ],
-        uitleg: "De drieslag is een krachtige methode om begrippen correct toe te passen. Begin altijd met het begrip, dan de definitie, en koppel pas dan aan de casus.",
+        explanation: "De drieslag is een krachtige methode om begrippen correct toe te passen. Begin altijd met het begrip, dan de definitie, en koppel pas dan aan de casus.",
       },
       {
         label: "Vraag 3b \u2014 Opofferingskosten",
         vraagText: "De gemeente kiest voor het speelplein (\u20AC1,5 miljoen). Wat zijn de opofferingskosten van deze keuze?",
-        denkstappen: [
+        thinkingSteps: [
           "Resterend budget na het speelplein?",
           "Welk alternatief is het beste dat wordt opgegeven?",
         ],
@@ -166,12 +166,12 @@ const oefeningen = [
       {
         label: "Vraag 4a \u2014 Oude en nieuwe snijpunten",
         vraagText: "Bereken de snijpunten met de assen voor de oude \u00e9n de nieuwe situatie.",
-        denkstappen: [
+        thinkingSteps: [
           "Oud: B = 200, p\u2081 = 10, p\u2082 = 20",
           "Nieuw: B = 240, p\u2081 = 15, p\u2082 = 20",
           "Bereken q\u2081\u1D50\u1D43\u02E3 en q\u2082\u1D50\u1D43\u02E3 voor beide situaties",
         ],
-        formuleHerinnering: ["q\u2081\u1D50\u1D43\u02E3 = B / p\u2081", "q\u2082\u1D50\u1D43\u02E3 = B / p\u2082"],
+        formulaReminder: ["q\u2081\u1D50\u1D43\u02E3 = B / p\u2081", "q\u2082\u1D50\u1D43\u02E3 = B / p\u2082"],
         scaffoldImage: { path: path.join(ASSETS_DIR, 'budgetlijn-gecombineerd.png'), width: 400, height: 200 },
         invulformaat: [
           "Oud:   q\u2081 = 200/10 = ........   q\u2082 = 200/20 = ........",
@@ -187,7 +187,7 @@ const oefeningen = [
       {
         label: "Vraag 4b \u2014 Beschrijf de verschuiving",
         vraagText: "Is dit een evenwijdige verschuiving, een kanteling, of iets anders? Leg uit.",
-        denkstappen: [
+        thinkingSteps: [
           "Zijn beide snijpunten veranderd?",
           "In dezelfde richting of tegengesteld?",
           "Wat veranderde er: budget, prijs, of beide?",
@@ -199,7 +199,7 @@ const oefeningen = [
           [{ text: "Dit is een gecombineerde verschuiving: g\u00e9\u00e9n zuivere evenwijdige verschuiving en g\u00e9\u00e9n zuivere kanteling.", bold: true }],
           "Het budget steeg (zou evenwijdig naar buiten geven), maar de prijs van goed 1 steeg ook (kantelt naar binnen op de x-as). Het netto-effect verschilt per as.",
         ],
-        uitleg: "Bij een gecombineerde verschuiving veranderen beide snijpunten, maar niet per se in dezelfde richting. Bereken altijd beide nieuwe snijpunten apart.",
+        explanation: "Bij een gecombineerde verschuiving veranderen beide snijpunten, maar niet per se in dezelfde richting. Bereken altijd beide nieuwe snijpunten apart.",
       },
     ],
   },
@@ -215,11 +215,11 @@ const oefeningen = [
       {
         label: "Vraag 5a \u2014 Oude en nieuwe snijpunten",
         vraagText: "Bereken de snijpunten met de assen voor de oude \u00e9n de nieuwe situatie.",
-        denkstappen: [
+        thinkingSteps: [
           "Oud: B = 600, p\u2081 = 10, p\u2082 = 50",
           "Nieuw: B = 600, p\u2081 = 12, p\u2082 = 50",
         ],
-        formuleHerinnering: ["q\u2081\u1D50\u1D43\u02E3 = B / p\u2081", "q\u2082\u1D50\u1D43\u02E3 = B / p\u2082"],
+        formulaReminder: ["q\u2081\u1D50\u1D43\u02E3 = B / p\u2081", "q\u2082\u1D50\u1D43\u02E3 = B / p\u2082"],
         scaffoldImage: { path: path.join(ASSETS_DIR, 'budgetlijn-gecombineerd.png'), width: 400, height: 200 },
         invulformaat: [
           "Oud:   q\u2081 = 600/10 = ........   q\u2082 = 600/50 = ........",
@@ -235,7 +235,7 @@ const oefeningen = [
       {
         label: "Vraag 5b \u2014 Type verschuiving",
         vraagText: "Beschrijf wat er met de budgetlijn gebeurt. Is het een kanteling of een evenwijdige verschuiving?",
-        denkstappen: [
+        thinkingSteps: [
           "Welk snijpunt is veranderd?",
           "Welk snijpunt is gelijk gebleven?",
           "Wat veranderde er: budget of prijs?",
@@ -247,7 +247,7 @@ const oefeningen = [
           [{ text: "De budgetlijn kantelt naar binnen rond het snijpunt (0, 12) op de q\u2082-as.", bold: true }],
           "De prijs van goed 1 steeg, het budget en p\u2082 bleven gelijk \u2192 dit is een zuivere kanteling.",
         ],
-        uitleg: "Bij een prijsverandering van \u00e9\u00e9n goed kantelt de budgetlijn. Het snijpunt van het goed waarvan de prijs niet verandert, blijft op zijn plaats.",
+        explanation: "Bij een prijsverandering van \u00e9\u00e9n goed kantelt de budgetlijn. Het snijpunt van het goed waarvan de prijs niet verandert, blijft op zijn plaats.",
       },
     ],
   },
@@ -263,11 +263,11 @@ const oefeningen = [
       {
         label: "Vraag 6a \u2014 Opofferingskosten vergelijken",
         vraagText: "Bereken de opofferingskosten van 1 uur vrije tijd bij bijbaan A en bij bijbaan B.",
-        denkstappen: [
+        thinkingSteps: [
           "Opofferingskosten van vrije tijd = misgelopen uurloon",
           "Vergelijk voor beide bijbanen",
         ],
-        formuleHerinnering: ["Opofferingskosten vrije tijd = uurloon"],
+        formulaReminder: ["Opofferingskosten vrije tijd = uurloon"],
         scaffoldImage: { path: path.join(ASSETS_DIR, 'arbeidsmarkt-vacatures.png'), width: 400, height: 200 },
         answerLines: 3,
         antwoord: [
@@ -280,7 +280,7 @@ const oefeningen = [
       {
         label: "Vraag 6b \u2014 Maximaal inkomen",
         vraagText: "Mark combineert beide banen: eerst 15 uur bijles, dan de rest in de supermarkt. Bereken zijn maximale weekinkomen als hij alle 40 uur werkt.",
-        denkstappen: [
+        thinkingSteps: [
           "Bijles: 15 uur \u00D7 \u20AC20",
           "Supermarkt: resterende uren \u00D7 \u20AC12",
           "Totaal optellen",
@@ -296,7 +296,7 @@ const oefeningen = [
           "Supermarkt: 25 \u00D7 \u20AC12 = \u20AC300",
           [{ text: "Maximaal weekinkomen = \u20AC300 + \u20AC300 = \u20AC600", bold: true }],
         ],
-        uitleg: "Door banen te combineren maximaliseert Mark zijn inkomen. De opofferingskosten van vrije tijd zijn niet constant: de eerste uren kosten \u20AC12 (supermarkt), maar na 25 uur kosten de volgende uren \u20AC20 (bijles).",
+        explanation: "Door banen te combineren maximaliseert Mark zijn inkomen. De opofferingskosten van vrije tijd zijn niet constant: de eerste uren kosten \u20AC12 (supermarkt), maar na 25 uur kosten de volgende uren \u20AC20 (bijles).",
       },
     ],
   },
@@ -312,7 +312,7 @@ const oefeningen = [
       {
         label: "Vraag 7a \u2014 Schaarste herkennen",
         vraagText: "Leg uit welke vorm van schaarste in deze bron beschreven wordt.",
-        denkstappen: [
+        thinkingSteps: [
           "Wat is het schaarse middel?",
           "Welke behoeften zijn er?",
           "Wie moet er kiezen?",
@@ -322,12 +322,12 @@ const oefeningen = [
           "Er is schaarste op de arbeidsmarkt: het aanbod van jonge werknemers (middel) is beperkt ten opzichte van de vraag van werkgevers (behoefte).",
           [{ text: "Werkgevers moeten concurreren om jongeren \u2192 ze verhogen het uurloon om werknemers te trekken.", bold: true }],
         ],
-        uitleg: "Schaarste op de arbeidsmarkt betekent dat er meer vacatures zijn dan werknemers. Dit is het tegenovergestelde van de schaarste die consumenten ervaren bij hun budget.",
+        explanation: "Schaarste op de arbeidsmarkt betekent dat er meer vacatures zijn dan werknemers. Dit is het tegenovergestelde van de schaarste die consumenten ervaren bij hun budget.",
       },
       {
         label: "Vraag 7b \u2014 Opofferingskosten",
         vraagText: "Bereken hoeveel de opofferingskosten van 1 uur vrije tijd zijn gestegen voor jongeren met een bijbaan.",
-        denkstappen: [
+        thinkingSteps: [
           "Oud uurloon = opofferingskosten vrije tijd (oud)",
           "Nieuw uurloon = opofferingskosten vrije tijd (nieuw)",
           "Bereken het verschil",
@@ -342,7 +342,7 @@ const oefeningen = [
       {
         label: "Vraag 7c \u2014 Effect op budgetlijn",
         vraagText: "Beschrijf het effect van de loonverhoging op de budgetlijn (vrije tijd vs. inkomen) van jongeren. Welk type verschuiving is dit?",
-        denkstappen: [
+        thinkingSteps: [
           "Wat verandert: het uurloon (= 'prijs' van vrije tijd)",
           "Wat blijft gelijk: het totaal beschikbare uren",
           "Is dit een kanteling of evenwijdige verschuiving?",
@@ -355,7 +355,7 @@ const oefeningen = [
           [{ text: "De budgetlijn kantelt omhoog rond het x-snijpunt. Vrije tijd wordt duurder.", bold: true }],
           "Dit is een kanteling, want de 'prijs' van vrije tijd (uurloon) verandert, terwijl het 'budget' (beschikbare uren) gelijk blijft.",
         ],
-        uitleg: "Op de arbeidsmarkt is het uurloon de 'prijs' van vrije tijd. Als het uurloon stijgt, kantelt de budgetlijn: je kunt per gewerkt uur meer verdienen, maar elk uur vrije tijd kost je ook meer.",
+        explanation: "Op de arbeidsmarkt is het uurloon de 'prijs' van vrije tijd. Als het uurloon stijgt, kantelt de budgetlijn: je kunt per gewerkt uur meer verdienen, maar elk uur vrije tijd kost je ook meer.",
       },
     ],
   },

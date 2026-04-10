@@ -265,11 +265,11 @@ function scanFiles(paragraafPath) {
       if (!fs.existsSync(full)) return null;
       const files = cleanDir(fs.readdirSync(full));
       const docxFiles = files.filter(f => f.endsWith(".docx"));
-      const vragen = docxFiles.find(f => /vragen\.docx$/i.test(f) && !/antwoorden/i.test(f));
-      const antwoorden = docxFiles.find(f => /antwoorden\.docx$/i.test(f));
+      const questions = docxFiles.find(f => /vragen\.docx$/i.test(f) && !/antwoorden/i.test(f));
+      const answers = docxFiles.find(f => /antwoorden\.docx$/i.test(f));
       const interactief = files.find(f => /\.html$/i.test(f));
-      if (!vragen && !antwoorden && !interactief) return null;
-      return { dir: subDir, vragen, antwoorden, interactief };
+      if (!questions && !answers && !interactief) return null;
+      return { dir: subDir, questions, answers, interactief };
     };
     result.oefenen.begeleide = scanExerciseDir("begeleide inoefening");
     result.oefenen.basis = scanExerciseDir("basisopgaven");
@@ -841,8 +841,8 @@ function renderParagraafPage(paragraaf, files, resolvedMap) {
 
   function exerciseCard(exerciseData, sectionPrefix, icon, title, desc, extraClass = "") {
     if (!exerciseData) return "";
-    const vragenHref = exerciseData.vragen ? encPath([sectionPrefix, exerciseData.dir, exerciseData.vragen]) : null;
-    const antwHref = exerciseData.antwoorden ? encPath([sectionPrefix, exerciseData.dir, exerciseData.antwoorden]) : null;
+    const vragenHref = exerciseData.questions ? encPath([sectionPrefix, exerciseData.dir, exerciseData.questions]) : null;
+    const antwHref = exerciseData.answers ? encPath([sectionPrefix, exerciseData.dir, exerciseData.answers]) : null;
     return `
       <div class="card ${extraClass}">
         <div class="card-icon"><svg viewBox="0 0 24 24">${icon}</svg></div>
@@ -891,8 +891,8 @@ function renderParagraafPage(paragraaf, files, resolvedMap) {
     if (!data) return "";
     const links = [];
     if (data.interactief) links.push(`<a class="sub-link" href="${encPath([oP, data.dir, data.interactief])}">Interactief</a>`);
-    if (data.vragen) links.push(`<a class="sub-link" href="${encPath([oP, data.dir, data.vragen])}">Vragen (docx)</a>`);
-    if (data.antwoorden) links.push(`<a class="sub-link" href="${encPath([oP, data.dir, data.antwoorden])}">Antwoorden (docx)</a>`);
+    if (data.questions) links.push(`<a class="sub-link" href="${encPath([oP, data.dir, data.questions])}">Vragen (docx)</a>`);
+    if (data.answers) links.push(`<a class="sub-link" href="${encPath([oP, data.dir, data.answers])}">Antwoorden (docx)</a>`);
     if (!links.length) return "";
     return `
         <div class="card card-exercise" style="flex: 1;">

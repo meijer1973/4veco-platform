@@ -42,7 +42,7 @@ const oefeningen = [
       {
         label: "Vraag 1a (2 punten)",
         vraagText: "Beredeneer dat de Europese smartphonemarkt kenmerken heeft van een heterogeen oligopolie.",
-        denkstappen: [
+        thinkingSteps: [
           "Noem het kenmerk → geef het bewijs uit de tekst.",
           "Doe dit voor minstens drie kenmerken.",
           "Gebruik de termen: weinig aanbieders, heterogeen product, hoge toetredingsbarrières.",
@@ -55,17 +55,17 @@ const oefeningen = [
           [{ text: "Hoge toetredingsbarrières: ", bold: true }, { text: "R&D-kosten van meer dan €1 miljard maken toetreding zeer moeilijk." }],
           "Conclusie: weinig aanbieders + heterogeen product + hoge barrières = heterogeen oligopolie.",
         ],
-        uitleg: "Op het CE krijg je punten per correct benoemd kenmerk mét bronverwijzing. Drie kenmerken met bewijs = maximale score. Let op dat je niet monopolistische concurrentie zegt — daar zijn veel aanbieders.",
+        explanation: "Op het CE krijg je punten per correct benoemd kenmerk mét bronverwijzing. Drie kenmerken met bewijs = maximale score. Let op dat je niet monopolistische concurrentie zegt — daar zijn veel aanbieders.",
       },
       {
         label: "Vraag 1b (3 punten)",
         vraagText: "De HHI (Herfindahl-Hirschman Index) wordt gebruikt om de marktconcentratie te meten. Bereken de HHI voor de drie grootste aanbieders, exclusief de overige aanbieders. Verklaar wat de uitkomst zegt over de mate van concurrentie.",
-        denkstappen: [
+        thinkingSteps: [
           "HHI = som van de gekwadrateerde marktaandelen (in percentages).",
           "Bereken voor Apple, Samsung en Xiaomi.",
           "Beoordeel: HHI > 2500 = hoge concentratie.",
         ],
-        formuleHerinnering: [
+        formulaReminder: [
           "HHI = s₁² + s₂² + s₃² + ...",
           "waarbij s = marktaandeel in %",
         ],
@@ -80,7 +80,7 @@ const oefeningen = [
           [{ text: "HHI = 2.034", bold: true }],
           "Een HHI tussen 1.500 en 2.500 duidt op een matig geconcentreerde markt. Hoewel drie bedrijven domineren, is de concurrentie niet minimaal — er is nog een restgroep van 24%.",
         ],
-        uitleg: "Let op: als je de overige aanbieders (24%) als één groep meetelt, wordt de HHI hoger (2.034 + 576 = 2.610). De vraag specificeert 'exclusief de overige' — lees altijd nauwkeurig.",
+        explanation: "Let op: als je de overige aanbieders (24%) als één groep meetelt, wordt de HHI hoger (2.034 + 576 = 2.610). De vraag specificeert 'exclusief de overige' — lees altijd nauwkeurig.",
       },
     ],
   },
@@ -100,7 +100,7 @@ const oefeningen = [
       {
         label: "Vraag 2a (2 punten)",
         vraagText: "Bereken het huidige marktevenwicht (prijs en hoeveelheid).",
-        denkstappen: [
+        thinkingSteps: [
           "Stel Qv = Qa.",
           "Los op naar p.",
           "Vul terug voor Q.",
@@ -117,18 +117,18 @@ const oefeningen = [
           "Q = 500 − 200 × 1 = 300",
           [{ text: "Q* = 300 miljoen liter", bold: true }],
         ],
-        uitleg: "Standaard evenwichtsberekening. Controleer altijd door Q ook in de aanbodfunctie in te vullen: Qa = −100 + 400 × 1 = 300 ✓",
+        explanation: "Standaard evenwichtsberekening. Controleer altijd door Q ook in de aanbodfunctie in te vullen: Qa = −100 + 400 × 1 = 300 ✓",
       },
       {
         label: "Vraag 2b (3 punten)",
         vraagText: "Bereken het nieuwe evenwicht na invoering van de suikertaks. Bereken ook hoeveel van de belasting de consument draagt en hoeveel de producent.",
-        denkstappen: [
+        thinkingSteps: [
           "Pas de aanbodfunctie aan: vervang p door (p − 0,30).",
           "Bereken het nieuwe evenwicht.",
           "Belastingdeel consument = p_nieuw − p_oud.",
           "Belastingdeel producent = belasting − deel consument.",
         ],
-        formuleHerinnering: [
+        formulaReminder: [
           "Nieuwe aanbod: Qa = −100 + 400(p − t)",
           "Deel consument = p_nieuw − p_oud",
           "Deel producent = t − deel consument",
@@ -150,16 +150,16 @@ const oefeningen = [
           [{ text: "Deel consument: ", bold: true }, { text: "€0,20 (= 1,20 − 1,00) → 67% van de belasting" }],
           [{ text: "Deel producent: ", bold: true }, { text: "€0,10 (= 1,00 − 0,90) → 33% van de belasting" }],
         ],
-        uitleg: "De verdeling van de belastingdruk hangt af van de prijselasticiteiten. Hier is de vraag minder elastisch dan het aanbod (helling vraag = −200, helling aanbod = 400), waardoor de consument een groter deel draagt.",
+        explanation: "De verdeling van de belastingdruk hangt af van de prijselasticiteiten. Hier is de vraag minder elastisch dan het aanbod (helling vraag = −200, helling aanbod = 400), waardoor de consument een groter deel draagt.",
       },
       {
         label: "Vraag 2c (2 punten)",
         vraagText: "Bereken het welvaartsverlies door de suikertaks.",
-        denkstappen: [
+        thinkingSteps: [
           "Welvaartsverlies = de driehoek van niet meer verhandelde eenheden.",
           "Basis = verschil in hoeveelheid, hoogte = belasting.",
         ],
-        formuleHerinnering: [
+        formulaReminder: [
           "DWL = ½ × t × (Q_oud − Q_nieuw)",
         ],
         invulformaat: "DWL = ½ × ........ × ........ = ........",
@@ -168,7 +168,7 @@ const oefeningen = [
           "DWL = ½ × 0,30 × 40",
           [{ text: "DWL = 6 miljoen euro", bold: true }],
         ],
-        uitleg: "Het welvaartsverlies is €6 miljoen. Dit is de maatschappelijke kosten van de belasting bovenop de herverdeling. Op het CE moet je dit getal kunnen interpreteren: het is de waarde van de transacties die niet meer plaatsvinden.",
+        explanation: "Het welvaartsverlies is €6 miljoen. Dit is de maatschappelijke kosten van de belasting bovenop de herverdeling. Op het CE moet je dit getal kunnen interpreteren: het is de waarde van de transacties die niet meer plaatsvinden.",
       },
     ],
   },
@@ -189,7 +189,7 @@ const oefeningen = [
       {
         label: "Vraag 3a (2 punten)",
         vraagText: "Bereken de binnenlandse vraag, het binnenlands aanbod en de omvang van de import bij de wereldmarktprijs.",
-        denkstappen: [
+        thinkingSteps: [
           "Vul p_w = 120 in bij zowel de vraag- als de aanbodfunctie.",
           "Import = vraag − aanbod.",
         ],
@@ -203,18 +203,18 @@ const oefeningen = [
           "Qa = −300 + 6 × 120 = −300 + 720 = 420",
           [{ text: "Import = 720 − 420 = 300 ton", bold: true }],
         ],
-        uitleg: "Bij de wereldmarktprijs is de binnenlandse vraag groter dan het binnenlands aanbod. Het verschil wordt geïmporteerd.",
+        explanation: "Bij de wereldmarktprijs is de binnenlandse vraag groter dan het binnenlands aanbod. Het verschil wordt geïmporteerd.",
       },
       {
         label: "Vraag 3b (3 punten)",
         vraagText: "De EU legt een invoerheffing van €20 per ton op Chinees staal. Bereken de nieuwe binnenlandse prijs, de nieuwe import en de opbrengst van de heffing voor de overheid.",
-        denkstappen: [
+        thinkingSteps: [
           "Nieuwe binnenlandse prijs = wereldmarktprijs + heffing.",
           "Vul de nieuwe prijs in bij vraag en aanbod.",
           "Nieuwe import = nieuwe vraag − nieuw aanbod.",
           "Heffingsopbrengst = heffing × nieuwe import.",
         ],
-        formuleHerinnering: [
+        formulaReminder: [
           "p_nieuw = p_w + heffing",
           "Heffingsopbrengst = heffing × import_nieuw",
         ],
@@ -231,12 +231,12 @@ const oefeningen = [
           [{ text: "Import_nieuw = 640 − 540 = 100 ton", bold: true }],
           [{ text: "Heffingsopbrengst = 20 × 100 = €2.000", bold: true }],
         ],
-        uitleg: "Door de heffing stijgt de binnenlandse prijs, daalt de import (van 300 naar 100 ton), en groeit het binnenlands aanbod (van 420 naar 540). Binnenlandse producenten profiteren, maar consumenten betalen meer.",
+        explanation: "Door de heffing stijgt de binnenlandse prijs, daalt de import (van 300 naar 100 ton), en groeit het binnenlands aanbod (van 420 naar 540). Binnenlandse producenten profiteren, maar consumenten betalen meer.",
       },
       {
         label: "Vraag 3c (2 punten)",
         vraagText: "Verklaar waarom de invoerheffing leidt tot een welvaartsverlies voor Nederland, ondanks de heffingsopbrengst voor de overheid.",
-        denkstappen: [
+        thinkingSteps: [
           "Welvaartsverlies bestaat uit twee driehoeken.",
           "Driehoek 1: inefficiënte binnenlandse productie (aanbodzijde).",
           "Driehoek 2: verloren consumptie (vraagzijde).",
@@ -250,7 +250,7 @@ const oefeningen = [
           [{ text: "2. Consumptieverlies: ", bold: true }, { text: "80 ton (720 − 640) wordt niet meer geconsumeerd, terwijl consumenten hiervoor meer dan €120 wilden betalen." }],
           "De heffingsopbrengst (€2.000) is slechts een overdracht van consumenten naar overheid — geen nettowelvaart. De twee driehoeken zijn het nettoverlies voor de maatschappij als geheel.",
         ],
-        uitleg: "Dit is een standaard CE-antwoordmodel. Je moet twee effecten noemen (productie-inefficiëntie en consumptieverlies) en uitleggen waarom de heffingsopbrengst geen welvaartswinst is. Bij 'verklaar' is de redenering belangrijker dan het getal.",
+        explanation: "Dit is een standaard CE-antwoordmodel. Je moet twee effecten noemen (productie-inefficiëntie en consumptieverlies) en uitleggen waarom de heffingsopbrengst geen welvaartswinst is. Bij 'verklaar' is de redenering belangrijker dan het getal.",
       },
     ],
   },
@@ -266,7 +266,7 @@ const oefeningen = [
       {
         label: "Vraag 4a (2 punten)",
         vraagText: "Leg uit waarom hier sprake is van een negatief extern effect en waarom de markt faalt.",
-        denkstappen: [
+        thinkingSteps: [
           "Wat is een extern effect? → kosten/baten die niet in de prijs verwerkt zijn.",
           "Wie draagt de schade? Is dit dezelfde partij als de producent?",
           "Waarom leidt dit tot overproductie?",
@@ -276,12 +276,12 @@ const oefeningen = [
           [{ text: "Negatief extern effect: ", bold: true }, { text: "de vervuiling veroorzaakt €8 per eenheid schade bij derden (omwonenden, visserij) die niet in de productiekosten van de fabriek zijn opgenomen." }],
           [{ text: "Marktfalen: ", bold: true }, { text: "de private kosten (€30) zijn lager dan de maatschappelijke kosten (€30 + €8 = €38). De fabriek produceert op basis van private kosten en produceert daardoor meer dan maatschappelijk optimaal is. De markt zelf corrigeert dit niet." }],
         ],
-        uitleg: "Het sleutelwoord is 'niet in de prijs verwerkt'. Externe effecten leiden tot een verschil tussen private en maatschappelijke kosten, waardoor de marktuitkomst niet efficiënt is.",
+        explanation: "Het sleutelwoord is 'niet in de prijs verwerkt'. Externe effecten leiden tot een verschil tussen private en maatschappelijke kosten, waardoor de marktuitkomst niet efficiënt is.",
       },
       {
         label: "Vraag 4b (3 punten)",
         vraagText: "De overheid overweegt een Pigouviaanse belasting. Hoe hoog moet deze belasting zijn? Verklaar waarom deze belasting de efficiëntie verbetert.",
-        denkstappen: [
+        thinkingSteps: [
           "Een Pigouviaanse belasting is gelijk aan het externe effect per eenheid.",
           "Wat gebeurt er met de aanbodcurve?",
           "Waarom komt de marktuitkomst dan dichter bij het maatschappelijk optimum?",
@@ -293,7 +293,7 @@ const oefeningen = [
           [{ text: "Efficiëntie: ", bold: true }, { text: "de fabriek zal haar productie verminderen tot het punt waar de marktprijs gelijk is aan de maatschappelijke kosten. Eenheden waarvan de productie meer kost dan ze opleveren (inclusief milieuschade) worden niet meer geproduceerd." }],
           "De belasting 'internaliseert' het externe effect: de vervuiler betaalt nu de volledige maatschappelijke kosten van zijn productie.",
         ],
-        uitleg: "Bij een Pigouviaanse belasting gaat het altijd om internalisering van externe effecten. De belasting is exact gelijk aan de marginale schade, zodat private kosten = maatschappelijke kosten. Dit is een standaard CE-onderwerp.",
+        explanation: "Bij een Pigouviaanse belasting gaat het altijd om internalisering van externe effecten. De belasting is exact gelijk aan de marginale schade, zodat private kosten = maatschappelijke kosten. Dit is een standaard CE-onderwerp.",
       },
     ],
   },
@@ -314,7 +314,7 @@ const oefeningen = [
       {
         label: "Vraag 5a (2 punten)",
         vraagText: "Bereken het marktevenwicht zonder overheidsingrijpen. Toon aan dat de minimumprijs boven de evenwichtsprijs ligt.",
-        denkstappen: [
+        thinkingSteps: [
           "Bereken het evenwicht: Qv = Qa.",
           "Vergelijk p* met p_min.",
         ],
@@ -331,18 +331,18 @@ const oefeningen = [
           [{ text: "Q* ≈ 333 eenheden", bold: true }],
           "De minimumprijs (€32) ligt boven de evenwichtsprijs (€26,67). De minimumprijs is bindend.",
         ],
-        uitleg: "Een minimumprijs is alleen bindend als deze boven het evenwicht ligt. Anders heeft de maatregel geen effect.",
+        explanation: "Een minimumprijs is alleen bindend als deze boven het evenwicht ligt. Anders heeft de maatregel geen effect.",
       },
       {
         label: "Vraag 5b (3 punten)",
         vraagText: "Bereken bij de minimumprijs: de gevraagde hoeveelheid, de aangeboden hoeveelheid en de omvang van het overschot. Bereken het welvaartsverlies.",
-        denkstappen: [
+        thinkingSteps: [
           "Vul p_min = 32 in bij vraag en aanbod.",
           "Overschot = aanbod − vraag.",
           "Welvaartsverlies: driehoek tussen Q_verhandeld en Q_evenwicht.",
           "Let op: bij een minimumprijs wordt de gevraagde hoeveelheid verhandeld (korte kant van de markt).",
         ],
-        formuleHerinnering: [
+        formulaReminder: [
           "Bij minimumprijs: Q_verhandeld = Qv (de korte kant)",
           "DWL = ½ × (p_min − p_aanbod bij Qv) × (Q* − Qv)",
         ],
@@ -364,7 +364,7 @@ const oefeningen = [
           "DWL = ½ × 8 × 53⅓",
           [{ text: "DWL ≈ €213", bold: true }],
         ],
-        uitleg: "Het welvaartsverlies ontstaat doordat 53 eenheden (333 − 280) niet meer verhandeld worden, terwijl consumenten er meer voor wilden betalen dan de productiekosten. Het overschot van 160 eenheden is apart — die worden geproduceerd maar niet verkocht.",
+        explanation: "Het welvaartsverlies ontstaat doordat 53 eenheden (333 − 280) niet meer verhandeld worden, terwijl consumenten er meer voor wilden betalen dan de productiekosten. Het overschot van 160 eenheden is apart — die worden geproduceerd maar niet verkocht.",
       },
     ],
   },
@@ -386,12 +386,12 @@ const oefeningen = [
       {
         label: "Vraag 6a (2 punten)",
         vraagText: "Bereken de prijselasticiteit van de vraag in het huidige evenwicht.",
-        denkstappen: [
+        thinkingSteps: [
           "Bereken eerst het evenwicht.",
           "De prijselasticiteit van de vraag = (dQ/dp) × (p/Q).",
           "dQ/dp lees je af uit de vraagfunctie (de coëfficiënt van p).",
         ],
-        formuleHerinnering: [
+        formulaReminder: [
           "Ev = (ΔQ/Δp) × (p/Q)",
           "Bij lineaire vraagfunctie: ΔQ/Δp = coëfficiënt van p",
         ],
@@ -406,12 +406,12 @@ const oefeningen = [
           "Ev = −5 × (4,80 / 76)",
           [{ text: "Ev = −0,316 (inelastisch)", bold: true }],
         ],
-        uitleg: "|Ev| < 1, dus de vraag is inelastisch. Dit is typisch voor benzine: consumenten zijn weinig gevoelig voor prijsveranderingen op korte termijn.",
+        explanation: "|Ev| < 1, dus de vraag is inelastisch. Dit is typisch voor benzine: consumenten zijn weinig gevoelig voor prijsveranderingen op korte termijn.",
       },
       {
         label: "Vraag 6b (3 punten)",
         vraagText: "Bereken het nieuwe evenwicht na de accijnsverhoging. Welk percentage van de accijns wordt doorberekend aan de consument?",
-        denkstappen: [
+        thinkingSteps: [
           "Pas de aanbodfunctie aan: Qa = −20 + 20(p − 0,50).",
           "Bereken het nieuwe evenwicht.",
           "Deel consument = (p_nieuw − p_oud) / accijns × 100%.",
@@ -431,12 +431,12 @@ const oefeningen = [
           "Prijsstijging consument: 5,20 − 4,80 = €0,40",
           [{ text: "Doorberekend: 0,40 / 0,50 × 100% = 80%", bold: true }],
         ],
-        uitleg: "Omdat de vraag inelastisch is (|Ev| = 0,316), draagt de consument het grootste deel van de accijns (80%). Dit is een kernregel: de partij met de minst elastische curve draagt het grootste deel van de belasting.",
+        explanation: "Omdat de vraag inelastisch is (|Ev| = 0,316), draagt de consument het grootste deel van de accijns (80%). Dit is een kernregel: de partij met de minst elastische curve draagt het grootste deel van de belasting.",
       },
       {
         label: "Vraag 6c (2 punten)",
         vraagText: "Verklaar met behulp van het begrip prijselasticiteit waarom de consument een groter deel van de accijns draagt dan de producent.",
-        denkstappen: [
+        thinkingSteps: [
           "Vergelijk de elasticiteit van vraag en aanbod.",
           "Welke partij kan makkelijker 'ontwijken'?",
           "Wie draagt het meeste = wie het minst elastisch is.",
@@ -447,7 +447,7 @@ const oefeningen = [
           "Het aanbod is elastischer: producenten kunnen hun aanbod makkelijker aanpassen.",
           [{ text: "Kernregel: ", bold: true }, { text: "de partij met de minst elastische curve draagt het grootste deel van de belasting. Consumenten kunnen niet makkelijk 'ontwijken', dus accepteren ze de hogere prijs." }],
         ],
-        uitleg: "Op het CE wordt verwacht dat je het verband legt tussen elasticiteit en belastingdruk. Noem altijd: (1) welke partij inelastischer is, (2) waarom (noodzakelijk goed/weinig substituten), en (3) de conclusie voor de belastingverdeling.",
+        explanation: "Op het CE wordt verwacht dat je het verband legt tussen elasticiteit en belastingdruk. Noem altijd: (1) welke partij inelastischer is, (2) waarom (noodzakelijk goed/weinig substituten), en (3) de conclusie voor de belastingverdeling.",
       },
     ],
   },
@@ -480,18 +480,18 @@ async function main() {
   const vragenBuf = await buildBegeleideInoefening(
     PARAGRAAF_NR, ONDERWERP, HEADER_TEXT, oefeningen, samenvattendSchema, false
   );
-  const antwoordenBuf = await buildBegeleideInoefening(
+  const answersBuf = await buildBegeleideInoefening(
     PARAGRAAF_NR, ONDERWERP, HEADER_TEXT, oefeningen, samenvattendSchema, true
   );
 
   const vragenPath = path.join(OUTPUT_DIR, "3.5.2 Naar het examen \u2013 begeleide inoefening \u2013 vragen.docx");
-  const antwoordenPath = path.join(OUTPUT_DIR, "3.5.2 Naar het examen \u2013 begeleide inoefening \u2013 antwoorden.docx");
+  const answersPath = path.join(OUTPUT_DIR, "3.5.2 Naar het examen \u2013 begeleide inoefening \u2013 antwoorden.docx");
 
   fs.writeFileSync(vragenPath, vragenBuf);
-  fs.writeFileSync(antwoordenPath, antwoordenBuf);
+  fs.writeFileSync(answersPath, answersBuf);
 
   console.log(`  Vragen:      ${vragenPath} (${(vragenBuf.length / 1024).toFixed(0)} KB)`);
-  console.log(`  Antwoorden:  ${antwoordenPath} (${(antwoordenBuf.length / 1024).toFixed(0)} KB)`);
+  console.log(`  Antwoorden:  ${answersPath} (${(answersBuf.length / 1024).toFixed(0)} KB)`);
   console.log("\nDone!");
 }
 

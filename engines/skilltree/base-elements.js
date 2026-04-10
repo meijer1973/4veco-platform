@@ -605,15 +605,15 @@
         var Q = ri(5, 15);
         var to = round1(a * Q - b * Q * Q);
         var tk = round1(tkA * Q * Q + tkB * Q + tkC);
-        var winst = round1(to - tk);
-        var wrongWinst = round1(to + tk);
+        var profit = round1(to - tk);
+        var wrongProfit = round1(to + tk);
         var errorS3 = {
             q: 'E\u00E9n van deze winstberekeningen bevat een fout. Welke?',
             mode: 'error',
             shownSteps: [
-                { text: 'Winst = TO \u2212 TK = ' + to + ' \u2212 ' + tk + ' = ' + winst, isError: false },
-                { text: 'Winst = TO + TK = ' + to + ' + ' + tk + ' = ' + wrongWinst, isError: true },
-                { text: 'Winst = ' + a + '\u00D7' + Q + ' \u2212 ' + b + '\u00D7' + (Q * Q) + ' \u2212 (' + tkA + '\u00D7' + (Q * Q) + ' + ' + tkB + '\u00D7' + Q + ' + ' + tkC + ') = ' + winst, isError: false }
+                { text: 'Winst = TO \u2212 TK = ' + to + ' \u2212 ' + tk + ' = ' + profit, isError: false },
+                { text: 'Winst = TO + TK = ' + to + ' + ' + tk + ' = ' + wrongProfit, isError: true },
+                { text: 'Winst = ' + a + '\u00D7' + Q + ' \u2212 ' + b + '\u00D7' + (Q * Q) + ' \u2212 (' + tkA + '\u00D7' + (Q * Q) + ' + ' + tkB + '\u00D7' + Q + ' + ' + tkC + ') = ' + profit, isError: false }
             ],
             hint: 'Winst = TO \u2212 TK, niet TO + TK.',
             expl: 'De fout telt TO en TK op in plaats van af te trekken. Winst = TO \u2212 TK.'
@@ -629,7 +629,7 @@
                 errorS3,
                 { q: 'Bereken TO bij Q = ' + Q + '.', a: to, hint: 'TO = ' + a + 'Q \u2212 ' + b + 'Q\u00B2. Vul Q = ' + Q + ' in.', expl: 'TO = ' + a + '\u00D7' + Q + ' \u2212 ' + b + '\u00D7' + (Q * Q) + ' = ' + to },
                 { q: 'Bereken TK bij Q = ' + Q + '.', a: tk, hint: 'Vul Q = ' + Q + ' in de kostenfunctie in.', expl: 'TK = ' + tkA + '\u00D7' + (Q * Q) + ' + ' + tkB + '\u00D7' + Q + ' + ' + tkC + ' = ' + tk },
-                { q: 'Bereken de winst.', a: winst, hint: 'Winst = TO \u2212 TK.', expl: 'Winst = ' + to + ' \u2212 ' + tk + ' = ' + winst }
+                { q: 'Bereken de winst.', a: profit, hint: 'Winst = TO \u2212 TK.', expl: 'Winst = ' + to + ' \u2212 ' + tk + ' = ' + profit }
             ]
         };
     };
@@ -896,7 +896,7 @@
         var c = round1(a * Q1 * Q2);
         if (b < 0) return GEN.E1();
         var Qmid = Math.round((Q1 + Q2) / 2);
-        var winstMid = round1(P * Qmid - (a * Qmid * Qmid + b * Qmid + c));
+        var profitMid = round1(P * Qmid - (a * Qmid * Qmid + b * Qmid + c));
         var orderE1 = {
             q: 'Zet de stappen van een volledige break-even analyse in de juiste volgorde.',
             mode: 'order',
@@ -917,7 +917,7 @@
                 { q: 'Stel TO = TK en herschrijf naar \u2026Q\u00B2 + \u2026Q + \u2026 = 0. Wat is de co\u00EBffici\u00EBnt van Q?', a: round1(b - P), hint: P + 'Q = ' + a + 'Q\u00B2 + ' + b + 'Q + ' + c + '. Breng alles naar \u00E9\u00E9n kant.', expl: a + 'Q\u00B2 + (' + b + ' \u2212 ' + P + ')Q + ' + c + ' = 0 \u2192 co\u00EBffici\u00EBnt = ' + round1(b - P) },
                 { q: 'Bereken de kleinste break-even hoeveelheid.', a: Q1, hint: 'Gebruik de abc-formule.', expl: 'Q\u2081 = ' + Q1 },
                 { q: 'Bereken de grootste break-even hoeveelheid.', a: Q2, hint: 'De tweede oplossing van dezelfde vergelijking.', expl: 'Q\u2082 = ' + Q2 },
-                { q: 'Bereken de winst bij Q = ' + Qmid + '.', a: winstMid, hint: 'Winst = TO \u2212 TK. Bereken beide bij Q = ' + Qmid + '.', expl: 'TO = ' + (P * Qmid) + ', TK = ' + round1(a * Qmid * Qmid + b * Qmid + c) + ', Winst = ' + winstMid }
+                { q: 'Bereken de winst bij Q = ' + Qmid + '.', a: profitMid, hint: 'Winst = TO \u2212 TK. Bereken beide bij Q = ' + Qmid + '.', expl: 'TO = ' + (P * Qmid) + ', TK = ' + round1(a * Qmid * Qmid + b * Qmid + c) + ', Winst = ' + profitMid }
             ]
         };
     };
@@ -1043,8 +1043,8 @@
         if (Qs <= 0 || Qs !== Math.round(Qs * 10) / 10) return GEN.E5();
         var tk = round1(a * Qs * Qs + bk * Qs + ck);
         var gtk = round2(tk / Qs);
-        var winstPerStuk = round2(P - gtk);
-        var totWinst = round1(winstPerStuk * Qs);
+        var profitPerUnit = round2(P - gtk);
+        var totalProfit = round1(profitPerUnit * Qs);
         var mcE5 = mcStep(
             'Wat is de voorwaarde voor optimale productie bij volkomen mededinging?',
             'P = MK',
@@ -1059,8 +1059,8 @@
                 { q: 'Bepaal de optimale productiehoeveelheid Q*.', a: Qs, hint: 'Bij volledige mededinging geldt: P = MK. Bepaal eerst MK.', expl: 'MK = ' + round1(2 * a) + 'Q + ' + bk + '. P = MK \u2192 Q* = (' + P + ' \u2212 ' + bk + ') \u00F7 ' + round1(2 * a) + ' = ' + Qs },
                 { q: 'Bereken TK bij de optimale hoeveelheid.', a: tk, hint: 'Vul Q* = ' + Qs + ' in de kostenfunctie in.', expl: 'TK = ' + a + '\u00D7' + Qs + '\u00B2 + ' + bk + '\u00D7' + Qs + ' + ' + ck + ' = ' + tk },
                 { q: 'Bereken GTK bij de optimale hoeveelheid.', a: gtk, hint: 'GTK = TK gedeeld door Q.', expl: 'GTK = ' + tk + ' \u00F7 ' + Qs + ' = ' + gtk },
-                { q: 'Bereken de winst per stuk.', a: winstPerStuk, hint: 'Winst per stuk = prijs minus gemiddelde kosten.', expl: 'Winst/stuk = ' + P + ' \u2212 ' + gtk + ' = ' + winstPerStuk },
-                { q: 'Bereken de totale winst.', a: totWinst, hint: 'Totale winst = winst per stuk \u00D7 hoeveelheid.', expl: 'Totale winst = ' + winstPerStuk + ' \u00D7 ' + Qs + ' = ' + totWinst }
+                { q: 'Bereken de winst per stuk.', a: profitPerUnit, hint: 'Winst per stuk = prijs minus gemiddelde kosten.', expl: 'Winst/stuk = ' + P + ' \u2212 ' + gtk + ' = ' + profitPerUnit },
+                { q: 'Bereken de totale winst.', a: totalProfit, hint: 'Totale winst = winst per stuk \u00D7 hoeveelheid.', expl: 'Totale winst = ' + profitPerUnit + ' \u00D7 ' + Qs + ' = ' + totalProfit }
             ]
         };
     };
@@ -1114,7 +1114,7 @@
         var Pstar = round1(aP - bP * Qs);
         var TO = round1(Pstar * Qs);
         var TK = round1(aTK * Qs * Qs + bTK * Qs + cTK);
-        var winst = round1(TO - TK);
+        var profit = round1(TO - TK);
         var wrongQs = round1(aP / (2 * bP));
         var errorE7 = {
             q: 'E\u00E9n van deze methoden voor winstmaximalisatie bevat een fout. Welke?',
@@ -1139,7 +1139,7 @@
                 { q: 'Bereken de prijs die de monopolist vraagt.', a: Pstar, hint: 'Vul Q* in de vraaglijn (P = \u2026).', expl: 'P* = ' + aP + ' \u2212 ' + bP + '\u00D7' + Qs + ' = ' + Pstar },
                 { q: 'Bereken de totale opbrengst.', a: TO, hint: 'TO = P* \u00D7 Q*.', expl: 'TO = ' + Pstar + ' \u00D7 ' + Qs + ' = ' + TO },
                 { q: 'Bereken de totale kosten bij Q*.', a: TK, hint: 'Vul Q* in de kostenfunctie.', expl: 'TK = ' + aTK + '\u00D7' + Qs + '\u00B2 + ' + bTK + '\u00D7' + Qs + ' + ' + cTK + ' = ' + TK },
-                { q: 'Bereken de maximale winst.', a: winst, hint: 'Winst = TO \u2212 TK.', expl: 'Winst = ' + TO + ' \u2212 ' + TK + ' = ' + winst }
+                { q: 'Bereken de maximale winst.', a: profit, hint: 'Winst = TO \u2212 TK.', expl: 'Winst = ' + TO + ' \u2212 ' + TK + ' = ' + profit }
             ]
         };
     };
@@ -1153,9 +1153,9 @@
         if (Q1 <= 0 || Q2 <= 0) return GEN.E8();
         var P1 = round1(a1 - b1 * Q1);
         var P2 = round1(a2 - b2 * Q2);
-        var winst1 = round1((P1 - mk) * Q1);
-        var winst2 = round1((P2 - mk) * Q2);
-        var totWinst = round1(winst1 + winst2);
+        var profit1 = round1((P1 - mk) * Q1);
+        var profit2 = round1((P2 - mk) * Q2);
+        var totalProfit = round1(profit1 + profit2);
         var orderE8 = {
             q: 'Zet de stappen voor prijsdiscriminatie in de juiste volgorde.',
             mode: 'order',
@@ -1177,9 +1177,9 @@
                 { q: 'Welke prijs vraagt de monopolist op markt 1?', a: P1, hint: 'Vul Q\u2081 in de vraagfunctie van markt 1.', expl: 'P\u2081 = ' + a1 + ' \u2212 ' + b1 + '\u00D7' + Q1 + ' = ' + P1 },
                 { q: 'Bepaal de optimale hoeveelheid op markt 2.', a: Q2, hint: 'Stel MO\u2082 = MK en los op.', expl: 'MO\u2082 = ' + a2 + ' \u2212 ' + (2 * b2) + 'Q\u2082 = ' + mk + ' \u2192 Q\u2082 = ' + Q2 },
                 { q: 'Welke prijs vraagt de monopolist op markt 2?', a: P2, hint: 'Vul Q\u2082 in de vraagfunctie van markt 2.', expl: 'P\u2082 = ' + a2 + ' \u2212 ' + b2 + '\u00D7' + Q2 + ' = ' + P2 },
-                { q: 'Bereken de winst op markt 1.', a: winst1, hint: 'Winst = (prijs \u2212 MK) \u00D7 hoeveelheid.', expl: 'Winst\u2081 = (' + P1 + ' \u2212 ' + mk + ') \u00D7 ' + Q1 + ' = ' + winst1 },
-                { q: 'Bereken de winst op markt 2.', a: winst2, hint: 'Winst = (prijs \u2212 MK) \u00D7 hoeveelheid.', expl: 'Winst\u2082 = (' + P2 + ' \u2212 ' + mk + ') \u00D7 ' + Q2 + ' = ' + winst2 },
-                { q: 'Bereken de totale winst.', a: totWinst, hint: 'Tel de winst van beide markten op.', expl: 'Totaal = ' + winst1 + ' + ' + winst2 + ' = ' + totWinst }
+                { q: 'Bereken de winst op markt 1.', a: profit1, hint: 'Winst = (prijs \u2212 MK) \u00D7 hoeveelheid.', expl: 'Winst\u2081 = (' + P1 + ' \u2212 ' + mk + ') \u00D7 ' + Q1 + ' = ' + profit1 },
+                { q: 'Bereken de winst op markt 2.', a: profit2, hint: 'Winst = (prijs \u2212 MK) \u00D7 hoeveelheid.', expl: 'Winst\u2082 = (' + P2 + ' \u2212 ' + mk + ') \u00D7 ' + Q2 + ' = ' + profit2 },
+                { q: 'Bereken de totale winst.', a: totalProfit, hint: 'Tel de winst van beide markten op.', expl: 'Totaal = ' + profit1 + ' + ' + profit2 + ' = ' + totalProfit }
             ]
         };
     };

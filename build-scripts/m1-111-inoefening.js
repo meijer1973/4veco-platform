@@ -33,7 +33,7 @@ const oefeningen = [
       {
         label: "Vraag 1a \u2014 Schaarste identificeren",
         vraagText: "Leg uit waarom er bij Lisa sprake is van schaarste.",
-        denkstappen: [
+        thinkingSteps: [
           "Wat zijn Lisa's behoeften (wensen)?",
           "Wat zijn haar middelen (geld en tijd)?",
           "Is er een verschil tussen behoeften en middelen?",
@@ -45,12 +45,12 @@ const oefeningen = [
           "Haar middelen zijn beperkt: \u20AC200 per maand inkomen en 4 uur vrije tijd per dag.",
           [{ text: "Conclusie: ", bold: true }, { text: "er is schaarste omdat haar behoeften (\u20AC2.480+) groter zijn dan haar middelen (\u20AC200/mnd). Ze kan niet alles tegelijk kopen." }],
         ],
-        uitleg: "Schaarste geldt voor iedereen \u2014 ook als je geld hebt. Het gaat om het verschil tussen wat je wilt en wat je kunt.",
+        explanation: "Schaarste geldt voor iedereen \u2014 ook als je geld hebt. Het gaat om het verschil tussen wat je wilt en wat je kunt.",
       },
       {
         label: "Vraag 1b \u2014 Primair vs. secundair",
         vraagText: "Noem een primaire en een secundaire behoefte van Lisa.",
-        denkstappen: [
+        thinkingSteps: [
           "Primair = noodzakelijk voor levensonderhoud",
           "Secundair = luxe, niet strikt noodzakelijk",
         ],
@@ -59,7 +59,7 @@ const oefeningen = [
           [{ text: "Primair: ", bold: true }, { text: "eten, onderdak, vervoer naar school (niet expliciet in de tekst, maar noodzakelijk)" }],
           [{ text: "Secundair: ", bold: true }, { text: "nieuwe telefoon, festivalkaartje, rijbewijs \u2014 dit zijn luxebehoeften" }],
         ],
-        uitleg: "Het onderscheid primair/secundair kan per persoon en per cultuur verschillen, maar de kern is: kun je zonder overleven?",
+        explanation: "Het onderscheid primair/secundair kan per persoon en per cultuur verschillen, maar de kern is: kun je zonder overleven?",
       },
     ],
   },
@@ -75,7 +75,7 @@ const oefeningen = [
       {
         label: "Vraag 2a \u2014 Alternatieve kosten van werken",
         vraagText: "Tom kiest optie A (werken). Wat zijn de alternatieve kosten van deze keuze?",
-        denkstappen: [
+        thinkingSteps: [
           "Welke opties geeft Tom op?",
           "Wat is de waarde van elke opgegeven optie?",
           "Welke opgegeven optie is het meest waard? (= alternatieve kosten)",
@@ -88,17 +88,17 @@ const oefeningen = [
           [{ text: "  Optie C: ", bold: true }, { text: "nettobaten = \u20AC50 \u2212 \u20AC0 = \u20AC50" }],
           [{ text: "Alternatieve kosten = \u20AC50", bold: true }, { text: " (optie C is het beste niet-gekozen alternatief)" }],
         ],
-        uitleg: "Je vergelijkt alleen de nettobaten van de niet-gekozen opties. Het beste alternatief (hoogste nettobaten) bepaalt de alternatieve kosten.",
+        explanation: "Je vergelijkt alleen de nettobaten van de niet-gekozen opties. Het beste alternatief (hoogste nettobaten) bepaalt de alternatieve kosten.",
       },
       {
         label: "Vraag 2b \u2014 Nettobaten berekenen",
         vraagText: "Bereken de nettobaten van Toms keuze (werken).",
-        denkstappen: [
+        thinkingSteps: [
           "Baten van werken = \u20AC40",
           "Kosten van werken = directe kosten + alternatieve kosten",
           "Nettobaten = baten \u2212 totale kosten",
         ],
-        formuleHerinnering: ["Nettobaten = Baten \u2212 (directe kosten + alternatieve kosten)"],
+        formulaReminder: ["Nettobaten = Baten \u2212 (directe kosten + alternatieve kosten)"],
         invulformaat: [
           "Baten = \u20AC........",
           "Directe kosten = \u20AC........",
@@ -111,7 +111,7 @@ const oefeningen = [
           "Alternatieve kosten = \u20AC50 (studeren)",
           [{ text: "Nettobaten = \u20AC40 \u2212 (\u20AC0 + \u20AC50) = \u2212\u20AC10", bold: true }],
         ],
-        uitleg: "De nettobaten zijn negatief! Dat betekent dat werken eigenlijk niet de beste keuze is. Rationeel gezien zou Tom beter kunnen studeren (nettobaten = \u20AC50 \u2212 \u20AC40 = +\u20AC10).",
+        explanation: "De nettobaten zijn negatief! Dat betekent dat werken eigenlijk niet de beste keuze is. Rationeel gezien zou Tom beter kunnen studeren (nettobaten = \u20AC50 \u2212 \u20AC40 = +\u20AC10).",
       },
     ],
   },
@@ -127,7 +127,7 @@ const oefeningen = [
       {
         label: "Vraag 3a \u2014 Factoren benoemen",
         vraagText: "Benoem bij elk element in de tekst de bijbehorende productiefactor.",
-        denkstappen: [
+        thinkingSteps: [
           "Arbeid = inzet van mensen",
           "Natuur = grondstoffen uit de natuur",
           "Kapitaal = machines en gebouwen",
@@ -140,12 +140,12 @@ const oefeningen = [
           [{ text: "Kapitaal: ", bold: true }, { text: "de professionele oven, het pand van de bakkerij" }],
           [{ text: "Ondernemerschap: ", bold: true }, { text: "de bakker als eigenaar \u2014 hij combineert de factoren en neemt het risico" }],
         ],
-        uitleg: "Let op: de bakker kan zowel arbeid leveren (brood bakken) als ondernemer zijn (beslissingen nemen). Dat zijn twee verschillende rollen.",
+        explanation: "Let op: de bakker kan zowel arbeid leveren (brood bakken) als ondernemer zijn (beslissingen nemen). Dat zijn twee verschillende rollen.",
       },
       {
         label: "Vraag 3b \u2014 Kapitaal vs. geld",
         vraagText: "De bakker leent \u20AC50.000 bij de bank voor een nieuwe oven. Is dit bedrag een productiefactor? Leg uit.",
-        denkstappen: [
+        thinkingSteps: [
           "Wat bedoelen economen met 'kapitaal'?",
           "Is geld hetzelfde als kapitaal?",
         ],
@@ -154,7 +154,7 @@ const oefeningen = [
           "Nee, het geldbedrag (\u20AC50.000) is zelf geen productiefactor.",
           [{ text: "Geld is geen productiefactor ", bold: true }, { text: "\u2014 het is een ruilmiddel. De oven die hij ermee koopt is w\u00e9l kapitaal (een productiefactor)." }],
         ],
-        uitleg: "Dit is een veelgemaakte fout op het examen. Geld wordt gebruikt om productiefactoren te kopen, maar is zelf geen factor waarmee je iets produceert.",
+        explanation: "Dit is een veelgemaakte fout op het examen. Geld wordt gebruikt om productiefactoren te kopen, maar is zelf geen factor waarmee je iets produceert.",
       },
     ],
   },
@@ -183,18 +183,18 @@ async function main() {
   const vragenBuf = await buildBegeleideInoefening(
     PARAGRAAF_NR, ONDERWERP, HEADER_TEXT, oefeningen, samenvattendSchema, false
   );
-  const antwoordenBuf = await buildBegeleideInoefening(
+  const answersBuf = await buildBegeleideInoefening(
     PARAGRAAF_NR, ONDERWERP, HEADER_TEXT, oefeningen, samenvattendSchema, true
   );
 
   const vragenPath = path.join(OUTPUT_DIR, "1.1.1 Kiezen is kostbaar \u2013 begeleide inoefening \u2013 vragen.docx");
-  const antwoordenPath = path.join(OUTPUT_DIR, "1.1.1 Kiezen is kostbaar \u2013 begeleide inoefening \u2013 antwoorden.docx");
+  const answersPath = path.join(OUTPUT_DIR, "1.1.1 Kiezen is kostbaar \u2013 begeleide inoefening \u2013 antwoorden.docx");
 
   fs.writeFileSync(vragenPath, vragenBuf);
-  fs.writeFileSync(antwoordenPath, antwoordenBuf);
+  fs.writeFileSync(answersPath, answersBuf);
 
   console.log(`  Vragen:      ${vragenPath} (${(vragenBuf.length / 1024).toFixed(0)} KB)`);
-  console.log(`  Antwoorden:  ${antwoordenPath} (${(antwoordenBuf.length / 1024).toFixed(0)} KB)`);
+  console.log(`  Antwoorden:  ${answersPath} (${(answersBuf.length / 1024).toFixed(0)} KB)`);
   console.log("\nDone!");
 }
 
