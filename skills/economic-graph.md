@@ -135,14 +135,79 @@ Check: do dashed lines align with the axis labels from Step 2?
 Add surplus areas, tax brackets, shift arrows, and other annotations.
 Check: do annotations avoid the scaffold elements from Step 1?
 
+**Step 6 — MANDATORY GRAPH-INTEGRITY QUALITY CHECK**
+
+Before rasterizing, verify that **every plotted point lies exactly on its line**. Reviewers spot off-line dots immediately because figures are eye-catching.
+
+**Run this check on the FIRST creation AND on every subsequent edit**, even small ones. The most common geometry bug is "I moved one line endpoint to clean up the look, and now the sample dots are off the line." Skipping the check after an edit reliably ships the bug.
+
+### Procedure
+
+For every line drawn in the SVG:
+1. Decode the function the line represents (e.g., `Q = -2P + 7`).
+2. Identify the **valid endpoints** of the visible portion within the plot:
+   - If the function has a cutoff (Q = 0 at some P), use that cutoff as the upper endpoint — never extend past it. Example: `Q = -2P + 7` has Q=0 at P=3.5, so the line goes from (P=3.5, Q=0) to (P=0, Q=7), NOT from (P=4, Q=0).
+   - If the cutoff lies OUTSIDE the visible plot area, clip the line at the plot boundary. **Do NOT extend the line to the y-axis or another axis arbitrarily.** Example: Tim's `Q = -P + 6` has cutoff at P=6, but if the plot only goes to P=5, then the line stops at (P=5, Q=1), not at the y-axis (P=6, Q=0).
+3. Convert valid endpoints to (x, y) using the plot's px-per-unit scale.
+4. For every plotted sample point on that line, recompute (x, y) from the function and verify it matches the drawn `<circle cx=... cy=...>` position.
+5. For every dashed reference line, verify both endpoints land on actual function values (not arbitrary positions).
+
+### Use the verification helper
+
+Don't rely on mental math alone — run the Python verifier:
+
+```python
+# build-scripts/verify_svg_geometry.py
+from verify_svg_geometry import Plot, LinearDemand, Curve
+
+plot = Plot(origin_x=80, origin_y=350, px_per_Q=40, px_per_P=59)
+
+# Tim: Q = -P + 6, line drawn from (120,55) to (320,350), dot at (240,232)
+plot.add_curve(
+    name="V_Tim",
+    fn=LinearDemand(intercept_Q=6, slope=-1),
+    drawn_endpoints=((120, 55), (320, 350)),
+    sample_points=[(240, 232)],
+)
+plot.verify()  # raises AssertionError on any mismatch
+```
+
+The helper has a self-test that demonstrates catching the exact §1.2.3 bug. Run it after every SVG edit, before rasterizing. ±1.5 px tolerance for rounding.
+
+### Visual clutter audit
+
+After geometry passes, audit every element (line, shape, fill, label) — each one must have a clear instructional purpose:
+- If two curves coincide over a range (e.g., V_coll = V_individual above a kink), do NOT draw both. Draw only one and add a small italic label noting the equivalence.
+- Remove anything that doesn't serve the lesson.
+
+### Anti-examples (both from §1.2.3 reviews)
+
+**Round 1 — wrong line endpoints from start:** Anna's `Q = -2P + 7` was drawn from (P=4, Q=0) [y=98] to (P=0, Q=7) [y=310]. But at P=4, the function gives Q=-1, not 0. Three sample dots ended up several pixels off the line.
+
+**Round 2 — broke a working figure during a "clean-up" edit:** Tim's `Q = -P + 6` line was originally drawn correctly from (120, 55) to (320, 350) — clipped at the visible plot top P=5. During a refactor, the start was "extended" to (80, 55) to align with the y-axis. But (80, 55) isn't an actual point on Tim's function — it's just where Q=0 visually. After this edit, Tim's dot at (240, 232) was no longer on the line. Reviewer caught it within seconds: "the green line should go through the green dot".
+
 **Why this order matters:**
-The scaffold defines reserved zones that later elements must respect. By placing the scaffold first, you always know where the axes, labels, and title are — preventing overlap. When the scaffold is skipped or built simultaneously with curves, position awareness is lost and elements collide.
+The scaffold defines reserved zones that later elements must respect. The integrity check at Step 6 catches the most common review-killing error: drawing curves that don't actually represent their function. The "edit-then-reverify" rule catches the second-most-common error: breaking a working figure while improving it.
 
 ---
 
 ## PART 1C: ECONOMIC CORRECTNESS RULES
 
 These rules prevent common economic errors in graphs.
+
+### Slope intuition for piecewise / collective curves
+
+When summing N consumer demand curves into a collective curve (or N firm supply curves into a market supply), the collective curve becomes **flatter** (less steep) when more participants are active, and **steeper** when fewer are active.
+
+**Intuition**: With P on the y-axis and Q on the x-axis, "flatter" means a small price change produces a larger total quantity response. With more participants active, each €1 price change moves more units, so the curve sweeps more horizontal distance — i.e., it's flatter.
+
+When writing about a collective demand curve with kinks:
+- **Below the kink** (more consumers active): describe the curve as **vlakker / minder steil**
+- **Above the kink** (fewer consumers active): describe the curve as **steiler**
+
+The same intuition applies to market supply curves with kinks (where firms enter/exit the market) and to multi-segment cost curves.
+
+**Anti-example**: A common error is to write "more consumers active means the curve is steeper, because more buyers respond to each price change". This is **backwards** — the response is on the Q-axis, so more responsiveness means more horizontal sweep, i.e. flatter, not steeper.
 
 ### Supply curves
 - Supply curves MUST have a **positive Y-intercept** (the curve starts on the Y-axis above the origin)

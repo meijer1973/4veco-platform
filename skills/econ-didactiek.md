@@ -1,455 +1,390 @@
 ---
 name: econ-didactiek
-description: "Didactic decision-making skill for economics education (bovenbouw vwo/havo). Provides principles and decision rules for differentiation (both scaffolding and extra challenge), cognitive load management, question design, lesson flow, and assessment — applied specifically to economics topics like markten, monopolie, internationale handel, and macro-economie. Use this skill whenever making pedagogical choices about lesson materials: which differentiation level to apply, how to frame exercises positively, how to design challenge materials for strong students, how to order content for optimal learning, and how to connect Bloom's taxonomy to economics question types. Trigger when the user mentions didactiek, scaffolding, differentiatie, begeleide inoefening, verdieping, extra uitdaging, cognitieve belasting, toetsmatrijs, leerlijnen, werkvormen, formatief toetsen, or any pedagogical discussion about economics materials. Also trigger for discussions about how to structure a lesson, which order to teach concepts, how to support struggling students without stigma, or how to challenge advanced students."
+description: "General didactic skill for economics education (bovenbouw vwo/havo). Provides principles and decision rules for differentiation, scaffolding, cognitive load management, dual coding, interleaving, misconception handling, Bloom's taxonomy, and question design — independent of output format. Use this skill whenever making pedagogical choices about any economics material: worksheets, presentations, textbooks, games, quizzes, or assessments. Trigger when the user mentions didactiek, scaffolding, differentiatie, begeleide inoefening, verdieping, cognitieve belasting, dual coding, interleaving, misconceptions, Bloom, toetsmatrijs, or any pedagogical discussion about economics materials. This skill defines WHAT to teach and WHY; product-specific builder skills define HOW to package it."
 ---
 
-# Economics Didactics Skill v2
+# Economie Didactiek Skill
 
-Didactic principles and decision rules for creating effective economics lesson materials. This skill works at a higher level than the format-specific skills (econ-word-templates, econ-pptx-templates, economic-graph) — it guides the *pedagogical choices* that determine what goes into those formats.
-
-**When to use this skill:**
-- Deciding how to differentiate for a specific group or student
-- Choosing between scaffolding (extra ondersteuning) and enrichment (extra uitdaging)
-- Designing materials that serve the full range of the classroom
-- Ordering concepts for optimal learning progression
-- Making assessment decisions (formative/summative, question types)
-- Any pedagogical discussion about economics materials
-
-**Companion skills (for execution):**
-- `econ-word-templates` → produces the Word documents
-- `econ-pptx-templates` → produces the PowerPoint slides
-- `economic-graph` → produces graphs, flow diagrams, and lesson design rules
+General didactic principles for economics education. This skill is format-independent — it applies equally to textbooks, presentations, games, quizzes, and any future product. Product-specific builder skills (econ-word-templates, econ-pptx-templates, textbook-builder, etc.) handle format and layout.
 
 ---
 
-## PART 1: DIFFERENTIATION AS A STARTING POINT
+## PART 1: CORE DESIGN PHILOSOPHY
 
-### 1.1 The differentiation spectrum
+### 1.1 Reduce friction, not add content
 
-Students in a vwo class vary widely in prior knowledge, working pace, and ability to think abstractly. Effective materials serve the entire spectrum — not just the middle group.
+Effective material design is not about adding more content but about reducing friction between the student and the concept. Every element — image, exercise, paragraph, slide — must earn its place by directly supporting schema construction. Decorative images, separated legends, blocks of same-type problems, and theory without a motivating problem are friction to be eliminated.
 
-```
-Extra support ◄────────── Standard ──────────► Extra challenge
+### 1.2 Problem-first, theory-second
 
-  Begeleide               Regular                Verdieping &
-  inoefening              exercise set           enrichment
-  
-  Thinking steps          Exercises as           Open-ended assignments
-  Hints                   they appear in         Model extensions
-  Formula cards           the textbook,          Find your own context
-  Fill-in formats         without extra          Critical evaluation
-  Worked-out answers      help or challenge      Transfer to another domain
-```
+Theory is introduced as a tool to solve a motivating problem, not the other way around. Students who don't understand the purpose of theory find learning "more dry and difficult than it needs to be" (Velenchik, 1995). Every concept should be anchored in a recognisable context before formalisation. The sequence is: problem → need for a tool → theory as tool → application.
 
-**Core principle:** we create materials at three levels, but we never label them by difficulty. The framing is always positive and neutral.
+### 1.3 Unified procedures, varied contexts
 
-| Level | Material | How it is framed to students |
-|-------|----------|------------------------------|
-| Extra support | Begeleide inoefening (with thinking steps, hints, formulas) | "Oefenen met denkstappen" |
-| Standard | Regular exercise set (no extra scaffolding or challenge) | The default approach |
-| Extra challenge | Verdieping assignments (open, evaluative, transfer questions) | "Verdieping" or "Denkertje" |
+**Concept-context separation:** procedures, notation, solution steps, and precise language are kept strictly consistent across all materials. If a procedure is taught in a theoretical explanation, the answer model follows exactly that procedure. But *contexts* are deliberately varied to build transfer. Same method, different settings. This mirrors mathematics: clean definitions and axioms first, broad application second.
 
-### 1.2 When to use which level?
+### 1.4 Models as tools, not reality
 
-**Extra support (scaffolding) is intended for students who:**
-- Get stuck when structuring their approach
-- Know the formulas but do not know which one to apply
-- Understand the concept but cannot apply it independently
-- Benefit from explicit intermediate steps
+Economic models are analytical tools, not descriptions of how the world works. Consistently signal the assumptions behind models, their limitations, and the gap between predictions and observed reality. Use **layered nuance**: introduce clean principles first, then systematically add qualifications, exceptions, and competing perspectives in later encounters.
 
-**Standard is intended for students who:**
-- Have followed the lesson and can work independently
-- Occasionally make mistakes but can self-correct
-- Do not need extra help but also do not ask for more
+### 1.5 Spiral curriculum
 
-**Extra challenge is intended for students who:**
-- Finish the standard exercises quickly and correctly
-- Need more depth or breadth
-- Benefit from higher Bloom levels (analyse, evaluate, create)
-- Are ready to apply knowledge in unfamiliar contexts
-
-### 1.3 Design rules per level
-
-**Extra support — scaffolding material:**
-- Provide thinking steps, hints, formula reminders, fill-in formats
-- Work out answers extensively with explanations (the "why")
-- Fade scaffolding across exercises (fading)
-- Use the begeleide inoefening template from econ-word-templates
-
-**Standard — regular material:**
-- Present the exercises as-is, without extra intermediate steps
-- Do not add scaffolding elements (no thinking-step boxes, no hints)
-- The standard answer key suffices
-- This is the base product every student receives
-
-**Extra challenge — verdieping material:**
-- Pose open questions that require evaluation or creation
-- Have students extend or critique a model
-- Ask for transfer: apply the concept in an unfamiliar context
-- Do NOT provide intermediate steps, hints, or formula cards — strong students do not need them, and they slow down the thinking process
-- Optionally: let students design their own exercises
-
-### 1.4 What does NOT belong in verdieping material
-
-It is tempting to make verdieping material "just harder" by adding longer calculations or more sub-questions. That is not enrichment — that is more of the same.
-
-| Not real enrichment | Real enrichment |
-|---------------------|-----------------|
-| More computation (longer numbers) | Critiquing a model ("When does MR = MC not hold?") |
-| More sub-questions on the same skill | Transfer to a new market/context |
-| The same calculation with different numbers | Writing and defending a policy proposal |
-| Extra steps in a chain | Comparing two models (e.g. Cournot vs Bertrand) |
-| Memorising harder formulas | Designing or extending a model yourself |
+Core concepts (opportunity cost, supply/demand, equilibrium, surplus) reappear at increasing complexity across the course. Each return adds depth, not just repetition. Example: opportunity cost appears as personal spending choices → PPF for firms → government budget trade-offs → cost-benefit analysis of regulation.
 
 ---
 
-## PART 2: DIDACTIC PRINCIPLES
+## PART 2: DIFFERENTIATIE
 
-### 2.1 Scaffolding (Vygotsky → Wood → Van de Pol)
+### 2.1 Het differentiatiespectrum
 
-Scaffolding is temporary support that is gradually withdrawn as students become more competent. It operates within the Zone of Proximal Development: just above what the student can do independently, but reachable with help.
+Leerlingen in een vwo-klas verschillen sterk in voorkennis, werktempo en abstractievermogen. Effectief materiaal bedient het hele spectrum.
 
-**Important:** scaffolding is specifically intended for students who need extra support. It is not the default for all students — for students who already master the material, scaffolding actually slows them down rather than helping.
+```
+Extra ondersteuning ◄────────── Standaard ──────────► Extra uitdaging
 
-**The four-step model (Van de Pol, 2012):**
+  Begeleide               Reguliere              Verdieping &
+  inoefening              opgavenset             verbreding
 
-| Step | Action | Example prompts |
-|------|--------|-----------------|
-| 1. Diagnosis | Identify where the student gets stuck | "What have you done so far?" / "Where does it go wrong?" |
-| 2. Check | Verify your interpretation is correct | "So you don't know how to derive MR?" |
-| 3. Help | Provide tailored support | Ask a question / give a hint / explain / provide a tool |
-| 4. Comprehension check | Verify the student understands | "Can you explain it in your own words now?" |
+  Denkstappen             Opgaven zonder         Open opdrachten
+  Hints                   extra hulp of          Modelextensies
+  Formulekaarten          extra uitdaging        Eigen context zoeken
+  Invulformaten                                  Kritische evaluatie
+  Uitgewerkte antw.                              Transfer naar ander domein
+```
 
-**Two forms:**
-- **Planned** → built into the material (thinking steps, hints, formula cards, partially completed answers). Only in begeleide inoefening, not in standard material.
-- **Interactive** → spontaneous during classroom dialogue (follow-up questions, rephrasing, thinking aloud). Can be used for any student, including strong ones.
+### 2.2 Wanneer welk niveau?
 
-### 2.2 Cognitive load (Sweller)
+**Extra ondersteuning** → leerlingen die vastlopen bij structureren, de formules kennen maar niet weten welke ze moeten gebruiken, het concept begrijpen maar niet zelfstandig kunnen toepassen.
 
-Students can only process a limited amount of new information at once. In economics this is especially relevant because many exercises simultaneously require a model/instrument (graph, formula) AND the economic theory behind it.
+**Standaard** → leerlingen die de stof in de les hebben gevolgd en zelfstandig aan de slag kunnen. Geen extra hulp nodig, geen extra uitdaging gevraagd.
 
-**Three types of load:**
+**Extra uitdaging** → leerlingen die standaardopgaven snel en correct afmaken, behoefte hebben aan meer diepgang, en klaar zijn om kennis in onbekende contexten toe te passen.
 
-| Type | What | What to do about it |
-|------|------|---------------------|
-| Intrinsic | Complexity of the material itself | Cannot be avoided, but can be split up |
-| Extraneous | Load caused by poor design | Minimise: clear language, logical structure, no distractions |
-| Germane | Load that leads to learning | Maximise: making connections, examples, practice |
+### 2.3 Ontwerpregels per niveau
 
-**Practical rules of thumb:**
-1. Teach the instrument (drawing a graph) SEPARATELY from the theory (why MR = MC)
-2. Provide worked examples for new skills — but only for students who need them. For advanced students, worked examples actually backfire (expertise reversal effect).
-3. Only increase complexity once the foundation is solid
-4. Combine text and image (dual coding) — not text OR image, but both together
+**Extra ondersteuning:**
+- Denkstappen, hints, formuleherinneringen, invulformaten
+- Antwoorden uitgebreid met uitleg (het "waarom")
+- Scaffolding afbouwen over oefeningen (fading)
 
-### 2.3 Dual Coding (Paivio/Mayer)
+**Standaard:**
+- Opgaven zonder tussenstappen, hints of scaffolding
+- Standaard antwoordmodel volstaat
+- Dit is het basisproduct dat elke leerling krijgt
 
-Information is remembered better when it enters through two channels: verbal (text/speech) and visual (image/diagram/colour). This applies to all levels.
+**Extra uitdaging:**
+- Open vragen die evaluatie of creatie vereisen
+- Laat leerlingen een model uitbreiden of bekritiseren
+- Transfer: pas het concept toe in een onbekende context
+- GEEN tussenstappen, hints of formulekaarten — die vertragen het denkproces
+- Eventueel: leerlingen hun eigen opgaven laten ontwerpen
 
-**Application in our materials:**
-- Domain colour coding (blue/amber/green) → visual recognition without reading
-- Graphs alongside textual explanation → two paths to the same concept
-- Flow diagrams for reasoning chains → visual structure for causal logic
-- Formula boxes in monospace → visual distinction from running text
+### 2.4 Wat NIET in verdiepingsmateriaal hoort
 
-### 2.4 Positive framing
+| ❌ Geen echte verdieping | ✅ Echte verdieping |
+|--------------------------|---------------------|
+| Meer rekenwerk (langere getallen) | Een model bekritiseren ("Wanneer klopt MO = MK niet?") |
+| Meer deelvragen over dezelfde vaardigheid | Transfer naar een nieuwe markt/context |
+| Dezelfde berekening met andere getallen | Een beleidsvoorstel schrijven en onderbouwen |
+| Extra stappen in een keten | Twee modellen vergelijken |
+| Moeilijkere formules memoriseren | Zelf een model ontwerpen of uitbreiden |
 
-**Core rule: never use labels that reinforce a negative self-image.**
+### 2.5 Positieve framing
 
-| Do not use | Use instead |
-|------------|-------------|
-| "Makkelijke versie" (easy version) | "Begeleide inoefening" |
-| "Basisniveau" (basic level) | "Stap-voor-stap werkblad" |
-| "Hulp bij moeite" (help for struggling) | "Oefenen met denkstappen" |
-| "Versimpeld" (simplified) | "Overzicht met formulekaart" |
-| "Zwakke leerlingen" (weak students) | "Leerlingen die baat hebben bij extra structuur" (students who benefit from extra structure) |
-| "Moeilijke versie" (hard version) | "Verdieping" |
-| "Voor de slimme leerlingen" (for the smart students) | "Denkertje" or "Bonusopgave" |
+**Kernregel: nooit labels die een negatief zelfbeeld versterken.**
 
-**Rationale:** by framing materials neutrally you prevent students from feeling labelled — in either direction. A student who picks up the begeleide inoefening should not feel "stupid"; a student who skips the verdieping should not feel "lazy".
+| ❌ Niet | ✅ Wel |
+|---------|--------|
+| "Makkelijke versie" | "Begeleide inoefening" |
+| "Basisniveau" | "Stap-voor-stap werkblad" |
+| "Versimpeld" | "Oefenen met denkstappen" |
+| "Zwakke leerlingen" | "Leerlingen die baat hebben bij extra structuur" |
+| "Moeilijke versie" / "Voor de slimme leerlingen" | "Verdieping" of "Denkertje" |
 
 ---
 
-## PART 3: SCAFFOLDING LEVELS (for begeleide inoefening)
+## PART 3: SCAFFOLDING
 
-This part applies exclusively when creating material for students who need extra support. For standard and verdieping material: skip this section.
+### 3.1 Scaffolding-niveaus
 
-### 3.1 The scaffolding spectrum
+| Niveau | Naam | Wat de leerling krijgt | Wanneer |
+|--------|------|------------------------|---------|
+| 0 | Geen scaffolding | Alleen de vraag | Standaard opgavenset |
+| 1 | Lichte hint | Één zin die richting geeft | Leerling weet het concept maar mist de ingang |
+| 2 | Denkstappen | Genummerde stappen als leidraad | Leerling kent de stof maar kan het niet structureren |
+| 3 | Formule-herinnering | Relevante formules bij de vraag | Leerling vergeet welke formule nodig is |
+| 4 | Invulformaat | Deels ingevuld antwoord | Leerling weet de stappen maar maakt rekenfouten |
+| 5 | Volledig uitgewerkt | Antwoord + uitleg waarom | Naslag, zelfstudie, herkansing |
 
-| Level | Name | What the student receives | When |
-|-------|------|--------------------------|------|
-| 0 | No scaffolding | Only the question | Standard exercise set (not in begeleide inoefening) |
-| 1 | Light hint | One sentence pointing in the right direction | Student knows the concept but lacks an entry point |
-| 2 | Thinking steps | Numbered steps as a guide | Student knows the material but cannot structure it |
-| 3 | Formula reminder | Relevant formulas alongside the question | Student forgets which formula is needed |
-| 4 | Fill-in format | Partially completed answer | Student knows the steps but makes calculation errors |
-| 5 | Fully worked out | Answer + explanation of why | Reference, self-study, resit |
+### 3.2 Fading-strategie
 
-**The begeleide inoefening combines levels 1-4.** The answer document adds level 5.
-
-### 3.2 Fading strategy
-
-Fade scaffolding across exercises:
+Bouw scaffolding af over de oefeningen heen:
 
 ```
-Exercise 1-2:  Full scaffolding (thinking steps + formulas + hints + fill-in format)
-Exercise 3-4:  Reduced (hints + formula card, no more thinking steps)
-Exercise 5-6:  Minimal (only a brief hint)
-Exercise 7-8:  No scaffolding (independent)
+Oefening 1-2:  Volledige scaffolding (denkstappen + formules + hints + invulformaat)
+Oefening 3-4:  Verminderd (hints + formulekaart, geen denkstappen meer)
+Oefening 5-6:  Minimaal (alleen een korte hint)
+Oefening 7-8:  Geen scaffolding (zelfstandig)
 ```
 
-**Signal for fading:** if exercise 3 requires the same skill as exercise 2 (but in a different context), it is time to remove the thinking steps.
+**Signaal voor fading:** als oefening 3 dezelfde vaardigheid vraagt als oefening 2 (maar in een andere context), is het tijd om de denkstappen te verwijderen.
 
-### 3.3 Decision tree: which scaffold for which question?
+### 3.3 Beslisboom: welke scaffold bij welke vraag?
 
 ```
-Question type = calculation?
-  |-- Yes → formula reminder + fill-in format + thinking steps
-  +-- No → 
-      Question type = reasoning/explanation?
-        |-- Yes → thinking steps + hint
-        +-- No →
-            Question type = draw a graph?
-              |-- Yes → thinking steps (drawing plan) + example coordinates
-              +-- No →
-                  Question type = concept/definition?
-                    |-- Yes → hint (reference to the concept)
-                    +-- No → no scaffold needed
+Vraagtype = berekening?
+  ├─ Ja → formule-herinnering + invulformaat + denkstappen
+  └─ Nee →
+      Vraagtype = redenering/uitleg?
+        ├─ Ja → denkstappen + hint
+        └─ Nee →
+            Vraagtype = grafiek tekenen?
+              ├─ Ja → denkstappen (tekenplan) + voorbeeld-coördinaten
+              └─ Nee →
+                  Vraagtype = begrip/definitie?
+                    ├─ Ja → hint (verwijzing naar begrip)
+                    └─ Nee → geen scaffold nodig
 ```
+
+### 3.4 Vygotsky's Zone van Naaste Ontwikkeling
+
+Scaffolding werkt binnen de ZNO: net boven wat de leerling zelfstandig kan, bereikbaar met hulp. Het vierstappenmodel (Van de Pol, 2012):
+
+1. **Diagnose** → achterhaal waar de leerling vastloopt
+2. **Check** → controleer of je interpretatie klopt
+3. **Hulp** → bied ondersteuning op maat
+4. **Begripscheck** → controleer of de leerling het snapt
+
+Twee vormen: **gepland** (ingebouwd in materiaal — alleen in begeleide inoefening) en **interactief** (spontaan in het onderwijsleergesprek — voor elke leerling).
 
 ---
 
-## PART 4: TAXONOMY AND QUESTION DESIGN
+## PART 4: COGNITIEVE BELASTING (Sweller)
 
-### 4.1 Bloom's taxonomy for economics
+### 4.1 Drie typen belasting
 
-| Bloom level | Economics example | Signal words in the question | Suitable for |
-|-------------|-------------------|------------------------------|--------------|
-| Remember | "Name the four market structures" | name, list, define | All levels |
-| Understand | "Explain why MR = MC maximises profit" | explain, describe, indicate why | All levels |
-| Apply | "Calculate the equilibrium price" | calculate, draw, derive | All levels |
-| Analyse | "Compare welfare before and after the tax" | compare, analyse, distinguish | Standard + verdieping |
-| Evaluate | "Assess whether price discrimination increases welfare" | assess, argue whether, is it justified that | Verdieping |
-| Create | "Propose a policy measure" | devise, design, propose | Verdieping |
+| Type | Wat | Doe ermee |
+|------|-----|-----------|
+| Intrinsiek | Complexiteit van de stof zelf | Niet te vermijden, wel op te splitsen |
+| Extrinsiek | Belasting door slecht ontwerp | Minimaliseer: helder taalgebruik, logische opbouw, geen afleiding |
+| Germaan | Belasting die leidt tot leren | Maximaliseer: verbanden leggen, voorbeelden, oefening |
 
-**Differentiation through Bloom:** the standard exercises mainly operate at remember/understand/apply. The verdieping pushes through to analyse/evaluate/create.
+### 4.2 Worked examples en expertise reversal
 
-### 4.2 Question structure per document type
+Novice learners leren meer van het bestuderen van uitgewerkte voorbeelden dan van zelf problemen oplossen (effect size 0.52, Crissman 2006). Maar het expertise reversal effect betekent dat scaffolding en uitgewerkte voorbeelden *contraproductief* worden bij gevorderde leerlingen. Dit is de theoretische onderbouwing voor de differentiatie: vroeg materiaal zwaar scaffolden, scaffolding doelbewust afbouwen.
 
-**News assignment (7 questions, increasing difficulty):**
-```
-1. Fill-in (remember)        → "De prijs is gestegen/gedaald"
-2. Fill-in (understand)      → "Hierdoor neemt de vraag toe/af"
-3. Name question (remember)  → "Noem twee voordelen van..."
-4. Calculation (apply)       → One step, concrete numbers from the article
-5. Diagram question (analyse)→ Refer to the visual on page 1
-6. Concept question (understand) → Connect an economic concept to the news
-7. Open question (evaluate)  → "Welke maatregel zou jij voorstellen?"
-```
+### 4.3 Praktische vuistregels
 
-**Begeleide inoefening (follows the structure of the original exercises):**
-- Preserve the original question wording
-- Add scaffolding based on the decision tree (Part 3.3)
-- Make answers more elaborate than the original answer key
-- Add explanation boxes that clarify the "why"
-
-**Verdieping assignments:**
-- Pose open questions at Bloom level analyse/evaluate/create
-- Provide context but no intermediate steps or hints
-- Ask for justification, comparison, or design
-- One verdieping assignment per paragraph is sufficient
-
-**Test (summative):**
-- Cover all learning objectives (create a toetsmatrijs)
-- Mix Bloom levels: ~30% remember/understand, ~40% apply, ~30% analyse/evaluate
-- One open question (evaluate/create)
-- Total: 5-7 exercises, 80-120 minutes
-
-### 4.3 Toetsmatrijs template
-
-| Learning objective | Exercise | Bloom level | Points | % |
-|--------------------|----------|-------------|--------|---|
-| Apply MR = MC | 1b | Apply | 8 | 10% |
-| Calculate CS | 2a | Apply | 6 | 7.5% |
-| ... | ... | ... | ... | ... |
-| **Total** | | | **80** | **100%** |
-
-**Check:** every learning objective tested at least once. No learning objective exceeds 25% of the points.
+1. Leer het instrument (grafiek tekenen) APART van de theorie (waarom MO = MK)
+2. Bouw complexiteit pas op als de basis staat
+3. Combineer tekst en beeld (dual coding) — niet tekst óf beeld, maar samen
+4. Eén concept per eenheid (slide, sectie, oefening)
+5. Maximaal ~4 nieuwe chunks per leermoment (Cowan, 2001)
 
 ---
 
-## PART 5: ECONOMICS-SPECIFIC DIDACTICS
+## PART 5: DUAL CODING (Paivio/Mayer)
 
-### 5.1 Concept-context approach
+### 5.1 Het principe
 
-The vwo curriculum works with concepts (exchange, cooperation) that are applied in various contexts. The approach differs by level:
+Informatie wordt beter onthouden als het via twee kanalen binnenkomt: verbaal (tekst/spraak) en visueel (beeld/diagram/kleur). Bevestigd voor economie specifiek (Nature: Humanities and Social Sciences Communications, 2024).
 
-**For students who need extra support — from concrete to abstract:**
-1. Start with a recognisable context (supermarket prices, Spotify subscription)
-2. Introduce the economic concept (monopoly, price discrimination)
-3. Formalise with formulas and graphs
-4. Apply within the same context
+**Kritische kanttekening:** grafieken helpen niet automatisch. Cohn et al. (2001) vonden dat studenten met grafieken soms *lager* scoorden. Wat telt is *hoe* grafieken worden geïntegreerd:
+- Bouw grafieken stap voor stap op met annotaties — nooit een afgewerkte grafiek laten zien en doorgaan
+- Oefen grafiek-leesvaardigheid apart vóór grafieken inzetten om nieuwe concepten te onderwijzen
+- Adresseer de verschuiving-van vs. verschuiving-langs verwarring expliciet
 
-**For standard — from concrete to abstract with transfer:**
-1. Start with a recognisable context
-2. Introduce the concept and formalise
-3. Apply in a new, comparable context
+### 5.2 Toepassing in materialen
 
-**For students seeking extra challenge — from abstract to concrete:**
-1. Introduce the model directly (MR = MC)
-2. Work through a brief example
-3. Have the student find a suitable context themselves
-4. Have the student extend or critique the model
+- Domeincodering (blauw/amber/groen) → visuele herkenning zonder te lezen
+- Grafieken naast tekstuele uitleg → twee paden naar hetzelfde concept
+- Stroomdiagrammen voor redeneerkettingen → visuele structuur voor causale logica
+- Formuleboxen in monospace → visueel onderscheid van lopende tekst
+- Varieer visuele vormen: grafieken, stroomdiagrammen, tabellen, schematische overzichten
 
-### 5.2 Causality chains
+### 5.3 Exercise scaffolding met visuals
 
-Economic reasoning often consists of chains of cause and effect. The scaffolding differs by level:
+Binnen een paragraaf/les progressie van oefeningen:
+1. **Simpel + volledige dual coding** (tekst + visueel)
+2. **Doelniveau + dual coding** (tekst + visueel)
+3. **Doelniveau zonder dual coding** (alleen tekst)
 
-| Phase | Level | Support |
-|-------|-------|---------|
-| Modelling | Extra support | Teacher builds the chain aloud, student follows along |
-| Guided completion | Extra support | Chain with blank slots the student fills in |
-| Independent construction | Standard | Student builds the entire chain themselves, only beginning and end given |
-| Transfer | Standard + verdieping | Student applies the same chain structure in a new context |
-| Critical evaluation | Verdieping | Student critiques the chain: which links are assumptions? When does the chain break down? |
+Zo worden leerlingen opgebouwd en wordt de visuele ondersteuning gefaded vóór het doorgaan.
 
-**Example of fading in chains:**
-```
-Extra support:  oil price up → [production costs up] → supply down → [price up]
-Standard:       minimum wage up → [___] → [___] → [___]
-Verdieping:     "The ECB lowers the interest rate. Build a chain of at least 5 links
-                 and indicate which links are uncertain."
-```
+### 5.4 Unified experience
 
-### 5.3 Graph skills
-
-Graphs are the most important instrument in economics, but also the biggest source of frustration. Build graph skills in layers:
-
-| Layer | Skill | Extra support | Standard | Verdieping |
-|-------|-------|---------------|----------|------------|
-| 1. Reading | "What is the price at Q = 20?" | Graph + arrow pointing to the spot | Only the question | — |
-| 2. Shifting | "Draw the new demand curve" | Direction hint + original curve | Only the question | — |
-| 3. Drawing | "Draw D, S, MR, and MC" | Coordinate table + sequence | Only formulas | — |
-| 4. Interpreting | "What does the shaded area represent?" | Legend with areas | Only the question | — |
-| 5. Reasoning | "What happens to CS with a tax?" | — | Only the question | "Compare two scenarios and evaluate the welfare effect" |
-
-### 5.4 Common mistakes per topic
-
-Build these in as warning boxes (warningBox) in material for extra support. In standard material: mention them briefly. In verdieping material: let students discover them on their own.
-
-**Market equilibrium:**
-- Confusing a shift OF versus a movement ALONG the demand curve
-- Forgetting that the ceteris paribus condition applies
-
-**Monopoly:**
-- Reading the price off the MR curve instead of the demand curve
-- Profit = TR instead of profit = TR - TC
-- Drawing the MR curve through the origin (with a linear demand curve, MR starts at the same y-intercept as D)
-
-**Price discrimination:**
-- Forgetting to name the two conditions (segmentation + no resale)
-- Arguing that price discrimination is always bad for consumers
-
-**International trade:**
-- Confusing absolute advantage with comparative advantage
-- Forgetting that both countries benefit from trade (not only the "cheaper" one)
+Dezelfde procedure (stappen, aanpak, redeneerstructuur) wordt in elk format op dezelfde manier uitgelegd. De context mag variëren, maar de aanpak is het anker. Als een uitleg 3 stappen voorschrijft, volgen alle materialen dezelfde 3 stappen.
 
 ---
 
-## PART 6: DIFFERENTIATION STRATEGIES IN PRACTICE
+## PART 6: INTERLEAVING
 
-### 6.1 Differentiating without labelling
+### 6.1 Het principe
 
-| Strategy | How | Framing |
-|----------|-----|---------|
-| Choice assignments | Student chooses which exercise to do | "Kies 3 van de 5 opgaven" (Choose 3 out of 5) |
-| Begeleide inoefening | Document with scaffolding, alongside the regular set | "Oefenen met denkstappen" |
-| Verdieping assignment | Open question for fast students | "Denkertje" or "Bonusopgave" |
-| Formula card | Formula overview, available for anyone who wants it | "Naslagblad" (reference sheet) |
-| Peer feedback | Students help each other | "Controleer elkaars werk" (check each other's work) |
-| Expert assignment | Strong student explains it to someone else | "Leg uit aan je buurman hoe je dit aanpakt" (explain to your neighbour how you approach this) |
+Oefenopgaven worden gemixed over vraagtypen in plaats van geblokt per onderwerp. Interleaving levert grote, betrouwbare leerwinst, maar minder dan 10% van typische methode-opgaven gebruikt het.
 
-### 6.2 Timing of differentiation within the lesson
+### 6.2 Toepassing
 
-```
-+---------------------------------------------+
-| BEFORE the lesson                            |
-| Extra support: prior-knowledge document      |
-| Extra challenge: advance reading / pre-work  |
-+---------------------------------------------+
-| DURING the lesson                            |
-| Everyone: presentation + standard explanation|
-| Extra support: begeleide inoefening          |
-| Extra challenge: verdieping assignment       |
-+---------------------------------------------+
-| AFTER the lesson                             |
-| Extra support: answer document               |
-| Standard: review the skills document         |
-| Extra challenge: work out their own context  |
-+---------------------------------------------+
-```
+- In lichtere lessen: meer ruimte voor interleaving-opgaven uit eerdere hoofdstukken en algemene vaardigheden
+- In zware lessen: interleaving terugbrengen tot een minimum om te focussen op de nieuwe vaardigheid
+- Interleaving-opgaven trainen basisvaardigheden (rekenvaardigheid, grafiek-lezen, begrippen) naast de nieuwe stof
 
 ---
 
-## PART 7: FORMATIVE ASSESSMENT
+## PART 7: MISCONCEPTIONS
 
-### 7.1 Check-in moments
+### 7.1 Het probleem
 
-Build checkpoints into the material:
+Misconcepties zijn diep resistent tegen standaardinstructie. Busom, Lopez-Mayan & Panadés vonden dat "exposure to an economic principles course hardly seems to affect misconceptions." Correct presenteren is niet genoeg.
 
-| Moment | Instrument | Example |
-|--------|------------|---------|
-| Start of lesson | Entry question | "Write down in one sentence what you still remember from last lesson" |
-| After theory | Comprehension check | CheckBox in presentation: "Can you say in your own words what MR = MC means?" |
-| After exercise | Self-check | "Compare your answer with the answer key" |
-| End of lesson | Exit ticket | "Write down one thing you can do now that you could not do at the start" |
+### 7.2 Vereiste strategieën
 
-### 7.2 Signals for adjustment
+1. **Predict-observe-explain** → presenteer scenario, laat leerling voorspellen, onthul uitkomst
+2. **Expliciete vergelijking** → misconceptie en correcte conceptie zij-aan-zij
+3. **Data-driven exercises** → leerlingen confronteren met bewijs dat hun aannames weerspreekt
 
-| Signal | Possible cause | Action |
-|--------|----------------|--------|
-| Many students stop at the same question | Too large a jump in difficulty | Add an intermediate question |
-| Students use the wrong formula | Formula reminder is missing | Make a formula card available |
-| Students make calculation errors but understand the concept | Insufficient mathematical prior knowledge | Deploy a prior-knowledge document |
-| Students copy answers without understanding | Answers too easily accessible | Share answers only after the lesson |
-| Fast students finish and sit idle | No verdieping material available | Have a verdieping assignment ready |
+### 7.3 Threshold concepts (Davies & Mangan)
+
+Deze verdienen expliciet, herhaald aandacht:
+- Prijs vs. kosten
+- Geld vs. inkomen
+- Reëel vs. nominaal
+- Besparingen vs. investering
+- Verschuiving VAN vs. LANGS de lijn
+- Absoluut vs. comparatief voordeel
+
+### 7.4 Veelgemaakte fouten per onderwerp
+
+Bouw deze in als waarschuwingsboxen in materiaal voor extra ondersteuning. In standaardmateriaal: noem ze kort. In verdiepingsmateriaal: laat leerlingen ze zelf ontdekken.
+
+**Marktevenwicht:**
+- Verwarring tussen verschuiving VAN en LANGS de vraaglijn
+- Vergeten dat de ceteris paribus-voorwaarde geldt
+
+**Monopolie:**
+- Prijs aflezen op de MO-lijn i.p.v. de vraaglijn
+- Winst = TO i.p.v. winst = TO − TK
+- MO-lijn door de oorsprong tekenen (bij lineaire vraaglijn begint MO op hetzelfde y-snijpunt als V)
+
+**Prijsdiscriminatie:**
+- Vergeten de twee voorwaarden te noemen (segmenteren + geen doorverkoop)
+- Redeneren dat prijsdiscriminatie altijd slecht is voor consumenten
+
+**Internationale handel:**
+- Absoluut voordeel verwarren met comparatief voordeel
+- Vergeten dat beide landen baat hebben bij handel
 
 ---
 
-## PART 8: DECISION RULES SUMMARISED
+## PART 8: BLOOM'S TAXONOMIE VOOR ECONOMIE
 
-### When designing any material:
+### 8.1 Niveaus met economie-voorbeelden
 
-1. **Differentiate deliberately** → create material for extra support, standard, AND extra challenge
-2. **One concept per slide/section** → keep cognitive load low
-3. **From concrete to abstract** → context first, then formula (except for verdieping)
-4. **Scaffolding only where needed** → begeleide inoefening is for those who need it, not for everyone
-5. **Verdieping is not "more of the same"** → higher Bloom levels, not more computation
-6. **Positive framing** → "begeleide inoefening" and "verdieping", no negative labels
-7. **Fading across exercises** → lots of help at exercise 1, no help at exercise 8
-8. **Explain in answers** → not only WHAT the answer is, but WHY
-9. **Build in formative assessment** → checkpoints that inform both student and teacher
-10. **Visual consistency** → same colours, fonts, and components across all documents
+| Bloom-niveau | Economie-voorbeeld | Signaalwoorden | Geschikt voor |
+|--------------|-------------------|----------------|---------------|
+| Onthouden | "Noem de vier marktvormen" | Noem, som op, geef de definitie van | Alle niveaus |
+| Begrijpen | "Leg uit waarom MO = MK winst maximaliseert" | Leg uit, beschrijf, geef aan waarom | Alle niveaus |
+| Toepassen | "Bereken de evenwichtsprijs" | Bereken, teken, leid af | Alle niveaus |
+| Analyseren | "Vergelijk de welvaart vóór en na de belasting" | Vergelijk, analyseer, onderscheid | Standaard + verdieping |
+| Evalueren | "Beoordeel of prijsdiscriminatie de welvaart verhoogt" | Beoordeel, beredeneer of | Verdieping |
+| Creëren | "Stel een beleidsmaatregel voor" | Bedenk, ontwerp, stel voor | Verdieping |
+
+### 8.2 Differentiatie via Bloom
+
+Standaardopgaven bewegen zich vooral op onthouden / begrijpen / toepassen. Verdieping tilt door naar analyseren / evalueren / creëren. Progressie binnen en over hoofdstukken volgt deze opbouw.
+
+---
+
+## PART 9: ECONOMIE-SPECIFIEKE DIDACTIEK
+
+### 9.1 Concept-context-benadering per niveau
+
+**Extra ondersteuning — concreet → abstract:**
+1. Herkenbare context (supermarktprijzen, Spotify)
+2. Economisch concept introduceren
+3. Formaliseren met formules en grafieken
+4. Toepassen in dezelfde context
+
+**Standaard — concreet → abstract → transfer:**
+1. Herkenbare context
+2. Concept en formalisering
+3. Toepassen in een nieuwe, vergelijkbare context
+
+**Extra uitdaging — abstract → concreet:**
+1. Model direct introduceren
+2. Kort voorbeeld uitwerken
+3. Leerling zoekt zelf een passende context
+4. Leerling breidt het model uit of bekritiseert het
+
+### 9.2 Causaliteitsketens
+
+Economische redeneringen zijn ketens van oorzaak en gevolg. Scaffolding verschilt per niveau:
+
+| Fase | Niveau | Ondersteuning |
+|------|--------|---------------|
+| Voordoen | Extra ondersteuning | Docent bouwt de keten hardop op |
+| Begeleid invullen | Extra ondersteuning | Keten met lege vakjes |
+| Zelfstandig opbouwen | Standaard | Begin en eind gegeven |
+| Transfer | Standaard + verdieping | Zelfde ketenstructuur, nieuwe context |
+| Kritische evaluatie | Verdieping | Welke schakels zijn aannames? Wanneer klopt het niet? |
+
+**Voorbeeld:**
+```
+Extra ondersteuning:  olieprijs ↑ → [productiekosten ↑] → aanbod ↓ → [prijs ↑]
+Standaard:            minimumloon ↑ → [___] → [___] → [___]
+Verdieping:           "De ECB verlaagt de rente. Bouw een keten van minimaal 5 schakels
+                       en geef aan welke schakels onzeker zijn."
+```
+
+### 9.3 Grafiekvaardigheid — opbouw in lagen
+
+| Laag | Vaardigheid | Extra ondersteuning | Standaard | Verdieping |
+|------|------------|---------------------|-----------|------------|
+| 1. Aflezen | "Wat is de prijs bij Q = 20?" | Grafiek + pijl naar het punt | Alleen de vraag | — |
+| 2. Verschuiven | "Teken de nieuwe vraaglijn" | Richting-hint + originele lijn | Alleen de vraag | — |
+| 3. Tekenen | "Teken V, A, MO en MK" | Coördinatentabel + volgorde | Alleen formules | — |
+| 4. Interpreteren | "Wat stelt het gearceerde vlak voor?" | Legenda met vlakken | Alleen de vraag | — |
+| 5. Redeneren | "Wat gebeurt met CS bij belasting?" | — | Alleen de vraag | "Vergelijk twee scenario's" |
+
+---
+
+## PART 10: BESLISREGELS
+
+### Bij het ontwerpen van elk materiaal:
+
+1. **Differentieer bewust** → maak materiaal voor extra ondersteuning, standaard én extra uitdaging
+2. **Eén concept per eenheid** → cognitieve belasting laag houden
+3. **Van concreet naar abstract** → eerst context, dan formule (behalve bij verdieping)
+4. **Problem-first** → begin met een motiverend probleem, niet met theorie
+5. **Scaffolding alleen waar nodig** → begeleide inoefening is voor wie het nodig heeft
+6. **Verdieping ≠ meer van hetzelfde** → hogere Bloom-niveaus, niet meer rekenwerk
+7. **Positieve framing** → "begeleide inoefening" en "verdieping", geen negatieve labels
+8. **Fading** → veel hulp bij oefening 1, geen hulp bij de laatste oefening
+9. **Uitleg bij antwoorden** → niet alleen WAT maar WAAROM
+10. **Interleave** → mix oefentypen, herhaal eerder geleerde vaardigheden
+11. **Confronteer misconcepties** → predict-observe-explain, niet alleen correct presenteren
+12. **Visuele consistentie** → zelfde kleuren, fonts en componenten in alle documenten
+13. **Unified procedures** → zelfde stappen in uitleg, antwoordmodel en alle materialen
 
 ---
 
 ## NEVER DO
 
-- Label material as "easy", "basic", or "for weak students"
-- Label material as "hard" or "for smart students"
-- Include scaffolding by default in all materials (it belongs only in begeleide inoefening)
-- Add thinking steps, hints, or formula cards to verdieping material (they do not belong there)
-- Offer scaffolding without a fading strategy (then it becomes a crutch)
-- Design verdieping as "more of the same" (longer calculations, more sub-questions)
-- Provide answers without explanations (then students only learn the answer, not the reasoning)
-- Explain theory without a concrete example
-- Introduce graphs without first practising the components separately
-- More than 7 learning objectives per lesson (cognitive overload)
-- Create a test without a toetsmatrijs (then you are testing at random)
-- Have students practise a reasoning chain without first modelling it
-- Create a presentation without speaker notes (the explanation is just as important as the slides)
-- Lock verdieping assignments behind a gate — they must be available to everyone
+- Materiaal labelen als "makkelijk", "basis", of "voor zwakke leerlingen"
+- Materiaal labelen als "moeilijk" of "voor slimme leerlingen"
+- Scaffolding standaard in alle materialen stoppen (alleen in begeleide inoefening)
+- Denkstappen, hints of formulekaarten in verdiepingsmateriaal (horen daar niet)
+- Scaffolding zonder fading-strategie (wordt een kruk)
+- Verdieping als "meer van hetzelfde" (langere sommen, meer deelvragen)
+- Antwoorden geven zonder uitleg
+- Theorie uitleggen zonder concreet voorbeeld
+- Grafieken introduceren zonder eerst de onderdelen apart te oefenen
+- Een redeneerketen laten oefenen zonder eerst het model voor te doen
+- Verdiepingsopdrachten achter slot en grendel — ze moeten voor iedereen beschikbaar zijn
+- Een afgewerkte grafiek tonen zonder stap-voor-stap opbouw
+- Modellen presenteren als werkelijkheid in plaats van als analytisch gereedschap
+- Alleen correcte informatie presenteren en verwachten dat misconcepties verdwijnen
 
 ---
 
-Apply this skill to the following task: $ARGUMENTS
+*This skill defines WHAT to teach and WHY. For HOW to package it, see the relevant product skill: econ-word-templates (Word), econ-pptx-templates (PowerPoint), economic-graph (graphs/diagrams), or the textbook-builder skill (textbooks).*

@@ -154,6 +154,9 @@ Skills staan in `skills/`. Ze worden automatisch geladen op basis van de taak.
 | Begeleide inoefening maken | `econ-word-templates` + `econ-didactiek` |
 | Opgaven/antwoorden maken | `econ-word-templates` + `econ-didactiek` |
 | Hoofdstuksamenvatting maken | `aanpak-samenvattingen` + `econ-word-templates` + `economic-graph` |
+| Textbook paragraph bouwen | `econ-textbook-paragraph` + `econ-exercise-builder` + `econ-didactiek` + `economic-graph` + `econ-pdf-builder` |
+| Exercises genereren (standalone) | `econ-exercise-builder` + `econ-didactiek` + `economic-graph` |
+| Markdown → PDF exporteren | `econ-pdf-builder` + `economic-graph` |
 
 ---
 
