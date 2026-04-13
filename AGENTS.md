@@ -58,7 +58,8 @@ A student working through all materials for one paragraph should feel like they'
 │   ├── check-links.js          ← Verifieert alle interne links
 │   ├── verify-deployment.sh    ← Post-push verificatie
 │   └── pre-push-hook.js        ← Git hook
-├── skills/                     ← Shared skills (didactiek, templates, grafieken) — for Claude, Codex, and any agent
+├── skills/                     ← Shared skills (didactiek, templates, grafieken, quality control) — for Claude, Codex, and any agent
+├── references/                 ← Reference documents (inspectie-standaarden) — used by skills
 └── package.json                ← Jest voor tests
 ```
 
@@ -157,6 +158,7 @@ Skills staan in `skills/`. Ze worden automatisch geladen op basis van de taak.
 | Textbook paragraph bouwen | `econ-textbook-paragraph` + `econ-exercise-builder` + `econ-didactiek` + `economic-graph` + `econ-pdf-builder` |
 | Exercises genereren (standalone) | `econ-exercise-builder` + `econ-didactiek` + `economic-graph` |
 | Markdown → PDF exporteren | `econ-pdf-builder` + `economic-graph` |
+| Consolidatie/toets bouwen | `econ-consolidation-builder` + `econ-didactiek` + `economic-graph` + `econ-pdf-builder` |
 
 ---
 

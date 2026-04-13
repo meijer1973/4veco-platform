@@ -252,6 +252,29 @@ python build-scripts/convert_vaardigheden.py "$PAR"
 python build-scripts/convert_begeleide_inoefening.py "$PAR"
 ```
 
+### Phase 5b: Didactic and precision review (10 min)
+
+After all components are built, run the two-pass review using `econ-paragraph-review`:
+
+1. **Pass 1 — Didactic architecture**: opening/motivation, scaffolding sequence, dual coding + fading, misconception handling, exercise design, summary completeness
+2. **Pass 2 — Mathematical precision**: graph accuracy (slopes, intercepts, point-curve consistency), algebra (domain restrictions, piecewise functions), terminology consistency, answer verification, cross-paragraph consistency
+3. Fix all FAIL items before proceeding. Document any FLAG items.
+
+This review catches errors before they reach students. A slope error in a well-scaffolded paragraph is worse than a missing hint — students learn the wrong thing effectively.
+
+### Phase 5c: Generate quality_ref (5 min)
+
+After all components are built and reviewed, generate the quality_ref using `econ-quality-control` (Part 2):
+
+1. Read `econ-quality-control` skill — check freshness of `references/inspectie-standaarden.md` (Part 0)
+2. Inventory all 14 possible components — which are present for this paragraph?
+3. Extract leerdoelen from the uitleg-vaardigheden document, map to eindtermen + Bloom levels
+4. For each present component: fill in doel, inspectie standards, didactiek principles (use mapping tables in skill Part 2.3/2.4)
+5. Write verantwoording section — one sentence per category, honest about gaps
+6. Save as `<paragraph-folder>/X.Y.Z-quality-ref.yaml`
+
+The quality_ref is internal documentation. It powers on-demand quality reports (paragraph, chapter, module, course level) — see `econ-quality-control` Part 3.
+
 ### Phase 6: Deploy (2 min)
 ```bash
 node scripts/deploy.js "$MODULE"
@@ -270,6 +293,8 @@ This runs ONLY the automated layer: engine copy, game shell generation, landing 
 - [ ] **Dual coding**: vaardigheden and voorkennis .docx files contain embedded graphs from `_assets/` (not text-only)
 - [ ] **Unified experience**: stappenplan game procedures use the same step labels and sequence as vaardigheden skills
 - [ ] **Visuelen-toewijzing**: every visual listed for a builder in the plan is actually embedded in that builder's output
+- [ ] **Paragraph review**: `econ-paragraph-review` both passes run, all FAIL items resolved
+- [ ] **Quality_ref**: `X.Y.Z-quality-ref.yaml` exists, all leerdoelen mapped, verantwoording complete
 - [ ] Browser: all 4 games load, all section cards appear in landing page
 - [ ] Data tests pass: `MODULE_ROOT="$MODULE" npx jest --testPathPatterns "engines/tests/.*-data\.test\.js"`
 
@@ -431,3 +456,5 @@ If a build script is not saved, the paragraph build is **incomplete**.
 | Build shared visuals in `_assets/` before Phase 4c | One graph, many documents — fix once instead of fixing in 3 separate scripts |
 | Use `lib-svg-utils.js` instead of inline `svgToPng()` | The same function was copy-pasted in 8 scripts — import the shared library instead |
 | Begeleide inoefening MUST have `scaffoldImage` for graph exercises | This document is scaffolding for weaker students — visual support is essential, not optional |
+| Run `econ-paragraph-review` two-pass review before delivering | Catches slope errors, missing domain restrictions, broken dual coding, and other issues that are hard to fix after delivery |
+| Generate `quality_ref` YAML after every paragraph build | Powers inspectie-verantwoording and quality reports at chapter/module/course level — see `econ-quality-control` skill |

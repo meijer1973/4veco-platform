@@ -12,6 +12,8 @@ Builds one complete textbook paragraph: theory + worked example + exercises + gr
 - `econ-exercise-builder` → generates `exercises.md` and `answers.md` (run first)
 - `economic-graph` → generates SVG/PNG graphs (called during build)
 - `econ-pdf-builder` → PDF export pipeline (styling, page breaks, image embedding)
+- `econ-quality-control` → quality assurance: generate quality_ref after build, on-demand quality reports
+- `econ-paragraph-review` → two-pass review protocol: didactic architecture + mathematical precision
 
 ---
 
@@ -25,30 +27,40 @@ Builds one complete textbook paragraph: theory + worked example + exercises + gr
 
 ### 1.2 Output files
 
-Per paragraph, saved to `/output/B{book}C{chapter}S{paragraph}/`:
+Per paragraph, saved to `<output-folder>/X.Y.Z [Name]/` (e.g., `1.2.2 Vraagfactoren/`):
 
 | File | Purpose |
 |------|---------|
-| `paragraph.md` | Complete textbook paragraph in markdown |
-| `answers.md` | Answer model (copied/linked from exercise builder) |
-| `assets/*.svg` | All graphs and diagrams as SVG |
-| `assets/*.png` | All graphs and diagrams as PNG (rasterised from SVG) |
-| `paragraph.pdf` | PDF export of paragraph.md with embedded images |
+| `X.Y.Z [Name] – paragraaf.md` | Complete textbook paragraph in markdown |
+| `X.Y.Z [Name] – opgaven.md` | Exercise set (exercises only, no theory) |
+| `X.Y.Z [Name] – antwoorden.md` | Answer model with step-by-step solutions |
+| `X.Y.Z [Name] – paragraaf.pdf` | PDF export of paragraaf.md with embedded images |
+| `X.Y.Z [Name] – opgaven.pdf` | PDF export of opgaven.md |
+| `X.Y.Z [Name] – antwoorden.pdf` | PDF export of antwoorden.md |
+| `_assets/*.svg` | All graphs and diagrams as SVG |
+| `_assets/*.png` | All graphs and diagrams as PNG (rasterised from SVG) |
+| `build_pdf.py` | PDF build script (paragraph-specific CSS + paths) |
 
 ### 1.3 File naming convention
 
+**Main files:** `X.Y.Z [Name] – <type>.<ext>` where X=book, Y=chapter, Z=paragraph. Types: `paragraaf`, `opgaven`, `antwoorden`. Use en-dash (–), not hyphen (-).
+
+**Assets:**
 ```
-assets/B{book}C{chapter}S{paragraph}_{type}_{number}.svg
-assets/B{book}C{chapter}S{paragraph}_{type}_{number}.png
+_assets/B{X}C{Y}S{Z}_{type}_{number}.svg
+_assets/B{X}C{Y}S{Z}_{type}_{number}.png
 ```
 
 Types: `fig` (graphs/diagrams in theory), `ex` (graphs in exercises), `we` (worked example graphs)
 
 Examples:
 ```
-assets/B2C1S2_fig_1.svg      — first theory figure
-assets/B2C1S2_we_1.svg       — worked example graph
-assets/B2C1S2_ex_1.svg       — exercise 1 graph (from exercise builder)
+1.2.2 Vraagfactoren – paragraaf.md    — main paragraph file
+1.2.2 Vraagfactoren – opgaven.md      — exercises
+1.2.2 Vraagfactoren – antwoorden.md   — answer model
+_assets/B1C2S2_fig_1.svg               — first theory figure
+_assets/B1C2S2_we_1.svg                — worked example graph
+_assets/B1C2S2_ex_1.svg                — exercise 1 graph
 ```
 
 ---
@@ -166,13 +178,13 @@ Graphs are built **step by step** in the theory text — never dropped in as fin
 We tekenen eerst de vraaglijn. Bij Q = 0 is de prijs €50 (het y-snijpunt). 
 Bij P = 0 is de gevraagde hoeveelheid 100 stuks (het x-snijpunt).
 
-![Figuur 1: De vraaglijn](assets/B2C2S1_fig_1.svg)
+![Figuur 1: De vraaglijn](_assets/B2C2S1_fig_1.svg)
 
 Nu voegen we de aanbodlijn toe. Het aanbod begint bij P = €5 
 (producenten bieden pas aan als de prijs boven €5 komt). 
 Bij Q = 60 is de prijs €20.
 
-![Figuur 2: Vraag en aanbod samen](assets/B2C2S1_fig_2.svg)
+![Figuur 2: Vraag en aanbod samen](_assets/B2C2S1_fig_2.svg)
 
 Het snijpunt van vraag en aanbod is het evenwicht: P* = €20, Q* = 60.
 ```
@@ -205,7 +217,7 @@ Rules:
 
 **Recall box (backward):** when a prerequisite skill is needed.
 ```markdown
-> **📋 Herhaling uit §X.Y**
+> **📋 Herhaling uit §X.Y.Z**
 > De evenwichtsprijs vind je door Qv = Qa te stellen en op te lossen naar P.
 ```
 
@@ -218,7 +230,7 @@ Rules:
 At the end of every paragraph:
 
 ```markdown
-> **Samenvatting §X.Y**
+> **Samenvatting §X.Y.Z**
 > - [Key insight 1]
 > - [Key insight 2]
 > - [Key formula]
@@ -240,8 +252,8 @@ Rules:
 2. Write a graph specification for each (see `econ-exercise-builder` §6.2 for format)
 3. Call `economic-graph` skill to generate SVG
 4. Rasterise SVG → PNG using `sharp` (as per `economic-graph` pipeline)
-5. Save both SVG and PNG to `assets/`
-6. Reference SVGs in markdown: `![caption](assets/filename.svg)`
+5. Save both SVG and PNG to `_assets/`
+6. Reference PNGs in markdown: `![caption](_assets/filename.png)`
 
 ### 4.1.bis Crowded-curve fix: split into side-by-side panels
 
@@ -257,10 +269,10 @@ Use the rule labels (§4.5) to make the contrast between the two panels explicit
 For theory sections where a graph is built incrementally (§3.4), generate **separate SVG files** for each stage:
 
 ```
-assets/B2C2S1_fig_1.svg  — demand curve only
-assets/B2C2S1_fig_2.svg  — demand + supply
-assets/B2C2S1_fig_3.svg  — demand + supply + equilibrium + labels
-assets/B2C2S1_fig_4.svg  — full graph with surplus shading
+_assets/B2C2S1_fig_1.svg  — demand curve only
+_assets/B2C2S1_fig_2.svg  — demand + supply
+_assets/B2C2S1_fig_3.svg  — demand + supply + equilibrium + labels
+_assets/B2C2S1_fig_4.svg  — full graph with surplus shading
 ```
 
 Each subsequent figure adds elements to the previous one. Axes, scale, and positioning must be identical across all stages so the student sees accumulation, not a different graph.
@@ -320,7 +332,7 @@ Place the summary visual immediately after the section that introduces the list,
 ```markdown
 Figuur 5 vat de vijf vraagfactoren in één beeld samen.
 
-![Figuur 5: De vijf vraagfactoren — overzicht](assets/B1C2S2_fig_5.svg)
+![Figuur 5: De vijf vraagfactoren — overzicht](_assets/B1C2S2_fig_5.svg)
 ```
 
 **Why:** A bulleted list is text-only and misses the dual coding opportunity. A single overview graphic gives students a visual hook they can recall later. Do NOT skip this step even when the items are described well in prose.
@@ -372,7 +384,7 @@ Use a colored stroke that matches the corresponding curve color (blue for moveme
 
 **Why:** Students re-scan figures during revision without re-reading the surrounding paragraphs. Rule labels embedded in the figure mean the rule is recoverable from the figure alone — the figure becomes a self-contained study aid.
 
-### 4.3 Supply curve rule
+### 4.6 Supply curve rule
 
 Supply lines always extend to the P-axis (y-axis), even when the y-intercept is negative. Supply lines never cross the Q-axis.
 
@@ -404,7 +416,7 @@ For PDF export (image embedding, CSS styling, page breaks, weasyprint pipeline),
 9. □ Theory graphs built step by step (not dropped in complete)
 10. □ All graphs generated via `economic-graph` skill with coordinate verification
 11. □ Supply lines extend to P-axis, never cross Q-axis
-12. □ SVG and PNG both saved to `assets/`
+12. □ SVG and PNG both saved to `_assets/`
 13. □ Axes, scale, positioning identical across incremental theory figures
 
 **Format checks:**
@@ -418,6 +430,18 @@ For PDF export (image embedding, CSS styling, page breaks, weasyprint pipeline),
 **Time check:**
 20. □ Exercise set fits 40–60 min student work time (cross-check with exercise builder)
 
+**Didactic and precision review (before quality_ref):**
+21. □ Run `econ-paragraph-review` Pass 1 (didactic architecture): opening, scaffolding, dual coding, fading, misconceptions, exercises, summary
+22. □ Run `econ-paragraph-review` Pass 2 (mathematical precision): graph accuracy, algebra, terminology, answer verification, cross-paragraph consistency
+23. □ All FAIL items resolved; FLAG items addressed or documented
+
+**Quality control (after review passes):**
+24. □ Generate `quality_ref` using `econ-quality-control` skill (Part 2)
+25. □ Store as `[paragraph-code]-quality-ref.yaml` in the paragraph folder
+26. □ All leerdoelen mapped to eindtermen with Bloom levels
+27. □ All present components documented with inspectie standards and didactiek principles
+28. □ Verantwoording section filled in honestly (flag weak points)
+
 ---
 
-*This skill builds textbook paragraphs. For exercise generation, see `econ-exercise-builder`. For pedagogical principles, see `econ-didactiek`. For graph generation, see `economic-graph`. For PDF export, see `econ-pdf-builder`.*
+*This skill builds textbook paragraphs. For exercise generation, see `econ-exercise-builder`. For pedagogical principles, see `econ-didactiek`. For graph generation, see `economic-graph`. For PDF export, see `econ-pdf-builder`. For paragraph review, see `econ-paragraph-review`. For quality assurance, see `econ-quality-control`.*

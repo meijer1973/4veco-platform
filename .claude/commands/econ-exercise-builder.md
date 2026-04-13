@@ -26,13 +26,15 @@ Additionally, the builder needs:
 
 ### 1.2 Output files
 
-Per paragraph, saved to `/output/B{book}C{chapter}S{paragraph}/`:
+Per paragraph, saved to `<output-folder>/X.Y.Z [Name]/` (e.g., `1.2.2 Vraagfactoren/`):
 
 | File | Contents |
 |------|----------|
-| `exercises.md` | Numbered exercise set, ready for textbook integration |
-| `answers.md` | Full answer models with step-by-step solutions and "waarom" explanations |
-| `assets/` | SVG and PNG files for any graphs referenced in exercises |
+| `X.Y.Z [Name] – opgaven.md` | Numbered exercise set, ready for textbook integration |
+| `X.Y.Z [Name] – antwoorden.md` | Full answer models with step-by-step solutions and "waarom" explanations |
+| `_assets/` | SVG and PNG files for any graphs referenced in exercises |
+
+File naming: use en-dash (–), not hyphen (-). See `econ-textbook-paragraph` §1.3 for the full convention.
 
 ---
 
@@ -236,7 +238,7 @@ Antwoord: [final answer with units]
 - **Always include units.** Every numerical answer has a unit (€, %, stuks, eenheden).
 - **Always include "Waarom".** At least for the final answer of each sub-question: why does this answer make economic sense? This prevents students from memorising procedures without understanding.
 - **Rounding:** state the rounding rule once at the top of the answer model (e.g., "Rond af op 2 decimalen tenzij anders aangegeven"). Apply consistently.
-- **Graph answers:** include a reference to the graph file in `assets/`. The graph must show the complete solution (all curves, equilibrium points, shaded areas, labels).
+- **Graph answers:** include a reference to the graph file in `_assets/`. The graph must show the complete solution (all curves, equilibrium points, shaded areas, labels).
 - **Concept precision (MANDATORY).** When attributing a change to a vraagfactor / aanbodfactor / cost driver, always pick the **most economically specific category**. Do NOT blur "preferences" with "price of a substitute", or "demand factor" with "supply factor".
   - ❌ Wrong: "Petrol prices rise → biking becomes more attractive → preferences for biking changed → shift right"
   - ✅ Right: "Petrol prices rise → cars (substitute for the bike) become more expensive → price of substitute changes → shift right"
@@ -274,7 +276,7 @@ Skills from the previous chapter that haven't been practised since.
 - Keep interleaving exercises **short** (2–4 minutes each)
 - Use a **different context** from the original paragraph where the skill was taught
 - Do **not** add scaffolding — these are revision, not new learning
-- If a student cannot do an interleaving exercise, this signals a gap — note in the answer model: "Kun je deze opgave niet maken? Herhaal dan §X.Y."
+- If a student cannot do an interleaving exercise, this signals a gap — note in the answer model: "Kun je deze opgave niet maken? Herhaal dan §X.Y.Z."
 
 ---
 
@@ -297,7 +299,7 @@ Equilibrium: Q* = 25, P* = 25
 Shading: CS triangle (blue, low opacity)
 Labels: "V (vraag)", "A (aanbod)", "E (evenwicht)"
 Axis: x = "Hoeveelheid (Q)", y = "Prijs (€)"
-File: assets/B2C2S1_ex1_surplus.svg
+File: _assets/B2C2S1_ex_1.svg
 ```
 
 The `economic-graph` skill uses this spec to generate SVG + PNG.
@@ -313,7 +315,7 @@ Supply lines always extend to the P-axis (y-axis), even when the y-intercept is 
 ### 7.1 exercises.md structure
 
 ```markdown
-# Opgaven §X.Y — [Title from blueprint]
+# Opgaven §X.Y.Z — [Title from blueprint]
 
 ## Uitgewerkt voorbeeld
 
@@ -326,7 +328,7 @@ Supply lines always extend to the P-axis (y-axis), even when the y-intercept is 
 **Opgave 1** *(met grafiek — zie figuur 1)*
 [Exercise text]
 
-![Figuur 1: beschrijving](assets/B1C2S1_ex1_name.svg)
+![Figuur 1: beschrijving](_assets/B1C2S1_ex_1.svg)
 
 **Opgave 2** *(met grafiek — zie figuur 2)*
 [Exercise text at target difficulty]
@@ -344,10 +346,10 @@ Supply lines always extend to the P-axis (y-axis), even when the y-intercept is 
 
 ## Interleaving
 
-**Opgave 6** *(herhaling §X.Y: [skill name])*
+**Opgave 6** *(herhaling §X.Y.Z: [skill name])*
 [Quick revision exercise]
 
-**Opgave 7** *(herhaling §X.Y: [skill name])*
+**Opgave 7** *(herhaling §X.Y.Z: [skill name])*
 [Quick revision exercise]
 
 ---
@@ -368,7 +370,7 @@ Supply lines always extend to the P-axis (y-axis), even when the y-intercept is 
 ### 7.2 answers.md structure
 
 ```markdown
-# Antwoorden §X.Y — [Title]
+# Antwoorden §X.Y.Z — [Title]
 
 **Afrondingsregel:** [state once]
 
