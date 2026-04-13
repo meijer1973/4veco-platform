@@ -241,7 +241,7 @@ quality_ref:
     missing: []                     # list of missing asset filenames (empty = good)
     orphaned: []                    # assets in _assets/ not referenced in any .md
     svgpng_paired: true             # every .svg has a .png and vice versa
-    naming_compliant: true          # all assets follow B{X}C{Y}S{Z}_{type}_{number} convention
+    naming_compliant: true          # all assets follow X.Y.Z_{type}_{number} convention
 
   # --- VERANTWOORDING ---
   # Short justification of key design choices

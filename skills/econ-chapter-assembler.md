@@ -188,14 +188,17 @@ The front page uses the same base font size (11pt) as the rest of the document. 
 
 ### 3.1 Input files
 
-The assembler expects the following folder structure (one folder per paragraph, using the `X.Y.Z [Name]` convention):
+The assembler expects paragraph folders **inside** the chapter folder:
 
 ```
-<output-folder>/X.Y.1 [Name]/X.Y.1 [Name] – paragraaf.md    + _assets/
-<output-folder>/X.Y.2 [Name]/X.Y.2 [Name] – paragraaf.md    + _assets/
-<output-folder>/X.Y.3 [Name]/X.Y.3 [Name] – paragraaf.md    + _assets/
-<output-folder>/X.Y.4 [Name]/X.Y.4 [Name] – opgaven.md      + _assets/   (consolidation)
+X.Y Hoofdstuk [Name]/                              ← chapter folder (this is where build_chapter.py lives)
+  X.Y.1 [Name]/X.Y.1 [Name] – paragraaf.md    + _assets/
+  X.Y.2 [Name]/X.Y.2 [Name] – paragraaf.md    + _assets/
+  X.Y.3 [Name]/X.Y.3 [Name] – paragraaf.md    + _assets/
+  X.Y.4 [Name]/X.Y.4 [Name] – opgaven.md      + _assets/   (consolidation)
 ```
+
+In `build_chapter.py`, use `MODULE = BASE` (not `BASE.parent`) since paragraphs are in the same directory.
 
 Plus the blueprint paragraph specs for lesson goals and titles.
 
@@ -237,7 +240,7 @@ for paragraph in paragraphs:
 
 ### 3.4 Asset collection
 
-All paragraph assets are already namespaced (e.g., `B1C2S1_fig_1.png`, `B1C2S3_ex_2.png`), so no renaming is needed. Collect into a single `_assets/` folder:
+All paragraph assets are already namespaced (e.g., `1.2.1_fig_1.png`, `1.2.3_ex_2.png`), so no renaming is needed. Collect into a single `_assets/` folder:
 
 ```python
 import shutil, glob

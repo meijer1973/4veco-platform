@@ -299,7 +299,7 @@ Equilibrium: Q* = 25, P* = 25
 Shading: CS triangle (blue, low opacity)
 Labels: "V (vraag)", "A (aanbod)", "E (evenwicht)"
 Axis: x = "Hoeveelheid (Q)", y = "Prijs (€)"
-File: _assets/B2C2S1_ex_1.svg
+File: _assets/2.2.1_ex_1.svg
 ```
 
 The `economic-graph` skill uses this spec to generate SVG + PNG.
@@ -328,7 +328,7 @@ Supply lines always extend to the P-axis (y-axis), even when the y-intercept is 
 **Opgave 1** *(met grafiek — zie figuur 1)*
 [Exercise text]
 
-![Figuur 1: beschrijving](_assets/B1C2S1_ex_1.svg)
+![Figuur 1: beschrijving](_assets/1.2.1_ex_1.svg)
 
 **Opgave 2** *(met grafiek — zie figuur 2)*
 [Exercise text at target difficulty]
@@ -422,7 +422,7 @@ After generating opgaven.md and antwoorden.md, run these checks before deliverin
 1. □ Extract all `![...](...)` image references from both files
 2. □ Verify each referenced asset exists in `_assets/` (both `.svg` and `.png`)
 3. □ If ANY are missing → the exercise set is **NOT complete**. Generate the missing graphs before delivering.
-4. □ Verify asset naming follows convention: `B{X}C{Y}S{Z}_{type}_{number}.{ext}`
+4. □ Verify asset naming follows convention: `X.Y.Z_{type}_{number}.{ext}`
 
 **A delivered exercise set with missing graph files is a broken deliverable, not a complete one.**
 

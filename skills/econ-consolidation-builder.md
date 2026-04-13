@@ -93,7 +93,7 @@ Design: boxes contain variable names (not explanations), arrows show causation d
 |---------|---------|---------|
 | ...     | ...     | ...     |
 
-![Figuur 1: beschrijvende titel](_assets/B{X}C{Y}S{Z}_fig_{N}.svg)
+![Figuur 1: beschrijvende titel](_assets/X.Y.Z_fig_{N}.svg)
 
 ---
 ```
@@ -307,7 +307,7 @@ Saved to `<output-folder>/X.Y.Z [Name]/` (e.g., `1.2.4 Consolidatie vraag en aan
 | `_assets/*.svg, *.png` | Source graphs/diagrams + answer graphs |
 | `build_pdf.py` | PDF build script |
 
-Asset naming: `_assets/B{X}C{Y}S{Z}_{type}_{number}.svg` (see `econ-textbook-paragraph` §1.3).
+Asset naming: `_assets/X.Y.Z_{type}_{number}.svg` (see `econ-textbook-paragraph` §1.3).
 
 ### 8.2 Per test
 

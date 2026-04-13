@@ -47,8 +47,8 @@ Per paragraph, saved to `<output-folder>/X.Y.Z [Name]/` (e.g., `1.2.2 Vraagfacto
 
 **Assets:**
 ```
-_assets/B{X}C{Y}S{Z}_{type}_{number}.svg
-_assets/B{X}C{Y}S{Z}_{type}_{number}.png
+_assets/X.Y.Z_{type}_{number}.svg
+_assets/X.Y.Z_{type}_{number}.png
 ```
 
 Types: `fig` (graphs/diagrams in theory), `ex` (graphs in exercises), `we` (worked example graphs)
@@ -58,9 +58,9 @@ Examples:
 1.2.2 Vraagfactoren – paragraaf.md    — main paragraph file
 1.2.2 Vraagfactoren – opgaven.md      — exercises
 1.2.2 Vraagfactoren – antwoorden.md   — answer model
-_assets/B1C2S2_fig_1.svg               — first theory figure
-_assets/B1C2S2_we_1.svg                — worked example graph
-_assets/B1C2S2_ex_1.svg                — exercise 1 graph
+_assets/1.2.2_fig_1.svg               — first theory figure
+_assets/1.2.2_we_1.svg                — worked example graph
+_assets/1.2.2_ex_1.svg                — exercise 1 graph
 ```
 
 ---
@@ -178,13 +178,13 @@ Graphs are built **step by step** in the theory text — never dropped in as fin
 We tekenen eerst de vraaglijn. Bij Q = 0 is de prijs €50 (het y-snijpunt). 
 Bij P = 0 is de gevraagde hoeveelheid 100 stuks (het x-snijpunt).
 
-![Figuur 1: De vraaglijn](_assets/B2C2S1_fig_1.svg)
+![Figuur 1: De vraaglijn](_assets/2.2.1_fig_1.svg)
 
 Nu voegen we de aanbodlijn toe. Het aanbod begint bij P = €5 
 (producenten bieden pas aan als de prijs boven €5 komt). 
 Bij Q = 60 is de prijs €20.
 
-![Figuur 2: Vraag en aanbod samen](_assets/B2C2S1_fig_2.svg)
+![Figuur 2: Vraag en aanbod samen](_assets/2.2.1_fig_2.svg)
 
 Het snijpunt van vraag en aanbod is het evenwicht: P* = €20, Q* = 60.
 ```
@@ -269,10 +269,10 @@ Use the rule labels (§4.5) to make the contrast between the two panels explicit
 For theory sections where a graph is built incrementally (§3.4), generate **separate SVG files** for each stage:
 
 ```
-_assets/B2C2S1_fig_1.svg  — demand curve only
-_assets/B2C2S1_fig_2.svg  — demand + supply
-_assets/B2C2S1_fig_3.svg  — demand + supply + equilibrium + labels
-_assets/B2C2S1_fig_4.svg  — full graph with surplus shading
+_assets/2.2.1_fig_1.svg  — demand curve only
+_assets/2.2.1_fig_2.svg  — demand + supply
+_assets/2.2.1_fig_3.svg  — demand + supply + equilibrium + labels
+_assets/2.2.1_fig_4.svg  — full graph with surplus shading
 ```
 
 Each subsequent figure adds elements to the previous one. Axes, scale, and positioning must be identical across all stages so the student sees accumulation, not a different graph.
@@ -332,7 +332,7 @@ Place the summary visual immediately after the section that introduces the list,
 ```markdown
 Figuur 5 vat de vijf vraagfactoren in één beeld samen.
 
-![Figuur 5: De vijf vraagfactoren — overzicht](_assets/B1C2S2_fig_5.svg)
+![Figuur 5: De vijf vraagfactoren — overzicht](_assets/1.2.2_fig_5.svg)
 ```
 
 **Why:** A bulleted list is text-only and misses the dual coding opportunity. A single overview graphic gives students a visual hook they can recall later. Do NOT skip this step even when the items are described well in prose.
@@ -427,7 +427,7 @@ For PDF export (image embedding, CSS styling, page breaks, weasyprint pipeline),
 15. □ No difficulty ratings or time estimates in student-facing markdown
 16. □ Definition boxes, formula boxes, warning boxes visually distinct
 17. □ Summary box present with ≤5 points and forward pointer
-18. □ File naming follows convention: `B{book}C{chapter}S{paragraph}_type_number`
+18. □ File naming follows convention: `X.Y.Z_type_number`
 19. □ PDF exported via `econ-pdf-builder` without errors
 
 **Time check:**

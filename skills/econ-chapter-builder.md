@@ -20,16 +20,77 @@ End-to-end orchestrator for building a complete textbook chapter from blueprint 
 
 ---
 
-## PART 1: INPUT
+## PART 1: INPUT AND FOLDER STRUCTURE
 
-Required:
+### 1.1 Required input
+
 1. **Blueprint chapter spec** — the chapter section from the course blueprint (e.g., `course_blueprint_v3.md`). Contains: paragraph titles, target exercises, lesson goals, difficulty notes.
-2. **Output folder** — where to save all output (e.g., `module test/`)
+2. **Output folder** — the parent folder where the chapter folder will be created (e.g., `module test/`)
 3. **Chapter number** — X.Y format (e.g., 1.3)
 
 Optional:
 - Prior chapter context — if this is not the first chapter, a brief summary of what students already know
 - Specific conventions — notation, colour palette, shared contexts decided by the teacher
+
+### 1.2 Folder hierarchy (MANDATORY)
+
+All paragraph folders go **inside** the chapter folder. Never create paragraph folders alongside the chapter folder.
+
+```
+<output-folder>/
+  X.Y Hoofdstuk [Name]/                          ← chapter folder
+    X.Y.1 [Paragraph 1 name]/                    ← paragraph folder (inside chapter)
+      X.Y.1 [Name] – paragraaf.md
+      X.Y.1 [Name] – opgaven.md
+      X.Y.1 [Name] – antwoorden.md
+      X.Y.1 [Name] – paragraaf.pdf
+      X.Y.1 [Name] – opgaven.pdf
+      X.Y.1 [Name] – antwoorden.pdf
+      build_pdf.py
+      _assets/
+        X.Y.1_fig_1.svg + .png
+        X.Y.1_ex_1.svg + .png
+        ...
+    X.Y.2 [Paragraph 2 name]/
+      ...
+    X.Y.3 [Paragraph 3 name]/
+      ...
+    X.Y.4 Gemengde opgaven/                       ← consolidation
+      X.Y.4 Gemengde opgaven – opgaven.md
+      X.Y.4 Gemengde opgaven – antwoorden.md
+      ...
+    _assets/                                      ← chapter-level (collected from all paragraphs)
+    X.Y [Name] – hoofdstuk.md
+    X.Y [Name] – hoofdstuk.html
+    X.Y [Name] – hoofdstuk.pdf
+    X.Y [Name] – antwoorden.md
+    X.Y [Name] – antwoorden.html
+    X.Y [Name] – antwoorden.pdf
+    build_chapter.py
+    _chapter-plan.md
+```
+
+### 1.3 Naming rules
+
+| Element | Convention | Example |
+|---------|-----------|---------|
+| Chapter folder | `X.Y Hoofdstuk [Name]` | `1.3 Hoofdstuk Aanbod en kosten` |
+| Paragraph folder | `X.Y.Z [Name]` — must match file prefix | `1.3.2 Kostenstructuren` |
+| Main files | `X.Y.Z [Name] – <type>.<ext>` with en-dash (–) | `1.3.2 Kostenstructuren – paragraaf.md` |
+| Chapter files | `X.Y [Name] – <type>.<ext>` (no "Hoofdstuk") | `1.3 Aanbod en kosten – hoofdstuk.pdf` |
+| Assets | `X.Y.Z_{type}_{number}.{svg\|png}` | `1.3.2_fig_1.svg` |
+
+**The folder name must exactly match the file prefix.** If files say `1.2.3 Van individuele naar collectieve vraag – paragraaf.md`, the folder must be `1.2.3 Van individuele naar collectieve vraag`, not `1.2.3 Collectieve vraag`.
+
+### 1.4 build_chapter.py path rule
+
+In `build_chapter.py`, paragraph folders are referenced relative to the chapter folder (same directory), NOT from the parent:
+
+```python
+BASE = Path(__file__).parent          # chapter folder
+MODULE = BASE                         # paragraphs are INSIDE the chapter folder
+# NOT: MODULE = BASE.parent           # WRONG — this would look outside the chapter
+```
 
 ---
 
@@ -152,7 +213,7 @@ Required files:
 Asset checks:
   □ Every ![...] reference in .md files → file exists in _assets/
   □ Every .svg has a matching .png
-  □ Asset names follow B{X}C{Y}S{Z}_{type}_{number} convention
+  □ Asset names follow X.Y.Z_{type}_{number} convention
   □ No orphaned assets
 ```
 
@@ -218,6 +279,15 @@ Follow `econ-chapter-assembler` skill exactly:
 | _assets/ has SVG+PNG pairs | count + pair check |
 | 0 broken image refs | grep refs → verify existence |
 | Asset naming convention followed | regex check on filenames |
+
+### Folder structure:
+
+| Check | Method |
+|---|---|
+| Paragraph folders are INSIDE the chapter folder | ls — no paragraph folders at the same level as the chapter folder |
+| Folder names match file prefixes | For each paragraph: folder name == file prefix before " – " |
+| Asset naming uses X.Y.Z (not B{X}C{Y}S{Z}) | regex check on all files in _assets/ |
+| build_chapter.py uses MODULE = BASE (not BASE.parent) | grep the script |
 
 ### Chapter level:
 
