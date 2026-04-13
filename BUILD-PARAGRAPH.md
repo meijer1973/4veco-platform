@@ -1,12 +1,117 @@
 # How to Build a Complete Paragraph
 
-From raw exercises to finished interactive lesson page. This document is the single source of truth for the paragraph production process.
+This document covers two pipelines that can run independently or together.
+
+| Mode | What it produces | When to use |
+|------|-----------------|-------------|
+| **Part A only** | Textbook paragraph: markdown + graphs + PDFs | Building chapters via `econ-chapter-builder` |
+| **Part B only** | Platform paragraph: 24 files (docx, pptx, html games, deploy) | Adding to the interactive platform when textbook content already exists |
+| **Both (A → B)** | Complete paragraph: textbook + platform | Full production from scratch |
 
 > **Before you start:** Read the **Design Principles** section in [AGENTS.md](AGENTS.md#design-principles). Two principles govern everything: **Dual Coding** (every concept pairs text with a visual) and **Unified Student Experience** (same procedures and approaches across all formats). These are non-negotiable.
 
 ---
 
-## 1. Definition of Done
+# PART A: TEXTBOOK BUILD (markdown → graphs → PDF)
+
+Produces the textbook paragraph: theory, exercises, answer models, graphs, and PDFs. Used by `econ-chapter-builder` for chapter assembly. Can run standalone.
+
+**Skills:** `econ-textbook-paragraph`, `econ-exercise-builder`, `economic-graph`, `econ-pdf-builder`
+
+## A1: Input
+
+- **Blueprint paragraph spec** — target exercise, lesson goals, difficulty notes
+- **Shared conventions** — from `_chapter-plan.md` if building as part of a chapter (notation, colours, shared contexts, interleaving targets)
+- **Prior paragraph context** — if this paragraph depends on an earlier one (key formulas, terminology)
+
+## A2: Build content
+
+Follow `econ-textbook-paragraph` skill exactly:
+
+1. Write `X.Y.Z [Name] – paragraaf.md` — theory + worked example + summary + exercises (all in one file)
+2. Extract exercises into `X.Y.Z [Name] – opgaven.md` — from "## Uitgewerkt voorbeeld" through end
+3. Write `X.Y.Z [Name] – antwoorden.md` — complete answer model with step-by-step solutions
+
+For consolidation paragraphs (last § in chapter), follow `econ-consolidation-builder` instead:
+1. Write `X.Y.Z Gemengde opgaven – opgaven.md` — source material + exercises
+2. Write `X.Y.Z Gemengde opgaven – antwoorden.md` — answer model
+3. No paragraaf.md — consolidation has no theory section
+
+## A3: Build graphs
+
+Follow `economic-graph` skill:
+
+1. Create `_assets/` folder in the paragraph folder
+2. Generate SVG for every graph referenced in the markdown
+3. Convert each SVG to PNG (via cairosvg or sharp)
+4. Save both in `_assets/` with naming: `X.Y.Z_{type}_{number}.{svg|png}`
+   - Types: `fig` (theory), `ex` (exercises), `we` (worked example)
+
+## A4: Build PDFs
+
+1. Create `build_pdf.py` (adapt from existing template — `ASSET_DIR="_assets"`, strip Pandoc defaults, paragraph name in footer)
+2. Run to generate: paragraaf.pdf, opgaven.pdf, antwoorden.pdf (or opgaven.pdf + antwoorden.pdf for consolidation)
+3. Use WeasyPrint (prepend `C:/msys64/mingw64/bin` to PATH)
+
+## A5: Asset completeness gate (HARD GATE)
+
+Before any review, verify:
+
+1. Every `![...](...)` reference in .md files → file exists in `_assets/`
+2. Every `.svg` has a matching `.png`
+3. Asset naming follows `X.Y.Z_{type}_{number}.{ext}`
+4. No orphaned assets (files in `_assets/` not referenced in any .md)
+5. All PDFs exist and are >10KB
+
+**If anything fails → go back and fix it. Cannot proceed with missing assets.**
+
+## A6: QC review (INDEPENDENT SUB-AGENT — MANDATORY)
+
+Run `econ-paragraph-review` via a separate sub-agent (not the builder):
+
+> "You are a QC reviewer. You did NOT build this paragraph. Read `econ-paragraph-review`, then review the paragraph at [path]. Run Pass 0 (asset integrity), Pass 1 (didactic), Pass 2 (mathematical). Report all issues."
+
+Save output as `X.Y.Z-review.md`. Fix all FAIL items before proceeding.
+
+The builder is **prohibited from** running this review itself.
+
+## A7: Quality ref (INDEPENDENT SUB-AGENT — MANDATORY)
+
+Generate `X.Y.Z-quality-ref.yaml` via a separate sub-agent:
+
+> "Read `econ-quality-control`. Inventory all components that actually exist (check file existence). Run asset integrity checks. Generate quality_ref YAML. Be honest about gaps."
+
+## A-verify: Part A checklist
+
+**Theory paragraphs:**
+- [ ] paragraaf.md, opgaven.md, antwoorden.md exist
+- [ ] paragraaf.pdf, opgaven.pdf, antwoorden.pdf exist (>10KB each)
+- [ ] build_pdf.py exists
+- [ ] `_assets/` has SVG+PNG pairs with `X.Y.Z_{type}_{number}` naming
+- [ ] 0 broken image references
+- [ ] `X.Y.Z-review.md` exists (from independent sub-agent)
+- [ ] `X.Y.Z-quality-ref.yaml` exists (from independent sub-agent)
+
+**Consolidation paragraphs:**
+- [ ] opgaven.md, antwoorden.md exist (no paragraaf.md)
+- [ ] opgaven.pdf, antwoorden.pdf exist (>10KB each)
+- [ ] build_pdf.py exists
+- [ ] `_assets/` has SVG+PNG pairs (if any graphs)
+- [ ] 0 broken image references
+- [ ] `X.Y.Z-review.md` exists
+- [ ] `X.Y.Z-quality-ref.yaml` exists
+
+**Part A is complete when all items are checked.**
+
+---
+
+# PART B: PLATFORM BUILD (docx, pptx, html, deploy)
+
+Produces the full interactive lesson page: 24 files including presentations, Word documents, HTML games, and deployment. Part B can reuse `_assets/` graphs from Part A.
+
+**If Part A was run first:** the `_assets/` folder already contains all graphs. Part B builders (presentatie, voorkennis, vaardigheden) embed these graphs rather than generating new ones.
+
+## B1. Definition of Done
 
 A complete paragraph has **24 files** plus an index.html. Every file listed as required MUST exist before the paragraph is considered done.
 
@@ -49,7 +154,7 @@ A complete paragraph has **24 files** plus an index.html. Every file listed as r
 
 ---
 
-## 2. Input contract
+## B2. Input contract
 
 These are the raw inputs needed to build one paragraph. They must exist BEFORE running any builder.
 
@@ -161,7 +266,7 @@ Each scripted-manual asset follows the same pattern: **read source → write bui
 
 ---
 
-## 3. End-to-end workflow
+## B3. End-to-end workflow
 
 This is the production sequence for one paragraph. Follow in order.
 
@@ -252,50 +357,14 @@ python build-scripts/convert_vaardigheden.py "$PAR"
 python build-scripts/convert_begeleide_inoefening.py "$PAR"
 ```
 
-### Phase 5a: Asset completeness gate (AUTOMATED — MANDATORY)
+### Phase 5a–5c: QC gates
 
-Before any review or quality check, verify that all referenced assets exist:
+If Part A was run first, these are already done (A5–A7). Skip to Phase 6.
 
-1. Extract every `![...](...)` reference from all `.md` files in the paragraph folder
-2. Verify each referenced file exists in `_assets/` (both `.svg` and `.png`)
-3. Verify no orphaned assets (files in `_assets/` not referenced in any `.md`)
-4. Verify asset naming follows `X.Y.Z_{type}_{number}.{ext}`
-
-**This is a hard gate.** If ANY referenced assets are missing, go back to Phase 4 and generate them. The paragraph cannot proceed past this point with missing assets.
-
-### Phase 5b: Didactic and precision review (INDEPENDENT SUB-AGENT — MANDATORY)
-
-After all components are built and assets verified, run the review using `econ-paragraph-review`.
-
-**This review MUST be run by a separate sub-agent**, NOT by the agent that built the paragraph. The builder has seen the content too many times and will rubber-stamp.
-
-Delegation instruction for the orchestrating agent:
-> Spawn a new sub-agent with: "You are a QC reviewer. You did NOT build this paragraph. Read the `econ-paragraph-review` skill, then review the paragraph at [path]. Run Pass 0 (asset integrity), Pass 1 (didactic architecture), and Pass 2 (mathematical precision). Report ALL issues with PASS/FLAG/FAIL ratings. Do not fix anything — only report."
-
-The builder agent receives the review report and fixes all FAIL items. The review sub-agent (or a new one) then re-reviews the fixed version.
-
-**The builder agent is PROHIBITED from:**
-- Running `econ-paragraph-review` itself
-- Declaring the paragraph "reviewed" without a sub-agent review report
-- Skipping the review because "the content looks good"
-
-### Phase 5c: Generate quality_ref (INDEPENDENT SUB-AGENT — MANDATORY)
-
-The quality_ref MUST be generated by a separate sub-agent (can be the same one that did the review, or a new one). The builder agent must not generate its own quality_ref — this prevents the builder from marking components as "present" when they are incomplete.
-
-Delegation instruction:
-> "Read the `econ-quality-control` skill. Inventory all components that actually exist for this paragraph (check file existence, not just intent). Run asset integrity checks and fill in the `assets` section of the YAML. Generate quality_ref YAML. Be honest about gaps — mark absent components as `aanwezig: false`."
-
-Steps:
-1. Read `econ-quality-control` skill — check freshness of `references/inspectie-standaarden.md` (Part 0)
-2. Inventory all 14 possible components — which are present for this paragraph?
-3. Run asset integrity checks — fill in the `assets` section (total_referenced, total_present, missing, orphaned, svgpng_paired, naming_compliant)
-4. Extract leerdoelen from the uitleg-vaardigheden document, map to eindtermen + Bloom levels
-5. For each present component: fill in doel, inspectie standards, didactiek principles (use mapping tables in skill Part 2.3/2.4)
-6. Write verantwoording section — one sentence per category, honest about gaps
-7. Save as `<paragraph-folder>/X.Y.Z-quality-ref.yaml`
-
-The quality_ref is internal documentation. It powers on-demand quality reports (paragraph, chapter, module, course level) — see `econ-quality-control` Part 3.
+If running Part B only (textbook content already exists), run these QC steps now:
+- **5a**: Asset completeness gate — see Part A §A5
+- **5b**: Didactic and precision review (independent sub-agent) — see Part A §A6
+- **5c**: Generate quality_ref (independent sub-agent) — see Part A §A7
 
 ### Phase 6: Deploy (2 min)
 ```bash
@@ -303,7 +372,12 @@ node scripts/deploy.js "$MODULE"
 ```
 This runs ONLY the automated layer: engine copy, game shell generation, landing pages, link check, data tests. It does NOT build rich documents.
 
-### Phase 7: Verify
+### B-verify: Part B checklist
+
+**Part A prerequisites (skip if running Part B only with existing content):**
+- [ ] Part A checklist passed (see A-verify above)
+
+**Platform files:**
 - [ ] `_paragraph-plan.md` exists and all sections are filled in
 - [ ] `_assets/` folder has PNGs matching every entry in the visuelen-plan
 - [ ] File count: 24 files + index.html
@@ -312,18 +386,20 @@ This runs ONLY the automated layer: engine copy, game shell generation, landing 
 - [ ] Nieuws met visual has embedded SVG→PNG chart, font sizes 16/11/9pt
 - [ ] Samenvatting uses table-based infographic layout
 - [ ] Terminology is consistent across all documents (check against terminologie table in plan)
+
+**Design principles:**
 - [ ] **Dual coding**: vaardigheden and voorkennis .docx files contain embedded graphs from `_assets/` (not text-only)
 - [ ] **Unified experience**: stappenplan game procedures use the same step labels and sequence as vaardigheden skills
 - [ ] **Visuelen-toewijzing**: every visual listed for a builder in the plan is actually embedded in that builder's output
-- [ ] **Asset gate**: Phase 5a passed — 0 missing image references, all SVG/PNG paired, naming convention followed
-- [ ] **Independent review**: Phase 5b run by a sub-agent (not the builder). Review report exists. All FAIL items resolved.
-- [ ] **Quality_ref**: `X.Y.Z-quality-ref.yaml` exists, generated by sub-agent (not builder), `assets.missing` is empty, all leerdoelen mapped, verantwoording complete
+
+**Deployment:**
 - [ ] Browser: all 4 games load, all section cards appear in landing page
 - [ ] Data tests pass: `MODULE_ROOT="$MODULE" npx jest --testPathPatterns "engines/tests/.*-data\.test\.js"`
+- [ ] `validate-paragraph.js` passes with 0 errors
 
 ---
 
-## 4. Script classification
+## B4. Script classification
 
 ### Platform generators (reusable, run by deploy.js)
 Fully automated from data files. deploy.js runs these.
@@ -383,7 +459,7 @@ Scripts built for specific paragraphs in earlier work. Useful as examples but no
 
 ---
 
-## 5. What deploy.js does and does NOT do
+## B5. What deploy.js does and does NOT do
 
 ### deploy.js handles (automated layer):
 - Copy engine files (JS/CSS) from `engines/` → `shared/`
@@ -412,7 +488,7 @@ Scripts built for specific paragraphs in earlier work. Useful as examples but no
 
 ---
 
-## 6. Validation
+## B6. Validation
 
 After building, run the paragraph validator:
 
@@ -433,7 +509,7 @@ This checks:
 
 ---
 
-## 7. Pedagogical approach by paragraph type
+## B7. Pedagogical approach by paragraph type
 
 | Paragraph type | Approach | Example |
 |----------------|----------|---------|
@@ -445,7 +521,7 @@ The default is **narrative-first** — students connect with stories before abst
 
 ---
 
-## 8. Build script requirement
+## B8. Build script requirement
 
 **Every scripted-manual file MUST have its build script saved** in `build-scripts/` with naming convention `mN-XYZ-<type>.js` (e.g., `m1-111-presentatie.js`).
 
@@ -458,7 +534,7 @@ If a build script is not saved, the paragraph build is **incomplete**.
 
 ---
 
-## 9. Quality rules (learned from production)
+## B9. Quality rules (learned from production)
 
 | Rule | Why |
 |------|-----|

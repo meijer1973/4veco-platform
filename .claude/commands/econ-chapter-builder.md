@@ -16,7 +16,7 @@ End-to-end orchestrator for building a complete textbook chapter from blueprint 
 
 **Workflow documents:**
 - `BUILD-CHAPTER.md` → the step-by-step process this skill follows
-- `BUILD-PARAGRAPH.md` → the process each paragraph sub-agent follows
+- `BUILD-PARAGRAPH.md` Part A → the textbook build process each paragraph sub-agent follows (Part B is the platform pipeline — separate, not used by this skill)
 
 ---
 
@@ -187,15 +187,15 @@ Each paragraph is built by a **separate sub-agent**. The orchestrator provides:
 2. The shared conventions from Part 2
 3. Context from prior paragraphs (if sequential) — key formulas, terminology, context details
 4. Explicit instruction — differs by paragraph type:
-   - **Theory paragraphs (§1–§3, or §1–§4 for Ch4):** "Follow `econ-textbook-paragraph` exactly. Produce ALL deliverables: paragraaf.md, opgaven.md, antwoorden.md, all SVG+PNG assets in `_assets/`, build_pdf.py, and all PDFs (paragraaf.pdf, opgaven.pdf, antwoorden.pdf)."
-   - **Consolidation paragraph (last §):** "Follow `econ-consolidation-builder` exactly. Produce ALL deliverables: opgaven.md, antwoorden.md, all SVG+PNG assets in `_assets/`, build_pdf.py, and PDFs (opgaven.pdf, antwoorden.pdf). No paragraaf.md — consolidation has no theory."
+   - **Theory paragraphs (§1–§3, or §1–§4 for Ch4):** "Follow `BUILD-PARAGRAPH.md` Part A (steps A1–A7). Use `econ-textbook-paragraph` for content. Produce ALL deliverables: paragraaf.md, opgaven.md, antwoorden.md, all SVG+PNG assets in `_assets/`, build_pdf.py, all PDFs (paragraaf.pdf, opgaven.pdf, antwoorden.pdf), X.Y.Z-review.md, X.Y.Z-quality-ref.yaml."
+   - **Consolidation paragraph (last §):** "Follow `BUILD-PARAGRAPH.md` Part A (steps A1–A7). Use `econ-consolidation-builder` for content. Produce ALL deliverables: opgaven.md, antwoorden.md, all SVG+PNG assets in `_assets/`, build_pdf.py, PDFs (opgaven.pdf, antwoorden.pdf), X.Y.Z-review.md, X.Y.Z-quality-ref.yaml. No paragraaf.md — consolidation has no theory."
 
 The sub-agent prompt must include:
 - The full blueprint spec for that paragraph
 - The shared conventions document
 - For sequential builds: a summary of what the prior paragraph established
-- The instruction to follow the correct skill (`econ-textbook-paragraph` for theory, `econ-consolidation-builder` for consolidation)
-- The instruction that ALL deliverables for that type are mandatory
+- The instruction to follow `BUILD-PARAGRAPH.md` Part A with the correct content skill
+- The instruction that ALL Part A deliverables for that type are mandatory
 
 ### 3.2 Completeness verification after each paragraph
 

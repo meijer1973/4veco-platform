@@ -5,7 +5,7 @@ description: "Assembles individual textbook paragraphs and consolidation exercis
 
 # Economics Chapter Assembler
 
-Assembles completed paragraph markdown files and consolidation exercises into a single chapter PDF with a front page. This skill does not create content — it wraps existing output from `econ-textbook-paragraph` and `econ-consolidation-builder` into one document.
+Assembles completed paragraph markdown files and consolidation exercises into a single chapter PDF with a front page. This skill does not create content — it wraps existing output from `BUILD-PARAGRAPH.md` Part A (the textbook build pipeline). It does not use or require Part B (platform) outputs.
 
 **Companion skills:**
 - `econ-textbook-paragraph` → provides `X.Y.Z [Name] – paragraaf.md` + `_assets/` per theory paragraph
