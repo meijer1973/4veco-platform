@@ -25,11 +25,20 @@ See `econ-chapter-builder` skill for detailed instructions on dependency analysi
 
 For each paragraph in the chapter, verify:
 
-1. □ Paragraph `.md` files exist (paragraaf/opgaven + antwoorden)
-2. □ `_assets/` folder exists with SVG + PNG pairs
-3. □ Asset completeness: extract all image refs from `.md` files → every referenced file exists in `_assets/`
-4. □ Review report exists (Phase 5b of BUILD-PARAGRAPH.md was completed by a sub-agent)
-5. □ `quality_ref` YAML exists (Phase 5c of BUILD-PARAGRAPH.md was completed by a sub-agent)
+**Theory paragraphs:**
+1. □ 3 `.md` files exist (paragraaf, opgaven, antwoorden)
+2. □ 3 `.pdf` files exist, each >10KB
+
+**Consolidation paragraph (last §):**
+1. □ 2 `.md` files exist (opgaven, antwoorden — no paragraaf)
+2. □ 2 `.pdf` files exist, each >10KB
+
+**All paragraphs (theory + consolidation):**
+3. □ `build_pdf.py` exists
+4. □ `_assets/` folder exists with SVG + PNG pairs
+5. □ Asset completeness: every image ref in `.md` → file exists in `_assets/`
+6. □ `X.Y.Z-review.md` exists (from independent QC review)
+7. □ `X.Y.Z-quality-ref.yaml` exists and valid (assets.missing is empty, svgpng_paired is true)
 
 **If any paragraph fails this gate → go back and complete that paragraph first.**
 
@@ -66,12 +75,18 @@ After assembly, re-verify assets in the chapter context:
 
 These checks only make sense at the chapter level. Must be run by a sub-agent that did not build the paragraphs.
 
-> Spawn a sub-agent: "You are a chapter-level reviewer. Read all paragraph .md files for chapter [X.Y]. Check the following and report PASS/FLAG/FAIL for each."
+> Spawn a sub-agent: "You are a chapter-level reviewer. Read the following for chapter [X.Y]:
+> 1. `_chapter-plan.md` (shared conventions, dual coding plan, procedure plan)
+> 2. The blueprint chapter spec
+> 3. All paragraph paragraaf.md and opgaven.md files
+> 4. All SVG files in each paragraph's `_assets/`
+>
+> Check the following and report PASS/FLAG/FAIL for each."
 
 | Check | What to look for |
 |-------|-----------------|
 | 4.1 Notation consistency | Variable names (Q_v, Q_a, P*, TK, TO, etc.) used identically across all paragraphs. FLAG if notation differs. |
-| 4.2 Leerdoelen coverage | Every goal on the front page is addressed in at least one paragraph's theory section AND practised in exercises. FLAG gaps. |
+| 4.2 Leerdoelen coverage | Every lesson goal from the **blueprint** is addressed in at least one paragraph's theory section AND practised in exercises. (Note: front-page leerdoelen are checked post-assembly in Phase 7.) FLAG gaps against blueprint. |
 | 4.3 Figure numbering | Each paragraph restarts figure numbering at 1. Verify no paragraph skips a number (e.g., Fig 1, 2, 4 — missing 3). FAIL if gaps. |
 | 4.4 Forward/backward references | Each paragraph's forward pointer (in summary box) matches the next paragraph's topic. Each herhaling box accurately references the prior paragraph. FLAG mismatches. |
 | 4.5 Consolidation coverage | The consolidation paragraph (§X.Y.4) references skills from ALL theory paragraphs, not just one. FLAG if any theory paragraph is under-represented. |
@@ -124,8 +139,9 @@ This checks:
 | 1 | `validate-chapter.js` passes with 0 errors | □ |
 | 2 | Cross-paragraph consistency review completed (sub-agent) | □ |
 | 3 | Front page: title, TOC, leerdoelen, catchy intro — all on one page | □ |
-| 4 | Chapter PDF: images render, pages break correctly (visual check) | □ |
-| 5 | Answer booklet PDF: images render, pages break correctly | □ |
+| 4 | Front page leerdoelen match blueprint goals (every blueprint goal appears on front page, no invented goals) | □ |
+| 5 | Chapter PDF: images render, pages break correctly (visual check) | □ |
+| 6 | Answer booklet PDF: images render, pages break correctly | □ |
 
 **A chapter is complete when ALL items are checked. Not before.**
 
