@@ -316,15 +316,21 @@ See `BUILD-CHAPTER.md` Phase 4 for the full checklist.
 
 ### 4.3 QC artifact verification
 
-After Parts 4.1 and 4.2, verify that QC artifacts exist for each paragraph:
+After Parts 4.1, 4.1b, and 4.2, verify QC artifacts for each paragraph. **Check content, not just existence.**
 
 ```
 Per paragraph:
-  □ X.Y.Z-review.md exists (output from econ-paragraph-review)
-  □ X.Y.Z-quality-ref.yaml exists (output from econ-quality-control)
+  □ X.Y.Z-review.md exists
+  □ X.Y.Z-review.md contains no unresolved FAIL items (grep for "FAIL" — all should be fixed)
+  □ X.Y.Z-quality-ref.yaml exists
+  □ quality_ref.assets.missing is empty ([])
+  □ quality_ref.assets.svgpng_paired is true
+  □ quality_ref.assets.naming_compliant is true
+  □ quality_ref.assets.total_referenced == quality_ref.assets.total_present
+  □ quality_ref has a Generated date (not stale — should match current build)
 ```
 
-If any are missing, the QC step was skipped — go back and run it.
+A quality_ref that exists but reports missing assets, unpaired SVGs, or naming violations is **invalid** — the gate fails. Go back and fix the underlying issues, then regenerate the quality_ref.
 
 ---
 
