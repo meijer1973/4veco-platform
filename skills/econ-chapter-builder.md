@@ -256,13 +256,20 @@ Required files:
 
 **If anything fails → send the sub-agent back** with specific instructions about what's missing. Do not proceed to the next wave.
 
-### 3.3 Sequential context handoff
+### 3.3 Sequential context handoff (with inter-wave QC)
 
-When building sequentially, after completing paragraph N:
+When building sequentially, after completing paragraph N and before starting paragraph N+1:
+
 1. Read the completed paragraaf.md
 2. Extract: key definitions, formulas, context details (company name, numbers), notation
-3. Include this summary in the prompt for paragraph N+1
-4. The next paragraph's herhaling box and forward references should connect naturally
+3. **Run a lightweight QC check on the completed paragraph** — spawn a review sub-agent for Pass 0 (asset integrity) and Pass 2 (mathematical precision) only. This catches notation errors, formula mistakes, and broken assets BEFORE they propagate into the next paragraph. Save as `X.Y.Z-review.md`.
+4. If the review finds FAIL items in Pass 2 (e.g., wrong formula, notation mismatch with chapter conventions), fix them before proceeding. This is critical — a slope error in §2 will be carried into §3's exercises.
+5. Include the verified summary in the prompt for paragraph N+1
+6. The next paragraph's herhaling box and forward references should connect naturally
+
+**Why inter-wave QC matters:** In a sequential build (e.g., §1→§2→§3), content from §1 feeds into §2's context. If §1 has a notation error or a wrong formula, §2 will inherit it, and §3 will inherit it from §2. Running QC between waves catches errors at the source instead of after they've spread to 3 paragraphs.
+
+For parallel waves (e.g., §1 and §3 built simultaneously), inter-wave QC is not needed — they don't share context. The full Part 4 QC runs after all waves complete.
 
 ---
 

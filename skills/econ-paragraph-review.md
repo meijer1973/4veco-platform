@@ -46,7 +46,7 @@ This is a 1-minute pre-flight check. If Pass 0 has any FAIL items, **STOP** — 
 | 0.2 SVG/PNG pairs complete | Every `.svg` file in `_assets/` has a matching `.png` with the same base name, and vice versa. **FAIL** if any are unpaired. |
 | 0.3 Asset naming convention | All files in `_assets/` follow the pattern `X.Y.Z_{type}_{number}.{ext}` where type is `fig`, `ex`, or `we`. **FLAG** any deviations. |
 | 0.4 No orphaned assets | Every file in `_assets/` is referenced in at least one `.md` file. **FLAG** any orphaned assets (files that exist but are never referenced). |
-| 0.5 Required output files | The expected `.md` files exist per `econ-textbook-paragraph` §1.2 (paragraaf.md, opgaven.md, antwoorden.md). **FAIL** if any are missing. |
+| 0.5 Required output files | Check which type of paragraph this is: **Theory**: paragraaf.md + opgaven.md + antwoorden.md must exist. **Consolidation** (folder name contains "Gemengde opgaven"): opgaven.md + antwoorden.md must exist (no paragraaf.md expected). **FAIL** if any required file for that type is missing. |
 
 **Pass 0 result:** If any FAIL → return the report immediately. The builder must fix asset issues before content review is meaningful.
 

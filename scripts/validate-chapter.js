@@ -152,7 +152,7 @@ function validateParagraph(folderName, isConsolidation) {
   // _assets/ folder
   const assetsDir = path.join(folder, '_assets');
   if (!fs.existsSync(assetsDir)) {
-    warn('No _assets/ folder (OK if no graphs needed)');
+    fail('MISSING _assets/ folder');
   } else {
     const assetFiles = fs.readdirSync(assetsDir);
     const svgs = assetFiles.filter(f => f.endsWith('.svg'));
@@ -176,9 +176,8 @@ function validateParagraph(folderName, isConsolidation) {
     const validPattern = /^\d+\.\d+\.\d+_(fig|ex|we)_\d+\.(svg|png)$/;
     for (const f of assetFiles) {
       if (!validPattern.test(f)) {
-        // Allow non-standard names but flag them
         if (f.endsWith('.svg') || f.endsWith('.png')) {
-          warn(`Non-standard asset name: ${f} (expected X.Y.Z_{type}_{number}.ext)`);
+          fail(`Non-compliant asset name: ${f} (must match X.Y.Z_{type}_{number}.ext)`);
         }
       }
     }
@@ -222,12 +221,39 @@ function validateParagraph(folderName, isConsolidation) {
     }
   }
 
-  // QC artifacts
+  // QC artifacts — required, not optional
   const reviewFile = fs.readdirSync(folder).find(f => f.endsWith('-review.md'));
-  reviewFile ? pass(`Review: ${reviewFile}`) : warn('No review report (X.Y.Z-review.md)');
+  if (reviewFile) {
+    // Check for unresolved FAIL items
+    const reviewContent = fs.readFileSync(path.join(folder, reviewFile), 'utf-8');
+    const failCount = (reviewContent.match(/\bFAIL\b/gi) || []).length;
+    if (failCount > 0) {
+      fail(`Review has ${failCount} unresolved FAIL item(s): ${reviewFile}`);
+    } else {
+      pass(`Review: ${reviewFile} (no unresolved FAILs)`);
+    }
+  } else {
+    fail('MISSING review report (X.Y.Z-review.md)');
+  }
 
   const qualityRef = fs.readdirSync(folder).find(f => f.endsWith('-quality-ref.yaml'));
-  qualityRef ? pass(`Quality ref: ${qualityRef}`) : warn('No quality_ref (X.Y.Z-quality-ref.yaml)');
+  if (qualityRef) {
+    // Validate quality_ref content
+    const yamlContent = fs.readFileSync(path.join(folder, qualityRef), 'utf-8');
+    const missingMatch = yamlContent.match(/missing:\s*\[([^\]]*)\]/);
+    const hasMissing = missingMatch && missingMatch[1].trim().length > 0;
+    const pairedMatch = yamlContent.match(/svgpng_paired:\s*(true|false)/);
+    const isPaired = !pairedMatch || pairedMatch[1] === 'true';
+    const namingMatch = yamlContent.match(/naming_compliant:\s*(true|false)/);
+    const isNaming = !namingMatch || namingMatch[1] === 'true';
+
+    if (hasMissing) fail(`quality_ref reports missing assets: ${qualityRef}`);
+    if (!isPaired) fail(`quality_ref reports unpaired SVG/PNG: ${qualityRef}`);
+    if (!isNaming) fail(`quality_ref reports naming non-compliance: ${qualityRef}`);
+    if (!hasMissing && isPaired && isNaming) pass(`Quality ref: ${qualityRef} (valid)`);
+  } else {
+    fail('MISSING quality_ref (X.Y.Z-quality-ref.yaml)');
+  }
 
   console.log();
 }
