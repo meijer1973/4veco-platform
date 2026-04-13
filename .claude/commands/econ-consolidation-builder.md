@@ -351,4 +351,16 @@ Saved to `<output-folder>/X.Y.Z [Name]/` (e.g., `1.4.1 Toets hoofdstuk 2/`):
 
 ---
 
+## POST-BUILD: QC AND QUALITY_REF
+
+The consolidation builder itself does **not** run QC — that is handled by the chapter orchestrator (`econ-chapter-builder` Part 4). When building consolidation as part of a chapter:
+
+1. The orchestrator spawns an independent review sub-agent that runs `econ-paragraph-review` (Pass 0 asset integrity + Pass 2 mathematical precision) on the consolidation output
+2. The orchestrator spawns a sub-agent to generate `X.Y.Z-quality-ref.yaml` via `econ-quality-control`
+3. Both artifacts are required by the chapter completeness gate
+
+When building consolidation standalone (not as part of a chapter), run the QC steps from `BUILD-PARAGRAPH.md` Part A steps A5–A7 yourself.
+
+---
+
 *This skill builds consolidation and test opgaven. For single-skill exercises, see `econ-exercise-builder`. For pedagogical principles, see `econ-didactiek`. For PDF export, see `econ-pdf-builder`.*

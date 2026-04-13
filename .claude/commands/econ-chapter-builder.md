@@ -187,15 +187,17 @@ Each paragraph is built by a **separate sub-agent**. The orchestrator provides:
 2. The shared conventions from Part 2
 3. Context from prior paragraphs (if sequential) — key formulas, terminology, context details
 4. Explicit instruction — differs by paragraph type:
-   - **Theory paragraphs (§1–§3, or §1–§4 for Ch4):** "Follow `BUILD-PARAGRAPH.md` Part A (steps A1–A7). Use `econ-textbook-paragraph` for content. Produce ALL deliverables: paragraaf.md, opgaven.md, antwoorden.md, all SVG+PNG assets in `_assets/`, build_pdf.py, all PDFs (paragraaf.pdf, opgaven.pdf, antwoorden.pdf), X.Y.Z-review.md, X.Y.Z-quality-ref.yaml."
-   - **Consolidation paragraph (last §):** "Follow `BUILD-PARAGRAPH.md` Part A (steps A1–A7). Use `econ-consolidation-builder` for content. Produce ALL deliverables: opgaven.md, antwoorden.md, all SVG+PNG assets in `_assets/`, build_pdf.py, PDFs (opgaven.pdf, antwoorden.pdf), X.Y.Z-review.md, X.Y.Z-quality-ref.yaml. No paragraaf.md — consolidation has no theory."
+   - **Theory paragraphs (§1–§3, or §1–§4 for Ch4):** "Follow `BUILD-PARAGRAPH.md` Part A steps A1–A5. Use `econ-textbook-paragraph` for content. Produce ALL deliverables: paragraaf.md, opgaven.md, antwoorden.md, all SVG+PNG assets in `_assets/`, build_pdf.py, and all PDFs (paragraaf.pdf, opgaven.pdf, antwoorden.pdf). Run the A5 asset completeness gate before returning."
+   - **Consolidation paragraph (last §):** "Follow `BUILD-PARAGRAPH.md` Part A steps A1–A5. Use `econ-consolidation-builder` for content. Produce ALL deliverables: opgaven.md, antwoorden.md, all SVG+PNG assets in `_assets/`, build_pdf.py, and PDFs (opgaven.pdf, antwoorden.pdf). No paragraaf.md — consolidation has no theory. Run the A5 asset completeness gate before returning."
+
+**Important:** Do NOT ask paragraph sub-agents to produce review.md or quality-ref.yaml. A sub-agent cannot independently review its own work. The orchestrator handles QC in Part 4 after all paragraphs are built.
 
 The sub-agent prompt must include:
 - The full blueprint spec for that paragraph
 - The shared conventions document
 - For sequential builds: a summary of what the prior paragraph established
-- The instruction to follow `BUILD-PARAGRAPH.md` Part A with the correct content skill
-- The instruction that ALL Part A deliverables for that type are mandatory
+- The instruction to follow `BUILD-PARAGRAPH.md` Part A (steps A1–A5) with the correct content skill
+- The instruction that ALL content deliverables for that type are mandatory (md + pdf + assets + build script)
 
 ### 3.2 Completeness verification after each paragraph
 
@@ -251,14 +253,28 @@ When building sequentially, after completing paragraph N:
 
 ## PART 4: QC REVIEW
 
-After ALL paragraphs are built and verified:
+After ALL paragraphs are built and verified (Part 3), the **orchestrator** runs QC. This is not delegated to the paragraph builders — they cannot review their own work.
 
 ### 4.1 Per-paragraph review (independent sub-agents)
 
-For each paragraph, spawn a review sub-agent:
-> "You are a QC reviewer. You did NOT build this paragraph. Read `econ-paragraph-review`, then review the paragraph at [path]. Run Pass 0 (asset integrity), Pass 1 (didactic), Pass 2 (mathematical). Report all issues."
+For **each paragraph** (theory AND consolidation), spawn a separate review sub-agent:
 
-Fix any FAIL items before proceeding.
+> "You are a QC reviewer. You did NOT build this paragraph. Read the `econ-paragraph-review` skill at `skills/econ-paragraph-review.md`. Then review the paragraph at [path].
+> Run Pass 0 (asset integrity), Pass 1 (didactic architecture), Pass 2 (mathematical precision).
+> Report ALL issues with PASS/FLAG/FAIL ratings. Do not fix anything — only report.
+> Save your report as `X.Y.Z-review.md` in the paragraph folder."
+
+**This applies to consolidation paragraphs too.** The consolidation builder skill does not include QC steps — that is intentional. QC for consolidation is handled here by the chapter orchestrator, using the same `econ-paragraph-review` process (Pass 0 asset check + Pass 2 mathematical precision; Pass 1 didactic checks apply where relevant).
+
+Fix any FAIL items before proceeding. The orchestrator sends fixes back to the original builder sub-agent or fixes them directly.
+
+### 4.1b Quality_ref generation (independent sub-agents)
+
+For **each paragraph** (theory AND consolidation), spawn a sub-agent:
+
+> "Read the `econ-quality-control` skill. Inventory all components that actually exist for this paragraph (check file existence, not just intent). Run asset integrity checks. Generate `X.Y.Z-quality-ref.yaml` in the paragraph folder. Be honest about gaps."
+
+This produces the quality_ref YAML required by the completeness gate.
 
 ### 4.2 Chapter-level consistency (independent sub-agent)
 
