@@ -148,6 +148,10 @@ Before any building starts, decide and document:
    - TO: #1A5276 (blue)
    - GTK: #8E44AD (purple)
 4. **Interleaving plan** — which earlier skills each paragraph should revisit in its "Herhaling" section. Spread interleaving across paragraphs; don't repeat the same skill in every paragraph.
+5. **Dual coding plan** — for each paragraph, list which key concepts require graph support. Identify visuals that should be shared or consistent across paragraphs (e.g., a supply/demand graph that appears in §1 and is extended in §2). Every concept that is explained in text must also have a visual representation — this is non-negotiable (see AGENTS.md Design Principles).
+6. **Procedure plan** — for each paragraph, list the key skills and their canonical step sequences. If §1 teaches "step 1: stel Qa = Qv, step 2: los op naar P, step 3: vul terug in", then §2 must use those exact same steps when revisiting equilibrium calculation. The procedure is the constant; context/numbers change. This ensures unified student experience across paragraphs.
+
+When running Part B (platform build) later, these plans feed into the full `_paragraph-plan.md` with visuelen-toewijzing and procedure-stappen-plan. For Part A (textbook only), enforce dual coding and unified experience through the content itself — every theory section pairs text with graphs, every worked example uses the same procedure as the exercises.
 
 ### 2.5 Write the chapter plan
 
@@ -173,6 +177,17 @@ Save a brief plan document in the output folder as `_chapter-plan.md`:
 - §X.Y.1: herhaling from §X.(Y-1).2, §X.(Y-1).3
 - §X.Y.2: herhaling from §X.Y.1, §X.(Y-1).1
 - §X.Y.3: herhaling from §X.Y.1, §X.Y.2
+
+## Dual coding plan
+- §X.Y.1: fig_1 (demand only), fig_2 (+ supply), fig_3 (equilibrium), fig_4 (overview)
+- §X.Y.2: reuses equilibrium graph from §X.Y.1, adds shift arrows
+- §X.Y.3: new cost/revenue graphs, independent from §1-2
+- Every theory concept has a paired visual — no text-only explanations
+
+## Procedure plan (unified experience)
+- Equilibrium calculation: (1) stel Qa = Qv, (2) los op naar P, (3) vul terug in, (4) controleer
+  → used in §X.Y.1 theory, §X.Y.1 exercises, §X.Y.2 when recalculating after shifts
+- [repeat for each key skill in the chapter]
 ```
 
 ---
@@ -292,6 +307,8 @@ Spawn a chapter-level reviewer with these inputs:
 > - Consolidation covers skills from ALL theory paragraphs
 > - No unintentional context reuse across paragraphs
 > - Colour consistency in SVGs (same concept = same colour)
+> - **Dual coding**: every theory concept in every paragraph has a paired visual (graph, diagram, or table). FLAG any text-only concept explanations.
+> - **Procedure consistency**: when the same skill appears in multiple paragraphs (e.g., equilibrium calculation), verify the step sequence is identical. Check worked examples and exercises use the same procedure as the theory section. FLAG any procedure mismatches across paragraphs.
 >
 > Note: leerdoelen coverage will be checked post-assembly against the front page."
 
