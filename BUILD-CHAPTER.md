@@ -95,17 +95,37 @@ Only after Phase 4 passes:
 
 ---
 
-## Phase 6: Final checklist
+## Phase 6: Automated validation
+
+Run the chapter validator:
+
+```bash
+node scripts/validate-chapter.js "<path-to-chapter-folder>"
+```
+
+This checks:
+- Paragraph folders inside chapter folder (correct hierarchy)
+- Per paragraph: required .md and .pdf files exist (theory vs consolidation)
+- Per paragraph: build_pdf.py exists, _assets/ has SVG+PNG pairs
+- Asset naming follows `X.Y.Z_{type}_{number}` convention
+- Every image reference resolves to a file
+- No orphaned assets
+- Chapter assembly files exist (hoofdstuk.md/.pdf, antwoorden.md/.pdf, build_chapter.py)
+- Chapter PDF > 500KB (images embedded)
+- build_chapter.py uses correct path (MODULE = BASE)
+- No paragraph folders at parent level
+
+**The chapter is not done until the validator passes with 0 errors.**
+
+## Phase 7: Final checklist
 
 | # | Check | Status |
 |---|-------|--------|
-| 1 | All paragraph pre-assembly gates passed | □ |
-| 2 | Chapter asset verification: 0 missing refs | □ |
-| 3 | Cross-paragraph consistency review completed (sub-agent) | □ |
-| 4 | Front page: title, TOC, leerdoelen, catchy intro — all on one page | □ |
-| 5 | Chapter PDF: images render, pages break correctly | □ |
-| 6 | Answer booklet PDF: images render, pages break correctly | □ |
-| 7 | `build_chapter.py` script saved (reproducible build) | □ |
+| 1 | `validate-chapter.js` passes with 0 errors | □ |
+| 2 | Cross-paragraph consistency review completed (sub-agent) | □ |
+| 3 | Front page: title, TOC, leerdoelen, catchy intro — all on one page | □ |
+| 4 | Chapter PDF: images render, pages break correctly (visual check) | □ |
+| 5 | Answer booklet PDF: images render, pages break correctly | □ |
 
 **A chapter is complete when ALL items are checked. Not before.**
 

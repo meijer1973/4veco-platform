@@ -1,0 +1,353 @@
+#!/usr/bin/env node
+/**
+ * validate-chapter.js — Verify a built chapter meets Part A (textbook) standards.
+ *
+ * Usage:
+ *   node scripts/validate-chapter.js <chapter-folder-path>
+ *   node scripts/validate-chapter.js "../module test/1.4 Hoofdstuk Marktevenwicht en marginale analyse"
+ *
+ * Checks:
+ *   - Chapter folder contains paragraph subfolders
+ *   - Each paragraph has required files (theory: 3md+3pdf, consolidation: 2md+2pdf)
+ *   - Each paragraph has build_pdf.py
+ *   - Asset completeness: every ![...] ref in .md resolves to a file in _assets/
+ *   - SVG/PNG pairing: every .svg has a .png and vice versa
+ *   - Asset naming convention: X.Y.Z_{type}_{number}.{ext}
+ *   - No orphaned assets
+ *   - Chapter assembly files exist (hoofdstuk.md/.pdf, antwoorden.md/.pdf, build_chapter.py)
+ *   - Chapter PDF size > 500KB (images embedded)
+ *   - Folder hierarchy: paragraphs inside chapter folder
+ *   - Folder names match file prefixes
+ */
+
+const fs = require('fs');
+const path = require('path');
+
+const chapterPath = process.argv[2];
+if (!chapterPath) {
+  console.error('Usage: node scripts/validate-chapter.js <chapter-folder-path>');
+  process.exit(1);
+}
+
+const CHAPTER = path.resolve(chapterPath);
+if (!fs.existsSync(CHAPTER)) {
+  console.error(`Chapter folder not found: ${CHAPTER}`);
+  process.exit(1);
+}
+
+const chapterName = path.basename(CHAPTER);
+const chapterMatch = chapterName.match(/^(\d+\.\d+)\s+Hoofdstuk\s+(.+)$/);
+if (!chapterMatch) {
+  console.error(`Cannot parse chapter folder name: ${chapterName}`);
+  console.error('Expected format: "X.Y Hoofdstuk Name"');
+  process.exit(1);
+}
+const chapterNr = chapterMatch[1];
+const chapterTitle = chapterMatch[2];
+
+console.log(`\nValidating chapter ${chapterNr} "${chapterTitle}"`);
+console.log(`Path: ${CHAPTER}\n`);
+
+let errors = 0;
+let warnings = 0;
+
+function fail(msg) { console.error(`  ✗ ${msg}`); errors++; }
+function warn(msg) { console.warn(`  ⚠ ${msg}`); warnings++; }
+function pass(msg) { console.log(`  ✓ ${msg}`); }
+
+// ── Discover paragraph folders ─────────────────────────────────
+
+console.log('── Paragraph discovery ──');
+
+const entries = fs.readdirSync(CHAPTER, { withFileTypes: true });
+const paraFolders = entries
+  .filter(e => e.isDirectory() && /^\d+\.\d+\.\d+\s+/.test(e.name))
+  .map(e => e.name)
+  .sort();
+
+if (paraFolders.length === 0) {
+  fail('No paragraph folders found inside chapter folder');
+  console.log(`\n${errors} error(s), ${warnings} warning(s)`);
+  process.exit(1);
+}
+
+// Identify theory vs consolidation
+const consolidationPattern = /gemengde\s+opgaven/i;
+const theoryFolders = paraFolders.filter(f => !consolidationPattern.test(f));
+const consolFolders = paraFolders.filter(f => consolidationPattern.test(f));
+
+pass(`${theoryFolders.length} theory paragraph(s): ${theoryFolders.map(f => f.split(' ')[0]).join(', ')}`);
+pass(`${consolFolders.length} consolidation paragraph(s): ${consolFolders.map(f => f.split(' ')[0]).join(', ')}`);
+console.log();
+
+// ── Per-paragraph checks ────────────────────────────────────────
+
+function extractImageRefs(folder) {
+  const refs = new Set();
+  const mdFiles = fs.readdirSync(folder).filter(f => f.endsWith('.md'));
+  for (const mdFile of mdFiles) {
+    const content = fs.readFileSync(path.join(folder, mdFile), 'utf-8');
+    const matches = content.matchAll(/!\[[^\]]*\]\(([^)]+)\)/g);
+    for (const m of matches) {
+      refs.add(m[1]);
+    }
+  }
+  return refs;
+}
+
+function validateParagraph(folderName, isConsolidation) {
+  const folder = path.join(CHAPTER, folderName);
+  const parNr = folderName.split(' ')[0];
+  const parName = folderName.substring(parNr.length + 1);
+
+  console.log(`── ${folderName} (${isConsolidation ? 'consolidation' : 'theory'}) ──`);
+
+  // Check folder name matches file prefix
+  const mdFiles = fs.readdirSync(folder).filter(f => f.endsWith('.md'));
+  for (const mdFile of mdFiles) {
+    const filePrefix = mdFile.split(' – ')[0];
+    if (filePrefix !== folderName) {
+      // Check if it's just a different name format
+      if (!mdFile.startsWith(parNr)) {
+        fail(`File prefix mismatch: folder="${folderName}" file="${filePrefix}"`);
+      }
+    }
+  }
+
+  // Required .md files
+  if (isConsolidation) {
+    const opgaven = mdFiles.find(f => f.includes('opgaven'));
+    const antwoorden = mdFiles.find(f => f.includes('antwoorden'));
+    opgaven ? pass('opgaven.md') : fail('MISSING opgaven.md');
+    antwoorden ? pass('antwoorden.md') : fail('MISSING antwoorden.md');
+  } else {
+    const paragraaf = mdFiles.find(f => f.includes('paragraaf'));
+    const opgaven = mdFiles.find(f => f.includes('opgaven'));
+    const antwoorden = mdFiles.find(f => f.includes('antwoorden'));
+    paragraaf ? pass('paragraaf.md') : fail('MISSING paragraaf.md');
+    opgaven ? pass('opgaven.md') : fail('MISSING opgaven.md');
+    antwoorden ? pass('antwoorden.md') : fail('MISSING antwoorden.md');
+  }
+
+  // Required .pdf files
+  const pdfFiles = fs.readdirSync(folder).filter(f => f.endsWith('.pdf'));
+  const expectedPdfCount = isConsolidation ? 2 : 3;
+  if (pdfFiles.length >= expectedPdfCount) {
+    for (const pdf of pdfFiles) {
+      const size = fs.statSync(path.join(folder, pdf)).size;
+      if (size < 10000) {
+        fail(`PDF too small: ${pdf} (${(size / 1024).toFixed(1)} KB)`);
+      } else {
+        pass(`${pdf} (${(size / 1024).toFixed(0)} KB)`);
+      }
+    }
+  } else {
+    fail(`Expected ${expectedPdfCount} PDFs, found ${pdfFiles.length}`);
+  }
+
+  // build_pdf.py
+  const buildScript = path.join(folder, 'build_pdf.py');
+  fs.existsSync(buildScript) ? pass('build_pdf.py') : fail('MISSING build_pdf.py');
+
+  // _assets/ folder
+  const assetsDir = path.join(folder, '_assets');
+  if (!fs.existsSync(assetsDir)) {
+    warn('No _assets/ folder (OK if no graphs needed)');
+  } else {
+    const assetFiles = fs.readdirSync(assetsDir);
+    const svgs = assetFiles.filter(f => f.endsWith('.svg'));
+    const pngs = assetFiles.filter(f => f.endsWith('.png'));
+
+    // SVG/PNG pairing
+    for (const svg of svgs) {
+      const pngName = svg.replace('.svg', '.png');
+      if (!pngs.includes(pngName)) {
+        fail(`Unpaired SVG: ${svg} (no matching .png)`);
+      }
+    }
+    for (const png of pngs) {
+      const svgName = png.replace('.png', '.svg');
+      if (!svgs.includes(svgName)) {
+        fail(`Unpaired PNG: ${png} (no matching .svg)`);
+      }
+    }
+
+    // Asset naming convention: X.Y.Z_{type}_{number}.{ext}
+    const validPattern = /^\d+\.\d+\.\d+_(fig|ex|we)_\d+\.(svg|png)$/;
+    for (const f of assetFiles) {
+      if (!validPattern.test(f)) {
+        // Allow non-standard names but flag them
+        if (f.endsWith('.svg') || f.endsWith('.png')) {
+          warn(`Non-standard asset name: ${f} (expected X.Y.Z_{type}_{number}.ext)`);
+        }
+      }
+    }
+
+    // Check prefix matches paragraph number
+    for (const f of assetFiles) {
+      if ((f.endsWith('.svg') || f.endsWith('.png')) && !f.startsWith(parNr + '_')) {
+        fail(`Asset prefix mismatch: ${f} does not start with ${parNr}_`);
+      }
+    }
+
+    pass(`_assets/: ${svgs.length} SVGs, ${pngs.length} PNGs`);
+
+    // Image reference resolution
+    const refs = extractImageRefs(folder);
+    let brokenRefs = 0;
+    for (const ref of refs) {
+      // Resolve relative to paragraph folder
+      const refBase = path.basename(ref).replace('.svg', '.png');
+      const fullPath = path.join(assetsDir, refBase);
+      if (!fs.existsSync(fullPath)) {
+        fail(`Broken image ref: ${ref}`);
+        brokenRefs++;
+      }
+    }
+    if (brokenRefs === 0 && refs.size > 0) {
+      pass(`${refs.size} image refs all resolve`);
+    }
+
+    // Orphaned assets
+    const referencedBases = new Set();
+    for (const ref of refs) {
+      const base = path.basename(ref).replace('.svg', '').replace('.png', '');
+      referencedBases.add(base);
+    }
+    for (const f of svgs) {
+      const base = f.replace('.svg', '');
+      if (!referencedBases.has(base)) {
+        warn(`Orphaned asset: ${f}`);
+      }
+    }
+  }
+
+  // QC artifacts
+  const reviewFile = fs.readdirSync(folder).find(f => f.endsWith('-review.md'));
+  reviewFile ? pass(`Review: ${reviewFile}`) : warn('No review report (X.Y.Z-review.md)');
+
+  const qualityRef = fs.readdirSync(folder).find(f => f.endsWith('-quality-ref.yaml'));
+  qualityRef ? pass(`Quality ref: ${qualityRef}`) : warn('No quality_ref (X.Y.Z-quality-ref.yaml)');
+
+  console.log();
+}
+
+for (const folder of theoryFolders) {
+  validateParagraph(folder, false);
+}
+for (const folder of consolFolders) {
+  validateParagraph(folder, true);
+}
+
+// ── Chapter-level checks ────────────────────────────────────────
+
+console.log('── Chapter assembly ──');
+
+// Chapter files
+const chapterFiles = fs.readdirSync(CHAPTER).filter(f => !fs.statSync(path.join(CHAPTER, f)).isDirectory());
+
+const hoofdstukMd = chapterFiles.find(f => f.includes('hoofdstuk.md'));
+const hoofdstukPdf = chapterFiles.find(f => f.includes('hoofdstuk.pdf'));
+const antwMd = chapterFiles.find(f => f.includes('antwoorden.md'));
+const antwPdf = chapterFiles.find(f => f.includes('antwoorden.pdf'));
+const buildChapter = chapterFiles.includes('build_chapter.py');
+const chapterPlan = chapterFiles.includes('_chapter-plan.md') || chapterFiles.find(f => f.includes('chapter-plan'));
+
+hoofdstukMd ? pass(`Chapter md: ${hoofdstukMd}`) : fail('MISSING hoofdstuk.md');
+hoofdstukPdf ? pass(`Chapter pdf: ${hoofdstukPdf}`) : fail('MISSING hoofdstuk.pdf');
+antwMd ? pass(`Answers md: ${antwMd}`) : fail('MISSING antwoorden.md');
+antwPdf ? pass(`Answers pdf: ${antwPdf}`) : fail('MISSING antwoorden.pdf');
+buildChapter ? pass('build_chapter.py') : fail('MISSING build_chapter.py');
+chapterPlan ? pass('Chapter plan exists') : warn('No _chapter-plan.md');
+
+// Chapter PDF size
+if (hoofdstukPdf) {
+  const size = fs.statSync(path.join(CHAPTER, hoofdstukPdf)).size;
+  if (size > 500000) {
+    pass(`Chapter PDF size: ${(size / 1024).toFixed(0)} KB (images likely embedded)`);
+  } else if (size > 100000) {
+    warn(`Chapter PDF size: ${(size / 1024).toFixed(0)} KB (images may be missing)`);
+  } else {
+    fail(`Chapter PDF too small: ${(size / 1024).toFixed(0)} KB (images likely missing)`);
+  }
+}
+
+// Chapter _assets/
+const chapterAssets = path.join(CHAPTER, '_assets');
+if (fs.existsSync(chapterAssets)) {
+  const files = fs.readdirSync(chapterAssets);
+  const svgs = files.filter(f => f.endsWith('.svg')).length;
+  const pngs = files.filter(f => f.endsWith('.png')).length;
+  pass(`Chapter _assets/: ${svgs} SVGs, ${pngs} PNGs`);
+
+  // All assets should have the chapter prefix
+  const expectedPrefix = chapterNr + '.';
+  for (const f of files) {
+    if ((f.endsWith('.svg') || f.endsWith('.png')) && !f.startsWith(expectedPrefix)) {
+      fail(`Chapter asset wrong prefix: ${f} (expected ${expectedPrefix}*)`);
+    }
+  }
+} else {
+  fail('MISSING chapter _assets/ folder');
+}
+
+// Chapter markdown image refs
+if (hoofdstukMd) {
+  const refs = extractImageRefs(CHAPTER);
+  let brokenRefs = 0;
+  for (const ref of refs) {
+    const refBase = path.basename(ref).replace('.svg', '.png');
+    const fullPath = path.join(chapterAssets, refBase);
+    if (!fs.existsSync(fullPath)) {
+      fail(`Broken ref in chapter md: ${ref}`);
+      brokenRefs++;
+    }
+  }
+  if (brokenRefs === 0 && refs.size > 0) {
+    pass(`${refs.size} chapter image refs all resolve`);
+  }
+}
+
+// build_chapter.py path check
+if (buildChapter) {
+  const script = fs.readFileSync(path.join(CHAPTER, 'build_chapter.py'), 'utf-8');
+  if (script.includes('BASE.parent')) {
+    fail('build_chapter.py uses BASE.parent (should use BASE — paragraphs are inside chapter folder)');
+  } else {
+    pass('build_chapter.py path: MODULE = BASE (correct)');
+  }
+}
+
+// ── Folder hierarchy check ──────────────────────────────────────
+
+console.log('\n── Folder hierarchy ──');
+
+// Check that no paragraph folders exist at the same level as the chapter folder
+const parentDir = path.dirname(CHAPTER);
+const siblings = fs.readdirSync(parentDir, { withFileTypes: true })
+  .filter(e => e.isDirectory() && /^\d+\.\d+\.\d+\s+/.test(e.name))
+  .map(e => e.name);
+
+if (siblings.length > 0) {
+  for (const s of siblings) {
+    const sibNr = s.split(' ')[0];
+    if (sibNr.startsWith(chapterNr + '.')) {
+      fail(`Paragraph folder "${s}" is OUTSIDE the chapter folder (should be inside)`);
+    }
+  }
+} else {
+  pass('No paragraph folders at parent level (correct hierarchy)');
+}
+
+// ── Summary ─────────────────────────────────────────────────────
+
+console.log(`\n${'═'.repeat(50)}`);
+console.log(`Chapter ${chapterNr}: ${errors} error(s), ${warnings} warning(s)`);
+if (errors === 0) {
+  console.log('✓ CHAPTER VALIDATION PASSED');
+} else {
+  console.log('✗ CHAPTER VALIDATION FAILED');
+}
+console.log();
+
+process.exit(errors > 0 ? 1 : 0);

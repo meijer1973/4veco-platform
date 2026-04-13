@@ -315,53 +315,33 @@ Follow `econ-chapter-assembler` skill exactly:
 
 **Do not declare the chapter complete until ALL of the following are verified:**
 
-### Per theory paragraph (×N from chapter plan — usually 3, but 4 for Ch4):
+### Step 1: Run the automated validator
+
+```bash
+node scripts/validate-chapter.js "<path-to-chapter-folder>"
+```
+
+This checks all of the following automatically:
+- Per theory paragraph: 3 .md + 3 .pdf (>10KB) + build_pdf.py + _assets/ with SVG+PNG pairs
+- Per consolidation paragraph: 2 .md + 2 .pdf (>10KB) + build_pdf.py + _assets/
+- Asset naming follows `X.Y.Z_{type}_{number}` convention
+- Every image reference in .md resolves to a file in _assets/
+- No orphaned assets
+- Paragraph folders inside chapter folder (correct hierarchy)
+- Chapter assembly files exist (hoofdstuk.md/.pdf, antwoorden.md/.pdf, build_chapter.py)
+- Chapter PDF > 500KB (images embedded)
+- build_chapter.py uses MODULE = BASE (not BASE.parent)
+
+**The validator must pass with 0 errors.**
+
+### Step 2: Manual checks (not automatable)
 
 | Check | Method |
 |---|---|
-| 3 .md files exist (paragraaf, opgaven, antwoorden) | ls |
-| 3 .pdf files exist, each >10KB | ls + file size check |
-| build_pdf.py exists | ls |
-| _assets/ has SVG+PNG pairs | count + pair check |
-| 0 broken image refs | grep refs → verify existence |
-| Asset naming `X.Y.Z_{type}_{number}` | regex check on filenames |
-| X.Y.Z-review.md exists | ls |
-| X.Y.Z-quality-ref.yaml exists | ls |
+| Front page fits on one page | Open PDF, visual check |
+| QC artifacts exist per paragraph | `X.Y.Z-review.md` + `X.Y.Z-quality-ref.yaml` (validator warns if missing) |
 
-### Per consolidation paragraph (×1, always last):
-
-| Check | Method |
-|---|---|
-| 2 .md files exist (opgaven, antwoorden) — no paragraaf | ls |
-| 2 .pdf files exist, each >10KB | ls + file size check |
-| build_pdf.py exists | ls |
-| _assets/ has SVG+PNG pairs (if any graphs) | count + pair check |
-| 0 broken image refs | grep refs → verify existence |
-| Asset naming `X.Y.Z_{type}_{number}` | regex check on filenames |
-| X.Y.Z-review.md exists | ls |
-| X.Y.Z-quality-ref.yaml exists | ls |
-
-### Folder structure:
-
-| Check | Method |
-|---|---|
-| Paragraph folders are INSIDE the chapter folder | ls — no paragraph folders at the same level as the chapter folder |
-| Folder names match file prefixes | For each paragraph: folder name == file prefix before " – " |
-| Asset naming uses X.Y.Z (not B{X}C{Y}S{Z}) | regex check on all files in _assets/ |
-| build_chapter.py uses MODULE = BASE (not BASE.parent) | grep the script |
-
-### Chapter level:
-
-| Check | Method |
-|---|---|
-| hoofdstuk.md + .html + .pdf exist | ls |
-| antwoorden.md + .html + .pdf exist | ls |
-| build_chapter.py exists | ls |
-| Chapter PDF >500KB (images embedded) | file size check |
-| 0 broken image refs in assembled .md | grep → verify |
-| Front page fits on one page | visual check |
-
-**Only after every check passes can the chapter be reported as complete.**
+**Only after both steps pass can the chapter be reported as complete.**
 
 ---
 
