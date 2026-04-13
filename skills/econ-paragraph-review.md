@@ -32,6 +32,8 @@ Run all passes sequentially: Pass 0 first, then Pass 1, then Pass 2. For each ch
 
 **Independent review requirement:** This review MUST be run by a separate sub-agent, NOT by the agent that built the paragraph. The builder has seen the content too many times and will rubber-stamp. See `BUILD-PARAGRAPH.md` Phase 5b.
 
+**Output:** Save the review report as `X.Y.Z-review.md` in the paragraph folder (e.g., `1.3.2-review.md`). This file is a QC artifact required by the chapter builder's completeness gate.
+
 ---
 
 ## PASS 0: ASSET AND FILE INTEGRITY

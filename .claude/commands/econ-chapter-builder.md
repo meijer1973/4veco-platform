@@ -186,18 +186,22 @@ Each paragraph is built by a **separate sub-agent**. The orchestrator provides:
 1. The blueprint paragraph spec (target exercise, lesson goals, difficulty notes)
 2. The shared conventions from Part 2
 3. Context from prior paragraphs (if sequential) — key formulas, terminology, context details
-4. Explicit instruction: **"Follow the `econ-textbook-paragraph` skill exactly. You must produce ALL deliverables: paragraaf.md, opgaven.md, antwoorden.md, all SVG+PNG assets in `_assets/`, build_pdf.py, and all PDFs (paragraaf.pdf, opgaven.pdf, antwoorden.pdf)."**
+4. Explicit instruction — differs by paragraph type:
+   - **Theory paragraphs (§1–§3, or §1–§4 for Ch4):** "Follow `econ-textbook-paragraph` exactly. Produce ALL deliverables: paragraaf.md, opgaven.md, antwoorden.md, all SVG+PNG assets in `_assets/`, build_pdf.py, and all PDFs (paragraaf.pdf, opgaven.pdf, antwoorden.pdf)."
+   - **Consolidation paragraph (last §):** "Follow `econ-consolidation-builder` exactly. Produce ALL deliverables: opgaven.md, antwoorden.md, all SVG+PNG assets in `_assets/`, build_pdf.py, and PDFs (opgaven.pdf, antwoorden.pdf). No paragraaf.md — consolidation has no theory."
 
 The sub-agent prompt must include:
 - The full blueprint spec for that paragraph
 - The shared conventions document
 - For sequential builds: a summary of what the prior paragraph established
-- The instruction to follow `econ-textbook-paragraph` skill
-- The instruction that ALL deliverables are mandatory — the paragraph is not complete without PDFs and graphs
+- The instruction to follow the correct skill (`econ-textbook-paragraph` for theory, `econ-consolidation-builder` for consolidation)
+- The instruction that ALL deliverables for that type are mandatory
 
 ### 3.2 Completeness verification after each paragraph
 
-After each sub-agent returns, the orchestrator runs these checks before proceeding:
+After each sub-agent returns, the orchestrator runs these checks before proceeding.
+
+**For theory paragraphs (§1–§3, or §1–§4 for Ch4):**
 
 ```
 Required files:
@@ -209,8 +213,24 @@ Required files:
   □ X.Y.Z [Name] – antwoorden.pdf  (>10KB)
   □ build_pdf.py
   □ _assets/ folder exists
+```
 
-Asset checks:
+**For the consolidation paragraph (last §):**
+
+```
+Required files:
+  □ X.Y.Z Gemengde opgaven – opgaven.md
+  □ X.Y.Z Gemengde opgaven – antwoorden.md
+  □ X.Y.Z Gemengde opgaven – opgaven.pdf    (>10KB)
+  □ X.Y.Z Gemengde opgaven – antwoorden.pdf (>10KB)
+  □ build_pdf.py
+  □ _assets/ folder exists
+  (No paragraaf.md/pdf — consolidation has no theory section)
+```
+
+**Asset checks (both types):**
+
+```
   □ Every ![...] reference in .md files → file exists in _assets/
   □ Every .svg has a matching .png
   □ Asset names follow X.Y.Z_{type}_{number} convention
@@ -242,10 +262,36 @@ Fix any FAIL items before proceeding.
 
 ### 4.2 Chapter-level consistency (independent sub-agent)
 
-Spawn a chapter-level reviewer:
-> "Read all paragraph .md files for chapter X.Y. Check: notation consistency, leerdoelen coverage, figure numbering, forward/backward references, consolidation coverage, context reuse, colour consistency in SVGs."
+Spawn a chapter-level reviewer with these inputs:
+> "You are a chapter-level reviewer. Read the following files for chapter X.Y:
+> 1. `_chapter-plan.md` — shared conventions, interleaving plan, build order
+> 2. The blueprint chapter spec (from the course blueprint)
+> 3. All paragraph paragraaf.md and opgaven.md files
+> 4. All SVG files in each paragraph's `_assets/` folder (for colour checks)
+>
+> Check the following and report PASS/FLAG/FAIL for each:
+> - Notation consistency across paragraphs
+> - Figure numbering (no gaps within each paragraph)
+> - Forward/backward references match (summary → next paragraph, herhaling → prior paragraph)
+> - Consolidation covers skills from ALL theory paragraphs
+> - No unintentional context reuse across paragraphs
+> - Colour consistency in SVGs (same concept = same colour)
+>
+> Note: leerdoelen coverage will be checked post-assembly against the front page."
 
 See `BUILD-CHAPTER.md` Phase 4 for the full checklist.
+
+### 4.3 QC artifact verification
+
+After Parts 4.1 and 4.2, verify that QC artifacts exist for each paragraph:
+
+```
+Per paragraph:
+  □ X.Y.Z-review.md exists (output from econ-paragraph-review)
+  □ X.Y.Z-quality-ref.yaml exists (output from econ-quality-control)
+```
+
+If any are missing, the QC step was skipped — go back and run it.
 
 ---
 
@@ -269,7 +315,7 @@ Follow `econ-chapter-assembler` skill exactly:
 
 **Do not declare the chapter complete until ALL of the following are verified:**
 
-### Per paragraph (×3 theory + ×1 consolidation):
+### Per theory paragraph (×N from chapter plan — usually 3, but 4 for Ch4):
 
 | Check | Method |
 |---|---|
@@ -278,7 +324,22 @@ Follow `econ-chapter-assembler` skill exactly:
 | build_pdf.py exists | ls |
 | _assets/ has SVG+PNG pairs | count + pair check |
 | 0 broken image refs | grep refs → verify existence |
-| Asset naming convention followed | regex check on filenames |
+| Asset naming `X.Y.Z_{type}_{number}` | regex check on filenames |
+| X.Y.Z-review.md exists | ls |
+| X.Y.Z-quality-ref.yaml exists | ls |
+
+### Per consolidation paragraph (×1, always last):
+
+| Check | Method |
+|---|---|
+| 2 .md files exist (opgaven, antwoorden) — no paragraaf | ls |
+| 2 .pdf files exist, each >10KB | ls + file size check |
+| build_pdf.py exists | ls |
+| _assets/ has SVG+PNG pairs (if any graphs) | count + pair check |
+| 0 broken image refs | grep refs → verify existence |
+| Asset naming `X.Y.Z_{type}_{number}` | regex check on filenames |
+| X.Y.Z-review.md exists | ls |
+| X.Y.Z-quality-ref.yaml exists | ls |
 
 ### Folder structure:
 

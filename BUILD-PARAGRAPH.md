@@ -259,7 +259,7 @@ Before any review or quality check, verify that all referenced assets exist:
 1. Extract every `![...](...)` reference from all `.md` files in the paragraph folder
 2. Verify each referenced file exists in `_assets/` (both `.svg` and `.png`)
 3. Verify no orphaned assets (files in `_assets/` not referenced in any `.md`)
-4. Verify asset naming follows `B{X}C{Y}S{Z}_{type}_{number}.{ext}`
+4. Verify asset naming follows `X.Y.Z_{type}_{number}.{ext}`
 
 **This is a hard gate.** If ANY referenced assets are missing, go back to Phase 4 and generate them. The paragraph cannot proceed past this point with missing assets.
 

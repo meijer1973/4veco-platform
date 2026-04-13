@@ -54,8 +54,8 @@ After assembly, re-verify assets in the chapter context:
 1. □ Extract all image refs from assembled chapter `.md` → verify each file exists in chapter `_assets/`
 2. □ Extract all image refs from assembled antwoorden `.md` → same check
 3. □ Every `.svg` in chapter `_assets/` has a matching `.png`
-4. □ All assets follow naming convention `B{X}C{Y}S{Z}_{type}_{number}.{ext}`
-5. □ All assets share the correct `B{X}C{Y}` prefix for this chapter
+4. □ All assets follow naming convention `X.Y.Z_{type}_{number}.{ext}`
+5. □ All assets share the correct `X.Y` prefix for this chapter
 6. □ No stale references (no asset prefix from a different chapter)
 
 **0 errors required before proceeding.**
