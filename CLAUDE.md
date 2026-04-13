@@ -4,6 +4,7 @@ All project documentation lives in dedicated files:
 
 - **AGENTS.md** — Repo overview, architecture, deploy scope, model usage, skills, testing, quality standards
 - **BUILD-PARAGRAPH.md** — End-to-end paragraph production guide (input contract, workflow, per-asset specs)
+- **BUILD-CHAPTER.md** — End-to-end chapter assembly guide (pre-assembly gates, cross-paragraph checks, independent QC)
 - **build-scripts/README.md** — Script taxonomy (generators, converters, reference implementations, utilities)
 - **source-data/README.md** — Input-side conventions
 

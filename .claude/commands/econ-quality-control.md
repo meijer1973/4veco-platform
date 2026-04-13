@@ -233,6 +233,16 @@ quality_ref:
       inspectie: [OP3]
       didactiek: ["differentiatie naar boven", "hogere Bloom-niveaus"]
 
+  # --- ASSET INTEGRITY ---
+  # Automated checks — must all pass before quality_ref is valid
+  assets:
+    total_referenced: 0             # total ![...] references across all .md files
+    total_present: 0                # how many of those files actually exist in _assets/
+    missing: []                     # list of missing asset filenames (empty = good)
+    orphaned: []                    # assets in _assets/ not referenced in any .md
+    svgpng_paired: true             # every .svg has a .png and vice versa
+    naming_compliant: true          # all assets follow B{X}C{Y}S{Z}_{type}_{number} convention
+
   # --- VERANTWOORDING ---
   # Short justification of key design choices
   verantwoording:

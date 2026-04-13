@@ -415,4 +415,17 @@ Antwoord: ...
 
 ---
 
+## POST-BUILD VERIFICATION — AFTER GENERATING EXERCISES
+
+After generating opgaven.md and antwoorden.md, run these checks before delivering:
+
+1. □ Extract all `![...](...)` image references from both files
+2. □ Verify each referenced asset exists in `_assets/` (both `.svg` and `.png`)
+3. □ If ANY are missing → the exercise set is **NOT complete**. Generate the missing graphs before delivering.
+4. □ Verify asset naming follows convention: `B{X}C{Y}S{Z}_{type}_{number}.{ext}`
+
+**A delivered exercise set with missing graph files is a broken deliverable, not a complete one.**
+
+---
+
 *This skill generates exercises. For the textbook paragraph (theory + exercises integrated), see `econ-textbook-paragraph`. For pedagogical principles, see `econ-didactiek`. For graph generation, see `economic-graph`.*

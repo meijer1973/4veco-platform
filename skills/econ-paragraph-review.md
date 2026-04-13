@@ -28,7 +28,25 @@ Both passes matter equally. A beautifully scaffolded paragraph with a slope erro
 
 ## REVIEW PROTOCOL
 
-Run both passes sequentially. For each check, note PASS, FLAG (minor issue), or FAIL (must fix). Deliver results organized by pass, not interleaved.
+Run all passes sequentially: Pass 0 first, then Pass 1, then Pass 2. For each check, note PASS, FLAG (minor issue), or FAIL (must fix). Deliver results organized by pass, not interleaved.
+
+**Independent review requirement:** This review MUST be run by a separate sub-agent, NOT by the agent that built the paragraph. The builder has seen the content too many times and will rubber-stamp. See `BUILD-PARAGRAPH.md` Phase 5b.
+
+---
+
+## PASS 0: ASSET AND FILE INTEGRITY
+
+This is a 1-minute pre-flight check. If Pass 0 has any FAIL items, **STOP** — do not proceed to Pass 1 or Pass 2. The paragraph is incomplete, not ready for review.
+
+| Check | What to look for |
+|-------|-----------------|
+| 0.1 All image refs resolve | Extract every `![...](...)` reference from all `.md` files in the paragraph folder. For each reference, verify the file exists in `_assets/`. **FAIL** if any referenced file is missing. List all missing files. |
+| 0.2 SVG/PNG pairs complete | Every `.svg` file in `_assets/` has a matching `.png` with the same base name, and vice versa. **FAIL** if any are unpaired. |
+| 0.3 Asset naming convention | All files in `_assets/` follow the pattern `B{X}C{Y}S{Z}_{type}_{number}.{ext}` where type is `fig`, `ex`, or `we`. **FLAG** any deviations. |
+| 0.4 No orphaned assets | Every file in `_assets/` is referenced in at least one `.md` file. **FLAG** any orphaned assets (files that exist but are never referenced). |
+| 0.5 Required output files | The expected `.md` files exist per `econ-textbook-paragraph` §1.2 (paragraaf.md, opgaven.md, antwoorden.md). **FAIL** if any are missing. |
+
+**Pass 0 result:** If any FAIL → return the report immediately. The builder must fix asset issues before content review is meaningful.
 
 ---
 

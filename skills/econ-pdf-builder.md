@@ -86,6 +86,18 @@ html = result.stdout
 
 If pandoc warns about a missing title, ignore the warning — it only affects the HTML `<title>` tag which is invisible in PDF.
 
+### 3.3 Strip Pandoc default stylesheet
+
+Pandoc `--standalone` injects a default stylesheet with `body { max-width: 36em; padding: 50px; }` and `p { margin: 1em 0; }`. These conflict with our custom CSS (especially page margins and spacing). **Always strip it** before injecting our own:
+
+```python
+import re
+html = re.sub(
+    r'<style>\s*/\* Default styles provided by pandoc.*?</style>',
+    '', html, flags=re.DOTALL
+)
+```
+
 ---
 
 ## PART 4: HTML POST-PROCESSING

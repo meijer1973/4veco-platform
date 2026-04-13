@@ -69,6 +69,43 @@ Curve labels (V, A, MO, MK, GTK, GVK etc.):
   If a label would be clipped at the right edge, move it to the left
   side of the curve endpoint or place it slightly above/below.
 
+Point labels (BEP, E, E', A, B etc.):
+  The placement depends on the slope of the curve(s) at that point:
+
+  - DOWNWARD-sloping curve (demand, GTK): place label ABOVE-RIGHT
+    (dx=+8, dy=-8 from the point). The curve falls away to the right,
+    so above-right is clear space.
+
+  - UPWARD-sloping curve (supply, TK, TO): place label ABOVE-LEFT
+    (dx=-8, dy=-8, text-anchor="end"). The curve rises to the right,
+    so above-right would overlap the line.
+
+  - TWO CURVES CROSSING (equilibrium, BEP): place label STRAIGHT ABOVE
+    (dx=0, dy=-12, text-anchor="middle"). Both sides have a line, so
+    only the space directly above is guaranteed clear.
+
+  Always verify: does the label text bbox overlap any line or filled area?
+  If yes, shift it further in the clear direction.
+
+Area labels (verlies, winst, CS, PS, surplus, tekort etc.):
+  Labels inside shaded areas MUST be fully contained within the area.
+  Never place a label at a position where part of the text extends
+  outside the shaded polygon.
+
+  How to find the correct position:
+  1. Identify the polygon vertices that define the shaded area
+  2. Calculate the CENTROID of the polygon (average of all vertex x's
+     and average of all vertex y's)
+  3. Place the label at the centroid — this guarantees it is inside
+     a convex polygon
+  4. For narrow triangles where the centroid is too close to an edge:
+     shift the label toward the widest part of the area
+  5. Verify: is every pixel of the text bbox inside the polygon?
+     The text bbox is approximately (x - width/2, y - height) to
+     (x + width/2, y) for text-anchor="middle"
+
+  NEVER eyeball area label positions. Always compute from vertices.
+
 Graph title:
   Position: x=360, y=25, text-anchor="middle" (centered above plot area)
 ```

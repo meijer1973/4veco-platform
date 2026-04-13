@@ -416,11 +416,14 @@ For PDF export (image embedding, CSS styling, page breaks, weasyprint pipeline),
 9. □ Theory graphs built step by step (not dropped in complete)
 10. □ All graphs generated via `economic-graph` skill with coordinate verification
 11. □ Supply lines extend to P-axis, never cross Q-axis
-12. □ SVG and PNG both saved to `_assets/`
+12. □ **Asset completeness (BLOCKING):**
+  - 12a. □ Extract all `![...](...)` references from paragraaf.md, opgaven.md, antwoorden.md — list every referenced file
+  - 12b. □ Verify each referenced file exists in `_assets/` (both `.svg` and `.png`). List any missing. **If ANY are missing → the paragraph is NOT complete. Generate missing assets before delivering.**
+  - 12c. □ Verify no orphaned assets in `_assets/` (files not referenced in any .md)
 13. □ Axes, scale, positioning identical across incremental theory figures
 
 **Format checks:**
-14. □ All image references resolve
+14. □ All image references verified to resolve (covered by 12a/12b — do not skip)
 15. □ No difficulty ratings or time estimates in student-facing markdown
 16. □ Definition boxes, formula boxes, warning boxes visually distinct
 17. □ Summary box present with ≤5 points and forward pointer

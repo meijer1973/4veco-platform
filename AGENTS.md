@@ -5,6 +5,7 @@ Platform repo for generating lesson materials for **Praktische Economie VWO 4**.
 ## Read first
 
 - Use [BUILD-PARAGRAPH.md](C:\Projects\4veco\4veco-platform\BUILD-PARAGRAPH.md) as the end-to-end guide for building a complete paragraph.
+- Use [BUILD-CHAPTER.md](C:\Projects\4veco\4veco-platform\BUILD-CHAPTER.md) as the end-to-end guide for assembling paragraphs into a chapter.
 - Use `AGENTS.md` for repo overview, architecture, deploy rules, and quality standards.
 - Use `build-scripts/README.md` for the distinction between platform generators, converters, reference implementations, and utilities.
 
@@ -159,6 +160,8 @@ Skills staan in `skills/`. Ze worden automatisch geladen op basis van de taak.
 | Exercises genereren (standalone) | `econ-exercise-builder` + `econ-didactiek` + `economic-graph` |
 | Markdown → PDF exporteren | `econ-pdf-builder` + `economic-graph` |
 | Consolidatie/toets bouwen | `econ-consolidation-builder` + `econ-didactiek` + `economic-graph` + `econ-pdf-builder` |
+| Hoofdstuk bouwen (end-to-end) | `econ-chapter-builder` (orchestrator) → `econ-textbook-paragraph` + `econ-consolidation-builder` + `econ-chapter-assembler` |
+| Hoofdstuk samenstellen (assembly only) | `econ-chapter-assembler` + `econ-pdf-builder` |
 
 ---
 
