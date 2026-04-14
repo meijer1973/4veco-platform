@@ -54,6 +54,8 @@ This is a 1-minute pre-flight check. If Pass 0 has any FAIL items, **STOP** — 
 
 ## PASS 1: DIDACTIC ARCHITECTURE
 
+**Authoritative reference:** `references/didactiek-principes.md` — the single source of truth for all didactical principles. All checks below are derived from this document.
+
 ### 1.1 Opening and motivation
 
 | Check | What to look for |
@@ -110,9 +112,24 @@ This is a 1-minute pre-flight check. If Pass 0 has any FAIL items, **STOP** — 
 | 1.6.4 Worked example placement | Does the worked example appear BEFORE the summary? If the summary appears before the worked example, the reading flow is broken — FLAG. |
 | 1.6.5 Begeleide inoefening reference | Is there a reference to additional scaffolded practice (e.g., website, begeleide inoefening document) for students who need more support? |
 
+### 1.7 School-fit quality (from school standards overlay)
+
+These checks verify compliance with `references/amstelveencollege_quality_standards.md`. FLAG deviations.
+
+| Check | What to look for |
+|-------|-----------------|
+| 1.7.1 Explicit learning goals | Are the intended leerdoelen visible at the start of the paragraph? Can a student tell what they should be able to do after completing this section? |
+| 1.7.2 Formative checkpoints | Does the paragraph include self-check moments (e.g., "Controleer: kun je nu...?", retrieval prompts, or checkpoint questions) that help the student and teacher monitor progress? |
+| 1.7.3 Layered differentiation | Is support (hints, scaffold images, extra worked examples) available without stigmatising labels? Is the ceiling high enough for stronger students without lowering the core? |
+| 1.7.4 Context serves concept | Does the context make the concept more legible and support transfer, rather than being decorative or distracting? Would removing the context make the concept harder to understand? |
+| 1.7.5 Learner self-monitoring | Does the summary or exercise section help students track what they understand vs where they need more practice? (e.g., checklist, self-assessment prompt) |
+| 1.7.6 Optional enrichment | If a verdiepingsopdracht exists, does it stretch beyond the core without competing with it? Is it clearly marked as optional? |
+
 ---
 
 ## PASS 2: MATHEMATICAL AND CONCEPTUAL PRECISION
+
+**Authoritative reference:** `references/economic_mathematical_precision_reference.md` — all checks below must be verified against this document. When in doubt, the precision reference takes precedence.
 
 ### 2.1 Graph accuracy
 
@@ -141,8 +158,8 @@ This is a 1-minute pre-flight check. If Pass 0 has any FAIL items, **STOP** — 
 
 | Check | What to look for |
 |-------|-----------------|
-| 2.3.1 Definition boxes | Is every new term introduced with a formal definition box (Definitie: ...)? The definition should be precise enough that a student could use it to answer an exam question. |
-| 2.3.2 Term consistency | Is the same term used consistently throughout? Flag if the paragraph alternates between "collectieve vraag" and "marktvraag" without stating they are synonyms. (Stating the synonym once and then choosing one is fine.) |
+| 2.3.1 Definition boxes | Is every new term introduced with a formal definition box (Definitie: ...)? The definition should be precise enough that a student could use it to answer an exam question. Verify Dutch terms and abbreviations against `references/economie-terminologie.md`. |
+| 2.3.2 Term consistency | Is the same term used consistently throughout? Flag if the paragraph alternates between "collectieve vraag" and "marktvraag" without stating they are synonyms. (Stating the synonym once and then choosing one is fine.) Flag any English terms where the syllabus prescribes Dutch (see `references/economie-terminologie.md` "Common pitfalls" section). |
 | 2.3.3 Correct economic relationships | For every causal claim (e.g., "if income rises, demand for a normal good increases"): verify the direction is correct. Check substitutes, complements, normal goods, inferior goods. |
 | 2.3.4 Horizontal vs. vertical | Any reference to "horizontaal optellen" or "verticaal optellen": verify the description matches the actual graphical operation. Horizontal addition = summing Q values at each P level. This is adding along the horizontal axis. |
 
@@ -159,10 +176,27 @@ This is a 1-minute pre-flight check. If Pass 0 has any FAIL items, **STOP** — 
 
 | Check | What to look for |
 |-------|-----------------|
-| 2.5.1 Prerequisite accuracy | When the paragraph says "In §X leerde je Y" — verify that §X actually teaches Y and uses the same terminology. |
+| 2.5.1 Prerequisite accuracy | When the paragraph says "In §X leerde je Y" — verify that §X actually teaches Y and uses the same terminology. Verify all Dutch economic terms against `references/economie-terminologie.md`. |
 | 2.5.2 Concept forward-compatibility | Does anything in this paragraph contradict or create confusion for later paragraphs? (e.g., stating a simplified rule now that will need to be "un-learned" later). |
 | 2.5.3 Notation consistency | Are variable names, subscript conventions (Q_v, Q_a, V₁, V₂), and graph labeling conventions consistent with previous and subsequent paragraphs? |
 | 2.5.4 Difficulty calibration | Does this paragraph's difficulty match its rating in the course blueprint (LICHT / MIDDEL / ZWAAR)? Flag if the actual content is significantly harder or easier than rated. |
+
+### 2.6 Economic and mathematical precision (from precision reference)
+
+These checks are derived from `references/economic_mathematical_precision_reference.md`. FAIL any violation.
+
+| Check | What to look for |
+|-------|-----------------|
+| 2.6.1 Economic object identification | Is the distinction between individual and market-level clear in every definition and example? (e.g., "een consument" vs "alle consumenten") |
+| 2.6.2 Ceteris paribus | When a curve is introduced, does the text explicitly state that other factors are held constant? |
+| 2.6.3 Units | Do all numerical answers include units? Are axis labels in format "Prijs (€)" not just "P"? |
+| 2.6.4 Movement vs shift | Is "beweging langs de curve" (own price) vs "verschuiving van de curve" (non-price factor) consistently and correctly applied? |
+| 2.6.5 Text-graph-table-formula match | Do numbers in the text, graph, table, and formula all agree exactly? If the graph is schematic, is that stated? |
+| 2.6.6 Cost terminology precision | Are TK, GTK, MK, TVK, GVK, GCK used correctly and never conflated? Is "producing more raises costs" always qualified (total vs average)? |
+| 2.6.7 Piecewise / domain restrictions | If collective demand or cost functions change at a threshold, is the function presented as piecewise with valid price/quantity ranges? |
+| 2.6.8 Break-even assumptions | Is the break-even formula only used when constant P and constant GVK are stated as assumptions? Is whole-unit rounding addressed? |
+| 2.6.9 Slope language | With P on y-axis, does "steiler" mean less responsive and "vlakker" mean more responsive? Verify every slope claim. |
+| 2.6.10 Common failure patterns | Check against precision reference §12: economic classification errors, curve logic errors, graph-text mismatch, formula-assumption mismatch, pedagogical overcompression. |
 
 ---
 

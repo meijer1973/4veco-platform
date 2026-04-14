@@ -8,7 +8,7 @@ description: "Builds consolidation exercises and test exercises with source mate
 Builds consolidation and test exercises: multi-skill, source-based, exam-style — with no new theory. The core unit is the **opgave**: a single context with source material and 4-6 escalating questions that weave together 2-5 concepts.
 
 **Companion skills:**
-- `econ-didactiek` — pedagogical principles
+- `econ-didactiek` — pedagogical decision rules (backed by `references/didactiek-principes.md`)
 - `economic-graph` — graphs, flow diagrams, supply curve rules
 - `econ-pdf-builder` — PDF export
 - `econ-exercise-builder` — single-skill exercises (this skill builds multi-skill integrated opgaven)
@@ -68,7 +68,7 @@ One context (ijssalon) weaves monopoly pricing, cost structures, game theory, st
 - **Data embedded in context.** Numbers in text ("De vaste kosten bedragen EUR500 per maand") or tables/graphs. Students extract relevant numbers.
 - **Self-contained.** Source contains all needed information.
 - **One world per opgave.** All questions reference the same context.
-- **Language level.** VWO level. Economic terminology matches syllabus exactly.
+- **Language level.** VWO level. Economic terminology matches syllabus exactly — see `references/economie-terminologie.md` for canonical terms and abbreviations.
 
 ### 2.3 Flow diagrams
 

@@ -9,6 +9,8 @@ Technical specifications for creating SVG-based economics visuals. All graphs mu
 
 **Core principle:** A student should understand the graph in 5 seconds without the teacher's explanation. If it takes longer, simplify.
 
+**Precision standard:** All graphs must comply with `references/economic_mathematical_precision_reference.md` — especially §9 (graph precision rules): axis labels with units, slope language matching axis orientation, exact numerical alignment with text, and no visual clutter.
+
 ---
 
 ## PART 1: SVG CANVAS & RENDERING
@@ -532,11 +534,18 @@ After generating any SVG with economic curves:
 13. Is the tax/subsidy bracket clearly visible?
 14. Are both old and new equilibrium prices labeled?
 
+### Text contrast on colored areas
+15. Does every text label have sufficient contrast against its background?
+16. Labels on colored bars/fills: use **white text on solid-color badges** (not colored text on same-hue semi-transparent overlays)
+17. Labels outside colored areas: use dark text (#2D3748 or the element's own color) on the light canvas (#F7FAFC)
+18. **Never** place colored text (e.g. green #27AE60) on a similar-color background (e.g. blue bar at 0.7 opacity, or green rect at 0.2 opacity) — even if the text is "technically" a different color, the contrast is unreadable
+19. Rule of thumb: if a badge/label sits inside a filled shape, give the badge a **solid** fill (the accent color at full opacity) and use **#FFFFFF** text
+
 ### All visuals
-15. Is the graph readable at the rendered size? (no text smaller than 10px)
-16. Does it use only palette colors? (no random colors)
-17. Is there a title at the top?
-18. Would a student understand it in 5 seconds?
+20. Is the graph readable at the rendered size? (no text smaller than 10px)
+21. Does it use only palette colors? (no random colors)
+22. Is there a title at the top?
+23. Would a student understand it in 5 seconds?
 
 **If any answer is "no", fix before delivering.**
 
@@ -591,6 +600,8 @@ slide.addImage({
 - Let axis labels overlap with price/quantity labels — maintain minimum 5px gap
 - Use the old pale area colors (#EBF5FB etc.) — use the medium-intensity colors with fill-opacity="0.45"
 - Insert a graph smaller than 8" wide on a PowerPoint slide — graphs must fill the slide
+- Place colored text on a same-hue background (e.g. green text on a green/blue bar, orange text on an orange fill) — use white text on solid-color badges instead, or place labels outside the colored area
+- Use semi-transparent overlays as label backgrounds inside colored bars — the layered transparency creates unreadable contrast. Use solid fills with white text
 - Place the Y-axis label horizontally (it must be rotated -90° and positioned at x=15)
 - Label equilibrium points with text "Evenwicht" — the dot + dashed lines are enough
 - Draw shift arrows diagonally — shift arrows must always be horizontal

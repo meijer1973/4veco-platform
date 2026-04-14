@@ -7,6 +7,13 @@ All project documentation lives in dedicated files:
 - **BUILD-CHAPTER.md** — End-to-end chapter assembly guide (pre-assembly gates, cross-paragraph checks, independent QC)
 - **build-scripts/README.md** — Script taxonomy (generators, converters, reference implementations, utilities)
 - **source-data/README.md** — Input-side conventions
+- **references/** — Authoritative external standards used by skills:
+  - `syllabus-economie-vwo-2026-versie-2.pdf` — Official CvTE syllabus (examenprogramma, eindtermen, notation markers)
+  - `economie-terminologie.md` — Canonical Dutch economic terms, abbreviations, and translation pitfalls. **All student-facing content must use terms from this reference.**
+  - `economic_mathematical_precision_reference.md` — Non-negotiable precision rules for all content: economic object identification, ceteris paribus, text-graph-formula matching, units, movement vs shift, cost terminology, domain restrictions. **Takes precedence over looser wording elsewhere.**
+  - `didactiek-principes.md` — Single source of truth for all didactical principles: cognitive load theory, dual coding, scaffolding/fading, differentiation, interleaving, misconceptions, Bloom's taxonomy, exercise design, paragraph structure, quality standards, research evidence
+  - `amstelveencollege_quality_standards.md` — School-fit overlay: explicit leerdoelen, formative monitoring, layered differentiation, meaningful context, learner self-monitoring, optional enrichment
+  - `inspectie-standaarden.md` — Onderwijsinspectie quality framework (OP1–OP6)
 
 Skills are in two locations (kept in sync):
 - `skills/` — shared canonical location for all agents (Claude, Codex, etc.)
