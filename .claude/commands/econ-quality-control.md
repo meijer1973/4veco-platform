@@ -233,6 +233,47 @@ quality_ref:
       inspectie: [OP3]
       didactiek: ["differentiatie naar boven", "hogere Bloom-niveaus"]
 
+  # --- TEST PREP COMPONENTS (Chapter 5 paragraphs only) ---
+  # Use this section INSTEAD of the componenten section above for test prep paragraphs.
+  # Test prep paragraphs do not have platform components (instapquiz, voorkennis, etc.)
+  componenten_testprep:                          # only for test prep paragraph types
+    type: testprep-summary|testprep-examskills|testprep-integration|testprep-practicetest
+    # §1 Actieve samenvatting:
+    samenvatting_blokken:
+      aanwezig: true|false
+      aantal_blokken: 5                          # expected: 5
+      mc_per_blok: 2-3                           # expected: 2-3 per block
+      misconcepties_gedocumenteerd: true|false    # distractors sourced from CSV/blueprint
+      inspectie: [OP3]
+      didactiek: ["retrieval practice", "misconceptie-gericht toetsen"]
+    # §2 Examenvaardigheden:
+    examvaardigheden:
+      aanwezig: true|false
+      aantal_oefeningen: 4-5
+      vaardigheden_gedekt: []                    # e.g. [noem, leg_uit, bereken, beoordeel, teken]
+      boek_emphasis_correct: true|false          # matches book-specific emphasis
+      inspectie: [OP3]
+      didactiek: ["antwoordstructurering", "metacognitie"]
+    # §3 Integratieoefening:
+    integratie:
+      aanwezig: true|false
+      aantal_deelvragen: 5-7
+      hoofdstukken_gedekt: []                    # e.g. [1, 2, 3, 4]
+      standpuntbepaling_laatste: true|false
+      cross_book: true|false                     # Book 4 only: requires Books 1-3 skills
+      inspectie: [OP3]
+      didactiek: ["transfer", "integratie", "evalueren"]
+    # §4 Proeftoets:
+    proeftoets:
+      aanwezig: true|false
+      toetsmatrijs_aanwezig: true|false
+      puntenverhouding_correct: true|false       # matches target distributions
+      bloom_verdeling_correct: true|false
+      tijdsduur: 120                             # minutes
+      cross_book: true|false                     # Book 4 only
+      inspectie: [OP2, OP3]
+      didactiek: ["formatief evalueren", "summatieve voorbereiding"]
+
   # --- ASSET INTEGRITY ---
   # Automated checks — must all pass before quality_ref is valid
   assets:

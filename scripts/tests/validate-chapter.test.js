@@ -192,6 +192,102 @@ describe('validate-chapter.js', () => {
     expect(output).toContain('Non-compliant asset name');
   });
 
+  test('accepts test prep summary (samenvatting.md, no paragraaf)', () => {
+    const dir = setupChapter('9.5 Hoofdstuk Toetsvoorbereiding', [
+      {
+        folder: '9.5.1 Actieve samenvatting',
+        mdFiles: ['9.5.1 Actieve samenvatting – samenvatting.md', '9.5.1 Actieve samenvatting – antwoorden.md'],
+        pdfFiles: ['9.5.1 Actieve samenvatting – samenvatting.pdf', '9.5.1 Actieve samenvatting – antwoorden.pdf'],
+        assets: ['9.5.1_fig_1.svg', '9.5.1_fig_1.png', '9.5.1_mc_1.svg', '9.5.1_mc_1.png'],
+        review: { name: '9.5.1-review.md', content: '# Review\nAll PASS.\n' },
+        qualityRef: {
+          name: '9.5.1-quality-ref.yaml',
+          content: 'assets:\n  missing: []\n  svgpng_paired: true\n  naming_compliant: true\n',
+        },
+      },
+    ]);
+    const { exitCode, output } = run(dir);
+    expect(output).not.toContain('MISSING paragraaf');
+    expect(output).not.toContain('MISSING opgaven');
+    expect(output).toContain('test prep (summary)');
+  });
+
+  test('accepts test prep practice test (toets + toetsmatrijs)', () => {
+    const dir = setupChapter('9.5 Hoofdstuk TestPrep4', [
+      {
+        folder: '9.5.4 Proeftoets',
+        mdFiles: ['9.5.4 Proeftoets – toets.md', '9.5.4 Proeftoets – antwoorden.md', '9.5.4 Proeftoets – toetsmatrijs.md'],
+        pdfFiles: ['9.5.4 Proeftoets – toets.pdf', '9.5.4 Proeftoets – antwoorden.pdf', '9.5.4 Proeftoets – toetsmatrijs.pdf'],
+        assets: ['9.5.4_fig_1.svg', '9.5.4_fig_1.png'],
+        review: { name: '9.5.4-review.md', content: '# Review\nAll PASS.\n' },
+        qualityRef: {
+          name: '9.5.4-quality-ref.yaml',
+          content: 'assets:\n  missing: []\n  svgpng_paired: true\n  naming_compliant: true\n',
+        },
+      },
+    ]);
+    const { exitCode, output } = run(dir);
+    expect(output).not.toContain('MISSING toets');
+    expect(output).not.toContain('MISSING toetsmatrijs');
+    expect(output).toContain('test prep (practice test)');
+  });
+
+  test('fails when practice test missing toetsmatrijs', () => {
+    const dir = setupChapter('9.5 Hoofdstuk TestPrepMissing', [
+      {
+        folder: '9.5.4 Proeftoets',
+        mdFiles: ['9.5.4 Proeftoets – toets.md', '9.5.4 Proeftoets – antwoorden.md'],
+        pdfFiles: ['9.5.4 Proeftoets – toets.pdf', '9.5.4 Proeftoets – antwoorden.pdf'],
+        assets: ['9.5.4_fig_1.svg', '9.5.4_fig_1.png'],
+        review: { name: '9.5.4-review.md', content: '# Review\nAll PASS.\n' },
+        qualityRef: {
+          name: '9.5.4-quality-ref.yaml',
+          content: 'assets:\n  missing: []\n  svgpng_paired: true\n  naming_compliant: true\n',
+        },
+      },
+    ]);
+    const { exitCode, output } = run(dir);
+    expect(exitCode).not.toBe(0);
+    expect(output).toContain('MISSING toetsmatrijs');
+  });
+
+  test('fails when summary missing samenvatting.md', () => {
+    const dir = setupChapter('9.5 Hoofdstuk TestPrepMissing2', [
+      {
+        folder: '9.5.1 Actieve samenvatting',
+        mdFiles: ['9.5.1 Actieve samenvatting – antwoorden.md'],
+        pdfFiles: ['9.5.1 Actieve samenvatting – antwoorden.pdf'],
+        assets: ['9.5.1_fig_1.svg', '9.5.1_fig_1.png'],
+        review: { name: '9.5.1-review.md', content: '# Review\nAll PASS.\n' },
+        qualityRef: {
+          name: '9.5.1-quality-ref.yaml',
+          content: 'assets:\n  missing: []\n  svgpng_paired: true\n  naming_compliant: true\n',
+        },
+      },
+    ]);
+    const { exitCode, output } = run(dir);
+    expect(exitCode).not.toBe(0);
+    expect(output).toContain('MISSING samenvatting');
+  });
+
+  test('accepts mc asset type in naming', () => {
+    const dir = setupChapter('9.5 Hoofdstuk TestMCAsset', [
+      {
+        folder: '9.5.1 Actieve samenvatting',
+        mdFiles: ['9.5.1 Actieve samenvatting – samenvatting.md', '9.5.1 Actieve samenvatting – antwoorden.md'],
+        pdfFiles: ['9.5.1 Actieve samenvatting – samenvatting.pdf', '9.5.1 Actieve samenvatting – antwoorden.pdf'],
+        assets: ['9.5.1_mc_1.svg', '9.5.1_mc_1.png'],
+        review: { name: '9.5.1-review.md', content: '# Review\nAll PASS.\n' },
+        qualityRef: {
+          name: '9.5.1-quality-ref.yaml',
+          content: 'assets:\n  missing: []\n  svgpng_paired: true\n  naming_compliant: true\n',
+        },
+      },
+    ]);
+    const { output } = run(dir);
+    expect(output).not.toContain('Non-compliant asset name');
+  });
+
   test('accepts valid consolidation (2 md, no paragraaf)', () => {
     const dir = setupChapter('9.9 Hoofdstuk TestConsol', [
       {

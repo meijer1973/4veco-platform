@@ -10,6 +10,7 @@ End-to-end orchestrator for building a complete textbook chapter from blueprint 
 **Skills called by this orchestrator:**
 - `econ-textbook-paragraph` → builds each theory paragraph (§1–§3)
 - `econ-consolidation-builder` → builds the consolidation paragraph (§4)
+- `econ-testprep-builder` → builds test preparation paragraphs (Chapter 5: §1–§4)
 - `econ-chapter-assembler` → wraps all paragraphs into a chapter PDF
 - `econ-paragraph-review` → independent QC review per paragraph
 - `econ-quality-control` → generates quality_ref per paragraph
@@ -66,6 +67,28 @@ All paragraph folders go **inside** the chapter folder. Never create paragraph f
       X.Y.4 Gemengde opgaven – antwoorden.md
       ...
     _assets/                                      ← chapter-level (collected from all paragraphs)
+
+Test preparation chapter (Chapter 5) has a different layout:
+
+  X.5 Hoofdstuk Toetsvoorbereiding/
+    X.5.1 Actieve samenvatting/
+      X.5.1 Actieve samenvatting – samenvatting.md
+      X.5.1 Actieve samenvatting – antwoorden.md
+      build_pdf.py + _assets/
+    X.5.2 Examenvaardigheden/
+      X.5.2 Examenvaardigheden – opgaven.md
+      X.5.2 Examenvaardigheden – antwoorden.md
+      build_pdf.py + _assets/
+    X.5.3 Integratieoefening/
+      X.5.3 Integratieoefening – opgaven.md
+      X.5.3 Integratieoefening – antwoorden.md
+      build_pdf.py + _assets/
+    X.5.4 Proeftoets/
+      X.5.4 Proeftoets – toets.md
+      X.5.4 Proeftoets – antwoorden.md
+      X.5.4 Proeftoets – toetsmatrijs.md
+      build_pdf.py + _assets/
+    _assets/
     X.Y [Name] – hoofdstuk.md
     X.Y [Name] – hoofdstuk.html
     X.Y [Name] – hoofdstuk.pdf
@@ -107,8 +130,9 @@ Before building anything, analyse the blueprint and produce a chapter plan.
 ### 2.1 List paragraphs
 
 Extract all paragraphs from the blueprint:
-- Standard chapter: §X.Y.1 (theory), §X.Y.2 (theory), §X.Y.3 (theory), §X.Y.4 (consolidation)
+- Standard theory chapter: §X.Y.1 (theory), §X.Y.2 (theory), §X.Y.3 (theory), §X.Y.4 (consolidation)
 - Exception: Book 1 Chapter 4 has §X.Y.1–§X.Y.4 (theory) + §X.Y.5 (consolidation)
+- Test preparation chapter (Chapter 5): §X.5.1 (active summary), §X.5.2 (exam skills), §X.5.3 (integration), §X.5.4 (practice test)
 
 ### 2.2 Analyse dependencies
 
@@ -136,10 +160,15 @@ Wave 2: paragraphs that depend on Wave 1 (build in parallel within wave)
 Wave 3: consolidation (always last, depends on all theory)
 ```
 
-Common patterns:
+Common patterns for theory chapters:
 - **All independent:** Wave 1 = {§1, §2, §3}, Wave 2 = {§4}
 - **Chain §2→§3:** Wave 1 = {§1, §2}, Wave 2 = {§3}, Wave 3 = {§4}
 - **Full chain:** Wave 1 = {§1}, Wave 2 = {§2}, Wave 3 = {§3}, Wave 4 = {§4}
+
+**Test preparation chapter (Chapter 5):** Fixed build order:
+- Wave 1: §1 (active summary) — always first: establishes review foundation, catches knowledge gaps
+- Wave 2: §2 (exam skills) — uses summary as reference, trains answer craft
+- Wave 3: §3 (integration) + §4 (practice test) — can be parallel: §3 is cross-chapter synthesis, §4 is exam simulation
 
 ### 2.4 Cross-paragraph conventions
 
@@ -212,6 +241,12 @@ Each paragraph is built by a **separate sub-agent**. The orchestrator provides:
 4. Explicit instruction — differs by paragraph type:
    - **Theory paragraphs (§1–§3, or §1–§4 for Ch4):** "Follow `BUILD-PARAGRAPH.md` Part A steps A1–A5. Use `econ-textbook-paragraph` for content. Produce ALL deliverables: paragraaf.md, opgaven.md, antwoorden.md, all SVG+PNG assets in `_assets/`, build_pdf.py, and all PDFs (paragraaf.pdf, opgaven.pdf, antwoorden.pdf). Run the A5 asset completeness gate before returning."
    - **Consolidation paragraph (last §):** "Follow `BUILD-PARAGRAPH.md` Part A steps A1–A5. Use `econ-consolidation-builder` for content. Produce ALL deliverables: opgaven.md, antwoorden.md, all SVG+PNG assets in `_assets/`, build_pdf.py, and PDFs (opgaven.pdf, antwoorden.pdf). No paragraaf.md — consolidation has no theory. Run the A5 asset completeness gate before returning."
+   - **Test prep paragraphs (Chapter 5, §1–§4):** "Follow `BUILD-PARAGRAPH.md` Part A steps A1–A5. Use `econ-testprep-builder` for content. No new theory. Produce deliverables per type:
+     - §1 (Actieve samenvatting): samenvatting.md + antwoorden.md + PDFs + _assets/ + build_pdf.py
+     - §2 (Examenvaardigheden): opgaven.md + antwoorden.md + PDFs + _assets/ + build_pdf.py
+     - §3 (Integratieoefening): opgaven.md + antwoorden.md + PDFs + _assets/ + build_pdf.py
+     - §4 (Proeftoets): toets.md + antwoorden.md + toetsmatrijs.md + PDFs + _assets/ + build_pdf.py
+     Run the A5 asset completeness gate before returning."
 
 **Important:** Do NOT ask paragraph sub-agents to produce review.md or quality-ref.yaml. A sub-agent cannot independently review its own work. The orchestrator handles QC in Part 4 after all paragraphs are built.
 
@@ -253,7 +288,47 @@ Required files:
   (No paragraaf.md/pdf — consolidation has no theory section)
 ```
 
-**Asset checks (both types):**
+**For test prep §1 (Actieve samenvatting):**
+
+```
+Required files:
+  □ X.5.1 Actieve samenvatting – samenvatting.md
+  □ X.5.1 Actieve samenvatting – antwoorden.md
+  □ X.5.1 Actieve samenvatting – samenvatting.pdf   (>10KB)
+  □ X.5.1 Actieve samenvatting – antwoorden.pdf     (>10KB)
+  □ build_pdf.py
+  □ _assets/ folder exists
+  (No paragraaf.md — test prep has no theory)
+```
+
+**For test prep §2 (Examenvaardigheden) and §3 (Integratieoefening):**
+
+```
+Required files:
+  □ X.5.Z [Name] – opgaven.md
+  □ X.5.Z [Name] – antwoorden.md
+  □ X.5.Z [Name] – opgaven.pdf    (>10KB)
+  □ X.5.Z [Name] – antwoorden.pdf (>10KB)
+  □ build_pdf.py
+  □ _assets/ folder exists
+  (No paragraaf.md — test prep has no theory)
+```
+
+**For test prep §4 (Proeftoets):**
+
+```
+Required files:
+  □ X.5.4 Proeftoets – toets.md
+  □ X.5.4 Proeftoets – antwoorden.md
+  □ X.5.4 Proeftoets – toetsmatrijs.md
+  □ X.5.4 Proeftoets – toets.pdf         (>10KB)
+  □ X.5.4 Proeftoets – antwoorden.pdf    (>10KB)
+  □ X.5.4 Proeftoets – toetsmatrijs.pdf  (>10KB)
+  □ build_pdf.py
+  □ _assets/ folder exists
+```
+
+**Asset checks (all types):**
 
 ```
   □ Every ![...] reference in .md files → file exists in _assets/
@@ -378,6 +453,7 @@ node scripts/validate-chapter.js "<path-to-chapter-folder>"
 This checks all of the following automatically:
 - Per theory paragraph: 3 .md + 3 .pdf (>10KB) + build_pdf.py + _assets/ with SVG+PNG pairs
 - Per consolidation paragraph: 2 .md + 2 .pdf (>10KB) + build_pdf.py + _assets/
+- Per test prep paragraph: type-specific .md + .pdf counts (see Part 3.2) + build_pdf.py + _assets/
 - Asset naming follows `X.Y.Z_{type}_{number}` convention
 - Every image reference in .md resolves to a file in _assets/
 - No orphaned assets
@@ -405,6 +481,7 @@ This checks all of the following automatically:
 2. □ Chapter plan written (`_chapter-plan.md`) with build order, dependencies, conventions
 3. □ All theory paragraphs built via `econ-textbook-paragraph` (sub-agents)
 4. □ Consolidation paragraph built via `econ-consolidation-builder` (sub-agent)
+4b. □ Test prep paragraphs built via `econ-testprep-builder` (sub-agents, Chapter 5 only)
 5. □ Each paragraph passed completeness verification (Part 3.2)
 6. □ Independent QC review per paragraph (Part 4.1, sub-agents)
 7. □ Chapter-level consistency review (Part 4.2, sub-agent)

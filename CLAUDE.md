@@ -14,6 +14,7 @@ All project documentation lives in dedicated files:
   - `didactiek-principes.md` — Single source of truth for all didactical principles: cognitive load theory, dual coding, scaffolding/fading, differentiation, interleaving, misconceptions, Bloom's taxonomy, exercise design, paragraph structure, quality standards, research evidence
   - `amstelveencollege_quality_standards.md` — School-fit overlay: explicit leerdoelen, formative monitoring, layered differentiation, meaningful context, learner self-monitoring, optional enrichment
   - `inspectie-standaarden.md` — Onderwijsinspectie quality framework (OP1–OP6)
+  - `vraagtypen-en-opgaveontwerp.md` — Single source of truth for all question types, exercise formats, answer model conventions, scaffolding systems, Bloom distribution targets, point allocation, and opgave design rules
 
 Skills are in two locations (kept in sync):
 - `skills/` — shared canonical location for all agents (Claude, Codex, etc.)

@@ -43,11 +43,33 @@ Assembles completed paragraph markdown files and consolidation exercises into a 
 
 Exception: Book 1 Chapter 4 has 4 theory paragraphs + consolidation (§1.4.1–§1.4.5).
 
+**Test preparation chapter (Chapter 5)** has a different paragraph mix:
+
+```
+┌─────────────────────────────────────────────┐
+│ FRONT PAGE (1 page)                         │
+│   Chapter 5 title, table of contents,       │
+│   review goals, introduction                │
+├─────────────────────────────────────────────┤
+│ §X.5.1 — Actieve samenvatting               │
+│   (from X.5.1 – samenvatting.md)            │
+├─────────────────────────────────────────────┤
+│ §X.5.2 — Examenvaardigheden                 │
+│   (from X.5.2 – opgaven.md)                 │
+├─────────────────────────────────────────────┤
+│ §X.5.3 — Integratieoefening                 │
+│   (from X.5.3 – opgaven.md)                 │
+├─────────────────────────────────────────────┤
+│ §X.5.4 — Proeftoets                         │
+│   (from X.5.4 – toets.md)                   │
+└─────────────────────────────────────────────┘
+```
+
 ### 1.2 What does NOT go in the chapter PDF
 
 - Answer models → assembled separately as an answer booklet
 - Begeleide inoefening → separate documents per paragraph
-- Test preparation → Chapter 5 is its own document
+- Toetsmatrijs (§4 practice test) → teacher-facing, not in chapter PDF
 - Difficulty ratings, time estimates → teacher-facing, never in student output
 
 ---
@@ -190,17 +212,36 @@ The front page uses the same base font size (11pt) as the rest of the document. 
 
 The assembler expects paragraph folders **inside** the chapter folder:
 
+**Theory chapter:**
 ```
-X.Y Hoofdstuk [Name]/                              ← chapter folder (this is where build_chapter.py lives)
+X.Y Hoofdstuk [Name]/
   X.Y.1 [Name]/X.Y.1 [Name] – paragraaf.md    + _assets/
   X.Y.2 [Name]/X.Y.2 [Name] – paragraaf.md    + _assets/
   X.Y.3 [Name]/X.Y.3 [Name] – paragraaf.md    + _assets/
   X.Y.4 [Name]/X.Y.4 [Name] – opgaven.md      + _assets/   (consolidation)
 ```
 
+**Test preparation chapter:**
+```
+X.5 Hoofdstuk [Name]/
+  X.5.1 Actieve samenvatting/X.5.1 Actieve samenvatting – samenvatting.md  + _assets/
+  X.5.2 Examenvaardigheden/X.5.2 Examenvaardigheden – opgaven.md          + _assets/
+  X.5.3 Integratieoefening/X.5.3 Integratieoefening – opgaven.md          + _assets/
+  X.5.4 Proeftoets/X.5.4 Proeftoets – toets.md                           + _assets/
+```
+
 In `build_chapter.py`, use `MODULE = BASE` (not `BASE.parent`) since paragraphs are in the same directory.
 
 Plus the blueprint paragraph specs for lesson goals and titles.
+
+### 3.1b Detecting the main content file per paragraph
+
+For each paragraph folder, the **main content file** (the one assembled into the chapter) is detected by exclusion:
+- NOT `antwoorden.md` (goes in answer booklet)
+- NOT `toetsmatrijs.md` (teacher-facing, not in chapter)
+- NOT files ending in `-review.md` or `-quality-ref.yaml` (QC artifacts)
+
+This means: for theory paragraphs it's `paragraaf.md`, for consolidation it's `opgaven.md`, for §1 test prep it's `samenvatting.md`, for §4 test prep it's `toets.md` — all detected automatically without hardcoding filenames.
 
 ### 3.2 Assembly steps
 
@@ -208,9 +249,8 @@ Plus the blueprint paragraph specs for lesson goals and titles.
 1. Generate front page as raw HTML (see §2.2)
    (chapter title, table of contents, lesson goals, catchy intro)
 
-2. Concatenate: front_page_html + page-break + §X.Y.1 paragraaf.md
-   + page-break + §X.Y.2 paragraaf.md + page-break + §X.Y.3 paragraaf.md
-   + page-break + §X.Y.4 opgaven.md (consolidation)
+2. Concatenate: front_page_html + page-break + §1 main_content.md
+   + page-break + §2 main_content.md + ... (detect main content file per paragraph using §3.1b rules)
 
 3. Rewrite asset paths in each paragraph:
    Replace paragraph-local paths (assets/ or _assets/) with _assets/
@@ -312,7 +352,7 @@ When chapters are later assembled into books, the chapter files follow:
 <output-folder>/1.2 Hoofdstuk [Name]/1.2 [Name] – hoofdstuk.pdf
 <output-folder>/1.3 Hoofdstuk [Name]/1.3 [Name] – hoofdstuk.pdf
 <output-folder>/1.4 Hoofdstuk [Name]/1.4 [Name] – hoofdstuk.pdf
-<output-folder>/1.5 Hoofdstuk [Name]/   (Chapter 5 — test preparation, separate skill)
+<output-folder>/1.5 Hoofdstuk [Name]/1.5 [Name] – hoofdstuk.pdf   (test preparation chapter)
 ```
 
 ---

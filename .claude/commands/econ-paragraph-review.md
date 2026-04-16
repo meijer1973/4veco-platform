@@ -44,9 +44,9 @@ This is a 1-minute pre-flight check. If Pass 0 has any FAIL items, **STOP** — 
 |-------|-----------------|
 | 0.1 All image refs resolve | Extract every `![...](...)` reference from all `.md` files in the paragraph folder. For each reference, verify the file exists in `_assets/`. **FAIL** if any referenced file is missing. List all missing files. |
 | 0.2 SVG/PNG pairs complete | Every `.svg` file in `_assets/` has a matching `.png` with the same base name, and vice versa. **FAIL** if any are unpaired. |
-| 0.3 Asset naming convention | All files in `_assets/` follow the pattern `X.Y.Z_{type}_{number}.{ext}` where type is `fig`, `ex`, or `we`. **FLAG** any deviations. |
+| 0.3 Asset naming convention | All files in `_assets/` follow the pattern `X.Y.Z_{type}_{number}.{ext}` where type is `fig`, `ex`, `we`, or `mc`. **FLAG** any deviations. |
 | 0.4 No orphaned assets | Every file in `_assets/` is referenced in at least one `.md` file. **FLAG** any orphaned assets (files that exist but are never referenced). |
-| 0.5 Required output files | Check which type of paragraph this is: **Theory**: paragraaf.md + opgaven.md + antwoorden.md must exist. **Consolidation** (folder name contains "Gemengde opgaven"): opgaven.md + antwoorden.md must exist (no paragraaf.md expected). **FAIL** if any required file for that type is missing. |
+| 0.5 Required output files | Check which type of paragraph this is based on folder name: **Theory** (default): paragraaf.md + opgaven.md + antwoorden.md. **Consolidation** (folder contains "Gemengde opgaven"): opgaven.md + antwoorden.md. **Test prep §1** (folder contains "Actieve samenvatting"): samenvatting.md + antwoorden.md. **Test prep §2** (folder contains "Examenvaardigheden"): opgaven.md + antwoorden.md. **Test prep §3** (folder contains "Integratieoefening"): opgaven.md + antwoorden.md. **Test prep §4** (folder contains "Proeftoets"): toets.md + antwoorden.md + toetsmatrijs.md. **FAIL** if any required file for that type is missing. |
 
 **Pass 0 result:** If any FAIL → return the report immediately. The builder must fix asset issues before content review is meaningful.
 
@@ -124,6 +124,53 @@ These checks verify compliance with `references/amstelveencollege_quality_standa
 | 1.7.4 Context serves concept | Does the context make the concept more legible and support transfer, rather than being decorative or distracting? Would removing the context make the concept harder to understand? |
 | 1.7.5 Learner self-monitoring | Does the summary or exercise section help students track what they understand vs where they need more practice? (e.g., checklist, self-assessment prompt) |
 | 1.7.6 Optional enrichment | If a verdiepingsopdracht exists, does it stretch beyond the core without competing with it? Is it clearly marked as optional? |
+
+### 1.8 Test preparation paragraphs (Chapter 5 only)
+
+These checks apply ONLY to test preparation paragraphs. Skip this section for theory and consolidation paragraphs.
+
+**§1 Active Summary (folder contains "Actieve samenvatting"):**
+
+| Check | What to look for |
+|-------|-----------------|
+| 1.8.1 Block count | Exactly 5 summary blocks, each covering a distinct topic cluster. **FAIL** if fewer than 5 or if blocks overlap significantly. |
+| 1.8.2 MC count per block | Each block has 2–3 MC questions interleaved after the summary text. **FAIL** if any block has 0 or 1 MC questions. |
+| 1.8.3 Distractor quality | MC distractors represent real student misconceptions (not obviously wrong alternatives). Check against reasoning CSV `distractor_*` columns or blueprint difficulty notes. **FLAG** if distractors are implausible or trivially wrong. |
+| 1.8.4 Answer explanations | Every MC question has an explanation that names the correct answer AND identifies which misconception the "trap" option represents. **FAIL** if explanations are missing. |
+| 1.8.5 Chapter coverage | All 4 theory chapters are represented across the 5 blocks. **FLAG** if coverage is lopsided (e.g., 3 blocks for Chapter 1, none for Chapter 4). |
+| 1.8.6 No new theory | Summary text reviews existing concepts only — no new definitions, formulas, or procedures. **FAIL** if new theory is introduced. |
+
+**§2 Exam Skills (folder contains "Examenvaardigheden"):**
+
+| Check | What to look for |
+|-------|-----------------|
+| 1.8.7 Exercise count | 4–5 exercises. **FLAG** if outside this range. |
+| 1.8.8 Single skill per exercise | Each exercise targets exactly ONE exam skill and is labelled with that skill. **FAIL** if an exercise mixes multiple skills or has no skill label. |
+| 1.8.9 Book emphasis match | The exercises match the book-specific emphasis (B1: graphs/notation, B2: standpuntbepaling, B3: multi-step, B4: real data/cumulative). **FLAG** if emphasis doesn't match the book. |
+| 1.8.10 Model vs weak answer | At least one exercise includes a model answer vs weak answer comparison. **FLAG** if missing. |
+
+**§3 Integration (folder contains "Integratieoefening"):**
+
+| Check | What to look for |
+|-------|-----------------|
+| 1.8.11 Single context | All sub-questions share one coherent scenario. Check: do the sub-questions reuse the same scenario nouns (company name, market, policy) throughout? **FAIL** if multiple unrelated contexts are used. |
+| 1.8.12 Sub-question count | 5–7 sub-questions. **FLAG** if outside this range. |
+| 1.8.13 Chapter skill labels | Each sub-question is labelled with the chapter skill it requires. **FAIL** if labels are missing. |
+| 1.8.14 Chapter coverage | All 4 theory chapters are represented across sub-questions. **FAIL** if any chapter is unrepresented. |
+| 1.8.15 Standpuntbepaling | The final sub-question is a standpuntbepaling (evaluate/assess). **FAIL** if the final question is purely calculation or recall. |
+| 1.8.16 Book 4 cross-book | For Book 4 only: at least one sub-question requires a skill from Books 1–3. **FAIL** if Book 4 §3 has no cross-book element. |
+
+**§4 Practice Test (folder contains "Proeftoets"):**
+
+| Check | What to look for |
+|-------|-----------------|
+| 1.8.17 Toetsmatrijs present | toetsmatrijs.md exists and contains a skills × Bloom × points matrix. **FAIL** if missing or empty. |
+| 1.8.18 Format compliance | 6–8 open questions across 3–4 contexts. **FLAG** if outside these ranges. |
+| 1.8.19 Point distribution | ~70% of questions are 2p, Bloom distribution approximately 25% begrijpen / 40% toepassen / 35% analyseren-evalueren. **FLAG** significant deviations. |
+| 1.8.20 Content coverage | All 4 theory chapters represented. **FAIL** if any chapter is absent. |
+| 1.8.21 Source types | At least 1 graph context, 1 data table, 1 text source. **FLAG** if any source type is missing. |
+| 1.8.22 Book 4 cumulative | For Book 4 only: at least one context requires tools from Books 1–3. **FAIL** if missing. |
+| 1.8.23 Point allocation | Every sub-question has explicit point allocation in the answer model. **FAIL** if points are missing. |
 
 ---
 

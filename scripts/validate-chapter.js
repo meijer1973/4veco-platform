@@ -8,7 +8,7 @@
  *
  * Checks:
  *   - Chapter folder contains paragraph subfolders
- *   - Each paragraph has required files (theory: 3md+3pdf, consolidation: 2md+2pdf)
+ *   - Each paragraph has required files (theory: 3md+3pdf, consolidation: 2md+2pdf, test prep: type-specific)
  *   - Each paragraph has build_pdf.py
  *   - Asset completeness: every ![...] ref in .md resolves to a file in _assets/
  *   - SVG/PNG pairing: every .svg has a .png and vice versa
@@ -71,13 +71,39 @@ if (paraFolders.length === 0) {
   process.exit(1);
 }
 
-// Identify theory vs consolidation
-const consolidationPattern = /gemengde\s+opgaven/i;
-const theoryFolders = paraFolders.filter(f => !consolidationPattern.test(f));
-const consolFolders = paraFolders.filter(f => consolidationPattern.test(f));
+// ── Paragraph type classification ──────────────────────────────
+// Each type has: pattern (regex on folder name), required .md files, expected PDF count
 
-pass(`${theoryFolders.length} theory paragraph(s): ${theoryFolders.map(f => f.split(' ')[0]).join(', ')}`);
-pass(`${consolFolders.length} consolidation paragraph(s): ${consolFolders.map(f => f.split(' ')[0]).join(', ')}`);
+const PARA_TYPES = {
+  consolidation:          { pattern: /gemengde\s+opgaven/i,      requiredMd: ['opgaven', 'antwoorden'],                    pdfCount: 2, label: 'consolidation' },
+  'testprep-summary':     { pattern: /actieve\s+samenvatting/i,  requiredMd: ['samenvatting', 'antwoorden'],                pdfCount: 2, label: 'test prep (summary)' },
+  'testprep-examskills':  { pattern: /examenvaardigheden/i,      requiredMd: ['opgaven', 'antwoorden'],                     pdfCount: 2, label: 'test prep (exam skills)' },
+  'testprep-integration': { pattern: /integratieoefening/i,      requiredMd: ['opgaven', 'antwoorden'],                     pdfCount: 2, label: 'test prep (integration)' },
+  'testprep-practicetest':{ pattern: /proeftoets/i,              requiredMd: ['toets', 'antwoorden', 'toetsmatrijs'],       pdfCount: 3, label: 'test prep (practice test)' },
+  theory:                 { pattern: null,                       requiredMd: ['paragraaf', 'opgaven', 'antwoorden'],        pdfCount: 3, label: 'theory' },
+};
+
+function classifyParagraph(folderName) {
+  for (const [type, spec] of Object.entries(PARA_TYPES)) {
+    if (spec.pattern && spec.pattern.test(folderName)) return type;
+  }
+  return 'theory'; // default
+}
+
+// Classify all paragraphs
+const classified = {};
+for (const f of paraFolders) {
+  const type = classifyParagraph(f);
+  if (!classified[type]) classified[type] = [];
+  classified[type].push(f);
+}
+
+for (const [type, spec] of Object.entries(PARA_TYPES)) {
+  const folders = classified[type] || [];
+  if (folders.length > 0) {
+    pass(`${folders.length} ${spec.label} paragraph(s): ${folders.map(f => f.split(' ')[0]).join(', ')}`);
+  }
+}
 console.log();
 
 // ── Per-paragraph checks ────────────────────────────────────────
@@ -95,12 +121,13 @@ function extractImageRefs(folder) {
   return refs;
 }
 
-function validateParagraph(folderName, isConsolidation) {
+function validateParagraph(folderName, paraType) {
   const folder = path.join(CHAPTER, folderName);
   const parNr = folderName.split(' ')[0];
   const parName = folderName.substring(parNr.length + 1);
+  const spec = PARA_TYPES[paraType];
 
-  console.log(`── ${folderName} (${isConsolidation ? 'consolidation' : 'theory'}) ──`);
+  console.log(`── ${folderName} (${spec.label}) ──`);
 
   // Check folder name matches file prefix
   const mdFiles = fs.readdirSync(folder).filter(f => f.endsWith('.md'));
@@ -114,24 +141,20 @@ function validateParagraph(folderName, isConsolidation) {
     }
   }
 
-  // Required .md files
-  if (isConsolidation) {
-    const opgaven = mdFiles.find(f => f.includes('opgaven'));
-    const antwoorden = mdFiles.find(f => f.includes('antwoorden'));
-    opgaven ? pass('opgaven.md') : fail('MISSING opgaven.md');
-    antwoorden ? pass('antwoorden.md') : fail('MISSING antwoorden.md');
-  } else {
-    const paragraaf = mdFiles.find(f => f.includes('paragraaf'));
-    const opgaven = mdFiles.find(f => f.includes('opgaven'));
-    const antwoorden = mdFiles.find(f => f.includes('antwoorden'));
-    paragraaf ? pass('paragraaf.md') : fail('MISSING paragraaf.md');
-    opgaven ? pass('opgaven.md') : fail('MISSING opgaven.md');
-    antwoorden ? pass('antwoorden.md') : fail('MISSING antwoorden.md');
+  // Required .md files (type-specific)
+  // Match on the suffix after the en-dash to avoid false positives from folder names
+  // e.g., "9.5.1 Actieve samenvatting – antwoorden.md" should NOT match "samenvatting"
+  for (const required of spec.requiredMd) {
+    const found = mdFiles.find(f => {
+      const suffix = f.split(' – ').pop() || f;
+      return suffix.includes(required);
+    });
+    found ? pass(`${required}.md`) : fail(`MISSING ${required}.md`);
   }
 
   // Required .pdf files
   const pdfFiles = fs.readdirSync(folder).filter(f => f.endsWith('.pdf'));
-  const expectedPdfCount = isConsolidation ? 2 : 3;
+  const expectedPdfCount = spec.pdfCount;
   if (pdfFiles.length >= expectedPdfCount) {
     for (const pdf of pdfFiles) {
       const size = fs.statSync(path.join(folder, pdf)).size;
@@ -173,7 +196,7 @@ function validateParagraph(folderName, isConsolidation) {
     }
 
     // Asset naming convention: X.Y.Z_{type}_{number}.{ext}
-    const validPattern = /^\d+\.\d+\.\d+_(fig|ex|we)_\d+\.(svg|png)$/;
+    const validPattern = /^\d+\.\d+\.\d+_(fig|ex|we|mc)_\d+\.(svg|png)$/;
     for (const f of assetFiles) {
       if (!validPattern.test(f)) {
         if (f.endsWith('.svg') || f.endsWith('.png')) {
@@ -258,11 +281,9 @@ function validateParagraph(folderName, isConsolidation) {
   console.log();
 }
 
-for (const folder of theoryFolders) {
-  validateParagraph(folder, false);
-}
-for (const folder of consolFolders) {
-  validateParagraph(folder, true);
+for (const folder of paraFolders) {
+  const type = classifyParagraph(folder);
+  validateParagraph(folder, type);
 }
 
 // ── Chapter-level checks ────────────────────────────────────────

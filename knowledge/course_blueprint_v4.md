@@ -394,6 +394,75 @@ Integrative exercises combining costs and revenues. Include: "at which Q is wins
 Full market equilibrium exercises: given functions, find equilibrium, calculate costs/revenue/profit, apply marginal rule. Include exam-style context: a short text about a fruit stand at a market with a cost table, requiring students to find the profit-maximising output and explain their reasoning. Combine graph reading with calculation.
 
 ---
+
+## Chapter 5: Test Preparation
+
+*This chapter has no new theory. It prepares students for the 120-minute end-of-book test covering Chapters 1–4. The 45-minute mid-book test (after Chapter 2, covering Chapters 1–2 only) has already taken place.*
+
+### §1 — Active summary with knowledge questions
+
+**Summary blocks cover:**
+- Block 1: Scarcity, opportunity cost, percentage changes, index numbers
+- Block 2: Individual and collective demand, betalingsbereidheid, demand factors, shifts vs movements
+- Block 3: Supply, cost structures (TK/VK/CK/GTK/GVK/GCK), revenue (TO/GO), break-even
+- Block 4: Market equilibrium, solving Qa = Qv, shifts and new equilibria
+- Block 5: Marginal concepts (MK, MO), the MO = MK profit maximisation rule
+
+**Multiple-choice question style (2–3 per block):**
+Questions should test understanding, not recall. Use mini-scenarios that require applying a concept. Wrong answers should represent real student errors.
+
+*Example after Block 2:*
+> The price of butter rises. A student says: "The demand curve for butter shifts to the left." Is this correct?
+> (A) Yes, because consumers buy less butter when the price rises.
+> (B) No, there is a movement along the demand curve, not a shift.
+> (C) Yes, because butter becomes less attractive compared to margarine.
+> (D) No, the supply curve shifts, not the demand curve.
+>
+> *(Correct: B. Option A is the classic shift/movement confusion.)*
+
+**Emphasis for Book 1:** Focus on graph reading conventions (which axis is which), percentage calculation traps (index points vs percentages), and the shift vs movement distinction.
+
+---
+
+### §2 — Exam skills: reading sources and structuring answers
+
+**Exercises (4–5 short ones):**
+- Given a data table with production costs at different output levels: extract the relevant numbers and calculate GTK and break-even. (Skill: selecting data from a table.)
+- Given a graph showing two demand curves without labels: identify which is individual and which is collective. Explain how you can tell. (Skill: interpreting an unfamiliar graph.)
+- Given a short text about a market: identify the demand factors mentioned and predict the direction of the demand shift. Write a full "leg uit" answer. (Skill: structuring a verbal explanation.)
+- Given a calculation question: show two student answers — one that earns full marks and one that loses marks. Identify what's missing from the weaker answer. (Skill: understanding what markers look for.)
+
+**Emphasis for Book 1:** The basics of exam craft. Students learn that "bereken" requires showing all steps, that "leg uit" requires a causal chain (not just a statement), and that graphs need labels and clear markings.
+
+---
+
+### §3 — Integration exercise: combining concepts across chapters
+
+**One coherent context requiring skills from all four chapters:**
+
+> A small coffee roaster sells bags of coffee. Fixed costs are €800/month, variable costs are €3/bag. The individual demand from regular customers and the collective market demand are given as functions. The market is currently in equilibrium.
+>
+> (a) Calculate TK at Q = 200 and Q = 400. Calculate GTK at both. *(Ch3 skill)*
+> (b) The market equilibrium is at P = 7 and Q = 300. Verify this using the given demand and supply functions. *(Ch4 skill)*
+> (c) A news report warns that coffee bean prices will rise by 20%. Show in a graph what happens to the supply curve and the equilibrium. Does the price rise by 20% as well? Why or why not? *(Ch2+Ch3 skill: shifts, supply factors)*
+> (d) At the new equilibrium, calculate MK and MO. Should the roaster produce more or fewer bags? *(Ch4 skill: marginal analysis)*
+
+---
+
+### §4 — Timed practice test
+
+A practice test in the exact format of the upcoming 120-minute test:
+- Same number of questions (6–8 open questions across 3–4 contexts)
+- Same point distribution
+- Mix of "bereken," "leg uit," "teken," and "noem" questions
+- At least one context with a data table, one with a graph, and one with a short text source
+- Covers all four theory chapters
+
+After completion: peer review using a correction model. Students mark each other's work and discuss where marks are earned or lost. This teaches students to read marking criteria and understand answer precision.
+
+---
+---
+
 # BOOK 2 — Elasticities, Surplus & Welfare
 
 ## Chapter 1: Elasticities

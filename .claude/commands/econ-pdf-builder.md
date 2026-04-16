@@ -63,6 +63,12 @@ def embed_images(md, asset_dir):
     return re.sub(r'!\[([^\]]*)\]\(([^)]+)\)', replacer, md)
 ```
 
+### 2.4 Exercise markdown formatting rules
+
+**Horizontal rules between exercises:** In exercise sections, `---` separators between individual `**Opgave N**` blocks must be removed. Keep `---` only before major section headers (`### Startoefeningen`, `### Zelfstandige oefening`, `### Herhaling`, `### Doeloefening`, `### Denkertje`).
+
+**Sub-question blank lines:** Keep blank lines between `a)`, `b)`, `c)` sub-questions in markdown source (pandoc needs them for paragraph separation). The compact visual look is achieved via CSS (`.exercise p { margin: 0 0 1pt 0; }`), not by removing blank lines.
+
 ---
 
 ## PART 3: PANDOC CONVERSION
@@ -124,7 +130,77 @@ def wrap_exercises(html):
     return html
 ```
 
-### 4.2 Inject CSS
+### 4.2 Rebalance table column widths
+
+After wrapping exercises, auto-adjust column widths so content fits without unnecessary wrapping. The function analyzes max text length per column and distributes widths proportionally (minimum 8% per column).
+
+```python
+from html.parser import HTMLParser
+
+def rebalance_table_columns(html):
+    """Analyze tables and set column widths proportional to content length."""
+    class CellExtractor(HTMLParser):
+        def __init__(self):
+            super().__init__()
+            self.tables = []
+            self.current_table = None
+            self.current_row = None
+            self.current_cell = None
+            self.in_cell = False
+        def handle_starttag(self, tag, attrs):
+            if tag == 'table': self.current_table = []
+            elif tag == 'tr' and self.current_table is not None: self.current_row = []
+            elif tag in ('td', 'th') and self.current_row is not None:
+                self.current_cell = ''; self.in_cell = True
+        def handle_endtag(self, tag):
+            if tag in ('td', 'th') and self.in_cell:
+                self.current_row.append(self.current_cell.strip())
+                self.current_cell = None; self.in_cell = False
+            elif tag == 'tr' and self.current_row is not None:
+                if self.current_row: self.current_table.append(self.current_row)
+                self.current_row = None
+            elif tag == 'table' and self.current_table is not None:
+                self.tables.append(self.current_table); self.current_table = None
+        def handle_data(self, data):
+            if self.in_cell: self.current_cell += data
+
+    parser = CellExtractor()
+    parser.feed(html)
+    tables = list(re.finditer(r'<table[^>]*>.*?</table>', html, re.DOTALL))
+    if len(tables) != len(parser.tables): return html
+
+    offset = 0
+    for match, cells in zip(tables, parser.tables):
+        if not cells or len(cells) < 2: continue
+        ncols = max(len(row) for row in cells)
+        if ncols < 2: continue
+        max_lens = [0] * ncols
+        for row in cells:
+            for j, cell in enumerate(row):
+                if j < ncols: max_lens[j] = max(max_lens[j], len(cell))
+        total_chars = sum(max_lens)
+        if total_chars == 0: continue
+        raw = [max(l, 2) for l in max_lens]
+        total_raw = sum(raw)
+        widths = [max(8, round(r / total_raw * 100)) for r in raw]
+        widths[widths.index(max(widths))] += 100 - sum(widths)
+        cols = ''.join(f'\n<col style="width: {w}%" />' for w in widths)
+        colgroup = f'<colgroup>{cols}\n</colgroup>\n'
+        table_html = match.group()
+        existing_cg = re.search(r'<colgroup>.*?</colgroup>\s*', table_html, re.DOTALL)
+        if existing_cg:
+            new_table = table_html[:existing_cg.start()] + colgroup + table_html[existing_cg.end():]
+        else:
+            tag_end = table_html.index('>') + 1
+            new_table = table_html[:tag_end] + '\n' + colgroup + table_html[tag_end:]
+        start = match.start() + offset
+        end = match.end() + offset
+        html = html[:start] + new_table + html[end:]
+        offset += len(new_table) - len(table_html)
+    return html
+```
+
+### 4.3 Inject CSS
 
 Insert the stylesheet before `</head>`. See Part 5 for the full CSS.
 
@@ -202,25 +278,27 @@ blockquote strong:first-child {
 table {
   border-collapse: collapse;
   width: 100%;
-  margin: 12px 0;
+  margin: 12pt 0;
   font-size: 10.5pt;
   break-inside: avoid;
 }
 
 th {
-  background: #1A5276;
-  color: white;
-  padding: 8px 12px;
+  background: #EDF0F3;
+  color: #1a1a1a;
+  font-weight: bold;
+  padding: 3pt 6pt;
   text-align: left;
+  border: 1px solid #999;
 }
 
 td {
-  border: 1px solid #CBD5E0;
-  padding: 6px 12px;
+  border: 1px solid #999;
+  padding: 2pt 6pt;
 }
 
-tr:nth-child(even) {
-  background: #F7FAFC;
+tr:nth-child(even) td {
+  background: #FAFBFC;
 }
 
 /* === IMAGES === */
@@ -238,8 +316,23 @@ p + figure, p + p > img {
 
 /* === EXERCISES === */
 .exercise {
-  break-inside: avoid;
+  margin-bottom: 14pt;
+  orphans: 2;
+  widows: 2;
 }
+
+.exercise > p:first-child {
+  break-after: avoid;
+  page-break-after: avoid;
+}
+
+.exercise p {
+  margin: 0 0 1pt 0;
+}
+
+/* === LISTS === */
+ul, ol { margin: 0 0 10pt 0; padding-left: 20pt; }
+ol[type="a"] { list-style-type: lower-alpha; }
 
 /* === MISC === */
 code {
