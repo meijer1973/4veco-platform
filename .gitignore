@@ -3,3 +3,6 @@ node_modules/
 /tmp/
 __pycache__/
 .claude/settings.local.json
+
+# Build outputs (each pptx builder writes to its own output-NNN-* folder)
+/output-*/
