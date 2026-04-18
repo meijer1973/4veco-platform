@@ -122,7 +122,7 @@ A complete paragraph has **24 files** plus an index.html. Every file listed as r
 | 3 | `X.Y.Z [Naam] – uitleg voorkennis.docx` | 1. Voorbereiden | Yes | Adapt `template-B_voorkennis.js` | Book content + domain knowledge | Scripted-manual |
 | 4 | `X.Y.Z [Naam] – uitleg voorkennis.html` | 1. Voorbereiden | Yes | `convert_voorkennis.py` | File #3 (.docx) | Converted |
 | 5 | `Lees dit als je niet weet hoe je moet beginnen met deze les.docx` | 1. Voorbereiden | Yes | Copy | Static file (identical in every paragraph) | Static |
-| 6 | `X.Y.Z [Naam] – presentatie.pptx` | 2. Leren | Yes | Adapt `pptx-351-afsluiting.js` | Book content + SVG graphs | Scripted-manual |
+| 6 | `X.Y.Z [Naam] – presentatie.pptx` | 2. Leren | Yes | Adapt `pptx-331-rol-overheid.js` (uses `lib-pptx.js`) | Book content + SVG graphs | Scripted-manual |
 | 7 | `X.Y.Z [Naam] – uitleg vaardigheden.docx` | 2. Leren | Yes | Adapt `template-A_vaardigheden.js` | Book content + domain knowledge | Scripted-manual |
 | 8 | `X.Y.Z [Naam] – uitleg vaardigheden.html` | 2. Leren | Yes | `convert_vaardigheden.py` | File #7 (.docx) | Converted |
 | 9 | `X.Y.Z [Naam] – nieuws met visual.docx` | 2. Leren | Yes | Adapt `nieuws-351-352-afsluiting.js` | Recent Dutch news + SVG visual | Scripted-manual |
@@ -177,11 +177,11 @@ Each scripted-manual asset follows the same pattern: **read source → write bui
 |---|---|
 | **Raw input** | Textbook paragraph: concepts, formulas, worked examples. Read via python-docx. |
 | **Agent process** | Extract 5-8 key concepts. For each: write a theory slide + design an SVG graph that visualises it. |
-| **Reference script** | `pptx-351-afsluiting.js` — copy, replace slide content + SVG graph functions. |
-| **Reusable (don't change)** | Slide masters (TITLE_DARK, CONTENT), color palette, `svgToPng()`, `drawCard()`, `flowChain()`, `addContentSlide()`. |
+| **Reference script** | `pptx-331-rol-overheid.js` — copy, replace slide content + SVG graph functions. Uses shared `lib-pptx.js`. |
+| **Reusable (don't change)** | `lib-pptx.js` exports: PC/SC/HEX palettes, T typography presets, `defineMasters()`, `svgToPng()`, `ICON`/`placeIcon()`, `svgHeader()`, `editorialTitle()`, `fixPptxFile()`, `roundtripWithLibreOffice()`. |
 | **Custom (must write)** | Slide sequence, text content per slide, SVG graph code per concept, speaker notes. |
 | **Skills to read first** | `econ-pptx-templates` + `economic-graph` |
-| **Hard rules** | Theory + worked examples only, NEVER exercise instructions. Min 3 SVG→PNG graphs. Min 18pt font. |
+| **Hard rules** | Theory + worked examples only, NEVER exercise instructions. Min 3 SVG→PNG graphs. Min 18pt font. After `writeFile()` always call `fixPptxFile()` + `roundtripWithLibreOffice()` — raw PptxGenJS output triggers PowerPoint repair dialog. |
 
 #### Uitleg voorkennis (.docx)
 | | |
@@ -341,7 +341,7 @@ For each document type, copy the reference script, replace the content, run it. 
 |----------|-----------------|-----------------|
 | Uitleg voorkennis | `template-B_voorkennis.js` | `1. Voorbereiden/` |
 | Uitleg vaardigheden | `template-A_vaardigheden.js` | `2. Leren/` |
-| Presentatie | `pptx-351-afsluiting.js` | `2. Leren/` |
+| Presentatie | `pptx-331-rol-overheid.js` | `2. Leren/` |
 | Nieuws met visual | `nieuws-351-352-afsluiting.js` | `2. Leren/` |
 | Samenvatting | `samenvatting-351-352-rebuild.js` | `2. Leren/` |
 | YouTube videos | Write HTML directly | `2. Leren/` |
@@ -429,7 +429,7 @@ These are paragraph-specific scripts that serve as templates. Copy one, change t
 |--------|---------------|----------------------|
 | `template-B_voorkennis.js` | `uitleg voorkennis.docx` | Yes — adapt content section |
 | `template-A_vaardigheden.js` | `uitleg vaardigheden.docx` | Yes — adapt content section |
-| `pptx-351-afsluiting.js` | `presentatie.pptx` (with SVG graphs) | Yes — new slides + graphs |
+| `pptx-331-rol-overheid.js` | `presentatie.pptx` (with SVG graphs + editorial design) | Yes — new slides + graphs; uses `lib-pptx.js` |
 | `nieuws-351-352-afsluiting.js` | `nieuws met visual.docx` (with SVG chart) | Yes — new article + chart |
 | `samenvatting-351-352-rebuild.js` | `samenvatting.docx` (table-based) | Yes — new content |
 | `inoefening-351-afsluiting.js` | `begeleide inoefening` (vragen + antwoorden) | Yes — new exercises |

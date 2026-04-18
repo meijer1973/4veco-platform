@@ -1,628 +1,632 @@
 /**
- * PPTX Build: 3.3.1 De rol van de overheid — presentatie met dual coding
- *
- * Rijk visueel deck: 17 dia's, 6 SVG-visuals.
- *
- * Run: NODE_PATH="$(npm root -g)" node build-scripts/pptx-331-rol-overheid.js
+ * pptx-331-creative.js — §3.3.1 De rol van de overheid
+ * CREATIVE/UNRESTRICTED version — editorial design system, rich illustration.
  */
-process.env.NODE_PATH = "C:/Users/meije/AppData/Roaming/npm/node_modules";
-require("module").Module._initPaths();
+
+const {
+  PC, SC, T, FONT_SANS, FONT_DISPLAY, FONT_SERIF,
+  defineMasters, softShadow, tightShadow,
+  svgToPng, pngB64, svgData,
+  ICON, placeIcon,
+  svgHeader, editorialTitle, fixPptxFile, roundtripWithLibreOffice,
+} = require("./lib-pptx.js");
 
 const PptxGenJS = require("pptxgenjs");
-const sharp = require("sharp");
 const fs = require("fs");
 const path = require("path");
-const { saveSvgFiles } = require("./lib-svg-save");
 
 // ═══════════════════════════════════════════════════════════════════════════
-// COLOR PALETTE
+// CUSTOM SVG SCENES + ANNOTATED CHARTS
 // ═══════════════════════════════════════════════════════════════════════════
-const C = {
-  dBlue: "1A5276", dBlueLt: "EBF5FB", dBlueDk: "154360",
-  dAmber: "E67E22", dAmberLt: "FEF5E7", dAmberDk: "BA6A1C",
-  dGreen: "1E8449", dGreenLt: "E8F8F0", dGreenDk: "186A3B",
-  navy: "1E2761", white: "FFFFFF", dark: "2D3748", gray: "718096",
-  lightGray: "F7F8FA", borderGray: "CBD5E0", red: "D9534F", lightRed: "FDE8E8",
-  cream: "F9F6F1", rowAlt: "F7FAFC",
-  purple: "7B2D8E", lightPurple: "F3E8F9",
-};
-// Chapter 3 is "Overheid" — use the blue (markt) domain to match the prior deck + skill library
-const DOMAIN = { color: C.dBlue, light: C.dBlueLt, dark: C.dBlueDk };
 
-const GC = {
-  demand: "#1A5276", supply: "#1E8449", supplyNew: "#E67E22",
-  cost: "#E67E22", costAvg: "#D9534F",
-  price: "#1A5276", revenue: "#7B2D8E", axis: "#2D3748", grid: "#CBD5E0",
-  label: "#718096", title: "#1E2761", bg: "#F7FAFC",
-  surplus: "#85C1E9", prodSurplus: "#82E0AA", loss: "#F1948A", tax: "#F8C471",
-};
+// Opening visual — stylized Dutch landscape silhouette (dike + water + buildings)
+function svgCoastlineSilhouette() {
+  return `${svgHeader(1280, 420, SC.indigoDeep)}
+    <!-- stars / sparse light points -->
+    ${Array.from({length: 20}, (_, i) => {
+      const x = 60 + (i * 127) % 1200, y = 40 + (i * 59) % 150;
+      return `<circle cx="${x}" cy="${y}" r="1" fill="#ffffff" opacity="${0.15 + (i % 3) * 0.1}"/>`;
+    }).join("")}
 
-const makeShadow = () => ({
-  type: "outer", color: "000000", blur: 6, offset: 2, angle: 135, opacity: 0.10,
-});
+    <!-- distant horizon glow -->
+    <defs>
+      <linearGradient id="glow" x1="0" x2="0" y1="0" y2="1">
+        <stop offset="0" stop-color="${SC.coral}" stop-opacity="0"/>
+        <stop offset="1" stop-color="${SC.coral}" stop-opacity="0.35"/>
+      </linearGradient>
+      <linearGradient id="waterG" x1="0" x2="0" y1="0" y2="1">
+        <stop offset="0" stop-color="${SC.indigoMid}"/>
+        <stop offset="1" stop-color="${SC.indigoDeep}"/>
+      </linearGradient>
+    </defs>
+    <rect x="0" y="220" width="1280" height="60" fill="url(#glow)"/>
 
-async function svgToPng(svgStr, width = 720) {
-  return sharp(Buffer.from(svgStr)).resize(width).png().toBuffer();
-}
-function pngToBase64(buf) {
-  return "image/png;base64," + buf.toString("base64");
-}
+    <!-- water -->
+    <rect x="0" y="280" width="1280" height="140" fill="url(#waterG)"/>
+    <path d="M0 296 Q60 288 120 296 T240 296 T360 296 T480 296 T600 296 T720 296 T840 296 T960 296 T1080 296 T1200 296" stroke="${SC.teal}" stroke-width="1.2" fill="none" opacity="0.6"/>
+    <path d="M0 312 Q80 306 160 312 T320 312 T480 312 T640 312 T800 312 T960 312 T1120 312" stroke="${SC.teal}" stroke-width="1" fill="none" opacity="0.35"/>
 
-// ═══════════════════════════════════════════════════════════════════════════
-// GRAPH 1: MARKTFALEN — TYPOLOGIE-INFOGRAPHIC
-// Centraal begrip "Marktfalen" met drie oorzaken en drie overheid-instrumenten
-// ═══════════════════════════════════════════════════════════════════════════
-function buildTypologieSVG() {
-  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" font-family="Arial">
-  <rect x="0" y="0" width="720" height="360" rx="8" fill="${GC.bg}"/>
-  <defs>
-    <marker id="ah1" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#718096"/>
-    </marker>
-  </defs>
+    <!-- dike silhouette (flat) -->
+    <path d="M0 280 L0 260 L200 250 L220 242 L280 244 L300 238 L380 240 L400 244 L420 240 L460 242 L490 238 L520 240 L560 236 L580 240 L640 242 L680 236 L720 240 L760 238 L800 240 L840 244 L890 240 L940 244 L980 242 L1030 238 L1080 242 L1130 240 L1280 250 L1280 280 Z"
+          fill="${SC.indigoDeep}" stroke="${SC.indigo}" stroke-width="1"/>
 
-  <!-- Title -->
-  <text x="360" y="28" text-anchor="middle" font-size="15" font-weight="bold" fill="${GC.title}">Drie oorzaken van marktfalen — drie overheidsingrepen</text>
+    <!-- distant city skyline (tiny rectangles) -->
+    ${Array.from({length: 16}, (_, i) => {
+      const x = 350 + i * 30, h = 6 + (i * 37) % 18, y = 244 - h;
+      return `<rect x="${x}" y="${y}" width="22" height="${h}" fill="${SC.indigo}" opacity="0.8"/>
+              <rect x="${x + 6}" y="${y + 3}" width="2" height="2" fill="${SC.amber}" opacity="0.7"/>`;
+    }).join("")}
 
-  <!-- Centraal begrip: Marktfalen -->
-  <rect x="280" y="155" width="160" height="60" rx="10" fill="#${DOMAIN.color}"/>
-  <text x="360" y="182" text-anchor="middle" font-size="16" font-weight="bold" fill="#FFFFFF">Marktfalen</text>
-  <text x="360" y="202" text-anchor="middle" font-size="11" fill="#FFFFFF" opacity="0.9">markt levert niet het optimum</text>
+    <!-- church tower / landmark -->
+    <rect x="640" y="216" width="14" height="28" fill="${SC.indigo}"/>
+    <polygon points="640,216 647,206 654,216" fill="${SC.indigo}"/>
+    <rect x="645" y="218" width="4" height="6" fill="${SC.amber}" opacity="0.8"/>
 
-  <!-- Drie oorzaken (links) -->
-  <!-- 1. Monopolie -->
-  <rect x="30" y="60" width="190" height="54" rx="8" fill="#FFFFFF" stroke="#${DOMAIN.color}" stroke-width="1.5"/>
-  <rect x="30" y="60" width="6" height="54" fill="#${DOMAIN.color}"/>
-  <text x="45" y="82" font-size="13" font-weight="bold" fill="#${DOMAIN.color}">1. Monopolie</text>
-  <text x="45" y="102" font-size="11" fill="#2D3748">te weinig concurrentie</text>
-
-  <!-- 2. Externe effecten -->
-  <rect x="30" y="160" width="190" height="54" rx="8" fill="#FFFFFF" stroke="#${DOMAIN.color}" stroke-width="1.5"/>
-  <rect x="30" y="160" width="6" height="54" fill="#${DOMAIN.color}"/>
-  <text x="45" y="182" font-size="13" font-weight="bold" fill="#${DOMAIN.color}">2. Externe effecten</text>
-  <text x="45" y="202" font-size="11" fill="#2D3748">baten/kosten buiten de prijs</text>
-
-  <!-- 3. Collectieve goederen -->
-  <rect x="30" y="260" width="190" height="54" rx="8" fill="#FFFFFF" stroke="#${DOMAIN.color}" stroke-width="1.5"/>
-  <rect x="30" y="260" width="6" height="54" fill="#${DOMAIN.color}"/>
-  <text x="45" y="282" font-size="13" font-weight="bold" fill="#${DOMAIN.color}">3. Collectieve goederen</text>
-  <text x="45" y="302" font-size="11" fill="#2D3748">markt levert ze niet</text>
-
-  <!-- Pijlen oorzaken → marktfalen -->
-  <line x1="222" y1="87" x2="278" y2="165" stroke="#718096" stroke-width="1.5" marker-end="url(#ah1)"/>
-  <line x1="222" y1="187" x2="278" y2="185" stroke="#718096" stroke-width="1.5" marker-end="url(#ah1)"/>
-  <line x1="222" y1="287" x2="278" y2="205" stroke="#718096" stroke-width="1.5" marker-end="url(#ah1)"/>
-
-  <!-- Drie instrumenten (rechts) -->
-  <!-- Mededingingsbeleid -->
-  <rect x="500" y="60" width="190" height="54" rx="8" fill="#${C.dGreenLt}" stroke="#1E8449" stroke-width="1.5"/>
-  <rect x="500" y="60" width="6" height="54" fill="#1E8449"/>
-  <text x="515" y="82" font-size="13" font-weight="bold" fill="#186A3B">Mededingingsbeleid</text>
-  <text x="515" y="102" font-size="11" fill="#2D3748">ACM, boetes, toezicht</text>
-
-  <!-- Belasting / subsidie -->
-  <rect x="500" y="160" width="190" height="54" rx="8" fill="#${C.dGreenLt}" stroke="#1E8449" stroke-width="1.5"/>
-  <rect x="500" y="160" width="6" height="54" fill="#1E8449"/>
-  <text x="515" y="182" font-size="13" font-weight="bold" fill="#186A3B">Belasting / subsidie</text>
-  <text x="515" y="202" font-size="11" fill="#2D3748">internaliseren</text>
-
-  <!-- Overheid levert / financiert -->
-  <rect x="500" y="260" width="190" height="54" rx="8" fill="#${C.dGreenLt}" stroke="#1E8449" stroke-width="1.5"/>
-  <rect x="500" y="260" width="6" height="54" fill="#1E8449"/>
-  <text x="515" y="282" font-size="13" font-weight="bold" fill="#186A3B">Overheid levert</text>
-  <text x="515" y="302" font-size="11" fill="#2D3748">defensie, dijken, …</text>
-
-  <!-- Pijlen marktfalen → instrumenten -->
-  <line x1="442" y1="165" x2="498" y2="87" stroke="#1E8449" stroke-width="1.5" marker-end="url(#ah1)"/>
-  <line x1="442" y1="185" x2="498" y2="187" stroke="#1E8449" stroke-width="1.5" marker-end="url(#ah1)"/>
-  <line x1="442" y1="205" x2="498" y2="287" stroke="#1E8449" stroke-width="1.5" marker-end="url(#ah1)"/>
-
-  <!-- Kopjes -->
-  <text x="125" y="48" text-anchor="middle" font-size="11" font-weight="bold" fill="${GC.label}">OORZAAK</text>
-  <text x="595" y="48" text-anchor="middle" font-size="11" font-weight="bold" fill="${GC.label}">OVERHEIDSINGREEP</text>
-</svg>`;
+    <!-- windmill on the right -->
+    <rect x="1100" y="220" width="6" height="30" fill="${SC.indigo}"/>
+    <polygon points="1103,220 1098,196 1108,198" fill="${SC.indigo}"/>
+    <g transform="translate(1103,220) rotate(28)">
+      <rect x="-1" y="-36" width="2" height="36" fill="${SC.indigo}"/>
+      <rect x="-1" y="0" width="2" height="36" fill="${SC.indigo}"/>
+      <rect x="-36" y="-1" width="36" height="2" fill="${SC.indigo}"/>
+      <rect x="0" y="-1" width="36" height="2" fill="${SC.indigo}"/>
+    </g>
+  </svg>`;
 }
 
-// ═══════════════════════════════════════════════════════════════════════════
-// GRAPH 2: NATUURLIJK MONOPOLIE — DALENDE GTK
-// GTK(Q) = 200/Q + 2, dalend. Punt A: 1 bedrijf, Q=100, GTK=4. Punt B: 2 bedrijven, Q=50, GTK=6
-// ═══════════════════════════════════════════════════════════════════════════
-function buildNatMonopolieSVG() {
-  const px = 80, py = 45, pw = 600, ph = 265;
-  const qMax = 140, pMax = 14;  // Q 0..140, GTK 0..14
-  const qToX = q => Math.round(px + (q / qMax) * pw);
-  const pToY = p => Math.round(py + ph - (p / pMax) * ph);
+// Redesigned marktfalen typology — editorial, with icons
+function svgMarktfalenTypo() {
+  return `${svgHeader(1280, 640, SC.paper)}
+    ${editorialTitle("Drie oorzaken van marktfalen — drie overheidsingrepen", "OVERZICHT")}
 
-  // GTK(Q) = 200/Q + 2  — sample at Q=10..140
+    <!-- Three-row layout: each row = oorzaak → mechanisme → instrument -->
+    ${[
+      { y: 170, icon: ICON.smokestack(SC.coralDeep, SC.smoke), title: "Monopolie / machtspositie", mech: "te weinig concurrentie", instr: "Mededingingsbeleid", instrSub: "ACM · Europese Commissie · boetes", col: SC.coral },
+      { y: 325, icon: ICON.factory(SC.amberDeep),              title: "Externe effecten",           mech: "baten/kosten buiten de prijs", instr: "Belasting of subsidie", instrSub: "internaliseren van het effect", col: SC.amber },
+      { y: 480, icon: ICON.badge(SC.oliveDeep, SC.coral),      title: "Collectieve goederen",        mech: "markt levert het niet", instr: "Overheid levert zelf", instrSub: "defensie, dijken, politie", col: SC.olive },
+    ].map(r => `
+      <!-- icon tile -->
+      <rect x="80" y="${r.y}" width="120" height="120" rx="12" fill="${r.col}" fill-opacity="0.14" stroke="${r.col}" stroke-width="1.5"/>
+      ${placeIcon(r.icon, 108, r.y + 28, 64)}
+
+      <!-- oorzaak title + mechanisme -->
+      <text x="230" y="${r.y + 38}" font-family="${FONT_SANS}" font-size="12" font-weight="700" fill="${SC.ash}" letter-spacing="2">OORZAAK</text>
+      <text x="230" y="${r.y + 68}" font-family="${FONT_SANS}" font-size="24" font-weight="700" fill="${SC.indigo}">${r.title}</text>
+      <text x="230" y="${r.y + 100}" font-family="${FONT_SERIF}" font-size="18" font-style="italic" fill="${SC.smoke}">${r.mech}</text>
+
+      <!-- big arrow -->
+      <g transform="translate(700,${r.y + 48})">
+        <line x1="0" y1="24" x2="100" y2="24" stroke="${r.col}" stroke-width="3" stroke-linecap="round"/>
+        <polyline points="88,10 100,24 88,38" fill="none" stroke="${r.col}" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+
+      <!-- instrument card -->
+      <rect x="830" y="${r.y + 20}" width="370" height="82" rx="10" fill="${SC.paper}" stroke="${r.col}" stroke-width="2"/>
+      <rect x="830" y="${r.y + 20}" width="8" height="82" fill="${r.col}"/>
+      <text x="855" y="${r.y + 48}" font-family="${FONT_SANS}" font-size="11" font-weight="700" fill="${SC.ash}" letter-spacing="2">OVERHEIDSINGREEP</text>
+      <text x="855" y="${r.y + 76}" font-family="${FONT_SANS}" font-size="22" font-weight="700" fill="${SC.indigo}">${r.instr}</text>
+      <text x="855" y="${r.y + 96}" font-family="${FONT_SANS}" font-size="13" fill="${SC.smoke}">${r.instrSub}</text>
+    `).join("")}
+  </svg>`;
+}
+
+// Natural monopoly GTK — annotated editorial style
+function svgNatMonAnnotated() {
+  const w = 1280, h = 640;
+  const px = 140, py = 140, pw = 860, ph = 400;
+  const qMax = 140, pMax = 14;
+  const qToX = q => px + (q / qMax) * pw;
+  const pToY = p => py + ph - (p / pMax) * ph;
+
+  // GTK(Q) = 200/Q + 2 — sample
   const pts = [];
-  for (let Q = 10; Q <= 140; Q += 2) {
-    const gtk = 200 / Q + 2;
-    pts.push(`${qToX(Q)},${pToY(gtk)}`);
-  }
-  const path = "M " + pts.join(" L ");
+  for (let Q = 10; Q <= 140; Q += 1) pts.push(`${qToX(Q).toFixed(1)},${pToY(200/Q + 2).toFixed(1)}`);
 
-  // Key points
-  const xA = qToX(100), yA = pToY(4);  // 1 bedrijf
-  const xB = qToX(50),  yB = pToY(6);  // 2 bedrijven (elk)
+  const xA = qToX(100), yA = pToY(4);
+  const xB = qToX(50),  yB = pToY(6);
 
-  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" font-family="Arial">
-  <rect x="0" y="0" width="720" height="360" rx="8" fill="${GC.bg}"/>
-  <defs>
-    <marker id="ah2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="${GC.axis}"/>
-    </marker>
-  </defs>
+  return `${svgHeader(w, h, SC.paper)}
+    ${editorialTitle("Eén aanbieder produceert goedkoper dan twee", "NATUURLIJK MONOPOLIE")}
 
-  <!-- Title -->
-  <text x="360" y="28" text-anchor="middle" font-size="14" font-weight="bold" fill="${GC.title}">Dalende GTK: één aanbieder produceert goedkoper dan twee</text>
+    <!-- Axes -->
+    <line x1="${px}" y1="${py + ph}" x2="${px}" y2="${py - 10}" stroke="${SC.ink}" stroke-width="1.8" marker-end="url(#ah-ink)"/>
+    <line x1="${px}" y1="${py + ph}" x2="${px + pw + 10}" y2="${py + ph}" stroke="${SC.ink}" stroke-width="1.8" marker-end="url(#ah-ink)"/>
+    <text x="${px - 50}" y="${py + ph/2}" font-family="${FONT_SANS}" font-size="13" fill="${SC.smoke}" text-anchor="middle" transform="rotate(-90, ${px - 50}, ${py + ph/2})">GTK (€ per eenheid)</text>
+    <text x="${px + pw/2}" y="${py + ph + 48}" font-family="${FONT_SANS}" font-size="13" fill="${SC.smoke}" text-anchor="middle">Productiehoeveelheid Q</text>
 
-  <!-- Axes -->
-  <line x1="${px}" y1="${py+ph}" x2="${px}" y2="${py-5}" stroke="${GC.axis}" stroke-width="1.5" marker-end="url(#ah2)"/>
-  <line x1="${px}" y1="${py+ph}" x2="${px+pw+5}" y2="${py+ph}" stroke="${GC.axis}" stroke-width="1.5" marker-end="url(#ah2)"/>
-  <text x="15" y="180" transform="rotate(-90, 15, 180)" text-anchor="middle" font-size="12" fill="${GC.label}">GTK (€ per eenheid)</text>
-  <text x="72" y="325" text-anchor="end" font-size="10" fill="${GC.label}">0</text>
+    <!-- GTK curve -->
+    <polyline points="${pts.join(" ")}" fill="none" stroke="${SC.coral}" stroke-width="3"/>
+    <text x="${px + pw - 50}" y="${pToY(200/140 + 2) - 16}" font-family="${FONT_SANS}" font-size="15" font-weight="700" fill="${SC.coral}">GTK</text>
 
-  <!-- Dashed references for point B (Q=50, GTK=6) -->
-  <line x1="${xB}" y1="${yB}" x2="${xB}" y2="${py+ph}" stroke="${GC.grid}" stroke-width="1" stroke-dasharray="4,3"/>
-  <line x1="${px}" y1="${yB}" x2="${xB}" y2="${yB}" stroke="${GC.grid}" stroke-width="1" stroke-dasharray="4,3"/>
-  <!-- Dashed references for point A (Q=100, GTK=4) -->
-  <line x1="${xA}" y1="${yA}" x2="${xA}" y2="${py+ph}" stroke="${GC.grid}" stroke-width="1" stroke-dasharray="4,3"/>
-  <line x1="${px}" y1="${yA}" x2="${xA}" y2="${yA}" stroke="${GC.grid}" stroke-width="1" stroke-dasharray="4,3"/>
+    <!-- Dashed references + dots -->
+    <line x1="${xB}" y1="${yB}" x2="${xB}" y2="${py + ph}" stroke="${SC.cloud}" stroke-width="1" stroke-dasharray="4,3"/>
+    <line x1="${px}" y1="${yB}" x2="${xB}" y2="${yB}" stroke="${SC.cloud}" stroke-width="1" stroke-dasharray="4,3"/>
+    <line x1="${xA}" y1="${yA}" x2="${xA}" y2="${py + ph}" stroke="${SC.cloud}" stroke-width="1" stroke-dasharray="4,3"/>
+    <line x1="${px}" y1="${yA}" x2="${xA}" y2="${yA}" stroke="${SC.cloud}" stroke-width="1" stroke-dasharray="4,3"/>
 
-  <!-- GTK curve -->
-  <path d="${path}" fill="none" stroke="${GC.costAvg}" stroke-width="2.5"/>
-  <text x="${qToX(140)-15}" y="${pToY(200/140+2)-8}" font-size="12" font-weight="bold" fill="${GC.costAvg}">GTK</text>
+    <circle cx="${xB}" cy="${yB}" r="8" fill="${SC.coralDeep}"/>
+    <circle cx="${xB}" cy="${yB}" r="14" fill="none" stroke="${SC.coralDeep}" stroke-width="2" opacity="0.45"/>
 
-  <!-- Point B: 2 bedrijven, elk Q=50 -->
-  <circle cx="${xB}" cy="${yB}" r="5" fill="#${C.red}"/>
-  <text x="${xB+10}" y="${yB-8}" font-size="11" font-weight="bold" fill="#${C.red}">2 bedrijven: GTK = €6</text>
+    <circle cx="${xA}" cy="${yA}" r="8" fill="${SC.indigo}"/>
+    <circle cx="${xA}" cy="${yA}" r="14" fill="none" stroke="${SC.indigo}" stroke-width="2" opacity="0.45"/>
 
-  <!-- Point A: 1 bedrijf, Q=100 -->
-  <circle cx="${xA}" cy="${yA}" r="5" fill="#${DOMAIN.color}"/>
-  <text x="${xA+10}" y="${yA-8}" font-size="11" font-weight="bold" fill="#${DOMAIN.color}">1 bedrijf: GTK = €4</text>
+    <!-- Axis value labels -->
+    <text x="${px - 10}" y="${yB + 5}" text-anchor="end" font-family="${FONT_SANS}" font-size="14" fill="${SC.ink}" font-weight="600">€6</text>
+    <text x="${px - 10}" y="${yA + 5}" text-anchor="end" font-family="${FONT_SANS}" font-size="14" fill="${SC.ink}" font-weight="600">€4</text>
+    <text x="${xB}" y="${py + ph + 22}" text-anchor="middle" font-family="${FONT_SANS}" font-size="13" fill="${SC.smoke}">Q = 50</text>
+    <text x="${xA}" y="${py + ph + 22}" text-anchor="middle" font-family="${FONT_SANS}" font-size="13" fill="${SC.smoke}">Q = 100</text>
 
-  <!-- Y-axis labels -->
-  <text x="72" y="${yB+4}" text-anchor="end" font-size="10" fill="${GC.axis}">6</text>
-  <text x="72" y="${yA+4}" text-anchor="end" font-size="10" fill="${GC.axis}">4</text>
+    <!-- Callout 1: 2 bedrijven (linkerkant) -->
+    <g>
+      <rect x="540" y="180" width="280" height="68" rx="10" fill="${SC.coralDeep}" stroke="${SC.coralDeep}"/>
+      <text x="560" y="206" font-family="${FONT_SANS}" font-size="12" font-weight="700" fill="${SC.coral}" letter-spacing="2" opacity="0.85">2 BEDRIJVEN, ELK Q = 50</text>
+      <text x="560" y="236" font-family="${FONT_DISPLAY}" font-size="22" font-weight="700" fill="#ffffff">GTK = €6 per eenheid</text>
+      <line x1="540" y1="220" x2="${xB + 15}" y2="${yB - 5}" stroke="${SC.coralDeep}" stroke-width="2"/>
+    </g>
 
-  <!-- X-axis labels -->
-  <text x="${xB}" y="325" text-anchor="middle" font-size="10" fill="${GC.axis}">Q = 50</text>
-  <text x="${xA}" y="325" text-anchor="middle" font-size="10" fill="${GC.axis}">Q = 100</text>
+    <!-- Callout 2: 1 bedrijf (rechterkant) -->
+    <g>
+      <rect x="${xA + 60}" y="270" width="280" height="68" rx="10" fill="${SC.indigo}"/>
+      <text x="${xA + 80}" y="296" font-family="${FONT_SANS}" font-size="12" font-weight="700" fill="${SC.teal}" letter-spacing="2">1 BEDRIJF, Q = 100</text>
+      <text x="${xA + 80}" y="326" font-family="${FONT_DISPLAY}" font-size="22" font-weight="700" fill="#ffffff">GTK = €4 per eenheid</text>
+      <line x1="${xA + 60}" y1="300" x2="${xA + 15}" y2="${yA + 5}" stroke="${SC.indigo}" stroke-width="2"/>
+    </g>
 
-  <!-- Caption -->
-  <text x="360" y="348" text-anchor="middle" font-size="11" fill="${GC.label}" font-style="italic">Meer productie → GTK daalt → één aanbieder efficiënter</text>
-</svg>`;
+    <!-- Footer insight -->
+    <rect x="140" y="580" width="1000" height="40" rx="6" fill="${SC.indigoDeep}"/>
+    <text x="160" y="606" font-family="${FONT_SERIF}" font-size="16" font-style="italic" fill="#ffffff">Hoe meer productie, hoe lager de gemiddelde kosten — dát is een natuurlijk monopolie.</text>
+  </svg>`;
 }
 
-// ═══════════════════════════════════════════════════════════════════════════
-// GRAPH 3: NEGATIEF EXTERN EFFECT
-// V: P = 50 - Q ;  MPK (private): P = Q ;  MMK (social) = MPK + 10: P = Q + 10
-// Market eq (V=MPK): Q=25, P=25  ;  Social eq (V=MMK): Q=20, P=30
-// DWL triangle: (Q=20, P=30) — (Q=25, P=25) — (Q=25, P=35)
-// ═══════════════════════════════════════════════════════════════════════════
-function buildNegExternSVG() {
-  const px = 80, py = 45, pw = 600, ph = 265;
+// Negative externality chart — FT-style annotated
+function svgNegExtAnnotated() {
+  const w = 1280, h = 640;
+  const px = 140, py = 140, pw = 860, ph = 400;
   const qMax = 55, pMax = 55;
-  const qToX = q => Math.round(px + (q / qMax) * pw);
-  const pToY = p => Math.round(py + ph - (p / pMax) * ph);
+  const qToX = q => px + (q / qMax) * pw;
+  const pToY = p => py + ph - (p / pMax) * ph;
 
-  // V: P = 50 - Q  (endpoints (0,50) and (50,0))
-  const v1x = qToX(0),  v1y = pToY(50);
-  const v2x = qToX(50), v2y = pToY(0);
-  // MPK: P = Q  (endpoints (0,0) and (50,50))
-  const s1x = qToX(0),  s1y = pToY(0);
-  const s2x = qToX(50), s2y = pToY(50);
-  // MMK: P = Q + 10  (endpoints (0,10) and (40,50))
-  const m1x = qToX(0),  m1y = pToY(10);
-  const m2x = qToX(40), m2y = pToY(50);
+  // V: P = 50 - Q ; MPK: P = Q ; MMK: P = Q + 10
+  const v1x = qToX(0), v1y = pToY(50), v2x = qToX(50), v2y = pToY(0);
+  const s1x = qToX(0), s1y = pToY(0), s2x = qToX(50), s2y = pToY(50);
+  const m1x = qToX(0), m1y = pToY(10), m2x = qToX(40), m2y = pToY(50);
 
-  const qMkt = 25, pMkt = 25;   // markt
-  const qSoc = 20, pSoc = 30;   // sociaal optimum
-  const xMkt = qToX(qMkt), yMkt = pToY(pMkt);
-  const xSoc = qToX(qSoc), ySoc = pToY(pSoc);
-  const xMktMMK = qToX(qMkt), yMktMMK = pToY(qMkt + 10); // MMK bij Q=25 is P=35
+  const xMkt = qToX(25), yMkt = pToY(25);
+  const xSoc = qToX(20), ySoc = pToY(30);
+  const yMmk = pToY(35); // MMK at Q=25
 
-  // DWL polygon: social eq (xSoc,ySoc) — (xMkt, yMkt on V) — (xMktMMK, MMK at Q=25)
-  const dwlPoints = `${xSoc},${ySoc} ${xMkt},${yMkt} ${xMktMMK},${yMktMMK}`;
+  return `${svgHeader(w, h, SC.paper)}
+    ${editorialTitle("Wat een vervuilende fabriek niét in zijn rekening heeft staan", "NEGATIEF EXTERN EFFECT")}
 
-  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" font-family="Arial">
-  <rect x="0" y="0" width="720" height="360" rx="8" fill="${GC.bg}"/>
-  <defs>
-    <marker id="ah3" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="${GC.axis}"/>
-    </marker>
-  </defs>
+    <!-- Axes -->
+    <line x1="${px}" y1="${py+ph}" x2="${px}" y2="${py-10}" stroke="${SC.ink}" stroke-width="1.8" marker-end="url(#ah-ink)"/>
+    <line x1="${px}" y1="${py+ph}" x2="${px+pw+10}" y2="${py+ph}" stroke="${SC.ink}" stroke-width="1.8" marker-end="url(#ah-ink)"/>
+    <text x="${px - 50}" y="${py + ph/2}" font-family="${FONT_SANS}" font-size="13" fill="${SC.smoke}" text-anchor="middle" transform="rotate(-90, ${px - 50}, ${py + ph/2})">Prijs (€)</text>
+    <text x="${px + pw/2}" y="${py + ph + 48}" font-family="${FONT_SANS}" font-size="13" fill="${SC.smoke}" text-anchor="middle">Hoeveelheid Q</text>
 
-  <!-- Title -->
-  <text x="360" y="28" text-anchor="middle" font-size="14" font-weight="bold" fill="${GC.title}">Negatief extern effect: te lage prijs, te veel productie</text>
+    <!-- DWL triangle (coral fill, diagonal hatching) -->
+    <defs>
+      <pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)">
+        <line x1="0" y1="0" x2="0" y2="6" stroke="${SC.coralDeep}" stroke-width="1.4"/>
+      </pattern>
+    </defs>
+    <polygon points="${xSoc},${ySoc} ${xMkt},${yMkt} ${xMkt},${yMmk}" fill="url(#hatch)" stroke="${SC.coralDeep}" stroke-width="1.5"/>
 
-  <!-- Axes -->
-  <line x1="${px}" y1="${py+ph}" x2="${px}" y2="${py-5}" stroke="${GC.axis}" stroke-width="1.5" marker-end="url(#ah3)"/>
-  <line x1="${px}" y1="${py+ph}" x2="${px+pw+5}" y2="${py+ph}" stroke="${GC.axis}" stroke-width="1.5" marker-end="url(#ah3)"/>
-  <text x="15" y="180" transform="rotate(-90, 15, 180)" text-anchor="middle" font-size="12" fill="${GC.label}">Prijs (P)</text>
-  <text x="72" y="325" text-anchor="end" font-size="10" fill="${GC.label}">0</text>
+    <!-- Dashed refs to Q-axis and P-axis -->
+    <line x1="${xSoc}" y1="${ySoc}" x2="${xSoc}" y2="${py+ph}" stroke="${SC.cloud}" stroke-width="1" stroke-dasharray="4,3"/>
+    <line x1="${px}" y1="${ySoc}" x2="${xSoc}" y2="${ySoc}" stroke="${SC.cloud}" stroke-width="1" stroke-dasharray="4,3"/>
+    <line x1="${xMkt}" y1="${yMkt}" x2="${xMkt}" y2="${py+ph}" stroke="${SC.cloud}" stroke-width="1" stroke-dasharray="4,3"/>
+    <line x1="${px}" y1="${yMkt}" x2="${xMkt}" y2="${yMkt}" stroke="${SC.cloud}" stroke-width="1" stroke-dasharray="4,3"/>
 
-  <!-- Welvaartsverlies (rood) — eerst zodat lijnen erop komen -->
-  <polygon points="${dwlPoints}" fill="${GC.loss}" fill-opacity="0.55"/>
+    <!-- Curves -->
+    <line x1="${v1x}" y1="${v1y}" x2="${v2x}" y2="${v2y}" stroke="${SC.indigo}" stroke-width="3"/>
+    <text x="${v2x - 30}" y="${v2y - 10}" font-family="${FONT_SANS}" font-size="16" font-weight="700" fill="${SC.indigo}">V</text>
 
-  <!-- Dashed refs: Qs → V & axis -->
-  <line x1="${xSoc}" y1="${ySoc}" x2="${xSoc}" y2="${py+ph}" stroke="${GC.grid}" stroke-width="1" stroke-dasharray="4,3"/>
-  <line x1="${px}" y1="${ySoc}" x2="${xSoc}" y2="${ySoc}" stroke="${GC.grid}" stroke-width="1" stroke-dasharray="4,3"/>
-  <!-- Dashed refs: Qm -->
-  <line x1="${xMkt}" y1="${yMkt}" x2="${xMkt}" y2="${py+ph}" stroke="${GC.grid}" stroke-width="1" stroke-dasharray="4,3"/>
-  <line x1="${px}" y1="${yMkt}" x2="${xMkt}" y2="${yMkt}" stroke="${GC.grid}" stroke-width="1" stroke-dasharray="4,3"/>
+    <line x1="${s1x}" y1="${s1y}" x2="${s2x}" y2="${s2y}" stroke="${SC.olive}" stroke-width="3"/>
+    <text x="${s2x + 10}" y="${s2y + 6}" font-family="${FONT_SANS}" font-size="16" font-weight="700" fill="${SC.olive}">MPK</text>
 
-  <!-- Curves -->
-  <!-- V (vraag) -->
-  <line x1="${v1x}" y1="${v1y}" x2="${v2x}" y2="${v2y}" stroke="${GC.demand}" stroke-width="2.5"/>
-  <text x="${v2x-18}" y="${v2y-6}" font-size="12" font-weight="bold" fill="${GC.demand}">V</text>
-  <!-- MPK (private supply) -->
-  <line x1="${s1x}" y1="${s1y}" x2="${s2x}" y2="${s2y}" stroke="${GC.supply}" stroke-width="2.5"/>
-  <text x="${s2x+6}" y="${s2y+4}" font-size="12" font-weight="bold" fill="${GC.supply}">MPK</text>
-  <!-- MMK (social supply) -->
-  <line x1="${m1x}" y1="${m1y}" x2="${m2x}" y2="${m2y}" stroke="${GC.supplyNew}" stroke-width="2.5" stroke-dasharray="7,4"/>
-  <text x="${m2x+6}" y="${m2y-6}" font-size="12" font-weight="bold" fill="${GC.supplyNew}">MMK</text>
+    <line x1="${m1x}" y1="${m1y}" x2="${m2x}" y2="${m2y}" stroke="${SC.coral}" stroke-width="3" stroke-dasharray="10,5"/>
+    <text x="${m2x + 10}" y="${m2y - 10}" font-family="${FONT_SANS}" font-size="16" font-weight="700" fill="${SC.coral}">MMK</text>
 
-  <!-- Equilibrium dots -->
-  <circle cx="${xMkt}" cy="${yMkt}" r="5" fill="${GC.demand}"/>
-  <circle cx="${xSoc}" cy="${ySoc}" r="5" fill="${GC.supplyNew}"/>
+    <!-- Equilibrium dots -->
+    <circle cx="${xMkt}" cy="${yMkt}" r="8" fill="${SC.indigo}"/>
+    <circle cx="${xSoc}" cy="${ySoc}" r="8" fill="${SC.coralDeep}"/>
 
-  <!-- DWL label -->
-  <text x="${xMkt+6}" y="${(ySoc + yMktMMK)/2 + 4}" font-size="11" font-weight="bold" fill="#922B21">welvaarts-</text>
-  <text x="${xMkt+6}" y="${(ySoc + yMktMMK)/2 + 18}" font-size="11" font-weight="bold" fill="#922B21">verlies</text>
+    <!-- Axis value labels -->
+    <text x="${px - 10}" y="${ySoc + 5}" text-anchor="end" font-family="${FONT_SANS}" font-size="13" fill="${SC.ink}" font-weight="600">€30</text>
+    <text x="${px - 10}" y="${yMkt + 5}" text-anchor="end" font-family="${FONT_SANS}" font-size="13" fill="${SC.ink}" font-weight="600">€25</text>
+    <text x="${xSoc}" y="${py + ph + 22}" text-anchor="middle" font-family="${FONT_SANS}" font-size="13" fill="${SC.smoke}">Qs = 20</text>
+    <text x="${xMkt}" y="${py + ph + 22}" text-anchor="middle" font-family="${FONT_SANS}" font-size="13" fill="${SC.smoke}">Qm = 25</text>
 
-  <!-- Axis labels -->
-  <text x="72" y="${pToY(50)+4}" text-anchor="end" font-size="10" fill="${GC.label}">50</text>
-  <text x="72" y="${ySoc+4}" text-anchor="end" font-size="10" fill="${GC.axis}">Ps = 30</text>
-  <text x="72" y="${yMkt+4}" text-anchor="end" font-size="10" fill="${GC.axis}">Pm = 25</text>
-  <text x="${xSoc}" y="325" text-anchor="middle" font-size="10" fill="${GC.axis}">Qs = 20</text>
-  <text x="${xMkt}" y="325" text-anchor="middle" font-size="10" fill="${GC.axis}">Qm = 25</text>
+    <!-- Annotation: MMK = MPK + externe kosten -->
+    <g>
+      <rect x="${m1x + 30}" y="150" width="260" height="60" rx="8" fill="${SC.coral}" fill-opacity="0.12" stroke="${SC.coral}" stroke-width="1.5"/>
+      <text x="${m1x + 48}" y="176" font-family="${FONT_SANS}" font-size="12" font-weight="700" fill="${SC.coralDeep}" letter-spacing="2">MMK =</text>
+      <text x="${m1x + 48}" y="196" font-family="${FONT_SANS}" font-size="14" fill="${SC.ink}">MPK + externe kosten</text>
+      <line x1="${m1x + 30}" y1="180" x2="${m1x + 10}" y2="${m1y + 20}" stroke="${SC.coral}" stroke-width="1.8" marker-end="url(#ah-coral)"/>
+    </g>
 
-  <!-- Legend note -->
-  <text x="360" y="348" text-anchor="middle" font-size="10" fill="${GC.label}" font-style="italic">MMK = MPK + externe kosten   |   marktoptimum Qm &gt; maatschappelijk optimum Qs</text>
-</svg>`;
+    <!-- Annotation: welvaartsverlies -->
+    <g>
+      <rect x="${xMkt + 80}" y="${yMkt - 30}" width="240" height="56" rx="8" fill="${SC.coralDeep}"/>
+      <text x="${xMkt + 98}" y="${yMkt - 8}" font-family="${FONT_SANS}" font-size="12" font-weight="700" fill="#ffffff" letter-spacing="2">WELVAARTSVERLIES</text>
+      <text x="${xMkt + 98}" y="${yMkt + 12}" font-family="${FONT_SERIF}" font-size="14" font-style="italic" fill="#ffffff">de driehoek die de markt laat liggen</text>
+      <line x1="${xMkt + 80}" y1="${yMkt}" x2="${xMkt + 15}" y2="${(ySoc + yMmk)/2}" stroke="${SC.coralDeep}" stroke-width="1.8" marker-end="url(#ah-coral)"/>
+    </g>
+
+    <!-- Bottom insight bar -->
+    <rect x="140" y="580" width="1000" height="40" rx="6" fill="${SC.indigoDeep}"/>
+    <text x="160" y="606" font-family="${FONT_SERIF}" font-size="16" font-style="italic" fill="#ffffff">De prijs liegt: hij vertelt niet de maatschappelijke kosten.</text>
+  </svg>`;
 }
 
-// ═══════════════════════════════════════════════════════════════════════════
-// GRAPH 4: POSITIEF EXTERN EFFECT
-// MPB (vraag privé): P = 30 - Q ;  MMB (social demand) = MPB + 10: P = 40 - Q
-// S: P = Q
-// Market eq (MPB=S): Q=15, P=15  ;  Social eq (MMB=S): Q=20, P=20
-// DWL triangle: (Q=15, P=15 on S) — (Q=20, P=20 on S=MMB) — (Q=15, P=25 on MMB)
-// ═══════════════════════════════════════════════════════════════════════════
-function buildPosExternSVG() {
-  const px = 80, py = 45, pw = 600, ph = 265;
+// Positive externality — annotated
+function svgPosExtAnnotated() {
+  const w = 1280, h = 640;
+  const px = 140, py = 140, pw = 860, ph = 400;
   const qMax = 35, pMax = 42;
-  const qToX = q => Math.round(px + (q / qMax) * pw);
-  const pToY = p => Math.round(py + ph - (p / pMax) * ph);
+  const qToX = q => px + (q / qMax) * pw;
+  const pToY = p => py + ph - (p / pMax) * ph;
 
-  // MPB: P = 30 - Q (from (0,30) to (30,0))
-  const d1x = qToX(0),  d1y = pToY(30);
-  const d2x = qToX(30), d2y = pToY(0);
-  // MMB: P = 40 - Q (from (0,40) to (35,5))
-  const m1x = qToX(0),  m1y = pToY(40);
-  const m2x = qToX(35), m2y = pToY(5);
-  // S: P = Q (from (0,0) to (35,35))
-  const s1x = qToX(0),  s1y = pToY(0);
-  const s2x = qToX(35), s2y = pToY(35);
+  // MPB: P = 30 - Q ; MMB: P = 40 - Q ; S: P = Q
+  const d1x = qToX(0), d1y = pToY(30), d2x = qToX(30), d2y = pToY(0);
+  const m1x = qToX(0), m1y = pToY(40), m2x = qToX(35), m2y = pToY(5);
+  const s1x = qToX(0), s1y = pToY(0), s2x = qToX(35), s2y = pToY(35);
 
-  const qMkt = 15, pMkt = 15;
-  const qSoc = 20, pSoc = 20;
-  const xMkt = qToX(qMkt), yMkt = pToY(pMkt);
-  const xSoc = qToX(qSoc), ySoc = pToY(pSoc);
-  // MMB at Q=15 → P = 40-15 = 25
-  const yMmbAtMkt = pToY(25);
+  const xMkt = qToX(15), yMkt = pToY(15);
+  const xSoc = qToX(20), ySoc = pToY(20);
+  const yMmbMkt = pToY(25);
 
-  // DWL polygon: (Qm,Pm on S) — (Qs,Ps on S=MMB) — (Qm,P=25 on MMB)
-  const dwlPoints = `${xMkt},${yMkt} ${xSoc},${ySoc} ${xMkt},${yMmbAtMkt}`;
+  return `${svgHeader(w, h, SC.paper)}
+    ${editorialTitle("Wanneer iedereen profiteert, maar niemand hoeft bij te dragen", "POSITIEF EXTERN EFFECT")}
 
-  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" font-family="Arial">
-  <rect x="0" y="0" width="720" height="360" rx="8" fill="${GC.bg}"/>
-  <defs>
-    <marker id="ah4" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="${GC.axis}"/>
-    </marker>
-  </defs>
+    <line x1="${px}" y1="${py+ph}" x2="${px}" y2="${py-10}" stroke="${SC.ink}" stroke-width="1.8" marker-end="url(#ah-ink)"/>
+    <line x1="${px}" y1="${py+ph}" x2="${px+pw+10}" y2="${py+ph}" stroke="${SC.ink}" stroke-width="1.8" marker-end="url(#ah-ink)"/>
+    <text x="${px - 50}" y="${py + ph/2}" font-family="${FONT_SANS}" font-size="13" fill="${SC.smoke}" text-anchor="middle" transform="rotate(-90, ${px - 50}, ${py + ph/2})">Prijs (€)</text>
+    <text x="${px + pw/2}" y="${py + ph + 48}" font-family="${FONT_SANS}" font-size="13" fill="${SC.smoke}" text-anchor="middle">Hoeveelheid Q</text>
 
-  <!-- Title -->
-  <text x="360" y="28" text-anchor="middle" font-size="14" font-weight="bold" fill="${GC.title}">Positief extern effect: te weinig consumptie</text>
+    <!-- DWL triangle -->
+    <defs>
+      <pattern id="hatch2" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)">
+        <line x1="0" y1="0" x2="0" y2="6" stroke="${SC.coralDeep}" stroke-width="1.4"/>
+      </pattern>
+    </defs>
+    <polygon points="${xMkt},${yMkt} ${xSoc},${ySoc} ${xMkt},${yMmbMkt}" fill="url(#hatch2)" stroke="${SC.coralDeep}" stroke-width="1.5"/>
 
-  <!-- Axes -->
-  <line x1="${px}" y1="${py+ph}" x2="${px}" y2="${py-5}" stroke="${GC.axis}" stroke-width="1.5" marker-end="url(#ah4)"/>
-  <line x1="${px}" y1="${py+ph}" x2="${px+pw+5}" y2="${py+ph}" stroke="${GC.axis}" stroke-width="1.5" marker-end="url(#ah4)"/>
-  <text x="15" y="180" transform="rotate(-90, 15, 180)" text-anchor="middle" font-size="12" fill="${GC.label}">Prijs (P)</text>
-  <text x="72" y="325" text-anchor="end" font-size="10" fill="${GC.label}">0</text>
+    <line x1="${xMkt}" y1="${yMkt}" x2="${xMkt}" y2="${py+ph}" stroke="${SC.cloud}" stroke-width="1" stroke-dasharray="4,3"/>
+    <line x1="${px}" y1="${yMkt}" x2="${xMkt}" y2="${yMkt}" stroke="${SC.cloud}" stroke-width="1" stroke-dasharray="4,3"/>
+    <line x1="${xSoc}" y1="${ySoc}" x2="${xSoc}" y2="${py+ph}" stroke="${SC.cloud}" stroke-width="1" stroke-dasharray="4,3"/>
+    <line x1="${px}" y1="${ySoc}" x2="${xSoc}" y2="${ySoc}" stroke="${SC.cloud}" stroke-width="1" stroke-dasharray="4,3"/>
 
-  <!-- DWL (rood) -->
-  <polygon points="${dwlPoints}" fill="${GC.loss}" fill-opacity="0.55"/>
+    <line x1="${s1x}" y1="${s1y}" x2="${s2x}" y2="${s2y}" stroke="${SC.olive}" stroke-width="3"/>
+    <text x="${s2x + 10}" y="${s2y + 6}" font-family="${FONT_SANS}" font-size="16" font-weight="700" fill="${SC.olive}">A</text>
 
-  <!-- Dashed refs -->
-  <line x1="${xMkt}" y1="${yMkt}" x2="${xMkt}" y2="${py+ph}" stroke="${GC.grid}" stroke-width="1" stroke-dasharray="4,3"/>
-  <line x1="${px}" y1="${yMkt}" x2="${xMkt}" y2="${yMkt}" stroke="${GC.grid}" stroke-width="1" stroke-dasharray="4,3"/>
-  <line x1="${xSoc}" y1="${ySoc}" x2="${xSoc}" y2="${py+ph}" stroke="${GC.grid}" stroke-width="1" stroke-dasharray="4,3"/>
-  <line x1="${px}" y1="${ySoc}" x2="${xSoc}" y2="${ySoc}" stroke="${GC.grid}" stroke-width="1" stroke-dasharray="4,3"/>
+    <line x1="${d1x}" y1="${d1y}" x2="${d2x}" y2="${d2y}" stroke="${SC.indigo}" stroke-width="3"/>
+    <text x="${d2x - 40}" y="${d2y - 10}" font-family="${FONT_SANS}" font-size="16" font-weight="700" fill="${SC.indigo}">MPB</text>
 
-  <!-- Curves -->
-  <!-- S -->
-  <line x1="${s1x}" y1="${s1y}" x2="${s2x}" y2="${s2y}" stroke="${GC.supply}" stroke-width="2.5"/>
-  <text x="${s2x+6}" y="${s2y+4}" font-size="12" font-weight="bold" fill="${GC.supply}">A</text>
-  <!-- MPB (private demand) -->
-  <line x1="${d1x}" y1="${d1y}" x2="${d2x}" y2="${d2y}" stroke="${GC.demand}" stroke-width="2.5"/>
-  <text x="${d2x-24}" y="${d2y-6}" font-size="12" font-weight="bold" fill="${GC.demand}">MPB</text>
-  <!-- MMB (social demand, shifted out) -->
-  <line x1="${m1x}" y1="${m1y}" x2="${m2x}" y2="${m2y}" stroke="${GC.supplyNew}" stroke-width="2.5" stroke-dasharray="7,4"/>
-  <text x="${m2x-6}" y="${m2y-8}" text-anchor="end" font-size="12" font-weight="bold" fill="${GC.supplyNew}">MMB</text>
+    <line x1="${m1x}" y1="${m1y}" x2="${m2x}" y2="${m2y}" stroke="${SC.teal}" stroke-width="3" stroke-dasharray="10,5"/>
+    <text x="${m2x - 50}" y="${m2y - 10}" font-family="${FONT_SANS}" font-size="16" font-weight="700" fill="${SC.teal}">MMB</text>
 
-  <!-- Equilibrium dots -->
-  <circle cx="${xMkt}" cy="${yMkt}" r="5" fill="${GC.demand}"/>
-  <circle cx="${xSoc}" cy="${ySoc}" r="5" fill="${GC.supplyNew}"/>
+    <circle cx="${xMkt}" cy="${yMkt}" r="8" fill="${SC.indigo}"/>
+    <circle cx="${xSoc}" cy="${ySoc}" r="8" fill="${SC.teal}"/>
 
-  <!-- DWL label (inside triangle) -->
-  <text x="${xMkt+10}" y="${(yMkt + yMmbAtMkt)/2 - 2}" font-size="11" font-weight="bold" fill="#922B21">welvaarts-</text>
-  <text x="${xMkt+10}" y="${(yMkt + yMmbAtMkt)/2 + 12}" font-size="11" font-weight="bold" fill="#922B21">verlies</text>
+    <text x="${px - 10}" y="${ySoc + 5}" text-anchor="end" font-family="${FONT_SANS}" font-size="13" fill="${SC.ink}" font-weight="600">€20</text>
+    <text x="${px - 10}" y="${yMkt + 5}" text-anchor="end" font-family="${FONT_SANS}" font-size="13" fill="${SC.ink}" font-weight="600">€15</text>
+    <text x="${xMkt}" y="${py + ph + 22}" text-anchor="middle" font-family="${FONT_SANS}" font-size="13" fill="${SC.smoke}">Qm = 15</text>
+    <text x="${xSoc}" y="${py + ph + 22}" text-anchor="middle" font-family="${FONT_SANS}" font-size="13" fill="${SC.smoke}">Qs = 20</text>
 
-  <!-- Axis labels -->
-  <text x="72" y="${ySoc+4}" text-anchor="end" font-size="10" fill="${GC.axis}">Ps = 20</text>
-  <text x="72" y="${yMkt+4}" text-anchor="end" font-size="10" fill="${GC.axis}">Pm = 15</text>
-  <text x="${xMkt}" y="325" text-anchor="middle" font-size="10" fill="${GC.axis}">Qm = 15</text>
-  <text x="${xSoc}" y="325" text-anchor="middle" font-size="10" fill="${GC.axis}">Qs = 20</text>
+    <!-- MMB annotation -->
+    <g>
+      <rect x="${m1x + 40}" y="150" width="260" height="60" rx="8" fill="${SC.teal}" fill-opacity="0.12" stroke="${SC.teal}" stroke-width="1.5"/>
+      <text x="${m1x + 58}" y="176" font-family="${FONT_SANS}" font-size="12" font-weight="700" fill="${SC.tealDeep}" letter-spacing="2">MMB =</text>
+      <text x="${m1x + 58}" y="196" font-family="${FONT_SANS}" font-size="14" fill="${SC.ink}">MPB + externe baten</text>
+      <line x1="${m1x + 40}" y1="180" x2="${m1x + 10}" y2="${m1y + 20}" stroke="${SC.teal}" stroke-width="1.8" marker-end="url(#ah-smoke)"/>
+    </g>
 
-  <text x="360" y="348" text-anchor="middle" font-size="10" fill="${GC.label}" font-style="italic">MMB = MPB + externe baten   |   marktoptimum Qm &lt; maatschappelijk optimum Qs</text>
-</svg>`;
+    <!-- DWL annotation -->
+    <g>
+      <rect x="${xMkt + 60}" y="${yMkt + 20}" width="280" height="56" rx="8" fill="${SC.coralDeep}"/>
+      <text x="${xMkt + 78}" y="${yMkt + 44}" font-family="${FONT_SANS}" font-size="12" font-weight="700" fill="#ffffff" letter-spacing="2">WELVAARTSVERLIES</text>
+      <text x="${xMkt + 78}" y="${yMkt + 62}" font-family="${FONT_SERIF}" font-size="13" font-style="italic" fill="#ffffff">de markt vaccineert te weinig mensen</text>
+      <line x1="${xMkt + 60}" y1="${yMkt + 40}" x2="${xMkt + 10}" y2="${(yMkt + yMmbMkt)/2}" stroke="${SC.coralDeep}" stroke-width="1.8" marker-end="url(#ah-coral)"/>
+    </g>
+
+    <rect x="140" y="580" width="1000" height="40" rx="6" fill="${SC.indigoDeep}"/>
+    <text x="160" y="606" font-family="${FONT_SERIF}" font-size="16" font-style="italic" fill="#ffffff">Meeliften werkt tegen je: de markt vergeet de baten die niet in de prijs zitten.</text>
+  </svg>`;
 }
 
-// ═══════════════════════════════════════════════════════════════════════════
-// GRAPH 5: INTERNALISEREN — PIGOU-BELASTING (supply shift)
-// V: P = 40 - Q ;  A: P = Q + 10 ;  A_nieuw: P = Q + 20 (belasting t=10)
-// Eq oud: Q=15, P=25 ; Eq nieuw: Q=10, P=30
-// ═══════════════════════════════════════════════════════════════════════════
-function buildInternaliserenSVG() {
-  const px = 80, py = 45, pw = 600, ph = 265;
+// Pigou tax annotated
+function svgPigouAnnotated() {
+  const w = 1280, h = 640;
+  const px = 140, py = 140, pw = 860, ph = 400;
   const qMax = 45, pMax = 45;
-  const qToX = q => Math.round(px + (q / qMax) * pw);
-  const pToY = p => Math.round(py + ph - (p / pMax) * ph);
+  const qToX = q => px + (q / qMax) * pw;
+  const pToY = p => py + ph - (p / pMax) * ph;
 
-  // V: P = 40 - Q  → (0,40) ... (40,0)
-  const v1x = qToX(0),  v1y = pToY(40);
-  const v2x = qToX(40), v2y = pToY(0);
-  // A: P = Q + 10  → (0,10) ... (30,40)
-  const a1x = qToX(0),  a1y = pToY(10);
-  const a2x = qToX(30), a2y = pToY(40);
-  // A_new: P = Q + 20 → (0,20) ... (20,40)
-  const an1x = qToX(0),  an1y = pToY(20);
-  const an2x = qToX(20), an2y = pToY(40);
+  const v1x = qToX(0), v1y = pToY(40), v2x = qToX(40), v2y = pToY(0);
+  const a1x = qToX(0), a1y = pToY(10), a2x = qToX(30), a2y = pToY(40);
+  const an1x = qToX(0), an1y = pToY(20), an2x = qToX(20), an2y = pToY(40);
 
-  // Equilibria
-  const qOld = 15, pOld = 25;   // V=A: 40-Q = Q+10 → Q=15
-  const qNew = 10, pNew = 30;   // V=A_new: 40-Q = Q+20 → Q=10
-  const xOld = qToX(qOld), yOld = pToY(pOld);
-  const xNew = qToX(qNew), yNew = pToY(pNew);
-  // Producer receives: P_new - t = 30 - 10 = 20
+  const xOld = qToX(15), yOld = pToY(25);
+  const xNew = qToX(10), yNew = pToY(30);
   const yProd = pToY(20);
 
-  // Tax revenue rectangle: Q=0..Q_new, between P_new (top) and P_producer (bottom)
-  const taxRect = { x: px, y: yNew, w: xNew - px, h: yProd - yNew };
+  return `${svgHeader(w, h, SC.paper)}
+    ${editorialTitle("Een belasting laat de prijs de waarheid vertellen", "INTERNALISEREN  ·  PIGOU-BELASTING")}
 
-  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" font-family="Arial">
-  <rect x="0" y="0" width="720" height="360" rx="8" fill="${GC.bg}"/>
-  <defs>
-    <marker id="ah5" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="${GC.axis}"/>
-    </marker>
-  </defs>
+    <line x1="${px}" y1="${py+ph}" x2="${px}" y2="${py-10}" stroke="${SC.ink}" stroke-width="1.8" marker-end="url(#ah-ink)"/>
+    <line x1="${px}" y1="${py+ph}" x2="${px+pw+10}" y2="${py+ph}" stroke="${SC.ink}" stroke-width="1.8" marker-end="url(#ah-ink)"/>
+    <text x="${px - 50}" y="${py + ph/2}" font-family="${FONT_SANS}" font-size="13" fill="${SC.smoke}" text-anchor="middle" transform="rotate(-90, ${px - 50}, ${py + ph/2})">Prijs (€)</text>
+    <text x="${px + pw/2}" y="${py + ph + 48}" font-family="${FONT_SANS}" font-size="13" fill="${SC.smoke}" text-anchor="middle">Hoeveelheid Q</text>
 
-  <!-- Title -->
-  <text x="360" y="28" text-anchor="middle" font-size="14" font-weight="bold" fill="${GC.title}">Internaliseren: belasting verschuift aanbod omhoog</text>
+    <!-- Tax revenue rectangle -->
+    <rect x="${px}" y="${yNew}" width="${xNew - px}" height="${yProd - yNew}" fill="${SC.amber}" fill-opacity="0.42"/>
+    <text x="${(px + xNew)/2}" y="${(yNew + yProd)/2 + 5}" text-anchor="middle" font-family="${FONT_SANS}" font-size="14" font-weight="700" fill="${SC.amberDeep}">belastingopbrengst</text>
 
-  <!-- Axes -->
-  <line x1="${px}" y1="${py+ph}" x2="${px}" y2="${py-5}" stroke="${GC.axis}" stroke-width="1.5" marker-end="url(#ah5)"/>
-  <line x1="${px}" y1="${py+ph}" x2="${px+pw+5}" y2="${py+ph}" stroke="${GC.axis}" stroke-width="1.5" marker-end="url(#ah5)"/>
-  <text x="15" y="180" transform="rotate(-90, 15, 180)" text-anchor="middle" font-size="12" fill="${GC.label}">Prijs (P)</text>
-  <text x="72" y="325" text-anchor="end" font-size="10" fill="${GC.label}">0</text>
+    <!-- Dashed refs -->
+    <line x1="${xOld}" y1="${yOld}" x2="${xOld}" y2="${py+ph}" stroke="${SC.cloud}" stroke-width="1" stroke-dasharray="4,3"/>
+    <line x1="${px}" y1="${yOld}" x2="${xOld}" y2="${yOld}" stroke="${SC.cloud}" stroke-width="1" stroke-dasharray="4,3"/>
+    <line x1="${xNew}" y1="${yNew}" x2="${xNew}" y2="${py+ph}" stroke="${SC.cloud}" stroke-width="1" stroke-dasharray="4,3"/>
+    <line x1="${px}" y1="${yNew}" x2="${xNew}" y2="${yNew}" stroke="${SC.cloud}" stroke-width="1" stroke-dasharray="4,3"/>
+    <line x1="${px}" y1="${yProd}" x2="${xNew}" y2="${yProd}" stroke="${SC.cloud}" stroke-width="1" stroke-dasharray="4,3"/>
 
-  <!-- Tax revenue rectangle -->
-  <rect x="${taxRect.x}" y="${taxRect.y}" width="${taxRect.w}" height="${taxRect.h}" fill="${GC.tax}" fill-opacity="0.55"/>
-  <text x="${(taxRect.x + taxRect.x + taxRect.w)/2}" y="${(taxRect.y + taxRect.y + taxRect.h)/2 + 4}" text-anchor="middle" font-size="11" font-weight="bold" fill="#7B4A12">belastingopbrengst</text>
+    <!-- Curves -->
+    <line x1="${v1x}" y1="${v1y}" x2="${v2x}" y2="${v2y}" stroke="${SC.indigo}" stroke-width="3"/>
+    <text x="${v2x + 10}" y="${v2y - 10}" font-family="${FONT_SANS}" font-size="16" font-weight="700" fill="${SC.indigo}">V</text>
 
-  <!-- Dashed reference lines -->
-  <line x1="${xOld}" y1="${yOld}" x2="${xOld}" y2="${py+ph}" stroke="${GC.grid}" stroke-width="1" stroke-dasharray="4,3"/>
-  <line x1="${px}" y1="${yOld}" x2="${xOld}" y2="${yOld}" stroke="${GC.grid}" stroke-width="1" stroke-dasharray="4,3"/>
-  <line x1="${xNew}" y1="${yNew}" x2="${xNew}" y2="${py+ph}" stroke="${GC.grid}" stroke-width="1" stroke-dasharray="4,3"/>
-  <line x1="${px}" y1="${yNew}" x2="${xNew}" y2="${yNew}" stroke="${GC.grid}" stroke-width="1" stroke-dasharray="4,3"/>
-  <line x1="${px}" y1="${yProd}" x2="${xNew}" y2="${yProd}" stroke="${GC.grid}" stroke-width="1" stroke-dasharray="4,3"/>
+    <line x1="${a1x}" y1="${a1y}" x2="${a2x}" y2="${a2y}" stroke="${SC.olive}" stroke-width="2.5" stroke-dasharray="8,5" opacity="0.75"/>
+    <text x="${a2x + 10}" y="${a2y + 6}" font-family="${FONT_SANS}" font-size="14" font-weight="700" fill="${SC.olive}" opacity="0.9">A (oud)</text>
 
-  <!-- Curves -->
-  <!-- V -->
-  <line x1="${v1x}" y1="${v1y}" x2="${v2x}" y2="${v2y}" stroke="${GC.demand}" stroke-width="2.5"/>
-  <text x="${v2x+6}" y="${v2y-6}" font-size="12" font-weight="bold" fill="${GC.demand}">V</text>
-  <!-- A oud (dashed, grey-ish) -->
-  <line x1="${a1x}" y1="${a1y}" x2="${a2x}" y2="${a2y}" stroke="${GC.supply}" stroke-width="2" stroke-dasharray="6,4" opacity="0.75"/>
-  <text x="${a2x+6}" y="${a2y+4}" font-size="11" font-weight="bold" fill="${GC.supply}" opacity="0.85">A (oud)</text>
-  <!-- A nieuw -->
-  <line x1="${an1x}" y1="${an1y}" x2="${an2x}" y2="${an2y}" stroke="${GC.supplyNew}" stroke-width="2.5"/>
-  <text x="${an2x+6}" y="${an2y-6}" font-size="12" font-weight="bold" fill="${GC.supplyNew}">A + belasting</text>
+    <line x1="${an1x}" y1="${an1y}" x2="${an2x}" y2="${an2y}" stroke="${SC.coral}" stroke-width="3"/>
+    <text x="${an2x + 10}" y="${an2y - 10}" font-family="${FONT_SANS}" font-size="16" font-weight="700" fill="${SC.coral}">A + belasting</text>
 
-  <!-- Shift arrow (horizontal, at mid-height) -->
-  <line x1="${qToX(20)}" y1="${pToY(30)}" x2="${qToX(20)-52}" y2="${pToY(30)}" stroke="${GC.supplyNew}" stroke-width="1.8" marker-end="url(#ah5)"/>
+    <!-- Shift arrow -->
+    <g>
+      <line x1="${qToX(25)}" y1="${pToY(30)}" x2="${qToX(25) - 80}" y2="${pToY(30)}" stroke="${SC.coralDeep}" stroke-width="2.4" marker-end="url(#ah-coral)"/>
+      <text x="${qToX(25) - 40}" y="${pToY(30) - 10}" text-anchor="middle" font-family="${FONT_SANS}" font-size="13" font-weight="700" fill="${SC.coralDeep}">shift</text>
+    </g>
 
-  <!-- Equilibrium dots -->
-  <circle cx="${xOld}" cy="${yOld}" r="5" fill="${GC.supply}" opacity="0.85"/>
-  <circle cx="${xNew}" cy="${yNew}" r="5" fill="${GC.supplyNew}"/>
+    <circle cx="${xOld}" cy="${yOld}" r="8" fill="${SC.olive}" opacity="0.85"/>
+    <circle cx="${xNew}" cy="${yNew}" r="8" fill="${SC.coralDeep}"/>
 
-  <!-- Tax height note inside rectangle -->
-  <text x="${(taxRect.x + taxRect.x + taxRect.w)/2}" y="${(taxRect.y + taxRect.y + taxRect.h)/2 - 8}" text-anchor="middle" font-size="10" fill="#7B4A12" font-style="italic">t = €10 per eenheid</text>
+    <!-- Axis labels -->
+    <text x="${px - 10}" y="${pToY(40) + 5}" text-anchor="end" font-family="${FONT_SANS}" font-size="13" fill="${SC.smoke}">€40</text>
+    <text x="${px - 10}" y="${yNew + 5}" text-anchor="end" font-family="${FONT_SANS}" font-size="13" fill="${SC.ink}" font-weight="700">€30</text>
+    <text x="${px - 10}" y="${yOld + 5}" text-anchor="end" font-family="${FONT_SANS}" font-size="13" fill="${SC.ink}">€25</text>
+    <text x="${px - 10}" y="${yProd + 5}" text-anchor="end" font-family="${FONT_SANS}" font-size="13" fill="${SC.ink}">€20</text>
+    <text x="${xNew}" y="${py + ph + 22}" text-anchor="middle" font-family="${FONT_SANS}" font-size="13" fill="${SC.ink}" font-weight="700">Qn = 10</text>
+    <text x="${xOld}" y="${py + ph + 22}" text-anchor="middle" font-family="${FONT_SANS}" font-size="13" fill="${SC.smoke}">Qo = 15</text>
 
-  <!-- Axis labels (kept short to avoid collision) -->
-  <text x="72" y="${pToY(40)+4}" text-anchor="end" font-size="10" fill="${GC.label}">40</text>
-  <text x="72" y="${yNew+4}" text-anchor="end" font-size="10" fill="${GC.axis}" font-weight="bold">30</text>
-  <text x="72" y="${yOld+4}" text-anchor="end" font-size="10" fill="${GC.axis}">25</text>
-  <text x="72" y="${yProd+4}" text-anchor="end" font-size="10" fill="${GC.axis}">20</text>
-  <text x="${xNew}" y="325" text-anchor="middle" font-size="10" fill="${GC.axis}" font-weight="bold">10</text>
-  <text x="${xOld}" y="325" text-anchor="middle" font-size="10" fill="${GC.axis}">15</text>
+    <!-- Callout: burden split -->
+    <g>
+      <rect x="${xNew + 100}" y="${yNew - 10}" width="310" height="80" rx="10" fill="${SC.indigo}"/>
+      <text x="${xNew + 120}" y="${yNew + 14}" font-family="${FONT_SANS}" font-size="12" font-weight="700" fill="${SC.amber}" letter-spacing="2">BELASTING t = €10</text>
+      <text x="${xNew + 120}" y="${yNew + 38}" font-family="${FONT_SANS}" font-size="14" fill="#ffffff">Consument: +€5   ·   Producent: -€5</text>
+      <text x="${xNew + 120}" y="${yNew + 58}" font-family="${FONT_SERIF}" font-size="13" font-style="italic" fill="${SC.cloud}">De last wordt gedeeld.</text>
+      <line x1="${xNew + 100}" y1="${yNew + 30}" x2="${xNew + 15}" y2="${yNew + 5}" stroke="${SC.indigo}" stroke-width="1.8"/>
+    </g>
 
-  <text x="360" y="348" text-anchor="middle" font-size="10" fill="${GC.label}" font-style="italic">Belasting t = €10 → prijs stijgt van 25 naar 30 → hoeveelheid daalt van 15 naar 10</text>
-</svg>`;
+    <rect x="140" y="580" width="1000" height="40" rx="6" fill="${SC.indigoDeep}"/>
+    <text x="160" y="606" font-family="${FONT_SERIF}" font-size="16" font-style="italic" fill="#ffffff">Vliegtaks in beeld: prijs omhoog, consumptie omlaag, extern effect ingeprijsd.</text>
+  </svg>`;
+}
+
+// Instrumenten-matrix — redesigned with icons
+function svgInstrumentenMatrix() {
+  return `${svgHeader(1280, 640, SC.paper)}
+    ${editorialTitle("Welk instrument past bij welk probleem?", "GEREEDSCHAPSKIST OVERHEID")}
+
+    <!-- Grid header -->
+    <rect x="80"  y="160" width="340" height="50" fill="${SC.indigo}"/>
+    <rect x="420" y="160" width="320" height="50" fill="${SC.indigoMid}"/>
+    <rect x="740" y="160" width="460" height="50" fill="${SC.coralDeep}"/>
+    <text x="100" y="192" font-family="${FONT_SANS}" font-size="13" font-weight="700" fill="#ffffff" letter-spacing="2">PROBLEEM</text>
+    <text x="440" y="192" font-family="${FONT_SANS}" font-size="13" font-weight="700" fill="#ffffff" letter-spacing="2">MECHANISME</text>
+    <text x="760" y="192" font-family="${FONT_SANS}" font-size="13" font-weight="700" fill="#ffffff" letter-spacing="2">INSTRUMENT</text>
+
+    ${[
+      { y: 210, icon: ICON.smokestack(SC.coralDeep, SC.smoke), probl: "Monopolie / machtspositie", pSub: "te weinig concurrentie", mech: "prijs te hoog, Q te laag", instr: "Mededingingsbeleid", instrSub: "ACM, EC, boetes", col: SC.coral },
+      { y: 310, icon: ICON.factory(SC.amberDeep),              probl: "Negatief extern effect",     pSub: "kosten buiten de prijs", mech: "prijs te laag, te veel productie", instr: "Belasting (accijns)", instrSub: "bv. vliegtaks", col: SC.amberDeep },
+      { y: 410, icon: ICON.syringe(SC.teal),                   probl: "Positief extern effect",     pSub: "baten buiten de prijs",  mech: "prijs te hoog, te weinig consumptie", instr: "Subsidie", instrSub: "bv. vaccinatie, onderwijs", col: SC.teal },
+      { y: 510, icon: ICON.badge(SC.oliveDeep, SC.coral),      probl: "Collectieve goederen",        pSub: "markt levert het niet", mech: "meelifters, geen prikkel", instr: "Overheid levert zelf", instrSub: "defensie, dijken, politie", col: SC.olive },
+    ].map(r => `
+      <rect x="80"  y="${r.y}" width="340" height="90" fill="${SC.chalk}" stroke="${SC.cloud}" stroke-width="1"/>
+      <rect x="80"  y="${r.y}" width="6"   height="90" fill="${r.col}"/>
+      ${placeIcon(r.icon, 104, r.y + 28, 36)}
+      <text x="160" y="${r.y + 42}" font-family="${FONT_SANS}" font-size="16" font-weight="700" fill="${SC.indigo}">${r.probl}</text>
+      <text x="160" y="${r.y + 62}" font-family="${FONT_SANS}" font-size="12" fill="${SC.smoke}">${r.pSub}</text>
+
+      <rect x="420" y="${r.y}" width="320" height="90" fill="${SC.paper}" stroke="${SC.cloud}" stroke-width="1"/>
+      <text x="440" y="${r.y + 52}" font-family="${FONT_SERIF}" font-size="15" font-style="italic" fill="${SC.smoke}">${r.mech}</text>
+
+      <rect x="740" y="${r.y}" width="460" height="90" fill="${SC.sky}" stroke="${SC.cloud}" stroke-width="1"/>
+      <text x="760" y="${r.y + 42}" font-family="${FONT_SANS}" font-size="18" font-weight="700" fill="${SC.indigo}">${r.instr}</text>
+      <text x="760" y="${r.y + 66}" font-family="${FONT_SANS}" font-size="12" fill="${SC.smoke}">${r.instrSub}</text>
+    `).join("")}
+  </svg>`;
+}
+
+// Three natural-monopoly examples — card layout with icons
+function svgNatMonExamples() {
+  const cards = [
+    { x: 80,   title: "Waterleidingnet",   note: "Eén net per wijk: dubbele leidingen zouden zinloos duur zijn.", color: SC.teal, bgColor: SC.tealDeep },
+    { x: 490,  title: "Spoorwegen",         note: "Extra rails naast de bestaande levert niemand iets op.",         color: SC.amber, bgColor: SC.amberDeep },
+    { x: 900,  title: "Elektriciteitsnet",  note: "Twee kabelnetten kruisen? Verspilling voor dezelfde woningen.",   color: SC.coral, bgColor: SC.coralDeep },
+  ];
+  return `${svgHeader(1280, 640, SC.paper)}
+    ${editorialTitle("Drie klassieke natuurlijke monopolies", "VOORBEELDEN UIT NEDERLAND")}
+
+    ${cards.map(c => {
+      // Wrap note into 3 lines by word count
+      const words = c.note.split(" ");
+      const t = Math.ceil(words.length / 3);
+      const lines = [
+        words.slice(0, t).join(" "),
+        words.slice(t, 2*t).join(" "),
+        words.slice(2*t).join(" "),
+      ].filter(Boolean);
+      const textLines = lines.map((l, i) =>
+        `<text x="${c.x + 155}" y="${400 + i * 26}" text-anchor="middle" font-family="Georgia, serif" font-size="16" font-style="italic" fill="${SC.ink}">${l}</text>`
+      ).join("");
+      return `
+        <rect x="${c.x}" y="160" width="310" height="420" rx="14" fill="${SC.chalk}" stroke="${SC.cloud}" stroke-width="1"/>
+        <rect x="${c.x}" y="160" width="310" height="120" fill="${c.bgColor}" rx="14"/>
+        <rect x="${c.x}" y="248" width="310" height="32" fill="${c.bgColor}"/>
+        ${placeIcon(ICON.factory(SC.paper), c.x + 125, 185, 60)}
+        <text x="${c.x + 155}" y="316" text-anchor="middle" font-family="${FONT_DISPLAY}" font-size="22" font-weight="700" fill="${SC.indigo}">${c.title}</text>
+        <line x1="${c.x + 50}" y1="340" x2="${c.x + 260}" y2="340" stroke="${c.color}" stroke-width="2"/>
+        ${textLines}
+      `;
+    }).join("")}
+  </svg>`;
+}
+
+// Side-by-side comparison — negatief vs positief extern effect
+function svgNegVsPos() {
+  return `${svgHeader(1280, 640, SC.paper)}
+    ${editorialTitle("Spiegelbeeld: negatief ↔ positief extern effect", "VERGELIJKING")}
+
+    <!-- LEFT: negatief -->
+    <rect x="80"  y="160" width="560" height="420" rx="14" fill="${SC.chalk}" stroke="${SC.coral}" stroke-width="2"/>
+    <rect x="80"  y="160" width="560" height="50" fill="${SC.coralDeep}" rx="14"/>
+    <rect x="80"  y="198" width="560" height="12" fill="${SC.coralDeep}"/>
+    <text x="360" y="192" text-anchor="middle" font-family="${FONT_DISPLAY}" font-size="22" font-weight="700" fill="#ffffff">Negatief extern effect</text>
+    ${placeIcon(ICON.factory(SC.coralDeep), 108, 232, 44)}
+    <text x="170" y="258" font-family="${FONT_SANS}" font-size="14" font-weight="700" fill="${SC.ink}">kosten voor derden</text>
+    <text x="170" y="282" font-family="${FONT_SANS}" font-size="13" fill="${SC.smoke}">(vervuiling, geluid)</text>
+
+    <line x1="108" y1="308" x2="608" y2="308" stroke="${SC.cloud}"/>
+
+    ${[
+      ["prijs is", "te laag"],
+      ["markt produceert", "te veel"],
+      ["welvaartsverlies zit", "bij overproductie"],
+      ["instrument", "belasting"],
+    ].map(([k, v], i) => `
+      <text x="108" y="${340 + i * 46}" font-family="${FONT_SANS}" font-size="13" fill="${SC.ash}" letter-spacing="1">${k.toUpperCase()}</text>
+      <text x="608" y="${340 + i * 46}" text-anchor="end" font-family="${FONT_SERIF}" font-size="18" font-style="italic" fill="${SC.coralDeep}" font-weight="700">${v}</text>
+    `).join("")}
+
+    <!-- RIGHT: positief -->
+    <rect x="660" y="160" width="560" height="420" rx="14" fill="${SC.chalk}" stroke="${SC.teal}" stroke-width="2"/>
+    <rect x="660" y="160" width="560" height="50" fill="${SC.tealDeep}" rx="14"/>
+    <rect x="660" y="198" width="560" height="12" fill="${SC.tealDeep}"/>
+    <text x="940" y="192" text-anchor="middle" font-family="${FONT_DISPLAY}" font-size="22" font-weight="700" fill="#ffffff">Positief extern effect</text>
+    ${placeIcon(ICON.syringe(SC.tealDeep), 688, 232, 44)}
+    <text x="750" y="258" font-family="${FONT_SANS}" font-size="14" font-weight="700" fill="${SC.ink}">baten voor derden</text>
+    <text x="750" y="282" font-family="${FONT_SANS}" font-size="13" fill="${SC.smoke}">(vaccinatie, onderwijs)</text>
+
+    <line x1="688" y1="308" x2="1188" y2="308" stroke="${SC.cloud}"/>
+
+    ${[
+      ["prijs is", "te hoog"],
+      ["markt consumeert", "te weinig"],
+      ["welvaartsverlies zit", "bij onderconsumptie"],
+      ["instrument", "subsidie"],
+    ].map(([k, v], i) => `
+      <text x="688" y="${340 + i * 46}" font-family="${FONT_SANS}" font-size="13" fill="${SC.ash}" letter-spacing="1">${k.toUpperCase()}</text>
+      <text x="1188" y="${340 + i * 46}" text-anchor="end" font-family="${FONT_SERIF}" font-size="18" font-style="italic" fill="${SC.tealDeep}" font-weight="700">${v}</text>
+    `).join("")}
+  </svg>`;
 }
 
 // ═══════════════════════════════════════════════════════════════════════════
-// GRAPH 6: INSTRUMENTEN-MATRIX  (probleem → passend instrument)
+// SLIDE BUILDERS (high-level layouts)
 // ═══════════════════════════════════════════════════════════════════════════
-function buildInstrumentMatrixSVG() {
-  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" font-family="Arial">
-  <rect x="0" y="0" width="720" height="360" rx="8" fill="${GC.bg}"/>
-
-  <!-- Title -->
-  <text x="360" y="28" text-anchor="middle" font-size="15" font-weight="bold" fill="${GC.title}">Welk instrument past bij welk probleem?</text>
-
-  <!-- Header row -->
-  <rect x="40" y="55" width="240" height="38" fill="#${DOMAIN.color}"/>
-  <text x="160" y="80" text-anchor="middle" font-size="13" font-weight="bold" fill="#FFFFFF">Probleem</text>
-  <rect x="280" y="55" width="200" height="38" fill="#${DOMAIN.color}"/>
-  <text x="380" y="80" text-anchor="middle" font-size="13" font-weight="bold" fill="#FFFFFF">Mechanisme</text>
-  <rect x="480" y="55" width="200" height="38" fill="#186A3B"/>
-  <text x="580" y="80" text-anchor="middle" font-size="13" font-weight="bold" fill="#FFFFFF">Instrument</text>
-
-  <!-- Row 1: Monopolie -->
-  <rect x="40" y="93" width="240" height="58" fill="#FFFFFF" stroke="#${C.borderGray}"/>
-  <rect x="40" y="93" width="5" height="58" fill="#${DOMAIN.color}"/>
-  <text x="55" y="116" font-size="13" font-weight="bold" fill="#${DOMAIN.color}">Monopolie / machtspositie</text>
-  <text x="55" y="136" font-size="11" fill="#2D3748">te weinig concurrentie</text>
-
-  <rect x="280" y="93" width="200" height="58" fill="#${C.rowAlt}" stroke="#${C.borderGray}"/>
-  <text x="290" y="116" font-size="11" fill="#2D3748">te hoge prijs,</text>
-  <text x="290" y="134" font-size="11" fill="#2D3748">te weinig aanbod</text>
-
-  <rect x="480" y="93" width="200" height="58" fill="#${C.dGreenLt}" stroke="#${C.borderGray}"/>
-  <rect x="480" y="93" width="5" height="58" fill="#1E8449"/>
-  <text x="495" y="116" font-size="12" font-weight="bold" fill="#186A3B">Mededingingsbeleid</text>
-  <text x="495" y="136" font-size="11" fill="#2D3748">ACM, EC, boetes</text>
-
-  <!-- Row 2: Negatief extern effect -->
-  <rect x="40" y="151" width="240" height="58" fill="#FFFFFF" stroke="#${C.borderGray}"/>
-  <rect x="40" y="151" width="5" height="58" fill="#${DOMAIN.color}"/>
-  <text x="55" y="174" font-size="13" font-weight="bold" fill="#${DOMAIN.color}">Negatief extern effect</text>
-  <text x="55" y="194" font-size="11" fill="#2D3748">kosten buiten de prijs</text>
-
-  <rect x="280" y="151" width="200" height="58" fill="#${C.rowAlt}" stroke="#${C.borderGray}"/>
-  <text x="290" y="174" font-size="11" fill="#2D3748">prijs te laag,</text>
-  <text x="290" y="192" font-size="11" fill="#2D3748">te veel productie</text>
-
-  <rect x="480" y="151" width="200" height="58" fill="#${C.dGreenLt}" stroke="#${C.borderGray}"/>
-  <rect x="480" y="151" width="5" height="58" fill="#1E8449"/>
-  <text x="495" y="174" font-size="12" font-weight="bold" fill="#186A3B">Belasting</text>
-  <text x="495" y="194" font-size="11" fill="#2D3748">bijv. vliegtaks, CO₂-heffing</text>
-
-  <!-- Row 3: Positief extern effect -->
-  <rect x="40" y="209" width="240" height="58" fill="#FFFFFF" stroke="#${C.borderGray}"/>
-  <rect x="40" y="209" width="5" height="58" fill="#${DOMAIN.color}"/>
-  <text x="55" y="232" font-size="13" font-weight="bold" fill="#${DOMAIN.color}">Positief extern effect</text>
-  <text x="55" y="252" font-size="11" fill="#2D3748">baten buiten de prijs</text>
-
-  <rect x="280" y="209" width="200" height="58" fill="#${C.rowAlt}" stroke="#${C.borderGray}"/>
-  <text x="290" y="232" font-size="11" fill="#2D3748">prijs te hoog,</text>
-  <text x="290" y="250" font-size="11" fill="#2D3748">te weinig consumptie</text>
-
-  <rect x="480" y="209" width="200" height="58" fill="#${C.dGreenLt}" stroke="#${C.borderGray}"/>
-  <rect x="480" y="209" width="5" height="58" fill="#1E8449"/>
-  <text x="495" y="232" font-size="12" font-weight="bold" fill="#186A3B">Subsidie</text>
-  <text x="495" y="252" font-size="11" fill="#2D3748">bijv. vaccinatie, onderwijs</text>
-
-  <!-- Row 4: Collectieve goederen -->
-  <rect x="40" y="267" width="240" height="58" fill="#FFFFFF" stroke="#${C.borderGray}"/>
-  <rect x="40" y="267" width="5" height="58" fill="#${DOMAIN.color}"/>
-  <text x="55" y="290" font-size="13" font-weight="bold" fill="#${DOMAIN.color}">Collectieve goederen</text>
-  <text x="55" y="310" font-size="11" fill="#2D3748">markt levert niet</text>
-
-  <rect x="280" y="267" width="200" height="58" fill="#${C.rowAlt}" stroke="#${C.borderGray}"/>
-  <text x="290" y="290" font-size="11" fill="#2D3748">meelifters,</text>
-  <text x="290" y="308" font-size="11" fill="#2D3748">geen private prikkel</text>
-
-  <rect x="480" y="267" width="200" height="58" fill="#${C.dGreenLt}" stroke="#${C.borderGray}"/>
-  <rect x="480" y="267" width="5" height="58" fill="#1E8449"/>
-  <text x="495" y="290" font-size="12" font-weight="bold" fill="#186A3B">Overheid levert zelf</text>
-  <text x="495" y="308" font-size="11" fill="#2D3748">defensie, dijken, politie</text>
-
-  <!-- Footer hint -->
-  <text x="360" y="348" text-anchor="middle" font-size="10" fill="${GC.label}" font-style="italic">Koppel het probleem aan het mechanisme — dán volgt het instrument</text>
-</svg>`;
-}
-
-// ═══════════════════════════════════════════════════════════════════════════
-// SLIDE HELPERS
-// ═══════════════════════════════════════════════════════════════════════════
-function addTitleMaster(pres) {
-  pres.defineSlideMaster({
-    title: "TITLE_DARK", background: { color: C.navy },
-    objects: [
-      { rect: { x: 0, y: 0, w: 10, h: 0.06, fill: { color: DOMAIN.color } } },
-      { rect: { x: 0, y: 5.15, w: 10, h: 0.475, fill: { color: "151D4A" } } },
-    ],
+function sectionDivider(pres, { kicker, title, subtitle, notes }) {
+  const s = pres.addSlide({ masterName: "DARK_HERO" });
+  s.addText(kicker.toUpperCase(), {
+    x: 0.6, y: 1.9, w: 8.8, h: 0.4,
+    ...T.labelUpper, color: PC.coral, fontSize: 14, charSpacing: 6,
   });
-}
-function addContentMaster(pres) {
-  pres.defineSlideMaster({
-    title: "CONTENT", background: { color: C.white },
-    objects: [{ rect: { x: 0, y: 0, w: 10, h: 0.75, fill: { color: DOMAIN.color } } }],
+  s.addText(title, {
+    x: 0.6, y: 2.35, w: 8.8, h: 1.3,
+    ...T.heroDark, fontSize: 56, charSpacing: -2,
   });
-}
-function addContentSlide(pres, title) {
-  const slide = pres.addSlide({ masterName: "CONTENT" });
-  slide.addText(title, {
-    x: 0.5, y: 0, w: 9, h: 0.75,
-    fontSize: 24, fontFace: "Arial", color: C.white, bold: true, valign: "middle",
-  });
-  return slide;
-}
-function drawCard(slide, x, y, w, h, accentColor, bgColor, title, titleColor, bodyParts) {
-  slide.addShape("rect", { x, y, w, h, fill: { color: bgColor }, rectRadius: 0.05, shadow: makeShadow() });
-  slide.addShape("rect", { x, y, w: 0.06, h, fill: { color: accentColor } });
-  slide.addText(title, {
-    x: x + 0.2, y: y + 0.12, w: w - 0.35, h: 0.4,
-    fontSize: 18, fontFace: "Arial", color: titleColor, bold: true, valign: "top", margin: 0,
-  });
-  if (bodyParts && bodyParts.length > 0) {
-    slide.addText(bodyParts, {
-      x: x + 0.2, y: y + 0.55, w: w - 0.35, h: h - 0.7,
-      fontSize: 13, fontFace: "Arial", color: C.dark, valign: "top", align: "left",
-      lineSpacingMultiple: 1.2, margin: 0,
+  if (subtitle) {
+    s.addText(subtitle, {
+      x: 0.6, y: 3.85, w: 8.8, h: 0.6,
+      ...T.subheadDark, fontFace: FONT_SERIF, italic: true,
     });
   }
+  // Decorative coral line
+  s.addShape("rect", { x: 0.6, y: 3.6, w: 0.6, h: 0.04, fill: { color: PC.coral } });
+  if (notes) s.addNotes(notes);
+  return s;
 }
-function drawGraphSlide(slide, imgBase64) {
-  slide.addImage({ data: imgBase64, x: 0.75, y: 0.95, w: 8.5, h: 4.25 });
+
+function heroStat(pres, { kicker, stat, subtitle, body, notes }) {
+  const s = pres.addSlide({ masterName: "DARK_HERO" });
+  s.addText(kicker.toUpperCase(), {
+    x: 0.6, y: 1.0, w: 8.8, h: 0.35,
+    ...T.labelUpper, color: PC.coral, fontSize: 13, charSpacing: 6,
+  });
+  s.addText(stat, {
+    x: 0.3, y: 1.45, w: 9.4, h: 2.4,
+    ...T.stat, fontSize: 130, charSpacing: -4, align: "center",
+  });
+  if (subtitle) {
+    s.addText(subtitle, {
+      x: 0.6, y: 3.95, w: 8.8, h: 0.5,
+      ...T.subheadDark, fontSize: 22, align: "center",
+    });
+  }
+  if (body) {
+    s.addText(body, {
+      x: 1.5, y: 4.45, w: 7, h: 0.6,
+      fontFace: FONT_SERIF, fontSize: 15, italic: true, color: PC.cloud, align: "center",
+    });
+  }
+  if (notes) s.addNotes(notes);
+  return s;
 }
 
-// Graph slide with a legend strip below (4 cells max), for graphs that use
-// unfamiliar abbreviations (MPK, MMK, MPB, MMB).
-function drawGraphSlideWithLegend(slide, imgBase64, legendItems) {
-  // Slightly smaller graph to leave room for legend
-  slide.addImage({ data: imgBase64, x: 1.0, y: 0.82, w: 8.0, h: 4.0 });
-
-  const lx = 0.5, ly = 4.90, lw = 9.0, lh = 0.62;
-  slide.addShape("rect", {
-    x: lx, y: ly, w: lw, h: lh,
-    fill: { color: C.lightGray }, line: { color: C.borderGray, width: 0.5 },
-  });
-
-  const n = legendItems.length;
-  const cellW = lw / n;
-  legendItems.forEach((it, i) => {
-    const cx = lx + i * cellW;
-    // Swatch
-    slide.addShape("rect", {
-      x: cx + 0.12, y: ly + 0.17, w: 0.22, h: 0.22,
-      fill: { color: it.color },
+function editorialSlide(pres, { kicker, title, subtitle, notes }) {
+  const s = pres.addSlide({ masterName: "LIGHT_ED" });
+  if (kicker) {
+    s.addText(kicker.toUpperCase(), {
+      x: 0.5, y: 0.3, w: 9, h: 0.3,
+      ...T.labelUpper, color: PC.coral, fontSize: 11, charSpacing: 4,
     });
-    // Abbrev + description
-    slide.addText([
-      { text: it.abbr, options: { bold: true, color: it.color } },
-      { text: "  " + it.desc, options: { color: C.dark } },
-    ], {
-      x: cx + 0.42, y: ly + 0.08, w: cellW - 0.5, h: lh - 0.16,
-      fontSize: 11, fontFace: "Arial", valign: "middle", margin: 0,
-      lineSpacingMultiple: 1.1,
-    });
+  }
+  s.addText(title, {
+    x: 0.5, y: 0.6, w: 9, h: 0.8,
+    ...T.displayLight, fontSize: 28, charSpacing: -0.5,
   });
+  if (subtitle) {
+    s.addText(subtitle, {
+      x: 0.5, y: 1.35, w: 9, h: 0.4,
+      ...T.subheadLight, fontFace: FONT_SERIF, italic: true,
+    });
+  }
+  if (notes) s.addNotes(notes);
+  return s;
+}
+
+function sidebarSlide(pres, { sidebarKicker, sidebarTitle, sidebarBody, notes }) {
+  const s = pres.addSlide({ masterName: "SIDEBAR" });
+  s.addText(sidebarKicker.toUpperCase(), {
+    x: 0.15, y: 0.4, w: 1.7, h: 0.3,
+    ...T.labelUpper, color: PC.coral, fontSize: 10, charSpacing: 3,
+  });
+  s.addText(sidebarTitle, {
+    x: 0.15, y: 0.75, w: 1.7, h: 1.6,
+    fontFace: FONT_DISPLAY, fontSize: 16, bold: true, color: PC.chalk, charSpacing: -0.3,
+  });
+  if (sidebarBody) {
+    s.addText(sidebarBody, {
+      x: 0.15, y: 2.5, w: 1.7, h: 2,
+      fontFace: FONT_SERIF, fontSize: 11, italic: true, color: PC.cloud, lineSpacingMultiple: 1.4,
+    });
+  }
+  if (notes) s.addNotes(notes);
+  return s;
+}
+
+function fullBleedImage(slide, img) {
+  // Image takes the full content area below the header
+  slide.addImage({ data: img, x: 0.4, y: 1.85, w: 9.2, h: 3.5 });
 }
 
 // ═══════════════════════════════════════════════════════════════════════════
@@ -635,412 +639,562 @@ async function build() {
   pres.author = "Economie VWO";
   pres.title = "3.3.1 De rol van de overheid";
 
-  addTitleMaster(pres);
-  addContentMaster(pres);
+  defineMasters(pres);
 
-  const svgEntries = [
-    { name: "331-marktfalen-typologie", svg: buildTypologieSVG() },
-    { name: "331-natuurlijk-monopolie-gtk", svg: buildNatMonopolieSVG() },
-    { name: "331-negatief-extern-effect", svg: buildNegExternSVG() },
-    { name: "331-positief-extern-effect", svg: buildPosExternSVG() },
-    { name: "331-internaliseren-belasting", svg: buildInternaliserenSVG() },
-    { name: "331-instrumenten-matrix", svg: buildInstrumentMatrixSVG() },
-  ];
-  const pngBufs = await Promise.all(svgEntries.map(e => svgToPng(e.svg)));
-  const [gTypo, gNatMon, gNeg, gPos, gInt, gMat] = pngBufs.map(pngToBase64);
+  // Build all SVGs first in parallel
+  const svgs = {
+    coastline:    svgCoastlineSilhouette(),
+    typology:     svgMarktfalenTypo(),
+    natMon:       svgNatMonAnnotated(),
+    natMonEx:     svgNatMonExamples(),
+    negExt:       svgNegExtAnnotated(),
+    posExt:       svgPosExtAnnotated(),
+    negVsPos:     svgNegVsPos(),
+    pigou:        svgPigouAnnotated(),
+    instruments:  svgInstrumentenMatrix(),
+  };
+  const imgs = {};
+  for (const [k, v] of Object.entries(svgs)) imgs[k] = await svgData(v, 1440);
 
   // ────────────────────────────────────────────────────────────────────
-  // DIA 1: Titel
+  // DIA 1 — Cinematic opener
   // ────────────────────────────────────────────────────────────────────
   {
-    const s = pres.addSlide({ masterName: "TITLE_DARK" });
+    const s = pres.addSlide({ masterName: "DARK_HERO" });
+    // Background silhouette image
+    s.addImage({ data: imgs.coastline, x: 0, y: 2.4, w: 10, h: 3.28 });
+
+    s.addText("§ 3.3.1", {
+      x: 0.6, y: 0.5, w: 4, h: 0.4,
+      ...T.labelUpper, color: PC.coral, fontSize: 14, charSpacing: 6,
+    });
     s.addText("De rol van de overheid", {
-      x: 0.7, y: 1.2, w: 8.6, h: 2,
-      fontSize: 40, fontFace: "Arial", color: C.white, bold: true,
+      x: 0.6, y: 0.95, w: 8.8, h: 1.3,
+      ...T.heroDark, fontSize: 60, charSpacing: -2,
     });
-    s.addText("Paragraaf 3.3.1", {
-      x: 0.7, y: 3.2, w: 8.6, h: 0.5,
-      fontSize: 20, fontFace: "Arial", color: C.gray,
+    s.addText("Hoofdstuk 3 · Overheid  ·  Praktische Economie VWO", {
+      x: 0.6, y: 2.3, w: 8.8, h: 0.4,
+      fontFace: FONT_SERIF, fontSize: 16, italic: true, color: PC.cloud,
     });
-    s.addText("Hoofdstuk 3: Overheid  |  Economie VWO", {
-      x: 0.7, y: 5.15, w: 8.6, h: 0.475,
-      fontSize: 12, fontFace: "Arial", color: C.gray, valign: "middle",
-    });
-    s.addNotes("Welkom bij §3.3.1. We onderzoeken wanneer de markt faalt en hoe de overheid ingrijpt. De rode draad: drie oorzaken (monopolie, externe effecten, collectieve goederen) → drie soorten beleid.");
+
+    s.addNotes("Welkom. We beginnen met het grote beeld: Nederland is een land van dijken, polders en markten. Soms werkt de markt prima. Soms gaat het mis — en dan komt de overheid in beeld.");
   }
 
   // ────────────────────────────────────────────────────────────────────
-  // DIA 2: Leerdoelen
+  // DIA 2 — Pull quote opener
   // ────────────────────────────────────────────────────────────────────
   {
-    const s = addContentSlide(pres, "Wat ga je leren?");
+    const s = pres.addSlide({ masterName: "DARK_HERO" });
+    s.addText("\u201C", {
+      x: 0.6, y: 0.7, w: 2, h: 2,
+      fontFace: FONT_SERIF, fontSize: 220, bold: true, color: PC.coral, charSpacing: -5,
+    });
+    s.addText("Als de markt faalt,\nwie grijpt in?", {
+      x: 1.8, y: 1.4, w: 8, h: 2.6,
+      fontFace: FONT_DISPLAY, fontSize: 60, bold: true, color: PC.chalk, charSpacing: -2, lineSpacingMultiple: 1.05,
+    });
+    s.addText("De kernvraag van dit hoofdstuk.", {
+      x: 1.8, y: 4.3, w: 8, h: 0.4,
+      fontFace: FONT_SERIF, fontSize: 16, italic: true, color: PC.amber,
+    });
+    s.addNotes("Laat de vraag even hangen. Zonder meteen antwoord te geven. Dit is de denkvraag van de les.");
+  }
+
+  // ────────────────────────────────────────────────────────────────────
+  // DIA 3 — Leerdoelen (sidebar layout)
+  // ────────────────────────────────────────────────────────────────────
+  {
+    const s = sidebarSlide(pres, {
+      sidebarKicker: "Wat ga je leren",
+      sidebarTitle: "Zes vaardigheden voor één uur",
+      sidebarBody: "Na deze paragraaf weet je waarom de overheid ingrijpt — en met welk instrument.",
+    });
     const doelen = [
-      "Herkennen wanneer er sprake is van marktfalen",
-      "Een natuurlijk monopolie uitleggen via dalende GTK",
-      "Een economische machtspositie bepalen (drempel 35 %)",
-      "Negatieve externe effecten herkennen en in een grafiek aanwijzen",
-      "Positieve externe effecten herkennen en in een grafiek aanwijzen",
-      "Internaliseren uitleggen: belasting of subsidie",
+      { n: "01", t: "Marktfalen herkennen in een casus" },
+      { n: "02", t: "Natuurlijk monopolie uitleggen via dalende GTK" },
+      { n: "03", t: "Economische machtspositie bepalen (drempel 35 %)" },
+      { n: "04", t: "Negatief extern effect aanwijzen in een grafiek" },
+      { n: "05", t: "Positief extern effect aanwijzen in een grafiek" },
+      { n: "06", t: "Internaliseren uitleggen: belasting of subsidie" },
     ];
-    s.addText(doelen.join("\n"), {
-      x: 0.7, y: 1.15, w: 8.6, h: 3.6,
-      bullet: { code: "25A0" }, fontSize: 17, fontFace: "Arial", color: C.dark,
-      paraSpaceAfter: 10, lineSpacingMultiple: 1.25,
+    doelen.forEach((d, i) => {
+      const y = 0.55 + i * 0.75;
+      s.addText(d.n, {
+        x: 2.3, y, w: 1.1, h: 0.7,
+        fontFace: FONT_DISPLAY, fontSize: 34, bold: true, color: PC.coral, charSpacing: -1,
+      });
+      s.addText(d.t, {
+        x: 3.4, y: y + 0.1, w: 6.3, h: 0.6,
+        fontFace: FONT_SANS, fontSize: 16, color: PC.ink, valign: "middle",
+      });
+      if (i < doelen.length - 1) {
+        s.addShape("rect", { x: 2.3, y: y + 0.68, w: 7.4, h: 0.01, fill: { color: PC.cloud } });
+      }
     });
-    s.addNotes("Kondig de zes leerdoelen aan. Benadruk dat de leerlingen aan het eind ook een grafiek voor externe effecten moeten kunnen lezen.");
+    s.addNotes("Zes leerdoelen. Benadruk dat elk leerdoel ook in een oefening terugkomt.");
   }
 
   // ────────────────────────────────────────────────────────────────────
-  // DIA 3: Overzicht marktfalen — typologie (infographic)
+  // DIA 4 — Section divider: MARKTFALEN
+  // ────────────────────────────────────────────────────────────────────
+  sectionDivider(pres, {
+    kicker: "Deel 1",
+    title: "Marktfalen",
+    subtitle: "Wanneer de markt niet het optimum levert — en waarom het dan aan de overheid is.",
+    notes: "Drie oorzaken volgen: monopolie, externe effecten, collectieve goederen. Vandaag: de eerste twee.",
+  });
+
+  // ────────────────────────────────────────────────────────────────────
+  // DIA 5 — Wat is marktfalen (two-column magazine)
   // ────────────────────────────────────────────────────────────────────
   {
-    const s = addContentSlide(pres, "Overzicht: drie oorzaken, drie remedies");
-    drawGraphSlide(s, gTypo);
-    s.addNotes("Deze dia is de kapstok van de hele les. Links staan de drie oorzaken van marktfalen, rechts de drie instrumenten waarmee de overheid ingrijpt. Elke volgende dia werkt één rij uit.");
+    const s = editorialSlide(pres, {
+      kicker: "Begrip · marktfalen",
+      title: "De markt doet haar werk — tot ze dat niet meer doet.",
+      notes: "Stel het contrast scherp: wanneer werkt de markt wel, en wanneer niet? Gebruik de definitie letterlijk: 'de markt levert niet het optimum'.",
+    });
+
+    // LEFT: markt werkt
+    s.addShape("rect", { x: 0.5, y: 2.0, w: 4.4, h: 3.1, fill: { color: PC.chalk }, line: { color: PC.cloud, width: 0.75 } });
+    s.addShape("rect", { x: 0.5, y: 2.0, w: 4.4, h: 0.08, fill: { color: PC.olive } });
+    s.addText("WERKT", {
+      x: 0.75, y: 2.2, w: 3.9, h: 0.3,
+      ...T.labelUpper, color: PC.olive, fontSize: 12, charSpacing: 4,
+    });
+    s.addText("Markt levert het optimum", {
+      x: 0.75, y: 2.55, w: 3.9, h: 0.5,
+      fontFace: FONT_DISPLAY, fontSize: 20, bold: true, color: PC.indigo, charSpacing: -0.5,
+    });
+    [
+      "Voldoende concurrentie",
+      "Alle kosten en baten in de prijs",
+      "Iedereen wordt bereikt",
+      "Prijs stuurt schaarse middelen efficiënt",
+    ].forEach((t, i) => {
+      s.addShape("rect", { x: 0.9, y: 3.25 + i * 0.38, w: 0.12, h: 0.12, fill: { color: PC.olive } });
+      s.addText(t, {
+        x: 1.1, y: 3.18 + i * 0.38, w: 3.7, h: 0.3,
+        fontFace: FONT_SANS, fontSize: 13, color: PC.ink, valign: "middle",
+      });
+    });
+
+    // RIGHT: markt faalt
+    s.addShape("rect", { x: 5.1, y: 2.0, w: 4.4, h: 3.1, fill: { color: PC.chalk }, line: { color: PC.cloud, width: 0.75 } });
+    s.addShape("rect", { x: 5.1, y: 2.0, w: 4.4, h: 0.08, fill: { color: PC.coral } });
+    s.addText("FAALT", {
+      x: 5.35, y: 2.2, w: 3.9, h: 0.3,
+      ...T.labelUpper, color: PC.coral, fontSize: 12, charSpacing: 4,
+    });
+    s.addText("Markt mist het optimum", {
+      x: 5.35, y: 2.55, w: 3.9, h: 0.5,
+      fontFace: FONT_DISPLAY, fontSize: 20, bold: true, color: PC.indigo, charSpacing: -0.5,
+    });
+    [
+      "Te weinig concurrentie (monopolie)",
+      "Kosten/baten buiten de markt",
+      "Markt levert goederen niet",
+      "Overheid moet corrigeren",
+    ].forEach((t, i) => {
+      s.addShape("ellipse", { x: 5.5, y: 3.25 + i * 0.38, w: 0.12, h: 0.12, fill: { color: PC.coral } });
+      s.addText(t, {
+        x: 5.7, y: 3.18 + i * 0.38, w: 3.7, h: 0.3,
+        fontFace: FONT_SANS, fontSize: 13, color: PC.ink, valign: "middle",
+      });
+    });
   }
 
   // ────────────────────────────────────────────────────────────────────
-  // DIA 4: Wat is marktfalen? (twee kaarten)
+  // DIA 6 — Typologie infographic
   // ────────────────────────────────────────────────────────────────────
   {
-    const s = addContentSlide(pres, "Wat is marktfalen?");
-    drawCard(s, 0.5, 1.05, 4.3, 3.9, DOMAIN.color, C.cream,
-      "Markt werkt goed", DOMAIN.dark,
-      [
-        { text: "Voldoende concurrentie", options: { bullet: { code: "25A0" }, color: DOMAIN.dark, bold: true, breakLine: true } },
-        { text: "Alle kosten/baten zitten in de prijs", options: { bullet: { code: "25A0" }, color: DOMAIN.dark, bold: true, breakLine: true } },
-        { text: "Goederen worden geleverd", options: { bullet: { code: "25A0" }, color: DOMAIN.dark, bold: true, breakLine: true } },
-        { text: "\u2192 prijs bepaalt schaarse middelen efficiënt", options: { fontSize: 12, italic: true, color: C.gray } },
-      ]);
-    drawCard(s, 5.2, 1.05, 4.3, 3.9, C.red, C.lightRed,
-      "Markt faalt", "922B21",
-      [
-        { text: "Te weinig concurrentie (monopolie)", options: { bullet: { code: "25A0" }, color: "922B21", bold: true, breakLine: true } },
-        { text: "Kosten/baten buiten de markt (externe effecten)", options: { bullet: { code: "25A0" }, color: "922B21", bold: true, breakLine: true } },
-        { text: "Markt levert niet (collectieve goederen)", options: { bullet: { code: "25A0" }, color: "922B21", bold: true, breakLine: true } },
-        { text: "\u2192 overheid grijpt in", options: { fontSize: 12, italic: true, color: C.gray } },
-      ]);
-    s.addNotes("Stel het contrast expliciet: wanneer levert de markt wél een optimum, en wanneer niet? Herinner de leerlingen aan hoofdstuk 1 (vraag en aanbod).");
+    const s = pres.addSlide({ masterName: "LIGHT_ED" });
+    s.addImage({ data: imgs.typology, x: 0.3, y: 0.3, w: 9.4, h: 5.0 });
+    s.addNotes("De kapstok van de les. Drie oorzaken, drie instrumenten. De volgende dia's werken elke rij uit.");
   }
 
   // ────────────────────────────────────────────────────────────────────
-  // DIA 5: Natuurlijk monopolie — theorie (twee kaarten)
+  // DIA 7 — Section: MONOPOLIE
+  // ────────────────────────────────────────────────────────────────────
+  sectionDivider(pres, {
+    kicker: "Deel 2",
+    title: "Als één koning regeert",
+    subtitle: "Natuurlijk monopolie, machtspositie, en de rol van de mededingingsautoriteit.",
+    notes: "De monopolie-dimensie van marktfalen. Begin met natuurlijk monopolie (soms onvermijdelijk), dan machtspositie (vaak niet).",
+  });
+
+  // ────────────────────────────────────────────────────────────────────
+  // DIA 8 — Natuurlijk monopolie concept (split content)
   // ────────────────────────────────────────────────────────────────────
   {
-    const s = addContentSlide(pres, "Natuurlijk monopolie");
-    drawCard(s, 0.5, 1.05, 4.3, 3.9, DOMAIN.color, C.cream,
-      "Kenmerk", DOMAIN.dark,
-      [
-        { text: "Hoge vaste kosten", options: { bullet: { code: "25A0" }, breakLine: true } },
-        { text: "Lage variabele kosten", options: { bullet: { code: "25A0" }, breakLine: true } },
-        { text: "GTK daalt bij meer productie", options: { bullet: { code: "25A0" }, bold: true, color: DOMAIN.dark, breakLine: true } },
-        { text: "\u00E9\u00E9n aanbieder is goedkoper dan twee", options: { bullet: { code: "25A0" }, breakLine: true } },
-      ]);
-    drawCard(s, 5.2, 1.05, 4.3, 3.9, "#B58500", "#FFF8E1",
-      "Voorbeelden", "7B4A12",
-      [
-        { text: "Waterleidingnet — \u00E9\u00E9n net is goedkoper dan twee", options: { bullet: { code: "25A0" }, breakLine: true } },
-        { text: "Spoorwegen — dubbele rails zijn onnodig duur", options: { bullet: { code: "25A0" }, breakLine: true } },
-        { text: "Elektriciteitsnet — netwerk is natuurlijk monopolie", options: { bullet: { code: "25A0" }, breakLine: true } },
-        { text: "Postbezorging — meer volume \u2192 lagere GTK", options: { bullet: { code: "25A0" } } },
-      ]);
-    s.addNotes("Leg uit dat ‘natuurlijk’ slaat op de kostenstructuur: bij hoge vaste en lage variabele kosten is één aanbieder technisch efficiënter. De overheid reguleert dan de prijs (bv. via ACM).");
+    const s = editorialSlide(pres, {
+      kicker: "Concept 01",
+      title: "Natuurlijk monopolie — als twee duurder is dan één.",
+      notes: "Bij hoge vaste kosten + lage variabele kosten is één aanbieder technisch efficiënter. Dat is wat 'natuurlijk' hier betekent.",
+    });
+
+    // LEFT: definition
+    s.addShape("rect", { x: 0.5, y: 2.0, w: 4.2, h: 3.1, fill: { color: PC.sky }, line: { color: PC.cloud, width: 0.75 } });
+    s.addText("DEFINITIE", {
+      x: 0.7, y: 2.15, w: 3.8, h: 0.3,
+      ...T.labelUpper, color: PC.indigo, fontSize: 11, charSpacing: 3,
+    });
+    s.addText([
+      { text: "Eén aanbieder", options: { bold: true, color: PC.indigo } },
+      { text: " heeft structureel lagere gemiddelde kosten dan twee of meer aanbieders bij elkaar.", options: {} },
+    ], {
+      x: 0.7, y: 2.5, w: 3.8, h: 1.5,
+      fontFace: FONT_SERIF, fontSize: 18, color: PC.ink, italic: true, lineSpacingMultiple: 1.3,
+    });
+    s.addShape("rect", { x: 0.7, y: 4.1, w: 0.4, h: 0.03, fill: { color: PC.coral } });
+    s.addText("Kenmerk: dalende GTK", {
+      x: 0.7, y: 4.2, w: 3.8, h: 0.4,
+      fontFace: FONT_SANS, fontSize: 14, bold: true, color: PC.coralDeep,
+    });
+    s.addText("hoge vaste kosten + lage variabele kosten per eenheid", {
+      x: 0.7, y: 4.55, w: 3.8, h: 0.4,
+      fontFace: FONT_SANS, fontSize: 12, color: PC.smoke,
+    });
+
+    // RIGHT: mental model (numbers)
+    s.addShape("rect", { x: 5.1, y: 2.0, w: 4.4, h: 3.1, fill: { color: PC.indigo } });
+    s.addText("DENK AAN POSTBEZORGING", {
+      x: 5.3, y: 2.15, w: 4, h: 0.3,
+      ...T.labelUpper, color: PC.amber, fontSize: 11, charSpacing: 3,
+    });
+    s.addText([
+      { text: "1 miljoen brieven", options: { bold: true, color: PC.chalk, fontSize: 18 } },
+      { text: "  →  GTK hoog\n", options: { color: PC.cloud, fontSize: 16 } },
+      { text: "10 miljoen brieven", options: { bold: true, color: PC.chalk, fontSize: 18 } },
+      { text: "  →  GTK veel lager\n\n", options: { color: PC.cloud, fontSize: 16 } },
+      { text: "PostNL + Sandd samen zou leiden tot hogere kosten per brief.", options: { italic: true, color: PC.amber, fontSize: 14, fontFace: FONT_SERIF } },
+    ], {
+      x: 5.3, y: 2.55, w: 4, h: 2.4,
+      fontFace: FONT_SANS, lineSpacingMultiple: 1.4,
+    });
   }
 
   // ────────────────────────────────────────────────────────────────────
-  // DIA 6: Natuurlijk monopolie — grafiek
+  // DIA 9 — GTK chart (annotated)
   // ────────────────────────────────────────────────────────────────────
   {
-    const s = addContentSlide(pres, "Waarom \u00E9\u00E9n aanbieder goedkoper is");
-    drawGraphSlide(s, gNatMon);
-    s.addNotes("Laat de GTK-curve zien en wijs beide punten aan. Eén aanbieder op Q=100: GTK=€4. Twee aanbieders elk op Q=50: GTK=€6. Dalende GTK is dé signatuur van een natuurlijk monopolie.");
+    const s = pres.addSlide({ masterName: "LIGHT_ED" });
+    s.addImage({ data: imgs.natMon, x: 0.3, y: 0.3, w: 9.4, h: 5.0 });
+    s.addNotes("Wijs beide punten aan. 1 aanbieder op Q=100 → GTK=€4. 2 aanbieders elk op Q=50 → GTK=€6 per bedrijf. Het verschil van €2 per eenheid is het efficiëntieverlies van concurrentie.");
   }
 
   // ────────────────────────────────────────────────────────────────────
-  // DIA 7: Economische machtspositie — drempel 35 %
+  // DIA 10 — Drie voorbeelden
   // ────────────────────────────────────────────────────────────────────
   {
-    const s = addContentSlide(pres, "Economische machtspositie");
-    // Left: flow of 3 steps
+    const s = pres.addSlide({ masterName: "LIGHT_ED" });
+    s.addImage({ data: imgs.natMonEx, x: 0.3, y: 0.3, w: 9.4, h: 5.0 });
+    s.addNotes("Drie klassieke voorbeelden. Vraag de klas: kan je er zelf nog een bedenken? (pijpleidingen, riolering, 5G-dekking op platteland).");
+  }
+
+  // ────────────────────────────────────────────────────────────────────
+  // DIA 11 — Hero stat: €1,49 mrd
+  // ────────────────────────────────────────────────────────────────────
+  heroStat(pres, {
+    kicker: "GOOGLE · 2019 · EUROPESE COMMISSIE",
+    stat: "€1,49 mrd",
+    subtitle: "boete voor misbruik van economische machtspositie",
+    body: "\u201C… Google dwong websites om alleen Google-advertenties te tonen.\u201D",
+    notes: "Zet de boete even in perspectief: €1,49 miljard is meer dan de hele Nederlandse cultuurbegroting per jaar. De EU neemt marktmacht serieus.",
+  });
+
+  // ────────────────────────────────────────────────────────────────────
+  // DIA 12 — Machtspositie flow + 35% threshold
+  // ────────────────────────────────────────────────────────────────────
+  {
+    const s = editorialSlide(pres, {
+      kicker: "Concept 02",
+      title: "Economische machtspositie",
+      subtitle: "De 35 %-drempel — een bedrijf met veel marktaandeel kan concurrenten wegdrukken.",
+      notes: "De Mededingingswet verbiedt misbruik. ACM handhaaft in Nederland, EC in Europa. Google-zaak als scherp voorbeeld.",
+    });
+    // Timeline-style flow
     const steps = [
-      { t: "1. Bepaal het marktaandeel", hi: false },
-      { t: "2. \u2265 35 %?   \u2192 machtspositie", hi: true },
-      { t: "3. Misbruikt het bedrijf die positie?", hi: false },
-      { t: "4. Zo ja: boete / regulering door ACM of EC", hi: true },
+      { n: "01", t: "Bepaal marktaandeel", s: "hoeveel % van de markt?", col: PC.indigoSoft },
+      { n: "02", t: "≥ 35 %?", s: "machtspositie volgens EU-regels", col: PC.coral },
+      { n: "03", t: "Wordt die positie misbruikt?", s: "uitsluiten concurrenten, afdwingen prijzen", col: PC.amberDeep },
+      { n: "04", t: "ACM/EC grijpt in", s: "boete, ontvlechting, regulering", col: PC.indigo },
     ];
-    const sx = 0.5, sy = 1.1, sw = 4.6, sh = 0.65, gap = 0.15;
+    const w = 2.15, gap = 0.18, startX = 0.5, y = 2.25, h = 2.6;
     steps.forEach((st, i) => {
-      const y = sy + i * (sh + gap);
-      s.addShape("rect", { x: sx, y, w: sw, h: sh,
-        fill: { color: st.hi ? DOMAIN.color : C.cream }, rectRadius: 0.04, shadow: makeShadow() });
+      const x = startX + i * (w + gap);
+      s.addShape("rect", { x, y, w, h, fill: { color: PC.chalk }, line: { color: PC.cloud, width: 0.5 } });
+      s.addShape("rect", { x, y, w, h: 0.06, fill: { color: st.col } });
+      s.addText(st.n, {
+        x: x + 0.2, y: y + 0.25, w: w - 0.4, h: 0.6,
+        fontFace: FONT_DISPLAY, fontSize: 40, bold: true, color: st.col, charSpacing: -2,
+      });
       s.addText(st.t, {
-        x: sx + 0.18, y, w: sw - 0.3, h: sh,
-        fontSize: 14, fontFace: "Arial",
-        color: st.hi ? C.white : C.dark, bold: st.hi, valign: "middle", margin: 0,
+        x: x + 0.2, y: y + 1.0, w: w - 0.4, h: 0.8,
+        fontFace: FONT_SANS, fontSize: 16, bold: true, color: PC.indigo, lineSpacingMultiple: 1.15,
       });
-    });
-
-    // Right: Google case card
-    drawCard(s, 5.3, 1.1, 4.2, 3.3, C.red, C.lightRed,
-      "Casus: Google", "922B21",
-      [
-        { text: "Marktaandeel zoekmachines EU", options: { fontSize: 12, color: C.gray, breakLine: true } },
-        { text: ">  90 %", options: { fontSize: 22, bold: true, color: "922B21", breakLine: true } },
-        { text: "Machtsmisbruik: dwong sites alleen Google-advertenties te tonen", options: { fontSize: 12, breakLine: true } },
-        { text: "\u2192 boete € 1,49 mrd", options: { fontSize: 14, bold: true, color: "922B21" } },
-      ]);
-
-    s.addNotes("De drempel van 35 % is het ankerpunt. Vraag klassikaal: wat is het marktaandeel van Albert Heijn? Van Booking? Is dat boven de drempel? Daarna de Google-casus als scherp voorbeeld.");
-  }
-
-  // ────────────────────────────────────────────────────────────────────
-  // DIA 8: Negatief extern effect — redeneerketen (flow)
-  // ────────────────────────────────────────────────────────────────────
-  {
-    const s = addContentSlide(pres, "Negatief extern effect \u2014 wat gebeurt er?");
-    const steps = [
-      { t: "Bedrijf produceert", hi: false },
-      { t: "Derden lijden schade (bv. vervuiling)", hi: false },
-      { t: "Kosten zitten niet in de prijs", hi: true },
-      { t: "Prijs te laag \u2192 te veel productie", hi: false },
-      { t: "Welvaartsverlies voor de samenleving", hi: true },
-    ];
-    const sx = 1.5, sy = 1.1, sw = 7, sh = 0.6, gap = 0.12;
-    steps.forEach((st, i) => {
-      const y = sy + i * (sh + gap);
-      s.addShape("rect", { x: sx, y, w: sw, h: sh,
-        fill: { color: st.hi ? C.red : C.cream }, rectRadius: 0.04, shadow: makeShadow() });
-      const pref = i > 0 ? "\u2193  " : "";
-      s.addText(pref + st.t, {
-        x: sx + 0.2, y, w: sw - 0.3, h: sh,
-        fontSize: 15, fontFace: "Arial",
-        color: st.hi ? C.white : C.dark, bold: st.hi, valign: "middle", margin: 0,
+      s.addText(st.s, {
+        x: x + 0.2, y: y + 1.85, w: w - 0.4, h: 0.65,
+        fontFace: FONT_SERIF, fontSize: 12, italic: true, color: PC.smoke, lineSpacingMultiple: 1.3,
       });
+      // Arrow between
+      if (i < steps.length - 1) {
+        s.addShape("rightTriangle", { x: x + w + 0.02, y: y + h/2 - 0.09, w: 0.15, h: 0.18,
+          fill: { color: PC.ash }, rotate: 90 });
+      }
     });
-    s.addNotes("Laat de keten stap voor stap oplopen. Vraag tussendoor: wie draagt de kosten eigenlijk? De gouden lijn: 'de prijs liegt' — hij vertelt niet de maatschappelijke kosten.");
   }
 
   // ────────────────────────────────────────────────────────────────────
-  // DIA 9: Negatief extern effect — grafiek
+  // DIA 13 — Section: EXTERNE EFFECTEN
   // ────────────────────────────────────────────────────────────────────
-  {
-    const s = addContentSlide(pres, "Negatief extern effect in de grafiek");
-    drawGraphSlideWithLegend(s, gNeg, [
-      { color: "1A5276", abbr: "V",   desc: "vraag" },
-      { color: "1E8449", abbr: "MPK", desc: "private kosten" },
-      { color: "E67E22", abbr: "MMK", desc: "MPK + externe kosten" },
-      { color: "D9534F", abbr: "\u25B2", desc: "welvaartsverlies" },
-    ]);
-    s.addNotes("Lees de grafiek samen. V = vraag. MPK = private marginale kosten (wat het bedrijf ziet). MMK = maatschappelijke marginale kosten (inclusief vervuiling). Markt kiest Qm=25, maar optimum is Qs=20. Het rode driehoekje = welvaartsverlies.");
-  }
+  sectionDivider(pres, {
+    kicker: "Deel 3",
+    title: "De prijs liegt",
+    subtitle: "Wat gebeurt er als kosten of baten buiten de markt vallen?",
+    notes: "Externe effecten zijn onze volgende vorm van marktfalen. Eerst de negatieve, dan de positieve.",
+  });
 
   // ────────────────────────────────────────────────────────────────────
-  // DIA 10: Positief extern effect — redeneerketen
+  // DIA 14 — Negatief extern effect: de keten
   // ────────────────────────────────────────────────────────────────────
   {
-    const s = addContentSlide(pres, "Positief extern effect \u2014 wat gebeurt er?");
-    const steps = [
-      { t: "Iemand koopt / consumeert", hi: false },
-      { t: "Derden profiteren mee (meelifter)", hi: false },
-      { t: "Baten zitten niet in de prijs", hi: true },
-      { t: "Prijs te hoog \u2192 te weinig consumptie", hi: false },
-      { t: "Welvaartsverlies voor de samenleving", hi: true },
+    const s = editorialSlide(pres, {
+      kicker: "Concept 03",
+      title: "Negatief extern effect — wat de rekening niet vertelt",
+      subtitle: "Vliegverkeer veroorzaakt luchtvervuiling. Maar zit die schade in de ticketprijs?",
+      notes: "De keten: produceren → derden lijden schade → kosten niet in prijs → te lage prijs → te veel productie.",
+    });
+    // Causal chain, horizontal with arrows
+    const chain = [
+      { t: "Bedrijf\nproduceert",            col: PC.indigo,    emph: false },
+      { t: "Derden lijden\nschade",           col: PC.amberDeep, emph: false },
+      { t: "Kosten zitten\nniet in de prijs", col: PC.coral,     emph: true  },
+      { t: "Prijs te laag,\nte veel productie", col: PC.coralDeep, emph: false },
+      { t: "Welvaarts-\nverlies",              col: PC.indigoDeep,emph: true  },
     ];
-    const sx = 1.5, sy = 1.1, sw = 7, sh = 0.6, gap = 0.12;
-    steps.forEach((st, i) => {
-      const y = sy + i * (sh + gap);
-      s.addShape("rect", { x: sx, y, w: sw, h: sh,
-        fill: { color: st.hi ? DOMAIN.color : C.cream }, rectRadius: 0.04, shadow: makeShadow() });
-      const pref = i > 0 ? "\u2193  " : "";
-      s.addText(pref + st.t, {
-        x: sx + 0.2, y, w: sw - 0.3, h: sh,
-        fontSize: 15, fontFace: "Arial",
-        color: st.hi ? C.white : C.dark, bold: st.hi, valign: "middle", margin: 0,
+    const n = chain.length, w = 1.65, gap = 0.12, startX = 0.4, y = 2.3, h = 1.7;
+    chain.forEach((c, i) => {
+      const x = startX + i * (w + gap);
+      s.addShape("rect", { x, y, w, h,
+        fill: { color: c.emph ? c.col : PC.chalk },
+        line: { color: c.col, width: 2 } });
+      s.addText(c.t, {
+        x: x + 0.1, y: y + 0.15, w: w - 0.2, h: h - 0.3,
+        fontFace: FONT_DISPLAY, fontSize: 15, bold: true,
+        color: c.emph ? PC.chalk : c.col,
+        align: "center", valign: "middle", lineSpacingMultiple: 1.2,
       });
+      if (i < n - 1) {
+        s.addText("→", {
+          x: x + w - 0.05, y: y + h/2 - 0.2, w: 0.25, h: 0.4,
+          fontFace: FONT_SANS, fontSize: 22, bold: true, color: PC.ash, align: "center",
+        });
+      }
     });
-    s.addNotes("Let op de spiegelbeeld-structuur met de vorige keten. Voorbeelden: vaccinatie, onderwijs, tuinonderhoud. Het 'meelifteffect' is de sleutel.");
-  }
-
-  // ────────────────────────────────────────────────────────────────────
-  // DIA 11: Positief extern effect — grafiek
-  // ────────────────────────────────────────────────────────────────────
-  {
-    const s = addContentSlide(pres, "Positief extern effect in de grafiek");
-    drawGraphSlideWithLegend(s, gPos, [
-      { color: "1E8449", abbr: "A",   desc: "aanbod" },
-      { color: "1A5276", abbr: "MPB", desc: "private baten" },
-      { color: "E67E22", abbr: "MMB", desc: "MPB + externe baten" },
-      { color: "D9534F", abbr: "\u25B2", desc: "welvaartsverlies" },
-    ]);
-    s.addNotes("Nu ligt het welvaartsverlies aan de andere kant: de markt kiest Qm=15, maar optimum is Qs=20. MMB ligt boven MPB omdat derden ook profiteren. Bij Qm=15 is het verschil precies het externe baten-bedrag.");
-  }
-
-  // ────────────────────────────────────────────────────────────────────
-  // DIA 12: Neg vs Pos — vergelijkingstabel
-  // ────────────────────────────────────────────────────────────────────
-  {
-    const s = addContentSlide(pres, "Negatief vs. positief extern effect");
-    const rows = [
-      [
-        { text: "Kenmerk",              options: { fill: { color: C.navy }, color: C.white, bold: true, fontSize: 13, fontFace: "Arial" } },
-        { text: "Negatief",             options: { fill: { color: C.navy }, color: C.white, bold: true, fontSize: 13, fontFace: "Arial" } },
-        { text: "Positief",             options: { fill: { color: C.navy }, color: C.white, bold: true, fontSize: 13, fontFace: "Arial" } },
-      ],
-      [
-        { text: "Wat zit buiten de prijs?", options: { fill: { color: C.rowAlt }, bold: true, fontSize: 12, fontFace: "Arial" } },
-        { text: "Kosten voor derden",       options: { fill: { color: C.rowAlt }, fontSize: 12, fontFace: "Arial" } },
-        { text: "Baten voor derden",        options: { fill: { color: C.rowAlt }, fontSize: 12, fontFace: "Arial" } },
-      ],
-      [
-        { text: "Effect op prijs",          options: { bold: true, fontSize: 12, fontFace: "Arial" } },
-        { text: "Te laag",                  options: { fontSize: 12, fontFace: "Arial" } },
-        { text: "Te hoog",                  options: { fontSize: 12, fontFace: "Arial" } },
-      ],
-      [
-        { text: "Effect op hoeveelheid",    options: { fill: { color: C.rowAlt }, bold: true, fontSize: 12, fontFace: "Arial" } },
-        { text: "Te veel productie",        options: { fill: { color: C.rowAlt }, fontSize: 12, fontFace: "Arial" } },
-        { text: "Te weinig consumptie",     options: { fill: { color: C.rowAlt }, fontSize: 12, fontFace: "Arial" } },
-      ],
-      [
-        { text: "Welke curve verschuift?",  options: { bold: true, fontSize: 12, fontFace: "Arial" } },
-        { text: "A/MPK \u2192 MMK (omhoog)", options: { fontSize: 12, fontFace: "Arial" } },
-        { text: "V/MPB \u2192 MMB (naar rechts)", options: { fontSize: 12, fontFace: "Arial" } },
-      ],
-      [
-        { text: "Voorbeelden",              options: { fill: { color: C.rowAlt }, bold: true, fontSize: 12, fontFace: "Arial" } },
-        { text: "Luchtvervuiling, geluidsoverlast", options: { fill: { color: C.rowAlt }, fontSize: 12, fontFace: "Arial" } },
-        { text: "Vaccinatie, onderwijs",    options: { fill: { color: C.rowAlt }, fontSize: 12, fontFace: "Arial" } },
-      ],
-      [
-        { text: "Instrument overheid",      options: { bold: true, fontSize: 12, fontFace: "Arial" } },
-        { text: "Belasting (prijs stijgt)", options: { fontSize: 12, fontFace: "Arial", color: "186A3B", bold: true } },
-        { text: "Subsidie (prijs daalt)",   options: { fontSize: 12, fontFace: "Arial", color: "186A3B", bold: true } },
-      ],
-    ];
-    s.addTable(rows, {
-      x: 0.5, y: 1.05, w: 9,
-      border: { pt: 0.5, color: C.borderGray },
-      colW: [2.8, 3.1, 3.1],
+    // Bottom anecdote
+    s.addShape("rect", { x: 0.4, y: 4.3, w: 9.2, h: 0.75, fill: { color: PC.indigoDeep } });
+    s.addText([
+      { text: "VOORBEELD  ·  ", options: { bold: true, color: PC.amber, fontSize: 11, charSpacing: 3 } },
+      { text: "Vliegtuig naar Barcelona: de reiziger betaalt het ticket, maar de CO₂-uitstoot wordt door iedereen gedragen.",
+        options: { color: PC.chalk, fontSize: 13, fontFace: FONT_SERIF, italic: true } },
+    ], {
+      x: 0.6, y: 4.35, w: 8.8, h: 0.65, valign: "middle",
     });
-    s.addNotes("Gebruik deze tabel als retrieval-oefening: dek een kolom af en laat leerlingen reconstrueren. Let op de spiegel-structuur — dat maakt het beter te onthouden.");
   }
 
   // ────────────────────────────────────────────────────────────────────
-  // DIA 13: Internaliseren — stappenplan (flow)
+  // DIA 15 — Negatief extern effect: grafiek
   // ────────────────────────────────────────────────────────────────────
   {
-    const s = addContentSlide(pres, "Internaliseren: extern effect in de prijs trekken");
-    const steps = [
-      { t: "Extern effect signaleren (kosten of baten buiten de prijs)", hi: false },
-      { t: "Negatief \u2192 belasting heffen  /  Positief \u2192 subsidie geven", hi: true },
-      { t: "Prijs verandert: bij belasting omhoog, bij subsidie omlaag", hi: false },
-      { t: "Hoeveelheid verschuift richting het maatschappelijke optimum", hi: false },
-      { t: "Externe effect is ge\u00EFnternaliseerd", hi: true },
+    const s = pres.addSlide({ masterName: "LIGHT_ED" });
+    s.addImage({ data: imgs.negExt, x: 0.3, y: 0.3, w: 9.4, h: 5.0 });
+    s.addNotes("Lees de grafiek. MPK = wat het bedrijf ziet aan kosten. MMK = maatschappelijke kosten incl. vervuiling. De gehatchte driehoek = welvaartsverlies.");
+  }
+
+  // ────────────────────────────────────────────────────────────────────
+  // DIA 16 — Positief extern effect: keten
+  // ────────────────────────────────────────────────────────────────────
+  {
+    const s = editorialSlide(pres, {
+      kicker: "Concept 04",
+      title: "Positief extern effect",
+      subtitle: "Waarom niemand vrijwillig genoeg bijdraagt — en een vaccinatie óók anderen beschermt.",
+      notes: "Spiegelbeeld van vorige keten. Let op de woorden: baten ipv kosten, consumptie ipv productie, te weinig ipv te veel.",
+    });
+    const chain = [
+      { t: "Iemand\nconsumeert",            col: PC.indigo,    emph: false },
+      { t: "Derden\nprofiteren mee",        col: PC.teal,      emph: false },
+      { t: "Baten zitten\nniet in de prijs", col: PC.tealDeep,  emph: true  },
+      { t: "Prijs te hoog,\nte weinig consumptie", col: PC.coral, emph: false },
+      { t: "Welvaarts-\nverlies",            col: PC.indigoDeep,emph: true  },
     ];
-    const sx = 1.3, sy = 1.05, sw = 7.4, sh = 0.62, gap = 0.12;
-    steps.forEach((st, i) => {
-      const y = sy + i * (sh + gap);
-      s.addShape("rect", { x: sx, y, w: sw, h: sh,
-        fill: { color: st.hi ? "1E8449" : C.cream }, rectRadius: 0.04, shadow: makeShadow() });
-      const pref = i > 0 ? "\u2193  " : "";
-      s.addText(pref + st.t, {
-        x: sx + 0.2, y, w: sw - 0.3, h: sh,
-        fontSize: 14, fontFace: "Arial",
-        color: st.hi ? C.white : C.dark, bold: st.hi, valign: "middle", margin: 0,
+    const n = chain.length, w = 1.65, gap = 0.12, startX = 0.4, y = 2.3, h = 1.7;
+    chain.forEach((c, i) => {
+      const x = startX + i * (w + gap);
+      s.addShape("rect", { x, y, w, h,
+        fill: { color: c.emph ? c.col : PC.chalk },
+        line: { color: c.col, width: 2 } });
+      s.addText(c.t, {
+        x: x + 0.1, y: y + 0.15, w: w - 0.2, h: h - 0.3,
+        fontFace: FONT_DISPLAY, fontSize: 15, bold: true,
+        color: c.emph ? PC.chalk : c.col,
+        align: "center", valign: "middle", lineSpacingMultiple: 1.2,
       });
+      if (i < n - 1) {
+        s.addText("→", {
+          x: x + w - 0.05, y: y + h/2 - 0.2, w: 0.25, h: 0.4,
+          fontFace: FONT_SANS, fontSize: 22, bold: true, color: PC.ash, align: "center",
+        });
+      }
     });
-    s.addNotes("Internaliseren = de externe kosten of baten in de prijs verwerken. De volgende dia laat zien hoe dat er in een vraag-aanbodgrafiek uitziet.");
+    s.addShape("rect", { x: 0.4, y: 4.3, w: 9.2, h: 0.75, fill: { color: PC.tealDeep } });
+    s.addText([
+      { text: "VOORBEELD  ·  ", options: { bold: true, color: PC.amber, fontSize: 11, charSpacing: 3 } },
+      { text: "Een kind laten vaccineren tegen mazelen: kosten €50, maar klasgenoten en buren profiteren mee.",
+        options: { color: PC.chalk, fontSize: 13, fontFace: FONT_SERIF, italic: true } },
+    ], {
+      x: 0.6, y: 4.35, w: 8.8, h: 0.65, valign: "middle",
+    });
   }
 
   // ────────────────────────────────────────────────────────────────────
-  // DIA 14: Internaliseren — grafiek (Pigouvian tax)
+  // DIA 17 — Positief extern effect: grafiek
   // ────────────────────────────────────────────────────────────────────
   {
-    const s = addContentSlide(pres, "Internaliseren in de grafiek");
-    drawGraphSlide(s, gInt);
-    s.addNotes("Voorbeeld: vliegtaks van €10 per ticket. Het aanbod verschuift omhoog met de belasting. Consument betaalt €30 (was €25). Aanbieder ontvangt €30-€10=€20. Hoeveelheid daalt van 15 naar 10 vluchten. De gele rechthoek = belastingopbrengst.");
+    const s = pres.addSlide({ masterName: "LIGHT_ED" });
+    s.addImage({ data: imgs.posExt, x: 0.3, y: 0.3, w: 9.4, h: 5.0 });
+    s.addNotes("MPB = private baten (wat de koper zelf waardeert). MMB = maatschappelijke baten (incl. bescherming van anderen). MMB ligt hoger. Het verschil = externe baten. Welvaartsverlies: de markt vaccineert te weinig.");
   }
 
   // ────────────────────────────────────────────────────────────────────
-  // DIA 15: Instrumenten-matrix
+  // DIA 18 — Vergelijking neg vs pos
   // ────────────────────────────────────────────────────────────────────
   {
-    const s = addContentSlide(pres, "Instrumenten van de overheid");
-    drawGraphSlide(s, gMat);
-    s.addNotes("Deze matrix vat alles samen: welk probleem krijgt welk instrument? Gebruik hem als retrieval: noem een voorbeeld (rookverbod, kinderopvangtoeslag, ACM-boete) en laat de klas de rij invullen.");
+    const s = pres.addSlide({ masterName: "LIGHT_ED" });
+    s.addImage({ data: imgs.negVsPos, x: 0.3, y: 0.3, w: 9.4, h: 5.0 });
+    s.addNotes("Spiegel-structuur maakt het onthouden makkelijker. Laat de klas de rechterkant voorspellen terwijl je de linker uitlegt.");
   }
 
   // ────────────────────────────────────────────────────────────────────
-  // DIA 16: Valkuilen
+  // DIA 19 — Section: INTERNALISEREN
+  // ────────────────────────────────────────────────────────────────────
+  sectionDivider(pres, {
+    kicker: "Deel 4",
+    title: "De prijs laten kloppen",
+    subtitle: "Internaliseren: externe kosten of baten in de prijs verwerken.",
+    notes: "Brug naar beleid. Belasting bij negatief effect, subsidie bij positief effect.",
+  });
+
+  // ────────────────────────────────────────────────────────────────────
+  // DIA 20 — Pigou-belasting grafiek
   // ────────────────────────────────────────────────────────────────────
   {
-    const s = addContentSlide(pres, "Valkuilen");
+    const s = pres.addSlide({ masterName: "LIGHT_ED" });
+    s.addImage({ data: imgs.pigou, x: 0.3, y: 0.3, w: 9.4, h: 5.0 });
+    s.addNotes("Vliegtaks als klassiek voorbeeld. Belasting t=€10. Prijs voor consument stijgt van €25 naar €30 (+€5). Producent ontvangt €20 (-€5). De last wordt gedeeld — de prijsstijging is NIET gelijk aan de belasting.");
+  }
+
+  // ────────────────────────────────────────────────────────────────────
+  // DIA 21 — Instrumenten-matrix
+  // ────────────────────────────────────────────────────────────────────
+  {
+    const s = pres.addSlide({ masterName: "LIGHT_ED" });
+    s.addImage({ data: imgs.instruments, x: 0.3, y: 0.3, w: 9.4, h: 5.0 });
+    s.addNotes("Complete matrix: alle vier de vormen met hun instrument. Gebruik dit als retrieval: noem een casus, laat leerlingen de rij invullen.");
+  }
+
+  // ────────────────────────────────────────────────────────────────────
+  // DIA 22 — Valkuilen
+  // ────────────────────────────────────────────────────────────────────
+  {
+    const s = editorialSlide(pres, {
+      kicker: "Denkfouten",
+      title: "Drie valkuilen die bij de toets altijd terugkomen.",
+      notes: "Benadruk elk: dit zijn de klassieke fouten. Wie ze kent, struikelt er niet meer over.",
+    });
     const items = [
-      { title: "\u201CMarktfalen = een bedrijf gaat failliet\u201D",
-        body: "Onjuist. Marktfalen betekent dat de markt als gehéél niet het optimum levert, niet dat \u00E9\u00E9n bedrijf omvalt." },
-      { title: "\u201CExterne effecten zijn altijd negatief\u201D",
-        body: "Onjuist. Er zijn ook positieve externe effecten (vaccinatie, onderwijs). Die leiden juist tot te weinig consumptie." },
-      { title: "\u201CInternaliseren = verbieden\u201D",
-        body: "Onjuist. Internaliseren = de externe kosten of baten in de prijs verwerken via belasting of subsidie. Het product wordt niet verboden." },
+      { num: "01", claim: "Alle monopolies zijn slecht",
+        truth: "Een natuurlijk monopolie is efficiënter dan meerdere aanbieders. De overheid reguleert, maar heft het monopolie niet op." },
+      { num: "02", claim: "Externe effecten zijn altijd negatief",
+        truth: "Er bestaan ook positieve externe effecten (onderwijs, vaccinatie). Die leiden juist tot te wéínig productie." },
+      { num: "03", claim: "Internaliseren = verbieden",
+        truth: "Internaliseren = kosten/baten in de prijs verwerken via belasting of subsidie. Het product wordt niet verboden." },
     ];
-    const sx = 0.6, sy = 1.05, sw = 8.8, sh = 1.17, gap = 0.14;
     items.forEach((it, i) => {
-      const y = sy + i * (sh + gap);
-      s.addShape("rect", { x: sx, y, w: sw, h: sh, fill: { color: C.lightRed }, rectRadius: 0.04 });
-      s.addShape("rect", { x: sx, y, w: 0.06, h: sh, fill: { color: C.red } });
-      s.addText(it.title, {
-        x: sx + 0.25, y: y + 0.1, w: sw - 0.4, h: 0.4,
-        fontSize: 16, fontFace: "Arial", color: "922B21", bold: true, margin: 0, valign: "top",
+      const y = 2.05 + i * 1.02;
+      s.addShape("rect", { x: 0.5, y, w: 9, h: 0.95,
+        fill: { color: PC.chalk }, line: { color: PC.coral, width: 1 } });
+      s.addShape("rect", { x: 0.5, y, w: 0.08, h: 0.95, fill: { color: PC.coral } });
+      s.addText(it.num, {
+        x: 0.65, y: y + 0.15, w: 0.9, h: 0.6,
+        fontFace: FONT_DISPLAY, fontSize: 26, bold: true, color: PC.coral, charSpacing: -0.5,
       });
-      s.addText(it.body, {
-        x: sx + 0.25, y: y + 0.48, w: sw - 0.4, h: sh - 0.55,
-        fontSize: 13, fontFace: "Arial", color: C.dark, margin: 0, valign: "top",
-        lineSpacingMultiple: 1.2,
+      s.addText([
+        { text: "\u201C" + it.claim + "\u201D", options: { fontFace: FONT_SERIF, fontSize: 14, italic: true, color: PC.coralDeep, bold: true, breakLine: true } },
+        { text: it.truth, options: { fontFace: FONT_SANS, fontSize: 12, color: PC.ink } },
+      ], {
+        x: 1.65, y: y + 0.1, w: 7.8, h: 0.8,
+        lineSpacingMultiple: 1.3, valign: "top",
       });
     });
-    s.addNotes("Laat de drie valkuilen expliciet zien. Vraag bij elk: welke leerling is hier gisteren nog ingetrapt? Dit zijn de klassieke denk­fouten bij toetsen.");
   }
 
   // ────────────────────────────────────────────────────────────────────
-  // DIA 17: Samenvatting (donker)
+  // DIA 23 — Closing: samenvatting (dark hero)
   // ────────────────────────────────────────────────────────────────────
   {
-    const s = pres.addSlide({ masterName: "TITLE_DARK" });
-    s.addText("Samenvatting", {
-      x: 0.7, y: 0.35, w: 8.6, h: 0.6,
-      fontSize: 30, fontFace: "Arial", color: C.white, bold: true,
+    const s = pres.addSlide({ masterName: "DARK_HERO" });
+    s.addText("De kern", {
+      x: 0.6, y: 0.5, w: 8.8, h: 0.4,
+      ...T.labelUpper, color: PC.coral, fontSize: 13, charSpacing: 6,
     });
-    s.addText("Check: beheers je dit voordat je gaat oefenen?", {
-      x: 0.7, y: 0.95, w: 8.6, h: 0.4,
-      fontSize: 14, fontFace: "Arial", color: C.gray, italic: true,
+    s.addText("Zes dingen om te onthouden", {
+      x: 0.6, y: 0.9, w: 8.8, h: 0.8,
+      ...T.headlineDark, fontSize: 32, charSpacing: -1,
     });
-    const punten = [
-      "Marktfalen = de markt levert geen optimaal resultaat (monopolie / externe effecten / collectieve goederen)",
-      "Natuurlijk monopolie: dalende GTK \u2192 \u00E9\u00E9n aanbieder efficiënter",
-      "Machtspositie: marktaandeel \u2265 35 % \u2192 Mededingingswet, toezicht door ACM / EC",
-      "Negatief extern effect: kosten buiten de prijs \u2192 prijs te laag \u2192 te veel productie",
-      "Positief extern effect: baten buiten de prijs \u2192 prijs te hoog \u2192 te weinig consumptie",
-      "Overheid internaliseert met belasting (negatief) of subsidie (positief)",
+    const items = [
+      { n: "01", t: "Marktfalen = markt levert niet het optimum" },
+      { n: "02", t: "Natuurlijk monopolie: dalende GTK → één aanbieder efficiënter" },
+      { n: "03", t: "Machtspositie: marktaandeel ≥ 35 %, ACM/EC grijpt in" },
+      { n: "04", t: "Negatief extern effect: prijs te laag, te veel productie" },
+      { n: "05", t: "Positief extern effect: prijs te hoog, te weinig consumptie" },
+      { n: "06", t: "Overheid internaliseert met belasting of subsidie" },
     ];
-    s.addText(punten.join("\n"), {
-      x: 0.7, y: 1.55, w: 8.6, h: 3.5,
-      bullet: { code: "25A0" }, fontSize: 15, fontFace: "Arial", color: C.white,
-      paraSpaceAfter: 8, lineSpacingMultiple: 1.25,
+    items.forEach((it, i) => {
+      const y = 1.85 + i * 0.52;
+      s.addText(it.n, {
+        x: 0.6, y, w: 0.6, h: 0.5,
+        fontFace: FONT_DISPLAY, fontSize: 22, bold: true, color: PC.coral, charSpacing: -1,
+      });
+      s.addText(it.t, {
+        x: 1.2, y: y + 0.05, w: 8.3, h: 0.45,
+        fontFace: FONT_SANS, fontSize: 16, color: PC.chalk, valign: "middle",
+      });
+      if (i < items.length - 1) {
+        s.addShape("rect", { x: 0.6, y: y + 0.48, w: 8.8, h: 0.005, fill: { color: PC.indigoSoft } });
+      }
     });
-    s.addNotes("Sluit af met een ‘pair & share’: leerlingen leggen in duo's de zes punten aan elkaar uit zonder dia. Wie struikelt waar? Die paragraaf nog even terug.");
+    s.addNotes("Retrieval: laat leerlingen de 6 punten aan elkaar uitleggen zonder dia. Wie struikelt, gaat terug naar dat concept.");
   }
 
   // ────────────────────────────────────────────────────────────────────
-  // Output
+  // OUTPUT
   // ────────────────────────────────────────────────────────────────────
-  const outDir = path.resolve(__dirname, "..", "output-331-pptx");
+  const outDir = path.resolve(__dirname, "../../output-331");
   if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { recursive: true });
 
-  saveSvgFiles(svgEntries, outDir);
+  // Save raw SVGs for debugging
+  const svgDir = path.join(outDir, "svg");
+  if (!fs.existsSync(svgDir)) fs.mkdirSync(svgDir, { recursive: true });
+  for (const [k, v] of Object.entries(svgs)) {
+    fs.writeFileSync(path.join(svgDir, `331c-${k}.svg`), v, "utf8");
+  }
 
   const outPath = path.join(outDir, "3.3.1 De rol van de overheid – presentatie.pptx");
   await pres.writeFile({ fileName: outPath });
-  console.log("PPTX written to", outPath);
+  const fix = await fixPptxFile(outPath);
+  roundtripWithLibreOffice(outPath);
+  console.log(`PPTX written to ${outPath} (fix: -${fix.removedOverrides} phantom overrides, -${fix.removedEmptyDirs} empty dirs; roundtripped via LibreOffice)`);
 }
 
 build().catch(e => { console.error(e); process.exit(1); });

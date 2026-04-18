@@ -1,669 +1,135 @@
 ---
 name: econ-pptx-templates
-description: "Reusable PptxGenJS templates for creating professional, visually consistent economics lesson presentations. Follows the same domain-based color system as the econ-word-templates skill (blue/amber/green) so students see a unified visual language across Word documents and PowerPoint slides. Use this skill whenever building presentations for economics lessons in combination with the pptx skill and the economic-graph skill. Trigger when the user asks for a presentatie, slides, les, or PowerPoint for economics education. Also trigger when the user mentions economie presentatie, lesslides, samenvatting slides, or any slide deck for economics VWO/HAVO."
+description: "Build rich economics PPTX presentations via PptxGenJS. Defines pedagogy mandates (graphs, speaker notes, canonical terminology) and the two non-negotiable technical fixes (LibreOffice round-trip for PowerPoint compatibility; 2-digit-number width rule). Recommends — but does not require — the editorial design system in `build-scripts/lib-pptx.js`. Use whenever building presentaties, slides, lesslides, or any PowerPoint deck for economics VWO/HAVO. Always read the `pptx` skill first for PptxGenJS toolchain basics."
 ---
 
-# Economics PowerPoint Templates v1
+# Economics PPTX presentations
 
-Reusable PptxGenJS code for building professional, visually consistent economics lesson presentations. All templates use 16:9 slides (10" × 5.625") with a design system that matches the Word document templates — same colors, same domain system, same visual language.
+Short skill. The previous version prescribed a rigid harness tuned for an older model. This rewrite keeps only what experience proved non-negotiable, drops the rest, and lets designers choose typography, palette, and layout freely.
 
-**Always read the pptx skill first** for PptxGenJS setup, QA, and image conversion. This skill provides the *design system and content patterns*; the pptx skill provides the *toolchain*.
-
----
-
-## MANDATORY: GRAPHS IN EVERY PRESENTATION
-
-**Graphs are an essential part of economics education.** They are abstract and difficult for students, so the more often they are shown, the better. When creating any presentation you MUST actively check where graphs can be added.
-
-**Rules:**
-- For each presentation, analyze which economic concepts benefit from a graph (S/D diagrams, cost curves, surplus areas, shifts, monopoly graphs, etc.)
-- Add graph slides on their own slides — cramming them onto existing slides makes it too busy
-- Use the `economic-graph` skill for SVG specifications and the SVG → Sharp → PNG pipeline
-- Pattern: first the text slide with explanation, then a separate slide with the graph that visualizes the concept
-- Prefer splitting a slide in two (text + graph separate) over leaving out a graph
-- You do NOT need an extra user prompt to add graphs — this is the default
-
-**Typical graphs per topic:**
-- Market equilibrium: S/D diagram with equilibrium point
-- Perfect competition: cost curves (MC, ATC) with price line, profit rectangle, CS/PS triangles
-- Monopoly: D + MR (double slope) + MC, p* on demand curve, profit rectangle + CS
-- Labour market: S/D with wage/labour axes, shifts
-- International trade: comparative advantage, PPF, gains from trade
+**Read `pptx` first** for PptxGenJS toolchain, slide dimensions, QA loop, and SVG→PNG conversion. This skill layers economics-specific pedagogy + hard-won technical fixes on top.
 
 ---
 
-## MANDATORY: CONTENT RULES
+## MANDATORY — pedagogy
 
-**Presentaties presenteren THEORIE met uitgewerkte voorbeelden.** Ze geven NOOIT expliciete instructies over opgaven ("maak opgave X", "doe oefening Y"). De docent bepaalt zelf wanneer leerlingen gaan oefenen.
+These are not style choices; they come from `references/didactiek-principes.md`, `references/economic_mathematical_precision_reference.md`, and `references/economie-terminologie.md`. Read those when in doubt.
 
-**Regels:**
-- Presenteer theorie met concrete voorbeelden en uitwerkingen
-- Gebruik grafieken om abstracte concepten visueel te maken
-- Geef nooit opdrachten of oefening-instructies op de dia's
-- Elke presentatie moet minimaal 3 SVG→PNG grafieken bevatten
-- Gebruik `pptx-351-afsluiting.js` als referentie-implementatie voor stijl en structuur
-
----
-
-## DESIGN SYSTEM: SHARED WITH WORD TEMPLATES
-
-The core principle is **visual unity** — a student should recognise the same color system, the same box types, and the same domain groupings whether they open a Word document or a PowerPoint slide.
-
-### Color Palette (identical to econ-word-templates)
-
-```javascript
-const C = {
-  // ── Domain 0: Markten (teal family) ──
-  dTeal:      "17A2B8",
-  dTealLt:    "E8F8FB",
-  dTealDk:    "117A8B",
-  // ── Domain 1: Marktanalyse (blue family) ──
-  dBlue:      "1A5276",
-  dBlueLt:    "EBF5FB",
-  dBlueDk:    "154360",
-  // ── Domain 2: Bedrijfseconomie (amber family) ──
-  dAmber:     "E67E22",
-  dAmberLt:   "FEF5E7",
-  dAmberDk:   "BA6A1C",
-  // ── Domain 3: Arbeidsmarkt (green family) ──
-  dGreen:     "1E8449",
-  dGreenLt:   "E8F8F0",
-  dGreenDk:   "186A3B",
-  // ── Domain 4: Afsluiting (purple family) ──
-  dPurple:    "7D3C98",
-  dPurpleLt:  "F4ECF7",
-  dPurpleDk:  "6C3483",
-  // ── Base colors ──
-  navy:       "1E2761",   // dark backgrounds (title slide, summary slide)
-  white:      "FFFFFF",
-  dark:       "2D3748",   // body text on light backgrounds
-  gray:       "718096",   // captions, subtitles, footers
-  lightGray:  "F7F8FA",   // formula box background, card background
-  borderGray: "CBD5E0",   // subtle borders
-  red:        "D9534F",   // warning accents
-  lightRed:   "FDE8E8",   // warning background
-  cream:      "F9F6F1",   // warm neutral card backgrounds
-  rowAlt:     "F7FAFC",   // alternating row shading
-  // ── Scaffolding colors ──
-  purple:     "7B2D8E",
-  lightPurple:"F3E8F9",
-  stepBg:     "FFF8E1",
-  stepBorder: "F9A825",
-};
-```
-
-### Domain Lookup
-
-```javascript
-const DOMAINS = {
-  markten: { label: "Markten",           color: C.dTeal,  light: C.dTealLt,  dark: C.dTealDk  },
-  markt:   { label: "Marktanalyse",      color: C.dBlue,  light: C.dBlueLt,  dark: C.dBlueDk  },
-  bedrijf: { label: "Bedrijfseconomie",  color: C.dAmber, light: C.dAmberLt, dark: C.dAmberDk },
-  arbeid:  { label: "Arbeidsmarkt",      color: C.dGreen, light: C.dGreenLt, dark: C.dGreenDk },
-};
-```
-
-### Typography
-
-```
-Font pairing: Arial (headers) + Arial (body) — matches Word documents exactly
-Header font:  Arial Bold
-Body font:    Arial Regular
-Monospace:    Consolas (formulas only)
-```
-
-| Element | Size | Color |
-|---------|------|-------|
-| Slide title (dark bg) | 36pt bold | white |
-| Slide title (light bg) | 28-32pt bold | dark or domain.dark |
-| Section header | 20-24pt bold | domain.color |
-| Body text | 14-16pt | dark |
-| Captions / footers | 10-12pt | gray |
-| Formula text | 14pt Consolas | dark |
+- **≥ 3 economic graphs per presentation.** Dual coding reinforcement (text + visual). Every key concept in a slide deck should appear at least once as a labeled diagram or chart.
+- **Theory + worked examples only.** NEVER include exercise instructions ("Maak opgave X", "Bereken …", "Beantwoord …"). Opgaven live in separate files.
+- **Speaker notes on every slide.** Teacher-facing. Explain reasoning, anticipate misconceptions, list cues.
+- **Body text ≥ 18pt.** Titles typically 28–44pt. Slide stats/hero numbers can go larger; respect the width rule below.
+- **Canonical Dutch terminology.** Use terms from `references/economie-terminologie.md` (e.g. "alternatieve kosten", NOT "opportuniteitskosten"). No anglicisms.
+- **Economic correctness.** Supply/demand labels, curve directions, units, movement-vs-shift, ceteris paribus — all must match `references/economic_mathematical_precision_reference.md`.
+- **Economic graph geometry.** Read the `economic-graph` skill. Run `build-scripts/verify_svg_geometry.py` after every SVG edit.
 
 ---
 
-## PART 1: SETUP
+## MANDATORY — technical (the two hard-won lessons)
 
-```javascript
-const pptxgen = require("pptxgenjs");
-const sharp = require("sharp");
+### 1. PowerPoint compatibility: always round-trip through LibreOffice
 
-let pres = new pptxgen();
-pres.layout = "LAYOUT_16x9";
-pres.author = "Economie VWO";
-pres.title = "Presentatie";
+Raw PptxGenJS output opens with a "Found a problem with content" repair dialog in Microsoft PowerPoint. Cause: phantom `<Override>` entries in `[Content_Types].xml` plus empty `charts/` / `embeddings/` directories. LibreOffice tolerates this silently; PowerPoint does not. `fixPptxFile()` alone does NOT fix it; python-pptx round-trip does NOT fix it. Only LibreOffice's OOXML exporter produces MS-compliant output.
+
+After every `await pres.writeFile(...)`:
+
+```js
+const { fixPptxFile, roundtripWithLibreOffice } = require("./lib-pptx.js");
+await pres.writeFile({ fileName: outPath });
+await fixPptxFile(outPath);         // cheap cleanup
+roundtripWithLibreOffice(outPath);  // THE fix (shells to soffice --headless --convert-to pptx)
 ```
 
-### Slide Dimensions Reference
+`roundtripWithLibreOffice` hardcodes the Windows path to `soffice.exe`. Project is Windows-only per root CLAUDE.md.
 
-```
-16:9 = 10" × 5.625"
-Margins: 0.5" all sides
-Content area: 9" × 4.625"
-Two-column split: left 4.25", gap 0.5", right 4.25"
-```
+### 2. Two-digit numbered labels need room
 
-### Helper: Fresh Shadow Factory
+Labels like `"01"`–`"99"` in shapes stack vertically when the container is too narrow at large font sizes. Enforce:
 
-PptxGenJS mutates option objects. Always use a factory.
+- `fontSize ≥ 24` → shape width **≥ 0.9"**
+- `fontSize ≥ 36` → shape width **≥ 1.1"**
 
-```javascript
-const makeShadow = () => ({
-  type: "outer", color: "000000", blur: 6, offset: 2, angle: 135, opacity: 0.10,
-});
-```
-
-### Helper: SVG Icon to Base64
-
-```javascript
-async function iconToBase64(svgString, size = 256) {
-  const buf = await sharp(Buffer.from(svgString)).resize(size, size).png().toBuffer();
-  return "image/png;base64," + buf.toString("base64");
-}
-```
+This bit every single §3.3.x deck. Check all numbered call-outs during visual QA.
 
 ---
 
-## PART 2: SLIDE MASTERS
+## MANDATORY — visual QA after every build
 
-Define these once per presentation. They establish the consistent visual structure.
+Don't ship without looking at every slide.
 
-### Title Slide Master (dark navy background)
-
-Used for: lesson title, section dividers, summary/closing.
-
-```javascript
-function addTitleMaster(pres, domain = "markt") {
-  const d = DOMAINS[domain];
-  pres.defineSlideMaster({
-    title: "TITLE_DARK",
-    background: { color: C.navy },
-    objects: [
-      // Domain accent bar (top, full width)
-      { rect: { x: 0, y: 0, w: 10, h: 0.06, fill: { color: d.color } } },
-      // Footer bar
-      { rect: { x: 0, y: 5.15, w: 10, h: 0.475, fill: { color: "151D4A" } } },
-    ],
-  });
-}
+```bash
+soffice --headless --convert-to pdf --outdir /tmp/qa "<file.pptx>"
+pdftoppm -r 90 /tmp/qa/<file>.pdf /tmp/qa/slide -png
 ```
 
-### Content Slide Master (light background)
-
-Used for: all content slides.
-
-```javascript
-function addContentMaster(pres, domain = "markt") {
-  const d = DOMAINS[domain];
-  pres.defineSlideMaster({
-    title: "CONTENT",
-    background: { color: C.white },
-    objects: [
-      // Header bar (domain color, full width)
-      { rect: { x: 0, y: 0, w: 10, h: 0.75, fill: { color: d.color } } },
-    ],
-  });
-}
-```
+Read each slide PNG. Look for: title/subtitle collisions, clipped text, stacked digits, overlapping shapes, missing graphs. Fix before shipping.
 
 ---
 
-## PART 3: REUSABLE SLIDE COMPONENTS
+## RECOMMENDED — use the editorial design system
 
-### Title Slide
+`build-scripts/lib-pptx.js` is the shared library. Reference builder: `build-scripts/pptx-331-rol-overheid.js`.
 
-```javascript
-function addTitleSlide(pres, title, paragraafNr, hoofdstuk, domain = "markt") {
-  const d = DOMAINS[domain];
-  const slide = pres.addSlide({ masterName: "TITLE_DARK" });
+Exports:
 
-  // Main title
-  slide.addText(title, {
-    x: 0.7, y: 1.2, w: 8.6, h: 2,
-    fontSize: 40, fontFace: "Arial", color: C.white, bold: true,
-    margin: 0,
-  });
+```js
+const {
+  PC, SC, HEX,                     // palettes: PC=bare hex for PptxGenJS, SC=#-prefixed for SVG
+  FONT_SANS, FONT_DISPLAY, FONT_SERIF, FONT_MONO,
+  T,                               // typography presets
+  defineMasters,                   // adds DARK_HERO / LIGHT_ED / SIDEBAR masters
+  softShadow, tightShadow,
+  svgToPng, pngB64, svgData,       // sharp → PNG pipeline at 1440px
+  ICON, placeIcon,                 // pictogram library (factory, dike, coin, scale, …)
+  lineParams, intersect,           // chart geometry helpers
+  svgHeader, editorialTitle,       // FT-style chart framing
+  fixPptxFile, roundtripWithLibreOffice,
+} = require("./lib-pptx.js");
+```
 
-  // Paragraaf subtitle
-  slide.addText(`Paragraaf ${paragraafNr}`, {
-    x: 0.7, y: 3.2, w: 8.6, h: 0.5,
-    fontSize: 20, fontFace: "Arial", color: C.gray,
-    margin: 0,
-  });
+Standard builder shape:
 
-  // Footer
-  slide.addText(`${hoofdstuk}  |  Economie VWO`, {
-    x: 0.7, y: 5.15, w: 8.6, h: 0.475,
-    fontSize: 12, fontFace: "Arial", color: C.gray, valign: "middle",
-    margin: 0,
-  });
+```js
+async function build() {
+  const pres = new PptxGenJS();
+  pres.defineLayout({ name: "CUSTOM_16x9", width: 10, height: 5.625 });
+  pres.layout = "CUSTOM_16x9";
+  defineMasters(pres);
 
-  return slide;
+  // build SVGs, rasterize to PNG base64, add slides …
+
+  await pres.writeFile({ fileName: outPath });
+  await fixPptxFile(outPath);
+  roundtripWithLibreOffice(outPath);
 }
 ```
 
-### Content Slide with Header Bar
-
-```javascript
-function addContentSlide(pres, title, domain = "markt") {
-  const d = DOMAINS[domain];
-  const slide = pres.addSlide({ masterName: "CONTENT" });
-
-  // Title text on header bar
-  slide.addText(title, {
-    x: 0.5, y: 0, w: 9, h: 0.75,
-    fontSize: 24, fontFace: "Arial", color: C.white, bold: true,
-    valign: "middle", margin: 0,
-  });
-
-  return slide;
-}
-```
-
-### Leerdoelen Slide
-
-```javascript
-function addLeerdoelenSlide(pres, leerdoelen, domain = "markt") {
-  const d = DOMAINS[domain];
-  const slide = addContentSlide(pres, "Wat moet je kunnen?", domain);
-
-  // IMPORTANT: Use \n-joined string so PptxGenJS creates separate <a:p> paragraphs.
-  // Do NOT use breakLine (creates <a:br/> soft breaks = all text in one paragraph).
-  slide.addText(leerdoelen.join("\n"), {
-    x: 0.7, y: 1.2, w: 8.6, h: 3.5,
-    bullet: true, fontSize: 16, fontFace: "Arial", color: C.dark,
-    paraSpaceAfter: 8,
-  });
-
-  return slide;
-}
-```
-
-### Two-Column Card Slide
-
-The signature content layout. Two cards side by side with left accent borders (mirrors the tipBox/warningBox from Word).
-
-```javascript
-function addTwoColumnSlide(pres, title, leftCard, rightCard, domain = "markt") {
-  const d = DOMAINS[domain];
-  const slide = addContentSlide(pres, title, domain);
-
-  const cardY = 1.1, cardH = 3.2;
-  const leftX = 0.5, rightX = 5.2;
-  const cardW = 4.3;
-  const accentW = 0.06;
-
-  // Left card
-  slide.addShape(pres.shapes.RECTANGLE, {
-    x: leftX, y: cardY, w: cardW, h: cardH,
-    fill: { color: C.cream }, shadow: makeShadow(),
-  });
-  slide.addShape(pres.shapes.RECTANGLE, {
-    x: leftX, y: cardY, w: accentW, h: cardH,
-    fill: { color: leftCard.accentColor || d.color },
-  });
-  slide.addText(leftCard.title, {
-    x: leftX + 0.25, y: cardY + 0.15, w: cardW - 0.4, h: 0.45,
-    fontSize: 20, fontFace: "Arial", color: leftCard.accentColor || d.color, bold: true, margin: 0,
-  });
-  const leftItems = leftCard.body.map((item, i) => ({
-    text: item,
-    options: { fontSize: 14, fontFace: "Arial", color: C.dark, breakLine: i < leftCard.body.length - 1 },
-  }));
-  slide.addText(leftItems, {
-    x: leftX + 0.25, y: cardY + 0.65, w: cardW - 0.4, h: cardH - 0.8,
-  });
-
-  // Right card
-  slide.addShape(pres.shapes.RECTANGLE, {
-    x: rightX, y: cardY, w: cardW, h: cardH,
-    fill: { color: C.cream }, shadow: makeShadow(),
-  });
-  slide.addShape(pres.shapes.RECTANGLE, {
-    x: rightX, y: cardY, w: accentW, h: cardH,
-    fill: { color: rightCard.accentColor || C.dAmber },
-  });
-  slide.addText(rightCard.title, {
-    x: rightX + 0.25, y: cardY + 0.15, w: cardW - 0.4, h: 0.45,
-    fontSize: 20, fontFace: "Arial", color: rightCard.accentColor || C.dAmber, bold: true, margin: 0,
-  });
-  const rightItems = rightCard.body.map((item, i) => ({
-    text: item,
-    options: { fontSize: 14, fontFace: "Arial", color: C.dark, breakLine: i < rightCard.body.length - 1 },
-  }));
-  slide.addText(rightItems, {
-    x: rightX + 0.25, y: cardY + 0.65, w: cardW - 0.4, h: cardH - 0.8,
-  });
-
-  return slide;
-}
-```
-
-### Flow/Chain Slide
-
-Horizontal or vertical chain of steps — used for redeneerkettingen (causality chains).
-
-```javascript
-function addFlowSlide(pres, title, steps, domain = "markt") {
-  const d = DOMAINS[domain];
-  const slide = addContentSlide(pres, title, domain);
-
-  const startY = 1.5;
-  const stepH = 0.55;
-  const gap = 0.12;
-  const stepW = 7;
-  const stepX = 1.5;
-
-  steps.forEach((step, i) => {
-    const y = startY + i * (stepH + gap);
-    const isHighlight = step.highlight;
-    const bg = isHighlight ? d.color : C.cream;
-    const textColor = isHighlight ? C.white : C.dark;
-
-    slide.addShape(pres.shapes.RECTANGLE, {
-      x: stepX, y, w: stepW, h: stepH,
-      fill: { color: bg }, shadow: makeShadow(),
-    });
-
-    const prefix = i > 0 ? "\u2193  " : "";
-    slide.addText(prefix + step.text, {
-      x: stepX + 0.2, y, w: stepW - 0.4, h: stepH,
-      fontSize: 16, fontFace: "Arial", color: textColor,
-      bold: isHighlight, valign: "middle", margin: 0,
-    });
-  });
-
-  return slide;
-}
-```
-
-### Valkuilen / Warning Slide
-
-Matches the warningBox and tipBox from Word documents.
-
-```javascript
-function addValkuilenSlide(pres, title, items, domain = "markt") {
-  const d = DOMAINS[domain];
-  const slide = addContentSlide(pres, title, domain);
-
-  const startY = 1.1;
-  const itemH = 1.1;
-  const gap = 0.15;
-  const itemW = 8.6;
-  const itemX = 0.7;
-
-  items.forEach((item, i) => {
-    const y = startY + i * (itemH + gap);
-
-    // Card background
-    slide.addShape(pres.shapes.RECTANGLE, {
-      x: itemX, y, w: itemW, h: itemH,
-      fill: { color: C.lightRed },
-    });
-    // Red accent bar (left)
-    slide.addShape(pres.shapes.RECTANGLE, {
-      x: itemX, y, w: 0.06, h: itemH,
-      fill: { color: C.red },
-    });
-    // Bold header
-    slide.addText(item.title, {
-      x: itemX + 0.25, y: y + 0.08, w: itemW - 0.5, h: 0.35,
-      fontSize: 16, fontFace: "Arial", color: C.red, bold: true, margin: 0,
-    });
-    // Explanation
-    slide.addText(item.body, {
-      x: itemX + 0.25, y: y + 0.45, w: itemW - 0.5, h: itemH - 0.55,
-      fontSize: 13, fontFace: "Arial", color: C.dark, margin: 0,
-    });
-  });
-
-  return slide;
-}
-```
-
-### Samenvatting / Checklist Slide
-
-```javascript
-function addSamenvattingSlide(pres, items, domain = "markt") {
-  const d = DOMAINS[domain];
-  const slide = pres.addSlide({ masterName: "TITLE_DARK" });
-
-  // Accent bar
-  slide.addShape(pres.shapes.RECTANGLE, {
-    x: 0, y: 0, w: 10, h: 0.06,
-    fill: { color: d.color },
-  });
-
-  slide.addText("Samenvatting", {
-    x: 0.7, y: 0.3, w: 8.6, h: 0.6,
-    fontSize: 28, fontFace: "Arial", color: C.white, bold: true, margin: 0,
-  });
-
-  slide.addText("Beheers je dit voordat je gaat oefenen?", {
-    x: 0.7, y: 0.85, w: 8.6, h: 0.4,
-    fontSize: 14, fontFace: "Arial", color: C.gray, italic: true, margin: 0,
-  });
-
-  // IMPORTANT: Use \n-joined string so PptxGenJS creates separate <a:p> paragraphs.
-  // Do NOT use breakLine (creates <a:br/> soft breaks = all text in one paragraph).
-  slide.addText(items.join("\n"), {
-    x: 0.7, y: 1.5, w: 8.6, h: 3.5,
-    bullet: true, fontSize: 15, fontFace: "Arial", color: C.white,
-    paraSpaceAfter: 8,
-  });
-
-  // Footer bar
-  slide.addShape(pres.shapes.RECTANGLE, {
-    x: 0, y: 5.15, w: 10, h: 0.475,
-    fill: { color: "151D4A" },
-  });
-
-  return slide;
-}
-```
-
-### Definition Table Slide
-
-Two-column table mirroring the defTable from Word.
-
-```javascript
-function addDefTableSlide(pres, title, rows, domain = "markt") {
-  const d = DOMAINS[domain];
-  const slide = addContentSlide(pres, title, domain);
-
-  const tableData = [
-    [
-      { text: "Begrip", options: { fill: { color: C.navy }, color: C.white, bold: true, fontSize: 14, fontFace: "Arial" } },
-      { text: "Betekenis", options: { fill: { color: C.navy }, color: C.white, bold: true, fontSize: 14, fontFace: "Arial" } },
-    ],
-    ...rows.map((r, i) => [
-      { text: r[0], options: { fill: { color: i % 2 === 0 ? C.rowAlt : C.white }, bold: true, fontSize: 13, fontFace: "Arial" } },
-      { text: r[1], options: { fill: { color: i % 2 === 0 ? C.rowAlt : C.white }, fontSize: 13, fontFace: "Arial" } },
-    ]),
-  ];
-
-  slide.addTable(tableData, {
-    x: 0.7, y: 1.1, w: 8.6,
-    border: { pt: 0.5, color: C.borderGray },
-    colW: [2.8, 5.8],
-  });
-
-  return slide;
-}
-```
-
-### Formula Slide
-
-Shows key formulas in a styled box — mirrors formulaBox from Word.
-
-```javascript
-function addFormulaSlide(pres, title, formulas, domain = "markt") {
-  const d = DOMAINS[domain];
-  const slide = addContentSlide(pres, title, domain);
-
-  const boxX = 0.7, boxY = 1.2, boxW = 8.6;
-  const lineH = 0.42;
-  const boxH = formulas.length * lineH + 0.3;
-
-  // Background
-  slide.addShape(pres.shapes.RECTANGLE, {
-    x: boxX, y: boxY, w: boxW, h: boxH,
-    fill: { color: C.lightGray },
-    line: { color: C.borderGray, width: 0.5 },
-  });
-  // Domain accent (left bar)
-  slide.addShape(pres.shapes.RECTANGLE, {
-    x: boxX, y: boxY, w: 0.06, h: boxH,
-    fill: { color: d.color },
-  });
-
-  formulas.forEach((formula, i) => {
-    slide.addText(formula, {
-      x: boxX + 0.3, y: boxY + 0.15 + i * lineH, w: boxW - 0.6, h: lineH,
-      fontSize: 16, fontFace: "Consolas", color: C.dark, margin: 0,
-    });
-  });
-
-  return slide;
-}
-```
+Builders that want a different palette or typography are free to roll their own — only the two technical fixes above are non-negotiable.
 
 ---
 
-## PART 4: SLIDE DECK TEMPLATES
+## SVG pitfalls (librsvg / sharp)
 
-### Standard Lesson Presentation
+Three repeat bugs. Pre-empt all three when writing SVG string generators.
 
-The typical flow for a single paragraaf:
-
-```javascript
-async function buildLesPresentation(config) {
-  // config = {
-  //   title: "Monopolie",
-  //   paragraafNr: "X.Y.Z",
-  //   hoofdstuk: "Hoofdstuk Y: [Naam]",
-  //   domain: "bedrijf",
-  //   leerdoelen: ["Winstmaximalisatie bij monopolie berekenen", ...],
-  //   slides: [
-  //     { type: "twoColumn", title: "...", left: {...}, right: {...} },
-  //     { type: "flow", title: "...", steps: [...] },
-  //     { type: "formula", title: "...", formulas: [...] },
-  //     { type: "defTable", title: "...", rows: [...] },
-  //     { type: "valkuilen", title: "...", items: [...] },
-  //     { type: "custom", builder: (pres, slide) => { ... } },
-  //   ],
-  //   samenvatting: ["Punt 1", "Punt 2", ...],
-  //   speakerNotes: { 1: "Notes for slide 1", ... },
-  // }
-
-  const pres = new pptxgen();
-  pres.layout = "LAYOUT_16x9";
-  pres.author = "Economie VWO";
-  pres.title = config.title;
-
-  addTitleMaster(pres, config.domain);
-  addContentMaster(pres, config.domain);
-
-  // 1. Title slide
-  addTitleSlide(pres, config.title, config.paragraafNr, config.hoofdstuk, config.domain);
-
-  // 2. Leerdoelen
-  addLeerdoelenSlide(pres, config.leerdoelen, config.domain);
-
-  // 3. Content slides
-  config.slides.forEach(s => {
-    switch (s.type) {
-      case "twoColumn":
-        addTwoColumnSlide(pres, s.title, s.left, s.right, config.domain);
-        break;
-      case "flow":
-        addFlowSlide(pres, s.title, s.steps, config.domain);
-        break;
-      case "formula":
-        addFormulaSlide(pres, s.title, s.formulas, config.domain);
-        break;
-      case "defTable":
-        addDefTableSlide(pres, s.title, s.rows, config.domain);
-        break;
-      case "valkuilen":
-        addValkuilenSlide(pres, s.title, s.items, config.domain);
-        break;
-      case "custom":
-        const slide = addContentSlide(pres, s.title, config.domain);
-        s.builder(pres, slide);
-        break;
-    }
-  });
-
-  // 4. Samenvatting
-  addSamenvattingSlide(pres, config.samenvatting, config.domain);
-
-  return pres;
-}
-```
+1. **No `<foreignObject>`.** librsvg renders it as empty space with no error. Use plain `<text>` elements; split multi-line content across multiple `<text>` tags with manual `y` offsets (or `<tspan dy="...">`).
+2. **Escape `<`, `>`, `&` in SVG `<text>` content.** `Pmin > P*` breaks the parser ("StartTag: invalid element name"). Use `&lt;`, `&gt;`, `&amp;`.
+3. **`#`-prefixed hex inside SVG.** SVG attributes need `"#1A5276"`; PptxGenJS options take bare `"1A5276"`. `lib-pptx.js` keeps the two namespaces: `PC.xxx` (bare) and `SC.xxx` (`#`-prefixed). Mixing them: SVG silently renders black.
 
 ---
 
-## PART 5: WORD ↔ POWERPOINT MAPPING
+## NO LONGER MANDATORY (dropped intentionally)
 
-This table shows how each Word component maps to its PowerPoint equivalent. Use this when converting materials between formats.
+These were harness rules the creative §3.3.x builds broke successfully. Designers may follow them, but the skill no longer requires them:
 
-| Word component | PowerPoint equivalent | Visual match |
-|---|---|---|
-| `domainBanner()` | Header bar on content slide (domain color) | Same color, same domain label feel |
-| `formulaBox()` | `addFormulaSlide()` — gray box with domain accent bar | Same left accent stripe + Consolas font |
-| `tipBox()` | Card with left accent bar on light background | Same accent color + cream background |
-| `warningBox()` | `addValkuilenSlide()` — red accent cards | Same red + light red scheme |
-| `summarySchema()` | `addSamenvattingSlide()` — dark slide with bullets | Navy background matches schema header |
-| `defTable()` | `addDefTableSlide()` — table with navy header | Same color scheme, alternating rows |
-| `visualTOC()` | Leerdoelen slide (simplified overview) | Domain colors in headers |
-| `domainLegend()` | Accent bar color on title slide | Domain color identification |
-| `denkstapBox()` | Flow/chain slide with yellow accent steps | Same stepBorder color |
-| `hintBox()` | Card with purple accent | Same purple accent |
+- Arial-only font discipline
+- Fixed 4-color domain palette (teal / blue / amber / green)
+- "No gradients" / "no decorative elements" / "no icons"
+- Universal domain-colored header bar at y=0.75"
+- Cream card backgrounds with 0.06" left accent bars
+- Two-column card layout as the default
+- "No hero-stat slides / no full-bleed dark slides"
+- Prescribed shadow factories
+- One-domain-color-per-chapter enforcement
 
----
-
-## PART 6: QA CHECKLIST
-
-### Every presentation
-1. Does every content slide have the **domain-colored header bar**?
-2. Is the title slide **dark navy** with domain accent bar at top?
-3. Are all colors from the **shared palette** (no random blues or grays)?
-4. Is the font **Arial throughout** (except Consolas for formulas)?
-5. Do cards use **left accent bars** (not borders all around)?
-6. Is text **left-aligned** on content slides (not centered body text)?
-7. Are slide backgrounds either **navy (dark)** or **white (light)** — no in-between?
-8. Does the closing slide match the **dark style** of the title slide?
-9. Are there **speaker notes** for every slide?
-10. Has visual QA been run with **thumbnail conversion**?
-
-### Design consistency with Word
-11. Would a student recognize the **same domain color** in both the document and the slide?
-12. Are **formula boxes** visually similar? (gray background, domain accent left bar, Consolas)
-13. Do **warning elements** use the same red accent in both formats?
-14. Is the **samenvatting** visually related to the summary schema in Word?
-
-**If any answer is "no", fix before delivering.**
-
----
-
-## NEVER DO
-
-- Use "#" prefix for hex colors (corrupts PptxGenJS files)
-- Encode opacity in 8-char hex strings (use `opacity` property instead)
-- Use Unicode bullets (use `bullet: true`)
-- Use `breakLine: true` for bullet lists — it creates `<a:br/>` soft breaks inside ONE paragraph, merging all bullets into a single text block. Instead, use `items.join("\n")` with `bullet: true` so PptxGenJS creates separate `<a:p>` paragraphs
-- Reuse option objects across addShape/addText calls (PptxGenJS mutates them)
-- Use negative shadow offsets (corrupts file)
-- Use ROUNDED_RECTANGLE with rectangular accent bars (corners won't align)
-- Center body text (left-align everything except titles)
-- Use random colors not in the palette (breaks visual unity with Word)
-- Mix fonts (Arial + Consolas only, matching Word)
-- Skip speaker notes (they're the teaching script)
-- Use accent lines under titles (AI-generated look)
-- Label begeleide inoefening slides as "makkelijk" or "hulp" — same naming policy as Word
-
----
-
-Apply this skill to the following task: $ARGUMENTS
+Pedagogy + LibreOffice round-trip + 2-digit-width rule are the only non-negotiables.

@@ -125,7 +125,7 @@ MODULE_ROOT="../3. Module 3 - Markt en overheid" node build-scripts/build-skillt
 | `build-newsdetective-shells.js` | HTML shells voor nieuws-detective |
 | `build-landing-page.js` | index.html voor paragrafen, hoofdstukken, module |
 | `template-B_voorkennis.js` | `uitleg voorkennis.docx` |
-| `pptx-template_presentatie.js` | Presentatie `.pptx` |
+| `pptx-331-rol-overheid.js` | Presentatie `.pptx` (reference builder; uses `lib-pptx.js`) |
 
 Let op: deze tabel is niet de volledige paragraph workflow. Veel rijke assets gebruiken reference scripts of converters buiten `deploy.js`. Zie [BUILD-PARAGRAPH.md](C:\Projects\4veco\4veco-platform\BUILD-PARAGRAPH.md) voor de complete productieketen.
 

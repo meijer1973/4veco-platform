@@ -1,6 +1,6 @@
 /**
- * lib-creative.js — editorial design system for the creative/unrestricted
- * version of the §3.3.x presentation series.
+ * lib-pptx.js — editorial design system for economics PPTX builds.
+ * Canonical shared library for all pptx-*.js builders.
  *
  * Key departures from the harness design system:
  *   • Segoe UI (Windows-system) with variable weights (300/400/600/700/900)

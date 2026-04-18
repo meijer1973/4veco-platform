@@ -46,8 +46,9 @@ These are the most important scripts for rich paragraph production outside the a
 |--------|--------|
 | `template-B_voorkennis.js` | `uitleg voorkennis.docx` |
 | `template-A_vaardigheden.js` | `uitleg vaardigheden.docx` |
-| `pptx-template_presentatie.js` | basic presentation template |
-| `pptx-351-afsluiting.js` | strong presentation reference with SVG graphs |
+| `pptx-331-rol-overheid.js` | reference presentation builder (uses `lib-pptx.js`; editorial design system) |
+| `lib-pptx.js` | shared pptx library: palettes, typography, slide masters, SVG pipeline, LibreOffice round-trip |
+| `roundtrip-pptx.py` | python-pptx round-trip helper (legacy; LibreOffice round-trip in `lib-pptx.js` preferred) |
 | `nieuws-351-352-afsluiting.js` | `nieuws met visual.docx` |
 | `samenvatting-351-352-rebuild.js` | paragraph `samenvatting.docx` |
 | `inoefening-351-afsluiting.js` | begeleide inoefening docs |
@@ -69,6 +70,7 @@ Examples:
 - `pptx-321-marktevenwicht.js`
 - `pptx-322-volkomen-concurrentie.js`
 - `pptx-323-monopolie.js`
+- `pptx-332-overheidsbeleid.js`, `pptx-333-collectieve-goederen.js`, `pptx-334-toepassen.js` (creative builds that match `pptx-331-rol-overheid.js`)
 - `build-311-basisopgaven.js`
 - `build-infographic-311.js`
 - `extract-quiz-data.js`
