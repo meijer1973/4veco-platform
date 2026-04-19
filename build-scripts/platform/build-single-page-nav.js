@@ -9,7 +9,7 @@ const path = require("path");
 
 const MODULE = process.env.MODULE_ROOT
     ? path.resolve(process.env.MODULE_ROOT)
-    : path.join(__dirname, "..");
+    : path.join(__dirname, "../..");
 const OUT = path.join(MODULE, "index.html");
 
 // Chapter colors matching the domain system

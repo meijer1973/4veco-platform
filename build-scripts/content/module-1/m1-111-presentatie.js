@@ -12,7 +12,7 @@ const PptxGenJS = require("pptxgenjs");
 const sharp = require("sharp");
 const fs = require("fs");
 const path = require("path");
-const { saveSvgFiles } = require("./lib-svg-save");
+const { saveSvgFiles } = require("../../lib/lib-svg-save");
 
 const C = {
   primary: "17A2B8", primaryDk: "117A8B", primaryLt: "E8F8FB",

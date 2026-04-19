@@ -196,7 +196,7 @@ For every line drawn in the SVG:
 Don't rely on mental math alone — run the Python verifier:
 
 ```python
-# build-scripts/verify_svg_geometry.py
+# build-scripts/lib/verify_svg_geometry.py
 from verify_svg_geometry import Plot, LinearDemand, Curve
 
 plot = Plot(origin_x=80, origin_y=350, px_per_Q=40, px_per_P=59)

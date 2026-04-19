@@ -49,7 +49,7 @@ A student working through all materials for one paragraph should feel like they'
 │   ├── skilltree/base-elements.js, explanations.js
 │   ├── theme.js
 │   └── tests/                  ← Unit tests + data validation tests
-├── build-scripts/              ← Generators (CSV→JS, HTML shells, landing pages, PPTX, DOCX)
+├── build-scripts/              ← Build pipeline (platform/, lib/, templates/, content/, archive/)
 ├── source-data/
 │   └── module-3/
 │       ├── reasoning/*.csv     ← Bron-CSV's voor redeneer-spel
@@ -113,7 +113,7 @@ Alle build scripts accepteren `MODULE_ROOT` als env var. Zonder die var schrijve
 
 ```bash
 # Eén script draaien tegen een specifieke module:
-MODULE_ROOT="../3. Module 3 - Markt en overheid" node build-scripts/build-skilltree-shells.js
+MODULE_ROOT="../3. Module 3 - Markt en overheid" node build-scripts/platform/build-skilltree-shells.js
 ```
 
 | Script | Genereert |
@@ -210,7 +210,7 @@ npm test
 
 ### Nieuw reasoning game toevoegen
 1. CSV maken → `source-data/module-3/reasoning/X.Y.Z.csv`
-2. `node build-scripts/build-reasoning-questions.js X.Y.Z <domain> source-data/module-3/reasoning/X.Y.Z.csv --generate-review`
+2. `node build-scripts/platform/build-reasoning-questions.js X.Y.Z <domain> source-data/module-3/reasoning/X.Y.Z.csv --generate-review`
 3. Economics review subagent op het review document
 4. Correcties doorvoeren in CSV, opnieuw builden
 5. `node scripts/deploy.js <module-path>`

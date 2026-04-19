@@ -17,14 +17,14 @@ Store data here when:
 
 - One CSV per paragraph: `X.Y.Z.csv`
 - Source-of-truth for the reasoning game
-- Consumed by `build-scripts/build-reasoning-questions.js`
+- Consumed by `build-scripts/platform/build-reasoning-questions.js`
 - Output becomes `shared/reasoning/X.Y.Z.js` in the target module repo
 
 ### `module-3/skilltree/`
 
 - One JS config per paragraph: `X.Y.Z.js`
 - Source-of-truth for visible skills / paragraph skill mapping
-- Used by `build-scripts/build-skilltree-shells.js`
+- Used by `build-scripts/platform/build-skilltree-shells.js`
 - Output becomes `shared/skilltree/X.Y.Z.js` plus the paragraph HTML shell
 
 ## What Does Not Yet Live Here

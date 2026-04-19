@@ -94,12 +94,12 @@ function runBuildScripts() {
     const opts = { cwd: PLATFORM_ROOT, env, stdio: 'inherit' };
 
     const scripts = [
-        { name: 'Skilltree shells + data', cmd: 'node build-scripts/build-skilltree-shells.js' },
-        { name: 'Reasoning engine shells', cmd: 'node build-scripts/build-reasoning-engine.js' },
-        { name: 'Quiz shells', cmd: 'node build-scripts/generate-quiz-shells.js' },
-        { name: 'News detective shells', cmd: 'node build-scripts/build-newsdetective-shells.js' },
-        { name: 'Procedure shells', cmd: 'node build-scripts/build-procedure-shells.js' },
-        { name: 'Landing pages', cmd: 'node build-scripts/build-landing-page.js' },
+        { name: 'Skilltree shells + data', cmd: 'node build-scripts/platform/build-skilltree-shells.js' },
+        { name: 'Reasoning engine shells', cmd: 'node build-scripts/platform/build-reasoning-engine.js' },
+        { name: 'Quiz shells', cmd: 'node build-scripts/platform/generate-quiz-shells.js' },
+        { name: 'News detective shells', cmd: 'node build-scripts/platform/build-newsdetective-shells.js' },
+        { name: 'Procedure shells', cmd: 'node build-scripts/platform/build-procedure-shells.js' },
+        { name: 'Landing pages', cmd: 'node build-scripts/platform/build-landing-page.js' },
     ];
 
     for (const script of scripts) {

@@ -2,7 +2,22 @@
 
 This folder contains all production scripts used to turn source material into the rich paragraph outputs that appear in the module repos.
 
-If you want to build a complete paragraph from scratch, start with [BUILD-PARAGRAPH.md](C:\Projects\4veco\4veco-platform\BUILD-PARAGRAPH.md). This README explains how the scripts in `build-scripts/` are grouped and how to use that grouping.
+If you want to build a complete paragraph from scratch, start with [BUILD-PARAGRAPH.md](C:\Projects\4veco\4veco-platform\BUILD-PARAGRAPH.md).
+
+## Folder Layout
+
+```
+build-scripts/
+├── platform/       core platform generators (used by scripts/deploy.js)
+├── lib/            shared libraries, converters, verifiers
+├── templates/      reusable scaffolds to copy when starting a new paragraph
+├── content/
+│   ├── module-1/   paragraph-specific builders for Module 1
+│   └── module-3/   paragraph-specific builders for Module 3
+└── archive/        legacy / one-off scripts kept for reference
+```
+
+The split is: **`platform/`, `lib/`, `templates/` are the reusable core** — they rarely change per paragraph. **`content/` is the per-paragraph material** — each `.js` file is effectively content that happens to live in script form.
 
 ## Output Convention
 
@@ -10,120 +25,96 @@ Intermediate build artifacts (pptx, svg, png) go to `output/{paragraph-code}/` a
 
 ## Script Types
 
-There are four script categories in this folder.
+### 1. Platform Generators — `platform/`
 
-### 1. Platform Generators
-
-These are reusable scripts that generate the automated layer. They are the scripts that `scripts/deploy.js` relies on.
+Reusable scripts that generate the automated layer. These are what `scripts/deploy.js` invokes.
 
 | Script | Purpose |
 |--------|---------|
-| `generate-quiz-shells.js` | Build quiz HTML shells from quiz data files |
-| `build-newsdetective-shells.js` | Build nieuws-detective HTML shells |
-| `build-reasoning-engine.js` | Build reasoning game HTML shells |
-| `build-reasoning-questions.js` | Convert reasoning CSV into `shared/reasoning/*.js` |
-| `build-skilltree-shells.js` | Build skilltree data + HTML shells |
-| `build-landing-page.js` | Build `index.html` at paragraph/chapter/module level |
+| `platform/generate-quiz-shells.js` | Quiz HTML shells from quiz data files |
+| `platform/build-newsdetective-shells.js` | Nieuws-detective HTML shells |
+| `platform/build-reasoning-engine.js` | Reasoning game HTML shells |
+| `platform/build-reasoning-questions.js` | Reasoning CSV → `shared/reasoning/*.js` |
+| `platform/build-skilltree-shells.js` | Skilltree data + HTML shells |
+| `platform/build-procedure-shells.js` | Procedure HTML shells |
+| `platform/build-landing-page.js` | `index.html` at paragraph/chapter/module level |
+| `platform/build-single-page-nav.js` | Single-page navigation for GitHub Pages |
 
-Use these when:
-- the source already exists as structured data
-- the output should be fully reproducible
-- the step belongs to the automated layer
+Use when the source already exists as structured data and the output should be fully reproducible.
 
-### 2. Converters
+### 2. Shared Libraries, Converters, Verifiers — `lib/`
 
-These transform rich `.docx` source files into interactive HTML variants.
+| File | Role |
+|------|------|
+| `lib/lib-pptx.js` | Palettes, typography, slide masters, SVG pipeline, LibreOffice round-trip |
+| `lib/lib-svg-utils.js` | SVG→PNG pipeline + graph color palette |
+| `lib/lib-svg-save.js` | Simple SVG file writer used by presentation builders |
+| `lib/lib-begeleide-inoefening.js` | Shared document builders for begeleide inoefening |
+| `lib/convert_voorkennis.py` | Converter: `uitleg voorkennis.docx` → HTML |
+| `lib/convert_vaardigheden.py` | Converter: `uitleg vaardigheden.docx` → HTML |
+| `lib/convert_begeleide_inoefening.py` | Converter: vragen + antwoorden `.docx` → HTML |
+| `lib/verify_svg_geometry.py` | SVG geometry verifier (run after every SVG edit) |
 
-| Script | Input | Output |
-|--------|-------|--------|
-| `convert_voorkennis.py` | `uitleg voorkennis.docx` | `uitleg voorkennis.html` |
-| `convert_vaardigheden.py` | `uitleg vaardigheden.docx` | `uitleg vaardigheden.html` |
-| `convert_begeleide_inoefening.py` | vragen + antwoorden `.docx` | `begeleide inoefening.html` |
+`lib-*.js` files are imported by content scripts. Converters and the verifier are invoked standalone.
 
-Use these after the corresponding `.docx` has already been produced.
+### 3. Templates — `templates/`
 
-### 3. Reference Implementations
+Starting points for new paragraph builders.
 
-These are the most important scripts for rich paragraph production outside the automated layer. They are not fully generic generators, but they are the intended reference points to copy and adapt for a new paragraph.
+| File | Use |
+|------|-----|
+| `templates/template-A_vaardigheden.js` | Scaffold for `uitleg vaardigheden.docx` builder |
+| `templates/template-B_voorkennis.js` | Scaffold for `uitleg voorkennis.docx` builder |
+| `templates/template-paragraph-plan.md` | Copy into paragraph folder as `_paragraph-plan.md` during Phase 4a |
 
-| Script | Builds |
-|--------|--------|
-| `template-B_voorkennis.js` | `uitleg voorkennis.docx` |
-| `template-A_vaardigheden.js` | `uitleg vaardigheden.docx` |
-| `pptx-331-rol-overheid.js` | reference presentation builder (uses `lib-pptx.js`; editorial design system) |
-| `lib-pptx.js` | shared pptx library: palettes, typography, slide masters, SVG pipeline, LibreOffice round-trip |
-| `nieuws-351-352-afsluiting.js` | `nieuws met visual.docx` |
-| `samenvatting-351-352-rebuild.js` | paragraph `samenvatting.docx` |
-| `inoefening-351-afsluiting.js` | begeleide inoefening docs |
-| `opgaven-351-afsluiting.js` | basis/midden/verrijking opgavensets |
-| `lib-begeleide-inoefening.js` | shared library used by inoefening scripts |
-| `lib-svg-utils.js` | shared SVG→PNG pipeline + graph color palette (used by all visual builders) |
-| `template-paragraph-plan.md` | planning template — copy into paragraph folder as `_paragraph-plan.md` during Phase 4a |
+### 4. Content — `content/module-1/`, `content/module-3/`
 
-Use these when:
-- the asset is rich, paragraph-specific, and content-heavy
-- you need a proven scaffold instead of starting from zero
-- the file is built by "copy script, replace content section, run script"
+Paragraph-specific builders. Each `.js` file builds a single asset (presentatie, voorkennis, vaardigheden, nieuws, inoefening, opgaven, samenvatting) for one paragraph. Naming:
 
-### 4. Paragraph-Specific or Utility Scripts
+- `content/module-1/m1-XYZ-<asset>.js` — Module 1, paragraph 1.X.Y, given asset type
+- `content/module-3/pptx-XYZ-<slug>.js` — Module 3 presentation builder for paragraph 3.X.Y
+- `content/module-3/<asset>-XYZ-<slug>.js` — Module 3 non-presentation builders (§3.5 exam prep, §3.2.6 vaardigheden, §3.1.1 opgaven)
 
-These are useful examples, migrations, or maintenance helpers, but they are not the main source of truth for new work.
+When starting a new paragraph, copy the closest existing builder from the corresponding `content/` subfolder, replace the content section, and run.
 
-Examples:
-- `pptx-321-marktevenwicht.js`
-- `pptx-322-volkomen-concurrentie.js`
-- `pptx-323-monopolie.js`
-- `pptx-332-overheidsbeleid.js`, `pptx-333-collectieve-goederen.js`, `pptx-334-toepassen.js` (creative builds that match `pptx-331-rol-overheid.js`)
-- `pptx-341-…` through `pptx-346-…` (§3.4 internationale handel)
-- `build-311-basisopgaven.js`
-- `build-infographic-311.js`
+### 5. Archive — `archive/`
 
-### 5. Archive
-
-Legacy / one-off scripts live under `build-scripts/archive/`. They are kept for historical reference only and are not part of the active pipeline. See `build-scripts/archive/README.md` for the retention policy.
+Legacy / one-off scripts kept for historical reference only. Not part of the active pipeline. See `archive/README.md` for the retention policy.
 
 ## How To Use This Folder
 
-### If you are building the automated layer
-
-Run:
+### Building the automated layer
 
 ```bash
 node scripts/deploy.js "../3. Module 3 - Markt en overheid"
 ```
 
-This handles:
-- engine copy
-- shell generation
-- landing pages
-- validation
+This handles engine copy, shell generation (via `platform/`), landing pages, and validation.
 
-### If you are building a complete paragraph
+### Building a complete paragraph
 
-Follow [BUILD-PARAGRAPH.md](C:\Projects\4veco\4veco-platform\BUILD-PARAGRAPH.md), then use scripts from this folder in this order:
+Follow [BUILD-PARAGRAPH.md](C:\Projects\4veco\4veco-platform\BUILD-PARAGRAPH.md). Scripts are used in this order:
 
-1. Create or update structured game data
-2. Run platform generators
-3. **Phase 4a**: Create `_paragraph-plan.md` (copy `template-paragraph-plan.md`, fill in concepts/visuals/terminology)
-4. **Phase 4b**: Build shared visuals in `_assets/` using `lib-svg-utils.js`
-5. **Phase 4c**: Build rich `.docx` / `.pptx` assets from reference implementations, reading from plan + `_assets/`
-6. Run converters for HTML versions
+1. Create or update structured game data (CSV / JS data files)
+2. Run platform generators (usually via `deploy.js`)
+3. **Phase 4a**: Create `_paragraph-plan.md` from `templates/template-paragraph-plan.md`
+4. **Phase 4b**: Build shared visuals in `_assets/` using `lib/lib-svg-utils.js`
+5. **Phase 4c**: Copy the closest `content/module-N/...` builder, adapt, run
+6. Run converters (`lib/convert_*.py`) for HTML versions
 7. Run `deploy.js`
 8. Verify output
 
 ## Conventions
 
-- Reusable scripts should include a `HOW TO ADAPT` header.
-- Paragraph-specific content should live in clearly marked content sections.
+- Reusable scripts (`platform/`, `lib/`, `templates/`) should include a `HOW TO ADAPT` header.
+- Content scripts (`content/`) should have paragraph-specific content in clearly marked sections.
 - Shared libraries should be imported, not copied.
-- Scripts that are good starting points for new paragraphs should say so explicitly in their header comments.
 - If a script is archival or paragraph-specific, say that explicitly in the header comments.
 
 ## Scope Reminder
 
-`deploy.js` does not build the full rich paragraph by itself.
+`deploy.js` does not build the full rich paragraph by itself. It does not create:
 
-It does not create:
 - presentaties
 - uitleg voorkennis docx
 - uitleg vaardigheden docx
@@ -133,4 +124,4 @@ It does not create:
 - opgavensets
 - YouTube pages
 
-Those still require paragraph-specific content work first, using the reference implementations listed above.
+Those still require paragraph-specific content work first, using the `content/` builders as reference.

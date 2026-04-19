@@ -13,7 +13,7 @@ const PptxGenJS = require("pptxgenjs");
 const sharp = require("sharp");
 const fs = require("fs");
 const path = require("path");
-const { saveSvgFiles } = require("./lib-svg-save");
+const { saveSvgFiles } = require("../../lib/lib-svg-save");
 
 // ═══════════════════════════════════════════════════════════════════════════
 // COLOR PALETTE

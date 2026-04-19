@@ -13,7 +13,7 @@ const path = require('path');
 
 const MODULE_ROOT = process.env.MODULE_ROOT
     ? path.resolve(process.env.MODULE_ROOT)
-    : path.resolve(__dirname, '..');
+    : path.resolve(__dirname, '../..');
 const QUESTIONS_DIR = path.join(MODULE_ROOT, 'shared', 'questions');
 
 // Find all quiz data files to determine which quizzes to generate

@@ -24,7 +24,7 @@ const path = require("path");
 
 const MODULE_BASE = process.env.MODULE_ROOT
     ? path.resolve(process.env.MODULE_ROOT)
-    : path.join(__dirname, "..");
+    : path.join(__dirname, "../..");
 
 const ONLY_ID = null;
 const DRY_RUN = false;

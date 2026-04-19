@@ -11,7 +11,7 @@ require("module").Module._initPaths();
 const PptxGenJS = require("pptxgenjs");
 const fs = require("fs");
 const path = require("path");
-const { svgToPng, pngToBase64, GRAPH_COLORS } = require("./lib-svg-utils");
+const { svgToPng, pngToBase64, GRAPH_COLORS } = require("../../lib/lib-svg-utils");
 
 // Check for pre-built PNGs in _assets/
 const ASSETS_DIR = path.join(__dirname, "_assets");

@@ -13,7 +13,7 @@ const PptxGenJS = require("pptxgenjs");
 const sharp = require("sharp");
 const fs = require("fs");
 const path = require("path");
-const { saveSvgFiles } = require("./lib-svg-save");
+const { saveSvgFiles } = require("../../lib/lib-svg-save");
 
 // ═══════════════════════════════════════════════════════════════════════════
 // COLOR PALETTE
@@ -658,7 +658,7 @@ async function build() {
   }
 
   // ── Save ──────────────────────────────────────────────────────────────
-  const MODULE_ROOT = process.env.MODULE_ROOT ? path.resolve(process.env.MODULE_ROOT) : path.resolve(__dirname, "..");
+  const MODULE_ROOT = process.env.MODULE_ROOT ? path.resolve(process.env.MODULE_ROOT) : path.resolve(__dirname, "../../..");
   const outDir = path.resolve(MODULE_ROOT, "3.2 Hoofdstuk 2 - Marktvormen en hun marktevenwicht/3.2.6 Paragraaf 6 - Marktvormen en hun economische doelmatigheid/2. Leren");
   const outFile = path.join(outDir, "3.2.6 Marktvormen en hun economische doelmatigheid \u2013 presentatie.pptx");
 

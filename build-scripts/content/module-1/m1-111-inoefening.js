@@ -8,13 +8,13 @@ const fs = require("fs");
 const path = require("path");
 const {
   buildBegeleideInoefening,
-} = require("./lib-begeleide-inoefening.js");
+} = require("../../lib/lib-begeleide-inoefening.js");
 
 const PARAGRAAF_NR = "1.1.1";
 const ONDERWERP = "Kiezen is kostbaar";
 const HEADER_TEXT = "Paragraaf 1.1.1 Kiezen is kostbaar";
 const OUTPUT_DIR = path.resolve(__dirname,
-  "../../module one claude/1.1 Hoofdstuk 1 - Voor niks gaat de zon op/1.1.1 Paragraaf 1 - Kiezen is kostbaar/3. Oefenen/begeleide inoefening"
+  "../../../../module one claude/1.1 Hoofdstuk 1 - Voor niks gaat de zon op/1.1.1 Paragraaf 1 - Kiezen is kostbaar/3. Oefenen/begeleide inoefening"
 );
 
 // ====================================================================

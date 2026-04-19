@@ -1,6 +1,6 @@
 ---
 name: econ-pptx-templates
-description: "Build rich economics PPTX presentations via PptxGenJS. Defines pedagogy mandates (graphs, speaker notes, canonical terminology) and the two non-negotiable technical fixes (LibreOffice round-trip for PowerPoint compatibility; 2-digit-number width rule). Recommends — but does not require — the editorial design system in `build-scripts/lib-pptx.js`. Use whenever building presentaties, slides, lesslides, or any PowerPoint deck for economics VWO/HAVO. Always read the `pptx` skill first for PptxGenJS toolchain basics."
+description: "Build rich economics PPTX presentations via PptxGenJS. Defines pedagogy mandates (graphs, speaker notes, canonical terminology) and the two non-negotiable technical fixes (LibreOffice round-trip for PowerPoint compatibility; 2-digit-number width rule). Recommends — but does not require — the editorial design system in `build-scripts/lib/lib-pptx.js`. Use whenever building presentaties, slides, lesslides, or any PowerPoint deck for economics VWO/HAVO. Always read the `pptx` skill first for PptxGenJS toolchain basics."
 ---
 
 # Economics PPTX presentations
@@ -21,7 +21,7 @@ These are not style choices; they come from `references/didactiek-principes.md`,
 - **Body text ≥ 18pt.** Titles typically 28–44pt. Slide stats/hero numbers can go larger; respect the width rule below.
 - **Canonical Dutch terminology.** Use terms from `references/economie-terminologie.md` (e.g. "alternatieve kosten", NOT "opportuniteitskosten"). No anglicisms.
 - **Economic correctness.** Supply/demand labels, curve directions, units, movement-vs-shift, ceteris paribus — all must match `references/economic_mathematical_precision_reference.md`.
-- **Economic graph geometry.** Read the `economic-graph` skill. Run `build-scripts/verify_svg_geometry.py` after every SVG edit.
+- **Economic graph geometry.** Read the `economic-graph` skill. Run `build-scripts/lib/verify_svg_geometry.py` after every SVG edit.
 
 ---
 
@@ -68,7 +68,7 @@ Read each slide PNG. Look for: title/subtitle collisions, clipped text, stacked 
 
 ## RECOMMENDED — use the editorial design system
 
-`build-scripts/lib-pptx.js` is the shared library. Reference builder: `build-scripts/pptx-331-rol-overheid.js`.
+`build-scripts/lib/lib-pptx.js` is the shared library. Reference builder: `build-scripts/content/module-3/pptx-331-rol-overheid.js`.
 
 Exports:
 

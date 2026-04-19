@@ -17,14 +17,14 @@ const fs = require("fs");
 const path = require("path");
 const {
   buildBegeleideInoefening,
-} = require("./lib-begeleide-inoefening.js");
+} = require("../../lib/lib-begeleide-inoefening.js");
 
 // ── CONFIG ──
 const PARAGRAAF_NR = "3.5.1";
 const ONDERWERP = "Afsluiting";
 const HEADER_TEXT = "Paragraaf 3.5.1 Afsluiting";
 const OUTPUT_DIR = path.resolve(__dirname,
-  "../../3. Module 3 - Markt en overheid/3.5 Hoofdstuk 5 - Afsluiting/3.5.1 Paragraaf 1 - Afsluiting/3. Oefenen/begeleide inoefening"
+  "../../../../3. Module 3 - Markt en overheid/3.5 Hoofdstuk 5 - Afsluiting/3.5.1 Paragraaf 1 - Afsluiting/3. Oefenen/begeleide inoefening"
 );
 
 // ══════════════════════════════════════════════════════════════════════

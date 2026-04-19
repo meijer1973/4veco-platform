@@ -6,7 +6,7 @@
  */
 const fs = require("fs");
 const path = require("path");
-const { saveSvgFiles } = require("./lib-svg-save");
+const { saveSvgFiles } = require("../../lib/lib-svg-save");
 const sharp = require("sharp");
 const {
   Document, Packer, Paragraph, TextRun, Table, TableRow, TableCell,

@@ -11,11 +11,11 @@
 
 const fs = require('fs');
 const path = require('path');
-const baseElements = require('../engines/skilltree/base-elements');
+const baseElements = require('../../engines/skilltree/base-elements');
 
 const MODULE_ROOT = process.env.MODULE_ROOT
     ? path.resolve(process.env.MODULE_ROOT)
-    : path.resolve(__dirname, '..');
+    : path.resolve(__dirname, '../..');
 
 // ── Paragraph definitions ──────────────────────────────────────────
 

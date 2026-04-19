@@ -19,7 +19,7 @@ const {
 } = require("docx");
 
 // ─── Output ───
-const MODULE_ROOT = process.env.MODULE_ROOT ? path.resolve(process.env.MODULE_ROOT) : path.resolve(__dirname, "..");
+const MODULE_ROOT = process.env.MODULE_ROOT ? path.resolve(process.env.MODULE_ROOT) : path.resolve(__dirname, "../../..");
 const OUT_DIR = path.resolve(MODULE_ROOT, "3.2 Hoofdstuk 2 - Marktvormen en hun marktevenwicht/3.2.6 Paragraaf 6 - Marktvormen en hun economische doelmatigheid/2. Leren");
 const OUT_FILE = path.join(OUT_DIR, "3.2.6 Marktvormen en hun economische doelmatigheid \u2013 uitleg vaardigheden.docx");
 

@@ -278,8 +278,8 @@ STEP 12: FIX any issues, rebuild, inspect again
 ### Adapting the template scripts
 
 The build-scripts folder contains reference implementations:
-- `build-scripts/template-B_voorkennis.js` — scaffold for voorkennis documents
-- `build-scripts/template-A_vaardigheden.js` — scaffold for vaardigheden documents
+- `build-scripts/templates/template-B_voorkennis.js` — scaffold for voorkennis documents
+- `build-scripts/templates/template-A_vaardigheden.js` — scaffold for vaardigheden documents
 
 To adapt for a new paragraph:
 1. Copy the relevant script

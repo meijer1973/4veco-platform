@@ -13,7 +13,7 @@ const {
   svgToPng, pngB64, svgData,
   ICON, placeIcon,
   svgHeader, editorialTitle, fixPptxFile, roundtripWithLibreOffice,
-} = require("./lib-pptx.js");
+} = require("../../lib/lib-pptx.js");
 
 const PptxGenJS = require("pptxgenjs");
 const fs = require("fs");
@@ -1094,7 +1094,7 @@ async function build() {
   // ────────────────────────────────────────────────────────────────────
   // OUTPUT
   // ────────────────────────────────────────────────────────────────────
-  const outDir = path.resolve(__dirname, "../output/3.4.2");
+  const outDir = path.resolve(__dirname, "../../../output/3.4.2");
   if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { recursive: true });
 
   const svgDir = path.join(outDir, "svg");

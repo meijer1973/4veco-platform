@@ -7,7 +7,7 @@
  */
 const fs = require("fs");
 const path = require("path");
-const { svgToPng, pngToBase64, GRAPH_COLORS } = require("./lib-svg-utils");
+const { svgToPng, pngToBase64, GRAPH_COLORS } = require("../../lib/lib-svg-utils");
 const {
   Document, Packer, Paragraph, TextRun, Table, TableRow, TableCell,
   ImageRun, Header, Footer, AlignmentType, BorderStyle, WidthType,
@@ -24,7 +24,7 @@ const CW_TIGHT = 9638;
 const IMG_WIDTH_PT = 482;
 
 const ASSETS_DIR = path.resolve(__dirname,
-  "../../module one claude/1.1 Hoofdstuk 1 - Voor niks gaat de zon op/1.1.3 Paragraaf 3 - Toepassen/_assets"
+  "../../../../module one claude/1.1 Hoofdstuk 1 - Voor niks gaat de zon op/1.1.3 Paragraaf 3 - Toepassen/_assets"
 );
 
 function noBorders() {

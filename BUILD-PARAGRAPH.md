@@ -258,9 +258,9 @@ Each scripted-manual asset follows the same pattern: **read source → write bui
 
 | Config file | What to add | When |
 |-------------|-------------|------|
-| `build-scripts/build-landing-page.js` | PARAGRAAF_DATA entry | Every new paragraph |
-| `build-scripts/build-landing-page.js` | CHAPTER_FOLDERS, CHAPTER_ORDER, CHAPTER_NUMBERS, DOMAIN_COLORS | Only for new chapters |
-| `build-scripts/build-skilltree-shells.js` | PARAGRAPHS entry | Every new paragraph |
+| `build-scripts/platform/build-landing-page.js` | PARAGRAAF_DATA entry | Every new paragraph |
+| `build-scripts/platform/build-landing-page.js` | CHAPTER_FOLDERS, CHAPTER_ORDER, CHAPTER_NUMBERS, DOMAIN_COLORS | Only for new chapters |
+| `build-scripts/platform/build-skilltree-shells.js` | PARAGRAPHS entry | Every new paragraph |
 | `engines/tests/skilltree-data.test.js` | expectedFiles entry | Every new paragraph |
 | `engines/theme.js` | DOMAIN_COLORS entry | Only for new chapters |
 
@@ -289,7 +289,7 @@ cp "$MODULE/3.1 Hoofdstuk 1 - Markten/3.1.1 Paragraaf 1 - Markt en marktstructuu
 ### Phase 3: Create game data files (30 min)
 1. Write `shared/questions/X.Y.Z.js` — quiz data (15 questions)
 2. Write `source-data/module-N/reasoning/X.Y.Z.csv` — reasoning CSV
-3. Run: `MODULE_ROOT="$MODULE" node build-scripts/build-reasoning-questions.js X.Y.Z <domain> source-data/module-N/reasoning/X.Y.Z.csv`
+3. Run: `MODULE_ROOT="$MODULE" node build-scripts/platform/build-reasoning-questions.js X.Y.Z <domain> source-data/module-N/reasoning/X.Y.Z.csv`
 4. Write `shared/newsdetective/X.Y.Z.js` — newsdetective data
 5. Write `shared/procedure/X.Y.Z.js` — procedure/stappenplan data. Steps MUST align with the vaardigheden skills (same labels, same order). See procedure-stappen-plan in the paragraph plan.
 
@@ -301,7 +301,7 @@ Phase 4 has three sub-phases. The planning step ensures terminology consistency 
 
 Read the textbook paragraph and answer key thoroughly, then create the paragraph plan.
 
-1. Copy `build-scripts/template-paragraph-plan.md` → `<paragraph-folder>/_paragraph-plan.md`
+1. Copy `build-scripts/templates/template-paragraph-plan.md` → `<paragraph-folder>/_paragraph-plan.md`
 2. Fill in every section:
    - **Kernconcepten**: 5-8 key concepts with definitions, formulas, graph types
    - **Visuelen-plan**: every SVG visual needed, with filename, graph type, which builders use it, and parameters (e.g. curve equations)
@@ -323,9 +323,9 @@ Build all SVG graphics listed in the visuelen-plan, so they can be reused across
 1. Create `<paragraph-folder>/_assets/` subfolder
 2. For each visual in the visuelen-plan:
    - Write the SVG following the `economic-graph` skill spec
-   - Render to PNG via `lib-svg-utils.js`: `const { svgToPng } = require('./lib-svg-utils')`
+   - Render to PNG via `lib/lib-svg-utils.js`: `const { svgToPng } = require('../../lib/lib-svg-utils')`
    - Save both `.svg` and `.png` to `_assets/` (e.g. `_assets/va-equilibrium.svg`, `_assets/va-equilibrium.png`)
-3. Optionally save the asset-builder script as `build-scripts/mN-XYZ-build-assets.js`
+3. Optionally save the asset-builder script as `build-scripts/content/module-N/mN-XYZ-build-assets.js`
 4. Quality-check all PNGs before proceeding — verify economic correctness and readability
 
 #### Phase 4c — Build documents
@@ -352,9 +352,9 @@ Run each with: `NODE_PATH="$(npm root -g)" node <script>.js`
 
 ### Phase 5: Convert docx → html (2 min)
 ```bash
-python build-scripts/convert_voorkennis.py "$PAR"
-python build-scripts/convert_vaardigheden.py "$PAR"
-python build-scripts/convert_begeleide_inoefening.py "$PAR"
+python build-scripts/lib/convert_voorkennis.py "$PAR"
+python build-scripts/lib/convert_vaardigheden.py "$PAR"
+python build-scripts/lib/convert_begeleide_inoefening.py "$PAR"
 ```
 
 ### Phase 5a–5c: QC gates
@@ -523,7 +523,7 @@ The default is **narrative-first** — students connect with stories before abst
 
 ## B8. Build script requirement
 
-**Every scripted-manual file MUST have its build script saved** in `build-scripts/` with naming convention `mN-XYZ-<type>.js` (e.g., `m1-111-presentatie.js`).
+**Every scripted-manual file MUST have its build script saved** in `build-scripts/content/module-N/` with naming convention `mN-XYZ-<type>.js` (e.g., `m1-111-presentatie.js`).
 
 This ensures:
 - Any file can be regenerated after corrections
@@ -548,7 +548,7 @@ If a build script is not saved, the paragraph build is **incomplete**.
 | CHAPTER_NUMBERS must be updated alongside CHAPTER_FOLDERS | Otherwise navigation shows "Hundefined" |
 | Filter `~$` temp files in directory scans | Office lock files get picked up as real content otherwise |
 | Run `validate-paragraph.js` before declaring done | Catches missing files, corrupted docx, empty presentations |
-| Save all build scripts in `build-scripts/` | Without scripts, the paragraph can't be regenerated or improved |
+| Save all build scripts in `build-scripts/content/module-N/` | Without scripts, the paragraph can't be regenerated or improved |
 | Intro paragraphs: narrative-first approach | Students connect with stories (Lisa, Tom) before abstractions |
 | Register paragraph AND run deploy | Without deploy, game shells and landing pages are missing — students can't navigate |
 | Create `_paragraph-plan.md` before building documents | Ensures terminology consistency and concept coverage across all 8 documents |

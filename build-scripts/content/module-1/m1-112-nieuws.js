@@ -6,7 +6,7 @@
  */
 const fs = require("fs");
 const path = require("path");
-const { svgToPng, pngToBase64, GRAPH_COLORS } = require("./lib-svg-utils");
+const { svgToPng, pngToBase64, GRAPH_COLORS } = require("../../lib/lib-svg-utils");
 const {
   Document, Packer, Paragraph, TextRun, Table, TableRow, TableCell,
   ImageRun, Header, Footer, AlignmentType, BorderStyle, WidthType,

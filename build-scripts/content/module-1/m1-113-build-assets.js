@@ -9,11 +9,11 @@ require("module").Module._initPaths();
 
 const fs = require("fs");
 const path = require("path");
-const { svgToPng, pngToBase64, GRAPH_COLORS } = require("./lib-svg-utils");
+const { svgToPng, pngToBase64, GRAPH_COLORS } = require("../../lib/lib-svg-utils");
 
 const OUT_DIR = path.resolve(
   __dirname,
-  "../..",
+  "../../../..",
   "module one claude",
   "1.1 Hoofdstuk 1 - Voor niks gaat de zon op",
   "1.1.3 Paragraaf 3 - Toepassen",

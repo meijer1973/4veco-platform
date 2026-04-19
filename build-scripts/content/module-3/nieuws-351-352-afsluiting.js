@@ -26,7 +26,7 @@
 const fs = require("fs");
 const path = require("path");
 const sharp = require("sharp");
-const { saveSvgFiles } = require("./lib-svg-save");
+const { saveSvgFiles } = require("../../lib/lib-svg-save");
 const {
   Document, Packer, Paragraph, TextRun, Table, TableRow, TableCell,
   ImageRun, Header, Footer, AlignmentType, BorderStyle, WidthType,
@@ -415,7 +415,7 @@ async function buildNieuws(doc) {
 // ══════════════════════════════════════════════════════════════════════
 
 const OUTPUT_BASE = path.resolve(__dirname,
-  "../../3. Module 3 - Markt en overheid/3.5 Hoofdstuk 5 - Afsluiting"
+  "../../../../3. Module 3 - Markt en overheid/3.5 Hoofdstuk 5 - Afsluiting"
 );
 
 const DOC_351 = {
