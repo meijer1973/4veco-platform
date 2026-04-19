@@ -4,5 +4,5 @@ node_modules/
 __pycache__/
 .claude/settings.local.json
 
-# Build outputs (each pptx builder writes to its own output-NNN-* folder)
-/output-*/
+# Build outputs (each pptx builder writes to output/N.N.N/)
+/output/

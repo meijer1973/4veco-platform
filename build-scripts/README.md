@@ -4,6 +4,10 @@ This folder contains all production scripts used to turn source material into th
 
 If you want to build a complete paragraph from scratch, start with [BUILD-PARAGRAPH.md](C:\Projects\4veco\4veco-platform\BUILD-PARAGRAPH.md). This README explains how the scripts in `build-scripts/` are grouped and how to use that grouping.
 
+## Output Convention
+
+Intermediate build artifacts (pptx, svg, png) go to `output/{paragraph-code}/` at the repo root — e.g. `output/3.3.1/` for §3.3.1 and `output/3.4.2/` for §3.4.2. The whole `/output/` tree is gitignored; scripts may overwrite it freely. Final deployable artifacts still land inside the module repos via `scripts/deploy.js`.
+
 ## Script Types
 
 There are four script categories in this folder.
@@ -48,7 +52,6 @@ These are the most important scripts for rich paragraph production outside the a
 | `template-A_vaardigheden.js` | `uitleg vaardigheden.docx` |
 | `pptx-331-rol-overheid.js` | reference presentation builder (uses `lib-pptx.js`; editorial design system) |
 | `lib-pptx.js` | shared pptx library: palettes, typography, slide masters, SVG pipeline, LibreOffice round-trip |
-| `roundtrip-pptx.py` | python-pptx round-trip helper (legacy; LibreOffice round-trip in `lib-pptx.js` preferred) |
 | `nieuws-351-352-afsluiting.js` | `nieuws met visual.docx` |
 | `samenvatting-351-352-rebuild.js` | paragraph `samenvatting.docx` |
 | `inoefening-351-afsluiting.js` | begeleide inoefening docs |
@@ -71,13 +74,13 @@ Examples:
 - `pptx-322-volkomen-concurrentie.js`
 - `pptx-323-monopolie.js`
 - `pptx-332-overheidsbeleid.js`, `pptx-333-collectieve-goederen.js`, `pptx-334-toepassen.js` (creative builds that match `pptx-331-rol-overheid.js`)
+- `pptx-341-…` through `pptx-346-…` (§3.4 internationale handel)
 - `build-311-basisopgaven.js`
 - `build-infographic-311.js`
-- `extract-quiz-data.js`
-- `restyle-instapquiz.js`
-- `extract-all-antwoorden.py`
-- `fix-emoji.py`
-- `prompt-youtube-videos.md`
+
+### 5. Archive
+
+Legacy / one-off scripts live under `build-scripts/archive/`. They are kept for historical reference only and are not part of the active pipeline. See `build-scripts/archive/README.md` for the retention policy.
 
 ## How To Use This Folder
 

@@ -568,7 +568,7 @@ async function build() {
     });
   }
 
-  const outDir = path.resolve(__dirname, "../../output-333");
+  const outDir = path.resolve(__dirname, "../output/3.3.3");
   if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { recursive: true });
   const svgDir = path.join(outDir, "svg");
   if (!fs.existsSync(svgDir)) fs.mkdirSync(svgDir, { recursive: true });

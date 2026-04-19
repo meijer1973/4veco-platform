@@ -1180,7 +1180,7 @@ async function build() {
   // ────────────────────────────────────────────────────────────────────
   // OUTPUT
   // ────────────────────────────────────────────────────────────────────
-  const outDir = path.resolve(__dirname, "../../output-331");
+  const outDir = path.resolve(__dirname, "../output/3.3.1");
   if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { recursive: true });
 
   // Save raw SVGs for debugging

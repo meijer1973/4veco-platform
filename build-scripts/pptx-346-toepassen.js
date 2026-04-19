@@ -693,7 +693,7 @@ async function build() {
   }
 
   // ── Write + fix + round-trip ────────────────────────────────────────
-  const outDir = path.resolve(__dirname, "../../output-346");
+  const outDir = path.resolve(__dirname, "../output/3.4.6");
   if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { recursive: true });
   const svgDir = path.join(outDir, "svg");
   if (!fs.existsSync(svgDir)) fs.mkdirSync(svgDir, { recursive: true });
