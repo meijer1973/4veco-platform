@@ -111,7 +111,11 @@ const T = {
 // ═══════════════════════════════════════════════════════════════════════════
 // SLIDE MASTERS
 // ═══════════════════════════════════════════════════════════════════════════
-function defineMasters(pres) {
+function defineMasters(pres, opts = {}) {
+  // Footer labels — override via opts for non-§3.3 chapters
+  const darkLabel  = opts.darkLabel  || "PARAGRAAF  ·  §3.3";
+  const lightLabel = opts.lightLabel || "§ 3.3  ·  OVERHEID";
+
   // Full-bleed dark — section openers, hero stats, closing slides
   pres.defineSlideMaster({
     title: "DARK_HERO",
@@ -121,7 +125,7 @@ function defineMasters(pres) {
       { rect: { x: 0, y: 0, w: 10, h: 0.03, fill: { color: PC.coral } } },
       // Subtle watermark-style paragraph id (bottom-left)
       { text: {
-          text: "PARAGRAAF  ·  §3.3",
+          text: darkLabel,
           options: { x: 0.4, y: 5.23, w: 4, h: 0.3,
             fontFace: FONT_SANS, fontSize: 9, color: PC.indigoSoft,
             charSpacing: 4, bold: true, margin: 0, valign: "middle" } } },
@@ -135,9 +139,9 @@ function defineMasters(pres) {
     objects: [
       // Thin indigo hairline along the top
       { rect: { x: 0, y: 0, w: 10, h: 0.02, fill: { color: PC.indigo } } },
-      // Footer: paragraph id on left, page number placeholder on right
+      // Footer: paragraph id on left
       { text: {
-          text: "§ 3.3  ·  OVERHEID",
+          text: lightLabel,
           options: { x: 0.4, y: 5.28, w: 4, h: 0.3,
             fontFace: FONT_SANS, fontSize: 9, color: PC.ash,
             charSpacing: 3, bold: true, margin: 0, valign: "middle" } } },
@@ -235,16 +239,24 @@ function roundtripWithPythonPptx(pptxPath) {
 function roundtripWithLibreOffice(pptxPath) {
   const path = require("path");
   const SOFFICE = "C:/Program Files/LibreOffice/program/soffice.exe";
-  const tmpDir = path.join(require("os").tmpdir(), "pptx-lores-" + Date.now());
+  const uniq = Date.now() + "-" + Math.random().toString(36).slice(2, 8);
+  const tmpDir = path.join(require("os").tmpdir(), "pptx-lores-" + uniq);
+  const profileDir = path.join(require("os").tmpdir(), "lo-profile-" + uniq);
   fs.mkdirSync(tmpDir, { recursive: true });
   try {
-    execFileSync(SOFFICE, ["--headless", "--convert-to", "pptx", "--outdir", tmpDir, pptxPath],
+    // -env:UserInstallation isolates the user profile so concurrent headless
+    // invocations don't trip over each other's locks.
+    const profileUri = "file:///" + profileDir.replace(/\\/g, "/");
+    execFileSync(SOFFICE,
+      ["-env:UserInstallation=" + profileUri,
+       "--headless", "--convert-to", "pptx", "--outdir", tmpDir, pptxPath],
       { stdio: "pipe" });
     const outFile = path.join(tmpDir, path.basename(pptxPath));
     if (!fs.existsSync(outFile)) throw new Error("LibreOffice did not produce output file");
     fs.copyFileSync(outFile, pptxPath);
   } finally {
     try { fs.rmSync(tmpDir, { recursive: true, force: true }); } catch {}
+    try { fs.rmSync(profileDir, { recursive: true, force: true }); } catch {}
   }
 }
 
