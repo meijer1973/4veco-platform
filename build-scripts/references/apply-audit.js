@@ -17,7 +17,10 @@ const { loadCatalog, saveCatalog } = require('./unit-lib');
 const { parseMarkdown, loadEindtermen } = require('./build-unit-index');
 
 const REPO_ROOT = path.resolve(__dirname, '..', '..');
-const AUDIT_JSON = path.join(__dirname, 'audit-2025.json');
+const AUDIT_FILES = [
+  path.join(__dirname, 'audit-2025.json'),
+  path.join(__dirname, 'audit-2023-2024.json'),
+];
 const EXAM_QUESTIONS = path.join(REPO_ROOT, 'references/external/exam-questions.json');
 
 const DOMAIN_ORDER = ['D', 'E', 'F', 'G', 'H', 'I', 'A', 'B', 'C', 'J', 'K'];
@@ -27,7 +30,14 @@ function isAId(s)    { return /^A\d{2}$/.test(s); }
 function isUnitId(s) { return /^[A-K]\d{2}$/.test(s); }
 
 function main() {
-  const audit = JSON.parse(fs.readFileSync(AUDIT_JSON, 'utf8'));
+  // Merge all audit files (one per run-year batch) into one map.
+  const audit = {};
+  for (const f of AUDIT_FILES) {
+    if (!fs.existsSync(f)) continue;
+    Object.assign(audit, JSON.parse(fs.readFileSync(f, 'utf8')));
+  }
+  console.log(`merged audit covers ${Object.keys(audit).length} exams`);
+
   const eindtermen = loadEindtermen() || new Set();
   console.log(`loaded ${eindtermen.size} valid eindtermen`);
 
@@ -65,13 +75,15 @@ function main() {
     (slugsByDomain[letter] = slugsByDomain[letter] || []).push(slug);
   }
 
-  // Idempotency: refuse if any non-A unit already exists.
-  const { preamble, units, byId } = loadCatalog();
-  const existingNonA = units.filter(u => !u.id.startsWith('A') && !u.deprecated);
-  if (existingNonA.length > 0) {
-    console.error(`refuse to run: catalog already has ${existingNonA.length} non-A unit(s). Revert first.`);
-    process.exit(1);
-  }
+  // Clean-rebuild mode: remove all non-A non-deprecated units so the audit
+  // can replace them with the merged multi-year output. A-domain (math
+  // skilltree) units are preserved.
+  const loaded = loadCatalog();
+  const preamble = loaded.preamble;
+  const byId = loaded.byId;
+  const units = loaded.units.filter(u => u.id.startsWith('A') || u.deprecated);
+  const removed = loaded.units.length - units.length;
+  if (removed > 0) console.log(`[rebuild] removed ${removed} existing non-A units (will be re-minted from audit)`);
 
   // Next available ID number for A-domain (if any new A-units are proposed).
   const aUsed = new Set(units.filter(u => u.id.startsWith('A')).map(u => u.id));

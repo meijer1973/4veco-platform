@@ -120,6 +120,18 @@ async function main() {
     process.exit(1);
   }
 
+  // Preserve existing annotations (required_skills, question_type, exam_codes)
+  // across re-extractions. The raw extraction produces empty placeholders;
+  // without this merge they would overwrite audit-applied annotations.
+  const existingByKey = new Map();
+  if (fs.existsSync(OUT_JSON)) {
+    try {
+      for (const row of JSON.parse(fs.readFileSync(OUT_JSON, 'utf8'))) {
+        existingByKey.set(row.exam + ':' + row.question_num, row);
+      }
+    } catch { /* ignore malformed */ }
+  }
+
   const pdfFiles = fs.readdirSync(EXAMS_DIR)
     .filter(f => /-o\.pdf$/.test(f))
     .sort();
@@ -135,6 +147,15 @@ async function main() {
     const buf = fs.readFileSync(path.join(EXAMS_DIR, f));
     const text = (await new PDFParse({ data: new Uint8Array(buf) }).getText()).text;
     const questions = extractQuestions(text, meta);
+    // Carry forward existing annotations when present.
+    for (const q of questions) {
+      const prior = existingByKey.get(q.exam + ':' + q.question_num);
+      if (prior) {
+        if (Array.isArray(prior.required_skills)) q.required_skills = prior.required_skills;
+        if (prior.question_type !== undefined) q.question_type = prior.question_type;
+        if (Array.isArray(prior.exam_codes)) q.exam_codes = prior.exam_codes;
+      }
+    }
     console.log(`${f}: ${questions.length} questions`);
     all.push(...questions);
   }
@@ -145,7 +166,8 @@ async function main() {
   });
 
   fs.writeFileSync(OUT_JSON, JSON.stringify(all, null, 2) + '\n');
-  console.log(`\nwrote ${path.relative(REPO_ROOT, OUT_JSON)} (${all.length} total questions)`);
+  const annotated = all.filter(q => q.required_skills && q.required_skills.length > 0).length;
+  console.log(`\nwrote ${path.relative(REPO_ROOT, OUT_JSON)} (${all.length} total; ${annotated} already annotated)`);
 
   const byExam = {};
   const byType = {};

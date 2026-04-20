@@ -665,7 +665,34 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - prior_learning: new_this_year
 - terms: []
 
-### D05 Heffing tegen overconsumptie
+### D05 Evenwicht bij accijns
+- kern: "Student berekent nieuw evenwicht en accijnsopbrengst na invoering van een heffing."
+- needs: []
+- mastery_target: apply
+- prior_learning: new_this_year
+- terms: []
+- procedure:
+  1. Student berekent nieuw evenwicht en accijnsopbrengst na invoering van een heffing.
+
+### D06 Gasverbruik en prijselasticiteit
+- kern: "Student analyseert hoe prijselasticiteit van de vraag naar gas zich vertaalt in reactie op energieprijsstijgingen."
+- needs: []
+- exam_codes: [D1.3]
+- mastery_target: understand
+- prior_learning: new_this_year
+- terms: []
+
+### D07 Heffing doorberekenen in prijs
+- kern: "Bereken welk percentage van een heffing wordt doorberekend in de consumentenprijs via evenwichtsanalyse."
+- needs: []
+- exam_codes: [D1.4a]
+- mastery_target: apply
+- prior_learning: new_this_year
+- terms: []
+- procedure:
+  1. Bereken welk percentage van een heffing wordt doorberekend in de consumentenprijs via evenwichtsanalyse.
+
+### D08 Heffing tegen overconsumptie
 - kern: "Student analyseert of een heffing overconsumptie tegengaat via veranderde vraag."
 - needs: []
 - exam_codes: [D1.4a]
@@ -673,7 +700,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - prior_learning: new_this_year
 - terms: []
 
-### D06 Homogene en heterogene goederen
+### D09 Homogene en heterogene goederen
 - kern: "Homogene goederen zijn identiek; heterogene goederen verschillen in kwaliteit of kenmerken."
 - needs: []
 - exam_codes: [D2.1]
@@ -681,14 +708,46 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - prior_learning: previously_taught
 - terms: []
 
-### D07 Marktfalen in watervoorziening
+### D10 Huizenmarkt in laagconjunctuur
+- kern: "Student analyseert effecten van laagconjunctuur op huiskoopprijzen via vraag en aanbod."
+- needs: []
+- mastery_target: understand
+- prior_learning: new_this_year
+- terms: []
+
+### D11 Inkomenselasticiteit huurmarkt
+- kern: "Student berekent en interpreteert inkomenselasticiteit van huurwoningen."
+- needs: []
+- mastery_target: apply
+- prior_learning: new_this_year
+- terms: []
+- procedure:
+  1. Student berekent en interpreteert inkomenselasticiteit van huurwoningen.
+
+### D12 Kruiselasticiteit en substituten
+- kern: "Student bepaalt uit kruiselasticiteit of goederen substituten zijn en analyseert vraagverschuivingen."
+- needs: []
+- mastery_target: apply
+- prior_learning: new_this_year
+- terms: []
+- procedure:
+  1. Student bepaalt uit kruiselasticiteit of goederen substituten zijn en analyseert vraagverschuivingen.
+
+### D13 Loonkostenstijging en arbeidsproductiviteit
+- kern: "Student analyseert hoe een stijging van loonkosten relatief tot arbeidsproductiviteit leidt tot hogere productiekosten."
+- needs: []
+- mastery_target: understand
+- prior_learning: new_this_year
+- terms: []
+
+### D14 Marktfalen in watervoorziening
 - kern: "Student bepaalt wanneer marktwerking doelen bereikt of overheidsinterventie nodig is."
 - needs: []
 - mastery_target: understand
 - prior_learning: new_this_year
 - terms: []
 
-### D08 Marktvormen classificeren
+### D15 Marktvormen classificeren
 - kern: "Classificeer markten aan hand van aantal aanbieders, aard van goederen en toetreding."
 - needs: []
 - exam_codes: [D2.1]
@@ -696,28 +755,55 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - prior_learning: previously_taught
 - terms: []
 
-### D09 Minimumprijs en werkloosheid
+### D16 Minimumprijs en werkloosheid
 - kern: "Minimumloon boven marktloon veroorzaakt vraagoverschot van arbeid en werkloosheid."
 - needs: []
 - mastery_target: understand
 - prior_learning: new_this_year
 - terms: []
 
-### D10 Subsidie en Pareto-efficientie
+### D17 Monopolie minimaal verlies
+- kern: "Onderneming met alleen vaste kosten heeft MK = 0, dus MK = GVK. Minimaal verlies waar prijs totale opbrengst dekt."
+- needs: []
+- mastery_target: understand
+- prior_learning: new_this_year
+- terms: []
+
+### D18 Monopolie met prijsdifferentiatie
+- kern: "Student bepaalt hoe monopolist winst behaalt via prijsdiscriminatie over verschillende markten."
+- needs: []
+- exam_codes: [D2.3]
+- mastery_target: apply
+- prior_learning: new_this_year
+- terms: []
+- procedure:
+  1. Student bepaalt hoe monopolist winst behaalt via prijsdiscriminatie over verschillende markten.
+
+### D19 Subsidie en Pareto-efficientie
 - kern: "Student legt uit of een subsidie-evenwicht Pareto-efficient is."
 - needs: []
 - mastery_target: understand
 - prior_learning: new_this_year
 - terms: []
 
-### D11 Pareto-efficientie in marktevenwicht
+### D20 Pareto-efficientie in marktevenwicht
 - kern: "Student legt uit wanneer een marktevenwicht Pareto-efficient is."
 - needs: []
 - mastery_target: understand
 - prior_learning: new_this_year
 - terms: []
 
-### D12 Prijsdiscriminatie en subsidies
+### D21 Prijsdiscriminatie over inkomensgroepen
+- kern: "Student analyseert hoe bedrijven prijzen differentieren en welvaartsgevolgen per inkomensgroep."
+- needs: []
+- exam_codes: [D2.3]
+- mastery_target: analyze
+- prior_learning: new_this_year
+- terms: []
+- procedure:
+  1. Student analyseert hoe bedrijven prijzen differentieren en welvaartsgevolgen per inkomensgroep.
+
+### D22 Prijsdiscriminatie en subsidies
 - kern: "Student herkent of subsidies prijsdiscriminatie veroorzaken en analyseert gevolgen."
 - needs: []
 - exam_codes: [D2.3]
@@ -725,7 +811,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - prior_learning: new_this_year
 - terms: []
 
-### D13 Voorwaarden voor prijsdiscriminatie
+### D23 Voorwaarden voor prijsdiscriminatie
 - kern: "Prijsdiscriminatie vereist marktscheiding en verschillende betalingsbereidheid."
 - needs: []
 - exam_codes: [D2.3]
@@ -733,21 +819,36 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - prior_learning: new_this_year
 - terms: []
 
-### D14 Soorten variabele kosten classificeren
+### D24 Drie voorwaarden prijsdiscriminatie
+- kern: "Student legt uit drie voorwaarden: voldoende marktmacht, markten scheiden, verschillende prijselasticiteiten."
+- needs: []
+- exam_codes: [D2.3]
+- mastery_target: understand
+- prior_learning: new_this_year
+- terms: []
+
+### D25 Prijselasticiteit en omzet
+- kern: "Bij inelastische vraag leidt grotere hoeveelheid tot lagere prijs; totale omzet kan dalen."
+- needs: []
+- mastery_target: understand
+- prior_learning: new_this_year
+- terms: []
+
+### D26 Soorten variabele kosten classificeren
 - kern: "Student onderscheidt tussen degressief, progressief en proportioneel variabele kosten."
 - needs: []
 - mastery_target: understand
 - prior_learning: previously_taught
 - terms: []
 
-### D15 Substituten en complementen
+### D27 Substituten en complementen
 - kern: "Substituten vervangen elkaar; complementen worden samen gebruikt."
 - needs: []
 - mastery_target: understand
 - prior_learning: previously_taught
 - terms: []
 
-### D16 Welvaart en surplus-effect
+### D28 Welvaart en surplus-effect
 - kern: "Prijsverlaging verhoogt consumentensurplus; effect op producentensurplus verschilt per geval."
 - needs: []
 - exam_codes: [D3.1]
@@ -755,7 +856,17 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - prior_learning: new_this_year
 - terms: []
 
-### D17 Winstmaximalisatie MO = MK
+### D29 Welvaartsverlies bij subsidie
+- kern: "Bepaal en arceer het deadweight loss ontstaan door subsidies als gevolg van allocatieve inefficientie."
+- needs: []
+- exam_codes: [D3.1]
+- mastery_target: apply
+- prior_learning: new_this_year
+- terms: []
+- procedure:
+  1. Bepaal en arceer het deadweight loss ontstaan door subsidies als gevolg van allocatieve inefficientie.
+
+### D30 Winstmaximalisatie MO = MK
 - kern: "Winstmaximale hoeveelheid vind je waar marginale opbrengst gelijk is aan marginale kosten."
 - needs: []
 - mastery_target: apply
@@ -780,7 +891,15 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - prior_learning: new_this_year
 - terms: []
 
-### E03 Omslagstelsel (AOW)
+### E03 Kapitaaldekking en renteeffecten
+- kern: "Student analyseert hoe rentes de betaalbaarheid van kapitaalgedekte pensioenen onder druk zetten."
+- needs: []
+- exam_codes: [E1.1]
+- mastery_target: understand
+- prior_learning: new_this_year
+- terms: []
+
+### E04 Omslagstelsel (AOW)
 - kern: "Omslagstelsel: werkenden betalen premie voor huidige uitkeringen; gevoelig voor vergrijzing."
 - needs: []
 - exam_codes: [E2.1]
@@ -788,14 +907,30 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - prior_learning: previously_taught
 - terms: []
 
-### E04 Voorraad- en stroomgrootheden onderscheiden
+### E05 Verlaging pensioenuitkeringen en solidariteit
+- kern: "Student analyseert hoe verlaging van pensioenuitkeringen de solidariteit tussen generaties beinvloedt."
+- needs: []
+- exam_codes: [E2.1]
+- mastery_target: understand
+- prior_learning: new_this_year
+- terms: []
+
+### E06 Voorraad- en stroomgrootheden onderscheiden
 - kern: "Student onderscheidt tussen voorraad- en stroomgrootheden."
 - needs: []
 - mastery_target: understand
 - prior_learning: previously_taught
 - terms: []
 
-### F01 Collectief goed classificeren
+### F01 Berovingsprobleem
+- kern: "Bedrijf investeert in specifieke technologie; het loopt risico dat partner contract breekt na de investering."
+- needs: []
+- exam_codes: [F2.1]
+- mastery_target: understand
+- prior_learning: new_this_year
+- terms: []
+
+### F02 Collectief goed classificeren
 - kern: "Student herkent collectieve goederen aan hand van excludeerbaarheid en rivaliteit."
 - needs: []
 - exam_codes: [F2.2]
@@ -803,7 +938,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - prior_learning: new_this_year
 - terms: []
 
-### F02 Dominante strategie
+### F03 Dominante strategie
 - kern: "Dominante strategie is de beste keuze voor een speler ongeacht wat de ander doet."
 - needs: []
 - exam_codes: [F1.5]
@@ -811,7 +946,17 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - prior_learning: previously_taught
 - terms: []
 
-### F03 Emissierechten als prikkel
+### F04 Duopolie en spelmatrixanalyse
+- kern: "Student analyseert dominante strategieen en winstmaximalisatie in een duopol via pay-off matrix."
+- needs: []
+- exam_codes: [F1.4]
+- mastery_target: apply
+- prior_learning: new_this_year
+- terms: []
+- procedure:
+  1. Student analyseert dominante strategieen en winstmaximalisatie in een duopol via pay-off matrix.
+
+### F05 Emissierechten als prikkel
 - kern: "Emissierechten geven bedrijven een prikkel om te verduurzamen door kosten van vervuiling."
 - needs: []
 - exam_codes: [F2.4]
@@ -819,7 +964,15 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - prior_learning: new_this_year
 - terms: []
 
-### F04 Externe effecten in marktbeslissingen
+### F06 Externe effecten en innovatieprikkel
+- kern: "Belastingen op negatieve externe effecten creeren een prikkel voor innovatie in schonere technologie."
+- needs: []
+- exam_codes: [F2.4]
+- mastery_target: understand
+- prior_learning: new_this_year
+- terms: []
+
+### F07 Externe effecten in marktbeslissingen
 - kern: "Student erkent dat negatieve externe effecten leiden tot overproductie vanuit maatschappelijk perspectief."
 - needs: []
 - exam_codes: [F2.4]
@@ -827,7 +980,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - prior_learning: new_this_year
 - terms: []
 
-### F05 Negatieve externe effecten
+### F08 Negatieve externe effecten
 - kern: "Overmatige consumptie met negatieve externe effecten leidt tot maatschappelijk welvaartsverlies."
 - needs: []
 - exam_codes: [F2.4]
@@ -835,7 +988,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - prior_learning: new_this_year
 - terms: []
 
-### F06 Gevangenendilemma
+### F09 Gevangenendilemma
 - kern: "Situatie waarbij dominante strategie leidt tot suboptimale uitkomst voor beide spelers."
 - needs: []
 - exam_codes: [F1.5]
@@ -843,7 +996,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - prior_learning: new_this_year
 - terms: []
 
-### F07 Internalisatie van externe effecten
+### F10 Internalisatie van externe effecten
 - kern: "Prijs gelijk aan maatschappelijke kosten zorgt ervoor dat externe effecten geinternaliseerd worden."
 - needs: []
 - exam_codes: [F2.4]
@@ -851,7 +1004,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - prior_learning: new_this_year
 - terms: []
 
-### F08 Lumpsum-financiering en externe effecten
+### F11 Lumpsum-financiering en externe effecten
 - kern: "Student legt uit hoe een lumpsum-financiering positieve externe effecten internaliseert."
 - needs: []
 - exam_codes: [F2.4]
@@ -859,7 +1012,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - prior_learning: new_this_year
 - terms: []
 
-### F09 Nash-evenwicht identificeren
+### F12 Nash-evenwicht identificeren
 - kern: "Student bepaalt het Nash-evenwicht uit een pay-off matrix met twee spelers."
 - needs: []
 - exam_codes: [F1.4]
@@ -869,7 +1022,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - procedure:
   1. Student bepaalt het Nash-evenwicht uit een pay-off matrix met twee spelers.
 
-### F10 Opzegtermijn en loonkosten
+### F13 Opzegtermijn en loonkosten
 - kern: "Student legt uit hoe kortere opzegtermijnen via berovingsprobleem tot hogere loonkosten leiden."
 - needs: []
 - exam_codes: [F2.1]
@@ -877,7 +1030,15 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - prior_learning: new_this_year
 - terms: []
 
-### F11 Verzonken kosten en beslissingen
+### F14 Toerismeconcentratie en externe effecten
+- kern: "Student analyseert hoe concentratie van toerisme negatieve externe effecten veroorzaakt."
+- needs: []
+- exam_codes: [F2.4]
+- mastery_target: understand
+- prior_learning: new_this_year
+- terms: []
+
+### F15 Verzonken kosten en beslissingen
 - kern: "Hoge verzonken kosten kunnen bedrijven aanmoedigen andere markten te zoeken."
 - needs: []
 - exam_codes: [F2.1]
@@ -901,7 +1062,15 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - prior_learning: new_this_year
 - terms: []
 
-### G03 Eigen risico en moral hazard
+### G03 Broodfonds: informatie en risicovermindering
+- kern: "In een broodfonds is er geen asymmetrische informatie omdat deelnemers elkaar goed kennen en vertrouwen."
+- needs: []
+- exam_codes: [G3.2]
+- mastery_target: understand
+- prior_learning: new_this_year
+- terms: []
+
+### G04 Eigen risico en moral hazard
 - kern: "Eigen risico geeft verzekerden een prikkel om voorzichtiger te handelen."
 - needs: []
 - exam_codes: [G4.5]
@@ -909,7 +1078,15 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - prior_learning: new_this_year
 - terms: []
 
-### G04 Principaal-agentprobleem identificeren
+### G05 Principaal-agent overheid en markt
+- kern: "Student beschrijft hoe mededingingsautoriteit en manager belangen verschillen."
+- needs: []
+- exam_codes: [G3.2]
+- mastery_target: understand
+- prior_learning: new_this_year
+- terms: []
+
+### G06 Principaal-agentprobleem identificeren
 - kern: "Student identificeert principaal-agentrelaties en de problemen die daaruit voortvloeien."
 - needs: []
 - exam_codes: [G3.2]
@@ -917,7 +1094,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - prior_learning: new_this_year
 - terms: []
 
-### G05 Transactiekosten
+### G07 Transactiekosten
 - kern: "Student berekent en interpreteert transactiekosten bij ruil."
 - needs: []
 - exam_codes: [G2.1]
@@ -927,7 +1104,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - procedure:
   1. Student berekent en interpreteert transactiekosten bij ruil.
 
-### G06 Vereveningsfonds voor risicodeling
+### G08 Vereveningsfonds voor risicodeling
 - kern: "Gemeenschappelijk fonds kan risico's uitvlakken en kostenverschillen compenseren."
 - needs: []
 - exam_codes: [G3.3]
@@ -935,7 +1112,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - prior_learning: new_this_year
 - terms: []
 
-### G07 Solidariteit in verzekeringen
+### G09 Solidariteit in verzekeringen
 - kern: "Gepersonaliseerde premies op basis van individueel risicoprofiel ondermijnen solidariteit."
 - needs: []
 - exam_codes: [G3.2]
@@ -943,10 +1120,18 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - prior_learning: new_this_year
 - terms: []
 
-### G08 Informatieasymmetrie verzekeringsmarkt
+### G10 Informatieasymmetrie verzekeringsmarkt
 - kern: "Informatieongelijkheid tussen verzekeraar en klant kan selectie- en moraalrisicoproblemen veroorzaken."
 - needs: []
 - exam_codes: [G2.2]
+- mastery_target: understand
+- prior_learning: new_this_year
+- terms: []
+
+### G11 Wisselkoersrisico bij valutabetaling
+- kern: "Student legt uit hoe appreciatie van de euro de werkelijke opbrengsten van exporteurs nadelig beinvloedt."
+- needs: []
+- exam_codes: [G2.1]
 - mastery_target: understand
 - prior_learning: new_this_year
 - terms: []
@@ -969,7 +1154,17 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - procedure:
   1. Student berekent de arbeidsinkomenquote: (arbeidsinkomen / nationaal inkomen) x 100%.
 
-### H03 Belastingschijven berekening
+### H03 Armington-elasticiteit
+- kern: "Student berekent Armington-elasticiteit en analyseert effectiviteit van import-beperkend beleid."
+- needs: []
+- exam_codes: [H1.1]
+- mastery_target: apply
+- prior_learning: new_this_year
+- terms: []
+- procedure:
+  1. Student berekent Armington-elasticiteit en analyseert effectiviteit van import-beperkend beleid.
+
+### H04 Belastingschijven berekening
 - kern: "Belastingdruk bepaald aan hand van marginaal tarief en betreffende schijven."
 - needs: []
 - exam_codes: [H4.6]
@@ -979,7 +1174,41 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - procedure:
   1. Belastingdruk bepaald aan hand van marginaal tarief en betreffende schijven.
 
-### H04 Exportsubsidie als protectie
+### H05 Circulaire economie en groen bbp
+- kern: "Student analyseert hoe circulaire economie het groen bbp kan verhogen via reductie milieuschade en recycling."
+- needs: []
+- exam_codes: [H3.4]
+- mastery_target: understand
+- prior_learning: new_this_year
+- terms: []
+
+### H06 Totale CO2-uitstoot berekenen
+- kern: "Bereken totale milieueffect van marktveranderingen door per-eenheid emissie met hoeveelheid te vermenigvuldigen."
+- needs: []
+- exam_codes: [H3.4]
+- mastery_target: apply
+- prior_learning: new_this_year
+- terms: []
+- procedure:
+  1. Bereken totale milieueffect van marktveranderingen door per-eenheid emissie met hoeveelheid te vermenigvuldigen.
+
+### H07 Vergrijzing, spaarquote en rente
+- kern: "Hogere sparende populatie vergroot kapitaalaanbod, wat de evenwichtsrente drukt."
+- needs: []
+- exam_codes: [H5.1]
+- mastery_target: understand
+- prior_learning: new_this_year
+- terms: []
+
+### H08 Denivellering en progressieve belasting
+- kern: "Denivellering treedt op wanneer belastingveranderingen het verschil in netto-inkomsten tussen inkomensgroepen verkleinen."
+- needs: []
+- exam_codes: [H4.6]
+- mastery_target: understand
+- prior_learning: new_this_year
+- terms: []
+
+### H09 Exportsubsidie als protectie
 - kern: "Toewijzing van emissierechten aan exporteurs verlaagt kosten en werkt protectionistisch."
 - needs: []
 - exam_codes: [H1.1]
@@ -987,7 +1216,15 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - prior_learning: new_this_year
 - terms: []
 
-### H05 Groen bbp en CO2
+### H10 Gini-coefficient bij recessie
+- kern: "Gini-coefficient stijgt tijdens recessie door werkloosheidsconcentratie en toename inkomensongelijkheid."
+- needs: []
+- exam_codes: [H4.1]
+- mastery_target: understand
+- prior_learning: new_this_year
+- terms: []
+
+### H11 Groen bbp en CO2
 - kern: "Lagere CO2-uitstoot vergroot groen bbp; minder productie wegens minder emissierechten verkleint het."
 - needs: []
 - exam_codes: [H3.4]
@@ -995,7 +1232,15 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - prior_learning: new_this_year
 - terms: []
 
-### H06 Minimumuurloon en internationale concurrentie
+### H12 Houdbaarheidssaldo
+- kern: "Het houdbaarheidssaldo geeft aan of overheidsvoorzieningen op lange termijn betaalbaar blijven; stijgende grijze druk verslechtert het saldo."
+- needs: []
+- exam_codes: [H5.1]
+- mastery_target: understand
+- prior_learning: new_this_year
+- terms: []
+
+### H13 Minimumuurloon en internationale concurrentie
 - kern: "Hoger minimumuurloon verhoogt bedrijfskosten, wat de internationale concurrentiepositie kan verslechteren."
 - needs: []
 - exam_codes: [H1.1]
@@ -1003,7 +1248,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - prior_learning: new_this_year
 - terms: []
 
-### H07 Minimumuurloon en economische groei
+### H14 Minimumuurloon en economische groei
 - kern: "Verhogen van het minimumuurloon kan via hogere consumptie tot economische groei leiden."
 - needs: []
 - exam_codes: [H1.1]
@@ -1011,7 +1256,15 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - prior_learning: new_this_year
 - terms: []
 
-### H08 Ontslagrecht en werkgeverrisico
+### H15 Nominale rentepercentage analyseren
+- kern: "Verklaar veranderingen in nominale rentevoeten van staatsobligaties met behulp van grafieken."
+- needs: []
+- exam_codes: [H5.2]
+- mastery_target: understand
+- prior_learning: new_this_year
+- terms: []
+
+### H16 Ontslagrecht en werkgeverrisico
 - kern: "Student legt uit hoe versoepeling van ontslagrecht risico voor werkgevers vermindert."
 - needs: []
 - exam_codes: [H5.1]
@@ -1019,7 +1272,15 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - prior_learning: new_this_year
 - terms: []
 
-### H09 Progressief tarief berekenen
+### H17 Productiviteit en technologie
+- kern: "Investeringen in arbeidsproductiviteit-verhogende technologieen kunnen op korte termijn werkgelegenheid verminderen maar op lange termijn concurrentiepositie verbeteren."
+- needs: []
+- exam_codes: [H1.1]
+- mastery_target: understand
+- prior_learning: new_this_year
+- terms: []
+
+### H18 Progressief tarief berekenen
 - kern: "Student berekent totale belasting bij progressieve tarieven en analyseert stimulansen."
 - needs: []
 - exam_codes: [H4.6]
@@ -1029,7 +1290,15 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - procedure:
   1. Student berekent totale belasting bij progressieve tarieven en analyseert stimulansen.
 
-### H10 Spaarsaldo en betalingsbalans
+### H19 Publiek kapitaal en staatsschuldquote
+- kern: "Student legt uit hoe investeringen in publiek kapitaal op lange termijn staatsschuldquote kunnen verlagen."
+- needs: []
+- exam_codes: [H5.1]
+- mastery_target: understand
+- prior_learning: new_this_year
+- terms: []
+
+### H20 Spaarsaldo en betalingsbalans
 - kern: "Student interpreteert positieve en negatieve particuliere spaarsalda."
 - needs: []
 - exam_codes: [H1.2]
@@ -1037,10 +1306,52 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - prior_learning: new_this_year
 - terms: []
 
-### H11 Wisselkoers en economische groei
+### H21 Staatsschuldquote berekenen
+- kern: "Bereken staatsschuldquote = staatsschuld / bbp x 100% en bepaal drempels voor duurzaamheid."
+- needs: []
+- exam_codes: [H5.1]
+- mastery_target: apply
+- prior_learning: new_this_year
+- terms: []
+- procedure:
+  1. Bereken staatsschuldquote = staatsschuld / bbp x 100% en bepaal drempels voor duurzaamheid.
+
+### H22 Tarifaanpassing en inkomenseffecten
+- kern: "Student analyseert hoe tarifaanpassingen secundaire inkomenseffecten hebben via vraagveranderingen."
+- needs: []
+- mastery_target: understand
+- prior_learning: new_this_year
+- terms: []
+
+### H23 Uitverdieneffect en belastingwig
+- kern: "Student legt uit hoe progressieve belastingen via hogere marginale lastendruk en substitutieeffect arbeidsaanbod verkleinen."
+- needs: []
+- exam_codes: [H4.6]
+- mastery_target: understand
+- prior_learning: new_this_year
+- terms: []
+
+### H24 Wisselkoers en depreciatie
+- kern: "Student berekent wisselkoerseffecten van depreciatie en legt uit hoe deze reele inkomens beinvloeden."
+- needs: []
+- exam_codes: [H1.1]
+- mastery_target: apply
+- prior_learning: new_this_year
+- terms: []
+- procedure:
+  1. Student berekent wisselkoerseffecten van depreciatie en legt uit hoe deze reele inkomens beinvloeden.
+
+### H25 Wisselkoers en economische groei
 - kern: "Student legt uit hoe wisselkoerseffecten tot groei kunnen leiden."
 - needs: []
 - exam_codes: [H1.1]
+- mastery_target: understand
+- prior_learning: new_this_year
+- terms: []
+
+### H26 Woonlastafweging koop vs huur
+- kern: "Beslissing over koop van eigen woning hangt af van rente, hypotheekkosten, huurprijs en persoonlijke omstandigheden."
+- needs: []
 - mastery_target: understand
 - prior_learning: new_this_year
 - terms: []
@@ -1059,7 +1370,22 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - prior_learning: new_this_year
 - terms: []
 
-### I03 Centrale bank rentebeleid
+### I03 Bedrijfsinvesteringen in laagconjunctuur
+- kern: "In laagconjunctuur reageren bedrijfsinvesteringen beperkt op renteverlagingen vanwege lage vraag."
+- needs: []
+- mastery_target: understand
+- prior_learning: new_this_year
+- terms: []
+
+### I04 CAO-looptijd en arbeidsmarktrigiditeit
+- kern: "Student legt uit hoe langere CAO-looptijden arbeidsmarktflexibiliteit en beleid beinvloeden."
+- needs: []
+- exam_codes: [I4.4]
+- mastery_target: understand
+- prior_learning: new_this_year
+- terms: []
+
+### I05 Centrale bank rentebeleid
 - kern: "Student bepaalt wanneer centrale banken rentes verhogen of verlagen."
 - needs: []
 - mastery_target: apply
@@ -1068,7 +1394,25 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - procedure:
   1. Student bepaalt wanneer centrale banken rentes verhogen of verlagen.
 
-### I04 Keynesiaanse kruis verschuivingen analyseren
+### I06 Deflatie in laagconjunctuur
+- kern: "Deflatie versterkt laagconjunctuur doordat consumenten en bedrijven bestedingen uitstellen."
+- needs: []
+- exam_codes: [I1.1]
+- mastery_target: understand
+- prior_learning: new_this_year
+- terms: []
+
+### I07 IS-MB-GA-model met outputgap
+- kern: "Student analyseert relatie tussen outputgap, nominale rente, inflatie en curveverschuivingen in laagconjunctuur."
+- needs: []
+- exam_codes: [I4.1]
+- mastery_target: analyze
+- prior_learning: new_this_year
+- terms: []
+- procedure:
+  1. Student analyseert relatie tussen outputgap, nominale rente, inflatie en curveverschuivingen in laagconjunctuur.
+
+### I08 Keynesiaanse kruis verschuivingen analyseren
 - kern: "Student analyseert hoe verschuivingen in IS en LM het evenwicht en effectiviteit van beleid beinvloeden."
 - needs: []
 - exam_codes: [I4.1, I4.2]
@@ -1078,7 +1422,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - procedure:
   1. Student analyseert hoe verschuivingen in IS en LM het evenwicht en effectiviteit van beleid beinvloeden.
 
-### I05 Koopkracht behouden bij inflatie
+### I09 Koopkracht behouden bij inflatie
 - kern: "Bereken nieuwe loon of uitkering om koopkracht gelijk te houden bij inflatie."
 - needs: []
 - exam_codes: [I1.4]
@@ -1088,7 +1432,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - procedure:
   1. Bereken nieuwe loon of uitkering om koopkracht gelijk te houden bij inflatie.
 
-### I06 Loonrigiditeit en GA-curve helling
+### I10 Loonrigiditeit en GA-curve helling
 - kern: "Student legt uit hoe loonflexibiliteit de helling van de GA-curve beinvloedt."
 - needs: []
 - exam_codes: [I4.4]
@@ -1096,7 +1440,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - prior_learning: new_this_year
 - terms: []
 
-### I07 Monetair beleid bij starre vs flexibele arbeidsmarkt
+### I11 Monetair beleid bij starre vs flexibele arbeidsmarkt
 - kern: "Student vergelijkt effectiviteit van renteverlagingen onder starre versus flexibele arbeidsmarktomstandigheden."
 - needs: []
 - mastery_target: analyze
@@ -1105,21 +1449,55 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - procedure:
   1. Student vergelijkt effectiviteit van renteverlagingen onder starre versus flexibele arbeidsmarktomstandigheden.
 
-### I08 Overheidssaldo verandering
+### I12 Monetair beleid en wisselkoers
+- kern: "Renteverlaging verlaagt rente en veroorzaakt depreciatie van de valuta, wat exportcompetitiviteit verbetert."
+- needs: []
+- exam_codes: [I1.2]
+- mastery_target: understand
+- prior_learning: new_this_year
+- terms: []
+
+### I13 Monetair trilemma
+- kern: "Student analyseert beleidsopties (vast wisselkoers, onafhankelijk beleid, kapitaalverkeer) in multinationale context."
+- needs: []
+- exam_codes: [I1.2]
+- mastery_target: understand
+- prior_learning: new_this_year
+- terms: []
+
+### I14 Multiplier en lekkages
+- kern: "Student begrijpt hoe autonome bestedingen via de multiplier en lekkages het inkomen beinvloeden."
+- needs: []
+- exam_codes: [I4.1]
+- mastery_target: understand
+- prior_learning: new_this_year
+- terms: []
+
+### I15 Output gap en economische schokken
+- kern: "Student analyseert hoe schokken een negatieve of positieve output gap veroorzaken."
+- needs: []
+- exam_codes: [I4.2]
+- mastery_target: analyze
+- prior_learning: new_this_year
+- terms: []
+- procedure:
+  1. Student analyseert hoe schokken een negatieve of positieve output gap veroorzaken.
+
+### I16 Overheidssaldo verandering
 - kern: "Overheidssaldo kan veranderen door belasting- of uitgavenveranderingen."
 - needs: []
 - mastery_target: understand
 - prior_learning: new_this_year
 - terms: []
 
-### I09 Rentebeleid en economische gevolgen
+### I17 Rentebeleid en economische gevolgen
 - kern: "Renteverhoging verkrapt de economie; renteverlaging stimuleert."
 - needs: []
 - mastery_target: understand
 - prior_learning: new_this_year
 - terms: []
 
-### I10 Werkelijk versus nominaal eigen risico
+### I18 Werkelijk versus nominaal eigen risico
 - kern: "Student analyseert hoe inflatie het werkelijk draagvermogen van een nominaal vast eigen risico beinvloedt."
 - needs: []
 - exam_codes: [I1.4]
@@ -1127,7 +1505,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - prior_learning: new_this_year
 - terms: []
 
-### I11 Wisselkoerseffect van monetair beleid
+### I19 Wisselkoerseffect van monetair beleid
 - kern: "Student legt uit hoe monetaire beleidsmaatregelen via de wisselkoers de conjunctuur beinvloeden."
 - needs: []
 - exam_codes: [I1.2]

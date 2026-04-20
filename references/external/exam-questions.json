@@ -1,5 +1,1948 @@
 [
   {
+    "exam": "ha-1022-a-23-1-o",
+    "level": "havo",
+    "year": 2023,
+    "tijdvak": 1,
+    "opgave_num": 1,
+    "opgave_name": "Brood op de plank",
+    "question_num": 1,
+    "points": 2,
+    "text": "Maak van de onderstaande zinnen een economisch juiste redenering. De verzekering tegen arbeidsongeschiktheid voor werkenden in loondienst is een …(1)… verzekering en wordt gefinancierd via het …(2)… Zzp’ers kunnen kiezen voor een individuele aov. Door het ontbreken van …(3)… bij het afsluiten van een individuele aov, is er bij deze verzekeringen sprake van …(4)… waardoor de premie relatief hoog is. Kies uit: bij (1) particuliere / sociale bij (2) kapitaaldekkingsstelsel / omslagstelsel bij (3) asymmetrische informatie / collectieve dwang / intertemporele ruil bij (4) averechtse selectie / meeliftgedrag / verzonken kosten Of zzp’ers een individuele aov afsluiten hangt sterk af van het inkomen (zie bron 1). Gebruik bron 1.",
+    "required_skills": [
+      "G02",
+      "G06"
+    ],
+    "question_type": "classificatie",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-23-1-o",
+    "level": "havo",
+    "year": 2023,
+    "tijdvak": 1,
+    "opgave_num": 1,
+    "opgave_name": "Brood op de plank",
+    "question_num": 2,
+    "points": 1,
+    "text": "Toon met een berekening aan dat meer dan 40% van de zzp’ers geen aov heeft. Gebruik bron 1.",
+    "required_skills": [
+      "A04"
+    ],
+    "question_type": "berekenen",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-23-1-o",
+    "level": "havo",
+    "year": 2023,
+    "tijdvak": 1,
+    "opgave_num": 1,
+    "opgave_name": "Brood op de plank",
+    "question_num": 3,
+    "points": 2,
+    "text": "Leg met behulp van bron 1 uit dat arbeidsongeschiktheid kan leiden tot denivellering van secundaire inkomens tussen zzp’ers. HA-1022-a-23-1-o 3 / 10 lees verder ►►► Een vakbondslid stelt: “Arbeidsongeschiktheid kan leiden tot denivellering van secundaire inkomens tussen arbeidsongeschikte zzp’ers en arbeidsongeschikte werknemers, als we bij beide groepen uitgaan van eenzelfde inkomensklasse.”",
+    "required_skills": [
+      "G02"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-23-1-o",
+    "level": "havo",
+    "year": 2023,
+    "tijdvak": 1,
+    "opgave_num": 1,
+    "opgave_name": "Brood op de plank",
+    "question_num": 4,
+    "points": 2,
+    "text": "Leg de stelling van het vakbondslid uit. Zzp’ers willen niet alleen het risico op inkomensverlies bij langdurige arbeidsongeschiktheid afdekken, maar ook het risico op inkomensverlies bij kortdurende ziekte. Zzp’ers kunnen hiervoor:  een inkomensverzekering afsluiten of  met een groep mensen uit hun netwerk een zogenoemd broodfonds oprichten (zie bron 2). Bij een broodfonds is er volgens de deelnemers geen sprake van asymmetrische informatie, en het risico op averechtse selectie en moral hazard is heel klein. Gebruik bron 2.",
+    "required_skills": [
+      "D28"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-23-1-o",
+    "level": "havo",
+    "year": 2023,
+    "tijdvak": 1,
+    "opgave_num": 1,
+    "opgave_name": "Brood op de plank",
+    "question_num": 5,
+    "points": 3,
+    "text": "Leg uit waarom er bij het broodfonds geen sprake is van asymmetrische informatie, en dat het risico op averechtse selectie en moral hazard heel klein is. Eén van de deelnemers aan broodfonds ‘Brood op de Plank’ heeft zijn deelname opgezegd. De overige deelnemers hebben zzp’er Nelleke uitgenodigd om deel te nemen aan het broodfonds Brood op de Plank (zie bron 2). Ze overweegt of ze de uitnodiging aan zal nemen. Nelleke rekent erop dat de komende twee jaar gemiddeld 4% van de 50 deelnemers aan het broodfonds schenkingen krijgt van het broodfonds in verband met ziekte. Ze neemt aan dat ze na twee jaar uit het broodfonds stapt, en wil weten hoeveel zij dan per saldo heeft betaald als ze zelf gezond is gebleven. Gebruik bron 2.",
+    "required_skills": [
+      "G03"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-23-1-o",
+    "level": "havo",
+    "year": 2023,
+    "tijdvak": 1,
+    "opgave_num": 1,
+    "opgave_name": "Brood op de plank",
+    "question_num": 6,
+    "points": 3,
+    "text": "Bereken het bedrag dat Nelleke over een periode van twee jaar per saldo moet betalen bij deelname aan het broodfonds. HA-1022-a-23-1-o 4 / 10 lees verder ►►►",
+    "required_skills": [
+      "A04"
+    ],
+    "question_type": "berekenen",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-23-1-o",
+    "level": "havo",
+    "year": 2023,
+    "tijdvak": 1,
+    "opgave_num": 2,
+    "opgave_name": "Wokakkoord",
+    "question_num": 7,
+    "points": 2,
+    "text": "Leg uit dat bij de investering in omscholingstrajecten sprake is van verzonken kosten voor de sector van Aziatische restaurants. Als gevolg van het tekort aan specialiteitenkoks dreigen de loonkosten van Aziatische restaurants hoog op te lopen. Om dit te voorkomen willen de Aziatische restaurants koks uit Azië laten overkomen. Dit wordt echter bemoeilijkt door de Wet arbeid vreemdelingen (WAV). In de WAV staan strenge voorwaarden voor het laten werken van werknemers uit landen waarmee Nederland geen vrij verkeer van arbeid heeft afgesproken. Een gevolg van de WAV is dat de opwaartse druk op de lonen van specialiteitenkoks blijft bestaan.",
+    "required_skills": [
+      "F13"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-23-1-o",
+    "level": "havo",
+    "year": 2023,
+    "tijdvak": 1,
+    "opgave_num": 2,
+    "opgave_name": "Wokakkoord",
+    "question_num": 8,
+    "points": 1,
+    "text": "Verklaar dit gevolg van de WAV op de loonontwikkeling van specialiteitenkoks. De Vereniging Chinese-Aziatische Horeca Ondernemers (VCHO) onderzoekt de arbeidsmarkt van specialiteitenkoks voor Aziatische restaurants met behulp van een model (zie bron 1) om een aantal mogelijke oplossingen te analyseren. Gebruik bron 1.",
+    "required_skills": [
+      "A06"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-23-1-o",
+    "level": "havo",
+    "year": 2023,
+    "tijdvak": 1,
+    "opgave_num": 2,
+    "opgave_name": "Wokakkoord",
+    "question_num": 9,
+    "points": 1,
+    "text": "Bereken het evenwichtsloon op de markt van specialiteitenkoks voor Aziatische restaurants na de toegenomen vraag. HA-1022-a-23-1-o 5 / 10 lees verder ►►► De Nederlandse regering en de VCHO sluiten uiteindelijk het zogenoemde Wokakkoord om het vraagoverschot naar specialiteitenkoks te verminderen. In dit Wokakkoord is bepaald dat maximaal 900 nieuwe specialiteitenkoks mogen overkomen uit Azië om in Nederlandse Aziatische restaurants te komen werken. De voorwaarden voor werkvergunningen zijn voor deze koks versoepeld. Een woordvoerder van de VCHO stelt: “We zijn blij met het overeengekomen quotum, maar het is niet voldoende om het tekort aan specialiteitenkoks volledig weg te werken.” Gebruik bron 1.",
+    "required_skills": [
+      "A06"
+    ],
+    "question_type": "berekenen",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-23-1-o",
+    "level": "havo",
+    "year": 2023,
+    "tijdvak": 1,
+    "opgave_num": 2,
+    "opgave_name": "Wokakkoord",
+    "question_num": 10,
+    "points": 2,
+    "text": "Bereken met hoeveel specialiteitenkoks het quotum van 900 koks moet worden verhoogd om het tekort aan koks volledig op te heffen bij een loon van € 25.000. De VCHO stelt dat het verhogen van een quotum kan leiden tot een daling van de gemiddelde loonkosten waardoor de totale omzet van de Aziatische restaurants kan toenemen.",
+    "required_skills": [
+      "A06"
+    ],
+    "question_type": "berekenen",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-23-1-o",
+    "level": "havo",
+    "year": 2023,
+    "tijdvak": 1,
+    "opgave_num": 2,
+    "opgave_name": "Wokakkoord",
+    "question_num": 11,
+    "points": 2,
+    "text": "Leg uit dat een daling van de gemiddelde loonkosten kan leiden tot een toename van de totale omzet van de restaurants. Ook de sterke economische groei in Azië zorgt ervoor dat niet aan de totale vraag naar specialiteitenkoks in Nederland kan worden voldaan. Gebruik bron 1.",
+    "required_skills": [
+      "A21"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-23-1-o",
+    "level": "havo",
+    "year": 2023,
+    "tijdvak": 1,
+    "opgave_num": 2,
+    "opgave_name": "Wokakkoord",
+    "question_num": 12,
+    "points": 2,
+    "text": "Maak van onderstaande zinnen een economisch juiste redenering. De sterke economische groei in Azië zorgt ervoor dat de vraag naar koks in Azië …(1)…. In de grafiek van bron 1 verschuift daardoor de …(2)… naar …(3)…. Dit leidt tot een …(4)… van het totale surplus op deze markt. Kies uit: bij (1) daalt / stijgt bij (2) aanbodlijn / vraaglijn bij (3) links / rechts bij (4) afname / toename HA-1022-a-23-1-o 6 / 10 lees verder ►►►",
+    "required_skills": [
+      "A19"
+    ],
+    "question_type": "classificatie",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-23-1-o",
+    "level": "havo",
+    "year": 2023,
+    "tijdvak": 1,
+    "opgave_num": 3,
+    "opgave_name": "Auto van de zaak",
+    "question_num": 13,
+    "points": 2,
+    "text": "Leg uit dat de nieuwe regeling van fiscale bijtelling de negatieve externe effecten van het autorijden kan terugdringen.",
+    "required_skills": [
+      "F06"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-23-1-o",
+    "level": "havo",
+    "year": 2023,
+    "tijdvak": 1,
+    "opgave_num": 3,
+    "opgave_name": "Auto van de zaak",
+    "question_num": 14,
+    "points": 2,
+    "text": "Leg uit dat de nieuwe regeling van fiscale bijtelling een gunstig effect kan hebben op innovatie en daarmee op de structurele groei van de economie. Meryem krijgt van haar werkgever de beschikking over een auto van de zaak per 1 januari 2023. De werkgever geeft haar een lijst met auto’s waaruit zij mag kiezen (zie bron 2). Zij gaat deze auto ook privé gebruiken. Meryem kiest de auto met de laagste fiscale bijtelling. Ze is benieuwd hoeveel extra belasting ze moet betalen in 2023. Meryem heeft een bruto-inkomen van € 35.000. Aftrekposten en overige fiscale bijtellingen heeft ze niet. Gebruik bron 1, 2 en 3.",
+    "required_skills": [
+      "F06"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-23-1-o",
+    "level": "havo",
+    "year": 2023,
+    "tijdvak": 1,
+    "opgave_num": 3,
+    "opgave_name": "Auto van de zaak",
+    "question_num": 15,
+    "points": 2,
+    "text": "Bereken hoeveel belasting Meryem in 2023 extra moet betalen als gevolg van de door haar gekozen auto van de zaak. De gekoppelde afbeelding kan niet worden weergegeven. Het bestand is mogelijk verplaatst, heeft een andere naam gekregen of is verwijderd. Controleer of de koppeling verwijst naar het juiste bestand en de juiste locatie. HA-1022-a-23-1-o 7 / 10 lees verder ►►►",
+    "required_skills": [
+      "H04"
+    ],
+    "question_type": "berekenen",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-23-1-o",
+    "level": "havo",
+    "year": 2023,
+    "tijdvak": 1,
+    "opgave_num": 4,
+    "opgave_name": "Een historisch lage rente",
+    "question_num": 16,
+    "points": 2,
+    "text": "Leg uit dat de renteverlaging door de ECB kan leiden tot een hogere inflatie.",
+    "required_skills": [
+      "I01"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-23-1-o",
+    "level": "havo",
+    "year": 2023,
+    "tijdvak": 1,
+    "opgave_num": 4,
+    "opgave_name": "Een historisch lage rente",
+    "question_num": 17,
+    "points": 2,
+    "text": "Leg uit dat verwachte deflatie een negatieve invloed heeft op de economische groei. Vanuit de Verenigde Staten (VS) komt kritiek op de renteverlaging door de ECB. Een Amerikaanse politicus: “Die renteverlaging door de ECB kan zorgen voor een verslechtering van de internationale concurrentiepositie van de VS.”",
+    "required_skills": [
+      "I05"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-23-1-o",
+    "level": "havo",
+    "year": 2023,
+    "tijdvak": 1,
+    "opgave_num": 4,
+    "opgave_name": "Een historisch lage rente",
+    "question_num": 18,
+    "points": 2,
+    "text": "Leg uit dat een renteverlaging van de ECB zorgt voor een verslechtering van de internationale concurrentiepositie van de VS. De beroepsbevolking in Europa vergrijst. De groep werkenden tussen 55 jaar en de pensioengerechtigde leeftijd groeit relatief snel ten opzichte van de groep werkenden tussen het begin van hun loopbaan en 55 jaar. Hierdoor stijgt het aandeel van 55-plussers in de beroepsbevolking. Een econoom stelt: “Ook door deze vergrijzing van de beroepsbevolking in Europa is de rente relatief laag.” Gebruik bron 1.",
+    "required_skills": [
+      "I12"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": [
+      "I1.2"
+    ]
+  },
+  {
+    "exam": "ha-1022-a-23-1-o",
+    "level": "havo",
+    "year": 2023,
+    "tijdvak": 1,
+    "opgave_num": 4,
+    "opgave_name": "Een historisch lage rente",
+    "question_num": 19,
+    "points": 2,
+    "text": "Leg de stelling van de econoom uit met behulp van bron 1. HA-1022-a-23-1-o 8 / 10 lees verder ►►►",
+    "required_skills": [
+      "H07"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-23-1-o",
+    "level": "havo",
+    "year": 2023,
+    "tijdvak": 1,
+    "opgave_num": 5,
+    "opgave_name": "Olieprijzenoorlog in het vat",
+    "question_num": 20,
+    "points": 1,
+    "text": "Citeer de zin uit het krantenbericht waaruit blijkt dat de prijsdaling van ruwe olie mede wordt veroorzaakt door een verandering van de vraag. Gebruik het krantenbericht.",
+    "required_skills": [],
+    "question_type": "noem",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-23-1-o",
+    "level": "havo",
+    "year": 2023,
+    "tijdvak": 1,
+    "opgave_num": 5,
+    "opgave_name": "Olieprijzenoorlog in het vat",
+    "question_num": 21,
+    "points": 2,
+    "text": "Van welke marktvorm is er sprake op de markt voor ruwe olie? Verklaar je antwoord aan de hand van twee relevante kenmerken van deze marktvorm. Het gevecht om marktaandeel kan opgevat worden als een simultaan spel. Gebruik bron 1.",
+    "required_skills": [
+      "D15"
+    ],
+    "question_type": "uitleg_of",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-23-1-o",
+    "level": "havo",
+    "year": 2023,
+    "tijdvak": 1,
+    "opgave_num": 5,
+    "opgave_name": "Olieprijzenoorlog in het vat",
+    "question_num": 22,
+    "points": 2,
+    "text": "Leg uit dat beide landen zich in een gevangenendilemma bevinden. Doe het als volgt:  Leg uit of beide landen een dominante strategie hebben.  Beredeneer vervolgens dat er sprake is van een gevangenendilemma. Gebruik bron 1.",
+    "required_skills": [
+      "F09"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-23-1-o",
+    "level": "havo",
+    "year": 2023,
+    "tijdvak": 1,
+    "opgave_num": 5,
+    "opgave_name": "Olieprijzenoorlog in het vat",
+    "question_num": 23,
+    "points": 2,
+    "text": "Verklaar de uitkomst in de cel rechtsonder in de tabel. Betrek in je antwoord de prijselasticiteit van de vraag. HA-1022-a-23-1-o 9 / 10 lees verder ►►► De dalende olieprijzen waren aanleiding voor Saoedi-Arabië en Rusland om met elkaar in overleg te gaan. De Saoedische minister van Energie stelde: “We bevinden ons in een gevangenendilemma. Daarom stel ik voor dat we afspraken maken over de maximale hoeveelheid olie die we aanbieden om zo de prijzen te verhogen.” De Russische minister van Energie reageerde op zijn Saoedische collega: “Laten we wachten met afspraken maken tot de VS hebben gereageerd op de prijsdaling. Als de VS de huidige productie handhaven, kunnen zij bij een prijsdaling van 30% naar US$ 30 per vat niet winstgevend produceren, terwijl zij dat bij de oude prijs wel konden. Ik verwacht dat de VS de oliemarkt zullen verlaten, zodat de concurrentie op lange termijn wordt beperkt.” Gebruik bron 2.",
+    "required_skills": [
+      "A15",
+      "D25"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-23-1-o",
+    "level": "havo",
+    "year": 2023,
+    "tijdvak": 1,
+    "opgave_num": 5,
+    "opgave_name": "Olieprijzenoorlog in het vat",
+    "question_num": 24,
+    "points": 2,
+    "text": "Toon met een berekening aan dat de VS bij de nieuwe prijs niet winstgevend kunnen produceren, terwijl zij dat bij de oude prijs wel konden. Gebruik bron 2.",
+    "required_skills": [
+      "A21"
+    ],
+    "question_type": "berekenen",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-23-1-o",
+    "level": "havo",
+    "year": 2023,
+    "tijdvak": 1,
+    "opgave_num": 5,
+    "opgave_name": "Olieprijzenoorlog in het vat",
+    "question_num": 25,
+    "points": 2,
+    "text": "Zal de VS op korte termijn de olieproductie stoppen en de oliemarkt verlaten? Verklaar je antwoord. De dalende olieprijs had ook gevolgen voor andere markten. Zo bleek de prijs voor het gebruik van olietankers voor olieopslag juist te zijn gestegen met meer dan 1.000%. Daarnaast verwachtten analisten dat de dalende olieprijs ertoe kan leiden dat investeerders in duurzame energieproductie een lagere winstgevendheid op hun investeringen behalen.",
+    "required_skills": [
+      "A25"
+    ],
+    "question_type": "uitleg_of",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-23-1-o",
+    "level": "havo",
+    "year": 2023,
+    "tijdvak": 1,
+    "opgave_num": 5,
+    "opgave_name": "Olieprijzenoorlog in het vat",
+    "question_num": 26,
+    "points": 2,
+    "text": "Beredeneer op welke manier de dalende olieprijs kan leiden tot een prijsstijging van het gebruik van olietankers voor olieopslag.",
+    "required_skills": [
+      "A06"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-23-1-o",
+    "level": "havo",
+    "year": 2023,
+    "tijdvak": 1,
+    "opgave_num": 5,
+    "opgave_name": "Olieprijzenoorlog in het vat",
+    "question_num": 27,
+    "points": 2,
+    "text": "Beredeneer op welke manier de dalende olieprijs ertoe kan leiden dat investeerders in duurzame energieproductie een lagere winstgevendheid op hun investeringen behalen. Let op: de laatste vragen van dit examen staan op de volgende pagina. HA-1022-a-23-1-o 10 / 10 lees verder ►►►",
+    "required_skills": [
+      "A27"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-23-1-o",
+    "level": "havo",
+    "year": 2023,
+    "tijdvak": 1,
+    "opgave_num": 6,
+    "opgave_name": "Treinmonopolie",
+    "question_num": 28,
+    "points": 1,
+    "text": "Maak van de onderstaande zin een economisch juiste redenering. De overheid heeft een wettelijk monopolie ingesteld vanwege de hoge …(1)… en vanwege de mogelijkheid invloed uit te oefenen op de …(2)…. Kies uit: bij (1) constante kosten / variabele kosten bij (2) omzet / prijs / winst Tot aan 2008 streefde de NS naar minimaal totaal verlies. Gebruik bron 1.",
+    "required_skills": [
+      "D15"
+    ],
+    "question_type": "classificatie",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-23-1-o",
+    "level": "havo",
+    "year": 2023,
+    "tijdvak": 1,
+    "opgave_num": 6,
+    "opgave_name": "Treinmonopolie",
+    "question_num": 29,
+    "points": 1,
+    "text": "Leg uit waarom de marginale kosten gelijk zijn aan de gemiddelde variabele kosten. Gebruik bron 1.",
+    "required_skills": [
+      "A14",
+      "D17"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-23-1-o",
+    "level": "havo",
+    "year": 2023,
+    "tijdvak": 1,
+    "opgave_num": 6,
+    "opgave_name": "Treinmonopolie",
+    "question_num": 30,
+    "points": 2,
+    "text": "Leg met behulp van bron 1 uit bij welke prijs er sprake is van een minimaal totaal verlies. Vanaf 2008 heeft de overheid besloten dat ook andere vervoerders dan de NS passagiersvervoer in Nederland mogen aanbieden. Daartoe heeft de overheid Nederland in regio’s ingedeeld. Per regio verkoopt de overheid één concessie (vergunning) om in die regio passagiersvervoer te verzorgen. De NS en andere vervoersmaatschappijen kunnen bieden op een concessie (vergunning) om in die regio passagiersvervoer te verzorgen. De prijs van de concessie is een vergoeding voor het gebruik van het eerder aangelegde spoorwegennet.",
+    "required_skills": [
+      "A22",
+      "D17"
+    ],
+    "question_type": "bron",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-23-1-o",
+    "level": "havo",
+    "year": 2023,
+    "tijdvak": 1,
+    "opgave_num": 6,
+    "opgave_name": "Treinmonopolie",
+    "question_num": 31,
+    "points": 1,
+    "text": "Leg uit van welke marktvorm er sprake is op de markt van passagiersvervoer per trein vanaf 2008. Bronvermelding Een opsomming van de in dit examen gebruikte bronnen, zoals teksten en afbeeldingen, is te vinden in het bij dit examen behorende correctievoorschrift, dat na afloop van het examen wordt gepubliceerd. einde  Bronvermelding Een opsomming van de in dit examen gebruikte bronnen, zoals teksten en afbeeldingen, is te vinden in het bij dit examen behorende correctievoorschrift.",
+    "required_skills": [
+      "D15"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-23-2-o",
+    "level": "havo",
+    "year": 2023,
+    "tijdvak": 2,
+    "opgave_num": 1,
+    "opgave_name": "Stoppen met aardgas dwingt tot keuzes",
+    "question_num": 1,
+    "points": 2,
+    "text": "Leg uit dat de overheid ruilt over de tijd indien er een overheidstekort ontstaat. Met een verhoging van de energiebelasting op gasverbruik kan de overheid gezinnen en bedrijven stimuleren om minder gas te verbruiken en te kiezen voor alternatieve energiebronnen. Het effect ervan is afhankelijk van de prijselasticiteit van de vraag naar gas. Voor een gemiddeld gezinshuishouden is de prijselasticiteit van de vraag naar gas −0,1. Het jaarlijkse gasverbruik is gemiddeld 1.466 m3 per gezinshuishouden. De overheid stelt zich ten doel het gasverbruik in kubieke meter (m 3 ) van een gemiddeld gezinshuishouden te verminderen met 5% en wil daartoe de huidige energiebelasting op gas met 75% verhogen. Gebruik bron 1 en bovenstaande tekst.",
+    "required_skills": [
+      "D06"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": [
+      "D1.4a"
+    ]
+  },
+  {
+    "exam": "ha-1022-a-23-2-o",
+    "level": "havo",
+    "year": 2023,
+    "tijdvak": 2,
+    "opgave_num": 1,
+    "opgave_name": "Stoppen met aardgas dwingt tot keuzes",
+    "question_num": 2,
+    "points": 3,
+    "text": "Bereken of een verhoging van de huidige energiebelasting met 75% voldoende is om de doelstelling van de overheid te halen. HA-1022-a-23-2-o 3 / 12 lees verder ►►► Een analist van het ministerie van economische zaken benadrukt dat economische groei van invloed is op de effectiviteit van het overheidsbeleid om de vraag naar gas van gezinnen en bedrijven te verminderen. De analist doet drie uitspraken:  Uitspraak 1: Economische groei kan enerzijds tot meer gasverbruik en anderzijds tot minder gasverbruik leiden.  Uitspraak 2: Economische groei maakt het voor de overheid makkelijker om subsidies te financieren.  Uitspraak 3: Subsidies op energiezuinige productietechnologieën en de verhoging van de energiebelasting op gasverbruik van gezinnen en bedrijven, hebben zelf ook weer effect op de economische groei van het land.",
+    "required_skills": [
+      "A15"
+    ],
+    "question_type": "berekenen",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-23-2-o",
+    "level": "havo",
+    "year": 2023,
+    "tijdvak": 2,
+    "opgave_num": 1,
+    "opgave_name": "Stoppen met aardgas dwingt tot keuzes",
+    "question_num": 3,
+    "points": 2,
+    "text": "Leg uitspraak 1 uit.",
+    "required_skills": [
+      "A04"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-23-2-o",
+    "level": "havo",
+    "year": 2023,
+    "tijdvak": 2,
+    "opgave_num": 1,
+    "opgave_name": "Stoppen met aardgas dwingt tot keuzes",
+    "question_num": 4,
+    "points": 1,
+    "text": "Leg uitspraak 2 uit.",
+    "required_skills": [
+      "D06"
+    ],
+    "question_type": "uitleg_of",
+    "exam_codes": [
+      "D1.4a"
+    ]
+  },
+  {
+    "exam": "ha-1022-a-23-2-o",
+    "level": "havo",
+    "year": 2023,
+    "tijdvak": 2,
+    "opgave_num": 1,
+    "opgave_name": "Stoppen met aardgas dwingt tot keuzes",
+    "question_num": 5,
+    "points": 2,
+    "text": "Leg uitspraak 3 uit. Betrek in je antwoord een positief effect en een negatief effect. HA-1022-a-23-2-o 4 / 12 lees verder ►►►",
+    "required_skills": [
+      "F07"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": [
+      "F2.4"
+    ]
+  },
+  {
+    "exam": "ha-1022-a-23-2-o",
+    "level": "havo",
+    "year": 2023,
+    "tijdvak": 2,
+    "opgave_num": 2,
+    "opgave_name": "Vliegtaks",
+    "question_num": 6,
+    "points": 1,
+    "text": "Geef een verklaring voor de conclusie van het onderzoeksbureau. Passagiers die vanaf de Nederlandse luchthaven Schiphol naar Rome vliegen, betalen bij luchtvaartmaatschappij Linea Azzurra een prijs van € 300 voor een vliegticket. De prijselasticiteit van de vraag naar deze vliegtickets van Schiphol naar Rome is −1,4.",
+    "required_skills": [
+      "A15"
+    ],
+    "question_type": "noem",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-23-2-o",
+    "level": "havo",
+    "year": 2023,
+    "tijdvak": 2,
+    "opgave_num": 2,
+    "opgave_name": "Vliegtaks",
+    "question_num": 7,
+    "points": 3,
+    "text": "Bereken hoeveel procent van de passagiers vanaf Schiphol naar Rome blijft vliegen indien de ticketprijs wordt verhoogd met € 7,50. Volgens een aantal politieke partijen kan het directe effect van de vliegtaks op het milieu worden vergroot door de hoogte van de vliegtaks af te laten hangen van de afstand van de vlucht. Twee politieke partijen gaan met elkaar in debat.  De Gele Partij zegt: Om eenzelfde daling van de vraag te realiseren, is voor lange vluchten een andere vliegtaks op vliegtickets nodig dan voor korte vluchten, omdat de vraag naar tickets voor lange vluchten minder prijselastisch is dan die naar tickets voor korte vluchten.  De Witte Partij zegt: Belast juist de tickets voor korte vluchten met een hogere vliegtaks. Een partijlid stelt: “Deze maatregel zal leiden tot een grotere daling van de vraag naar vliegtickets, omdat er voor kortere vluchten meer substitutiegoederen en -diensten zijn.”",
+    "required_skills": [
+      "A15",
+      "D12"
+    ],
+    "question_type": "berekenen",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-23-2-o",
+    "level": "havo",
+    "year": 2023,
+    "tijdvak": 2,
+    "opgave_num": 2,
+    "opgave_name": "Vliegtaks",
+    "question_num": 8,
+    "points": 2,
+    "text": "Leg uit of de vliegtaks op tickets voor lange vluchten volgens de Gele Partij hoger of lager moet zijn dan de vliegtaks op tickets voor korte vluchten. noot bezettingsgraad = het feitelijke aantal bezette stoelen afgezet tegen het beschikbare aantal stoelen HA-1022-a-23-2-o 5 / 12 lees verder ►►► De Witte Partij baseert haar standpunt op de beschikbaarheid van substitutiegoederen en -diensten.",
+    "required_skills": [
+      "A16"
+    ],
+    "question_type": "uitleg_of",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-23-2-o",
+    "level": "havo",
+    "year": 2023,
+    "tijdvak": 2,
+    "opgave_num": 2,
+    "opgave_name": "Vliegtaks",
+    "question_num": 9,
+    "points": 2,
+    "text": "Leidt de vliegtaks voor korte vluchten tot een verschuiving van of een verschuiving langs de vraaglijn van treintickets? Leg je keuze uit en benoem daarbij de richting van de verschuiving van/langs de vraaglijn. De luchtvaartmaatschappijen protesteren tegen de voorgestelde vliegtaks van € 7,50 per vliegticket, en stellen dat deze taks ten koste gaat van hun winst en alleen goed is voor de Nederlandse schatkist. Om het effect op de winst te verklaren, tonen zij een marktmodel met een vraag- en aanbodfunctie. Marktmodel met vraag- en aanbodfuncties Qv = −P + 480 Qa vóór invoering vliegtaks = 2P – 105 Qa na invoering vliegtaks = 2P – 120 Er geldt dat Qv = Qa P = gemiddelde prijs van een vliegticket in euro’s Q = aantal vliegtickets vanuit Nederlandse luchthavens x 10.000 Op basis van dit marktmodel stellen de luchtvaartmaatschappijen dat ze de vliegtaks niet volledig kunnen doorberekenen in de prijs van een vliegticket.",
+    "required_skills": [
+      "A16"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-23-2-o",
+    "level": "havo",
+    "year": 2023,
+    "tijdvak": 2,
+    "opgave_num": 2,
+    "opgave_name": "Vliegtaks",
+    "question_num": 10,
+    "points": 3,
+    "text": "Bereken hoeveel procent van de vliegtaks voor rekening van de luchtvaartmaatschappijen komt. Bereken daartoe eerst de oude en de nieuwe evenwichtsprijs.",
+    "required_skills": [
+      "A06",
+      "D05"
+    ],
+    "question_type": "berekenen",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-23-2-o",
+    "level": "havo",
+    "year": 2023,
+    "tijdvak": 2,
+    "opgave_num": 2,
+    "opgave_name": "Vliegtaks",
+    "question_num": 11,
+    "points": 2,
+    "text": "Bereken de opbrengst van de vliegtaks voor de Nederlandse schatkist. HA-1022-a-23-2-o 6 / 12 lees verder ►►►",
+    "required_skills": [
+      "F02"
+    ],
+    "question_type": "berekenen",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-23-2-o",
+    "level": "havo",
+    "year": 2023,
+    "tijdvak": 2,
+    "opgave_num": 3,
+    "opgave_name": "Heffingskortingen inkomensafhankelijk",
+    "question_num": 12,
+    "points": 2,
+    "text": "Leg de stelling van de regering uit. Onderstaand oorzaak-gevolg schema toont de invloed van de verhoogde arbeidskorting (bij inkomens tot en met € 80.000) op de arbeidsvraag. Gebruik de uitspraak van partij 1 en het schema.",
+    "required_skills": [
+      "H02"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": [
+      "H5.1"
+    ]
+  },
+  {
+    "exam": "ha-1022-a-23-2-o",
+    "level": "havo",
+    "year": 2023,
+    "tijdvak": 2,
+    "opgave_num": 3,
+    "opgave_name": "Heffingskortingen inkomensafhankelijk",
+    "question_num": 13,
+    "points": 2,
+    "text": "Maak van het schema een economisch juiste redenering. Doe het als volgt:  schrijf de letters a t/m f op;  schrijf achter iedere letter het juiste economische verschijnsel. Kies uit: 1 looneisen worden gematigd 2 nettoloon stijgt 3 internationale concurrentiepositie verbetert 4 koopkracht neemt toe 5 binnenlandse vraag naar goederen neemt toe 6 vraag naar exportgoederen neemt toe HA-1022-a-23-2-o 7 / 12 lees verder ►►► Gebruik bron 1.",
+    "required_skills": [
+      "H14"
+    ],
+    "question_type": "classificatie",
+    "exam_codes": [
+      "H1.1"
+    ]
+  },
+  {
+    "exam": "ha-1022-a-23-2-o",
+    "level": "havo",
+    "year": 2023,
+    "tijdvak": 2,
+    "opgave_num": 3,
+    "opgave_name": "Heffingskortingen inkomensafhankelijk",
+    "question_num": 14,
+    "points": 2,
+    "text": "Leg uit of het gemiddelde belastingtarief van een werknemer met een inkomen van € 20.000 hoger of lager wordt na de belastingwijziging. Belastingheffing kan een nivellerend effect hebben op de inkomensverdeling. Een belastbaar inkomen van € 120.000 is zes keer zo hoog als een belastbaar inkomen van € 20.000 (zie bron 1 en bron 2). Een werknemer met een belastbaar inkomen van € 120.000 had in 2013 een netto-inkomen van € 66.744. Een werknemer met een belastbaar inkomen van € 20.000 had in 2013 een netto-inkomen van € 16.317. Daarmee was het netto-inkomen van het hogere inkomen 4,1 keer zo hoog als het netto-inkomen van het lagere inkomen. Door de belastingwijziging is er in 2014 sprake van een toegenomen nivellering voor de belastbare inkomens € 120.000 en € 20.000. Gebruik bron 1 en bron 2.",
+    "required_skills": [
+      "H23"
+    ],
+    "question_type": "uitleg_of",
+    "exam_codes": [
+      "H4.6"
+    ]
+  },
+  {
+    "exam": "ha-1022-a-23-2-o",
+    "level": "havo",
+    "year": 2023,
+    "tijdvak": 2,
+    "opgave_num": 3,
+    "opgave_name": "Heffingskortingen inkomensafhankelijk",
+    "question_num": 15,
+    "points": 2,
+    "text": "Toon met een berekening aan dat er door de belastingwijziging in 2014 sprake is van toegenomen nivellering voor de inkomens € 120.000 en € 20.000. Het Centraal Planbureau (CPB) voorspelde dat in 2014 en volgende jaren de Nederlandse economie zal groeien. Stel dat deze voorspelling uit is gekomen en dat in 2017 de Nederlandse economie in de fase van hoogconjunctuur verkeerde. Gebruik bron 3.",
+    "required_skills": [
+      "H04"
+    ],
+    "question_type": "berekenen",
+    "exam_codes": [
+      "H4.6"
+    ]
+  },
+  {
+    "exam": "ha-1022-a-23-2-o",
+    "level": "havo",
+    "year": 2023,
+    "tijdvak": 2,
+    "opgave_num": 3,
+    "opgave_name": "Heffingskortingen inkomensafhankelijk",
+    "question_num": 16,
+    "points": 2,
+    "text": "Had de aanpassing van de beide heffingskortingen een procyclisch of anticyclisch effect op de conjuncturele ontwikkeling van Nederland in het jaar 2017? Leg je keuze uit met een berekening. HA-1022-a-23-2-o 8 / 12 lees verder ►►►",
+    "required_skills": [
+      "I19"
+    ],
+    "question_type": "berekenen",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-23-2-o",
+    "level": "havo",
+    "year": 2023,
+    "tijdvak": 2,
+    "opgave_num": 4,
+    "opgave_name": "De prijs van medicijnen",
+    "question_num": 17,
+    "points": 2,
+    "text": "Bepaal de prijs die Fluid zal vragen voor één doosje Antibio. Bepaal daartoe eerst de afzet van Antibio. Gebruik bron 1.",
+    "required_skills": [
+      "A20"
+    ],
+    "question_type": "berekenen",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-23-2-o",
+    "level": "havo",
+    "year": 2023,
+    "tijdvak": 2,
+    "opgave_num": 4,
+    "opgave_name": "De prijs van medicijnen",
+    "question_num": 18,
+    "points": 2,
+    "text": "Bereken de maximale totale winst die Fluid maakt met Antibio. Uit een krant: Medicijnfabrikant Fluid legt uit waarom ze veel winst op het medicijn Antibio moet maken. Dankzij het patent op dit medicijn verdient het bedrijf niet alleen de ontwikkelkosten terug, maar kan het ook winst maken. Met deze winst kan de ontwikkeling van weer andere, nieuwe medicijnen worden gefinancierd. Voordat een medicijnfabrikant een nieuw medicijn op de Amerikaanse markt mag brengen, moet het eerst worden goedgekeurd door de U.S Food and Drug Administration (FDA). Gebruik het bovenstaande krantenartikel.",
+    "required_skills": [
+      "A20",
+      "A21"
+    ],
+    "question_type": "berekenen",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-23-2-o",
+    "level": "havo",
+    "year": 2023,
+    "tijdvak": 2,
+    "opgave_num": 4,
+    "opgave_name": "De prijs van medicijnen",
+    "question_num": 19,
+    "points": 2,
+    "text": "Leg uit dat er bij de investeringen die door Fluid zijn gedaan voor medicijnontwikkeling sprake kan zijn van verzonken kosten. Kate Miller is voorzitter van een patiëntenvereniging en maakt bezwaar tegen de prijsverhoging van het medicijn Antibio door Fluid. De Amerikaanse patiënten krijgen dit medicijn niet vergoed door de zorgverzekeraar. Zij maakt zich zorgen over de patiënten die afhankelijk zijn van dit medicijn. Kate Miller bespreekt het effect van de prijsverandering en inkomensverandering op de vraag naar dit medicijn. HA-1022-a-23-2-o 9 / 12 lees verder ►►►",
+    "required_skills": [
+      "A20"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-23-2-o",
+    "level": "havo",
+    "year": 2023,
+    "tijdvak": 2,
+    "opgave_num": 4,
+    "opgave_name": "De prijs van medicijnen",
+    "question_num": 20,
+    "points": 1,
+    "text": "Maak van de onderstaande zinnen een economisch juiste tekst.  Bij medicijnen zie je in het algemeen dat de vraag …(1)… is.  Ook bij daling van het inkomen zal de vraag naar het medicijn nauwelijks dalen. Er is hier sprake van een …(2)… goed. Kies uit: bij (1) prijselastisch / prijsinelastisch bij (2) noodzakelijk / inferieur Kate Miller zoekt naar opties om ervoor te zorgen dat dit medicijn betaalbaar blijft. Zij stelt de volgende maatregelen voor: A: het vaststellen van een maximumprijs door de overheid B: het sneller laten aflopen van het patent op het medicijn",
+    "required_skills": [
+      "A15"
+    ],
+    "question_type": "classificatie",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-23-2-o",
+    "level": "havo",
+    "year": 2023,
+    "tijdvak": 2,
+    "opgave_num": 4,
+    "opgave_name": "De prijs van medicijnen",
+    "question_num": 21,
+    "points": 2,
+    "text": "Leg voor beide maatregelen uit hoe deze een neerwaarts effect kunnen hebben op de prijs van het medicijn Antibio. Fluid is geen voorstander van beide maatregelen. De directeur van Fluid stelt dat (te) lage winsten op nieuw te ontwikkelen medicijnen in de toekomst gevolgen kunnen hebben voor de welvaart. Fluid verwijst daarbij naar de Human Development Index. De Human Development Index (HDI) is een welvaartsindex van de Verenigde Naties die voornamelijk armoede, analfabetisme, onderwijs en levensverwachting in een bepaald land meet.",
+    "required_skills": [
+      "A25"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-23-2-o",
+    "level": "havo",
+    "year": 2023,
+    "tijdvak": 2,
+    "opgave_num": 4,
+    "opgave_name": "De prijs van medicijnen",
+    "question_num": 22,
+    "points": 2,
+    "text": "Onderbouw de stelling van de directeur. HA-1022-a-23-2-o 10 / 12 lees verder ►►►",
+    "required_skills": [
+      "H20"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": [
+      "H1.2"
+    ]
+  },
+  {
+    "exam": "ha-1022-a-23-2-o",
+    "level": "havo",
+    "year": 2023,
+    "tijdvak": 2,
+    "opgave_num": 5,
+    "opgave_name": "Verzekerd van data",
+    "question_num": 23,
+    "points": 2,
+    "text": "Toon aan de hand van bron 1 aan dat beide bedrijven in een gevangenendilemma terecht komen. Ga als volgt te werk:  Leg uit hoe de dominante strategie van beide bedrijven tot stand komt. Noem daarbij de relevante getallen uit de matrix.  Leg uit dat er sprake is van een gevangenendilemma. Stel dat ABC en XYZ een afspraak maken dat als ze beide gehackt worden, dat beide bedrijven dan zullen kiezen voor de strategie die een beter resultaat oplevert voor beide. Maar XYZ twijfelt of ABC zich wel aan de afspraak zal houden.",
+    "required_skills": [
+      "F12"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": [
+      "F1.4"
+    ]
+  },
+  {
+    "exam": "ha-1022-a-23-2-o",
+    "level": "havo",
+    "year": 2023,
+    "tijdvak": 2,
+    "opgave_num": 5,
+    "opgave_name": "Verzekerd van data",
+    "question_num": 24,
+    "points": 1,
+    "text": "Noem een voorbeeld van geloofwaardige zelfbinding waarmee bedrijf ABC bedrijf XYZ kan overtuigen dat het zich aan de afspraak zal houden. HA-1022-a-23-2-o 11 / 12 lees verder ►►► ABC sluit bij verzekeringsmaatschappij Veiligheid voor Alles een verzekering af voor schade veroorzaakt door computerincidenten. ABC betaalt daarvoor een premie van € 140 per maand. De kans dat ABC schade oploopt door computerincidenten is ieder jaar 0,3%. ABC verwacht dat het gemiddelde schadebedrag in een jaar met schade ongeveer € 350.000 zal bedragen.",
+    "required_skills": [
+      "F09"
+    ],
+    "question_type": "noem",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-23-2-o",
+    "level": "havo",
+    "year": 2023,
+    "tijdvak": 2,
+    "opgave_num": 5,
+    "opgave_name": "Verzekerd van data",
+    "question_num": 25,
+    "points": 3,
+    "text": "Toon met een berekening aan dat ABC risicomijdend gedrag vertoont door de verzekering af te sluiten. Verzekeringsmaatschappij Veiligheid voor Alles vermeldt in haar polisvoorwaarden de volgende uitsluitingen. Er vindt geen vergoeding van schade plaats indien: 1 medewerkers van het verzekerde bedrijf aantoonbaar opzettelijk schade toebrengen aan het computersysteem 2 het personeel niet getraind is in het herkennen van verdachte computermeldingen 3 het bedrijf de updates van de beveiligingssoftware niet goed heeft uitgevoerd 4 de schade het gevolg is van stroomuitval veroorzaakt door de energieleverancier",
+    "required_skills": [
+      "G04"
+    ],
+    "question_type": "berekenen",
+    "exam_codes": [
+      "G4.5"
+    ]
+  },
+  {
+    "exam": "ha-1022-a-23-2-o",
+    "level": "havo",
+    "year": 2023,
+    "tijdvak": 2,
+    "opgave_num": 5,
+    "opgave_name": "Verzekerd van data",
+    "question_num": 26,
+    "points": 2,
+    "text": "Welke twee van de genoemde uitsluitingen zijn bedoeld om het risico op moral hazard tegen te gaan? Licht je keuzes toe. Let op: de laatste vragen van dit examen staan op de volgende pagina. HA-1022-a-23-2-o 12 / 12 lees verder ►►►",
+    "required_skills": [
+      "G04"
+    ],
+    "question_type": "classificatie",
+    "exam_codes": [
+      "G4.5"
+    ]
+  },
+  {
+    "exam": "ha-1022-a-23-2-o",
+    "level": "havo",
+    "year": 2023,
+    "tijdvak": 2,
+    "opgave_num": 6,
+    "opgave_name": "Door delen meer welvaart?",
+    "question_num": 27,
+    "points": 2,
+    "text": "Verklaar de stelling van de milieuorganisaties.",
+    "required_skills": [
+      "F02"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": [
+      "F2.2"
+    ]
+  },
+  {
+    "exam": "ha-1022-a-23-2-o",
+    "level": "havo",
+    "year": 2023,
+    "tijdvak": 2,
+    "opgave_num": 6,
+    "opgave_name": "Door delen meer welvaart?",
+    "question_num": 28,
+    "points": 1,
+    "text": "Leg uit dat er toegevoegde waarde ontstaat bij een transactie via Deel-Kar.nl. Econoom Charlotte Brouwer zegt over Deel-Kar.nl: “De winstgevendheid van Deel-Kar.nl wordt negatief beïnvloed door asymmetrische informatie bij zowel de verhuurder als de huurder van een deelauto.",
+    "required_skills": [
+      "G07"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": [
+      "G2.1"
+    ]
+  },
+  {
+    "exam": "ha-1022-a-23-2-o",
+    "level": "havo",
+    "year": 2023,
+    "tijdvak": 2,
+    "opgave_num": 6,
+    "opgave_name": "Door delen meer welvaart?",
+    "question_num": 29,
+    "points": 2,
+    "text": "Leg de uitspraak van econoom Brouwer uit. Brouwer stelt: “Sommige huurders van auto’s via Deel-Kar.nl zullen moral hazard gedrag vertonen. De verhuurders hoeven zich daar echter geen zorgen over te maken.”",
+    "required_skills": [
+      "G02"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": [
+      "G3.2"
+    ]
+  },
+  {
+    "exam": "ha-1022-a-23-2-o",
+    "level": "havo",
+    "year": 2023,
+    "tijdvak": 2,
+    "opgave_num": 6,
+    "opgave_name": "Door delen meer welvaart?",
+    "question_num": 30,
+    "points": 2,
+    "text": "Verklaar de stelling van econoom Brouwer. einde  Bronvermelding Een opsomming van de in dit examen gebruikte bronnen, zoals teksten en afbeeldingen, is te vinden in het bij dit examen behorende correctievoorschrift.",
+    "required_skills": [
+      "F07"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": [
+      "F2.4"
+    ]
+  },
+  {
+    "exam": "ha-1022-a-24-1-o",
+    "level": "havo",
+    "year": 2024,
+    "tijdvak": 1,
+    "opgave_num": 1,
+    "opgave_name": "Een nieuwe cao",
+    "question_num": 1,
+    "points": 2,
+    "text": "Leg uit dat er sprake is van nivelleren, als de looneis van de vakbond wordt ingewilligd. Els Middelkoop is medewerker van een supermarkt. Ze leest in de krant over de looneis van de vakbond. Els verdiende in 2019 een jaarsalaris van € 24.998,- en is benieuwd naar wat dit in 2020 voor haar zou betekenen. Gebruik het krantenbericht en bron 1.",
+    "required_skills": [],
+    "question_type": "uitleg_dat",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-24-1-o",
+    "level": "havo",
+    "year": 2024,
+    "tijdvak": 1,
+    "opgave_num": 1,
+    "opgave_name": "Een nieuwe cao",
+    "question_num": 2,
+    "points": 3,
+    "text": "Bereken de koopkrachtverbetering van Els Middelkoop in 2020, indien de looneis van de vakbond wordt gerealiseerd. Geef je antwoord op 1 decimaal nauwkeurig. Barbara Berends is onderhandelaar van de supermarktketens, en Jacco Jansen is onderhandelaar van de vakbond. Samen bespreken zij de consequenties van de loonstijging die door de vakbond geëist is. De onderhandelaar van de werkgever vindt de looneis te hoog. Barbara Berends: “U moet zich realiseren dat een loonkostenstijging van 3,5% binnen ons bedrijf, waar de loonkosten 40% van de totale kosten uitmaken, zal leiden tot een productiekostenstijging van 1,4%. De supermarktketens kunnen deze hoge looneis niet betalen.” Jacco Jansen reageert met de volgende uitspraken: 1 U spreekt over de nominale productiekostenstijging, maar de reële productiekostenstijging is lager. 2 Bovendien leidt de gestegen arbeidsproductiviteit tot lagere productiekosten. 3 En u moet zich realiseren dat de omzet bij supermarkten toch zal stijgen, aangezien is gebleken dat de vraag naar goederen uit de supermarkt prijsinelastisch is. HA-1022-a-24-1-o 3 / 11 lees verder ►►► Gebruik uitspraak 1 en bron 1.",
+    "required_skills": [
+      "A04"
+    ],
+    "question_type": "berekenen",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-24-1-o",
+    "level": "havo",
+    "year": 2024,
+    "tijdvak": 1,
+    "opgave_num": 1,
+    "opgave_name": "Een nieuwe cao",
+    "question_num": 3,
+    "points": 2,
+    "text": "Bereken de reële productiekostenstijging bij een nominale loonkostenstijging van 3,5% als de loonkosten 40% van de totale kosten uitmaken. Gebruik uitspraak 2.",
+    "required_skills": [
+      "A04"
+    ],
+    "question_type": "berekenen",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-24-1-o",
+    "level": "havo",
+    "year": 2024,
+    "tijdvak": 1,
+    "opgave_num": 1,
+    "opgave_name": "Een nieuwe cao",
+    "question_num": 4,
+    "points": 2,
+    "text": "Leg uit dat een stijging van de arbeidsproductiviteit leidt tot lagere productiekosten. Gebruik uitspraak 3.",
+    "required_skills": [
+      "D13"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-24-1-o",
+    "level": "havo",
+    "year": 2024,
+    "tijdvak": 1,
+    "opgave_num": 1,
+    "opgave_name": "Een nieuwe cao",
+    "question_num": 5,
+    "points": 2,
+    "text": "Leg uit dat de prijsstijging van de goederen uit de supermarkt leidt tot een stijging van de omzet. Na intensieve onderhandelingen gaan de supermarktketens akkoord met de looneis van de vakbond. De nieuwe cao geldt voor alle werknemers. Gebruik bron 2.",
+    "required_skills": [
+      "A15"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-24-1-o",
+    "level": "havo",
+    "year": 2024,
+    "tijdvak": 1,
+    "opgave_num": 1,
+    "opgave_name": "Een nieuwe cao",
+    "question_num": 6,
+    "points": 2,
+    "text": "Leg uit dat er in toenemende mate sprake is van meeliftgedrag bij de cao-onderhandelingen. HA-1022-a-24-1-o 4 / 11 lees verder ►►►",
+    "required_skills": [],
+    "question_type": "uitleg_dat",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-24-1-o",
+    "level": "havo",
+    "year": 2024,
+    "tijdvak": 1,
+    "opgave_num": 2,
+    "opgave_name": "Speedpedelec",
+    "question_num": 7,
+    "points": 1,
+    "text": "Is een helm een substitutiegoed of een complementair goed van de speedpedelec? Geef een argument voor je keuze. De drie grootste aanbieders van speedpedelecs hebben gezamenlijk 70% van de markt van speedpedelecs in handen. Iedere aanbieder heeft binnen het assortiment keuzemogelijkheden, zoals design, vermogen en sterkte van de accu. Sprinter is een van de aanbieders van speedpedelecs. Over type Sprinter4 zijn de volgende gegevens bekend: Marginale kosten (MK) € 3.500 Totale constante kosten (TCK) € 1.000.000",
+    "required_skills": [
+      "D26"
+    ],
+    "question_type": "noem",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-24-1-o",
+    "level": "havo",
+    "year": 2024,
+    "tijdvak": 1,
+    "opgave_num": 2,
+    "opgave_name": "Speedpedelec",
+    "question_num": 8,
+    "points": 2,
+    "text": "Maak van onderstaande zinnen een economisch juiste tekst.  De marktvorm van de markt van speedpedelecs wordt …(1)… genoemd.  Een speedpedelec is een …(2)… goed.  Bij type Sprinter4 is sprake van …(3)… variabele kosten. Kies uit: bij (1) volkomen concurrentie / monopolistische concurrentie / oligopolie bij (2) homogeen / heterogeen bij (3) proportioneel / progressief / degressief Gebruik bron 1.",
+    "required_skills": [
+      "D15"
+    ],
+    "question_type": "classificatie",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-24-1-o",
+    "level": "havo",
+    "year": 2024,
+    "tijdvak": 1,
+    "opgave_num": 2,
+    "opgave_name": "Speedpedelec",
+    "question_num": 9,
+    "points": 2,
+    "text": "Welk vlak geeft de totale winst van Sprinter weer, als het bedrijf streeft naar maximale omzet? Noteer de letters van de hoekpunten van het vlak en leg je keuze uit. Sprinter heeft een nieuwe zakelijke klant gevonden. Het Nederlandse accountantskantoor Snel krijgt van het internationale moederbedrijf een budget van € 6.000 per medewerker, om voor alle 100 medewerkers speedpedelecs Sprinter4 aan te schaffen. Het moederbedrijf van Snel heeft de spelregels bepaald:  Snel doet een prijsvoorstel aan Sprinter voor levering van 100 stuks Sprinter4. Dat voorstel kan € 6.000 per speedpedelec zijn, maar het kan ook een lager bedrag zijn.  Als Sprinter het voorstel accepteert, dan ontvangt Sprinter de afgesproken prijs en ontvangt Snel het verschil tussen € 6.000 en de afgesproken prijs.  Als Sprinter het voorstel weigert, dan ontvangen beide bedrijven niets. Sprinter wil minimaal € 3.500 ontvangen voor type Sprinter4. HA-1022-a-24-1-o 5 / 11 lees verder ►►► Gebruik bron 1.",
+    "required_skills": [
+      "A20",
+      "D30"
+    ],
+    "question_type": "berekenen",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-24-1-o",
+    "level": "havo",
+    "year": 2024,
+    "tijdvak": 1,
+    "opgave_num": 2,
+    "opgave_name": "Speedpedelec",
+    "question_num": 10,
+    "points": 2,
+    "text": "Leg uit dat Sprinter minimaal € 3.500 wil ontvangen voor type Sprinter4. De hiervoor vermelde spelregels voldoen aan de kenmerken van een ultimatumspel.",
+    "required_skills": [
+      "D30"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-24-1-o",
+    "level": "havo",
+    "year": 2024,
+    "tijdvak": 1,
+    "opgave_num": 2,
+    "opgave_name": "Speedpedelec",
+    "question_num": 11,
+    "points": 2,
+    "text": "Maak van onderstaande zinnen een economisch juiste tekst over de kenmerken van het ultimatumspel.  Het ultimatumspel is een …(1)… spel.  Het spel kent …(2)… spelers.  De …(3)… doet een voorstel om een geldbedrag te verdelen.  De …(4)… kiest vervolgens tussen het voorstel accepteren of weigeren.  Als de tweede speler …(5)… dan ontvangen beide het overeengekomen deel. Kies uit: bij (1) sequentieel / simultaan bij (2) twee / drie bij (3) aanbieder / respondent bij (4) aanbieder / respondent bij (5) accepteert / weigert In bron 2 staan drie keuzeopties van het spel beschreven in een beslisboom. De uitkomsten geven de verdeling van het restbedrag na aftrek van de variabele productiekosten. Gebruik bron 2.",
+    "required_skills": [
+      "F09"
+    ],
+    "question_type": "classificatie",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-24-1-o",
+    "level": "havo",
+    "year": 2024,
+    "tijdvak": 1,
+    "opgave_num": 2,
+    "opgave_name": "Speedpedelec",
+    "question_num": 12,
+    "points": 2,
+    "text": "Welke bedragen moeten op plaats (1) en (2) in de beslisboom staan? Leg je keuze uit. Gebruik bron 2.",
+    "required_skills": [
+      "A08",
+      "A14"
+    ],
+    "question_type": "berekenen",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-24-1-o",
+    "level": "havo",
+    "year": 2024,
+    "tijdvak": 1,
+    "opgave_num": 2,
+    "opgave_name": "Speedpedelec",
+    "question_num": 13,
+    "points": 2,
+    "text": "Leg uit welke van de drie verdelingen uit bron 2 tot stand zal komen, als Sprinter en Snel streven naar een zo hoog mogelijke eigen opbrengst in euro’s. De directie van Snel wil Sprinter een prijsvoorstel doen van € 3.700 per speedpedelec. Een deskundige op het gebied van ultimatumspellen waarschuwt: “Snel kan beter een hoger bod doen aan Sprinter, want de praktijk leert dat zo’n laag bod toch vaak geweigerd wordt, ondanks dat beide bedrijven dan niets ontvangen.” Gebruik de uitspraak van de deskundige.",
+    "required_skills": [
+      "F09"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-24-1-o",
+    "level": "havo",
+    "year": 2024,
+    "tijdvak": 1,
+    "opgave_num": 2,
+    "opgave_name": "Speedpedelec",
+    "question_num": 14,
+    "points": 1,
+    "text": "Geef een reden waarom Sprinter het prijsvoorstel zou willen weigeren. HA-1022-a-24-1-o 6 / 11 lees verder ►►►",
+    "required_skills": [
+      "F02"
+    ],
+    "question_type": "noem",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-24-1-o",
+    "level": "havo",
+    "year": 2024,
+    "tijdvak": 1,
+    "opgave_num": 3,
+    "opgave_name": "Een valse start",
+    "question_num": 15,
+    "points": 2,
+    "text": "Maak van onderstaande zinnen een economisch juiste tekst.  Op de woningmarkt zijn veel individuele vragers en aanbieders actief. De aangeboden woningen zijn …(1)… goederen. De woningmarkt kan daarom het best worden omschreven als …(2)….  De inkomenselasticiteit van de vraag naar huurwoningen in de vrije sector is voor starters op de Nederlandse woningmarkt gelijk aan -0,5. Dit betekent dat starters een huurwoning als een …(3)… goed beschouwen. Kies uit: bij (1) heterogene / homogene bij (2) monopolistische concurrentie / oligopolie / volkomen concurrentie bij (3) inferieur / luxe / primair",
+    "required_skills": [
+      "D15"
+    ],
+    "question_type": "classificatie",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-24-1-o",
+    "level": "havo",
+    "year": 2024,
+    "tijdvak": 1,
+    "opgave_num": 3,
+    "opgave_name": "Een valse start",
+    "question_num": 16,
+    "points": 2,
+    "text": "Leg uit dat starters in een laagconjunctuur een voorkeur hebben voor huren boven kopen en lenen. HA-1022-a-24-1-o 7 / 11 lees verder ►►► Woningbezitters mogen de betaalde hypotheekrente aftrekken van de inkomstenbelasting. Dit belastingvoordeel bevordert eigenwoningbezit, en belemmert een goed functionerende verhuurmarkt. De overheid wil een evenwichtige woningmarkt bevorderen, en past daarom de tarieven van de hypotheekrenteaftrek aan. Zo wordt het marginale belastingtarief waartegen de hypotheekrente maximaal kan worden afgetrokken geleidelijk afgebouwd van 49,50% naar 37,05%. belastbaar inkomen marginaal tarief hypotheekrenteaftrek nu na afbouw € 0 - € 69.398 37,05% 37,05% € 69.399 en hoger 49,50% 37,05% Een econoom doet naar aanleiding van de tariefaanpassing twee uitspraken: Uitspraak 1: “Door de tariefaanpassing wordt de secundaire inkomensverdeling gelijker.” Uitspraak 2: “Op de lange termijn kan de tariefaanpassing bijdragen aan de betaalbaarheid van koopwoningen.” Gebruik bovenstaande tekst en uitspraak 1 van de econoom.",
+    "required_skills": [
+      "D10"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-24-1-o",
+    "level": "havo",
+    "year": 2024,
+    "tijdvak": 1,
+    "opgave_num": 3,
+    "opgave_name": "Een valse start",
+    "question_num": 17,
+    "points": 2,
+    "text": "Leg uit dat de tariefaanpassing leidt tot een gelijkere secundaire inkomensverdeling binnen de groep van woningbezitters. Gebruik uitspraak 2 van de econoom.",
+    "required_skills": [
+      "H22"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-24-1-o",
+    "level": "havo",
+    "year": 2024,
+    "tijdvak": 1,
+    "opgave_num": 3,
+    "opgave_name": "Een valse start",
+    "question_num": 18,
+    "points": 2,
+    "text": "Leg uit dat de tariefaanpassing via de vraagzijde van de woningmarkt kan leiden tot een daling van de verkoopprijs van koopwoningen. HA-1022-a-24-1-o 8 / 11 lees verder ►►►",
+    "required_skills": [
+      "I01"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-24-1-o",
+    "level": "havo",
+    "year": 2024,
+    "tijdvak": 1,
+    "opgave_num": 4,
+    "opgave_name": "Pensioenuitkeringen",
+    "question_num": 19,
+    "points": 2,
+    "text": "Bereken het bedrag in euro’s dat het ABP eind augustus tekort komt om de toekomstige uitkeringen te kunnen betalen. Gebruik het krantenbericht.",
+    "required_skills": [
+      "A04"
+    ],
+    "question_type": "berekenen",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-24-1-o",
+    "level": "havo",
+    "year": 2024,
+    "tijdvak": 1,
+    "opgave_num": 4,
+    "opgave_name": "Pensioenuitkeringen",
+    "question_num": 20,
+    "points": 2,
+    "text": "Maak van onderstaande zinnen een economisch juiste tekst. Het pensioenfonds ABP financiert de pensioenen volgens het …(1)…. Doordat de rente is …(2)…, groeide de huidige waarde van de toekomstige verplichtingen en daalde de dekkingsgraad. Om de dekkingsgraad te verhogen, kunnen pensioenpremies worden …(3)…. Kies uit: bij (1) omslagstelsel / kapitaaldekkingsstelsel bij (2) gestegen / gedaald bij (3) verhoogd / verlaagd Als gevolg van de lage dekkingsgraad is de kans groot dat de huidige en toekomstige pensioenuitkeringen moeten worden verlaagd.",
+    "required_skills": [
+      "E01"
+    ],
+    "question_type": "classificatie",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-24-1-o",
+    "level": "havo",
+    "year": 2024,
+    "tijdvak": 1,
+    "opgave_num": 4,
+    "opgave_name": "Pensioenuitkeringen",
+    "question_num": 21,
+    "points": 1,
+    "text": "Geef een verklaring dat verlaging van de pensioenuitkeringen de bestedingen van ouderen kan verlagen.",
+    "required_skills": [
+      "E05"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-24-1-o",
+    "level": "havo",
+    "year": 2024,
+    "tijdvak": 1,
+    "opgave_num": 4,
+    "opgave_name": "Pensioenuitkeringen",
+    "question_num": 22,
+    "points": 2,
+    "text": "Leg uit dat verlaging van de pensioenuitkeringen kan leiden tot afname van de huidige bestedingen van de werkzame beroepsbevolking.",
+    "required_skills": [
+      "E05"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-24-1-o",
+    "level": "havo",
+    "year": 2024,
+    "tijdvak": 1,
+    "opgave_num": 4,
+    "opgave_name": "Pensioenuitkeringen",
+    "question_num": 23,
+    "points": 2,
+    "text": "Leg uit dat uitstel van verlaging van pensioenuitkeringen kan leiden tot afname van de huidige bestedingen. HA-1022-a-24-1-o 9 / 11 lees verder ►►►",
+    "required_skills": [
+      "E05"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-24-1-o",
+    "level": "havo",
+    "year": 2024,
+    "tijdvak": 1,
+    "opgave_num": 4,
+    "opgave_name": "Pensioenuitkeringen",
+    "question_num": 24,
+    "points": 2,
+    "text": "Leg uit dat uitstel van de verlaging van pensioenuitkeringen dwingt tot solidariteit tussen generaties. Het huidige pensioenstelsel bestaat uit bedrijfspensioenen, die via het kapitaaldekkingsstelsel gefinancierd worden, en uit AOW-uitkeringen, die via het omslagstelsel gefinancierd worden. In periodes van lage rente verslechtert de betaalbaarheid van het kapitaaldekkingsstelsel.",
+    "required_skills": [
+      "E01"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-24-1-o",
+    "level": "havo",
+    "year": 2024,
+    "tijdvak": 1,
+    "opgave_num": 4,
+    "opgave_name": "Pensioenuitkeringen",
+    "question_num": 25,
+    "points": 2,
+    "text": "Leg uit dat een lage rente de betaalbaarheid van het kapitaaldekkingsstelsel onder druk zet. HA-1022-a-24-1-o 10 / 11 lees verder ►►►",
+    "required_skills": [
+      "E03"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-24-1-o",
+    "level": "havo",
+    "year": 2024,
+    "tijdvak": 1,
+    "opgave_num": 5,
+    "opgave_name": "Toerisme",
+    "question_num": 26,
+    "points": 2,
+    "text": "Zijn de bestedingen van buitenlandse toeristen voor de Nederlandse economie in Nederland een vorm van import, van export of geen van beide? Leg je keuze uit.",
+    "required_skills": [],
+    "question_type": "uitleg_of",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-24-1-o",
+    "level": "havo",
+    "year": 2024,
+    "tijdvak": 1,
+    "opgave_num": 5,
+    "opgave_name": "Toerisme",
+    "question_num": 27,
+    "points": 2,
+    "text": "Maak onderstaande redenering economisch juist: De bruto toegevoegde waarde van de Nederlandse bedrijven in de toeristische sector kan worden berekend door te kijken naar het verschil tussen de omzet en de waarde van de …(1)…. Het bbp van een land bestaat uit de toegevoegde waarde van de bedrijven en de toegevoegde waarde van …(2)…. De laatste is gelijk aan …(3)…. Kies uit: bij (1) ingekochte hulp- en grondstoffen / investeringen / primaire inkomens bij (2) het buitenland / de overheid bij (3) de ambtenarensalarissen / het saldo van de primaire inkomens uit het buitenland Bron 1 laat de werkgelegenheid in de sector toerisme zien, zowel in aantal personen als in arbeidsjaren. Beide indicatoren zijn toegenomen als gevolg van de toegenomen bestedingen in de sector. Ook wordt er minder in deeltijd gewerkt. Gebruik bron 1.",
+    "required_skills": [
+      "H14"
+    ],
+    "question_type": "classificatie",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-24-1-o",
+    "level": "havo",
+    "year": 2024,
+    "tijdvak": 1,
+    "opgave_num": 5,
+    "opgave_name": "Toerisme",
+    "question_num": 28,
+    "points": 2,
+    "text": "Toon met een berekening aan dat werknemers in de sector toerisme tussen 2014 en 2017 gemiddeld minder in deeltijd zijn gaan werken. HA-1022-a-24-1-o 11 / 11 lees verder ►►► Op plekken in Nederland waar het toerisme zich vooral concentreert, treden negatieve externe effecten op.",
+    "required_skills": [
+      "A04"
+    ],
+    "question_type": "berekenen",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-24-1-o",
+    "level": "havo",
+    "year": 2024,
+    "tijdvak": 1,
+    "opgave_num": 5,
+    "opgave_name": "Toerisme",
+    "question_num": 29,
+    "points": 2,
+    "text": "Leg uit dat een concentratie van toerisme op bepaalde plekken in Nederland kan leiden tot negatieve externe effecten. Adviesbureau De Toerist heeft onderzocht hoe het toerisme beter kan worden gespreid over het hele land. Het blijkt dat buitenlandse toeristen in Nederland relatief weinig met het openbaar vervoer reizen. Het adviesbureau pleit ervoor om buitenlandse toeristen via prijsdiscriminatie aan te zetten tot meer gebruik van het openbaar vervoer.",
+    "required_skills": [
+      "F14"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-24-1-o",
+    "level": "havo",
+    "year": 2024,
+    "tijdvak": 1,
+    "opgave_num": 5,
+    "opgave_name": "Toerisme",
+    "question_num": 30,
+    "points": 2,
+    "text": "Leg uit dat het toepassen van prijsdiscriminatie in het openbaar vervoer ertoe kan leiden dat het groen bbp stijgt. einde  Bronvermelding Een opsomming van de in dit examen gebruikte bronnen, zoals teksten en afbeeldingen, is te vinden in het bij dit examen behorende correctievoorschrift.",
+    "required_skills": [
+      "D21"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-24-2-o",
+    "level": "havo",
+    "year": 2024,
+    "tijdvak": 2,
+    "opgave_num": 1,
+    "opgave_name": "Cashewnoten",
+    "question_num": 1,
+    "points": 2,
+    "text": "Van welke marktvorm is sprake op de cashewnotenmarkt? Geef twee kenmerken van deze marktvorm. Op de veiling is een gemiddelde marktprijs van 1.550 Tanzaniaanse shilling per kilogram tot stand gekomen. Volgens de boeren is deze marktprijs te laag om de productiekosten te dekken. Om de boeren te behoeden voor faillissement, kondigt de president van Tanzania een minimumprijs van 3.300 Tanzaniaanse shilling per kilogram aan. Het overschot dat als gevolg van de minimumprijs ontstaat, zal worden opgekocht door de overheid. De nieuwe marktsituatie is geschetst in bron 1. De prijselasticiteit van het aanbod (Ea) is gedefinieerd als: % verandering aangeboden hoeveelheid Ea % verandering prijs  Gebruik bron 1 en bovenstaande definitie van de prijselasticiteit van het aanbod.",
+    "required_skills": [
+      "D15"
+    ],
+    "question_type": "classificatie",
+    "exam_codes": [
+      "D2.1"
+    ]
+  },
+  {
+    "exam": "ha-1022-a-24-2-o",
+    "level": "havo",
+    "year": 2024,
+    "tijdvak": 2,
+    "opgave_num": 1,
+    "opgave_name": "Cashewnoten",
+    "question_num": 2,
+    "points": 2,
+    "text": "Leid de prijselasticiteit van het aanbod af uit het verloop van de aanbodlijn op de markt van cashewnoten. Gebruik bron 1.",
+    "required_skills": [
+      "A15"
+    ],
+    "question_type": "berekenen",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-24-2-o",
+    "level": "havo",
+    "year": 2024,
+    "tijdvak": 2,
+    "opgave_num": 1,
+    "opgave_name": "Cashewnoten",
+    "question_num": 3,
+    "points": 3,
+    "text": "Welk vlak geeft het geldbedrag weer van het overschot dat de overheid heeft opgekocht? Noteer de letters van de hoekpunten van het vlak en leg je keuze uit. Bij het besluit om in te grijpen in de markt, heeft de overheid een afweging gemaakt tussen de belangen van verschillende groepen in de samenleving. Een econoom stelt dat twee groepen financieel nadeel ondervinden van de ingreep: de kopers van de cashewnoten en de burgers van het land.",
+    "required_skills": [
+      "A19"
+    ],
+    "question_type": "grafisch",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-24-2-o",
+    "level": "havo",
+    "year": 2024,
+    "tijdvak": 2,
+    "opgave_num": 1,
+    "opgave_name": "Cashewnoten",
+    "question_num": 4,
+    "points": 2,
+    "text": "Leg met behulp van het begrip consumentensurplus uit dat de minimumprijs financieel nadelig is voor de kopers van cashewnoten.",
+    "required_skills": [
+      "D28"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": [
+      "D3.1"
+    ]
+  },
+  {
+    "exam": "ha-1022-a-24-2-o",
+    "level": "havo",
+    "year": 2024,
+    "tijdvak": 2,
+    "opgave_num": 1,
+    "opgave_name": "Cashewnoten",
+    "question_num": 5,
+    "points": 1,
+    "text": "Geef een reden waarom het opkoopprogramma financieel nadelig is voor de burgers van het land. HA-1022-a-24-2-o 3 / 10 lees verder ►►► Een econoom stelt: “Om te kunnen concurreren met andere landen waar cashewnoten worden geproduceerd, zijn economische structuurontwikkelingen nodig. Bijvoorbeeld investeringen in nieuwe technologieën die leiden tot een toename van de arbeidsproductiviteit. Op de korte-termijn kunnen deze investeringen leiden tot een vermindering van de werkgelegenheid op de cashewnotenmarkt, maar op de lange-termijn zijn ze noodzakelijk voor het herstel ervan.” Het korte-termijn effect is in de figuur weergegeven door pijl 1. Het lange-termijn effect is in de figuur weergegeven door pijl 2 en pijl 3. Toelichting: een “–“ betekent een negatief verband, een “+” betekent een positief verband. Gebruik pijl 1 uit de figuur.",
+    "required_skills": [
+      "F02"
+    ],
+    "question_type": "noem",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-24-2-o",
+    "level": "havo",
+    "year": 2024,
+    "tijdvak": 2,
+    "opgave_num": 1,
+    "opgave_name": "Cashewnoten",
+    "question_num": 6,
+    "points": 1,
+    "text": "Geef een argument voor het korte-termijn effect dat investeringen in arbeidsproductiviteit-verhogende technologieën kunnen leiden tot een vermindering van de werkgelegenheid. Gebruik pijl 2 en 3 uit de figuur.",
+    "required_skills": [
+      "H17"
+    ],
+    "question_type": "noem",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-24-2-o",
+    "level": "havo",
+    "year": 2024,
+    "tijdvak": 2,
+    "opgave_num": 1,
+    "opgave_name": "Cashewnoten",
+    "question_num": 7,
+    "points": 2,
+    "text": "Leg het lange-termijn effect uit dat investeringen in arbeidsproductiviteit- verhogende technologieën kunnen leiden tot een toename van werkgelegenheid. HA-1022-a-24-2-o 4 / 10 lees verder ►►►",
+    "required_skills": [
+      "H17"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-24-2-o",
+    "level": "havo",
+    "year": 2024,
+    "tijdvak": 2,
+    "opgave_num": 2,
+    "opgave_name": "Kiezen voor een tandarts",
+    "question_num": 8,
+    "points": 2,
+    "text": "Noem twee relevante kenmerken van de marktvorm monopolistische concurrentie en licht die toe aan de hand van het krantenbericht. Enkele gezondheidseconomen reageren op het nieuwe beleid van de overheid en doen de volgende uitspraken: 1 “Marktwerking zal leiden tot lagere prijzen van tandzorg.” 2 “Als veel patiënten tegen de kosten van tandzorg zijn verzekerd, zal marktwerking niet leiden tot lagere prijzen.” 3 “De overheid zal erop moeten toezien dat tandartsen geen prijsafspraken met elkaar maken.”",
+    "required_skills": [
+      "D15"
+    ],
+    "question_type": "noem",
+    "exam_codes": [
+      "D2.1"
+    ]
+  },
+  {
+    "exam": "ha-1022-a-24-2-o",
+    "level": "havo",
+    "year": 2024,
+    "tijdvak": 2,
+    "opgave_num": 2,
+    "opgave_name": "Kiezen voor een tandarts",
+    "question_num": 9,
+    "points": 2,
+    "text": "Leg uitspraak 1 uit.",
+    "required_skills": [
+      "D15"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-24-2-o",
+    "level": "havo",
+    "year": 2024,
+    "tijdvak": 2,
+    "opgave_num": 2,
+    "opgave_name": "Kiezen voor een tandarts",
+    "question_num": 10,
+    "points": 2,
+    "text": "Leg uitspraak 2 uit.",
+    "required_skills": [
+      "G04"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-24-2-o",
+    "level": "havo",
+    "year": 2024,
+    "tijdvak": 2,
+    "opgave_num": 2,
+    "opgave_name": "Kiezen voor een tandarts",
+    "question_num": 11,
+    "points": 2,
+    "text": "Noem twee gevolgen van prijsafspraken tussen tandartsen die nadelig zijn voor consumenten. HA-1022-a-24-2-o 5 / 10 lees verder ►►► Denzel Martina is niet verzekerd tegen de kosten van tandzorg. Denzel bezoekt ieder half jaar het Mondmedisch Centrum in zijn woonplaats voor een gebitscontrole. Uit landelijke statistieken blijkt dat patiënten die één keer per halfjaar een gebitscontrole laten uitvoeren, gemiddeld een keer per vier jaar een vervolgbehandeling nodig hebben. Per 1 januari 2024 verhoogt het Mondmedisch Centrum de tarieven, en daarom overweegt Denzel het volgende:  Hij stapt over naar tandartspraktijk De Concurrent.  Hij sluit een tandzorgverzekering af. Denzel heeft een risiconeutrale houding ten opzichte van de kosten en verwacht geen verandering in zijn zorgconsumptie. Denzel Martina maakt het volgende overzicht: gebitscontrole vervolgbehandeling oud tarief Mondmedisch Centrum € 24 per halfjaar € 50 per behandeling nieuw tarief Mondmedisch Centrum € 28 per halfjaar € 60 per behandeling tarief De Concurrent € 26 per halfjaar € 70 per behandeling eigen risico tandzorgverzekering geen eigen risico € 5 eigen risico per behandeling premie tandzorgverzekering € 69 per jaar",
+    "required_skills": [
+      "D15"
+    ],
+    "question_type": "noem",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-24-2-o",
+    "level": "havo",
+    "year": 2024,
+    "tijdvak": 2,
+    "opgave_num": 2,
+    "opgave_name": "Kiezen voor een tandarts",
+    "question_num": 12,
+    "points": 3,
+    "text": "Toon met een berekening aan welke keuze het best past bij de voorkeur van Denzel Martina. HA-1022-a-24-2-o 6 / 10 lees verder ►►►",
+    "required_skills": [
+      "G07"
+    ],
+    "question_type": "berekenen",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-24-2-o",
+    "level": "havo",
+    "year": 2024,
+    "tijdvak": 2,
+    "opgave_num": 3,
+    "opgave_name": "Studiekosten",
+    "question_num": 13,
+    "points": 2,
+    "text": "Leg uit dat de overheid met deze regeling ruilt over de tijd. Niet alle opleidingstrajecten leiden tot een baan met voldoende inkomen. Bij het controleren van de voorwaarden voor scholingskostenaftrek kan de overheid te maken krijgen met asymmetrische informatie.",
+    "required_skills": [
+      "E01"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-24-2-o",
+    "level": "havo",
+    "year": 2024,
+    "tijdvak": 2,
+    "opgave_num": 3,
+    "opgave_name": "Studiekosten",
+    "question_num": 14,
+    "points": 2,
+    "text": "Leg uit dat asymmetrische informatie een financieel risico voor de overheid kan veroorzaken. Een econoom stelt dat mensen in de hoogste inkomenscategorie meer gebruikmaken van de regeling dan mensen in de lagere inkomenscategorieën. Dit wordt versterkt doordat het land een progressief belastingstelsel kent met drie schijven, zie bron 1. Gebruik bron 1 en bovenstaande tekst.",
+    "required_skills": [
+      "G02"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-24-2-o",
+    "level": "havo",
+    "year": 2024,
+    "tijdvak": 2,
+    "opgave_num": 3,
+    "opgave_name": "Studiekosten",
+    "question_num": 15,
+    "points": 2,
+    "text": "Geef twee argumenten die de stelling van de econoom onderbouwen. Denise heeft haar hbo-studie pedagogiek met succes afgerond en is inmiddels een aantal jaren werkzaam als leerlingbegeleider. Zij overweegt om volgend jaar in de avonduren te gaan studeren voor een universitaire master orthopedagogiek. Ze wil graag weten wat deze studie haar volgend jaar zou kosten. De kosten voor de eenjarige master orthopedagogiek zijn:  collegegeld: € 2.300  studiematerialen: € 400 Denise mag de kosten boven de drempel van € 300 aftrekken. Ze heeft volgend jaar een bruto-inkomen van € 36.000. Zij heeft geen andere aftrekposten. Gebruik bron 1.",
+    "required_skills": [
+      "H04"
+    ],
+    "question_type": "noem",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-24-2-o",
+    "level": "havo",
+    "year": 2024,
+    "tijdvak": 2,
+    "opgave_num": 3,
+    "opgave_name": "Studiekosten",
+    "question_num": 16,
+    "points": 2,
+    "text": "Bereken de netto-studiekosten van Denise. HA-1022-a-24-2-o 7 / 10 lees verder ►►►",
+    "required_skills": [
+      "H04"
+    ],
+    "question_type": "berekenen",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-24-2-o",
+    "level": "havo",
+    "year": 2024,
+    "tijdvak": 2,
+    "opgave_num": 4,
+    "opgave_name": "Rente omlaag, maar dan?",
+    "question_num": 17,
+    "points": 2,
+    "text": "Leg uit dat deflatie de laagconjunctuur versterkt. Een econoom reageert op het krantenbericht met twee beweringen. Bewering 1: “Door de renteverlaging zullen in een laagconjunctuur de bedrijfsinvesteringen nauwelijks toenemen.” Bewering 2: “De afweging van huurders om nu al dan niet over te gaan tot koop van een eigen woning, is gebaseerd op veel meer factoren dan alleen de hoogte van het rentetarief. Ik heb een voorbeeld uitgewerkt (bron 1).”",
+    "required_skills": [
+      "I06"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-24-2-o",
+    "level": "havo",
+    "year": 2024,
+    "tijdvak": 2,
+    "opgave_num": 4,
+    "opgave_name": "Rente omlaag, maar dan?",
+    "question_num": 18,
+    "points": 2,
+    "text": "Leg bewering 1 uit. Gebruik bewering 2 en bron 1.",
+    "required_skills": [
+      "I03"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-24-2-o",
+    "level": "havo",
+    "year": 2024,
+    "tijdvak": 2,
+    "opgave_num": 4,
+    "opgave_name": "Rente omlaag, maar dan?",
+    "question_num": 19,
+    "points": 3,
+    "text": "Laat met een berekening zien dat de jaarlijkse woonlast bij koop pas na drie jaar lager is dan bij huren. Bereken hiertoe de jaarlijkse woonlasten in het derde en vierde jaar. Gebruik bewering 2 en bron 1.",
+    "required_skills": [
+      "H26"
+    ],
+    "question_type": "berekenen",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-24-2-o",
+    "level": "havo",
+    "year": 2024,
+    "tijdvak": 2,
+    "opgave_num": 4,
+    "opgave_name": "Rente omlaag, maar dan?",
+    "question_num": 20,
+    "points": 1,
+    "text": "Noem een andere reden dan genoemd in bewering 2 en bron 1, die huurders kunnen betrekken in hun afweging om al dan niet een eigen woning te kopen. HA-1022-a-24-2-o 8 / 10 lees verder ►►►",
+    "required_skills": [
+      "H26"
+    ],
+    "question_type": "noem",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-24-2-o",
+    "level": "havo",
+    "year": 2024,
+    "tijdvak": 2,
+    "opgave_num": 5,
+    "opgave_name": "Zorgen om morgen",
+    "question_num": 21,
+    "points": 2,
+    "text": "Leg uit dat het houdbaarheidssaldo kan verslechteren als gevolg van de ontwikkeling van de grijze druk. Aan de andere kant verwacht het CPB dat het aanbod van arbeid binnen de groep van 20- tot 66-jarigen zal toenemen, doordat een groter deel van die groep besluit te gaan werken.",
+    "required_skills": [
+      "H12"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-24-2-o",
+    "level": "havo",
+    "year": 2024,
+    "tijdvak": 2,
+    "opgave_num": 5,
+    "opgave_name": "Zorgen om morgen",
+    "question_num": 22,
+    "points": 2,
+    "text": "Leg uit dat deze ontwikkeling zowel kan leiden tot hogere toekomstige overheidsinkomsten alsook tot lagere toekomstige overheidsuitgaven. HA-1022-a-24-2-o 9 / 10 lees verder ►►► De recente verhoging van de pensioenleeftijd lost het houdbaarheidstekort gedeeltelijk op. Om de betaalbaarheid van overheidsvoorzieningen verder te verbeteren, stelt een econoom een aantal beleidsopties voor aan de Nederlandse regering: 1 Verhoog het tarief van alle belastingschijven in het progressieve belastingstelsel met 1 procentpunt. 2 Verlaag de uitkeringen, inclusief de AOW. Een van de twee beleidsopties kan leiden tot een daling van het arbeidsaanbod.",
+    "required_skills": [
+      "H14"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-24-2-o",
+    "level": "havo",
+    "year": 2024,
+    "tijdvak": 2,
+    "opgave_num": 5,
+    "opgave_name": "Zorgen om morgen",
+    "question_num": 23,
+    "points": 2,
+    "text": "Leg uit welke van de twee beleidsopties kan leiden tot een daling van het arbeidsaanbod. Een van de twee beleidsopties leidt tot denivellering.",
+    "required_skills": [
+      "H23"
+    ],
+    "question_type": "uitleg_of",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-24-2-o",
+    "level": "havo",
+    "year": 2024,
+    "tijdvak": 2,
+    "opgave_num": 5,
+    "opgave_name": "Zorgen om morgen",
+    "question_num": 24,
+    "points": 2,
+    "text": "Leg uit welke van de twee beleidsopties leidt tot denivellering. Let op: de laatste vragen van dit examen staan op de volgende pagina. HA-1022-a-24-2-o 10 / 10 lees verder ►►►",
+    "required_skills": [
+      "H08"
+    ],
+    "question_type": "uitleg_of",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-24-2-o",
+    "level": "havo",
+    "year": 2024,
+    "tijdvak": 2,
+    "opgave_num": 6,
+    "opgave_name": "Aanbesteding",
+    "question_num": 25,
+    "points": 2,
+    "text": "Leg uit welk verdelingsvoorstel (uitgedrukt in hele euro’s) aannemer Schot in de Zaak minimaal zal accepteren, als deze uitsluitend het eigenbelang op korte termijn nastreeft. Er zijn voor de toekomst twee situaties mogelijk: a De twee aannemers zullen in de toekomst nooit meer met elkaar samenwerken. b De twee aannemers zullen in de toekomst vaker met elkaar samenwerken.",
+    "required_skills": [
+      "F12"
+    ],
+    "question_type": "berekenen",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-24-2-o",
+    "level": "havo",
+    "year": 2024,
+    "tijdvak": 2,
+    "opgave_num": 6,
+    "opgave_name": "Aanbesteding",
+    "question_num": 26,
+    "points": 2,
+    "text": "Wordt het voorstel van Bouwrijk aan Schot in de Zaak in situatie b hoger of lager dan in situatie a? Leg je keuze uit. Stel dat de twee aannemers bij hun strategie rekening houden met een sociale norm.",
+    "required_skills": [
+      "F09"
+    ],
+    "question_type": "uitleg_of",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-24-2-o",
+    "level": "havo",
+    "year": 2024,
+    "tijdvak": 2,
+    "opgave_num": 6,
+    "opgave_name": "Aanbesteding",
+    "question_num": 27,
+    "points": 2,
+    "text": "Onderbouw met een voorbeeld welke invloed een sociale norm kan hebben op het gedrag van beide aannemers. De aannemers hebben in hun startkosten de kosten van een aansprakelijkheidsverzekering meegenomen. De verzekeraar biedt de keuze tussen een hoog of een laag eigen risico.",
+    "required_skills": [
+      "F09"
+    ],
+    "question_type": "bron",
+    "exam_codes": []
+  },
+  {
+    "exam": "ha-1022-a-24-2-o",
+    "level": "havo",
+    "year": 2024,
+    "tijdvak": 2,
+    "opgave_num": 6,
+    "opgave_name": "Aanbesteding",
+    "question_num": 28,
+    "points": 2,
+    "text": "Geef twee redenen waarom een verzekeraar een lagere premie kan vragen bij een hoger eigen risico. Bronvermelding Een opsomming van de in dit examen gebruikte bronnen, zoals teksten en afbeeldingen, is te vinden in het bij dit examen behorende correctievoorschrift. einde ",
+    "required_skills": [
+      "G04"
+    ],
+    "question_type": "noem",
+    "exam_codes": []
+  },
+  {
     "exam": "ha-1022-a-25-1-o",
     "level": "havo",
     "year": 2025,
@@ -10,7 +1953,7 @@
     "points": 2,
     "text": "Leg de uitspraak van econoom 1 uit.",
     "required_skills": [
-      "H07"
+      "H14"
     ],
     "question_type": "uitleg_dat",
     "exam_codes": [
@@ -28,7 +1971,7 @@
     "points": 2,
     "text": "Leg de uitspraak van econoom 2 uit. Het debat gaat verder. Econoom 2 beweert: “Het minimumuurloon ligt boven het marktloon. Het verhogen van het minimumuurloon heeft een effect op de werkloosheid”.",
     "required_skills": [
-      "H06"
+      "H13"
     ],
     "question_type": "uitleg_dat",
     "exam_codes": [
@@ -46,7 +1989,7 @@
     "points": 2,
     "text": "Leg uit welk effect het verhogen van het minimumuurloon heeft op de werkloosheid. Bij de vragen 4 en 5 worden de belastingen buiten beschouwing gelaten. Het minimumuurloon voor de jongeren (< 21 jaar) is afhankelijk van de leeftijd. Zo krijgt een 16-jarige voor hetzelfde werk een lager minimumuurloon dan een 20-jarige. Gebruik bron 1.",
     "required_skills": [
-      "D09"
+      "D16"
     ],
     "question_type": "uitleg_dat",
     "exam_codes": []
@@ -78,7 +2021,7 @@
     "points": 2,
     "text": "Bereken hoe hoog het minimumuurloon op 31 juli 2024 van de 16-jarige moet zijn om minimaal dezelfde koopkracht te behouden als op 31 maart 2024. De economie van Nederland bevindt zich op het moment van het debat in een laagconjunctuur. Econoom 1 stelt dat de overheid naast het verhogen van het minimumuurloon, ook anticyclisch begrotingsbeleid kan voeren.",
     "required_skills": [
-      "I05"
+      "I09"
     ],
     "question_type": "berekenen",
     "exam_codes": [
@@ -112,7 +2055,7 @@
     "points": 2,
     "text": "Leg uit of de centrale bank de rente zal verhogen of verlagen om de inflatie te laten stijgen. HA-1022-a-25-1-o 4 / 9 lees verder ►►►",
     "required_skills": [
-      "I03"
+      "I05"
     ],
     "question_type": "uitleg_of",
     "exam_codes": []
@@ -128,9 +2071,9 @@
     "points": 2,
     "text": "Maak van onderstaande tekst een economisch juiste redenering. De Bonairiaanse fietsverhuurmarkt kan worden gezien als een markt van ...(1)…. De huurfietsen kunnen worden gezien als …(2)… producten. Huurfietsen en eigen fietsen kunnen worden gezien als ...(3)… goederen. Kies uit: bij (1) volkomen concurrentie / monopolistische concurrentie / oligopolie bij (2) homogene / heterogene bij (3) substitutie / complementaire Verhuurbedrijf Hopi Bon wil ook fietsen gaan verhuren. Het bedrijf gaat fietsenrekken plaatsen langs de kust en in enkele binnenlandse plaatsen. Toeristen kunnen fietsen huren en betalen per dag. Ze kunnen de fietsen overal op het eiland plaatsen in de daarvoor bestemde fietsenrekken. Ze kunnen dan eventueel overstappen op een ander type fiets. Hopi Bon rekent eenzelfde prijs voor de twee typen fietsen. De directeur van Hopi Bon maakt een analyse (zie bron 1). Gebruik bron 1.",
     "required_skills": [
-      "D08",
-      "D06",
-      "D15"
+      "D15",
+      "D09",
+      "D27"
     ],
     "question_type": "classificatie",
     "exam_codes": [
@@ -148,7 +2091,7 @@
     "points": 2,
     "text": "Zijn de variabele kosten degressief, proportioneel of progressief? Leg je antwoord uit. Hopi Bon heeft als doelstelling maximale winst. Gebruik bron 1.",
     "required_skills": [
-      "D14"
+      "D26"
     ],
     "question_type": "classificatie",
     "exam_codes": []
@@ -165,7 +2108,7 @@
     "text": "Bereken het resultaat per dag van Hopi Bon. HA-1022-a-25-1-o 5 / 9 lees verder ►►► De welvaart die ontstaat op deze fietsverhuurmarkt kan worden gemeten aan de hand van het consumenten- en producentensurplus. Door een prijsverlaging stijgt de welvaart. Gebruik bron 1.",
     "required_skills": [
       "A20",
-      "D17"
+      "D30"
     ],
     "question_type": "berekenen",
     "exam_codes": []
@@ -181,7 +2124,7 @@
     "points": 3,
     "text": "Leg het welvaartseffect uit als Hopi Bon een lagere prijs rekent dan de prijs bij maximale winst. Doe het als volgt:  Leg het effect van een lagere prijs uit op het consumentensurplus.  Leg het effect van een lagere prijs uit op het dalende producentensurplus.  Leg het effect van een lagere prijs uit op het stijgende producentensurplus. Hopi Bon wil starten met een huurprijs van $ 16, om daarna deze te verhogen naar $ 24. De directeur onderzoekt of het starten met een lage prijs ervoor zorgt dat bij een prijsverhoging de omzet zal stijgen. Gebruik bron 1.",
     "required_skills": [
-      "D16"
+      "D28"
     ],
     "question_type": "uitleg_dat",
     "exam_codes": [
@@ -215,7 +2158,7 @@
     "points": 2,
     "text": "Leg uit of het plan van de directeur voldoet aan de twee voorwaarden van prijsdiscriminatie. In Kralendijk, de hoofdstad van Bonaire, worden de huurfietsen door de toeristen overal en nergens achtergelaten, behalve in de daarvoor bestemde fietsenrekken. Dit leidt tot ergernis onder de bevolking. Bovendien raken de huurfietsen hierdoor beschadigd. De directeur van Hopi Bon besluit om een eigen risico in te stellen, zodat de overlast en de schade verminderen. Gebruik bovenstaande tekst.",
     "required_skills": [
-      "D13"
+      "D23"
     ],
     "question_type": "uitleg_of",
     "exam_codes": [
@@ -233,7 +2176,7 @@
     "points": 2,
     "text": "Leg uit dat een eigen risico beide problemen op kan lossen. HA-1022-a-25-1-o 6 / 9 lees verder ►►►",
     "required_skills": [
-      "G03"
+      "G04"
     ],
     "question_type": "uitleg_dat",
     "exam_codes": [
@@ -251,7 +2194,7 @@
     "points": 1,
     "text": "Geef een verklaring waarom het emissierechtensysteem bedrijven kan prikkelen om minder CO 2 uit te stoten. Bedrijven kunnen ook ervoor kiezen om duurzamer te produceren waardoor zij minder emissierechten hoeven op te kopen. Een econoom onderzoekt de casus van twee bedrijven: Gas en Kolen. In het model van de econoom staan winstveranderingen voor beide bedrijven voor het komende jaar. Pay-offmatrix winstveranderingen in miljoenen euro’s Kolen kopen emissierechten investeren in duurzame productie Gas kopen emissierechten 70 ; 80 50 ; 40 investeren in duurzame productie 30 ; 60 35 ; 45",
     "required_skills": [
-      "F03"
+      "F05"
     ],
     "question_type": "noem",
     "exam_codes": [
@@ -269,8 +2212,8 @@
     "points": 2,
     "text": "Leg uit of beide bedrijven in een gevangenendilemma terecht komen. Ga als volgt te werk:  Leg met behulp van getallen uit hoe de dominante strategie van beide bedrijven tot stand komt.  Leg uit of er sprake is van een gevangenendilemma. HA-1022-a-25-1-o 7 / 9 lees verder ►►► Investeringen in duurzame productiemethoden leiden tot hoge verzonken kosten. Hierdoor gaan bedrijven op zoek naar nieuwe markten, waardoor de totale CO 2 -uitstoot niet daalt.",
     "required_skills": [
-      "F02",
-      "F06"
+      "F03",
+      "F09"
     ],
     "question_type": "bron",
     "exam_codes": [
@@ -288,7 +2231,7 @@
     "points": 2,
     "text": "Leg uit dat de hoge verzonken kosten ervoor kunnen zorgen dat de totale CO 2 -uitstoot niet daalt. De Nederlandse overheid geeft een groot deel van de verkregen emissierechten aan bedrijven die vooral produceren voor de export.",
     "required_skills": [
-      "F11"
+      "F15"
     ],
     "question_type": "uitleg_dat",
     "exam_codes": [
@@ -306,7 +2249,7 @@
     "points": 2,
     "text": "Leg uit dat het grotendeels toewijzen van emissierechten aan internationaal opererende bedrijven een vorm van protectie is. De EU wil de daling van de CO 2 -uitstoot versnellen. De EU besluit om het aantal emissierechten te verlagen, zodat er minder rechten overblijven voor bedrijven. Dit heeft twee gevolgen voor het groen bbp.",
     "required_skills": [
-      "H04"
+      "H09"
     ],
     "question_type": "uitleg_dat",
     "exam_codes": [
@@ -324,7 +2267,7 @@
     "points": 2,
     "text": "Leg beide gevolgen uit voor het groen bbp. Stel dat de EU besluit tot het volgende systeem van emissierechten. De EU stelt de prijs van emissierechten gelijk aan de maatschappelijke kosten die gepaard gaan met de uitstoot. Bedrijven kunnen onbeperkt rechten aankopen bij de EU tegen deze prijs. Er worden geen rechten meer gegeven door de EU.",
     "required_skills": [
-      "H05"
+      "H11"
     ],
     "question_type": "uitleg_dat",
     "exam_codes": [
@@ -342,7 +2285,7 @@
     "points": 1,
     "text": "Benoem het effect van dit andere systeem van de EU op de negatieve externe effecten van CO 2 -uitstoot. HA-1022-a-25-1-o 8 / 9 lees verder ►►►",
     "required_skills": [
-      "F07"
+      "F10"
     ],
     "question_type": "noem",
     "exam_codes": [
@@ -360,7 +2303,7 @@
     "points": 1,
     "text": "Wordt de AOW-uitkering volgens het kapitaaldekkingsstelsel of het omslagstelsel gefinancierd? Motiveer je keuze.",
     "required_skills": [
-      "E03"
+      "E04"
     ],
     "question_type": "classificatie",
     "exam_codes": [
@@ -413,7 +2356,7 @@
     "text": "Toon met een berekening aan dat door maatregel 2 de koopkrachtdaling voor een (echt)paar minimaal 6% is bij een inflatie van 1%. De onderzoeker zegt over maatregel 3: “Dit leidt ertoe dat een alleenstaande oudere met een AOW-uitkering als enige inkomstenbron, jaarlijks een paar duizend euro meer belasting in box 1 moet betalen ten opzichte van de huidige situatie.” Gebruik bron 1, 2 en 3.",
     "required_skills": [
       "A04",
-      "I05"
+      "I09"
     ],
     "question_type": "berekenen",
     "exam_codes": [
@@ -432,7 +2375,7 @@
     "text": "Bereken hoeveel euro een alleenstaande oudere extra in box 1 moet betalen door maatregel 3. HA-1022-a-25-1-o 9 / 9 lees verder ►►►",
     "required_skills": [
       "A04",
-      "H03"
+      "H04"
     ],
     "question_type": "berekenen",
     "exam_codes": [
@@ -450,7 +2393,7 @@
     "points": 1,
     "text": "Geef een verklaring waarom de verzekeringsmarkt een markt is van onvolkomen concurrentie. De risico-inschatting door verzekeraars werkt vervolgens door in de premie. Dit zou kunnen leiden tot een vermindering van averechtse selectie.",
     "required_skills": [
-      "D08"
+      "D15"
     ],
     "question_type": "noem",
     "exam_codes": [
@@ -487,7 +2430,7 @@
     "points": 2,
     "text": "Leg de uitspraak van de toezichthouder uit. Uit onderzoek blijkt dat vooral buitenlandse verzekeraars gebruik maken van artificiële intelligentie om data te analyseren en daarmee gerichter de goede risico’s aantrekken.",
     "required_skills": [
-      "G07"
+      "G09"
     ],
     "question_type": "uitleg_dat",
     "exam_codes": [
@@ -505,7 +2448,7 @@
     "points": 2,
     "text": "Leg de gevolgen van de grotere inzet van artificiële intelligentie door buitenlandse verzekeraars uit voor de winstgevendheid van binnenlandse verzekeraars. einde  Bronvermelding Een opsomming van de in dit examen gebruikte bronnen, zoals teksten en afbeeldingen, is te vinden in het bij dit examen behorende correctievoorschrift.",
     "required_skills": [
-      "D08"
+      "D15"
     ],
     "question_type": "uitleg_dat",
     "exam_codes": [
@@ -524,7 +2467,7 @@
     "text": "Leg uit dat regeringen door de afgesproken grens voor het overheidstekort, tijdens een recessie, beleid moeten voeren dat de recessie juist groter maakt. Het beleid in het buitenland heeft gevolgen voor Nederland.",
     "required_skills": [
       "I01",
-      "I09"
+      "I17"
     ],
     "question_type": "uitleg_dat",
     "exam_codes": []
@@ -557,7 +2500,7 @@
     "text": "Verklaar de uitkomst in de cel linksonder. Doe het als volgt:  Leg uit waarom het overheidssaldo van Nederland stijgt.  Leg uit waarom het overheidssaldo van andere EMU-landen sterker daalt.  Leg uit waarom het overheidssaldo sterker daalt. HA-1022-a-25-2-o 3 / 11 lees verder ►►► Als overheden besluiten anticyclisch begrotingsbeleid te voeren, worden extra uitgaven veelal gefinancierd met leningen, wat leidt tot een hogere staatsschuld.",
     "required_skills": [
       "I01",
-      "I08"
+      "I16"
     ],
     "question_type": "uitleg_dat",
     "exam_codes": []
@@ -573,7 +2516,7 @@
     "points": 2,
     "text": "Zullen de overheidsbestedingen in de toekomst door het huidige anticyclisch begrotingsbeleid toenemen of afnemen? Leg je keuze uit. Om de recessie te bestrijden, maar toch de overheidstekorten te bewaken, stellen regeringsleiders voor om afspraken te maken binnen de EMU over gezamenlijk anticyclisch begrotingsbeleid. Een econoom stelt dat de afspraken voor Nederland weinig uitmaken: “Als nu niet wordt bezuinigd, zal Nederland het vertrouwen van de financiële markten verliezen.”",
     "required_skills": [
-      "I08"
+      "I16"
     ],
     "question_type": "uitleg_of",
     "exam_codes": []
@@ -589,7 +2532,7 @@
     "points": 2,
     "text": "Maak van onderstaande zinnen een economisch juiste redenering. Door een toenemend overheidstekort moet de Nederlandse overheid meer lenen, waardoor de rente …(1)… Het aanbod van staatsobligaties neemt …(2)… en dat leidt tot een …(3)… van de obligatiekoersen. Een stijgende staatsschuldquote leidt vanwege het grotere kredietrisico tot afnemend vertrouwen bij beleggers, waardoor de rente …(4)… Kies uit: bij (1) stijgt / daalt bij (2) toe / af bij (3) stijging / daling bij (4) verder stijgt / verder daalt HA-1022-a-25-2-o 4 / 11 lees verder ►►►",
     "required_skills": [
-      "I09"
+      "I17"
     ],
     "question_type": "classificatie",
     "exam_codes": []
@@ -605,7 +2548,7 @@
     "points": 2,
     "text": "Leg uit dat overmatige suikerconsumptie tot negatieve externe effecten leidt. Gebruik bovenstaand krantenartikel.",
     "required_skills": [
-      "F05"
+      "F08"
     ],
     "question_type": "uitleg_dat",
     "exam_codes": [
@@ -705,7 +2648,7 @@
     "points": 2,
     "text": "Leg uit of de Fed de rente heeft verhoogd of verlaagd. De aanpassing van de rente heeft, via de conjunctuurzijde, invloed op de hoogte van de aandelenkoersen. De aanpassing heeft ook effect gehad op de structuurzijde van de economie.",
     "required_skills": [
-      "I09"
+      "I17"
     ],
     "question_type": "uitleg_of",
     "exam_codes": []
@@ -722,7 +2665,7 @@
     "text": "Leg het negatieve verband uit tussen de rentestand en de aandelenkoersen via de conjunctuurzijde van de economie.",
     "required_skills": [
       "A15",
-      "I09"
+      "I17"
     ],
     "question_type": "uitleg_dat",
     "exam_codes": []
@@ -738,7 +2681,7 @@
     "points": 2,
     "text": "Leg het negatieve verband uit tussen de rentestand en de structuurzijde van de economie. Aan het einde van het kwartaal zijn de aandelenkoersen weer gestegen. Een belegger koopt op 31 januari 4.000 aandelen ASML en 6.000 aandelen ING. Op 1 april verkoopt de belegger deze aandelen weer. De aandelenkoersen zijn weergegeven in onderstaande tabel. Nederlandse aandelenkoersen op de beurs in de VS aandeel koers ($) 31 januari koers ($) 1 april ASML 149,40 187,50 ING 14,61 18,32",
     "required_skills": [
-      "I09"
+      "I17"
     ],
     "question_type": "uitleg_dat",
     "exam_codes": []
@@ -770,7 +2713,7 @@
     "points": 2,
     "text": "Maak van onderstaande zinnen een economisch juiste redenering. Op de markt van basiszorgverzekeringen is er sprake van …(1)… solidariteit. De zorgverzekeraars zijn actief op een …(2)…. Op deze markt is er sprake van ...(3)… concurrentie. Het aantrekken van studenten leidt tot …(4)… voor de zorgverzekeraar die de studenten aantrekt. Kies uit: bij (1) verplichte / vrijwillige bij (2) oligopolistische markt / markt van monopolistische concurrentie bij (3) volkomen / onvolkomen bij (4) averechtse selectie / risico-aversie / kostenvoordeel Zorgverzekeraars A en C zijn beide van plan om een campagne te voeren. Deze campagne is gericht op studenten. De kosten van de campagne zijn voor A en C gelijk vast bedrag. Een econoom maakt een pay-offmatrix (zie bron 2). In deze matrix zijn de winstveranderingen van de verzekeraars niet gelijk aan elkaar als één verzekeraar geen campagne voert en de andere verzekeraar wel. Als verzekeraar A bijvoorbeeld wel campagne voert en verzekeraar C niet, zal de winst van verzekeraar A met 10% stijgen. Als verzekeraar A geen campagne voert en verzekeraar C wel, zal de winst van verzekeraar C met 9% stijgen. Gebruik bron 1 en 2.",
     "required_skills": [
-      "D08"
+      "D15"
     ],
     "question_type": "classificatie",
     "exam_codes": [
@@ -804,7 +2747,7 @@
     "points": 2,
     "text": "Leg met behulp van getallen uit de matrix in bron 2 uit of er sprake is van een gevangenendilemma. Doe het als volgt:  Leg uit of beide verzekeraars een dominante strategie hebben.  Beredeneer vervolgens of er sprake is van een gevangenendilemma. HA-1022-a-25-2-o 9 / 11 lees verder ►►► De overheid in dit land heeft een vereveningsfonds ingesteld. Alle zorgverzekeraars storten per verzekerde een bedrag in dit fonds. Zorgverzekeraars met relatief veel slechte risico’s kunnen een beroep doen op dit fonds en kunnen zo een deel van de zorgkosten die ze maken compenseren.",
     "required_skills": [
-      "F06"
+      "F09"
     ],
     "question_type": "uitleg_of",
     "exam_codes": [
@@ -822,7 +2765,7 @@
     "points": 2,
     "text": "Leg uit waarom de overheid een vereveningsfonds instelt voor de basiszorgverzekering.",
     "required_skills": [
-      "G08"
+      "G10"
     ],
     "question_type": "uitleg_dat",
     "exam_codes": [
@@ -840,7 +2783,7 @@
     "points": 2,
     "text": "Leg uit dat een doelgroepencampagne minder financieel voordeel voor de zorgverzekeraar oplevert als er sprake is van een vereveningsfonds. HA-1022-a-25-2-o 10 / 11 lees verder ►►►",
     "required_skills": [
-      "G06"
+      "G08"
     ],
     "question_type": "uitleg_dat",
     "exam_codes": [
@@ -874,7 +2817,7 @@
     "points": 3,
     "text": "Maak van onderstaand schema een economisch juiste redenering. Doe het als volgt:  Schrijf de letters a tot en met f op.  Schrijf achter elke letter het nummer van het juiste economische verschijnsel. Kies uit: 1 belastingverlaging 2 besteedbaar inkomen stijgt 3 binnenlandse bestedingen stijgen 4 grenzen productiecapaciteit bereikt 5 investeringen in infrastructuur 6 particuliere consumptie stijgt Oorzaak-gevolgschema economisch beleid HA-1022-a-25-2-o 11 / 11 lees verder ►►► Door de aangekondigde belastingverlaging ontstaat er een overheidstekort.",
     "required_skills": [
-      "I08"
+      "I16"
     ],
     "question_type": "classificatie",
     "exam_codes": []
@@ -890,7 +2833,7 @@
     "points": 2,
     "text": "Leg uit dat een overheidstekort kan worden gezien als uitgestelde belastingheffing. De aangekondigde belastingverlaging bestaat uit twee maatregelen. De eerste maatregel is het verlagen van het belastingtarief. De tweede maatregel is het verhogen van de inkomensafhankelijke algemene heffingskorting. Beide maatregelen staan in onderstaande tabel. schijf belastbaar inkomen oud tarief oude heffingskorting nieuw tarief nieuwe heffingskorting 1 $ 0 - $ 44.725 32% $ 1.250 20% $ 2.375 2 $ 44.726 - $ 95.375 38% $ 750 24% $ 1.350 3 $ 95.376 - $ 182.100 42% $ 500 32% $ 750 4 $ 182.101 en hoger 48% $ 0 35% $ 0",
     "required_skills": [
-      "I08"
+      "I16"
     ],
     "question_type": "uitleg_dat",
     "exam_codes": []
@@ -907,7 +2850,7 @@
     "text": "Bereken hoeveel belasting iemand betaalt bij een belastbaar inkomen van $ 50.000 na de belastingmaatregelen. Door de aanpassing verandert het gemiddelde belastingtarief van iemand met een belastbaar inkomen van $ 40.000.",
     "required_skills": [
       "A04",
-      "H03"
+      "H04"
     ],
     "question_type": "berekenen",
     "exam_codes": [
@@ -963,6 +2906,1990 @@
     "exam_codes": []
   },
   {
+    "exam": "vw-1022-a-23-1-o",
+    "level": "vwo",
+    "year": 2023,
+    "tijdvak": 1,
+    "opgave_num": 1,
+    "opgave_name": "Content",
+    "question_num": 1,
+    "points": 2,
+    "text": "Leg uit dat er sprake is van ruilen over tijd bij het beleid van Superstream.",
+    "required_skills": [
+      "A02"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": []
+  },
+  {
+    "exam": "vw-1022-a-23-1-o",
+    "level": "vwo",
+    "year": 2023,
+    "tijdvak": 1,
+    "opgave_num": 1,
+    "opgave_name": "Content",
+    "question_num": 2,
+    "points": 2,
+    "text": "Leg uit dat de niet-kostendekkende prijs de opkomst van concurrenten heeft afgeremd. Bedrijfsanalist Vera Vierklau ziet in haar onderzoek dat er bij de huidige prijs sprake is van een prijsinelastische vraag als door het gevoerde prijsbeleid de concurrentie verdwijnt. Ze constateert het volgende: i. “Door het verdwijnen van de concurrentie verandert de marktvorm. Hierdoor verschuift de prijsafzetfunctie (GO-curve), ii. Door deze verschuiving verandert (bij iedere prijs) de prijselasticiteit van de vraag naar abonnementen. iii. Als Superstream de prijs (matig) verhoogt, zal de omzet stijgen.”",
+    "required_skills": [
+      "A02",
+      "A07"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": []
+  },
+  {
+    "exam": "vw-1022-a-23-1-o",
+    "level": "vwo",
+    "year": 2023,
+    "tijdvak": 1,
+    "opgave_num": 1,
+    "opgave_name": "Content",
+    "question_num": 3,
+    "points": 3,
+    "text": "Leg elk van de drie constateringen van bedrijfsanalist Vierklau uit. VW-1022-a-23-1-o 3 / 13 lees verder ►►► Figuur 1 opbrengsten en kosten Superstream bij een monopolie GO = 200 – 10Q MK = 2 GO (=P) = de jaarlijkse abonnementsprijs in euro’s Q = het aantal abonnementen in miljoenen Door de toegenomen marktmacht wordt Superstream een monopolist en streeft naar maximale winst.",
+    "required_skills": [
+      "D23"
+    ],
+    "question_type": "uitleg_of",
+    "exam_codes": [
+      "D2.3"
+    ]
+  },
+  {
+    "exam": "vw-1022-a-23-1-o",
+    "level": "vwo",
+    "year": 2023,
+    "tijdvak": 1,
+    "opgave_num": 1,
+    "opgave_name": "Content",
+    "question_num": 4,
+    "points": 2,
+    "text": "Bereken de prijs waarbij Superstream maximale winst behaalt. Vierklau onderzoekt het totale surplus en kijkt uitsluitend naar figuur 1. Zij concludeert: “De verandering van een niet-kostendekkende prijs naar een monopolieprijs heeft enerzijds effect op de omvang van het surplus in deze markt en anderzijds effect op de verdeling van dat surplus.”",
+    "required_skills": [
+      "A20",
+      "A21"
+    ],
+    "question_type": "berekenen",
+    "exam_codes": []
+  },
+  {
+    "exam": "vw-1022-a-23-1-o",
+    "level": "vwo",
+    "year": 2023,
+    "tijdvak": 1,
+    "opgave_num": 1,
+    "opgave_name": "Content",
+    "question_num": 5,
+    "points": 2,
+    "text": "Leg beide effecten uit op het surplus. VW-1022-a-23-1-o 4 / 13 lees verder ►►►",
+    "required_skills": [
+      "A19"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": [
+      "D3.1"
+    ]
+  },
+  {
+    "exam": "vw-1022-a-23-1-o",
+    "level": "vwo",
+    "year": 2023,
+    "tijdvak": 1,
+    "opgave_num": 2,
+    "opgave_name": "Aruba",
+    "question_num": 6,
+    "points": 1,
+    "text": "Verklaar dat de koppeling van de AWG aan de USD voor een lagere inflatie voor de consumenten in Aruba zorgt. Aruba heeft vrij kapitaalverkeer met het buitenland. Er is sprake van een trilemma bij het monetair beleid: de centrale bank van Aruba kan geen onafhankelijke rentepolitiek voeren.",
+    "required_skills": [
+      "E01"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": []
+  },
+  {
+    "exam": "vw-1022-a-23-1-o",
+    "level": "vwo",
+    "year": 2023,
+    "tijdvak": 1,
+    "opgave_num": 2,
+    "opgave_name": "Aruba",
+    "question_num": 7,
+    "points": 2,
+    "text": "Leg uit dat de centrale bank van Aruba geen onafhankelijke rentepolitiek kan voeren. Begin 2019 (= uitgangssituatie) zijn de vraag- en aanbodfuncties van de Arubaanse florin op de valutamarkt op een bepaalde dag als in tabel 1. Tabel 1 Qv = –2P + 2,68 Qv = collectieve vraag naar AWG (x miljoen) P = wisselkoers van de AWG in USD Qa = 3P – 0,11 Qa = collectieve aanbod van AWG (x miljoen) Medio 2019 kiezen meer Amerikaanse toeristen voor een vakantie naar Aruba als substitutiegoed voor een reis naar Cuba en de Dominicaanse Republiek. Tegelijkertijd investeren Amerikaanse bedrijven niet meer in windturbines en zonnepanelen op Aruba. Deze twee ontwikkelingen zorgen voor een tegengesteld effect op de wisselkoers van de AWG in USD. Zonder valuta-interventie daalt de wisselkoers van de AWG naar 0,50 USD.",
+    "required_skills": [
+      "E01"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": [
+      "E1.1"
+    ]
+  },
+  {
+    "exam": "vw-1022-a-23-1-o",
+    "level": "vwo",
+    "year": 2023,
+    "tijdvak": 1,
+    "opgave_num": 2,
+    "opgave_name": "Aruba",
+    "question_num": 8,
+    "points": 2,
+    "text": "Leg uit welke ontwikkeling heeft geleid tot een daling van de wisselkoers van de AWG.",
+    "required_skills": [
+      "A15"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": []
+  },
+  {
+    "exam": "vw-1022-a-23-1-o",
+    "level": "vwo",
+    "year": 2023,
+    "tijdvak": 1,
+    "opgave_num": 2,
+    "opgave_name": "Aruba",
+    "question_num": 9,
+    "points": 2,
+    "text": "Toon met een berekening aan hoeveel AWG door de centrale bank medio 2019 wordt opgekocht om de koersdaling tegen te gaan. VW-1022-a-23-1-o 5 / 13 lees verder ►►► In 2020 veroorzaken recessies in de Verenigde Staten, in het buurland Venezuela en in de Europese Unie een krimpend reëel bruto binnenlands product van Aruba. Met name het toerisme, waar relatief veel huishoudens werkzaam zijn tegen lage inkomens, loopt aanzienlijk terug. Hierdoor kan de Gini-coëfficiënt van de primaire inkomens stijgen.",
+    "required_skills": [
+      "A02"
+    ],
+    "question_type": "berekenen",
+    "exam_codes": []
+  },
+  {
+    "exam": "vw-1022-a-23-1-o",
+    "level": "vwo",
+    "year": 2023,
+    "tijdvak": 1,
+    "opgave_num": 2,
+    "opgave_name": "Aruba",
+    "question_num": 10,
+    "points": 2,
+    "text": "Leg uit dat de Gini-coëfficiënt van de primaire inkomens kan stijgen. Een econoom wil de recessie bestrijden door de belastingtarieven op inkomen uit arbeid te verlagen.",
+    "required_skills": [
+      "H10"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": [
+      "H4.1"
+    ]
+  },
+  {
+    "exam": "vw-1022-a-23-1-o",
+    "level": "vwo",
+    "year": 2023,
+    "tijdvak": 1,
+    "opgave_num": 2,
+    "opgave_name": "Aruba",
+    "question_num": 11,
+    "points": 2,
+    "text": "Leg uit dat de verlaging van de belastingtarieven kan leiden tot een toename van de werkgelegenheid. VW-1022-a-23-1-o 6 / 13 lees verder ►►►",
+    "required_skills": [
+      "H15"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": [
+      "H5.2"
+    ]
+  },
+  {
+    "exam": "vw-1022-a-23-1-o",
+    "level": "vwo",
+    "year": 2023,
+    "tijdvak": 1,
+    "opgave_num": 3,
+    "opgave_name": "Bij wanbetaling afrekenen",
+    "question_num": 12,
+    "points": 3,
+    "text": "Leg dit principaal-agentprobleem uit en geef aan welke verzekeringsvoorwaarde dit probleem kan verminderen. Kredietverzekeraars zijn bang om met moral hazard door zowel de leverancier als het inkopende bedrijf te maken te krijgen.",
+    "required_skills": [
+      "G02",
+      "F09"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": [
+      "G3.2"
+    ]
+  },
+  {
+    "exam": "vw-1022-a-23-1-o",
+    "level": "vwo",
+    "year": 2023,
+    "tijdvak": 1,
+    "opgave_num": 3,
+    "opgave_name": "Bij wanbetaling afrekenen",
+    "question_num": 13,
+    "points": 2,
+    "text": "Leg uit welke twee verzekeringsvoorwaarden moral hazard door leveranciers kunnen verminderen.",
+    "required_skills": [
+      "G04"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": [
+      "G4.5"
+    ]
+  },
+  {
+    "exam": "vw-1022-a-23-1-o",
+    "level": "vwo",
+    "year": 2023,
+    "tijdvak": 1,
+    "opgave_num": 3,
+    "opgave_name": "Bij wanbetaling afrekenen",
+    "question_num": 14,
+    "points": 2,
+    "text": "Leg uit welke voorwaarde het risico op averechtse selectie voor de verzekeraar vermindert. Digibate levert IT-diensten aan andere bedrijven en hanteert een betalingstermijn. De directie overweegt een kredietverzekering af te sluiten bij de kredietverzekeraar. De kredietverzekeraar bepaalt de premie op basis van twee factoren: − het verwachte schadebedrag − een premieopslag van 20% van het verwachte schadebedrag De kredietverzekeraar bepaalt de kans op wanbetaling op basis van historische data en verzamelt de volgende gegevens van Digibate (zie tabel 1). Tabel 1 financiële gegevens Digibate aantal contracten gemiddelde omzet in euro’s afgesproken betalingstermijn kans op wanbetaling 20 1 miljoen 90 dagen 0,05% 30 0,5 miljoen 60 dagen 0,2% 80 0,25 miljoen 60 dagen 0,2%",
+    "required_skills": [
+      "G04"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": [
+      "G4.5"
+    ]
+  },
+  {
+    "exam": "vw-1022-a-23-1-o",
+    "level": "vwo",
+    "year": 2023,
+    "tijdvak": 1,
+    "opgave_num": 3,
+    "opgave_name": "Bij wanbetaling afrekenen",
+    "question_num": 15,
+    "points": 2,
+    "text": "Bereken de totale verzekeringspremie. VW-1022-a-23-1-o 8 / 13 lees verder ►►►",
+    "required_skills": [
+      "A04"
+    ],
+    "question_type": "berekenen",
+    "exam_codes": []
+  },
+  {
+    "exam": "vw-1022-a-23-1-o",
+    "level": "vwo",
+    "year": 2023,
+    "tijdvak": 1,
+    "opgave_num": 4,
+    "opgave_name": "Achter het net vissen",
+    "question_num": 16,
+    "points": 3,
+    "text": "Laat aan de hand van een berekening zien dat de stelling van econoom Haddok klopt. VW-1022-a-23-1-o 9 / 13 lees verder ►►► Visserijbedrijven willen investeren in innovatieve technologieën om hun visvangst en hun marktpositie te verbeteren. Haddok onderzoekt dit en reageert met behulp van figuur 1: i “Door de investeringen veranderen de kosten voor een individuele visser en verschuift een curve in het rechterdiagram, ii Daardoor verandert het evenwicht op de collectieve markt, iii Hierdoor zal de situatie van overbevissing juist verder verslechteren.”",
+    "required_skills": [
+      "A06",
+      "A20"
+    ],
+    "question_type": "berekenen",
+    "exam_codes": []
+  },
+  {
+    "exam": "vw-1022-a-23-1-o",
+    "level": "vwo",
+    "year": 2023,
+    "tijdvak": 1,
+    "opgave_num": 4,
+    "opgave_name": "Achter het net vissen",
+    "question_num": 17,
+    "points": 3,
+    "text": "Leg de reactie van econoom Haddok uit met behulp van figuur 1. Om overbevissing te stoppen moet de visvangst gelijk zijn aan de groei. Om dit te bereiken zou de overheid een heffing per ton vis kunnen opleggen.",
+    "required_skills": [],
+    "question_type": "uitleg_dat",
+    "exam_codes": []
+  },
+  {
+    "exam": "vw-1022-a-23-1-o",
+    "level": "vwo",
+    "year": 2023,
+    "tijdvak": 1,
+    "opgave_num": 4,
+    "opgave_name": "Achter het net vissen",
+    "question_num": 18,
+    "points": 2,
+    "text": "Bereken op basis van het model de nieuwe marktprijs en de heffing per ton vis om de overbevissing te stoppen. De overheid wil vergunningen uitgeven met een visquotum. Haddok zegt hierover: “Het uitgeven van vergunningen kan de overbevissing ook stoppen. Maar er moet worden voldaan aan twee voorwaarden.”",
+    "required_skills": [
+      "A02"
+    ],
+    "question_type": "berekenen",
+    "exam_codes": []
+  },
+  {
+    "exam": "vw-1022-a-23-1-o",
+    "level": "vwo",
+    "year": 2023,
+    "tijdvak": 1,
+    "opgave_num": 4,
+    "opgave_name": "Achter het net vissen",
+    "question_num": 19,
+    "points": 2,
+    "text": "Benoem deze twee voorwaarden. VW-1022-a-23-1-o 10 / 13 lees verder ►►►",
+    "required_skills": [
+      "F07"
+    ],
+    "question_type": "noem",
+    "exam_codes": [
+      "F2.4"
+    ]
+  },
+  {
+    "exam": "vw-1022-a-23-1-o",
+    "level": "vwo",
+    "year": 2023,
+    "tijdvak": 1,
+    "opgave_num": 5,
+    "opgave_name": "Belastingverhoging",
+    "question_num": 20,
+    "points": 2,
+    "text": "Leg de bewering van Kempes uit. Bereken daarvoor eerst de grootte van de multiplier van de algemene heffingskorting. Kempes: “Ik verwacht dat de verlaging van de algemene heffingskorting leidt tot een afname van het bbp en dat na verloop van tijd de economie een nieuw evenwicht bereikt bij een rente van 5,6% en een stabiele inflatie van 1,3%. Dit analyseer ik met behulp van het IS-MB-GA-model zoals getoond in figuur 1.”",
+    "required_skills": [
+      "A01"
+    ],
+    "question_type": "berekenen",
+    "exam_codes": [
+      "H1.1"
+    ]
+  },
+  {
+    "exam": "vw-1022-a-23-1-o",
+    "level": "vwo",
+    "year": 2023,
+    "tijdvak": 1,
+    "opgave_num": 5,
+    "opgave_name": "Belastingverhoging",
+    "question_num": 21,
+    "points": 2,
+    "text": "Leg de verschuiving langs de GA 0 -curve uit.",
+    "required_skills": [
+      "I08"
+    ],
+    "question_type": "grafisch",
+    "exam_codes": [
+      "I4.2"
+    ]
+  },
+  {
+    "exam": "vw-1022-a-23-1-o",
+    "level": "vwo",
+    "year": 2023,
+    "tijdvak": 1,
+    "opgave_num": 5,
+    "opgave_name": "Belastingverhoging",
+    "question_num": 22,
+    "points": 2,
+    "text": "Leg uit dat de GA-curve zal verschuiven over de tijd. De gewenste verbetering van het overheidssaldo is mede afhankelijk van het rentebeleid van de centrale bank. Kempes concludeert: “Als de centrale bank de rente op 8% had gehouden, zou de overheid extra moeten bezuinigen om uiteindelijk de beoogde verbetering van het overheidssaldo te realiseren.”",
+    "required_skills": [
+      "I10"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": [
+      "I4.4"
+    ]
+  },
+  {
+    "exam": "vw-1022-a-23-1-o",
+    "level": "vwo",
+    "year": 2023,
+    "tijdvak": 1,
+    "opgave_num": 5,
+    "opgave_name": "Belastingverhoging",
+    "question_num": 23,
+    "points": 2,
+    "text": "Leg de conclusie van Kempes uit. Econoom Gabriel Tango uit kritiek op de Keynesiaanse visie in het model van Kempes. Tango stelt: “Als je een monetaristische visie had gehad, zou de centrale bank de rente niet zo ver hoeven te verlagen om haar doelstelling te behalen.”",
+    "required_skills": [
+      "I11"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": [
+      "I4.3"
+    ]
+  },
+  {
+    "exam": "vw-1022-a-23-1-o",
+    "level": "vwo",
+    "year": 2023,
+    "tijdvak": 1,
+    "opgave_num": 5,
+    "opgave_name": "Belastingverhoging",
+    "question_num": 24,
+    "points": 2,
+    "text": "Leg de stelling van Tango uit. Betrek de helling van de IS-curve in je antwoord. VW-1022-a-23-1-o 11 / 13 lees verder ►►► Tabel 1 enkele uitkomsten van het model rente aanpassing algemene heffingskorting (in miljarden) overheids- bestedingen (in miljarden) consumptie (in miljarden) bbp (in miljarden) 8% 100 180 330 8% –2 100 177 327 5,6% –2 100 178,5 330 Figuur 1 grafische weergave van het IS-MB-GA-model VW-1022-a-23-1-o 12 / 13 lees verder ►►►",
+    "required_skills": [
+      "I08"
+    ],
+    "question_type": "bron",
+    "exam_codes": [
+      "I4.2"
+    ]
+  },
+  {
+    "exam": "vw-1022-a-23-1-o",
+    "level": "vwo",
+    "year": 2023,
+    "tijdvak": 1,
+    "opgave_num": 6,
+    "opgave_name": "Circulaire economie",
+    "question_num": 25,
+    "points": 2,
+    "text": "Leg uit dat een circulaire economie het groen bbp kan verhogen. Het onderzoeksbureau merkt op: “Bij uitputting van niet-hernieuwbare grondstoffen zal marktwerking leiden tot andere prijzen, waardoor stroom A zal toenemen.”",
+    "required_skills": [
+      "H05"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": [
+      "H3.4"
+    ]
+  },
+  {
+    "exam": "vw-1022-a-23-1-o",
+    "level": "vwo",
+    "year": 2023,
+    "tijdvak": 1,
+    "opgave_num": 6,
+    "opgave_name": "Circulaire economie",
+    "question_num": 26,
+    "points": 2,
+    "text": "Leg de opmerking van het onderzoeksbureau uit. Het onderzoeksbureau stelt dat de overheid een circulaire economie kan bevorderen door prijsprikkels. Een voorbeeld is statiegeld op plastic flesjes. De consument krijgt het statiegeld uitsluitend terug bij inlevering van het flesje.",
+    "required_skills": [
+      "F07"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": [
+      "F2.4"
+    ]
+  },
+  {
+    "exam": "vw-1022-a-23-1-o",
+    "level": "vwo",
+    "year": 2023,
+    "tijdvak": 1,
+    "opgave_num": 6,
+    "opgave_name": "Circulaire economie",
+    "question_num": 27,
+    "points": 1,
+    "text": "Verklaar dat statiegeld op plastic flesjes de maatschappelijke kosten verlaagt. VW-1022-a-23-1-o 13 / 13 lees verder ►►► Het onderzoeksbureau bekijkt een casus van twee bedrijven. Bedrijf ‘Cirkel’ heeft een productieproces waarbij afval vrijkomt, maar heeft tot nu toe niet zelf geïnvesteerd in het scheiden van het afval. Nu levert het bedrijf het afval aan bedrijf ‘Schoon’, die het afval kan scheiden. Daarvoor moet bedrijf Schoon wel investeren in een nieuwe verwerkingsinstallatie, die specifiek wordt gemaakt om het afval van Cirkel te verwerken. Relevante gegevens van bedrijf Schoon: − Opbrengst: € 6 per kilogram verwerkt afval. − Variabele kosten: € 2 per kilogram verwerkt afval + de inkoopkosten van afval per kilogram (van Cirkel). − Vaste (constante) kosten: € 180.000 per jaar, waarvan driekwart als verzonken kosten kunnen worden aangemerkt. − Er wordt 100.000 kilogram afval per jaar verwerkt.",
+    "required_skills": [
+      "A07"
+    ],
+    "question_type": "noem",
+    "exam_codes": []
+  },
+  {
+    "exam": "vw-1022-a-23-1-o",
+    "level": "vwo",
+    "year": 2023,
+    "tijdvak": 1,
+    "opgave_num": 6,
+    "opgave_name": "Circulaire economie",
+    "question_num": 28,
+    "points": 2,
+    "text": "Bereken de maximale prijs die Schoon kan bieden voor de inkoop van afval per kilogram om break-even te kunnen produceren. Schoon wil anticiperen op mogelijke concurrenten en besluit na een mondeling overleg met Cirkel de verwerkingsinstallatie aan te schaffen. Bij de definitieve contractonderhandelingen eist Cirkel een hogere prijs dan Schoon bereid is te betalen.",
+    "required_skills": [
+      "A22"
+    ],
+    "question_type": "berekenen",
+    "exam_codes": []
+  },
+  {
+    "exam": "vw-1022-a-23-1-o",
+    "level": "vwo",
+    "year": 2023,
+    "tijdvak": 1,
+    "opgave_num": 6,
+    "opgave_name": "Circulaire economie",
+    "question_num": 29,
+    "points": 2,
+    "text": "Leg uit dat Schoon te maken heeft met een berovingsprobleem. Bronvermelding Een opsomming van de in dit examen gebruikte bronnen, zoals teksten en afbeeldingen, is te vinden in het bij dit examen behorende correctievoorschrift. einde ",
+    "required_skills": [
+      "F01"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": [
+      "F2.1"
+    ]
+  },
+  {
+    "exam": "vw-1022-a-23-2-o",
+    "level": "vwo",
+    "year": 2023,
+    "tijdvak": 2,
+    "opgave_num": 1,
+    "opgave_name": "Macro-economische ontwikkelingen",
+    "question_num": 1,
+    "points": 1,
+    "text": "Laat met een berekening zien dat het nationaal inkomen € 350 miljard bedraagt in 2000.",
+    "required_skills": [
+      "H02"
+    ],
+    "question_type": "berekenen",
+    "exam_codes": [
+      "H1.1"
+    ]
+  },
+  {
+    "exam": "vw-1022-a-23-2-o",
+    "level": "vwo",
+    "year": 2023,
+    "tijdvak": 2,
+    "opgave_num": 1,
+    "opgave_name": "Macro-economische ontwikkelingen",
+    "question_num": 2,
+    "points": 2,
+    "text": "Heeft het land in 2000-2019 beter of slechter dan het beschreven trendmatige gemiddelde van de voornaamste handelspartners gepresteerd? Motiveer je keuze met een berekening.",
+    "required_skills": [
+      "H20"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": [
+      "H1.2"
+    ]
+  },
+  {
+    "exam": "vw-1022-a-23-2-o",
+    "level": "vwo",
+    "year": 2023,
+    "tijdvak": 2,
+    "opgave_num": 1,
+    "opgave_name": "Macro-economische ontwikkelingen",
+    "question_num": 3,
+    "points": 2,
+    "text": "Leg aan de hand van het kringloopmodel uit of de overheid in 2019 een positieve of negatieve bijdrage heeft geleverd aan het totaal van de bestedingen. Het nationaal spaarsaldo is al jaren (sterk) positief. Vanuit het buitenland ontstaat er kritiek op het structureel positieve nationaal spaarsaldo. De onderzoekers beweren daarom: “Het nationaal spaarsaldo en het overheidssaldo in 2019 tonen aan dat de overheid begrotingsbeleid kan voeren om het handelsoverschot te beperken. Dit heeft vervolgens gevolgen voor de conjunctuur van het eigen land en de buurlanden.”",
+    "required_skills": [
+      "A19"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": [
+      "D3.1"
+    ]
+  },
+  {
+    "exam": "vw-1022-a-23-2-o",
+    "level": "vwo",
+    "year": 2023,
+    "tijdvak": 2,
+    "opgave_num": 1,
+    "opgave_name": "Macro-economische ontwikkelingen",
+    "question_num": 4,
+    "points": 2,
+    "text": "Leg de bewering van de onderzoekers uit. De onderzoekers concluderen: “Bij eenzelfde inzet van productiefactoren kan door extra investeringen in R&D de structurele groei van de economie worden bevorderd.”",
+    "required_skills": [
+      "A21"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": []
+  },
+  {
+    "exam": "vw-1022-a-23-2-o",
+    "level": "vwo",
+    "year": 2023,
+    "tijdvak": 2,
+    "opgave_num": 1,
+    "opgave_name": "Macro-economische ontwikkelingen",
+    "question_num": 5,
+    "points": 2,
+    "text": "Leg de conclusie van de onderzoekers uit. Betrek de totale factorproductiviteit in je antwoord. VW-1022-a-23-2-o 4 / 13 lees verder ►►►",
+    "required_skills": [
+      "A01",
+      "A02"
+    ],
+    "question_type": "berekenen",
+    "exam_codes": []
+  },
+  {
+    "exam": "vw-1022-a-23-2-o",
+    "level": "vwo",
+    "year": 2023,
+    "tijdvak": 2,
+    "opgave_num": 2,
+    "opgave_name": "Markt voor hoger onderwijs",
+    "question_num": 6,
+    "points": 1,
+    "text": "Verklaar hoe de voorwaarde het leenrisico van een student vermindert.",
+    "required_skills": [
+      "E01"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": []
+  },
+  {
+    "exam": "vw-1022-a-23-2-o",
+    "level": "vwo",
+    "year": 2023,
+    "tijdvak": 2,
+    "opgave_num": 2,
+    "opgave_name": "Markt voor hoger onderwijs",
+    "question_num": 7,
+    "points": 2,
+    "text": "Leg uit dat het leenstelsel op termijn een positief effect heeft op de consumptieve bestedingen. Voordat het leenstelsel werd ingevoerd, waren vooral studenten uit huishoudens met een laag inkomen voor de financiering van hun studie aangewezen op commerciële banken. Vanwege een risico op wanbetaling rekenden deze banken een hogere rente voor dit type leningen. Hierdoor werd de vermogensverdeling tussen huishoudens beïnvloed.",
+    "required_skills": [
+      "A15"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": [
+      "D1.4a"
+    ]
+  },
+  {
+    "exam": "vw-1022-a-23-2-o",
+    "level": "vwo",
+    "year": 2023,
+    "tijdvak": 2,
+    "opgave_num": 2,
+    "opgave_name": "Markt voor hoger onderwijs",
+    "question_num": 8,
+    "points": 2,
+    "text": "Leg uit op welke wijze de vermogensverdeling tussen huishoudens werd beïnvloed in de periode voordat het leenstelsel werd ingevoerd. Onderwijsinstellingen in het hoger onderwijs (aanbieders) rekenen € 12.000 per jaar collegegeld. Het hoger onderwijs wordt toegankelijker als het collegegeld daalt door bijvoorbeeld een subsidie aan de aanbieder. Het Plan Bureau (PB) onderzoekt de effecten van een subsidie op het collegegeld voor de markt van hoger onderwijs (zie figuur 1). Figuur 1 Vraag- en aanbodmodel van hoger onderwijs VW-1022-a-23-2-o 5 / 13 lees verder ►►► De subsidie heeft gevolgen voor de doelmatigheid van het hoger onderwijs.",
+    "required_skills": [
+      "A15"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": []
+  },
+  {
+    "exam": "vw-1022-a-23-2-o",
+    "level": "vwo",
+    "year": 2023,
+    "tijdvak": 2,
+    "opgave_num": 2,
+    "opgave_name": "Markt voor hoger onderwijs",
+    "question_num": 9,
+    "points": 2,
+    "text": "Analyseer de gevolgen van de subsidie voor de doelmatigheid. Ga als volgt te werk:  Arceer in de uitwerkbijlage (figuur A) het subsidiebedrag van de overheid.  Arceer in de uitwerkbijlage (figuur B) het verloren surplus dat ontstaat door de overheidssubsidie. Het PB stelt: “Bij het hoger onderwijs treedt door de subsidie een positief extern effect op waardoor de maatschappelijke (brede) welvaart stijgt.”",
+    "required_skills": [
+      "A19"
+    ],
+    "question_type": "grafisch",
+    "exam_codes": []
+  },
+  {
+    "exam": "vw-1022-a-23-2-o",
+    "level": "vwo",
+    "year": 2023,
+    "tijdvak": 2,
+    "opgave_num": 2,
+    "opgave_name": "Markt voor hoger onderwijs",
+    "question_num": 10,
+    "points": 2,
+    "text": "Leg de stelling van het PB uit.",
+    "required_skills": [
+      "F07"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": []
+  },
+  {
+    "exam": "vw-1022-a-23-2-o",
+    "level": "vwo",
+    "year": 2023,
+    "tijdvak": 2,
+    "opgave_num": 2,
+    "opgave_name": "Markt voor hoger onderwijs",
+    "question_num": 11,
+    "points": 2,
+    "text": "Leg uit dat er inverdieneffecten optreden door de subsidie op het collegegeld. VW-1022-a-23-2-o 6 / 13 lees verder ►►►",
+    "required_skills": [
+      "A27",
+      "F07"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": []
+  },
+  {
+    "exam": "vw-1022-a-23-2-o",
+    "level": "vwo",
+    "year": 2023,
+    "tijdvak": 2,
+    "opgave_num": 3,
+    "opgave_name": "Kostenpost",
+    "question_num": 12,
+    "points": 2,
+    "text": "Toon met een berekening aan dat de vraag naar brievenpost in de uitgangssituatie prijselastisch is. Ga daarbij uit van een tariefsverlaging van 10%. PostNV streeft naar maximale winst, maar aandeelhouders willen daarbij dat de winst per product minstens 10% van de gemiddelde totale kosten is.",
+    "required_skills": [
+      "A07",
+      "A21"
+    ],
+    "question_type": "berekenen",
+    "exam_codes": []
+  },
+  {
+    "exam": "vw-1022-a-23-2-o",
+    "level": "vwo",
+    "year": 2023,
+    "tijdvak": 2,
+    "opgave_num": 3,
+    "opgave_name": "Kostenpost",
+    "question_num": 13,
+    "points": 3,
+    "text": "Toon met een berekening aan dat de winst per product in de nieuwe situatie lager is dan 10% van de gemiddelde totale kosten (GTK). Econoom Van Gorkum reageert: “Uit marktonderzoek blijkt dat in de nieuwe situatie, consumenten en bedrijven prijselastisch reageren bij een verhoging van het posttarief en prijsinelastisch bij een verlaging van het tarief.”",
+    "required_skills": [
+      "A14"
+    ],
+    "question_type": "berekenen",
+    "exam_codes": []
+  },
+  {
+    "exam": "vw-1022-a-23-2-o",
+    "level": "vwo",
+    "year": 2023,
+    "tijdvak": 2,
+    "opgave_num": 3,
+    "opgave_name": "Kostenpost",
+    "question_num": 14,
+    "points": 2,
+    "text": "Leg uit of het mogelijk is om de omzet te verhogen door een aanpassing van het posttarief. VW-1022-a-23-2-o 7 / 13 lees verder ►►► Figuur 1 Indexcijfers afzet en omzet van PostNV op de brievenpostmarkt (2010 = 100) Figuur 2 Indexcijfers afzet en omzet van PostNV op de pakketbezorgingsmarkt (2012 = 100) Naast brievenpost is PostNV ook actief in pakketbezorging waar PostNV een grote speler is. Het is daarom mogelijk dat PostNV aan kruissubsidie heeft gedaan om de concurrentiepositie op de markt van pakketbezorging te versterken. Kruissubsidie betekent dat PostNV brievenpost relatief duurder maakt om pakketpost relatief goedkoper te maken om zo beter te kunnen concurreren op de markt van pakketpost.",
+    "required_skills": [
+      "A26"
+    ],
+    "question_type": "uitleg_of",
+    "exam_codes": []
+  },
+  {
+    "exam": "vw-1022-a-23-2-o",
+    "level": "vwo",
+    "year": 2023,
+    "tijdvak": 2,
+    "opgave_num": 3,
+    "opgave_name": "Kostenpost",
+    "question_num": 15,
+    "points": 2,
+    "text": "Leg op basis van figuur 1 en 2 uit hoe er kan worden afgeleid dat er sprake kan zijn geweest van kruissubsidie. Tussen de overheid en PostNV is er sprake van een principaal-agent probleem. De mededingingsautoriteit is daarom door de overheid aangesteld als toezichthouder.",
+    "required_skills": [
+      "D22"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": []
+  },
+  {
+    "exam": "vw-1022-a-23-2-o",
+    "level": "vwo",
+    "year": 2023,
+    "tijdvak": 2,
+    "opgave_num": 3,
+    "opgave_name": "Kostenpost",
+    "question_num": 16,
+    "points": 3,
+    "text": "Beschrijf het principaal-agent probleem tussen PostNV en de overheid én leg uit hoe toezicht van de mededingingsautoriteit dit kan verminderen. VW-1022-a-23-2-o 8 / 13 lees verder ►►►",
+    "required_skills": [
+      "G05"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": [
+      "G3.2"
+    ]
+  },
+  {
+    "exam": "vw-1022-a-23-2-o",
+    "level": "vwo",
+    "year": 2023,
+    "tijdvak": 2,
+    "opgave_num": 4,
+    "opgave_name": "Doelbewust depreciëren",
+    "question_num": 17,
+    "points": 2,
+    "text": "Bereken de wisselkoers van de dollar in yen voor de depreciatie.",
+    "required_skills": [
+      "H24"
+    ],
+    "question_type": "berekenen",
+    "exam_codes": [
+      "H1.1"
+    ]
+  },
+  {
+    "exam": "vw-1022-a-23-2-o",
+    "level": "vwo",
+    "year": 2023,
+    "tijdvak": 2,
+    "opgave_num": 4,
+    "opgave_name": "Doelbewust depreciëren",
+    "question_num": 18,
+    "points": 2,
+    "text": "Leg uit hoe het rentebeleid van de JCB leidt tot een depreciatie van de yen ten opzichte van de dollar. De depreciatie van de yen heeft gevolgen voor de koopkracht van Amerikaanse huishoudens. Een woordvoerder van de FED stelt dat de hogere waarde van de dollar ten opzichte van de yen op termijn een positief effect heeft op het reële inkomen van het gemiddelde Amerikaanse huishouden.",
+    "required_skills": [],
+    "question_type": "uitleg_dat",
+    "exam_codes": []
+  },
+  {
+    "exam": "vw-1022-a-23-2-o",
+    "level": "vwo",
+    "year": 2023,
+    "tijdvak": 2,
+    "opgave_num": 4,
+    "opgave_name": "Doelbewust depreciëren",
+    "question_num": 19,
+    "points": 2,
+    "text": "Leg de stelling van de woordvoerder uit. VW-1022-a-23-2-o 9 / 13 lees verder ►►► Figuur 1 toont een model. Hierin heeft het monetair beleid van de JCB en de FED via de valutamarkt een sterke invloed op de onderlinge exportopbrengsten. Figuur 1 Exportopbrengsten Japan en VS  De getallen betreffen uitsluitend de onderlinge exportopbrengst van Japan en de VS in de eigen valuta, uitgedrukt in afgeronde gehele indexcijfers (de huidige situatie is gelijk aan “ongewijzigd beleid; ongewijzigd beleid”).  De exportprijs wordt uitsluitend bepaald door de hoogte van de wisselkoers. Andere factoren die invloed hebben op de exportprijs worden constant verondersteld. Uit het model kunnen de volgende conclusies worden getrokken: i. Het model heeft een Nash-evenwicht. ii. Dit Nash-evenwicht zal gevolgen hebben voor het binnenlands prijspeil van zowel de VS als Japan (die beide in een hoogconjunctuur verkeren) waardoor de internationale concurrentiepositie kan verslechteren.",
+    "required_skills": [],
+    "question_type": "uitleg_dat",
+    "exam_codes": []
+  },
+  {
+    "exam": "vw-1022-a-23-2-o",
+    "level": "vwo",
+    "year": 2023,
+    "tijdvak": 2,
+    "opgave_num": 4,
+    "opgave_name": "Doelbewust depreciëren",
+    "question_num": 20,
+    "points": 3,
+    "text": "Leg de conclusies uit en gebruik getallen uit de spelboom voor het aantonen van het Nash-evenwicht. VW-1022-a-23-2-o 10 / 13 lees verder ►►►",
+    "required_skills": [
+      "F12"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": []
+  },
+  {
+    "exam": "vw-1022-a-23-2-o",
+    "level": "vwo",
+    "year": 2023,
+    "tijdvak": 2,
+    "opgave_num": 5,
+    "opgave_name": "Vertrouwen",
+    "question_num": 21,
+    "points": 2,
+    "text": "Leg uit dat het inkomen sterker daalt dan de autonome bestedingen. Vanuit het Keynesiaans kruis blijkt dat in het IS-MB-GA diagram een negatieve output gap ontstaat. De GA-curve toont daarbij aan dat de productie daalt.",
+    "required_skills": [
+      "I14"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": [
+      "I4.1"
+    ]
+  },
+  {
+    "exam": "vw-1022-a-23-2-o",
+    "level": "vwo",
+    "year": 2023,
+    "tijdvak": 2,
+    "opgave_num": 5,
+    "opgave_name": "Vertrouwen",
+    "question_num": 22,
+    "points": 2,
+    "text": "Leg aan de hand van de GA-curve uit dat de productie door de schok daalt. Econoom Valderrama stelt: “Ik neem aan dat de centrale bank de beleidsrente aanpast aan de verwachte inflatie en dat ze effectief de rente met één stap aanpassen zodanig dat deze de economie op een output gap van nul brengt.”",
+    "required_skills": [
+      "I15"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": [
+      "I4.2"
+    ]
+  },
+  {
+    "exam": "vw-1022-a-23-2-o",
+    "level": "vwo",
+    "year": 2023,
+    "tijdvak": 2,
+    "opgave_num": 5,
+    "opgave_name": "Vertrouwen",
+    "question_num": 23,
+    "points": 2,
+    "text": "Teken in de uitwerkbijlage (figuur C) de nieuwe IS-curve (IS 1 ), MB-curve (MB 1 ) en GA-curve (GA 1 ) bij het nieuwe evenwicht. Noteer op de relevante assen in het tweede en/of derde diagram het nieuwe inkomen (Y*), rente (r 1 ) en de inflatie (π1 ). Valderrama stelt dat het aanpassingsmechanisme van de economie wordt bepaald door de economische visie van de centrale bank.",
+    "required_skills": [
+      "I08"
+    ],
+    "question_type": "grafisch",
+    "exam_codes": []
+  },
+  {
+    "exam": "vw-1022-a-23-2-o",
+    "level": "vwo",
+    "year": 2023,
+    "tijdvak": 2,
+    "opgave_num": 5,
+    "opgave_name": "Vertrouwen",
+    "question_num": 24,
+    "points": 2,
+    "text": "Leg het verschil uit tussen de monetaristen en de Keynesianen met betrekking tot het aanpassingsmechanisme naar het nieuwe evenwicht. Econoom Valderrama stelt: “De mate van onzekerheid en de trage transitie van de economie vloeien voort uit cao’s met een lange looptijd. Ik pleit daarom voor cao’s met een kortere looptijd, waardoor de GA-curve steiler wordt en de economie sneller naar het nieuwe evenwicht gaat.”",
+    "required_skills": [
+      "I11"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": []
+  },
+  {
+    "exam": "vw-1022-a-23-2-o",
+    "level": "vwo",
+    "year": 2023,
+    "tijdvak": 2,
+    "opgave_num": 5,
+    "opgave_name": "Vertrouwen",
+    "question_num": 25,
+    "points": 2,
+    "text": "Leg het pleidooi van de econoom uit. VW-1022-a-23-2-o 12 / 13 lees verder ►►►",
+    "required_skills": [
+      "I04"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": []
+  },
+  {
+    "exam": "vw-1022-a-23-2-o",
+    "level": "vwo",
+    "year": 2023,
+    "tijdvak": 2,
+    "opgave_num": 6,
+    "opgave_name": "De woningmarkt in de knel",
+    "question_num": 26,
+    "points": 1,
+    "text": "Bereken hoeveel huishoudens op de wachtlijst staan. VastWonen stelt dat bij afschaffing van de maximumhuur, de wachtlijst verdwijnt als VastWonen maximale omzet als doelstelling hanteert.",
+    "required_skills": [
+      "A14"
+    ],
+    "question_type": "berekenen",
+    "exam_codes": []
+  },
+  {
+    "exam": "vw-1022-a-23-2-o",
+    "level": "vwo",
+    "year": 2023,
+    "tijdvak": 2,
+    "opgave_num": 6,
+    "opgave_name": "De woningmarkt in de knel",
+    "question_num": 27,
+    "points": 2,
+    "text": "Toon met een berekening aan of de stelling juist is. De gemeente houdt vast aan de maximumhuur. Om de krapte aan te pakken wil de directeur van VastWonen oude kantoorpanden opkopen van de gemeente en deze ombouwen tot sociale huurwoningen. De aankoop- en verbouwingsplannen moeten worden gefinancierd door middel van hypothecaire leningen (lening met onderpand). Econoom Knopper vindt het een goed plan en onderbouwt het als volgt: “De huidige lage hypotheekrente in combinatie met de huidige situatie op de sociale huurwoningmarkt zorgen voor een laag risico voor VastWonen, waardoor de schulden voor de woningbouwvereniging geen financieel probleem vormen.”",
+    "required_skills": [
+      "A06"
+    ],
+    "question_type": "berekenen",
+    "exam_codes": []
+  },
+  {
+    "exam": "vw-1022-a-23-2-o",
+    "level": "vwo",
+    "year": 2023,
+    "tijdvak": 2,
+    "opgave_num": 6,
+    "opgave_name": "De woningmarkt in de knel",
+    "question_num": 28,
+    "points": 2,
+    "text": "Leg de onderbouwing van econoom Knopper uit. VW-1022-a-23-2-o 13 / 13 lees verder ►►► In de gemeente Reder zijn er naast sociale huurwoningen ook particuliere huurwoningen. Een particuliere huurwoning is een woning in de vrije sector (zonder overheidsregulering) en de huur wordt bepaald door vraag en aanbod. Ook deze markt wordt krapper (zie tabel 2). Tabel 2 Gegevens particuliere huurwoningen in Reder Ontwikkeling ten opzichte van jaar eerder aantal vrijgekomen huurwoningen 9,9% gemiddelde huur +6% hoogte van de middeninkomens +3% Uit onderzoek blijkt dat de inkomenselasticiteit van particuliere huurwoningen van de middeninkomens gelijk is aan +0,4. Een makelaar verklaart de grote prijsstijging van particuliere huurwoningen: “Ontwikkelingen aan zowel de vraagkant als de aanbodkant van de particuliere huurwoningmarkt zorgen voor stijgende huren.”",
+    "required_skills": [
+      "A25"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": []
+  },
+  {
+    "exam": "vw-1022-a-23-2-o",
+    "level": "vwo",
+    "year": 2023,
+    "tijdvak": 2,
+    "opgave_num": 6,
+    "opgave_name": "De woningmarkt in de knel",
+    "question_num": 29,
+    "points": 2,
+    "text": "Leg de verklaring van de makelaar uit aan de hand van gegevens uit tabel 2 én de inkomenselasticiteit. einde  Bronvermelding Een opsomming van de in dit examen gebruikte bronnen, zoals teksten en afbeeldingen, is te vinden in het bij dit examen behorende correctievoorschrift.",
+    "required_skills": [
+      "D11"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": []
+  },
+  {
+    "exam": "vw-1022-a-24-1-o",
+    "level": "vwo",
+    "year": 2024,
+    "tijdvak": 1,
+    "opgave_num": 1,
+    "opgave_name": "Duurzaamheid stimuleren",
+    "question_num": 1,
+    "points": 2,
+    "text": "Leg uit dat de productie van product A leidt tot negatieve externe effecten en maatschappelijke kosten. Geef daarbij een voorbeeld van een negatief extern effect.",
+    "required_skills": [
+      "F08"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": [
+      "F2.4"
+    ]
+  },
+  {
+    "exam": "vw-1022-a-24-1-o",
+    "level": "vwo",
+    "year": 2024,
+    "tijdvak": 1,
+    "opgave_num": 1,
+    "opgave_name": "Duurzaamheid stimuleren",
+    "question_num": 2,
+    "points": 2,
+    "text": "Bereken hoeveel procent van de heffing wordt doorberekend in de prijs van product A. Voor product B geldt: Qa = 2p – 20 Qv = –2p + 80 Qa = aangeboden hoeveelheid zonder subsidie (x 1.000 stuks) Qv = gevraagde hoeveelheid (x 1.000 stuks) P = de prijs per product in euro’s De subsidie bedraagt € 5 per product. De CO 2 -uitstoot per product A is 6 kilogram, en per product B is het 2 kilogram.",
+    "required_skills": [
+      "D07"
+    ],
+    "question_type": "berekenen",
+    "exam_codes": [
+      "D1.4a"
+    ]
+  },
+  {
+    "exam": "vw-1022-a-24-1-o",
+    "level": "vwo",
+    "year": 2024,
+    "tijdvak": 1,
+    "opgave_num": 1,
+    "opgave_name": "Duurzaamheid stimuleren",
+    "question_num": 3,
+    "points": 4,
+    "text": "Bereken hoeveel kilogram de totale CO 2 -uitstoot zal afnemen door de heffing op product A en de subsidie op product B.",
+    "required_skills": [
+      "H06"
+    ],
+    "question_type": "berekenen",
+    "exam_codes": [
+      "H3.4"
+    ]
+  },
+  {
+    "exam": "vw-1022-a-24-1-o",
+    "level": "vwo",
+    "year": 2024,
+    "tijdvak": 1,
+    "opgave_num": 1,
+    "opgave_name": "Duurzaamheid stimuleren",
+    "question_num": 4,
+    "points": 2,
+    "text": "Arceer in de uitwerkbijlage:  de heffingsopbrengst voor de overheid in figuur 1.  het verlies aan economische doelmatigheid als gevolg van de subsidie in figuur 2. De econoom bekijkt hoe de heffing zal uitwerken voor een individueel bedrijf op de markt van product A (zie figuur 1). Bedrijf Knop had voor de heffing € 12 constante kosten per product en € 5 proportioneel variabele kosten per product.",
+    "required_skills": [
+      "A19",
+      "D29"
+    ],
+    "question_type": "grafisch",
+    "exam_codes": [
+      "D3.1"
+    ]
+  },
+  {
+    "exam": "vw-1022-a-24-1-o",
+    "level": "vwo",
+    "year": 2024,
+    "tijdvak": 1,
+    "opgave_num": 1,
+    "opgave_name": "Duurzaamheid stimuleren",
+    "question_num": 5,
+    "points": 2,
+    "text": "Leg met behulp van getallen uit of bedrijf Knop het komende jaar door zal gaan met de productie, als de heffing wordt ingevoerd. De econoom plaatst een kanttekening bij haar analyse: “De subsidie op markt B heeft ook effect op markt A. De kruislingse prijselasticiteiten zijn positief voor product A en B. Als de prijs van product B daalt, zal de verwachte CO 2 -uitstoot van product A veranderen.”",
+    "required_skills": [
+      "A21"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": []
+  },
+  {
+    "exam": "vw-1022-a-24-1-o",
+    "level": "vwo",
+    "year": 2024,
+    "tijdvak": 1,
+    "opgave_num": 1,
+    "opgave_name": "Duurzaamheid stimuleren",
+    "question_num": 6,
+    "points": 2,
+    "text": "Leg met behulp van de kruislingse prijselasticiteit uit of de verwachte CO 2 -uitstoot van product A toeneemt of afneemt bij een prijsdaling van product B. VW-1022-a-24-1-o 4 / 13 lees verder ►►►",
+    "required_skills": [
+      "A16"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": []
+  },
+  {
+    "exam": "vw-1022-a-24-1-o",
+    "level": "vwo",
+    "year": 2024,
+    "tijdvak": 1,
+    "opgave_num": 2,
+    "opgave_name": "Staat van de schulden",
+    "question_num": 7,
+    "points": 1,
+    "text": "Geef met behulp van figuur 1 een verklaring voor de ontwikkeling van het nominale rentepercentage op staatsobligaties. Econoom Falco beweert dat de dienstverlening van de overheid onder druk komt te staan, als de rente-uitgaven groter worden dan 10% van de overheidsuitgaven. De overheidsuitgaven van Maecenates bedragen 43% van het bbp in 2020.",
+    "required_skills": [
+      "H15"
+    ],
+    "question_type": "bron",
+    "exam_codes": [
+      "H5.2"
+    ]
+  },
+  {
+    "exam": "vw-1022-a-24-1-o",
+    "level": "vwo",
+    "year": 2024,
+    "tijdvak": 1,
+    "opgave_num": 2,
+    "opgave_name": "Staat van de schulden",
+    "question_num": 8,
+    "points": 2,
+    "text": "Bereken of de dienstverlening van de overheid in Maecenates in 2020 volgens Falco onder druk komt te staan. VW-1022-a-24-1-o 5 / 13 lees verder ►►► Falco wil dat de staatsschuldquote afneemt door een verhoging van de inkomstenbelasting. Colomba vindt dat een verhoging van de inkomstenbelasting door een uitverdieneffect en een grotere belastingwig, een beperkt effect heeft op de staatsschuld.",
+    "required_skills": [
+      "H21"
+    ],
+    "question_type": "berekenen",
+    "exam_codes": [
+      "H5.1"
+    ]
+  },
+  {
+    "exam": "vw-1022-a-24-1-o",
+    "level": "vwo",
+    "year": 2024,
+    "tijdvak": 1,
+    "opgave_num": 2,
+    "opgave_name": "Staat van de schulden",
+    "question_num": 9,
+    "points": 2,
+    "text": "Leg uit dat een verhoging van de inkomstenbelasting door het uitverdieneffect, een beperkt effect heeft op de staatsschuld.",
+    "required_skills": [
+      "H23"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": [
+      "H4.6"
+    ]
+  },
+  {
+    "exam": "vw-1022-a-24-1-o",
+    "level": "vwo",
+    "year": 2024,
+    "tijdvak": 1,
+    "opgave_num": 2,
+    "opgave_name": "Staat van de schulden",
+    "question_num": 10,
+    "points": 2,
+    "text": "Leg uit dat een verhoging van de inkomstenbelasting leidt tot een grotere belastingwig en dat daardoor het bbp kan dalen. Colomba stelt: “De overheidsinvesteringen kunnen via het publiek kapitaal op termijn tot een lagere staatsschuldquote leiden.”",
+    "required_skills": [],
+    "question_type": "uitleg_dat",
+    "exam_codes": [
+      "H4.6"
+    ]
+  },
+  {
+    "exam": "vw-1022-a-24-1-o",
+    "level": "vwo",
+    "year": 2024,
+    "tijdvak": 1,
+    "opgave_num": 2,
+    "opgave_name": "Staat van de schulden",
+    "question_num": 11,
+    "points": 2,
+    "text": "Leg de stelling van Colomba uit. Geef daarbij een voorbeeld van publiek kapitaal. Bezuinigingen van de overheid verlagen de binnenlandse bestedingen en leiden tot een positief overheidssaldo. Het positieve overheidssaldo leidt via de vermogensmarkt ertoe dat de binnenlandse bestedingen toch kunnen toenemen.",
+    "required_skills": [
+      "H19"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": [
+      "H5.1"
+    ]
+  },
+  {
+    "exam": "vw-1022-a-24-1-o",
+    "level": "vwo",
+    "year": 2024,
+    "tijdvak": 1,
+    "opgave_num": 2,
+    "opgave_name": "Staat van de schulden",
+    "question_num": 12,
+    "points": 2,
+    "text": "Leg uit dat een positief overheidssaldo via de vermogensmarkt kan leiden tot toenemende binnenlandse bestedingen. VW-1022-a-24-1-o 6 / 13 lees verder ►►►",
+    "required_skills": [],
+    "question_type": "uitleg_dat",
+    "exam_codes": []
+  },
+  {
+    "exam": "vw-1022-a-24-1-o",
+    "level": "vwo",
+    "year": 2024,
+    "tijdvak": 1,
+    "opgave_num": 3,
+    "opgave_name": "Valutaverzekering",
+    "question_num": 13,
+    "points": 2,
+    "text": "Leg uit dat een betaling in vreemde valuta voor Nederlandse exporteurs nadelig uitpakt bij een tussentijdse appreciatie van de euro. De verzekeraar Tradesure introduceert een nieuwe verzekering: de valutaverzekering bij export. De voorwaarden staan in tabel 1. Tabel 1 Voorwaarden valutaverzekering bij export Verzekering Een exporteur kan naast het exportcontract ook een valutaverzekering afsluiten als de betaling van het exportcontract in vreemde valuta wordt gedaan. De verzekering wordt afgesloten tegen het risico van een koerswijziging ten opzichte van de garantiekoers (= de op dat moment geldende koers). Verzekerde valuta Standaardvaluta’s: wisselkoersen van westerse en relatief stabiele ontwikkelingslanden. Hogere risico valuta’s: wisselkoersen van instabielere landen. Premie Er is een vaste premie van 0,5% van de verzekerde contractsom, tot een maximumpremie van € 125.000. Daarnaast is er een variabele premie van 0,16% per maand van de contractsom voor de standaardvaluta’s en 0,25% per maand van de contractsom voor de hogere risico valuta’s. Uitkering Wanneer bij betaling van het exportcontract het ontvangen bedrag in euro’s lager is dan het verzekerde bedrag in euro’s tegen de garantiekoers, keert Tradesure het verschil uit.",
+    "required_skills": [
+      "G11"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": [
+      "G2.1"
+    ]
+  },
+  {
+    "exam": "vw-1022-a-24-1-o",
+    "level": "vwo",
+    "year": 2024,
+    "tijdvak": 1,
+    "opgave_num": 3,
+    "opgave_name": "Valutaverzekering",
+    "question_num": 14,
+    "points": 2,
+    "text": "Leg uit of het hanteren van verschillende variabele premies ervoor zorgt dat averechtse selectie binnen de valutaverzekering wordt verminderd.",
+    "required_skills": [
+      "G02",
+      "G06"
+    ],
+    "question_type": "uitleg_of",
+    "exam_codes": [
+      "G3.2"
+    ]
+  },
+  {
+    "exam": "vw-1022-a-24-1-o",
+    "level": "vwo",
+    "year": 2024,
+    "tijdvak": 1,
+    "opgave_num": 3,
+    "opgave_name": "Valutaverzekering",
+    "question_num": 15,
+    "points": 1,
+    "text": "Verklaar of Tradesure rekening moet houden met de aanwezigheid van moral hazard. VW-1022-a-24-1-o 7 / 13 lees verder ►►► Arco is een bedrijf dat handelt in tweedehands-landbouwapparatuur. Arco onderhandelt al enkele maanden met Tradesure over een aantal voorwaarden.",
+    "required_skills": [
+      "G04"
+    ],
+    "question_type": "noem",
+    "exam_codes": [
+      "G4.5"
+    ]
+  },
+  {
+    "exam": "vw-1022-a-24-1-o",
+    "level": "vwo",
+    "year": 2024,
+    "tijdvak": 1,
+    "opgave_num": 3,
+    "opgave_name": "Valutaverzekering",
+    "question_num": 16,
+    "points": 1,
+    "text": "Beargumenteer of de onderhandelingskosten van Arco verzonken kosten zijn. Arco sluit op 1-1-2023 een exportcontract met een bedrijf uit Rwanda voor de levering van € 12 miljoen aan landbouwapparatuur. Arco ontvangt van het bedrijf het bedrag in Rwandese Frank (RF), volgens Tradesure een hogere risico valuta. Daarom sluit Arco een valutaverzekering af bij Tradesure op 1-1-2023. Het bedrijf uit Rwanda betaalt op 1-7-2023. Figuur 1 Verwachte ontwikkeling wisselkoers van de euro in RF Gebruik bovenstaande tekst, figuur 1 en tabel 1.",
+    "required_skills": [
+      "F13"
+    ],
+    "question_type": "uitleg_of",
+    "exam_codes": [
+      "F2.1"
+    ]
+  },
+  {
+    "exam": "vw-1022-a-24-1-o",
+    "level": "vwo",
+    "year": 2024,
+    "tijdvak": 1,
+    "opgave_num": 3,
+    "opgave_name": "Valutaverzekering",
+    "question_num": 17,
+    "points": 2,
+    "text": "Bereken of Arco voordeel heeft gehad van het afsluiten van de valutaverzekering. VW-1022-a-24-1-o 8 / 13 lees verder ►►►",
+    "required_skills": [
+      "G07"
+    ],
+    "question_type": "berekenen",
+    "exam_codes": [
+      "G2.1"
+    ]
+  },
+  {
+    "exam": "vw-1022-a-24-1-o",
+    "level": "vwo",
+    "year": 2024,
+    "tijdvak": 1,
+    "opgave_num": 4,
+    "opgave_name": "Onder de motorkap",
+    "question_num": 18,
+    "points": 2,
+    "text": "Leg met behulp van de GA-curve uit dat de reële productie in Westland zal stijgen. Door de veranderde inflatiedoelstelling van de Oostlandse centrale bank verschuift MB 0 naar MB 1 .",
+    "required_skills": [
+      "I08"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": [
+      "I4.1"
+    ]
+  },
+  {
+    "exam": "vw-1022-a-24-1-o",
+    "level": "vwo",
+    "year": 2024,
+    "tijdvak": 1,
+    "opgave_num": 4,
+    "opgave_name": "Onder de motorkap",
+    "question_num": 19,
+    "points": 2,
+    "text": "Leg uit of de verschuiving van de MB-curve in Oostland duidt op een lagere of hogere inflatiedoelstelling van de centrale bank. De IS-curve geeft het verband weer tussen de reële rente en het reële inkomen. Hier is sprake van ruilen over de tijd.",
+    "required_skills": [
+      "I08"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": [
+      "I4.2"
+    ]
+  },
+  {
+    "exam": "vw-1022-a-24-1-o",
+    "level": "vwo",
+    "year": 2024,
+    "tijdvak": 1,
+    "opgave_num": 4,
+    "opgave_name": "Onder de motorkap",
+    "question_num": 20,
+    "points": 2,
+    "text": "Leg uit dat het dalend verband van de IS-curve aantoont dat huishoudens ruilen over de tijd. De wetenschapper stelt dat beide economieën na één renteaanpassing terugkeren naar de potentiële productie. In Oostland zal er een evenwicht ontstaan bij MB 0 = MB 2 . In Westland zal een ander evenwicht ontstaan omdat daar ander beleid is gevoerd. Het model laat drie variabelen zien: de reële productie, de reële rente en de inflatie. De wetenschapper concludeert: “Als ik enkel naar de figuren kijk, zie ik dat slechts één van deze drie variabelen verschilt als beide economieën weer naar Y* terug zijn gekeerd.”",
+    "required_skills": [
+      "E01"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": [
+      "E2.1"
+    ]
+  },
+  {
+    "exam": "vw-1022-a-24-1-o",
+    "level": "vwo",
+    "year": 2024,
+    "tijdvak": 1,
+    "opgave_num": 4,
+    "opgave_name": "Onder de motorkap",
+    "question_num": 21,
+    "points": 3,
+    "text": "Toon de conclusie van de wetenschapper aan. Werk de opdracht in de uitwerkbijlage als volgt uit:  Teken in figuur 3 de curven die de economie van Westland weergeven nadat de economie is teruggekeerd naar de potentiële productie (Y*).  Benoem de reële rente en inflatie in het nieuwe evenwicht voor beide landen. VW-1022-a-24-1-o 10 / 13 lees verder ►►►",
+    "required_skills": [
+      "I08"
+    ],
+    "question_type": "grafisch",
+    "exam_codes": [
+      "I4.1"
+    ]
+  },
+  {
+    "exam": "vw-1022-a-24-1-o",
+    "level": "vwo",
+    "year": 2024,
+    "tijdvak": 1,
+    "opgave_num": 5,
+    "opgave_name": "Vissen naar winst",
+    "question_num": 22,
+    "points": 3,
+    "text": "Bereken hoeveel vissers er actief zijn op de middeleeuwse vismarkt. In de late middeleeuwen worden de consumenten welvarender en kopen ze meer vis. De econoom beweert: i. Door de toegenomen welvaart verandert de prijselasticiteit van de vraag naar vis. ii. Door de toegenomen welvaart ontstaat een markt van monopolistische concurrentie.",
+    "required_skills": [
+      "A06"
+    ],
+    "question_type": "berekenen",
+    "exam_codes": []
+  },
+  {
+    "exam": "vw-1022-a-24-1-o",
+    "level": "vwo",
+    "year": 2024,
+    "tijdvak": 1,
+    "opgave_num": 5,
+    "opgave_name": "Vissen naar winst",
+    "question_num": 23,
+    "points": 2,
+    "text": "Leg beide beweringen van de econoom uit. VW-1022-a-24-1-o 11 / 13 lees verder ►►► In de twintigste eeuw vinden er grote technologische ontwikkelingen plaats waardoor schepen sneller meer vis binnenhalen. Door deze schaalvoordelen ontstaat een oligopolistische markt. Visserijen Dirdam en Nednol domineren de markt in de regio. Beide visserijen kunnen hun prijzen verlagen of handhaven (zie matrix 1). Matrix 1 Winsten van Dirdam en Nednol in miljoenen € Nednol handhaaft de prijs Nednol verlaagt de prijs Dirdam handhaaft de prijs 30 ; 10 14 ; 20 Dirdam verlaagt de prijs 33 ; –2 19 ; 6",
+    "required_skills": [
+      "D15"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": [
+      "D2.1"
+    ]
+  },
+  {
+    "exam": "vw-1022-a-24-1-o",
+    "level": "vwo",
+    "year": 2024,
+    "tijdvak": 1,
+    "opgave_num": 5,
+    "opgave_name": "Vissen naar winst",
+    "question_num": 24,
+    "points": 2,
+    "text": "Leg met behulp van getallen uit matrix 1 uit of er sprake is van een gevangenendilemma. Na enkele jaren vormen Dirdam en Nednol een kartel. Syrap kan toetreden tot de vismarkt met een lagere prijs of de kartelprijs. De econoom presenteert spelboom 1 met daarin de keuzes. Spelboom 1 Winsten Syrap, Nednol en Dirdam in miljoenen € De = symbolen geven aan waar Nednol / Dirdam ervoor kiezen hun prijs gelijk te houden aan de eerdere kartelprijs. De – symbolen geven aan waar Nednol / Dirdam ervoor kiezen hun prijs te verlagen ten opzichte van de eerdere kartelprijs.",
+    "required_skills": [
+      "F09"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": [
+      "F1.5"
+    ]
+  },
+  {
+    "exam": "vw-1022-a-24-1-o",
+    "level": "vwo",
+    "year": 2024,
+    "tijdvak": 1,
+    "opgave_num": 5,
+    "opgave_name": "Vissen naar winst",
+    "question_num": 25,
+    "points": 2,
+    "text": "Leg uit of Syrap toetreedt met een kartelprijs of een lagere prijs (getallen hoeven niet expliciet benoemd te worden). VW-1022-a-24-1-o 12 / 13 lees verder ►►►",
+    "required_skills": [
+      "F12"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": [
+      "F1.4"
+    ]
+  },
+  {
+    "exam": "vw-1022-a-24-1-o",
+    "level": "vwo",
+    "year": 2024,
+    "tijdvak": 1,
+    "opgave_num": 6,
+    "opgave_name": "Groeien tot de top",
+    "question_num": 26,
+    "points": 2,
+    "text": "Leg uit of er bij figuur 1 sprake is van een Keynesiaans model of een Nieuw klassiek model. De econoom analyseert met behulp van figuur 1 twee opties om de economische groei op korte termijn te stimuleren:  de autonome overheidsbestedingen stimuleren.  de autonome consumptie stimuleren.",
+    "required_skills": [],
+    "question_type": "uitleg_of",
+    "exam_codes": [
+      "I1.1"
+    ]
+  },
+  {
+    "exam": "vw-1022-a-24-1-o",
+    "level": "vwo",
+    "year": 2024,
+    "tijdvak": 1,
+    "opgave_num": 6,
+    "opgave_name": "Groeien tot de top",
+    "question_num": 27,
+    "points": 2,
+    "text": "Leg uit welke optie het sterkste effect heeft op de groei van het nationaal inkomen. VW-1022-a-24-1-o 13 / 13 lees verder ►►► De economische groei op lange termijn kan worden bestudeerd met behulp van de productiefunctie: Y = A*f(K,L) waarbij: Y = potentieel nationaal inkomen A = factorproductiviteit K = de hoeveelheid beschikbaar kapitaal L = de hoeveelheid beschikbare arbeid Figuur 2 Productiefunctie Legenda: Y 1 = de productiefunctie in de uitgangssituatie Y 2 = de productiefunctie na het stimuleren van R&D-investeringen",
+    "required_skills": [],
+    "question_type": "uitleg_dat",
+    "exam_codes": [
+      "I1.1"
+    ]
+  },
+  {
+    "exam": "vw-1022-a-24-1-o",
+    "level": "vwo",
+    "year": 2024,
+    "tijdvak": 1,
+    "opgave_num": 6,
+    "opgave_name": "Groeien tot de top",
+    "question_num": 28,
+    "points": 2,
+    "text": "Leg aan de hand van de productiefunctie Y 1 uit dat de marginale winst van extra productie zal afnemen, als de inzet van de productiefactor arbeid toeneemt. De econoom concludeert: “Door de R&D-investeringen te stimuleren, kan de totale factorproductiviteit op lange termijn stijgen. Daardoor zal de productiefunctie in figuur 2 van Y 1 naar Y 2 verschuiven.”",
+    "required_skills": [
+      "H14"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": [
+      "H1.1"
+    ]
+  },
+  {
+    "exam": "vw-1022-a-24-1-o",
+    "level": "vwo",
+    "year": 2024,
+    "tijdvak": 1,
+    "opgave_num": 6,
+    "opgave_name": "Groeien tot de top",
+    "question_num": 29,
+    "points": 2,
+    "text": "Leg de conclusie van de econoom uit. einde  Bronvermelding Een opsomming van de in dit examen gebruikte bronnen, zoals teksten en afbeeldingen, is te vinden in het bij dit examen behorende correctievoorschrift.",
+    "required_skills": [
+      "H11"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": [
+      "H3.4"
+    ]
+  },
+  {
+    "exam": "vw-1022-a-24-2-o",
+    "level": "vwo",
+    "year": 2024,
+    "tijdvak": 2,
+    "opgave_num": 1,
+    "opgave_name": "Duopolis",
+    "question_num": 1,
+    "points": 1,
+    "text": "Bereken de prijs van een boodschappenpakket als Civitas monopolist is en de sociale norm hanteert. De manager van Lucrum maakt een analyse op basis van matrix 1. Matrix 1 Winsten Lucrum en Civitas (x € 1.000) in een herhaald spel q Civitas = 12.000 q Civitas = 15.000 q Civitas = 18.000 q Lucrum = 6.000 440 ; 980 260 ; 800 80 ; 440 q Lucrum = 10.000 400 ; 500 100 ; 200 -200 ; -280 q Lucrum = 12.000 260 ; 260 -100 ; -100 -460 ; -640",
+    "required_skills": [
+      "F04"
+    ],
+    "question_type": "berekenen",
+    "exam_codes": [
+      "F1.4"
+    ]
+  },
+  {
+    "exam": "vw-1022-a-24-2-o",
+    "level": "vwo",
+    "year": 2024,
+    "tijdvak": 2,
+    "opgave_num": 1,
+    "opgave_name": "Duopolis",
+    "question_num": 2,
+    "points": 2,
+    "text": "Toon met een berekening aan dat de winst van Lucrum in de cel linksboven € 440.000 bedraagt. VW-1022-a-24-2-o 3 / 12 lees verder ►►► deal sluiten kleine marge gemeente zelf regelen marktprijs deal sluiten gemeente Civitas zelf regelen kostprijs deal sluiten gemeente zelf regelen In de uitgangssituatie (nog voor het onderzoek) bieden zowel Lucrum als Civitas 12.000 boodschappenpakketten aan. De manager van Lucrum concludeert: “Als we op basis van de matrix onze dominante strategie volgen, zijn we vanwege de sociale norm van Civitas, op termijn slechter af dan in de uitgangssituatie.”",
+    "required_skills": [
+      "A20",
+      "A21"
+    ],
+    "question_type": "berekenen",
+    "exam_codes": []
+  },
+  {
+    "exam": "vw-1022-a-24-2-o",
+    "level": "vwo",
+    "year": 2024,
+    "tijdvak": 2,
+    "opgave_num": 1,
+    "opgave_name": "Duopolis",
+    "question_num": 3,
+    "points": 3,
+    "text": "Leg de conclusie van de manager van Lucrum uit. De directeur van Civitas wil prijsdiscriminatie toepassen voor mensen met een betalingsbereidheid onder de huidige verkoopprijs. De gemeente kan de huishoudens opdelen in vijf even grote inkomensgroepen, en geeft per week een kortingscode op naam aan uitsluitend de armste groep.",
+    "required_skills": [
+      "F09"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": [
+      "F1.5"
+    ]
+  },
+  {
+    "exam": "vw-1022-a-24-2-o",
+    "level": "vwo",
+    "year": 2024,
+    "tijdvak": 2,
+    "opgave_num": 1,
+    "opgave_name": "Duopolis",
+    "question_num": 4,
+    "points": 2,
+    "text": "Beargumenteer of het plan van de directeur voldoet aan de twee voorwaarden van prijsdiscriminatie. Civitas denkt alle huishoudens te kunnen voorzien van boodschappen, als er een subsidie komt vanuit de gemeente. Civitas overweegt om een van de drie prijsvoorstellen te doen. Deze zijn weergegeven in spelboom 1. De gemeente kan met Civitas een deal sluiten of zelf de voedselvoorziening regelen voor de armste groep. In alle voorstellen heeft iedereen te eten. De gemeente streeft naar zo laag mogelijke kosten, en Civitas wil ook winst maken. Spelboom 1 Winsten Civitas en kosten van de gemeente Toelichting: alle prijzen van Civitas zijn inclusief een (eventuele) subsidie.",
+    "required_skills": [
+      "D21"
+    ],
+    "question_type": "uitleg_of",
+    "exam_codes": [
+      "D2.3"
+    ]
+  },
+  {
+    "exam": "vw-1022-a-24-2-o",
+    "level": "vwo",
+    "year": 2024,
+    "tijdvak": 2,
+    "opgave_num": 1,
+    "opgave_name": "Duopolis",
+    "question_num": 5,
+    "points": 2,
+    "text": "Leg uit welke uitkomst tot stand zal komen. Noem daarbij getallen uit de spelboom. VW-1022-a-24-2-o 4 / 12 lees verder ►►►",
+    "required_skills": [
+      "A19"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": [
+      "D3.1"
+    ]
+  },
+  {
+    "exam": "vw-1022-a-24-2-o",
+    "level": "vwo",
+    "year": 2024,
+    "tijdvak": 2,
+    "opgave_num": 2,
+    "opgave_name": "Schuiven met schuld",
+    "question_num": 6,
+    "points": 2,
+    "text": "Bereken of het overheidssaldo aan deze eis voldoet.",
+    "required_skills": [
+      "H03"
+    ],
+    "question_type": "berekenen",
+    "exam_codes": [
+      "H1.1"
+    ]
+  },
+  {
+    "exam": "vw-1022-a-24-2-o",
+    "level": "vwo",
+    "year": 2024,
+    "tijdvak": 2,
+    "opgave_num": 2,
+    "opgave_name": "Schuiven met schuld",
+    "question_num": 7,
+    "points": 2,
+    "text": "Leg uit dat bij progressieve inkomstenbelastingen de effectieve vraag in een economische neergang minder hard daalt dan bij proportionele inkomstenbelastingen. De econoom stelt: “Vanwege de open aard van de economie zal stimulerend begrotingsbeleid een beperkt effect hebben op de afname van de werkloosheid.”",
+    "required_skills": [
+      "H23"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": [
+      "H4.6"
+    ]
+  },
+  {
+    "exam": "vw-1022-a-24-2-o",
+    "level": "vwo",
+    "year": 2024,
+    "tijdvak": 2,
+    "opgave_num": 2,
+    "opgave_name": "Schuiven met schuld",
+    "question_num": 8,
+    "points": 2,
+    "text": "Leg de stelling van de econoom uit. VW-1022-a-24-2-o 5 / 12 lees verder ►►► De econoom gebruikt tabel 1 om de toekomstige effecten van het beleid van de overheid van Anderland te analyseren. De econoom neemt aan dat de overheid in 2020 en 2021 geen aanvullende anticyclische maatregelen neemt. Tabel 1 Nominale groei bbp en ontwikkeling staatsschuldquote jaartal nominale groei bbp in % (t.o.v. vorig jaar) staatsschuldquote in % 2016 0,3 55 2017 2,2 52 2018 0,2 53 2019 2,0 50 2020 -4,0 60 2021 -5,0 70",
+    "required_skills": [
+      "I01"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": []
+  },
+  {
+    "exam": "vw-1022-a-24-2-o",
+    "level": "vwo",
+    "year": 2024,
+    "tijdvak": 2,
+    "opgave_num": 2,
+    "opgave_name": "Schuiven met schuld",
+    "question_num": 9,
+    "points": 2,
+    "text": "Bereken aan de hand van tabel 1 de procentuele toename van de nominale waarde van de staatsschuld tussen 2019 en 2021. Neem 2019 als basisjaar. De econoom beweert: “Anticyclisch begrotingsbeleid leidt tot een staatsschuld en gegeven de doelstelling van de overheid zullen de lasten daarvan bij de toekomstige belastingbetalers terechtkomen.”",
+    "required_skills": [
+      "H03"
+    ],
+    "question_type": "berekenen",
+    "exam_codes": [
+      "H1.1"
+    ]
+  },
+  {
+    "exam": "vw-1022-a-24-2-o",
+    "level": "vwo",
+    "year": 2024,
+    "tijdvak": 2,
+    "opgave_num": 2,
+    "opgave_name": "Schuiven met schuld",
+    "question_num": 10,
+    "points": 2,
+    "text": "Leg de bewering van de econoom uit. VW-1022-a-24-2-o 6 / 12 lees verder ►►►",
+    "required_skills": [
+      "I01"
+    ],
+    "question_type": "uitleg_of",
+    "exam_codes": []
+  },
+  {
+    "exam": "vw-1022-a-24-2-o",
+    "level": "vwo",
+    "year": 2024,
+    "tijdvak": 2,
+    "opgave_num": 3,
+    "opgave_name": "Beleidsdilemma",
+    "question_num": 11,
+    "points": 1,
+    "text": "Geef een verklaring dat er in de uitgangssituatie (Y 0 ) sprake is van natuurlijke werkloosheid. Door de laagconjunctuur verschuift de IS-curve van IS 0 naar IS 1 .",
+    "required_skills": [
+      "I19"
+    ],
+    "question_type": "noem",
+    "exam_codes": []
+  },
+  {
+    "exam": "vw-1022-a-24-2-o",
+    "level": "vwo",
+    "year": 2024,
+    "tijdvak": 2,
+    "opgave_num": 3,
+    "opgave_name": "Beleidsdilemma",
+    "question_num": 12,
+    "points": 2,
+    "text": "Leg uit dat de laagconjunctuur leidt tot een lagere inflatie en een lagere productie. De regeringsleiders van de eurozone komen in crisisberaad bij elkaar om een gezamenlijk begrotingsbeleid te voeren. Een regeringsleider behoort tot de klassieke economen en beweert: “De productie zal niet reageren op stimulerend begrotingsbeleid. Er moet een curve in het IS-MB-GA-model anders worden getekend om dit duidelijk te maken.”",
+    "required_skills": [
+      "I08"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": [
+      "I4.1"
+    ]
+  },
+  {
+    "exam": "vw-1022-a-24-2-o",
+    "level": "vwo",
+    "year": 2024,
+    "tijdvak": 2,
+    "opgave_num": 3,
+    "opgave_name": "Beleidsdilemma",
+    "question_num": 13,
+    "points": 2,
+    "text": "Geef aan welke curve anders had moeten worden getekend en leg uit hoe deze curve zal verlopen. De gemiddelde staatsschuldquote van de eurozone is nu 84%. Beleggers schatten het risico van beleggen in staatsobligaties hoog in. De regeringsleiders stellen: “Door deze inschatting zal het voeren van stimulerend begrotingsbeleid niet haalbaar zijn.”",
+    "required_skills": [
+      "I08"
+    ],
+    "question_type": "noem",
+    "exam_codes": []
+  },
+  {
+    "exam": "vw-1022-a-24-2-o",
+    "level": "vwo",
+    "year": 2024,
+    "tijdvak": 2,
+    "opgave_num": 3,
+    "opgave_name": "Beleidsdilemma",
+    "question_num": 14,
+    "points": 2,
+    "text": "Leg de stelling van de regeringsleiders uit. De econoom laat met het IS-MB-GA-model zien dat de inflatie en de rente zullen veranderen over de tijd, zodat er weer een output gap van nul ontstaat. Neem aan dat de centrale bank de nominale rente zo aanpast dat de reële rente (r) stapsgewijs met 1 procentpunt daalt. De centrale bank en de overheid voeren geen stimulerend beleid.",
+    "required_skills": [
+      "I01"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": []
+  },
+  {
+    "exam": "vw-1022-a-24-2-o",
+    "level": "vwo",
+    "year": 2024,
+    "tijdvak": 2,
+    "opgave_num": 3,
+    "opgave_name": "Beleidsdilemma",
+    "question_num": 15,
+    "points": 3,
+    "text": "Geef de aanpassing van de economie weer over de tijd. Doe het als volgt:  Teken in de uitwerkbijlage de verschuivingen van de relevante curven tot en met het moment dat de output gap weer nul wordt.  Vul in de tabel in de uitwerkbijlage de reële rente (r) en de inflatie (π) in bij een output gap van nul. VW-1022-a-24-2-o 8 / 12 lees verder ►►►",
+    "required_skills": [
+      "I08"
+    ],
+    "question_type": "grafisch",
+    "exam_codes": [
+      "I4.1"
+    ]
+  },
+  {
+    "exam": "vw-1022-a-24-2-o",
+    "level": "vwo",
+    "year": 2024,
+    "tijdvak": 2,
+    "opgave_num": 4,
+    "opgave_name": "Stikstofheffing",
+    "question_num": 16,
+    "points": 1,
+    "text": "Geef een verklaring dat een stikstofheffing via de producenten kan leiden tot een afname van de stikstofuitstoot door producenten. Op de binnenlandse staalmarkt concurreert de enige binnenlandse staalproducent, Archy, met buitenlandse producenten. De staalverwerkende industrie is de vrager op de binnenlandse staalmarkt. Piethaan onderzoekt met behulp van de Armington-elasticiteit de gevolgen van een stikstofheffing op de afzet van Archy. procentuele verandering importvolume Armington-elasticiteit = procentuele verandering prijs binnenlands product",
+    "required_skills": [
+      "I07"
+    ],
+    "question_type": "noem",
+    "exam_codes": []
+  },
+  {
+    "exam": "vw-1022-a-24-2-o",
+    "level": "vwo",
+    "year": 2024,
+    "tijdvak": 2,
+    "opgave_num": 4,
+    "opgave_name": "Stikstofheffing",
+    "question_num": 17,
+    "points": 2,
+    "text": "Leg uit dat een grotere Armington-elasticiteit leidt tot een hogere binnenlandse effectiviteit van de stikstofheffing. De staalverwerkende industrie vraagt om 9 miljoen ton staal. Archy levert in de uitgangssituatie 7,333 miljoen ton staal. De rest wordt geïmporteerd. Na invoering van de stikstofheffing blijft de totale binnenlandse vraag naar staal 9 miljoen ton. Figuur 1 Opbrengsten en kosten Archy VW-1022-a-24-2-o 9 / 12 lees verder ►►► Archy streeft naar maximale totale winst. Voor Archy geldt in de uitgangssituatie: GO = –60Q + 980 MK 1 = 100 Een stikstofheffing zal leiden tot een stijging van de marginale kosten met 40%.",
+    "required_skills": [
+      "A16"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": []
+  },
+  {
+    "exam": "vw-1022-a-24-2-o",
+    "level": "vwo",
+    "year": 2024,
+    "tijdvak": 2,
+    "opgave_num": 4,
+    "opgave_name": "Stikstofheffing",
+    "question_num": 18,
+    "points": 2,
+    "text": "Toon met een berekening aan dat de binnenlandse prijs van Archy na de stikstofheffing € 560 per ton is. Gebruik figuur 1, de tekst boven figuur 1 en de formule van de Armington- elasticiteit.",
+    "required_skills": [
+      "A15"
+    ],
+    "question_type": "berekenen",
+    "exam_codes": [
+      "H1.1"
+    ]
+  },
+  {
+    "exam": "vw-1022-a-24-2-o",
+    "level": "vwo",
+    "year": 2024,
+    "tijdvak": 2,
+    "opgave_num": 4,
+    "opgave_name": "Stikstofheffing",
+    "question_num": 19,
+    "points": 2,
+    "text": "Bereken de hoogte van de Armington-elasticiteit. Piethaan: “Een stikstofheffing zal effect hebben op het producentensurplus van de binnenlandse staalmarkt, waardoor de doelmatigheid van de staalmarkt verder zal afnemen. Onze buurlanden hebben echter minder milieuregels, waardoor de mondiale maatschappelijke kosten juist kunnen toenemen.”",
+    "required_skills": [
+      "A16"
+    ],
+    "question_type": "berekenen",
+    "exam_codes": []
+  },
+  {
+    "exam": "vw-1022-a-24-2-o",
+    "level": "vwo",
+    "year": 2024,
+    "tijdvak": 2,
+    "opgave_num": 4,
+    "opgave_name": "Stikstofheffing",
+    "question_num": 20,
+    "points": 3,
+    "text": "Analyseer het effect van de stikstofheffing op het producentensurplus in de binnenlandse staalmarkt. Doe het als volgt:  Arceer in de figuur in de uitwerkbijlage de veranderingen van het producentensurplus als gevolg van de stikstofheffing.  Geef een verklaring voor de daling van het producentensurplus.",
+    "required_skills": [
+      "A19"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": []
+  },
+  {
+    "exam": "vw-1022-a-24-2-o",
+    "level": "vwo",
+    "year": 2024,
+    "tijdvak": 2,
+    "opgave_num": 4,
+    "opgave_name": "Stikstofheffing",
+    "question_num": 21,
+    "points": 2,
+    "text": "Leg uit dat de mondiale maatschappelijke kosten door de stikstofheffing kunnen stijgen. VW-1022-a-24-2-o 10 / 12 lees verder ►►►",
+    "required_skills": [
+      "F07"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": [
+      "F2.4"
+    ]
+  },
+  {
+    "exam": "vw-1022-a-24-2-o",
+    "level": "vwo",
+    "year": 2024,
+    "tijdvak": 2,
+    "opgave_num": 5,
+    "opgave_name": "Cyberrisicoverzekering",
+    "question_num": 22,
+    "points": 1,
+    "text": "Bij welke van de twee klantengroepen is het risico voor de verzekeraar het hoogst? Verklaar je antwoord. Een expert stelt: “Bij werknemers in loondienst is de kans op een hack vanwege onvoorzichtig handelen groter dan bij zzp’ers. Dat komt doordat er bij overige ondernemingen sprake is van een principaal-agentprobleem en bij zzp’ers niet.”",
+    "required_skills": [
+      "G02",
+      "G04"
+    ],
+    "question_type": "classificatie",
+    "exam_codes": [
+      "G3.2"
+    ]
+  },
+  {
+    "exam": "vw-1022-a-24-2-o",
+    "level": "vwo",
+    "year": 2024,
+    "tijdvak": 2,
+    "opgave_num": 5,
+    "opgave_name": "Cyberrisicoverzekering",
+    "question_num": 23,
+    "points": 3,
+    "text": "Leg uit dat er bij overige ondernemingen sprake is van een principaal- agentprobleem en bij zzp’ers niet. De verzekeraar stelt bij het aanbieden van de cyberrisicoverzekering een aantal preventie-eisen, waaronder het zorgen voor up-to-date beveiligingssoftware. Als ondernemingen daar niet aan voldoen, krijgen ze maar de helft van de schade uitgekeerd.",
+    "required_skills": [
+      "G04"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": []
+  },
+  {
+    "exam": "vw-1022-a-24-2-o",
+    "level": "vwo",
+    "year": 2024,
+    "tijdvak": 2,
+    "opgave_num": 5,
+    "opgave_name": "Cyberrisicoverzekering",
+    "question_num": 24,
+    "points": 2,
+    "text": "Leg uit dat de preventie-eisen het risico op averechtse selectie verminderen. VW-1022-a-24-2-o 11 / 12 lees verder ►►► De verzekeraar wil een zo laag mogelijke premie hanteren. Daarom overweegt de verzekeraar per 1-1-2024 een eigen risico van € 50.000 voor zzp’ers en € 250.000 voor overige ondernemingen in te voeren.",
+    "required_skills": [
+      "G04"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": [
+      "G4.5"
+    ]
+  },
+  {
+    "exam": "vw-1022-a-24-2-o",
+    "level": "vwo",
+    "year": 2024,
+    "tijdvak": 2,
+    "opgave_num": 5,
+    "opgave_name": "Cyberrisicoverzekering",
+    "question_num": 25,
+    "points": 2,
+    "text": "Leg uit dat een eigen risico leidt tot zowel een verschuiving van de vraaglijn als een verschuiving langs de vraaglijn van de cyberrisicoverzekering. De verzekeraar ziet een winstmogelijkheid bij de genoemde eigen risico’s en stelt de jaarlijkse premie vast op € 10.500 voor zzp’ers en € 20.500 voor overige ondernemingen. De expert van de verzekeraar neemt aan dat de gegevens in tabel 1 niet veranderen.",
+    "required_skills": [],
+    "question_type": "uitleg_of",
+    "exam_codes": []
+  },
+  {
+    "exam": "vw-1022-a-24-2-o",
+    "level": "vwo",
+    "year": 2024,
+    "tijdvak": 2,
+    "opgave_num": 5,
+    "opgave_name": "Cyberrisicoverzekering",
+    "question_num": 26,
+    "points": 3,
+    "text": "Bereken de hoogte van de winst. Let op: de laatste vragen van dit examen staan op de volgende pagina. VW-1022-a-24-2-o 12 / 12 lees verder ►►► vaste wisselkoersen vrij verkeer van kapitaal onafhankelijk rentebeleid centrale bank",
+    "required_skills": [
+      "G07"
+    ],
+    "question_type": "berekenen",
+    "exam_codes": [
+      "G2.1"
+    ]
+  },
+  {
+    "exam": "vw-1022-a-24-2-o",
+    "level": "vwo",
+    "year": 2024,
+    "tijdvak": 2,
+    "opgave_num": 6,
+    "opgave_name": "Trilemma",
+    "question_num": 27,
+    "points": 2,
+    "text": "Leg uit dat bij beleidsoptie B internationaal kapitaalverkeer moet worden beperkt. Bij beleidsoptie A kunnen de Westlandse en Oostlandse centrale banken geen eigen rentebeleid voeren. Ze voeren dan dezelfde rente die voor Westland te hoog is en voor Oostland te laag is.",
+    "required_skills": [
+      "E01",
+      "I13"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": [
+      "I1.2"
+    ]
+  },
+  {
+    "exam": "vw-1022-a-24-2-o",
+    "level": "vwo",
+    "year": 2024,
+    "tijdvak": 2,
+    "opgave_num": 6,
+    "opgave_name": "Trilemma",
+    "question_num": 28,
+    "points": 2,
+    "text": "Leg uit dat het voeren van dezelfde rente tot verdere conjuncturele problemen in beide landen leidt. De introductie van vaste wisselkoersen moet in beide landen leiden tot een evenwichtige arbeidsmarkt. Dan moet er worden voldaan aan twee voorwaarden: 1 onbeperkte arbeidsmobiliteit tussen landen en sectoren 2 relatief weinig loonrigiditeit / prijsrigiditeit",
+    "required_skills": [
+      "I08"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": []
+  },
+  {
+    "exam": "vw-1022-a-24-2-o",
+    "level": "vwo",
+    "year": 2024,
+    "tijdvak": 2,
+    "opgave_num": 6,
+    "opgave_name": "Trilemma",
+    "question_num": 29,
+    "points": 2,
+    "text": "Kies een van de twee voorwaarden en leg uit dat deze voorwaarde tot een evenwichtige arbeidsmarkt kan leiden in beide landen. einde  Bronvermelding Een opsomming van de in dit examen gebruikte bronnen, zoals teksten en afbeeldingen, is te vinden in het bij dit examen behorende correctievoorschrift.",
+    "required_skills": [
+      "I08"
+    ],
+    "question_type": "uitleg_dat",
+    "exam_codes": [
+      "I4.1"
+    ]
+  },
+  {
     "exam": "vw-1022-a-25-1-o",
     "level": "vwo",
     "year": 2025,
@@ -973,7 +4900,7 @@
     "points": 1,
     "text": "Is een zorgbehandeling een collectief goed? Motiveer je antwoord. De overheid vindt dat iedereen in het land recht heeft op gezondheidszorg. Om de kosten te kunnen dekken, komt er een verplichte zorgverzekering. Zorgverzekeraars kunnen verzekerden niet weigeren. Verzekerden betalen maandelijks premie aan een zorgverzekeraar. De zorgverzekeraars zijn niet in staat om vooraf te bepalen of de verzekerden goede of slechte risico’s zijn.",
     "required_skills": [
-      "F01"
+      "F02"
     ],
     "question_type": "classificatie",
     "exam_codes": [
@@ -1053,7 +4980,7 @@
     "points": 2,
     "text": "Leg uit dat er sprake kan zijn van een principaal-agentprobleem. VW-1022-a-25-1-o 4 / 13 lees verder ►►►",
     "required_skills": [
-      "G04"
+      "G06"
     ],
     "question_type": "uitleg_dat",
     "exam_codes": [
@@ -1284,7 +5211,7 @@
     "points": 2,
     "text": "Leg uit welk effect het monetair beleid van de Curaçaose centrale bank, via de valutamarkt, heeft op de conjunctuur van Aruba. VW-1022-a-25-1-o 9 / 13 lees verder ►►► Figuur 1 Factoren beïnvloeding Curaçaose en Arubaanse economie VW-1022-a-25-1-o 10 / 13 lees verder ►►►",
     "required_skills": [
-      "I11"
+      "I19"
     ],
     "question_type": "uitleg_dat",
     "exam_codes": []
@@ -1300,7 +5227,7 @@
     "points": 2,
     "text": "Leg beide veranderingen van de EV 1 -curve ten opzichte van de EV 0 -curve uit. Door de gedragsverandering ontstaat een negatieve output gap. De econoom analyseert twee maatregelen: het voeren van begrotingsbeleid of monetair beleid. De overheid kan de overheidsbestedingen verhogen. Dit heeft twee gevolgen voor het groen bbp.",
     "required_skills": [
-      "I04"
+      "I08"
     ],
     "question_type": "uitleg_dat",
     "exam_codes": [
@@ -1374,7 +5301,7 @@
     "points": 2,
     "text": "Leg uit of er bij een investering voor biologische teelt sprake is van verzonken kosten. De econoom stelt een model op voor twee boeren om de keuze voor traditionele of biologische teelt te onderzoeken (zie tabellen 1 en 2). Tabel 1 verkoopprijs en variabele kosten per kg traditionele teelt biologische teelt verkoopprijs per kg € 2,20 € 3,00 variabele kosten per kg € 0,75 € 1,00 Tabel 2 pay-off matrix van behaalde winsten (in €) en afzetten (in kg) boer B traditionele teelt biologische teelt boer A traditionele teelt € 80.000 ; € 80.000 65.000 kg ; 65.000 kg € 87.250 ; € 75.000 70.000 kg ; 46.050 kg biologische teelt € 75.000 ; € 87.250 46.050 kg ; 70.000 kg € 92.900 ; € 92.900 55.000 kg ; 55.000 kg Stel dat boer B investeert in biologische teelt, terwijl boer A voorlopig traditioneel blijft telen. De vaste (constante) kosten voor de investering zijn € 14.250. VW-1022-a-25-1-o 13 / 13 lees verder ►►► Gebruik tabellen 1 en 2.",
     "required_skills": [
-      "F04"
+      "F07"
     ],
     "question_type": "uitleg_dat",
     "exam_codes": [
@@ -1408,7 +5335,7 @@
     "points": 2,
     "text": "Noem de Nash-evenwichten uit tabel 2 bij winstmaximalisatie. Gebruik tabel 2.",
     "required_skills": [
-      "F09"
+      "F12"
     ],
     "question_type": "noem",
     "exam_codes": [
@@ -1426,7 +5353,7 @@
     "points": 2,
     "text": "Leg met behulp van getallen uit of de negatieve externe effecten dalen als de boeren kiezen voor afzetmaximalisatie. einde  Bronvermelding Een opsomming van de in dit examen gebruikte bronnen, zoals teksten en afbeeldingen, is te vinden in het bij dit examen behorende correctievoorschrift.",
     "required_skills": [
-      "F04"
+      "F07"
     ],
     "question_type": "uitleg_dat",
     "exam_codes": [
@@ -1444,7 +5371,7 @@
     "points": 2,
     "text": "Is hier sprake van degressief, proportioneel of progressief variabele kosten? Leg je antwoord uit.",
     "required_skills": [
-      "D14"
+      "D26"
     ],
     "question_type": "classificatie",
     "exam_codes": []
@@ -1478,7 +5405,7 @@
     "points": 2,
     "text": "Leg uit of de overheid met deze subsidie prijsdiscriminatie ontstaat. Stel dat de overheid een subsidie van € 50 per videodeurbel geeft aan alle consumenten. Hierdoor verschuift de GO- en MO-lijn.",
     "required_skills": [
-      "D12"
+      "D22"
     ],
     "question_type": "uitleg_of",
     "exam_codes": [
@@ -1530,7 +5457,7 @@
     "points": 2,
     "text": "Leg uit dat het nieuwe marktevenwicht Pareto-efficiënt is. VW-1022-a-25-2-o 4 / 13 lees verder ►►►",
     "required_skills": [
-      "D11"
+      "D20"
     ],
     "question_type": "uitleg_dat",
     "exam_codes": []
@@ -1582,7 +5509,7 @@
     "points": 1,
     "text": "Is de netto opgebouwde pensioenbesparing een stroomgrootheid of een voorraadgrootheid? Motiveer je keuze. De lijn in figuur 1 geeft aan dat de premies als percentage van het totale pensioenvermogen dalen. Gebruik de aannames a, b, c en d en figuur 1.",
     "required_skills": [
-      "E04"
+      "E06"
     ],
     "question_type": "classificatie",
     "exam_codes": []
@@ -1648,7 +5575,7 @@
     "points": 2,
     "text": "Bereken hoeveel het GOB verdient in euro’s aan de transactie van € 500.",
     "required_skills": [
-      "G05"
+      "G07"
     ],
     "question_type": "berekenen",
     "exam_codes": [
@@ -1666,7 +5593,7 @@
     "points": 2,
     "text": "Leg uit dat een toenemende concurrentie tussen geld-overmaak-bedrijven kan leiden tot hogere economische groei in de Afrikaanse landen. VW-1022-a-25-2-o 7 / 13 lees verder ►►► Economen onderzoeken de economie van een specifiek Afrikaans land. Ze gebruiken tabel 1 en laten de financiële rekening van de betalingsbalans buiten beschouwing. Het land hanteert een vaste (officiële) wisselkoers met de euro. Tabel 1 Macro-economische gegevens van het Afrikaanse land 2019 2020 2021 bbp (in miljarden frank) 103,3 109,7 117,9 begrotingssaldo (% van bbp) -4,5 -3,5 -3,7 saldo lopende rekening (% van bbp) -4 -3,4 -3,4 ontvangen inkomensoverdrachten (in miljarden frank) 6,70 6,82 6,92",
     "required_skills": [
-      "H11"
+      "H25"
     ],
     "question_type": "uitleg_dat",
     "exam_codes": [
@@ -1684,7 +5611,7 @@
     "points": 1,
     "text": "Heeft het Afrikaanse land een positief of negatief particulier spaarsaldo in 2021? Motiveer je antwoord. De economen verwachten dat het saldo op de lopende rekening na 2021 zal verslechteren.",
     "required_skills": [
-      "H10"
+      "H20"
     ],
     "question_type": "classificatie",
     "exam_codes": [
@@ -1702,7 +5629,7 @@
     "points": 2,
     "text": "Leg uit of de centrale bank van het Afrikaanse land de rente zal verlagen of verhogen om de vaste wisselkoers te kunnen handhaven. VW-1022-a-25-2-o 8 / 13 lees verder ►►►",
     "required_skills": [
-      "I03"
+      "I05"
     ],
     "question_type": "uitleg_of",
     "exam_codes": []
@@ -1718,7 +5645,7 @@
     "points": 2,
     "text": "Leg uit dat de lumpsum-financiering van middelbare scholen de positief externe effecten van de ontwikkeling van menselijk kapitaal internaliseert. Scholen streven naar een zo hoog mogelijk aantal leerlingen en besteden daarom een groot deel van de lumpsum aan marketing. De Inspectie van het Onderwijs is uitsluitend gericht op het controleren van de kwaliteit van het geboden onderwijs.",
     "required_skills": [
-      "F08"
+      "F11"
     ],
     "question_type": "uitleg_dat",
     "exam_codes": [
@@ -1736,7 +5663,7 @@
     "points": 2,
     "text": "Leg uit of er sprake is van een principaal-agentprobleem tussen de inspectie en de scholen. Een econoom maakt een model om de gevolgen van het marketingbeleid aan te tonen (zie bron 1 en matrix 1). In het model zijn er twee scholen: het Rij-college en het Kolom-college. Zij ervaren uitsluitend concurrentie van elkaar. VW-1022-a-25-2-o 9 / 13 lees verder ►►► Bron 1 Gegevens en aannames model Onderstaande gegevens gelden voor het vorige schooljaar en het huidige schooljaar.  De afzetfuncties zijn gelijk aan: q Vrij = 800 + 2M rij – 0,5M kolom q Vkolom = 800 + 2M kolom – 0,5M rij  q v = het aantal leerlingen per school  M = het percentage van het maximale marketingbudget (M = 100 als een school het volledige marketingbudget inzet)  De school ontvangt een lumpsum van € 6.000 per leerling per jaar.  Het maximale budget voor marketing bestaat uit 10% van de lumpsum van het vorige schooljaar. Marketingkosten zijn constante kosten.  De kostenfunctie voor elke school luidt: TK = 3.000q + 2.510.000 + marketingkosten (q = aantal leerlingen) Matrix 1 Verandering financiële reserve (x € 1.000) bij inzet marketing Kolom-college M = 0% M = 50% M = 100% Rij- college M = 0% -110 ; -110 (A) 1) -185 ; -50 (B) -260 ; 10 (C) M = 50% -50 ; -185 (D) -125 ; -125 (E) -200 ; -65 (F) M = 100% 10 ; -260 (G) -65 ; -200 (H) -140 ; -140 (I) In het vorige schooljaar voerden beide scholen geen marketing (cel A).",
     "required_skills": [
-      "G04"
+      "G06"
     ],
     "question_type": "uitleg_of",
     "exam_codes": [
@@ -1770,7 +5697,7 @@
     "points": 2,
     "text": "Leg uit met behulp van getallen uit de matrix of er sprake is van een Nash-evenwicht. De scholen besluiten te fuseren tot één school met 1.600 leerlingen. De school zal dan geen marketingkosten hebben. De totale constante kosten moeten afnemen om break-even te draaien.",
     "required_skills": [
-      "F09"
+      "F12"
     ],
     "question_type": "bron",
     "exam_codes": [
@@ -1804,7 +5731,7 @@
     "points": 2,
     "text": "Leg uit dat de versoepeling van het ontslagrecht leidt tot minder risico bij werkgevers en daardoor tot een toename van de werkgelegenheid. De verkorting van de opzegtermijn kan ertoe leiden dat het berovingsprobleem in arbeidsrelaties groter wordt, waardoor de loonkosten per product kunnen toenemen.",
     "required_skills": [
-      "H08"
+      "H16"
     ],
     "question_type": "uitleg_dat",
     "exam_codes": [
@@ -1822,7 +5749,7 @@
     "points": 2,
     "text": "Leg uit dat de verkorting van de opzegtermijn, via het berovingsprobleem, kan leiden tot een toename van de loonkosten per product. Om de macro-economische effecten van beide voorstellen te onderzoeken, gebruikt een econoom het IS-MB-GA model. Figuren 1 en 2 tonen een negatieve vraagschok waardoor de productie kleiner is dan het productiepotentieel. Figuur 1 toont een model met een starre arbeidsmarkt en figuur 2 toont een model met een flexibele arbeidsmarkt. VW-1022-a-25-2-o 11 / 13 lees verder ►►► Figuur 1 Starre arbeidsmarkt Figuur 2 Flexibele arbeidsmarkt r = reële rente in procenten π = inflatie in procenten Y = reële productie / inkomen",
     "required_skills": [
-      "F10"
+      "F13"
     ],
     "question_type": "uitleg_dat",
     "exam_codes": [
@@ -1840,7 +5767,7 @@
     "points": 2,
     "text": "Leg uit dat door versoepeling van het ontslagrecht de GA-curve steiler wordt.",
     "required_skills": [
-      "I06"
+      "I10"
     ],
     "question_type": "uitleg_dat",
     "exam_codes": [
@@ -1858,7 +5785,7 @@
     "points": 2,
     "text": "Leg uit in welk model (figuur 1 of figuur 2) de centrale bank de nominale rente sterker zal verlagen om de economie terug te laten keren naar de potentiële productie. VW-1022-a-25-2-o 12 / 13 lees verder ►►►",
     "required_skills": [
-      "I07"
+      "I11"
     ],
     "question_type": "uitleg_of",
     "exam_codes": []
@@ -1874,7 +5801,7 @@
     "points": 2,
     "text": "Leg uit voor elk van beide doelen of marktwerking ervoor zorgt dat deze worden behaald. In de situatie vóór de droogte was de prijs van water € 1 per 1.000 liter. Een econoom stelt een model op waarin een heffing van € 1 per 1.000 liter water wordt ingevoerd (zie figuur 1). Figuur 1 Vraag en aanbod van drinkwater per maand Q a1 = aanbodlijn voor heffing Q a2 = aanbodlijn na heffing Q v1 = vraaglijn september t/m juni Q v2 = vraaglijn in droogste maanden juli en augustus Q’ = maandelijkse productiecapaciteit bij droogte P = prijs voor heffing in euro’s Ph = prijs na heffing in euro’s VW-1022-a-25-2-o 13 / 13 lees verder ►►► Gebruik figuur 1.",
     "required_skills": [
-      "D07"
+      "D14"
     ],
     "question_type": "uitleg_of",
     "exam_codes": []
@@ -1890,7 +5817,7 @@
     "points": 2,
     "text": "Leg uit of de heffing ervoor zorgt dat de overconsumptie in de zomermaanden bij droogte wordt tegengegaan. De econoom stelt een tweede model op waarin een gepersonaliseerd schijvenstelsel op drinkwater wordt geïntroduceerd. Het stelsel werkt op basis van de drinkwaterconsumptie per persoon per jaar, en is als volgt opgebouwd: Vrijstelling (aftrekpost) 10.000 liter per persoon per jaar Heffingskorting € 70 per persoon per jaar Schijf Bereik Tarief 1 1 – 20.000 liter € 0,003 per liter 2 20.001 – 60.000 liter € 0,006 per liter 3 60.001 en meer € 0,009 per liter Een persoon verbruikt gemiddeld 50.000 liter water per jaar.",
     "required_skills": [
-      "D05"
+      "D08"
     ],
     "question_type": "uitleg_of",
     "exam_codes": [
@@ -1908,7 +5835,7 @@
     "points": 3,
     "text": "Toon met een berekening aan dat deze persoon meer dan € 100 per jaar betaalt aan waterbelasting. De econoom beweert dat het marginale tarief hoger ligt dan het gemiddelde tarief, waardoor er een prikkel is om zuinig om te gaan met water.",
     "required_skills": [
-      "H09"
+      "H18"
     ],
     "question_type": "berekenen",
     "exam_codes": [
@@ -1926,7 +5853,7 @@
     "points": 2,
     "text": "Leg de bewering van de econoom uit door middel van een berekening van het gemiddelde tarief per liter water bij een gebruik van 50.000 liter water. einde  Bronvermelding Een opsomming van de in dit examen gebruikte bronnen, zoals teksten en afbeeldingen, is te vinden in het bij dit examen behorende correctievoorschrift.",
     "required_skills": [
-      "H09"
+      "H18"
     ],
     "question_type": "berekenen",
     "exam_codes": [
