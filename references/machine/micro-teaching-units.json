@@ -1516,9 +1516,11 @@
     "id": "E01",
     "name": "Intergenerationele ruil",
     "category": "ruilen over tijd",
-    "layer": 0,
+    "layer": 1,
     "kern": "Analyseer hoe pensioenstelsels intergenerationele ruil faciliteren.",
-    "needs": [],
+    "needs": [
+      "E02"
+    ],
     "exam_codes": [
       "E2.1"
     ],
@@ -1527,7 +1529,9 @@
     "aspects": [
       "verbaal"
     ],
-    "terms": []
+    "terms": [
+      "intertemporele ruil"
+    ]
   },
   {
     "id": "E02",
@@ -1552,9 +1556,12 @@
     "id": "E03",
     "name": "Kapitaaldekking en renteeffecten",
     "category": "ruilen over tijd",
-    "layer": 0,
+    "layer": 2,
     "kern": "Analyseer hoe rentes de betaalbaarheid van kapitaalgedekte pensioenen onder druk zetten.",
-    "needs": [],
+    "needs": [
+      "E02",
+      "H15"
+    ],
     "exam_codes": [
       "E1.1"
     ],
@@ -1563,15 +1570,22 @@
     "aspects": [
       "verbaal"
     ],
-    "terms": []
+    "terms": [
+      "rente",
+      "waardevaste pensioenen",
+      "welvaartsvaste pensioenen"
+    ]
   },
   {
     "id": "E04",
     "name": "Omslagstelsel (AOW)",
     "category": "ruilen over tijd",
-    "layer": 0,
+    "layer": 2,
     "kern": "Omslagstelsel: werkenden betalen premie voor huidige uitkeringen; gevoelig voor vergrijzing.",
-    "needs": [],
+    "needs": [
+      "E01",
+      "E02"
+    ],
     "exam_codes": [
       "E2.1"
     ],
@@ -1580,15 +1594,20 @@
     "aspects": [
       "verbaal"
     ],
-    "terms": []
+    "terms": [
+      "welvaartsvaste pensioenen"
+    ]
   },
   {
     "id": "E05",
-    "name": "Verlaging pensioenuitkeringen en solidariteit",
+    "name": "Pensioenkorting en intergenerationele solidariteit",
     "category": "ruilen over tijd",
-    "layer": 0,
-    "kern": "Analyseer hoe verlaging van pensioenuitkeringen de solidariteit tussen generaties beïnvloedt.",
-    "needs": [],
+    "layer": 3,
+    "kern": "Analyseer hoe een korting op pensioenuitkeringen de solidariteit tussen jongere premiebetalers en oudere ontvangers beïnvloedt.",
+    "needs": [
+      "E04",
+      "H01"
+    ],
     "exam_codes": [
       "E2.1"
     ],
@@ -1597,7 +1616,10 @@
     "aspects": [
       "verbaal"
     ],
-    "terms": []
+    "terms": [
+      "waardevaste pensioenen",
+      "welvaartsvaste pensioenen"
+    ]
   },
   {
     "id": "E06",

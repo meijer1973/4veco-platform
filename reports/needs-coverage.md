@@ -1,8 +1,8 @@
 # Needs-Coverage Report
 
-Generated: 2026-04-20T14:32:31.808Z
+Generated: 2026-04-20T14:34:47.579Z
 Live units:      144
-With no needs:   48
+With no needs:   44
 
 ## Status: **INFORMATIONAL**
 
@@ -33,13 +33,9 @@ Units with empty `needs` are not broken — they simply have no prerequisite edg
 - **D23** Voorwaarden voor prijsdiscriminatie
 - **D27** Substituten en complementen
 
-## Domain E (6)
+## Domain E (2)
 
-- **E01** Intergenerationele ruil
 - **E02** Intertemporele ruil in pensioenstelsels
-- **E03** Kapitaaldekking en renteeffecten
-- **E04** Omslagstelsel (AOW)
-- **E05** Verlaging pensioenuitkeringen en solidariteit
 - **E06** Voorraad- en stroomgrootheden onderscheiden
 
 ## Domain F (5)

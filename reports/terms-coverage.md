@@ -1,8 +1,8 @@
 # Terms-Coverage Report
 
-Generated: 2026-04-20T14:32:31.892Z
+Generated: 2026-04-20T14:34:47.727Z
 Live units:      144
-With no terms:   24
+With no terms:   20
 
 ## Status: **INFORMATIONAL**
 
@@ -33,11 +33,4 @@ Units with empty `terms` have no canonical-vocabulary links yet. Wire via `unit-
 ## Domain D (1)
 
 - **D09** Homogene en heterogene goederen
-
-## Domain E (4)
-
-- **E01** Intergenerationele ruil
-- **E03** Kapitaaldekking en renteeffecten
-- **E04** Omslagstelsel (AOW)
-- **E05** Verlaging pensioenuitkeringen en solidariteit
 

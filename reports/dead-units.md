@@ -1,6 +1,6 @@
 # Dead Units Report
 
-Generated: 2026-04-20T14:32:31.559Z
+Generated: 2026-04-20T14:34:47.210Z
 Live units:   144
 Files scanned: 70
 Cited:        74
@@ -31,7 +31,7 @@ These units exist in the catalog but no source file cites them. Candidates for d
 - **E02** Intertemporele ruil in pensioenstelsels
 - **E03** Kapitaaldekking en renteeffecten
 - **E04** Omslagstelsel (AOW)
-- **E05** Verlaging pensioenuitkeringen en solidariteit
+- **E05** Pensioenkorting en intergenerationele solidariteit
 - **E06** Voorraad- en stroomgrootheden onderscheiden
 - **F01** Berovingsprobleem herkennen
 - **F02** Collectief goed classificeren

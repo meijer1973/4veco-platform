@@ -923,12 +923,12 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 
 ### E01 Intergenerationele ruil
 - kern: "Analyseer hoe pensioenstelsels intergenerationele ruil faciliteren."
-- needs: []
+- needs: [E02]
 - exam_codes: [E2.1]
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: []
+- terms: [intertemporele ruil]
 
 ### E02 Intertemporele ruil in pensioenstelsels
 - kern: "Leg uit hoe pensioenen ruil over tijd vertegenwoordigen."
@@ -941,30 +941,30 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 
 ### E03 Kapitaaldekking en renteeffecten
 - kern: "Analyseer hoe rentes de betaalbaarheid van kapitaalgedekte pensioenen onder druk zetten."
-- needs: []
+- needs: [E02, H15]
 - exam_codes: [E1.1]
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: []
+- terms: [rente, waardevaste pensioenen, welvaartsvaste pensioenen]
 
 ### E04 Omslagstelsel (AOW)
 - kern: "Omslagstelsel: werkenden betalen premie voor huidige uitkeringen; gevoelig voor vergrijzing."
-- needs: []
+- needs: [E01, E02]
 - exam_codes: [E2.1]
 - mastery_target: understand
 - prior_learning: previously_taught
 - aspects: [verbaal]
-- terms: []
+- terms: [welvaartsvaste pensioenen]
 
-### E05 Verlaging pensioenuitkeringen en solidariteit
-- kern: "Analyseer hoe verlaging van pensioenuitkeringen de solidariteit tussen generaties beïnvloedt."
-- needs: []
+### E05 Pensioenkorting en intergenerationele solidariteit
+- kern: "Analyseer hoe een korting op pensioenuitkeringen de solidariteit tussen jongere premiebetalers en oudere ontvangers beïnvloedt."
+- needs: [E04, H01]
 - exam_codes: [E2.1]
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: []
+- terms: [waardevaste pensioenen, welvaartsvaste pensioenen]
 
 ### E06 Voorraad- en stroomgrootheden onderscheiden
 - kern: "Onderscheid tussen voorraad- en stroomgrootheden."
