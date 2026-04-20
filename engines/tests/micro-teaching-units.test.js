@@ -150,10 +150,11 @@ describe('validate', () => {
     return {
       id: 'D01',
       name: 'Marktevenwicht',
-      kern: 'Student bepaalt evenwichtsprijs en -hoeveelheid.',
+      kern: 'Bepaal evenwichtsprijs en -hoeveelheid.',
       needs: [],
       mastery_target: 'understand',
       prior_learning: 'new_this_year',
+      aspects: ['verbaal'],
       terms: [],
       ...overrides,
     };
@@ -188,9 +189,9 @@ describe('validate', () => {
     expect(errors).toEqual(expect.arrayContaining([expect.stringMatching(/mastery_target "nonsense"/)]));
   });
 
-  test('requires procedure when mastery_target >= apply', () => {
+  test('apply+ without procedure warns but does not fail validation', () => {
     const { errors } = validate([baseUnit({ mastery_target: 'apply' })], {});
-    expect(errors).toEqual(expect.arrayContaining([expect.stringMatching(/requires non-empty procedure/)]));
+    expect(errors).toEqual([]);
   });
 
   test('passes apply-level with procedure', () => {
@@ -199,6 +200,18 @@ describe('validate', () => {
       {}
     );
     expect(errors).toEqual([]);
+  });
+
+  test('requires non-empty aspects', () => {
+    const u = baseUnit();
+    u.aspects = [];
+    const { errors } = validate([u], {});
+    expect(errors).toEqual(expect.arrayContaining([expect.stringMatching(/aspects must be a non-empty array/)]));
+  });
+
+  test('rejects unknown aspect value', () => {
+    const { errors } = validate([baseUnit({ aspects: ['fabeltje'] })], {});
+    expect(errors).toEqual(expect.arrayContaining([expect.stringMatching(/aspect "fabeltje" not in/)]));
   });
 
   test('rejects generator on non-A unit', () => {
@@ -361,7 +374,7 @@ describe('unit-add validateSpec', () => {
     return {
       id: 'D05', name: 'Market', kern: 'k',
       needs: [], mastery_target: 'understand',
-      prior_learning: 'new_this_year', terms: [],
+      prior_learning: 'new_this_year', aspects: ['verbaal'], terms: [],
     };
   }
 
@@ -379,9 +392,9 @@ describe('unit-add validateSpec', () => {
     expect(errs).toEqual(expect.arrayContaining([expect.stringMatching(/invalid ID/)]));
   });
 
-  test('requires procedure on apply-level', () => {
+  test('apply-level without procedure warns but does not fail spec validation', () => {
     const errs = validateSpec({ ...okSpec(), mastery_target: 'apply' }, new Set());
-    expect(errs).toEqual(expect.arrayContaining([expect.stringMatching(/non-empty procedure/)]));
+    expect(errs).toEqual([]);
   });
 
   test('requires generator on A-domain', () => {
@@ -390,6 +403,11 @@ describe('unit-add validateSpec', () => {
       new Set()
     );
     expect(errs).toEqual(expect.arrayContaining([expect.stringMatching(/A-domain units require a generator/)]));
+  });
+
+  test('requires non-empty aspects', () => {
+    const errs = validateSpec({ ...okSpec(), aspects: [] }, new Set());
+    expect(errs).toEqual(expect.arrayContaining([expect.stringMatching(/aspects must be a non-empty array/)]));
   });
 
   test('rejects generator on non-A', () => {
@@ -511,7 +529,7 @@ describe('validate with cross-ref sets', () => {
     return {
       id: 'D01', name: 'X', kern: 'k', needs: [],
       mastery_target: 'understand', prior_learning: 'new_this_year',
-      terms: [], exam_codes: [exam],
+      aspects: ['verbaal'], terms: [], exam_codes: [exam],
     };
   }
 
@@ -543,8 +561,8 @@ describe('unit-lib rebuildMarkdown', () => {
 
   test('emits units in sorted order', () => {
     const units = [
-      { id: 'D02', name: 'Two', kern: 'k2', needs: [], mastery_target: 'understand', prior_learning: 'new_this_year', terms: [] },
-      { id: 'A01', name: 'One', kern: 'k1', needs: [], mastery_target: 'understand', prior_learning: 'new_this_year', terms: [] },
+      { id: 'D02', name: 'Two', kern: 'k2', needs: [], mastery_target: 'understand', prior_learning: 'new_this_year', aspects: ['verbaal'], terms: [] },
+      { id: 'A01', name: 'One', kern: 'k1', needs: [], mastery_target: 'understand', prior_learning: 'new_this_year', aspects: ['rekenen'], terms: [] },
     ];
     const md = rebuildMarkdown(preamble, units);
     const order = (md.match(/### (\w+)/g) || []).map(s => s.slice(4));
@@ -553,7 +571,7 @@ describe('unit-lib rebuildMarkdown', () => {
 
   test('round-trips through parser', () => {
     const units = [
-      { id: 'A01', name: 'Test', layer: 0, kern: 'k', needs: [], mastery_target: 'apply', prior_learning: 'new_this_year', terms: ['a'], procedure: ['step'], generator: 'GEN_A01' },
+      { id: 'A01', name: 'Test', layer: 0, kern: 'k', needs: [], mastery_target: 'apply', prior_learning: 'new_this_year', aspects: ['rekenen'], terms: ['a'], procedure: ['step'], generator: 'GEN_A01' },
     ];
     const md = rebuildMarkdown(preamble, units);
     const parsed = parseMarkdown(md);
@@ -561,6 +579,7 @@ describe('unit-lib rebuildMarkdown', () => {
     expect(parsed[0].id).toBe('A01');
     expect(parsed[0].layer).toBe(0);
     expect(parsed[0].generator).toBe('GEN_A01');
+    expect(parsed[0].aspects).toEqual(['rekenen']);
   });
 });
 
@@ -590,6 +609,7 @@ describe('stored layer invariant', () => {
       needs: [],
       mastery_target: 'understand',
       prior_learning: 'new_this_year',
+      aspects: ['verbaal'],
       terms: [],
       ...overrides,
     };

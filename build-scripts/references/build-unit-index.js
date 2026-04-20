@@ -40,7 +40,8 @@ const CATEGORY = {
 const BLOOM_LEVELS = ['remember', 'understand', 'apply', 'analyze', 'evaluate'];
 const APPLY_OR_HIGHER = new Set(['apply', 'analyze', 'evaluate']);
 const PRIOR_LEARNING = ['previously_taught', 'new_this_year', 'review_and_extend'];
-const REQUIRED_FIELDS = ['kern', 'needs', 'mastery_target', 'prior_learning', 'terms'];
+const ASPECTS = ['verbaal', 'grafisch', 'rekenen'];
+const REQUIRED_FIELDS = ['kern', 'needs', 'mastery_target', 'prior_learning', 'terms', 'aspects'];
 
 // ----- parsing -----
 
@@ -137,13 +138,24 @@ function validate(units, { terms, eindtermen }) {
     if (u.prior_learning && !PRIOR_LEARNING.includes(u.prior_learning)) {
       errors.push(`${u.id}: prior_learning "${u.prior_learning}" not in ${PRIOR_LEARNING.join('|')}`);
     }
+    if (!Array.isArray(u.aspects) || u.aspects.length === 0) {
+      errors.push(`${u.id}: aspects must be a non-empty array (subset of ${ASPECTS.join('|')})`);
+    } else {
+      for (const a of u.aspects) {
+        if (!ASPECTS.includes(a)) errors.push(`${u.id}: aspect "${a}" not in ${ASPECTS.join('|')}`);
+      }
+    }
     if (u.duration_min !== undefined && (u.duration_min < 3 || u.duration_min > 7)) {
       // warning, not a fatal error — log to stderr but don't fail
       console.warn(`[warn] ${u.id}: duration_min=${u.duration_min} outside 3-7 range`);
     }
     if (APPLY_OR_HIGHER.has(u.mastery_target)) {
       if (!u.procedure || (Array.isArray(u.procedure) && u.procedure.length === 0)) {
-        errors.push(`${u.id}: mastery_target=${u.mastery_target} requires non-empty procedure`);
+        // Warn, don't fail: a real canonical procedure is pedagogical work that
+        // often lags behind unit minting. reports/procedure-coverage.md tracks
+        // which apply+ units still need one; a CI threshold there is the
+        // right place to escalate, not a hard validator fail.
+        console.warn(`[warn] ${u.id}: mastery_target=${u.mastery_target} has no procedure (tracked in procedure-coverage)`);
       }
     }
     if (u.generator && !u.id.startsWith('A')) {
@@ -302,7 +314,7 @@ function buildJsonEntry(u) {
   };
   const passthrough = [
     'duration_min', 'kern', 'needs', 'exam_codes', 'mastery_target',
-    'prior_learning', 'terms', 'procedure', 'pitfalls', 'generator',
+    'prior_learning', 'aspects', 'terms', 'procedure', 'pitfalls', 'generator',
     'deprecated', 'deprecated_in_favor_of',
   ];
   for (const k of passthrough) if (u[k] !== undefined) entry[k] = u[k];
@@ -361,4 +373,5 @@ module.exports = {
   BLOOM_LEVELS,
   PRIOR_LEARNING,
   APPLY_OR_HIGHER,
+  ASPECTS,
 };

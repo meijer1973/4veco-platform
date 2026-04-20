@@ -69,30 +69,63 @@ function main() {
     }
   }
 
-  lines.push(`Term citations across all units: ${totalTerms}`, '');
+  // Known discouraged forms from economie-terminologie.md (anglicisms /
+  // non-canonical spellings the terminology file explicitly flags).
+  // Extended with common drift spotted during audits.
+  const discouraged = [
+    { bad: 'prijsdifferentiatie', good: 'prijsdiscriminatie' },
+    { bad: 'opportuniteitskosten', good: 'alternatieve kosten' },
+    { bad: 'consumers', good: 'consumenten' },
+    { bad: 'beinvloedt', good: 'beïnvloedt' },
+    { bad: 'strategieen', good: 'strategieën' },
+    { bad: 'efficientie', good: 'efficiëntie' },
+  ];
+  const discouragedHits = [];
+  for (const u of units) {
+    const hay = (u.name || '') + ' ' + (u.kern || '');
+    for (const d of discouraged) {
+      const re = new RegExp(`\\b${d.bad}\\b`, 'i');
+      if (re.test(hay)) discouragedHits.push({ id: u.id, bad: d.bad, good: d.good });
+    }
+  }
 
-  if (missing.length === 0) {
+  lines.push(`Term citations across all units: ${totalTerms}`, `Discouraged-form hits in name/kern: ${discouragedHits.length}`, '');
+
+  const totalProblems = missing.length + discouragedHits.length;
+  if (totalProblems === 0) {
     lines.push('## Status: **PASS**', '');
     if (totalTerms === 0) {
-      lines.push('No units cite any terms yet — nothing to check.');
+      lines.push('No units cite any terms yet — nothing to check in `terms` field. Discouraged-form sweep of `name`/`kern` also clean.');
     } else {
-      lines.push('Every cited term resolves to a canonical entry.');
+      lines.push('Every cited term resolves to a canonical entry. Discouraged-form sweep of `name`/`kern` clean.');
     }
     fs.writeFileSync(REPORT, lines.join('\n') + '\n');
     console.log(`OK  ${totalTerms} term citation(s), 0 drift. Report: ${path.relative(REPO_ROOT, REPORT)}`);
     process.exit(0);
   }
 
-  lines.push(`## Status: **FAIL** — ${missing.length} non-canonical term(s)`, '');
-  const byUnit = {};
-  for (const m of missing) (byUnit[m.id] = byUnit[m.id] || []).push(m.term);
-  for (const id of Object.keys(byUnit).sort()) {
-    lines.push(`- **${id}** → ${byUnit[id].map(t => `"${t}"`).join(', ')}`);
+  lines.push(`## Status: **FAIL** — ${totalProblems} issue(s)`, '');
+
+  if (missing.length > 0) {
+    lines.push(`### ${missing.length} non-canonical term(s) in \`terms\` field`, '');
+    const byUnit = {};
+    for (const m of missing) (byUnit[m.id] = byUnit[m.id] || []).push(m.term);
+    for (const id of Object.keys(byUnit).sort()) {
+      lines.push(`- **${id}** → ${byUnit[id].map(t => `"${t}"`).join(', ')}`);
+    }
+    lines.push('', 'Either add each term to economie-terminologie.md or fix the unit via `unit-update --id <ID> --spec \'{"terms":[…]}\'`.', '');
   }
-  lines.push('', 'Either add each term to economie-terminologie.md or fix the unit via `unit-update --id <ID> --spec \'{"terms":[…]}\'`.', '');
+
+  if (discouragedHits.length > 0) {
+    lines.push(`### ${discouragedHits.length} discouraged form(s) in \`name\`/\`kern\``, '');
+    for (const d of discouragedHits) {
+      lines.push(`- **${d.id}** uses "${d.bad}" — prefer "${d.good}"`);
+    }
+    lines.push('', 'Fix via `unit-update --id <ID> --spec \'{"kern":"…","name":"…"}\'` or `unit-rename`.', '');
+  }
 
   fs.writeFileSync(REPORT, lines.join('\n') + '\n');
-  console.error(`${missing.length} non-canonical term(s). Report: ${path.relative(REPO_ROOT, REPORT)}`);
+  console.error(`${totalProblems} terminology issue(s). Report: ${path.relative(REPO_ROOT, REPORT)}`);
   process.exit(1);
 }
 

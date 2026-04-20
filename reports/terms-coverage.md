@@ -1,16 +1,60 @@
-# Dead Units Report
+# Terms-Coverage Report
 
-Generated: 2026-04-20T13:19:38.159Z
-Live units:   144
-Files scanned: 68
-Cited:        50
-Dead:         94
+Generated: 2026-04-20T13:19:38.446Z
+Live units:      144
+With no terms:   144
 
-## Dead units (94)
+## Status: **INFORMATIONAL**
 
-These units exist in the catalog but no source file cites them. Candidates for deprecation via `unit-deprecate` unless the catalog is intentionally ahead of the curriculum.
+Units with empty `terms` have no canonical-vocabulary links yet. Wire via `unit-update --id <ID> --spec '{"terms":["...","..."]}'` when a paragraph plan surfaces which canonical terms the unit anchors.
 
+## Domain A (37)
+
+- **A01** Lineaire functie opstellen
+- **A02** Vergelijking oplossen
+- **A03** Functie omschrijven (P↔Q)
+- **A04** Substitueren
+- **A05** Snijpunt met P-as berekenen
+- **A06** Evenwichtsprijs & -hoeveelheid
+- **A07** TO-functie opstellen
+- **A08** TK-functie herkennen
+- **A09** Collectief aanbod
+- **A10** Oppervlakte driehoek
+- **A11** Afgeleide bepalen
+- **A12** MO bepalen
+- **A13** MK bepalen
+- **A14** GTK bepalen
+- **A15** Prijselasticiteit van de vraag
+- **A16** Kruiselasticiteit
+- **A17** Inkomenselasticiteit
+- **A18** Comparatief voordeel bepalen
+- **A19** Surplus berekenen (CS/PS)
+- **A20** MO = MK oplossen
+- **A21** Winst = TO − TK
+- **A22** Break-even (TO = TK)
+- **A23** Evenwicht met heffing
+- **A24** Collectief aanbod bepalen
+- **A25** Minimumprijs analyseren
+- **A26** Maximumprijs analyseren
+- **A27** Subsidie analyseren
+- **A28** MK = GTK oplossen
+- **A29** Break-even analyse
+- **A30** Consumentensurplus
+- **A31** Individueel → collectief aanbod
+- **A32** Welvaartsverlies belasting
+- **A33** Optimale productie bij VM
+- **A34** Effecten invoerrecht
+- **A35** Max. winst monopolist
+- **A36** Prijsdiscriminatie
+- **A37** Lange-termijnevenwicht VM
+
+## Domain D (30)
+
+- **D01** Accijnsopbrengst uit grafiek
+- **D02** Constante kosten en winst
+- **D03** Consumentensurplus en accijns
 - **D04** Elasticiteit en goederenclassificatie
+- **D05** Evenwicht bij accijns
 - **D06** Gasverbruik en prijselasticiteit
 - **D07** Heffing doorberekenen in prijs
 - **D08** Heffing tegen overconsumptie
@@ -23,8 +67,12 @@ These units exist in the catalog but no source file cites them. Candidates for d
 - **D15** Marktvormen classificeren
 - **D16** Minimumprijs en werkloosheid
 - **D17** Monopolie minimaal verlies
+- **D18** Monopolie met prijsdiscriminatie
 - **D19** Subsidie en Pareto-efficiëntie
 - **D20** Pareto-efficiëntie in marktevenwicht
+- **D21** Prijsdiscriminatie over inkomensgroepen
+- **D22** Prijsdiscriminatie en subsidies
+- **D23** Voorwaarden voor prijsdiscriminatie
 - **D24** Drie voorwaarden prijsdiscriminatie
 - **D25** Prijselasticiteit en omzet
 - **D26** Soorten variabele kosten classificeren
@@ -32,12 +80,18 @@ These units exist in the catalog but no source file cites them. Candidates for d
 - **D28** Welvaart en surplus-effect
 - **D29** Welvaartsverlies bij subsidie
 - **D30** Winstmaximalisatie MO = MK
+
+## Domain E (6)
+
 - **E01** Intergenerationele ruil
 - **E02** Intertemporele ruil in pensioenstelsels
 - **E03** Kapitaaldekking en renteeffecten
 - **E04** Omslagstelsel (AOW)
 - **E05** Verlaging pensioenuitkeringen en solidariteit
 - **E06** Voorraad- en stroomgrootheden onderscheiden
+
+## Domain F (15)
+
 - **F01** Berovingsprobleem
 - **F02** Collectief goed classificeren
 - **F03** Dominante strategie
@@ -53,6 +107,9 @@ These units exist in the catalog but no source file cites them. Candidates for d
 - **F13** Opzegtermijn en loonkosten
 - **F14** Toerismeconcentratie en externe effecten
 - **F15** Verzonken kosten en beslissingen
+
+## Domain G (11)
+
 - **G01** AI en risicoinschatting
 - **G02** Averechtse selectie herkennen
 - **G03** Broodfonds: informatie en risicovermindering
@@ -64,7 +121,11 @@ These units exist in the catalog but no source file cites them. Candidates for d
 - **G09** Solidariteit in verzekeringen
 - **G10** Informatieasymmetrie verzekeringsmarkt
 - **G11** Wisselkoersrisico bij valutabetaling
+
+## Domain H (26)
+
 - **H01** AOW-betaalbaarheid en vergrijzing
+- **H02** AIQ (arbeidsinkomenquote) berekenen
 - **H03** Armington-elasticiteit
 - **H04** Belastingschijven berekening
 - **H05** Circulaire economie en groen bbp
@@ -89,10 +150,16 @@ These units exist in the catalog but no source file cites them. Candidates for d
 - **H24** Wisselkoers en depreciatie
 - **H25** Wisselkoers en economische groei
 - **H26** Woonlastafweging koop vs huur
+
+## Domain I (19)
+
+- **I01** Anticyclisch begrotingsbeleid
 - **I02** Anticyclische inkomensoverdrachten
 - **I03** Bedrijfsinvesteringen in laagconjunctuur
 - **I04** CAO-looptijd en arbeidsmarktrigiditeit
+- **I05** Centrale bank rentebeleid
 - **I06** Deflatie in laagconjunctuur
+- **I07** IS-MB-GA-model met outputgap
 - **I08** Keynesiaanse kruis verschuivingen analyseren
 - **I09** Koopkracht behouden bij inflatie
 - **I10** Loonrigiditeit en GA-curve helling
@@ -104,19 +171,5 @@ These units exist in the catalog but no source file cites them. Candidates for d
 - **I16** Overheidssaldo verandering
 - **I17** Rentebeleid en economische gevolgen
 - **I18** Werkelijk versus nominaal eigen risico
-
-## Citation counts (top 10 most cited)
-
-| Unit | Name | Files citing |
-|---|---|---|
-| A01 | Lineaire functie opstellen | 22 |
-| A02 | Vergelijking oplossen | 19 |
-| A03 | Functie omschrijven (P↔Q) | 19 |
-| A04 | Substitueren | 19 |
-| A05 | Snijpunt met P-as berekenen | 19 |
-| A15 | Prijselasticiteit van de vraag | 19 |
-| A16 | Kruiselasticiteit | 19 |
-| A17 | Inkomenselasticiteit | 19 |
-| A06 | Evenwichtsprijs & -hoeveelheid | 8 |
-| A10 | Oppervlakte driehoek | 8 |
+- **I19** Wisselkoerseffect van monetair beleid
 

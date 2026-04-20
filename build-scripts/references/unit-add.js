@@ -29,6 +29,7 @@ const {
   BLOOM_LEVELS,
   PRIOR_LEARNING,
   APPLY_OR_HIGHER,
+  ASPECTS,
 } = require('./build-unit-index');
 
 const REPO_ROOT = path.resolve(__dirname, '..', '..');
@@ -68,6 +69,7 @@ function buildSpecFromFlags(flags) {
   if (flags.needs) spec.needs = String(flags.needs).split(',').map(s => s.trim()).filter(Boolean);
   if (flags['exam-codes']) spec.exam_codes = String(flags['exam-codes']).split(',').map(s => s.trim()).filter(Boolean);
   if (flags.terms) spec.terms = String(flags.terms).split(',').map(s => s.trim()).filter(Boolean);
+  if (flags.aspects) spec.aspects = String(flags.aspects).split(',').map(s => s.trim()).filter(Boolean);
   if (flags['duration-min']) spec.duration_min = parseInt(spec.duration_min, 10);
   return spec;
 }
@@ -90,10 +92,18 @@ function validateSpec(spec, existingIds) {
   else if (!PRIOR_LEARNING.includes(spec.prior_learning))
     errors.push(`prior_learning "${spec.prior_learning}" not in ${PRIOR_LEARNING.join('|')}`);
   if (!Array.isArray(spec.terms)) errors.push('terms must be an array (use --terms "a,b" or JSON)');
+  if (!Array.isArray(spec.aspects) || spec.aspects.length === 0) {
+    errors.push(`aspects must be a non-empty array (subset of ${ASPECTS.join('|')})`);
+  } else {
+    for (const a of spec.aspects) {
+      if (!ASPECTS.includes(a)) errors.push(`aspect "${a}" not in ${ASPECTS.join('|')}`);
+    }
+  }
 
   if (spec.id && APPLY_OR_HIGHER.has(spec.mastery_target)) {
-    if (!spec.procedure || !Array.isArray(spec.procedure) || spec.procedure.length === 0)
-      errors.push(`mastery_target=${spec.mastery_target} requires a non-empty procedure array`);
+    if (!spec.procedure || !Array.isArray(spec.procedure) || spec.procedure.length === 0) {
+      console.warn(`[warn] ${spec.id}: mastery_target=${spec.mastery_target} has no procedure (tracked in procedure-coverage)`);
+    }
   }
   if (spec.id && spec.generator && !spec.id.startsWith('A'))
     errors.push('generator is only valid for A-domain units');
@@ -115,6 +125,7 @@ function formatEntry(u) {
     lines.push(`- exam_codes: [${u.exam_codes.join(', ')}]`);
   lines.push(`- mastery_target: ${u.mastery_target}`);
   lines.push(`- prior_learning: ${u.prior_learning}`);
+  lines.push(`- aspects: [${(u.aspects || []).join(', ')}]`);
   lines.push(`- terms: [${(u.terms || []).join(', ')}]`);
   if (Array.isArray(u.procedure) && u.procedure.length) {
     lines.push('- procedure:');
@@ -204,8 +215,16 @@ function main() {
     process.exit(1);
   }
 
+  // Refresh the stats line in the preamble.
+  const { renderPreamble } = require('./unit-lib');
+  const markerIdx = next.indexOf(UNITS_MARKER);
+  const endOfMarkerLine = next.indexOf('\n', markerIdx);
+  const preambleOnly = next.slice(0, endOfMarkerLine + 1);
+  const refreshedPreamble = renderPreamble(preambleOnly, nextUnits);
+  const finalContent = refreshedPreamble + next.slice(endOfMarkerLine + 1);
+
   // Atomic write of markdown + JSON
-  fs.writeFileSync(UNITS_MD, next);
+  fs.writeFileSync(UNITS_MD, finalContent);
   const byId = new Map(nextUnits.map(u => [u.id, u]));
   computeLayers(nextUnits, byId);
   const jsonEntries = sortUnits(nextUnits).map(buildJsonEntry);

@@ -37,10 +37,25 @@ function loadCatalog() {
   return { preamble, units, byId };
 }
 
+function buildStatsLine(units) {
+  const live = units.filter(u => !u.deprecated);
+  const byLetter = {};
+  for (const u of live) byLetter[u.id[0]] = (byLetter[u.id[0]] || 0) + 1;
+  const order = ['A','B','C','D','E','F','G','H','I','J','K'];
+  const parts = order.filter(l => byLetter[l]).map(l => `${l}=${byLetter[l]}`);
+  const date = new Date().toISOString().slice(0, 10);
+  return `*${live.length} live units as of ${date} — ${parts.join(', ')}.*`;
+}
+
+function renderPreamble(preamble, units) {
+  const statsLine = buildStatsLine(units);
+  return preamble.replace(/<!-- STATS LINE -->\n?(?:\*.*\*\n)?/, `<!-- STATS LINE -->\n${statsLine}\n`);
+}
+
 function rebuildMarkdown(preamble, units) {
   const sorted = sortUnits(units);
   const blocks = sorted.map(u => formatEntry(u).trim());
-  return preamble + '\n' + blocks.join('\n\n') + '\n';
+  return renderPreamble(preamble, units) + '\n' + blocks.join('\n\n') + '\n';
 }
 
 function saveCatalog({ preamble, units }) {
@@ -101,6 +116,8 @@ module.exports = {
   loadCatalog,
   saveCatalog,
   rebuildMarkdown,
+  renderPreamble,
+  buildStatsLine,
   parseFlagArgs,
   requireUnit,
   reportValidationErrors,

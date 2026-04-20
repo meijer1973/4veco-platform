@@ -9,10 +9,10 @@
     "needs": [],
     "mastery_target": "apply",
     "prior_learning": "previously_taught",
-    "terms": [],
-    "procedure": [
-      "Stel een lineaire functie op (y = ax + b) vanuit een economische context, zoals een vraag- of aanbodfunctie."
+    "aspects": [
+      "rekenen"
     ],
+    "terms": [],
     "pitfalls": [
       "Let op de volgorde: als je Qv als functie van P opstelt, dan is P de x en Q de y."
     ],
@@ -28,6 +28,10 @@
     "needs": [],
     "mastery_target": "apply",
     "prior_learning": "previously_taught",
+    "aspects": [
+      "rekenen",
+      "verbaal"
+    ],
     "terms": [],
     "procedure": [
       "Breng alle termen met de onbekende naar één kant",
@@ -49,6 +53,9 @@
     "needs": [],
     "mastery_target": "apply",
     "prior_learning": "previously_taught",
+    "aspects": [
+      "rekenen"
+    ],
     "terms": [],
     "procedure": [
       "Trek b af: Q − b = aP",
@@ -69,10 +76,11 @@
     "needs": [],
     "mastery_target": "apply",
     "prior_learning": "previously_taught",
-    "terms": [],
-    "procedure": [
-      "Vul een waarde in een functie in en bereken het resultaat."
+    "aspects": [
+      "rekenen",
+      "verbaal"
     ],
+    "terms": [],
     "pitfalls": [
       "Bij 0,5Q² moet je eerst Q kwadrateren en dan pas vermenigvuldigen met 0,5."
     ],
@@ -88,10 +96,11 @@
     "needs": [],
     "mastery_target": "apply",
     "prior_learning": "previously_taught",
-    "terms": [],
-    "procedure": [
-      "Bereken het snijpunt van een functie met de verticale as (P-as) door Q = 0 in te vullen."
+    "aspects": [
+      "grafisch",
+      "rekenen"
     ],
+    "terms": [],
     "pitfalls": [
       "Verwar het snijpunt met de P-as niet met het snijpunt met de Q-as."
     ],
@@ -110,6 +119,10 @@
     ],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
+    "aspects": [
+      "rekenen",
+      "verbaal"
+    ],
     "terms": [],
     "procedure": [
       "Stel de twee functies aan elkaar gelijk",
@@ -134,10 +147,12 @@
     ],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
-    "terms": [],
-    "procedure": [
-      "Stel de totale opbrengstfunctie op: TO = P × Q. Schrijf de vraagfunctie om zodat P in Q is uitgedrukt."
+    "aspects": [
+      "grafisch",
+      "rekenen",
+      "verbaal"
     ],
+    "terms": [],
     "pitfalls": [
       "Vergeet niet de haakjes als je P × Q uitrekent!"
     ],
@@ -155,10 +170,11 @@
     ],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
-    "terms": [],
-    "procedure": [
-      "Herken en werk met de totale kostenfunctie (TK), vaak gegeven als TK = vaste kosten + variabele kosten × Q."
+    "aspects": [
+      "rekenen",
+      "verbaal"
     ],
+    "terms": [],
     "pitfalls": [
       "Bij TK = 12Q + 0,3Q² denken leerlingen soms dat er geen vaste kosten zijn."
     ],
@@ -176,10 +192,10 @@
     ],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
-    "terms": [],
-    "procedure": [
-      "Tel individuele aanbodfuncties op tot een collectieve aanbodfunctie."
+    "aspects": [
+      "rekenen"
     ],
+    "terms": [],
     "pitfalls": [
       "Als je Qa = 50 × (−5 + 2P) uitwerkt, vergeet dan niet BEIDE termen te vermenigvuldigen: 50 × −5 = −250 en 50 × 2P = 100P."
     ],
@@ -197,10 +213,11 @@
     ],
     "mastery_target": "apply",
     "prior_learning": "previously_taught",
-    "terms": [],
-    "procedure": [
-      "Bereken de oppervlakte van een driehoek in een grafiek: ½ × basis × hoogte."
+    "aspects": [
+      "grafisch",
+      "rekenen"
     ],
+    "terms": [],
     "pitfalls": [
       "Verwar de hoogte niet met de P-waarde zelf."
     ],
@@ -218,10 +235,10 @@
     ],
     "mastery_target": "apply",
     "prior_learning": "previously_taught",
-    "terms": [],
-    "procedure": [
-      "Bepaal de afgeleide van een functie. Bijvoorbeeld: als TO = 5Q², dan is MO = 10Q."
+    "aspects": [
+      "rekenen"
     ],
+    "terms": [],
     "pitfalls": [
       "Een veelgemaakte fout: de constante vergeten te schrappen."
     ],
@@ -240,10 +257,11 @@
     ],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
-    "terms": [],
-    "procedure": [
-      "Bepaal de marginale opbrengst (MO) door de afgeleide van de TO-functie te nemen."
+    "aspects": [
+      "grafisch",
+      "rekenen"
     ],
+    "terms": [],
     "pitfalls": [
       "MO is niet hetzelfde als de prijs!"
     ],
@@ -262,10 +280,10 @@
     ],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
-    "terms": [],
-    "procedure": [
-      "Bepaal de marginale kosten (MK) door de afgeleide van de TK-functie te nemen."
+    "aspects": [
+      "rekenen"
     ],
+    "terms": [],
     "pitfalls": [
       "Verwar MK niet met GTK (gemiddelde totale kosten)."
     ],
@@ -283,10 +301,11 @@
     ],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
-    "terms": [],
-    "procedure": [
-      "Bereken de gemiddelde totale kosten: GTK = TK / Q."
+    "aspects": [
+      "rekenen",
+      "verbaal"
     ],
+    "terms": [],
     "pitfalls": [
       "Deel ELKE term apart door Q!"
     ],
@@ -304,10 +323,11 @@
     ],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
-    "terms": [],
-    "procedure": [
-      "Bereken de prijselasticiteit: Ev = %ΔQv / %ΔP. Bepaal of de vraag elastisch of inelastisch is."
+    "aspects": [
+      "rekenen",
+      "verbaal"
     ],
+    "terms": [],
     "pitfalls": [
       "Vergeet het minteken niet!"
     ],
@@ -323,10 +343,11 @@
     "needs": [],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
-    "terms": [],
-    "procedure": [
-      "Bereken de kruiselasticiteit: Ekr = %ΔQa / %ΔPb. Bepaal of goederen substituten of complementen zijn."
+    "aspects": [
+      "rekenen",
+      "verbaal"
     ],
+    "terms": [],
     "pitfalls": [
       "Let goed op welk product de Q is en welk product de P."
     ],
@@ -342,10 +363,10 @@
     "needs": [],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
-    "terms": [],
-    "procedure": [
-      "Bereken de inkomenselasticiteit: Ei = %ΔQ / %ΔY. Bepaal of een goed normaal, inferieur of luxe is."
+    "aspects": [
+      "rekenen"
     ],
+    "terms": [],
     "pitfalls": [
       "Verwar inkomenselasticiteit niet met prijselasticiteit!"
     ],
@@ -361,10 +382,11 @@
     "needs": [],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
-    "terms": [],
-    "procedure": [
-      "Vergelijk de alternatieve kosten van twee producenten om te bepalen wie een comparatief voordeel heeft."
+    "aspects": [
+      "rekenen",
+      "verbaal"
     ],
+    "terms": [],
     "pitfalls": [
       "Verwar absoluut en comparatief voordeel niet!"
     ],
@@ -383,10 +405,11 @@
     ],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
-    "terms": [],
-    "procedure": [
-      "Bereken het consumenten- of producentensurplus als driehoeksoppervlakte in de vraag-/aanbodgrafiek."
+    "aspects": [
+      "grafisch",
+      "verbaal"
     ],
+    "terms": [],
     "pitfalls": [
       "Vergeet niet om de vraaglijn om te schrijven naar P als functie van Q voordat je Pmax bepaalt."
     ],
@@ -406,10 +429,11 @@
     ],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
-    "terms": [],
-    "procedure": [
-      "Vind de winstmaximaliserende hoeveelheid door MO gelijk te stellen aan MK en op te lossen."
+    "aspects": [
+      "rekenen",
+      "verbaal"
     ],
+    "terms": [],
     "pitfalls": [
       "Verwar MO niet met de prijs!"
     ],
@@ -429,10 +453,11 @@
     ],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
-    "terms": [],
-    "procedure": [
-      "Bereken de winst door de totale opbrengst min de totale kosten: W = TO − TK."
+    "aspects": [
+      "rekenen",
+      "verbaal"
     ],
+    "terms": [],
     "pitfalls": [
       "Vergeet de constante kosten niet!"
     ],
@@ -452,10 +477,11 @@
     ],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
-    "terms": [],
-    "procedure": [
-      "Vind de break-evenhoeveelheid door TO = TK op te lossen. Bij dit punt is de winst nul."
+    "aspects": [
+      "rekenen",
+      "verbaal"
     ],
+    "terms": [],
     "pitfalls": [
       "Bij het herschrijven naar de standaardvorm verplaats je alle termen naar één kant."
     ],
@@ -474,10 +500,10 @@
     ],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
-    "terms": [],
-    "procedure": [
-      "Bereken het nieuwe marktevenwicht nadat de overheid een heffing (accijns) heeft opgelegd."
+    "aspects": [
+      "rekenen"
     ],
+    "terms": [],
     "pitfalls": [
       "Let op het teken!"
     ],
@@ -496,10 +522,10 @@
     ],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
-    "terms": [],
-    "procedure": [
-      "Bepaal het collectieve aanbod vanuit meerdere individuele aanbieders en bereken het marktevenwicht."
+    "aspects": [
+      "rekenen"
     ],
+    "terms": [],
     "pitfalls": [
       "Als bedrijven een verschillende minimumprijs hebben, biedt het ene bedrijf al aan terwijl het andere nog niet produceert."
     ],
@@ -517,10 +543,10 @@
     ],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
-    "terms": [],
-    "procedure": [
-      "Analyseer het effect van een minimumprijs: bereken het vraagoverschot en het welvaartsverlies."
+    "aspects": [
+      "verbaal"
     ],
+    "terms": [],
     "pitfalls": [
       "Bij een minimumprijs bepaalt de vraagzijde hoeveel er verhandeld wordt, niet het aanbod."
     ],
@@ -538,10 +564,10 @@
     ],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
-    "terms": [],
-    "procedure": [
-      "Analyseer het effect van een maximumprijs: bereken het vraagoverschot en de gevolgen voor consumenten."
+    "aspects": [
+      "verbaal"
     ],
+    "terms": [],
     "pitfalls": [
       "Bij een maximumprijs bepaalt de aanbodzijde hoeveel er verhandeld wordt."
     ],
@@ -560,10 +586,11 @@
     ],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
-    "terms": [],
-    "procedure": [
-      "Bereken het effect van een subsidie op het marktevenwicht, de prijs en de verdeling van het voordeel."
+    "aspects": [
+      "grafisch",
+      "verbaal"
     ],
+    "terms": [],
     "pitfalls": [
       "Bij een subsidie ontvangt de producent P + s, niet P − s."
     ],
@@ -582,10 +609,11 @@
     ],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
-    "terms": [],
-    "procedure": [
-      "Vind de hoeveelheid waar MK = GTK. Dit is het minimum van de GTK-curve (efficiënte schaal)."
+    "aspects": [
+      "grafisch",
+      "rekenen"
     ],
+    "terms": [],
     "pitfalls": [
       "GTK is niet de afgeleide van TK!"
     ],
@@ -603,10 +631,10 @@
     ],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
-    "terms": [],
-    "procedure": [
-      "Voer een volledige break-evenanalyse uit: vind de break-evenhoeveelheid en bepaal winst/verlies bij een gegeven Q."
+    "aspects": [
+      "rekenen"
     ],
+    "terms": [],
     "pitfalls": [
       "Bij het herschrijven naar de standaardvorm verandert het teken van de Q-term."
     ],
@@ -624,10 +652,10 @@
     ],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
-    "terms": [],
-    "procedure": [
-      "Bereken het consumentensurplus voor en na een beleidsverandering en bepaal het verschil."
+    "aspects": [
+      "rekenen"
     ],
+    "terms": [],
     "pitfalls": [
       "Pmax is niet de coëfficiënt vóór P in de vraaglijn."
     ],
@@ -645,10 +673,10 @@
     ],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
-    "terms": [],
-    "procedure": [
-      "Ga van individuele aanbodcurves naar de collectieve aanbodcurve en bereken het marktevenwicht."
+    "aspects": [
+      "rekenen"
     ],
+    "terms": [],
     "pitfalls": [
       "Als groep B een minimumprijs van €8 heeft en je rekent bij P = 6, dan is Qi_B = (6−8)/2 = −1."
     ],
@@ -667,10 +695,11 @@
     ],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
-    "terms": [],
-    "procedure": [
-      "Bereken het welvaartsverlies (deadweight loss) dat ontstaat door een belasting als driehoeksoppervlakte."
+    "aspects": [
+      "grafisch",
+      "rekenen"
     ],
+    "terms": [],
     "pitfalls": [
       "Verwar het welvaartsverlies niet met de totale belastingopbrengst."
     ],
@@ -690,10 +719,10 @@
     ],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
-    "terms": [],
-    "procedure": [
-      "Bepaal de optimale productie bij volkomen mededinging: produceer waar P = MK en bereken de winst."
+    "aspects": [
+      "rekenen"
     ],
+    "terms": [],
     "pitfalls": [
       "Winst is niet P × Q!"
     ],
@@ -713,10 +742,11 @@
     ],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
-    "terms": [],
-    "procedure": [
-      "Analyseer de effecten van een invoerrecht op binnenlandse productie, consumptie, import en welvaart."
+    "aspects": [
+      "rekenen",
+      "verbaal"
     ],
+    "terms": [],
     "pitfalls": [
       "Het invoerrecht verandert niet de binnenlandse vraag- of aanbodfuncties zelf."
     ],
@@ -736,10 +766,10 @@
     ],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
-    "terms": [],
-    "procedure": [
-      "Bereken de maximale winst van een monopolist: vind Q waar MO = MK, bepaal P en reken W = TO − TK uit."
+    "aspects": [
+      "rekenen"
     ],
+    "terms": [],
     "pitfalls": [
       "Gebruik niet MO als prijs!"
     ],
@@ -758,10 +788,10 @@
     ],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
-    "terms": [],
-    "procedure": [
-      "Bereken de winst bij prijsdiscriminatie: de monopolist rekent verschillende prijzen in verschillende markten."
+    "aspects": [
+      "rekenen"
     ],
+    "terms": [],
     "pitfalls": [
       "Gebruik niet dezelfde Q voor beide markten!"
     ],
@@ -779,10 +809,10 @@
     ],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
-    "terms": [],
-    "procedure": [
-      "Bepaal het lange-termijnevenwicht bij volkomen mededinging: P = MK = GTK (minimale GTK)."
+    "aspects": [
+      "rekenen"
     ],
+    "terms": [],
     "pitfalls": [
       "Winst = 0 betekent niet dat het bedrijf geen geld verdient!"
     ],
@@ -797,10 +827,10 @@
     "needs": [],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
-    "terms": [],
-    "procedure": [
-      "Bepaal accijnsopbrengst door verhandelde hoeveelheid na belasting met belastingbedrag te vermenigvuldigen."
-    ]
+    "aspects": [
+      "verbaal"
+    ],
+    "terms": []
   },
   {
     "id": "D02",
@@ -811,6 +841,9 @@
     "needs": [],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
     "terms": []
   },
   {
@@ -818,17 +851,17 @@
     "name": "Consumentensurplus en accijns",
     "category": "markt",
     "layer": 0,
-    "kern": "Accijns verhoogt prijs, consumers betalen meer, consumentensurplus daalt.",
+    "kern": "Accijns verhoogt prijs, consumenten betalen meer, consumentensurplus daalt.",
     "needs": [],
     "exam_codes": [
       "D3.1"
     ],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
-    "terms": [],
-    "procedure": [
-      "Accijns verhoogt prijs, consumers betalen meer, consumentensurplus daalt."
-    ]
+    "aspects": [
+      "verbaal"
+    ],
+    "terms": []
   },
   {
     "id": "D04",
@@ -839,6 +872,9 @@
     "needs": [],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
     "terms": []
   },
   {
@@ -846,27 +882,30 @@
     "name": "Evenwicht bij accijns",
     "category": "markt",
     "layer": 0,
-    "kern": "Student berekent nieuw evenwicht en accijnsopbrengst na invoering van een heffing.",
+    "kern": "Bereken nieuw evenwicht en accijnsopbrengst na invoering van een heffing.",
     "needs": [],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
-    "terms": [],
-    "procedure": [
-      "Student berekent nieuw evenwicht en accijnsopbrengst na invoering van een heffing."
-    ]
+    "aspects": [
+      "rekenen"
+    ],
+    "terms": []
   },
   {
     "id": "D06",
     "name": "Gasverbruik en prijselasticiteit",
     "category": "markt",
     "layer": 0,
-    "kern": "Student analyseert hoe prijselasticiteit van de vraag naar gas zich vertaalt in reactie op energieprijsstijgingen.",
+    "kern": "Analyseer hoe prijselasticiteit van de vraag naar gas zich vertaalt in reactie op energieprijsstijgingen.",
     "needs": [],
     "exam_codes": [
       "D1.3"
     ],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
     "terms": []
   },
   {
@@ -881,23 +920,26 @@
     ],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
-    "terms": [],
-    "procedure": [
-      "Bereken welk percentage van een heffing wordt doorberekend in de consumentenprijs via evenwichtsanalyse."
-    ]
+    "aspects": [
+      "rekenen"
+    ],
+    "terms": []
   },
   {
     "id": "D08",
     "name": "Heffing tegen overconsumptie",
     "category": "markt",
     "layer": 0,
-    "kern": "Student analyseert of een heffing overconsumptie tegengaat via veranderde vraag.",
+    "kern": "Analyseer of een heffing overconsumptie tegengaat via veranderde vraag.",
     "needs": [],
     "exam_codes": [
       "D1.4a"
     ],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
     "terms": []
   },
   {
@@ -912,6 +954,9 @@
     ],
     "mastery_target": "understand",
     "prior_learning": "previously_taught",
+    "aspects": [
+      "verbaal"
+    ],
     "terms": []
   },
   {
@@ -919,10 +964,13 @@
     "name": "Huizenmarkt in laagconjunctuur",
     "category": "markt",
     "layer": 0,
-    "kern": "Student analyseert effecten van laagconjunctuur op huiskoopprijzen via vraag en aanbod.",
+    "kern": "Analyseer effecten van laagconjunctuur op huiskoopprijzen via vraag en aanbod.",
     "needs": [],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
     "terms": []
   },
   {
@@ -930,38 +978,41 @@
     "name": "Inkomenselasticiteit huurmarkt",
     "category": "markt",
     "layer": 0,
-    "kern": "Student berekent en interpreteert inkomenselasticiteit van huurwoningen.",
+    "kern": "Bereken en interpreteert inkomenselasticiteit van huurwoningen.",
     "needs": [],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
-    "terms": [],
-    "procedure": [
-      "Student berekent en interpreteert inkomenselasticiteit van huurwoningen."
-    ]
+    "aspects": [
+      "verbaal"
+    ],
+    "terms": []
   },
   {
     "id": "D12",
     "name": "Kruiselasticiteit en substituten",
     "category": "markt",
     "layer": 0,
-    "kern": "Student bepaalt uit kruiselasticiteit of goederen substituten zijn en analyseert vraagverschuivingen.",
+    "kern": "Bepaal uit kruiselasticiteit of goederen substituten zijn en analyseert vraagverschuivingen.",
     "needs": [],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
-    "terms": [],
-    "procedure": [
-      "Student bepaalt uit kruiselasticiteit of goederen substituten zijn en analyseert vraagverschuivingen."
-    ]
+    "aspects": [
+      "rekenen"
+    ],
+    "terms": []
   },
   {
     "id": "D13",
     "name": "Loonkostenstijging en arbeidsproductiviteit",
     "category": "markt",
     "layer": 0,
-    "kern": "Student analyseert hoe een stijging van loonkosten relatief tot arbeidsproductiviteit leidt tot hogere productiekosten.",
+    "kern": "Analyseer hoe een stijging van loonkosten relatief tot arbeidsproductiviteit leidt tot hogere productiekosten.",
     "needs": [],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
     "terms": []
   },
   {
@@ -969,10 +1020,13 @@
     "name": "Marktfalen in watervoorziening",
     "category": "markt",
     "layer": 0,
-    "kern": "Student bepaalt wanneer marktwerking doelen bereikt of overheidsinterventie nodig is.",
+    "kern": "Bepaal wanneer marktwerking doelen bereikt of overheidsinterventie nodig is.",
     "needs": [],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
     "terms": []
   },
   {
@@ -987,6 +1041,9 @@
     ],
     "mastery_target": "understand",
     "prior_learning": "previously_taught",
+    "aspects": [
+      "verbaal"
+    ],
     "terms": []
   },
   {
@@ -998,6 +1055,9 @@
     "needs": [],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
     "terms": []
   },
   {
@@ -1009,45 +1069,54 @@
     "needs": [],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
     "terms": []
   },
   {
     "id": "D18",
-    "name": "Monopolie met prijsdifferentiatie",
+    "name": "Monopolie met prijsdiscriminatie",
     "category": "markt",
     "layer": 0,
-    "kern": "Student bepaalt hoe monopolist winst behaalt via prijsdiscriminatie over verschillende markten.",
+    "kern": "Bepaal hoe monopolist winst behaalt via prijsdiscriminatie over verschillende markten.",
     "needs": [],
     "exam_codes": [
       "D2.3"
     ],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
-    "terms": [],
-    "procedure": [
-      "Student bepaalt hoe monopolist winst behaalt via prijsdiscriminatie over verschillende markten."
-    ]
+    "aspects": [
+      "rekenen"
+    ],
+    "terms": []
   },
   {
     "id": "D19",
-    "name": "Subsidie en Pareto-efficientie",
+    "name": "Subsidie en Pareto-efficiëntie",
     "category": "markt",
     "layer": 0,
-    "kern": "Student legt uit of een subsidie-evenwicht Pareto-efficient is.",
+    "kern": "Leg uit of een subsidie-evenwicht Pareto-efficiënt is.",
     "needs": [],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
     "terms": []
   },
   {
     "id": "D20",
-    "name": "Pareto-efficientie in marktevenwicht",
+    "name": "Pareto-efficiëntie in marktevenwicht",
     "category": "markt",
     "layer": 0,
-    "kern": "Student legt uit wanneer een marktevenwicht Pareto-efficient is.",
+    "kern": "Leg uit wanneer een marktevenwicht Pareto-efficiënt is.",
     "needs": [],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
     "terms": []
   },
   {
@@ -1055,30 +1124,33 @@
     "name": "Prijsdiscriminatie over inkomensgroepen",
     "category": "markt",
     "layer": 0,
-    "kern": "Student analyseert hoe bedrijven prijzen differentieren en welvaartsgevolgen per inkomensgroep.",
+    "kern": "Analyseer hoe bedrijven prijzen differentieren en welvaartsgevolgen per inkomensgroep.",
     "needs": [],
     "exam_codes": [
       "D2.3"
     ],
     "mastery_target": "analyze",
     "prior_learning": "new_this_year",
-    "terms": [],
-    "procedure": [
-      "Student analyseert hoe bedrijven prijzen differentieren en welvaartsgevolgen per inkomensgroep."
-    ]
+    "aspects": [
+      "verbaal"
+    ],
+    "terms": []
   },
   {
     "id": "D22",
     "name": "Prijsdiscriminatie en subsidies",
     "category": "markt",
     "layer": 0,
-    "kern": "Student herkent of subsidies prijsdiscriminatie veroorzaken en analyseert gevolgen.",
+    "kern": "Herken of subsidies prijsdiscriminatie veroorzaken en analyseert gevolgen.",
     "needs": [],
     "exam_codes": [
       "D2.3"
     ],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
     "terms": []
   },
   {
@@ -1093,6 +1165,9 @@
     ],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
     "terms": []
   },
   {
@@ -1100,13 +1175,16 @@
     "name": "Drie voorwaarden prijsdiscriminatie",
     "category": "markt",
     "layer": 0,
-    "kern": "Student legt uit drie voorwaarden: voldoende marktmacht, markten scheiden, verschillende prijselasticiteiten.",
+    "kern": "Leg uit drie voorwaarden: voldoende marktmacht, markten scheiden, verschillende prijselasticiteiten.",
     "needs": [],
     "exam_codes": [
       "D2.3"
     ],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
     "terms": []
   },
   {
@@ -1118,6 +1196,9 @@
     "needs": [],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
     "terms": []
   },
   {
@@ -1125,10 +1206,13 @@
     "name": "Soorten variabele kosten classificeren",
     "category": "markt",
     "layer": 0,
-    "kern": "Student onderscheidt tussen degressief, progressief en proportioneel variabele kosten.",
+    "kern": "Onderscheid tussen degressief, progressief en proportioneel variabele kosten.",
     "needs": [],
     "mastery_target": "understand",
     "prior_learning": "previously_taught",
+    "aspects": [
+      "verbaal"
+    ],
     "terms": []
   },
   {
@@ -1140,6 +1224,9 @@
     "needs": [],
     "mastery_target": "understand",
     "prior_learning": "previously_taught",
+    "aspects": [
+      "verbaal"
+    ],
     "terms": []
   },
   {
@@ -1154,6 +1241,9 @@
     ],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
     "terms": []
   },
   {
@@ -1168,10 +1258,10 @@
     ],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
-    "terms": [],
-    "procedure": [
-      "Bepaal en arceer het deadweight loss ontstaan door subsidies als gevolg van allocatieve inefficientie."
-    ]
+    "aspects": [
+      "grafisch"
+    ],
+    "terms": []
   },
   {
     "id": "D30",
@@ -1182,23 +1272,27 @@
     "needs": [],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
-    "terms": [],
-    "procedure": [
-      "Winstmaximale hoeveelheid vind je waar marginale opbrengst gelijk is aan marginale kosten."
-    ]
+    "aspects": [
+      "rekenen",
+      "verbaal"
+    ],
+    "terms": []
   },
   {
     "id": "E01",
     "name": "Intergenerationele ruil",
     "category": "ruilen over tijd",
     "layer": 0,
-    "kern": "Student analyseert hoe pensioenstelsels intergenerationele ruil faciliteren.",
+    "kern": "Analyseer hoe pensioenstelsels intergenerationele ruil faciliteren.",
     "needs": [],
     "exam_codes": [
       "E2.1"
     ],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
     "terms": []
   },
   {
@@ -1206,13 +1300,16 @@
     "name": "Intertemporele ruil in pensioenstelsels",
     "category": "ruilen over tijd",
     "layer": 0,
-    "kern": "Student legt uit hoe pensioenen ruil over tijd vertegenwoordigen.",
+    "kern": "Leg uit hoe pensioenen ruil over tijd vertegenwoordigen.",
     "needs": [],
     "exam_codes": [
       "E1.1"
     ],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
     "terms": []
   },
   {
@@ -1220,13 +1317,16 @@
     "name": "Kapitaaldekking en renteeffecten",
     "category": "ruilen over tijd",
     "layer": 0,
-    "kern": "Student analyseert hoe rentes de betaalbaarheid van kapitaalgedekte pensioenen onder druk zetten.",
+    "kern": "Analyseer hoe rentes de betaalbaarheid van kapitaalgedekte pensioenen onder druk zetten.",
     "needs": [],
     "exam_codes": [
       "E1.1"
     ],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
     "terms": []
   },
   {
@@ -1241,6 +1341,9 @@
     ],
     "mastery_target": "understand",
     "prior_learning": "previously_taught",
+    "aspects": [
+      "verbaal"
+    ],
     "terms": []
   },
   {
@@ -1248,13 +1351,16 @@
     "name": "Verlaging pensioenuitkeringen en solidariteit",
     "category": "ruilen over tijd",
     "layer": 0,
-    "kern": "Student analyseert hoe verlaging van pensioenuitkeringen de solidariteit tussen generaties beinvloedt.",
+    "kern": "Analyseer hoe verlaging van pensioenuitkeringen de solidariteit tussen generaties beïnvloedt.",
     "needs": [],
     "exam_codes": [
       "E2.1"
     ],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
     "terms": []
   },
   {
@@ -1262,10 +1368,13 @@
     "name": "Voorraad- en stroomgrootheden onderscheiden",
     "category": "ruilen over tijd",
     "layer": 0,
-    "kern": "Student onderscheidt tussen voorraad- en stroomgrootheden.",
+    "kern": "Onderscheid tussen voorraad- en stroomgrootheden.",
     "needs": [],
     "mastery_target": "understand",
     "prior_learning": "previously_taught",
+    "aspects": [
+      "verbaal"
+    ],
     "terms": []
   },
   {
@@ -1280,6 +1389,9 @@
     ],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
     "terms": []
   },
   {
@@ -1287,13 +1399,17 @@
     "name": "Collectief goed classificeren",
     "category": "samenwerken en onderhandelen",
     "layer": 0,
-    "kern": "Student herkent collectieve goederen aan hand van excludeerbaarheid en rivaliteit.",
+    "kern": "Herken collectieve goederen aan hand van excludeerbaarheid en rivaliteit.",
     "needs": [],
     "exam_codes": [
       "F2.2"
     ],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
+    "aspects": [
+      "rekenen",
+      "verbaal"
+    ],
     "terms": []
   },
   {
@@ -1308,6 +1424,9 @@
     ],
     "mastery_target": "understand",
     "prior_learning": "previously_taught",
+    "aspects": [
+      "verbaal"
+    ],
     "terms": []
   },
   {
@@ -1315,17 +1434,17 @@
     "name": "Duopolie en spelmatrixanalyse",
     "category": "samenwerken en onderhandelen",
     "layer": 0,
-    "kern": "Student analyseert dominante strategieen en winstmaximalisatie in een duopol via pay-off matrix.",
+    "kern": "Analyseer dominante strategieën en winstmaximalisatie in een duopol via pay-off matrix.",
     "needs": [],
     "exam_codes": [
       "F1.4"
     ],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
-    "terms": [],
-    "procedure": [
-      "Student analyseert dominante strategieen en winstmaximalisatie in een duopol via pay-off matrix."
-    ]
+    "aspects": [
+      "rekenen"
+    ],
+    "terms": []
   },
   {
     "id": "F05",
@@ -1339,6 +1458,9 @@
     ],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
     "terms": []
   },
   {
@@ -1353,6 +1475,9 @@
     ],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
     "terms": []
   },
   {
@@ -1360,13 +1485,16 @@
     "name": "Externe effecten in marktbeslissingen",
     "category": "samenwerken en onderhandelen",
     "layer": 0,
-    "kern": "Student erkent dat negatieve externe effecten leiden tot overproductie vanuit maatschappelijk perspectief.",
+    "kern": "Erken dat negatieve externe effecten leiden tot overproductie vanuit maatschappelijk perspectief.",
     "needs": [],
     "exam_codes": [
       "F2.4"
     ],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
     "terms": []
   },
   {
@@ -1381,6 +1509,9 @@
     ],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
     "terms": []
   },
   {
@@ -1395,6 +1526,9 @@
     ],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
     "terms": []
   },
   {
@@ -1409,6 +1543,9 @@
     ],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
     "terms": []
   },
   {
@@ -1416,13 +1553,16 @@
     "name": "Lumpsum-financiering en externe effecten",
     "category": "samenwerken en onderhandelen",
     "layer": 0,
-    "kern": "Student legt uit hoe een lumpsum-financiering positieve externe effecten internaliseert.",
+    "kern": "Leg uit hoe een lumpsum-financiering positieve externe effecten internaliseert.",
     "needs": [],
     "exam_codes": [
       "F2.4"
     ],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
     "terms": []
   },
   {
@@ -1430,30 +1570,34 @@
     "name": "Nash-evenwicht identificeren",
     "category": "samenwerken en onderhandelen",
     "layer": 0,
-    "kern": "Student bepaalt het Nash-evenwicht uit een pay-off matrix met twee spelers.",
+    "kern": "Bepaal het Nash-evenwicht uit een pay-off matrix met twee spelers.",
     "needs": [],
     "exam_codes": [
       "F1.4"
     ],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
-    "terms": [],
-    "procedure": [
-      "Student bepaalt het Nash-evenwicht uit een pay-off matrix met twee spelers."
-    ]
+    "aspects": [
+      "rekenen",
+      "verbaal"
+    ],
+    "terms": []
   },
   {
     "id": "F13",
     "name": "Opzegtermijn en loonkosten",
     "category": "samenwerken en onderhandelen",
     "layer": 0,
-    "kern": "Student legt uit hoe kortere opzegtermijnen via berovingsprobleem tot hogere loonkosten leiden.",
+    "kern": "Leg uit hoe kortere opzegtermijnen via berovingsprobleem tot hogere loonkosten leiden.",
     "needs": [],
     "exam_codes": [
       "F2.1"
     ],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
     "terms": []
   },
   {
@@ -1461,13 +1605,16 @@
     "name": "Toerismeconcentratie en externe effecten",
     "category": "samenwerken en onderhandelen",
     "layer": 0,
-    "kern": "Student analyseert hoe concentratie van toerisme negatieve externe effecten veroorzaakt.",
+    "kern": "Analyseer hoe concentratie van toerisme negatieve externe effecten veroorzaakt.",
     "needs": [],
     "exam_codes": [
       "F2.4"
     ],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
     "terms": []
   },
   {
@@ -1482,6 +1629,9 @@
     ],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
     "terms": []
   },
   {
@@ -1496,6 +1646,9 @@
     ],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
     "terms": []
   },
   {
@@ -1503,13 +1656,16 @@
     "name": "Averechtse selectie herkennen",
     "category": "risico en informatie",
     "layer": 0,
-    "kern": "Student herkent averechtse selectie als gevolg van informatieasymmetrie op markten.",
+    "kern": "Herken averechtse selectie als gevolg van informatieasymmetrie op markten.",
     "needs": [],
     "exam_codes": [
       "G3.2"
     ],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
     "terms": []
   },
   {
@@ -1524,6 +1680,9 @@
     ],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
     "terms": []
   },
   {
@@ -1538,6 +1697,10 @@
     ],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
+    "aspects": [
+      "rekenen",
+      "verbaal"
+    ],
     "terms": []
   },
   {
@@ -1545,13 +1708,16 @@
     "name": "Principaal-agent overheid en markt",
     "category": "risico en informatie",
     "layer": 0,
-    "kern": "Student beschrijft hoe mededingingsautoriteit en manager belangen verschillen.",
+    "kern": "Beschrijf hoe mededingingsautoriteit en manager belangen verschillen.",
     "needs": [],
     "exam_codes": [
       "G3.2"
     ],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
     "terms": []
   },
   {
@@ -1559,13 +1725,16 @@
     "name": "Principaal-agentprobleem identificeren",
     "category": "risico en informatie",
     "layer": 0,
-    "kern": "Student identificeert principaal-agentrelaties en de problemen die daaruit voortvloeien.",
+    "kern": "Identificeer principaal-agentrelaties en de problemen die daaruit voortvloeien.",
     "needs": [],
     "exam_codes": [
       "G3.2"
     ],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
     "terms": []
   },
   {
@@ -1573,17 +1742,18 @@
     "name": "Transactiekosten",
     "category": "risico en informatie",
     "layer": 0,
-    "kern": "Student berekent en interpreteert transactiekosten bij ruil.",
+    "kern": "Bereken en interpreteert transactiekosten bij ruil.",
     "needs": [],
     "exam_codes": [
       "G2.1"
     ],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
-    "terms": [],
-    "procedure": [
-      "Student berekent en interpreteert transactiekosten bij ruil."
-    ]
+    "aspects": [
+      "rekenen",
+      "verbaal"
+    ],
+    "terms": []
   },
   {
     "id": "G08",
@@ -1597,6 +1767,9 @@
     ],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
     "terms": []
   },
   {
@@ -1611,6 +1784,9 @@
     ],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
     "terms": []
   },
   {
@@ -1625,6 +1801,9 @@
     ],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
     "terms": []
   },
   {
@@ -1632,13 +1811,16 @@
     "name": "Wisselkoersrisico bij valutabetaling",
     "category": "risico en informatie",
     "layer": 0,
-    "kern": "Student legt uit hoe appreciatie van de euro de werkelijke opbrengsten van exporteurs nadelig beinvloedt.",
+    "kern": "Leg uit hoe appreciatie van de euro de werkelijke opbrengsten van exporteurs nadelig beïnvloedt.",
     "needs": [],
     "exam_codes": [
       "G2.1"
     ],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
     "terms": []
   },
   {
@@ -1653,6 +1835,9 @@
     ],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
     "terms": []
   },
   {
@@ -1660,34 +1845,35 @@
     "name": "AIQ (arbeidsinkomenquote) berekenen",
     "category": "welvaart en groei",
     "layer": 0,
-    "kern": "Student berekent de arbeidsinkomenquote: (arbeidsinkomen / nationaal inkomen) x 100%.",
+    "kern": "Bereken de arbeidsinkomenquote: (arbeidsinkomen / nationaal inkomen) x 100%.",
     "needs": [],
     "exam_codes": [
       "H1.1"
     ],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
-    "terms": [],
-    "procedure": [
-      "Student berekent de arbeidsinkomenquote: (arbeidsinkomen / nationaal inkomen) x 100%."
-    ]
+    "aspects": [
+      "rekenen",
+      "verbaal"
+    ],
+    "terms": []
   },
   {
     "id": "H03",
     "name": "Armington-elasticiteit",
     "category": "welvaart en groei",
     "layer": 0,
-    "kern": "Student berekent Armington-elasticiteit en analyseert effectiviteit van import-beperkend beleid.",
+    "kern": "Bereken Armington-elasticiteit en analyseert effectiviteit van import-beperkend beleid.",
     "needs": [],
     "exam_codes": [
       "H1.1"
     ],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
-    "terms": [],
-    "procedure": [
-      "Student berekent Armington-elasticiteit en analyseert effectiviteit van import-beperkend beleid."
-    ]
+    "aspects": [
+      "rekenen"
+    ],
+    "terms": []
   },
   {
     "id": "H04",
@@ -1701,23 +1887,27 @@
     ],
     "mastery_target": "apply",
     "prior_learning": "previously_taught",
-    "terms": [],
-    "procedure": [
-      "Belastingdruk bepaald aan hand van marginaal tarief en betreffende schijven."
-    ]
+    "aspects": [
+      "rekenen",
+      "verbaal"
+    ],
+    "terms": []
   },
   {
     "id": "H05",
     "name": "Circulaire economie en groen bbp",
     "category": "welvaart en groei",
     "layer": 0,
-    "kern": "Student analyseert hoe circulaire economie het groen bbp kan verhogen via reductie milieuschade en recycling.",
+    "kern": "Analyseer hoe circulaire economie het groen bbp kan verhogen via reductie milieuschade en recycling.",
     "needs": [],
     "exam_codes": [
       "H3.4"
     ],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
     "terms": []
   },
   {
@@ -1732,10 +1922,10 @@
     ],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
-    "terms": [],
-    "procedure": [
-      "Bereken totale milieueffect van marktveranderingen door per-eenheid emissie met hoeveelheid te vermenigvuldigen."
-    ]
+    "aspects": [
+      "rekenen"
+    ],
+    "terms": []
   },
   {
     "id": "H07",
@@ -1749,6 +1939,9 @@
     ],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
     "terms": []
   },
   {
@@ -1763,6 +1956,9 @@
     ],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
     "terms": []
   },
   {
@@ -1777,6 +1973,9 @@
     ],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
     "terms": []
   },
   {
@@ -1791,6 +1990,9 @@
     ],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
     "terms": []
   },
   {
@@ -1805,6 +2007,9 @@
     ],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
     "terms": []
   },
   {
@@ -1819,6 +2024,9 @@
     ],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
     "terms": []
   },
   {
@@ -1833,6 +2041,9 @@
     ],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
     "terms": []
   },
   {
@@ -1847,6 +2058,9 @@
     ],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
     "terms": []
   },
   {
@@ -1861,6 +2075,9 @@
     ],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
     "terms": []
   },
   {
@@ -1868,13 +2085,16 @@
     "name": "Ontslagrecht en werkgeverrisico",
     "category": "welvaart en groei",
     "layer": 0,
-    "kern": "Student legt uit hoe versoepeling van ontslagrecht risico voor werkgevers vermindert.",
+    "kern": "Leg uit hoe versoepeling van ontslagrecht risico voor werkgevers vermindert.",
     "needs": [],
     "exam_codes": [
       "H5.1"
     ],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
     "terms": []
   },
   {
@@ -1889,6 +2109,9 @@
     ],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
     "terms": []
   },
   {
@@ -1896,30 +2119,33 @@
     "name": "Progressief tarief berekenen",
     "category": "welvaart en groei",
     "layer": 0,
-    "kern": "Student berekent totale belasting bij progressieve tarieven en analyseert stimulansen.",
+    "kern": "Bereken totale belasting bij progressieve tarieven en analyseert stimulansen.",
     "needs": [],
     "exam_codes": [
       "H4.6"
     ],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
-    "terms": [],
-    "procedure": [
-      "Student berekent totale belasting bij progressieve tarieven en analyseert stimulansen."
-    ]
+    "aspects": [
+      "rekenen"
+    ],
+    "terms": []
   },
   {
     "id": "H19",
     "name": "Publiek kapitaal en staatsschuldquote",
     "category": "welvaart en groei",
     "layer": 0,
-    "kern": "Student legt uit hoe investeringen in publiek kapitaal op lange termijn staatsschuldquote kunnen verlagen.",
+    "kern": "Leg uit hoe investeringen in publiek kapitaal op lange termijn staatsschuldquote kunnen verlagen.",
     "needs": [],
     "exam_codes": [
       "H5.1"
     ],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
     "terms": []
   },
   {
@@ -1927,13 +2153,16 @@
     "name": "Spaarsaldo en betalingsbalans",
     "category": "welvaart en groei",
     "layer": 0,
-    "kern": "Student interpreteert positieve en negatieve particuliere spaarsalda.",
+    "kern": "Interpreteer positieve en negatieve particuliere spaarsalda.",
     "needs": [],
     "exam_codes": [
       "H1.2"
     ],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
     "terms": []
   },
   {
@@ -1948,20 +2177,23 @@
     ],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
-    "terms": [],
-    "procedure": [
-      "Bereken staatsschuldquote = staatsschuld / bbp x 100% en bepaal drempels voor duurzaamheid."
-    ]
+    "aspects": [
+      "rekenen"
+    ],
+    "terms": []
   },
   {
     "id": "H22",
     "name": "Tarifaanpassing en inkomenseffecten",
     "category": "welvaart en groei",
     "layer": 0,
-    "kern": "Student analyseert hoe tarifaanpassingen secundaire inkomenseffecten hebben via vraagveranderingen.",
+    "kern": "Analyseer hoe tarifaanpassingen secundaire inkomenseffecten hebben via vraagveranderingen.",
     "needs": [],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
     "terms": []
   },
   {
@@ -1969,13 +2201,16 @@
     "name": "Uitverdieneffect en belastingwig",
     "category": "welvaart en groei",
     "layer": 0,
-    "kern": "Student legt uit hoe progressieve belastingen via hogere marginale lastendruk en substitutieeffect arbeidsaanbod verkleinen.",
+    "kern": "Leg uit hoe progressieve belastingen via hogere marginale lastendruk en substitutieeffect arbeidsaanbod verkleinen.",
     "needs": [],
     "exam_codes": [
       "H4.6"
     ],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
     "terms": []
   },
   {
@@ -1983,30 +2218,33 @@
     "name": "Wisselkoers en depreciatie",
     "category": "welvaart en groei",
     "layer": 0,
-    "kern": "Student berekent wisselkoerseffecten van depreciatie en legt uit hoe deze reele inkomens beinvloeden.",
+    "kern": "Bereken wisselkoerseffecten van depreciatie en legt uit hoe deze reele inkomens beinvloeden.",
     "needs": [],
     "exam_codes": [
       "H1.1"
     ],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
-    "terms": [],
-    "procedure": [
-      "Student berekent wisselkoerseffecten van depreciatie en legt uit hoe deze reele inkomens beinvloeden."
-    ]
+    "aspects": [
+      "rekenen"
+    ],
+    "terms": []
   },
   {
     "id": "H25",
     "name": "Wisselkoers en economische groei",
     "category": "welvaart en groei",
     "layer": 0,
-    "kern": "Student legt uit hoe wisselkoerseffecten tot groei kunnen leiden.",
+    "kern": "Leg uit hoe wisselkoerseffecten tot groei kunnen leiden.",
     "needs": [],
     "exam_codes": [
       "H1.1"
     ],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
     "terms": []
   },
   {
@@ -2018,6 +2256,10 @@
     "needs": [],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
+    "aspects": [
+      "rekenen",
+      "verbaal"
+    ],
     "terms": []
   },
   {
@@ -2029,6 +2271,9 @@
     "needs": [],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
     "terms": []
   },
   {
@@ -2036,10 +2281,13 @@
     "name": "Anticyclische inkomensoverdrachten",
     "category": "goede en slechte tijden",
     "layer": 0,
-    "kern": "Student legt uit hoe inkomensoverdrachten anticyclisch werken tijdens laagconjunctuur.",
+    "kern": "Leg uit hoe inkomensoverdrachten anticyclisch werken tijdens laagconjunctuur.",
     "needs": [],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
     "terms": []
   },
   {
@@ -2051,6 +2299,9 @@
     "needs": [],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
     "terms": []
   },
   {
@@ -2058,13 +2309,16 @@
     "name": "CAO-looptijd en arbeidsmarktrigiditeit",
     "category": "goede en slechte tijden",
     "layer": 0,
-    "kern": "Student legt uit hoe langere CAO-looptijden arbeidsmarktflexibiliteit en beleid beinvloeden.",
+    "kern": "Leg uit hoe langere CAO-looptijden arbeidsmarktflexibiliteit en beleid beinvloeden.",
     "needs": [],
     "exam_codes": [
       "I4.4"
     ],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
     "terms": []
   },
   {
@@ -2072,14 +2326,14 @@
     "name": "Centrale bank rentebeleid",
     "category": "goede en slechte tijden",
     "layer": 0,
-    "kern": "Student bepaalt wanneer centrale banken rentes verhogen of verlagen.",
+    "kern": "Bepaal wanneer centrale banken rentes verhogen of verlagen.",
     "needs": [],
     "mastery_target": "apply",
     "prior_learning": "previously_taught",
-    "terms": [],
-    "procedure": [
-      "Student bepaalt wanneer centrale banken rentes verhogen of verlagen."
-    ]
+    "aspects": [
+      "verbaal"
+    ],
+    "terms": []
   },
   {
     "id": "I06",
@@ -2093,6 +2347,9 @@
     ],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
     "terms": []
   },
   {
@@ -2100,24 +2357,24 @@
     "name": "IS-MB-GA-model met outputgap",
     "category": "goede en slechte tijden",
     "layer": 0,
-    "kern": "Student analyseert relatie tussen outputgap, nominale rente, inflatie en curveverschuivingen in laagconjunctuur.",
+    "kern": "Analyseer relatie tussen outputgap, nominale rente, inflatie en curveverschuivingen in laagconjunctuur.",
     "needs": [],
     "exam_codes": [
       "I4.1"
     ],
     "mastery_target": "analyze",
     "prior_learning": "new_this_year",
-    "terms": [],
-    "procedure": [
-      "Student analyseert relatie tussen outputgap, nominale rente, inflatie en curveverschuivingen in laagconjunctuur."
-    ]
+    "aspects": [
+      "verbaal"
+    ],
+    "terms": []
   },
   {
     "id": "I08",
     "name": "Keynesiaanse kruis verschuivingen analyseren",
     "category": "goede en slechte tijden",
     "layer": 0,
-    "kern": "Student analyseert hoe verschuivingen in IS en LM het evenwicht en effectiviteit van beleid beinvloeden.",
+    "kern": "Analyseer hoe verschuivingen in IS en LM het evenwicht en effectiviteit van beleid beinvloeden.",
     "needs": [],
     "exam_codes": [
       "I4.1",
@@ -2125,10 +2382,11 @@
     ],
     "mastery_target": "analyze",
     "prior_learning": "new_this_year",
-    "terms": [],
-    "procedure": [
-      "Student analyseert hoe verschuivingen in IS en LM het evenwicht en effectiviteit van beleid beinvloeden."
-    ]
+    "aspects": [
+      "grafisch",
+      "verbaal"
+    ],
+    "terms": []
   },
   {
     "id": "I09",
@@ -2142,23 +2400,26 @@
     ],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
-    "terms": [],
-    "procedure": [
-      "Bereken nieuwe loon of uitkering om koopkracht gelijk te houden bij inflatie."
-    ]
+    "aspects": [
+      "rekenen"
+    ],
+    "terms": []
   },
   {
     "id": "I10",
     "name": "Loonrigiditeit en GA-curve helling",
     "category": "goede en slechte tijden",
     "layer": 0,
-    "kern": "Student legt uit hoe loonflexibiliteit de helling van de GA-curve beinvloedt.",
+    "kern": "Leg uit hoe loonflexibiliteit de helling van de GA-curve beïnvloedt.",
     "needs": [],
     "exam_codes": [
       "I4.4"
     ],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
     "terms": []
   },
   {
@@ -2166,14 +2427,14 @@
     "name": "Monetair beleid bij starre vs flexibele arbeidsmarkt",
     "category": "goede en slechte tijden",
     "layer": 0,
-    "kern": "Student vergelijkt effectiviteit van renteverlagingen onder starre versus flexibele arbeidsmarktomstandigheden.",
+    "kern": "Vergelijk effectiviteit van renteverlagingen onder starre versus flexibele arbeidsmarktomstandigheden.",
     "needs": [],
     "mastery_target": "analyze",
     "prior_learning": "new_this_year",
-    "terms": [],
-    "procedure": [
-      "Student vergelijkt effectiviteit van renteverlagingen onder starre versus flexibele arbeidsmarktomstandigheden."
-    ]
+    "aspects": [
+      "verbaal"
+    ],
+    "terms": []
   },
   {
     "id": "I12",
@@ -2187,6 +2448,9 @@
     ],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
     "terms": []
   },
   {
@@ -2194,13 +2458,16 @@
     "name": "Monetair trilemma",
     "category": "goede en slechte tijden",
     "layer": 0,
-    "kern": "Student analyseert beleidsopties (vast wisselkoers, onafhankelijk beleid, kapitaalverkeer) in multinationale context.",
+    "kern": "Analyseer beleidsopties (vast wisselkoers, onafhankelijk beleid, kapitaalverkeer) in multinationale context.",
     "needs": [],
     "exam_codes": [
       "I1.2"
     ],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
     "terms": []
   },
   {
@@ -2208,13 +2475,16 @@
     "name": "Multiplier en lekkages",
     "category": "goede en slechte tijden",
     "layer": 0,
-    "kern": "Student begrijpt hoe autonome bestedingen via de multiplier en lekkages het inkomen beinvloeden.",
+    "kern": "Begrijp hoe autonome bestedingen via de multiplier en lekkages het inkomen beinvloeden.",
     "needs": [],
     "exam_codes": [
       "I4.1"
     ],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
     "terms": []
   },
   {
@@ -2222,17 +2492,17 @@
     "name": "Output gap en economische schokken",
     "category": "goede en slechte tijden",
     "layer": 0,
-    "kern": "Student analyseert hoe schokken een negatieve of positieve output gap veroorzaken.",
+    "kern": "Analyseer hoe schokken een negatieve of positieve output gap veroorzaken.",
     "needs": [],
     "exam_codes": [
       "I4.2"
     ],
     "mastery_target": "analyze",
     "prior_learning": "new_this_year",
-    "terms": [],
-    "procedure": [
-      "Student analyseert hoe schokken een negatieve of positieve output gap veroorzaken."
-    ]
+    "aspects": [
+      "verbaal"
+    ],
+    "terms": []
   },
   {
     "id": "I16",
@@ -2243,6 +2513,9 @@
     "needs": [],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
     "terms": []
   },
   {
@@ -2254,6 +2527,9 @@
     "needs": [],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
     "terms": []
   },
   {
@@ -2261,13 +2537,16 @@
     "name": "Werkelijk versus nominaal eigen risico",
     "category": "goede en slechte tijden",
     "layer": 0,
-    "kern": "Student analyseert hoe inflatie het werkelijk draagvermogen van een nominaal vast eigen risico beinvloedt.",
+    "kern": "Analyseer hoe inflatie het werkelijk draagvermogen van een nominaal vast eigen risico beïnvloedt.",
     "needs": [],
     "exam_codes": [
       "I1.4"
     ],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
     "terms": []
   },
   {
@@ -2275,13 +2554,17 @@
     "name": "Wisselkoerseffect van monetair beleid",
     "category": "goede en slechte tijden",
     "layer": 0,
-    "kern": "Student legt uit hoe monetaire beleidsmaatregelen via de wisselkoers de conjunctuur beinvloeden.",
+    "kern": "Leg uit hoe monetaire beleidsmaatregelen via de wisselkoers de conjunctuur beinvloeden.",
     "needs": [],
     "exam_codes": [
       "I1.2"
     ],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
+    "aspects": [
+      "rekenen",
+      "verbaal"
+    ],
     "terms": []
   }
 ]

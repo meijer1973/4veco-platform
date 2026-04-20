@@ -128,11 +128,9 @@ function main() {
       prior_learning: u.prior_learning || 'new_this_year',
       terms: [],
     };
-    if (['apply', 'analyze', 'evaluate'].includes(unit.mastery_target)) {
-      // Apply-level unit without an abstract procedure — seed with the kern
-      // as a single-step placeholder; refinement via unit-update later.
-      unit.procedure = [u.kern];
-    }
+    // Apply-level units that genuinely need a canonical procedure get one via a
+    // later targeted unit-update pass; the validator now warns on missing
+    // procedure instead of failing, so no placeholder is seeded here.
     newUnits.push(unit);
     units.push(unit);
   }
