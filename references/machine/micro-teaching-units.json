@@ -13,6 +13,9 @@
     "procedure": [
       "Stel een lineaire functie op (y = ax + b) vanuit een economische context, zoals een vraag- of aanbodfunctie."
     ],
+    "pitfalls": [
+      "Let op de volgorde: als je Qv als functie van P opstelt, dan is P de x en Q de y."
+    ],
     "generator": "GEN_A01"
   },
   {
@@ -27,7 +30,12 @@
     "prior_learning": "previously_taught",
     "terms": [],
     "procedure": [
-      "Los een vergelijking met één onbekende op, bijvoorbeeld door twee functies aan elkaar gelijk te stellen."
+      "Breng alle termen met de onbekende naar één kant",
+      "Breng alle getallen naar de andere kant",
+      "Deel door het getal vóór de onbekende"
+    ],
+    "pitfalls": [
+      "Als je een term naar de andere kant verplaatst, vergeet dan niet het teken om te draaien."
     ],
     "generator": "GEN_A02"
   },
@@ -43,7 +51,11 @@
     "prior_learning": "previously_taught",
     "terms": [],
     "procedure": [
-      "Schrijf een functie om van P als functie van Q naar Q als functie van P, of andersom."
+      "Trek b af: Q − b = aP",
+      "Deel door a: P = (Q − b) / a"
+    ],
+    "pitfalls": [
+      "Bij Qv = 100 − 2P is het verleidelijk om te delen door 2 en dan te schrijven P = 50 − Qv."
     ],
     "generator": "GEN_A03"
   },
@@ -61,6 +73,9 @@
     "procedure": [
       "Vul een waarde in een functie in en bereken het resultaat."
     ],
+    "pitfalls": [
+      "Bij 0,5Q² moet je eerst Q kwadrateren en dan pas vermenigvuldigen met 0,5."
+    ],
     "generator": "GEN_A04"
   },
   {
@@ -76,6 +91,9 @@
     "terms": [],
     "procedure": [
       "Bereken het snijpunt van een functie met de verticale as (P-as) door Q = 0 in te vullen."
+    ],
+    "pitfalls": [
+      "Verwar het snijpunt met de P-as niet met het snijpunt met de Q-as."
     ],
     "generator": "GEN_A05"
   },
@@ -94,7 +112,12 @@
     "prior_learning": "new_this_year",
     "terms": [],
     "procedure": [
-      "Bereken de evenwichtsprijs en -hoeveelheid door vraag en aanbod aan elkaar gelijk te stellen."
+      "Stel de twee functies aan elkaar gelijk",
+      "Los op naar P → evenwichtsprijs (P*)",
+      "Vul P* in een van de functies → evenwichtshoeveelheid (Q*)"
+    ],
+    "pitfalls": [
+      "Vergeet niet de evenwichtshoeveelheid te berekenen!"
     ],
     "generator": "GEN_A06"
   },
@@ -115,6 +138,9 @@
     "procedure": [
       "Stel de totale opbrengstfunctie op: TO = P × Q. Schrijf de vraagfunctie om zodat P in Q is uitgedrukt."
     ],
+    "pitfalls": [
+      "Vergeet niet de haakjes als je P × Q uitrekent!"
+    ],
     "generator": "GEN_A07"
   },
   {
@@ -132,6 +158,9 @@
     "terms": [],
     "procedure": [
       "Herken en werk met de totale kostenfunctie (TK), vaak gegeven als TK = vaste kosten + variabele kosten × Q."
+    ],
+    "pitfalls": [
+      "Bij TK = 12Q + 0,3Q² denken leerlingen soms dat er geen vaste kosten zijn."
     ],
     "generator": "GEN_A08"
   },
@@ -151,6 +180,9 @@
     "procedure": [
       "Tel individuele aanbodfuncties op tot een collectieve aanbodfunctie."
     ],
+    "pitfalls": [
+      "Als je Qa = 50 × (−5 + 2P) uitwerkt, vergeet dan niet BEIDE termen te vermenigvuldigen: 50 × −5 = −250 en 50 × 2P = 100P."
+    ],
     "generator": "GEN_A09"
   },
   {
@@ -169,6 +201,9 @@
     "procedure": [
       "Bereken de oppervlakte van een driehoek in een grafiek: ½ × basis × hoogte."
     ],
+    "pitfalls": [
+      "Verwar de hoogte niet met de P-waarde zelf."
+    ],
     "generator": "GEN_A10"
   },
   {
@@ -186,6 +221,9 @@
     "terms": [],
     "procedure": [
       "Bepaal de afgeleide van een functie. Bijvoorbeeld: als TO = 5Q², dan is MO = 10Q."
+    ],
+    "pitfalls": [
+      "Een veelgemaakte fout: de constante vergeten te schrappen."
     ],
     "generator": "GEN_A11"
   },
@@ -206,6 +244,9 @@
     "procedure": [
       "Bepaal de marginale opbrengst (MO) door de afgeleide van de TO-functie te nemen."
     ],
+    "pitfalls": [
+      "MO is niet hetzelfde als de prijs!"
+    ],
     "generator": "GEN_A12"
   },
   {
@@ -225,6 +266,9 @@
     "procedure": [
       "Bepaal de marginale kosten (MK) door de afgeleide van de TK-functie te nemen."
     ],
+    "pitfalls": [
+      "Verwar MK niet met GTK (gemiddelde totale kosten)."
+    ],
     "generator": "GEN_A13"
   },
   {
@@ -242,6 +286,9 @@
     "terms": [],
     "procedure": [
       "Bereken de gemiddelde totale kosten: GTK = TK / Q."
+    ],
+    "pitfalls": [
+      "Deel ELKE term apart door Q!"
     ],
     "generator": "GEN_A14"
   },
@@ -261,6 +308,9 @@
     "procedure": [
       "Bereken de prijselasticiteit: Ev = %ΔQv / %ΔP. Bepaal of de vraag elastisch of inelastisch is."
     ],
+    "pitfalls": [
+      "Vergeet het minteken niet!"
+    ],
     "generator": "GEN_A15"
   },
   {
@@ -276,6 +326,9 @@
     "terms": [],
     "procedure": [
       "Bereken de kruiselasticiteit: Ekr = %ΔQa / %ΔPb. Bepaal of goederen substituten of complementen zijn."
+    ],
+    "pitfalls": [
+      "Let goed op welk product de Q is en welk product de P."
     ],
     "generator": "GEN_A16"
   },
@@ -293,6 +346,9 @@
     "procedure": [
       "Bereken de inkomenselasticiteit: Ei = %ΔQ / %ΔY. Bepaal of een goed normaal, inferieur of luxe is."
     ],
+    "pitfalls": [
+      "Verwar inkomenselasticiteit niet met prijselasticiteit!"
+    ],
     "generator": "GEN_A17"
   },
   {
@@ -308,6 +364,9 @@
     "terms": [],
     "procedure": [
       "Vergelijk de alternatieve kosten van twee producenten om te bepalen wie een comparatief voordeel heeft."
+    ],
+    "pitfalls": [
+      "Verwar absoluut en comparatief voordeel niet!"
     ],
     "generator": "GEN_A18"
   },
@@ -327,6 +386,9 @@
     "terms": [],
     "procedure": [
       "Bereken het consumenten- of producentensurplus als driehoeksoppervlakte in de vraag-/aanbodgrafiek."
+    ],
+    "pitfalls": [
+      "Vergeet niet om de vraaglijn om te schrijven naar P als functie van Q voordat je Pmax bepaalt."
     ],
     "generator": "GEN_A19"
   },
@@ -348,6 +410,9 @@
     "procedure": [
       "Vind de winstmaximaliserende hoeveelheid door MO gelijk te stellen aan MK en op te lossen."
     ],
+    "pitfalls": [
+      "Verwar MO niet met de prijs!"
+    ],
     "generator": "GEN_A20"
   },
   {
@@ -367,6 +432,9 @@
     "terms": [],
     "procedure": [
       "Bereken de winst door de totale opbrengst min de totale kosten: W = TO − TK."
+    ],
+    "pitfalls": [
+      "Vergeet de constante kosten niet!"
     ],
     "generator": "GEN_A21"
   },
@@ -388,6 +456,9 @@
     "procedure": [
       "Vind de break-evenhoeveelheid door TO = TK op te lossen. Bij dit punt is de winst nul."
     ],
+    "pitfalls": [
+      "Bij het herschrijven naar de standaardvorm verplaats je alle termen naar één kant."
+    ],
     "generator": "GEN_A22"
   },
   {
@@ -406,6 +477,9 @@
     "terms": [],
     "procedure": [
       "Bereken het nieuwe marktevenwicht nadat de overheid een heffing (accijns) heeft opgelegd."
+    ],
+    "pitfalls": [
+      "Let op het teken!"
     ],
     "generator": "GEN_A23"
   },
@@ -426,6 +500,9 @@
     "procedure": [
       "Bepaal het collectieve aanbod vanuit meerdere individuele aanbieders en bereken het marktevenwicht."
     ],
+    "pitfalls": [
+      "Als bedrijven een verschillende minimumprijs hebben, biedt het ene bedrijf al aan terwijl het andere nog niet produceert."
+    ],
     "generator": "GEN_A24"
   },
   {
@@ -444,6 +521,9 @@
     "procedure": [
       "Analyseer het effect van een minimumprijs: bereken het vraagoverschot en het welvaartsverlies."
     ],
+    "pitfalls": [
+      "Bij een minimumprijs bepaalt de vraagzijde hoeveel er verhandeld wordt, niet het aanbod."
+    ],
     "generator": "GEN_A25"
   },
   {
@@ -461,6 +541,9 @@
     "terms": [],
     "procedure": [
       "Analyseer het effect van een maximumprijs: bereken het vraagoverschot en de gevolgen voor consumenten."
+    ],
+    "pitfalls": [
+      "Bij een maximumprijs bepaalt de aanbodzijde hoeveel er verhandeld wordt."
     ],
     "generator": "GEN_A26"
   },
@@ -481,6 +564,9 @@
     "procedure": [
       "Bereken het effect van een subsidie op het marktevenwicht, de prijs en de verdeling van het voordeel."
     ],
+    "pitfalls": [
+      "Bij een subsidie ontvangt de producent P + s, niet P − s."
+    ],
     "generator": "GEN_A27"
   },
   {
@@ -500,6 +586,9 @@
     "procedure": [
       "Vind de hoeveelheid waar MK = GTK. Dit is het minimum van de GTK-curve (efficiënte schaal)."
     ],
+    "pitfalls": [
+      "GTK is niet de afgeleide van TK!"
+    ],
     "generator": "GEN_A28"
   },
   {
@@ -517,6 +606,9 @@
     "terms": [],
     "procedure": [
       "Voer een volledige break-evenanalyse uit: vind de break-evenhoeveelheid en bepaal winst/verlies bij een gegeven Q."
+    ],
+    "pitfalls": [
+      "Bij het herschrijven naar de standaardvorm verandert het teken van de Q-term."
     ],
     "generator": "GEN_A29"
   },
@@ -536,6 +628,9 @@
     "procedure": [
       "Bereken het consumentensurplus voor en na een beleidsverandering en bepaal het verschil."
     ],
+    "pitfalls": [
+      "Pmax is niet de coëfficiënt vóór P in de vraaglijn."
+    ],
     "generator": "GEN_A30"
   },
   {
@@ -553,6 +648,9 @@
     "terms": [],
     "procedure": [
       "Ga van individuele aanbodcurves naar de collectieve aanbodcurve en bereken het marktevenwicht."
+    ],
+    "pitfalls": [
+      "Als groep B een minimumprijs van €8 heeft en je rekent bij P = 6, dan is Qi_B = (6−8)/2 = −1."
     ],
     "generator": "GEN_A31"
   },
@@ -572,6 +670,9 @@
     "terms": [],
     "procedure": [
       "Bereken het welvaartsverlies (deadweight loss) dat ontstaat door een belasting als driehoeksoppervlakte."
+    ],
+    "pitfalls": [
+      "Verwar het welvaartsverlies niet met de totale belastingopbrengst."
     ],
     "generator": "GEN_A32"
   },
@@ -593,6 +694,9 @@
     "procedure": [
       "Bepaal de optimale productie bij volkomen mededinging: produceer waar P = MK en bereken de winst."
     ],
+    "pitfalls": [
+      "Winst is niet P × Q!"
+    ],
     "generator": "GEN_A33"
   },
   {
@@ -612,6 +716,9 @@
     "terms": [],
     "procedure": [
       "Analyseer de effecten van een invoerrecht op binnenlandse productie, consumptie, import en welvaart."
+    ],
+    "pitfalls": [
+      "Het invoerrecht verandert niet de binnenlandse vraag- of aanbodfuncties zelf."
     ],
     "generator": "GEN_A34"
   },
@@ -633,6 +740,9 @@
     "procedure": [
       "Bereken de maximale winst van een monopolist: vind Q waar MO = MK, bepaal P en reken W = TO − TK uit."
     ],
+    "pitfalls": [
+      "Gebruik niet MO als prijs!"
+    ],
     "generator": "GEN_A35"
   },
   {
@@ -652,6 +762,9 @@
     "procedure": [
       "Bereken de winst bij prijsdiscriminatie: de monopolist rekent verschillende prijzen in verschillende markten."
     ],
+    "pitfalls": [
+      "Gebruik niet dezelfde Q voor beide markten!"
+    ],
     "generator": "GEN_A36"
   },
   {
@@ -669,6 +782,9 @@
     "terms": [],
     "procedure": [
       "Bepaal het lange-termijnevenwicht bij volkomen mededinging: P = MK = GTK (minimale GTK)."
+    ],
+    "pitfalls": [
+      "Winst = 0 betekent niet dat het bedrijf geen geld verdient!"
     ],
     "generator": "GEN_A37"
   }

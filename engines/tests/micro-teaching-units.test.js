@@ -30,6 +30,11 @@ const {
   parseFlagArgs,
 } = require('../../build-scripts/references/unit-lib');
 
+const {
+  loadTerminology,
+  loadEindtermen,
+} = require('../../build-scripts/references/build-unit-index');
+
 // ---------- parseInlineValue ----------
 
 describe('parseInlineValue', () => {
@@ -471,6 +476,58 @@ describe('unit-add insertEntry', () => {
 
   test('throws when marker is missing', () => {
     expect(() => insertEntry('# No marker\n', '### A01\n', 'A01')).toThrow(/cannot find units marker/);
+  });
+});
+
+// ---------- cross-ref loaders ----------
+
+describe('cross-ref loaders (live files)', () => {
+  test('loadEindtermen returns a Set of codes from the committed register', () => {
+    const e = loadEindtermen();
+    if (e === null) {
+      // register not present in this worktree — skip
+      return;
+    }
+    expect(e instanceof Set).toBe(true);
+    // Expect well-known codes from the 2026 CvTE syllabus.
+    expect(e.has('D1.1')).toBe(true);
+    expect(e.has('G1.1')).toBe(true);
+    expect(e.size).toBeGreaterThan(50);
+  });
+
+  test('loadTerminology returns a Set or null', () => {
+    const t = loadTerminology();
+    // economie-terminologie.md exists in the main repo; must parse to a Set.
+    if (t === null) return;
+    expect(t instanceof Set).toBe(true);
+    expect(t.size).toBeGreaterThan(0);
+  });
+});
+
+// ---------- validate() with cross-refs ----------
+
+describe('validate with cross-ref sets', () => {
+  function apply(exam) {
+    return {
+      id: 'D01', name: 'X', kern: 'k', needs: [],
+      mastery_target: 'understand', prior_learning: 'new_this_year',
+      terms: [], exam_codes: [exam],
+    };
+  }
+
+  test('rejects unknown exam_code when eindtermen set is provided', () => {
+    const { errors } = validate([apply('Z99.99')], { eindtermen: new Set(['D1.1']) });
+    expect(errors).toEqual(expect.arrayContaining([expect.stringMatching(/exam_code "Z99.99" not found/)]));
+  });
+
+  test('accepts known exam_code when eindtermen set is provided', () => {
+    const { errors } = validate([apply('D1.1')], { eindtermen: new Set(['D1.1']) });
+    expect(errors).toEqual([]);
+  });
+
+  test('skips exam_code check when eindtermen set is absent (backward compat)', () => {
+    const { errors } = validate([apply('Z99.99')], {});
+    expect(errors).toEqual([]);
   });
 });
 

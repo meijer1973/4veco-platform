@@ -1,6 +1,6 @@
 # Terminology Drift Report
 
-Generated: 2026-04-20T10:26:35.920Z
+Generated: 2026-04-20T11:44:03.154Z
 Units:     37
 Canonical: 34 terms in economie-terminologie.md
 
