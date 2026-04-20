@@ -5,19 +5,33 @@ CvTE examination papers. The primary ground-truth source for the exercise-first 
 ## Policy
 
 - **Never hand-edit PDFs.** These are verbatim CvTE-published exam papers, downloaded and committed as-is for reproducibility.
-- File naming convention: `<level>-<year>-tijdvak-<n>.pdf`, e.g. `havo-2025-tijdvak-1.pdf`.
-- Source: download from CvTE / cito.nl / examenblad.nl as each cohort's exams are released.
+- File naming follows CvTE's official code: `<prefix>-<vak>-a-<yy>-<tijdvak>-<suffix>.pdf` where `prefix ∈ {vw, ha}`, `vak=1022` for economie, `yy` is the two-digit year, and `suffix ∈ {o, c}` (opgaven or correctievoorschrift). Example: `vw-1022-a-25-1-o.pdf` = VWO economie 2025 tijdvak 1 opgaven.
+- Source: https://www.examenblad.nl (via wrapper URLs that redirect to the PDF CDN).
 
-## Expected initial contents
+## Machine-refresh
 
-| File | Source |
+`build-scripts/references/download-exams.js` fetches the current cohort's papers automatically. Runs idempotently — existing files are skipped unless `--force` is passed.
+
+```
+node build-scripts/references/download-exams.js --year 2025
+```
+
+The script resolves examenblad's wrapper URLs (e.g. `/2025/vwo/documenten/cse-1/vw-1022-a-25-1-o`) via 303-redirect to the underlying PDF CDN path (e.g. `/system/files/exam-document/2025-05/vw-1022-a-25-1-o.pdf`).
+
+## Current contents (2025 cohort)
+
+| File | Description |
 |---|---|
-| `havo-2025-tijdvak-1.pdf` | CvTE havo economie exam 2025, first tijdvak |
-| `havo-2025-tijdvak-2.pdf` | CvTE havo economie exam 2025, second tijdvak |
-| `vwo-2025-tijdvak-1.pdf` | CvTE vwo economie exam 2025, first tijdvak |
-| `vwo-2025-tijdvak-2.pdf` | CvTE vwo economie exam 2025, second tijdvak |
+| `vw-1022-a-25-1-o.pdf` | VWO 2025 tijdvak 1 — opgaven |
+| `vw-1022-a-25-1-c.pdf` | VWO 2025 tijdvak 1 — correctievoorschrift |
+| `vw-1022-a-25-2-o.pdf` | VWO 2025 tijdvak 2 — opgaven |
+| `vw-1022-a-25-2-c.pdf` | VWO 2025 tijdvak 2 — correctievoorschrift |
+| `ha-1022-a-25-1-o.pdf` | HAVO 2025 tijdvak 1 — opgaven |
+| `ha-1022-a-25-1-c.pdf` | HAVO 2025 tijdvak 1 — correctievoorschrift |
+| `ha-1022-a-25-2-o.pdf` | HAVO 2025 tijdvak 2 — opgaven |
+| `ha-1022-a-25-2-c.pdf` | HAVO 2025 tijdvak 2 — correctievoorschrift |
 
-Earlier years (2020–2024) may be added later for trend analysis; defer unless the 2025 audit reveals a need.
+Earlier years (2020–2024) may be added for trend analysis; call the script with `--year 2024` etc.
 
 ## How these are used
 
