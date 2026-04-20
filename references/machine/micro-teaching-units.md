@@ -48,7 +48,7 @@ Each unit entry uses this format. Fields marked *optional* are omitted when empt
 - duration_min: <3-7>                                 # A-only (seeded); optional elsewhere
 - kern: "<one-sentence mastery statement; imperative for apply+, declarative allowed for remember/understand>"
 - needs: [<prerequisite unit IDs>]                    # required (may be empty)
-- exam_codes: [<CvTE eindterm codes, e.g. D3.2, A4.1>]  # optional
+- exam_codes: [<CvTE eindterm codes, e.g. D3.2, I3.5>]  # optional; D-I only
 - mastery_target: <remember | understand | apply | analyze | evaluate>
 - prior_learning: <previously_taught | new_this_year | review_and_extend>
 - aspects: [<verbaal | grafisch | rekenen>]           # required, non-empty subset

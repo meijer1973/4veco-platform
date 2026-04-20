@@ -98,9 +98,10 @@
     "tekst": "Het onderscheid tussen een prijselastische- en een prijsinelastische vraag.",
     "verbs": [
       "toepassen",
-      "herkennen"
+      "herkennen",
+      "onderscheiden"
     ],
-    "implied_bloom": "apply",
+    "implied_bloom": "analyze",
     "examen": "centraal",
     "year": 2026
   },
@@ -128,9 +129,10 @@
     "tekst": "Het onderscheid tussen inferieure, normale en luxe goederen, in relatie met de waarde van de inkomenselasticiteit.",
     "verbs": [
       "toepassen",
-      "herkennen"
+      "herkennen",
+      "onderscheiden"
     ],
-    "implied_bloom": "apply",
+    "implied_bloom": "analyze",
     "examen": "centraal",
     "year": 2026
   },
@@ -263,9 +265,10 @@
     "tekst": "Het onderscheid en de samenhang tussen totale, gemiddelde totale (GTK) en marginale kosten (MK).",
     "verbs": [
       "toepassen",
-      "herkennen"
+      "herkennen",
+      "onderscheiden"
     ],
-    "implied_bloom": "apply",
+    "implied_bloom": "analyze",
     "examen": "centraal",
     "year": 2026
   },
@@ -382,7 +385,8 @@
     "subdomein_title": "Marktstructuur",
     "tekst": "Het onderscheid tussen de marktvormen op basis van het aantal marktpartijen, heterogeniteit van de goederen en toetredingsmogelijkheden (1) I Volledige mededinging/ volkomen concurrentie: veel aanbieders, een homogeen goed en vrije toetreding. Marktvormen waarbij sprake is van onvolkomen concurrentie kennen beperkte toetredingsmogelijkheden: II Monopolistische concurrentie: veel aanbieders en heterogene goederen. III Oligopolie: weinig aanbieders en een homogeen goed of heterogene goederen. IV Monopolie: één aanbieder.",
     "verbs": [
-      "analyseren"
+      "analyseren",
+      "onderscheiden"
     ],
     "implied_bloom": "analyze",
     "examen": "centraal",
@@ -665,9 +669,10 @@
     "tekst": "Het onderscheid en de samenhang tussen nominale en reële grootheden.",
     "verbs": [
       "toepassen",
-      "herkennen"
+      "herkennen",
+      "onderscheiden"
     ],
-    "implied_bloom": "apply",
+    "implied_bloom": "analyze",
     "examen": "centraal",
     "year": 2026
   },
@@ -800,9 +805,10 @@
     "tekst": "Het onderscheid tussen een simultaan, een sequentieel spel en een herhaald (simultaan) spel.",
     "verbs": [
       "toepassen",
-      "herkennen"
+      "herkennen",
+      "onderscheiden"
     ],
-    "implied_bloom": "apply",
+    "implied_bloom": "analyze",
     "examen": "centraal",
     "year": 2026
   },
@@ -992,7 +998,7 @@
     "domein_title": "Concept samenwerken en onderhandelen",
     "subdomein": "F2",
     "subdomein_title": "Suboptimale situaties",
-    "tekst": "Het optreden en internaliseren van positieve of negatieve externe effecten. Domein G Risico en Informatie verzamelen ten einde onzekerheid te verkleinen. Aangezien de informatie vaak een beperkt karakter zal hebben moeten transactiepartijen een inschatting maken van mogelijke gebeurtenissen (risico) en de mate waarin transactiepartners gebeurtenissen beïnvloeden of informatie achterhouden die relevant is voor het tot stand brengen van een transactie (asymmetrische informatie).",
+    "tekst": "Het optreden en internaliseren van positieve of negatieve externe effecten.",
     "verbs": [
       "toepassen",
       "herkennen"
@@ -1235,9 +1241,10 @@
     "tekst": "Macro-economische begrippen • Inkomen: de vorming van het bbp (Bruto Binnenlands Product) waarbij de volgende methoden kunnen worden onderscheiden: - Bestedingsmethode: inkomen = consumptie + investeringen + overheidsbestedingen + export – import - Objectieve methode: inkomen = som toegevoegde waarde = totale omzet – totale kosten leveringen van derden - Subjectieve methode: inkomen = arbeidsinkomen (loonsom werknemers + toegerekende lonen zelfstandigen) + kapitaalinkomen (rente, dividend, pacht, huur en winst) + afschrijvingen • Categoriale inkomensverdeling • Loonkosten per eenheid product en de arbeidsinkomensquote (=AIQ) arbeidsinkomen als deel van het nationaal inkomen.",
     "verbs": [
       "toepassen",
-      "herkennen"
+      "herkennen",
+      "onderscheiden"
     ],
-    "implied_bloom": "apply",
+    "implied_bloom": "analyze",
     "examen": "centraal",
     "year": 2026
   },
@@ -1652,7 +1659,142 @@
     "domein_title": "Concept goede tijden, slechte tijden",
     "subdomein": "I2",
     "subdomein_title": "Begrotingsbeleid",
-    "tekst": "Inverdieneffecten bij het begrotingsbeleid zijn de hogere belastinginkomsten en lagere uitgaven aan uitkeringen doordat economie wordt gestimuleerd. Omgekeerde geldt bij uitverdieneffecten I.3 Monetair beleid en de centrale bank 3.1 De Europese Centrale Bank (ECB) voert monetair beleid en houdt financieel toezicht. 3.2 De geldhoeveelheid: geld in handen van publiek in omloop • M1 als maatstaf van de maatschappelijke geldhoeveelheid 3.3 Doelstelling monetair beleid centrale bank • Enkelvoudig mandaat: prijsstabiliteit (ECB) • Duaal mandaat: prijsstabiliteit en economische groei (bijvoorbeeld FED) 3.4 Geldschepping • Proces van geldschepping via simultane kredietverlening en creatie van bankdeposito’s en vice versa voor geldvernietiging • Hogere rente centrale bank remt kredietverlening en creatie deposito’s af en vertraagt de geldgroei omdat de financieringskosten van banken toenemen. 3.5 Monetair beleid (rentebeleid) • De rente van de centrale bank (ECB: refi-rente) bepaalt uiteindelijk de geldhoeveelheid: een hogere (lagere) rente leidt tot minder (meer) kredietverlening door banken en dus een lagere (hogere) geldhoeveelheid; • De Centrale Bank bereikt de aangekondigde rente door interventies op de geldmarkt. 3.6 Effectieve ondergrens nominale rente • Zodra de nominale rente negatief wordt, ontstaan er prikkels om vermogen contant aan te houden; • In een geldeconomie kan de rente op spaargeld en overheidsobligaties enigszins negatief worden want het aanhouden van veel kasgeld is onpraktisch en kostbaar. 3.7 Banken en financieel toezicht • Een bankrun kan ontstaan doordat de langlopende bezittingen van een bank niet op korte termijn kunnen worden verkocht om aan de kortlopende verplichtingen te voldoen; • Depositogarantiestelsel vermindert de kans op bankruns; • De ECB treedt op als lener-in-laatste-instantie aan banken. 3.8 Rente, wisselkoersen en kapitaalverkeer • Wisselkoers: prijs van een munt in termen van een andere munt (bijvoorbeeld euro per dollar); • Internationale concurrentiepositie van een land hangt af van buitenlands prijspeil ten opzichte van binnenlands prijspeil en de wisselkoers; • Depreciatie/appreciatie van de munt leidt tot toename/afname van het saldo op de lopende rekening en een toename/afname van het saldo op de financiële rekening; • Een hogere/lagere nominale rente leidt tot appreciatie/depreciatie van de munt door een hogere/lagere kapitaalinvoer; • Wisselkoersregimes: vaste en zwevende wisselkoersen; • Bij vaste wisselkoersen en vrij kapitaalverkeer kan de Centrale Bank geen onafhankelijke rentepolitiek voeren: als de centrale bank de rente verhoogt, leidt dat tot een kapitaalinstroom uit het buitenland, waardoor de wisselkoers apprecieert; • Trilemma monetair beleid: maar twee van de volgende drie kunnen worden gekozen o vrij kapitaalverkeer o zelfstandig monetair beleid o vaste wisselkoers. 3.9 EMU • Een muntunie heeft als voordeel dat wisselkoersschommelingen worden voorkomen waardoor financiële stabiliteit kan worden bevorderd; • Een muntunie heeft als nadeel dat economieën in de muntunie niet meer schokken kunnen opvangen via aanpassing van de wisselkoers waardoor de conjunctuurbeweging wordt versterkt; • Theorie optimale valutagebieden: bij afwezigheid van wisselkoers is alternatief aanpassingsmechanisme nodig via prijzen, lonen, migratie of inkomensoverdrachten (transfers).",
+    "tekst": "Inverdieneffecten bij het begrotingsbeleid zijn de hogere belastinginkomsten en lagere uitgaven aan uitkeringen doordat economie wordt gestimuleerd. Omgekeerde geldt bij uitverdieneffecten",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "I3.1",
+    "domein": "I",
+    "domein_title": "Concept goede tijden, slechte tijden",
+    "subdomein": "I3",
+    "subdomein_title": "Monetair beleid en de centrale bank",
+    "tekst": "De Europese Centrale Bank (ECB) voert monetair beleid en houdt financieel toezicht.",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "I3.2",
+    "domein": "I",
+    "domein_title": "Concept goede tijden, slechte tijden",
+    "subdomein": "I3",
+    "subdomein_title": "Monetair beleid en de centrale bank",
+    "tekst": "De geldhoeveelheid: geld in handen van publiek in omloop • M1 als maatstaf van de maatschappelijke geldhoeveelheid",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "I3.3",
+    "domein": "I",
+    "domein_title": "Concept goede tijden, slechte tijden",
+    "subdomein": "I3",
+    "subdomein_title": "Monetair beleid en de centrale bank",
+    "tekst": "Doelstelling monetair beleid centrale bank • Enkelvoudig mandaat: prijsstabiliteit (ECB) • Duaal mandaat: prijsstabiliteit en economische groei (bijvoorbeeld FED)",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "I3.4",
+    "domein": "I",
+    "domein_title": "Concept goede tijden, slechte tijden",
+    "subdomein": "I3",
+    "subdomein_title": "Monetair beleid en de centrale bank",
+    "tekst": "Geldschepping • Proces van geldschepping via simultane kredietverlening en creatie van bankdeposito’s en vice versa voor geldvernietiging • Hogere rente centrale bank remt kredietverlening en creatie deposito’s af en vertraagt de geldgroei omdat de financieringskosten van banken toenemen.",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "I3.5",
+    "domein": "I",
+    "domein_title": "Concept goede tijden, slechte tijden",
+    "subdomein": "I3",
+    "subdomein_title": "Monetair beleid en de centrale bank",
+    "tekst": "Monetair beleid (rentebeleid) • De rente van de centrale bank (ECB: refi-rente) bepaalt uiteindelijk de geldhoeveelheid: een hogere (lagere) rente leidt tot minder (meer) kredietverlening door banken en dus een lagere (hogere) geldhoeveelheid; • De Centrale Bank bereikt de aangekondigde rente door interventies op de geldmarkt.",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "I3.6",
+    "domein": "I",
+    "domein_title": "Concept goede tijden, slechte tijden",
+    "subdomein": "I3",
+    "subdomein_title": "Monetair beleid en de centrale bank",
+    "tekst": "Effectieve ondergrens nominale rente • Zodra de nominale rente negatief wordt, ontstaan er prikkels om vermogen contant aan te houden; • In een geldeconomie kan de rente op spaargeld en overheidsobligaties enigszins negatief worden want het aanhouden van veel kasgeld is onpraktisch en kostbaar.",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "I3.7",
+    "domein": "I",
+    "domein_title": "Concept goede tijden, slechte tijden",
+    "subdomein": "I3",
+    "subdomein_title": "Monetair beleid en de centrale bank",
+    "tekst": "Banken en financieel toezicht • Een bankrun kan ontstaan doordat de langlopende bezittingen van een bank niet op korte termijn kunnen worden verkocht om aan de kortlopende verplichtingen te voldoen; • Depositogarantiestelsel vermindert de kans op bankruns; • De ECB treedt op als lener-in-laatste-instantie aan banken.",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "I3.8",
+    "domein": "I",
+    "domein_title": "Concept goede tijden, slechte tijden",
+    "subdomein": "I3",
+    "subdomein_title": "Monetair beleid en de centrale bank",
+    "tekst": "Rente, wisselkoersen en kapitaalverkeer • Wisselkoers: prijs van een munt in termen van een andere munt (bijvoorbeeld euro per dollar); • Internationale concurrentiepositie van een land hangt af van buitenlands prijspeil ten opzichte van binnenlands prijspeil en de wisselkoers; • Depreciatie/appreciatie van de munt leidt tot toename/afname van het saldo op de lopende rekening en een toename/afname van het saldo op de financiële rekening; • Een hogere/lagere nominale rente leidt tot appreciatie/depreciatie van de munt door een hogere/lagere kapitaalinvoer; • Wisselkoersregimes: vaste en zwevende wisselkoersen; • Bij vaste wisselkoersen en vrij kapitaalverkeer kan de Centrale Bank geen onafhankelijke rentepolitiek voeren: als de centrale bank de rente verhoogt, leidt dat tot een kapitaalinstroom uit het buitenland, waardoor de wisselkoers apprecieert; • Trilemma monetair beleid: maar twee van de volgende drie kunnen worden gekozen o vrij kapitaalverkeer o zelfstandig monetair beleid o vaste wisselkoers.",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "I3.9",
+    "domein": "I",
+    "domein_title": "Concept goede tijden, slechte tijden",
+    "subdomein": "I3",
+    "subdomein_title": "Monetair beleid en de centrale bank",
+    "tekst": "EMU • Een muntunie heeft als voordeel dat wisselkoersschommelingen worden voorkomen waardoor financiële stabiliteit kan worden bevorderd; • Een muntunie heeft als nadeel dat economieën in de muntunie niet meer schokken kunnen opvangen via aanpassing van de wisselkoers waardoor de conjunctuurbeweging wordt versterkt; • Theorie optimale valutagebieden: bij afwezigheid van wisselkoers is alternatief aanpassingsmechanisme nodig via prijzen, lonen, migratie of inkomensoverdrachten (transfers).",
     "verbs": [
       "toepassen",
       "herkennen"
@@ -1742,7 +1884,7 @@
     "domein_title": "Concept goede tijden, slechte tijden",
     "subdomein": "I4",
     "subdomein_title": "Conjunctuuranalyse aan de hand van IS-MB-GA-model voor een gesloten",
-    "tekst": "Economische scholen en IS-MB-GA • Keynesianen: begrotingsbeleid is krachtig, monetair beleid is zwak; o IS-curve is steil: bestedingen reageren weinig op de renteveranderingen; o MB verschuift weinig: centrale bank verhoogt rente weinig bij stijgende inflatie. • Monetaristen: begrotingsbeleid is zwak, monetair beleid is sterk; o IS-curve is vlak: bestedingen reageren sterk op de rente; o MB verschuift veel: centrale bank verhoogt rente sterk bij stijgende inflatie. • Keynesianen en monetaristen: er is geen perfecte loon- en prijsflexibiliteit waardoor GA-curve niet verticaal is. Op korte termijn is Y niet gelijk aan potentiële productie Y*. • Neo- en Nieuw klassieken: er is sprake van perfecte loon- en prijsflexibiliteit. GA is verticaal en Y is gelijk aan potentiële productie Y*. Hierdoor is vraagstimulering (budgettair en monetair) niet effectief: geen effect op inkomen, alleen effect op inflatie. 4 HET CENTRAAL EXAMEN Zittingsduur centraal examen: Raadpleeg hiervoor Examenblad.nl. Vakspecifieke regels correctievoorschrift Voor de examens economie is de volgende regel aan de algemene regels toegevoegd: Voor rekenfouten worden geen punten afgetrokken. Wanneer echter de kandidaat bij een berekening kennelijk verzuimd heeft door schatting controle op het antwoord uit te oefenen, wordt voor deze fouten één punt afgetrokken tot een maximum van drie punten voor het hele examen. De vakinhoudelijke argumenten, op grond waarvan aan een antwoord dat niet in het antwoordmodel voorkomt scorepunten worden toegekend (algemene regel 3.3 in het correctievoorschrift), moeten voor het vak economie afkomstig zijn uit gezaghebbende, wetenschappelijk verantwoorde publicaties. Toegestane hulpmiddelen Raadpleeg hiervoor Examenblad.nl, grafische rekenmachine niet! Septembermededeling en Maartmededeling Voorafgaand aan het Centraal Examen in 2022 kunnen er nog mededelingen over dit examen gedaan worden in de septembermededeling (2021) en de maartmededeling (2022). Deze worden gepubliceerd op Examenblad.nl. BIJLAGE 1 EXAMENPROGRAMMA ECONOMIE VWO Het eindexamen bestaat uit het centraal examen en het schoolexamen. Het examenprogramma bestaat uit de volgende domeinen: Domein A Vaardigheden Domein B Concept Schaarste Domein C Concept Ruil Domein D Concept Markt Domein E Concept Ruilen over de tijd Domein F Concept Samenwerken en onderhandelen Domein G Concept Risico en informatie Domein H Concept Welvaart en groei Domein I Concept Goede tijden, slechte tijden Domein J Onderzoek en experiment Domein K Keuzeonderwerpen Het centraal examen: Het centraal examen heeft betrekking op de domeinen D, E, F, G, H, I, in combinatie met domein A. Het schoolexamen: Het schoolexamen heeft betrekking op domein B, C, J en K, in combinatie met domein A en: – indien het bevoegd gezag daarvoor kiest: een of meer domeinen of subdomeinen waarop het centraal examen betrekking heeft; – indien het bevoegd gezag daarvoor kiest: andere vakonderdelen, die per kandidaat kunnen verschillen. Beschrijving van de domeinen: Domein A Vaardigheden Domein B Concept schaarste tot het maken van keuzes. Domein C Concept ruil middelen en een optimale benutting van comparatieve voordelen. Voorts kan de kandidaat analyseren dat ruil arbeidsdeling mogelijk maakt en op welke manier geld het ruilproces soepeler laat verlopen. Domein D Concept markt de markt. Prijsvorming is het coördinatiemechanisme waarmee vraag en aanbod op elkaar worden afgestemd. De manier waarop prijsvorming plaatsvindt is afhankelijk van de marktstructuur (marktvormen) en heeft gevolgen voor toetreding, welvaart en economische politiek. Domein E Concept ruilen over de tijd De kandidaat kan, binnen de contexten van gezinshuishoudingen, bedrijfshuishoudingen en overheidshuishoudingen, analyseren dat ruil niet alleen op één moment in de tijd plaatsvindt, maar ook over de tijd. De prijs die deze intertemporele ruil coördineert is de rente. Domein F Concept samenwerken en onderhandelen samenwerken en onderhandelen meer oplevert voor (markt)partijen dan vertrouwen op individuele acties. Centralisatie, waarbij (collectieve) dwang het middel is om acties tot stand te brengen, kan een alternatief coördinatiemechanisme zijn voor keuzes. Domein G Concept risico en informatie verzamelen ten einde onzekerheid te verkleinen. Aangezien de informatie vaak een beperkt karakter zal hebben moeten transactiepartijen een inschatting maken van mogelijke gebeurtenissen (risico) en de mate waarin transactiepartners gebeurtenissen beïnvloeden of informatie achterhouden die relevant is voor het tot stand brengen van een transactie (asymmetrische informatie). Domein H Concept welvaart en groei economische groei en van de verdeling van inkomen en welvaart. Keuzes op microniveau werken door op macroniveau in elke economie die gekenmerkt wordt door wederzijds afhankelijke markten. Domein I Concept goede tijden, slechte tijden economische activiteiten en welke mogelijkheden en grenzen er zijn voor conjunctuurbeleid. Markten laten zich niet gemakkelijk reguleren mede door toedoen van rigiditeiten. Domein J Onderzoek en experiment ‘economische kijk’ op maatschappelijke verschijnselen en van strategisch inzicht. De kandidaat kan analyseren welke grenzen aan de verklaringskracht van theoretische concepten gesteld kunnen worden. Domein K Keuzeonderwerpen De kandidaat kiest ten minste twee keuzeonderwerpen om deze analyse uit te voeren. BIJLAGE 2 DE FUNCTIE VAN (VERPLICHTE) CONTEXTEN IN HET CE In deze bijlage wordt toegelicht wat de functie is van contexten in het kader van een centraal examen. 1. Kennistransfer naar nieuwe contexten Leerlingen moeten laten zien dat zij in staat zijn één of meerdere concepten te hanteren om een context te beschrijven en te analyseren. Kennis over de contexten mag van de leerlingen niet verwacht worden. De te toetsen kennis bestaat daarom uit de conceptuele begrippen en verbanden uit de zes domeinen (D tot en met I) in combinatie met de vaardigheden uit domein A. Centrale examenopgaven dienen aan te sturen op transfer van conceptuele kennis naar andere contexten dan die de kandidaat al is tegengekomen tijdens het curriculum. De kandidaat moet daarbij aantonen te kunnen redeneren binnen een vast kader. Een voorbeeld van een poging van de examenmakers om kennistransfer te activeren is opgave 3 van het pilotexamen vwo 2010 tijdvak 2 (Liever zelfstandig). Hier is het concept risico en informatie aan de orde in een andere context (de arbeidsmarkt) dan waarin leerlingen dit meestal aantreffen (verzekeren). Dergelijke opgaven voorzien de kandidaat (of de docent die de kandidaat op het examen voorbereidt) van de nodige aanvullende informatie over de context. Dat levert een centraal examen met ‘casus-achtige’ opgaven op waarbij een beroep wordt gedaan op het verwerken van informatie. 2. Contexten en verplichte contexten Een context is een voor een kandidaat herkenbare situatie of gebeurtenis waarin economische concepten een rol spelen. Teulings II stelt dat bepaalde contexten zoals de arbeidsmarkt en de sociale zekerheid dermate essentieel zijn voor een goed begrip van economie dat ze in een examenprogramma niet mogen ontbreken. Teulings II heeft deze contexten dan ook verplicht gesteld. Deze verplichting is in de syllabus niet vertaald in een verplichte opname van deze contexten in het centraal examen. Dat kan ook niet omdat in de wettekst van het examenprogramma de verplichte contexten niet zijn vermeld als onderdeel van de stof voor het centraal examen. Zie ook bijlage 1. Het idee van een verplichte context moet als volgt gezien worden: ‘een verplichte context moet in het curriculum in ieder geval aan de orde komen’. De verplichte contexten kunnen met meerdere (onderdelen van) concepten geanalyseerd worden. Teulings II heeft elke verplichte context ondergebracht bij één van de domeinen C tot en met I. In feite is dit niet in overeenstemming met de gedachte van transfer van conceptuele kennis naar andere / meerdere contexten. Daarom waren in de gereviseerde syllabus economie havo 2012 de voorbeeldmatige omschrijvingen van de verplichte contexten uit de werkversie syllabus (2007) ontkoppeld van een specifiek domein. Ze werden als geheel opgenomen in een aparte bijlage. In deze bijgestelde syllabus vwo worden geen omschrijvingen meer opgenomen van verplichte contexten, omdat verplichte contexten geen centrale examenstof zijn. Als zodanig horen ze dus ook niet thuis in een syllabus die een nadere uitwerking biedt van het CE-gedeelte van het examenprogramma. Het wel opnemen van enige vorm van uitwerking zou de suggestie kunnen wekken dat deze verplichte contexten een uitbreiding vormen van de CE-stof. Dat is niet het geval.",
+    "tekst": "Economische scholen en IS-MB-GA • Keynesianen: begrotingsbeleid is krachtig, monetair beleid is zwak; o IS-curve is steil: bestedingen reageren weinig op de renteveranderingen; o MB verschuift weinig: centrale bank verhoogt rente weinig bij stijgende inflatie. • Monetaristen: begrotingsbeleid is zwak, monetair beleid is sterk; o IS-curve is vlak: bestedingen reageren sterk op de rente; o MB verschuift veel: centrale bank verhoogt rente sterk bij stijgende inflatie. • Keynesianen en monetaristen: er is geen perfecte loon- en prijsflexibiliteit waardoor GA-curve niet verticaal is. Op korte termijn is Y niet gelijk aan potentiële productie Y*. • Neo- en Nieuw klassieken: er is sprake van perfecte loon- en prijsflexibiliteit. GA is verticaal en Y is gelijk aan potentiële productie Y*. Hierdoor is vraagstimulering (budgettair en monetair) niet effectief: geen effect op inkomen, alleen effect op inflatie.",
     "verbs": [
       "toepassen",
       "herkennen"

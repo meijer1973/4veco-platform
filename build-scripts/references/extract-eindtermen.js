@@ -83,8 +83,28 @@ function parseDomainLine(line) {
 }
 
 function parseSubdomainHeader(line) {
-  const m = line.match(/^([A-K])(\d+):?\s+(.+?)\s*$/);
+  // Accept both `G1: title`, `G1 title`, and `I.3 title`. The CvTE PDF
+  // uses mixed conventions between domains; `I.3 Monetair beleid en de
+  // centrale bank` is the dot-separated form for the I3 subdomain and
+  // must be recognized, else its eindtermen slide into I2.3's buffer.
+  const m = line.match(/^([A-K])\.?(\d+):?\s+(.+?)\s*$/);
   return m ? { letter: m[1], num: m[2], title: m[3].trim() } : null;
+}
+
+// Domain-intro lines that appear between sections (e.g. "Domein G Risico
+// en Informatie" before G1:). These are NOT subdomain headers but DO
+// terminate the previous eindterm's continuation buffer.
+function isDomainIntroLine(line) {
+  return /^\s*Domein\s+[A-K]\s+/.test(line);
+}
+
+// Stop tokens that mark the end of the specification section: chapter 4,
+// bijlagen, literature list. Once seen, flush current eindterm and exit
+// the spec section so nothing after is absorbed.
+function isEndOfSpecToken(line) {
+  return /^\s*\d+\s+HET\s+CENTRAAL\s+EXAMEN\b/.test(line)
+      || /^\s*BIJLAGE\s+\d+/.test(line)
+      || /^\s*LITERATUUR\b/i.test(line);
 }
 
 function verbsFromIntro(line) {
@@ -96,6 +116,27 @@ function verbsFromIntro(line) {
     }
   }
   return verbs;
+}
+
+// Scan an eindterm's body text for action-verb forms, so the per-eindterm
+// verbs list reflects what the student actually does (berekenen/analyseren/
+// interpreteren/…) rather than only what the subdomain intro claims
+// ("toepassen en herkennen"). Handles infinitive, imperative 2nd-person
+// ("bereken"), and conjugated ("berekent") forms. Deduplicated, lowercase,
+// returned as canonical infinitives drawn from VERB_TO_BLOOM.
+function verbsFromBody(tekst) {
+  if (!tekst) return [];
+  const found = new Set();
+  const lower = tekst.toLowerCase();
+  for (const { verbs: vs } of VERB_TO_BLOOM) {
+    for (const v of vs) {
+      // Infinitive (berekenen), stem (bereken), or conjugated (berekent).
+      const stem = v.endsWith('en') ? v.slice(0, -2) : v;
+      const re = new RegExp(`\\b${stem}(t|en|de|den)?\\b`, 'i');
+      if (re.test(lower)) found.add(v);
+    }
+  }
+  return [...found];
 }
 
 function bloomFromVerbs(verbs) {
@@ -125,6 +166,10 @@ function parseEindtermen(text) {
     let tekst = currentEindterm.lines.join(' ').replace(/\s+/g, ' ').trim();
     // Strip trailing footnote refs like "… van vraag. (1)".
     tekst = tekst.replace(/\s*\(\d+\)\s*$/g, '');
+    // Merge subdomain-intro verbs with body-scan verbs for a truer cognitive
+    // signal. The intro line is uniform across most subdomains; body verbs
+    // reveal the actual action the student performs (bereken, analyseer…).
+    const mergedVerbs = [...new Set([...currentVerbs, ...verbsFromBody(tekst)])];
     entries.push({
       code: currentEindterm.code,
       domein: currentDomain ? currentDomain.letter : null,
@@ -132,8 +177,8 @@ function parseEindtermen(text) {
       subdomein: currentSubdomain ? `${currentSubdomain.letter}${currentSubdomain.num}` : null,
       subdomein_title: currentSubdomain ? currentSubdomain.title : null,
       tekst,
-      verbs: [...currentVerbs],
-      implied_bloom: bloomFromVerbs(currentVerbs),
+      verbs: mergedVerbs,
+      implied_bloom: bloomFromVerbs(mergedVerbs),
       examen: 'centraal',
       year: SYLLABUS_YEAR,
     });
@@ -143,6 +188,15 @@ function parseEindtermen(text) {
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i];
     if (isPageFooter(line)) continue;
+
+    // Hard stop at end-of-spec tokens (chapter 4, bijlagen). Without this,
+    // I4.6 and similar last-subdomain eindtermen absorb exam-regulation and
+    // appendix text through to EOF.
+    if (isEndOfSpecToken(line)) {
+      flushCurrent();
+      inSpecSection = false;
+      continue;
+    }
 
     if (isSpecDomainLine(line)) {
       flushCurrent();
@@ -154,6 +208,17 @@ function parseEindtermen(text) {
     }
 
     if (!inSpecSection) continue;
+
+    // Domain-intro paragraphs like "Domein G Risico en Informatie" appear
+    // between subdomain blocks. They are NOT subdomain headers but DO
+    // terminate the previous eindterm; failing to flush here causes F2.4
+    // to absorb the G-domain intro text.
+    if (isDomainIntroLine(line)) {
+      flushCurrent();
+      // Don't change currentDomain yet — the next `Gn:` header will trigger
+      // the implicit-domain-switch branch below.
+      continue;
+    }
 
     const sub = parseSubdomainHeader(line);
     // Accept subdomain header as an implicit domain switch when the letter
@@ -244,6 +309,10 @@ function emitMarkdown(entries) {
     `Generated: ${new Date().toISOString()}`,
     `Entries:   ${entries.length}`,
     `Year:      ${SYLLABUS_YEAR}`,
+    '',
+    '## Scope',
+    '',
+    'This register covers the CvTE central-exam content domains **D, E, F, G, H, I**. Domain **A (Vaardigheden)** is intentionally out of scope — vaardigheden (math / graph / verbal reasoning) are captured per-unit as the `aspects` field on the micro-teaching-units catalog, which is the cleaner mechanism for routing. School-exam-only domains (B Schaarste, C Ruil, J Onderzoek en experiment, K Keuzeonderwerpen) are also excluded; they have no `exam_codes` in the central-exam register.',
     '',
     '---',
     '',
