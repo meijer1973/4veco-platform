@@ -1,8 +1,8 @@
 # Needs-Coverage Report
 
-Generated: 2026-04-20T13:57:38.534Z
+Generated: 2026-04-20T14:06:17.977Z
 Live units:      144
-With no needs:   96
+With no needs:   78
 
 ## Status: **INFORMATIONAL**
 
@@ -74,34 +74,16 @@ Units with empty `needs` are not broken — they simply have no prerequisite edg
 - **G10** Informatieasymmetrie verzekeringsmarkt
 - **G11** Wisselkoersrisico bij valutabetaling
 
-## Domain H (26)
+## Domain H (8)
 
-- **H01** AOW-betaalbaarheid en vergrijzing
-- **H02** AIQ (arbeidsinkomenquote) berekenen
-- **H03** Armington-elasticiteit
-- **H04** Belastingschijven berekening
-- **H05** Circulaire economie en groen bbp
-- **H06** Totale CO2-uitstoot berekenen
-- **H07** Vergrijzing, spaarquote en rente
-- **H08** Denivellering en progressieve belasting
-- **H09** Exportsubsidie als protectie
+- **H01** AOW-leeftijd als houdbaarheidsinstrument
+- **H05** Circulaire economie in groen bbp
 - **H10** Gini-coefficient bij recessie
-- **H11** Groen bbp en CO2
-- **H12** Houdbaarheidssaldo
-- **H13** Minimumuurloon en internationale concurrentie
-- **H14** Minimumuurloon en economische groei
-- **H15** Nominale rentepercentage analyseren
-- **H16** Ontslagrecht en werkgeverrisico
-- **H17** Productiviteit en technologie
-- **H18** Progressief tarief berekenen
-- **H19** Publiek kapitaal en staatsschuldquote
-- **H20** Spaarsaldo en betalingsbalans
+- **H13** Minimumuurloon: kostenkanaal naar concurrentiepositie
+- **H14** Minimumuurloon: vraagkanaal naar bbp-groei
+- **H16** Soepeler ontslagrecht en werkgeversrisico
 - **H21** Staatsschuldquote berekenen
-- **H22** Tarifaanpassing en inkomenseffecten
-- **H23** Uitverdieneffect en belastingwig
 - **H24** Wisselkoers en depreciatie
-- **H25** Wisselkoers en economische groei
-- **H26** Woonlastafweging koop vs huur
 
 ## Domain I (19)
 

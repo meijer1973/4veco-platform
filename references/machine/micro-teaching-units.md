@@ -1208,63 +1208,88 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - aspects: [verbaal]
 - terms: []
 
-### H01 AOW-betaalbaarheid en vergrijzing
-- kern: "Verhogen AOW-leeftijd verbetert betaalbaarheid bij vergrijzing."
+### H01 AOW-leeftijd als houdbaarheidsinstrument
+- kern: "Leg uit hoe een hogere AOW-leeftijd via premiegrondslag en uitkeringsduur de houdbaarheid van het AOW-stelsel verbetert bij vergrijzing."
 - needs: []
 - exam_codes: [H5.1]
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: []
+- terms: [welvaartsvaste pensioenen, waardevaste pensioenen]
 
 ### H02 AIQ (arbeidsinkomenquote) berekenen
 - kern: "Bereken de arbeidsinkomenquote: (arbeidsinkomen / nationaal inkomen) x 100%."
-- needs: []
+- needs: [A02]
 - exam_codes: [H1.1]
 - mastery_target: apply
 - prior_learning: new_this_year
 - aspects: [rekenen, verbaal]
-- terms: []
+- terms: [primair inkomen]
+- procedure:
+  1. Bepaal het totale arbeidsinkomen (loonsom incl. toegerekend loon zelfstandigen)
+  2. Bepaal het nationaal inkomen (of bbp tegen factorkosten, afhankelijk van definitie in de bron)
+  3. Bereken AIQ = arbeidsinkomen / nationaal inkomen × 100%
+  4. Controleer eenheden: teller en noemer in dezelfde valuta en hetzelfde jaar
+  5. Interpreteer: AIQ stijgt als lonen sneller groeien dan winsten, en omgekeerd
 
-### H03 Armington-elasticiteit
-- kern: "Bereken Armington-elasticiteit en analyseer effectiviteit van import-beperkend beleid."
-- needs: []
+### H03 Armington-elasticiteit en importbeleid
+- kern: "Bereken de Armington-elasticiteit en beoordeel daarmee hoe sterk importvraag reageert op een prijsverandering van binnenlandse versus buitenlandse varianten."
+- needs: [A15]
 - exam_codes: [H1.1]
 - mastery_target: apply
 - prior_learning: new_this_year
 - aspects: [rekenen]
-- terms: []
+- terms: [prijselasticiteit van de vraag]
+- procedure:
+  1. Noteer de procentuele verandering in de relatieve prijs van buitenlands versus binnenlands goed (%ΔP)
+  2. Noteer de procentuele verandering in de relatieve importvraag (%ΔQ)
+  3. Bereken de Armington-elasticiteit = %ΔQ / %ΔP
+  4. Beoordeel de absolute waarde: > 1 betekent sterke substitutie tussen binnenlands en buitenlands; < 1 zwakke
+  5. Koppel aan beleidsvraag: hoe effectiever importbelemmerend beleid is, hoe hoger de Armington-elasticiteit
 
 ### H04 Belastingschijven berekening
 - kern: "Belastingdruk bepaald aan hand van marginaal tarief en betreffende schijven."
-- needs: []
+- needs: [A02]
 - exam_codes: [H4.6]
 - mastery_target: apply
 - prior_learning: previously_taught
 - aspects: [rekenen, verbaal]
-- terms: [marginaal tarief]
+- terms: [marginaal tarief, gemiddeld tarief]
+- procedure:
+  1. Noteer per schijf het marginale tarief en de bovengrens
+  2. Bepaal in welke schijf het belastbaar inkomen valt
+  3. Bereken per volledig gevulde schijf: (bovengrens − ondergrens) × marginaal tarief
+  4. Bereken voor de laatste schijf: (belastbaar inkomen − ondergrens schijf) × marginaal tarief
+  5. Tel de schijfbedragen op tot totale inkomstenbelasting
+  6. Bereken eventueel gemiddeld tarief = totale belasting / belastbaar inkomen × 100%
 
-### H05 Circulaire economie en groen bbp
-- kern: "Analyseer hoe circulaire economie het groen bbp kan verhogen via reductie milieuschade en recycling."
+### H05 Circulaire economie in groen bbp
+- kern: "Leg uit hoe circulaire productie via minder milieuschade en minder grondstofgebruik het groen bbp per hoofd verhoogt."
 - needs: []
 - exam_codes: [H3.4]
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: []
+- terms: [groen bbp per hoofd]
 
 ### H06 Totale CO2-uitstoot berekenen
 - kern: "Bereken totale milieueffect van marktveranderingen door per-eenheid emissie met hoeveelheid te vermenigvuldigen."
-- needs: []
+- needs: [A06]
 - exam_codes: [H3.4]
 - mastery_target: apply
 - prior_learning: new_this_year
 - aspects: [rekenen]
-- terms: []
+- terms: [marktevenwicht]
+- procedure:
+  1. Bepaal de verkochte hoeveelheid Q (bv. aantal eenheden, liters, km)
+  2. Bepaal de CO2-uitstoot per eenheid e (kg of ton per eenheid)
+  3. Bereken totale CO2-uitstoot = Q × e
+  4. Werk bij marktveranderingen de nieuwe Q uit (zoals in A06 voor een nieuw evenwicht) en herbereken
+  5. Interpreteer: een maatregel die Q laat dalen verlaagt de totale uitstoot evenredig bij gelijke e
 
 ### H07 Vergrijzing, spaarquote en rente
 - kern: "Hogere sparende populatie vergroot kapitaalaanbod, wat de evenwichtsrente drukt."
-- needs: []
+- needs: [H01]
 - exam_codes: [H5.1]
 - mastery_target: understand
 - prior_learning: new_this_year
@@ -1273,21 +1298,21 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 
 ### H08 Denivellering en progressieve belasting
 - kern: "Denivellering treedt op wanneer belastingveranderingen het verschil in netto-inkomsten tussen inkomensgroepen verkleinen."
-- needs: []
+- needs: [H04]
 - exam_codes: [H4.6]
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: []
+- terms: [denivelleren, marginaal tarief]
 
-### H09 Exportsubsidie als protectie
-- kern: "Toewijzing van emissierechten aan exporteurs verlaagt kosten en werkt protectionistisch."
-- needs: []
+### H09 Kostenvoordeel exporteurs als protectionisme
+- kern: "Beargumenteer wanneer een kostenvoordeel voor binnenlandse exporteurs (bv. gratis toegewezen emissierechten) feitelijk werkt als protectionisme tegen buitenlandse concurrenten."
+- needs: [H03]
 - exam_codes: [H1.1]
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: []
+- terms: [subsidies, heffingen]
 
 ### H10 Gini-coefficient bij recessie
 - kern: "Gini-coefficient stijgt tijdens recessie door werkloosheidsconcentratie en toename inkomensongelijkheid."
@@ -1296,55 +1321,55 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: [Gini-coefficient]
+- terms: [Gini-coefficient, conjuncturele werkloosheid]
 
 ### H11 Groen bbp en CO2
 - kern: "Lagere CO2-uitstoot vergroot groen bbp; minder productie wegens minder emissierechten verkleint het."
-- needs: []
+- needs: [H05, H06]
 - exam_codes: [H3.4]
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: []
+- terms: [groen bbp per hoofd]
 
 ### H12 Houdbaarheidssaldo
 - kern: "Het houdbaarheidssaldo geeft aan of overheidsvoorzieningen op lange termijn betaalbaar blijven; stijgende grijze druk verslechtert het saldo."
-- needs: []
+- needs: [H01]
 - exam_codes: [H5.1]
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: []
+- terms: [staatsschuld]
 
-### H13 Minimumuurloon en internationale concurrentie
-- kern: "Hoger minimumuurloon verhoogt bedrijfskosten, wat de internationale concurrentiepositie kan verslechteren."
+### H13 Minimumuurloon: kostenkanaal naar concurrentiepositie
+- kern: "Redeneer via het kostenkanaal hoe een hoger minimumuurloon de internationale concurrentiepositie kan verslechteren."
 - needs: []
 - exam_codes: [H1.1]
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: []
+- terms: [wisselkoers]
 
-### H14 Minimumuurloon en economische groei
-- kern: "Verhogen van het minimumuurloon kan via hogere consumptie tot economische groei leiden."
+### H14 Minimumuurloon: vraagkanaal naar bbp-groei
+- kern: "Redeneer via het bestedingskanaal hoe een hoger minimumuurloon de consumptie en daarmee de bbp-groei kan verhogen."
 - needs: []
 - exam_codes: [H1.1]
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: []
+- terms: [koopkracht, bbp-groei]
 
-### H15 Nominale rentepercentage analyseren
-- kern: "Verklaar veranderingen in nominale rentevoeten van staatsobligaties met behulp van grafieken."
-- needs: []
+### H15 Nominale rente op staatsobligaties verklaren
+- kern: "Verklaar bewegingen in de nominale rente op staatsobligaties vanuit vraag-en-aanbod op de obligatiemarkt en risicoperceptie."
+- needs: [H21]
 - exam_codes: [H5.2]
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: []
+- terms: [rente, obligaties, risico]
 
-### H16 Ontslagrecht en werkgeverrisico
-- kern: "Leg uit hoe versoepeling van ontslagrecht risico voor werkgevers vermindert."
+### H16 Soepeler ontslagrecht en werkgeversrisico
+- kern: "Leg uit hoe versoepeling van ontslagrecht het aannamerisico voor werkgevers verlaagt en het effect op werkgelegenheid beredeneer."
 - needs: []
 - exam_codes: [H5.1]
 - mastery_target: understand
@@ -1352,9 +1377,9 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - aspects: [verbaal]
 - terms: [risico]
 
-### H17 Productiviteit en technologie
-- kern: "Investeringen in arbeidsproductiviteit-verhogende technologieen kunnen op korte termijn werkgelegenheid verminderen maar op lange termijn concurrentiepositie verbeteren."
-- needs: []
+### H17 Arbeidsproductiviteit, werkgelegenheid en lange termijn
+- kern: "Onderscheid het korte-termijn werkgelegenheidseffect van productiviteitsverhogende investeringen van het lange-termijn concurrentie-effect."
+- needs: [H13]
 - exam_codes: [H1.1]
 - mastery_target: understand
 - prior_learning: new_this_year
@@ -1363,30 +1388,36 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 
 ### H18 Progressief tarief berekenen
 - kern: "Bereken totale belasting bij progressieve tarieven en analyseer stimulansen."
-- needs: []
+- needs: [H04]
 - exam_codes: [H4.6]
 - mastery_target: apply
 - prior_learning: new_this_year
 - aspects: [rekenen]
-- terms: []
+- terms: [marginaal tarief, gemiddeld tarief]
+- procedure:
+  1. Noteer per schijf het marginale tarief
+  2. Voer de stapsgewijze berekening uit zoals in H04 (totale inkomstenbelasting)
+  3. Bereken het gemiddelde tarief = totale belasting / belastbaar inkomen × 100%
+  4. Bereken het marginale tarief op het inkomen: het tarief van de hoogst bereikte schijf
+  5. Analyseer de prikkel: een hoger marginaal tarief verkleint de beloning van een extra verdiende euro en kan arbeidsaanbod drukken
 
 ### H19 Publiek kapitaal en staatsschuldquote
 - kern: "Leg uit hoe investeringen in publiek kapitaal op lange termijn staatsschuldquote kunnen verlagen."
-- needs: []
+- needs: [H21]
 - exam_codes: [H5.1]
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: [investeringen]
+- terms: [investeringen, staatsschuld]
 
 ### H20 Spaarsaldo en betalingsbalans
 - kern: "Interpreteer positieve en negatieve particuliere spaarsalda."
-- needs: []
+- needs: [H21]
 - exam_codes: [H1.2]
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: []
+- terms: [primair inkomen]
 
 ### H21 Staatsschuldquote berekenen
 - kern: "Bereken staatsschuldquote = staatsschuld / bbp x 100% en bepaal drempels voor duurzaamheid."
@@ -1395,24 +1426,30 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - mastery_target: apply
 - prior_learning: new_this_year
 - aspects: [rekenen]
-- terms: [staatsschuld]
+- terms: [staatsschuld, bbp-niveau]
+- procedure:
+  1. Bepaal de staatsschuld in euro's (stand aan het einde van het jaar)
+  2. Bepaal het bbp in euro's over hetzelfde jaar
+  3. Bereken staatsschuldquote = staatsschuld / bbp × 100%
+  4. Vergelijk met de 60%-drempel uit het Stabiliteits- en Groeipact
+  5. Analyseer dynamiek: quote daalt als bbp-groei groter is dan de groei van de staatsschuld
 
-### H22 Tarifaanpassing en inkomenseffecten
-- kern: "Analyseer hoe tarifaanpassingen secundaire inkomenseffecten hebben via vraagveranderingen."
-- needs: []
+### H22 Belastingtariefaanpassing en secundaire inkomenseffecten
+- kern: "Analyseer hoe een wijziging in belastingtarieven via veranderd besteedbaar inkomen de vraag en daarmee secundaire inkomenseffecten oproept."
+- needs: [H04, H08]
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: []
+- terms: [secundair inkomen, marginaal tarief]
 
-### H23 Uitverdieneffect en belastingwig
-- kern: "Leg uit hoe progressieve belastingen via hogere marginale lastendruk en substitutieeffect arbeidsaanbod verkleinen."
-- needs: []
+### H23 Belastingwig en uitverdieneffect op arbeidsaanbod
+- kern: "Leg uit hoe een hogere belastingwig via het substitutie-effect het arbeidsaanbod verkleint (uitverdieneffect)."
+- needs: [H18]
 - exam_codes: [H4.6]
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: []
+- terms: [marginaal tarief, uitverdieneffecten, arbeidsaanbod (= beroepsbevolking)]
 
 ### H24 Wisselkoers en depreciatie
 - kern: "Bereken wisselkoerseffecten van depreciatie en leg uit hoe deze reële inkomens beïnvloeden."
@@ -1421,20 +1458,26 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - mastery_target: apply
 - prior_learning: new_this_year
 - aspects: [rekenen]
-- terms: [wisselkoers]
+- terms: [wisselkoers, koopkracht]
+- procedure:
+  1. Noteer de oude wisselkoers (prijs buitenlandse valuta in binnenlandse, bv. €/$)
+  2. Noteer de nieuwe wisselkoers na depreciatie
+  3. Bereken procentuele depreciatie = (nieuw − oud) / oud × 100%
+  4. Reken een importprijs of exportopbrengst om naar binnenlandse valuta bij beide koersen
+  5. Interpreteer: depreciatie maakt import duurder (reële koopkracht daalt) en export goedkoper voor buitenlandse kopers
 
-### H25 Wisselkoers en economische groei
-- kern: "Leg uit hoe wisselkoerseffecten tot groei kunnen leiden."
-- needs: []
+### H25 Wisselkoers, export en bbp-groei
+- kern: "Leg uit hoe een depreciatie van de wisselkoers via goedkopere export tot hogere bbp-groei kan leiden."
+- needs: [H24]
 - exam_codes: [H1.1]
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: [wisselkoers]
+- terms: [wisselkoers, bbp-groei]
 
-### H26 Woonlastafweging koop vs huur
-- kern: "Beslissing over koop van eigen woning hangt af van rente, hypotheekkosten, huurprijs en persoonlijke omstandigheden."
-- needs: []
+### H26 Koop- versus huurlasten vergelijken
+- kern: "Vergelijk netto woonlasten van kopen en huren door rente, aflossing, onderhoud en huurprijs systematisch tegen elkaar af te zetten."
+- needs: [H15]
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [rekenen, verbaal]

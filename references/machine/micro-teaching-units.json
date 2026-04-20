@@ -2105,10 +2105,10 @@
   },
   {
     "id": "H01",
-    "name": "AOW-betaalbaarheid en vergrijzing",
+    "name": "AOW-leeftijd als houdbaarheidsinstrument",
     "category": "welvaart en groei",
     "layer": 0,
-    "kern": "Verhogen AOW-leeftijd verbetert betaalbaarheid bij vergrijzing.",
+    "kern": "Leg uit hoe een hogere AOW-leeftijd via premiegrondslag en uitkeringsduur de houdbaarheid van het AOW-stelsel verbetert bij vergrijzing.",
     "needs": [],
     "exam_codes": [
       "H5.1"
@@ -2118,15 +2118,20 @@
     "aspects": [
       "verbaal"
     ],
-    "terms": []
+    "terms": [
+      "welvaartsvaste pensioenen",
+      "waardevaste pensioenen"
+    ]
   },
   {
     "id": "H02",
     "name": "AIQ (arbeidsinkomenquote) berekenen",
     "category": "welvaart en groei",
-    "layer": 0,
+    "layer": 1,
     "kern": "Bereken de arbeidsinkomenquote: (arbeidsinkomen / nationaal inkomen) x 100%.",
-    "needs": [],
+    "needs": [
+      "A02"
+    ],
     "exam_codes": [
       "H1.1"
     ],
@@ -2136,15 +2141,26 @@
       "rekenen",
       "verbaal"
     ],
-    "terms": []
+    "terms": [
+      "primair inkomen"
+    ],
+    "procedure": [
+      "Bepaal het totale arbeidsinkomen (loonsom incl. toegerekend loon zelfstandigen)",
+      "Bepaal het nationaal inkomen (of bbp tegen factorkosten, afhankelijk van definitie in de bron)",
+      "Bereken AIQ = arbeidsinkomen / nationaal inkomen × 100%",
+      "Controleer eenheden: teller en noemer in dezelfde valuta en hetzelfde jaar",
+      "Interpreteer: AIQ stijgt als lonen sneller groeien dan winsten, en omgekeerd"
+    ]
   },
   {
     "id": "H03",
-    "name": "Armington-elasticiteit",
+    "name": "Armington-elasticiteit en importbeleid",
     "category": "welvaart en groei",
-    "layer": 0,
-    "kern": "Bereken Armington-elasticiteit en analyseer effectiviteit van import-beperkend beleid.",
-    "needs": [],
+    "layer": 2,
+    "kern": "Bereken de Armington-elasticiteit en beoordeel daarmee hoe sterk importvraag reageert op een prijsverandering van binnenlandse versus buitenlandse varianten.",
+    "needs": [
+      "A15"
+    ],
     "exam_codes": [
       "H1.1"
     ],
@@ -2153,15 +2169,26 @@
     "aspects": [
       "rekenen"
     ],
-    "terms": []
+    "terms": [
+      "prijselasticiteit van de vraag"
+    ],
+    "procedure": [
+      "Noteer de procentuele verandering in de relatieve prijs van buitenlands versus binnenlands goed (%ΔP)",
+      "Noteer de procentuele verandering in de relatieve importvraag (%ΔQ)",
+      "Bereken de Armington-elasticiteit = %ΔQ / %ΔP",
+      "Beoordeel de absolute waarde: > 1 betekent sterke substitutie tussen binnenlands en buitenlands; < 1 zwakke",
+      "Koppel aan beleidsvraag: hoe effectiever importbelemmerend beleid is, hoe hoger de Armington-elasticiteit"
+    ]
   },
   {
     "id": "H04",
     "name": "Belastingschijven berekening",
     "category": "welvaart en groei",
-    "layer": 0,
+    "layer": 1,
     "kern": "Belastingdruk bepaald aan hand van marginaal tarief en betreffende schijven.",
-    "needs": [],
+    "needs": [
+      "A02"
+    ],
     "exam_codes": [
       "H4.6"
     ],
@@ -2172,15 +2199,24 @@
       "verbaal"
     ],
     "terms": [
-      "marginaal tarief"
+      "marginaal tarief",
+      "gemiddeld tarief"
+    ],
+    "procedure": [
+      "Noteer per schijf het marginale tarief en de bovengrens",
+      "Bepaal in welke schijf het belastbaar inkomen valt",
+      "Bereken per volledig gevulde schijf: (bovengrens − ondergrens) × marginaal tarief",
+      "Bereken voor de laatste schijf: (belastbaar inkomen − ondergrens schijf) × marginaal tarief",
+      "Tel de schijfbedragen op tot totale inkomstenbelasting",
+      "Bereken eventueel gemiddeld tarief = totale belasting / belastbaar inkomen × 100%"
     ]
   },
   {
     "id": "H05",
-    "name": "Circulaire economie en groen bbp",
+    "name": "Circulaire economie in groen bbp",
     "category": "welvaart en groei",
     "layer": 0,
-    "kern": "Analyseer hoe circulaire economie het groen bbp kan verhogen via reductie milieuschade en recycling.",
+    "kern": "Leg uit hoe circulaire productie via minder milieuschade en minder grondstofgebruik het groen bbp per hoofd verhoogt.",
     "needs": [],
     "exam_codes": [
       "H3.4"
@@ -2190,15 +2226,19 @@
     "aspects": [
       "verbaal"
     ],
-    "terms": []
+    "terms": [
+      "groen bbp per hoofd"
+    ]
   },
   {
     "id": "H06",
     "name": "Totale CO2-uitstoot berekenen",
     "category": "welvaart en groei",
-    "layer": 0,
+    "layer": 2,
     "kern": "Bereken totale milieueffect van marktveranderingen door per-eenheid emissie met hoeveelheid te vermenigvuldigen.",
-    "needs": [],
+    "needs": [
+      "A06"
+    ],
     "exam_codes": [
       "H3.4"
     ],
@@ -2207,15 +2247,26 @@
     "aspects": [
       "rekenen"
     ],
-    "terms": []
+    "terms": [
+      "marktevenwicht"
+    ],
+    "procedure": [
+      "Bepaal de verkochte hoeveelheid Q (bv. aantal eenheden, liters, km)",
+      "Bepaal de CO2-uitstoot per eenheid e (kg of ton per eenheid)",
+      "Bereken totale CO2-uitstoot = Q × e",
+      "Werk bij marktveranderingen de nieuwe Q uit (zoals in A06 voor een nieuw evenwicht) en herbereken",
+      "Interpreteer: een maatregel die Q laat dalen verlaagt de totale uitstoot evenredig bij gelijke e"
+    ]
   },
   {
     "id": "H07",
     "name": "Vergrijzing, spaarquote en rente",
     "category": "welvaart en groei",
-    "layer": 0,
+    "layer": 1,
     "kern": "Hogere sparende populatie vergroot kapitaalaanbod, wat de evenwichtsrente drukt.",
-    "needs": [],
+    "needs": [
+      "H01"
+    ],
     "exam_codes": [
       "H5.1"
     ],
@@ -2232,9 +2283,11 @@
     "id": "H08",
     "name": "Denivellering en progressieve belasting",
     "category": "welvaart en groei",
-    "layer": 0,
+    "layer": 2,
     "kern": "Denivellering treedt op wanneer belastingveranderingen het verschil in netto-inkomsten tussen inkomensgroepen verkleinen.",
-    "needs": [],
+    "needs": [
+      "H04"
+    ],
     "exam_codes": [
       "H4.6"
     ],
@@ -2243,15 +2296,20 @@
     "aspects": [
       "verbaal"
     ],
-    "terms": []
+    "terms": [
+      "denivelleren",
+      "marginaal tarief"
+    ]
   },
   {
     "id": "H09",
-    "name": "Exportsubsidie als protectie",
+    "name": "Kostenvoordeel exporteurs als protectionisme",
     "category": "welvaart en groei",
-    "layer": 0,
-    "kern": "Toewijzing van emissierechten aan exporteurs verlaagt kosten en werkt protectionistisch.",
-    "needs": [],
+    "layer": 3,
+    "kern": "Beargumenteer wanneer een kostenvoordeel voor binnenlandse exporteurs (bv. gratis toegewezen emissierechten) feitelijk werkt als protectionisme tegen buitenlandse concurrenten.",
+    "needs": [
+      "H03"
+    ],
     "exam_codes": [
       "H1.1"
     ],
@@ -2260,7 +2318,10 @@
     "aspects": [
       "verbaal"
     ],
-    "terms": []
+    "terms": [
+      "subsidies",
+      "heffingen"
+    ]
   },
   {
     "id": "H10",
@@ -2278,16 +2339,20 @@
       "verbaal"
     ],
     "terms": [
-      "Gini-coefficient"
+      "Gini-coefficient",
+      "conjuncturele werkloosheid"
     ]
   },
   {
     "id": "H11",
     "name": "Groen bbp en CO2",
     "category": "welvaart en groei",
-    "layer": 0,
+    "layer": 3,
     "kern": "Lagere CO2-uitstoot vergroot groen bbp; minder productie wegens minder emissierechten verkleint het.",
-    "needs": [],
+    "needs": [
+      "H05",
+      "H06"
+    ],
     "exam_codes": [
       "H3.4"
     ],
@@ -2296,15 +2361,19 @@
     "aspects": [
       "verbaal"
     ],
-    "terms": []
+    "terms": [
+      "groen bbp per hoofd"
+    ]
   },
   {
     "id": "H12",
     "name": "Houdbaarheidssaldo",
     "category": "welvaart en groei",
-    "layer": 0,
+    "layer": 1,
     "kern": "Het houdbaarheidssaldo geeft aan of overheidsvoorzieningen op lange termijn betaalbaar blijven; stijgende grijze druk verslechtert het saldo.",
-    "needs": [],
+    "needs": [
+      "H01"
+    ],
     "exam_codes": [
       "H5.1"
     ],
@@ -2313,14 +2382,16 @@
     "aspects": [
       "verbaal"
     ],
-    "terms": []
+    "terms": [
+      "staatsschuld"
+    ]
   },
   {
     "id": "H13",
-    "name": "Minimumuurloon en internationale concurrentie",
+    "name": "Minimumuurloon: kostenkanaal naar concurrentiepositie",
     "category": "welvaart en groei",
     "layer": 0,
-    "kern": "Hoger minimumuurloon verhoogt bedrijfskosten, wat de internationale concurrentiepositie kan verslechteren.",
+    "kern": "Redeneer via het kostenkanaal hoe een hoger minimumuurloon de internationale concurrentiepositie kan verslechteren.",
     "needs": [],
     "exam_codes": [
       "H1.1"
@@ -2330,14 +2401,16 @@
     "aspects": [
       "verbaal"
     ],
-    "terms": []
+    "terms": [
+      "wisselkoers"
+    ]
   },
   {
     "id": "H14",
-    "name": "Minimumuurloon en economische groei",
+    "name": "Minimumuurloon: vraagkanaal naar bbp-groei",
     "category": "welvaart en groei",
     "layer": 0,
-    "kern": "Verhogen van het minimumuurloon kan via hogere consumptie tot economische groei leiden.",
+    "kern": "Redeneer via het bestedingskanaal hoe een hoger minimumuurloon de consumptie en daarmee de bbp-groei kan verhogen.",
     "needs": [],
     "exam_codes": [
       "H1.1"
@@ -2347,15 +2420,20 @@
     "aspects": [
       "verbaal"
     ],
-    "terms": []
+    "terms": [
+      "koopkracht",
+      "bbp-groei"
+    ]
   },
   {
     "id": "H15",
-    "name": "Nominale rentepercentage analyseren",
+    "name": "Nominale rente op staatsobligaties verklaren",
     "category": "welvaart en groei",
-    "layer": 0,
-    "kern": "Verklaar veranderingen in nominale rentevoeten van staatsobligaties met behulp van grafieken.",
-    "needs": [],
+    "layer": 1,
+    "kern": "Verklaar bewegingen in de nominale rente op staatsobligaties vanuit vraag-en-aanbod op de obligatiemarkt en risicoperceptie.",
+    "needs": [
+      "H21"
+    ],
     "exam_codes": [
       "H5.2"
     ],
@@ -2364,14 +2442,18 @@
     "aspects": [
       "verbaal"
     ],
-    "terms": []
+    "terms": [
+      "rente",
+      "obligaties",
+      "risico"
+    ]
   },
   {
     "id": "H16",
-    "name": "Ontslagrecht en werkgeverrisico",
+    "name": "Soepeler ontslagrecht en werkgeversrisico",
     "category": "welvaart en groei",
     "layer": 0,
-    "kern": "Leg uit hoe versoepeling van ontslagrecht risico voor werkgevers vermindert.",
+    "kern": "Leg uit hoe versoepeling van ontslagrecht het aannamerisico voor werkgevers verlaagt en het effect op werkgelegenheid beredeneer.",
     "needs": [],
     "exam_codes": [
       "H5.1"
@@ -2387,11 +2469,13 @@
   },
   {
     "id": "H17",
-    "name": "Productiviteit en technologie",
+    "name": "Arbeidsproductiviteit, werkgelegenheid en lange termijn",
     "category": "welvaart en groei",
-    "layer": 0,
-    "kern": "Investeringen in arbeidsproductiviteit-verhogende technologieen kunnen op korte termijn werkgelegenheid verminderen maar op lange termijn concurrentiepositie verbeteren.",
-    "needs": [],
+    "layer": 1,
+    "kern": "Onderscheid het korte-termijn werkgelegenheidseffect van productiviteitsverhogende investeringen van het lange-termijn concurrentie-effect.",
+    "needs": [
+      "H13"
+    ],
     "exam_codes": [
       "H1.1"
     ],
@@ -2408,9 +2492,11 @@
     "id": "H18",
     "name": "Progressief tarief berekenen",
     "category": "welvaart en groei",
-    "layer": 0,
+    "layer": 2,
     "kern": "Bereken totale belasting bij progressieve tarieven en analyseer stimulansen.",
-    "needs": [],
+    "needs": [
+      "H04"
+    ],
     "exam_codes": [
       "H4.6"
     ],
@@ -2419,15 +2505,27 @@
     "aspects": [
       "rekenen"
     ],
-    "terms": []
+    "terms": [
+      "marginaal tarief",
+      "gemiddeld tarief"
+    ],
+    "procedure": [
+      "Noteer per schijf het marginale tarief",
+      "Voer de stapsgewijze berekening uit zoals in H04 (totale inkomstenbelasting)",
+      "Bereken het gemiddelde tarief = totale belasting / belastbaar inkomen × 100%",
+      "Bereken het marginale tarief op het inkomen: het tarief van de hoogst bereikte schijf",
+      "Analyseer de prikkel: een hoger marginaal tarief verkleint de beloning van een extra verdiende euro en kan arbeidsaanbod drukken"
+    ]
   },
   {
     "id": "H19",
     "name": "Publiek kapitaal en staatsschuldquote",
     "category": "welvaart en groei",
-    "layer": 0,
+    "layer": 1,
     "kern": "Leg uit hoe investeringen in publiek kapitaal op lange termijn staatsschuldquote kunnen verlagen.",
-    "needs": [],
+    "needs": [
+      "H21"
+    ],
     "exam_codes": [
       "H5.1"
     ],
@@ -2437,16 +2535,19 @@
       "verbaal"
     ],
     "terms": [
-      "investeringen"
+      "investeringen",
+      "staatsschuld"
     ]
   },
   {
     "id": "H20",
     "name": "Spaarsaldo en betalingsbalans",
     "category": "welvaart en groei",
-    "layer": 0,
+    "layer": 1,
     "kern": "Interpreteer positieve en negatieve particuliere spaarsalda.",
-    "needs": [],
+    "needs": [
+      "H21"
+    ],
     "exam_codes": [
       "H1.2"
     ],
@@ -2455,7 +2556,9 @@
     "aspects": [
       "verbaal"
     ],
-    "terms": []
+    "terms": [
+      "primair inkomen"
+    ]
   },
   {
     "id": "H21",
@@ -2473,30 +2576,46 @@
       "rekenen"
     ],
     "terms": [
-      "staatsschuld"
+      "staatsschuld",
+      "bbp-niveau"
+    ],
+    "procedure": [
+      "Bepaal de staatsschuld in euro's (stand aan het einde van het jaar)",
+      "Bepaal het bbp in euro's over hetzelfde jaar",
+      "Bereken staatsschuldquote = staatsschuld / bbp × 100%",
+      "Vergelijk met de 60%-drempel uit het Stabiliteits- en Groeipact",
+      "Analyseer dynamiek: quote daalt als bbp-groei groter is dan de groei van de staatsschuld"
     ]
   },
   {
     "id": "H22",
-    "name": "Tarifaanpassing en inkomenseffecten",
+    "name": "Belastingtariefaanpassing en secundaire inkomenseffecten",
     "category": "welvaart en groei",
-    "layer": 0,
-    "kern": "Analyseer hoe tarifaanpassingen secundaire inkomenseffecten hebben via vraagveranderingen.",
-    "needs": [],
+    "layer": 3,
+    "kern": "Analyseer hoe een wijziging in belastingtarieven via veranderd besteedbaar inkomen de vraag en daarmee secundaire inkomenseffecten oproept.",
+    "needs": [
+      "H04",
+      "H08"
+    ],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
     "aspects": [
       "verbaal"
     ],
-    "terms": []
+    "terms": [
+      "secundair inkomen",
+      "marginaal tarief"
+    ]
   },
   {
     "id": "H23",
-    "name": "Uitverdieneffect en belastingwig",
+    "name": "Belastingwig en uitverdieneffect op arbeidsaanbod",
     "category": "welvaart en groei",
-    "layer": 0,
-    "kern": "Leg uit hoe progressieve belastingen via hogere marginale lastendruk en substitutieeffect arbeidsaanbod verkleinen.",
-    "needs": [],
+    "layer": 3,
+    "kern": "Leg uit hoe een hogere belastingwig via het substitutie-effect het arbeidsaanbod verkleint (uitverdieneffect).",
+    "needs": [
+      "H18"
+    ],
     "exam_codes": [
       "H4.6"
     ],
@@ -2505,7 +2624,11 @@
     "aspects": [
       "verbaal"
     ],
-    "terms": []
+    "terms": [
+      "marginaal tarief",
+      "uitverdieneffecten",
+      "arbeidsaanbod (= beroepsbevolking)"
+    ]
   },
   {
     "id": "H24",
@@ -2523,16 +2646,26 @@
       "rekenen"
     ],
     "terms": [
-      "wisselkoers"
+      "wisselkoers",
+      "koopkracht"
+    ],
+    "procedure": [
+      "Noteer de oude wisselkoers (prijs buitenlandse valuta in binnenlandse, bv. €/$)",
+      "Noteer de nieuwe wisselkoers na depreciatie",
+      "Bereken procentuele depreciatie = (nieuw − oud) / oud × 100%",
+      "Reken een importprijs of exportopbrengst om naar binnenlandse valuta bij beide koersen",
+      "Interpreteer: depreciatie maakt import duurder (reële koopkracht daalt) en export goedkoper voor buitenlandse kopers"
     ]
   },
   {
     "id": "H25",
-    "name": "Wisselkoers en economische groei",
+    "name": "Wisselkoers, export en bbp-groei",
     "category": "welvaart en groei",
-    "layer": 0,
-    "kern": "Leg uit hoe wisselkoerseffecten tot groei kunnen leiden.",
-    "needs": [],
+    "layer": 1,
+    "kern": "Leg uit hoe een depreciatie van de wisselkoers via goedkopere export tot hogere bbp-groei kan leiden.",
+    "needs": [
+      "H24"
+    ],
     "exam_codes": [
       "H1.1"
     ],
@@ -2542,16 +2675,19 @@
       "verbaal"
     ],
     "terms": [
-      "wisselkoers"
+      "wisselkoers",
+      "bbp-groei"
     ]
   },
   {
     "id": "H26",
-    "name": "Woonlastafweging koop vs huur",
+    "name": "Koop- versus huurlasten vergelijken",
     "category": "welvaart en groei",
-    "layer": 0,
-    "kern": "Beslissing over koop van eigen woning hangt af van rente, hypotheekkosten, huurprijs en persoonlijke omstandigheden.",
-    "needs": [],
+    "layer": 2,
+    "kern": "Vergelijk netto woonlasten van kopen en huren door rente, aflossing, onderhoud en huurprijs systematisch tegen elkaar af te zetten.",
+    "needs": [
+      "H15"
+    ],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
     "aspects": [

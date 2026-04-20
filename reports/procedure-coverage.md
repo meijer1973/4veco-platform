@@ -1,9 +1,9 @@
 # Procedure-Coverage Report
 
-Generated: 2026-04-20T13:57:38.696Z
+Generated: 2026-04-20T14:06:18.125Z
 Apply+ units:            63
-With procedure:          13
-Without procedure:       50 (A: 34, non-A: 16)
+With procedure:          20
+Without procedure:       43 (A: 34, non-A: 9)
 
 ## Status: **INFORMATIONAL**
 
@@ -11,7 +11,7 @@ A canonical procedure is the step sequence every downstream material (voorkennis
 
 A-domain units are listed separately: their executable recipe is the `GEN_*` randomizer, so a missing step list is lower-priority than for non-A units.
 
-## Non-A units missing procedure (16)
+## Non-A units missing procedure (9)
 
 ### Domain F (2)
 
@@ -21,16 +21,6 @@ A-domain units are listed separately: their executable recipe is the `GEN_*` ran
 ### Domain G (1)
 
 - **G07** Transactiekosten — _apply_
-
-### Domain H (7)
-
-- **H02** AIQ (arbeidsinkomenquote) berekenen — _apply_
-- **H03** Armington-elasticiteit — _apply_
-- **H04** Belastingschijven berekening — _apply_
-- **H06** Totale CO2-uitstoot berekenen — _apply_
-- **H18** Progressief tarief berekenen — _apply_
-- **H21** Staatsschuldquote berekenen — _apply_
-- **H24** Wisselkoers en depreciatie — _apply_
 
 ### Domain I (6)
 

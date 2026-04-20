@@ -1,8 +1,8 @@
 # Terms-Coverage Report
 
-Generated: 2026-04-20T13:57:38.600Z
+Generated: 2026-04-20T14:06:18.058Z
 Live units:      144
-With no terms:   56
+With no terms:   40
 
 ## Status: **INFORMATIONAL**
 
@@ -53,25 +53,6 @@ Units with empty `terms` have no canonical-vocabulary links yet. Wire via `unit-
 - **G06** Principaal-agentprobleem identificeren
 - **G09** Solidariteit in verzekeringen
 - **G11** Wisselkoersrisico bij valutabetaling
-
-## Domain H (16)
-
-- **H01** AOW-betaalbaarheid en vergrijzing
-- **H02** AIQ (arbeidsinkomenquote) berekenen
-- **H03** Armington-elasticiteit
-- **H05** Circulaire economie en groen bbp
-- **H06** Totale CO2-uitstoot berekenen
-- **H08** Denivellering en progressieve belasting
-- **H09** Exportsubsidie als protectie
-- **H11** Groen bbp en CO2
-- **H12** Houdbaarheidssaldo
-- **H13** Minimumuurloon en internationale concurrentie
-- **H14** Minimumuurloon en economische groei
-- **H15** Nominale rentepercentage analyseren
-- **H18** Progressief tarief berekenen
-- **H20** Spaarsaldo en betalingsbalans
-- **H22** Tarifaanpassing en inkomenseffecten
-- **H23** Uitverdieneffect en belastingwig
 
 ## Domain I (9)
 

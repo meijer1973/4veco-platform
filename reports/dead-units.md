@@ -1,6 +1,6 @@
 # Dead Units Report
 
-Generated: 2026-04-20T13:57:38.238Z
+Generated: 2026-04-20T14:06:17.764Z
 Live units:   144
 Files scanned: 70
 Cited:        74
@@ -56,21 +56,21 @@ These units exist in the catalog but no source file cites them. Candidates for d
 - **G10** Informatieasymmetrie verzekeringsmarkt
 - **G11** Wisselkoersrisico bij valutabetaling
 - **H04** Belastingschijven berekening
-- **H05** Circulaire economie en groen bbp
+- **H05** Circulaire economie in groen bbp
 - **H06** Totale CO2-uitstoot berekenen
 - **H07** Vergrijzing, spaarquote en rente
 - **H08** Denivellering en progressieve belasting
-- **H09** Exportsubsidie als protectie
+- **H09** Kostenvoordeel exporteurs als protectionisme
 - **H10** Gini-coefficient bij recessie
 - **H11** Groen bbp en CO2
-- **H16** Ontslagrecht en werkgeverrisico
-- **H17** Productiviteit en technologie
+- **H16** Soepeler ontslagrecht en werkgeversrisico
+- **H17** Arbeidsproductiviteit, werkgelegenheid en lange termijn
 - **H19** Publiek kapitaal en staatsschuldquote
 - **H20** Spaarsaldo en betalingsbalans
 - **H21** Staatsschuldquote berekenen
-- **H22** Tarifaanpassing en inkomenseffecten
-- **H23** Uitverdieneffect en belastingwig
-- **H25** Wisselkoers en economische groei
+- **H22** Belastingtariefaanpassing en secundaire inkomenseffecten
+- **H23** Belastingwig en uitverdieneffect op arbeidsaanbod
+- **H25** Wisselkoers, export en bbp-groei
 - **I02** Anticyclische inkomensoverdrachten
 - **I06** Deflatie in laagconjunctuur
 - **I08** Keynesiaanse kruis verschuivingen analyseren
