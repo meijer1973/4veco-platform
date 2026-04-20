@@ -1,8 +1,8 @@
 # Terms-Coverage Report
 
-Generated: 2026-04-20T14:25:07.421Z
+Generated: 2026-04-20T14:32:31.892Z
 Live units:      144
-With no terms:   33
+With no terms:   24
 
 ## Status: **INFORMATIONAL**
 
@@ -40,16 +40,4 @@ Units with empty `terms` have no canonical-vocabulary links yet. Wire via `unit-
 - **E03** Kapitaaldekking en renteeffecten
 - **E04** Omslagstelsel (AOW)
 - **E05** Verlaging pensioenuitkeringen en solidariteit
-
-## Domain I (9)
-
-- **I03** Bedrijfsinvesteringen in laagconjunctuur
-- **I04** CAO-looptijd en arbeidsmarktrigiditeit
-- **I05** Centrale bank rentebeleid
-- **I06** Deflatie in laagconjunctuur
-- **I11** Monetair beleid bij starre vs flexibele arbeidsmarkt
-- **I14** Multiplier en lekkages
-- **I15** Output gap en economische schokken
-- **I16** Overheidssaldo verandering
-- **I17** Rentebeleid en economische gevolgen
 

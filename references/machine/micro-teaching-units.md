@@ -1501,84 +1501,114 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - terms: [rente]
 
 ### I01 Anticyclisch begrotingsbeleid
-- kern: "In laagconjunctuur verhoogt overheid uitgaven of verlaagt belastingen om economie te stimuleren."
+- kern: "Beschrijf hoe de overheid in laagconjunctuur bestedingen verhoogt of belastingen verlaagt en in hoogconjunctuur het omgekeerde doet om de conjunctuurcyclus af te vlakken."
 - needs: []
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: [anticyclisch]
+- terms: [anticyclisch, conjunctuurpolitiek, overheidstekort]
 
-### I02 Anticyclische inkomensoverdrachten
-- kern: "Leg uit hoe inkomensoverdrachten anticyclisch werken tijdens laagconjunctuur."
-- needs: []
+### I02 Automatische stabilisatoren via inkomensoverdrachten
+- kern: "Leg uit hoe inkomensoverdrachten zoals WW en bijstand automatisch meebewegen met de conjunctuur en zo de bestedingen stabiliseren zonder nieuw beleid."
+- needs: [I01]
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: [anticyclisch]
+- terms: [automatische stabilisatoren, anticyclisch, secundair inkomen]
 
-### I03 Bedrijfsinvesteringen in laagconjunctuur
-- kern: "In laagconjunctuur reageren bedrijfsinvesteringen beperkt op renteverlagingen vanwege lage vraag."
-- needs: []
+### I03 Renteongevoeligheid van investeringen bij ondergrens
+- kern: "Leg uit waarom bedrijfsinvesteringen beperkt reageren op renteverlagingen als de vraag laag is of de effectieve ondergrens nominale rente nadert."
+- needs: [I17]
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: []
+- terms: [investeringen, effectieve ondergrens nominale rente, rente]
 
-### I04 CAO-looptijd en arbeidsmarktrigiditeit
-- kern: "Leg uit hoe langere CAO-looptijden arbeidsmarktflexibiliteit en beleid beïnvloeden."
+### I04 CAO-looptijd en loonrigiditeit
+- kern: "Leg uit hoe langere CAO-looptijden loonaanpassingen vertragen en daarmee de flexibiliteit van de arbeidsmarkt en de effectiviteit van conjunctuurbeleid beïnvloeden."
 - needs: []
 - exam_codes: [I4.4]
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: []
+- terms: [arbeidsaanbod (= beroepsbevolking)]
 
-### I05 Centrale bank rentebeleid
-- kern: "Bepaal wanneer centrale banken rentes verhogen of verlagen."
-- needs: []
+### I05 Rentebesluit van centrale bank
+- kern: "Bepaal op basis van inflatie, outputgap en duaal mandaat of een centrale bank de beleidsrente verhoogt, verlaagt of constant houdt."
+- needs: [I17, I07]
 - mastery_target: apply
 - prior_learning: previously_taught
 - aspects: [verbaal]
-- terms: []
+- terms: [rente, duaal mandaat, effectieve ondergrens nominale rente]
+- procedure:
+  1. Noteer het mandaat van de centrale bank (enkelvoudig: alleen inflatiedoel; duaal: inflatie én werkgelegenheid / outputgap)
+  2. Bepaal de inflatie π en vergelijk met het inflatiedoel (bijvoorbeeld 2%)
+  3. Bepaal de outputgap Y − Y* (positief = hoogconjunctuur, negatief = laagconjunctuur)
+  4. Kies: π boven doel of positieve outputgap → renteverhoging (verkrappen); π onder doel of negatieve outputgap → renteverlaging (verruimen)
+  5. Controleer de effectieve ondergrens nominale rente: als de beleidsrente al bij 0% ligt, is verdere verlaging niet mogelijk en moeten alternatieve instrumenten overwogen worden
+  6. Verwoord het besluit met verwijzing naar het mandaat en de waargenomen afwijkingen
 
-### I06 Deflatie in laagconjunctuur
-- kern: "Deflatie versterkt laagconjunctuur doordat consumenten en bedrijven bestedingen uitstellen."
+### I06 Deflatiespiraal
+- kern: "Leg uit hoe dalende prijzen consumenten en bedrijven aanzetten tot uitstel van bestedingen en investeringen, waardoor de laagconjunctuur zichzelf versterkt."
 - needs: []
 - exam_codes: [I1.1]
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: []
+- terms: [hoogconjunctuur, koopkracht]
 
-### I07 IS-MB-GA-model met outputgap
-- kern: "Analyseer relatie tussen outputgap, nominale rente, inflatie en curveverschuivingen in laagconjunctuur."
-- needs: []
+### I07 IS-MB-GA-model: outputgap en inflatie
+- kern: "Analyseer met het IS-MB-GA-model hoe een schok via outputgap en inflatie doorwerkt op rente, bbp en prijsniveau."
+- needs: [I10, I14]
 - exam_codes: [I4.1]
 - mastery_target: analyze
 - prior_learning: new_this_year
 - aspects: [grafisch, verbaal]
-- terms: [rente]
+- terms: [rente, GA-curve, hoogconjunctuur]
+- procedure:
+  1. Teken de uitgangssituatie met IS-curve (Y dalend in reële rente r), MB-curve (beleidsregel van de centrale bank) en GA-curve (inflatie π stijgend in outputgap Y − Y*)
+  2. Identificeer het beginevenwicht: snijpunt IS-MB bepaalt Y en r; GA bepaalt π bij die Y
+  3. Bepaal welke curve verschuift door de schok (bijvoorbeeld vraagschok schuift IS, aanbodschok schuift GA)
+  4. Teken de verschuiving en lees het nieuwe snijpunt af: nieuwe Y, nieuwe outputgap Y − Y*, nieuwe r
+  5. Bepaal het nieuwe prijsniveau met de GA-curve: negatieve outputgap → lagere π; positieve outputgap → hogere π
+  6. Beschrijf de reactie van de centrale bank volgens de MB-regel en wat dit doet met de terugkeer naar Y*
+  7. Vergeet niet de as-richting te labelen: r verticaal voor IS-MB, π verticaal voor GA
 
-### I08 Keynesiaanse kruis verschuivingen analyseren
-- kern: "Analyseer hoe verschuivingen in IS en LM het evenwicht en effectiviteit van beleid beïnvloeden."
-- needs: []
+### I08 Keynesiaans kruis: verschuivingen analyseren
+- kern: "Analyseer hoe een verandering in autonome bestedingen (C, I, G of X−M) de geplande bestedingen verschuift en via de multiplier een nieuw evenwicht op Y = bestedingen oplevert."
+- needs: [I14]
 - exam_codes: [I4.1, I4.2]
 - mastery_target: analyze
 - prior_learning: new_this_year
 - aspects: [grafisch, verbaal]
-- terms: [Keynesiaanse kruis]
+- terms: [Keynesiaanse kruis, investeringen]
+- procedure:
+  1. Teken de 45°-lijn (werkelijke bestedingen = inkomen, Y = Y) in een diagram met Y horizontaal en geplande bestedingen EB verticaal
+  2. Teken de bestedingenlijn EB = C + I + G + (X − M) met autonome component A op de verticale as en helling gelijk aan de marginale bestedingsquote c
+  3. Identificeer het beginevenwicht als snijpunt van EB met de 45°-lijn: hier geldt Y = EB
+  4. Bepaal welke autonome component verandert (ΔC, ΔI, ΔG of Δ(X − M)) en met welk bedrag ΔA
+  5. Schuif de EB-lijn verticaal met ΔA omhoog (bestedingsimpuls) of omlaag (bestedingsdaling)
+  6. Lees het nieuwe evenwicht af op de 45°-lijn en bereken ΔY = multiplier × ΔA (zie I14)
+  7. Verwoord het effect: een autonome impuls leidt via uitgavenrondes tot een groter inkomenseffect
 
-### I09 Koopkracht behouden bij inflatie
-- kern: "Bereken nieuwe loon of uitkering om koopkracht gelijk te houden bij inflatie."
-- needs: []
+### I09 Koopkrachtbehoud bij inflatie berekenen
+- kern: "Bereken de nominale loon- of uitkeringsstijging die nodig is om de koopkracht gelijk te houden bij een gegeven inflatiepercentage."
+- needs: [A02]
 - exam_codes: [I1.4]
 - mastery_target: apply
 - prior_learning: new_this_year
 - aspects: [rekenen]
-- terms: [koopkracht]
+- terms: [koopkracht, nominale en reele grootheden]
+- procedure:
+  1. Noteer het oude nominale loon of uitkering L0 en het inflatiepercentage π over de periode
+  2. Bereken het nieuwe nominale bedrag L1 = L0 × (1 + π/100) om exact mee te stijgen met de prijzen
+  3. Controleer: de procentuele loonstijging = π, dus koopkracht blijft gelijk (reële stijging = 0%)
+  4. Bij gegeven nominale stijging g: bereken de reële stijging = ((1 + g/100) / (1 + π/100) − 1) × 100%
+  5. Interpreteer: reëel > 0 betekent koopkrachtwinst, reëel < 0 betekent koopkrachtverlies
+  6. Let op eenheden en periode: gebruik jaar-op-jaar percentages en consistente valuta
 
-### I10 Loonrigiditeit en GA-curve helling
-- kern: "Leg uit hoe loonflexibiliteit de helling van de GA-curve beïnvloedt."
+### I10 Loonrigiditeit en helling GA-curve
+- kern: "Leg uit hoe starre lonen leiden tot een vlakkere GA-curve op korte termijn en hoe flexibele lonen de curve steiler maken."
 - needs: []
 - exam_codes: [I4.4]
 - mastery_target: understand
@@ -1586,80 +1616,95 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - aspects: [grafisch, verbaal]
 - terms: [GA-curve]
 
-### I11 Monetair beleid bij starre vs flexibele arbeidsmarkt
-- kern: "Vergelijk effectiviteit van renteverlagingen onder starre versus flexibele arbeidsmarktomstandigheden."
-- needs: []
+### I11 Monetair beleid: starre versus flexibele arbeidsmarkt
+- kern: "Vergelijk het effect van een renteverlaging op bbp en prijsniveau tussen een starre en een flexibele arbeidsmarkt en verklaar het verschil via de helling van de GA-curve."
+- needs: [I10, I05]
 - mastery_target: analyze
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: []
+- terms: [rente, GA-curve, arbeidsaanbod (= beroepsbevolking)]
+- procedure:
+  1. Teken het IS-MB-GA-diagram (zie I07) voor een economie met starre lonen: vlakke GA-curve op korte termijn
+  2. Pas een renteverlaging toe: MB-curve schuift omlaag, IS-evenwicht verschuift naar hogere Y
+  3. Lees af: groot effect op Y (bbp), klein effect op π (prijsniveau) door vlakke GA
+  4. Teken hetzelfde diagram voor een flexibele arbeidsmarkt: steile GA-curve
+  5. Pas dezelfde renteverlaging toe: klein effect op Y, groot effect op π
+  6. Vergelijk beide uitkomsten en concludeer dat monetair beleid krachtiger is bij loonrigiditeit op korte termijn en vooral prijseffecten heeft bij loonflexibiliteit
+  7. Verwoord het verband met I10 (helling GA-curve volgt uit loonflexibiliteit)
 
-### I12 Monetair beleid en wisselkoers
-- kern: "Renteverlaging verlaagt rente en veroorzaakt depreciatie van de valuta, wat exportcompetitiviteit verbetert."
-- needs: []
+### I12 Wisselkoerskanaal van rentebeleid
+- kern: "Leg uit hoe een renteverlaging via kapitaaluitstroom leidt tot depreciatie van de valuta en daarmee de exportcompetitiviteit vergroot."
+- needs: [I17, H24]
 - exam_codes: [I1.2]
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: [rente, wisselkoers]
+- terms: [rente, wisselkoers, monetair beleid (rentebeleid)]
 
 ### I13 Monetair trilemma
-- kern: "Analyseer beleidsopties (vast wisselkoers, onafhankelijk beleid, kapitaalverkeer) in multinationale context."
-- needs: []
+- kern: "Analyseer waarom een land hooguit twee van de drie doelen — vaste wisselkoers, vrij kapitaalverkeer en zelfstandig rentebeleid — tegelijk kan bereiken."
+- needs: [I12]
 - exam_codes: [I1.2]
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: [wisselkoers]
+- terms: [wisselkoers, muntunie, monetair beleid (rentebeleid)]
 
 ### I14 Multiplier en lekkages
-- kern: "Begrijp hoe autonome bestedingen via de multiplier en lekkages het inkomen beïnvloeden."
+- kern: "Leg uit hoe een toename van autonome bestedingen via de multiplier een groter inkomenseffect oproept en hoe belastingen, spaarneiging en import als lekkages de multiplier verkleinen."
 - needs: []
 - exam_codes: [I4.1]
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: []
+- terms: [investeringen, inverdieneffecten, uitverdieneffecten]
 
-### I15 Output gap en economische schokken
-- kern: "Analyseer hoe schokken een negatieve of positieve output gap veroorzaken."
-- needs: []
+### I15 Outputgap bij vraag- en aanbodschokken
+- kern: "Analyseer hoe een positieve of negatieve vraag- of aanbodschok de feitelijke productie ten opzichte van het potentieel bbp verschuift en een output gap veroorzaakt."
+- needs: [I07, I14]
 - exam_codes: [I4.2]
 - mastery_target: analyze
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: []
+- terms: [conjuncturele werkloosheid, hoogconjunctuur]
+- procedure:
+  1. Bepaal het potentieel bbp Y* (structurele productiecapaciteit) en het feitelijke bbp Y
+  2. Bereken de outputgap = (Y − Y*) / Y* × 100%
+  3. Classificeer de schok: vraagschok (verschuift IS-curve, bijvoorbeeld exportdaling) of aanbodschok (verschuift GA-curve, bijvoorbeeld olieprijsstijging)
+  4. Teken de verschuiving in het IS-MB-GA-diagram en bepaal de richting: negatieve schok → Y daalt → negatieve outputgap; positieve schok → Y stijgt → positieve outputgap
+  5. Analyseer het gevolg voor inflatie via de GA-curve: negatieve outputgap drukt π, positieve outputgap stuwt π op
+  6. Beschrijf het verwachte hersteltraject: via rentebeleid (MB-regel) of automatische stabilisatoren keert Y terug naar Y*
 
-### I16 Overheidssaldo verandering
-- kern: "Overheidssaldo kan veranderen door belasting- of uitgavenveranderingen."
-- needs: []
+### I16 Overheidssaldo en conjunctuur
+- kern: "Leg uit hoe belastingontvangsten en overheidsuitgaven samen het overheidssaldo bepalen en hoe dit saldo met de conjunctuur meebeweegt."
+- needs: [H21]
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: []
+- terms: [staatsschuld, overheidstekort, automatische stabilisatoren]
 
-### I17 Rentebeleid en economische gevolgen
-- kern: "Renteverhoging verkrapt de economie; renteverlaging stimuleert."
-- needs: []
+### I17 Rentebeleid en transmissiemechanisme
+- kern: "Leg uit hoe een renteverhoging via duurder krediet consumptie en investeringen afremt en hoe een renteverlaging deze bestedingen stimuleert."
+- needs: [H15]
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: []
+- terms: [rente, investeringen, monetair beleid (rentebeleid)]
 
-### I18 Werkelijk versus nominaal eigen risico
-- kern: "Analyseer hoe inflatie het werkelijk draagvermogen van een nominaal vast eigen risico beïnvloedt."
-- needs: []
+### I18 Reële waarde van nominaal eigen risico
+- kern: "Leg uit hoe inflatie de reële last van een nominaal vast eigen risico verlaagt en waarom herziening nodig is om het beleidsdoel vast te houden."
+- needs: [I09]
 - exam_codes: [I1.4]
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: [eigen risico]
+- terms: [eigen risico, koopkracht, nominale en reele grootheden]
 
-### I19 Wisselkoerseffect van monetair beleid
-- kern: "Leg uit hoe monetaire beleidsmaatregelen via de wisselkoers de conjunctuur beïnvloeden."
-- needs: []
+### I19 Wisselkoerseffect van monetair beleid op conjunctuur
+- kern: "Leg uit hoe rentebeleid via de wisselkoers de netto export verandert en zo de binnenlandse conjunctuur beïnvloedt."
+- needs: [I12, H24]
 - exam_codes: [I1.2]
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [rekenen, verbaal]
-- terms: [wisselkoers]
+- terms: [wisselkoers, monetair beleid (rentebeleid), bbp-groei]

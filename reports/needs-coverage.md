@@ -1,8 +1,8 @@
 # Needs-Coverage Report
 
-Generated: 2026-04-20T14:25:07.359Z
+Generated: 2026-04-20T14:32:31.808Z
 Live units:      144
-With no needs:   62
+With no needs:   48
 
 ## Status: **INFORMATIONAL**
 
@@ -69,25 +69,11 @@ Units with empty `needs` are not broken — they simply have no prerequisite edg
 - **H21** Staatsschuldquote berekenen
 - **H24** Wisselkoers en depreciatie
 
-## Domain I (19)
+## Domain I (5)
 
 - **I01** Anticyclisch begrotingsbeleid
-- **I02** Anticyclische inkomensoverdrachten
-- **I03** Bedrijfsinvesteringen in laagconjunctuur
-- **I04** CAO-looptijd en arbeidsmarktrigiditeit
-- **I05** Centrale bank rentebeleid
-- **I06** Deflatie in laagconjunctuur
-- **I07** IS-MB-GA-model met outputgap
-- **I08** Keynesiaanse kruis verschuivingen analyseren
-- **I09** Koopkracht behouden bij inflatie
-- **I10** Loonrigiditeit en GA-curve helling
-- **I11** Monetair beleid bij starre vs flexibele arbeidsmarkt
-- **I12** Monetair beleid en wisselkoers
-- **I13** Monetair trilemma
+- **I04** CAO-looptijd en loonrigiditeit
+- **I06** Deflatiespiraal
+- **I10** Loonrigiditeit en helling GA-curve
 - **I14** Multiplier en lekkages
-- **I15** Output gap en economische schokken
-- **I16** Overheidssaldo verandering
-- **I17** Rentebeleid en economische gevolgen
-- **I18** Werkelijk versus nominaal eigen risico
-- **I19** Wisselkoerseffect van monetair beleid
 

@@ -1,6 +1,6 @@
 # Dead Units Report
 
-Generated: 2026-04-20T14:25:07.076Z
+Generated: 2026-04-20T14:32:31.559Z
 Live units:   144
 Files scanned: 70
 Cited:        74
@@ -71,15 +71,15 @@ These units exist in the catalog but no source file cites them. Candidates for d
 - **H22** Belastingtariefaanpassing en secundaire inkomenseffecten
 - **H23** Belastingwig en uitverdieneffect op arbeidsaanbod
 - **H25** Wisselkoers, export en bbp-groei
-- **I02** Anticyclische inkomensoverdrachten
-- **I06** Deflatie in laagconjunctuur
-- **I08** Keynesiaanse kruis verschuivingen analyseren
-- **I09** Koopkracht behouden bij inflatie
+- **I02** Automatische stabilisatoren via inkomensoverdrachten
+- **I06** Deflatiespiraal
+- **I08** Keynesiaans kruis: verschuivingen analyseren
+- **I09** Koopkrachtbehoud bij inflatie berekenen
 - **I13** Monetair trilemma
 - **I14** Multiplier en lekkages
-- **I15** Output gap en economische schokken
-- **I17** Rentebeleid en economische gevolgen
-- **I18** Werkelijk versus nominaal eigen risico
+- **I15** Outputgap bij vraag- en aanbodschokken
+- **I17** Rentebeleid en transmissiemechanisme
+- **I18** Reële waarde van nominaal eigen risico
 
 ## Citation counts (top 10 most cited)
 

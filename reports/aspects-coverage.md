@@ -1,6 +1,6 @@
 # Aspects-Coverage Report
 
-Generated: 2026-04-20T14:25:07.563Z
+Generated: 2026-04-20T14:32:32.024Z
 Live units: 144
 
 ## Status: **INFORMATIONAL**
@@ -72,5 +72,5 @@ These units' aspects were inferred from `kern`/`name` text, not from real exam c
 
 ### Domain I (1)
 
-- **I18** Werkelijk versus nominaal eigen risico — aspects: `[verbaal]`
+- **I18** Reële waarde van nominaal eigen risico — aspects: `[verbaal]`
 

@@ -1,26 +1,15 @@
 # Procedure-Coverage Report
 
-Generated: 2026-04-20T14:25:07.492Z
+Generated: 2026-04-20T14:32:31.957Z
 Apply+ units:            63
-With procedure:          23
-Without procedure:       40 (A: 34, non-A: 6)
+With procedure:          29
+Without procedure:       34 (A: 34, non-A: 0)
 
 ## Status: **INFORMATIONAL**
 
 A canonical procedure is the step sequence every downstream material (voorkennis, vaardigheden, answer model, slide deck) cites verbatim. A missing procedure means the unit minted without an abstract recipe; each still-missing unit should get one written when the next paragraph build cites it.
 
 A-domain units are listed separately: their executable recipe is the `GEN_*` randomizer, so a missing step list is lower-priority than for non-A units.
-
-## Non-A units missing procedure (6)
-
-### Domain I (6)
-
-- **I05** Centrale bank rentebeleid — _apply_
-- **I07** IS-MB-GA-model met outputgap — _analyze_
-- **I08** Keynesiaanse kruis verschuivingen analyseren — _analyze_
-- **I09** Koopkracht behouden bij inflatie — _apply_
-- **I11** Monetair beleid bij starre vs flexibele arbeidsmarkt — _analyze_
-- **I15** Output gap en economische schokken — _analyze_
 
 ## A-domain units missing procedure (34)
 
