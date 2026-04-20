@@ -1,7 +1,7 @@
 # Needs-Coverage Report
 
-Generated: 2026-04-20T14:34:47.579Z
-Live units:      144
+Generated: 2026-04-20T14:46:14.770Z
+Live units:      143
 With no needs:   44
 
 ## Status: **INFORMATIONAL**
@@ -30,7 +30,7 @@ Units with empty `needs` are not broken — they simply have no prerequisite edg
 - **D14** Marktfalen en overheidsinterventie beoordelen
 - **D15** Marktvormen classificeren
 - **D16** Minimumprijs en werkloosheid
-- **D23** Voorwaarden voor prijsdiscriminatie
+- **D24** Drie voorwaarden prijsdiscriminatie
 - **D27** Substituten en complementen
 
 ## Domain E (2)

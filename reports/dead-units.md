@@ -1,9 +1,9 @@
 # Dead Units Report
 
-Generated: 2026-04-20T14:34:47.210Z
-Live units:   144
+Generated: 2026-04-20T14:46:14.547Z
+Live units:   143
 Files scanned: 70
-Cited:        74
+Cited:        73
 Dead:         70
 
 ## Dead units (70)

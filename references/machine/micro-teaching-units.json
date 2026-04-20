@@ -124,6 +124,7 @@
       "verbaal"
     ],
     "terms": [
+      "evenwichtshoeveelheid",
       "evenwichtsprijs"
     ],
     "procedure": [
@@ -920,7 +921,8 @@
       "verbaal"
     ],
     "terms": [
-      "consumentensurplus"
+      "consumentensurplus",
+      "marktevenwicht"
     ],
     "procedure": [
       "Bepaal het oorspronkelijke consumentensurplus (CS_voor) als driehoek boven P* tot Pmax (zoals in A30)",
@@ -961,8 +963,10 @@
       "rekenen"
     ],
     "terms": [
-      "marktevenwicht",
-      "heffingen"
+      "evenwichtshoeveelheid",
+      "evenwichtsprijs",
+      "heffingen",
+      "marktevenwicht"
     ],
     "procedure": [
       "Schrijf de aanbodfunctie om naar P als functie van Q",
@@ -1072,8 +1076,9 @@
       "verbaal"
     ],
     "terms": [
+      "collectieve aanbodlijn",
       "collectieve vraaglijn",
-      "collectieve aanbodlijn"
+      "evenwichtsprijs"
     ]
   },
   {
@@ -1140,7 +1145,8 @@
       "verbaal"
     ],
     "terms": [
-      "collectieve aanbodlijn"
+      "collectieve aanbodlijn",
+      "evenwichtsprijs"
     ]
   },
   {
@@ -1220,7 +1226,7 @@
     "layer": 6,
     "kern": "Bepaal hoe monopolist winst behaalt via prijsdiscriminatie over verschillende markten.",
     "needs": [
-      "D23",
+      "D24",
       "A36"
     ],
     "exam_codes": [
@@ -1301,7 +1307,8 @@
       "verbaal"
     ],
     "terms": [
-      "prijsdiscriminatie"
+      "prijsdiscriminatie",
+      "totale surplus"
     ],
     "procedure": [
       "Identificeer de inkomensgroepen en hun vraagfuncties (lage vs. hoge Ev)",
@@ -1318,7 +1325,7 @@
     "layer": 4,
     "kern": "Herken of subsidies prijsdiscriminatie veroorzaken en analyseer gevolgen.",
     "needs": [
-      "D23",
+      "D24",
       "A27"
     ],
     "exam_codes": [
@@ -1352,17 +1359,19 @@
     "terms": [
       "betalingsbereidheid",
       "prijsdiscriminatie"
+    ],
+    "deprecated": true,
+    "deprecated_in_favor_of": [
+      "D24"
     ]
   },
   {
     "id": "D24",
     "name": "Drie voorwaarden prijsdiscriminatie",
     "category": "markt",
-    "layer": 1,
-    "kern": "Leg uit drie voorwaarden: voldoende marktmacht, markten scheiden, verschillende prijselasticiteiten.",
-    "needs": [
-      "D23"
-    ],
+    "layer": 0,
+    "kern": "Leg uit de drie voorwaarden voor prijsdiscriminatie: voldoende marktmacht, scheidbare deelmarkten met verschillende prijselasticiteiten en betalingsbereidheid.",
+    "needs": [],
     "exam_codes": [
       "D2.3"
     ],
@@ -1372,6 +1381,7 @@
       "verbaal"
     ],
     "terms": [
+      "betalingsbereidheid",
       "marktmacht",
       "prijsdiscriminatie"
     ]
@@ -1654,8 +1664,9 @@
     ],
     "terms": [
       "berovingsprobleem",
-      "risico",
-      "contracten en prikkels"
+      "contracten en prikkels",
+      "investeringen",
+      "risico"
     ]
   },
   {
@@ -1716,7 +1727,8 @@
     ],
     "terms": [
       "dominante strategie",
-      "pay-off matrix"
+      "pay-off matrix",
+      "winst"
     ],
     "procedure": [
       "Noteer voor elke speler de uitbetalingen bij elke combinatie van strategieen uit de pay-off matrix",
@@ -1931,7 +1943,8 @@
     ],
     "terms": [
       "berovingsprobleem",
-      "contracten en prikkels"
+      "contracten en prikkels",
+      "risico"
     ]
   },
   {
@@ -2688,8 +2701,9 @@
       "rekenen"
     ],
     "terms": [
-      "staatsschuld",
-      "bbp-niveau"
+      "bbp-groei",
+      "bbp-niveau",
+      "staatsschuld"
     ],
     "procedure": [
       "Bepaal de staatsschuld in euro's (stand aan het einde van het jaar)",
@@ -2825,6 +2839,7 @@
     "terms": [
       "anticyclisch",
       "conjunctuurpolitiek",
+      "hoogconjunctuur",
       "overheidstekort"
     ]
   },
@@ -2863,9 +2878,8 @@
       "verbaal"
     ],
     "terms": [
-      "investeringen",
       "effectieve ondergrens nominale rente",
-      "rente"
+      "investeringen"
     ]
   },
   {
@@ -2903,9 +2917,9 @@
       "verbaal"
     ],
     "terms": [
-      "rente",
       "duaal mandaat",
-      "effectieve ondergrens nominale rente"
+      "effectieve ondergrens nominale rente",
+      "hoogconjunctuur"
     ],
     "procedure": [
       "Noteer het mandaat van de centrale bank (enkelvoudig: alleen inflatiedoel; duaal: inflatie én werkgelegenheid / outputgap)",
@@ -2933,6 +2947,7 @@
     ],
     "terms": [
       "hoogconjunctuur",
+      "investeringen",
       "koopkracht"
     ]
   },
@@ -2956,9 +2971,11 @@
       "verbaal"
     ],
     "terms": [
-      "rente",
       "GA-curve",
-      "hoogconjunctuur"
+      "IS-curve",
+      "MB-curve",
+      "hoogconjunctuur",
+      "rente"
     ],
     "procedure": [
       "Teken de uitgangssituatie met IS-curve (Y dalend in reële rente r), MB-curve (beleidsregel van de centrale bank) en GA-curve (inflatie π stijgend in outputgap Y − Y*)",
@@ -3069,9 +3086,10 @@
       "verbaal"
     ],
     "terms": [
-      "rente",
       "GA-curve",
-      "arbeidsaanbod (= beroepsbevolking)"
+      "MB-curve",
+      "arbeidsaanbod (= beroepsbevolking)",
+      "rente"
     ],
     "procedure": [
       "Teken het IS-MB-GA-diagram (zie I07) voor een economie met starre lonen: vlakke GA-curve op korte termijn",
@@ -3102,9 +3120,8 @@
       "verbaal"
     ],
     "terms": [
-      "rente",
-      "wisselkoers",
-      "monetair beleid (rentebeleid)"
+      "monetair beleid (rentebeleid)",
+      "wisselkoers"
     ]
   },
   {
@@ -3170,6 +3187,9 @@
       "verbaal"
     ],
     "terms": [
+      "GA-curve",
+      "IS-curve",
+      "automatische stabilisatoren",
       "conjuncturele werkloosheid",
       "hoogconjunctuur"
     ],
@@ -3217,7 +3237,6 @@
       "verbaal"
     ],
     "terms": [
-      "rente",
       "investeringen",
       "monetair beleid (rentebeleid)"
     ]
