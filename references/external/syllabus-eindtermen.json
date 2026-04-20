@@ -1,0 +1,1754 @@
+[
+  {
+    "code": "D1.1",
+    "domein": "D",
+    "domein_title": "Concept markt",
+    "subdomein": "D1",
+    "subdomein_title": "Vraag en Aanbod",
+    "tekst": "Betalingsbereidheid als de maximale prijs die een vrager bereid is te betalen voor één eenheid van een goed.",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "D1.2",
+    "domein": "D",
+    "domein_title": "Concept markt",
+    "subdomein": "D1",
+    "subdomein_title": "Vraag en Aanbod",
+    "tekst": "De individuele vraaglijn die het verband weergeeft tussen de gevraagde hoeveelheid van één vrager bij uiteenlopende prijzen.",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "D1.3",
+    "domein": "D",
+    "domein_title": "Concept markt",
+    "subdomein": "D1",
+    "subdomein_title": "Vraag en Aanbod",
+    "tekst": "Het verband tussen de individuele vraaglijn en de collectieve vraaglijn.",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "D1.4a",
+    "domein": "D",
+    "domein_title": "Concept markt",
+    "subdomein": "D1",
+    "subdomein_title": "Vraag en Aanbod",
+    "tekst": "Het verband tussen de betalingsbereidheid van alle vragers en het verloop van de collectieve vraaglijn.",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "D1.4b",
+    "domein": "D",
+    "domein_title": "Concept markt",
+    "subdomein": "D1",
+    "subdomein_title": "Vraag en Aanbod",
+    "tekst": "Parallelle verschuiving van de collectieve vraaglijn als gevolg van verandering van het inkomen, de behoeften, prijzen van andere goederen en het aantal vragers.",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "D1.5",
+    "domein": "D",
+    "domein_title": "Concept markt",
+    "subdomein": "D1",
+    "subdomein_title": "Vraag en Aanbod",
+    "tekst": "Prijselasticiteit (alleen segmentelasticiteit) als een maat voor de relatieve verandering van de gevraagde hoeveelheid als gevolg van een relatieve prijsverandering.",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "D1.6",
+    "domein": "D",
+    "domein_title": "Concept markt",
+    "subdomein": "D1",
+    "subdomein_title": "Vraag en Aanbod",
+    "tekst": "Het onderscheid tussen een prijselastische- en een prijsinelastische vraag.",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "D1.7",
+    "domein": "D",
+    "domein_title": "Concept markt",
+    "subdomein": "D1",
+    "subdomein_title": "Vraag en Aanbod",
+    "tekst": "Inkomenselasticiteit (alleen segmentelasticiteit) als een maat voor de relatieve verandering van de gevraagde hoeveelheid als gevolg van een relatieve inkomensverandering.",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "D1.8",
+    "domein": "D",
+    "domein_title": "Concept markt",
+    "subdomein": "D1",
+    "subdomein_title": "Vraag en Aanbod",
+    "tekst": "Het onderscheid tussen inferieure, normale en luxe goederen, in relatie met de waarde van de inkomenselasticiteit.",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "D1.9",
+    "domein": "D",
+    "domein_title": "Concept markt",
+    "subdomein": "D1",
+    "subdomein_title": "Vraag en Aanbod",
+    "tekst": "Substitueerbaarheid en complementariteit van goederen, in relatie tot de vraag naar een (ander) goed; kruislingse elasticiteit.",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "D1.10",
+    "domein": "D",
+    "domein_title": "Concept markt",
+    "subdomein": "D1",
+    "subdomein_title": "Vraag en Aanbod",
+    "tekst": "De individuele aanbodlijn die het verband weergeeft tussen de aangeboden hoeveelheid van één aanbieder bij uiteenlopende prijzen.",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "D1.11",
+    "domein": "D",
+    "domein_title": "Concept markt",
+    "subdomein": "D1",
+    "subdomein_title": "Vraag en Aanbod",
+    "tekst": "Het verband tussen de individuele aanbodlijn en de collectieve aanbodlijn.",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "D1.12",
+    "domein": "D",
+    "domein_title": "Concept markt",
+    "subdomein": "D1",
+    "subdomein_title": "Vraag en Aanbod",
+    "tekst": "De verschuiving van de collectieve aanbodlijn als gevolg van een verandering van de prijzen van productiefactoren, technische ontwikkeling en aantal aanbieders.",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "D1.13",
+    "domein": "D",
+    "domein_title": "Concept markt",
+    "subdomein": "D1",
+    "subdomein_title": "Vraag en Aanbod",
+    "tekst": "De verschuiving van de collectieve aanbodlijn als gevolg van heffingen of subsidies.",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "D1.14",
+    "domein": "D",
+    "domein_title": "Concept markt",
+    "subdomein": "D1",
+    "subdomein_title": "Vraag en Aanbod",
+    "tekst": "De samenhang tussen prijs (p of GO), afzet (q of Q) en totale opbrengst (omzet, TO).",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "D1.15",
+    "domein": "D",
+    "domein_title": "Concept markt",
+    "subdomein": "D1",
+    "subdomein_title": "Vraag en Aanbod",
+    "tekst": "De betekenis van de prijselasticiteit van de vraag voor de verandering van de totale opbrengst (omzet) bij prijsveranderingen.",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "D1.16",
+    "domein": "D",
+    "domein_title": "Concept markt",
+    "subdomein": "D1",
+    "subdomein_title": "Vraag en Aanbod",
+    "tekst": "De onderverdeling van totale kosten (TK) in vaste/constante kosten (TCK) en variabele kosten (TVK).",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "D1.17",
+    "domein": "D",
+    "domein_title": "Concept markt",
+    "subdomein": "D1",
+    "subdomein_title": "Vraag en Aanbod",
+    "tekst": "Het onderscheid en de samenhang tussen totale, gemiddelde totale (GTK) en marginale kosten (MK).",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "D1.18",
+    "domein": "D",
+    "domein_title": "Concept markt",
+    "subdomein": "D1",
+    "subdomein_title": "Vraag en Aanbod",
+    "tekst": "Het verband tussen de individuele aanbodlijn en het verloop van de marginale kosten(lijn) bij hoeveelheidsaanpassing.",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "D1.19",
+    "domein": "D",
+    "domein_title": "Concept markt",
+    "subdomein": "D1",
+    "subdomein_title": "Vraag en Aanbod",
+    "tekst": "De invloed van het verloop van opbrengst en kosten voor de omvang van de winst, zowel gemiddeld als totaal.",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "D1.20",
+    "domein": "D",
+    "domein_title": "Concept markt",
+    "subdomein": "D1",
+    "subdomein_title": "Vraag en Aanbod",
+    "tekst": "De bepaling van de break-even-afzet bij een gelijkheid van totale / gemiddeld totale kosten en totale / gemiddeld totale opbrengsten",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "D1.21",
+    "domein": "D",
+    "domein_title": "Concept markt",
+    "subdomein": "D1",
+    "subdomein_title": "Vraag en Aanbod",
+    "tekst": "De invloed van marginale opbrengsten en marginale kosten op de (maximale) winst.",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "D1.22",
+    "domein": "D",
+    "domein_title": "Concept markt",
+    "subdomein": "D1",
+    "subdomein_title": "Vraag en Aanbod",
+    "tekst": "De betekenis van de markt als coördinatiemechanisme van vraag en aanbod.",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "D1.23",
+    "domein": "D",
+    "domein_title": "Concept markt",
+    "subdomein": "D1",
+    "subdomein_title": "Vraag en Aanbod",
+    "tekst": "Marktevenwicht als zijnde de gelijkheid van de gevraagde en aangeboden hoeveelheid bij de evenwichtsprijs.",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "D1.24",
+    "domein": "D",
+    "domein_title": "Concept markt",
+    "subdomein": "D1",
+    "subdomein_title": "Vraag en Aanbod",
+    "tekst": "De invloed van veranderingen in vraag en aanbod op de evenwichtsprijs, de evenwichtshoeveelheid en de totale evenwichtsopbrengst (omzet).",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "D2.1",
+    "domein": "D",
+    "domein_title": "Concept markt",
+    "subdomein": "D2",
+    "subdomein_title": "Marktstructuur",
+    "tekst": "Het onderscheid tussen de marktvormen op basis van het aantal marktpartijen, heterogeniteit van de goederen en toetredingsmogelijkheden (1) I Volledige mededinging/ volkomen concurrentie: veel aanbieders, een homogeen goed en vrije toetreding. Marktvormen waarbij sprake is van onvolkomen concurrentie kennen beperkte toetredingsmogelijkheden: II Monopolistische concurrentie: veel aanbieders en heterogene goederen. III Oligopolie: weinig aanbieders en een homogeen goed of heterogene goederen. IV Monopolie: één aanbieder.",
+    "verbs": [
+      "analyseren"
+    ],
+    "implied_bloom": "analyze",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "D2.2",
+    "domein": "D",
+    "domein_title": "Concept markt",
+    "subdomein": "D2",
+    "subdomein_title": "Marktstructuur",
+    "tekst": "Het bepalen van de prijs en afzet die bij volkomen concurrentie, monopolistische concurrentie, oligopolie of monopolie maximale totale winst opleveren.",
+    "verbs": [
+      "analyseren"
+    ],
+    "implied_bloom": "analyze",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "D2.3",
+    "domein": "D",
+    "domein_title": "Concept markt",
+    "subdomein": "D2",
+    "subdomein_title": "Marktstructuur",
+    "tekst": "De mogelijkheden voor en gevolgen van prijsdiscriminatie voor de prijzen, afzet en winst bij monopolie.",
+    "verbs": [
+      "analyseren"
+    ],
+    "implied_bloom": "analyze",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "D3.1",
+    "domein": "D",
+    "domein_title": "Concept markt",
+    "subdomein": "D3",
+    "subdomein_title": "Doelmatigheid en economische politiek",
+    "tekst": "Consumentensurplus als het verschil tussen de marktprijs en de betalingsbereidheid van vragers die bereid zijn meer te betalen dan die marktprijs.",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "D3.2",
+    "domein": "D",
+    "domein_title": "Concept markt",
+    "subdomein": "D3",
+    "subdomein_title": "Doelmatigheid en economische politiek",
+    "tekst": "Producentensurplus als het verschil tussen de marktprijs en de prijs waartegen alle producenten bereid zijn aan te bieden.",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "D3.3",
+    "domein": "D",
+    "domein_title": "Concept markt",
+    "subdomein": "D3",
+    "subdomein_title": "Doelmatigheid en economische politiek",
+    "tekst": "Het totale surplus als de optelsom van het consumentensurplus en het producentensurplus.",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "D3.4",
+    "domein": "D",
+    "domein_title": "Concept markt",
+    "subdomein": "D3",
+    "subdomein_title": "Doelmatigheid en economische politiek",
+    "tekst": "De omvang van het totale surplus als maatstaf voor de economische doelmatigheid van de economische uitkomst.",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "D3.5",
+    "domein": "D",
+    "domein_title": "Concept markt",
+    "subdomein": "D3",
+    "subdomein_title": "Doelmatigheid en economische politiek",
+    "tekst": "Bij een maximaal totaal surplus (som van consumenten- en producentensurplus) is de uitkomst Pareto efficiënt.",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "D3.6",
+    "domein": "D",
+    "domein_title": "Concept markt",
+    "subdomein": "D3",
+    "subdomein_title": "Doelmatigheid en economische politiek",
+    "tekst": "De invloed van marktmacht op de omvang van het totale surplus en het verloren surplus/Harberger-driehoek (dead weight loss).",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "D3.7",
+    "domein": "D",
+    "domein_title": "Concept markt",
+    "subdomein": "D3",
+    "subdomein_title": "Doelmatigheid en economische politiek",
+    "tekst": "De invloed van marktmacht op de verdeling van het totale surplus tussen aanbieders en vragers.",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "D3.8",
+    "domein": "D",
+    "domein_title": "Concept markt",
+    "subdomein": "D3",
+    "subdomein_title": "Doelmatigheid en economische politiek",
+    "tekst": "De manier waarop een monopolist via prijsdiscriminatie een deel van het consumentensurplus kan afromen.",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "D3.9",
+    "domein": "D",
+    "domein_title": "Concept markt",
+    "subdomein": "D3",
+    "subdomein_title": "Doelmatigheid en economische politiek",
+    "tekst": "De invloed van overheidsingrijpen via heffingen of subsidies op het marktresultaat en daardoor op de omvang en de verdeling van het totale surplus.",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "D3.10",
+    "domein": "D",
+    "domein_title": "Concept markt",
+    "subdomein": "D3",
+    "subdomein_title": "Doelmatigheid en economische politiek",
+    "tekst": "De invloed van prijsregulering door middel van minimumprijzen of maximumprijzen op het marktresultaat en daardoor op de omvang en verdeling van het totale surplus.",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "D3.11",
+    "domein": "D",
+    "domein_title": "Concept markt",
+    "subdomein": "D3",
+    "subdomein_title": "Doelmatigheid en economische politiek",
+    "tekst": "Effecten van octrooien/patenten op marktgedrag en marktresultaat.",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "E1.1",
+    "domein": "E",
+    "domein_title": "Concept ruilen over tijd",
+    "subdomein": "E1",
+    "subdomein_title": "Intertemporele ruil",
+    "tekst": "De intertemporele ruil waarbij niet in de tijd samenvallende rendementen vergele- ken worden: afweging tussen individuele prijs van tijd en marktprijs van tijd.",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "E1.2",
+    "domein": "E",
+    "domein_title": "Concept ruilen over tijd",
+    "subdomein": "E1",
+    "subdomein_title": "Intertemporele ruil",
+    "tekst": "Lenen en sparen door deelnemers aan intertemporele ruil als schuiven met koopkracht / bestedingen in de tijd.",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "E1.3",
+    "domein": "E",
+    "domein_title": "Concept ruilen over tijd",
+    "subdomein": "E1",
+    "subdomein_title": "Intertemporele ruil",
+    "tekst": "De keuze om al dan niet vermogen te vragen of aan te bieden met daarbij argumenten als tijdsvoorkeur en risico-aversie.",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "E1.4",
+    "domein": "E",
+    "domein_title": "Concept ruilen over tijd",
+    "subdomein": "E1",
+    "subdomein_title": "Intertemporele ruil",
+    "tekst": "Rente als beloning voor het uitstellen van consumptie (sparen) en het dragen van risico (lenen) en als compensatie voor inflatie; • Verschillende rentes door bijvoorbeeld verschillen in looptijd, risico en liquiditeit. • Rente op bijvoorbeeld staatsobligaties, bedrijfsleningen en consumentenkrediet.",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "E1.5",
+    "domein": "E",
+    "domein_title": "Concept ruilen over tijd",
+    "subdomein": "E1",
+    "subdomein_title": "Intertemporele ruil",
+    "tekst": "Financiële sector en financieel risico • De financiële sector bemiddelt tussen spaarders en investeerders en verschuift risico van mensen/partijen die risico willen afstaan naar mensen/partijen die risico willen dragen • De invloed van risico’s als (dreiging van) wanbetaling en informatieasymmetrie • Het risico omtrent inflatie op het gedrag van aanbieders en/of vragers van vermogen en daarmee op de rente",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "E1.6",
+    "domein": "E",
+    "domein_title": "Concept ruilen over tijd",
+    "subdomein": "E1",
+    "subdomein_title": "Intertemporele ruil",
+    "tekst": "Het onderscheid en de samenhang tussen nominale en reële grootheden.",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "E1.7",
+    "domein": "E",
+    "domein_title": "Concept ruilen over tijd",
+    "subdomein": "E1",
+    "subdomein_title": "Intertemporele ruil",
+    "tekst": "Het belang van investeringen bij de vorming van publiek kapitaal zoals infrastructuur, of privaat kapitaal zoals menselijk kapitaal of kapitaalgoederen van bedrijven.",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "E1.8",
+    "domein": "E",
+    "domein_title": "Concept ruilen over tijd",
+    "subdomein": "E1",
+    "subdomein_title": "Intertemporele ruil",
+    "tekst": "Het verschil tussen voorraad- en stroomgrootheden en hun onderlinge verband.",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "E1.9",
+    "domein": "E",
+    "domein_title": "Concept ruilen over tijd",
+    "subdomein": "E1",
+    "subdomein_title": "Intertemporele ruil",
+    "tekst": "Intertemporele ruil door de overheid vergelijken met een dergelijke ruil in de private sector gelet op de staatsschuld en de bijzondere positie van het overheidstekort als uitgestelde belastingheffing.",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "E1.10",
+    "domein": "E",
+    "domein_title": "Concept ruilen over tijd",
+    "subdomein": "E1",
+    "subdomein_title": "Intertemporele ruil",
+    "tekst": "Belastingspreiding in de tijd als methode om welvaartsverliezen als gevolg van belastingheffing te spreiden in de tijd.",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "E2.1",
+    "domein": "E",
+    "domein_title": "Concept ruilen over tijd",
+    "subdomein": "E2",
+    "subdomein_title": "Registratie intertemporele ruil",
+    "tekst": "De levensloop binnen gezinshuishoudingen en de rol van de overheid met daarbij: - welvaartsvaste- of waardevaste pensioenen / inkomens 1 Omwille van de eenduidigheid worden consumptiehuishoudingen respectievelijk productiehuishoudingen in de specifieke eindtermen aangeduid met de benamingen ‘gezinshoudingen’ respectievelijk ‘bedrijfshuishoudingen’. (Het hedendaags gezin kan samengesteld zijn uit vader, moeder en kinderen, maar een andere samenstelling is ook mogelijk). - het omslagstelsel en het kapitaaldekkingsstelsel als het gaat om de financiering van het pensioen / inkomen - intergenerationele ruil",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "E2.2",
+    "domein": "E",
+    "domein_title": "Concept ruilen over tijd",
+    "subdomein": "E2",
+    "subdomein_title": "Registratie intertemporele ruil",
+    "tekst": "De vermogenspositie van de overheid met daarbij: • de staatsschuld • het begrotingsaldo (tekort/overschot) De eisen van het Stabiliteits- en groeipact zijn: • Het begrotingstekort mag niet boven de 3 procent van het bbp komen • De staatsschuld als percentage van het bbp (staatsschuldquote) mag niet meer dan 60 procent van het bbp bedragen",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "F1.1",
+    "domein": "F",
+    "domein_title": "Concept samenwerken en onderhandelen",
+    "subdomein": "F1",
+    "subdomein_title": "Speltheorie",
+    "tekst": "Het belang van voldoende en van gelijke informatie voor de spelers.",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "F1.2",
+    "domein": "F",
+    "domein_title": "Concept samenwerken en onderhandelen",
+    "subdomein": "F1",
+    "subdomein_title": "Speltheorie",
+    "tekst": "De weergave van het spel in een pay-off matrix of een spelboom (beslisboom).",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "F1.3",
+    "domein": "F",
+    "domein_title": "Concept samenwerken en onderhandelen",
+    "subdomein": "F1",
+    "subdomein_title": "Speltheorie",
+    "tekst": "Het onderscheid tussen een simultaan, een sequentieel spel en een herhaald (simultaan) spel.",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "F1.4",
+    "domein": "F",
+    "domein_title": "Concept samenwerken en onderhandelen",
+    "subdomein": "F1",
+    "subdomein_title": "Speltheorie",
+    "tekst": "Het optreden van een Nash-evenwicht.",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "F1.5",
+    "domein": "F",
+    "domein_title": "Concept samenwerken en onderhandelen",
+    "subdomein": "F1",
+    "subdomein_title": "Speltheorie",
+    "tekst": "Het optreden van een gevangenendilemma waarin sprake is van een dominante strategie voor de spelers met daarbij het suboptimale Nash evenwicht.",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "F1.6",
+    "domein": "F",
+    "domein_title": "Concept samenwerken en onderhandelen",
+    "subdomein": "F1",
+    "subdomein_title": "Speltheorie",
+    "tekst": "Een spelsituatie waarbij niet altijd een dominante strategie aanwezig is.",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "F1.7",
+    "domein": "F",
+    "domein_title": "Concept samenwerken en onderhandelen",
+    "subdomein": "F1",
+    "subdomein_title": "Speltheorie",
+    "tekst": "Zelfbinding als alternatief voor de eigen dominante strategie indien zelfbinding een lagere pay-off oplevert en het effect hiervan op de keuze die één of meerdere spelers gedurende het verdere verloop van het spel maken.",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "F1.8",
+    "domein": "F",
+    "domein_title": "Concept samenwerken en onderhandelen",
+    "subdomein": "F1",
+    "subdomein_title": "Speltheorie",
+    "tekst": "De invloed van sociale normen op de pay-offs in de matrix en het effect hiervan op de keuze die één of meerdere spelers gedurende het verdere verloop van het spel maken.",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "F1.9",
+    "domein": "F",
+    "domein_title": "Concept samenwerken en onderhandelen",
+    "subdomein": "F1",
+    "subdomein_title": "Speltheorie",
+    "tekst": "Het effect van de reputatie die de spelers gedurende het spel hebben opgebouwd op de pay-offs in de matrix gedurende een tijdsperiode en het effect hiervan op de keuze (s) die één of meerdere spelers gedurende het verloop van het spel maken.",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "F1.10",
+    "domein": "F",
+    "domein_title": "Concept samenwerken en onderhandelen",
+    "subdomein": "F1",
+    "subdomein_title": "Speltheorie",
+    "tekst": "De invloed van het herhalen van een simultaan spel op de mogelijke evenwichten.",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "F1.11",
+    "domein": "F",
+    "domein_title": "Concept samenwerken en onderhandelen",
+    "subdomein": "F1",
+    "subdomein_title": "Speltheorie",
+    "tekst": "De invloed van zelfbinding op de geloofwaardigheid van een dreiging, bijvoorbeeld de dreiging van een prijzenoorlog bij toetreding.",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "F1.12",
+    "domein": "F",
+    "domein_title": "Concept samenwerken en onderhandelen",
+    "subdomein": "F1",
+    "subdomein_title": "Speltheorie",
+    "tekst": "De afruil tussen binding en flexibiliteit bij langdurige relaties, bijvoorbeeld arbeidsrelaties, kartelafspraken en internationale handel.",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "F2.1",
+    "domein": "F",
+    "domein_title": "Concept samenwerken en onderhandelen",
+    "subdomein": "F2",
+    "subdomein_title": "Suboptimale situaties",
+    "tekst": "Het optreden van een berovingsprobleem indien er sprake is van verzonken kosten: kosten die al gemaakt zijn en niet kunnen worden teruggedraaid vanwege het specifieke karakter van de investering.",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "F2.2",
+    "domein": "F",
+    "domein_title": "Concept samenwerken en onderhandelen",
+    "subdomein": "F2",
+    "subdomein_title": "Suboptimale situaties",
+    "tekst": "Het optreden van een tegenstelling tussen individueel en collectief belang bij collectieve goederen.",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "F2.3",
+    "domein": "F",
+    "domein_title": "Concept samenwerken en onderhandelen",
+    "subdomein": "F2",
+    "subdomein_title": "Suboptimale situaties",
+    "tekst": "Het optreden van meeliftersgedrag indien er sprake is van een dominante strategie van niet bijdragen aan een collectief goed.",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "F2.4",
+    "domein": "F",
+    "domein_title": "Concept samenwerken en onderhandelen",
+    "subdomein": "F2",
+    "subdomein_title": "Suboptimale situaties",
+    "tekst": "Het optreden en internaliseren van positieve of negatieve externe effecten. Domein G Risico en Informatie verzamelen ten einde onzekerheid te verkleinen. Aangezien de informatie vaak een beperkt karakter zal hebben moeten transactiepartijen een inschatting maken van mogelijke gebeurtenissen (risico) en de mate waarin transactiepartners gebeurtenissen beïnvloeden of informatie achterhouden die relevant is voor het tot stand brengen van een transactie (asymmetrische informatie).",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "G1.1",
+    "domein": "G",
+    "domein_title": "Concept risico en informatie",
+    "subdomein": "G1",
+    "subdomein_title": "Risico",
+    "tekst": "De aard en de omvang van het risico dat ontstaat bij het nemen van een beslissing in een situatie van onzekerheid (onzeker voorval).",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "G1.2",
+    "domein": "G",
+    "domein_title": "Concept risico en informatie",
+    "subdomein": "G1",
+    "subdomein_title": "Risico",
+    "tekst": "Risicoaversie en verschillen daarin tussen transactiepartners.",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "G2.1",
+    "domein": "G",
+    "domein_title": "Concept risico en informatie",
+    "subdomein": "G2",
+    "subdomein_title": "Asymmetrische informatie",
+    "tekst": "Onvolledige informatie leidt in een ruilsituatie tot transactiekosten",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "G2.2",
+    "domein": "G",
+    "domein_title": "Concept risico en informatie",
+    "subdomein": "G2",
+    "subdomein_title": "Asymmetrische informatie",
+    "tekst": "Informatieasymmetrie: informatieachterstand of informatievoorsprong van de ene transactiepartij t.o.v. de andere partij",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "G3.1",
+    "domein": "G",
+    "domein_title": "Concept risico en informatie",
+    "subdomein": "G3",
+    "subdomein_title": "Asymmetrische informatie in bedrijf",
+    "tekst": "De keuze die een ondernemer maakt bij het verkrijgen van vermogen en de functie van onderpand bij het verkrijgen van krediet.",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "G3.2",
+    "domein": "G",
+    "domein_title": "Concept risico en informatie",
+    "subdomein": "G3",
+    "subdomein_title": "Asymmetrische informatie in bedrijf",
+    "tekst": "Principaal-agentrelaties, het risico op averechtse selectie en moral hazard2. Te denken valt aan: • opdrachtgever – opdrachtnemer • vermogensverschaffer(eigendom) – ondernemer(leiding) • kredietgever – kredietnemer Bij een principaal-agentrelatie is er sprake van een principaal, een agent, asymmetrische informatie en tegengestelde belangen.",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "G3.3",
+    "domein": "G",
+    "domein_title": "Concept risico en informatie",
+    "subdomein": "G3",
+    "subdomein_title": "Asymmetrische informatie in bedrijf",
+    "tekst": "Het hanteren van contracten in een principaal-agentrelatie en het inzetten van prikkels.",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "G3.4",
+    "domein": "G",
+    "domein_title": "Concept risico en informatie",
+    "subdomein": "G3",
+    "subdomein_title": "Asymmetrische informatie in bedrijf",
+    "tekst": "De rol van toezichthouders op financiële en op andere markten",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "G4.1",
+    "domein": "G",
+    "domein_title": "Concept risico en informatie",
+    "subdomein": "G4",
+    "subdomein_title": "Risico verzekeren",
+    "tekst": "De betekenis van risicoaversie met betrekking tot het afsluiten van een verzekering.",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "G4.2",
+    "domein": "G",
+    "domein_title": "Concept risico en informatie",
+    "subdomein": "G4",
+    "subdomein_title": "Risico verzekeren",
+    "tekst": "De afweging tussen kosten en risico bij verzekeren door beide transactiepartijen.",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "G4.3",
+    "domein": "G",
+    "domein_title": "Concept risico en informatie",
+    "subdomein": "G4",
+    "subdomein_title": "Risico verzekeren",
+    "tekst": "Het effect dat (verplichte)solidariteit kan hebben op risicomanagement van verzekerden.",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "G4.4",
+    "domein": "G",
+    "domein_title": "Concept risico en informatie",
+    "subdomein": "G4",
+    "subdomein_title": "Risico verzekeren",
+    "tekst": "Averechtse selectie en middelen om dit te beperken: het verplicht voorschrijven van een verzekering; het instellen van een collectieve verzekering",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "G4.5",
+    "domein": "G",
+    "domein_title": "Concept risico en informatie",
+    "subdomein": "G4",
+    "subdomein_title": "Risico verzekeren",
+    "tekst": "Moral hazard en middelen om dit te beperken: bijvoorbeeld eigen risico, bonus- malussysteem.",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "G5.1",
+    "domein": "G",
+    "domein_title": "Concept risico en informatie",
+    "subdomein": "G5",
+    "subdomein_title": "Beleggen",
+    "tekst": "De relatie tussen de hoogte van het risico en het te verwachten rendement bij beleggingen.",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "G5.2",
+    "domein": "G",
+    "domein_title": "Concept risico en informatie",
+    "subdomein": "G5",
+    "subdomein_title": "Beleggen",
+    "tekst": "Het verschil tussen obligaties en aandelen ten aanzien van de mate van risico en het te verwachten rendement.",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "H1.1",
+    "domein": "H",
+    "domein_title": "Concept welvaart en groei",
+    "subdomein": "H1",
+    "subdomein_title": "Macro-economische kringloop",
+    "tekst": "Macro-economische begrippen • Inkomen: de vorming van het bbp (Bruto Binnenlands Product) waarbij de volgende methoden kunnen worden onderscheiden: - Bestedingsmethode: inkomen = consumptie + investeringen + overheidsbestedingen + export – import - Objectieve methode: inkomen = som toegevoegde waarde = totale omzet – totale kosten leveringen van derden - Subjectieve methode: inkomen = arbeidsinkomen (loonsom werknemers + toegerekende lonen zelfstandigen) + kapitaalinkomen (rente, dividend, pacht, huur en winst) + afschrijvingen • Categoriale inkomensverdeling • Loonkosten per eenheid product en de arbeidsinkomensquote (=AIQ) arbeidsinkomen als deel van het nationaal inkomen.",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "H1.2",
+    "domein": "H",
+    "domein_title": "Concept welvaart en groei",
+    "subdomein": "H1",
+    "subdomein_title": "Macro-economische kringloop",
+    "tekst": "De economische kringloop, reëel en financieel • Reële kringloop: Y = C + I + O + E – M • Bestedingen van de een is het inkomen van een ander (evenwicht goederenmarkt) • Financiële kringloop: S = I + (O – B) + (E – M) • De vordering van de een is de verplichting van de ander (evenwicht vermogensmarkt) • In open economie: saldo lopende rekening = nationaal spaarsaldo = particulier spaarsaldo + overheidssaldo • Voor iedere transactie in de reële sfeer (reële kringloop) bestaat er een transactie in de financiële sfeer (financiële kringloop) • Betalingsbalans, lopende rekening (reële transacties met buitenland) en financiële rekening (financiële transacties met buitenland).",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "H2.1",
+    "domein": "H",
+    "domein_title": "Concept welvaart en groei",
+    "subdomein": "H2",
+    "subdomein_title": "Structurele groei",
+    "tekst": "Op lange termijn wordt de economische groei bepaald door de groei van de productiefactoren en technologie (het aanbod) in de economie.",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "H2.2",
+    "domein": "H",
+    "domein_title": "Concept welvaart en groei",
+    "subdomein": "H2",
+    "subdomein_title": "Structurele groei",
+    "tekst": "De productiefunctie: Y = Af(K, L) (1) • f(·): productiefunctie, A: (totale factor) productiviteit, K: kapitaal en land, L: arbeid • Potentiële productie Y stijgt/daalt door meer/minder kapitaal (K hoger/lager), meer/minder arbeid (L hoger/lager), hogere/lagere (totale factor) productiviteit (A hoger/lager) • Positieve maar afnemende meeropbrengsten van kapitaal K en arbeid L • Constante schaalopbrengsten: verdubbeling K en L leidt tot verdubbeling Y",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "H2.3",
+    "domein": "H",
+    "domein_title": "Concept welvaart en groei",
+    "subdomein": "H2",
+    "subdomein_title": "Structurele groei",
+    "tekst": "Factoren die de totale factorproductiviteit bepalen De totale factorproductiviteit stijgt (A hoger) door innovatie (proces- en product-), R&D, learning-by-doing, onderwijs, onderzoek, handel, betere instituties, betere infrastructuur, beter milieu, gunstige geografische ligging politieke stabiliteit; • Onder instituties wordt onder meer verstaan: kwaliteit overheid, eigendomsrechten en rechtsstaat, regels voor eerlijke mededinging.",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "H2.4",
+    "domein": "H",
+    "domein_title": "Concept welvaart en groei",
+    "subdomein": "H2",
+    "subdomein_title": "Structurele groei",
+    "tekst": "Structureel of groeibevorderend beleid: beleid dat A, K, of L verhoogt.",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "H3.1",
+    "domein": "H",
+    "domein_title": "Concept welvaart en groei",
+    "subdomein": "H3",
+    "subdomein_title": "Inkomen, welvaart en welzijn",
+    "tekst": "Welvaart van een huishouden • De (brede) welvaart van een gezinshuishouden is waarde van behoeftebevrediging van schaarse goederen zoals consumptie van goederen en diensten, vrije tijd, milieu, leefomgeving, collectieve goederen, infrastructuur, risico (negatief), ongelijkheid (negatief), veiligheid, overheidspaternalisme.",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "H3.2",
+    "domein": "H",
+    "domein_title": "Concept welvaart en groei",
+    "subdomein": "H3",
+    "subdomein_title": "Inkomen, welvaart en welzijn",
+    "tekst": "Maatschappelijke welvaart • Maatschappelijke (brede) welvaart = een optelsom van (brede) welvaart van alle huishoudens; • Alleen gezinshuishoudens dragen bij aan de maatschappelijke welvaart. Ondernemingen dragen indirect bij aan de welvaart via de winstuitkeringen aan de huishoudens; • Maatschappelijke welvaart houdt politieke waardeoordelen in over ongelijkheid (wiens welvaart weegt het zwaarste in de optelling van welvaart van huishoudens); • De maatschappelijke welvaart kan alleen in geld worden uitgedrukt als alle (materiële en immateriële) maatschappelijke kosten en baten van schaarse goederen, bijvoorbeeld als de baten of kosten van (inkomens)risico, infrastructuur, milieu, leefomgeving en veiligheid in geld kunnen worden uitgedrukt, en welvaartsvergelijking tussen huishoudens mogelijk is; • Verschil tussen welvaart en bbp: het verschil tussen brede maatschappelijke welvaart en de totale waarde van markttransacties.",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "H3.3",
+    "domein": "H",
+    "domein_title": "Concept welvaart en groei",
+    "subdomein": "H3",
+    "subdomein_title": "Inkomen, welvaart en welzijn",
+    "tekst": "Maximale maatschappelijke welvaart is niet gelijk aan Pareto-optimum: maatschappelijke welvaart neemt toe als de maatschappelijke winst van de een groter is dan het maatschappelijke verlies van de ander.",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "H3.4",
+    "domein": "H",
+    "domein_title": "Concept welvaart en groei",
+    "subdomein": "H3",
+    "subdomein_title": "Inkomen, welvaart en welzijn",
+    "tekst": "Welzijn gaat over de behoeftebevrediging ontleend aan schaarse en niet-schaarse goederen en brede welvaart alleen over de behoeftebevrediging ontleend aan schaarse goederen.",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "H3.5",
+    "domein": "H",
+    "domein_title": "Concept welvaart en groei",
+    "subdomein": "H3",
+    "subdomein_title": "Inkomen, welvaart en welzijn",
+    "tekst": "Groen bbp per hoofd: groen bbp = bbp minus geschatte (monetaire) waarde van schade aan milieu plus geschatte (monetaire) waarde van verbetering aan milieu.",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "H4.1",
+    "domein": "H",
+    "domein_title": "Concept welvaart en groei",
+    "subdomein": "H4",
+    "subdomein_title": "Ongelijkheid en herverdeling",
+    "tekst": "Gini-coëfficiënt en percentielenratio als maatstaven voor inkomensongelijkheid.",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "H4.2",
+    "domein": "H",
+    "domein_title": "Concept welvaart en groei",
+    "subdomein": "H4",
+    "subdomein_title": "Ongelijkheid en herverdeling",
+    "tekst": "Maatstaven voor inkomen kunnen verschillen: • huishouden vs. individu • arbeidsinkomen vs. totaal inkomen (inclusief kapitaalinkomen en uitkeringen) • primair en secundair inkomen.",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "H4.3",
+    "domein": "H",
+    "domein_title": "Concept welvaart en groei",
+    "subdomein": "H4",
+    "subdomein_title": "Ongelijkheid en herverdeling",
+    "tekst": "Ongelijkheid van vermogen",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "H4.4",
+    "domein": "H",
+    "domein_title": "Concept welvaart en groei",
+    "subdomein": "H4",
+    "subdomein_title": "Ongelijkheid en herverdeling",
+    "tekst": "Nivelleren en denivelleren: met beleid verkleinen of vergroten van de relatieve inkomensverschillen tussen huishoudens.",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "H4.5",
+    "domein": "H",
+    "domein_title": "Concept welvaart en groei",
+    "subdomein": "H4",
+    "subdomein_title": "Ongelijkheid en herverdeling",
+    "tekst": "Er kan een afruil zijn tussen doelmatigheid en rechtvaardigheid als herverdeling van inkomen en vermogen leidt tot minder prikkels voor economische activiteiten, bijvoorbeeld om te werken (uren, participatie, uittreding), te sparen, te scholen, te ondernemen, en tot meer prikkels om te migreren of belasting te ontwijken. Deze afruil hoeft niet op te treden als herverdeling niet leidt tot minder sterke prikkels voor economische activiteiten (via bijvoorbeeld onderwijs, kinderopvang, sociale zekerheid).",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "H4.6",
+    "domein": "H",
+    "domein_title": "Concept welvaart en groei",
+    "subdomein": "H4",
+    "subdomein_title": "Ongelijkheid en herverdeling",
+    "tekst": "Belasting • Gemiddeld en marginaal tarief • Belastingwig • Progressief /degressief belastingstelsel: gemiddeld tarief stijgt /daalt met inkomen • Vlaktaks: 1 marginaal tarief • Belasting op inkomen uit arbeid • Belasting op vermogen • Heffingskortingen • Aftrekposten en bijtellingen • Vennootschapsbelasting • Indirecte belastingen, zoals de btw en de accijnzen",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "H4.7",
+    "domein": "H",
+    "domein_title": "Concept welvaart en groei",
+    "subdomein": "H4",
+    "subdomein_title": "Ongelijkheid en herverdeling",
+    "tekst": "Uitkeringen en toeslagen als instrumenten voor herverdeling en verzekering.",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "H5.1",
+    "domein": "H",
+    "domein_title": "Concept welvaart en groei",
+    "subdomein": "H5",
+    "subdomein_title": "Arbeidsmarkt en werkloosheid",
+    "tekst": "Begrippen voor de beschrijving van de arbeidsmarkt • Arbeidsaanbod (= beroepsbevolking) • Arbeidsvraag (werkgelegenheid + openstaande vacatures) • Werkloosheid • Vacatures • Loonontwikkeling • Flexwerk en zzp",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "H5.2",
+    "domein": "H",
+    "domein_title": "Concept welvaart en groei",
+    "subdomein": "H5",
+    "subdomein_title": "Arbeidsmarkt en werkloosheid",
+    "tekst": "Verschillende soorten werkloosheid • Structurele werkloosheid, waaronder frictiewerkloosheid • Conjuncturele werkloosheid",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "H5.3",
+    "domein": "H",
+    "domein_title": "Concept welvaart en groei",
+    "subdomein": "H5",
+    "subdomein_title": "Arbeidsmarkt en werkloosheid",
+    "tekst": "Verklaringen structurele en frictiewerkloosheid",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "I1.1",
+    "domein": "I",
+    "domein_title": "Concept goede tijden, slechte tijden",
+    "subdomein": "I1",
+    "subdomein_title": "Conjunctuur",
+    "tekst": "Begrippen voor de beschrijving van de conjunctuur • Bbp-groei & niveau • Output gap = feitelijke productie (= Y) – potentiële productie (= Y*) • Werkloosheid en werkgelegenheid • Inflatie en prijspeil (consumentenprijsindex) • Nominale rente centrale bank • Reële rente",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "I1.2",
+    "domein": "I",
+    "domein_title": "Concept goede tijden, slechte tijden",
+    "subdomein": "I1",
+    "subdomein_title": "Conjunctuur",
+    "tekst": "Conjunctuur, output gap en werkloosheid • Structureel aanbod op lange termijn = potentiële productie Y* • Geaggregeerde vraag = feitelijke productie Y • Natuurlijke werkloosheid: structurele werkloosheid die hoort bij potentiële productie en constante inflatie • Hoogconjunctuur: overbesteding, output gap > 0, werkloosheid < structurele werkloosheid • Laagconjunctuur: onderbesteding, output gap < 0, werkloosheid > structurele werkloosheid",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "I1.3",
+    "domein": "I",
+    "domein_title": "Concept goede tijden, slechte tijden",
+    "subdomein": "I1",
+    "subdomein_title": "Conjunctuur",
+    "tekst": "Conjunctuur en welvaart • Schommelingen in de inflatie, het inkomen en werkloosheid veroorzaken welvaartsverliezen",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "I1.4",
+    "domein": "I",
+    "domein_title": "Concept goede tijden, slechte tijden",
+    "subdomein": "I1",
+    "subdomein_title": "Conjunctuur",
+    "tekst": "Reële versus nominale grootheden • Koopkracht en inflatie • De relatie tussen het prijsindexcijfer, koopkracht en inflatie/deflatie • Reële rente = (1 + nominale rente)/(1 + verwachte inflatie) – 1 • Geldillusie: mensen verwarren reële en nominale grootheden",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "I1.5",
+    "domein": "I",
+    "domein_title": "Concept goede tijden, slechte tijden",
+    "subdomein": "I1",
+    "subdomein_title": "Conjunctuur",
+    "tekst": "Conjunctuurpolitiek • Het beïnvloeden van de conjunctuur door middel van monetair of begrotingsbeleid • Timing en dosering van actieve begrotingspolitiek en monetair beleid",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "I2.1",
+    "domein": "I",
+    "domein_title": "Concept goede tijden, slechte tijden",
+    "subdomein": "I2",
+    "subdomein_title": "Begrotingsbeleid",
+    "tekst": "Anticyclisch / procyclisch begrotingsbeleid: stimulerend / verkrappend begrotingsbeleid (hogere uitgaven of lagere belastingen) bij laagconjunctuur en verkrappend / stimulerend begrotingsbeleid bij hoogconjunctuur",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "I2.2",
+    "domein": "I",
+    "domein_title": "Concept goede tijden, slechte tijden",
+    "subdomein": "I2",
+    "subdomein_title": "Begrotingsbeleid",
+    "tekst": "Automatische stabilisatoren bij hoogconjunctuur en laagconjunctuur: sociale uitkeringen en belastingen",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "I2.3",
+    "domein": "I",
+    "domein_title": "Concept goede tijden, slechte tijden",
+    "subdomein": "I2",
+    "subdomein_title": "Begrotingsbeleid",
+    "tekst": "Inverdieneffecten bij het begrotingsbeleid zijn de hogere belastinginkomsten en lagere uitgaven aan uitkeringen doordat economie wordt gestimuleerd. Omgekeerde geldt bij uitverdieneffecten I.3 Monetair beleid en de centrale bank 3.1 De Europese Centrale Bank (ECB) voert monetair beleid en houdt financieel toezicht. 3.2 De geldhoeveelheid: geld in handen van publiek in omloop • M1 als maatstaf van de maatschappelijke geldhoeveelheid 3.3 Doelstelling monetair beleid centrale bank • Enkelvoudig mandaat: prijsstabiliteit (ECB) • Duaal mandaat: prijsstabiliteit en economische groei (bijvoorbeeld FED) 3.4 Geldschepping • Proces van geldschepping via simultane kredietverlening en creatie van bankdeposito’s en vice versa voor geldvernietiging • Hogere rente centrale bank remt kredietverlening en creatie deposito’s af en vertraagt de geldgroei omdat de financieringskosten van banken toenemen. 3.5 Monetair beleid (rentebeleid) • De rente van de centrale bank (ECB: refi-rente) bepaalt uiteindelijk de geldhoeveelheid: een hogere (lagere) rente leidt tot minder (meer) kredietverlening door banken en dus een lagere (hogere) geldhoeveelheid; • De Centrale Bank bereikt de aangekondigde rente door interventies op de geldmarkt. 3.6 Effectieve ondergrens nominale rente • Zodra de nominale rente negatief wordt, ontstaan er prikkels om vermogen contant aan te houden; • In een geldeconomie kan de rente op spaargeld en overheidsobligaties enigszins negatief worden want het aanhouden van veel kasgeld is onpraktisch en kostbaar. 3.7 Banken en financieel toezicht • Een bankrun kan ontstaan doordat de langlopende bezittingen van een bank niet op korte termijn kunnen worden verkocht om aan de kortlopende verplichtingen te voldoen; • Depositogarantiestelsel vermindert de kans op bankruns; • De ECB treedt op als lener-in-laatste-instantie aan banken. 3.8 Rente, wisselkoersen en kapitaalverkeer • Wisselkoers: prijs van een munt in termen van een andere munt (bijvoorbeeld euro per dollar); • Internationale concurrentiepositie van een land hangt af van buitenlands prijspeil ten opzichte van binnenlands prijspeil en de wisselkoers; • Depreciatie/appreciatie van de munt leidt tot toename/afname van het saldo op de lopende rekening en een toename/afname van het saldo op de financiële rekening; • Een hogere/lagere nominale rente leidt tot appreciatie/depreciatie van de munt door een hogere/lagere kapitaalinvoer; • Wisselkoersregimes: vaste en zwevende wisselkoersen; • Bij vaste wisselkoersen en vrij kapitaalverkeer kan de Centrale Bank geen onafhankelijke rentepolitiek voeren: als de centrale bank de rente verhoogt, leidt dat tot een kapitaalinstroom uit het buitenland, waardoor de wisselkoers apprecieert; • Trilemma monetair beleid: maar twee van de volgende drie kunnen worden gekozen o vrij kapitaalverkeer o zelfstandig monetair beleid o vaste wisselkoers. 3.9 EMU • Een muntunie heeft als voordeel dat wisselkoersschommelingen worden voorkomen waardoor financiële stabiliteit kan worden bevorderd; • Een muntunie heeft als nadeel dat economieën in de muntunie niet meer schokken kunnen opvangen via aanpassing van de wisselkoers waardoor de conjunctuurbeweging wordt versterkt; • Theorie optimale valutagebieden: bij afwezigheid van wisselkoers is alternatief aanpassingsmechanisme nodig via prijzen, lonen, migratie of inkomensoverdrachten (transfers).",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "I4.1",
+    "domein": "I",
+    "domein_title": "Concept goede tijden, slechte tijden",
+    "subdomein": "I4",
+    "subdomein_title": "Conjunctuuranalyse aan de hand van IS-MB-GA-model voor een gesloten",
+    "tekst": "Het Keynesiaanse kruis • De consumptie stijgt als het besteedbaar inkomen toeneemt en als de autonome consumptie toeneemt; • De investeringen zijn autonoom; • Het Keynesiaanse kruis geeft het evenwicht tussen de bestedingen en het inkomen bij gegeven rente en inflatie; • De bestedingen van de een zijn het inkomen van een ander: de totale bestedingen nemen toe/af als het inkomen stijgt/daalt (ceteris paribus); • Mechanisme: inkomen Y past zich aan om evenwicht te geven op de goederenmarkt; • Consumentenvertrouwen en producentenvertrouwen, optimisme/ pessimisme (‘animal spirits’): hogere/ lagere autonome consumptie of investeringen; o Bij ieder inkomen willen huishoudens of bedrijven meer/minder consumeren of investeren; • Hogere/lagere overheidsuitgaven O of lagere/hogere belastingen B verhogen/verlagen bestedingen waardoor een hoger/lager inkomen wordt bereikt (en vice versa); • Als de goederenmarkt in evenwicht is, dan is de vermogensmarkt automatisch ook in evenwicht; o Uit de kringloop (bij gesloten economie) volgt dat aanbod gelijk is aan de vraag op de vermogensmarkt: S = I + (O – B); • Een hogere / lagere marginale consumptiequote (= lagere / hogere marginale spaarquote) zorgt ervoor dat een steilere (vlakkere) helling van de bestedingslijn steiler / vlakker wordt, waardoor de effecten van hogere bestedingen op het inkomen (multipliers) groter /kleiner zijn en vice versa; • De grootte van de multiplier hangt af van het spaarlek en het belastinglek.",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "I4.2",
+    "domein": "I",
+    "domein_title": "Concept goede tijden, slechte tijden",
+    "subdomein": "I4",
+    "subdomein_title": "Conjunctuuranalyse aan de hand van IS-MB-GA-model voor een gesloten",
+    "tekst": "IS-curve • De IS-curve geeft de combinaties van inkomen en reële rente waarbij de goederenmarkt in evenwicht is: productie = bestedingen. Op de horizontale as staat het inkomen en op de verticale as de reële rente. De IS-curve geeft een dalend verband weer tussen de rente en het inkomen; • Mechanisme voor dalend verband: de consumptie en de investeringen stijgen/dalen als de reële rente daalt/stijgt; • Stijging/daling van autonome bestedingen (bijvoorbeeld door lagere autonome consumptie of investeringen of stimulerend/verkrappend begrotingsbeleid) leidt tot een hoger/lager inkomen. De IS-curve schuift naar rechts/links, want bij iedere reële rente zal het inkomen hoger/lager zijn om evenwicht op de goederenmarkt te realiseren.",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "I4.3",
+    "domein": "I",
+    "domein_title": "Concept goede tijden, slechte tijden",
+    "subdomein": "I4",
+    "subdomein_title": "Conjunctuuranalyse aan de hand van IS-MB-GA-model voor een gesloten",
+    "tekst": "MB-curve • De MB-curve geeft de monetaire beleidsregel van de Centrale Bank. Op de horizontale as staat het inkomen en op de verticale as de reële rente. De MB-curve geeft een horizontaal verband tussen de reële rente r en het inkomen Y; • De centrale bank voert een ruimer/krapper monetair beleid (heeft een hogere/lagere inflatiedoelstelling) als het een lagere/hogere rente zet bij ieder inkomen Y; • Monetaire beleidsregel centrale bank: de reële rente gaat omhoog/omlaag (MB-curve schuift omhoog/omlaag) als inflatie stijgt/daalt; • Mechanisme: de Centrale Bank verhoogt/verlaagt de nominale rente als de inflatie stijgt/daalt. Bij gegeven inflatieverwachtingen betekent dit dat de reële rente stijgt/daalt; • Bij een sterkere afkeer van inflatie zal de Centrale Bank de nominale rente meer aanpassen als de inflatie stijgt/daalt (en zal de MB-curve meer omhoog/omlaag verschuiven).",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "I4.4",
+    "domein": "I",
+    "domein_title": "Concept goede tijden, slechte tijden",
+    "subdomein": "I4",
+    "subdomein_title": "Conjunctuuranalyse aan de hand van IS-MB-GA-model voor een gesloten",
+    "tekst": "GA-curve • De GA-curve geeft het geaggregeerde aanbod van goederen en diensten bij ieder inflatieniveau. De GA-curve is stijgend in de inflatie. Op de horizontale as staat het inkomen en op de verticale as de inflatie. Punt op de GA-curve waarbij Y = Y* geeft de verwachte inflatie weer; • Hoe groter/kleiner de mate van loon- en prijsflexibiliteit is, hoe steiler/vlakker de helling van de GA-curve; • Mechanisme: GA is stijgend door loon- en prijsrigiditeit. Bij een hogere/lagere dan verwachte inflatie dalen/stijgen de reële lonen en de reële productiekosten omdat nominale lonen en inkoopprijzen op de korte termijn zijn vastgelegd in contracten. Bij lagere/hogere reële productiekosten zullen bedrijven meer/minder produceren; • Mechanisme achter verschuiving curve over de tijd: Aanpassingen van KT naar LT-evenwicht verlopen via de aanpassing van de verwachte inflatie over de tijd. Als de inflatie stijgt /daalt, zal de inflatieverwachting ook toenemen/afnemen, waardoor lonen en inkoopprijzen opnieuw worden onderhandeld op basis van de hogere/lagere inflatieverwachtingen. De GA- curve schuift dan omhoog/omlaag over de tijd.",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "I4.5",
+    "domein": "I",
+    "domein_title": "Concept goede tijden, slechte tijden",
+    "subdomein": "I4",
+    "subdomein_title": "Conjunctuuranalyse aan de hand van IS-MB-GA-model voor een gesloten",
+    "tekst": "Conjuncturele werkloosheid • Conjuncturele werkloosheid treedt op bij een negatieve output gap en neemt toe als de output gap negatiever wordt.",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "I4.6",
+    "domein": "I",
+    "domein_title": "Concept goede tijden, slechte tijden",
+    "subdomein": "I4",
+    "subdomein_title": "Conjunctuuranalyse aan de hand van IS-MB-GA-model voor een gesloten",
+    "tekst": "Economische scholen en IS-MB-GA • Keynesianen: begrotingsbeleid is krachtig, monetair beleid is zwak; o IS-curve is steil: bestedingen reageren weinig op de renteveranderingen; o MB verschuift weinig: centrale bank verhoogt rente weinig bij stijgende inflatie. • Monetaristen: begrotingsbeleid is zwak, monetair beleid is sterk; o IS-curve is vlak: bestedingen reageren sterk op de rente; o MB verschuift veel: centrale bank verhoogt rente sterk bij stijgende inflatie. • Keynesianen en monetaristen: er is geen perfecte loon- en prijsflexibiliteit waardoor GA-curve niet verticaal is. Op korte termijn is Y niet gelijk aan potentiële productie Y*. • Neo- en Nieuw klassieken: er is sprake van perfecte loon- en prijsflexibiliteit. GA is verticaal en Y is gelijk aan potentiële productie Y*. Hierdoor is vraagstimulering (budgettair en monetair) niet effectief: geen effect op inkomen, alleen effect op inflatie. 4 HET CENTRAAL EXAMEN Zittingsduur centraal examen: Raadpleeg hiervoor Examenblad.nl. Vakspecifieke regels correctievoorschrift Voor de examens economie is de volgende regel aan de algemene regels toegevoegd: Voor rekenfouten worden geen punten afgetrokken. Wanneer echter de kandidaat bij een berekening kennelijk verzuimd heeft door schatting controle op het antwoord uit te oefenen, wordt voor deze fouten één punt afgetrokken tot een maximum van drie punten voor het hele examen. De vakinhoudelijke argumenten, op grond waarvan aan een antwoord dat niet in het antwoordmodel voorkomt scorepunten worden toegekend (algemene regel 3.3 in het correctievoorschrift), moeten voor het vak economie afkomstig zijn uit gezaghebbende, wetenschappelijk verantwoorde publicaties. Toegestane hulpmiddelen Raadpleeg hiervoor Examenblad.nl, grafische rekenmachine niet! Septembermededeling en Maartmededeling Voorafgaand aan het Centraal Examen in 2022 kunnen er nog mededelingen over dit examen gedaan worden in de septembermededeling (2021) en de maartmededeling (2022). Deze worden gepubliceerd op Examenblad.nl. BIJLAGE 1 EXAMENPROGRAMMA ECONOMIE VWO Het eindexamen bestaat uit het centraal examen en het schoolexamen. Het examenprogramma bestaat uit de volgende domeinen: Domein A Vaardigheden Domein B Concept Schaarste Domein C Concept Ruil Domein D Concept Markt Domein E Concept Ruilen over de tijd Domein F Concept Samenwerken en onderhandelen Domein G Concept Risico en informatie Domein H Concept Welvaart en groei Domein I Concept Goede tijden, slechte tijden Domein J Onderzoek en experiment Domein K Keuzeonderwerpen Het centraal examen: Het centraal examen heeft betrekking op de domeinen D, E, F, G, H, I, in combinatie met domein A. Het schoolexamen: Het schoolexamen heeft betrekking op domein B, C, J en K, in combinatie met domein A en: – indien het bevoegd gezag daarvoor kiest: een of meer domeinen of subdomeinen waarop het centraal examen betrekking heeft; – indien het bevoegd gezag daarvoor kiest: andere vakonderdelen, die per kandidaat kunnen verschillen. Beschrijving van de domeinen: Domein A Vaardigheden Domein B Concept schaarste tot het maken van keuzes. Domein C Concept ruil middelen en een optimale benutting van comparatieve voordelen. Voorts kan de kandidaat analyseren dat ruil arbeidsdeling mogelijk maakt en op welke manier geld het ruilproces soepeler laat verlopen. Domein D Concept markt de markt. Prijsvorming is het coördinatiemechanisme waarmee vraag en aanbod op elkaar worden afgestemd. De manier waarop prijsvorming plaatsvindt is afhankelijk van de marktstructuur (marktvormen) en heeft gevolgen voor toetreding, welvaart en economische politiek. Domein E Concept ruilen over de tijd De kandidaat kan, binnen de contexten van gezinshuishoudingen, bedrijfshuishoudingen en overheidshuishoudingen, analyseren dat ruil niet alleen op één moment in de tijd plaatsvindt, maar ook over de tijd. De prijs die deze intertemporele ruil coördineert is de rente. Domein F Concept samenwerken en onderhandelen samenwerken en onderhandelen meer oplevert voor (markt)partijen dan vertrouwen op individuele acties. Centralisatie, waarbij (collectieve) dwang het middel is om acties tot stand te brengen, kan een alternatief coördinatiemechanisme zijn voor keuzes. Domein G Concept risico en informatie verzamelen ten einde onzekerheid te verkleinen. Aangezien de informatie vaak een beperkt karakter zal hebben moeten transactiepartijen een inschatting maken van mogelijke gebeurtenissen (risico) en de mate waarin transactiepartners gebeurtenissen beïnvloeden of informatie achterhouden die relevant is voor het tot stand brengen van een transactie (asymmetrische informatie). Domein H Concept welvaart en groei economische groei en van de verdeling van inkomen en welvaart. Keuzes op microniveau werken door op macroniveau in elke economie die gekenmerkt wordt door wederzijds afhankelijke markten. Domein I Concept goede tijden, slechte tijden economische activiteiten en welke mogelijkheden en grenzen er zijn voor conjunctuurbeleid. Markten laten zich niet gemakkelijk reguleren mede door toedoen van rigiditeiten. Domein J Onderzoek en experiment ‘economische kijk’ op maatschappelijke verschijnselen en van strategisch inzicht. De kandidaat kan analyseren welke grenzen aan de verklaringskracht van theoretische concepten gesteld kunnen worden. Domein K Keuzeonderwerpen De kandidaat kiest ten minste twee keuzeonderwerpen om deze analyse uit te voeren. BIJLAGE 2 DE FUNCTIE VAN (VERPLICHTE) CONTEXTEN IN HET CE In deze bijlage wordt toegelicht wat de functie is van contexten in het kader van een centraal examen. 1. Kennistransfer naar nieuwe contexten Leerlingen moeten laten zien dat zij in staat zijn één of meerdere concepten te hanteren om een context te beschrijven en te analyseren. Kennis over de contexten mag van de leerlingen niet verwacht worden. De te toetsen kennis bestaat daarom uit de conceptuele begrippen en verbanden uit de zes domeinen (D tot en met I) in combinatie met de vaardigheden uit domein A. Centrale examenopgaven dienen aan te sturen op transfer van conceptuele kennis naar andere contexten dan die de kandidaat al is tegengekomen tijdens het curriculum. De kandidaat moet daarbij aantonen te kunnen redeneren binnen een vast kader. Een voorbeeld van een poging van de examenmakers om kennistransfer te activeren is opgave 3 van het pilotexamen vwo 2010 tijdvak 2 (Liever zelfstandig). Hier is het concept risico en informatie aan de orde in een andere context (de arbeidsmarkt) dan waarin leerlingen dit meestal aantreffen (verzekeren). Dergelijke opgaven voorzien de kandidaat (of de docent die de kandidaat op het examen voorbereidt) van de nodige aanvullende informatie over de context. Dat levert een centraal examen met ‘casus-achtige’ opgaven op waarbij een beroep wordt gedaan op het verwerken van informatie. 2. Contexten en verplichte contexten Een context is een voor een kandidaat herkenbare situatie of gebeurtenis waarin economische concepten een rol spelen. Teulings II stelt dat bepaalde contexten zoals de arbeidsmarkt en de sociale zekerheid dermate essentieel zijn voor een goed begrip van economie dat ze in een examenprogramma niet mogen ontbreken. Teulings II heeft deze contexten dan ook verplicht gesteld. Deze verplichting is in de syllabus niet vertaald in een verplichte opname van deze contexten in het centraal examen. Dat kan ook niet omdat in de wettekst van het examenprogramma de verplichte contexten niet zijn vermeld als onderdeel van de stof voor het centraal examen. Zie ook bijlage 1. Het idee van een verplichte context moet als volgt gezien worden: ‘een verplichte context moet in het curriculum in ieder geval aan de orde komen’. De verplichte contexten kunnen met meerdere (onderdelen van) concepten geanalyseerd worden. Teulings II heeft elke verplichte context ondergebracht bij één van de domeinen C tot en met I. In feite is dit niet in overeenstemming met de gedachte van transfer van conceptuele kennis naar andere / meerdere contexten. Daarom waren in de gereviseerde syllabus economie havo 2012 de voorbeeldmatige omschrijvingen van de verplichte contexten uit de werkversie syllabus (2007) ontkoppeld van een specifiek domein. Ze werden als geheel opgenomen in een aparte bijlage. In deze bijgestelde syllabus vwo worden geen omschrijvingen meer opgenomen van verplichte contexten, omdat verplichte contexten geen centrale examenstof zijn. Als zodanig horen ze dus ook niet thuis in een syllabus die een nadere uitwerking biedt van het CE-gedeelte van het examenprogramma. Het wel opnemen van enige vorm van uitwerking zou de suggestie kunnen wekken dat deze verplichte contexten een uitbreiding vormen van de CE-stof. Dat is niet het geval.",
+    "verbs": [
+      "toepassen",
+      "herkennen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  }
+]

@@ -15,6 +15,8 @@ const {
   computeLayers,
   buildJsonEntry,
   sortUnits,
+  loadTerminology,
+  loadEindtermen,
 } = require('./build-unit-index');
 const { formatEntry } = require('./unit-add');
 
@@ -44,7 +46,10 @@ function rebuildMarkdown(preamble, units) {
 function saveCatalog({ preamble, units }) {
   const newContent = rebuildMarkdown(preamble, units);
   const nextUnits = parseMarkdown(newContent);
-  const { errors, byId } = validate(nextUnits, {});
+  const { errors, byId } = validate(nextUnits, {
+    terms: loadTerminology(),
+    eindtermen: loadEindtermen(),
+  });
   if (errors.length) {
     const err = new Error('validation failed');
     err.errors = errors;

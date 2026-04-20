@@ -355,6 +355,8 @@ module.exports = {
   computeLayers,
   buildJsonEntry,
   sortUnits,
+  loadTerminology,
+  loadEindtermen,
   CATEGORY,
   BLOOM_LEVELS,
   PRIOR_LEARNING,

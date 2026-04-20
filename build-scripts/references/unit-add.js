@@ -24,6 +24,8 @@ const {
   computeLayers,
   buildJsonEntry,
   sortUnits,
+  loadTerminology,
+  loadEindtermen,
   BLOOM_LEVELS,
   PRIOR_LEARNING,
   APPLY_OR_HIGHER,
@@ -192,7 +194,10 @@ function main() {
 
   // Full catalog validation (would-be state, without writing yet)
   const nextUnits = parseMarkdown(next);
-  const { errors } = validate(nextUnits, {});
+  const { errors } = validate(nextUnits, {
+    terms: loadTerminology(),
+    eindtermen: loadEindtermen(),
+  });
   if (errors.length) {
     for (const e of errors) console.error('CATALOG  ' + e);
     console.error(`\n${errors.length} validation error(s). Markdown NOT written.`);
