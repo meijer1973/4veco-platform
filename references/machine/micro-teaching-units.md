@@ -110,6 +110,8 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 <!-- STATS LINE -->
 *144 live units as of 2026-04-20 — A=37, D=30, E=6, F=15, G=11, H=26, I=19.*
 
+*144 live units as of 2026-04-20 — A=37, D=30, E=6, F=15, G=11, H=26, I=19.*
+
 
 *B/C/J/K are still empty by design — they cover school-exam domains that no exercise has yet driven a unit mint for. Units appear when exercises demand them (see `knowledge/micro-teaching-units-plan.md` §9).*
 
@@ -609,11 +611,16 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 
 ### D01 Accijnsopbrengst uit grafiek
 - kern: "Bepaal accijnsopbrengst door verhandelde hoeveelheid na belasting met belastingbedrag te vermenigvuldigen."
-- needs: []
+- needs: [D05]
 - mastery_target: apply
 - prior_learning: new_this_year
 - aspects: [grafisch, verbaal]
-- terms: []
+- terms: [heffingen]
+- procedure:
+  1. Lees de verhandelde hoeveelheid na heffing (Q_na) af op de horizontale as
+  2. Lees het belastingbedrag per eenheid (t) af als verticale afstand tussen aanbod-met-heffing en oorspronkelijk aanbod
+  3. Bereken accijnsopbrengst = t × Q_na
+  4. Controleer de eenheid (bijvoorbeeld euro's per periode)
 
 ### D02 Constante kosten en winst
 - kern: "Constante kosten beïnvloeden break-even analyse maar niet het MO = MK optimum."
@@ -625,12 +632,18 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 
 ### D03 Consumentensurplus en accijns
 - kern: "Accijns verhoogt prijs, consumenten betalen meer, consumentensurplus daalt."
-- needs: []
+- needs: [D05, A30]
 - exam_codes: [D3.1]
 - mastery_target: apply
 - prior_learning: new_this_year
 - aspects: [verbaal]
 - terms: [consumentensurplus]
+- procedure:
+  1. Bepaal het oorspronkelijke consumentensurplus (CS_voor) als driehoek boven P* tot Pmax (zoals in A30)
+  2. Bereken het nieuwe marktevenwicht na heffing (zoals in D05): nieuwe prijs P_na
+  3. Bepaal het nieuwe consumentensurplus (CS_na) boven P_na
+  4. Bereken de afname: ΔCS = CS_voor − CS_na
+  5. Interpreteer wie het surplusverlies draagt
 
 ### D04 Elasticiteit en goederenclassificatie
 - kern: "Gebruik inkomenselasticiteit om goederen te classificeren als inferieur, normaal of luxe."
@@ -642,14 +655,20 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 
 ### D05 Evenwicht bij accijns
 - kern: "Bereken nieuw evenwicht en accijnsopbrengst na invoering van een heffing."
-- needs: []
+- needs: [A23]
 - mastery_target: apply
 - prior_learning: new_this_year
 - aspects: [rekenen]
-- terms: []
+- terms: [marktevenwicht, heffingen]
+- procedure:
+  1. Schrijf de aanbodfunctie om naar P als functie van Q
+  2. Verhoog de prijsterm met het heffingsbedrag t: P_aanbod_nieuw = P_aanbod_oud + t
+  3. Schrijf terug naar Q als functie van P en stel gelijk aan de vraagfunctie (zoals in A06)
+  4. Los op naar P* (nieuwe evenwichtsprijs) en bereken Q* (nieuwe evenwichtshoeveelheid)
+  5. Bereken accijnsopbrengst = t × Q*
 
-### D06 Gasverbruik en prijselasticiteit
-- kern: "Analyseer hoe prijselasticiteit van de vraag naar gas zich vertaalt in reactie op energieprijsstijgingen."
+### D06 Vraagreactie via prijselasticiteit interpreteren
+- kern: "Gebruik de prijselasticiteit van de vraag (Ev) om te voorspellen hoe Qv reageert op een prijsverandering en verklaar het resultaat in context."
 - needs: []
 - exam_codes: [D1.3]
 - mastery_target: understand
@@ -659,21 +678,27 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 
 ### D07 Heffing doorberekenen in prijs
 - kern: "Bereken welk percentage van een heffing wordt doorberekend in de consumentenprijs via evenwichtsanalyse."
-- needs: []
+- needs: [D05, A15]
 - exam_codes: [D1.4a]
 - mastery_target: apply
 - prior_learning: new_this_year
 - aspects: [rekenen]
-- terms: []
+- terms: [heffingen, evenwichtsprijs]
+- procedure:
+  1. Bepaal de evenwichtsprijs zonder heffing (P0)
+  2. Bereken het nieuwe evenwicht met heffing t (zoals in D05): consumentenprijs Pc en producentenprijs Pp = Pc − t
+  3. Bereken doorberekening aan consument = (Pc − P0) / t × 100%
+  4. Het restant (100% − dit percentage) komt ten laste van de producent
+  5. Leg uit hoe de elasticiteit van vraag en aanbod de verdeling bepaalt
 
 ### D08 Heffing tegen overconsumptie
 - kern: "Analyseer of een heffing overconsumptie tegengaat via veranderde vraag."
-- needs: []
+- needs: [A15]
 - exam_codes: [D1.4a]
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: []
+- terms: [heffingen]
 
 ### D09 Homogene en heterogene goederen
 - kern: "Homogene goederen zijn identiek; heterogene goederen verschillen in kwaliteit of kenmerken."
@@ -684,45 +709,57 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - aspects: [verbaal]
 - terms: []
 
-### D10 Huizenmarkt in laagconjunctuur
-- kern: "Analyseer effecten van laagconjunctuur op huiskoopprijzen via vraag en aanbod."
+### D10 Vraag/aanbod-verschuiving bij conjunctuurschok
+- kern: "Analyseer hoe een conjunctuurschok de collectieve vraaglijn of aanbodlijn verschuift en wat dit doet met evenwichtsprijs en -hoeveelheid."
 - needs: []
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: []
+- terms: [collectieve vraaglijn, collectieve aanbodlijn]
 
-### D11 Inkomenselasticiteit huurmarkt
-- kern: "Bereken en interpreteer inkomenselasticiteit van huurwoningen."
-- needs: []
+### D11 Inkomenselasticiteit berekenen en interpreteren
+- kern: "Bereken Ei uit twee waarnemingen en interpreteer de uitkomst in de context van het goed."
+- needs: [A17]
 - mastery_target: apply
 - prior_learning: new_this_year
 - aspects: [rekenen, verbaal]
 - terms: [inkomenselasticiteit]
+- procedure:
+  1. Bepaal Q voor en na de inkomensverandering (Q1, Q2) en het inkomen (Y1, Y2)
+  2. Bereken %ΔQ = (Q2 − Q1) / Q1 × 100% en %ΔY = (Y2 − Y1) / Y1 × 100%
+  3. Bereken Ei = %ΔQ / %ΔY
+  4. Classificeer: Ei < 0 inferieur, 0 < Ei < 1 normaal, Ei > 1 luxe
+  5. Verwoord de interpretatie voor de context (bijvoorbeeld huurwoningen)
 
 ### D12 Kruiselasticiteit en substituten
 - kern: "Bepaal uit kruiselasticiteit of goederen substituten zijn en analyseer vraagverschuivingen."
-- needs: []
+- needs: [A16]
 - mastery_target: apply
 - prior_learning: new_this_year
 - aspects: [rekenen]
-- terms: []
+- terms: [substitueerbaarheid]
+- procedure:
+  1. Bepaal Qa van goed A voor en na de prijsverandering van goed B en de prijzen Pb1, Pb2
+  2. Bereken %ΔQa en %ΔPb
+  3. Bereken Ekr = %ΔQa / %ΔPb
+  4. Classificeer: Ekr > 0 substituten, Ekr < 0 complementen, Ekr ≈ 0 ongerelateerd
+  5. Leg uit in welke richting de vraaglijn van A verschuift bij een prijsverandering van B
 
-### D13 Loonkostenstijging en arbeidsproductiviteit
-- kern: "Analyseer hoe een stijging van loonkosten relatief tot arbeidsproductiviteit leidt tot hogere productiekosten."
+### D13 Kostenstijging en aanbodverschuiving
+- kern: "Analyseer hoe een stijging van productiekosten (zoals loon per eenheid product) de collectieve aanbodlijn verschuift en doorwerkt in evenwichtsprijs."
 - needs: []
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: []
+- terms: [collectieve aanbodlijn]
 
-### D14 Marktfalen in watervoorziening
-- kern: "Bepaal wanneer marktwerking doelen bereikt of overheidsinterventie nodig is."
+### D14 Marktfalen en overheidsinterventie beoordelen
+- kern: "Beoordeel of marktwerking tot een doelmatige uitkomst leidt en of overheidsinterventie gerechtvaardigd is."
 - needs: []
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: []
+- terms: [marktmacht]
 
 ### D15 Marktvormen classificeren
 - kern: "Classificeer markten aan hand van aantal aanbieders, aard van goederen en toetreding."
@@ -739,53 +776,65 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: []
+- terms: [minimumprijzen]
 
 ### D17 Monopolie minimaal verlies
 - kern: "Onderneming met alleen vaste kosten heeft MK = 0, dus MK = GVK. Minimaal verlies waar prijs totale opbrengst dekt."
-- needs: []
+- needs: [A14]
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: [totale opbrengst]
+- terms: [marginale kosten, totale opbrengst]
 
 ### D18 Monopolie met prijsdiscriminatie
 - kern: "Bepaal hoe monopolist winst behaalt via prijsdiscriminatie over verschillende markten."
-- needs: []
+- needs: [D23, A36]
 - exam_codes: [D2.3]
 - mastery_target: apply
 - prior_learning: new_this_year
 - aspects: [rekenen]
 - terms: [prijsdiscriminatie, winst]
+- procedure:
+  1. Stel de twee deelmarkten op met eigen vraagfuncties en gemeenschappelijke MK
+  2. Bepaal MO per deelmarkt en los MO1 = MK en MO2 = MK op (zoals in A36)
+  3. Bepaal per deelmarkt de prijs Pi via de eigen vraagfunctie
+  4. Bereken TO = P1·Q1 + P2·Q2 en W = TO − TK
+  5. Vergelijk met de winst zonder prijsdiscriminatie om de meerwinst te laten zien
 
 ### D19 Subsidie en Pareto-efficiëntie
 - kern: "Leg uit of een subsidie-evenwicht Pareto-efficiënt is."
-- needs: []
+- needs: [D20, A27]
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: []
+- terms: [subsidies, Pareto efficient]
 
 ### D20 Pareto-efficiëntie in marktevenwicht
 - kern: "Leg uit wanneer een marktevenwicht Pareto-efficiënt is."
-- needs: []
+- needs: [A19]
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: [marktevenwicht]
+- terms: [marktevenwicht, Pareto efficient]
 
 ### D21 Prijsdiscriminatie over inkomensgroepen
 - kern: "Analyseer hoe bedrijven prijzen differentieren en welvaartsgevolgen per inkomensgroep."
-- needs: []
+- needs: [D18, D28]
 - exam_codes: [D2.3]
 - mastery_target: analyze
 - prior_learning: new_this_year
 - aspects: [verbaal]
 - terms: [prijsdiscriminatie]
+- procedure:
+  1. Identificeer de inkomensgroepen en hun vraagfuncties (lage vs. hoge Ev)
+  2. Bereken prijs en hoeveelheid per groep bij prijsdiscriminatie (zoals in D18)
+  3. Bepaal CS per groep en vergelijk met de situatie zonder prijsdiscriminatie
+  4. Benoem welke groep welvaartswinst of -verlies ondervindt
+  5. Beoordeel de herverdelende gevolgen in termen van totale surplus
 
 ### D22 Prijsdiscriminatie en subsidies
 - kern: "Herken of subsidies prijsdiscriminatie veroorzaken en analyseer gevolgen."
-- needs: []
+- needs: [D23, A27]
 - exam_codes: [D2.3]
 - mastery_target: understand
 - prior_learning: new_this_year
@@ -803,7 +852,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 
 ### D24 Drie voorwaarden prijsdiscriminatie
 - kern: "Leg uit drie voorwaarden: voldoende marktmacht, markten scheiden, verschillende prijselasticiteiten."
-- needs: []
+- needs: [D23]
 - exam_codes: [D2.3]
 - mastery_target: understand
 - prior_learning: new_this_year
@@ -812,15 +861,15 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 
 ### D25 Prijselasticiteit en omzet
 - kern: "Bij inelastische vraag leidt grotere hoeveelheid tot lagere prijs; totale omzet kan dalen."
-- needs: []
+- needs: [A15]
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: []
+- terms: [prijselasticiteit van de vraag, totale opbrengst]
 
 ### D26 Soorten variabele kosten classificeren
 - kern: "Onderscheid tussen degressief, progressief en proportioneel variabele kosten."
-- needs: []
+- needs: [A08]
 - mastery_target: understand
 - prior_learning: previously_taught
 - aspects: [verbaal]
@@ -832,11 +881,11 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - mastery_target: understand
 - prior_learning: previously_taught
 - aspects: [verbaal]
-- terms: []
+- terms: [substitueerbaarheid, complementariteit]
 
 ### D28 Welvaart en surplus-effect
 - kern: "Prijsverlaging verhoogt consumentensurplus; effect op producentensurplus verschilt per geval."
-- needs: []
+- needs: [A19, A30]
 - exam_codes: [D3.1]
 - mastery_target: understand
 - prior_learning: new_this_year
@@ -845,20 +894,32 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 
 ### D29 Welvaartsverlies bij subsidie
 - kern: "Bepaal en arceer het deadweight loss ontstaan door subsidies als gevolg van allocatieve inefficientie."
-- needs: []
+- needs: [A32]
 - exam_codes: [D3.1]
 - mastery_target: apply
 - prior_learning: new_this_year
 - aspects: [grafisch]
-- terms: [subsidies]
+- terms: [subsidies, verloren surplus]
+- procedure:
+  1. Teken vraag- en aanbodlijn en markeer het oorspronkelijke evenwicht (P*, Q*)
+  2. Verschuif de aanbodlijn omlaag met het subsidiebedrag s en bepaal Q_na
+  3. Identificeer de welvaartsverliesdriehoek: hoekpunten bij Q*, Q_na en de twee curves
+  4. Arceer het driehoekje tussen vraag en oorspronkelijk aanbod, tussen Q* en Q_na
+  5. Bereken de oppervlakte = ½ × (Q_na − Q*) × s
 
 ### D30 Winstmaximalisatie MO = MK
 - kern: "Winstmaximale hoeveelheid vind je waar marginale opbrengst gelijk is aan marginale kosten."
-- needs: []
+- needs: [A12, A13, A20]
 - mastery_target: apply
 - prior_learning: new_this_year
 - aspects: [rekenen, verbaal]
-- terms: [marginale kosten]
+- terms: [marginale kosten, marginale opbrengsten, winst]
+- procedure:
+  1. Bepaal MO uit de TO-functie (zoals in A12)
+  2. Bepaal MK uit de TK-functie (zoals in A13)
+  3. Stel MO = MK en los op naar Q (zoals in A20)
+  4. Vul Q in de vraagfunctie (of GO-functie) om de prijs P te bepalen
+  5. Bereken de winst W = TO − TK bij deze Q
 
 ### E01 Intergenerationele ruil
 - kern: "Analyseer hoe pensioenstelsels intergenerationele ruil faciliteren."

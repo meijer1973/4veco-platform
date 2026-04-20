@@ -1,6 +1,6 @@
 # DAG Integrity Report
 
-Generated: 2026-04-20T13:47:34.353Z
+Generated: 2026-04-20T13:57:38.144Z
 Source:    references/machine/micro-teaching-units.md
 Units:     144
 
@@ -12,9 +12,11 @@ All 144 units validate. DAG is acyclic. Every `needs` reference resolves.
 
 | Layer | Count |
 |---|---|
-| 0 | 112 |
-| 1 | 10 |
-| 2 | 3 |
-| 3 | 10 |
-| 4 | 4 |
-| 5 | 5 |
+| 0 | 93 |
+| 1 | 11 |
+| 2 | 8 |
+| 3 | 11 |
+| 4 | 8 |
+| 5 | 10 |
+| 6 | 2 |
+| 7 | 1 |

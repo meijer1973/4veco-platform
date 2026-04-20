@@ -1,9 +1,9 @@
 # Procedure-Coverage Report
 
-Generated: 2026-04-20T13:47:34.919Z
+Generated: 2026-04-20T13:57:38.696Z
 Apply+ units:            63
-With procedure:          3
-Without procedure:       60 (A: 34, non-A: 26)
+With procedure:          13
+Without procedure:       50 (A: 34, non-A: 16)
 
 ## Status: **INFORMATIONAL**
 
@@ -11,20 +11,7 @@ A canonical procedure is the step sequence every downstream material (voorkennis
 
 A-domain units are listed separately: their executable recipe is the `GEN_*` randomizer, so a missing step list is lower-priority than for non-A units.
 
-## Non-A units missing procedure (26)
-
-### Domain D (10)
-
-- **D01** Accijnsopbrengst uit grafiek — _apply_
-- **D03** Consumentensurplus en accijns — _apply_
-- **D05** Evenwicht bij accijns — _apply_
-- **D07** Heffing doorberekenen in prijs — _apply_
-- **D11** Inkomenselasticiteit huurmarkt — _apply_
-- **D12** Kruiselasticiteit en substituten — _apply_
-- **D18** Monopolie met prijsdiscriminatie — _apply_
-- **D21** Prijsdiscriminatie over inkomensgroepen — _analyze_
-- **D29** Welvaartsverlies bij subsidie — _apply_
-- **D30** Winstmaximalisatie MO = MK — _apply_
+## Non-A units missing procedure (16)
 
 ### Domain F (2)
 

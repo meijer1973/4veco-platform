@@ -1,6 +1,6 @@
 # Dead Units Report
 
-Generated: 2026-04-20T13:47:34.451Z
+Generated: 2026-04-20T13:57:38.238Z
 Live units:   144
 Files scanned: 70
 Cited:        74
@@ -14,9 +14,9 @@ These units exist in the catalog but no source file cites them. Candidates for d
 - **D07** Heffing doorberekenen in prijs
 - **D08** Heffing tegen overconsumptie
 - **D09** Homogene en heterogene goederen
-- **D10** Huizenmarkt in laagconjunctuur
-- **D13** Loonkostenstijging en arbeidsproductiviteit
-- **D14** Marktfalen in watervoorziening
+- **D10** Vraag/aanbod-verschuiving bij conjunctuurschok
+- **D13** Kostenstijging en aanbodverschuiving
+- **D14** Marktfalen en overheidsinterventie beoordelen
 - **D15** Marktvormen classificeren
 - **D16** Minimumprijs en werkloosheid
 - **D17** Monopolie minimaal verlies

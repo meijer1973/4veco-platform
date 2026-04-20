@@ -863,16 +863,26 @@
     "id": "D01",
     "name": "Accijnsopbrengst uit grafiek",
     "category": "markt",
-    "layer": 0,
+    "layer": 5,
     "kern": "Bepaal accijnsopbrengst door verhandelde hoeveelheid na belasting met belastingbedrag te vermenigvuldigen.",
-    "needs": [],
+    "needs": [
+      "D05"
+    ],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
     "aspects": [
       "grafisch",
       "verbaal"
     ],
-    "terms": []
+    "terms": [
+      "heffingen"
+    ],
+    "procedure": [
+      "Lees de verhandelde hoeveelheid na heffing (Q_na) af op de horizontale as",
+      "Lees het belastingbedrag per eenheid (t) af als verticale afstand tussen aanbod-met-heffing en oorspronkelijk aanbod",
+      "Bereken accijnsopbrengst = t × Q_na",
+      "Controleer de eenheid (bijvoorbeeld euro's per periode)"
+    ]
   },
   {
     "id": "D02",
@@ -895,9 +905,12 @@
     "id": "D03",
     "name": "Consumentensurplus en accijns",
     "category": "markt",
-    "layer": 0,
+    "layer": 5,
     "kern": "Accijns verhoogt prijs, consumenten betalen meer, consumentensurplus daalt.",
-    "needs": [],
+    "needs": [
+      "D05",
+      "A30"
+    ],
     "exam_codes": [
       "D3.1"
     ],
@@ -908,6 +921,13 @@
     ],
     "terms": [
       "consumentensurplus"
+    ],
+    "procedure": [
+      "Bepaal het oorspronkelijke consumentensurplus (CS_voor) als driehoek boven P* tot Pmax (zoals in A30)",
+      "Bereken het nieuwe marktevenwicht na heffing (zoals in D05): nieuwe prijs P_na",
+      "Bepaal het nieuwe consumentensurplus (CS_na) boven P_na",
+      "Bereken de afname: ΔCS = CS_voor − CS_na",
+      "Interpreteer wie het surplusverlies draagt"
     ]
   },
   {
@@ -930,22 +950,34 @@
     "id": "D05",
     "name": "Evenwicht bij accijns",
     "category": "markt",
-    "layer": 0,
+    "layer": 4,
     "kern": "Bereken nieuw evenwicht en accijnsopbrengst na invoering van een heffing.",
-    "needs": [],
+    "needs": [
+      "A23"
+    ],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
     "aspects": [
       "rekenen"
     ],
-    "terms": []
+    "terms": [
+      "marktevenwicht",
+      "heffingen"
+    ],
+    "procedure": [
+      "Schrijf de aanbodfunctie om naar P als functie van Q",
+      "Verhoog de prijsterm met het heffingsbedrag t: P_aanbod_nieuw = P_aanbod_oud + t",
+      "Schrijf terug naar Q als functie van P en stel gelijk aan de vraagfunctie (zoals in A06)",
+      "Los op naar P* (nieuwe evenwichtsprijs) en bereken Q* (nieuwe evenwichtshoeveelheid)",
+      "Bereken accijnsopbrengst = t × Q*"
+    ]
   },
   {
     "id": "D06",
-    "name": "Gasverbruik en prijselasticiteit",
+    "name": "Vraagreactie via prijselasticiteit interpreteren",
     "category": "markt",
     "layer": 0,
-    "kern": "Analyseer hoe prijselasticiteit van de vraag naar gas zich vertaalt in reactie op energieprijsstijgingen.",
+    "kern": "Gebruik de prijselasticiteit van de vraag (Ev) om te voorspellen hoe Qv reageert op een prijsverandering en verklaar het resultaat in context.",
     "needs": [],
     "exam_codes": [
       "D1.3"
@@ -963,9 +995,12 @@
     "id": "D07",
     "name": "Heffing doorberekenen in prijs",
     "category": "markt",
-    "layer": 0,
+    "layer": 5,
     "kern": "Bereken welk percentage van een heffing wordt doorberekend in de consumentenprijs via evenwichtsanalyse.",
-    "needs": [],
+    "needs": [
+      "D05",
+      "A15"
+    ],
     "exam_codes": [
       "D1.4a"
     ],
@@ -974,15 +1009,27 @@
     "aspects": [
       "rekenen"
     ],
-    "terms": []
+    "terms": [
+      "heffingen",
+      "evenwichtsprijs"
+    ],
+    "procedure": [
+      "Bepaal de evenwichtsprijs zonder heffing (P0)",
+      "Bereken het nieuwe evenwicht met heffing t (zoals in D05): consumentenprijs Pc en producentenprijs Pp = Pc − t",
+      "Bereken doorberekening aan consument = (Pc − P0) / t × 100%",
+      "Het restant (100% − dit percentage) komt ten laste van de producent",
+      "Leg uit hoe de elasticiteit van vraag en aanbod de verdeling bepaalt"
+    ]
   },
   {
     "id": "D08",
     "name": "Heffing tegen overconsumptie",
     "category": "markt",
-    "layer": 0,
+    "layer": 2,
     "kern": "Analyseer of een heffing overconsumptie tegengaat via veranderde vraag.",
-    "needs": [],
+    "needs": [
+      "A15"
+    ],
     "exam_codes": [
       "D1.4a"
     ],
@@ -991,7 +1038,9 @@
     "aspects": [
       "verbaal"
     ],
-    "terms": []
+    "terms": [
+      "heffingen"
+    ]
   },
   {
     "id": "D09",
@@ -1012,25 +1061,30 @@
   },
   {
     "id": "D10",
-    "name": "Huizenmarkt in laagconjunctuur",
+    "name": "Vraag/aanbod-verschuiving bij conjunctuurschok",
     "category": "markt",
     "layer": 0,
-    "kern": "Analyseer effecten van laagconjunctuur op huiskoopprijzen via vraag en aanbod.",
+    "kern": "Analyseer hoe een conjunctuurschok de collectieve vraaglijn of aanbodlijn verschuift en wat dit doet met evenwichtsprijs en -hoeveelheid.",
     "needs": [],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
     "aspects": [
       "verbaal"
     ],
-    "terms": []
+    "terms": [
+      "collectieve vraaglijn",
+      "collectieve aanbodlijn"
+    ]
   },
   {
     "id": "D11",
-    "name": "Inkomenselasticiteit huurmarkt",
+    "name": "Inkomenselasticiteit berekenen en interpreteren",
     "category": "markt",
-    "layer": 0,
-    "kern": "Bereken en interpreteer inkomenselasticiteit van huurwoningen.",
-    "needs": [],
+    "layer": 2,
+    "kern": "Bereken Ei uit twee waarnemingen en interpreteer de uitkomst in de context van het goed.",
+    "needs": [
+      "A17"
+    ],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
     "aspects": [
@@ -1039,49 +1093,71 @@
     ],
     "terms": [
       "inkomenselasticiteit"
+    ],
+    "procedure": [
+      "Bepaal Q voor en na de inkomensverandering (Q1, Q2) en het inkomen (Y1, Y2)",
+      "Bereken %ΔQ = (Q2 − Q1) / Q1 × 100% en %ΔY = (Y2 − Y1) / Y1 × 100%",
+      "Bereken Ei = %ΔQ / %ΔY",
+      "Classificeer: Ei < 0 inferieur, 0 < Ei < 1 normaal, Ei > 1 luxe",
+      "Verwoord de interpretatie voor de context (bijvoorbeeld huurwoningen)"
     ]
   },
   {
     "id": "D12",
     "name": "Kruiselasticiteit en substituten",
     "category": "markt",
-    "layer": 0,
+    "layer": 2,
     "kern": "Bepaal uit kruiselasticiteit of goederen substituten zijn en analyseer vraagverschuivingen.",
-    "needs": [],
+    "needs": [
+      "A16"
+    ],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
     "aspects": [
       "rekenen"
     ],
-    "terms": []
+    "terms": [
+      "substitueerbaarheid"
+    ],
+    "procedure": [
+      "Bepaal Qa van goed A voor en na de prijsverandering van goed B en de prijzen Pb1, Pb2",
+      "Bereken %ΔQa en %ΔPb",
+      "Bereken Ekr = %ΔQa / %ΔPb",
+      "Classificeer: Ekr > 0 substituten, Ekr < 0 complementen, Ekr ≈ 0 ongerelateerd",
+      "Leg uit in welke richting de vraaglijn van A verschuift bij een prijsverandering van B"
+    ]
   },
   {
     "id": "D13",
-    "name": "Loonkostenstijging en arbeidsproductiviteit",
+    "name": "Kostenstijging en aanbodverschuiving",
     "category": "markt",
     "layer": 0,
-    "kern": "Analyseer hoe een stijging van loonkosten relatief tot arbeidsproductiviteit leidt tot hogere productiekosten.",
+    "kern": "Analyseer hoe een stijging van productiekosten (zoals loon per eenheid product) de collectieve aanbodlijn verschuift en doorwerkt in evenwichtsprijs.",
     "needs": [],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
     "aspects": [
       "verbaal"
     ],
-    "terms": []
+    "terms": [
+      "collectieve aanbodlijn"
+    ]
   },
   {
     "id": "D14",
-    "name": "Marktfalen in watervoorziening",
+    "name": "Marktfalen en overheidsinterventie beoordelen",
     "category": "markt",
     "layer": 0,
-    "kern": "Bepaal wanneer marktwerking doelen bereikt of overheidsinterventie nodig is.",
+    "kern": "Beoordeel of marktwerking tot een doelmatige uitkomst leidt en of overheidsinterventie gerechtvaardigd is.",
     "needs": [],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
     "aspects": [
       "verbaal"
     ],
-    "terms": []
+    "terms": [
+      "marktmacht"
+    ]
   },
   {
     "id": "D15",
@@ -1114,21 +1190,26 @@
     "aspects": [
       "verbaal"
     ],
-    "terms": []
+    "terms": [
+      "minimumprijzen"
+    ]
   },
   {
     "id": "D17",
     "name": "Monopolie minimaal verlies",
     "category": "markt",
-    "layer": 0,
+    "layer": 3,
     "kern": "Onderneming met alleen vaste kosten heeft MK = 0, dus MK = GVK. Minimaal verlies waar prijs totale opbrengst dekt.",
-    "needs": [],
+    "needs": [
+      "A14"
+    ],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
     "aspects": [
       "verbaal"
     ],
     "terms": [
+      "marginale kosten",
       "totale opbrengst"
     ]
   },
@@ -1136,9 +1217,12 @@
     "id": "D18",
     "name": "Monopolie met prijsdiscriminatie",
     "category": "markt",
-    "layer": 0,
+    "layer": 6,
     "kern": "Bepaal hoe monopolist winst behaalt via prijsdiscriminatie over verschillende markten.",
-    "needs": [],
+    "needs": [
+      "D23",
+      "A36"
+    ],
     "exam_codes": [
       "D2.3"
     ],
@@ -1150,45 +1234,64 @@
     "terms": [
       "prijsdiscriminatie",
       "winst"
+    ],
+    "procedure": [
+      "Stel de twee deelmarkten op met eigen vraagfuncties en gemeenschappelijke MK",
+      "Bepaal MO per deelmarkt en los MO1 = MK en MO2 = MK op (zoals in A36)",
+      "Bepaal per deelmarkt de prijs Pi via de eigen vraagfunctie",
+      "Bereken TO = P1·Q1 + P2·Q2 en W = TO − TK",
+      "Vergelijk met de winst zonder prijsdiscriminatie om de meerwinst te laten zien"
     ]
   },
   {
     "id": "D19",
     "name": "Subsidie en Pareto-efficiëntie",
     "category": "markt",
-    "layer": 0,
+    "layer": 5,
     "kern": "Leg uit of een subsidie-evenwicht Pareto-efficiënt is.",
-    "needs": [],
-    "mastery_target": "understand",
-    "prior_learning": "new_this_year",
-    "aspects": [
-      "verbaal"
+    "needs": [
+      "D20",
+      "A27"
     ],
-    "terms": []
-  },
-  {
-    "id": "D20",
-    "name": "Pareto-efficiëntie in marktevenwicht",
-    "category": "markt",
-    "layer": 0,
-    "kern": "Leg uit wanneer een marktevenwicht Pareto-efficiënt is.",
-    "needs": [],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
     "aspects": [
       "verbaal"
     ],
     "terms": [
-      "marktevenwicht"
+      "subsidies",
+      "Pareto efficient"
+    ]
+  },
+  {
+    "id": "D20",
+    "name": "Pareto-efficiëntie in marktevenwicht",
+    "category": "markt",
+    "layer": 4,
+    "kern": "Leg uit wanneer een marktevenwicht Pareto-efficiënt is.",
+    "needs": [
+      "A19"
+    ],
+    "mastery_target": "understand",
+    "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
+    "terms": [
+      "marktevenwicht",
+      "Pareto efficient"
     ]
   },
   {
     "id": "D21",
     "name": "Prijsdiscriminatie over inkomensgroepen",
     "category": "markt",
-    "layer": 0,
+    "layer": 7,
     "kern": "Analyseer hoe bedrijven prijzen differentieren en welvaartsgevolgen per inkomensgroep.",
-    "needs": [],
+    "needs": [
+      "D18",
+      "D28"
+    ],
     "exam_codes": [
       "D2.3"
     ],
@@ -1199,15 +1302,25 @@
     ],
     "terms": [
       "prijsdiscriminatie"
+    ],
+    "procedure": [
+      "Identificeer de inkomensgroepen en hun vraagfuncties (lage vs. hoge Ev)",
+      "Bereken prijs en hoeveelheid per groep bij prijsdiscriminatie (zoals in D18)",
+      "Bepaal CS per groep en vergelijk met de situatie zonder prijsdiscriminatie",
+      "Benoem welke groep welvaartswinst of -verlies ondervindt",
+      "Beoordeel de herverdelende gevolgen in termen van totale surplus"
     ]
   },
   {
     "id": "D22",
     "name": "Prijsdiscriminatie en subsidies",
     "category": "markt",
-    "layer": 0,
+    "layer": 4,
     "kern": "Herken of subsidies prijsdiscriminatie veroorzaken en analyseer gevolgen.",
-    "needs": [],
+    "needs": [
+      "D23",
+      "A27"
+    ],
     "exam_codes": [
       "D2.3"
     ],
@@ -1245,9 +1358,11 @@
     "id": "D24",
     "name": "Drie voorwaarden prijsdiscriminatie",
     "category": "markt",
-    "layer": 0,
+    "layer": 1,
     "kern": "Leg uit drie voorwaarden: voldoende marktmacht, markten scheiden, verschillende prijselasticiteiten.",
-    "needs": [],
+    "needs": [
+      "D23"
+    ],
     "exam_codes": [
       "D2.3"
     ],
@@ -1265,23 +1380,30 @@
     "id": "D25",
     "name": "Prijselasticiteit en omzet",
     "category": "markt",
-    "layer": 0,
+    "layer": 2,
     "kern": "Bij inelastische vraag leidt grotere hoeveelheid tot lagere prijs; totale omzet kan dalen.",
-    "needs": [],
+    "needs": [
+      "A15"
+    ],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
     "aspects": [
       "verbaal"
     ],
-    "terms": []
+    "terms": [
+      "prijselasticiteit van de vraag",
+      "totale opbrengst"
+    ]
   },
   {
     "id": "D26",
     "name": "Soorten variabele kosten classificeren",
     "category": "markt",
-    "layer": 0,
+    "layer": 2,
     "kern": "Onderscheid tussen degressief, progressief en proportioneel variabele kosten.",
-    "needs": [],
+    "needs": [
+      "A08"
+    ],
     "mastery_target": "understand",
     "prior_learning": "previously_taught",
     "aspects": [
@@ -1303,15 +1425,21 @@
     "aspects": [
       "verbaal"
     ],
-    "terms": []
+    "terms": [
+      "substitueerbaarheid",
+      "complementariteit"
+    ]
   },
   {
     "id": "D28",
     "name": "Welvaart en surplus-effect",
     "category": "markt",
-    "layer": 0,
+    "layer": 5,
     "kern": "Prijsverlaging verhoogt consumentensurplus; effect op producentensurplus verschilt per geval.",
-    "needs": [],
+    "needs": [
+      "A19",
+      "A30"
+    ],
     "exam_codes": [
       "D3.1"
     ],
@@ -1329,9 +1457,11 @@
     "id": "D29",
     "name": "Welvaartsverlies bij subsidie",
     "category": "markt",
-    "layer": 0,
+    "layer": 6,
     "kern": "Bepaal en arceer het deadweight loss ontstaan door subsidies als gevolg van allocatieve inefficientie.",
-    "needs": [],
+    "needs": [
+      "A32"
+    ],
     "exam_codes": [
       "D3.1"
     ],
@@ -1341,16 +1471,28 @@
       "grafisch"
     ],
     "terms": [
-      "subsidies"
+      "subsidies",
+      "verloren surplus"
+    ],
+    "procedure": [
+      "Teken vraag- en aanbodlijn en markeer het oorspronkelijke evenwicht (P*, Q*)",
+      "Verschuif de aanbodlijn omlaag met het subsidiebedrag s en bepaal Q_na",
+      "Identificeer de welvaartsverliesdriehoek: hoekpunten bij Q*, Q_na en de twee curves",
+      "Arceer het driehoekje tussen vraag en oorspronkelijk aanbod, tussen Q* en Q_na",
+      "Bereken de oppervlakte = ½ × (Q_na − Q*) × s"
     ]
   },
   {
     "id": "D30",
     "name": "Winstmaximalisatie MO = MK",
     "category": "markt",
-    "layer": 0,
+    "layer": 4,
     "kern": "Winstmaximale hoeveelheid vind je waar marginale opbrengst gelijk is aan marginale kosten.",
-    "needs": [],
+    "needs": [
+      "A12",
+      "A13",
+      "A20"
+    ],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
     "aspects": [
@@ -1358,7 +1500,16 @@
       "verbaal"
     ],
     "terms": [
-      "marginale kosten"
+      "marginale kosten",
+      "marginale opbrengsten",
+      "winst"
+    ],
+    "procedure": [
+      "Bepaal MO uit de TO-functie (zoals in A12)",
+      "Bepaal MK uit de TK-functie (zoals in A13)",
+      "Stel MO = MK en los op naar Q (zoals in A20)",
+      "Vul Q in de vraagfunctie (of GO-functie) om de prijs P te bepalen",
+      "Bereken de winst W = TO − TK bij deze Q"
     ]
   },
   {

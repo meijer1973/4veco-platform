@@ -1,8 +1,8 @@
 # Needs-Coverage Report
 
-Generated: 2026-04-20T13:47:34.726Z
+Generated: 2026-04-20T13:57:38.534Z
 Live units:      144
-With no needs:   115
+With no needs:   96
 
 ## Status: **INFORMATIONAL**
 
@@ -19,38 +19,19 @@ Units with empty `needs` are not broken — they simply have no prerequisite edg
 - **A17** Inkomenselasticiteit
 - **A18** Comparatief voordeel bepalen
 
-## Domain D (30)
+## Domain D (11)
 
-- **D01** Accijnsopbrengst uit grafiek
 - **D02** Constante kosten en winst
-- **D03** Consumentensurplus en accijns
 - **D04** Elasticiteit en goederenclassificatie
-- **D05** Evenwicht bij accijns
-- **D06** Gasverbruik en prijselasticiteit
-- **D07** Heffing doorberekenen in prijs
-- **D08** Heffing tegen overconsumptie
+- **D06** Vraagreactie via prijselasticiteit interpreteren
 - **D09** Homogene en heterogene goederen
-- **D10** Huizenmarkt in laagconjunctuur
-- **D11** Inkomenselasticiteit huurmarkt
-- **D12** Kruiselasticiteit en substituten
-- **D13** Loonkostenstijging en arbeidsproductiviteit
-- **D14** Marktfalen in watervoorziening
+- **D10** Vraag/aanbod-verschuiving bij conjunctuurschok
+- **D13** Kostenstijging en aanbodverschuiving
+- **D14** Marktfalen en overheidsinterventie beoordelen
 - **D15** Marktvormen classificeren
 - **D16** Minimumprijs en werkloosheid
-- **D17** Monopolie minimaal verlies
-- **D18** Monopolie met prijsdiscriminatie
-- **D19** Subsidie en Pareto-efficiëntie
-- **D20** Pareto-efficiëntie in marktevenwicht
-- **D21** Prijsdiscriminatie over inkomensgroepen
-- **D22** Prijsdiscriminatie en subsidies
 - **D23** Voorwaarden voor prijsdiscriminatie
-- **D24** Drie voorwaarden prijsdiscriminatie
-- **D25** Prijselasticiteit en omzet
-- **D26** Soorten variabele kosten classificeren
 - **D27** Substituten en complementen
-- **D28** Welvaart en surplus-effect
-- **D29** Welvaartsverlies bij subsidie
-- **D30** Winstmaximalisatie MO = MK
 
 ## Domain E (6)
 

@@ -1,8 +1,8 @@
 # Terms-Coverage Report
 
-Generated: 2026-04-20T13:47:34.805Z
+Generated: 2026-04-20T13:57:38.600Z
 Live units:      144
-With no terms:   68
+With no terms:   56
 
 ## Status: **INFORMATIONAL**
 
@@ -30,21 +30,9 @@ Units with empty `terms` have no canonical-vocabulary links yet. Wire via `unit-
 - **A34** Effecten invoerrecht
 - **A37** Lange-termijnevenwicht VM
 
-## Domain D (13)
+## Domain D (1)
 
-- **D01** Accijnsopbrengst uit grafiek
-- **D05** Evenwicht bij accijns
-- **D07** Heffing doorberekenen in prijs
-- **D08** Heffing tegen overconsumptie
 - **D09** Homogene en heterogene goederen
-- **D10** Huizenmarkt in laagconjunctuur
-- **D12** Kruiselasticiteit en substituten
-- **D13** Loonkostenstijging en arbeidsproductiviteit
-- **D14** Marktfalen in watervoorziening
-- **D16** Minimumprijs en werkloosheid
-- **D19** Subsidie en Pareto-efficiëntie
-- **D25** Prijselasticiteit en omzet
-- **D27** Substituten en complementen
 
 ## Domain E (4)
 
