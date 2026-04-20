@@ -697,6 +697,12 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - prior_learning: new_this_year
 - aspects: [verbaal]
 - terms: [heffingen]
+- procedure:
+  1. Identificeer het overconsumptieprobleem: benoem het externe effect en waarom de marktuitkomst te hoog ligt
+  2. Bepaal het nieuwe evenwicht met heffing t zoals in D05 (nieuwe Pc, Pp en Q*)
+  3. Bereken de procentuele vraagreductie ΔQ/Q0 en vergelijk die met de prijselasticiteit Ev uit A15
+  4. Beoordeel of de vraagreductie groot genoeg is om de gewenste afname van overconsumptie te halen
+  5. Verwoord een conclusie: werkt de heffing voldoende, en welke rol speelt de (in)elasticiteit van de vraag
 
 ### D09 Homogene en heterogene goederen
 - kern: "Homogene goederen zijn identiek; heterogene goederen verschillen in kwaliteit of kenmerken."
@@ -714,6 +720,12 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - prior_learning: new_this_year
 - aspects: [verbaal]
 - terms: [collectieve aanbodlijn, collectieve vraaglijn, evenwichtsprijs]
+- procedure:
+  1. Identificeer de schok en benoem welk kanaal loopt: beïnvloedt die de collectieve vraaglijn of de collectieve aanbodlijn
+  2. Beredeneer de richting van de verschuiving (naar links of naar rechts) en onderbouw met het onderliggende gedrag van consumenten of producenten
+  3. Teken de verschuiving in het P-Q-diagram en lees de nieuwe evenwichtsprijs en evenwichtshoeveelheid af (methode uit A06)
+  4. Vergelijk oud en nieuw evenwicht: benoem de verandering in P* en Q* in tekens en orde van grootte
+  5. Verklaar het resultaat in de context van de conjunctuurschok (hoogconjunctuur of laagconjunctuur)
 
 ### D11 Inkomenselasticiteit berekenen en interpreteren
 - kern: "Bereken Ei uit twee waarnemingen en interpreteer de uitkomst in de context van het goed."
@@ -750,6 +762,12 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - prior_learning: new_this_year
 - aspects: [verbaal]
 - terms: [collectieve aanbodlijn, evenwichtsprijs]
+- procedure:
+  1. Identificeer de kostenstijging en benoem of die per eenheid product is (bv. loon per eenheid) of een vaste component
+  2. Beredeneer dat hogere variabele kosten de collectieve aanbodlijn verticaal omhoog en dus naar links verschuiven
+  3. Teken de verschuiving en bepaal het nieuwe evenwicht (zoals in A06): lees P* en Q* af
+  4. Vergelijk oud en nieuw evenwicht: prijs stijgt, hoeveelheid daalt; bereken de procentuele veranderingen
+  5. Beoordeel de doorwerking: welk deel van de kostenstijging wordt doorberekend aan consumenten en welk deel drukt op de producent
 
 ### D14 Marktfalen en overheidsinterventie beoordelen
 - kern: "Beoordeel of marktwerking tot een doelmatige uitkomst leidt en of overheidsinterventie gerechtvaardigd is."
@@ -758,6 +776,12 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - prior_learning: new_this_year
 - aspects: [verbaal]
 - terms: [marktmacht]
+- procedure:
+  1. Identificeer het type marktfalen (externe effecten, marktmacht, collectief goed of informatieasymmetrie) en beschrijf het mechanisme
+  2. Benoem de beoordelingscriteria: economische doelmatigheid (efficiëntie), rechtvaardigheid (verdeling) en mate van externe effecten
+  3. Toets de huidige marktuitkomst aan elk criterium: bereken of beredeneer het welvaartsverlies en de verdelingseffecten
+  4. Beoordeel het voorgestelde overheidsinstrument (heffing, subsidie, regulering) aan dezelfde criteria en betrek uitvoeringskosten en neveneffecten
+  5. Vergelijk de situatie met en zonder ingrijpen en formuleer een onderbouwd verdict: is ingrijpen gerechtvaardigd, en zo ja welke vorm heeft de voorkeur
 
 ### D15 Marktvormen classificeren
 - kern: "Classificeer markten aan hand van aantal aanbieders, aard van goederen en toetreding."
@@ -929,6 +953,12 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - prior_learning: new_this_year
 - aspects: [verbaal]
 - terms: [intertemporele ruil]
+- procedure:
+  1. Benoem de twee generaties in het stelsel: de huidige premiebetalers (werkenden) en de huidige uitkeringsontvangers (gepensioneerden)
+  2. Beschrijf de geldstroom: wie betaalt premie, wie ontvangt pensioen, en op welk moment
+  3. Leg uit hoe deze betaling later wordt teruggeruild: de huidige werkenden verwachten zelf een uitkering van de volgende generatie
+  4. Analyseer de voorwaarden waaronder de ruil in evenwicht blijft (demografie, loonontwikkeling, rendement) — koppel aan intertemporele ruil uit E02
+  5. Verwoord welke generatie voor- of nadeel heeft bij een schok (bv. vergrijzing of recessie)
 
 ### E02 Intertemporele ruil in pensioenstelsels
 - kern: "Leg uit hoe pensioenen ruil over tijd vertegenwoordigen."
@@ -947,6 +977,12 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - prior_learning: new_this_year
 - aspects: [verbaal]
 - terms: [rente, waardevaste pensioenen, welvaartsvaste pensioenen]
+- procedure:
+  1. Beschrijf kort het kapitaaldekkingsstelsel: premies worden belegd en het rendement betaalt de latere uitkering
+  2. Identificeer de rol van de rente: bepaal hoe lagere rentes de verdisconteerde waarde van toekomstige verplichtingen verhogen (zie H15)
+  3. Analyseer het effect op de dekkingsgraad: bij lagere rente stijgen de verplichtingen terwijl het vermogen niet meestijgt
+  4. Beoordeel de gevolgen voor premiebetalers (hogere premie nodig) en uitkeringsontvangers (risico op niet-indexeren van waardevaste of welvaartsvaste pensioenen)
+  5. Concludeer of het stelsel betaalbaar blijft of dat aanpassing nodig is
 
 ### E04 Omslagstelsel (AOW)
 - kern: "Omslagstelsel: werkenden betalen premie voor huidige uitkeringen; gevoelig voor vergrijzing."
@@ -965,6 +1001,12 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - prior_learning: new_this_year
 - aspects: [verbaal]
 - terms: [waardevaste pensioenen, welvaartsvaste pensioenen]
+- procedure:
+  1. Identificeer de twee groepen: jongere premiebetalers en oudere uitkeringsontvangers in het omslagstelsel
+  2. Beschrijf de pensioenkorting: met hoeveel procent daalt de nominale uitkering, en hoe werkt dat op de koopkracht via de inflatie
+  3. Analyseer het effect op de ontvangers: daling van besteedbaar inkomen en reële uitkering (waardevast/welvaartsvast wordt losgelaten)
+  4. Analyseer het effect op de premiebetalers: blijft de premie stabiel of daalt die mee, en wat betekent dat voor de intergenerationele lastenverdeling
+  5. Beoordeel of de korting de solidariteit tussen generaties versterkt of ondermijnt en onderbouw de conclusie
 
 ### E06 Voorraad- en stroomgrootheden onderscheiden
 - kern: "Onderscheid tussen voorraad- en stroomgrootheden."
@@ -1111,6 +1153,12 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - prior_learning: new_this_year
 - aspects: [verbaal]
 - terms: [externe effecten]
+- procedure:
+  1. Identificeer het externe effect dat door concentratie ontstaat (bv. files, luchtvervuiling, overbelaste infrastructuur)
+  2. Beredeneer waarom de schade meer dan evenredig toeneemt met het aantal activiteiten op dezelfde plek (niet-lineaire effecten)
+  3. Vergelijk privaatkosten en maatschappelijke kosten: laat zien dat er verloren surplus ontstaat (zoals in F08)
+  4. Analyseer welke ingreep het effect zou internaliseren (heffingen, vergunningen, ruimtelijke spreiding) en hoe dit de prikkel voor producenten verandert
+  5. Beoordeel wanneer ingrijpen maatschappelijk gewenst is: weeg de vermeden externe schade af tegen de kosten van de interventie
 
 ### F15 Verzonken kosten negeren in beslissingen
 - kern: "Verzonken kosten zijn niet terugvorderbare uitgaven uit het verleden en horen geen rol te spelen in toekomstgerichte beslissingen; alleen toekomstige opbrengsten en kosten tellen mee."
@@ -1330,6 +1378,12 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - prior_learning: new_this_year
 - aspects: [verbaal]
 - terms: [heffingen, subsidies]
+- procedure:
+  1. Identificeer het kostenvoordeel: welk instrument (bv. gratis emissierechten, subsidie, belastingvrijstelling) verlaagt de kostprijs van binnenlandse exporteurs
+  2. Bereken of beredeneer hoe het voordeel de relatieve prijs van binnenlandse versus buitenlandse goederen wijzigt (gebruik Armington-logica uit H03)
+  3. Benoem de beoordelingscriteria: werkt het als protectionisme (nadeel voor buitenlandse concurrenten), treedt er vrijhandelsverstoring op, en hoe zit het met milieudoelen
+  4. Weeg voor- en nadelen af: binnenlandse werkgelegenheid en exportpositie tegenover verstoorde concurrentie en mogelijke WTO-conflicten
+  5. Concludeer of het instrument feitelijk protectionistisch werkt en onder welke voorwaarden dat gerechtvaardigd is
 
 ### H10 Gini-coefficient bij recessie
 - kern: "Gini-coefficient stijgt tijdens recessie door werkloosheidsconcentratie en toename inkomensongelijkheid."
@@ -1366,6 +1420,12 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - prior_learning: new_this_year
 - aspects: [verbaal]
 - terms: [wisselkoers]
+- procedure:
+  1. Identificeer het kostenkanaal: een hoger minimumuurloon verhoogt de loonkosten per eenheid product voor arbeidsintensieve sectoren
+  2. Beredeneer de doorwerking op de prijzen: hogere kostprijs leidt tot hogere afzetprijzen van Nederlandse exportgoederen
+  3. Vergelijk met buitenlandse concurrenten: bij gelijke wisselkoers worden Nederlandse goederen relatief duurder en daalt de exportvraag
+  4. Analyseer of wisselkoersaanpassing (depreciatie) dit effect deels kan compenseren en onder welke voorwaarden
+  5. Concludeer met een verdict over de internationale concurrentiepositie, met een expliciete ceteris-paribus-aanname
 
 ### H14 Minimumuurloon: vraagkanaal naar bbp-groei
 - kern: "Redeneer via het bestedingskanaal hoe een hoger minimumuurloon de consumptie en daarmee de bbp-groei kan verhogen."
@@ -1375,6 +1435,12 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - prior_learning: new_this_year
 - aspects: [verbaal]
 - terms: [bbp-groei, koopkracht]
+- procedure:
+  1. Identificeer het bestedingskanaal: een hoger minimumuurloon verhoogt het besteedbaar inkomen van lagere inkomensgroepen
+  2. Beredeneer waarom juist deze groep een hoge consumptiequote heeft, zodat een groot deel van de extra koopkracht wordt besteed
+  3. Analyseer de doorwerking via de multiplier (zie I14): extra consumptie stuwt Y omhoog in meerdere bestedingsrondes
+  4. Weeg de bbp-groei af tegen mogelijke lekkages (import, sparen, belasting) die de multiplier verkleinen
+  5. Concludeer of en onder welke voorwaarden het vraagkanaal tot hogere bbp-groei leidt
 
 ### H15 Nominale rente op staatsobligaties verklaren
 - kern: "Verklaar bewegingen in de nominale rente op staatsobligaties vanuit vraag-en-aanbod op de obligatiemarkt en risicoperceptie."
@@ -1458,6 +1524,12 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - prior_learning: new_this_year
 - aspects: [verbaal]
 - terms: [marginaal tarief, secundair inkomen]
+- procedure:
+  1. Bepaal de verandering in het marginaal tarief en bereken het effect op het besteedbaar inkomen van een representatief huishouden (methode uit H04)
+  2. Identificeer hoeveel extra (of minder) consumptie hieruit volgt: koppel de inkomensverandering aan de marginale consumptiequote c
+  3. Analyseer de multiplier-werking: de eerste bestedingsronde genereert nieuwe inkomens voor andere huishoudens (secundair inkomen)
+  4. Tel de rondes op via ΔY = multiplier × ΔA (zie I14) en let op lekkages (import, sparen, belasting)
+  5. Beoordeel het netto-effect op bbp en inkomensverdeling; vergelijk met denivellering of nivellering uit H08
 
 ### H23 Belastingwig en uitverdieneffect op arbeidsaanbod
 - kern: "Leg uit hoe een hogere belastingwig via het substitutie-effect het arbeidsaanbod verkleint (uitverdieneffect)."
@@ -1499,6 +1571,12 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - prior_learning: new_this_year
 - aspects: [rekenen, verbaal]
 - terms: [rente]
+- procedure:
+  1. Inventariseer per optie de kostencategorieën: bij kopen (hypotheekrente, aflossing, onderhoud, eigenaarslasten) en bij huren (kale huur, servicekosten)
+  2. Bereken voor beide opties de netto maandlasten over een vaste periode (bv. 1 jaar), inclusief fiscale effecten
+  3. Corrigeer voor vermogensopbouw bij kopen (aflossingsdeel is geen kostenpost maar besparing) en voor verwachte waardegroei van de woning
+  4. Voer gevoeligheidsanalyse uit op de rente (zie H15) en de huurontwikkeling: welke aanname verschuift de uitkomst
+  5. Vergelijk de netto woonlasten systematisch per categorie en concludeer onder welke voorwaarden kopen goedkoper is dan huren
 
 ### I01 Anticyclisch begrotingsbeleid
 - kern: "Beschrijf hoe de overheid in laagconjunctuur bestedingen verhoogt of belastingen verlaagt en in hoogconjunctuur het omgekeerde doet om de conjunctuurcyclus af te vlakken."
@@ -1643,6 +1721,12 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - prior_learning: new_this_year
 - aspects: [verbaal]
 - terms: [monetair beleid, muntunie, wisselkoers]
+- procedure:
+  1. Benoem de drie doelen van het trilemma: vaste wisselkoers, vrij kapitaalverkeer, zelfstandig rentebeleid
+  2. Analyseer paar 1 (vaste wisselkoers + vrij kapitaalverkeer): toon dat de centrale bank de rente moet aanpassen aan het buitenland, dus geen zelfstandig rentebeleid
+  3. Analyseer paar 2 (vaste wisselkoers + zelfstandig rentebeleid): toon dat kapitaalcontroles nodig zijn om uitstroom bij rentegap te voorkomen
+  4. Analyseer paar 3 (vrij kapitaalverkeer + zelfstandig rentebeleid): toon dat de wisselkoers dan moet kunnen zweven (zie I12)
+  5. Concludeer dat elke keuze van twee doelen het derde uitsluit en plaats een concreet land in het schema (bv. Nederland binnen de muntunie)
 
 ### I14 Multiplier en lekkages
 - kern: "Leg uit hoe een toename van autonome bestedingen via de multiplier een groter inkomenseffect oproept en hoe belastingen, spaarneiging en import als lekkages de multiplier verkleinen."

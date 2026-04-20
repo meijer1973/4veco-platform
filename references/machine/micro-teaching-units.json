@@ -1051,6 +1051,13 @@
     ],
     "terms": [
       "heffingen"
+    ],
+    "procedure": [
+      "Identificeer het overconsumptieprobleem: benoem het externe effect en waarom de marktuitkomst te hoog ligt",
+      "Bepaal het nieuwe evenwicht met heffing t zoals in D05 (nieuwe Pc, Pp en Q*)",
+      "Bereken de procentuele vraagreductie ΔQ/Q0 en vergelijk die met de prijselasticiteit Ev uit A15",
+      "Beoordeel of de vraagreductie groot genoeg is om de gewenste afname van overconsumptie te halen",
+      "Verwoord een conclusie: werkt de heffing voldoende, en welke rol speelt de (in)elasticiteit van de vraag"
     ]
   },
   {
@@ -1086,6 +1093,13 @@
       "collectieve aanbodlijn",
       "collectieve vraaglijn",
       "evenwichtsprijs"
+    ],
+    "procedure": [
+      "Identificeer de schok en benoem welk kanaal loopt: beïnvloedt die de collectieve vraaglijn of de collectieve aanbodlijn",
+      "Beredeneer de richting van de verschuiving (naar links of naar rechts) en onderbouw met het onderliggende gedrag van consumenten of producenten",
+      "Teken de verschuiving in het P-Q-diagram en lees de nieuwe evenwichtsprijs en evenwichtshoeveelheid af (methode uit A06)",
+      "Vergelijk oud en nieuw evenwicht: benoem de verandering in P* en Q* in tekens en orde van grootte",
+      "Verklaar het resultaat in de context van de conjunctuurschok (hoogconjunctuur of laagconjunctuur)"
     ]
   },
   {
@@ -1154,6 +1168,13 @@
     "terms": [
       "collectieve aanbodlijn",
       "evenwichtsprijs"
+    ],
+    "procedure": [
+      "Identificeer de kostenstijging en benoem of die per eenheid product is (bv. loon per eenheid) of een vaste component",
+      "Beredeneer dat hogere variabele kosten de collectieve aanbodlijn verticaal omhoog en dus naar links verschuiven",
+      "Teken de verschuiving en bepaal het nieuwe evenwicht (zoals in A06): lees P* en Q* af",
+      "Vergelijk oud en nieuw evenwicht: prijs stijgt, hoeveelheid daalt; bereken de procentuele veranderingen",
+      "Beoordeel de doorwerking: welk deel van de kostenstijging wordt doorberekend aan consumenten en welk deel drukt op de producent"
     ]
   },
   {
@@ -1170,6 +1191,13 @@
     ],
     "terms": [
       "marktmacht"
+    ],
+    "procedure": [
+      "Identificeer het type marktfalen (externe effecten, marktmacht, collectief goed of informatieasymmetrie) en beschrijf het mechanisme",
+      "Benoem de beoordelingscriteria: economische doelmatigheid (efficiëntie), rechtvaardigheid (verdeling) en mate van externe effecten",
+      "Toets de huidige marktuitkomst aan elk criterium: bereken of beredeneer het welvaartsverlies en de verdelingseffecten",
+      "Beoordeel het voorgestelde overheidsinstrument (heffing, subsidie, regulering) aan dezelfde criteria en betrek uitvoeringskosten en neveneffecten",
+      "Vergelijk de situatie met en zonder ingrijpen en formuleer een onderbouwd verdict: is ingrijpen gerechtvaardigd, en zo ja welke vorm heeft de voorkeur"
     ]
   },
   {
@@ -1550,6 +1578,13 @@
     ],
     "terms": [
       "intertemporele ruil"
+    ],
+    "procedure": [
+      "Benoem de twee generaties in het stelsel: de huidige premiebetalers (werkenden) en de huidige uitkeringsontvangers (gepensioneerden)",
+      "Beschrijf de geldstroom: wie betaalt premie, wie ontvangt pensioen, en op welk moment",
+      "Leg uit hoe deze betaling later wordt teruggeruild: de huidige werkenden verwachten zelf een uitkering van de volgende generatie",
+      "Analyseer de voorwaarden waaronder de ruil in evenwicht blijft (demografie, loonontwikkeling, rendement) — koppel aan intertemporele ruil uit E02",
+      "Verwoord welke generatie voor- of nadeel heeft bij een schok (bv. vergrijzing of recessie)"
     ]
   },
   {
@@ -1593,6 +1628,13 @@
       "rente",
       "waardevaste pensioenen",
       "welvaartsvaste pensioenen"
+    ],
+    "procedure": [
+      "Beschrijf kort het kapitaaldekkingsstelsel: premies worden belegd en het rendement betaalt de latere uitkering",
+      "Identificeer de rol van de rente: bepaal hoe lagere rentes de verdisconteerde waarde van toekomstige verplichtingen verhogen (zie H15)",
+      "Analyseer het effect op de dekkingsgraad: bij lagere rente stijgen de verplichtingen terwijl het vermogen niet meestijgt",
+      "Beoordeel de gevolgen voor premiebetalers (hogere premie nodig) en uitkeringsontvangers (risico op niet-indexeren van waardevaste of welvaartsvaste pensioenen)",
+      "Concludeer of het stelsel betaalbaar blijft of dat aanpassing nodig is"
     ]
   },
   {
@@ -1638,6 +1680,13 @@
     "terms": [
       "waardevaste pensioenen",
       "welvaartsvaste pensioenen"
+    ],
+    "procedure": [
+      "Identificeer de twee groepen: jongere premiebetalers en oudere uitkeringsontvangers in het omslagstelsel",
+      "Beschrijf de pensioenkorting: met hoeveel procent daalt de nominale uitkering, en hoe werkt dat op de koopkracht via de inflatie",
+      "Analyseer het effect op de ontvangers: daling van besteedbaar inkomen en reële uitkering (waardevast/welvaartsvast wordt losgelaten)",
+      "Analyseer het effect op de premiebetalers: blijft de premie stabiel of daalt die mee, en wat betekent dat voor de intergenerationele lastenverdeling",
+      "Beoordeel of de korting de solidariteit tussen generaties versterkt of ondermijnt en onderbouw de conclusie"
     ]
   },
   {
@@ -1975,6 +2024,13 @@
     ],
     "terms": [
       "externe effecten"
+    ],
+    "procedure": [
+      "Identificeer het externe effect dat door concentratie ontstaat (bv. files, luchtvervuiling, overbelaste infrastructuur)",
+      "Beredeneer waarom de schade meer dan evenredig toeneemt met het aantal activiteiten op dezelfde plek (niet-lineaire effecten)",
+      "Vergelijk privaatkosten en maatschappelijke kosten: laat zien dat er verloren surplus ontstaat (zoals in F08)",
+      "Analyseer welke ingreep het effect zou internaliseren (heffingen, vergunningen, ruimtelijke spreiding) en hoe dit de prikkel voor producenten verandert",
+      "Beoordeel wanneer ingrijpen maatschappelijk gewenst is: weeg de vermeden externe schade af tegen de kosten van de interventie"
     ]
   },
   {
@@ -2455,6 +2511,13 @@
     "terms": [
       "heffingen",
       "subsidies"
+    ],
+    "procedure": [
+      "Identificeer het kostenvoordeel: welk instrument (bv. gratis emissierechten, subsidie, belastingvrijstelling) verlaagt de kostprijs van binnenlandse exporteurs",
+      "Bereken of beredeneer hoe het voordeel de relatieve prijs van binnenlandse versus buitenlandse goederen wijzigt (gebruik Armington-logica uit H03)",
+      "Benoem de beoordelingscriteria: werkt het als protectionisme (nadeel voor buitenlandse concurrenten), treedt er vrijhandelsverstoring op, en hoe zit het met milieudoelen",
+      "Weeg voor- en nadelen af: binnenlandse werkgelegenheid en exportpositie tegenover verstoorde concurrentie en mogelijke WTO-conflicten",
+      "Concludeer of het instrument feitelijk protectionistisch werkt en onder welke voorwaarden dat gerechtvaardigd is"
     ]
   },
   {
@@ -2537,6 +2600,13 @@
     ],
     "terms": [
       "wisselkoers"
+    ],
+    "procedure": [
+      "Identificeer het kostenkanaal: een hoger minimumuurloon verhoogt de loonkosten per eenheid product voor arbeidsintensieve sectoren",
+      "Beredeneer de doorwerking op de prijzen: hogere kostprijs leidt tot hogere afzetprijzen van Nederlandse exportgoederen",
+      "Vergelijk met buitenlandse concurrenten: bij gelijke wisselkoers worden Nederlandse goederen relatief duurder en daalt de exportvraag",
+      "Analyseer of wisselkoersaanpassing (depreciatie) dit effect deels kan compenseren en onder welke voorwaarden",
+      "Concludeer met een verdict over de internationale concurrentiepositie, met een expliciete ceteris-paribus-aanname"
     ]
   },
   {
@@ -2557,6 +2627,13 @@
     "terms": [
       "bbp-groei",
       "koopkracht"
+    ],
+    "procedure": [
+      "Identificeer het bestedingskanaal: een hoger minimumuurloon verhoogt het besteedbaar inkomen van lagere inkomensgroepen",
+      "Beredeneer waarom juist deze groep een hoge consumptiequote heeft, zodat een groot deel van de extra koopkracht wordt besteed",
+      "Analyseer de doorwerking via de multiplier (zie I14): extra consumptie stuwt Y omhoog in meerdere bestedingsrondes",
+      "Weeg de bbp-groei af tegen mogelijke lekkages (import, sparen, belasting) die de multiplier verkleinen",
+      "Concludeer of en onder welke voorwaarden het vraagkanaal tot hogere bbp-groei leidt"
     ]
   },
   {
@@ -2740,6 +2817,13 @@
     "terms": [
       "marginaal tarief",
       "secundair inkomen"
+    ],
+    "procedure": [
+      "Bepaal de verandering in het marginaal tarief en bereken het effect op het besteedbaar inkomen van een representatief huishouden (methode uit H04)",
+      "Identificeer hoeveel extra (of minder) consumptie hieruit volgt: koppel de inkomensverandering aan de marginale consumptiequote c",
+      "Analyseer de multiplier-werking: de eerste bestedingsronde genereert nieuwe inkomens voor andere huishoudens (secundair inkomen)",
+      "Tel de rondes op via ΔY = multiplier × ΔA (zie I14) en let op lekkages (import, sparen, belasting)",
+      "Beoordeel het netto-effect op bbp en inkomensverdeling; vergelijk met denivellering of nivellering uit H08"
     ]
   },
   {
@@ -2831,6 +2915,13 @@
     ],
     "terms": [
       "rente"
+    ],
+    "procedure": [
+      "Inventariseer per optie de kostencategorieën: bij kopen (hypotheekrente, aflossing, onderhoud, eigenaarslasten) en bij huren (kale huur, servicekosten)",
+      "Bereken voor beide opties de netto maandlasten over een vaste periode (bv. 1 jaar), inclusief fiscale effecten",
+      "Corrigeer voor vermogensopbouw bij kopen (aflossingsdeel is geen kostenpost maar besparing) en voor verwachte waardegroei van de woning",
+      "Voer gevoeligheidsanalyse uit op de rente (zie H15) en de huurontwikkeling: welke aanname verschuift de uitkomst",
+      "Vergelijk de netto woonlasten systematisch per categorie en concludeer onder welke voorwaarden kopen goedkoper is dan huren"
     ]
   },
   {
@@ -3151,6 +3242,13 @@
       "monetair beleid",
       "muntunie",
       "wisselkoers"
+    ],
+    "procedure": [
+      "Benoem de drie doelen van het trilemma: vaste wisselkoers, vrij kapitaalverkeer, zelfstandig rentebeleid",
+      "Analyseer paar 1 (vaste wisselkoers + vrij kapitaalverkeer): toon dat de centrale bank de rente moet aanpassen aan het buitenland, dus geen zelfstandig rentebeleid",
+      "Analyseer paar 2 (vaste wisselkoers + zelfstandig rentebeleid): toon dat kapitaalcontroles nodig zijn om uitstroom bij rentegap te voorkomen",
+      "Analyseer paar 3 (vrij kapitaalverkeer + zelfstandig rentebeleid): toon dat de wisselkoers dan moet kunnen zweven (zie I12)",
+      "Concludeer dat elke keuze van twee doelen het derde uitsluit en plaats een concreet land in het schema (bv. Nederland binnen de muntunie)"
     ]
   },
   {
