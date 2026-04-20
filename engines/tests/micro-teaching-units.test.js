@@ -17,6 +17,14 @@ const {
   sortUnits,
 } = require('../../build-scripts/references/build-unit-index');
 
+const {
+  parseArgs,
+  buildSpecFromFlags,
+  validateSpec,
+  formatEntry,
+  insertEntry,
+} = require('../../build-scripts/references/unit-add');
+
 // ---------- parseInlineValue ----------
 
 describe('parseInlineValue', () => {
@@ -292,6 +300,172 @@ describe('sortUnits', () => {
   test('sorts by ID', () => {
     const units = [{ id: 'D02' }, { id: 'A01' }, { id: 'D01' }];
     expect(sortUnits(units).map(u => u.id)).toEqual(['A01', 'D01', 'D02']);
+  });
+});
+
+// ---------- unit-add: parseArgs ----------
+
+describe('unit-add parseArgs', () => {
+  test('parses --spec JSON', () => {
+    const { spec } = parseArgs(['node', 'u', '--spec', '{"id":"A01"}']);
+    expect(spec).toEqual({ id: 'A01' });
+  });
+
+  test('parses flags with values', () => {
+    const { flags } = parseArgs(['node', 'u', '--id', 'D05', '--name', 'Market']);
+    expect(flags.id).toBe('D05');
+    expect(flags.name).toBe('Market');
+  });
+
+  test('flags without values become true', () => {
+    const { flags } = parseArgs(['node', 'u', '--deprecated']);
+    expect(flags.deprecated).toBe(true);
+  });
+});
+
+// ---------- unit-add: buildSpecFromFlags ----------
+
+describe('unit-add buildSpecFromFlags', () => {
+  test('maps hyphenated flags to underscore fields', () => {
+    const spec = buildSpecFromFlags({
+      id: 'D05', name: 'X', kern: 'k',
+      'mastery-target': 'understand', 'prior-learning': 'new_this_year',
+      needs: 'D01,D02', terms: 'a, b, c',
+    });
+    expect(spec.mastery_target).toBe('understand');
+    expect(spec.prior_learning).toBe('new_this_year');
+    expect(spec.needs).toEqual(['D01', 'D02']);
+    expect(spec.terms).toEqual(['a', 'b', 'c']);
+  });
+
+  test('needs becomes empty array when absent', () => {
+    const spec = buildSpecFromFlags({ id: 'D01' });
+    expect(spec.needs).toBeUndefined();
+  });
+});
+
+// ---------- unit-add: validateSpec ----------
+
+describe('unit-add validateSpec', () => {
+  function okSpec() {
+    return {
+      id: 'D05', name: 'Market', kern: 'k',
+      needs: [], mastery_target: 'understand',
+      prior_learning: 'new_this_year', terms: [],
+    };
+  }
+
+  test('passes valid spec', () => {
+    expect(validateSpec(okSpec(), new Set())).toEqual([]);
+  });
+
+  test('rejects existing ID', () => {
+    const errs = validateSpec(okSpec(), new Set(['D05']));
+    expect(errs).toEqual(expect.arrayContaining([expect.stringMatching(/already exists/)]));
+  });
+
+  test('rejects invalid ID format', () => {
+    const errs = validateSpec({ ...okSpec(), id: 'foo' }, new Set());
+    expect(errs).toEqual(expect.arrayContaining([expect.stringMatching(/invalid ID/)]));
+  });
+
+  test('requires procedure on apply-level', () => {
+    const errs = validateSpec({ ...okSpec(), mastery_target: 'apply' }, new Set());
+    expect(errs).toEqual(expect.arrayContaining([expect.stringMatching(/non-empty procedure/)]));
+  });
+
+  test('requires generator on A-domain', () => {
+    const errs = validateSpec(
+      { ...okSpec(), id: 'A01', mastery_target: 'apply', procedure: ['stap'] },
+      new Set()
+    );
+    expect(errs).toEqual(expect.arrayContaining([expect.stringMatching(/A-domain units require a generator/)]));
+  });
+
+  test('rejects generator on non-A', () => {
+    const errs = validateSpec({ ...okSpec(), generator: 'GEN_X' }, new Set());
+    expect(errs).toEqual(expect.arrayContaining([expect.stringMatching(/only valid for A-domain/)]));
+  });
+});
+
+// ---------- unit-add: formatEntry ----------
+
+describe('unit-add formatEntry', () => {
+  test('emits readable markdown for a minimal unit', () => {
+    const md = formatEntry({
+      id: 'D05', name: 'Marktevenwicht',
+      kern: 'Student bepaalt evenwicht.',
+      needs: ['D01', 'D02'],
+      mastery_target: 'understand',
+      prior_learning: 'new_this_year',
+      terms: ['marktevenwicht'],
+    });
+    expect(md).toMatch(/^### D05 Marktevenwicht\n/);
+    expect(md).toContain('- needs: [D01, D02]');
+    expect(md).toContain('- terms: [marktevenwicht]');
+    expect(md).toContain('- mastery_target: understand');
+  });
+
+  test('emits numbered procedure steps', () => {
+    const md = formatEntry({
+      id: 'D06', name: 'Marktevenwicht (berekening)',
+      kern: 'k', needs: [],
+      mastery_target: 'apply', prior_learning: 'new_this_year',
+      terms: [],
+      procedure: ['Stap een.', 'Stap twee.'],
+    });
+    expect(md).toContain('- procedure:\n  1. Stap een.\n  2. Stap twee.\n');
+  });
+
+  test('round-trips through parseBlock', () => {
+    const original = {
+      id: 'D07', name: 'Marktevenwicht (analyse)',
+      kern: 'Student analyseert welvaart.',
+      needs: ['D05'],
+      mastery_target: 'understand',
+      prior_learning: 'new_this_year',
+      terms: ['welvaart'],
+    };
+    const md = formatEntry(original);
+    const raw = md.replace(/^### /, '');
+    const parsed = parseBlock(raw);
+    expect(parsed.id).toBe(original.id);
+    expect(parsed.name).toBe(original.name);
+    expect(parsed.kern).toBe(original.kern);
+    expect(parsed.needs).toEqual(original.needs);
+    expect(parsed.mastery_target).toBe(original.mastery_target);
+    expect(parsed.terms).toEqual(original.terms);
+  });
+});
+
+// ---------- unit-add: insertEntry ----------
+
+describe('unit-add insertEntry', () => {
+  const skeleton = [
+    '# Heading',
+    '',
+    '<!-- UNIT ENTRIES BELOW THIS LINE -->',
+    '',
+  ].join('\n');
+
+  test('inserts into an empty catalog', () => {
+    const entry = '### D01 First\n- needs: []\n';
+    const out = insertEntry(skeleton, entry, 'D01');
+    expect(out).toContain('### D01 First');
+    expect(out.indexOf('<!-- UNIT ENTRIES')).toBeLessThan(out.indexOf('### D01'));
+  });
+
+  test('keeps units sorted by ID', () => {
+    let md = skeleton;
+    md = insertEntry(md, '### D05 Fifth\n- needs: []\n', 'D05');
+    md = insertEntry(md, '### A01 Alpha\n- needs: []\n', 'A01');
+    md = insertEntry(md, '### D02 Second\n- needs: []\n', 'D02');
+    const order = (md.match(/### (\w+)/g) || []).map(s => s.slice(4));
+    expect(order).toEqual(['A01', 'D02', 'D05']);
+  });
+
+  test('throws when marker is missing', () => {
+    expect(() => insertEntry('# No marker\n', '### A01\n', 'A01')).toThrow(/cannot find units marker/);
   });
 });
 
