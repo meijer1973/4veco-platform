@@ -1,6 +1,6 @@
 # Aspects-Coverage Report
 
-Generated: 2026-04-20T13:19:38.626Z
+Generated: 2026-04-20T13:47:34.990Z
 Live units: 144
 
 ## Status: **INFORMATIONAL**
@@ -12,32 +12,32 @@ The `aspects` field records whether mastery requires **verbaal** reasoning, **gr
 | Aspect | Units |
 |---|---|
 | verbaal | 112 |
-| grafisch | 10 |
-| rekenen | 53 |
+| grafisch | 13 |
+| rekenen | 56 |
 
 ## Combinations
 
 | Combination | Units |
 |---|---|
-| verbaal | 87 |
+| verbaal | 83 |
 | rekenen | 26 |
-| rekenen+verbaal | 21 |
+| rekenen+verbaal | 22 |
 | grafisch+rekenen | 5 |
-| grafisch+verbaal | 3 |
-| grafisch+rekenen+verbaal | 1 |
+| grafisch+verbaal | 4 |
+| grafisch+rekenen+verbaal | 3 |
 | grafisch | 1 |
 
 ## By domain
 
 | Domain | verbaal | grafisch | rekenen |
 |---|---:|---:|---:|
-| A | 17 | 8 | 33 |
-| D | 25 | 1 | 5 |
+| A | 17 | 8 | 35 |
+| D | 25 | 2 | 6 |
 | E | 6 | 0 | 0 |
 | F | 14 | 0 | 3 |
 | G | 11 | 0 | 2 |
 | H | 21 | 0 | 8 |
-| I | 18 | 1 | 2 |
+| I | 18 | 3 | 2 |
 
 ## Review backlog: 22 unit(s) with no exam citation
 

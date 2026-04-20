@@ -1,6 +1,6 @@
 # Procedure-Coverage Report
 
-Generated: 2026-04-20T13:19:38.526Z
+Generated: 2026-04-20T13:47:34.919Z
 Apply+ units:            63
 With procedure:          3
 Without procedure:       60 (A: 34, non-A: 26)

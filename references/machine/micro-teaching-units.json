@@ -123,7 +123,9 @@
       "rekenen",
       "verbaal"
     ],
-    "terms": [],
+    "terms": [
+      "evenwichtsprijs"
+    ],
     "procedure": [
       "Stel de twee functies aan elkaar gelijk",
       "Los op naar P → evenwichtsprijs (P*)",
@@ -174,7 +176,9 @@
       "rekenen",
       "verbaal"
     ],
-    "terms": [],
+    "terms": [
+      "variabele kosten"
+    ],
     "pitfalls": [
       "Bij TK = 12Q + 0,3Q² denken leerlingen soms dat er geen vaste kosten zijn."
     ],
@@ -283,7 +287,9 @@
     "aspects": [
       "rekenen"
     ],
-    "terms": [],
+    "terms": [
+      "marginale kosten"
+    ],
     "pitfalls": [
       "Verwar MK niet met GTK (gemiddelde totale kosten)."
     ],
@@ -305,7 +311,9 @@
       "rekenen",
       "verbaal"
     ],
-    "terms": [],
+    "terms": [
+      "gemiddelde totale kosten"
+    ],
     "pitfalls": [
       "Deel ELKE term apart door Q!"
     ],
@@ -327,7 +335,9 @@
       "rekenen",
       "verbaal"
     ],
-    "terms": [],
+    "terms": [
+      "prijselasticiteit van de vraag"
+    ],
     "pitfalls": [
       "Vergeet het minteken niet!"
     ],
@@ -366,7 +376,9 @@
     "aspects": [
       "rekenen"
     ],
-    "terms": [],
+    "terms": [
+      "inkomenselasticiteit"
+    ],
     "pitfalls": [
       "Verwar inkomenselasticiteit niet met prijselasticiteit!"
     ],
@@ -407,9 +419,12 @@
     "prior_learning": "new_this_year",
     "aspects": [
       "grafisch",
+      "rekenen",
       "verbaal"
     ],
-    "terms": [],
+    "terms": [
+      "producentensurplus"
+    ],
     "pitfalls": [
       "Vergeet niet om de vraaglijn om te schrijven naar P als functie van Q voordat je Pmax bepaalt."
     ],
@@ -457,7 +472,11 @@
       "rekenen",
       "verbaal"
     ],
-    "terms": [],
+    "terms": [
+      "totale kosten",
+      "totale opbrengst",
+      "winst"
+    ],
     "pitfalls": [
       "Vergeet de constante kosten niet!"
     ],
@@ -481,7 +500,9 @@
       "rekenen",
       "verbaal"
     ],
-    "terms": [],
+    "terms": [
+      "winst"
+    ],
     "pitfalls": [
       "Bij het herschrijven naar de standaardvorm verplaats je alle termen naar één kant."
     ],
@@ -503,7 +524,9 @@
     "aspects": [
       "rekenen"
     ],
-    "terms": [],
+    "terms": [
+      "marktevenwicht"
+    ],
     "pitfalls": [
       "Let op het teken!"
     ],
@@ -525,7 +548,9 @@
     "aspects": [
       "rekenen"
     ],
-    "terms": [],
+    "terms": [
+      "marktevenwicht"
+    ],
     "pitfalls": [
       "Als bedrijven een verschillende minimumprijs hebben, biedt het ene bedrijf al aan terwijl het andere nog niet produceert."
     ],
@@ -588,9 +613,12 @@
     "prior_learning": "new_this_year",
     "aspects": [
       "grafisch",
+      "rekenen",
       "verbaal"
     ],
-    "terms": [],
+    "terms": [
+      "marktevenwicht"
+    ],
     "pitfalls": [
       "Bij een subsidie ontvangt de producent P + s, niet P − s."
     ],
@@ -634,7 +662,9 @@
     "aspects": [
       "rekenen"
     ],
-    "terms": [],
+    "terms": [
+      "winst"
+    ],
     "pitfalls": [
       "Bij het herschrijven naar de standaardvorm verandert het teken van de Q-term."
     ],
@@ -655,7 +685,9 @@
     "aspects": [
       "rekenen"
     ],
-    "terms": [],
+    "terms": [
+      "consumentensurplus"
+    ],
     "pitfalls": [
       "Pmax is niet de coëfficiënt vóór P in de vraaglijn."
     ],
@@ -676,7 +708,9 @@
     "aspects": [
       "rekenen"
     ],
-    "terms": [],
+    "terms": [
+      "marktevenwicht"
+    ],
     "pitfalls": [
       "Als groep B een minimumprijs van €8 heeft en je rekent bij P = 6, dan is Qi_B = (6−8)/2 = −1."
     ],
@@ -722,7 +756,9 @@
     "aspects": [
       "rekenen"
     ],
-    "terms": [],
+    "terms": [
+      "winst"
+    ],
     "pitfalls": [
       "Winst is niet P × Q!"
     ],
@@ -769,7 +805,9 @@
     "aspects": [
       "rekenen"
     ],
-    "terms": [],
+    "terms": [
+      "winst"
+    ],
     "pitfalls": [
       "Gebruik niet MO als prijs!"
     ],
@@ -791,7 +829,10 @@
     "aspects": [
       "rekenen"
     ],
-    "terms": [],
+    "terms": [
+      "prijsdiscriminatie",
+      "winst"
+    ],
     "pitfalls": [
       "Gebruik niet dezelfde Q voor beide markten!"
     ],
@@ -828,6 +869,7 @@
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
     "aspects": [
+      "grafisch",
       "verbaal"
     ],
     "terms": []
@@ -837,14 +879,17 @@
     "name": "Constante kosten en winst",
     "category": "markt",
     "layer": 0,
-    "kern": "Constante kosten beinvloeden break-even analyse maar niet het MO = MK optimum.",
+    "kern": "Constante kosten beïnvloeden break-even analyse maar niet het MO = MK optimum.",
     "needs": [],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
     "aspects": [
       "verbaal"
     ],
-    "terms": []
+    "terms": [
+      "constante kosten",
+      "winst"
+    ]
   },
   {
     "id": "D03",
@@ -861,7 +906,9 @@
     "aspects": [
       "verbaal"
     ],
-    "terms": []
+    "terms": [
+      "consumentensurplus"
+    ]
   },
   {
     "id": "D04",
@@ -875,7 +922,9 @@
     "aspects": [
       "verbaal"
     ],
-    "terms": []
+    "terms": [
+      "inkomenselasticiteit"
+    ]
   },
   {
     "id": "D05",
@@ -906,7 +955,9 @@
     "aspects": [
       "verbaal"
     ],
-    "terms": []
+    "terms": [
+      "prijselasticiteit van de vraag"
+    ]
   },
   {
     "id": "D07",
@@ -978,21 +1029,24 @@
     "name": "Inkomenselasticiteit huurmarkt",
     "category": "markt",
     "layer": 0,
-    "kern": "Bereken en interpreteert inkomenselasticiteit van huurwoningen.",
+    "kern": "Bereken en interpreteer inkomenselasticiteit van huurwoningen.",
     "needs": [],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
     "aspects": [
+      "rekenen",
       "verbaal"
     ],
-    "terms": []
+    "terms": [
+      "inkomenselasticiteit"
+    ]
   },
   {
     "id": "D12",
     "name": "Kruiselasticiteit en substituten",
     "category": "markt",
     "layer": 0,
-    "kern": "Bepaal uit kruiselasticiteit of goederen substituten zijn en analyseert vraagverschuivingen.",
+    "kern": "Bepaal uit kruiselasticiteit of goederen substituten zijn en analyseer vraagverschuivingen.",
     "needs": [],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
@@ -1044,7 +1098,9 @@
     "aspects": [
       "verbaal"
     ],
-    "terms": []
+    "terms": [
+      "marktvormen"
+    ]
   },
   {
     "id": "D16",
@@ -1072,7 +1128,9 @@
     "aspects": [
       "verbaal"
     ],
-    "terms": []
+    "terms": [
+      "totale opbrengst"
+    ]
   },
   {
     "id": "D18",
@@ -1089,7 +1147,10 @@
     "aspects": [
       "rekenen"
     ],
-    "terms": []
+    "terms": [
+      "prijsdiscriminatie",
+      "winst"
+    ]
   },
   {
     "id": "D19",
@@ -1117,7 +1178,9 @@
     "aspects": [
       "verbaal"
     ],
-    "terms": []
+    "terms": [
+      "marktevenwicht"
+    ]
   },
   {
     "id": "D21",
@@ -1134,14 +1197,16 @@
     "aspects": [
       "verbaal"
     ],
-    "terms": []
+    "terms": [
+      "prijsdiscriminatie"
+    ]
   },
   {
     "id": "D22",
     "name": "Prijsdiscriminatie en subsidies",
     "category": "markt",
     "layer": 0,
-    "kern": "Herken of subsidies prijsdiscriminatie veroorzaken en analyseert gevolgen.",
+    "kern": "Herken of subsidies prijsdiscriminatie veroorzaken en analyseer gevolgen.",
     "needs": [],
     "exam_codes": [
       "D2.3"
@@ -1151,7 +1216,10 @@
     "aspects": [
       "verbaal"
     ],
-    "terms": []
+    "terms": [
+      "prijsdiscriminatie",
+      "subsidies"
+    ]
   },
   {
     "id": "D23",
@@ -1168,7 +1236,10 @@
     "aspects": [
       "verbaal"
     ],
-    "terms": []
+    "terms": [
+      "betalingsbereidheid",
+      "prijsdiscriminatie"
+    ]
   },
   {
     "id": "D24",
@@ -1185,7 +1256,10 @@
     "aspects": [
       "verbaal"
     ],
-    "terms": []
+    "terms": [
+      "marktmacht",
+      "prijsdiscriminatie"
+    ]
   },
   {
     "id": "D25",
@@ -1213,7 +1287,9 @@
     "aspects": [
       "verbaal"
     ],
-    "terms": []
+    "terms": [
+      "variabele kosten"
+    ]
   },
   {
     "id": "D27",
@@ -1244,7 +1320,10 @@
     "aspects": [
       "verbaal"
     ],
-    "terms": []
+    "terms": [
+      "consumentensurplus",
+      "producentensurplus"
+    ]
   },
   {
     "id": "D29",
@@ -1261,7 +1340,9 @@
     "aspects": [
       "grafisch"
     ],
-    "terms": []
+    "terms": [
+      "subsidies"
+    ]
   },
   {
     "id": "D30",
@@ -1276,7 +1357,9 @@
       "rekenen",
       "verbaal"
     ],
-    "terms": []
+    "terms": [
+      "marginale kosten"
+    ]
   },
   {
     "id": "E01",
@@ -1310,7 +1393,9 @@
     "aspects": [
       "verbaal"
     ],
-    "terms": []
+    "terms": [
+      "intertemporele ruil"
+    ]
   },
   {
     "id": "E03",
@@ -1375,7 +1460,9 @@
     "aspects": [
       "verbaal"
     ],
-    "terms": []
+    "terms": [
+      "voorraad- en stroomgrootheden"
+    ]
   },
   {
     "id": "F01",
@@ -1392,7 +1479,10 @@
     "aspects": [
       "verbaal"
     ],
-    "terms": []
+    "terms": [
+      "berovingsprobleem",
+      "risico"
+    ]
   },
   {
     "id": "F02",
@@ -1410,7 +1500,9 @@
       "rekenen",
       "verbaal"
     ],
-    "terms": []
+    "terms": [
+      "collectieve goederen"
+    ]
   },
   {
     "id": "F03",
@@ -1427,7 +1519,9 @@
     "aspects": [
       "verbaal"
     ],
-    "terms": []
+    "terms": [
+      "dominante strategie"
+    ]
   },
   {
     "id": "F04",
@@ -1444,7 +1538,10 @@
     "aspects": [
       "rekenen"
     ],
-    "terms": []
+    "terms": [
+      "dominante strategie",
+      "pay-off matrix"
+    ]
   },
   {
     "id": "F05",
@@ -1478,7 +1575,9 @@
     "aspects": [
       "verbaal"
     ],
-    "terms": []
+    "terms": [
+      "externe effecten"
+    ]
   },
   {
     "id": "F07",
@@ -1495,7 +1594,9 @@
     "aspects": [
       "verbaal"
     ],
-    "terms": []
+    "terms": [
+      "externe effecten"
+    ]
   },
   {
     "id": "F08",
@@ -1512,7 +1613,9 @@
     "aspects": [
       "verbaal"
     ],
-    "terms": []
+    "terms": [
+      "externe effecten"
+    ]
   },
   {
     "id": "F09",
@@ -1529,7 +1632,10 @@
     "aspects": [
       "verbaal"
     ],
-    "terms": []
+    "terms": [
+      "dominante strategie",
+      "gevangenendilemma"
+    ]
   },
   {
     "id": "F10",
@@ -1546,7 +1652,9 @@
     "aspects": [
       "verbaal"
     ],
-    "terms": []
+    "terms": [
+      "externe effecten"
+    ]
   },
   {
     "id": "F11",
@@ -1563,7 +1671,9 @@
     "aspects": [
       "verbaal"
     ],
-    "terms": []
+    "terms": [
+      "externe effecten"
+    ]
   },
   {
     "id": "F12",
@@ -1581,7 +1691,10 @@
       "rekenen",
       "verbaal"
     ],
-    "terms": []
+    "terms": [
+      "Nash-evenwicht",
+      "pay-off matrix"
+    ]
   },
   {
     "id": "F13",
@@ -1598,7 +1711,9 @@
     "aspects": [
       "verbaal"
     ],
-    "terms": []
+    "terms": [
+      "berovingsprobleem"
+    ]
   },
   {
     "id": "F14",
@@ -1615,7 +1730,9 @@
     "aspects": [
       "verbaal"
     ],
-    "terms": []
+    "terms": [
+      "externe effecten"
+    ]
   },
   {
     "id": "F15",
@@ -1632,7 +1749,9 @@
     "aspects": [
       "verbaal"
     ],
-    "terms": []
+    "terms": [
+      "verzonken kosten"
+    ]
   },
   {
     "id": "G01",
@@ -1666,7 +1785,9 @@
     "aspects": [
       "verbaal"
     ],
-    "terms": []
+    "terms": [
+      "informatieasymmetrie"
+    ]
   },
   {
     "id": "G03",
@@ -1701,7 +1822,9 @@
       "rekenen",
       "verbaal"
     ],
-    "terms": []
+    "terms": [
+      "eigen risico"
+    ]
   },
   {
     "id": "G05",
@@ -1742,7 +1865,7 @@
     "name": "Transactiekosten",
     "category": "risico en informatie",
     "layer": 0,
-    "kern": "Bereken en interpreteert transactiekosten bij ruil.",
+    "kern": "Bereken en interpreteer transactiekosten bij ruil.",
     "needs": [],
     "exam_codes": [
       "G2.1"
@@ -1753,7 +1876,9 @@
       "rekenen",
       "verbaal"
     ],
-    "terms": []
+    "terms": [
+      "transactiekosten"
+    ]
   },
   {
     "id": "G08",
@@ -1770,7 +1895,9 @@
     "aspects": [
       "verbaal"
     ],
-    "terms": []
+    "terms": [
+      "risico"
+    ]
   },
   {
     "id": "G09",
@@ -1804,7 +1931,9 @@
     "aspects": [
       "verbaal"
     ],
-    "terms": []
+    "terms": [
+      "informatieasymmetrie"
+    ]
   },
   {
     "id": "G11",
@@ -1863,7 +1992,7 @@
     "name": "Armington-elasticiteit",
     "category": "welvaart en groei",
     "layer": 0,
-    "kern": "Bereken Armington-elasticiteit en analyseert effectiviteit van import-beperkend beleid.",
+    "kern": "Bereken Armington-elasticiteit en analyseer effectiviteit van import-beperkend beleid.",
     "needs": [],
     "exam_codes": [
       "H1.1"
@@ -1891,7 +2020,9 @@
       "rekenen",
       "verbaal"
     ],
-    "terms": []
+    "terms": [
+      "marginaal tarief"
+    ]
   },
   {
     "id": "H05",
@@ -1942,7 +2073,9 @@
     "aspects": [
       "verbaal"
     ],
-    "terms": []
+    "terms": [
+      "rente"
+    ]
   },
   {
     "id": "H08",
@@ -1993,7 +2126,9 @@
     "aspects": [
       "verbaal"
     ],
-    "terms": []
+    "terms": [
+      "Gini-coefficient"
+    ]
   },
   {
     "id": "H11",
@@ -2095,7 +2230,9 @@
     "aspects": [
       "verbaal"
     ],
-    "terms": []
+    "terms": [
+      "risico"
+    ]
   },
   {
     "id": "H17",
@@ -2112,14 +2249,16 @@
     "aspects": [
       "verbaal"
     ],
-    "terms": []
+    "terms": [
+      "investeringen"
+    ]
   },
   {
     "id": "H18",
     "name": "Progressief tarief berekenen",
     "category": "welvaart en groei",
     "layer": 0,
-    "kern": "Bereken totale belasting bij progressieve tarieven en analyseert stimulansen.",
+    "kern": "Bereken totale belasting bij progressieve tarieven en analyseer stimulansen.",
     "needs": [],
     "exam_codes": [
       "H4.6"
@@ -2146,7 +2285,9 @@
     "aspects": [
       "verbaal"
     ],
-    "terms": []
+    "terms": [
+      "investeringen"
+    ]
   },
   {
     "id": "H20",
@@ -2180,7 +2321,9 @@
     "aspects": [
       "rekenen"
     ],
-    "terms": []
+    "terms": [
+      "staatsschuld"
+    ]
   },
   {
     "id": "H22",
@@ -2218,7 +2361,7 @@
     "name": "Wisselkoers en depreciatie",
     "category": "welvaart en groei",
     "layer": 0,
-    "kern": "Bereken wisselkoerseffecten van depreciatie en legt uit hoe deze reele inkomens beinvloeden.",
+    "kern": "Bereken wisselkoerseffecten van depreciatie en leg uit hoe deze reële inkomens beïnvloeden.",
     "needs": [],
     "exam_codes": [
       "H1.1"
@@ -2228,7 +2371,9 @@
     "aspects": [
       "rekenen"
     ],
-    "terms": []
+    "terms": [
+      "wisselkoers"
+    ]
   },
   {
     "id": "H25",
@@ -2245,7 +2390,9 @@
     "aspects": [
       "verbaal"
     ],
-    "terms": []
+    "terms": [
+      "wisselkoers"
+    ]
   },
   {
     "id": "H26",
@@ -2260,7 +2407,9 @@
       "rekenen",
       "verbaal"
     ],
-    "terms": []
+    "terms": [
+      "rente"
+    ]
   },
   {
     "id": "I01",
@@ -2274,7 +2423,9 @@
     "aspects": [
       "verbaal"
     ],
-    "terms": []
+    "terms": [
+      "anticyclisch"
+    ]
   },
   {
     "id": "I02",
@@ -2288,7 +2439,9 @@
     "aspects": [
       "verbaal"
     ],
-    "terms": []
+    "terms": [
+      "anticyclisch"
+    ]
   },
   {
     "id": "I03",
@@ -2309,7 +2462,7 @@
     "name": "CAO-looptijd en arbeidsmarktrigiditeit",
     "category": "goede en slechte tijden",
     "layer": 0,
-    "kern": "Leg uit hoe langere CAO-looptijden arbeidsmarktflexibiliteit en beleid beinvloeden.",
+    "kern": "Leg uit hoe langere CAO-looptijden arbeidsmarktflexibiliteit en beleid beïnvloeden.",
     "needs": [],
     "exam_codes": [
       "I4.4"
@@ -2365,16 +2518,19 @@
     "mastery_target": "analyze",
     "prior_learning": "new_this_year",
     "aspects": [
+      "grafisch",
       "verbaal"
     ],
-    "terms": []
+    "terms": [
+      "rente"
+    ]
   },
   {
     "id": "I08",
     "name": "Keynesiaanse kruis verschuivingen analyseren",
     "category": "goede en slechte tijden",
     "layer": 0,
-    "kern": "Analyseer hoe verschuivingen in IS en LM het evenwicht en effectiviteit van beleid beinvloeden.",
+    "kern": "Analyseer hoe verschuivingen in IS en LM het evenwicht en effectiviteit van beleid beïnvloeden.",
     "needs": [],
     "exam_codes": [
       "I4.1",
@@ -2386,7 +2542,9 @@
       "grafisch",
       "verbaal"
     ],
-    "terms": []
+    "terms": [
+      "Keynesiaanse kruis"
+    ]
   },
   {
     "id": "I09",
@@ -2403,7 +2561,9 @@
     "aspects": [
       "rekenen"
     ],
-    "terms": []
+    "terms": [
+      "koopkracht"
+    ]
   },
   {
     "id": "I10",
@@ -2418,9 +2578,12 @@
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
     "aspects": [
+      "grafisch",
       "verbaal"
     ],
-    "terms": []
+    "terms": [
+      "GA-curve"
+    ]
   },
   {
     "id": "I11",
@@ -2451,7 +2614,10 @@
     "aspects": [
       "verbaal"
     ],
-    "terms": []
+    "terms": [
+      "rente",
+      "wisselkoers"
+    ]
   },
   {
     "id": "I13",
@@ -2468,14 +2634,16 @@
     "aspects": [
       "verbaal"
     ],
-    "terms": []
+    "terms": [
+      "wisselkoers"
+    ]
   },
   {
     "id": "I14",
     "name": "Multiplier en lekkages",
     "category": "goede en slechte tijden",
     "layer": 0,
-    "kern": "Begrijp hoe autonome bestedingen via de multiplier en lekkages het inkomen beinvloeden.",
+    "kern": "Begrijp hoe autonome bestedingen via de multiplier en lekkages het inkomen beïnvloeden.",
     "needs": [],
     "exam_codes": [
       "I4.1"
@@ -2547,14 +2715,16 @@
     "aspects": [
       "verbaal"
     ],
-    "terms": []
+    "terms": [
+      "eigen risico"
+    ]
   },
   {
     "id": "I19",
     "name": "Wisselkoerseffect van monetair beleid",
     "category": "goede en slechte tijden",
     "layer": 0,
-    "kern": "Leg uit hoe monetaire beleidsmaatregelen via de wisselkoers de conjunctuur beinvloeden.",
+    "kern": "Leg uit hoe monetaire beleidsmaatregelen via de wisselkoers de conjunctuur beïnvloeden.",
     "needs": [],
     "exam_codes": [
       "I1.2"
@@ -2565,6 +2735,8 @@
       "rekenen",
       "verbaal"
     ],
-    "terms": []
+    "terms": [
+      "wisselkoers"
+    ]
   }
 ]

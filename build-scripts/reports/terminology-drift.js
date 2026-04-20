@@ -26,13 +26,16 @@ function loadCanonicalTerms() {
   if (!fs.existsSync(TERMS_MD)) return null;
   const content = fs.readFileSync(TERMS_MD, 'utf8');
   const terms = new Set();
-  // Any heading is a canonical term.
-  for (const m of content.matchAll(/^##+\s+(.+?)\s*$/gm)) {
-    terms.add(m[1].trim());
-  }
-  // `- **term**` pattern inside term lists.
-  for (const m of content.matchAll(/^-\s+\*\*(.+?)\*\*/gm)) {
-    terms.add(m[1].trim());
+  for (const m of content.matchAll(/^##+\s+(.+?)\s*$/gm)) terms.add(m[1].trim());
+  for (const m of content.matchAll(/^-\s+\*\*(.+?)\*\*/gm)) terms.add(m[1].trim());
+  // Pipe-table row (second column = canonical Dutch term, split on `/`).
+  for (const line of content.split(/\r?\n/)) {
+    const m = line.match(/^\|\s*\d+(?:\.\d+[a-z]?)?\s*\|\s*([^|]+?)\s*\|/);
+    if (!m) continue;
+    for (const part of m[1].trim().split(/\s*\/\s*/)) {
+      const p = part.trim();
+      if (p && !p.startsWith('(') && p.length > 2) terms.add(p);
+    }
   }
   return terms;
 }

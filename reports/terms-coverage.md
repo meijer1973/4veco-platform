@@ -1,175 +1,99 @@
 # Terms-Coverage Report
 
-Generated: 2026-04-20T13:19:38.446Z
+Generated: 2026-04-20T13:47:34.805Z
 Live units:      144
-With no terms:   144
+With no terms:   68
 
 ## Status: **INFORMATIONAL**
 
 Units with empty `terms` have no canonical-vocabulary links yet. Wire via `unit-update --id <ID> --spec '{"terms":["...","..."]}'` when a paragraph plan surfaces which canonical terms the unit anchors.
 
-## Domain A (37)
+## Domain A (19)
 
 - **A01** Lineaire functie opstellen
 - **A02** Vergelijking oplossen
 - **A03** Functie omschrijven (P↔Q)
 - **A04** Substitueren
 - **A05** Snijpunt met P-as berekenen
-- **A06** Evenwichtsprijs & -hoeveelheid
 - **A07** TO-functie opstellen
-- **A08** TK-functie herkennen
 - **A09** Collectief aanbod
 - **A10** Oppervlakte driehoek
 - **A11** Afgeleide bepalen
 - **A12** MO bepalen
-- **A13** MK bepalen
-- **A14** GTK bepalen
-- **A15** Prijselasticiteit van de vraag
 - **A16** Kruiselasticiteit
-- **A17** Inkomenselasticiteit
 - **A18** Comparatief voordeel bepalen
-- **A19** Surplus berekenen (CS/PS)
 - **A20** MO = MK oplossen
-- **A21** Winst = TO − TK
-- **A22** Break-even (TO = TK)
-- **A23** Evenwicht met heffing
-- **A24** Collectief aanbod bepalen
 - **A25** Minimumprijs analyseren
 - **A26** Maximumprijs analyseren
-- **A27** Subsidie analyseren
 - **A28** MK = GTK oplossen
-- **A29** Break-even analyse
-- **A30** Consumentensurplus
-- **A31** Individueel → collectief aanbod
 - **A32** Welvaartsverlies belasting
-- **A33** Optimale productie bij VM
 - **A34** Effecten invoerrecht
-- **A35** Max. winst monopolist
-- **A36** Prijsdiscriminatie
 - **A37** Lange-termijnevenwicht VM
 
-## Domain D (30)
+## Domain D (13)
 
 - **D01** Accijnsopbrengst uit grafiek
-- **D02** Constante kosten en winst
-- **D03** Consumentensurplus en accijns
-- **D04** Elasticiteit en goederenclassificatie
 - **D05** Evenwicht bij accijns
-- **D06** Gasverbruik en prijselasticiteit
 - **D07** Heffing doorberekenen in prijs
 - **D08** Heffing tegen overconsumptie
 - **D09** Homogene en heterogene goederen
 - **D10** Huizenmarkt in laagconjunctuur
-- **D11** Inkomenselasticiteit huurmarkt
 - **D12** Kruiselasticiteit en substituten
 - **D13** Loonkostenstijging en arbeidsproductiviteit
 - **D14** Marktfalen in watervoorziening
-- **D15** Marktvormen classificeren
 - **D16** Minimumprijs en werkloosheid
-- **D17** Monopolie minimaal verlies
-- **D18** Monopolie met prijsdiscriminatie
 - **D19** Subsidie en Pareto-efficiëntie
-- **D20** Pareto-efficiëntie in marktevenwicht
-- **D21** Prijsdiscriminatie over inkomensgroepen
-- **D22** Prijsdiscriminatie en subsidies
-- **D23** Voorwaarden voor prijsdiscriminatie
-- **D24** Drie voorwaarden prijsdiscriminatie
 - **D25** Prijselasticiteit en omzet
-- **D26** Soorten variabele kosten classificeren
 - **D27** Substituten en complementen
-- **D28** Welvaart en surplus-effect
-- **D29** Welvaartsverlies bij subsidie
-- **D30** Winstmaximalisatie MO = MK
 
-## Domain E (6)
+## Domain E (4)
 
 - **E01** Intergenerationele ruil
-- **E02** Intertemporele ruil in pensioenstelsels
 - **E03** Kapitaaldekking en renteeffecten
 - **E04** Omslagstelsel (AOW)
 - **E05** Verlaging pensioenuitkeringen en solidariteit
-- **E06** Voorraad- en stroomgrootheden onderscheiden
 
-## Domain F (15)
+## Domain F (1)
 
-- **F01** Berovingsprobleem
-- **F02** Collectief goed classificeren
-- **F03** Dominante strategie
-- **F04** Duopolie en spelmatrixanalyse
 - **F05** Emissierechten als prikkel
-- **F06** Externe effecten en innovatieprikkel
-- **F07** Externe effecten in marktbeslissingen
-- **F08** Negatieve externe effecten
-- **F09** Gevangenendilemma
-- **F10** Internalisatie van externe effecten
-- **F11** Lumpsum-financiering en externe effecten
-- **F12** Nash-evenwicht identificeren
-- **F13** Opzegtermijn en loonkosten
-- **F14** Toerismeconcentratie en externe effecten
-- **F15** Verzonken kosten en beslissingen
 
-## Domain G (11)
+## Domain G (6)
 
 - **G01** AI en risicoinschatting
-- **G02** Averechtse selectie herkennen
 - **G03** Broodfonds: informatie en risicovermindering
-- **G04** Eigen risico en moral hazard
 - **G05** Principaal-agent overheid en markt
 - **G06** Principaal-agentprobleem identificeren
-- **G07** Transactiekosten
-- **G08** Vereveningsfonds voor risicodeling
 - **G09** Solidariteit in verzekeringen
-- **G10** Informatieasymmetrie verzekeringsmarkt
 - **G11** Wisselkoersrisico bij valutabetaling
 
-## Domain H (26)
+## Domain H (16)
 
 - **H01** AOW-betaalbaarheid en vergrijzing
 - **H02** AIQ (arbeidsinkomenquote) berekenen
 - **H03** Armington-elasticiteit
-- **H04** Belastingschijven berekening
 - **H05** Circulaire economie en groen bbp
 - **H06** Totale CO2-uitstoot berekenen
-- **H07** Vergrijzing, spaarquote en rente
 - **H08** Denivellering en progressieve belasting
 - **H09** Exportsubsidie als protectie
-- **H10** Gini-coefficient bij recessie
 - **H11** Groen bbp en CO2
 - **H12** Houdbaarheidssaldo
 - **H13** Minimumuurloon en internationale concurrentie
 - **H14** Minimumuurloon en economische groei
 - **H15** Nominale rentepercentage analyseren
-- **H16** Ontslagrecht en werkgeverrisico
-- **H17** Productiviteit en technologie
 - **H18** Progressief tarief berekenen
-- **H19** Publiek kapitaal en staatsschuldquote
 - **H20** Spaarsaldo en betalingsbalans
-- **H21** Staatsschuldquote berekenen
 - **H22** Tarifaanpassing en inkomenseffecten
 - **H23** Uitverdieneffect en belastingwig
-- **H24** Wisselkoers en depreciatie
-- **H25** Wisselkoers en economische groei
-- **H26** Woonlastafweging koop vs huur
 
-## Domain I (19)
+## Domain I (9)
 
-- **I01** Anticyclisch begrotingsbeleid
-- **I02** Anticyclische inkomensoverdrachten
 - **I03** Bedrijfsinvesteringen in laagconjunctuur
 - **I04** CAO-looptijd en arbeidsmarktrigiditeit
 - **I05** Centrale bank rentebeleid
 - **I06** Deflatie in laagconjunctuur
-- **I07** IS-MB-GA-model met outputgap
-- **I08** Keynesiaanse kruis verschuivingen analyseren
-- **I09** Koopkracht behouden bij inflatie
-- **I10** Loonrigiditeit en GA-curve helling
 - **I11** Monetair beleid bij starre vs flexibele arbeidsmarkt
-- **I12** Monetair beleid en wisselkoers
-- **I13** Monetair trilemma
 - **I14** Multiplier en lekkages
 - **I15** Output gap en economische schokken
 - **I16** Overheidssaldo verandering
 - **I17** Rentebeleid en economische gevolgen
-- **I18** Werkelijk versus nominaal eigen risico
-- **I19** Wisselkoerseffect van monetair beleid
 

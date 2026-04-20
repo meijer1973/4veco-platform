@@ -282,10 +282,23 @@ function loadTerminology() {
   if (!fs.existsSync(TERMINOLOGY_MD)) return null;
   const content = fs.readFileSync(TERMINOLOGY_MD, 'utf8');
   const terms = new Set();
-  // Heuristic: every ## or ### heading is a canonical term. Tolerant — we'd
-  // tighten this once the terminology file has a machine-editing pipeline.
+  // Headings are canonical terms (domain-level and subsection-level).
   for (const m of content.matchAll(/^##+\s+(.+)$/gm)) {
     terms.add(m[1].trim());
+  }
+  // Bolded leads in bullet lists.
+  for (const m of content.matchAll(/^-\s+\*\*([^*]+)\*\*/gm)) {
+    terms.add(m[1].trim());
+  }
+  // Pipe-table row: `| 1.2 | <term> | ...`. The second column is the canonical
+  // Dutch term, with `/` separating alternative canonical forms.
+  for (const line of content.split(/\r?\n/)) {
+    const m = line.match(/^\|\s*\d+(?:\.\d+[a-z]?)?\s*\|\s*([^|]+?)\s*\|/);
+    if (!m) continue;
+    for (const part of m[1].trim().split(/\s*\/\s*/)) {
+      const p = part.trim();
+      if (p && !p.startsWith('(') && p.length > 2) terms.add(p);
+    }
   }
   return terms;
 }
