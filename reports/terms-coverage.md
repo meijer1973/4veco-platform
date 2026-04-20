@@ -1,8 +1,8 @@
 # Terms-Coverage Report
 
-Generated: 2026-04-20T14:06:18.058Z
+Generated: 2026-04-20T14:16:09.089Z
 Live units:      144
-With no terms:   40
+With no terms:   39
 
 ## Status: **INFORMATIONAL**
 
@@ -40,10 +40,6 @@ Units with empty `terms` have no canonical-vocabulary links yet. Wire via `unit-
 - **E03** Kapitaaldekking en renteeffecten
 - **E04** Omslagstelsel (AOW)
 - **E05** Verlaging pensioenuitkeringen en solidariteit
-
-## Domain F (1)
-
-- **F05** Emissierechten als prikkel
 
 ## Domain G (6)
 

@@ -1,8 +1,8 @@
 # Needs-Coverage Report
 
-Generated: 2026-04-20T14:06:17.977Z
+Generated: 2026-04-20T14:16:09.044Z
 Live units:      144
-With no needs:   78
+With no needs:   68
 
 ## Status: **INFORMATIONAL**
 
@@ -42,23 +42,13 @@ Units with empty `needs` are not broken — they simply have no prerequisite edg
 - **E05** Verlaging pensioenuitkeringen en solidariteit
 - **E06** Voorraad- en stroomgrootheden onderscheiden
 
-## Domain F (15)
+## Domain F (5)
 
-- **F01** Berovingsprobleem
+- **F01** Berovingsprobleem herkennen
 - **F02** Collectief goed classificeren
 - **F03** Dominante strategie
-- **F04** Duopolie en spelmatrixanalyse
-- **F05** Emissierechten als prikkel
-- **F06** Externe effecten en innovatieprikkel
-- **F07** Externe effecten in marktbeslissingen
-- **F08** Negatieve externe effecten
-- **F09** Gevangenendilemma
-- **F10** Internalisatie van externe effecten
-- **F11** Lumpsum-financiering en externe effecten
-- **F12** Nash-evenwicht identificeren
-- **F13** Opzegtermijn en loonkosten
-- **F14** Toerismeconcentratie en externe effecten
-- **F15** Verzonken kosten en beslissingen
+- **F07** Overproductie bij negatieve externe effecten
+- **F15** Verzonken kosten negeren in beslissingen
 
 ## Domain G (11)
 

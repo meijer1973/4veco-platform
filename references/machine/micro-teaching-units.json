@@ -1617,10 +1617,10 @@
   },
   {
     "id": "F01",
-    "name": "Berovingsprobleem",
+    "name": "Berovingsprobleem herkennen",
     "category": "samenwerken en onderhandelen",
     "layer": 0,
-    "kern": "Bedrijf investeert in specifieke technologie; het loopt risico dat partner contract breekt na de investering.",
+    "kern": "Bij relatiespecifieke investeringen loopt de investerende partij het risico dat de ander na de investering het contract heronderhandelt of verbreekt.",
     "needs": [],
     "exam_codes": [
       "F2.1"
@@ -1632,7 +1632,8 @@
     ],
     "terms": [
       "berovingsprobleem",
-      "risico"
+      "risico",
+      "contracten en prikkels"
     ]
   },
   {
@@ -1676,11 +1677,13 @@
   },
   {
     "id": "F04",
-    "name": "Duopolie en spelmatrixanalyse",
+    "name": "Dominante strategieën in pay-off matrix",
     "category": "samenwerken en onderhandelen",
-    "layer": 0,
-    "kern": "Analyseer dominante strategieën en winstmaximalisatie in een duopol via pay-off matrix.",
-    "needs": [],
+    "layer": 1,
+    "kern": "Identificeer dominante strategieën van beide spelers in een pay-off matrix en bepaal de uitkomst waarbij elke speler zijn dominante strategie kiest.",
+    "needs": [
+      "F03"
+    ],
     "exam_codes": [
       "F1.4"
     ],
@@ -1692,32 +1695,25 @@
     "terms": [
       "dominante strategie",
       "pay-off matrix"
+    ],
+    "procedure": [
+      "Noteer voor elke speler de uitbetalingen bij elke combinatie van strategieen uit de pay-off matrix",
+      "Vergelijk per speler de uitbetalingen per kolom (speler 1) of rij (speler 2) en onderstreep de hoogste per strategie van de tegenspeler",
+      "Controleer of er een strategie is die voor een speler altijd de hoogste uitbetaling geeft: dat is zijn dominante strategie",
+      "Herhaal voor de tegenspeler en benoem de uitkomstcel waar beide dominante strategieen samenkomen",
+      "Interpreteer de uitkomst economisch: welke winst behaalt elke speler en is dit gezamenlijk optimaal?"
     ]
   },
   {
     "id": "F05",
     "name": "Emissierechten als prikkel",
     "category": "samenwerken en onderhandelen",
-    "layer": 0,
-    "kern": "Emissierechten geven bedrijven een prikkel om te verduurzamen door kosten van vervuiling.",
-    "needs": [],
-    "exam_codes": [
-      "F2.4"
+    "layer": 3,
+    "kern": "Verhandelbare emissierechten zetten een prijs op vervuiling, waardoor bedrijven een prikkel krijgen om uitstoot te verminderen of schoner te produceren.",
+    "needs": [
+      "F07",
+      "F10"
     ],
-    "mastery_target": "understand",
-    "prior_learning": "new_this_year",
-    "aspects": [
-      "verbaal"
-    ],
-    "terms": []
-  },
-  {
-    "id": "F06",
-    "name": "Externe effecten en innovatieprikkel",
-    "category": "samenwerken en onderhandelen",
-    "layer": 0,
-    "kern": "Belastingen op negatieve externe effecten creeren een prikkel voor innovatie in schonere technologie.",
-    "needs": [],
     "exam_codes": [
       "F2.4"
     ],
@@ -1728,14 +1724,36 @@
     ],
     "terms": [
       "externe effecten"
+    ]
+  },
+  {
+    "id": "F06",
+    "name": "Heffing op externe effecten als innovatieprikkel",
+    "category": "samenwerken en onderhandelen",
+    "layer": 1,
+    "kern": "Een heffing op negatieve externe effecten verhoogt de private kosten van vervuilen en geeft bedrijven daarmee een prikkel om te investeren in schonere technologie.",
+    "needs": [
+      "F07"
+    ],
+    "exam_codes": [
+      "F2.4"
+    ],
+    "mastery_target": "understand",
+    "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
+    "terms": [
+      "externe effecten",
+      "heffingen"
     ]
   },
   {
     "id": "F07",
-    "name": "Externe effecten in marktbeslissingen",
+    "name": "Overproductie bij negatieve externe effecten",
     "category": "samenwerken en onderhandelen",
     "layer": 0,
-    "kern": "Erken dat negatieve externe effecten leiden tot overproductie vanuit maatschappelijk perspectief.",
+    "kern": "Bij negatieve externe effecten liggen de maatschappelijke kosten hoger dan de private kosten, waardoor de markt meer produceert dan maatschappelijk optimaal is.",
     "needs": [],
     "exam_codes": [
       "F2.4"
@@ -1746,16 +1764,19 @@
       "verbaal"
     ],
     "terms": [
-      "externe effecten"
+      "externe effecten",
+      "marktevenwicht"
     ]
   },
   {
     "id": "F08",
-    "name": "Negatieve externe effecten",
+    "name": "Verloren surplus door negatieve externe effecten",
     "category": "samenwerken en onderhandelen",
-    "layer": 0,
-    "kern": "Overmatige consumptie met negatieve externe effecten leidt tot maatschappelijk welvaartsverlies.",
-    "needs": [],
+    "layer": 1,
+    "kern": "Productie of consumptie voorbij het maatschappelijk optimum leidt tot verloren surplus: het verschil tussen maatschappelijke kosten en baten op de extra eenheden.",
+    "needs": [
+      "F07"
+    ],
     "exam_codes": [
       "F2.4"
     ],
@@ -1765,16 +1786,20 @@
       "verbaal"
     ],
     "terms": [
-      "externe effecten"
+      "externe effecten",
+      "maatschappelijke welvaart",
+      "verloren surplus"
     ]
   },
   {
     "id": "F09",
     "name": "Gevangenendilemma",
     "category": "samenwerken en onderhandelen",
-    "layer": 0,
+    "layer": 1,
     "kern": "Situatie waarbij dominante strategie leidt tot suboptimale uitkomst voor beide spelers.",
-    "needs": [],
+    "needs": [
+      "F03"
+    ],
     "exam_codes": [
       "F1.5"
     ],
@@ -1792,9 +1817,12 @@
     "id": "F10",
     "name": "Internalisatie van externe effecten",
     "category": "samenwerken en onderhandelen",
-    "layer": 0,
-    "kern": "Prijs gelijk aan maatschappelijke kosten zorgt ervoor dat externe effecten geinternaliseerd worden.",
-    "needs": [],
+    "layer": 2,
+    "kern": "Door de externe kosten of baten via heffing, subsidie of rechten in de prijs op te nemen, komt de marktuitkomst dichter bij het maatschappelijk optimum.",
+    "needs": [
+      "F07",
+      "F08"
+    ],
     "exam_codes": [
       "F2.4"
     ],
@@ -1804,16 +1832,20 @@
       "verbaal"
     ],
     "terms": [
-      "externe effecten"
+      "externe effecten",
+      "heffingen",
+      "subsidies"
     ]
   },
   {
     "id": "F11",
-    "name": "Lumpsum-financiering en externe effecten",
+    "name": "Lumpsum-subsidie bij positieve externe effecten",
     "category": "samenwerken en onderhandelen",
-    "layer": 0,
-    "kern": "Leg uit hoe een lumpsum-financiering positieve externe effecten internaliseert.",
-    "needs": [],
+    "layer": 3,
+    "kern": "Een lumpsum-subsidie vergoedt de producent voor positieve externe effecten zonder de marginale beslissing te verstoren, zodat een maatschappelijk gewenste activiteit rendabel wordt.",
+    "needs": [
+      "F10"
+    ],
     "exam_codes": [
       "F2.4"
     ],
@@ -1823,16 +1855,19 @@
       "verbaal"
     ],
     "terms": [
-      "externe effecten"
+      "externe effecten",
+      "subsidies"
     ]
   },
   {
     "id": "F12",
-    "name": "Nash-evenwicht identificeren",
+    "name": "Nash-evenwicht in pay-off matrix",
     "category": "samenwerken en onderhandelen",
-    "layer": 0,
-    "kern": "Bepaal het Nash-evenwicht uit een pay-off matrix met twee spelers.",
-    "needs": [],
+    "layer": 1,
+    "kern": "Bepaal het Nash-evenwicht in een pay-off matrix: de uitkomst waarbij geen van beide spelers zijn strategie wil veranderen gegeven de keuze van de ander.",
+    "needs": [
+      "F03"
+    ],
     "exam_codes": [
       "F1.4"
     ],
@@ -1844,16 +1879,26 @@
     ],
     "terms": [
       "Nash-evenwicht",
-      "pay-off matrix"
+      "pay-off matrix",
+      "dominante strategie"
+    ],
+    "procedure": [
+      "Markeer voor speler 1 per kolom (strategie van speler 2) de hoogste uitbetaling",
+      "Markeer voor speler 2 per rij (strategie van speler 1) de hoogste uitbetaling",
+      "Zoek de cel(len) waarin beide uitbetalingen gemarkeerd zijn: dit is het Nash-evenwicht",
+      "Controleer of er meerdere Nash-evenwichten zijn of geen in zuivere strategieen",
+      "Beschrijf in woorden waarom geen van beide spelers eenzijdig wil afwijken"
     ]
   },
   {
     "id": "F13",
-    "name": "Opzegtermijn en loonkosten",
+    "name": "Berovingsprobleem op de arbeidsmarkt",
     "category": "samenwerken en onderhandelen",
-    "layer": 0,
-    "kern": "Leg uit hoe kortere opzegtermijnen via berovingsprobleem tot hogere loonkosten leiden.",
-    "needs": [],
+    "layer": 1,
+    "kern": "Pas het berovingsprobleem toe op de arbeidsmarkt: kortere opzegtermijnen verhogen het risico voor werkgevers op relatiespecifieke scholingsinvesteringen, wat loonkosten en investeringsbereidheid beïnvloedt.",
+    "needs": [
+      "F01"
+    ],
     "exam_codes": [
       "F2.1"
     ],
@@ -1863,16 +1908,19 @@
       "verbaal"
     ],
     "terms": [
-      "berovingsprobleem"
+      "berovingsprobleem",
+      "contracten en prikkels"
     ]
   },
   {
     "id": "F14",
-    "name": "Toerismeconcentratie en externe effecten",
+    "name": "Concentratie-externaliteiten analyseren",
     "category": "samenwerken en onderhandelen",
-    "layer": 0,
-    "kern": "Analyseer hoe concentratie van toerisme negatieve externe effecten veroorzaakt.",
-    "needs": [],
+    "layer": 2,
+    "kern": "Analyseer hoe ruimtelijke of sectorale concentratie van economische activiteit negatieve externe effecten versterkt en wanneer ingrijpen maatschappelijk gewenst is.",
+    "needs": [
+      "F08"
+    ],
     "exam_codes": [
       "F2.4"
     ],
@@ -1887,10 +1935,10 @@
   },
   {
     "id": "F15",
-    "name": "Verzonken kosten en beslissingen",
+    "name": "Verzonken kosten negeren in beslissingen",
     "category": "samenwerken en onderhandelen",
     "layer": 0,
-    "kern": "Hoge verzonken kosten kunnen bedrijven aanmoedigen andere markten te zoeken.",
+    "kern": "Verzonken kosten zijn niet terugvorderbare uitgaven uit het verleden en horen geen rol te spelen in toekomstgerichte beslissingen; alleen toekomstige opbrengsten en kosten tellen mee.",
     "needs": [],
     "exam_codes": [
       "F2.1"

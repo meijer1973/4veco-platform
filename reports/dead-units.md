@@ -1,6 +1,6 @@
 # Dead Units Report
 
-Generated: 2026-04-20T14:06:17.764Z
+Generated: 2026-04-20T14:16:08.790Z
 Live units:   144
 Files scanned: 70
 Cited:        74
@@ -33,19 +33,19 @@ These units exist in the catalog but no source file cites them. Candidates for d
 - **E04** Omslagstelsel (AOW)
 - **E05** Verlaging pensioenuitkeringen en solidariteit
 - **E06** Voorraad- en stroomgrootheden onderscheiden
-- **F01** Berovingsprobleem
+- **F01** Berovingsprobleem herkennen
 - **F02** Collectief goed classificeren
 - **F03** Dominante strategie
-- **F04** Duopolie en spelmatrixanalyse
-- **F06** Externe effecten en innovatieprikkel
-- **F07** Externe effecten in marktbeslissingen
-- **F08** Negatieve externe effecten
+- **F04** Dominante strategieen in pay-off matrix
+- **F06** Heffing op externe effecten als innovatieprikkel
+- **F07** Overproductie bij negatieve externe effecten
+- **F08** Verloren surplus door negatieve externe effecten
 - **F09** Gevangenendilemma
 - **F10** Internalisatie van externe effecten
-- **F12** Nash-evenwicht identificeren
-- **F13** Opzegtermijn en loonkosten
-- **F14** Toerismeconcentratie en externe effecten
-- **F15** Verzonken kosten en beslissingen
+- **F12** Nash-evenwicht in pay-off matrix
+- **F13** Berovingsprobleem op de arbeidsmarkt
+- **F14** Concentratie-externaliteiten analyseren
+- **F15** Verzonken kosten negeren in beslissingen
 - **G01** AI en risicoinschatting
 - **G02** Averechtse selectie herkennen
 - **G04** Eigen risico en moral hazard

@@ -1,9 +1,9 @@
 # Procedure-Coverage Report
 
-Generated: 2026-04-20T14:06:18.125Z
+Generated: 2026-04-20T14:16:09.196Z
 Apply+ units:            63
-With procedure:          20
-Without procedure:       43 (A: 34, non-A: 9)
+With procedure:          22
+Without procedure:       41 (A: 34, non-A: 7)
 
 ## Status: **INFORMATIONAL**
 
@@ -11,12 +11,7 @@ A canonical procedure is the step sequence every downstream material (voorkennis
 
 A-domain units are listed separately: their executable recipe is the `GEN_*` randomizer, so a missing step list is lower-priority than for non-A units.
 
-## Non-A units missing procedure (9)
-
-### Domain F (2)
-
-- **F04** Duopolie en spelmatrixanalyse — _apply_
-- **F12** Nash-evenwicht identificeren — _apply_
+## Non-A units missing procedure (7)
 
 ### Domain G (1)
 

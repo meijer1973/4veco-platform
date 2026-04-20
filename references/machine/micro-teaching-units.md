@@ -974,14 +974,14 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - aspects: [verbaal]
 - terms: [voorraad- en stroomgrootheden]
 
-### F01 Berovingsprobleem
-- kern: "Bedrijf investeert in specifieke technologie; het loopt risico dat partner contract breekt na de investering."
+### F01 Berovingsprobleem herkennen
+- kern: "Bij relatiespecifieke investeringen loopt de investerende partij het risico dat de ander na de investering het contract heronderhandelt of verbreekt."
 - needs: []
 - exam_codes: [F2.1]
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: [berovingsprobleem, risico]
+- terms: [berovingsprobleem, risico, contracten en prikkels]
 
 ### F02 Collectief goed classificeren
 - kern: "Herken collectieve goederen aan hand van excludeerbaarheid en rivaliteit."
@@ -1001,54 +1001,60 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - aspects: [verbaal]
 - terms: [dominante strategie]
 
-### F04 Duopolie en spelmatrixanalyse
-- kern: "Analyseer dominante strategieën en winstmaximalisatie in een duopol via pay-off matrix."
-- needs: []
+### F04 Dominante strategieën in pay-off matrix
+- kern: "Identificeer dominante strategieën van beide spelers in een pay-off matrix en bepaal de uitkomst waarbij elke speler zijn dominante strategie kiest."
+- needs: [F03]
 - exam_codes: [F1.4]
 - mastery_target: apply
 - prior_learning: new_this_year
 - aspects: [rekenen]
 - terms: [dominante strategie, pay-off matrix]
+- procedure:
+  1. Noteer voor elke speler de uitbetalingen bij elke combinatie van strategieen uit de pay-off matrix
+  2. Vergelijk per speler de uitbetalingen per kolom (speler 1) of rij (speler 2) en onderstreep de hoogste per strategie van de tegenspeler
+  3. Controleer of er een strategie is die voor een speler altijd de hoogste uitbetaling geeft: dat is zijn dominante strategie
+  4. Herhaal voor de tegenspeler en benoem de uitkomstcel waar beide dominante strategieen samenkomen
+  5. Interpreteer de uitkomst economisch: welke winst behaalt elke speler en is dit gezamenlijk optimaal?
 
 ### F05 Emissierechten als prikkel
-- kern: "Emissierechten geven bedrijven een prikkel om te verduurzamen door kosten van vervuiling."
-- needs: []
-- exam_codes: [F2.4]
-- mastery_target: understand
-- prior_learning: new_this_year
-- aspects: [verbaal]
-- terms: []
-
-### F06 Externe effecten en innovatieprikkel
-- kern: "Belastingen op negatieve externe effecten creeren een prikkel voor innovatie in schonere technologie."
-- needs: []
+- kern: "Verhandelbare emissierechten zetten een prijs op vervuiling, waardoor bedrijven een prikkel krijgen om uitstoot te verminderen of schoner te produceren."
+- needs: [F07, F10]
 - exam_codes: [F2.4]
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
 - terms: [externe effecten]
 
-### F07 Externe effecten in marktbeslissingen
-- kern: "Erken dat negatieve externe effecten leiden tot overproductie vanuit maatschappelijk perspectief."
-- needs: []
+### F06 Heffing op externe effecten als innovatieprikkel
+- kern: "Een heffing op negatieve externe effecten verhoogt de private kosten van vervuilen en geeft bedrijven daarmee een prikkel om te investeren in schonere technologie."
+- needs: [F07]
 - exam_codes: [F2.4]
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: [externe effecten]
+- terms: [externe effecten, heffingen]
 
-### F08 Negatieve externe effecten
-- kern: "Overmatige consumptie met negatieve externe effecten leidt tot maatschappelijk welvaartsverlies."
+### F07 Overproductie bij negatieve externe effecten
+- kern: "Bij negatieve externe effecten liggen de maatschappelijke kosten hoger dan de private kosten, waardoor de markt meer produceert dan maatschappelijk optimaal is."
 - needs: []
 - exam_codes: [F2.4]
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: [externe effecten]
+- terms: [externe effecten, marktevenwicht]
+
+### F08 Verloren surplus door negatieve externe effecten
+- kern: "Productie of consumptie voorbij het maatschappelijk optimum leidt tot verloren surplus: het verschil tussen maatschappelijke kosten en baten op de extra eenheden."
+- needs: [F07]
+- exam_codes: [F2.4]
+- mastery_target: understand
+- prior_learning: new_this_year
+- aspects: [verbaal]
+- terms: [externe effecten, maatschappelijke welvaart, verloren surplus]
 
 ### F09 Gevangenendilemma
 - kern: "Situatie waarbij dominante strategie leidt tot suboptimale uitkomst voor beide spelers."
-- needs: []
+- needs: [F03]
 - exam_codes: [F1.5]
 - mastery_target: understand
 - prior_learning: new_this_year
@@ -1056,52 +1062,58 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - terms: [dominante strategie, gevangenendilemma]
 
 ### F10 Internalisatie van externe effecten
-- kern: "Prijs gelijk aan maatschappelijke kosten zorgt ervoor dat externe effecten geinternaliseerd worden."
-- needs: []
+- kern: "Door de externe kosten of baten via heffing, subsidie of rechten in de prijs op te nemen, komt de marktuitkomst dichter bij het maatschappelijk optimum."
+- needs: [F07, F08]
 - exam_codes: [F2.4]
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: [externe effecten]
+- terms: [externe effecten, heffingen, subsidies]
 
-### F11 Lumpsum-financiering en externe effecten
-- kern: "Leg uit hoe een lumpsum-financiering positieve externe effecten internaliseert."
-- needs: []
+### F11 Lumpsum-subsidie bij positieve externe effecten
+- kern: "Een lumpsum-subsidie vergoedt de producent voor positieve externe effecten zonder de marginale beslissing te verstoren, zodat een maatschappelijk gewenste activiteit rendabel wordt."
+- needs: [F10]
 - exam_codes: [F2.4]
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: [externe effecten]
+- terms: [externe effecten, subsidies]
 
-### F12 Nash-evenwicht identificeren
-- kern: "Bepaal het Nash-evenwicht uit een pay-off matrix met twee spelers."
-- needs: []
+### F12 Nash-evenwicht in pay-off matrix
+- kern: "Bepaal het Nash-evenwicht in een pay-off matrix: de uitkomst waarbij geen van beide spelers zijn strategie wil veranderen gegeven de keuze van de ander."
+- needs: [F03]
 - exam_codes: [F1.4]
 - mastery_target: apply
 - prior_learning: new_this_year
 - aspects: [rekenen, verbaal]
-- terms: [Nash-evenwicht, pay-off matrix]
+- terms: [Nash-evenwicht, pay-off matrix, dominante strategie]
+- procedure:
+  1. Markeer voor speler 1 per kolom (strategie van speler 2) de hoogste uitbetaling
+  2. Markeer voor speler 2 per rij (strategie van speler 1) de hoogste uitbetaling
+  3. Zoek de cel(len) waarin beide uitbetalingen gemarkeerd zijn: dit is het Nash-evenwicht
+  4. Controleer of er meerdere Nash-evenwichten zijn of geen in zuivere strategieen
+  5. Beschrijf in woorden waarom geen van beide spelers eenzijdig wil afwijken
 
-### F13 Opzegtermijn en loonkosten
-- kern: "Leg uit hoe kortere opzegtermijnen via berovingsprobleem tot hogere loonkosten leiden."
-- needs: []
+### F13 Berovingsprobleem op de arbeidsmarkt
+- kern: "Pas het berovingsprobleem toe op de arbeidsmarkt: kortere opzegtermijnen verhogen het risico voor werkgevers op relatiespecifieke scholingsinvesteringen, wat loonkosten en investeringsbereidheid beïnvloedt."
+- needs: [F01]
 - exam_codes: [F2.1]
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: [berovingsprobleem]
+- terms: [berovingsprobleem, contracten en prikkels]
 
-### F14 Toerismeconcentratie en externe effecten
-- kern: "Analyseer hoe concentratie van toerisme negatieve externe effecten veroorzaakt."
-- needs: []
+### F14 Concentratie-externaliteiten analyseren
+- kern: "Analyseer hoe ruimtelijke of sectorale concentratie van economische activiteit negatieve externe effecten versterkt en wanneer ingrijpen maatschappelijk gewenst is."
+- needs: [F08]
 - exam_codes: [F2.4]
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
 - terms: [externe effecten]
 
-### F15 Verzonken kosten en beslissingen
-- kern: "Hoge verzonken kosten kunnen bedrijven aanmoedigen andere markten te zoeken."
+### F15 Verzonken kosten negeren in beslissingen
+- kern: "Verzonken kosten zijn niet terugvorderbare uitgaven uit het verleden en horen geen rol te spelen in toekomstgerichte beslissingen; alleen toekomstige opbrengsten en kosten tellen mee."
 - needs: []
 - exam_codes: [F2.1]
 - mastery_target: understand
