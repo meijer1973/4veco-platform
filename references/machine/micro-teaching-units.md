@@ -109,6 +109,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 
 <!-- UNIT ENTRIES BELOW THIS LINE — managed by build-scripts/references/unit-*.js -->
 ### A01 Lineaire functie opstellen
+- layer: 0
 - duration_min: 5
 - kern: "Stel een lineaire functie op (y = ax + b) vanuit een economische context, zoals een vraag- of aanbodfunctie."
 - needs: []
@@ -120,6 +121,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - generator: GEN_A01
 
 ### A02 Vergelijking oplossen
+- layer: 0
 - duration_min: 5
 - kern: "Los een vergelijking met één onbekende op, bijvoorbeeld door twee functies aan elkaar gelijk te stellen."
 - needs: []
@@ -131,6 +133,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - generator: GEN_A02
 
 ### A03 Functie omschrijven (P↔Q)
+- layer: 0
 - duration_min: 5
 - kern: "Schrijf een functie om van P als functie van Q naar Q als functie van P, of andersom."
 - needs: []
@@ -142,6 +145,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - generator: GEN_A03
 
 ### A04 Substitueren
+- layer: 0
 - duration_min: 5
 - kern: "Vul een waarde in een functie in en bereken het resultaat."
 - needs: []
@@ -153,6 +157,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - generator: GEN_A04
 
 ### A05 Snijpunt met P-as berekenen
+- layer: 0
 - duration_min: 5
 - kern: "Bereken het snijpunt van een functie met de verticale as (P-as) door Q = 0 in te vullen."
 - needs: []
@@ -164,6 +169,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - generator: GEN_A05
 
 ### A06 Evenwichtsprijs & -hoeveelheid
+- layer: 1
 - duration_min: 5
 - kern: "Bereken de evenwichtsprijs en -hoeveelheid door vraag en aanbod aan elkaar gelijk te stellen."
 - needs: [A01, A02]
@@ -175,6 +181,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - generator: GEN_A06
 
 ### A07 TO-functie opstellen
+- layer: 1
 - duration_min: 5
 - kern: "Stel de totale opbrengstfunctie op: TO = P × Q. Schrijf de vraagfunctie om zodat P in Q is uitgedrukt."
 - needs: [A01, A03]
@@ -186,6 +193,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - generator: GEN_A07
 
 ### A08 TK-functie herkennen
+- layer: 1
 - duration_min: 5
 - kern: "Herken en werk met de totale kostenfunctie (TK), vaak gegeven als TK = vaste kosten + variabele kosten × Q."
 - needs: [A01]
@@ -197,6 +205,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - generator: GEN_A08
 
 ### A09 Collectief aanbod
+- layer: 1
 - duration_min: 5
 - kern: "Tel individuele aanbodfuncties op tot een collectieve aanbodfunctie."
 - needs: [A03]
@@ -208,6 +217,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - generator: GEN_A09
 
 ### A10 Oppervlakte driehoek
+- layer: 1
 - duration_min: 5
 - kern: "Bereken de oppervlakte van een driehoek in een grafiek: ½ × basis × hoogte."
 - needs: [A04]
@@ -219,6 +229,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - generator: GEN_A10
 
 ### A11 Afgeleide bepalen
+- layer: 1
 - duration_min: 5
 - kern: "Bepaal de afgeleide van een functie. Bijvoorbeeld: als TO = 5Q², dan is MO = 10Q."
 - needs: [A01]
@@ -230,6 +241,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - generator: GEN_A11
 
 ### A12 MO bepalen
+- layer: 2
 - duration_min: 5
 - kern: "Bepaal de marginale opbrengst (MO) door de afgeleide van de TO-functie te nemen."
 - needs: [A11, A07]
@@ -241,6 +253,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - generator: GEN_A12
 
 ### A13 MK bepalen
+- layer: 2
 - duration_min: 5
 - kern: "Bepaal de marginale kosten (MK) door de afgeleide van de TK-functie te nemen."
 - needs: [A11, A08]
@@ -252,6 +265,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - generator: GEN_A13
 
 ### A14 GTK bepalen
+- layer: 2
 - duration_min: 5
 - kern: "Bereken de gemiddelde totale kosten: GTK = TK / Q."
 - needs: [A08]
@@ -263,6 +277,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - generator: GEN_A14
 
 ### A15 Prijselasticiteit van de vraag
+- layer: 1
 - duration_min: 5
 - kern: "Bereken de prijselasticiteit: Ev = %ΔQv / %ΔP. Bepaal of de vraag elastisch of inelastisch is."
 - needs: [A04]
@@ -274,6 +289,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - generator: GEN_A15
 
 ### A16 Kruiselasticiteit
+- layer: 1
 - duration_min: 5
 - kern: "Bereken de kruiselasticiteit: Ekr = %ΔQa / %ΔPb. Bepaal of goederen substituten of complementen zijn."
 - needs: []
@@ -285,6 +301,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - generator: GEN_A16
 
 ### A17 Inkomenselasticiteit
+- layer: 1
 - duration_min: 5
 - kern: "Bereken de inkomenselasticiteit: Ei = %ΔQ / %ΔY. Bepaal of een goed normaal, inferieur of luxe is."
 - needs: []
@@ -296,6 +313,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - generator: GEN_A17
 
 ### A18 Comparatief voordeel bepalen
+- layer: 1
 - duration_min: 5
 - kern: "Vergelijk de alternatieve kosten van twee producenten om te bepalen wie een comparatief voordeel heeft."
 - needs: []
@@ -307,6 +325,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - generator: GEN_A18
 
 ### A19 Surplus berekenen (CS/PS)
+- layer: 3
 - duration_min: 5
 - kern: "Bereken het consumenten- of producentensurplus als driehoeksoppervlakte in de vraag-/aanbodgrafiek."
 - needs: [A06, A10]
@@ -318,6 +337,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - generator: GEN_A19
 
 ### A20 MO = MK oplossen
+- layer: 3
 - duration_min: 5
 - kern: "Vind de winstmaximaliserende hoeveelheid door MO gelijk te stellen aan MK en op te lossen."
 - needs: [A12, A13, A02]
@@ -329,6 +349,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - generator: GEN_A20
 
 ### A21 Winst = TO − TK
+- layer: 3
 - duration_min: 5
 - kern: "Bereken de winst door de totale opbrengst min de totale kosten: W = TO − TK."
 - needs: [A07, A08, A04]
@@ -340,6 +361,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - generator: GEN_A21
 
 ### A22 Break-even (TO = TK)
+- layer: 3
 - duration_min: 5
 - kern: "Vind de break-evenhoeveelheid door TO = TK op te lossen. Bij dit punt is de winst nul."
 - needs: [A07, A08, A02]
@@ -351,6 +373,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - generator: GEN_A22
 
 ### A23 Evenwicht met heffing
+- layer: 3
 - duration_min: 5
 - kern: "Bereken het nieuwe marktevenwicht nadat de overheid een heffing (accijns) heeft opgelegd."
 - needs: [A06, A01]
@@ -362,6 +385,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - generator: GEN_A23
 
 ### A24 Collectief aanbod bepalen
+- layer: 3
 - duration_min: 5
 - kern: "Bepaal het collectieve aanbod vanuit meerdere individuele aanbieders en bereken het marktevenwicht."
 - needs: [A09, A03]
@@ -373,6 +397,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - generator: GEN_A24
 
 ### A25 Minimumprijs analyseren
+- layer: 3
 - duration_min: 5
 - kern: "Analyseer het effect van een minimumprijs: bereken het vraagoverschot en het welvaartsverlies."
 - needs: [A06]
@@ -384,6 +409,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - generator: GEN_A25
 
 ### A26 Maximumprijs analyseren
+- layer: 3
 - duration_min: 5
 - kern: "Analyseer het effect van een maximumprijs: bereken het vraagoverschot en de gevolgen voor consumenten."
 - needs: [A06]
@@ -395,6 +421,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - generator: GEN_A26
 
 ### A27 Subsidie analyseren
+- layer: 3
 - duration_min: 5
 - kern: "Bereken het effect van een subsidie op het marktevenwicht, de prijs en de verdeling van het voordeel."
 - needs: [A06, A01]
@@ -406,6 +433,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - generator: GEN_A27
 
 ### A28 MK = GTK oplossen
+- layer: 3
 - duration_min: 5
 - kern: "Vind de hoeveelheid waar MK = GTK. Dit is het minimum van de GTK-curve (efficiënte schaal)."
 - needs: [A13, A14]
@@ -417,6 +445,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - generator: GEN_A28
 
 ### A29 Break-even analyse
+- layer: 4
 - duration_min: 5
 - kern: "Voer een volledige break-evenanalyse uit: vind de break-evenhoeveelheid en bepaal winst/verlies bij een gegeven Q."
 - needs: [A22]
@@ -428,6 +457,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - generator: GEN_A29
 
 ### A30 Consumentensurplus
+- layer: 4
 - duration_min: 5
 - kern: "Bereken het consumentensurplus voor en na een beleidsverandering en bepaal het verschil."
 - needs: [A19]
@@ -439,6 +469,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - generator: GEN_A30
 
 ### A31 Individueel → collectief aanbod
+- layer: 4
 - duration_min: 5
 - kern: "Ga van individuele aanbodcurves naar de collectieve aanbodcurve en bereken het marktevenwicht."
 - needs: [A24]
@@ -450,6 +481,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - generator: GEN_A31
 
 ### A32 Welvaartsverlies belasting
+- layer: 5
 - duration_min: 5
 - kern: "Bereken het welvaartsverlies (deadweight loss) dat ontstaat door een belasting als driehoeksoppervlakte."
 - needs: [A19, A23]
@@ -461,6 +493,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - generator: GEN_A32
 
 ### A33 Optimale productie bij VM
+- layer: 4
 - duration_min: 5
 - kern: "Bepaal de optimale productie bij volkomen mededinging: produceer waar P = MK en bereken de winst."
 - needs: [A13, A14, A04]
@@ -472,6 +505,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - generator: GEN_A33
 
 ### A34 Effecten invoerrecht
+- layer: 5
 - duration_min: 5
 - kern: "Analyseer de effecten van een invoerrecht op binnenlandse productie, consumptie, import en welvaart."
 - needs: [A19, A23, A06]
@@ -483,6 +517,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - generator: GEN_A34
 
 ### A35 Max. winst monopolist
+- layer: 5
 - duration_min: 5
 - kern: "Bereken de maximale winst van een monopolist: vind Q waar MO = MK, bepaal P en reken W = TO − TK uit."
 - needs: [A20, A21, A04]
@@ -494,6 +529,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - generator: GEN_A35
 
 ### A36 Prijsdiscriminatie
+- layer: 5
 - duration_min: 5
 - kern: "Bereken de winst bij prijsdiscriminatie: de monopolist rekent verschillende prijzen in verschillende markten."
 - needs: [A20, A21]
@@ -505,6 +541,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - generator: GEN_A36
 
 ### A37 Lange-termijnevenwicht VM
+- layer: 5
 - duration_min: 5
 - kern: "Bepaal het lange-termijnevenwicht bij volkomen mededinging: P = MK = GTK (minimale GTK)."
 - needs: [A28]

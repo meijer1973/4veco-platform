@@ -5,6 +5,6 @@
 window.SKILL_TREE_DATA = {
     parNr: "3.2.1",
     parName: "Marktevenwicht",
-    activeSkills: ["F1","F2","F3","F4","F7","F5","B1","B8","B9","B10","S1"],
-    newSkills: ["F5","B1","S1"]
+    activeSkills: ["A01","A02","A03","A04","A05","A10","A06","A15","A16","A17","A19"],
+    newSkills: ["A10","A06","A19"]
 };

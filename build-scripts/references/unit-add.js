@@ -105,6 +105,7 @@ function validateSpec(spec, existingIds) {
 
 function formatEntry(u) {
   const lines = [`### ${u.id} ${u.name}`];
+  if (typeof u.layer === 'number') lines.push(`- layer: ${u.layer}`);
   if (u.duration_min !== undefined) lines.push(`- duration_min: ${u.duration_min}`);
   lines.push(`- kern: ${JSON.stringify(u.kern)}`);
   lines.push(`- needs: [${(u.needs || []).join(', ')}]`);

@@ -175,6 +175,35 @@ function validate(units, { terms, eindtermen }) {
   const cycles = findCycles(units, byId);
   for (const c of cycles) errors.push(`cycle detected: ${c.join(' -> ')}`);
 
+  // Stored-layer consistency: layer must be >= max(needs.layer) + 1.
+  // Computed here after cycle check so we don't recurse into cycles.
+  if (cycles.length === 0) {
+    const minMemo = new Map();
+    function minLayer(id, visiting) {
+      if (minMemo.has(id)) return minMemo.get(id);
+      if (visiting.has(id)) return 0;
+      visiting.add(id);
+      const u = byId.get(id);
+      if (!u || !Array.isArray(u.needs) || u.needs.length === 0) { minMemo.set(id, 0); return 0; }
+      let max = -1;
+      for (const n of u.needs) {
+        if (!byId.has(n)) continue;
+        const other = byId.get(n);
+        const v = (typeof other.layer === 'number') ? other.layer : minLayer(n, visiting);
+        if (v > max) max = v;
+      }
+      const result = max + 1;
+      minMemo.set(id, result);
+      return result;
+    }
+    for (const u of units) {
+      if (typeof u.layer === 'number') {
+        const m = minLayer(u.id, new Set());
+        if (u.layer < m) errors.push(`${u.id}: stored layer ${u.layer} below derived minimum ${m}`);
+      }
+    }
+  }
+
   return { errors, byId };
 }
 
@@ -203,23 +232,35 @@ function findCycles(units, byId) {
   return cycles;
 }
 
+// Layer policy: the DAG defines a minimum layer = max(needs.layer) + 1.
+// A unit MAY store an explicit `layer` that is >= this minimum (used to place
+// units in curriculum tiers that go deeper than dependency depth, e.g. the
+// math skill-tree "Eindbazen" layer). If no explicit layer is stored, use the
+// derived minimum. The validator enforces that stored layers are not below
+// the derived minimum.
 function computeLayers(units, byId) {
-  const memo = new Map();
-  function layerOf(id, path) {
-    if (memo.has(id)) return memo.get(id);
-    if (path.includes(id)) return 0; // cycle handled separately; avoid infinite recursion
+  const minMemo = new Map();
+  function minLayerOf(id, path) {
+    if (minMemo.has(id)) return minMemo.get(id);
+    if (path.includes(id)) return 0;
     const u = byId.get(id);
-    if (!u || !Array.isArray(u.needs) || u.needs.length === 0) { memo.set(id, 0); return 0; }
+    if (!u || !Array.isArray(u.needs) || u.needs.length === 0) { minMemo.set(id, 0); return 0; }
     let max = -1;
     for (const n of u.needs) {
       if (!byId.has(n)) continue;
-      max = Math.max(max, layerOf(n, [...path, id]));
+      // Use the OTHER unit's effective layer (stored if present, else derived).
+      const other = byId.get(n);
+      const otherLayer = (other && typeof other.layer === 'number') ? other.layer : minLayerOf(n, [...path, id]);
+      if (otherLayer > max) max = otherLayer;
     }
     const v = max + 1;
-    memo.set(id, v);
+    minMemo.set(id, v);
     return v;
   }
-  for (const u of units) u.layer = layerOf(u.id, []);
+  for (const u of units) {
+    const min = minLayerOf(u.id, []);
+    if (typeof u.layer !== 'number') u.layer = min;
+  }
   return units;
 }
 

@@ -5,6 +5,6 @@
 window.SKILL_TREE_DATA = {
     parNr: "3.2.2",
     parName: "Volkomen concurrentie",
-    activeSkills: ["F1","F2","F3","F4","F7","F5","F6","B1","B2","B3","B4","B5","B6","B7","B8","B9","B10","S1","S2","S3","S4","S10","E5","E9"],
-    newSkills: ["F6","B2","B3","B4","B5","B6","B7","S2","S3","S4","S10","E5","E9"]
+    activeSkills: ["A01","A02","A03","A04","A05","A10","A11","A06","A07","A08","A09","A12","A13","A14","A15","A16","A17","A19","A20","A21","A22","A28","A33","A37"],
+    newSkills: ["A11","A07","A08","A09","A12","A13","A14","A20","A21","A22","A28","A33","A37"]
 };

@@ -6,5 +6,5 @@ window.SKILL_TREE_DATA = {
     parNr: "3.2.7",
     parName: "Toepassen",
     activeSkills: null,
-    newSkills: ["B11","S5","S6","S7","S8","S9","E3","E4","E6","E8"]
+    newSkills: ["A18","A23","A24","A25","A26","A27","A31","A32","A34","A36"]
 };

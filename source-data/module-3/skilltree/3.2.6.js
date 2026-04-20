@@ -5,6 +5,6 @@
 window.SKILL_TREE_DATA = {
     parNr: "3.2.6",
     parName: "Marktvormen en hun economische doelmatigheid",
-    activeSkills: ["F1","F2","F3","F4","F7","F5","F6","B1","B2","B3","B5","B6","B7","B8","B9","B10","S1","S2","S3","S4","S10","E1","E2","E5","E7","E9"],
-    newSkills: ["E2"]
+    activeSkills: ["A01","A02","A03","A04","A05","A10","A11","A06","A07","A08","A12","A13","A14","A15","A16","A17","A19","A20","A21","A22","A28","A29","A30","A33","A35","A37"],
+    newSkills: ["A30"]
 };

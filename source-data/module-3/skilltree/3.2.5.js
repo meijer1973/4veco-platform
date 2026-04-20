@@ -5,6 +5,6 @@
 window.SKILL_TREE_DATA = {
     parNr: "3.2.5",
     parName: "Monopolistische concurrentie",
-    activeSkills: ["F1","F2","F3","F4","F7","F6","B2","B3","B5","B6","B7","B8","B9","B10","S2","S3","S4","E1","E5"],
-    newSkills: ["E1"]
+    activeSkills: ["A01","A02","A03","A04","A05","A11","A07","A08","A12","A13","A14","A15","A16","A17","A20","A21","A22","A29","A33"],
+    newSkills: ["A29"]
 };

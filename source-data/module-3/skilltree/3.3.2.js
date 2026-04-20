@@ -5,6 +5,6 @@
 window.SKILL_TREE_DATA = {
     parNr: "3.3.2",
     parName: "Overheidsbeleid",
-    activeSkills: ["F1","F2","F3","F4","F7","F5","B1","B8","B9","B10","S1","S5","S7","S8","S9","E4"],
+    activeSkills: ["A01","A02","A03","A04","A05","A10","A06","A15","A16","A17","A19","A23","A25","A26","A27","A32"],
     newSkills: []
 };

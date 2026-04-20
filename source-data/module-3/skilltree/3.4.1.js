@@ -5,6 +5,6 @@
 window.SKILL_TREE_DATA = {
     parNr: "3.4.1",
     parName: "Internationale handel",
-    activeSkills: ["F1","F2","F3","F4","F7","B8","B9","B10","B11"],
+    activeSkills: ["A01","A02","A03","A04","A05","A15","A16","A17","A18"],
     newSkills: []
 };

@@ -267,7 +267,7 @@
     "id": "A16",
     "name": "Kruiselasticiteit",
     "category": "vaardigheden",
-    "layer": 0,
+    "layer": 1,
     "duration_min": 5,
     "kern": "Bereken de kruiselasticiteit: Ekr = %ΔQa / %ΔPb. Bepaal of goederen substituten of complementen zijn.",
     "needs": [],
@@ -283,7 +283,7 @@
     "id": "A17",
     "name": "Inkomenselasticiteit",
     "category": "vaardigheden",
-    "layer": 0,
+    "layer": 1,
     "duration_min": 5,
     "kern": "Bereken de inkomenselasticiteit: Ei = %ΔQ / %ΔY. Bepaal of een goed normaal, inferieur of luxe is.",
     "needs": [],
@@ -299,7 +299,7 @@
     "id": "A18",
     "name": "Comparatief voordeel bepalen",
     "category": "vaardigheden",
-    "layer": 0,
+    "layer": 1,
     "duration_min": 5,
     "kern": "Vergelijk de alternatieve kosten van twee producenten om te bepalen wie een comparatief voordeel heeft.",
     "needs": [],
@@ -315,7 +315,7 @@
     "id": "A19",
     "name": "Surplus berekenen (CS/PS)",
     "category": "vaardigheden",
-    "layer": 2,
+    "layer": 3,
     "duration_min": 5,
     "kern": "Bereken het consumenten- of producentensurplus als driehoeksoppervlakte in de vraag-/aanbodgrafiek.",
     "needs": [
@@ -354,7 +354,7 @@
     "id": "A21",
     "name": "Winst = TO − TK",
     "category": "vaardigheden",
-    "layer": 2,
+    "layer": 3,
     "duration_min": 5,
     "kern": "Bereken de winst door de totale opbrengst min de totale kosten: W = TO − TK.",
     "needs": [
@@ -374,7 +374,7 @@
     "id": "A22",
     "name": "Break-even (TO = TK)",
     "category": "vaardigheden",
-    "layer": 2,
+    "layer": 3,
     "duration_min": 5,
     "kern": "Vind de break-evenhoeveelheid door TO = TK op te lossen. Bij dit punt is de winst nul.",
     "needs": [
@@ -394,7 +394,7 @@
     "id": "A23",
     "name": "Evenwicht met heffing",
     "category": "vaardigheden",
-    "layer": 2,
+    "layer": 3,
     "duration_min": 5,
     "kern": "Bereken het nieuwe marktevenwicht nadat de overheid een heffing (accijns) heeft opgelegd.",
     "needs": [
@@ -413,7 +413,7 @@
     "id": "A24",
     "name": "Collectief aanbod bepalen",
     "category": "vaardigheden",
-    "layer": 2,
+    "layer": 3,
     "duration_min": 5,
     "kern": "Bepaal het collectieve aanbod vanuit meerdere individuele aanbieders en bereken het marktevenwicht.",
     "needs": [
@@ -432,7 +432,7 @@
     "id": "A25",
     "name": "Minimumprijs analyseren",
     "category": "vaardigheden",
-    "layer": 2,
+    "layer": 3,
     "duration_min": 5,
     "kern": "Analyseer het effect van een minimumprijs: bereken het vraagoverschot en het welvaartsverlies.",
     "needs": [
@@ -450,7 +450,7 @@
     "id": "A26",
     "name": "Maximumprijs analyseren",
     "category": "vaardigheden",
-    "layer": 2,
+    "layer": 3,
     "duration_min": 5,
     "kern": "Analyseer het effect van een maximumprijs: bereken het vraagoverschot en de gevolgen voor consumenten.",
     "needs": [
@@ -468,7 +468,7 @@
     "id": "A27",
     "name": "Subsidie analyseren",
     "category": "vaardigheden",
-    "layer": 2,
+    "layer": 3,
     "duration_min": 5,
     "kern": "Bereken het effect van een subsidie op het marktevenwicht, de prijs en de verdeling van het voordeel.",
     "needs": [
@@ -506,7 +506,7 @@
     "id": "A29",
     "name": "Break-even analyse",
     "category": "vaardigheden",
-    "layer": 3,
+    "layer": 4,
     "duration_min": 5,
     "kern": "Voer een volledige break-evenanalyse uit: vind de break-evenhoeveelheid en bepaal winst/verlies bij een gegeven Q.",
     "needs": [
@@ -524,7 +524,7 @@
     "id": "A30",
     "name": "Consumentensurplus",
     "category": "vaardigheden",
-    "layer": 3,
+    "layer": 4,
     "duration_min": 5,
     "kern": "Bereken het consumentensurplus voor en na een beleidsverandering en bepaal het verschil.",
     "needs": [
@@ -542,7 +542,7 @@
     "id": "A31",
     "name": "Individueel → collectief aanbod",
     "category": "vaardigheden",
-    "layer": 3,
+    "layer": 4,
     "duration_min": 5,
     "kern": "Ga van individuele aanbodcurves naar de collectieve aanbodcurve en bereken het marktevenwicht.",
     "needs": [
@@ -560,7 +560,7 @@
     "id": "A32",
     "name": "Welvaartsverlies belasting",
     "category": "vaardigheden",
-    "layer": 3,
+    "layer": 5,
     "duration_min": 5,
     "kern": "Bereken het welvaartsverlies (deadweight loss) dat ontstaat door een belasting als driehoeksoppervlakte.",
     "needs": [
@@ -579,7 +579,7 @@
     "id": "A33",
     "name": "Optimale productie bij VM",
     "category": "vaardigheden",
-    "layer": 3,
+    "layer": 4,
     "duration_min": 5,
     "kern": "Bepaal de optimale productie bij volkomen mededinging: produceer waar P = MK en bereken de winst.",
     "needs": [
@@ -599,7 +599,7 @@
     "id": "A34",
     "name": "Effecten invoerrecht",
     "category": "vaardigheden",
-    "layer": 3,
+    "layer": 5,
     "duration_min": 5,
     "kern": "Analyseer de effecten van een invoerrecht op binnenlandse productie, consumptie, import en welvaart.",
     "needs": [
@@ -619,7 +619,7 @@
     "id": "A35",
     "name": "Max. winst monopolist",
     "category": "vaardigheden",
-    "layer": 4,
+    "layer": 5,
     "duration_min": 5,
     "kern": "Bereken de maximale winst van een monopolist: vind Q waar MO = MK, bepaal P en reken W = TO − TK uit.",
     "needs": [
@@ -639,7 +639,7 @@
     "id": "A36",
     "name": "Prijsdiscriminatie",
     "category": "vaardigheden",
-    "layer": 4,
+    "layer": 5,
     "duration_min": 5,
     "kern": "Bereken de winst bij prijsdiscriminatie: de monopolist rekent verschillende prijzen in verschillende markten.",
     "needs": [
@@ -658,7 +658,7 @@
     "id": "A37",
     "name": "Lange-termijnevenwicht VM",
     "category": "vaardigheden",
-    "layer": 4,
+    "layer": 5,
     "duration_min": 5,
     "kern": "Bepaal het lange-termijnevenwicht bij volkomen mededinging: P = MK = GTK (minimale GTK).",
     "needs": [

@@ -52,6 +52,7 @@ function buildSpec(skill, mapping) {
   return {
     id: newId,
     name: skill.name,
+    layer: skill.layer,            // preserve curriculum tier from base-elements
     duration_min: 5,
     kern: skill.desc,
     needs,
