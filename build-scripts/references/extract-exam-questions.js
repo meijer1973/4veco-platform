@@ -44,8 +44,17 @@ const OUT_JSON  = path.join(REPO_ROOT, 'references/external/exam-questions.json'
 // wide whitespace; we accept runs of whitespace as a tab.
 const QUESTION_START_RE = /^(\d+)p\s+(\d+)\s+(.+?)\s*$/;
 const OPGAVE_RE = /^Opgave\s+(\d+)\s+(.+?)\s*$/;
-const PAGE_FOOTER_RE = /^-- \d+ of \d+ --$/;
-const PAGE_HEADER_RE = /^[vh][wa]-1022-a-\d+-\d+-o\s+\d+ \/ \d+\s+lees verder/;
+const PAGE_FOOTER_RE = /^-- (\d+) of \d+ --$/;
+// Case-insensitive: the PDFs render `HA-1022-a-…` with uppercase HA, not the
+// lowercase form the exam code uses. Without the /i flag, the page header
+// leaks into the preceding question's text on every page.
+const PAGE_HEADER_RE = /^[vh][wa]-1022-a-\d+-\d+-o\s+\d+ \/ \d+\s+lees verder/i;
+// End-of-exam boilerplate: once any of these appears, stop accumulating.
+const END_OF_EXAM_RE = /^(Bronvermelding|einde|Examenopgaven|Let op:)\b/i;
+// OOXML broken-image placeholder (from the PowerPoint export of some exams).
+const BROKEN_IMG_RE = /De gekoppelde afbeelding kan niet worden weergegeven\.[^]*?juiste locatie\./g;
+// Private-use-area glyphs left over from PDF font substitution (bullets, etc.)
+const PUA_RE = /[\uE000-\uF8FF]/g;
 
 function parseExamCode(filename) {
   const m = filename.match(/^(vw|ha)-1022-a-(\d\d)-(\d)-o\.pdf$/);
@@ -59,7 +68,16 @@ function parseExamCode(filename) {
 }
 
 function cleanText(s) {
-  return s.replace(/\s+/g, ' ').trim();
+  return s
+    .replace(BROKEN_IMG_RE, '')
+    .replace(PUA_RE, '')
+    // Page header with exam code prefix: `HA-1022-a-23-1-o 3 / 10 lees verder ►►►`
+    .replace(/\b[VvHh][WwAa]-1022-a-\d+-\d+-o\s+\d+\s*\/\s*\d+\s+lees verder\s*[►▶\s]*/gi, ' ')
+    // Page header without exam code prefix (some PDFs render it that way):
+    // `2 / 13 lees verder ►►►`
+    .replace(/\b\d+\s*\/\s*\d+\s+lees verder\s*[►▶\s]*/gi, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
 }
 
 function extractQuestions(text, examMeta) {
@@ -67,9 +85,12 @@ function extractQuestions(text, examMeta) {
   const questions = [];
   let currentOpgave = null;
   let currentQuestion = null;
+  let currentPage = 1;
+  let afterExam = false;
 
   function flush() {
     if (currentQuestion) {
+      if (currentQuestion.page_end == null) currentQuestion.page_end = currentPage;
       currentQuestion.text = cleanText(currentQuestion.text);
       questions.push(currentQuestion);
       currentQuestion = null;
@@ -77,9 +98,27 @@ function extractQuestions(text, examMeta) {
   }
 
   for (const line of lines) {
-    if (PAGE_FOOTER_RE.test(line.trim()) || PAGE_HEADER_RE.test(line.trim())) continue;
+    const trimmed = line.trim();
 
-    const op = OPGAVE_RE.exec(line.trim());
+    // Hard stop once the exam boilerplate section begins — Bronvermelding,
+    // einde, etc. — so post-exam text doesn't bleed into the last question.
+    if (END_OF_EXAM_RE.test(trimmed)) {
+      flush();
+      afterExam = true;
+      continue;
+    }
+    if (afterExam) continue;
+
+    // Footer "-- N of M --" tells us which page we just finished; use that
+    // as the running page counter for page_start/page_end on each question.
+    const footer = PAGE_FOOTER_RE.exec(trimmed);
+    if (footer) {
+      currentPage = parseInt(footer[1], 10) + 1;
+      continue;
+    }
+    if (PAGE_HEADER_RE.test(trimmed)) continue;
+
+    const op = OPGAVE_RE.exec(trimmed);
     if (op) {
       flush();
       currentOpgave = { num: parseInt(op[1], 10), name: op[2].trim() };
@@ -98,6 +137,8 @@ function extractQuestions(text, examMeta) {
         opgave_name: currentOpgave.name,
         question_num: parseInt(q[2], 10),
         points: parseInt(q[1], 10),
+        page_start: currentPage,
+        page_end: null,
         text: q[3],
         required_skills: [],
         question_type: null,
@@ -107,7 +148,8 @@ function extractQuestions(text, examMeta) {
     }
 
     if (currentQuestion) {
-      currentQuestion.text += ' ' + line.trim();
+      currentQuestion.text += ' ' + trimmed;
+      currentQuestion.page_end = currentPage;
     }
   }
   flush();
