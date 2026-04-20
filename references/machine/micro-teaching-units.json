@@ -787,5 +787,859 @@
       "Winst = 0 betekent niet dat het bedrijf geen geld verdient!"
     ],
     "generator": "GEN_A37"
+  },
+  {
+    "id": "D01",
+    "name": "Accijnsopbrengst uit grafiek",
+    "category": "markt",
+    "layer": 0,
+    "kern": "Bepaal accijnsopbrengst door verhandelde hoeveelheid na belasting met belastingbedrag te vermenigvuldigen.",
+    "needs": [],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "terms": [],
+    "procedure": [
+      "Bepaal accijnsopbrengst door verhandelde hoeveelheid na belasting met belastingbedrag te vermenigvuldigen."
+    ]
+  },
+  {
+    "id": "D02",
+    "name": "Constante kosten en winst",
+    "category": "markt",
+    "layer": 0,
+    "kern": "Constante kosten beinvloeden break-even analyse maar niet het MO = MK optimum.",
+    "needs": [],
+    "mastery_target": "understand",
+    "prior_learning": "new_this_year",
+    "terms": []
+  },
+  {
+    "id": "D03",
+    "name": "Consumentensurplus en accijns",
+    "category": "markt",
+    "layer": 0,
+    "kern": "Accijns verhoogt prijs, consumers betalen meer, consumentensurplus daalt.",
+    "needs": [],
+    "exam_codes": [
+      "D3.1"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "terms": [],
+    "procedure": [
+      "Accijns verhoogt prijs, consumers betalen meer, consumentensurplus daalt."
+    ]
+  },
+  {
+    "id": "D04",
+    "name": "Elasticiteit en goederenclassificatie",
+    "category": "markt",
+    "layer": 0,
+    "kern": "Gebruik inkomenselasticiteit om goederen te classificeren als inferieur, normaal of luxe.",
+    "needs": [],
+    "mastery_target": "understand",
+    "prior_learning": "new_this_year",
+    "terms": []
+  },
+  {
+    "id": "D05",
+    "name": "Heffing tegen overconsumptie",
+    "category": "markt",
+    "layer": 0,
+    "kern": "Student analyseert of een heffing overconsumptie tegengaat via veranderde vraag.",
+    "needs": [],
+    "exam_codes": [
+      "D1.4a"
+    ],
+    "mastery_target": "understand",
+    "prior_learning": "new_this_year",
+    "terms": []
+  },
+  {
+    "id": "D06",
+    "name": "Homogene en heterogene goederen",
+    "category": "markt",
+    "layer": 0,
+    "kern": "Homogene goederen zijn identiek; heterogene goederen verschillen in kwaliteit of kenmerken.",
+    "needs": [],
+    "exam_codes": [
+      "D2.1"
+    ],
+    "mastery_target": "understand",
+    "prior_learning": "previously_taught",
+    "terms": []
+  },
+  {
+    "id": "D07",
+    "name": "Marktfalen in watervoorziening",
+    "category": "markt",
+    "layer": 0,
+    "kern": "Student bepaalt wanneer marktwerking doelen bereikt of overheidsinterventie nodig is.",
+    "needs": [],
+    "mastery_target": "understand",
+    "prior_learning": "new_this_year",
+    "terms": []
+  },
+  {
+    "id": "D08",
+    "name": "Marktvormen classificeren",
+    "category": "markt",
+    "layer": 0,
+    "kern": "Classificeer markten aan hand van aantal aanbieders, aard van goederen en toetreding.",
+    "needs": [],
+    "exam_codes": [
+      "D2.1"
+    ],
+    "mastery_target": "understand",
+    "prior_learning": "previously_taught",
+    "terms": []
+  },
+  {
+    "id": "D09",
+    "name": "Minimumprijs en werkloosheid",
+    "category": "markt",
+    "layer": 0,
+    "kern": "Minimumloon boven marktloon veroorzaakt vraagoverschot van arbeid en werkloosheid.",
+    "needs": [],
+    "mastery_target": "understand",
+    "prior_learning": "new_this_year",
+    "terms": []
+  },
+  {
+    "id": "D10",
+    "name": "Subsidie en Pareto-efficientie",
+    "category": "markt",
+    "layer": 0,
+    "kern": "Student legt uit of een subsidie-evenwicht Pareto-efficient is.",
+    "needs": [],
+    "mastery_target": "understand",
+    "prior_learning": "new_this_year",
+    "terms": []
+  },
+  {
+    "id": "D11",
+    "name": "Pareto-efficientie in marktevenwicht",
+    "category": "markt",
+    "layer": 0,
+    "kern": "Student legt uit wanneer een marktevenwicht Pareto-efficient is.",
+    "needs": [],
+    "mastery_target": "understand",
+    "prior_learning": "new_this_year",
+    "terms": []
+  },
+  {
+    "id": "D12",
+    "name": "Prijsdiscriminatie en subsidies",
+    "category": "markt",
+    "layer": 0,
+    "kern": "Student herkent of subsidies prijsdiscriminatie veroorzaken en analyseert gevolgen.",
+    "needs": [],
+    "exam_codes": [
+      "D2.3"
+    ],
+    "mastery_target": "understand",
+    "prior_learning": "new_this_year",
+    "terms": []
+  },
+  {
+    "id": "D13",
+    "name": "Voorwaarden voor prijsdiscriminatie",
+    "category": "markt",
+    "layer": 0,
+    "kern": "Prijsdiscriminatie vereist marktscheiding en verschillende betalingsbereidheid.",
+    "needs": [],
+    "exam_codes": [
+      "D2.3"
+    ],
+    "mastery_target": "understand",
+    "prior_learning": "new_this_year",
+    "terms": []
+  },
+  {
+    "id": "D14",
+    "name": "Soorten variabele kosten classificeren",
+    "category": "markt",
+    "layer": 0,
+    "kern": "Student onderscheidt tussen degressief, progressief en proportioneel variabele kosten.",
+    "needs": [],
+    "mastery_target": "understand",
+    "prior_learning": "previously_taught",
+    "terms": []
+  },
+  {
+    "id": "D15",
+    "name": "Substituten en complementen",
+    "category": "markt",
+    "layer": 0,
+    "kern": "Substituten vervangen elkaar; complementen worden samen gebruikt.",
+    "needs": [],
+    "mastery_target": "understand",
+    "prior_learning": "previously_taught",
+    "terms": []
+  },
+  {
+    "id": "D16",
+    "name": "Welvaart en surplus-effect",
+    "category": "markt",
+    "layer": 0,
+    "kern": "Prijsverlaging verhoogt consumentensurplus; effect op producentensurplus verschilt per geval.",
+    "needs": [],
+    "exam_codes": [
+      "D3.1"
+    ],
+    "mastery_target": "understand",
+    "prior_learning": "new_this_year",
+    "terms": []
+  },
+  {
+    "id": "D17",
+    "name": "Winstmaximalisatie MO = MK",
+    "category": "markt",
+    "layer": 0,
+    "kern": "Winstmaximale hoeveelheid vind je waar marginale opbrengst gelijk is aan marginale kosten.",
+    "needs": [],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "terms": [],
+    "procedure": [
+      "Winstmaximale hoeveelheid vind je waar marginale opbrengst gelijk is aan marginale kosten."
+    ]
+  },
+  {
+    "id": "E01",
+    "name": "Intergenerationele ruil",
+    "category": "ruilen over tijd",
+    "layer": 0,
+    "kern": "Student analyseert hoe pensioenstelsels intergenerationele ruil faciliteren.",
+    "needs": [],
+    "exam_codes": [
+      "E2.1"
+    ],
+    "mastery_target": "understand",
+    "prior_learning": "new_this_year",
+    "terms": []
+  },
+  {
+    "id": "E02",
+    "name": "Intertemporele ruil in pensioenstelsels",
+    "category": "ruilen over tijd",
+    "layer": 0,
+    "kern": "Student legt uit hoe pensioenen ruil over tijd vertegenwoordigen.",
+    "needs": [],
+    "exam_codes": [
+      "E1.1"
+    ],
+    "mastery_target": "understand",
+    "prior_learning": "new_this_year",
+    "terms": []
+  },
+  {
+    "id": "E03",
+    "name": "Omslagstelsel (AOW)",
+    "category": "ruilen over tijd",
+    "layer": 0,
+    "kern": "Omslagstelsel: werkenden betalen premie voor huidige uitkeringen; gevoelig voor vergrijzing.",
+    "needs": [],
+    "exam_codes": [
+      "E2.1"
+    ],
+    "mastery_target": "understand",
+    "prior_learning": "previously_taught",
+    "terms": []
+  },
+  {
+    "id": "E04",
+    "name": "Voorraad- en stroomgrootheden onderscheiden",
+    "category": "ruilen over tijd",
+    "layer": 0,
+    "kern": "Student onderscheidt tussen voorraad- en stroomgrootheden.",
+    "needs": [],
+    "mastery_target": "understand",
+    "prior_learning": "previously_taught",
+    "terms": []
+  },
+  {
+    "id": "F01",
+    "name": "Collectief goed classificeren",
+    "category": "samenwerken en onderhandelen",
+    "layer": 0,
+    "kern": "Student herkent collectieve goederen aan hand van excludeerbaarheid en rivaliteit.",
+    "needs": [],
+    "exam_codes": [
+      "F2.2"
+    ],
+    "mastery_target": "understand",
+    "prior_learning": "new_this_year",
+    "terms": []
+  },
+  {
+    "id": "F02",
+    "name": "Dominante strategie",
+    "category": "samenwerken en onderhandelen",
+    "layer": 0,
+    "kern": "Dominante strategie is de beste keuze voor een speler ongeacht wat de ander doet.",
+    "needs": [],
+    "exam_codes": [
+      "F1.5"
+    ],
+    "mastery_target": "understand",
+    "prior_learning": "previously_taught",
+    "terms": []
+  },
+  {
+    "id": "F03",
+    "name": "Emissierechten als prikkel",
+    "category": "samenwerken en onderhandelen",
+    "layer": 0,
+    "kern": "Emissierechten geven bedrijven een prikkel om te verduurzamen door kosten van vervuiling.",
+    "needs": [],
+    "exam_codes": [
+      "F2.4"
+    ],
+    "mastery_target": "understand",
+    "prior_learning": "new_this_year",
+    "terms": []
+  },
+  {
+    "id": "F04",
+    "name": "Externe effecten in marktbeslissingen",
+    "category": "samenwerken en onderhandelen",
+    "layer": 0,
+    "kern": "Student erkent dat negatieve externe effecten leiden tot overproductie vanuit maatschappelijk perspectief.",
+    "needs": [],
+    "exam_codes": [
+      "F2.4"
+    ],
+    "mastery_target": "understand",
+    "prior_learning": "new_this_year",
+    "terms": []
+  },
+  {
+    "id": "F05",
+    "name": "Negatieve externe effecten",
+    "category": "samenwerken en onderhandelen",
+    "layer": 0,
+    "kern": "Overmatige consumptie met negatieve externe effecten leidt tot maatschappelijk welvaartsverlies.",
+    "needs": [],
+    "exam_codes": [
+      "F2.4"
+    ],
+    "mastery_target": "understand",
+    "prior_learning": "new_this_year",
+    "terms": []
+  },
+  {
+    "id": "F06",
+    "name": "Gevangenendilemma",
+    "category": "samenwerken en onderhandelen",
+    "layer": 0,
+    "kern": "Situatie waarbij dominante strategie leidt tot suboptimale uitkomst voor beide spelers.",
+    "needs": [],
+    "exam_codes": [
+      "F1.5"
+    ],
+    "mastery_target": "understand",
+    "prior_learning": "new_this_year",
+    "terms": []
+  },
+  {
+    "id": "F07",
+    "name": "Internalisatie van externe effecten",
+    "category": "samenwerken en onderhandelen",
+    "layer": 0,
+    "kern": "Prijs gelijk aan maatschappelijke kosten zorgt ervoor dat externe effecten geinternaliseerd worden.",
+    "needs": [],
+    "exam_codes": [
+      "F2.4"
+    ],
+    "mastery_target": "understand",
+    "prior_learning": "new_this_year",
+    "terms": []
+  },
+  {
+    "id": "F08",
+    "name": "Lumpsum-financiering en externe effecten",
+    "category": "samenwerken en onderhandelen",
+    "layer": 0,
+    "kern": "Student legt uit hoe een lumpsum-financiering positieve externe effecten internaliseert.",
+    "needs": [],
+    "exam_codes": [
+      "F2.4"
+    ],
+    "mastery_target": "understand",
+    "prior_learning": "new_this_year",
+    "terms": []
+  },
+  {
+    "id": "F09",
+    "name": "Nash-evenwicht identificeren",
+    "category": "samenwerken en onderhandelen",
+    "layer": 0,
+    "kern": "Student bepaalt het Nash-evenwicht uit een pay-off matrix met twee spelers.",
+    "needs": [],
+    "exam_codes": [
+      "F1.4"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "terms": [],
+    "procedure": [
+      "Student bepaalt het Nash-evenwicht uit een pay-off matrix met twee spelers."
+    ]
+  },
+  {
+    "id": "F10",
+    "name": "Opzegtermijn en loonkosten",
+    "category": "samenwerken en onderhandelen",
+    "layer": 0,
+    "kern": "Student legt uit hoe kortere opzegtermijnen via berovingsprobleem tot hogere loonkosten leiden.",
+    "needs": [],
+    "exam_codes": [
+      "F2.1"
+    ],
+    "mastery_target": "understand",
+    "prior_learning": "new_this_year",
+    "terms": []
+  },
+  {
+    "id": "F11",
+    "name": "Verzonken kosten en beslissingen",
+    "category": "samenwerken en onderhandelen",
+    "layer": 0,
+    "kern": "Hoge verzonken kosten kunnen bedrijven aanmoedigen andere markten te zoeken.",
+    "needs": [],
+    "exam_codes": [
+      "F2.1"
+    ],
+    "mastery_target": "understand",
+    "prior_learning": "new_this_year",
+    "terms": []
+  },
+  {
+    "id": "G01",
+    "name": "AI en risicoinschatting",
+    "category": "risico en informatie",
+    "layer": 0,
+    "kern": "Betere risicoinschatting met AI kan averechtse selectie verminderen.",
+    "needs": [],
+    "exam_codes": [
+      "G3.2"
+    ],
+    "mastery_target": "understand",
+    "prior_learning": "new_this_year",
+    "terms": []
+  },
+  {
+    "id": "G02",
+    "name": "Averechtse selectie herkennen",
+    "category": "risico en informatie",
+    "layer": 0,
+    "kern": "Student herkent averechtse selectie als gevolg van informatieasymmetrie op markten.",
+    "needs": [],
+    "exam_codes": [
+      "G3.2"
+    ],
+    "mastery_target": "understand",
+    "prior_learning": "new_this_year",
+    "terms": []
+  },
+  {
+    "id": "G03",
+    "name": "Eigen risico en moral hazard",
+    "category": "risico en informatie",
+    "layer": 0,
+    "kern": "Eigen risico geeft verzekerden een prikkel om voorzichtiger te handelen.",
+    "needs": [],
+    "exam_codes": [
+      "G4.5"
+    ],
+    "mastery_target": "understand",
+    "prior_learning": "new_this_year",
+    "terms": []
+  },
+  {
+    "id": "G04",
+    "name": "Principaal-agentprobleem identificeren",
+    "category": "risico en informatie",
+    "layer": 0,
+    "kern": "Student identificeert principaal-agentrelaties en de problemen die daaruit voortvloeien.",
+    "needs": [],
+    "exam_codes": [
+      "G3.2"
+    ],
+    "mastery_target": "understand",
+    "prior_learning": "new_this_year",
+    "terms": []
+  },
+  {
+    "id": "G05",
+    "name": "Transactiekosten",
+    "category": "risico en informatie",
+    "layer": 0,
+    "kern": "Student berekent en interpreteert transactiekosten bij ruil.",
+    "needs": [],
+    "exam_codes": [
+      "G2.1"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "terms": [],
+    "procedure": [
+      "Student berekent en interpreteert transactiekosten bij ruil."
+    ]
+  },
+  {
+    "id": "G06",
+    "name": "Vereveningsfonds voor risicodeling",
+    "category": "risico en informatie",
+    "layer": 0,
+    "kern": "Gemeenschappelijk fonds kan risico's uitvlakken en kostenverschillen compenseren.",
+    "needs": [],
+    "exam_codes": [
+      "G3.3"
+    ],
+    "mastery_target": "understand",
+    "prior_learning": "new_this_year",
+    "terms": []
+  },
+  {
+    "id": "G07",
+    "name": "Solidariteit in verzekeringen",
+    "category": "risico en informatie",
+    "layer": 0,
+    "kern": "Gepersonaliseerde premies op basis van individueel risicoprofiel ondermijnen solidariteit.",
+    "needs": [],
+    "exam_codes": [
+      "G3.2"
+    ],
+    "mastery_target": "understand",
+    "prior_learning": "new_this_year",
+    "terms": []
+  },
+  {
+    "id": "G08",
+    "name": "Informatieasymmetrie verzekeringsmarkt",
+    "category": "risico en informatie",
+    "layer": 0,
+    "kern": "Informatieongelijkheid tussen verzekeraar en klant kan selectie- en moraalrisicoproblemen veroorzaken.",
+    "needs": [],
+    "exam_codes": [
+      "G2.2"
+    ],
+    "mastery_target": "understand",
+    "prior_learning": "new_this_year",
+    "terms": []
+  },
+  {
+    "id": "H01",
+    "name": "AOW-betaalbaarheid en vergrijzing",
+    "category": "welvaart en groei",
+    "layer": 0,
+    "kern": "Verhogen AOW-leeftijd verbetert betaalbaarheid bij vergrijzing.",
+    "needs": [],
+    "exam_codes": [
+      "H5.1"
+    ],
+    "mastery_target": "understand",
+    "prior_learning": "new_this_year",
+    "terms": []
+  },
+  {
+    "id": "H02",
+    "name": "AIQ (arbeidsinkomenquote) berekenen",
+    "category": "welvaart en groei",
+    "layer": 0,
+    "kern": "Student berekent de arbeidsinkomenquote: (arbeidsinkomen / nationaal inkomen) x 100%.",
+    "needs": [],
+    "exam_codes": [
+      "H1.1"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "terms": [],
+    "procedure": [
+      "Student berekent de arbeidsinkomenquote: (arbeidsinkomen / nationaal inkomen) x 100%."
+    ]
+  },
+  {
+    "id": "H03",
+    "name": "Belastingschijven berekening",
+    "category": "welvaart en groei",
+    "layer": 0,
+    "kern": "Belastingdruk bepaald aan hand van marginaal tarief en betreffende schijven.",
+    "needs": [],
+    "exam_codes": [
+      "H4.6"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "previously_taught",
+    "terms": [],
+    "procedure": [
+      "Belastingdruk bepaald aan hand van marginaal tarief en betreffende schijven."
+    ]
+  },
+  {
+    "id": "H04",
+    "name": "Exportsubsidie als protectie",
+    "category": "welvaart en groei",
+    "layer": 0,
+    "kern": "Toewijzing van emissierechten aan exporteurs verlaagt kosten en werkt protectionistisch.",
+    "needs": [],
+    "exam_codes": [
+      "H1.1"
+    ],
+    "mastery_target": "understand",
+    "prior_learning": "new_this_year",
+    "terms": []
+  },
+  {
+    "id": "H05",
+    "name": "Groen bbp en CO2",
+    "category": "welvaart en groei",
+    "layer": 0,
+    "kern": "Lagere CO2-uitstoot vergroot groen bbp; minder productie wegens minder emissierechten verkleint het.",
+    "needs": [],
+    "exam_codes": [
+      "H3.4"
+    ],
+    "mastery_target": "understand",
+    "prior_learning": "new_this_year",
+    "terms": []
+  },
+  {
+    "id": "H06",
+    "name": "Minimumuurloon en internationale concurrentie",
+    "category": "welvaart en groei",
+    "layer": 0,
+    "kern": "Hoger minimumuurloon verhoogt bedrijfskosten, wat de internationale concurrentiepositie kan verslechteren.",
+    "needs": [],
+    "exam_codes": [
+      "H1.1"
+    ],
+    "mastery_target": "understand",
+    "prior_learning": "new_this_year",
+    "terms": []
+  },
+  {
+    "id": "H07",
+    "name": "Minimumuurloon en economische groei",
+    "category": "welvaart en groei",
+    "layer": 0,
+    "kern": "Verhogen van het minimumuurloon kan via hogere consumptie tot economische groei leiden.",
+    "needs": [],
+    "exam_codes": [
+      "H1.1"
+    ],
+    "mastery_target": "understand",
+    "prior_learning": "new_this_year",
+    "terms": []
+  },
+  {
+    "id": "H08",
+    "name": "Ontslagrecht en werkgeverrisico",
+    "category": "welvaart en groei",
+    "layer": 0,
+    "kern": "Student legt uit hoe versoepeling van ontslagrecht risico voor werkgevers vermindert.",
+    "needs": [],
+    "exam_codes": [
+      "H5.1"
+    ],
+    "mastery_target": "understand",
+    "prior_learning": "new_this_year",
+    "terms": []
+  },
+  {
+    "id": "H09",
+    "name": "Progressief tarief berekenen",
+    "category": "welvaart en groei",
+    "layer": 0,
+    "kern": "Student berekent totale belasting bij progressieve tarieven en analyseert stimulansen.",
+    "needs": [],
+    "exam_codes": [
+      "H4.6"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "terms": [],
+    "procedure": [
+      "Student berekent totale belasting bij progressieve tarieven en analyseert stimulansen."
+    ]
+  },
+  {
+    "id": "H10",
+    "name": "Spaarsaldo en betalingsbalans",
+    "category": "welvaart en groei",
+    "layer": 0,
+    "kern": "Student interpreteert positieve en negatieve particuliere spaarsalda.",
+    "needs": [],
+    "exam_codes": [
+      "H1.2"
+    ],
+    "mastery_target": "understand",
+    "prior_learning": "new_this_year",
+    "terms": []
+  },
+  {
+    "id": "H11",
+    "name": "Wisselkoers en economische groei",
+    "category": "welvaart en groei",
+    "layer": 0,
+    "kern": "Student legt uit hoe wisselkoerseffecten tot groei kunnen leiden.",
+    "needs": [],
+    "exam_codes": [
+      "H1.1"
+    ],
+    "mastery_target": "understand",
+    "prior_learning": "new_this_year",
+    "terms": []
+  },
+  {
+    "id": "I01",
+    "name": "Anticyclisch begrotingsbeleid",
+    "category": "goede en slechte tijden",
+    "layer": 0,
+    "kern": "In laagconjunctuur verhoogt overheid uitgaven of verlaagt belastingen om economie te stimuleren.",
+    "needs": [],
+    "mastery_target": "understand",
+    "prior_learning": "new_this_year",
+    "terms": []
+  },
+  {
+    "id": "I02",
+    "name": "Anticyclische inkomensoverdrachten",
+    "category": "goede en slechte tijden",
+    "layer": 0,
+    "kern": "Student legt uit hoe inkomensoverdrachten anticyclisch werken tijdens laagconjunctuur.",
+    "needs": [],
+    "mastery_target": "understand",
+    "prior_learning": "new_this_year",
+    "terms": []
+  },
+  {
+    "id": "I03",
+    "name": "Centrale bank rentebeleid",
+    "category": "goede en slechte tijden",
+    "layer": 0,
+    "kern": "Student bepaalt wanneer centrale banken rentes verhogen of verlagen.",
+    "needs": [],
+    "mastery_target": "apply",
+    "prior_learning": "previously_taught",
+    "terms": [],
+    "procedure": [
+      "Student bepaalt wanneer centrale banken rentes verhogen of verlagen."
+    ]
+  },
+  {
+    "id": "I04",
+    "name": "Keynesiaanse kruis verschuivingen analyseren",
+    "category": "goede en slechte tijden",
+    "layer": 0,
+    "kern": "Student analyseert hoe verschuivingen in IS en LM het evenwicht en effectiviteit van beleid beinvloeden.",
+    "needs": [],
+    "exam_codes": [
+      "I4.1",
+      "I4.2"
+    ],
+    "mastery_target": "analyze",
+    "prior_learning": "new_this_year",
+    "terms": [],
+    "procedure": [
+      "Student analyseert hoe verschuivingen in IS en LM het evenwicht en effectiviteit van beleid beinvloeden."
+    ]
+  },
+  {
+    "id": "I05",
+    "name": "Koopkracht behouden bij inflatie",
+    "category": "goede en slechte tijden",
+    "layer": 0,
+    "kern": "Bereken nieuwe loon of uitkering om koopkracht gelijk te houden bij inflatie.",
+    "needs": [],
+    "exam_codes": [
+      "I1.4"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "terms": [],
+    "procedure": [
+      "Bereken nieuwe loon of uitkering om koopkracht gelijk te houden bij inflatie."
+    ]
+  },
+  {
+    "id": "I06",
+    "name": "Loonrigiditeit en GA-curve helling",
+    "category": "goede en slechte tijden",
+    "layer": 0,
+    "kern": "Student legt uit hoe loonflexibiliteit de helling van de GA-curve beinvloedt.",
+    "needs": [],
+    "exam_codes": [
+      "I4.4"
+    ],
+    "mastery_target": "understand",
+    "prior_learning": "new_this_year",
+    "terms": []
+  },
+  {
+    "id": "I07",
+    "name": "Monetair beleid bij starre vs flexibele arbeidsmarkt",
+    "category": "goede en slechte tijden",
+    "layer": 0,
+    "kern": "Student vergelijkt effectiviteit van renteverlagingen onder starre versus flexibele arbeidsmarktomstandigheden.",
+    "needs": [],
+    "mastery_target": "analyze",
+    "prior_learning": "new_this_year",
+    "terms": [],
+    "procedure": [
+      "Student vergelijkt effectiviteit van renteverlagingen onder starre versus flexibele arbeidsmarktomstandigheden."
+    ]
+  },
+  {
+    "id": "I08",
+    "name": "Overheidssaldo verandering",
+    "category": "goede en slechte tijden",
+    "layer": 0,
+    "kern": "Overheidssaldo kan veranderen door belasting- of uitgavenveranderingen.",
+    "needs": [],
+    "mastery_target": "understand",
+    "prior_learning": "new_this_year",
+    "terms": []
+  },
+  {
+    "id": "I09",
+    "name": "Rentebeleid en economische gevolgen",
+    "category": "goede en slechte tijden",
+    "layer": 0,
+    "kern": "Renteverhoging verkrapt de economie; renteverlaging stimuleert.",
+    "needs": [],
+    "mastery_target": "understand",
+    "prior_learning": "new_this_year",
+    "terms": []
+  },
+  {
+    "id": "I10",
+    "name": "Werkelijk versus nominaal eigen risico",
+    "category": "goede en slechte tijden",
+    "layer": 0,
+    "kern": "Student analyseert hoe inflatie het werkelijk draagvermogen van een nominaal vast eigen risico beinvloedt.",
+    "needs": [],
+    "exam_codes": [
+      "I1.4"
+    ],
+    "mastery_target": "understand",
+    "prior_learning": "new_this_year",
+    "terms": []
+  },
+  {
+    "id": "I11",
+    "name": "Wisselkoerseffect van monetair beleid",
+    "category": "goede en slechte tijden",
+    "layer": 0,
+    "kern": "Student legt uit hoe monetaire beleidsmaatregelen via de wisselkoers de conjunctuur beinvloeden.",
+    "needs": [],
+    "exam_codes": [
+      "I1.2"
+    ],
+    "mastery_target": "understand",
+    "prior_learning": "new_this_year",
+    "terms": []
   }
 ]
