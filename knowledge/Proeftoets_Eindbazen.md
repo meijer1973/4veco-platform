@@ -7,7 +7,7 @@ Students have completed the full curriculum of module 3 and unlocked all 37 skil
 This plan designs the module 3 cross-book practice test  so that:
 - Each of the five Layer-5 skill-tree skills is tested at full exam difficulty.
 - Lower-layer prerequisites appear as explicit warm-up questions — the test mirrors the skill-tree dependency graph.
-- All question types and answer-model conventions follow the canonical consolidation / proeftoets specs (`references/vraagtypen-en-opgaveontwerp.md`, `skills/econ-testprep-builder.md` Part 5).
+- All question types and answer-model conventions follow the canonical consolidation / proeftoets specs (`references/authored/vraagtypen-en-opgaveontwerp.md`, `skills/econ-testprep-builder.md` Part 5).
 
 Outcome: a 120-min, 4-opgave, ~32-point proeftoets that certifies a student can independently execute the hardest skills of the skill-tree under exam conditions, using real VWO question types.
 
@@ -98,9 +98,9 @@ Each opgave follows the proeftoets progression (`econ-testprep-builder.md` §5.3
 |---|---|
 | Layer-5 skill-definities + prereqs | `engines/skilltree/base-elements.js` |
 | Paragraaf-gebonden skill-map (Book 4 unlockt alle skills) | `source-data/module-3/skilltree/3.5.2.js` (referentie voor scope-check) |
-| Vraagtype-taxonomie, scoring, Bloom-target | `references/vraagtypen-en-opgaveontwerp.md` |
-| Economische precisieregels | `references/economic_mathematical_precision_reference.md` |
-| Nederlandse terminologie | `references/economie-terminologie.md` |
+| Vraagtype-taxonomie, scoring, Bloom-target | `references/authored/vraagtypen-en-opgaveontwerp.md` |
+| Economische precisieregels | `references/authored/economic_mathematical_precision_reference.md` |
+| Nederlandse terminologie | `references/authored/economie-terminologie.md` |
 | PDF-bouwrecept | `skills/econ-pdf-builder/` + bestaande `build_pdf.py` in een andere proeftoets |
 | Proeftoets-template §5.4 | `skills/econ-testprep-builder.md` regel 305–440 |
 | Reeds gebouwde proeftoetsen (patronen) | bestaande `X.5.4 Proeftoets/` mappen in `output/` (kopieer naming/styling) |
@@ -108,8 +108,8 @@ Each opgave follows the proeftoets progression (`econ-testprep-builder.md` §5.3
 ## Kritieke bestanden om voor-te-lezen vóór te bouwen
 
 - `skills/econ-testprep-builder.md` (Part 5 — proeftoets specs)
-- `references/vraagtypen-en-opgaveontwerp.md` (volledig — één source of truth)
-- `references/economic_mathematical_precision_reference.md` (beperkingen op domein, richtingen)
+- `references/authored/vraagtypen-en-opgaveontwerp.md` (volledig — één source of truth)
+- `references/authored/economic_mathematical_precision_reference.md` (beperkingen op domein, richtingen)
 - `knowledge/course_blueprint_v4.md` Boek 4 hoofdstuk 5 specificatie
 - `engines/skilltree/base-elements.js` definities van E4/E6/E7/E8/E9 met prereqs
 - `skills/economic-graph/` voor grafiek-specificaties

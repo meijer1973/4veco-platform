@@ -8,15 +8,15 @@ description: "Builds test preparation paragraphs for economics education (bovenb
 Builds all four paragraph types for Chapter 5 (test preparation) of each book. These paragraphs introduce **no new theory** — they scaffold exam readiness through a deliberate progression: retrieval practice (§1) → skill training (§2) → integration (§3) → exam simulation (§4).
 
 **Companion skills:**
-- `econ-didactiek` → pedagogical decision rules (backed by `references/didactiek-principes.md`)
+- `econ-didactiek` → pedagogical decision rules (backed by `references/authored/didactiek-principes.md`)
 - `economic-graph` → SVG/PNG graphs (called during build)
 - `econ-pdf-builder` → PDF export pipeline
 - `econ-quality-control` → quality_ref generation after build
 
 **Reference standards:**
-- `references/economic_mathematical_precision_reference.md` → precision rules (takes precedence)
-- `references/economie-terminologie.md` → canonical Dutch terms
-- `references/amstelveencollege_quality_standards.md` → school-fit overlay
+- `references/authored/economic_mathematical_precision_reference.md` → precision rules (takes precedence)
+- `references/authored/economie-terminologie.md` → canonical Dutch terms
+- `references/external/amstelveencollege_quality_standards.md` → school-fit overlay
 - `knowledge/course_blueprint_v4.md` → Chapter 5 specs per book
 
 ---
@@ -56,7 +56,7 @@ Chapter 5 of each book. Four paragraphs, no new theory, scaffolded exam readines
 - **No new theory.** Every concept must come from Chapters 1–4.
 - **Dual coding applies.** Summary blocks (§1) include at least one graph per block. Exercises (§2–§4) include source graphs where relevant.
 - **Misconception-driven design.** MC distractors (§1) and skill exercises (§2) target documented student errors, not randomly wrong alternatives.
-- **VWO terminology.** All student-facing content uses terms from `references/economie-terminologie.md`.
+- **VWO terminology.** All student-facing content uses terms from `references/authored/economie-terminologie.md`.
 
 ---
 
@@ -88,7 +88,7 @@ Total: 5 blocks × 2–3 MC = 10–15 MC questions per paragraph.
 - Each distractor must represent a **real student misconception**. Source these from:
   - `source-data/module-{N}/reasoning/*.csv` → `distractor_*_label` and `distractor_*_detail` columns
   - Blueprint difficulty notes (e.g., "The shift vs movement distinction is the single most common error")
-  - `references/didactiek-principes.md` → documented misconception patterns
+  - `references/authored/didactiek-principes.md` → documented misconception patterns
 - If `source-data` has no CSV for this topic, use the blueprint's difficulty notes and the misconception warnings from theory paragraphs.
 - **Never use obviously wrong alternatives** ("the answer is 42", "none of the above").
 - Mark the "trap" answer (most tempting wrong option) in the answer explanation.
@@ -284,7 +284,7 @@ Each opgave follows the exam format:
   - Data embedded in context text or tables. Students extract relevant numbers.
   - Self-contained: source contains all needed information.
   - One world per opgave: all questions reference the same context.
-  - VWO-level language. Economic terminology from `references/economie-terminologie.md`.
+  - VWO-level language. Economic terminology from `references/authored/economie-terminologie.md`.
 
 ### 5.2 Question design taxonomy
 
@@ -443,7 +443,7 @@ Example mapping:
 If `source-data` has no reasoning CSV for a topic:
 - Use the blueprint's **difficulty notes** (these explicitly document common errors)
 - Use **misconception warnings** (marked with warning callout) from the theory paragraphs
-- Use `references/didactiek-principes.md` documented misconception patterns
+- Use `references/authored/didactiek-principes.md` documented misconception patterns
 
 ---
 
@@ -584,7 +584,7 @@ X.5.4 Proeftoets/
 
 ### All types:
 29. [ ] No new theory anywhere
-30. [ ] VWO terminology from `references/economie-terminologie.md`
+30. [ ] VWO terminology from `references/authored/economie-terminologie.md`
 31. [ ] All image refs resolve to files in `_assets/`
 32. [ ] SVG/PNG pairs complete
 33. [ ] Asset naming: `X.5.Z_{type}_{number}.{ext}`

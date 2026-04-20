@@ -9,7 +9,7 @@ Technical specifications for creating SVG-based economics visuals. All graphs mu
 
 **Core principle:** A student should understand the graph in 5 seconds without the teacher's explanation. If it takes longer, simplify.
 
-**Precision standard:** All graphs must comply with `references/economic_mathematical_precision_reference.md` — especially §9 (graph precision rules): axis labels with units, slope language matching axis orientation, exact numerical alignment with text, and no visual clutter.
+**Precision standard:** All graphs must comply with `references/authored/economic_mathematical_precision_reference.md` — especially §9 (graph precision rules): axis labels with units, slope language matching axis orientation, exact numerical alignment with text, and no visual clutter.
 
 ---
 

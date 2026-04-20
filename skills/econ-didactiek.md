@@ -7,7 +7,7 @@ description: "General didactic skill for economics education (bovenbouw vwo/havo
 
 General didactic principles for economics education. This skill is format-independent — it applies equally to textbooks, presentations, games, quizzes, and any future product. Product-specific builder skills (econ-word-templates, econ-pptx-templates, textbook-builder, etc.) handle format and layout.
 
-**Authoritative reference:** `references/didactiek-principes.md` is the single source of truth for all didactical principles in this repository. This skill provides operational decision rules; the reference document contains the complete theoretical foundation, research evidence, and detailed specifications. When this skill and the reference document conflict, the reference document takes precedence.
+**Authoritative reference:** `references/authored/didactiek-principes.md` is the single source of truth for all didactical principles in this repository. This skill provides operational decision rules; the reference document contains the complete theoretical foundation, research evidence, and detailed specifications. When this skill and the reference document conflict, the reference document takes precedence.
 
 ---
 
@@ -37,7 +37,7 @@ Core concepts (opportunity cost, supply/demand, equilibrium, surplus) reappear a
 
 ## PART 2: DIFFERENTIATIE
 
-**School-fit overlay:** Differentiation must follow `references/amstelveencollege_quality_standards.md` accent 3 — layered support with neutral framing and high expectations. Support is a route to the same core goals, not a different destination. No stigmatising labels, no separate tracks.
+**School-fit overlay:** Differentiation must follow `references/external/amstelveencollege_quality_standards.md` accent 3 — layered support with neutral framing and high expectations. Support is a route to the same core goals, not a different destination. No stigmatising labels, no separate tracks.
 
 ### 2.1 Het differentiatiespectrum
 

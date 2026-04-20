@@ -60,7 +60,10 @@ A student working through all materials for one paragraph should feel like they'
 │   ├── verify-deployment.sh    ← Post-push verificatie
 │   └── pre-push-hook.js        ← Git hook
 ├── skills/                     ← Shared skills (didactiek, templates, grafieken, quality control) — for Claude, Codex, and any agent
-├── references/                 ← Authoritative standards: syllabus, terminologie, precision rules, inspectie — used by all content skills
+├── references/                 ← Authoritative standards, organised by maintenance status:
+│   ├── external/                ←   Mirrored from outside bodies (CvTE, inspectie, school); machine-refreshed
+│   ├── authored/                ←   Hand-edited (legacy bucket; target to shrink)
+│   └── machine/                 ←   Edited only via CLI scripts; integrity-enforced
 └── package.json                ← Jest voor tests
 ```
 

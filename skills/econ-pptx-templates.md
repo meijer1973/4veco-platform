@@ -13,14 +13,14 @@ Short skill. The previous version prescribed a rigid harness tuned for an older 
 
 ## MANDATORY — pedagogy
 
-These are not style choices; they come from `references/didactiek-principes.md`, `references/economic_mathematical_precision_reference.md`, and `references/economie-terminologie.md`. Read those when in doubt.
+These are not style choices; they come from `references/authored/didactiek-principes.md`, `references/authored/economic_mathematical_precision_reference.md`, and `references/authored/economie-terminologie.md`. Read those when in doubt.
 
 - **≥ 3 economic graphs per presentation.** Dual coding reinforcement (text + visual). Every key concept in a slide deck should appear at least once as a labeled diagram or chart.
 - **Theory + worked examples only.** NEVER include exercise instructions ("Maak opgave X", "Bereken …", "Beantwoord …"). Opgaven live in separate files.
 - **Speaker notes on every slide.** Teacher-facing. Explain reasoning, anticipate misconceptions, list cues.
 - **Body text ≥ 18pt.** Titles typically 28–44pt. Slide stats/hero numbers can go larger; respect the width rule below.
-- **Canonical Dutch terminology.** Use terms from `references/economie-terminologie.md` (e.g. "alternatieve kosten", NOT "opportuniteitskosten"). No anglicisms.
-- **Economic correctness.** Supply/demand labels, curve directions, units, movement-vs-shift, ceteris paribus — all must match `references/economic_mathematical_precision_reference.md`.
+- **Canonical Dutch terminology.** Use terms from `references/authored/economie-terminologie.md` (e.g. "alternatieve kosten", NOT "opportuniteitskosten"). No anglicisms.
+- **Economic correctness.** Supply/demand labels, curve directions, units, movement-vs-shift, ceteris paribus — all must match `references/authored/economic_mathematical_precision_reference.md`.
 - **Economic graph geometry.** Read the `economic-graph` skill. Run `build-scripts/lib/verify_svg_geometry.py` after every SVG edit.
 
 ---

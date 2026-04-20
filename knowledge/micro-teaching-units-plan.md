@@ -269,11 +269,11 @@ Expected unit count after all passes: smaller than the v2 estimate of 80â€“120 â
 - `build-scripts/templates/template-B_voorkennis.js`, `template-A_vaardigheden.js`, `template-paragraph-plan.md`
 - `build-scripts/content/module-1/m1-111-voorkennis.js`, `m1-111-vaardigheden.js`
 - `source-data/module-{1,3}/reasoning/*.csv`
-- `references/syllabus-economie-vwo-2026-versie-2.pdf`
+- `references/external/syllabus-economie-vwo-2026-versie-2.pdf`
 - **`references/external/exams/havo-2025-*.pdf`** (new, to be downloaded from CvTE)
 - **`references/external/exams/vwo-2025-*.pdf`** (new, to be downloaded from CvTE)
 - `knowledge/course_blueprint_v4.md`
-- `references/economie-terminologie.md`
+- `references/authored/economie-terminologie.md`
 
 **Create:**
 - `references/machine/micro-teaching-units.md` + `.json`

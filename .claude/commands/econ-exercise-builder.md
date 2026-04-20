@@ -5,7 +5,7 @@ description: "Generates a complete exercise set with answer models for a single 
 
 # Economics Exercise Builder
 
-Generates a complete exercise set + answer models for one textbook paragraph, given a blueprint paragraph spec. This skill handles exercise design and sequencing. For pedagogical principles, see `econ-didactiek` (backed by `references/didactiek-principes.md`). For graph generation, see `economic-graph`. For school-fit quality (differentiation, context quality, self-monitoring), see `references/amstelveencollege_quality_standards.md`.
+Generates a complete exercise set + answer models for one textbook paragraph, given a blueprint paragraph spec. This skill handles exercise design and sequencing. For pedagogical principles, see `econ-didactiek` (backed by `references/authored/didactiek-principes.md`). For graph generation, see `economic-graph`. For school-fit quality (differentiation, context quality, self-monitoring), see `references/external/amstelveencollege_quality_standards.md`.
 
 ---
 
@@ -239,7 +239,7 @@ Antwoord: [final answer with units]
 - **Always include "Waarom".** At least for the final answer of each sub-question: why does this answer make economic sense? This prevents students from memorising procedures without understanding.
 - **Rounding:** state the rounding rule once at the top of the answer model (e.g., "Rond af op 2 decimalen tenzij anders aangegeven"). Apply consistently.
 - **Graph answers:** include a reference to the graph file in `_assets/`. The graph must show the complete solution (all curves, equilibrium points, shaded areas, labels).
-- **Concept precision (MANDATORY).** When attributing a change to a vraagfactor / aanbodfactor / cost driver, always pick the **most economically specific category** (see `references/economic_mathematical_precision_reference.md` §4.3 and §12.1). Do NOT blur "preferences" with "price of a substitute", or "demand factor" with "supply factor".
+- **Concept precision (MANDATORY).** When attributing a change to a vraagfactor / aanbodfactor / cost driver, always pick the **most economically specific category** (see `references/authored/economic_mathematical_precision_reference.md` §4.3 and §12.1). Do NOT blur "preferences" with "price of a substitute", or "demand factor" with "supply factor".
   - ❌ Wrong: "Petrol prices rise → biking becomes more attractive → preferences for biking changed → shift right"
   - ✅ Right: "Petrol prices rise → cars (substitute for the bike) become more expensive → price of substitute changes → shift right"
   - When there's a tempting wrong attribution, add a one-line `⚠️ Let op de juiste vraagfactor` reminder in the answer model.

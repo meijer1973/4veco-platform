@@ -4,7 +4,7 @@ Canonical Dutch economic terms as defined by the **Syllabus Economie VWO 2026** 
 
 **Rule:** Use the exact Dutch term from this reference in all student-facing output. Never translate to English or use informal alternatives. The syllabus abbreviations (TK, GTK, MK, etc.) are the only permitted abbreviations.
 
-**Source:** `references/syllabus-economie-vwo-2026-versie-2.pdf`
+**Source:** `references/external/syllabus-economie-vwo-2026-versie-2.pdf`
 
 **Notation markers from the syllabus:**
 - **(1)** = alleen grafisch onderbouwen (graphical only, no computation required)
@@ -455,4 +455,4 @@ The syllabus defines these formulas with specific variable names:
 ---
 
 *Source: Syllabus Economie VWO 2026, Versie 2, juli 2024. College voor Toetsen en Examens, Utrecht.*
-*PDF: `references/syllabus-economie-vwo-2026-versie-2.pdf`*
+*PDF: `references/external/syllabus-economie-vwo-2026-versie-2.pdf`*

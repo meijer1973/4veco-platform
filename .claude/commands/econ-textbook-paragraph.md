@@ -8,16 +8,16 @@ description: "Builds a complete textbook paragraph for economics education (bove
 Builds one complete textbook paragraph: theory + worked example + exercises + graphs → markdown + assets + PDF. This skill handles the textbook-specific format and writing rules.
 
 **Companion skills (always read first):**
-- `econ-didactiek` → pedagogical decision rules (scaffolding, dual coding, Bloom's, misconceptions) — backed by `references/didactiek-principes.md`
+- `econ-didactiek` → pedagogical decision rules (scaffolding, dual coding, Bloom's, misconceptions) — backed by `references/authored/didactiek-principes.md`
 - `econ-exercise-builder` → generates `exercises.md` and `answers.md` (run first)
 - `economic-graph` → generates SVG/PNG graphs (called during build)
 - `econ-pdf-builder` → PDF export pipeline (styling, page breaks, image embedding)
 - `econ-quality-control` → quality assurance: generate quality_ref after build, on-demand quality reports
 
 **Reference standards:**
-- `references/economic_mathematical_precision_reference.md` → precision rules (takes precedence)
-- `references/economie-terminologie.md` → canonical Dutch terms
-- `references/amstelveencollege_quality_standards.md` → school-fit overlay: explicit leerdoelen, formative checkpoints, layered differentiation, meaningful context, learner self-monitoring
+- `references/authored/economic_mathematical_precision_reference.md` → precision rules (takes precedence)
+- `references/authored/economie-terminologie.md` → canonical Dutch terms
+- `references/external/amstelveencollege_quality_standards.md` → school-fit overlay: explicit leerdoelen, formative checkpoints, layered differentiation, meaningful context, learner self-monitoring
 - `econ-paragraph-review` → two-pass review protocol: didactic architecture + mathematical precision
 
 ---
@@ -152,9 +152,9 @@ Definitions get a **definition box** — visually distinct from running text.
 Rules:
 - One definition per box
 - Definition first, then examples
-- Use the exact terminology from the syllabus (Dutch) — see `references/economie-terminologie.md` for the canonical term list
+- Use the exact terminology from the syllabus (Dutch) — see `references/authored/economie-terminologie.md` for the canonical term list
 - Provide the abbreviation in parentheses on first use
-- Clearly distinguish individual vs market-level concepts (see `references/economic_mathematical_precision_reference.md` §2.1)
+- Clearly distinguish individual vs market-level concepts (see `references/authored/economic_mathematical_precision_reference.md` §2.1)
 
 ### 3.3 Formulas
 
@@ -171,9 +171,9 @@ Formulas get a **formula box** — visually distinct, monospace.
 
 Rules:
 - Group related formulas together (max 3–4 per box)
-- Use the same variable names as the syllabus (TK, TCK, TVK, GTK, MK, TO, GO, MO — see `references/economie-terminologie.md`)
+- Use the same variable names as the syllabus (TK, TCK, TVK, GTK, MK, TO, GO, MO — see `references/authored/economie-terminologie.md`)
 - Show units in parentheses after the box if not obvious
-- State domain restrictions / validity range at first presentation (see `references/economic_mathematical_precision_reference.md` §10.1)
+- State domain restrictions / validity range at first presentation (see `references/authored/economic_mathematical_precision_reference.md` §10.1)
 - Never conflate total and average concepts (TK ≠ GTK, TVK ≠ GVK — see precision reference §7)
 
 ### 3.4 Graphs in theory sections
@@ -417,7 +417,7 @@ For PDF export (image embedding, CSS styling, page breaks, weasyprint pipeline),
 4. □ Worked example uses the same procedure as the target exercise
 5. □ Dual coding fading applied (visual → visual → no visual in guided practice)
 6. □ At least one misconception warning if applicable (check `econ-didactiek` §7.4)
-7. □ Definitions use exact syllabus terminology (verify against `references/economie-terminologie.md`)
+7. □ Definitions use exact syllabus terminology (verify against `references/authored/economie-terminologie.md`)
 8. □ Answer model follows unified procedures — same steps as worked example
 
 **Graph checks:**
@@ -443,7 +443,7 @@ For PDF export (image embedding, CSS styling, page breaks, weasyprint pipeline),
 
 **Didactic and precision review (before quality_ref):**
 21. □ Run `econ-paragraph-review` Pass 1 (didactic architecture): opening, scaffolding, dual coding, fading, misconceptions, exercises, summary
-22. □ Run `econ-paragraph-review` Pass 2 (mathematical precision): graph accuracy, algebra, terminology, answer verification, cross-paragraph consistency — verify against `references/economic_mathematical_precision_reference.md`
+22. □ Run `econ-paragraph-review` Pass 2 (mathematical precision): graph accuracy, algebra, terminology, answer verification, cross-paragraph consistency — verify against `references/authored/economic_mathematical_precision_reference.md`
 23. □ All FAIL items resolved; FLAG items addressed or documented
 
 **Quality control (after review passes):**

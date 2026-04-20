@@ -16,7 +16,7 @@ Quality assurance system for economics lesson materials, structured in two layer
 - `economic-graph` → graph and visual components being quality-checked
 
 **Reference files:**
-- `references/inspectie-standaarden.md` → full mapping of inspectie standards to material requirements
+- `references/external/inspectie-standaarden.md` → full mapping of inspectie standards to material requirements
 
 ---
 
@@ -118,7 +118,7 @@ The inspectie concretized OP3 in 2023 based on scientific evidence. During class
 
 **For material design, criteria 3–7 translate directly into structural choices.**
 
-→ For full standard descriptions and legal basis, see `references/inspectie-standaarden.md`
+→ For full standard descriptions and legal basis, see `references/external/inspectie-standaarden.md`
 
 ---
 
@@ -524,7 +524,7 @@ begeleide inoefening → basis → midden → verrijking]
 ```
 Per paragraph:
  0. ──► FRESHNESS CHECK             (→ Part 0 of this skill)
-      Check last_verified date on references/inspectie-standaarden.md
+      Check last_verified date on references/external/inspectie-standaarden.md
       Apply cascading rules (< 3 mo: proceed; 3-9 mo: quick check; > 9 mo: thorough review)
  1. Extract leerdoelen from opgaven
  2. Build presentatie              (→ econ-pptx-templates)

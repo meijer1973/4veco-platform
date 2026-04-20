@@ -246,13 +246,13 @@ Per F/B/S/E-skill is er een natuurlijke primaire categorie (zie §2.1–2.8 hier
 
 | Onderwerp | Bestand |
 |-----------|---------|
-| Vraagtype-taxonomie (7 types) | `references/vraagtypen-en-opgaveontwerp.md` § 1.1–1.3 |
-| Bloom-niveaus en distributie-eisen | `references/vraagtypen-en-opgaveontwerp.md` § 4.1 |
-| Didactische principes (dual coding, scaffolding, misconcepties) | `references/didactiek-principes.md` § 1–7 |
+| Vraagtype-taxonomie (7 types) | `references/authored/vraagtypen-en-opgaveontwerp.md` § 1.1–1.3 |
+| Bloom-niveaus en distributie-eisen | `references/authored/vraagtypen-en-opgaveontwerp.md` § 4.1 |
+| Didactische principes (dual coding, scaffolding, misconcepties) | `references/authored/didactiek-principes.md` § 1–7 |
 | Content-skillhiërarchie (F/B/S/E) | `engines/skilltree/base-elements.js` |
 | Per-paragraaf skill-mapping | `source-data/module-X/skilltree/*.js` |
-| Officiële CvTE Domein A | `references/syllabus-economie-vwo-2026-versie-2.pdf` |
-| Onderwijsinspectie-raamwerk (OP0–OP3) | `references/inspectie-standaarden.md` |
-| Canonieke economische terminologie | `references/economie-terminologie.md` |
-| Rekenkundige en modelmatige precisie | `references/economic_mathematical_precision_reference.md` |
-| Amstelveen College kwaliteitsoverlay | `references/amstelveencollege_quality_standards.md` |
+| Officiële CvTE Domein A | `references/external/syllabus-economie-vwo-2026-versie-2.pdf` |
+| Onderwijsinspectie-raamwerk (OP0–OP3) | `references/external/inspectie-standaarden.md` |
+| Canonieke economische terminologie | `references/authored/economie-terminologie.md` |
+| Rekenkundige en modelmatige precisie | `references/authored/economic_mathematical_precision_reference.md` |
+| Amstelveen College kwaliteitsoverlay | `references/external/amstelveencollege_quality_standards.md` |

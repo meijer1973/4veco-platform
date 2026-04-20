@@ -20,10 +20,10 @@ End-to-end orchestrator for building a complete textbook chapter from blueprint 
 - `BUILD-PARAGRAPH.md` Part A → the textbook build process each paragraph sub-agent follows (Part B is the platform pipeline — separate, not used by this skill)
 
 **Reference standards (sub-agents must comply):**
-- `references/didactiek-principes.md` → didactical principles (source of truth)
-- `references/economic_mathematical_precision_reference.md` → precision rules
-- `references/economie-terminologie.md` → canonical Dutch terms
-- `references/amstelveencollege_quality_standards.md` → school-fit overlay
+- `references/authored/didactiek-principes.md` → didactical principles (source of truth)
+- `references/authored/economic_mathematical_precision_reference.md` → precision rules
+- `references/authored/economie-terminologie.md` → canonical Dutch terms
+- `references/external/amstelveencollege_quality_standards.md` → school-fit overlay
 
 ---
 
@@ -185,8 +185,8 @@ Before any building starts, decide and document:
 4. **Interleaving plan** — which earlier skills each paragraph should revisit in its "Herhaling" section. Spread interleaving across paragraphs; don't repeat the same skill in every paragraph.
 5. **Dual coding plan** — for each paragraph, list which key concepts require graph support. Identify visuals that should be shared or consistent across paragraphs (e.g., a supply/demand graph that appears in §1 and is extended in §2). Every concept that is explained in text must also have a visual representation — this is non-negotiable (see AGENTS.md Design Principles).
 6. **Procedure plan** — for each paragraph, list the key skills and their canonical step sequences. If §1 teaches "step 1: stel Qa = Qv, step 2: los op naar P, step 3: vul terug in", then §2 must use those exact same steps when revisiting equilibrium calculation. The procedure is the constant; context/numbers change. This ensures unified student experience across paragraphs.
-7. **Precision standards** — all paragraphs must adhere to `references/economic_mathematical_precision_reference.md`. Ensure consistent use of: individual vs market-level language, ceteris paribus framing on curve introductions, units on all axis labels, movement vs shift vocabulary, formula domain restrictions at first presentation, cost terminology (TK ≠ GTK ≠ MK), and text-graph-table-formula number matching.
-8. **School-fit overlay** — all paragraphs must satisfy `references/amstelveencollege_quality_standards.md`: explicit leerdoelen, formative checkpoints, layered differentiation (support without separate tracks), meaningful context for concept transfer, learner self-monitoring prompts. This overlay adjusts emphasis, not structure.
+7. **Precision standards** — all paragraphs must adhere to `references/authored/economic_mathematical_precision_reference.md`. Ensure consistent use of: individual vs market-level language, ceteris paribus framing on curve introductions, units on all axis labels, movement vs shift vocabulary, formula domain restrictions at first presentation, cost terminology (TK ≠ GTK ≠ MK), and text-graph-table-formula number matching.
+8. **School-fit overlay** — all paragraphs must satisfy `references/external/amstelveencollege_quality_standards.md`: explicit leerdoelen, formative checkpoints, layered differentiation (support without separate tracks), meaningful context for concept transfer, learner self-monitoring prompts. This overlay adjusts emphasis, not structure.
 
 When running Part B (platform build) later, these plans feed into the full `_paragraph-plan.md` with visuelen-toewijzing and procedure-stappen-plan. For Part A (textbook only), enforce dual coding and unified experience through the content itself — every theory section pairs text with graphs, every worked example uses the same procedure as the exercises.
 

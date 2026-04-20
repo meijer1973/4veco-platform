@@ -10,7 +10,7 @@ The 4veco-platform dual-coding principle (AGENTS.md + BUILD-PARAGRAPH.md line 11
 
 Goal: plan a **platform-side enhancement** that (a) adds the graph specs and build scripts here so the next build produces graph-rich paragraphs, and (b) treats all four §3.3.x paragraphs equally. 3.3.4 is a consolidation (label = "Toepassen") and follows `econ-consolidation-builder` (no paragraaf.md, only opgaven + antwoorden with bron-materialen).
 
-## Guiding principles (from `skills/econ-didactiek.md`, `economic-graph.md`, `references/economic_mathematical_precision_reference.md`)
+## Guiding principles (from `skills/econ-didactiek.md`, `economic-graph.md`, `references/authored/economic_mathematical_precision_reference.md`)
 
 - **One concept = one visual.** Every theory sub-section of a paragraph gets at least one SVG. Target: ≥ 1 `fig_N` per theory H3, plus `we_1` for the worked example, plus `ex_N` for exercises that reason over a diagram.
 - **Consistent color coding per domain.** Reuse the 3.2.x palette: market = blue, external-effect wedge = amber, welfare loss = red-hatched, government instrument = green.
@@ -101,8 +101,8 @@ These are structural additions to each paragraaf.md, applied uniformly:
 - `skills/econ-consolidation-builder.md` — 3.3.4 (consolidation) skeleton
 - `skills/econ-didactiek.md` — dual coding, fading, misconception handling
 - `skills/econ-pptx-templates.md` + `skills/econ-word-templates.md` — reusable dual-coded components
-- `references/economic_mathematical_precision_reference.md` §9 — non-negotiable graph-precision rules
-- `references/economie-terminologie.md` — canonical Dutch terms (MPC / MSC, DWL, Gini, accijns, etc.)
+- `references/authored/economic_mathematical_precision_reference.md` §9 — non-negotiable graph-precision rules
+- `references/authored/economie-terminologie.md` — canonical Dutch terms (MPC / MSC, DWL, Gini, accijns, etc.)
 
 **Reference existing scripts to mirror:**
 - `build-scripts/m1-112-build-assets.js` — asset-generator pattern

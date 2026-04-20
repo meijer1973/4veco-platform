@@ -2,7 +2,7 @@
 
 ## Context
 
-Audit of `knowledge/course_blueprint_v4.md` against the official CvTE syllabus (`references/syllabus-economie-vwo-2026-versie-2.pdf`) and canonical terminology (`references/economie-terminologie.md`). This is a read-only report, not an implementation plan — no files will be changed.
+Audit of `knowledge/course_blueprint_v4.md` against the official CvTE syllabus (`references/external/syllabus-economie-vwo-2026-versie-2.pdf`) and canonical terminology (`references/authored/economie-terminologie.md`). This is a read-only report, not an implementation plan — no files will be changed.
 
 ## Scope assumption
 
@@ -83,4 +83,4 @@ Recommended tweaks are minor: one worked example each for monopolistische concur
 
 - Re-read syllabus Domain D eindtermen list (PDF p. ~12–18) against the paragraph-by-paragraph claims in the blueprint Table-of-Contents (lines ~50–200 of `course_blueprint_v4.md`).
 - Spot-check Book 2 Ch2 against syllabus D3 eindtermen 3.1–3.11.
-- Cross-check terminology via `references/economie-terminologie.md` with a grep of blueprint for known anglicism traps ("opportuniteitskosten", "deadweight").
+- Cross-check terminology via `references/authored/economie-terminologie.md` with a grep of blueprint for known anglicism traps ("opportuniteitskosten", "deadweight").

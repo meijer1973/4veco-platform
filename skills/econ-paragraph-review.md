@@ -54,7 +54,7 @@ This is a 1-minute pre-flight check. If Pass 0 has any FAIL items, **STOP** — 
 
 ## PASS 1: DIDACTIC ARCHITECTURE
 
-**Authoritative reference:** `references/didactiek-principes.md` — the single source of truth for all didactical principles. All checks below are derived from this document.
+**Authoritative reference:** `references/authored/didactiek-principes.md` — the single source of truth for all didactical principles. All checks below are derived from this document.
 
 ### 1.1 Opening and motivation
 
@@ -114,7 +114,7 @@ This is a 1-minute pre-flight check. If Pass 0 has any FAIL items, **STOP** — 
 
 ### 1.7 School-fit quality (from school standards overlay)
 
-These checks verify compliance with `references/amstelveencollege_quality_standards.md`. FLAG deviations.
+These checks verify compliance with `references/external/amstelveencollege_quality_standards.md`. FLAG deviations.
 
 | Check | What to look for |
 |-------|-----------------|
@@ -176,7 +176,7 @@ These checks apply ONLY to test preparation paragraphs. Skip this section for th
 
 ## PASS 2: MATHEMATICAL AND CONCEPTUAL PRECISION
 
-**Authoritative reference:** `references/economic_mathematical_precision_reference.md` — all checks below must be verified against this document. When in doubt, the precision reference takes precedence.
+**Authoritative reference:** `references/authored/economic_mathematical_precision_reference.md` — all checks below must be verified against this document. When in doubt, the precision reference takes precedence.
 
 ### 2.1 Graph accuracy
 
@@ -205,8 +205,8 @@ These checks apply ONLY to test preparation paragraphs. Skip this section for th
 
 | Check | What to look for |
 |-------|-----------------|
-| 2.3.1 Definition boxes | Is every new term introduced with a formal definition box (Definitie: ...)? The definition should be precise enough that a student could use it to answer an exam question. Verify Dutch terms and abbreviations against `references/economie-terminologie.md`. |
-| 2.3.2 Term consistency | Is the same term used consistently throughout? Flag if the paragraph alternates between "collectieve vraag" and "marktvraag" without stating they are synonyms. (Stating the synonym once and then choosing one is fine.) Flag any English terms where the syllabus prescribes Dutch (see `references/economie-terminologie.md` "Common pitfalls" section). |
+| 2.3.1 Definition boxes | Is every new term introduced with a formal definition box (Definitie: ...)? The definition should be precise enough that a student could use it to answer an exam question. Verify Dutch terms and abbreviations against `references/authored/economie-terminologie.md`. |
+| 2.3.2 Term consistency | Is the same term used consistently throughout? Flag if the paragraph alternates between "collectieve vraag" and "marktvraag" without stating they are synonyms. (Stating the synonym once and then choosing one is fine.) Flag any English terms where the syllabus prescribes Dutch (see `references/authored/economie-terminologie.md` "Common pitfalls" section). |
 | 2.3.3 Correct economic relationships | For every causal claim (e.g., "if income rises, demand for a normal good increases"): verify the direction is correct. Check substitutes, complements, normal goods, inferior goods. |
 | 2.3.4 Horizontal vs. vertical | Any reference to "horizontaal optellen" or "verticaal optellen": verify the description matches the actual graphical operation. Horizontal addition = summing Q values at each P level. This is adding along the horizontal axis. |
 
@@ -223,14 +223,14 @@ These checks apply ONLY to test preparation paragraphs. Skip this section for th
 
 | Check | What to look for |
 |-------|-----------------|
-| 2.5.1 Prerequisite accuracy | When the paragraph says "In §X leerde je Y" — verify that §X actually teaches Y and uses the same terminology. Verify all Dutch economic terms against `references/economie-terminologie.md`. |
+| 2.5.1 Prerequisite accuracy | When the paragraph says "In §X leerde je Y" — verify that §X actually teaches Y and uses the same terminology. Verify all Dutch economic terms against `references/authored/economie-terminologie.md`. |
 | 2.5.2 Concept forward-compatibility | Does anything in this paragraph contradict or create confusion for later paragraphs? (e.g., stating a simplified rule now that will need to be "un-learned" later). |
 | 2.5.3 Notation consistency | Are variable names, subscript conventions (Q_v, Q_a, V₁, V₂), and graph labeling conventions consistent with previous and subsequent paragraphs? |
 | 2.5.4 Difficulty calibration | Does this paragraph's difficulty match its rating in the course blueprint (LICHT / MIDDEL / ZWAAR)? Flag if the actual content is significantly harder or easier than rated. |
 
 ### 2.6 Economic and mathematical precision (from precision reference)
 
-These checks are derived from `references/economic_mathematical_precision_reference.md`. FAIL any violation.
+These checks are derived from `references/authored/economic_mathematical_precision_reference.md`. FAIL any violation.
 
 | Check | What to look for |
 |-------|-----------------|
