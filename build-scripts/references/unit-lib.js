@@ -1,0 +1,105 @@
+/**
+ * unit-lib.js — shared helpers for unit-* mutation commands.
+ *
+ * Each unit-* CLI (rename, update, deprecate, add-dep, remove-dep, split,
+ * merge) loads the catalog, mutates in memory, runs the full validator, and
+ * writes markdown + regenerated JSON atomically. This module centralises
+ * those steps so each command stays small.
+ */
+
+const fs = require('fs');
+const path = require('path');
+const {
+  parseMarkdown,
+  validate,
+  computeLayers,
+  buildJsonEntry,
+  sortUnits,
+} = require('./build-unit-index');
+const { formatEntry } = require('./unit-add');
+
+const REPO_ROOT  = path.resolve(__dirname, '..', '..');
+const UNITS_MD   = path.join(REPO_ROOT, 'references/machine/micro-teaching-units.md');
+const UNITS_JSON = path.join(REPO_ROOT, 'references/machine/micro-teaching-units.json');
+const UNITS_MARKER = '<!-- UNIT ENTRIES BELOW THIS LINE';
+
+function loadCatalog() {
+  if (!fs.existsSync(UNITS_MD)) throw new Error(`missing: ${UNITS_MD}`);
+  const content = fs.readFileSync(UNITS_MD, 'utf8');
+  const markerIdx = content.indexOf(UNITS_MARKER);
+  if (markerIdx === -1) throw new Error(`cannot find units marker in ${UNITS_MD}`);
+  const endOfMarker = content.indexOf('\n', markerIdx);
+  const preamble = content.slice(0, endOfMarker + 1);
+  const units = parseMarkdown(content);
+  const byId = new Map(units.map(u => [u.id, u]));
+  return { preamble, units, byId };
+}
+
+function rebuildMarkdown(preamble, units) {
+  const sorted = sortUnits(units);
+  const blocks = sorted.map(u => formatEntry(u).trim());
+  return preamble + '\n' + blocks.join('\n\n') + '\n';
+}
+
+function saveCatalog({ preamble, units }) {
+  const newContent = rebuildMarkdown(preamble, units);
+  const nextUnits = parseMarkdown(newContent);
+  const { errors, byId } = validate(nextUnits, {});
+  if (errors.length) {
+    const err = new Error('validation failed');
+    err.errors = errors;
+    throw err;
+  }
+  computeLayers(nextUnits, byId);
+  const jsonEntries = sortUnits(nextUnits).map(buildJsonEntry);
+  fs.writeFileSync(UNITS_MD, newContent);
+  fs.writeFileSync(UNITS_JSON, JSON.stringify(jsonEntries, null, 2) + '\n');
+  return nextUnits.length;
+}
+
+function parseFlagArgs(argv) {
+  const args = argv.slice(2);
+  const flags = {};
+  let spec = null;
+  for (let i = 0; i < args.length; i++) {
+    const a = args[i];
+    if (a === '--spec') {
+      spec = JSON.parse(args[++i]);
+    } else if (a.startsWith('--')) {
+      const key = a.slice(2);
+      const value = args[i + 1] && !args[i + 1].startsWith('--') ? args[++i] : true;
+      flags[key] = value;
+    }
+  }
+  return { flags, spec };
+}
+
+function requireUnit(byId, id) {
+  const u = byId.get(id);
+  if (!u) {
+    console.error(`ERROR  unit ${id} not found in catalog`);
+    process.exit(1);
+  }
+  return u;
+}
+
+function reportValidationErrors(err) {
+  if (err && err.errors) {
+    for (const e of err.errors) console.error('CATALOG  ' + e);
+    console.error(`\n${err.errors.length} validation error(s). Catalog NOT written.`);
+  } else {
+    console.error('ERROR  ' + err.message);
+  }
+}
+
+module.exports = {
+  loadCatalog,
+  saveCatalog,
+  rebuildMarkdown,
+  parseFlagArgs,
+  requireUnit,
+  reportValidationErrors,
+  UNITS_MD,
+  UNITS_JSON,
+  REPO_ROOT,
+};

@@ -25,6 +25,11 @@ const {
   insertEntry,
 } = require('../../build-scripts/references/unit-add');
 
+const {
+  rebuildMarkdown,
+  parseFlagArgs,
+} = require('../../build-scripts/references/unit-lib');
+
 // ---------- parseInlineValue ----------
 
 describe('parseInlineValue', () => {
@@ -466,6 +471,92 @@ describe('unit-add insertEntry', () => {
 
   test('throws when marker is missing', () => {
     expect(() => insertEntry('# No marker\n', '### A01\n', 'A01')).toThrow(/cannot find units marker/);
+  });
+});
+
+// ---------- unit-lib: rebuildMarkdown ----------
+
+describe('unit-lib rebuildMarkdown', () => {
+  const preamble = [
+    '# Registry',
+    '',
+    '<!-- UNIT ENTRIES BELOW THIS LINE -->',
+    '',
+  ].join('\n');
+
+  test('emits units in sorted order', () => {
+    const units = [
+      { id: 'D02', name: 'Two', kern: 'k2', needs: [], mastery_target: 'understand', prior_learning: 'new_this_year', terms: [] },
+      { id: 'A01', name: 'One', kern: 'k1', needs: [], mastery_target: 'understand', prior_learning: 'new_this_year', terms: [] },
+    ];
+    const md = rebuildMarkdown(preamble, units);
+    const order = (md.match(/### (\w+)/g) || []).map(s => s.slice(4));
+    expect(order).toEqual(['A01', 'D02']);
+  });
+
+  test('round-trips through parser', () => {
+    const units = [
+      { id: 'A01', name: 'Test', layer: 0, kern: 'k', needs: [], mastery_target: 'apply', prior_learning: 'new_this_year', terms: ['a'], procedure: ['step'], generator: 'GEN_A01' },
+    ];
+    const md = rebuildMarkdown(preamble, units);
+    const parsed = parseMarkdown(md);
+    expect(parsed).toHaveLength(1);
+    expect(parsed[0].id).toBe('A01');
+    expect(parsed[0].layer).toBe(0);
+    expect(parsed[0].generator).toBe('GEN_A01');
+  });
+});
+
+// ---------- unit-lib: parseFlagArgs ----------
+
+describe('unit-lib parseFlagArgs', () => {
+  test('parses --spec JSON', () => {
+    const { spec } = parseFlagArgs(['node', 'x', '--spec', '{"a":1}']);
+    expect(spec).toEqual({ a: 1 });
+  });
+
+  test('parses simple flags', () => {
+    const { flags } = parseFlagArgs(['node', 'x', '--id', 'A01', '--undo']);
+    expect(flags.id).toBe('A01');
+    expect(flags.undo).toBe(true);
+  });
+});
+
+// ---------- stored-layer validation ----------
+
+describe('stored layer invariant', () => {
+  function baseUnit(overrides = {}) {
+    return {
+      id: 'D01',
+      name: 'X',
+      kern: 'k',
+      needs: [],
+      mastery_target: 'understand',
+      prior_learning: 'new_this_year',
+      terms: [],
+      ...overrides,
+    };
+  }
+
+  test('accepts stored layer equal to derived minimum', () => {
+    const a = baseUnit({ id: 'D01', layer: 0 });
+    const b = baseUnit({ id: 'D02', layer: 1, needs: ['D01'] });
+    const { errors } = validate([a, b], {});
+    expect(errors).toEqual([]);
+  });
+
+  test('accepts stored layer above derived minimum (curriculum tier)', () => {
+    const a = baseUnit({ id: 'D01', layer: 0 });
+    const b = baseUnit({ id: 'D02', layer: 5, needs: ['D01'] });
+    const { errors } = validate([a, b], {});
+    expect(errors).toEqual([]);
+  });
+
+  test('rejects stored layer below derived minimum', () => {
+    const a = baseUnit({ id: 'D01', layer: 2 });
+    const b = baseUnit({ id: 'D02', layer: 1, needs: ['D01'] });
+    const { errors } = validate([a, b], {});
+    expect(errors).toEqual(expect.arrayContaining([expect.stringMatching(/D02: stored layer 1 below derived minimum 3/)]));
   });
 });
 
