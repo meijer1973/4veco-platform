@@ -94,10 +94,12 @@ How exercises are distributed across the three difficulty levels.
 
 ## Skills & prior knowledge
 
-Quick reference for the "uitleg" builders.
+Quick reference for the "uitleg" builders. **Cite unit IDs from `references/machine/micro-teaching-units.md`** — not free text — so the registry integrity reports can catch drift.
 
-**Prior knowledge** (5-7 prerequisites): [concept 1], [concept 2], ...
-**Skills** (5-7 skills): [skill 1], [skill 2], ...
+**Prior knowledge** (unit IDs, comma-separated): [A01, A02, ...]
+**Skills** (unit IDs, comma-separated): [D05, D06, ...]
+
+Every cited ID must resolve to a live unit (the build fails the `unresolved-refs.md` CI check otherwise). If a required skill doesn't exist yet, mint it via `node build-scripts/references/unit-add.js --spec '{...}'` before referencing it here.
 
 Optional graphs needed for these documents: [list or "none"].
 
@@ -105,12 +107,16 @@ Optional graphs needed for these documents: [list or "none"].
 
 ## Procedure step plan (unified experience)
 
-> **Critical**: This defines the canonical step sequence for each skill. ALL builders ("vaardigheden", "stappenplan" game, presentatie, "inoefening") must follow these exact steps. Products and numbers may vary by context, but the approach is fixed.
+> **Critical**: This section is now **derived from the units, not authored here**. Each skill cited above has a canonical `procedure` field in `micro-teaching-units.md`. Downstream builders ("vaardigheden", "stappenplan" game, presentatie, "inoefening") must pull procedure steps from the registry via the unit ID, not re-author them. Products and numbers may vary by context, but the step sequence is fixed.
 
-| Skill | Step 1 | Step 2 | Step 3 | Used by |
-|---|---|---|---|---|
-| [skill 1] | [step label + approach] | [step label + approach] | [step label + approach] | vaardigheden, stappenplan, presentatie |
-| [skill 2] | | | | |
+If a unit's procedure needs a refinement, use `unit-update --id <ID> --spec '{"procedure":[...]}'`. Changes flow back into every consumer automatically via the generated JSON; no per-paragraph duplication.
+
+For the convenience of the paragraph author: a snapshot table copied here as documentation only (NOT the source of truth):
+
+| Unit ID | Unit name | Steps (see micro-teaching-units.md#<ID> for the authoritative list) |
+|---|---|---|
+| [A01] | [name] | [N steps] |
+| [D05] | [name] | [N steps] |
 
 ---
 

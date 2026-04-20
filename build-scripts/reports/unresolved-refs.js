@@ -24,7 +24,6 @@ const SCAN_DIRS = [
   '.claude/plans',
   'skills',
   '.claude/commands',
-  'build-scripts/templates',
 ];
 
 // Paths that are themselves the registry, its tooling, or documentation of

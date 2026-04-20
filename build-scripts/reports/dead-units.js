@@ -23,7 +23,6 @@ const SCAN_DIRS = [
   '.claude/plans',
   'skills',
   '.claude/commands',
-  'build-scripts/templates',
 ];
 
 const EXCLUDE_PATTERNS = [
