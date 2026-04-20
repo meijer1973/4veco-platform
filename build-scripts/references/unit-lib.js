@@ -49,7 +49,14 @@ function buildStatsLine(units) {
 
 function renderPreamble(preamble, units) {
   const statsLine = buildStatsLine(units);
-  return preamble.replace(/<!-- STATS LINE -->\n?(?:\*.*\*\n)?/, `<!-- STATS LINE -->\n${statsLine}\n`);
+  // Paired markers bound the stats block exactly. Replace everything between
+  // <!-- STATS LINE --> and <!-- STATS END --> inclusive, so nothing below
+  // the close marker (e.g. the B/C/J/K design note) is consumed, and any
+  // orphan stats lines left by earlier narrower regexes get flushed.
+  return preamble.replace(
+    /<!-- STATS LINE -->[\s\S]*?<!-- STATS END -->/,
+    `<!-- STATS LINE -->\n${statsLine}\n<!-- STATS END -->`
+  );
 }
 
 function rebuildMarkdown(preamble, units) {

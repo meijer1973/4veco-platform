@@ -296,12 +296,20 @@ function loadTerminology() {
   // field in the catalog markdown is ALSO comma-separated on parse, which is
   // why a comma-joined canonical cell can't enter the set as one string — the
   // round-trip would split it anyway.)
+  // Gloss handling: a canonical cell may include a parenthetical gloss like
+  // `arbeidsaanbod (= beroepsbevolking)` or `monetair beleid (rentebeleid)`.
+  // We add BOTH the full form AND the gloss-stripped form to the canonical
+  // set, so unit authors can cite the clean lexical term without a gloss.
   for (const line of content.split(/\r?\n/)) {
     const m = line.match(/^\|\s*\d+(?:\.\d+[a-z]?)?\s*\|\s*([^|]+?)\s*\|/);
     if (!m) continue;
     for (const part of m[1].trim().split(/\s*[/,]\s*/)) {
       const p = part.trim();
-      if (p && !p.startsWith('(') && p.length > 2) terms.add(p);
+      if (!p || p.startsWith('(') || p.length <= 2) continue;
+      terms.add(p);
+      // Also add gloss-stripped form: "X (Y)" -> "X"; "X (= Y)" -> "X".
+      const stripped = p.replace(/\s*\(=?[^)]+\)\s*$/, '').trim();
+      if (stripped && stripped !== p && stripped.length > 2) terms.add(stripped);
     }
   }
   return terms;

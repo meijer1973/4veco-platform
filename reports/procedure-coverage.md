@@ -1,15 +1,46 @@
 # Procedure-Coverage Report
 
-Generated: 2026-04-20T14:46:14.902Z
-Apply+ units:            63
+Generated: 2026-04-20T18:12:33.017Z
+Apply+ units:            77
 With procedure:          29
-Without procedure:       34 (A: 34, non-A: 0)
+Without procedure:       48 (A: 34, non-A: 14)
 
 ## Status: **INFORMATIONAL**
 
 A canonical procedure is the step sequence every downstream material (voorkennis, vaardigheden, answer model, slide deck) cites verbatim. A missing procedure means the unit minted without an abstract recipe; each still-missing unit should get one written when the next paragraph build cites it.
 
 A-domain units are listed separately: their executable recipe is the `GEN_*` randomizer, so a missing step list is lower-priority than for non-A units.
+
+## Non-A units missing procedure (14)
+
+### Domain D (4)
+
+- **D08** Heffing tegen overconsumptie — _analyze_
+- **D10** Vraag/aanbod-verschuiving bij conjunctuurschok — _analyze_
+- **D13** Kostenstijging en aanbodverschuiving — _analyze_
+- **D14** Marktfalen en overheidsinterventie beoordelen — _evaluate_
+
+### Domain E (3)
+
+- **E01** Intergenerationele ruil — _analyze_
+- **E03** Kapitaaldekking en renteeffecten — _analyze_
+- **E05** Pensioenkorting en intergenerationele solidariteit — _analyze_
+
+### Domain F (1)
+
+- **F14** Concentratie-externaliteiten analyseren — _analyze_
+
+### Domain H (5)
+
+- **H09** Kostenvoordeel exporteurs als protectionisme — _evaluate_
+- **H13** Minimumuurloon: kostenkanaal naar concurrentiepositie — _analyze_
+- **H14** Minimumuurloon: vraagkanaal naar bbp-groei — _analyze_
+- **H22** Belastingtariefaanpassing en secundaire inkomenseffecten — _analyze_
+- **H26** Koop- versus huurlasten vergelijken — _analyze_
+
+### Domain I (1)
+
+- **I13** Monetair trilemma — _analyze_
 
 ## A-domain units missing procedure (34)
 

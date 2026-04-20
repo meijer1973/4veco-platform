@@ -28,13 +28,16 @@ function loadCanonicalTerms() {
   const terms = new Set();
   for (const m of content.matchAll(/^##+\s+(.+?)\s*$/gm)) terms.add(m[1].trim());
   for (const m of content.matchAll(/^-\s+\*\*(.+?)\*\*/gm)) terms.add(m[1].trim());
-  // Pipe-table row (second column = canonical Dutch term, split on `/` or `,`).
+  // Pipe-table row; split on `/` or `,`; include gloss-stripped form too.
   for (const line of content.split(/\r?\n/)) {
     const m = line.match(/^\|\s*\d+(?:\.\d+[a-z]?)?\s*\|\s*([^|]+?)\s*\|/);
     if (!m) continue;
     for (const part of m[1].trim().split(/\s*[/,]\s*/)) {
       const p = part.trim();
-      if (p && !p.startsWith('(') && p.length > 2) terms.add(p);
+      if (!p || p.startsWith('(') || p.length <= 2) continue;
+      terms.add(p);
+      const stripped = p.replace(/\s*\(=?[^)]+\)\s*$/, '').trim();
+      if (stripped && stripped !== p && stripped.length > 2) terms.add(stripped);
     }
   }
   return terms;

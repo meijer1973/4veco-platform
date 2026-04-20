@@ -570,6 +570,8 @@
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
     "aspects": [
+      "grafisch",
+      "rekenen",
       "verbaal"
     ],
     "terms": [],
@@ -591,6 +593,8 @@
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
     "aspects": [
+      "grafisch",
+      "rekenen",
       "verbaal"
     ],
     "terms": [],
@@ -873,6 +877,7 @@
     "prior_learning": "new_this_year",
     "aspects": [
       "grafisch",
+      "rekenen",
       "verbaal"
     ],
     "terms": [
@@ -918,6 +923,8 @@
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
     "aspects": [
+      "grafisch",
+      "rekenen",
       "verbaal"
     ],
     "terms": [
@@ -1014,8 +1021,8 @@
       "rekenen"
     ],
     "terms": [
-      "heffingen",
-      "evenwichtsprijs"
+      "evenwichtsprijs",
+      "heffingen"
     ],
     "procedure": [
       "Bepaal de evenwichtsprijs zonder heffing (P0)",
@@ -1037,7 +1044,7 @@
     "exam_codes": [
       "D1.4a"
     ],
-    "mastery_target": "understand",
+    "mastery_target": "analyze",
     "prior_learning": "new_this_year",
     "aspects": [
       "verbaal"
@@ -1070,7 +1077,7 @@
     "layer": 0,
     "kern": "Analyseer hoe een conjunctuurschok de collectieve vraaglijn of aanbodlijn verschuift en wat dit doet met evenwichtsprijs en -hoeveelheid.",
     "needs": [],
-    "mastery_target": "understand",
+    "mastery_target": "analyze",
     "prior_learning": "new_this_year",
     "aspects": [
       "verbaal"
@@ -1139,7 +1146,7 @@
     "layer": 0,
     "kern": "Analyseer hoe een stijging van productiekosten (zoals loon per eenheid product) de collectieve aanbodlijn verschuift en doorwerkt in evenwichtsprijs.",
     "needs": [],
-    "mastery_target": "understand",
+    "mastery_target": "analyze",
     "prior_learning": "new_this_year",
     "aspects": [
       "verbaal"
@@ -1156,7 +1163,7 @@
     "layer": 0,
     "kern": "Beoordeel of marktwerking tot een doelmatige uitkomst leidt en of overheidsinterventie gerechtvaardigd is.",
     "needs": [],
-    "mastery_target": "understand",
+    "mastery_target": "evaluate",
     "prior_learning": "new_this_year",
     "aspects": [
       "verbaal"
@@ -1265,8 +1272,8 @@
       "verbaal"
     ],
     "terms": [
-      "subsidies",
-      "Pareto efficient"
+      "Pareto efficiënt",
+      "subsidies"
     ]
   },
   {
@@ -1284,8 +1291,8 @@
       "verbaal"
     ],
     "terms": [
-      "marktevenwicht",
-      "Pareto efficient"
+      "Pareto efficiënt",
+      "marktevenwicht"
     ]
   },
   {
@@ -1304,6 +1311,7 @@
     "mastery_target": "analyze",
     "prior_learning": "new_this_year",
     "aspects": [
+      "rekenen",
       "verbaal"
     ],
     "terms": [
@@ -1436,8 +1444,8 @@
       "verbaal"
     ],
     "terms": [
-      "substitueerbaarheid",
-      "complementariteit"
+      "complementariteit",
+      "substitueerbaarheid"
     ]
   },
   {
@@ -1478,7 +1486,8 @@
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
     "aspects": [
-      "grafisch"
+      "grafisch",
+      "rekenen"
     ],
     "terms": [
       "subsidies",
@@ -1534,7 +1543,7 @@
     "exam_codes": [
       "E2.1"
     ],
-    "mastery_target": "understand",
+    "mastery_target": "analyze",
     "prior_learning": "new_this_year",
     "aspects": [
       "verbaal"
@@ -1575,7 +1584,7 @@
     "exam_codes": [
       "E1.1"
     ],
-    "mastery_target": "understand",
+    "mastery_target": "analyze",
     "prior_learning": "new_this_year",
     "aspects": [
       "verbaal"
@@ -1621,7 +1630,7 @@
     "exam_codes": [
       "E2.1"
     ],
-    "mastery_target": "understand",
+    "mastery_target": "analyze",
     "prior_learning": "new_this_year",
     "aspects": [
       "verbaal"
@@ -1913,8 +1922,8 @@
     ],
     "terms": [
       "Nash-evenwicht",
-      "pay-off matrix",
-      "dominante strategie"
+      "dominante strategie",
+      "pay-off matrix"
     ],
     "procedure": [
       "Markeer voor speler 1 per kolom (strategie van speler 2) de hoogste uitbetaling",
@@ -1959,7 +1968,7 @@
     "exam_codes": [
       "F2.4"
     ],
-    "mastery_target": "understand",
+    "mastery_target": "analyze",
     "prior_learning": "new_this_year",
     "aspects": [
       "verbaal"
@@ -2049,9 +2058,9 @@
       "verbaal"
     ],
     "terms": [
+      "collectieve verzekering",
       "informatieasymmetrie",
-      "risico",
-      "collectieve verzekering"
+      "risico"
     ]
   },
   {
@@ -2073,8 +2082,8 @@
       "verbaal"
     ],
     "terms": [
-      "eigen risico",
-      "contracten en prikkels"
+      "contracten en prikkels",
+      "eigen risico"
     ]
   },
   {
@@ -2095,8 +2104,8 @@
       "verbaal"
     ],
     "terms": [
-      "principaal-agentrelatie",
-      "contracten en prikkels"
+      "contracten en prikkels",
+      "principaal-agentrelatie"
     ]
   },
   {
@@ -2115,8 +2124,8 @@
       "verbaal"
     ],
     "terms": [
-      "principaal-agentrelatie",
-      "contracten en prikkels"
+      "contracten en prikkels",
+      "principaal-agentrelatie"
     ]
   },
   {
@@ -2161,8 +2170,8 @@
       "verbaal"
     ],
     "terms": [
-      "risico",
-      "collectieve verzekering"
+      "collectieve verzekering",
+      "risico"
     ]
   },
   {
@@ -2183,9 +2192,9 @@
       "verbaal"
     ],
     "terms": [
+      "bonus-malussysteem",
       "collectieve verzekering",
-      "risico",
-      "bonus-malussysteem"
+      "risico"
     ]
   },
   {
@@ -2223,9 +2232,9 @@
       "verbaal"
     ],
     "terms": [
-      "wisselkoers",
       "financieel risico",
-      "onzekerheid"
+      "onzekerheid",
+      "wisselkoers"
     ]
   },
   {
@@ -2244,8 +2253,8 @@
       "verbaal"
     ],
     "terms": [
-      "welvaartsvaste pensioenen",
-      "waardevaste pensioenen"
+      "waardevaste pensioenen",
+      "welvaartsvaste pensioenen"
     ]
   },
   {
@@ -2324,8 +2333,8 @@
       "verbaal"
     ],
     "terms": [
-      "marginaal tarief",
-      "gemiddeld tarief"
+      "gemiddeld tarief",
+      "marginaal tarief"
     ],
     "procedure": [
       "Noteer per schijf het marginale tarief en de bovengrens",
@@ -2438,14 +2447,14 @@
     "exam_codes": [
       "H1.1"
     ],
-    "mastery_target": "understand",
+    "mastery_target": "evaluate",
     "prior_learning": "new_this_year",
     "aspects": [
       "verbaal"
     ],
     "terms": [
-      "subsidies",
-      "heffingen"
+      "heffingen",
+      "subsidies"
     ]
   },
   {
@@ -2521,7 +2530,7 @@
     "exam_codes": [
       "H1.1"
     ],
-    "mastery_target": "understand",
+    "mastery_target": "analyze",
     "prior_learning": "new_this_year",
     "aspects": [
       "verbaal"
@@ -2540,14 +2549,14 @@
     "exam_codes": [
       "H1.1"
     ],
-    "mastery_target": "understand",
+    "mastery_target": "analyze",
     "prior_learning": "new_this_year",
     "aspects": [
       "verbaal"
     ],
     "terms": [
-      "koopkracht",
-      "bbp-groei"
+      "bbp-groei",
+      "koopkracht"
     ]
   },
   {
@@ -2568,8 +2577,8 @@
       "verbaal"
     ],
     "terms": [
-      "rente",
       "obligaties",
+      "rente",
       "risico"
     ]
   },
@@ -2631,8 +2640,8 @@
       "rekenen"
     ],
     "terms": [
-      "marginaal tarief",
-      "gemiddeld tarief"
+      "gemiddeld tarief",
+      "marginaal tarief"
     ],
     "procedure": [
       "Noteer per schijf het marginale tarief",
@@ -2723,14 +2732,14 @@
       "H04",
       "H08"
     ],
-    "mastery_target": "understand",
+    "mastery_target": "analyze",
     "prior_learning": "new_this_year",
     "aspects": [
       "verbaal"
     ],
     "terms": [
-      "secundair inkomen",
-      "marginaal tarief"
+      "marginaal tarief",
+      "secundair inkomen"
     ]
   },
   {
@@ -2751,9 +2760,9 @@
       "verbaal"
     ],
     "terms": [
+      "arbeidsaanbod",
       "marginaal tarief",
-      "uitverdieneffecten",
-      "arbeidsaanbod (= beroepsbevolking)"
+      "uitverdieneffecten"
     ]
   },
   {
@@ -2772,8 +2781,8 @@
       "rekenen"
     ],
     "terms": [
-      "wisselkoers",
-      "koopkracht"
+      "koopkracht",
+      "wisselkoers"
     ],
     "procedure": [
       "Noteer de oude wisselkoers (prijs buitenlandse valuta in binnenlandse, bv. €/$)",
@@ -2801,8 +2810,8 @@
       "verbaal"
     ],
     "terms": [
-      "wisselkoers",
-      "bbp-groei"
+      "bbp-groei",
+      "wisselkoers"
     ]
   },
   {
@@ -2814,7 +2823,7 @@
     "needs": [
       "H15"
     ],
-    "mastery_target": "understand",
+    "mastery_target": "analyze",
     "prior_learning": "new_this_year",
     "aspects": [
       "rekenen",
@@ -2858,8 +2867,8 @@
       "verbaal"
     ],
     "terms": [
-      "automatische stabilisatoren",
       "anticyclisch",
+      "automatische stabilisatoren",
       "secundair inkomen"
     ]
   },
@@ -2898,7 +2907,7 @@
       "verbaal"
     ],
     "terms": [
-      "arbeidsaanbod (= beroepsbevolking)"
+      "arbeidsaanbod"
     ]
   },
   {
@@ -2914,6 +2923,7 @@
     "mastery_target": "apply",
     "prior_learning": "previously_taught",
     "aspects": [
+      "rekenen",
       "verbaal"
     ],
     "terms": [
@@ -2922,12 +2932,10 @@
       "hoogconjunctuur"
     ],
     "procedure": [
-      "Noteer het mandaat van de centrale bank (enkelvoudig: alleen inflatiedoel; duaal: inflatie én werkgelegenheid / outputgap)",
-      "Bepaal de inflatie π en vergelijk met het inflatiedoel (bijvoorbeeld 2%)",
-      "Bepaal de outputgap Y − Y* (positief = hoogconjunctuur, negatief = laagconjunctuur)",
-      "Kies: π boven doel of positieve outputgap → renteverhoging (verkrappen); π onder doel of negatieve outputgap → renteverlaging (verruimen)",
-      "Controleer de effectieve ondergrens nominale rente: als de beleidsrente al bij 0% ligt, is verdere verlaging niet mogelijk en moeten alternatieve instrumenten overwogen worden",
-      "Verwoord het besluit met verwijzing naar het mandaat en de waargenomen afwijkingen"
+      "Noteer het mandaat van de centrale bank (enkelvoudig: alleen inflatiedoel; duaal: inflatie én outputgap).",
+      "Kwantificeer de afwijkingen: inflatie π versus doel, en outputgap Y − Y* (zie I15 voor outputgap-berekening).",
+      "Kies: π boven doel of positieve outputgap → renteverhoging (verkrappen); π onder doel of negatieve outputgap → renteverlaging (verruimen). Controleer de effectieve ondergrens nominale rente.",
+      "Verwoord het besluit met verwijzing naar het mandaat en de waargenomen afwijkingen."
     ]
   },
   {
@@ -2978,13 +2986,11 @@
       "rente"
     ],
     "procedure": [
-      "Teken de uitgangssituatie met IS-curve (Y dalend in reële rente r), MB-curve (beleidsregel van de centrale bank) en GA-curve (inflatie π stijgend in outputgap Y − Y*)",
-      "Identificeer het beginevenwicht: snijpunt IS-MB bepaalt Y en r; GA bepaalt π bij die Y",
-      "Bepaal welke curve verschuift door de schok (bijvoorbeeld vraagschok schuift IS, aanbodschok schuift GA)",
-      "Teken de verschuiving en lees het nieuwe snijpunt af: nieuwe Y, nieuwe outputgap Y − Y*, nieuwe r",
-      "Bepaal het nieuwe prijsniveau met de GA-curve: negatieve outputgap → lagere π; positieve outputgap → hogere π",
-      "Beschrijf de reactie van de centrale bank volgens de MB-regel en wat dit doet met de terugkeer naar Y*",
-      "Vergeet niet de as-richting te labelen: r verticaal voor IS-MB, π verticaal voor GA"
+      "Teken IS-curve (Y dalend in reële rente r), MB-curve (beleidsregel) en GA-curve (π stijgend in outputgap Y − Y*). Label assen: r verticaal voor IS-MB, π verticaal voor GA.",
+      "Identificeer het beginevenwicht: snijpunt IS-MB bepaalt Y en r; GA bepaalt π bij die Y.",
+      "Bepaal welke curve verschuift door de schok (vraagschok → IS, aanbodschok → GA) en teken de verschuiving.",
+      "Lees het nieuwe snijpunt af: nieuwe Y, outputgap Y − Y*, nieuwe r en nieuwe π via de GA-curve.",
+      "Beschrijf de reactie van de centrale bank volgens de MB-regel (zie I05) en de terugkeer naar Y*."
     ]
   },
   {
@@ -3004,6 +3010,7 @@
     "prior_learning": "new_this_year",
     "aspects": [
       "grafisch",
+      "rekenen",
       "verbaal"
     ],
     "terms": [
@@ -3011,13 +3018,11 @@
       "investeringen"
     ],
     "procedure": [
-      "Teken de 45°-lijn (werkelijke bestedingen = inkomen, Y = Y) in een diagram met Y horizontaal en geplande bestedingen EB verticaal",
-      "Teken de bestedingenlijn EB = C + I + G + (X − M) met autonome component A op de verticale as en helling gelijk aan de marginale bestedingsquote c",
-      "Identificeer het beginevenwicht als snijpunt van EB met de 45°-lijn: hier geldt Y = EB",
-      "Bepaal welke autonome component verandert (ΔC, ΔI, ΔG of Δ(X − M)) en met welk bedrag ΔA",
-      "Schuif de EB-lijn verticaal met ΔA omhoog (bestedingsimpuls) of omlaag (bestedingsdaling)",
-      "Lees het nieuwe evenwicht af op de 45°-lijn en bereken ΔY = multiplier × ΔA (zie I14)",
-      "Verwoord het effect: een autonome impuls leidt via uitgavenrondes tot een groter inkomenseffect"
+      "Teken het Keynesiaans kruis: 45°-lijn (Y = EB) naast de bestedingenlijn EB = C + I + G + (X − M) met autonome component A en helling gelijk aan de marginale bestedingsquote c.",
+      "Lees het beginevenwicht af als snijpunt van EB met de 45°-lijn (Y = EB).",
+      "Bepaal welke autonome component verandert (ΔC, ΔI, ΔG of Δ(X − M)) en met welk bedrag ΔA.",
+      "Schuif EB verticaal met ΔA en lees het nieuwe evenwicht op de 45°-lijn af.",
+      "Bereken ΔY = multiplier × ΔA (zie I14) en verwoord het uitgavenrondes-effect."
     ]
   },
   {
@@ -3083,12 +3088,13 @@
     "mastery_target": "analyze",
     "prior_learning": "new_this_year",
     "aspects": [
+      "grafisch",
       "verbaal"
     ],
     "terms": [
       "GA-curve",
       "MB-curve",
-      "arbeidsaanbod (= beroepsbevolking)",
+      "arbeidsaanbod",
       "rente"
     ],
     "procedure": [
@@ -3120,7 +3126,7 @@
       "verbaal"
     ],
     "terms": [
-      "monetair beleid (rentebeleid)",
+      "monetair beleid",
       "wisselkoers"
     ]
   },
@@ -3136,15 +3142,15 @@
     "exam_codes": [
       "I1.2"
     ],
-    "mastery_target": "understand",
+    "mastery_target": "analyze",
     "prior_learning": "new_this_year",
     "aspects": [
       "verbaal"
     ],
     "terms": [
-      "wisselkoers",
+      "monetair beleid",
       "muntunie",
-      "monetair beleid (rentebeleid)"
+      "wisselkoers"
     ]
   },
   {
@@ -3163,8 +3169,8 @@
       "verbaal"
     ],
     "terms": [
-      "investeringen",
       "inverdieneffecten",
+      "investeringen",
       "uitverdieneffecten"
     ]
   },
@@ -3184,6 +3190,8 @@
     "mastery_target": "analyze",
     "prior_learning": "new_this_year",
     "aspects": [
+      "grafisch",
+      "rekenen",
       "verbaal"
     ],
     "terms": [
@@ -3217,9 +3225,9 @@
       "verbaal"
     ],
     "terms": [
-      "staatsschuld",
+      "automatische stabilisatoren",
       "overheidstekort",
-      "automatische stabilisatoren"
+      "staatsschuld"
     ]
   },
   {
@@ -3238,7 +3246,7 @@
     ],
     "terms": [
       "investeringen",
-      "monetair beleid (rentebeleid)"
+      "monetair beleid"
     ]
   },
   {
@@ -3284,9 +3292,9 @@
       "verbaal"
     ],
     "terms": [
-      "wisselkoers",
-      "monetair beleid (rentebeleid)",
-      "bbp-groei"
+      "bbp-groei",
+      "monetair beleid",
+      "wisselkoers"
     ]
   }
 ]

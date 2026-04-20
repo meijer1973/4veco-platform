@@ -83,7 +83,7 @@ Canonical Dutch economic terms as defined by the **Syllabus Economie VWO 2026** 
 | 3.2 | producentensurplus | PS | producer surplus | marktprijs − minimale verkoopprijs |
 | 3.3 | totale surplus | TS | total surplus | CS + PS |
 | 3.4 | economische doelmatigheid | — | economic efficiency | TS as measure |
-| 3.5 | Pareto efficient | — | Pareto efficient | maximum TS |
+| 3.5 | Pareto efficiënt | — | Pareto efficient | maximum TS |
 | 3.6 | verloren surplus / Harberger-driehoek | DWL | deadweight loss | syllabus uses "dead weight loss" in English |
 | 3.7 | marktmacht | — | market power | effect on TS distribution |
 | 3.8 | prijsdiscriminatie en consumentensurplus | — | price discrimination and CS | afromen (skimming) |
