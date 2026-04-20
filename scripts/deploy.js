@@ -70,19 +70,118 @@ function copyEngines() {
     const skilltreeDir = path.join(sharedDir, 'skilltree');
     if (!fs.existsSync(skilltreeDir)) fs.mkdirSync(skilltreeDir, { recursive: true });
 
-    for (const file of ['base-elements.js', 'explanations.js']) {
-        const src = path.join(ENGINES_DIR, 'skilltree', file);
-        const dst = path.join(skilltreeDir, file);
-        if (!fs.existsSync(src)) {
-            console.warn(`  WARN: skilltree/${file} not found, skipping`);
-            continue;
+    // explanations.js: straight copy.
+    {
+        const src = path.join(ENGINES_DIR, 'skilltree', 'explanations.js');
+        const dst = path.join(skilltreeDir, 'explanations.js');
+        if (fs.existsSync(src)) {
+            fs.writeFileSync(dst, HEADER + fs.readFileSync(src, 'utf8'), 'utf8');
+            console.log(`  \u2713 skilltree/explanations.js`);
+        } else {
+            console.warn(`  WARN: skilltree/explanations.js not found, skipping`);
         }
-        const content = fs.readFileSync(src, 'utf8');
-        fs.writeFileSync(dst, HEADER + content, 'utf8');
-        console.log(`  \u2713 skilltree/${file}`);
     }
 
+    // base-elements.js: bundle catalog + generators inline so the browser
+    // gets a self-contained file with no further dependencies.
+    bundleSkilltreeBaseElements(skilltreeDir);
+
     console.log('  Done: engine files copied.\n');
+}
+
+// Produce a self-contained base-elements.js that inlines the catalog's
+// A-domain units + all GEN functions, so the deployed module loads in the
+// browser with a single <script src="shared/skilltree/base-elements.js">.
+function bundleSkilltreeBaseElements(skilltreeDir) {
+    const catalogPath = path.join(PLATFORM_ROOT, 'references/machine/micro-teaching-units.json');
+    const generatorsPath = path.join(ENGINES_DIR, 'skilltree/generators.js');
+    const dst = path.join(skilltreeDir, 'base-elements.js');
+
+    if (!fs.existsSync(catalogPath)) {
+        console.warn(`  WARN: catalog not found at ${path.relative(PLATFORM_ROOT, catalogPath)} — falling back to plain copy`);
+        const src = path.join(ENGINES_DIR, 'skilltree/base-elements.js');
+        if (fs.existsSync(src)) fs.writeFileSync(dst, HEADER + fs.readFileSync(src, 'utf8'), 'utf8');
+        return;
+    }
+    if (!fs.existsSync(generatorsPath)) {
+        console.warn(`  WARN: generators.js not found — falling back to plain copy`);
+        const src = path.join(ENGINES_DIR, 'skilltree/base-elements.js');
+        if (fs.existsSync(src)) fs.writeFileSync(dst, HEADER + fs.readFileSync(src, 'utf8'), 'utf8');
+        return;
+    }
+
+    const units = JSON.parse(fs.readFileSync(catalogPath, 'utf8'));
+    const generatorsSrc = fs.readFileSync(generatorsPath, 'utf8');
+
+    // Extract the inner guts of generators.js (between `'use strict';` and
+    // the module-level closing `return { GEN: ... }`). The generator
+    // function bodies contain many nested return statements, so we use
+    // lastIndexOf to find the outermost module-level return at 4-space
+    // indentation — that's always at the tail of the factory body.
+    const startMarker = "'use strict';";
+    const endMarker = '\n    return {';
+    const startIdx = generatorsSrc.indexOf(startMarker);
+    const returnIdx = generatorsSrc.lastIndexOf(endMarker);
+    if (startIdx === -1 || returnIdx === -1 || returnIdx < startIdx) {
+        throw new Error('deploy: cannot extract generators from generators.js (missing markers)');
+    }
+    const innerGuts = generatorsSrc.slice(startIdx + startMarker.length, returnIdx).trim();
+
+    // Build SKILLS array literal from the A-domain slice of the catalog.
+    const skills = units
+        .filter(u => u.id.charAt(0) === 'A' && !u.deprecated)
+        .map(u => ({
+            id: u.id,
+            name: u.name,
+            layer: u.layer,
+            needs: u.needs || [],
+            desc: u.kern || (u.procedure && u.procedure[0]) || ''
+        }));
+
+    const bundle = [
+        HEADER.trimEnd(),
+        '/**',
+        ' * SkillTree Base Elements (bundled).',
+        ' * Self-contained: catalog SKILLS + generators + layer display data.',
+        ' * Bundled at deploy time from references/machine/micro-teaching-units.json',
+        ' * and engines/skilltree/generators.js.',
+        ' */',
+        '(function (root, factory) {',
+        '    if (typeof module !== \'undefined\' && module.exports) {',
+        '        module.exports = factory();',
+        '    } else {',
+        '        root.SKILL_TREE_ELEMENTS = factory();',
+        '    }',
+        '})(typeof self !== \'undefined\' ? self : this, function () {',
+        '    \'use strict\';',
+        '',
+        '    ' + innerGuts,
+        '',
+        '    var SKILLS = ' + JSON.stringify(skills, null, 8).replace(/\n/g, '\n    ') + ';',
+        '',
+        '    var LAYER_NAMES = [\'Fundament\', \'Bouwstenen\', \'Marginale grootheden\', \'Samengesteld\', \'Gevorderd\', \'Eindbazen\'];',
+        '    var LAYER_COLORS = [',
+        '        { bg:\'#1a3353\', text:\'#7cb9e8\', glow:\'rgba(26,82,118,0.35)\' },',
+        '        { bg:\'#2a1f4e\', text:\'#b8a9e8\', glow:\'rgba(136,78,160,0.3)\' },',
+        '        { bg:\'#1a3a3a\', text:\'#7dcec0\', glow:\'rgba(30,132,120,0.3)\' },',
+        '        { bg:\'#1a3a2a\', text:\'#7dcea0\', glow:\'rgba(30,132,73,0.3)\' },',
+        '        { bg:\'#3a1a2a\', text:\'#e07a9a\', glow:\'rgba(180,60,100,0.3)\' },',
+        '        { bg:\'#4a2a1a\', text:\'#f0b27a\', glow:\'rgba(230,126,34,0.3)\' }',
+        '    ];',
+        '',
+        '    return {',
+        '        SKILLS: SKILLS,',
+        '        LAYER_NAMES: LAYER_NAMES,',
+        '        LAYER_COLORS: LAYER_COLORS,',
+        '        GEN: GEN,',
+        '        helpers: { ri: ri, pick: pick, round1: round1, round2: round2, mcStep: mcStep }',
+        '    };',
+        '});',
+        '',
+    ].join('\n');
+
+    fs.writeFileSync(dst, bundle, 'utf8');
+    console.log(`  \u2713 skilltree/base-elements.js (bundled ${skills.length} units + generators)`);
 }
 
 // ── Step 2: Run build scripts ────────────────────────────────────

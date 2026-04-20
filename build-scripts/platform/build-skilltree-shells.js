@@ -23,32 +23,32 @@ const MODULE_ROOT = process.env.MODULE_ROOT
 // F5 wordt alleen toegevoegd bij paragrafen met surplus (S1).
 // F6 wordt alleen toegevoegd bij paragrafen met MO/MK (B5/B6).
 const PARAGRAPHS = [
-    { parNr:'3.1.1', name:'Markt en marktstructuur', skills:['F1','F2','F3','F4','F7','B8','B9','B10'] },
-    { parNr:'3.1.2', name:'Marktvormen', skills:['F1','F2','F3','F4','F7','B8','B9','B10'] },
-    { parNr:'3.1.3', name:'Toepassen', skills:['F1','F2','F3','F4','F7','B8','B9','B10'] },
-    { parNr:'3.2.1', name:'Marktevenwicht', skills:['F1','F2','F3','F4','F7','F5','B1','B8','B9','B10','S1'] },
-    { parNr:'3.2.2', name:'Volkomen concurrentie', skills:['F1','F2','F3','F4','F7','F5','F6','B1','B2','B3','B4','B5','B6','B7','B8','B9','B10','S1','S2','S3','S4','S10','E5','E9'] },
-    { parNr:'3.2.3', name:'Monopolie', skills:['F1','F2','F3','F4','F7','F5','F6','B1','B2','B3','B5','B6','B8','B9','B10','S1','S2','S3','E7'] },
-    { parNr:'3.2.4', name:'Oligopolie', skills:['F1','F2','F3','F4','F7','B8','B9','B10'] },
-    { parNr:'3.2.5', name:'Monopolistische concurrentie', skills:['F1','F2','F3','F4','F7','F6','B2','B3','B5','B6','B7','B8','B9','B10','S2','S3','S4','E1','E5'] },
-    { parNr:'3.2.6', name:'Marktvormen en hun economische doelmatigheid', skills:['F1','F2','F3','F4','F7','F5','F6','B1','B2','B3','B5','B6','B7','B8','B9','B10','S1','S2','S3','S4','S10','E1','E2','E5','E7','E9'] },
+    { parNr:'3.1.1', name:'Markt en marktstructuur', skills:['A01','A02','A03','A04','A05','A15','A16','A17'] },
+    { parNr:'3.1.2', name:'Marktvormen', skills:['A01','A02','A03','A04','A05','A15','A16','A17'] },
+    { parNr:'3.1.3', name:'Toepassen', skills:['A01','A02','A03','A04','A05','A15','A16','A17'] },
+    { parNr:'3.2.1', name:'Marktevenwicht', skills:['A01','A02','A03','A04','A05','A10','A06','A15','A16','A17','A19'] },
+    { parNr:'3.2.2', name:'Volkomen concurrentie', skills:['A01','A02','A03','A04','A05','A10','A11','A06','A07','A08','A09','A12','A13','A14','A15','A16','A17','A19','A20','A21','A22','A28','A33','A37'] },
+    { parNr:'3.2.3', name:'Monopolie', skills:['A01','A02','A03','A04','A05','A10','A11','A06','A07','A08','A12','A13','A15','A16','A17','A19','A20','A21','A35'] },
+    { parNr:'3.2.4', name:'Oligopolie', skills:['A01','A02','A03','A04','A05','A15','A16','A17'] },
+    { parNr:'3.2.5', name:'Monopolistische concurrentie', skills:['A01','A02','A03','A04','A05','A11','A07','A08','A12','A13','A14','A15','A16','A17','A20','A21','A22','A29','A33'] },
+    { parNr:'3.2.6', name:'Marktvormen en hun economische doelmatigheid', skills:['A01','A02','A03','A04','A05','A10','A11','A06','A07','A08','A12','A13','A14','A15','A16','A17','A19','A20','A21','A22','A28','A29','A30','A33','A35','A37'] },
     { parNr:'3.2.7', name:'Toepassen', skills:null }, // all skills
-    { parNr:'3.3.1', name:'De rol van de overheid', skills:['F1','F2','F3','F4','F7','B8','B9','B10'] },
-    { parNr:'3.3.2', name:'Overheidsbeleid', skills:['F1','F2','F3','F4','F7','F5','B1','B8','B9','B10','S1','S5','S7','S8','S9','E4'] },
-    { parNr:'3.3.3', name:'Collectieve goederen', skills:['F1','F2','F3','F4','F7','B8','B9','B10'] },
-    { parNr:'3.3.4', name:'Toepassen', skills:['F1','F2','F3','F4','F7','F5','B1','B8','B9','B10','S1','S5','S7','S8','S9','E4','E6'] },
-    { parNr:'3.4.1', name:'Internationale handel', skills:['F1','F2','F3','F4','F7','B8','B9','B10','B11'] },
-    { parNr:'3.4.2', name:'Inter-industri\u00EBle handel', skills:['F1','F2','F3','F4','F7','B8','B9','B10','B11'] },
-    { parNr:'3.4.3', name:'Intra-industri\u00EBle handel', skills:['F1','F2','F3','F4','F7','B8','B9','B10','B11'] },
-    { parNr:'3.4.4', name:'Internationale productieketens', skills:['F1','F2','F3','F4','F7','B8','B9','B10','B11'] },
-    { parNr:'3.4.5', name:'Internationaal handelsbeleid', skills:['F1','F2','F3','F4','F7','F5','B1','B8','B9','B10','B11','S1','S5','E4','E6'] },
-    { parNr:'3.4.6', name:'Toepassen', skills:['F1','F2','F3','F4','F7','F5','B1','B8','B9','B10','B11','S1','S5','E4','E6'] },
+    { parNr:'3.3.1', name:'De rol van de overheid', skills:['A01','A02','A03','A04','A05','A15','A16','A17'] },
+    { parNr:'3.3.2', name:'Overheidsbeleid', skills:['A01','A02','A03','A04','A05','A10','A06','A15','A16','A17','A19','A23','A25','A26','A27','A32'] },
+    { parNr:'3.3.3', name:'Collectieve goederen', skills:['A01','A02','A03','A04','A05','A15','A16','A17'] },
+    { parNr:'3.3.4', name:'Toepassen', skills:['A01','A02','A03','A04','A05','A10','A06','A15','A16','A17','A19','A23','A25','A26','A27','A32','A34'] },
+    { parNr:'3.4.1', name:'Internationale handel', skills:['A01','A02','A03','A04','A05','A15','A16','A17','A18'] },
+    { parNr:'3.4.2', name:'Inter-industri\u00EBle handel', skills:['A01','A02','A03','A04','A05','A15','A16','A17','A18'] },
+    { parNr:'3.4.3', name:'Intra-industri\u00EBle handel', skills:['A01','A02','A03','A04','A05','A15','A16','A17','A18'] },
+    { parNr:'3.4.4', name:'Internationale productieketens', skills:['A01','A02','A03','A04','A05','A15','A16','A17','A18'] },
+    { parNr:'3.4.5', name:'Internationaal handelsbeleid', skills:['A01','A02','A03','A04','A05','A10','A06','A15','A16','A17','A18','A19','A23','A32','A34'] },
+    { parNr:'3.4.6', name:'Toepassen', skills:['A01','A02','A03','A04','A05','A10','A06','A15','A16','A17','A18','A19','A23','A32','A34'] },
     { parNr:'3.5.1', name:'Afsluiting', skills:null }, // all skills — full review
     { parNr:'3.5.2', name:'Naar het examen', skills:null }, // all skills — exam level
     // Module 1: Schaarste, geld en handel
-    { parNr:'1.1.1', name:'Kiezen is kostbaar', skills:['F1','F2','F3','F4','F7'] },
-    { parNr:'1.1.2', name:'Kiezen of delen', skills:['F1','F2','F3','F4'] },
-    { parNr:'1.1.3', name:'Toepassen', skills:['F1','F2','F3','F4','F7'] },
+    { parNr:'1.1.1', name:'Kiezen is kostbaar', skills:['A01','A02','A03','A04','A05'] },
+    { parNr:'1.1.2', name:'Kiezen of delen', skills:['A01','A02','A03','A04'] },
+    { parNr:'1.1.3', name:'Toepassen', skills:['A01','A02','A03','A04','A05'] },
 ];
 
 // ── Compute which skills are new per paragraph ───────────────────────
