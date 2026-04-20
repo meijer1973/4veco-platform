@@ -1954,11 +1954,14 @@
   },
   {
     "id": "G01",
-    "name": "AI en risicoinschatting",
+    "name": "Risicoinschatting en averechtse selectie",
     "category": "risico en informatie",
-    "layer": 0,
-    "kern": "Betere risicoinschatting met AI kan averechtse selectie verminderen.",
-    "needs": [],
+    "layer": 2,
+    "kern": "Betere risicoinschatting door verzekeraars vermindert informatieasymmetrie en verkleint daardoor averechtse selectie op de verzekeringsmarkt.",
+    "needs": [
+      "G10",
+      "G02"
+    ],
     "exam_codes": [
       "G3.2"
     ],
@@ -1967,15 +1970,20 @@
     "aspects": [
       "verbaal"
     ],
-    "terms": []
+    "terms": [
+      "informatieasymmetrie",
+      "risico"
+    ]
   },
   {
     "id": "G02",
     "name": "Averechtse selectie herkennen",
     "category": "risico en informatie",
-    "layer": 0,
+    "layer": 1,
     "kern": "Herken averechtse selectie als gevolg van informatieasymmetrie op markten.",
-    "needs": [],
+    "needs": [
+      "G10"
+    ],
     "exam_codes": [
       "G3.2"
     ],
@@ -1990,11 +1998,13 @@
   },
   {
     "id": "G03",
-    "name": "Broodfonds: informatie en risicovermindering",
+    "name": "Onderlinge risicopool zonder informatieasymmetrie",
     "category": "risico en informatie",
-    "layer": 0,
-    "kern": "In een broodfonds is er geen asymmetrische informatie omdat deelnemers elkaar goed kennen en vertrouwen.",
-    "needs": [],
+    "layer": 1,
+    "kern": "In een kleine, vertrouwde risicopool ontbreekt informatieasymmetrie omdat deelnemers elkaars risicoprofiel kennen, waardoor averechtse selectie en moreel wangedrag beperkt blijven.",
+    "needs": [
+      "G10"
+    ],
     "exam_codes": [
       "G3.2"
     ],
@@ -2003,15 +2013,21 @@
     "aspects": [
       "verbaal"
     ],
-    "terms": []
+    "terms": [
+      "informatieasymmetrie",
+      "risico",
+      "collectieve verzekering"
+    ]
   },
   {
     "id": "G04",
     "name": "Eigen risico en moral hazard",
     "category": "risico en informatie",
-    "layer": 0,
+    "layer": 1,
     "kern": "Eigen risico geeft verzekerden een prikkel om voorzichtiger te handelen.",
-    "needs": [],
+    "needs": [
+      "G10"
+    ],
     "exam_codes": [
       "G4.5"
     ],
@@ -2022,16 +2038,19 @@
       "verbaal"
     ],
     "terms": [
-      "eigen risico"
+      "eigen risico",
+      "contracten en prikkels"
     ]
   },
   {
     "id": "G05",
-    "name": "Principaal-agent overheid en markt",
+    "name": "Belangentegenstelling in principaal-agentrelatie",
     "category": "risico en informatie",
-    "layer": 0,
-    "kern": "Beschrijf hoe mededingingsautoriteit en manager belangen verschillen.",
-    "needs": [],
+    "layer": 1,
+    "kern": "In een principaal-agentrelatie verschillen de belangen van principaal en agent, waardoor de agent keuzes kan maken die ten koste gaan van de principaal.",
+    "needs": [
+      "G06"
+    ],
     "exam_codes": [
       "G3.2"
     ],
@@ -2040,7 +2059,10 @@
     "aspects": [
       "verbaal"
     ],
-    "terms": []
+    "terms": [
+      "principaal-agentrelatie",
+      "contracten en prikkels"
+    ]
   },
   {
     "id": "G06",
@@ -2057,14 +2079,17 @@
     "aspects": [
       "verbaal"
     ],
-    "terms": []
+    "terms": [
+      "principaal-agentrelatie",
+      "contracten en prikkels"
+    ]
   },
   {
     "id": "G07",
-    "name": "Transactiekosten",
+    "name": "Transactiekosten berekenen en interpreteren",
     "category": "risico en informatie",
     "layer": 0,
-    "kern": "Bereken en interpreteer transactiekosten bij ruil.",
+    "kern": "Bereken de totale transactiekosten van een ruil door zoek-, onderhandel- en controlekosten bij elkaar op te tellen en beoordeel of de ruil na aftrek nog rendabel is.",
     "needs": [],
     "exam_codes": [
       "G2.1"
@@ -2077,14 +2102,20 @@
     ],
     "terms": [
       "transactiekosten"
+    ],
+    "procedure": [
+      "Inventariseer alle transactiekostenposten (zoekkosten, onderhandelkosten, controle- en handhavingskosten)",
+      "Tel de bedragen per post op tot de totale transactiekosten van de ruil",
+      "Bereken het netto voordeel = bruto ruilvoordeel − totale transactiekosten",
+      "Concludeer of de ruil rendabel is (netto voordeel > 0) en benoem welke kostenpost doorslaggevend is"
     ]
   },
   {
     "id": "G08",
-    "name": "Vereveningsfonds voor risicodeling",
+    "name": "Risicodeling via gemeenschappelijk fonds",
     "category": "risico en informatie",
     "layer": 0,
-    "kern": "Gemeenschappelijk fonds kan risico's uitvlakken en kostenverschillen compenseren.",
+    "kern": "Een gemeenschappelijk fonds vlakt individuele risico's uit door premies te bundelen en kostenverschillen tussen deelnemers te compenseren.",
     "needs": [],
     "exam_codes": [
       "G3.3"
@@ -2095,16 +2126,19 @@
       "verbaal"
     ],
     "terms": [
-      "risico"
+      "risico",
+      "collectieve verzekering"
     ]
   },
   {
     "id": "G09",
-    "name": "Solidariteit in verzekeringen",
+    "name": "Gepersonaliseerde premies ondermijnen solidariteit",
     "category": "risico en informatie",
-    "layer": 0,
-    "kern": "Gepersonaliseerde premies op basis van individueel risicoprofiel ondermijnen solidariteit.",
-    "needs": [],
+    "layer": 1,
+    "kern": "Premies gebaseerd op individuele risicoprofielen verkleinen de herverdeling tussen lage- en hogerrisicogroepen en ondermijnen zo de solidariteit in een collectieve verzekering.",
+    "needs": [
+      "G08"
+    ],
     "exam_codes": [
       "G3.2"
     ],
@@ -2113,7 +2147,11 @@
     "aspects": [
       "verbaal"
     ],
-    "terms": []
+    "terms": [
+      "collectieve verzekering",
+      "risico",
+      "bonus-malussysteem"
+    ]
   },
   {
     "id": "G10",
@@ -2136,10 +2174,10 @@
   },
   {
     "id": "G11",
-    "name": "Wisselkoersrisico bij valutabetaling",
+    "name": "Wisselkoersrisico bij internationale handel",
     "category": "risico en informatie",
     "layer": 0,
-    "kern": "Leg uit hoe appreciatie van de euro de werkelijke opbrengsten van exporteurs nadelig beïnvloedt.",
+    "kern": "Bij betalingen in vreemde valuta leidt een ongunstige wisselkoersverandering tussen contractmoment en betalingsmoment tot lagere reële opbrengsten voor de exporteur of hogere kosten voor de importeur.",
     "needs": [],
     "exam_codes": [
       "G2.1"
@@ -2149,7 +2187,11 @@
     "aspects": [
       "verbaal"
     ],
-    "terms": []
+    "terms": [
+      "wisselkoers",
+      "financieel risico",
+      "onzekerheid"
+    ]
   },
   {
     "id": "H01",

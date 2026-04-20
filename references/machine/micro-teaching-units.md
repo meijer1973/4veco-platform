@@ -1121,50 +1121,50 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - aspects: [verbaal]
 - terms: [verzonken kosten]
 
-### G01 AI en risicoinschatting
-- kern: "Betere risicoinschatting met AI kan averechtse selectie verminderen."
-- needs: []
+### G01 Risicoinschatting en averechtse selectie
+- kern: "Betere risicoinschatting door verzekeraars vermindert informatieasymmetrie en verkleint daardoor averechtse selectie op de verzekeringsmarkt."
+- needs: [G10, G02]
 - exam_codes: [G3.2]
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: []
+- terms: [informatieasymmetrie, risico]
 
 ### G02 Averechtse selectie herkennen
 - kern: "Herken averechtse selectie als gevolg van informatieasymmetrie op markten."
-- needs: []
+- needs: [G10]
 - exam_codes: [G3.2]
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
 - terms: [informatieasymmetrie]
 
-### G03 Broodfonds: informatie en risicovermindering
-- kern: "In een broodfonds is er geen asymmetrische informatie omdat deelnemers elkaar goed kennen en vertrouwen."
-- needs: []
+### G03 Onderlinge risicopool zonder informatieasymmetrie
+- kern: "In een kleine, vertrouwde risicopool ontbreekt informatieasymmetrie omdat deelnemers elkaars risicoprofiel kennen, waardoor averechtse selectie en moreel wangedrag beperkt blijven."
+- needs: [G10]
 - exam_codes: [G3.2]
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: []
+- terms: [informatieasymmetrie, risico, collectieve verzekering]
 
 ### G04 Eigen risico en moral hazard
 - kern: "Eigen risico geeft verzekerden een prikkel om voorzichtiger te handelen."
-- needs: []
+- needs: [G10]
 - exam_codes: [G4.5]
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [rekenen, verbaal]
-- terms: [eigen risico]
+- terms: [eigen risico, contracten en prikkels]
 
-### G05 Principaal-agent overheid en markt
-- kern: "Beschrijf hoe mededingingsautoriteit en manager belangen verschillen."
-- needs: []
+### G05 Belangentegenstelling in principaal-agentrelatie
+- kern: "In een principaal-agentrelatie verschillen de belangen van principaal en agent, waardoor de agent keuzes kan maken die ten koste gaan van de principaal."
+- needs: [G06]
 - exam_codes: [G3.2]
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: []
+- terms: [principaal-agentrelatie, contracten en prikkels]
 
 ### G06 Principaal-agentprobleem identificeren
 - kern: "Identificeer principaal-agentrelaties en de problemen die daaruit voortvloeien."
@@ -1173,34 +1173,39 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: []
+- terms: [principaal-agentrelatie, contracten en prikkels]
 
-### G07 Transactiekosten
-- kern: "Bereken en interpreteer transactiekosten bij ruil."
+### G07 Transactiekosten berekenen en interpreteren
+- kern: "Bereken de totale transactiekosten van een ruil door zoek-, onderhandel- en controlekosten bij elkaar op te tellen en beoordeel of de ruil na aftrek nog rendabel is."
 - needs: []
 - exam_codes: [G2.1]
 - mastery_target: apply
 - prior_learning: new_this_year
 - aspects: [rekenen, verbaal]
 - terms: [transactiekosten]
+- procedure:
+  1. Inventariseer alle transactiekostenposten (zoekkosten, onderhandelkosten, controle- en handhavingskosten)
+  2. Tel de bedragen per post op tot de totale transactiekosten van de ruil
+  3. Bereken het netto voordeel = bruto ruilvoordeel − totale transactiekosten
+  4. Concludeer of de ruil rendabel is (netto voordeel > 0) en benoem welke kostenpost doorslaggevend is
 
-### G08 Vereveningsfonds voor risicodeling
-- kern: "Gemeenschappelijk fonds kan risico's uitvlakken en kostenverschillen compenseren."
+### G08 Risicodeling via gemeenschappelijk fonds
+- kern: "Een gemeenschappelijk fonds vlakt individuele risico's uit door premies te bundelen en kostenverschillen tussen deelnemers te compenseren."
 - needs: []
 - exam_codes: [G3.3]
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: [risico]
+- terms: [risico, collectieve verzekering]
 
-### G09 Solidariteit in verzekeringen
-- kern: "Gepersonaliseerde premies op basis van individueel risicoprofiel ondermijnen solidariteit."
-- needs: []
+### G09 Gepersonaliseerde premies ondermijnen solidariteit
+- kern: "Premies gebaseerd op individuele risicoprofielen verkleinen de herverdeling tussen lage- en hogerrisicogroepen en ondermijnen zo de solidariteit in een collectieve verzekering."
+- needs: [G08]
 - exam_codes: [G3.2]
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: []
+- terms: [collectieve verzekering, risico, bonus-malussysteem]
 
 ### G10 Informatieasymmetrie verzekeringsmarkt
 - kern: "Informatieongelijkheid tussen verzekeraar en klant kan selectie- en moraalrisicoproblemen veroorzaken."
@@ -1211,14 +1216,14 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - aspects: [verbaal]
 - terms: [informatieasymmetrie]
 
-### G11 Wisselkoersrisico bij valutabetaling
-- kern: "Leg uit hoe appreciatie van de euro de werkelijke opbrengsten van exporteurs nadelig beïnvloedt."
+### G11 Wisselkoersrisico bij internationale handel
+- kern: "Bij betalingen in vreemde valuta leidt een ongunstige wisselkoersverandering tussen contractmoment en betalingsmoment tot lagere reële opbrengsten voor de exporteur of hogere kosten voor de importeur."
 - needs: []
 - exam_codes: [G2.1]
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: []
+- terms: [wisselkoers, financieel risico, onzekerheid]
 
 ### H01 AOW-leeftijd als houdbaarheidsinstrument
 - kern: "Leg uit hoe een hogere AOW-leeftijd via premiegrondslag en uitkeringsduur de houdbaarheid van het AOW-stelsel verbetert bij vergrijzing."

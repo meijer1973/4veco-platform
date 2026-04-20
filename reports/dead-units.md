@@ -1,6 +1,6 @@
 # Dead Units Report
 
-Generated: 2026-04-20T14:16:08.790Z
+Generated: 2026-04-20T14:25:07.076Z
 Live units:   144
 Files scanned: 70
 Cited:        74
@@ -36,7 +36,7 @@ These units exist in the catalog but no source file cites them. Candidates for d
 - **F01** Berovingsprobleem herkennen
 - **F02** Collectief goed classificeren
 - **F03** Dominante strategie
-- **F04** Dominante strategieen in pay-off matrix
+- **F04** Dominante strategieën in pay-off matrix
 - **F06** Heffing op externe effecten als innovatieprikkel
 - **F07** Overproductie bij negatieve externe effecten
 - **F08** Verloren surplus door negatieve externe effecten
@@ -46,15 +46,15 @@ These units exist in the catalog but no source file cites them. Candidates for d
 - **F13** Berovingsprobleem op de arbeidsmarkt
 - **F14** Concentratie-externaliteiten analyseren
 - **F15** Verzonken kosten negeren in beslissingen
-- **G01** AI en risicoinschatting
+- **G01** Risicoinschatting en averechtse selectie
 - **G02** Averechtse selectie herkennen
 - **G04** Eigen risico en moral hazard
-- **G05** Principaal-agent overheid en markt
+- **G05** Belangentegenstelling in principaal-agentrelatie
 - **G06** Principaal-agentprobleem identificeren
-- **G08** Vereveningsfonds voor risicodeling
-- **G09** Solidariteit in verzekeringen
+- **G08** Risicodeling via gemeenschappelijk fonds
+- **G09** Gepersonaliseerde premies ondermijnen solidariteit
 - **G10** Informatieasymmetrie verzekeringsmarkt
-- **G11** Wisselkoersrisico bij valutabetaling
+- **G11** Wisselkoersrisico bij internationale handel
 - **H04** Belastingschijven berekening
 - **H05** Circulaire economie in groen bbp
 - **H06** Totale CO2-uitstoot berekenen

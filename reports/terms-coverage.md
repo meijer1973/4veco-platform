@@ -1,8 +1,8 @@
 # Terms-Coverage Report
 
-Generated: 2026-04-20T14:16:09.089Z
+Generated: 2026-04-20T14:25:07.421Z
 Live units:      144
-With no terms:   39
+With no terms:   33
 
 ## Status: **INFORMATIONAL**
 
@@ -40,15 +40,6 @@ Units with empty `terms` have no canonical-vocabulary links yet. Wire via `unit-
 - **E03** Kapitaaldekking en renteeffecten
 - **E04** Omslagstelsel (AOW)
 - **E05** Verlaging pensioenuitkeringen en solidariteit
-
-## Domain G (6)
-
-- **G01** AI en risicoinschatting
-- **G03** Broodfonds: informatie en risicovermindering
-- **G05** Principaal-agent overheid en markt
-- **G06** Principaal-agentprobleem identificeren
-- **G09** Solidariteit in verzekeringen
-- **G11** Wisselkoersrisico bij valutabetaling
 
 ## Domain I (9)
 

@@ -1,9 +1,9 @@
 # Procedure-Coverage Report
 
-Generated: 2026-04-20T14:16:09.196Z
+Generated: 2026-04-20T14:25:07.492Z
 Apply+ units:            63
-With procedure:          22
-Without procedure:       41 (A: 34, non-A: 7)
+With procedure:          23
+Without procedure:       40 (A: 34, non-A: 6)
 
 ## Status: **INFORMATIONAL**
 
@@ -11,11 +11,7 @@ A canonical procedure is the step sequence every downstream material (voorkennis
 
 A-domain units are listed separately: their executable recipe is the `GEN_*` randomizer, so a missing step list is lower-priority than for non-A units.
 
-## Non-A units missing procedure (7)
-
-### Domain G (1)
-
-- **G07** Transactiekosten — _apply_
+## Non-A units missing procedure (6)
 
 ### Domain I (6)
 

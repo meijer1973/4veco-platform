@@ -1,8 +1,8 @@
 # Needs-Coverage Report
 
-Generated: 2026-04-20T14:16:09.044Z
+Generated: 2026-04-20T14:25:07.359Z
 Live units:      144
-With no needs:   68
+With no needs:   62
 
 ## Status: **INFORMATIONAL**
 
@@ -50,19 +50,13 @@ Units with empty `needs` are not broken — they simply have no prerequisite edg
 - **F07** Overproductie bij negatieve externe effecten
 - **F15** Verzonken kosten negeren in beslissingen
 
-## Domain G (11)
+## Domain G (5)
 
-- **G01** AI en risicoinschatting
-- **G02** Averechtse selectie herkennen
-- **G03** Broodfonds: informatie en risicovermindering
-- **G04** Eigen risico en moral hazard
-- **G05** Principaal-agent overheid en markt
 - **G06** Principaal-agentprobleem identificeren
-- **G07** Transactiekosten
-- **G08** Vereveningsfonds voor risicodeling
-- **G09** Solidariteit in verzekeringen
+- **G07** Transactiekosten berekenen en interpreteren
+- **G08** Risicodeling via gemeenschappelijk fonds
 - **G10** Informatieasymmetrie verzekeringsmarkt
-- **G11** Wisselkoersrisico bij valutabetaling
+- **G11** Wisselkoersrisico bij internationale handel
 
 ## Domain H (8)
 
