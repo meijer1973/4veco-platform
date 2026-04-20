@@ -1,1 +1,675 @@
-[]
+[
+  {
+    "id": "A01",
+    "name": "Lineaire functie opstellen",
+    "category": "vaardigheden",
+    "layer": 0,
+    "duration_min": 5,
+    "kern": "Stel een lineaire functie op (y = ax + b) vanuit een economische context, zoals een vraag- of aanbodfunctie.",
+    "needs": [],
+    "mastery_target": "apply",
+    "prior_learning": "previously_taught",
+    "terms": [],
+    "procedure": [
+      "Stel een lineaire functie op (y = ax + b) vanuit een economische context, zoals een vraag- of aanbodfunctie."
+    ],
+    "generator": "GEN_A01"
+  },
+  {
+    "id": "A02",
+    "name": "Vergelijking oplossen",
+    "category": "vaardigheden",
+    "layer": 0,
+    "duration_min": 5,
+    "kern": "Los een vergelijking met één onbekende op, bijvoorbeeld door twee functies aan elkaar gelijk te stellen.",
+    "needs": [],
+    "mastery_target": "apply",
+    "prior_learning": "previously_taught",
+    "terms": [],
+    "procedure": [
+      "Los een vergelijking met één onbekende op, bijvoorbeeld door twee functies aan elkaar gelijk te stellen."
+    ],
+    "generator": "GEN_A02"
+  },
+  {
+    "id": "A03",
+    "name": "Functie omschrijven (P↔Q)",
+    "category": "vaardigheden",
+    "layer": 0,
+    "duration_min": 5,
+    "kern": "Schrijf een functie om van P als functie van Q naar Q als functie van P, of andersom.",
+    "needs": [],
+    "mastery_target": "apply",
+    "prior_learning": "previously_taught",
+    "terms": [],
+    "procedure": [
+      "Schrijf een functie om van P als functie van Q naar Q als functie van P, of andersom."
+    ],
+    "generator": "GEN_A03"
+  },
+  {
+    "id": "A04",
+    "name": "Substitueren",
+    "category": "vaardigheden",
+    "layer": 0,
+    "duration_min": 5,
+    "kern": "Vul een waarde in een functie in en bereken het resultaat.",
+    "needs": [],
+    "mastery_target": "apply",
+    "prior_learning": "previously_taught",
+    "terms": [],
+    "procedure": [
+      "Vul een waarde in een functie in en bereken het resultaat."
+    ],
+    "generator": "GEN_A04"
+  },
+  {
+    "id": "A05",
+    "name": "Snijpunt met P-as berekenen",
+    "category": "vaardigheden",
+    "layer": 0,
+    "duration_min": 5,
+    "kern": "Bereken het snijpunt van een functie met de verticale as (P-as) door Q = 0 in te vullen.",
+    "needs": [],
+    "mastery_target": "apply",
+    "prior_learning": "previously_taught",
+    "terms": [],
+    "procedure": [
+      "Bereken het snijpunt van een functie met de verticale as (P-as) door Q = 0 in te vullen."
+    ],
+    "generator": "GEN_A05"
+  },
+  {
+    "id": "A06",
+    "name": "Evenwichtsprijs & -hoeveelheid",
+    "category": "vaardigheden",
+    "layer": 1,
+    "duration_min": 5,
+    "kern": "Bereken de evenwichtsprijs en -hoeveelheid door vraag en aanbod aan elkaar gelijk te stellen.",
+    "needs": [
+      "A01",
+      "A02"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "terms": [],
+    "procedure": [
+      "Bereken de evenwichtsprijs en -hoeveelheid door vraag en aanbod aan elkaar gelijk te stellen."
+    ],
+    "generator": "GEN_A06"
+  },
+  {
+    "id": "A07",
+    "name": "TO-functie opstellen",
+    "category": "vaardigheden",
+    "layer": 1,
+    "duration_min": 5,
+    "kern": "Stel de totale opbrengstfunctie op: TO = P × Q. Schrijf de vraagfunctie om zodat P in Q is uitgedrukt.",
+    "needs": [
+      "A01",
+      "A03"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "terms": [],
+    "procedure": [
+      "Stel de totale opbrengstfunctie op: TO = P × Q. Schrijf de vraagfunctie om zodat P in Q is uitgedrukt."
+    ],
+    "generator": "GEN_A07"
+  },
+  {
+    "id": "A08",
+    "name": "TK-functie herkennen",
+    "category": "vaardigheden",
+    "layer": 1,
+    "duration_min": 5,
+    "kern": "Herken en werk met de totale kostenfunctie (TK), vaak gegeven als TK = vaste kosten + variabele kosten × Q.",
+    "needs": [
+      "A01"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "terms": [],
+    "procedure": [
+      "Herken en werk met de totale kostenfunctie (TK), vaak gegeven als TK = vaste kosten + variabele kosten × Q."
+    ],
+    "generator": "GEN_A08"
+  },
+  {
+    "id": "A09",
+    "name": "Collectief aanbod",
+    "category": "vaardigheden",
+    "layer": 1,
+    "duration_min": 5,
+    "kern": "Tel individuele aanbodfuncties op tot een collectieve aanbodfunctie.",
+    "needs": [
+      "A03"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "terms": [],
+    "procedure": [
+      "Tel individuele aanbodfuncties op tot een collectieve aanbodfunctie."
+    ],
+    "generator": "GEN_A09"
+  },
+  {
+    "id": "A10",
+    "name": "Oppervlakte driehoek",
+    "category": "vaardigheden",
+    "layer": 1,
+    "duration_min": 5,
+    "kern": "Bereken de oppervlakte van een driehoek in een grafiek: ½ × basis × hoogte.",
+    "needs": [
+      "A04"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "previously_taught",
+    "terms": [],
+    "procedure": [
+      "Bereken de oppervlakte van een driehoek in een grafiek: ½ × basis × hoogte."
+    ],
+    "generator": "GEN_A10"
+  },
+  {
+    "id": "A11",
+    "name": "Afgeleide bepalen",
+    "category": "vaardigheden",
+    "layer": 1,
+    "duration_min": 5,
+    "kern": "Bepaal de afgeleide van een functie. Bijvoorbeeld: als TO = 5Q², dan is MO = 10Q.",
+    "needs": [
+      "A01"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "previously_taught",
+    "terms": [],
+    "procedure": [
+      "Bepaal de afgeleide van een functie. Bijvoorbeeld: als TO = 5Q², dan is MO = 10Q."
+    ],
+    "generator": "GEN_A11"
+  },
+  {
+    "id": "A12",
+    "name": "MO bepalen",
+    "category": "vaardigheden",
+    "layer": 2,
+    "duration_min": 5,
+    "kern": "Bepaal de marginale opbrengst (MO) door de afgeleide van de TO-functie te nemen.",
+    "needs": [
+      "A11",
+      "A07"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "terms": [],
+    "procedure": [
+      "Bepaal de marginale opbrengst (MO) door de afgeleide van de TO-functie te nemen."
+    ],
+    "generator": "GEN_A12"
+  },
+  {
+    "id": "A13",
+    "name": "MK bepalen",
+    "category": "vaardigheden",
+    "layer": 2,
+    "duration_min": 5,
+    "kern": "Bepaal de marginale kosten (MK) door de afgeleide van de TK-functie te nemen.",
+    "needs": [
+      "A11",
+      "A08"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "terms": [],
+    "procedure": [
+      "Bepaal de marginale kosten (MK) door de afgeleide van de TK-functie te nemen."
+    ],
+    "generator": "GEN_A13"
+  },
+  {
+    "id": "A14",
+    "name": "GTK bepalen",
+    "category": "vaardigheden",
+    "layer": 2,
+    "duration_min": 5,
+    "kern": "Bereken de gemiddelde totale kosten: GTK = TK / Q.",
+    "needs": [
+      "A08"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "terms": [],
+    "procedure": [
+      "Bereken de gemiddelde totale kosten: GTK = TK / Q."
+    ],
+    "generator": "GEN_A14"
+  },
+  {
+    "id": "A15",
+    "name": "Prijselasticiteit van de vraag",
+    "category": "vaardigheden",
+    "layer": 1,
+    "duration_min": 5,
+    "kern": "Bereken de prijselasticiteit: Ev = %ΔQv / %ΔP. Bepaal of de vraag elastisch of inelastisch is.",
+    "needs": [
+      "A04"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "terms": [],
+    "procedure": [
+      "Bereken de prijselasticiteit: Ev = %ΔQv / %ΔP. Bepaal of de vraag elastisch of inelastisch is."
+    ],
+    "generator": "GEN_A15"
+  },
+  {
+    "id": "A16",
+    "name": "Kruiselasticiteit",
+    "category": "vaardigheden",
+    "layer": 0,
+    "duration_min": 5,
+    "kern": "Bereken de kruiselasticiteit: Ekr = %ΔQa / %ΔPb. Bepaal of goederen substituten of complementen zijn.",
+    "needs": [],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "terms": [],
+    "procedure": [
+      "Bereken de kruiselasticiteit: Ekr = %ΔQa / %ΔPb. Bepaal of goederen substituten of complementen zijn."
+    ],
+    "generator": "GEN_A16"
+  },
+  {
+    "id": "A17",
+    "name": "Inkomenselasticiteit",
+    "category": "vaardigheden",
+    "layer": 0,
+    "duration_min": 5,
+    "kern": "Bereken de inkomenselasticiteit: Ei = %ΔQ / %ΔY. Bepaal of een goed normaal, inferieur of luxe is.",
+    "needs": [],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "terms": [],
+    "procedure": [
+      "Bereken de inkomenselasticiteit: Ei = %ΔQ / %ΔY. Bepaal of een goed normaal, inferieur of luxe is."
+    ],
+    "generator": "GEN_A17"
+  },
+  {
+    "id": "A18",
+    "name": "Comparatief voordeel bepalen",
+    "category": "vaardigheden",
+    "layer": 0,
+    "duration_min": 5,
+    "kern": "Vergelijk de alternatieve kosten van twee producenten om te bepalen wie een comparatief voordeel heeft.",
+    "needs": [],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "terms": [],
+    "procedure": [
+      "Vergelijk de alternatieve kosten van twee producenten om te bepalen wie een comparatief voordeel heeft."
+    ],
+    "generator": "GEN_A18"
+  },
+  {
+    "id": "A19",
+    "name": "Surplus berekenen (CS/PS)",
+    "category": "vaardigheden",
+    "layer": 2,
+    "duration_min": 5,
+    "kern": "Bereken het consumenten- of producentensurplus als driehoeksoppervlakte in de vraag-/aanbodgrafiek.",
+    "needs": [
+      "A06",
+      "A10"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "terms": [],
+    "procedure": [
+      "Bereken het consumenten- of producentensurplus als driehoeksoppervlakte in de vraag-/aanbodgrafiek."
+    ],
+    "generator": "GEN_A19"
+  },
+  {
+    "id": "A20",
+    "name": "MO = MK oplossen",
+    "category": "vaardigheden",
+    "layer": 3,
+    "duration_min": 5,
+    "kern": "Vind de winstmaximaliserende hoeveelheid door MO gelijk te stellen aan MK en op te lossen.",
+    "needs": [
+      "A12",
+      "A13",
+      "A02"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "terms": [],
+    "procedure": [
+      "Vind de winstmaximaliserende hoeveelheid door MO gelijk te stellen aan MK en op te lossen."
+    ],
+    "generator": "GEN_A20"
+  },
+  {
+    "id": "A21",
+    "name": "Winst = TO − TK",
+    "category": "vaardigheden",
+    "layer": 2,
+    "duration_min": 5,
+    "kern": "Bereken de winst door de totale opbrengst min de totale kosten: W = TO − TK.",
+    "needs": [
+      "A07",
+      "A08",
+      "A04"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "terms": [],
+    "procedure": [
+      "Bereken de winst door de totale opbrengst min de totale kosten: W = TO − TK."
+    ],
+    "generator": "GEN_A21"
+  },
+  {
+    "id": "A22",
+    "name": "Break-even (TO = TK)",
+    "category": "vaardigheden",
+    "layer": 2,
+    "duration_min": 5,
+    "kern": "Vind de break-evenhoeveelheid door TO = TK op te lossen. Bij dit punt is de winst nul.",
+    "needs": [
+      "A07",
+      "A08",
+      "A02"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "terms": [],
+    "procedure": [
+      "Vind de break-evenhoeveelheid door TO = TK op te lossen. Bij dit punt is de winst nul."
+    ],
+    "generator": "GEN_A22"
+  },
+  {
+    "id": "A23",
+    "name": "Evenwicht met heffing",
+    "category": "vaardigheden",
+    "layer": 2,
+    "duration_min": 5,
+    "kern": "Bereken het nieuwe marktevenwicht nadat de overheid een heffing (accijns) heeft opgelegd.",
+    "needs": [
+      "A06",
+      "A01"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "terms": [],
+    "procedure": [
+      "Bereken het nieuwe marktevenwicht nadat de overheid een heffing (accijns) heeft opgelegd."
+    ],
+    "generator": "GEN_A23"
+  },
+  {
+    "id": "A24",
+    "name": "Collectief aanbod bepalen",
+    "category": "vaardigheden",
+    "layer": 2,
+    "duration_min": 5,
+    "kern": "Bepaal het collectieve aanbod vanuit meerdere individuele aanbieders en bereken het marktevenwicht.",
+    "needs": [
+      "A09",
+      "A03"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "terms": [],
+    "procedure": [
+      "Bepaal het collectieve aanbod vanuit meerdere individuele aanbieders en bereken het marktevenwicht."
+    ],
+    "generator": "GEN_A24"
+  },
+  {
+    "id": "A25",
+    "name": "Minimumprijs analyseren",
+    "category": "vaardigheden",
+    "layer": 2,
+    "duration_min": 5,
+    "kern": "Analyseer het effect van een minimumprijs: bereken het vraagoverschot en het welvaartsverlies.",
+    "needs": [
+      "A06"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "terms": [],
+    "procedure": [
+      "Analyseer het effect van een minimumprijs: bereken het vraagoverschot en het welvaartsverlies."
+    ],
+    "generator": "GEN_A25"
+  },
+  {
+    "id": "A26",
+    "name": "Maximumprijs analyseren",
+    "category": "vaardigheden",
+    "layer": 2,
+    "duration_min": 5,
+    "kern": "Analyseer het effect van een maximumprijs: bereken het vraagoverschot en de gevolgen voor consumenten.",
+    "needs": [
+      "A06"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "terms": [],
+    "procedure": [
+      "Analyseer het effect van een maximumprijs: bereken het vraagoverschot en de gevolgen voor consumenten."
+    ],
+    "generator": "GEN_A26"
+  },
+  {
+    "id": "A27",
+    "name": "Subsidie analyseren",
+    "category": "vaardigheden",
+    "layer": 2,
+    "duration_min": 5,
+    "kern": "Bereken het effect van een subsidie op het marktevenwicht, de prijs en de verdeling van het voordeel.",
+    "needs": [
+      "A06",
+      "A01"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "terms": [],
+    "procedure": [
+      "Bereken het effect van een subsidie op het marktevenwicht, de prijs en de verdeling van het voordeel."
+    ],
+    "generator": "GEN_A27"
+  },
+  {
+    "id": "A28",
+    "name": "MK = GTK oplossen",
+    "category": "vaardigheden",
+    "layer": 3,
+    "duration_min": 5,
+    "kern": "Vind de hoeveelheid waar MK = GTK. Dit is het minimum van de GTK-curve (efficiënte schaal).",
+    "needs": [
+      "A13",
+      "A14"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "terms": [],
+    "procedure": [
+      "Vind de hoeveelheid waar MK = GTK. Dit is het minimum van de GTK-curve (efficiënte schaal)."
+    ],
+    "generator": "GEN_A28"
+  },
+  {
+    "id": "A29",
+    "name": "Break-even analyse",
+    "category": "vaardigheden",
+    "layer": 3,
+    "duration_min": 5,
+    "kern": "Voer een volledige break-evenanalyse uit: vind de break-evenhoeveelheid en bepaal winst/verlies bij een gegeven Q.",
+    "needs": [
+      "A22"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "terms": [],
+    "procedure": [
+      "Voer een volledige break-evenanalyse uit: vind de break-evenhoeveelheid en bepaal winst/verlies bij een gegeven Q."
+    ],
+    "generator": "GEN_A29"
+  },
+  {
+    "id": "A30",
+    "name": "Consumentensurplus",
+    "category": "vaardigheden",
+    "layer": 3,
+    "duration_min": 5,
+    "kern": "Bereken het consumentensurplus voor en na een beleidsverandering en bepaal het verschil.",
+    "needs": [
+      "A19"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "terms": [],
+    "procedure": [
+      "Bereken het consumentensurplus voor en na een beleidsverandering en bepaal het verschil."
+    ],
+    "generator": "GEN_A30"
+  },
+  {
+    "id": "A31",
+    "name": "Individueel → collectief aanbod",
+    "category": "vaardigheden",
+    "layer": 3,
+    "duration_min": 5,
+    "kern": "Ga van individuele aanbodcurves naar de collectieve aanbodcurve en bereken het marktevenwicht.",
+    "needs": [
+      "A24"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "terms": [],
+    "procedure": [
+      "Ga van individuele aanbodcurves naar de collectieve aanbodcurve en bereken het marktevenwicht."
+    ],
+    "generator": "GEN_A31"
+  },
+  {
+    "id": "A32",
+    "name": "Welvaartsverlies belasting",
+    "category": "vaardigheden",
+    "layer": 3,
+    "duration_min": 5,
+    "kern": "Bereken het welvaartsverlies (deadweight loss) dat ontstaat door een belasting als driehoeksoppervlakte.",
+    "needs": [
+      "A19",
+      "A23"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "terms": [],
+    "procedure": [
+      "Bereken het welvaartsverlies (deadweight loss) dat ontstaat door een belasting als driehoeksoppervlakte."
+    ],
+    "generator": "GEN_A32"
+  },
+  {
+    "id": "A33",
+    "name": "Optimale productie bij VM",
+    "category": "vaardigheden",
+    "layer": 3,
+    "duration_min": 5,
+    "kern": "Bepaal de optimale productie bij volkomen mededinging: produceer waar P = MK en bereken de winst.",
+    "needs": [
+      "A13",
+      "A14",
+      "A04"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "terms": [],
+    "procedure": [
+      "Bepaal de optimale productie bij volkomen mededinging: produceer waar P = MK en bereken de winst."
+    ],
+    "generator": "GEN_A33"
+  },
+  {
+    "id": "A34",
+    "name": "Effecten invoerrecht",
+    "category": "vaardigheden",
+    "layer": 3,
+    "duration_min": 5,
+    "kern": "Analyseer de effecten van een invoerrecht op binnenlandse productie, consumptie, import en welvaart.",
+    "needs": [
+      "A19",
+      "A23",
+      "A06"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "terms": [],
+    "procedure": [
+      "Analyseer de effecten van een invoerrecht op binnenlandse productie, consumptie, import en welvaart."
+    ],
+    "generator": "GEN_A34"
+  },
+  {
+    "id": "A35",
+    "name": "Max. winst monopolist",
+    "category": "vaardigheden",
+    "layer": 4,
+    "duration_min": 5,
+    "kern": "Bereken de maximale winst van een monopolist: vind Q waar MO = MK, bepaal P en reken W = TO − TK uit.",
+    "needs": [
+      "A20",
+      "A21",
+      "A04"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "terms": [],
+    "procedure": [
+      "Bereken de maximale winst van een monopolist: vind Q waar MO = MK, bepaal P en reken W = TO − TK uit."
+    ],
+    "generator": "GEN_A35"
+  },
+  {
+    "id": "A36",
+    "name": "Prijsdiscriminatie",
+    "category": "vaardigheden",
+    "layer": 4,
+    "duration_min": 5,
+    "kern": "Bereken de winst bij prijsdiscriminatie: de monopolist rekent verschillende prijzen in verschillende markten.",
+    "needs": [
+      "A20",
+      "A21"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "terms": [],
+    "procedure": [
+      "Bereken de winst bij prijsdiscriminatie: de monopolist rekent verschillende prijzen in verschillende markten."
+    ],
+    "generator": "GEN_A36"
+  },
+  {
+    "id": "A37",
+    "name": "Lange-termijnevenwicht VM",
+    "category": "vaardigheden",
+    "layer": 4,
+    "duration_min": 5,
+    "kern": "Bepaal het lange-termijnevenwicht bij volkomen mededinging: P = MK = GTK (minimale GTK).",
+    "needs": [
+      "A28"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "terms": [],
+    "procedure": [
+      "Bepaal het lange-termijnevenwicht bij volkomen mededinging: P = MK = GTK (minimale GTK)."
+    ],
+    "generator": "GEN_A37"
+  }
+]
