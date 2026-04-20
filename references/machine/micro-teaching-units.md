@@ -124,6 +124,12 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - prior_learning: previously_taught
 - aspects: [rekenen]
 - terms: []
+- procedure:
+  1. Noteer twee punten (P₁, Q₁) en (P₂, Q₂) uit de opgave.
+  2. Bereken de richtingscoëfficiënt a = (Q₂ − Q₁) / (P₂ − P₁).
+  3. Vul één punt in Q = aP + b en los op voor b.
+  4. Controleer het teken: vraagfunctie heeft a < 0, aanbodfunctie heeft a > 0.
+  5. Verifieer door het tweede punt in te vullen — de uitkomst moet kloppen.
 - pitfalls:
   - Let op de volgorde: als je Qv als functie van P opstelt, dan is P de x en Q de y.
 - generator: GEN_A01
@@ -170,6 +176,12 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - prior_learning: previously_taught
 - aspects: [rekenen, verbaal]
 - terms: []
+- procedure:
+  1. Identificeer in de formule elke plek waar de variabele voorkomt.
+  2. Vervang die variabele consequent door de gegeven waarde, inclusief haakjes bij negatieve getallen.
+  3. Reken in de volgorde haakjes → machten → vermenigvuldigen/delen → optellen/aftrekken.
+  4. Noteer tussenresultaten per term om optelfouten te voorkomen.
+  5. Controleer de eenheid van het eindantwoord (€, stuks, %).
 - pitfalls:
   - Bij 0,5Q² moet je eerst Q kwadrateren en dan pas vermenigvuldigen met 0,5.
 - generator: GEN_A04
@@ -183,6 +195,11 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - prior_learning: previously_taught
 - aspects: [grafisch, rekenen]
 - terms: []
+- procedure:
+  1. Zorg dat de functie in de vorm P = f(Q) staat; zo niet, schrijf eerst om (zoals in A03).
+  2. Vul Q = 0 in de functie P = f(Q).
+  3. Lees de uitkomst af: dit is Pmax bij een vraagfunctie of Pmin bij een aanbodfunctie.
+  4. Controleer: bij een vraagfunctie Q = a − bP vind je het snijpunt ook als a/b.
 - pitfalls:
   - Verwar het snijpunt met de P-as niet met het snijpunt met de Q-as.
 - generator: GEN_A05
@@ -213,6 +230,11 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - prior_learning: new_this_year
 - aspects: [grafisch, rekenen, verbaal]
 - terms: []
+- procedure:
+  1. Zorg dat P als functie van Q beschikbaar is; schrijf zo nodig om (zoals in A03).
+  2. Vermenigvuldig TO = P × Q met haakjes om elke term van P mee te nemen.
+  3. Werk uit tot een nette TO-functie in Q (lineair bij volkomen concurrentie, kwadratisch bij een monopolie).
+  4. Controleer door een willekeurige Q in te vullen: TO moet gelijk zijn aan P(Q) × Q.
 - pitfalls:
   - Vergeet niet de haakjes als je P × Q uitrekent!
 - generator: GEN_A07
@@ -226,6 +248,11 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - prior_learning: new_this_year
 - aspects: [rekenen, verbaal]
 - terms: [variabele kosten]
+- procedure:
+  1. Splits de TK-functie in een term zonder Q (= TCK) en termen met Q (= TVK).
+  2. Controleer door Q = 0 in te vullen: de uitkomst is de TCK.
+  3. Benoem de lineaire variabele kosten per stuk (coëfficiënt vóór Q) en eventuele kwadratische term.
+  4. Bereken TK bij de gevraagde Q door substitutie (zoals in A04).
 - pitfalls:
   - Bij TK = 12Q + 0,3Q² denken leerlingen soms dat er geen vaste kosten zijn.
 - generator: GEN_A08
@@ -239,6 +266,12 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - prior_learning: new_this_year
 - aspects: [rekenen]
 - terms: []
+- procedure:
+  1. Zorg dat de individuele aanbodfunctie in de vorm qa = f(P) staat; schrijf zo nodig om (zoals in A03).
+  2. Bij n identieke aanbieders: vermenigvuldig de hele functie met n (beide termen!).
+  3. Bij verschillende aanbieders: tel de individuele Q-functies op bij dezelfde P.
+  4. Bepaal per aanbieder de minimumprijs (qa = 0) en neem alleen aanbieders mee waarvoor qa ≥ 0.
+  5. Controleer met één prijs: n × individuele qa moet gelijk zijn aan de collectieve Qa.
 - pitfalls:
   - Als je Qa = 50 × (−5 + 2P) uitwerkt, vergeet dan niet BEIDE termen te vermenigvuldigen: 50 × −5 = −250 en 50 × 2P = 100P.
 - generator: GEN_A09
@@ -252,6 +285,12 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - prior_learning: previously_taught
 - aspects: [grafisch, rekenen]
 - terms: []
+- procedure:
+  1. Identificeer de drie hoekpunten van de driehoek in de grafiek.
+  2. Kies een basis en een hoogte die loodrecht op elkaar staan.
+  3. Bepaal de basis als een horizontale afstand (ΔQ) of de hoogte als een verticale afstand (ΔP).
+  4. Bereken de oppervlakte = ½ × basis × hoogte.
+  5. Controleer: basis en hoogte zijn beide positieve afstanden, geen losse coördinaten.
 - pitfalls:
   - Verwar de hoogte niet met de P-waarde zelf.
 - generator: GEN_A10
@@ -265,6 +304,12 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - prior_learning: previously_taught
 - aspects: [rekenen]
 - terms: []
+- procedure:
+  1. Schrijf de functie als som van termen van de vorm aQⁿ.
+  2. Pas per term de regel toe: aQⁿ → n·a·Qⁿ⁻¹.
+  3. Laat constante termen verdwijnen (afgeleide = 0).
+  4. Tel de afgeleide termen op tot één nette functie (MO of MK).
+  5. Controleer: de afgeleide van een lineaire term aQ is a; de afgeleide van aQ² is 2aQ.
 - pitfalls:
   - Een veelgemaakte fout: de constante vergeten te schrappen.
 - generator: GEN_A11
@@ -278,6 +323,11 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - prior_learning: new_this_year
 - aspects: [grafisch, rekenen]
 - terms: []
+- procedure:
+  1. Stel de TO-functie op via TO = P × Q (zoals in A07).
+  2. Bepaal MO als afgeleide van TO naar Q (zoals in A11).
+  3. Controleer het type: bij volkomen concurrentie is MO = P (constant); bij een monopolie met P = a − bQ is MO = a − 2bQ.
+  4. Bereken MO bij de gevraagde Q door substitutie.
 - pitfalls:
   - MO is niet hetzelfde als de prijs!
 - generator: GEN_A12
@@ -291,6 +341,11 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - prior_learning: new_this_year
 - aspects: [rekenen]
 - terms: [marginale kosten]
+- procedure:
+  1. Identificeer de TK-functie en haar termen.
+  2. Bepaal MK als afgeleide van TK naar Q (zoals in A11); de vaste kosten vallen weg.
+  3. Controleer: bij lineaire TK is MK constant, bij kwadratische TK stijgt MK met Q.
+  4. Bereken MK bij de gevraagde Q door substitutie.
 - pitfalls:
   - Verwar MK niet met GTK (gemiddelde totale kosten).
 - generator: GEN_A13
@@ -304,6 +359,12 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - prior_learning: new_this_year
 - aspects: [rekenen, verbaal]
 - terms: [gemiddelde totale kosten]
+- procedure:
+  1. Noteer de TK-functie.
+  2. Deel elke term afzonderlijk door Q: TCK/Q + v + cQ.
+  3. Vereenvoudig (Q² / Q = Q, constante/Q blijft staan als TCK/Q).
+  4. Bereken GTK bij de gevraagde Q door substitutie.
+  5. Interpreteer: TCK/Q daalt met Q (schaalvoordeel), cQ stijgt — samen geven ze de U-vorm.
 - pitfalls:
   - Deel ELKE term apart door Q!
 - generator: GEN_A14
@@ -317,6 +378,12 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - prior_learning: new_this_year
 - aspects: [rekenen, verbaal]
 - terms: [prijselasticiteit van de vraag]
+- procedure:
+  1. Noteer de oude en nieuwe waarden van P en Q.
+  2. Bereken %ΔQv = (ΔQv / Qv_oud) × 100% en %ΔP = (ΔP / P_oud) × 100% met correct teken.
+  3. Bereken Ev = %ΔQv / %ΔP.
+  4. Interpreteer: |Ev| > 1 = elastisch, |Ev| < 1 = inelastisch, |Ev| = 1 = unitair.
+  5. Controleer het teken: Ev is bij een normale vraag altijd negatief.
 - pitfalls:
   - Vergeet het minteken niet!
 - generator: GEN_A15
@@ -330,6 +397,11 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - prior_learning: new_this_year
 - aspects: [rekenen, verbaal]
 - terms: []
+- procedure:
+  1. Identificeer welk product de Q levert (product A) en welk product de P (product B).
+  2. Bereken %ΔQa van product A en %ΔPb van product B met correct teken.
+  3. Bereken Ekr = %ΔQa / %ΔPb.
+  4. Interpreteer het teken: Ekr > 0 = substituten, Ekr < 0 = complementen, Ekr ≈ 0 = geen verband.
 - pitfalls:
   - Let goed op welk product de Q is en welk product de P.
 - generator: GEN_A16
@@ -343,6 +415,11 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - prior_learning: new_this_year
 - aspects: [rekenen]
 - terms: [inkomenselasticiteit]
+- procedure:
+  1. Bereken %ΔQ van het product en %ΔY van het inkomen met correct teken.
+  2. Bereken Ei = %ΔQ / %ΔY.
+  3. Interpreteer: Ei < 0 = inferieur goed, 0 < Ei < 1 = noodzakelijk goed, Ei > 1 = luxegoed.
+  4. Controleer: noemer is %ΔY (inkomen), niet %ΔP — verwar niet met Ev.
 - pitfalls:
   - Verwar inkomenselasticiteit niet met prijselasticiteit!
 - generator: GEN_A17
@@ -356,6 +433,12 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - prior_learning: new_this_year
 - aspects: [rekenen, verbaal]
 - terms: []
+- procedure:
+  1. Noteer per land de maximale productie van beide goederen per periode.
+  2. Bereken per land de alternatieve kosten van product X (= hoeveelheid Y opgegeven / hoeveelheid X gewonnen).
+  3. Vergelijk de alternatieve kosten: het land met de laagste alternatieve kosten heeft het comparatief voordeel in dat product.
+  4. Controleer: de alternatieve kosten van het andere product zijn het omgekeerde van de eerste berekening.
+  5. Concludeer welk land in welk product moet specialiseren.
 - pitfalls:
   - Verwar absoluut en comparatief voordeel niet!
 - generator: GEN_A18
@@ -369,6 +452,12 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - prior_learning: new_this_year
 - aspects: [grafisch, rekenen, verbaal]
 - terms: [producentensurplus]
+- procedure:
+  1. Bereken het marktevenwicht P* en Q* (zoals in A06).
+  2. Bepaal Pmax (snijpunt vraaglijn met P-as, zoals in A05) en Pmin (snijpunt aanbodlijn met P-as).
+  3. Bereken CS = ½ × Q* × (Pmax − P*) als driehoeksoppervlakte (zoals in A10).
+  4. Bereken PS = ½ × Q* × (P* − Pmin) op dezelfde manier.
+  5. Controleer: CS en PS zijn beide positieve bedragen.
 - pitfalls:
   - Vergeet niet om de vraaglijn om te schrijven naar P als functie van Q voordat je Pmax bepaalt.
 - generator: GEN_A19
@@ -382,6 +471,12 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - prior_learning: new_this_year
 - aspects: [rekenen, verbaal]
 - terms: []
+- procedure:
+  1. Stel de MO-functie op (afgeleide van TO, zoals in A12).
+  2. Stel de MK-functie op (afgeleide van TK, zoals in A13).
+  3. Stel MO = MK en los op voor Q* (zoals in A02).
+  4. Controleer dat bij deze Q* geldt MO > MK voor kleinere Q en MO < MK voor grotere Q.
+  5. Gebruik Q* later om P* (via de vraaglijn) en de winst te bepalen.
 - pitfalls:
   - Verwar MO niet met de prijs!
 - generator: GEN_A20
@@ -395,6 +490,12 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - prior_learning: new_this_year
 - aspects: [rekenen, verbaal]
 - terms: [totale kosten, totale opbrengst, winst]
+- procedure:
+  1. Bereken TO bij de gegeven Q door substitutie in de TO-functie (zoals in A04).
+  2. Bereken TK bij dezelfde Q door substitutie in de TK-functie.
+  3. Bereken winst = TO − TK.
+  4. Interpreteer: een negatieve uitkomst is verlies.
+  5. Controleer of de vaste kosten meegenomen zijn in TK.
 - pitfalls:
   - Vergeet de constante kosten niet!
 - generator: GEN_A21
@@ -408,6 +509,12 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - prior_learning: new_this_year
 - aspects: [rekenen, verbaal]
 - terms: [winst]
+- procedure:
+  1. Stel TO = TK.
+  2. Herschrijf naar de standaardvorm aQ² + bQ + c = 0 (alles naar één kant, tekens omdraaien).
+  3. Los op met de abc-formule of via ontbinden in factoren — je vindt twee break-evenpunten Q₁ en Q₂.
+  4. Concludeer: tussen Q₁ en Q₂ maakt het bedrijf winst; erbuiten verlies.
+  5. Controleer door Q₁ en Q₂ terug te vullen: TO en TK moeten gelijk zijn.
 - pitfalls:
   - Bij het herschrijven naar de standaardvorm verplaats je alle termen naar één kant.
 - generator: GEN_A22
@@ -421,6 +528,12 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - prior_learning: new_this_year
 - aspects: [rekenen]
 - terms: [marktevenwicht]
+- procedure:
+  1. Vervang in de aanbodfunctie P door (P − t) — de producent ontvangt minder door de heffing.
+  2. Werk de nieuwe aanbodfunctie uit (let op haakjes: beide termen vermenigvuldigen).
+  3. Stel de nieuwe Qa gelijk aan Qv en los op naar P* (zoals in A06).
+  4. Bereken Q*_nieuw door P*_nieuw in te vullen.
+  5. Analyseer de verdeling: consumentenprijs − P*_oud + P*_oud − producentenprijs = heffing.
 - pitfalls:
   - Let op het teken!
 - generator: GEN_A23
@@ -434,6 +547,12 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - prior_learning: new_this_year
 - aspects: [rekenen]
 - terms: [marktevenwicht]
+- procedure:
+  1. Schrijf elke individuele aanbodfunctie om naar qi als functie van P (zoals in A03).
+  2. Bepaal per groep de minimumprijs via qi = 0.
+  3. Vermenigvuldig per groep qi met het aantal bedrijven in die groep.
+  4. Tel de groepen op bij dezelfde P, maar alleen waar qi > 0 geldt.
+  5. Geef de knikpunten aan: op elke minimumprijs treedt een nieuwe groep toe en verandert de helling.
 - pitfalls:
   - Als bedrijven een verschillende minimumprijs hebben, biedt het ene bedrijf al aan terwijl het andere nog niet produceert.
 - generator: GEN_A24
@@ -447,6 +566,12 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - prior_learning: new_this_year
 - aspects: [grafisch, rekenen, verbaal]
 - terms: []
+- procedure:
+  1. Bereken het marktevenwicht P* en Q* zonder ingrijpen (zoals in A06).
+  2. Controleer: Pmin > P*? Zo niet, dan heeft de minimumprijs geen effect.
+  3. Bereken Qv(Pmin) en Qa(Pmin) via substitutie.
+  4. Bereken aanbodoverschot = Qa(Pmin) − Qv(Pmin).
+  5. Concludeer: er wordt Qv(Pmin) verhandeld — de vraag is de korte zijde van de markt.
 - pitfalls:
   - Bij een minimumprijs bepaalt de vraagzijde hoeveel er verhandeld wordt, niet het aanbod.
 - generator: GEN_A25
@@ -460,6 +585,12 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - prior_learning: new_this_year
 - aspects: [grafisch, rekenen, verbaal]
 - terms: []
+- procedure:
+  1. Bereken het marktevenwicht P* en Q* zonder ingrijpen (zoals in A06).
+  2. Controleer: Pmax < P*? Zo niet, dan heeft de maximumprijs geen effect.
+  3. Bereken Qv(Pmax) en Qa(Pmax) via substitutie.
+  4. Bereken vraagoverschot (tekort) = Qv(Pmax) − Qa(Pmax).
+  5. Concludeer: er wordt Qa(Pmax) verhandeld — het aanbod is de korte zijde van de markt.
 - pitfalls:
   - Bij een maximumprijs bepaalt de aanbodzijde hoeveel er verhandeld wordt.
 - generator: GEN_A26
@@ -473,6 +604,12 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - prior_learning: new_this_year
 - aspects: [grafisch, rekenen, verbaal]
 - terms: [marktevenwicht]
+- procedure:
+  1. Vervang in de aanbodfunctie P door (P + s) — de producent ontvangt meer door de subsidie.
+  2. Werk de nieuwe aanbodfunctie uit (beide termen vermenigvuldigen).
+  3. Stel de nieuwe Qa gelijk aan Qv en los op naar P*_nieuw en Q*_nieuw (zoals in A06).
+  4. Bereken de totale subsidiekosten = s × Q*_nieuw.
+  5. Analyseer: consumentenprijs daalt, producentenprijs (P + s) stijgt; samen is het verschil de subsidie.
 - pitfalls:
   - Bij een subsidie ontvangt de producent P + s, niet P − s.
 - generator: GEN_A27
@@ -486,6 +623,12 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - prior_learning: new_this_year
 - aspects: [grafisch, rekenen]
 - terms: []
+- procedure:
+  1. Stel MK op als afgeleide van TK (zoals in A13).
+  2. Stel GTK op als TK / Q (zoals in A14).
+  3. Stel MK = GTK en vereenvoudig (de lineaire term valt links en rechts weg).
+  4. Los op: meestal Q² = TCK / a, dus Q = √(TCK / a).
+  5. Controleer: GTK(Q*) = MK(Q*). Dit punt is het minimum van de GTK-curve (efficiënte schaal).
 - pitfalls:
   - GTK is niet de afgeleide van TK!
 - generator: GEN_A28
@@ -499,6 +642,12 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - prior_learning: new_this_year
 - aspects: [rekenen]
 - terms: [winst]
+- procedure:
+  1. Stel TO = TK en herschrijf naar standaardvorm aQ² + bQ + c = 0.
+  2. Los op met de abc-formule voor Q₁ en Q₂ (zoals in A22).
+  3. Bepaal het winstgebied: Q₁ < Q < Q₂.
+  4. Bereken bij een specifieke Q de winst als W = TO − TK (zoals in A21).
+  5. Optioneel: bereken de maximale winst via MO = MK (zoals in A20) en evalueer W op dat punt.
 - pitfalls:
   - Bij het herschrijven naar de standaardvorm verandert het teken van de Q-term.
 - generator: GEN_A29
@@ -512,6 +661,12 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - prior_learning: new_this_year
 - aspects: [rekenen]
 - terms: [consumentensurplus]
+- procedure:
+  1. Bereken P* door Qv = Qa te stellen en op te lossen (zoals in A06).
+  2. Bereken Q* door P* in te vullen in de vraag- of aanbodfunctie.
+  3. Bepaal Pmax door Q = 0 in de vraagfunctie te zetten (zoals in A05).
+  4. Bereken CS = ½ × Q* × (Pmax − P*) als driehoeksoppervlakte (zoals in A10).
+  5. Controleer op schets: de driehoek ligt tussen vraaglijn, verticale as en de horizontale lijn op P*.
 - pitfalls:
   - Pmax is niet de coëfficiënt vóór P in de vraaglijn.
 - generator: GEN_A30
@@ -525,6 +680,12 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - prior_learning: new_this_year
 - aspects: [rekenen]
 - terms: [marktevenwicht]
+- procedure:
+  1. Schrijf elke individuele aanbodlijn om naar qi = f(P) (zoals in A03).
+  2. Bepaal per groep de minimumprijs (qi = 0) en orden de groepen van lage naar hoge minimumprijs.
+  3. Vermenigvuldig per groep qi met het aantal bedrijven en schakel bij prijzen onder Pmin de groep op 0.
+  4. Tel de groepsbijdragen op bij de gevraagde P — enkel positieve termen tellen mee.
+  5. Geef in het antwoord de knikpunten aan (op elke minimumprijs verandert de helling).
 - pitfalls:
   - Als groep B een minimumprijs van €8 heeft en je rekent bij P = 6, dan is Qi_B = (6−8)/2 = −1.
 - generator: GEN_A31
@@ -538,6 +699,12 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - prior_learning: new_this_year
 - aspects: [grafisch, rekenen]
 - terms: []
+- procedure:
+  1. Bereken Q*_oud uit het evenwicht zonder heffing (zoals in A06).
+  2. Bereken Q*_nieuw uit het evenwicht met heffing (zoals in A23).
+  3. Bepaal ΔQ = Q*_oud − Q*_nieuw (positief).
+  4. Bereken DWL = ½ × ΔQ × t als driehoeksoppervlakte.
+  5. Onderscheid duidelijk van de belastingopbrengst (t × Q*_nieuw): die is een herverdeling, geen verlies.
 - pitfalls:
   - Verwar het welvaartsverlies niet met de totale belastingopbrengst.
 - generator: GEN_A32
@@ -551,6 +718,12 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - prior_learning: new_this_year
 - aspects: [rekenen]
 - terms: [winst]
+- procedure:
+  1. Stel MK op als afgeleide van TK (zoals in A13).
+  2. Stel P = MK en los op voor Q* (het bedrijf is prijsnemer).
+  3. Bereken TK(Q*) en daaruit GTK = TK / Q*.
+  4. Bereken winst per stuk = P − GTK.
+  5. Bereken totale winst = (P − GTK) × Q*. Bij P < GTK maakt het bedrijf verlies.
 - pitfalls:
   - Winst is niet P × Q!
 - generator: GEN_A33
@@ -564,6 +737,12 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - prior_learning: new_this_year
 - aspects: [rekenen, verbaal]
 - terms: []
+- procedure:
+  1. Bereken zonder invoerrecht Qv en Qa bij Pw en bepaal de import = Qv − Qa.
+  2. Bepaal de nieuwe binnenlandse prijs P_nieuw = Pw + t.
+  3. Bereken Qv(P_nieuw) en Qa(P_nieuw) via substitutie en daaruit de nieuwe import.
+  4. Bereken de overheidsinkomsten = t × nieuwe import.
+  5. Vergelijk de vier effecten: binnenlandse productie stijgt, consumptie daalt, import daalt, overheidsinkomsten nieuw.
 - pitfalls:
   - Het invoerrecht verandert niet de binnenlandse vraag- of aanbodfuncties zelf.
 - generator: GEN_A34
@@ -577,6 +756,12 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - prior_learning: new_this_year
 - aspects: [rekenen]
 - terms: [winst]
+- procedure:
+  1. Stel MO op uit de vraaglijn P = a − bQ: MO = a − 2bQ.
+  2. Stel MK op als afgeleide van TK.
+  3. Stel MO = MK en los op voor Q* (zoals in A20).
+  4. Bepaal P* door Q* in te vullen in de vraaglijn (niet in MO!).
+  5. Bereken winst = P* × Q* − TK(Q*) (zoals in A21).
 - pitfalls:
   - Gebruik niet MO als prijs!
 - generator: GEN_A35
@@ -590,6 +775,12 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - prior_learning: new_this_year
 - aspects: [rekenen]
 - terms: [prijsdiscriminatie, winst]
+- procedure:
+  1. Bepaal MK (gelijk voor beide markten, zoals in A13).
+  2. Stel per markt MO_i op uit de eigen vraaglijn (MO_i = a_i − 2b_iQ_i).
+  3. Los per markt MO_i = MK op voor Q_i*.
+  4. Lees per markt P_i* af uit de eigen vraaglijn bij Q_i*.
+  5. Bereken de totale winst = Σ (P_i* − MK) × Q_i* — de markt met de inelastischere vraag krijgt de hogere prijs.
 - pitfalls:
   - Gebruik niet dezelfde Q voor beide markten!
 - generator: GEN_A36
@@ -603,6 +794,12 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - prior_learning: new_this_year
 - aspects: [rekenen]
 - terms: []
+- procedure:
+  1. Stel MK op (afgeleide van TK) en GTK op (TK / Q).
+  2. Los MK = GTK op voor Q* (zoals in A28) — dit is het minimum van de GTK-curve.
+  3. Bereken P_LT = MK(Q*) = GTK(Q*): dit is de lange-termijnprijs.
+  4. Verifieer dat winst per stuk = P_LT − GTK = 0 (economische winst = 0).
+  5. Concludeer: toetreding/uittreding is beëindigd, want bedrijven verdienen precies het normale ondernemersinkomen.
 - pitfalls:
   - Winst = 0 betekent niet dat het bedrijf geen geld verdient!
 - generator: GEN_A37
