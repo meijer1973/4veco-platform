@@ -3290,6 +3290,37 @@
     ]
   },
   {
+    "id": "G12",
+    "name": "Verzekeringspremie berekenen uit verwachte schade",
+    "category": "risico en informatie",
+    "layer": 1,
+    "kern": "Bereken een verzekeringspremie als verwachte schade (kans × schadebedrag) plus opslag voor administratiekosten en risico-/winstmarge; interpreteer verschillen in premie tussen risicogroepen.",
+    "needs": [
+      "A38"
+    ],
+    "exam_codes": [
+      "G1.1",
+      "G2.1"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "aspects": [
+      "rekenen"
+    ],
+    "terms": [],
+    "procedure": [
+      "Bepaal de kans p op schade (per verzekerde per periode).",
+      "Bepaal het te verzekeren schadebedrag S (vaste claim of gemiddelde claim).",
+      "Bereken de verwachte schade = p × S.",
+      "Voeg de opslag toe (administratiekosten, risico-marge, winst) om de premie te krijgen.",
+      "Controleer: bij een homogene risicogroep moet de totaalpremie de totale verwachte schade plus opslag dekken; bij een gemengde groep leidt één uniforme premie tot solidariteit tussen hoge- en lage-risicoverzekerden."
+    ],
+    "pitfalls": [
+      "Alleen schadebedrag rekenen zonder kans — dat overschat de verwachte schade.",
+      "Opslag vergeten — zonder opslag dekt de premie alleen de actuariële verwachting, niet de bedrijfskosten."
+    ]
+  },
+  {
     "id": "H01",
     "name": "AOW-leeftijd als houdbaarheidsinstrument",
     "category": "welvaart en groei",
@@ -3923,6 +3954,72 @@
     "deprecated": true,
     "deprecated_in_favor_of": [
       "E07"
+    ]
+  },
+  {
+    "id": "H27",
+    "name": "Productiefunctie Y = A·f(K, L) toepassen",
+    "category": "welvaart en groei",
+    "layer": 0,
+    "kern": "Pas de productiefunctie Y = A·f(K, L) toe: verklaar hoe groei in kapitaal K, arbeid L en totale factorproductiviteit A bijdraagt aan lange-termijn productie; herken afnemend grensproduct wanneer K óf L alleen toeneemt.",
+    "needs": [],
+    "exam_codes": [
+      "H2.1",
+      "H2.2",
+      "H2.3"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "aspects": [
+      "rekenen",
+      "verbaal"
+    ],
+    "terms": [
+      "productiefunctie"
+    ],
+    "procedure": [
+      "Lees de beschikbare factoren af: K (kapitaalvoorraad), L (arbeidsvolume), A (totale factorproductiviteit).",
+      "Bereken Y uit de gegeven vorm van f(·) — vaak proportioneel in K en L (of Cobb-Douglas-achtig).",
+      "Onderscheid een stijging in A (productiviteitstoename) van een stijging in K of L (factoraccumulatie) — het effect op Y verschilt.",
+      "Herken afnemend grensproduct: extra K bij gelijke L (of extra L bij gelijke K) levert steeds minder Y op.",
+      "Koppel aan beleid: structureel groeibeleid richt zich op A, K óf L — afhankelijk van welke factor knellend is."
+    ],
+    "pitfalls": [
+      "Y-groei alleen aan inzet toeschrijven — productiviteitsgroei via A is cruciaal maar onzichtbaar in K en L.",
+      "Afnemend grensproduct betekent niet dat Y daalt: Y blijft stijgen, maar steeds langzamer."
+    ]
+  },
+  {
+    "id": "H28",
+    "name": "Betalingsbalans: saldo lopende rekening",
+    "category": "welvaart en groei",
+    "layer": 1,
+    "kern": "Bereken het saldo op de lopende rekening van de betalingsbalans uit netto-export (goederen + diensten), primair inkomen (netto-factorinkomen uit buitenland) en secundair inkomen (overdrachten); interpreteer een overschot als binnenlandse besparingen > investeringen.",
+    "needs": [
+      "H24"
+    ],
+    "exam_codes": [
+      "H1.1",
+      "H1.2"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "aspects": [
+      "rekenen",
+      "verbaal"
+    ],
+    "terms": [
+      "betalingsbalans"
+    ],
+    "procedure": [
+      "Identificeer de vier componenten: saldo goederenhandel, saldo dienstenhandel, primair inkomen, secundair inkomen.",
+      "Bereken per component ontvangsten − uitgaven.",
+      "Tel de vier componentsaldi op voor het saldo op de lopende rekening.",
+      "Interpreteer: positief saldo = binnenlandse besparingen > investeringen (netto-crediteur positie); negatief saldo = omgekeerd."
+    ],
+    "pitfalls": [
+      "Alleen goederenhandel meenemen — diensten, inkomen en overdrachten horen volledig bij de lopende rekening.",
+      "Lopende rekening verwarren met financiële rekening — financiële rekening registreert vermogensstromen, niet reële stromen."
     ]
   },
   {
