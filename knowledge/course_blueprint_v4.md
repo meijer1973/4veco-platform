@@ -885,6 +885,8 @@ After completion: peer review using a correction model. Focus particularly on wh
 
 **Difficulty notes:** This is where differentiation enters the course. The power rule on a quadratic is simple ("multiply by 2, drop the Q's power by 1"). Students need to see it as a recipe. The conceptual link ("marginal cost tells you what one more ton costs") was established in Book 1 Ch4§3–§4. Exercise (f) tests whether they understand the rule, not just apply it. One lesson is tight — spend the first 15 minutes on the differentiation technique, then apply it.
 
+**Algebra-voorbereiding op §3:** in de volgende paragraaf gebruiken leerlingen GTK = TK/Q. Om daarop voorbereid te zijn, besteed de laatste 5 minuten aan één oefening: gegeven TK = 0,5Q² + 10Q + 500, laat zien dat GTK = 0,5Q + 10 + 500/Q. Dit is alleen TK delen door Q, term voor term. De `500/Q`-term voelt wennen — benoem expliciet dat deze term groter wordt naarmate Q kleiner wordt (vaste kosten per eenheid dalen bij schaalvoordelen). Dit geeft leerlingen de intuïtie vóór ze in §3 de vergelijking moeten oplossen.
+
 ---
 
 ### §3 — Long-run equilibrium: entry and exit 🟨 MEDIUM
@@ -894,20 +896,22 @@ After completion: peer review using a correction model. Focus particularly on wh
 > (a) Explain what will happen in the long run: will new farmers enter or exit the market? What happens to total market supply?
 > (b) Show in a market diagram (supply and demand) what happens to the market price when supply increases.
 > (c) At what profit level will entry stop? Explain.
-> (d) In long-run equilibrium, price equals the minimum of GTK. Using TK = 0.5Q² + 10Q + 500, write the formula for GTK. Set GTK = MK (= Q + 10) and solve for Q. This is the efficient scale of the firm.
-> (e) Calculate GTK at the Q you found in (d). This is the long-run equilibrium price. Verify that profit = 0 at this price.
+> (d1) Schrijf GTK = TK/Q op. Deel elke term van TK = 0,5Q² + 10Q + 500 door Q. *Verwacht resultaat: GTK = 0,5Q + 10 + 500/Q.*
+> (d2) In long-run equilibrium, price equals the minimum of GTK. Set GTK = MK (= Q + 10) and solve for Q. *Tip: trek 10 van beide kanten af, vermenigvuldig met Q om de breuk weg te werken, verzamel Q²-termen.* Dit is de efficiënte schaal van het bedrijf.
+> (e) Calculate GTK at the Q you found in (d2). This is the long-run equilibrium price. Verify that profit = 0 at this price.
 > (f) Draw the long-run equilibrium for the individual firm: P = GTK at the minimum of GTK, with the MK curve passing through that point. Explain why this is the long-run result.
 
 **Lesson goals:**
 - Explain that positive profit attracts entry; negative profit causes exit
 - Understand that entry shifts market supply right → price falls
 - Understand that in long-run equilibrium: economic profit = 0
+- Herleid GTK uit TK door term-voor-term delen door Q
 - Calculate the efficient scale by setting GTK = MK and solving for Q
 - Calculate the long-run equilibrium price from the minimum GTK
 - Show that long-run equilibrium occurs where P = minimum GTK = MK
 - Draw the individual firm's long-run equilibrium graph
 
-**Difficulty notes:** Conceptual reasoning about dynamics plus a meaningful calculation. Exercise (d) is the key new skill: setting GTK = MK. Students write GTK = TK/Q = 0.5Q + 10 + 500/Q, then set this equal to MK = Q + 10, giving 0.5Q + 10 + 500/Q = Q + 10, which simplifies to 500/Q = 0.5Q, so Q² = 1000, Q ≈ 31.6. This algebra is demanding — the 500/Q term is unfamiliar. Guide students through it step by step. Exercise (e) provides the satisfying verification (profit = 0). One lesson works if you prioritise the calculation and keep the graphical work in (f) concise.
+**Difficulty notes:** Conceptual reasoning about dynamics plus a meaningful calculation. Exercises (d1)/(d2) are the key new skill: herleiden van GTK en vervolgens GTK = MK oplossen. Students write GTK = TK/Q = 0,5Q + 10 + 500/Q, then set this equal to MK = Q + 10, giving 0,5Q + 10 + 500/Q = Q + 10, which simplifies to 500/Q = 0,5Q, so Q² = 1000, Q ≈ 31,6. This algebra is demanding — the 500/Q term is unfamiliar. De splitsing in (d1)/(d2) en de algebra-voorbereiding aan het eind van §2 zijn cruciaal — zonder die stappen wordt §3 overweldigend voor de onderkant van de klas. Exercise (e) provides the satisfying verification (profit = 0). One lesson works if you prioritise the calculation and keep the graphical work in (f) concise.
 
 ---
 
