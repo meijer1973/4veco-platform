@@ -1,5 +1,7 @@
 # 4veco Platform
 
+**Deze directory bevat geen student-facing webpagina's.** Games/paragrafen/etc. worden hier ontwikkeld en via `node scripts/deploy.js "<module-pad>"` gegenereerd naar een sibling-module (`../3. Module 3 - Markt en overheid/` of `../3-Module-3-rewire-test/`). Zie `../CLAUDE.md` voor de volledige pipeline + directory-kaart. Als je een browserwijziging verwacht te zien, moet je eerst deployen — niets rendert rechtstreeks vanuit de platform-tree.
+
 All project documentation lives in dedicated files:
 
 - **AGENTS.md** — Repo overview, architecture, deploy scope, model usage, skills, testing, quality standards
