@@ -530,6 +530,1308 @@
       "exam_codes": ["A2.10", "A2.11", "A2.12", "D1.21"],
       "difficulty_notes": "Exercise (e) is the bridge to algebraic application. The hint deliberately uses an approximate MK ('each extra unit costs approximately 4Q') rather than formal differentiation — that comes in Module 3. Students learn the logic of the rule here; the calculus technique comes later. Exercise (f) builds verification habits. One lesson works because the rule emerges naturally from the table work in §1.4.3.",
       "source_ref": "knowledge/course_blueprint_v4.md §1.4.4"
+    },
+    {
+      "id": "2.1.1",
+      "module": 2,
+      "chapter": 1,
+      "paragraph": 1,
+      "paragraph_title": "Price elasticity: concept and calculation",
+      "difficulty": "MEDIUM",
+      "target_exercise": {
+        "context": "A cinema raises ticket prices from €10.00 to €12.00. The number of visitors drops from 500 to 420 per week.",
+        "subquestions": [
+          {"label": "a", "prompt": "Calculate the percentage change in price."},
+          {"label": "b", "prompt": "Calculate the percentage change in quantity demanded."},
+          {"label": "c", "prompt": "Calculate the price elasticity of demand (Ev = %ΔQv / %ΔP)."},
+          {"label": "d", "prompt": "Is the demand for cinema tickets elastic or inelastic? Explain what this means in plain language."},
+          {"label": "e", "prompt": "A petrol station raises its price from €1.80 to €1.90. Sales drop from 10,000 to 9,800 litres. Calculate Ev. Is petrol elastic or inelastic? Why does this make sense?"}
+        ]
+      },
+      "lesson_goals": [
+        "Calculate percentage changes for price and quantity",
+        "Apply the formula Ev = %ΔQv / %ΔP",
+        "Classify demand as elastic (|Ev| > 1) or inelastic (|Ev| < 1)",
+        "Explain intuitively why some goods are more elastic than others (substitutes, necessity vs luxury)"
+      ],
+      "required_skills": ["A15", "D06"],
+      "prior_knowledge_assumed": [],
+      "new_skills_introduced": ["A15", "D06"],
+      "missing_units_flagged": [
+        "Classify demand as elastic vs inelastic from |Ev| against the 1-threshold (concept-level, tight pairing with A15)",
+        "Explain intuitively why substitute-rich or luxury goods are more elastic (concept-level; necessity-vs-luxury, substitute availability)"
+      ],
+      "exam_codes": ["A2.4", "A2.5", "D1.3"],
+      "difficulty_notes": "The formula itself is simple, but students make errors in the percentage calculation (using new instead of old as base, forgetting the sign). Exercise (e) provides immediate contrast — elastic vs inelastic — which cements understanding. One lesson is doable if the percentage skill from §1.1.2 is solid. If not, this spills.",
+      "source_ref": "knowledge/course_blueprint_v4.md §2.1.1"
+    },
+    {
+      "id": "2.1.2",
+      "module": 2,
+      "chapter": 1,
+      "paragraph": 2,
+      "paragraph_title": "Elastic vs inelastic: the connection to omzet (revenue)",
+      "difficulty": "MEDIUM",
+      "target_exercise": {
+        "context": "Uses the cinema and petrol cases from §2.1.1 to discover the Ev↔omzet rule.",
+        "subquestions": [
+          {"label": "a", "prompt": "Cinema: price up from €10 to €12, visitors down from 500 to 420. Calculate omzet (total revenue = P × Q) before and after."},
+          {"label": "b", "prompt": "Did omzet go up or down? Explain this using the elasticity you calculated in §2.1.1."},
+          {"label": "c", "prompt": "The cinema owner wants to maximise omzet. Based on the Ev, should he raise the price further or lower it? Explain the rule."},
+          {"label": "d", "prompt": "Now consider the petrol station (price up from €1.80 to €1.90, litres from 10,000 to 9,800). Calculate omzet before and after. Did the price increase help the petrol station's revenue? Why?"},
+          {"label": "e", "prompt": "Complete the rule: 'If demand is elastic, a price increase leads to … omzet. If demand is inelastic, a price increase leads to … omzet.'"}
+        ]
+      },
+      "lesson_goals": [
+        "Calculate omzet = P × Q before and after a price change",
+        "Explain that elastic demand means quantity drops proportionally more than price rises → omzet falls",
+        "Explain that inelastic demand means quantity drops proportionally less → omzet rises",
+        "Apply the rule to advise a business on pricing strategy"
+      ],
+      "required_skills": ["A07", "A15", "D25"],
+      "prior_knowledge_assumed": ["A07", "A15"],
+      "new_skills_introduced": ["D25"],
+      "missing_units_flagged": [
+        "State and apply the Ev↔omzet-direction rule to advise a pricing move (concept-level, the business-relevance payoff of §2.1.1)"
+      ],
+      "exam_codes": ["A2.5", "D1.15"],
+      "difficulty_notes": "This is where elasticity becomes meaningful — students see why businesses care. Note that the formula omzet = P × Q (total revenue) is used here for the first time this year in a formal way. Students have an intuitive notion of revenue, but this is the first time they apply the formula systematically and connect it to a concept (elasticity). The rule 'elastic → price up means omzet down' is counterintuitive for some. One lesson works — the calculations are simple repetitions of §2.1.1, the new element is the interpretation.",
+      "source_ref": "knowledge/course_blueprint_v4.md §2.1.2"
+    },
+    {
+      "id": "2.1.3",
+      "module": 2,
+      "chapter": 1,
+      "paragraph": 3,
+      "paragraph_title": "Income elasticity and cross elasticity",
+      "difficulty": "MEDIUM",
+      "target_exercise": {
+        "context": "Income elasticity (Ei), cross elasticity (Ek), and multi-variable demand functions. Part C introduces Qx = 100 − 2Px + 0.5Py + 0.01Y as a realistic exam-style demand function.",
+        "subquestions": [
+          {"label": "a", "prompt": "Average household income rises by 5%. Demand for organic food rises by 8%. Demand for budget instant noodles drops by 3%. Calculate the income elasticity (Ei) for organic food and for instant noodles. Classify each: normal good or inferior good? Luxury or necessity?"},
+          {"label": "b", "prompt": "The price of coffee rises by 10%. The demand for tea rises by 4%. The demand for coffee filters drops by 6%. Calculate the cross elasticity (Ek) for tea with respect to coffee price, and for coffee filters with respect to coffee price. Classify: are tea and coffee substitutes or complements? What about coffee and coffee filters?"},
+          {"label": "c", "prompt": "The demand for good X is Qx = 100 − 2Px + 0.5Py + 0.01Y, with Px = 10, Py = 20, Y = 30000. Calculate the current Qx. Then: income rises to Y = 33000 (other factors unchanged) — calculate the new Qx and Ei. Then: Py rises from 20 to 24 (other factors at original values) — calculate the new Qx and Ek. Are X and Y substitutes or complements?"},
+          {"label": "d", "prompt": "Using the demand function from (c): predict what happens to the demand for X if a recession lowers income by 10%. Calculate the new Qx."}
+        ]
+      },
+      "lesson_goals": [
+        "Calculate Ei = %ΔQd / %ΔIncome",
+        "Classify goods: normal (Ei > 0) vs inferior (Ei < 0), necessity (0 < Ei < 1) vs luxury (Ei > 1)",
+        "Calculate Ek = %ΔQd(good A) / %ΔP(good B)",
+        "Classify pairs: substitutes (Ek > 0) vs complements (Ek < 0)",
+        "Read and use a demand function with multiple variables (price of other goods, income)",
+        "Use elasticity for predictions"
+      ],
+      "required_skills": ["A04", "A16", "A17", "D04", "D11", "D12", "D27"],
+      "prior_knowledge_assumed": ["A04", "D27"],
+      "new_skills_introduced": ["A16", "A17", "D04", "D11", "D12"],
+      "missing_units_flagged": [
+        "Classify normal vs inferior from Ei sign; luxury vs necessity from |Ei| vs 1 (concept-level, pairs with A17)",
+        "Read a multi-variable demand function Qx(Px, Py, Y) and evaluate at a point (A-domain candidate, ceteris paribus in action — the Part-C novel skill)",
+        "Predict Qd change from elasticity × percentage change in driver (A-domain candidate; inverts the measurement formula)"
+      ],
+      "exam_codes": ["A2.4", "A2.5", "D1.7", "D1.8", "D1.9"],
+      "difficulty_notes": "Parts A and B use the same formula structure as Ev — same skill, different variables. Students who mastered §2.1.1 handle this quickly. Part C introduces multi-variable demand functions, which appear in exam questions. Students must be comfortable substituting multiple values and holding other variables constant (ceteris paribus in action). This is the most novel element. One lesson works because parts A and B are fast; part C takes more time but is essential for exam preparation.",
+      "source_ref": "knowledge/course_blueprint_v4.md §2.1.3"
+    },
+    {
+      "id": "2.2.1",
+      "module": 2,
+      "chapter": 2,
+      "paragraph": 1,
+      "paragraph_title": "Consumer surplus",
+      "difficulty": "MEDIUM",
+      "target_exercise": {
+        "context": "The demand curve for concert tickets is P = 50 − 0.5Q (P in €, Q in tickets). The market price is €20.",
+        "subquestions": [
+          {"label": "a", "prompt": "Calculate the equilibrium quantity demanded at this price."},
+          {"label": "b", "prompt": "Draw the demand curve. Shade the area that represents the consumer surplus."},
+          {"label": "c", "prompt": "Calculate the consumer surplus. (Hint: it is a triangle.)"},
+          {"label": "d", "prompt": "Explain in your own words what consumer surplus means. Why is it a measure of welfare for buyers?"}
+        ]
+      },
+      "lesson_goals": [
+        "Define consumer surplus as the difference between willingness to pay and actual price, summed over all buyers",
+        "Identify CS graphically as the triangle between the demand curve and the price line",
+        "Calculate CS as area of a triangle: ½ × base × height",
+        "Interpret CS as a measure of buyer welfare"
+      ],
+      "required_skills": ["A03", "A10", "A19", "A30"],
+      "prior_knowledge_assumed": ["A03", "A10"],
+      "new_skills_introduced": ["A19", "A30"],
+      "missing_units_flagged": [
+        "Verbal: interpret CS as aggregate willingness-to-pay minus paid-price (concept-level, welfare-framing)",
+        "Identify the correct triangle for CS on a P–Q diagram (grafisch skill, A-domain candidate; common student trap is shading the wrong area)"
+      ],
+      "exam_codes": ["A2.16", "A2.17", "D3.1"],
+      "difficulty_notes": "The concept is visual and concrete. The calculation (triangle area) is simple geometry. The main stumbling block is correctly identifying which triangle — students sometimes shade the wrong area. One lesson comfortable.",
+      "source_ref": "knowledge/course_blueprint_v4.md §2.2.1"
+    },
+    {
+      "id": "2.2.2",
+      "module": 2,
+      "chapter": 2,
+      "paragraph": 2,
+      "paragraph_title": "Producer surplus, total surplus, and the link to marginal cost",
+      "difficulty": "MEDIUM",
+      "target_exercise": {
+        "context": "The supply curve for concert tickets is P = 5 + 0.25Q. The demand curve is P = 50 − 0.5Q.",
+        "subquestions": [
+          {"label": "a", "prompt": "Calculate the equilibrium price and quantity."},
+          {"label": "b", "prompt": "Draw both curves. Shade and label CS and PS in different colours."},
+          {"label": "c", "prompt": "Calculate CS and PS separately."},
+          {"label": "d", "prompt": "Calculate the total surplus (TS = CS + PS)."},
+          {"label": "e", "prompt": "The supply curve represents the marginal cost of each additional ticket. Explain why producer surplus can also be read as: 'the difference between the price received and the marginal cost of production, summed over all units sold.' Show this in your graph."},
+          {"label": "f", "prompt": "A promoter asks: 'Is this the best possible outcome for society?' Answer using the concept of total surplus."}
+        ]
+      },
+      "lesson_goals": [
+        "Define producer surplus as the difference between actual price received and minimum acceptable price, summed over all sellers",
+        "Identify PS graphically (triangle between price line and supply curve)",
+        "Calculate PS as a triangle area",
+        "Calculate total surplus = CS + PS",
+        "Understand that the supply curve IS the marginal cost curve — so PS is the area between price and MC",
+        "Begin to understand that competitive equilibrium maximises total surplus"
+      ],
+      "required_skills": ["A06", "A10", "A19", "D20"],
+      "prior_knowledge_assumed": ["A06", "A10", "A19"],
+      "new_skills_introduced": ["D20"],
+      "missing_units_flagged": [
+        "Reinterpret the supply curve as the marginal cost curve (concept-level; critical for monopoly welfare in §3.3.1)",
+        "Compute total surplus TS = CS + PS and recognise it as the competitive-equilibrium welfare metric (concept-level)"
+      ],
+      "exam_codes": ["A2.16", "A2.17", "D3.1"],
+      "difficulty_notes": "The graphical work for PS mirrors CS — students pick it up quickly. The challenging element is exercise (e): connecting PS to marginal cost. The supply curve has been treated as 'willingness to sell' so far; now students must see it as the MC curve. This dual interpretation (supply = MC) is critical for understanding welfare effects of monopoly in Module 3. Spend time on this connection — it is more important than the triangle calculation itself. One lesson works if you prioritise the MC connection over drilling calculations.",
+      "source_ref": "knowledge/course_blueprint_v4.md §2.2.2"
+    },
+    {
+      "id": "2.2.3",
+      "module": 2,
+      "chapter": 2,
+      "paragraph": 3,
+      "paragraph_title": "Pareto-efficiency and deadweight loss introduction",
+      "difficulty": "MEDIUM",
+      "target_exercise": {
+        "context": "Using the market from §2.2.2 (equilibrium P = €20, Q = 60, TS = 1350): a forced price of €30 creates a welfare loss that students calculate and interpret.",
+        "subquestions": [
+          {"label": "a", "prompt": "Suppose the government forces the price to €30. Calculate the new Qd and Qs. Which one determines actual transactions? Why?"},
+          {"label": "b", "prompt": "Calculate CS and PS at the forced price of €30."},
+          {"label": "c", "prompt": "Calculate the new total surplus. How much surplus is lost compared to the free market equilibrium?"},
+          {"label": "d", "prompt": "The lost surplus is called deadweight loss (welvaartsverlies). Shade it in your graph."},
+          {"label": "e", "prompt": "Explain in your own words what Pareto-efficient means. Why is the free market equilibrium Pareto-efficient and the situation at P = €30 not?"}
+        ]
+      },
+      "lesson_goals": [
+        "Define Pareto-efficiency: no one can be made better off without making someone else worse off",
+        "Understand that the competitive equilibrium is Pareto-efficient (TS is maximised)",
+        "Calculate deadweight loss when price deviates from equilibrium",
+        "Recognise that any price above or below equilibrium creates deadweight loss",
+        "Identify deadweight loss graphically (the 'lost triangle')"
+      ],
+      "required_skills": ["A10", "A19", "A32", "D20"],
+      "prior_knowledge_assumed": ["A10", "A19", "D20"],
+      "new_skills_introduced": ["A32"],
+      "missing_units_flagged": [
+        "Determine the short-side rule (transactions at a forced price = min(Qd, Qs)) and name which side rations (concept-level + application)",
+        "Give a verbal Pareto-efficiency definition and argue why competitive equilibrium satisfies it (concept-level, mastery_target understand)"
+      ],
+      "exam_codes": ["A2.16", "A2.17", "D3.5"],
+      "difficulty_notes": "The Pareto concept is abstract but exercise (e) makes it concrete: 'can you improve someone's position without hurting another?' The deadweight loss calculation is straightforward (it's another triangle). The conceptual challenge is that students must see why transactions are 'lost.' One lesson works because the math is revision — the new element is the interpretation.",
+      "source_ref": "knowledge/course_blueprint_v4.md §2.2.3"
+    },
+    {
+      "id": "2.3.1",
+      "module": 2,
+      "chapter": 3,
+      "paragraph": 1,
+      "paragraph_title": "Taxes: the wedge and the new equilibrium",
+      "difficulty": "MEDIUM",
+      "target_exercise": {
+        "context": "Market: Qv = −2P + 20 and Qa = P − 1. The government introduces a tax of €3 per unit, paid by the producer.",
+        "subquestions": [
+          {"label": "a", "prompt": "Calculate the original equilibrium price and quantity."},
+          {"label": "b", "prompt": "The tax shifts the supply curve upward by €3. Write the new supply function."},
+          {"label": "c", "prompt": "Calculate the new equilibrium. What is the consumer price (what the buyer pays)? What is the producer price (what the seller keeps after paying tax)?"},
+          {"label": "d", "prompt": "Draw the situation before and after the tax. Mark the tax wedge."}
+        ]
+      },
+      "lesson_goals": [
+        "Understand that a per-unit tax creates a wedge between consumer and producer price",
+        "Calculate the new supply function after tax (shift supply up by tax amount)",
+        "Calculate the new equilibrium with tax",
+        "Distinguish between consumer price and producer price",
+        "Show the tax wedge graphically"
+      ],
+      "required_skills": ["A06", "A23", "D05", "D07"],
+      "prior_knowledge_assumed": ["A06"],
+      "new_skills_introduced": ["A23", "D05", "D07"],
+      "missing_units_flagged": [
+        "Derive the after-tax supply function by adding the tax per unit to the inverse-supply (A-domain candidate; the 'shift-up-by-tax' mechanics)",
+        "Distinguish consumer price Pc vs producer price Pp and the tax wedge = Pc − Pp (concept-level + grafisch)"
+      ],
+      "exam_codes": ["A2.10", "A2.14", "D1.13", "D1.24"],
+      "difficulty_notes": "The concept of 'the supply curve shifts up by the tax amount' is often taught but rarely understood. Students confuse 'upward shift = less supply.' Exercise (d) is essential — the graph makes the wedge visible. One lesson works if you focus on the mechanics (how to calculate) and save the welfare analysis for §2.3.2.",
+      "source_ref": "knowledge/course_blueprint_v4.md §2.3.1"
+    },
+    {
+      "id": "2.3.2",
+      "module": 2,
+      "chapter": 3,
+      "paragraph": 2,
+      "paragraph_title": "Taxes: burden sharing, afwenteling and welfare loss",
+      "difficulty": "MEDIUM",
+      "target_exercise": {
+        "context": "Using the market from §2.3.1 (original: P* = 7, Q* = 6; after tax €3: Pc = 8, Pp = 5, Qt = 3).",
+        "subquestions": [
+          {"label": "a", "prompt": "How much of the €3 tax is paid by the consumer? How much by the producer?"},
+          {"label": "b", "prompt": "Calculate the afwentelingspercentage (% of tax passed on to consumer)."},
+          {"label": "c", "prompt": "Calculate CS before and after the tax."},
+          {"label": "d", "prompt": "Calculate PS before and after the tax."},
+          {"label": "e", "prompt": "Calculate total tax revenue for the government."},
+          {"label": "f", "prompt": "Calculate the deadweight loss. Verify: old TS = new CS + new PS + tax revenue + DWL."}
+        ]
+      },
+      "lesson_goals": [
+        "Calculate how the tax burden is shared between buyer and seller",
+        "Calculate the afwentelingspercentage",
+        "Calculate CS, PS and tax revenue in the post-tax situation",
+        "Calculate deadweight loss from taxation",
+        "Understand that taxes always create some deadweight loss (except in extreme elasticity cases)"
+      ],
+      "required_skills": ["A10", "A19", "A23", "A32", "D03", "D07"],
+      "prior_knowledge_assumed": ["A10", "A19", "A23", "D07"],
+      "new_skills_introduced": ["A32", "D03"],
+      "missing_units_flagged": [
+        "Compute afwentelingspercentage = (Pc − P*) / tax × 100 and interpret it (A-domain candidate; the consumer-burden metric)",
+        "Apply the surplus-accounting identity: old TS = new CS + new PS + tax revenue + DWL (concept-level, completeness check)",
+        "Compute tax revenue rectangle (tax × Qt) graphically and numerically (grafisch + reken skill, overlaps A32 but separable)"
+      ],
+      "exam_codes": ["A2.16", "A2.17", "D3.1", "D3.9"],
+      "difficulty_notes": "This is a calculation-heavy lesson with 5–6 separate computations. The key insight — 'not all lost CS and PS goes to the government; some is simply lost' — is the deadweight loss. Students need the graph from §2.3.1 in front of them. One lesson is tight. Recommend: do exercises (a–d) in class, assign (e–f) as homework.",
+      "source_ref": "knowledge/course_blueprint_v4.md §2.3.2"
+    },
+    {
+      "id": "2.3.3",
+      "module": 2,
+      "chapter": 3,
+      "paragraph": 3,
+      "paragraph_title": "Subsidies: mirror of taxes",
+      "difficulty": "MEDIUM",
+      "target_exercise": {
+        "context": "Market: Qv = −4P + 40 and Qa = 2P − 2. The government gives a subsidy of €3 per unit to producers.",
+        "subquestions": [
+          {"label": "a", "prompt": "Calculate the original equilibrium."},
+          {"label": "b", "prompt": "Write the new supply function (supply shifts down by subsidy amount)."},
+          {"label": "c", "prompt": "Calculate the new equilibrium. What price does the consumer pay? What does the producer effectively receive?"},
+          {"label": "d", "prompt": "Calculate CS and PS before and after the subsidy."},
+          {"label": "e", "prompt": "Calculate the total cost of the subsidy to the government (= subsidy × new Q)."},
+          {"label": "f", "prompt": "Calculate the deadweight loss. (Yes, subsidies also create DWL.)"},
+          {"label": "g", "prompt": "Draw the complete graph showing CS, PS, government cost, and DWL."}
+        ]
+      },
+      "lesson_goals": [
+        "Apply the tax framework in reverse: supply shifts down instead of up",
+        "Calculate new equilibrium, consumer and producer prices after subsidy",
+        "Calculate CS, PS, government expenditure, and DWL",
+        "Understand that subsidies also create deadweight loss (overproduction beyond efficient level)"
+      ],
+      "required_skills": ["A06", "A10", "A19", "A27", "D19", "D29"],
+      "prior_knowledge_assumed": ["A06", "A10", "A19"],
+      "new_skills_introduced": ["A27", "D19", "D29"],
+      "missing_units_flagged": [
+        "Derive the after-subsidy supply function by subtracting the subsidy per unit from the inverse-supply (A-domain candidate; the mirror mechanic of §2.3.1)",
+        "Explain that subsidies cause DWL via overproduction beyond the Pareto-efficient quantity (concept-level, counterintuitive to students)",
+        "Compute government subsidy expenditure = subsidy × Q_new (reken skill, A-domain candidate)"
+      ],
+      "exam_codes": ["A2.15", "A2.16", "D3.5", "D3.9"],
+      "difficulty_notes": "If students understood §2.3.1 and §2.3.2, this is mechanical transfer — same skills, different direction. The surprise is that subsidies also cause DWL (students assume subsidies are 'purely good'). One lesson works because the method is identical to taxes.",
+      "source_ref": "knowledge/course_blueprint_v4.md §2.3.3"
+    },
+    {
+      "id": "2.4.1",
+      "module": 2,
+      "chapter": 4,
+      "paragraph": 1,
+      "paragraph_title": "Maximum price (prijsplafond)",
+      "difficulty": "MEDIUM",
+      "target_exercise": {
+        "context": "The market for rental housing: Qv = −5P + 6000 and Qa = 3P − 1600 (P in €/month, Q in apartments). The government sets a maximum rent of €800/month.",
+        "subquestions": [
+          {"label": "a", "prompt": "Calculate the equilibrium rent and number of apartments rented."},
+          {"label": "b", "prompt": "The government sets a maximum rent of €800/month. Is this below or above the equilibrium price? Why does this matter?"},
+          {"label": "c", "prompt": "Calculate the quantity demanded and quantity supplied at P = 800. Calculate the shortage."},
+          {"label": "d", "prompt": "Draw the graph. Shade the shortage."},
+          {"label": "e", "prompt": "Calculate CS and PS at the maximum price. Calculate the deadweight loss."},
+          {"label": "f", "prompt": "A student says: 'The maximum price is good because it helps renters.' Evaluate this claim: which renters benefit, and who is harmed?"}
+        ]
+      },
+      "lesson_goals": [
+        "Understand that a maximum price must be below equilibrium to have effect",
+        "Calculate shortage = Qd − Qs at the controlled price",
+        "Calculate welfare effects: some CS is gained from lower price, some is lost from fewer transactions",
+        "Identify deadweight loss graphically and computationally",
+        "Evaluate the trade-off: lower price for some vs fewer available units"
+      ],
+      "required_skills": ["A06", "A10", "A19", "A26", "A32"],
+      "prior_knowledge_assumed": ["A06", "A10", "A19"],
+      "new_skills_introduced": ["A26", "A32"],
+      "missing_units_flagged": [
+        "Argue that a maximum price has no effect unless set below equilibrium (concept-level; the 'binding-constraint' condition)",
+        "Structure a beoordeel-answer: who wins, who loses under a max price — renters-with-a-unit vs renters-without (concept-level + verbal skill)"
+      ],
+      "exam_codes": ["A2.15", "A2.16", "D3.10", "D3.9"],
+      "difficulty_notes": "The welfare analysis here is more nuanced than taxes: some consumers gain, others lose access entirely. Exercise (f) forces critical thinking. One lesson works — the graph is similar to §2.2.3 (forced price deviation), so students recognise the pattern.",
+      "source_ref": "knowledge/course_blueprint_v4.md §2.4.1"
+    },
+    {
+      "id": "2.4.2",
+      "module": 2,
+      "chapter": 4,
+      "paragraph": 2,
+      "paragraph_title": "Minimum price (minimumprijs/garantieprijs)",
+      "difficulty": "MEDIUM",
+      "target_exercise": {
+        "context": "The EU sets a minimum price for butter at €6/kg. The market: Qv = −10P + 100 and Qa = 5P − 5 (Q in millions of kg).",
+        "subquestions": [
+          {"label": "a", "prompt": "Calculate the equilibrium price and quantity."},
+          {"label": "b", "prompt": "Calculate Qd and Qa at the minimum price of €6. Calculate the surplus (aanbodoverschot)."},
+          {"label": "c", "prompt": "The EU buys the surplus. Calculate the cost to the EU."},
+          {"label": "d", "prompt": "Draw the graph. Shade the surplus, CS, PS, and the deadweight loss."},
+          {"label": "e", "prompt": "Who benefits from the minimum price? Who pays? Is it Pareto-efficient?"}
+        ]
+      },
+      "lesson_goals": [
+        "Understand that a minimum price must be above equilibrium to have effect",
+        "Calculate surplus = Qs − Qd at the controlled price",
+        "Understand government options: buy surplus, destroy it, or export it",
+        "Calculate the cost of intervention",
+        "Calculate welfare effects: PS increases but CS decreases, plus DWL"
+      ],
+      "required_skills": ["A06", "A10", "A19", "A25", "A32"],
+      "prior_knowledge_assumed": ["A06", "A10", "A19"],
+      "new_skills_introduced": ["A25", "A32"],
+      "missing_units_flagged": [
+        "Argue that a minimum price has no effect unless set above equilibrium (concept-level; binding-constraint, mirror of §2.4.1)",
+        "Compute the cost to the government of buying up the aanbodoverschot = (Qs − Qd) × Pmin (reken skill, A-domain candidate)",
+        "Evaluate distributional effect: who gains (producers), who pays (consumers + taxpayers) (concept-level + verbal)"
+      ],
+      "exam_codes": ["A2.15", "A2.16", "D3.10", "D3.9"],
+      "difficulty_notes": "Mirror of §2.4.1. Students who understood maximum price handle this quickly. The surplus (aanbodoverschot) vs shortage distinction is important to drill. The EU butter/milk example makes it concrete. One lesson comfortable.",
+      "source_ref": "knowledge/course_blueprint_v4.md §2.4.2"
+    },
+    {
+      "id": "2.4.3",
+      "module": 2,
+      "chapter": 4,
+      "paragraph": 3,
+      "paragraph_title": "Production quotas",
+      "difficulty": "MEDIUM",
+      "target_exercise": {
+        "context": "The milk market: Qv = −2P + 200 and Qa = P − 10 (Q in million litres). The government introduces a production quota of 50 million litres.",
+        "subquestions": [
+          {"label": "a", "prompt": "Calculate the free market equilibrium (P and Q)."},
+          {"label": "b", "prompt": "The government introduces a production quota of 50 million litres. At this quantity, what price are consumers willing to pay? (Read from the demand curve.)"},
+          {"label": "c", "prompt": "Calculate CS and PS at the quota. Compare with free market TS."},
+          {"label": "d", "prompt": "Calculate the deadweight loss."},
+          {"label": "e", "prompt": "Compare the quota with a minimum price that achieves the same producer price. Which policy creates less deadweight loss?"},
+          {"label": "f", "prompt": "Why might producers actually prefer a quota? Think about certainty of income."}
+        ]
+      },
+      "lesson_goals": [
+        "Understand that a quota restricts output directly (instead of manipulating price)",
+        "Calculate the new market price by substituting the quota quantity into the demand function",
+        "Calculate welfare effects of a quota",
+        "Compare quotas with other policy instruments (minimum price, tax)",
+        "Understand that producers may gain from restricted supply (higher price per unit)"
+      ],
+      "required_skills": ["A04", "A06", "A10", "A19", "A32"],
+      "prior_knowledge_assumed": ["A04", "A06", "A10", "A19", "A32"],
+      "new_skills_introduced": [],
+      "missing_units_flagged": [
+        "Invert the demand function to read price from a given quota quantity (A-domain candidate; bridges to §3.2 monopoly mechanics)",
+        "Compare welfare effects of quota vs minimum price vs tax for the same producer-price target (concept-level + analytical; exam-integration skill)",
+        "Explain why producers can prefer a quota to free-market output (concept-level, income-certainty argument)"
+      ],
+      "exam_codes": ["A2.15", "A2.16", "D3.10", "D3.9"],
+      "difficulty_notes": "Slightly more complex than §2.4.1 and §2.4.2 because the mechanism is different: quantity is fixed, price adjusts via demand curve. Exercise (e) is the integrative challenge — comparing instruments. This is valuable exam preparation. One lesson works because students now have the surplus analysis routine down.",
+      "source_ref": "knowledge/course_blueprint_v4.md §2.4.3"
+    },
+    {
+      "id": "3.1.1",
+      "module": 3,
+      "chapter": 1,
+      "paragraph": 1,
+      "paragraph_title": "Characteristics of volkomen concurrentie",
+      "difficulty": "LIGHT",
+      "target_exercise": {
+        "context": "A wheat farmer sells wheat at the market price of €200 per ton. He cannot influence this price.",
+        "subquestions": [
+          {"label": "a", "prompt": "Name four characteristics of a perfectly competitive market. For each, explain why the wheat market fits."},
+          {"label": "b", "prompt": "The farmer considers charging €210 per ton. Explain why this won't work."},
+          {"label": "c", "prompt": "Draw the farmer's individual price line. Label it P = GO = MO."},
+          {"label": "d", "prompt": "Explain why for this farmer MO = price."}
+        ]
+      },
+      "lesson_goals": [
+        "Name the four characteristics: many buyers and sellers, homogeneous product, free entry/exit, perfect information",
+        "Explain why individual firms are price takers (hoeveelheidsaanpasser)",
+        "Understand that P = GO = MO in perfect competition (horizontal price line)",
+        "Draw the individual firm's price/revenue lines"
+      ],
+      "required_skills": ["D09", "D15"],
+      "prior_knowledge_assumed": [],
+      "new_skills_introduced": ["D09", "D15"],
+      "missing_units_flagged": [
+        "Name the four characteristics of volkomen concurrentie and recognise them in a concrete market (concept-level, mastery_target understand)",
+        "Explain why an individual firm in volkomen concurrentie is a hoeveelheidsaanpasser / price taker (concept-level)",
+        "Show P = GO = MO for the individual firm (grafisch + concept; the horizontal price line representation)"
+      ],
+      "exam_codes": ["D2.1"],
+      "difficulty_notes": "Conceptual lesson. The P = GO = MO equality is stated and understood visually, not derived mathematically. Students find this intuitive ('if you always get the same price, each extra unit brings in that price'). One lesson comfortable — use the extra time for real-world examples (commodity markets, agriculture).",
+      "source_ref": "knowledge/course_blueprint_v4.md §3.1.1"
+    },
+    {
+      "id": "3.1.2",
+      "module": 3,
+      "chapter": 1,
+      "paragraph": 2,
+      "paragraph_title": "Profit maximisation: MO = MK at volkomen concurrentie",
+      "difficulty": "MEDIUM",
+      "target_exercise": {
+        "context": "The wheat farmer's costs are TK = 0.5Q² + 10Q + 500 (Q in tons). Market price is €200/ton. First use of the differentiation power rule on a quadratic TK.",
+        "subquestions": [
+          {"label": "a", "prompt": "Write down the MK function. (Hint: differentiate TK. Remember: if TK = aQ² + bQ + c, then MK = 2aQ + b.)"},
+          {"label": "b", "prompt": "Write down the MO. (What is MO for a price taker?)"},
+          {"label": "c", "prompt": "Set MO = MK and solve for Q. This is the profit-maximising quantity."},
+          {"label": "d", "prompt": "Calculate total revenue, total costs, and total profit at this Q."},
+          {"label": "e", "prompt": "Draw a graph with MK and the horizontal price/MO line. Mark the profit-maximising point."},
+          {"label": "f", "prompt": "Would this farmer produce at Q = 100? Explain using MO and MK."}
+        ]
+      },
+      "lesson_goals": [
+        "Differentiate a simple quadratic TK function to find MK (power rule: bring down exponent, reduce by one)",
+        "State MO = P for a price-taking firm",
+        "Find profit-maximising output by setting MO = MK",
+        "Calculate winst at optimal Q",
+        "Show the MO = MK solution graphically",
+        "Explain why producing beyond MO = MK reduces profit"
+      ],
+      "required_skills": ["A11", "A13", "A20", "A21", "A33", "D30"],
+      "prior_knowledge_assumed": ["A20", "A21", "D30"],
+      "new_skills_introduced": ["A11", "A13", "A33"],
+      "missing_units_flagged": [
+        "Apply the power rule to differentiate aQ² + bQ + c, producing 2aQ + b (A-domain candidate; A11 covers 'Afgeleide bepalen' generally but not this specific TK→MK recipe)",
+        "State MO = P as a special case for a price-taker firm (concept-level, tight pair with §3.1.1)"
+      ],
+      "exam_codes": ["A2.10", "A2.11", "A2.12", "D1.19", "D1.21"],
+      "difficulty_notes": "This is where differentiation enters the course. The power rule on a quadratic is simple ('multiply by 2, drop the Q's power by 1'). Students need to see it as a recipe. The conceptual link ('marginal cost tells you what one more ton costs') was established in §1.4.3–§4. Exercise (f) tests whether they understand the rule, not just apply it. One lesson is tight — spend the first 15 minutes on the differentiation technique, then apply it. An algebra bridge at the end of the lesson previews GTK = TK/Q term-by-term for §3.1.3.",
+      "source_ref": "knowledge/course_blueprint_v4.md §3.1.2"
+    },
+    {
+      "id": "3.1.3",
+      "module": 3,
+      "chapter": 1,
+      "paragraph": 3,
+      "paragraph_title": "Long-run equilibrium: entry and exit",
+      "difficulty": "MEDIUM",
+      "target_exercise": {
+        "context": "The wheat farmer from §3.1.2 makes a profit. Students walk the long-run dynamics: entry → supply shifts → price falls → profit erodes → zero-profit equilibrium at P = min GTK = MK.",
+        "subquestions": [
+          {"label": "a", "prompt": "Explain what will happen in the long run: will new farmers enter or exit the market? What happens to total market supply?"},
+          {"label": "b", "prompt": "Show in a market diagram (supply and demand) what happens to the market price when supply increases."},
+          {"label": "c", "prompt": "At what profit level will entry stop? Explain."},
+          {"label": "d1", "prompt": "Schrijf GTK = TK/Q op. Deel elke term van TK = 0,5Q² + 10Q + 500 door Q. (Verwacht resultaat: GTK = 0,5Q + 10 + 500/Q.)"},
+          {"label": "d2", "prompt": "In long-run equilibrium, price equals the minimum of GTK. Set GTK = MK (= Q + 10) and solve for Q. (Tip: trek 10 van beide kanten af, vermenigvuldig met Q om de breuk weg te werken, verzamel Q²-termen.) Dit is de efficiënte schaal van het bedrijf."},
+          {"label": "e", "prompt": "Calculate GTK at the Q you found in (d2). This is the long-run equilibrium price. Verify that profit = 0 at this price."},
+          {"label": "f", "prompt": "Draw the long-run equilibrium for the individual firm: P = GTK at the minimum of GTK, with the MK curve passing through that point. Explain why this is the long-run result."}
+        ]
+      },
+      "lesson_goals": [
+        "Explain that positive profit attracts entry; negative profit causes exit",
+        "Understand that entry shifts market supply right → price falls",
+        "Understand that in long-run equilibrium: economic profit = 0",
+        "Herleid GTK uit TK door term-voor-term delen door Q",
+        "Calculate the efficient scale by setting GTK = MK and solving for Q",
+        "Calculate the long-run equilibrium price from the minimum GTK",
+        "Show that long-run equilibrium occurs where P = minimum GTK = MK",
+        "Draw the individual firm's long-run equilibrium graph"
+      ],
+      "required_skills": ["A11", "A13", "A14", "A28", "A37", "D13"],
+      "prior_knowledge_assumed": ["A11", "A13", "A14"],
+      "new_skills_introduced": ["A28", "A37"],
+      "missing_units_flagged": [
+        "Herleid GTK uit TK door term-voor-term delen door Q (A-domain candidate; the 500/Q-term is the didactic bottleneck explicitly scaffolded into §3.1.2)",
+        "Argue that entry erodes positive profit and exit eliminates losses, so long-run profit = 0 in volkomen concurrentie (concept-level, mastery_target understand)",
+        "Recognise the long-run equilibrium geometric condition P = min GTK = MK and explain why (concept-level + grafisch)"
+      ],
+      "exam_codes": ["A2.10", "A2.11", "A4.5", "D1.21"],
+      "difficulty_notes": "Conceptual reasoning about dynamics plus a meaningful calculation. Exercises (d1)/(d2) are the key new skill: herleiden van GTK en vervolgens GTK = MK oplossen. The 500/Q term is demanding; the scaffold (d1→d2) and the algebra bridge at the end of §3.1.2 are cruciaal — zonder die stappen wordt deze paragraaf overweldigend voor de onderkant van de klas.",
+      "source_ref": "knowledge/course_blueprint_v4.md §3.1.3"
+    },
+    {
+      "id": "3.2.1",
+      "module": 3,
+      "chapter": 2,
+      "paragraph": 1,
+      "paragraph_title": "Characteristics of monopoly",
+      "difficulty": "MEDIUM",
+      "target_exercise": {
+        "context": "The NS (Dutch Railways) is the only provider of train services on most routes. Students map causes of monopoly, the prijszetter role, and compare with volkomen concurrentie.",
+        "subquestions": [
+          {"label": "a", "prompt": "Name three reasons why monopolies can exist (with an example for each)."},
+          {"label": "b", "prompt": "A monopolist faces the entire market demand curve. Explain why a monopolist is a prijszetter, not a hoeveelheidsaanpasser."},
+          {"label": "c", "prompt": "Compare perfect competition and monopoly in a table: number of sellers, product type, entry barriers, price influence."},
+          {"label": "d", "prompt": "Apple charges €1200 for an iPhone while production costs are estimated at €400. Does Apple have a monopoly? Explain using market structure characteristics."}
+        ]
+      },
+      "lesson_goals": [
+        "Name causes of monopoly: legal (government-granted), natural (economies of scale), patents",
+        "Explain that a monopolist faces the downward-sloping market demand curve",
+        "Understand prijszetter: the monopolist chooses the price (or equivalently, the quantity)",
+        "Distinguish monopoly from perfect competition using structural characteristics",
+        "Apply the concept to real-world cases (critical thinking: is Apple really a monopolist?)"
+      ],
+      "required_skills": ["D15"],
+      "prior_knowledge_assumed": ["D15"],
+      "new_skills_introduced": [],
+      "missing_units_flagged": [
+        "Name the typical causes of monopoly — legal, natural, patent — with an example each (concept-level, mastery_target understand)",
+        "Contrast prijszetter vs hoeveelheidsaanpasser and link to the slope of the firm-level demand curve (concept-level)",
+        "Judge real-world market power claims against the four structural characteristics (concept-level + verbal analysis; the 'is Apple really a monopolist?' style question)"
+      ],
+      "exam_codes": ["D2.1", "D2.2"],
+      "difficulty_notes": "Conceptual lesson with no calculations. Exercise (d) is a discussion-starter — Apple has market power but isn't a pure monopolist (substitutes exist). This nuance engages students. One lesson comfortable.",
+      "source_ref": "knowledge/course_blueprint_v4.md §3.2.1"
+    },
+    {
+      "id": "3.2.2",
+      "module": 3,
+      "chapter": 2,
+      "paragraph": 2,
+      "paragraph_title": "MO at monopoly: understanding the declining MO curve",
+      "difficulty": "MEDIUM",
+      "target_exercise": {
+        "context": "A monopolist faces demand Qv = 100 − 2P, or equivalently P = 50 − 0.5Q. Students build the Q/P/TO/MO table, then verify with differentiation.",
+        "subquestions": [
+          {"label": "a", "prompt": "Complete the Q/P/TO/MO table for Q = 0, 10, 20, 30, 40, 50, 60 using TO = P×Q and MO = ΔTO/ΔQ."},
+          {"label": "b", "prompt": "At which Q is TO maximised? What is MO at that point?"},
+          {"label": "c", "prompt": "Draw the demand curve (P line) and the MO curve in the same graph. What do you notice about the slope of MO compared to the demand curve?"},
+          {"label": "d", "prompt": "Explain in words why MO is lower than the price for a monopolist. (Hint: to sell one more unit, the monopolist must lower the price on ALL units.)"},
+          {"label": "e", "prompt": "Verify using the formula: TO = P × Q = (50 − 0.5Q) × Q = 50Q − 0.5Q². Differentiate to find MO. Compare with your table."}
+        ]
+      },
+      "lesson_goals": [
+        "Calculate TO from a demand function: TO = P × Q",
+        "Calculate MO from a table (ΔTO/ΔQ)",
+        "Discover that MO < P for a monopolist (because lowering price on all units)",
+        "Observe that the MO curve has twice the slope of the demand curve",
+        "Derive MO by differentiating TO (first application of power rule on a quadratic revenue function)"
+      ],
+      "required_skills": ["A03", "A07", "A11", "A12"],
+      "prior_knowledge_assumed": ["A03", "A07"],
+      "new_skills_introduced": ["A11", "A12"],
+      "missing_units_flagged": [
+        "Explain why MO < P for a monopolist — the 'price-cut-on-all-units' argument (concept-level, the non-obvious insight of this paragraph)",
+        "Observe that the MO curve has twice the slope of a linear demand curve (concept-level + grafisch; pattern recognition before calculus)",
+        "Build TO = P×Q from a linear P(Q) and expand into aQ + bQ² form (A-domain candidate; step-0 of the §3.2.3 procedure)"
+      ],
+      "exam_codes": ["A2.10", "A2.11"],
+      "difficulty_notes": "This is the key preparation lesson for §3.2.3. The table method (exercises a–c) builds intuition BEFORE the algebra (exercise e). Students see the pattern in the numbers first, then verify with calculus. The differentiation in (e) uses the same power rule from §3.1.2. One lesson works IF you do the table first — don't start with algebra.",
+      "source_ref": "knowledge/course_blueprint_v4.md §3.2.2"
+    },
+    {
+      "id": "3.2.3",
+      "module": 3,
+      "chapter": 2,
+      "paragraph": 3,
+      "paragraph_title": "Profit maximisation at monopoly: full calculation",
+      "difficulty": "HEAVY",
+      "target_exercise": {
+        "context": "The monopolist from §3.2.2 has demand P = 50 − 0.5Q and costs TK = 0.25Q² + 5Q + 100. The hardest single lesson in the course: the full 6-step monopoly procedure from demand to P*, Q*, winst and graph.",
+        "subquestions": [
+          {"label": "a", "prompt": "Write TO as a function of Q: TO = (50 − 0.5Q) × Q. Expand."},
+          {"label": "b", "prompt": "Differentiate TO to find MO."},
+          {"label": "c", "prompt": "Differentiate TK to find MK."},
+          {"label": "d", "prompt": "Set MO = MK. Solve for Q."},
+          {"label": "e", "prompt": "Find the price by substituting Q back into the demand function P = 50 − 0.5Q."},
+          {"label": "f", "prompt": "Calculate total profit: Winst = TO − TK."},
+          {"label": "g", "prompt": "Draw the graph: demand curve, MO, MK. Mark the profit-maximising Q and P. Shade the area of profit."},
+          {"label": "h", "prompt": "Could the monopolist charge a higher price than your answer in (e)? What would happen to quantity and profit?"}
+        ]
+      },
+      "lesson_goals": [
+        "Execute the full monopoly profit maximisation procedure: TO→MO, TK→MK, MO=MK, substitute back, winst",
+        "Draw the complete monopoly graph with MO, MK, demand curve",
+        "Identify the profit area graphically"
+      ],
+      "required_skills": ["A03", "A07", "A11", "A12", "A13", "A20", "A21", "A35", "D30"],
+      "prior_knowledge_assumed": ["A03", "A07", "A11", "A12", "A13", "A20", "A21", "D30"],
+      "new_skills_introduced": ["A35"],
+      "missing_units_flagged": [
+        "Execute the full 6-step monopoly procedure end-to-end (A35 is registered as 'Max. winst monopolist'; this procedure-execution skill is what it should canonically encode — verify A35's procedure field covers it)",
+        "Shade the monopolist's profit rectangle (P* − GTK(Q*)) × Q* on the MO/MK/demand graph (grafisch skill, A-domain candidate)",
+        "Explain why charging above P* reduces profit — the demand constraint (concept-level, verbal)"
+      ],
+      "exam_codes": ["A2.10", "A2.11", "A2.12", "D1.21", "D2.2"],
+      "difficulty_notes": "The most demanding lesson in the course. 6 algebraic steps plus a graph. However, students have been prepared: MK differentiation (§3.1.2), MO table and differentiation (§3.2.2), MO = MK rule (§1.4.3–§4). The exercise is scaffolded step-by-step. In class: work through steps (a–f) together as guided practice, assign (g–h) as homework. One lesson is tight but feasible with this scaffolding.",
+      "source_ref": "knowledge/course_blueprint_v4.md §3.2.3"
+    },
+    {
+      "id": "3.3.1",
+      "module": 3,
+      "chapter": 3,
+      "paragraph": 1,
+      "paragraph_title": "Welfare effects of monopoly: surplus and Harberger triangle",
+      "difficulty": "MEDIUM",
+      "target_exercise": {
+        "context": "Using the monopolist from §3.2.3 (optimal P = €30, Q = 40, demand P = 50 − 0.5Q, MK = 0.5Q + 5). Compare monopoly welfare to the competitive benchmark (P = MK) and compute the Harberger triangle.",
+        "subquestions": [
+          {"label": "a", "prompt": "Calculate CS at the monopoly price. (Triangle between demand curve and price, from Q = 0 to Q = 40.)"},
+          {"label": "b", "prompt": "Calculate PS at the monopoly price."},
+          {"label": "c", "prompt": "Now calculate what TS would be under perfect competition (where P = MK, i.e. demand = MK). Find the competitive P and Q. Calculate competitive TS."},
+          {"label": "d", "prompt": "Calculate the deadweight loss (Harberger triangle) = competitive TS − monopoly TS."},
+          {"label": "e", "prompt": "Shade the Harberger triangle in your graph. Explain in words: 'where did this surplus go?'"}
+        ]
+      },
+      "lesson_goals": [
+        "Calculate CS and PS under monopoly pricing",
+        "Calculate the competitive outcome (P = MK) as benchmark",
+        "Calculate the Harberger triangle (deadweight loss from monopoly)",
+        "Understand that monopoly transfers surplus from consumers to producer AND destroys some surplus entirely",
+        "Explain why monopoly is not Pareto-efficient"
+      ],
+      "required_skills": ["A06", "A10", "A19", "A30", "A32", "A35"],
+      "prior_knowledge_assumed": ["A06", "A10", "A19", "A30", "A32", "A35"],
+      "new_skills_introduced": [],
+      "missing_units_flagged": [
+        "Construct a competitive benchmark by imposing P = MK and computing P*, Q*, TS (concept-level + application; the §3.3.1 novelty is the comparison, not the components)",
+        "Compute the Harberger triangle = competitive TS − monopoly TS and identify it graphically between monopoly-Q and competitive-Q (grafisch + reken skill, A-domain candidate)",
+        "Distinguish surplus transfer (CS→PS) from surplus destruction (DWL) verbally (concept-level, the 'where did the surplus go?' narrative)"
+      ],
+      "exam_codes": ["A2.16", "A2.17", "D3.1"],
+      "difficulty_notes": "Builds directly on §2.2 (surplus analysis) and §3.2.3 (monopoly mechanics). The calculation involves finding the competitive equilibrium (demand = supply/MK) — which is revision from Module 1. The new element is the comparison. One lesson works because students already have all the component skills.",
+      "source_ref": "knowledge/course_blueprint_v4.md §3.3.1"
+    },
+    {
+      "id": "3.3.2",
+      "module": 3,
+      "chapter": 3,
+      "paragraph": 2,
+      "paragraph_title": "Price discrimination",
+      "difficulty": "MEDIUM",
+      "target_exercise": {
+        "context": "A theme park faces two groups: adults (Qv = −5P + 300) and children (Qv = −10P + 300). MK = €10 (constant). Combined demand is given as Qv = −15P + 600.",
+        "subquestions": [
+          {"label": "a", "prompt": "Without price discrimination: the combined demand curve is given as Qv = −15P + 600. Set MO = MK, find optimal P and Q. Calculate total profit."},
+          {"label": "b", "prompt": "With price discrimination: the park charges adults and children different prices. For each group separately, derive MO, set MO = MK and find optimal P and Q. Calculate total profit."},
+          {"label": "c", "prompt": "How much extra profit does price discrimination yield?"},
+          {"label": "d", "prompt": "What conditions must be met for price discrimination to work? (Hint: can adults buy children's tickets?)"},
+          {"label": "e", "prompt": "Name a real-world example of price discrimination and explain how the conditions are met."}
+        ]
+      },
+      "lesson_goals": [
+        "Define price discrimination: charging different prices to different groups for the same product",
+        "Calculate profit with and without price discrimination",
+        "Understand that price discrimination increases producer surplus",
+        "Name conditions: market segments must be separable, no resale possible",
+        "Recognise real-world examples (student discounts, airline pricing, happy hour)"
+      ],
+      "required_skills": ["A11", "A20", "A35", "A36", "D18", "D21", "D22", "D24"],
+      "prior_knowledge_assumed": ["A11", "A20", "A35"],
+      "new_skills_introduced": ["A36", "D18", "D21", "D22", "D24"],
+      "missing_units_flagged": [
+        "Apply the MO=MK procedure twice (once per market segment) and sum the resulting profits (A-domain candidate; a 'two-market monopoly' variant)",
+        "Compare winst with vs without price discrimination and quantify the extra PS captured (reken skill)",
+        "Name and verify the three operational conditions for price discrimination: separable segments, no resale, different elasticities (concept-level; partly covered by D24 but worth a procedure check)"
+      ],
+      "exam_codes": ["A2.10", "A2.11", "D2.3"],
+      "difficulty_notes": "The combined demand curve is provided in exercise (a) to avoid the aggregation complexity. Exercise (b) applies the MO = MK procedure twice (once per group), which is repetitive but reinforcing. One lesson works with this simplification.",
+      "source_ref": "knowledge/course_blueprint_v4.md §3.3.2"
+    },
+    {
+      "id": "3.3.3",
+      "module": 3,
+      "chapter": 3,
+      "paragraph": 3,
+      "paragraph_title": "Overview of all market structures",
+      "difficulty": "MEDIUM",
+      "target_exercise": {
+        "context": "Descriptive/comparative lesson: build the 4-structure comparison table and classify real-world markets.",
+        "subquestions": [
+          {"label": "a", "prompt": "Complete the comparison table (rows: number of sellers, product type, entry barriers, price influence, example) across columns: volkomen concurrentie, monopolistische concurrentie, oligopolie, monopolie."},
+          {"label": "b", "prompt": "A coffee shop in Amsterdam operates in a market with many competitors, but each shop has its own style and menu. Which market structure is this? Explain."},
+          {"label": "c", "prompt": "The petrol market has 4 major companies. Products are nearly identical. Which market structure? Explain."},
+          {"label": "d", "prompt": "Rank the four market structures from most to least competitive. For each, state whether TS is higher or lower than at volkomen concurrentie."},
+          {"label": "e", "prompt": "Why might an oligopolist have an incentive to collude (prijsafspraken maken)? Why is this illegal?"}
+        ]
+      },
+      "lesson_goals": [
+        "Name and characterise all four market structures",
+        "Classify real-world markets into the correct structure",
+        "Understand the spectrum from perfect competition to monopoly",
+        "Understand that market power generally reduces total surplus",
+        "Recognise collusion as an attempt to act as a collective monopolist"
+      ],
+      "required_skills": ["D15"],
+      "prior_knowledge_assumed": ["D15"],
+      "new_skills_introduced": [],
+      "missing_units_flagged": [
+        "Characterise monopolistische concurrentie (many sellers, productdifferentiatie, free entry, limited short-run price-setting power) (concept-level, mastery_target understand)",
+        "Characterise oligopolie (few sellers, strategic interaction, high entry barriers, price leadership / collusion risk) (concept-level, mastery_target understand)",
+        "Classify a given real-world market into one of the four structures using the characteristic table (concept-level application)",
+        "Explain the incentive to collude in oligopolie and why cartels are illegal + unstable (concept-level; hooks into the §3.3.3 Gap 1 revision plan)"
+      ],
+      "exam_codes": ["D2.1"],
+      "difficulty_notes": "Descriptive/comparative lesson. The table is a study tool students can use for revision. Exercise (e) bridges to game theory (which is covered elsewhere in the full VWO program). One lesson comfortable — good opportunity for class discussion about real-world examples.",
+      "source_ref": "knowledge/course_blueprint_v4.md §3.3.3"
+    },
+    {
+      "id": "3.4.1",
+      "module": 3,
+      "chapter": 4,
+      "paragraph": 1,
+      "paragraph_title": "Negative external effects",
+      "difficulty": "MEDIUM",
+      "target_exercise": {
+        "context": "A factory produces chemicals. Private marginal costs are MPC = 2Q. Production causes water pollution costing fishermen €4 per unit, so MSC = 2Q + 4. Demand P = 20 − Q.",
+        "subquestions": [
+          {"label": "a", "prompt": "Calculate the market equilibrium (where demand = MPC). This is what the market produces without government intervention."},
+          {"label": "b", "prompt": "Calculate the socially optimal equilibrium (where demand = MSC)."},
+          {"label": "c", "prompt": "Draw both equilibria in one graph. Shade the welfare loss from overproduction."},
+          {"label": "d", "prompt": "How many units too many does the free market produce?"},
+          {"label": "e", "prompt": "Explain why this is called market failure. Who bears the cost that the market ignores?"}
+        ]
+      },
+      "lesson_goals": [
+        "Define external effects (externalities): costs/benefits affecting third parties not involved in the transaction",
+        "Distinguish private costs from social costs: MSC = MPC + external cost",
+        "Calculate market equilibrium (using MPC) and socially optimal equilibrium (using MSC)",
+        "Calculate the welfare loss from overproduction (the market produces too much)",
+        "Explain why externalities cause market failure: the market price doesn't reflect the full cost"
+      ],
+      "required_skills": ["A06", "A10", "F07", "F08"],
+      "prior_knowledge_assumed": ["A06", "A10"],
+      "new_skills_introduced": ["F07", "F08"],
+      "missing_units_flagged": [
+        "Distinguish MPC vs MSC and identify MSC = MPC + external marginal cost (concept-level, foundation for §3.4.3 Pigouvian-tax mechanics)",
+        "Overproduction gap: compute Q_market − Q_social and interpret as 'units too many' (A-domain candidate; pairs with F07)",
+        "Verbal market-failure framing: who bears the ignored cost, and why does the market price undercount it (concept-level)"
+      ],
+      "exam_codes": ["A2.10", "A2.16", "A2.17"],
+      "difficulty_notes": "New graph type: two supply curves (MPC and MSC). Students must understand why the market uses MPC (because firms don't pay for pollution) while society should use MSC. The math is straightforward — it's the same equilibrium calculation as Module 1, just done twice. One lesson works.",
+      "source_ref": "knowledge/course_blueprint_v4.md §3.4.1"
+    },
+    {
+      "id": "3.4.2",
+      "module": 3,
+      "chapter": 4,
+      "paragraph": 2,
+      "paragraph_title": "Positive external effects",
+      "difficulty": "MEDIUM",
+      "target_exercise": {
+        "context": "Vaccinations have positive external effects. MPB curve (private benefit) P = 30 − Q; MSB = MPB + €5 = 35 − Q. Supply (= MC) P = Q.",
+        "subquestions": [
+          {"label": "a", "prompt": "Calculate the market equilibrium (where supply = MPB)."},
+          {"label": "b", "prompt": "Calculate the socially optimal equilibrium (where supply = MSB). To do this: MSB = 35 − Q. Set equal to supply."},
+          {"label": "c", "prompt": "The market produces too little. By how many units?"},
+          {"label": "d", "prompt": "Draw both equilibria. Shade the welfare loss from underproduction."},
+          {"label": "e", "prompt": "Suggest a policy to correct this market failure. How large should the correction be?"}
+        ]
+      },
+      "lesson_goals": [
+        "Distinguish private benefits from social benefits: MSB = MPB + external benefit",
+        "Calculate market equilibrium (using MPB) and socially optimal equilibrium (using MSB)",
+        "Understand that the market produces too little of goods with positive externalities",
+        "Suggest correction: subsidy equal to the external benefit per unit",
+        "Draw the graph with MPB and MSB"
+      ],
+      "required_skills": ["A06", "A10", "F11"],
+      "prior_knowledge_assumed": ["A06", "A10"],
+      "new_skills_introduced": ["F11"],
+      "missing_units_flagged": [
+        "Distinguish MPB vs MSB and identify MSB = MPB + external marginal benefit (concept-level, mirror of §3.4.1 on the demand side)",
+        "Underproduction gap: compute Q_social − Q_market and interpret as 'units too few' (A-domain candidate; mirror of the §3.4.1 unit)",
+        "Size a corrective subsidy to equal the per-unit external benefit (concept-level; directly reuses §2.3.3 subsidy mechanics)"
+      ],
+      "exam_codes": ["A2.10", "A2.16"],
+      "difficulty_notes": "Mirror of §3.4.1 — if students understood negative externalities, this is the same logic reversed. The policy suggestion (exercise e) connects back to §2.3 (subsidies). One lesson comfortable.",
+      "source_ref": "knowledge/course_blueprint_v4.md §3.4.2"
+    },
+    {
+      "id": "3.4.3",
+      "module": 3,
+      "chapter": 4,
+      "paragraph": 3,
+      "paragraph_title": "Government correction of market failure",
+      "difficulty": "MEDIUM",
+      "target_exercise": {
+        "context": "Using the factory from §3.4.1 (MPC = 2Q, MSC = 2Q + 4, demand P = 20 − Q). Students derive the Pigouvian tax, meet Coase, and revisit patents as a dual-edged tool.",
+        "subquestions": [
+          {"label": "a", "prompt": "The government introduces a Pigouvian tax of €4 per unit. Write the new private cost function (MPC + tax). Calculate the new market equilibrium."},
+          {"label": "b", "prompt": "Compare this with the socially optimal outcome from §3.4.1(b). Are they the same?"},
+          {"label": "c", "prompt": "An economist suggests: 'Instead of a tax, let the fishermen negotiate with the factory. If they pay the factory to reduce output, both sides can be better off.' This is called the Coase theorem. Under what condition does this work? (Hint: think about transaction costs and property rights.)"},
+          {"label": "d", "prompt": "The factory has a patent on its chemical process. Explain how a patent can simultaneously be a solution to one market failure (innovation) and a cause of another (monopoly). Connect to §3.2."},
+          {"label": "e", "prompt": "Name three policy instruments the government can use to correct negative externalities and give a real example for each."}
+        ]
+      },
+      "lesson_goals": [
+        "Understand Pigouvian tax: a tax equal to the external cost per unit",
+        "Show that a Pigouvian tax makes the market outcome equal to the socially optimal outcome",
+        "Understand the Coase theorem: private negotiation can solve externalities if transaction costs are low",
+        "Recognise the trade-off in patents: innovation incentive vs monopoly power",
+        "Name policy instruments: taxes, subsidies, regulation, tradeable permits, property rights"
+      ],
+      "required_skills": ["A06", "A23", "F05", "F06", "F10"],
+      "prior_knowledge_assumed": ["A06", "A23"],
+      "new_skills_introduced": ["F05", "F06", "F10"],
+      "missing_units_flagged": [
+        "Size a Pigouvian tax to equal the per-unit external cost and show that the post-tax market equilibrium coincides with the social optimum (concept-level + application; the §3.4.3 payoff)",
+        "State the Coase theorem condition (low transaction costs, clear property rights) and argue when private negotiation suffices (concept-level, mastery_target understand)",
+        "Evaluate the patent trade-off: innovation incentive vs monopoly welfare loss (concept-level + verbal; the §3.4.3↔§3.2 integration)",
+        "Enumerate policy instruments for negative externalities with a real example each (concept-level, breadth)"
+      ],
+      "exam_codes": ["D3.4", "D3.9"],
+      "difficulty_notes": "Mix of calculation (a–b) and conceptual reasoning (c–e). The Coase theorem can be kept light — just the basic idea, not formal proof. Exercise (d) is an excellent integrative question connecting market failure to monopoly. One lesson works — the calculation is revision, the new elements are Coase and policy instruments.",
+      "source_ref": "knowledge/course_blueprint_v4.md §3.4.3"
+    },
+    {
+      "id": "4.1.1",
+      "module": 4,
+      "chapter": 1,
+      "paragraph": 1,
+      "paragraph_title": "Labor demand: derived demand and marginal productivity",
+      "difficulty": "LIGHT",
+      "target_exercise": {
+        "context": "A restaurant hires waiters. Marginal product falls: 1st=50 extra meals, 2nd=45, 3rd=35, 4th=25, 5th=15. Revenue is €15 per meal. Students compute VMP and apply the hiring rule VMP ≥ W.",
+        "subquestions": [
+          {"label": "a", "prompt": "Calculate the value of marginal product (VMP = marginal product × revenue per meal) for each waiter."},
+          {"label": "b", "prompt": "The wage is €450 per evening. How many waiters should the restaurant hire? Explain using the VMP."},
+          {"label": "c", "prompt": "The wage rises to €600. How many waiters now? What happened to labor demand?"},
+          {"label": "d", "prompt": "Explain why the demand for labor is called 'derived demand.'"},
+          {"label": "e", "prompt": "Draw the restaurant's labor demand curve using the VMP values."}
+        ]
+      },
+      "lesson_goals": [
+        "Define marginal product of labor (extra output from one additional worker)",
+        "Calculate value of marginal product: VMP = MP × price of output",
+        "Apply the hiring rule: hire as long as VMP ≥ wage",
+        "Understand derived demand: labor is demanded because of demand for the product",
+        "Draw a labor demand curve (which is the VMP curve)"
+      ],
+      "required_skills": [],
+      "prior_knowledge_assumed": [],
+      "new_skills_introduced": [],
+      "missing_units_flagged": [
+        "Compute VMP = MP × output-price from a marginal-product table (A-domain candidate; labor-market parallel to A13 MK-bepalen)",
+        "Apply the hiring rule: hire while VMP ≥ W and stop when VMP < W (concept-level + application; labor-market parallel to MO=MK in §1.4.4)",
+        "Explain 'derived demand' — labor is demanded because of product-market demand (concept-level, mastery_target understand)",
+        "Draw a labor demand curve from a VMP table (grafisch skill, A-domain candidate)"
+      ],
+      "exam_codes": [],
+      "difficulty_notes": "Connects directly to marginal analysis from Module 1 and Module 3 (MO = MK is analogous to VMP = W). Students find the restaurant context engaging. The diminishing marginal product is intuitive ('the kitchen gets crowded'). One lesson comfortable.",
+      "source_ref": "knowledge/course_blueprint_v4.md §4.1.1"
+    },
+    {
+      "id": "4.1.2",
+      "module": 4,
+      "chapter": 1,
+      "paragraph": 2,
+      "paragraph_title": "Labor supply and participation rate",
+      "difficulty": "MEDIUM",
+      "target_exercise": {
+        "context": "Country X: population 15–75 = 12 million; beroepsbevolking = 9 million; werkloze beroepsbevolking = 540,000.",
+        "subquestions": [
+          {"label": "a", "prompt": "Calculate the bruto participatiegraad (participation rate)."},
+          {"label": "b", "prompt": "Calculate the werkloosheidspercentage (unemployment rate)."},
+          {"label": "c", "prompt": "A student says: '3 million people are unemployed because 12 − 9 = 3 million.' Explain why this is wrong."},
+          {"label": "d", "prompt": "Average wages rise significantly. Explain how this might affect the participation rate (think about people currently in the niet-beroepsbevolking)."},
+          {"label": "e", "prompt": "Draw a labor supply curve. Explain why it is upward sloping."}
+        ]
+      },
+      "lesson_goals": [
+        "Define beroepsbevolking, niet-beroepsbevolking, werkloze beroepsbevolking",
+        "Calculate participation rate = beroepsbevolking / population 15–75 × 100",
+        "Calculate unemployment rate = werklozen / beroepsbevolking × 100",
+        "Explain what drives labor supply: wages, preferences, demographics",
+        "Draw an upward-sloping labor supply curve"
+      ],
+      "required_skills": [],
+      "prior_knowledge_assumed": [],
+      "new_skills_introduced": [],
+      "missing_units_flagged": [
+        "Define beroepsbevolking vs niet-beroepsbevolking vs werkloze beroepsbevolking — the core labor-market vocabulary (concept-level, mastery_target understand; the single biggest student-confusion trap in §4.1)",
+        "Compute the bruto participatiegraad = beroepsbevolking / pop(15–75) × 100 (A-domain candidate)",
+        "Compute the werkloosheidspercentage = werklozen / beroepsbevolking × 100, with beroepsbevolking as the denominator — NOT population (A-domain candidate; exercise (c) targets exactly this student error)",
+        "Explain how wage changes can shift the participation rate via niet-beroepsbevolking entering (concept-level, mastery_target understand)"
+      ],
+      "exam_codes": [],
+      "difficulty_notes": "The terminology (beroepsbevolking vs niet-beroepsbevolking) is the main challenge — students mix up 'not working' with 'unemployed.' Exercise (c) directly addresses this confusion. The formulas are simple. One lesson works with clear emphasis on definitions.",
+      "source_ref": "knowledge/course_blueprint_v4.md §4.1.2"
+    },
+    {
+      "id": "4.1.3",
+      "module": 4,
+      "chapter": 1,
+      "paragraph": 3,
+      "paragraph_title": "Labor market equilibrium",
+      "difficulty": "LIGHT",
+      "target_exercise": {
+        "context": "The labor market for IT workers: Qd = −200W + 5000 and Qs = 300W − 1000 (W = wage €/hour, Q = number of workers).",
+        "subquestions": [
+          {"label": "a", "prompt": "Calculate the equilibrium wage and employment level."},
+          {"label": "b", "prompt": "At a wage of €14/hour, is there a krappe arbeidsmarkt or a ruime arbeidsmarkt? Calculate the gap."},
+          {"label": "c", "prompt": "In a krappe arbeidsmarkt, what happens to wages? In a ruime arbeidsmarkt? Explain."},
+          {"label": "d", "prompt": "Draw the labor market diagram with the equilibrium and the situation at W = €14."},
+          {"label": "e", "prompt": "New tech companies enter the market, increasing demand for IT workers. The new demand is Qd = −200W + 7000. Calculate the new equilibrium. What happened to wages and employment?"}
+        ]
+      },
+      "lesson_goals": [
+        "Apply supply-demand equilibrium framework to the labor market",
+        "Calculate equilibrium wage and employment",
+        "Define krappe arbeidsmarkt (demand > supply) and ruime arbeidsmarkt (supply > demand)",
+        "Predict wage adjustments from market imbalances",
+        "Analyse shifts in labor demand or supply"
+      ],
+      "required_skills": ["A02", "A04", "A06"],
+      "prior_knowledge_assumed": ["A02", "A04", "A06"],
+      "new_skills_introduced": [],
+      "missing_units_flagged": [
+        "Define krappe arbeidsmarkt (Qd>Qs) vs ruime arbeidsmarkt (Qs>Qd) and predict wage direction (concept-level, labor-market specific terminology — not in the A-unit 'surplus vs shortage' flag from §1.4.1)",
+        "Recognise that the labor-market equilibrium is a direct application of the goods-market equilibrium framework with W substituting for P (concept-level, mastery_target understand; cross-context transfer)"
+      ],
+      "exam_codes": ["A2.10", "A2.12", "A2.15"],
+      "difficulty_notes": "Direct transfer from §1.4 — same math, different context. Students recognise the framework. Exercise (e) mirrors §1.4.2. One lesson comfortable. This is a confidence-building lesson.",
+      "source_ref": "knowledge/course_blueprint_v4.md §4.1.3"
+    },
+    {
+      "id": "4.2.1",
+      "module": 4,
+      "chapter": 2,
+      "paragraph": 1,
+      "paragraph_title": "Types of unemployment",
+      "difficulty": "MEDIUM",
+      "target_exercise": {
+        "context": "Classify five real-world cases as conjuncturele werkloosheid, structurele werkloosheid, or frictiewerkloosheid and propose policy responses.",
+        "subquestions": [
+          {"label": "a", "prompt": "A coal miner in Limburg loses his job because the mine closes permanently due to the shift to renewable energy. Which type of unemployment?"},
+          {"label": "b", "prompt": "A marketing manager quits her job to search for a better position. She is unemployed for 3 months. Which type?"},
+          {"label": "c", "prompt": "A construction worker is laid off because the housing market crashed during a recession. Which type?"},
+          {"label": "d", "prompt": "Factory workers are replaced by robots. Their skills don't match available jobs. Which type?"},
+          {"label": "e", "prompt": "For each type, explain whether it is temporary or can persist for a long time."},
+          {"label": "f", "prompt": "A government wants to reduce structurele werkloosheid. Name two policy measures and explain how they work."}
+        ]
+      },
+      "lesson_goals": [
+        "Define three types of unemployment: conjunctureel (cyclical), structureel (structural), frictie (frictional)",
+        "Classify real-world cases into the correct type",
+        "Understand causes: demand shortfall (cyclical), skills mismatch or automation (structural), search time (frictional)",
+        "Suggest policy responses for each type",
+        "Understand that frictional unemployment is normal and even healthy"
+      ],
+      "required_skills": [],
+      "prior_knowledge_assumed": [],
+      "new_skills_introduced": [],
+      "missing_units_flagged": [
+        "Define conjuncturele werkloosheid (demand shortfall during a recession) (concept-level, mastery_target understand)",
+        "Define structurele werkloosheid (skills/sector mismatch, automation, permanent industry decline) (concept-level, mastery_target understand)",
+        "Define frictiewerkloosheid (short-term between-jobs search) and argue why it is healthy (concept-level)",
+        "Classify a real-world unemployment case into the correct type from context cues (concept-level application; the diagnostic-classification skill)",
+        "Match policy instruments (fiscal stimulus / retraining / active labor market policy) to the corresponding unemployment type (concept-level + verbal; exam standpuntbepaling prep)"
+      ],
+      "exam_codes": [],
+      "difficulty_notes": "Definitional lesson. The classification can be ambiguous (is the coal miner structural or frictional?) — this makes for good discussion. Exercise (f) requires policy thinking. One lesson works.",
+      "source_ref": "knowledge/course_blueprint_v4.md §4.2.1"
+    },
+    {
+      "id": "4.2.2",
+      "module": 4,
+      "chapter": 2,
+      "paragraph": 2,
+      "paragraph_title": "Minimum wage: welfare effects on the labor market",
+      "difficulty": "MEDIUM",
+      "target_exercise": {
+        "context": "IT labor market from §4.1.3 (Qd = −200W + 5000, Qs = 300W − 1000, W* = €12, Q* = 2600). Government sets a minimum wage of €15/hour.",
+        "subquestions": [
+          {"label": "a", "prompt": "Calculate Qd and Qs at the minimum wage of €15/hour."},
+          {"label": "b", "prompt": "How many workers become unemployed? (= Qs − Qd)"},
+          {"label": "c", "prompt": "Draw the labor market with the minimum wage. Shade the werknemerssurplus and werkgeverssurplus."},
+          {"label": "d", "prompt": "Calculate the total surplus before and after the minimum wage."},
+          {"label": "e", "prompt": "Calculate the deadweight loss."},
+          {"label": "f", "prompt": "Some workers earn more (€15 instead of €12), but others lose their jobs. Evaluate: 'A minimum wage helps workers.' Use your calculations to argue both sides."}
+        ]
+      },
+      "lesson_goals": [
+        "Apply the minimum price framework from §2.4.2 to the labor market",
+        "Calculate unemployment caused by a minimum wage (surplus of labor)",
+        "Calculate welfare effects: werknemerssurplus, werkgeverssurplus, deadweight loss",
+        "Recognise the trade-off: higher wages for employed vs job losses for others",
+        "Formulate a balanced evaluation of minimum wage policy"
+      ],
+      "required_skills": ["A02", "A04", "A06", "A10", "A19", "A25", "A32", "D16", "H13", "H14"],
+      "prior_knowledge_assumed": ["A02", "A04", "A06", "A10", "A19", "A25", "A32"],
+      "new_skills_introduced": ["D16", "H13", "H14"],
+      "missing_units_flagged": [
+        "Transfer the minimum-price framework from §2.4.2 (goods market) to the labor market with W substituting for P (concept-level; the §4.2.2 central insight)",
+        "Compute werknemerssurplus (labor-market analogue of CS) and werkgeverssurplus (analogue of PS) (concept-level + reken; the vocab maps to the goods-market surplus triangles)",
+        "Write a balanced standpuntbepaling: higher wages for the employed vs unemployment for excluded workers — use calculations to support both sides (concept-level + verbal; exam-skill)"
+      ],
+      "exam_codes": ["A2.16", "A4.5", "D3.10", "H5.2"],
+      "difficulty_notes": "This is a direct transfer from Module 2 (minimumprijs). Students should recognise the framework: a minimum wage IS a minimum price on labor. The welfare calculation is identical. The new element is exercise (f) — a balanced evaluation — which is an exam skill (standpuntbepaling). One lesson works. If there is a long time gap between Module 2 and this lesson, start with a 10-minute revision of minimum price mechanics.",
+      "source_ref": "knowledge/course_blueprint_v4.md §4.2.2"
+    },
+    {
+      "id": "4.2.3",
+      "module": 4,
+      "chapter": 2,
+      "paragraph": 3,
+      "paragraph_title": "Unions, CAO, and labor policy",
+      "difficulty": "MEDIUM",
+      "target_exercise": {
+        "context": "CAO wage-setting, unions, loonstarheid, and labor market policy in the Dutch institutional context.",
+        "subquestions": [
+          {"label": "a", "prompt": "A CAO (collectieve arbeidsovereenkomst) sets wages for all workers in the metal industry at 10% above the equilibrium wage. Explain how this is similar to a minimum wage. What effect does it have on employment?"},
+          {"label": "b", "prompt": "Name two advantages of unions for workers. Name one disadvantage."},
+          {"label": "c", "prompt": "Define loonstarheid. Explain why it can cause unemployment to persist even when the economy recovers."},
+          {"label": "d", "prompt": "The government wants to increase employment. Compare two policies: (i) lowering the minimum wage, (ii) retraining subsidies for workers. For each, explain the mechanism and evaluate the likely effectiveness."},
+          {"label": "e", "prompt": "In the Netherlands, wages rarely fall even in a recession. Explain this using the concepts CAO and loonstarheid."}
+        ]
+      },
+      "lesson_goals": [
+        "Understand that unions and CAOs can set wages above equilibrium (similar to minimum price)",
+        "Define loonstarheid (wage rigidity): wages adjust slowly downward",
+        "Explain why wage rigidity can cause persistent unemployment",
+        "Compare labor market policies: wage flexibility vs active labor market policy (training)",
+        "Apply concepts to the Dutch institutional context (poldermodel, CAO system)"
+      ],
+      "required_skills": ["I04", "I10"],
+      "prior_knowledge_assumed": [],
+      "new_skills_introduced": ["I04", "I10"],
+      "missing_units_flagged": [
+        "Define CAO as an industry-wide collective wage agreement and argue why it acts like a binding minimum price (concept-level, mastery_target understand; Dutch-institutional specific)",
+        "Enumerate advantages + disadvantages of unions for workers, firms, and society (concept-level + verbal)",
+        "Explain loonstarheid-causes-persistent-unemployment mechanism (concept-level; I04 and I10 cover loonrigiditeit in a macro-conjunctuur frame — worth a separate labor-market unit)",
+        "Compare wage-flexibility policy vs active-labor-market policy (retraining) with their mechanisms and effectiveness (concept-level + verbal; exam-skill)"
+      ],
+      "exam_codes": [],
+      "difficulty_notes": "Mostly conceptual/institutional. The link to minimum wage analysis (§2.4.2) makes the economic reasoning familiar. The new element is loonstarheid as a market imperfection. Exercise (e) connects theory to Dutch reality. One lesson comfortable.",
+      "source_ref": "knowledge/course_blueprint_v4.md §4.2.3"
+    },
+    {
+      "id": "4.3.1",
+      "module": 4,
+      "chapter": 3,
+      "paragraph": 1,
+      "paragraph_title": "Absolute and comparative advantage",
+      "difficulty": "MEDIUM",
+      "target_exercise": {
+        "context": "Two countries A and B produce cars and grain. A: 100 hours/car, 10 hours/ton grain. B: 150 hours/car, 30 hours/ton grain.",
+        "subquestions": [
+          {"label": "a", "prompt": "Which country has an absolute advantage in cars? In grain?"},
+          {"label": "b", "prompt": "Calculate the opportunity cost of 1 car in each country (in tons of grain given up)."},
+          {"label": "c", "prompt": "Calculate the opportunity cost of 1 ton of grain in each country (in cars given up)."},
+          {"label": "d", "prompt": "Which country has a comparative advantage in cars? In grain? Explain."},
+          {"label": "e", "prompt": "A student says: 'Country A is better at everything, so trade doesn't make sense.' Explain why this is wrong using your answers."}
+        ]
+      },
+      "lesson_goals": [
+        "Define absolute advantage (produce more with same resources)",
+        "Define comparative advantage (lowest opportunity cost)",
+        "Calculate opportunity costs from a production table",
+        "Explain that comparative advantage, not absolute advantage, determines trade patterns",
+        "Understand that trade benefits both countries even if one is better at everything"
+      ],
+      "required_skills": ["A18"],
+      "prior_knowledge_assumed": [],
+      "new_skills_introduced": ["A18"],
+      "missing_units_flagged": [
+        "Define absolute advantage (lower input requirement for the same output) vs comparative advantage (lower opportunity cost) and argue why CA — not AA — drives trade (concept-level, mastery_target understand; A18 covers the calculation but not the conceptual distinction cleanly)",
+        "Refute the 'better at everything so no trade' misconception using an opportunity-cost comparison (concept-level + verbal; the 'aha moment' exam skill)"
+      ],
+      "exam_codes": ["A2.6", "A4.3"],
+      "difficulty_notes": "The opportunity cost calculation is the tricky part — students must think in terms of 'what you give up.' The counterintuitive result (B can have a comparative advantage despite being worse at everything) is why the concept is hard. One lesson is tight — allocate time for the 'aha moment.'",
+      "source_ref": "knowledge/course_blueprint_v4.md §4.3.1"
+    },
+    {
+      "id": "4.3.2",
+      "module": 4,
+      "chapter": 3,
+      "paragraph": 2,
+      "paragraph_title": "Gains from trade, terms of trade",
+      "difficulty": "MEDIUM",
+      "target_exercise": {
+        "context": "Countries A and B from §4.3.1 each have 3000 labor hours, split evenly before trade. Terms of trade proposed: 1 car = 8 tons of grain.",
+        "subquestions": [
+          {"label": "a", "prompt": "Calculate production of each good in each country before trade."},
+          {"label": "b", "prompt": "Now each country fully specialises. Calculate total world production of each good."},
+          {"label": "c", "prompt": "Show that world production has increased for at least one good (without decreasing the other)."},
+          {"label": "d", "prompt": "Country A exports grain to B and imports cars. The terms of trade are: 1 car = 8 tons of grain. With trade, A consumes 15 cars and 185 tons of grain. Is A better off than before trade? Show with numbers."},
+          {"label": "e", "prompt": "At which terms of trade would A refuse to trade? At which would B refuse? (Hint: use opportunity costs from §4.3.1.)"}
+        ]
+      },
+      "lesson_goals": [
+        "Calculate production before and after specialisation",
+        "Show that specialisation increases total world output",
+        "Define terms of trade: the exchange ratio between goods",
+        "Determine the range of mutually beneficial terms of trade (between the two opportunity costs)",
+        "Understand that both countries can gain from trade"
+      ],
+      "required_skills": ["A18"],
+      "prior_knowledge_assumed": ["A18"],
+      "new_skills_introduced": [],
+      "missing_units_flagged": [
+        "Compute pre-trade and post-specialisation production for each country and quantify the world-output gain (A-domain candidate)",
+        "Define terms-of-trade as the exchange ratio between two goods and compare consumption bundles before vs after trade (concept-level + reken)",
+        "Determine the mutually-beneficial range of terms-of-trade from the two countries' opportunity costs (concept-level; the bounded-interval reasoning)"
+      ],
+      "exam_codes": ["A2.6", "A4.3"],
+      "difficulty_notes": "Lots of arithmetic but conceptually straightforward once comparative advantage is understood. Exercise (e) requires connecting back to opportunity costs — elegant but potentially confusing. One lesson works if §4.3.1 was solid. If not, this spills.",
+      "source_ref": "knowledge/course_blueprint_v4.md §4.3.2"
+    },
+    {
+      "id": "4.3.3",
+      "module": 4,
+      "chapter": 3,
+      "paragraph": 3,
+      "paragraph_title": "Protectionism and trade policy",
+      "difficulty": "MEDIUM",
+      "target_exercise": {
+        "context": "Domestic market: Qv = −2P + 200, Qa = P − 10 (P in €, Q in thousands of units). World price €40. Government imposes a €10 tariff raising the import price to €50.",
+        "subquestions": [
+          {"label": "a", "prompt": "At free trade: calculate domestic Qd, domestic Qa, and imports (Qd − Qa)."},
+          {"label": "b", "prompt": "The government imposes a tariff of €10. The new import price is €50. Calculate the new domestic Qd, Qa, and imports."},
+          {"label": "c", "prompt": "Calculate the tariff revenue for the government."},
+          {"label": "d", "prompt": "Draw the free-trade and post-tariff situations. Shade the two deadweight loss triangles."},
+          {"label": "e", "prompt": "Who benefits from the tariff? Who loses? Evaluate: 'Tariffs protect domestic jobs.'"}
+        ]
+      },
+      "lesson_goals": [
+        "Calculate import quantity under free trade (domestic demand − domestic supply at world price)",
+        "Analyse the effect of a tariff: higher price, lower imports, higher domestic production",
+        "Calculate tariff revenue",
+        "Identify welfare effects: domestic producers gain, consumers lose, government gains revenue, net DWL",
+        "Evaluate protectionist arguments critically"
+      ],
+      "required_skills": ["A04", "A10", "A34", "H09"],
+      "prior_knowledge_assumed": ["A04", "A10"],
+      "new_skills_introduced": ["A34", "H09"],
+      "missing_units_flagged": [
+        "Compute imports = domestic Qd − domestic Qa at a given world price (A-domain candidate; the free-trade baseline calculation)",
+        "Identify BOTH DWL triangles under a tariff — production inefficiency AND consumption loss — as distinct regions (grafisch + concept; the §4.3.3 novelty vs the single-DWL of §2.3)",
+        "Critically evaluate 'tariffs protect domestic jobs' using winners-vs-losers surplus accounting (concept-level + verbal; exam standpuntbepaling)"
+      ],
+      "exam_codes": ["A2.16", "A2.17", "A4.3"],
+      "difficulty_notes": "The graph has two DWL triangles (production inefficiency + consumption loss) — this is more complex than the single DWL triangle from taxes. However, the calculation itself is straightforward (just reading off demand and supply at two prices). The welfare analysis connects directly to Module 2's tax analysis. One lesson works because it's application, not new methodology.",
+      "source_ref": "knowledge/course_blueprint_v4.md §4.3.3"
+    },
+    {
+      "id": "4.4.1",
+      "module": 4,
+      "chapter": 4,
+      "paragraph": 1,
+      "paragraph_title": "Inflation, CPI, and price indices",
+      "difficulty": "MEDIUM",
+      "target_exercise": {
+        "context": "A shopping basket costs €150 in 2023 (base year, index = 100) and €162 in 2025. In 2026 the CPI is 112. A worker's nominal wage rises from €3000/month in 2023 to €3200 in 2025.",
+        "subquestions": [
+          {"label": "a", "prompt": "Calculate the CPI for 2025."},
+          {"label": "b", "prompt": "Calculate the inflation rate from 2023 to 2025."},
+          {"label": "c", "prompt": "In 2026, the CPI is 112. Calculate the inflation from 2025 to 2026. (Watch out: not 4%!)"},
+          {"label": "d", "prompt": "A worker's nominal wage rises from €3000/month in 2023 to €3200 in 2025. Calculate the real wage change. Did the worker's purchasing power increase or decrease?"},
+          {"label": "e", "prompt": "Explain the difference between nominal and real values. Why do economists prefer to use real values?"}
+        ]
+      },
+      "lesson_goals": [
+        "Calculate CPI = (basket cost in year t / basket cost in base year) × 100",
+        "Calculate inflation rate from CPI values",
+        "Distinguish between index point changes and percentage changes (critical exam skill!)",
+        "Calculate real values: real wage = nominal wage / CPI × 100",
+        "Explain why real values correct for inflation"
+      ],
+      "required_skills": ["I09"],
+      "prior_knowledge_assumed": [],
+      "new_skills_introduced": ["I09"],
+      "missing_units_flagged": [
+        "Compute CPI from basket costs across two years (A-domain candidate; overlaps with the §1.1.2 index-number flag — promote to shared unit)",
+        "Distinguish index-point change from percentage-change with CPI examples (concept-level + reken; the §4.4.1 exam-trap explicitly called out in exercise c — same pitfall as §1.1.2)",
+        "Compute real wage = nominal wage / CPI × 100 and interpret the direction (A-domain candidate; I09 is close but macro-framed)",
+        "Explain why economists prefer real values (concept-level, mastery_target understand)"
+      ],
+      "exam_codes": [],
+      "difficulty_notes": "Exercise (c) is the classic trap — students think '108 to 112 = 4% inflation' when it's actually (112−108)/108 = 3.7%. This connects directly to §1.1.2 (percentage changes). The real vs nominal distinction is conceptually important but mathematically simple. One lesson works.",
+      "source_ref": "knowledge/course_blueprint_v4.md §4.4.1"
+    },
+    {
+      "id": "4.4.2",
+      "module": 4,
+      "chapter": 4,
+      "paragraph": 2,
+      "paragraph_title": "Purchasing power and indexering",
+      "difficulty": "MEDIUM",
+      "target_exercise": {
+        "context": "A pension of €1500/month. Inflation 4%, average wage growth 6%. Students compare three indexering regimes: waardevast, welvaartsvast, bevroren.",
+        "subquestions": [
+          {"label": "a", "prompt": "The pension is waardevast (indexed to inflation). Calculate the new pension."},
+          {"label": "b", "prompt": "The pension is welvaartsvast (indexed to wage growth). Calculate the new pension."},
+          {"label": "c", "prompt": "The pension is bevroren (frozen). Calculate the real purchasing power loss in euros per month."},
+          {"label": "d", "prompt": "Which indexering method is best for the pensioner? Which is cheapest for the pension fund? Explain the trade-off."},
+          {"label": "e", "prompt": "A country experiences 2% deflation. What happens to the purchasing power of a frozen pension? Is this good or bad for the pensioner?"}
+        ]
+      },
+      "lesson_goals": [
+        "Define waardevast (indexed to CPI/inflation) vs welvaartsvast (indexed to wages)",
+        "Calculate pensions/wages after indexering",
+        "Calculate purchasing power changes when pensions are frozen",
+        "Understand the trade-off between protecting pensioners and pension fund sustainability",
+        "Apply concepts to deflation (reverse situation)"
+      ],
+      "required_skills": ["I09"],
+      "prior_knowledge_assumed": ["I09"],
+      "new_skills_introduced": [],
+      "missing_units_flagged": [
+        "Define waardevast (indexed to inflation) vs welvaartsvast (indexed to wage growth) vs bevroren (no indexering) — pensioen-indexering vocab (concept-level, mastery_target understand)",
+        "Compute the new pension under each of the three indexering regimes and compute the real purchasing-power loss under bevroren (A-domain candidate)",
+        "Evaluate the pensioner-vs-fund trade-off across the three regimes (concept-level + verbal; exam standpuntbepaling prep)",
+        "Apply the purchasing-power logic under deflation (concept-level; reversed-sign case, good diagnostic)"
+      ],
+      "exam_codes": [],
+      "difficulty_notes": "The terminology (waardevast, welvaartsvast, bevroren) is confusing because the words sound similar. Exercises (a–c) force precise calculation for each case. Exercise (e) tests deeper understanding. One lesson works — the math is arithmetic, the challenge is keeping the definitions straight.",
+      "source_ref": "knowledge/course_blueprint_v4.md §4.4.2"
+    },
+    {
+      "id": "4.4.3",
+      "module": 4,
+      "chapter": 4,
+      "paragraph": 3,
+      "paragraph_title": "Real vs nominal: integration and application",
+      "difficulty": "MEDIUM",
+      "target_exercise": {
+        "context": "Integration lesson applying the real vs nominal distinction to interest rates, GDP growth, wages, and central bank policy.",
+        "subquestions": [
+          {"label": "a", "prompt": "The nominal interest rate on a savings account is 5%. Inflation is 3%. Calculate the real interest rate (use: real ≈ nominal − inflation). If you save €10,000, how much more can you actually buy after one year?"},
+          {"label": "b", "prompt": "Country X's nominal GDP grew from €800 billion to €840 billion. The GDP deflator rose from 100 to 103. Calculate real GDP growth. Did the country produce more goods and services, or did prices just rise?"},
+          {"label": "c", "prompt": "A worker's nominal wage rises from €2500 to €2600 (4% increase). Inflation is 5%. Calculate the real wage change. Is this worker better or worse off?"},
+          {"label": "d", "prompt": "In the 1970s, inflation in the Netherlands was 10% and nominal wages rose by 8%. Explain what happened to workers' purchasing power. How might this affect consumption?"},
+          {"label": "e", "prompt": "Combine your knowledge: explain why a central bank targets low inflation (around 2%). Use the concepts real interest rate, purchasing power, and wage earners in your answer."}
+        ]
+      },
+      "lesson_goals": [
+        "Calculate real interest rate ≈ nominal interest rate − inflation",
+        "Calculate real GDP growth using the GDP deflator",
+        "Apply the real vs nominal framework to wages, interest rates, and GDP",
+        "Understand why persistent inflation erodes purchasing power",
+        "Explain why central banks target low inflation (integration question)"
+      ],
+      "required_skills": ["H15", "I09", "I18"],
+      "prior_knowledge_assumed": ["I09"],
+      "new_skills_introduced": ["H15", "I18"],
+      "missing_units_flagged": [
+        "Compute real interest rate ≈ nominal − inflation and interpret purchasing-power effect on savings (concept-level + reken; partial overlap with H15 which is macro-framed)",
+        "Compute real GDP growth from nominal GDP change and GDP deflator change (A-domain candidate; the deflator-adjustment mechanic)",
+        "Explain why central banks target ~2% inflation, connecting real interest rate, purchasing power, and wage-earners (concept-level + verbal; exam integration question — the §4.4.3 payoff)"
+      ],
+      "exam_codes": [],
+      "difficulty_notes": "This is an integration lesson — no new concepts, just applying the real/nominal distinction from §4.4.1 and the indexering concepts from §4.4.2 to different economic variables. Exercise (e) is a synthesis question that prepares for exam-style evaluative answers. One lesson comfortable.",
+      "source_ref": "knowledge/course_blueprint_v4.md §4.4.3"
     }
   ]
 }
