@@ -226,8 +226,13 @@
         if (isNew) cls += ' st-new-skill';
         if (isGoal) cls += ' st-goal-skill';
         if (onPath) cls += ' st-on-goal-path';
-        var dis = (locked || !hasGen) ? ' disabled' : '';
-        var h = '<button class="' + cls + '" data-layer="' + skill.layer + '" data-skill="' + esc(skill.id) + '" type="button"' + dis + '>';
+        // NOTE: do NOT use the HTML `disabled` attribute — a disabled <button>
+        // swallows ALL clicks inside it, which would prevent the inner
+        // .st-info-btn / .st-dep-btn icons from firing on locked cards.
+        // Use aria-disabled instead and gate the open-exercise click
+        // separately by checking the .st-locked class in the delegation.
+        var ariaDis = (locked || !hasGen) ? ' aria-disabled="true"' : '';
+        var h = '<button class="' + cls + '" data-layer="' + skill.layer + '" data-skill="' + esc(skill.id) + '" type="button"' + ariaDis + '>';
         h += '<div class="st-skill-id"><span>' + esc(skill.id) + '</span><span class="st-skill-icons">'
            + '<span class="st-info-btn" data-info="' + esc(skill.id) + '" title="Info"><i class="fa-solid fa-circle-info"></i></span>'
            + '<span class="st-dep-btn" data-dep="' + esc(skill.id) + '" title="Afhankelijkheden"><i class="fa-solid fa-sitemap"></i></span>'
@@ -660,30 +665,32 @@
             var ed = sg.edges[eei], fp = positions[ed.from], tp = positions[ed.to];
             if (!fp || !tp) continue;
             var x1 = fp.x + NW / 2, y1 = fp.y + NH, x2 = tp.x + NW / 2, y2 = tp.y, mid = (y1 + y2) / 2;
-            var color = (st[ed.from] || 0) >= 1 ? '#2f7d4a' : '#b23b3b';
-            edgesSvg += '<path class="st-dep-edge" d="M ' + x1 + ' ' + y1 + ' C ' + x1 + ' ' + mid + ' ' + x2 + ' ' + mid + ' ' + x2 + ' ' + y2 + '" stroke="' + color + '"/>';
+            // Edge colour driven by a class; CSS resolves to theme-aware vars.
+            var edgeCls = 'st-dep-edge' + ((st[ed.from] || 0) >= 1 ? ' st-dep-edge-met' : ' st-dep-edge-unmet');
+            edgesSvg += '<path class="' + edgeCls + '" d="M ' + x1 + ' ' + y1 + ' C ' + x1 + ' ' + mid + ' ' + x2 + ' ' + mid + ' ' + x2 + ' ' + y2 + '"/>';
         }
-        var lc = ['#17A2B8', '#d08732', '#2f7d4a', '#7b4fae', '#c2266b', '#c2410c'];
         var nodesSvg = '';
         for (var ni2 = 0; ni2 < sg.nodes.length; ni2++) {
             var nd = sg.nodes[ni2], pos = positions[nd.id];
             if (!pos) continue;
             var sc = st[nd.id] || 0;
             var dis = (!engine.hasGenerator(nd.id) || !engine.prereqsDone(nd.id)) && sc === 0;
-            var gcls = 'st-dep-node' + (dis ? ' st-dep-node-disabled' : '');
-            var fill = lc[nd.layer] || '#444';
+            // Classes carry all visual state. SVG fills/strokes resolve in CSS via
+            // var(--layer-accent), var(--ink), etc. — so the dep view inherits the
+            // page's light/dark theme instead of being hardcoded to dark.
+            var gcls = 'st-dep-node';
+            if (dis) gcls += ' st-dep-node-disabled';
+            if (nd.id === sg.root) gcls += ' st-dep-node-root';
             var nm = nd.name.length > 16 ? nd.name.substring(0, 14) + '\u2026' : nd.name;
-            var strokeW = nd.id === sg.root ? 2 : 1;
-            var strokeC = nd.id === sg.root ? '#c58f2c' : 'rgba(0,0,0,0.25)';
             var starStr = '';
             for (var ss = 0; ss < STAR_DISPLAY_COUNT; ss++) starStr += ss < sc ? '\u2605' : '\u2606';
             nodesSvg += '<g class="' + gcls + '" data-skill="' + esc(nd.id) + '" transform="translate(' + pos.x + ',' + pos.y + ')" data-layer="' + nd.layer + '">'
-                + '<rect width="' + NW + '" height="' + NH + '" rx="8" ry="8" fill="' + fill + '" stroke="' + strokeC + '" stroke-width="' + strokeW + '"/>'
-                + '<text x="8" y="14" font-family="JetBrains Mono, monospace" font-size="9" font-weight="700" fill="#fff" opacity="0.85">' + esc(nd.id) + '</text>'
-                + '<text x="8" y="30" font-family="Inter, sans-serif" font-size="11" fill="#fff">' + esc(nm) + '</text>'
-                + '<text x="8" y="44" font-family="Inter, sans-serif" font-size="9" fill="#ffe18a">' + starStr + '</text>'
-                + '<g class="st-dep-info-btn" data-dep-info="' + esc(nd.id) + '" transform="translate(' + (NW - 34) + ',6)"><rect width="14" height="14" rx="3" fill="rgba(0,0,0,0.25)"/><text x="7" y="11" font-size="10" font-family="sans-serif" text-anchor="middle" fill="#fff">i</text></g>'
-                + '<g class="st-dep-tree-btn" data-dep-drill="' + esc(nd.id) + '" transform="translate(' + (NW - 18) + ',6)"><rect width="14" height="14" rx="3" fill="rgba(0,0,0,0.25)"/><text x="7" y="11" font-size="10" font-family="sans-serif" text-anchor="middle" fill="#fff">\u22A5</text></g>'
+                + '<rect class="st-dep-node-rect" width="' + NW + '" height="' + NH + '" rx="8" ry="8"/>'
+                + '<text class="st-dep-node-id" x="8" y="14">' + esc(nd.id) + '</text>'
+                + '<text class="st-dep-node-name" x="8" y="30">' + esc(nm) + '</text>'
+                + '<text class="st-dep-node-stars" x="8" y="44">' + starStr + '</text>'
+                + '<g class="st-dep-info-btn" data-dep-info="' + esc(nd.id) + '" transform="translate(' + (NW - 34) + ',6)"><rect class="st-dep-node-iconbg" width="14" height="14" rx="3"/><text class="st-dep-node-iconfg" x="7" y="11" text-anchor="middle">i</text></g>'
+                + '<g class="st-dep-tree-btn" data-dep-drill="' + esc(nd.id) + '" transform="translate(' + (NW - 18) + ',6)"><rect class="st-dep-node-iconbg" width="14" height="14" rx="3"/><text class="st-dep-node-iconfg" x="7" y="11" text-anchor="middle">\u22A5</text></g>'
                 + '</g>';
         }
         return '<svg class="st-dep-graph" viewBox="0 0 ' + width + ' ' + height + '" xmlns="http://www.w3.org/2000/svg">' + edgesSvg + nodesSvg + '</svg>';
@@ -819,7 +826,9 @@
                     var grm = t.getAttribute('data-goal-remove');
                     if (grm) { engine.removeGoal(grm); renderTree(); return; }
                     if (t.getAttribute('data-skill') && t.classList && t.classList.contains('st-skill-card')) {
-                        if (t.disabled) return;
+                        // Gate via class, not the HTML disabled attr (which we don't set —
+                        // see renderSkillCard for why).
+                        if (t.classList.contains('st-locked') || t.getAttribute('aria-disabled') === 'true') return;
                         mountExercise(t.getAttribute('data-skill'));
                         return;
                     }

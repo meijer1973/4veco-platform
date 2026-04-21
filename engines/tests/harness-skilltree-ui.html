@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skilltree UI — verification harness (refactor/skilltree-ui-idiom)</title>
+    <!--
+        This file mirrors the shape the real *-wiskundevaardigheden.html files
+        will take after the Sept-2026 deploy. The FULL persistent scaffold is
+        visible here — designers edit HTML + CSS, not JS. A tiny harness bar
+        up top lets devs switch paragraaf + reset localStorage. The per-
+        paragraaf title and §chip are hardcoded for 3.1.1 by default, and
+        the harness init script updates them when the paragraaf dropdown
+        changes so the harness is usable across all 22 paragraphs.
+    -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../skilltree.css">
+    <style>
+        .harness-bar {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 9999;
+            background: #0a0f1e; color: #f8fafc; padding: 6px 14px;
+            font: 12px/1.4 'DM Sans', system-ui, sans-serif;
+            border-bottom: 1px solid #1e293b;
+            display: flex; gap: 10px; align-items: center; flex-wrap: wrap;
+        }
+        .harness-bar select, .harness-bar button {
+            background: #1e293b; color: #f8fafc; border: 1px solid #334155;
+            padding: 3px 8px; font: inherit; cursor: pointer;
+        }
+        .harness-bar code { color: #94a3b8; }
+        body { padding-top: 34px; }
+    </style>
+</head>
+<body>
+    <div class="harness-bar">
+        <strong>Harness</strong>
+        <span>refactor/skilltree-ui-idiom</span>
+        <label>Paragraaf:
+            <select id="harness-par">
+                <option value="3.1.1">3.1.1 Markt en marktstructuur</option>
+                <option value="3.1.2">3.1.2 Marktvormen</option>
+                <option value="3.1.3">3.1.3 Toepassen</option>
+                <option value="3.2.1">3.2.1 Marktevenwicht</option>
+                <option value="3.2.2">3.2.2 Volkomen concurrentie</option>
+                <option value="3.2.3">3.2.3 Monopolie</option>
+                <option value="3.2.4">3.2.4 Oligopolie</option>
+                <option value="3.2.5">3.2.5 Monopolistische concurrentie</option>
+                <option value="3.2.6">3.2.6 Doelmatigheid</option>
+                <option value="3.2.7">3.2.7 Toepassen</option>
+                <option value="3.3.1">3.3.1 Rol van de overheid</option>
+                <option value="3.3.2">3.3.2 Overheidsbeleid</option>
+                <option value="3.3.3">3.3.3 Collectieve goederen</option>
+                <option value="3.3.4">3.3.4 Toepassen</option>
+                <option value="3.4.1">3.4.1 Internationale handel</option>
+                <option value="3.4.2">3.4.2 Inter-industriële handel</option>
+                <option value="3.4.3">3.4.3 Intra-industriële handel</option>
+                <option value="3.4.4">3.4.4 Productieketens</option>
+                <option value="3.4.5">3.4.5 Handelsbeleid</option>
+                <option value="3.4.6">3.4.6 Toepassen</option>
+                <option value="3.5.1">3.5.1 Afsluiting</option>
+                <option value="3.5.2">3.5.2 Naar het examen</option>
+            </select>
+        </label>
+        <button id="harness-reset-ls" type="button">Clear localStorage</button>
+        <code>Pick a paragraph, then reload.</code>
+    </div>
+
+    <a class="back-to-overview" href="../index.html">&larr; Terug naar overzicht</a>
+
+    <div class="st-top-strip">
+        <a class="st-crumb-back" href="../index.html">&larr; Overzicht</a>
+        <span class="st-crumb-sep"></span>
+        <span class="st-crumb-chip" id="st-crumb-chip">&sect;3.1.1</span>
+    </div>
+
+    <div id="skilltree-app">
+
+        <section class="st-view st-view-tree" id="st-view-tree">
+
+            <div class="st-legend" id="st-legend">
+                <span><i class="fa-solid fa-circle-info"></i> Info</span>
+                <span><i class="fa-solid fa-sitemap"></i> Afhankelijkheden</span>
+                <button class="st-view-toggle" id="st-view-toggle" type="button">&sect; Paragraaf</button>
+                <button class="st-theme-toggle" id="st-theme-toggle" type="button" aria-label="Wissel licht/donker">
+                    <span class="ring"><i class="fa-solid fa-sun"></i></span>
+                    <span class="label">Licht</span>
+                </button>
+            </div>
+
+            <header class="st-header" id="st-header">
+                <h1 id="st-header-title">Markt en marktstructuur</h1>
+                <p class="st-subtitle"></p>
+                <div class="st-progress-summary">
+                    <span class="st-stat-tile">
+                        <span class="ico" style="color:var(--green)">&#x25CF;</span>
+                        <span class="num"><span id="st-stat-mastered-val">0</span><span class="muted">/<span id="st-stat-total-val">0</span></span></span>
+                        <span class="lbl">Voltooid</span>
+                    </span>
+                    <span class="st-stat-tile">
+                        <span class="ico" style="color:var(--gold)">&#x2605;</span>
+                        <span class="num"><span id="st-stat-stars-val">0</span><span class="muted">/<span id="st-stat-maxstars-val">0</span></span></span>
+                        <span class="lbl">Sterren</span>
+                    </span>
+                </div>
+            </header>
+
+            <div class="st-goal-banner-slot" id="st-goal-banner-slot"></div>
+
+            <div class="st-layers" id="st-layers"></div>
+
+            <button class="st-reset-btn" id="st-reset" type="button">
+                <i class="fa-solid fa-rotate-left"></i> Reset
+            </button>
+
+        </section>
+
+        <section class="st-view st-view-deps" id="st-view-deps" hidden>
+            <header class="st-view-header">
+                <button class="st-view-back" id="st-deps-back" type="button">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </button>
+                <h2 id="st-deps-title">Afhankelijkheden</h2>
+            </header>
+            <div class="st-view-deps-body" id="st-deps-graph-slot"></div>
+            <footer class="st-view-deps-footer">
+                <div id="st-deps-goal-btn-slot"></div>
+                <div class="st-dep-legend">
+                    <span>&#8212; <span style="color:var(--green)">groen</span> = beheerst</span>
+                    <span>&#8212; <span style="color:var(--red)">rood</span> = nog te oefenen</span>
+                    <span>Tap = oefenen &middot; <i class="fa-solid fa-sitemap"></i> = afhankelijkheden</span>
+                </div>
+            </footer>
+        </section>
+
+        <section class="st-view st-view-expl" id="st-view-expl" hidden>
+            <header class="st-view-header">
+                <button class="st-view-back" id="st-expl-back" type="button">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </button>
+                <h2 id="st-expl-title"></h2>
+            </header>
+            <div class="st-view-expl-body" id="st-expl-body"></div>
+        </section>
+
+        <div class="st-info-overlay" id="st-info-overlay" hidden>
+            <div class="st-info-container" id="st-info-container">
+                <div class="st-info-header" id="st-info-header"></div>
+                <p class="st-info-desc" id="st-info-desc"></p>
+                <div class="st-info-preview" id="st-info-preview"></div>
+                <div class="st-info-stars" id="st-info-stars"></div>
+            </div>
+        </div>
+
+        <section class="st-view st-view-exercise" id="st-view-exercise" hidden>
+
+            <div class="st-exercise" id="st-exercise">
+
+                <div class="st-ex-header">
+                    <button class="st-back-btn" id="st-back" type="button">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </button>
+                    <div style="flex:1">
+                        <div class="st-ex-skill-id" id="st-ex-skill-id"></div>
+                        <div class="st-ex-skill-name" id="st-ex-skill-name"></div>
+                    </div>
+                    <div class="st-step-counter" id="st-step-counter"></div>
+                </div>
+
+                <div class="st-progress-bar">
+                    <div class="st-progress-fill" id="st-progress-fill"></div>
+                </div>
+
+                <div class="st-context" id="st-context"></div>
+
+                <div class="st-completed-list" id="st-completed-list"></div>
+
+                <div class="st-step-card-slot" id="st-step-card-slot"></div>
+
+                <div class="st-score-tracker" id="st-score-tracker"></div>
+
+                <div class="st-result-slot" id="st-result-slot" hidden></div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+    <script>
+        // ── Harness-only paragraph switcher (not part of the deployed game) ──
+        (function () {
+            var DATA_BASE = '../../../3. Module 3 - Markt en overheid/shared/skilltree/';
+            var stored = localStorage.getItem('harness-par') || '3.1.1';
+            var sel = document.getElementById('harness-par');
+            sel.value = stored;
+
+            // Update the HTML scaffold's title + chip to match the selected paragraaf.
+            // In the real deployed files these are hardcoded per paragraaf; here we
+            // rewrite them on the fly so the harness is usable across all 22.
+            var opt = sel.options[sel.selectedIndex];
+            var parName = opt.text.replace(/^\d+(\.\d+)*\s+/, '');
+            document.getElementById('st-header-title').textContent = parName;
+            document.getElementById('st-crumb-chip').innerHTML = '&sect;' + stored;
+            document.title = stored + ' ' + parName + ' \u2014 Wiskundevaardigheden';
+
+            sel.addEventListener('change', function () {
+                localStorage.setItem('harness-par', sel.value);
+                location.reload();
+            });
+            document.getElementById('harness-reset-ls').addEventListener('click', function () {
+                localStorage.removeItem('skilltree_global_stars');
+                localStorage.removeItem('skilltree_goals');
+                localStorage.removeItem('econ-game-stars');
+                alert('localStorage cleared. Reloading.');
+                location.reload();
+            });
+
+            // Synchronously inject the selected paragraaf data file before the
+            // engine/UI scripts load (document.write during parse).
+            document.write('<script src="' + DATA_BASE + stored + '.js"><\/script>');
+        })();
+    </script>
+    <script src="../../../3. Module 3 - Markt en overheid/shared/skilltree/base-elements.js"></script>
+    <script src="../../../3. Module 3 - Markt en overheid/shared/skilltree/explanations.js"></script>
+    <script src="../skilltree-engine.js"></script>
+    <script src="../skilltree-ui.js"></script>
+</body>
+</html>

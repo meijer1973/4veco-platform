@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<!--
+    Canonical template for {{PAR_NR}} *-wiskundevaardigheden.html deployed files.
+
+    Each of the 22 deployed skilltree pages should take this exact shape after
+    the Sept-2026 cohort boundary. Two placeholders are substituted at build time:
+
+        {{PAR_NR}}    →  e.g. "3.1.1"
+        {{PAR_NAME}}  →  e.g. "Markt en marktstructuur"
+
+    The per-paragraaf data script src also follows the same {{PAR_NR}} pattern.
+
+    Do not add per-paragraaf content beyond these two placeholders; everything
+    else is identical across the 22 files. Any design/layout change happens in
+    this template + skilltree.css + (if behaviour) skilltree-ui.js.
+
+    Deploy note: the Module-3 sweep that applies this template MUST happen in
+    the same commit as the new shared/skilltree-ui.js drop — the new JS binds
+    to the IDs introduced here and will error out on an old-style HTML that
+    only has <div id="skilltree-app"></div>.
+-->
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{PAR_NR}} {{PAR_NAME}} – Wiskundevaardigheden</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../../../shared/skilltree.css">
+</head>
+<body>
+    <a class="back-to-overview" href="../index.html">&larr; Terug naar overzicht</a>
+
+    <div class="st-top-strip">
+        <a class="st-crumb-back" href="../index.html">&larr; Overzicht</a>
+        <span class="st-crumb-sep"></span>
+        <span class="st-crumb-chip" id="st-crumb-chip">&sect;{{PAR_NR}}</span>
+    </div>
+
+    <div id="skilltree-app">
+
+        <section class="st-view st-view-tree" id="st-view-tree">
+
+            <div class="st-legend" id="st-legend">
+                <span><i class="fa-solid fa-circle-info"></i> Info</span>
+                <span><i class="fa-solid fa-sitemap"></i> Afhankelijkheden</span>
+                <button class="st-view-toggle" id="st-view-toggle" type="button">&sect; Paragraaf</button>
+                <button class="st-theme-toggle" id="st-theme-toggle" type="button" aria-label="Wissel licht/donker">
+                    <span class="ring"><i class="fa-solid fa-sun"></i></span>
+                    <span class="label">Licht</span>
+                </button>
+            </div>
+
+            <header class="st-header" id="st-header">
+                <h1 id="st-header-title">{{PAR_NAME}}</h1>
+                <p class="st-subtitle"></p>
+                <div class="st-progress-summary">
+                    <span class="st-stat-tile">
+                        <span class="ico" style="color:var(--green)">&#x25CF;</span>
+                        <span class="num"><span id="st-stat-mastered-val">0</span><span class="muted">/<span id="st-stat-total-val">0</span></span></span>
+                        <span class="lbl">Voltooid</span>
+                    </span>
+                    <span class="st-stat-tile">
+                        <span class="ico" style="color:var(--gold)">&#x2605;</span>
+                        <span class="num"><span id="st-stat-stars-val">0</span><span class="muted">/<span id="st-stat-maxstars-val">0</span></span></span>
+                        <span class="lbl">Sterren</span>
+                    </span>
+                </div>
+            </header>
+
+            <div class="st-goal-banner-slot" id="st-goal-banner-slot"></div>
+
+            <div class="st-layers" id="st-layers"></div>
+
+            <button class="st-reset-btn" id="st-reset" type="button">
+                <i class="fa-solid fa-rotate-left"></i> Reset
+            </button>
+
+        </section>
+
+        <section class="st-view st-view-deps" id="st-view-deps" hidden>
+            <header class="st-view-header">
+                <button class="st-view-back" id="st-deps-back" type="button">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </button>
+                <h2 id="st-deps-title">Afhankelijkheden</h2>
+            </header>
+            <div class="st-view-deps-body" id="st-deps-graph-slot"></div>
+            <footer class="st-view-deps-footer">
+                <div id="st-deps-goal-btn-slot"></div>
+                <div class="st-dep-legend">
+                    <span>&#8212; <span style="color:var(--green)">groen</span> = beheerst</span>
+                    <span>&#8212; <span style="color:var(--red)">rood</span> = nog te oefenen</span>
+                    <span>Tap = oefenen &middot; <i class="fa-solid fa-sitemap"></i> = afhankelijkheden</span>
+                </div>
+            </footer>
+        </section>
+
+        <section class="st-view st-view-expl" id="st-view-expl" hidden>
+            <header class="st-view-header">
+                <button class="st-view-back" id="st-expl-back" type="button">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </button>
+                <h2 id="st-expl-title"></h2>
+            </header>
+            <div class="st-view-expl-body" id="st-expl-body"></div>
+        </section>
+
+        <div class="st-info-overlay" id="st-info-overlay" hidden>
+            <div class="st-info-container" id="st-info-container">
+                <div class="st-info-header" id="st-info-header"></div>
+                <p class="st-info-desc" id="st-info-desc"></p>
+                <div class="st-info-preview" id="st-info-preview"></div>
+                <div class="st-info-stars" id="st-info-stars"></div>
+            </div>
+        </div>
+
+        <section class="st-view st-view-exercise" id="st-view-exercise" hidden>
+
+            <div class="st-exercise" id="st-exercise">
+
+                <div class="st-ex-header">
+                    <button class="st-back-btn" id="st-back" type="button">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </button>
+                    <div style="flex:1">
+                        <div class="st-ex-skill-id" id="st-ex-skill-id"></div>
+                        <div class="st-ex-skill-name" id="st-ex-skill-name"></div>
+                    </div>
+                    <div class="st-step-counter" id="st-step-counter"></div>
+                </div>
+
+                <div class="st-progress-bar">
+                    <div class="st-progress-fill" id="st-progress-fill"></div>
+                </div>
+
+                <div class="st-context" id="st-context"></div>
+
+                <div class="st-completed-list" id="st-completed-list"></div>
+
+                <div class="st-step-card-slot" id="st-step-card-slot"></div>
+
+                <div class="st-score-tracker" id="st-score-tracker"></div>
+
+                <div class="st-result-slot" id="st-result-slot" hidden></div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+    <script src="../../../shared/skilltree/base-elements.js"></script>
+    <script src="../../../shared/skilltree/{{PAR_NR}}.js"></script>
+    <script src="../../../shared/skilltree/explanations.js"></script>
+    <script src="../../../shared/skilltree-engine.js"></script>
+    <script src="../../../shared/skilltree-ui.js"></script>
+</body>
+</html>
