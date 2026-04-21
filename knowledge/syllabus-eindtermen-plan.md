@@ -2,6 +2,8 @@
 
 Response to `knowledge/syllabus-eindtermen-quality-review.md` (2026-04-20).
 
+> **⚠ Partially superseded 2026-04-21.** The scope decision in §75 / §122 ("Position 1: domain A intentionally out of scope") was rejected by the user on didactic grounds. Scope has been extended to include A-domain; see `knowledge/exam-codes-scope-policy-revision-plan.md` and the supersession log in `skills/manage-references.md` PART 6.
+
 ## TL;DR
 
 All four findings have merit. I re-ran a read-only parse on `references/external/syllabus-eindtermen.json` and the numbers check out exactly:

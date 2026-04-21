@@ -36,7 +36,9 @@
       "A04"
     ],
     "question_type": "berekenen",
-    "exam_codes": []
+    "exam_codes": [
+      "A2.12"
+    ]
   },
   {
     "exam": "ha-1022-a-23-1-o",
@@ -114,7 +116,9 @@
       "A04"
     ],
     "question_type": "berekenen",
-    "exam_codes": []
+    "exam_codes": [
+      "A2.12"
+    ]
   },
   {
     "exam": "ha-1022-a-23-1-o",
@@ -152,7 +156,11 @@
       "A06"
     ],
     "question_type": "uitleg_dat",
-    "exam_codes": []
+    "exam_codes": [
+      "A2.10",
+      "A2.12",
+      "A2.15"
+    ]
   },
   {
     "exam": "ha-1022-a-23-1-o",
@@ -170,7 +178,11 @@
       "A06"
     ],
     "question_type": "berekenen",
-    "exam_codes": []
+    "exam_codes": [
+      "A2.10",
+      "A2.12",
+      "A2.15"
+    ]
   },
   {
     "exam": "ha-1022-a-23-1-o",
@@ -188,7 +200,11 @@
       "A06"
     ],
     "question_type": "berekenen",
-    "exam_codes": []
+    "exam_codes": [
+      "A2.10",
+      "A2.12",
+      "A2.15"
+    ]
   },
   {
     "exam": "ha-1022-a-23-1-o",
@@ -206,7 +222,10 @@
       "A21"
     ],
     "question_type": "uitleg_dat",
-    "exam_codes": []
+    "exam_codes": [
+      "A2.1",
+      "A2.11"
+    ]
   },
   {
     "exam": "ha-1022-a-23-1-o",
@@ -224,7 +243,10 @@
       "A19"
     ],
     "question_type": "classificatie",
-    "exam_codes": []
+    "exam_codes": [
+      "A2.16",
+      "A2.17"
+    ]
   },
   {
     "exam": "ha-1022-a-23-1-o",
@@ -460,7 +482,10 @@
       "A21"
     ],
     "question_type": "berekenen",
-    "exam_codes": []
+    "exam_codes": [
+      "A2.1",
+      "A2.11"
+    ]
   },
   {
     "exam": "ha-1022-a-23-1-o",
@@ -478,7 +503,11 @@
       "A25"
     ],
     "question_type": "uitleg_of",
-    "exam_codes": []
+    "exam_codes": [
+      "A2.15",
+      "A2.16",
+      "A4.5"
+    ]
   },
   {
     "exam": "ha-1022-a-23-1-o",
@@ -496,7 +525,11 @@
       "A06"
     ],
     "question_type": "uitleg_dat",
-    "exam_codes": []
+    "exam_codes": [
+      "A2.10",
+      "A2.12",
+      "A2.15"
+    ]
   },
   {
     "exam": "ha-1022-a-23-1-o",
@@ -514,7 +547,10 @@
       "A27"
     ],
     "question_type": "uitleg_dat",
-    "exam_codes": []
+    "exam_codes": [
+      "A2.15",
+      "A2.16"
+    ]
   },
   {
     "exam": "ha-1022-a-23-1-o",
@@ -636,7 +672,10 @@
       "A15"
     ],
     "question_type": "berekenen",
-    "exam_codes": []
+    "exam_codes": [
+      "A2.4",
+      "A2.5"
+    ]
   },
   {
     "exam": "ha-1022-a-23-2-o",
@@ -654,7 +693,9 @@
       "A04"
     ],
     "question_type": "uitleg_dat",
-    "exam_codes": []
+    "exam_codes": [
+      "A2.12"
+    ]
   },
   {
     "exam": "ha-1022-a-23-2-o",
@@ -712,7 +753,10 @@
       "A15"
     ],
     "question_type": "noem",
-    "exam_codes": []
+    "exam_codes": [
+      "A2.4",
+      "A2.5"
+    ]
   },
   {
     "exam": "ha-1022-a-23-2-o",
@@ -751,7 +795,10 @@
       "A16"
     ],
     "question_type": "uitleg_of",
-    "exam_codes": []
+    "exam_codes": [
+      "A2.4",
+      "A2.5"
+    ]
   },
   {
     "exam": "ha-1022-a-23-2-o",
@@ -769,7 +816,10 @@
       "A16"
     ],
     "question_type": "uitleg_dat",
-    "exam_codes": []
+    "exam_codes": [
+      "A2.4",
+      "A2.5"
+    ]
   },
   {
     "exam": "ha-1022-a-23-2-o",
@@ -929,7 +979,10 @@
       "A20"
     ],
     "question_type": "berekenen",
-    "exam_codes": []
+    "exam_codes": [
+      "A2.10",
+      "A2.12"
+    ]
   },
   {
     "exam": "ha-1022-a-23-2-o",
@@ -948,7 +1001,12 @@
       "A21"
     ],
     "question_type": "berekenen",
-    "exam_codes": []
+    "exam_codes": [
+      "A2.1",
+      "A2.10",
+      "A2.11",
+      "A2.12"
+    ]
   },
   {
     "exam": "ha-1022-a-23-2-o",
@@ -966,7 +1024,10 @@
       "A20"
     ],
     "question_type": "uitleg_dat",
-    "exam_codes": []
+    "exam_codes": [
+      "A2.10",
+      "A2.12"
+    ]
   },
   {
     "exam": "ha-1022-a-23-2-o",
@@ -984,7 +1045,10 @@
       "A15"
     ],
     "question_type": "classificatie",
-    "exam_codes": []
+    "exam_codes": [
+      "A2.4",
+      "A2.5"
+    ]
   },
   {
     "exam": "ha-1022-a-23-2-o",
@@ -1002,7 +1066,11 @@
       "A25"
     ],
     "question_type": "uitleg_dat",
-    "exam_codes": []
+    "exam_codes": [
+      "A2.15",
+      "A2.16",
+      "A4.5"
+    ]
   },
   {
     "exam": "ha-1022-a-23-2-o",
@@ -1216,7 +1284,9 @@
       "A04"
     ],
     "question_type": "berekenen",
-    "exam_codes": []
+    "exam_codes": [
+      "A2.12"
+    ]
   },
   {
     "exam": "ha-1022-a-24-1-o",
@@ -1234,7 +1304,9 @@
       "A04"
     ],
     "question_type": "berekenen",
-    "exam_codes": []
+    "exam_codes": [
+      "A2.12"
+    ]
   },
   {
     "exam": "ha-1022-a-24-1-o",
@@ -1273,7 +1345,10 @@
       "A15"
     ],
     "question_type": "uitleg_dat",
-    "exam_codes": []
+    "exam_codes": [
+      "A2.4",
+      "A2.5"
+    ]
   },
   {
     "exam": "ha-1022-a-24-1-o",
@@ -1409,7 +1484,11 @@
       "A14"
     ],
     "question_type": "berekenen",
-    "exam_codes": []
+    "exam_codes": [
+      "A2.10",
+      "A2.11",
+      "A2.15"
+    ]
   },
   {
     "exam": "ha-1022-a-24-1-o",
@@ -1548,7 +1627,9 @@
       "A04"
     ],
     "question_type": "berekenen",
-    "exam_codes": []
+    "exam_codes": [
+      "A2.12"
+    ]
   },
   {
     "exam": "ha-1022-a-24-1-o",
@@ -1722,7 +1803,9 @@
       "A04"
     ],
     "question_type": "berekenen",
-    "exam_codes": []
+    "exam_codes": [
+      "A2.12"
+    ]
   },
   {
     "exam": "ha-1022-a-24-1-o",
@@ -1800,7 +1883,10 @@
       "A15"
     ],
     "question_type": "berekenen",
-    "exam_codes": []
+    "exam_codes": [
+      "A2.4",
+      "A2.5"
+    ]
   },
   {
     "exam": "ha-1022-a-24-2-o",
@@ -1818,7 +1904,10 @@
       "A19"
     ],
     "question_type": "grafisch",
-    "exam_codes": []
+    "exam_codes": [
+      "A2.16",
+      "A2.17"
+    ]
   },
   {
     "exam": "ha-1022-a-24-2-o",
@@ -2400,7 +2489,9 @@
       "A04"
     ],
     "question_type": "berekenen",
-    "exam_codes": []
+    "exam_codes": [
+      "A2.12"
+    ]
   },
   {
     "exam": "ha-1022-a-25-1-o",
@@ -2562,7 +2653,10 @@
       "A15"
     ],
     "question_type": "berekenen",
-    "exam_codes": []
+    "exam_codes": [
+      "A2.4",
+      "A2.5"
+    ]
   },
   {
     "exam": "ha-1022-a-25-1-o",
@@ -3090,7 +3184,10 @@
       "A17"
     ],
     "question_type": "berekenen",
-    "exam_codes": []
+    "exam_codes": [
+      "A2.4",
+      "A2.5"
+    ]
   },
   {
     "exam": "ha-1022-a-25-2-o",
@@ -3129,7 +3226,10 @@
       "A15"
     ],
     "question_type": "uitleg_dat",
-    "exam_codes": []
+    "exam_codes": [
+      "A2.4",
+      "A2.5"
+    ]
   },
   {
     "exam": "ha-1022-a-25-2-o",
@@ -3211,7 +3311,10 @@
       "A21"
     ],
     "question_type": "berekenen",
-    "exam_codes": []
+    "exam_codes": [
+      "A2.1",
+      "A2.11"
+    ]
   },
   {
     "exam": "ha-1022-a-25-2-o",
@@ -3469,7 +3572,10 @@
       "A02"
     ],
     "question_type": "uitleg_dat",
-    "exam_codes": []
+    "exam_codes": [
+      "A2.10",
+      "A2.12"
+    ]
   },
   {
     "exam": "vw-1022-a-23-1-o",
@@ -3488,7 +3594,11 @@
       "A07"
     ],
     "question_type": "uitleg_dat",
-    "exam_codes": []
+    "exam_codes": [
+      "A2.10",
+      "A2.12",
+      "A2.15"
+    ]
   },
   {
     "exam": "vw-1022-a-23-1-o",
@@ -3527,7 +3637,12 @@
       "A21"
     ],
     "question_type": "berekenen",
-    "exam_codes": []
+    "exam_codes": [
+      "A2.1",
+      "A2.10",
+      "A2.11",
+      "A2.12"
+    ]
   },
   {
     "exam": "vw-1022-a-23-1-o",
@@ -3605,7 +3720,10 @@
       "A15"
     ],
     "question_type": "uitleg_dat",
-    "exam_codes": []
+    "exam_codes": [
+      "A2.4",
+      "A2.5"
+    ]
   },
   {
     "exam": "vw-1022-a-23-1-o",
@@ -3623,7 +3741,10 @@
       "A02"
     ],
     "question_type": "berekenen",
-    "exam_codes": []
+    "exam_codes": [
+      "A2.10",
+      "A2.12"
+    ]
   },
   {
     "exam": "vw-1022-a-23-1-o",
@@ -3742,7 +3863,9 @@
       "A04"
     ],
     "question_type": "berekenen",
-    "exam_codes": []
+    "exam_codes": [
+      "A2.12"
+    ]
   },
   {
     "exam": "vw-1022-a-23-1-o",
@@ -3761,7 +3884,11 @@
       "A20"
     ],
     "question_type": "berekenen",
-    "exam_codes": []
+    "exam_codes": [
+      "A2.10",
+      "A2.12",
+      "A2.15"
+    ]
   },
   {
     "exam": "vw-1022-a-23-1-o",
@@ -3795,7 +3922,10 @@
       "A02"
     ],
     "question_type": "berekenen",
-    "exam_codes": []
+    "exam_codes": [
+      "A2.10",
+      "A2.12"
+    ]
   },
   {
     "exam": "vw-1022-a-23-1-o",
@@ -3973,7 +4103,10 @@
       "A07"
     ],
     "question_type": "noem",
-    "exam_codes": []
+    "exam_codes": [
+      "A2.10",
+      "A2.15"
+    ]
   },
   {
     "exam": "vw-1022-a-23-1-o",
@@ -3991,7 +4124,10 @@
       "A22"
     ],
     "question_type": "berekenen",
-    "exam_codes": []
+    "exam_codes": [
+      "A2.10",
+      "A2.12"
+    ]
   },
   {
     "exam": "vw-1022-a-23-1-o",
@@ -4089,7 +4225,10 @@
       "A21"
     ],
     "question_type": "uitleg_dat",
-    "exam_codes": []
+    "exam_codes": [
+      "A2.1",
+      "A2.11"
+    ]
   },
   {
     "exam": "vw-1022-a-23-2-o",
@@ -4108,7 +4247,11 @@
       "A02"
     ],
     "question_type": "berekenen",
-    "exam_codes": []
+    "exam_codes": [
+      "A2.10",
+      "A2.12",
+      "A2.9"
+    ]
   },
   {
     "exam": "vw-1022-a-23-2-o",
@@ -4166,7 +4309,10 @@
       "A15"
     ],
     "question_type": "uitleg_dat",
-    "exam_codes": []
+    "exam_codes": [
+      "A2.4",
+      "A2.5"
+    ]
   },
   {
     "exam": "vw-1022-a-23-2-o",
@@ -4184,7 +4330,10 @@
       "A19"
     ],
     "question_type": "grafisch",
-    "exam_codes": []
+    "exam_codes": [
+      "A2.16",
+      "A2.17"
+    ]
   },
   {
     "exam": "vw-1022-a-23-2-o",
@@ -4244,7 +4393,12 @@
       "A21"
     ],
     "question_type": "berekenen",
-    "exam_codes": []
+    "exam_codes": [
+      "A2.1",
+      "A2.10",
+      "A2.11",
+      "A2.15"
+    ]
   },
   {
     "exam": "vw-1022-a-23-2-o",
@@ -4262,7 +4416,9 @@
       "A14"
     ],
     "question_type": "berekenen",
-    "exam_codes": []
+    "exam_codes": [
+      "A2.11"
+    ]
   },
   {
     "exam": "vw-1022-a-23-2-o",
@@ -4280,7 +4436,11 @@
       "A26"
     ],
     "question_type": "uitleg_of",
-    "exam_codes": []
+    "exam_codes": [
+      "A2.15",
+      "A2.16",
+      "A4.5"
+    ]
   },
   {
     "exam": "vw-1022-a-23-2-o",
@@ -4511,7 +4671,9 @@
       "A14"
     ],
     "question_type": "berekenen",
-    "exam_codes": []
+    "exam_codes": [
+      "A2.11"
+    ]
   },
   {
     "exam": "vw-1022-a-23-2-o",
@@ -4529,7 +4691,11 @@
       "A06"
     ],
     "question_type": "berekenen",
-    "exam_codes": []
+    "exam_codes": [
+      "A2.10",
+      "A2.12",
+      "A2.15"
+    ]
   },
   {
     "exam": "vw-1022-a-23-2-o",
@@ -4547,7 +4713,11 @@
       "A25"
     ],
     "question_type": "uitleg_dat",
-    "exam_codes": []
+    "exam_codes": [
+      "A2.15",
+      "A2.16",
+      "A4.5"
+    ]
   },
   {
     "exam": "vw-1022-a-23-2-o",
@@ -4667,7 +4837,10 @@
       "A21"
     ],
     "question_type": "uitleg_dat",
-    "exam_codes": []
+    "exam_codes": [
+      "A2.1",
+      "A2.11"
+    ]
   },
   {
     "exam": "vw-1022-a-24-1-o",
@@ -4685,7 +4858,10 @@
       "A16"
     ],
     "question_type": "uitleg_dat",
-    "exam_codes": []
+    "exam_codes": [
+      "A2.4",
+      "A2.5"
+    ]
   },
   {
     "exam": "vw-1022-a-24-1-o",
@@ -4998,7 +5174,11 @@
       "A06"
     ],
     "question_type": "berekenen",
-    "exam_codes": []
+    "exam_codes": [
+      "A2.10",
+      "A2.12",
+      "A2.15"
+    ]
   },
   {
     "exam": "vw-1022-a-24-1-o",
@@ -5173,7 +5353,12 @@
       "A21"
     ],
     "question_type": "berekenen",
-    "exam_codes": []
+    "exam_codes": [
+      "A2.1",
+      "A2.10",
+      "A2.11",
+      "A2.12"
+    ]
   },
   {
     "exam": "vw-1022-a-24-2-o",
@@ -5472,7 +5657,10 @@
       "A16"
     ],
     "question_type": "uitleg_dat",
-    "exam_codes": []
+    "exam_codes": [
+      "A2.4",
+      "A2.5"
+    ]
   },
   {
     "exam": "vw-1022-a-24-2-o",
@@ -5510,7 +5698,10 @@
       "A16"
     ],
     "question_type": "berekenen",
-    "exam_codes": []
+    "exam_codes": [
+      "A2.4",
+      "A2.5"
+    ]
   },
   {
     "exam": "vw-1022-a-24-2-o",
@@ -5528,7 +5719,10 @@
       "A19"
     ],
     "question_type": "uitleg_dat",
-    "exam_codes": []
+    "exam_codes": [
+      "A2.16",
+      "A2.17"
+    ]
   },
   {
     "exam": "vw-1022-a-24-2-o",
@@ -5765,7 +5959,10 @@
       "A15"
     ],
     "question_type": "berekenen",
-    "exam_codes": []
+    "exam_codes": [
+      "A2.4",
+      "A2.5"
+    ]
   },
   {
     "exam": "vw-1022-a-25-1-o",
@@ -5929,7 +6126,11 @@
       "A35"
     ],
     "question_type": "berekenen",
-    "exam_codes": []
+    "exam_codes": [
+      "A2.10",
+      "A2.11",
+      "A2.12"
+    ]
   },
   {
     "exam": "vw-1022-a-25-1-o",
@@ -5948,7 +6149,11 @@
       "A14"
     ],
     "question_type": "noem",
-    "exam_codes": []
+    "exam_codes": [
+      "A2.10",
+      "A2.11",
+      "A2.15"
+    ]
   },
   {
     "exam": "vw-1022-a-25-1-o",
@@ -5966,7 +6171,10 @@
       "A08"
     ],
     "question_type": "berekenen",
-    "exam_codes": []
+    "exam_codes": [
+      "A2.10",
+      "A2.15"
+    ]
   },
   {
     "exam": "vw-1022-a-25-1-o",
@@ -6198,7 +6406,10 @@
       "A21"
     ],
     "question_type": "berekenen",
-    "exam_codes": []
+    "exam_codes": [
+      "A2.1",
+      "A2.11"
+    ]
   },
   {
     "exam": "vw-1022-a-25-1-o",
@@ -6278,7 +6489,12 @@
       "A12"
     ],
     "question_type": "berekenen",
-    "exam_codes": []
+    "exam_codes": [
+      "A2.1",
+      "A2.10",
+      "A2.11",
+      "A2.12"
+    ]
   },
   {
     "exam": "vw-1022-a-25-2-o",
@@ -6317,7 +6533,11 @@
       "A12"
     ],
     "question_type": "grafisch",
-    "exam_codes": []
+    "exam_codes": [
+      "A2.10",
+      "A2.11",
+      "A2.15"
+    ]
   },
   {
     "exam": "vw-1022-a-25-2-o",
@@ -6336,7 +6556,11 @@
       "A27"
     ],
     "question_type": "grafisch",
-    "exam_codes": []
+    "exam_codes": [
+      "A2.15",
+      "A2.16",
+      "A2.17"
+    ]
   },
   {
     "exam": "vw-1022-a-25-2-o",
@@ -6613,7 +6837,10 @@
       "A21"
     ],
     "question_type": "berekenen",
-    "exam_codes": []
+    "exam_codes": [
+      "A2.1",
+      "A2.11"
+    ]
   },
   {
     "exam": "vw-1022-a-25-2-o",
@@ -6651,7 +6878,10 @@
       "A22"
     ],
     "question_type": "berekenen",
-    "exam_codes": []
+    "exam_codes": [
+      "A2.10",
+      "A2.12"
+    ]
   },
   {
     "exam": "vw-1022-a-25-2-o",

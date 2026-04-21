@@ -48,7 +48,7 @@ Each unit entry uses this format. Fields marked *optional* are omitted when empt
 - duration_min: <3-7>                                 # A-only (seeded); optional elsewhere
 - kern: "<one-sentence mastery statement; imperative for apply+, declarative allowed for remember/understand>"
 - needs: [<prerequisite unit IDs>]                    # required (may be empty)
-- exam_codes: [<CvTE eindterm codes, e.g. D3.2, I3.5>]  # optional; D-I only
+- exam_codes: [<CvTE eindterm codes, e.g. D3.2, A2.10>]  # optional; A + D-I
 - mastery_target: <remember | understand | apply | analyze | evaluate>
 - prior_learning: <previously_taught | new_this_year | review_and_extend>
 - aspects: [<verbaal | grafisch | rekenen>]           # required, non-empty subset
@@ -120,6 +120,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - duration_min: 5
 - kern: "Stel een lineaire functie op (y = ax + b) vanuit een economische context, zoals een vraag- of aanbodfunctie."
 - needs: []
+- exam_codes: [A2.9, A2.10]
 - mastery_target: apply
 - prior_learning: previously_taught
 - aspects: [rekenen]
@@ -139,6 +140,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - duration_min: 5
 - kern: "Los een vergelijking met één onbekende op, bijvoorbeeld door twee functies aan elkaar gelijk te stellen."
 - needs: []
+- exam_codes: [A2.10, A2.12]
 - mastery_target: apply
 - prior_learning: previously_taught
 - aspects: [rekenen, verbaal]
@@ -156,6 +158,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - duration_min: 5
 - kern: "Schrijf een functie om van P als functie van Q naar Q als functie van P, of andersom."
 - needs: []
+- exam_codes: [A2.10]
 - mastery_target: apply
 - prior_learning: previously_taught
 - aspects: [rekenen]
@@ -172,6 +175,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - duration_min: 5
 - kern: "Vul een waarde in een functie in en bereken het resultaat."
 - needs: []
+- exam_codes: [A2.12]
 - mastery_target: apply
 - prior_learning: previously_taught
 - aspects: [rekenen, verbaal]
@@ -191,6 +195,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - duration_min: 5
 - kern: "Bereken het snijpunt van een functie met de verticale as (P-as) door Q = 0 in te vullen."
 - needs: []
+- exam_codes: [A2.13, A2.14]
 - mastery_target: apply
 - prior_learning: previously_taught
 - aspects: [grafisch, rekenen]
@@ -209,6 +214,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - duration_min: 5
 - kern: "Bereken de evenwichtsprijs en -hoeveelheid door vraag en aanbod aan elkaar gelijk te stellen."
 - needs: [A01, A02]
+- exam_codes: [A2.10, A2.12, A2.15]
 - mastery_target: apply
 - prior_learning: new_this_year
 - aspects: [rekenen, verbaal]
@@ -226,6 +232,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - duration_min: 5
 - kern: "Stel de totale opbrengstfunctie op: TO = P × Q. Schrijf de vraagfunctie om zodat P in Q is uitgedrukt."
 - needs: [A01, A03]
+- exam_codes: [A2.10, A2.15]
 - mastery_target: apply
 - prior_learning: new_this_year
 - aspects: [grafisch, rekenen, verbaal]
@@ -244,6 +251,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - duration_min: 5
 - kern: "Herken en werk met de totale kostenfunctie (TK), vaak gegeven als TK = vaste kosten + variabele kosten × Q."
 - needs: [A01]
+- exam_codes: [A2.10, A2.15]
 - mastery_target: apply
 - prior_learning: new_this_year
 - aspects: [rekenen, verbaal]
@@ -262,6 +270,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - duration_min: 5
 - kern: "Tel individuele aanbodfuncties op tot een collectieve aanbodfunctie."
 - needs: [A03]
+- exam_codes: [A2.9]
 - mastery_target: apply
 - prior_learning: new_this_year
 - aspects: [rekenen]
@@ -281,6 +290,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - duration_min: 5
 - kern: "Bereken de oppervlakte van een driehoek in een grafiek: ½ × basis × hoogte."
 - needs: [A04]
+- exam_codes: [A2.17]
 - mastery_target: apply
 - prior_learning: previously_taught
 - aspects: [grafisch, rekenen]
@@ -300,6 +310,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - duration_min: 5
 - kern: "Bepaal de afgeleide van een functie. Bijvoorbeeld: als TO = 5Q², dan is MO = 10Q."
 - needs: [A01]
+- exam_codes: [A2.11]
 - mastery_target: apply
 - prior_learning: previously_taught
 - aspects: [rekenen]
@@ -319,6 +330,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - duration_min: 5
 - kern: "Bepaal de marginale opbrengst (MO) door de afgeleide van de TO-functie te nemen."
 - needs: [A11, A07]
+- exam_codes: [A2.11]
 - mastery_target: apply
 - prior_learning: new_this_year
 - aspects: [grafisch, rekenen]
@@ -337,6 +349,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - duration_min: 5
 - kern: "Bepaal de marginale kosten (MK) door de afgeleide van de TK-functie te nemen."
 - needs: [A11, A08]
+- exam_codes: [A2.11]
 - mastery_target: apply
 - prior_learning: new_this_year
 - aspects: [rekenen]
@@ -355,6 +368,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - duration_min: 5
 - kern: "Bereken de gemiddelde totale kosten: GTK = TK / Q."
 - needs: [A08]
+- exam_codes: [A2.11]
 - mastery_target: apply
 - prior_learning: new_this_year
 - aspects: [rekenen, verbaal]
@@ -374,6 +388,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - duration_min: 5
 - kern: "Bereken de prijselasticiteit: Ev = %ΔQv / %ΔP. Bepaal of de vraag elastisch of inelastisch is."
 - needs: [A04]
+- exam_codes: [A2.4, A2.5]
 - mastery_target: apply
 - prior_learning: new_this_year
 - aspects: [rekenen, verbaal]
@@ -393,6 +408,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - duration_min: 5
 - kern: "Bereken de kruiselasticiteit: Ekr = %ΔQa / %ΔPb. Bepaal of goederen substituten of complementen zijn."
 - needs: []
+- exam_codes: [A2.4, A2.5]
 - mastery_target: apply
 - prior_learning: new_this_year
 - aspects: [rekenen, verbaal]
@@ -411,6 +427,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - duration_min: 5
 - kern: "Bereken de inkomenselasticiteit: Ei = %ΔQ / %ΔY. Bepaal of een goed normaal, inferieur of luxe is."
 - needs: []
+- exam_codes: [A2.4, A2.5]
 - mastery_target: apply
 - prior_learning: new_this_year
 - aspects: [rekenen]
@@ -429,6 +446,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - duration_min: 5
 - kern: "Vergelijk de alternatieve kosten van twee producenten om te bepalen wie een comparatief voordeel heeft."
 - needs: []
+- exam_codes: [A2.6, A4.3]
 - mastery_target: apply
 - prior_learning: new_this_year
 - aspects: [rekenen, verbaal]
@@ -448,6 +466,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - duration_min: 5
 - kern: "Bereken het consumenten- of producentensurplus als driehoeksoppervlakte in de vraag-/aanbodgrafiek."
 - needs: [A06, A10]
+- exam_codes: [A2.16, A2.17]
 - mastery_target: apply
 - prior_learning: new_this_year
 - aspects: [grafisch, rekenen, verbaal]
@@ -467,6 +486,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - duration_min: 5
 - kern: "Vind de winstmaximaliserende hoeveelheid door MO gelijk te stellen aan MK en op te lossen."
 - needs: [A12, A13, A02]
+- exam_codes: [A2.10, A2.12]
 - mastery_target: apply
 - prior_learning: new_this_year
 - aspects: [rekenen, verbaal]
@@ -486,6 +506,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - duration_min: 5
 - kern: "Bereken de winst door de totale opbrengst min de totale kosten: W = TO − TK."
 - needs: [A07, A08, A04]
+- exam_codes: [A2.1, A2.11]
 - mastery_target: apply
 - prior_learning: new_this_year
 - aspects: [rekenen, verbaal]
@@ -505,6 +526,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - duration_min: 5
 - kern: "Vind de break-evenhoeveelheid door TO = TK op te lossen. Bij dit punt is de winst nul."
 - needs: [A07, A08, A02]
+- exam_codes: [A2.10, A2.12]
 - mastery_target: apply
 - prior_learning: new_this_year
 - aspects: [rekenen, verbaal]
@@ -524,6 +546,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - duration_min: 5
 - kern: "Bereken het nieuwe marktevenwicht nadat de overheid een heffing (accijns) heeft opgelegd."
 - needs: [A06, A01]
+- exam_codes: [A2.10, A2.14]
 - mastery_target: apply
 - prior_learning: new_this_year
 - aspects: [rekenen]
@@ -543,6 +566,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - duration_min: 5
 - kern: "Bepaal het collectieve aanbod vanuit meerdere individuele aanbieders en bereken het marktevenwicht."
 - needs: [A09, A03]
+- exam_codes: [A2.9, A2.12]
 - mastery_target: apply
 - prior_learning: new_this_year
 - aspects: [rekenen]
@@ -562,6 +586,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - duration_min: 5
 - kern: "Analyseer het effect van een minimumprijs: bereken het vraagoverschot en het welvaartsverlies."
 - needs: [A06]
+- exam_codes: [A2.15, A2.16, A4.5]
 - mastery_target: apply
 - prior_learning: new_this_year
 - aspects: [grafisch, rekenen, verbaal]
@@ -581,6 +606,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - duration_min: 5
 - kern: "Analyseer het effect van een maximumprijs: bereken het vraagoverschot en de gevolgen voor consumenten."
 - needs: [A06]
+- exam_codes: [A2.15, A2.16, A4.5]
 - mastery_target: apply
 - prior_learning: new_this_year
 - aspects: [grafisch, rekenen, verbaal]
@@ -600,6 +626,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - duration_min: 5
 - kern: "Bereken het effect van een subsidie op het marktevenwicht, de prijs en de verdeling van het voordeel."
 - needs: [A06, A01]
+- exam_codes: [A2.15, A2.16]
 - mastery_target: apply
 - prior_learning: new_this_year
 - aspects: [grafisch, rekenen, verbaal]
@@ -619,6 +646,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - duration_min: 5
 - kern: "Vind de hoeveelheid waar MK = GTK. Dit is het minimum van de GTK-curve (efficiënte schaal)."
 - needs: [A13, A14]
+- exam_codes: [A2.10, A2.11]
 - mastery_target: apply
 - prior_learning: new_this_year
 - aspects: [grafisch, rekenen]
@@ -638,6 +666,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - duration_min: 5
 - kern: "Voer een volledige break-evenanalyse uit: vind de break-evenhoeveelheid en bepaal winst/verlies bij een gegeven Q."
 - needs: [A22]
+- exam_codes: [A2.10, A2.15]
 - mastery_target: apply
 - prior_learning: new_this_year
 - aspects: [rekenen]
@@ -657,6 +686,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - duration_min: 5
 - kern: "Bereken het consumentensurplus voor en na een beleidsverandering en bepaal het verschil."
 - needs: [A19]
+- exam_codes: [A2.16, A2.17]
 - mastery_target: apply
 - prior_learning: new_this_year
 - aspects: [rekenen]
@@ -676,6 +706,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - duration_min: 5
 - kern: "Ga van individuele aanbodcurves naar de collectieve aanbodcurve en bereken het marktevenwicht."
 - needs: [A24]
+- exam_codes: [A2.9, A2.14]
 - mastery_target: apply
 - prior_learning: new_this_year
 - aspects: [rekenen]
@@ -695,6 +726,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - duration_min: 5
 - kern: "Bereken het welvaartsverlies (deadweight loss) dat ontstaat door een belasting als driehoeksoppervlakte."
 - needs: [A19, A23]
+- exam_codes: [A2.16, A2.17]
 - mastery_target: apply
 - prior_learning: new_this_year
 - aspects: [grafisch, rekenen]
@@ -714,6 +746,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - duration_min: 5
 - kern: "Bepaal de optimale productie bij volkomen mededinging: produceer waar P = MK en bereken de winst."
 - needs: [A13, A14, A04]
+- exam_codes: [A2.10, A2.12]
 - mastery_target: apply
 - prior_learning: new_this_year
 - aspects: [rekenen]
@@ -733,6 +766,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - duration_min: 5
 - kern: "Analyseer de effecten van een invoerrecht op binnenlandse productie, consumptie, import en welvaart."
 - needs: [A19, A23, A06]
+- exam_codes: [A2.16, A4.3]
 - mastery_target: apply
 - prior_learning: new_this_year
 - aspects: [rekenen, verbaal]
@@ -752,6 +786,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - duration_min: 5
 - kern: "Bereken de maximale winst van een monopolist: vind Q waar MO = MK, bepaal P en reken W = TO − TK uit."
 - needs: [A20, A21, A04]
+- exam_codes: [A2.10, A2.11, A2.12]
 - mastery_target: apply
 - prior_learning: new_this_year
 - aspects: [rekenen]
@@ -771,6 +806,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - duration_min: 5
 - kern: "Bereken de winst bij prijsdiscriminatie: de monopolist rekent verschillende prijzen in verschillende markten."
 - needs: [A20, A21]
+- exam_codes: [A2.10, A2.11]
 - mastery_target: apply
 - prior_learning: new_this_year
 - aspects: [rekenen]
@@ -790,6 +826,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - duration_min: 5
 - kern: "Bepaal het lange-termijnevenwicht bij volkomen mededinging: P = MK = GTK (minimale GTK)."
 - needs: [A28]
+- exam_codes: [A2.10, A4.5]
 - mastery_target: apply
 - prior_learning: new_this_year
 - aspects: [rekenen]

@@ -1,5 +1,550 @@
 [
   {
+    "code": "A1.1",
+    "domein": "A",
+    "domein_title": "Vaardigheden",
+    "subdomein": "A1",
+    "subdomein_title": "Informatievaardigheden",
+    "tekst": "de benodigde informatie halen uit bronnen zoals tekst, tabellen, grafieken en afbeeldingen;",
+    "verbs": [],
+    "implied_bloom": "understand",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "A1.2",
+    "domein": "A",
+    "domein_title": "Vaardigheden",
+    "subdomein": "A1",
+    "subdomein_title": "Informatievaardigheden",
+    "tekst": "de aangeboden bronnen beoordelen op bruikbaarheid en relevantie;",
+    "verbs": [
+      "beoordelen"
+    ],
+    "implied_bloom": "evaluate",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "A1.3",
+    "domein": "A",
+    "domein_title": "Vaardigheden",
+    "subdomein": "A1",
+    "subdomein_title": "Informatievaardigheden",
+    "tekst": "met voorbeelden toelichten;",
+    "verbs": [],
+    "implied_bloom": "understand",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "A1.4",
+    "domein": "A",
+    "domein_title": "Vaardigheden",
+    "subdomein": "A1",
+    "subdomein_title": "Informatievaardigheden",
+    "tekst": "feiten van meningen onderscheiden;",
+    "verbs": [
+      "onderscheiden"
+    ],
+    "implied_bloom": "analyze",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "A1.5",
+    "domein": "A",
+    "domein_title": "Vaardigheden",
+    "subdomein": "A1",
+    "subdomein_title": "Informatievaardigheden",
+    "tekst": "gegeven bronnen interpreteren en in combinatie met economische kennis komen tot antwoorden op economische vragen;",
+    "verbs": [],
+    "implied_bloom": "understand",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "A1.6",
+    "domein": "A",
+    "domein_title": "Vaardigheden",
+    "subdomein": "A1",
+    "subdomein_title": "Informatievaardigheden",
+    "tekst": "randvoorwaarden en vooronderstellingen van een economisch model onderscheiden van gegevens uit realistische contexten;",
+    "verbs": [
+      "onderscheiden"
+    ],
+    "implied_bloom": "analyze",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "A1.7",
+    "domein": "A",
+    "domein_title": "Vaardigheden",
+    "subdomein": "A1",
+    "subdomein_title": "Informatievaardigheden",
+    "tekst": "rekenen en redeneren binnen de randvoorwaarden en vooronderstellingen van een model;",
+    "verbs": [],
+    "implied_bloom": "understand",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "A1.8",
+    "domein": "A",
+    "domein_title": "Vaardigheden",
+    "subdomein": "A1",
+    "subdomein_title": "Informatievaardigheden",
+    "tekst": "redeneren buiten de kaders van een economisch model, indien de context daartoe aanleiding geeft.",
+    "verbs": [],
+    "implied_bloom": "understand",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "A1.9",
+    "domein": "A",
+    "domein_title": "Vaardigheden",
+    "subdomein": "A1",
+    "subdomein_title": "Informatievaardigheden",
+    "tekst": "transfer: het toepassen van concepten in nieuwe contexten: zie bijlage 2.",
+    "verbs": [
+      "toepassen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "A2.1",
+    "domein": "A",
+    "domein_title": "Vaardigheden",
+    "subdomein": "A2",
+    "subdomein_title": "Rekenkundig en/of grafisch onderbouwen",
+    "tekst": "basisrekenvaardigheden toepassen in economische vraagstukken",
+    "verbs": [
+      "toepassen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "A2.2",
+    "domein": "A",
+    "domein_title": "Vaardigheden",
+    "subdomein": "A2",
+    "subdomein_title": "Rekenkundig en/of grafisch onderbouwen",
+    "tekst": "rekenregels optellen, aftrekken, vermenigvuldigen, delen,",
+    "verbs": [],
+    "implied_bloom": "understand",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "A2.3",
+    "domein": "A",
+    "domein_title": "Vaardigheden",
+    "subdomein": "A2",
+    "subdomein_title": "Rekenkundig en/of grafisch onderbouwen",
+    "tekst": "positieve en negatieve getallen/breuken/decimalen",
+    "verbs": [],
+    "implied_bloom": "understand",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "A2.4",
+    "domein": "A",
+    "domein_title": "Vaardigheden",
+    "subdomein": "A2",
+    "subdomein_title": "Rekenkundig en/of grafisch onderbouwen",
+    "tekst": "procenten, promillen en perunages",
+    "verbs": [],
+    "implied_bloom": "understand",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "A2.5",
+    "domein": "A",
+    "domein_title": "Vaardigheden",
+    "subdomein": "A2",
+    "subdomein_title": "Rekenkundig en/of grafisch onderbouwen",
+    "tekst": "onderscheid procentuele mutatie en procentpunt verandering",
+    "verbs": [
+      "onderscheiden"
+    ],
+    "implied_bloom": "analyze",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "A2.6",
+    "domein": "A",
+    "domein_title": "Vaardigheden",
+    "subdomein": "A2",
+    "subdomein_title": "Rekenkundig en/of grafisch onderbouwen",
+    "tekst": "verhoudingen en schatting",
+    "verbs": [],
+    "implied_bloom": "understand",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "A2.7",
+    "domein": "A",
+    "domein_title": "Vaardigheden",
+    "subdomein": "A2",
+    "subdomein_title": "Rekenkundig en/of grafisch onderbouwen",
+    "tekst": "rekenen met grote en kleine getallen",
+    "verbs": [],
+    "implied_bloom": "understand",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "A2.8",
+    "domein": "A",
+    "domein_title": "Vaardigheden",
+    "subdomein": "A2",
+    "subdomein_title": "Rekenkundig en/of grafisch onderbouwen",
+    "tekst": "afrondingsregels",
+    "verbs": [],
+    "implied_bloom": "understand",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "A2.9",
+    "domein": "A",
+    "domein_title": "Vaardigheden",
+    "subdomein": "A2",
+    "subdomein_title": "Rekenkundig en/of grafisch onderbouwen",
+    "tekst": "vergelijkingen, beschrijvende statistiek en grafieken gebruiken in economische vraagstukken",
+    "verbs": [],
+    "implied_bloom": "understand",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "A2.10",
+    "domein": "A",
+    "domein_title": "Vaardigheden",
+    "subdomein": "A2",
+    "subdomein_title": "Rekenkundig en/of grafisch onderbouwen",
+    "tekst": "werken met eerstegraads – en tweedegraadsvergelijkingen",
+    "verbs": [],
+    "implied_bloom": "understand",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "A2.11",
+    "domein": "A",
+    "domein_title": "Vaardigheden",
+    "subdomein": "A2",
+    "subdomein_title": "Rekenkundig en/of grafisch onderbouwen",
+    "tekst": "het bepalen van een eerstegraadsvergelijking als afgeleide van een tweedegraadsvergelijking:",
+    "verbs": [],
+    "implied_bloom": "understand",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "A2.12",
+    "domein": "A",
+    "domein_title": "Vaardigheden",
+    "subdomein": "A2",
+    "subdomein_title": "Rekenkundig en/of grafisch onderbouwen",
+    "tekst": "oplossen van een stelsel van vergelijkingen via substitutie",
+    "verbs": [],
+    "implied_bloom": "understand",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "A2.13",
+    "domein": "A",
+    "domein_title": "Vaardigheden",
+    "subdomein": "A2",
+    "subdomein_title": "Rekenkundig en/of grafisch onderbouwen",
+    "tekst": "werken met assenstelsels (X en Y) en kwadranten",
+    "verbs": [],
+    "implied_bloom": "understand",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "A2.14",
+    "domein": "A",
+    "domein_title": "Vaardigheden",
+    "subdomein": "A2",
+    "subdomein_title": "Rekenkundig en/of grafisch onderbouwen",
+    "tekst": "waardes bepalen en grafieken tekenen en/of bewerken",
+    "verbs": [],
+    "implied_bloom": "understand",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "A2.15",
+    "domein": "A",
+    "domein_title": "Vaardigheden",
+    "subdomein": "A2",
+    "subdomein_title": "Rekenkundig en/of grafisch onderbouwen",
+    "tekst": "berekeningen maken op basis van grafieken bij domein D",
+    "verbs": [],
+    "implied_bloom": "understand",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "A2.16",
+    "domein": "A",
+    "domein_title": "Vaardigheden",
+    "subdomein": "A2",
+    "subdomein_title": "Rekenkundig en/of grafisch onderbouwen",
+    "tekst": "oppervlaktes arceren",
+    "verbs": [],
+    "implied_bloom": "understand",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "A2.17",
+    "domein": "A",
+    "domein_title": "Vaardigheden",
+    "subdomein": "A2",
+    "subdomein_title": "Rekenkundig en/of grafisch onderbouwen",
+    "tekst": "oppervlaktes berekenen: alléén driehoek en rechthoek",
+    "verbs": [
+      "berekenen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "A2.18",
+    "domein": "A",
+    "domein_title": "Vaardigheden",
+    "subdomein": "A2",
+    "subdomein_title": "Rekenkundig en/of grafisch onderbouwen",
+    "tekst": "indexcijfers: partieel, samengesteld (gewogen), basisjaar verleggen",
+    "verbs": [],
+    "implied_bloom": "understand",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "A2.19",
+    "domein": "A",
+    "domein_title": "Vaardigheden",
+    "subdomein": "A2",
+    "subdomein_title": "Rekenkundig en/of grafisch onderbouwen",
+    "tekst": "diagrammen: lijn, staaf, cirkel; enkelvoudig en samengesteld",
+    "verbs": [],
+    "implied_bloom": "understand",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "A2.20",
+    "domein": "A",
+    "domein_title": "Vaardigheden",
+    "subdomein": "A2",
+    "subdomein_title": "Rekenkundig en/of grafisch onderbouwen",
+    "tekst": "tabellen: rijen/kolommen, indeling in klassen (percentielen, decielen e.d.), cumuleren",
+    "verbs": [],
+    "implied_bloom": "understand",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "A2.21",
+    "domein": "A",
+    "domein_title": "Vaardigheden",
+    "subdomein": "A2",
+    "subdomein_title": "Rekenkundig en/of grafisch onderbouwen",
+    "tekst": "gemiddeldes: gewogen en ongewogen",
+    "verbs": [],
+    "implied_bloom": "understand",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "A2.22",
+    "domein": "A",
+    "domein_title": "Vaardigheden",
+    "subdomein": "A2",
+    "subdomein_title": "Rekenkundig en/of grafisch onderbouwen",
+    "tekst": "berekenen van contante waarde en eindwaarde (geen reeksen)",
+    "verbs": [
+      "berekenen"
+    ],
+    "implied_bloom": "apply",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "A3.1",
+    "domein": "A",
+    "domein_title": "Vaardigheden",
+    "subdomein": "A3",
+    "subdomein_title": "Standpuntbepaling",
+    "tekst": "de rol en de perspectieven van de verschillende actoren (consumenten, producenten, werkgevers, werknemers, burgers, overheid, bankwezen);",
+    "verbs": [],
+    "implied_bloom": "understand",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "A3.2",
+    "domein": "A",
+    "domein_title": "Vaardigheden",
+    "subdomein": "A3",
+    "subdomein_title": "Standpuntbepaling",
+    "tekst": "een eventuele botsing van belangen;",
+    "verbs": [],
+    "implied_bloom": "understand",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "A3.3",
+    "domein": "A",
+    "domein_title": "Vaardigheden",
+    "subdomein": "A3",
+    "subdomein_title": "Standpuntbepaling",
+    "tekst": "oplossingen voor / reacties op mogelijk ongewenst gedrag;",
+    "verbs": [],
+    "implied_bloom": "understand",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "A3.4",
+    "domein": "A",
+    "domein_title": "Vaardigheden",
+    "subdomein": "A3",
+    "subdomein_title": "Standpuntbepaling",
+    "tekst": "een standpunt bepalen en onderbouwen of een gegeven standpunt onderbouwen (argumenten pro)",
+    "verbs": [],
+    "implied_bloom": "understand",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "A3.5",
+    "domein": "A",
+    "domein_title": "Vaardigheden",
+    "subdomein": "A3",
+    "subdomein_title": "Standpuntbepaling",
+    "tekst": "een standpunt relativeren / weerleggen (argumenten contra)",
+    "verbs": [],
+    "implied_bloom": "understand",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "A3.6",
+    "domein": "A",
+    "domein_title": "Vaardigheden",
+    "subdomein": "A3",
+    "subdomein_title": "Standpuntbepaling",
+    "tekst": "afwegingsvraagstukken beschrijven",
+    "verbs": [
+      "beschrijven"
+    ],
+    "implied_bloom": "understand",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "A4.1",
+    "domein": "A",
+    "domein_title": "Vaardigheden",
+    "subdomein": "A4",
+    "subdomein_title": "Strategisch inzicht",
+    "tekst": "het herkennen van relevante economische aspecten (concepten) bij het analyseren van concrete maatschappelijke vraagstukken (contexten)",
+    "verbs": [
+      "analyseren",
+      "herkennen"
+    ],
+    "implied_bloom": "analyze",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "A4.2",
+    "domein": "A",
+    "domein_title": "Vaardigheden",
+    "subdomein": "A4",
+    "subdomein_title": "Strategisch inzicht",
+    "tekst": "het hanteren van een economische denkwijze (redeneren binnen vooronderstellingen / een model)",
+    "verbs": [],
+    "implied_bloom": "understand",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "A4.3",
+    "domein": "A",
+    "domein_title": "Vaardigheden",
+    "subdomein": "A4",
+    "subdomein_title": "Strategisch inzicht",
+    "tekst": "het onderscheiden van oorzaak en gevolg",
+    "verbs": [
+      "onderscheiden"
+    ],
+    "implied_bloom": "analyze",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "A4.4",
+    "domein": "A",
+    "domein_title": "Vaardigheden",
+    "subdomein": "A4",
+    "subdomein_title": "Strategisch inzicht",
+    "tekst": "het onderscheiden van probleem en oplossing",
+    "verbs": [
+      "onderscheiden"
+    ],
+    "implied_bloom": "analyze",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "A4.5",
+    "domein": "A",
+    "domein_title": "Vaardigheden",
+    "subdomein": "A4",
+    "subdomein_title": "Strategisch inzicht",
+    "tekst": "het onderscheiden van korte en lange termijn",
+    "verbs": [
+      "onderscheiden"
+    ],
+    "implied_bloom": "analyze",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
+    "code": "A4.6",
+    "domein": "A",
+    "domein_title": "Vaardigheden",
+    "subdomein": "A4",
+    "subdomein_title": "Strategisch inzicht",
+    "tekst": "het onderscheiden van evenwichtige situaties en onevenwichtige situaties",
+    "verbs": [
+      "onderscheiden"
+    ],
+    "implied_bloom": "analyze",
+    "examen": "centraal",
+    "year": 2026
+  },
+  {
     "code": "D1.1",
     "domein": "D",
     "domein_title": "Concept markt",

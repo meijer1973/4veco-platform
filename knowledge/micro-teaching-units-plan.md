@@ -107,7 +107,7 @@ Eleven prefixes, one per CvTE domain, matching the exam program exactly. Two-dig
 | `D06` | Marktevenwicht (berekening) | apply | 6-step |
 | `D07` | Marktevenwicht (welvaartsanalyse) | analyze | strategy |
 
-The three-aspect structure (verbal / reasoning / calculation) is captured on each unit via the `aspects` field (`verbaal` / `grafisch` / `rekenen`), not via A-subdomain exam codes — domain A is intentionally out of scope for the `exam_codes` register (see `references/external/syllabus-eindtermen.md` scope note).
+Three-aspect routing (verbal / reasoning / calculation) is captured on each unit via the `aspects` field (`verbaal` / `grafisch` / `rekenen`). **Traceability** to the CvTE exam program goes through `exam_codes`, which can cite A-subdomain eindtermen (e.g. `A2.10` for tweedegraadsvergelijkingen) alongside content-domain codes. The two fields are complementary: `aspects` routes downstream format; `exam_codes` proves coverage.
 
 ---
 
@@ -121,7 +121,7 @@ Each unit entry in `micro-teaching-units.md`:
 - **`duration_min`** — target 3–7 minutes; validator warns outside range.
 - **`kern`** — one-sentence mastery statement.
 - **`needs`** — list of prerequisite unit IDs (DAG edges).
-- **`exam_codes`** — list of CvTE eindterm codes from CE content domains D–I (e.g. `["D3.2", "I3.5"]`); validator rejects unknown codes. Domain A (Vaardigheden) is intentionally out of scope — use `aspects` instead. Empty list allowed for units that are pure prerequisites (e.g. math building blocks not explicitly in exam program).
+- **`exam_codes`** — list of CvTE eindterm codes from domains A, D, E, F, G, H, I (e.g. `["D3.2", "A2.10"]`); validator rejects unknown codes. `aspects` handles routing; `exam_codes` handles syllabus traceability — complementary, not interchangeable. Empty list allowed for units that cover skills CvTE hasn't codified (legitimate exercise-first discoveries).
 - **`mastery_target`** — remember | understand | apply | analyze | evaluate (ceiling, not cap).
 - **`prior_learning`** — `previously_taught` | `new_this_year` | `review_and_extend`.
 - **`terms`** — list of canonical Dutch terms (validated against `economie-terminologie.md`).

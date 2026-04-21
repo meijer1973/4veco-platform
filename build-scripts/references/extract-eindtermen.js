@@ -83,13 +83,21 @@ function parseDomainLine(line) {
 }
 
 function parseSubdomainHeader(line) {
-  // Accept both `G1: title`, `G1 title`, and `I.3 title`. The CvTE PDF
-  // uses mixed conventions between domains; `I.3 Monetair beleid en de
-  // centrale bank` is the dot-separated form for the I3 subdomain and
-  // must be recognized, else its eindtermen slide into I2.3's buffer.
-  const m = line.match(/^([A-K])\.?(\d+):?\s+(.+?)\s*$/);
+  // Accept all four forms used across the PDF:
+  //   `G1: title`       — colon (D-I)
+  //   `G1 title`        — bare (D-I, some subdomains)
+  //   `I.3 title`       — dot between letter and digit (I-domain quirk)
+  //   `A1. title`       — dot after digit (A-domain convention)
+  const m = line.match(/^([A-K])\.?(\d+)[:.]?\s+(.+?)\s*$/);
   return m ? { letter: m[1], num: m[2], title: m[3].trim() } : null;
 }
+
+// A-domain uses a different structure: bullet-lists under an `a. onderdelen`
+// marker rather than numbered leaf eindtermen. These helpers detect that
+// structure so A-subdomain bullets can be minted as codes A<n>.<bulletIdx>.
+const A_BULLET_RE = /^[–—•\-]\s+(.+?)\s*$/;
+const A_ONDERDELEN_START_RE = /^a\.\s*onderdelen\b/i;
+const A_ONDERDELEN_END_RE = /^[bc]\.\s+/i;
 
 // Domain-intro lines that appear between sections (e.g. "Domein G Risico
 // en Informatie" before G1:). These are NOT subdomain headers but DO
@@ -185,6 +193,11 @@ function parseEindtermen(text) {
     currentEindterm = null;
   }
 
+  // A-domain state: after `A<n>.` header we scan for `a. onderdelen`, then
+  // collect bullets as eindtermen A<n>.<bulletIdx>. Reset on next subdomain.
+  let aCollecting = false;
+  let aBulletIdx = 0;
+
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i];
     if (isPageFooter(line)) continue;
@@ -243,6 +256,22 @@ function parseEindtermen(text) {
       flushCurrent();
       currentSubdomain = sub;
       currentVerbs = [];
+      // A-domain subdomain switch: activate bullet collection immediately.
+      // A1-A3 have an `a. onderdelen` marker before bullets (still fine —
+      // non-bullet lines between header and first bullet are ignored);
+      // A4 has bullets directly under the header with no marker, so we
+      // can't wait for `a. onderdelen`. A5 is explicitly school-exam only
+      // per the syllabus ("wordt niet getoetst in het centraal examen") —
+      // treat as end-of-A-spec.
+      if (currentDomain.letter === 'A') {
+        aCollecting = true;
+        aBulletIdx = 0;
+        if (sub.num === '5') {
+          aCollecting = false;
+          currentSubdomain = null;
+        }
+        continue;
+      }
       // Look ahead for the "De kandidaat kan ..." line to pick up verbs.
       for (let j = i + 1; j < Math.min(i + 5, lines.length); j++) {
         if (/^\s*De kandidaat kan /.test(lines[j])) {
@@ -253,6 +282,46 @@ function parseEindtermen(text) {
           break;
         }
       }
+      continue;
+    }
+
+    // ----- A-domain bullet collection -----
+    // Once inside an A-subdomain (A1-A4), look for `a. onderdelen` start
+    // marker, then mint each en-dash-prefixed bullet as an eindterm.
+    if (currentDomain && currentDomain.letter === 'A' && currentSubdomain) {
+      const trimmed = line.trim();
+      if (A_ONDERDELEN_START_RE.test(trimmed)) {
+        aCollecting = true;
+        aBulletIdx = 0;
+        continue;
+      }
+      if (A_ONDERDELEN_END_RE.test(trimmed)) {
+        // `b. uitwerking in examenvragen` / `c. specifieke aanwijzingen`
+        // terminate the bullet list.
+        flushCurrent();
+        aCollecting = false;
+        continue;
+      }
+      if (aCollecting) {
+        const bullet = A_BULLET_RE.exec(trimmed);
+        if (bullet) {
+          flushCurrent();
+          aBulletIdx++;
+          currentEindterm = {
+            code: `${currentSubdomain.letter}${currentSubdomain.num}.${aBulletIdx}`,
+            lines: [bullet[1]],
+          };
+          continue;
+        }
+        // Non-bullet, non-header line inside the bullet list: continuation
+        // of the previous bullet (wrapped lines).
+        if (currentEindterm && trimmed) {
+          currentEindterm.lines.push(trimmed);
+        }
+        continue;
+      }
+      // Inside A-domain but not inside `onderdelen` — skip narrative prose
+      // (paragraph intro, `b.`/`c.` narrative sections).
       continue;
     }
 
@@ -312,7 +381,7 @@ function emitMarkdown(entries) {
     '',
     '## Scope',
     '',
-    'This register covers the CvTE central-exam content domains **D, E, F, G, H, I**. Domain **A (Vaardigheden)** is intentionally out of scope — vaardigheden (math / graph / verbal reasoning) are captured per-unit as the `aspects` field on the micro-teaching-units catalog, which is the cleaner mechanism for routing. School-exam-only domains (B Schaarste, C Ruil, J Onderzoek en experiment, K Keuzeonderwerpen) are also excluded; they have no `exam_codes` in the central-exam register.',
+    'This register mirrors the CvTE central-exam syllabus for domains **A, D, E, F, G, H, I**. Domain A (Vaardigheden) is included: although the CvTE syllabus formally structures A as bullet-lists rather than numbered leaves, the exam genuinely requires these skills (solving tweedegraadsvergelijkingen, reading graphs, argumentation). The exercise-first principle says: if a student needs a skill to do the exam, it belongs in the register. A-codes are minted from the bullet structure as A1.1..A4.N. A5 (Experimenten) is excluded per the syllabus\' own statement that it is not tested in the CE. School-exam-only domains (B Schaarste, C Ruil, J Onderzoek en experiment, K Keuzeonderwerpen) are excluded pending a future revision.',
     '',
     '---',
     '',

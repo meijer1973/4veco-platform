@@ -7,6 +7,10 @@
     "duration_min": 5,
     "kern": "Stel een lineaire functie op (y = ax + b) vanuit een economische context, zoals een vraag- of aanbodfunctie.",
     "needs": [],
+    "exam_codes": [
+      "A2.9",
+      "A2.10"
+    ],
     "mastery_target": "apply",
     "prior_learning": "previously_taught",
     "aspects": [
@@ -33,6 +37,10 @@
     "duration_min": 5,
     "kern": "Los een vergelijking met één onbekende op, bijvoorbeeld door twee functies aan elkaar gelijk te stellen.",
     "needs": [],
+    "exam_codes": [
+      "A2.10",
+      "A2.12"
+    ],
     "mastery_target": "apply",
     "prior_learning": "previously_taught",
     "aspects": [
@@ -58,6 +66,9 @@
     "duration_min": 5,
     "kern": "Schrijf een functie om van P als functie van Q naar Q als functie van P, of andersom.",
     "needs": [],
+    "exam_codes": [
+      "A2.10"
+    ],
     "mastery_target": "apply",
     "prior_learning": "previously_taught",
     "aspects": [
@@ -81,6 +92,9 @@
     "duration_min": 5,
     "kern": "Vul een waarde in een functie in en bereken het resultaat.",
     "needs": [],
+    "exam_codes": [
+      "A2.12"
+    ],
     "mastery_target": "apply",
     "prior_learning": "previously_taught",
     "aspects": [
@@ -108,6 +122,10 @@
     "duration_min": 5,
     "kern": "Bereken het snijpunt van een functie met de verticale as (P-as) door Q = 0 in te vullen.",
     "needs": [],
+    "exam_codes": [
+      "A2.13",
+      "A2.14"
+    ],
     "mastery_target": "apply",
     "prior_learning": "previously_taught",
     "aspects": [
@@ -136,6 +154,11 @@
     "needs": [
       "A01",
       "A02"
+    ],
+    "exam_codes": [
+      "A2.10",
+      "A2.12",
+      "A2.15"
     ],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
@@ -168,6 +191,10 @@
       "A01",
       "A03"
     ],
+    "exam_codes": [
+      "A2.10",
+      "A2.15"
+    ],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
     "aspects": [
@@ -196,6 +223,10 @@
     "kern": "Herken en werk met de totale kostenfunctie (TK), vaak gegeven als TK = vaste kosten + variabele kosten × Q.",
     "needs": [
       "A01"
+    ],
+    "exam_codes": [
+      "A2.10",
+      "A2.15"
     ],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
@@ -227,6 +258,9 @@
     "needs": [
       "A03"
     ],
+    "exam_codes": [
+      "A2.9"
+    ],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
     "aspects": [
@@ -254,6 +288,9 @@
     "kern": "Bereken de oppervlakte van een driehoek in een grafiek: ½ × basis × hoogte.",
     "needs": [
       "A04"
+    ],
+    "exam_codes": [
+      "A2.17"
     ],
     "mastery_target": "apply",
     "prior_learning": "previously_taught",
@@ -284,6 +321,9 @@
     "needs": [
       "A01"
     ],
+    "exam_codes": [
+      "A2.11"
+    ],
     "mastery_target": "apply",
     "prior_learning": "previously_taught",
     "aspects": [
@@ -312,6 +352,9 @@
     "needs": [
       "A11",
       "A07"
+    ],
+    "exam_codes": [
+      "A2.11"
     ],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
@@ -342,6 +385,9 @@
       "A11",
       "A08"
     ],
+    "exam_codes": [
+      "A2.11"
+    ],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
     "aspects": [
@@ -370,6 +416,9 @@
     "kern": "Bereken de gemiddelde totale kosten: GTK = TK / Q.",
     "needs": [
       "A08"
+    ],
+    "exam_codes": [
+      "A2.11"
     ],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
@@ -402,6 +451,10 @@
     "needs": [
       "A04"
     ],
+    "exam_codes": [
+      "A2.4",
+      "A2.5"
+    ],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
     "aspects": [
@@ -431,6 +484,10 @@
     "duration_min": 5,
     "kern": "Bereken de kruiselasticiteit: Ekr = %ΔQa / %ΔPb. Bepaal of goederen substituten of complementen zijn.",
     "needs": [],
+    "exam_codes": [
+      "A2.4",
+      "A2.5"
+    ],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
     "aspects": [
@@ -457,6 +514,10 @@
     "duration_min": 5,
     "kern": "Bereken de inkomenselasticiteit: Ei = %ΔQ / %ΔY. Bepaal of een goed normaal, inferieur of luxe is.",
     "needs": [],
+    "exam_codes": [
+      "A2.4",
+      "A2.5"
+    ],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
     "aspects": [
@@ -484,6 +545,10 @@
     "duration_min": 5,
     "kern": "Vergelijk de alternatieve kosten van twee producenten om te bepalen wie een comparatief voordeel heeft.",
     "needs": [],
+    "exam_codes": [
+      "A2.6",
+      "A4.3"
+    ],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
     "aspects": [
@@ -513,6 +578,10 @@
     "needs": [
       "A06",
       "A10"
+    ],
+    "exam_codes": [
+      "A2.16",
+      "A2.17"
     ],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
@@ -548,6 +617,10 @@
       "A13",
       "A02"
     ],
+    "exam_codes": [
+      "A2.10",
+      "A2.12"
+    ],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
     "aspects": [
@@ -578,6 +651,10 @@
       "A07",
       "A08",
       "A04"
+    ],
+    "exam_codes": [
+      "A2.1",
+      "A2.11"
     ],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
@@ -614,6 +691,10 @@
       "A08",
       "A02"
     ],
+    "exam_codes": [
+      "A2.10",
+      "A2.12"
+    ],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
     "aspects": [
@@ -646,6 +727,10 @@
       "A06",
       "A01"
     ],
+    "exam_codes": [
+      "A2.10",
+      "A2.14"
+    ],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
     "aspects": [
@@ -677,6 +762,10 @@
       "A09",
       "A03"
     ],
+    "exam_codes": [
+      "A2.9",
+      "A2.12"
+    ],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
     "aspects": [
@@ -706,6 +795,11 @@
     "kern": "Analyseer het effect van een minimumprijs: bereken het vraagoverschot en het welvaartsverlies.",
     "needs": [
       "A06"
+    ],
+    "exam_codes": [
+      "A2.15",
+      "A2.16",
+      "A4.5"
     ],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
@@ -737,6 +831,11 @@
     "needs": [
       "A06"
     ],
+    "exam_codes": [
+      "A2.15",
+      "A2.16",
+      "A4.5"
+    ],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
     "aspects": [
@@ -767,6 +866,10 @@
     "needs": [
       "A06",
       "A01"
+    ],
+    "exam_codes": [
+      "A2.15",
+      "A2.16"
     ],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
@@ -801,6 +904,10 @@
       "A13",
       "A14"
     ],
+    "exam_codes": [
+      "A2.10",
+      "A2.11"
+    ],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
     "aspects": [
@@ -829,6 +936,10 @@
     "kern": "Voer een volledige break-evenanalyse uit: vind de break-evenhoeveelheid en bepaal winst/verlies bij een gegeven Q.",
     "needs": [
       "A22"
+    ],
+    "exam_codes": [
+      "A2.10",
+      "A2.15"
     ],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
@@ -860,6 +971,10 @@
     "needs": [
       "A19"
     ],
+    "exam_codes": [
+      "A2.16",
+      "A2.17"
+    ],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
     "aspects": [
@@ -889,6 +1004,10 @@
     "kern": "Ga van individuele aanbodcurves naar de collectieve aanbodcurve en bereken het marktevenwicht.",
     "needs": [
       "A24"
+    ],
+    "exam_codes": [
+      "A2.9",
+      "A2.14"
     ],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
@@ -921,6 +1040,10 @@
       "A19",
       "A23"
     ],
+    "exam_codes": [
+      "A2.16",
+      "A2.17"
+    ],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
     "aspects": [
@@ -951,6 +1074,10 @@
       "A13",
       "A14",
       "A04"
+    ],
+    "exam_codes": [
+      "A2.10",
+      "A2.12"
     ],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
@@ -984,6 +1111,10 @@
       "A23",
       "A06"
     ],
+    "exam_codes": [
+      "A2.16",
+      "A4.3"
+    ],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
     "aspects": [
@@ -1014,6 +1145,11 @@
       "A20",
       "A21",
       "A04"
+    ],
+    "exam_codes": [
+      "A2.10",
+      "A2.11",
+      "A2.12"
     ],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
@@ -1046,6 +1182,10 @@
       "A20",
       "A21"
     ],
+    "exam_codes": [
+      "A2.10",
+      "A2.11"
+    ],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
     "aspects": [
@@ -1076,6 +1216,10 @@
     "kern": "Bepaal het lange-termijnevenwicht bij volkomen mededinging: P = MK = GTK (minimale GTK).",
     "needs": [
       "A28"
+    ],
+    "exam_codes": [
+      "A2.10",
+      "A4.5"
     ],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",

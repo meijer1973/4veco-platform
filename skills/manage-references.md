@@ -5,7 +5,23 @@ description: "Canonical policy + operations reference for the references/ folder
 
 # Manage-References Skill
 
-Canonical policy + operations reference for everything under `references/`. This folder is the platform's data backbone — the syllabus register, the micro-teaching-units catalog, the real exam-questions corpus, the canonical terminology list, and quality standards. Every rule that governs how these files are created, edited, validated, and refreshed is listed here.
+## Why this folder exists
+
+Teaching is the work of squaring a circle: on one side a **human** with finite cognitive capacity, prior knowledge, and state of mind; on the other side a **task** with a concrete technical demand. A lesson succeeds when the gap between those two is bridged at an appropriate step size — not too easy (no learning), not too hard (collapse).
+
+`references/` is that bridge in data form. Every file in it holds one side of the pair or the mapping between them:
+
+| Side | What it encodes | Primary files |
+|---|---|---|
+| **Task demand** | What the exam actually asks; what skills the task requires | `exam-questions.json` (real CvTE questions), `syllabus-eindtermen.json` (what CvTE claims to test) |
+| **Student side** | What a unit of teaching looks like — prior knowledge, cognitive load, procedure, mastery level | `micro-teaching-units.{md,json}` (the catalog) |
+| **Bridge / contract** | The mapping between student and task (which units each question requires; which eindtermen each unit covers; which canonical vocabulary anchors both) | `exam_codes` and `required_skills` fields; `economie-terminologie.md`; `didactiek-principes.md` |
+
+The **exercise-first principle** follows directly from this framing: the task demand is the ground truth. If a real exam question requires a skill, that skill belongs in the catalog as a teaching unit — independent of whether CvTE has formally named it in the syllabus text. The syllabus register is a mirror of what CvTE describes; it is not a gatekeeper on what students need.
+
+When a policy question comes up, ask the student/task question first: *does a student need this to do an exercise?* If yes, it's in scope. Everything else in this skill operationalises that principle.
+
+## How this skill is used
 
 **Authoritative-reference pattern:** the source-of-truth for each rule is the file this skill points at (schema headers, code, READMEs). The skill consolidates pointers; it does not duplicate content. If the skill and a source file disagree, **the source file wins** and the skill is out of date — fix the skill.
 
@@ -106,8 +122,7 @@ Every rule that governs these files, grouped by topic. Each rule has a source-of
 
 ### 3.4 Register scope (`syllabus-eindtermen.json`)
 
-15. **Currently covers CvTE central-exam content domains D–I.** Domain A (Vaardigheden) and school-exam-only domains B/C/J/K are excluded.
-    **⚠ This policy is disputed.** The user has rejected the "A-domain out of scope" justification; revision plan at `knowledge/exam-codes-scope-policy-revision-plan.md` proposes extending the register to include A. See PART 6 below for current status.
+15. **Covers CvTE central-exam content for domains A, D, E, F, G, H, I.** A-domain bullets are minted as codes `A1.1..A4.N` from the syllabus spec section. A5 (Experimenten) is excluded per the syllabus' own statement that it is not tested in the CE. School-exam-only domains B, C, J, K are excluded pending a future revision that brings a school-exam need into the catalog.
     *Source:* `references/external/syllabus-eindtermen.md` frontmatter; `build-scripts/references/extract-eindtermen.js` hardcoded scope string.
 16. **Terminology-extractor canonicity rules.** Pipe-table rows produce canonical entries; `/` or `,` separates alternatives; em-dash / hyphen placeholder accepted in the number column; gloss-stripped forms added alongside the full form.
     *Source:* `build-scripts/references/build-unit-index.js` `loadTerminology`; `build-scripts/reports/terminology-drift.js` `loadCanonicalTerms`.
@@ -214,17 +229,12 @@ Any rule not listed in PART 3 is not policy. It's a local decision. If it should
 
 ---
 
-## PART 6: DISPUTED / SUPERSEDED POLICIES
+## PART 6: SUPERSEDED POLICIES
 
-### 6.1 Currently disputed
+History of retired rules, so a future reader can trace what was tried and why.
 
-- **Register scope = D–I only** (rule 15). The user rejected the justification on 2026-04-21 (exercise-first principle violated; A-domain *is* teaching content per `didactiek-principes.md` §5.7 "Grafiekvaardigheid — opbouw in lagen"; `aspects` is routing, not traceability — complementary, not replacement).
-  **Pending revision:** `knowledge/exam-codes-scope-policy-revision-plan.md` proposes extending the register to include A-domain by minting codes `A1.1..A5.N` from the syllabus PDF's bullet structure.
-  **Status:** plan drafted, not yet executed.
-
-### 6.2 Superseded
-
+- **Register scope = D–I only** (superseded 2026-04-21). Held briefly on the argument that A-domain was "already captured via `aspects`." Rejected by the user on exercise-first grounds: if solving a tweedegraadsvergelijking is exam-required, it belongs in the register regardless of whether CvTE formally numbers it. Also contradicted `didactiek-principes.md` §5.7 which prescribes explicit graph-skill layers. Scope extended to A, D, E, F, G, H, I. Plan: `knowledge/exam-codes-scope-policy-revision-plan.md`.
 - **Placeholder single-step procedures** (superseded 2026-04-20). Apply+ units used to be seeded with a procedure = `[kern]` to pass the mandatory-procedure validator. Validator was later relaxed from fail to warn; placeholders were stripped. See commit history + `reports/procedure-coverage.md`.
 - **Case-sensitive PDF page-header regex** (superseded 2026-04-20). `extract-exam-questions.js` `PAGE_HEADER_RE` required lowercase `[vh][wa]`; PDFs render `HA-…` uppercase, so headers leaked into question text. Now case-insensitive.
 - **Comma-joined canonical terms treated as one token** (superseded 2026-04-20). `loadTerminology` used to split only on `/`; extended to also split on `,`.
-- **Stale `A4.1` example in catalog schema** (superseded 2026-04-21). `A4.1` was never a real CvTE code; replaced with `D3.2, I3.5`. Rule 14 now explicitly forbids invented codes in schema examples.
+- **Stale `A4.1` example in catalog schema** (superseded 2026-04-21). `A4.1` was not a real code when cited. Replaced first with `D3.2, I3.5`; now (after A-domain scope extension) `A2.10` is a real code and becomes the new schema example.
