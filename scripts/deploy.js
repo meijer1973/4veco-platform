@@ -36,7 +36,10 @@ if (!fs.existsSync(MODULE_ROOT)) {
     process.exit(1);
 }
 
-const HEADER = '// AUTO-COPIED FROM 4veco-platform/engines/ \u2014 DO NOT EDIT HERE\n';
+const HEADER_JS  = '// AUTO-COPIED FROM 4veco-platform/engines/ \u2014 DO NOT EDIT HERE\n';
+const HEADER_CSS = '/* AUTO-COPIED FROM 4veco-platform/engines/ \u2014 DO NOT EDIT HERE */\n';
+function headerFor(file) { return file.endsWith('.css') ? HEADER_CSS : HEADER_JS; }
+const HEADER = HEADER_JS;
 
 // ── Step 1: Copy engine files ────────────────────────────────────
 
@@ -62,7 +65,7 @@ function copyEngines() {
             continue;
         }
         const content = fs.readFileSync(src, 'utf8');
-        fs.writeFileSync(dst, HEADER + content, 'utf8');
+        fs.writeFileSync(dst, headerFor(file) + content, 'utf8');
         console.log(`  \u2713 ${file}`);
     }
 

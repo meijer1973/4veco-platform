@@ -88,65 +88,98 @@ function generateShell(parNr) {
     const sharedPath = '../../../shared';
 
     const html = `<!DOCTYPE html>
-<html lang="nl">
+<html lang="nl" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>${escapeHtml(meta.parName)} - Instapquiz</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <title>${escapeHtml(meta.parName)} — Instapquiz</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="${sharedPath}/quiz.css">
+    <script>(function(){try{var m=localStorage.getItem('quizMode')||'light';document.documentElement.setAttribute('data-theme',m);}catch(e){}})();</script>
 </head>
 <body>
 <div class="app-container">
-    <div class="header">
-        <a class="back-to-overview" href="../index.html">&larr; Terug naar overzicht</a>
-        <h1><span class="par-badge">${escapeHtml(meta.parNr)}</span> ${escapeHtml(meta.parName)} – Instapquiz</h1>
-        <div class="stats-bar" id="game-stats" style="display: none;">
-            <div><i class="fa-solid fa-star"></i> Score: <span id="score-display">0</span></div>
-            <div><i class="fa-solid fa-list-ol"></i> Vraag: <span id="question-count">0/10</span></div>
+    <header class="header">
+        <div class="header-left">
+            <a class="back-to-overview" href="../index.html"><i class="fa-solid fa-arrow-left"></i> Overzicht</a>
+            <span class="header-divider"></span>
+            <div class="header-title-group">
+                <span class="par-badge">§${escapeHtml(meta.parNr)}</span>
+                <h1>${escapeHtml(meta.parName)}</h1>
+            </div>
         </div>
+        <div class="header-right">
+            <div class="stats-bar">
+                <div class="stat-tile">
+                    <i class="fa-solid fa-bolt stat-icon score"></i>
+                    <span class="stat-value" id="score-display">0</span>
+                    <span class="stat-label">Score</span>
+                </div>
+                <div class="stat-tile">
+                    <i class="fa-solid fa-circle-check stat-icon closed"></i>
+                    <span class="stat-value" id="closed-display">0/0</span>
+                    <span class="stat-label">Gesloten</span>
+                </div>
+            </div>
+            <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Licht/donker wisselen"></button>
+        </div>
+    </header>
+
+    <div class="session-strip" id="session-strip" style="display:none;">
+        <span class="strip-label">Sessie</span>
+        <div class="session-segments" id="session-segments"></div>
+        <span class="session-count" id="session-count">00<span class="sep"> / 10</span></span>
     </div>
+
     <div class="content-layout">
         <div class="main-area">
             <div id="start-screen" class="screen active">
                 <h2>${escapeHtml(meta.parName)}</h2>
                 <p>${escapeHtml(meta.subtitle)}</p>
                 <div class="topics-box">
-                    <h3><i class="fa-solid fa-bullseye icon"></i> Wat we gaan toetsen:</h3>
+                    <h3><i class="fa-solid fa-bullseye icon"></i> Wat we gaan toetsen</h3>
                     <ul>
 ${topicsHtml}
                     </ul>
                 </div>
-                <button class="btn btn-large" onclick="startGame()">Start de Training</button>
+                <button class="btn btn-large" onclick="startGame()">Start de training <i class="fa-solid fa-arrow-right"></i></button>
             </div>
+
             <div id="game-screen" class="screen">
-                <div style="display: flex; justify-content: space-between; align-items: center;">
+                <div class="question-meta">
                     <div id="category-display" class="category-badge">Categorie</div>
-                    <div id="difficulty-stars" style="color: #fbbf24; margin-bottom: 20px; font-size: 18px;"></div>
+                    <div id="difficulty-chip" class="difficulty-chip"></div>
                 </div>
-                <div id="question-text" class="question-text">Vraag...</div>
+                <h2 id="question-text" class="question-text">Vraag...</h2>
                 <div id="options-container" class="options-grid"></div>
                 <div id="feedback-container" class="feedback-box">
-                    <div id="feedback-title" class="feedback-title">Feedback</div>
-                    <div id="feedback-text">Uitleg...</div>
+                    <div class="feedback-icon" id="feedback-icon"></div>
+                    <div class="feedback-body">
+                        <div id="feedback-title" class="feedback-title">Feedback</div>
+                        <p id="feedback-text" class="feedback-text">Uitleg...</p>
+                    </div>
                 </div>
-                <button id="next-btn" class="btn" style="display: none;" onclick="nextQuestion()">Volgende Vraag <i class="fa-solid fa-arrow-right"></i></button>
+                <button id="next-btn" class="btn" style="display: none;" onclick="nextQuestion()">Volgende vraag <i class="fa-solid fa-arrow-right"></i></button>
             </div>
+
             <div id="end-screen" class="screen">
-                <h2>Sessie Voltooid! <i class="fa-solid fa-trophy" style="color: #fbbf24;"></i></h2>
-                <p style="font-size: 18px; margin-top: 10px; margin-bottom: 30px;">In deze sessie heb je <span id="final-score" style="font-weight: bold; color: var(--domain-primary);"></span> vragen goed beantwoord.</p>
-                <div style="background-color: #f1f5f9; padding: 20px; border-radius: 12px; margin-bottom: 30px;">
-                    <h3 style="margin-bottom: 10px; font-size: 18px;">Hoe nu verder?</h3>
-                    <p style="color: #475569; line-height: 1.6;">Bekijk je actuele voortgang in de zijbalk (of hieronder op mobiel). Bouw per onderwerp een <strong>reeks van 3</strong> op om deze definitief af te sluiten en de balk groen te maken. Maak je een fout? Dan reset de reeks naar nul.</p>
+                <h2>Sessie voltooid <i class="fa-solid fa-trophy trophy"></i></h2>
+                <p class="end-summary">In deze sessie heb je <span id="final-score"></span> vragen goed beantwoord.</p>
+                <div class="end-callout">
+                    <h3>Hoe nu verder?</h3>
+                    <p>Bekijk je voortgang in de zijbalk. Bouw per onderwerp een <strong>reeks van 3</strong> op om deze definitief af te sluiten. Maak je een fout? Dan reset de reeks naar nul.</p>
                 </div>
-                <button class="btn btn-large" onclick="restartSession()">Start Volgende Sessie <i class="fa-solid fa-rotate-right"></i></button>
+                <button class="btn btn-large" onclick="restartSession()">Start volgende sessie <i class="fa-solid fa-rotate-right"></i></button>
             </div>
         </div>
-        <div class="sidebar-area" id="sidebar">
-            <h3 class="sidebar-title"><i class="fa-solid fa-chart-pie"></i> Jouw Voortgang</h3>
+
+        <aside class="sidebar-area" id="sidebar">
+            <h3 class="sidebar-title"><i class="fa-solid fa-chart-simple"></i> Jouw beheersing</h3>
             <div id="mastery-dashboard" class="mastery-container"></div>
-        </div>
+        </aside>
     </div>
 </div>
 <script src="${sharedPath}/theme.js"></script>
