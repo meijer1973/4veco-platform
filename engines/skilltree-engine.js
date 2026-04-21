@@ -24,6 +24,18 @@
 
     var STORAGE_KEY = 'skilltree_global_stars';
     var GOALS_STORAGE_KEY = 'skilltree_goals';
+    var PREREQ_STAR_THRESHOLD = 1;
+    var GOAL_COMPLETE_STARS = 3;
+    var MAX_STARS = 5;
+    var MAX_ACTIVE_GOALS = 2;
+    var LEGACY_PARAGRAPH_KEYS = [
+        '3.1.1','3.1.2','3.1.3',
+        '3.2.1','3.2.2','3.2.3','3.2.4','3.2.5','3.2.6','3.2.7',
+        '3.3.1','3.3.2','3.3.3','3.3.4',
+        '3.4.1','3.4.2','3.4.3','3.4.4','3.4.5','3.4.6',
+        '3.5.1','3.5.2',
+        '1.1.1','1.1.2','1.1.3'
+    ];
 
     /**
      * @param {Object} config
@@ -98,6 +110,103 @@
         return this._visibleSkills;
     };
 
+    SkillTreeEngine.prototype._getVisibleSkill = function (skillId) {
+        for (var i = 0; i < this._visibleSkills.length; i++) {
+            if (this._visibleSkills[i].id === skillId) return this._visibleSkills[i];
+        }
+        return null;
+    };
+
+    SkillTreeEngine.prototype._hasStartedSkill = function (skillId) {
+        return this.getSkillStars(skillId) >= PREREQ_STAR_THRESHOLD;
+    };
+
+    SkillTreeEngine.prototype._hasCompletedSkill = function (skillId) {
+        return this.getSkillStars(skillId) >= GOAL_COMPLETE_STARS;
+    };
+
+    SkillTreeEngine.prototype._collectReachableSkillIds = function (skillId) {
+        if (!this._skillMap[skillId]) return null;
+
+        var visited = {};
+        var queue = [skillId];
+        var readIdx = 0;
+
+        visited[skillId] = true;
+        while (readIdx < queue.length) {
+            var current = queue[readIdx++];
+            var skill = this._skillMap[current];
+            if (!skill) continue;
+
+            for (var i = 0; i < skill.needs.length; i++) {
+                var prereq = skill.needs[i];
+                if (!visited[prereq]) {
+                    visited[prereq] = true;
+                    queue.push(prereq);
+                }
+            }
+        }
+
+        return visited;
+    };
+
+    SkillTreeEngine.prototype._buildTopologicalOrder = function (skillSet) {
+        var inDeg = {};
+        var adj = {};
+        var nodeIds = [];
+        var topoQueue = [];
+        var queueIdx = 0;
+        var topoOrder = [];
+
+        for (var skillId in skillSet) {
+            if (!skillSet.hasOwnProperty(skillId) || !this._skillMap[skillId]) continue;
+            inDeg[skillId] = 0;
+            adj[skillId] = [];
+            nodeIds.push(skillId);
+        }
+
+        for (var i = 0; i < nodeIds.length; i++) {
+            var node = this._skillMap[nodeIds[i]];
+            for (var j = 0; j < node.needs.length; j++) {
+                var prereq = node.needs[j];
+                if (!skillSet[prereq]) continue;
+                adj[prereq].push(node.id);
+                inDeg[node.id]++;
+            }
+        }
+
+        for (var id in inDeg) {
+            if (inDeg.hasOwnProperty(id) && inDeg[id] === 0) topoQueue.push(id);
+        }
+
+        while (queueIdx < topoQueue.length) {
+            var current = topoQueue[queueIdx++];
+            topoOrder.push(current);
+            var neighbors = adj[current] || [];
+
+            for (var ni = 0; ni < neighbors.length; ni++) {
+                inDeg[neighbors[ni]]--;
+                if (inDeg[neighbors[ni]] === 0) topoQueue.push(neighbors[ni]);
+            }
+        }
+
+        return topoOrder;
+    };
+
+    SkillTreeEngine.prototype._collectSkillsOnActiveGoalPaths = function () {
+        var onGoalPath = {};
+
+        for (var i = 0; i < this._goals.active.length; i++) {
+            var skillSet = this._collectReachableSkillIds(this._goals.active[i].id);
+            if (!skillSet) continue;
+            for (var skillId in skillSet) {
+                if (skillSet.hasOwnProperty(skillId)) onGoalPath[skillId] = true;
+            }
+        }
+
+        return onGoalPath;
+    };
+
     SkillTreeEngine.prototype.setViewMode = function (mode) {
         // 'paragraph' = filtered by activeSkills, 'module' = all skills
         if (mode === 'module') {
@@ -145,15 +254,9 @@
         // Migration: merge old per-paragraph keys
         var merged = {};
         var oldKeys = [];
-        var parNrs = [
-            '3.1.1','3.1.2','3.1.3',
-            '3.2.1','3.2.2','3.2.3','3.2.4','3.2.5','3.2.6','3.2.7',
-            '3.3.1','3.3.2','3.3.3','3.3.4',
-            '3.4.1','3.4.2','3.4.3','3.4.4','3.4.5','3.4.6'
-        ];
 
-        for (var i = 0; i < parNrs.length; i++) {
-            var key = 'skilltree_' + parNrs[i];
+        for (var i = 0; i < LEGACY_PARAGRAPH_KEYS.length; i++) {
+            var key = 'skilltree_' + LEGACY_PARAGRAPH_KEYS[i];
             try {
                 var val = this._storage.getItem(key);
                 if (val) {
@@ -256,7 +359,7 @@
 
     SkillTreeEngine.prototype.setGoal = function (skillId) {
         if (!this._skillMap[skillId]) return null;
-        if (this._goals.active.length >= 2) return null;
+        if (this._goals.active.length >= MAX_ACTIVE_GOALS) return null;
         // Check not already active
         for (var i = 0; i < this._goals.active.length; i++) {
             if (this._goals.active[i].id === skillId) return null;
@@ -298,73 +401,11 @@
         var skill = this._skillMap[skillId];
         if (!skill) return null;
 
-        // BFS on FULL skill graph (not paragraph-filtered)
-        var visited = {};
-        var queue = [skillId];
-        visited[skillId] = true;
-        var allNodes = [];
-
-        while (queue.length > 0) {
-            var current = queue.shift();
-            var s = this._skillMap[current];
-            if (!s) continue;
-            allNodes.push(s);
-            for (var j = 0; j < s.needs.length; j++) {
-                var prereq = s.needs[j];
-                if (!visited[prereq]) {
-                    visited[prereq] = true;
-                    queue.push(prereq);
-                }
-            }
-        }
-
-        // Topological sort (Kahn's algorithm) for remaining skills
-        var inDeg = {};
-        var adj = {};
-        for (var ni = 0; ni < allNodes.length; ni++) {
-            var nid = allNodes[ni].id;
-            if (!inDeg[nid]) inDeg[nid] = 0;
-            if (!adj[nid]) adj[nid] = [];
-        }
-        for (var ei = 0; ei < allNodes.length; ei++) {
-            var node = allNodes[ei];
-            for (var pi = 0; pi < node.needs.length; pi++) {
-                var p = node.needs[pi];
-                if (visited[p]) {
-                    if (!adj[p]) adj[p] = [];
-                    adj[p].push(node.id);
-                    inDeg[node.id] = (inDeg[node.id] || 0) + 1;
-                }
-            }
-        }
-        // Re-count in-degrees properly (reset first)
-        for (var r in inDeg) { if (inDeg.hasOwnProperty(r)) inDeg[r] = 0; }
-        for (var ei2 = 0; ei2 < allNodes.length; ei2++) {
-            var node2 = allNodes[ei2];
-            for (var pi2 = 0; pi2 < node2.needs.length; pi2++) {
-                if (visited[node2.needs[pi2]]) {
-                    inDeg[node2.id] = (inDeg[node2.id] || 0) + 1;
-                }
-            }
-        }
-
-        var topoQueue = [];
-        for (var t in inDeg) {
-            if (inDeg.hasOwnProperty(t) && inDeg[t] === 0) topoQueue.push(t);
-        }
-        var topoOrder = [];
-        while (topoQueue.length > 0) {
-            var cur = topoQueue.shift();
-            topoOrder.push(cur);
-            var neighbors = adj[cur] || [];
-            for (var ni2 = 0; ni2 < neighbors.length; ni2++) {
-                inDeg[neighbors[ni2]]--;
-                if (inDeg[neighbors[ni2]] === 0) topoQueue.push(neighbors[ni2]);
-            }
-        }
+        var skillSet = this._collectReachableSkillIds(skillId);
+        var topoOrder = this._buildTopologicalOrder(skillSet);
 
         // Classify nodes
-        var totalPrereqs = allNodes.length;
+        var totalPrereqs = topoOrder.length;
         var masteredPrereqs = 0;
         var fullyMastered = 0;
         var remaining = [];
@@ -372,16 +413,16 @@
 
         for (var ti = 0; ti < topoOrder.length; ti++) {
             var sid = topoOrder[ti];
-            var stars = this._stars[sid] || 0;
-            if (stars >= 1) masteredPrereqs++;
-            if (stars >= 3) fullyMastered++;
-            if (stars < 3) {
+            var stars = this.getSkillStars(sid);
+            if (stars >= PREREQ_STAR_THRESHOLD) masteredPrereqs++;
+            if (stars >= GOAL_COMPLETE_STARS) fullyMastered++;
+            if (stars < GOAL_COMPLETE_STARS) {
                 remaining.push(sid);
-                // Check if all prereqs of this skill are done (>= 1 star)
+                // Actionable means every prerequisite has at least one star.
                 var sk = this._skillMap[sid];
                 var allPrereqsDone = true;
                 for (var pi3 = 0; pi3 < sk.needs.length; pi3++) {
-                    if ((this._stars[sk.needs[pi3]] || 0) < 1) {
+                    if (!this._hasStartedSkill(sk.needs[pi3])) {
                         allPrereqsDone = false;
                         break;
                     }
@@ -395,12 +436,12 @@
         for (var oi = 0; oi < topoOrder.length; oi++) {
             var oid = topoOrder[oi];
             var osk = this._skillMap[oid];
-            var ost = this._stars[oid] || 0;
+            var ost = this.getSkillStars(oid);
             orderedPath.push({
                 id: oid,
                 name: osk ? osk.name : oid,
                 stars: ost,
-                done: ost >= 3,
+                done: ost >= GOAL_COMPLETE_STARS,
                 actionable: false
             });
         }
@@ -423,7 +464,7 @@
             remainingSkills: remaining,
             nextActionable: nextActionable,
             orderedPath: orderedPath,
-            complete: (this._stars[skillId] || 0) >= 3
+            complete: this._hasCompletedSkill(skillId)
         };
     };
 
@@ -431,25 +472,7 @@
         var path = this.getGoalPath(skillId);
         if (!path) return null;
 
-        // Build set of all skills on the path
-        var pathSet = {};
-        var fullPath = this.getGoalPath(skillId);
-        // Collect all node IDs from BFS (redo quick BFS for the set)
-        var visited = {};
-        var queue = [skillId];
-        visited[skillId] = true;
-        while (queue.length > 0) {
-            var current = queue.shift();
-            var s = this._skillMap[current];
-            if (!s) continue;
-            pathSet[current] = true;
-            for (var j = 0; j < s.needs.length; j++) {
-                if (!visited[s.needs[j]]) {
-                    visited[s.needs[j]] = true;
-                    queue.push(s.needs[j]);
-                }
-            }
-        }
+        var pathSet = this._collectReachableSkillIds(skillId);
 
         // Intersect with visible skills
         var visibleOnPath = [];
@@ -462,7 +485,7 @@
             if (vs.id === skillId) goalVisibleHere = true;
             visibleOnPath.push(vs.id);
             // Actionable = on path, < 3 stars, prereqs done
-            if ((this._stars[vs.id] || 0) < 3 && this.prereqsDone(vs.id)) {
+            if (!this._hasCompletedSkill(vs.id) && this.prereqsDone(vs.id)) {
                 visibleActionable.push(vs.id);
             }
         }
@@ -480,7 +503,7 @@
 
         for (var i = 0; i < this._goals.active.length; i++) {
             var goal = this._goals.active[i];
-            if ((this._stars[goal.id] || 0) >= 3) {
+            if (this._hasCompletedSkill(goal.id)) {
                 achieved.push(goal.id);
                 this._goals.achieved.push({
                     id: goal.id,
@@ -501,27 +524,8 @@
     };
 
     SkillTreeEngine.prototype.isOnGoalPath = function (skillId) {
-        for (var i = 0; i < this._goals.active.length; i++) {
-            var path = this.getGoalPath(this._goals.active[i].id);
-            if (!path) continue;
-            // Check if skillId is in the full path
-            var visited = {};
-            var queue = [this._goals.active[i].id];
-            visited[this._goals.active[i].id] = true;
-            while (queue.length > 0) {
-                var current = queue.shift();
-                if (current === skillId) return true;
-                var s = this._skillMap[current];
-                if (!s) continue;
-                for (var j = 0; j < s.needs.length; j++) {
-                    if (!visited[s.needs[j]]) {
-                        visited[s.needs[j]] = true;
-                        queue.push(s.needs[j]);
-                    }
-                }
-            }
-        }
-        return false;
+        var onGoalPath = this._collectSkillsOnActiveGoalPaths();
+        return !!onGoalPath[skillId];
     };
 
     // ── Prerequisites ─────────────────────────────────────────
@@ -531,34 +535,22 @@
         if (!skill) return false;
 
         // Use visible skill's filtered needs if available
-        var visSkill = null;
-        for (var i = 0; i < this._visibleSkills.length; i++) {
-            if (this._visibleSkills[i].id === skillId) {
-                visSkill = this._visibleSkills[i];
-                break;
-            }
-        }
+        var visSkill = this._getVisibleSkill(skillId);
         var needs = visSkill ? visSkill.needs : skill.needs;
 
         for (var j = 0; j < needs.length; j++) {
-            if ((this._stars[needs[j]] || 0) < 1) return false;
+            if (!this._hasStartedSkill(needs[j])) return false;
         }
         return true;
     };
 
     SkillTreeEngine.prototype.getMissingPrereqs = function (skillId) {
-        var visSkill = null;
-        for (var i = 0; i < this._visibleSkills.length; i++) {
-            if (this._visibleSkills[i].id === skillId) {
-                visSkill = this._visibleSkills[i];
-                break;
-            }
-        }
+        var visSkill = this._getVisibleSkill(skillId);
         if (!visSkill) return [];
 
         var missing = [];
         for (var j = 0; j < visSkill.needs.length; j++) {
-            if ((this._stars[visSkill.needs[j]] || 0) < 1) {
+            if (!this._hasStartedSkill(visSkill.needs[j])) {
                 missing.push(visSkill.needs[j]);
             }
         }
@@ -580,12 +572,13 @@
         // BFS to collect all transitive prerequisites
         var visited = {};
         var queue = [skillId];
+        var readIdx = 0;
         visited[skillId] = true;
         var nodes = [];
         var edges = [];
 
-        while (queue.length > 0) {
-            var current = queue.shift();
+        while (readIdx < queue.length) {
+            var current = queue[readIdx++];
             var skill = visMap[current];
             if (!skill) continue;
 
@@ -843,9 +836,9 @@
         if (!this._exercise || !this._activeSkill) return null;
 
         var totalPenalty = this._errors + this._hints;
-        var earned = totalPenalty === 0 ? 3 : totalPenalty <= 2 ? 2 : 1;
-        var prev = this._stars[this._activeSkill.id] || 0;
-        var newTotal = Math.min(5, prev + earned);
+        var earned = totalPenalty === 0 ? GOAL_COMPLETE_STARS : totalPenalty <= 2 ? 2 : 1;
+        var prev = this.getSkillStars(this._activeSkill.id);
+        var newTotal = Math.min(MAX_STARS, prev + earned);
         var improved = newTotal > prev;
 
         if (improved) {
@@ -884,31 +877,12 @@
         var best = null;
         var bestScore = Infinity;
 
-        // Precompute goal-path set for scoring bonus
-        var onGoalPath = {};
-        for (var gi = 0; gi < this._goals.active.length; gi++) {
-            var gid = this._goals.active[gi].id;
-            var visited = {};
-            var queue = [gid];
-            visited[gid] = true;
-            while (queue.length > 0) {
-                var cur = queue.shift();
-                onGoalPath[cur] = true;
-                var sk = this._skillMap[cur];
-                if (!sk) continue;
-                for (var ni = 0; ni < sk.needs.length; ni++) {
-                    if (!visited[sk.needs[ni]]) {
-                        visited[sk.needs[ni]] = true;
-                        queue.push(sk.needs[ni]);
-                    }
-                }
-            }
-        }
+        var onGoalPath = this._collectSkillsOnActiveGoalPaths();
 
         for (var i = 0; i < this._visibleSkills.length; i++) {
             var s = this._visibleSkills[i];
             if (s.id === currentSkillId) continue;
-            if ((this._stars[s.id] || 0) >= 5) continue;
+            if (this.getSkillStars(s.id) >= MAX_STARS) continue;
             if (!this.prereqsDone(s.id)) continue;
             if (!this.hasGenerator(s.id)) continue;
 
@@ -916,7 +890,7 @@
             var layerDist = s.layer - currentLayer;
             var score = layerDist >= 0 ? layerDist * 10 : 100 + Math.abs(layerDist) * 10;
             // Within same priority, prefer fewer stars (less practiced)
-            score += (this._stars[s.id] || 0);
+            score += this.getSkillStars(s.id);
             // Strong bonus for goal-path skills
             if (onGoalPath[s.id]) score -= 200;
 
@@ -937,8 +911,8 @@
         var totalStars = 0;
 
         for (var i = 0; i < visible.length; i++) {
-            var s = this._stars[visible[i].id] || 0;
-            if (s >= 1) mastered++;
+            var s = this.getSkillStars(visible[i].id);
+            if (s >= PREREQ_STAR_THRESHOLD) mastered++;
             totalStars += s;
         }
 
@@ -946,7 +920,7 @@
             mastered: mastered,
             total: visible.length,
             totalStars: totalStars,
-            maxStars: visible.length * 5
+            maxStars: visible.length * MAX_STARS
         };
     };
 
