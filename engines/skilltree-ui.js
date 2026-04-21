@@ -1,1387 +1,861 @@
 /**
- * SkillTree UI — DOM binding layer for the skill tree (wiskundevaardigheden).
- * IIFE that reads window.SKILL_TREE_ELEMENTS and window.SKILL_TREE_DATA,
- * creates a SkillTreeEngine, and renders the tree + exercise views.
+ * skilltree-ui-v2.js — DOM binding layer for the wiskundevaardigheden skilltree.
+ * Reads globals: SKILL_TREE_ELEMENTS, SKILL_TREE_DATA, SKILL_TREE_EXPLANATIONS, SkillTreeEngine.
+ * Binds to the persistent HTML scaffold; populates slots and toggles [hidden].
  */
 (function () {
     'use strict';
-
-    // ── Dependencies ──────────────────────────────────────────
-    var elements = window.SKILL_TREE_ELEMENTS;
-    var data = window.SKILL_TREE_DATA;
-    var explanations = window.SKILL_TREE_EXPLANATIONS || {};
+    /* ── 1. Globals guard + fatal banner ───────────────────── */
+    function fatal(msg) {
+        try {
+            var d = document.createElement('div');
+            d.style.cssText = 'padding:14px;margin:18px;border-radius:8px;background:#b23b3b;color:#fff;font-family:sans-serif;';
+            d.textContent = 'Skilltree UI: ' + msg;
+            if (document.body) document.body.insertBefore(d, document.body.firstChild);
+        } catch (e) { /* ignore */ }
+        if (typeof console !== 'undefined' && console.error) console.error('[skilltree-ui-v2] ' + msg);
+    }
+    var ELEMENTS = window.SKILL_TREE_ELEMENTS;
+    var DATA = window.SKILL_TREE_DATA;
+    var EXPLANATIONS = window.SKILL_TREE_EXPLANATIONS || {};
     var Engine = window.SkillTreeEngine;
-
-    if (!elements || !Engine || !data) {
-        document.body.innerHTML = '<p style="color:red;padding:20px">Fout: ontbrekende scripts. Controleer of alle bestanden geladen zijn.</p>';
-        return;
-    }
-
-    var engine = new Engine({ elements: elements, data: data, explanations: explanations });
-    var root = document.getElementById('skilltree-app');
-
-    // ── SVG Icons ─────────────────────────────────────────────
-    function iconArrowLeft() { return '<span class="st-icon"><svg width="20" height="20" viewBox="0 0 24 24"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg></span>'; }
-    function iconLightbulb() { return '<span class="st-icon"><svg width="14" height="14" viewBox="0 0 24 24"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 006 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg></span>'; }
-    function iconReset()     { return '<span class="st-icon"><svg width="12" height="12" viewBox="0 0 24 24"><path d="M3 12a9 9 0 109-9 9.75 9.75 0 00-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg></span>'; }
-    function iconRefresh()   { return '<span class="st-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M21 2v6h-6"/><path d="M3 12a9 9 0 0115-6.7L21 8"/><path d="M3 22v-6h6"/><path d="M21 12a9 9 0 01-15 6.7L3 16"/></svg></span>'; }
-    function iconTree()      { return '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v6"/><path d="M12 9l-5 5"/><path d="M12 9l5 5"/><circle cx="12" cy="3" r="1.5"/><circle cx="7" cy="14" r="1.5"/><circle cx="17" cy="14" r="1.5"/><path d="M7 15.5v3"/><path d="M17 15.5v3"/><circle cx="7" cy="20" r="1.5"/><circle cx="17" cy="20" r="1.5"/></svg>'; }
-    function iconInfo()      { return '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>'; }
-    function iconBook()      { return '<span class="st-icon"><svg width="14" height="14" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg></span>'; }
-
-    // ── State ─────────────────────────────────────────────────
-    var view = 'tree'; // 'tree' | 'exercise'
-    var feedback = null; // null | 'correct' | 'wrong'
-    var inputValue = '';
-    var showHint = false;
-    var showExpl = false;
-    var finishResult = null; // set when exercise is completed (last answer correct)
-    var advanceTimer = null;
-    var lastFinishedSkillId = null; // for "opnieuw oefenen"
-    var depSkillId = null;         // which skill's dependency tree is shown (null = hidden)
-    var depSubgraph = null;        // cached result of getDependencySubgraph
-    var depHistory = [];           // navigation stack for back button
-    var savedDepState = null;      // overlay state saved while doing an exercise
-    var goalJustAchieved = null;   // set when a goal is completed during this exercise
-    var mcSelected = -1;           // which MC option was clicked (-1 = none)
-    var orderPlaced = [];          // indices of blocks placed in chain (order mode)
-    var errorSelected = -1;        // which error card was clicked (-1 = none)
-
-    // ── Render dispatcher ─────────────────────────────────────
-    function render() {
-        if (view === 'exercise') {
-            renderExercise();
-        } else {
-            renderTree();
-        }
-        renderDependencyOverlay();
-    }
-
-    // ── Helpers ────────────────────────────────────────────────
+    if (!ELEMENTS) { fatal('SKILL_TREE_ELEMENTS missing'); return; }
+    if (!DATA) { fatal('SKILL_TREE_DATA missing'); return; }
+    if (!Engine) { fatal('SkillTreeEngine missing'); return; }
+    /* ── 2. Engine ─────────────────────────────────────────── */
+    var engine = new Engine({ elements: ELEMENTS, data: DATA, explanations: EXPLANATIONS });
+    /* ── 3. els map + 4. critical-element guard ────────────── */
+    function $(id) { return document.getElementById(id); }
+    var els = {
+        app:$('skilltree-app'), viewTree:$('st-view-tree'), viewDeps:$('st-view-deps'),
+        viewExpl:$('st-view-expl'), viewExercise:$('st-view-exercise'),
+        headerTitle:$('st-header-title'), statMastered:$('st-stat-mastered-val'),
+        statTotal:$('st-stat-total-val'), statStars:$('st-stat-stars-val'),
+        statMaxStars:$('st-stat-maxstars-val'), viewToggle:$('st-view-toggle'),
+        themeToggle:$('st-theme-toggle'), goalBannerSlot:$('st-goal-banner-slot'),
+        layers:$('st-layers'), resetBtn:$('st-reset'), depsBack:$('st-deps-back'),
+        depsTitle:$('st-deps-title'), depsGraphSlot:$('st-deps-graph-slot'),
+        depsGoalBtnSlot:$('st-deps-goal-btn-slot'), explBack:$('st-expl-back'),
+        explTitle:$('st-expl-title'), explBody:$('st-expl-body'),
+        infoOverlay:$('st-info-overlay'), infoContainer:$('st-info-container'),
+        infoHeader:$('st-info-header'), infoDesc:$('st-info-desc'),
+        infoPreview:$('st-info-preview'), infoStars:$('st-info-stars'),
+        exercise:$('st-exercise'), exBack:$('st-back'), exSkillId:$('st-ex-skill-id'),
+        exSkillName:$('st-ex-skill-name'), exStepCounter:$('st-step-counter'),
+        exProgressFill:$('st-progress-fill'), exContext:$('st-context'),
+        exCompleted:$('st-completed-list'), exStepSlot:$('st-step-card-slot'),
+        exScoreTracker:$('st-score-tracker'), exResultSlot:$('st-result-slot')
+    };
+    var REQ = ['app','viewTree','viewDeps','viewExpl','viewExercise','layers','goalBannerSlot','exStepSlot','exResultSlot','infoOverlay'];
+    var miss = [];
+    for (var mi = 0; mi < REQ.length; mi++) if (!els[REQ[mi]]) miss.push(REQ[mi]);
+    if (miss.length) { fatal('scaffold missing: ' + miss.join(', ')); return; }
+    /* ── 5. Shared state ──────────────────────────────────── */
+    var STAR_DISPLAY_COUNT = 5;
+    var uiState = {
+        deps: {
+            activeSkillId: null,
+            history: [],
+            returnState: null
+        },
+        exercise: {
+            orderPlaced: [],
+            hintShown: false,
+            hintHtml: '',
+            autoAdvanceId: null
+        },
+        explOrigin: 'tree'
+    };
+    /* ── 6. Utilities ─────────────────────────────────────── */
     function esc(s) {
-        var d = document.createElement('div');
-        d.textContent = s;
-        return d.innerHTML;
+        if (s == null) return '';
+        return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
     }
-
-    function starsHTML(count, max) {
-        max = max || 5;
-        var h = '';
-        for (var i = 0; i < max; i++) {
-            h += '<span class="' + (i < count ? 'st-star-on' : 'st-star-off') + '">\u2605</span>';
-        }
-        return h;
+    function fmt(s) { return esc(s).replace(/\n/g, '<br>'); }
+    function stars(n, max) {
+        var M = max || STAR_DISPLAY_COUNT, o = '';
+        for (var i = 0; i < M; i++) o += i < n ? '<span class="st-star-on">\u2605</span>' : '<span class="st-star-off">\u2605</span>';
+        return o;
     }
-
-    // ── Shared card display state ─────────────────────────────
-    function getCardDisplayState(skillId) {
-        var skill = null;
-        var visible = engine.getVisibleSkills();
-        for (var i = 0; i < visible.length; i++) {
-            if (visible[i].id === skillId) { skill = visible[i]; break; }
-        }
-        if (!skill) return null;
-
-        var stars = engine.getStars();
-        var layerColors = engine.getLayerColors();
-        var layerNames = engine.getLayerNames();
-        var newArr = engine.getNewSkills();
-        var lc = layerColors[skill.layer] || layerColors[0];
-        var starCount = stars[skill.id] || 0;
-        var hasGen = engine.hasGenerator(skill.id);
-        var ready = engine.prereqsDone(skill.id);
-        var missing = engine.getMissingPrereqs(skill.id);
-        var isNew = false;
-        for (var n = 0; n < newArr.length; n++) { if (newArr[n] === skill.id) { isNew = true; break; } }
-        var isMastered = starCount === 5;
-        var isLastLayer = skill.layer === layerNames.length - 1;
-        var hasDeps = skill.needs.length > 0;
-
-        var boxShadow = starCount >= 1 ? '0 0 12px ' + lc.glow :
-                        isNew ? '0 0 10px ' + lc.glow : 'none';
-        var borderStyle = isMastered ? '2px solid #fbbf24' :
-                          (isNew && starCount === 0) ? '1.5px solid ' + lc.text :
-                          '1px solid ' + lc.text + '40';
-        var strokeColor = isMastered ? '#fbbf24' : lc.text + '60';
-        var strokeWidth = isMastered ? 2 : 1;
-
-        var classes = 'st-skill-card';
-        if (!ready && starCount === 0) classes += ' st-locked';
-        if (isMastered) classes += ' st-mastered-5';
-        if (isNew && starCount === 0) classes += ' st-new-skill';
-
-        return {
-            id: skill.id, name: skill.name, layer: skill.layer,
-            starCount: starCount, hasGenerator: hasGen, hasDeps: hasDeps,
-            ready: ready, missing: missing, isNew: isNew, isMastered: isMastered,
-            isLastLayer: isLastLayer,
-            bg: lc.bg, text: lc.text, glow: lc.glow,
-            borderStyle: borderStyle, boxShadow: boxShadow,
-            strokeColor: strokeColor, strokeWidth: strokeWidth,
-            classes: classes
+    function showView(name) {
+        els.viewTree.hidden = name !== 'tree';
+        els.viewDeps.hidden = name !== 'deps';
+        els.viewExpl.hidden = name !== 'expl';
+        els.viewExercise.hidden = name !== 'exercise';
+    }
+    function findSkill(id) {
+        var all = engine.getAllSkills();
+        for (var i = 0; i < all.length; i++) if (all[i].id === id) return all[i];
+        return null;
+    }
+    function clearAutoAdvance() {
+        if (!uiState.exercise.autoAdvanceId) return;
+        clearTimeout(uiState.exercise.autoAdvanceId);
+        uiState.exercise.autoAdvanceId = null;
+    }
+    function resetStepUiState() {
+        uiState.exercise.orderPlaced = [];
+        uiState.exercise.hintShown = false;
+        uiState.exercise.hintHtml = '';
+    }
+    function rememberDepsReturnState() {
+        if (!uiState.deps.activeSkillId) return;
+        uiState.deps.returnState = {
+            skillId: uiState.deps.activeSkillId,
+            history: uiState.deps.history.slice()
         };
     }
-
-    // ── Tree view ─────────────────────────────────────────────
+    function restoreDepsReturnState() {
+        if (!uiState.deps.returnState) return false;
+        var saved = uiState.deps.returnState;
+        uiState.deps.returnState = null;
+        uiState.deps.activeSkillId = saved.skillId;
+        uiState.deps.history = saved.history || [];
+        showView('deps');
+        renderDepsView(uiState.deps.activeSkillId);
+        return true;
+    }
+    /* ── 7. Theme ─────────────────────────────────────────── */
+    function syncThemeLabel() {
+        if (!els.themeToggle) return;
+        var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+        var lbl = els.themeToggle.querySelector('.label');
+        if (lbl) lbl.textContent = isDark ? 'Donker' : 'Licht';
+        var ring = els.themeToggle.querySelector('.ring i');
+        if (ring) ring.className = isDark ? 'fa-solid fa-moon' : 'fa-solid fa-sun';
+    }
+    function applyStoredTheme() {
+        var m;
+        try { m = localStorage.getItem('quizMode'); } catch (e) { m = null; }
+        if (m === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+        else document.documentElement.removeAttribute('data-theme');
+        syncThemeLabel();
+    }
+    function toggleTheme() {
+        var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+        if (isDark) {
+            document.documentElement.removeAttribute('data-theme');
+            try { localStorage.setItem('quizMode', 'light'); } catch (e) {}
+        } else {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            try { localStorage.setItem('quizMode', 'dark'); } catch (e) {}
+        }
+        syncThemeLabel();
+    }
+    /* ── 8. Tree render ───────────────────────────────────── */
     function renderTree() {
-        var progress = engine.getProgress();
-        var layerNames = engine.getLayerNames();
-        var layerColors = engine.getLayerColors();
-        var visible = engine.getVisibleSkills();
-
-        // Precompute goal-path skills for highlighting
-        var goals = engine.getGoals();
-        var goalPathSet = {};
-        var goalSkillSet = {};
-        for (var gi = 0; gi < goals.active.length; gi++) {
-            var gid = goals.active[gi].id;
-            goalSkillSet[gid] = true;
-            var parPath = engine.getGoalPathForParagraph(gid);
-            if (parPath) {
-                for (var pi = 0; pi < parPath.visibleOnPath.length; pi++) {
-                    goalPathSet[parPath.visibleOnPath[pi]] = true;
-                }
-            }
-        }
-
-        var viewMode = engine.getViewMode();
-        var html = '<div class="st-legend">';
-        html += '<span>' + iconInfo() + ' Info</span>';
-        html += '<span>' + iconTree() + ' Afhankelijkheden</span>';
-        html += '<button class="st-view-toggle" id="st-view-toggle">' + (viewMode === 'module' ? '\u00A7 Paragraaf' : '\u25A6 Module') + '</button>';
-        html += '</div>';
-
-        html += '<div class="st-header">';
-        html += '<h1>Wiskundevaardigheden</h1>';
-        html += '<p class="st-subtitle">' + (viewMode === 'module' ? 'Alle vaardigheden van de module' : 'Vaardigheden voor deze paragraaf') + '</p>';
-        html += '<div class="st-progress-summary">';
-        html += progress.mastered + ' / ' + progress.total + ' vaardigheden \u00B7 ';
-        html += progress.totalStars + ' / ' + progress.maxStars + ' sterren';
-        html += '</div></div>';
-
-        // Goal banner
-        html += renderGoalBanner(goals);
-
-        html += '<div class="st-layers">';
-        for (var li = 0; li < layerNames.length; li++) {
-            var lc = layerColors[li];
-            var layerSkills = [];
-            for (var j = 0; j < visible.length; j++) {
-                if (visible[j].layer === li) layerSkills.push(visible[j]);
-            }
-            if (layerSkills.length === 0) continue;
-
-            html += '<div class="st-layer">';
-            html += '<div class="st-layer-title" style="color:' + lc.text + '">';
-            if (li === layerNames.length - 1) html += '<span>\uD83C\uDFC6</span>';
-            html += 'Laag ' + (li + 1) + ' \u2014 ' + esc(layerNames[li]);
-            html += '</div>';
-            html += '<div class="st-layer-grid">';
-
-            for (var k = 0; k < layerSkills.length; k++) {
-                var cs = getCardDisplayState(layerSkills[k].id);
-                if (!cs) continue;
-
-                var cardClasses = cs.classes;
-                if (goalPathSet[cs.id] && !goalSkillSet[cs.id]) cardClasses += ' st-on-goal-path';
-                if (goalSkillSet[cs.id]) cardClasses += ' st-goal-skill';
-
-                html += '<button class="' + cardClasses + '"';
-                html += ' data-skill="' + cs.id + '"';
-                if (!cs.hasGenerator) html += ' disabled';
-                html += ' style="background:' + cs.bg + ';color:' + cs.text + ';border:' + cs.borderStyle + ';box-shadow:' + cs.boxShadow + ';--st-glow:' + cs.glow + '">';
-
-                html += '<div class="st-skill-id"><span>' + esc(cs.id);
-                if (goalPathSet[cs.id]) html += ' <span class="st-goal-icon">\uD83C\uDFAF</span>';
-                html += '</span>';
-                html += '<span class="st-skill-icons">';
-                html += '<span class="st-info-btn" data-info-skill="' + cs.id + '" title="Meer informatie">' + iconInfo() + '</span>';
-                if (cs.hasDeps) {
-                    html += '<span class="st-dep-btn" data-dep-skill="' + cs.id + '" title="Toon afhankelijkheden">' + iconTree() + '</span>';
-                }
-                html += '</span>';
-                html += '</div>';
-                if (!cs.ready && cs.missing.length > 0 && cs.starCount === 0) {
-                    html += '<div class="st-prereq-hint" title="Tip: oefen eerst ' + cs.missing.join(', ') + '">\uD83D\uDCA1 ' + cs.missing.join(', ') + '</div>';
-                }
-
-                html += '<div>' + (cs.isLastLayer ? '\uD83C\uDFC6 ' : '') + esc(cs.name) + '</div>';
-
-                if (cs.starCount > 0) {
-                    html += '<div class="st-stars">' + starsHTML(cs.starCount) + '</div>';
-                } else {
-                    var actionVerb = ('ontouchstart' in window) ? 'Tap' : 'Klik';
-                    html += '<div class="st-tap-hint">' + actionVerb + ' om te oefenen \u2192</div>';
-                }
-
-                html += '</button>';
-            }
-            html += '</div></div>';
-        }
-        html += '</div>';
-
-        // Reset button
-        html += '<button class="st-reset-btn" id="st-reset">' + iconReset() + ' Reset</button>';
-
-        root.innerHTML = html;
-
-        // Wire events
-        var cards = root.querySelectorAll('.st-skill-card');
-        for (var m = 0; m < cards.length; m++) {
-            cards[m].addEventListener('click', function () {
-                var sid = this.getAttribute('data-skill');
-                startSkill(sid);
-            });
-        }
-
-        // Wire dependency tree buttons
-        var depBtns = root.querySelectorAll('.st-dep-btn');
-        for (var d = 0; d < depBtns.length; d++) {
-            depBtns[d].addEventListener('click', function (e) {
-                e.stopPropagation();
-                var sid = this.getAttribute('data-dep-skill');
-                openDependencyOverlay(sid);
-            });
-        }
-
-        // Wire info buttons
-        var infoBtns = root.querySelectorAll('.st-info-btn');
-        for (var ib = 0; ib < infoBtns.length; ib++) {
-            infoBtns[ib].addEventListener('click', function (e) {
-                e.stopPropagation();
-                var sid = this.getAttribute('data-info-skill');
-                openInfoPopup(sid);
-            });
-        }
-
-        var viewToggle = document.getElementById('st-view-toggle');
-        if (viewToggle) {
-            viewToggle.addEventListener('click', function () {
-                var current = engine.getViewMode();
-                engine.setViewMode(current === 'module' ? 'paragraph' : 'module');
-                render();
-            });
-        }
-
-        // Wire goal remove buttons
-        var goalRemBtns = root.querySelectorAll('.st-goal-remove');
-        for (var gr = 0; gr < goalRemBtns.length; gr++) {
-            goalRemBtns[gr].addEventListener('click', function () {
-                var gid = this.getAttribute('data-goal-id');
-                engine.removeGoal(gid);
-                render();
-            });
-        }
-
-        // Wire goal path start-exercise buttons
-        var goalStartBtns = root.querySelectorAll('[data-goal-start]');
-        for (var gs = 0; gs < goalStartBtns.length; gs++) {
-            goalStartBtns[gs].addEventListener('click', function () {
-                var sid = this.getAttribute('data-goal-start');
-                startSkill(sid);
-            });
-        }
-
-        var resetBtn = document.getElementById('st-reset');
-        if (resetBtn) {
-            resetBtn.addEventListener('click', function () {
-                if (confirm('Weet je zeker dat je alle voortgang wilt resetten?')) {
-                    engine.resetStars();
-                    render();
-                }
-            });
-        }
+        if (els.headerTitle) els.headerTitle.textContent = DATA.parName || 'Wiskundevaardigheden';
+        var p = engine.getProgress();
+        if (els.statMastered) els.statMastered.textContent = String(p.mastered);
+        if (els.statTotal) els.statTotal.textContent = String(p.total);
+        if (els.statStars) els.statStars.textContent = String(p.totalStars);
+        if (els.statMaxStars) els.statMaxStars.textContent = String(p.maxStars);
+        if (els.viewToggle) els.viewToggle.innerHTML = engine.getViewMode() === 'module' ? '\u29E6 Module' : '\u00A7 Paragraaf';
+        renderGoalBanner();
+        renderLayers();
     }
-
-    function returnToTree() {
-        view = 'tree';
-        render();
-        // Restore overlay if we came from one
-        if (savedDepState) {
-            depHistory = savedDepState.history;
-            depSkillId = savedDepState.skillId;
-            depSubgraph = engine.getDependencySubgraph(depSkillId);
-            savedDepState = null;
-            renderDependencyOverlay();
-        }
-    }
-
-    // ── Goal banner ───────────────────────────────────────────
-    function renderGoalBanner(goals) {
-        var hasActive = goals.active.length > 0;
-        var hasAchieved = goals.achieved.length > 0;
-
-        if (!hasActive && !hasAchieved) {
-            return '<div class="st-goal-banner"><div class="st-goal-prompt">\uD83C\uDFAF Kies een doel via het afhankelijkheden-menu van een vaardigheid</div></div>';
-        }
-
-        var html = '<div class="st-goal-banner">';
-        html += '<div class="st-goal-section-title">\uD83C\uDFAF Doelen</div>';
-
-        // Active goals
-        for (var i = 0; i < goals.active.length; i++) {
-            var goal = goals.active[i];
-            var path = engine.getGoalPath(goal.id);
-            if (!path) continue;
-
-            var pct = path.totalPrereqs > 0 ? Math.round((path.fullyMastered / path.totalPrereqs) * 100) : 0;
-
-            html += '<div class="st-goal-card">';
-            html += '<button class="st-goal-remove" data-goal-id="' + goal.id + '">\u2715</button>';
-            html += '<div class="st-goal-name"><span class="st-goal-name-id">' + esc(goal.id) + '</span>' + esc(path.goalName) + '</div>';
-            html += '<div class="st-goal-bar"><div class="st-goal-bar-fill" style="width:' + pct + '%"></div></div>';
-            html += '<div class="st-goal-info"><span>' + path.fullyMastered + '/' + path.totalPrereqs + ' stappen</span><span>' + pct + '%</span></div>';
-
-            // Full ordered path with progress
-            if (path.orderedPath && path.orderedPath.length > 0) {
-                html += '<div class="st-goal-path">';
-                for (var pi = 0; pi < path.orderedPath.length; pi++) {
-                    var step = path.orderedPath[pi];
-                    var stepClass = 'st-goal-step';
-                    if (step.done) stepClass += ' st-goal-step-done';
-                    else if (step.actionable) stepClass += ' st-goal-step-actionable';
-                    var isGoalTarget = step.id === goal.id;
-                    if (isGoalTarget) stepClass += ' st-goal-step-target';
-
-                    if (step.actionable && engine.hasGenerator(step.id)) {
-                        html += '<button class="' + stepClass + '" data-goal-start="' + step.id + '">';
-                    } else {
-                        html += '<span class="' + stepClass + '">';
-                    }
-                    html += '<span class="st-goal-step-id">' + esc(step.id) + '</span>';
-                    html += '<span class="st-goal-step-name">' + esc(step.name) + '</span>';
-                    if (step.done) html += '<span class="st-goal-step-check">\u2713</span>';
-                    else html += '<span class="st-goal-step-stars">' + step.stars + '/3</span>';
-                    if (step.actionable && engine.hasGenerator(step.id)) {
-                        html += '</button>';
-                    } else {
-                        html += '</span>';
-                    }
-
-                    // Arrow between steps (not after last)
-                    if (pi < path.orderedPath.length - 1) {
-                        html += '<span class="st-goal-step-arrow">\u2192</span>';
-                    }
-                }
-                html += '</div>';
-            }
-
-            html += '</div>';
-        }
-
-        // Achieved badges
-        for (var a = 0; a < goals.achieved.length; a++) {
-            var badge = goals.achieved[a];
-            var skill = engine.getAllSkills();
-            var badgeName = badge.id;
-            for (var bs = 0; bs < skill.length; bs++) {
-                if (skill[bs].id === badge.id) { badgeName = skill[bs].name; break; }
-            }
-            html += '<div class="st-goal-card st-goal-card-achieved">';
-            html += '<div class="st-goal-name"><span class="st-goal-achieved-text">\uD83C\uDFC6 ' + esc(badge.id) + ' \u00B7 ' + esc(badgeName) + ' (behaald!)</span></div>';
-            html += '</div>';
-        }
-
-        html += '</div>';
-        return html;
-    }
-
-    function startSkill(skillId) {
-        if (!engine.hasGenerator(skillId)) return;
-        var ex = engine.startExercise(skillId);
-        if (!ex) return;
-        view = 'exercise';
-        feedback = null;
-        inputValue = '';
-        showHint = false;
-        showExpl = false;
-        finishResult = null;
-        lastFinishedSkillId = null;
-        mcSelected = -1;
-        orderPlaced = [];
-        errorSelected = -1;
-        render();
-        focusInput();
-    }
-
-    // ── Exercise view ─────────────────────────────────────────
-    function renderExercise() {
-        // If exercise finished (finishResult set), show completed view
-        if (finishResult) {
-            renderCompleted();
+    function renderGoalBanner() {
+        var g = engine.getGoals(), h = '';
+        var noActive = !g.active || !g.active.length;
+        var noAchieved = !g.achieved || !g.achieved.length;
+        if (noActive && noAchieved) {
+            els.goalBannerSlot.innerHTML = '<div class="st-goal-banner"><div class="st-goal-prompt">Tip: tap <i class="fa-solid fa-sitemap"></i> op een kaartje om een doel te kiezen.</div></div>';
             return;
         }
-
+        h = '<div class="st-goal-banner">';
+        if (!noActive) for (var i = 0; i < g.active.length; i++) {
+            var path = engine.getGoalPath(g.active[i].id);
+            if (path) h += renderGoalCard(g.active[i].id, path);
+        }
+        if (!noAchieved) for (var j = 0; j < g.achieved.length; j++) {
+            var ag = g.achieved[j], sk = findSkill(ag.id);
+            h += '<div class="st-goal-card-achieved"><span class="st-goal-achieved-text">\u2713 Doel behaald:</span> <strong>' + esc(ag.id) + '</strong> &middot; ' + esc(sk ? sk.name : ag.id) + '</div>';
+        }
+        h += '</div>';
+        els.goalBannerSlot.innerHTML = h;
+    }
+    function renderGoalCard(goalId, path) {
+        var steps = '', p = path.orderedPath || [];
+        for (var i = 0; i < p.length; i++) {
+            var s = p[i], cls = 'st-goal-step';
+            if (s.done) cls += ' st-goal-step-done';
+            else if (s.actionable) cls += ' st-goal-step-actionable';
+            var data = (s.actionable && !s.done) ? ' data-goal-step="' + esc(s.id) + '"' : '';
+            steps += '<span class="' + cls + '"' + data + '><span class="st-goal-step-id">' + esc(s.id) + '</span>'
+                   + (s.done ? '<span class="st-goal-step-check">\u2713</span>' : '') + '</span>';
+            if (i < p.length - 1) steps += '<span class="st-goal-step-arrow">\u203A</span>';
+        }
+        return '<div class="st-goal-card">'
+             + '<div class="st-goal-name"><span class="st-goal-name-id">' + esc(goalId) + '</span>' + esc(path.goalName || goalId) + '</div>'
+             + '<div class="st-goal-path">' + steps + '</div>'
+             + '<button class="st-goal-remove" type="button" data-goal-remove="' + esc(goalId) + '" title="Doel verwijderen"><i class="fa-solid fa-xmark"></i></button>'
+             + '</div>';
+    }
+    function renderLayers() {
+        var visible = engine.getVisibleSkills(), names = engine.getLayerNames(), st = engine.getStars();
+        var newSet = {}, nl = engine.getNewSkills();
+        for (var n = 0; n < nl.length; n++) newSet[nl[n]] = true;
+        var buckets = {};
+        for (var i = 0; i < visible.length; i++) {
+            var sk = visible[i];
+            if (!buckets[sk.layer]) buckets[sk.layer] = [];
+            buckets[sk.layer].push(sk);
+        }
+        var keys = [];
+        for (var lk in buckets) if (buckets.hasOwnProperty(lk)) keys.push(parseInt(lk, 10));
+        keys.sort(function (a, b) { return a - b; });
+        var h = '';
+        for (var li = 0; li < keys.length; li++) {
+            var layer = keys[li], items = buckets[layer];
+            h += '<div class="st-layer" data-layer="' + layer + '"><div class="st-layer-title">' + esc(names[layer] || ('Laag ' + layer)) + '</div><div class="st-layer-grid">';
+            for (var ii = 0; ii < items.length; ii++) h += renderSkillCard(items[ii], st[items[ii].id] || 0, newSet);
+            h += '</div></div>';
+        }
+        els.layers.innerHTML = h;
+    }
+    function renderSkillCard(skill, sc, newSet) {
+        var prereqsOk = engine.prereqsDone(skill.id);
+        var locked = !prereqsOk && sc === 0;
+        var hasGen = engine.hasGenerator(skill.id);
+        var isGoal = engine.isGoal(skill.id);
+        var onPath = engine.isOnGoalPath(skill.id) && !isGoal;
+        var isNew = newSet[skill.id] && sc === 0;
+        var cls = 'st-skill-card';
+        if (locked) cls += ' st-locked';
+        if (sc >= STAR_DISPLAY_COUNT) cls += ' st-mastered-5';
+        if (isNew) cls += ' st-new-skill';
+        if (isGoal) cls += ' st-goal-skill';
+        if (onPath) cls += ' st-on-goal-path';
+        var dis = (locked || !hasGen) ? ' disabled' : '';
+        var h = '<button class="' + cls + '" data-layer="' + skill.layer + '" data-skill="' + esc(skill.id) + '" type="button"' + dis + '>';
+        h += '<div class="st-skill-id"><span>' + esc(skill.id) + '</span><span class="st-skill-icons">'
+           + '<span class="st-info-btn" data-info="' + esc(skill.id) + '" title="Info"><i class="fa-solid fa-circle-info"></i></span>'
+           + '<span class="st-dep-btn" data-dep="' + esc(skill.id) + '" title="Afhankelijkheden"><i class="fa-solid fa-sitemap"></i></span>'
+           + '</span></div>';
+        h += '<div>' + esc(skill.name) + (isGoal ? ' <span class="st-goal-icon" title="Jouw doel"></span>' : '') + '</div>';
+        if (locked) {
+            var ms = engine.getMissingPrereqs(skill.id);
+            if (ms && ms.length) h += '<div class="st-prereq-hint">Eerst: ' + esc(ms.join(', ')) + '</div>';
+        } else if (sc === 0 && hasGen) {
+            h += '<div class="st-tap-hint">tik om te oefenen</div>';
+        }
+        h += '<div class="st-stars">' + stars(sc, STAR_DISPLAY_COUNT) + '</div></button>';
+        return h;
+    }
+    /* ── 9. Exercise render ───────────────────────────────── */
+    function mountExercise(skillId) {
+        var state = engine.startExercise(skillId);
+        if (!state) { fatal('Geen oefening beschikbaar voor ' + skillId); return; }
+        resetStepUiState();
+        clearAutoAdvance();
+        var sk = findSkill(skillId);
+        if (els.exercise) els.exercise.setAttribute('data-layer', sk ? String(sk.layer) : '0');
+        if (els.exSkillId) els.exSkillId.textContent = skillId;
+        if (els.exSkillName) els.exSkillName.textContent = state.skillName;
+        if (els.exContext) els.exContext.innerHTML = fmt(state.context || '');
+        if (els.exStepSlot) els.exStepSlot.hidden = false;
+        if (els.exScoreTracker) els.exScoreTracker.hidden = false;
+        if (els.exResultSlot) {
+            els.exResultSlot.hidden = true;
+            els.exResultSlot.innerHTML = '';
+            els.exResultSlot.removeAttribute('data-result-skill');
+        }
+        if (els.exCompleted) els.exCompleted.innerHTML = '';
+        showView('exercise');
+        renderStep();
+        renderScoreTracker();
+    }
+    function renderStepActions(step, skillId) {
+        var h = '<div class="st-help-row">';
+        if (step.hint) h += '<button class="st-hint-btn" type="button" data-action="hint"><i class="fa-solid fa-lightbulb"></i> Hint</button>';
+        if (engine.hasExplanation(skillId)) h += '<button class="st-explanation-btn" type="button" data-action="open-expl"><i class="fa-solid fa-book-open"></i> Uitleg</button>';
+        h += '</div>';
+        return h;
+    }
+    function buildStepCard(state) {
+        var step = state.currentStep;
+        var mode = step.mode || 'numeric';
+        var h = '<div class="st-step-card"><div class="st-question">' + fmt(step.q) + '</div>';
+        if (mode === 'mc') {
+            h += '<div class="st-mc-grid">';
+            for (var i = 0; i < step.options.length; i++) {
+                h += '<button class="st-mc-option" type="button" data-mc="' + i + '">' + esc(String(step.options[i])) + '</button>';
+            }
+            h += '</div>';
+        } else if (mode === 'order') {
+            h += renderOrderWidget(step, uiState.exercise.orderPlaced);
+        } else if (mode === 'error') {
+            h += '<div class="st-error-cards">';
+            for (var e = 0; e < step.shownSteps.length; e++) {
+                h += '<div class="st-error-card" data-err="' + e + '"><span class="st-error-num">' + (e + 1) + '.</span>' + esc(step.shownSteps[e].text) + '</div>';
+            }
+            h += '</div>';
+        } else {
+            h += '<div class="st-input-row"><button class="st-minus-btn" type="button" data-action="minus">\u2212</button>'
+               + '<input class="st-answer-input" id="st-numeric-input" type="text" inputmode="decimal" autocomplete="off" placeholder="Antwoord"></div>'
+               + '<button class="st-check-btn" type="button" data-action="check-numeric">Controleer</button>';
+        }
+        h += '<div class="st-wrong-msg" data-role="wrong-msg" hidden></div>';
+        h += renderStepActions(step, state.skillId);
+        h += '<div data-role="hint-box"></div><div data-role="expl-box"></div></div>';
+        return h;
+    }
+    function renderStep() {
         var state = engine.getExerciseState();
-        if (!state) { returnToTree(); return; }
-
-        var lc = engine.getLayerColors()[state.skillLayer];
-        var progress = ((state.currentStepIdx + (feedback === 'correct' ? 1 : 0)) / state.totalSteps) * 100;
-
-        var html = '<div class="st-exercise">';
-
-        // Header
-        html += '<div class="st-ex-header">';
-        html += '<button class="st-back-btn" id="st-back">' + iconArrowLeft() + '</button>';
-        html += '<div style="flex:1">';
-        html += '<div class="st-ex-skill-id" style="color:' + lc.text + '">' + esc(state.skillId) + '</div>';
-        html += '<div class="st-ex-skill-name">' + esc(state.skillName) + '</div>';
-        html += '</div>';
-        html += '<div class="st-step-counter">Stap ' + (state.currentStepIdx + 1) + '/' + state.totalSteps + '</div>';
-        html += '</div>';
-
-        // Progress bar
-        html += '<div class="st-progress-bar">';
-        html += '<div class="st-progress-fill" style="width:' + progress + '%;background:linear-gradient(90deg,' + lc.text + ',' + lc.glow.replace('0.3', '0.8') + ')"></div>';
-        html += '</div>';
-
-        // Context
-        html += '<div class="st-context">' + esc(state.context) + '</div>';
-
-        // Completed steps
-        for (var i = 0; i < state.completedSteps.length; i++) {
-            var cs = state.completedSteps[i];
-            html += '<div class="st-completed-step">';
-            html += '<div class="st-cs-label">\u2713 Stap ' + (i + 1) + ': ' + esc(cs.q) + '</div>';
-            html += '<div class="st-cs-answer">Antwoord: ' + cs.a + '</div>';
-            html += '</div>';
+        if (!state) return;
+        var mode = state.currentStep.mode || 'numeric';
+        var pct = Math.round((state.currentStepIdx / state.totalSteps) * 100);
+        if (els.exProgressFill) els.exProgressFill.style.width = pct + '%';
+        if (els.exStepCounter) els.exStepCounter.textContent = (state.currentStepIdx + 1) + ' / ' + state.totalSteps;
+        renderCompleted(state.completedSteps);
+        els.exStepSlot.innerHTML = buildStepCard(state);
+        if (uiState.exercise.hintHtml) {
+            var hintBox = els.exStepSlot.querySelector('[data-role="hint-box"]');
+            if (hintBox) hintBox.innerHTML = uiState.exercise.hintHtml;
         }
-
-        // Current step
-        var stepMode = state.currentStep.mode || 'numeric';
-        var stepClass = 'st-step-card';
-        if (feedback === 'correct') stepClass += ' st-correct';
-        if (feedback === 'wrong') stepClass += ' st-wrong';
-        html += '<div class="' + stepClass + '">';
-        html += '<p class="st-question">' + esc(state.currentStep.q) + '</p>';
-
-        if (stepMode === 'mc') {
-            // Multiple choice grid
-            html += '<div class="st-mc-grid">';
-            for (var oi = 0; oi < state.currentStep.options.length; oi++) {
-                var optClass = 'st-mc-option';
-                var optDisabled = '';
-                if (feedback === 'correct') {
-                    if (oi === state.currentStep.correctIdx) {
-                        optClass += ' st-mc-correct';
-                    } else {
-                        optClass += ' st-mc-faded';
-                    }
-                    optDisabled = ' disabled';
-                } else if (feedback === 'wrong' && mcSelected === oi) {
-                    optClass += ' st-mc-wrong';
-                }
-                html += '<button class="' + optClass + '" data-mc-idx="' + oi + '"' + optDisabled + '>' + esc(String(state.currentStep.options[oi])) + '</button>';
+        if (mode === 'numeric') {
+            var inp = document.getElementById('st-numeric-input');
+            if (inp) {
+                setTimeout(function () { try { inp.focus(); } catch (e) {} }, 30);
             }
-            html += '</div>';
-        } else if (stepMode === 'order') {
-            // Order mode: bank of blocks + chain
-            var shuffled = [];
-            for (var si = 0; si < state.currentStep.blocks.length; si++) shuffled.push(si);
-            // Build bank (unplaced blocks)
-            html += '<div class="st-order-bank">';
-            for (var bi = 0; bi < shuffled.length; bi++) {
-                var placed = false;
-                for (var pi = 0; pi < orderPlaced.length; pi++) {
-                    if (orderPlaced[pi] === bi) { placed = true; break; }
-                }
-                var blockClass = 'st-order-block' + (placed ? ' st-placed' : '');
-                html += '<div class="' + blockClass + '" data-block-idx="' + bi + '">' + esc(state.currentStep.blocks[bi]) + '</div>';
-            }
-            html += '</div>';
-            // Build chain (placed blocks)
-            html += '<div class="st-order-chain">';
-            for (var ci = 0; ci < orderPlaced.length; ci++) {
-                if (ci > 0) html += '<div class="st-order-arrow">\u2193</div>';
-                html += '<div class="st-order-placed" data-chain-idx="' + ci + '">' + (ci + 1) + '. ' + esc(state.currentStep.blocks[orderPlaced[ci]]) + '</div>';
-            }
-            html += '</div>';
-            // Check button (only when all blocks placed)
-            if (orderPlaced.length === state.currentStep.blocks.length && feedback !== 'correct') {
-                html += '<button class="st-check-btn" id="st-order-check" style="background:' + lc.bg + ';color:' + lc.text + '">Controleer volgorde</button>';
-            }
-        } else if (stepMode === 'error') {
-            // Error mode: 3 step cards, tap to select the error
-            html += '<div class="st-error-cards">';
-            for (var ei = 0; ei < state.currentStep.shownSteps.length; ei++) {
-                var errClass = 'st-error-card';
-                var errDisabled = '';
-                if (feedback === 'correct') {
-                    if (state.currentStep.shownSteps[ei].isError) {
-                        errClass += ' st-error-found';
-                    } else {
-                        errClass += ' st-error-ok';
-                    }
-                    errDisabled = ' data-disabled="true"';
-                } else if (feedback === 'wrong' && errorSelected === ei) {
-                    errClass += ' st-error-wrong';
-                }
-                html += '<div class="' + errClass + '" data-error-idx="' + ei + '"' + errDisabled + '>';
-                html += '<span class="st-error-num">Stap ' + (ei + 1) + '</span> ' + esc(state.currentStep.shownSteps[ei].text);
-                html += '</div>';
-            }
-            html += '</div>';
-        } else {
-            // Numeric input row
-            html += '<div class="st-input-row">';
-            html += '<button class="st-minus-btn" id="st-toggle-minus"' + (feedback === 'correct' ? ' disabled' : '') + '>\u00B1</button>';
-            html += '<input class="st-answer-input" id="st-input" type="text" inputmode="decimal" value="' + esc(inputValue) + '"' + (feedback === 'correct' ? ' disabled' : '') + ' placeholder="Antwoord (gebruik \u00B1 voor negatief)">';
-
-            var btnBg = feedback === 'correct' ? '#166534' : lc.bg;
-            var btnColor = feedback === 'correct' ? '#dcfce7' : lc.text;
-            html += '<button class="st-check-btn" id="st-check" style="background:' + btnBg + ';color:' + btnColor + '"' + (feedback === 'correct' ? ' disabled' : '') + '>Check</button>';
-            html += '</div>';
-        }
-
-        // Feedback (wrong message — only for numeric; MC shows inline via button color)
-        if (feedback === 'wrong' && stepMode === 'numeric') {
-            html += '<p class="st-wrong-msg">\u2717 Niet juist. Probeer het opnieuw' + (!showHint ? ' of gebruik een hint.' : '.') + '</p>';
-        }
-
-        // Hint + Uitleg buttons
-        html += '<div class="st-help-row">';
-        if (feedback !== 'correct' && !showHint) {
-            html += '<button class="st-hint-btn" id="st-hint">' + iconLightbulb() + ' Hint</button>';
-        }
-        if (engine.hasExplanation(state.skillId)) {
-            html += '<button class="st-explanation-btn" id="st-explanation">' + iconBook() + ' Uitleg</button>';
-        }
-        html += '</div>';
-        if (showHint) {
-            html += '<div class="st-hint-box">\uD83D\uDCA1 ' + esc(state.currentStep.hint) + '</div>';
-        }
-
-        // Explanation
-        if (showExpl) {
-            html += '<div class="st-expl-box">\u2713 ' + esc(state.currentStep.expl) + '</div>';
-        }
-
-        html += '</div>'; // end step card
-
-        // Score tracker
-        var penalty = state.errors + state.hints;
-        var previewStars = penalty === 0 ? 3 : penalty <= 2 ? 2 : 1;
-        var scoreClass = penalty === 0 ? 'st-score-perfect' : '';
-        html += '<div class="st-score-tracker">';
-        html += '<span>Fouten: ' + state.errors + '</span>';
-        if (state.streak >= 2) {
-            html += '<span class="st-streak">\uD83D\uDD25 ' + state.streak + ' op rij!</span>';
-        } else {
-            html += '<span>Hints: ' + state.hints + '</span>';
-        }
-        html += '<span class="' + scoreClass + '">+' + previewStars + ' \u2605</span>';
-        html += '</div>';
-
-        html += '</div>'; // end exercise
-
-        root.innerHTML = html;
-
-        // Wire events
-        document.getElementById('st-back').addEventListener('click', function () {
-            engine.abortExercise();
-            if (advanceTimer) { clearTimeout(advanceTimer); advanceTimer = null; }
-            returnToTree();
-        });
-
-        var inp = document.getElementById('st-input');
-        if (inp) {
-            inp.addEventListener('input', function () {
-                inputValue = this.value;
-                if (feedback === 'wrong') feedback = null;
-            });
-            inp.addEventListener('keydown', function (e) {
-                if (e.key === 'Enter') doCheck();
-            });
-        }
-
-        // MC option handlers (instant submit on tap)
-        var mcBtns = root.querySelectorAll('.st-mc-option');
-        for (var mi = 0; mi < mcBtns.length; mi++) {
-            mcBtns[mi].addEventListener('click', function () {
-                if (feedback === 'correct') return;
-                var idx = parseInt(this.getAttribute('data-mc-idx'), 10);
-                mcSelected = idx;
-                doCheck(idx);
-            });
-        }
-
-        // Order mode: bank click → add to chain
-        var orderBlocks = root.querySelectorAll('.st-order-block:not(.st-placed)');
-        for (var obi = 0; obi < orderBlocks.length; obi++) {
-            orderBlocks[obi].addEventListener('click', function () {
-                if (feedback === 'correct') return;
-                var idx = parseInt(this.getAttribute('data-block-idx'), 10);
-                orderPlaced.push(idx);
-                feedback = null;
-                render();
-            });
-        }
-        // Order mode: chain click → remove from chain
-        var orderChain = root.querySelectorAll('.st-order-placed');
-        for (var oci = 0; oci < orderChain.length; oci++) {
-            orderChain[oci].addEventListener('click', function () {
-                if (feedback === 'correct') return;
-                var ci = parseInt(this.getAttribute('data-chain-idx'), 10);
-                orderPlaced.splice(ci, 1);
-                feedback = null;
-                render();
-            });
-        }
-        // Order mode: check button
-        var orderCheckBtn = document.getElementById('st-order-check');
-        if (orderCheckBtn) {
-            orderCheckBtn.addEventListener('click', function () {
-                doCheck(orderPlaced);
-            });
-        }
-
-        // Error mode: instant submit on tap
-        var errorCards = root.querySelectorAll('.st-error-card:not([data-disabled])');
-        for (var eci = 0; eci < errorCards.length; eci++) {
-            errorCards[eci].addEventListener('click', function () {
-                if (feedback === 'correct') return;
-                var idx = parseInt(this.getAttribute('data-error-idx'), 10);
-                errorSelected = idx;
-                doCheck(idx);
-            });
-        }
-
-        var toggleBtn = document.getElementById('st-toggle-minus');
-        if (toggleBtn) {
-            toggleBtn.addEventListener('click', function () {
-                inputValue = inputValue.startsWith('-') ? inputValue.slice(1) : '-' + inputValue;
-                feedback = null;
-                render();
-                focusInput();
-            });
-        }
-
-        var checkBtn = document.getElementById('st-check');
-        if (checkBtn) {
-            checkBtn.addEventListener('click', doCheck);
-        }
-
-        var hintBtn = document.getElementById('st-hint');
-        if (hintBtn) {
-            hintBtn.addEventListener('click', function () {
-                engine.useHint();
-                showHint = true;
-                render();
-                focusInput();
-            });
-        }
-
-        var uitlegBtn = document.getElementById('st-explanation');
-        if (uitlegBtn) {
-            uitlegBtn.addEventListener('click', function () {
-                var state = engine.getExerciseState();
-                if (state) openExplanationOverlay(state.skillId);
-            });
         }
     }
-
-    function doCheck(mcIdx) {
-        if (feedback === 'correct') return;
-        var answerInput = mcIdx !== undefined ? mcIdx : inputValue;
-        var result = engine.checkAnswer(answerInput);
+    function renderOrderWidget(step, placed) {
+        var placedSet = {};
+        for (var p = 0; p < placed.length; p++) placedSet[placed[p]] = true;
+        var h = '<div class="st-order-bank">';
+        for (var i = 0; i < step.blocks.length; i++) {
+            var pl = placedSet[i];
+            h += '<button class="st-order-block' + (pl ? ' st-placed' : '') + '" type="button" data-order-block="' + i + '"' + (pl ? ' disabled' : '') + '>' + esc(step.blocks[i]) + '</button>';
+        }
+        h += '</div><div class="st-order-chain">';
+        for (var j = 0; j < placed.length; j++) {
+            h += '<div class="st-order-placed">' + esc(step.blocks[placed[j]]) + '</div>';
+            if (j < placed.length - 1) h += '<span class="st-order-arrow">\u2193</span>';
+        }
+        h += '</div>';
+        if (placed.length > 0) h += '<div class="st-help-row"><button class="st-check-btn" type="button" data-action="reset-order">Opnieuw</button></div>';
+        return h;
+    }
+    function handleOrderBlock(idx, step) {
+        for (var i = 0; i < uiState.exercise.orderPlaced.length; i++) {
+            if (uiState.exercise.orderPlaced[i] === idx) return;
+        }
+        uiState.exercise.orderPlaced.push(idx);
+        if (uiState.exercise.orderPlaced.length === step.blocks.length) {
+            var result = engine.checkAnswer(uiState.exercise.orderPlaced.slice());
+            resetStepUiState();
+            if (!result.correct) renderStep();
+            handleSubmitResult(result);
+            return;
+        }
+        renderStep();
+    }
+    function handleMinus() {
+        var inp = document.getElementById('st-numeric-input');
+        if (!inp) return;
+        inp.value = inp.value.charAt(0) === '-' ? inp.value.substring(1) : '-' + inp.value;
+        inp.focus();
+    }
+    function handleCheckNumeric() {
+        var inp = document.getElementById('st-numeric-input');
+        if (!inp) return;
+        var v = inp.value.trim();
+        if (v === '') return;
+        handleSubmitResult(engine.checkAnswer(v));
+    }
+    function handleMC(idx) {
+        var btns = els.exStepSlot.querySelectorAll('.st-mc-option');
+        for (var i = 0; i < btns.length; i++) btns[i].disabled = true;
+        var r = engine.checkAnswer(idx);
+        if (r.correct) btns[idx].classList.add('st-mc-correct');
+        else {
+            btns[idx].classList.add('st-mc-wrong');
+            setTimeout(function () { for (var j = 0; j < btns.length; j++) if (j !== idx) btns[j].disabled = false; }, 50);
+        }
+        handleSubmitResult(r);
+    }
+    function handleError(idx) {
+        var cards = els.exStepSlot.querySelectorAll('.st-error-card');
+        var r = engine.checkAnswer(idx);
+        if (r.correct) {
+            for (var i = 0; i < cards.length; i++) {
+                cards[i].setAttribute('data-disabled', '1');
+                cards[i].classList.add(i === idx ? 'st-error-found' : 'st-error-ok');
+            }
+        } else cards[idx].classList.add('st-error-wrong');
+        handleSubmitResult(r);
+    }
+    function handleSubmitResult(result) {
+        var card = els.exStepSlot.querySelector('.st-step-card');
+        var wrongMsg = els.exStepSlot.querySelector('[data-role="wrong-msg"]');
         if (result.correct) {
-            feedback = 'correct';
-            showExpl = true;
-
+            if (card) card.classList.add('st-correct');
+            if (result.explanation) {
+                var box = els.exStepSlot.querySelector('[data-role="expl-box"]');
+                if (box) box.innerHTML = '<div class="st-expl-box">' + fmt(result.explanation) + '</div>';
+            }
+            renderScoreTracker();
+            clearAutoAdvance();
             if (result.isLastStep) {
-                // Last step correct — finish immediately, show result inline
-                var fr = engine.finishExercise();
-                if (fr) {
-                    lastFinishedSkillId = fr.skillId;
-                    finishResult = fr;
-                    // Check if any goals are now achieved
-                    var achieved = engine.checkGoalCompletion();
-                    if (achieved.length > 0) {
-                        goalJustAchieved = achieved;
-                    }
-                }
-                render();
+                uiState.exercise.autoAdvanceId = setTimeout(finishAndShowResult, 900);
             } else {
-                // Auto-advance for non-last steps
-                render();
-                if (advanceTimer) clearTimeout(advanceTimer);
-                advanceTimer = setTimeout(function () {
-                    advanceTimer = null;
+                uiState.exercise.autoAdvanceId = setTimeout(function () {
                     engine.nextStep();
-                    feedback = null;
-                    inputValue = '';
-                    showHint = false;
-                    showExpl = false;
-                    mcSelected = -1;
-                    orderPlaced = [];
-                    errorSelected = -1;
-                    render();
-                    focusInput();
+                    resetStepUiState();
+                    renderStep();
+                    renderScoreTracker();
                 }, 1200);
             }
         } else {
-            feedback = 'wrong';
-            render();
-            focusInput();
+            if (card) { card.classList.add('st-wrong'); setTimeout(function () { card.classList.remove('st-wrong'); }, 450); }
+            if (wrongMsg) { wrongMsg.hidden = false; wrongMsg.textContent = errMsg(result.error); }
+            renderScoreTracker();
         }
     }
-
-    // ── Confetti generator ──────────────────────────────────────
-    function spawnConfetti(container) {
-        var colors = ['#fbbf24', '#22c55e', '#3b82f6', '#ef4444', '#a855f7', '#f97316'];
-        var confettiCount = 40;
-        for (var i = 0; i < confettiCount; i++) {
-            var span = document.createElement('span');
-            span.className = 'st-confetti-piece';
-            span.style.left = Math.random() * 100 + '%';
-            span.style.background = colors[Math.floor(Math.random() * colors.length)];
-            span.style.animationDelay = (Math.random() * 0.6) + 's';
-            span.style.animationDuration = (1.2 + Math.random() * 1.0) + 's';
-            // Random horizontal drift
-            span.style.setProperty('--drift', (Math.random() * 120 - 60) + 'px');
-            container.appendChild(span);
+    function errMsg(c) {
+        if (c === 'invalid_number') return 'Vul een geldig getal in.';
+        if (c === 'invalid_choice') return 'Kies een van de opties.';
+        if (c === 'wrong_order') return 'Volgorde klopt nog niet. Probeer opnieuw.';
+        if (c === 'incomplete_order') return 'Plaats alle blokken.';
+        return 'Nog niet juist, probeer opnieuw.';
+    }
+    function showHint() {
+        if (uiState.exercise.hintShown) return;
+        var hint = engine.useHint();
+        if (!hint) return;
+        var box = els.exStepSlot.querySelector('[data-role="hint-box"]');
+        uiState.exercise.hintHtml = '<div class="st-hint-box"><i class="fa-solid fa-lightbulb"></i> ' + fmt(hint) + '</div>';
+        if (box) box.innerHTML = uiState.exercise.hintHtml;
+        uiState.exercise.hintShown = true;
+        renderScoreTracker();
+    }
+    function renderCompleted(completed) {
+        if (!els.exCompleted) return;
+        var h = '';
+        for (var i = 0; i < completed.length; i++) {
+            var c = completed[i];
+            h += '<div class="st-completed-step"><div class="st-cs-label">Stap ' + (i + 1) + ' \u2713</div>'
+               + '<div>' + fmt(c.q) + '</div><div class="st-cs-answer">' + esc(String(c.a)) + '</div></div>';
+        }
+        els.exCompleted.innerHTML = h;
+    }
+    function renderScoreTracker() {
+        if (!els.exScoreTracker) return;
+        var s = engine.getExerciseState();
+        if (!s) { els.exScoreTracker.innerHTML = ''; return; }
+        var perfect = s.errors === 0 && s.hints === 0;
+        var h = '<span>Fouten: ' + s.errors + '</span><span>Hints: ' + s.hints + '</span>';
+        if (s.streak > 1) h += '<span class="st-streak">\uD83D\uDD25 Reeks: ' + s.streak + '</span>';
+        if (perfect && s.completedSteps.length > 0) h += '<span class="st-score-perfect">Perfect!</span>';
+        els.exScoreTracker.innerHTML = h;
+    }
+    /* ── 10. Result render ────────────────────────────────── */
+    function finishAndShowResult() {
+        var state = engine.getExerciseState();
+        if (!state) return;
+        var skillId = state.skillId;
+        clearAutoAdvance();
+        var finish = engine.finishExercise();
+        if (!finish) return;
+        var achieved = engine.checkGoalCompletion();
+        renderResult(finish, skillId, achieved);
+    }
+    function renderResult(finish, skillId, achievedIds) {
+        if (els.exStepSlot) els.exStepSlot.hidden = true;
+        if (els.exScoreTracker) els.exScoreTracker.hidden = true;
+        if (els.exResultSlot) els.exResultSlot.hidden = false;
+        var mastered = finish.newTotal >= 3;
+        var goalAchieved = false;
+        for (var a = 0; a < achievedIds.length; a++) if (achievedIds[a] === skillId) goalAchieved = true;
+        var cardCls = 'st-result-card' + ((mastered && finish.improved) ? ' st-mastery-card' : '');
+        var msg;
+        if (finish.newTotal >= 5) msg = 'Meesterschap!';
+        else if (finish.newTotal >= 3) msg = 'Goed gedaan!';
+        else if (finish.improved) msg = 'Mooi, je bent vooruit!';
+        else msg = 'Probeer nog een keer voor meer sterren.';
+        var details = 'Verdiend: +' + finish.earned + ' ster' + (finish.earned === 1 ? '' : 'ren')
+                    + ' (' + finish.errors + ' fout, ' + finish.hints + ' hint' + (finish.hints === 1 ? '' : 's') + ')';
+        var h = '<div class="' + cardCls + '">';
+        h += '<div class="st-result-stars">' + stars(finish.newTotal, STAR_DISPLAY_COUNT) + '</div>';
+        h += '<div class="st-result-message">' + esc(msg) + '</div>';
+        h += '<div class="st-result-details">' + details + '</div>';
+        if (!finish.improved && finish.previous < STAR_DISPLAY_COUNT) h += '<div class="st-near-miss">Vorige keer had je al ' + finish.previous + ' ster(ren).</div>';
+        else if (finish.improved) h += '<div class="st-result-progress">' + finish.previous + ' \u2192 ' + finish.newTotal + ' sterren</div>';
+        var goalInfo = goalProgressForSkill(skillId);
+        if (goalInfo && !goalAchieved) h += renderGoalProgress(goalInfo);
+        var next = engine.getNextSkill(skillId);
+        h += '<div class="st-result-buttons">'
+           + '<button class="st-btn-back" type="button" data-result-action="back"><i class="fa-solid fa-arrow-left"></i> Terug</button>'
+           + '<button class="st-btn-retry" type="button" data-result-action="retry"><i class="fa-solid fa-rotate-right"></i> Nog een keer</button>';
+        if (next) h += '<button class="st-btn-next" type="button" data-result-action="next" data-next="' + esc(next.id) + '">Volgende: ' + esc(next.id) + ' <i class="fa-solid fa-arrow-right"></i></button>';
+        h += '</div>';
+        if (goalAchieved) {
+            var gsk = findSkill(skillId);
+            h += '<div class="st-goal-achieved-card"><div class="st-goal-achieved-title">\uD83C\uDFAF Doel behaald!</div>'
+               + '<div class="st-goal-achieved-name">' + esc(gsk ? gsk.name : skillId) + '</div></div>';
+        }
+        h += '</div>';
+        els.exResultSlot.setAttribute('data-result-skill', skillId);
+        els.exResultSlot.innerHTML = h;
+        if (goalAchieved || (mastered && finish.improved)) {
+            spawnConfetti(els.exResultSlot.querySelector('.st-result-card'));
         }
     }
-
-    // ── Completed view (inline, no overlay) ───────────────────
-    function renderCompleted() {
-        var fr = finishResult;
-        var isMastery = fr.newTotal === 5 && fr.improved;
-        var msg = isMastery ? 'Meester! \uD83C\uDFC6' : fr.earned === 3 ? 'Perfect! \uD83C\uDFAF' : fr.earned === 2 ? 'Goed gedaan!' : 'Gehaald!';
-        var details = '';
-        if (fr.errors > 0) details += fr.errors + ' fout' + (fr.errors > 1 ? 'en' : '');
-        if (fr.errors > 0 && fr.hints > 0) details += ', ';
-        if (fr.hints > 0) details += fr.hints + ' hint' + (fr.hints > 1 ? 's' : '') + ' gebruikt';
-        if (fr.errors === 0 && fr.hints === 0) details = 'Zonder fouten of hints!';
-
-        var html = '<div class="st-exercise">';
-
-        // Result card (with confetti container)
-        html += '<div class="st-result-card' + (isMastery ? ' st-mastery-card' : '') + '">';
-
-        // Confetti container (above content, inside card)
-        if (isMastery) {
-            html += '<div class="st-confetti-container" id="st-confetti"></div>';
-        }
-
-        // Star display
-        html += '<div class="st-result-stars">';
-        html += starsHTML(fr.newTotal, 5);
-        html += '</div>';
-
-        // Message
-        html += '<p class="st-result-message">' + esc(msg) + '</p>';
-
-        // Details
-        html += '<p class="st-result-details">' + esc(details) + '</p>';
-
-        // Progress info
-        if (fr.improved) {
-            html += '<p class="st-result-progress">+' + fr.earned + ' \u2605 \u2192 ' + fr.newTotal + '/5 sterren</p>';
-        } else {
-            html += '<p class="st-result-progress">' + fr.newTotal + '/5 sterren (al behaald)</p>';
-        }
-
-        // Near-miss encouragement
-        if (fr.newTotal === 4 && fr.improved) {
-            html += '<p class="st-near-miss">Nog \u00e9\u00e9n ster voor de gouden rand \uD83C\uDFC6 Doe het foutloos!</p>';
-        }
-
-        // Navigation buttons
-        html += '<div class="st-result-buttons">';
-        html += '<button class="st-btn-back" id="st-result-back">' + iconArrowLeft() + ' Overzicht</button>';
-        if (fr.newTotal < 5) {
-            html += '<button class="st-btn-retry" id="st-result-retry">' + iconRefresh() + ' Opnieuw</button>';
-        }
-
-        // Next skill button
-        var nextSkill = engine.getNextSkill(fr.skillId);
-        if (nextSkill) {
-            html += '<button class="st-btn-next" id="st-result-next" data-skill="' + nextSkill.id + '">Volgende \u2192</button>';
-        }
-
-        html += '</div>';
-
-        html += '</div>'; // end result card
-
-        // Goal progress section (if skill is on a goal path)
-        var activeGoals = engine.getGoals().active;
-        for (var gpi = 0; gpi < activeGoals.length; gpi++) {
-            if (engine.isOnGoalPath(fr.skillId)) {
-                var gPath = engine.getGoalPath(activeGoals[gpi].id);
-                if (gPath) {
-                    var gPct = gPath.totalPrereqs > 0 ? Math.round((gPath.fullyMastered / gPath.totalPrereqs) * 100) : 0;
-                    html += '<div class="st-result-goal">';
-                    html += '<div class="st-result-goal-title">\uD83C\uDFAF Doel: ' + esc(gPath.goalName) + '</div>';
-                    html += '<div class="st-goal-bar"><div class="st-goal-bar-fill" style="width:' + gPct + '%"></div></div>';
-                    html += '<div class="st-goal-info"><span>' + gPath.fullyMastered + '/' + gPath.totalPrereqs + ' stappen</span><span>' + gPct + '%</span></div>';
-                    if (gPath.nextActionable.length > 0) {
-                        var nId = gPath.nextActionable[0];
-                        var allSk = engine.getAllSkills();
-                        var nName = nId;
-                        for (var nsi = 0; nsi < allSk.length; nsi++) {
-                            if (allSk[nsi].id === nId) { nName = allSk[nsi].name; break; }
-                        }
-                        html += '<div class="st-result-goal-next">Volgende stap: ' + esc(nId) + ' \u2014 ' + esc(nName) + '</div>';
-                    }
-                    html += '</div>';
-                }
-                break; // show only one goal progress
-            }
-        }
-
-        // Goal achievement celebration
-        if (goalJustAchieved && goalJustAchieved.length > 0) {
-            for (var agi = 0; agi < goalJustAchieved.length; agi++) {
-                var achievedId = goalJustAchieved[agi];
-                var allSkills = engine.getAllSkills();
-                var achievedName = achievedId;
-                for (var asi = 0; asi < allSkills.length; asi++) {
-                    if (allSkills[asi].id === achievedId) { achievedName = allSkills[asi].name; break; }
-                }
-                html += '<div class="st-goal-achieved-card" id="st-goal-achieved-card">';
-                html += '<div class="st-confetti-container" id="st-goal-confetti"></div>';
-                html += '<div class="st-goal-achieved-title">\uD83C\uDFC6 Doel bereikt!</div>';
-                html += '<div class="st-goal-achieved-name">' + esc(achievedName) + '</div>';
-                html += '<button class="st-btn-back" id="st-goal-achieved-ok">Bekijk je badges \u2192</button>';
-                html += '</div>';
-            }
-        }
-
-        html += '</div>'; // end exercise
-
-        root.innerHTML = html;
-
-        // Spawn confetti particles
-        if (isMastery) {
-            var confettiEl = document.getElementById('st-confetti');
-            if (confettiEl) spawnConfetti(confettiEl);
-        }
-
-        // Spawn goal confetti
-        if (goalJustAchieved && goalJustAchieved.length > 0) {
-            var goalConfettiEl = document.getElementById('st-goal-confetti');
-            if (goalConfettiEl) spawnConfetti(goalConfettiEl);
-        }
-
-        // Animate stars
-        setTimeout(function () {
-            var starEls = root.querySelectorAll('.st-result-stars .st-star-on');
-            for (var i = 0; i < starEls.length; i++) {
-                (function (el, delay) {
-                    setTimeout(function () {
-                        el.style.animation = 'starPop 0.4s ease both';
-                    }, delay);
-                })(starEls[i], i * 150);
-            }
-        }, 50);
-
-        // Wire events
-        document.getElementById('st-result-back').addEventListener('click', function () {
-            finishResult = null;
-            goalJustAchieved = null;
-            returnToTree();
-        });
-
-        var retryBtn = document.getElementById('st-result-retry');
-        if (retryBtn) {
-            retryBtn.addEventListener('click', function () {
-                finishResult = null;
-                goalJustAchieved = null;
-                startSkill(lastFinishedSkillId);
-            });
-        }
-
-        var nextBtn = document.getElementById('st-result-next');
-        if (nextBtn) {
-            nextBtn.addEventListener('click', function () {
-                var sid = this.getAttribute('data-skill');
-                finishResult = null;
-                goalJustAchieved = null;
-                startSkill(sid);
-            });
-        }
-
-        var goalOkBtn = document.getElementById('st-goal-achieved-ok');
-        if (goalOkBtn) {
-            goalOkBtn.addEventListener('click', function () {
-                finishResult = null;
-                goalJustAchieved = null;
-                returnToTree();
-            });
+    function onResultBack() {
+        if (!restoreDepsReturnState()) {
+            showView('tree');
+            renderTree();
         }
     }
-
-    // ── Dependency tree overlay ─────────────────────────────────
-
-    function openDependencyOverlay(skillId) {
-        depSubgraph = engine.getDependencySubgraph(skillId);
-        if (!depSubgraph) return;
-        // Push current view onto history if we're already showing a dep tree
-        if (depSkillId) {
-            depHistory.push(depSkillId);
+    function goalProgressForSkill(skillId) {
+        var g = engine.getGoals();
+        if (!g.active || !g.active.length) return null;
+        for (var i = 0; i < g.active.length; i++) {
+            var path = engine.getGoalPath(g.active[i].id);
+            if (!path) continue;
+            for (var j = 0; j < path.orderedPath.length; j++) {
+                if (path.orderedPath[j].id === skillId) return path;
+            }
         }
-        depSkillId = skillId;
-        renderDependencyOverlay();
+        return null;
     }
-
-    function goBackDependency() {
-        if (depHistory.length > 0) {
-            depSkillId = depHistory.pop();
-            depSubgraph = engine.getDependencySubgraph(depSkillId);
-            renderDependencyOverlay();
-        } else {
-            closeDependencyOverlay();
+    function renderGoalProgress(path) {
+        var done = path.fullyMastered, total = path.totalPrereqs;
+        var pct = total > 0 ? Math.round((done / total) * 100) : 0;
+        var h = '<div class="st-result-goal"><div class="st-result-goal-title">Doel: ' + esc(path.goalName) + '</div>'
+              + '<div class="st-goal-bar"><div class="st-goal-bar-fill" style="width:' + pct + '%"></div></div>'
+              + '<div class="st-goal-info"><span>' + done + ' / ' + total + ' beheerst</span><span>' + pct + '%</span></div>';
+        if (path.nextActionable && path.nextActionable.length > 0 && !path.complete) {
+            h += '<div class="st-result-goal-next">Volgende stap: <strong>' + esc(path.nextActionable[0]) + '</strong></div>';
         }
+        return h + '</div>';
     }
-
-    function closeDependencyOverlay() {
-        depSkillId = null;
-        depSubgraph = null;
-        depHistory = [];
-        var el = document.getElementById('st-dep-overlay');
-        if (el) el.remove();
+    function spawnConfetti(parent) {
+        if (!parent) return;
+        var c = document.createElement('div');
+        c.className = 'st-confetti-container';
+        var colors = ['#c58f2c', '#17A2B8', '#d08732', '#2f7d4a', '#b23b3b'];
+        for (var i = 0; i < 40; i++) {
+            var p = document.createElement('span');
+            p.className = 'st-confetti-piece';
+            p.style.left = (Math.random() * 100) + '%';
+            p.style.background = colors[i % colors.length];
+            p.style.setProperty('--drift', (Math.random() * 160 - 80).toFixed(0) + 'px');
+            p.style.animationDelay = (Math.random() * 0.4).toFixed(2) + 's';
+            c.appendChild(p);
+        }
+        parent.appendChild(c);
+        setTimeout(function () { if (c.parentNode) c.parentNode.removeChild(c); }, 2500);
     }
-
-    function renderDependencyOverlay() {
-        // Remove existing overlay
-        var existing = document.getElementById('st-dep-overlay');
-        if (existing) existing.remove();
-
-        if (!depSkillId || !depSubgraph || view !== 'tree') return;
-
-        // Refresh subgraph to get current star data
-        depSubgraph = engine.getDependencySubgraph(depSkillId);
-        if (!depSubgraph) { depSkillId = null; return; }
-
-        var layerColors = engine.getLayerColors();
-        var stars = engine.getStars();
-        var nodes = depSubgraph.nodes;
-        var edges = depSubgraph.edges;
-
-        // ── Layout constants ──────────────────────────────────
-        var NODE_W = 120, NODE_H = 48, H_GAP = 14, V_GAP = 42, PAD = 14;
-
-        // ── Group nodes by layer ──────────────────────────────
-        var layerBuckets = {};
-        for (var i = 0; i < nodes.length; i++) {
-            var ly = nodes[i].layer;
-            if (!layerBuckets[ly]) layerBuckets[ly] = [];
-            layerBuckets[ly].push(nodes[i]);
-        }
-
-        // Sort layers descending (root skill's layer at top)
-        var layerOrder = Object.keys(layerBuckets).map(Number).sort(function (a, b) { return b - a; });
-
-        // ── Barycenter ordering (minimize crossings) ──────────
-        var nodePos = {};
-        // First pass: assign initial x positions per layer row
-        for (var li = 0; li < layerOrder.length; li++) {
-            var layer = layerOrder[li];
-            var bucket = layerBuckets[layer];
-            if (li > 0) {
-                // Sort by average x of parents (nodes in higher layers that depend on this node)
-                bucket.sort(function (a, b) {
-                    var avgA = getParentAvgX(a.id, edges, nodePos);
-                    var avgB = getParentAvgX(b.id, edges, nodePos);
-                    return avgA - avgB;
-                });
-            }
-            for (var bi = 0; bi < bucket.length; bi++) {
-                nodePos[bucket[bi].id] = { row: li, col: bi, rowSize: bucket.length };
-            }
-        }
-
-        // ── Compute pixel positions ───────────────────────────
-        var maxCols = 1;
-        for (var key in layerBuckets) {
-            if (layerBuckets[key].length > maxCols) maxCols = layerBuckets[key].length;
-        }
-        var svgW = Math.max(320, maxCols * (NODE_W + H_GAP) - H_GAP + PAD * 2);
-        var svgH = layerOrder.length * (NODE_H + V_GAP) - V_GAP + PAD * 2;
-
-        for (var nid in nodePos) {
-            var np = nodePos[nid];
-            var rowW = np.rowSize * (NODE_W + H_GAP) - H_GAP;
-            var startX = (svgW - rowW) / 2;
-            np.x = startX + np.col * (NODE_W + H_GAP);
-            np.y = PAD + np.row * (NODE_H + V_GAP);
-            np.cx = np.x + NODE_W / 2;
-            np.cy = np.y + NODE_H / 2;
-        }
-
-        // ── Build SVG ─────────────────────────────────────────
-        var svg = '<svg class="st-dep-graph" viewBox="0 0 ' + svgW + ' ' + svgH + '" preserveAspectRatio="xMidYMin meet">';
-
-        // Arrowhead marker
-        svg += '<defs><marker id="dep-arrow" markerWidth="6" markerHeight="4" refX="5" refY="2" orient="auto">';
-        svg += '<path d="M0,0 L6,2 L0,4 Z" fill="#475569"/>';
-        svg += '</marker></defs>';
-
-        // Edges
-        for (var ei = 0; ei < edges.length; ei++) {
-            var fromPos = nodePos[edges[ei].from];
-            var toPos = nodePos[edges[ei].to];
-            if (!fromPos || !toPos) continue;
-
-            // Edge goes from prereq (lower layer = lower row = higher y) UP to dependent (higher layer = higher row = lower y)
-            var x1 = fromPos.cx, y1 = fromPos.y;        // top of prereq node
-            var x2 = toPos.cx, y2 = toPos.y + NODE_H;   // bottom of dependent node
-
-            var cp = V_GAP * 0.45;
-            var d = 'M' + x1 + ',' + y1 + ' C' + x1 + ',' + (y1 - cp) + ' ' + x2 + ',' + (y2 + cp) + ' ' + x2 + ',' + y2;
-
-            var prereqStars = stars[edges[ei].from] || 0;
-            var edgeColor = prereqStars >= 1 ? 'rgba(34,197,94,0.35)' : 'rgba(239,68,68,0.25)';
-
-            svg += '<path class="st-dep-edge" d="' + d + '" stroke="' + edgeColor + '" marker-end="url(#dep-arrow)"/>';
-        }
-
-        // Nodes
-        for (var ni = 0; ni < nodes.length; ni++) {
-            var node = nodes[ni];
-            var pos = nodePos[node.id];
-            if (!pos) continue;
-            var cs = getCardDisplayState(node.id);
-            var lc = layerColors[node.layer] || layerColors[0];
-            var nodeStars = cs ? cs.starCount : (stars[node.id] || 0);
-            var sColor = cs ? cs.strokeColor : (lc.text + '60');
-            var sWidth = cs ? cs.strokeWidth : 1;
-            var hasGen = cs ? cs.hasGenerator : false;
-            var hasDeps = cs ? cs.hasDeps : (node.needs && node.needs.length > 0);
-            var nodeBg = cs ? cs.bg : lc.bg;
-            var nodeText = cs ? cs.text : lc.text;
-
-            var nodeClass = 'st-dep-node' + (hasGen ? '' : ' st-dep-node-disabled');
-            svg += '<g class="' + nodeClass + '" data-skill="' + node.id + '">';
-            svg += '<rect x="' + pos.x + '" y="' + pos.y + '" width="' + NODE_W + '" height="' + NODE_H + '"';
-            svg += ' rx="8" fill="' + nodeBg + '" stroke="' + sColor + '" stroke-width="' + sWidth + '"/>';
-
-            // Skill ID badge
-            svg += '<text x="' + (pos.x + 7) + '" y="' + (pos.y + 12) + '" fill="' + nodeText + '" font-size="8.5" font-weight="700" opacity="0.5" font-family="DM Sans, sans-serif">' + node.id + '</text>';
-
-            // Info icon (top-right, shifted left if tree icon also present)
-            var infoX = pos.x + NODE_W - (hasDeps ? 30 : 16);
-            var infoY = pos.y + 3;
-            svg += '<g class="st-dep-info-btn" data-info-skill="' + node.id + '" transform="translate(' + infoX + ',' + infoY + ')">';
-            svg += '<rect x="-3" y="-3" width="18" height="18" fill="transparent"/>';
-            svg += '<g transform="scale(0.5)" fill="none" stroke="#e2e8f0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.8">';
-            svg += '<circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/>';
-            svg += '</g></g>';
-
-            // Tree icon (top-right, only if has dependencies)
-            if (hasDeps) {
-                var treeX = pos.x + NODE_W - 16;
-                var treeY = pos.y + 3;
-                svg += '<g class="st-dep-tree-btn" data-dep-skill="' + node.id + '" transform="translate(' + treeX + ',' + treeY + ')">';
-                svg += '<rect x="-3" y="-3" width="18" height="18" fill="transparent"/>';
-                svg += '<g transform="scale(0.5)" fill="none" stroke="#e2e8f0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.8">';
-                svg += '<path d="M12 3v6"/><path d="M12 9l-5 5"/><path d="M12 9l5 5"/>';
-                svg += '<circle cx="12" cy="3" r="1.5"/><circle cx="7" cy="14" r="1.5"/><circle cx="17" cy="14" r="1.5"/>';
-                svg += '<path d="M7 15.5v3"/><path d="M17 15.5v3"/>';
-                svg += '<circle cx="7" cy="20" r="1.5"/><circle cx="17" cy="20" r="1.5"/>';
-                svg += '</g></g>';
-            }
-
-            // Skill name (truncate if needed)
-            var displayName = node.name.length > 20 ? node.name.substring(0, 18) + '\u2026' : node.name;
-            svg += '<text x="' + pos.cx + '" y="' + (pos.y + 26) + '" fill="' + nodeText + '" font-size="9.5" font-weight="500" text-anchor="middle" font-family="DM Sans, sans-serif">' + esc(displayName) + '</text>';
-
-            // Stars
-            var starY = pos.y + NODE_H - 7;
-            var starStartX = pos.cx - 19;
-            for (var si = 0; si < 5; si++) {
-                var starColor = si < nodeStars ? '#fbbf24' : '#334155';
-                svg += '<text x="' + (starStartX + si * 9.5) + '" y="' + starY + '" fill="' + starColor + '" font-size="7.5" text-anchor="middle">\u2605</text>';
-            }
-
-            svg += '</g>';
-        }
-
-        svg += '</svg>';
-
-        // ── Build overlay HTML ────────────────────────────────
-        var rootNode = null;
-        for (var ri = 0; ri < nodes.length; ri++) {
-            if (nodes[ri].id === depSkillId) { rootNode = nodes[ri]; break; }
-        }
-        var title = rootNode ? rootNode.name : depSkillId;
-
-        var overlayHTML = '<div class="st-dep-overlay" id="st-dep-overlay">';
-        overlayHTML += '<div class="st-dep-container">';
-        overlayHTML += '<div class="st-dep-header">';
-        overlayHTML += '<button class="st-dep-close" id="st-dep-close">' + iconArrowLeft() + '</button>';
-        overlayHTML += '<h2>Afhankelijkheden: ' + esc(title) + '</h2>';
-        overlayHTML += '</div>';
-        overlayHTML += svg;
-
-        // Goal button
-        var isAlreadyGoal = engine.isGoal(depSkillId);
-        var isAlreadyAchieved = engine.isAchievedGoal(depSkillId);
-        var activeGoalCount = engine.getGoals().active.length;
-        if (isAlreadyAchieved) {
-            overlayHTML += '<button class="st-goal-set-btn" disabled>\uD83C\uDFC6 Doel al behaald</button>';
-        } else if (isAlreadyGoal) {
-            overlayHTML += '<button class="st-goal-set-btn" disabled>\uD83C\uDFAF Dit is al een doel</button>';
-        } else if (activeGoalCount >= 2) {
-            overlayHTML += '<button class="st-goal-set-btn" disabled>Maximaal 2 doelen \u2014 verwijder eerst een doel</button>';
-        } else {
-            overlayHTML += '<button class="st-goal-set-btn" id="st-set-goal">\uD83C\uDFAF Stel in als doel</button>';
-        }
-
-        overlayHTML += '<div class="st-dep-legend">';
-        overlayHTML += '<span>\u2500 <span style="color:#22c55e">groen</span> = beheerst</span>';
-        overlayHTML += '<span>\u2500 <span style="color:#ef4444">rood</span> = nog te oefenen</span>';
-        overlayHTML += '<span>Tap = oefenen \u00B7 ' + iconTree() + ' = afhankelijkheden</span>';
-        overlayHTML += '</div>';
-        overlayHTML += '</div></div>';
-
-        // Insert into DOM
-        document.body.insertAdjacentHTML('beforeend', overlayHTML);
-
-        // ── Wire overlay events ───────────────────────────────
-        document.getElementById('st-dep-close').addEventListener('click', goBackDependency);
-
-        document.getElementById('st-dep-overlay').addEventListener('click', function (e) {
-            if (e.target === this) closeDependencyOverlay();
-        });
-
-        // Node click → start exercise (same as main tree), but remember overlay state
-        var svgNodes = document.querySelectorAll('#st-dep-overlay .st-dep-node');
-        for (var sni = 0; sni < svgNodes.length; sni++) {
-            svgNodes[sni].addEventListener('click', function (e) {
-                e.stopPropagation();
-                var sid = this.getAttribute('data-skill');
-                if (!sid || !engine.hasGenerator(sid)) return;
-                // Save overlay state so we can return after exercise
-                savedDepState = { skillId: depSkillId, history: depHistory.slice() };
-                // Remove overlay DOM but keep saved state
-                depSkillId = null;
-                depSubgraph = null;
-                depHistory = [];
-                var el = document.getElementById('st-dep-overlay');
-                if (el) el.remove();
-                startSkill(sid);
-            });
-        }
-
-        // Tree icon click → drill deeper (same as main tree)
-        var treeBtns = document.querySelectorAll('#st-dep-overlay .st-dep-tree-btn');
-        for (var ti = 0; ti < treeBtns.length; ti++) {
-            treeBtns[ti].addEventListener('click', function (e) {
-                e.stopPropagation();
-                var sid = this.getAttribute('data-dep-skill');
-                if (!sid) return;
-                openDependencyOverlay(sid);
-            });
-        }
-
-        // Info icon click → show info popup
-        var depInfoBtns = document.querySelectorAll('#st-dep-overlay .st-dep-info-btn');
-        for (var di = 0; di < depInfoBtns.length; di++) {
-            depInfoBtns[di].addEventListener('click', function (e) {
-                e.stopPropagation();
-                var sid = this.getAttribute('data-info-skill');
-                if (!sid) return;
-                openInfoPopup(sid);
-            });
-        }
-
-        // Wire goal button
-        var goalBtn = document.getElementById('st-set-goal');
-        if (goalBtn) {
-            goalBtn.addEventListener('click', function () {
-                engine.setGoal(depSkillId);
-                closeDependencyOverlay();
-                render();
-            });
-        }
-
-        // Escape key
-        var escHandler = function (e) {
-            if (e.key === 'Escape') {
-                goBackDependency();
-                if (!depSkillId) document.removeEventListener('keydown', escHandler);
-            }
-        };
-        document.addEventListener('keydown', escHandler);
-    }
-
-    function getParentAvgX(nodeId, edges, nodePos) {
-        var sum = 0, count = 0;
-        for (var i = 0; i < edges.length; i++) {
-            if (edges[i].from === nodeId && nodePos[edges[i].to]) {
-                sum += nodePos[edges[i].to].cx || 0;
-                count++;
-            }
-        }
-        return count > 0 ? sum / count : 0;
-    }
-
-    // ── Info popup ─────────────────────────────────────────────
-
+    /* ── 11. Info popup ───────────────────────────────────── */
     function openInfoPopup(skillId) {
-        closeInfoPopup();
-        var desc = engine.getSkillDescription(skillId);
-        var preview = engine.generatePreview(skillId);
-        var cs = getCardDisplayState(skillId);
-        if (!cs) return;
-
-        var html = '<div class="st-info-overlay" id="st-info-overlay">';
-        html += '<div class="st-info-container">';
-        html += '<div class="st-info-header" style="color:' + cs.text + '">';
-        html += '<span class="st-info-skill-id">' + esc(cs.id) + '</span>';
-        html += '<span>' + esc(cs.name) + '</span>';
-        html += '<button class="st-info-close" id="st-info-close">\u2715</button>';
-        html += '</div>';
-
-        if (desc) {
-            html += '<p class="st-info-desc">' + esc(desc) + '</p>';
-        }
-
-        if (preview) {
-            html += '<div class="st-info-preview">';
-            html += '<div class="st-info-preview-label">Voorbeeldvraag</div>';
-            html += '<div class="st-info-preview-context">' + esc(preview.context) + '</div>';
-            html += '<div class="st-info-preview-q">' + esc(preview.question) + '</div>';
-            html += '</div>';
-        }
-
-        if (cs.starCount > 0) {
-            html += '<div class="st-info-stars">' + starsHTML(cs.starCount) + '</div>';
-        }
-
-        html += '</div></div>';
-
-        document.body.insertAdjacentHTML('beforeend', html);
-
-        document.getElementById('st-info-close').addEventListener('click', closeInfoPopup);
-        document.getElementById('st-info-overlay').addEventListener('click', function (e) {
-            if (e.target === this) closeInfoPopup();
-        });
-        document.addEventListener('keydown', infoEscHandler);
+        var skill = findSkill(skillId);
+        if (!skill) return;
+        els.infoContainer.setAttribute('data-layer', String(skill.layer));
+        var desc = engine.getSkillDescription(skillId) || '';
+        var prev = engine.generatePreview(skillId);
+        var sc = engine.getStars()[skillId] || 0;
+        els.infoHeader.innerHTML = '<span class="st-info-skill-id">' + esc(skillId) + '</span>'
+            + '<span>' + esc(skill.name) + '</span>'
+            + '<button class="st-info-close" type="button" data-info-close="1" aria-label="Sluiten">\u00D7</button>';
+        els.infoDesc.innerHTML = fmt(desc);
+        if (prev) {
+            els.infoPreview.innerHTML = '<div class="st-info-preview-label">Voorbeeldvraag</div>'
+                + '<div class="st-info-preview-context">' + fmt(prev.context || '') + '</div>'
+                + '<div class="st-info-preview-q">' + fmt(prev.question || '') + '</div>';
+        } else els.infoPreview.innerHTML = '<div class="st-info-preview-label">Geen voorbeeld beschikbaar</div>';
+        els.infoStars.innerHTML = stars(sc, STAR_DISPLAY_COUNT);
+        els.infoOverlay.hidden = false;
     }
-
-    function closeInfoPopup() {
-        var el = document.getElementById('st-info-overlay');
-        if (el) el.remove();
-        document.removeEventListener('keydown', infoEscHandler);
+    function closeInfoPopup() { els.infoOverlay.hidden = true; }
+    /* ── 12. Deps view ────────────────────────────────────── */
+    function openDepsView(skillId, replace) {
+        if (!replace && uiState.deps.activeSkillId && uiState.deps.activeSkillId !== skillId) {
+            uiState.deps.history.push(uiState.deps.activeSkillId);
+        }
+        uiState.deps.activeSkillId = skillId;
+        renderDepsView(skillId);
+        showView('deps');
     }
-
-    function infoEscHandler(e) {
-        if (e.key === 'Escape') closeInfoPopup();
+    function drillDeeper(skillId) {
+        if (uiState.deps.activeSkillId) uiState.deps.history.push(uiState.deps.activeSkillId);
+        uiState.deps.activeSkillId = skillId;
+        renderDepsView(skillId);
     }
-
-    // ── Explanation overlay ───────────────────────────────────
-
-    function openExplanationOverlay(skillId) {
-        closeExplanationOverlay();
+    function popDepsHistory() {
+        if (uiState.deps.history.length > 0) {
+            uiState.deps.activeSkillId = uiState.deps.history.pop();
+            renderDepsView(uiState.deps.activeSkillId);
+        } else {
+            uiState.deps.activeSkillId = null;
+            uiState.deps.history = [];
+            showView('tree');
+            renderTree();
+        }
+    }
+    function renderDepsView(skillId) {
+        var sg = engine.getDependencySubgraph(skillId);
+        if (!sg) return;
+        var sk = findSkill(skillId), name = sk ? sk.name : skillId;
+        if (els.depsTitle) els.depsTitle.textContent = 'Afhankelijkheden: ' + name;
+        els.depsGraphSlot.innerHTML = buildDepsSvg(sg);
+        var isGoal = engine.isGoal(skillId), isAch = engine.isAchievedGoal(skillId);
+        var goals = engine.getGoals();
+        var full = goals.active.length >= 2 && !isGoal;
+        var dis = isGoal || isAch || full;
+        var lbl = isAch ? 'Doel al behaald' : isGoal ? 'Al ingesteld als doel' : full ? 'Max 2 doelen actief' : 'Stel in als doel';
+        els.depsGoalBtnSlot.innerHTML = '<button class="st-goal-set-btn" id="st-set-goal" type="button"' + (dis ? ' disabled' : '') + '><i class="fa-solid fa-bullseye"></i> ' + esc(lbl) + '</button>';
+    }
+    function buildDepsSvg(sg) {
+        var NW = 120, NH = 48, HG = 14, VG = 42, PAD = 14;
+        var st = engine.getStars();
+        var byLayer = {};
+        for (var i = 0; i < sg.nodes.length; i++) {
+            var n = sg.nodes[i];
+            if (!byLayer[n.layer]) byLayer[n.layer] = [];
+            byLayer[n.layer].push(n);
+        }
+        var keys = [];
+        for (var lk in byLayer) if (byLayer.hasOwnProperty(lk)) keys.push(parseInt(lk, 10));
+        keys.sort(function (a, b) { return a - b; });
+        if (sg.nodes.length > 3) {
+            var aOut = {}, aIn = {};
+            for (var ei = 0; ei < sg.edges.length; ei++) {
+                var e = sg.edges[ei];
+                (aOut[e.from] = aOut[e.from] || []).push(e.to);
+                (aIn[e.to] = aIn[e.to] || []).push(e.from);
+            }
+            for (var pass = 0; pass < 3; pass++) {
+                for (var li = 1; li < keys.length; li++) {
+                    var prev = byLayer[keys[li - 1]], prevIdx = {};
+                    for (var pi = 0; pi < prev.length; pi++) prevIdx[prev[pi].id] = pi;
+                    byLayer[keys[li]].sort(function (a, b) { return bary(a, prevIdx, aIn) - bary(b, prevIdx, aIn); });
+                }
+                for (var li2 = keys.length - 2; li2 >= 0; li2--) {
+                    var nxt = byLayer[keys[li2 + 1]], nxtIdx = {};
+                    for (var ni = 0; ni < nxt.length; ni++) nxtIdx[nxt[ni].id] = ni;
+                    byLayer[keys[li2]].sort(function (a, b) { return bary(a, nxtIdx, aOut) - bary(b, nxtIdx, aOut); });
+                }
+            }
+        }
+        var positions = {}, maxW = 0;
+        for (var ri = 0; ri < keys.length; ri++) {
+            var row = byLayer[keys[ri]];
+            var w = row.length * NW + (row.length - 1) * HG;
+            if (w > maxW) maxW = w;
+        }
+        var width = maxW + PAD * 2;
+        for (var ri2 = 0; ri2 < keys.length; ri2++) {
+            var row2 = byLayer[keys[ri2]];
+            var rowW = row2.length * NW + (row2.length - 1) * HG;
+            var sx = PAD + (maxW - rowW) / 2;
+            for (var ci = 0; ci < row2.length; ci++) {
+                positions[row2[ci].id] = { x: sx + ci * (NW + HG), y: PAD + ri2 * (NH + VG), layer: row2[ci].layer };
+            }
+        }
+        var height = PAD * 2 + keys.length * NH + (keys.length - 1) * VG;
+        var edgesSvg = '';
+        for (var eei = 0; eei < sg.edges.length; eei++) {
+            var ed = sg.edges[eei], fp = positions[ed.from], tp = positions[ed.to];
+            if (!fp || !tp) continue;
+            var x1 = fp.x + NW / 2, y1 = fp.y + NH, x2 = tp.x + NW / 2, y2 = tp.y, mid = (y1 + y2) / 2;
+            var color = (st[ed.from] || 0) >= 1 ? '#2f7d4a' : '#b23b3b';
+            edgesSvg += '<path class="st-dep-edge" d="M ' + x1 + ' ' + y1 + ' C ' + x1 + ' ' + mid + ' ' + x2 + ' ' + mid + ' ' + x2 + ' ' + y2 + '" stroke="' + color + '"/>';
+        }
+        var lc = ['#17A2B8', '#d08732', '#2f7d4a', '#7b4fae', '#c2266b', '#c2410c'];
+        var nodesSvg = '';
+        for (var ni2 = 0; ni2 < sg.nodes.length; ni2++) {
+            var nd = sg.nodes[ni2], pos = positions[nd.id];
+            if (!pos) continue;
+            var sc = st[nd.id] || 0;
+            var dis = (!engine.hasGenerator(nd.id) || !engine.prereqsDone(nd.id)) && sc === 0;
+            var gcls = 'st-dep-node' + (dis ? ' st-dep-node-disabled' : '');
+            var fill = lc[nd.layer] || '#444';
+            var nm = nd.name.length > 16 ? nd.name.substring(0, 14) + '\u2026' : nd.name;
+            var strokeW = nd.id === sg.root ? 2 : 1;
+            var strokeC = nd.id === sg.root ? '#c58f2c' : 'rgba(0,0,0,0.25)';
+            var starStr = '';
+            for (var ss = 0; ss < STAR_DISPLAY_COUNT; ss++) starStr += ss < sc ? '\u2605' : '\u2606';
+            nodesSvg += '<g class="' + gcls + '" data-skill="' + esc(nd.id) + '" transform="translate(' + pos.x + ',' + pos.y + ')" data-layer="' + nd.layer + '">'
+                + '<rect width="' + NW + '" height="' + NH + '" rx="8" ry="8" fill="' + fill + '" stroke="' + strokeC + '" stroke-width="' + strokeW + '"/>'
+                + '<text x="8" y="14" font-family="JetBrains Mono, monospace" font-size="9" font-weight="700" fill="#fff" opacity="0.85">' + esc(nd.id) + '</text>'
+                + '<text x="8" y="30" font-family="Inter, sans-serif" font-size="11" fill="#fff">' + esc(nm) + '</text>'
+                + '<text x="8" y="44" font-family="Inter, sans-serif" font-size="9" fill="#ffe18a">' + starStr + '</text>'
+                + '<g class="st-dep-info-btn" data-dep-info="' + esc(nd.id) + '" transform="translate(' + (NW - 34) + ',6)"><rect width="14" height="14" rx="3" fill="rgba(0,0,0,0.25)"/><text x="7" y="11" font-size="10" font-family="sans-serif" text-anchor="middle" fill="#fff">i</text></g>'
+                + '<g class="st-dep-tree-btn" data-dep-drill="' + esc(nd.id) + '" transform="translate(' + (NW - 18) + ',6)"><rect width="14" height="14" rx="3" fill="rgba(0,0,0,0.25)"/><text x="7" y="11" font-size="10" font-family="sans-serif" text-anchor="middle" fill="#fff">\u22A5</text></g>'
+                + '</g>';
+        }
+        return '<svg class="st-dep-graph" viewBox="0 0 ' + width + ' ' + height + '" xmlns="http://www.w3.org/2000/svg">' + edgesSvg + nodesSvg + '</svg>';
+    }
+    function bary(node, idx, adj) {
+        var list = adj[node.id];
+        if (!list || !list.length) return 0;
+        var sum = 0, cnt = 0;
+        for (var i = 0; i < list.length; i++) if (idx.hasOwnProperty(list[i])) { sum += idx[list[i]]; cnt++; }
+        return cnt > 0 ? sum / cnt : 0;
+    }
+    /* ── 13. Expl view ────────────────────────────────────── */
+    function openExplView(skillId, origin) {
         var expl = engine.getExplanation(skillId);
         if (!expl) return;
-        var cs = getCardDisplayState(skillId);
-        var skillName = cs ? cs.name : skillId;
-
-        var html = '<div class="st-expl-overlay" id="st-expl-overlay">';
-        html += '<div class="st-expl-container">';
-
-        // Header
-        html += '<div class="st-expl-header">';
-        html += '<button class="st-expl-back" id="st-expl-close">' + iconArrowLeft() + '</button>';
-        html += '<h2>' + esc(expl.title || skillName) + '</h2>';
-        html += '</div>';
-
-        // Sections
-        for (var i = 0; i < expl.sections.length; i++) {
-            var sec = expl.sections[i];
-            switch (sec.type) {
-                case 'uitleg':
-                    html += '<div class="st-expl-section st-expl-uitleg">';
-                    html += '<div class="st-expl-section-label">Uitleg</div>';
-                    html += '<div class="st-expl-text">' + formatExplText(sec.content) + '</div>';
-                    html += '</div>';
-                    break;
-                case 'formule':
-                    html += '<div class="st-expl-section st-expl-formule">';
-                    html += '<div class="st-expl-section-label">Formule</div>';
-                    html += '<div class="st-expl-formula-box">' + formatExplText(sec.content) + '</div>';
-                    html += '</div>';
-                    break;
-                case 'voorbeeld':
-                    html += '<div class="st-expl-section st-expl-voorbeeld">';
-                    html += '<div class="st-expl-section-label">Voorbeeld' + (sec.title ? ': ' + esc(sec.title) : '') + '</div>';
-                    html += '<div class="st-expl-text">' + formatExplText(sec.content) + '</div>';
-                    html += '</div>';
-                    break;
-                case 'tip':
-                    html += '<div class="st-expl-section st-expl-tip">';
-                    html += '<div class="st-expl-section-label">\uD83D\uDCA1 Tip</div>';
-                    html += '<div class="st-expl-text">' + formatExplText(sec.content) + '</div>';
-                    html += '</div>';
-                    break;
-                case 'valkuil':
-                    html += '<div class="st-expl-section st-expl-valkuil">';
-                    html += '<div class="st-expl-section-label">\u26A0 Valkuil</div>';
-                    html += '<div class="st-expl-text">' + formatExplText(sec.content) + '</div>';
-                    html += '</div>';
-                    break;
-                case 'check':
-                    html += '<div class="st-expl-section st-expl-check">';
-                    html += '<div class="st-expl-section-label">\u2714 Zelfcheck</div>';
-                    html += '<div class="st-expl-text">' + formatExplText(sec.content) + '</div>';
-                    html += '</div>';
-                    break;
-            }
+        uiState.explOrigin = origin || 'tree';
+        if (els.explTitle) els.explTitle.textContent = expl.title || skillId;
+        if (els.explBody) { els.explBody.innerHTML = renderExplSections(expl.sections || []); els.explBody.scrollTop = 0; }
+        showView('expl');
+    }
+    function renderExplSections(sections) {
+        var lbl = { uitleg:'Uitleg', formule:'Formule', voorbeeld:'Voorbeeld', tip:'\uD83D\uDCA1 Tip', valkuil:'\u26A0 Valkuil', check:'\u2714 Zelfcheck' };
+        var h = '';
+        for (var i = 0; i < sections.length; i++) {
+            var s = sections[i], t = s.type || 'uitleg';
+            var label = lbl[t] || t;
+            if (t === 'voorbeeld' && s.title) label += ': ' + s.title;
+            h += '<div class="st-expl-section st-expl-' + t + '"><div class="st-expl-section-label">' + esc(label) + '</div>';
+            h += t === 'formule'
+                ? '<div class="st-expl-formula-box">' + fmt(s.content || '') + '</div>'
+                : '<div class="st-expl-text">' + fmt(s.content || '') + '</div>';
+            h += '</div>';
         }
-
-        html += '<div class="st-expl-fade"></div>';
-        html += '</div></div>';
-
-        document.body.insertAdjacentHTML('beforeend', html);
-
-        // Scroll-fade: hide gradient when scrolled to bottom
-        var exCont = document.querySelector('.st-expl-container');
-        function checkExplScroll() {
-            if (exCont.scrollTop + exCont.clientHeight >= exCont.scrollHeight - 10) {
-                exCont.classList.add('st-scrolled-bottom');
-            } else {
-                exCont.classList.remove('st-scrolled-bottom');
-            }
-        }
-        if (exCont.scrollHeight <= exCont.clientHeight) {
-            exCont.classList.add('st-scrolled-bottom');
-        }
-        exCont.addEventListener('scroll', checkExplScroll);
-
-        document.getElementById('st-expl-close').addEventListener('click', closeExplanationOverlay);
-        document.getElementById('st-expl-overlay').addEventListener('click', function (e) {
-            if (e.target === this) closeExplanationOverlay();
+        return h;
+    }
+    function closeExplView() {
+        if (uiState.explOrigin === 'exercise' && engine.getExerciseState()) showView('exercise');
+        else if (uiState.deps.activeSkillId) showView('deps');
+        else { showView('tree'); renderTree(); }
+    }
+    /* ── 14. Persistent listeners ─────────────────────────── */
+    function wireListeners() {
+        if (els.themeToggle) els.themeToggle.addEventListener('click', toggleTheme);
+        if (els.viewToggle) els.viewToggle.addEventListener('click', function () {
+            engine.setViewMode(engine.getViewMode() === 'module' ? 'paragraph' : 'module');
+            renderTree();
         });
-        document.addEventListener('keydown', explEscHandler);
+        if (els.resetBtn) els.resetBtn.addEventListener('click', function () {
+            if (confirm('Weet je zeker dat je alle sterren wilt resetten?')) { engine.resetStars(); renderTree(); }
+        });
+        if (els.exBack) els.exBack.addEventListener('click', function () {
+            clearAutoAdvance();
+            resetStepUiState();
+            engine.abortExercise();
+            if (!restoreDepsReturnState()) { showView('tree'); renderTree(); }
+        });
+        if (els.depsBack) els.depsBack.addEventListener('click', popDepsHistory);
+        if (els.explBack) els.explBack.addEventListener('click', closeExplView);
+        if (els.infoOverlay) els.infoOverlay.addEventListener('click', function (e) {
+            if (e.target === els.infoOverlay) { closeInfoPopup(); return; }
+            var n = e.target;
+            while (n && n !== els.infoOverlay) {
+                if (n.getAttribute && n.getAttribute('data-info-close')) { closeInfoPopup(); return; }
+                n = n.parentNode;
+            }
+        });
+        document.addEventListener('keydown', function (e) {
+            if (e.key !== 'Escape' && e.keyCode !== 27) return;
+            if (!els.infoOverlay.hidden) { closeInfoPopup(); return; }
+            if (!els.viewExpl.hidden) { closeExplView(); return; }
+            if (!els.viewDeps.hidden) { popDepsHistory(); return; }
+        });
+        if (els.exStepSlot) els.exStepSlot.addEventListener('click', function (e) {
+            var state = engine.getExerciseState();
+            if (!state) return;
+            var step = state.currentStep;
+            var mode = step.mode || 'numeric';
+            var t = e.target;
+            while (t && t !== els.exStepSlot) {
+                if (t.getAttribute) {
+                    var act = t.getAttribute('data-action');
+                    if (act === 'hint') { showHint(); return; }
+                    if (act === 'open-expl') { openExplView(state.skillId, 'exercise'); return; }
+                    if (act === 'minus') { handleMinus(); return; }
+                    if (act === 'check-numeric') { handleCheckNumeric(); return; }
+                    if (act === 'reset-order') { resetStepUiState(); renderStep(); return; }
+                    var mc = t.getAttribute('data-mc');
+                    if (mc !== null && mode === 'mc') { handleMC(parseInt(mc, 10)); return; }
+                    var er = t.getAttribute('data-err');
+                    if (er !== null && mode === 'error') { handleError(parseInt(er, 10)); return; }
+                    var ob = t.getAttribute('data-order-block');
+                    if (ob !== null && mode === 'order') { handleOrderBlock(parseInt(ob, 10), step); return; }
+                }
+                t = t.parentNode;
+            }
+        });
+        if (els.exStepSlot) els.exStepSlot.addEventListener('keydown', function (e) {
+            if (!e.target || e.target.id !== 'st-numeric-input') return;
+            if (e.key === 'Enter' || e.keyCode === 13) {
+                e.preventDefault();
+                handleCheckNumeric();
+            }
+        });
+        if (els.exResultSlot) els.exResultSlot.addEventListener('click', function (e) {
+            var t = e.target;
+            while (t && t !== els.exResultSlot) {
+                if (t.getAttribute) {
+                    var act = t.getAttribute('data-result-action');
+                    if (act) {
+                        var skillId = els.exResultSlot.getAttribute('data-result-skill');
+                        if (act === 'back') onResultBack();
+                        else if (act === 'retry' && skillId) mountExercise(skillId);
+                        else if (act === 'next') {
+                            var nx = t.getAttribute('data-next');
+                            if (nx) mountExercise(nx);
+                        }
+                        return;
+                    }
+                }
+                t = t.parentNode;
+            }
+        });
+        els.viewTree.addEventListener('click', function (e) {
+            var t = e.target;
+            while (t && t !== els.viewTree) {
+                if (t.getAttribute) {
+                    var info = t.getAttribute('data-info');
+                    if (info) { e.preventDefault(); e.stopPropagation(); openInfoPopup(info); return; }
+                    var dep = t.getAttribute('data-dep');
+                    if (dep) { e.preventDefault(); e.stopPropagation(); openDepsView(dep, true); return; }
+                    var gs = t.getAttribute('data-goal-step');
+                    if (gs) { mountExercise(gs); return; }
+                    var grm = t.getAttribute('data-goal-remove');
+                    if (grm) { engine.removeGoal(grm); renderTree(); return; }
+                    if (t.getAttribute('data-skill') && t.classList && t.classList.contains('st-skill-card')) {
+                        if (t.disabled) return;
+                        mountExercise(t.getAttribute('data-skill'));
+                        return;
+                    }
+                }
+                t = t.parentNode;
+            }
+        });
+        els.viewDeps.addEventListener('click', function (e) {
+            var t = e.target;
+            while (t && t !== els.viewDeps) {
+                if (t.getAttribute) {
+                    if (t.id === 'st-set-goal' && !t.disabled) {
+                        engine.setGoal(uiState.deps.activeSkillId); renderDepsView(uiState.deps.activeSkillId); return;
+                    }
+                    var drill = t.getAttribute('data-dep-drill');
+                    if (drill) { drillDeeper(drill); return; }
+                    var di = t.getAttribute('data-dep-info');
+                    if (di) { openInfoPopup(di); return; }
+                    if (t.tagName === 'g' || (t.parentNode && t.parentNode.tagName === 'g')) {
+                        var g = t.tagName === 'g' ? t : t.parentNode;
+                        var sa = g.getAttribute && g.getAttribute('data-skill');
+                        var gc = g.getAttribute && g.getAttribute('class');
+                        if (sa && gc && gc.indexOf('st-dep-node-disabled') < 0) {
+                            rememberDepsReturnState();
+                            mountExercise(sa);
+                            return;
+                        }
+                    }
+                }
+                t = t.parentNode;
+            }
+        });
     }
-
-    function closeExplanationOverlay() {
-        var el = document.getElementById('st-expl-overlay');
-        if (el) el.remove();
-        document.removeEventListener('keydown', explEscHandler);
-    }
-
-    function explEscHandler(e) {
-        if (e.key === 'Escape') closeExplanationOverlay();
-    }
-
-    function formatExplText(text) {
-        // Convert newlines to <br> and preserve plain text
-        return esc(text).replace(/\n/g, '<br>');
-    }
-
-    // ── Focus helper ──────────────────────────────────────────
-    function focusInput() {
-        setTimeout(function () {
-            var inp = document.getElementById('st-input');
-            if (inp) inp.focus();
-        }, 50);
-    }
-
-    // ── Initial render ────────────────────────────────────────
-    render();
+    /* ── 15. Init ─────────────────────────────────────────── */
+    applyStoredTheme();
+    wireListeners();
+    showView('tree');
+    renderTree();
 })();
