@@ -99,14 +99,18 @@
         "Distinguish between index point change and percentage change",
         "Apply these skills to economic data (prices, wages, production)"
       ],
-      "required_skills": [],
-      "prior_knowledge_assumed": [],
-      "new_skills_introduced": [],
-      "missing_units_flagged": [
-        "Compute percentage change with (new − old) / old × 100 (A-domain candidate, foundation for elasticity)",
-        "Compute and interpret price index relative to a base year (A-domain candidate)",
-        "Distinguish index-point change from percentage change (concept-level + calculation; classic exam pitfall)"
+      "required_skills": [
+        "A38",
+        "A39",
+        "D31"
       ],
+      "prior_knowledge_assumed": [],
+      "new_skills_introduced": [
+        "A38",
+        "A39",
+        "D31"
+      ],
+      "missing_units_flagged": [],
       "exam_codes": [],
       "difficulty_notes": "Students are weaker at percentage calculations than teachers expect. The index-point vs percentage trap (exercise d) is a classic exam mistake. This paragraph lays the foundation for ALL later calculations (elasticities, inflation, real/nominal). Worth investing time. One lesson is tight — assign exercise (d) type problems as homework.",
       "source_ref": "knowledge/course_blueprint_v4.md §1.1.2"
@@ -141,13 +145,16 @@
         "Interpolate between data points",
         "Critically interpret claims using data"
       ],
-      "required_skills": [],
-      "prior_knowledge_assumed": [],
+      "required_skills": [
+        "A38"
+      ],
+      "prior_knowledge_assumed": [
+        "A38"
+      ],
       "new_skills_introduced": [],
       "missing_units_flagged": [
         "Draw a (P,Q) graph from a table with the economist's axis convention (P vertical, Q horizontal) (A-domain candidate)",
-        "Read values from a (P,Q) graph; interpolate between data points (A-domain candidate)",
-        "Critically interpret a percentage claim against tabular data (combines P-change skill with reading)"
+        "Read values from a (P,Q) graph; interpolate between data points (A-domain candidate)"
       ],
       "exam_codes": [],
       "difficulty_notes": "Skill-based, hands-on. Students enjoy the concreteness. The main pitfall is putting axes wrong (price on horizontal instead of vertical). One lesson comfortable.",
@@ -235,16 +242,19 @@
         "Classify goods as substitutes or complements based on context"
       ],
       "required_skills": [
-        "D27"
+        "A42",
+        "D27",
+        "D32",
+        "D33"
       ],
       "prior_knowledge_assumed": [],
       "new_skills_introduced": [
-        "D27"
+        "A42",
+        "D27",
+        "D32",
+        "D33"
       ],
       "missing_units_flagged": [
-        "Distinguish movement-along vs shift-of the demand curve (concept-level; the single most common micro error — must be its own unit)",
-        "Name and exemplify the standard demand-shift factors (inkomen, voorkeuren, prijs substituten/complementen, verwachtingen) (concept-level)",
-        "Show a demand-curve shift graphically with a labelled before/after (grafisch skill, A-domain candidate)",
         "Classify a normal vs inferior good response to an income change (concept-level, prerequisite for D11 inkomenselasticiteit)"
       ],
       "exam_codes": [
@@ -340,16 +350,19 @@
         "Show supply shifts graphically"
       ],
       "required_skills": [
-        "D13"
+        "D13",
+        "D32",
+        "D33"
       ],
-      "prior_knowledge_assumed": [],
+      "prior_knowledge_assumed": [
+        "D32",
+        "D33"
+      ],
       "new_skills_introduced": [
         "D13"
       ],
       "missing_units_flagged": [
-        "Draw an upward-sloping supply curve with correct economist axes (A-domain candidate)",
-        "Distinguish movement-along vs shift-of the supply curve (concept-level; parallel to the demand-side gap flagged in §1.2.2)",
-        "Name and exemplify supply-shift factors (inputprijzen, technologie, aantal aanbieders, verwachtingen, overheidsbeleid) (concept-level)"
+        "Draw an upward-sloping supply curve with correct economist axes (A-domain candidate)"
       ],
       "exam_codes": [
         "D1.12",
@@ -468,7 +481,8 @@
         "A08",
         "A21",
         "A22",
-        "A29"
+        "A29",
+        "A40"
       ],
       "prior_knowledge_assumed": [
         "A08"
@@ -477,11 +491,11 @@
         "A07",
         "A21",
         "A22",
-        "A29"
+        "A29",
+        "A40"
       ],
       "missing_units_flagged": [
-        "Observe GO = P at a constant price (concept-level, a single-step recognition)",
-        "Shade winst/verlies zones between TK and TO curves (grafisch skill, A-domain candidate)"
+        "Observe GO = P at a constant price (concept-level, a single-step recognition)"
       ],
       "exam_codes": [
         "A2.1",
@@ -593,18 +607,19 @@
         "A02",
         "A04",
         "A06",
+        "A42",
         "D13"
       ],
       "prior_knowledge_assumed": [
         "A02",
         "A04",
         "A06",
+        "A42",
         "D13"
       ],
       "new_skills_introduced": [],
       "missing_units_flagged": [
-        "Reason about simultaneous supply+demand shifts: determinate Q-direction but ambiguous P-direction (concept-level, diagnostic checkpoint)",
-        "Graphical before/after comparison with shift arrows (grafisch skill, A-domain candidate)"
+        "Reason about simultaneous supply+demand shifts: determinate Q-direction but ambiguous P-direction (concept-level, diagnostic checkpoint)"
       ],
       "exam_codes": [
         "A2.10",
@@ -985,7 +1000,8 @@
         "A03",
         "A10",
         "A19",
-        "A30"
+        "A30",
+        "A40"
       ],
       "prior_knowledge_assumed": [
         "A03",
@@ -993,11 +1009,11 @@
       ],
       "new_skills_introduced": [
         "A19",
-        "A30"
+        "A30",
+        "A40"
       ],
       "missing_units_flagged": [
-        "Verbal: interpret CS as aggregate willingness-to-pay minus paid-price (concept-level, welfare-framing)",
-        "Identify the correct triangle for CS on a P–Q diagram (grafisch skill, A-domain candidate; common student trap is shading the wrong area)"
+        "Verbal: interpret CS as aggregate willingness-to-pay minus paid-price (concept-level, welfare-framing)"
       ],
       "exam_codes": [
         "A2.16",
@@ -1180,6 +1196,7 @@
       "required_skills": [
         "A06",
         "A23",
+        "A41",
         "D05",
         "D07"
       ],
@@ -1188,11 +1205,11 @@
       ],
       "new_skills_introduced": [
         "A23",
+        "A41",
         "D05",
         "D07"
       ],
       "missing_units_flagged": [
-        "Derive the after-tax supply function by adding the tax per unit to the inverse-supply (A-domain candidate; the 'shift-up-by-tax' mechanics)",
         "Distinguish consumer price Pc vs producer price Pp and the tax wedge = Pc − Pp (concept-level + grafisch)"
       ],
       "exam_codes": [
@@ -1252,6 +1269,7 @@
         "A19",
         "A23",
         "A32",
+        "A40",
         "D03",
         "D07"
       ],
@@ -1259,6 +1277,7 @@
         "A10",
         "A19",
         "A23",
+        "A40",
         "D07"
       ],
       "new_skills_introduced": [
@@ -1267,8 +1286,7 @@
       ],
       "missing_units_flagged": [
         "Compute afwentelingspercentage = (Pc − P*) / tax × 100 and interpret it (A-domain candidate; the consumer-burden metric)",
-        "Apply the surplus-accounting identity: old TS = new CS + new PS + tax revenue + DWL (concept-level, completeness check)",
-        "Compute tax revenue rectangle (tax × Qt) graphically and numerically (grafisch + reken skill, overlaps A32 but separable)"
+        "Apply the surplus-accounting identity: old TS = new CS + new PS + tax revenue + DWL (concept-level, completeness check)"
       ],
       "exam_codes": [
         "A2.16",
@@ -1330,13 +1348,15 @@
         "A10",
         "A19",
         "A27",
+        "A41",
         "D19",
         "D29"
       ],
       "prior_knowledge_assumed": [
         "A06",
         "A10",
-        "A19"
+        "A19",
+        "A41"
       ],
       "new_skills_introduced": [
         "A27",
@@ -1344,7 +1364,6 @@
         "D29"
       ],
       "missing_units_flagged": [
-        "Derive the after-subsidy supply function by subtracting the subsidy per unit from the inverse-supply (A-domain candidate; the mirror mechanic of §2.3.1)",
         "Explain that subsidies cause DWL via overproduction beyond the Pareto-efficient quantity (concept-level, counterintuitive to students)",
         "Compute government subsidy expenditure = subsidy × Q_new (reken skill, A-domain candidate)"
       ],
@@ -1405,7 +1424,8 @@
         "A10",
         "A19",
         "A26",
-        "A32"
+        "A32",
+        "D34"
       ],
       "prior_knowledge_assumed": [
         "A06",
@@ -1414,10 +1434,10 @@
       ],
       "new_skills_introduced": [
         "A26",
-        "A32"
+        "A32",
+        "D34"
       ],
       "missing_units_flagged": [
-        "Argue that a maximum price has no effect unless set below equilibrium (concept-level; the 'binding-constraint' condition)",
         "Structure a beoordeel-answer: who wins, who loses under a max price — renters-with-a-unit vs renters-without (concept-level + verbal skill)"
       ],
       "exam_codes": [
@@ -1473,19 +1493,20 @@
         "A10",
         "A19",
         "A25",
-        "A32"
+        "A32",
+        "D34"
       ],
       "prior_knowledge_assumed": [
         "A06",
         "A10",
-        "A19"
+        "A19",
+        "D34"
       ],
       "new_skills_introduced": [
         "A25",
         "A32"
       ],
       "missing_units_flagged": [
-        "Argue that a minimum price has no effect unless set above equilibrium (concept-level; binding-constraint, mirror of §2.4.1)",
         "Compute the cost to the government of buying up the aanbodoverschot = (Qs − Qd) × Pmin (reken skill, A-domain candidate)",
         "Evaluate distributional effect: who gains (producers), who pays (consumers + taxpayers) (concept-level + verbal)"
       ],
@@ -1958,6 +1979,7 @@
         "A20",
         "A21",
         "A35",
+        "A40",
         "D30"
       ],
       "prior_knowledge_assumed": [
@@ -1968,6 +1990,7 @@
         "A13",
         "A20",
         "A21",
+        "A40",
         "D30"
       ],
       "new_skills_introduced": [
@@ -1975,7 +1998,6 @@
       ],
       "missing_units_flagged": [
         "Execute the full 6-step monopoly procedure end-to-end (A35 is registered as 'Max. winst monopolist'; this procedure-execution skill is what it should canonically encode — verify A35's procedure field covers it)",
-        "Shade the monopolist's profit rectangle (P* − GTK(Q*)) × Q* on the MO/MK/demand graph (grafisch skill, A-domain candidate)",
         "Explain why charging above P* reduces profit — the demand constraint (concept-level, verbal)"
       ],
       "exam_codes": [
@@ -2033,7 +2055,8 @@
         "A19",
         "A30",
         "A32",
-        "A35"
+        "A35",
+        "A40"
       ],
       "prior_knowledge_assumed": [
         "A06",
@@ -2041,12 +2064,12 @@
         "A19",
         "A30",
         "A32",
-        "A35"
+        "A35",
+        "A40"
       ],
       "new_skills_introduced": [],
       "missing_units_flagged": [
         "Construct a competitive benchmark by imposing P = MK and computing P*, Q*, TS (concept-level + application; the §3.3.1 novelty is the comparison, not the components)",
-        "Compute the Harberger triangle = competitive TS − monopoly TS and identify it graphically between monopoly-Q and competitive-Q (grafisch + reken skill, A-domain candidate)",
         "Distinguish surplus transfer (CS→PS) from surplus destruction (DWL) verbally (concept-level, the 'where did the surplus go?' narrative)"
       ],
       "exam_codes": [
@@ -2232,7 +2255,9 @@
         "A06",
         "A10",
         "F07",
-        "F08"
+        "F08",
+        "F16",
+        "F17"
       ],
       "prior_knowledge_assumed": [
         "A06",
@@ -2240,11 +2265,11 @@
       ],
       "new_skills_introduced": [
         "F07",
-        "F08"
+        "F08",
+        "F16",
+        "F17"
       ],
       "missing_units_flagged": [
-        "Distinguish MPC vs MSC and identify MSC = MPC + external marginal cost (concept-level, foundation for §3.4.3 Pigouvian-tax mechanics)",
-        "Overproduction gap: compute Q_market − Q_social and interpret as 'units too many' (A-domain candidate; pairs with F07)",
         "Verbal market-failure framing: who bears the ignored cost, and why does the market price undercount it (concept-level)"
       ],
       "exam_codes": [
@@ -2297,20 +2322,22 @@
       "required_skills": [
         "A06",
         "A10",
-        "F11"
+        "F11",
+        "F16",
+        "F17",
+        "F18"
       ],
       "prior_knowledge_assumed": [
         "A06",
-        "A10"
+        "A10",
+        "F16",
+        "F17"
       ],
       "new_skills_introduced": [
-        "F11"
+        "F11",
+        "F18"
       ],
-      "missing_units_flagged": [
-        "Distinguish MPB vs MSB and identify MSB = MPB + external marginal benefit (concept-level, mirror of §3.4.1 on the demand side)",
-        "Underproduction gap: compute Q_social − Q_market and interpret as 'units too few' (A-domain candidate; mirror of the §3.4.1 unit)",
-        "Size a corrective subsidy to equal the per-unit external benefit (concept-level; directly reuses §2.3.3 subsidy mechanics)"
-      ],
+      "missing_units_flagged": [],
       "exam_codes": [
         "A2.10",
         "A2.16"
@@ -2362,11 +2389,13 @@
         "A23",
         "F05",
         "F06",
-        "F10"
+        "F10",
+        "F18"
       ],
       "prior_knowledge_assumed": [
         "A06",
-        "A23"
+        "A23",
+        "F18"
       ],
       "new_skills_introduced": [
         "F05",
@@ -2374,7 +2403,6 @@
         "F10"
       ],
       "missing_units_flagged": [
-        "Size a Pigouvian tax to equal the per-unit external cost and show that the post-tax market equilibrium coincides with the social optimum (concept-level + application; the §3.4.3 payoff)",
         "State the Coase theorem condition (low transaction costs, clear property rights) and argue when private negotiation suffices (concept-level, mastery_target understand)",
         "Evaluate the patent trade-off: innovation incentive vs monopoly welfare loss (concept-level + verbal; the §3.4.3↔§3.2 integration)",
         "Enumerate policy instruments for negative externalities with a real example each (concept-level, breadth)"
@@ -2932,11 +2960,13 @@
         "A04",
         "A10",
         "A34",
+        "A40",
         "H09"
       ],
       "prior_knowledge_assumed": [
         "A04",
-        "A10"
+        "A10",
+        "A40"
       ],
       "new_skills_introduced": [
         "A34",
@@ -2944,7 +2974,6 @@
       ],
       "missing_units_flagged": [
         "Compute imports = domestic Qd − domestic Qa at a given world price (A-domain candidate; the free-trade baseline calculation)",
-        "Identify BOTH DWL triangles under a tariff — production inefficiency AND consumption loss — as distinct regions (grafisch + concept; the §4.3.3 novelty vs the single-DWL of §2.3)",
         "Critically evaluate 'tariffs protect domestic jobs' using winners-vs-losers surplus accounting (concept-level + verbal; exam standpuntbepaling)"
       ],
       "exam_codes": [
@@ -2995,15 +3024,20 @@
         "Explain why real values correct for inflation"
       ],
       "required_skills": [
+        "A38",
+        "A39",
+        "D31",
         "I09"
       ],
-      "prior_knowledge_assumed": [],
+      "prior_knowledge_assumed": [
+        "A38",
+        "A39",
+        "D31"
+      ],
       "new_skills_introduced": [
         "I09"
       ],
       "missing_units_flagged": [
-        "Compute CPI from basket costs across two years (A-domain candidate; overlaps with the §1.1.2 index-number flag — promote to shared unit)",
-        "Distinguish index-point change from percentage-change with CPI examples (concept-level + reken; the §4.4.1 exam-trap explicitly called out in exercise c — same pitfall as §1.1.2)",
         "Compute real wage = nominal wage / CPI × 100 and interpret the direction (A-domain candidate; I09 is close but macro-framed)",
         "Explain why economists prefer real values (concept-level, mastery_target understand)"
       ],
