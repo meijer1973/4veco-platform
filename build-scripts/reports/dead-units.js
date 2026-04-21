@@ -34,7 +34,7 @@ const EXCLUDE_PATTERNS = [
   /knowledge[\\/]references-migration-plan\.md$/,
 ];
 
-const ID_PATTERN = /\b[A-K]\d{2}\b/g;
+const ID_PATTERN = /\b[A-L]\d{2}\b/g;
 
 function walk(dir, acc) {
   const abs = path.join(REPO_ROOT, dir);

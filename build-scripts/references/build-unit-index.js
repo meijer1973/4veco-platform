@@ -23,7 +23,7 @@ const TERMINOLOGY_MD = path.join(REPO_ROOT, 'references/authored/economie-termin
 const EINDTERMEN_JSON = path.join(REPO_ROOT, 'references/external/syllabus-eindtermen.json');
 
 const UNITS_MARKER = '<!-- UNIT ENTRIES BELOW THIS LINE';
-const ID_RE = /^[A-K]\d{2}$/;
+const ID_RE = /^[A-L]\d{2}$/;
 const CATEGORY = {
   A: 'vaardigheden',
   B: 'schaarste',
@@ -36,6 +36,7 @@ const CATEGORY = {
   I: 'goede en slechte tijden',
   J: 'onderzoek en experiment',
   K: 'keuzeonderwerpen',
+  L: 'arbeidsmarkt',
 };
 const BLOOM_LEVELS = ['remember', 'understand', 'apply', 'analyze', 'evaluate'];
 const APPLY_OR_HIGHER = new Set(['apply', 'analyze', 'evaluate']);
@@ -114,7 +115,7 @@ function validate(units, { terms, eindtermen }) {
 
   for (const u of units) {
     if (!ID_RE.test(u.id)) {
-      errors.push(`${u.id}: invalid ID format (expected [A-K]\\d\\d)`);
+      errors.push(`${u.id}: invalid ID format (expected [A-L]\\d\\d)`);
       continue;
     }
     if (byId.has(u.id)) {

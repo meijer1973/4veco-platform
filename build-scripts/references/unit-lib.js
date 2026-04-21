@@ -41,7 +41,7 @@ function buildStatsLine(units) {
   const live = units.filter(u => !u.deprecated);
   const byLetter = {};
   for (const u of live) byLetter[u.id[0]] = (byLetter[u.id[0]] || 0) + 1;
-  const order = ['A','B','C','D','E','F','G','H','I','J','K'];
+  const order = ['A','B','C','D','E','F','G','H','I','J','K','L'];
   const parts = order.filter(l => byLetter[l]).map(l => `${l}=${byLetter[l]}`);
   const date = new Date().toISOString().slice(0, 10);
   return `*${live.length} live units as of ${date} — ${parts.join(', ')}.*`;

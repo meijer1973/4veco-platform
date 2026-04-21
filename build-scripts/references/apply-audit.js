@@ -23,11 +23,11 @@ const AUDIT_FILES = [
 ];
 const EXAM_QUESTIONS = path.join(REPO_ROOT, 'references/external/exam-questions.json');
 
-const DOMAIN_ORDER = ['D', 'E', 'F', 'G', 'H', 'I', 'A', 'B', 'C', 'J', 'K'];
+const DOMAIN_ORDER = ['D', 'E', 'F', 'G', 'H', 'I', 'L', 'A', 'B', 'C', 'J', 'K'];
 const VALID_TYPES = new Set(['uitleg_dat', 'berekenen', 'uitleg_of', 'classificatie', 'grafisch', 'bron', 'noem']);
 
 function isAId(s)    { return /^A\d{2}$/.test(s); }
-function isUnitId(s) { return /^[A-K]\d{2}$/.test(s); }
+function isUnitId(s) { return /^[A-L]\d{2}$/.test(s); }
 
 function main() {
   // Merge all audit files (one per run-year batch) into one map.

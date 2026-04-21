@@ -18,9 +18,9 @@ Each unit *can carry* a stable permanent ID, prerequisite links (forming a DAG w
 
 `<DomainLetter><2-digit number>`, sequential within domain. Example: `A01`, `D05`, `H12`.
 
-Eleven domain prefixes match the CvTE examenprogramma exactly:
+The first eleven domain prefixes match the CvTE examenprogramma exactly. `L` is a platform-added prefix — see the note below the table.
 
-| Prefix | CvTE domain | Scope |
+| Prefix | Domain | Scope |
 |---|---|---|
 | `A` | Vaardigheden | Math, graph reading, calculation, reasoning — minted lazily as exercises demand |
 | `B` | Schaarste | School exam |
@@ -33,6 +33,7 @@ Eleven domain prefixes match the CvTE examenprogramma exactly:
 | `I` | Goede en slechte tijden | Central exam (conjunctuur) |
 | `J` | Onderzoek en experiment | School exam |
 | `K` | Keuzeonderwerpen | School exam |
+| `L` | Arbeidsmarkt | **Platform-added point of attention.** CvTE places arbeidsmarkt content under H5, but its volume in real central-exam questions (heavy — see audit) justifies a distinct catalog prefix so the domain stays visible in coverage reports. `exam_codes` on L-units still reference `H5.x` / `A2.x` / `D3.10` per CvTE. |
 
 IDs are **permanent once minted**. Renames change only the display name. Splits/merges mint new IDs and deprecate the old with pointers. Renumbering is forbidden.
 

@@ -79,9 +79,9 @@ Earlier years (2020–2024) may be added later for trend analysis; defer unless 
 
 ---
 
-## 2. Unit ID prefixes — CvTE domain letters
+## 2. Unit ID prefixes — CvTE domain letters (+ one platform-added prefix)
 
-Eleven prefixes, one per CvTE domain, matching the exam program exactly. Two-digit sequential numbering within domain visually distinguishes unit IDs from eindterm codes (`D01 Marktevenwicht` vs eindterm `D3.2`).
+Eleven prefixes match the CvTE examenprogramma exactly. One additional prefix — `L` — is platform-added. Two-digit sequential numbering within domain visually distinguishes unit IDs from eindterm codes (`D01 Marktevenwicht` vs eindterm `D3.2`).
 
 | Prefix | Domain | Scope (relevant slice in current curriculum) |
 |---|---|---|
@@ -96,8 +96,9 @@ Eleven prefixes, one per CvTE domain, matching the exam program exactly. Two-dig
 | `I` | Goede en slechte tijden | Central exam (conjunctuur) |
 | `J` | Onderzoek en experiment | School exam |
 | `K` | Keuzeonderwerpen | School exam |
+| `L` | Arbeidsmarkt | **Platform-added point of attention.** CvTE places arbeidsmarkt content under H5, but it is heavily tested in the central exam and didactically distinct enough to warrant its own catalog prefix so coverage stays visible. `exam_codes` on L-units still reference `H5.x` / `A2.x` / `D3.10` per CvTE. |
 
-**Why this works with the exercise-first principle:** since units are minted lazily, the A-bucket stays bounded — only A-skills that a real exercise demands exist. Empty/sparse domains (H, I, G for the current curriculum) are honest gaps in the coverage report, not prefixes we invent materials for.
+**Why this works with the exercise-first principle:** since units are minted lazily, the A-bucket stays bounded — only A-skills that a real exercise demands exist. Empty/sparse domains (G for the current curriculum) are honest gaps in the coverage report, not prefixes we invent materials for.
 
 **Concept-mode pluralism handled natively:** a concept taught at multiple Bloom levels becomes multiple units in the same domain, distinguished by `mastery_target`, `procedure`, and a naming suffix:
 

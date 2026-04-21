@@ -36,7 +36,7 @@ const REPO_ROOT = path.resolve(__dirname, '..', '..');
 const UNITS_MD   = path.join(REPO_ROOT, 'references/machine/micro-teaching-units.md');
 const UNITS_JSON = path.join(REPO_ROOT, 'references/machine/micro-teaching-units.json');
 const UNITS_MARKER = '<!-- UNIT ENTRIES BELOW THIS LINE';
-const ID_RE = /^[A-K]\d{2}$/;
+const ID_RE = /^[A-L]\d{2}$/;
 
 // ----- arg parsing -----
 
@@ -79,7 +79,7 @@ function buildSpecFromFlags(flags) {
 function validateSpec(spec, existingIds) {
   const errors = [];
   if (!spec.id) errors.push('missing --id');
-  else if (!ID_RE.test(spec.id)) errors.push(`invalid ID "${spec.id}" (expected [A-K]\\d\\d)`);
+  else if (!ID_RE.test(spec.id)) errors.push(`invalid ID "${spec.id}" (expected [A-L]\\d\\d)`);
   else if (existingIds.has(spec.id)) errors.push(`ID "${spec.id}" already exists in the catalog`);
 
   if (!spec.name || typeof spec.name !== 'string') errors.push('missing --name');

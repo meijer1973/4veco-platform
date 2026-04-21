@@ -19,7 +19,7 @@ Blueprint v4 is the **VWO 4** curriculum. Domains not examined centrally in VWO 
 | E — Ruilen over de tijd | VWO 5/6 | Correctly deferred |
 | F — Samenwerken/onderhandelen | VWO 5/6 | Correctly deferred |
 | G — Risico en informatie | VWO 5/6 | Correctly deferred |
-| H — Welvaart en groei | school exam only | Covered (Module 4: labor, trade, inflation) |
+| H — Welvaart en groei | **yes (central exam)** | Covered (Module 4: labor, trade, inflation). Includes H5 arbeidsmarkt, heavily exam-tested. |
 | I — Concept-contextbenadering (macro) | VWO 5/6 | Correctly deferred |
 
 No central-exam endpoint is left uncovered for the VWO 4 scope.
@@ -75,7 +75,7 @@ This repeated exposure across contexts is strong didactics.
 
 ## Verdict
 
-**Blueprint v4 is aligned with the CvTE VWO 4 exam program.** Central-exam Domain D coverage is comprehensive; school-exam Domains B/C/H are present; VWO 5/6 domains correctly deferred. Terminology canonical. Cognitive level appropriate. Sequencing defensible.
+**Blueprint v4 is aligned with the CvTE VWO 4 exam program.** Central-exam Domain D coverage is comprehensive; central-exam Domain H (welvaart, arbeidsmarkt) is present in Module 4; school-exam Domains B/C are present; VWO 5/6 domains correctly deferred. Terminology canonical. Cognitive level appropriate. Sequencing defensible.
 
 Recommended tweaks are minor: one worked example each for monopolistische concurrentie en oligopolie; pre-teach algebraic rearrangement before GTK=MK; flag §2.1.3 part C as optional depth.
 

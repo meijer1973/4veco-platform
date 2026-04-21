@@ -2,7 +2,7 @@
 /**
  * unresolved-refs.js
  *
- * Scans the source tree for references to unit IDs (the [A-K]\d\d pattern)
+ * Scans the source tree for references to unit IDs (the [A-L]\d\d pattern)
  * and flags any that don't resolve to a live entry in the catalog.
  * Deprecated units produce a warning (migration hint), not an error.
  *
@@ -38,7 +38,7 @@ const EXCLUDE_PATTERNS = [
   /knowledge[\\/]references-migration-plan\.md$/,
 ];
 
-const ID_PATTERN = /\b[A-K]\d{2}\b/g;
+const ID_PATTERN = /\b[A-L]\d{2}\b/g;
 
 function walk(dir, acc) {
   const abs = path.join(REPO_ROOT, dir);
