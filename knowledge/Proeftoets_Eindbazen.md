@@ -110,7 +110,7 @@ Each opgave follows the proeftoets progression (`econ-testprep-builder.md` §5.3
 - `skills/econ-testprep-builder.md` (Part 5 — proeftoets specs)
 - `references/authored/vraagtypen-en-opgaveontwerp.md` (volledig — één source of truth)
 - `references/authored/economic_mathematical_precision_reference.md` (beperkingen op domein, richtingen)
-- `knowledge/course_blueprint_v4.md` Boek 4 hoofdstuk 5 specificatie
+- `knowledge/course_blueprint_v4.md` §4.5 specificatie
 - `engines/skilltree/base-elements.js` definities van E4/E6/E7/E8/E9 met prereqs
 - `skills/economic-graph/` voor grafiek-specificaties
 

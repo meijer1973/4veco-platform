@@ -1,11 +1,11 @@
 ---
 name: econ-testprep-builder
-description: "Builds test preparation paragraphs for economics education (bovenbouw vwo): active summaries with MC questions, exam skills training, integration exercises, and timed practice tests. Each book's Chapter 5 contains these four paragraph types in a scaffolded progression from retrieval practice to exam simulation. No new theory is introduced. Use this skill when the user mentions toetsvoorbereiding, test preparation, actieve samenvatting, examenvaardigheden, integratieoefening, proeftoets, or when building Chapter 5 of any book. Always use in combination with econ-didactiek (pedagogy), economic-graph (graphs), and econ-pdf-builder (PDF export)."
+description: "Builds test preparation paragraphs for economics education (bovenbouw vwo): active summaries with MC questions, exam skills training, integration exercises, and timed practice tests. Each module's Chapter 5 contains these four paragraph types in a scaffolded progression from retrieval practice to exam simulation. No new theory is introduced. Use this skill when the user mentions toetsvoorbereiding, test preparation, actieve samenvatting, examenvaardigheden, integratieoefening, proeftoets, or when building Chapter 5 of any module. Always use in combination with econ-didactiek (pedagogy), economic-graph (graphs), and econ-pdf-builder (PDF export)."
 ---
 
 # Economics Test Preparation Builder
 
-Builds all four paragraph types for Chapter 5 (test preparation) of each book. These paragraphs introduce **no new theory** — they scaffold exam readiness through a deliberate progression: retrieval practice (§1) → skill training (§2) → integration (§3) → exam simulation (§4).
+Builds all four paragraph types for Chapter 5 (test preparation) of each module. These paragraphs introduce **no new theory** — they scaffold exam readiness through a deliberate progression: retrieval practice (§1) → skill training (§2) → integration (§3) → exam simulation (§4).
 
 **Companion skills:**
 - `econ-didactiek` → pedagogical decision rules (backed by `references/authored/didactiek-principes.md`)
@@ -25,7 +25,7 @@ Builds all four paragraph types for Chapter 5 (test preparation) of each book. T
 
 ### 1.1 What is a test preparation chapter?
 
-Chapter 5 of each book. Four paragraphs, no new theory, scaffolded exam readiness:
+Chapter 5 of each module. Four paragraphs, no new theory, scaffolded exam readiness:
 
 | § | Type | Purpose | Metaphor |
 |---|------|---------|----------|
@@ -46,10 +46,10 @@ Chapter 5 of each book. Four paragraphs, no new theory, scaffolded exam readines
 
 | Book | §1 focus | §2 focus | §3 scope | §4 cumulative |
 |------|----------|----------|----------|---------------|
-| 1 | Graph conventions, % traps, shift/movement | Graph reading, calculation notation | Book 1 only | Book 1 only |
-| 2 | Elasticity interpretation, surplus accounting | Standpuntbepaling answer structure | Book 2 only | Book 2 only |
-| 3 | Multi-step monopoly procedure, market structures | Multi-step calculations, monopoly graph reading | Book 3 only | Book 3 only |
-| 4 | Labor terminology, comparative advantage, index/% | Real data, cumulative reasoning | **Cross-book** (Books 1–4) | **Cross-book** (Books 1–4) |
+| 1 | Graph conventions, % traps, shift/movement | Graph reading, calculation notation | Module 1 only | Module 1 only |
+| 2 | Elasticity interpretation, surplus accounting | Standpuntbepaling answer structure | Module 2 only | Module 2 only |
+| 3 | Multi-step monopoly procedure, market structures | Multi-step calculations, monopoly graph reading | Module 3 only | Module 3 only |
+| 4 | Labor terminology, comparative advantage, index/% | Real data, cumulative reasoning | **Cross-module** (Modules 1–4) | **Cross-module** (Modules 1–4) |
 
 ### 1.4 Shared rules
 
@@ -64,7 +64,7 @@ Chapter 5 of each book. Four paragraphs, no new theory, scaffolded exam readines
 
 ### 2.1 Structure
 
-Five summary blocks, one per major topic area of the book. Each block:
+Five summary blocks, one per major topic area of the module. Each block:
 1. **Summary text** (4–6 sentences) — concise review of the key concepts
 2. **2–3 multiple-choice questions** — interleaved immediately after the summary text
 
@@ -72,7 +72,7 @@ Total: 5 blocks × 2–3 MC = 10–15 MC questions per paragraph.
 
 ### 2.2 Summary block design
 
-- **Identify 5 topic clusters** from the book's theory chapters. Use the blueprint's block specifications.
+- **Identify 5 topic clusters** from the module's theory chapters. Use the blueprint's block specifications.
 - Each block summarises ONE cluster in 4–6 sentences.
 - Include at least one graph reference per block (e.g., "Figuur 1 toont de vraaglijn en de aanbodlijn in evenwicht").
 - Use active language: "Je berekent..." not "Men kan berekenen..."
@@ -174,10 +174,10 @@ Each answer type requires a different structure. Students must know the differen
 
 Each book focuses on different skills. The builder must check that the emphasis matches.
 
-- **Book 1:** Graph conventions (which axis is which?), calculation notation (show steps), shift vs movement distinction
-- **Book 2:** Standpuntbepaling (beoordeel) answer structure, surplus accounting identity (old TS = new CS + PS + revenue + DWL), policy graph reading
-- **Book 3:** Multi-step monopoly procedure (6 steps from memory), reading complex monopoly graphs, structuring multi-step bereken answers
-- **Book 4:** Working with real CBS/EU data, critical reading of media economic claims, cross-chapter standpuntbepaling
+- **Module 1:** Graph conventions (which axis is which?), calculation notation (show steps), shift vs movement distinction
+- **Module 2:** Standpuntbepaling (beoordeel) answer structure, surplus accounting identity (old TS = new CS + PS + revenue + DWL), policy graph reading
+- **Module 3:** Multi-step monopoly procedure (6 steps from memory), reading complex monopoly graphs, structuring multi-step bereken answers
+- **Module 4:** Working with real CBS/EU data, critical reading of media economic claims, cross-chapter standpuntbepaling
 
 ### 3.5 Exercise format
 
@@ -254,9 +254,9 @@ Rules:
 - **Final sub-question is always standpuntbepaling** that synthesises earlier sub-questions.
 - **Questions are theory-paragraph style** — clean, focused. Not exam-complex with extensive source material. The integration comes from combining skills within one context, not from complex packaging.
 
-### 4.3 Book 4 special rule
+### 4.3 Module 4 special rule
 
-Book 4's integration exercise is **cross-book**: it must require at least one skill from Books 1–3 in addition to Book 4 skills. The blueprint provides specific examples (e.g., the EU textile tariff context requires labor market equilibrium + trade analysis + welfare effects + real/nominal calculations).
+Module 4's integration exercise is **cross-module**: it must require at least one skill from Modules 1–3 in addition to Module 4 skills. The blueprint provides specific examples (e.g., the EU textile tariff context requires labor market equilibrium + trade analysis + welfare effects + real/nominal calculations).
 
 ### 4.4 File output
 
@@ -364,7 +364,7 @@ Zo kunnen de totale zorgkosten afnemen (conclusie = gegeven).
 - **Toetsmatrijs required** — create BEFORE designing opgaven. Maps: skills × Bloom level × points. Every leerdoel from Chapters 1–4 must be covered.
 - **Content coverage:** all four theory chapters represented
 - **Source type requirements:** at least one context with a graph, one with a data table, one with a longer text source
-- **Book 4 cumulative requirement** (non-negotiable): at least one context must require tools from Books 1–3 (equilibrium calculation, surplus analysis, elasticity, etc.)
+- **Module 4 cumulative requirement** (non-negotiable): at least one context must require tools from Modules 1–3 (equilibrium calculation, surplus analysis, elasticity, etc.)
 - **Cumulative cross-chapter sources** are encouraged: e.g., rising energy prices → percentage change (B1C1) → supply shift (B1C3) → new equilibrium (B1C4) → welfare loss from tax (B2C3) → evaluate policy (evalueren)
 
 ### 5.7 Graph modes
@@ -547,7 +547,7 @@ X.5.4 Proeftoets/
 ## DECISION CHECKLIST
 
 ### §1 Active Summary:
-1. [ ] 5 summary blocks identified (one per topic cluster from the book)
+1. [ ] 5 summary blocks identified (one per topic cluster from the module)
 2. [ ] Each block is 4–6 sentences
 3. [ ] 2–3 MC questions per block (10–15 total)
 4. [ ] MC distractors sourced from reasoning CSVs or blueprint difficulty notes
@@ -568,7 +568,7 @@ X.5.4 Proeftoets/
 15. [ ] 5–7 sub-questions, each labelled with chapter skill
 16. [ ] All 4 theory chapters represented in sub-questions
 17. [ ] Final sub-question is standpuntbepaling
-18. [ ] Book 4: cross-book elements included (Books 1–3)
+18. [ ] Module 4: cross-module elements included (Modules 1–3)
 19. [ ] Questions are theory-paragraph style (clean, not exam-complex)
 
 ### §4 Practice Test:
@@ -578,7 +578,7 @@ X.5.4 Proeftoets/
 23. [ ] Bloom distribution balanced (~25% begrijpen, ~40% toepassen, ~35% analyseren/evalueren)
 24. [ ] All 4 theory chapters covered
 25. [ ] At least 1 graph context, 1 data table, 1 text source
-26. [ ] Book 4: cumulative elements from Books 1–3 included
+26. [ ] Module 4: cumulative elements from Modules 1–3 included
 27. [ ] Answer models with point allocation per sub-question
 28. [ ] Source referencing in answers ("Uit de tabel...")
 

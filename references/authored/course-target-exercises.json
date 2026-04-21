@@ -1,0 +1,535 @@
+{
+  "schema_version": 1,
+  "blueprint_version": "v4",
+  "blueprint_source": "knowledge/course_blueprint_v4.md",
+  "_schema_doc": {
+    "id": "Stable identifier '<module>.<chapter>.<paragraph>' (matches platform folder convention 3.1.1). Permanent once minted.",
+    "module": "1-4 (the platform's top-level unit; equals 'Module N' in the blueprint)",
+    "chapter": "1-5 (5 = test prep)",
+    "paragraph": "1-5 (last is consolidation in theory chapters)",
+    "paragraph_title": "Verbatim from blueprint header (without difficulty marker).",
+    "difficulty": "LIGHT | MEDIUM | HEAVY — from blueprint marker.",
+    "target_exercise": {
+      "context": "Brief framing sentence(s) the student reads first.",
+      "subquestions": "Array of {label, prompt}. Labels are blueprint letters ('a', 'b', ...). Prompts are verbatim from blueprint."
+    },
+    "lesson_goals": "Array of strings, verbatim from blueprint.",
+    "required_skills": "Unit IDs (from references/machine/micro-teaching-units.json) the student must wield to do this exercise. Must include both prior_knowledge_assumed and new_skills_introduced.",
+    "prior_knowledge_assumed": "Subset of required_skills the student should already have from earlier paragraphs.",
+    "new_skills_introduced": "Subset of required_skills this lesson is responsible for teaching.",
+    "missing_units_flagged": "Array of free-text descriptions of skills that should be units in the registry but aren't yet. Phase-2 backlog.",
+    "exam_codes": "CvTE eindterm codes — derived in a later pass from required_skills' exam_codes union (per the exam-questions.json convention).",
+    "difficulty_notes": "Verbatim from blueprint.",
+    "source_ref": "Pointer back to the blueprint section."
+  },
+  "exercises": [
+    {
+      "id": "1.1.1",
+      "module": 1,
+      "chapter": 1,
+      "paragraph": 1,
+      "paragraph_title": "Scarcity, opportunity cost, economic thinking",
+      "difficulty": "LIGHT",
+      "target_exercise": {
+        "context": "A farmer has 10 hectares of land. He can grow wheat (profit €500/ha) or corn (profit €350/ha). He decides to grow wheat on all 10 hectares.",
+        "subquestions": [
+          {
+            "label": "a",
+            "prompt": "What is his revenue from wheat?"
+          },
+          {
+            "label": "b",
+            "prompt": "What are his opportunity costs?"
+          },
+          {
+            "label": "c",
+            "prompt": "A neighbour uses 10 hectares for both: 6 ha wheat and 4 ha corn. Calculate her total profit. Did she make a better choice? Explain using the concept of scarcity."
+          }
+        ]
+      },
+      "lesson_goals": [
+        "Define scarcity as the core economic problem",
+        "Explain that every choice has an opportunity cost",
+        "Calculate opportunity costs in simple scenarios",
+        "Recognise trade-offs in everyday decisions"
+      ],
+      "required_skills": [],
+      "prior_knowledge_assumed": [],
+      "new_skills_introduced": [],
+      "missing_units_flagged": [
+        "Define scarcity as the core economic problem (concept-level, mastery_target understand)",
+        "Identify opportunity cost / alternatieve kosten in a choice scenario (concept + simple calculation)",
+        "Compute total profit from a mixed-allocation choice (basic multiplication-and-sum, A-domain candidate)"
+      ],
+      "exam_codes": [],
+      "difficulty_notes": "Intuitive concepts, concrete examples. Students engage well. No calculation barriers. One lesson is comfortable with time for class discussion.",
+      "source_ref": "knowledge/course_blueprint_v4.md §1.1.1"
+    },
+    {
+      "id": "1.1.2",
+      "module": 1,
+      "chapter": 1,
+      "paragraph": 2,
+      "paragraph_title": "Percentages, percentage changes, index numbers",
+      "difficulty": "MEDIUM",
+      "target_exercise": {
+        "context": "Practice with percentage changes and index numbers across price data.",
+        "subquestions": [
+          {
+            "label": "a",
+            "prompt": "The price of a bicycle rises from €800 to €920. Calculate the percentage change."
+          },
+          {
+            "label": "b",
+            "prompt": "In 2023, a standard shopping basket costs €150. In 2025 the same basket costs €162. The base year is 2023 (index = 100). Calculate the price index for 2025."
+          },
+          {
+            "label": "c",
+            "prompt": "In 2026 the index rises to 112. Calculate the price increase from 2025 to 2026 in percent."
+          },
+          {
+            "label": "d",
+            "prompt": "A student claims: 'The index went from 108 to 112, so inflation is 4%.' Explain why this is wrong and calculate the correct figure."
+          }
+        ]
+      },
+      "lesson_goals": [
+        "Calculate percentage changes using (new − old) / old × 100",
+        "Calculate and interpret index numbers",
+        "Distinguish between index point change and percentage change",
+        "Apply these skills to economic data (prices, wages, production)"
+      ],
+      "required_skills": [],
+      "prior_knowledge_assumed": [],
+      "new_skills_introduced": [],
+      "missing_units_flagged": [
+        "Compute percentage change with (new − old) / old × 100 (A-domain candidate, foundation for elasticity)",
+        "Compute and interpret price index relative to a base year (A-domain candidate)",
+        "Distinguish index-point change from percentage change (concept-level + calculation; classic exam pitfall)"
+      ],
+      "exam_codes": [],
+      "difficulty_notes": "Students are weaker at percentage calculations than teachers expect. The index-point vs percentage trap (exercise d) is a classic exam mistake. This paragraph lays the foundation for ALL later calculations (elasticities, inflation, real/nominal). Worth investing time. One lesson is tight — assign exercise (d) type problems as homework.",
+      "source_ref": "knowledge/course_blueprint_v4.md §1.1.2"
+    },
+    {
+      "id": "1.1.3",
+      "module": 1,
+      "chapter": 1,
+      "paragraph": 3,
+      "paragraph_title": "Reading and drawing graphs, interpreting tables",
+      "difficulty": "LIGHT",
+      "target_exercise": {
+        "context": "The table below shows the number of ice creams sold at different prices: P=€1.00→Q=500, €1.50→400, €2.00→300, €2.50→200, €3.00→100.",
+        "subquestions": [
+          {
+            "label": "a",
+            "prompt": "Draw this as a graph with price on the vertical axis and quantity on the horizontal axis."
+          },
+          {
+            "label": "b",
+            "prompt": "Read from your graph: how many ice creams are sold at €1.75?"
+          },
+          {
+            "label": "c",
+            "prompt": "A newspaper writes: 'Ice cream sales dropped by 50%.' Looking at the table, between which two prices could this have happened? Explain."
+          }
+        ]
+      },
+      "lesson_goals": [
+        "Read values from graphs and tables",
+        "Draw a graph from tabular data with correct axes",
+        "Interpolate between data points",
+        "Critically interpret claims using data"
+      ],
+      "required_skills": [],
+      "prior_knowledge_assumed": [],
+      "new_skills_introduced": [],
+      "missing_units_flagged": [
+        "Draw a (P,Q) graph from a table with the economist's axis convention (P vertical, Q horizontal) (A-domain candidate)",
+        "Read values from a (P,Q) graph; interpolate between data points (A-domain candidate)",
+        "Critically interpret a percentage claim against tabular data (combines P-change skill with reading)"
+      ],
+      "exam_codes": [],
+      "difficulty_notes": "Skill-based, hands-on. Students enjoy the concreteness. The main pitfall is putting axes wrong (price on horizontal instead of vertical). One lesson comfortable.",
+      "source_ref": "knowledge/course_blueprint_v4.md §1.1.3"
+    },
+    {
+      "id": "1.2.1",
+      "module": 1,
+      "chapter": 2,
+      "paragraph": 1,
+      "paragraph_title": "Individual demand, betalingsbereidheid, demand curve",
+      "difficulty": "LIGHT",
+      "target_exercise": {
+        "context": "Lisa loves pizza. She is willing to pay €8 for her first pizza, €6 for the second, €4 for the third, and €1.50 for the fourth.",
+        "subquestions": [
+          {
+            "label": "a",
+            "prompt": "Draw Lisa's individual demand curve (step function) with price on the vertical axis."
+          },
+          {
+            "label": "b",
+            "prompt": "The market price is €5. How many pizzas does Lisa buy? Explain using the concept of betalingsbereidheid."
+          },
+          {
+            "label": "c",
+            "prompt": "The price drops to €3. How many does she buy now?"
+          },
+          {
+            "label": "d",
+            "prompt": "Explain in your own words why the demand curve slopes downward."
+          }
+        ]
+      },
+      "lesson_goals": [
+        "Define betalingsbereidheid (willingness to pay)",
+        "Explain the relationship between price and quantity demanded",
+        "Draw an individual demand curve from willingness-to-pay data",
+        "Explain the law of demand"
+      ],
+      "required_skills": [],
+      "prior_knowledge_assumed": [],
+      "new_skills_introduced": [],
+      "missing_units_flagged": [
+        "Define betalingsbereidheid as the maximum price a consumer will pay for an additional unit (concept-level, prerequisite for surplus)",
+        "Construct an individual step-function demand curve from a willingness-to-pay schedule (A-domain candidate; precedes A01 lineaire vraag)",
+        "Apply 'buy if P ≤ betalingsbereidheid' decision rule to find Q at a given P (concept + reading)",
+        "Explain the law of demand verbally (concept-level, mastery_target understand)"
+      ],
+      "exam_codes": [],
+      "difficulty_notes": "Very intuitive. Pizza/real-life examples work well. Step functions are visual and concrete. One lesson comfortable — use the extra time for a good class discussion about what determines betalingsbereidheid.",
+      "source_ref": "knowledge/course_blueprint_v4.md §1.2.1"
+    },
+    {
+      "id": "1.2.2",
+      "module": 1,
+      "chapter": 2,
+      "paragraph": 2,
+      "paragraph_title": "Demand factors, shifts vs movements along the curve",
+      "difficulty": "MEDIUM",
+      "target_exercise": {
+        "context": "The market for butter is in equilibrium at P = €2 and Q = 1000.",
+        "subquestions": [
+          {
+            "label": "a",
+            "prompt": "The price of butter rises to €2.50. Show in a graph what happens to the quantity demanded. Is this a shift of the demand curve or a movement along it?"
+          },
+          {
+            "label": "b",
+            "prompt": "A health report claims that margarine is unhealthy. Show in a graph what happens to the demand for butter. Is this a shift or a movement?"
+          },
+          {
+            "label": "c",
+            "prompt": "Average income in the country rises by 5%. Butter is a normal good. Show the effect on the demand curve."
+          },
+          {
+            "label": "d",
+            "prompt": "Name four factors that cause the demand curve to shift and give an example for each."
+          }
+        ]
+      },
+      "lesson_goals": [
+        "Distinguish between a movement along the demand curve (caused by own price change) and a shift of the demand curve (caused by other factors)",
+        "Name and explain demand factors: income, preferences, price of substitutes/complements, expectations",
+        "Show shifts graphically (left/right)",
+        "Classify goods as substitutes or complements based on context"
+      ],
+      "required_skills": [
+        "D27"
+      ],
+      "prior_knowledge_assumed": [],
+      "new_skills_introduced": [
+        "D27"
+      ],
+      "missing_units_flagged": [
+        "Distinguish movement-along vs shift-of the demand curve (concept-level; the single most common micro error — must be its own unit)",
+        "Name and exemplify the standard demand-shift factors (inkomen, voorkeuren, prijs substituten/complementen, verwachtingen) (concept-level)",
+        "Show a demand-curve shift graphically with a labelled before/after (grafisch skill, A-domain candidate)",
+        "Classify a normal vs inferior good response to an income change (concept-level, prerequisite for D11 inkomenselasticiteit)"
+      ],
+      "exam_codes": [
+        "D1.9"
+      ],
+      "difficulty_notes": "The shift vs movement distinction is the single most common error in all of microeconomics. Students confuse these for months. The lesson must hammer this with at least 4–5 examples. One lesson is tight but essential — this concept returns in every subsequent chapter.",
+      "source_ref": "knowledge/course_blueprint_v4.md §1.2.2"
+    },
+    {
+      "id": "1.2.3",
+      "module": 1,
+      "chapter": 2,
+      "paragraph": 3,
+      "paragraph_title": "From individual to collective demand",
+      "difficulty": "MEDIUM",
+      "target_exercise": {
+        "context": "There are only two consumers on the market for lemonade: Anna and Ben. Anna's Qd: P=€1→5, €2→3, €3→1, €4→0. Ben's Qd: P=€1→8, €2→5, €3→2, €4→1.",
+        "subquestions": [
+          {"label": "a", "prompt": "Calculate the collective demand at each price."},
+          {"label": "b", "prompt": "Draw the individual demand curves and the collective demand curve in the same graph."},
+          {"label": "c", "prompt": "Anna's demand function is Qd = −2P + 7, Ben's is Qd = −3P + 11. Derive the collective demand function algebraically."},
+          {"label": "d", "prompt": "At which price does Anna leave the market entirely? What happens to the collective demand curve at that point?"}
+        ]
+      },
+      "lesson_goals": [
+        "Explain that collective demand is the horizontal sum of individual demand curves",
+        "Calculate collective demand from individual data (table method)",
+        "Derive collective demand algebraically (adding Q's at equal P)",
+        "Recognise the kink in the collective curve when one consumer drops out"
+      ],
+      "required_skills": ["A01"],
+      "prior_knowledge_assumed": ["A01"],
+      "new_skills_introduced": [],
+      "missing_units_flagged": [
+        "Horizontal sum: aggregate individual demand tables into collective demand (A-domain candidate, mirror of A31 for aanbod)",
+        "Algebraic horizontal sum of linear demand functions (A-domain candidate, Q-at-equal-P)",
+        "Recognise the kink in collective demand when one consumer exits (concept-level)"
+      ],
+      "exam_codes": ["A2.9"],
+      "difficulty_notes": "The horizontal addition (adding Q's, not P's) is counter-intuitive for some students. The algebraic derivation (exercise c) requires comfort with linear equations. One lesson works if algebra skills from §1.1 are solid. The kink (exercise d) can be mentioned but is not essential.",
+      "source_ref": "knowledge/course_blueprint_v4.md §1.2.3"
+    },
+    {
+      "id": "1.3.1",
+      "module": 1,
+      "chapter": 3,
+      "paragraph": 1,
+      "paragraph_title": "Supply curve, supply factors, shifts",
+      "difficulty": "MEDIUM",
+      "target_exercise": {
+        "context": "Supply-side mirror of §1.2.2: how own-price vs other factors move a supply curve.",
+        "subquestions": [
+          {"label": "a", "prompt": "A manufacturer of solar panels faces higher silicon prices. Show in a graph what happens to the supply curve for solar panels. Explain."},
+          {"label": "b", "prompt": "The government introduces a subsidy for solar panel production. Show the effect on the supply curve."},
+          {"label": "c", "prompt": "Name three factors that cause the supply curve to shift and give an example for each."},
+          {"label": "d", "prompt": "Draw a supply curve. Mark a movement along the curve and a shift of the curve. Label clearly which is which."}
+        ]
+      },
+      "lesson_goals": [
+        "Draw and interpret a supply curve (upward sloping)",
+        "Name supply factors: input prices, technology, number of suppliers, expectations, government policy",
+        "Distinguish between shifts and movements along the supply curve",
+        "Show supply shifts graphically"
+      ],
+      "required_skills": ["D13"],
+      "prior_knowledge_assumed": [],
+      "new_skills_introduced": ["D13"],
+      "missing_units_flagged": [
+        "Draw an upward-sloping supply curve with correct economist axes (A-domain candidate)",
+        "Distinguish movement-along vs shift-of the supply curve (concept-level; parallel to the demand-side gap flagged in §1.2.2)",
+        "Name and exemplify supply-shift factors (inputprijzen, technologie, aantal aanbieders, verwachtingen, overheidsbeleid) (concept-level)"
+      ],
+      "exam_codes": ["D1.12", "D1.24"],
+      "difficulty_notes": "Mirror of §1.2.2. Students pick this up faster because they have the demand framework. The shift/movement distinction gets reinforced. Exercise (c) deliberately does not give away the answer about own price — if a student lists 'own price' as a shift factor, it reveals they have not grasped the distinction between movement and shift. This diagnostic value is important. One lesson comfortable.",
+      "source_ref": "knowledge/course_blueprint_v4.md §1.3.1"
+    },
+    {
+      "id": "1.3.2",
+      "module": 1,
+      "chapter": 3,
+      "paragraph": 2,
+      "paragraph_title": "Cost structures: TK, VK, CK, GTK, GVK, GCK",
+      "difficulty": "MEDIUM",
+      "target_exercise": {
+        "context": "A bakery has fixed costs (constante kosten) of €500 per month (rent, insurance). Each loaf of bread costs €0.80 in ingredients and energy (variabele kosten per stuk).",
+        "subquestions": [
+          {"label": "a", "prompt": "Write the formulas for TK, TVK, and TCK as a function of Q."},
+          {"label": "b", "prompt": "Calculate TK, TVK, TCK at Q = 500 and Q = 1000."},
+          {"label": "c", "prompt": "Calculate GTK, GVK, and GCK at Q = 500 and Q = 1000."},
+          {"label": "d", "prompt": "What happens to GTK as Q increases? Explain why this is logical."},
+          {"label": "e", "prompt": "A student says: 'GCK is always the same.' Is this correct? Explain."}
+        ]
+      },
+      "lesson_goals": [
+        "Distinguish between vaste/constante kosten (CK) and variabele kosten (VK)",
+        "Calculate TK = TCK + TVK",
+        "Calculate averages: GTK = TK/Q, GVK = TVK/Q, GCK = TCK/Q",
+        "Understand that GCK decreases as Q increases (spreading fixed costs)",
+        "Understand that GVK is constant when VK per unit is constant"
+      ],
+      "required_skills": ["A08", "A14", "D02", "D26"],
+      "prior_knowledge_assumed": [],
+      "new_skills_introduced": ["A08", "A14", "D02", "D26"],
+      "missing_units_flagged": [
+        "Compute GVK = TVK/Q and GCK = TCK/Q (A-domain candidates; A14 covers GTK but not GVK/GCK separately)",
+        "Explain why GCK falls as Q rises (spreading fixed costs) (concept-level, foundation for long-run equilibrium in §3.1.3)"
+      ],
+      "exam_codes": ["D1.16", "D1.17", "D1.21", "A2.11", "A2.15"],
+      "difficulty_notes": "Seven cost concepts is a lot of terminology. The key insight (GTK falls because fixed costs spread) is intuitive. Exercises (d) and (e) test conceptual understanding, not just calculation. One lesson works because the formulas are all simple divisions — the challenge is keeping the abbreviations straight. Recommend a summary card students keep in their notebook.",
+      "source_ref": "knowledge/course_blueprint_v4.md §1.3.2"
+    },
+    {
+      "id": "1.3.3",
+      "module": 1,
+      "chapter": 3,
+      "paragraph": 3,
+      "paragraph_title": "Revenue: TO, GO, winst, break-even",
+      "difficulty": "LIGHT",
+      "target_exercise": {
+        "context": "The bakery from §1.3.2 sells bread at €1.50 per loaf.",
+        "subquestions": [
+          {"label": "a", "prompt": "Write the formula for TO as a function of Q."},
+          {"label": "b", "prompt": "Calculate TO and winst (TO − TK) at Q = 500 and Q = 1000."},
+          {"label": "c", "prompt": "Calculate GO (= TO/Q) at Q = 500. What do you notice?"},
+          {"label": "d", "prompt": "At which production level does the bakery exactly break even (winst = 0)? Show this with a calculation."},
+          {"label": "e", "prompt": "Draw a graph with TK and TO. Mark the break-even point. Shade the area of winst when Q = 1000."}
+        ]
+      },
+      "lesson_goals": [
+        "Calculate TO = P × Q",
+        "Calculate GO = TO/Q (and notice GO = P at constant price)",
+        "Calculate winst = TO − TK",
+        "Find the break-even point algebraically (TO = TK)",
+        "Show TK and TO in a graph and identify winst/verlies zones"
+      ],
+      "required_skills": ["A07", "A08", "A21", "A22", "A29"],
+      "prior_knowledge_assumed": ["A08"],
+      "new_skills_introduced": ["A07", "A21", "A22", "A29"],
+      "missing_units_flagged": [
+        "Observe GO = P at a constant price (concept-level, a single-step recognition)",
+        "Shade winst/verlies zones between TK and TO curves (grafisch skill, A-domain candidate)"
+      ],
+      "exam_codes": ["A2.1", "A2.10", "A2.11", "A2.12", "A2.15"],
+      "difficulty_notes": "Lighter than §1.3.2 because fewer new concepts. The break-even calculation is straightforward algebra. The graph (exercise e) bridges to visual analysis. One lesson comfortable — good opportunity to check that §1.3.2's cost concepts stuck.",
+      "source_ref": "knowledge/course_blueprint_v4.md §1.3.3"
+    },
+    {
+      "id": "1.4.1",
+      "module": 1,
+      "chapter": 4,
+      "paragraph": 1,
+      "paragraph_title": "Equilibrium: solving Qa = Qv",
+      "difficulty": "MEDIUM",
+      "target_exercise": {
+        "context": "On the market for notebooks: Qv = −2P + 100 and Qa = 3P − 25.",
+        "subquestions": [
+          {"label": "a", "prompt": "Calculate the equilibrium price and equilibrium quantity."},
+          {"label": "b", "prompt": "Check your answer by substituting back into both equations."},
+          {"label": "c", "prompt": "Draw both curves in a graph and mark the equilibrium point."},
+          {"label": "d", "prompt": "At a price of €30, is there a surplus (aanbodoverschot) or a shortage (vraagoverschot)? Calculate its size."}
+        ]
+      },
+      "lesson_goals": [
+        "Set Qa = Qv and solve for P (equilibrium price)",
+        "Substitute back to find equilibrium quantity",
+        "Draw demand and supply curves and locate equilibrium graphically",
+        "Determine surplus or shortage at a given price"
+      ],
+      "required_skills": ["A02", "A04", "A06"],
+      "prior_knowledge_assumed": ["A02"],
+      "new_skills_introduced": ["A04", "A06"],
+      "missing_units_flagged": [
+        "Determine surplus (aanbodoverschot) vs shortage (vraagoverschot) at a non-equilibrium price and calculate its size (A-domain candidate, prerequisite for government price interventions in §2.4)"
+      ],
+      "exam_codes": ["A2.10", "A2.12", "A2.15"],
+      "difficulty_notes": "First real algebraic challenge. Students who struggle with rearranging equations need support. Exercise (b) — checking the answer — builds good habits. Exercise (d) bridges to government intervention (Module 2). One lesson is tight if algebra is weak — provide a worked example first, then let students practice.",
+      "source_ref": "knowledge/course_blueprint_v4.md §1.4.1"
+    },
+    {
+      "id": "1.4.2",
+      "module": 1,
+      "chapter": 4,
+      "paragraph": 2,
+      "paragraph_title": "Shifts in supply and demand, new equilibria",
+      "difficulty": "MEDIUM",
+      "target_exercise": {
+        "context": "Starting from the notebook market (Qv = −2P + 100, Qa = 3P − 25, equilibrium P* = 25, Q* = 50).",
+        "subquestions": [
+          {"label": "a", "prompt": "A new factory opens. The new supply function is Qa = 3P − 10. Calculate the new equilibrium price and quantity."},
+          {"label": "b", "prompt": "Compare with the old equilibrium: what happened to price? To quantity? Is this logical?"},
+          {"label": "c", "prompt": "Now suppose student income rises. The new demand function is Qv = −2P + 120 (supply back to original). Calculate the new equilibrium."},
+          {"label": "d", "prompt": "Draw a graph showing both changes (one at a time). Use arrows to show the direction of shifts."},
+          {"label": "e", "prompt": "Now suppose BOTH changes happen at the same time: supply shifts to Qa = 3P − 10 AND demand shifts to Qv = −2P + 120. Calculate the new equilibrium. What happened to quantity? What happened to price? Could you have predicted the direction of the price change without calculating? Explain."}
+        ]
+      },
+      "lesson_goals": [
+        "Calculate a new equilibrium after a supply or demand shift",
+        "Compare old and new equilibrium: predict direction of price and quantity change",
+        "Connect shifts to the demand/supply factors from §1.2 and §1.3",
+        "Show shifts graphically with clear before/after",
+        "Analyse simultaneous shifts: quantity effect is clear (both increase Q), but price effect is ambiguous (one pushes up, the other pushes down)"
+      ],
+      "required_skills": ["A02", "A04", "A06", "D13"],
+      "prior_knowledge_assumed": ["A02", "A04", "A06", "D13"],
+      "new_skills_introduced": [],
+      "missing_units_flagged": [
+        "Reason about simultaneous supply+demand shifts: determinate Q-direction but ambiguous P-direction (concept-level, diagnostic checkpoint)",
+        "Graphical before/after comparison with shift arrows (grafisch skill, A-domain candidate)"
+      ],
+      "exam_codes": ["A2.10", "A2.12", "A2.15", "D1.12", "D1.24"],
+      "difficulty_notes": "Exercise (e) is the key diagnostic question. When both curves shift right, quantity unambiguously increases, but the price change depends on the relative size of the shifts — it could go up, down, or stay the same. Students who understand the model grasp this; students who are just plugging numbers are surprised. This is an important conceptual checkpoint. One lesson works — the algebra is revision from §1.4.1, the challenge is the reasoning in (e).",
+      "source_ref": "knowledge/course_blueprint_v4.md §1.4.2"
+    },
+    {
+      "id": "1.4.3",
+      "module": 1,
+      "chapter": 4,
+      "paragraph": 3,
+      "paragraph_title": "Marginal concepts: MK and MO",
+      "difficulty": "MEDIUM",
+      "target_exercise": {
+        "context": "A firm has TK = 200 + 3Q (costs in €, Q in units) and sells at a fixed price of €8 per unit, so TO = 8Q. Students build a Q/TK/TO/Winst/MK/MO table and discover patterns.",
+        "subquestions": [
+          {"label": "a", "prompt": "Fill in the table for Q = 0, 10, 20, 30, 40, 50: compute TK, TO, winst, MK (= ΔTK when Q rises by 1) and MO (= ΔTO when Q rises by 1)."},
+          {"label": "b", "prompt": "What do you notice about MK? Is it constant or changing?"},
+          {"label": "c", "prompt": "What do you notice about MO? Why is this logical given a constant price?"},
+          {"label": "d", "prompt": "A second firm has TK = 100 + Q² and sells at €30 per unit. Fill in a similar table for Q = 0, 5, 10, 15, 20. What happens to MK now?"},
+          {"label": "e", "prompt": "Explain in your own words: what does MK tell you? What does MO tell you?"}
+        ]
+      },
+      "lesson_goals": [
+        "Define MK as the additional cost of producing one extra unit (ΔTK/ΔQ)",
+        "Define MO as the additional revenue from selling one extra unit (ΔTO/ΔQ)",
+        "Calculate MK and MO from a table using subtraction",
+        "Observe that MK is constant for linear TK, but increasing for quadratic TK",
+        "Observe that MO equals the price when price is constant",
+        "Build intuitive understanding of marginal thinking"
+      ],
+      "required_skills": ["A07", "A08", "A12", "A13", "A21"],
+      "prior_knowledge_assumed": ["A07", "A08", "A21"],
+      "new_skills_introduced": ["A12", "A13"],
+      "missing_units_flagged": [
+        "Compute MK and MO from a table by taking differences (table-method, precedes A11/A12/A13 differentiation — Module 1 must NOT use calculus; a table-only variant should be its own unit)",
+        "Observe MK constant for linear TK vs increasing for quadratic TK (concept-level pattern recognition)",
+        "Observe MO = P when price is constant (concept-level)"
+      ],
+      "exam_codes": ["A2.11", "A2.1", "D1.21"],
+      "difficulty_notes": "This paragraph introduces the concepts and calculation only — NOT yet the profit maximisation rule. Students work with tables and subtraction, discovering patterns. No differentiation yet. The quadratic cost function in exercise (d) prepares students for rising MK, which they will encounter in Module 3. One lesson works well because the focus is on understanding, not on a complex procedure.",
+      "source_ref": "knowledge/course_blueprint_v4.md §1.4.3"
+    },
+    {
+      "id": "1.4.4",
+      "module": 1,
+      "chapter": 4,
+      "paragraph": 4,
+      "paragraph_title": "Profit maximisation: the MO = MK rule",
+      "difficulty": "MEDIUM",
+      "target_exercise": {
+        "context": "Using Firm 2 from §1.4.3 (TK = 100 + Q², TO = 30Q). Students discover MO = MK from the table, then apply it algebraically with an approximate MK.",
+        "subquestions": [
+          {"label": "a", "prompt": "Extend your table from §1.4.3(d) and add a column for winst at each Q."},
+          {"label": "b", "prompt": "At which Q is winst highest?"},
+          {"label": "c", "prompt": "Look at your MK and MO columns. At the profit-maximising Q, what is true about MK and MO?"},
+          {"label": "d", "prompt": "Explain the rule: 'produce as long as MO ≥ MK, stop when MO = MK.'"},
+          {"label": "e", "prompt": "A third firm has TK = 50 + 2Q² and sells at P = 40. Using the rule MO = MK, calculate the profit-maximising Q WITHOUT making a full table. (Hint: MK = ΔTK/ΔQ. For TK = 50 + 2Q², each extra unit costs approximately 4Q. So set 4Q = 40.)"},
+          {"label": "f", "prompt": "Verify your answer from (e) by calculating winst at Q−1, Q, and Q+1. Is winst indeed highest at your answer?"}
+        ]
+      },
+      "lesson_goals": [
+        "Discover through the table that winst is maximised where MO = MK",
+        "State the profit maximisation rule: produce where MO = MK",
+        "Understand why: if MO > MK, one more unit adds to profit; if MO < MK, it subtracts",
+        "Apply the rule directly (without a full table) by setting MO = MK as an equation",
+        "Verify the solution by checking profit at nearby quantities"
+      ],
+      "required_skills": ["A12", "A13", "A20", "A21", "D30"],
+      "prior_knowledge_assumed": ["A12", "A13", "A21"],
+      "new_skills_introduced": ["A20", "D30"],
+      "missing_units_flagged": [
+        "Approximate MK from TK = a + bQ² as 2bQ without formal differentiation (Module 1 pre-calculus bridge; a distinct unit from A11 'Afgeleide bepalen')",
+        "Verify a profit optimum by checking winst at Q−1, Q, Q+1 (A-domain candidate, good-habits-building step)"
+      ],
+      "exam_codes": ["A2.10", "A2.11", "A2.12", "D1.21"],
+      "difficulty_notes": "Exercise (e) is the bridge to algebraic application. The hint deliberately uses an approximate MK ('each extra unit costs approximately 4Q') rather than formal differentiation — that comes in Module 3. Students learn the logic of the rule here; the calculus technique comes later. Exercise (f) builds verification habits. One lesson works because the rule emerges naturally from the table work in §1.4.3.",
+      "source_ref": "knowledge/course_blueprint_v4.md §1.4.4"
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 # Economics Course Blueprint — Full Paragraph Plan
-## Upper Secondary (VWO-level) | 4 Books × 5 Chapters | Domain D Focus
+## Upper Secondary (VWO-level) | 4 Modules × 5 Chapters | Domain D Focus
 ### Version 4 — For colleague review
 
 ---
@@ -22,23 +22,23 @@ Theory paragraphs are kept lean and focused on one core skill or concept per les
 
 A key design constraint was that **no single paragraph should require more than one lesson in practice**. Teaching experience shows that a lesson that unexpectedly takes two sessions disrupts the entire planning cascade. Every paragraph was assessed for realistic classroom time. Where content was too heavy for one lesson, it was split across paragraphs or redistributed across chapters. This is why, for example, cost structures are split across two paragraphs (totals/averages, then marginals), and monopoly profit maximisation is preceded by a separate "understanding MO at monopoly" lesson.
 
-Book 4 is deliberately lighter than Books 2–3 to accommodate end-of-year fatigue and to serve as a buffer if earlier books run over schedule.
+Module 4 is deliberately lighter than Modules 2–3 to accommodate end-of-year fatigue and to serve as a buffer if earlier modules run over schedule.
 
 ## 4. Paragraph and chapter structure
 
-Each book has 5 chapters: 4 theory chapters and 1 test preparation chapter. Each theory chapter has 3 theory paragraphs and 1 consolidation paragraph (4 paragraphs total). Exception: Book 1 Chapter 4 has 4 theory paragraphs + consolidation (5 total), because marginal analysis needed to be split for didactic reasons.
+Each module has 5 chapters: 4 theory chapters and 1 test preparation chapter. Each theory chapter has 3 theory paragraphs and 1 consolidation paragraph (4 paragraphs total). Exception: §1.4 has 4 theory paragraphs + consolidation (5 total), because marginal analysis needed to be split for didactic reasons.
 
-The test preparation chapter (Chapter 5) has 4 paragraphs with a scaffolded structure of its own: §1 is an active summary with interleaved multiple-choice questions (retrieval practice), §2 trains exam skills (source reading, answer structuring), §3 is an integration exercise combining concepts from across the book, and §4 is a timed practice test under exam conditions. This progression moves from "do I know the pieces?" to "can I combine them?" to "can I do it under pressure?"
+The test preparation chapter (Chapter 5) has 4 paragraphs with a scaffolded structure of its own: §1 is an active summary with interleaved multiple-choice questions (retrieval practice), §2 trains exam skills (source reading, answer structuring), §3 is an integration exercise combining concepts from across the module, and §4 is a timed practice test under exam conditions. This progression moves from "do I know the pieces?" to "can I combine them?" to "can I do it under pressure?"
 
-Total lesson count: ~49 theory lessons + 16 consolidation + 16 test prep lessons ≈ 81–85 lessons. At 2 lessons per week across ~36 school weeks (72 lessons), this is tight. Book 4's lighter load provides the buffer. The test preparation paragraphs can also be compressed if needed — §1 (summary) can be assigned as homework, and §3 and §4 can be combined into a single session.
+Total lesson count: ~49 theory lessons + 16 consolidation + 16 test prep lessons ≈ 81–85 lessons. At 2 lessons per week across ~36 school weeks (72 lessons), this is tight. Module 4's lighter load provides the buffer. The test preparation paragraphs can also be compressed if needed — §1 (summary) can be assigned as homework, and §3 and §4 can be combined into a single session.
 
 ## 5. Building-block progression
 
 The course follows a strict prerequisite chain. Each paragraph builds on earlier ones, and the blueprint explicitly avoids introducing concepts before their foundations are in place. Key progression:
 
-- **Percentages and graphs** (Book 1 Ch1) → **elasticity calculations** (Book 2 Ch1)
-- **Cost structures** (Book 1 Ch3§2) → **marginal costs** (Book 1 Ch4§3) → **MO=MK rule** (Book 1 Ch4§4) → **profit maximisation at volkomen concurrentie** (Book 3 Ch1§2) → **profit maximisation at monopoly** (Book 3 Ch2§3)
-- **Surplus analysis** (Book 2 Ch2) → **welfare effects of taxes** (Book 2 Ch3) → **welfare effects of monopoly** (Book 3 Ch3§1) → **welfare effects of minimum wage on labor market** (Book 4 Ch2§2) → **welfare effects of tariffs** (Book 4 Ch3§3)
+- **Percentages and graphs** (§1.1) → **elasticity calculations** (§2.1)
+- **Cost structures** (§1.3.2) → **marginal costs** (§1.4.3) → **MO=MK rule** (§1.4.4) → **profit maximisation at volkomen concurrentie** (§3.1.2) → **profit maximisation at monopoly** (§3.2.3)
+- **Surplus analysis** (§2.2) → **welfare effects of taxes** (§2.3) → **welfare effects of monopoly** (§3.3.1) → **welfare effects of minimum wage on labor market** (§4.2.2) → **welfare effects of tariffs** (§4.3.3)
 
 These chains mean that weakness in early skills cascades. The consolidation paragraphs serve as checkpoints to catch gaps before they become problems.
 
@@ -46,11 +46,11 @@ These chains mean that weakness in early skills cascades. The consolidation para
 
 Students encounter differentiation of simple quadratic functions for the first time in this economics course, typically before their mathematics course covers it. The blueprint handles this by introducing differentiation as a practical recipe ("power rule: bring down the exponent, reduce by one") applied to economic functions, not as a mathematical concept. The progression is:
 
-1. Marginals from tables and subtraction (Book 1 Ch4§3)
-2. Differentiating TK to find MK (Book 3 Ch1§2) — first use of the rule
-3. Differentiating TO to find MO at monopoly (Book 3 Ch2§2–§3) — full application
+1. Marginals from tables and subtraction (§1.4.3)
+2. Differentiating TK to find MK (§3.1.2) — first use of the rule
+3. Differentiating TO to find MO at monopoly (§3.2.2–§3) — full application
 
-We only need to differentiate quadratic equations. Coordinate with mathematics colleagues when Book 3 Chapter 2 is taught.
+We only need to differentiate quadratic equations. Coordinate with mathematics colleagues when §3.2 is taught.
 
 ## 7. Context and motivation
 
@@ -58,11 +58,11 @@ While theory paragraphs are lean, they are not dry. Each target exercise uses a 
 
 ## 8. Test design
 
-Each book contains two test moments. The **smaller test (45 minutes)** comes mid-book, after chapters 1 and 2, to check whether students are on track and to catch mistakes early — before the material builds further. The **larger test (120 minutes)** comes at the end of the book, covering all four theory chapters, and is the main summative assessment. This rhythm means students get feedback halfway through each book, giving both teacher and students time to correct course before the high-stakes test. The consolidation paragraphs and test prep chapters explicitly prepare students for both formats.
+Each module contains two test moments. The **smaller test (45 minutes)** comes mid-module, after chapters 1 and 2, to check whether students are on track and to catch mistakes early — before the material builds further. The **larger test (120 minutes)** comes at the end of the module, covering all four theory chapters, and is the main summative assessment. This rhythm means students get feedback halfway through each module, giving both teacher and students time to correct course before the high-stakes test. The consolidation paragraphs and test prep chapters explicitly prepare students for both formats.
 
 ## 9. Test preparation chapter design
 
-The test preparation chapter (Chapter 5 of each book) follows its own internal scaffolding. Unlike theory chapters, it introduces no new content. Instead, it systematically builds exam readiness through four paragraphs:
+The test preparation chapter (Chapter 5 of each module) follows its own internal scaffolding. Unlike theory chapters, it introduces no new content. Instead, it systematically builds exam readiness through four paragraphs:
 
 1. **Active summary with multiple-choice questions** — A structured summary of all four theory chapters, broken into short blocks. After each block, 2–3 multiple-choice questions force retrieval practice. Passive re-reading is one of the least effective study strategies; interleaving summary with questions transforms it into active processing. The wrong answer options should represent real student misconceptions, not obviously silly alternatives.
 
@@ -72,16 +72,16 @@ The test preparation chapter (Chapter 5 of each book) follows its own internal s
 
 4. **Timed practice test** — A practice test under exam conditions in the exact format of the upcoming 120-minute test. After completion, class time is used for peer review with a correction model, teaching students to read marking criteria.
 
-The emphasis shifts across books: Book 1 focuses on graph skills and calculation notation; Book 2 emphasises surplus calculations and policy evaluation; Book 3 heavily practises multi-step monopoly procedures; Book 4 is the most cumulative, drawing on all four books.
+The emphasis shifts across modules: Module 1 focuses on graph skills and calculation notation; Module 2 emphasises surplus calculations and policy evaluation; Module 3 heavily practises multi-step monopoly procedures; Module 4 is the most cumulative, drawing on all four modules.
 
 ---
 ---
 
-# BOOK 1 — Foundations & Demand/Supply
+# Module 1 — Foundations & Demand/Supply
 
-## Chapter 1: Economic Thinking & Math Foundations
+## 1.1 — Economic Thinking & Math Foundations
 
-### §1 — Scarcity, opportunity cost, economic thinking ⬜ LIGHT
+### 1.1.1 — Scarcity, opportunity cost, economic thinking ⬜ LIGHT
 
 **Target exercise:**
 > A farmer has 10 hectares of land. He can grow wheat (profit €500/ha) or corn (profit €350/ha). He decides to grow wheat on all 10 hectares.
@@ -99,7 +99,7 @@ The emphasis shifts across books: Book 1 focuses on graph skills and calculation
 
 ---
 
-### §2 — Percentages, percentage changes, index numbers 🟨 MEDIUM
+### 1.1.2 — Percentages, percentage changes, index numbers 🟨 MEDIUM
 
 **Target exercise:**
 > (a) The price of a bicycle rises from €800 to €920. Calculate the percentage change.
@@ -117,7 +117,7 @@ The emphasis shifts across books: Book 1 focuses on graph skills and calculation
 
 ---
 
-### §3 — Reading and drawing graphs, interpreting tables ⬜ LIGHT
+### 1.1.3 — Reading and drawing graphs, interpreting tables ⬜ LIGHT
 
 **Target exercise:**
 > The table below shows the number of ice creams sold at different prices:
@@ -144,15 +144,15 @@ The emphasis shifts across books: Book 1 focuses on graph skills and calculation
 
 ---
 
-### §4 — Consolidation ⬜
+### 1.1.4 — Consolidation ⬜
 
 Extra practice combining all three skills: percentage calculations with graph reading, interpreting index numbers from a table, drawing graphs from data. Introduce first exam-style elements: a short text with a data table, followed by questions that require both reading and calculation. No new theory.
 
 ---
 
-## Chapter 2: Demand
+## 1.2 — Demand
 
-### §1 — Individual demand, betalingsbereidheid, demand curve ⬜ LIGHT
+### 1.2.1 — Individual demand, betalingsbereidheid, demand curve ⬜ LIGHT
 
 **Target exercise:**
 > Lisa loves pizza. She is willing to pay €8 for her first pizza, €6 for the second, €4 for the third, and €1.50 for the fourth.
@@ -171,7 +171,7 @@ Extra practice combining all three skills: percentage calculations with graph re
 
 ---
 
-### §2 — Demand factors, shifts vs movements along the curve 🟨 MEDIUM
+### 1.2.2 — Demand factors, shifts vs movements along the curve 🟨 MEDIUM
 
 **Target exercise:**
 > The market for butter is in equilibrium at P = €2 and Q = 1000.
@@ -190,7 +190,7 @@ Extra practice combining all three skills: percentage calculations with graph re
 
 ---
 
-### §3 — From individual to collective demand 🟨 MEDIUM
+### 1.2.3 — From individual to collective demand 🟨 MEDIUM
 
 **Target exercise:**
 > There are only two consumers on the market for lemonade: Anna and Ben.
@@ -213,19 +213,19 @@ Extra practice combining all three skills: percentage calculations with graph re
 - Derive collective demand algebraically (adding Q's at equal P)
 - Recognise the kink in the collective curve when one consumer drops out
 
-**Difficulty notes:** The horizontal addition (adding Q's, not P's) is counter-intuitive for some students. The algebraic derivation (exercise c) requires comfort with linear equations. One lesson works if algebra skills from Ch1 are solid. The kink (exercise d) can be mentioned but is not essential.
+**Difficulty notes:** The horizontal addition (adding Q's, not P's) is counter-intuitive for some students. The algebraic derivation (exercise c) requires comfort with linear equations. One lesson works if algebra skills from §1.1 are solid. The kink (exercise d) can be mentioned but is not essential.
 
 ---
 
-### §4 — Consolidation ⬜
+### 1.2.4 — Consolidation ⬜
 
 Practice exercises combining demand curves, shifts, and aggregation. Introduce exam-style source material: a short news article about a market (e.g., "avocado prices surge after poor harvest"), followed by questions requiring students to identify shifts, movements, and demand factors. No new theory.
 
 ---
 
-## Chapter 3: Supply & Cost Structures
+## 1.3 — Supply & Cost Structures
 
-### §1 — Supply curve, supply factors, shifts 🟨 MEDIUM
+### 1.3.1 — Supply curve, supply factors, shifts 🟨 MEDIUM
 
 **Target exercise:**
 > (a) A manufacturer of solar panels faces higher silicon prices. Show in a graph what happens to the supply curve for solar panels. Explain.
@@ -239,11 +239,11 @@ Practice exercises combining demand curves, shifts, and aggregation. Introduce e
 - Distinguish between shifts and movements along the supply curve
 - Show supply shifts graphically
 
-**Difficulty notes:** Mirror of Ch2§2. Students pick this up faster because they have the demand framework. The shift/movement distinction gets reinforced. Exercise (c) deliberately does not give away the answer about own price — if a student lists "own price" as a shift factor, it reveals they have not grasped the distinction between movement and shift. This diagnostic value is important. One lesson comfortable.
+**Difficulty notes:** Mirror of §1.2.2. Students pick this up faster because they have the demand framework. The shift/movement distinction gets reinforced. Exercise (c) deliberately does not give away the answer about own price — if a student lists "own price" as a shift factor, it reveals they have not grasped the distinction between movement and shift. This diagnostic value is important. One lesson comfortable.
 
 ---
 
-### §2 — Cost structures: TK, VK, CK, GTK, GVK, GCK 🟨 MEDIUM
+### 1.3.2 — Cost structures: TK, VK, CK, GTK, GVK, GCK 🟨 MEDIUM
 
 **Target exercise:**
 > A bakery has fixed costs (constante kosten) of €500 per month (rent, insurance). Each loaf of bread costs €0.80 in ingredients and energy (variabele kosten per stuk).
@@ -264,7 +264,7 @@ Practice exercises combining demand curves, shifts, and aggregation. Introduce e
 
 ---
 
-### §3 — Revenue: TO, GO, winst, break-even ⬜ LIGHT
+### 1.3.3 — Revenue: TO, GO, winst, break-even ⬜ LIGHT
 
 **Target exercise:**
 > The bakery from §2 sells bread at €1.50 per loaf.
@@ -285,17 +285,17 @@ Practice exercises combining demand curves, shifts, and aggregation. Introduce e
 
 ---
 
-### §4 — Consolidation 🟨
+### 1.3.4 — Consolidation 🟨
 
-Integrative exercises combining costs and revenues. Include: "at which Q is winst maximized?" using tables (NOT yet marginal analysis — that comes in Ch4). Include a short text-based context (e.g., a bakery owner's annual report) with a table of costs and revenues, requiring students to extract and calculate. Build intuition for "there's a sweet spot."
+Integrative exercises combining costs and revenues. Include: "at which Q is winst maximized?" using tables (NOT yet marginal analysis — that comes in §1.4). Include a short text-based context (e.g., a bakery owner's annual report) with a table of costs and revenues, requiring students to extract and calculate. Build intuition for "there's a sweet spot."
 
 ---
 
-## Chapter 4: Market Equilibrium & Marginal Analysis
+## 1.4 — Market Equilibrium & Marginal Analysis
 
 *Note: this chapter has 4 theory paragraphs + consolidation (5 total) because marginal analysis requires two separate lessons — one to build the concepts, one to apply the profit maximisation rule.*
 
-### §1 — Equilibrium: solving Qa = Qv 🟨 MEDIUM
+### 1.4.1 — Equilibrium: solving Qa = Qv 🟨 MEDIUM
 
 **Target exercise:**
 > On the market for notebooks: Qv = −2P + 100 and Qa = 3P − 25.
@@ -310,11 +310,11 @@ Integrative exercises combining costs and revenues. Include: "at which Q is wins
 - Draw demand and supply curves and locate equilibrium graphically
 - Determine surplus or shortage at a given price
 
-**Difficulty notes:** First real algebraic challenge. Students who struggle with rearranging equations need support. Exercise (b) — checking the answer — builds good habits. Exercise (d) bridges to government intervention (Book 2). One lesson is tight if algebra is weak — provide a worked example first, then let students practice.
+**Difficulty notes:** First real algebraic challenge. Students who struggle with rearranging equations need support. Exercise (b) — checking the answer — builds good habits. Exercise (d) bridges to government intervention (Module 2). One lesson is tight if algebra is weak — provide a worked example first, then let students practice.
 
 ---
 
-### §2 — Shifts in supply and demand, new equilibria 🟨 MEDIUM
+### 1.4.2 — Shifts in supply and demand, new equilibria 🟨 MEDIUM
 
 **Target exercise:**
 > Starting from the notebook market (Qv = −2P + 100, Qa = 3P − 25, equilibrium P* = 25, Q* = 50):
@@ -327,7 +327,7 @@ Integrative exercises combining costs and revenues. Include: "at which Q is wins
 **Lesson goals:**
 - Calculate a new equilibrium after a supply or demand shift
 - Compare old and new equilibrium: predict direction of price and quantity change
-- Connect shifts to the demand/supply factors from Ch2 and Ch3
+- Connect shifts to the demand/supply factors from §1.2 and §1.3
 - Show shifts graphically with clear before/after
 - Analyse simultaneous shifts: quantity effect is clear (both increase Q), but price effect is ambiguous (one pushes up, the other pushes down)
 
@@ -335,7 +335,7 @@ Integrative exercises combining costs and revenues. Include: "at which Q is wins
 
 ---
 
-### §3 — Marginal concepts: MK and MO 🟨 MEDIUM
+### 1.4.3 — Marginal concepts: MK and MO 🟨 MEDIUM
 
 **Target exercise:**
 > A firm has TK = 200 + 3Q (costs in €, Q in units) and sells at a fixed price of €8 per unit, so TO = 8Q.
@@ -363,11 +363,11 @@ Integrative exercises combining costs and revenues. Include: "at which Q is wins
 - Observe that MO equals the price when price is constant
 - Build intuitive understanding of marginal thinking
 
-**Difficulty notes:** This paragraph introduces the concepts and calculation only — NOT yet the profit maximisation rule. Students work with tables and subtraction, discovering patterns. No differentiation yet. The quadratic cost function in exercise (d) prepares students for rising MK, which they will encounter in Book 3. One lesson works well because the focus is on understanding, not on a complex procedure.
+**Difficulty notes:** This paragraph introduces the concepts and calculation only — NOT yet the profit maximisation rule. Students work with tables and subtraction, discovering patterns. No differentiation yet. The quadratic cost function in exercise (d) prepares students for rising MK, which they will encounter in Module 3. One lesson works well because the focus is on understanding, not on a complex procedure.
 
 ---
 
-### §4 — Profit maximisation: the MO = MK rule 🟨 MEDIUM
+### 1.4.4 — Profit maximisation: the MO = MK rule 🟨 MEDIUM
 
 **Target exercise:**
 > Using Firm 2 from §3 (TK = 100 + Q², TO = 30Q):
@@ -385,21 +385,21 @@ Integrative exercises combining costs and revenues. Include: "at which Q is wins
 - Apply the rule directly (without a full table) by setting MO = MK as an equation
 - Verify the solution by checking profit at nearby quantities
 
-**Difficulty notes:** Exercise (e) is the bridge to algebraic application. The hint deliberately uses an approximate MK ("each extra unit costs approximately 4Q") rather than formal differentiation — that comes in Book 3. Students learn the logic of the rule here; the calculus technique comes later. Exercise (f) builds verification habits. One lesson works because the rule emerges naturally from the table work in §3.
+**Difficulty notes:** Exercise (e) is the bridge to algebraic application. The hint deliberately uses an approximate MK ("each extra unit costs approximately 4Q") rather than formal differentiation — that comes in Module 3. Students learn the logic of the rule here; the calculus technique comes later. Exercise (f) builds verification habits. One lesson works because the rule emerges naturally from the table work in §3.
 
 ---
 
-### §5 — Consolidation 🟨
+### 1.4.5 — Consolidation 🟨
 
 Full market equilibrium exercises: given functions, find equilibrium, calculate costs/revenue/profit, apply marginal rule. Include exam-style context: a short text about a fruit stand at a market with a cost table, requiring students to find the profit-maximising output and explain their reasoning. Combine graph reading with calculation.
 
 ---
 
-## Chapter 5: Test Preparation
+## 1.5 — Test Preparation
 
-*This chapter has no new theory. It prepares students for the 120-minute end-of-book test covering Chapters 1–4. The 45-minute mid-book test (after Chapter 2, covering Chapters 1–2 only) has already taken place.*
+*This chapter has no new theory. It prepares students for the 120-minute end-of-module test covering Chapters 1–4. The 45-minute mid-module test (after Chapter 2, covering Chapters 1–2 only) has already taken place.*
 
-### §1 — Active summary with knowledge questions
+### 1.5.1 — Active summary with knowledge questions
 
 **Summary blocks cover:**
 - Block 1: Scarcity, opportunity cost, percentage changes, index numbers
@@ -420,11 +420,11 @@ Questions should test understanding, not recall. Use mini-scenarios that require
 >
 > *(Correct: B. Option A is the classic shift/movement confusion.)*
 
-**Emphasis for Book 1:** Focus on graph reading conventions (which axis is which), percentage calculation traps (index points vs percentages), and the shift vs movement distinction.
+**Emphasis for Module 1:** Focus on graph reading conventions (which axis is which), percentage calculation traps (index points vs percentages), and the shift vs movement distinction.
 
 ---
 
-### §2 — Exam skills: reading sources and structuring answers
+### 1.5.2 — Exam skills: reading sources and structuring answers
 
 **Exercises (4–5 short ones):**
 - Given a data table with production costs at different output levels: extract the relevant numbers and calculate GTK and break-even. (Skill: selecting data from a table.)
@@ -432,24 +432,24 @@ Questions should test understanding, not recall. Use mini-scenarios that require
 - Given a short text about a market: identify the demand factors mentioned and predict the direction of the demand shift. Write a full "leg uit" answer. (Skill: structuring a verbal explanation.)
 - Given a calculation question: show two student answers — one that earns full marks and one that loses marks. Identify what's missing from the weaker answer. (Skill: understanding what markers look for.)
 
-**Emphasis for Book 1:** The basics of exam craft. Students learn that "bereken" requires showing all steps, that "leg uit" requires a causal chain (not just a statement), and that graphs need labels and clear markings.
+**Emphasis for Module 1:** The basics of exam craft. Students learn that "bereken" requires showing all steps, that "leg uit" requires a causal chain (not just a statement), and that graphs need labels and clear markings.
 
 ---
 
-### §3 — Integration exercise: combining concepts across chapters
+### 1.5.3 — Integration exercise: combining concepts across chapters
 
 **One coherent context requiring skills from all four chapters:**
 
 > A small coffee roaster sells bags of coffee. Fixed costs are €800/month, variable costs are €3/bag. The individual demand from regular customers and the collective market demand are given as functions. The market is currently in equilibrium.
 >
-> (a) Calculate TK at Q = 200 and Q = 400. Calculate GTK at both. *(Ch3 skill)*
-> (b) The market equilibrium is at P = 7 and Q = 300. Verify this using the given demand and supply functions. *(Ch4 skill)*
-> (c) A news report warns that coffee bean prices will rise by 20%. Show in a graph what happens to the supply curve and the equilibrium. Does the price rise by 20% as well? Why or why not? *(Ch2+Ch3 skill: shifts, supply factors)*
-> (d) At the new equilibrium, calculate MK and MO. Should the roaster produce more or fewer bags? *(Ch4 skill: marginal analysis)*
+> (a) Calculate TK at Q = 200 and Q = 400. Calculate GTK at both. *(§1.3 skill)*
+> (b) The market equilibrium is at P = 7 and Q = 300. Verify this using the given demand and supply functions. *(§1.4 skill)*
+> (c) A news report warns that coffee bean prices will rise by 20%. Show in a graph what happens to the supply curve and the equilibrium. Does the price rise by 20% as well? Why or why not? *(§1.2+§1.3 skill: shifts, supply factors)*
+> (d) At the new equilibrium, calculate MK and MO. Should the roaster produce more or fewer bags? *(§1.4 skill: marginal analysis)*
 
 ---
 
-### §4 — Timed practice test
+### 1.5.4 — Timed practice test
 
 A practice test in the exact format of the upcoming 120-minute test:
 - Same number of questions (6–8 open questions across 3–4 contexts)
@@ -463,11 +463,11 @@ After completion: peer review using a correction model. Students mark each other
 ---
 ---
 
-# BOOK 2 — Elasticities, Surplus & Welfare
+# Module 2 — Elasticities, Surplus & Welfare
 
-## Chapter 1: Elasticities
+## 2.1 — Elasticities
 
-### §1 — Price elasticity: concept and calculation 🟨 MEDIUM
+### 2.1.1 — Price elasticity: concept and calculation 🟨 MEDIUM
 
 **Target exercise:**
 > A cinema raises ticket prices from €10.00 to €12.00. The number of visitors drops from 500 to 420 per week.
@@ -483,11 +483,11 @@ After completion: peer review using a correction model. Students mark each other
 - Classify demand as elastic (|Ev| > 1) or inelastic (|Ev| < 1)
 - Explain intuitively why some goods are more elastic than others (substitutes, necessity vs luxury)
 
-**Difficulty notes:** The formula itself is simple, but students make errors in the percentage calculation (using new instead of old as base, forgetting the sign). Exercise (e) provides immediate contrast — elastic vs inelastic — which cements understanding. One lesson is doable if the percentage skill from Book 1 Ch1§2 is solid. If not, this spills.
+**Difficulty notes:** The formula itself is simple, but students make errors in the percentage calculation (using new instead of old as base, forgetting the sign). Exercise (e) provides immediate contrast — elastic vs inelastic — which cements understanding. One lesson is doable if the percentage skill from §1.1.2 is solid. If not, this spills.
 
 ---
 
-### §2 — Elastic vs inelastic: the connection to omzet (revenue) 🟨 MEDIUM
+### 2.1.2 — Elastic vs inelastic: the connection to omzet (revenue) 🟨 MEDIUM
 
 **Target exercise:**
 > Using the cinema from §1 (price up from €10 to €12, visitors down from 500 to 420):
@@ -507,7 +507,7 @@ After completion: peer review using a correction model. Students mark each other
 
 ---
 
-### §3 — Income elasticity and cross elasticity 🟨 MEDIUM
+### 2.1.3 — Income elasticity and cross elasticity 🟨 MEDIUM
 
 **Target exercise:**
 > *Part A — Income elasticity:*
@@ -541,15 +541,15 @@ After completion: peer review using a correction model. Students mark each other
 
 ---
 
-### §4 — Consolidation 🟨
+### 2.1.4 — Consolidation 🟨
 
 Mixed elasticity problems with exam-style source material. Include a table of real market data (e.g., CBS data on consumer spending) and ask students to calculate relevant elasticities. Include: "given this Ev, what happens to omzet if price changes by X%?" Include one exercise with a multi-variable demand function in a news context. Include a question where students must determine which elasticity to calculate from context.
 
 ---
 
-## Chapter 2: Consumer Surplus, Producer Surplus & Pareto-efficiency
+## 2.2 — Consumer Surplus, Producer Surplus & Pareto-efficiency
 
-### §1 — Consumer surplus 🟨 MEDIUM
+### 2.2.1 — Consumer surplus 🟨 MEDIUM
 
 **Target exercise:**
 > The demand curve for concert tickets is P = 50 − 0.5Q (P in €, Q in tickets).
@@ -569,7 +569,7 @@ Mixed elasticity problems with exam-style source material. Include a table of re
 
 ---
 
-### §2 — Producer surplus, total surplus, and the link to marginal cost 🟨 MEDIUM
+### 2.2.2 — Producer surplus, total surplus, and the link to marginal cost 🟨 MEDIUM
 
 **Target exercise:**
 > The supply curve for concert tickets is P = 5 + 0.25Q. The demand curve is P = 50 − 0.5Q.
@@ -588,11 +588,11 @@ Mixed elasticity problems with exam-style source material. Include a table of re
 - Understand that the supply curve IS the marginal cost curve — so PS is the area between price and MC
 - Begin to understand that competitive equilibrium maximises total surplus
 
-**Difficulty notes:** The graphical work for PS mirrors CS — students pick it up quickly. The challenging element is exercise (e): connecting PS to marginal cost. The supply curve has been treated as "willingness to sell" so far; now students must see it as the MC curve. This dual interpretation (supply = MC) is critical for understanding welfare effects of monopoly in Book 3. Spend time on this connection — it is more important than the triangle calculation itself. One lesson works if you prioritise the MC connection over drilling calculations.
+**Difficulty notes:** The graphical work for PS mirrors CS — students pick it up quickly. The challenging element is exercise (e): connecting PS to marginal cost. The supply curve has been treated as "willingness to sell" so far; now students must see it as the MC curve. This dual interpretation (supply = MC) is critical for understanding welfare effects of monopoly in Module 3. Spend time on this connection — it is more important than the triangle calculation itself. One lesson works if you prioritise the MC connection over drilling calculations.
 
 ---
 
-### §3 — Pareto-efficiency and deadweight loss introduction 🟨 MEDIUM
+### 2.2.3 — Pareto-efficiency and deadweight loss introduction 🟨 MEDIUM
 
 **Target exercise:**
 > Using the market from §2 (equilibrium P = €20, Q = 60, TS = 1350):
@@ -613,15 +613,15 @@ Mixed elasticity problems with exam-style source material. Include a table of re
 
 ---
 
-### §4 — Consolidation 🟨
+### 2.2.4 — Consolidation 🟨
 
 Practice with different demand/supply functions. Include exam-style source material: a graph with demand and supply curves and a policy intervention, requiring students to calculate surplus and welfare loss. Include: "rank three market outcomes by total surplus." Include a verbal explanation question: "a politician says a maximum price helps consumers. Evaluate this claim using surplus analysis."
 
 ---
 
-## Chapter 3: Government Intervention — Taxes & Subsidies
+## 2.3 — Government Intervention — Taxes & Subsidies
 
-### §1 — Taxes: the wedge and the new equilibrium 🟨 MEDIUM
+### 2.3.1 — Taxes: the wedge and the new equilibrium 🟨 MEDIUM
 
 **Target exercise:**
 > Market: Qv = −2P + 20 and Qa = P − 1. The government introduces a tax of €3 per unit, paid by the producer.
@@ -641,7 +641,7 @@ Practice with different demand/supply functions. Include exam-style source mater
 
 ---
 
-### §2 — Taxes: burden sharing, afwenteling and welfare loss 🟨 MEDIUM
+### 2.3.2 — Taxes: burden sharing, afwenteling and welfare loss 🟨 MEDIUM
 
 **Target exercise:**
 > Using the market from §1 (original: P* = 7, Q* = 6; after tax €3: Pc = 8, Pp = 5, Qt = 3):
@@ -663,7 +663,7 @@ Practice with different demand/supply functions. Include exam-style source mater
 
 ---
 
-### §3 — Subsidies: mirror of taxes 🟨 MEDIUM
+### 2.3.3 — Subsidies: mirror of taxes 🟨 MEDIUM
 
 **Target exercise:**
 > Market: Qv = −4P + 40 and Qa = 2P − 2. The government gives a subsidy of €3 per unit to producers.
@@ -685,15 +685,15 @@ Practice with different demand/supply functions. Include exam-style source mater
 
 ---
 
-### §4 — Consolidation 🟨
+### 2.3.4 — Consolidation 🟨
 
 Mixed tax and subsidy problems with exam-style source material. Include a graph showing a market with a tax, accompanied by a data table (before/after quantities and prices), requiring students to calculate afwenteling, surplus, and DWL. Include: "the government can use a tax or a subsidy to achieve the same goal — which is cheaper?" Include an exam-style context (environmental tax on plastic bags, subsidy for electric cars).
 
 ---
 
-## Chapter 4: Government Intervention — Price Controls
+## 2.4 — Government Intervention — Price Controls
 
-### §1 — Maximum price (prijsplafond) 🟨 MEDIUM
+### 2.4.1 — Maximum price (prijsplafond) 🟨 MEDIUM
 
 **Target exercise:**
 > The market for rental housing: Qv = −5P + 6000 and Qa = 3P − 1600 (P in €/month, Q in apartments).
@@ -711,11 +711,11 @@ Mixed tax and subsidy problems with exam-style source material. Include a graph 
 - Identify deadweight loss graphically and computationally
 - Evaluate the trade-off: lower price for some vs fewer available units
 
-**Difficulty notes:** The welfare analysis here is more nuanced than taxes: some consumers gain, others lose access entirely. Exercise (f) forces critical thinking. One lesson works — the graph is similar to Ch2§3 (forced price deviation), so students recognise the pattern.
+**Difficulty notes:** The welfare analysis here is more nuanced than taxes: some consumers gain, others lose access entirely. Exercise (f) forces critical thinking. One lesson works — the graph is similar to §2.2.3 (forced price deviation), so students recognise the pattern.
 
 ---
 
-### §2 — Minimum price (minimumprijs/garantieprijs) 🟨 MEDIUM
+### 2.4.2 — Minimum price (minimumprijs/garantieprijs) 🟨 MEDIUM
 
 **Target exercise:**
 > The EU sets a minimum price for butter at €6/kg. The market: Qv = −10P + 100 and Qa = 5P − 5 (Q in millions of kg).
@@ -736,7 +736,7 @@ Mixed tax and subsidy problems with exam-style source material. Include a graph 
 
 ---
 
-### §3 — Production quotas 🟨 MEDIUM
+### 2.4.3 — Production quotas 🟨 MEDIUM
 
 **Target exercise:**
 > The milk market: Qv = −2P + 200 and Qa = P − 10 (Q in million litres).
@@ -758,17 +758,17 @@ Mixed tax and subsidy problems with exam-style source material. Include a graph 
 
 ---
 
-### §4 — Consolidation 🟨
+### 2.4.4 — Consolidation 🟨
 
 Full government intervention problems mixing taxes, subsidies, price floors, price ceilings, and quotas. Include exam-style source material: a news article about EU agricultural policy with a data table, requiring students to analyse the intervention using surplus concepts. Include: "the government wants to reduce alcohol consumption — compare a tax, a maximum sales quantity, and a minimum price." 
 
 ---
 
-## Chapter 5: Test Preparation
+## 2.5 — Test Preparation
 
-*This chapter has no new theory. It prepares students for the 120-minute end-of-book test covering Chapters 1–4. The 45-minute mid-book test (after Chapter 2, covering elasticities and surplus analysis) has already taken place.*
+*This chapter has no new theory. It prepares students for the 120-minute end-of-module test covering Chapters 1–4. The 45-minute mid-module test (after Chapter 2, covering elasticities and surplus analysis) has already taken place.*
 
-### §1 — Active summary with knowledge questions
+### 2.5.1 — Active summary with knowledge questions
 
 **Summary blocks cover:**
 - Block 1: Price elasticity (Ev), elastic vs inelastic, connection to omzet
@@ -797,11 +797,11 @@ Full government intervention problems mixing taxes, subsidies, price floors, pri
 >
 > *(Correct: B. DWL = old TS − (new CS + new PS + tax revenue) = 500 − 450 = 50. Option A is the trap — students who forget to include government revenue in the welfare calculation.)*
 
-**Emphasis for Book 2:** Elasticity interpretation (not just calculation), the surplus accounting identity (old TS = new CS + new PS + government revenue + DWL), and distinguishing between the welfare effects of different policy instruments.
+**Emphasis for Module 2:** Elasticity interpretation (not just calculation), the surplus accounting identity (old TS = new CS + new PS + government revenue + DWL), and distinguishing between the welfare effects of different policy instruments.
 
 ---
 
-### §2 — Exam skills: reading sources and structuring answers
+### 2.5.2 — Exam skills: reading sources and structuring answers
 
 **Exercises (4–5 short ones):**
 - Given a graph showing a market with a tax wedge but no labels: identify the consumer price, producer price, tax revenue area, and deadweight loss area. (Skill: reading an unlabelled policy graph.)
@@ -809,25 +809,25 @@ Full government intervention problems mixing taxes, subsidies, price floors, pri
 - A politician says: "The sugar tax will be paid entirely by consumers." Given the elasticities, evaluate this claim. Write a full "beoordeel" answer. (Skill: the standpuntbepaling answer structure — state the claim, give arguments for and against, use data to support, conclude.)
 - Given two student answers to the same "verklaar" question: identify which answer earns more marks and explain why. (Skill: understanding causal chains in verbal answers.)
 
-**Emphasis for Book 2:** The "beoordeel" (evaluate) answer structure, which appears for the first time as students encounter policy trade-offs. Also: reading and interpreting policy graphs accurately.
+**Emphasis for Module 2:** The "beoordeel" (evaluate) answer structure, which appears for the first time as students encounter policy trade-offs. Also: reading and interpreting policy graphs accurately.
 
 ---
 
-### §3 — Integration exercise: combining concepts across chapters
+### 2.5.3 — Integration exercise: combining concepts across chapters
 
 **One coherent context requiring skills from all four chapters:**
 
 > The government is considering three policies to reduce plastic bag consumption: (i) a tax of €0.25 per bag, (ii) a maximum sales quantity (quota) of 500 million bags, (iii) a subsidy on reusable bags. The market for plastic bags has demand Qv = −800P + 1200 and supply Qa = 400P − 200 (Q in millions, P in euros).
 >
-> (a) Calculate the current equilibrium price and quantity. *(Ch1-2 revision skill)*
-> (b) Calculate the price elasticity of demand at the current equilibrium. Is demand elastic or inelastic? What does this predict about the effectiveness of a price-based policy? *(Ch1 skill)*
-> (c) Analyse the tax option: calculate the new equilibrium, the consumer and producer prices, the afwentelingspercentage, CS, PS, tax revenue, and DWL. *(Ch3 skill)*
-> (d) Analyse the quota option: calculate the new price and the welfare effects. *(Ch4 skill)*
+> (a) Calculate the current equilibrium price and quantity. *(§2.1-2 revision skill)*
+> (b) Calculate the price elasticity of demand at the current equilibrium. Is demand elastic or inelastic? What does this predict about the effectiveness of a price-based policy? *(§2.1 skill)*
+> (c) Analyse the tax option: calculate the new equilibrium, the consumer and producer prices, the afwentelingspercentage, CS, PS, tax revenue, and DWL. *(§2.3 skill)*
+> (d) Analyse the quota option: calculate the new price and the welfare effects. *(§2.4 skill)*
 > (e) Compare the two policies: which reduces consumption more? Which creates less deadweight loss? Which raises revenue for the government? Advise the government, using your calculations. *(Integration + standpuntbepaling)*
 
 ---
 
-### §4 — Timed practice test
+### 2.5.4 — Timed practice test
 
 A practice test in the exact format of the upcoming 120-minute test:
 - Same number of questions (6–8 open questions across 3–4 contexts)
@@ -841,11 +841,11 @@ After completion: peer review using a correction model. Focus particularly on wh
 ---
 ---
 
-# BOOK 3 — Market Structures & Market Failure
+# Module 3 — Market Structures & Market Failure
 
-## Chapter 1: Perfect Competition
+## 3.1 — Perfect Competition
 
-### §1 — Characteristics of volkomen concurrentie ⬜ LIGHT
+### 3.1.1 — Characteristics of volkomen concurrentie ⬜ LIGHT
 
 **Target exercise:**
 > A wheat farmer sells wheat at the market price of €200 per ton. He cannot influence this price.
@@ -864,7 +864,7 @@ After completion: peer review using a correction model. Focus particularly on wh
 
 ---
 
-### §2 — Profit maximisation: MO = MK at volkomen concurrentie 🟨 MEDIUM
+### 3.1.2 — Profit maximisation: MO = MK at volkomen concurrentie 🟨 MEDIUM
 
 **Target exercise:**
 > The wheat farmer's costs are TK = 0.5Q² + 10Q + 500 (Q in tons). Market price is €200/ton.
@@ -883,13 +883,13 @@ After completion: peer review using a correction model. Focus particularly on wh
 - Show the MO = MK solution graphically
 - Explain why producing beyond MO = MK reduces profit
 
-**Difficulty notes:** This is where differentiation enters the course. The power rule on a quadratic is simple ("multiply by 2, drop the Q's power by 1"). Students need to see it as a recipe. The conceptual link ("marginal cost tells you what one more ton costs") was established in Book 1 Ch4§3–§4. Exercise (f) tests whether they understand the rule, not just apply it. One lesson is tight — spend the first 15 minutes on the differentiation technique, then apply it.
+**Difficulty notes:** This is where differentiation enters the course. The power rule on a quadratic is simple ("multiply by 2, drop the Q's power by 1"). Students need to see it as a recipe. The conceptual link ("marginal cost tells you what one more ton costs") was established in §1.4.3–§4. Exercise (f) tests whether they understand the rule, not just apply it. One lesson is tight — spend the first 15 minutes on the differentiation technique, then apply it.
 
 **Algebra-voorbereiding op §3:** in de volgende paragraaf gebruiken leerlingen GTK = TK/Q. Om daarop voorbereid te zijn, besteed de laatste 5 minuten aan één oefening: gegeven TK = 0,5Q² + 10Q + 500, laat zien dat GTK = 0,5Q + 10 + 500/Q. Dit is alleen TK delen door Q, term voor term. De `500/Q`-term voelt wennen — benoem expliciet dat deze term groter wordt naarmate Q kleiner wordt (vaste kosten per eenheid dalen bij schaalvoordelen). Dit geeft leerlingen de intuïtie vóór ze in §3 de vergelijking moeten oplossen.
 
 ---
 
-### §3 — Long-run equilibrium: entry and exit 🟨 MEDIUM
+### 3.1.3 — Long-run equilibrium: entry and exit 🟨 MEDIUM
 
 **Target exercise:**
 > The wheat farmer from §2 makes a profit.
@@ -915,15 +915,15 @@ After completion: peer review using a correction model. Focus particularly on wh
 
 ---
 
-### §4 — Consolidation 🟨
+### 3.1.4 — Consolidation 🟨
 
 Full perfect competition exercises: from cost function → MK → MO = MK → optimal Q → profit → long-run adjustment. Include exam-style source material: a text about a competitive agricultural market with a cost/revenue table, requiring students to find optimal output and explain long-run dynamics. Include context: "a strawberry grower," "a t-shirt factory in a competitive market."
 
 ---
 
-## Chapter 2: Monopoly — Concepts & Mechanics
+## 3.2 — Monopoly — Concepts & Mechanics
 
-### §1 — Characteristics of monopoly 🟨 MEDIUM
+### 3.2.1 — Characteristics of monopoly 🟨 MEDIUM
 
 **Target exercise:**
 > (a) The NS (Dutch Railways) is the only provider of train services on most routes. Name three reasons why monopolies can exist (with an example for each).
@@ -942,7 +942,7 @@ Full perfect competition exercises: from cost function → MK → MO = MK → op
 
 ---
 
-### §2 — MO at monopoly: understanding the declining MO curve 🟨 MEDIUM
+### 3.2.2 — MO at monopoly: understanding the declining MO curve 🟨 MEDIUM
 
 **Target exercise:**
 > A monopolist faces demand Qv = 100 − 2P, or equivalently P = 50 − 0.5Q.
@@ -970,11 +970,11 @@ Full perfect competition exercises: from cost function → MK → MO = MK → op
 - Observe that the MO curve has twice the slope of the demand curve
 - Derive MO by differentiating TO (first application of power rule on a quadratic revenue function)
 
-**Difficulty notes:** This is the key preparation lesson for §3. The table method (exercises a–c) builds intuition BEFORE the algebra (exercise e). Students see the pattern in the numbers first, then verify with calculus. The differentiation in (e) uses the same power rule from Ch1§2. One lesson works IF you do the table first — don't start with algebra.
+**Difficulty notes:** This is the key preparation lesson for §3. The table method (exercises a–c) builds intuition BEFORE the algebra (exercise e). Students see the pattern in the numbers first, then verify with calculus. The differentiation in (e) uses the same power rule from §3.1.2. One lesson works IF you do the table first — don't start with algebra.
 
 ---
 
-### §3 — Profit maximisation at monopoly: full calculation 🟥→🟨 HEAVY (made manageable)
+### 3.2.3 — Profit maximisation at monopoly: full calculation 🟥→🟨 HEAVY (made manageable)
 
 **Target exercise:**
 > The monopolist from §2 has demand P = 50 − 0.5Q and costs TK = 0.25Q² + 5Q + 100.
@@ -999,22 +999,22 @@ Full perfect competition exercises: from cost function → MK → MO = MK → op
 - Draw the complete monopoly graph with MO, MK, demand curve
 - Identify the profit area graphically
 
-**Difficulty notes:** The most demanding lesson in the course. 6 algebraic steps plus a graph. However, students have been prepared: MK differentiation (Ch1§2), MO table and differentiation (Ch2§2), MO = MK rule (Book 1 Ch4§3–§4). The exercise is scaffolded step-by-step. In class: work through steps (a–f) together as guided practice, assign (g–h) as homework. One lesson is tight but feasible with this scaffolding.
+**Difficulty notes:** The most demanding lesson in the course. 6 algebraic steps plus a graph. However, students have been prepared: MK differentiation (§3.1.2), MO table and differentiation (§3.2.2), MO = MK rule (§1.4.3–§4). The exercise is scaffolded step-by-step. In class: work through steps (a–f) together as guided practice, assign (g–h) as homework. One lesson is tight but feasible with this scaffolding.
 
 ---
 
-### §4 — Consolidation 🟥
+### 3.2.4 — Consolidation 🟥
 
 The hardest consolidation in the course. Multiple monopoly profit maximisation exercises with different demand and cost functions. Include exam-style source material: a text describing a monopolist (e.g., a water company) with a graph showing demand and cost curves, requiring students to read off values and calculate optimal output and profit. Include: "a monopolist with constant MK" (simpler), "a monopolist with increasing MK" (standard), and one where students must first rewrite the demand function.
 
 ---
 
-## Chapter 3: Monopoly Welfare, Price Discrimination & Other Structures
+## 3.3 — Monopoly Welfare, Price Discrimination & Other Structures
 
-### §1 — Welfare effects of monopoly: surplus and Harberger triangle 🟨 MEDIUM
+### 3.3.1 — Welfare effects of monopoly: surplus and Harberger triangle 🟨 MEDIUM
 
 **Target exercise:**
-> Using the monopolist from Ch2§3 (optimal P = €30, Q = 40, with demand P = 50 − 0.5Q and MK = 0.5Q + 5):
+> Using the monopolist from §3.2.3 (optimal P = €30, Q = 40, with demand P = 50 − 0.5Q and MK = 0.5Q + 5):
 > (a) Calculate CS at the monopoly price. (Triangle between demand curve and price, from Q = 0 to Q = 40.)
 > (b) Calculate PS at the monopoly price.
 > (c) Now calculate what TS would be under perfect competition (where P = MK, i.e. demand = MK). Find the competitive P and Q. Calculate competitive TS.
@@ -1028,11 +1028,11 @@ The hardest consolidation in the course. Multiple monopoly profit maximisation e
 - Understand that monopoly transfers surplus from consumers to producer AND destroys some surplus entirely
 - Explain why monopoly is not Pareto-efficient
 
-**Difficulty notes:** Builds directly on Book 2 Ch2 (surplus analysis) and Ch2§3 (monopoly mechanics). The calculation involves finding the competitive equilibrium (demand = supply/MK) — which is revision from Book 1. The new element is the comparison. One lesson works because students already have all the component skills.
+**Difficulty notes:** Builds directly on §2.2 (surplus analysis) and §3.2.3 (monopoly mechanics). The calculation involves finding the competitive equilibrium (demand = supply/MK) — which is revision from Module 1. The new element is the comparison. One lesson works because students already have all the component skills.
 
 ---
 
-### §2 — Price discrimination 🟨 MEDIUM
+### 3.3.2 — Price discrimination 🟨 MEDIUM
 
 **Target exercise:**
 > A theme park faces two groups: adults (Qv = −5P + 300) and children (Qv = −10P + 300). MK = €10 (constant).
@@ -1053,7 +1053,7 @@ The hardest consolidation in the course. Multiple monopoly profit maximisation e
 
 ---
 
-### §3 — Overview of all market structures 🟨 MEDIUM
+### 3.3.3 — Overview of all market structures 🟨 MEDIUM
 
 **Target exercise:**
 > (a) Complete the comparison table:
@@ -1082,15 +1082,15 @@ The hardest consolidation in the course. Multiple monopoly profit maximisation e
 
 ---
 
-### §4 — Consolidation 🟨
+### 3.3.4 — Consolidation 🟨
 
 Mixed exercises across market structures with exam-style source material. Include a text about a specific market (e.g., "the market for streaming services") with market data, requiring students to identify the structure, analyse pricing behaviour, and evaluate welfare effects. Include: "given these market characteristics, identify the structure and predict pricing behaviour." Include a comparison: "a market changes from monopoly to oligopoly — what happens to price and welfare?"
 
 ---
 
-## Chapter 4: Market Failure & External Effects
+## 3.4 — Market Failure & External Effects
 
-### §1 — Negative external effects 🟨 MEDIUM
+### 3.4.1 — Negative external effects 🟨 MEDIUM
 
 **Target exercise:**
 > A factory produces chemicals. Private marginal costs are MPC = 2Q. But production causes water pollution costing nearby fishermen €4 per unit. So social marginal costs are MSC = 2Q + 4. Market demand is P = 20 − Q.
@@ -1107,11 +1107,11 @@ Mixed exercises across market structures with exam-style source material. Includ
 - Calculate the welfare loss from overproduction (the market produces too much)
 - Explain why externalities cause market failure: the market price doesn't reflect the full cost
 
-**Difficulty notes:** New graph type: two supply curves (MPC and MSC). Students must understand why the market uses MPC (because firms don't pay for pollution) while society should use MSC. The math is straightforward — it's the same equilibrium calculation as Book 1, just done twice. One lesson works.
+**Difficulty notes:** New graph type: two supply curves (MPC and MSC). Students must understand why the market uses MPC (because firms don't pay for pollution) while society should use MSC. The math is straightforward — it's the same equilibrium calculation as Module 1, just done twice. One lesson works.
 
 ---
 
-### §2 — Positive external effects 🟨 MEDIUM
+### 3.4.2 — Positive external effects 🟨 MEDIUM
 
 **Target exercise:**
 > Vaccinations have positive external effects: each person vaccinated protects others (herd immunity). Private marginal benefits are MPB. Social marginal benefits are MSB = MPB + €5 (the benefit to others).
@@ -1129,18 +1129,18 @@ Mixed exercises across market structures with exam-style source material. Includ
 - Suggest correction: subsidy equal to the external benefit per unit
 - Draw the graph with MPB and MSB
 
-**Difficulty notes:** Mirror of §1 — if students understood negative externalities, this is the same logic reversed. The policy suggestion (exercise e) connects back to Book 2 Ch3 (subsidies). One lesson comfortable.
+**Difficulty notes:** Mirror of §1 — if students understood negative externalities, this is the same logic reversed. The policy suggestion (exercise e) connects back to §2.3 (subsidies). One lesson comfortable.
 
 ---
 
-### §3 — Government correction of market failure 🟨 MEDIUM
+### 3.4.3 — Government correction of market failure 🟨 MEDIUM
 
 **Target exercise:**
 > Using the factory from §1 (MPC = 2Q, MSC = 2Q + 4, demand P = 20 − Q):
 > (a) The government introduces a Pigouvian tax of €4 per unit. Write the new private cost function (MPC + tax). Calculate the new market equilibrium.
 > (b) Compare this with the socially optimal outcome from §1(b). Are they the same?
 > (c) An economist suggests: "Instead of a tax, let the fishermen negotiate with the factory. If they pay the factory to reduce output, both sides can be better off." This is called the Coase theorem. Under what condition does this work? (Hint: think about transaction costs and property rights.)
-> (d) The factory has a patent on its chemical process. Explain how a patent can simultaneously be a solution to one market failure (innovation) and a cause of another (monopoly). Connect to Ch2.
+> (d) The factory has a patent on its chemical process. Explain how a patent can simultaneously be a solution to one market failure (innovation) and a cause of another (monopoly). Connect to §3.2.
 > (e) Name three policy instruments the government can use to correct negative externalities and give a real example for each.
 
 **Lesson goals:**
@@ -1154,17 +1154,17 @@ Mixed exercises across market structures with exam-style source material. Includ
 
 ---
 
-### §4 — Consolidation 🟨
+### 3.4.4 — Consolidation 🟨
 
 Full market failure exercises with exam-style source material. Include a longer text about an environmental issue (e.g., nitrogen emissions in the Netherlands) with data, requiring students to identify external effects, calculate welfare loss, and evaluate policy options. Include: "a factory pollutes AND has a monopoly — analyse both market failures and their interaction."
 
 ---
 
-## Chapter 5: Test Preparation
+## 3.5 — Test Preparation
 
-*This chapter has no new theory. It prepares students for the 120-minute end-of-book test covering Chapters 1–4. The 45-minute mid-book test (after Chapter 2, covering perfect competition and monopoly mechanics) has already taken place.*
+*This chapter has no new theory. It prepares students for the 120-minute end-of-module test covering Chapters 1–4. The 45-minute mid-module test (after Chapter 2, covering perfect competition and monopoly mechanics) has already taken place.*
 
-### §1 — Active summary with knowledge questions
+### 3.5.1 — Active summary with knowledge questions
 
 **Summary blocks cover:**
 - Block 1: Characteristics of perfect competition, P = GO = MO, profit maximisation with MO = MK (differentiation), long-run equilibrium (GTK = MK)
@@ -1193,11 +1193,11 @@ Full market failure exercises with exam-style source material. Include a longer 
 >
 > *(Correct: B. Option C is the common error — students think a tax doesn't change quantity.)*
 
-**Emphasis for Book 3:** The multi-step monopoly procedure (students must be able to reproduce the 6 steps from memory), the comparison between market structures (which produces highest TS?), and the distinction between private and social costs.
+**Emphasis for Module 3:** The multi-step monopoly procedure (students must be able to reproduce the 6 steps from memory), the comparison between market structures (which produces highest TS?), and the distinction between private and social costs.
 
 ---
 
-### §2 — Exam skills: reading sources and structuring answers
+### 3.5.2 — Exam skills: reading sources and structuring answers
 
 **Exercises (4–5 short ones):**
 - Given a monopoly graph with MO, MK, and demand curve but no calculated values: read off the profit-maximising Q, the price, and shade the profit area and the Harberger triangle. (Skill: reading and interpreting a monopoly graph without algebra.)
@@ -1205,25 +1205,25 @@ Full market failure exercises with exam-style source material. Include a longer 
 - A question asks: "Bereken het welvaartsverlies door monopolie." Show a model answer with all required steps clearly labelled. Then show a weaker student answer that makes a common error (e.g., forgetting to calculate the competitive benchmark). (Skill: understanding what a complete "bereken" answer looks like for a multi-step problem.)
 - Given a graph showing external effects with MPC and MSC: calculate the welfare loss from overproduction. Write a "verklaar" answer explaining why the market produces too much. (Skill: combining calculation with causal explanation.)
 
-**Emphasis for Book 3:** Reading monopoly graphs (the most complex graph type students encounter), and structuring multi-step calculation answers so no steps are skipped.
+**Emphasis for Module 3:** Reading monopoly graphs (the most complex graph type students encounter), and structuring multi-step calculation answers so no steps are skipped.
 
 ---
 
-### §3 — Integration exercise: combining concepts across chapters
+### 3.5.3 — Integration exercise: combining concepts across chapters
 
 **One coherent context requiring skills from all four chapters:**
 
 > PharmaCorp is the sole producer of a patented medication. Demand is P = 100 − 0.5Q. Costs are TK = 0.25Q² + 10Q + 200. The production process also generates chemical waste, imposing an external cost of €5 per unit on local residents.
 >
-> (a) Calculate PharmaCorp's profit-maximising Q and P using MO = MK. Calculate the profit. *(Ch2 skill: monopoly winstmaximalisatie)*
-> (b) Calculate CS, PS, and the Harberger triangle. How much total surplus is lost compared to the competitive outcome? *(Ch3 skill: welfare analysis)*
-> (c) Now consider the external cost. What is the socially optimal output? (Hint: add the external cost to MK and set equal to demand.) *(Ch4 skill: external effects)*
-> (d) The government can revoke the patent (creating competition) or impose a Pigouvian tax (correcting the externality). Analyse: which policy addresses which market failure? Can they be combined? What would happen? *(Ch1+Ch3+Ch4 integration + standpuntbepaling)*
-> (e) A health economist argues: "The patent should be maintained because it funds R&D for future drugs." Evaluate this argument. *(Ch4 skill: patents as double-edged sword)*
+> (a) Calculate PharmaCorp's profit-maximising Q and P using MO = MK. Calculate the profit. *(§3.2 skill: monopoly winstmaximalisatie)*
+> (b) Calculate CS, PS, and the Harberger triangle. How much total surplus is lost compared to the competitive outcome? *(§3.3 skill: welfare analysis)*
+> (c) Now consider the external cost. What is the socially optimal output? (Hint: add the external cost to MK and set equal to demand.) *(§3.4 skill: external effects)*
+> (d) The government can revoke the patent (creating competition) or impose a Pigouvian tax (correcting the externality). Analyse: which policy addresses which market failure? Can they be combined? What would happen? *(§3.1+§3.3+§3.4 integration + standpuntbepaling)*
+> (e) A health economist argues: "The patent should be maintained because it funds R&D for future drugs." Evaluate this argument. *(§3.4 skill: patents as double-edged sword)*
 
 ---
 
-### §4 — Timed practice test
+### 3.5.4 — Timed practice test
 
 A practice test in the exact format of the upcoming 120-minute test:
 - Same number of questions (6–8 open questions across 3–4 contexts)
@@ -1237,11 +1237,11 @@ After completion: peer review using a correction model. Pay particular attention
 ---
 ---
 
-# BOOK 4 — Labor Markets, Trade & Macro Basics
+# Module 4 — Labor Markets, Trade & Macro Basics
 
-## Chapter 1: Labor Market Basics
+## 4.1 — Labor Market Basics
 
-### §1 — Labor demand: derived demand and marginal productivity ⬜ LIGHT
+### 4.1.1 — Labor demand: derived demand and marginal productivity ⬜ LIGHT
 
 **Target exercise:**
 > A restaurant hires waiters. Each waiter can serve a certain number of additional meals per evening:
@@ -1267,11 +1267,11 @@ After completion: peer review using a correction model. Pay particular attention
 - Understand derived demand: labor is demanded because of demand for the product
 - Draw a labor demand curve (which is the VMP curve)
 
-**Difficulty notes:** Connects directly to marginal analysis from Book 1 and Book 3 (MO = MK is analogous to VMP = W). Students find the restaurant context engaging. The diminishing marginal product is intuitive ("the kitchen gets crowded"). One lesson comfortable.
+**Difficulty notes:** Connects directly to marginal analysis from Module 1 and Module 3 (MO = MK is analogous to VMP = W). Students find the restaurant context engaging. The diminishing marginal product is intuitive ("the kitchen gets crowded"). One lesson comfortable.
 
 ---
 
-### §2 — Labor supply and participation rate 🟨 MEDIUM
+### 4.1.2 — Labor supply and participation rate 🟨 MEDIUM
 
 **Target exercise:**
 > Country X has the following data:
@@ -1296,7 +1296,7 @@ After completion: peer review using a correction model. Pay particular attention
 
 ---
 
-### §3 — Labor market equilibrium ⬜ LIGHT
+### 4.1.3 — Labor market equilibrium ⬜ LIGHT
 
 **Target exercise:**
 > The labor market for IT workers: Qd = −200W + 5000 and Qs = 300W − 1000 (W = wage in €/hour, Q = number of workers).
@@ -1313,19 +1313,19 @@ After completion: peer review using a correction model. Pay particular attention
 - Predict wage adjustments from market imbalances
 - Analyse shifts in labor demand or supply
 
-**Difficulty notes:** Direct transfer from Book 1 Ch4 — same math, different context. Students recognise the framework. Exercise (e) mirrors Book 1 Ch4§2. One lesson comfortable. This is a confidence-building lesson.
+**Difficulty notes:** Direct transfer from §1.4 — same math, different context. Students recognise the framework. Exercise (e) mirrors §1.4.2. One lesson comfortable. This is a confidence-building lesson.
 
 ---
 
-### §4 — Consolidation ⬜
+### 4.1.4 — Consolidation ⬜
 
 Practice with different labor markets. Include exam-style source material: CBS data on labor market statistics (beroepsbevolking, werkloosheid) with a graph showing trends over time, requiring students to calculate and interpret changes. Include context: "the labor market for nurses," "the gig economy." Simple surplus analysis on the labor market.
 
 ---
 
-## Chapter 2: Wages, Minimum Wage & Unemployment
+## 4.2 — Wages, Minimum Wage & Unemployment
 
-### §1 — Types of unemployment 🟨 MEDIUM
+### 4.2.1 — Types of unemployment 🟨 MEDIUM
 
 **Target exercise:**
 > Classify each situation as conjuncturele werkloosheid, structurele werkloosheid, or frictiewerkloosheid. Explain your choice.
@@ -1347,10 +1347,10 @@ Practice with different labor markets. Include exam-style source material: CBS d
 
 ---
 
-### §2 — Minimum wage: welfare effects on the labor market 🟨 MEDIUM
+### 4.2.2 — Minimum wage: welfare effects on the labor market 🟨 MEDIUM
 
 **Target exercise:**
-> Using the IT labor market from Ch1§3: Qd = −200W + 5000, Qs = 300W − 1000 (equilibrium W* = €12, Q* = 2600).
+> Using the IT labor market from §4.1.3: Qd = −200W + 5000, Qs = 300W − 1000 (equilibrium W* = €12, Q* = 2600).
 > (a) The government sets a minimum wage of €15/hour. Calculate Qd and Qs at this wage.
 > (b) How many workers become unemployed? (= Qs − Qd)
 > (c) Draw the labor market with the minimum wage. Shade the werknemerssurplus and werkgeverssurplus.
@@ -1359,17 +1359,17 @@ Practice with different labor markets. Include exam-style source material: CBS d
 > (f) Some workers earn more (€15 instead of €12), but others lose their jobs. Evaluate: "A minimum wage helps workers." Use your calculations to argue both sides.
 
 **Lesson goals:**
-- Apply the minimum price framework from Book 2 Ch4§2 to the labor market
+- Apply the minimum price framework from §2.4.2 to the labor market
 - Calculate unemployment caused by a minimum wage (surplus of labor)
 - Calculate welfare effects: werknemerssurplus, werkgeverssurplus, deadweight loss
 - Recognise the trade-off: higher wages for employed vs job losses for others
 - Formulate a balanced evaluation of minimum wage policy
 
-**Difficulty notes:** This is a direct transfer from Book 2 (minimumprijs). Students should recognise the framework: a minimum wage IS a minimum price on labor. The welfare calculation is identical. The new element is exercise (f) — a balanced evaluation — which is an exam skill (standpuntbepaling). One lesson works. If there is a long time gap between Book 2 and this lesson, start with a 10-minute revision of minimum price mechanics.
+**Difficulty notes:** This is a direct transfer from Module 2 (minimumprijs). Students should recognise the framework: a minimum wage IS a minimum price on labor. The welfare calculation is identical. The new element is exercise (f) — a balanced evaluation — which is an exam skill (standpuntbepaling). One lesson works. If there is a long time gap between Module 2 and this lesson, start with a 10-minute revision of minimum price mechanics.
 
 ---
 
-### §3 — Unions, CAO, and labor policy 🟨 MEDIUM
+### 4.2.3 — Unions, CAO, and labor policy 🟨 MEDIUM
 
 **Target exercise:**
 > (a) A CAO (collectieve arbeidsovereenkomst) sets wages for all workers in the metal industry at 10% above the equilibrium wage. Explain how this is similar to a minimum wage. What effect does it have on employment?
@@ -1389,15 +1389,15 @@ Practice with different labor markets. Include exam-style source material: CBS d
 
 ---
 
-### §4 — Consolidation ⬜
+### 4.2.4 — Consolidation ⬜
 
 Labor market exercises mixing all chapter content. Include exam-style source material: a news article about labor market policy (e.g., "debate on raising the minimum wage in the Netherlands") with CBS data on employment and wages, requiring analysis using surplus concepts, unemployment types, and policy evaluation.
 
 ---
 
-## Chapter 3: International Trade
+## 4.3 — International Trade
 
-### §1 — Absolute and comparative advantage 🟨 MEDIUM
+### 4.3.1 — Absolute and comparative advantage 🟨 MEDIUM
 
 **Target exercise:**
 > Two countries produce cars and grain:
@@ -1424,7 +1424,7 @@ Labor market exercises mixing all chapter content. Include exam-style source mat
 
 ---
 
-### §2 — Gains from trade, terms of trade 🟨 MEDIUM
+### 4.3.2 — Gains from trade, terms of trade 🟨 MEDIUM
 
 **Target exercise:**
 > Using countries A and B from §1 (A: comparative advantage in grain, B: comparative advantage in cars):
@@ -1446,7 +1446,7 @@ Labor market exercises mixing all chapter content. Include exam-style source mat
 
 ---
 
-### §3 — Protectionism and trade policy 🟨 MEDIUM
+### 4.3.3 — Protectionism and trade policy 🟨 MEDIUM
 
 **Target exercise:**
 > Domestic market: Qv = −2P + 200, Qa = P − 10 (P in €, Q in thousands of units). The world price is €40.
@@ -1463,19 +1463,19 @@ Labor market exercises mixing all chapter content. Include exam-style source mat
 - Identify welfare effects: domestic producers gain, consumers lose, government gains revenue, net DWL
 - Evaluate protectionist arguments critically
 
-**Difficulty notes:** The graph has two DWL triangles (production inefficiency + consumption loss) — this is more complex than the single DWL triangle from taxes. However, the calculation itself is straightforward (just reading off demand and supply at two prices). The welfare analysis connects directly to Book 2's tax analysis. One lesson works because it's application, not new methodology.
+**Difficulty notes:** The graph has two DWL triangles (production inefficiency + consumption loss) — this is more complex than the single DWL triangle from taxes. However, the calculation itself is straightforward (just reading off demand and supply at two prices). The welfare analysis connects directly to Module 2's tax analysis. One lesson works because it's application, not new methodology.
 
 ---
 
-### §4 — Consolidation ⬜
+### 4.3.4 — Consolidation ⬜
 
 Trade exercises with exam-style source material. Include a text about a trade dispute (e.g., "EU tariffs on Chinese electric vehicles") with a data table on trade volumes and prices, requiring students to calculate comparative advantage, analyse tariff effects, and evaluate policy. Include a question comparing quotas with tariffs.
 
 ---
 
-## Chapter 4: Inflation, Purchasing Power & Prices
+## 4.4 — Inflation, Purchasing Power & Prices
 
-### §1 — Inflation, CPI, and price indices 🟨 MEDIUM
+### 4.4.1 — Inflation, CPI, and price indices 🟨 MEDIUM
 
 **Target exercise:**
 > A shopping basket costs €150 in 2023 (base year, index = 100) and €162 in 2025.
@@ -1492,11 +1492,11 @@ Trade exercises with exam-style source material. Include a text about a trade di
 - Calculate real values: real wage = nominal wage / CPI × 100
 - Explain why real values correct for inflation
 
-**Difficulty notes:** Exercise (c) is the classic trap — students think "108 to 112 = 4% inflation" when it's actually (112−108)/108 = 3.7%. This connects directly to Book 1 Ch1§2 (percentage changes). The real vs nominal distinction is conceptually important but mathematically simple. One lesson works.
+**Difficulty notes:** Exercise (c) is the classic trap — students think "108 to 112 = 4% inflation" when it's actually (112−108)/108 = 3.7%. This connects directly to §1.1.2 (percentage changes). The real vs nominal distinction is conceptually important but mathematically simple. One lesson works.
 
 ---
 
-### §2 — Purchasing power and indexering 🟨 MEDIUM
+### 4.4.2 — Purchasing power and indexering 🟨 MEDIUM
 
 **Target exercise:**
 > A pension is €1,500 per month. Inflation is 4%. Average wages rose by 6%.
@@ -1517,7 +1517,7 @@ Trade exercises with exam-style source material. Include a text about a trade di
 
 ---
 
-### §3 — Real vs nominal: integration and application 🟨 MEDIUM
+### 4.4.3 — Real vs nominal: integration and application 🟨 MEDIUM
 
 **Target exercise:**
 > (a) The nominal interest rate on a savings account is 5%. Inflation is 3%. Calculate the real interest rate (use: real ≈ nominal − inflation). If you save €10,000, how much more can you actually buy after one year?
@@ -1537,17 +1537,17 @@ Trade exercises with exam-style source material. Include a text about a trade di
 
 ---
 
-### §4 — Consolidation ⬜
+### 4.4.4 — Consolidation ⬜
 
 Mixed exercises with exam-style source material: inflation calculations, real vs nominal, indexering, purchasing power. Include a text about pension policy with a table of inflation rates and wage growth over 5 years, requiring students to calculate real changes and evaluate policy choices. Include: "pensioners protest against frozen pensions during 6% inflation — analyse their complaint using calculations."
 
 ---
 
-## Chapter 5: Test Preparation
+## 4.5 — Test Preparation
 
-*This chapter has no new theory. It prepares students for the 120-minute end-of-book test covering Chapters 1–4. This is the final test of the year, so the practice test should also include cumulative elements from Books 1–3. The 45-minute mid-book test (after Chapter 2, covering labor markets, unemployment, and minimum wage) has already taken place.*
+*This chapter has no new theory. It prepares students for the 120-minute end-of-module test covering Chapters 1–4. This is the final test of the year, so the practice test should also include cumulative elements from Modules 1–3. The 45-minute mid-module test (after Chapter 2, covering labor markets, unemployment, and minimum wage) has already taken place.*
 
-### §1 — Active summary with knowledge questions
+### 4.5.1 — Active summary with knowledge questions
 
 **Summary blocks cover:**
 - Block 1: Labor demand (derived demand, marginal productivity, VMP), labor supply (participation rate, beroepsbevolking), labor market equilibrium (krappe/ruime arbeidsmarkt)
@@ -1565,7 +1565,7 @@ Mixed exercises with exam-style source material: inflation calculations, real vs
 > (C) Yes, because employers can no longer afford as many workers.
 > (D) No, the labor supply curve shifts, not the demand curve.
 >
-> *(Correct: B. A wage change causes a movement along the demand curve, not a shift. This mirrors the shift/movement distinction from Book 1 — students who got it wrong there may get it wrong here too.)*
+> *(Correct: B. A wage change causes a movement along the demand curve, not a shift. This mirrors the shift/movement distinction from Module 1 — students who got it wrong there may get it wrong here too.)*
 
 *Example after Block 3:*
 > Country A needs 100 hours for a car and 10 hours for a ton of grain. Country B needs 150 hours for a car and 30 hours for a ton of grain. Which country has a comparative advantage in cars?
@@ -1576,11 +1576,11 @@ Mixed exercises with exam-style source material: inflation calculations, real vs
 >
 > *(Correct: B. Option A confuses absolute with comparative advantage — the most common error.)*
 
-**Emphasis for Book 4:** Labor market terminology (beroepsbevolking vs niet-beroepsbevolking), the comparative advantage calculation (opportunity costs, not absolute productivity), and the index-point vs percentage distinction (which returns from Book 1).
+**Emphasis for Module 4:** Labor market terminology (beroepsbevolking vs niet-beroepsbevolking), the comparative advantage calculation (opportunity costs, not absolute productivity), and the index-point vs percentage distinction (which returns from Module 1).
 
 ---
 
-### §2 — Exam skills: reading sources and structuring answers
+### 4.5.2 — Exam skills: reading sources and structuring answers
 
 **Exercises (4–5 short ones):**
 - Given a CBS table with labor market data (beroepsbevolking, werklozen, participatiegraad) across 5 years: calculate changes and interpret trends. (Skill: working with real statistical data.)
@@ -1588,34 +1588,34 @@ Mixed exercises with exam-style source material: inflation calculations, real vs
 - Given inflation data: a journalist writes "inflation rose from 3 to 5 index points." Explain what is wrong with this statement and calculate the correct inflation rate. (Skill: critical reading of economic claims in media.)
 - Write a "beoordeel" answer to: "The government should raise the minimum wage to reduce poverty." Use concepts from at least two chapters (labor surplus analysis + unemployment types). (Skill: cross-chapter standpuntbepaling.)
 
-**Emphasis for Book 4:** Working with real data sources (CBS, EU statistics), critical reading of media claims, and the cumulative standpuntbepaling that draws on multiple chapters.
+**Emphasis for Module 4:** Working with real data sources (CBS, EU statistics), critical reading of media claims, and the cumulative standpuntbepaling that draws on multiple chapters.
 
 ---
 
-### §3 — Integration exercise: combining concepts across chapters AND across books
+### 4.5.3 — Integration exercise: combining concepts across chapters AND across modules
 
-**One coherent context requiring skills from Book 4 AND earlier books:**
+**One coherent context requiring skills from Module 4 AND earlier modules:**
 
 > The EU is debating whether to impose a tariff on cheap textiles imported from country X, where wages are much lower. Currently, the domestic textile industry employs 50,000 workers. The domestic labor market for textile workers has Qd = −200W + 4000 and Qs = 300W − 500. The goods market for textiles has domestic demand Qv = −2P + 200 and domestic supply Qa = P − 10, with a world price of €30.
 >
-> (a) Calculate the equilibrium wage for textile workers. Is this above or below the national minimum wage of €13/hour? *(Ch1-2 skill: labor market equilibrium)*
-> (b) At free trade, calculate domestic production, domestic consumption, and imports. *(Ch3 skill: trade with world price)*
-> (c) The EU imposes a tariff of €15. Calculate the new domestic production, consumption, and imports. Calculate the tariff revenue and the deadweight loss. *(Ch3 skill: tariff analysis)*
-> (d) The tariff raises the domestic textile price. How does this affect the demand for domestic textile workers? Show graphically what happens to employment and wages. *(Ch1+Ch3 integration: goods market → derived labor demand)*
-> (e) Opponents say: "The tariff protects jobs but hurts consumers." Supporters say: "Without the tariff, textile workers face structural unemployment." Evaluate both claims using your calculations. Which type of unemployment would the workers face without protection? *(Ch2+Ch3+Ch4 integration + standpuntbepaling)*
-> (f) Calculate the effect of the tariff on the consumer price in real terms, given 3% inflation. Does the real price increase differ from the nominal price increase? *(Ch4 skill: real vs nominal)*
+> (a) Calculate the equilibrium wage for textile workers. Is this above or below the national minimum wage of €13/hour? *(§4.1-2 skill: labor market equilibrium)*
+> (b) At free trade, calculate domestic production, domestic consumption, and imports. *(§4.3 skill: trade with world price)*
+> (c) The EU imposes a tariff of €15. Calculate the new domestic production, consumption, and imports. Calculate the tariff revenue and the deadweight loss. *(§4.3 skill: tariff analysis)*
+> (d) The tariff raises the domestic textile price. How does this affect the demand for domestic textile workers? Show graphically what happens to employment and wages. *(§4.1+§4.3 integration: goods market → derived labor demand)*
+> (e) Opponents say: "The tariff protects jobs but hurts consumers." Supporters say: "Without the tariff, textile workers face structural unemployment." Evaluate both claims using your calculations. Which type of unemployment would the workers face without protection? *(§4.2+§4.3+§4.4 integration + standpuntbepaling)*
+> (f) Calculate the effect of the tariff on the consumer price in real terms, given 3% inflation. Does the real price increase differ from the nominal price increase? *(§4.4 skill: real vs nominal)*
 
 ---
 
-### §4 — Timed practice test
+### 4.5.4 — Timed practice test
 
 A practice test in the exact format of the upcoming 120-minute test:
 - Same number of questions (6–8 open questions across 3–4 contexts)
 - Same point distribution
 - Must include: at least one labor market analysis, one trade/tariff calculation, one inflation/real-vs-nominal calculation, one policy evaluation
-- **Cumulative elements:** At least one context should require tools from Books 1–3 (equilibrium calculation, surplus analysis, or elasticity). This prepares students for cumulative questions on the final test
+- **Cumulative elements:** At least one context should require tools from Modules 1–3 (equilibrium calculation, surplus analysis, or elasticity). This prepares students for cumulative questions on the final test
 - At least one context with CBS/EU data, one with a graph, one with a longer text source
-- Covers all four Book 4 theory chapters + selected Book 1–3 skills
+- Covers all four Module 4 theory chapters + selected Module 1–3 skills
 
 After completion: peer review using a correction model. This is the last practice opportunity before the final test — focus on completeness of answers and time management. Students should track how long each context takes them and identify where they lose time.
 
@@ -1626,20 +1626,20 @@ After completion: peer review using a correction model. This is the last practic
 
 ## Paragraphs to watch in practice:
 
-1. **Book 1, Ch4§4 (MO=MK rule):** The approximate MK calculation in exercise (e) uses informal differentiation ("each extra unit costs approximately 4Q"). Monitor whether this creates confusion when formal differentiation is introduced in Book 3. If so, keep Book 1's treatment strictly table-based and save all algebraic MO=MK for Book 3.
+1. **Module 1, §4.4.4 (MO=MK rule):** The approximate MK calculation in exercise (e) uses informal differentiation ("each extra unit costs approximately 4Q"). Monitor whether this creates confusion when formal differentiation is introduced in Module 3. If so, keep Module 1's treatment strictly table-based and save all algebraic MO=MK for Module 3.
 
-2. **Book 2, Ch1§3 (Ei, Ek + demand functions):** Part C (multi-variable demand function) is new to this version. If it makes the lesson too heavy, move Part C to the consolidation paragraph and keep §3 to just Ei and Ek with simple percentage data.
+2. **Module 2, §4.1.3 (Ei, Ek + demand functions):** Part C (multi-variable demand function) is new to this version. If it makes the lesson too heavy, move Part C to the consolidation paragraph and keep §3 to just Ei and Ek with simple percentage data.
 
-3. **Book 2, Ch3§2 (taxes — afwenteling + welfare loss):** Five separate calculations in one lesson. Mitigation: do CS and PS together in class; assign DWL calculation as homework. Alternatively, provide a pre-drawn graph so students focus on calculation, not drawing.
+3. **Module 2, §4.3.2 (taxes — afwenteling + welfare loss):** Five separate calculations in one lesson. Mitigation: do CS and PS together in class; assign DWL calculation as homework. Alternatively, provide a pre-drawn graph so students focus on calculation, not drawing.
 
-4. **Book 3, Ch2§3 (monopoly winstmaximalisatie):** The hardest single lesson. Mitigation: the step-by-step scaffolding reduces risk. Do steps (a–d) as guided practice, let students do (e–f) independently.
+4. **Module 3, §4.2.3 (monopoly winstmaximalisatie):** The hardest single lesson. Mitigation: the step-by-step scaffolding reduces risk. Do steps (a–d) as guided practice, let students do (e–f) independently.
 
-## Cross-book dependencies to monitor:
+## Cross-module dependencies to monitor:
 
-- **Book 2 Ch2 (surplus)** depends on Book 1 Ch4§1 (equilibrium solving). If algebra is weak, surplus calculations will struggle.
-- **Book 3 Ch2§2–§3 (monopoly)** depends on differentiation introduced in Book 3 Ch1§2. If students need more differentiation practice, delay monopoly by one lesson and add a pure differentiation practice lesson.
-- **Book 4 Ch2§2 (minimum wage surplus)** depends on Book 2 Ch4§2 (minimum price). If there is a long time gap, build in a 10-minute revision before this lesson.
+- **§2.2 (surplus)** depends on §1.4.1 (equilibrium solving). If algebra is weak, surplus calculations will struggle.
+- **§3.2.2–§3 (monopoly)** depends on differentiation introduced in §3.1.2. If students need more differentiation practice, delay monopoly by one lesson and add a pure differentiation practice lesson.
+- **§4.2.2 (minimum wage surplus)** depends on §2.4.2 (minimum price). If there is a long time gap, build in a 10-minute revision before this lesson.
 
-## Using Book 4 as buffer:
+## Using Module 4 as buffer:
 
-Book 4 is deliberately lighter. If Books 2–3 run over by 2–3 lessons total, shorten Book 4 consolidation sessions or integrate Book 4 test preparation into the final test prep chapter instead of doing it separately. The consolidation paragraphs in Book 4 (all rated ⬜) can absorb compression without losing essential content.
+Module 4 is deliberately lighter. If Modules 2–3 run over by 2–3 lessons total, shorten Module 4 consolidation sessions or integrate Module 4 test preparation into the final test prep chapter instead of doing it separately. The consolidation paragraphs in Module 4 (all rated ⬜) can absorb compression without losing essential content.

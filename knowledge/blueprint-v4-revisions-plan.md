@@ -6,7 +6,7 @@ The blueprint audit (`knowledge/blueprint-v4-audit.md`) flagged two minor-but-ac
 
 ---
 
-## Gap 1 — Book 3 Ch3§3 "Overview of all market structures"
+## Gap 1 — §3.3.3 "Overview of all market structures"
 
 **Current state** (blueprint lines 1052–1077): exercise is a fill-in comparison table + classification of 2 real markets (coffee shop, petrol) + a ranking question + a collusion prompt. Students *name* monopolistische concurrentie and oligopolie but never *compute* or *diagnose* anything specific to either structure. Risk: students can recite characteristics but can't discriminate the four structures under exam pressure.
 
@@ -37,7 +37,7 @@ Proposed additions (keep §3 a one-lesson paragraph — add, don't inflate):
 
 ---
 
-## Gap 2 — Book 3 Ch1§3 "Long-run equilibrium: entry and exit"
+## Gap 2 — §3.1.3 "Long-run equilibrium: entry and exit"
 
 **Current state** (blueprint lines 890–910): exercise (d) asks students to write GTK = TK/Q = 0.5Q + 10 + 500/Q, set equal to MK = Q + 10, solve for Q (→ Q² = 1000, Q ≈ 31.6). The difficulty note (line 910) *acknowledges* the 500/Q term is unfamiliar and says "guide students through it step by step" — but the paragraph gives no scaffold; students meet the move cold.
 
@@ -69,20 +69,20 @@ Replace the single (d) with:
 Single file: `C:/Projects/4veco/4veco-platform/knowledge/course_blueprint_v4.md`
 
 Specific line ranges:
-- §2 of Book 3 Ch1: line 886 (append to difficulty note)
-- §3 of Book 3 Ch1: lines 897, 901–908, 910 (split (d), add goal, update note)
-- §3 of Book 3 Ch3: lines 1054–1077 (replace (e), add (f)/(g), update goals + note)
+- §3.1.2: line 886 (append to difficulty note)
+- §3.1.3: lines 897, 901–908, 910 (split (d), add goal, update note)
+- §3.3.3: lines 1054–1077 (replace (e), add (f)/(g), update goals + note)
 
 No source-data, no build-scripts, no output/ changes — nothing is built yet for these paragraphs.
 
 ## Verification
 
-1. Re-read the three edited paragraphs end-to-end to confirm they still fit a single-lesson budget (§3 Ch3 was already "comfortable", §3 Ch1 was already "one lesson works if...").
+1. Re-read the three edited paragraphs end-to-end to confirm they still fit a single-lesson budget (§3.3.3 was already "comfortable", §3.1.3 was already "one lesson works if...").
 2. Cross-check lesson-goal additions against `references/authored/economie-terminologie.md` (expect: "prijszettingsmacht", "productdifferentiatie", "prijsafspraak" — all canonical).
 3. When paragraphs actually get built later (via `econ-textbook-paragraph`), the new exercises become concrete opgaven; the audit gap closes at build-time automatically.
 
 ## Out of scope
 
 - No changes to built output (only §3.3.1 exists; neither target paragraph is there).
-- No changes to the third audit finding (Book 2 Ch1§3 part C as optional depth) — that one is already flagged in blueprint lines 1627, so it's a build-time decision, not a blueprint revision.
+- No changes to the third audit finding (§2.1.3 part C as optional depth) — that one is already flagged in blueprint lines 1627, so it's a build-time decision, not a blueprint revision.
 - No changes to the schedule/notation discussion from the audit.
