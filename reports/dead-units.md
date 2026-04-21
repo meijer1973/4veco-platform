@@ -1,18 +1,17 @@
 # Dead Units Report
 
-Generated: 2026-04-20T19:31:35.724Z
+Generated: 2026-04-21T07:36:08.235Z
 Live units:   143
-Files scanned: 75
-Cited:        96
-Dead:         47
+Files scanned: 77
+Cited:        97
+Dead:         46
 
-## Dead units (47)
+## Dead units (46)
 
 These units exist in the catalog but no source file cites them. Candidates for deprecation via `unit-deprecate` unless the catalog is intentionally ahead of the curriculum.
 
 - **D04** Elasticiteit en goederenclassificatie
 - **D07** Heffing doorberekenen in prijs
-- **D09** Homogene en heterogene goederen
 - **D15** Marktvormen classificeren
 - **D16** Minimumprijs en werkloosheid
 - **D17** Monopolie minimaal verlies

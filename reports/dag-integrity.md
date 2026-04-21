@@ -1,6 +1,6 @@
 # DAG Integrity Report
 
-Generated: 2026-04-20T19:31:35.601Z
+Generated: 2026-04-21T07:36:08.132Z
 Source:    references/machine/micro-teaching-units.md
 Units:     144
 

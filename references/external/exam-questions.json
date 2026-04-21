@@ -302,7 +302,9 @@
       "I01"
     ],
     "question_type": "uitleg_dat",
-    "exam_codes": []
+    "exam_codes": [
+      "I2.1"
+    ]
   },
   {
     "exam": "ha-1022-a-23-1-o",
@@ -320,7 +322,10 @@
       "I05"
     ],
     "question_type": "uitleg_dat",
-    "exam_codes": []
+    "exam_codes": [
+      "I3.3",
+      "I3.5"
+    ]
   },
   {
     "exam": "ha-1022-a-23-1-o",
@@ -435,7 +440,9 @@
       "D25"
     ],
     "question_type": "uitleg_dat",
-    "exam_codes": []
+    "exam_codes": [
+      "D1.15"
+    ]
   },
   {
     "exam": "ha-1022-a-23-1-o",
@@ -546,7 +553,10 @@
       "D17"
     ],
     "question_type": "uitleg_dat",
-    "exam_codes": []
+    "exam_codes": [
+      "D1.19",
+      "D2.2"
+    ]
   },
   {
     "exam": "ha-1022-a-23-1-o",
@@ -565,7 +575,10 @@
       "D17"
     ],
     "question_type": "bron",
-    "exam_codes": []
+    "exam_codes": [
+      "D1.19",
+      "D2.2"
+    ]
   },
   {
     "exam": "ha-1022-a-23-1-o",
@@ -718,7 +731,9 @@
       "D12"
     ],
     "question_type": "berekenen",
-    "exam_codes": []
+    "exam_codes": [
+      "D1.9"
+    ]
   },
   {
     "exam": "ha-1022-a-23-2-o",
@@ -773,7 +788,10 @@
       "D05"
     ],
     "question_type": "berekenen",
-    "exam_codes": []
+    "exam_codes": [
+      "D1.13",
+      "D1.24"
+    ]
   },
   {
     "exam": "ha-1022-a-23-2-o",
@@ -1234,7 +1252,10 @@
       "D13"
     ],
     "question_type": "uitleg_dat",
-    "exam_codes": []
+    "exam_codes": [
+      "D1.12",
+      "D1.24"
+    ]
   },
   {
     "exam": "ha-1022-a-24-1-o",
@@ -1286,7 +1307,9 @@
       "D26"
     ],
     "question_type": "noem",
-    "exam_codes": []
+    "exam_codes": [
+      "D1.17"
+    ]
   },
   {
     "exam": "ha-1022-a-24-1-o",
@@ -1325,7 +1348,9 @@
       "D30"
     ],
     "question_type": "berekenen",
-    "exam_codes": []
+    "exam_codes": [
+      "D1.21"
+    ]
   },
   {
     "exam": "ha-1022-a-24-1-o",
@@ -1343,7 +1368,9 @@
       "D30"
     ],
     "question_type": "uitleg_dat",
-    "exam_codes": []
+    "exam_codes": [
+      "D1.21"
+    ]
   },
   {
     "exam": "ha-1022-a-24-1-o",
@@ -1460,7 +1487,10 @@
       "D10"
     ],
     "question_type": "uitleg_dat",
-    "exam_codes": []
+    "exam_codes": [
+      "D1.24",
+      "D1.4b"
+    ]
   },
   {
     "exam": "ha-1022-a-24-1-o",
@@ -1478,7 +1508,9 @@
       "H22"
     ],
     "question_type": "uitleg_dat",
-    "exam_codes": []
+    "exam_codes": [
+      "H4.6"
+    ]
   },
   {
     "exam": "ha-1022-a-24-1-o",
@@ -1496,7 +1528,9 @@
       "I01"
     ],
     "question_type": "uitleg_dat",
-    "exam_codes": []
+    "exam_codes": [
+      "I2.1"
+    ]
   },
   {
     "exam": "ha-1022-a-24-1-o",
@@ -2082,7 +2116,10 @@
       "I03"
     ],
     "question_type": "uitleg_dat",
-    "exam_codes": []
+    "exam_codes": [
+      "I3.6",
+      "I4.2"
+    ]
   },
   {
     "exam": "ha-1022-a-24-2-o",
@@ -2336,7 +2373,10 @@
       "D16"
     ],
     "question_type": "uitleg_dat",
-    "exam_codes": []
+    "exam_codes": [
+      "D3.10",
+      "H5.2"
+    ]
   },
   {
     "exam": "ha-1022-a-25-1-o",
@@ -2392,7 +2432,9 @@
       "I01"
     ],
     "question_type": "noem",
-    "exam_codes": []
+    "exam_codes": [
+      "I2.1"
+    ]
   },
   {
     "exam": "ha-1022-a-25-1-o",
@@ -2410,7 +2452,10 @@
       "I05"
     ],
     "question_type": "uitleg_of",
-    "exam_codes": []
+    "exam_codes": [
+      "I3.3",
+      "I3.5"
+    ]
   },
   {
     "exam": "ha-1022-a-25-1-o",
@@ -2450,7 +2495,9 @@
       "D26"
     ],
     "question_type": "classificatie",
-    "exam_codes": []
+    "exam_codes": [
+      "D1.17"
+    ]
   },
   {
     "exam": "ha-1022-a-25-1-o",
@@ -2469,7 +2516,9 @@
       "D30"
     ],
     "question_type": "berekenen",
-    "exam_codes": []
+    "exam_codes": [
+      "D1.21"
+    ]
   },
   {
     "exam": "ha-1022-a-25-1-o",
@@ -2726,7 +2775,9 @@
       "I01"
     ],
     "question_type": "uitleg_dat",
-    "exam_codes": []
+    "exam_codes": [
+      "I2.1"
+    ]
   },
   {
     "exam": "ha-1022-a-25-1-o",
@@ -2868,7 +2919,11 @@
       "I17"
     ],
     "question_type": "uitleg_dat",
-    "exam_codes": []
+    "exam_codes": [
+      "I1.5",
+      "I2.1",
+      "I3.5"
+    ]
   },
   {
     "exam": "ha-1022-a-25-2-o",
@@ -2886,7 +2941,9 @@
       "I01"
     ],
     "question_type": "uitleg_of",
-    "exam_codes": []
+    "exam_codes": [
+      "I2.1"
+    ]
   },
   {
     "exam": "ha-1022-a-25-2-o",
@@ -2905,7 +2962,11 @@
       "I16"
     ],
     "question_type": "uitleg_dat",
-    "exam_codes": []
+    "exam_codes": [
+      "E2.2",
+      "I2.1",
+      "I2.2"
+    ]
   },
   {
     "exam": "ha-1022-a-25-2-o",
@@ -2923,7 +2984,10 @@
       "I16"
     ],
     "question_type": "uitleg_of",
-    "exam_codes": []
+    "exam_codes": [
+      "E2.2",
+      "I2.2"
+    ]
   },
   {
     "exam": "ha-1022-a-25-2-o",
@@ -2941,7 +3005,10 @@
       "I17"
     ],
     "question_type": "classificatie",
-    "exam_codes": []
+    "exam_codes": [
+      "I1.5",
+      "I3.5"
+    ]
   },
   {
     "exam": "ha-1022-a-25-2-o",
@@ -2995,7 +3062,10 @@
       "D04"
     ],
     "question_type": "uitleg_of",
-    "exam_codes": []
+    "exam_codes": [
+      "D1.7",
+      "D1.8"
+    ]
   },
   {
     "exam": "ha-1022-a-25-2-o",
@@ -3071,7 +3141,10 @@
       "I17"
     ],
     "question_type": "uitleg_of",
-    "exam_codes": []
+    "exam_codes": [
+      "I1.5",
+      "I3.5"
+    ]
   },
   {
     "exam": "ha-1022-a-25-2-o",
@@ -3090,7 +3163,10 @@
       "I17"
     ],
     "question_type": "uitleg_dat",
-    "exam_codes": []
+    "exam_codes": [
+      "I1.5",
+      "I3.5"
+    ]
   },
   {
     "exam": "ha-1022-a-25-2-o",
@@ -3108,7 +3184,10 @@
       "I17"
     ],
     "question_type": "uitleg_dat",
-    "exam_codes": []
+    "exam_codes": [
+      "I1.5",
+      "I3.5"
+    ]
   },
   {
     "exam": "ha-1022-a-25-2-o",
@@ -3164,7 +3243,10 @@
       "D02"
     ],
     "question_type": "uitleg_dat",
-    "exam_codes": []
+    "exam_codes": [
+      "D1.16",
+      "D1.21"
+    ]
   },
   {
     "exam": "ha-1022-a-25-2-o",
@@ -3242,7 +3324,9 @@
       "I01"
     ],
     "question_type": "noem",
-    "exam_codes": []
+    "exam_codes": [
+      "I2.1"
+    ]
   },
   {
     "exam": "ha-1022-a-25-2-o",
@@ -3260,7 +3344,10 @@
       "I16"
     ],
     "question_type": "classificatie",
-    "exam_codes": []
+    "exam_codes": [
+      "E2.2",
+      "I2.2"
+    ]
   },
   {
     "exam": "ha-1022-a-25-2-o",
@@ -3278,7 +3365,10 @@
       "I16"
     ],
     "question_type": "uitleg_dat",
-    "exam_codes": []
+    "exam_codes": [
+      "E2.2",
+      "I2.2"
+    ]
   },
   {
     "exam": "ha-1022-a-25-2-o",
@@ -3353,7 +3443,9 @@
       "I01"
     ],
     "question_type": "uitleg_dat",
-    "exam_codes": []
+    "exam_codes": [
+      "I2.1"
+    ]
   },
   {
     "exam": "vw-1022-a-23-1-o",
@@ -4373,7 +4465,9 @@
       "I11"
     ],
     "question_type": "uitleg_dat",
-    "exam_codes": []
+    "exam_codes": [
+      "I4.4"
+    ]
   },
   {
     "exam": "vw-1022-a-23-2-o",
@@ -4465,7 +4559,10 @@
       "D11"
     ],
     "question_type": "uitleg_dat",
-    "exam_codes": []
+    "exam_codes": [
+      "D1.7",
+      "D1.8"
+    ]
   },
   {
     "exam": "vw-1022-a-24-1-o",
@@ -5188,7 +5285,9 @@
       "I01"
     ],
     "question_type": "uitleg_dat",
-    "exam_codes": []
+    "exam_codes": [
+      "I2.1"
+    ]
   },
   {
     "exam": "vw-1022-a-24-2-o",
@@ -5226,7 +5325,9 @@
       "I01"
     ],
     "question_type": "uitleg_of",
-    "exam_codes": []
+    "exam_codes": [
+      "I2.1"
+    ]
   },
   {
     "exam": "vw-1022-a-24-2-o",
@@ -5305,7 +5406,9 @@
       "I01"
     ],
     "question_type": "uitleg_dat",
-    "exam_codes": []
+    "exam_codes": [
+      "I2.1"
+    ]
   },
   {
     "exam": "vw-1022-a-24-2-o",
@@ -6147,7 +6250,9 @@
       "D26"
     ],
     "question_type": "classificatie",
-    "exam_codes": []
+    "exam_codes": [
+      "D1.17"
+    ]
   },
   {
     "exam": "vw-1022-a-25-2-o",
@@ -6243,7 +6348,9 @@
       "D20"
     ],
     "question_type": "uitleg_dat",
-    "exam_codes": []
+    "exam_codes": [
+      "D3.5"
+    ]
   },
   {
     "exam": "vw-1022-a-25-2-o",
@@ -6301,7 +6408,9 @@
       "E06"
     ],
     "question_type": "classificatie",
-    "exam_codes": []
+    "exam_codes": [
+      "E1.8"
+    ]
   },
   {
     "exam": "vw-1022-a-25-2-o",
@@ -6357,7 +6466,9 @@
       "I02"
     ],
     "question_type": "uitleg_dat",
-    "exam_codes": []
+    "exam_codes": [
+      "I2.2"
+    ]
   },
   {
     "exam": "vw-1022-a-25-2-o",
@@ -6435,7 +6546,10 @@
       "I05"
     ],
     "question_type": "uitleg_of",
-    "exam_codes": []
+    "exam_codes": [
+      "I3.3",
+      "I3.5"
+    ]
   },
   {
     "exam": "vw-1022-a-25-2-o",
@@ -6609,7 +6723,9 @@
       "I11"
     ],
     "question_type": "uitleg_of",
-    "exam_codes": []
+    "exam_codes": [
+      "I4.4"
+    ]
   },
   {
     "exam": "vw-1022-a-25-2-o",
@@ -6627,7 +6743,10 @@
       "D14"
     ],
     "question_type": "uitleg_of",
-    "exam_codes": []
+    "exam_codes": [
+      "D3.4",
+      "D3.9"
+    ]
   },
   {
     "exam": "vw-1022-a-25-2-o",

@@ -28,9 +28,10 @@ function loadCanonicalTerms() {
   const terms = new Set();
   for (const m of content.matchAll(/^##+\s+(.+?)\s*$/gm)) terms.add(m[1].trim());
   for (const m of content.matchAll(/^-\s+\*\*(.+?)\*\*/gm)) terms.add(m[1].trim());
-  // Pipe-table row; split on `/` or `,`; include gloss-stripped form too.
+  // Pipe-table row; first column is number OR em-dash/hyphen placeholder;
+  // split on `/` or `,`; include gloss-stripped form too.
   for (const line of content.split(/\r?\n/)) {
-    const m = line.match(/^\|\s*\d+(?:\.\d+[a-z]?)?\s*\|\s*([^|]+?)\s*\|/);
+    const m = line.match(/^\|\s*(?:\d+(?:\.\d+[a-z]?)?|[—-])\s*\|\s*([^|]+?)\s*\|/);
     if (!m) continue;
     for (const part of m[1].trim().split(/\s*[/,]\s*/)) {
       const p = part.trim();

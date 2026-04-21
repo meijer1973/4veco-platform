@@ -1,8 +1,8 @@
 # Unresolved References Report
 
-Generated: 2026-04-20T19:31:35.970Z
+Generated: 2026-04-21T07:36:08.405Z
 Catalog: 143 live, 1 deprecated
-Files scanned: 75
+Files scanned: 77
 
 ## Warnings — 5 citation(s) of deprecated units
 

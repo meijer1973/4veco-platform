@@ -1,8 +1,8 @@
 # Terms-Coverage Report
 
-Generated: 2026-04-20T19:31:36.144Z
+Generated: 2026-04-21T07:36:08.595Z
 Live units:      143
-With no terms:   20
+With no terms:   19
 
 ## Status: **INFORMATIONAL**
 
@@ -29,8 +29,4 @@ Units with empty `terms` have no canonical-vocabulary links yet. Wire via `unit-
 - **A32** Welvaartsverlies belasting
 - **A34** Effecten invoerrecht
 - **A37** Lange-termijnevenwicht VM
-
-## Domain D (1)
-
-- **D09** Homogene en heterogene goederen
 

@@ -290,18 +290,18 @@ function loadTerminology() {
   for (const m of content.matchAll(/^-\s+\*\*([^*]+)\*\*/gm)) {
     terms.add(m[1].trim());
   }
-  // Pipe-table row: `| 1.2 | <term> | ...`. The second column is the canonical
-  // Dutch term. The authored file uses both `/` and `,` as separators between
-  // alternative/related canonical forms — split on either. (A unit's terms
-  // field in the catalog markdown is ALSO comma-separated on parse, which is
-  // why a comma-joined canonical cell can't enter the set as one string — the
-  // round-trip would split it anyway.)
+  // Pipe-table row: `| 1.2 | <term> | ...` OR `| — | <term> | ...`. The first
+  // column is either a section number or an em-dash/hyphen placeholder for
+  // unnumbered-but-still-canonical entries (e.g. marktvormen rows). The
+  // second column is the canonical Dutch term; `/` and `,` separate
+  // alternatives. (A unit's terms field in the catalog markdown is ALSO
+  // comma-separated on parse, so comma-joined cells must be split here too.)
   // Gloss handling: a canonical cell may include a parenthetical gloss like
   // `arbeidsaanbod (= beroepsbevolking)` or `monetair beleid (rentebeleid)`.
   // We add BOTH the full form AND the gloss-stripped form to the canonical
   // set, so unit authors can cite the clean lexical term without a gloss.
   for (const line of content.split(/\r?\n/)) {
-    const m = line.match(/^\|\s*\d+(?:\.\d+[a-z]?)?\s*\|\s*([^|]+?)\s*\|/);
+    const m = line.match(/^\|\s*(?:\d+(?:\.\d+[a-z]?)?|[—-])\s*\|\s*([^|]+?)\s*\|/);
     if (!m) continue;
     for (const part of m[1].trim().split(/\s*[/,]\s*/)) {
       const p = part.trim();

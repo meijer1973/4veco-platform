@@ -1104,6 +1104,10 @@
     "needs": [
       "D05"
     ],
+    "exam_codes": [
+      "D1.13",
+      "D3.9"
+    ],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
     "aspects": [
@@ -1128,6 +1132,10 @@
     "layer": 0,
     "kern": "Constante kosten beïnvloeden break-even analyse maar niet het MO = MK optimum.",
     "needs": [],
+    "exam_codes": [
+      "D1.16",
+      "D1.21"
+    ],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
     "aspects": [
@@ -1177,6 +1185,10 @@
     "layer": 0,
     "kern": "Gebruik inkomenselasticiteit om goederen te classificeren als inferieur, normaal of luxe.",
     "needs": [],
+    "exam_codes": [
+      "D1.7",
+      "D1.8"
+    ],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
     "aspects": [
@@ -1194,6 +1206,10 @@
     "kern": "Bereken nieuw evenwicht en accijnsopbrengst na invoering van een heffing.",
     "needs": [
       "A23"
+    ],
+    "exam_codes": [
+      "D1.13",
+      "D1.24"
     ],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
@@ -1306,7 +1322,10 @@
     "aspects": [
       "verbaal"
     ],
-    "terms": []
+    "terms": [
+      "homogeen goed",
+      "heterogene goederen"
+    ]
   },
   {
     "id": "D10",
@@ -1315,6 +1334,10 @@
     "layer": 0,
     "kern": "Analyseer hoe een conjunctuurschok de collectieve vraaglijn of aanbodlijn verschuift en wat dit doet met evenwichtsprijs en -hoeveelheid.",
     "needs": [],
+    "exam_codes": [
+      "D1.24",
+      "D1.4b"
+    ],
     "mastery_target": "analyze",
     "prior_learning": "new_this_year",
     "aspects": [
@@ -1342,6 +1365,10 @@
     "needs": [
       "A17"
     ],
+    "exam_codes": [
+      "D1.7",
+      "D1.8"
+    ],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
     "aspects": [
@@ -1368,6 +1395,9 @@
     "needs": [
       "A16"
     ],
+    "exam_codes": [
+      "D1.9"
+    ],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
     "aspects": [
@@ -1391,6 +1421,10 @@
     "layer": 0,
     "kern": "Analyseer hoe een stijging van productiekosten (zoals loon per eenheid product) de collectieve aanbodlijn verschuift en doorwerkt in evenwichtsprijs.",
     "needs": [],
+    "exam_codes": [
+      "D1.12",
+      "D1.24"
+    ],
     "mastery_target": "analyze",
     "prior_learning": "new_this_year",
     "aspects": [
@@ -1415,6 +1449,10 @@
     "layer": 0,
     "kern": "Beoordeel of marktwerking tot een doelmatige uitkomst leidt en of overheidsinterventie gerechtvaardigd is.",
     "needs": [],
+    "exam_codes": [
+      "D3.4",
+      "D3.9"
+    ],
     "mastery_target": "evaluate",
     "prior_learning": "new_this_year",
     "aspects": [
@@ -1457,6 +1495,10 @@
     "layer": 0,
     "kern": "Minimumloon boven marktloon veroorzaakt vraagoverschot van arbeid en werkloosheid.",
     "needs": [],
+    "exam_codes": [
+      "D3.10",
+      "H5.2"
+    ],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
     "aspects": [
@@ -1474,6 +1516,10 @@
     "kern": "Onderneming met alleen vaste kosten heeft MK = 0, dus MK = GVK. Minimaal verlies waar prijs totale opbrengst dekt.",
     "needs": [
       "A14"
+    ],
+    "exam_codes": [
+      "D2.2",
+      "D1.19"
     ],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
@@ -1525,6 +1571,10 @@
       "D20",
       "A27"
     ],
+    "exam_codes": [
+      "D3.5",
+      "D3.9"
+    ],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
     "aspects": [
@@ -1543,6 +1593,9 @@
     "kern": "Leg uit wanneer een marktevenwicht Pareto-efficiënt is.",
     "needs": [
       "A19"
+    ],
+    "exam_codes": [
+      "D3.5"
     ],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
@@ -1662,6 +1715,9 @@
     "needs": [
       "A15"
     ],
+    "exam_codes": [
+      "D1.15"
+    ],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
     "aspects": [
@@ -1681,6 +1737,9 @@
     "needs": [
       "A08"
     ],
+    "exam_codes": [
+      "D1.17"
+    ],
     "mastery_target": "understand",
     "prior_learning": "previously_taught",
     "aspects": [
@@ -1697,6 +1756,9 @@
     "layer": 0,
     "kern": "Substituten vervangen elkaar; complementen worden samen gebruikt.",
     "needs": [],
+    "exam_codes": [
+      "D1.9"
+    ],
     "mastery_target": "understand",
     "prior_learning": "previously_taught",
     "aspects": [
@@ -1770,6 +1832,9 @@
       "A12",
       "A13",
       "A20"
+    ],
+    "exam_codes": [
+      "D1.21"
     ],
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
@@ -1927,6 +1992,9 @@
     "layer": 0,
     "kern": "Onderscheid tussen voorraad- en stroomgrootheden.",
     "needs": [],
+    "exam_codes": [
+      "E1.8"
+    ],
     "mastery_target": "understand",
     "prior_learning": "previously_taught",
     "aspects": [
@@ -3040,6 +3108,9 @@
       "H04",
       "H08"
     ],
+    "exam_codes": [
+      "H4.6"
+    ],
     "mastery_target": "analyze",
     "prior_learning": "new_this_year",
     "aspects": [
@@ -3162,6 +3233,9 @@
     "layer": 0,
     "kern": "Beschrijf hoe de overheid in laagconjunctuur bestedingen verhoogt of belastingen verlaagt en in hoogconjunctuur het omgekeerde doet om de conjunctuurcyclus af te vlakken.",
     "needs": [],
+    "exam_codes": [
+      "I2.1"
+    ],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
     "aspects": [
@@ -3183,6 +3257,9 @@
     "needs": [
       "I01"
     ],
+    "exam_codes": [
+      "I2.2"
+    ],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
     "aspects": [
@@ -3202,6 +3279,10 @@
     "kern": "Leg uit waarom bedrijfsinvesteringen beperkt reageren op renteverlagingen als de vraag laag is of de effectieve ondergrens nominale rente nadert.",
     "needs": [
       "I17"
+    ],
+    "exam_codes": [
+      "I3.6",
+      "I4.2"
     ],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
@@ -3241,6 +3322,10 @@
     "needs": [
       "I17",
       "I07"
+    ],
+    "exam_codes": [
+      "I3.3",
+      "I3.5"
     ],
     "mastery_target": "apply",
     "prior_learning": "previously_taught",
@@ -3407,6 +3492,9 @@
       "I10",
       "I05"
     ],
+    "exam_codes": [
+      "I4.4"
+    ],
     "mastery_target": "analyze",
     "prior_learning": "new_this_year",
     "aspects": [
@@ -3548,6 +3636,10 @@
     "needs": [
       "H21"
     ],
+    "exam_codes": [
+      "E2.2",
+      "I2.2"
+    ],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
     "aspects": [
@@ -3567,6 +3659,10 @@
     "kern": "Leg uit hoe een renteverhoging via duurder krediet consumptie en investeringen afremt en hoe een renteverlaging deze bestedingen stimuleert.",
     "needs": [
       "H15"
+    ],
+    "exam_codes": [
+      "I3.5",
+      "I1.5"
     ],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",

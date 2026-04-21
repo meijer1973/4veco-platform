@@ -1,10 +1,10 @@
 # Terminology Drift Report
 
-Generated: 2026-04-20T19:31:35.835Z
+Generated: 2026-04-21T07:36:08.330Z
 Units:     144
-Canonical: 185 terms in economie-terminologie.md
+Canonical: 265 terms in economie-terminologie.md
 
-Term citations across all units: 235
+Term citations across all units: 237
 Discouraged-form hits in name/kern: 0
 
 ## Status: **PASS**
