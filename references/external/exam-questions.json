@@ -2134,10 +2134,13 @@
     "page_end": 7,
     "text": "Laat met een berekening zien dat de jaarlijkse woonlast bij koop pas na drie jaar lager is dan bij huren. Bereken hiertoe de jaarlijkse woonlasten in het derde en vierde jaar. Gebruik bewering 2 en bron 1.",
     "required_skills": [
-      "H26"
+      "E07"
     ],
     "question_type": "berekenen",
-    "exam_codes": []
+    "exam_codes": [
+      "E1.1",
+      "E1.3"
+    ]
   },
   {
     "exam": "ha-1022-a-24-2-o",
@@ -2152,10 +2155,13 @@
     "page_end": 8,
     "text": "Noem een andere reden dan genoemd in bewering 2 en bron 1, die huurders kunnen betrekken in hun afweging om al dan niet een eigen woning te kopen.",
     "required_skills": [
-      "H26"
+      "E07"
     ],
     "question_type": "noem",
-    "exam_codes": []
+    "exam_codes": [
+      "E1.1",
+      "E1.3"
+    ]
   },
   {
     "exam": "ha-1022-a-24-2-o",

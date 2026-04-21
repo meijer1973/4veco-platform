@@ -2005,6 +2005,37 @@
     ]
   },
   {
+    "id": "E07",
+    "name": "Koop- versus huurlasten vergelijken",
+    "category": "ruilen over tijd",
+    "layer": 2,
+    "kern": "Vergelijk netto woonlasten van kopen en huren door rente, aflossing, onderhoud en huurprijs systematisch tegen elkaar af te zetten.",
+    "needs": [
+      "E02",
+      "H15"
+    ],
+    "exam_codes": [
+      "E1.1",
+      "E1.3"
+    ],
+    "mastery_target": "analyze",
+    "prior_learning": "new_this_year",
+    "aspects": [
+      "rekenen",
+      "verbaal"
+    ],
+    "terms": [
+      "rente"
+    ],
+    "procedure": [
+      "Inventariseer per optie de kostencategorieën: bij kopen (hypotheekrente, aflossing, onderhoud, eigenaarslasten) en bij huren (kale huur, servicekosten)",
+      "Bereken voor beide opties de netto maandlasten over een vaste periode (bv. 1 jaar), inclusief fiscale effecten",
+      "Corrigeer voor vermogensopbouw bij kopen (aflossingsdeel is geen kostenpost maar besparing) en voor verwachte waardegroei van de woning",
+      "Voer gevoeligheidsanalyse uit op de rente (zie H15) en de huurontwikkeling: welke aanname verschuift de uitkomst",
+      "Vergelijk de netto woonlasten systematisch per categorie en concludeer onder welke voorwaarden kopen goedkoper is dan huren"
+    ]
+  },
+  {
     "id": "F01",
     "name": "Berovingsprobleem herkennen",
     "category": "samenwerken en onderhandelen",
@@ -3224,6 +3255,10 @@
       "Corrigeer voor vermogensopbouw bij kopen (aflossingsdeel is geen kostenpost maar besparing) en voor verwachte waardegroei van de woning",
       "Voer gevoeligheidsanalyse uit op de rente (zie H15) en de huurontwikkeling: welke aanname verschuift de uitkomst",
       "Vergelijk de netto woonlasten systematisch per categorie en concludeer onder welke voorwaarden kopen goedkoper is dan huren"
+    ],
+    "deprecated": true,
+    "deprecated_in_favor_of": [
+      "E07"
     ]
   },
   {

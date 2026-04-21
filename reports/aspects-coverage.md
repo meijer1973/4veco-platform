@@ -1,6 +1,6 @@
 # Aspects-Coverage Report
 
-Generated: 2026-04-21T07:36:08.750Z
+Generated: 2026-04-21T07:46:49.319Z
 Live units: 143
 
 ## Status: **INFORMATIONAL**
@@ -32,10 +32,10 @@ The `aspects` field records whether mastery requires **verbaal** reasoning, **gr
 |---|---:|---:|---:|
 | A | 17 | 10 | 37 |
 | D | 24 | 3 | 10 |
-| E | 6 | 0 | 0 |
+| E | 7 | 0 | 1 |
 | F | 14 | 0 | 3 |
 | G | 11 | 0 | 2 |
-| H | 21 | 0 | 8 |
+| H | 20 | 0 | 7 |
 | I | 18 | 5 | 5 |
 
 ## Review backlog: 22 unit(s) with no exam citation

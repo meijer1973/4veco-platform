@@ -1,12 +1,12 @@
 # Dead Units Report
 
-Generated: 2026-04-21T07:36:08.235Z
+Generated: 2026-04-21T07:46:48.769Z
 Live units:   143
 Files scanned: 77
-Cited:        97
-Dead:         46
+Cited:        96
+Dead:         47
 
-## Dead units (46)
+## Dead units (47)
 
 These units exist in the catalog but no source file cites them. Candidates for deprecation via `unit-deprecate` unless the catalog is intentionally ahead of the curriculum.
 
@@ -22,6 +22,7 @@ These units exist in the catalog but no source file cites them. Candidates for d
 - **E02** Intertemporele ruil in pensioenstelsels
 - **E04** Omslagstelsel (AOW)
 - **E06** Voorraad- en stroomgrootheden onderscheiden
+- **E07** Koop- versus huurlasten vergelijken
 - **F01** Berovingsprobleem herkennen
 - **F02** Collectief goed classificeren
 - **F03** Dominante strategie
