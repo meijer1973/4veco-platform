@@ -1,12 +1,12 @@
 # Dead Units Report
 
-Generated: 2026-04-21T15:23:41.252Z
-Live units:   143
+Generated: 2026-04-21T20:39:31.841Z
+Live units:   164
 Files scanned: 84
 Cited:        110
-Dead:         33
+Dead:         54
 
-## Dead units (33)
+## Dead units (54)
 
 These units exist in the catalog but no source file cites them. Candidates for deprecation via `unit-deprecate` unless the catalog is intentionally ahead of the curriculum.
 
@@ -43,6 +43,27 @@ These units exist in the catalog but no source file cites them. Candidates for d
 - **H25** Wisselkoers, export en bbp-groei
 - **I02** Automatische stabilisatoren via inkomensoverdrachten
 - **I18** Reële waarde van nominaal eigen risico
+- **L01** Waarde marginaal product (VMP)
+- **L02** Inhuurregel VMP ≥ W
+- **L03** Afgeleide vraag (derived demand)
+- **L04** Arbeidsvraagcurve tekenen uit VMP
+- **L05** Beroepsbevolking, niet-beroepsbevolking, werkloze beroepsbevolking
+- **L06** Bruto participatiegraad berekenen
+- **L07** Werkloosheidspercentage berekenen
+- **L08** Effect van loonstijging op participatiegraad
+- **L09** Krappe versus ruime arbeidsmarkt
+- **L10** Arbeidsmarktevenwicht als transfer van goederenmarkt
+- **L11** Conjuncturele werkloosheid
+- **L12** Structurele werkloosheid
+- **L13** Frictiewerkloosheid
+- **L14** Werkloosheid classificeren uit context
+- **L15** Beleidsinstrument koppelen aan type werkloosheid
+- **L16** Werknemers- en werkgeverssurplus bij minimumloon
+- **L17** CAO als bindende loonafspraak
+- **L18** Voordelen en nadelen van vakbonden
+- **L19** Loonstarheid
+- **L20** Loonflexibiliteit versus actief arbeidsmarktbeleid
+- **L21** Standpuntbepaling minimumloon
 
 ## Citation counts (top 10 most cited)
 

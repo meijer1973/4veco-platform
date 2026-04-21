@@ -3900,5 +3900,552 @@
       "monetair beleid",
       "wisselkoers"
     ]
+  },
+  {
+    "id": "L01",
+    "name": "Waarde marginaal product (VMP)",
+    "category": "arbeidsmarkt",
+    "layer": 0,
+    "kern": "Bereken VMP = marginaal product × prijs per eenheid output uit een tabel met aflopende marginale productiviteit, en gebruik VMP als grens voor de individuele arbeidsvraag.",
+    "needs": [],
+    "exam_codes": [
+      "H5.1"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "aspects": [
+      "rekenen"
+    ],
+    "terms": [
+      "arbeidsvraag (= werkgelegenheid + vacatures)"
+    ],
+    "procedure": [
+      "Lees marginaal product per werkende af uit de tabel.",
+      "Vermenigvuldig met de prijs per eenheid output om VMP te krijgen.",
+      "Interpreteer VMP als maximale loonbereidheid van de werkgever voor die werknemer."
+    ],
+    "pitfalls": [
+      "Marginaal product verwarren met totaal product — het gaat om de extra bijdrage per additionele werkende."
+    ]
+  },
+  {
+    "id": "L02",
+    "name": "Inhuurregel VMP ≥ W",
+    "category": "arbeidsmarkt",
+    "layer": 1,
+    "kern": "Bepaal hoeveel werkenden een werkgever aanneemt door VMP per werkende met het loon W te vergelijken: neem aan zolang VMP ≥ W, stop zodra VMP < W.",
+    "needs": [
+      "L01"
+    ],
+    "exam_codes": [
+      "H5.1"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "aspects": [
+      "rekenen"
+    ],
+    "terms": [],
+    "procedure": [
+      "Bereken VMP per werknemer (zie L01).",
+      "Vergelijk VMP met W voor elke werknemer in volgorde.",
+      "Tel mee zolang VMP ≥ W; het laatste aangenomen nummer is de arbeidsvraag bij loon W."
+    ],
+    "pitfalls": [
+      "Vergeten dat VMP afneemt: de eerste werkende verdient wel boven W, de vijfde misschien niet."
+    ]
+  },
+  {
+    "id": "L03",
+    "name": "Afgeleide vraag (derived demand)",
+    "category": "arbeidsmarkt",
+    "layer": 0,
+    "kern": "Leg uit waarom de vraag naar arbeid een afgeleide vraag is: werkgevers vragen arbeid omdat consumenten de eindproducten willen kopen, niet omdat arbeid zelf gewenst is.",
+    "needs": [],
+    "exam_codes": [
+      "H5.1"
+    ],
+    "mastery_target": "understand",
+    "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
+    "terms": [
+      "arbeidsvraag (= werkgelegenheid + vacatures)"
+    ],
+    "pitfalls": [
+      "Denken dat arbeidsvraag alleen door loon bepaald wordt — bij dalende productvraag daalt arbeidsvraag zelfs bij ongewijzigd loon."
+    ]
+  },
+  {
+    "id": "L04",
+    "name": "Arbeidsvraagcurve tekenen uit VMP",
+    "category": "arbeidsmarkt",
+    "layer": 1,
+    "kern": "Teken de individuele arbeidsvraagcurve van een werkgever door VMP per werkende op de verticale as en de werknemersrij op de horizontale as uit te zetten; het resultaat is de dalende VMP-curve.",
+    "needs": [
+      "L01"
+    ],
+    "exam_codes": [
+      "H5.1"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "aspects": [
+      "grafisch"
+    ],
+    "terms": [],
+    "procedure": [
+      "Zet loon W op de verticale as en aantal werkenden op de horizontale as.",
+      "Plot VMP-waarden uit de tabel als punten: werkende-nummer op de horizontale as, VMP op de verticale as.",
+      "Verbind de punten tot een dalende arbeidsvraagcurve; lees bij elke W af hoeveel werkenden aangenomen worden."
+    ],
+    "pitfalls": [
+      "Assen omwisselen of loon op de horizontale as plaatsen — economische conventie is W verticaal."
+    ]
+  },
+  {
+    "id": "L05",
+    "name": "Beroepsbevolking, niet-beroepsbevolking, werkloze beroepsbevolking",
+    "category": "arbeidsmarkt",
+    "layer": 0,
+    "kern": "Definieer beroepsbevolking (iedereen van 15–75 die werkt of werk zoekt), niet-beroepsbevolking (wel die leeftijd maar werkt niet en zoekt geen werk) en werkloze beroepsbevolking (zoekt werk, heeft nog geen baan).",
+    "needs": [],
+    "exam_codes": [
+      "H5.1"
+    ],
+    "mastery_target": "understand",
+    "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
+    "terms": [
+      "arbeidsaanbod (= beroepsbevolking)",
+      "werkloosheid"
+    ],
+    "pitfalls": [
+      "\"Niet-werkend\" verwarren met \"werkloos\" — scholieren/gepensioneerden zitten in de niet-beroepsbevolking, niet in de werkloze beroepsbevolking."
+    ]
+  },
+  {
+    "id": "L06",
+    "name": "Bruto participatiegraad berekenen",
+    "category": "arbeidsmarkt",
+    "layer": 1,
+    "kern": "Bereken de bruto participatiegraad = beroepsbevolking / bevolking 15–75 × 100, en interpreteer het resultaat als het percentage dat actief is op de arbeidsmarkt.",
+    "needs": [
+      "L05"
+    ],
+    "exam_codes": [
+      "H5.1",
+      "A2.4"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "aspects": [
+      "rekenen"
+    ],
+    "terms": [],
+    "procedure": [
+      "Vul in: teller = beroepsbevolking (werkenden + werkloze beroepsbevolking).",
+      "Vul in: noemer = bevolking tussen 15 en 75 jaar (NIET de totale bevolking).",
+      "Deel en vermenigvuldig met 100 om het percentage te krijgen."
+    ],
+    "pitfalls": [
+      "Totale bevolking gebruiken als noemer in plaats van de 15–75-leeftijdsgroep."
+    ]
+  },
+  {
+    "id": "L07",
+    "name": "Werkloosheidspercentage berekenen",
+    "category": "arbeidsmarkt",
+    "layer": 1,
+    "kern": "Bereken het werkloosheidspercentage = werkloze beroepsbevolking / beroepsbevolking × 100; de noemer is de beroepsbevolking, niet de totale bevolking.",
+    "needs": [
+      "L05"
+    ],
+    "exam_codes": [
+      "H5.1",
+      "A2.4"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "aspects": [
+      "rekenen"
+    ],
+    "terms": [
+      "werkloosheid"
+    ],
+    "procedure": [
+      "Vul in: teller = werkloze beroepsbevolking (zoekt werk, heeft geen baan).",
+      "Vul in: noemer = beroepsbevolking (werkenden + werklozen).",
+      "Deel en vermenigvuldig met 100."
+    ],
+    "pitfalls": [
+      "De niet-beroepsbevolking meetellen als werkloos (scholieren/gepensioneerden zijn geen werklozen)."
+    ]
+  },
+  {
+    "id": "L08",
+    "name": "Effect van loonstijging op participatiegraad",
+    "category": "arbeidsmarkt",
+    "layer": 2,
+    "kern": "Leg uit dat een aanhoudende loonstijging mensen uit de niet-beroepsbevolking kan trekken naar de beroepsbevolking, waardoor de participatiegraad stijgt.",
+    "needs": [
+      "L05",
+      "L06"
+    ],
+    "exam_codes": [
+      "H5.1"
+    ],
+    "mastery_target": "understand",
+    "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
+    "terms": [
+      "loonontwikkeling"
+    ],
+    "pitfalls": [
+      "Denken dat participatiegraad alleen van demografie afhangt — lonen en beleid verplaatsen mensen tussen beroepsbevolking en niet-beroepsbevolking."
+    ]
+  },
+  {
+    "id": "L09",
+    "name": "Krappe versus ruime arbeidsmarkt",
+    "category": "arbeidsmarkt",
+    "layer": 0,
+    "kern": "Herken een krappe arbeidsmarkt (arbeidsvraag > arbeidsaanbod, oplopende lonen) versus een ruime arbeidsmarkt (arbeidsaanbod > arbeidsvraag, dalende lonen en oplopende werkloosheid).",
+    "needs": [],
+    "exam_codes": [
+      "H5.1"
+    ],
+    "mastery_target": "understand",
+    "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
+    "terms": [],
+    "pitfalls": [
+      "\"Krap\" klinkt negatief, maar krappe arbeidsmarkt is vanuit werkenden gunstig — drukt lonen op."
+    ]
+  },
+  {
+    "id": "L10",
+    "name": "Arbeidsmarktevenwicht als transfer van goederenmarkt",
+    "category": "arbeidsmarkt",
+    "layer": 2,
+    "kern": "Pas het goederenmarkt-evenwichtsraamwerk toe op de arbeidsmarkt door W voor P en werkenden voor Q te substitueren; los Qa = Qv op voor W* en bereken de evenwichtswerkgelegenheid.",
+    "needs": [
+      "A02",
+      "A04",
+      "A06"
+    ],
+    "exam_codes": [
+      "H5.1",
+      "A2.10",
+      "A2.12",
+      "A2.15"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "review_and_extend",
+    "aspects": [
+      "rekenen",
+      "grafisch"
+    ],
+    "terms": [
+      "arbeidsaanbod (= beroepsbevolking)",
+      "arbeidsvraag (= werkgelegenheid + vacatures)"
+    ],
+    "procedure": [
+      "Identificeer W als prijs en aantal werkenden als hoeveelheid op de assen.",
+      "Stel Qa = Qv en los op voor W* (zelfde rekenwerk als §1.4.1).",
+      "Substitueer W* terug in een van beide vergelijkingen voor de evenwichtswerkgelegenheid Q*.",
+      "Controleer: bij W* is arbeidsvraag = arbeidsaanbod; bij W > W* ontstaat werkloosheid; bij W < W* ontstaat tekort (krapte)."
+    ],
+    "pitfalls": [
+      "Vergeten dat op de arbeidsmarkt werkenden aanbod leveren en bedrijven vraag hebben — de namen zijn omgekeerd aan de goederenmarkt."
+    ]
+  },
+  {
+    "id": "L11",
+    "name": "Conjuncturele werkloosheid",
+    "category": "arbeidsmarkt",
+    "layer": 0,
+    "kern": "Definieer conjuncturele werkloosheid als werkloosheid door tekortschietende bestedingen tijdens laagconjunctuur; verdwijnt als de economie herstelt.",
+    "needs": [],
+    "exam_codes": [
+      "H5.2"
+    ],
+    "mastery_target": "understand",
+    "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
+    "terms": [
+      "conjuncturele werkloosheid"
+    ],
+    "pitfalls": [
+      "Conjuncturele werkloosheid verwarren met structurele — conjunctureel is tijdelijk en keert om bij herstel."
+    ]
+  },
+  {
+    "id": "L12",
+    "name": "Structurele werkloosheid",
+    "category": "arbeidsmarkt",
+    "layer": 0,
+    "kern": "Definieer structurele werkloosheid als werkloosheid door blijvende mismatch tussen vaardigheden en vraag (bijvoorbeeld door automatisering of sectorverschuiving); blijft bestaan zonder gericht beleid.",
+    "needs": [],
+    "exam_codes": [
+      "H5.2",
+      "H5.3"
+    ],
+    "mastery_target": "understand",
+    "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
+    "terms": [
+      "structurele werkloosheid"
+    ],
+    "pitfalls": [
+      "Denken dat conjunctuurherstel structurele werkloosheid oplost — zonder herscholing blijft de mismatch bestaan."
+    ]
+  },
+  {
+    "id": "L13",
+    "name": "Frictiewerkloosheid",
+    "category": "arbeidsmarkt",
+    "layer": 0,
+    "kern": "Definieer frictiewerkloosheid als kortdurende werkloosheid tijdens het zoeken naar een nieuwe baan; is normaal en zelfs gezond op een dynamische arbeidsmarkt.",
+    "needs": [],
+    "exam_codes": [
+      "H5.2",
+      "H5.3"
+    ],
+    "mastery_target": "understand",
+    "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
+    "terms": [
+      "frictiewerkloosheid"
+    ],
+    "pitfalls": [
+      "Frictiewerkloosheid als probleem zien — een kleine fractie frictiewerkloosheid betekent dat de arbeidsmarkt werkt, niet dat hij hapert."
+    ]
+  },
+  {
+    "id": "L14",
+    "name": "Werkloosheid classificeren uit context",
+    "category": "arbeidsmarkt",
+    "layer": 1,
+    "kern": "Classificeer een werkloosheidssituatie als conjunctureel, structureel of frictioneel op basis van de oorzaak (bestedingstekort, skills-mismatch, of tussen-banen-zoektijd).",
+    "needs": [
+      "L11",
+      "L12",
+      "L13"
+    ],
+    "exam_codes": [
+      "H5.2"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
+    "terms": [],
+    "procedure": [
+      "Lees de context: wat is de oorzaak van het banenverlies?",
+      "Als de oorzaak een recessie/bestedingsdaling is → conjunctureel.",
+      "Als de oorzaak een blijvende sector-/skills-verschuiving is (automatisering, sectorverandering) → structureel.",
+      "Als de persoon zelf ontslag neemt en rondkijkt → frictioneel."
+    ],
+    "pitfalls": [
+      "Niet-evidente gevallen (mijnwerker na mijnsluiting) vereisen judgement: blijvende mismatch = structureel, korte overbrugging = frictioneel."
+    ]
+  },
+  {
+    "id": "L15",
+    "name": "Beleidsinstrument koppelen aan type werkloosheid",
+    "category": "arbeidsmarkt",
+    "layer": 2,
+    "kern": "Koppel het juiste beleidsinstrument aan elk type werkloosheid: fiscale stimulus voor conjunctureel, herscholing/onderwijs voor structureel, vacaturebemiddeling voor frictioneel.",
+    "needs": [
+      "L14"
+    ],
+    "exam_codes": [
+      "H5.3"
+    ],
+    "mastery_target": "understand",
+    "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
+    "terms": [],
+    "pitfalls": [
+      "Fiscale stimulus inzetten tegen structurele werkloosheid — werkt niet, want het probleem is mismatch, geen vraag-tekort."
+    ]
+  },
+  {
+    "id": "L16",
+    "name": "Werknemers- en werkgeverssurplus bij minimumloon",
+    "category": "arbeidsmarkt",
+    "layer": 4,
+    "kern": "Bereken werknemerssurplus (arbeidsmarkt-CS) en werkgeverssurplus (arbeidsmarkt-PS) voor en na invoering van een minimumloon; identificeer welvaartsverlies als de \\\"verloren driehoek\\\" bij W_min > W*.",
+    "needs": [
+      "A02",
+      "A04",
+      "A06",
+      "A10",
+      "A19",
+      "L10"
+    ],
+    "exam_codes": [
+      "A2.16",
+      "D3.10",
+      "H5.2"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "review_and_extend",
+    "aspects": [
+      "rekenen",
+      "grafisch"
+    ],
+    "terms": [],
+    "procedure": [
+      "Bereken W* en Q* zonder ingrijpen (zie L10).",
+      "Bij W_min > W*: bereken Qd en Qa bij W_min; werkgelegenheid = min(Qd, Qa) = Qd.",
+      "Werknemerssurplus = driehoek boven de arbeidsaanbodcurve tot W_min over Qd werkenden.",
+      "Werkgeverssurplus = driehoek tussen W_min en de arbeidsvraagcurve over Qd werkenden.",
+      "Welvaartsverlies = driehoek tussen W_min en W* over het verschil Qv(W_min) – Q*."
+    ],
+    "pitfalls": [
+      "Qa gebruiken als daadwerkelijke werkgelegenheid bij W_min > W* — de korte zijde (Qd) bepaalt hoeveel banen er zijn."
+    ]
+  },
+  {
+    "id": "L17",
+    "name": "CAO als bindende loonafspraak",
+    "category": "arbeidsmarkt",
+    "layer": 0,
+    "kern": "Leg uit dat een CAO (collectieve arbeidsovereenkomst) dat lonen boven het evenwichtsloon afspreekt werkt als een bindend minimumloon voor de gehele sector, met werkloosheid als gevolg.",
+    "needs": [],
+    "exam_codes": [
+      "H5.1",
+      "D3.10"
+    ],
+    "mastery_target": "understand",
+    "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
+    "terms": [
+      "loonontwikkeling"
+    ],
+    "pitfalls": [
+      "Denken dat CAO alleen loonhoogte betreft — CAO legt ook arbeidsvoorwaarden vast, maar het economische effect is vooral de loonvloer."
+    ]
+  },
+  {
+    "id": "L18",
+    "name": "Voordelen en nadelen van vakbonden",
+    "category": "arbeidsmarkt",
+    "layer": 0,
+    "kern": "Noem voordelen van vakbonden voor werkenden (hogere lonen, betere voorwaarden, collectieve onderhandelingsmacht) en nadelen (hogere loonkosten voor werkgevers, lagere werkgelegenheid, insiders vs outsiders).",
+    "needs": [],
+    "exam_codes": [
+      "H5.1"
+    ],
+    "mastery_target": "understand",
+    "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
+    "terms": [],
+    "pitfalls": [
+      "Alleen voor- of alleen nadelen noemen — het is een trade-off; goede antwoorden benoemen beide kanten."
+    ]
+  },
+  {
+    "id": "L19",
+    "name": "Loonstarheid",
+    "category": "arbeidsmarkt",
+    "layer": 0,
+    "kern": "Definieer loonstarheid als de neiging van lonen om traag (vooral omlaag) aan te passen aan veranderingen in arbeidsmarkt-omstandigheden, met als gevolg persistente werkloosheid na een negatieve schok.",
+    "needs": [],
+    "exam_codes": [
+      "H5.3",
+      "A4.5"
+    ],
+    "mastery_target": "understand",
+    "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
+    "terms": [
+      "loonontwikkeling"
+    ],
+    "pitfalls": [
+      "Loonstarheid verwarren met CAO — loonstarheid kan ook zonder CAO bestaan (contracten, psychologische weerstand), CAO is één institutionele oorzaak."
+    ]
+  },
+  {
+    "id": "L20",
+    "name": "Loonflexibiliteit versus actief arbeidsmarktbeleid",
+    "category": "arbeidsmarkt",
+    "layer": 1,
+    "kern": "Vergelijk twee beleidsreacties op werkloosheid: verlagen van de loonvloer (wacht op loondaling) versus actief arbeidsmarktbeleid (herscholing, bemiddeling); beoordeel op effectiviteit per type werkloosheid.",
+    "needs": [
+      "L19"
+    ],
+    "exam_codes": [
+      "H5.3"
+    ],
+    "mastery_target": "analyze",
+    "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
+    "terms": [],
+    "procedure": [
+      "Identificeer het dominante type werkloosheid (conjunctureel/structureel/frictie).",
+      "Redeneer wat loonverlaging zou doen: effectief bij CAO-loonvloer, ineffectief bij structurele mismatch.",
+      "Redeneer wat actief beleid zou doen: effectief bij structurele mismatch, overbodig bij simpele frictie.",
+      "Concludeer welke combinatie past bij de case."
+    ],
+    "pitfalls": [
+      "Één maatregel als \"beste\" bestempelen zonder de oorzaak van de werkloosheid te benoemen."
+    ]
+  },
+  {
+    "id": "L21",
+    "name": "Standpuntbepaling minimumloon",
+    "category": "arbeidsmarkt",
+    "layer": 5,
+    "kern": "Schrijf een beoordeel-antwoord over het minimumloon dat beide kanten benoemt: hogere lonen voor wie nog werk heeft versus werkloosheid voor wie uitgeprijsd wordt; onderbouw met surplus-berekeningen.",
+    "needs": [
+      "L16"
+    ],
+    "exam_codes": [
+      "A4.1",
+      "A4.5",
+      "H5.2"
+    ],
+    "mastery_target": "evaluate",
+    "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
+    "terms": [],
+    "procedure": [
+      "Noem het argument voor: werknemerssurplus stijgt per nog-werkende; bereken hoeveel.",
+      "Noem het argument tegen: werkgelegenheid daalt; bereken hoeveel banen verloren gaan en welvaartsverlies.",
+      "Benoem wie wint (insiders) en wie verliest (outsiders, werkgevers).",
+      "Trek een conclusie die beide kanten weegt — geen one-sided standpunt."
+    ],
+    "pitfalls": [
+      "Alleen de winnaars benoemen (eenzijdige standpuntbepaling levert nooit volle punten op)."
+    ]
   }
 ]
