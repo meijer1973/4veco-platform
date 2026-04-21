@@ -53,14 +53,18 @@
         "Calculate opportunity costs in simple scenarios",
         "Recognise trade-offs in everyday decisions"
       ],
-      "required_skills": [],
-      "prior_knowledge_assumed": [],
-      "new_skills_introduced": [],
-      "missing_units_flagged": [
-        "Define scarcity as the core economic problem (concept-level, mastery_target understand)",
-        "Identify opportunity cost / alternatieve kosten in a choice scenario (concept + simple calculation)",
-        "Compute total profit from a mixed-allocation choice (basic multiplication-and-sum, A-domain candidate)"
+      "required_skills": [
+        "A43",
+        "B01",
+        "B02"
       ],
+      "prior_knowledge_assumed": [],
+      "new_skills_introduced": [
+        "A43",
+        "B01",
+        "B02"
+      ],
+      "missing_units_flagged": [],
       "exam_codes": [],
       "difficulty_notes": "Intuitive concepts, concrete examples. Students engage well. No calculation barriers. One lesson is comfortable with time for class discussion.",
       "source_ref": "knowledge/course_blueprint_v4.md §1.1.1"
@@ -194,15 +198,20 @@
         "Draw an individual demand curve from willingness-to-pay data",
         "Explain the law of demand"
       ],
-      "required_skills": [],
-      "prior_knowledge_assumed": [],
-      "new_skills_introduced": [],
-      "missing_units_flagged": [
-        "Define betalingsbereidheid as the maximum price a consumer will pay for an additional unit (concept-level, prerequisite for surplus)",
-        "Construct an individual step-function demand curve from a willingness-to-pay schedule (A-domain candidate; precedes A01 lineaire vraag)",
-        "Apply 'buy if P ≤ betalingsbereidheid' decision rule to find Q at a given P (concept + reading)",
-        "Explain the law of demand verbally (concept-level, mastery_target understand)"
+      "required_skills": [
+        "A44",
+        "D35",
+        "D36",
+        "D37"
       ],
+      "prior_knowledge_assumed": [],
+      "new_skills_introduced": [
+        "A44",
+        "D35",
+        "D36",
+        "D37"
+      ],
+      "missing_units_flagged": [],
       "exam_codes": [],
       "difficulty_notes": "Very intuitive. Pizza/real-life examples work well. Step functions are visual and concrete. One lesson comfortable — use the extra time for a good class discussion about what determines betalingsbereidheid.",
       "source_ref": "knowledge/course_blueprint_v4.md §1.2.1"

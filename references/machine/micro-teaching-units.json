@@ -1390,6 +1390,116 @@
     "generator": "GEN_A42"
   },
   {
+    "id": "A43",
+    "name": "Totale winst uit gemengde allocatie berekenen",
+    "category": "vaardigheden",
+    "layer": 0,
+    "kern": "Bereken de totale winst van een verdeling van beperkte middelen over meerdere activiteiten door per activiteit (hoeveelheid × winst/eenheid) te berekenen en op te tellen.",
+    "needs": [],
+    "exam_codes": [
+      "A2.1"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "previously_taught",
+    "aspects": [
+      "rekenen"
+    ],
+    "terms": [],
+    "procedure": [
+      "Lees per activiteit de hoeveelheid middelen en de winst per eenheid af.",
+      "Bereken voor elke activiteit: hoeveelheid × winst per eenheid.",
+      "Tel de uitkomsten op voor de totale winst.",
+      "Vergelijk met andere verdelingen om de beste keuze te bepalen."
+    ],
+    "pitfalls": [
+      "Winst per eenheid verwarren met totale opbrengst — winst is opbrengst minus kosten.",
+      "De som van niet-gekozen alternatieven optellen — alleen de daadwerkelijk gekozen activiteiten tellen voor de totale winst."
+    ],
+    "generator": "GEN_A43"
+  },
+  {
+    "id": "A44",
+    "name": "Individuele stapfunctie-vraagcurve tekenen uit betalingsbereidheid",
+    "category": "vaardigheden",
+    "layer": 1,
+    "kern": "Teken de individuele vraagcurve van één consument als een stapfunctie: voor elke eenheid een horizontale stap op de hoogte van de betalingsbereidheid voor die eenheid.",
+    "needs": [
+      "D35"
+    ],
+    "exam_codes": [
+      "A2.14",
+      "D1.2"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "aspects": [
+      "grafisch"
+    ],
+    "terms": [
+      "betalingsbereidheid"
+    ],
+    "procedure": [
+      "Zet prijs P op de verticale as en hoeveelheid Q op de horizontale as.",
+      "Teken voor elke eenheid (1e, 2e, ...) een horizontale streep ter hoogte van de bijbehorende betalingsbereidheid.",
+      "De stappen dalen van links naar rechts als de betalingsbereidheid per extra eenheid afneemt.",
+      "De resulterende trapsgewijze lijn is de individuele vraagcurve."
+    ],
+    "pitfalls": [
+      "Een rechte (lineaire) vraagcurve tekenen — bij individuele, per-eenheid-gedefinieerde betalingsbereidheid is de curve trapsgewijs.",
+      "Assen verwisselen (P op horizontale as) tegen de economische conventie."
+    ],
+    "generator": "GEN_A44"
+  },
+  {
+    "id": "B01",
+    "name": "Schaarste als kerneconomisch probleem",
+    "category": "schaarste",
+    "layer": 0,
+    "kern": "Herken schaarste als de basisvoorwaarde van alle economische keuzes: middelen (tijd, geld, grondstoffen) zijn beperkt terwijl wensen onbeperkt zijn, waardoor keuzes onvermijdelijk zijn.",
+    "needs": [],
+    "mastery_target": "understand",
+    "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
+    "terms": [
+      "schaarste"
+    ],
+    "pitfalls": [
+      "Schaarste gelijkstellen aan \"weinig\" — lucht is weinig schaars, zand op het strand is plaatselijk niet schaars; wat telt is \"beperkt ten opzichte van de vraag\".",
+      "Schaarste alleen op geld betrekken — tijd, ruimte en grondstoffen zijn evengoed schaars en leiden tot alternatieve kosten."
+    ]
+  },
+  {
+    "id": "B02",
+    "name": "Alternatieve kosten in een keuze-situatie",
+    "category": "schaarste",
+    "layer": 1,
+    "kern": "Identificeer de alternatieve kosten van een keuze als de opbrengst van het beste niet-gekozen alternatief, en bereken deze expliciet wanneer de cijfers gegeven zijn.",
+    "needs": [
+      "B01"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal",
+      "rekenen"
+    ],
+    "terms": [
+      "alternatieve kosten"
+    ],
+    "procedure": [
+      "Benoem alle beschikbare alternatieven voor de middelen (tijd, geld, grondstoffen).",
+      "Bereken voor elk alternatief de opbrengst (of verwachte opbrengst).",
+      "Rangschik de alternatieven; het niet-gekozen alternatief met de hoogste opbrengst zijn de alternatieve kosten.",
+      "Vergelijk de opbrengst van de daadwerkelijke keuze met deze alternatieve kosten om de nettowaarde van de keuze te beoordelen."
+    ],
+    "pitfalls": [
+      "Alle niet-gekozen alternatieven optellen — alternatieve kosten zijn alléén het beste niet-gekozen alternatief.",
+      "Engelse \"opportunity costs\" of \"opportuniteitskosten\" gebruiken in Nederlandse teksten — de canonical term is \"alternatieve kosten\"."
+    ]
+  },
+  {
     "id": "D01",
     "name": "Accijnsopbrengst uit grafiek",
     "category": "markt",
@@ -2243,6 +2353,87 @@
     "pitfalls": [
       "Een niet-bindende prijsregulering als bindend behandelen en toch tekorten / overschotten berekenen — als max boven of min onder het evenwicht ligt, is er niets aan de hand.",
       "Vergeten te controleren of de regulering bindend is voordat je welvaartsberekeningen start."
+    ]
+  },
+  {
+    "id": "D35",
+    "name": "Betalingsbereidheid definiëren",
+    "category": "markt",
+    "layer": 0,
+    "kern": "Definieer betalingsbereidheid als de maximale prijs die een consument bereid is te betalen voor één extra eenheid van een goed; deze kan dalen naarmate meer eenheden al gekocht zijn.",
+    "needs": [],
+    "exam_codes": [
+      "D1.1"
+    ],
+    "mastery_target": "understand",
+    "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
+    "terms": [
+      "betalingsbereidheid"
+    ],
+    "pitfalls": [
+      "Betalingsbereidheid gelijkstellen aan \"wat iemand gewoonlijk betaalt\" — het is de maximale prijs, niet de marktprijs.",
+      "Vergeten dat betalingsbereidheid per eenheid kan verschillen — de eerste eenheid heeft vaak een hogere betalingsbereidheid dan de derde."
+    ]
+  },
+  {
+    "id": "D36",
+    "name": "Beslisregel: koop als P ≤ betalingsbereidheid",
+    "category": "markt",
+    "layer": 1,
+    "kern": "Pas de consumentenbeslissingsregel toe: een consument koopt een extra eenheid precies dan wanneer zijn betalingsbereidheid voor die eenheid ≥ de marktprijs P; gebruik dit om de individuele vraag bij een gegeven P te bepalen.",
+    "needs": [
+      "D35"
+    ],
+    "exam_codes": [
+      "D1.1",
+      "D1.2"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal",
+      "rekenen"
+    ],
+    "terms": [
+      "betalingsbereidheid"
+    ],
+    "procedure": [
+      "Lees de betalingsbereidheid per eenheid af uit de gegevens.",
+      "Vergelijk elke betalingsbereidheid met de gegeven marktprijs P.",
+      "Tel het aantal eenheden waarvoor betalingsbereidheid ≥ P — dat is de gevraagde hoeveelheid van deze consument bij prijs P.",
+      "Controleer: daalt P, dan stijgt (of blijft gelijk) de gevraagde hoeveelheid."
+    ],
+    "pitfalls": [
+      "Alleen de eerste eenheid checken — de regel moet op elke eenheid apart worden toegepast.",
+      "De consument koopt niet als P = betalingsbereidheid: hij is dan precies indifferent; de regel is P ≤ betalingsbereidheid (gelijkheid telt mee)."
+    ]
+  },
+  {
+    "id": "D37",
+    "name": "Wet van de vraag verbaal uitleggen",
+    "category": "markt",
+    "layer": 2,
+    "kern": "Leg uit waarom de vraagcurve dalend is: bij een lagere prijs vinden meer consumenten het waardevol om te kopen (hun betalingsbereidheid overschrijdt de prijs), en individuele consumenten zijn bereid meer eenheden te kopen doordat hun dalende betalingsbereidheid dan nog steeds boven P ligt.",
+    "needs": [
+      "D35",
+      "D36"
+    ],
+    "exam_codes": [
+      "D1.2",
+      "D1.4a"
+    ],
+    "mastery_target": "understand",
+    "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
+    "terms": [],
+    "pitfalls": [
+      "De wet van de vraag alleen als \"regel\" leren zonder uitleg — een goed antwoord legt uit WAAROM, via betalingsbereidheid of afnemend grensnut.",
+      "Verwarren met een verschuiving: de wet van de vraag betreft een beweging langs de curve (eigen-prijseffect), niet een verschuiving."
     ]
   },
   {

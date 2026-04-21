@@ -318,13 +318,13 @@ Canonical Dutch economic terms as defined by the **Syllabus Economie VWO 2026** 
 
 Terms that are not tied to a single syllabus domain but are used throughout the curriculum:
 
-| Dutch term (canonical) | English equivalent | Notes |
-|---|---|---|
-| alternatieve kosten | opportunity cost | What you give up when choosing one option over another. Fundamental concept across all domains. In the syllabus used as "opportuniteitskosten" in international trade (H), but "alternatieve kosten" is the standard Dutch term used in textbooks and exams. |
-| schaarste | scarcity | Domein B (SE), but foundational for all CE domains |
-| ruil | exchange/trade | Domein C (SE), but foundational |
-| coordinatiemechanisme | coordination mechanism | market, government, or other |
-| afruil / trade-off | trade-off | used across D, H, I |
+| # | Dutch term (canonical) | English equivalent | Notes |
+|---|---|---|---|
+| — | alternatieve kosten | opportunity cost | What you give up when choosing one option over another. Fundamental concept across all domains. In the syllabus used as "opportuniteitskosten" in international trade (H), but "alternatieve kosten" is the standard Dutch term used in textbooks and exams. |
+| — | schaarste | scarcity | Domein B (SE), but foundational for all CE domains |
+| — | ruil | exchange/trade | Domein C (SE), but foundational |
+| — | coordinatiemechanisme | coordination mechanism | market, government, or other |
+| — | afruil / trade-off | trade-off | used across D, H, I |
 
 ---
 
