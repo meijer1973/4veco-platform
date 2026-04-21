@@ -2487,7 +2487,7 @@
     "id": "E03",
     "name": "Kapitaaldekking en renteeffecten",
     "category": "ruilen over tijd",
-    "layer": 2,
+    "layer": 1,
     "kern": "Analyseer hoe rentes de betaalbaarheid van kapitaalgedekte pensioenen onder druk zetten.",
     "needs": [
       "E02",
@@ -2589,7 +2589,7 @@
     "id": "E07",
     "name": "Koop- versus huurlasten vergelijken",
     "category": "ruilen over tijd",
-    "layer": 2,
+    "layer": 1,
     "kern": "Vergelijk netto woonlasten van kopen en huren door rente, aflossing, onderhoud en huurprijs systematisch tegen elkaar af te zetten.",
     "needs": [
       "E02",
@@ -3636,13 +3636,11 @@
     "id": "H15",
     "name": "Nominale rente op staatsobligaties verklaren",
     "category": "welvaart en groei",
-    "layer": 1,
+    "layer": 0,
     "kern": "Verklaar bewegingen in de nominale rente op staatsobligaties vanuit vraag-en-aanbod op de obligatiemarkt en risicoperceptie.",
-    "needs": [
-      "H21"
-    ],
+    "needs": [],
     "exam_codes": [
-      "H5.2"
+      "H1.2"
     ],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
@@ -3901,7 +3899,7 @@
     "id": "H26",
     "name": "Koop- versus huurlasten vergelijken",
     "category": "welvaart en groei",
-    "layer": 2,
+    "layer": 1,
     "kern": "Vergelijk netto woonlasten van kopen en huren door rente, aflossing, onderhoud en huurprijs systematisch tegen elkaar af te zetten.",
     "needs": [
       "H15"
@@ -3976,7 +3974,7 @@
     "id": "I03",
     "name": "Renteongevoeligheid van investeringen bij ondergrens",
     "category": "goede en slechte tijden",
-    "layer": 3,
+    "layer": 2,
     "kern": "Leg uit waarom bedrijfsinvesteringen beperkt reageren op renteverlagingen als de vraag laag is of de effectieve ondergrens nominale rente nadert.",
     "needs": [
       "I17"
@@ -4018,7 +4016,7 @@
     "id": "I05",
     "name": "Rentebesluit van centrale bank",
     "category": "goede en slechte tijden",
-    "layer": 3,
+    "layer": 2,
     "kern": "Bepaal op basis van inflatie, outputgap en duaal mandaat of een centrale bank de beleidsrente verhoogt, verlaagt of constant houdt.",
     "needs": [
       "I17",
@@ -4187,7 +4185,7 @@
     "id": "I11",
     "name": "Monetair beleid: starre versus flexibele arbeidsmarkt",
     "category": "goede en slechte tijden",
-    "layer": 4,
+    "layer": 3,
     "kern": "Vergelijk het effect van een renteverlaging op bbp en prijsniveau tussen een starre en een flexibele arbeidsmarkt en verklaar het verschil via de helling van de GA-curve.",
     "needs": [
       "I10",
@@ -4222,14 +4220,14 @@
     "id": "I12",
     "name": "Wisselkoerskanaal van rentebeleid",
     "category": "goede en slechte tijden",
-    "layer": 3,
+    "layer": 2,
     "kern": "Leg uit hoe een renteverlaging via kapitaaluitstroom leidt tot depreciatie van de valuta en daarmee de exportcompetitiviteit vergroot.",
     "needs": [
       "I17",
-      "H24"
+      "I20"
     ],
     "exam_codes": [
-      "I1.2"
+      "I3.8"
     ],
     "mastery_target": "understand",
     "prior_learning": "new_this_year",
@@ -4245,7 +4243,7 @@
     "id": "I13",
     "name": "Monetair trilemma",
     "category": "goede en slechte tijden",
-    "layer": 4,
+    "layer": 3,
     "kern": "Analyseer waarom een land hooguit twee van de drie doelen — vaste wisselkoers, vrij kapitaalverkeer en zelfstandig rentebeleid — tegelijk kan bereiken.",
     "needs": [
       "I12"
@@ -4356,7 +4354,7 @@
     "id": "I17",
     "name": "Rentebeleid en transmissiemechanisme",
     "category": "goede en slechte tijden",
-    "layer": 2,
+    "layer": 1,
     "kern": "Leg uit hoe een renteverhoging via duurder krediet consumptie en investeringen afremt en hoe een renteverlaging deze bestedingen stimuleert.",
     "needs": [
       "H15"
@@ -4402,7 +4400,7 @@
     "id": "I19",
     "name": "Wisselkoerseffect van monetair beleid op conjunctuur",
     "category": "goede en slechte tijden",
-    "layer": 4,
+    "layer": 3,
     "kern": "Leg uit hoe rentebeleid via de wisselkoers de netto export verandert en zo de binnenlandse conjunctuur beïnvloedt.",
     "needs": [
       "I12",
@@ -4421,6 +4419,31 @@
       "bbp-groei",
       "monetair beleid",
       "wisselkoers"
+    ]
+  },
+  {
+    "id": "I20",
+    "name": "Internationale kapitaalmobiliteit en rentepariteit",
+    "category": "goede en slechte tijden",
+    "layer": 1,
+    "kern": "Leg uit waarom een relatief hogere binnenlandse rente buitenlands kapitaal aantrekt en een relatieve renteverlaging kapitaal doet wegvloeien; deze kapitaalbewegingen drijven via vraag en aanbod op de valutamarkt de wisselkoers.",
+    "needs": [
+      "H24"
+    ],
+    "exam_codes": [
+      "I3.8"
+    ],
+    "mastery_target": "understand",
+    "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
+    "terms": [
+      "wisselkoers"
+    ],
+    "pitfalls": [
+      "Denken dat kapitaal uitsluitend op absoluut rentepeil reageert — het gaat om het RELATIEVE rente-verschil met buitenland.",
+      "De causaliteit omkeren: rente → kapitaalstromen → wisselkoers, niet andersom in deze eerste-orde redenering."
     ]
   },
   {
@@ -4814,7 +4837,7 @@
     "name": "Werknemers- en werkgeverssurplus bij minimumloon",
     "category": "arbeidsmarkt",
     "layer": 4,
-    "kern": "Bereken werknemerssurplus (arbeidsmarkt-CS) en werkgeverssurplus (arbeidsmarkt-PS) voor en na invoering van een minimumloon; identificeer welvaartsverlies als de \\\"verloren driehoek\\\" bij W_min > W*.",
+    "kern": "Bereken werknemerssurplus (arbeidsmarkt-CS) en werkgeverssurplus (arbeidsmarkt-PS) voor en na invoering van een minimumloon; identificeer welvaartsverlies als de \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"verloren driehoek\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\" bij W_min > W*.",
     "needs": [
       "A02",
       "A04",
