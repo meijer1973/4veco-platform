@@ -173,62 +173,50 @@ def build_toc_entries(chapter_pairs: list[tuple[str, Path, str]]) -> list[dict]:
     return entries
 
 # ---------------------------------------------------------------------------
-# Terminology parsing + begrippenlijst
+# Terminology: begrippenlijst driven by references/machine/begrippen.json
 # ---------------------------------------------------------------------------
-ROMAN_PREFIX_RE = re.compile(r"^[IVX]+\s+")
-HEADER_LINE_HINTS = ("Dutch term", "term (canonical)", "#")
+def load_begrippen(begrippen_json_path: Path) -> list[dict]:
+    """Load the canonical term registry. Returns a list of live (non-deprecated)
+    entries with the full schema preserved: id, term_nl, definition_nl, domain,
+    abbreviation, synonyms_nl, formulas, syllabus_clause, etc."""
+    with begrippen_json_path.open(encoding="utf-8") as f:
+        data = json.load(f)
+    entries = []
+    for entry in data.get("terms", {}).values():
+        if entry.get("deprecated"):
+            continue
+        entries.append(entry)
+    return entries
 
-def parse_terminology(terminology_md_path: Path) -> list[dict]:
-    """Parse markdown tables → [{'term': str, 'notes': str}] entries."""
-    md = terminology_md_path.read_text(encoding="utf-8")
-    terms: list[dict] = []
-    for raw_line in md.splitlines():
-        line = raw_line.strip()
-        if not line.startswith("|") or not line.endswith("|"):
-            continue
-        cells = [c.strip() for c in line.strip("|").split("|")]
-        if len(cells) < 3:
-            continue
-        # Header-separator row: | --- | --- | ... |
-        if all(set(c) <= set("-: ") for c in cells):
-            continue
-        term_cell = cells[1]
-        if not term_cell or term_cell == "—":
-            continue
-        if any(hint in term_cell for hint in HEADER_LINE_HINTS):
-            continue
-        for raw_term in term_cell.split("/"):
-            t = raw_term.strip()
-            if not t or t == "—":
-                continue
-            t = ROMAN_PREFIX_RE.sub("", t)
-            if not t:
-                continue
-            notes = cells[-1] if len(cells) > 3 else ""
-            # Notes often ends on abbrev-only column, dedup against English column
-            if notes in {"—", ""}:
-                notes = ""
-            terms.append({"term": t, "notes": notes})
-    return terms
-
-def extract_begrippen(book_md_text: str, terminology_md_path: Path) -> list[dict]:
-    all_terms = parse_terminology(terminology_md_path)
+def extract_begrippen(book_md_text: str, registry: list[dict]) -> list[dict]:
+    """Return the subset of registry entries whose term_nl, abbreviation, or any
+    synonym appears as a whole word in the book body. Sort alphabetically by
+    term_nl (Dutch-collation safe)."""
     lowered_body = book_md_text.lower()
-    seen_keys = set()
     matched: list[dict] = []
-    for entry in all_terms:
-        term = entry["term"]
-        key = term.lower()
-        if key in seen_keys:
+    seen_ids: set[str] = set()
+    for entry in registry:
+        term = entry.get("term_nl", "")
+        if not term or len(term) < 3:
             continue
-        if len(term) < 3:  # avoid false matches on single-letter abbreviations
+        if entry.get("id") in seen_ids:
             continue
-        pattern = r"\b" + re.escape(key) + r"\b"
-        if re.search(pattern, lowered_body, flags=re.IGNORECASE):
-            seen_keys.add(key)
+        candidates = [term]
+        abbrev = entry.get("abbreviation") or ""
+        if abbrev and len(abbrev) >= 2:
+            candidates.append(abbrev)
+        for syn in entry.get("synonyms_nl") or []:
+            if syn and len(syn) >= 3:
+                candidates.append(syn)
+        if any(_term_occurs(cand, lowered_body) for cand in candidates):
+            seen_ids.add(entry["id"])
             matched.append(entry)
-    matched.sort(key=lambda x: _sort_key(x["term"]))
+    matched.sort(key=lambda e: _sort_key(e["term_nl"]))
     return matched
+
+def _term_occurs(term: str, lowered_body: str) -> bool:
+    pattern = r"\b" + re.escape(term.lower()) + r"\b"
+    return re.search(pattern, lowered_body) is not None
 
 def _sort_key(s: str) -> str:
     return s.lower().replace("ë", "e").replace("ï", "i").replace("é", "e")
@@ -243,10 +231,24 @@ def render_begrippenlijst_html(begrippen: list[dict]) -> str:
         )
     parts = ['<div class="book-glossary">', '<h1>Begrippenlijst</h1>', '<dl>']
     for b in begrippen:
-        term = html_escape(b["term"])
-        notes = b.get("notes", "").strip()
-        parts.append(f'<dt>{term}</dt>')
-        parts.append(f'<dd>{html_escape(notes) if notes else "—"}</dd>')
+        term = html_escape(b["term_nl"])
+        abbrev = (b.get("abbreviation") or "").strip()
+        dt = f'<dt>{term}'
+        if abbrev:
+            dt += f' <span class="term-abbrev">({html_escape(abbrev)})</span>'
+        dt += '</dt>'
+        parts.append(dt)
+
+        definition = (b.get("definition_nl") or "").strip()
+        if definition:
+            parts.append(f'<dd>{html_escape(definition)}</dd>')
+        else:
+            parts.append('<dd class="term-todo"><em>(definitie volgt)</em></dd>')
+
+        formulas = b.get("formulas") or []
+        if formulas:
+            rendered = " &middot; ".join(f'<code>{html_escape(f)}</code>' for f in formulas)
+            parts.append(f'<dd class="term-formula">{rendered}</dd>')
     parts.append('</dl></div>')
     return "\n".join(parts)
 
@@ -664,6 +666,27 @@ p { margin: 0 0 10pt 0; }
   padding-left: 18pt;
   color: #222;
 }
+.book-glossary dt .term-abbrev {
+  color: #555;
+  font-weight: normal;
+  font-size: 10pt;
+}
+.book-glossary dd.term-formula {
+  font-size: 10pt;
+  color: #2F6B2F;
+  margin-top: -2pt;
+}
+.book-glossary dd.term-formula code {
+  background: #EFF6EC;
+  color: #2F6B2F;
+  padding: 0 4pt;
+  border-radius: 3px;
+  font-size: 10pt;
+}
+.book-glossary dd.term-todo {
+  color: #888;
+  font-style: italic;
+}
 
 .book-formulas {
   break-before: page;
@@ -851,11 +874,12 @@ def assemble_book_md(manifest: dict, lessen_root: Path, platform_root: Path):
     # Build a "raw body" (with asset paths) for term scanning.
     raw_body = "\n\n".join(md for _, _, md in chapter_data)
 
-    terminology_md_path = platform_root / "references" / "authored" / "economie-terminologie.md"
-    if terminology_md_path.exists():
-        begrippen = extract_begrippen(raw_body, terminology_md_path)
+    begrippen_json_path = platform_root / "references" / "machine" / "begrippen.json"
+    if begrippen_json_path.exists():
+        registry = load_begrippen(begrippen_json_path)
+        begrippen = extract_begrippen(raw_body, registry)
     else:
-        print(f"  Warning: terminology file not found at {terminology_md_path}",
+        print(f"  Warning: begrippen registry not found at {begrippen_json_path}",
               file=sys.stderr)
         begrippen = []
     glossary_html = render_begrippenlijst_html(begrippen)
