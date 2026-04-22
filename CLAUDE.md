@@ -31,4 +31,6 @@ Skills are in two locations (kept in sync):
 - `skills/` — shared canonical location for all agents (Claude, Codex, etc.)
 - `.claude/commands/` — Claude Code reads from this path automatically
 
+**Meta-skill:** `senior-dev-planning` — planning methodology for any non-trivial coding task in this repo (investigate before asserting, be honest about uncertainty, reason backwards from the user's actual need). Triggers on requests like "plan before coding" or whenever work touches unfamiliar code. Operationalizes the Working agreement rules for the specific artifact of a plan document; not tied to the AGENTS.md build-artifact trigger table.
+
 Temporary files: always clean up after every task. Use `/tmp/claude-work/` for intermediate files.
