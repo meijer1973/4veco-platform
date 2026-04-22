@@ -68,9 +68,10 @@ function detectDomain(styleBlock) {
 }
 
 // ── One-file transform ───────────────────────────────────────────
-const SHARED_LINK = '<link rel="stylesheet" href="../../../shared/voorkennis.css">';
+// Flat layout: paragraph root → shared/ is 2 levels up.
+const SHARED_LINK = '<link rel="stylesheet" href="../../shared/voorkennis.css">';
 const PREPAINT = "<script>(function(){try{var m=localStorage.getItem('quizMode')||'light';document.documentElement.setAttribute('data-theme',m);}catch(e){}})();</script>";
-const SHARED_SCRIPT = '<script src="../../../shared/voorkennis.js"></script>';
+const SHARED_SCRIPT = '<script src="../../shared/voorkennis.js"></script>';
 
 function transformOne(file) {
     let src = fs.readFileSync(file, 'utf8');

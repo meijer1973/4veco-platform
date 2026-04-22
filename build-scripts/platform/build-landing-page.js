@@ -1,22 +1,26 @@
 /**
- * Build Landing Pages + Restructure Folders
+ * Build Landing Pages (flat layout)
  *
  * Generates index.html at three levels:
- * - Module page (overview of all chapters)
- * - Chapter pages (overview of paragrafen in that chapter)
- * - Paragraaf pages (file dashboard with Voorbereiden/Leren/Oefenen)
+ * - Book page      (overview of all chapters)
+ * - Chapter pages  (overview of paragrafen in that chapter)
+ * - Paragraaf pages (file dashboard with Voorbereiden / Oefenen / Leren)
  *
  * All pages include a left navigation sidebar showing the full book structure.
  *
- * HOW TO ADAPT:
- * - To add a new paragraaf: add an entry to PARAGRAAF_DATA
- * - To change the HTML template: edit renderParagraafPage / renderChapterPage / renderModulePage
- * - To run for a single paragraaf: set ONLY_ID = "3.2.3" (or null for all)
+ * Target metadata — chapter list, paragraph list, domain assignments — comes
+ * from the target's own deploy-config.json manifest. See
+ * build-scripts/lib/lib-deploy-config.js.
  *
- * Run: NODE_PATH="$(npm root -g)" node build-scripts/build-landing-page.js
+ * Paragraph layout is flat: all companion files sit directly at the paragraph
+ * root (no 1. Voorbereiden / 2. Leren / 3. Oefenen subfolders). Section
+ * membership is derived from filename patterns only.
+ *
+ * Run: MODULE_ROOT="<target-book-path>" node build-scripts/platform/build-landing-page.js
  */
 const fs = require("fs");
 const path = require("path");
+const { loadConfig } = require("../lib/lib-deploy-config");
 
 // ═══════════════════════════════════════════════════════════════════════════
 // CONFIGURATION
@@ -26,256 +30,111 @@ const MODULE_BASE = process.env.MODULE_ROOT
     ? path.resolve(process.env.MODULE_ROOT)
     : path.join(__dirname, "../..");
 
+const CONFIG = loadConfig(MODULE_BASE);
+
 const ONLY_ID = null;
 const DRY_RUN = false;
 
 // Temporarily hide the task rows (basisopgaven, middenopgaven, verrijkingsopgaven)
-// Set to false to show them again
 const HIDE_TASK_ROWS = false;
 
-// Temporarily hide specific paragrafen from nav, chapter pages, and generation
-// The folder and files remain intact; remove the id from this set to restore
-const HIDDEN_PARAGRAFEN = new Set(["3.2.4"]);
+console.log(`Target: ${CONFIG.displayLabel} (${CONFIG.moduleRoot})`);
 
-// ── Module auto-detection ─────────────────────────────────────────────
-// Scan MODULE_ROOT for chapter folders (X.Y Hoofdstuk...) to determine
-// which module we're building. This filters all config to only that module.
-function detectModulePrefix() {
-  const entries = fs.readdirSync(MODULE_BASE, { withFileTypes: true });
-  const chapterPattern = /^(\d+)\.\d+\s+Hoofdstuk/;
-  const moduleNrs = new Set();
-  for (const e of entries) {
-    if (e.isDirectory()) {
-      const m = e.name.match(chapterPattern);
-      if (m) moduleNrs.add(m[1]);
-    }
-  }
-  if (moduleNrs.size === 0) {
-    console.error("ERROR: No chapter folders found in", MODULE_BASE);
-    process.exit(1);
-  }
-  if (moduleNrs.size > 1) {
-    console.warn("WARNING: Multiple modules detected:", [...moduleNrs].join(", "), "— using first");
-  }
-  return [...moduleNrs][0]; // e.g., "3" or "1"
-}
-
-const MODULE_NR = detectModulePrefix();
-
-// ── Module metadata ───────────────────────────────────────────────────
-const MODULE_NAMES = {
-  "1": "Schaarste, geld en handel",
-  "2": "Vraag en aanbod",
-  "3": "Markt en overheid",
-};
-const MODULE_NAME = MODULE_NAMES[MODULE_NR] || `Module ${MODULE_NR}`;
-
-console.log(`Detected module: ${MODULE_NR} (${MODULE_NAME})`);
-
-// ── All paragraph data (multi-module registry) ────────────────────────
-const ALL_PARAGRAAF_DATA = [
-  { id: "3.1.1", name: "Markt en marktstructuur", chapter: "3.1", chapterName: "Markten", chapterFull: "Hoofdstuk 1 \u2013 Markten", domain: "teal" },
-  { id: "3.1.2", name: "Marktvormen", chapter: "3.1", chapterName: "Markten", chapterFull: "Hoofdstuk 1 \u2013 Markten", domain: "teal" },
-  { id: "3.1.3", name: "Toepassen", chapter: "3.1", chapterName: "Markten", chapterFull: "Hoofdstuk 1 \u2013 Markten", domain: "teal" },
-  { id: "3.2.1", name: "Marktevenwicht", chapter: "3.2", chapterName: "Marktvormen en hun marktevenwicht", chapterFull: "Hoofdstuk 2 \u2013 Marktvormen en hun marktevenwicht", domain: "blue" },
-  { id: "3.2.2", name: "Volkomen concurrentie", chapter: "3.2", chapterName: "Marktvormen en hun marktevenwicht", chapterFull: "Hoofdstuk 2 \u2013 Marktvormen en hun marktevenwicht", domain: "blue" },
-  { id: "3.2.3", name: "Monopolie", chapter: "3.2", chapterName: "Marktvormen en hun marktevenwicht", chapterFull: "Hoofdstuk 2 \u2013 Marktvormen en hun marktevenwicht", domain: "blue" },
-  { id: "3.2.4", name: "Oligopolie", chapter: "3.2", chapterName: "Marktvormen en hun marktevenwicht", chapterFull: "Hoofdstuk 2 \u2013 Marktvormen en hun marktevenwicht", domain: "blue" },
-  { id: "3.2.5", name: "Monopolistische concurrentie", chapter: "3.2", chapterName: "Marktvormen en hun marktevenwicht", chapterFull: "Hoofdstuk 2 \u2013 Marktvormen en hun marktevenwicht", domain: "blue" },
-  { id: "3.2.6", name: "Marktvormen en hun economische doelmatigheid", chapter: "3.2", chapterName: "Marktvormen en hun marktevenwicht", chapterFull: "Hoofdstuk 2 \u2013 Marktvormen en hun marktevenwicht", domain: "blue" },
-  { id: "3.2.7", name: "Toepassen", chapter: "3.2", chapterName: "Marktvormen en hun marktevenwicht", chapterFull: "Hoofdstuk 2 \u2013 Marktvormen en hun marktevenwicht", domain: "blue" },
-  { id: "3.3.1", name: "De rol van de overheid", chapter: "3.3", chapterName: "Overheid", chapterFull: "Hoofdstuk 3 \u2013 Overheid", domain: "amber" },
-  { id: "3.3.2", name: "Overheidsbeleid", chapter: "3.3", chapterName: "Overheid", chapterFull: "Hoofdstuk 3 \u2013 Overheid", domain: "amber" },
-  { id: "3.3.3", name: "Collectieve goederen", chapter: "3.3", chapterName: "Overheid", chapterFull: "Hoofdstuk 3 \u2013 Overheid", domain: "amber" },
-  { id: "3.3.4", name: "Toepassen", chapter: "3.3", chapterName: "Overheid", chapterFull: "Hoofdstuk 3 \u2013 Overheid", domain: "amber" },
-  { id: "3.4.1", name: "Internationale handel", chapter: "3.4", chapterName: "Internationale markten", chapterFull: "Hoofdstuk 4 \u2013 Internationale markten", domain: "green" },
-  { id: "3.4.2", name: "Inter-industriele handel", chapter: "3.4", chapterName: "Internationale markten", chapterFull: "Hoofdstuk 4 \u2013 Internationale markten", domain: "green" },
-  { id: "3.4.3", name: "Intra-industriele handel", chapter: "3.4", chapterName: "Internationale markten", chapterFull: "Hoofdstuk 4 \u2013 Internationale markten", domain: "green" },
-  { id: "3.4.4", name: "Internationale productieketens", chapter: "3.4", chapterName: "Internationale markten", chapterFull: "Hoofdstuk 4 \u2013 Internationale markten", domain: "green" },
-  { id: "3.4.5", name: "Internationaal handelsbeleid", chapter: "3.4", chapterName: "Internationale markten", chapterFull: "Hoofdstuk 4 \u2013 Internationale markten", domain: "green" },
-  { id: "3.4.6", name: "Toepassen", chapter: "3.4", chapterName: "Internationale markten", chapterFull: "Hoofdstuk 4 \u2013 Internationale markten", domain: "green" },
-  { id: "3.5.1", name: "Afsluiting", chapter: "3.5", chapterName: "Afsluiting", chapterFull: "Hoofdstuk 5 \u2013 Afsluiting", domain: "purple" },
-  { id: "3.5.2", name: "Naar het examen", chapter: "3.5", chapterName: "Afsluiting", chapterFull: "Hoofdstuk 5 \u2013 Afsluiting", domain: "purple" },
-  // Module 1: Schaarste, geld en handel
-  { id: "1.1.1", name: "Kiezen is kostbaar", chapter: "1.1", chapterName: "Voor niks gaat de zon op", chapterFull: "Hoofdstuk 1 \u2013 Voor niks gaat de zon op", domain: "teal" },
-  { id: "1.1.2", name: "Kiezen of delen", chapter: "1.1", chapterName: "Voor niks gaat de zon op", chapterFull: "Hoofdstuk 1 \u2013 Voor niks gaat de zon op", domain: "teal" },
-  { id: "1.1.3", name: "Toepassen", chapter: "1.1", chapterName: "Voor niks gaat de zon op", chapterFull: "Hoofdstuk 1 \u2013 Voor niks gaat de zon op", domain: "teal" },
-];
-
-// ── Filter to active module only ──────────────────────────────────────
-const PARAGRAAF_DATA = ALL_PARAGRAAF_DATA.filter(p => p.id.startsWith(MODULE_NR + "."));
+// ═══════════════════════════════════════════════════════════════════════════
+// DOMAIN COLORS — platform-universal palette
+// ═══════════════════════════════════════════════════════════════════════════
 
 const DOMAIN_COLORS = {
-  teal:  { main: "#17A2B8", light: "#E8F8FB", dark: "#117A8B" },
-  blue:  { main: "#1A5276", light: "#EBF5FB", dark: "#154360" },
-  amber: { main: "#E67E22", light: "#FEF5E7", dark: "#BA6A1C" },
-  green: { main: "#1E8449", light: "#E8F8F0", dark: "#186A3B" },
+  teal:   { main: "#17A2B8", light: "#E8F8FB", dark: "#117A8B" },
+  blue:   { main: "#1A5276", light: "#EBF5FB", dark: "#154360" },
+  amber:  { main: "#E67E22", light: "#FEF5E7", dark: "#BA6A1C" },
+  green:  { main: "#1E8449", light: "#E8F8F0", dark: "#186A3B" },
   purple: { main: "#7D3C98", light: "#F4ECF7", dark: "#6C3483" },
 };
 
-const ALL_CHAPTER_FOLDERS = {
-  "3.1": "3.1 Hoofdstuk 1 - Markten",
-  "3.2": "3.2 Hoofdstuk 2 - Marktvormen en hun marktevenwicht",
-  "3.3": "3.3 Hoofdstuk 3 - Overheid",
-  "3.4": "3.4 Hoofdstuk 4 - Internationale markten",
-  "3.5": "3.5 Hoofdstuk 5 - Afsluiting",
-  "1.1": "1.1 Hoofdstuk 1 - Voor niks gaat de zon op",
-};
-
-const ALL_CHAPTER_NUMBERS = { "3.1": "1", "3.2": "2", "3.3": "3", "3.4": "4", "3.5": "5", "1.1": "1" };
-
-// Filter to active module
-const CHAPTER_FOLDERS = {};
-const CHAPTER_NUMBERS = {};
-const CHAPTER_ORDER = [];
-for (const [key, val] of Object.entries(ALL_CHAPTER_FOLDERS)) {
-  if (key.startsWith(MODULE_NR + ".")) {
-    CHAPTER_FOLDERS[key] = val;
-    CHAPTER_NUMBERS[key] = ALL_CHAPTER_NUMBERS[key];
-    CHAPTER_ORDER.push(key);
-  }
-}
-CHAPTER_ORDER.sort();
-
 // ═══════════════════════════════════════════════════════════════════════════
-// SECTION RULES
+// SECTION RULES — filename → section mapping (flat layout)
 // ═══════════════════════════════════════════════════════════════════════════
 
-const VOORBEREIDEN_PATTERNS = [/instapquiz\.html$/i, /nieuws-detective\.html$/i, /uitleg voorkennis\.docx$/i, /^Lees dit.*\.docx$/i];
-const LEREN_PATTERNS = [/presentatie\.pptx$/i, /uitleg vaardigheden\.docx$/i, /youtube.videos\.html$/i, /nieuws met visual\.docx$/i, /samenvatting\.docx$/i];
-const OEFENEN_DIRS = ["basisopgaven", "middenopgaven", "verrijkingsopgaven", "begeleide inoefening"];
 const DELETE_PATTERNS = [/^desktop\.ini$/i, /\.zip$/i, /\.tmp$/i];
 
-// Filter out Office temp/lock files (~$...) and other junk from directory listings
 function cleanDir(files) {
   return files.filter(f => !f.startsWith("~$") && !f.startsWith("."));
 }
 
 // ═══════════════════════════════════════════════════════════════════════════
-// FOLDER DISCOVERY
-// ═══════════════════════════════════════════════════════════════════════════
-
-function findParagraafFolder(chapterId, paragraafId) {
-  const chapterFolder = CHAPTER_FOLDERS[chapterId];
-  if (!chapterFolder) return null;
-  const chapterPath = path.join(MODULE_BASE, chapterFolder);
-  if (!fs.existsSync(chapterPath)) return null;
-  const entries = fs.readdirSync(chapterPath, { withFileTypes: true });
-  const match = entries.find(e => e.isDirectory() && e.name.startsWith(paragraafId + " "));
-  return match ? { fullPath: path.join(chapterPath, match.name), folderName: match.name } : null;
-}
-
-// ═══════════════════════════════════════════════════════════════════════════
-// RESTRUCTURE (unchanged)
-// ═══════════════════════════════════════════════════════════════════════════
-
-function restructureFolder(paragraafPath, paragraaf) {
-  const voorbereidenDir = path.join(paragraafPath, "1. Voorbereiden");
-  const lerenDir = path.join(paragraafPath, "2. Leren");
-  const oefenenDir = path.join(paragraafPath, "3. Oefenen");
-
-  if (fs.existsSync(voorbereidenDir) && fs.existsSync(lerenDir) && fs.existsSync(oefenenDir)) {
-    console.log(`  [skip] Already restructured: ${paragraaf.id}`);
-    return;
-  }
-
-  for (const dir of [voorbereidenDir, lerenDir, oefenenDir]) {
-    if (!fs.existsSync(dir)) { if (!DRY_RUN) fs.mkdirSync(dir); console.log(`  [mkdir] ${path.basename(dir)}`); }
-  }
-
-  const entries = fs.readdirSync(paragraafPath, { withFileTypes: true });
-  for (const entry of entries) {
-    if (!entry.isFile()) continue;
-    const name = entry.name;
-    const src = path.join(paragraafPath, name);
-    if (DELETE_PATTERNS.some(p => p.test(name))) { console.log(`  [delete] ${name}`); if (!DRY_RUN) fs.unlinkSync(src); continue; }
-    if (VOORBEREIDEN_PATTERNS.some(p => p.test(name))) { console.log(`  [move] ${name} -> 1. Voorbereiden/`); if (!DRY_RUN) fs.renameSync(src, path.join(voorbereidenDir, name)); continue; }
-    if (LEREN_PATTERNS.some(p => p.test(name))) { console.log(`  [move] ${name} -> 2. Leren/`); if (!DRY_RUN) fs.renameSync(src, path.join(lerenDir, name)); continue; }
-    if (name === "index.html") continue;
-    console.log(`  [warn] Unmatched file at root: ${name}`);
-  }
-
-  for (const dirName of OEFENEN_DIRS) {
-    const src = path.join(paragraafPath, dirName);
-    if (fs.existsSync(src)) { console.log(`  [move] ${dirName}/ -> 3. Oefenen/`); if (!DRY_RUN) fs.renameSync(src, path.join(oefenenDir, dirName)); }
-  }
-
-  if (!DRY_RUN && fs.existsSync(oefenenDir)) {
-    for (const sub of fs.readdirSync(oefenenDir, { withFileTypes: true })) {
-      if (!sub.isDirectory()) continue;
-      const iniPath = path.join(oefenenDir, sub.name, "desktop.ini");
-      if (fs.existsSync(iniPath)) { fs.unlinkSync(iniPath); console.log(`  [delete] 3. Oefenen/${sub.name}/desktop.ini`); }
-    }
-  }
-}
-
-// ═══════════════════════════════════════════════════════════════════════════
-// FILE SCANNER (unchanged)
+// FILE SCANNER (flat layout: all companion files at paragraph root)
 // ═══════════════════════════════════════════════════════════════════════════
 
 function scanFiles(paragraafPath) {
   const result = {
     voorbereiden: { instapquiz: null, voorkennis: null, leesdit: null, nieuwsdetective: null },
-    leren: { presentatie: null, vaardigheden: null, stappenplan: null, youtube: null, nieuws: null, samenvatting: null },
-    oefenen: { redeneerSpel: null, wiskundevaardigheden: null, begeleide: null, basis: null, midden: null, verrijking: null },
+    leren:        { presentatie: null, vaardigheden: null, stappenplan: null, youtube: null, nieuws: null, samenvatting: null },
+    oefenen:      { redeneerSpel: null, wiskundevaardigheden: null, begeleide: null, basis: null, midden: null, verrijking: null },
   };
-  const vDir = path.join(paragraafPath, "1. Voorbereiden");
-  const lDir = path.join(paragraafPath, "2. Leren");
-  const oDir = path.join(paragraafPath, "3. Oefenen");
+  if (!fs.existsSync(paragraafPath)) return result;
 
-  if (fs.existsSync(vDir)) {
-    const vFiles = cleanDir(fs.readdirSync(vDir));
-    for (const f of vFiles) {
-      if (/instapquiz\.html$/i.test(f)) result.voorbereiden.instapquiz = f;
-      else if (/nieuws-detective\.html$/i.test(f)) result.voorbereiden.nieuwsdetective = f;
-      else if (/uitleg voorkennis\.html$/i.test(f)) result.voorbereiden.voorkennis = f;
-      else if (/^Lees dit/i.test(f)) result.voorbereiden.leesdit = f;
-    }
-    // Fallback to .docx if no .html version found
-    if (!result.voorbereiden.voorkennis) {
-      const docx = vFiles.find(f => /uitleg voorkennis\.docx$/i.test(f));
-      if (docx) result.voorbereiden.voorkennis = docx;
+  const files = cleanDir(fs.readdirSync(paragraafPath));
+
+  // Housekeeping: delete obvious junk (desktop.ini, .zip, .tmp) at root.
+  for (const f of files) {
+    if (DELETE_PATTERNS.some(p => p.test(f))) {
+      if (!DRY_RUN) fs.unlinkSync(path.join(paragraafPath, f));
+      console.log(`  [delete] ${f}`);
     }
   }
-  if (fs.existsSync(lDir)) {
-    const lFiles = cleanDir(fs.readdirSync(lDir));
-    for (const f of lFiles) {
-      if (/presentatie\.pptx$/i.test(f)) result.leren.presentatie = f;
-      else if (/uitleg vaardigheden\.html$/i.test(f)) result.leren.vaardigheden = f;
-      else if (/youtube.videos\.html$/i.test(f)) result.leren.youtube = f;
-      else if (/nieuws met visual\.docx$/i.test(f)) result.leren.nieuws = f;
-      else if (/samenvatting\.docx$/i.test(f)) result.leren.samenvatting = f;
-      else if (/stappenplan\.html$/i.test(f)) result.leren.stappenplan = f;
-    }
-    // Fallback to .docx if no .html version found
-    if (!result.leren.vaardigheden) {
-      const docx = lFiles.find(f => /uitleg vaardigheden\.docx$/i.test(f));
-      if (docx) result.leren.vaardigheden = docx;
-    }
-  }
-  if (fs.existsSync(oDir)) {
-    // Scan for interactive exercise HTML files directly in the oefenen dir
-    for (const f of cleanDir(fs.readdirSync(oDir))) {
-      if (/redeneer-spel\.html$/i.test(f)) result.oefenen.redeneerSpel = f;
-      else if (/wiskundevaardigheden\.html$/i.test(f)) result.oefenen.wiskundevaardigheden = f;
-    }
 
-    const scanExerciseDir = (subDir) => {
-      const full = path.join(oDir, subDir);
-      if (!fs.existsSync(full)) return null;
-      const files = cleanDir(fs.readdirSync(full));
-      const docxFiles = files.filter(f => f.endsWith(".docx"));
-      const questions = docxFiles.find(f => /vragen\.docx$/i.test(f) && !/antwoorden/i.test(f));
-      const answers = docxFiles.find(f => /antwoorden\.docx$/i.test(f));
-      const interactief = files.find(f => /\.html$/i.test(f));
-      if (!questions && !answers && !interactief) return null;
-      return { dir: subDir, questions, answers, interactief };
+  // Helper: find first file matching a pattern.
+  const find = (re) => files.find(f => re.test(f)) || null;
+
+  // Voorbereiden
+  result.voorbereiden.instapquiz      = find(/instapquiz\.html$/i);
+  result.voorbereiden.nieuwsdetective = find(/nieuws-detective\.html$/i);
+  result.voorbereiden.voorkennis      = find(/uitleg voorkennis\.html$/i) || find(/uitleg voorkennis\.docx$/i);
+  result.voorbereiden.leesdit         = find(/^Lees dit/i);
+
+  // Leren
+  result.leren.presentatie   = find(/presentatie\.pptx$/i);
+  result.leren.vaardigheden  = find(/uitleg vaardigheden\.html$/i) || find(/uitleg vaardigheden\.docx$/i);
+  result.leren.stappenplan   = find(/stappenplan\.html$/i);
+  result.leren.youtube       = find(/youtube.videos\.html$/i);
+  result.leren.nieuws        = find(/nieuws met visual\.docx$/i);
+  result.leren.samenvatting  = find(/samenvatting\.docx$/i);
+
+  // Oefenen — interactive shells sit at paragraph root; opgaven are flat files
+  // with "– basis –", "– midden –", "– verrijking –", "– begeleide inoefening –"
+  // infix. The interactive begeleide inoefening HTML has no infix before ".html".
+  result.oefenen.redeneerSpel          = find(/redeneer-spel\.html$/i);
+  result.oefenen.wiskundevaardigheden  = find(/wiskundevaardigheden\.html$/i);
+
+  const findPair = (label) => {
+    const esc = label.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const re = new RegExp(`\\u2013 ${esc} \\u2013 (vragen|antwoorden)\\.docx$`, "i");
+    const pair = { label, vragen: null, antwoorden: null };
+    for (const f of files) {
+      const m = f.match(re);
+      if (!m) continue;
+      if (m[1].toLowerCase() === "vragen") pair.vragen = f;
+      else pair.antwoorden = f;
+    }
+    if (!pair.vragen && !pair.antwoorden) return null;
+    return pair;
+  };
+
+  const begeleidePair = findPair("begeleide inoefening");
+  const begeleideInteractive = find(/– begeleide inoefening\.html$/i);
+  if (begeleidePair || begeleideInteractive) {
+    result.oefenen.begeleide = {
+      vragen: begeleidePair ? begeleidePair.vragen : null,
+      antwoorden: begeleidePair ? begeleidePair.antwoorden : null,
+      interactief: begeleideInteractive,
     };
-    result.oefenen.begeleide = scanExerciseDir("begeleide inoefening");
-    result.oefenen.basis = scanExerciseDir("basisopgaven");
-    result.oefenen.midden = scanExerciseDir("middenopgaven");
-    result.oefenen.verrijking = scanExerciseDir("verrijkingsopgaven");
   }
+
+  result.oefenen.basis      = findPair("basis");
+  result.oefenen.midden     = findPair("midden");
+  result.oefenen.verrijking = findPair("verrijking");
+
   return result;
 }
 
@@ -285,30 +144,24 @@ function encPath(segments) { return segments.map(s => encodeURIComponent(s)).joi
 // NAVIGATION SIDEBAR
 // ═══════════════════════════════════════════════════════════════════════════
 
-// resolvedMap: { paragraafId: { ...paragraafData, folderName } }
-// pageType: "module" | "chapter" | "paragraaf"
-// currentId: chapter id (e.g. "3.2") for chapter pages, paragraaf id (e.g. "3.2.3") for paragraaf pages, null for module
-// depth: 0 = module, 1 = chapter, 2 = paragraaf
-
 function renderNav(resolvedMap, pageType, currentId) {
   const grouped = {};
-  for (const ch of CHAPTER_ORDER) {
-    grouped[ch] = PARAGRAAF_DATA.filter(p => p.chapter === ch && !HIDDEN_PARAGRAFEN.has(p.id));
+  for (const ch of CONFIG.chapters) {
+    grouped[ch.id] = CONFIG.paragraphs.filter(p => p.chapter === ch.id && !CONFIG.isHidden(p.id));
   }
 
   function navLink(targetType, targetChapter, targetParagraaf) {
-    // Build path from current page to target
-    const chFolder = encodeURIComponent(CHAPTER_FOLDERS[targetChapter]);
+    const ch = CONFIG.chapterIndex[targetChapter];
+    const chFolder = ch ? encodeURIComponent(ch.folder) : "";
     const pFolder = targetParagraaf ? encodeURIComponent(resolvedMap[targetParagraaf].folderName) : null;
 
-    if (pageType === "module") {
-      if (targetType === "module") return "index.html";
+    if (pageType === "book") {
+      if (targetType === "book") return "index.html";
       if (targetType === "chapter") return `${chFolder}/index.html`;
       return `${chFolder}/${pFolder}/index.html`;
     }
     if (pageType === "chapter") {
-      const curChFolder = encodeURIComponent(CHAPTER_FOLDERS[currentId]);
-      if (targetType === "module") return "../index.html";
+      if (targetType === "book") return "../index.html";
       if (targetType === "chapter") {
         if (targetChapter === currentId) return "index.html";
         return `../${chFolder}/index.html`;
@@ -317,8 +170,8 @@ function renderNav(resolvedMap, pageType, currentId) {
       return `../${chFolder}/${pFolder}/index.html`;
     }
     // pageType === "paragraaf"
-    const curChapter = currentId.substring(0, 3);
-    if (targetType === "module") return "../../index.html";
+    const curChapter = currentId.substring(0, currentId.lastIndexOf("."));
+    if (targetType === "book") return "../../index.html";
     if (targetType === "chapter") {
       if (targetChapter === curChapter) return "../index.html";
       return `../../${chFolder}/index.html`;
@@ -329,24 +182,22 @@ function renderNav(resolvedMap, pageType, currentId) {
 
   let html = "";
 
-  // Module link
-  const isModuleActive = pageType === "module";
-  html += `    <a class="nav-module${isModuleActive ? " active" : ""}" href="${navLink("module")}">Module ${MODULE_NR}: ${MODULE_NAME}</a>\n`;
+  // Book link
+  const isBookActive = pageType === "book";
+  html += `    <a class="nav-module${isBookActive ? " active" : ""}" href="${navLink("book")}">${CONFIG.displayLabel}</a>\n`;
 
-  for (const ch of CHAPTER_ORDER) {
-    const paragrafen = grouped[ch];
+  for (const ch of CONFIG.chapters) {
+    const paragrafen = grouped[ch.id];
     if (!paragrafen.length) continue;
-    const first = paragrafen[0];
-    const dc = DOMAIN_COLORS[first.domain];
-    const chNum = CHAPTER_NUMBERS[ch];
-    const isCurrentChapter = (pageType === "chapter" && currentId === ch)
-      || (pageType === "paragraaf" && currentId.startsWith(ch));
+    const dc = DOMAIN_COLORS[ch.domain];
+    const isCurrentChapter = (pageType === "chapter" && currentId === ch.id)
+      || (pageType === "paragraaf" && currentId.startsWith(ch.id + "."));
     const expanded = isCurrentChapter;
 
     html += `    <div class="nav-chapter${expanded ? " expanded" : ""}">\n`;
-    html += `      <a class="nav-ch-title${pageType === "chapter" && currentId === ch ? " active" : ""}" href="${navLink("chapter", ch)}" style="--ch-color: ${dc.main}">\n`;
+    html += `      <a class="nav-ch-title${pageType === "chapter" && currentId === ch.id ? " active" : ""}" href="${navLink("chapter", ch.id)}" style="--ch-color: ${dc.main}">\n`;
     html += `        <span class="nav-dot"></span>\n`;
-    html += `        <span class="nav-ch-label">H${chNum} ${first.chapterName}</span>\n`;
+    html += `        <span class="nav-ch-label">H${ch.number} ${ch.name}</span>\n`;
     html += `        <svg class="nav-arrow" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>\n`;
     html += `      </a>\n`;
     html += `      <div class="nav-items">\n`;
@@ -354,7 +205,7 @@ function renderNav(resolvedMap, pageType, currentId) {
     for (const p of paragrafen) {
       if (!resolvedMap[p.id]) continue;
       const isActive = pageType === "paragraaf" && currentId === p.id;
-      html += `        <a class="nav-item${isActive ? " active" : ""}" href="${navLink("paragraaf", ch, p.id)}" style="--ch-color: ${dc.main}">${p.id} ${p.name}</a>\n`;
+      html += `        <a class="nav-item${isActive ? " active" : ""}" href="${navLink("paragraaf", ch.id, p.id)}" style="--ch-color: ${dc.main}">${p.id} ${p.name}</a>\n`;
     }
 
     html += `      </div>\n`;
@@ -545,7 +396,7 @@ function sharedCSS(dc) {
   .card-guide { border-left-color: var(--border-gray); background: var(--cream); }
   .card-guide .card-icon { background: rgba(0,0,0,0.04); color: var(--gray); }
 
-  /* ── Chapter card (module page) ── */
+  /* ── Chapter card (book page) ── */
   .chapter-card {
     display: block; background: var(--white); border-radius: 10px;
     border-left: 5px solid var(--ch-color, var(--domain));
@@ -686,7 +537,6 @@ ${bodyContent}
   </div>
 </div>
 <script>
-// Toggle chapter expand/collapse
 document.querySelectorAll('.nav-ch-title').forEach(el => {
   el.addEventListener('click', function(e) {
     if (e.ctrlKey || e.metaKey) return;
@@ -697,9 +547,6 @@ document.querySelectorAll('.nav-ch-title').forEach(el => {
 document.querySelectorAll('.nav-ch-title').forEach(el => {
   el.addEventListener('dblclick', function() { window.location = this.href; });
 });
-
-// Office Online viewer for .docx and .pptx on desktop
-var BASE_URL = "https://meijer1973.github.io/economie-vwo4-m3/";
 
 function openViewer(href, title) {
   var abs = new URL(href, window.location.href).href;
@@ -736,33 +583,31 @@ if (window.innerWidth > 768) {
 }
 
 // ═══════════════════════════════════════════════════════════════════════════
-// MODULE PAGE
+// BOOK PAGE (top-level index.html at the target root)
 // ═══════════════════════════════════════════════════════════════════════════
 
-function renderModulePage(resolvedMap) {
-  const dc = { main: "#1E2761", light: "#EBF5FB", dark: "#154360" }; // navy as domain
-  const navHTML = renderNav(resolvedMap, "module", null);
+function renderBookPage(resolvedMap) {
+  const dc = { main: "#1E2761", light: "#EBF5FB", dark: "#154360" }; // navy
+  const navHTML = renderNav(resolvedMap, "book", null);
 
   let bodyHTML = `
 <header class="hero">
   <div class="hero-inner">
-    <span class="hero-badge">Module ${MODULE_NR}</span>
-    <h1>${MODULE_NAME}</h1>
+    <span class="hero-badge">Boek ${CONFIG.nr}</span>
+    <h1>${CONFIG.name}</h1>
   </div>
 </header>
 <main>`;
 
-  for (const ch of CHAPTER_ORDER) {
-    const paragrafen = PARAGRAAF_DATA.filter(p => p.chapter === ch && !HIDDEN_PARAGRAFEN.has(p.id));
+  for (const ch of CONFIG.chapters) {
+    const paragrafen = CONFIG.paragraphs.filter(p => p.chapter === ch.id && !CONFIG.isHidden(p.id));
     if (!paragrafen.length) continue;
-    const first = paragrafen[0];
-    const dc2 = DOMAIN_COLORS[first.domain];
-    const chNum = CHAPTER_NUMBERS[ch];
-    const chFolder = encodeURIComponent(CHAPTER_FOLDERS[ch]);
+    const dc2 = DOMAIN_COLORS[ch.domain];
+    const chFolder = encodeURIComponent(ch.folder);
 
     bodyHTML += `
   <a class="chapter-card" href="${chFolder}/index.html" style="--ch-color: ${dc2.main}">
-    <h3><span class="ch-num">H${chNum}</span>${first.chapterName}</h3>
+    <h3><span class="ch-num">H${ch.number}</span>${ch.name}</h3>
     <div class="chapter-card-count">${paragrafen.length} paragrafen</div>
     <div class="chapter-card-items">
       ${paragrafen.map(p => `<span class="chapter-card-item">${p.id} ${p.name}</span>`).join("\n      ")}
@@ -772,9 +617,9 @@ function renderModulePage(resolvedMap) {
 
   bodyHTML += `
 </main>
-<footer>Economie VWO 4 &middot; Module ${MODULE_NR}: ${MODULE_NAME}</footer>`;
+<footer>Economie VWO 4 &middot; ${CONFIG.displayLabel}</footer>`;
 
-  return pageShell(`Module ${MODULE_NR} \u2013 ${MODULE_NAME}`, dc, navHTML, bodyHTML);
+  return pageShell(`${CONFIG.displayLabel}`, dc, navHTML, bodyHTML);
 }
 
 // ═══════════════════════════════════════════════════════════════════════════
@@ -782,19 +627,18 @@ function renderModulePage(resolvedMap) {
 // ═══════════════════════════════════════════════════════════════════════════
 
 function renderChapterPage(chapterId, resolvedMap) {
-  const paragrafen = PARAGRAAF_DATA.filter(p => p.chapter === chapterId && !HIDDEN_PARAGRAFEN.has(p.id));
-  const first = paragrafen[0];
-  const dc = DOMAIN_COLORS[first.domain];
-  const chNum = CHAPTER_NUMBERS[chapterId];
+  const ch = CONFIG.chapterIndex[chapterId];
+  const paragrafen = CONFIG.paragraphs.filter(p => p.chapter === chapterId && !CONFIG.isHidden(p.id));
+  const dc = DOMAIN_COLORS[ch.domain];
   const navHTML = renderNav(resolvedMap, "chapter", chapterId);
 
   let bodyHTML = `
 <header class="hero">
   <div class="hero-inner">
-    <a class="back-link" href="../index.html"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg> Module ${MODULE_NR}</a>
-    <span class="hero-badge">Hoofdstuk ${chNum}</span>
-    <h1>${first.chapterName}</h1>
-    <p class="hero-sub">Module ${MODULE_NR} \u2013 ${MODULE_NAME}</p>
+    <a class="back-link" href="../index.html"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg> Boek ${CONFIG.nr}</a>
+    <span class="hero-badge">Hoofdstuk ${ch.number}</span>
+    <h1>${ch.name}</h1>
+    <p class="hero-sub">${CONFIG.displayLabel}</p>
   </div>
 </header>
 <main>`;
@@ -816,9 +660,9 @@ function renderChapterPage(chapterId, resolvedMap) {
 
   bodyHTML += `
 </main>
-<footer>Economie VWO 4 &middot; Module ${MODULE_NR}: ${MODULE_NAME}</footer>`;
+<footer>Economie VWO 4 &middot; ${CONFIG.displayLabel}</footer>`;
 
-  return pageShell(`${first.chapterFull} \u2013 Lesmateriaal`, dc, navHTML, bodyHTML);
+  return pageShell(`${CONFIG.chapterFullLabel(chapterId)} – Lesmateriaal`, dc, navHTML, bodyHTML);
 }
 
 // ═══════════════════════════════════════════════════════════════════════════
@@ -827,6 +671,8 @@ function renderChapterPage(chapterId, resolvedMap) {
 
 function renderParagraafPage(paragraaf, files, resolvedMap) {
   const dc = DOMAIN_COLORS[paragraaf.domain];
+  const ch = CONFIG.chapterIndex[paragraaf.chapter];
+  const chapterFull = CONFIG.chapterFullLabel(paragraaf.chapter);
   const navHTML = renderNav(resolvedMap, "paragraaf", paragraaf.id);
 
   function card(href, icon, title, desc, fileType, extraClass = "") {
@@ -838,10 +684,11 @@ function renderParagraafPage(paragraaf, files, resolvedMap) {
       </a>`;
   }
 
-  function exerciseCard(exerciseData, sectionPrefix, icon, title, desc, extraClass = "") {
-    if (!exerciseData) return "";
-    const vragenHref = exerciseData.questions ? encPath([sectionPrefix, exerciseData.dir, exerciseData.questions]) : null;
-    const antwHref = exerciseData.answers ? encPath([sectionPrefix, exerciseData.dir, exerciseData.answers]) : null;
+  // Flat layout: exercise pair files sit at paragraph root, linked by filename directly.
+  function exerciseCard(pair, icon, title, desc, extraClass = "") {
+    if (!pair) return "";
+    const vragenHref = pair.vragen ? encPath([pair.vragen]) : null;
+    const antwHref = pair.antwoorden ? encPath([pair.antwoorden]) : null;
     return `
       <div class="card ${extraClass}">
         <div class="card-icon"><svg viewBox="0 0 24 24">${icon}</svg></div>
@@ -854,28 +701,23 @@ function renderParagraafPage(paragraaf, files, resolvedMap) {
       </div>`;
   }
 
-  const vP = "1. Voorbereiden", lP = "2. Leren", oP = "3. Oefenen";
-
-  // Helper to detect file type from extension
   const ext = (f) => f ? f.split(".").pop().toLowerCase() : "docx";
 
   const voorbereidenCards = [
-    files.voorbereiden.instapquiz ? card(encPath([vP, files.voorbereiden.instapquiz]), ICONS.quiz, "Instapquiz", "Test wat je al weet over deze stof", "html") : "",
-    files.voorbereiden.voorkennis ? card(encPath([vP, files.voorbereiden.voorkennis]), ICONS.book, "Voorkennis", "Herhaal wat je nodig hebt voor deze les", ext(files.voorbereiden.voorkennis)) : "",
-    files.voorbereiden.nieuwsdetective ? card(encPath([vP, files.voorbereiden.nieuwsdetective]), ICONS.search, "Nieuws-detective", "Ontdek de economie achter het nieuws", "html") : "",
-    // files.voorbereiden.leesdit ? card(encPath([vP, files.voorbereiden.leesdit]), ICONS.info, "Hoe begin ik?", "Wegwijzer als je niet weet waar je moet starten", "docx", "card-guide") : "",
+    files.voorbereiden.instapquiz      ? card(encPath([files.voorbereiden.instapquiz]),      ICONS.quiz,      "Instapquiz",       "Test wat je al weet over deze stof", "html") : "",
+    files.voorbereiden.voorkennis      ? card(encPath([files.voorbereiden.voorkennis]),      ICONS.book,      "Voorkennis",       "Herhaal wat je nodig hebt voor deze les", ext(files.voorbereiden.voorkennis)) : "",
+    files.voorbereiden.nieuwsdetective ? card(encPath([files.voorbereiden.nieuwsdetective]), ICONS.search,    "Nieuws-detective", "Ontdek de economie achter het nieuws", "html") : "",
   ].filter(Boolean).join("\n");
 
   const lerenCards = [
-    files.leren.presentatie ? card(encPath([lP, files.leren.presentatie]), ICONS.monitor, "Presentatie", "De les-presentatie met kernpunten", "pptx") : "",
-    files.leren.vaardigheden ? card(encPath([lP, files.leren.vaardigheden]), ICONS.doc, "Uitleg vaardigheden", "Stap-voor-stap uitleg van de lesstof", ext(files.leren.vaardigheden)) : "",
-    files.leren.stappenplan ? card(encPath([lP, files.leren.stappenplan]), ICONS.steps, "Stappenplan", "Oefen de stappen van elke vaardigheid", "html") : "",
-    files.leren.youtube ? card(encPath([lP, files.leren.youtube]), ICONS.play, "YouTube-video\u2019s", "Video-uitleg bij de stof", "html") : "",
-    files.leren.nieuws ? card(encPath([lP, files.leren.nieuws]), ICONS.newspaper, "Nieuws", "Actueel artikel met verwerkingsvragen", "docx") : "",
-    files.leren.samenvatting ? card(encPath([lP, files.leren.samenvatting]), ICONS.check, "Samenvatting", "Overzicht van deze paragraaf", "docx") : "",
+    files.leren.presentatie   ? card(encPath([files.leren.presentatie]),   ICONS.monitor,   "Presentatie",         "De les-presentatie met kernpunten", "pptx") : "",
+    files.leren.vaardigheden  ? card(encPath([files.leren.vaardigheden]),  ICONS.doc,       "Uitleg vaardigheden", "Stap-voor-stap uitleg van de lesstof", ext(files.leren.vaardigheden)) : "",
+    files.leren.stappenplan   ? card(encPath([files.leren.stappenplan]),   ICONS.steps,     "Stappenplan",         "Oefen de stappen van elke vaardigheid", "html") : "",
+    files.leren.youtube       ? card(encPath([files.leren.youtube]),       ICONS.play,      "YouTube-video’s", "Video-uitleg bij de stof", "html") : "",
+    files.leren.nieuws        ? card(encPath([files.leren.nieuws]),        ICONS.newspaper, "Nieuws",              "Actueel artikel met verwerkingsvragen", "docx") : "",
+    files.leren.samenvatting  ? card(encPath([files.leren.samenvatting]),  ICONS.check,     "Samenvatting",        "Overzicht van deze paragraaf", "docx") : "",
   ].filter(Boolean).join("\n");
 
-  // Interactive exercise cards (full-width flex row)
   function interactiveCard(href, icon, title, desc) {
     return `
         <div class="card card-exercise" style="flex: 1; border-left-color: var(--ch-color, ${dc.main});">
@@ -889,9 +731,9 @@ function renderParagraafPage(paragraaf, files, resolvedMap) {
   function begeleidCard(data) {
     if (!data) return "";
     const links = [];
-    if (data.interactief) links.push(`<a class="sub-link" href="${encPath([oP, data.dir, data.interactief])}">Interactief</a>`);
-    if (data.questions) links.push(`<a class="sub-link" href="${encPath([oP, data.dir, data.questions])}">Vragen (docx)</a>`);
-    if (data.answers) links.push(`<a class="sub-link" href="${encPath([oP, data.dir, data.answers])}">Antwoorden (docx)</a>`);
+    if (data.interactief) links.push(`<a class="sub-link" href="${encPath([data.interactief])}">Interactief</a>`);
+    if (data.vragen)      links.push(`<a class="sub-link" href="${encPath([data.vragen])}">Vragen (docx)</a>`);
+    if (data.antwoorden)  links.push(`<a class="sub-link" href="${encPath([data.antwoorden])}">Antwoorden (docx)</a>`);
     if (!links.length) return "";
     return `
         <div class="card card-exercise" style="flex: 1;">
@@ -903,8 +745,8 @@ function renderParagraafPage(paragraaf, files, resolvedMap) {
   }
 
   const interactiveRow = [];
-  if (files.oefenen.redeneerSpel) interactiveRow.push(interactiveCard(encPath([oP, files.oefenen.redeneerSpel]), ICONS.puzzle, "Redeneer-spel", "Train je redeneervaardigheid met 5 spelmodi"));
-  if (files.oefenen.wiskundevaardigheden) interactiveRow.push(interactiveCard(encPath([oP, files.oefenen.wiskundevaardigheden]), ICONS.layers, "Wiskundevaardigheden", "Oefen de wiskundevaardigheden voor deze paragraaf"));
+  if (files.oefenen.redeneerSpel)         interactiveRow.push(interactiveCard(encPath([files.oefenen.redeneerSpel]),          ICONS.puzzle, "Redeneer-spel",        "Train je redeneervaardigheid met 5 spelmodi"));
+  if (files.oefenen.wiskundevaardigheden) interactiveRow.push(interactiveCard(encPath([files.oefenen.wiskundevaardigheden]),  ICONS.layers, "Wiskundevaardigheden", "Oefen de wiskundevaardigheden voor deze paragraaf"));
   const begeleidHTML = begeleidCard(files.oefenen.begeleide);
   if (begeleidHTML) interactiveRow.push(begeleidHTML);
 
@@ -914,12 +756,10 @@ function renderParagraafPage(paragraaf, files, resolvedMap) {
 
   const oefenenCards = interactiveRowHTML;
 
-  // Task rows (basis/midden/verrijking) — shown as separate section 4 "Opgaven"
-  // Can be hidden entirely via HIDE_TASK_ROWS flag
   const taskCards = [
-    exerciseCard(files.oefenen.basis, oP, ICONS.star0, "Basisopgaven", "Standaard opgaven", "card-exercise-normal"),
-    exerciseCard(files.oefenen.midden, oP, ICONS.star1, "Middenopgaven", "Kortere set, meer zelfstandig", "card-exercise-normal"),
-    exerciseCard(files.oefenen.verrijking, oP, ICONS.star2, "Verrijkingsopgaven", "Extra uitdaging", "card-exercise-normal"),
+    exerciseCard(files.oefenen.basis,      ICONS.star0, "Basisopgaven",         "Standaard opgaven",           "card-exercise-normal"),
+    exerciseCard(files.oefenen.midden,     ICONS.star1, "Middenopgaven",        "Kortere set, meer zelfstandig", "card-exercise-normal"),
+    exerciseCard(files.oefenen.verrijking, ICONS.star2, "Verrijkingsopgaven",   "Extra uitdaging",             "card-exercise-normal"),
   ].filter(Boolean).join("\n");
   const hasT = !HIDE_TASK_ROWS && taskCards.trim().length > 0;
 
@@ -930,10 +770,10 @@ function renderParagraafPage(paragraaf, files, resolvedMap) {
   let bodyHTML = `
 <header class="hero">
   <div class="hero-inner">
-    <a class="back-link" href="../index.html"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg> ${paragraaf.chapterFull}</a>
+    <a class="back-link" href="../index.html"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg> ${chapterFull}</a>
     <span class="hero-badge">Paragraaf ${paragraaf.id}</span>
     <h1>${paragraaf.name}</h1>
-    <p class="hero-sub">${paragraaf.chapterFull}</p>
+    <p class="hero-sub">${chapterFull}</p>
   </div>
 </header>
 <main>`;
@@ -956,7 +796,7 @@ function renderParagraafPage(paragraaf, files, resolvedMap) {
   if (hasL) bodyHTML += `
   <div class="section">
     <div class="section-header"><span class="step-number">3</span><h2>Leren</h2></div>
-    <p class="section-hint">De les doorwerken: presentatie, uitleg en video\u2019s</p>
+    <p class="section-hint">De les doorwerken: presentatie, uitleg en video’s</p>
     <div class="card-grid">${lerenCards}</div>
   </div>`;
 
@@ -969,9 +809,9 @@ function renderParagraafPage(paragraaf, files, resolvedMap) {
 
   bodyHTML += `
 </main>
-<footer>Economie VWO 4 &middot; Module ${MODULE_NR}: ${MODULE_NAME}</footer>`;
+<footer>Economie VWO 4 &middot; ${CONFIG.displayLabel}</footer>`;
 
-  return pageShell(`${paragraaf.id} ${paragraaf.name} \u2013 Lesmateriaal`, dc, navHTML, bodyHTML);
+  return pageShell(`${paragraaf.id} ${paragraaf.name} – Lesmateriaal`, dc, navHTML, bodyHTML);
 }
 
 // ═══════════════════════════════════════════════════════════════════════════
@@ -981,10 +821,10 @@ function renderParagraafPage(paragraaf, files, resolvedMap) {
 function main() {
   console.log("Building landing pages...\n");
 
-  // Step 1: Resolve all paragraaf folder names
+  // Step 1: Resolve every paragraaf's folder name on disk.
   const resolvedMap = {};
-  for (const p of PARAGRAAF_DATA) {
-    const found = findParagraafFolder(p.chapter, p.id);
+  for (const p of CONFIG.paragraphs) {
+    const found = CONFIG.findParagraphFolder(p.id);
     if (found) {
       resolvedMap[p.id] = { ...p, folderName: found.folderName, fullPath: found.fullPath };
     } else {
@@ -995,16 +835,14 @@ function main() {
   let success = 0, errors = 0;
 
   // Step 2: Process paragraaf pages
-  const targets = ONLY_ID ? PARAGRAAF_DATA.filter(p => p.id === ONLY_ID) : PARAGRAAF_DATA;
+  const targets = ONLY_ID ? CONFIG.paragraphs.filter(p => p.id === ONLY_ID) : CONFIG.paragraphs;
 
   for (const p of targets) {
-    if (HIDDEN_PARAGRAFEN.has(p.id)) { console.log(`=== ${p.id} ${p.name} === [HIDDEN, skipped]`); continue; }
+    if (CONFIG.isHidden(p.id)) { console.log(`=== ${p.id} ${p.name} === [HIDDEN, skipped]`); continue; }
     const resolved = resolvedMap[p.id];
     if (!resolved) { errors++; continue; }
 
     console.log(`=== ${p.id} ${p.name} ===`);
-
-    try { restructureFolder(resolved.fullPath, p); } catch (err) { console.error(`  [ERROR] ${err.message}`); errors++; continue; }
 
     const files = scanFiles(resolved.fullPath);
     const html = renderParagraafPage(p, files, resolvedMap);
@@ -1015,24 +853,23 @@ function main() {
 
   // Step 3: Generate chapter pages
   if (!ONLY_ID) {
-    for (const ch of CHAPTER_ORDER) {
-      const chFolder = CHAPTER_FOLDERS[ch];
-      const chPath = path.join(MODULE_BASE, chFolder);
+    for (const ch of CONFIG.chapters) {
+      const chPath = path.join(MODULE_BASE, ch.folder);
       if (!fs.existsSync(chPath)) continue;
 
-      const html = renderChapterPage(ch, resolvedMap);
+      const html = renderChapterPage(ch.id, resolvedMap);
       if (!DRY_RUN) fs.writeFileSync(path.join(chPath, "index.html"), html, "utf8");
-      console.log(`\n[chapter] ${chFolder}/index.html (${(html.length / 1024).toFixed(1)} KB)`);
+      console.log(`\n[chapter] ${ch.folder}/index.html (${(html.length / 1024).toFixed(1)} KB)`);
     }
 
-    // Step 4: Generate module page
-    const html = renderModulePage(resolvedMap);
+    // Step 4: Generate book page
+    const html = renderBookPage(resolvedMap);
     if (!DRY_RUN) fs.writeFileSync(path.join(MODULE_BASE, "index.html"), html, "utf8");
-    console.log(`\n[module] index.html (${(html.length / 1024).toFixed(1)} KB)`);
+    console.log(`\n[book] index.html (${(html.length / 1024).toFixed(1)} KB)`);
   }
 
   console.log(`\n${"=".repeat(50)}`);
-  console.log(`Done. ${success} paragraaf pages, ${ONLY_ID ? 0 : 4} chapter pages, ${ONLY_ID ? 0 : 1} module page.`);
+  console.log(`Done. ${success} paragraaf pages, ${ONLY_ID ? 0 : CONFIG.chapters.length} chapter pages, ${ONLY_ID ? 0 : 1} book page.`);
   if (errors) console.log(`${errors} errors.`);
   if (DRY_RUN) console.log("(DRY RUN)");
 }

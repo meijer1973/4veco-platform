@@ -1,5 +1,11 @@
 /**
  * Data validation tests for Skill Tree — base elements and per-paragraph data files.
+ *
+ * Per-paragraph tests are driven by the target's deploy-config.json manifest:
+ * only paragraphs that declare a `skilltree` block participate. If MODULE_ROOT
+ * has no manifest (e.g. tests run against the platform root itself), the
+ * per-paragraph suite is skipped and only the base-elements + generator suites
+ * run.
  */
 const path = require('path');
 const fs = require('fs');
@@ -8,6 +14,17 @@ const elements = require('../skilltree/base-elements');
 const MODULE_ROOT = process.env.MODULE_ROOT
     ? path.resolve(process.env.MODULE_ROOT)
     : path.resolve(__dirname, '..', '..');
+
+let skilltreeParagraphs = [];
+try {
+    const { loadConfig } = require('../../build-scripts/lib/lib-deploy-config');
+    const cfg = loadConfig(MODULE_ROOT);
+    skilltreeParagraphs = cfg.paragraphs
+        .filter(p => p.skilltree !== undefined)
+        .map(p => p.id);
+} catch (e) {
+    // No manifest at MODULE_ROOT — per-paragraph tests are a no-op.
+}
 
 // ── Base elements validation ──────────────────────────────────────
 
@@ -139,29 +156,20 @@ describe('exercise generators', () => {
 
 // ── Per-paragraph data files ──────────────────────────────────────
 
-describe('per-paragraph data files', () => {
+const perParagraphDescribe = skilltreeParagraphs.length > 0 ? describe : describe.skip;
+
+perParagraphDescribe('per-paragraph data files', () => {
     const dataDir = path.join(MODULE_ROOT, 'shared', 'skilltree');
     const validIds = new Set(elements.SKILLS.map(s => s.id));
 
-    const expectedFiles = [
-        '3.1.1', '3.1.2', '3.1.3',
-        '3.2.1', '3.2.2', '3.2.3', '3.2.4', '3.2.5', '3.2.6', '3.2.7',
-        '3.3.1', '3.3.2', '3.3.3', '3.3.4',
-        '3.4.1', '3.4.2', '3.4.3', '3.4.4', '3.4.5', '3.4.6',
-        '3.5.1', '3.5.2',
-        '1.1.1',
-        '1.1.2',
-        '1.1.3'
-    ];
-
     test('all data files exist', () => {
-        for (const parNr of expectedFiles) {
+        for (const parNr of skilltreeParagraphs) {
             const filePath = path.join(dataDir, parNr + '.js');
             expect(fs.existsSync(filePath)).toBe(true);
         }
     });
 
-    for (const parNr of expectedFiles) {
+    for (const parNr of skilltreeParagraphs) {
         test(`${parNr}.js sets valid SKILL_TREE_DATA`, () => {
             // Simulate browser global
             const code = fs.readFileSync(path.join(dataDir, parNr + '.js'), 'utf8');

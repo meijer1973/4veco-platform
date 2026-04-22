@@ -5,8 +5,12 @@
  * Copies engine files, runs build scripts, and verifies the result.
  *
  * Usage:
- *   node scripts/deploy.js <target-module-path>
- *   node scripts/deploy.js "../3. Module 3 - Markt en overheid"
+ *   node scripts/deploy.js <target-book-path>
+ *   node scripts/deploy.js "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod"
+ *
+ * The target must contain a deploy-config.json manifest at its root; see
+ * build-scripts/lib/lib-deploy-config.js. Paragraph layout is flat: all
+ * companion files live at the paragraph root, no phase subfolders.
  *
  * Steps:
  *   1. Copy engine files → <target>/shared/
@@ -25,8 +29,8 @@ const ENGINES_DIR = path.join(PLATFORM_ROOT, 'engines');
 
 const targetArg = process.argv[2];
 if (!targetArg) {
-    console.error('Usage: node scripts/deploy.js <target-module-path>');
-    console.error('Example: node scripts/deploy.js "../3. Module 3 - Markt en overheid"');
+    console.error('Usage: node scripts/deploy.js <target-book-path>');
+    console.error('Example: node scripts/deploy.js "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod"');
     process.exit(1);
 }
 
