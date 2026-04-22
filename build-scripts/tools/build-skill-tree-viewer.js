@@ -63,6 +63,8 @@ function main() {
     terms: u.terms || [],
     procedure: u.procedure || [],
     pitfalls: u.pitfalls || [],
+    deprecated: u.deprecated || false,
+    deprecated_in_favor_of: u.deprecated_in_favor_of || [],
   }));
 
   const dataJson = JSON.stringify(slim);

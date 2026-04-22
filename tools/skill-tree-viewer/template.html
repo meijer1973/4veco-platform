@@ -99,6 +99,15 @@
   }
   .unit-row:hover { background: var(--hover); }
   .unit-row.selected { background: #fff3e0; border-left-color: var(--selected); }
+  .unit-row.deprecated .uid,
+  .unit-row.deprecated .uname { color: #bdbdbd; text-decoration: line-through; }
+  .unit-row.deprecated .dom-dot { opacity: 0.35; }
+  .unit-row .depr-arrow {
+    font-size: 9px;
+    color: #9e9e9e;
+    font-style: italic;
+    white-space: nowrap;
+  }
   .unit-row .dom-dot {
     width: 10px; height: 10px; border-radius: 50%;
     flex-shrink: 0;
@@ -197,6 +206,12 @@
     stroke: var(--selected);
     stroke-width: 3px;
   }
+  .node.deprecated .node-rect {
+    stroke-dasharray: 4 3;
+    fill-opacity: 0.45;
+  }
+  .node.deprecated .node-id,
+  .node.deprecated .node-name { text-decoration: line-through; opacity: 0.7; }
   .node .node-id {
     font-family: "SF Mono", Menlo, Consolas, monospace;
     font-weight: 700;
@@ -553,10 +568,15 @@
       const row = document.createElement('div');
       row.className = 'unit-row';
       if (u.id === state.selectedId) row.classList.add('selected');
+      if (u.deprecated) row.classList.add('deprecated');
+      const deprArrow = u.deprecated && u.deprecated_in_favor_of && u.deprecated_in_favor_of.length
+        ? `<span class="depr-arrow">→ ${u.deprecated_in_favor_of.join(', ')}</span>`
+        : '';
       row.innerHTML = `
         <span class="dom-dot" style="background: ${domColor(u.id[0])}"></span>
         <span class="uid">${u.id}</span>
         <span class="uname" title="${escapeAttr(u.name)}">${escapeHtml(u.name)}</span>
+        ${deprArrow}
         <span class="tier-badge tier-${tierLabel(u.mastery_target)}">${tierLabel(u.mastery_target)}</span>
       `;
       row.addEventListener('click', () => selectUnit(u.id));
@@ -618,6 +638,8 @@
         isRoot: id === rootId,
         isUpstream: up.has(id) && id !== rootId,
         isDownstream: down.has(id) && id !== rootId,
+        deprecated: !!u.deprecated,
+        deprecated_in_favor_of: u.deprecated_in_favor_of || [],
       };
     });
     const links = [];
@@ -737,7 +759,7 @@
     nodeSel.exit().remove();
     const nodeEnter = nodeSel.enter()
       .append('g')
-      .attr('class', d => 'node' + (d.isRoot ? ' selected' : ''))
+      .attr('class', d => 'node' + (d.isRoot ? ' selected' : '') + (d.deprecated ? ' deprecated' : ''))
       .on('click', (event, d) => {
         event.stopPropagation();
         selectUnit(d.id);
@@ -873,7 +895,10 @@
     const panel = document.getElementById('info-panel');
     document.getElementById('ip-id').textContent = u.id;
     document.getElementById('ip-name').textContent = ' ' + u.name;
-    document.getElementById('ip-meta').innerHTML = `
+    const deprBanner = u.deprecated
+      ? `<div style="background:#ffebee;color:#c62828;padding:4px 8px;border-radius:4px;margin-bottom:6px;font-size:11px;font-weight:600;">DEPRECATED${u.deprecated_in_favor_of && u.deprecated_in_favor_of.length ? ' → ' + u.deprecated_in_favor_of.join(', ') : ''}</div>`
+      : '';
+    document.getElementById('ip-meta').innerHTML = deprBanner + `
       <strong>${DOM_NAMES[u.id[0]] || ''}</strong>
       &nbsp;·&nbsp; layer ${u.layer || 0}
       &nbsp;·&nbsp; ${u.mastery_target || '?'}
