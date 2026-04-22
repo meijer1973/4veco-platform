@@ -2496,7 +2496,7 @@
     "id": "E03",
     "name": "Kapitaaldekking en renteeffecten",
     "category": "ruilen over tijd",
-    "layer": 1,
+    "layer": 4,
     "kern": "Analyseer hoe rentes de betaalbaarheid van kapitaalgedekte pensioenen onder druk zetten.",
     "needs": [
       "E02",
@@ -2598,7 +2598,7 @@
     "id": "E07",
     "name": "Koop- versus huurlasten vergelijken",
     "category": "ruilen over tijd",
-    "layer": 1,
+    "layer": 4,
     "kern": "Vergelijk netto woonlasten van kopen en huren door rente, aflossing, onderhoud en huurprijs systematisch tegen elkaar af te zetten.",
     "needs": [
       "E02",
@@ -3676,9 +3676,12 @@
     "id": "H15",
     "name": "Nominale rente op staatsobligaties verklaren",
     "category": "welvaart en groei",
-    "layer": 0,
+    "layer": 3,
     "kern": "Verklaar bewegingen in de nominale rente op staatsobligaties vanuit vraag-en-aanbod op de obligatiemarkt en risicoperceptie.",
-    "needs": [],
+    "needs": [
+      "H30",
+      "H31"
+    ],
     "exam_codes": [
       "H1.2"
     ],
@@ -3939,7 +3942,7 @@
     "id": "H26",
     "name": "Koop- versus huurlasten vergelijken",
     "category": "welvaart en groei",
-    "layer": 1,
+    "layer": 4,
     "kern": "Vergelijk netto woonlasten van kopen en huren door rente, aflossing, onderhoud en huurprijs systematisch tegen elkaar af te zetten.",
     "needs": [
       "H15"
@@ -4034,6 +4037,87 @@
     ]
   },
   {
+    "id": "H29",
+    "name": "Obligatie als verhandelbaar schuldpapier",
+    "category": "welvaart en groei",
+    "layer": 0,
+    "kern": "Benoem wat een obligatie is — een verhandelbaar schuldpapier met vaste nominale waarde, couponrente en looptijd — en onderscheid de primaire markt (emissie/veiling door de uitgever) van de secundaire markt (handel tussen beleggers).",
+    "needs": [],
+    "exam_codes": [
+      "H1.2"
+    ],
+    "mastery_target": "understand",
+    "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
+    "terms": [
+      "obligaties"
+    ],
+    "pitfalls": [
+      "Obligatie verwarren met aandeel: een obligatie is schuld (uitgever moet nominale waarde terugbetalen), een aandeel is eigendom.",
+      "Emittent-perspectief (overheid of bedrijf leent door uitgifte) verwarren met beleggers-perspectief (belegger koopt schuldpapier) — op de secundaire markt staan twee beleggers tegenover elkaar, niet de uitgever."
+    ]
+  },
+  {
+    "id": "H30",
+    "name": "Vraag en aanbod op de obligatiemarkt",
+    "category": "welvaart en groei",
+    "layer": 1,
+    "kern": "Leg uit hoe vraag en aanbod op de secundaire obligatiemarkt samen de obligatiekoers bepalen. Noem de drie belangrijkste demand-shifters (risicoperceptie, alternatieve rendementen, inflatieverwachting) en de belangrijkste supply-shifter (nieuwe uitgiften door overheid of bedrijven).",
+    "needs": [
+      "H29",
+      "D32"
+    ],
+    "exam_codes": [
+      "H1.2"
+    ],
+    "mastery_target": "understand",
+    "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
+    "terms": [
+      "obligaties",
+      "rendement"
+    ],
+    "pitfalls": [
+      "Denken dat meer vraag naar obligaties de rente omhoog stuwt (intuitie vanuit spaarrente) — het is precies omgekeerd: meer vraag duwt de koers omhoog en daarmee het rendement omlaag.",
+      "Verwarren van de obligatiekoers (marktprijs) met de nominale waarde — de koers beweegt mee met vraag en aanbod, de nominale waarde staat vast bij uitgifte.",
+      "Denken dat de overheid de rente op haar obligaties direct vaststelt — de effectieve rente volgt uit de veilingkoers die beleggers bereid zijn te bieden."
+    ]
+  },
+  {
+    "id": "H31",
+    "name": "Inverse relatie obligatiekoers en rente",
+    "category": "welvaart en groei",
+    "layer": 2,
+    "kern": "Leg uit dat obligatiekoers en effectief rendement omgekeerd bewegen: bij gelijke couponstroom betekent een hogere aankoopkoers een lager effectief rendement, en omgekeerd.",
+    "needs": [
+      "H29",
+      "H30"
+    ],
+    "exam_codes": [
+      "H1.2"
+    ],
+    "mastery_target": "understand",
+    "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal",
+      "rekenen"
+    ],
+    "terms": [
+      "obligaties",
+      "rendement",
+      "rente"
+    ],
+    "pitfalls": [
+      "Denken dat een hogere koers hetzelfde is als een hogere rente — het is precies omgekeerd, omdat de couponstroom per obligatie vastligt.",
+      "De inverse relatie doortrekken naar de couponrente: die staat vast bij uitgifte; alleen het effectief rendement beweegt met de marktkoers.",
+      "Aannemen dat het koerseffect voor elke obligatie even groot is — bij langlopend papier is het rendementseffect van een koersschommeling veel groter dan bij kortlopend papier."
+    ]
+  },
+  {
     "id": "I01",
     "name": "Anticyclisch begrotingsbeleid",
     "category": "goede en slechte tijden",
@@ -4082,7 +4166,7 @@
     "id": "I03",
     "name": "Renteongevoeligheid van investeringen bij ondergrens",
     "category": "goede en slechte tijden",
-    "layer": 2,
+    "layer": 5,
     "kern": "Leg uit waarom bedrijfsinvesteringen beperkt reageren op renteverlagingen als de vraag laag is of de effectieve ondergrens nominale rente nadert.",
     "needs": [
       "I17"
@@ -4124,7 +4208,7 @@
     "id": "I05",
     "name": "Rentebesluit van centrale bank",
     "category": "goede en slechte tijden",
-    "layer": 2,
+    "layer": 5,
     "kern": "Bepaal op basis van inflatie, outputgap en duaal mandaat of een centrale bank de beleidsrente verhoogt, verlaagt of constant houdt.",
     "needs": [
       "I17",
@@ -4293,7 +4377,7 @@
     "id": "I11",
     "name": "Monetair beleid: starre versus flexibele arbeidsmarkt",
     "category": "goede en slechte tijden",
-    "layer": 3,
+    "layer": 6,
     "kern": "Vergelijk het effect van een renteverlaging op bbp en prijsniveau tussen een starre en een flexibele arbeidsmarkt en verklaar het verschil via de helling van de GA-curve.",
     "needs": [
       "I10",
@@ -4328,7 +4412,7 @@
     "id": "I12",
     "name": "Wisselkoerskanaal van rentebeleid",
     "category": "goede en slechte tijden",
-    "layer": 2,
+    "layer": 5,
     "kern": "Leg uit hoe een renteverlaging via kapitaaluitstroom leidt tot depreciatie van de valuta en daarmee de exportcompetitiviteit vergroot.",
     "needs": [
       "I17",
@@ -4351,7 +4435,7 @@
     "id": "I13",
     "name": "Monetair trilemma",
     "category": "goede en slechte tijden",
-    "layer": 3,
+    "layer": 6,
     "kern": "Analyseer waarom een land hooguit twee van de drie doelen — vaste wisselkoers, vrij kapitaalverkeer en zelfstandig rentebeleid — tegelijk kan bereiken.",
     "needs": [
       "I12"
@@ -4462,7 +4546,7 @@
     "id": "I17",
     "name": "Rentebeleid en transmissiemechanisme",
     "category": "goede en slechte tijden",
-    "layer": 1,
+    "layer": 4,
     "kern": "Leg uit hoe een renteverhoging via duurder krediet consumptie en investeringen afremt en hoe een renteverlaging deze bestedingen stimuleert.",
     "needs": [
       "H15"
@@ -4508,7 +4592,7 @@
     "id": "I19",
     "name": "Wisselkoerseffect van monetair beleid op conjunctuur",
     "category": "goede en slechte tijden",
-    "layer": 3,
+    "layer": 6,
     "kern": "Leg uit hoe rentebeleid via de wisselkoers de netto export verandert en zo de binnenlandse conjunctuur beïnvloedt.",
     "needs": [
       "I12",
@@ -4945,7 +5029,7 @@
     "name": "Werknemers- en werkgeverssurplus bij minimumloon",
     "category": "arbeidsmarkt",
     "layer": 4,
-    "kern": "Bereken werknemerssurplus (arbeidsmarkt-CS) en werkgeverssurplus (arbeidsmarkt-PS) voor en na invoering van een minimumloon; identificeer welvaartsverlies als de \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"verloren driehoek\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\" bij W_min > W*.",
+    "kern": "Bereken werknemerssurplus (arbeidsmarkt-CS) en werkgeverssurplus (arbeidsmarkt-PS) voor en na invoering van een minimumloon; identificeer welvaartsverlies als de \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"verloren driehoek\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\" bij W_min > W*.",
     "needs": [
       "A02",
       "A04",
