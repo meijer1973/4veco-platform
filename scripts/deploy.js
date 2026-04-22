@@ -50,6 +50,7 @@ const HEADER = HEADER_JS;
 function copyEngines() {
     console.log('\n\u2501\u2501 Step 1: Copying engine files \u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\n');
     const sharedDir = path.join(MODULE_ROOT, 'shared');
+    if (!fs.existsSync(sharedDir)) fs.mkdirSync(sharedDir, { recursive: true });
 
     // Flat engine files (JS + CSS)
     const flatFiles = [
