@@ -240,3 +240,27 @@ History of retired rules, so a future reader can trace what was tried and why.
 - **Stale `A4.1` example in catalog schema** (superseded 2026-04-21). `A4.1` was not a real code when cited. Replaced first with `D3.2, I3.5`; now (after A-domain scope extension) `A2.10` is a real code and becomes the new schema example.
 - **"Eleven domain prefixes match CvTE exactly"** (superseded 2026-04-21). Held that the catalog ID prefix set must equal the CvTE A–K domain letters. Superseded after the blueprint walk (49 target exercises across Modules 1–4) surfaced that arbeidsmarkt content — heavily central-exam tested — sits awkwardly across A / D3.10 / H5 / I-labor fragments. New prefix `L` (Arbeidsmarkt) is platform-added as a point-of-attention domain: its `exam_codes` still reference CvTE (H5.x etc.), but the distinct catalog prefix keeps the labor-market coverage visible in reports. Validator regex widened `[A-K]` → `[A-L]` in 6 files. See `references/machine/micro-teaching-units.md` domain table.
 - **"H = school exam only" claim in blueprint audit** (superseded 2026-04-21). `knowledge/blueprint-v4-audit.md` classified H as school-exam-only. Wrong: the CvTE register contains 21 H-eindtermen (H1 kringloop, H2 productiefunctie, H3 welvaart, H4 verdeling, H5 arbeidsmarkt), and real CvTE exam-questions cite H-codes 52× across havo+vwo. Audit corrected to "central exam."
+
+---
+
+## PART 7: QUALITY CONTROL PIPELINE
+
+The 8 deterministic report scripts under `build-scripts/reports/` (see PART 4) check the **shape** of the catalog: schema validity, DAG acyclicity, terminology canonicity, reference-resolvability. They cannot judge whether `exam_codes` point to the *right* CvTE eindterm, whether `needs` edges are *structurally justified*, or whether the catalog can be *reached* from a real exam question. That LLM-judgment layer is the QC pipeline.
+
+**Operational entry point:** `skills/qc-references.md` (slash command `/qc-references`). The runner reads versioned prompt files, launches subagents in parallel, walks resulting trees, and writes one timestamped report per run — without ever editing the catalog. The user remains the gate for any mints / edits triggered by findings.
+
+**Test specifications** (one prompt per file under `references/qc-prompts/`):
+
+| Test ID | Prompt file | Catches |
+|---|---|---|
+| `probe-questions` | `references/qc-prompts/probe-questions.md` | Catalog gaps that real exam topics demand but no unit covers |
+| `exam-derived-skills` | `references/qc-prompts/exam-derived-skills.md` | Whether catalog can be reached from real CvTE exam questions |
+| `tree-integrity-audit` | `references/qc-prompts/tree-integrity-audit.md` | Wrong exam_codes, over-wired needs, kern↔procedure drift |
+
+**Outputs** (visible under `reports/`):
+- `reports/qc/qc-run-YYYY-MM-DD.md` — one per run (overwrite if same day).
+- `reports/qc/SUMMARY.md` — append-one-row-per-run trend table.
+
+**Cadence:** invoked manually after ≥5 catalog edits since last run, or at minimum monthly. No CI hook (none exists in this repo); re-evaluate when CI lands.
+
+**Adding a new test:** create a new `*.md` prompt file under `references/qc-prompts/`, add a row to its README and to the runner's MVP-test table, and document one expected failure signal so reviewers know what good looks like.
