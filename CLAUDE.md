@@ -2,7 +2,12 @@
 
 **Working agreement** — read `../CLAUDE.md` "Working agreement — how Claude operates in this repo". Seven non-negotiable operating rules (read-first, sanity-check-plans, be-honest-about-mistakes, quality-over-patchwork). Apply to every task in this repo, not just the root.
 
-**Deze directory bevat geen student-facing webpagina's.** Games/paragrafen/etc. worden hier ontwikkeld en via `node scripts/deploy.js "<module-pad>"` gegenereerd naar een sibling-module (`../3. Module 3 - Markt en overheid/` of `../3-Module-3-rewire-test/`). Zie `../CLAUDE.md` voor de volledige pipeline + directory-kaart. Als je een browserwijziging verwacht te zien, moet je eerst deployen — niets rendert rechtstreeks vanuit de platform-tree.
+**Deze directory bevat geen student-facing output.** Er zijn twee outputpaden, beide naar sibling-directories:
+
+- **Games → Module 3.** `node scripts/deploy.js "<module-pad>"` genereert HTML-games naar `../3. Module 3 - Markt en overheid/` of `../3-Module-3-rewire-test/`.
+- **Paragrafen, hoofdstukken, boeken → 4veco-lessen.** Skills `econ-textbook-paragraph`, `econ-chapter-builder` en `econ-book-builder` schrijven markdown + PDF naar `../4veco-lessen/Boek N - titel/X.Y Hoofdstuk naam/`. Dit is de student-facing structuur die Module 3 op termijn vervangt.
+
+Zie `../CLAUDE.md` voor de volledige pipeline + directory-kaart. Als je een browser- of PDF-wijziging verwacht te zien, moet je eerst deployen of opnieuw bouwen — niets rendert rechtstreeks vanuit de platform-tree.
 
 All project documentation lives in dedicated files:
 

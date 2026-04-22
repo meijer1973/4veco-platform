@@ -38,16 +38,65 @@ A student working through all materials for one paragraph should feel like they'
 
 **How to enforce:** The `_paragraph-plan.md` contains a **procedure-stappen-plan** that defines the canonical step sequence for each skill. All builders — vaardigheden, stappenplan game, presentatie, inoefening — must follow these exact steps. A **visuelen-toewijzing** table maps each visual to every builder that must embed it.
 
+## Architectural principles
+
+Three decisions that govern what lives in this platform and how it evolves. These are not style preferences — they determine which proposals fit the project and which are reasoning backwards into a dying direction.
+
+### 1. Exercises are the source of truth
+
+Lesson goals and the micro-teaching-units catalog derive from target exercises — especially real CvTE exam questions — not from exam-program text or syllabus abstractions. Units exist because an exercise requires a skill, not because a syllabus sentence implies one might. Bulk-extracting from the exam program produces ghost skills that appear in reports but never in real work.
+
+**Ground-truth hierarchy (strongest to weakest):**
+1. Real CvTE exam questions from past havo/vwo papers
+2. Blueprint target exercises in `course_blueprint_v4.md` (each lesson anchored by one)
+3. Target exercises already built in the platform (paragraph-level)
+4. Proeftoets-eindbazen and consolidation exercises
+5. Syllabus eindtermen — for grouping and coverage reporting only, never for minting
+6. Blueprint prose — descriptive context for the target exercises above
+
+**How to apply:**
+- When creating an exercise or analyzing an exam question, check every required skill. Missing units are minted via CLI (`build-scripts/references/unit-add.js`) with exam_codes and needs populated.
+- Never pre-mint units from the syllabus. Domain A (Vaardigheden) especially grows exercise-first — CvTE lists many abstract skills there that rarely concretize into exam questions.
+- Gap reports (exam-vs-program-gaps, blueprint-vs-exam-gaps, exam-question-type-distribution) surface drift between syllabus claims, real exam reality, blueprint intent, and built materials. **Gaps are diagnostic signal, not a to-do list to auto-fill.**
+
+### 2. Machine-only editing — the goal end-state
+
+Hand-edits to machine-authored references and generated artifacts are forbidden. Humans propose changes via CLI scripts (eventually wrapped by natural-language skills); the CLI validates and writes. If a human hand-edits a machine reference, the change does not survive: next script run or next report reverts or flags it.
+
+**Why:** Integrity at scale. A catalog with DAG dependencies, exam-code cross-references, and procedure consistency cannot be maintained by hand without silent drift as soon as the dataset exceeds one person's working memory.
+
+**Current state (direction, not yet uniform):**
+- `references/machine/` — already enforced. Edits only via `build-scripts/references/*-edit.js`. Never via Edit/Write tools.
+- `references/external/` — machine-refreshed (re-extracted from PDFs, re-fetched from URLs). Same principle, different source.
+- `references/authored/` — still hand-edited by design. Long-term direction: shrink this folder as more references gain machine-editing pipelines. Folder location signals current status.
+
+**How to apply:**
+- When the user asks to change a unit, formula, procedure, or term in a machine reference: invoke or design the appropriate CLI command. Do not open the file and edit.
+- Skills that modify machine references shell out to the CLI; they have no file-write capability on machine references.
+- When a new hand-maintained reference becomes painful (drift, inconsistency, scale): the answer is to build a CLI pipeline and migrate it from `authored/` to `machine/`, not to add more manual process.
+
+### 3. Module 3 is being retired — don't reason backwards into it
+
+Module 3 is the current cohort's material and is frozen until September 2026 for student-localStorage integrity. It will be retired in favor of markdown-native material in `4veco-lessen/`. `3-Module-3-rewire-test/` is a testing surround layered on top of that legacy module — partially broken in several places because the module itself is (vaardigheden pages come from `.docx` via `convert_vaardigheden.py`, a lossy binary source).
+
+**How to apply:**
+- Don't propose refactors that improve Module 3's `.docx → HTML` path (e.g. teaching `convert_vaardigheden.py` to emit editorial HTML, or building a proper `build-vaardigheden-shells.js` that reads the `.docx`). That's reasoning backwards into a dying stack.
+- The `reskin-vaardigheden.js` + deploy pipeline is a bridge that works until the next-year testing surround exists — leave it.
+- If a Module-3-specific issue looks expensive to fix, flag the decision back to the user ("this is in the retiring stack — is it worth the time?") rather than diving in.
+- New content flows into `4veco-lessen/Boek N - titel/` as markdown-native; that is the direction.
+
 ## Structuur
 
 ```
 4veco-platform/
-├── engines/                    ← Game engines (broncode)
+├── engines/                    ← Game engines (broncode) — 5 games
 │   ├── quiz-engine.js, quiz-ui.js, quiz.css
 │   ├── reasoning-engine.js, reasoning-ui.js, reasoning.css
 │   ├── skilltree-engine.js, skilltree-ui.js, skilltree.css
 │   ├── newsdetective-engine.js, newsdetective-ui.js, newsdetective.css
+│   ├── procedure-engine.js, procedure-ui.js, procedure.css  ← stappenplan-game
 │   ├── skilltree/base-elements.js, explanations.js
+│   ├── voorkennis.js, voorkennis.css  ← geen game, maar een doc-renderlaag
 │   ├── theme.js
 │   └── tests/                  ← Unit tests + data validation tests
 ├── build-scripts/              ← Build pipeline (platform/, lib/, templates/, content/, archive/)

@@ -5,8 +5,8 @@ This document covers two pipelines that can run independently or together.
 | Mode | What it produces | When to use |
 |------|-----------------|-------------|
 | **Part A only** | Textbook paragraph: markdown + graphs + PDFs | Building chapters via `econ-chapter-builder` |
-| **Part B only** | Platform paragraph: 24 files (docx, pptx, html games, deploy) | Adding to the interactive platform when textbook content already exists |
-| **Both (A → B)** | Complete paragraph: textbook + platform | Full production from scratch |
+| **Part B only** | Lessen paragraph companions: 24 files (docx, pptx, HTML games, landing page) at the paragraph root | Adding teacher-facing companions to a 4veco-lessen paragraph when textbook content (Part A) exists |
+| **Both (A → B)** | Complete paragraph: textbook + companions | Full production from scratch |
 
 > **Before you start:** Read the **Design Principles** section in [AGENTS.md](AGENTS.md#design-principles). Two principles govern everything: **Dual Coding** (every concept pairs text with a visual) and **Unified Student Experience** (same procedures and approaches across all formats). These are non-negotiable.
 
@@ -105,11 +105,20 @@ Generate `X.Y.Z-quality-ref.yaml` via a separate sub-agent:
 
 ---
 
-# PART B: PLATFORM BUILD (docx, pptx, html, deploy)
+# PART B: LESSEN COMPANIONS (docx, pptx, html, landing page)
 
-Produces the full interactive lesson page: 24 files including presentations, Word documents, HTML games, and deployment. Part B can reuse `_assets/` graphs from Part A.
+Produces the teacher-facing companions for a lessen paragraph: 24 files including presentations, Word documents, HTML games, and a landing page. Part B can reuse `_assets/` graphs from Part A.
 
-**If Part A was run first:** the `_assets/` folder already contains all graphs. Part B builders (presentatie, voorkennis, vaardigheden) embed these graphs rather than generating new ones.
+**If Part A was run first:** the `_assets/` folder already contains all graphs. Part B builders (presentatie, voorkennis, vaardigheden, nieuws, samenvatting, begeleide inoefening) embed these graphs rather than generating new ones.
+
+## B0. Target and layout
+
+- **Target repo:** `C:\Projects\4veco\4veco-lessen`.
+- **Naming:** `Boek N - Title / N.X Hoofdstuk X - Name / N.X.Y [Naam]`. Books replace the old "Module N" level; chapters and paragraphs keep their two- and three-part numbering.
+- **Per-paragraph layout is flat.** All 24 Part B files sit directly in the paragraph folder alongside Part A outputs (`paragraaf.md`, `opgaven.md`, `antwoorden.md`, `_assets/`, PDFs, `build_pdf.py`, review.md, quality-ref.yaml). No `1. Voorbereiden/`, `2. Leren/`, `3. Oefenen/` subfolders.
+- **Section labels** in tables below (Voorbereiden / Leren / Oefenen) identify the pedagogical role of a file, not a folder. Files are grouped by filename convention (`uitleg voorkennis`, `presentatie`, `begeleide inoefening –`, `basis –`, etc.).
+- **`shared/` lives at book root:** `4veco-lessen/Boek N - Title/shared/` holds engine JS/CSS and the game data files (`shared/questions/`, `shared/procedure/`, etc.).
+- **Module 3 references in older guides are legacy.** For new work, this spec supersedes them. Module 3 (`../3. Module 3 - Markt en overheid/`) stays on its subfolder layout until it retires in September 2026.
 
 ## B1. Definition of Done
 
@@ -117,30 +126,32 @@ A complete paragraph has **24 files** plus an index.html. Every file listed as r
 
 | # | File | Section | Required | Builder | Source input | Output type |
 |---|------|---------|----------|---------|--------------|-------------|
-| 1 | `X.Y.Z [Naam] – instapquiz.html` | 1. Voorbereiden | Yes | `generate-quiz-shells.js` (auto) | `shared/questions/X.Y.Z.js` | Generated |
-| 2 | `X.Y.Z [Naam] – nieuws-detective.html` | 1. Voorbereiden | Yes | `build-newsdetective-shells.js` (auto) | `shared/newsdetective/X.Y.Z.js` | Generated |
-| 3 | `X.Y.Z [Naam] – uitleg voorkennis.docx` | 1. Voorbereiden | Yes | Adapt `template-B_voorkennis.js` | Book content + domain knowledge | Scripted-manual |
-| 4 | `X.Y.Z [Naam] – uitleg voorkennis.html` | 1. Voorbereiden | Yes | `convert_voorkennis.py` | File #3 (.docx) | Converted |
-| 5 | `Lees dit als je niet weet hoe je moet beginnen met deze les.docx` | 1. Voorbereiden | Yes | Copy | Static file (identical in every paragraph) | Static |
-| 6 | `X.Y.Z [Naam] – presentatie.pptx` | 2. Leren | Yes | Adapt `pptx-331-rol-overheid.js` (uses `lib-pptx.js`) | Book content + SVG graphs | Scripted-manual |
-| 7 | `X.Y.Z [Naam] – uitleg vaardigheden.docx` | 2. Leren | Yes | Adapt `template-A_vaardigheden.js` | Book content + domain knowledge | Scripted-manual |
-| 8 | `X.Y.Z [Naam] – uitleg vaardigheden.html` | 2. Leren | Yes | `convert_vaardigheden.py` | File #7 (.docx) | Converted |
-| 9 | `X.Y.Z [Naam] – nieuws met visual.docx` | 2. Leren | Yes | Adapt `nieuws-351-352-afsluiting.js` | Recent Dutch news + SVG visual | Scripted-manual |
-| 10 | `X.Y.Z [Naam] – samenvatting.docx` | 2. Leren | Yes | Adapt `samenvatting-351-352-rebuild.js` | Key concepts from paragraph | Scripted-manual |
-| 11 | `X.Y.Z [Naam] – youtube-videos.html` | 2. Leren | Yes | Write directly | 3 real YouTube video IDs | Manual |
-| 12 | `X.Y.Z [Naam] – stappenplan.html` | 2. Leren | Yes | `build-procedure-shells.js` (auto) | `shared/procedure/X.Y.Z.js` | Generated |
-| 13 | `X.Y.Z [Naam] – redeneer-spel.html` | 3. Oefenen | Yes | `build-reasoning-engine.js` (auto) | `shared/reasoning/X.Y.Z.js` | Generated |
-| 14 | `X.Y.Z [Naam] – wiskundevaardigheden.html` | 3. Oefenen | Yes | `build-skilltree-shells.js` (auto) | PARAGRAPHS array in script | Generated |
-| 15 | `begeleide inoefening – vragen.docx` | 3. Oefenen/begeleide inoefening | Yes | Adapt `inoefening-351-afsluiting.js` | Exercises with scaffolding | Scripted-manual |
-| 16 | `begeleide inoefening – antwoorden.docx` | 3. Oefenen/begeleide inoefening | Yes | Same script as #15 | Same | Scripted-manual |
-| 17 | `begeleide inoefening.html` | 3. Oefenen/begeleide inoefening | Yes | `convert_begeleide_inoefening.py` | Files #15 + #16 | Converted |
-| 18 | `basis – vragen.docx` | 3. Oefenen/basisopgaven | Yes | Adapt `opgaven-351-afsluiting.js` | Exercises (8-10 questions) | Scripted-manual |
-| 19 | `basis – antwoorden.docx` | 3. Oefenen/basisopgaven | Yes | Same script as #18 | Same | Scripted-manual |
-| 20 | `midden – vragen.docx` | 3. Oefenen/middenopgaven | Yes | Same script as #18 | Exercises (6-8 questions) | Scripted-manual |
-| 21 | `midden – antwoorden.docx` | 3. Oefenen/middenopgaven | Yes | Same script as #18 | Same | Scripted-manual |
-| 22 | `verrijking – vragen.docx` | 3. Oefenen/verrijkingsopgaven | Yes | Same script as #18 | Exercises (4-6 questions) | Scripted-manual |
-| 23 | `verrijking – antwoorden.docx` | 3. Oefenen/verrijkingsopgaven | Yes | Same script as #18 | Same | Scripted-manual |
+| 1 | `X.Y.Z [Naam] – instapquiz.html` | Voorbereiden | Yes | `generate-quiz-shells.js` (auto) | `shared/questions/X.Y.Z.js` | Generated |
+| 2 | `X.Y.Z [Naam] – nieuws-detective.html` | Voorbereiden | Yes | `build-newsdetective-shells.js` (auto) | `shared/newsdetective/X.Y.Z.js` | Generated |
+| 3 | `X.Y.Z [Naam] – uitleg voorkennis.docx` | Voorbereiden | Yes | Adapt `template-B_voorkennis.js` | Book content + domain knowledge | Scripted-manual |
+| 4 | `X.Y.Z [Naam] – uitleg voorkennis.html` | Voorbereiden | Yes | `convert_voorkennis.py` | File #3 (.docx) | Converted |
+| 5 | `Lees dit als je niet weet hoe je moet beginnen met deze les.docx` | Voorbereiden | Yes | Copy | Static file (identical in every paragraph) | Static |
+| 6 | `X.Y.Z [Naam] – presentatie.pptx` | Leren | Yes | Adapt `pptx-331-rol-overheid.js` (uses `lib-pptx.js`) | Book content + SVG graphs | Scripted-manual |
+| 7 | `X.Y.Z [Naam] – uitleg vaardigheden.docx` | Leren | Yes | Adapt `template-A_vaardigheden.js` | Book content + domain knowledge | Scripted-manual |
+| 8 | `X.Y.Z [Naam] – uitleg vaardigheden.html` | Leren | Yes | `convert_vaardigheden.py` | File #7 (.docx) | Converted |
+| 9 | `X.Y.Z [Naam] – nieuws met visual.docx` | Leren | Yes | Adapt `nieuws-351-352-afsluiting.js` | Recent Dutch news + SVG visual | Scripted-manual |
+| 10 | `X.Y.Z [Naam] – samenvatting.docx` | Leren | Yes | Adapt `samenvatting-351-352-rebuild.js` | Key concepts from paragraph | Scripted-manual |
+| 11 | `X.Y.Z [Naam] – youtube-videos.html` | Leren | Yes | Write directly | 3 real YouTube video IDs | Manual |
+| 12 | `X.Y.Z [Naam] – stappenplan.html` | Leren | Yes | `build-procedure-shells.js` (auto) | `shared/procedure/X.Y.Z.js` | Generated |
+| 13 | `X.Y.Z [Naam] – redeneer-spel.html` | Oefenen | Yes | `build-reasoning-engine.js` (auto) | `shared/reasoning/X.Y.Z.js` | Generated |
+| 14 | `X.Y.Z [Naam] – wiskundevaardigheden.html` | Oefenen | Yes | `build-skilltree-shells.js` (auto) | PARAGRAPHS array in script | Generated |
+| 15 | `X.Y.Z [Naam] – begeleide inoefening – vragen.docx` | Oefenen/begeleide inoefening | Yes | Adapt `inoefening-351-afsluiting.js` | Exercises with scaffolding | Scripted-manual |
+| 16 | `X.Y.Z [Naam] – begeleide inoefening – antwoorden.docx` | Oefenen/begeleide inoefening | Yes | Same script as #15 | Same | Scripted-manual |
+| 17 | `X.Y.Z [Naam] – begeleide inoefening.html` | Oefenen/begeleide inoefening | Yes | `convert_begeleide_inoefening.py` | Files #15 + #16 | Converted |
+| 18 | `X.Y.Z [Naam] – basis – vragen.docx` | Oefenen/basisopgaven | Yes | Adapt `opgaven-351-afsluiting.js` | Exercises (8-10 questions) | Scripted-manual |
+| 19 | `X.Y.Z [Naam] – basis – antwoorden.docx` | Oefenen/basisopgaven | Yes | Same script as #18 | Same | Scripted-manual |
+| 20 | `X.Y.Z [Naam] – midden – vragen.docx` | Oefenen/middenopgaven | Yes | Same script as #18 | Exercises (6-8 questions) | Scripted-manual |
+| 21 | `X.Y.Z [Naam] – midden – antwoorden.docx` | Oefenen/middenopgaven | Yes | Same script as #18 | Same | Scripted-manual |
+| 22 | `X.Y.Z [Naam] – verrijking – vragen.docx` | Oefenen/verrijkingsopgaven | Yes | Same script as #18 | Exercises (4-6 questions) | Scripted-manual |
+| 23 | `X.Y.Z [Naam] – verrijking – antwoorden.docx` | Oefenen/verrijkingsopgaven | Yes | Same script as #18 | Same | Scripted-manual |
 | 24 | `index.html` | Root | Yes | `build-landing-page.js` (auto) | Scans folder contents | Generated |
+
+> **Flat-layout filename change:** in the retargeted Part B, opgavenset and begeleide-inoefening filenames keep the `X.Y.Z [Naam] –` prefix so they stay unique at the paragraph root (since there are no longer `basisopgaven/` or `begeleide inoefening/` subfolders to disambiguate them). Role labels in the Section column identify pedagogical role only, not folder paths.
 
 ### Output type definitions
 
@@ -163,7 +174,7 @@ These are the raw inputs needed to build one paragraph. They must exist BEFORE r
 | Input | Location | Format | Who creates it |
 |-------|----------|--------|----------------|
 | Quiz questions | `shared/questions/X.Y.Z.js` | JS: `var QUIZ_DATA = { meta, categories, questions }` | Agent writes the JS file. 15 questions, 3-4 categories, at least one difficulty:3 per category. |
-| Reasoning questions | `source-data/module-N/reasoning/X.Y.Z.csv` | Semicolon-delimited CSV, 15 rows, 5 modes | Agent writes CSV, then runs `build-reasoning-questions.js` to produce JS. |
+| Reasoning questions | `source-data/book-N/reasoning/X.Y.Z.csv` | Semicolon-delimited CSV, 15 rows, 5 modes | Agent writes CSV, then runs `build-reasoning-questions.js` to produce JS. |
 | Newsdetective data | `shared/newsdetective/X.Y.Z.js` | JS: `var NEWS_DETECTIVE_DATA = { meta, article, rounds }` | Agent writes the JS file. Real Dutch news, 4 rounds. |
 | Procedure data | `shared/procedure/X.Y.Z.js` | JS: `var PROCEDURE_DATA = { meta, procedures }` | Agent writes the JS file. Steps aligned with uitleg vaardigheden. |
 | Skilltree config | Entry in `build-skilltree-shells.js` PARAGRAPHS array | JS object: `{ parNr, name, skills }` | Agent adds to array. Data file auto-generated. |
@@ -254,15 +265,22 @@ Each scripted-manual asset follows the same pattern: **read source → write bui
 | **Custom** | Video IDs, titles, channel names, descriptions. |
 | **Design note** | Manual by design. No generator exists or is planned. `prompt-youtube-videos.md` has search guidance. |
 
-### C. Registration entries (→ platform repo config files)
+### C. Registration entries (→ book manifest)
 
-| Config file | What to add | When |
-|-------------|-------------|------|
-| `build-scripts/platform/build-landing-page.js` | PARAGRAAF_DATA entry | Every new paragraph |
-| `build-scripts/platform/build-landing-page.js` | CHAPTER_FOLDERS, CHAPTER_ORDER, CHAPTER_NUMBERS, DOMAIN_COLORS | Only for new chapters |
-| `build-scripts/platform/build-skilltree-shells.js` | PARAGRAPHS entry | Every new paragraph |
-| `engines/tests/skilltree-data.test.js` | expectedFiles entry | Every new paragraph |
-| `engines/theme.js` | DOMAIN_COLORS entry | Only for new chapters |
+The target book carries a `deploy-config.json` manifest at its root (e.g.
+`4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/deploy-config.json`).
+Platform generators read this manifest; it is the single source of truth for
+chapter structure, paragraph metadata, and optional per-paragraph config.
+
+| Edit | What to add | When |
+|------|-------------|------|
+| Book manifest `paragraphs[]` | `{ id, name, chapter, domain, skilltree?, kind? }` | Every new lessen paragraph |
+| Book manifest `chapters[]` | `{ id, folder, name, number, domain }` | Only for a new chapter |
+| Paragraph `skilltree` field (optional) | `{ skills: ["A01", ...] }` or `{ skills: null }` (all) | Only when the paragraph should have a wiskundevaardigheden shell |
+| `engines/theme.js` | DOMAIN_COLORS entry | Only for a brand-new domain name (teal/blue/amber/green/purple already exist) |
+
+The loader (`build-scripts/lib/lib-deploy-config.js`) hard-fails if the manifest
+is missing or malformed. There is no auto-detection fallback.
 
 ---
 
@@ -270,28 +288,34 @@ Each scripted-manual asset follows the same pattern: **read source → write bui
 
 This is the production sequence for one paragraph. Follow in order.
 
-### Phase 1: Register (5 min)
-1. Add paragraph to `build-landing-page.js` PARAGRAAF_DATA
-2. Add paragraph to `build-skilltree-shells.js` PARAGRAPHS
-3. Add paragraph to `skilltree-data.test.js` expectedFiles
-4. If new chapter: add to CHAPTER_FOLDERS, CHAPTER_ORDER, CHAPTER_NUMBERS, DOMAIN_COLORS, theme.js
+### Phase 1: Register (2 min)
+1. Open the book's `deploy-config.json` manifest.
+2. Add an entry to `paragraphs[]`: `{ "id": "X.Y.Z", "name": "...", "chapter": "X.Y", "domain": "<teal|blue|amber|green|purple>" }`. Add `"skilltree": { "skills": [...] }` only if the paragraph should emit a wiskundevaardigheden shell.
+3. If this is the first paragraph in a new chapter, add an entry to `chapters[]` first.
+4. For a new domain (beyond teal/blue/amber/green/purple), add it to `engines/theme.js` — otherwise nothing else to touch.
 
 ### Phase 2: Create folder structure (1 min)
 ```bash
-MODULE="../3. Module 3 - Markt en overheid"
-PAR="$MODULE/3.X Hoofdstuk X - Name/3.X.Y Paragraaf Y - Name"
-mkdir -p "$PAR/1. Voorbereiden" "$PAR/2. Leren"
-mkdir -p "$PAR/3. Oefenen/basisopgaven" "$PAR/3. Oefenen/middenopgaven"
-mkdir -p "$PAR/3. Oefenen/verrijkingsopgaven" "$PAR/3. Oefenen/begeleide inoefening"
-cp "$MODULE/3.1 Hoofdstuk 1 - Markten/3.1.1 Paragraaf 1 - Markt en marktstructuur/1. Voorbereiden/Lees dit als je niet weet hoe je moet beginnen met deze les.docx" "$PAR/1. Voorbereiden/"
+BOOK="../4veco-lessen/Boek N - Title"
+PAR="$BOOK/N.X Hoofdstuk X - Name/N.X.Y [Naam]"
+mkdir -p "$PAR"
+# Flat layout: no 1. Voorbereiden / 2. Leren / 3. Oefenen subfolders.
+# Part A outputs and all 24 Part B files live at the paragraph root.
+# Static "Lees dit..." file — copy from any existing lessen paragraph:
+cp "$BOOK/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/Lees dit als je niet weet hoe je moet beginnen met deze les.docx" "$PAR/" 2>/dev/null || echo "Seed the static file from a legacy source on first run."
 ```
 
 ### Phase 3: Create game data files (30 min)
-1. Write `shared/questions/X.Y.Z.js` — quiz data (15 questions)
-2. Write `source-data/module-N/reasoning/X.Y.Z.csv` — reasoning CSV
-3. Run: `MODULE_ROOT="$MODULE" node build-scripts/platform/build-reasoning-questions.js X.Y.Z <domain> source-data/module-N/reasoning/X.Y.Z.csv`
-4. Write `shared/newsdetective/X.Y.Z.js` — newsdetective data
-5. Write `shared/procedure/X.Y.Z.js` — procedure/stappenplan data. Steps MUST align with the vaardigheden skills (same labels, same order). See procedure-stappen-plan in the paragraph plan.
+
+Game data files live under `$BOOK/shared/` (e.g. `4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/shared/`). Reasoning CSV sources live under `source-data/book-N/reasoning/` in the platform repo.
+
+1. Write `$BOOK/shared/questions/X.Y.Z.js` — quiz data (15 questions)
+2. Write `source-data/book-N/reasoning/X.Y.Z.csv` — reasoning CSV
+3. Run: `MODULE_ROOT="$BOOK" node build-scripts/platform/build-reasoning-questions.js X.Y.Z <domain> source-data/book-N/reasoning/X.Y.Z.csv`
+4. Write `$BOOK/shared/newsdetective/X.Y.Z.js` — newsdetective data
+5. Write `$BOOK/shared/procedure/X.Y.Z.js` — procedure/stappenplan data. Steps MUST align with the vaardigheden skills (same labels, same order). See procedure-stappen-plan in the paragraph plan.
+
+> The `MODULE_ROOT` env-var name is kept (not renamed to `BOOK_ROOT`) so existing scripts continue to work. It points at a lessen book root in the new pipeline.
 
 ### Phase 4: Create rich documents (bulk of the work)
 
@@ -325,7 +349,7 @@ Build all SVG graphics listed in the visuelen-plan, so they can be reused across
    - Write the SVG following the `economic-graph` skill spec
    - Render to PNG via `lib/lib-svg-utils.js`: `const { svgToPng } = require('../../lib/lib-svg-utils')`
    - Save both `.svg` and `.png` to `_assets/` (e.g. `_assets/va-equilibrium.svg`, `_assets/va-equilibrium.png`)
-3. Optionally save the asset-builder script as `build-scripts/content/module-N/mN-XYZ-build-assets.js`
+3. Optionally save the asset-builder script as `build-scripts/content/book-N/bN-XYZ-build-assets.js`
 4. Quality-check all PNGs before proceeding — verify economic correctness and readability
 
 #### Phase 4c — Build documents
@@ -339,14 +363,14 @@ For each document type, copy the reference script, replace the content, run it. 
 
 | Document | Reference script | Output location |
 |----------|-----------------|-----------------|
-| Uitleg voorkennis | `template-B_voorkennis.js` | `1. Voorbereiden/` |
-| Uitleg vaardigheden | `template-A_vaardigheden.js` | `2. Leren/` |
-| Presentatie | `pptx-331-rol-overheid.js` | `2. Leren/` |
-| Nieuws met visual | `nieuws-351-352-afsluiting.js` | `2. Leren/` |
-| Samenvatting | `samenvatting-351-352-rebuild.js` | `2. Leren/` |
-| YouTube videos | Write HTML directly | `2. Leren/` |
-| Begeleide inoefening | `inoefening-351-afsluiting.js` | `3. Oefenen/begeleide inoefening/` |
-| Opgavensets (3 levels) | `opgaven-351-afsluiting.js` | `3. Oefenen/{basis,midden,verrijking}opgaven/` |
+| Uitleg voorkennis | `template-B_voorkennis.js` | `<paragraph folder>` |
+| Uitleg vaardigheden | `template-A_vaardigheden.js` | `<paragraph folder>` |
+| Presentatie | `pptx-331-rol-overheid.js` | `<paragraph folder>` |
+| Nieuws met visual | `nieuws-351-352-afsluiting.js` | `<paragraph folder>` |
+| Samenvatting | `samenvatting-351-352-rebuild.js` | `<paragraph folder>` |
+| YouTube videos | Write HTML directly | `<paragraph folder>` |
+| Begeleide inoefening | `inoefening-351-afsluiting.js` | `<paragraph folder>` |
+| Opgavensets (3 levels) | `opgaven-351-afsluiting.js` | `<paragraph folder>` |
 
 Run each with: `NODE_PATH="$(npm root -g)" node <script>.js`
 
@@ -356,6 +380,7 @@ python build-scripts/lib/convert_voorkennis.py "$PAR"
 python build-scripts/lib/convert_vaardigheden.py "$PAR"
 python build-scripts/lib/convert_begeleide_inoefening.py "$PAR"
 ```
+Converters read the source `.docx` from `$PAR` directly (flat layout) and write the `.html` alongside.
 
 ### Phase 5a–5c: QC gates
 
@@ -368,9 +393,9 @@ If running Part B only (textbook content already exists), run these QC steps now
 
 ### Phase 6: Deploy (2 min)
 ```bash
-node scripts/deploy.js "$MODULE"
+node scripts/deploy.js "$BOOK"
 ```
-This runs ONLY the automated layer: engine copy, game shell generation, landing pages, link check, data tests. It does NOT build rich documents.
+`$BOOK` points at a lessen book root (e.g. `../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod`); `shared/` lives directly under it. This runs ONLY the automated layer: engine copy, game shell generation (flat output into each paragraph root), landing pages, link check, data tests. It does NOT build rich documents.
 
 ### B-verify: Part B checklist
 
@@ -394,7 +419,7 @@ This runs ONLY the automated layer: engine copy, game shell generation, landing 
 
 **Deployment:**
 - [ ] Browser: all 4 games load, all section cards appear in landing page
-- [ ] Data tests pass: `MODULE_ROOT="$MODULE" npx jest --testPathPatterns "engines/tests/.*-data\.test\.js"`
+- [ ] Data tests pass: `MODULE_ROOT="$BOOK" npx jest --testPathPatterns "engines/tests/.*-data\.test\.js"`
 - [ ] `validate-paragraph.js` passes with 0 errors
 
 ---
@@ -406,13 +431,15 @@ Fully automated from data files. deploy.js runs these.
 
 | Script | Reads from | Writes to |
 |--------|-----------|-----------|
-| `generate-quiz-shells.js` | `shared/questions/*.js` | `1. Voorbereiden/*.html` |
-| `build-newsdetective-shells.js` | `shared/newsdetective/*.js` | `1. Voorbereiden/*.html` |
-| `build-procedure-shells.js` | `shared/procedure/*.js` | `2. Leren/*.html` |
-| `build-reasoning-engine.js` | `shared/reasoning/*.js` | `3. Oefenen/*.html` |
-| `build-skilltree-shells.js` | PARAGRAPHS array + `engines/skilltree/base-elements.js` | `shared/skilltree/*.js` + `3. Oefenen/*.html` |
-| `build-landing-page.js` | Scans folder contents | `index.html` at 3 levels |
+| `generate-quiz-shells.js` | `shared/questions/*.js` | `<paragraph folder>/*.html` |
+| `build-newsdetective-shells.js` | `shared/newsdetective/*.js` | `<paragraph folder>/*.html` |
+| `build-procedure-shells.js` | `shared/procedure/*.js` | `<paragraph folder>/*.html` |
+| `build-reasoning-engine.js` | `shared/reasoning/*.js` | `<paragraph folder>/*.html` |
+| `build-skilltree-shells.js` | Book manifest paragraphs with `skilltree` + `engines/skilltree/base-elements.js` | `shared/skilltree/*.js` + `<paragraph folder>/*.html` |
+| `build-landing-page.js` | Book manifest + scans paragraph folder contents (filename-based classification, flat layout) | `index.html` at paragraph/chapter/book levels |
 | `build-reasoning-questions.js` | CSV file (manual arg) | `shared/reasoning/*.js` |
+
+> **Flat layout:** all generators emit directly to the paragraph root — there are no phase subfolders. Each generator calls `loadConfig(MODULE_ROOT)` to read the book's `deploy-config.json` and resolves each `parNr` to its folder via the manifest. Data files whose parNr is not in the manifest are skipped with a warning.
 
 ### Reusable converters (run manually after .docx creation)
 
@@ -462,13 +489,13 @@ Scripts built for specific paragraphs in earlier work. Useful as examples but no
 ## B5. What deploy.js does and does NOT do
 
 ### deploy.js handles (automated layer):
-- Copy engine files (JS/CSS) from `engines/` → `shared/`
-- Generate skilltree data + HTML shells
-- Generate reasoning game HTML shells
-- Generate quiz HTML shells
-- Generate newsdetective HTML shells
-- Generate procedure (stappenplan) HTML shells
-- Rebuild all landing pages (index.html at paragraph/chapter/module level)
+- Copy engine files (JS/CSS) from `engines/` → `<book>/shared/`
+- Generate skilltree data + HTML shells (flat output: shells land at paragraph root)
+- Generate reasoning game HTML shells (flat output)
+- Generate quiz HTML shells (flat output)
+- Generate newsdetective HTML shells (flat output)
+- Generate procedure (stappenplan) HTML shells (flat output)
+- Rebuild all landing pages (index.html at paragraph/chapter/book level)
 - Run link checker
 - Run data validation tests
 
@@ -497,12 +524,12 @@ node scripts/validate-paragraph.js "<path-to-paragraph-folder>"
 ```
 
 This checks:
-- All 23 required files exist
+- All 23 required files exist at the paragraph root (flat layout)
 - All .docx files are valid zip archives
 - Presentation > 100KB (has graphs)
 - All .html files have content (not empty shells)
 - Quiz has difficulty-3 per category
-- Game data files exist in shared/
+- Game data files exist in `<book>/shared/`
 - Reasoning CSV source exists
 
 **A paragraph is not done until the validator passes with 0 errors.**
@@ -523,7 +550,7 @@ The default is **narrative-first** — students connect with stories before abst
 
 ## B8. Build script requirement
 
-**Every scripted-manual file MUST have its build script saved** in `build-scripts/content/module-N/` with naming convention `mN-XYZ-<type>.js` (e.g., `m1-111-presentatie.js`).
+**Every scripted-manual file MUST have its build script saved** in `build-scripts/content/book-N/` with naming convention `bN-XYZ-<type>.js` (e.g., `b1-111-presentatie.js`). Older Module 3 scripts under `build-scripts/content/module-N/` stay where they are; new lessen work writes under `book-N/`.
 
 This ensures:
 - Any file can be regenerated after corrections
@@ -548,7 +575,7 @@ If a build script is not saved, the paragraph build is **incomplete**.
 | CHAPTER_NUMBERS must be updated alongside CHAPTER_FOLDERS | Otherwise navigation shows "Hundefined" |
 | Filter `~$` temp files in directory scans | Office lock files get picked up as real content otherwise |
 | Run `validate-paragraph.js` before declaring done | Catches missing files, corrupted docx, empty presentations |
-| Save all build scripts in `build-scripts/content/module-N/` | Without scripts, the paragraph can't be regenerated or improved |
+| Save all build scripts in `build-scripts/content/book-N/` | Without scripts, the paragraph can't be regenerated or improved |
 | Intro paragraphs: narrative-first approach | Students connect with stories (Lisa, Tom) before abstractions |
 | Register paragraph AND run deploy | Without deploy, game shells and landing pages are missing — students can't navigate |
 | Create `_paragraph-plan.md` before building documents | Ensures terminology consistency and concept coverage across all 8 documents |
