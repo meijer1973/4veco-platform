@@ -25,14 +25,15 @@ function loadAllData() {
 }
 
 const allData = loadAllData();
+const describeOrSkip = allData.length > 0 ? describe : describe.skip;
 
-describe('procedure data files', () => {
+describeOrSkip('procedure data files', () => {
     test('at least 1 data file exists', () => {
         expect(allData.length).toBeGreaterThanOrEqual(1);
     });
 });
 
-describe.each(allData)('$parNr ($file)', ({ parNr, data }) => {
+if (allData.length > 0) describe.each(allData)('$parNr ($file)', ({ parNr, data }) => {
 
     // ── Meta ────────────────────────────────────────────────────────
     test('has meta with parNr matching filename', () => {

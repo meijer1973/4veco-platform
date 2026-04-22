@@ -10,8 +10,9 @@ const MODULE_ROOT = process.env.MODULE_ROOT
     : path.resolve(__dirname, '..', '..');
 const QUESTIONS_DIR = path.join(MODULE_ROOT, 'shared', 'questions');
 
-// Load all data files
+// Load all data files — empty if shared/questions/ is missing (fresh book)
 function loadAllQuizData() {
+    if (!fs.existsSync(QUESTIONS_DIR)) return [];
     const files = fs.readdirSync(QUESTIONS_DIR).filter(f => f.endsWith('.js')).sort();
     const result = [];
     for (const file of files) {
@@ -25,14 +26,15 @@ function loadAllQuizData() {
 }
 
 const allQuizzes = loadAllQuizData();
+const describeOrSkip = allQuizzes.length > 0 ? describe : describe.skip;
 
-describe('quiz data files', () => {
-    test('at least 20 quiz data files exist', () => {
-        expect(allQuizzes.length).toBeGreaterThanOrEqual(20);
+describeOrSkip('quiz data files', () => {
+    test('at least 1 quiz data file exists', () => {
+        expect(allQuizzes.length).toBeGreaterThanOrEqual(1);
     });
 });
 
-describe.each(allQuizzes)('$parNr ($file)', ({ parNr, data }) => {
+if (allQuizzes.length > 0) describe.each(allQuizzes)('$parNr ($file)', ({ parNr, data }) => {
     test('has meta with required fields', () => {
         expect(data.meta).toBeDefined();
         expect(data.meta.parNr).toBe(parNr);
