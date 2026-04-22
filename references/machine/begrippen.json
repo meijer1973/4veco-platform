@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "generated_at": "2026-04-22T11:47:33.674Z",
+  "generated_at": "2026-04-22T11:59:00.529Z",
   "terms": {
     "aandelen": {
       "id": "aandelen",
@@ -16,7 +16,7 @@
       "notation_markers": [],
       "formulas": [],
       "example_nl": "Een aandeel Shell geeft recht op dividend (bij winst) en een deel van de koerswaarde bij verkoop; de koers kan in een jaar met 20% stijgen of dalen.",
-      "pitfall_nl": null,
+      "pitfall_nl": "Dividend is NIET gegarandeerd — een bedrijf kan besluiten geen dividend uit te keren. Aandelen lopen daarnaast koersrisico; het verwachte rendement hoort daarom hoger te liggen dan bij obligaties.",
       "teaching_units": [],
       "deprecated": false,
       "deprecated_in_favor_of": null
@@ -114,7 +114,7 @@
       "notation_markers": [],
       "formulas": [],
       "example_nl": "Als 1 USD stijgt van € 0,90 naar € 1,00, is de dollar geapprecieerd — Amerikaanse goederen worden voor eurokopers ruim 10% duurder.",
-      "pitfall_nl": null,
+      "pitfall_nl": "Een sterkere eigen munt maakt export juist DUURDER voor buitenlanders en import goedkoper. Klinkt tegenintuïtief: \"sterk\" voelt als goed, maar hurt exporteurs.",
       "teaching_units": [],
       "deprecated": false,
       "deprecated_in_favor_of": null
@@ -154,7 +154,7 @@
       "notation_markers": [],
       "formulas": [],
       "example_nl": "In Nederland bestaat de beroepsbevolking van ongeveer 10 miljoen mensen uit ca. 9,7 miljoen werkenden plus 0,3 miljoen werklozen.",
-      "pitfall_nl": null,
+      "pitfall_nl": "Bestaat uit werkenden PLUS werklozen die werk zoeken. Niet alleen de groep met een huidige baan.",
       "teaching_units": [
         "H23",
         "I04",
@@ -307,7 +307,7 @@
       "notation_markers": [],
       "formulas": [],
       "example_nl": "Als een zorgverzekeraar één premie voor iedereen rekent, haken gezonde mensen af en blijven vooral zieken als klant over — de premie moet omhoog en de markt loopt leeg.",
-      "pitfall_nl": null,
+      "pitfall_nl": "Verborgen EIGENSCHAPPEN die al vóór de transactie bestaan (ziekte bij verzekering). Verwar niet met moral hazard (verborgen GEDRAG NA de transactie).",
       "teaching_units": [],
       "deprecated": false,
       "deprecated_in_favor_of": null
@@ -326,7 +326,7 @@
       "notation_markers": [],
       "formulas": [],
       "example_nl": "Bij Silicon Valley Bank vroegen klanten in maart 2023 in één dag € 42 mld op — de bank kon die vraag niet aan en viel om, ondanks voorheen gezonde balansen.",
-      "pitfall_nl": null,
+      "pitfall_nl": "Een op zich solvabele bank kan alsnog omvallen door liquiditeitsproblemen als te veel spaarders tegelijk opnemen. Solvabel ≠ liquide.",
       "teaching_units": [],
       "deprecated": false,
       "deprecated_in_favor_of": null
@@ -602,7 +602,7 @@
         "GTK = GO"
       ],
       "example_nl": "Een bedrijf met TCK = € 6.000, TVK = € 30 per stuk en prijs € 50 bereikt break-even bij 6.000 / (50 − 30) = 300 stuks.",
-      "pitfall_nl": null,
+      "pitfall_nl": "Bij break-even is de winst nul, niet \"minimaal\". Onder break-even is er verlies; boven break-even winst.",
       "teaching_units": [],
       "deprecated": false,
       "deprecated_in_favor_of": null
@@ -642,7 +642,7 @@
         "bbp = C + I + O + E − M  (bestedingsmethode)"
       ],
       "example_nl": "Het Nederlandse bbp was in 2023 ongeveer € 1.050 miljard: de optelsom van alle toegevoegde waarde in Nederland dat jaar.",
-      "pitfall_nl": null,
+      "pitfall_nl": "bbp meet productie binnen de landsgrenzen (bruto binnenlands), niet door inwoners van dat land waar ook ter wereld (dat is bnp). In een internationaliserende economie verschillen die twee flink.",
       "teaching_units": [],
       "deprecated": false,
       "deprecated_in_favor_of": null
@@ -727,7 +727,7 @@
       "notation_markers": [],
       "formulas": [],
       "example_nl": "Straatverlichting, dijkbescherming en landsverdediging zijn collectieve goederen: iedereen geniet ervan en niemand kan worden uitgesloten — daarom betaalt de overheid.",
-      "pitfall_nl": null,
+      "pitfall_nl": "Criteria zijn niet-rivaliserend én niet-uitsluitbaar. Een overheidsdienst hoeft geen collectief goed te zijn; zorg bijvoorbeeld is rivaliserend en uitsluitbaar.",
       "teaching_units": [
         "F02"
       ],
@@ -817,7 +817,7 @@
       "notation_markers": [],
       "formulas": [],
       "example_nl": "Tijdens de corona-recessie kregen horecamedewerkers tijdelijk geen werk — hun werkloosheid was conjunctureel, niet structureel, en verdween grotendeels toen de horeca weer opende.",
-      "pitfall_nl": null,
+      "pitfall_nl": "Verdwijnt grotendeels als de economie herstelt. Structurele werkloosheid blijft, ook bij hoogconjunctuur — het onderscheid bepaalt welk beleid werkt.",
       "teaching_units": [
         "H10",
         "I15",
@@ -863,7 +863,7 @@
       "notation_markers": [],
       "formulas": [],
       "example_nl": "De huur van een bakkerij (€ 2.500 per maand) blijft gelijk of de bakker nu 1.000 of 10.000 broden per maand bakt.",
-      "pitfall_nl": null,
+      "pitfall_nl": "Officiële afkorting is TCK (totale constante kosten), niet \"TC\". \"Vaste kosten\" is spreektaal — in economisch werk altijd TCK gebruiken.",
       "teaching_units": [
         "D02"
       ],
@@ -927,7 +927,7 @@
         "CS = ½ × (P_max − P*) × Q*  (bij lineaire vraag)"
       ],
       "example_nl": "Iemand wil maximaal € 15 voor een boek betalen, maar de marktprijs is € 10. Het consumentensurplus voor deze klant is € 5.",
-      "pitfall_nl": null,
+      "pitfall_nl": "Surplus meet welvaart (\"wat koop je voor minder dan je ervoor over had\"), niet omzet. Omzet zit bij de aanbieder; surplus is de extra waarde voor de koper.",
       "teaching_units": [
         "A30",
         "D03",
@@ -1036,7 +1036,7 @@
       "notation_markers": [],
       "formulas": [],
       "example_nl": "Als 1 GBP daalt van € 1,20 naar € 1,10, is het pond gedeprecieerd — Britse goederen zijn voor eurokopers 8% goedkoper geworden.",
-      "pitfall_nl": null,
+      "pitfall_nl": "Slaat op zwevende wisselkoersen — de munt daalt door marktkrachten. Bij een vaste wisselkoers spreken we van devaluatie (beleidsbeslissing), niet depreciatie.",
       "teaching_units": [],
       "deprecated": false,
       "deprecated_in_favor_of": null
@@ -1286,7 +1286,7 @@
       "notation_markers": [],
       "formulas": [],
       "example_nl": "Snijpunt van de collectieve vraag- en aanbodlijn voor brood: zowel vragers als aanbieders komen uit op € 2,50 en 10.000 broden.",
-      "pitfall_nl": null,
+      "pitfall_nl": "Markten bewegen richting evenwicht, maar liggen niet per definitie altijd op het snijpunt. Bij verstoringen (heffing, prijsregulering) ontstaat juist een afwijking.",
       "teaching_units": [
         "A06",
         "D05",
@@ -1311,7 +1311,7 @@
       "notation_markers": [],
       "formulas": [],
       "example_nl": "Een chemische fabriek stoot CO₂ uit zonder dat de milieuschade in haar kosten zit: dit is een negatief extern effect dat de overheid probeert te internaliseren via een CO₂-heffing.",
-      "pitfall_nl": null,
+      "pitfall_nl": "Kunnen positief zijn (bestuiving door bijen) of negatief (CO₂-uitstoot). Veel leerlingen denken alleen aan vervuiling.",
       "teaching_units": [
         "F05",
         "F06",
@@ -1418,7 +1418,7 @@
       "notation_markers": [],
       "formulas": [],
       "example_nl": "Een starter die na zijn studie twee maanden zoekt voor de juiste baan vindt, draagt in die periode bij aan frictiewerkloosheid.",
-      "pitfall_nl": null,
+      "pitfall_nl": "Onderdeel van structurele werkloosheid, ondanks dat die \"kort\" is. Frictie verdwijnt niet bij hoogconjunctuur; mensen blijven van baan wisselen.",
       "teaching_units": [
         "L13"
       ],
@@ -1503,7 +1503,7 @@
       "notation_markers": [],
       "formulas": [],
       "example_nl": "Als ING een hypotheek van € 300.000 verstrekt, schrijft de bank dat bedrag bij op de rekening van de koper: nieuw giraal geld ontstaat uit het niets.",
-      "pitfall_nl": null,
+      "pitfall_nl": "Banken scheppen giraal geld bij het verstrekken van een krediet; de centrale bank schept chartaal geld. Beide zijn vormen van geldcreatie, maar via verschillende kanalen.",
       "teaching_units": [],
       "deprecated": false,
       "deprecated_in_favor_of": null
@@ -1543,7 +1543,7 @@
         "gemiddeld tarief = totale belasting / totaal inkomen × 100%"
       ],
       "example_nl": "Bij € 50.000 inkomen en € 15.000 belasting is het gemiddelde tarief 30% — ook al is het toptarief op de laatste euro hoger.",
-      "pitfall_nl": null,
+      "pitfall_nl": "Is belastingdruk over je hele inkomen. Ligt bij een progressief stelsel altijd ONDER het marginale tarief van de hoogste schijf die je haalt.",
       "teaching_units": [
         "H04",
         "H18"
@@ -1569,7 +1569,7 @@
         "GTK = TK / Q"
       ],
       "example_nl": "Bij TK = € 10.000 en een productie van 500 stuks: GTK = 10.000 / 500 = € 20 per stuk.",
-      "pitfall_nl": null,
+      "pitfall_nl": "Is kosten per stuk, niet totale kosten. GTK kan dalen terwijl TK nog steeds oploopt.",
       "teaching_units": [
         "A14"
       ],
@@ -1590,7 +1590,7 @@
       "notation_markers": [],
       "formulas": [],
       "example_nl": "Twee verdachten bekennen allebei om strafreductie te krijgen; allebei zwijgen had hun een veel lichtere straf opgeleverd, maar dat durven ze elkaar niet toe te vertrouwen.",
-      "pitfall_nl": null,
+      "pitfall_nl": "Beide bekennen is een Nash-evenwicht maar géén pareto-optimum: beiden zouden zwijgen een beter gezamenlijk resultaat geven.",
       "teaching_units": [
         "F09"
       ],
@@ -1675,7 +1675,7 @@
       "notation_markers": [],
       "formulas": [],
       "example_nl": "De accijns op benzine van € 0,80 per liter verschuift de aanbodlijn van benzinepompen € 0,80 omhoog; de pompprijs stijgt, maar niet met de volle € 0,80 als de vraag deels reageert.",
-      "pitfall_nl": null,
+      "pitfall_nl": "Wie de heffing economisch betaalt (consument of aanbieder) hangt af van de elasticiteiten, niet van wie volgens de wet moet afdragen.",
       "teaching_units": [
         "D01",
         "D05",
@@ -1830,7 +1830,7 @@
       "notation_markers": [],
       "formulas": [],
       "example_nl": "Als een student gaat werken en meer te besteden heeft, koopt hij minder supermarkt-huismerk pasta en schakelt over op duurdere merken — huismerk is inferieur.",
-      "pitfall_nl": null,
+      "pitfall_nl": "Inferieur slaat op het inkomenseffect, niet op kwaliteit. Een goed met Ei < 0 is wiskundig inferieur, ook al vinden consumenten het prima.",
       "teaching_units": [],
       "deprecated": false,
       "deprecated_in_favor_of": null
@@ -1853,7 +1853,7 @@
         "inflatie = %ΔCPI"
       ],
       "example_nl": "Bij 3% inflatie kost een boodschappenmand die vorig jaar € 100 was nu € 103.",
-      "pitfall_nl": null,
+      "pitfall_nl": "Is een tempo (%ΔCPI), niet een prijsniveau. 10% inflatie betekent dat het prijspeil in één jaar met 10% omhoog is gegaan — niet dat prijzen \"10% hoger dan normaal\" zijn.",
       "teaching_units": [],
       "deprecated": false,
       "deprecated_in_favor_of": null
@@ -1921,7 +1921,7 @@
         "Ei = %ΔQv / %ΔY"
       ],
       "example_nl": "Stijgt het inkomen met 5% en de vraag naar restaurantbezoek met 10%, dan is Ei = 10 / 5 = 2: een luxegoed.",
-      "pitfall_nl": null,
+      "pitfall_nl": "Het teken bepaalt de soort goed: Ei < 0 = inferieur, 0 < Ei < 1 = normaal, Ei > 1 = luxe. De grootte van |Ei| zegt hoe sterk, niet welk type.",
       "teaching_units": [
         "A17",
         "D04",
@@ -2113,7 +2113,7 @@
       "notation_markers": [],
       "formulas": [],
       "example_nl": "De Nederlandse aanvullende pensioenen (werkgeverspensioen bovenop de AOW) werken volgens het kapitaaldekkingsstelsel: premies worden door het pensioenfonds belegd en leveren later het pensioen op.",
-      "pitfall_nl": null,
+      "pitfall_nl": "Gespaard vermogen is voor dé eigen pensioenen: geen intergenerationele overdracht. Beleggingsrendement en inflatie bepalen de dekkingsgraad mede.",
       "teaching_units": [],
       "deprecated": false,
       "deprecated_in_favor_of": null
@@ -2189,7 +2189,7 @@
       "notation_markers": [],
       "formulas": [],
       "example_nl": "De liftenbouwers Otis, KONE en ThyssenKrupp kregen in 2007 een boete van meer dan € 1 miljard voor het jarenlang verdelen van de liftenmarkt in Europa.",
-      "pitfall_nl": null,
+      "pitfall_nl": "Zijn in EU en NL verboden; de ACM kan boetes opleggen die in honderden miljoenen lopen. \"Gentleman's agreement\" of stille afstemming telt óók als kartel.",
       "teaching_units": [],
       "deprecated": false,
       "deprecated_in_favor_of": null
@@ -2439,7 +2439,7 @@
       "notation_markers": [],
       "formulas": [],
       "example_nl": "In Nederland geldt boven € 73.000 een toptarief van 49,5%: van elke extra verdiende euro houd je nog maar € 0,505 netto over.",
-      "pitfall_nl": null,
+      "pitfall_nl": "Geldt op de LAATSTE euro inkomen, niet gemiddeld. Iemand met 49,5% toptarief betaalt gemiddeld veel minder dan 49,5% over z'n hele salaris.",
       "teaching_units": [
         "H04",
         "H08",
@@ -2489,7 +2489,7 @@
         "MK = ΔTK / ΔQ"
       ],
       "example_nl": "Stijgen de totale kosten van € 10.000 naar € 10.040 bij één extra paar schoenen, dan is MK = 40 / 1 = € 40.",
-      "pitfall_nl": null,
+      "pitfall_nl": "Verwar MK (ΔTK/ΔQ, helling van de TK-lijn) niet met GTK (TK/Q, gemiddelde). MK snijdt GTK in het minimum van de GTK-lijn.",
       "teaching_units": [
         "A13",
         "D17",
@@ -2517,7 +2517,7 @@
         "MO = MK  (maximale winst)"
       ],
       "example_nl": "Stijgt TO van € 24.000 naar € 24.045 bij één extra verkocht paar schoenen, dan is MO = € 45. Zolang MO > MK, loont het om de productie uit te breiden.",
-      "pitfall_nl": null,
+      "pitfall_nl": "Bij volkomen concurrentie is MO gelijk aan de prijs; bij onvolkomen concurrentie MO < P omdat extra verkoop alleen lukt als de prijs daalt.",
       "teaching_units": [
         "D30"
       ],
@@ -2578,7 +2578,7 @@
       "notation_markers": [],
       "formulas": [],
       "example_nl": "Bij een prijs van € 2,50 willen bakkers samen 10.000 broden per dag aanbieden en klanten samen 10.000 broden kopen: de markt is in evenwicht.",
-      "pitfall_nl": null,
+      "pitfall_nl": "Evenwicht betekent gevraagde hoeveelheid = aangeboden hoeveelheid, niet dat niemand ontevreden is. Boven- of onderaan de vraaglijn zijn er nog wel wensen.",
       "teaching_units": [
         "A23",
         "A24",
@@ -2673,7 +2673,7 @@
       "notation_markers": [],
       "formulas": [],
       "example_nl": "Een maximale huurprijs onder het marktevenwicht leidt tot wachtlijsten voor huurwoningen: meer mensen willen huren dan beschikbaar is.",
-      "pitfall_nl": null,
+      "pitfall_nl": "Een maximumprijs werkt pas als die onder de evenwichtsprijs ligt. Boven het evenwicht heeft hij geen effect; de markt klaart vanzelf.",
       "teaching_units": [],
       "deprecated": false,
       "deprecated_in_favor_of": null
@@ -2718,7 +2718,7 @@
       "notation_markers": [],
       "formulas": [],
       "example_nl": "Een bewoner geniet van de openbare fietsenstalling zonder mee te betalen; als iedereen dat doet, komt er nooit een betere stalling — klassiek meeliftersgedrag.",
-      "pitfall_nl": null,
+      "pitfall_nl": "De individuele dominante strategie is niet bijdragen — zelfs als iedereen weet dat het gezamenlijke resultaat suboptimaal uitvalt. Klassiek prisoner's-dilemma-probleem.",
       "teaching_units": [],
       "deprecated": false,
       "deprecated_in_favor_of": null
@@ -2737,7 +2737,7 @@
       "notation_markers": [],
       "formulas": [],
       "example_nl": "Een wettelijk minimumloon boven het evenwichtsloon leidt tot werkloosheid: meer mensen willen werken dan werkgevers kunnen aannemen bij die prijs van arbeid.",
-      "pitfall_nl": null,
+      "pitfall_nl": "Een minimumprijs werkt pas als die boven de evenwichtsprijs ligt. Onder het evenwicht heeft hij geen effect.",
       "teaching_units": [
         "D16"
       ],
@@ -2762,7 +2762,7 @@
       "notation_markers": [],
       "formulas": [],
       "example_nl": "Toen inflatie in 2022 boven 10% steeg, verhoogde de ECB haar beleidsrente van 0% naar 4% om het lenen en bestedingen te remmen — verkrappend monetair beleid.",
-      "pitfall_nl": null,
+      "pitfall_nl": "Werkt indirect via rente, kredietvolumes en wisselkoers — niet instant. Typische transmissie-vertraging is 6–18 maanden voor inflatie-effecten.",
       "teaching_units": [
         "I12",
         "I13",
@@ -2845,7 +2845,7 @@
       "notation_markers": [],
       "formulas": [],
       "example_nl": "Iemand met een volledig vergoede fietsdiefstalverzekering zet zijn fiets minder zorgvuldig op slot dan iemand zonder verzekering: klassiek moral hazard.",
-      "pitfall_nl": null,
+      "pitfall_nl": "Verborgen GEDRAG NA de transactie (roekeloos rijden na verzekering). Verwar niet met averechtse selectie (verborgen eigenschap VÓÓR).",
       "teaching_units": [],
       "deprecated": false,
       "deprecated_in_favor_of": null
@@ -2866,7 +2866,7 @@
         "multiplier = 1 / (1 − c + c·t)  (met c = MCQ, t = belastinglek)"
       ],
       "example_nl": "Met MCQ = 0,8 en t = 0,3: multiplier ≈ 1/(1 − 0,8 + 0,24) ≈ 2,3. Elke extra € 1 mld overheidsuitgaven verhoogt het bbp met ongeveer € 2,3 mld.",
-      "pitfall_nl": null,
+      "pitfall_nl": "Ligt meestal tussen 1 en 2 in een open economie; is door lekken (sparen, belasting, import) zelden zo hoog als in gesloten leerboekvoorbeelden. Nooit negatief.",
       "teaching_units": [],
       "deprecated": false,
       "deprecated_in_favor_of": null
@@ -2986,7 +2986,7 @@
       "notation_markers": [],
       "formulas": [],
       "example_nl": "Een verhoging van het toptarief en extra kinderbijslag voor lage inkomens nivelleert de inkomensverdeling: de Gini-coëfficiënt van besteedbaar inkomen daalt.",
-      "pitfall_nl": null,
+      "pitfall_nl": "Maakt verschillen kleiner (gelijker inkomen/vermogen); denivelleren = juist groter. Studenten wisselen deze twee regelmatig om.",
       "teaching_units": [],
       "deprecated": false,
       "deprecated_in_favor_of": null
@@ -3007,7 +3007,7 @@
         "reëel = nominaal / (1 + inflatie)"
       ],
       "example_nl": "Steeg je salaris van € 3.000 naar € 3.060 bij 2% inflatie, dan is het nominale loon met 2% gestegen maar het reële loon vrijwel onveranderd.",
-      "pitfall_nl": null,
+      "pitfall_nl": "Nominaal − inflatie ≈ reëel. Is de inflatie hoger dan de nominale toename, dan daal je reëel — ook al stijgen de eurobedragen op papier.",
       "teaching_units": [],
       "deprecated": false,
       "deprecated_in_favor_of": null
@@ -3145,7 +3145,7 @@
       "notation_markers": [],
       "formulas": [],
       "example_nl": "De Nederlandse AOW werkt volgens het omslagstelsel: werkenden betalen AOW-premie, die meteen als AOW-uitkering aan de huidige ouderen wordt uitbetaald.",
-      "pitfall_nl": null,
+      "pitfall_nl": "Er wordt geen potje opgebouwd: premies van werkenden gaan rechtstreeks naar huidige gepensioneerden. Vergrijzing drukt daardoor direct op huidige premies.",
       "teaching_units": [],
       "deprecated": false,
       "deprecated_in_favor_of": null
@@ -3244,7 +3244,7 @@
         "output gap = (Y − Y*) / Y* × 100%"
       ],
       "example_nl": "Als Y = € 1.020 mld en Y* = € 1.050 mld, is de output gap (1.020 − 1.050)/1.050 × 100% ≈ −2,9%: de economie draait onder haar potentieel.",
-      "pitfall_nl": null,
+      "pitfall_nl": "Positieve output gap = hoogconjunctuur (Y > Y*); negatieve gap = laagconjunctuur. Veel studenten draaien het teken om.",
       "teaching_units": [],
       "deprecated": false,
       "deprecated_in_favor_of": null
@@ -3282,7 +3282,7 @@
       "notation_markers": [],
       "formulas": [],
       "example_nl": "Als de overheid in een jaar € 380 miljard uitgeeft en € 360 miljard ontvangt, bedraagt het overheidstekort € 20 miljard.",
-      "pitfall_nl": null,
+      "pitfall_nl": "Is een stroomgrootheid (per jaar). Tekorten stapelen zich op in de staatsschuld (voorraad). Niet hetzelfde.",
       "teaching_units": [
         "I01",
         "I16"
@@ -3429,7 +3429,7 @@
       "notation_markers": [],
       "formulas": [],
       "example_nl": "Een bioscoop vraagt € 7 voor studenten en € 12 voor volwassenen: dezelfde film, maar twee prijzen omdat de twee groepen een verschillende betalingsbereidheid hebben.",
-      "pitfall_nl": null,
+      "pitfall_nl": "Is niet per definitie slecht voor de welvaart: als aanbieders anders bepaalde klantgroepen niet bedienen, kan prijsdiscriminatie het totale surplus vergroten.",
       "teaching_units": [
         "A36",
         "D18",
@@ -3497,7 +3497,7 @@
         "Ev = %ΔQv / %ΔP"
       ],
       "example_nl": "Stijgt de prijs met 10% en daalt de gevraagde hoeveelheid met 20%, dan is Ev = −20 / 10 = −2. In absolute waarde > 1, dus prijselastisch.",
-      "pitfall_nl": null,
+      "pitfall_nl": "Ev is meestal negatief. Staat er \"elasticiteit = 2\", dan wordt bijna altijd |Ev| bedoeld. Het teken vergeten is een klassieke fout.",
       "teaching_units": [
         "A15",
         "D06",
@@ -3645,7 +3645,7 @@
         "PS = ½ × (P* − P_min) × Q*  (bij lineaire aanbod)"
       ],
       "example_nl": "Een aanbieder wil een product minimaal voor € 4 verkopen, maar de marktprijs is € 7. Het producentensurplus voor deze aanbieder is € 3 per stuk.",
-      "pitfall_nl": null,
+      "pitfall_nl": "Het aanbieders-surplus is niet hetzelfde als winst: PS zegt niets over de constante kosten (TCK). Winst = PS − TCK op de lange termijn.",
       "teaching_units": [
         "A19",
         "D28"
@@ -3713,7 +3713,7 @@
         "reële rente = (1 + nominale rente) / (1 + inflatie) − 1"
       ],
       "example_nl": "Bij 4% nominale rente en 3% inflatie is de reële rente (1,04/1,03) − 1 ≈ 1%.",
-      "pitfall_nl": null,
+      "pitfall_nl": "Is bij benadering nominale rente MINUS inflatie, niet plus. Bij 3% rente en 5% inflatie is de reële rente ongeveer −2%: sparen kost koopkracht.",
       "teaching_units": [],
       "deprecated": false,
       "deprecated_in_favor_of": null
@@ -3775,7 +3775,7 @@
         "rendement = opbrengst / inleg × 100%"
       ],
       "example_nl": "Wie € 1.000 belegt en na een jaar € 1.070 terugkrijgt, behaalt een rendement van 7% per jaar.",
-      "pitfall_nl": null,
+      "pitfall_nl": "Nominaal rendement houdt geen rekening met inflatie. Bij 5% rendement en 4% inflatie hou je reëel maar ongeveer 1% over — dat is de relevante maat.",
       "teaching_units": [
         "H30",
         "H31"
@@ -3799,7 +3799,7 @@
       "notation_markers": [],
       "formulas": [],
       "example_nl": "Een hypotheek tegen 4% rente betekent dat de lener per € 100.000 schuld jaarlijks € 4.000 aan rente betaalt, bovenop de aflossing.",
-      "pitfall_nl": null,
+      "pitfall_nl": "Is een prijs (percentage per jaar), niet een bedrag. Bij 4% rente op € 100.000 betaal je € 4.000 per jaar — het percentage en het eurobedrag zijn twee verschillende grootheden.",
       "teaching_units": [
         "E03",
         "E07",
@@ -3874,7 +3874,7 @@
       "notation_markers": [],
       "formulas": [],
       "example_nl": "Een huiseigenaar betaalt jaarlijks € 300 aan opstalverzekering, ook al is de verwachte schade slechts € 150 per jaar: de zekerheid is hem extra geld waard.",
-      "pitfall_nl": null,
+      "pitfall_nl": "Risicoavers ≠ risicomijdend. Risico-averse mensen nemen wel degelijk risico, maar vragen er compensatie voor — vandaar de risicopremie op aandelen.",
       "teaching_units": [],
       "deprecated": false,
       "deprecated_in_favor_of": null
@@ -3995,7 +3995,7 @@
       "notation_markers": [],
       "formulas": [],
       "example_nl": "De Nederlandse staatsschuld bedroeg eind 2023 ongeveer € 480 miljard, ofwel zo'n 45% van het bbp.",
-      "pitfall_nl": null,
+      "pitfall_nl": "Is een voorraadgrootheid (op een moment), geen stroomgrootheid. Het jaarlijkse tekort (stroom) laat de schuld oplopen.",
       "teaching_units": [
         "H12",
         "H19",
@@ -4038,7 +4038,7 @@
       "notation_markers": [],
       "formulas": [],
       "example_nl": "Een subsidie van € 2.000 per energiezuinige woning verhoogt de bouwactiviteit en de vraag naar materialen: stimulerend begrotingsbeleid.",
-      "pitfall_nl": null,
+      "pitfall_nl": "Stimulerend begrotingsbeleid is iets anders dan stimulerend monetair beleid. Het eerste is overheidsuitgaven verhogen / belasting verlagen; het tweede is rente verlagen door de centrale bank.",
       "teaching_units": [],
       "deprecated": false,
       "deprecated_in_favor_of": null
@@ -4097,7 +4097,7 @@
       "notation_markers": [],
       "formulas": [],
       "example_nl": "Een subsidie van € 2.000 per elektrische auto verschuift de aanbodlijn € 2.000 omlaag; de marktprijs voor de consument daalt.",
-      "pitfall_nl": null,
+      "pitfall_nl": "Ook het voordeel van een subsidie wordt verdeeld over consument en aanbieder volgens de elasticiteiten; de consumentenprijs daalt niet met het volle subsidiebedrag.",
       "teaching_units": [
         "D19",
         "D22",
@@ -4185,7 +4185,7 @@
         "toegevoegde waarde = omzet − kosten leveringen derden"
       ],
       "example_nl": "Een bakker koopt voor € 1.000 aan grondstoffen en verkoopt voor € 3.000 aan brood: de toegevoegde waarde bedraagt € 2.000.",
-      "pitfall_nl": null,
+      "pitfall_nl": "Is niet hetzelfde als winst: toegevoegde waarde = omzet − inkoop, en daarin zitten nog lonen, rente, afschrijvingen en winst. Winst is wat er na die posten overblijft.",
       "teaching_units": [],
       "deprecated": false,
       "deprecated_in_favor_of": null
@@ -4246,7 +4246,7 @@
         "TK = TCK + TVK"
       ],
       "example_nl": "Een schoenenfabriek heeft € 4.000 huur per maand (constant) plus € 20 materiaal per paar schoenen. Bij 300 paar: TK = 4.000 + 20 × 300 = € 10.000.",
-      "pitfall_nl": null,
+      "pitfall_nl": "TK = TCK + TVK. De afkorting TK slaat op het totáál; TCK is alleen het constante deel. Niet door elkaar gebruiken.",
       "teaching_units": [
         "A21"
       ],
@@ -4339,7 +4339,7 @@
       "notation_markers": [],
       "formulas": [],
       "example_nl": "Het eurogebied combineert vrij kapitaalverkeer met een vaste koers tussen eurolanden, maar geeft zelfstandige monetaire autonomie per land op — dat hoort bij de ECB.",
-      "pitfall_nl": null,
+      "pitfall_nl": "Niet te verwarren met het gewone economische \"trade-off\"-principe. Het trilemma stelt dat je uit drie beleidsdoelen er maar TWEE tegelijk kunt kiezen.",
       "teaching_units": [],
       "deprecated": false,
       "deprecated_in_favor_of": null
@@ -4382,7 +4382,7 @@
       "notation_markers": [],
       "formulas": [],
       "example_nl": "De inkoop van bloem, suiker en gist is per brood vast, maar stijgt evenredig met het aantal gebakken broden: bij 0 broden zijn de variabele kosten € 0.",
-      "pitfall_nl": null,
+      "pitfall_nl": "Variabele kosten stijgen mét de productie, maar niet automatisch lineair: bij afnemende meeropbrengsten gaan ze sneller omhoog dan de productie.",
       "teaching_units": [
         "A08",
         "D26"
@@ -4444,7 +4444,7 @@
       "notation_markers": [],
       "formulas": [],
       "example_nl": "Een btw-verhoging van 21% naar 23% tijdens een hoogconjunctuur haalt koopkracht uit de economie — verkrappend begrotingsbeleid.",
-      "pitfall_nl": null,
+      "pitfall_nl": "Hetzelfde instrument (bezuinigen / belasting verhogen) kan pro- of anticyclisch zijn. Verkrappen tijdens hoogconjunctuur is anticyclisch; tijdens laagconjunctuur juist procyclisch.",
       "teaching_units": [],
       "deprecated": false,
       "deprecated_in_favor_of": null
@@ -4465,7 +4465,7 @@
       "notation_markers": [],
       "formulas": [],
       "example_nl": "Bij een heffing van € 1 per eenheid daalt de verhandelde hoeveelheid van 100 naar 80. Het verloren surplus is de driehoek van potentiële handel (tussen 80 en 100) die nu niet meer plaatsvindt.",
-      "pitfall_nl": null,
+      "pitfall_nl": "Wordt in syllabustekst afwisselend \"verloren surplus\", \"dead weight loss\" of \"Harberger-driehoek\" genoemd. Alle drie verwijzen naar hetzelfde.",
       "teaching_units": [
         "D29",
         "F08"
@@ -4550,7 +4550,7 @@
       "notation_markers": [],
       "formulas": [],
       "example_nl": "Een filmstudio heeft € 80 miljoen aan een tegenvallende film uitgegeven: die kosten zijn verzonken, en bepalen niet of de film nog uitgebracht moet worden — alleen de extra opbrengsten en extra kosten tellen.",
-      "pitfall_nl": null,
+      "pitfall_nl": "Verzonken kosten horen NIET thuis in een toekomstige keuze. Alleen extra opbrengsten en extra kosten tellen — al voelt dat tegen het gevoel in.",
       "teaching_units": [
         "F15"
       ],
@@ -4700,7 +4700,7 @@
       "notation_markers": [],
       "formulas": [],
       "example_nl": "Als de beroepsbevolking 10 miljoen is en er zijn 9,7 miljoen banen, bedraagt de werkloosheid 300.000 personen of 3%.",
-      "pitfall_nl": null,
+      "pitfall_nl": "Telt alleen mensen die beschikbaar zijn én actief zoeken. Ontmoedigden (gestopt met zoeken) vallen uit de statistiek — werkloosheid kan daardoor \"dalen\" zonder dat werkgelegenheid stijgt.",
       "teaching_units": [
         "L05",
         "L07"
@@ -4726,7 +4726,7 @@
         "winst = TO − TK"
       ],
       "example_nl": "Een schoenwinkel heeft TO = € 24.000 en TK = € 18.000: winst = 24.000 − 18.000 = € 6.000.",
-      "pitfall_nl": null,
+      "pitfall_nl": "Winst = TO − TK (alle kosten). Verwar niet met toegevoegde waarde (omzet − leveringen van derden), die alleen de inkoop eraf haalt.",
       "teaching_units": [
         "A21",
         "A22",
@@ -4758,7 +4758,7 @@
       "notation_markers": [],
       "formulas": [],
       "example_nl": "Een wisselkoers van 1 EUR = 1,10 USD betekent dat je voor elke euro $ 1,10 krijgt; daalt die naar 1 EUR = 1,05 USD, dan is de euro gedeprecieerd.",
-      "pitfall_nl": null,
+      "pitfall_nl": "Let goed op de koers-richting: 1 EUR = 1,10 USD betekent iets anders dan 1 USD = 0,91 EUR. Bij een daling van \"de koers\" moet je weten welke munt het onderwerp is.",
       "teaching_units": [
         "G11",
         "H13",

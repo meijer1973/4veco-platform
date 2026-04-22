@@ -31,6 +31,7 @@ Elk begrip heeft een stabiele id (slug van de Nederlandse term), een student-fac
 - **Syllabus:** D1.20
 - **Engels:** break-even quantity
 - **Voorbeeld:** Een bedrijf met TCK = € 6.000, TVK = € 30 per stuk en prijs € 50 bereikt break-even bij 6.000 / (50 − 30) = 300 stuks.
+- **Let op:** Bij break-even is de winst nul, niet "minimaal". Onder break-even is er verlies; boven break-even winst.
 
 ### collectieve-aanbodlijn
 - **Term:** collectieve aanbodlijn
@@ -65,6 +66,7 @@ Elk begrip heeft een stabiele id (slug van de Nederlandse term), een student-fac
 - **Afkorting:** TCK
 - **Engels:** total cost / fixed cost / variable cost
 - **Voorbeeld:** De huur van een bakkerij (€ 2.500 per maand) blijft gelijk of de bakker nu 1.000 of 10.000 broden per maand bakt.
+- **Let op:** Officiële afkorting is TCK (totale constante kosten), niet "TC". "Vaste kosten" is spreektaal — in economisch werk altijd TCK gebruiken.
 - **Vermijd:** fixed cost
 - **Teaching-units:** D02
 
@@ -76,6 +78,7 @@ Elk begrip heeft een stabiele id (slug van de Nederlandse term), een student-fac
 - **Afkorting:** CS
 - **Engels:** consumer surplus
 - **Voorbeeld:** Iemand wil maximaal € 15 voor een boek betalen, maar de marktprijs is € 10. Het consumentensurplus voor deze klant is € 5.
+- **Let op:** Surplus meet welvaart ("wat koop je voor minder dan je ervoor over had"), niet omzet. Omzet zit bij de aanbieder; surplus is de extra waarde voor de koper.
 - **Vermijd:** consumer surplus, consumentenoverschot
 - **Teaching-units:** A30, D03, D28
 
@@ -108,6 +111,7 @@ Elk begrip heeft een stabiele id (slug van de Nederlandse term), een student-fac
 - **Syllabus:** D1.23
 - **Engels:** market equilibrium / equilibrium price
 - **Voorbeeld:** Snijpunt van de collectieve vraag- en aanbodlijn voor brood: zowel vragers als aanbieders komen uit op € 2,50 en 10.000 broden.
+- **Let op:** Markten bewegen richting evenwicht, maar liggen niet per definitie altijd op het snijpunt. Bij verstoringen (heffing, prijsregulering) ontstaat juist een afwijking.
 - **Vermijd:** equilibrium price
 - **Teaching-units:** A06, D05, D07, D10, D13
 
@@ -119,6 +123,7 @@ Elk begrip heeft een stabiele id (slug van de Nederlandse term), een student-fac
 - **Afkorting:** GTK
 - **Engels:** average total cost / marginal cost
 - **Voorbeeld:** Bij TK = € 10.000 en een productie van 500 stuks: GTK = 10.000 / 500 = € 20 per stuk.
+- **Let op:** Is kosten per stuk, niet totale kosten. GTK kan dalen terwijl TK nog steeds oploopt.
 - **Vermijd:** average total cost
 - **Teaching-units:** A14
 
@@ -136,6 +141,7 @@ Elk begrip heeft een stabiele id (slug van de Nederlandse term), een student-fac
 - **Syllabus:** D1.13
 - **Engels:** taxes / subsidies
 - **Voorbeeld:** De accijns op benzine van € 0,80 per liter verschuift de aanbodlijn van benzinepompen € 0,80 omhoog; de pompprijs stijgt, maar niet met de volle € 0,80 als de vraag deels reageert.
+- **Let op:** Wie de heffing economisch betaalt (consument of aanbieder) hangt af van de elasticiteiten, niet van wie volgens de wet moet afdragen.
 - **Teaching-units:** D01, D05, D07, D08, F06, F10, H09
 
 ### heterogene-goederen
@@ -174,6 +180,7 @@ Elk begrip heeft een stabiele id (slug van de Nederlandse term), een student-fac
 - **Syllabus:** D1.8
 - **Engels:** inferior / normal / luxury goods
 - **Voorbeeld:** Als een student gaat werken en meer te besteden heeft, koopt hij minder supermarkt-huismerk pasta en schakelt over op duurdere merken — huismerk is inferieur.
+- **Let op:** Inferieur slaat op het inkomenseffect, niet op kwaliteit. Een goed met Ei < 0 is wiskundig inferieur, ook al vinden consumenten het prima.
 - **Vermijd:** inferieure producten
 
 ### inkomenselasticiteit
@@ -185,6 +192,7 @@ Elk begrip heeft een stabiele id (slug van de Nederlandse term), een student-fac
 - **Engels:** income elasticity
 - **Notatie:** (2)
 - **Voorbeeld:** Stijgt het inkomen met 5% en de vraag naar restaurantbezoek met 10%, dan is Ei = 10 / 5 = 2: een luxegoed.
+- **Let op:** Het teken bepaalt de soort goed: Ei < 0 = inferieur, 0 < Ei < 1 = normaal, Ei > 1 = luxe. De grootte van |Ei| zegt hoe sterk, niet welk type.
 - **Vermijd:** income elasticity
 - **Teaching-units:** A17, D04, D11
 
@@ -203,6 +211,7 @@ Elk begrip heeft een stabiele id (slug van de Nederlandse term), een student-fac
 - **Afkorting:** MK
 - **Engels:** average total cost / marginal cost
 - **Voorbeeld:** Stijgen de totale kosten van € 10.000 naar € 10.040 bij één extra paar schoenen, dan is MK = 40 / 1 = € 40.
+- **Let op:** Verwar MK (ΔTK/ΔQ, helling van de TK-lijn) niet met GTK (TK/Q, gemiddelde). MK snijdt GTK in het minimum van de GTK-lijn.
 - **Vermijd:** marginal cost
 - **Teaching-units:** A13, D17, D30
 
@@ -214,6 +223,7 @@ Elk begrip heeft een stabiele id (slug van de Nederlandse term), een student-fac
 - **Afkorting:** MO
 - **Engels:** marginal revenue / marginal cost
 - **Voorbeeld:** Stijgt TO van € 24.000 naar € 24.045 bij één extra verkocht paar schoenen, dan is MO = € 45. Zolang MO > MK, loont het om de productie uit te breiden.
+- **Let op:** Bij volkomen concurrentie is MO gelijk aan de prijs; bij onvolkomen concurrentie MO < P omdat extra verkoop alleen lukt als de prijs daalt.
 - **Vermijd:** marginal revenue
 - **Teaching-units:** D30
 
@@ -230,6 +240,7 @@ Elk begrip heeft een stabiele id (slug van de Nederlandse term), een student-fac
 - **Syllabus:** D1.23
 - **Engels:** market equilibrium / equilibrium price
 - **Voorbeeld:** Bij een prijs van € 2,50 willen bakkers samen 10.000 broden per dag aanbieden en klanten samen 10.000 broden kopen: de markt is in evenwicht.
+- **Let op:** Evenwicht betekent gevraagde hoeveelheid = aangeboden hoeveelheid, niet dat niemand ontevreden is. Boven- of onderaan de vraaglijn zijn er nog wel wensen.
 - **Teaching-units:** A23, A24, A27, A31, D03, D05, D20, F07, H06
 
 ### marktmacht
@@ -263,6 +274,7 @@ Elk begrip heeft een stabiele id (slug van de Nederlandse term), een student-fac
 - **Syllabus:** D3.10
 - **Engels:** price floors / price ceilings
 - **Voorbeeld:** Een maximale huurprijs onder het marktevenwicht leidt tot wachtlijsten voor huurwoningen: meer mensen willen huren dan beschikbaar is.
+- **Let op:** Een maximumprijs werkt pas als die onder de evenwichtsprijs ligt. Boven het evenwicht heeft hij geen effect; de markt klaart vanzelf.
 
 ### minimumprijzen
 - **Term:** minimumprijzen
@@ -270,6 +282,7 @@ Elk begrip heeft een stabiele id (slug van de Nederlandse term), een student-fac
 - **Syllabus:** D3.10
 - **Engels:** price floors / price ceilings
 - **Voorbeeld:** Een wettelijk minimumloon boven het evenwichtsloon leidt tot werkloosheid: meer mensen willen werken dan werkgevers kunnen aannemen bij die prijs van arbeid.
+- **Let op:** Een minimumprijs werkt pas als die boven de evenwichtsprijs ligt. Onder het evenwicht heeft hij geen effect.
 - **Teaching-units:** D16
 
 ### monopolie
@@ -342,6 +355,7 @@ Elk begrip heeft een stabiele id (slug van de Nederlandse term), een student-fac
 - **Syllabus:** D2.3
 - **Engels:** price discrimination
 - **Voorbeeld:** Een bioscoop vraagt € 7 voor studenten en € 12 voor volwassenen: dezelfde film, maar twee prijzen omdat de twee groepen een verschillende betalingsbereidheid hebben.
+- **Let op:** Is niet per definitie slecht voor de welvaart: als aanbieders anders bepaalde klantgroepen niet bedienen, kan prijsdiscriminatie het totale surplus vergroten.
 - **Vermijd:** price discrimination, prijsdifferentiatie
 - **Teaching-units:** A36, D18, D21, D22, D23, D24
 
@@ -369,6 +383,7 @@ Elk begrip heeft een stabiele id (slug van de Nederlandse term), een student-fac
 - **Engels:** price elasticity of demand
 - **Notatie:** (1)
 - **Voorbeeld:** Stijgt de prijs met 10% en daalt de gevraagde hoeveelheid met 20%, dan is Ev = −20 / 10 = −2. In absolute waarde > 1, dus prijselastisch.
+- **Let op:** Ev is meestal negatief. Staat er "elasticiteit = 2", dan wordt bijna altijd |Ev| bedoeld. Het teken vergeten is een klassieke fout.
 - **Teaching-units:** A15, D06, D25, H03
 
 ### prijselastische-vraag
@@ -393,6 +408,7 @@ Elk begrip heeft een stabiele id (slug van de Nederlandse term), een student-fac
 - **Afkorting:** PS
 - **Engels:** producer surplus
 - **Voorbeeld:** Een aanbieder wil een product minimaal voor € 4 verkopen, maar de marktprijs is € 7. Het producentensurplus voor deze aanbieder is € 3 per stuk.
+- **Let op:** Het aanbieders-surplus is niet hetzelfde als winst: PS zegt niets over de constante kosten (TCK). Winst = PS − TCK op de lange termijn.
 - **Vermijd:** producer surplus
 - **Teaching-units:** A19, D28
 
@@ -402,6 +418,7 @@ Elk begrip heeft een stabiele id (slug van de Nederlandse term), een student-fac
 - **Syllabus:** D1.13
 - **Engels:** taxes / subsidies
 - **Voorbeeld:** Een subsidie van € 2.000 per elektrische auto verschuift de aanbodlijn € 2.000 omlaag; de marktprijs voor de consument daalt.
+- **Let op:** Ook het voordeel van een subsidie wordt verdeeld over consument en aanbieder volgens de elasticiteiten; de consumentenprijs daalt niet met het volle subsidiebedrag.
 - **Teaching-units:** D19, D22, D29, F10, F11, H09
 
 ### substitueerbaarheid
@@ -420,6 +437,7 @@ Elk begrip heeft een stabiele id (slug van de Nederlandse term), een student-fac
 - **Afkorting:** TK
 - **Engels:** total cost / fixed cost / variable cost
 - **Voorbeeld:** Een schoenenfabriek heeft € 4.000 huur per maand (constant) plus € 20 materiaal per paar schoenen. Bij 300 paar: TK = 4.000 + 20 × 300 = € 10.000.
+- **Let op:** TK = TCK + TVK. De afkorting TK slaat op het totáál; TCK is alleen het constante deel. Niet door elkaar gebruiken.
 - **Vermijd:** total cost
 - **Teaching-units:** A21
 
@@ -451,6 +469,7 @@ Elk begrip heeft een stabiele id (slug van de Nederlandse term), een student-fac
 - **Afkorting:** TVK
 - **Engels:** total cost / fixed cost / variable cost
 - **Voorbeeld:** De inkoop van bloem, suiker en gist is per brood vast, maar stijgt evenredig met het aantal gebakken broden: bij 0 broden zijn de variabele kosten € 0.
+- **Let op:** Variabele kosten stijgen mét de productie, maar niet automatisch lineair: bij afnemende meeropbrengsten gaan ze sneller omhoog dan de productie.
 - **Vermijd:** variable cost
 - **Teaching-units:** A08, D26
 
@@ -461,6 +480,7 @@ Elk begrip heeft een stabiele id (slug van de Nederlandse term), een student-fac
 - **Afkorting:** DWL
 - **Engels:** deadweight loss
 - **Voorbeeld:** Bij een heffing van € 1 per eenheid daalt de verhandelde hoeveelheid van 100 naar 80. Het verloren surplus is de driehoek van potentiële handel (tussen 80 en 100) die nu niet meer plaatsvindt.
+- **Let op:** Wordt in syllabustekst afwisselend "verloren surplus", "dead weight loss" of "Harberger-driehoek" genoemd. Alle drie verwijzen naar hetzelfde.
 - **Vermijd:** deadweight loss
 - **Teaching-units:** D29, F08
 
@@ -494,6 +514,7 @@ Elk begrip heeft een stabiele id (slug van de Nederlandse term), een student-fac
 - **Syllabus:** D1.19
 - **Engels:** profit
 - **Voorbeeld:** Een schoenwinkel heeft TO = € 24.000 en TK = € 18.000: winst = 24.000 − 18.000 = € 6.000.
+- **Let op:** Winst = TO − TK (alle kosten). Verwar niet met toegevoegde waarde (omzet − leveringen van derden), die alleen de inkoop eraf haalt.
 - **Vermijd:** profit
 - **Teaching-units:** A21, A22, A29, A33, A35, A36, D02, D18, D30, F04
 
@@ -557,6 +578,7 @@ Elk begrip heeft een stabiele id (slug van de Nederlandse term), een student-fac
 - **Syllabus:** E2.1
 - **Engels:** funded pension system
 - **Voorbeeld:** De Nederlandse aanvullende pensioenen (werkgeverspensioen bovenop de AOW) werken volgens het kapitaaldekkingsstelsel: premies worden door het pensioenfonds belegd en leveren later het pensioen op.
+- **Let op:** Gespaard vermogen is voor dé eigen pensioenen: geen intergenerationele overdracht. Beleggingsrendement en inflatie bepalen de dekkingsgraad mede.
 
 ### lenen-en-sparen
 - **Term:** lenen en sparen
@@ -572,6 +594,7 @@ Elk begrip heeft een stabiele id (slug van de Nederlandse term), een student-fac
 - **Syllabus:** E1.6
 - **Engels:** nominal and real values
 - **Voorbeeld:** Steeg je salaris van € 3.000 naar € 3.060 bij 2% inflatie, dan is het nominale loon met 2% gestegen maar het reële loon vrijwel onveranderd.
+- **Let op:** Nominaal − inflatie ≈ reëel. Is de inflatie hoger dan de nominale toename, dan daal je reëel — ook al stijgen de eurobedragen op papier.
 
 ### omslagstelsel
 - **Term:** omslagstelsel
@@ -579,6 +602,7 @@ Elk begrip heeft een stabiele id (slug van de Nederlandse term), een student-fac
 - **Syllabus:** E2.1
 - **Engels:** pay-as-you-go system
 - **Voorbeeld:** De Nederlandse AOW werkt volgens het omslagstelsel: werkenden betalen AOW-premie, die meteen als AOW-uitkering aan de huidige ouderen wordt uitbetaald.
+- **Let op:** Er wordt geen potje opgebouwd: premies van werkenden gaan rechtstreeks naar huidige gepensioneerden. Vergrijzing drukt daardoor direct op huidige premies.
 
 ### overheidstekort
 - **Term:** overheidstekort
@@ -586,6 +610,7 @@ Elk begrip heeft een stabiele id (slug van de Nederlandse term), een student-fac
 - **Syllabus:** E1.9
 - **Engels:** national debt / government deficit
 - **Voorbeeld:** Als de overheid in een jaar € 380 miljard uitgeeft en € 360 miljard ontvangt, bedraagt het overheidstekort € 20 miljard.
+- **Let op:** Is een stroomgrootheid (per jaar). Tekorten stapelen zich op in de staatsschuld (voorraad). Niet hetzelfde.
 - **Teaching-units:** I01, I16
 
 ### rente
@@ -594,6 +619,7 @@ Elk begrip heeft een stabiele id (slug van de Nederlandse term), een student-fac
 - **Syllabus:** E1.4
 - **Engels:** interest
 - **Voorbeeld:** Een hypotheek tegen 4% rente betekent dat de lener per € 100.000 schuld jaarlijks € 4.000 aan rente betaalt, bovenop de aflossing.
+- **Let op:** Is een prijs (percentage per jaar), niet een bedrag. Bij 4% rente op € 100.000 betaal je € 4.000 per jaar — het percentage en het eurobedrag zijn twee verschillende grootheden.
 - **Vermijd:** interest rate
 - **Teaching-units:** E03, E07, H07, H15, H26, H31, I07, I11
 
@@ -610,6 +636,7 @@ Elk begrip heeft een stabiele id (slug van de Nederlandse term), een student-fac
 - **Syllabus:** E1.9
 - **Engels:** national debt / government deficit
 - **Voorbeeld:** De Nederlandse staatsschuld bedroeg eind 2023 ongeveer € 480 miljard, ofwel zo'n 45% van het bbp.
+- **Let op:** Is een voorraadgrootheid (op een moment), geen stroomgrootheid. Het jaarlijkse tekort (stroom) laat de schuld oplopen.
 - **Vermijd:** government debt
 - **Teaching-units:** H12, H19, H21, I16
 
@@ -667,6 +694,7 @@ Elk begrip heeft een stabiele id (slug van de Nederlandse term), een student-fac
 - **Syllabus:** F2.2
 - **Engels:** public/collective goods
 - **Voorbeeld:** Straatverlichting, dijkbescherming en landsverdediging zijn collectieve goederen: iedereen geniet ervan en niemand kan worden uitgesloten — daarom betaalt de overheid.
+- **Let op:** Criteria zijn niet-rivaliserend én niet-uitsluitbaar. Een overheidsdienst hoeft geen collectief goed te zijn; zorg bijvoorbeeld is rivaliserend en uitsluitbaar.
 - **Vermijd:** publieke goederen
 - **Teaching-units:** F02
 
@@ -685,6 +713,7 @@ Elk begrip heeft een stabiele id (slug van de Nederlandse term), een student-fac
 - **Syllabus:** F2.4
 - **Engels:** externalities
 - **Voorbeeld:** Een chemische fabriek stoot CO₂ uit zonder dat de milieuschade in haar kosten zit: dit is een negatief extern effect dat de overheid probeert te internaliseren via een CO₂-heffing.
+- **Let op:** Kunnen positief zijn (bestuiving door bijen) of negatief (CO₂-uitstoot). Veel leerlingen denken alleen aan vervuiling.
 - **Teaching-units:** F05, F06, F07, F08, F10, F11, F14
 
 ### gevangenendilemma
@@ -693,6 +722,7 @@ Elk begrip heeft een stabiele id (slug van de Nederlandse term), een student-fac
 - **Syllabus:** F1.5
 - **Engels:** prisoner's dilemma / dominant strategy
 - **Voorbeeld:** Twee verdachten bekennen allebei om strafreductie te krijgen; allebei zwijgen had hun een veel lichtere straf opgeleverd, maar dat durven ze elkaar niet toe te vertrouwen.
+- **Let op:** Beide bekennen is een Nash-evenwicht maar géén pareto-optimum: beiden zouden zwijgen een beter gezamenlijk resultaat geven.
 - **Teaching-units:** F09
 
 ### kartelafspraken
@@ -701,6 +731,7 @@ Elk begrip heeft een stabiele id (slug van de Nederlandse term), een student-fac
 - **Syllabus:** F1.12
 - **Engels:** cartel agreements
 - **Voorbeeld:** De liftenbouwers Otis, KONE en ThyssenKrupp kregen in 2007 een boete van meer dan € 1 miljard voor het jarenlang verdelen van de liftenmarkt in Europa.
+- **Let op:** Zijn in EU en NL verboden; de ACM kan boetes opleggen die in honderden miljoenen lopen. "Gentleman's agreement" of stille afstemming telt óók als kartel.
 
 ### meeliftersgedrag
 - **Term:** meeliftersgedrag
@@ -708,6 +739,7 @@ Elk begrip heeft een stabiele id (slug van de Nederlandse term), een student-fac
 - **Syllabus:** F2.3
 - **Engels:** free-rider behaviour
 - **Voorbeeld:** Een bewoner geniet van de openbare fietsenstalling zonder mee te betalen; als iedereen dat doet, komt er nooit een betere stalling — klassiek meeliftersgedrag.
+- **Let op:** De individuele dominante strategie is niet bijdragen — zelfs als iedereen weet dat het gezamenlijke resultaat suboptimaal uitvalt. Klassiek prisoner's-dilemma-probleem.
 - **Vermijd:** vrijbuiter" / "gratis meerijder
 
 ### nash-evenwicht
@@ -761,6 +793,7 @@ Elk begrip heeft een stabiele id (slug van de Nederlandse term), een student-fac
 - **Syllabus:** F2.1
 - **Engels:** hold-up problem / sunk costs
 - **Voorbeeld:** Een filmstudio heeft € 80 miljoen aan een tegenvallende film uitgegeven: die kosten zijn verzonken, en bepalen niet of de film nog uitgebracht moet worden — alleen de extra opbrengsten en extra kosten tellen.
+- **Let op:** Verzonken kosten horen NIET thuis in een toekomstige keuze. Alleen extra opbrengsten en extra kosten tellen — al voelt dat tegen het gevoel in.
 - **Vermijd:** gezonken kosten
 - **Teaching-units:** F15
 
@@ -779,6 +812,7 @@ Elk begrip heeft een stabiele id (slug van de Nederlandse term), een student-fac
 - **Syllabus:** G5.2
 - **Engels:** bonds / shares
 - **Voorbeeld:** Een aandeel Shell geeft recht op dividend (bij winst) en een deel van de koerswaarde bij verkoop; de koers kan in een jaar met 20% stijgen of dalen.
+- **Let op:** Dividend is NIET gegarandeerd — een bedrijf kan besluiten geen dividend uit te keren. Aandelen lopen daarnaast koersrisico; het verwachte rendement hoort daarom hoger te liggen dan bij obligaties.
 
 ### averechtse-selectie
 - **Term:** averechtse selectie
@@ -786,6 +820,7 @@ Elk begrip heeft een stabiele id (slug van de Nederlandse term), een student-fac
 - **Syllabus:** G3.2
 - **Engels:** adverse selection
 - **Voorbeeld:** Als een zorgverzekeraar één premie voor iedereen rekent, haken gezonde mensen af en blijven vooral zieken als klant over — de premie moet omhoog en de markt loopt leeg.
+- **Let op:** Verborgen EIGENSCHAPPEN die al vóór de transactie bestaan (ziekte bij verzekering). Verwar niet met moral hazard (verborgen GEDRAG NA de transactie).
 - **Vermijd:** negatieve selectie
 
 ### bonus-malussysteem
@@ -834,6 +869,7 @@ Elk begrip heeft een stabiele id (slug van de Nederlandse term), een student-fac
 - **Syllabus:** G3.2
 - **Engels:** moral hazard
 - **Voorbeeld:** Iemand met een volledig vergoede fietsdiefstalverzekering zet zijn fiets minder zorgvuldig op slot dan iemand zonder verzekering: klassiek moral hazard.
+- **Let op:** Verborgen GEDRAG NA de transactie (roekeloos rijden na verzekering). Verwar niet met averechtse selectie (verborgen eigenschap VÓÓR).
 
 ### obligaties
 - **Term:** obligaties
@@ -873,6 +909,7 @@ Elk begrip heeft een stabiele id (slug van de Nederlandse term), een student-fac
 - **Syllabus:** G5.1
 - **Engels:** return/yield
 - **Voorbeeld:** Wie € 1.000 belegt en na een jaar € 1.070 terugkrijgt, behaalt een rendement van 7% per jaar.
+- **Let op:** Nominaal rendement houdt geen rekening met inflatie. Bij 5% rendement en 4% inflatie hou je reëel maar ongeveer 1% over — dat is de relevante maat.
 - **Teaching-units:** H30, H31
 
 ### risico
@@ -889,6 +926,7 @@ Elk begrip heeft een stabiele id (slug van de Nederlandse term), een student-fac
 - **Syllabus:** G1.2
 - **Engels:** risk aversion
 - **Voorbeeld:** Een huiseigenaar betaalt jaarlijks € 300 aan opstalverzekering, ook al is de verwachte schade slechts € 150 per jaar: de zekerheid is hem extra geld waard.
+- **Let op:** Risicoavers ≠ risicomijdend. Risico-averse mensen nemen wel degelijk risico, maar vragen er compensatie voor — vandaar de risicopremie op aandelen.
 
 ### toezichthouders
 - **Term:** toezichthouders
@@ -943,6 +981,7 @@ Elk begrip heeft een stabiele id (slug van de Nederlandse term), een student-fac
 - **Engels:** labour supply (= labour force)
 - **Synoniemen:** beroepsbevolking
 - **Voorbeeld:** In Nederland bestaat de beroepsbevolking van ongeveer 10 miljoen mensen uit ca. 9,7 miljoen werkenden plus 0,3 miljoen werklozen.
+- **Let op:** Bestaat uit werkenden PLUS werklozen die werk zoeken. Niet alleen de groep met een huidige baan.
 - **Teaching-units:** H23, I04, I11, L05, L10
 
 ### arbeidsinkomen
@@ -1009,6 +1048,7 @@ Elk begrip heeft een stabiele id (slug van de Nederlandse term), een student-fac
 - **Afkorting:** bbp
 - **Engels:** gross domestic product (GDP)
 - **Voorbeeld:** Het Nederlandse bbp was in 2023 ongeveer € 1.050 miljard: de optelsom van alle toegevoegde waarde in Nederland dat jaar.
+- **Let op:** bbp meet productie binnen de landsgrenzen (bruto binnenlands), niet door inwoners van dat land waar ook ter wereld (dat is bnp). In een internationaliserende economie verschillen die twee flink.
 
 ### btw
 - **Term:** btw
@@ -1031,6 +1071,7 @@ Elk begrip heeft een stabiele id (slug van de Nederlandse term), een student-fac
 - **Syllabus:** H5.2
 - **Engels:** cyclical unemployment
 - **Voorbeeld:** Tijdens de corona-recessie kregen horecamedewerkers tijdelijk geen werk — hun werkloosheid was conjunctureel, niet structureel, en verdween grotendeels toen de horeca weer opende.
+- **Let op:** Verdwijnt grotendeels als de economie herstelt. Structurele werkloosheid blijft, ook bij hoogconjunctuur — het onderscheid bepaalt welk beleid werkt.
 - **Vermijd:** cyclische werkloosheid
 - **Teaching-units:** H10, I15, L11
 
@@ -1076,6 +1117,7 @@ Elk begrip heeft een stabiele id (slug van de Nederlandse term), een student-fac
 - **Syllabus:** H5.2
 - **Engels:** frictional unemployment
 - **Voorbeeld:** Een starter die na zijn studie twee maanden zoekt voor de juiste baan vindt, draagt in die periode bij aan frictiewerkloosheid.
+- **Let op:** Onderdeel van structurele werkloosheid, ondanks dat die "kort" is. Frictie verdwijnt niet bij hoogconjunctuur; mensen blijven van baan wisselen.
 - **Vermijd:** frictionele werkloosheid
 - **Teaching-units:** L13
 
@@ -1086,6 +1128,7 @@ Elk begrip heeft een stabiele id (slug van de Nederlandse term), een student-fac
 - **Syllabus:** H4.6
 - **Engels:** average / marginal tax rate
 - **Voorbeeld:** Bij € 50.000 inkomen en € 15.000 belasting is het gemiddelde tarief 30% — ook al is het toptarief op de laatste euro hoger.
+- **Let op:** Is belastingdruk over je hele inkomen. Ligt bij een progressief stelsel altijd ONDER het marginale tarief van de hoogste schijf die je haalt.
 - **Teaching-units:** H04, H18
 
 ### gini-coefficient
@@ -1164,6 +1207,7 @@ Elk begrip heeft een stabiele id (slug van de Nederlandse term), een student-fac
 - **Syllabus:** H4.6
 - **Engels:** average / marginal tax rate
 - **Voorbeeld:** In Nederland geldt boven € 73.000 een toptarief van 49,5%: van elke extra verdiende euro houd je nog maar € 0,505 netto over.
+- **Let op:** Geldt op de LAATSTE euro inkomen, niet gemiddeld. Iemand met 49,5% toptarief betaalt gemiddeld veel minder dan 49,5% over z'n hele salaris.
 - **Teaching-units:** H04, H08, H18, H22, H23
 
 ### nationaal-spaarsaldo
@@ -1181,6 +1225,7 @@ Elk begrip heeft een stabiele id (slug van de Nederlandse term), een student-fac
 - **Syllabus:** H4.4
 - **Engels:** reduce / increase inequality
 - **Voorbeeld:** Een verhoging van het toptarief en extra kinderbijslag voor lage inkomens nivelleert de inkomensverdeling: de Gini-coëfficiënt van besteedbaar inkomen daalt.
+- **Let op:** Maakt verschillen kleiner (gelijker inkomen/vermogen); denivelleren = juist groter. Studenten wisselen deze twee regelmatig om.
 
 ### objectieve-methode
 - **Term:** objectieve methode
@@ -1252,6 +1297,7 @@ Elk begrip heeft een stabiele id (slug van de Nederlandse term), een student-fac
 - **Syllabus:** H1.1
 - **Engels:** value added
 - **Voorbeeld:** Een bakker koopt voor € 1.000 aan grondstoffen en verkoopt voor € 3.000 aan brood: de toegevoegde waarde bedraagt € 2.000.
+- **Let op:** Is niet hetzelfde als winst: toegevoegde waarde = omzet − inkoop, en daarin zitten nog lonen, rente, afschrijvingen en winst. Winst is wat er na die posten overblijft.
 
 ### totale-factorproductiviteit
 - **Term:** totale factorproductiviteit
@@ -1295,6 +1341,7 @@ Elk begrip heeft een stabiele id (slug van de Nederlandse term), een student-fac
 - **Syllabus:** H5.1
 - **Engels:** unemployment
 - **Voorbeeld:** Als de beroepsbevolking 10 miljoen is en er zijn 9,7 miljoen banen, bedraagt de werkloosheid 300.000 personen of 3%.
+- **Let op:** Telt alleen mensen die beschikbaar zijn én actief zoeken. Ontmoedigden (gestopt met zoeken) vallen uit de statistiek — werkloosheid kan daardoor "dalen" zonder dat werkgelegenheid stijgt.
 - **Vermijd:** unemployment
 - **Teaching-units:** L05, L07
 
@@ -1314,6 +1361,7 @@ Elk begrip heeft een stabiele id (slug van de Nederlandse term), een student-fac
 - **Syllabus:** I3.8
 - **Engels:** depreciation / appreciation
 - **Voorbeeld:** Als 1 USD stijgt van € 0,90 naar € 1,00, is de dollar geapprecieerd — Amerikaanse goederen worden voor eurokopers ruim 10% duurder.
+- **Let op:** Een sterkere eigen munt maakt export juist DUURDER voor buitenlanders en import goedkoper. Klinkt tegenintuïtief: "sterk" voelt als goed, maar hurt exporteurs.
 
 ### automatische-stabilisatoren
 - **Term:** automatische stabilisatoren
@@ -1343,6 +1391,7 @@ Elk begrip heeft een stabiele id (slug van de Nederlandse term), een student-fac
 - **Syllabus:** I3.7
 - **Engels:** bank run / deposit guarantee
 - **Voorbeeld:** Bij Silicon Valley Bank vroegen klanten in maart 2023 in één dag € 42 mld op — de bank kon die vraag niet aan en viel om, ondanks voorheen gezonde balansen.
+- **Let op:** Een op zich solvabele bank kan alsnog omvallen door liquiditeitsproblemen als te veel spaarders tegelijk opnemen. Solvabel ≠ liquide.
 
 ### bbp-groei
 - **Term:** bbp-groei
@@ -1398,6 +1447,7 @@ Elk begrip heeft een stabiele id (slug van de Nederlandse term), een student-fac
 - **Syllabus:** I3.8
 - **Engels:** depreciation / appreciation
 - **Voorbeeld:** Als 1 GBP daalt van € 1,20 naar € 1,10, is het pond gedeprecieerd — Britse goederen zijn voor eurokopers 8% goedkoper geworden.
+- **Let op:** Slaat op zwevende wisselkoersen — de munt daalt door marktkrachten. Bij een vaste wisselkoers spreken we van devaluatie (beleidsbeslissing), niet depreciatie.
 
 ### duaal-mandaat
 - **Term:** duaal mandaat
@@ -1474,6 +1524,7 @@ Elk begrip heeft een stabiele id (slug van de Nederlandse term), een student-fac
 - **Syllabus:** I3.4
 - **Engels:** money creation
 - **Voorbeeld:** Als ING een hypotheek van € 300.000 verstrekt, schrijft de bank dat bedrag bij op de rekening van de koper: nieuw giraal geld ontstaat uit het niets.
+- **Let op:** Banken scheppen giraal geld bij het verstrekken van een krediet; de centrale bank schept chartaal geld. Beide zijn vormen van geldcreatie, maar via verschillende kanalen.
 - **Vermijd:** geldcreatie
 
 ### geldvernietiging
@@ -1500,6 +1551,7 @@ Elk begrip heeft een stabiele id (slug van de Nederlandse term), een student-fac
 - **Afkorting:** CPI
 - **Engels:** inflation / consumer price index
 - **Voorbeeld:** Bij 3% inflatie kost een boodschappenmand die vorig jaar € 100 was nu € 103.
+- **Let op:** Is een tempo (%ΔCPI), niet een prijsniveau. 10% inflatie betekent dat het prijspeil in één jaar met 10% omhoog is gegaan — niet dat prijzen "10% hoger dan normaal" zijn.
 - **Vermijd:** inflation
 
 ### inflatieverwachtingen
@@ -1625,6 +1677,7 @@ Elk begrip heeft een stabiele id (slug van de Nederlandse term), een student-fac
 - **Engels:** monetary policy
 - **Synoniemen:** rentebeleid
 - **Voorbeeld:** Toen inflatie in 2022 boven 10% steeg, verhoogde de ECB haar beleidsrente van 0% naar 4% om het lenen en bestedingen te remmen — verkrappend monetair beleid.
+- **Let op:** Werkt indirect via rente, kredietvolumes en wisselkoers — niet instant. Typische transmissie-vertraging is 6–18 maanden voor inflatie-effecten.
 - **Vermijd:** monetary policy
 - **Teaching-units:** I12, I13, I17, I19
 
@@ -1642,6 +1695,7 @@ Elk begrip heeft een stabiele id (slug van de Nederlandse term), een student-fac
 - **Syllabus:** I4.1
 - **Engels:** multiplier
 - **Voorbeeld:** Met MCQ = 0,8 en t = 0,3: multiplier ≈ 1/(1 − 0,8 + 0,24) ≈ 2,3. Elke extra € 1 mld overheidsuitgaven verhoogt het bbp met ongeveer € 2,3 mld.
+- **Let op:** Ligt meestal tussen 1 en 2 in een open economie; is door lekken (sparen, belasting, import) zelden zo hoog als in gesloten leerboekvoorbeelden. Nooit negatief.
 
 ### muntunie
 - **Term:** muntunie
@@ -1686,6 +1740,7 @@ Elk begrip heeft een stabiele id (slug van de Nederlandse term), een student-fac
 - **Syllabus:** I1.1
 - **Engels:** output gap
 - **Voorbeeld:** Als Y = € 1.020 mld en Y* = € 1.050 mld, is de output gap (1.020 − 1.050)/1.050 × 100% ≈ −2,9%: de economie draait onder haar potentieel.
+- **Let op:** Positieve output gap = hoogconjunctuur (Y > Y*); negatieve gap = laagconjunctuur. Veel studenten draaien het teken om.
 
 ### overbesteding
 - **Term:** overbesteding
@@ -1716,6 +1771,7 @@ Elk begrip heeft een stabiele id (slug van de Nederlandse term), een student-fac
 - **Syllabus:** I1.1
 - **Engels:** real interest rate
 - **Voorbeeld:** Bij 4% nominale rente en 3% inflatie is de reële rente (1,04/1,03) − 1 ≈ 1%.
+- **Let op:** Is bij benadering nominale rente MINUS inflatie, niet plus. Bij 3% rente en 5% inflatie is de reële rente ongeveer −2%: sparen kost koopkracht.
 
 ### reele-rente-formule
 - **Term:** reële rente formule
@@ -1745,6 +1801,7 @@ Elk begrip heeft een stabiele id (slug van de Nederlandse term), een student-fac
 - **Syllabus:** I2.1
 - **Engels:** expansionary / contractionary fiscal policy
 - **Voorbeeld:** Een subsidie van € 2.000 per energiezuinige woning verhoogt de bouwactiviteit en de vraag naar materialen: stimulerend begrotingsbeleid.
+- **Let op:** Stimulerend begrotingsbeleid is iets anders dan stimulerend monetair beleid. Het eerste is overheidsuitgaven verhogen / belasting verlagen; het tweede is rente verlagen door de centrale bank.
 
 ### theorie-optimale-valutagebieden
 - **Term:** theorie optimale valutagebieden
@@ -1759,6 +1816,7 @@ Elk begrip heeft een stabiele id (slug van de Nederlandse term), een student-fac
 - **Syllabus:** I3.8
 - **Engels:** monetary policy trilemma
 - **Voorbeeld:** Het eurogebied combineert vrij kapitaalverkeer met een vaste koers tussen eurolanden, maar geeft zelfstandige monetaire autonomie per land op — dat hoort bij de ECB.
+- **Let op:** Niet te verwarren met het gewone economische "trade-off"-principe. Het trilemma stelt dat je uit drie beleidsdoelen er maar TWEE tegelijk kunt kiezen.
 
 ### uitverdieneffecten
 - **Term:** uitverdieneffecten
@@ -1781,6 +1839,7 @@ Elk begrip heeft een stabiele id (slug van de Nederlandse term), een student-fac
 - **Syllabus:** I2.1
 - **Engels:** expansionary / contractionary fiscal policy
 - **Voorbeeld:** Een btw-verhoging van 21% naar 23% tijdens een hoogconjunctuur haalt koopkracht uit de economie — verkrappend begrotingsbeleid.
+- **Let op:** Hetzelfde instrument (bezuinigen / belasting verhogen) kan pro- of anticyclisch zijn. Verkrappen tijdens hoogconjunctuur is anticyclisch; tijdens laagconjunctuur juist procyclisch.
 - **Vermijd:** contractief begrotingsbeleid
 
 ### wisselkoers
@@ -1789,6 +1848,7 @@ Elk begrip heeft een stabiele id (slug van de Nederlandse term), een student-fac
 - **Syllabus:** I3.8
 - **Engels:** exchange rate
 - **Voorbeeld:** Een wisselkoers van 1 EUR = 1,10 USD betekent dat je voor elke euro $ 1,10 krijgt; daalt die naar 1 EUR = 1,05 USD, dan is de euro gedeprecieerd.
+- **Let op:** Let goed op de koers-richting: 1 EUR = 1,10 USD betekent iets anders dan 1 USD = 0,91 EUR. Bij een daling van "de koers" moet je weten welke munt het onderwerp is.
 - **Vermijd:** exchange rate
 - **Teaching-units:** G11, H13, H24, H25, I12, I13, I19, I20
 

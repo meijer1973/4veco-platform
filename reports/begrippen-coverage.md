@@ -10,7 +10,7 @@ Totaal: **225** begrippen (225 live, 0 deprecated).
 |---|---:|---:|
 | definition_nl | 0 | 0% |
 | example_nl | 0 | 0% |
-| pitfall_nl | 225 | 100% |
+| pitfall_nl | 165 | 73% |
 | teaching_units (reverse-link) | 131 | 58% |
 | syllabus_clause | 2 | 1% |
 
