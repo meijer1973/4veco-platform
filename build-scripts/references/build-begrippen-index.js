@@ -203,6 +203,11 @@ function renderTermBlock(id, entry) {
   } else {
     out.push(`- **Definitie:** _(definitie volgt)_`);
   }
+  if (Array.isArray(entry.formulas) && entry.formulas.length) {
+    const label = entry.formulas.length === 1 ? 'Formule' : 'Formules';
+    const rendered = entry.formulas.map(f => '`' + f + '`').join(' · ');
+    out.push(`- **${label}:** ${rendered}`);
+  }
   if (entry.syllabus_clause) out.push(`- **Syllabus:** ${entry.syllabus_clause}`);
   if (entry.abbreviation)    out.push(`- **Afkorting:** ${entry.abbreviation}`);
   if (entry.english_equivalent) out.push(`- **Engels:** ${entry.english_equivalent}`);
@@ -240,6 +245,7 @@ function renderCoverageReport(registry) {
   const missingDef = live.filter(e => !e.definition_nl || !e.definition_nl.trim()).length;
   const missingExample = live.filter(e => !e.example_nl).length;
   const missingPitfall = live.filter(e => !e.pitfall_nl).length;
+  const withFormula = live.filter(e => Array.isArray(e.formulas) && e.formulas.length > 0).length;
   const noUnits = live.filter(e => !e.teaching_units || e.teaching_units.length === 0).length;
   const noClause = live.filter(e => !e.syllabus_clause).length;
 
@@ -267,6 +273,8 @@ function renderCoverageReport(registry) {
   lines.push(`| pitfall_nl | ${missingPitfall} | ${pct(missingPitfall, live.length)} |`);
   lines.push(`| teaching_units (reverse-link) | ${noUnits} | ${pct(noUnits, live.length)} |`);
   lines.push(`| syllabus_clause | ${noClause} | ${pct(noClause, live.length)} |`);
+  lines.push('');
+  lines.push(`Terms with at least one formula: **${withFormula}** of ${live.length}. (Not every term carries a formula, so this counts coverage, not a backlog.)`);
   lines.push('');
   lines.push('## Definities per domein');
   lines.push('');

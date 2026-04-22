@@ -52,6 +52,7 @@ const DEFAULT_ENTRY = {
   deprecated_forms: [],
   related_terms: [],
   notation_markers: [],
+  formulas: [],            // list of Dutch-convention formula strings (e.g. "TK = TCK + TVK")
   example_nl: null,
   pitfall_nl: null,
   teaching_units: [],      // derived by build-begrippen-index
@@ -124,7 +125,7 @@ function mergeEntry(existing, patch) {
 function normalizeEntry(entry) {
   const out = { ...DEFAULT_ENTRY, ...entry };
   // Coerce array-shaped fields
-  for (const k of ['synonyms_nl', 'deprecated_forms', 'related_terms', 'notation_markers', 'teaching_units']) {
+  for (const k of ['synonyms_nl', 'deprecated_forms', 'related_terms', 'notation_markers', 'formulas', 'teaching_units']) {
     if (!Array.isArray(out[k])) out[k] = [];
   }
   // Null-or-string fields: empty strings → null (except definition_nl which stays '')
@@ -190,7 +191,7 @@ function buildPatchFromFlags(flags) {
       }
     }
   }
-  for (const listFlag of ['synonyms-nl', 'deprecated-forms', 'related-terms', 'notation-markers']) {
+  for (const listFlag of ['synonyms-nl', 'deprecated-forms', 'related-terms', 'notation-markers', 'formulas']) {
     if (Object.prototype.hasOwnProperty.call(flags, listFlag)) {
       const field = listFlag.replace(/-/g, '_');
       patch[field] = splitCsv(flags[listFlag]);
