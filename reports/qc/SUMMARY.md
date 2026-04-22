@@ -4,7 +4,8 @@ One row per `/qc-references` invocation. New rows append to the bottom; never ov
 
 | Run date | Tests run | New gaps | Gaps closed | Catalog units | Notes |
 |---|---|---:|---:|---:|---|
-| 2026-04-21 | probe-questions, exam-derived-skills | 10 | — | 178 | First run. Surfaced productiefunctie, lopende rekening, verzekeringspremie, spelboom, Marshall-Lerner, loonelasticiteit arbeidsvraag, monopoly-vs-VC benchmark, integratieve staatsschuld, Keynes-vs-monetarist, valuta-interventie cost. Three closed in same-day mints (H27, H28, G12). |
+| 2026-04-21 | probe-questions, exam-derived-skills | 10 | — | 178 | First run. Surfaced productiefunctie, lopende rekening, verzekeringspremie, spelboom, Marshall-Lerner, loonelasticiteit arbeidsvraag, monopoly-vs-VC benchmark, integratieve staatsschuld, Keynes-vs-monetarist, valuta-interventie cost. Three closed in same-day mints (H27, H28, G12). Used vw-1022-a-23-1-o + vw-1022-a-24-1-o for exam-derived. |
+| 2026-04-22 | probe-questions, exam-derived-skills, tree-integrity-audit | 12 | 3 | 189 | First run with tree-integrity-audit live (4/5 sampled units flagged: H27/A23/D14 thin needs, A23 kern-procedure mismatch). New mint candidates: spelboom, zelfbinding, multi-markt korte-termijn integratie, prijs-vs-hoeveelheidsinstrument, monopoly-vs-VC benchmark, bbp-deflator vs CPI, afzetmaximalisatie. Used vw-1022-a-24-2-o + vw-1022-a-25-1-o. Audited units: I20, H27, F18, A23, D14. |
 
 ## How to interpret
 
