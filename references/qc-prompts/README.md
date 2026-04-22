@@ -14,7 +14,8 @@ Each `*.md` file in this folder is a **versioned prompt** that one subagent runs
 |---|---|---|
 | `probe-questions.md` | VWO-economie teacher generates 7 probing exam-style questions across domains, names the main skill + prereqs from instinct (no catalog access) | Catalog gaps that real exam topics demand but no unit covers |
 | `exam-derived-skills.md` | Same teacher reads 2 real CvTE VWO exam booklets, identifies the main skill per opgave | Whether the catalog can be reached from real exam questions; surface integrative-skill gaps |
-| `tree-integrity-audit.md` | Economist auditor inspects 5 sampled units' full text and judges (a) exam_code correctness, (b) needs-edge justification, (c) kern↔procedure alignment | Wrong exam_codes, over-wired prereqs, kern drift — the I12 class of bugs |
+| `tree-integrity-audit.md` | Economist auditor inspects 5 sampled units' full text and judges (a) exam_code correctness, (b) needs-edge justification, (c) kern↔procedure alignment | Wrong exam_codes, over-wired prereqs, kern drift — the I12 class of bugs (top-down per-unit) |
+| `foundation-audit.md` | VWO-economie docent inspects 5 sampled L0 units and judges whether the empty-`needs` positioning matches what VWO 4 students actually bring from onderbouw | Units mis-marked as L0 that assume advanced prereqs — the H15 class of bugs (bottom-up by layer) |
 
 ## How runs are produced
 

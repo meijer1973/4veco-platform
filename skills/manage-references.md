@@ -269,7 +269,8 @@ The 8 deterministic report scripts under `build-scripts/reports/` (see PART 4) c
 |---|---|---|
 | `probe-questions` | `references/qc-prompts/probe-questions.md` | Catalog gaps that real exam topics demand but no unit covers |
 | `exam-derived-skills` | `references/qc-prompts/exam-derived-skills.md` | Whether catalog can be reached from real CvTE exam questions |
-| `tree-integrity-audit` | `references/qc-prompts/tree-integrity-audit.md` | Wrong exam_codes, over-wired needs, kern↔procedure drift |
+| `tree-integrity-audit` | `references/qc-prompts/tree-integrity-audit.md` | Wrong exam_codes, over-wired needs, kern↔procedure drift (top-down per-unit) |
+| `foundation-audit` | `references/qc-prompts/foundation-audit.md` | L0 units that assume prereqs VWO 4 students don't bring from onderbouw (bottom-up by layer) |
 
 **Outputs** (visible under `reports/`):
 - `reports/qc/qc-run-YYYY-MM-DD.md` — one per run (overwrite if same day).

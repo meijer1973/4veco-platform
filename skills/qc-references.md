@@ -34,7 +34,8 @@ Each test is a versioned prompt in `references/qc-prompts/`. Edit a prompt to ch
 |---|---|---|
 | `probe-questions` | `references/qc-prompts/probe-questions.md` | Catalog gaps that real exam topics demand but no unit covers |
 | `exam-derived-skills` | `references/qc-prompts/exam-derived-skills.md` | Whether the catalog can be reached from real CvTE exam questions |
-| `tree-integrity-audit` | `references/qc-prompts/tree-integrity-audit.md` | Wrong exam_codes, over-wired needs edges, kern↔procedure drift |
+| `tree-integrity-audit` | `references/qc-prompts/tree-integrity-audit.md` | Wrong exam_codes, over-wired needs edges, kern↔procedure drift (top-down per-unit audit) |
+| `foundation-audit` | `references/qc-prompts/foundation-audit.md` | L0 units that assume prereq concepts VWO 4 students don't bring from onderbouw (bottom-up, inverse of tree-integrity-audit) |
 
 ## Runner protocol
 
@@ -44,7 +45,7 @@ When the user invokes `/qc-references`, execute the following sequence:
 
 - Today's date: `YYYY-MM-DD` (UTC date in run filename).
 - Create scratch directory: `/tmp/claude-work/qc-YYYY-MM-DD/` (mkdir -p).
-- Read all three prompt files from `references/qc-prompts/*.md`.
+- Read all four prompt files from `references/qc-prompts/*.md`.
 - Read current catalog stats: `node -e` to print catalog-units count from `references/machine/micro-teaching-units.json`.
 - Read `reports/qc/SUMMARY.md` to find the most recent prior run row (for "gaps closed" comparison later).
 
@@ -60,15 +61,21 @@ When the user invokes `/qc-references`, execute the following sequence:
 - For each chosen ID, dump its full text block (id, name, kern, mastery_target, exam_codes, needs, procedure, terms) into the prompt's `<UNIT-DUMPS>` placeholder.
 - Substitute `<OUTPUT-PATH>`.
 
+**For `foundation-audit`:**
+- Filter catalog to L0 foundation candidates: `layer === 0 && (!needs || needs.length === 0) && !deprecated`.
+- Sample 5 L0 unit IDs. Strategy: **3 high-risk slots** picked from the top-decile by fan-out (number of direct dependents = count of units where this ID appears in `needs`); **2 random slots** uniformly from the remaining L0 pool. If fewer than 30 L0 units exist, pick top-3 fan-out + 2 random from the rest. Prefer IDs NOT audited in the prior run (scan prior SUMMARY.md `Notes` for IDs) but don't exclude them — slight weighting only.
+- Dump each chosen unit's full text block (id, name, kern, mastery_target, exam_codes, aspects, terms, procedure, pitfalls) into `<UNIT-DUMPS>`.
+- Substitute `<OUTPUT-PATH>`.
+
 **For `probe-questions`:**
 - Substitute `<RUNNER-PROVIDES-PATH>` with the per-run scratch path.
 - No other parameters — the prompt is fixed.
 
-### 3. Launch all 3 subagents in parallel
+### 3. Launch all 4 subagents in parallel
 
-In a single message with three Agent tool calls (subagent_type: `general-purpose`), each with `run_in_background: true`. The three prompts are sent verbatim from the prompt files (with substitutions applied). Each subagent writes its output to its assigned scratch path under `/tmp/claude-work/qc-YYYY-MM-DD/`.
+In a single message with four Agent tool calls (subagent_type: `general-purpose`), each with `run_in_background: true`. The four prompts are sent verbatim from the prompt files (with substitutions applied). Each subagent writes its output to its assigned scratch path under `/tmp/claude-work/qc-YYYY-MM-DD/`.
 
-### 4. Wait for all three completions
+### 4. Wait for all four completions
 
 The system notifies as each subagent finishes. Do NOT poll. Continue with other work or simply wait.
 
@@ -79,6 +86,7 @@ For each subagent's output:
 - **`probe-questions`**: For each of the 7 questions, find the closest catalog unit by fuzzy-matching `Hoofdvaardigheid` against unit `name + kern`. For matches, walk the `needs` tree (use the inline node script template below). For non-matches, flag as a gap.
 - **`exam-derived-skills`**: For each opgave, same fuzzy-match + tree walk per opgave's `Hoofdvaardigheid`.
 - **`tree-integrity-audit`**: Read the agent's per-unit verdicts directly. No tree walking needed — the agent already audited.
+- **`foundation-audit`**: Read the agent's per-unit verdicts directly. No tree walking. For each RED verdict, record the mint-voorstel in the "Recommended fixes" rollup as a candidate new L0 unit with the agent's proposed title.
 
 **Tree walk template (inline node):**
 ```javascript
@@ -119,6 +127,9 @@ At `reports/qc/qc-run-YYYY-MM-DD.md`. Structure:
 
 ## Test 3 — Tree-integrity audit
 <the agent's per-unit output, lightly cleaned>
+
+## Test 4 — Foundation audit (bottom-up L0 check)
+<the agent's per-unit output: verdict GREEN/YELLOW/RED, ontbrekende voorkennis, mint-voorstel>
 
 ---
 
