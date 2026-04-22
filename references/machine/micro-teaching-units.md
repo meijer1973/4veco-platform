@@ -917,6 +917,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - generator: GEN_A41
 
 ### A42 Grafische verschuiving met voor-en-na pijlen
+- layer: 1
 - kern: "Teken een grafische verschuiving (vraag- of aanbodcurve) met zowel de oude als de nieuwe curve, gelabeld D / D' of S / S', en geef de richting aan met pijlen tussen de oude en nieuwe positie."
 - needs: []
 - exam_codes: [A2.15]
@@ -971,6 +972,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - generator: GEN_A44
 
 ### B01 Schaarste als kerneconomisch probleem
+- layer: 1
 - kern: "Herken schaarste als de basisvoorwaarde van alle economische keuzes: middelen (tijd, geld, grondstoffen) zijn beperkt terwijl wensen onbeperkt zijn, waardoor keuzes onvermijdelijk zijn."
 - needs: []
 - mastery_target: understand
@@ -1012,6 +1014,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
   4. Controleer de eenheid (bijvoorbeeld euro's per periode)
 
 ### D02 Constante kosten en winst
+- layer: 1
 - kern: "Constante kosten beïnvloeden break-even analyse maar niet het MO = MK optimum."
 - needs: []
 - exam_codes: [D1.16, D1.21]
@@ -1036,6 +1039,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
   5. Interpreteer wie het surplusverlies draagt
 
 ### D04 Elasticiteit en goederenclassificatie
+- layer: 1
 - kern: "Gebruik inkomenselasticiteit om goederen te classificeren als inferieur, normaal of luxe."
 - needs: []
 - exam_codes: [D1.7, D1.8]
@@ -1060,6 +1064,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
   5. Bereken accijnsopbrengst = t × Q*
 
 ### D06 Vraagreactie via prijselasticiteit interpreteren
+- layer: 1
 - kern: "Gebruik de prijselasticiteit van de vraag (Ev) om te voorspellen hoe Qv reageert op een prijsverandering en verklaar het resultaat in context."
 - needs: []
 - exam_codes: [D1.3]
@@ -1099,6 +1104,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
   5. Verwoord een conclusie: werkt de heffing voldoende, en welke rol speelt de (in)elasticiteit van de vraag
 
 ### D09 Homogene en heterogene goederen
+- layer: 1
 - kern: "Homogene goederen zijn identiek; heterogene goederen verschillen in kwaliteit of kenmerken."
 - needs: []
 - exam_codes: [D2.1]
@@ -1108,6 +1114,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - terms: [homogeen goed, heterogene goederen]
 
 ### D10 Vraag/aanbod-verschuiving bij conjunctuurschok
+- layer: 1
 - kern: "Analyseer hoe een conjunctuurschok de collectieve vraaglijn of aanbodlijn verschuift en wat dit doet met evenwichtsprijs en -hoeveelheid."
 - needs: []
 - exam_codes: [D1.24, D1.4b]
@@ -1153,6 +1160,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
   5. Leg uit in welke richting de vraaglijn van A verschuift bij een prijsverandering van B
 
 ### D13 Kostenstijging en aanbodverschuiving
+- layer: 1
 - kern: "Analyseer hoe een stijging van productiekosten (zoals loon per eenheid product) de collectieve aanbodlijn verschuift en doorwerkt in evenwichtsprijs."
 - needs: []
 - exam_codes: [D1.12, D1.24]
@@ -1184,6 +1192,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
   5. Vergelijk de situatie met en zonder ingrijpen en formuleer een onderbouwd verdict: is ingrijpen gerechtvaardigd, en zo ja welke vorm heeft de voorkeur
 
 ### D15 Marktvormen classificeren
+- layer: 1
 - kern: "Classificeer markten aan hand van aantal aanbieders, aard van goederen en toetreding."
 - needs: []
 - exam_codes: [D2.1]
@@ -1193,6 +1202,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - terms: [marktvormen]
 
 ### D16 Minimumprijs en werkloosheid
+- layer: 1
 - kern: "Minimumloon boven marktloon veroorzaakt vraagoverschot van arbeid en werkloosheid."
 - needs: []
 - exam_codes: [D3.10, H5.2]
@@ -1279,6 +1289,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - deprecated_in_favor_of: [D24]
 
 ### D24 Drie voorwaarden prijsdiscriminatie
+- layer: 1
 - kern: "Leg uit de drie voorwaarden voor prijsdiscriminatie: voldoende marktmacht, scheidbare deelmarkten met verschillende prijselasticiteiten en betalingsbereidheid."
 - needs: []
 - exam_codes: [D2.3]
@@ -1306,6 +1317,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - terms: [variabele kosten]
 
 ### D27 Substituten en complementen
+- layer: 1
 - kern: "Substituten vervangen elkaar; complementen worden samen gebruikt."
 - needs: []
 - exam_codes: [D1.9]
@@ -1366,6 +1378,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
   - Bij inflatievragen altijd A38 toepassen op de indexwaarden, niet het verschil gebruiken.
 
 ### D32 Verschuiving versus beweging langs de curve
+- layer: 1
 - kern: "Onderscheid een beweging langs de vraag- of aanbodcurve (veroorzaakt door eigen-prijsverandering) van een verschuiving van de curve (veroorzaakt door een andere factor dan eigen prijs)."
 - needs: []
 - exam_codes: [D1.4a, D1.4b]
@@ -1402,6 +1415,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
   - Vergeten te controleren of de regulering bindend is voordat je welvaartsberekeningen start.
 
 ### D35 Betalingsbereidheid definiëren
+- layer: 1
 - kern: "Definieer betalingsbereidheid als de maximale prijs die een consument bereid is te betalen voor één extra eenheid van een goed; deze kan dalen naarmate meer eenheden al gekocht zijn."
 - needs: []
 - exam_codes: [D1.1]
@@ -1458,6 +1472,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
   5. Verwoord welke generatie voor- of nadeel heeft bij een schok (bv. vergrijzing of recessie)
 
 ### E02 Intertemporele ruil in pensioenstelsels
+- layer: 1
 - kern: "Leg uit hoe pensioenen ruil over tijd vertegenwoordigen."
 - needs: []
 - exam_codes: [E1.1]
@@ -1506,6 +1521,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
   5. Beoordeel of de korting de solidariteit tussen generaties versterkt of ondermijnt en onderbouw de conclusie
 
 ### E06 Voorraad- en stroomgrootheden onderscheiden
+- layer: 1
 - kern: "Onderscheid tussen voorraad- en stroomgrootheden."
 - needs: []
 - exam_codes: [E1.8]
@@ -1530,6 +1546,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
   5. Vergelijk de netto woonlasten systematisch per categorie en concludeer onder welke voorwaarden kopen goedkoper is dan huren
 
 ### F01 Berovingsprobleem herkennen
+- layer: 1
 - kern: "Bij relatiespecifieke investeringen loopt de investerende partij het risico dat de ander na de investering het contract heronderhandelt of verbreekt."
 - needs: []
 - exam_codes: [F2.1]
@@ -1539,6 +1556,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - terms: [berovingsprobleem, contracten en prikkels, investeringen, risico]
 
 ### F02 Collectief goed classificeren
+- layer: 1
 - kern: "Herken collectieve goederen aan hand van excludeerbaarheid en rivaliteit."
 - needs: []
 - exam_codes: [F2.2]
@@ -1548,6 +1566,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - terms: [collectieve goederen]
 
 ### F03 Dominante strategie
+- layer: 1
 - kern: "Dominante strategie is de beste keuze voor een speler ongeacht wat de ander doet."
 - needs: []
 - exam_codes: [F1.5]
@@ -1590,6 +1609,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - terms: [externe effecten, heffingen]
 
 ### F07 Overproductie bij negatieve externe effecten
+- layer: 1
 - kern: "Bij negatieve externe effecten liggen de maatschappelijke kosten hoger dan de private kosten, waardoor de markt meer produceert dan maatschappelijk optimaal is."
 - needs: []
 - exam_codes: [F2.4]
@@ -1674,6 +1694,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
   5. Beoordeel wanneer ingrijpen maatschappelijk gewenst is: weeg de vermeden externe schade af tegen de kosten van de interventie
 
 ### F15 Verzonken kosten negeren in beslissingen
+- layer: 1
 - kern: "Verzonken kosten zijn niet terugvorderbare uitgaven uit het verleden en horen geen rol te spelen in toekomstgerichte beslissingen; alleen toekomstige opbrengsten en kosten tellen mee."
 - needs: []
 - exam_codes: [F2.1]
@@ -1683,6 +1704,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - terms: [verzonken kosten]
 
 ### F16 MPC–MSC en MPB–MSB onderscheiden
+- layer: 1
 - kern: "Onderscheid private van sociale marginale kosten/opbrengsten: bij een negatief extern effect is MSC = MPC + externe kost/eenheid, bij een positief extern effect is MSB = MPB + externe baat/eenheid."
 - needs: []
 - exam_codes: [F2.4]
@@ -1774,6 +1796,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - terms: [contracten en prikkels, principaal-agentrelatie]
 
 ### G06 Principaal-agentprobleem identificeren
+- layer: 1
 - kern: "Identificeer principaal-agentrelaties en de problemen die daaruit voortvloeien."
 - needs: []
 - exam_codes: [G3.2]
@@ -1783,6 +1806,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - terms: [contracten en prikkels, principaal-agentrelatie]
 
 ### G07 Transactiekosten berekenen en interpreteren
+- layer: 1
 - kern: "Bereken de totale transactiekosten van een ruil door zoek-, onderhandel- en controlekosten bij elkaar op te tellen en beoordeel of de ruil na aftrek nog rendabel is."
 - needs: []
 - exam_codes: [G2.1]
@@ -1797,6 +1821,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
   4. Concludeer of de ruil rendabel is (netto voordeel > 0) en benoem welke kostenpost doorslaggevend is
 
 ### G08 Risicodeling via gemeenschappelijk fonds
+- layer: 1
 - kern: "Een gemeenschappelijk fonds vlakt individuele risico's uit door premies te bundelen en kostenverschillen tussen deelnemers te compenseren."
 - needs: []
 - exam_codes: [G3.3]
@@ -1815,6 +1840,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - terms: [bonus-malussysteem, collectieve verzekering, risico]
 
 ### G10 Informatieasymmetrie verzekeringsmarkt
+- layer: 1
 - kern: "Informatieongelijkheid tussen verzekeraar en klant kan selectie- en moraalrisicoproblemen veroorzaken."
 - needs: []
 - exam_codes: [G2.2]
@@ -1824,6 +1850,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - terms: [informatieasymmetrie]
 
 ### G11 Wisselkoersrisico bij internationale handel
+- layer: 1
 - kern: "Bij betalingen in vreemde valuta leidt een ongunstige wisselkoersverandering tussen contractmoment en betalingsmoment tot lagere reële opbrengsten voor de exporteur of hogere kosten voor de importeur."
 - needs: []
 - exam_codes: [G2.1]
@@ -1851,6 +1878,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
   - Opslag vergeten — zonder opslag dekt de premie alleen de actuariële verwachting, niet de bedrijfskosten.
 
 ### H01 AOW-leeftijd als houdbaarheidsinstrument
+- layer: 1
 - kern: "Leg uit hoe een hogere AOW-leeftijd via premiegrondslag en uitkeringsduur de houdbaarheid van het AOW-stelsel verbetert bij vergrijzing."
 - needs: []
 - exam_codes: [H5.1]
@@ -1906,6 +1934,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
   6. Bereken eventueel gemiddeld tarief = totale belasting / belastbaar inkomen × 100%
 
 ### H05 Circulaire economie in groen bbp
+- layer: 1
 - kern: "Leg uit hoe circulaire productie via minder milieuschade en minder grondstofgebruik het groen bbp per hoofd verhoogt."
 - needs: []
 - exam_codes: [H3.4]
@@ -1963,6 +1992,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
   5. Concludeer of het instrument feitelijk protectionistisch werkt en onder welke voorwaarden dat gerechtvaardigd is
 
 ### H10 Gini-coefficient bij recessie
+- layer: 1
 - kern: "Gini-coefficient stijgt tijdens recessie door werkloosheidsconcentratie en toename inkomensongelijkheid."
 - needs: []
 - exam_codes: [H4.1]
@@ -1990,6 +2020,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - terms: [staatsschuld]
 
 ### H13 Minimumuurloon: kostenkanaal naar concurrentiepositie
+- layer: 1
 - kern: "Redeneer via het kostenkanaal hoe een hoger minimumuurloon de internationale concurrentiepositie kan verslechteren."
 - needs: []
 - exam_codes: [H1.1]
@@ -2005,6 +2036,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
   5. Concludeer met een verdict over de internationale concurrentiepositie, met een expliciete ceteris-paribus-aanname
 
 ### H14 Minimumuurloon: vraagkanaal naar bbp-groei
+- layer: 1
 - kern: "Redeneer via het bestedingskanaal hoe een hoger minimumuurloon de consumptie en daarmee de bbp-groei kan verhogen."
 - needs: []
 - exam_codes: [H1.1]
@@ -2020,7 +2052,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
   5. Concludeer of en onder welke voorwaarden het vraagkanaal tot hogere bbp-groei leidt
 
 ### H15 Nominale rente op staatsobligaties verklaren
-- layer: 3
+- layer: 4
 - kern: "Verklaar bewegingen in de nominale rente op staatsobligaties vanuit vraag-en-aanbod op de obligatiemarkt en risicoperceptie."
 - needs: [H30, H31]
 - exam_codes: [H1.2]
@@ -2030,6 +2062,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - terms: [obligaties, rente, risico]
 
 ### H16 Soepeler ontslagrecht en werkgeversrisico
+- layer: 1
 - kern: "Leg uit hoe versoepeling van ontslagrecht het aannamerisico voor werkgevers verlaagt en het effect op werkgelegenheid beredeneer."
 - needs: []
 - exam_codes: [H5.1]
@@ -2081,6 +2114,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - terms: [primair inkomen]
 
 ### H21 Staatsschuldquote berekenen
+- layer: 1
 - kern: "Bereken staatsschuldquote = staatsschuld / bbp x 100% en bepaal drempels voor duurzaamheid."
 - needs: []
 - exam_codes: [H5.1]
@@ -2120,6 +2154,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - terms: [arbeidsaanbod, marginaal tarief, uitverdieneffecten]
 
 ### H24 Wisselkoers en depreciatie
+- layer: 1
 - kern: "Bereken wisselkoerseffecten van depreciatie en leg uit hoe deze reële inkomens beïnvloeden."
 - needs: []
 - exam_codes: [H1.1]
@@ -2160,7 +2195,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - deprecated_in_favor_of: [E07]
 
 ### H27 Productiefunctie Y = A·f(K, L) toepassen
-- layer: 2
+- layer: 3
 - kern: "Pas de productiefunctie Y = A·f(K, L) toe: verklaar hoe groei in kapitaal K, arbeid L en totale factorproductiviteit A bijdraagt aan lange-termijn productie; herken afnemend grensproduct wanneer K óf L alleen toeneemt."
 - needs: [H17]
 - exam_codes: [H2.1, H2.2, H2.3]
@@ -2196,7 +2231,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
   - Lopende rekening verwarren met financiële rekening — financiële rekening registreert vermogensstromen, niet reële stromen.
 
 ### H29 Obligatie als verhandelbaar schuldpapier
-- layer: 0
+- layer: 1
 - kern: "Benoem wat een obligatie is — een verhandelbaar schuldpapier met vaste nominale waarde, couponrente en looptijd — en onderscheid de primaire markt (emissie/veiling door de uitgever) van de secundaire markt (handel tussen beleggers)."
 - needs: []
 - exam_codes: [H1.2]
@@ -2209,7 +2244,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
   - Emittent-perspectief (overheid of bedrijf leent door uitgifte) verwarren met beleggers-perspectief (belegger koopt schuldpapier) — op de secundaire markt staan twee beleggers tegenover elkaar, niet de uitgever.
 
 ### H30 Vraag en aanbod op de obligatiemarkt
-- layer: 1
+- layer: 2
 - kern: "Leg uit hoe vraag en aanbod op de secundaire obligatiemarkt samen de obligatiekoers bepalen. Noem de drie belangrijkste demand-shifters (risicoperceptie, alternatieve rendementen, inflatieverwachting) en de belangrijkste supply-shifter (nieuwe uitgiften door overheid of bedrijven)."
 - needs: [H29, D32]
 - exam_codes: [H1.2]
@@ -2223,7 +2258,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
   - Denken dat de overheid de rente op haar obligaties direct vaststelt — de effectieve rente volgt uit de veilingkoers die beleggers bereid zijn te bieden.
 
 ### H31 Inverse relatie obligatiekoers en rente
-- layer: 2
+- layer: 3
 - kern: "Leg uit dat obligatiekoers en effectief rendement omgekeerd bewegen: bij gelijke couponstroom betekent een hogere aankoopkoers een lager effectief rendement, en omgekeerd."
 - needs: [H29, H30]
 - exam_codes: [H1.2]
@@ -2237,6 +2272,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
   - Aannemen dat het koerseffect voor elke obligatie even groot is — bij langlopend papier is het rendementseffect van een koersschommeling veel groter dan bij kortlopend papier.
 
 ### I01 Anticyclisch begrotingsbeleid
+- layer: 1
 - kern: "Beschrijf hoe de overheid in laagconjunctuur bestedingen verhoogt of belastingen verlaagt en in hoogconjunctuur het omgekeerde doet om de conjunctuurcyclus af te vlakken."
 - needs: []
 - exam_codes: [I2.1]
@@ -2264,6 +2300,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - terms: [effectieve ondergrens nominale rente, investeringen]
 
 ### I04 CAO-looptijd en loonrigiditeit
+- layer: 1
 - kern: "Leg uit hoe langere CAO-looptijden loonaanpassingen vertragen en daarmee de flexibiliteit van de arbeidsmarkt en de effectiviteit van conjunctuurbeleid beïnvloeden."
 - needs: []
 - exam_codes: [I4.4]
@@ -2287,6 +2324,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
   4. Verwoord het besluit met verwijzing naar het mandaat en de waargenomen afwijkingen.
 
 ### I06 Deflatiespiraal
+- layer: 1
 - kern: "Leg uit hoe dalende prijzen consumenten en bedrijven aanzetten tot uitstel van bestedingen en investeringen, waardoor de laagconjunctuur zichzelf versterkt."
 - needs: []
 - exam_codes: [I1.1]
@@ -2342,6 +2380,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
   6. Let op eenheden en periode: gebruik jaar-op-jaar percentages en consistente valuta
 
 ### I10 Loonrigiditeit en helling GA-curve
+- layer: 1
 - kern: "Leg uit hoe starre lonen leiden tot een vlakkere GA-curve op korte termijn en hoe flexibele lonen de curve steiler maken."
 - needs: []
 - exam_codes: [I4.4]
@@ -2392,6 +2431,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
   5. Concludeer dat elke keuze van twee doelen het derde uitsluit en plaats een concreet land in het schema (bv. Nederland binnen de muntunie)
 
 ### I14 Multiplier en lekkages
+- layer: 1
 - kern: "Leg uit hoe een toename van autonome bestedingen via de multiplier een groter inkomenseffect oproept en hoe belastingen, spaarneiging en import als lekkages de multiplier verkleinen."
 - needs: []
 - exam_codes: [I4.1]
@@ -2465,6 +2505,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
   - De causaliteit omkeren: rente → kapitaalstromen → wisselkoers, niet andersom in deze eerste-orde redenering.
 
 ### L01 Waarde marginaal product (VMP)
+- layer: 1
 - kern: "Bereken VMP = marginaal product × prijs per eenheid output uit een tabel met aflopende marginale productiviteit, en gebruik VMP als grens voor de individuele arbeidsvraag."
 - needs: []
 - exam_codes: [H5.1]
@@ -2495,6 +2536,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
   - Vergeten dat VMP afneemt: de eerste werkende verdient wel boven W, de vijfde misschien niet.
 
 ### L03 Afgeleide vraag (derived demand)
+- layer: 1
 - kern: "Leg uit waarom de vraag naar arbeid een afgeleide vraag is: werkgevers vragen arbeid omdat consumenten de eindproducten willen kopen, niet omdat arbeid zelf gewenst is."
 - needs: []
 - exam_codes: [H5.1]
@@ -2521,6 +2563,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
   - Assen omwisselen of loon op de horizontale as plaatsen — economische conventie is W verticaal.
 
 ### L05 Beroepsbevolking, niet-beroepsbevolking, werkloze beroepsbevolking
+- layer: 1
 - kern: "Definieer beroepsbevolking (iedereen van 15–75 die werkt of werk zoekt), niet-beroepsbevolking (wel die leeftijd maar werkt niet en zoekt geen werk) en werkloze beroepsbevolking (zoekt werk, heeft nog geen baan)."
 - needs: []
 - exam_codes: [H5.1]
@@ -2573,6 +2616,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
   - Denken dat participatiegraad alleen van demografie afhangt — lonen en beleid verplaatsen mensen tussen beroepsbevolking en niet-beroepsbevolking.
 
 ### L09 Krappe versus ruime arbeidsmarkt
+- layer: 1
 - kern: "Herken een krappe arbeidsmarkt (arbeidsvraag > arbeidsaanbod, oplopende lonen) versus een ruime arbeidsmarkt (arbeidsaanbod > arbeidsvraag, dalende lonen en oplopende werkloosheid)."
 - needs: []
 - exam_codes: [H5.1]
@@ -2600,6 +2644,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
   - Vergeten dat op de arbeidsmarkt werkenden aanbod leveren en bedrijven vraag hebben — de namen zijn omgekeerd aan de goederenmarkt.
 
 ### L11 Conjuncturele werkloosheid
+- layer: 1
 - kern: "Definieer conjuncturele werkloosheid als werkloosheid door tekortschietende bestedingen tijdens laagconjunctuur; verdwijnt als de economie herstelt."
 - needs: []
 - exam_codes: [H5.2]
@@ -2611,6 +2656,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
   - Conjuncturele werkloosheid verwarren met structurele — conjunctureel is tijdelijk en keert om bij herstel.
 
 ### L12 Structurele werkloosheid
+- layer: 1
 - kern: "Definieer structurele werkloosheid als werkloosheid door blijvende mismatch tussen vaardigheden en vraag (bijvoorbeeld door automatisering of sectorverschuiving); blijft bestaan zonder gericht beleid."
 - needs: []
 - exam_codes: [H5.2, H5.3]
@@ -2622,6 +2668,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
   - Denken dat conjunctuurherstel structurele werkloosheid oplost — zonder herscholing blijft de mismatch bestaan.
 
 ### L13 Frictiewerkloosheid
+- layer: 1
 - kern: "Definieer frictiewerkloosheid als kortdurende werkloosheid tijdens het zoeken naar een nieuwe baan; is normaal en zelfs gezond op een dynamische arbeidsmarkt."
 - needs: []
 - exam_codes: [H5.2, H5.3]
@@ -2660,7 +2707,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
   - Fiscale stimulus inzetten tegen structurele werkloosheid — werkt niet, want het probleem is mismatch, geen vraag-tekort.
 
 ### L16 Werknemers- en werkgeverssurplus bij minimumloon
-- kern: "Bereken werknemerssurplus (arbeidsmarkt-CS) en werkgeverssurplus (arbeidsmarkt-PS) voor en na invoering van een minimumloon; identificeer welvaartsverlies als de \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"verloren driehoek\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\" bij W_min > W*."
+- kern: "Bereken werknemerssurplus (arbeidsmarkt-CS) en werkgeverssurplus (arbeidsmarkt-PS) voor en na invoering van een minimumloon; identificeer welvaartsverlies als de \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"verloren driehoek\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\" bij W_min > W*."
 - needs: [A02, A04, A06, A10, A19, L10]
 - exam_codes: [A2.16, D3.10, H5.2]
 - mastery_target: apply
@@ -2677,6 +2724,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
   - Qa gebruiken als daadwerkelijke werkgelegenheid bij W_min > W* — de korte zijde (Qd) bepaalt hoeveel banen er zijn.
 
 ### L17 CAO als bindende loonafspraak
+- layer: 1
 - kern: "Leg uit dat een CAO (collectieve arbeidsovereenkomst) dat lonen boven het evenwichtsloon afspreekt werkt als een bindend minimumloon voor de gehele sector, met werkloosheid als gevolg."
 - needs: []
 - exam_codes: [H5.1, D3.10]
@@ -2688,6 +2736,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
   - Denken dat CAO alleen loonhoogte betreft — CAO legt ook arbeidsvoorwaarden vast, maar het economische effect is vooral de loonvloer.
 
 ### L18 Voordelen en nadelen van vakbonden
+- layer: 1
 - kern: "Noem voordelen van vakbonden voor werkenden (hogere lonen, betere voorwaarden, collectieve onderhandelingsmacht) en nadelen (hogere loonkosten voor werkgevers, lagere werkgelegenheid, insiders vs outsiders)."
 - needs: []
 - exam_codes: [H5.1]
@@ -2699,6 +2748,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
   - Alleen voor- of alleen nadelen noemen — het is een trade-off; goede antwoorden benoemen beide kanten.
 
 ### L19 Loonstarheid
+- layer: 1
 - kern: "Definieer loonstarheid als de neiging van lonen om traag (vooral omlaag) aan te passen aan veranderingen in arbeidsmarkt-omstandigheden, met als gevolg persistente werkloosheid na een negatieve schok."
 - needs: []
 - exam_codes: [H5.3, A4.5]

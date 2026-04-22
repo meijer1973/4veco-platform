@@ -1368,7 +1368,7 @@
     "id": "A42",
     "name": "Grafische verschuiving met voor-en-na pijlen",
     "category": "vaardigheden",
-    "layer": 0,
+    "layer": 1,
     "kern": "Teken een grafische verschuiving (vraag- of aanbodcurve) met zowel de oude als de nieuwe curve, gelabeld D / D' of S / S', en geef de richting aan met pijlen tussen de oude en nieuwe positie.",
     "needs": [],
     "exam_codes": [
@@ -1424,7 +1424,7 @@
     "id": "A44",
     "name": "Individuele stapfunctie-vraagcurve tekenen uit betalingsbereidheid",
     "category": "vaardigheden",
-    "layer": 1,
+    "layer": 2,
     "kern": "Teken de individuele vraagcurve van één consument als een stapfunctie: voor elke eenheid een horizontale stap op de hoogte van de betalingsbereidheid voor die eenheid.",
     "needs": [
       "D35"
@@ -1457,7 +1457,7 @@
     "id": "B01",
     "name": "Schaarste als kerneconomisch probleem",
     "category": "schaarste",
-    "layer": 0,
+    "layer": 1,
     "kern": "Herken schaarste als de basisvoorwaarde van alle economische keuzes: middelen (tijd, geld, grondstoffen) zijn beperkt terwijl wensen onbeperkt zijn, waardoor keuzes onvermijdelijk zijn.",
     "needs": [],
     "mastery_target": "understand",
@@ -1477,7 +1477,7 @@
     "id": "B02",
     "name": "Alternatieve kosten in een keuze-situatie",
     "category": "schaarste",
-    "layer": 1,
+    "layer": 2,
     "kern": "Identificeer de alternatieve kosten van een keuze als de opbrengst van het beste niet-gekozen alternatief, en bereken deze expliciet wanneer de cijfers gegeven zijn.",
     "needs": [
       "B01"
@@ -1536,7 +1536,7 @@
     "id": "D02",
     "name": "Constante kosten en winst",
     "category": "markt",
-    "layer": 0,
+    "layer": 1,
     "kern": "Constante kosten beïnvloeden break-even analyse maar niet het MO = MK optimum.",
     "needs": [],
     "exam_codes": [
@@ -1589,7 +1589,7 @@
     "id": "D04",
     "name": "Elasticiteit en goederenclassificatie",
     "category": "markt",
-    "layer": 0,
+    "layer": 1,
     "kern": "Gebruik inkomenselasticiteit om goederen te classificeren als inferieur, normaal of luxe.",
     "needs": [],
     "exam_codes": [
@@ -1641,7 +1641,7 @@
     "id": "D06",
     "name": "Vraagreactie via prijselasticiteit interpreteren",
     "category": "markt",
-    "layer": 0,
+    "layer": 1,
     "kern": "Gebruik de prijselasticiteit van de vraag (Ev) om te voorspellen hoe Qv reageert op een prijsverandering en verklaar het resultaat in context.",
     "needs": [],
     "exam_codes": [
@@ -1718,7 +1718,7 @@
     "id": "D09",
     "name": "Homogene en heterogene goederen",
     "category": "markt",
-    "layer": 0,
+    "layer": 1,
     "kern": "Homogene goederen zijn identiek; heterogene goederen verschillen in kwaliteit of kenmerken.",
     "needs": [],
     "exam_codes": [
@@ -1738,7 +1738,7 @@
     "id": "D10",
     "name": "Vraag/aanbod-verschuiving bij conjunctuurschok",
     "category": "markt",
-    "layer": 0,
+    "layer": 1,
     "kern": "Analyseer hoe een conjunctuurschok de collectieve vraaglijn of aanbodlijn verschuift en wat dit doet met evenwichtsprijs en -hoeveelheid.",
     "needs": [],
     "exam_codes": [
@@ -1825,7 +1825,7 @@
     "id": "D13",
     "name": "Kostenstijging en aanbodverschuiving",
     "category": "markt",
-    "layer": 0,
+    "layer": 1,
     "kern": "Analyseer hoe een stijging van productiekosten (zoals loon per eenheid product) de collectieve aanbodlijn verschuift en doorwerkt in evenwichtsprijs.",
     "needs": [],
     "exam_codes": [
@@ -1886,7 +1886,7 @@
     "id": "D15",
     "name": "Marktvormen classificeren",
     "category": "markt",
-    "layer": 0,
+    "layer": 1,
     "kern": "Classificeer markten aan hand van aantal aanbieders, aard van goederen en toetreding.",
     "needs": [],
     "exam_codes": [
@@ -1905,7 +1905,7 @@
     "id": "D16",
     "name": "Minimumprijs en werkloosheid",
     "category": "markt",
-    "layer": 0,
+    "layer": 1,
     "kern": "Minimumloon boven marktloon veroorzaakt vraagoverschot van arbeid en werkloosheid.",
     "needs": [],
     "exam_codes": [
@@ -2102,7 +2102,7 @@
     "id": "D24",
     "name": "Drie voorwaarden prijsdiscriminatie",
     "category": "markt",
-    "layer": 0,
+    "layer": 1,
     "kern": "Leg uit de drie voorwaarden voor prijsdiscriminatie: voldoende marktmacht, scheidbare deelmarkten met verschillende prijselasticiteiten en betalingsbereidheid.",
     "needs": [],
     "exam_codes": [
@@ -2166,7 +2166,7 @@
     "id": "D27",
     "name": "Substituten en complementen",
     "category": "markt",
-    "layer": 0,
+    "layer": 1,
     "kern": "Substituten vervangen elkaar; complementen worden samen gebruikt.",
     "needs": [],
     "exam_codes": [
@@ -2297,7 +2297,7 @@
     "id": "D32",
     "name": "Verschuiving versus beweging langs de curve",
     "category": "markt",
-    "layer": 0,
+    "layer": 1,
     "kern": "Onderscheid een beweging langs de vraag- of aanbodcurve (veroorzaakt door eigen-prijsverandering) van een verschuiving van de curve (veroorzaakt door een andere factor dan eigen prijs).",
     "needs": [],
     "exam_codes": [
@@ -2320,7 +2320,7 @@
     "id": "D33",
     "name": "Vraag- en aanbodverschuivingsfactoren benoemen",
     "category": "markt",
-    "layer": 1,
+    "layer": 2,
     "kern": "Noem en herken de standaard verschuivingsfactoren: voor vraag (inkomen, voorkeuren, prijzen substituten/complementen, verwachtingen) en voor aanbod (inputprijzen, technologie, aantal aanbieders, verwachtingen, overheidsbeleid).",
     "needs": [
       "D32"
@@ -2368,7 +2368,7 @@
     "id": "D35",
     "name": "Betalingsbereidheid definiëren",
     "category": "markt",
-    "layer": 0,
+    "layer": 1,
     "kern": "Definieer betalingsbereidheid als de maximale prijs die een consument bereid is te betalen voor één extra eenheid van een goed; deze kan dalen naarmate meer eenheden al gekocht zijn.",
     "needs": [],
     "exam_codes": [
@@ -2391,7 +2391,7 @@
     "id": "D36",
     "name": "Beslisregel: koop als P ≤ betalingsbereidheid",
     "category": "markt",
-    "layer": 1,
+    "layer": 2,
     "kern": "Pas de consumentenbeslissingsregel toe: een consument koopt een extra eenheid precies dan wanneer zijn betalingsbereidheid voor die eenheid ≥ de marktprijs P; gebruik dit om de individuele vraag bij een gegeven P te bepalen.",
     "needs": [
       "D35"
@@ -2424,7 +2424,7 @@
     "id": "D37",
     "name": "Wet van de vraag verbaal uitleggen",
     "category": "markt",
-    "layer": 2,
+    "layer": 3,
     "kern": "Leg uit waarom de vraagcurve dalend is: bij een lagere prijs vinden meer consumenten het waardevol om te kopen (hun betalingsbereidheid overschrijdt de prijs), en individuele consumenten zijn bereid meer eenheden te kopen doordat hun dalende betalingsbereidheid dan nog steeds boven P ligt.",
     "needs": [
       "D35",
@@ -2449,7 +2449,7 @@
     "id": "E01",
     "name": "Intergenerationele ruil",
     "category": "ruilen over tijd",
-    "layer": 1,
+    "layer": 2,
     "kern": "Analyseer hoe pensioenstelsels intergenerationele ruil faciliteren.",
     "needs": [
       "E02"
@@ -2477,7 +2477,7 @@
     "id": "E02",
     "name": "Intertemporele ruil in pensioenstelsels",
     "category": "ruilen over tijd",
-    "layer": 0,
+    "layer": 1,
     "kern": "Leg uit hoe pensioenen ruil over tijd vertegenwoordigen.",
     "needs": [],
     "exam_codes": [
@@ -2496,7 +2496,7 @@
     "id": "E03",
     "name": "Kapitaaldekking en renteeffecten",
     "category": "ruilen over tijd",
-    "layer": 4,
+    "layer": 5,
     "kern": "Analyseer hoe rentes de betaalbaarheid van kapitaalgedekte pensioenen onder druk zetten.",
     "needs": [
       "E02",
@@ -2527,7 +2527,7 @@
     "id": "E04",
     "name": "Omslagstelsel (AOW)",
     "category": "ruilen over tijd",
-    "layer": 2,
+    "layer": 3,
     "kern": "Omslagstelsel: werkenden betalen premie voor huidige uitkeringen; gevoelig voor vergrijzing.",
     "needs": [
       "E01",
@@ -2549,7 +2549,7 @@
     "id": "E05",
     "name": "Pensioenkorting en intergenerationele solidariteit",
     "category": "ruilen over tijd",
-    "layer": 3,
+    "layer": 4,
     "kern": "Analyseer hoe een korting op pensioenuitkeringen de solidariteit tussen jongere premiebetalers en oudere ontvangers beïnvloedt.",
     "needs": [
       "E04",
@@ -2579,7 +2579,7 @@
     "id": "E06",
     "name": "Voorraad- en stroomgrootheden onderscheiden",
     "category": "ruilen over tijd",
-    "layer": 0,
+    "layer": 1,
     "kern": "Onderscheid tussen voorraad- en stroomgrootheden.",
     "needs": [],
     "exam_codes": [
@@ -2598,7 +2598,7 @@
     "id": "E07",
     "name": "Koop- versus huurlasten vergelijken",
     "category": "ruilen over tijd",
-    "layer": 4,
+    "layer": 5,
     "kern": "Vergelijk netto woonlasten van kopen en huren door rente, aflossing, onderhoud en huurprijs systematisch tegen elkaar af te zetten.",
     "needs": [
       "E02",
@@ -2629,7 +2629,7 @@
     "id": "F01",
     "name": "Berovingsprobleem herkennen",
     "category": "samenwerken en onderhandelen",
-    "layer": 0,
+    "layer": 1,
     "kern": "Bij relatiespecifieke investeringen loopt de investerende partij het risico dat de ander na de investering het contract heronderhandelt of verbreekt.",
     "needs": [],
     "exam_codes": [
@@ -2651,7 +2651,7 @@
     "id": "F02",
     "name": "Collectief goed classificeren",
     "category": "samenwerken en onderhandelen",
-    "layer": 0,
+    "layer": 1,
     "kern": "Herken collectieve goederen aan hand van excludeerbaarheid en rivaliteit.",
     "needs": [],
     "exam_codes": [
@@ -2671,7 +2671,7 @@
     "id": "F03",
     "name": "Dominante strategie",
     "category": "samenwerken en onderhandelen",
-    "layer": 0,
+    "layer": 1,
     "kern": "Dominante strategie is de beste keuze voor een speler ongeacht wat de ander doet.",
     "needs": [],
     "exam_codes": [
@@ -2690,7 +2690,7 @@
     "id": "F04",
     "name": "Dominante strategieën in pay-off matrix",
     "category": "samenwerken en onderhandelen",
-    "layer": 1,
+    "layer": 2,
     "kern": "Identificeer dominante strategieën van beide spelers in een pay-off matrix en bepaal de uitkomst waarbij elke speler zijn dominante strategie kiest.",
     "needs": [
       "F03"
@@ -2720,7 +2720,7 @@
     "id": "F05",
     "name": "Emissierechten als prikkel",
     "category": "samenwerken en onderhandelen",
-    "layer": 3,
+    "layer": 4,
     "kern": "Verhandelbare emissierechten zetten een prijs op vervuiling, waardoor bedrijven een prikkel krijgen om uitstoot te verminderen of schoner te produceren.",
     "needs": [
       "F07",
@@ -2742,7 +2742,7 @@
     "id": "F06",
     "name": "Heffing op externe effecten als innovatieprikkel",
     "category": "samenwerken en onderhandelen",
-    "layer": 1,
+    "layer": 2,
     "kern": "Een heffing op negatieve externe effecten verhoogt de private kosten van vervuilen en geeft bedrijven daarmee een prikkel om te investeren in schonere technologie.",
     "needs": [
       "F07"
@@ -2764,7 +2764,7 @@
     "id": "F07",
     "name": "Overproductie bij negatieve externe effecten",
     "category": "samenwerken en onderhandelen",
-    "layer": 0,
+    "layer": 1,
     "kern": "Bij negatieve externe effecten liggen de maatschappelijke kosten hoger dan de private kosten, waardoor de markt meer produceert dan maatschappelijk optimaal is.",
     "needs": [],
     "exam_codes": [
@@ -2784,7 +2784,7 @@
     "id": "F08",
     "name": "Verloren surplus door negatieve externe effecten",
     "category": "samenwerken en onderhandelen",
-    "layer": 1,
+    "layer": 2,
     "kern": "Productie of consumptie voorbij het maatschappelijk optimum leidt tot verloren surplus: het verschil tussen maatschappelijke kosten en baten op de extra eenheden.",
     "needs": [
       "F07"
@@ -2807,7 +2807,7 @@
     "id": "F09",
     "name": "Gevangenendilemma",
     "category": "samenwerken en onderhandelen",
-    "layer": 1,
+    "layer": 2,
     "kern": "Situatie waarbij dominante strategie leidt tot suboptimale uitkomst voor beide spelers.",
     "needs": [
       "F03"
@@ -2829,7 +2829,7 @@
     "id": "F10",
     "name": "Internalisatie van externe effecten",
     "category": "samenwerken en onderhandelen",
-    "layer": 2,
+    "layer": 3,
     "kern": "Door de externe kosten of baten via heffing, subsidie of rechten in de prijs op te nemen, komt de marktuitkomst dichter bij het maatschappelijk optimum.",
     "needs": [
       "F07",
@@ -2853,7 +2853,7 @@
     "id": "F11",
     "name": "Lumpsum-subsidie bij positieve externe effecten",
     "category": "samenwerken en onderhandelen",
-    "layer": 3,
+    "layer": 4,
     "kern": "Een lumpsum-subsidie vergoedt de producent voor positieve externe effecten zonder de marginale beslissing te verstoren, zodat een maatschappelijk gewenste activiteit rendabel wordt.",
     "needs": [
       "F10"
@@ -2875,7 +2875,7 @@
     "id": "F12",
     "name": "Nash-evenwicht in pay-off matrix",
     "category": "samenwerken en onderhandelen",
-    "layer": 1,
+    "layer": 2,
     "kern": "Bepaal het Nash-evenwicht in een pay-off matrix: de uitkomst waarbij geen van beide spelers zijn strategie wil veranderen gegeven de keuze van de ander.",
     "needs": [
       "F03"
@@ -2906,7 +2906,7 @@
     "id": "F13",
     "name": "Berovingsprobleem op de arbeidsmarkt",
     "category": "samenwerken en onderhandelen",
-    "layer": 1,
+    "layer": 2,
     "kern": "Pas het berovingsprobleem toe op de arbeidsmarkt: kortere opzegtermijnen verhogen het risico voor werkgevers op relatiespecifieke scholingsinvesteringen, wat loonkosten en investeringsbereidheid beïnvloedt.",
     "needs": [
       "F01"
@@ -2929,7 +2929,7 @@
     "id": "F14",
     "name": "Concentratie-externaliteiten analyseren",
     "category": "samenwerken en onderhandelen",
-    "layer": 2,
+    "layer": 3,
     "kern": "Analyseer hoe ruimtelijke of sectorale concentratie van economische activiteit negatieve externe effecten versterkt en wanneer ingrijpen maatschappelijk gewenst is.",
     "needs": [
       "F08"
@@ -2957,7 +2957,7 @@
     "id": "F15",
     "name": "Verzonken kosten negeren in beslissingen",
     "category": "samenwerken en onderhandelen",
-    "layer": 0,
+    "layer": 1,
     "kern": "Verzonken kosten zijn niet terugvorderbare uitgaven uit het verleden en horen geen rol te spelen in toekomstgerichte beslissingen; alleen toekomstige opbrengsten en kosten tellen mee.",
     "needs": [],
     "exam_codes": [
@@ -2976,7 +2976,7 @@
     "id": "F16",
     "name": "MPC–MSC en MPB–MSB onderscheiden",
     "category": "samenwerken en onderhandelen",
-    "layer": 0,
+    "layer": 1,
     "kern": "Onderscheid private van sociale marginale kosten/opbrengsten: bij een negatief extern effect is MSC = MPC + externe kost/eenheid, bij een positief extern effect is MSB = MPB + externe baat/eenheid.",
     "needs": [],
     "exam_codes": [
@@ -3061,7 +3061,7 @@
     "id": "G01",
     "name": "Risicoinschatting en averechtse selectie",
     "category": "risico en informatie",
-    "layer": 2,
+    "layer": 3,
     "kern": "Betere risicoinschatting door verzekeraars vermindert informatieasymmetrie en verkleint daardoor averechtse selectie op de verzekeringsmarkt.",
     "needs": [
       "G10",
@@ -3084,7 +3084,7 @@
     "id": "G02",
     "name": "Averechtse selectie herkennen",
     "category": "risico en informatie",
-    "layer": 1,
+    "layer": 2,
     "kern": "Herken averechtse selectie als gevolg van informatieasymmetrie op markten.",
     "needs": [
       "G10"
@@ -3105,7 +3105,7 @@
     "id": "G03",
     "name": "Onderlinge risicopool zonder informatieasymmetrie",
     "category": "risico en informatie",
-    "layer": 1,
+    "layer": 2,
     "kern": "In een kleine, vertrouwde risicopool ontbreekt informatieasymmetrie omdat deelnemers elkaars risicoprofiel kennen, waardoor averechtse selectie en moreel wangedrag beperkt blijven.",
     "needs": [
       "G10"
@@ -3128,7 +3128,7 @@
     "id": "G04",
     "name": "Eigen risico en moral hazard",
     "category": "risico en informatie",
-    "layer": 1,
+    "layer": 2,
     "kern": "Eigen risico geeft verzekerden een prikkel om voorzichtiger te handelen.",
     "needs": [
       "G10"
@@ -3151,7 +3151,7 @@
     "id": "G05",
     "name": "Belangentegenstelling in principaal-agentrelatie",
     "category": "risico en informatie",
-    "layer": 1,
+    "layer": 2,
     "kern": "In een principaal-agentrelatie verschillen de belangen van principaal en agent, waardoor de agent keuzes kan maken die ten koste gaan van de principaal.",
     "needs": [
       "G06"
@@ -3173,7 +3173,7 @@
     "id": "G06",
     "name": "Principaal-agentprobleem identificeren",
     "category": "risico en informatie",
-    "layer": 0,
+    "layer": 1,
     "kern": "Identificeer principaal-agentrelaties en de problemen die daaruit voortvloeien.",
     "needs": [],
     "exam_codes": [
@@ -3193,7 +3193,7 @@
     "id": "G07",
     "name": "Transactiekosten berekenen en interpreteren",
     "category": "risico en informatie",
-    "layer": 0,
+    "layer": 1,
     "kern": "Bereken de totale transactiekosten van een ruil door zoek-, onderhandel- en controlekosten bij elkaar op te tellen en beoordeel of de ruil na aftrek nog rendabel is.",
     "needs": [],
     "exam_codes": [
@@ -3219,7 +3219,7 @@
     "id": "G08",
     "name": "Risicodeling via gemeenschappelijk fonds",
     "category": "risico en informatie",
-    "layer": 0,
+    "layer": 1,
     "kern": "Een gemeenschappelijk fonds vlakt individuele risico's uit door premies te bundelen en kostenverschillen tussen deelnemers te compenseren.",
     "needs": [],
     "exam_codes": [
@@ -3239,7 +3239,7 @@
     "id": "G09",
     "name": "Gepersonaliseerde premies ondermijnen solidariteit",
     "category": "risico en informatie",
-    "layer": 1,
+    "layer": 2,
     "kern": "Premies gebaseerd op individuele risicoprofielen verkleinen de herverdeling tussen lage- en hogerrisicogroepen en ondermijnen zo de solidariteit in een collectieve verzekering.",
     "needs": [
       "G08"
@@ -3262,7 +3262,7 @@
     "id": "G10",
     "name": "Informatieasymmetrie verzekeringsmarkt",
     "category": "risico en informatie",
-    "layer": 0,
+    "layer": 1,
     "kern": "Informatieongelijkheid tussen verzekeraar en klant kan selectie- en moraalrisicoproblemen veroorzaken.",
     "needs": [],
     "exam_codes": [
@@ -3281,7 +3281,7 @@
     "id": "G11",
     "name": "Wisselkoersrisico bij internationale handel",
     "category": "risico en informatie",
-    "layer": 0,
+    "layer": 1,
     "kern": "Bij betalingen in vreemde valuta leidt een ongunstige wisselkoersverandering tussen contractmoment en betalingsmoment tot lagere reële opbrengsten voor de exporteur of hogere kosten voor de importeur.",
     "needs": [],
     "exam_codes": [
@@ -3333,7 +3333,7 @@
     "id": "H01",
     "name": "AOW-leeftijd als houdbaarheidsinstrument",
     "category": "welvaart en groei",
-    "layer": 0,
+    "layer": 1,
     "kern": "Leg uit hoe een hogere AOW-leeftijd via premiegrondslag en uitkeringsduur de houdbaarheid van het AOW-stelsel verbetert bij vergrijzing.",
     "needs": [],
     "exam_codes": [
@@ -3441,7 +3441,7 @@
     "id": "H05",
     "name": "Circulaire economie in groen bbp",
     "category": "welvaart en groei",
-    "layer": 0,
+    "layer": 1,
     "kern": "Leg uit hoe circulaire productie via minder milieuschade en minder grondstofgebruik het groen bbp per hoofd verhoogt.",
     "needs": [],
     "exam_codes": [
@@ -3488,7 +3488,7 @@
     "id": "H07",
     "name": "Vergrijzing, spaarquote en rente",
     "category": "welvaart en groei",
-    "layer": 1,
+    "layer": 2,
     "kern": "Hogere sparende populatie vergroot kapitaalaanbod, wat de evenwichtsrente drukt.",
     "needs": [
       "H01"
@@ -3560,7 +3560,7 @@
     "id": "H10",
     "name": "Gini-coefficient bij recessie",
     "category": "welvaart en groei",
-    "layer": 0,
+    "layer": 1,
     "kern": "Gini-coefficient stijgt tijdens recessie door werkloosheidsconcentratie en toename inkomensongelijkheid.",
     "needs": [],
     "exam_codes": [
@@ -3602,7 +3602,7 @@
     "id": "H12",
     "name": "Houdbaarheidssaldo",
     "category": "welvaart en groei",
-    "layer": 1,
+    "layer": 2,
     "kern": "Het houdbaarheidssaldo geeft aan of overheidsvoorzieningen op lange termijn betaalbaar blijven; stijgende grijze druk verslechtert het saldo.",
     "needs": [
       "H01"
@@ -3623,7 +3623,7 @@
     "id": "H13",
     "name": "Minimumuurloon: kostenkanaal naar concurrentiepositie",
     "category": "welvaart en groei",
-    "layer": 0,
+    "layer": 1,
     "kern": "Redeneer via het kostenkanaal hoe een hoger minimumuurloon de internationale concurrentiepositie kan verslechteren.",
     "needs": [],
     "exam_codes": [
@@ -3649,7 +3649,7 @@
     "id": "H14",
     "name": "Minimumuurloon: vraagkanaal naar bbp-groei",
     "category": "welvaart en groei",
-    "layer": 0,
+    "layer": 1,
     "kern": "Redeneer via het bestedingskanaal hoe een hoger minimumuurloon de consumptie en daarmee de bbp-groei kan verhogen.",
     "needs": [],
     "exam_codes": [
@@ -3676,7 +3676,7 @@
     "id": "H15",
     "name": "Nominale rente op staatsobligaties verklaren",
     "category": "welvaart en groei",
-    "layer": 3,
+    "layer": 4,
     "kern": "Verklaar bewegingen in de nominale rente op staatsobligaties vanuit vraag-en-aanbod op de obligatiemarkt en risicoperceptie.",
     "needs": [
       "H30",
@@ -3700,7 +3700,7 @@
     "id": "H16",
     "name": "Soepeler ontslagrecht en werkgeversrisico",
     "category": "welvaart en groei",
-    "layer": 0,
+    "layer": 1,
     "kern": "Leg uit hoe versoepeling van ontslagrecht het aannamerisico voor werkgevers verlaagt en het effect op werkgelegenheid beredeneer.",
     "needs": [],
     "exam_codes": [
@@ -3719,7 +3719,7 @@
     "id": "H17",
     "name": "Arbeidsproductiviteit, werkgelegenheid en lange termijn",
     "category": "welvaart en groei",
-    "layer": 1,
+    "layer": 2,
     "kern": "Onderscheid het korte-termijn werkgelegenheidseffect van productiviteitsverhogende investeringen van het lange-termijn concurrentie-effect.",
     "needs": [
       "H13"
@@ -3769,7 +3769,7 @@
     "id": "H19",
     "name": "Publiek kapitaal en staatsschuldquote",
     "category": "welvaart en groei",
-    "layer": 1,
+    "layer": 2,
     "kern": "Leg uit hoe investeringen in publiek kapitaal op lange termijn staatsschuldquote kunnen verlagen.",
     "needs": [
       "H21"
@@ -3791,7 +3791,7 @@
     "id": "H20",
     "name": "Spaarsaldo en betalingsbalans",
     "category": "welvaart en groei",
-    "layer": 1,
+    "layer": 2,
     "kern": "Interpreteer positieve en negatieve particuliere spaarsalda.",
     "needs": [
       "H21"
@@ -3812,7 +3812,7 @@
     "id": "H21",
     "name": "Staatsschuldquote berekenen",
     "category": "welvaart en groei",
-    "layer": 0,
+    "layer": 1,
     "kern": "Bereken staatsschuldquote = staatsschuld / bbp x 100% en bepaal drempels voor duurzaamheid.",
     "needs": [],
     "exam_codes": [
@@ -3893,7 +3893,7 @@
     "id": "H24",
     "name": "Wisselkoers en depreciatie",
     "category": "welvaart en groei",
-    "layer": 0,
+    "layer": 1,
     "kern": "Bereken wisselkoerseffecten van depreciatie en leg uit hoe deze reële inkomens beïnvloeden.",
     "needs": [],
     "exam_codes": [
@@ -3920,7 +3920,7 @@
     "id": "H25",
     "name": "Wisselkoers, export en bbp-groei",
     "category": "welvaart en groei",
-    "layer": 1,
+    "layer": 2,
     "kern": "Leg uit hoe een depreciatie van de wisselkoers via goedkopere export tot hogere bbp-groei kan leiden.",
     "needs": [
       "H24"
@@ -3942,7 +3942,7 @@
     "id": "H26",
     "name": "Koop- versus huurlasten vergelijken",
     "category": "welvaart en groei",
-    "layer": 4,
+    "layer": 5,
     "kern": "Vergelijk netto woonlasten van kopen en huren door rente, aflossing, onderhoud en huurprijs systematisch tegen elkaar af te zetten.",
     "needs": [
       "H15"
@@ -3972,7 +3972,7 @@
     "id": "H27",
     "name": "Productiefunctie Y = A·f(K, L) toepassen",
     "category": "welvaart en groei",
-    "layer": 2,
+    "layer": 3,
     "kern": "Pas de productiefunctie Y = A·f(K, L) toe: verklaar hoe groei in kapitaal K, arbeid L en totale factorproductiviteit A bijdraagt aan lange-termijn productie; herken afnemend grensproduct wanneer K óf L alleen toeneemt.",
     "needs": [
       "H17"
@@ -4007,7 +4007,7 @@
     "id": "H28",
     "name": "Betalingsbalans: saldo lopende rekening",
     "category": "welvaart en groei",
-    "layer": 1,
+    "layer": 2,
     "kern": "Bereken het saldo op de lopende rekening van de betalingsbalans uit netto-export (goederen + diensten), primair inkomen (netto-factorinkomen uit buitenland) en secundair inkomen (overdrachten); interpreteer een overschot als binnenlandse besparingen > investeringen.",
     "needs": [
       "H24"
@@ -4040,7 +4040,7 @@
     "id": "H29",
     "name": "Obligatie als verhandelbaar schuldpapier",
     "category": "welvaart en groei",
-    "layer": 0,
+    "layer": 1,
     "kern": "Benoem wat een obligatie is — een verhandelbaar schuldpapier met vaste nominale waarde, couponrente en looptijd — en onderscheid de primaire markt (emissie/veiling door de uitgever) van de secundaire markt (handel tussen beleggers).",
     "needs": [],
     "exam_codes": [
@@ -4063,7 +4063,7 @@
     "id": "H30",
     "name": "Vraag en aanbod op de obligatiemarkt",
     "category": "welvaart en groei",
-    "layer": 1,
+    "layer": 2,
     "kern": "Leg uit hoe vraag en aanbod op de secundaire obligatiemarkt samen de obligatiekoers bepalen. Noem de drie belangrijkste demand-shifters (risicoperceptie, alternatieve rendementen, inflatieverwachting) en de belangrijkste supply-shifter (nieuwe uitgiften door overheid of bedrijven).",
     "needs": [
       "H29",
@@ -4091,7 +4091,7 @@
     "id": "H31",
     "name": "Inverse relatie obligatiekoers en rente",
     "category": "welvaart en groei",
-    "layer": 2,
+    "layer": 3,
     "kern": "Leg uit dat obligatiekoers en effectief rendement omgekeerd bewegen: bij gelijke couponstroom betekent een hogere aankoopkoers een lager effectief rendement, en omgekeerd.",
     "needs": [
       "H29",
@@ -4121,7 +4121,7 @@
     "id": "I01",
     "name": "Anticyclisch begrotingsbeleid",
     "category": "goede en slechte tijden",
-    "layer": 0,
+    "layer": 1,
     "kern": "Beschrijf hoe de overheid in laagconjunctuur bestedingen verhoogt of belastingen verlaagt en in hoogconjunctuur het omgekeerde doet om de conjunctuurcyclus af te vlakken.",
     "needs": [],
     "exam_codes": [
@@ -4143,7 +4143,7 @@
     "id": "I02",
     "name": "Automatische stabilisatoren via inkomensoverdrachten",
     "category": "goede en slechte tijden",
-    "layer": 1,
+    "layer": 2,
     "kern": "Leg uit hoe inkomensoverdrachten zoals WW en bijstand automatisch meebewegen met de conjunctuur en zo de bestedingen stabiliseren zonder nieuw beleid.",
     "needs": [
       "I01"
@@ -4166,7 +4166,7 @@
     "id": "I03",
     "name": "Renteongevoeligheid van investeringen bij ondergrens",
     "category": "goede en slechte tijden",
-    "layer": 5,
+    "layer": 6,
     "kern": "Leg uit waarom bedrijfsinvesteringen beperkt reageren op renteverlagingen als de vraag laag is of de effectieve ondergrens nominale rente nadert.",
     "needs": [
       "I17"
@@ -4189,7 +4189,7 @@
     "id": "I04",
     "name": "CAO-looptijd en loonrigiditeit",
     "category": "goede en slechte tijden",
-    "layer": 0,
+    "layer": 1,
     "kern": "Leg uit hoe langere CAO-looptijden loonaanpassingen vertragen en daarmee de flexibiliteit van de arbeidsmarkt en de effectiviteit van conjunctuurbeleid beïnvloeden.",
     "needs": [],
     "exam_codes": [
@@ -4208,7 +4208,7 @@
     "id": "I05",
     "name": "Rentebesluit van centrale bank",
     "category": "goede en slechte tijden",
-    "layer": 5,
+    "layer": 6,
     "kern": "Bepaal op basis van inflatie, outputgap en duaal mandaat of een centrale bank de beleidsrente verhoogt, verlaagt of constant houdt.",
     "needs": [
       "I17",
@@ -4240,7 +4240,7 @@
     "id": "I06",
     "name": "Deflatiespiraal",
     "category": "goede en slechte tijden",
-    "layer": 0,
+    "layer": 1,
     "kern": "Leg uit hoe dalende prijzen consumenten en bedrijven aanzetten tot uitstel van bestedingen en investeringen, waardoor de laagconjunctuur zichzelf versterkt.",
     "needs": [],
     "exam_codes": [
@@ -4261,7 +4261,7 @@
     "id": "I07",
     "name": "IS-MB-GA-model: outputgap en inflatie",
     "category": "goede en slechte tijden",
-    "layer": 1,
+    "layer": 2,
     "kern": "Analyseer met het IS-MB-GA-model hoe een schok via outputgap en inflatie doorwerkt op rente, bbp en prijsniveau.",
     "needs": [
       "I10",
@@ -4295,7 +4295,7 @@
     "id": "I08",
     "name": "Keynesiaans kruis: verschuivingen analyseren",
     "category": "goede en slechte tijden",
-    "layer": 1,
+    "layer": 2,
     "kern": "Analyseer hoe een verandering in autonome bestedingen (C, I, G of X−M) de geplande bestedingen verschuift en via de multiplier een nieuw evenwicht op Y = bestedingen oplevert.",
     "needs": [
       "I14"
@@ -4357,7 +4357,7 @@
     "id": "I10",
     "name": "Loonrigiditeit en helling GA-curve",
     "category": "goede en slechte tijden",
-    "layer": 0,
+    "layer": 1,
     "kern": "Leg uit hoe starre lonen leiden tot een vlakkere GA-curve op korte termijn en hoe flexibele lonen de curve steiler maken.",
     "needs": [],
     "exam_codes": [
@@ -4377,7 +4377,7 @@
     "id": "I11",
     "name": "Monetair beleid: starre versus flexibele arbeidsmarkt",
     "category": "goede en slechte tijden",
-    "layer": 6,
+    "layer": 7,
     "kern": "Vergelijk het effect van een renteverlaging op bbp en prijsniveau tussen een starre en een flexibele arbeidsmarkt en verklaar het verschil via de helling van de GA-curve.",
     "needs": [
       "I10",
@@ -4412,7 +4412,7 @@
     "id": "I12",
     "name": "Wisselkoerskanaal van rentebeleid",
     "category": "goede en slechte tijden",
-    "layer": 5,
+    "layer": 6,
     "kern": "Leg uit hoe een renteverlaging via kapitaaluitstroom leidt tot depreciatie van de valuta en daarmee de exportcompetitiviteit vergroot.",
     "needs": [
       "I17",
@@ -4435,7 +4435,7 @@
     "id": "I13",
     "name": "Monetair trilemma",
     "category": "goede en slechte tijden",
-    "layer": 6,
+    "layer": 7,
     "kern": "Analyseer waarom een land hooguit twee van de drie doelen — vaste wisselkoers, vrij kapitaalverkeer en zelfstandig rentebeleid — tegelijk kan bereiken.",
     "needs": [
       "I12"
@@ -4465,7 +4465,7 @@
     "id": "I14",
     "name": "Multiplier en lekkages",
     "category": "goede en slechte tijden",
-    "layer": 0,
+    "layer": 1,
     "kern": "Leg uit hoe een toename van autonome bestedingen via de multiplier een groter inkomenseffect oproept en hoe belastingen, spaarneiging en import als lekkages de multiplier verkleinen.",
     "needs": [],
     "exam_codes": [
@@ -4486,7 +4486,7 @@
     "id": "I15",
     "name": "Outputgap bij vraag- en aanbodschokken",
     "category": "goede en slechte tijden",
-    "layer": 2,
+    "layer": 3,
     "kern": "Analyseer hoe een positieve of negatieve vraag- of aanbodschok de feitelijke productie ten opzichte van het potentieel bbp verschuift en een output gap veroorzaakt.",
     "needs": [
       "I07",
@@ -4522,7 +4522,7 @@
     "id": "I16",
     "name": "Overheidssaldo en conjunctuur",
     "category": "goede en slechte tijden",
-    "layer": 1,
+    "layer": 2,
     "kern": "Leg uit hoe belastingontvangsten en overheidsuitgaven samen het overheidssaldo bepalen en hoe dit saldo met de conjunctuur meebeweegt.",
     "needs": [
       "H21"
@@ -4546,7 +4546,7 @@
     "id": "I17",
     "name": "Rentebeleid en transmissiemechanisme",
     "category": "goede en slechte tijden",
-    "layer": 4,
+    "layer": 5,
     "kern": "Leg uit hoe een renteverhoging via duurder krediet consumptie en investeringen afremt en hoe een renteverlaging deze bestedingen stimuleert.",
     "needs": [
       "H15"
@@ -4592,7 +4592,7 @@
     "id": "I19",
     "name": "Wisselkoerseffect van monetair beleid op conjunctuur",
     "category": "goede en slechte tijden",
-    "layer": 6,
+    "layer": 7,
     "kern": "Leg uit hoe rentebeleid via de wisselkoers de netto export verandert en zo de binnenlandse conjunctuur beïnvloedt.",
     "needs": [
       "I12",
@@ -4617,7 +4617,7 @@
     "id": "I20",
     "name": "Internationale kapitaalmobiliteit en rentepariteit",
     "category": "goede en slechte tijden",
-    "layer": 1,
+    "layer": 2,
     "kern": "Leg uit waarom een relatief hogere binnenlandse rente buitenlands kapitaal aantrekt en een relatieve renteverlaging kapitaal doet wegvloeien; deze kapitaalbewegingen drijven via vraag en aanbod op de valutamarkt de wisselkoers.",
     "needs": [
       "H24"
@@ -4642,7 +4642,7 @@
     "id": "L01",
     "name": "Waarde marginaal product (VMP)",
     "category": "arbeidsmarkt",
-    "layer": 0,
+    "layer": 1,
     "kern": "Bereken VMP = marginaal product × prijs per eenheid output uit een tabel met aflopende marginale productiviteit, en gebruik VMP als grens voor de individuele arbeidsvraag.",
     "needs": [],
     "exam_codes": [
@@ -4669,7 +4669,7 @@
     "id": "L02",
     "name": "Inhuurregel VMP ≥ W",
     "category": "arbeidsmarkt",
-    "layer": 1,
+    "layer": 2,
     "kern": "Bepaal hoeveel werkenden een werkgever aanneemt door VMP per werkende met het loon W te vergelijken: neem aan zolang VMP ≥ W, stop zodra VMP < W.",
     "needs": [
       "L01"
@@ -4696,7 +4696,7 @@
     "id": "L03",
     "name": "Afgeleide vraag (derived demand)",
     "category": "arbeidsmarkt",
-    "layer": 0,
+    "layer": 1,
     "kern": "Leg uit waarom de vraag naar arbeid een afgeleide vraag is: werkgevers vragen arbeid omdat consumenten de eindproducten willen kopen, niet omdat arbeid zelf gewenst is.",
     "needs": [],
     "exam_codes": [
@@ -4718,7 +4718,7 @@
     "id": "L04",
     "name": "Arbeidsvraagcurve tekenen uit VMP",
     "category": "arbeidsmarkt",
-    "layer": 1,
+    "layer": 2,
     "kern": "Teken de individuele arbeidsvraagcurve van een werkgever door VMP per werkende op de verticale as en de werknemersrij op de horizontale as uit te zetten; het resultaat is de dalende VMP-curve.",
     "needs": [
       "L01"
@@ -4745,7 +4745,7 @@
     "id": "L05",
     "name": "Beroepsbevolking, niet-beroepsbevolking, werkloze beroepsbevolking",
     "category": "arbeidsmarkt",
-    "layer": 0,
+    "layer": 1,
     "kern": "Definieer beroepsbevolking (iedereen van 15–75 die werkt of werk zoekt), niet-beroepsbevolking (wel die leeftijd maar werkt niet en zoekt geen werk) en werkloze beroepsbevolking (zoekt werk, heeft nog geen baan).",
     "needs": [],
     "exam_codes": [
@@ -4768,7 +4768,7 @@
     "id": "L06",
     "name": "Bruto participatiegraad berekenen",
     "category": "arbeidsmarkt",
-    "layer": 1,
+    "layer": 2,
     "kern": "Bereken de bruto participatiegraad = beroepsbevolking / bevolking 15–75 × 100, en interpreteer het resultaat als het percentage dat actief is op de arbeidsmarkt.",
     "needs": [
       "L05"
@@ -4796,7 +4796,7 @@
     "id": "L07",
     "name": "Werkloosheidspercentage berekenen",
     "category": "arbeidsmarkt",
-    "layer": 1,
+    "layer": 2,
     "kern": "Bereken het werkloosheidspercentage = werkloze beroepsbevolking / beroepsbevolking × 100; de noemer is de beroepsbevolking, niet de totale bevolking.",
     "needs": [
       "L05"
@@ -4826,7 +4826,7 @@
     "id": "L08",
     "name": "Effect van loonstijging op participatiegraad",
     "category": "arbeidsmarkt",
-    "layer": 2,
+    "layer": 3,
     "kern": "Leg uit dat een aanhoudende loonstijging mensen uit de niet-beroepsbevolking kan trekken naar de beroepsbevolking, waardoor de participatiegraad stijgt.",
     "needs": [
       "L05",
@@ -4851,7 +4851,7 @@
     "id": "L09",
     "name": "Krappe versus ruime arbeidsmarkt",
     "category": "arbeidsmarkt",
-    "layer": 0,
+    "layer": 1,
     "kern": "Herken een krappe arbeidsmarkt (arbeidsvraag > arbeidsaanbod, oplopende lonen) versus een ruime arbeidsmarkt (arbeidsaanbod > arbeidsvraag, dalende lonen en oplopende werkloosheid).",
     "needs": [],
     "exam_codes": [
@@ -4908,7 +4908,7 @@
     "id": "L11",
     "name": "Conjuncturele werkloosheid",
     "category": "arbeidsmarkt",
-    "layer": 0,
+    "layer": 1,
     "kern": "Definieer conjuncturele werkloosheid als werkloosheid door tekortschietende bestedingen tijdens laagconjunctuur; verdwijnt als de economie herstelt.",
     "needs": [],
     "exam_codes": [
@@ -4930,7 +4930,7 @@
     "id": "L12",
     "name": "Structurele werkloosheid",
     "category": "arbeidsmarkt",
-    "layer": 0,
+    "layer": 1,
     "kern": "Definieer structurele werkloosheid als werkloosheid door blijvende mismatch tussen vaardigheden en vraag (bijvoorbeeld door automatisering of sectorverschuiving); blijft bestaan zonder gericht beleid.",
     "needs": [],
     "exam_codes": [
@@ -4953,7 +4953,7 @@
     "id": "L13",
     "name": "Frictiewerkloosheid",
     "category": "arbeidsmarkt",
-    "layer": 0,
+    "layer": 1,
     "kern": "Definieer frictiewerkloosheid als kortdurende werkloosheid tijdens het zoeken naar een nieuwe baan; is normaal en zelfs gezond op een dynamische arbeidsmarkt.",
     "needs": [],
     "exam_codes": [
@@ -4976,7 +4976,7 @@
     "id": "L14",
     "name": "Werkloosheid classificeren uit context",
     "category": "arbeidsmarkt",
-    "layer": 1,
+    "layer": 2,
     "kern": "Classificeer een werkloosheidssituatie als conjunctureel, structureel of frictioneel op basis van de oorzaak (bestedingstekort, skills-mismatch, of tussen-banen-zoektijd).",
     "needs": [
       "L11",
@@ -5006,7 +5006,7 @@
     "id": "L15",
     "name": "Beleidsinstrument koppelen aan type werkloosheid",
     "category": "arbeidsmarkt",
-    "layer": 2,
+    "layer": 3,
     "kern": "Koppel het juiste beleidsinstrument aan elk type werkloosheid: fiscale stimulus voor conjunctureel, herscholing/onderwijs voor structureel, vacaturebemiddeling voor frictioneel.",
     "needs": [
       "L14"
@@ -5029,7 +5029,7 @@
     "name": "Werknemers- en werkgeverssurplus bij minimumloon",
     "category": "arbeidsmarkt",
     "layer": 4,
-    "kern": "Bereken werknemerssurplus (arbeidsmarkt-CS) en werkgeverssurplus (arbeidsmarkt-PS) voor en na invoering van een minimumloon; identificeer welvaartsverlies als de \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"verloren driehoek\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\" bij W_min > W*.",
+    "kern": "Bereken werknemerssurplus (arbeidsmarkt-CS) en werkgeverssurplus (arbeidsmarkt-PS) voor en na invoering van een minimumloon; identificeer welvaartsverlies als de \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"verloren driehoek\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\" bij W_min > W*.",
     "needs": [
       "A02",
       "A04",
@@ -5065,7 +5065,7 @@
     "id": "L17",
     "name": "CAO als bindende loonafspraak",
     "category": "arbeidsmarkt",
-    "layer": 0,
+    "layer": 1,
     "kern": "Leg uit dat een CAO (collectieve arbeidsovereenkomst) dat lonen boven het evenwichtsloon afspreekt werkt als een bindend minimumloon voor de gehele sector, met werkloosheid als gevolg.",
     "needs": [],
     "exam_codes": [
@@ -5088,7 +5088,7 @@
     "id": "L18",
     "name": "Voordelen en nadelen van vakbonden",
     "category": "arbeidsmarkt",
-    "layer": 0,
+    "layer": 1,
     "kern": "Noem voordelen van vakbonden voor werkenden (hogere lonen, betere voorwaarden, collectieve onderhandelingsmacht) en nadelen (hogere loonkosten voor werkgevers, lagere werkgelegenheid, insiders vs outsiders).",
     "needs": [],
     "exam_codes": [
@@ -5108,7 +5108,7 @@
     "id": "L19",
     "name": "Loonstarheid",
     "category": "arbeidsmarkt",
-    "layer": 0,
+    "layer": 1,
     "kern": "Definieer loonstarheid als de neiging van lonen om traag (vooral omlaag) aan te passen aan veranderingen in arbeidsmarkt-omstandigheden, met als gevolg persistente werkloosheid na een negatieve schok.",
     "needs": [],
     "exam_codes": [
@@ -5131,7 +5131,7 @@
     "id": "L20",
     "name": "Loonflexibiliteit versus actief arbeidsmarktbeleid",
     "category": "arbeidsmarkt",
-    "layer": 1,
+    "layer": 2,
     "kern": "Vergelijk twee beleidsreacties op werkloosheid: verlagen van de loonvloer (wacht op loondaling) versus actief arbeidsmarktbeleid (herscholing, bemiddeling); beoordeel op effectiviteit per type werkloosheid.",
     "needs": [
       "L19"

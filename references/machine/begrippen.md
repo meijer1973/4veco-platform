@@ -531,6 +531,7 @@ Elk begrip heeft een stabiele id (slug van de Nederlandse term), een student-fac
 ### intergenerationele-ruil
 - **Term:** intergenerationele ruil
 - **Definitie:** Het overdragen van koopkracht of verplichtingen tussen generaties, bijvoorbeeld via staatsschuld of een omslagstelsel. De ene generatie ontvangt nu iets wat de volgende moet opbrengen.
+- **Syllabus:** E2.1
 - **Engels:** intergenerational exchange
 - **Voorbeeld:** Door een hoge staatsschuld profiteert de huidige generatie van meer overheidsuitgaven; toekomstige belastingbetalers moeten de schuld later afbetalen.
 
@@ -553,6 +554,7 @@ Elk begrip heeft een stabiele id (slug van de Nederlandse term), een student-fac
 ### kapitaaldekkingsstelsel
 - **Term:** kapitaaldekkingsstelsel
 - **Definitie:** Pensioenstelsel waarin premies worden belegd en opgebouwd tot een individueel of collectief vermogen, waaruit later de eigen pensioenen worden betaald. Elke generatie spaart voor zichzelf.
+- **Syllabus:** E2.1
 - **Engels:** funded pension system
 - **Voorbeeld:** De Nederlandse aanvullende pensioenen (werkgeverspensioen bovenop de AOW) werken volgens het kapitaaldekkingsstelsel: premies worden door het pensioenfonds belegd en leveren later het pensioen op.
 
@@ -574,6 +576,7 @@ Elk begrip heeft een stabiele id (slug van de Nederlandse term), een student-fac
 ### omslagstelsel
 - **Term:** omslagstelsel
 - **Definitie:** Pensioenstelsel waarin de huidige premies direct gebruikt worden om de huidige pensioenen uit te keren. De werkende generatie betaalt voor de gepensioneerden — een vorm van intergenerationele ruil.
+- **Syllabus:** E2.1
 - **Engels:** pay-as-you-go system
 - **Voorbeeld:** De Nederlandse AOW werkt volgens het omslagstelsel: werkenden betalen AOW-premie, die meteen als AOW-uitkering aan de huidige ouderen wordt uitbetaald.
 
@@ -613,6 +616,7 @@ Elk begrip heeft een stabiele id (slug van de Nederlandse term), een student-fac
 ### stabiliteits-en-groeipact
 - **Term:** Stabiliteits- en groeipact
 - **Definitie:** Afspraak binnen de Europese Unie die eurolanden bindt aan een begrotingstekort van maximaal 3% van het bbp en een staatsschuldquote van maximaal 60%. Moet de stabiliteit van de euro borgen.
+- **Syllabus:** E2.2
 - **Engels:** Stability and Growth Pact
 - **Voorbeeld:** Toen Frankrijk in 2023 een tekort van 5% van het bbp boekte, overschreed het de 3%-grens van het stabiliteits- en groeipact en kreeg het een corrigerende aanbeveling vanuit Brussel.
 
@@ -905,678 +909,892 @@ Elk begrip heeft een stabiele id (slug van de Nederlandse term), een student-fac
 
 ### accijnzen
 - **Term:** accijnzen
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** Bijzondere verbruiksbelastingen op specifieke producten zoals benzine, alcohol en tabak. Meestal bedoeld om ongewenst gebruik te ontmoedigen en/of om extra belastinginkomsten te genereren.
+- **Syllabus:** H4.6
 - **Engels:** VAT / excise duties
+- **Voorbeeld:** Ongeveer de helft van de pompprijs van een liter benzine (circa € 0,85) bestaat uit accijns die de overheid int.
 
 ### afnemende-meeropbrengsten
 - **Term:** afnemende meeropbrengsten
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** Eigenschap waarbij het toevoegen van één productiefactor (terwijl andere gelijk blijven) steeds minder extra productie oplevert. Geldt op korte termijn voor zowel kapitaal als arbeid.
+- **Syllabus:** H2.2
 - **Engels:** diminishing marginal returns
+- **Voorbeeld:** Een bakker met één oven die steeds meer bakkers aanneemt, ziet dat de tiende bakker nauwelijks nog extra broden produceert — de oven is de beperkende factor.
 
 ### aftrekposten-en-bijtellingen
 - **Term:** aftrekposten en bijtellingen
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** Uitgaven die mogen worden afgetrokken van (aftrekposten) of inkomsten die moeten worden opgeteld bij (bijtellingen) het belastbaar inkomen. Beïnvloeden de grondslag waarover belasting wordt berekend.
+- **Syllabus:** H4.6
 - **Engels:** deductions and additions
+- **Voorbeeld:** Hypotheekrente is een aftrekpost (verlaagt het belastbaar inkomen); privégebruik van een leaseauto is een bijtelling (verhoogt het).
 
 ### arbeid
 - **Term:** arbeid
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** Menselijke inspanning, zowel fysiek als mentaal, ingezet om goederen en diensten te produceren. In de macro-economie aangeduid met L en gemeten in gewerkte uren of aantal werkenden.
+- **Syllabus:** H2.2
 - **Afkorting:** L
 - **Engels:** labour
+- **Voorbeeld:** De Nederlandse beroepsbevolking is ongeveer 10 miljoen mensen; de totaal gewerkte uren bepalen hoeveel arbeid (L) in de productiefunctie zit.
 
 ### arbeidsaanbod
 - **Term:** arbeidsaanbod
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** Het aantal mensen dat zich aanbiedt op de arbeidsmarkt: werkenden plus werklozen samen. Wordt ook wel beroepsbevolking genoemd; afhankelijk van demografie, onderwijs en participatiekeuzes.
 - **Syllabus:** H5.1
 - **Engels:** labour supply (= labour force)
 - **Synoniemen:** beroepsbevolking
+- **Voorbeeld:** In Nederland bestaat de beroepsbevolking van ongeveer 10 miljoen mensen uit ca. 9,7 miljoen werkenden plus 0,3 miljoen werklozen.
 - **Teaching-units:** H23, I04, I11, L05, L10
 
 ### arbeidsinkomen
 - **Term:** arbeidsinkomen
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** Inkomen dat mensen ontvangen uit hun arbeid, zoals loon en winst van zelfstandigen. Samen met kapitaalinkomen vormt het het primaire inkomen.
+- **Syllabus:** H4.2
 - **Engels:** labour income / capital income
+- **Voorbeeld:** Het bruto jaarsalaris van een leraar van € 52.000 is arbeidsinkomen; net als de winst van een zelfstandige kapper uit zijn zaak.
 
 ### arbeidsinkomenquote
 - **Term:** arbeidsinkomenquote
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** Het aandeel van het arbeidsinkomen in het totale nationale inkomen, uitgedrukt als percentage. Daalt al decennia in veel landen, wat wijst op een grotere rol van kapitaal in de inkomensverdeling.
+- **Formule:** `AIQ = arbeidsinkomen / nationaal inkomen × 100%`
+- **Syllabus:** H1.1
 - **Afkorting:** AIQ
 - **Engels:** labour income share
+- **Voorbeeld:** Als van € 1.000 mld nationaal inkomen € 720 mld naar arbeid gaat, is de AIQ 72%.
 
 ### arbeidsvraag
 - **Term:** arbeidsvraag
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** Het aantal arbeidsplaatsen dat werkgevers willen invullen: huidige werkgelegenheid plus openstaande vacatures. Wordt bepaald door de productiebehoefte van bedrijven en loonkosten.
+- **Syllabus:** H5.1
 - **Engels:** labour demand
 - **Synoniemen:** werkgelegenheid + vacatures
+- **Voorbeeld:** Als Nederland 9,7 miljoen banen telt plus 400.000 vacatures, bedraagt de arbeidsvraag ongeveer 10,1 miljoen.
 - **Teaching-units:** L01, L03, L10
 
 ### belastingwig
 - **Term:** belastingwig
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** Het verschil tussen wat een werkgever aan loonkosten betaalt en wat de werknemer netto ontvangt. Bestaat uit loonheffing en sociale premies; hoge wig drukt werkgelegenheid.
+- **Syllabus:** H4.6
 - **Engels:** tax wedge
+- **Voorbeeld:** Een werkgever betaalt € 5.000 per maand, de werknemer krijgt € 3.000 netto: de belastingwig is € 2.000 per maand.
 
 ### bestedingsmethode
 - **Term:** bestedingsmethode
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** Methode om het bbp te berekenen door alle finale bestedingen op te tellen: consumptie, investeringen, overheidsbestedingen plus export minus import.
+- **Formule:** `bbp = C + I + O + E − M`
+- **Syllabus:** H1.1
 - **Engels:** expenditure method
+- **Voorbeeld:** Stel: C = € 500 mld, I = € 200 mld, O = € 300 mld, E = € 900 mld, M = € 850 mld. Dan is bbp = 500 + 200 + 300 + 900 − 850 = € 1.050 mld.
 - **Vermijd:** uitgavenmethode
 
 ### betalingsbalans
 - **Term:** betalingsbalans
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** Overzicht van alle transacties tussen de binnenlandse economie en het buitenland in een periode. Bestaat uit de lopende rekening (handel, diensten, inkomens) en de financiële rekening (kapitaalbewegingen).
+- **Syllabus:** H1.2
 - **Engels:** balance of payments
+- **Voorbeeld:** Als Nederland per jaar voor € 50 mld meer exporteert dan importeert, is er een overschot op de lopende rekening van € 50 mld.
 - **Teaching-units:** H28
 
 ### brede-welvaart
 - **Term:** (brede) welvaart
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** Mate waarin mensen hun behoeften kunnen bevredigen, inclusief aspecten als gezondheid, milieu, sociale samenhang en toekomstbestendigheid. Gaat verder dan alleen materieel inkomen.
 - **Syllabus:** H3.1
 - **Engels:** (broad) welfare/well-being
+- **Voorbeeld:** Twee gezinnen kunnen hetzelfde inkomen hebben, maar dat met een schone leefomgeving en goede gezondheid heeft hogere brede welvaart.
 
 ### bruto-binnenlands-product
 - **Term:** bruto binnenlands product
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** De totale geldwaarde van alle eindproducten en diensten die in een jaar binnen de landsgrenzen worden geproduceerd. Belangrijkste maatstaf voor de omvang van een economie; kan via drie methoden berekend worden.
+- **Formule:** `bbp = C + I + O + E − M  (bestedingsmethode)`
 - **Syllabus:** H1.1
 - **Afkorting:** bbp
 - **Engels:** gross domestic product (GDP)
+- **Voorbeeld:** Het Nederlandse bbp was in 2023 ongeveer € 1.050 miljard: de optelsom van alle toegevoegde waarde in Nederland dat jaar.
 
 ### btw
 - **Term:** btw
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** Algemene verbruiksbelasting op toegevoegde waarde, geheven bij verkoop aan consumenten. Een indirecte belasting: aanbieders dragen af, maar uiteindelijk betalen consumenten hem in de prijs.
+- **Syllabus:** H4.6
 - **Engels:** VAT / excise duties
+- **Voorbeeld:** Een pak pasta van € 1,50 bevat bij 9% btw € 0,12 belasting; een elektrische auto van € 40.000 bevat bij 21% btw bijna € 7.000 btw.
 
 ### categoriale-inkomensverdeling
 - **Term:** categoriale inkomensverdeling
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** De verdeling van het totale inkomen over arbeid en kapitaal. Laat zien welk deel van het bbp naar werkenden gaat (via loon) en welk deel naar kapitaalverschaffers (via winst, rente, dividend).
+- **Syllabus:** H1.1
 - **Engels:** functional income distribution
+- **Voorbeeld:** Als van € 1.000 mld nationaal inkomen € 700 mld naar lonen gaat en € 300 mld naar winst/dividend/rente, is de categoriale inkomensverdeling 70% arbeid, 30% kapitaal.
 - **Vermijd:** categorische inkomensverdeling
 
 ### conjuncturele-werkloosheid
 - **Term:** conjuncturele werkloosheid
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** Werkloosheid die ontstaat doordat de economie onder haar potentiële productie draait (negatieve output gap). Verdwijnt als de conjunctuur aantrekt; geen permanente mismatch.
+- **Syllabus:** H5.2
 - **Engels:** cyclical unemployment
+- **Voorbeeld:** Tijdens de corona-recessie kregen horecamedewerkers tijdelijk geen werk — hun werkloosheid was conjunctureel, niet structureel, en verdween grotendeels toen de horeca weer opende.
 - **Vermijd:** cyclische werkloosheid
 - **Teaching-units:** H10, I15, L11
 
 ### constante-schaalopbrengsten
 - **Term:** constante schaalopbrengsten
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** Eigenschap van een productiefunctie waarbij een gelijkmatige toename van alle productiefactoren leidt tot een even grote toename van de productie. Verdubbeling van K en L leidt tot verdubbeling van Y.
+- **Syllabus:** H2.2
 - **Engels:** constant returns to scale
+- **Voorbeeld:** Een bakkerij die al haar ovens, personeel en materiaal verdubbelt en daarmee ook twee keer zoveel broden bakt, kent constante schaalopbrengsten.
 
 ### degressief-belastingstelsel
 - **Term:** degressief belastingstelsel
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** Belastingstelsel waarin het marginale tarief daalt naarmate het inkomen stijgt. Hogere inkomens betalen relatief minder belasting; denivelleert de inkomensverdeling.
+- **Syllabus:** H4.6
 - **Engels:** progressive / degressive tax system
+- **Voorbeeld:** Als er 40% belasting wordt geheven tot € 30.000 en daarboven slechts 25%, is het stelsel degressief: hoe hoger je inkomen, hoe lager je gemiddelde tarief.
 
 ### denivelleren
 - **Term:** denivelleren
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** Beleid dat de inkomens- of vermogensverschillen juist groter maakt, bijvoorbeeld door een vlaktaks of het afschaffen van erfbelasting. Versterkt prikkels om te werken en te sparen maar vergroot ongelijkheid.
 - **Syllabus:** H4.4
 - **Engels:** reduce / increase inequality
+- **Voorbeeld:** Een belastinghervorming die het toptarief verlaagt en de bijstand versobert denivelleert: hogere inkomens houden meer over, lagere minder.
 - **Teaching-units:** H08
 
 ### economische-kringloop
 - **Term:** economische kringloop
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** Schematische weergave van de geldstromen tussen gezinnen, bedrijven, overheid en buitenland. Laat zien hoe inkomens, bestedingen en productie aan elkaar verbonden zijn in een reële en een financiële stroom.
 - **Syllabus:** H1.2
 - **Engels:** circular flow
+- **Voorbeeld:** Gezinnen leveren arbeid aan bedrijven (reële stroom) en ontvangen loon (geldstroom); dat loon wordt weer besteed aan producten van bedrijven — de kringloop sluit rond.
 
 ### flexwerk-en-zzp
 - **Term:** flexwerk en zzp
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** Vormen van arbeid zonder vast dienstverband: tijdelijke contracten, uitzendkrachten, oproepkrachten en zelfstandigen zonder personeel. Bieden flexibiliteit maar minder inkomenszekerheid.
+- **Syllabus:** H5.1
 - **Engels:** flexible work and self-employed
+- **Voorbeeld:** Ongeveer een derde van de Nederlandse werkenden werkt flexibel of als zzp'er — een maaltijdbezorger op nul-urencontract of een IT'er met eigen bv zijn typische voorbeelden.
 
 ### frictiewerkloosheid
 - **Term:** frictiewerkloosheid
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** Kortdurende werkloosheid die ontstaat als mensen van baan wisselen of net de arbeidsmarkt betreden. Onderdeel van structurele werkloosheid; hoort bij een normaal functionerende arbeidsmarkt.
+- **Syllabus:** H5.2
 - **Engels:** frictional unemployment
+- **Voorbeeld:** Een starter die na zijn studie twee maanden zoekt voor de juiste baan vindt, draagt in die periode bij aan frictiewerkloosheid.
 - **Vermijd:** frictionele werkloosheid
 - **Teaching-units:** L13
 
 ### gemiddeld-tarief
 - **Term:** gemiddeld tarief
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** Het aandeel van het totale inkomen dat aan inkomstenbelasting wordt betaald. Gemeten over het hele inkomen, niet over de laatste verdiende euro.
+- **Formule:** `gemiddeld tarief = totale belasting / totaal inkomen × 100%`
 - **Syllabus:** H4.6
 - **Engels:** average / marginal tax rate
+- **Voorbeeld:** Bij € 50.000 inkomen en € 15.000 belasting is het gemiddelde tarief 30% — ook al is het toptarief op de laatste euro hoger.
 - **Teaching-units:** H04, H18
 
 ### gini-coefficient
-- **Term:** Gini-coefficient
-- **Definitie:** _(definitie volgt)_
+- **Term:** Gini-coëfficiënt
+- **Definitie:** Maat voor inkomens- of vermogensongelijkheid met een waarde tussen 0 (iedereen gelijk) en 1 (één persoon heeft alles). Gebaseerd op de oppervlakte tussen de Lorenz-curve en de gelijkheidslijn.
 - **Syllabus:** H4.1
 - **Engels:** Gini coefficient / percentile ratio
+- **Voorbeeld:** Nederland heeft een Gini-coëfficiënt van ongeveer 0,28 voor besteedbaar inkomen — vrij gelijkmatig verdeeld. De VS zit rond 0,39: meer ongelijkheid.
 - **Teaching-units:** H10
 
 ### groen-bbp-per-hoofd
 - **Term:** groen bbp per hoofd
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** Het bbp per inwoner, gecorrigeerd voor de schade aan en verbeteringen in het milieu. Probeert ecologische duurzaamheid in één cijfer samen te vatten.
+- **Formule:** `groen bbp = bbp − milieuschade + milieuverbetering`
 - **Syllabus:** H3.5
 - **Engels:** green GDP per capita
+- **Voorbeeld:** Als het bbp € 1.000 mld is, milieuschade € 50 mld en milieu-investeringen € 20 mld opleveren, is het groene bbp € 970 mld.
 - **Teaching-units:** H05, H11
 
 ### heffingskortingen
 - **Term:** heffingskortingen
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** Aftrek op de verschuldigde inkomstenbelasting, los van de grondslag. Werken als een vast bedrag, waardoor ze relatief voordeliger zijn voor lage inkomens en het stelsel nivellerend maken.
+- **Syllabus:** H4.6
 - **Engels:** tax credits
+- **Voorbeeld:** De algemene heffingskorting van ongeveer € 3.000 verlaagt ieders belasting met dat bedrag; wie € 10.000 verdient profiteert relatief meer dan wie € 100.000 verdient.
 
 ### innovatie-r-d-onderwijs-instituties
 - **Term:** innovatie, R&D, onderwijs, instituties
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** Groepsbegrip voor de factoren die de totale factorproductiviteit A verhogen. Investeringen in R&D en onderwijs plus goede instituties (eigendomsrechten, rechtstaat) maken structurele groei mogelijk.
 - **Syllabus:** H2.3
 - **Engels:** innovation, R&D, education, institutions
+- **Voorbeeld:** Landen met sterke universiteiten, veel R&D-uitgaven en stabiele instituties (zoals Zuid-Korea na 1960) zien hun A en daarmee hun welvaart snel toenemen.
 
 ### kapitaal
 - **Term:** kapitaal
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** Duurzaam geproduceerd productiemiddel dat wordt ingezet om nieuwe goederen en diensten te produceren, zoals machines, gebouwen en infrastructuur. In de macro-economie aangeduid met K.
+- **Syllabus:** H2.2
 - **Afkorting:** K
 - **Engels:** capital
+- **Voorbeeld:** Een bakker gebruikt ovens, een mixer en een winkelpand: dit zijn vormen van kapitaal die de bakker helpen brood te produceren.
 
 ### kapitaalinkomen
 - **Term:** kapitaalinkomen
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** Inkomen dat voortkomt uit het bezit van kapitaal, zoals rente, dividend, huuropbrengsten of winst uit onderneming. Samen met arbeidsinkomen vormt het het primaire inkomen.
+- **Syllabus:** H4.2
 - **Engels:** labour income / capital income
+- **Voorbeeld:** Dividend van € 1.200 op aandelen, € 400 rente op spaargeld en € 8.000 huur uit een woning zijn alle vormen van kapitaalinkomen.
 
 ### loonkosten-per-eenheid-product
 - **Term:** loonkosten per eenheid product
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** De arbeidskosten per geproduceerde eenheid. Geeft aan hoe duur productie is geworden in termen van loonlasten en is een belangrijke concurrentiemaat tussen landen.
+- **Formule:** `loonkosten per eenheid product = totale loonsom / totale productie`
+- **Syllabus:** H1.1
 - **Engels:** unit labour costs
+- **Voorbeeld:** Als Duitse autofabrieken € 40.000 aan lonen betalen per geproduceerde auto en Hongaarse € 15.000, heeft Hongarije in dit opzicht een concurrentievoordeel.
 
 ### loonontwikkeling
 - **Term:** loonontwikkeling
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** De stijging of daling van lonen over de tijd, vaak uitgedrukt in procenten per jaar. Bepaald door productiviteitsgroei, inflatie, cao-onderhandelingen en arbeidsmarkt­krapte.
+- **Syllabus:** H5.1
 - **Engels:** wage development
+- **Voorbeeld:** Bij 4% cao-stijging en 3% inflatie stijgt het reële loon met ongeveer 1% — een gematigde loonontwikkeling.
 - **Teaching-units:** L08, L17, L19
 
 ### maatschappelijke-welvaart
 - **Term:** maatschappelijke welvaart
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** De som van de welvaart van alle huishoudens samen, gecorrigeerd voor collectieve zaken zoals publieke voorzieningen en externe effecten. Maatstaf op landsniveau.
 - **Syllabus:** H3.2
 - **Engels:** social welfare
+- **Voorbeeld:** Een land dat het bbp met 2% verhoogt maar tegelijk de luchtkwaliteit sterk verslechtert, ziet de maatschappelijke welvaart mogelijk dalen ondanks de bbp-groei.
 - **Teaching-units:** F08
 
 ### marginaal-tarief
 - **Term:** marginaal tarief
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** Het belastingtarief dat over de laatste verdiende euro wordt geheven. Bepaalt of het loont om nog een uurtje extra te werken en is daarom een belangrijke prikkel in de inkomstenbelasting.
 - **Syllabus:** H4.6
 - **Engels:** average / marginal tax rate
+- **Voorbeeld:** In Nederland geldt boven € 73.000 een toptarief van 49,5%: van elke extra verdiende euro houd je nog maar € 0,505 netto over.
 - **Teaching-units:** H04, H08, H18, H22, H23
 
 ### nationaal-spaarsaldo
 - **Term:** nationaal spaarsaldo
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** Het deel van het nationale inkomen dat niet wordt geconsumeerd. Is gelijk aan de binnenlandse investeringen plus het overheidssaldo plus het saldo op de lopende rekening.
+- **Formule:** `S = I + (O − B) + (E − M)`
+- **Syllabus:** H1.2
 - **Afkorting:** S
 - **Engels:** national savings
+- **Voorbeeld:** Als I = € 200 mld, O − B = −€ 20 mld en E − M = € 50 mld, dan is het nationaal spaarsaldo S = 200 − 20 + 50 = € 230 mld.
 
 ### nivelleren
 - **Term:** nivelleren
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** Beleid dat de inkomens- of vermogensverschillen kleiner maakt, bijvoorbeeld door progressieve belastingen of hogere uitkeringen. Vergroot gelijkheid maar kan prikkels om te werken verminderen.
 - **Syllabus:** H4.4
 - **Engels:** reduce / increase inequality
+- **Voorbeeld:** Een verhoging van het toptarief en extra kinderbijslag voor lage inkomens nivelleert de inkomensverdeling: de Gini-coëfficiënt van besteedbaar inkomen daalt.
 
 ### objectieve-methode
 - **Term:** objectieve methode
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** Methode om het bbp te berekenen door de toegevoegde waarde van alle bedrijven en sectoren bij elkaar op te tellen. Voorkomt dubbel tellen door alleen de waarde te nemen die in elke schakel is gecreëerd.
+- **Syllabus:** H1.1
 - **Engels:** production/output method
+- **Voorbeeld:** Bij een brood: boer € 0,30 toegevoegde waarde, molenaar € 0,20, bakker € 0,50 = samen € 1,00 aan de economie toegevoegd — ook al is de eindprijs € 2,50 als de boer zelf ook kosten maakte.
 
 ### percentielenratio
 - **Term:** percentielenratio
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** Verhouding tussen het inkomen van een hoog percentiel en een laag percentiel van de inkomensverdeling, vaak 80/20 of 90/10. Alternatief voor de Gini-coëfficiënt.
+- **Formule:** `80/20 ratio = inkomen 80e percentiel / inkomen 20e percentiel`
 - **Syllabus:** H4.1
 - **Engels:** Gini coefficient / percentile ratio
+- **Voorbeeld:** Als het inkomen op het 80e percentiel € 60.000 is en op het 20e percentiel € 20.000, is de 80/20 ratio 3: de top verdient drie keer zoveel als de basis.
 
 ### primair-inkomen
 - **Term:** primair inkomen
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** Inkomen verkregen uit deelname aan het productieproces, vóór herverdeling door belasting en sociale uitkeringen. Bestaat uit arbeidsinkomen en kapitaalinkomen.
 - **Syllabus:** H4.2
 - **Engels:** primary / secondary income
+- **Voorbeeld:** Het brutoloon van € 3.500 dat een werknemer direct van de werkgever krijgt, is primair inkomen. De loonheffing komt er in de secundaire fase weer af.
 - **Teaching-units:** H02, H20
 
 ### productiefunctie
 - **Term:** productiefunctie
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** Wiskundig verband dat beschrijft hoe productie afhangt van kapitaal en arbeid, geschaald door de totale factorproductiviteit. Grondslag voor het analyseren van structurele groei.
+- **Formule:** `Y = A · f(K, L)`
 - **Syllabus:** H2.2
 - **Engels:** production function
 - **Notatie:** (1)
+- **Voorbeeld:** Bij een verdubbeling van kapitaal en arbeid verdubbelt Y als de productiefunctie constante schaalopbrengsten kent — mits A gelijk blijft.
 - **Teaching-units:** H27
 
 ### progressief
-- **Term:** progressief
-- **Definitie:** _(definitie volgt)_
+- **Term:** progressief belastingstelsel
+- **Definitie:** Belastingstelsel waarin het marginale tarief oploopt met het inkomen. Hogere inkomens betalen zowel absoluut als relatief meer belasting; nivelleert de inkomensverdeling.
+- **Syllabus:** H4.6
 - **Engels:** progressive / degressive tax system
+- **Voorbeeld:** Een stelsel met 20% tot € 30.000, 35% boven € 30.000 en 50% boven € 75.000 is progressief: iedere volgende schijf wordt zwaarder belast.
 
 ### secundair-inkomen
 - **Term:** secundair inkomen
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** Inkomen na herverdeling door de overheid: primair inkomen minus belastingen plus uitkeringen en toeslagen. Maatstaf voor de feitelijke koopkracht van huishoudens.
 - **Syllabus:** H4.2
 - **Engels:** primary / secondary income
+- **Voorbeeld:** Brutoloon € 3.500, belasting € 900, zorgtoeslag € 120: het secundaire inkomen is 3.500 − 900 + 120 = € 2.720.
 - **Teaching-units:** H22, I02
 
 ### structurele-werkloosheid
 - **Term:** structurele werkloosheid
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** Werkloosheid die aanwezig blijft ook als de economie op volle kracht draait. Ontstaat door mismatch tussen vraag en aanbod op de arbeidsmarkt en omvat frictiewerkloosheid als onderdeel.
 - **Syllabus:** H5.2
 - **Engels:** structural unemployment
+- **Voorbeeld:** Als er vacatures zijn voor verpleegkundigen terwijl werkloze administratief medewerkers niet de juiste scholing hebben, is dat structurele werkloosheid door een kwalitatieve mismatch.
 - **Teaching-units:** L12
 
 ### subjectieve-methode
 - **Term:** subjectieve methode
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** Methode om het bbp te berekenen door alle primaire inkomens in de economie op te tellen: arbeidsinkomen plus kapitaalinkomen. Sluit aan bij de gedachte dat productie altijd inkomen oplevert.
+- **Syllabus:** H1.1
 - **Engels:** income method
+- **Voorbeeld:** Als werknemers € 600 mld verdienen en kapitaaleigenaren € 450 mld, is het nationaal inkomen volgens de subjectieve methode € 1.050 mld.
 
 ### toegevoegde-waarde
 - **Term:** toegevoegde waarde
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** De waarde die een bedrijf toevoegt aan zijn inkomende goederen: de omzet min de kosten van leveringen van derden. Is per definitie gelijk aan de betaalde lonen plus de winst plus andere vergoedingen.
+- **Formule:** `toegevoegde waarde = omzet − kosten leveringen derden`
+- **Syllabus:** H1.1
 - **Engels:** value added
+- **Voorbeeld:** Een bakker koopt voor € 1.000 aan grondstoffen en verkoopt voor € 3.000 aan brood: de toegevoegde waarde bedraagt € 2.000.
 
 ### totale-factorproductiviteit
 - **Term:** totale factorproductiviteit
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** De efficiëntie waarmee kapitaal en arbeid worden omgezet in productie. Stijgt door technologische vooruitgang, R&D, onderwijs en betere instituties; verklaart groei boven wat K en L alleen opleveren.
+- **Syllabus:** H2.2
 - **Afkorting:** A
 - **Engels:** total factor productivity
+- **Voorbeeld:** Als K en L gelijk blijven maar Y met 2% per jaar stijgt, is dat toegenomen totale factorproductiviteit — bijvoorbeeld door digitalisering.
 
 ### vennootschapsbelasting
 - **Term:** vennootschapsbelasting
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** Belasting op de winst van vennootschappen zoals bv's en nv's. Aparte heffing van de inkomstenbelasting; het tarief is meestal lager dan het toptarief op arbeidsinkomen.
+- **Syllabus:** H4.6
 - **Engels:** corporate tax
+- **Voorbeeld:** Een Nederlandse bv met € 500.000 winst betaalt vennootschapsbelasting in twee schijven (bijv. 19% tot € 200.000 en 25,8% daarboven).
 
 ### vermogensongelijkheid
 - **Term:** vermogensongelijkheid
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** De ongelijke verdeling van het vermogen (bezittingen minus schulden) in een samenleving. In veel landen nog schever verdeeld dan inkomen: de top 10% bezit vaak meer dan 50% van het totaal.
 - **Syllabus:** H4.3
 - **Engels:** wealth inequality
+- **Voorbeeld:** In Nederland bezit de rijkste 10% van de huishoudens ongeveer 60% van het totale vermogen, terwijl de onderste 50% samen minder dan 5% heeft.
 
 ### vlaktaks
 - **Term:** vlaktaks
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** Belastingstelsel met één uniform marginaal tarief over het hele inkomen. Gemiddelde tarief stijgt alleen door heffingskorting; eenvoudig maar minder nivellerend dan een progressief stelsel.
+- **Syllabus:** H4.6
 - **Engels:** flat tax
+- **Voorbeeld:** Een vlaktaks van 35% op al het inkomen met een heffingskorting van € 3.000 is in Estland al jarenlang het belastingmodel.
 
 ### welzijn
 - **Term:** welzijn
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** De mate waarin mensen hun behoeften bevredigd weten en zich tevreden voelen. Breder dan welvaart: omvat ook niet-materiële aspecten zoals vrije tijd, veiligheid en zingeving.
 - **Syllabus:** H3.4
 - **Engels:** well-being/welfare
+- **Voorbeeld:** Iemand met een gemiddeld inkomen, goede gezondheid en een hechte sociale kring scoort vaak hoger op welzijn dan een rijke maar sociaal geïsoleerde werkverslaafde.
 
 ### werkloosheid
 - **Term:** werkloosheid
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** De situatie waarin mensen die willen werken en beschikbaar zijn geen baan hebben. Gemeten als het verschil tussen arbeidsaanbod en werkgelegenheid, vaak als percentage van de beroepsbevolking.
+- **Syllabus:** H5.1
 - **Engels:** unemployment
+- **Voorbeeld:** Als de beroepsbevolking 10 miljoen is en er zijn 9,7 miljoen banen, bedraagt de werkloosheid 300.000 personen of 3%.
 - **Vermijd:** unemployment
 - **Teaching-units:** L05, L07
 
 ## Domein I: Goede en slechte tijden
 
 ### anticyclisch
-- **Term:** anticyclisch
-- **Definitie:** _(definitie volgt)_
+- **Term:** anticyclisch begrotingsbeleid
+- **Definitie:** Begrotingsbeleid dat tegen de conjunctuur in werkt: stimuleert bij laagconjunctuur (meer uitgaven of lagere belasting) en verkrapt bij hoogconjunctuur. Dempt conjunctuurschommelingen.
 - **Syllabus:** I2.1
 - **Engels:** countercyclical / procyclical fiscal policy
+- **Voorbeeld:** Een overheid die tijdens een recessie extra infrastructuur aanlegt en lonen subsidieert, voert anticyclisch begrotingsbeleid — ze trekt de vraag omhoog.
 - **Teaching-units:** I01, I02
 
 ### appreciatie
 - **Term:** appreciatie
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** Stijging van de wisselkoers van een zwevende munt. Maakt export duurder voor buitenlandse kopers en import goedkoper voor binnenlandse consumenten.
+- **Syllabus:** I3.8
 - **Engels:** depreciation / appreciation
+- **Voorbeeld:** Als 1 USD stijgt van € 0,90 naar € 1,00, is de dollar geapprecieerd — Amerikaanse goederen worden voor eurokopers ruim 10% duurder.
 
 ### automatische-stabilisatoren
 - **Term:** automatische stabilisatoren
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** Onderdelen van de begroting die vanzelf anticyclisch werken zonder nieuwe beleidsbeslissingen. Werkloosheidsuitkeringen stijgen in een recessie; belastinginkomsten dalen — de vraag wordt automatisch ondersteund.
 - **Syllabus:** I2.2
 - **Engels:** automatic stabilisers
+- **Voorbeeld:** Tijdens de corona-laagconjunctuur liepen WW-uitgaven vanzelf op en daalden belastinginkomsten; dit bracht koopkracht op peil zonder dat de Kamer nieuw beleid hoefde te maken.
 - **Teaching-units:** I02, I15, I16
 
 ### autonome-bestedingen
 - **Term:** autonome bestedingen
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** Alle bestedingen die niet afhangen van het huidige inkomen: autonome consumptie, autonome investeringen en overheidsuitgaven. Vormen samen het startpunt van de bestedingslijn.
+- **Syllabus:** I4.1
 - **Engels:** autonomous consumption / spending
+- **Voorbeeld:** Overheidsuitgaven aan wegenonderhoud gaan door, ongeacht of de economie groeit of krimpt — klassieke autonome besteding.
 
 ### autonome-consumptie
 - **Term:** autonome consumptie
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** Deel van de consumptie dat niet afhankelijk is van het inkomen, bijvoorbeeld minimale uitgaven voor eten en huisvesting. In het Keynesiaanse kruis het startpunt van de bestedingslijn op de verticale as.
+- **Syllabus:** I4.1
 - **Engels:** autonomous consumption / spending
+- **Voorbeeld:** Ook bij een inkomen van € 0 geeft een gezin € 800 per maand uit aan minimale boodschappen en huur: € 800 is hun autonome consumptie.
 
 ### bankrun
 - **Term:** bankrun
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** Situatie waarin veel spaarders tegelijk hun tegoeden opnemen omdat ze vrezen dat hun bank failliet gaat. Kan een op zich gezonde bank alsnog omvertrekken door liquiditeitsproblemen.
 - **Syllabus:** I3.7
 - **Engels:** bank run / deposit guarantee
+- **Voorbeeld:** Bij Silicon Valley Bank vroegen klanten in maart 2023 in één dag € 42 mld op — de bank kon die vraag niet aan en viel om, ondanks voorheen gezonde balansen.
 
 ### bbp-groei
 - **Term:** bbp-groei
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** Procentuele verandering van het bbp van het ene jaar op het andere. Maatstaf voor hoe snel een economie groeit of krimpt.
+- **Formule:** `bbp-groei = (bbp_nieuw − bbp_oud) / bbp_oud × 100%`
 - **Syllabus:** I1.1
 - **Engels:** GDP growth / GDP level
+- **Voorbeeld:** Steeg het bbp van € 1.000 mld naar € 1.020 mld, dan is de bbp-groei 2% over dat jaar.
 - **Teaching-units:** H14, H21, H25, I19
 
 ### bbp-niveau
 - **Term:** bbp-niveau
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** De absolute waarde van het bbp op een bepaald moment, in euro's. Onderscheiden van bbp-groei, die het tempo van verandering meet.
 - **Syllabus:** I1.1
 - **Engels:** GDP growth / GDP level
+- **Voorbeeld:** Het Nederlandse bbp-niveau was in 2023 ongeveer € 1.050 mld; de bbp-groei dat jaar bedroeg circa 0,1%.
 - **Teaching-units:** H21
 
 ### belastinglek
 - **Term:** belastinglek
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** Deel van extra inkomen dat via belastingen weglekt naar de overheid in plaats van opnieuw in de kringloop te stromen. Verlaagt, net als het spaarlek, de multiplier.
+- **Syllabus:** I4.1
 - **Engels:** savings leakage / tax leakage
+- **Voorbeeld:** Als van € 100 extra bruto-inkomen € 30 loonheffing is, bedraagt het belastinglek 0,3.
 
 ### conjunctuurpolitiek
 - **Term:** conjunctuurpolitiek
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** Overheidsbeleid dat conjunctuurschommelingen afvlakt, via begrotingsbeleid (overheidsuitgaven en belastingen) en monetair beleid (rente en geldhoeveelheid). Stimulerend bij laagconjunctuur, verkrappend bij hoogconjunctuur.
 - **Syllabus:** I1.5
 - **Engels:** stabilisation policy
+- **Voorbeeld:** Tijdens de corona-laagconjunctuur stimuleerde Nederland via NOW-steun en loonsubsidies, terwijl de ECB de rente op 0% hield — gecombineerde conjunctuurpolitiek.
 - **Teaching-units:** I01
 
 ### consumentenprijsindex
 - **Term:** consumentenprijsindex
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** Indexcijfer dat het gemiddelde prijsniveau van een representatieve mand goederen en diensten voor consumenten volgt. Basis voor het meten van inflatie.
+- **Syllabus:** I1.1
 - **Afkorting:** CPI
 - **Engels:** inflation / consumer price index
+- **Voorbeeld:** Als de CPI van 100 naar 105 gaat, is het gemiddelde prijspeil met 5% gestegen: inflatie bedraagt 5%.
 
 ### depositogarantiestelsel
 - **Term:** depositogarantiestelsel
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** Regeling waarmee de overheid spaartegoeden bij banken garandeert tot een bepaald bedrag, in de EU tot € 100.000 per persoon per bank. Voorkomt paniek en bankruns.
 - **Syllabus:** I3.7
 - **Engels:** bank run / deposit guarantee
+- **Voorbeeld:** Als DSB Bank failliet gaat, garandeert het Nederlandse depositogarantiestelsel elke spaarder tot € 100.000 — spaarders hoeven daardoor niet te panikeren.
 - **Vermijd:** depositogarantieregeling
 
 ### depreciatie
 - **Term:** depreciatie
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** Daling van de wisselkoers van een zwevende munt. Maakt export goedkoper voor buitenlandse kopers en import duurder voor binnenlandse consumenten.
+- **Syllabus:** I3.8
 - **Engels:** depreciation / appreciation
+- **Voorbeeld:** Als 1 GBP daalt van € 1,20 naar € 1,10, is het pond gedeprecieerd — Britse goederen zijn voor eurokopers 8% goedkoper geworden.
 
 ### duaal-mandaat
 - **Term:** duaal mandaat
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** Doelstelling van een centrale bank die twee hoofddoelen nastreeft, meestal prijsstabiliteit plus maximale werkgelegenheid. De Amerikaanse Federal Reserve volgt dit model.
 - **Syllabus:** I3.3
 - **Engels:** single / dual mandate
+- **Voorbeeld:** De Fed mag de rente verlagen om werkloosheid te bestrijden, ook als de inflatie iets boven het doel ligt — dat verschilt van de ECB, die strikter op inflatie stuurt.
 - **Teaching-units:** I05
 
 ### effectieve-ondergrens-nominale-rente
 - **Term:** effectieve ondergrens nominale rente
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** Ondergrens waarbij verdere rentedalingen niet of nauwelijks meer werken, omdat spaarders anders hun geld contant gaan houden. In de praktijk ligt deze rond de 0% of iets daaronder.
 - **Syllabus:** I3.6
 - **Engels:** effective lower bound
+- **Voorbeeld:** Toen de ECB haar depositorente in 2014–2022 licht negatief zette, was de manoeuvreerruimte beperkt: nog verder omlaag had spaarders naar cash gedreven.
 - **Teaching-units:** I03, I05
 
 ### emu
 - **Term:** EMU
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** Economische en Monetaire Unie van de Europese Unie met één gedeelde munt (de euro) en gezamenlijk monetair beleid door de ECB. Eurolanden geven nationaal monetair beleid op.
 - **Syllabus:** I3.9
 - **Engels:** EMU / monetary union
+- **Voorbeeld:** Nederland is EMU-land: de euro is de nationale munt en de ECB (niet DNB) bepaalt de rente — budgettair is Nederland nog wel zelfstandig.
 
 ### enkelvoudig-mandaat
 - **Term:** enkelvoudig mandaat
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** Doelstelling van een centrale bank die één hoofddoel heeft, meestal prijsstabiliteit. Voorbeeld: de ECB richt zich primair op ongeveer 2% inflatie.
 - **Syllabus:** I3.3
 - **Engels:** single / dual mandate
+- **Voorbeeld:** De ECB heeft een enkelvoudig mandaat: prijsstabiliteit (inflatiedoel 2%) staat voorop; werkgelegenheid volgt pas als daarmee verenigbaar.
+
+### europese-centrale-bank
+- **Term:** Europese Centrale Bank
+- **Definitie:** Centrale bank van het eurogebied, verantwoordelijk voor het monetair beleid en financieel toezicht. Streeft primair naar prijsstabiliteit (inflatiedoel ongeveer 2%).
+- **Syllabus:** I3.1
+- **Afkorting:** ECB
+- **Engels:** European Central Bank
+- **Voorbeeld:** De ECB bepaalt de refi-rente voor alle 20 eurolanden; tijdens de inflatiepiek van 2022 trok ze de rente binnen een jaar op van 0% naar 4%.
 
 ### feitelijke-productie
 - **Term:** feitelijke productie
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** Het bbp dat een economie daadwerkelijk produceert in een jaar, gelijk aan de geaggregeerde vraag. Kan onder of boven het potentieel liggen — dat verschil heet de output gap.
+- **Syllabus:** I1.2
 - **Afkorting:** Y
 - **Engels:** actual output
+- **Voorbeeld:** De feitelijke productie daalde in Nederland in 2020 naar € 800 mld; het potentieel lag toen rond € 830 mld — een negatieve output gap van ongeveer 4%.
 
 ### ga-curve
 - **Term:** GA-curve
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** Curve die het geaggregeerd aanbod beschrijft: stijgend verband tussen productie en inflatie. De helling hangt af van de mate van loon- en prijsrigiditeit.
 - **Syllabus:** I4.4
 - **Engels:** AS curve (aggregate supply)
+- **Voorbeeld:** Bij oververhitting stijgen lonen en prijzen meer dan productie: de GA-curve loopt steiler omhoog in krappe economie dan in een slappe markt.
 - **Teaching-units:** I07, I10, I11, I15
+
+### geldhoeveelheid
+- **Term:** geldhoeveelheid
+- **Definitie:** Totaal aan geld dat in handen is van het publiek: chartaal geld (munten en biljetten) plus direct opneembaar giraal geld (betaalrekeningen). De eng definitie heet M1.
+- **Syllabus:** I3.2
+- **Afkorting:** M1
+- **Engels:** money supply
+- **Voorbeeld:** Bij € 300 mld chartaal + € 600 mld aan direct opneembaar giraal geld bedraagt M1 ongeveer € 900 mld.
 
 ### geldillusie
 - **Term:** geldillusie
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** De neiging van mensen om te denken in nominale geldbedragen in plaats van in reële koopkracht. Een "loonsverhoging" van 3% bij 4% inflatie voelt als vooruitgang, terwijl de koopkracht juist daalt.
+- **Syllabus:** I1.4
 - **Engels:** money illusion
+- **Voorbeeld:** Een werknemer is tevreden met 3% loonsverhoging, maar als de inflatie 5% is, gaat hij er reëel op achteruit — geldillusie verhult dat.
 
 ### geldschepping
 - **Term:** geldschepping
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** Het proces waarbij banken nieuw giraal geld in omloop brengen door kredieten te verlenen. Elke nieuwe lening creëert tegelijkertijd een deposito: beide kanten van het bankbalans groeien.
 - **Syllabus:** I3.4
 - **Engels:** money creation
+- **Voorbeeld:** Als ING een hypotheek van € 300.000 verstrekt, schrijft de bank dat bedrag bij op de rekening van de koper: nieuw giraal geld ontstaat uit het niets.
 - **Vermijd:** geldcreatie
 
 ### geldvernietiging
 - **Term:** geldvernietiging
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** Omgekeerd proces van geldschepping: als een lening wordt afgelost, verdwijnt het deposito dat bij het verstrekken ontstond. Giraal geld wordt uit omloop gehaald.
+- **Syllabus:** I3.4
 - **Engels:** money destruction
+- **Voorbeeld:** Bij elke maandelijkse hypotheekaflossing verdwijnt dat bedrag van de rekening van de huiseigenaar én van het balanstotaal van de bank — geldvernietiging.
 
 ### hoogconjunctuur
 - **Term:** hoogconjunctuur
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** Periode waarin de economie boven haar potentiële productie draait (positieve output gap). Kenmerken: krapte op de arbeidsmarkt, oplopende lonen en inflatiedruk.
 - **Syllabus:** I1.2
 - **Engels:** boom / expansion
+- **Voorbeeld:** In 2022 draaide de Nederlandse economie op volle toeren met recordlage werkloosheid en stijgende lonen — een periode van hoogconjunctuur.
 - **Vermijd:** economische boom
 - **Teaching-units:** I01, I05, I06, I07, I15
 
 ### inflatie
 - **Term:** inflatie
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** Algemene stijging van het prijspeil, meestal gemeten via de consumentenprijsindex. Bij inflatie kun je met hetzelfde bedrag geld minder kopen — de koopkracht daalt.
+- **Formule:** `inflatie = %ΔCPI`
+- **Syllabus:** I1.1
 - **Afkorting:** CPI
 - **Engels:** inflation / consumer price index
+- **Voorbeeld:** Bij 3% inflatie kost een boodschappenmand die vorig jaar € 100 was nu € 103.
 - **Vermijd:** inflation
 
 ### inflatieverwachtingen
 - **Term:** inflatieverwachtingen
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** De inflatie die huishoudens, bedrijven en beleggers voor de toekomst verwachten. Verschuift de GA-curve: hogere verwachtingen leiden tot hogere looneisen en prijszettingen.
+- **Syllabus:** I4.4
 - **Engels:** inflation expectations
+- **Voorbeeld:** Toen energieprijzen in 2022 uit de pan rezen, stegen ook de verwachte inflatie en de cao-looneisen — de GA-curve schoof omhoog.
 
 ### internationale-concurrentiepositie
 - **Term:** internationale concurrentiepositie
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** De mate waarin binnenlandse producenten kunnen concurreren met buitenlandse aanbieders, afhankelijk van prijsniveau en wisselkoers. Verbetert bij loonmatiging of depreciatie.
+- **Syllabus:** I3.8
 - **Engels:** international competitiveness
+- **Voorbeeld:** Als Nederlandse lonen met 1% stijgen en Duitse met 4%, verbetert de Nederlandse concurrentiepositie: Nederlandse producten worden relatief goedkoper op de Duitse markt.
 
 ### inverdieneffecten
 - **Term:** inverdieneffecten
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** Effecten waardoor een overheidsimpuls zichzelf deels terugverdient: extra uitgaven leiden tot meer werk en productie, wat extra belastinginkomsten en lagere uitkeringsuitgaven oplevert.
 - **Syllabus:** I2.3
 - **Engels:** fiscal multiplier effects
+- **Voorbeeld:** Een extra overheidsuitgave van € 1 mld aan wegenbouw levert extra btw, loonheffing en winstbelasting op; het feitelijke tekort neemt daardoor minder toe dan € 1 mld.
 - **Teaching-units:** I14
 
 ### is-curve
 - **Term:** IS-curve
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** Curve die alle combinaties van rente en productie weergeeft waarbij de goederenmarkt in evenwicht is. Dalend: bij een lagere rente investeren bedrijven meer, wat de productie omhoogstuwt.
 - **Syllabus:** I4.2
 - **Engels:** IS curve
+- **Voorbeeld:** Daalt de rente van 4% naar 2%, dan nemen investeringen toe en schuift het evenwicht langs de IS-curve naar een hogere productie.
 - **Teaching-units:** I07, I15
 
 ### kapitaalinvoer
 - **Term:** kapitaalinvoer
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** Instroom van buitenlands kapitaal in de binnenlandse economie, bijvoorbeeld doordat buitenlanders obligaties of aandelen kopen. Hogere binnenlandse rente trekt kapitaalinvoer aan.
+- **Syllabus:** I3.8
 - **Engels:** capital inflow / outflow
+- **Voorbeeld:** Als de ECB haar rente verhoogt, worden Europese obligaties aantrekkelijker voor Amerikaanse beleggers: kapitaalinvoer richting het eurogebied neemt toe.
 
 ### kapitaaluitvoer
 - **Term:** kapitaaluitvoer
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** Uitstroom van binnenlands kapitaal naar het buitenland, bijvoorbeeld doordat binnenlanders buitenlandse effecten kopen. Lagere binnenlandse rente stimuleert kapitaaluitvoer.
+- **Syllabus:** I3.8
 - **Engels:** capital inflow / outflow
+- **Voorbeeld:** Bij rentepariteit tussen de Fed op 5% en de ECB op 3% zoeken veel Europese beleggers hogere Amerikaanse rente op — een vorm van kapitaaluitvoer.
 
 ### keynesiaanse-kruis
 - **Term:** Keynesiaanse kruis
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** Model van Keynes dat het kortetermijn-evenwicht in de goederenmarkt bepaalt door de bestedingslijn gelijk te stellen aan de 45°-lijn (productie = bestedingen). Laat de multiplier-werking zien.
 - **Syllabus:** I4.1
 - **Engels:** Keynesian cross
+- **Voorbeeld:** Een extra overheidsuitgave van € 10 mld verhoogt bij een multiplier van 2 de productie met € 20 mld; in het Keynesiaanse kruis verschuift de bestedingslijn omhoog en kruist de 45°-lijn verder naar rechts.
 - **Teaching-units:** I08
 
 ### keynesianen
 - **Term:** Keynesianen
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** Stroming die stelt dat de economie op korte termijn uit evenwicht kan zijn door te weinig vraag, en dat actief begrotings- en monetair beleid die output gap kan sluiten.
 - **Syllabus:** I4.6
 - **Engels:** Keynesians / Monetarists / New Classicals
+- **Voorbeeld:** Een keynesiaan bepleit tijdens een recessie extra overheidsuitgaven om de bestedingen op peil te brengen, ook al loopt het tekort daardoor tijdelijk op.
 
 ### koopkracht
 - **Term:** koopkracht
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** De hoeveelheid goederen en diensten die je met je inkomen kunt kopen. Stijgt als lonen sneller groeien dan prijzen; daalt bij hogere inflatie of lagere nominale inkomens.
 - **Syllabus:** I1.4
 - **Engels:** purchasing power
+- **Voorbeeld:** Stijgt je loon met 4% en de inflatie met 5%, dan daalt je koopkracht met ongeveer 1% — je kunt minder kopen dan vorig jaar.
 - **Vermijd:** purchasing power
 - **Teaching-units:** H14, H24, I06, I09, I18
 
 ### laagconjunctuur
 - **Term:** laagconjunctuur
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** Periode waarin de economie onder haar potentiële productie draait (negatieve output gap). Kenmerken: oplopende werkloosheid, afnemende investeringen en vaak lagere inflatie.
+- **Syllabus:** I1.2
 - **Engels:** recession / contraction
+- **Voorbeeld:** Tijdens de corona-dip van 2020 kromp het bbp met 3,8% en steeg de werkloosheid — klassieke laagconjunctuur.
 - **Vermijd:** recessie
 
 ### lener-in-laatste-instantie
 - **Term:** lener-in-laatste-instantie
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** Rol van de centrale bank die commerciële banken tijdelijk krediet verschaft als zij in acute liquiditeitsnood verkeren. Voorkomt dat een korte liquiditeitscrisis uitmondt in een solvabiliteitscrisis.
+- **Syllabus:** I3.7
 - **Engels:** lender of last resort
+- **Voorbeeld:** Tijdens de eurocrisis in 2012 verleende de ECB langlopende leningen (LTRO) aan banken om ze door de storm te helpen — klassieke rol als lener-in-laatste-instantie.
 
 ### loon-en-prijsrigiditeit
 - **Term:** loon- en prijsrigiditeit
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** De mate waarin lonen en prijzen op korte termijn moeilijk aanpassen, bijvoorbeeld door contracten of menukosten. Hoe hoger de rigiditeit, hoe vlakker de GA-curve en hoe sterker de conjunctuureffecten.
+- **Syllabus:** I4.4
 - **Engels:** wage and price rigidity
+- **Voorbeeld:** Cao-lonen worden meestal een of twee jaar vastgelegd; daardoor dalen lonen bij een recessie niet meteen mee — een vorm van loonrigiditeit.
 - **Vermijd:** loon-/prijsstijfheid" / "starheid
 
 ### marginale-consumptiequote
 - **Term:** marginale consumptiequote
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** Deel van een extra euro inkomen dat huishoudens consumeren in plaats van sparen. Bepaalt de helling van de bestedingslijn en daarmee de multiplier.
+- **Formule:** `MCQ = ΔC / ΔY`
+- **Syllabus:** I4.1
 - **Engels:** marginal propensity to consume / save
+- **Voorbeeld:** Als iemand van € 100 extra inkomen € 80 uitgeeft en € 20 spaart, is zijn MCQ 0,8.
 
 ### marginale-spaarquote
 - **Term:** marginale spaarquote
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** Deel van een extra euro inkomen dat huishoudens sparen. Aanvullend op de marginale consumptiequote: MSQ + MCQ = 1.
+- **Formule:** `MSQ = ΔS / ΔY = 1 − MCQ`
+- **Syllabus:** I4.1
 - **Engels:** marginal propensity to consume / save
+- **Voorbeeld:** Bij MCQ = 0,8 is MSQ = 0,2: van elke extra euro inkomen wordt 20 cent gespaard.
 
 ### mb-curve
 - **Term:** MB-curve
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** Curve die de monetaire beleidsregel van de centrale bank weergeeft: horizontaal op de beleidsrente die de bank kiest om inflatie rond het doel te houden. Verschuift verticaal met beleidsveranderingen.
 - **Syllabus:** I4.3
 - **Engels:** MB curve
+- **Voorbeeld:** Verhoogt de ECB haar rente van 2% naar 4% om hoge inflatie te bestrijden, dan schuift de horizontale MB-curve omhoog.
 - **Vermijd:** LM curve
 - **Teaching-units:** I07, I11
 
 ### monetair-beleid
 - **Term:** monetair beleid
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** Beleid van de centrale bank om via de rente en de geldhoeveelheid de inflatie en de conjunctuur te sturen. Werkt via het transmissiemechanisme naar bedrijven en huishoudens.
 - **Syllabus:** I3.5
 - **Engels:** monetary policy
 - **Synoniemen:** rentebeleid
+- **Voorbeeld:** Toen inflatie in 2022 boven 10% steeg, verhoogde de ECB haar beleidsrente van 0% naar 4% om het lenen en bestedingen te remmen — verkrappend monetair beleid.
 - **Vermijd:** monetary policy
 - **Teaching-units:** I12, I13, I17, I19
 
 ### monetaristen
 - **Term:** Monetaristen
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** Stroming die stelt dat inflatie vooral een monetair verschijnsel is en dat stabiele geldgroei belangrijker is dan actief conjunctuurbeleid. Wantrouwen overheidsingrijpen.
 - **Syllabus:** I4.6
 - **Engels:** Keynesians / Monetarists / New Classicals
+- **Voorbeeld:** Milton Friedman, boegbeeld van de monetaristen, pleitte voor een vaste jaarlijkse geldgroei als beste stabilisator — géén fijnregeling via rentebesluiten.
 
 ### multiplier
 - **Term:** multiplier
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** Factor die aangeeft hoeveel de totale productie verandert bij een eenheid verandering in autonome bestedingen. Hangt af van de marginale consumptiequote, het spaarlek en het belastinglek.
+- **Formule:** `multiplier = 1 / (1 − c + c·t)  (met c = MCQ, t = belastinglek)`
+- **Syllabus:** I4.1
 - **Engels:** multiplier
+- **Voorbeeld:** Met MCQ = 0,8 en t = 0,3: multiplier ≈ 1/(1 − 0,8 + 0,24) ≈ 2,3. Elke extra € 1 mld overheidsuitgaven verhoogt het bbp met ongeveer € 2,3 mld.
 
 ### muntunie
 - **Term:** muntunie
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** Unie van landen die één gezamenlijke munt gebruiken en dus één gezamenlijk monetair beleid voeren. De Europese Muntunie (eurozone) is het bekendste voorbeeld.
 - **Syllabus:** I3.9
 - **Engels:** EMU / monetary union
+- **Voorbeeld:** De eurozone met 20 deelnemende EU-landen deelt sinds 1999 de euro; het Amerikaanse dollargebied is een andere muntunie.
 - **Teaching-units:** I13
 
 ### natuurlijke-werkloosheid
 - **Term:** natuurlijke werkloosheid
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** De structurele werkloosheid die overblijft als de economie op haar potentieel draait en de inflatie stabiel is. Samengesteld uit frictie- en structurele werkloosheid zonder conjuncturele component.
+- **Syllabus:** I1.2
 - **Engels:** natural rate of unemployment
+- **Voorbeeld:** Als Nederland bij Y = Y* zo'n 3,5% werkloosheid heeft zonder oplopende inflatie, ligt de natuurlijke werkloosheid rond 3,5%.
 
 ### neo-klassieken
 - **Term:** Neo-klassieken
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** Stroming die ervan uitgaat dat lonen en prijzen snel aanpassen en markten vrijwel altijd in evenwicht zijn. Conjunctuurbeleid is volgens hen weinig effectief.
 - **Syllabus:** I4.6
 - **Engels:** Keynesians / Monetarists / New Classicals
+- **Voorbeeld:** Een neo-klassieke econoom zou betogen dat corona-laagconjunctuur vanzelf weer oplost via loondaling en prijsaanpassing; stimulans is dan grotendeels overbodig.
 
 ### nominale-rente-centrale-bank
 - **Term:** nominale rente centrale bank
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** Het rentetarief dat de centrale bank vaststelt voor leningen aan commerciële banken. Stuurinstrument van het monetair beleid; beïnvloedt via de banken alle andere rentes in de economie.
+- **Syllabus:** I1.1
 - **Engels:** policy rate
+- **Voorbeeld:** Toen de ECB haar beleidsrente in 2022 optrok van 0% naar 4%, volgden hypotheekrentes en spaarrentes in Europa met enige vertraging.
 
 ### onderbesteding
 - **Term:** onderbesteding
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** Situatie waarin de bestedingen te laag zijn om de potentiële productie af te zetten: feitelijke productie onder het potentieel. Leidt tot werkloosheid en lage inflatie.
+- **Syllabus:** I1.2
 - **Engels:** overspending / underspending
+- **Voorbeeld:** Na een financiële crisis houden huishoudens hun hand op de knip; productiecapaciteit ligt stil en werkloosheid loopt op — onderbesteding in laagconjunctuur.
 
 ### output-gap
 - **Term:** output gap
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** Het verschil tussen de feitelijke productie en de potentiële productie, meestal uitgedrukt als percentage. Positief in hoogconjunctuur, negatief in laagconjunctuur.
+- **Formule:** `output gap = (Y − Y*) / Y* × 100%`
+- **Syllabus:** I1.1
 - **Engels:** output gap
+- **Voorbeeld:** Als Y = € 1.020 mld en Y* = € 1.050 mld, is de output gap (1.020 − 1.050)/1.050 × 100% ≈ −2,9%: de economie draait onder haar potentieel.
 
 ### overbesteding
 - **Term:** overbesteding
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** Situatie waarin de bestedingen groter zijn dan wat de economie duurzaam kan produceren: feitelijke productie boven de potentiële. Leidt tot oplopende inflatie.
+- **Syllabus:** I1.2
 - **Engels:** overspending / underspending
+- **Voorbeeld:** Een consumptieboom met stijgende lonen en lage rente drijft de vraag boven het aanbodpotentieel — overbesteding in hoogconjunctuur.
 
 ### potentiele-productie
-- **Term:** potentiele productie
-- **Definitie:** _(definitie volgt)_
+- **Term:** potentiële productie
+- **Definitie:** De productie die een economie duurzaam kan halen met haar beschikbare productiefactoren en technologie zonder oplopende inflatie. Stijgt op lange termijn door groei van K, L en A.
+- **Syllabus:** I1.2
 - **Afkorting:** Y*
 - **Engels:** potential output
+- **Voorbeeld:** Als Nederland structureel € 1.050 mld zou kunnen produceren maar er feitelijk € 1.020 mld wordt geproduceerd, ligt de potentiële productie 3% hoger dan de feitelijke.
 
 ### procyclisch-begrotingsbeleid
 - **Term:** procyclisch begrotingsbeleid
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** Begrotingsbeleid dat de conjunctuur versterkt: extra uitgaven tijdens hoogconjunctuur of bezuinigingen tijdens laagconjunctuur. Verergert schommelingen; meestal politiek/bestuurlijk gedreven.
 - **Syllabus:** I2.1
 - **Engels:** countercyclical / procyclical fiscal policy
+- **Voorbeeld:** Bezuinigingen tijdens een recessie om het tekort te verlagen versterken de vraaguitval — procyclisch beleid dat de recessie dieper maakt.
 
 ### reele-rente
-- **Term:** reele rente
-- **Definitie:** _(definitie volgt)_
+- **Term:** reële rente
+- **Definitie:** De nominale rente gecorrigeerd voor (verwachte) inflatie. Geeft aan hoeveel koopkracht je werkelijk overhoudt aan sparen of hoeveel een lening echt kost.
+- **Formule:** `reële rente = (1 + nominale rente) / (1 + inflatie) − 1`
+- **Syllabus:** I1.1
 - **Engels:** real interest rate
+- **Voorbeeld:** Bij 4% nominale rente en 3% inflatie is de reële rente (1,04/1,03) − 1 ≈ 1%.
 
 ### reele-rente-formule
-- **Term:** reele rente formule
-- **Definitie:** _(definitie volgt)_
+- **Term:** reële rente formule
+- **Definitie:** Formule die de reële rente afleidt uit de nominale rente en de inflatie. Voor kleine percentages benaderd als reële rente ≈ nominale rente − inflatie.
+- **Formules:** `reële rente = (1 + r_nom) / (1 + π) − 1` · `reële rente ≈ r_nom − π  (bij kleine %)`
+- **Syllabus:** I1.4
 - **Engels:** real interest rate formula
+- **Voorbeeld:** Bij r_nom = 5% en π = 3%: reële rente = 1,05/1,03 − 1 ≈ 1,94%, iets minder dan de benadering van 2%.
 
 ### refi-rente
 - **Term:** refi-rente
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** De rente waartegen de ECB giraal geld leent aan commerciële banken in haar herfinancieringsoperaties. Belangrijkste beleidsrente voor het eurogebied.
+- **Syllabus:** I3.5
 - **Engels:** ECB refinancing rate
+- **Voorbeeld:** Een verhoging van de refi-rente van 0,5% naar 1% maakt het voor banken duurder om bij de ECB te lenen; hypotheek- en bedrijfskredietrentes volgen.
 
 ### spaarlek
 - **Term:** spaarlek
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** Deel van extra inkomen dat niet in de kringloop wordt uitgegeven maar weglekt naar sparen. Verlaagt de multiplier.
+- **Syllabus:** I4.1
 - **Engels:** savings leakage / tax leakage
+- **Voorbeeld:** Als van € 100 extra inkomen € 20 wordt gespaard, is het spaarlek 0,2 — die euro komt niet terug als vraag naar producten.
 
 ### stimulerend
-- **Term:** stimulerend
-- **Definitie:** _(definitie volgt)_
+- **Term:** stimulerend begrotingsbeleid
+- **Definitie:** Begrotingsbeleid dat de geaggregeerde vraag verhoogt via extra uitgaven of belastingverlagingen. Toegepast bij laagconjunctuur om de output gap te sluiten.
+- **Syllabus:** I2.1
 - **Engels:** expansionary / contractionary fiscal policy
+- **Voorbeeld:** Een subsidie van € 2.000 per energiezuinige woning verhoogt de bouwactiviteit en de vraag naar materialen: stimulerend begrotingsbeleid.
 
 ### theorie-optimale-valutagebieden
 - **Term:** theorie optimale valutagebieden
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** Theorie die criteria geeft voor wanneer een groep landen baat heeft bij één gezamenlijke munt: vergelijkbare conjunctuur, mobiliteit van arbeid en kapitaal, en onderlinge budgettaire overdrachten.
+- **Syllabus:** I3.9
 - **Engels:** optimum currency area theory
+- **Voorbeeld:** De VS is volgens deze theorie een geschikter valutagebied dan de eurozone: Amerikanen verhuizen makkelijker tussen deelstaten en er zijn federale overdrachten bij asymmetrische schokken.
 
 ### trilemma-monetair-beleid
 - **Term:** trilemma monetair beleid
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** Stelling dat een land uit drie beleidsdoelen maar twee tegelijk kan realiseren: vrij kapitaalverkeer, zelfstandig monetair beleid en een vaste wisselkoers. Een van drieën moet wijken.
+- **Syllabus:** I3.8
 - **Engels:** monetary policy trilemma
+- **Voorbeeld:** Het eurogebied combineert vrij kapitaalverkeer met een vaste koers tussen eurolanden, maar geeft zelfstandige monetaire autonomie per land op — dat hoort bij de ECB.
 
 ### uitverdieneffecten
 - **Term:** uitverdieneffecten
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** Effecten waardoor een bezuiniging zichzelf deels tegenwerkt: minder uitgaven leiden tot minder werk, dus lagere belastinginkomsten en hogere uitkeringsuitgaven. Het feitelijke tekort daalt minder dan verwacht.
 - **Syllabus:** I2.3
 - **Engels:** fiscal multiplier effects
+- **Voorbeeld:** Een bezuiniging op ambtenaren levert niet de volle besparing op: ontslagen ambtenaren betalen geen loonheffing meer en kosten mogelijk WW — uitverdieneffecten verkleinen de opbrengst.
 - **Teaching-units:** H23, I14
 
-### vaste
-- **Term:** vaste
-- **Definitie:** _(definitie volgt)_
+### vaste-wisselkoersen
+- **Term:** vaste wisselkoersen
+- **Definitie:** Wisselkoerssysteem waarin de koers tussen twee munten door de overheid of centrale bank op een vaste waarde wordt gehouden. Biedt koerszekerheid maar beperkt de beleidsvrijheid.
+- **Syllabus:** I3.8
 - **Engels:** fixed / floating exchange rates
+- **Voorbeeld:** Hongkong houdt zijn dollar vast gekoppeld aan de Amerikaanse dollar (ongeveer 7,80 HKD per USD) — de autoriteiten kopen of verkopen deviezen om die koers te handhaven.
 
 ### verkrappend-begrotingsbeleid
 - **Term:** verkrappend begrotingsbeleid
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** Begrotingsbeleid dat de geaggregeerde vraag remt via bezuinigingen of belastingverhogingen. Toegepast bij hoogconjunctuur om oververhitting en inflatie tegen te gaan.
+- **Syllabus:** I2.1
 - **Engels:** expansionary / contractionary fiscal policy
+- **Voorbeeld:** Een btw-verhoging van 21% naar 23% tijdens een hoogconjunctuur haalt koopkracht uit de economie — verkrappend begrotingsbeleid.
 - **Vermijd:** contractief begrotingsbeleid
 
 ### wisselkoers
 - **Term:** wisselkoers
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** De prijs van een munt uitgedrukt in een andere munt. Beïnvloedt de internationale concurrentiepositie: een sterke eigen munt maakt export duurder en import goedkoper.
 - **Syllabus:** I3.8
 - **Engels:** exchange rate
+- **Voorbeeld:** Een wisselkoers van 1 EUR = 1,10 USD betekent dat je voor elke euro $ 1,10 krijgt; daalt die naar 1 EUR = 1,05 USD, dan is de euro gedeprecieerd.
 - **Vermijd:** exchange rate
 - **Teaching-units:** G11, H13, H24, H25, I12, I13, I19, I20
 
 ### zwevende-wisselkoersen
 - **Term:** zwevende wisselkoersen
-- **Definitie:** _(definitie volgt)_
+- **Definitie:** Wisselkoerssysteem waarin de koers vrij door vraag en aanbod op de valutamarkt wordt bepaald. Geeft beleidsvrijheid maar brengt koersschommelingen met zich mee.
+- **Syllabus:** I3.8
 - **Engels:** fixed / floating exchange rates
+- **Voorbeeld:** De euro-dollarkoers zweeft vrij: in 2022 fluctueerde hij tussen $ 0,96 en $ 1,15 — vraag en aanbod op de valutamarkt bepaalden de koers dagelijks.

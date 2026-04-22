@@ -270,7 +270,7 @@ The 8 deterministic report scripts under `build-scripts/reports/` (see PART 4) c
 | `probe-questions` | `references/qc-prompts/probe-questions.md` | Catalog gaps that real exam topics demand but no unit covers |
 | `exam-derived-skills` | `references/qc-prompts/exam-derived-skills.md` | Whether catalog can be reached from real CvTE exam questions |
 | `tree-integrity-audit` | `references/qc-prompts/tree-integrity-audit.md` | Wrong exam_codes, over-wired needs, kern↔procedure drift (top-down per-unit) |
-| `foundation-audit` | `references/qc-prompts/foundation-audit.md` | L0 units that assume prereqs VWO 4 students don't bring from onderbouw (bottom-up by layer) |
+| `foundation-audit` | `references/qc-prompts/foundation-audit.md` | L0 units that claim mathematical-foundation status but are really economic; L1 units with unjustified `needs` (bottom-up by layer) |
 
 **Outputs** (visible under `reports/`):
 - `reports/qc/qc-run-YYYY-MM-DD.md` — one per run (overwrite if same day).
@@ -279,3 +279,35 @@ The 8 deterministic report scripts under `build-scripts/reports/` (see PART 4) c
 **Cadence:** invoked manually after ≥5 catalog edits since last run, or at minimum monthly. No CI hook (none exists in this repo); re-evaluate when CI lands.
 
 **Adding a new test:** create a new `*.md` prompt file under `references/qc-prompts/`, add a row to its README and to the runner's MVP-test table, and document one expected failure signal so reviewers know what good looks like.
+
+---
+
+## PART 8: LAYER SEMANTICS
+
+The validator in `build-scripts/references/build-unit-index.js` enforces only the structural rule `layer >= max(needs.layer) + 1`. That ensures the DAG math is consistent, but says nothing about **what a given layer number means** for the course. This section is the semantic policy.
+
+### The rule
+
+| Layer | Content | Structural requirement |
+|---|---|---|
+| **L0** | Pre-course mathematical / calculation skills. Onderbouw-wiskunde that the economics course uses but does NOT teach. Examples: linear-equation solving, percentage change, substituting into a function, reading a graph-axis scale. | `needs=[]`. Content is **mathematical or notational, not economic**. |
+| **L1** | Foundational economic concepts. The course's opening vocabulary — things like schaarste, vraag/aanbod, alternatieve kosten, betalingsbereidheid. Some students may have heard these in onderbouw, but the course re-teaches them as first-class content. | Preferred: `needs=[]`. Acceptable: `needs` contain only L0 math primitives (e.g. an economic concept that requires percentage calculation). |
+| **L2+** | Economic scaffolding built on earlier economic concepts. | Structural math: `layer = max(needs.layer) + 1`. Some drift tolerated for curated tier placements; flagged by QC runs when severe. |
+
+### Tiebreak rule
+
+When a unit *could* sit at either L0 or L1, **prefer L1**. L0 is the small, bounded set of math primitives; it does not grow unless we're adding genuinely new calculation territory.
+
+### What this means operationally
+
+- **Minting a new unit**: first ask "is this mathematical or economic?" Mathematical → L0 candidate. Economic → L1 candidate (unless it has economic prereqs → L2+). Never assign L0 to an economic concept just because it happens to have `needs=[]`.
+- **A unit with `needs=[]` is not automatically L0**. Most `needs=[]` units should sit at L1 (the foundational economic concepts that the course teaches from scratch).
+- **A unit that only depends on math primitives** can legitimately be L1 with `needs` pointing at specific A-domain math units — that reflects that the economic concept uses a calculation the student already has.
+
+### What the foundation-audit test checks
+
+The `foundation-audit` QC test samples L0 units and asks: *is this mathematical in character, or is it an economic concept that should be at L1?* It also samples L1 units and asks: *do you actually need the cited `needs`, or is this a standalone economic concept that got over-wired?*
+
+### Drift policy
+
+L0/L1 are the tight layers. Errors here cascade: if an L0 is wrongly classified, dependent chains inherit the misreading. L2+ is allowed looser tolerances — the math still binds, but the "is this the right layer?" judgment relaxes as we climb.
