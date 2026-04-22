@@ -722,10 +722,11 @@
     "category": "vaardigheden",
     "layer": 3,
     "duration_min": 5,
-    "kern": "Bereken het nieuwe marktevenwicht nadat de overheid een heffing (accijns) heeft opgelegd.",
+    "kern": "Bereken het nieuwe marktevenwicht nadat de overheid een heffing (accijns) heeft opgelegd, en analyseer hoe de heffing verdeeld wordt tussen consument en producent.",
     "needs": [
       "A06",
-      "A01"
+      "A01",
+      "A15"
     ],
     "exam_codes": [
       "A2.10",
@@ -747,7 +748,9 @@
       "Analyseer de verdeling: consumentenprijs − P*_oud + P*_oud − producentenprijs = heffing."
     ],
     "pitfalls": [
-      "Let op het teken!"
+      "De heffing t aftrekken van P in de aanbodfunctie, niet van de vraagfunctie — de producent ontvangt minder per eenheid.",
+      "Haakjes rond (P − t) vergeten: beide termen moeten met de aanbodhelling vermenigvuldigd worden.",
+      "De verdeling consument/producent hangt af van relatieve elasticiteiten — de meest inelastische partij draagt het grootste deel van de heffing."
     ],
     "generator": "GEN_A23"
   },
@@ -1850,9 +1853,15 @@
     "id": "D14",
     "name": "Marktfalen en overheidsinterventie beoordelen",
     "category": "markt",
-    "layer": 0,
+    "layer": 6,
     "kern": "Beoordeel of marktwerking tot een doelmatige uitkomst leidt en of overheidsinterventie gerechtvaardigd is.",
-    "needs": [],
+    "needs": [
+      "F18",
+      "F02",
+      "G02",
+      "A35",
+      "D28"
+    ],
     "exam_codes": [
       "D3.4",
       "D3.9"
@@ -3960,9 +3969,11 @@
     "id": "H27",
     "name": "Productiefunctie Y = A·f(K, L) toepassen",
     "category": "welvaart en groei",
-    "layer": 0,
+    "layer": 2,
     "kern": "Pas de productiefunctie Y = A·f(K, L) toe: verklaar hoe groei in kapitaal K, arbeid L en totale factorproductiviteit A bijdraagt aan lange-termijn productie; herken afnemend grensproduct wanneer K óf L alleen toeneemt.",
-    "needs": [],
+    "needs": [
+      "H17"
+    ],
     "exam_codes": [
       "H2.1",
       "H2.2",
@@ -4934,7 +4945,7 @@
     "name": "Werknemers- en werkgeverssurplus bij minimumloon",
     "category": "arbeidsmarkt",
     "layer": 4,
-    "kern": "Bereken werknemerssurplus (arbeidsmarkt-CS) en werkgeverssurplus (arbeidsmarkt-PS) voor en na invoering van een minimumloon; identificeer welvaartsverlies als de \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"verloren driehoek\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\" bij W_min > W*.",
+    "kern": "Bereken werknemerssurplus (arbeidsmarkt-CS) en werkgeverssurplus (arbeidsmarkt-PS) voor en na invoering van een minimumloon; identificeer welvaartsverlies als de \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"verloren driehoek\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\" bij W_min > W*.",
     "needs": [
       "A02",
       "A04",
