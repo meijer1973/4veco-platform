@@ -14,7 +14,7 @@ Human-authored references that the platform still hand-edits. This is the **lega
 
 | File | Long-term path |
 |---|---|
-| `economie-terminologie.md` | `machine/` once `term-add` / `term-deprecate` CLI is built |
+| `economie-terminologie.md` | **Migration started 2026-04-22.** Initial `machine/begrippen.{md,json}` seeded from this file (empty definitions). Still read by `build-unit-index.js` as a fallback canonical-term source during the editorial fill-in phase. Retire when ≥ 80% of `begrippen.json` entries have `definition_nl` filled and all skill references have been rerouted to `begrippen.md`. |
 | `vraagtypen-en-opgaveontwerp.md` | `machine/` eventually |
 | `skill-categories.md` | partly absorbed into `vraagtypen-en-opgaveontwerp.md` and `micro-teaching-units.md`; may be deprecated |
 | `economic_mathematical_precision_reference.md` | likely stays `authored/` (expert precision judgement) |

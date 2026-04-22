@@ -22,6 +22,8 @@ const UNITS_JSON = path.join(REPO_ROOT, 'references/machine/micro-teaching-units
 const TERMINOLOGY_MD = path.join(REPO_ROOT, 'references/authored/economie-terminologie.md');
 const EINDTERMEN_JSON = path.join(REPO_ROOT, 'references/external/syllabus-eindtermen.json');
 
+const BEGRIPPEN_JSON = path.join(REPO_ROOT, 'references/machine/begrippen.json');
+
 const UNITS_MARKER = '<!-- UNIT ENTRIES BELOW THIS LINE';
 const ID_RE = /^[A-L]\d{2}$/;
 const CATEGORY = {
@@ -279,10 +281,39 @@ function computeLayers(units, byId) {
 
 // ----- cross-reference loaders -----
 
+// loadTerminology builds the canonical term set consulted by validator-rule
+// #5. The authoritative source is now `references/machine/begrippen.json`
+// (edited only via `build-scripts/references/term-*.js`). During the
+// migration phase, `references/authored/economie-terminologie.md` is still
+// read and unioned in so that terms not yet seeded into begrippen
+// (cross-domain terms like "alternatieve kosten", "schaarste") still
+// resolve. When economie-terminologie.md is eventually deleted, the
+// fallback becomes a no-op.
 function loadTerminology() {
-  if (!fs.existsSync(TERMINOLOGY_MD)) return null;
-  const content = fs.readFileSync(TERMINOLOGY_MD, 'utf8');
   const terms = new Set();
+
+  if (fs.existsSync(BEGRIPPEN_JSON)) {
+    try {
+      const data = JSON.parse(fs.readFileSync(BEGRIPPEN_JSON, 'utf8'));
+      if (data && typeof data.terms === 'object') {
+        for (const entry of Object.values(data.terms)) {
+          if (entry && typeof entry.term_nl === 'string' && entry.term_nl.trim()) {
+            terms.add(entry.term_nl.trim());
+          }
+          if (Array.isArray(entry && entry.synonyms_nl)) {
+            for (const syn of entry.synonyms_nl) {
+              if (typeof syn === 'string' && syn.trim()) terms.add(syn.trim());
+            }
+          }
+        }
+      }
+    } catch (err) {
+      console.warn(`[warn] failed to parse ${BEGRIPPEN_JSON}: ${err.message}`);
+    }
+  }
+
+  if (!fs.existsSync(TERMINOLOGY_MD)) return terms.size ? terms : null;
+  const content = fs.readFileSync(TERMINOLOGY_MD, 'utf8');
   // Headings are canonical terms (domain-level and subsection-level).
   for (const m of content.matchAll(/^##+\s+(.+)$/gm)) {
     terms.add(m[1].trim());
