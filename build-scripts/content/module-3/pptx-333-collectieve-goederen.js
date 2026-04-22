@@ -385,7 +385,7 @@ async function build() {
     s.addText("De goederen die de markt niet kan leveren — en wat we er samen mee doen.", { x: 0.6, y: 3.6, w: 8.8, h: 0.8,
       fontFace: FONT_SERIF, fontSize: 20, italic: true, color: PC.cloud });
     s.addShape("rect", { x: 0.6, y: 4.6, w: 0.8, h: 0.04, fill: { color: PC.coral } });
-    s.addText("Hoofdstuk 3 · Overheid  ·  Praktische Economie VWO", { x: 0.6, y: 4.7, w: 8.8, h: 0.4,
+    s.addText("Hoofdstuk 3 · Overheid", { x: 0.6, y: 4.7, w: 8.8, h: 0.4,
       fontFace: FONT_SERIF, fontSize: 14, italic: true, color: PC.cloud });
     s.addNotes("Voor Nederlanders is dit misschien wel de meest voelbare vorm van marktfalen: zonder dijken geen Amsterdam. We beginnen met die intuïtie en werken naar de theorie toe.");
   }

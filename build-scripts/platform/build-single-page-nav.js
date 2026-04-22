@@ -244,7 +244,6 @@ footer{text-align:center;padding:2rem;color:#718096;font-size:.8rem}
 
 <div class="hero">
   <h1>Module 3 \u2014 Markt en overheid</h1>
-  <p>Praktische Economie VWO 4</p>
 </div>
 
 <div class="container">

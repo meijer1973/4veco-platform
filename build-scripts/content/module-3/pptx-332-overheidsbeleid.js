@@ -479,7 +479,7 @@ async function build() {
       fontFace: FONT_SERIF, fontSize: 22, italic: true, color: PC.cloud });
     // Decorative divider
     s.addShape("rect", { x: 0.6, y: 3.6, w: 0.8, h: 0.04, fill: { color: PC.coral } });
-    s.addText("Hoofdstuk 3 · Overheid  ·  Praktische Economie VWO", { x: 0.6, y: 3.75, w: 8.8, h: 0.4, fontFace: FONT_SERIF, fontSize: 14, italic: true, color: PC.cloud });
+    s.addText("Hoofdstuk 3 · Overheid", { x: 0.6, y: 3.75, w: 8.8, h: 0.4, fontFace: FONT_SERIF, fontSize: 14, italic: true, color: PC.cloud });
     s.addNotes("Deze paragraaf: vier concrete prijsinstrumenten. Minimumprijs, maximumprijs, accijns, subsidie. We beginnen met waar ze in het nieuws verschijnen.");
   }
 

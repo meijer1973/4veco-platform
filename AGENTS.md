@@ -1,6 +1,6 @@
 # 4veco Platform — Build Tools & Game Engines
 
-Platform repo for generating lesson materials for **Praktische Economie VWO 4**. Contains game engines, build scripts, source data, and skills. Generated output is deployed to separate module repos.
+Platform repo for generating lesson materials for VWO 4 economie. Contains game engines, build scripts, source data, and skills. Generated output is deployed to separate module repos.
 
 ## Read first
 

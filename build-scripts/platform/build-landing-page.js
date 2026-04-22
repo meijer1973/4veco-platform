@@ -748,7 +748,6 @@ function renderModulePage(resolvedMap) {
   <div class="hero-inner">
     <span class="hero-badge">Module ${MODULE_NR}</span>
     <h1>${MODULE_NAME}</h1>
-    <p class="hero-sub">Praktische Economie VWO 4</p>
   </div>
 </header>
 <main>`;

@@ -759,7 +759,7 @@ async function build() {
       x: 0.6, y: 0.95, w: 8.8, h: 1.3,
       ...T.heroDark, fontSize: 54, charSpacing: -2,
     });
-    s.addText("Hoofdstuk 4 · Internationale markten  ·  Praktische Economie VWO", {
+    s.addText("Hoofdstuk 4 · Internationale markten", {
       x: 0.6, y: 2.3, w: 8.8, h: 0.4,
       fontFace: FONT_SERIF, fontSize: 16, italic: true, color: PC.cloud,
     });
