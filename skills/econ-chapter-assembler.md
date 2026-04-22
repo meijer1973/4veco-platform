@@ -328,7 +328,13 @@ Same process as the chapter PDF: concatenate answer files, insert page breaks, e
 
 ### 5.1 Output files
 
-Saved to `<output-folder>/X.Y Hoofdstuk [Name]/` (e.g., `1.2 Hoofdstuk Vraag en aanbod/`):
+Saved to `<lessen-root>/Boek N - <title>/X.Y Hoofdstuk [Name]/` (e.g.,
+`4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/`):
+
+Chapters for Boek N live **inside** their book folder. The chapter number's
+first segment is the book number (chapter 1.Y → Boek 1, chapter 2.Y → Boek 2).
+Look up the book title in `build-scripts/books/book-manifests/book-N.json` to
+form the full book folder name.
 
 | File | Contents |
 |------|----------|
@@ -348,11 +354,11 @@ File naming: use en-dash (–), not hyphen (-). See `econ-textbook-paragraph` §
 When chapters are later assembled into books, the chapter files follow:
 
 ```
-<output-folder>/1.1 Hoofdstuk [Name]/1.1 [Name] – hoofdstuk.pdf
-<output-folder>/1.2 Hoofdstuk [Name]/1.2 [Name] – hoofdstuk.pdf
-<output-folder>/1.3 Hoofdstuk [Name]/1.3 [Name] – hoofdstuk.pdf
-<output-folder>/1.4 Hoofdstuk [Name]/1.4 [Name] – hoofdstuk.pdf
-<output-folder>/1.5 Hoofdstuk [Name]/1.5 [Name] – hoofdstuk.pdf   (test preparation chapter)
+<lessen-root>/Boek 1 - <title>/1.1 Hoofdstuk [Name]/1.1 [Name] – hoofdstuk.pdf
+<lessen-root>/Boek 1 - <title>/1.2 Hoofdstuk [Name]/1.2 [Name] – hoofdstuk.pdf
+<lessen-root>/Boek 1 - <title>/1.3 Hoofdstuk [Name]/1.3 [Name] – hoofdstuk.pdf
+<lessen-root>/Boek 1 - <title>/1.4 Hoofdstuk [Name]/1.4 [Name] – hoofdstuk.pdf
+<lessen-root>/Boek 1 - <title>/1.5 Hoofdstuk [Name]/1.5 [Name] – hoofdstuk.pdf   (test preparation chapter)
 ```
 
 ---

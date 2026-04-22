@@ -41,11 +41,17 @@ Optional:
 
 ### 1.2 Folder hierarchy (MANDATORY)
 
-All paragraph folders go **inside** the chapter folder. Never create paragraph folders alongside the chapter folder.
+All paragraph folders go **inside** the chapter folder, and the chapter folder
+goes **inside** its book folder at
+`<lessen-root>/Boek N - <title>/`. Never create paragraph folders alongside the
+chapter folder. Never create chapter folders at the lessen-root.
+
+Chapter 1.Y belongs to Boek 1, chapter 2.Y to Boek 2, etc. Look up the book
+title in `build-scripts/books/book-manifests/book-N.json`.
 
 ```
-<output-folder>/
-  X.Y Hoofdstuk [Name]/                          ← chapter folder
+<lessen-root>/Boek N - <title>/                  ← book folder
+  X.Y Hoofdstuk [Name]/                          ← chapter folder (inside book)
     X.Y.1 [Paragraph 1 name]/                    ← paragraph folder (inside chapter)
       X.Y.1 [Name] – paragraaf.md
       X.Y.1 [Name] – opgaven.md

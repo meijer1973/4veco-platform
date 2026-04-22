@@ -1,3 +1,10 @@
+> **⚠️ Superseded (2026-04-21)** — The book builder has been implemented as a markdown-first,
+> PDF-output pipeline that wraps the existing `econ-chapter-assembler`. See
+> `skills/econ-book-builder.md` and `build-scripts/books/` for the live design. This document
+> describes an earlier exercise-first `.docx` pipeline that was not pursued; it is kept for
+> historical context. The `exercises/module-N/` ground-truth schema described below remains
+> aspirational and may still be valuable if the website pipeline migrates later.
+
 # Exercise-First Platform Architecture
 
 ## Context
