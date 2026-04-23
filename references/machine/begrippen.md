@@ -3,7 +3,7 @@
 **Niet met de hand bewerken.** Alle mutaties gaan via `build-scripts/references/term-*.js`.
 Regenereer met `node build-scripts/references/build-begrippen-index.js`.
 
-*Versie 1.0.0 — gegenereerd 2026-04-22.*
+*Versie 1.0.0 — gegenereerd 2026-04-23.*
 
 Elk begrip heeft een stabiele id (slug van de Nederlandse term), een student-facing Nederlandse definitie, een syllabus-clause (indien van toepassing), en cross-links naar gerelateerde termen en teaching-units.
 

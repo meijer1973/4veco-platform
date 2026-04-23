@@ -53,9 +53,9 @@ The next three months should make that backbone dependable:
 ### Skilltree Consistency
 
 - The catalog has `44` A-domain units.
-- Skilltree generators currently cover `37`.
-- Missing generators: `A38`, `A39`, `A40`, `A41`, `A42`, `A43`, `A44`.
-- This is currently reflected in failing tests.
+- Skilltree generators now cover all `44` A-domain units.
+- `A38` through `A44` were implemented in Sprint 0.1.
+- Skilltree tests are now catalog-driven and pass.
 
 ### Begrippen Registry
 
@@ -92,21 +92,21 @@ The next three months should make that backbone dependable:
 
 ### Reports
 
-The report layer is stale in places.
+The report layer was regenerated in Sprint 0.4.
 
-- Several reports still mention `143-145` live units.
-- The current catalog has `190` live units.
-- `begrippen-coverage.md` is current as of 2026-04-22.
-- Most other reports were generated on 2026-04-21 and predate later catalog edits.
-- `build-scripts/references/README.md` says the CLI suite is "yet to be built", but many scripts now exist.
+- Core reports now reflect the current catalog: `192` total units, `190` live units, `2` deprecated units.
+- `dag-integrity.md` passes.
+- `terminology-drift.md` passes.
+- `unresolved-refs.md` has warnings only, not unresolved IDs.
+- Coverage reports are informational backlog, not Green Gate blockers.
+- Detailed status lives in `knowledge/reference-report-sanity.md`.
 
 ## Priority Tasks
 
 ### 1. Make Reports Trustworthy Again
 
-- Regenerate all reports from the current catalog.
-- Fix report scripts that still assume the old unit count or old terminology source.
-- Add a compact reference-health report with:
+- Keep reports current after catalog changes.
+- Add a compact reference-health report if this becomes a recurring manual step, with:
   - unit counts
   - term counts
   - exam-question coverage
@@ -124,9 +124,8 @@ The report layer is stale in places.
 
 ### 3. Repair A-Domain and Skilltree Consistency
 
-- Decide whether A38-A44 are interactive skilltree skills or catalog-only primitives.
-- If interactive: add `GEN.A38` through `GEN.A44`.
-- If catalog-only: update tests and engine assumptions so only interactive A-units require generators.
+- Keep A-domain skilltree generators in sync with the catalog.
+- `GEN.A38` through `GEN.A44` are now implemented.
 - Keep the skilltree tests aligned with the machine catalog, not with hard-coded historical counts.
 
 ### 4. Curate Blueprint Missing-Unit Flags
@@ -165,11 +164,10 @@ The report layer is stale in places.
 
 Primary goal: make the reference system tell the truth about itself.
 
-- Regenerate reports.
-- Fix stale report scripts.
-- Add the reference-health report.
+- Keep regenerated reports current.
+- Use `knowledge/reference-report-sanity.md` as the current Green Gate report summary.
 - Resolve deprecated `D23` references.
-- Decide and fix A38-A44 skilltree/generator policy.
+- Keep A38-A44 skilltree/generator coverage green.
 - Update stale CLI documentation.
 
 Deliverable:
@@ -228,4 +226,3 @@ By 2026-07-23, the team can plausibly have:
 | Exam questions with required skills | 322/349 | 345+ |
 | Exam questions with exam codes | 330/349 | 345+ |
 | Blueprint missing flags | 84 raw | 0 raw; all triaged |
-

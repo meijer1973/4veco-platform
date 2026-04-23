@@ -1,6 +1,6 @@
 # Begrippen coverage
 
-*Gegenereerd 2026-04-22 door `build-scripts/references/build-begrippen-index.js`.*
+*Gegenereerd 2026-04-23 door `build-scripts/references/build-begrippen-index.js`.*
 
 Totaal: **225** begrippen (225 live, 0 deprecated).
 

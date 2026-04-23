@@ -11,10 +11,10 @@ During Phase 0, this document may be updated freely because planning and read-on
 
 ## Current Status
 
-The core platform test suite is green as of Sprint 0.1. `validate-paragraph.js` is aligned with the flat layout as of Sprint 0.2. `check:platform` and `check:book` exist as of Sprint 0.3. Remaining Green Gate blockers are:
+The core platform test suite is green as of Sprint 0.1. `validate-paragraph.js` is aligned with the flat layout as of Sprint 0.2. `check:platform` and `check:book` exist as of Sprint 0.3. Reference reports were regenerated in Sprint 0.4. Remaining Green Gate blockers are:
 
 - Book 1 chapters 1.2-1.5 have content quality-gate gaps.
-- generated reference reports have not yet been checked against the current catalog.
+- Sprint 0.5 sign-off has not happened yet.
 
 Chapter `1.1 Hoofdstuk Economisch denken en rekenen` currently passes `validate-chapter.js` and can be used as the known-good chapter validation baseline.
 
@@ -233,6 +233,24 @@ Meaning:
 - This is no longer a missing-command blocker.
 - The book command now exposes the remaining Book 1 cleanup work directly.
 
+## Reference Report Commands
+
+Status: passing or informational.
+
+Current result:
+
+- `reports/dag-integrity.md`: PASS.
+- `reports/terminology-drift.md`: PASS.
+- `reports/unresolved-refs.md`: warning only; no unresolved unit IDs, 6 deprecated-ID citations in planning docs.
+- Coverage/dead-unit reports now show 190 live units instead of stale 143-145 counts.
+- `reports/begrippen-coverage.md`: 225 live terms, 0 deprecated terms.
+
+Meaning:
+
+- Stale generated reports are no longer a Green Gate blocker.
+- Detailed status lives in `knowledge/reference-report-sanity.md`.
+- Dead units, missing `needs`, missing `terms`, missing pitfalls, and deprecated-ID planning citations are backlog signals, not Phase 0 blockers.
+
 ## Noise That Should Not Distract The Team
 
 - The npm update notice is irrelevant to the Green Gate.
@@ -241,7 +259,7 @@ Meaning:
 
 ## Phase 0 Next Actions
 
-1. Run Sprint 0.4 reference report sanity checks.
+1. Run Sprint 0.5 sign-off.
 2. Keep chapter 1.1 as the chapter-validator baseline.
 3. Treat chapter 1.2-1.5 review, quality-ref, chapter-plan, and asset issues as known Book 1 cleanup work after the gate rules are clear.
 4. Keep `npm run check:platform` and `npm run check:book -- <book-path>` as the team-facing Green Gate commands.

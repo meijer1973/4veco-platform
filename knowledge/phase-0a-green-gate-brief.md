@@ -31,7 +31,7 @@ The Green Gate passes only when all checks below are true:
 | `validate-paragraph.js` is active, required, and matches the flat paragraph layout. | Done in Sprint 0.2 and wired into `check:book` in Sprint 0.3. It supports `part-a`, `part-b`, and `complete` modes. |
 | The skilltree/catalog mismatch is resolved. | Done in Sprint 0.1. `GEN.A38`-`GEN.A44` are implemented and tests are catalog-driven. |
 | One command exists to validate the platform plus a target book. | Done in Sprint 0.3. Use `npm run check:platform` and `npm run check:book -- <book-path>`. |
-| Generated reports are not obviously stale against the current catalog. | Not verified yet. This belongs in Sprint 0.4. |
+| Generated reports are not obviously stale against the current catalog. | Done in Sprint 0.4. Current status is recorded in `knowledge/reference-report-sanity.md`. |
 | The deployment/output freeze can be lifted safely. | Not done. This is the Sprint 0.5 sign-off decision. |
 
 ## Freeze Rules
@@ -120,7 +120,7 @@ After this, work moves to the implementation sprints:
 - Sprint 0.1: make platform tests green.
 - Sprint 0.2: align validators with flat layout. Complete for `validate-paragraph.js`; book-level wiring completed in Sprint 0.3.
 - Sprint 0.3: add `check:platform` and `check:book`. Complete; Book 1 still fails because of known content/QC gaps.
-- Sprint 0.4: check reference report sanity.
+- Sprint 0.4: check reference report sanity. Complete; stale report counts are refreshed and remaining report warnings are non-blocking backlog.
 - Sprint 0.5: run final checks and lift or keep the freeze.
 
 ## Update Rule

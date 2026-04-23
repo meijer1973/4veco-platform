@@ -1,16 +1,15 @@
 # Unresolved References Report
 
-Generated: 2026-04-21T20:58:57.164Z
-Catalog: 183 live, 2 deprecated
-Files scanned: 84
+Generated: 2026-04-23T14:05:52.085Z
+Catalog: 190 live, 2 deprecated
+Files scanned: 70
 
-## Warnings — 9 citation(s) of deprecated units
+## Warnings — 6 citation(s) of deprecated units
 
 These do not fail CI but indicate upcoming migration work.
 
-- knowledge\micro-teaching-units-document-quality-review.md → D23
-- knowledge\micro-teaching-units-followup-plan.md → D23, H26
-- knowledge\micro-teaching-units-quality-followup-review.md → D23, H26
-- knowledge\micro-teaching-units-quality-third-review.md → D23, H26
-- knowledge\micro-teaching-units-third-followup-plan.md → D23, H26
+- knowledge\current-state-detailed-analysis.md → D23, H26
+- knowledge\reference-report-sanity.md → D23
+- knowledge\reference-three-month-roadmap.md → D23, H26
+- knowledge\three-month-roadmap.md → D23
 

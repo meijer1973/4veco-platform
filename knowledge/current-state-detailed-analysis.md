@@ -332,7 +332,7 @@ Main catalog risks:
 
 - Many units still have no `needs` edges.
 - Many units still lack term links.
-- Reports are stale relative to the current catalog.
+- Reports were refreshed in Sprint 0.4; keep them regenerated after catalog changes.
 - A-domain catalog expansion has outrun the skilltree generator layer.
 
 ## Begrippen Registry Details
@@ -459,29 +459,27 @@ The target exercise data is valuable, but `missing_units_flagged` should become 
 
 Reports under `reports/` are generated diagnostics and should not be hand-edited.
 
-Observed issue:
+Sprint 0.4 regenerated the core reports. The old `143-145` live-unit counts are no longer current.
 
-- Several reports still show `143-145` live units.
-- Current machine catalog has `190` live units.
+Current report state:
 
-This means the report layer must be regenerated and possibly repaired before it can be trusted for planning.
+- `dag-integrity.md`: PASS, 192 total units.
+- `terminology-drift.md`: PASS, 0 drift.
+- `unresolved-refs.md`: warning only; 6 deprecated-ID citations in planning docs.
+- `needs-coverage.md`: 190 live units, 61 with no `needs`.
+- `terms-coverage.md`: 190 live units, 44 with no `terms`.
+- `procedure-coverage.md`: 101/101 apply+ units have procedures.
+- `aspects-coverage.md`: 190 live units, 69 without exam citation.
+- `dead-units.md`: 137 uncited live units; this is an exercise-first triage signal, not a bulk-deprecation list.
+- `begrippen-coverage.md`: 225 live terms, 0 deprecated terms.
 
-Reports that appear stale relative to current catalog:
-
-- `dag-integrity.md`
-- `terminology-drift.md`
-- `needs-coverage.md`
-- `terms-coverage.md`
-- `procedure-coverage.md`
-- `aspects-coverage.md`
-
-`begrippen-coverage.md` is more current and reflects the newer `begrippen` registry.
+Details live in `knowledge/reference-report-sanity.md`.
 
 ## Main Risks
 
 ### 1. Stale Green Signals
 
-Reports and tests can become misleading if they are based on older catalog assumptions.
+Resolved for Phase 0 report freshness in Sprint 0.4. Future risk remains if generated reports are not refreshed after catalog changes.
 
 ### 2. Layout Drift
 
@@ -505,24 +503,20 @@ Module 3 is important operationally, but strategically frozen. Expensive fixes t
 
 ## Suggested Further Analysis
 
-1. **Reference report regeneration**
-   - Run every `build-scripts/reports/*.js` script.
-   - Identify which scripts break against the current catalog.
-
-2. **Term migration map**
+1. **Term migration map**
    - Map old human-readable unit term strings to `begrippen.json` slug IDs.
    - Decide whether to preserve aliases for backwards compatibility.
 
-3. **Book 1 cleanup pass**
+2. **Book 1 cleanup pass**
    - Use `npm run check:book -- "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod"` as the single failure list.
    - Resolve the chapter 1.2-1.5 review, quality-ref, chapter-plan, and asset issues.
 
-4. **Book 1 companion pilot plan**
+3. **Book 1 companion pilot plan**
    - Pick chapter 1.1.
    - Inventory which existing Module 1 scripts can be adapted.
    - Identify missing flat-layout library support before writing content.
 
-5. **Book 2 readiness check**
+4. **Book 2 readiness check**
    - Extract Book 2 target exercises.
    - Check whether required skills exist and are adequately defined.
    - Decide which missing flags must be resolved before Book 2 production.

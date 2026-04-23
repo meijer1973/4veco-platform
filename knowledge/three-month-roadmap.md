@@ -29,7 +29,7 @@ The Green Gate passes only when all checks below are true:
 | `validate-paragraph.js` is active, required, and matches the new flat paragraph layout. | Done in Sprint 0.2 and wired into `check:book` in Sprint 0.3. It supports `part-a`, `part-b`, and `complete` modes. |
 | The skilltree/catalog mismatch is resolved. | Done in Sprint 0.1. `GEN.A38`-`GEN.A44` are implemented and tests are catalog-driven. |
 | One command exists to validate the platform plus a target book. | Done in Sprint 0.3. Use `npm run check:platform` and `npm run check:book -- <book-path>`. |
-| Generated reports are not obviously stale against the current catalog. | Not verified yet. This belongs in Sprint 0.4. |
+| Generated reports are not obviously stale against the current catalog. | Done in Sprint 0.4. Current status is recorded in `knowledge/reference-report-sanity.md`. |
 | The deployment/output freeze can be lifted safely. | Not done. This is the Sprint 0.5 sign-off decision. |
 
 This is the unlock point for full material production.
@@ -187,6 +187,8 @@ npm run check:book -- "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod"
 
 Target: 1 day.
 
+Status: complete. Reports have been regenerated and the blocking report checks are green.
+
 Goal: prevent stale reference reports from misleading the material team during Book 2 planning and clean up report drift where it blocks the green gate.
 
 Tasks:
@@ -199,8 +201,24 @@ Tasks:
 
 Exit criteria:
 
-- There is no obviously stale report being treated as authoritative.
-- Known stale reports are named explicitly.
+- Met: there is no obviously stale report being treated as authoritative.
+- Met: known report warnings are named explicitly in `knowledge/reference-report-sanity.md`.
+
+Verified commands:
+
+```powershell
+node build-scripts\reports\dag-integrity.js
+node build-scripts\reports\needs-coverage.js
+node build-scripts\reports\terms-coverage.js
+node build-scripts\reports\procedure-coverage.js
+node build-scripts\reports\aspects-coverage.js
+node build-scripts\reports\terminology-drift.js
+node build-scripts\reports\dead-units.js
+node build-scripts\reports\unresolved-refs.js
+node build-scripts\references\build-begrippen-index.js
+```
+
+Current catalog counts: 192 total units, 190 live units, 2 deprecated units, 225 live terms. `dag-integrity` and `terminology-drift` pass. Remaining report findings are backlog signals, not Phase 0 blockers.
 
 ### Sprint 0.5: Green-Gate Sign-Off
 
