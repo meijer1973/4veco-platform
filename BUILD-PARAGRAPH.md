@@ -5,7 +5,7 @@ This document covers two pipelines that can run independently or together.
 | Mode | What it produces | When to use |
 |------|-----------------|-------------|
 | **Part A only** | Textbook paragraph: markdown + graphs + PDFs | Building chapters via `econ-chapter-builder` |
-| **Part B only** | Lessen paragraph companions: 24 files (docx, pptx, HTML games, landing page) at the paragraph root | Adding teacher-facing companions to a 4veco-lessen paragraph when textbook content (Part A) exists |
+| **Part B only** | Lessen paragraph companions: 24 root files including `index.html` (docx, pptx, HTML games, landing page) | Adding teacher-facing companions to a 4veco-lessen paragraph when textbook content (Part A) exists |
 | **Both (A → B)** | Complete paragraph: textbook + companions | Full production from scratch |
 
 > **Before you start:** Read the **Design Principles** section in [AGENTS.md](AGENTS.md#design-principles). Two principles govern everything: **Dual Coding** (every concept pairs text with a visual) and **Unified Student Experience** (same procedures and approaches across all formats). These are non-negotiable.
@@ -35,7 +35,7 @@ Follow `econ-textbook-paragraph` skill exactly:
 For consolidation paragraphs (last § in chapter), follow `econ-consolidation-builder` instead:
 1. Write `X.Y.Z Gemengde opgaven – opgaven.md` — source material + exercises
 2. Write `X.Y.Z Gemengde opgaven – antwoorden.md` — answer model
-3. No paragraaf.md — consolidation has no theory section
+3. No paragraaf.md — consolidation has no theory section, but its markdown and PDFs are still required
 
 ## A3: Build graphs
 
@@ -107,7 +107,7 @@ Generate `X.Y.Z-quality-ref.yaml` via a separate sub-agent:
 
 # PART B: LESSEN COMPANIONS (docx, pptx, html, landing page)
 
-Produces the teacher-facing companions for a lessen paragraph: 24 files including presentations, Word documents, HTML games, and a landing page. Part B can reuse `_assets/` graphs from Part A.
+Produces the teacher-facing companions for a lessen paragraph: 24 root files including presentations, Word documents, HTML games, and `index.html`. Part B can reuse `_assets/` graphs from Part A.
 
 **If Part A was run first:** the `_assets/` folder already contains all graphs. Part B builders (presentatie, voorkennis, vaardigheden, nieuws, samenvatting, begeleide inoefening) embed these graphs rather than generating new ones.
 
@@ -115,14 +115,14 @@ Produces the teacher-facing companions for a lessen paragraph: 24 files includin
 
 - **Target repo:** `C:\Projects\4veco\4veco-lessen`.
 - **Naming:** `Boek N - Title / N.X Hoofdstuk X - Name / N.X.Y [Naam]`. Books replace the old "Module N" level; chapters and paragraphs keep their two- and three-part numbering.
-- **Per-paragraph layout is flat.** All 24 Part B files sit directly in the paragraph folder alongside Part A outputs (`paragraaf.md`, `opgaven.md`, `antwoorden.md`, `_assets/`, PDFs, `build_pdf.py`, review.md, quality-ref.yaml). No `1. Voorbereiden/`, `2. Leren/`, `3. Oefenen/` subfolders.
+- **Per-paragraph layout is flat.** All 24 Part B files, including `index.html`, sit directly in the paragraph folder alongside Part A outputs (`paragraaf.md`, `opgaven.md`, `antwoorden.md`, `_assets/`, PDFs, `build_pdf.py`, review.md, quality-ref.yaml). No `1. Voorbereiden/`, `2. Leren/`, `3. Oefenen/` subfolders.
 - **Section labels** in tables below (Voorbereiden / Leren / Oefenen) identify the pedagogical role of a file, not a folder. Files are grouped by filename convention (`uitleg voorkennis`, `presentatie`, `begeleide inoefening –`, `basis –`, etc.).
 - **`shared/` lives at book root:** `4veco-lessen/Boek N - Title/shared/` holds engine JS/CSS and the game data files (`shared/questions/`, `shared/procedure/`, etc.).
 - **Module 3 references in older guides are legacy.** For new work, this spec supersedes them. Module 3 (`../3. Module 3 - Markt en overheid/`) stays on its subfolder layout until it retires in September 2026.
 
 ## B1. Definition of Done
 
-A complete paragraph has **24 files** plus an index.html. Every file listed as required MUST exist before the paragraph is considered done.
+A complete Part B companion set has **24 required root files including `index.html`**. Every file listed below MUST exist before the companion paragraph is considered done.
 
 | # | File | Section | Required | Builder | Source input | Output type |
 |---|------|---------|----------|---------|--------------|-------------|
@@ -139,7 +139,7 @@ A complete paragraph has **24 files** plus an index.html. Every file listed as r
 | 11 | `X.Y.Z [Naam] – youtube-videos.html` | Leren | Yes | Write directly | 3 real YouTube video IDs | Manual |
 | 12 | `X.Y.Z [Naam] – stappenplan.html` | Leren | Yes | `build-procedure-shells.js` (auto) | `shared/procedure/X.Y.Z.js` | Generated |
 | 13 | `X.Y.Z [Naam] – redeneer-spel.html` | Oefenen | Yes | `build-reasoning-engine.js` (auto) | `shared/reasoning/X.Y.Z.js` | Generated |
-| 14 | `X.Y.Z [Naam] – wiskundevaardigheden.html` | Oefenen | Yes | `build-skilltree-shells.js` (auto) | PARAGRAPHS array in script | Generated |
+| 14 | `X.Y.Z [Naam] – wiskundevaardigheden.html` | Oefenen | Yes | `build-skilltree-shells.js` (auto) | `skilltree` field in book manifest | Generated |
 | 15 | `X.Y.Z [Naam] – begeleide inoefening – vragen.docx` | Oefenen/begeleide inoefening | Yes | Adapt `inoefening-351-afsluiting.js` | Exercises with scaffolding | Scripted-manual |
 | 16 | `X.Y.Z [Naam] – begeleide inoefening – antwoorden.docx` | Oefenen/begeleide inoefening | Yes | Same script as #15 | Same | Scripted-manual |
 | 17 | `X.Y.Z [Naam] – begeleide inoefening.html` | Oefenen/begeleide inoefening | Yes | `convert_begeleide_inoefening.py` | Files #15 + #16 | Converted |
@@ -174,10 +174,10 @@ These are the raw inputs needed to build one paragraph. They must exist BEFORE r
 | Input | Location | Format | Who creates it |
 |-------|----------|--------|----------------|
 | Quiz questions | `shared/questions/X.Y.Z.js` | JS: `var QUIZ_DATA = { meta, categories, questions }` | Agent writes the JS file. 15 questions, 3-4 categories, at least one difficulty:3 per category. |
-| Reasoning questions | `source-data/book-N/reasoning/X.Y.Z.csv` | Semicolon-delimited CSV, 15 rows, 5 modes | Agent writes CSV, then runs `build-reasoning-questions.js` to produce JS. |
+| Reasoning questions | `source-data/book-N/reasoning/X.Y.Z.csv` | Semicolon-delimited CSV, 15 rows, 5 modes | Agent writes CSV, then runs `build-reasoning-questions.js` to produce `shared/reasoning/X.Y.Z.js`. |
 | Newsdetective data | `shared/newsdetective/X.Y.Z.js` | JS: `var NEWS_DETECTIVE_DATA = { meta, article, rounds }` | Agent writes the JS file. Real Dutch news, 4 rounds. |
 | Procedure data | `shared/procedure/X.Y.Z.js` | JS: `var PROCEDURE_DATA = { meta, procedures }` | Agent writes the JS file. Steps aligned with uitleg vaardigheden. |
-| Skilltree config | Entry in `build-skilltree-shells.js` PARAGRAPHS array | JS object: `{ parNr, name, skills }` | Agent adds to array. Data file auto-generated. |
+| Skilltree config | `skilltree` field in the book manifest paragraph entry | JSON: `{ "skills": ["A01", ...] }` or `{ "skills": null }` (all) | Agent adds to manifest. Data file auto-generated in `shared/skilltree/`. |
 
 ### B. Rich document content — per-asset production specs
 
@@ -270,14 +270,16 @@ Each scripted-manual asset follows the same pattern: **read source → write bui
 The target book carries a `deploy-config.json` manifest at its root (e.g.
 `4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/deploy-config.json`).
 Platform generators read this manifest; it is the single source of truth for
-chapter structure, paragraph metadata, and optional per-paragraph config.
+chapter structure, paragraph metadata, and per-paragraph game config.
 
 | Edit | What to add | When |
 |------|-------------|------|
-| Book manifest `paragraphs[]` | `{ id, name, chapter, domain, skilltree?, kind? }` | Every new lessen paragraph |
+| Book manifest `paragraphs[]` | `{ id, name, chapter, domain, skilltree, kind? }` | Every new Part B/complete lessen paragraph |
 | Book manifest `chapters[]` | `{ id, folder, name, number, domain }` | Only for a new chapter |
-| Paragraph `skilltree` field (optional) | `{ skills: ["A01", ...] }` or `{ skills: null }` (all) | Only when the paragraph should have a wiskundevaardigheden shell |
+| Paragraph `skilltree` field | `{ skills: ["A01", ...] }` or `{ skills: null }` (all) | Required for every Part B/complete paragraph because wiskundevaardigheden is one of the 24 required files |
 | `engines/theme.js` | DOMAIN_COLORS entry | Only for a brand-new domain name (teal/blue/amber/green/purple already exist) |
+
+Existing Part A-only textbook paragraphs may omit `skilltree` until companion production starts. A paragraph is not a complete Part B paragraph until the `skilltree` field is present and the wiskundevaardigheden shell/data have been generated.
 
 The loader (`build-scripts/lib/lib-deploy-config.js`) hard-fails if the manifest
 is missing or malformed. There is no auto-detection fallback.
@@ -290,7 +292,7 @@ This is the production sequence for one paragraph. Follow in order.
 
 ### Phase 1: Register (2 min)
 1. Open the book's `deploy-config.json` manifest.
-2. Add an entry to `paragraphs[]`: `{ "id": "X.Y.Z", "name": "...", "chapter": "X.Y", "domain": "<teal|blue|amber|green|purple>" }`. Add `"skilltree": { "skills": [...] }` only if the paragraph should emit a wiskundevaardigheden shell.
+2. Add an entry to `paragraphs[]`: `{ "id": "X.Y.Z", "name": "...", "chapter": "X.Y", "domain": "<teal|blue|amber|green|purple>", "skilltree": { "skills": [...] } }`. Use `"skilltree": { "skills": null }` when all math skills should be visible.
 3. If this is the first paragraph in a new chapter, add an entry to `chapters[]` first.
 4. For a new domain (beyond teal/blue/amber/green/purple), add it to `engines/theme.js` — otherwise nothing else to touch.
 
@@ -300,18 +302,18 @@ BOOK="../4veco-lessen/Boek N - Title"
 PAR="$BOOK/N.X Hoofdstuk X - Name/N.X.Y [Naam]"
 mkdir -p "$PAR"
 # Flat layout: no 1. Voorbereiden / 2. Leren / 3. Oefenen subfolders.
-# Part A outputs and all 24 Part B files live at the paragraph root.
+# Part A outputs and all 24 Part B files, including index.html, live at the paragraph root.
 # Static "Lees dit..." file — copy from any existing lessen paragraph:
 cp "$BOOK/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/Lees dit als je niet weet hoe je moet beginnen met deze les.docx" "$PAR/" 2>/dev/null || echo "Seed the static file from a legacy source on first run."
 ```
 
 ### Phase 3: Create game data files (30 min)
 
-Game data files live under `$BOOK/shared/` (e.g. `4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/shared/`). Reasoning CSV sources live under `source-data/book-N/reasoning/` in the platform repo.
+Game runtime data files live under `$BOOK/shared/` (e.g. `4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/shared/`). Reasoning runtime data is `shared/reasoning/X.Y.Z.js`. The raw reasoning CSV source lives under `source-data/book-N/reasoning/` in the platform repo.
 
 1. Write `$BOOK/shared/questions/X.Y.Z.js` — quiz data (15 questions)
-2. Write `source-data/book-N/reasoning/X.Y.Z.csv` — reasoning CSV
-3. Run: `MODULE_ROOT="$BOOK" node build-scripts/platform/build-reasoning-questions.js X.Y.Z <domain> source-data/book-N/reasoning/X.Y.Z.csv`
+2. Write `source-data/book-N/reasoning/X.Y.Z.csv` — source-of-truth reasoning CSV
+3. Run: `MODULE_ROOT="$BOOK" node build-scripts/platform/build-reasoning-questions.js X.Y.Z <domain> source-data/book-N/reasoning/X.Y.Z.csv` — writes `shared/reasoning/X.Y.Z.js`
 4. Write `$BOOK/shared/newsdetective/X.Y.Z.js` — newsdetective data
 5. Write `$BOOK/shared/procedure/X.Y.Z.js` — procedure/stappenplan data. Steps MUST align with the vaardigheden skills (same labels, same order). See procedure-stappen-plan in the paragraph plan.
 
@@ -322,6 +324,8 @@ Game data files live under `$BOOK/shared/` (e.g. `4veco-lessen/Boek 1 - Grondsla
 Phase 4 has three sub-phases. The planning step ensures terminology consistency and visual reuse across all 8 documents.
 
 #### Phase 4a — Plan (15 min)
+
+This paragraph plan is required for Part B/complete companion production. It is not required for Part A-only textbook paragraphs.
 
 Read the textbook paragraph and answer key thoroughly, then create the paragraph plan.
 
@@ -338,7 +342,7 @@ Read the textbook paragraph and answer key thoroughly, then create the paragraph
    - **Procedure-stappen-plan** (unified experience): for each skill, the exact step labels and sequence. This is the canonical approach — all builders (vaardigheden, stappenplan game, presentatie) must follow these steps. Products/numbers may vary by context, but the approach is fixed.
    - **Visuelen-toewijzing** (dual coding): for each visual in `_assets/`, which builders embed it — not just the presentatie. Every document that explains a concept with a matching visual must include it.
 
-This plan is the **single source of truth** for all builders. Every builder reads it before starting.
+This plan is the **single source of truth** for all Part B builders. Every companion builder reads it before starting.
 
 #### Phase 4b — Build shared visuals (20 min)
 
@@ -405,7 +409,7 @@ node scripts/deploy.js "$BOOK"
 **Platform files:**
 - [ ] `_paragraph-plan.md` exists and all sections are filled in
 - [ ] `_assets/` folder has PNGs matching every entry in the visuelen-plan
-- [ ] File count: 24 files + index.html
+- [ ] File count: 24 required Part B root files, including index.html
 - [ ] All .docx/.pptx open in Word/PowerPoint without errors
 - [ ] Presentatie has ≥3 economic graphs, presents theory (no exercise instructions)
 - [ ] Nieuws met visual has embedded SVG→PNG chart, font sizes 16/11/9pt
@@ -439,7 +443,7 @@ Fully automated from data files. deploy.js runs these.
 | `build-landing-page.js` | Book manifest + scans paragraph folder contents (filename-based classification, flat layout) | `index.html` at paragraph/chapter/book levels |
 | `build-reasoning-questions.js` | CSV file (manual arg) | `shared/reasoning/*.js` |
 
-> **Flat layout:** all generators emit directly to the paragraph root — there are no phase subfolders. Each generator calls `loadConfig(MODULE_ROOT)` to read the book's `deploy-config.json` and resolves each `parNr` to its folder via the manifest. Data files whose parNr is not in the manifest are skipped with a warning.
+> **Flat layout:** all generators emit directly to the paragraph root — there are no phase subfolders. Each generator calls `loadConfig(MODULE_ROOT)` to read the book's `deploy-config.json` and resolves each `parNr` to its folder via the manifest. Data files whose parNr is not in the manifest are skipped with a warning. The current skilltree generator only emits for paragraphs that declare `skilltree`; for a complete Part B paragraph, that declaration is required.
 
 ### Reusable converters (run manually after .docx creation)
 
@@ -517,6 +521,22 @@ Scripts built for specific paragraphs in earlier work. Useful as examples but no
 
 ## B6. Validation
 
+`validate-paragraph.js` should enforce the flat-layout contract in modes:
+
+- **Part A/textbook mode**: validates textbook files at the paragraph root. Theory paragraphs require paragraaf/opgaven/antwoorden markdown and PDFs. Consolidation paragraphs require opgaven/antwoorden markdown and PDFs; `paragraaf.md`/`paragraaf.pdf` are not required because consolidation has no theory section.
+- **Part B/companion mode**: validates the 24 required Part B root files listed in B1, including `index.html`. `_paragraph-plan.md` is required in this mode because it is the source of truth for companion builders.
+- **Complete mode**: validates both Part A and Part B.
+
+For Part B/complete mode, game runtime data lives in `<book>/shared/`:
+
+- `shared/questions/X.Y.Z.js`
+- `shared/newsdetective/X.Y.Z.js`
+- `shared/reasoning/X.Y.Z.js`
+- `shared/procedure/X.Y.Z.js`
+- `shared/skilltree/X.Y.Z.js`
+
+The raw reasoning CSV source is kept in `source-data/book-N/reasoning/X.Y.Z.csv` in the platform repo, then compiled into `shared/reasoning/X.Y.Z.js`. Do not validate it as `shared/reasoning/X.Y.Z.csv`.
+
 After building, run the paragraph validator:
 
 ```bash
@@ -524,15 +544,15 @@ node scripts/validate-paragraph.js "<path-to-paragraph-folder>"
 ```
 
 This checks:
-- All 23 required files exist at the paragraph root (flat layout)
+- All 24 required Part B files exist at the paragraph root (flat layout), including `index.html`
 - All .docx files are valid zip archives
 - Presentation > 100KB (has graphs)
 - All .html files have content (not empty shells)
 - Quiz has difficulty-3 per category
 - Game data files exist in `<book>/shared/`
-- Reasoning CSV source exists
+- Reasoning runtime JS exists in `<book>/shared/reasoning/`; source CSV exists in platform `source-data/book-N/reasoning/` when source checks are enabled
 
-**A paragraph is not done until the validator passes with 0 errors.**
+**A Part B/complete paragraph is not done until the validator passes with 0 errors.**
 
 ---
 

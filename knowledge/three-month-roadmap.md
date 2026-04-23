@@ -5,7 +5,7 @@ Scope: `4veco-platform` and companion output directory `../4veco-lessen`
 
 ## Core Principle
 
-The two-team plan should start with a narrow platform-green gate. Until that gate is met, the material team should avoid starting work that depends on validators, generated game shells, skilltree data, or reference reports.
+The two-team plan should start with a narrow platform-green gate. Until that gate is met, there is a deployment/output freeze for student-facing `4veco-lessen` material. The material team may plan and review, but should not start production work that depends on validators, generated game shells, skilltree data, or reference reports.
 
 First make the platform minimally trustworthy. Then split the teams:
 
@@ -14,18 +14,47 @@ First make the platform minimally trustworthy. Then split the teams:
 
 ## Phase 0: Define Green Enough
 
-Do not wait for perfect architecture. Phase 0 is a short unblock phase whose only purpose is to make the platform safe enough for material production.
+Do not wait for perfect architecture. Phase 0 covers both unblock work and essential cleanup work. Its purpose is to make `4veco-platform` safe enough for material production in `4veco-lessen`.
 
-The platform is green enough when:
+### Accepted Green-Enough Checklist
 
-- `npm.cmd test -- --runInBand` passes.
-- `validate-chapter.js` works for current `4veco-lessen` chapters.
-- `validate-paragraph.js` matches the new flat paragraph layout or is clearly marked legacy and not used.
-- The skilltree/catalog mismatch is resolved.
-- One command exists to validate the platform plus a target book.
-- Generated reports are not obviously stale against the current catalog.
+Status: accepted, not yet complete. Current failure details live in `knowledge/green-gate-failing-commands.md`.
+
+The Green Gate passes only when all checks below are true:
+
+| Gate | Current status |
+|------|----------------|
+| `npm.cmd test -- --runInBand` passes. | Not done. The skilltree data suite still fails. |
+| `validate-chapter.js` works for current `4veco-lessen` chapters. | Partial. Chapter 1.1 passes; chapters 1.2-1.5 still expose content quality-gate gaps. |
+| `validate-paragraph.js` is active, required, and matches the new flat paragraph layout. | Not done. It still expects the older paragraph folder naming format. |
+| The skilltree/catalog mismatch is resolved. | Not done. `GEN.A38`-`GEN.A44` need to be implemented or classified as catalog-only. |
+| One command exists to validate the platform plus a target book. | Not done. `check:platform` and `check:book` do not exist yet. |
+| Generated reports are not obviously stale against the current catalog. | Not verified yet. This belongs in Sprint 0.4. |
+| The deployment/output freeze can be lifted safely. | Not done. This is the Sprint 0.5 sign-off decision. |
 
 This is the unlock point for full material production.
+
+### Phase 0 Deployment Freeze
+
+During Phase 0, agents must not generate, deploy, overwrite, or commit student-facing output in `4veco-lessen`.
+
+Allowed during the freeze:
+
+- planning documents.
+- read-only review of existing material.
+- platform code fixes in `4veco-platform`.
+- validator/test/report fixes in `4veco-platform`.
+- temporary scratch runs outside production output paths.
+- health-check commands that inspect existing `4veco-lessen` output.
+
+Not allowed during the freeze:
+
+- new chapter or book production in `4veco-lessen`.
+- new paragraph production in `4veco-lessen`.
+- companion-material generation in `4veco-lessen`.
+- deployment or generator runs that overwrite production material in `4veco-lessen`.
+
+The freeze lifts only after Sprint 0.5 signs off the green gate.
 
 ### Phase 0A: Intake And Freeze The Gate
 
@@ -33,26 +62,29 @@ Target: 0.5 day.
 
 Goal: define exactly what must be green before the material team starts production work.
 
+Phase 0A handoff brief: `knowledge/phase-0a-green-gate-brief.md`.
+
 Tasks:
 
-- Record the current failing commands and their failure causes.
-- Decide whether Phase 0 covers only unblock work or also cleanup work. Default: unblock work only.
-- Write the accepted "green enough" checklist into this roadmap.
-- Mark `validate-paragraph.js` as either:
-  - active and required for the flat layout, or
-  - legacy and excluded from the gate until fixed.
+- Record the current failing commands and their failure causes in `knowledge/green-gate-failing-commands.md`.
+- Confirm that Phase 0 covers both unblock work and essential cleanup work.
+- Keep the accepted "green enough" checklist in this roadmap current as failures are fixed.
+- Mark `validate-paragraph.js` as active and required for the flat layout.
+- Keep the flat-layout paragraph contract in `BUILD-PARAGRAPH.md` B6 as the source for what `validate-paragraph.js` must enforce.
+- Declare the Phase 0 deployment/output freeze for `4veco-lessen`.
 - Confirm that the material team may only do planning/review during Phase 0, not validator-dependent production.
 
 Exit criteria:
 
 - Everyone knows which commands must pass.
-- Everyone knows which broken areas are deliberately out of scope for Phase 0.
+- Everyone knows which cleanup tasks are required before the gate can pass.
+- Everyone knows the freeze rules and what work is still allowed.
 
-### Sprint 0.1: Test Suite Unblock
+### Sprint 0.1: Test Suite Unblock And Cleanup
 
 Target: 2-3 days.
 
-Goal: make the core platform test suite pass, or reduce failures to explicit accepted exceptions.
+Goal: make the core platform test suite pass and clean up the known test-contract drift that caused the failures.
 
 Tasks:
 
@@ -73,17 +105,18 @@ Exit criteria:
 - `npm.cmd test -- --runInBand` passes.
 - Any remaining skipped tests have a written reason and owner.
 
-### Sprint 0.2: Validator Alignment
+### Sprint 0.2: Validator Alignment And Cleanup
 
 Target: 2-3 days.
 
-Goal: make validation match the actual `4veco-lessen` layouts.
+Goal: make validation match the actual `4veco-lessen` layouts and remove stale validator assumptions.
 
 Tasks:
 
 - Keep `validate-chapter.js` as the required Part A chapter gate.
 - Verify `validate-chapter.js` against all current Book 1 chapters.
-- Update `validate-paragraph.js` for flat paragraph folders, or explicitly mark it legacy.
+- Update `validate-paragraph.js` for flat paragraph folders.
+- Make `validate-paragraph.js` part of the green-gate health check.
 - Decide whether companion validation needs a separate mode or file.
 - Add a clear validator usage note:
   - textbook/chapter validation.
@@ -94,6 +127,7 @@ Exit criteria:
 
 - The platform team can say which validator applies to which artifact.
 - The material team can validate Book 1 chapters without guessing.
+- The material team can validate a flat-layout paragraph pack with `validate-paragraph.js`.
 
 ### Sprint 0.3: Book-Level Health Command
 
@@ -123,17 +157,18 @@ Exit criteria:
 - A teammate can run the health check without knowing the internals.
 - Failures point to a concrete next action.
 
-### Sprint 0.4: Reference Report Sanity
+### Sprint 0.4: Reference Report Sanity And Cleanup
 
 Target: 1 day.
 
-Goal: prevent stale reference reports from misleading the material team during Book 2 planning.
+Goal: prevent stale reference reports from misleading the material team during Book 2 planning and clean up report drift where it blocks the green gate.
 
 Tasks:
 
 - Regenerate the core reference reports.
 - Confirm report unit counts match the current catalog.
-- If a report cannot be fixed inside Phase 0, label it stale and exclude it from production decisions.
+- Fix reports that block the green gate.
+- If a non-blocking report cannot be fixed inside Phase 0, label it stale and exclude it from production decisions.
 - Confirm `micro-teaching-units.json`, `begrippen.json`, and report outputs agree on basic counts.
 
 Exit criteria:
@@ -152,12 +187,13 @@ Tasks:
 - Run the final platform and book health checks.
 - Record pass/fail status.
 - List residual risks that do not block material production.
-- Assign owners for post-gate cleanup.
+- Assign owners for remaining cleanup that does not block material production.
+- If all gate checks pass, explicitly lift the deployment/output freeze.
 
 Exit criteria:
 
-- If green: material team starts Book 1 release cleanup and Book 2 production.
-- If not green: keep both teams focused on unblock work, and do not start dependent production.
+- If green: freeze is lifted; material team starts Book 1 release cleanup and Book 2 production.
+- If not green: keep both teams focused on Phase 0 unblock and cleanup work, and do not start dependent production.
 
 ### Phase 0 Non-Goals
 
@@ -167,7 +203,6 @@ These are important, but they should not block the green gate:
 - Full companion-material pipeline.
 - All Book 1 review/quality-ref gaps.
 - Book 2 production.
-- Module 3 structural refactors.
 
 ## Phase 1: First Post-Gate Split Sprint
 
@@ -179,6 +214,7 @@ Purpose: start the two-team split without losing the discipline created in Phase
 
 - Add the health commands to team working agreements.
 - Make the green-gate commands the first step before any new chapter/book production.
+- Confirm the Phase 0 deployment/output freeze has been lifted.
 - Record known non-blocking residual risks in `knowledge/current-state-detailed-analysis.md`.
 - Assign owners for each residual platform issue.
 
@@ -233,7 +269,7 @@ Target: months 1-3.
 - Make book/chapter validation easy to run.
 - Add small tests around reference CLI scripts.
 - Update stale docs where they conflict with current behavior.
-- Avoid investing in the retiring Module 3 stack.
+- Keep architecture work focused on `4veco-platform` and `4veco-lessen`.
 
 ### Track C: Companion Pipeline
 
@@ -287,14 +323,14 @@ Target: months 1-3.
 
 ### Weeks 1-2: Platform Green Gate
 
-- Platform team owns all green-work.
-- Material team can do review/planning only, not production dependent on broken validators.
-- Output: tests green, validators usable, book validation command exists.
+- Platform team owns all green-gate unblock and cleanup work.
+- Material team can do review/planning only; production output in `4veco-lessen` stays frozen.
+- Output: tests green, validators usable, book validation command exists, freeze can be lifted.
 
 ### Weeks 3-4: Book 1 Release Cleanup
 
 - Material team fixes Book 1 validation gaps.
-- Platform team fixes stale reports and reference-health basics.
+- Platform team continues reference-health and architecture cleanup.
 - Output: Book 1 all chapters validate.
 
 ### Month 2
@@ -315,4 +351,4 @@ Make the first milestone brutally narrow:
 
 > Platform green enough for material production.
 
-Only after that should the teams split fully. Otherwise the material team will keep building on moving sand, and the platform team will be pulled into constant unblock work.
+Only after that should the teams split fully. Otherwise the material team will keep building on moving sand, and the platform team will be pulled into constant green-gate cleanup work.

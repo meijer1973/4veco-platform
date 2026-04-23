@@ -10,6 +10,26 @@ Platform repo for generating lesson materials for VWO 4 economie. Contains game 
 - Use `AGENTS.md` for repo overview, architecture, deploy rules, and quality standards.
 - Use `build-scripts/README.md` for the distinction between platform generators, converters, reference implementations, and utilities.
 
+## Temporary Green Gate deployment/output freeze
+
+Active until the Phase 0 green gate in `knowledge/three-month-roadmap.md` is signed off.
+
+During this freeze, agents must not generate, deploy, overwrite, or commit student-facing output in `../4veco-lessen`. The goal is to get `4veco-platform` green before material production resumes.
+
+Allowed during the freeze:
+- planning documents and roadmap edits
+- read-only review of existing `4veco-lessen` material
+- platform code fixes, validators, tests, and report-generation fixes in `4veco-platform`
+- temporary scratch runs outside production output paths
+- health-check commands that inspect existing `4veco-lessen` output
+
+Not allowed during the freeze:
+- new chapter/book/paragraph production in `../4veco-lessen`
+- companion-material generation in `../4veco-lessen`
+- deploy/generator runs that overwrite production material in `../4veco-lessen`
+
+Unfreeze only after the green gate passes: platform tests green, validators aligned with the flat layout, `validate-paragraph.js` active and required, book health checks runnable, and stale blocking reports resolved or explicitly excluded.
+
 ## Design Principles
 
 These two principles are the DNA of every product this platform produces — lesson materials, textbooks, assessments, and any future format. Every builder, skill, and template must follow them.
