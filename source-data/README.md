@@ -13,14 +13,21 @@ Store data here when:
 
 ## Current Structured Inputs
 
-### `module-3/reasoning/`
+### `book-1/reasoning/`
+
+- One CSV per paragraph: `X.Y.Z.csv`
+- Active source-of-truth location for Book 1 reasoning game data
+- Consumed by `build-scripts/platform/build-reasoning-questions.js`
+- Output becomes `shared/reasoning/X.Y.Z.js` in the target book
+
+### `module-3/reasoning/` (legacy)
 
 - One CSV per paragraph: `X.Y.Z.csv`
 - Source-of-truth for the reasoning game
 - Consumed by `build-scripts/platform/build-reasoning-questions.js`
-- Output becomes `shared/reasoning/X.Y.Z.js` in the target module repo
+- Output becomes `shared/reasoning/X.Y.Z.js` in the legacy target
 
-### `module-3/skilltree/`
+### `module-3/skilltree/` (legacy)
 
 - One JS config per paragraph: `X.Y.Z.js`
 - Source-of-truth for visible skills / paragraph skill mapping

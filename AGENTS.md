@@ -1,6 +1,6 @@
 # 4veco Platform — Build Tools & Game Engines
 
-Platform repo for generating lesson materials for VWO 4 economie. Contains game engines, build scripts, source data, and skills. Generated output is deployed to separate module repos.
+Platform repo for generating lesson materials for VWO 4 economie. Contains game engines, build scripts, source data, and skills. Generated output is deployed to separate lesson targets.
 
 ## Read first
 
@@ -95,14 +95,14 @@ Hand-edits to machine-authored references and generated artifacts are forbidden.
 - Skills that modify machine references shell out to the CLI; they have no file-write capability on machine references.
 - When a new hand-maintained reference becomes painful (drift, inconsistency, scale): the answer is to build a CLI pipeline and migrate it from `authored/` to `machine/`, not to add more manual process.
 
-### 3. Module 3 is being retired — don't reason backwards into it
+### 3. The legacy game target is being retired — don't reason backwards into it
 
-Module 3 is the current cohort's material and is frozen until September 2026 for student-localStorage integrity. It will be retired in favor of markdown-native material in `4veco-lessen/`. `3-Module-3-rewire-test/` is a testing surround layered on top of that legacy module — partially broken in several places because the module itself is (vaardigheden pages come from `.docx` via `convert_vaardigheden.py`, a lossy binary source).
+The current legacy game target (historically Module 3) is frozen until September 2026 for student-localStorage integrity. It will be retired in favor of markdown-native material in `4veco-lessen/`. `3-Module-3-rewire-test/` is a testing surround layered on top of that legacy target — partially broken in several places because the target itself is (vaardigheden pages come from `.docx` via `convert_vaardigheden.py`, a lossy binary source).
 
 **How to apply:**
-- Don't propose refactors that improve Module 3's `.docx → HTML` path (e.g. teaching `convert_vaardigheden.py` to emit editorial HTML, or building a proper `build-vaardigheden-shells.js` that reads the `.docx`). That's reasoning backwards into a dying stack.
+- Don't propose refactors that improve the legacy target's `.docx → HTML` path (e.g. teaching `convert_vaardigheden.py` to emit editorial HTML, or building a proper `build-vaardigheden-shells.js` that reads the `.docx`). That's reasoning backwards into a dying stack.
 - The `reskin-vaardigheden.js` + deploy pipeline is a bridge that works until the next-year testing surround exists — leave it.
-- If a Module-3-specific issue looks expensive to fix, flag the decision back to the user ("this is in the retiring stack — is it worth the time?") rather than diving in.
+- If a legacy-target-specific issue looks expensive to fix, flag the decision back to the user ("this is in the retiring stack — is it worth the time?") rather than diving in.
 - New content flows into `4veco-lessen/Boek N - titel/` as markdown-native; that is the direction.
 
 ## Structuur
@@ -121,7 +121,9 @@ Module 3 is the current cohort's material and is frozen until September 2026 for
 │   └── tests/                  ← Unit tests + data validation tests
 ├── build-scripts/              ← Build pipeline (platform/, lib/, templates/, content/, archive/)
 ├── source-data/
-│   └── module-3/
+│   ├── book-1/
+│   │   └── reasoning/          ← Boekgerichte reasoning-CSV's (actieve richting)
+│   └── module-3/               ← Legacy input voor het oude game-target
 │       ├── reasoning/*.csv     ← Bron-CSV's voor redeneer-spel
 │       └── skilltree/*.js      ← Per-paragraaf skill config
 ├── scripts/
@@ -140,11 +142,11 @@ Module 3 is the current cohort's material and is frozen until September 2026 for
 ## Deploy workflow
 
 ```bash
-# Alles bouwen en kopiëren naar module-3:
-node scripts/deploy.js "../3. Module 3 - Markt en overheid"
+# Automated layer bouwen en kopiëren naar een target:
+node scripts/deploy.js "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod"
 
-# Of via npm script:
-npm run deploy:m3
+# Legacy alias:
+npm run deploy:legacy
 ```
 
 De deploy doet:
@@ -174,9 +176,9 @@ De deploy doet:
 
 Voor de volledige paragraaf-productie: volg [BUILD-PARAGRAPH.md](C:\Projects\4veco\4veco-platform\BUILD-PARAGRAPH.md).
 
-### Schalen naar Module 4
+### Deployen naar een ander target
 ```bash
-node scripts/deploy.js "../4. Module 4 - [Naam]"
+node scripts/deploy.js "../4veco-lessen/Boek N - [Titel]"
 ```
 Zelfde engines, zelfde base-elements, andere content data.
 
@@ -185,8 +187,8 @@ Zelfde engines, zelfde base-elements, andere content data.
 Alle build scripts accepteren `MODULE_ROOT` als env var. Zonder die var schrijven ze naar hun parent directory (backward-compatible).
 
 ```bash
-# Eén script draaien tegen een specifieke module:
-MODULE_ROOT="../3. Module 3 - Markt en overheid" node build-scripts/platform/build-skilltree-shells.js
+# Eén script draaien tegen een specifieke target-root:
+MODULE_ROOT="../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod" node build-scripts/platform/build-skilltree-shells.js
 ```
 
 | Script | Genereert |
@@ -267,8 +269,8 @@ Volg de `economic-graph` skill. Kernprincipe: economisch correct, geometrisch ex
 # Engine unit tests (geen MODULE_ROOT nodig):
 npx jest --testPathPatterns "engines/tests/.*-engine\.test\.js"
 
-# Data tests (tegen een module-repo):
-MODULE_ROOT="../3. Module 3 - Markt en overheid" npx jest --testPathPatterns "engines/tests/.*-data\.test\.js"
+# Data tests (tegen een target-root met manifest):
+MODULE_ROOT="../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod" npx jest --testPathPatterns "engines/tests/.*-data\.test\.js"
 
 # Alle tests:
 npm test
@@ -282,8 +284,8 @@ npm test
 5. Commit en push module-repo
 
 ### Nieuw reasoning game toevoegen
-1. CSV maken → `source-data/module-3/reasoning/X.Y.Z.csv`
-2. `node build-scripts/platform/build-reasoning-questions.js X.Y.Z <domain> source-data/module-3/reasoning/X.Y.Z.csv --generate-review`
+1. CSV maken → `source-data/book-1/reasoning/X.Y.Z.csv`
+2. `node build-scripts/platform/build-reasoning-questions.js X.Y.Z <domain> source-data/book-1/reasoning/X.Y.Z.csv --generate-review`
 3. Economics review subagent op het review document
 4. Correcties doorvoeren in CSV, opnieuw builden
 5. `node scripts/deploy.js <module-path>`

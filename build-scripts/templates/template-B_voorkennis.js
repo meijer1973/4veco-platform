@@ -1,13 +1,13 @@
 /**
  * Template B: Uitleg Voorkennis
- * Reference implementation from 3.1.1 Markt en marktstructuur.
+ * Reference implementation adapted from a legacy market-structure paragraph.
  *
  * COMPLIANT with econ-word-templates skill — all tables use WidthType.DXA,
  * 4-column visualTOC, correct summarySchema with header row, correct
  * domainBanner, formulaBox, checkBox, tipBox, warningBox, domainLegend.
  *
  * HOW TO ADAPT FOR ANOTHER PARAGRAPH:
- * 1. Change OUT_DIR and OUT_FILE to point to the new paragraph folder
+ * 1. Change OUT_DIR and OUT_FILE (or set OUT_DIR env var) to point to the new paragraph folder
  * 2. Update the CHAPTER DATA section (search for "════") with new chapters/domains
  * 3. Replace the BUILD SECTION CHILDREN content with new paragraph text
  * 4. Update the header text in makeHeader() call at the bottom
@@ -49,8 +49,9 @@ function embedAssetImage(assetsDir, filename, width, height) {
 // ─── Unicode colon (U+F03A) ───
 const UC = "\uF03A";
 
-const OUT_DIR = `C:\\Users\\meije\\Documents\\0. claude\\3. Module 3 ${UC} Markt en overheid\\3.1 Hoofdstuk 1 ${UC} Markten\\3.1.1 Paragraaf 1 ${UC} Markt en marktstructuur`;
-const OUT_FILE = path.join(OUT_DIR, "3.1.1 Markt en marktstructuur \u2013 uitleg voorkennis.docx");
+const DEFAULT_OUT_DIR = path.resolve(__dirname, "..", "..", "output", "template-b-voorkennis");
+const OUT_DIR = process.env.OUT_DIR || DEFAULT_OUT_DIR;
+const OUT_FILE = path.join(OUT_DIR, "X.Y.Z Voorbeeldparagraaf \u2013 uitleg voorkennis.docx");
 
 // ─── Page setup ───
 const PAGE = { size: { width: 11906, height: 16838 }, margin: { top: 1440, right: 1440, bottom: 1440, left: 1440 } };

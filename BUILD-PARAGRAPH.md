@@ -118,7 +118,38 @@ Produces the teacher-facing companions for a lessen paragraph: 24 root files inc
 - **Per-paragraph layout is flat.** All 24 Part B files, including `index.html`, sit directly in the paragraph folder alongside Part A outputs (`paragraaf.md`, `opgaven.md`, `antwoorden.md`, `_assets/`, PDFs, `build_pdf.py`, review.md, quality-ref.yaml). No `1. Voorbereiden/`, `2. Leren/`, `3. Oefenen/` subfolders.
 - **Section labels** in tables below (Voorbereiden / Leren / Oefenen) identify the pedagogical role of a file, not a folder. Files are grouped by filename convention (`uitleg voorkennis`, `presentatie`, `begeleide inoefening –`, `basis –`, etc.).
 - **`shared/` lives at book root:** `4veco-lessen/Boek N - Title/shared/` holds engine JS/CSS and the game data files (`shared/questions/`, `shared/procedure/`, etc.).
-- **Module 3 references in older guides are legacy.** For new work, this spec supersedes them. Module 3 (`../3. Module 3 - Markt en overheid/`) stays on its subfolder layout until it retires in September 2026.
+- **Legacy subfolder-layout references in older guides are legacy.** For new work, this spec supersedes them. The old game target stays on its subfolder layout until it retires in September 2026.
+
+## B0a. First-time Book Setup (one-time per book)
+
+Before the first Part B/complete paragraph in a book, bootstrap the book root. Do this once per book, not once per paragraph.
+
+Required bootstrap state:
+
+- Book-root `deploy-config.json` exists and is valid.
+- Book-root `shared/` exists.
+- The following `shared/` subfolders exist:
+  - `shared/questions/`
+  - `shared/reasoning/`
+  - `shared/newsdetective/`
+  - `shared/procedure/`
+  - `shared/skilltree/`
+- Platform-side book directories exist:
+  - `build-scripts/content/book-N/`
+  - `source-data/book-N/reasoning/`
+
+For Book 1, the manifest path is:
+
+`../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/deploy-config.json`
+
+The static helper file `Lees dit als je niet weet hoe je moet beginnen met deze les.docx` can be seeded from the verified legacy source:
+
+`C:\Projects\4veco\3-Module-3-rewire-test\3.1 Hoofdstuk 1 - Markten\3.1.1 Paragraaf 1 - Markt en marktstructuur\1. Voorbereiden\Lees dit als je niet weet hoe je moet beginnen met deze les.docx`
+
+Important:
+
+- `scripts/deploy.js` is **not** a read-only probe. It writes engine files and generated shells into the target book.
+- Do not use deploy as a harmless existence check.
 
 ## B1. Definition of Done
 
@@ -307,23 +338,9 @@ mkdir -p "$PAR"
 cp "$BOOK/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/Lees dit als je niet weet hoe je moet beginnen met deze les.docx" "$PAR/" 2>/dev/null || echo "Seed the static file from a legacy source on first run."
 ```
 
-### Phase 3: Create game data files (30 min)
+If the destination book does not already contain the static helper file, seed it from the verified legacy source listed in **B0a** before continuing.
 
-Game runtime data files live under `$BOOK/shared/` (e.g. `4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/shared/`). Reasoning runtime data is `shared/reasoning/X.Y.Z.js`. The raw reasoning CSV source lives under `source-data/book-N/reasoning/` in the platform repo.
-
-1. Write `$BOOK/shared/questions/X.Y.Z.js` — quiz data (15 questions)
-2. Write `source-data/book-N/reasoning/X.Y.Z.csv` — source-of-truth reasoning CSV
-3. Run: `MODULE_ROOT="$BOOK" node build-scripts/platform/build-reasoning-questions.js X.Y.Z <domain> source-data/book-N/reasoning/X.Y.Z.csv` — writes `shared/reasoning/X.Y.Z.js`
-4. Write `$BOOK/shared/newsdetective/X.Y.Z.js` — newsdetective data
-5. Write `$BOOK/shared/procedure/X.Y.Z.js` — procedure/stappenplan data. Steps MUST align with the vaardigheden skills (same labels, same order). See procedure-stappen-plan in the paragraph plan.
-
-> The `MODULE_ROOT` env-var name is kept (not renamed to `BOOK_ROOT`) so existing scripts continue to work. It points at a lessen book root in the new pipeline.
-
-### Phase 4: Create rich documents (bulk of the work)
-
-Phase 4 has three sub-phases. The planning step ensures terminology consistency and visual reuse across all 8 documents.
-
-#### Phase 4a — Plan (15 min)
+### Phase 2a: Create paragraph plan (15 min)
 
 This paragraph plan is required for Part B/complete companion production. It is not required for Part A-only textbook paragraphs.
 
@@ -344,7 +361,23 @@ Read the textbook paragraph and answer key thoroughly, then create the paragraph
 
 This plan is the **single source of truth** for all Part B builders. Every companion builder reads it before starting.
 
-#### Phase 4b — Build shared visuals (20 min)
+### Phase 3: Create game data files (30 min)
+
+Game runtime data files live under `$BOOK/shared/` (e.g. `4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/shared/`). Reasoning runtime data is `shared/reasoning/X.Y.Z.js`. The raw reasoning CSV source lives under `source-data/book-N/reasoning/` in the platform repo.
+
+1. Write `$BOOK/shared/questions/X.Y.Z.js` — quiz data (15 questions)
+2. Write `source-data/book-N/reasoning/X.Y.Z.csv` — source-of-truth reasoning CSV
+3. Run: `MODULE_ROOT="$BOOK" node build-scripts/platform/build-reasoning-questions.js X.Y.Z <domain> source-data/book-N/reasoning/X.Y.Z.csv` — writes `shared/reasoning/X.Y.Z.js`
+4. Write `$BOOK/shared/newsdetective/X.Y.Z.js` — newsdetective data
+5. After Phase 2a is complete, write `$BOOK/shared/procedure/X.Y.Z.js` — procedure/stappenplan data. Do **not** re-author the procedure ad hoc. For each skill unit in the paragraph plan, copy its canonical `procedure` array from `references/machine/micro-teaching-units.json` into the procedure data file. The labels and order must match the paragraph plan and the vaardigheden build.
+
+> The `MODULE_ROOT` env-var name is kept (not renamed to `BOOK_ROOT`) so existing scripts continue to work. It points at a lessen book root in the new pipeline.
+
+### Phase 4: Create rich documents (bulk of the work)
+
+Phase 4 has two sub-phases. The planning step already happened in Phase 2a.
+
+#### Phase 4a — Build shared visuals (20 min)
 
 Build all SVG graphics listed in the visuelen-plan, so they can be reused across documents.
 
@@ -356,7 +389,7 @@ Build all SVG graphics listed in the visuelen-plan, so they can be reused across
 3. Optionally save the asset-builder script as `build-scripts/content/book-N/bN-XYZ-build-assets.js`
 4. Quality-check all PNGs before proceeding — verify economic correctness and readability
 
-#### Phase 4c — Build documents
+#### Phase 4b — Build documents
 
 For each document type, copy the reference script, replace the content, run it. Each builder should:
 - Read `_paragraph-plan.md` for its outline, terminology, and concept coverage
@@ -400,6 +433,8 @@ If running Part B only (textbook content already exists), run these QC steps now
 node scripts/deploy.js "$BOOK"
 ```
 `$BOOK` points at a lessen book root (e.g. `../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod`); `shared/` lives directly under it. This runs ONLY the automated layer: engine copy, game shell generation (flat output into each paragraph root), landing pages, link check, data tests. It does NOT build rich documents.
+
+This command writes to the target book. It is a build/deploy step, not a read-only validation probe.
 
 ### B-verify: Part B checklist
 
@@ -570,7 +605,7 @@ The default is **narrative-first** — students connect with stories before abst
 
 ## B8. Build script requirement
 
-**Every scripted-manual file MUST have its build script saved** in `build-scripts/content/book-N/` with naming convention `bN-XYZ-<type>.js` (e.g., `b1-111-presentatie.js`). Older Module 3 scripts under `build-scripts/content/module-N/` stay where they are; new lessen work writes under `book-N/`.
+**Every scripted-manual file MUST have its build script saved** in `build-scripts/content/book-N/` with naming convention `bN-XYZ-<type>.js` (e.g., `b1-111-presentatie.js`). Older legacy scripts under `build-scripts/content/module-N/` stay where they are; new lessen work writes under `book-N/`.
 
 This ensures:
 - Any file can be regenerated after corrections

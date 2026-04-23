@@ -1,6 +1,6 @@
 # Build Scripts
 
-This folder contains all production scripts used to turn source material into the rich paragraph outputs that appear in the module repos.
+This folder contains all production scripts used to turn source material into the rich paragraph outputs that appear in lesson targets.
 
 If you want to build a complete paragraph from scratch, start with [BUILD-PARAGRAPH.md](C:\Projects\4veco\4veco-platform\BUILD-PARAGRAPH.md).
 
@@ -12,8 +12,9 @@ build-scripts/
 ├── lib/            shared libraries, converters, verifiers
 ├── templates/      reusable scaffolds to copy when starting a new paragraph
 ├── content/
-│   ├── module-1/   paragraph-specific builders for Module 1
-│   └── module-3/   paragraph-specific builders for Module 3
+│   ├── book-1/     paragraph-specific builders for Book 1 and onward
+│   ├── module-1/   paragraph-specific builders for older module-era work
+│   └── module-3/   legacy paragraph-specific builders kept as references
 └── archive/        legacy / one-off scripts kept for reference
 ```
 
@@ -67,15 +68,15 @@ Starting points for new paragraph builders.
 | `templates/template-B_voorkennis.js` | Scaffold for `uitleg voorkennis.docx` builder |
 | `templates/template-paragraph-plan.md` | Copy into paragraph folder as `_paragraph-plan.md` during Phase 4a |
 
-### 4. Content — `content/module-1/`, `content/module-3/`
+### 4. Content — `content/book-N/`, `content/module-N/`
 
 Paragraph-specific builders. Each `.js` file builds a single asset (presentatie, voorkennis, vaardigheden, nieuws, inoefening, opgaven, samenvatting) for one paragraph. Naming:
 
-- `content/module-1/m1-XYZ-<asset>.js` — Module 1, paragraph 1.X.Y, given asset type
-- `content/module-3/pptx-XYZ-<slug>.js` — Module 3 presentation builder for paragraph 3.X.Y
-- `content/module-3/<asset>-XYZ-<slug>.js` — Module 3 non-presentation builders (§3.5 exam prep, §3.2.6 vaardigheden, §3.1.1 opgaven)
+- `content/book-1/b1-XYZ-<asset>.js` — Book 1 builder for paragraph 1.X.Y
+- `content/module-1/m1-XYZ-<asset>.js` — older module-era builder for paragraph 1.X.Y
+- `content/module-3/<asset>-XYZ-<slug>.js` — legacy reference builders kept for older material
 
-When starting a new paragraph, copy the closest existing builder from the corresponding `content/` subfolder, replace the content section, and run.
+When starting a new paragraph, copy the closest existing builder from the corresponding `content/` subfolder, replace the content section, and run. New book work should prefer `content/book-N/`.
 
 ### 5. Archive — `archive/`
 
@@ -86,7 +87,7 @@ Legacy / one-off scripts kept for historical reference only. Not part of the act
 ### Building the automated layer
 
 ```bash
-node scripts/deploy.js "../3. Module 3 - Markt en overheid"
+node scripts/deploy.js "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod"
 ```
 
 This handles engine copy, shell generation (via `platform/`), landing pages, and validation.
@@ -97,9 +98,9 @@ Follow [BUILD-PARAGRAPH.md](C:\Projects\4veco\4veco-platform\BUILD-PARAGRAPH.md)
 
 1. Create or update structured game data (CSV / JS data files)
 2. Run platform generators (usually via `deploy.js`)
-3. **Phase 4a**: Create `_paragraph-plan.md` from `templates/template-paragraph-plan.md`
-4. **Phase 4b**: Build shared visuals in `_assets/` using `lib/lib-svg-utils.js`
-5. **Phase 4c**: Copy the closest `content/module-N/...` builder, adapt, run
+3. **Phase 2a**: Create `_paragraph-plan.md` from `templates/template-paragraph-plan.md`
+4. **Phase 4a**: Build shared visuals in `_assets/` using `lib/lib-svg-utils.js`
+5. **Phase 4b**: Copy the closest `content/book-N/...` or legacy reference builder, adapt, run
 6. Run converters (`lib/convert_*.py`) for HTML versions
 7. Run `deploy.js`
 8. Verify output

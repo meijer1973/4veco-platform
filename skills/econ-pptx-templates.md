@@ -68,7 +68,7 @@ Read each slide PNG. Look for: title/subtitle collisions, clipped text, stacked 
 
 ## RECOMMENDED — use the editorial design system
 
-`build-scripts/lib/lib-pptx.js` is the shared library. Reference builder: `build-scripts/content/module-3/pptx-331-rol-overheid.js`.
+`build-scripts/lib/lib-pptx.js` is the shared library. New book-side builders belong under `build-scripts/content/book-N/`; older legacy references still live under `build-scripts/content/module-3/`.
 
 Exports:
 

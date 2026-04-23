@@ -4,8 +4,8 @@
 
 **Deze directory bevat geen student-facing output.** Er zijn twee outputpaden, beide naar sibling-directories:
 
-- **Games → Module 3.** `node scripts/deploy.js "<module-pad>"` genereert HTML-games naar `../3. Module 3 - Markt en overheid/` of `../3-Module-3-rewire-test/`.
-- **Paragrafen, hoofdstukken, boeken → 4veco-lessen.** Skills `econ-textbook-paragraph`, `econ-chapter-builder` en `econ-book-builder` schrijven markdown + PDF naar `../4veco-lessen/Boek N - titel/X.Y Hoofdstuk naam/`. Dit is de student-facing structuur die Module 3 op termijn vervangt.
+- **Paragrafen, hoofdstukken, boeken → 4veco-lessen.** Skills `econ-textbook-paragraph`, `econ-chapter-builder` en `econ-book-builder` schrijven markdown + PDF naar `../4veco-lessen/Boek N - titel/X.Y Hoofdstuk naam/`. Dit is de primaire student-facing structuur.
+- **Automated game layer → deploy target met manifest.** `node scripts/deploy.js "<target-pad>"` kopieert de gedeelde engines en genereert de automated shells naar een target met `deploy-config.json`. Voor legacy-onderhoud zijn dat nog bestaande targets zoals `../3. Module 3 - Markt en overheid/` en `../3-Module-3-rewire-test/`.
 
 Zie `../CLAUDE.md` voor de volledige pipeline + directory-kaart. Als je een browser- of PDF-wijziging verwacht te zien, moet je eerst deployen of opnieuw bouwen — niets rendert rechtstreeks vanuit de platform-tree.
 

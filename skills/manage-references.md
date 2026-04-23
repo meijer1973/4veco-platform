@@ -142,13 +142,13 @@ Every rule that governs these files, grouped by topic. Each rule has a source-of
 
 ### 3.7 Deploy / build
 
-20. **Deploy-time bundling** inlines the catalog + generators into the browser-loadable `shared/skilltree/base-elements.js` at module deploy time.
-    **Module 3 is frozen until September 2026** for student-localStorage protection — do not deploy catalog rewires that change skill IDs mid-year.
+20. **Deploy-time bundling** inlines the catalog + generators into the browser-loadable `shared/skilltree/base-elements.js` at deploy time.
+    **The legacy game target is frozen until September 2026** for student-localStorage protection — do not deploy catalog rewires that change skill IDs mid-year.
     *Source:* `scripts/deploy.js` `bundleSkilltreeBaseElements`; auto-memory `project_building_for_next_year.md`.
 
 ### 3.8 Workflow
 
-21. **Git worktrees for risky changes.** Platform rewires and Module-3 deploy tests use sibling worktrees, never modify main directly.
+21. **Git worktrees for risky changes.** Platform rewires and legacy deploy tests use sibling worktrees, never modify main directly.
     *Source:* auto-memory `feedback_worktree_for_risky_changes.md`.
 22. **Pilots stay outside the platform tree.** Long-term pilot storage lives outside `4veco-platform/` to prevent context rot.
     *Source:* auto-memory `project_pilot_policy.md`.

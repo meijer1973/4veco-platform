@@ -3,6 +3,11 @@
 Generated: 2026-04-23  
 Scope: `4veco-platform` and companion output directory `../4veco-lessen`
 
+Related split working docs:
+
+- `knowledge/platform-team-roadmap.md`
+- `knowledge/lessen-team-roadmap.md`
+
 ## Core Principle
 
 The two-team plan should start with a narrow platform-green gate. Until that gate is met, there is a deployment/output freeze for student-facing `4veco-lessen` material. The material team may plan and review, but should not start production work that depends on validators, generated game shells, skilltree data, or reference reports.
