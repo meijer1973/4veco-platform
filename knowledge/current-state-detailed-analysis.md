@@ -7,6 +7,25 @@ Scope: `4veco-platform`, `../4veco-lessen`, and `references/`
 
 This document records the current observed state in more detail than the roadmap files. It is intended as a starting point for deeper follow-up analysis, not as a final architecture decision.
 
+## Sprint 0.5 Update
+
+Updated on 2026-04-23 after the Green Gate sign-off.
+
+Current gate status:
+
+- `npm.cmd run check:platform` passes: 10 passing suites, 362 passing tests.
+- `npm.cmd run check:book -- "..\4veco-lessen\Boek 1 - Grondslagen, vraag en aanbod"` passes: 26/26 checks.
+- Book 1 Part A textbook/chapter delivery is green.
+- The Phase 0 deployment/output freeze is lifted for Part A textbook/book material production.
+
+Current companion status:
+
+- A full Part A + Part B paragraph build is not yet proven.
+- `node scripts\validate-paragraph.js --mode complete` on Book 1 paragraph 1.1.1 correctly fails because the Part B companion layer is absent.
+- `build-scripts/content/book-1/` does not exist yet.
+- Book 1 currently has no `deploy-config.json` and no `shared/` game-data/engine layer at the book root.
+- Companion production should therefore start with one MVP paragraph, not scaled production.
+
 ## How This Was Assessed
 
 The analysis was based on local inspection of:
@@ -84,10 +103,10 @@ It contains:
 
 - 5 chapter folders.
 - 21 paragraph folders.
-- `deploy-config.json`.
 - book-level markdown, HTML, and PDF.
-- book-level `shared/` engine files.
 - book-level `_assets/`.
+- no `deploy-config.json` at the book root as of Sprint 0.5 verification.
+- no book-level `shared/` engine/game-data layer as of Sprint 0.5 verification.
 
 File-type counts under `../4veco-lessen` at inspection time:
 
@@ -109,6 +128,8 @@ No `.docx` or `.pptx` files were found in Book 1 during inspection.
 
 ## Book 1 Chapter Validation
 
+Sprint 0.5 update: all five chapters now pass through `npm.cmd run check:book -- "..\4veco-lessen\Boek 1 - Grondslagen, vraag en aanbod"`. The chapter notes below record the current status after the QC backfill and blocker fixes.
+
 ### Chapter 1.1
 
 Status: passed.
@@ -126,51 +147,42 @@ The validator reported:
 
 ### Chapter 1.2
 
-Status: failed.
+Status: passed after Sprint 0.5.
 
-Main issues:
+Resolved in Sprint 0.5:
 
-- Missing review reports for all paragraphs.
-- Missing quality refs for all paragraphs.
-- Asset naming issue in 1.2.2:
-  - `1.2.2_ex1_pizza.*`
-  - `1.2.2_ex2_smartphones.*`
-- Orphaned assets:
-  - `1.2.2_ex_1.svg`
-  - `1.2.2_ex_2.svg`
-- Missing `_chapter-plan.md`.
+- Added the missing `_chapter-plan.md`.
+- Added missing review reports and quality refs.
+- Fixed the blocking 1.2.3 table/formula mismatch and slope-language errors.
 
 ### Chapter 1.3
 
-Status: failed.
+Status: passed after Sprint 0.5.
 
-Main issues:
+Resolved in Sprint 0.5:
 
-- Missing review reports for all paragraphs.
-- Missing quality refs for all paragraphs.
-- Missing `_chapter-plan.md`.
+- Added the missing `_chapter-plan.md`.
+- Added missing review reports and quality refs.
+- Fixed the blocking 1.3.1 graph-text numeric mismatch.
 
 ### Chapter 1.4
 
-Status: failed.
+Status: passed after Sprint 0.5.
 
-Main issues:
+Resolved in Sprint 0.5:
 
-- Missing review reports for all paragraphs.
-- Missing quality refs for all paragraphs.
-
-Chapter plan exists.
+- Added missing review reports and quality refs.
+- Existing chapter plan remains accepted by the validator.
 
 ### Chapter 1.5
 
-Status: failed.
+Status: passed after Sprint 0.5.
 
-Main issues:
+Resolved in Sprint 0.5:
 
-- Missing review reports for all test-prep paragraphs.
-- Missing quality refs for all test-prep paragraphs.
-
-Chapter plan exists.
+- Added missing review reports and quality refs.
+- Fixed the blocking 1.5.1, 1.5.3, and 1.5.4 review findings.
+- Existing chapter plan remains accepted by the validator.
 
 ## Platform Test State
 

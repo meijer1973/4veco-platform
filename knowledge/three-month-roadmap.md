@@ -18,21 +18,21 @@ Do not wait for perfect architecture. Phase 0 covers both unblock work and essen
 
 ### Accepted Green-Enough Checklist
 
-Status: accepted, not yet complete. Current failure details live in `knowledge/green-gate-failing-commands.md`.
+Status: complete as of Sprint 0.5 sign-off on 2026-04-23. Current gate evidence lives in `knowledge/green-gate-failing-commands.md`.
 
 The Green Gate passes only when all checks below are true:
 
 | Gate | Current status |
 |------|----------------|
-| `npm.cmd test -- --runInBand` passes. | Done in Sprint 0.1. Full platform test suite passes. |
-| `validate-chapter.js` works for current `4veco-lessen` chapters. | Partial. Chapter 1.1 passes; chapters 1.2-1.5 still expose content quality-gate gaps. |
+| `npm.cmd test -- --runInBand` passes. | Done in Sprint 0.1. Full platform test suite passes. Rechecked in Sprint 0.5 via `npm.cmd run check:platform`. |
+| `validate-chapter.js` works for current `4veco-lessen` chapters. | Done in Sprint 0.5. All five Book 1 chapters pass through `check:book`. |
 | `validate-paragraph.js` is active, required, and matches the new flat paragraph layout. | Done in Sprint 0.2 and wired into `check:book` in Sprint 0.3. It supports `part-a`, `part-b`, and `complete` modes. |
 | The skilltree/catalog mismatch is resolved. | Done in Sprint 0.1. `GEN.A38`-`GEN.A44` are implemented and tests are catalog-driven. |
 | One command exists to validate the platform plus a target book. | Done in Sprint 0.3. Use `npm run check:platform` and `npm run check:book -- <book-path>`. |
 | Generated reports are not obviously stale against the current catalog. | Done in Sprint 0.4. Current status is recorded in `knowledge/reference-report-sanity.md`. |
-| The deployment/output freeze can be lifted safely. | Not done. This is the Sprint 0.5 sign-off decision. |
+| The deployment/output freeze can be lifted safely. | Done in Sprint 0.5. Freeze lifted for Part A textbook/book material production. |
 
-This is the unlock point for full material production.
+This is the unlock point for Part A textbook/book material production. It is not a sign-off that the full Part B companion pipeline is already production-ready; companion production remains a separate Phase 1/2 track.
 
 ### Phase 0 Deployment Freeze
 
@@ -148,7 +148,7 @@ The first three pass. The `complete` command correctly fails on the absent Part 
 
 Target: 1-2 days.
 
-Status: complete. The commands exist and run; Book 1 still fails because of known content/QC gaps.
+Status: complete. The commands exist and run. Book 1 failed during Sprint 0.3, but the remaining content/QC gaps were fixed and rechecked in Sprint 0.5.
 
 Goal: provide one command sequence that both teams can run before declaring the platform usable.
 
@@ -181,7 +181,7 @@ npm run check:platform
 npm run check:book -- "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod"
 ```
 
-`check:platform` passes. `check:book` runs chapter and paragraph validation and currently fails Book 1 with 21 failed checks out of 26, all tied to the known chapter 1.2-1.5 review/quality-ref/asset cleanup work.
+Original Sprint 0.3 result: `check:platform` passed and `check:book` exposed 21 failed checks out of 26. Sprint 0.5 follow-up fixed those gaps; current result is `check:book` passing 26/26.
 
 ### Sprint 0.4: Reference Report Sanity And Cleanup
 
@@ -224,6 +224,8 @@ Current catalog counts: 192 total units, 190 live units, 2 deprecated units, 225
 
 Target: 0.5 day.
 
+Status: complete. Signed off on 2026-04-23.
+
 Goal: decide whether full team split can begin.
 
 Tasks:
@@ -236,8 +238,30 @@ Tasks:
 
 Exit criteria:
 
-- If green: freeze is lifted; material team starts Book 1 release cleanup and Book 2 production.
-- If not green: keep both teams focused on Phase 0 unblock and cleanup work, and do not start dependent production.
+- Green result: freeze is lifted for Part A textbook/book material production.
+- Material team may start Book 1 release polish and Book 2 Part A textbook production.
+- Companion/full-paragraph Part B production is not yet proven and should start as a focused MVP track, not as scaled production.
+
+Verified commands:
+
+```powershell
+npm.cmd run check:platform
+npm.cmd run check:book -- "..\4veco-lessen\Boek 1 - Grondslagen, vraag en aanbod"
+node scripts\validate-paragraph.js --mode complete "..\4veco-lessen\Boek 1 - Grondslagen, vraag en aanbod\1.1 Hoofdstuk Economisch denken en rekenen\1.1.1 Schaarste en economisch denken"
+```
+
+Results:
+
+- `check:platform` passes: 10 passing suites, 362 passing tests.
+- `check:book` passes: 26/26 checks passed.
+- `validate-paragraph --mode complete` correctly fails for 1.1.1 because Book 1 currently contains Part A textbook output, not the 24-file Part B companion layer.
+
+Residual non-blocking risks:
+
+- The Part B companion pipeline is documented and validator-covered, but not proven end-to-end for Book 1.
+- `build-scripts/content/book-1/` does not exist yet, so no reproducible Book 1 companion build scripts are in place.
+- Book 1 currently has no `deploy-config.json` or `shared/` game-data layer at the book root, so `scripts/deploy.js` cannot yet generate flat companion game shells for this book.
+- A complete paragraph build with companions requires a first MVP paragraph before scaling.
 
 ### Phase 0 Non-Goals
 
@@ -245,7 +269,6 @@ These are important, but they should not block the green gate:
 
 - Full reference catalog cleanup.
 - Full companion-material pipeline.
-- All Book 1 review/quality-ref gaps.
 - Book 2 production.
 
 ## Phase 1: First Post-Gate Split Sprint
@@ -258,16 +281,19 @@ Purpose: start the two-team split without losing the discipline created in Phase
 
 - Add the health commands to team working agreements.
 - Make the green-gate commands the first step before any new chapter/book production.
-- Confirm the Phase 0 deployment/output freeze has been lifted.
+- Confirm the Phase 0 deployment/output freeze has been lifted for Part A textbook/book material production.
 - Record known non-blocking residual risks in `knowledge/current-state-detailed-analysis.md`.
 - Assign owners for each residual platform issue.
 
-### Priority 2: Start Book 1 Release Cleanup
+### Priority 2: Start Book 1 Release Polish
 
-- Material team starts the Book 1 validator gaps:
-  - missing reviews.
-  - missing quality refs.
-  - 1.2.2 asset naming/orphan issue.
+- Material team starts a teacher-facing Book 1 review pass:
+  - clarity.
+  - pacing.
+  - graph readability.
+  - answer model usability.
+  - exam fit.
+- Keep `check:book` green after every change.
 - Platform team stays available for validator defects only, not content decisions.
 - Any repeated manual fix should be turned into a script or checklist.
 
@@ -275,7 +301,7 @@ Purpose: start the two-team split without losing the discipline created in Phase
 
 - Platform team starts the reference report and architecture tracks.
 - Do not reopen Phase 0 unless the health command regresses.
-- Defer companion-pipeline work until the validation path stays stable for at least one full Book 1 cleanup pass.
+- Start companion-pipeline work as an MVP track: one representative paragraph, complete Part B output, complete-mode validation, then decide whether to scale.
 
 ### Phase 1 Deliverable
 
@@ -326,10 +352,9 @@ Target: months 1-3.
 
 ### Track A: Book 1 Release Grade
 
-- Add missing reviews and quality refs for chapters 1.2 through 1.5.
-- Fix the 1.2.2 asset naming/orphan issue.
-- Get all five Book 1 chapter validators passing.
-- Rebuild Book 1 PDF/HTML.
+- Keep all five Book 1 chapter validators passing after every edit.
+- Preserve the Sprint 0.5 QC artifacts: reviews and quality refs are now required, not optional paperwork.
+- Rebuild affected paragraph/chapter/book PDF/HTML whenever source markdown or assets change.
 - Do a teacher-facing review pass:
   - clarity
   - pacing
