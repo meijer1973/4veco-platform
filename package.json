@@ -4,6 +4,8 @@
   "description": "Build tools and game engines for 4veco economics education modules",
   "scripts": {
     "test": "jest",
+    "check:platform": "jest --runInBand",
+    "check:book": "node scripts/check-book.js",
     "deploy:m3": "node scripts/deploy.js ../\"3. Module 3 - Markt en overheid\""
   },
   "type": "commonjs",

@@ -182,9 +182,9 @@ npm.cmd test -- --runInBand
 
 Observed result after Sprint 0.2:
 
-- 9 passing suites.
+- 10 passing suites.
 - 4 skipped suites.
-- 360 tests passed.
+- 362 tests passed.
 - 5 tests skipped.
 - 0 tests failed.
 
@@ -505,18 +505,17 @@ Module 3 is important operationally, but strategically frozen. Expensive fixes t
 
 ## Suggested Further Analysis
 
-1. **Book-level health command**
-   - Add `check:platform`.
-   - Add `check:book`.
-   - Wire `validate-chapter.js` and `validate-paragraph.js` into the repeatable Green Gate command.
-
-2. **Reference report regeneration**
+1. **Reference report regeneration**
    - Run every `build-scripts/reports/*.js` script.
    - Identify which scripts break against the current catalog.
 
-3. **Term migration map**
+2. **Term migration map**
    - Map old human-readable unit term strings to `begrippen.json` slug IDs.
    - Decide whether to preserve aliases for backwards compatibility.
+
+3. **Book 1 cleanup pass**
+   - Use `npm run check:book -- "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod"` as the single failure list.
+   - Resolve the chapter 1.2-1.5 review, quality-ref, chapter-plan, and asset issues.
 
 4. **Book 1 companion pilot plan**
    - Pick chapter 1.1.

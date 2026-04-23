@@ -11,10 +11,9 @@ During Phase 0, this document may be updated freely because planning and read-on
 
 ## Current Status
 
-The core platform test suite is green as of Sprint 0.1. `validate-paragraph.js` is aligned with the flat layout as of Sprint 0.2. Remaining Green Gate blockers are:
+The core platform test suite is green as of Sprint 0.1. `validate-paragraph.js` is aligned with the flat layout as of Sprint 0.2. `check:platform` and `check:book` exist as of Sprint 0.3. Remaining Green Gate blockers are:
 
 - Book 1 chapters 1.2-1.5 have content quality-gate gaps.
-- the proposed `check:platform` and `check:book` commands do not exist yet.
 - generated reference reports have not yet been checked against the current catalog.
 
 Chapter `1.1 Hoofdstuk Economisch denken en rekenen` currently passes `validate-chapter.js` and can be used as the known-good chapter validation baseline.
@@ -27,9 +26,9 @@ Status: passing.
 
 Current result:
 
-- 9 passing suites.
+- 10 passing suites.
 - 4 skipped suites.
-- 360 passing tests.
+- 362 passing tests.
 - 5 skipped tests.
 - 0 failing tests.
 
@@ -192,32 +191,47 @@ Meaning:
 - The missing layer is the companion layer: 23 missing companion root files, `_paragraph-plan.md`, and 5 shared game-data files.
 - This is not a platform-validator failure anymore; it is expected until the companion MVP work begins.
 
-## Missing Health Commands
+## Health Commands
 
 ### `npm.cmd run check:platform`
 
-Status: failing.
+Status: passing.
 
-Failure cause:
+Current result:
 
-- `package.json` does not define a `check:platform` script yet.
+- Runs the platform Jest suite in-band.
+- 10 passing suites.
+- 4 skipped suites.
+- 362 passing tests.
+- 5 skipped tests.
+- 0 failing tests.
 
-Likely fix direction:
+Meaning:
 
-- Add a repeatable platform health command that runs the core test suite and any stable platform checks.
+- This is the repeatable platform-side Green Gate command.
 
 ### `npm.cmd run check:book -- "..\4veco-lessen\Boek 1 - Grondslagen, vraag en aanbod"`
 
-Status: failing.
+Status: failing on known Book 1 content/QC gaps.
 
-Failure cause:
+Current result:
 
-- `package.json` does not define a `check:book` script yet.
+- The command exists and runs.
+- It validates every chapter with `validate-chapter.js`.
+- It validates every paragraph with `validate-paragraph.js --mode auto`.
+- Book 1 result: 21 failed checks out of 26.
 
-Likely fix direction:
+Failure causes:
 
-- Add a book health command that validates every chapter in a target book path.
-- Include `validate-paragraph.js` now that the flat-layout contract is implemented.
+- Chapters 1.2-1.5 fail because of missing paragraph review reports and missing `quality_ref` files.
+- Chapter 1.2 also still has the known `1.2.2` asset naming/orphan issues.
+- Chapters 1.2 and 1.3 still warn about missing `_chapter-plan.md`.
+- Paragraphs 1.1.1-1.1.4 pass the paragraph-level check and remain the known-good baseline.
+
+Meaning:
+
+- This is no longer a missing-command blocker.
+- The book command now exposes the remaining Book 1 cleanup work directly.
 
 ## Noise That Should Not Distract The Team
 
@@ -227,8 +241,7 @@ Likely fix direction:
 
 ## Phase 0 Next Actions
 
-1. Add `check:platform`.
-2. Add `check:book`.
-3. Wire `validate-paragraph.js` into the book health command.
-4. Keep chapter 1.1 as the chapter-validator baseline.
-5. Treat chapter 1.2-1.5 review, quality-ref, chapter-plan, and asset issues as known Book 1 cleanup work after the gate rules are clear.
+1. Run Sprint 0.4 reference report sanity checks.
+2. Keep chapter 1.1 as the chapter-validator baseline.
+3. Treat chapter 1.2-1.5 review, quality-ref, chapter-plan, and asset issues as known Book 1 cleanup work after the gate rules are clear.
+4. Keep `npm run check:platform` and `npm run check:book -- <book-path>` as the team-facing Green Gate commands.

@@ -26,9 +26,9 @@ The Green Gate passes only when all checks below are true:
 |------|----------------|
 | `npm.cmd test -- --runInBand` passes. | Done in Sprint 0.1. Full platform test suite passes. |
 | `validate-chapter.js` works for current `4veco-lessen` chapters. | Partial. Chapter 1.1 passes; chapters 1.2-1.5 still expose content quality-gate gaps. |
-| `validate-paragraph.js` is active, required, and matches the new flat paragraph layout. | Done in Sprint 0.2 as a standalone validator. It supports `part-a`, `part-b`, and `complete` modes; book-level wiring moves to Sprint 0.3. |
+| `validate-paragraph.js` is active, required, and matches the new flat paragraph layout. | Done in Sprint 0.2 and wired into `check:book` in Sprint 0.3. It supports `part-a`, `part-b`, and `complete` modes. |
 | The skilltree/catalog mismatch is resolved. | Done in Sprint 0.1. `GEN.A38`-`GEN.A44` are implemented and tests are catalog-driven. |
-| One command exists to validate the platform plus a target book. | Not done. `check:platform` and `check:book` do not exist yet. |
+| One command exists to validate the platform plus a target book. | Done in Sprint 0.3. Use `npm run check:platform` and `npm run check:book -- <book-path>`. |
 | Generated reports are not obviously stale against the current catalog. | Not verified yet. This belongs in Sprint 0.4. |
 | The deployment/output freeze can be lifted safely. | Not done. This is the Sprint 0.5 sign-off decision. |
 
@@ -111,7 +111,7 @@ Exit criteria:
 
 Target: 2-3 days.
 
-Status: complete for validator alignment. Book-level command wiring moves to Sprint 0.3.
+Status: complete. Validator alignment finished in Sprint 0.2; book-level wiring finished in Sprint 0.3.
 
 Goal: make validation match the actual `4veco-lessen` layouts and remove stale validator assumptions.
 
@@ -148,6 +148,8 @@ The first three pass. The `complete` command correctly fails on the absent Part 
 
 Target: 1-2 days.
 
+Status: complete. The commands exist and run; Book 1 still fails because of known content/QC gaps.
+
 Goal: provide one command sequence that both teams can run before declaring the platform usable.
 
 Tasks:
@@ -169,8 +171,17 @@ npm run check:book -- "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod"
 
 Exit criteria:
 
-- A teammate can run the health check without knowing the internals.
-- Failures point to a concrete next action.
+- Met: a teammate can run the health check without knowing the internals.
+- Met: failures point to a concrete next action.
+
+Verified commands:
+
+```powershell
+npm run check:platform
+npm run check:book -- "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod"
+```
+
+`check:platform` passes. `check:book` runs chapter and paragraph validation and currently fails Book 1 with 21 failed checks out of 26, all tied to the known chapter 1.2-1.5 review/quality-ref/asset cleanup work.
 
 ### Sprint 0.4: Reference Report Sanity And Cleanup
 
