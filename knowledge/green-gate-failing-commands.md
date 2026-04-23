@@ -11,50 +11,34 @@ During Phase 0, this document may be updated freely because planning and read-on
 
 ## Current Status
 
-The platform is not green yet. The biggest blockers are:
+The core platform test suite is green as of Sprint 0.1. Remaining Green Gate blockers are:
 
-- the skilltree test contract is stale against the current 44-skill catalog.
 - `validate-paragraph.js` still expects an older paragraph folder naming format.
 - Book 1 chapters 1.2-1.5 have content quality-gate gaps.
 - the proposed `check:platform` and `check:book` commands do not exist yet.
 
 Chapter `1.1 Hoofdstuk Economisch denken en rekenen` currently passes `validate-chapter.js` and can be used as the known-good chapter validation baseline.
 
-## Blocking Platform Commands
+## Platform Test Command
 
 ### `npm.cmd test -- --runInBand`
 
-Status: failing.
+Status: passing.
 
 Current result:
 
-- 1 failing test suite.
-- 7 passing suites.
+- 8 passing suites.
 - 4 skipped suites.
-- 10 failing tests.
-- 345 passing tests.
+- 355 passing tests.
+- 5 skipped tests.
+- 0 failing tests.
 
-Primary failing suite:
+Resolved in Sprint 0.1:
 
-```powershell
-engines/tests/skilltree-data.test.js
-```
-
-Failure causes:
-
-- The test expects 37 skills, but the current data has 44.
-- The layer-count expectation is stale:
-  - expected: `[5, 10, 3, 10, 4, 5]`
-  - actual: `[7, 13, 5, 10, 4, 5]`
-- At least one prerequisite reference points to a skill that is not present in `elements.SKILLS`.
-- Generators are missing for `GEN.A38` through `GEN.A44`.
-
-Likely fix direction:
-
-- Decide whether `GEN.A38`-`GEN.A44` are interactive skilltree skills or catalog-only skills.
-- If interactive, add generators and repair prerequisite wiring.
-- If catalog-only, update tests so they only require generators for interactive skills.
-- Replace hard-coded historical skill counts with catalog-driven expectations.
+- `GEN.A38` through `GEN.A44` are implemented as interactive skilltree generators.
+- Skilltree tests now compare against the active A-domain catalog instead of hard-coded historical counts.
+- Non-A catalog prerequisites are preserved in the reference catalog but filtered out of the executable skilltree dependency graph.
+- The deployed skilltree bundle now applies the same prerequisite filtering.
 
 ## Validator Commands
 
@@ -215,16 +199,13 @@ Likely fix direction:
 ## Noise That Should Not Distract The Team
 
 - The npm update notice is irrelevant to the Green Gate.
-- `validate-chapter.js` fixture output appears in the Jest console, including deliberately bad fixture names and missing files. That output is not itself the current blocking failure; the active Jest failure is the skilltree data suite.
+- `validate-chapter.js` fixture output appears in the Jest console, including deliberately bad fixture names and missing files. That output is not a current blocking failure; the full Jest suite passes.
 - Module 3 deployment should not be used as the direction for Green Gate work. The gate is about making `4veco-platform` trustworthy for `../4veco-lessen`.
 
 ## Phase 0 Next Actions
 
-1. Fix or reclassify `GEN.A38`-`GEN.A44`.
-2. Repair the missing skilltree prerequisite reference.
-3. Replace stale hard-coded skilltree expectations with data-driven checks.
-4. Update `validate-paragraph.js` for the flat paragraph layout.
-5. Add `check:platform`.
-6. Add `check:book`.
-7. Keep chapter 1.1 as the chapter-validator baseline.
-8. Treat chapter 1.2-1.5 review, quality-ref, chapter-plan, and asset issues as known Book 1 cleanup work after the gate rules are clear.
+1. Update `validate-paragraph.js` for the flat paragraph layout.
+2. Add `check:platform`.
+3. Add `check:book`.
+4. Keep chapter 1.1 as the chapter-validator baseline.
+5. Treat chapter 1.2-1.5 review, quality-ref, chapter-plan, and asset issues as known Book 1 cleanup work after the gate rules are clear.

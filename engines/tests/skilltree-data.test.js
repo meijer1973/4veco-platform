@@ -10,6 +10,7 @@
 const path = require('path');
 const fs = require('fs');
 const elements = require('../skilltree/base-elements');
+const catalog = require('../../references/machine/micro-teaching-units.json');
 
 const MODULE_ROOT = process.env.MODULE_ROOT
     ? path.resolve(process.env.MODULE_ROOT)
@@ -28,9 +29,15 @@ try {
 
 // ── Base elements validation ──────────────────────────────────────
 
+const activeCatalogSkillIds = catalog
+    .filter(u => u.id.startsWith('A') && !u.deprecated)
+    .map(u => u.id)
+    .sort();
+
 describe('base-elements', () => {
-    test('exports SKILLS array with 37 entries', () => {
-        expect(elements.SKILLS).toHaveLength(37);
+    test('exports every active A-domain catalog unit', () => {
+        const skillIds = elements.SKILLS.map(s => s.id).sort();
+        expect(skillIds).toEqual(activeCatalogSkillIds);
     });
 
     test('exports LAYER_NAMES with 6 entries', () => {
@@ -46,8 +53,10 @@ describe('base-elements', () => {
         }
     });
 
-    test('exports GEN object with 37 generators', () => {
-        expect(Object.keys(elements.GEN)).toHaveLength(37);
+    test('exports one generator for every skilltree unit', () => {
+        const skillIds = new Set(elements.SKILLS.map(s => s.id));
+        const genIds = Object.keys(elements.GEN).sort();
+        expect(genIds).toEqual([...skillIds].sort());
     });
 
     test('all skill IDs are unique', () => {
@@ -100,10 +109,14 @@ describe('base-elements', () => {
         }
     });
 
-    test('layer counts: L0=5, L1=10, L2=3, L3=10, L4=4, L5=5', () => {
-        const counts = [0, 0, 0, 0, 0, 0];
-        for (const s of elements.SKILLS) counts[s.layer]++;
-        expect(counts).toEqual([5, 10, 3, 10, 4, 5]);
+    test('all skills belong to a declared layer', () => {
+        const counts = Array(elements.LAYER_NAMES.length).fill(0);
+        for (const s of elements.SKILLS) {
+            expect(s.layer).toBeGreaterThanOrEqual(0);
+            expect(s.layer).toBeLessThan(elements.LAYER_NAMES.length);
+            counts[s.layer]++;
+        }
+        expect(counts.reduce((sum, count) => sum + count, 0)).toBe(elements.SKILLS.length);
     });
 });
 

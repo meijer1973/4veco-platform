@@ -1,3 +1,4 @@
+/* Current coverage: one generator for every active A-domain skill in the catalog. */
 /**
  * SkillTree Generators — 37 exercise randomizers, one per unit.
  * Extracted from base-elements.js during the unit-catalog rewire.
@@ -1122,6 +1123,219 @@
                     'Denk aan het verschil tussen economische winst en boekhoudkundige winst.',
                     'Bij economische winst = 0 is de ondernemersbeloning al verrekend in TK. Het bedrijf maakt "normale winst".'
                 )
+            ]
+        };
+    };
+
+    GEN.A38 = function () {
+        var oldValue = ri(50, 200);
+        var pct = pick([-25, -20, -10, -5, 5, 10, 20, 25]);
+        var newValue = round1(oldValue * (1 + pct / 100));
+        var diff = round1(newValue - oldValue);
+        return {
+            context: 'Een waarde verandert van ' + oldValue + ' naar ' + newValue + '. Bereken de procentuele verandering.',
+            steps: [
+                { q: 'Bereken nieuw minus oud.', a: diff, hint: 'Trek de oude waarde af van de nieuwe waarde.', expl: 'Verschil = ' + newValue + ' - ' + oldValue + ' = ' + diff + '.' },
+                { q: 'Bereken de procentuele verandering.', a: pct, hint: 'Gebruik: (nieuw - oud) / oud x 100.', expl: '(' + diff + ' / ' + oldValue + ') x 100 = ' + pct + '%.' },
+                mcStep(
+                    'Hoe interpreteer je het teken?',
+                    pct > 0 ? 'stijging' : 'daling',
+                    ['stijging', 'daling', 'procentpunt', 'indexcijfer'],
+                    'Een positief percentage betekent omhoog; een negatief percentage betekent omlaag.',
+                    'De uitkomst is ' + pct + '%, dus dit is een ' + (pct > 0 ? 'stijging' : 'daling') + '.'
+                )
+            ]
+        };
+    };
+
+    GEN.A39 = function () {
+        var basePrice = ri(40, 120);
+        var index = pick([85, 90, 95, 105, 110, 115, 120, 125]);
+        var currentPrice = round1(basePrice * index / 100);
+        var previousIndex = pick([90, 95, 100, 105, 110]);
+        if (previousIndex === index) previousIndex += 5;
+        var inflation = round2((index - previousIndex) / previousIndex * 100);
+        return {
+            context: 'Een boodschappenmand kost in het basisjaar ' + basePrice + '. In het doeljaar kost dezelfde mand ' + currentPrice + '.',
+            steps: [
+                { q: 'Bereken de prijsindex van het doeljaar.', a: index, hint: 'Index = mandprijs doeljaar / mandprijs basisjaar x 100.', expl: 'Index = ' + currentPrice + ' / ' + basePrice + ' x 100 = ' + index + '.' },
+                { q: 'Als de vorige index ' + previousIndex + ' was, hoeveel procent inflatie is er dan?', a: inflation, hint: 'Gebruik A38 op de indexwaarden.', expl: 'Inflatie = (' + index + ' - ' + previousIndex + ') / ' + previousIndex + ' x 100 = ' + inflation + '%.' },
+                mcStep(
+                    'Wat betekent een index van ' + index + '?',
+                    index > 100 ? 'de mand is duurder dan in het basisjaar' : 'de mand is goedkoper dan in het basisjaar',
+                    ['de mand is duurder dan in het basisjaar', 'de mand is goedkoper dan in het basisjaar', 'de inflatie is precies ' + index + '%', 'het basisjaar kost ' + index],
+                    'Vergelijk de index met 100.',
+                    'Het basisjaar is 100. Een index ' + (index > 100 ? 'boven' : 'onder') + ' 100 betekent dat de mand ' + (index > 100 ? 'duurder' : 'goedkoper') + ' is.'
+                )
+            ]
+        };
+    };
+
+    GEN.A40 = function () {
+        var kind = pick(['consumentensurplus', 'producentensurplus', 'belastingopbrengst', 'welvaartsverlies']);
+        var correctRegion = {
+            consumentensurplus: 'tussen vraagcurve en prijs, links van Q',
+            producentensurplus: 'tussen prijs en aanbodcurve, links van Q',
+            belastingopbrengst: 'rechthoek: heffing per stuk x verhandelde hoeveelheid',
+            welvaartsverlies: 'driehoek tussen oude en nieuwe hoeveelheid'
+        }[kind];
+        return {
+            context: 'Je krijgt een P-Q diagram en moet het gebied voor ' + kind + ' arceren.',
+            steps: [
+                mcStep(
+                    'Welk gebied hoort bij ' + kind + '?',
+                    correctRegion,
+                    [
+                        'tussen vraagcurve en prijs, links van Q',
+                        'tussen prijs en aanbodcurve, links van Q',
+                        'rechthoek: heffing per stuk x verhandelde hoeveelheid',
+                        'driehoek tussen oude en nieuwe hoeveelheid',
+                        'alles onder de aanbodcurve'
+                    ],
+                    'Bepaal eerst welke economische grootheid gevraagd wordt.',
+                    kind + ' hoort bij: ' + correctRegion + '.'
+                ),
+                {
+                    q: 'Zet de arceerstappen in de juiste volgorde.',
+                    mode: 'order',
+                    blocks: [
+                        'Bepaal welke grootheid gevraagd wordt',
+                        'Zoek de grenzen van het gebied',
+                        'Arceer de gesloten figuur en label die'
+                    ],
+                    correctOrder: [0, 1, 2],
+                    hint: 'Eerst herkennen, dan grenzen zoeken, dan tekenen.',
+                    expl: 'Je voorkomt een verkeerd gebied door eerst de definitie en grenzen vast te leggen.'
+                }
+            ]
+        };
+    };
+
+    GEN.A41 = function () {
+        var intercept = ri(4, 16);
+        var slope = pick([1, 2, 3, 4]);
+        var amount = ri(2, 8);
+        var isTax = Math.random() < 0.5;
+        var newIntercept = isTax ? intercept + amount : intercept - amount;
+        return {
+            context: 'De inverse aanbodfunctie is P = ' + intercept + ' + ' + slope + 'Q. Er komt een ' + (isTax ? 'heffing' : 'subsidie') + ' van ' + amount + ' per stuk.',
+            steps: [
+                mcStep(
+                    'Wat gebeurt er met de aanbodcurve in P-vorm?',
+                    isTax ? 'heffing: aanbod schuift omhoog' : 'subsidie: aanbod schuift omlaag',
+                    ['heffing: aanbod schuift omhoog', 'heffing: aanbod schuift omlaag', 'subsidie: aanbod schuift omhoog', 'subsidie: aanbod schuift omlaag'],
+                    'Denk vanuit de kosten per extra product.',
+                    (isTax ? 'Een heffing verhoogt' : 'Een subsidie verlaagt') + ' de prijs die aanbieders nodig hebben bij elke hoeveelheid.'
+                ),
+                { q: 'Wat wordt de nieuwe constante term in de inverse aanbodfunctie?', a: newIntercept, hint: (isTax ? 'Tel de heffing erbij op.' : 'Trek de subsidie ervan af.'), expl: 'Nieuwe constante = ' + intercept + (isTax ? ' + ' : ' - ') + amount + ' = ' + newIntercept + '.' },
+                {
+                    q: 'Zet de aanpak in de juiste volgorde.',
+                    mode: 'order',
+                    blocks: [
+                        'Schrijf aanbod in inverse vorm',
+                        'Verwerk heffing of subsidie in de constante term',
+                        'Stel de nieuwe aanbodfunctie gelijk aan vraag'
+                    ],
+                    correctOrder: [0, 1, 2],
+                    hint: 'Eerst de vorm goed zetten, dan verschuiven, dan evenwicht oplossen.',
+                    expl: 'De fout zit vaak in de richting van de verschuiving; daarom werk je eerst in P-vorm.'
+                }
+            ]
+        };
+    };
+
+    GEN.A42 = function () {
+        var curve = pick(['vraagcurve', 'aanbodcurve']);
+        var direction = pick(['rechts', 'links']);
+        var label = curve === 'vraagcurve' ? 'D' : 'S';
+        return {
+            context: 'Teken een verschuiving van de ' + curve + ' naar ' + direction + ' met een oud-en-nieuw diagram.',
+            steps: [
+                mcStep(
+                    'Welke labels gebruik je voor de oude en nieuwe curve?',
+                    label + ' en ' + label + "'",
+                    [label + ' en ' + label + "'", 'P en Q', "E en E'", 'MK en MO'],
+                    'Vraag is D, aanbod is S. De nieuwe curve krijgt een accent.',
+                    'De oude curve is ' + label + ', de nieuwe curve is ' + label + "'."
+                ),
+                mcStep(
+                    'Welke richting krijgen de verschuivingspijlen?',
+                    'horizontaal',
+                    ['horizontaal', 'verticaal', 'diagonaal', 'langs de curve'],
+                    'Een verschuiving laat zien hoeveel Q verandert bij dezelfde P.',
+                    'De pijlen zijn horizontaal omdat je de hoeveelheid bij gelijke prijs vergelijkt.'
+                ),
+                {
+                    q: 'Zet de tekenstappen in de juiste volgorde.',
+                    mode: 'order',
+                    blocks: [
+                        'Teken en label de oude curve',
+                        'Teken en label de nieuwe curve',
+                        'Plaats horizontale pijlen tussen oud en nieuw'
+                    ],
+                    correctOrder: [0, 1, 2],
+                    hint: 'Het oude beeld blijft zichtbaar.',
+                    expl: 'Een verschuivingsdiagram toont altijd oud, nieuw en richting.'
+                }
+            ]
+        };
+    };
+
+    GEN.A43 = function () {
+        var qA = ri(2, 9), qB = ri(2, 9), qC = ri(2, 9);
+        var pA = ri(3, 12), pB = ri(3, 12), pC = ri(3, 12);
+        var winA = qA * pA, winB = qB * pB, winC = qC * pC;
+        var total = winA + winB + winC;
+        return {
+            context: 'Een leerling verdeelt tijd over drie activiteiten.\nA: ' + qA + ' uur x ' + pA + ' winst per uur.\nB: ' + qB + ' uur x ' + pB + ' winst per uur.\nC: ' + qC + ' uur x ' + pC + ' winst per uur.',
+            steps: [
+                { q: 'Bereken de winst van activiteit A.', a: winA, hint: 'Hoeveelheid x winst per eenheid.', expl: 'A = ' + qA + ' x ' + pA + ' = ' + winA + '.' },
+                { q: 'Bereken de winst van activiteit B.', a: winB, hint: 'Hoeveelheid x winst per eenheid.', expl: 'B = ' + qB + ' x ' + pB + ' = ' + winB + '.' },
+                { q: 'Bereken de totale winst van de gekozen mix.', a: total, hint: 'Tel de winst van A, B en C op.', expl: 'Totaal = ' + winA + ' + ' + winB + ' + ' + winC + ' = ' + total + '.' },
+                mcStep(
+                    'Welke activiteiten tel je mee?',
+                    'alleen de daadwerkelijk gekozen activiteiten',
+                    ['alleen de daadwerkelijk gekozen activiteiten', 'alle mogelijke alternatieven', 'alleen de activiteit met hoogste winst per uur', 'alleen de niet-gekozen alternatieven'],
+                    'De vraag gaat over deze allocatie.',
+                    'Totale winst hoort bij wat echt gekozen is, niet bij de gemiste alternatieven.'
+                )
+            ]
+        };
+    };
+
+    GEN.A44 = function () {
+        var w1 = ri(14, 20);
+        var w2 = w1 - ri(2, 4);
+        var w3 = w2 - ri(2, 4);
+        var w4 = w3 - ri(2, 4);
+        var price = pick([w2, w3 + 1, w3, w4 + 1]);
+        var values = [w1, w2, w3, w4];
+        var demanded = values.filter(function (v) { return v >= price; }).length;
+        var totalWtp = values.slice(0, demanded).reduce(function (sum, v) { return sum + v; }, 0);
+        return {
+            context: 'Betalingsbereidheid per extra eenheid: 1e=' + w1 + ', 2e=' + w2 + ', 3e=' + w3 + ', 4e=' + w4 + '. De marktprijs is ' + price + '.',
+            steps: [
+                mcStep(
+                    'Welke vorm heeft de individuele vraagcurve?',
+                    'een dalende stapfunctie',
+                    ['een dalende stapfunctie', 'een stijgende rechte lijn', 'een horizontale prijslijn', 'een U-vormige kostencurve'],
+                    'Elke extra eenheid heeft een eigen betalingsbereidheid.',
+                    'Per eenheid teken je een horizontale stap op de hoogte van de betalingsbereidheid.'
+                ),
+                { q: 'Hoeveel eenheden koopt deze consument bij prijs ' + price + '?', a: demanded, hint: 'Tel elke eenheid met betalingsbereidheid groter dan of gelijk aan de prijs.', expl: demanded + ' eenheid/eenheden hebben betalingsbereidheid >= ' + price + '.' },
+                { q: 'Wat is de totale betalingsbereidheid voor deze gekochte eenheden?', a: totalWtp, hint: 'Tel de betalingsbereidheid van de gekochte eenheden op.', expl: 'Totale betalingsbereidheid = ' + values.slice(0, demanded).join(' + ') + ' = ' + totalWtp + '.' },
+                {
+                    q: 'Zet de tekenstappen in de juiste volgorde.',
+                    mode: 'order',
+                    blocks: [
+                        'Zet P op de verticale as en Q op de horizontale as',
+                        'Teken per eenheid een horizontale stap',
+                        'Laat de stappen dalen als betalingsbereidheid afneemt'
+                    ],
+                    correctOrder: [0, 1, 2],
+                    hint: 'Eerst assen, dan stappen, dan controleren of de curve daalt.',
+                    expl: 'Een individuele vraagcurve uit betalingsbereidheid is trapsgewijs.'
+                }
             ]
         };
     };

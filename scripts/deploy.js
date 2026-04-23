@@ -137,13 +137,18 @@ function bundleSkilltreeBaseElements(skilltreeDir) {
     const innerGuts = generatorsSrc.slice(startIdx + startMarker.length, returnIdx).trim();
 
     // Build SKILLS array literal from the A-domain slice of the catalog.
+    const skillIds = new Set(
+        units
+            .filter(u => u.id.charAt(0) === 'A' && !u.deprecated)
+            .map(u => u.id)
+    );
     const skills = units
-        .filter(u => u.id.charAt(0) === 'A' && !u.deprecated)
+        .filter(u => skillIds.has(u.id))
         .map(u => ({
             id: u.id,
             name: u.name,
             layer: u.layer,
-            needs: u.needs || [],
+            needs: (u.needs || []).filter(id => skillIds.has(id)),
             desc: u.kern || (u.procedure && u.procedure[0]) || ''
         }));
 

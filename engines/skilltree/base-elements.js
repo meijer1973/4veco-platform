@@ -28,16 +28,29 @@
         generators = (root.SKILL_TREE_GENERATORS || { GEN: {}, helpers: {} });
     }
 
+    var skillIds = {};
+    for (var i = 0; i < units.length; i++) {
+        var unit = units[i];
+        if (unit.id.charAt(0) !== 'A') continue;
+        if (unit.deprecated) continue;
+        skillIds[unit.id] = true;
+    }
+
     var SKILLS = [];
     for (var i = 0; i < units.length; i++) {
         var u = units[i];
         if (u.id.charAt(0) !== 'A') continue;
         if (u.deprecated) continue;
+        var needs = [];
+        var rawNeeds = u.needs || [];
+        for (var n = 0; n < rawNeeds.length; n++) {
+            if (skillIds[rawNeeds[n]]) needs.push(rawNeeds[n]);
+        }
         SKILLS.push({
             id: u.id,
             name: u.name,
             layer: u.layer,
-            needs: u.needs || [],
+            needs: needs,
             desc: u.kern || (u.procedure && u.procedure[0]) || ''
         });
     }
