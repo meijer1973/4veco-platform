@@ -11,11 +11,11 @@ During Phase 0, this document may be updated freely because planning and read-on
 
 ## Current Status
 
-The core platform test suite is green as of Sprint 0.1. Remaining Green Gate blockers are:
+The core platform test suite is green as of Sprint 0.1. `validate-paragraph.js` is aligned with the flat layout as of Sprint 0.2. Remaining Green Gate blockers are:
 
-- `validate-paragraph.js` still expects an older paragraph folder naming format.
 - Book 1 chapters 1.2-1.5 have content quality-gate gaps.
 - the proposed `check:platform` and `check:book` commands do not exist yet.
+- generated reference reports have not yet been checked against the current catalog.
 
 Chapter `1.1 Hoofdstuk Economisch denken en rekenen` currently passes `validate-chapter.js` and can be used as the known-good chapter validation baseline.
 
@@ -27,9 +27,9 @@ Status: passing.
 
 Current result:
 
-- 8 passing suites.
+- 9 passing suites.
 - 4 skipped suites.
-- 355 passing tests.
+- 360 passing tests.
 - 5 skipped tests.
 - 0 failing tests.
 
@@ -39,6 +39,7 @@ Resolved in Sprint 0.1:
 - Skilltree tests now compare against the active A-domain catalog instead of hard-coded historical counts.
 - Non-A catalog prerequisites are preserved in the reference catalog but filtered out of the executable skilltree dependency graph.
 - The deployed skilltree bundle now applies the same prerequisite filtering.
+- `validate-paragraph.js` has focused tests for flat Part A, consolidation paragraphs, Part B companion packs, and complete-mode failure behavior.
 
 ## Validator Commands
 
@@ -146,28 +147,50 @@ Likely fix direction:
 
 ### `node scripts\validate-paragraph.js "..\4veco-lessen\Boek 1 - Grondslagen, vraag en aanbod\1.1 Hoofdstuk Economisch denken en rekenen\1.1.1 Schaarste en economisch denken"`
 
-Status: failing.
+Status: passing.
 
-Failure cause:
+Current result:
 
-- `validate-paragraph.js` cannot parse the current flat paragraph folder name.
-- It still expects the older format:
+- Mode: `part-a (auto)`.
+- 0 errors.
+- 0 warnings.
 
-```text
-X.Y.Z Paragraaf N - Name
-```
+Meaning:
 
-- The actual current format is:
+- `validate-paragraph.js` now accepts the current flat paragraph folder name.
+- A theory Part A paragraph can be validated directly.
+- Markdown, PDFs, `build_pdf.py`, assets, review, and quality ref all pass for this baseline paragraph.
 
-```text
-1.1.1 Schaarste en economisch denken
-```
+### `node scripts\validate-paragraph.js "..\4veco-lessen\Boek 1 - Grondslagen, vraag en aanbod\1.1 Hoofdstuk Economisch denken en rekenen\1.1.4 Gemengde opgaven"`
 
-Likely fix direction:
+Status: passing.
 
-- Keep `validate-paragraph.js` active and required.
-- Update it to support the flat `4veco-lessen` paragraph layout.
-- Define exactly which files a flat paragraph pack must contain before wiring it into the book health command.
+Current result:
+
+- Mode: `part-a (auto)`.
+- 0 errors.
+- 0 warnings.
+
+Meaning:
+
+- Consolidation paragraphs are handled as a first-class Part A type.
+- They require `opgaven.md`, `antwoorden.md`, `opgaven.pdf`, and `antwoorden.pdf`.
+- They do not require `paragraaf.md` or `paragraaf.pdf`.
+
+### `node scripts\validate-paragraph.js --mode complete "..\4veco-lessen\Boek 1 - Grondslagen, vraag en aanbod\1.1 Hoofdstuk Economisch denken en rekenen\1.1.1 Schaarste en economisch denken"`
+
+Status: expected failure.
+
+Current result:
+
+- Part A passes.
+- Part B fails with 29 errors.
+
+Meaning:
+
+- The command correctly proves that Book 1 currently has a Part A textbook paragraph, not a complete Part A + Part B companion pack.
+- The missing layer is the companion layer: 23 missing companion root files, `_paragraph-plan.md`, and 5 shared game-data files.
+- This is not a platform-validator failure anymore; it is expected until the companion MVP work begins.
 
 ## Missing Health Commands
 
@@ -194,7 +217,7 @@ Failure cause:
 Likely fix direction:
 
 - Add a book health command that validates every chapter in a target book path.
-- Include `validate-paragraph.js` once the flat-layout contract is implemented.
+- Include `validate-paragraph.js` now that the flat-layout contract is implemented.
 
 ## Noise That Should Not Distract The Team
 
@@ -204,8 +227,8 @@ Likely fix direction:
 
 ## Phase 0 Next Actions
 
-1. Update `validate-paragraph.js` for the flat paragraph layout.
-2. Add `check:platform`.
-3. Add `check:book`.
+1. Add `check:platform`.
+2. Add `check:book`.
+3. Wire `validate-paragraph.js` into the book health command.
 4. Keep chapter 1.1 as the chapter-validator baseline.
 5. Treat chapter 1.2-1.5 review, quality-ref, chapter-plan, and asset issues as known Book 1 cleanup work after the gate rules are clear.

@@ -180,31 +180,20 @@ Command:
 npm.cmd test -- --runInBand
 ```
 
-Observed result:
+Observed result after Sprint 0.2:
 
-- 8 test suites considered.
-- 6 passed.
-- 2 failed.
-- 335 tests passed.
-- 20 tests failed.
-- 5 skipped.
+- 9 passing suites.
+- 4 skipped suites.
+- 360 tests passed.
+- 5 tests skipped.
+- 0 tests failed.
 
-Main failing areas:
+Resolved areas:
 
 ### Skilltree Data Tests
 
-The tests still expect:
-
-- 37 skills.
-- 37 generators.
-- old layer counts.
-
-The current machine unit catalog has:
-
-- 44 live A-domain units.
-- generators only for A01-A37.
-
-Missing generators:
+The tests are now catalog-driven instead of hard-coded to the older 37-skill state.
+`GEN.A38` through `GEN.A44` are implemented as interactive skilltree generators:
 
 - A38: Procentuele verandering berekenen
 - A39: Prijsindex (CPI) berekenen
@@ -216,22 +205,20 @@ Missing generators:
 
 ### Validate-Chapter Tests
 
-Several tests fail because captured `output` is not iterable. This looks like a test harness/output-capture issue, not necessarily a validator-domain issue.
+The validator tests now pass. The warning/error lines visible during `npm.cmd test -- --runInBand` come from deliberate negative fixtures, not failing Jest assertions.
 
 ## Validator State
 
 `scripts/validate-chapter.js` is useful and already reflects much of the Part A chapter contract.
 
-`scripts/validate-paragraph.js` appears stale relative to the current flat `4veco-lessen` Part B layout:
+`scripts/validate-paragraph.js` was aligned in Sprint 0.2. It now supports the current flat `4veco-lessen` layout:
 
-- It expects folder names like `X.Y.Z Paragraaf N - Name`.
-- It expects nested folders:
-  - `1. Voorbereiden/`
-  - `2. Leren/`
-  - `3. Oefenen/`
-- `BUILD-PARAGRAPH.md` now defines a flat paragraph layout where all Part B files sit directly in the paragraph root.
+- `--mode part-a`: textbook markdown, PDFs, `build_pdf.py`, assets, review, and quality ref.
+- `--mode part-b`: the 24 flat companion root files, `_paragraph-plan.md`, and shared game data.
+- `--mode complete`: Part A plus Part B.
+- `--mode auto`: Part A unless companion markers are present.
 
-This mismatch means paragraph-level validation cannot currently be trusted for new `4veco-lessen` Part B work.
+It has focused Jest coverage and has been checked against real Book 1 Part A paragraphs `1.1.1` and `1.1.4`. Complete-mode validation correctly fails on current Book 1 paragraphs because the Part B companion layer is not present yet.
 
 ## Build Script State
 
@@ -498,11 +485,11 @@ Reports and tests can become misleading if they are based on older catalog assum
 
 ### 2. Layout Drift
 
-`BUILD-PARAGRAPH.md` defines a flat `4veco-lessen` layout, but some validators still expect legacy nested layouts.
+`validate-paragraph.js` now follows the flat `4veco-lessen` layout. The next layout risk is wiring that standalone validator into the book-level health command.
 
 ### 3. Catalog Ahead Of Engine
 
-The unit catalog now includes A38-A44, but the skilltree generator layer does not.
+Resolved for A38-A44 in Sprint 0.1. Non-A prerequisites are still kept in the catalog and filtered out of the executable skilltree graph.
 
 ### 4. Half-Migrated Terminology
 
@@ -518,29 +505,25 @@ Module 3 is important operationally, but strategically frozen. Expensive fixes t
 
 ## Suggested Further Analysis
 
-1. **Validator gap analysis**
-   - Compare `BUILD-PARAGRAPH.md` Part B required files with `validate-paragraph.js`.
-   - Produce a patch plan for flat-layout validation.
+1. **Book-level health command**
+   - Add `check:platform`.
+   - Add `check:book`.
+   - Wire `validate-chapter.js` and `validate-paragraph.js` into the repeatable Green Gate command.
 
-2. **A38-A44 policy decision**
-   - Determine whether each unit should be interactive in skilltree.
-   - Estimate generator work per unit.
-
-3. **Reference report regeneration**
+2. **Reference report regeneration**
    - Run every `build-scripts/reports/*.js` script.
    - Identify which scripts break against the current catalog.
 
-4. **Term migration map**
+3. **Term migration map**
    - Map old human-readable unit term strings to `begrippen.json` slug IDs.
    - Decide whether to preserve aliases for backwards compatibility.
 
-5. **Book 1 companion pilot plan**
+4. **Book 1 companion pilot plan**
    - Pick chapter 1.1.
    - Inventory which existing Module 1 scripts can be adapted.
    - Identify missing flat-layout library support before writing content.
 
-6. **Book 2 readiness check**
+5. **Book 2 readiness check**
    - Extract Book 2 target exercises.
    - Check whether required skills exist and are adequately defined.
    - Decide which missing flags must be resolved before Book 2 production.
-

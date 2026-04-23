@@ -1,333 +1,460 @@
 #!/usr/bin/env node
 /**
- * validate-paragraph.js — Verify a built paragraph meets platform standards.
+ * validate-paragraph.js - Verify one flat-layout 4veco-lessen paragraph.
  *
  * Usage:
- *   node scripts/validate-paragraph.js <paragraph-folder-path>
- *   node scripts/validate-paragraph.js "../module one claude/1.1 Hoofdstuk 1 - Voor niks gaat de zon op/1.1.1 Paragraaf 1 - Kiezen is kostbaar"
+ *   node scripts/validate-paragraph.js [--mode auto|part-a|part-b|complete] <paragraph-folder-path>
  *
- * Checks:
- *   - All 24 required files exist
- *   - All .docx files are valid zip archives
- *   - All .pptx files > 100KB (non-empty)
- *   - All .html files > 500 bytes and contain actual content
- *   - Samenvatting has tables (table-based check)
- *   - Game data files exist in shared/
- *   - Build scripts exist for scripted-manual files
+ * Modes:
+ *   auto      Validates Part A unless companion files are present.
+ *   part-a    Textbook paragraph only.
+ *   part-b    Companion paragraph only.
+ *   complete  Part A + Part B.
  */
+
+'use strict';
 
 const fs = require('fs');
 const path = require('path');
 
-const parPath = process.argv[2];
-if (!parPath) {
-  console.error('Usage: node scripts/validate-paragraph.js <paragraph-folder-path>');
-  process.exit(1);
+const DASH = '\u2013';
+const VALID_MODES = new Set(['auto', 'part-a', 'part-b', 'complete']);
+
+function usage() {
+  console.error('Usage: node scripts/validate-paragraph.js [--mode auto|part-a|part-b|complete] <paragraph-folder-path>');
 }
 
-const PAR = path.resolve(parPath);
-if (!fs.existsSync(PAR)) {
+function parseArgs(argv) {
+  let mode = 'auto';
+  let paragraphPath = null;
+
+  for (let i = 0; i < argv.length; i++) {
+    const arg = argv[i];
+    if (arg === '--mode') {
+      mode = argv[++i];
+    } else if (arg.startsWith('--mode=')) {
+      mode = arg.slice('--mode='.length);
+    } else if (arg === '--help' || arg === '-h') {
+      usage();
+      process.exit(0);
+    } else if (!paragraphPath) {
+      paragraphPath = arg;
+    } else {
+      console.error(`Unexpected argument: ${arg}`);
+      usage();
+      process.exit(1);
+    }
+  }
+
+  if (!VALID_MODES.has(mode)) {
+    console.error(`Invalid mode: ${mode}`);
+    usage();
+    process.exit(1);
+  }
+  if (!paragraphPath) {
+    usage();
+    process.exit(1);
+  }
+
+  return { mode, paragraphPath };
+}
+
+const { mode: requestedMode, paragraphPath } = parseArgs(process.argv.slice(2));
+const PAR = path.resolve(paragraphPath);
+
+if (!fs.existsSync(PAR) || !fs.statSync(PAR).isDirectory()) {
   console.error(`Paragraph folder not found: ${PAR}`);
   process.exit(1);
 }
 
-// Extract paragraph number and name from folder name
 const folderName = path.basename(PAR);
-const parMatch = folderName.match(/^(\d+\.\d+\.\d+)\s+Paragraaf\s+\d+\s+-\s+(.+)$/);
+const parMatch = folderName.match(/^(\d+\.\d+\.\d+)\s+(.+)$/);
 if (!parMatch) {
   console.error(`Cannot parse paragraph folder name: ${folderName}`);
-  console.error('Expected format: "X.Y.Z Paragraaf N - Name"');
+  console.error('Expected flat format: "X.Y.Z Paragraph Name"');
   process.exit(1);
 }
-const parNr = parMatch[1];
-const parName = parMatch[2];
-const moduleRoot = path.resolve(PAR, '..', '..');
 
-console.log(`\nValidating paragraph ${parNr} "${parName}"`);
-console.log(`Path: ${PAR}\n`);
+const parNr = parMatch[1];
+let parName = parMatch[2];
+const legacyName = parName.match(/^Paragraaf\s+\d+\s+-\s+(.+)$/);
+if (legacyName) parName = legacyName[1];
+
+const prefix = `${parNr} ${parName}`;
+const bookRoot = path.resolve(PAR, '..', '..');
+const rootFiles = fs.readdirSync(PAR).filter(f => fs.statSync(path.join(PAR, f)).isFile());
 
 let errors = 0;
 let warnings = 0;
 
-function fail(msg) { console.error(`  ✗ ${msg}`); errors++; }
-function warn(msg) { console.warn(`  ⚠ ${msg}`); warnings++; }
-function pass(msg) { console.log(`  ✓ ${msg}`); }
+function fail(msg) {
+  console.log(`  X ${msg}`);
+  errors++;
+}
+function warn(msg) {
+  console.log(`  ! ${msg}`);
+  warnings++;
+}
+function pass(msg) {
+  console.log(`  OK ${msg}`);
+}
+function hasFile(name) {
+  return fs.existsSync(path.join(PAR, name));
+}
+function fileSize(name) {
+  return fs.statSync(path.join(PAR, name)).size;
+}
+function suffixOf(fileName) {
+  const parts = fileName.split(` ${DASH} `);
+  return parts.length > 1 ? parts[parts.length - 1] : fileName;
+}
+function findRootFileBySuffix(suffix) {
+  return rootFiles.find(f => suffixOf(f) === suffix);
+}
+function isDocxLike(name) {
+  const fullPath = path.join(PAR, name);
+  if (!fs.existsSync(fullPath)) return false;
+  const buf = fs.readFileSync(fullPath);
+  return buf.length >= 100 && buf[0] === 0x50 && buf[1] === 0x4B;
+}
 
-// ── Required files ──────────────────────────────────────────────────
+const PARA_TYPES = {
+  consolidation: {
+    pattern: /gemengde\s+opgaven/i,
+    requiredMd: ['opgaven', 'antwoorden'],
+    requiredPdf: ['opgaven', 'antwoorden'],
+    label: 'consolidation',
+  },
+  'testprep-summary': {
+    pattern: /actieve\s+samenvatting/i,
+    requiredMd: ['samenvatting', 'antwoorden'],
+    requiredPdf: ['samenvatting', 'antwoorden'],
+    label: 'test prep summary',
+  },
+  'testprep-examskills': {
+    pattern: /examenvaardigheden/i,
+    requiredMd: ['opgaven', 'antwoorden'],
+    requiredPdf: ['opgaven', 'antwoorden'],
+    label: 'test prep exam skills',
+  },
+  'testprep-integration': {
+    pattern: /integratieoefening/i,
+    requiredMd: ['opgaven', 'antwoorden'],
+    requiredPdf: ['opgaven', 'antwoorden'],
+    label: 'test prep integration',
+  },
+  'testprep-practicetest': {
+    pattern: /proeftoets/i,
+    requiredMd: ['toets', 'antwoorden', 'toetsmatrijs'],
+    requiredPdf: ['toets', 'antwoorden', 'toetsmatrijs'],
+    label: 'test prep practice test',
+  },
+  theory: {
+    pattern: null,
+    requiredMd: ['paragraaf', 'opgaven', 'antwoorden'],
+    requiredPdf: ['paragraaf', 'opgaven', 'antwoorden'],
+    label: 'theory',
+  },
+};
 
-console.log('── File existence ──');
+function classifyParagraph(name) {
+  for (const [type, spec] of Object.entries(PARA_TYPES)) {
+    if (spec.pattern && spec.pattern.test(name)) return type;
+  }
+  return 'theory';
+}
 
-const prefix = `${parNr} ${parName}`;
-const required = [
-  { path: `1. Voorbereiden/${prefix} – instapquiz.html`, type: 'html' },
-  { path: `1. Voorbereiden/${prefix} – nieuws-detective.html`, type: 'html' },
-  { path: `1. Voorbereiden/${prefix} – uitleg voorkennis.docx`, type: 'docx' },
-  { path: `1. Voorbereiden/${prefix} – uitleg voorkennis.html`, type: 'html' },
-  { path: `1. Voorbereiden/Lees dit als je niet weet hoe je moet beginnen met deze les.docx`, type: 'docx' },
-  { path: `2. Leren/${prefix} – presentatie.pptx`, type: 'pptx' },
-  { path: `2. Leren/${prefix} – uitleg vaardigheden.docx`, type: 'docx' },
-  { path: `2. Leren/${prefix} – uitleg vaardigheden.html`, type: 'html' },
-  { path: `2. Leren/${prefix} – nieuws met visual.docx`, type: 'docx' },
-  { path: `2. Leren/${prefix} – samenvatting.docx`, type: 'docx' },
-  { path: `2. Leren/${prefix} – youtube-videos.html`, type: 'html' },
-  { path: `2. Leren/${prefix} – stappenplan.html`, type: 'html' },
-  { path: `3. Oefenen/${prefix} – redeneer-spel.html`, type: 'html' },
-  { path: `3. Oefenen/${prefix} – wiskundevaardigheden.html`, type: 'html' },
-  { path: `3. Oefenen/begeleide inoefening/${prefix} – begeleide inoefening – vragen.docx`, type: 'docx' },
-  { path: `3. Oefenen/begeleide inoefening/${prefix} – begeleide inoefening – antwoorden.docx`, type: 'docx' },
-  { path: `3. Oefenen/begeleide inoefening/${prefix} – begeleide inoefening.html`, type: 'html' },
-  { path: `3. Oefenen/basisopgaven/${prefix} – basis – vragen.docx`, type: 'docx' },
-  { path: `3. Oefenen/basisopgaven/${prefix} – basis – antwoorden.docx`, type: 'docx' },
-  { path: `3. Oefenen/middenopgaven/${prefix} – midden – vragen.docx`, type: 'docx' },
-  { path: `3. Oefenen/middenopgaven/${prefix} – midden – antwoorden.docx`, type: 'docx' },
-  { path: `3. Oefenen/verrijkingsopgaven/${prefix} – verrijking – vragen.docx`, type: 'docx' },
-  { path: `3. Oefenen/verrijkingsopgaven/${prefix} – verrijking – antwoorden.docx`, type: 'docx' },
-  { path: `index.html`, type: 'html' },
-];
+function partBRequiredFiles() {
+  return [
+    { path: `${prefix} ${DASH} instapquiz.html`, type: 'html' },
+    { path: `${prefix} ${DASH} nieuws-detective.html`, type: 'html' },
+    { path: `${prefix} ${DASH} uitleg voorkennis.docx`, type: 'docx' },
+    { path: `${prefix} ${DASH} uitleg voorkennis.html`, type: 'html' },
+    { path: 'Lees dit als je niet weet hoe je moet beginnen met deze les.docx', type: 'docx' },
+    { path: `${prefix} ${DASH} presentatie.pptx`, type: 'pptx' },
+    { path: `${prefix} ${DASH} uitleg vaardigheden.docx`, type: 'docx' },
+    { path: `${prefix} ${DASH} uitleg vaardigheden.html`, type: 'html' },
+    { path: `${prefix} ${DASH} nieuws met visual.docx`, type: 'docx' },
+    { path: `${prefix} ${DASH} samenvatting.docx`, type: 'docx' },
+    { path: `${prefix} ${DASH} youtube-videos.html`, type: 'html' },
+    { path: `${prefix} ${DASH} stappenplan.html`, type: 'html' },
+    { path: `${prefix} ${DASH} redeneer-spel.html`, type: 'html' },
+    { path: `${prefix} ${DASH} wiskundevaardigheden.html`, type: 'html' },
+    { path: `${prefix} ${DASH} begeleide inoefening ${DASH} vragen.docx`, type: 'docx' },
+    { path: `${prefix} ${DASH} begeleide inoefening ${DASH} antwoorden.docx`, type: 'docx' },
+    { path: `${prefix} ${DASH} begeleide inoefening.html`, type: 'html' },
+    { path: `${prefix} ${DASH} basis ${DASH} vragen.docx`, type: 'docx' },
+    { path: `${prefix} ${DASH} basis ${DASH} antwoorden.docx`, type: 'docx' },
+    { path: `${prefix} ${DASH} midden ${DASH} vragen.docx`, type: 'docx' },
+    { path: `${prefix} ${DASH} midden ${DASH} antwoorden.docx`, type: 'docx' },
+    { path: `${prefix} ${DASH} verrijking ${DASH} vragen.docx`, type: 'docx' },
+    { path: `${prefix} ${DASH} verrijking ${DASH} antwoorden.docx`, type: 'docx' },
+    { path: 'index.html', type: 'html' },
+  ];
+}
 
-let fileCount = 0;
-for (const file of required) {
-  const fullPath = path.join(PAR, file.path);
-  if (!fs.existsSync(fullPath)) {
-    fail(`MISSING: ${file.path}`);
+function hasPartBMarkers() {
+  if (hasFile('_paragraph-plan.md')) return true;
+  return partBRequiredFiles()
+    .filter(f => f.path !== 'index.html')
+    .some(f => hasFile(f.path));
+}
+
+function hasPartAFiles() {
+  return rootFiles.some(f => {
+    const suffix = suffixOf(f);
+    return ['paragraaf.md', 'opgaven.md', 'antwoorden.md', 'samenvatting.md', 'toets.md'].includes(suffix);
+  });
+}
+
+function effectiveMode() {
+  if (requestedMode !== 'auto') return requestedMode;
+  if (hasPartBMarkers()) return hasPartAFiles() ? 'complete' : 'part-b';
+  return 'part-a';
+}
+
+function extractImageRefs(markdownFiles) {
+  const refs = new Set();
+  for (const mdFile of markdownFiles) {
+    const content = fs.readFileSync(path.join(PAR, mdFile), 'utf8');
+    const matches = content.matchAll(/!\[[^\]]*\]\(([^)]+)\)/g);
+    for (const match of matches) {
+      const ref = match[1].split('#')[0].trim();
+      if (ref && !/^https?:\/\//i.test(ref)) refs.add(ref);
+    }
+  }
+  return refs;
+}
+
+function validateAssets(markdownFiles) {
+  console.log('\n-- Asset integrity --');
+  const assetsDir = path.join(PAR, '_assets');
+  if (!fs.existsSync(assetsDir) || !fs.statSync(assetsDir).isDirectory()) {
+    fail('MISSING _assets/ folder');
+    return;
+  }
+
+  const assetFiles = fs.readdirSync(assetsDir).filter(f => fs.statSync(path.join(assetsDir, f)).isFile());
+  const svgs = assetFiles.filter(f => f.endsWith('.svg'));
+  const pngs = assetFiles.filter(f => f.endsWith('.png'));
+  const pngSet = new Set(pngs);
+  const svgSet = new Set(svgs);
+
+  for (const svg of svgs) {
+    const png = svg.replace(/\.svg$/, '.png');
+    if (!pngSet.has(png)) fail(`Unpaired SVG: ${svg} (no matching .png)`);
+  }
+  for (const png of pngs) {
+    const svg = png.replace(/\.png$/, '.svg');
+    if (!svgSet.has(svg)) fail(`Unpaired PNG: ${png} (no matching .svg)`);
+  }
+
+  const assetPattern = new RegExp(`^${parNr.replace(/\./g, '\\.')}_(fig|ex|we|mc)_\\d+\\.(svg|png)$`);
+  for (const file of assetFiles) {
+    if ((file.endsWith('.svg') || file.endsWith('.png')) && !assetPattern.test(file)) {
+      fail(`Non-compliant asset name: ${file} (must match X.Y.Z_{type}_{number}.ext)`);
+    }
+  }
+
+  const refs = extractImageRefs(markdownFiles);
+  const referencedBases = new Set();
+  let brokenRefs = 0;
+  for (const ref of refs) {
+    const normalized = ref.replace(/\\/g, '/');
+    const refPath = path.resolve(PAR, normalized);
+    const expectedRoot = path.resolve(PAR);
+    if (!refPath.startsWith(expectedRoot)) {
+      fail(`Image ref escapes paragraph folder: ${ref}`);
+      brokenRefs++;
+      continue;
+    }
+    if (!fs.existsSync(refPath)) {
+      fail(`Broken image ref: ${ref}`);
+      brokenRefs++;
+    }
+    referencedBases.add(path.basename(ref).replace(/\.(svg|png)$/i, ''));
+  }
+
+  for (const svg of svgs) {
+    const base = svg.replace(/\.svg$/, '');
+    if (refs.size > 0 && !referencedBases.has(base)) warn(`Orphaned asset: ${svg}`);
+  }
+
+  if (brokenRefs === 0 && refs.size > 0) pass(`${refs.size} image refs all resolve`);
+  pass(`_assets/: ${svgs.length} SVGs, ${pngs.length} PNGs`);
+}
+
+function validateReviewAndQualityRef() {
+  console.log('\n-- QC artifacts --');
+  const reviewFile = rootFiles.find(f => f === `${parNr}-review.md` || f.endsWith('-review.md'));
+  if (!reviewFile) {
+    fail('MISSING review report (X.Y.Z-review.md)');
   } else {
-    fileCount++;
+    const reviewContent = fs.readFileSync(path.join(PAR, reviewFile), 'utf8');
+    const failCount = (reviewContent.match(/\bFAIL\b/gi) || []).length;
+    if (failCount > 0) fail(`Review has ${failCount} unresolved FAIL item(s): ${reviewFile}`);
+    else pass(`Review: ${reviewFile} (no unresolved FAILs)`);
   }
-}
-console.log(`  ${fileCount}/${required.length} required files present\n`);
 
-// ── File integrity ──────────────────────────────────────────────────
-
-console.log('── File integrity ──');
-
-for (const file of required) {
-  const fullPath = path.join(PAR, file.path);
-  if (!fs.existsSync(fullPath)) continue;
-
-  const stat = fs.statSync(fullPath);
-  const name = path.basename(file.path);
-
-  if (file.type === 'docx') {
-    // Check valid zip (docx is a zip archive)
-    const buf = fs.readFileSync(fullPath);
-    if (buf.length < 100) {
-      fail(`TOO SMALL: ${name} (${buf.length} bytes)`);
-    } else if (buf[0] !== 0x50 || buf[1] !== 0x4B) {
-      fail(`NOT VALID DOCX: ${name} (not a zip archive)`);
-    } else {
-      pass(`${name} (${(stat.size / 1024).toFixed(1)} KB, valid docx)`);
-    }
-  } else if (file.type === 'pptx') {
-    if (stat.size < 20000) {
-      fail(`PPTX TOO SMALL: ${name} (${(stat.size / 1024).toFixed(1)} KB — expected >20KB)`);
-    } else if (stat.size < 100000) {
-      warn(`PPTX SMALL: ${name} (${(stat.size / 1024).toFixed(1)} KB — new presentations with graphs should be >100KB)`);
-    } else {
-      pass(`${name} (${(stat.size / 1024).toFixed(1)} KB)`);
-    }
-  } else if (file.type === 'html') {
-    if (stat.size < 500) {
-      warn(`HTML VERY SMALL: ${name} (${stat.size} bytes — may be just a shell)`);
-    } else {
-      pass(`${name} (${(stat.size / 1024).toFixed(1)} KB)`);
-    }
+  const qualityRef = rootFiles.find(f => f === `${parNr}-quality-ref.yaml` || f.endsWith('-quality-ref.yaml'));
+  if (!qualityRef) {
+    fail('MISSING quality_ref (X.Y.Z-quality-ref.yaml)');
+    return;
   }
+
+  const yaml = fs.readFileSync(path.join(PAR, qualityRef), 'utf8');
+  const missingMatch = yaml.match(/missing:\s*\[([^\]]*)\]/);
+  const hasMissing = missingMatch && missingMatch[1].trim().length > 0;
+  const pairedMatch = yaml.match(/svgpng_paired:\s*(true|false)/);
+  const isPaired = !pairedMatch || pairedMatch[1] === 'true';
+  const namingMatch = yaml.match(/naming_compliant:\s*(true|false)/);
+  const isNaming = !namingMatch || namingMatch[1] === 'true';
+
+  if (hasMissing) fail(`quality_ref reports missing assets: ${qualityRef}`);
+  if (!isPaired) fail(`quality_ref reports unpaired SVG/PNG: ${qualityRef}`);
+  if (!isNaming) fail(`quality_ref reports naming non-compliance: ${qualityRef}`);
+  if (!hasMissing && isPaired && isNaming) pass(`Quality ref: ${qualityRef} (valid)`);
 }
 
-// ── Game data files ──────────────────────────────────────────────────
+function validatePartA() {
+  const type = classifyParagraph(folderName);
+  const spec = PARA_TYPES[type];
+  console.log('\n-- Part A textbook files --');
+  pass(`Paragraph type: ${spec.label}`);
 
-console.log('\n── Game data files ──');
+  const markdownFiles = [];
+  for (const required of spec.requiredMd) {
+    const file = findRootFileBySuffix(`${required}.md`);
+    if (file) {
+      markdownFiles.push(file);
+      pass(`${required}.md: ${file}`);
+    } else {
+      fail(`MISSING ${required}.md`);
+    }
+  }
 
-const sharedDir = path.join(moduleRoot, 'shared');
-const gameData = [
-  { path: `questions/${parNr}.js`, label: 'Quiz data' },
-  { path: `newsdetective/${parNr}.js`, label: 'Newsdetective data' },
-  { path: `reasoning/${parNr}.js`, label: 'Reasoning data (JS)' },
-  { path: `skilltree/${parNr}.js`, label: 'Skilltree data' },
-  { path: `procedure/${parNr}.js`, label: 'Procedure/stappenplan data' },
-];
+  for (const required of spec.requiredPdf) {
+    const file = findRootFileBySuffix(`${required}.pdf`);
+    if (!file) {
+      fail(`MISSING ${required}.pdf`);
+      continue;
+    }
+    const size = fileSize(file);
+    if (size < 10000) fail(`PDF too small: ${file} (${(size / 1024).toFixed(1)} KB)`);
+    else pass(`${file} (${(size / 1024).toFixed(0)} KB)`);
+  }
 
-for (const gd of gameData) {
-  const fullPath = path.join(sharedDir, gd.path);
-  if (!fs.existsSync(fullPath)) {
-    fail(`MISSING: shared/${gd.path} (${gd.label})`);
+  hasFile('build_pdf.py') ? pass('build_pdf.py') : fail('MISSING build_pdf.py');
+  validateAssets(markdownFiles);
+  validateReviewAndQualityRef();
+}
+
+function validatePartB() {
+  console.log('\n-- Part B companion files --');
+
+  const required = partBRequiredFiles();
+  let present = 0;
+  for (const file of required) {
+    if (!hasFile(file.path)) {
+      fail(`MISSING: ${file.path}`);
+      continue;
+    }
+    present++;
+    const size = fileSize(file.path);
+    if (file.type === 'docx') {
+      if (!isDocxLike(file.path)) fail(`NOT VALID DOCX: ${file.path}`);
+      else pass(`${file.path} (${(size / 1024).toFixed(1)} KB, valid docx)`);
+    } else if (file.type === 'pptx') {
+      if (size < 20000) fail(`PPTX TOO SMALL: ${file.path} (${(size / 1024).toFixed(1)} KB)`);
+      else if (size < 100000) warn(`PPTX SMALL: ${file.path} (${(size / 1024).toFixed(1)} KB)`);
+      else pass(`${file.path} (${(size / 1024).toFixed(1)} KB)`);
+    } else if (file.type === 'html') {
+      if (size < 500) warn(`HTML VERY SMALL: ${file.path} (${size} bytes)`);
+      else pass(`${file.path} (${(size / 1024).toFixed(1)} KB)`);
+    }
+  }
+  console.log(`  ${present}/${required.length} required Part B files present`);
+
+  console.log('\n-- Part B plan and game data --');
+  if (!hasFile('_paragraph-plan.md')) {
+    fail('MISSING _paragraph-plan.md');
   } else {
-    const size = fs.statSync(fullPath).size;
-    pass(`shared/${gd.path} (${(size / 1024).toFixed(1)} KB)`);
+    const plan = fs.readFileSync(path.join(PAR, '_paragraph-plan.md'), 'utf8');
+    if (!/procedure-stappen/i.test(plan)) warn('Plan missing procedure-stappen-plan section');
+    if (!/visuelen-toewijzing/i.test(plan)) warn('Plan missing visuelen-toewijzing section');
+    if (!/terminologie/i.test(plan)) warn('Plan missing terminologie section');
+    pass('_paragraph-plan.md');
   }
+
+  const sharedDir = path.join(bookRoot, 'shared');
+  const dataFiles = [
+    { path: `questions/${parNr}.js`, label: 'Quiz data' },
+    { path: `newsdetective/${parNr}.js`, label: 'Newsdetective data' },
+    { path: `reasoning/${parNr}.js`, label: 'Reasoning data' },
+    { path: `procedure/${parNr}.js`, label: 'Procedure data' },
+    { path: `skilltree/${parNr}.js`, label: 'Skilltree data' },
+  ];
+
+  for (const data of dataFiles) {
+    const fullPath = path.join(sharedDir, data.path);
+    if (!fs.existsSync(fullPath)) {
+      fail(`MISSING: shared/${data.path} (${data.label})`);
+    } else {
+      pass(`shared/${data.path} (${(fs.statSync(fullPath).size / 1024).toFixed(1)} KB)`);
+    }
+  }
+
+  validateQuiz(path.join(sharedDir, 'questions', `${parNr}.js`));
+  validateProcedure(path.join(sharedDir, 'procedure', `${parNr}.js`));
 }
 
-// Check reasoning CSV source
-const csvPath = path.join(sharedDir, 'reasoning', `${parNr}.csv`);
-if (fs.existsSync(csvPath)) {
-  pass(`shared/reasoning/${parNr}.csv (source CSV present)`);
-} else {
-  warn(`shared/reasoning/${parNr}.csv not found — JS exists but CSV source is missing`);
-}
-
-// ── Quiz quality check ──────────────────────────────────────────────
-
-console.log('\n── Quiz quality ──');
-
-const quizPath = path.join(sharedDir, 'questions', `${parNr}.js`);
-if (fs.existsSync(quizPath)) {
+function validateQuiz(quizPath) {
+  if (!fs.existsSync(quizPath)) return;
   try {
     const code = fs.readFileSync(quizPath, 'utf8');
     const fn = new Function(code + '\nreturn QUIZ_DATA;');
     const data = fn();
-
     const catKeys = Object.keys(data.categories || {});
     const questions = data.questions || [];
-    pass(`${questions.length} questions, ${catKeys.length} categories`);
-
-    // Check difficulty-3 per category
+    pass(`Quiz: ${questions.length} questions, ${catKeys.length} categories`);
     for (const cat of catKeys) {
       const d3 = questions.filter(q => q.category === cat && q.difficulty === 3).length;
-      if (d3 === 0) {
-        fail(`Quiz category "${cat}" has NO difficulty-3 questions (mastery system needs this)`);
-      }
+      if (d3 === 0) fail(`Quiz category "${cat}" has NO difficulty-3 questions`);
     }
   } catch (e) {
     fail(`Quiz data parse error: ${e.message}`);
   }
 }
 
-// ── Samenvatting table check ────────────────────────────────────────
-
-console.log('\n── Samenvatting format ──');
-
-const samPath = path.join(PAR, '2. Leren', `${prefix} – samenvatting.docx`);
-if (fs.existsSync(samPath)) {
-  // Quick check: count <w:tbl> in document.xml
-  try {
-    const AdmZip = require('adm-zip');
-    const zip = new AdmZip(samPath);
-    const docXml = zip.readAsText('word/document.xml');
-    const tableCount = (docXml.match(/<w:tbl[ >]/g) || []).length;
-    if (tableCount >= 3) {
-      pass(`Samenvatting has ${tableCount} tables (table-based layout)`);
-    } else {
-      warn(`Samenvatting has only ${tableCount} tables — may not be infographic layout (expected ≥3)`);
-    }
-  } catch (e) {
-    // adm-zip not available, try basic zip check
-    warn(`Cannot check samenvatting tables (adm-zip not available). Verify manually.`);
-  }
-}
-
-// ── Dual coding check ───────────────────────────────────────────────
-
-console.log('\n── Dual coding (images in documents) ──');
-
-const assetsDir = path.join(PAR, '_assets');
-if (fs.existsSync(assetsDir)) {
-  const svgs = fs.readdirSync(assetsDir).filter(f => f.endsWith('.svg'));
-  const pngs = fs.readdirSync(assetsDir).filter(f => f.endsWith('.png'));
-  if (svgs.length > 0) {
-    pass(`_assets/ has ${svgs.length} SVG(s) and ${pngs.length} PNG(s)`);
-  } else {
-    warn(`_assets/ exists but has no SVG files`);
-  }
-} else {
-  warn(`No _assets/ folder — paragraph has no shared visuals (dual coding missing)`);
-}
-
-// Check that key docx files have embedded images (dual coding)
-function countDocxImages(docxPath) {
-  try {
-    const AdmZip = require('adm-zip');
-    const zip = new AdmZip(docxPath);
-    const docXml = zip.readAsText('word/document.xml');
-    return (docXml.match(/<a:blip/g) || []).length;
-  } catch (e) {
-    return -1; // adm-zip not available
-  }
-}
-
-const dualCodingDocs = [
-  { path: `2. Leren/${prefix} – uitleg vaardigheden.docx`, label: 'Vaardigheden', minImages: 1 },
-  { path: `1. Voorbereiden/${prefix} – uitleg voorkennis.docx`, label: 'Voorkennis', minImages: 0 },
-  { path: `2. Leren/${prefix} – samenvatting.docx`, label: 'Samenvatting', minImages: 0 },
-];
-
-for (const doc of dualCodingDocs) {
-  const fullPath = path.join(PAR, doc.path);
-  if (fs.existsSync(fullPath)) {
-    const imgCount = countDocxImages(fullPath);
-    if (imgCount === -1) {
-      // adm-zip not available, skip
-    } else if (imgCount >= doc.minImages && imgCount > 0) {
-      pass(`${doc.label}: ${imgCount} embedded image(s) (dual coding ✓)`);
-    } else if (doc.minImages > 0 && imgCount === 0) {
-      fail(`${doc.label}: NO embedded images — dual coding missing`);
-    } else if (imgCount === 0) {
-      warn(`${doc.label}: no embedded images — consider adding visuals`);
-    }
-  }
-}
-
-// Check begeleide inoefening vragen has scaffold images
-const biVragenPath = path.join(PAR, `3. Oefenen/begeleide inoefening/${prefix} – begeleide inoefening – vragen.docx`);
-if (fs.existsSync(biVragenPath)) {
-  const imgCount = countDocxImages(biVragenPath);
-  if (imgCount === -1) {
-    // adm-zip not available
-  } else if (imgCount > 0) {
-    pass(`Begeleide inoefening vragen: ${imgCount} scaffold image(s) (dual coding ✓)`);
-  } else {
-    warn(`Begeleide inoefening vragen: no scaffold images — weaker students need visual support`);
-  }
-}
-
-// ── Unified experience check ────────────────────────────────────────
-
-console.log('\n── Unified experience ──');
-
-const procedurePath = path.join(sharedDir, 'procedure', `${parNr}.js`);
-if (fs.existsSync(procedurePath)) {
+function validateProcedure(procedurePath) {
+  if (!fs.existsSync(procedurePath)) return;
   try {
     const code = fs.readFileSync(procedurePath, 'utf8');
     const fn = new Function(code + '\nreturn PROCEDURE_DATA;');
     const data = fn();
     const procs = data.procedures || [];
     pass(`Stappenplan: ${procs.length} procedure(s) defined`);
-    // Check each procedure has proper step labels
-    for (const proc of procs) {
-      const steps = (proc.steps || []).filter(s => s.type === 'choose');
-      const hasLabels = steps.every(s => s.label && s.label.includes('Stap'));
-      if (!hasLabels) {
-        warn(`Procedure "${proc.title}": step labels should include "Stap N — description" for unified experience`);
-      }
-    }
   } catch (e) {
     fail(`Procedure data parse error: ${e.message}`);
   }
 }
 
-// Check _paragraph-plan.md exists
-const planPath = path.join(PAR, '_paragraph-plan.md');
-if (fs.existsSync(planPath)) {
-  const plan = fs.readFileSync(planPath, 'utf8');
-  const hasProcedures = plan.includes('Procedure-stappen-plan') || plan.includes('procedure-stappen');
-  const hasVisuelen = plan.includes('Visuelen-toewijzing') || plan.includes('visuelen-toewijzing');
-  const hasTerminologie = plan.includes('Terminologie') || plan.includes('terminologie');
-  if (hasProcedures) { pass('Plan has procedure-stappen-plan (unified experience)'); }
-  else { warn('Plan missing procedure-stappen-plan section'); }
-  if (hasVisuelen) { pass('Plan has visuelen-toewijzing (dual coding)'); }
-  else { warn('Plan missing visuelen-toewijzing section'); }
-  if (hasTerminologie) { pass('Plan has terminologie table'); }
-  else { warn('Plan missing terminologie table'); }
-}
+const mode = effectiveMode();
 
-// ── Summary ──────────────────────────────────────────────────────────
+console.log(`\nValidating paragraph ${parNr} "${parName}"`);
+console.log(`Path: ${PAR}`);
+console.log(`Mode: ${mode}${requestedMode === 'auto' ? ' (auto)' : ''}`);
 
-console.log('\n══════════════════════════════════════════');
+if (mode === 'part-a' || mode === 'complete') validatePartA();
+if (mode === 'part-b' || mode === 'complete') validatePartB();
+
+console.log('\n==========================================');
 if (errors === 0 && warnings === 0) {
-  console.log(`✓ Paragraph ${parNr} "${parName}" PASSED all checks.`);
+  console.log(`OK Paragraph ${parNr} "${parName}" PASSED all checks.`);
 } else if (errors === 0) {
-  console.log(`⚠ Paragraph ${parNr} "${parName}" passed with ${warnings} warning(s).`);
+  console.log(`OK Paragraph ${parNr} "${parName}" passed with ${warnings} warning(s).`);
 } else {
-  console.log(`✗ Paragraph ${parNr} "${parName}" FAILED: ${errors} error(s), ${warnings} warning(s).`);
+  console.log(`FAIL Paragraph ${parNr} "${parName}" failed: ${errors} error(s), ${warnings} warning(s).`);
 }
 console.log('');
 

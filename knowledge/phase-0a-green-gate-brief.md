@@ -28,7 +28,7 @@ The Green Gate passes only when all checks below are true:
 |------|----------------|
 | `npm.cmd test -- --runInBand` passes. | Done in Sprint 0.1. Full platform test suite passes. |
 | `validate-chapter.js` works for current `4veco-lessen` chapters. | Partial. Chapter 1.1 passes; chapters 1.2-1.5 still expose content quality-gate gaps. |
-| `validate-paragraph.js` is active, required, and matches the flat paragraph layout. | Not done. It still expects the old paragraph folder naming format. |
+| `validate-paragraph.js` is active, required, and matches the flat paragraph layout. | Done in Sprint 0.2 as a standalone validator. It supports `part-a`, `part-b`, and `complete` modes; book-level wiring moves to Sprint 0.3. |
 | The skilltree/catalog mismatch is resolved. | Done in Sprint 0.1. `GEN.A38`-`GEN.A44` are implemented and tests are catalog-driven. |
 | One command exists to validate the platform plus a target book. | Not done. `check:platform` and `check:book` do not exist yet. |
 | Generated reports are not obviously stale against the current catalog. | Not verified yet. This belongs in Sprint 0.4. |
@@ -118,7 +118,7 @@ Phase 0A is complete when:
 After this, work moves to the implementation sprints:
 
 - Sprint 0.1: make platform tests green.
-- Sprint 0.2: align validators with flat layout.
+- Sprint 0.2: align validators with flat layout. Complete for `validate-paragraph.js`; book-level wiring moves to Sprint 0.3.
 - Sprint 0.3: add `check:platform` and `check:book`.
 - Sprint 0.4: check reference report sanity.
 - Sprint 0.5: run final checks and lift or keep the freeze.

@@ -26,7 +26,7 @@ The Green Gate passes only when all checks below are true:
 |------|----------------|
 | `npm.cmd test -- --runInBand` passes. | Done in Sprint 0.1. Full platform test suite passes. |
 | `validate-chapter.js` works for current `4veco-lessen` chapters. | Partial. Chapter 1.1 passes; chapters 1.2-1.5 still expose content quality-gate gaps. |
-| `validate-paragraph.js` is active, required, and matches the new flat paragraph layout. | Not done. It still expects the older paragraph folder naming format. |
+| `validate-paragraph.js` is active, required, and matches the new flat paragraph layout. | Done in Sprint 0.2 as a standalone validator. It supports `part-a`, `part-b`, and `complete` modes; book-level wiring moves to Sprint 0.3. |
 | The skilltree/catalog mismatch is resolved. | Done in Sprint 0.1. `GEN.A38`-`GEN.A44` are implemented and tests are catalog-driven. |
 | One command exists to validate the platform plus a target book. | Not done. `check:platform` and `check:book` do not exist yet. |
 | Generated reports are not obviously stale against the current catalog. | Not verified yet. This belongs in Sprint 0.4. |
@@ -111,6 +111,8 @@ Exit criteria:
 
 Target: 2-3 days.
 
+Status: complete for validator alignment. Book-level command wiring moves to Sprint 0.3.
+
 Goal: make validation match the actual `4veco-lessen` layouts and remove stale validator assumptions.
 
 Tasks:
@@ -127,9 +129,20 @@ Tasks:
 
 Exit criteria:
 
-- The platform team can say which validator applies to which artifact.
-- The material team can validate Book 1 chapters without guessing.
-- The material team can validate a flat-layout paragraph pack with `validate-paragraph.js`.
+- Met: the platform team can say which validator applies to which artifact.
+- Met: the material team can validate Book 1 chapters without guessing.
+- Met: the material team can validate a flat-layout paragraph pack with `validate-paragraph.js`.
+
+Verified commands:
+
+```powershell
+npm.cmd test -- --runInBand
+node scripts\validate-paragraph.js "..\4veco-lessen\Boek 1 - Grondslagen, vraag en aanbod\1.1 Hoofdstuk Economisch denken en rekenen\1.1.1 Schaarste en economisch denken"
+node scripts\validate-paragraph.js "..\4veco-lessen\Boek 1 - Grondslagen, vraag en aanbod\1.1 Hoofdstuk Economisch denken en rekenen\1.1.4 Gemengde opgaven"
+node scripts\validate-paragraph.js --mode complete "..\4veco-lessen\Boek 1 - Grondslagen, vraag en aanbod\1.1 Hoofdstuk Economisch denken en rekenen\1.1.1 Schaarste en economisch denken"
+```
+
+The first three pass. The `complete` command correctly fails on the absent Part B companion layer, proving the validator distinguishes Part A textbook output from complete paragraph packs.
 
 ### Sprint 0.3: Book-Level Health Command
 
