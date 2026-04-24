@@ -1,4 +1,4 @@
-# Flag Backlog — candidate units from the Module 1–4 blueprint walk
+# Flag Backlog — candidate units from the course blueprint walk
 
 Generated 2026-04-21 by clustering the 141 `missing_units_flagged` entries in `references/authored/course-target-exercises.json` (49 target exercises).
 

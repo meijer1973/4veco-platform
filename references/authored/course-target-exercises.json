@@ -697,7 +697,7 @@
         "A13"
       ],
       "missing_units_flagged": [
-        "Compute MK and MO from a table by taking differences (table-method, precedes A11/A12/A13 differentiation — Module 1 must NOT use calculus; a table-only variant should be its own unit)",
+        "Compute MK and MO from a table by taking differences (table-method, precedes A11/A12/A13 differentiation — the pre-calculus foundation sequence must NOT use calculus; a table-only variant should be its own unit)",
         "Observe MK constant for linear TK vs increasing for quadratic TK (concept-level pattern recognition)",
         "Observe MO = P when price is constant (concept-level)"
       ],
@@ -769,7 +769,7 @@
         "D30"
       ],
       "missing_units_flagged": [
-        "Approximate MK from TK = a + bQ² as 2bQ without formal differentiation (Module 1 pre-calculus bridge; a distinct unit from A11 'Afgeleide bepalen')",
+        "Approximate MK from TK = a + bQ² as 2bQ without formal differentiation (early pre-calculus bridge; a distinct unit from A11 'Afgeleide bepalen')",
         "Verify a profit optimum by checking winst at Q−1, Q, Q+1 (A-domain candidate, good-habits-building step)"
       ],
       "exam_codes": [
@@ -2086,7 +2086,7 @@
         "A2.17",
         "D3.1"
       ],
-      "difficulty_notes": "Builds directly on §2.2 (surplus analysis) and §3.2.3 (monopoly mechanics). The calculation involves finding the competitive equilibrium (demand = supply/MK) — which is revision from Module 1. The new element is the comparison. One lesson works because students already have all the component skills.",
+      "difficulty_notes": "Builds directly on §2.2 (surplus analysis) and §3.2.3 (monopoly mechanics). The calculation involves finding the competitive equilibrium (demand = supply/MK) — which is revision of earlier competitive-equilibrium work. The new element is the comparison. One lesson works because students already have all the component skills.",
       "source_ref": "knowledge/course_blueprint_v4.md §3.3.1"
     },
     {
@@ -2286,7 +2286,7 @@
         "A2.16",
         "A2.17"
       ],
-      "difficulty_notes": "New graph type: two supply curves (MPC and MSC). Students must understand why the market uses MPC (because firms don't pay for pollution) while society should use MSC. The math is straightforward — it's the same equilibrium calculation as Module 1, just done twice. One lesson works.",
+      "difficulty_notes": "New graph type: two supply curves (MPC and MSC). Students must understand why the market uses MPC (because firms don't pay for pollution) while society should use MSC. The math is straightforward — it's the same equilibrium calculation introduced earlier, just done twice. One lesson works.",
       "source_ref": "knowledge/course_blueprint_v4.md §3.4.1"
     },
     {
@@ -2477,7 +2477,7 @@
       ],
       "missing_units_flagged": [],
       "exam_codes": [],
-      "difficulty_notes": "Connects directly to marginal analysis from Module 1 and Module 3 (MO = MK is analogous to VMP = W). Students find the restaurant context engaging. The diminishing marginal product is intuitive ('the kitchen gets crowded'). One lesson comfortable.",
+      "difficulty_notes": "Connects directly to earlier marginal-analysis units (MO = MK is analogous to VMP = W). Students find the restaurant context engaging. The diminishing marginal product is intuitive ('the kitchen gets crowded'). One lesson comfortable.",
       "source_ref": "knowledge/course_blueprint_v4.md §4.1.1"
     },
     {

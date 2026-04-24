@@ -244,9 +244,9 @@ The active build-script architecture is clear:
 - `build-scripts/references/`: machine-reference CLI suite.
 - `build-scripts/reports/`: generated diagnostics.
 
-However, `build-scripts/content/book-1/` does not exist yet. Existing rich document builders are mostly under:
+Current rich document builders are split between current Book 1 work and retained legacy references:
 
-- `build-scripts/content/module-1/`
+- `build-scripts/content/book-1/`
 - `build-scripts/content/module-3/`
 
 This supports the conclusion that Book 1 Part A is broad, while Book 1 Part B still needs a new flat-layout production pattern.
@@ -525,7 +525,7 @@ Module 3 is important operationally, but strategically frozen. Expensive fixes t
 
 3. **Book 1 companion pilot plan**
    - Pick chapter 1.1.
-   - Inventory which existing Module 1 scripts can be adapted.
+   - Inventory which current Book 1 builders and retained legacy references can be adapted.
    - Identify missing flat-layout library support before writing content.
 
 4. **Book 2 readiness check**

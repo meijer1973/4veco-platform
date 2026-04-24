@@ -353,7 +353,7 @@ Target: months 1-3.
 
 - Build a reliable flat-layout Part B path.
 - Create `build-scripts/content/book-1/`.
-- Adapt only the best reusable Module 1/3 content-builder patterns.
+- Adapt only the best reusable Book 1 and retained legacy content-builder patterns.
 - Validate the companion MVP before scaling.
 
 ## Material Team Roadmap
