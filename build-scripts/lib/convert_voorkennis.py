@@ -3,6 +3,7 @@
 """
 Convert 'uitleg voorkennis.docx' to interactive HTML with sidebar navigation.
 Usage: python convert_voorkennis.py [paragraph_folder_path]
+       python convert_voorkennis.py --layout-test-v1 [paragraph_folder_path]
        python convert_voorkennis.py --all   (processes all paragraphs)
 
 HOW TO ADAPT
@@ -476,7 +477,7 @@ def render_callout(callout_type, text):
 '''
 
 
-def generate_html(data, para_number, para_name, asset_prefix="../_assets"):
+def generate_html(data, para_number, para_name, asset_prefix="../_assets", shared_prefix=None, test_label=""):
     """Generate the full HTML string."""
     sections = data['sections']
     checklist = data['checklist']
@@ -613,6 +614,58 @@ def generate_html(data, para_number, para_name, asset_prefix="../_assets"):
     # Grid columns for hero cards
     n = len(sections)
     grid_cols = f'repeat({n}, 1fr)' if n <= 5 else f'repeat({min(n,4)}, 1fr)'
+
+    if shared_prefix:
+        title_suffix = f' - {esc(test_label)}' if test_label else ''
+        badge_suffix = f' &middot; {esc(test_label)}' if test_label else ''
+
+        return f'''<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="4veco-layout-test" content="voorkennis-v1">
+<title>{para_number} {esc(para_name)} \u2013 Uitleg voorkennis{title_suffix}</title>
+<link rel="stylesheet" href="{shared_prefix}/voorkennis.css">
+</head>
+<body data-layout-test="voorkennis-v1">
+
+<button class="sidebar-toggle" id="sidebarToggle" aria-label="Menu openen">
+  <svg viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+</button>
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+<div class="page-layout">
+  <nav class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <h2>{para_number} {esc(para_name)}</h2>
+      <p>Uitleg voorkennis</p>
+    </div>
+{sidebar_items}
+  </nav>
+
+  <div class="content">
+    <header class="hero">
+      <div class="hero-inner">
+        <span class="hero-badge">{para_number} &middot; Voorkennis{badge_suffix}</span>
+        <h1>{esc(para_name)} &mdash; Voorkennis</h1>
+        <p class="hero-sub">{esc(data['subtitle'])}</p>
+        <div class="hero-cards">
+{hero_cards}
+        </div>
+      </div>
+    </header>
+
+    <main>
+{sections_html}
+{checklist_html}
+    </main>
+  </div>
+</div>
+
+<script src="{shared_prefix}/voorkennis.js"></script>
+</body>
+</html>'''
 
     # Assemble full HTML
     return f'''<!DOCTYPE html>
@@ -954,7 +1007,7 @@ def find_paragraph_info(folder_path):
     return number, name
 
 
-def process_paragraph(para_folder):
+def process_paragraph(para_folder, layout_test_v1=False):
     """Process a single paragraph folder."""
     para_number, para_name = find_paragraph_info(para_folder)
 
@@ -966,12 +1019,20 @@ def process_paragraph(para_folder):
 
     if flat_files:
         docx_path = flat_files[0]
-        html_path = os.path.join(para_folder, f'{para_number} {para_name} \u2013 uitleg voorkennis.html')
+        if layout_test_v1:
+            html_path = os.path.join(para_folder, f'{para_number} {para_name} \u2013 uitleg voorkennis - layout test v1.html')
+        else:
+            html_path = os.path.join(para_folder, f'{para_number} {para_name} \u2013 uitleg voorkennis.html')
         asset_prefix = '_assets'
+        shared_prefix = '../../shared'
     elif legacy_files:
         docx_path = legacy_files[0]
-        html_path = os.path.join(para_folder, '1. Voorbereiden', f'{para_number} {para_name} \u2013 uitleg voorkennis.html')
+        if layout_test_v1:
+            html_path = os.path.join(para_folder, '1. Voorbereiden', f'{para_number} {para_name} \u2013 uitleg voorkennis - layout test v1.html')
+        else:
+            html_path = os.path.join(para_folder, '1. Voorbereiden', f'{para_number} {para_name} \u2013 uitleg voorkennis.html')
         asset_prefix = '../_assets'
+        shared_prefix = '../../../shared'
     else:
         print(f'  SKIP {para_number}: no voorkennis.docx found')
         return False
@@ -986,21 +1047,36 @@ def process_paragraph(para_folder):
         print(f'  SKIP {para_number}: no sections found')
         return False
 
-    html_content = generate_html(data, para_number, para_name, asset_prefix)
+    html_content = generate_html(
+        data,
+        para_number,
+        para_name,
+        asset_prefix,
+        shared_prefix=shared_prefix if layout_test_v1 else None,
+        test_label='layout test v1' if layout_test_v1 else '',
+    )
 
     with open(html_path, 'w', encoding='utf-8') as f:
         f.write(html_content)
 
-    print(f'  OK {para_number} {para_name} ({len(data["sections"])} sections, {len(data["checklist"])} checklist items)')
+    suffix = ' layout test v1' if layout_test_v1 else ''
+    print(f'  OK {para_number} {para_name}{suffix} ({len(data["sections"])} sections, {len(data["checklist"])} checklist items)')
     return True
 
 
 def main():
-    if len(sys.argv) < 2:
+    args = sys.argv[1:]
+    layout_test_v1 = False
+    if '--layout-test-v1' in args:
+        layout_test_v1 = True
+        args.remove('--layout-test-v1')
+
+    if len(args) < 1:
         print('Usage: python convert_voorkennis.py [path] or --all')
+        print('       python convert_voorkennis.py --layout-test-v1 [path]')
         sys.exit(1)
 
-    if sys.argv[1] == '--all':
+    if args[0] == '--all':
         # Find all paragraph folders
         base = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
         folders = sorted(glob.glob(os.path.join(base, '3.*/3.*.*')))
@@ -1009,11 +1085,11 @@ def main():
         success = 0
         for folder in folders:
             if os.path.isdir(folder):
-                if process_paragraph(folder):
+                if process_paragraph(folder, layout_test_v1=layout_test_v1):
                     success += 1
         print(f'\nDone: {success}/{len(folders)} converted')
     else:
-        process_paragraph(sys.argv[1])
+        process_paragraph(args[0], layout_test_v1=layout_test_v1)
 
 
 if __name__ == '__main__':

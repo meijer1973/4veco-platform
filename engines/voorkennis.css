@@ -327,7 +327,7 @@ html[data-theme="dark"] .hero-sub {
 /* Hero card grid */
 .hero-cards {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 10px;
   margin-top: 18px;
   padding-bottom: 18px;
@@ -551,6 +551,23 @@ html[data-theme="dark"] .section-num.bg-grafisch   { box-shadow: inset 0 0 0 1px
   line-height: 1.8;
   color: var(--ink);
   white-space: pre-line;
+}
+
+/* Shared figures from paragraph _assets/ */
+.asset-figure {
+  margin: 16px 0 18px;
+  text-align: center;
+}
+.asset-svg {
+  display: block;
+  width: 100%;
+  max-width: 620px;
+  height: auto;
+  margin: 0 auto;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg-card);
+  box-shadow: var(--shadow-card);
 }
 
 /* ── Callouts ─────────────────────────────────────────── */
