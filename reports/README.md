@@ -23,6 +23,12 @@ Reports land in this folder as they are built. Each report is a separate concern
 | `orphaned-builds.md` | Built outputs under `output/` with no live paragraph plan — pilot cleanup signal |
 | `pilot-status.md` | Age of pilot paragraph plans — enforces the "pilots are ephemeral" policy |
 
+### Internal project oversight
+
+| Report | Purpose |
+|---|---|
+| `internal-dashboard/index.html` | Developer-facing dashboard with Platform, Lessen, and Innovation tabs sourced from team roadmaps and quality-gate issues |
+
 ### Exam alignment (the diagnostic lens)
 
 These three reports make visible the drift between syllabus claims, real-exam reality, blueprint intent, and built materials.

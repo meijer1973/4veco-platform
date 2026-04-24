@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>4veco Internal Dashboard</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f6f7f9;
+      --surface: #ffffff;
+      --text: #1d2733;
+      --muted: #627084;
+      --line: #d9dee7;
+      --teal: #0f766e;
+      --blue: #1d4ed8;
+      --amber: #a16207;
+      --green: #15803d;
+      --red: #b42318;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.5;
+    }
+    header {
+      background: #19212d;
+      color: #fff;
+      padding: 28px clamp(18px, 4vw, 48px);
+    }
+    header p { max-width: 980px; color: #d7dde7; margin: 8px 0 0; }
+    h1, h2, h3 { margin: 0; letter-spacing: 0; }
+    h1 { font-size: 32px; }
+    h2 { font-size: 24px; }
+    h3 { font-size: 16px; margin-top: 24px; }
+    main { padding: 24px clamp(18px, 4vw, 48px) 48px; }
+    .internal-mark {
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+      color: #fff;
+      border: 1px solid rgba(255,255,255,.35);
+      padding: 4px 8px;
+      margin-bottom: 14px;
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+    .tabs {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 18px;
+    }
+    .tab-button {
+      border: 1px solid var(--line);
+      border-bottom: 0;
+      background: #eef2f7;
+      color: var(--text);
+      padding: 10px 16px;
+      cursor: pointer;
+      font-weight: 700;
+    }
+    .tab-button.active {
+      background: var(--surface);
+      color: var(--blue);
+    }
+    .tab-panel {
+      display: none;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      padding: 22px;
+    }
+    .tab-panel.active { display: block; }
+    .team-header {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 20px;
+      align-items: start;
+    }
+    .eyebrow {
+      margin: 0 0 4px;
+      color: var(--muted);
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 12px;
+    }
+    .metric-strip {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(86px, 1fr));
+      gap: 8px;
+    }
+    .metric-strip div {
+      border: 1px solid var(--line);
+      padding: 12px;
+      background: #fbfcfe;
+      min-width: 86px;
+    }
+    .metric-strip strong { display: block; font-size: 26px; }
+    .metric-strip span { color: var(--muted); font-size: 12px; }
+    .source-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 12px;
+      padding: 0;
+      list-style: none;
+    }
+    .source-list li, .summary-block {
+      border: 1px solid var(--line);
+      background: #fbfcfe;
+      padding: 14px;
+    }
+    code {
+      display: block;
+      margin-top: 6px;
+      color: #26384f;
+      overflow-wrap: anywhere;
+      font-family: Consolas, Monaco, monospace;
+      font-size: 13px;
+    }
+    .pill, .status {
+      display: inline-block;
+      margin-left: 6px;
+      padding: 2px 7px;
+      border: 1px solid var(--line);
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .ok, .done { color: var(--green); background: #ecfdf3; border-color: #b7e4c7; }
+    .missing, .open { color: var(--amber); background: #fff7ed; border-color: #fed7aa; }
+    .table-wrap { overflow-x: auto; border: 1px solid var(--line); }
+    table { width: 100%; border-collapse: collapse; min-width: 760px; }
+    th, td {
+      text-align: left;
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--line);
+      vertical-align: top;
+    }
+    th { background: #eef2f7; }
+    .dashboard-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+      margin-top: 14px;
+    }
+    .category {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      padding: 14px;
+    }
+    .category strong {
+      display: inline-flex;
+      min-width: 34px;
+      height: 34px;
+      align-items: center;
+      justify-content: center;
+      background: #e0f2fe;
+      color: #075985;
+      margin-bottom: 10px;
+    }
+    .list-panel {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      padding: 18px;
+      margin-top: 18px;
+    }
+    .list-panel ul { margin: 10px 0 0; padding-left: 20px; }
+    .list-panel li { margin-bottom: 10px; }
+    footer {
+      padding: 20px clamp(18px, 4vw, 48px);
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+    }
+    @media (max-width: 720px) {
+      .team-header { grid-template-columns: 1fr; }
+      h1 { font-size: 26px; }
+      .tab-button { flex: 1 1 100%; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="internal-mark">Internal Dashboard</div>
+    <h1>4veco Project Dashboard</h1>
+    <p>Developer-facing overview generated from team roadmaps and platform quality reports. This page is not student-facing and must stay out of lesson output.</p>
+    <p>Generated: 2026-04-24T18:53:05.530Z</p>
+  </header>
+  <main>
+    <nav class="tabs" role="tablist" aria-label="Team dashboard tabs">
+      <button id="button-platform" class="tab-button active" role="tab" aria-selected="true" aria-controls="tab-platform" data-tab="platform">Platform</button>
+<button id="button-lessen" class="tab-button " role="tab" aria-selected="false" aria-controls="tab-lessen" data-tab="lessen">Lessen</button>
+<button id="button-innovation" class="tab-button " role="tab" aria-selected="false" aria-controls="tab-innovation" data-tab="innovation">Innovation</button>
+    </nav>
+    
+    <section id="tab-platform" class="tab-panel active" role="tabpanel" aria-labelledby="button-platform">
+      <div class="team-header">
+        <div>
+          <p class="eyebrow">Control Center</p>
+          <h2>Platform</h2>
+          <p>Owns platform guardrails, validator and deploy health, reference quality control, year and multi-year planning, and the efficiency question of what should be taught versus omitted.</p>
+        </div>
+        <div class="metric-strip" aria-label="Sprint summary">
+          <div><strong>4</strong><span>completed</span></div>
+          <div><strong>2</strong><span>open</span></div>
+        </div>
+      </div>
+      <h3>Roadmap Sources</h3>
+      <ul class="source-list">
+        <li>
+          <strong>Platform roadmap</strong>
+          <span class="pill ok">found</span>
+          <code>knowledge/platform-team-roadmap.md</code>
+          <p>2026-04-24 after completing Sprint P1.3 internal dashboard MVP</p>
+          <p>Sprint 0.5 is signed off for Part A textbook/book production, Sprint P1.1 has proven the first Book 1 companion paragraph path, and Sprint P1.2 has technically proven the pattern on a second Book 1 companion paragraph.</p>
+        </li></ul>
+      <h3>Sprint Ledger</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Sprint</th><th>Name</th><th>Completed</th><th>Current State</th><th>Source</th></tr>
+          </thead>
+          <tbody><tr><td>0.5</td><td>Phase 0 Green Gate</td><td><span class="status done">yes</span></td><td>Signed off for Part A textbook/book production.</td><td>Platform roadmap</td></tr>
+<tr><td>P1.1</td><td>Book 1 Companion Proof Sprint</td><td><span class="status done">yes</span></td><td>`1.1.1` companion path proven end-to-end.</td><td>Platform roadmap</td></tr>
+<tr><td>P1.2</td><td>Companion Scaling And Handoff Sprint</td><td><span class="status done">yes</span></td><td>`1.1.2` passed as a technical probe; its test materials were removed for didactic rebuild.</td><td>Platform roadmap</td></tr>
+<tr><td>P1.3</td><td>Internal Review Dashboard Sprint</td><td><span class="status done">yes</span></td><td>Internal three-team dashboard MVP generates from team roadmap sources and quality-gate issues.</td><td>Platform roadmap</td></tr>
+<tr><td>P1.4</td><td>Reference Data Quality Sprint</td><td><span class="status open">no</span></td><td>Current platform priority; clean unit/term/exam-link backlog.</td><td>Platform roadmap</td></tr>
+<tr><td>P1.5</td><td>CI And Health Check Routine Sprint</td><td><span class="status open">no</span></td><td>Planned; make routine health checks harder to skip.</td><td>Platform roadmap</td></tr></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="tab-lessen" class="tab-panel " role="tabpanel" aria-labelledby="button-lessen">
+      <div class="team-header">
+        <div>
+          <p class="eyebrow">Effective Teaching</p>
+          <h2>Lessen</h2>
+          <p>Owns front-end quality, lesson usability, differentiation, games, visuals, companion material quality, and turning technically valid material into effective teaching.</p>
+        </div>
+        <div class="metric-strip" aria-label="Sprint summary">
+          <div><strong>3</strong><span>completed</span></div>
+          <div><strong>6</strong><span>open</span></div>
+        </div>
+      </div>
+      <h3>Roadmap Sources</h3>
+      <ul class="source-list">
+        <li>
+          <strong>Lessen roadmap</strong>
+          <span class="pill ok">found</span>
+          <code>../4veco-lessen/lessen-team-roadmap.md</code>
+          <p>2026-04-24 after companion pilot review, layout/UI reprioritization, visual-variant direction, and L1.3A-C split</p>
+          <p>Sprint 0.5 is signed off for Part A textbook/book production.</p>
+        </li></ul>
+      <h3>Sprint Ledger</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Sprint</th><th>Name</th><th>Completed</th><th>Current State</th><th>Source</th></tr>
+          </thead>
+          <tbody><tr><td>L0.5</td><td>Green Gate Handoff</td><td><span class="status done">yes</span></td><td>Book 1 Part A and the platform/book health routine are green.</td><td>Lessen roadmap</td></tr>
+<tr><td>L1.1</td><td>First Companion Technical Pilot</td><td><span class="status done">yes</span></td><td>`1.1.1` passes the current complete technical gate.</td><td>Lessen roadmap</td></tr>
+<tr><td>L1.2</td><td>Second Companion Technical Probe</td><td><span class="status done">yes</span></td><td>`1.1.2` proved the technical pattern can repeat; probe materials were removed for didactic rebuild.</td><td>Lessen roadmap</td></tr>
+<tr><td>L1.3A</td><td>Basic HTML Layout And Front-End Usability</td><td><span class="status open">no</span></td><td>Pilot run completed for `1.1.1` `uitleg voorkennis`, `uitleg vaardigheden`, and `begeleide inoefening`; needs human usability sign-off.</td><td>Lessen roadmap</td></tr>
+<tr><td>L1.3B</td><td>Companion SVGs And Light/Dark Visual Variants</td><td><span class="status open">no</span></td><td>Proper SVG/variant workflow is running for `1.1.1`; game/interactive visual slots still need a decision.</td><td>Lessen roadmap</td></tr>
+<tr><td>L1.3C</td><td>PowerPoint Presentation Improvement</td><td><span class="status open">no</span></td><td>`1.1.1` PPTX regenerated with adapted slide visuals and LibreOffice roundtrip; needs presentation-quality review.</td><td>Lessen roadmap</td></tr>
+<tr><td>L1.4</td><td>Post-Layout Scaling Decision</td><td><span class="status open">no</span></td><td>Decide whether to expand after L1.3A-C are platform-integrated, regenerated, and reviewed.</td><td>Lessen roadmap</td></tr>
+<tr><td>L2.1</td><td>Book 1 Release Polish</td><td><span class="status open">no</span></td><td>Teacher-facing polish continues under the Book 1 health gate.</td><td>Lessen roadmap</td></tr>
+<tr><td>L2.2</td><td>Book 2 Part A Textbook Layer</td><td><span class="status open">no</span></td><td>Start Book 2 Part A only under the chapter/paragraph hard gates.</td><td>Lessen roadmap</td></tr></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="tab-innovation" class="tab-panel " role="tabpanel" aria-labelledby="button-innovation">
+      <div class="team-header">
+        <div>
+          <p class="eyebrow">Collab Experiments</p>
+          <h2>Innovation</h2>
+          <p>Owns controlled experiments in the collab worktrees: better presentations, web-native lesson media, narration, and future ideas before adoption into production workflows.</p>
+        </div>
+        <div class="metric-strip" aria-label="Sprint summary">
+          <div><strong>0</strong><span>completed</span></div>
+          <div><strong>20</strong><span>open</span></div>
+        </div>
+      </div>
+      <h3>Roadmap Sources</h3>
+      <ul class="source-list">
+        <li>
+          <strong>Innovation platform roadmap</strong>
+          <span class="pill ok">found</span>
+          <code>../4veco-platform-collab/knowledge/innovation-team-roadmap.md</code>
+          <p>2026-04-24</p>
+          <p>The Innovation Team owns controlled experiments that may break the mold before they become production workflow. This track is allowed to take more risk than normal material production, but the risk stays inside the collab setup and becomes useful only when the learning can be turned into platform workflows, reusable builders, or clear product decisions.</p>
+        </li>
+
+        <li>
+          <strong>Innovation output roadmap</strong>
+          <span class="pill ok">found</span>
+          <code>../4veco-lessen-collab/innovation-team-roadmap.md</code>
+          <p>2026-04-24</p>
+          <p>The Innovation Team owns controlled experiments that may break the mold before they become production workflow. This track is allowed to take more risk than normal material production, but the risk stays inside the collab setup and becomes useful only when the learning can be turned into platform workflows, reusable builders, or clear product decisions.</p>
+        </li></ul>
+      <h3>Sprint Ledger</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Sprint</th><th>Name</th><th>Completed</th><th>Current State</th><th>Source</th></tr>
+          </thead>
+          <tbody><tr><td>Sprint I0</td><td>Charter and baseline</td><td><span class="status open">no</span></td><td>What does &quot;better PowerPoint&quot; mean for one real lesson?</td><td>Innovation platform roadmap</td></tr>
+<tr><td>Sprint I1</td><td>First excellent presentation</td><td><span class="status open">no</span></td><td>Can we make one teacher-ready PowerPoint that is clearly better than the current pattern?</td><td>Innovation platform roadmap</td></tr>
+<tr><td>Sprint I2</td><td>Presentation production loop</td><td><span class="status open">no</span></td><td>Can the improved standard be reproduced without heroic one-off work?</td><td>Innovation platform roadmap</td></tr>
+<tr><td>Sprint I3</td><td>Graph presentations MVP</td><td><span class="status open">no</span></td><td>Can we build graph-heavy PowerPoints that are mathematically correct and visually calm?</td><td>Innovation platform roadmap</td></tr>
+<tr><td>Sprint I4</td><td>Graph scale-up</td><td><span class="status open">no</span></td><td>Can graph-heavy presentation production become a reliable pattern?</td><td>Innovation platform roadmap</td></tr>
+<tr><td>Sprint I5</td><td>Web-native presentation prototype</td><td><span class="status open">no</span></td><td>Can a presentation live naturally inside the lesson website instead of feeling like embedded Office?</td><td>Innovation platform roadmap</td></tr>
+<tr><td>Sprint I6</td><td>Web integration polish</td><td><span class="status open">no</span></td><td>Can web-native presentations work for students and teachers across devices?</td><td>Innovation platform roadmap</td></tr>
+<tr><td>Sprint I7</td><td>Speaker notes to speech prototype</td><td><span class="status open">no</span></td><td>Can speaker notes become a useful narrated experience?</td><td>Innovation platform roadmap</td></tr>
+<tr><td>Sprint I8</td><td>Video-like lesson experience</td><td><span class="status open">no</span></td><td>Can slides, notes, narration, and pacing create a coherent video-like flow?</td><td>Innovation platform roadmap</td></tr>
+<tr><td>Sprint I9</td><td>Innovation backlog reset</td><td><span class="status open">no</span></td><td>What should the innovation team attack next?</td><td>Innovation platform roadmap</td></tr>
+<tr><td>Sprint I0</td><td>Rubric seed from last strong presentation</td><td><span class="status open">no</span></td><td>Which qualities made the last presentation pretty good, and where is it still not ready?</td><td>Innovation output roadmap</td></tr>
+<tr><td>Sprint I1</td><td>First graph-heavy presentation</td><td><span class="status open">no</span></td><td>Can the next chapter&#39;s graph paragraph become a strong PowerPoint without losing economic precision?</td><td>Innovation output roadmap</td></tr>
+<tr><td>Sprint I2</td><td>Flowchart presentation prototype</td><td><span class="status open">no</span></td><td>Can a presentation lean on very well-formed flowcharts as the main explanation structure?</td><td>Innovation output roadmap</td></tr>
+<tr><td>Sprint I3</td><td>Rubric and test revision</td><td><span class="status open">no</span></td><td>What must the rubric and tests learn from the graph and flowchart prototypes?</td><td>Innovation output roadmap</td></tr>
+<tr><td>Sprint I4</td><td>Presentation production loop</td><td><span class="status open">no</span></td><td>Can the improved standard be reproduced without heroic one-off work?</td><td>Innovation output roadmap</td></tr>
+<tr><td>Sprint I5</td><td>Web-native presentation prototype</td><td><span class="status open">no</span></td><td>Can a presentation live naturally inside the lesson website instead of feeling like embedded Office?</td><td>Innovation output roadmap</td></tr>
+<tr><td>Sprint I6</td><td>Web integration polish</td><td><span class="status open">no</span></td><td>Can web-native presentations work for students and teachers across devices?</td><td>Innovation output roadmap</td></tr>
+<tr><td>Sprint I7</td><td>Speaker notes to speech prototype</td><td><span class="status open">no</span></td><td>Can speaker notes become a useful narrated experience?</td><td>Innovation output roadmap</td></tr>
+<tr><td>Sprint I8</td><td>Video-like lesson experience</td><td><span class="status open">no</span></td><td>Can slides, notes, narration, and pacing create a coherent video-like flow?</td><td>Innovation output roadmap</td></tr>
+<tr><td>Sprint I9</td><td>Innovation backlog reset</td><td><span class="status open">no</span></td><td>What should the innovation team attack next?</td><td>Innovation output roadmap</td></tr></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="list-panel" aria-labelledby="quality-heading">
+      <h2 id="quality-heading">Open Quality Issues By Category</h2>
+      <div class="dashboard-grid">
+        <article class="category">
+          <strong>1</strong>
+          <h3>Bronprobleem</h3>
+          <p>Underlying source is missing, stale, contradictory, or unsuitable.</p>
+        </article>
+
+        <article class="category">
+          <strong>1</strong>
+          <h3>Extractieprobleem</h3>
+          <p>Source exists but extraction/parsing produced incomplete or bad data.</p>
+        </article>
+
+        <article class="category">
+          <strong>1</strong>
+          <h3>Claimprobleem</h3>
+          <p>Generated or authored claim is unsupported, too broad, or conflicts with evidence.</p>
+        </article>
+
+        <article class="category">
+          <strong>2</strong>
+          <h3>Interpretatieprobleem</h3>
+          <p>Data is present but interpreted incorrectly in planning, reports, or material logic.</p>
+        </article>
+
+        <article class="category">
+          <strong>1</strong>
+          <h3>Tekstprobleem</h3>
+          <p>Wording, clarity, terminology, or student/teacher explanation quality needs work.</p>
+        </article></div>
+      <h3>Known Platform Quality-Gate Issues</h3>
+      <ul>
+        <li>
+          <span class="status open">bronprobleem</span>
+          News source URLs are not truly validated
+          <code>knowledge/platform-team-companion-quality-gate-review.md</code>
+        </li>
+
+        <li>
+          <span class="status open">extractieprobleem</span>
+          Complete-mode quality refs can be stale
+          <code>knowledge/platform-team-companion-quality-gate-review.md</code>
+        </li>
+
+        <li>
+          <span class="status open">tekstprobleem</span>
+          Review flags are not surfaced as scale blockers
+          <code>knowledge/platform-team-companion-quality-gate-review.md</code>
+        </li>
+
+        <li>
+          <span class="status open">interpretatieprobleem</span>
+          Plan-to-output alignment is not enforced
+          <code>knowledge/platform-team-companion-quality-gate-review.md</code>
+        </li>
+
+        <li>
+          <span class="status open">interpretatieprobleem</span>
+          Browser smoke checks are not part of the repeatable gate
+          <code>knowledge/platform-team-companion-quality-gate-review.md</code>
+        </li>
+
+        <li>
+          <span class="status open">claimprobleem</span>
+          Game-data tests are structural, not content-quality checks
+          <code>knowledge/platform-team-companion-quality-gate-review.md</code>
+        </li></ul>
+    </section>
+
+    <section class="list-panel" aria-labelledby="gate-heading">
+      <h2 id="gate-heading">Green-Gate Evidence</h2>
+      <ul>
+        <li>
+          <span class="status done">passes</span>
+          <code>npm.cmd run check:platform</code>
+          <span>knowledge/platform-team-roadmap.md</span>
+        </li>
+
+        <li>
+          <span class="status done">passes</span>
+          <code>npm.cmd run check:book -- &quot;..\4veco-lessen\Boek 1 - Grondslagen, vraag en aanbod&quot;</code>
+          <span>knowledge/platform-team-roadmap.md</span>
+        </li>
+
+        <li>
+          <span class="status done">passes</span>
+          <code>node scripts\validate-paragraph.js --mode complete &quot;&lt;1.1.1-folder&gt;&quot;</code>
+          <span>knowledge/platform-team-roadmap.md</span>
+        </li></ul>
+    </section>
+
+    <section class="list-panel" aria-labelledby="companion-heading">
+      <h2 id="companion-heading">Companion Pipeline Status</h2>
+      <ul>
+        <li>
+          <strong>1.1.1 Schaarste en economisch denken</strong>
+          <span>Complete technical proof; currently approved pilot surface for dashboard evidence.</span>
+        </li>
+
+        <li>
+          <strong>1.1.2 Percentages en indexcijfers</strong>
+          <span>Historical technical probe passed; test materials cleared and paragraph awaits didactic rebuild.</span>
+        </li></ul>
+    </section>
+  </main>
+  <footer>
+    Source data: <code>reports/internal-dashboard/dashboard-data.json</code>
+  </footer>
+  <script>
+    const buttons = Array.from(document.querySelectorAll('.tab-button'));
+    const panels = Array.from(document.querySelectorAll('.tab-panel'));
+    buttons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const id = button.dataset.tab;
+        buttons.forEach((b) => {
+          const active = b === button;
+          b.classList.toggle('active', active);
+          b.setAttribute('aria-selected', String(active));
+        });
+        panels.forEach((panel) => {
+          panel.classList.toggle('active', panel.id === 'tab-' + id);
+        });
+      });
+    });
+  </script>
+</body>
+</html>

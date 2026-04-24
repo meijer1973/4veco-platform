@@ -6,6 +6,7 @@
     "test": "jest",
     "check:platform": "jest --runInBand",
     "check:book": "node scripts/check-book.js",
+    "dashboard:internal": "node build-scripts/reports/internal-dashboard.js",
     "deploy:legacy": "node scripts/deploy.js ../\"3. Module 3 - Markt en overheid\"",
     "deploy:m3": "npm run deploy:legacy"
   },

@@ -1,7 +1,7 @@
 # Platform Team Roadmap
 
 Generated: 2026-04-23  
-Updated: 2026-04-24 after adding the three-team dashboard model and roadmap source baseline  
+Updated: 2026-04-24 after completing Sprint P1.3 internal dashboard MVP  
 Source: split from `knowledge/three-month-roadmap.md` after Sprint 0.5 sign-off
 
 ## Sprint Ledger
@@ -13,8 +13,8 @@ Order reflects current platform execution priority, not just sprint number.
 | 0.5 | Phase 0 Green Gate | yes | Signed off for Part A textbook/book production. |
 | P1.1 | Book 1 Companion Proof Sprint | yes | `1.1.1` companion path proven end-to-end. |
 | P1.2 | Companion Scaling And Handoff Sprint | yes | `1.1.2` passed as a technical probe; its test materials were removed for didactic rebuild. |
-| P1.3 | Internal Review Dashboard Sprint | no | Current platform priority; developer-facing HTML overview for project health and open quality issues. |
-| P1.4 | Reference Data Quality Sprint | no | Planned; clean unit/term/exam-link backlog. |
+| P1.3 | Internal Review Dashboard Sprint | yes | Internal three-team dashboard MVP generates from team roadmap sources and quality-gate issues. |
+| P1.4 | Reference Data Quality Sprint | no | Current platform priority; clean unit/term/exam-link backlog. |
 | P1.5 | CI And Health Check Routine Sprint | no | Planned; make routine health checks harder to skip. |
 
 Detailed bootstrap plan for the first Book 1 companion MVP:
@@ -227,7 +227,9 @@ Exit criteria:
 
 ### Sprint P1.3: Internal Review Dashboard Sprint
 
-Completed: no.
+Completed: yes.
+
+Completed on: 2026-04-24.
 
 Goal:
 
@@ -280,16 +282,25 @@ Implementation direction:
 
 Next action:
 
-- Inventory the three roadmap sources and define the tab data model before styling the first dashboard version.
+- Use the dashboard as the visible control surface for Sprint P1.4 reference-data quality work.
+
+Evidence:
+
+- `build-scripts/reports/internal-dashboard.js` generates the dashboard.
+- `reports/internal-dashboard/index.html` is the internal developer-facing dashboard.
+- `reports/internal-dashboard/dashboard-data.json` stores the parsed source data.
+- `npm.cmd run dashboard:internal` completed successfully.
+- `node --check build-scripts\reports\internal-dashboard.js` passed.
+- Dashboard data verification passed: 3 teams, all roadmap sources found, 33 sprint rows, and 6 parsed quality-gate issues across the five issue categories.
 
 Exit criteria:
 
-- A first internal HTML dashboard can be generated locally.
-- It has separate tabs for Platform, Lessen, and Innovation.
-- It shows sprint completion status and open issues by the five categories above.
-- It lists each tab's source roadmap and last known status.
-- It clearly labels itself as internal/developer-facing.
-- The dashboard generation path is documented and does not touch student-facing output.
+- A first internal HTML dashboard can be generated locally. Done.
+- It has separate tabs for Platform, Lessen, and Innovation. Done.
+- It shows sprint completion status and open issues by the five categories above. Done.
+- It lists each tab's source roadmap and last known status. Done.
+- It clearly labels itself as internal/developer-facing. Done.
+- The dashboard generation path is documented and does not touch student-facing output. Done; output stays under `reports/internal-dashboard/`.
 
 ### Sprint P1.4: Reference Data Quality Sprint
 
@@ -344,7 +355,7 @@ npm.cmd run check:book -- "..\4veco-lessen\Boek 1 - Grondslagen, vraag en aanbod
 - Make book/chapter/paragraph validation practical to run during active work.
 - Add small tests around reference CLI scripts where risk is high.
 - Keep validator docs and roadmap status aligned with real behavior.
-- Record non-blocking residual risks in `knowledge/current-state-detailed-analysis.md` or the internal dashboard once Sprint P1.3 exists.
+- Record non-blocking residual risks in the internal dashboard or `knowledge/current-state-detailed-analysis.md`.
 
 Next action:
 
@@ -369,7 +380,8 @@ Exit criteria:
 ### Next 1 Week
 
 - Sprint P1.2 has proven the next representative companion paragraph.
-- Sprint P1.3 starts as the current platform priority: internal dashboard and quality-gate visibility.
+- Sprint P1.3 is complete: internal dashboard and quality-gate visibility now have a first generated surface.
+- Sprint P1.4 starts as the current platform priority: reference-data quality.
 - Green gate stays green.
 - Lessen team can continue one real companion paragraph without platform ambiguity.
 
@@ -378,7 +390,7 @@ Exit criteria:
 - At least two representative paragraphs pass `--mode complete`. Technically observed for `1.1.1` and `1.1.2`; 1.1.2 must be recreated didactically before it counts as approved material.
 - Reusable Book 1 companion build scripts exist under `build-scripts/content/book-1/` only for approved content; the temporary 1.1.2 probe scripts have been removed.
 - Deploy/config assumptions for flat Book output are stable enough to repeat.
-- Sprint P1.3 has a first internal dashboard shape or input inventory.
+- Sprint P1.3 dashboard can be extended with richer report inputs as Sprint P1.4 discovers reference-data work.
 
 ### Months 1-3
 
