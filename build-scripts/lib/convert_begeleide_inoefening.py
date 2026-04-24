@@ -36,6 +36,25 @@ def get_domain_info(domain_name):
 def esc(text):
     return html_mod.escape(text)
 
+def find_web_variant_bases(assets_dir):
+    """Return asset bases that have both web light and dark SVG variants."""
+    bases = set()
+    if os.path.isdir(assets_dir):
+        for svg in glob.glob(os.path.join(assets_dir, '*_web_light.svg')):
+            base = os.path.basename(svg).replace('_web_light.svg', '')
+            if os.path.exists(os.path.join(assets_dir, base + '_web_dark.svg')):
+                bases.add(base)
+    return bases
+
+def render_asset_image(asset_prefix, asset_name, web_variant_bases):
+    """Render an asset image, using themed web variants when available."""
+    if asset_name in web_variant_bases:
+        light_src = f'{asset_prefix}/{esc(asset_name)}_web_light.svg'
+        dark_src = f'{asset_prefix}/{esc(asset_name)}_web_dark.svg'
+        fallback_src = f'{asset_prefix}/{esc(asset_name)}.svg'
+        return f'          <figure class="asset-figure"><img src="{light_src}" data-light-src="{light_src}" data-dark-src="{dark_src}" data-fallback-src="{fallback_src}" alt="{esc(asset_name)}" class="asset-svg"></figure>\n'
+    return f'          <figure class="asset-figure"><img src="{asset_prefix}/{esc(asset_name)}.svg" alt="{esc(asset_name)}" class="asset-svg"></figure>\n'
+
 def make_id(text):
     """Create a URL-safe id from question label."""
     # Extract question number like "1a", "2b", "3g-h"
@@ -333,8 +352,9 @@ def render_callout_text(text):
     return clean
 
 
-def generate_html(opgaven, samenvatting, para_number, para_name, asset_prefix="../../_assets"):
+def generate_html(opgaven, samenvatting, para_number, para_name, asset_prefix="../../_assets", web_variant_bases=None):
     """Generate the full HTML."""
+    web_variant_bases = web_variant_bases or set()
 
     # Determine primary domain color
     primary_domain = 'Marktanalyse'
@@ -448,7 +468,7 @@ def generate_html(opgaven, samenvatting, para_number, para_name, asset_prefix=".
             # Dual coding: scaffold images
             images_html = ''
             for img_name in q.get('images', []):
-                images_html += f'          <figure class="asset-figure"><img src="{asset_prefix}/{esc(img_name)}.svg" alt="{esc(img_name)}" class="asset-svg"></figure>\n'
+                images_html += render_asset_image(asset_prefix, img_name, web_variant_bases)
 
             questions_html += f'''
         <div class="question-card" id="{q['id']}">
@@ -861,7 +881,10 @@ def process_paragraph(para_folder):
     total_q = sum(len(o['questions']) for o in opgaven)
     total_ans = sum(1 for o in opgaven for q in o['questions'] if q['answer'])
 
-    html_content = generate_html(opgaven, samenvatting, para_number, para_name, asset_prefix)
+    assets_dir = os.path.join(para_folder, '_assets')
+    web_variant_bases = find_web_variant_bases(assets_dir)
+
+    html_content = generate_html(opgaven, samenvatting, para_number, para_name, asset_prefix, web_variant_bases)
 
     with open(long_path(html_path), 'w', encoding='utf-8') as f:
         f.write(html_content)

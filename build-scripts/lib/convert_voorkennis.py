@@ -477,10 +477,11 @@ def render_callout(callout_type, text):
 '''
 
 
-def generate_html(data, para_number, para_name, asset_prefix="../_assets", shared_prefix=None, test_label=""):
+def generate_html(data, para_number, para_name, asset_prefix="../_assets", shared_prefix=None, test_label="", web_variant_bases=None):
     """Generate the full HTML string."""
     sections = data['sections']
     checklist = data['checklist']
+    web_variant_bases = web_variant_bases or set()
 
     # Collect unique domains for CSS variables
     domain_infos = {}
@@ -569,7 +570,12 @@ def generate_html(data, para_number, para_name, asset_prefix="../_assets", share
                 lines = edata.replace('\n', '<br>\n            ')
                 content_html += f'        <div class="formula-box">\n            {lines}\n        </div>\n'
             elif etype == 'asset_image':
-                content_html += f'        <figure class="asset-figure">\n          <img src="{asset_prefix}/{esc(edata)}.svg" alt="{esc(edata)}" class="asset-svg">\n        </figure>\n'
+                if edata in web_variant_bases:
+                    light_src = f'{asset_prefix}/{edata}_web_light.svg'
+                    dark_src = f'{asset_prefix}/{edata}_web_dark.svg'
+                    content_html += f'        <figure class="asset-figure">\n          <img src="{light_src}" data-light-src="{light_src}" data-dark-src="{dark_src}" data-fallback-src="{asset_prefix}/{esc(edata)}.svg" alt="{esc(edata)}" class="asset-svg">\n        </figure>\n'
+                else:
+                    content_html += f'        <figure class="asset-figure">\n          <img src="{asset_prefix}/{esc(edata)}.svg" alt="{esc(edata)}" class="asset-svg">\n        </figure>\n'
             elif etype in ('callout_kernregel', 'callout_letop', 'callout_controle', 'callout_tip'):
                 content_html += render_callout(etype, edata)
             elif etype == 'samenvatting':
@@ -1047,6 +1053,14 @@ def process_paragraph(para_folder, layout_test_v1=False):
         print(f'  SKIP {para_number}: no sections found')
         return False
 
+    web_variant_bases = set()
+    assets_dir = os.path.join(para_folder, '_assets') if flat_files else os.path.join(para_folder, '_assets')
+    if os.path.isdir(assets_dir):
+        for svg in glob.glob(os.path.join(assets_dir, '*_web_light.svg')):
+            base = os.path.basename(svg).replace('_web_light.svg', '')
+            if os.path.exists(os.path.join(assets_dir, base + '_web_dark.svg')):
+                web_variant_bases.add(base)
+
     html_content = generate_html(
         data,
         para_number,
@@ -1054,6 +1068,7 @@ def process_paragraph(para_folder, layout_test_v1=False):
         asset_prefix,
         shared_prefix=shared_prefix if layout_test_v1 else None,
         test_label='layout test v1' if layout_test_v1 else '',
+        web_variant_bases=web_variant_bases,
     )
 
     with open(html_path, 'w', encoding='utf-8') as f:

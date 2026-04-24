@@ -21,7 +21,7 @@ List the 5-8 key concepts that this paragraph teaches. Every builder draws from 
 
 ## Visuals plan
 
-List every SVG visual needed across all builders. Each visual is built once in Phase 4b and stored in `_assets/`.
+List every conceptual SVG visual needed across all builders. Part A textbook visuals may be source material, but companion output should use surface-adapted variants rather than copy-pasted book images.
 For companion-only visuals, always write the full file name with extension somewhere in the plan (for example `X.Y.Z_news_topic.svg/png` here and `X.Y.Z_news_topic.png` in the visual-assignment table) so `validate-paragraph.js --mode complete` can verify it instead of flagging it as an orphan.
 
 | Filename | Graph type (economic-graph.md) | Used by | Description | Parameters |
@@ -30,6 +30,19 @@ For companion-only visuals, always write the full file name with extension somew
 | | | | | |
 
 **Graph types** (from `economic-graph.md` Part 3): A. Supply & Demand, B. Cost curves (MK/GTK/GVK), C. Market equilibrium + surplus, D. Tax/subsidy shift, E. Comparative advantage (PPF), F. Flowchart, G. Bar/line chart, H. Custom.
+
+---
+
+## Visual variants plan
+
+For each conceptual visual, list the surface-specific files that must be rendered to `_assets/`. Use the same economic data and reasoning, but adapt layout, proportions, typography, contrast, annotations, and color treatment to the surface.
+
+Web pages with a light/dark theme need both `_web_light` and `_web_dark` variants whenever the visual contains text, axes, fills, or a non-transparent background. Do not put a light-mode textbook PNG inside dark mode.
+
+| Concept visual | Source/base | Slide variant | Docx variant | Summary variant | Web light | Web dark | Notes |
+|---|---|---|---|---|---|---|---|
+| [concept] | `[filename].svg` | `[filename]_slide.png` | `[filename]_doc.png` | `[filename]_summary.png` | `[filename]_web_light.svg/png` | `[filename]_web_dark.svg/png` | [what changes per surface] |
+| | | | | | | | |
 
 ---
 
@@ -123,9 +136,9 @@ For the convenience of the paragraph author: a snapshot table copied here as doc
 
 ## Visual assignment (dual coding)
 
-> **Critical**: Every document that explains a concept with a matching visual MUST embed it. Not just the presentatie.
+> **Critical**: Every document that explains a concept with a matching visual MUST embed an adapted variant. Not just the presentatie. Dual coding means conceptual continuity, not literal copy-paste of a textbook image.
 
-| Visual | presentatie | vaardigheden | voorkennis | samenvatting |
+| Visual concept | presentatie | vaardigheden | voorkennis | samenvatting | themed web |
 |---|---|---|---|---|
-| `[filename].png` | slide [N] | skill [N] ([name]) | section [N] ([name]) | cell [N] |
-| | | | | |
+| `[concept]` | `[filename]_slide.png`, slide [N] | `[filename]_doc.png`, skill [N] ([name]) | `[filename]_doc.png`, section [N] ([name]) | `[filename]_summary.png`, cell [N] | `[filename]_web_light.svg/png` + `[filename]_web_dark.svg/png` |
+| | | | | | |

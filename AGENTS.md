@@ -46,10 +46,12 @@ These two principles are the DNA of every product this platform produces — les
 Every document that explains a concept must pair text with a visual aid. Information is retained better when it arrives through both verbal (text/speech) and visual (graph/diagram/color) channels.
 
 **Rules:**
-- Explainer documents (voorkennis, vaardigheden) embed relevant graphs from `_assets/` — not just the presentatie
+- Explainer documents (voorkennis, vaardigheden) embed relevant visual variants from `_assets/` — not just the presentatie
 - Samenvatting includes key concept graphs alongside text cells
 - Exercises reference or include graphs where the concept involves graphical reasoning
-- The same graph that appears in the presentatie should appear (at appropriate size) in the vaardigheden doc that teaches the same skill
+- The same visual concept that appears in the presentatie should reappear in the vaardigheden doc that teaches the same skill, but not as a literal copy-paste of the textbook image. Use surface-adapted variants: slide, docx, summary thumbnail, web-light, and web-dark where relevant.
+- Part A textbook visuals are source material, not finished companion artwork. Companion visuals may reuse the same data, labels, and SVG geometry, or may be redrawn, but they must be adapted to the layout and medium where they appear.
+- Web pages with light/dark modes must provide theme-appropriate visual variants when a graphic contains backgrounds, axes, text, fills, or low-contrast colors. Do not rely on a light-mode textbook PNG inside dark mode.
 - Domain color coding (blauw/amber/groen) provides visual recognition without reading
 - Formula boxes in monospace provide visual distinction from running text
 
@@ -60,10 +62,10 @@ A student working through all materials for one paragraph should feel like they'
 **Rules:**
 - **Same procedure steps**: If a skill has 3 steps in the vaardigheden doc, the stappenplan game must use those exact 3 steps (same labels, same order, same reasoning). The procedure is the constant; the context can change.
 - **Same approach to solving**: If the vaardigheden teaches "step 1: vul q₂=0 in, step 2: vul q₁=0 in, step 3: verbind", then every document that references snijpunten calculation follows that same approach.
-- **Same visuals reinforcing the approach**: The graph from the presentatie should reappear in the vaardigheden explanation of the same skill — so students see the visual anchor for the procedure they're learning.
+- **Same visual concept reinforcing the approach**: The graph/concept from the presentatie should reappear in the vaardigheden explanation of the same skill — so students see the visual anchor for the procedure they're learning. This means conceptual continuity, not literal file reuse. Adapt the visual to the surface: slide composition, Word layout, web light mode, web dark mode, and thumbnail use can each need their own SVG/PNG variant.
 - **Same terminology**: Enforced via the `_paragraph-plan.md` terminologie table.
 
-**How to enforce:** The `_paragraph-plan.md` contains a **procedure-stappen-plan** that defines the canonical step sequence for each skill. All builders — vaardigheden, stappenplan game, presentatie, inoefening — must follow these exact steps. A **visuelen-toewijzing** table maps each visual to every builder that must embed it.
+**How to enforce:** The `_paragraph-plan.md` contains a **procedure-stappen-plan** that defines the canonical step sequence for each skill. All builders — vaardigheden, stappenplan game, presentatie, inoefening — must follow these exact steps. A **visual-variants plan** maps each concept visual to its surface-specific files, and a **visuelen-toewijzing** table maps those variants to every builder that must embed them.
 
 ## Architectural principles
 

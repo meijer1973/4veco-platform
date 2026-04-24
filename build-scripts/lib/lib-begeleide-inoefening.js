@@ -309,18 +309,21 @@ function answerSpace(lineCount = 3) {
  * @param {string} imgPath - Absolute path to the image file
  * @param {number} width - Display width in px
  * @param {number} height - Display height in px
+ * @param {string} assetName - Concept asset name for HTML converters
  * @returns {Paragraph|null} - Paragraph with embedded image, or null if file not found
  */
-function embedAssetFromPath(imgPath, width, height) {
+function embedAssetFromPath(imgPath, width, height, assetName) {
   if (!fs.existsSync(imgPath)) return null;
   const buf = fs.readFileSync(imgPath);
   const ext = imgPath.split('.').pop();
+  const fileName = imgPath.split(/[/\\]/).pop();
+  const htmlAssetName = assetName || fileName.replace(/\.[^.]+$/, '');
   return new Paragraph({
     spacing: { before: 120, after: 120 },
     alignment: AlignmentType.CENTER,
     children: [new ImageRun({
       data: buf, transformation: { width, height }, type: ext === 'jpg' ? 'jpg' : 'png',
-      altText: { title: imgPath.split(/[/\\]/).pop(), description: 'asset:' + imgPath.split(/[/\\]/).pop().replace(/\.[^.]+$/, ''), name: imgPath.split(/[/\\]/).pop() },
+      altText: { title: htmlAssetName, description: 'asset:' + htmlAssetName, name: fileName },
     })],
   });
 }
@@ -569,7 +572,7 @@ async function buildBegeleideInoefening(paragraafNr, onderwerp, headerText, oefe
       // Dual coding: visual scaffolding image — shown in BOTH vragen and antwoorden
       // This helps weaker students by providing a visual anchor alongside the text scaffolding
       if (dv.scaffoldImage) {
-        const scaffImg = embedAssetFromPath(dv.scaffoldImage.path, dv.scaffoldImage.width, dv.scaffoldImage.height);
+        const scaffImg = embedAssetFromPath(dv.scaffoldImage.path, dv.scaffoldImage.width, dv.scaffoldImage.height, dv.scaffoldImage.assetName);
         if (scaffImg) children.push(scaffImg);
         children.push(sp());
       }

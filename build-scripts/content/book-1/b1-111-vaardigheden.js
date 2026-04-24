@@ -9,7 +9,7 @@
  * Skill 2's "Hoe werkt het?" procedure is taken VERBATIM from
  * references/machine/micro-teaching-units.json B02.procedure (4 steps).
  *
- * Dual coding: fig_1 embedded in skill 1; fig_2 + we_1 embedded in skill 2.
+ * Dual coding: doc-adapted visual variants embedded in Word; HTML uses themed web variants.
  *
  * Output: flat paragraph-root layout (no "2. Leren" subfolder).
  *
@@ -42,8 +42,8 @@ const ASSETS_DIR = path.join(PARAGRAPH_DIR, "_assets");
 const OUT_DIR = PARAGRAPH_DIR; // flat layout at paragraph root
 const OUT_FILE = path.join(OUT_DIR, "1.1.1 Schaarste en economisch denken – uitleg vaardigheden.docx");
 
-// ─── Dual coding: embed pre-built PNGs from _assets/ ───
-function embedAssetImage(filename, width, height) {
+// ─── Dual coding: embed adapted PNG variants from _assets/ ───
+function embedAssetImage(filename, width, height, htmlAssetName = filename) {
   const imgPath = path.join(ASSETS_DIR, filename + ".png");
   if (!fs.existsSync(imgPath)) {
     console.warn("WARNING: asset missing:", imgPath);
@@ -55,7 +55,7 @@ function embedAssetImage(filename, width, height) {
     alignment: AlignmentType.CENTER,
     children: [new ImageRun({
       data: buf, transformation: { width, height }, type: "png",
-      altText: { title: filename, description: "asset:" + filename, name: filename },
+      altText: { title: htmlAssetName, description: "asset:" + htmlAssetName, name: htmlAssetName },
     })],
   });
 }
@@ -442,7 +442,7 @@ children.push(p("Als het antwoord op check 1 en check 2 ja is, is er schaarste. 
 children.push(sp(60));
 
 // Visual — fig_1
-const fig1 = embedAssetImage("1.1.1_fig_1", 500, 320);
+const fig1 = embedAssetImage("1.1.1_fig_1_doc", 500, 320, "1.1.1_fig_1");
 if (fig1) children.push(fig1);
 children.push(sp(60));
 
@@ -499,7 +499,11 @@ children.push(formulaBox([
 children.push(sp(60));
 
 // Visual — fig_2 (procedure diagram)
-const fig2 = embedAssetImage("1.1.1_fig_2", 500, 320);
+const fig3 = embedAssetImage("1.1.1_fig_3_doc", 500, 320, "1.1.1_fig_3");
+if (fig3) children.push(fig3);
+children.push(sp(60));
+
+const fig2 = embedAssetImage("1.1.1_fig_2_doc", 500, 320, "1.1.1_fig_2");
 if (fig2) children.push(fig2);
 children.push(sp(60));
 
@@ -517,7 +521,7 @@ children.push(p("Stap 4 — Nettowaarde van de keuze: €5.000 − €3.500 = �
 children.push(sp(40));
 
 // Visual — we_1 (worked example diagram — second of the DUAL CODING visuals)
-const we1 = embedAssetImage("1.1.1_we_1", 520, 340);
+const we1 = embedAssetImage("1.1.1_we_1_doc", 520, 330, "1.1.1_we_1");
 if (we1) children.push(we1);
 children.push(sp(60));
 

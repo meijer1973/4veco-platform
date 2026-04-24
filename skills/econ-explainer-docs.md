@@ -12,7 +12,7 @@ Recipe for building two types of explainer documents per paragraph:
 These documents make the classroom presentation self-readable. They add the context, examples, and explanations that a teacher would normally give orally.
 
 **Design principles (see AGENTS.md):**
-- **Dual coding**: Every section that explains a concept with a graphical component MUST embed the matching graph from `_assets/`. Use `ImageRun` with `altText: { description: 'asset:<filename>' }`. The HTML converter will detect this and inject the SVG version. Students should see the same visuals here that they see in the presentation.
+- **Dual coding**: Every section that explains a concept with a graphical component MUST embed the matching adapted visual variant from `_assets/`. Use `ImageRun` with `altText: { description: 'asset:<concept-base>' }`, even when the embedded Word image itself is a `_doc` variant. The HTML converter uses that concept base to inject the themed web SVG variant. Students should see the same visual concept and data across presentation, Word, and HTML, not a literal copy-paste of the textbook image.
 - **Unified experience**: Follow the exact step sequences from the `_paragraph-plan.md` procedure-stappen-plan. The approach is the constant across all formats.
 
 **Always read first:**

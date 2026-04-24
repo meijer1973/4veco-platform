@@ -30,8 +30,8 @@ Theory is introduced as a tool to solve a motivating problem, not the other way 
 
 **Enforcement rules:**
 1. If a skill has 3 steps in the vaardigheden doc, the stappenplan game uses those exact 3 steps (same labels, same order, same reasoning). The procedure is the constant; the context can change.
-2. The graph from the presentatie reappears in the vaardigheden explanation of the same skill — so students see the visual anchor for the procedure they're learning.
-3. Terminology is enforced via the `_paragraph-plan.md` terminologie table. The `procedure-stappen-plan` defines the canonical step sequence for each skill. All builders follow these exact steps.
+2. The visual concept from the presentatie reappears in the vaardigheden explanation of the same skill — so students see the visual anchor for the procedure they're learning. This means adapted variants per surface, not a literal copy-paste of the same textbook image.
+3. Terminology is enforced via the `_paragraph-plan.md` terminologie table. The `procedure-stappen-plan` defines the canonical step sequence for each skill. The `visual-variants plan` defines which surface-specific image each builder uses. All builders follow these exact plans.
 
 ### 1.4 Models as tools, not reality
 
@@ -116,10 +116,10 @@ Information is retained better when it arrives through both verbal (text/speech)
 
 **Rules:**
 - Every document explaining a concept must pair text with a visual aid
-- Explainer documents (voorkennis, vaardigheden) embed relevant graphs from `_assets/` — not just the presentatie
+- Explainer documents (voorkennis, vaardigheden) embed relevant adapted visual variants from `_assets/` — not just the presentatie
 - Samenvatting includes key concept graphs alongside text cells
 - Exercises reference or include graphs where the concept involves graphical reasoning
-- The same graph in the presentatie should appear in the vaardigheden doc teaching the same skill
+- The same visual concept in the presentatie should appear in the vaardigheden doc teaching the same skill, with separate slide/docx/summary/web-light/web-dark variants where the layout or theme needs it
 - Domain colour coding (blauw/amber/groen) provides visual recognition without reading
 - Formula boxes in monospace provide visual distinction from running text
 

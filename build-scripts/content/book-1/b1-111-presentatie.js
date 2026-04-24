@@ -7,7 +7,7 @@
  * schaarste, alternatieve kosten, economisch denken (3 stappen),
  * uitgewerkt voorbeeld (boer tarwe vs maïs), samenvatting, afsluiting.
  *
- * Embeds pre-rendered PNGs from _assets/ (fig_1, fig_2, fig_3, we_1).
+ * Embeds slide-adapted PNG variants from _assets/ (fig_1, fig_2, fig_3, we_1).
  * Output → 4veco-lessen/Boek 1 .../1.1.1 Schaarste en economisch denken/
  */
 
@@ -23,7 +23,7 @@ const fs = require("fs");
 const path = require("path");
 
 // ═══════════════════════════════════════════════════════════════════════════
-// PNG ASSET LOADER — fig_1, fig_2, fig_3, we_1 are pre-rendered in _assets/
+// PNG ASSET LOADER — slide variants are pre-rendered in _assets/
 // ═══════════════════════════════════════════════════════════════════════════
 function loadPngAsBase64(p) {
   const buf = fs.readFileSync(p);
@@ -71,16 +71,16 @@ async function build() {
     lightLabel: "§ 1.1.1  ·  SCHAARSTE EN ECONOMISCH DENKEN",
   });
 
-  // Load pre-rendered PNGs from _assets/
+  // Load slide-adapted PNGs from _assets/
   const assetDir = path.resolve(__dirname,
     "../../../../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/" +
     "1.1 Hoofdstuk Economisch denken en rekenen/" +
     "1.1.1 Schaarste en economisch denken/_assets");
   const imgs = {
-    fig1: loadPngAsBase64(path.join(assetDir, "1.1.1_fig_1.png")),
-    fig2: loadPngAsBase64(path.join(assetDir, "1.1.1_fig_2.png")),
-    fig3: loadPngAsBase64(path.join(assetDir, "1.1.1_fig_3.png")),
-    we1:  loadPngAsBase64(path.join(assetDir, "1.1.1_we_1.png")),
+    fig1: loadPngAsBase64(path.join(assetDir, "1.1.1_fig_1_slide.png")),
+    fig2: loadPngAsBase64(path.join(assetDir, "1.1.1_fig_2_slide.png")),
+    fig3: loadPngAsBase64(path.join(assetDir, "1.1.1_fig_3_slide.png")),
+    we1:  loadPngAsBase64(path.join(assetDir, "1.1.1_we_1_slide.png")),
   };
 
   // ────────────────────────────────────────────────────────────────────

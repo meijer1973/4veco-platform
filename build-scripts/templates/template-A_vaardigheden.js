@@ -31,10 +31,11 @@ const {
   Header, Footer, PageNumber, LevelFormat, PageBreak, ImageRun,
 } = require("docx");
 
-// ─── Dual coding: embed pre-built PNGs from _assets/ ───
+// ─── Dual coding: embed adapted PNG variants from _assets/ ───
 // Alt-text convention: "asset:<filename>" lets HTML converters detect these
-// images and replace them with <img src="_assets/<filename>.svg"> in the HTML output.
-function embedAssetImage(assetsDir, filename, width, height) {
+// images and replace them with themed web SVG variants in the HTML output.
+// Pass htmlAssetName when the Word image is a _doc variant but HTML should use the base concept.
+function embedAssetImage(assetsDir, filename, width, height, htmlAssetName = filename) {
   const imgPath = path.join(assetsDir, filename + ".png");
   if (!fs.existsSync(imgPath)) return null;
   const buf = fs.readFileSync(imgPath);
@@ -43,7 +44,7 @@ function embedAssetImage(assetsDir, filename, width, height) {
     alignment: AlignmentType.CENTER,
     children: [new ImageRun({
       data: buf, transformation: { width, height }, type: "png",
-      altText: { title: filename, description: "asset:" + filename, name: filename },
+      altText: { title: htmlAssetName, description: "asset:" + htmlAssetName, name: htmlAssetName },
     })],
   });
 }

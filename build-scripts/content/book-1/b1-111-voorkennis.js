@@ -26,8 +26,8 @@ const {
   Header, Footer, PageNumber, LevelFormat, PageBreak, ImageRun,
 } = require("docx");
 
-// ─── Dual coding: embed pre-built PNGs from _assets/ ───
-function embedAssetImage(assetsDir, filename, width, height) {
+// ─── Dual coding: embed adapted PNG variants from _assets/ ───
+function embedAssetImage(assetsDir, filename, width, height, htmlAssetName = filename) {
   const imgPath = path.join(assetsDir, filename + ".png");
   if (!fs.existsSync(imgPath)) return null;
   const buf = fs.readFileSync(imgPath);
@@ -36,7 +36,7 @@ function embedAssetImage(assetsDir, filename, width, height) {
     alignment: AlignmentType.CENTER,
     children: [new ImageRun({
       data: buf, transformation: { width, height }, type: "png",
-      altText: { title: filename, description: "asset:" + filename, name: filename },
+      altText: { title: htmlAssetName, description: "asset:" + htmlAssetName, name: htmlAssetName },
     })],
   });
 }
@@ -461,7 +461,7 @@ children.push(bullet("De schaal: gaat de as in stapjes van €50, €100 of €5
 children.push(h2d("Voorbeeld: winst per hectare", VK_DOMAINS.grafisch.color));
 children.push(p("In het staafdiagram hieronder zie je de winst per hectare voor drie gewassen die een boer kan verbouwen. Op de x-as staan de drie gewassen, op de y-as de winst per hectare in euro’s."));
 
-const figExImage = embedAssetImage(ASSETS_DIR, "1.1.1_ex_1", 420, 280);
+const figExImage = embedAssetImage(ASSETS_DIR, "1.1.1_ex_1_doc", 420, 270, "1.1.1_ex_1");
 if (figExImage) children.push(figExImage);
 children.push(p("Voorbeeld van aflezen: trek vanaf de top van de maïs-staaf een denkbeeldige horizontale lijn naar de y-as. Daar lees je de winst per hectare van maïs af. Doe hetzelfde voor tarwe en zonnebloemen, en je kunt direct zien welk gewas het meest oplevert per hectare.", { italics: true, color: C.gray }));
 

@@ -11,6 +11,10 @@
     function applyMode(mode) {
         document.documentElement.setAttribute('data-theme', mode === 'dark' ? 'dark' : 'light');
         try { localStorage.setItem(THEME_KEY, mode); } catch (e) {}
+        document.querySelectorAll('img[data-light-src][data-dark-src]').forEach(function (img) {
+            var next = mode === 'dark' ? img.getAttribute('data-dark-src') : img.getAttribute('data-light-src');
+            if (next) img.setAttribute('src', next);
+        });
         document.querySelectorAll('.theme-toggle').forEach(function (btn) {
             var ring = btn.querySelector('.ring');
             var label = btn.querySelector('.label');

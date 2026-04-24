@@ -49,6 +49,25 @@ def esc(text):
     """HTML-escape text."""
     return html_mod.escape(text)
 
+def find_web_variant_bases(assets_dir):
+    """Return asset bases that have both web light and dark SVG variants."""
+    bases = set()
+    if os.path.isdir(assets_dir):
+        for svg in glob.glob(os.path.join(assets_dir, '*_web_light.svg')):
+            base = os.path.basename(svg).replace('_web_light.svg', '')
+            if os.path.exists(os.path.join(assets_dir, base + '_web_dark.svg')):
+                bases.add(base)
+    return bases
+
+def render_asset_image(asset_prefix, asset_name, web_variant_bases):
+    """Render an asset image, using themed web variants when available."""
+    if asset_name in web_variant_bases:
+        light_src = f'{asset_prefix}/{esc(asset_name)}_web_light.svg'
+        dark_src = f'{asset_prefix}/{esc(asset_name)}_web_dark.svg'
+        fallback_src = f'{asset_prefix}/{esc(asset_name)}.svg'
+        return f'        <figure class="asset-figure">\n          <img src="{light_src}" data-light-src="{light_src}" data-dark-src="{dark_src}" data-fallback-src="{fallback_src}" alt="{esc(asset_name)}" class="asset-svg">\n        </figure>\n'
+    return f'        <figure class="asset-figure">\n          <img src="{asset_prefix}/{esc(asset_name)}.svg" alt="{esc(asset_name)}" class="asset-svg">\n        </figure>\n'
+
 def parse_document(docx_path):
     """Parse a voorkennis .docx and return structured data."""
     doc = Document(docx_path)
@@ -507,10 +526,11 @@ def render_callout(callout_type, text):
 '''
 
 
-def generate_html(data, para_number, para_name, asset_prefix="../_assets"):
+def generate_html(data, para_number, para_name, asset_prefix="../_assets", web_variant_bases=None):
     """Generate the full HTML string."""
     sections = data['sections']
     checklist = data['checklist']
+    web_variant_bases = web_variant_bases or set()
 
     # Collect unique domains for CSS variables
     domain_infos = {}
@@ -599,7 +619,7 @@ def generate_html(data, para_number, para_name, asset_prefix="../_assets"):
                 lines = edata.replace('\n', '<br>\n            ')
                 content_html += f'        <div class="formula-box">\n            {lines}\n        </div>\n'
             elif etype == 'asset_image':
-                content_html += f'        <figure class="asset-figure">\n          <img src="{asset_prefix}/{esc(edata)}.svg" alt="{esc(edata)}" class="asset-svg">\n        </figure>\n'
+                content_html += render_asset_image(asset_prefix, edata, web_variant_bases)
             elif etype in ('callout_kernregel', 'callout_letop', 'callout_controle', 'callout_tip'):
                 content_html += render_callout(etype, edata)
             elif etype == 'samenvatting':
@@ -1033,7 +1053,10 @@ def process_paragraph(para_folder):
         print(f'  SKIP {para_number}: no sections found')
         return False
 
-    html_content = generate_html(data, para_number, para_name, asset_prefix)
+    assets_dir = os.path.join(para_folder, '_assets')
+    web_variant_bases = find_web_variant_bases(assets_dir)
+
+    html_content = generate_html(data, para_number, para_name, asset_prefix, web_variant_bases)
 
     with open(html_path, 'w', encoding='utf-8') as f:
         f.write(html_content)

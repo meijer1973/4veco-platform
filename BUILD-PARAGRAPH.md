@@ -107,9 +107,11 @@ Generate `X.Y.Z-quality-ref.yaml` via a separate sub-agent:
 
 # PART B: LESSEN COMPANIONS (docx, pptx, html, landing page)
 
-Produces the teacher-facing companions for a lessen paragraph: 24 root files including presentations, Word documents, HTML games, and `index.html`. Part B can reuse `_assets/` graphs from Part A.
+Produces the teacher-facing companions for a lessen paragraph: 24 root files including presentations, Word documents, HTML games, and `index.html`. Part B can use `_assets/` graphs from Part A as source material, but must adapt visuals to the companion surface instead of copy-pasting textbook images.
 
-**If Part A was run first:** the `_assets/` folder already contains all graphs. Part B builders (presentatie, voorkennis, vaardigheden, nieuws, samenvatting, begeleide inoefening) embed these graphs rather than generating new ones.
+**If Part A was run first:** the `_assets/` folder already contains textbook graphs. Part B builders (presentatie, voorkennis, vaardigheden, nieuws, samenvatting, begeleide inoefening) may derive from these graphs, but the preferred output is surface-specific variants: slide, docx, summary thumbnail, web-light, and web-dark where relevant. The economic data and reasoning should stay consistent; the layout, contrast, typography, proportions, annotations, and theme colors should be adapted.
+
+> **Visual variant rule:** Do not treat dual coding as literal reuse of Part A book art. A visual anchor means students see the same concept and data across surfaces, not the same PNG pasted everywhere. Web pages with dark mode require a dark visual variant when the image contains text, axes, colored fills, or a light background.
 
 ## B0. Target and layout
 
@@ -349,7 +351,8 @@ Read the textbook paragraph and answer key thoroughly, then create the paragraph
 1. Copy `build-scripts/templates/template-paragraph-plan.md` → `<paragraph-folder>/_paragraph-plan.md`
 2. Fill in every section:
    - **Kernconcepten**: 5-8 key concepts with definitions, formulas, graph types
-   - **Visuelen-plan**: every SVG visual needed, with filename, graph type, which builders use it, and parameters (e.g. curve equations)
+   - **Visuelen-plan**: every conceptual SVG visual needed, with source filename, graph type, which builders use it, and parameters (e.g. curve equations)
+   - **Visual-variants-plan**: every surface-specific derivative needed for layout and accessibility (`*_slide`, `*_doc`, `*_summary`, `*_web_light`, `*_web_dark`). Web-light and web-dark variants are required when a visual is used in a themed HTML page.
    - **Presentatie-outline**: slide sequence with visual references
    - **Nieuws-plan**: article choice + chart type
    - **Samenvatting-concepten**: complete concept checklist (cross-check against kernconcepten)
@@ -357,7 +360,7 @@ Read the textbook paragraph and answer key thoroughly, then create the paragraph
    - **Opgaven-verdeling**: exercise distribution across basis/midden/verrijking
    - **Vaardigheden & Voorkennis**: quick reference for the uitleg-builders
    - **Procedure-stappen-plan** (unified experience): for each skill, the exact step labels and sequence. This is the canonical approach — all builders (vaardigheden, stappenplan game, presentatie) must follow these steps. Products/numbers may vary by context, but the approach is fixed.
-   - **Visuelen-toewijzing** (dual coding): for each visual in `_assets/`, which builders embed it — not just the presentatie. Every document that explains a concept with a matching visual must include it.
+   - **Visuelen-toewijzing** (dual coding): for each visual concept in `_assets/`, which variant each builder embeds — not just the presentatie. Every document that explains a concept with a matching visual must include an adapted variant.
 
 This plan is the **single source of truth** for all Part B builders. Every companion builder reads it before starting.
 
@@ -379,13 +382,14 @@ Phase 4 has two sub-phases. The planning step already happened in Phase 2a.
 
 #### Phase 4a — Build shared visuals (20 min)
 
-Build all SVG graphics listed in the visuelen-plan, so they can be reused across documents.
+Build all SVG graphics listed in the visuelen-plan, plus the surface variants listed in the visual-variants-plan. Reuse the same data and concept, not necessarily the same artwork.
 
 1. Create `<paragraph-folder>/_assets/` subfolder
 2. For each visual in the visuelen-plan:
    - Write the SVG following the `economic-graph` skill spec
    - Render to PNG via `lib/lib-svg-utils.js`: `const { svgToPng } = require('../../lib/lib-svg-utils')`
-   - Save both `.svg` and `.png` to `_assets/` (e.g. `_assets/va-equilibrium.svg`, `_assets/va-equilibrium.png`)
+   - Save both `.svg` and `.png` to `_assets/` (e.g. `_assets/va-equilibrium_slide.svg`, `_assets/va-equilibrium_slide.png`)
+   - For web visuals in themed pages, save both light and dark variants (e.g. `_web_light.svg/png` and `_web_dark.svg/png`)
 3. Optionally save the asset-builder script as `build-scripts/content/book-N/bN-XYZ-build-assets.js`
 4. Quality-check all PNGs before proceeding — verify economic correctness and readability
 
@@ -393,9 +397,9 @@ Build all SVG graphics listed in the visuelen-plan, so they can be reused across
 
 For each document type, copy the reference script, replace the content, run it. Each builder should:
 - Read `_paragraph-plan.md` for its outline, terminology, and concept coverage
-- Read pre-built PNGs from `_assets/` instead of generating SVGs inline
+- Read pre-built adapted variants from `_assets/` instead of generating SVGs inline
 - Use `const { svgToPng, pngToBase64, GRAPH_COLORS } = require('./lib-svg-utils')` instead of inline copies
-- **Dual coding**: embed every visual listed in the visuelen-toewijzing for this builder (use `ImageRun` in docx scripts)
+- **Dual coding**: embed every adapted visual variant listed in the visuelen-toewijzing for this builder (use `ImageRun` in docx scripts)
 - **Unified experience**: follow the exact step sequence from the procedure-stappen-plan — same labels, same order, same approach. The stappenplan game procedures must mirror vaardigheden skill steps exactly.
 
 | Document | Reference script | Output location |
@@ -443,7 +447,7 @@ This command writes to the target book. It is a build/deploy step, not a read-on
 
 **Platform files:**
 - [ ] `_paragraph-plan.md` exists and all sections are filled in
-- [ ] `_assets/` folder has PNGs matching every entry in the visuelen-plan
+- [ ] `_assets/` folder has SVG+PNG pairs matching every entry in the visuelen-plan and visual-variants-plan
 - [ ] File count: 24 required Part B root files, including index.html
 - [ ] All .docx/.pptx open in Word/PowerPoint without errors
 - [ ] Presentatie has ≥3 economic graphs, presents theory (no exercise instructions)
@@ -452,7 +456,8 @@ This command writes to the target book. It is a build/deploy step, not a read-on
 - [ ] Terminology is consistent across all documents (check against terminologie table in plan)
 
 **Design principles:**
-- [ ] **Dual coding**: vaardigheden and voorkennis .docx files contain embedded graphs from `_assets/` (not text-only)
+- [ ] **Dual coding**: vaardigheden and voorkennis .docx files contain embedded adapted variants from `_assets/` (not text-only and not raw textbook copy-paste)
+- [ ] **Theme variants**: every themed web visual has a light and dark variant, and the HTML/JS swaps to the correct one
 - [ ] **Unified experience**: stappenplan game procedures use the same step labels and sequence as vaardigheden skills
 - [ ] **Visuelen-toewijzing**: every visual listed for a builder in the plan is actually embedded in that builder's output
 
@@ -634,7 +639,7 @@ If a build script is not saved, the paragraph build is **incomplete**.
 | Intro paragraphs: narrative-first approach | Students connect with stories (Lisa, Tom) before abstractions |
 | Register paragraph AND run deploy | Without deploy, game shells and landing pages are missing — students can't navigate |
 | Create `_paragraph-plan.md` before building documents | Ensures terminology consistency and concept coverage across all 8 documents |
-| Build shared visuals in `_assets/` before Phase 4c | One graph, many documents — fix once instead of fixing in 3 separate scripts |
+| Build shared visual variants in `_assets/` before Phase 4c | One concept, many surface-specific variants — fix the source idea once, then render for slide/doc/web contexts |
 | Use `lib-svg-utils.js` instead of inline `svgToPng()` | The same function was copy-pasted in 8 scripts — import the shared library instead |
 | Begeleide inoefening MUST have `scaffoldImage` for graph exercises | This document is scaffolding for weaker students — visual support is essential, not optional |
 | Run `econ-paragraph-review` two-pass review before delivering | Catches slope errors, missing domain restrictions, broken dual coding, and other issues that are hard to fix after delivery |

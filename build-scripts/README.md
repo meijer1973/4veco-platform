@@ -97,7 +97,7 @@ Follow [BUILD-PARAGRAPH.md](C:\Projects\4veco\4veco-platform\BUILD-PARAGRAPH.md)
 1. Create or update structured game data (CSV / JS data files)
 2. Run platform generators (usually via `deploy.js`)
 3. **Phase 2a**: Create `_paragraph-plan.md` from `templates/template-paragraph-plan.md`
-4. **Phase 4a**: Build shared visuals in `_assets/` using `lib/lib-svg-utils.js`
+4. **Phase 4a**: Build shared visual concepts and surface variants in `_assets/` using `lib/lib-svg-utils.js`
 5. **Phase 4b**: Copy the closest `content/book-N/...` or legacy reference builder, adapt, run
 6. Run converters (`lib/convert_*.py`) for HTML versions
 7. Run `deploy.js`

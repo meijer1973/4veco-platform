@@ -6,9 +6,9 @@
  *
  * 6 scaffolded exercises (separate set from the 5 textbook exercises):
  *   1. Schaarste ja/nee — 3 mini-scenarios
- *   2. Alternatieve kosten bij 2 alternatieven (Max)         [scaffoldImage: fig_2]
- *   3. Alternatieve kosten bij 3 alternatieven (Sam)         [scaffoldImage: fig_2]
- *   4. Winst op schaars middel (boer, 12 ha, 3 gewassen)     [scaffoldImage: we_1]
+ *   2. Alternatieve kosten bij 2 alternatieven (Max)         [scaffoldImage: fig_2_doc]
+ *   3. Alternatieve kosten bij 3 alternatieven (Sam)         [scaffoldImage: fig_2_doc]
+ *   4. Winst op schaars middel (boer, 12 ha, 3 gewassen)     [scaffoldImage: we_1_doc]
  *   5. Meerdere keuzerondes — €30-budget
  *   6. Verhaal-analyse — overheidskeuze bij budget (B02-stappen)
  *
@@ -19,6 +19,11 @@
 
 const fs = require("fs");
 const path = require("path");
+
+const NODE_PATH = path.join(process.env.APPDATA || "", "npm", "node_modules");
+process.env.NODE_PATH = NODE_PATH;
+require("module").Module._initPaths();
+
 const {
   buildBegeleideInoefening,
 } = require("../../lib/lib-begeleide-inoefening.js");
@@ -36,14 +41,16 @@ const OUTPUT_DIR = PARAGRAAF_DIR;
 const ASSETS_DIR = path.join(PARAGRAAF_DIR, "_assets");
 
 const IMG_FIG_2 = {
-  path: path.join(ASSETS_DIR, "1.1.1_fig_2.png"),
+  path: path.join(ASSETS_DIR, "1.1.1_fig_2_doc.png"),
+  assetName: "1.1.1_fig_2",
   width: 520,
-  height: 320,
+  height: 333,
 };
 const IMG_WE_1 = {
-  path: path.join(ASSETS_DIR, "1.1.1_we_1.png"),
+  path: path.join(ASSETS_DIR, "1.1.1_we_1_doc.png"),
+  assetName: "1.1.1_we_1",
   width: 520,
-  height: 320,
+  height: 333,
 };
 
 // ══════════════════════════════════════════════════════════════════════

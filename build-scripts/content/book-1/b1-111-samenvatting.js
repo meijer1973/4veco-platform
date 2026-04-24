@@ -14,7 +14,7 @@
  *   - Row 2b  amber  (pitfalls / warning)
  *   - Row 3   green  (procedure)
  *
- * Four visuals embedded from ../_assets/ (fig_1, fig_2, fig_3, we_1).
+ * Four summary-adapted visuals embedded from ../_assets/ (fig_1, fig_2, fig_3, we_1).
  * Single page A4 portrait.
  *
  * Run from C:/Projects/4veco/4veco-platform:
@@ -84,7 +84,7 @@ const ASSETS_DIR = path.resolve(
   "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_assets"
 );
 
-function embeddedImage(filename, width, height) {
+function embeddedImage(filename, width, height, htmlAssetName = filename.replace(/\.png$/i, "")) {
   const buf = fs.readFileSync(path.join(ASSETS_DIR, filename));
   return new Paragraph({
     alignment: AlignmentType.CENTER,
@@ -93,7 +93,7 @@ function embeddedImage(filename, width, height) {
       data: buf,
       transformation: { width, height },
       type: "png",
-      altText: { title: filename, description: "asset:" + filename, name: filename },
+      altText: { title: htmlAssetName, description: "asset:" + htmlAssetName, name: htmlAssetName },
     })],
   });
 }
@@ -191,7 +191,7 @@ function cell_R1C1() {
     ),
     bodyLine("→  Schaarste is het startpunt van elk economisch probleem.",
       { italics: true, color: C.tealDk, after: 40 }),
-    embeddedImage("1.1.1_fig_1.png", 230, 140),
+    embeddedImage("1.1.1_fig_1_summary.png", 230, 133, "1.1.1_fig_1"),
     bodyLine("Behoeften (onbegrensd) → schaarste-filter → keuze.",
       { size: 14, color: C.gray, italics: true, after: 0 }),
   ]);
@@ -263,7 +263,7 @@ function cell_R2C1() {
         font: "Consolas", size: 16, bold: true, color: C.blueDk,
       })],
     }),
-    embeddedImage("1.1.1_fig_2.png", 230, 140),
+    embeddedImage("1.1.1_fig_2_summary.png", 230, 133, "1.1.1_fig_2"),
     bodyLine("Twee alternatieven → pijl wijst het niet-gekozen alternatief aan.",
       { size: 14, color: C.gray, italics: true, after: 0 }),
   ]);
@@ -322,7 +322,7 @@ function cell_R3C1() {
       new TextRun({ text: "geef je op", font: "Arial", size: 17, bold: true, color: C.dark }),
       new TextRun({ text: " als je kiest? (= alt.kosten)", font: "Arial", size: 17, color: C.dark }),
     ]}),
-    embeddedImage("1.1.1_fig_3.png", 230, 140),
+    embeddedImage("1.1.1_fig_3_summary.png", 230, 133, "1.1.1_fig_3"),
     bodyLine("Alternatieven → Opbrengsten → Wat geef je op?",
       { size: 14, color: C.gray, italics: true, after: 0 }),
   ]);
@@ -376,7 +376,7 @@ function cell_R3C2() {
       new TextRun({ text: "€ 3.500", font: "Consolas", size: 15, bold: true, color: C.greenDk }),
       new TextRun({ text: " (gemiste maïsopbrengst).", font: "Arial", size: 15, color: C.dark }),
     ]}),
-    embeddedImage("1.1.1_we_1.png", 230, 130),
+    embeddedImage("1.1.1_we_1_summary.png", 230, 133, "1.1.1_we_1"),
     bodyLine("Vergelijking tarwe vs maïs met alt.kosten-annotatie.",
       { size: 14, color: C.gray, italics: true, after: 0 }),
   ]);
