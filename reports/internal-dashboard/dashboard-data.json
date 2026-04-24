@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-24T20:50:52.268Z",
+  "generatedAt": "2026-04-24T21:02:43.322Z",
   "internalOnly": true,
   "teams": [
     {
@@ -14,19 +14,26 @@
           "exists": true,
           "absolutePath": "C:/Projects/4veco/4veco-platform/knowledge/platform-team-roadmap.md",
           "generated": "2026-04-23",
-          "updated": "2026-04-24 after sorting sprint ledgers with open items first",
+          "updated": "2026-04-24 after adding the quality issue catalog and improvement-planning phase",
           "scope": "",
           "summary": "Sprint 0.5 is signed off for Part A textbook/book production, Sprint P1.1 has proven the first Book 1 companion paragraph path, and Sprint P1.2 has technically proven the pattern on a second Book 1 companion paragraph.",
           "sprints": [
             {
               "sprint": "P1.4",
-              "name": "Reference Data Quality Sprint",
+              "name": "Quality Issue Catalog And Improvement Plan",
               "completed": "no",
-              "currentState": "Current platform priority; clean unit/term/exam-link backlog.",
+              "currentState": "Current platform priority; create the authoritative issue log by quality category and turn it into the next-period improvement plan.",
               "exitGate": ""
             },
             {
               "sprint": "P1.5",
+              "name": "Reference Data Quality Sprint",
+              "completed": "no",
+              "currentState": "Planned from the issue catalog; clean unit/term/exam-link backlog and reference trust problems.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "P1.6",
               "name": "CI And Health Check Routine Sprint",
               "completed": "no",
               "currentState": "Planned; make routine health checks harder to skip.",
@@ -66,14 +73,22 @@
       "sprints": [
         {
           "sprint": "P1.4",
-          "name": "Reference Data Quality Sprint",
+          "name": "Quality Issue Catalog And Improvement Plan",
           "completed": "no",
-          "currentState": "Current platform priority; clean unit/term/exam-link backlog.",
+          "currentState": "Current platform priority; create the authoritative issue log by quality category and turn it into the next-period improvement plan.",
           "exitGate": "",
           "roadmap": "Platform roadmap"
         },
         {
           "sprint": "P1.5",
+          "name": "Reference Data Quality Sprint",
+          "completed": "no",
+          "currentState": "Planned from the issue catalog; clean unit/term/exam-link backlog and reference trust problems.",
+          "exitGate": "",
+          "roadmap": "Platform roadmap"
+        },
+        {
+          "sprint": "P1.6",
           "name": "CI And Health Check Routine Sprint",
           "completed": "no",
           "currentState": "Planned; make routine health checks harder to skip.",
@@ -114,7 +129,7 @@
         }
       ],
       "completedCount": 4,
-      "openCount": 2
+      "openCount": 3
     },
     {
       "id": "lessen",

@@ -1,7 +1,7 @@
 # Platform Team Roadmap
 
 Generated: 2026-04-23  
-Updated: 2026-04-24 after sorting sprint ledgers with open items first  
+Updated: 2026-04-24 after adding the quality issue catalog and improvement-planning phase  
 Source: split from `knowledge/three-month-roadmap.md` after Sprint 0.5 sign-off
 
 ## Sprint Ledger
@@ -10,8 +10,9 @@ Open items are listed first; completed items are kept below them.
 
 | Sprint | Name | Completed | Current State |
 |--------|------|-----------|---------------|
-| P1.4 | Reference Data Quality Sprint | no | Current platform priority; clean unit/term/exam-link backlog. |
-| P1.5 | CI And Health Check Routine Sprint | no | Planned; make routine health checks harder to skip. |
+| P1.4 | Quality Issue Catalog And Improvement Plan | no | Current platform priority; create the authoritative issue log by quality category and turn it into the next-period improvement plan. |
+| P1.5 | Reference Data Quality Sprint | no | Planned from the issue catalog; clean unit/term/exam-link backlog and reference trust problems. |
+| P1.6 | CI And Health Check Routine Sprint | no | Planned; make routine health checks harder to skip. |
 | 0.5 | Phase 0 Green Gate | yes | Signed off for Part A textbook/book production. |
 | P1.1 | Book 1 Companion Proof Sprint | yes | `1.1.1` companion path proven end-to-end. |
 | P1.2 | Companion Scaling And Handoff Sprint | yes | `1.1.2` passed as a technical probe; its test materials were removed for didactic rebuild. |
@@ -49,7 +50,7 @@ The temporary Green Gate deployment/output freeze is lifted as of 2026-04-24. Co
 
 The companion pilot is still open. The technical pipeline now repeats, but the 1.1.2 probe materials were testing material only and have been removed from both `4veco-lessen` and the platform build inputs. That paragraph must be recreated by an agent explicitly instructed for teaching and didactic design.
 
-Companion layout/front-end improvement has been handed off to the lessen team. The next platform-owned priority is the internal review dashboard and quality-gate visibility.
+Companion layout/front-end improvement has been handed off to the lessen team. The next platform-owned priority is the quality issue catalog and next-period improvement plan, using the internal dashboard as the control surface.
 
 Verified:
 
@@ -94,6 +95,44 @@ Definition of complete:
 - The sprint exit criteria are met.
 - Relevant checks have run or the reason for not running them is written down.
 - Any remaining risks are either resolved, moved to a later sprint, or recorded as escalation triggers.
+
+## Program Phase: Quality Issue Catalog And Improvement Planning
+
+This phase starts after the internal dashboard MVP. The first order of business is not fixing every visible problem immediately; it is making a good log of improvement issues per quality category, with enough evidence and ownership that the next period can be planned intelligently.
+
+Purpose:
+
+- Build one authoritative issue log for platform-facing quality work.
+- Use the dashboard categories as the first taxonomy, but allow the categories to change while cataloging if the real issue set shows a better structure.
+- Distinguish proof problems from production problems: can we prove inspection/exam alignment, can we trust references, can we show that a skill is worth teaching, can we prove generated material is ready to scale?
+- Convert the issue log into a practical improvement plan for the next period instead of treating every issue as equally urgent.
+
+Issue log fields:
+
+- issue id
+- title
+- quality category
+- owner team
+- source/evidence link
+- affected scope
+- severity
+- status
+- next action
+- target sprint or defer/reject decision
+- proof required to close
+
+Category governance:
+
+- The current eight dashboard categories are a starting point, not a permanent law.
+- Category changes must be recorded in this roadmap and in the dashboard generator.
+- When a category changes, old issues should be migrated or explicitly left as historical evidence.
+- The category set should remain small enough for humans to scan during planning.
+
+Exit output for the phase:
+
+- An internal issue log visible through the dashboard.
+- A next-period improvement plan ordered by quality risk, educational value, and platform leverage.
+- Clear separation between platform-owned fixes, lessen-team teaching/material fixes, and innovation experiments.
 
 ## Sprint Details
 
@@ -285,7 +324,7 @@ Implementation direction:
 
 Next action:
 
-- Use the dashboard as the visible control surface for Sprint P1.4 reference-data quality work.
+- Use the dashboard as the visible control surface for Sprint P1.4 quality issue cataloging and improvement planning.
 
 Evidence:
 
@@ -294,7 +333,7 @@ Evidence:
 - `reports/internal-dashboard/dashboard-data.json` stores the parsed source data.
 - `npm.cmd run dashboard:internal` completed successfully.
 - `node --check build-scripts\reports\internal-dashboard.js` passed.
-- Dashboard data verification passed: 3 teams, all roadmap sources found, 33 sprint rows, and 6 parsed quality-gate issues across the five issue categories.
+- Dashboard data verification passed: 3 teams, all roadmap sources found, 33 sprint rows, and 6 parsed quality-gate issues across the dashboard quality categories.
 
 Exit criteria:
 
@@ -305,13 +344,52 @@ Exit criteria:
 - It clearly labels itself as internal/developer-facing. Done.
 - The dashboard generation path is documented and does not touch student-facing output. Done; output stays under `reports/internal-dashboard/`.
 
-### Sprint P1.4: Reference Data Quality Sprint
+### Sprint P1.4: Quality Issue Catalog And Improvement Plan
 
 Completed: no.
 
 Goal:
 
-Improve trust in machine/reference data by cleaning known unit, term, and exam-link drift.
+Create the authoritative quality issue log by category, then turn that log into a next-period improvement plan.
+
+Work:
+
+- Inventory issues from:
+  - `knowledge/platform-team-companion-quality-gate-review.md`
+  - existing `reports/`
+  - platform roadmap residual risks
+  - lessen roadmap handoff items
+  - innovation roadmap transfer risks
+- Record each issue with category, owner, evidence, severity, status, next action, and proof required to close.
+- Treat the current quality categories as provisional during cataloging.
+- Propose category changes if the real issue set shows that the taxonomy is wrong or too broad.
+- Separate issues into:
+  - fix now
+  - plan this period
+  - defer
+  - reject/not actionable
+  - belongs to lessen team
+  - belongs to innovation team
+- Produce a next-period improvement plan from the issue log.
+
+Next action:
+
+- Define the first issue-log schema and seed it from the known quality-gate review.
+
+Exit criteria:
+
+- The dashboard has a real issue log, not only parsed headings.
+- Every issue has a quality category, owner team, source/evidence, status, and next action.
+- Category changes, if any, are documented and reflected in the dashboard generator.
+- The next-period improvement plan is written and ordered by quality risk, educational value, and platform leverage.
+
+### Sprint P1.5: Reference Data Quality Sprint
+
+Completed: no.
+
+Goal:
+
+Improve trust in machine/reference data by cleaning known unit, term, and exam-link drift after Sprint P1.4 identifies and prioritizes the reference-quality issues.
 
 Work:
 
@@ -330,7 +408,7 @@ Work:
 
 Next action:
 
-- Identify the current authoritative report for each backlog class before editing any machine reference.
+- Wait for Sprint P1.4 to identify the authoritative reference-quality issue list before editing machine references.
 
 Exit criteria:
 
@@ -338,7 +416,7 @@ Exit criteria:
 - Machine references are changed only through the intended CLI scripts.
 - Any remaining drift is recorded with owner and reason.
 
-### Sprint P1.5: CI And Health Check Routine Sprint
+### Sprint P1.6: CI And Health Check Routine Sprint
 
 Completed: no.
 
@@ -384,7 +462,7 @@ Exit criteria:
 
 - Sprint P1.2 has proven the next representative companion paragraph.
 - Sprint P1.3 is complete: internal dashboard and quality-gate visibility now have a first generated surface.
-- Sprint P1.4 starts as the current platform priority: reference-data quality.
+- Sprint P1.4 starts as the current platform priority: quality issue catalog and next-period improvement planning.
 - Green gate stays green.
 - Lessen team can continue one real companion paragraph without platform ambiguity.
 
@@ -393,10 +471,12 @@ Exit criteria:
 - At least two representative paragraphs pass `--mode complete`. Technically observed for `1.1.1` and `1.1.2`; 1.1.2 must be recreated didactically before it counts as approved material.
 - Reusable Book 1 companion build scripts exist under `build-scripts/content/book-1/` only for approved content; the temporary 1.1.2 probe scripts have been removed.
 - Deploy/config assumptions for flat Book output are stable enough to repeat.
-- Sprint P1.3 dashboard can be extended with richer report inputs as Sprint P1.4 discovers reference-data work.
+- Sprint P1.4 produces the issue log and next-period improvement plan.
+- Sprint P1.3 dashboard can be extended with richer issue-log and report inputs as Sprint P1.4 discovers the real work.
 
 ### Months 1-3
 
+- Quality issue categories are stable enough to guide planning, or category changes are documented with migrations.
 - Reference backlog is cleaner and better trusted.
 - Companion pipeline is proven on repeated real work, not just documented.
 - Internal dashboard gives developers a reliable overview of sprint state and open quality issues.
