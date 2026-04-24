@@ -1,7 +1,7 @@
 # Platform Team Roadmap
 
 Generated: 2026-04-23  
-Updated: 2026-04-24 after converting the roadmap into explicit sprint status tracking  
+Updated: 2026-04-24 after starting Sprint P1.2 companion scaling  
 Source: split from `knowledge/three-month-roadmap.md` after Sprint 0.5 sign-off
 
 Detailed bootstrap plan for the first Book 1 companion MVP:
@@ -73,7 +73,7 @@ Definition of complete:
 |--------|------|-----------|---------------|
 | 0.5 | Phase 0 Green Gate | yes | Signed off for Part A textbook/book production. |
 | P1.1 | Book 1 Companion Proof Sprint | yes | `1.1.1` companion path proven end-to-end. |
-| P1.2 | Companion Scaling And Handoff Sprint | no | Next active sprint; prove repeatability beyond one paragraph. |
+| P1.2 | Companion Scaling And Handoff Sprint | no | Active; `1.1.2` selected as the second companion scaling probe. |
 | P1.3 | Internal Review Dashboard Sprint | no | Planned; developer-facing HTML overview for project health and open quality issues. |
 | P1.4 | Reference Data Quality Sprint | no | Planned; clean unit/term/exam-link backlog. |
 | P1.5 | CI And Health Check Routine Sprint | no | Planned; make routine health checks harder to skip. |
@@ -140,13 +140,39 @@ Exit criteria:
 
 Completed: no.
 
+Started: 2026-04-24.
+
 Goal:
 
 Prove that the Book 1 companion pattern scales beyond one paragraph without the lessen team inventing platform structure on the fly.
 
+Current probe:
+
+- Selected paragraph: `1.1.2 Percentages en indexcijfers`.
+- Reason: it is the next registered Book 1 paragraph in the proven chapter, has complete Part A outputs, and exposes Part B repeatability without adding a new chapter/layout variable.
+- Baseline result: `1.1.1` still passes `validate-paragraph.js --mode complete`.
+- Probe result: `1.1.2` passes its Part A checks but fails `--mode complete`/`--mode part-b` with 29 Part B errors.
+
+Observed missing pieces for `1.1.2`:
+
+- 23 missing companion root files; only `index.html` exists from the 24-file Part B set.
+- missing `_paragraph-plan.md`
+- missing `shared/questions/1.1.2.js`
+- missing `shared/newsdetective/1.1.2.js`
+- missing `shared/reasoning/1.1.2.js`
+- missing `shared/procedure/1.1.2.js`
+- missing `shared/skilltree/1.1.2.js`
+
+Initial ownership read:
+
+- No new platform-owned blocker has been proven by the `1.1.2` probe yet.
+- Current failures are expected companion-production inputs/outputs, so they are content/data work unless a builder or validator fails after those inputs exist.
+- `deploy.js` must not be used as a read-only probe because it writes to the target book.
+
 Next action:
 
-- Select the next representative Book 1 companion paragraph and run the same complete validation path used for `1.1.1`.
+- Coordinate the `1.1.2` Part B content/data start: `_paragraph-plan.md`, game data, skilltree manifest decision, static helper file, and rich companion files.
+- After those inputs exist, rerun `validate-paragraph.js --mode complete` to detect actual platform repeatability defects.
 
 Work:
 
