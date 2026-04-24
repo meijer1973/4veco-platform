@@ -9,22 +9,22 @@ This document records the current observed state in more detail than the roadmap
 
 ## Sprint 0.5 Update
 
-Updated on 2026-04-23 after the Green Gate sign-off.
+Updated on 2026-04-24 after explicit platform unfreeze sign-off. This supersedes the original 2026-04-23 snapshot where the companion path had not yet been proven.
 
 Current gate status:
 
-- `npm.cmd run check:platform` passes: 10 passing suites, 362 passing tests.
+- `npm.cmd run check:platform` passes: 10 passing suites, 363 passing tests, 6 skipped tests.
 - `npm.cmd run check:book -- "..\4veco-lessen\Boek 1 - Grondslagen, vraag en aanbod"` passes: 26/26 checks.
 - Book 1 Part A textbook/chapter delivery is green.
-- The Phase 0 deployment/output freeze is lifted for Part A textbook/book material production.
+- The Phase 0 deployment/output freeze is lifted for controlled `../4veco-lessen` production under the normal build/validation workflow.
 
 Current companion status:
 
-- A full Part A + Part B paragraph build is not yet proven.
-- `node scripts\validate-paragraph.js --mode complete` on Book 1 paragraph 1.1.1 correctly fails because the Part B companion layer is absent.
-- `build-scripts/content/book-1/` does not exist yet.
-- Book 1 currently has no `deploy-config.json` and no `shared/` game-data/engine layer at the book root.
-- Companion production should therefore start with one MVP paragraph, not scaled production.
+- `1.1.1 Schaarste en economisch denken` proves the first full Part A + Part B companion path end-to-end.
+- `build-scripts/content/book-1/` exists.
+- `source-data/book-1/reasoning/` exists.
+- Book 1 has a book-root `deploy-config.json` and `shared/` game-data/engine layer.
+- Companion production can now scale in Sprint P1.2, starting with `1.1.2 Percentages en indexcijfers`.
 
 ## How This Was Assessed
 

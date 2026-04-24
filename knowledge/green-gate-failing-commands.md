@@ -1,16 +1,16 @@
 # Green Gate Command Register
 
 Generated: 2026-04-23  
-Updated: 2026-04-23 after Sprint 0.5 sign-off  
+Updated: 2026-04-24 after explicit platform unfreeze sign-off  
 Scope: Phase 0 Green Gate for `4veco-platform` and existing `../4veco-lessen` output
 
 ## Current Status
 
 There are no remaining Phase 0 Green Gate command failures.
 
-Sprint 0.5 is signed off for Part A textbook/book production. The deployment/output freeze is lifted for Book 1 release polish and Book 2 Part A textbook production.
+Sprint 0.5 is signed off and the deployment/output freeze is lifted for controlled `../4veco-lessen` production under the normal build/validation workflow.
 
-The full Part B companion pipeline is explicitly not part of this sign-off. It is documented and validator-covered, but it has not yet been proven end-to-end for Book 1.
+The first Part B companion path has been proven end-to-end for `1.1.1 Schaarste en economisch denken`. Scaling the companion path beyond that paragraph remains Sprint P1.2 work.
 
 ## Green Commands
 

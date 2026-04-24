@@ -1,6 +1,7 @@
 # Three-Month Roadmap
 
 Generated: 2026-04-23  
+Updated: 2026-04-24 after explicit platform unfreeze sign-off  
 Scope: `4veco-platform` and companion output directory `../4veco-lessen`
 
 Related split working docs:
@@ -10,7 +11,7 @@ Related split working docs:
 
 ## Core Principle
 
-The two-team plan should start with a narrow platform-green gate. Until that gate is met, there is a deployment/output freeze for student-facing `4veco-lessen` material. The material team may plan and review, but should not start production work that depends on validators, generated game shells, skilltree data, or reference reports.
+The two-team plan started with a narrow platform-green gate. That gate is now met and the deployment/output freeze for student-facing `4veco-lessen` material is lifted as of 2026-04-24.
 
 First make the platform minimally trustworthy. Then split the teams:
 
@@ -35,31 +36,33 @@ The Green Gate passes only when all checks below are true:
 | The skilltree/catalog mismatch is resolved. | Done in Sprint 0.1. `GEN.A38`-`GEN.A44` are implemented and tests are catalog-driven. |
 | One command exists to validate the platform plus a target book. | Done in Sprint 0.3. Use `npm run check:platform` and `npm run check:book -- <book-path>`. |
 | Generated reports are not obviously stale against the current catalog. | Done in Sprint 0.4. Current status is recorded in `knowledge/reference-report-sanity.md`. |
-| The deployment/output freeze can be lifted safely. | Done in Sprint 0.5. Freeze lifted for Part A textbook/book material production. |
+| The deployment/output freeze can be lifted safely. | Done in Sprint 0.5 and explicitly unfrozen on 2026-04-24. Controlled `4veco-lessen` production may resume under the normal build/validation workflow. |
 
-This is the unlock point for Part A textbook/book material production. It is not a sign-off that the full Part B companion pipeline is already production-ready; companion production remains a separate Phase 1/2 track.
+This is the unlock point for controlled material production. It is not a claim that every Part B companion paragraph is already built; companion production remains a separate Phase 1/2 track and must keep using `validate-paragraph.js --mode complete` before being considered done.
 
 ### Phase 0 Deployment Freeze
 
-During Phase 0, agents must not generate, deploy, overwrite, or commit student-facing output in `4veco-lessen`.
+Status: lifted on 2026-04-24 after explicit user sign-off.
 
-Allowed during the freeze:
+Evidence at unfreeze:
 
-- planning documents.
-- read-only review of existing material.
-- platform code fixes in `4veco-platform`.
-- validator/test/report fixes in `4veco-platform`.
-- temporary scratch runs outside production output paths.
-- health-check commands that inspect existing `4veco-lessen` output.
+- `npm.cmd run check:platform` passes.
+- `npm.cmd run check:book -- "..\4veco-lessen\Boek 1 - Grondslagen, vraag en aanbod"` passes.
+- `1.1.1 Schaarste en economisch denken` passes complete-mode validation and proves the first Book 1 companion path.
 
-Not allowed during the freeze:
+Allowed after unfreeze:
 
-- new chapter or book production in `4veco-lessen`.
-- new paragraph production in `4veco-lessen`.
-- companion-material generation in `4veco-lessen`.
-- deployment or generator runs that overwrite production material in `4veco-lessen`.
+- controlled chapter/book/paragraph production in `4veco-lessen`
+- companion-material generation in `4veco-lessen`
+- deployment or generator runs that intentionally target production output
+- continued platform, validator, report, and planning work
 
-The freeze lifts only after Sprint 0.5 signs off the green gate.
+Required after unfreeze:
+
+- follow `BUILD-PARAGRAPH.md` and `BUILD-CHAPTER.md`
+- run the relevant validators after production output is generated
+- record sprint status changes in the relevant team roadmap
+- remember that `scripts/deploy.js` writes to the target and is never a read-only probe
 
 ### Phase 0A: Intake And Freeze The Gate
 
@@ -243,9 +246,9 @@ Tasks:
 
 Exit criteria:
 
-- Green result: freeze is lifted for Part A textbook/book material production.
-- Material team may start Book 1 release polish and Book 2 Part A textbook production.
-- Companion/full-paragraph Part B production is not yet proven and should start as a focused MVP track, not as scaled production.
+- Green result: freeze is lifted for controlled `4veco-lessen` production under the normal build/validation workflow.
+- Material team may start Book 1 release polish, Book 2 textbook production, and controlled companion production.
+- Companion/full-paragraph Part B production is proven for `1.1.1`; scaling beyond that remains a focused MVP track, not unbounded bulk production.
 
 Verified commands:
 

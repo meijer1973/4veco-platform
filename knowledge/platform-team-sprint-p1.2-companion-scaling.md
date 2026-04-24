@@ -2,11 +2,12 @@
 
 Generated: 2026-04-24  
 Owner: Platform team  
-Status: active, not complete
+Status: active, not complete  
+Freeze state: platform/output freeze lifted on 2026-04-24
 
 ## Purpose
 
-Record the first repeatability probe after the `1.1.1` companion proof sprint. This note is internal planning/triage only. It must not generate or overwrite student-facing output.
+Record the first repeatability probe after the `1.1.1` companion proof sprint. This note is internal planning/triage, but the platform/output freeze has now been lifted, so controlled companion production may proceed under `BUILD-PARAGRAPH.md`.
 
 ## Selected Probe
 
@@ -92,9 +93,9 @@ Content/data-owned at this point:
 - deciding and registering the skilltree mapping
 - copying the static helper file
 - producing rich companion docs and converted HTML
-- running deploy/build steps only when production-output writes are allowed again
+- running deploy/build steps intentionally as part of the controlled production workflow
 
-## Safe Next Actions During The Freeze
+## Safe Next Actions After Unfreeze
 
 Allowed:
 
@@ -102,13 +103,15 @@ Allowed:
 - inspect existing `1.1.2` files read-only
 - draft planning/checklists
 - run read-only validation commands
-- use scratch copies outside production output paths if a platform hypothesis needs reproduction
+- produce the missing `1.1.2` companion inputs/outputs under the normal `BUILD-PARAGRAPH.md` workflow
+- run deploy/generator steps when intentionally building production output, followed by validation
 
-Not allowed:
+Still not allowed:
 
-- run `scripts/deploy.js` against `../4veco-lessen`
-- generate or overwrite `1.1.2` companion files in `../4veco-lessen`
-- edit production Book 1 shared data or manifest files as part of this platform sprint without explicit unfreeze/approval
+- treating `scripts/deploy.js` as a read-only probe
+- untracked/manual patchwork that bypasses the paragraph build workflow
+- writing dashboard/internal review output into student-facing material
+- changing the separately frozen legacy Module 3 production target
 
 ## Handoff Checklist For `1.1.2`
 

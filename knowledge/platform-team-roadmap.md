@@ -1,7 +1,7 @@
 # Platform Team Roadmap
 
 Generated: 2026-04-23  
-Updated: 2026-04-24 after starting Sprint P1.2 companion scaling  
+Updated: 2026-04-24 after platform unfreeze sign-off  
 Source: split from `knowledge/three-month-roadmap.md` after Sprint 0.5 sign-off
 
 Detailed bootstrap plan for the first Book 1 companion MVP:
@@ -28,6 +28,8 @@ Own the platform guardrails that make material production trustworthy:
 
 Sprint 0.5 is signed off for Part A textbook/book production, and Sprint P1.1 has proven the first Book 1 companion paragraph path.
 
+The temporary Green Gate deployment/output freeze is lifted as of 2026-04-24. Controlled production in `../4veco-lessen` may resume under the normal build/validation workflow. The legacy Module 3 target remains separately frozen until September 2026.
+
 Verified:
 
 - `npm.cmd run check:platform` passes.
@@ -40,6 +42,7 @@ Important boundary:
 - Part A textbook/chapter/book delivery is green.
 - The Part B companion pipeline is technically proven end-to-end for `1.1.1 Schaarste en economisch denken`.
 - Bulk repetition beyond the first MVP paragraph is not yet proven.
+- P1.2 can now proceed from read-only triage into controlled companion scaling work.
 
 Companion bootstrap status:
 
@@ -210,7 +213,7 @@ Boundary:
 - This dashboard is internal and developer-facing.
 - It must live in the platform/reporting workflow, not in public or student-facing lesson output.
 - It must not expose technical quality categories on any public-facing site.
-- During the temporary green gate freeze, dashboard work may only generate internal reports or scratch output inside the platform or `/tmp/Codex-work/`, not production material in `../4veco-lessen`.
+- Dashboard work may generate internal reports inside the platform/reporting tree, but it must not write dashboard output into public or student-facing lesson material.
 
 Issue categories:
 

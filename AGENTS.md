@@ -10,25 +10,32 @@ Platform repo for generating lesson materials for VWO 4 economie. Contains game 
 - Use `AGENTS.md` for repo overview, architecture, deploy rules, and quality standards.
 - Use `build-scripts/README.md` for the distinction between platform generators, converters, reference implementations, and utilities.
 
-## Temporary Green Gate deployment/output freeze
+## Green Gate status: unfrozen
 
-Active until the Phase 0 green gate in `knowledge/three-month-roadmap.md` is signed off.
+The temporary Green Gate deployment/output freeze was lifted on 2026-04-24 after explicit user sign-off.
 
-During this freeze, agents must not generate, deploy, overwrite, or commit student-facing output in `../4veco-lessen`. The goal is to get `4veco-platform` green before material production resumes.
+Evidence at unfreeze:
+- `npm.cmd run check:platform` passes
+- `npm.cmd run check:book -- "..\4veco-lessen\Boek 1 - Grondslagen, vraag en aanbod"` passes
+- validators are aligned with the flat layout
+- `validate-paragraph.js` is active and required
+- stale blocking reports are resolved or explicitly excluded
+- `1.1.1 Schaarste en economisch denken` proves the first Book 1 companion path end-to-end
 
-Allowed during the freeze:
-- planning documents and roadmap edits
-- read-only review of existing `4veco-lessen` material
-- platform code fixes, validators, tests, and report-generation fixes in `4veco-platform`
-- temporary scratch runs outside production output paths
-- health-check commands that inspect existing `4veco-lessen` output
-
-Not allowed during the freeze:
-- new chapter/book/paragraph production in `../4veco-lessen`
+Allowed after unfreeze:
+- controlled chapter/book/paragraph production in `../4veco-lessen`
 - companion-material generation in `../4veco-lessen`
-- deploy/generator runs that overwrite production material in `../4veco-lessen`
+- deploy/generator runs against `../4veco-lessen` when the task intentionally calls for production output
+- normal platform code, validator, report, and planning work
 
-Unfreeze only after the green gate passes: platform tests green, validators aligned with the flat layout, `validate-paragraph.js` active and required, book health checks runnable, and stale blocking reports resolved or explicitly excluded.
+Required after unfreeze:
+- follow `BUILD-PARAGRAPH.md` and `BUILD-CHAPTER.md` for production work
+- run the relevant validators after generating or deploying output
+- keep roadmap sprint status current when production or platform state changes
+- do not treat `scripts/deploy.js` as read-only; it writes to the target
+
+Still frozen separately:
+- the legacy Module 3 target remains frozen until September 2026 for student-localStorage integrity; do not reason new work back into that retiring stack
 
 ## Design Principles
 
