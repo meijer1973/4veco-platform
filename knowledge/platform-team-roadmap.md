@@ -1,7 +1,7 @@
 # Platform Team Roadmap
 
 Generated: 2026-04-23  
-Updated: 2026-04-23 after executing Sprint P1.1  
+Updated: 2026-04-24 after converting the roadmap into explicit sprint status tracking  
 Source: split from `knowledge/three-month-roadmap.md` after Sprint 0.5 sign-off
 
 Detailed bootstrap plan for the first Book 1 companion MVP:
@@ -18,10 +18,11 @@ Own the platform guardrails that make material production trustworthy:
 - reference quality
 - architecture quality
 - CI and repeatable health checks
+- internal developer-facing project oversight
 
 ## Current Status
 
-Sprint 0.5 is signed off for Part A textbook/book production, and Sprint P1.1 has now proven the first Book 1 companion paragraph path.
+Sprint 0.5 is signed off for Part A textbook/book production, and Sprint P1.1 has proven the first Book 1 companion paragraph path.
 
 Verified:
 
@@ -33,7 +34,7 @@ Verified:
 Important boundary:
 
 - Part A textbook/chapter/book delivery is green.
-- The Part B companion pipeline is now technically proven end-to-end for `1.1.1 Schaarste en economisch denken`.
+- The Part B companion pipeline is technically proven end-to-end for `1.1.1 Schaarste en economisch denken`.
 - Bulk repetition beyond the first MVP paragraph is not yet proven.
 
 Companion bootstrap status:
@@ -46,38 +47,65 @@ Companion bootstrap status:
 - `validate-paragraph.js --mode part-b` and `--mode complete` for `1.1.1` now run against the real flat-layout Book 1 flow.
 - `scripts/deploy.js` now supports the Book 1 MVP flow cleanly, including shared reasoning metadata and flat-layout converter/deploy behavior.
 
-## Team Guardrails
+## Sprint Status Standard Procedure
 
-- Keep `check:platform` green.
-- Keep `check:book` green while the lessen team edits Book 1 and builds Book 2 Part A.
-- Do not reopen Phase 0 unless one of the green-gate commands regresses.
-- Treat companion work as a pilot scaling track: one real paragraph now passes `validate-paragraph.js --mode complete`, but repeatability across more paragraphs is still the next proof step.
+Every platform plan update must keep sprint state explicit. This is now standard procedure for this roadmap and related platform planning docs.
 
-## Recommended Start
+Required on every roadmap update:
 
-### Phase 1A: Companion Handoff Stabilization
+- Update the `Updated:` line with the date and reason.
+- Keep every sprint under `Sprint Ledger` marked with `Completed: yes` or `Completed: no`.
+- For every completed sprint, record evidence: commands run, files changed, or a short decision note.
+- For every incomplete sprint, keep a concrete next action and an exit condition.
+- Do not mark a sprint complete from intention alone. Completion requires verified exit criteria.
+- If a sprint changes scope, add a note under that sprint instead of silently rewriting history.
+- If a new sprint is added, assign it an owner track, a completion status, and public/private boundary notes when relevant.
 
-Status: complete.
+Definition of complete:
 
-Target: 0.5-1 week.
+- The sprint exit criteria are met.
+- Relevant checks have run or the reason for not running them is written down.
+- Any remaining risks are either resolved, moved to a later sprint, or recorded as escalation triggers.
+
+## Sprint Ledger
+
+| Sprint | Name | Completed | Current State |
+|--------|------|-----------|---------------|
+| 0.5 | Phase 0 Green Gate | yes | Signed off for Part A textbook/book production. |
+| P1.1 | Book 1 Companion Proof Sprint | yes | `1.1.1` companion path proven end-to-end. |
+| P1.2 | Companion Scaling And Handoff Sprint | no | Next active sprint; prove repeatability beyond one paragraph. |
+| P1.3 | Internal Review Dashboard Sprint | no | Planned; developer-facing HTML overview for project health and open quality issues. |
+| P1.4 | Reference Data Quality Sprint | no | Planned; clean unit/term/exam-link backlog. |
+| P1.5 | CI And Health Check Routine Sprint | no | Planned; make routine health checks harder to skip. |
+
+## Sprint Details
+
+### Sprint 0.5: Phase 0 Green Gate
+
+Completed: yes.
 
 Purpose:
 
-- keep the Part A green gate routine intact
-- prove that the new Book 1 companion bootstrap is genuinely usable
-- keep the split with the lessen team clean by removing any remaining platform-owned ambiguity
+- get the platform green before material production resumes
+- establish platform/book validation as the baseline gate
+- separate platform readiness from bulk content generation
 
-Success condition:
+Evidence:
 
-- the platform team can say with confidence whether any remaining `1.1.1` Part B failures are platform defects or content/data work
-- the lessen team can continue the MVP paragraph without inventing platform structure on the fly
-- the Book 1 proof run is green on platform, book, paragraph-complete, and deploy checks
+- Phase 0 green gate is signed off for Part A textbook/book production.
+- `check:platform` and `check:book` are part of the active routine.
 
-## First Sprint Proposal
+Exit criteria:
+
+- platform tests green
+- validators aligned with the flat layout
+- `validate-paragraph.js` active and required
+- book health checks runnable
+- stale blocking reports resolved or explicitly excluded
 
 ### Sprint P1.1: Book 1 Companion Proof Sprint
 
-Status: complete.
+Completed: yes.
 
 Goal:
 
@@ -108,46 +136,95 @@ Exit criteria:
 - `1.1.1` passes `validate-paragraph.js --mode complete`
 - no remaining `1.1.1` platform blockers were found during the proof run
 
-## Immediate Priorities
+### Sprint P1.2: Companion Scaling And Handoff Sprint
 
-### 1. Lock The Green Gate Into Routine
+Completed: no.
 
-- Keep these as the standard pre/post-change checks:
+Goal:
 
-```powershell
-npm.cmd run check:platform
-npm.cmd run check:book -- "..\4veco-lessen\Boek 1 - Grondslagen, vraag en aanbod"
-```
+Prove that the Book 1 companion pattern scales beyond one paragraph without the lessen team inventing platform structure on the fly.
 
-- Keep validator docs and roadmap status aligned with real behavior.
-- Record any non-blocking residual risks in `knowledge/current-state-detailed-analysis.md`.
+Next action:
 
-### 2. Prove And Stabilize The Companion MVP Plumbing
+- Select the next representative Book 1 companion paragraph and run the same complete validation path used for `1.1.1`.
 
-This is the main post-gate platform responsibility.
-
-Current state:
-
-- `build-scripts/content/book-1/` exists.
-- Book 1 has a book-root `deploy-config.json`.
-- Book 1 has a book-root `shared/` game-data/engine layer.
-- `1.1.1` now passes `validate-paragraph.js --mode complete`.
-- `scripts/deploy.js` now runs cleanly against Book 1.
-- The remaining question is how to scale the pattern from one proven paragraph to repeatable routine use.
-
-Tasks:
+Work:
 
 - Keep the Book 1 bootstrap layer stable.
 - Verify `scripts/deploy.js` runs cleanly against Book 1 under repeat use.
 - Verify generated/shared files land where the flat layout expects them.
-- Triage remaining Part B validation failures into platform-owned vs content-owned work.
-- Support one representative complete companion paragraph until it passes:
+- Triage any Part B validation failures into platform-owned vs content-owned work.
+- Support at least one additional complete companion paragraph until it passes:
 
 ```powershell
 node scripts\validate-paragraph.js --mode complete "<paragraph-folder>"
 ```
 
-### 3. Reference Data Quality
+Exit criteria:
+
+- At least two Book 1 companion paragraphs pass `validate-paragraph.js --mode complete`.
+- Any repeated manual setup step is documented, scripted, or explicitly assigned to content work.
+- The lessen team has a clear handoff note for what is platform-owned and what is content-owned.
+
+### Sprint P1.3: Internal Review Dashboard Sprint
+
+Completed: no.
+
+Goal:
+
+Create a developer-facing internal HTML dashboard that gives humans a compact overview of where the platform is going, which quality issues are open, and which sprint/report areas need attention.
+
+Boundary:
+
+- This dashboard is internal and developer-facing.
+- It must live in the platform/reporting workflow, not in public or student-facing lesson output.
+- It must not expose technical quality categories on any public-facing site.
+- During the temporary green gate freeze, dashboard work may only generate internal reports or scratch output inside the platform or `/tmp/Codex-work/`, not production material in `../4veco-lessen`.
+
+Issue categories:
+
+- bronprobleem: the underlying source is missing, stale, contradictory, or unsuitable
+- extractieprobleem: the source exists but the extraction/parsing layer produced bad or incomplete data
+- claimprobleem: a generated or authored claim is unsupported, too broad, or conflicts with evidence
+- interpretatieprobleem: the data is present but interpreted incorrectly in planning, reports, or material logic
+- tekstprobleem: wording, clarity, terminology, or student/teacher explanation quality needs work
+
+Dashboard scope:
+
+- sprint status from this roadmap
+- open validator/report issues by category
+- green-gate command status and last known evidence
+- companion pipeline status by paragraph
+- reference-data backlog summary
+- links to source reports, roadmap sections, and escalation notes
+
+Implementation direction:
+
+- Prefer a static internal HTML report generated from structured JSON/Markdown inputs.
+- Keep the dashboard source under `build-scripts/` or `scripts/` if it becomes reusable.
+- Keep generated dashboard output under an internal report path such as `reports/internal-dashboard/`, not in `../4veco-lessen`.
+- Make the data model explicit before styling the page.
+
+Next action:
+
+- Inventory existing report files and decide which structured inputs should feed the first dashboard version.
+
+Exit criteria:
+
+- A first internal HTML dashboard can be generated locally.
+- It shows sprint completion status and open issues by the five categories above.
+- It clearly labels itself as internal/developer-facing.
+- The dashboard generation path is documented and does not touch student-facing output.
+
+### Sprint P1.4: Reference Data Quality Sprint
+
+Completed: no.
+
+Goal:
+
+Improve trust in machine/reference data by cleaning known unit, term, and exam-link drift.
+
+Work:
 
 - Regenerate stale reports when needed.
 - Clean unit-term drift between `micro-teaching-units.json` and `begrippen.json`.
@@ -162,32 +239,76 @@ node scripts\validate-paragraph.js --mode complete "<paragraph-folder>"
   - missing exam-code links
   - deprecated `D23` cleanup
 
-### 4. Architecture Quality
+Next action:
 
-- Keep validators layout-aware and explicit.
-- Keep generated output separate from source intent.
+- Identify the current authoritative report for each backlog class before editing any machine reference.
+
+Exit criteria:
+
+- The main reference backlog report separates true blockers from deferred/non-actionable items.
+- Machine references are changed only through the intended CLI scripts.
+- Any remaining drift is recorded with owner and reason.
+
+### Sprint P1.5: CI And Health Check Routine Sprint
+
+Completed: no.
+
+Goal:
+
+Make the green-gate routine repeatable enough that platform health is visible before material teams are blocked.
+
+Work:
+
+- Keep these as the standard pre/post-change checks:
+
+```powershell
+npm.cmd run check:platform
+npm.cmd run check:book -- "..\4veco-lessen\Boek 1 - Grondslagen, vraag en aanbod"
+```
+
 - Make book/chapter/paragraph validation practical to run during active work.
 - Add small tests around reference CLI scripts where risk is high.
-- Update docs when live behavior changes.
+- Keep validator docs and roadmap status aligned with real behavior.
+- Record non-blocking residual risks in `knowledge/current-state-detailed-analysis.md` or the internal dashboard once Sprint P1.3 exists.
+
+Next action:
+
+- Decide which health checks should run locally only, which should be CI candidates, and which need target-path parameters.
+
+Exit criteria:
+
+- The routine checks are documented in one place.
+- The checks are easy to run without remembering hidden target paths.
+- Known failures are surfaced as explicit status, not tribal knowledge.
+
+## Team Guardrails
+
+- Keep `check:platform` green.
+- Keep `check:book` green while the lessen team edits Book 1 and builds Book 2 Part A.
+- Do not reopen Phase 0 unless one of the green-gate commands regresses.
+- Treat companion work as a pilot scaling track: one real paragraph now passes `validate-paragraph.js --mode complete`, but repeatability across more paragraphs is still the next proof step.
+- Keep internal review/reporting dashboards separate from public/student-facing output.
 
 ## Platform Team Deliverables
 
 ### Next 1 Week
 
+- Sprint P1.2 starts and identifies the next representative companion paragraph.
 - Green gate stays green.
-- Companion MVP plumbing is proven stable for Book 1 under real use.
 - Lessen team can continue one real companion paragraph without platform ambiguity.
 
 ### Next 2-4 Weeks
 
-- One representative paragraph passes `--mode complete`. Completed for `1.1.1`.
+- At least two representative paragraphs pass `--mode complete`.
 - Reusable Book 1 companion build scripts exist under `build-scripts/content/book-1/`.
 - Deploy/config assumptions for flat Book output are stable enough to repeat.
+- Sprint P1.3 has a first internal dashboard shape or input inventory.
 
 ### Months 1-3
 
 - Reference backlog is cleaner and better trusted.
-- Companion pipeline is proven on real work, not just documented.
+- Companion pipeline is proven on repeated real work, not just documented.
+- Internal dashboard gives developers a reliable overview of sprint state and open quality issues.
 - Platform quality is better than merely "green".
 
 ## What The Platform Team Does Not Own
@@ -195,6 +316,7 @@ node scripts\validate-paragraph.js --mode complete "<paragraph-folder>"
 - Teacher-facing content judgment on Book 1 polish.
 - The actual educational writing for Book 2 Part A.
 - Bulk companion production across many paragraphs before the MVP is proven.
+- Public presentation of internal quality categories such as bronprobleem, extractieprobleem, claimprobleem, interpretatieprobleem, and tekstprobleem.
 
 ## Escalation Triggers
 
@@ -204,3 +326,4 @@ Bring issues back to shared planning immediately if:
 - `check:book` regresses because of validator/platform behavior rather than content edits.
 - `scripts/deploy.js` cannot target Book 1 cleanly after config/plumbing is added.
 - The first companion MVP reveals a structural mismatch between `BUILD-PARAGRAPH.md` and the real toolchain.
+- The internal dashboard starts duplicating generated student-facing output instead of summarizing internal platform/report state.
