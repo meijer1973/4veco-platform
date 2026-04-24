@@ -1,7 +1,7 @@
 # Platform Team Roadmap
 
 Generated: 2026-04-23  
-Updated: 2026-04-24 after platform unfreeze sign-off  
+Updated: 2026-04-24 after completing Sprint P1.2 companion scaling  
 Source: split from `knowledge/three-month-roadmap.md` after Sprint 0.5 sign-off
 
 Detailed bootstrap plan for the first Book 1 companion MVP:
@@ -11,6 +11,10 @@ Detailed bootstrap plan for the first Book 1 companion MVP:
 Active companion scaling triage:
 
 - `knowledge/platform-team-sprint-p1.2-companion-scaling.md`
+
+Companion quality-gate review:
+
+- `knowledge/platform-team-companion-quality-gate-review.md`
 
 ## Mission
 
@@ -26,7 +30,7 @@ Own the platform guardrails that make material production trustworthy:
 
 ## Current Status
 
-Sprint 0.5 is signed off for Part A textbook/book production, and Sprint P1.1 has proven the first Book 1 companion paragraph path.
+Sprint 0.5 is signed off for Part A textbook/book production, Sprint P1.1 has proven the first Book 1 companion paragraph path, and Sprint P1.2 has now proven the pattern on a second Book 1 companion paragraph.
 
 The temporary Green Gate deployment/output freeze is lifted as of 2026-04-24. Controlled production in `../4veco-lessen` may resume under the normal build/validation workflow. The legacy Module 3 target remains separately frozen until September 2026.
 
@@ -41,8 +45,8 @@ Important boundary:
 
 - Part A textbook/chapter/book delivery is green.
 - The Part B companion pipeline is technically proven end-to-end for `1.1.1 Schaarste en economisch denken`.
-- Bulk repetition beyond the first MVP paragraph is not yet proven.
-- P1.2 can now proceed from read-only triage into controlled companion scaling work.
+- The companion pattern is now repeated for `1.1.2 Percentages en indexcijfers`.
+- Bulk repetition across many paragraphs is still not proven and should wait for the quality-gate backlog to be tightened.
 
 Companion bootstrap status:
 
@@ -80,7 +84,7 @@ Definition of complete:
 |--------|------|-----------|---------------|
 | 0.5 | Phase 0 Green Gate | yes | Signed off for Part A textbook/book production. |
 | P1.1 | Book 1 Companion Proof Sprint | yes | `1.1.1` companion path proven end-to-end. |
-| P1.2 | Companion Scaling And Handoff Sprint | no | Active; `1.1.2` selected as the second companion scaling probe. |
+| P1.2 | Companion Scaling And Handoff Sprint | yes | `1.1.2` now passes complete validation; two Book 1 companion paragraphs are proven. |
 | P1.3 | Internal Review Dashboard Sprint | no | Planned; developer-facing HTML overview for project health and open quality issues. |
 | P1.4 | Reference Data Quality Sprint | no | Planned; clean unit/term/exam-link backlog. |
 | P1.5 | CI And Health Check Routine Sprint | no | Planned; make routine health checks harder to skip. |
@@ -145,9 +149,10 @@ Exit criteria:
 
 ### Sprint P1.2: Companion Scaling And Handoff Sprint
 
-Completed: no.
+Completed: yes.
 
 Started: 2026-04-24.
+Completed on: 2026-04-24.
 
 Goal:
 
@@ -159,28 +164,40 @@ Current probe:
 - Detailed triage note: `knowledge/platform-team-sprint-p1.2-companion-scaling.md`.
 - Reason: it is the next registered Book 1 paragraph in the proven chapter, has complete Part A outputs, and exposes Part B repeatability without adding a new chapter/layout variable.
 - Baseline result: `1.1.1` still passes `validate-paragraph.js --mode complete`.
-- Probe result: `1.1.2` passes its Part A checks but fails `--mode complete`/`--mode part-b` with 29 Part B errors.
+- Initial probe result: `1.1.2` passed its Part A checks but failed `--mode complete`/`--mode part-b` with 29 Part B errors.
+- Completion result: `1.1.2` now passes `validate-paragraph.js --mode complete` after companion production and deploy.
 
-Observed missing pieces for `1.1.2`:
+Resolved missing pieces for `1.1.2`:
 
-- 23 missing companion root files; only `index.html` exists from the 24-file Part B set.
-- missing `_paragraph-plan.md`
-- missing `shared/questions/1.1.2.js`
-- missing `shared/newsdetective/1.1.2.js`
-- missing `shared/reasoning/1.1.2.js`
-- missing `shared/procedure/1.1.2.js`
-- missing `shared/skilltree/1.1.2.js`
+- `_paragraph-plan.md` exists.
+- all 24 required Part B root files exist.
+- `shared/questions/1.1.2.js` exists.
+- `shared/newsdetective/1.1.2.js` exists.
+- `shared/reasoning/1.1.2.js` exists and is generated from `source-data/book-1/reasoning/1.1.2.csv`.
+- `shared/procedure/1.1.2.js` exists.
+- `shared/skilltree/1.1.2.js` exists after deploy.
+- reusable production scripts exist under `build-scripts/content/book-1/`:
+  - `b1-112-game-data.js`
+  - `b1-112-companions.js`
 
 Initial ownership read:
 
-- No new platform-owned blocker has been proven by the `1.1.2` probe yet.
-- Current failures are expected companion-production inputs/outputs, so they are content/data work unless a builder or validator fails after those inputs exist.
+- No new platform-owned layout/deploy blocker was proven by the `1.1.2` build.
+- The flat Book 1 path repeats cleanly once content/data inputs exist.
 - `deploy.js` must not be used as a read-only probe because it writes to the target book.
+
+Evidence:
+
+- `node scripts\deploy.js "..\4veco-lessen\Boek 1 - Grondslagen, vraag en aanbod"` completed successfully.
+- `node scripts\validate-paragraph.js --mode complete "<1.1.2-folder>"` passed.
+- `node scripts\validate-paragraph.js --mode complete "<1.1.1-folder>"` still passed after deploy.
+- `npm.cmd run check:book -- "..\4veco-lessen\Boek 1 - Grondslagen, vraag en aanbod"` passed 26/26.
+- `npm.cmd run check:platform` passed.
 
 Next action:
 
-- Coordinate the `1.1.2` Part B content/data start: `_paragraph-plan.md`, game data, skilltree manifest decision, static helper file, and rich companion files.
-- After those inputs exist, rerun `validate-paragraph.js --mode complete` to detect actual platform repeatability defects.
+- Move companion platform work to quality-gate hardening before bulk companion production.
+- Sprint P1.3 dashboard work should use the real `1.1.1`/`1.1.2` evidence and the companion quality-gate review.
 
 Work:
 
@@ -196,9 +213,9 @@ node scripts\validate-paragraph.js --mode complete "<paragraph-folder>"
 
 Exit criteria:
 
-- At least two Book 1 companion paragraphs pass `validate-paragraph.js --mode complete`.
-- Any repeated manual setup step is documented, scripted, or explicitly assigned to content work.
-- The lessen team has a clear handoff note for what is platform-owned and what is content-owned.
+- At least two Book 1 companion paragraphs pass `validate-paragraph.js --mode complete`. Done for `1.1.1` and `1.1.2`.
+- Any repeated manual setup step is documented, scripted, or explicitly assigned to content work. Done through `b1-112-game-data.js`, `b1-112-companions.js`, and the P1.2 triage note.
+- The lessen team has a clear handoff note for what is platform-owned and what is content-owned. Done in `knowledge/platform-team-sprint-p1.2-companion-scaling.md`.
 
 ### Sprint P1.3: Internal Review Dashboard Sprint
 
@@ -320,20 +337,20 @@ Exit criteria:
 - Keep `check:platform` green.
 - Keep `check:book` green while the lessen team edits Book 1 and builds Book 2 Part A.
 - Do not reopen Phase 0 unless one of the green-gate commands regresses.
-- Treat companion work as a pilot scaling track: one real paragraph now passes `validate-paragraph.js --mode complete`, but repeatability across more paragraphs is still the next proof step.
+- Treat companion work as a pilot scaling track: two real paragraphs now pass `validate-paragraph.js --mode complete`, but bulk production should wait for quality-gate hardening.
 - Keep internal review/reporting dashboards separate from public/student-facing output.
 
 ## Platform Team Deliverables
 
 ### Next 1 Week
 
-- Sprint P1.2 starts and identifies the next representative companion paragraph.
+- Sprint P1.2 has proven the next representative companion paragraph.
 - Green gate stays green.
 - Lessen team can continue one real companion paragraph without platform ambiguity.
 
 ### Next 2-4 Weeks
 
-- At least two representative paragraphs pass `--mode complete`.
+- At least two representative paragraphs pass `--mode complete`. Completed for `1.1.1` and `1.1.2`.
 - Reusable Book 1 companion build scripts exist under `build-scripts/content/book-1/`.
 - Deploy/config assumptions for flat Book output are stable enough to repeat.
 - Sprint P1.3 has a first internal dashboard shape or input inventory.

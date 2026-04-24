@@ -2,12 +2,12 @@
 
 Generated: 2026-04-24  
 Owner: Platform team  
-Status: active, not complete  
+Status: complete  
 Freeze state: platform/output freeze lifted on 2026-04-24
 
 ## Purpose
 
-Record the first repeatability probe after the `1.1.1` companion proof sprint. This note is internal planning/triage, but the platform/output freeze has now been lifted, so controlled companion production may proceed under `BUILD-PARAGRAPH.md`.
+Record the first repeatability probe after the `1.1.1` companion proof sprint. The probe is now complete: `1.1.2` has been produced and passes complete-mode validation.
 
 ## Selected Probe
 
@@ -50,6 +50,25 @@ Observed result:
 - `1.1.2` passed its Part A checks.
 - `1.1.2` failed complete and Part B validation with 29 errors because companion inputs/outputs are not built yet.
 
+Completion commands:
+
+```powershell
+node build-scripts\content\book-1\b1-112-game-data.js
+$env:MODULE_ROOT="..\4veco-lessen\Boek 1 - Grondslagen, vraag en aanbod"; node build-scripts\platform\build-reasoning-questions.js 1.1.2 math-economics source-data\book-1\reasoning\1.1.2.csv
+node build-scripts\content\book-1\b1-112-companions.js
+node scripts\deploy.js "..\4veco-lessen\Boek 1 - Grondslagen, vraag en aanbod"
+node scripts\validate-paragraph.js --mode complete "..\4veco-lessen\Boek 1 - Grondslagen, vraag en aanbod\1.1 Hoofdstuk Economisch denken en rekenen\1.1.2 Percentages en indexcijfers"
+node scripts\validate-paragraph.js --mode complete "..\4veco-lessen\Boek 1 - Grondslagen, vraag en aanbod\1.1 Hoofdstuk Economisch denken en rekenen\1.1.1 Schaarste en economisch denken"
+```
+
+Completion result:
+
+- `scripts/deploy.js` completed successfully for Book 1.
+- `1.1.2` passed complete validation with 24/24 Part B files present.
+- `1.1.1` still passed complete validation after the deploy.
+- Book health passed 26/26 checks.
+- Platform tests passed.
+
 ## Current `1.1.2` State
 
 Present Part A/root files:
@@ -63,21 +82,21 @@ Present Part A/root files:
 - `index.html`
 - `_assets/` with four SVG/PNG pairs
 
-Missing Part B items:
+Resolved Part B items:
 
-- 23 of the 24 required companion root files; only `index.html` exists.
-- `_paragraph-plan.md`
-- `shared/questions/1.1.2.js`
-- `shared/newsdetective/1.1.2.js`
-- `shared/reasoning/1.1.2.js`
-- `shared/procedure/1.1.2.js`
-- `shared/skilltree/1.1.2.js`
+- all 24 required companion root files exist
+- `_paragraph-plan.md` exists
+- `shared/questions/1.1.2.js` exists
+- `shared/newsdetective/1.1.2.js` exists
+- `shared/reasoning/1.1.2.js` exists
+- `shared/procedure/1.1.2.js` exists
+- `shared/skilltree/1.1.2.js` exists
 
 ## Initial Ownership Read
 
-No new platform-owned blocker has been proven yet.
+No new platform-owned layout/deploy blocker was proven by the second paragraph.
 
-The current failures are expected because the second companion paragraph has not been produced. Treat them as content/data work until the missing inputs exist and a builder, converter, validator, or generator fails despite valid inputs.
+The initial failures were expected because the second companion paragraph had not been produced. After the inputs existed, the flat Book 1 path repeated cleanly.
 
 Platform-owned if discovered later:
 
@@ -115,9 +134,9 @@ Still not allowed:
 
 ## Handoff Checklist For `1.1.2`
 
-Before the next complete validation can prove platform repeatability, `1.1.2` needs:
+Completed items:
 
-- `_paragraph-plan.md` filled from `build-scripts/templates/template-paragraph-plan.md`
+- `_paragraph-plan.md` filled for `1.1.2`
 - static `Lees dit als je niet weet hoe je moet beginnen met deze les.docx`
 - quiz data in `shared/questions/1.1.2.js`
 - source reasoning CSV in `source-data/book-1/reasoning/1.1.2.csv`
@@ -126,11 +145,11 @@ Before the next complete validation can prove platform repeatability, `1.1.2` ne
 - procedure data in `shared/procedure/1.1.2.js`
 - skilltree manifest decision and resulting `shared/skilltree/1.1.2.js`
 - rich companion files listed in `BUILD-PARAGRAPH.md` Part B
-- converted HTML for voorkennis, vaardigheden, and begeleide inoefening
+- HTML for voorkennis, vaardigheden, and begeleide inoefening
 
 ## Exit Condition For This Sprint
 
-Sprint P1.2 is complete only when at least two Book 1 companion paragraphs pass:
+Sprint P1.2 is complete: at least two Book 1 companion paragraphs pass:
 
 ```powershell
 node scripts\validate-paragraph.js --mode complete "<paragraph-folder>"
@@ -139,4 +158,9 @@ node scripts\validate-paragraph.js --mode complete "<paragraph-folder>"
 Current count:
 
 - passed: `1.1.1`
-- not yet passed: `1.1.2`
+- passed: `1.1.2`
+
+Residual risk:
+
+- This proves repeatability for a second paragraph, not safe bulk production across the whole book.
+- The companion quality-gate backlog in `knowledge/platform-team-companion-quality-gate-review.md` should be handled before broad scaling.
