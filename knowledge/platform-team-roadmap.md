@@ -1,7 +1,7 @@
 # Platform Team Roadmap
 
 Generated: 2026-04-23  
-Updated: 2026-04-24 after removing Sprint P1.6 because companion layout/front-end work was handed off to the lessen team  
+Updated: 2026-04-24 after adding the three-team dashboard model and roadmap source baseline  
 Source: split from `knowledge/three-month-roadmap.md` after Sprint 0.5 sign-off
 
 ## Sprint Ledger
@@ -231,7 +231,7 @@ Completed: no.
 
 Goal:
 
-Create a developer-facing internal HTML dashboard that gives humans a compact overview of where the platform is going, which quality issues are open, and which sprint/report areas need attention.
+Create a developer-facing internal HTML dashboard that gives humans a compact overview of where the three teams are going, which quality issues are open, and which sprint/report areas need attention.
 
 Boundary:
 
@@ -250,28 +250,44 @@ Issue categories:
 
 Dashboard scope:
 
-- sprint status from this roadmap
+- sprint status from each team roadmap
 - open validator/report issues by category
 - green-gate command status and last known evidence
 - companion pipeline status by paragraph
 - reference-data backlog summary
 - links to source reports, roadmap sections, and escalation notes
 
+Team tabs:
+
+- Platform / Control Center: owns platform guardrails, validator/deploy health, reference quality control, year and multi-year planning, and the efficiency question of exactly which skills, complexes, and goals should be taught versus omitted as unnecessary.
+- Lessen / Effective Teaching: owns front-end quality, lesson usability, differentiation, games, visuals, companion material quality, and turning technically valid material into effective teaching.
+- Innovation / Collab Experiments: owns controlled experiments in the collab worktrees, where riskier presentation, web-native, narration, and future product ideas can be tried before adoption into production workflows.
+
+Baseline roadmap sources:
+
+- Platform tab: `knowledge/platform-team-roadmap.md`
+- Lessen tab: `../4veco-lessen/lessen-team-roadmap.md`
+- Innovation tab, platform side: `../4veco-platform-collab/knowledge/innovation-team-roadmap.md`
+- Innovation tab, lesson-output side: `../4veco-lessen-collab/innovation-team-roadmap.md`
+
 Implementation direction:
 
 - Prefer a static internal HTML report generated from structured JSON/Markdown inputs.
+- Start with the roadmap files above as the first structured source inventory.
 - Keep the dashboard source under `build-scripts/` or `scripts/` if it becomes reusable.
 - Keep generated dashboard output under an internal report path such as `reports/internal-dashboard/`, not in `../4veco-lessen`.
 - Make the data model explicit before styling the page.
 
 Next action:
 
-- Inventory existing report files and decide which structured inputs should feed the first dashboard version.
+- Inventory the three roadmap sources and define the tab data model before styling the first dashboard version.
 
 Exit criteria:
 
 - A first internal HTML dashboard can be generated locally.
+- It has separate tabs for Platform, Lessen, and Innovation.
 - It shows sprint completion status and open issues by the five categories above.
+- It lists each tab's source roadmap and last known status.
 - It clearly labels itself as internal/developer-facing.
 - The dashboard generation path is documented and does not touch student-facing output.
 
