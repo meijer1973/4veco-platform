@@ -7,7 +7,7 @@ Scope: `4veco-platform` and companion output directory `../4veco-lessen`
 Related split working docs:
 
 - `knowledge/platform-team-roadmap.md`
-- `knowledge/lessen-team-roadmap.md`
+- `../4veco-lessen/lessen-team-roadmap.md`
 
 ## Core Principle
 
