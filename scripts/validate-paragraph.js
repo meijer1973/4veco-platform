@@ -226,7 +226,24 @@ function extractImageRefs(markdownFiles) {
   return refs;
 }
 
-function validateAssets(markdownFiles) {
+function extractPlannedAssetBases() {
+  const planPath = path.join(PAR, '_paragraph-plan.md');
+  const bases = new Set();
+  if (!fs.existsSync(planPath)) return bases;
+
+  const content = fs.readFileSync(planPath, 'utf8');
+
+  for (const match of content.matchAll(/\b(\d+\.\d+\.\d+_[A-Za-z0-9_-]+)\.(svg|png)\b/g)) {
+    bases.add(match[1]);
+  }
+  for (const match of content.matchAll(/\b(\d+\.\d+\.\d+_[A-Za-z0-9_-]+)\.svg\/png\b/g)) {
+    bases.add(match[1]);
+  }
+
+  return bases;
+}
+
+function validateAssets(markdownFiles, options = {}) {
   console.log('\n-- Asset integrity --');
   const assetsDir = path.join(PAR, '_assets');
   if (!fs.existsSync(assetsDir) || !fs.statSync(assetsDir).isDirectory()) {
@@ -242,6 +259,8 @@ function validateAssets(markdownFiles) {
 
   const refs = extractImageRefs(markdownFiles);
   const referencedBases = new Set();
+  const plannedBases = options.includePlannedAssets ? extractPlannedAssetBases() : new Set();
+  const trackedBases = new Set(plannedBases);
   let brokenRefs = 0;
   for (const ref of refs) {
     const normalized = ref.replace(/\\/g, '/');
@@ -256,10 +275,12 @@ function validateAssets(markdownFiles) {
       fail(`Broken image ref: ${ref}`);
       brokenRefs++;
     }
-    referencedBases.add(path.basename(ref).replace(/\.(svg|png)$/i, ''));
+    const base = path.basename(ref).replace(/\.(svg|png)$/i, '');
+    referencedBases.add(base);
+    trackedBases.add(base);
   }
 
-  for (const base of referencedBases) {
+  for (const base of trackedBases) {
     const svg = `${base}.svg`;
     const png = `${base}.png`;
     if (!svgSet.has(svg)) fail(`Missing SVG for referenced asset: ${svg}`);
@@ -278,10 +299,11 @@ function validateAssets(markdownFiles) {
 
   for (const svg of svgs) {
     const base = svg.replace(/\.svg$/, '');
-    if (refs.size > 0 && !referencedBases.has(base)) warn(`Orphaned asset: ${svg}`);
+    if (trackedBases.size > 0 && !trackedBases.has(base)) warn(`Orphaned asset: ${svg}`);
   }
 
   if (brokenRefs === 0 && refs.size > 0) pass(`${refs.size} image refs all resolve`);
+  if (plannedBases.size > 0) pass(`${plannedBases.size} companion asset(s) declared in _paragraph-plan.md`);
   pass(`_assets/: ${svgs.length} SVGs, ${pngs.length} PNGs`);
 }
 
@@ -346,7 +368,7 @@ function validatePartA() {
   }
 
   hasFile('build_pdf.py') ? pass('build_pdf.py') : fail('MISSING build_pdf.py');
-  validateAssets(markdownFiles);
+  validateAssets(markdownFiles, { includePlannedAssets: mode === 'complete' });
   validateReviewAndQualityRef();
 }
 

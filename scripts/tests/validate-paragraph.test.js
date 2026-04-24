@@ -83,7 +83,7 @@ function setupPartA(folderName = '9.9.1 Theory', kind = 'theory') {
   return dir;
 }
 
-function setupPartB(folderName = '9.9.1 Theory') {
+function setupPartB(folderName = '9.9.1 Theory', options = {}) {
   const dir = paragraphDir(folderName);
   const parNr = folderName.split(' ')[0];
   const parName = folderName.substring(parNr.length + 1);
@@ -126,7 +126,7 @@ function setupPartB(folderName = '9.9.1 Theory') {
 
   writeText(
     path.join(dir, '_paragraph-plan.md'),
-    [
+    options.planContent || [
       '# Plan',
       '## Procedure-stappen-plan',
       '## Visuelen-toewijzing',
@@ -187,6 +187,32 @@ describe('validate-paragraph.js', () => {
     expect(exitCode).toBe(0);
     expect(output).toContain('24/24 required Part B files present');
     expect(output).toContain('PASSED all checks');
+  });
+
+  test('complete mode accepts companion-only assets declared in _paragraph-plan.md', () => {
+    const dir = setupPartA();
+    setupPartB('9.9.1 Theory', {
+      planContent: [
+        '# Plan',
+        '## Visuals plan',
+        '| Filename | Used by |',
+        '|---|---|',
+        '| `9.9.1_news_woningtekort.svg/png` | nieuws |',
+        '## Procedure-stappen-plan',
+        '## Visuelen-toewijzing',
+        '| Visual | presentatie | vaardigheden | voorkennis | samenvatting |',
+        '|---|---|---|---|---|',
+        '| `9.9.1_news_woningtekort.png` | - | - | - | - |',
+        '## Terminologie',
+      ].join('\n'),
+    });
+    writeText(path.join(dir, '_assets', '9.9.1_news_woningtekort.svg'), '<svg></svg>');
+    writeText(path.join(dir, '_assets', '9.9.1_news_woningtekort.png'), 'png');
+
+    const { exitCode, output } = run(dir, 'complete');
+    expect(exitCode).toBe(0);
+    expect(output).toContain('companion asset(s) declared in _paragraph-plan.md');
+    expect(output).not.toContain('Orphaned asset: 9.9.1_news_woningtekort.svg');
   });
 
   test('complete mode fails on a Part A-only paragraph', () => {

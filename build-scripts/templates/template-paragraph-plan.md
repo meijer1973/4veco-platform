@@ -22,6 +22,7 @@ List the 5-8 key concepts that this paragraph teaches. Every builder draws from 
 ## Visuals plan
 
 List every SVG visual needed across all builders. Each visual is built once in Phase 4b and stored in `_assets/`.
+For companion-only visuals, always write the full file name with extension somewhere in the plan (for example `X.Y.Z_news_topic.svg/png` here and `X.Y.Z_news_topic.png` in the visual-assignment table) so `validate-paragraph.js --mode complete` can verify it instead of flagging it as an orphan.
 
 | Filename | Graph type (economic-graph.md) | Used by | Description | Parameters |
 |---|---|---|---|---|
