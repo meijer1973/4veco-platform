@@ -1,8 +1,22 @@
 # Platform Team Roadmap
 
 Generated: 2026-04-23  
-Updated: 2026-04-24 after completing Sprint P1.2 companion scaling, clearing the 1.1.2 probe materials, and reprioritizing companion layout/UI  
+Updated: 2026-04-24 after moving the sprint ledger to the top and reconciling sprint order with current roadmap priority  
 Source: split from `knowledge/three-month-roadmap.md` after Sprint 0.5 sign-off
+
+## Sprint Ledger
+
+Order reflects current execution priority, not just sprint number.
+
+| Sprint | Name | Completed | Current State |
+|--------|------|-----------|---------------|
+| 0.5 | Phase 0 Green Gate | yes | Signed off for Part A textbook/book production. |
+| P1.1 | Book 1 Companion Proof Sprint | yes | `1.1.1` companion path proven end-to-end. |
+| P1.2 | Companion Scaling And Handoff Sprint | yes | `1.1.2` passed as a technical probe; its test materials were removed for didactic rebuild. |
+| P1.6 | Companion Layout And Front-End Integration Sprint | no | Current companion priority; improve layout/usability through platform-owned code paths before bulk scaling. |
+| P1.3 | Internal Review Dashboard Sprint | no | Planned next; developer-facing HTML overview for project health and open quality issues. |
+| P1.4 | Reference Data Quality Sprint | no | Planned; clean unit/term/exam-link backlog. |
+| P1.5 | CI And Health Check Routine Sprint | no | Planned; make routine health checks harder to skip. |
 
 Detailed bootstrap plan for the first Book 1 companion MVP:
 
@@ -81,18 +95,6 @@ Definition of complete:
 - The sprint exit criteria are met.
 - Relevant checks have run or the reason for not running them is written down.
 - Any remaining risks are either resolved, moved to a later sprint, or recorded as escalation triggers.
-
-## Sprint Ledger
-
-| Sprint | Name | Completed | Current State |
-|--------|------|-----------|---------------|
-| 0.5 | Phase 0 Green Gate | yes | Signed off for Part A textbook/book production. |
-| P1.1 | Book 1 Companion Proof Sprint | yes | `1.1.1` companion path proven end-to-end. |
-| P1.2 | Companion Scaling And Handoff Sprint | yes | `1.1.2` passed as a technical probe; its test materials were removed for didactic rebuild. |
-| P1.3 | Internal Review Dashboard Sprint | no | Planned; developer-facing HTML overview for project health and open quality issues. |
-| P1.4 | Reference Data Quality Sprint | no | Planned; clean unit/term/exam-link backlog. |
-| P1.5 | CI And Health Check Routine Sprint | no | Planned; make routine health checks harder to skip. |
-| P1.6 | Companion Layout And Front-End Integration Sprint | no | Current companion priority; improve layout/usability through platform-owned code paths before bulk scaling. |
 
 ## Sprint Details
 
