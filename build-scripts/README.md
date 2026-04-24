@@ -13,7 +13,6 @@ build-scripts/
 ├── templates/      reusable scaffolds to copy when starting a new paragraph
 ├── content/
 │   ├── book-1/     paragraph-specific builders for Book 1 and onward
-│   ├── module-1/   paragraph-specific builders for older module-era work
 │   └── module-3/   legacy paragraph-specific builders kept as references
 └── archive/        legacy / one-off scripts kept for reference
 ```
@@ -68,12 +67,11 @@ Starting points for new paragraph builders.
 | `templates/template-B_voorkennis.js` | Scaffold for `uitleg voorkennis.docx` builder |
 | `templates/template-paragraph-plan.md` | Copy into paragraph folder as `_paragraph-plan.md` during Phase 4a |
 
-### 4. Content — `content/book-N/`, `content/module-N/`
+### 4. Content — `content/book-N/`, `content/module-3/`
 
 Paragraph-specific builders. Each `.js` file builds a single asset (presentatie, voorkennis, vaardigheden, nieuws, inoefening, opgaven, samenvatting) for one paragraph. Naming:
 
 - `content/book-1/b1-XYZ-<asset>.js` — Book 1 builder for paragraph 1.X.Y
-- `content/module-1/m1-XYZ-<asset>.js` — older module-era builder for paragraph 1.X.Y
 - `content/module-3/<asset>-XYZ-<slug>.js` — legacy reference builders kept for older material
 
 When starting a new paragraph, copy the closest existing builder from the corresponding `content/` subfolder, replace the content section, and run. New book work should prefer `content/book-N/`.

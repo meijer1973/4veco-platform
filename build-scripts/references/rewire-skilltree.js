@@ -170,7 +170,7 @@ function buildBaseElementsFile() {
 }
 
 function rewireActiveSkillsFiles(map) {
-  const dirs = ['source-data/module-1/skilltree', 'source-data/module-3/skilltree'];
+  const dirs = ['source-data/module-3/skilltree'];
   const paths = [];
   for (const dir of dirs) {
     const abs = path.join(REPO_ROOT, dir);
