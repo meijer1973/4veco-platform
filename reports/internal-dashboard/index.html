@@ -186,7 +186,7 @@
     <div class="internal-mark">Internal Dashboard</div>
     <h1>4veco Project Dashboard</h1>
     <p>Developer-facing overview generated from team roadmaps and platform quality reports. This page is not student-facing and must stay out of lesson output.</p>
-    <p>Generated: 2026-04-24T18:53:05.530Z</p>
+    <p>Generated: 2026-04-24T20:37:04.552Z</p>
   </header>
   <main>
     <nav class="tabs" role="tablist" aria-label="Team dashboard tabs">
@@ -250,7 +250,7 @@
           <strong>Lessen roadmap</strong>
           <span class="pill ok">found</span>
           <code>../4veco-lessen/lessen-team-roadmap.md</code>
-          <p>2026-04-24 after companion pilot review, layout/UI reprioritization, visual-variant direction, and L1.3A-C split</p>
+          <p>2026-04-24 after companion pilot review, layout/UI reprioritization, visual-variant direction, L1.3A-C split, and L1.3B platform integration (news variant system, symmetry validator, game-visuals decision)</p>
           <p>Sprint 0.5 is signed off for Part A textbook/book production.</p>
         </li></ul>
       <h3>Sprint Ledger</h3>
@@ -336,67 +336,85 @@
       <div class="dashboard-grid">
         <article class="category">
           <strong>1</strong>
-          <h3>Bronprobleem</h3>
-          <p>Underlying source is missing, stale, contradictory, or unsuitable.</p>
+          <h3>Inspection And Accountability</h3>
+          <p>Evidence, traceability, coverage, and proof that materials meet school, inspection, and exam-program expectations.</p>
         </article>
 
         <article class="category">
           <strong>1</strong>
-          <h3>Extractieprobleem</h3>
-          <p>Source exists but extraction/parsing produced incomplete or bad data.</p>
+          <h3>Reference Quality</h3>
+          <p>Correctness, freshness, deduplication, source validity, unit quality, term quality, and exam-code links.</p>
         </article>
 
         <article class="category">
           <strong>1</strong>
-          <h3>Claimprobleem</h3>
-          <p>Generated or authored claim is unsupported, too broad, or conflicts with evidence.</p>
-        </article>
-
-        <article class="category">
-          <strong>2</strong>
-          <h3>Interpretatieprobleem</h3>
-          <p>Data is present but interpreted incorrectly in planning, reports, or material logic.</p>
+          <h3>Didactic Quality</h3>
+          <p>Whether the right skills, complexes, goals, sequence, cognitive load, and misconceptions are handled efficiently.</p>
         </article>
 
         <article class="category">
           <strong>1</strong>
-          <h3>Tekstprobleem</h3>
-          <p>Wording, clarity, terminology, or student/teacher explanation quality needs work.</p>
+          <h3>Assessment And Exam Fit</h3>
+          <p>Alignment with CvTE-style demands, question types, answer models, target skills, and exam realism.</p>
+        </article>
+
+        <article class="category">
+          <strong>0</strong>
+          <h3>Student And Teacher Experience</h3>
+          <p>Readability, navigation, visuals, games, differentiation, teacher readiness, and classroom usability.</p>
+        </article>
+
+        <article class="category">
+          <strong>1</strong>
+          <h3>Platform Reliability</h3>
+          <p>Repeatability and trustworthiness of generators, validators, deploys, links, tests, and reporting routines.</p>
+        </article>
+
+        <article class="category">
+          <strong>1</strong>
+          <h3>Production Readiness</h3>
+          <p>Release and scaling blockers: incomplete artifacts, unresolved flags, manual steps, rebuild gaps, and known risks.</p>
+        </article>
+
+        <article class="category">
+          <strong>0</strong>
+          <h3>Innovation Transfer</h3>
+          <p>Whether collab experiments are accepted, rejected, revised, or migrated into production workflows.</p>
         </article></div>
       <h3>Known Platform Quality-Gate Issues</h3>
       <ul>
         <li>
-          <span class="status open">bronprobleem</span>
+          <span class="status open">reference_quality</span>
           News source URLs are not truly validated
           <code>knowledge/platform-team-companion-quality-gate-review.md</code>
         </li>
 
         <li>
-          <span class="status open">extractieprobleem</span>
+          <span class="status open">inspection_accountability</span>
           Complete-mode quality refs can be stale
           <code>knowledge/platform-team-companion-quality-gate-review.md</code>
         </li>
 
         <li>
-          <span class="status open">tekstprobleem</span>
+          <span class="status open">production_readiness</span>
           Review flags are not surfaced as scale blockers
           <code>knowledge/platform-team-companion-quality-gate-review.md</code>
         </li>
 
         <li>
-          <span class="status open">interpretatieprobleem</span>
+          <span class="status open">didactic_quality</span>
           Plan-to-output alignment is not enforced
           <code>knowledge/platform-team-companion-quality-gate-review.md</code>
         </li>
 
         <li>
-          <span class="status open">interpretatieprobleem</span>
+          <span class="status open">platform_reliability</span>
           Browser smoke checks are not part of the repeatable gate
           <code>knowledge/platform-team-companion-quality-gate-review.md</code>
         </li>
 
         <li>
-          <span class="status open">claimprobleem</span>
+          <span class="status open">assessment_exam_fit</span>
           Game-data tests are structural, not content-quality checks
           <code>knowledge/platform-team-companion-quality-gate-review.md</code>
         </li></ul>

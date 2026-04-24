@@ -244,11 +244,14 @@ Boundary:
 
 Issue categories:
 
-- bronprobleem: the underlying source is missing, stale, contradictory, or unsuitable
-- extractieprobleem: the source exists but the extraction/parsing layer produced bad or incomplete data
-- claimprobleem: a generated or authored claim is unsupported, too broad, or conflicts with evidence
-- interpretatieprobleem: the data is present but interpreted incorrectly in planning, reports, or material logic
-- tekstprobleem: wording, clarity, terminology, or student/teacher explanation quality needs work
+- Inspection And Accountability: evidence, traceability, coverage, and proof that materials meet school, inspection, and exam-program expectations.
+- Reference Quality: correctness, freshness, deduplication, source validity, unit quality, term quality, and exam-code links.
+- Didactic Quality: whether the right skills, complexes, goals, sequence, cognitive load, and misconceptions are handled efficiently.
+- Assessment And Exam Fit: alignment with CvTE-style demands, question types, answer models, target skills, and exam realism.
+- Student And Teacher Experience: readability, navigation, visuals, games, differentiation, teacher readiness, and classroom usability.
+- Platform Reliability: repeatability and trustworthiness of generators, validators, deploys, links, tests, and reporting routines.
+- Production Readiness: release and scaling blockers, including incomplete artifacts, unresolved flags, manual steps, rebuild gaps, and known risks.
+- Innovation Transfer: whether collab experiments are accepted, rejected, revised, or migrated into production workflows.
 
 Dashboard scope:
 
@@ -297,7 +300,7 @@ Exit criteria:
 
 - A first internal HTML dashboard can be generated locally. Done.
 - It has separate tabs for Platform, Lessen, and Innovation. Done.
-- It shows sprint completion status and open issues by the five categories above. Done.
+- It shows sprint completion status and open issues by the eight categories above. Done.
 - It lists each tab's source roadmap and last known status. Done.
 - It clearly labels itself as internal/developer-facing. Done.
 - The dashboard generation path is documented and does not touch student-facing output. Done; output stays under `reports/internal-dashboard/`.
@@ -405,7 +408,7 @@ Exit criteria:
 - The actual educational writing for Book 2 Part A.
 - Companion layout/front-end direction after handoff to the lessen team.
 - Bulk companion production across many paragraphs before the MVP is proven.
-- Public presentation of internal quality categories such as bronprobleem, extractieprobleem, claimprobleem, interpretatieprobleem, and tekstprobleem.
+- Public presentation of internal quality categories and issue status from the developer-facing dashboard.
 
 ## Escalation Triggers
 

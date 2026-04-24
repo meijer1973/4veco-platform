@@ -57,29 +57,44 @@ const TEAM_TABS = [
 
 const ISSUE_CATEGORIES = [
   {
-    id: 'bronprobleem',
-    label: 'Bronprobleem',
-    description: 'Underlying source is missing, stale, contradictory, or unsuitable.',
+    id: 'inspection_accountability',
+    label: 'Inspection And Accountability',
+    description: 'Evidence, traceability, coverage, and proof that materials meet school, inspection, and exam-program expectations.',
   },
   {
-    id: 'extractieprobleem',
-    label: 'Extractieprobleem',
-    description: 'Source exists but extraction/parsing produced incomplete or bad data.',
+    id: 'reference_quality',
+    label: 'Reference Quality',
+    description: 'Correctness, freshness, deduplication, source validity, unit quality, term quality, and exam-code links.',
   },
   {
-    id: 'claimprobleem',
-    label: 'Claimprobleem',
-    description: 'Generated or authored claim is unsupported, too broad, or conflicts with evidence.',
+    id: 'didactic_quality',
+    label: 'Didactic Quality',
+    description: 'Whether the right skills, complexes, goals, sequence, cognitive load, and misconceptions are handled efficiently.',
   },
   {
-    id: 'interpretatieprobleem',
-    label: 'Interpretatieprobleem',
-    description: 'Data is present but interpreted incorrectly in planning, reports, or material logic.',
+    id: 'assessment_exam_fit',
+    label: 'Assessment And Exam Fit',
+    description: 'Alignment with CvTE-style demands, question types, answer models, target skills, and exam realism.',
   },
   {
-    id: 'tekstprobleem',
-    label: 'Tekstprobleem',
-    description: 'Wording, clarity, terminology, or student/teacher explanation quality needs work.',
+    id: 'student_teacher_experience',
+    label: 'Student And Teacher Experience',
+    description: 'Readability, navigation, visuals, games, differentiation, teacher readiness, and classroom usability.',
+  },
+  {
+    id: 'platform_reliability',
+    label: 'Platform Reliability',
+    description: 'Repeatability and trustworthiness of generators, validators, deploys, links, tests, and reporting routines.',
+  },
+  {
+    id: 'production_readiness',
+    label: 'Production Readiness',
+    description: 'Release and scaling blockers: incomplete artifacts, unresolved flags, manual steps, rebuild gaps, and known risks.',
+  },
+  {
+    id: 'innovation_transfer',
+    label: 'Innovation Transfer',
+    description: 'Whether collab experiments are accepted, rejected, revised, or migrated into production workflows.',
   },
 ];
 
@@ -205,11 +220,13 @@ function parseRoadmap(source) {
 
 function categorizeIssue(title) {
   const t = title.toLowerCase();
-  if (t.includes('source') || t.includes('url')) return 'bronprobleem';
-  if (t.includes('quality ref')) return 'extractieprobleem';
-  if (t.includes('game-data') || t.includes('content-quality')) return 'claimprobleem';
-  if (t.includes('review flags') || t.includes('wording')) return 'tekstprobleem';
-  return 'interpretatieprobleem';
+  if (t.includes('source') || t.includes('url')) return 'reference_quality';
+  if (t.includes('quality ref')) return 'inspection_accountability';
+  if (t.includes('game-data') || t.includes('content-quality')) return 'assessment_exam_fit';
+  if (t.includes('review flags') || t.includes('manual')) return 'production_readiness';
+  if (t.includes('plan-to-output') || t.includes('alignment')) return 'didactic_quality';
+  if (t.includes('browser') || t.includes('gate') || t.includes('test')) return 'platform_reliability';
+  return 'student_teacher_experience';
 }
 
 function parseQualityIssues() {

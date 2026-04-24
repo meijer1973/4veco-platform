@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-24T18:53:05.530Z",
+  "generatedAt": "2026-04-24T20:37:04.552Z",
   "internalOnly": true,
   "teams": [
     {
@@ -128,7 +128,7 @@
           "exists": true,
           "absolutePath": "C:/Projects/4veco/4veco-lessen/lessen-team-roadmap.md",
           "generated": "2026-04-23",
-          "updated": "2026-04-24 after companion pilot review, layout/UI reprioritization, visual-variant direction, and L1.3A-C split",
+          "updated": "2026-04-24 after companion pilot review, layout/UI reprioritization, visual-variant direction, L1.3A-C split, and L1.3B platform integration (news variant system, symmetry validator, game-visuals decision)",
           "scope": "- `uitleg voorkennis.html`",
           "summary": "Sprint 0.5 is signed off for Part A textbook/book production.",
           "sprints": [
@@ -614,65 +614,83 @@
   ],
   "issueCategories": [
     {
-      "id": "bronprobleem",
-      "label": "Bronprobleem",
-      "description": "Underlying source is missing, stale, contradictory, or unsuitable.",
+      "id": "inspection_accountability",
+      "label": "Inspection And Accountability",
+      "description": "Evidence, traceability, coverage, and proof that materials meet school, inspection, and exam-program expectations.",
       "count": 1
     },
     {
-      "id": "extractieprobleem",
-      "label": "Extractieprobleem",
-      "description": "Source exists but extraction/parsing produced incomplete or bad data.",
+      "id": "reference_quality",
+      "label": "Reference Quality",
+      "description": "Correctness, freshness, deduplication, source validity, unit quality, term quality, and exam-code links.",
       "count": 1
     },
     {
-      "id": "claimprobleem",
-      "label": "Claimprobleem",
-      "description": "Generated or authored claim is unsupported, too broad, or conflicts with evidence.",
+      "id": "didactic_quality",
+      "label": "Didactic Quality",
+      "description": "Whether the right skills, complexes, goals, sequence, cognitive load, and misconceptions are handled efficiently.",
       "count": 1
     },
     {
-      "id": "interpretatieprobleem",
-      "label": "Interpretatieprobleem",
-      "description": "Data is present but interpreted incorrectly in planning, reports, or material logic.",
-      "count": 2
+      "id": "assessment_exam_fit",
+      "label": "Assessment And Exam Fit",
+      "description": "Alignment with CvTE-style demands, question types, answer models, target skills, and exam realism.",
+      "count": 1
     },
     {
-      "id": "tekstprobleem",
-      "label": "Tekstprobleem",
-      "description": "Wording, clarity, terminology, or student/teacher explanation quality needs work.",
+      "id": "student_teacher_experience",
+      "label": "Student And Teacher Experience",
+      "description": "Readability, navigation, visuals, games, differentiation, teacher readiness, and classroom usability.",
+      "count": 0
+    },
+    {
+      "id": "platform_reliability",
+      "label": "Platform Reliability",
+      "description": "Repeatability and trustworthiness of generators, validators, deploys, links, tests, and reporting routines.",
       "count": 1
+    },
+    {
+      "id": "production_readiness",
+      "label": "Production Readiness",
+      "description": "Release and scaling blockers: incomplete artifacts, unresolved flags, manual steps, rebuild gaps, and known risks.",
+      "count": 1
+    },
+    {
+      "id": "innovation_transfer",
+      "label": "Innovation Transfer",
+      "description": "Whether collab experiments are accepted, rejected, revised, or migrated into production workflows.",
+      "count": 0
     }
   ],
   "issues": [
     {
       "title": "News source URLs are not truly validated",
-      "category": "bronprobleem",
+      "category": "reference_quality",
       "source": "knowledge/platform-team-companion-quality-gate-review.md"
     },
     {
       "title": "Complete-mode quality refs can be stale",
-      "category": "extractieprobleem",
+      "category": "inspection_accountability",
       "source": "knowledge/platform-team-companion-quality-gate-review.md"
     },
     {
       "title": "Review flags are not surfaced as scale blockers",
-      "category": "tekstprobleem",
+      "category": "production_readiness",
       "source": "knowledge/platform-team-companion-quality-gate-review.md"
     },
     {
       "title": "Plan-to-output alignment is not enforced",
-      "category": "interpretatieprobleem",
+      "category": "didactic_quality",
       "source": "knowledge/platform-team-companion-quality-gate-review.md"
     },
     {
       "title": "Browser smoke checks are not part of the repeatable gate",
-      "category": "interpretatieprobleem",
+      "category": "platform_reliability",
       "source": "knowledge/platform-team-companion-quality-gate-review.md"
     },
     {
       "title": "Game-data tests are structural, not content-quality checks",
-      "category": "claimprobleem",
+      "category": "assessment_exam_fit",
       "source": "knowledge/platform-team-companion-quality-gate-review.md"
     }
   ],
