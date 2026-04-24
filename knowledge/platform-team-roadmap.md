@@ -8,6 +8,10 @@ Detailed bootstrap plan for the first Book 1 companion MVP:
 
 - `knowledge/platform-team-companion-bootstrap-plan.md`
 
+Active companion scaling triage:
+
+- `knowledge/platform-team-sprint-p1.2-companion-scaling.md`
+
 ## Mission
 
 Own the platform guardrails that make material production trustworthy:
@@ -149,6 +153,7 @@ Prove that the Book 1 companion pattern scales beyond one paragraph without the 
 Current probe:
 
 - Selected paragraph: `1.1.2 Percentages en indexcijfers`.
+- Detailed triage note: `knowledge/platform-team-sprint-p1.2-companion-scaling.md`.
 - Reason: it is the next registered Book 1 paragraph in the proven chapter, has complete Part A outputs, and exposes Part B repeatability without adding a new chapter/layout variable.
 - Baseline result: `1.1.1` still passes `validate-paragraph.js --mode complete`.
 - Probe result: `1.1.2` passes its Part A checks but fails `--mode complete`/`--mode part-b` with 29 Part B errors.
