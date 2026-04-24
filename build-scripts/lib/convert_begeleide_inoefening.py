@@ -333,7 +333,7 @@ def render_callout_text(text):
     return clean
 
 
-def generate_html(opgaven, samenvatting, para_number, para_name):
+def generate_html(opgaven, samenvatting, para_number, para_name, asset_prefix="../../_assets"):
     """Generate the full HTML."""
 
     # Determine primary domain color
@@ -448,7 +448,7 @@ def generate_html(opgaven, samenvatting, para_number, para_name):
             # Dual coding: scaffold images
             images_html = ''
             for img_name in q.get('images', []):
-                images_html += f'          <figure class="asset-figure"><img src="../../_assets/{esc(img_name)}.svg" alt="{esc(img_name)}" class="asset-svg"></figure>\n'
+                images_html += f'          <figure class="asset-figure"><img src="{asset_prefix}/{esc(img_name)}.svg" alt="{esc(img_name)}" class="asset-svg"></figure>\n'
 
             questions_html += f'''
         <div class="question-card" id="{q['id']}">
@@ -823,13 +823,23 @@ def find_paragraph_info(folder_path):
 def process_paragraph(para_folder):
     para_number, para_name = find_paragraph_info(para_folder)
 
-    bi_folder = os.path.join(para_folder, '3. Oefenen', 'begeleide inoefening')
-    if not os.path.isdir(bi_folder):
+    legacy_bi_folder = os.path.join(para_folder, '3. Oefenen', 'begeleide inoefening')
+    flat_vragen = glob.glob(os.path.join(para_folder, '*begeleide inoefening*vragen*.docx'))
+    flat_antwoorden = glob.glob(os.path.join(para_folder, '*begeleide inoefening*antwoorden*.docx'))
+
+    if flat_vragen:
+        vragen_files = flat_vragen
+        antwoorden_files = flat_antwoorden
+        html_path = os.path.join(para_folder, f'{para_number} {para_name} \u2013 begeleide inoefening.html')
+        asset_prefix = '_assets'
+    elif os.path.isdir(legacy_bi_folder):
+        vragen_files = glob.glob(os.path.join(legacy_bi_folder, '*vragen*.docx'))
+        antwoorden_files = glob.glob(os.path.join(legacy_bi_folder, '*antwoorden*.docx'))
+        html_path = os.path.join(legacy_bi_folder, f'{para_number} {para_name} \u2013 begeleide inoefening.html')
+        asset_prefix = '../../_assets'
+    else:
         print(f'  SKIP {para_number}: no begeleide inoefening folder')
         return False
-
-    vragen_files = glob.glob(os.path.join(bi_folder, '*vragen*.docx'))
-    antwoorden_files = glob.glob(os.path.join(bi_folder, '*antwoorden*.docx'))
 
     if not vragen_files:
         print(f'  SKIP {para_number}: no vragen.docx')
@@ -851,10 +861,7 @@ def process_paragraph(para_folder):
     total_q = sum(len(o['questions']) for o in opgaven)
     total_ans = sum(1 for o in opgaven for q in o['questions'] if q['answer'])
 
-    html_content = generate_html(opgaven, samenvatting, para_number, para_name)
-
-    html_filename = f'{para_number} {para_name} \u2013 begeleide inoefening.html'
-    html_path = os.path.join(bi_folder, html_filename)
+    html_content = generate_html(opgaven, samenvatting, para_number, para_name, asset_prefix)
 
     with open(long_path(html_path), 'w', encoding='utf-8') as f:
         f.write(html_content)

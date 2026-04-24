@@ -65,6 +65,14 @@ function checkFile(htmlPath) {
 
 function checkReachability() {
     let reachErrors = 0;
+    const nonInteractiveSuffixes = [
+        ' – paragraaf.html',
+        ' – opgaven.html',
+        ' – antwoorden.html',
+        ' – samenvatting.html',
+        ' – toets.html',
+        ' – toetsmatrijs.html',
+    ];
 
     // Find all interactive HTML files in paragraph subfolders
     const interactiveFiles = findHtmlFiles(MODULE_ROOT).filter(f => {
@@ -72,6 +80,7 @@ function checkReachability() {
         const name = path.basename(f);
         // Skip index.html files and navigation pages
         if (name === 'index.html') return false;
+        if (nonInteractiveSuffixes.some(suffix => name.endsWith(suffix))) return false;
         // Only check files inside numbered paragraph folders (e.g. "3.1.1 ...")
         return /\d+\.\d+\.\d+/.test(rel) && !rel.includes('node_modules');
     });
@@ -80,12 +89,23 @@ function checkReachability() {
         const fileName = path.basename(file);
         const fileDir = path.dirname(file);
 
-        // Walk up to find the paragraph index.html
-        // Interactive files are in subfolders like "1. Voorbereiden/", "3. Oefenen/", etc.
-        const parDir = path.dirname(fileDir); // go up from e.g. "3. Oefenen" to paragraph root
+        // Walk up to find the paragraph index.html. Support both the legacy
+        // subfolder layout and the flat paragraph-root layout.
+        let parDir = fileDir;
+        let foundParagraphIndex = false;
+        while (parDir !== MODULE_ROOT) {
+            const candidateIndex = path.join(parDir, 'index.html');
+            const base = path.basename(parDir);
+            if (/^\d+\.\d+\.\d+\s+/.test(base) && fs.existsSync(candidateIndex)) {
+                foundParagraphIndex = true;
+                break;
+            }
+            const parent = path.dirname(parDir);
+            if (parent === parDir) break;
+            parDir = parent;
+        }
+        if (!foundParagraphIndex) continue;
         const parIndex = path.join(parDir, 'index.html');
-
-        if (!fs.existsSync(parIndex)) continue; // no index.html to check against
 
         const indexContent = fs.readFileSync(parIndex, 'utf8');
 

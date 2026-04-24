@@ -4,6 +4,11 @@
  *
  * Usage:
  *   node scripts/check-book.js [--paragraph-mode auto|part-a|part-b|complete] [--verbose] <book-folder-path>
+ *
+ * Default paragraph mode is `part-a`. Book health should stay anchored to the
+ * textbook/chapter gate while companion MVP work is still in progress on
+ * individual paragraphs. Use `--paragraph-mode complete` explicitly when the
+ * goal is to validate a full paragraph pack.
  */
 
 'use strict';
@@ -22,7 +27,7 @@ function usage() {
 function parseArgs(argv) {
   const options = {
     bookPath: null,
-    paragraphMode: 'auto',
+    paragraphMode: 'part-a',
     skipChapters: false,
     skipParagraphs: false,
     verbose: false,

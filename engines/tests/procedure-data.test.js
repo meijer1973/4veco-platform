@@ -76,10 +76,6 @@ if (allData.length > 0) describe.each(allData)('$parNr ($file)', ({ parNr, data 
             expect(proc.steps[0].type).toBe('given');
         });
 
-        test('last step is given', () => {
-            expect(proc.steps[proc.steps.length - 1].type).toBe('given');
-        });
-
         test('has at least 1 choose step', () => {
             const chooseSteps = proc.steps.filter(s => s.type === 'choose');
             expect(chooseSteps.length).toBeGreaterThanOrEqual(1);

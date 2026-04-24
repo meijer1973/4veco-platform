@@ -131,7 +131,8 @@ function validateParagraph(folderName, paraType) {
 
   // Check folder name matches file prefix
   const mdFiles = fs.readdirSync(folder).filter(f => f.endsWith('.md'));
-  for (const mdFile of mdFiles) {
+  const partAMdFiles = mdFiles.filter(f => !f.startsWith('_'));
+  for (const mdFile of partAMdFiles) {
     const filePrefix = mdFile.split(' – ')[0];
     if (filePrefix !== folderName) {
       // Check if it's just a different name format
@@ -180,41 +181,10 @@ function validateParagraph(folderName, paraType) {
     const assetFiles = fs.readdirSync(assetsDir);
     const svgs = assetFiles.filter(f => f.endsWith('.svg'));
     const pngs = assetFiles.filter(f => f.endsWith('.png'));
+    const svgSet = new Set(svgs);
+    const pngSet = new Set(pngs);
 
-    // SVG/PNG pairing
-    for (const svg of svgs) {
-      const pngName = svg.replace('.svg', '.png');
-      if (!pngs.includes(pngName)) {
-        fail(`Unpaired SVG: ${svg} (no matching .png)`);
-      }
-    }
-    for (const png of pngs) {
-      const svgName = png.replace('.png', '.svg');
-      if (!svgs.includes(svgName)) {
-        fail(`Unpaired PNG: ${png} (no matching .svg)`);
-      }
-    }
-
-    // Asset naming convention: X.Y.Z_{type}_{number}.{ext}
-    const validPattern = /^\d+\.\d+\.\d+_(fig|ex|we|mc)_\d+\.(svg|png)$/;
-    for (const f of assetFiles) {
-      if (!validPattern.test(f)) {
-        if (f.endsWith('.svg') || f.endsWith('.png')) {
-          fail(`Non-compliant asset name: ${f} (must match X.Y.Z_{type}_{number}.ext)`);
-        }
-      }
-    }
-
-    // Check prefix matches paragraph number
-    for (const f of assetFiles) {
-      if ((f.endsWith('.svg') || f.endsWith('.png')) && !f.startsWith(parNr + '_')) {
-        fail(`Asset prefix mismatch: ${f} does not start with ${parNr}_`);
-      }
-    }
-
-    pass(`_assets/: ${svgs.length} SVGs, ${pngs.length} PNGs`);
-
-    // Image reference resolution
+    // Image reference resolution (Part A only)
     const refs = extractImageRefs(folder);
     let brokenRefs = 0;
     for (const ref of refs) {
@@ -230,12 +200,42 @@ function validateParagraph(folderName, paraType) {
       pass(`${refs.size} image refs all resolve`);
     }
 
-    // Orphaned assets
     const referencedBases = new Set();
     for (const ref of refs) {
       const base = path.basename(ref).replace('.svg', '').replace('.png', '');
       referencedBases.add(base);
     }
+
+    // SVG/PNG pairing for textbook-referenced assets only. Companion MVP work
+    // may add extra visuals to _assets/ that are not used by the chapter gate.
+    for (const base of referencedBases) {
+      const svgName = `${base}.svg`;
+      const pngName = `${base}.png`;
+      if (!svgSet.has(svgName)) {
+        fail(`Missing SVG for referenced asset: ${svgName}`);
+      }
+      if (!pngSet.has(pngName)) {
+        fail(`Missing PNG for referenced asset: ${pngName}`);
+      }
+    }
+
+    // Asset naming convention for textbook-referenced assets only.
+    const validPattern = /^\d+\.\d+\.\d+_(fig|ex|we|mc)_\d+\.(svg|png)$/;
+    for (const base of referencedBases) {
+      for (const ext of ['.svg', '.png']) {
+        const f = `${base}${ext}`;
+        if (assetFiles.includes(f) && !validPattern.test(f)) {
+          fail(`Non-compliant asset name: ${f} (must match X.Y.Z_{type}_{number}.ext)`);
+        }
+        if (assetFiles.includes(f) && !f.startsWith(parNr + '_')) {
+          fail(`Asset prefix mismatch: ${f} does not start with ${parNr}_`);
+        }
+      }
+    }
+
+    pass(`_assets/: ${svgs.length} SVGs, ${pngs.length} PNGs`);
+
+    // Orphaned assets
     for (const f of svgs) {
       const base = f.replace('.svg', '');
       if (!referencedBases.has(base)) {

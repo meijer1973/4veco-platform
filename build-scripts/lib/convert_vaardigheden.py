@@ -507,7 +507,7 @@ def render_callout(callout_type, text):
 '''
 
 
-def generate_html(data, para_number, para_name):
+def generate_html(data, para_number, para_name, asset_prefix="../_assets"):
     """Generate the full HTML string."""
     sections = data['sections']
     checklist = data['checklist']
@@ -599,7 +599,7 @@ def generate_html(data, para_number, para_name):
                 lines = edata.replace('\n', '<br>\n            ')
                 content_html += f'        <div class="formula-box">\n            {lines}\n        </div>\n'
             elif etype == 'asset_image':
-                content_html += f'        <figure class="asset-figure">\n          <img src="../_assets/{esc(edata)}.svg" alt="{esc(edata)}" class="asset-svg">\n        </figure>\n'
+                content_html += f'        <figure class="asset-figure">\n          <img src="{asset_prefix}/{esc(edata)}.svg" alt="{esc(edata)}" class="asset-svg">\n        </figure>\n'
             elif etype in ('callout_kernregel', 'callout_letop', 'callout_controle', 'callout_tip'):
                 content_html += render_callout(etype, edata)
             elif etype == 'samenvatting':
@@ -1005,14 +1005,23 @@ def process_paragraph(para_folder):
     """Process a single paragraph folder."""
     para_number, para_name = find_paragraph_info(para_folder)
 
-    # Find the vaardigheden docx
-    pattern = os.path.join(para_folder, '2. Leren', '*vaardigheden*.docx')
-    files = glob.glob(pattern)
-    if not files:
+    # Support both legacy subfolders and the flat Book layout.
+    flat_pattern = os.path.join(para_folder, '*uitleg vaardigheden*.docx')
+    legacy_pattern = os.path.join(para_folder, '2. Leren', '*vaardigheden*.docx')
+    flat_files = glob.glob(flat_pattern)
+    legacy_files = glob.glob(legacy_pattern)
+
+    if flat_files:
+        docx_path = flat_files[0]
+        html_path = os.path.join(para_folder, f'{para_number} {para_name} \u2013 uitleg vaardigheden.html')
+        asset_prefix = '_assets'
+    elif legacy_files:
+        docx_path = legacy_files[0]
+        html_path = os.path.join(para_folder, '2. Leren', f'{para_number} {para_name} \u2013 uitleg vaardigheden.html')
+        asset_prefix = '../_assets'
+    else:
         print(f'  SKIP {para_number}: no vaardigheden.docx found')
         return False
-
-    docx_path = files[0]
 
     try:
         data = build_sections_from_doc(docx_path)
@@ -1024,11 +1033,7 @@ def process_paragraph(para_folder):
         print(f'  SKIP {para_number}: no sections found')
         return False
 
-    html_content = generate_html(data, para_number, para_name)
-
-    # Write HTML file
-    html_filename = f'{para_number} {para_name} \u2013 uitleg vaardigheden.html'
-    html_path = os.path.join(para_folder, '2. Leren', html_filename)
+    html_content = generate_html(data, para_number, para_name, asset_prefix)
 
     with open(html_path, 'w', encoding='utf-8') as f:
         f.write(html_content)

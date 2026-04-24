@@ -79,6 +79,18 @@ function copyEngines() {
     const skilltreeDir = path.join(sharedDir, 'skilltree');
     if (!fs.existsSync(skilltreeDir)) fs.mkdirSync(skilltreeDir, { recursive: true });
 
+    // Reasoning shared metadata
+    const reasoningDir = path.join(sharedDir, 'reasoning');
+    if (!fs.existsSync(reasoningDir)) fs.mkdirSync(reasoningDir, { recursive: true });
+    const reasoningMetaSrc = path.join(PLATFORM_ROOT, 'source-data', 'module-3', 'reasoning', 'meta-categories.js');
+    const reasoningMetaDst = path.join(reasoningDir, 'meta-categories.js');
+    if (fs.existsSync(reasoningMetaSrc)) {
+        fs.writeFileSync(reasoningMetaDst, HEADER + fs.readFileSync(reasoningMetaSrc, 'utf8'), 'utf8');
+        console.log(`  ✓ reasoning/meta-categories.js`);
+    } else {
+        console.warn(`  WARN: reasoning/meta-categories.js source not found, skipping`);
+    }
+
     // explanations.js: straight copy.
     {
         const src = path.join(ENGINES_DIR, 'skilltree', 'explanations.js');

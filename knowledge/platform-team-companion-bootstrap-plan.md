@@ -1,6 +1,7 @@
 # Platform Team Plan: Book 1 Companion MVP Bootstrap
 
 Generated: 2026-04-23  
+Updated: 2026-04-23 after executing Sprint P1.1  
 Owner: Platform team  
 Scope: make the first flat-layout Part B MVP paragraph executable for Book 1 without pushing platform-bootstrap work onto the lessen team
 
@@ -24,9 +25,32 @@ After this plan is complete, the lessen team should be able to start the first B
 
 This plan does **not** promise that the full companion pipeline is already proven. It makes the first MVP build possible without platform ambiguity.
 
-## Confirmed Blockers
+## Status
 
-These are the platform-owned bootstrap blockers confirmed in the repo:
+Bootstrap status: complete. Proof sprint status: complete for the first MVP paragraph.
+
+Completed:
+
+- `BUILD-PARAGRAPH.md` now contains the Book 1 first-time setup guidance and the corrected ordering around `_paragraph-plan.md` and procedure data.
+- Book 1 now has a book-root `deploy-config.json`.
+- Book 1 now has a book-root `shared/` tree.
+- `build-scripts/content/book-1/` now exists.
+- `source-data/book-1/reasoning/` now exists.
+- the static `Lees dit als je niet weet hoe je moet beginnen met deze les.docx` source path is documented and the file has been seeded into `1.1.1`.
+- `loadConfig()` for Book 1 passes.
+- `validate-paragraph.js --mode complete` for `1.1.1` passes.
+- `scripts/deploy.js` now runs cleanly against Book 1, including link checks and data tests.
+- the flat-layout converters for voorkennis, vaardigheden, and begeleide inoefening now support Book 1 root-level companion files.
+
+Resolved during proof sprint:
+
+- `scripts/deploy.js` behaves cleanly and repeatably against Book 1 during real MVP work
+- the remaining Part B failures for `1.1.1` were platform-owned until fixed, and no platform blockers remain after the proof run
+- one complete paragraph can pass `validate-paragraph.js --mode complete`
+
+## Original Blockers (Now Resolved)
+
+These were the platform-owned bootstrap blockers confirmed in the repo:
 
 1. Book 1 has no `deploy-config.json` at the book root.
 2. Book 1 has no `shared/` tree at the book root.
@@ -56,9 +80,19 @@ Important nuance:
 
 Those stay with the lessen team once the bootstrap is in place.
 
+## Remaining Platform Questions
+
+The bootstrap layer is now in place. The platform-side question has narrowed to:
+
+> Is the Book 1 companion path stable under real MVP use, or does `1.1.1` still reveal platform-owned defects?
+
+The next phase is therefore not "create the floor" but "prove the floor."
+
 ## Deliverables
 
 ### Deliverable A: Docs Patch
+
+Status: complete.
 
 Patch `BUILD-PARAGRAPH.md` so the first Book 1 Part B run is not ambiguous.
 
@@ -77,6 +111,8 @@ Required doc changes:
 - Clarify that `scripts/deploy.js` writes to the target and is not a read-only probe
 
 ### Deliverable B: Book 1 Bootstrap
+
+Status: complete.
 
 Bootstrap the Book 1 target at:
 
@@ -105,6 +141,8 @@ Note:
 
 ### Deliverable C: Platform Repo Bootstrap
 
+Status: complete.
+
 Create the Book 1 platform-side directories:
 
 - `build-scripts/content/book-1/`
@@ -114,9 +152,33 @@ Optional but recommended:
 
 - add a small README or placeholder note in each so the intended use is obvious
 
+### Deliverable D: Proof Sprint Support
+
+Status: complete.
+
+Support the first MVP paragraph until the remaining failures are clearly separated into:
+
+- platform-owned defects
+- lessen-team content/data work
+
+Exit criteria:
+
+- Book 1 deploy/generator behavior is stable under real use
+- the platform bootstrap no longer hides any structural surprises
+- the roadmap can move from "bootstrap" to "proof sprint" language
+
+Observed result:
+
+- `check:platform` passes
+- `check:book` passes
+- `1.1.1` passes `validate-paragraph.js --mode complete`
+- `scripts/deploy.js` passes its link and data verification against Book 1
+
 ## Work Plan
 
 ### Step 1: Patch The Part B Spec
+
+Status: complete.
 
 Files:
 
@@ -136,6 +198,8 @@ Exit criteria:
 - the procedure-data step no longer depends implicitly on future vaardigheden writing
 
 ### Step 2: Create The Book 1 Manifest
+
+Status: complete.
 
 Files:
 
@@ -157,6 +221,8 @@ Exit criteria:
 
 ### Step 3: Create The Book 1 Shared Tree
 
+Status: complete.
+
 Path:
 
 - `..\4veco-lessen\Boek 1 - Grondslagen, vraag en aanbod\shared\`
@@ -176,6 +242,8 @@ Exit criteria:
 
 ### Step 4: Create The Book 1 Platform Directories
 
+Status: complete.
+
 Paths:
 
 - `build-scripts/content/book-1/`
@@ -187,6 +255,8 @@ Exit criteria:
 - Book 1 reasoning CSVs have a stable home from the first MVP onward
 
 ### Step 5: Document The Static File Seed Path
+
+Status: complete.
 
 Document the concrete source path for:
 
@@ -202,7 +272,9 @@ Exit criteria:
 
 ### Step 6: Validate The Bootstrap
 
-Do these checks after the bootstrap is in place.
+Status: complete.
+
+These checks have now been run successfully against the first Book 1 MVP paragraph.
 
 Safe validation checks:
 
@@ -212,35 +284,52 @@ Safe validation checks:
 node -e "const { loadConfig } = require('./build-scripts/lib/lib-deploy-config'); const cfg = loadConfig('../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod'); console.log(cfg.displayLabel); console.log(cfg.findParagraphFolder('1.1.1'));"
 ```
 
-2. Paragraph Part B/complete readiness check should still fail for content reasons, but not for missing book bootstrap:
+2. Paragraph proof check:
 
 ```powershell
-node scripts\validate-paragraph.js --mode part-b "..\4veco-lessen\Boek 1 - Grondslagen, vraag en aanbod\1.1 Hoofdstuk Economisch denken en rekenen\1.1.1 Schaarste en economisch denken"
+node scripts\validate-paragraph.js --mode complete "..\4veco-lessen\Boek 1 - Grondslagen, vraag en aanbod\1.1 Hoofdstuk Economisch denken en rekenen\1.1.1 Schaarste en economisch denken"
 ```
 
-Expected after bootstrap:
+Observed result:
 
-- still missing the 24 companion files
-- still missing `_paragraph-plan.md`
-- but no longer blocked by missing book-root setup assumptions
+- `1.1.1` passes complete mode
+- one non-blocking orphan-asset warning remains for `1.1.1_news_woningtekort.svg`
+- no bootstrap/platform assumptions block the paragraph anymore
 
-3. Optional deploy smoke test:
+3. Deploy proof check:
 
 ```powershell
 node scripts\deploy.js "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod"
 ```
 
-Use this only after the team accepts that it writes to the target.
+Observed result:
+
+- deploy completes successfully
+- link checks pass
+- data tests pass
 
 Exit criteria:
 
 - the platform bootstrap no longer blocks the lessen team from starting the MVP paragraph
+- the first MVP paragraph is now technically proven on the Book 1 path
+
+Current observed state for `1.1.1`:
+
+- `Lees dit...docx` is present
+- `index.html` is present
+- `wiskundevaardigheden.html` is present
+- `shared/skilltree/1.1.1.js` is present
+- all 24 required Part B files are present
+- all required shared game-data files are present
+- the paragraph passes complete-mode validation with one warning
 
 ## Recommended Ownership Split During Execution
 
 ### Platform Team Executes Now
 
-- Step 1 through Step 6 in this plan
+- Keep the bootstrap layer stable
+- verify `scripts/deploy.js` and validator behavior under real Book 1 MVP work
+- fix platform-owned blockers surfaced by `1.1.1`
 
 ### Lessen Team Can Work In Parallel
 
@@ -259,12 +348,14 @@ The handoff happens when:
 - `BUILD-PARAGRAPH.md` is patched
 - bootstrap validation passes
 
+That handoff is now active and proven for the first MVP paragraph. The next platform-owned phase is repeatability and scale, not bootstrap creation.
+
 At that point the lessen team should proceed with the first full Part B MVP build.
 
 ## Success Definition
 
 This plan is successful when the following statement is true:
 
-> The first Book 1 companion MVP paragraph may still fail for real content-build reasons, but it will no longer fail because the Book 1 platform/bootstrap layer is missing or ambiguous.
+> The first Book 1 companion MVP paragraph no longer fails because the Book 1 platform/bootstrap layer is missing or ambiguous, and the Book 1 path is proven end-to-end for one real paragraph.
 
 That is the right platform-team finish line for this phase.

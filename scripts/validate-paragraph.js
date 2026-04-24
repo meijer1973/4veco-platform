@@ -240,22 +240,6 @@ function validateAssets(markdownFiles) {
   const pngSet = new Set(pngs);
   const svgSet = new Set(svgs);
 
-  for (const svg of svgs) {
-    const png = svg.replace(/\.svg$/, '.png');
-    if (!pngSet.has(png)) fail(`Unpaired SVG: ${svg} (no matching .png)`);
-  }
-  for (const png of pngs) {
-    const svg = png.replace(/\.png$/, '.svg');
-    if (!svgSet.has(svg)) fail(`Unpaired PNG: ${png} (no matching .svg)`);
-  }
-
-  const assetPattern = new RegExp(`^${parNr.replace(/\./g, '\\.')}_(fig|ex|we|mc)_\\d+\\.(svg|png)$`);
-  for (const file of assetFiles) {
-    if ((file.endsWith('.svg') || file.endsWith('.png')) && !assetPattern.test(file)) {
-      fail(`Non-compliant asset name: ${file} (must match X.Y.Z_{type}_{number}.ext)`);
-    }
-  }
-
   const refs = extractImageRefs(markdownFiles);
   const referencedBases = new Set();
   let brokenRefs = 0;
@@ -273,6 +257,23 @@ function validateAssets(markdownFiles) {
       brokenRefs++;
     }
     referencedBases.add(path.basename(ref).replace(/\.(svg|png)$/i, ''));
+  }
+
+  for (const base of referencedBases) {
+    const svg = `${base}.svg`;
+    const png = `${base}.png`;
+    if (!svgSet.has(svg)) fail(`Missing SVG for referenced asset: ${svg}`);
+    if (!pngSet.has(png)) fail(`Missing PNG for referenced asset: ${png}`);
+  }
+
+  const assetPattern = new RegExp(`^${parNr.replace(/\./g, '\\.')}_(fig|ex|we|mc)_\\d+\\.(svg|png)$`);
+  for (const base of referencedBases) {
+    for (const ext of ['.svg', '.png']) {
+      const file = `${base}${ext}`;
+      if (assetFiles.includes(file) && !assetPattern.test(file)) {
+        fail(`Non-compliant asset name: ${file} (must match X.Y.Z_{type}_{number}.ext)`);
+      }
+    }
   }
 
   for (const svg of svgs) {
