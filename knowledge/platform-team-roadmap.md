@@ -1,21 +1,21 @@
 # Platform Team Roadmap
 
 Generated: 2026-04-23  
-Updated: 2026-04-24 after completing Sprint P1.3 internal dashboard MVP  
+Updated: 2026-04-24 after sorting sprint ledgers with open items first  
 Source: split from `knowledge/three-month-roadmap.md` after Sprint 0.5 sign-off
 
 ## Sprint Ledger
 
-Order reflects current platform execution priority, not just sprint number.
+Open items are listed first; completed items are kept below them.
 
 | Sprint | Name | Completed | Current State |
 |--------|------|-----------|---------------|
+| P1.4 | Reference Data Quality Sprint | no | Current platform priority; clean unit/term/exam-link backlog. |
+| P1.5 | CI And Health Check Routine Sprint | no | Planned; make routine health checks harder to skip. |
 | 0.5 | Phase 0 Green Gate | yes | Signed off for Part A textbook/book production. |
 | P1.1 | Book 1 Companion Proof Sprint | yes | `1.1.1` companion path proven end-to-end. |
 | P1.2 | Companion Scaling And Handoff Sprint | yes | `1.1.2` passed as a technical probe; its test materials were removed for didactic rebuild. |
 | P1.3 | Internal Review Dashboard Sprint | yes | Internal three-team dashboard MVP generates from team roadmap sources and quality-gate issues. |
-| P1.4 | Reference Data Quality Sprint | no | Current platform priority; clean unit/term/exam-link backlog. |
-| P1.5 | CI And Health Check Routine Sprint | no | Planned; make routine health checks harder to skip. |
 
 Detailed bootstrap plan for the first Book 1 companion MVP:
 

@@ -249,12 +249,12 @@ function parseQualityIssues() {
 function buildData() {
   const teams = TEAM_TABS.map((team) => {
     const roadmaps = team.roadmaps.map(parseRoadmap);
-    const sprints = roadmaps.flatMap((roadmap) =>
+    const sprints = sortSprintsOpenFirst(roadmaps.flatMap((roadmap) =>
       roadmap.sprints.map((sprint) => ({
         ...sprint,
         roadmap: roadmap.label,
       }))
-    );
+    ));
     return {
       ...team,
       roadmaps,
@@ -306,6 +306,18 @@ function buildData() {
       },
     ],
   };
+}
+
+function sortSprintsOpenFirst(sprints) {
+  return sprints
+    .map((sprint, index) => ({ ...sprint, index }))
+    .sort((a, b) => {
+      const aDone = a.completed === 'yes' ? 1 : 0;
+      const bDone = b.completed === 'yes' ? 1 : 0;
+      if (aDone !== bDone) return aDone - bDone;
+      return a.index - b.index;
+    })
+    .map(({ index, ...sprint }) => sprint);
 }
 
 function escapeHtml(value) {

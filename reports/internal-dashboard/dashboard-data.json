@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-24T20:37:04.552Z",
+  "generatedAt": "2026-04-24T20:50:52.268Z",
   "internalOnly": true,
   "teams": [
     {
@@ -14,10 +14,24 @@
           "exists": true,
           "absolutePath": "C:/Projects/4veco/4veco-platform/knowledge/platform-team-roadmap.md",
           "generated": "2026-04-23",
-          "updated": "2026-04-24 after completing Sprint P1.3 internal dashboard MVP",
+          "updated": "2026-04-24 after sorting sprint ledgers with open items first",
           "scope": "",
           "summary": "Sprint 0.5 is signed off for Part A textbook/book production, Sprint P1.1 has proven the first Book 1 companion paragraph path, and Sprint P1.2 has technically proven the pattern on a second Book 1 companion paragraph.",
           "sprints": [
+            {
+              "sprint": "P1.4",
+              "name": "Reference Data Quality Sprint",
+              "completed": "no",
+              "currentState": "Current platform priority; clean unit/term/exam-link backlog.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "P1.5",
+              "name": "CI And Health Check Routine Sprint",
+              "completed": "no",
+              "currentState": "Planned; make routine health checks harder to skip.",
+              "exitGate": ""
+            },
             {
               "sprint": "0.5",
               "name": "Phase 0 Green Gate",
@@ -45,25 +59,27 @@
               "completed": "yes",
               "currentState": "Internal three-team dashboard MVP generates from team roadmap sources and quality-gate issues.",
               "exitGate": ""
-            },
-            {
-              "sprint": "P1.4",
-              "name": "Reference Data Quality Sprint",
-              "completed": "no",
-              "currentState": "Current platform priority; clean unit/term/exam-link backlog.",
-              "exitGate": ""
-            },
-            {
-              "sprint": "P1.5",
-              "name": "CI And Health Check Routine Sprint",
-              "completed": "no",
-              "currentState": "Planned; make routine health checks harder to skip.",
-              "exitGate": ""
             }
           ]
         }
       ],
       "sprints": [
+        {
+          "sprint": "P1.4",
+          "name": "Reference Data Quality Sprint",
+          "completed": "no",
+          "currentState": "Current platform priority; clean unit/term/exam-link backlog.",
+          "exitGate": "",
+          "roadmap": "Platform roadmap"
+        },
+        {
+          "sprint": "P1.5",
+          "name": "CI And Health Check Routine Sprint",
+          "completed": "no",
+          "currentState": "Planned; make routine health checks harder to skip.",
+          "exitGate": "",
+          "roadmap": "Platform roadmap"
+        },
         {
           "sprint": "0.5",
           "name": "Phase 0 Green Gate",
@@ -95,22 +111,6 @@
           "currentState": "Internal three-team dashboard MVP generates from team roadmap sources and quality-gate issues.",
           "exitGate": "",
           "roadmap": "Platform roadmap"
-        },
-        {
-          "sprint": "P1.4",
-          "name": "Reference Data Quality Sprint",
-          "completed": "no",
-          "currentState": "Current platform priority; clean unit/term/exam-link backlog.",
-          "exitGate": "",
-          "roadmap": "Platform roadmap"
-        },
-        {
-          "sprint": "P1.5",
-          "name": "CI And Health Check Routine Sprint",
-          "completed": "no",
-          "currentState": "Planned; make routine health checks harder to skip.",
-          "exitGate": "",
-          "roadmap": "Platform roadmap"
         }
       ],
       "completedCount": 4,
@@ -128,7 +128,7 @@
           "exists": true,
           "absolutePath": "C:/Projects/4veco/4veco-lessen/lessen-team-roadmap.md",
           "generated": "2026-04-23",
-          "updated": "2026-04-24 after companion pilot review, layout/UI reprioritization, visual-variant direction, L1.3A-C split, and L1.3B platform integration (news variant system, symmetry validator, game-visuals decision)",
+          "updated": "2026-04-24 after companion pilot review, layout/UI reprioritization, visual-variant direction, L1.3A-C split, L1.3B platform integration (news variant system, symmetry validator, game-visuals decision), and L1.4-L1.6 pipeline-regression + layout-round-2 sprints inserted before scaling decision",
           "scope": "- `uitleg voorkennis.html`",
           "summary": "Sprint 0.5 is signed off for Part A textbook/book production.",
           "sprints": [
@@ -176,9 +176,30 @@
             },
             {
               "sprint": "L1.4",
+              "name": "First Pipeline Regression Paragraph",
+              "completed": "no",
+              "currentState": "Build one additional Book 1 companion paragraph against the L1.3A-C platform state to prove the pipeline still works on fresh content.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "L1.5",
+              "name": "Layout Round 2",
+              "completed": "no",
+              "currentState": "Tighten layout/UI based on the L1.3A-C usability review and anything L1.4 surfaced. Platform-owned only.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "L1.6",
+              "name": "Second Pipeline Regression Paragraph",
+              "completed": "no",
+              "currentState": "Build one more Book 1 companion paragraph after L1.5 to confirm the layout changes did not break the pipeline.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "L1.7",
               "name": "Post-Layout Scaling Decision",
               "completed": "no",
-              "currentState": "Decide whether to expand after L1.3A-C are platform-integrated, regenerated, and reviewed.",
+              "currentState": "Decide whether to expand broadly after L1.3A-C + L1.4-L1.6 prove the layout survives two independent paragraph builds.",
               "exitGate": ""
             },
             {
@@ -199,30 +220,6 @@
         }
       ],
       "sprints": [
-        {
-          "sprint": "L0.5",
-          "name": "Green Gate Handoff",
-          "completed": "yes",
-          "currentState": "Book 1 Part A and the platform/book health routine are green.",
-          "exitGate": "",
-          "roadmap": "Lessen roadmap"
-        },
-        {
-          "sprint": "L1.1",
-          "name": "First Companion Technical Pilot",
-          "completed": "yes",
-          "currentState": "`1.1.1` passes the current complete technical gate.",
-          "exitGate": "",
-          "roadmap": "Lessen roadmap"
-        },
-        {
-          "sprint": "L1.2",
-          "name": "Second Companion Technical Probe",
-          "completed": "yes",
-          "currentState": "`1.1.2` proved the technical pattern can repeat; probe materials were removed for didactic rebuild.",
-          "exitGate": "",
-          "roadmap": "Lessen roadmap"
-        },
         {
           "sprint": "L1.3A",
           "name": "Basic HTML Layout And Front-End Usability",
@@ -249,9 +246,33 @@
         },
         {
           "sprint": "L1.4",
+          "name": "First Pipeline Regression Paragraph",
+          "completed": "no",
+          "currentState": "Build one additional Book 1 companion paragraph against the L1.3A-C platform state to prove the pipeline still works on fresh content.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "L1.5",
+          "name": "Layout Round 2",
+          "completed": "no",
+          "currentState": "Tighten layout/UI based on the L1.3A-C usability review and anything L1.4 surfaced. Platform-owned only.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "L1.6",
+          "name": "Second Pipeline Regression Paragraph",
+          "completed": "no",
+          "currentState": "Build one more Book 1 companion paragraph after L1.5 to confirm the layout changes did not break the pipeline.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "L1.7",
           "name": "Post-Layout Scaling Decision",
           "completed": "no",
-          "currentState": "Decide whether to expand after L1.3A-C are platform-integrated, regenerated, and reviewed.",
+          "currentState": "Decide whether to expand broadly after L1.3A-C + L1.4-L1.6 prove the layout survives two independent paragraph builds.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
@@ -270,10 +291,34 @@
           "currentState": "Start Book 2 Part A only under the chapter/paragraph hard gates.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "L0.5",
+          "name": "Green Gate Handoff",
+          "completed": "yes",
+          "currentState": "Book 1 Part A and the platform/book health routine are green.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "L1.1",
+          "name": "First Companion Technical Pilot",
+          "completed": "yes",
+          "currentState": "`1.1.1` passes the current complete technical gate.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "L1.2",
+          "name": "Second Companion Technical Probe",
+          "completed": "yes",
+          "currentState": "`1.1.2` proved the technical pattern can repeat; probe materials were removed for didactic rebuild.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
         }
       ],
       "completedCount": 3,
-      "openCount": 6
+      "openCount": 9
     },
     {
       "id": "innovation",
