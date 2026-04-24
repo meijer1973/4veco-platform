@@ -77,6 +77,37 @@ html[data-theme="dark"] {
   --shadow-lift: 0 8px 24px rgba(0,0,0,0.4);
 }
 
+body[data-layout="begeleide-inoefening-v1"] {
+  --accent: var(--wiskundig);
+  --accent-lt: var(--wiskundig-tint);
+  --accent-dk: var(--wiskundig);
+  --accent-contrast: #ffffff;
+}
+body[data-accent-domain="economisch"],
+body[data-accent-domain="bedrijf"],
+body[data-accent-domain="arbeids"] {
+  --accent: var(--economisch);
+  --accent-lt: var(--economisch-tint);
+  --accent-dk: var(--economisch);
+}
+body[data-accent-domain="wiskunde"],
+body[data-accent-domain="markt"],
+body[data-accent-domain="marktwerk"] {
+  --accent: var(--wiskundig);
+  --accent-lt: var(--wiskundig-tint);
+  --accent-dk: var(--wiskundig);
+}
+body[data-accent-domain="grafisch"],
+body[data-accent-domain="overheid"],
+body[data-accent-domain="extern"] {
+  --accent: var(--grafisch);
+  --accent-lt: var(--grafisch-tint);
+  --accent-dk: var(--grafisch);
+}
+html[data-theme="dark"] body[data-layout="begeleide-inoefening-v1"] {
+  --accent-contrast: #07100b;
+}
+
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
@@ -204,6 +235,79 @@ html[data-theme="dark"] .domain-grafisch .nav-number { color: var(--bg); }
 .domain-wiskunde   .nav-badge { color: var(--wiskundig); }
 .domain-grafisch   .nav-badge { color: var(--grafisch); }
 
+/* Guided practice sidebar */
+.nav-opgave { margin-bottom: 3px; }
+.nav-opgave-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 18px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--ink);
+  cursor: pointer;
+  border-left: 3px solid transparent;
+  transition: background 0.15s, border-color 0.15s;
+}
+.nav-opgave-title:hover { background: var(--bg-card); }
+.nav-opgave.expanded .nav-opgave-title {
+  border-left-color: var(--accent);
+  background: color-mix(in oklab, var(--accent) 9%, var(--bg-lift));
+}
+.nav-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background: var(--accent);
+}
+.nav-opgave-label {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.nav-arrow {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  stroke: var(--ink-muted);
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: transform 0.2s;
+}
+.nav-opgave.expanded .nav-arrow { transform: rotate(180deg); }
+.nav-questions {
+  display: none;
+  padding: 2px 0 6px;
+}
+.nav-opgave.expanded .nav-questions { display: block; }
+.nav-q {
+  display: block;
+  padding: 6px 18px 6px 38px;
+  font-size: 11.5px;
+  color: var(--ink-soft);
+  border-left: 3px solid transparent;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background 0.1s, color 0.1s;
+}
+.nav-q:hover {
+  color: var(--ink);
+  background: var(--bg-card);
+}
+.nav-q.active {
+  color: var(--ink);
+  font-weight: 700;
+  border-left-color: var(--accent);
+  background: color-mix(in oklab, var(--accent) 8%, var(--bg-lift));
+}
+
 .sidebar-toggle {
   display: none;
   position: fixed; top: 12px; left: 12px; z-index: 20;
@@ -243,7 +347,8 @@ html[data-theme="dark"] .domain-grafisch .nav-number { color: var(--bg); }
 .hero-inner { max-width: 960px; margin: 0 auto; position: relative; }
 
 /* Back-to-overview link (injected) — mirrors the Instapquiz header style */
-.back-to-overview {
+.back-to-overview,
+.back-link {
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -255,8 +360,17 @@ html[data-theme="dark"] .domain-grafisch .nav-number { color: var(--bg); }
   margin-bottom: 10px;
   transition: color 0.15s;
 }
-.back-to-overview:hover { color: var(--ink); }
-.back-to-overview svg { flex-shrink: 0; }
+.back-to-overview:hover,
+.back-link:hover { color: var(--ink); }
+.back-to-overview svg,
+.back-link svg {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+}
 
 /* Theme toggle (injected) */
 .theme-toggle {
@@ -405,6 +519,253 @@ main {
   max-width: var(--content-max);
   margin: 0 auto;
   padding: 24px 40px 48px;
+}
+
+/* Guided practice content */
+body[data-layout="begeleide-inoefening-v1"] .hero-card {
+  border-top-color: var(--accent);
+  background: linear-gradient(180deg, var(--accent-lt), var(--bg-card));
+  min-height: 112px;
+}
+html[data-theme="dark"] body[data-layout="begeleide-inoefening-v1"] .hero-card {
+  background: linear-gradient(180deg, color-mix(in oklab, var(--accent) 18%, transparent), rgba(255,255,255,0.02));
+}
+body[data-layout="begeleide-inoefening-v1"] .hero-card-num,
+body[data-layout="begeleide-inoefening-v1"] .hero-card-count {
+  font-family: var(--mono);
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 1.1px;
+}
+body[data-layout="begeleide-inoefening-v1"] .hero-card-count {
+  font-size: 9px;
+  font-weight: 700;
+  margin-top: 8px;
+}
+
+.opgave-section {
+  margin-bottom: 44px;
+  scroll-margin-top: 1rem;
+}
+.opgave-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-bottom: 12px;
+  margin-bottom: 18px;
+  border-bottom: 1px solid var(--border);
+}
+.opgave-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  font-family: var(--mono);
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--accent);
+  flex-shrink: 0;
+  background: var(--accent-lt);
+  border: 1px solid color-mix(in oklab, var(--accent) 45%, var(--border));
+}
+html[data-theme="dark"] .opgave-num {
+  background: color-mix(in oklab, var(--accent) 13%, transparent);
+}
+.opgave-title-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.opgave-title {
+  order: 2;
+  font-family: var(--heading-font);
+  font-weight: var(--heading-weight);
+  font-style: var(--heading-style);
+  letter-spacing: var(--heading-letter);
+  font-size: 1.35rem;
+  line-height: 1.15;
+  color: var(--ink);
+  margin-top: 2px;
+}
+.opgave-badge {
+  order: 1;
+  align-self: flex-start;
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 3px;
+}
+.context-box,
+.fill-in,
+.answer-box {
+  background: var(--bg-inset);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: 6px;
+  padding: 12px 16px;
+  margin: 10px 0 14px;
+  font-family: var(--mono);
+  font-size: 13px;
+  line-height: 1.75;
+  color: var(--ink);
+}
+.opgave-intro {
+  font-size: 14px;
+  color: var(--ink-soft);
+  margin-bottom: 14px;
+  padding: 11px 14px;
+  background: var(--bg-lift);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--border-lift);
+  border-radius: 6px;
+}
+.question-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  margin-bottom: 16px;
+  overflow: hidden;
+  scroll-margin-top: 1rem;
+  box-shadow: var(--shadow-card);
+}
+.question-header {
+  padding: 15px 18px;
+  border-bottom: 1px solid var(--border);
+}
+.question-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  color: var(--accent);
+  margin-bottom: 5px;
+}
+.question-text {
+  font-size: 14px;
+  color: var(--ink);
+  line-height: 1.65;
+}
+.question-card .fill-in,
+.question-card .asset-figure {
+  margin-left: 18px;
+  margin-right: 18px;
+}
+.helper-section {
+  padding: 0 18px 12px;
+}
+.helper-section details,
+.answer-toggle {
+  border-radius: 6px;
+  margin-bottom: 8px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--bg-lift);
+}
+.helper-section details summary,
+.answer-toggle summary {
+  padding: 9px 12px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  user-select: none;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--ink);
+  background: color-mix(in oklab, var(--accent) 8%, var(--bg-lift));
+}
+.helper-section details summary::-webkit-details-marker,
+.answer-toggle summary::-webkit-details-marker {
+  display: none;
+}
+.helper-section details summary::before,
+.answer-toggle summary::before {
+  content: "\25B8";
+  font-size: 10px;
+  color: var(--accent);
+  transition: transform 0.2s;
+}
+.helper-section details[open] summary::before,
+.answer-toggle[open] summary::before {
+  transform: rotate(90deg);
+}
+.helper-section .detail-content,
+.answer-content {
+  padding: 11px 12px 13px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--ink-soft);
+  background: var(--bg-card);
+  border-top: 1px solid var(--border);
+}
+.helper-denkstappen summary { color: var(--wiskundig); }
+.helper-hint summary,
+.helper-kernregel summary { color: var(--gold); }
+.helper-formule summary { color: var(--economisch); }
+.helper-letop summary { color: var(--letop-ink); }
+.helper-controle summary { color: var(--controle-ink); }
+.helper-tip summary { color: var(--tip-ink); }
+.helper-formule .detail-content {
+  font-family: var(--mono);
+}
+.answer-toggle {
+  border-left: 3px solid var(--accent);
+  border-radius: 0;
+  border-right: 0;
+  border-bottom: 0;
+  margin: 0;
+}
+.answer-toggle summary {
+  color: var(--accent);
+  background: var(--accent-lt);
+}
+html[data-theme="dark"] .answer-toggle summary {
+  background: color-mix(in oklab, var(--accent) 13%, var(--bg-lift));
+}
+.answer-content {
+  padding: 16px 18px;
+}
+.answer-box {
+  margin: 0 0 10px;
+  border-left-color: var(--controle-ink);
+}
+.uitleg-box {
+  background: color-mix(in oklab, var(--gold) 8%, var(--bg-lift));
+  border-left: 3px solid var(--gold);
+  border-radius: 0 6px 6px 0;
+  padding: 11px 13px;
+  font-size: 13px;
+  line-height: 1.65;
+  color: var(--ink);
+}
+.samenvatting-section {
+  background: var(--bg-card);
+  border: 1px solid var(--border-lift);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 30px;
+  box-shadow: var(--shadow-card);
+}
+.samenvatting-caption {
+  background: var(--accent);
+  color: var(--accent-contrast);
+  padding: 10px 14px;
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+}
+html[data-theme="dark"] .samenvatting-caption {
+  background: color-mix(in oklab, var(--accent) 14%, transparent);
+  color: var(--accent);
 }
 
 /* ── Sections ──────────────────────────────────────────── */
@@ -763,6 +1124,15 @@ html[data-theme="dark"] .samenvatting-table caption.caption-grafisch {
   .hero-cards { grid-template-columns: 1fr 1fr; }
   main { padding: 18px 18px 32px; }
   .section-title { font-size: 1.15rem; }
+  .opgave-title { font-size: 1.15rem; }
+  .question-header,
+  .answer-content { padding-left: 14px; padding-right: 14px; }
+  .helper-section { padding-left: 14px; padding-right: 14px; }
+  .question-card .fill-in,
+  .question-card .asset-figure {
+    margin-left: 14px;
+    margin-right: 14px;
+  }
   .theme-toggle { position: static; margin-top: 8px; }
 }
 @media (max-width: 480px) {

@@ -352,7 +352,7 @@ def render_callout_text(text):
     return clean
 
 
-def generate_html(opgaven, samenvatting, para_number, para_name, asset_prefix="../../_assets", web_variant_bases=None):
+def generate_html(opgaven, samenvatting, para_number, para_name, asset_prefix="../../_assets", shared_prefix=None, web_variant_bases=None):
     """Generate the full HTML."""
     web_variant_bases = web_variant_bases or set()
 
@@ -510,6 +510,50 @@ def generate_html(opgaven, samenvatting, para_number, para_name, asset_prefix=".
 
     n_cards = len(opgaven)
     grid = f'repeat({min(n_cards, 5)}, 1fr)'
+
+    if shared_prefix:
+        return f'''<!DOCTYPE html>
+<html lang="nl" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>(function(){{try{{var m=localStorage.getItem('quizMode')||'light';document.documentElement.setAttribute('data-theme',m);}}catch(e){{}}}})();</script>
+<title>{para_number} {esc(para_name)} \u2013 Begeleide inoefening</title>
+<link rel="stylesheet" href="{shared_prefix}/voorkennis.css">
+</head>
+<body data-layout="begeleide-inoefening-v1" data-accent-domain="{esc(dcls)}">
+<button class="sidebar-toggle" id="sidebarToggle" aria-label="Menu openen">
+  <svg viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+</button>
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+<div class="page-layout">
+  <nav class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <h2>{para_number} {esc(para_name)}</h2>
+      <p>Begeleide inoefening</p>
+    </div>
+{sidebar_items}
+  </nav>
+  <div class="content">
+    <header class="hero">
+      <div class="hero-inner">
+        <span class="hero-badge">{para_number} &middot; Begeleide inoefening</span>
+        <h1>{esc(para_name)} &mdash; Begeleide inoefening</h1>
+        <p class="hero-sub">Oefeningen met denkstappen, formule-herinneringen en hints.</p>
+        <div class="hero-cards">
+{hero_cards}
+        </div>
+      </div>
+    </header>
+    <main>
+{opgave_sections}
+{samenvatting_html}
+    </main>
+  </div>
+</div>
+<script src="{shared_prefix}/voorkennis.js"></script>
+</body>
+</html>'''
 
     return f'''<!DOCTYPE html>
 <html lang="nl">
@@ -852,11 +896,13 @@ def process_paragraph(para_folder):
         antwoorden_files = flat_antwoorden
         html_path = os.path.join(para_folder, f'{para_number} {para_name} \u2013 begeleide inoefening.html')
         asset_prefix = '_assets'
+        shared_prefix = '../../shared'
     elif os.path.isdir(legacy_bi_folder):
         vragen_files = glob.glob(os.path.join(legacy_bi_folder, '*vragen*.docx'))
         antwoorden_files = glob.glob(os.path.join(legacy_bi_folder, '*antwoorden*.docx'))
         html_path = os.path.join(legacy_bi_folder, f'{para_number} {para_name} \u2013 begeleide inoefening.html')
         asset_prefix = '../../_assets'
+        shared_prefix = '../../../../shared'
     else:
         print(f'  SKIP {para_number}: no begeleide inoefening folder')
         return False
@@ -884,7 +930,15 @@ def process_paragraph(para_folder):
     assets_dir = os.path.join(para_folder, '_assets')
     web_variant_bases = find_web_variant_bases(assets_dir)
 
-    html_content = generate_html(opgaven, samenvatting, para_number, para_name, asset_prefix, web_variant_bases)
+    html_content = generate_html(
+        opgaven,
+        samenvatting,
+        para_number,
+        para_name,
+        asset_prefix,
+        shared_prefix=shared_prefix,
+        web_variant_bases=web_variant_bases,
+    )
 
     with open(long_path(html_path), 'w', encoding='utf-8') as f:
         f.write(html_content)

@@ -624,17 +624,19 @@ def generate_html(data, para_number, para_name, asset_prefix="../_assets", share
     if shared_prefix:
         title_suffix = f' - {esc(test_label)}' if test_label else ''
         badge_suffix = f' &middot; {esc(test_label)}' if test_label else ''
+        test_meta = '<meta name="4veco-layout-test" content="voorkennis-v1">\n' if test_label else ''
+        body_attr = ' data-layout-test="voorkennis-v1"' if test_label else ' data-layout="voorkennis-v1"'
 
         return f'''<!DOCTYPE html>
-<html lang="nl">
+<html lang="nl" data-theme="light">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="4veco-layout-test" content="voorkennis-v1">
+{test_meta}<script>(function(){{try{{var m=localStorage.getItem('quizMode')||'light';document.documentElement.setAttribute('data-theme',m);}}catch(e){{}}}})();</script>
 <title>{para_number} {esc(para_name)} \u2013 Uitleg voorkennis{title_suffix}</title>
 <link rel="stylesheet" href="{shared_prefix}/voorkennis.css">
 </head>
-<body data-layout-test="voorkennis-v1">
+<body{body_attr}>
 
 <button class="sidebar-toggle" id="sidebarToggle" aria-label="Menu openen">
   <svg viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
@@ -1066,7 +1068,7 @@ def process_paragraph(para_folder, layout_test_v1=False):
         para_number,
         para_name,
         asset_prefix,
-        shared_prefix=shared_prefix if layout_test_v1 else None,
+        shared_prefix=shared_prefix,
         test_label='layout test v1' if layout_test_v1 else '',
         web_variant_bases=web_variant_bases,
     )
