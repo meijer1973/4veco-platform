@@ -15,7 +15,7 @@ Compatibility decisions:
 - Sprint `R0.1` now means the sprint-execution scaffold.
 - The older local `R0.1` / `R0.2` history is preserved as completed historical `H0.x` work, not as active roadmap numbering.
 - `R0.1 Sprint Execution Scaffold` is completed.
-- `R1.2 Core JSON Schemas` is completed; the next planned sprint is `R1.3 Unit Prior-Knowledge Schema Extension`.
+- `R1.3 Unit Prior-Knowledge Schema Extension` is completed; the next planned sprint is `R2.1 Full Empty-Needs Audit`.
 - Current catalog metrics are updated after the labor-market unit additions.
 - The reference CLI exists; CLI documentation still needs cleanup because parts of the README still read like a future contract.
 
@@ -41,7 +41,6 @@ Open items are listed first; completed items are kept below them.
 
 | Sprint | Name | Completed | Current State |
 |--------|------|-----------|---------------|
-| R1.3 | Unit Prior-Knowledge Schema Extension | no | Planned. Add explicit zero-needs and assumed-prior-knowledge governance. |
 | R2.1 | Full Empty-Needs Audit | no | Planned. Non-mutating audit over the full current unit catalog. |
 | R2.2 | Subagent Review For Empty Needs | no | Planned. Pedagogy, data-integrity, and evidence auditors triage hidden prerequisites. |
 | R2.3 | Human Review And Gate Closure | no | Planned. Human economics reviewer closes or conditions the empty-needs gate. |
@@ -59,6 +58,7 @@ Open items are listed first; completed items are kept below them.
 | R7.2 | Hybrid Retrieval | no | Planned. Add lexical/entity/graph retrieval before optional vector search. |
 | R7.3 | Retrieval Evaluation Set | no | Planned. Make retrieval quality regressions visible. |
 | R7.4 | RAG Review Gate | no | Planned. Approve internal/teacher-facing RAG only after evaluation. |
+| R1.3 | Unit Prior-Knowledge Schema Extension | yes | Completed. Unit and review schemas now support zero-needs status, assumed prior knowledge, and review records. |
 | R1.2 | Core JSON Schemas | yes | Completed. Initial JSON schema contracts exist for units, terms, evidence, graph edges, reports, RAG chunks, feedback, games, and simulations. |
 | R1.1 | Source-of-Truth Decision | yes | Completed. `references/SOURCE_OF_TRUTH.md` defines canonical source, projection, authority, and edit-policy rules. |
 | R0.2 | Reference Baseline Inventory | yes | Completed. Source manifest, document inventory, builder, and validators now define the baseline reference/report/tooling surface. |
@@ -287,17 +287,18 @@ Do not invert this order.
 
 ## Immediate Next Sprint
 
-Proceed with `R1.3 Unit Prior-Knowledge Schema Extension`.
+Proceed with `R2.1 Full Empty-Needs Audit`.
 
 Create:
 
-- `docs/sprints/R1.3-plan.md`
-- `references/data/sprints/R1.3.plan.json`
-- `reports/sprints/R1.3-baseline.md`
-- prior-knowledge schema fields or schema support under `references/schemas/`
-- validator support for the prior-knowledge extension
+- `docs/sprints/R2.1-plan.md`
+- `references/data/sprints/R2.1.plan.json`
+- `reports/sprints/R2.1-baseline.md`
+- `references/data/audits/empty-needs-audit.json`
+- `reports/reference-audits/empty-needs-audit.md`
+- audit script under `build-scripts/references/`
 
-Extend the unit schema contract without mutating the existing machine unit catalog.
+Run a non-mutating audit over the full current unit catalog. Do not apply dependency corrections in R2.1.
 
 ## Final Rule
 

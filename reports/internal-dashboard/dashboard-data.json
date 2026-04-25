@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-25T19:31:53.113Z",
+  "generatedAt": "2026-04-25T19:33:54.366Z",
   "internalOnly": true,
   "teams": [
     {
@@ -163,13 +163,6 @@
           "summary": "References Team Roadmap Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Scope: references/, build-scripts/references/, build-scripts/reports/, reference dashboards, and generated reference reports under reports/ Adoption Decision The handoff roadmap has been adopted as the main operating roadmap for the references team. No blocking incompatibility was found. The roadmap direction fits the repository: machine-edited references, evidence-first unit growth, JSON-first reports, review gates for pedagogical auth...",
           "sprints": [
             {
-              "sprint": "R1.3",
-              "name": "Unit Prior-Knowledge Schema Extension",
-              "completed": "no",
-              "currentState": "Planned. Add explicit zero-needs and assumed-prior-knowledge governance.",
-              "exitGate": ""
-            },
-            {
               "sprint": "R2.1",
               "name": "Full Empty-Needs Audit",
               "completed": "no",
@@ -289,6 +282,13 @@
               "exitGate": ""
             },
             {
+              "sprint": "R1.3",
+              "name": "Unit Prior-Knowledge Schema Extension",
+              "completed": "yes",
+              "currentState": "Completed. Unit and review schemas now support zero-needs status, assumed prior knowledge, and review records.",
+              "exitGate": ""
+            },
+            {
               "sprint": "R1.2",
               "name": "Core JSON Schemas",
               "completed": "yes",
@@ -341,14 +341,6 @@
         }
       ],
       "sprints": [
-        {
-          "sprint": "R1.3",
-          "name": "Unit Prior-Knowledge Schema Extension",
-          "completed": "no",
-          "currentState": "Planned. Add explicit zero-needs and assumed-prior-knowledge governance.",
-          "exitGate": "",
-          "roadmap": "References roadmap"
-        },
         {
           "sprint": "R2.1",
           "name": "Full Empty-Needs Audit",
@@ -486,6 +478,14 @@
           "roadmap": "References roadmap"
         },
         {
+          "sprint": "R1.3",
+          "name": "Unit Prior-Knowledge Schema Extension",
+          "completed": "yes",
+          "currentState": "Completed. Unit and review schemas now support zero-needs status, assumed prior knowledge, and review records.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
           "sprint": "R1.2",
           "name": "Core JSON Schemas",
           "completed": "yes",
@@ -542,8 +542,8 @@
           "roadmap": "References roadmap"
         }
       ],
-      "completedCount": 7,
-      "openCount": 18
+      "completedCount": 8,
+      "openCount": 17
     },
     {
       "id": "lessen",
