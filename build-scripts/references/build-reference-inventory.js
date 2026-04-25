@@ -141,6 +141,18 @@ function classify(pathRel) {
       downstream_dependencies: ['roadmap', 'dashboards', 'future-validators'],
     };
   }
+  if (pathRel.startsWith('references/schemas/')) {
+    return {
+      layer: 'schema_contract',
+      authority_level: 'machine_contract',
+      source_type: 'json_schema',
+      generated_status: 'manual_source',
+      edit_policy: 'code_review',
+      owner: 'references_team',
+      refresh_policy: 'schema_review',
+      downstream_dependencies: ['validators', 'reference-cli', 'reports', 'future-rag'],
+    };
+  }
   if (pathRel === 'references/reference-team-roadmap.md') {
     return {
       layer: 'planning',

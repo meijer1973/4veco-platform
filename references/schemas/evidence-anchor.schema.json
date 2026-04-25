@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://4veco.local/references/schemas/evidence-anchor.schema.json",
+  "title": "EvidenceAnchor",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["evidence_id", "source_path", "document_id", "locator"],
+  "properties": {
+    "evidence_id": { "type": "string" },
+    "source_path": { "type": "string" },
+    "document_id": { "type": "string" },
+    "locator": { "type": "object" },
+    "excerpt": { "type": ["string", "null"] },
+    "extraction_method": { "type": "string" },
+    "confidence": { "type": "string" }
+  }
+}

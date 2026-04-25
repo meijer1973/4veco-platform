@@ -1,26 +1,28 @@
 {
   "schema_version": "0.1",
-  "generated_at": "2026-04-25T19:28:52.350Z",
+  "generated_at": "2026-04-25T19:31:53.225Z",
   "sprint_id": "R0.2",
   "scope": "references/",
   "note": "Self-generated inventory files intentionally omit size and sha256 to avoid unstable self-checksums.",
   "summary": {
-    "file_count": 57,
+    "file_count": 76,
     "by_layer": {
       "authored_judgement": 7,
-      "governance_data": 6,
+      "governance_data": 8,
       "external_authority": 32,
       "machine_registry": 5,
       "quality_protocol": 5,
       "planning": 1,
+      "schema_contract": 17,
       "governance_policy": 1
     },
     "by_edit_policy": {
       "human_reviewed_edit": 14,
       "generated_by_inventory_script": 2,
-      "sprint_process": 4,
+      "sprint_process": 6,
       "external_refresh_only": 32,
-      "cli_only": 5
+      "cli_only": 5,
+      "code_review": 17
     }
   },
   "files": [
@@ -270,6 +272,46 @@
       "extension": "json",
       "size_bytes": 1362,
       "sha256": "30a1f6e32b0984986eaefc730853b536682614e9883c32362cacff0251d6f912",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/data/sprints/R1.2.plan.json",
+      "file_name": "R1.2.plan.json",
+      "extension": "json",
+      "size_bytes": 710,
+      "sha256": "52e553471cf7cbd5cf885bcc5524a548446fac94368c75c7104f16ced18f1e1c",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/data/sprints/R1.2.result.json",
+      "file_name": "R1.2.result.json",
+      "extension": "json",
+      "size_bytes": 1345,
+      "sha256": "23830720cef02702cee328228fae35eee08b19a0d1df279056d80b150941c1ac",
       "layer": "governance_data",
       "authority_level": "generated_report",
       "source_type": "sprint_metadata",
@@ -1128,8 +1170,8 @@
       "path": "references/reference-team-roadmap.md",
       "file_name": "reference-team-roadmap.md",
       "extension": "md",
-      "size_bytes": 13165,
-      "sha256": "993e829fb2367ef7841e56f4407dea7bb867de5987478a8c2d5559078ef46308",
+      "size_bytes": 13299,
+      "sha256": "fb1100eb8c082962b19d2576f178fee327e6732b0224513011b97b54629bf9f1",
       "layer": "planning",
       "authority_level": "authored_judgement",
       "source_type": "roadmap",
@@ -1140,6 +1182,363 @@
       "downstream_dependencies": [
         "internal-dashboard",
         "sprint-planning"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/schemas/alignment-edge.schema.json",
+      "file_name": "alignment-edge.schema.json",
+      "extension": "json",
+      "size_bytes": 609,
+      "sha256": "bc71af1e7d130ee373801e6b757c789c8b957efa839b3c8b6e7f35d23744fe95",
+      "layer": "schema_contract",
+      "authority_level": "machine_contract",
+      "source_type": "json_schema",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "references_team",
+      "refresh_policy": "schema_review",
+      "downstream_dependencies": [
+        "validators",
+        "reference-cli",
+        "reports",
+        "future-rag"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/schemas/claim.schema.json",
+      "file_name": "claim.schema.json",
+      "extension": "json",
+      "size_bytes": 572,
+      "sha256": "895aa9c5a78ba201d7372edfad9c3e79f4594121c6739974e037f9eaf0faeaca",
+      "layer": "schema_contract",
+      "authority_level": "machine_contract",
+      "source_type": "json_schema",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "references_team",
+      "refresh_policy": "schema_review",
+      "downstream_dependencies": [
+        "validators",
+        "reference-cli",
+        "reports",
+        "future-rag"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/schemas/evidence-anchor.schema.json",
+      "file_name": "evidence-anchor.schema.json",
+      "extension": "json",
+      "size_bytes": 613,
+      "sha256": "7a415ac7df4a066e333601191d23f83cb596d5d4f263557327215d66fcc57865",
+      "layer": "schema_contract",
+      "authority_level": "machine_contract",
+      "source_type": "json_schema",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "references_team",
+      "refresh_policy": "schema_review",
+      "downstream_dependencies": [
+        "validators",
+        "reference-cli",
+        "reports",
+        "future-rag"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/schemas/exam-question.schema.json",
+      "file_name": "exam-question.schema.json",
+      "extension": "json",
+      "size_bytes": 700,
+      "sha256": "7eaa8be8700078dea888df0a386e0c866d79010d0558485cbeab1ca20aa2bdf7",
+      "layer": "schema_contract",
+      "authority_level": "machine_contract",
+      "source_type": "json_schema",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "references_team",
+      "refresh_policy": "schema_review",
+      "downstream_dependencies": [
+        "validators",
+        "reference-cli",
+        "reports",
+        "future-rag"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/schemas/feedback.schema.json",
+      "file_name": "feedback.schema.json",
+      "extension": "json",
+      "size_bytes": 657,
+      "sha256": "45f39d3677ceeed9782777b484e05eebefc544c7cbe9b26995d0451e676031f7",
+      "layer": "schema_contract",
+      "authority_level": "machine_contract",
+      "source_type": "json_schema",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "references_team",
+      "refresh_policy": "schema_review",
+      "downstream_dependencies": [
+        "validators",
+        "reference-cli",
+        "reports",
+        "future-rag"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/schemas/game-item.schema.json",
+      "file_name": "game-item.schema.json",
+      "extension": "json",
+      "size_bytes": 613,
+      "sha256": "d870d1cea679bed7ad4227193e6eb60031c3f3309bfd42185465852cfa6c0b41",
+      "layer": "schema_contract",
+      "authority_level": "machine_contract",
+      "source_type": "json_schema",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "references_team",
+      "refresh_policy": "schema_review",
+      "downstream_dependencies": [
+        "validators",
+        "reference-cli",
+        "reports",
+        "future-rag"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/schemas/misconception.schema.json",
+      "file_name": "misconception.schema.json",
+      "extension": "json",
+      "size_bytes": 566,
+      "sha256": "3a4c8b0db0d2527dc9d672a9ed45a377672e7fcaaf3a6c4e11637b888f5c2c3b",
+      "layer": "schema_contract",
+      "authority_level": "machine_contract",
+      "source_type": "json_schema",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "references_team",
+      "refresh_policy": "schema_review",
+      "downstream_dependencies": [
+        "validators",
+        "reference-cli",
+        "reports",
+        "future-rag"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/schemas/quality-issue.schema.json",
+      "file_name": "quality-issue.schema.json",
+      "extension": "json",
+      "size_bytes": 716,
+      "sha256": "edb07bec77e4e26f1e1ec11c10798a56ced5defb3f2abf1e280f1311d6d01b0d",
+      "layer": "schema_contract",
+      "authority_level": "machine_contract",
+      "source_type": "json_schema",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "references_team",
+      "refresh_policy": "schema_review",
+      "downstream_dependencies": [
+        "validators",
+        "reference-cli",
+        "reports",
+        "future-rag"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/schemas/rag-chunk.schema.json",
+      "file_name": "rag-chunk.schema.json",
+      "extension": "json",
+      "size_bytes": 719,
+      "sha256": "f59a58168cb4879e2d37ec4946648718e875b6b1bf159044e23a79020e7b4a9e",
+      "layer": "schema_contract",
+      "authority_level": "machine_contract",
+      "source_type": "json_schema",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "references_team",
+      "refresh_policy": "schema_review",
+      "downstream_dependencies": [
+        "validators",
+        "reference-cli",
+        "reports",
+        "future-rag"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/schemas/report.schema.json",
+      "file_name": "report.schema.json",
+      "extension": "json",
+      "size_bytes": 545,
+      "sha256": "2588a2db581546196dcc4e77afd8381415aa0ffaea2c77bf38048f721331b4cd",
+      "layer": "schema_contract",
+      "authority_level": "machine_contract",
+      "source_type": "json_schema",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "references_team",
+      "refresh_policy": "schema_review",
+      "downstream_dependencies": [
+        "validators",
+        "reference-cli",
+        "reports",
+        "future-rag"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/schemas/simulation.schema.json",
+      "file_name": "simulation.schema.json",
+      "extension": "json",
+      "size_bytes": 718,
+      "sha256": "469e68ab94b253f9e73ae71a41d79beede1defe7f6135f947dfaa86e90a75058",
+      "layer": "schema_contract",
+      "authority_level": "machine_contract",
+      "source_type": "json_schema",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "references_team",
+      "refresh_policy": "schema_review",
+      "downstream_dependencies": [
+        "validators",
+        "reference-cli",
+        "reports",
+        "future-rag"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/schemas/source-document.schema.json",
+      "file_name": "source-document.schema.json",
+      "extension": "json",
+      "size_bytes": 655,
+      "sha256": "571b05e4c8e6329285b2490caddda28bbcdaccfc345da09906fc3092e27c07da",
+      "layer": "schema_contract",
+      "authority_level": "machine_contract",
+      "source_type": "json_schema",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "references_team",
+      "refresh_policy": "schema_review",
+      "downstream_dependencies": [
+        "validators",
+        "reference-cli",
+        "reports",
+        "future-rag"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/schemas/syllabus-code.schema.json",
+      "file_name": "syllabus-code.schema.json",
+      "extension": "json",
+      "size_bytes": 519,
+      "sha256": "cea6b0672d036211c70579ce72a2af47dc0f94f99f3a83a37dfb668f32d74c50",
+      "layer": "schema_contract",
+      "authority_level": "machine_contract",
+      "source_type": "json_schema",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "references_team",
+      "refresh_policy": "schema_review",
+      "downstream_dependencies": [
+        "validators",
+        "reference-cli",
+        "reports",
+        "future-rag"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/schemas/target-exercise.schema.json",
+      "file_name": "target-exercise.schema.json",
+      "extension": "json",
+      "size_bytes": 637,
+      "sha256": "6a53a222a47b4c4dc6990c8b87356221684e52f6e0078ae281c2d512c17f03e4",
+      "layer": "schema_contract",
+      "authority_level": "machine_contract",
+      "source_type": "json_schema",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "references_team",
+      "refresh_policy": "schema_review",
+      "downstream_dependencies": [
+        "validators",
+        "reference-cli",
+        "reports",
+        "future-rag"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/schemas/term.schema.json",
+      "file_name": "term.schema.json",
+      "extension": "json",
+      "size_bytes": 731,
+      "sha256": "4681dd890a1b47c013a82043589744fbc86cc57d052c19ea74fb64fb2d7df410",
+      "layer": "schema_contract",
+      "authority_level": "machine_contract",
+      "source_type": "json_schema",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "references_team",
+      "refresh_policy": "schema_review",
+      "downstream_dependencies": [
+        "validators",
+        "reference-cli",
+        "reports",
+        "future-rag"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/schemas/unit.schema.json",
+      "file_name": "unit.schema.json",
+      "extension": "json",
+      "size_bytes": 834,
+      "sha256": "30a697e75871e0ddeab3e07c60aa3fcea38157ae560ef772323de4b2a739019a",
+      "layer": "schema_contract",
+      "authority_level": "machine_contract",
+      "source_type": "json_schema",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "references_team",
+      "refresh_policy": "schema_review",
+      "downstream_dependencies": [
+        "validators",
+        "reference-cli",
+        "reports",
+        "future-rag"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/schemas/worked-example.schema.json",
+      "file_name": "worked-example.schema.json",
+      "extension": "json",
+      "size_bytes": 557,
+      "sha256": "9f7d4bac5e724a0645393961d57b905c85b6b8051f222c6e38b60b903be6b310",
+      "layer": "schema_contract",
+      "authority_level": "machine_contract",
+      "source_type": "json_schema",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "references_team",
+      "refresh_policy": "schema_review",
+      "downstream_dependencies": [
+        "validators",
+        "reference-cli",
+        "reports",
+        "future-rag"
       ],
       "self_generated_inventory_file": false
     },

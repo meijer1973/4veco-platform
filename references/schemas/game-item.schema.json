@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://4veco.local/references/schemas/game-item.schema.json",
+  "title": "GameItem",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["game_item_id", "unit_ids", "mechanic"],
+  "properties": {
+    "game_item_id": { "type": "string" },
+    "unit_ids": { "type": "array", "items": { "type": "string" } },
+    "mechanic": { "type": "string" },
+    "difficulty_band": { "type": "string" },
+    "feedback_ids": { "type": "array", "items": { "type": "string" } },
+    "debrief_prompt_nl": { "type": ["string", "null"] }
+  }
+}

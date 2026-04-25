@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://4veco.local/references/schemas/worked-example.schema.json",
+  "title": "WorkedExample",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["example_id", "unit_ids", "steps"],
+  "properties": {
+    "example_id": { "type": "string" },
+    "unit_ids": { "type": "array", "items": { "type": "string" } },
+    "prompt_nl": { "type": "string" },
+    "steps": { "type": "array", "items": { "type": "object" } },
+    "answer_nl": { "type": ["string", "null"] }
+  }
+}

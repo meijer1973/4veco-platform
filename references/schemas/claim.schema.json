@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://4veco.local/references/schemas/claim.schema.json",
+  "title": "Claim",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["claim_id", "claim_type", "subject_id", "object_id", "status"],
+  "properties": {
+    "claim_id": { "type": "string" },
+    "claim_type": { "type": "string" },
+    "subject_id": { "type": "string" },
+    "object_id": { "type": "string" },
+    "evidence_ids": { "type": "array", "items": { "type": "string" } },
+    "status": { "type": "string" }
+  }
+}

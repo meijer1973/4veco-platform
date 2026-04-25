@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-25T19:28:52.227Z",
+  "generatedAt": "2026-04-25T19:31:53.113Z",
   "internalOnly": true,
   "teams": [
     {
@@ -163,13 +163,6 @@
           "summary": "References Team Roadmap Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Scope: references/, build-scripts/references/, build-scripts/reports/, reference dashboards, and generated reference reports under reports/ Adoption Decision The handoff roadmap has been adopted as the main operating roadmap for the references team. No blocking incompatibility was found. The roadmap direction fits the repository: machine-edited references, evidence-first unit growth, JSON-first reports, review gates for pedagogical auth...",
           "sprints": [
             {
-              "sprint": "R1.2",
-              "name": "Core JSON Schemas",
-              "completed": "no",
-              "currentState": "Planned. Define schemas before broad rewrites.",
-              "exitGate": ""
-            },
-            {
               "sprint": "R1.3",
               "name": "Unit Prior-Knowledge Schema Extension",
               "completed": "no",
@@ -296,6 +289,13 @@
               "exitGate": ""
             },
             {
+              "sprint": "R1.2",
+              "name": "Core JSON Schemas",
+              "completed": "yes",
+              "currentState": "Completed. Initial JSON schema contracts exist for units, terms, evidence, graph edges, reports, RAG chunks, feedback, games, and simulations.",
+              "exitGate": ""
+            },
+            {
               "sprint": "R1.1",
               "name": "Source-of-Truth Decision",
               "completed": "yes",
@@ -341,14 +341,6 @@
         }
       ],
       "sprints": [
-        {
-          "sprint": "R1.2",
-          "name": "Core JSON Schemas",
-          "completed": "no",
-          "currentState": "Planned. Define schemas before broad rewrites.",
-          "exitGate": "",
-          "roadmap": "References roadmap"
-        },
         {
           "sprint": "R1.3",
           "name": "Unit Prior-Knowledge Schema Extension",
@@ -494,6 +486,14 @@
           "roadmap": "References roadmap"
         },
         {
+          "sprint": "R1.2",
+          "name": "Core JSON Schemas",
+          "completed": "yes",
+          "currentState": "Completed. Initial JSON schema contracts exist for units, terms, evidence, graph edges, reports, RAG chunks, feedback, games, and simulations.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
           "sprint": "R1.1",
           "name": "Source-of-Truth Decision",
           "completed": "yes",
@@ -542,8 +542,8 @@
           "roadmap": "References roadmap"
         }
       ],
-      "completedCount": 6,
-      "openCount": 19
+      "completedCount": 7,
+      "openCount": 18
     },
     {
       "id": "lessen",

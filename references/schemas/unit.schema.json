@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://4veco.local/references/schemas/unit.schema.json",
+  "title": "MicroTeachingUnit",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "name", "kern", "needs", "mastery_target"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[A-Z][0-9]{2}$" },
+    "name": { "type": "string" },
+    "kern": { "type": "string" },
+    "needs": { "type": "array", "items": { "type": "string" } },
+    "mastery_target": { "type": "string", "enum": ["understand", "apply", "analyze", "evaluate"] },
+    "terms": { "type": "array", "items": { "type": "string" } },
+    "exam_codes": { "type": "array", "items": { "type": "string" } },
+    "procedure": { "type": ["string", "object", "null"] },
+    "deprecated": { "type": "boolean" }
+  }
+}

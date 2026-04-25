@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://4veco.local/references/schemas/quality-issue.schema.json",
+  "title": "QualityIssue",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["issue_id", "title", "quality_category", "status"],
+  "properties": {
+    "issue_id": { "type": "string" },
+    "title": { "type": "string" },
+    "quality_category": { "type": "string" },
+    "evidence_path": { "type": ["string", "null"] },
+    "affected_surface": { "type": "string" },
+    "severity": { "type": "string" },
+    "status": { "type": "string" },
+    "next_action": { "type": ["string", "null"] },
+    "proof_required_to_close": { "type": ["string", "null"] }
+  }
+}

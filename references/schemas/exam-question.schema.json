@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://4veco.local/references/schemas/exam-question.schema.json",
+  "title": "ExamQuestion",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "source_document_id", "question_number"],
+  "properties": {
+    "id": { "type": "string" },
+    "source_document_id": { "type": "string" },
+    "question_number": { "type": "string" },
+    "exam_codes": { "type": "array", "items": { "type": "string" } },
+    "required_units": { "type": "array", "items": { "type": "string" } },
+    "question_type": { "type": ["string", "null"] },
+    "evidence_ids": { "type": "array", "items": { "type": "string" } }
+  }
+}

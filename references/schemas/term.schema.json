@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://4veco.local/references/schemas/term.schema.json",
+  "title": "Term",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "term_nl", "definition_nl"],
+  "properties": {
+    "id": { "type": "string" },
+    "term_nl": { "type": "string" },
+    "definition_nl": { "type": "string" },
+    "domain": { "type": "string" },
+    "syllabus_clause": { "type": ["string", "null"] },
+    "example_nl": { "type": ["string", "null"] },
+    "pitfall_nl": { "type": ["string", "null"] },
+    "formulas": { "type": "array" },
+    "teaching_units": { "type": "array", "items": { "type": "string" } },
+    "deprecated": { "type": "boolean" }
+  }
+}

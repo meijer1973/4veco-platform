@@ -1,0 +1,17 @@
+{
+  "sprint_id": "R1.2",
+  "name": "Core JSON Schemas",
+  "status": "planned",
+  "planned_on": "2026-04-25",
+  "plan": "docs/sprints/R1.2-plan.md",
+  "protected_reference_data_changes_allowed": false,
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js docs/sprints/R1.2-plan.md",
+    "node build-scripts/references/validate-core-schemas.js",
+    "node build-scripts/reports/internal-dashboard.js",
+    "node build-scripts/references/build-reference-inventory.js",
+    "node build-scripts/references/check-source-manifest.js",
+    "node build-scripts/references/check-document-inventory.js",
+    "node build-scripts/sprints/check-sprint-result.js reports/sprints/R1.2-result.md"
+  ]
+}
