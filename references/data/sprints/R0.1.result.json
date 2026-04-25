@@ -1,0 +1,35 @@
+{
+  "sprint_id": "R0.1",
+  "name": "Sprint Execution Scaffold",
+  "status": "completed",
+  "completed_on": "2026-04-25",
+  "plan": "docs/sprints/R0.1-plan.md",
+  "baseline": "reports/sprints/R0.1-baseline.md",
+  "result": "reports/sprints/R0.1-result.md",
+  "diff_summary": "reports/sprints/R0.1-diff-summary.md",
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js docs/sprints/example-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-result.js reports/sprints/example-result.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js docs/sprints/R0.1-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-result.js reports/sprints/R0.1-result.md",
+      "status": "passed"
+    }
+  ],
+  "protected_reference_data_changed": false,
+  "follow_ups": [
+    "Resolve R0.1 sprint-id collision with existing reference-team roadmap history.",
+    "Update build-scripts/references/README.md to match current CLI implementation status.",
+    "Decide whether references/data is the long-term home for manifests, audits, and sprint metadata."
+  ]
+}
+

@@ -1,0 +1,25 @@
+{
+  "sprint_id": "R0.1",
+  "name": "Sprint Execution Scaffold",
+  "status": "planned",
+  "source_roadmap": "references/final-codex-handoff-roadmap.md",
+  "allowed_paths": [
+    "docs/sprints/",
+    "reports/sprints/",
+    "references/data/sprints/",
+    "build-scripts/sprints/"
+  ],
+  "forbidden_paths": [
+    "references/machine/",
+    "references/external/",
+    "../4veco-lessen/"
+  ],
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js docs/sprints/example-plan.md",
+    "node build-scripts/sprints/check-sprint-result.js reports/sprints/example-result.md",
+    "node build-scripts/sprints/check-sprint-plan.js docs/sprints/R0.1-plan.md",
+    "node build-scripts/sprints/check-sprint-result.js reports/sprints/R0.1-result.md"
+  ],
+  "human_review_required": true
+}
+
