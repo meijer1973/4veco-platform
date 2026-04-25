@@ -52,6 +52,18 @@ const DOMAIN_COLORS = {
   purple: { main: "#7D3C98", light: "#F4ECF7", dark: "#6C3483" },
 };
 
+// Collapse the deploy-config domain-color keys onto the three accent tokens
+// that engines/voorkennis.css defines (economisch / wiskunde / grafisch).
+// The paragraaf-level index.html is generated against that stylesheet, so
+// every page needs exactly one of these three as its data-accent-domain.
+const DOMAIN_SHARED_TOKEN = {
+  amber:  "economisch",
+  blue:   "wiskunde",
+  green:  "grafisch",
+  teal:   "wiskunde",
+  purple: "economisch",
+};
+
 // ═══════════════════════════════════════════════════════════════════════════
 // SECTION RULES — filename → section mapping (flat layout)
 // ═══════════════════════════════════════════════════════════════════════════
@@ -669,149 +681,327 @@ function renderChapterPage(chapterId, resolvedMap) {
 // PARAGRAAF PAGE
 // ═══════════════════════════════════════════════════════════════════════════
 
-function renderParagraafPage(paragraaf, files, resolvedMap) {
-  const dc = DOMAIN_COLORS[paragraaf.domain];
-  const ch = CONFIG.chapterIndex[paragraaf.chapter];
+function renderParagraafPage(paragraaf, files, _resolvedMap) {
   const chapterFull = CONFIG.chapterFullLabel(paragraaf.chapter);
-  const navHTML = renderNav(resolvedMap, "paragraaf", paragraaf.id);
+  const accentToken = DOMAIN_SHARED_TOKEN[paragraaf.domain] || "economisch";
 
-  function card(href, icon, title, desc, fileType, extraClass = "") {
+  const ext = (f) => f ? f.split(".").pop().toLowerCase() : "docx";
+
+  function resourceCard(href, icon, title, desc, fileType, extraClass = "") {
     if (!href) return "";
     return `
-      <a class="card ${extraClass}" href="${href}">
-        <div class="card-icon"><svg viewBox="0 0 24 24">${icon}</svg></div>
-        <div class="card-body"><h3>${title}</h3><p>${desc}</p><span class="file-type">${fileType}</span></div>
-      </a>`;
+        <a class="resource-card ${extraClass}" href="${href}">
+          <div class="resource-card-icon"><svg viewBox="0 0 24 24">${icon}</svg></div>
+          <div class="resource-card-body">
+            <h3>${title}</h3>
+            <p>${desc}</p>
+            <span class="resource-card-type">${fileType}</span>
+          </div>
+        </a>`;
   }
 
-  // Flat layout: exercise pair files sit at paragraph root, linked by filename directly.
-  function exerciseCard(pair, icon, title, desc, extraClass = "") {
+  function exercisePairCard(pair, icon, title, desc) {
     if (!pair) return "";
     const vragenHref = pair.vragen ? encPath([pair.vragen]) : null;
     const antwHref = pair.antwoorden ? encPath([pair.antwoorden]) : null;
     return `
-      <div class="card ${extraClass}">
-        <div class="card-icon"><svg viewBox="0 0 24 24">${icon}</svg></div>
-        <div class="card-body"><h3>${title}</h3><p>${desc}</p>
-          <div class="sub-links">
-            ${vragenHref ? `<a class="sub-link" href="${vragenHref}">Vragen</a>` : ""}
-            ${antwHref ? `<a class="sub-link" href="${antwHref}">Antwoorden</a>` : ""}
+        <div class="resource-card resource-card-pair">
+          <div class="resource-card-icon"><svg viewBox="0 0 24 24">${icon}</svg></div>
+          <div class="resource-card-body">
+            <h3>${title}</h3>
+            <p>${desc}</p>
+            <div class="resource-sub-links">
+              ${vragenHref ? `<a class="resource-sub-link" href="${vragenHref}">Vragen</a>` : ""}
+              ${antwHref ? `<a class="resource-sub-link" href="${antwHref}">Antwoorden</a>` : ""}
+            </div>
           </div>
-        </div>
-      </div>`;
+        </div>`;
   }
-
-  const ext = (f) => f ? f.split(".").pop().toLowerCase() : "docx";
-
-  const voorbereidenCards = [
-    files.voorbereiden.instapquiz      ? card(encPath([files.voorbereiden.instapquiz]),      ICONS.quiz,      "Instapquiz",       "Test wat je al weet over deze stof", "html") : "",
-    files.voorbereiden.voorkennis      ? card(encPath([files.voorbereiden.voorkennis]),      ICONS.book,      "Voorkennis",       "Herhaal wat je nodig hebt voor deze les", ext(files.voorbereiden.voorkennis)) : "",
-    files.voorbereiden.nieuwsdetective ? card(encPath([files.voorbereiden.nieuwsdetective]), ICONS.search,    "Nieuws-detective", "Ontdek de economie achter het nieuws", "html") : "",
-  ].filter(Boolean).join("\n");
-
-  const lerenCards = [
-    files.leren.presentatie   ? card(encPath([files.leren.presentatie]),   ICONS.monitor,   "Presentatie",         "De les-presentatie met kernpunten", "pptx") : "",
-    files.leren.vaardigheden  ? card(encPath([files.leren.vaardigheden]),  ICONS.doc,       "Uitleg vaardigheden", "Stap-voor-stap uitleg van de lesstof", ext(files.leren.vaardigheden)) : "",
-    files.leren.stappenplan   ? card(encPath([files.leren.stappenplan]),   ICONS.steps,     "Stappenplan",         "Oefen de stappen van elke vaardigheid", "html") : "",
-    files.leren.youtube       ? card(encPath([files.leren.youtube]),       ICONS.play,      "YouTube-video’s", "Video-uitleg bij de stof", "html") : "",
-    files.leren.nieuws        ? card(encPath([files.leren.nieuws]),        ICONS.newspaper, "Nieuws",              "Actueel artikel met verwerkingsvragen", "docx") : "",
-    files.leren.samenvatting  ? card(encPath([files.leren.samenvatting]),  ICONS.check,     "Samenvatting",        "Overzicht van deze paragraaf", "docx") : "",
-  ].filter(Boolean).join("\n");
 
   function interactiveCard(href, icon, title, desc) {
     return `
-        <div class="card card-exercise" style="flex: 1; border-left-color: var(--ch-color, ${dc.main});">
-          <div class="card-icon"><svg viewBox="0 0 24 24">${icon}</svg></div>
-          <div class="card-body"><h3>${title}</h3><p>${desc}</p>
-            <div class="sub-links"><a class="sub-link" href="${href}">Spelen</a></div>
+        <a class="resource-card resource-card-interactive" href="${href}">
+          <div class="resource-card-icon"><svg viewBox="0 0 24 24">${icon}</svg></div>
+          <div class="resource-card-body">
+            <h3>${title}</h3>
+            <p>${desc}</p>
+            <span class="resource-card-action">Spelen &rarr;</span>
           </div>
-        </div>`;
+        </a>`;
   }
 
   function begeleidCard(data) {
     if (!data) return "";
     const links = [];
-    if (data.interactief) links.push(`<a class="sub-link" href="${encPath([data.interactief])}">Interactief</a>`);
-    if (data.vragen)      links.push(`<a class="sub-link" href="${encPath([data.vragen])}">Vragen (docx)</a>`);
-    if (data.antwoorden)  links.push(`<a class="sub-link" href="${encPath([data.antwoorden])}">Antwoorden (docx)</a>`);
+    if (data.interactief) links.push(`<a class="resource-sub-link" href="${encPath([data.interactief])}">Interactief</a>`);
+    if (data.vragen)      links.push(`<a class="resource-sub-link" href="${encPath([data.vragen])}">Vragen (docx)</a>`);
+    if (data.antwoorden)  links.push(`<a class="resource-sub-link" href="${encPath([data.antwoorden])}">Antwoorden (docx)</a>`);
     if (!links.length) return "";
     return `
-        <div class="card card-exercise" style="flex: 1;">
-          <div class="card-icon"><svg viewBox="0 0 24 24">${ICONS.users}</svg></div>
-          <div class="card-body"><h3>Begeleide inoefening</h3><p>Oefenen met denkstappen en hints</p>
-            <div class="sub-links">${links.join("")}</div>
+        <div class="resource-card resource-card-interactive">
+          <div class="resource-card-icon"><svg viewBox="0 0 24 24">${ICONS.users}</svg></div>
+          <div class="resource-card-body">
+            <h3>Begeleide inoefening</h3>
+            <p>Oefenen met denkstappen en hints</p>
+            <div class="resource-sub-links">${links.join("")}</div>
           </div>
         </div>`;
   }
 
-  const interactiveRow = [];
-  if (files.oefenen.redeneerSpel)         interactiveRow.push(interactiveCard(encPath([files.oefenen.redeneerSpel]),          ICONS.puzzle, "Redeneer-spel",        "Train je redeneervaardigheid met 5 spelmodi"));
-  if (files.oefenen.wiskundevaardigheden) interactiveRow.push(interactiveCard(encPath([files.oefenen.wiskundevaardigheden]),  ICONS.layers, "Wiskundevaardigheden", "Oefen de wiskundevaardigheden voor deze paragraaf"));
+  const voorbereidenCards = [
+    files.voorbereiden.instapquiz      ? resourceCard(encPath([files.voorbereiden.instapquiz]),      ICONS.quiz,   "Instapquiz",       "Test wat je al weet over deze stof", "html") : "",
+    files.voorbereiden.voorkennis      ? resourceCard(encPath([files.voorbereiden.voorkennis]),      ICONS.book,   "Voorkennis",       "Herhaal wat je nodig hebt voor deze les", ext(files.voorbereiden.voorkennis)) : "",
+    files.voorbereiden.nieuwsdetective ? resourceCard(encPath([files.voorbereiden.nieuwsdetective]), ICONS.search, "Nieuws-detective", "Ontdek de economie achter het nieuws", "html") : "",
+  ].filter(Boolean).join("\n");
+
+  const lerenCards = [
+    files.leren.presentatie  ? resourceCard(encPath([files.leren.presentatie]),  ICONS.monitor,   "Presentatie",         "De les-presentatie met kernpunten", "pptx") : "",
+    files.leren.vaardigheden ? resourceCard(encPath([files.leren.vaardigheden]), ICONS.doc,       "Uitleg vaardigheden", "Stap-voor-stap uitleg van de lesstof", ext(files.leren.vaardigheden)) : "",
+    files.leren.stappenplan  ? resourceCard(encPath([files.leren.stappenplan]),  ICONS.steps,     "Stappenplan",         "Oefen de stappen van elke vaardigheid", "html") : "",
+    files.leren.youtube      ? resourceCard(encPath([files.leren.youtube]),      ICONS.play,      "YouTube-video’s", "Video-uitleg bij de stof", "html") : "",
+    files.leren.nieuws       ? resourceCard(encPath([files.leren.nieuws]),       ICONS.newspaper, "Nieuws",              "Actueel artikel met verwerkingsvragen", "docx") : "",
+    files.leren.samenvatting ? resourceCard(encPath([files.leren.samenvatting]), ICONS.check,     "Samenvatting",        "Overzicht van deze paragraaf", "docx") : "",
+  ].filter(Boolean).join("\n");
+
+  const oefenenRow = [];
+  if (files.oefenen.redeneerSpel)         oefenenRow.push(interactiveCard(encPath([files.oefenen.redeneerSpel]),         ICONS.puzzle, "Redeneer-spel",        "Train je redeneervaardigheid met 5 spelmodi"));
+  if (files.oefenen.wiskundevaardigheden) oefenenRow.push(interactiveCard(encPath([files.oefenen.wiskundevaardigheden]), ICONS.layers, "Wiskundevaardigheden", "Oefen de wiskundevaardigheden voor deze paragraaf"));
   const begeleidHTML = begeleidCard(files.oefenen.begeleide);
-  if (begeleidHTML) interactiveRow.push(begeleidHTML);
-
-  const interactiveRowHTML = interactiveRow.length > 0
-    ? `\n      <div style="grid-column: 1 / -1; display: flex; gap: 0.85rem;">${interactiveRow.join("")}\n      </div>`
-    : "";
-
-  const oefenenCards = interactiveRowHTML;
+  if (begeleidHTML) oefenenRow.push(begeleidHTML);
+  const oefenenCards = oefenenRow.join("\n");
 
   const taskCards = [
-    exerciseCard(files.oefenen.basis,      ICONS.star0, "Basisopgaven",         "Standaard opgaven",           "card-exercise-normal"),
-    exerciseCard(files.oefenen.midden,     ICONS.star1, "Middenopgaven",        "Kortere set, meer zelfstandig", "card-exercise-normal"),
-    exerciseCard(files.oefenen.verrijking, ICONS.star2, "Verrijkingsopgaven",   "Extra uitdaging",             "card-exercise-normal"),
+    exercisePairCard(files.oefenen.basis,      ICONS.star0, "Basisopgaven",       "Standaard opgaven"),
+    exercisePairCard(files.oefenen.midden,     ICONS.star1, "Middenopgaven",      "Kortere set, meer zelfstandig"),
+    exercisePairCard(files.oefenen.verrijking, ICONS.star2, "Verrijkingsopgaven", "Extra uitdaging"),
   ].filter(Boolean).join("\n");
-  const hasT = !HIDE_TASK_ROWS && taskCards.trim().length > 0;
 
   const hasV = voorbereidenCards.trim().length > 0;
-  const hasL = lerenCards.trim().length > 0;
   const hasO = oefenenCards.trim().length > 0;
+  const hasL = lerenCards.trim().length > 0;
+  const hasT = !HIDE_TASK_ROWS && taskCards.trim().length > 0;
 
-  let bodyHTML = `
-<header class="hero">
-  <div class="hero-inner">
-    <a class="back-link" href="../index.html"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg> ${chapterFull}</a>
-    <span class="hero-badge">Paragraaf ${paragraaf.id}</span>
-    <h1>${paragraaf.name}</h1>
-    <p class="hero-sub">${chapterFull}</p>
+  const sections = [];
+  if (hasV) sections.push({ id: "voorbereiden", num: 1, title: "Voorbereiden", hint: "Check wat je al weet en wat je nog nodig hebt", body: voorbereidenCards });
+  if (hasO) sections.push({ id: "oefenen",      num: 2, title: "Oefenen",      hint: "Kies een interactieve oefening",               body: oefenenCards });
+  if (hasL) sections.push({ id: "leren",        num: 3, title: "Leren",        hint: "De les doorwerken: presentatie, uitleg en video’s", body: lerenCards });
+  if (hasT) sections.push({ id: "opgaven",      num: 4, title: "Opgaven",      hint: "Oefen op je eigen niveau",                     body: taskCards });
+
+  const sidebarItems = sections.map(s => `      <a class="nav-item domain-${accentToken}" href="#${s.id}" data-section="${s.id}">
+        <span class="nav-number">${s.num}</span>
+        <span class="nav-text">
+          <span class="nav-title">${s.title}</span>
+          <span class="nav-badge">${s.hint}</span>
+        </span>
+      </a>`).join("\n");
+
+  const sectionsHTML = sections.map(s => `
+      <section class="section" id="${s.id}">
+        <div class="section-header border-${accentToken}">
+          <span class="section-num bg-${accentToken}">${s.num}</span>
+          <div class="section-title-group">
+            <div class="section-title">${s.title}</div>
+            <span class="section-badge">${s.hint}</span>
+          </div>
+        </div>
+        <div class="resource-grid">${s.body}
+        </div>
+      </section>`).join("\n");
+
+  const chapterBackHref = "../index.html";
+  const bookBackHref = "../../index.html";
+
+  return `<!DOCTYPE html>
+<html lang="nl" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>(function(){try{var m=localStorage.getItem('quizMode')||'light';document.documentElement.setAttribute('data-theme',m);}catch(e){}})();</script>
+<title>${paragraaf.id} ${paragraaf.name} – Lesmateriaal</title>
+<link rel="stylesheet" href="../../shared/voorkennis.css">
+<style>
+  .sidebar-jump {
+    display: block; padding: 0.55rem 1.1rem;
+    font-size: 0.72rem; color: var(--ink-soft);
+    border-bottom: 1px solid var(--border);
+  }
+  .sidebar-jump a { color: var(--accent); }
+  .sidebar-jump a:hover { text-decoration: underline; }
+
+  .resource-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 0.9rem;
+  }
+  .resource-card {
+    display: flex; gap: 0.85rem; align-items: flex-start;
+    background: var(--bg-lift);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--accent);
+    border-radius: 10px;
+    padding: 1rem 1.15rem;
+    color: inherit; text-decoration: none;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .resource-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  }
+  .resource-card-icon {
+    flex-shrink: 0; width: 38px; height: 38px; border-radius: 8px;
+    background: var(--accent-lt); color: var(--accent);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .resource-card-icon svg {
+    width: 20px; height: 20px; fill: none; stroke: currentColor;
+    stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
+  }
+  .resource-card-body { flex: 1; min-width: 0; }
+  .resource-card-body h3 {
+    font-size: 0.98rem; font-weight: 600; color: var(--ink);
+    margin: 0 0 0.2rem;
+  }
+  .resource-card-body p {
+    font-size: 0.82rem; color: var(--ink-soft);
+    line-height: 1.45; margin: 0 0 0.45rem;
+  }
+  .resource-card-type {
+    display: inline-block;
+    font-size: 0.62rem; font-family: var(--mono, ui-monospace, monospace);
+    text-transform: uppercase; letter-spacing: 0.05em;
+    color: var(--ink-soft);
+    background: var(--bg); border: 1px solid var(--border);
+    padding: 0.1rem 0.45rem; border-radius: 3px;
+  }
+  .resource-card-action {
+    display: inline-block;
+    font-size: 0.78rem; font-weight: 600;
+    color: var(--accent);
+  }
+  .resource-sub-links {
+    display: flex; gap: 0.45rem; flex-wrap: wrap;
+    margin-top: 0.3rem;
+  }
+  .resource-sub-link {
+    display: inline-block;
+    font-size: 0.74rem; font-weight: 500;
+    padding: 0.25rem 0.65rem;
+    border: 1px solid var(--border); border-radius: 5px;
+    color: var(--accent); background: var(--bg);
+    transition: background 0.12s, border-color 0.12s;
+  }
+  .resource-sub-link:hover {
+    background: var(--accent-lt);
+    border-color: var(--accent);
+  }
+  .resource-card-pair { border-left-color: var(--accent); }
+  .resource-card-interactive { border-left-color: var(--accent); }
+
+  @media (max-width: 640px) {
+    .resource-grid { grid-template-columns: 1fr; }
+  }
+
+  /* Document viewer (docx/pptx) */
+  .viewer-panel {
+    display: none; position: fixed; inset: 0;
+    background: var(--bg); z-index: 50; flex-direction: column;
+  }
+  .viewer-panel.active { display: flex; }
+  .viewer-bar {
+    display: flex; align-items: center; gap: 0.75rem;
+    padding: 0.55rem 1rem;
+    background: var(--ink); color: #fff;
+    font-size: 0.85rem;
+  }
+  .viewer-title { flex: 1; font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .viewer-download {
+    color: #fff; background: var(--accent);
+    padding: 0.28rem 0.75rem; border-radius: 4px;
+    text-decoration: none; font-size: 0.8rem;
+  }
+  .viewer-close {
+    background: transparent; border: 1px solid rgba(255,255,255,0.3); color: #fff;
+    padding: 0.28rem 0.75rem; border-radius: 4px;
+    cursor: pointer; font-size: 0.8rem;
+  }
+  .viewer-frame { flex: 1; border: none; width: 100%; background: #fff; }
+</style>
+</head>
+<body data-layout="paragraaf-v1" data-accent-domain="${accentToken}">
+
+<button class="sidebar-toggle" id="sidebarToggle" aria-label="Menu openen">
+  <svg viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+</button>
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+<div class="page-layout">
+  <nav class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <h2>${paragraaf.id} ${paragraaf.name}</h2>
+      <p>Lesmateriaal</p>
+    </div>
+    <div class="sidebar-jump">
+      <a href="${chapterBackHref}">&larr; ${chapterFull}</a><br>
+      <a href="${bookBackHref}">${CONFIG.displayLabel}</a>
+    </div>
+${sidebarItems}
+  </nav>
+
+  <div class="content">
+    <header class="hero">
+      <div class="hero-inner">
+        <a class="back-link" href="${chapterBackHref}"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg> ${chapterFull}</a>
+        <span class="hero-badge">Paragraaf ${paragraaf.id}</span>
+        <h1>${paragraaf.name}</h1>
+        <p class="hero-sub">${chapterFull}</p>
+      </div>
+    </header>
+
+    <main>${sectionsHTML}
+    </main>
   </div>
-</header>
-<main>`;
+</div>
 
-  if (hasV) bodyHTML += `
-  <div class="section">
-    <div class="section-header"><span class="step-number">1</span><h2>Voorbereiden</h2></div>
-    <p class="section-hint">Check wat je al weet en wat je nog nodig hebt</p>
-    <div class="card-grid">${voorbereidenCards}</div>
-  </div>`;
+<div class="viewer-panel" id="viewerPanel">
+  <div class="viewer-bar">
+    <span class="viewer-title" id="viewerTitle"></span>
+    <a class="viewer-download" id="viewerDownload" href="#" download>Download</a>
+    <button class="viewer-close" onclick="closeViewer()">Sluiten &times;</button>
+  </div>
+  <iframe id="viewerFrame" class="viewer-frame" sandbox="allow-scripts allow-same-origin allow-forms allow-popups"></iframe>
+</div>
 
-  // Section order: Oefenen (2) before Leren (3) — students prefer to practice first
-  if (hasO) bodyHTML += `
-  <div class="section">
-    <div class="section-header"><span class="step-number">2</span><h2>Oefenen</h2></div>
-    <p class="section-hint">Kies het niveau dat bij je past</p>
-    <div class="card-grid">${oefenenCards}</div>
-  </div>`;
-
-  if (hasL) bodyHTML += `
-  <div class="section">
-    <div class="section-header"><span class="step-number">3</span><h2>Leren</h2></div>
-    <p class="section-hint">De les doorwerken: presentatie, uitleg en video’s</p>
-    <div class="card-grid">${lerenCards}</div>
-  </div>`;
-
-  if (hasT) bodyHTML += `
-  <div class="section">
-    <div class="section-header"><span class="step-number">4</span><h2>Opgaven</h2></div>
-    <p class="section-hint">Oefen op je eigen niveau</p>
-    <div class="card-grid">${taskCards}</div>
-  </div>`;
-
-  bodyHTML += `
-</main>
-<footer>Economie VWO 4 &middot; ${CONFIG.displayLabel}</footer>`;
-
-  return pageShell(`${paragraaf.id} ${paragraaf.name} – Lesmateriaal`, dc, navHTML, bodyHTML);
+<script src="../../shared/voorkennis.js"></script>
+<script>
+function openViewer(href, title) {
+  var abs = new URL(href, window.location.href).href;
+  var viewerURL = "https://view.officeapps.live.com/op/embed.aspx?src=" + encodeURIComponent(abs);
+  document.getElementById("viewerTitle").textContent = title;
+  document.getElementById("viewerDownload").href = href;
+  document.getElementById("viewerFrame").src = viewerURL;
+  document.getElementById("viewerPanel").classList.add("active");
+}
+function closeViewer() {
+  document.getElementById("viewerPanel").classList.remove("active");
+  document.getElementById("viewerFrame").src = "about:blank";
+}
+if (window.innerWidth > 768) {
+  document.addEventListener("click", function(e) {
+    var link = e.target.closest("a[href]");
+    if (!link) return;
+    var href = link.getAttribute("href");
+    if (!href) return;
+    var lower = href.toLowerCase();
+    if (lower.endsWith(".docx") || lower.endsWith(".pptx")) {
+      e.preventDefault();
+      var name = decodeURIComponent(href.split("/").pop()).replace(/\\.[^.]+$/, "");
+      openViewer(href, name);
+    }
+  });
+}
+</script>
+</body>
+</html>`;
 }
 
 // ═══════════════════════════════════════════════════════════════════════════

@@ -2,10 +2,15 @@
  * b1-111-presentatie.js — §1.1.1 Schaarste en economisch denken
  * Boek 1 · Hoofdstuk 1.1 · Paragraaf 1.1.1 — introductory narrative-first presentation
  *
- * Follows the editorial design system in lib-pptx.js.
- * 8 slides per the paragraph plan: title, narrative hook (Lisa),
- * schaarste, alternatieve kosten, economisch denken (3 stappen),
- * uitgewerkt voorbeeld (boer tarwe vs maïs), samenvatting, afsluiting.
+ * Follows the editorial design system in lib-pptx.js + the teacher-supporting
+ * slides rules in the econ-pptx-templates skill (modality, one idea per slide,
+ * progressive disclosure, speaker notes as content container).
+ *
+ * 9 slides: title · narratief (Lisa) · schaarste · alternatieve kosten ·
+ * economisch denken (3 stappen) · uitgewerkt voorbeeld stap 2 ·
+ * uitgewerkt voorbeeld stap 3 · samenvatting · bridge-afsluiting.
+ *
+ * Speaker notes follow the Vraag / Uitleg / Pitfall / Overgang template.
  *
  * Embeds slide-adapted PNG variants from _assets/ (fig_1, fig_2, fig_3, we_1).
  * Output → 4veco-lessen/Boek 1 .../1.1.1 Schaarste en economisch denken/
@@ -105,7 +110,12 @@ async function build() {
       x: 0.6, y: 4.75, w: 8.8, h: 0.4,
       fontFace: FONT_SANS, fontSize: 14, color: PC.cloud,
     });
-    s.addNotes("Openingsdia. Laat de vraag even hangen: waarom kun je niet alles hebben? Daar gaat de hele paragraaf over.");
+    s.addNotes(
+      "Vraag:    Waarom kun je niet alles hebben? Laat de klas één antwoord roepen.\n" +
+      "Uitleg:   Zeg dat deze paragraaf precies om die vraag draait. Nog niks uitleggen — alleen nieuwsgierigheid oprekken.\n" +
+      "Pitfall:  —\n" +
+      "Overgang: Naar Lisa met haar zakgeld."
+    );
   }
 
   // ────────────────────────────────────────────────────────────────────
@@ -176,130 +186,80 @@ async function build() {
       fontFace: FONT_SERIF, fontSize: 18, italic: true, color: PC.chalk, valign: "middle",
     });
 
-    s.addNotes("Geen visual nodig hier — het verhaal doet het werk. Vraag klas: 'welke zou jij kiezen?' — en dan: 'wat kost die keuze je eigenlijk?' Dat is de brug naar het vakbegrip.");
+    s.addNotes(
+      "Vraag:    Welke zou jij kiezen, bioscoop of boek? Hand omhoog.\n" +
+      "Uitleg:   Beide opties samen kosten €27, Lisa heeft €20. Kiezen is dus verplicht. Wat kost die keuze haar eigenlijk?\n" +
+      "Pitfall:  —\n" +
+      "Overgang: Dit is schaarste — en schaarste geldt niet alleen voor Lisa."
+    );
   }
 
   // ────────────────────────────────────────────────────────────────────
-  // DIA 3 — Concept Schaarste + tabel + fig_1 + pitfall
+  // DIA 3 — Concept Schaarste: één-zin definitie + gecentreerde visual
+  // Tabel (scholier/boer/overheid) en valkuil staan in de speaker notes.
   // ────────────────────────────────────────────────────────────────────
   {
     const s = editorialSlide(pres, {
       kicker: "Kernbegrip 1",
-      title: "Schaarste: het basisprobleem van de economie",
-      notes: "Hamer op de verhouding behoeften/middelen — niet op zeldzaamheid. Water is overal, maar één flesje bij drie dorstige mensen = schaarste.",
+      title: "Schaarste",
     });
 
-    // Definitiebalk
-    s.addShape("rect", { x: 0.5, y: 1.75, w: 9, h: 0.75,
-      fill: { color: PC.indigo }, line: { color: PC.indigo, width: 0 } });
+    // Eén-zin definitiebalk — volle breedte
+    s.addShape("rect", { x: 0.5, y: 1.75, w: 9, h: 0.75, fill: { color: PC.indigo } });
     s.addShape("rect", { x: 0.5, y: 1.75, w: 0.12, h: 0.75, fill: { color: PC.coral } });
-    s.addText([
-      { text: "DEFINITIE  ", options: { fontFace: FONT_SANS, fontSize: 11, bold: true, color: PC.coral, charSpacing: 3 } },
-      { text: "Schaarste is de situatie waarin de behoeften (wensen) groter zijn dan de beschikbare middelen.", options: { fontFace: FONT_SERIF, fontSize: 18, italic: true, color: PC.chalk } },
-    ], {
-      x: 0.8, y: 1.78, w: 8.6, h: 0.7, valign: "middle",
-    });
+    s.addText(
+      "Je behoeften zijn groter dan je middelen — dus móét je kiezen.",
+      { x: 0.8, y: 1.78, w: 8.6, h: 0.7, valign: "middle",
+        fontFace: FONT_SERIF, fontSize: 20, italic: true, color: PC.chalk }
+    );
 
-    // LEFT: schaarste-tabel (scholier / boer / overheid)
-    s.addText("SCHAARSTE GELDT VOOR IEDEREEN", {
-      x: 0.5, y: 2.7, w: 5, h: 0.3,
-      ...T.labelUpper, color: PC.ash, fontSize: 11, charSpacing: 3,
-    });
-    const rows = [
-      { who: "Scholier",  mid: "Geld (€20)",       kies: "Bioscoop of boek?" },
-      { who: "Boer",      mid: "Land (10 hectare)",kies: "Tarwe of maïs?" },
-      { who: "Overheid",  mid: "Budget",           kies: "Wegen of onderwijs?" },
-    ];
-    // Header
-    s.addShape("rect", { x: 0.5, y: 3.05, w: 5, h: 0.35, fill: { color: PC.indigoMid } });
-    s.addText("WIE",         { x: 0.6,  y: 3.06, w: 1.2, h: 0.33, fontFace: FONT_SANS, fontSize: 10, bold: true, color: PC.chalk, charSpacing: 2, valign: "middle" });
-    s.addText("MIDDEL",      { x: 1.85, y: 3.06, w: 1.6, h: 0.33, fontFace: FONT_SANS, fontSize: 10, bold: true, color: PC.chalk, charSpacing: 2, valign: "middle" });
-    s.addText("KEUZE",       { x: 3.5,  y: 3.06, w: 1.9, h: 0.33, fontFace: FONT_SANS, fontSize: 10, bold: true, color: PC.chalk, charSpacing: 2, valign: "middle" });
-    rows.forEach((r, i) => {
-      const y = 3.4 + i * 0.45;
-      s.addShape("rect", { x: 0.5, y, w: 5, h: 0.45,
-        fill: { color: i % 2 === 0 ? PC.chalk : PC.paperMid }, line: { color: PC.cloud, width: 0.5 } });
-      s.addText(r.who, { x: 0.6,  y: y + 0.02, w: 1.2, h: 0.4, fontFace: FONT_SANS, fontSize: 14, bold: true, color: PC.indigo, valign: "middle" });
-      s.addText(r.mid, { x: 1.85, y: y + 0.02, w: 1.6, h: 0.4, fontFace: FONT_SANS, fontSize: 13, color: PC.ink, valign: "middle" });
-      s.addText(r.kies,{ x: 3.5,  y: y + 0.02, w: 1.9, h: 0.4, fontFace: FONT_SERIF, fontSize: 13, italic: true, color: PC.smoke, valign: "middle" });
-    });
+    // Grote, gecentreerde visual — geen concurrerende tekstblokken
+    s.addImage({ data: imgs.fig1, x: 3.075, y: 2.75, w: 3.85, h: 2.6 });
 
-    // Pitfall callout onderaan links
-    s.addShape("rect", { x: 0.5, y: 4.95, w: 5, h: 0.5,
-      fill: { color: PC.badBg }, line: { color: PC.coralDeep, width: 1 } });
-    s.addShape("rect", { x: 0.5, y: 4.95, w: 0.08, h: 0.5, fill: { color: PC.coralDeep } });
-    s.addText([
-      { text: "VALKUIL  ", options: { fontFace: FONT_SANS, fontSize: 10, bold: true, color: PC.coralDeep, charSpacing: 3 } },
-      { text: "schaarste is niet hetzelfde als weinig of zeldzaam.", options: { fontFace: FONT_SANS, fontSize: 13, color: PC.badInk } },
-    ], { x: 0.7, y: 4.97, w: 4.75, h: 0.46, valign: "middle" });
-
-    // RIGHT: figuur 1
-    s.addImage({ data: imgs.fig1, x: 5.65, y: 2.7, w: 3.85, h: 2.6 });
-    s.addText("Figuur 1 · behoeften versus middelen", {
-      x: 5.65, y: 5.3, w: 3.85, h: 0.25,
-      ...T.captionLight, fontSize: 10, align: "center",
-    });
+    s.addNotes(
+      "Vraag:    Wat heb jij deze week wel gewild en niet gekregen? Waardoor?\n" +
+      "Uitleg:   Schaarste is de verhouding tussen wensen en middelen — niet een kwestie van zeldzaam zijn. " +
+      "Schaarste geldt voor iedereen:\n" +
+      "          • Scholier — geld (€20) → bioscoop of boek?\n" +
+      "          • Boer — land (10 hectare) → tarwe of maïs?\n" +
+      "          • Overheid — budget → wegen of onderwijs?\n" +
+      "Pitfall:  Schaarste ≠ weinig of zeldzaam. Water is overal, maar één flesje bij drie dorstige mensen is ook schaarste.\n" +
+      "Overgang: Omdat kiezen móét, heeft elke keuze een prijs — niet in euro's, maar in wat je laat liggen."
+    );
   }
 
   // ────────────────────────────────────────────────────────────────────
-  // DIA 4 — Concept Alternatieve kosten + Lisa-voorbeeld + fig_2 + pitfall
+  // DIA 4 — Concept Alternatieve kosten: één-zin definitie + visual
+  // Lisa-uitwerking (gekozen/niet gekozen) en valkuil leven in de notes.
   // ────────────────────────────────────────────────────────────────────
   {
     const s = editorialSlide(pres, {
       kicker: "Kernbegrip 2",
-      title: "Alternatieve kosten: de prijs van je keuze",
-      notes: "Niet verwarren met de gelduitgave. De alternatieve kosten zijn wat je MISLOOPT — het beste alternatief dat je laat liggen.",
+      title: "Alternatieve kosten",
     });
 
-    // Definitiebalk
-    s.addShape("rect", { x: 0.5, y: 1.75, w: 9, h: 0.75,
-      fill: { color: PC.indigo } });
+    // Eén-zin definitiebalk — volle breedte
+    s.addShape("rect", { x: 0.5, y: 1.75, w: 9, h: 0.75, fill: { color: PC.indigo } });
     s.addShape("rect", { x: 0.5, y: 1.75, w: 0.12, h: 0.75, fill: { color: PC.amber } });
-    s.addText([
-      { text: "DEFINITIE  ", options: { fontFace: FONT_SANS, fontSize: 11, bold: true, color: PC.amber, charSpacing: 3 } },
-      { text: "Alternatieve kosten = de opbrengst van het beste alternatief dat je opgeeft bij een keuze.", options: { fontFace: FONT_SERIF, fontSize: 18, italic: true, color: PC.chalk } },
-    ], { x: 0.8, y: 1.78, w: 8.6, h: 0.7, valign: "middle" });
+    s.addText(
+      "De opbrengst van het beste alternatief dat je laat liggen.",
+      { x: 0.8, y: 1.78, w: 8.6, h: 0.7, valign: "middle",
+        fontFace: FONT_SERIF, fontSize: 20, italic: true, color: PC.chalk }
+    );
 
-    // LEFT: Lisa uitwerking (drie regels)
-    s.addText("TERUG NAAR LISA", {
-      x: 0.5, y: 2.7, w: 5, h: 0.3,
-      ...T.labelUpper, color: PC.ash, fontSize: 11, charSpacing: 3,
-    });
-    const lisaRows = [
-      { lbl: "Gekozen",          val: "Bioscoop (€12) — plezier van de film",              col: PC.teal },
-      { lbl: "Niet gekozen",     val: "Boek (€15) — avonden leesplezier",                   col: PC.amberDeep },
-      { lbl: "Alternatieve kosten", val: "Het leesplezier van het boek — dát geef je op.", col: PC.coralDeep },
-    ];
-    lisaRows.forEach((r, i) => {
-      const y = 3.05 + i * 0.6;
-      s.addShape("rect", { x: 0.5, y, w: 5, h: 0.55,
-        fill: { color: PC.chalk }, line: { color: PC.cloud, width: 0.5 } });
-      s.addShape("rect", { x: 0.5, y, w: 0.08, h: 0.55, fill: { color: r.col } });
-      s.addText(r.lbl.toUpperCase(), {
-        x: 0.7, y: y + 0.04, w: 1.8, h: 0.2,
-        fontFace: FONT_SANS, fontSize: 9, bold: true, color: r.col, charSpacing: 2,
-      });
-      s.addText(r.val, {
-        x: 0.7, y: y + 0.24, w: 4.7, h: 0.3,
-        fontFace: FONT_SANS, fontSize: 13, color: PC.ink, valign: "middle",
-      });
-    });
+    // Grote, gecentreerde visual
+    s.addImage({ data: imgs.fig2, x: 3.075, y: 2.75, w: 3.85, h: 2.6 });
 
-    // Pitfall
-    s.addShape("rect", { x: 0.5, y: 4.95, w: 5, h: 0.5,
-      fill: { color: PC.badBg }, line: { color: PC.coralDeep, width: 1 } });
-    s.addShape("rect", { x: 0.5, y: 4.95, w: 0.08, h: 0.5, fill: { color: PC.coralDeep } });
-    s.addText([
-      { text: "VALKUIL  ", options: { fontFace: FONT_SANS, fontSize: 10, bold: true, color: PC.coralDeep, charSpacing: 3 } },
-      { text: "alternatieve kosten ≠ de prijs die je betaalt.", options: { fontFace: FONT_SANS, fontSize: 13, color: PC.badInk } },
-    ], { x: 0.7, y: 4.97, w: 4.75, h: 0.46, valign: "middle" });
-
-    // RIGHT: figuur 2
-    s.addImage({ data: imgs.fig2, x: 5.65, y: 2.7, w: 3.85, h: 2.6 });
-    s.addText("Figuur 2 · twee alternatieven — wat geef je op?", {
-      x: 5.65, y: 5.3, w: 3.85, h: 0.25,
-      ...T.captionLight, fontSize: 10, align: "center",
-    });
+    s.addNotes(
+      "Vraag:    Lisa kiest de bioscoop. Wat kost haar dat — in euro's, en daarnaast?\n" +
+      "Uitleg:   Terug naar Lisa:\n" +
+      "          • Gekozen — bioscoop (€12), het plezier van de film.\n" +
+      "          • Niet gekozen — boek (€15), avonden leesplezier.\n" +
+      "          • Alternatieve kosten — het leesplezier dat ze laat liggen.\n" +
+      "          Benadruk: niet het geldbedrag, maar wat ze misloopt.\n" +
+      "Pitfall:  Alternatieve kosten ≠ de prijs die je betaalt. Dat is de gewone uitgave.\n" +
+      "Overgang: Hoe vind je bij élke keuze systematisch de alternatieve kosten? In drie stappen."
+    );
   }
 
   // ────────────────────────────────────────────────────────────────────
@@ -308,9 +268,15 @@ async function build() {
   {
     const s = editorialSlide(pres, {
       kicker: "Kernbegrip 3",
-      title: "Economisch denken: kiezen bij schaarste in drie stappen",
-      notes: "Dit is het schema dat je overal terug gaat zien. Elk tentamen, elke opgave: (1) alternatieven, (2) opbrengsten, (3) wat geef je op.",
+      title: "Economisch denken in drie stappen",
     });
+    s.addNotes(
+      "Vraag:    Als je voor een lastige keuze staat, waarmee begin je?\n" +
+      "Uitleg:   Drie stappen, altijd dezelfde volgorde: (1) welke opties, (2) wat levert elke optie op, (3) wat geef je op. " +
+      "Dit is het schema dat in elk tentamen en elke opgave terugkomt.\n" +
+      "Pitfall:  —\n" +
+      "Overgang: We passen het meteen toe op een boer met 10 hectare."
+    );
 
     // LEFT: drie stappen in genummerde blokken
     const steps = [
@@ -353,73 +319,84 @@ async function build() {
   }
 
   // ────────────────────────────────────────────────────────────────────
-  // DIA 6 — Worked example: boer tarwe vs maïs + we_1
+  // DIA 6a — Uitgewerkt voorbeeld · Stap 2: opbrengsten berekenen
+  // Progressive disclosure — alleen de rekenstap, nog geen conclusie.
   // ────────────────────────────────────────────────────────────────────
   {
     const s = editorialSlide(pres, {
-      kicker: "Uitgewerkt voorbeeld",
-      title: "De boer, 10 hectare, twee gewassen",
-      notes: "Laat de drie stappen uit dia 5 concreet worden. Benadruk: alternatieve kosten = opbrengst van het BESTE niet-gekozen alternatief, niet de som.",
+      kicker: "Uitgewerkt voorbeeld · Stap 2",
+      title: "Wat levert elk gewas op?",
     });
 
-    // Rekentabel links
-    s.addText("STAP 2 · OPBRENGSTEN BEREKENEN", {
-      x: 0.5, y: 1.85, w: 5, h: 0.3,
-      ...T.labelUpper, color: PC.ash, fontSize: 11, charSpacing: 3,
-    });
+    // Tabel (2 rijen: tarwe, maïs) — linker helft
     // Kolomkoppen
-    s.addShape("rect", { x: 0.5, y: 2.2, w: 5, h: 0.38, fill: { color: PC.indigoMid } });
-    s.addText("GEWAS",        { x: 0.6,  y: 2.21, w: 1.3, h: 0.36, fontFace: FONT_SANS, fontSize: 10, bold: true, color: PC.chalk, charSpacing: 2, valign: "middle" });
-    s.addText("€ / HECTARE",  { x: 1.95, y: 2.21, w: 1.6, h: 0.36, fontFace: FONT_SANS, fontSize: 10, bold: true, color: PC.chalk, charSpacing: 2, valign: "middle" });
-    s.addText("TOTAAL (10 ha)",{x: 3.6,  y: 2.21, w: 1.85,h: 0.36, fontFace: FONT_SANS, fontSize: 10, bold: true, color: PC.chalk, charSpacing: 2, valign: "middle" });
+    s.addShape("rect", { x: 0.5, y: 2.2, w: 5, h: 0.4, fill: { color: PC.indigoMid } });
+    s.addText("GEWAS",         { x: 0.6,  y: 2.22, w: 1.3, h: 0.36, fontFace: FONT_SANS, fontSize: 10, bold: true, color: PC.chalk, charSpacing: 2, valign: "middle" });
+    s.addText("€ / HECTARE",   { x: 1.95, y: 2.22, w: 1.6, h: 0.36, fontFace: FONT_SANS, fontSize: 10, bold: true, color: PC.chalk, charSpacing: 2, valign: "middle" });
+    s.addText("TOTAAL (10 ha)",{ x: 3.6,  y: 2.22, w: 1.85,h: 0.36, fontFace: FONT_SANS, fontSize: 10, bold: true, color: PC.chalk, charSpacing: 2, valign: "middle" });
     const calcRows = [
-      { g: "Tarwe", per: "€500", tot: "€5.000", col: PC.teal,      hl: true },
-      { g: "Maïs",  per: "€350", tot: "€3.500", col: PC.amberDeep, hl: false },
+      { g: "Tarwe", per: "€500", tot: "€5.000", col: PC.teal      },
+      { g: "Maïs",  per: "€350", tot: "€3.500", col: PC.amberDeep },
     ];
     calcRows.forEach((r, i) => {
-      const y = 2.6 + i * 0.5;
-      s.addShape("rect", { x: 0.5, y, w: 5, h: 0.5,
-        fill: { color: r.hl ? PC.goodBg : PC.chalk }, line: { color: PC.cloud, width: 0.5 } });
-      s.addShape("rect", { x: 0.5, y, w: 0.08, h: 0.5, fill: { color: r.col } });
-      s.addText(r.g,   { x: 0.7,  y: y + 0.05, w: 1.2, h: 0.4, fontFace: FONT_SANS, fontSize: 15, bold: true, color: PC.indigo, valign: "middle" });
-      s.addText(r.per, { x: 1.95, y: y + 0.05, w: 1.6, h: 0.4, fontFace: FONT_SANS, fontSize: 15, color: PC.ink, valign: "middle" });
-      s.addText(r.tot, { x: 3.6,  y: y + 0.05, w: 1.85,h: 0.4, fontFace: FONT_DISPLAY, fontSize: 18, bold: true, color: r.col, valign: "middle" });
+      const y = 2.6 + i * 0.6;
+      s.addShape("rect", { x: 0.5, y, w: 5, h: 0.6,
+        fill: { color: PC.chalk }, line: { color: PC.cloud, width: 0.5 } });
+      s.addShape("rect", { x: 0.5, y, w: 0.08, h: 0.6, fill: { color: r.col } });
+      s.addText(r.g,   { x: 0.7,  y: y + 0.08, w: 1.2, h: 0.45, fontFace: FONT_SANS, fontSize: 18, bold: true, color: PC.indigo, valign: "middle" });
+      s.addText(r.per, { x: 1.95, y: y + 0.08, w: 1.6, h: 0.45, fontFace: FONT_SANS, fontSize: 18, color: PC.ink, valign: "middle" });
+      s.addText(r.tot, { x: 3.6,  y: y + 0.08, w: 1.85,h: 0.45, fontFace: FONT_DISPLAY, fontSize: 22, bold: true, color: r.col, valign: "middle" });
     });
 
-    // Stap 3 uitkomstbox
-    s.addShape("rect", { x: 0.5, y: 3.75, w: 5, h: 1.6,
-      fill: { color: PC.indigo } });
-    s.addShape("rect", { x: 0.5, y: 3.75, w: 0.12, h: 1.6, fill: { color: PC.coral } });
-    s.addText("STAP 3 · WAT GEEFT HIJ OP?", {
-      x: 0.75, y: 3.85, w: 4.5, h: 0.3,
-      fontFace: FONT_SANS, fontSize: 11, bold: true, color: PC.coral, charSpacing: 3,
+    // RIGHT: we_1 figuur — gecentreerd in de rechthelft
+    s.addImage({ data: imgs.we1, x: 5.65, y: 2.2, w: 3.85, h: 2.6 });
+
+    s.addNotes(
+      "Vraag:    Een boer heeft 10 hectare. Tarwe levert €500/ha op, maïs €350/ha. Wat verdient hij per gewas?\n" +
+      "Uitleg:   Snel voorrekenen: 10 × €500 = €5.000 voor tarwe; 10 × €350 = €3.500 voor maïs. " +
+      "We hebben nu de opbrengst van élke optie — dat was stap 2.\n" +
+      "Pitfall:  Niet meteen zeggen welke hij moet kiezen. We berekenen hier alleen.\n" +
+      "Overgang: De getallen staan. Wat geeft hij op als hij tarwe kiest?"
+    );
+  }
+
+  // ────────────────────────────────────────────────────────────────────
+  // DIA 6b — Uitgewerkt voorbeeld · Stap 3: alternatieve kosten aanwijzen
+  // Conclusie-dia — één groot getal, één zin, dezelfde visual als 6a.
+  // ────────────────────────────────────────────────────────────────────
+  {
+    const s = editorialSlide(pres, {
+      kicker: "Uitgewerkt voorbeeld · Stap 3",
+      title: "Wat geeft hij op?",
     });
-    s.addText("Kiest tarwe → alternatieve kosten =", {
-      x: 0.75, y: 4.15, w: 4.5, h: 0.35,
-      fontFace: FONT_SANS, fontSize: 14, color: PC.chalk, valign: "middle",
+
+    // LEFT: groot uitkomstblok
+    s.addShape("rect", { x: 0.5, y: 2.2, w: 5, h: 2.6, fill: { color: PC.indigo } });
+    s.addShape("rect", { x: 0.5, y: 2.2, w: 0.12, h: 2.6, fill: { color: PC.coral } });
+    s.addText("Kiest tarwe → alternatieve kosten", {
+      x: 0.8, y: 2.45, w: 4.5, h: 0.4,
+      fontFace: FONT_SANS, fontSize: 16, color: PC.chalk, valign: "middle",
     });
     s.addText("€3.500", {
-      x: 0.75, y: 4.5, w: 4.5, h: 0.6,
-      fontFace: FONT_DISPLAY, fontSize: 36, bold: true, color: PC.amber, charSpacing: -1,
+      x: 0.8, y: 2.95, w: 4.5, h: 1.1,
+      fontFace: FONT_DISPLAY, fontSize: 72, bold: true, color: PC.amber, charSpacing: -2,
     });
-    s.addText("de maïsopbrengst die hij misloopt", {
-      x: 0.75, y: 5.1, w: 4.5, h: 0.25,
-      fontFace: FONT_SERIF, fontSize: 13, italic: true, color: PC.cloud,
+    s.addText("de maïsopbrengst die hij laat liggen", {
+      x: 0.8, y: 4.15, w: 4.5, h: 0.45,
+      fontFace: FONT_SERIF, fontSize: 16, italic: true, color: PC.cloud, valign: "middle",
     });
 
-    // RIGHT: we_1 figuur
-    s.addImage({ data: imgs.we1, x: 5.65, y: 1.85, w: 3.85, h: 2.6 });
-    s.addText("Uitgewerkt voorbeeld · tarwe versus maïs", {
-      x: 5.65, y: 4.45, w: 3.85, h: 0.25,
-      ...T.captionLight, fontSize: 10, align: "center",
-    });
-    // Netto-winst annotatie
-    s.addShape("rect", { x: 5.65, y: 4.85, w: 3.85, h: 0.55,
-      fill: { color: PC.goodBg }, line: { color: PC.goodInk, width: 1 } });
-    s.addText([
-      { text: "NETTO VOORDEEL  ", options: { fontFace: FONT_SANS, fontSize: 10, bold: true, color: PC.goodInk, charSpacing: 2 } },
-      { text: "€5.000 − €3.500 = €1.500", options: { fontFace: FONT_DISPLAY, fontSize: 15, bold: true, color: PC.goodInk } },
-    ], { x: 5.8, y: 4.88, w: 3.6, h: 0.5, valign: "middle" });
+    // RIGHT: dezelfde visual — herkenningspunt voor de leerling
+    s.addImage({ data: imgs.we1, x: 5.65, y: 2.2, w: 3.85, h: 2.6 });
+
+    s.addNotes(
+      "Vraag:    Hij kiest tarwe. Wat láát hij dan liggen?\n" +
+      "Uitleg:   De maïsopbrengst van €3.500 — dát zijn zijn alternatieve kosten. " +
+      "Niet de som van opties, niet de prijs die hij betaalt: het beste alternatief dat hij niet neemt.\n" +
+      "          Netto: €5.000 − €3.500 = €1.500 voordeel. Kiezen loont dus — zolang de opbrengst de alternatieve kosten overtreft.\n" +
+      "Pitfall:  Alternatieve kosten optellen over alle niet-gekozen opties is fout. Het is altijd het BESTE alternatief.\n" +
+      "Overgang: Even samenvatten: vijf dingen om vast te houden."
+    );
   }
 
   // ────────────────────────────────────────────────────────────────────
@@ -456,7 +433,12 @@ async function build() {
         s.addShape("rect", { x: 0.6, y: y + 0.6, w: 8.8, h: 0.005, fill: { color: PC.indigoSoft } });
       }
     });
-    s.addNotes("Retrieval-moment. Laat leerlingen in tweetallen de vijf punten hardop aan elkaar uitleggen zonder op de dia te kijken.");
+    s.addNotes(
+      "Vraag:    Welke van de vijf punten kun je uit je hoofd aan je buurman uitleggen?\n" +
+      "Uitleg:   Retrieval-moment. Twee minuten: leerlingen leggen de vijf punten hardop aan elkaar uit, zonder op de dia te kijken.\n" +
+      "Pitfall:  —\n" +
+      "Overgang: Terug naar Lisa — met één vraag die openblijft."
+    );
   }
 
   // ────────────────────────────────────────────────────────────────────
@@ -490,7 +472,12 @@ async function build() {
       x: 0.85, y: 4.5, w: 8.5, h: 0.45,
       fontFace: FONT_DISPLAY, fontSize: 22, bold: true, color: PC.chalk, valign: "middle",
     });
-    s.addNotes("Bridge-dia. Nog geen inhoud uit §1.1.2 geven — alleen het vervolg aankondigen zodat leerlingen geactiveerd blijven.");
+    s.addNotes(
+      "Vraag:    Hoe vergelijk je eigenlijk het plezier van een film met dat van een boek — of tarwe met maïs?\n" +
+      "Uitleg:   Bridge-dia. Laat de vraag open. Nog geen inhoud uit §1.1.2 geven — alleen het vervolg aankondigen, zodat leerlingen geactiveerd blijven.\n" +
+      "Pitfall:  —\n" +
+      "Overgang: Einde paragraaf 1.1.1. Volgende les: hoe meten we dat in geld?"
+    );
   }
 
   // ────────────────────────────────────────────────────────────────────

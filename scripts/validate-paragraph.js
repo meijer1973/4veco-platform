@@ -287,19 +287,50 @@ function validateAssets(markdownFiles, options = {}) {
     if (!pngSet.has(png)) fail(`Missing PNG for referenced asset: ${png}`);
   }
 
-  const assetPattern = new RegExp(`^${parNr.replace(/\./g, '\\.')}_(fig|ex|we|mc)_\\d+\\.(svg|png)$`);
+  const SURFACE_SUFFIX_SRC = '(?:_(?:slide|doc|summary|web_light|web_dark))';
+  const assetPattern = new RegExp(
+    `^${parNr.replace(/\./g, '\\.')}_(?:fig|ex|we|mc|news)_[A-Za-z0-9]+${SURFACE_SUFFIX_SRC}?\\.(svg|png)$`
+  );
   for (const base of referencedBases) {
     for (const ext of ['.svg', '.png']) {
       const file = `${base}${ext}`;
       if (assetFiles.includes(file) && !assetPattern.test(file)) {
-        fail(`Non-compliant asset name: ${file} (must match X.Y.Z_{type}_{number}.ext)`);
+        fail(`Non-compliant asset name: ${file} (must match X.Y.Z_{type}_{number}[_{surface}].ext)`);
       }
     }
   }
 
+  const surfaceSuffixRe = new RegExp(`${SURFACE_SUFFIX_SRC}$`);
   for (const svg of svgs) {
     const base = svg.replace(/\.svg$/, '');
-    if (trackedBases.size > 0 && !trackedBases.has(base)) warn(`Orphaned asset: ${svg}`);
+    if (trackedBases.size === 0 || trackedBases.has(base)) continue;
+    // Accept surface-variant files when their parent concept base is tracked.
+    const parent = base.replace(surfaceSuffixRe, '');
+    if (parent !== base && trackedBases.has(parent)) continue;
+    warn(`Orphaned asset: ${svg}`);
+  }
+
+  if (options.includePlannedAssets) {
+    const pairs = [
+      ['_web_light', '_web_dark'],
+      ['_web_dark', '_web_light'],
+    ];
+    let asymmetryCount = 0;
+    for (const [have, need] of pairs) {
+      const haveRe = new RegExp(`${have}$`);
+      for (const base of trackedBases) {
+        if (!haveRe.test(base)) continue;
+        const counterpart = base.replace(haveRe, need);
+        if (!trackedBases.has(counterpart)) {
+          fail(`Light/dark asymmetry: ${base} declared but ${counterpart} is not in _paragraph-plan.md`);
+          asymmetryCount++;
+        }
+      }
+    }
+    const lightCount = [...trackedBases].filter(b => b.endsWith('_web_light')).length;
+    if (asymmetryCount === 0 && lightCount > 0) {
+      pass(`${lightCount} web_light/web_dark variant pair(s) symmetric`);
+    }
   }
 
   if (brokenRefs === 0 && refs.size > 0) pass(`${refs.size} image refs all resolve`);

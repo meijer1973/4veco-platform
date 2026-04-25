@@ -18,6 +18,7 @@ const fs = require("fs");
 const path = require("path");
 const sharp = require("sharp");
 const { saveSvgFiles } = require("../../lib/lib-svg-save");
+const { SURFACES, THEMES } = require("../../lib/lib-visual-surfaces");
 const {
   Document, Packer, Paragraph, TextRun, Table, TableRow, TableCell,
   ImageRun, Header, Footer, AlignmentType, BorderStyle, WidthType,
@@ -141,12 +142,18 @@ function spacer(twips = 120) {
 // Toont schaarste visueel: vraag staat ver boven aanbod.
 // Groeps-titel noemt beide staven: "Vraag" (wachtenden) en
 // "Aanbod" (jaarlijks vrijkomend). Getallen × 1.000.
-function svgWoningtekort() {
+//
+// Theme-aware: reads its palette from THEMES[cfg.theme] so the same
+// composition can be emitted for light (doc, web_light) and dark
+// (web_dark) surfaces. ViewBox stays at 720×360 regardless of surface;
+// resolution scales via svgToPng(svg, surface.pngW).
+function renderWoningtekort(cfg) {
+  const t = THEMES[cfg.theme];
   const W = 720, H = 360;
-  // Data in 1.000-tallen
+
   const bars = [
-    { label: "Vraag (wachtenden)",     value: 400, color: "#1A5276" },
-    { label: "Aanbod (per jaar vrij)", value:  80, color: "#1E8449" },
+    { label: "Vraag (wachtenden)",     value: 400, color: t.blue },
+    { label: "Aanbod (per jaar vrij)", value:  80, color: t.green },
   ];
   const maxValue = 450; // round y-max with headroom
   const plotLeft = 120, plotRight = 620, plotTop = 80, plotBottom = 300;
@@ -154,58 +161,64 @@ function svgWoningtekort() {
   const barW = 120;
   const gap  = (plotRight - plotLeft - bars.length * barW) / (bars.length + 1);
 
-  // Y-axis grid lines every 100 (x1.000)
   let grid = "";
   for (let v = 0; v <= maxValue; v += 100) {
     const y = plotBottom - (v / maxValue) * plotH;
-    grid += `<line x1="${plotLeft}" y1="${y}" x2="${plotRight}" y2="${y}" stroke="#E2E8F0" stroke-width="1" />`;
-    grid += `<text x="${plotLeft - 10}" y="${y + 4}" font-family="Arial" font-size="12" fill="#718096" text-anchor="end">${v}</text>`;
+    grid += `<line x1="${plotLeft}" y1="${y}" x2="${plotRight}" y2="${y}" stroke="${t.grid}" stroke-width="1" />`;
+    grid += `<text x="${plotLeft - 10}" y="${y + 4}" font-family="Inter, Arial, sans-serif" font-size="12" fill="${t.muted}" text-anchor="end">${v}</text>`;
   }
 
-  // Axes
   const axes = `
-    <line x1="${plotLeft}" y1="${plotTop}" x2="${plotLeft}" y2="${plotBottom}" stroke="#2D3748" stroke-width="1.5" />
-    <line x1="${plotLeft}" y1="${plotBottom}" x2="${plotRight}" y2="${plotBottom}" stroke="#2D3748" stroke-width="1.5" />
+    <line x1="${plotLeft}" y1="${plotTop}"    x2="${plotLeft}"  y2="${plotBottom}" stroke="${t.soft}" stroke-width="1.5" />
+    <line x1="${plotLeft}" y1="${plotBottom}" x2="${plotRight}" y2="${plotBottom}" stroke="${t.soft}" stroke-width="1.5" />
   `;
 
-  // Bars + labels
   let barsSvg = "";
   bars.forEach((b, i) => {
     const x = plotLeft + gap + i * (barW + gap);
     const h = (b.value / maxValue) * plotH;
     const y = plotBottom - h;
     barsSvg += `<rect x="${x}" y="${y}" width="${barW}" height="${h}" rx="3" fill="${b.color}" />`;
-    // value label on top of bar
-    barsSvg += `<text x="${x + barW / 2}" y="${y - 8}" font-family="Arial" font-size="14" font-weight="bold" fill="${b.color}" text-anchor="middle">${b.value}</text>`;
-    // x-axis label under bar (can wrap in two lines — keep single for simplicity)
-    barsSvg += `<text x="${x + barW / 2}" y="${plotBottom + 22}" font-family="Arial" font-size="13" fill="#2D3748" text-anchor="middle">${b.label}</text>`;
+    barsSvg += `<text x="${x + barW / 2}" y="${y - 8}" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="bold" fill="${b.color}" text-anchor="middle">${b.value}</text>`;
+    barsSvg += `<text x="${x + barW / 2}" y="${plotBottom + 22}" font-family="Inter, Arial, sans-serif" font-size="13" fill="${t.ink}" text-anchor="middle">${b.label}</text>`;
   });
 
-  // "Tekort"-annotatie tussen beide staven
   const tekort = bars[0].value - bars[1].value; // 320
-  const annoX = plotLeft + gap + barW + gap / 2; // mid-gap between bars
-  const topBarY = plotBottom - (bars[0].value / maxValue) * plotH;
+  const annoX = plotLeft + gap + barW + gap / 2;
+  const topBarY    = plotBottom - (bars[0].value / maxValue) * plotH;
   const bottomBarY = plotBottom - (bars[1].value / maxValue) * plotH;
   const annotation = `
-    <line x1="${annoX}" y1="${topBarY}"    x2="${annoX}" y2="${bottomBarY}" stroke="#C0392B" stroke-width="2" stroke-dasharray="4,4" />
-    <line x1="${annoX - 6}" y1="${topBarY}" x2="${annoX + 6}" y2="${topBarY}" stroke="#C0392B" stroke-width="2" />
-    <line x1="${annoX - 6}" y1="${bottomBarY}" x2="${annoX + 6}" y2="${bottomBarY}" stroke="#C0392B" stroke-width="2" />
-    <rect x="${annoX + 10}" y="${(topBarY + bottomBarY) / 2 - 14}" width="160" height="28" rx="4" fill="#FDEDEC" stroke="#C0392B" stroke-width="1" />
-    <text x="${annoX + 90}" y="${(topBarY + bottomBarY) / 2 + 5}" font-family="Arial" font-size="13" font-weight="bold" fill="#C0392B" text-anchor="middle">Tekort: ${tekort}</text>
+    <line x1="${annoX}" y1="${topBarY}"    x2="${annoX}" y2="${bottomBarY}" stroke="${t.red}" stroke-width="2" stroke-dasharray="4,4" />
+    <line x1="${annoX - 6}" y1="${topBarY}"    x2="${annoX + 6}" y2="${topBarY}"    stroke="${t.red}" stroke-width="2" />
+    <line x1="${annoX - 6}" y1="${bottomBarY}" x2="${annoX + 6}" y2="${bottomBarY}" stroke="${t.red}" stroke-width="2" />
+    <rect x="${annoX + 10}" y="${(topBarY + bottomBarY) / 2 - 14}" width="160" height="28" rx="4" fill="${t.redSoft}" stroke="${t.red}" stroke-width="1" />
+    <text x="${annoX + 90}" y="${(topBarY + bottomBarY) / 2 + 5}" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="bold" fill="${t.red}" text-anchor="middle">Tekort: ${tekort}</text>
   `;
 
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}">
-  <rect width="${W}" height="${H}" rx="8" fill="#F7FAFC" />
-  <text x="${W / 2}" y="30" font-family="Arial" font-size="16" font-weight="bold" fill="#1E2761" text-anchor="middle">Woningmarkt Nederland: vraag en aanbod sociale huur</text>
-  <text x="${W / 2}" y="50" font-family="Arial" font-size="12" fill="#718096" text-anchor="middle">Aantal woningen (× 1.000) — indicatief 2024</text>
-  <text x="${plotLeft - 70}" y="${plotTop + plotH / 2}" font-family="Arial" font-size="12" fill="#2D3748" text-anchor="middle" transform="rotate(-90 ${plotLeft - 70} ${plotTop + plotH / 2})">Woningen (× 1.000)</text>
+  <rect width="${W}" height="${H}" rx="8" fill="${t.bg}" />
+  <text x="${W / 2}" y="30" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="bold" fill="${t.ink}" text-anchor="middle">Woningmarkt Nederland: vraag en aanbod sociale huur</text>
+  <text x="${W / 2}" y="50" font-family="Inter, Arial, sans-serif" font-size="12" fill="${t.muted}" text-anchor="middle">Aantal woningen (× 1.000) — indicatief 2024</text>
+  <text x="${plotLeft - 70}" y="${plotTop + plotH / 2}" font-family="Inter, Arial, sans-serif" font-size="12" fill="${t.soft}" text-anchor="middle" transform="rotate(-90 ${plotLeft - 70} ${plotTop + plotH / 2})">Woningen (× 1.000)</text>
   ${grid}
   ${axes}
   ${barsSvg}
   ${annotation}
-  <text x="${plotLeft}" y="${H - 10}" font-family="Arial" font-size="10" fill="#718096">Bron: CBS / ministerie BZK — orde-van-grootte (onderwijsmateriaal)</text>
+  <text x="${plotLeft}" y="${H - 10}" font-family="Inter, Arial, sans-serif" font-size="10" fill="${t.muted}">Bron: CBS / ministerie BZK — orde-van-grootte (onderwijsmateriaal)</text>
 </svg>`;
 }
+
+// News-asset registration. Mirrors the VISUALS shape used in
+// b1-111-visual-variants.js: asset base → surfaces it supports + render fn.
+// News does not appear on the presentation or in the summary, so slide
+// and summary surfaces are skipped (mirrors how ex_1 is scoped in the
+// visual-variants builder).
+const NEWS_VISUALS = {
+  "1.1.1_news_woningtekort": {
+    surfaces: ["doc", "web_light", "web_dark"],
+    render: renderWoningtekort,
+  },
+};
 
 // ══════════════════════════════════════════════════════════════════════
 // CONTENT
@@ -247,25 +260,57 @@ const DOC = {
 };
 
 // ══════════════════════════════════════════════════════════════════════
-// BUILD
+// BUILD — variants first, then the docx embeds the _doc PNG
 // ══════════════════════════════════════════════════════════════════════
 
-async function buildNieuws(doc, svg) {
+/**
+ * Render all news-asset surface variants (doc / web_light / web_dark)
+ * plus the canonical base file. Returns the base SVG string so buildNieuws
+ * can store a copy next to the docx.
+ */
+async function buildNewsVariants() {
+  if (!fs.existsSync(ASSETS_DIR)) fs.mkdirSync(ASSETS_DIR, { recursive: true });
+
+  let baseSvg = null;
+
+  for (const [base, entry] of Object.entries(NEWS_VISUALS)) {
+    for (const surfaceName of entry.surfaces) {
+      const surface = SURFACES[surfaceName];
+      const svg = entry.render(surface);
+      const stem = `${base}_${surface.suffix}`;
+      const svgPath = path.join(ASSETS_DIR, `${stem}.svg`);
+      const pngPath = path.join(ASSETS_DIR, `${stem}.png`);
+      fs.writeFileSync(svgPath, svg, "utf8");
+      fs.writeFileSync(pngPath, await svgToPng(svg, surface.pngW));
+      console.log(`wrote ${path.basename(svgPath)} and ${path.basename(pngPath)}`);
+    }
+
+    // Canonical base file: same light palette as web_light/doc. Kept so
+    // downstream consumers that expect the plain X.Y.Z_news_*.svg name
+    // (and the paragraph plan index row) continue to resolve.
+    const baseRender = entry.render(SURFACES.web_light);
+    const baseSvgPath = path.join(ASSETS_DIR, `${base}.svg`);
+    const basePngPath = path.join(ASSETS_DIR, `${base}.png`);
+    fs.writeFileSync(baseSvgPath, baseRender, "utf8");
+    fs.writeFileSync(basePngPath, await svgToPng(baseRender, 960));
+    console.log(`wrote ${path.basename(baseSvgPath)} and ${path.basename(basePngPath)}`);
+    if (base === "1.1.1_news_woningtekort") baseSvg = baseRender;
+  }
+
+  return baseSvg;
+}
+
+async function buildNieuws(doc, baseSvg) {
   const headerText = `${doc.nr} ${doc.naam} – Nieuws met visual`;
 
-  // Render SVG → PNG
-  const pngBuf = await svgToPng(svg, 720);
-  // viewBox 720×360 → aspect 0.5
+  // Embed the adapted _doc PNG (higher resolution than the old 720-wide
+  // base render) so the Word document carries the surface variant, not
+  // a raw screenshot of the neutral source.
+  const docPngPath = path.join(ASSETS_DIR, "1.1.1_news_woningtekort_doc.png");
+  const pngBuf = fs.readFileSync(docPngPath);
+  // viewBox 720×360 → aspect 0.5; held constant across surfaces so the
+  // docx layout geometry does not change when the PNG resolution does.
   const IMG_HEIGHT_PT = Math.round(IMG_WIDTH_PT * (360 / 720));
-
-  // Save PNG and SVG to _assets/ (reuse across builders)
-  if (!fs.existsSync(ASSETS_DIR)) fs.mkdirSync(ASSETS_DIR, { recursive: true });
-  const pngPath = path.join(ASSETS_DIR, "1.1.1_news_woningtekort.png");
-  const svgPath = path.join(ASSETS_DIR, "1.1.1_news_woningtekort.svg");
-  fs.writeFileSync(pngPath, pngBuf);
-  fs.writeFileSync(svgPath, svg, "utf8");
-  console.log(`Saved asset: ${pngPath} (${pngBuf.length} bytes)`);
-  console.log(`Saved asset: ${svgPath} (${Buffer.byteLength(svg, "utf8")} bytes)`);
 
   const children = [];
   children.push(headlinePara(doc.headline));
@@ -321,14 +366,14 @@ async function buildNieuws(doc, svg) {
   console.log(`Created: ${OUTPUT_FILE} (${buf.length} bytes)`);
 
   // Also keep a copy of the SVG next to the docx via saveSvgFiles (svg/ subdir)
-  saveSvgFiles([{ name: "1.1.1-nieuws-visual", svg }], OUTPUT_DIR);
+  saveSvgFiles([{ name: "1.1.1-nieuws-visual", svg: baseSvg }], OUTPUT_DIR);
 }
 
 // ── MAIN ──
 (async () => {
   try {
-    const svg = svgWoningtekort();
-    await buildNieuws(DOC, svg);
+    const baseSvg = await buildNewsVariants();
+    await buildNieuws(DOC, baseSvg);
     console.log("\nDone! Nieuws met visual for 1.1.1 created.");
   } catch (err) {
     console.error("ERROR:", err);

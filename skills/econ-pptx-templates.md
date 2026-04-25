@@ -25,6 +25,32 @@ These are not style choices; they come from `references/authored/didactiek-princ
 
 ---
 
+## MANDATORY — teacher-supporting slides
+
+A classroom PPTX is not a textbook page and not a self-study handout. The student is **listening to the teacher and watching the slide at the same time**. When the slide is text-dense, the student's verbal working memory is forced to process speech and reading simultaneously — Sweller's *modality effect* / Mayer's *multimedia-learning* corollary. Output: overload, retention loss. The `samenvatting` and `uitleg` docs cover self-study; the PPTX covers live teaching.
+
+Eight rules. Non-negotiable for new builders; existing builders are migrated as they are touched.
+
+1. **Modality rule.** Slide = visual anchor + short text. On-slide prose ≤ one sentence per concept (~12 words). Long explanations, examples, and caveats live in **speaker notes**. The teacher's voice carries the verbal channel; the slide carries the visual channel.
+2. **One idea per slide.** A definition, a graph, or one worked-example step. Do not stack definition + side-table + pitfall-callout + image on the same slide. Pitfalls get their own slide or live only in speaker notes.
+3. **Progressive disclosure for graphs.** Build complex graphs across 2–3 slides — curve alone → second curve added → equilibrium marked. Do not show the complete diagram on one slide and narrate over it. This is Mayer's *segmenting* principle.
+4. **Redundancy avoidance.** If the teacher says it aloud (per notes), it does not also appear on the slide. A slide bullet that paraphrases the teacher is cognitive noise, not reinforcement.
+5. **Speaker notes are the content container.** Structured per slide:
+   ```
+   Vraag:    [opener prompt for the class]
+   Uitleg:   [what to say while the visual is up]
+   Pitfall:  [common misconception to surface — if any]
+   Overgang: [cue to the next slide]
+   ```
+   The **Uitleg** block carries the explanation weight that used to sit on the slide. **Pitfall** replaces on-slide VALKUIL callouts.
+6. **Typography as structure.** Use the `T` presets from `lib-pptx.js` (`displayLight`, `headlineLight`, `bodyLight`, `heroDark`, …). Stop redefining `fontSize` inline per call — presets already encode the ≥18pt body / ≥28pt title / ≥40pt hero contract.
+7. **Signaling.** Color, arrows, and weight cue the currently-discussed element. Everything else stays neutral. If a graph has three curves, only the one being discussed is colored; the others fade to ash.
+8. **Dual coding is a teacher + slide duet**, not a slide-internal pattern. Visual on slide, verbal from teacher. AGENTS.md's *Dual Coding* principle still holds — the pairing just lives across two channels, not both crammed onto one screen.
+
+**QA gate — teacher read-through.** After every presentation build, read the speaker notes aloud at ~45s per slide while looking only at the slide PNG. Confirm: the slide never forces reading during narration, every slide has a clear visual anchor, the **Overgang** cues flow naturally into the next slide. Document failure modes in the paragraph's review notes before shipping.
+
+---
+
 ## MANDATORY — technical (the two hard-won lessons)
 
 ### 1. PowerPoint compatibility: always round-trip through LibreOffice

@@ -33,6 +33,37 @@ def get_domain_info(domain_name):
     slug = domain_name.lower().replace(' ', '')[:8]
     return (slug, '#1A5276', '#EBF5FB', '#154360')
 
+# Collapse every paragraph-flavored slug onto one of the three tokens that
+# engines/voorkennis.css actually defines selectors for. The stylesheet also
+# accepts the legacy slugs (markt, bedrijf, arbeids, …), but emitting only the
+# three canonical tokens keeps the attribute semantic and less surprising.
+SHARED_DOMAIN_TOKENS = {
+    'wiskunde':   'wiskunde',
+    'economisch': 'economisch',
+    'grafisch':   'grafisch',
+    'bedrijf':    'economisch',
+    'markt':      'wiskunde',
+    'marktwerk':  'wiskunde',
+    'overheid':   'grafisch',
+    'arbeids':    'economisch',
+    'extern':     'grafisch',
+}
+
+def shared_domain_class(domain_name):
+    """Return one of {wiskunde, economisch, grafisch} for any domain name."""
+    slug = get_domain_info(domain_name)[0]
+    return SHARED_DOMAIN_TOKENS.get(slug, 'economisch')
+
+def majority_shared_domain(opgaven, fallback='Economisch'):
+    """Pick the shared-token accent that covers the most opgaves."""
+    if not opgaven:
+        return shared_domain_class(fallback)
+    counts = {}
+    for opg in opgaven:
+        tok = shared_domain_class(opg.get('domain') or fallback)
+        counts[tok] = counts.get(tok, 0) + 1
+    return max(counts, key=counts.get)
+
 def esc(text):
     return html_mod.escape(text)
 
@@ -131,7 +162,7 @@ def parse_bi_document(docx_path, is_answers=False):
                         stream.append(('opgave_header', {
                             'nr': first,
                             'title': parts[0].strip(),
-                            'domain': parts[-1].strip() if len(parts) > 1 else 'Marktanalyse',
+                            'domain': parts[-1].strip() if len(parts) > 1 else 'Economisch',
                         }))
                         continue
 
@@ -356,12 +387,19 @@ def generate_html(opgaven, samenvatting, para_number, para_name, asset_prefix=".
     """Generate the full HTML."""
     web_variant_bases = web_variant_bases or set()
 
-    # Determine primary domain color
-    primary_domain = 'Marktanalyse'
+    # Determine primary domain color. The accent shown in the hero band and
+    # sidebar is derived from the majority domain across all opgaves so that a
+    # paragraph with a clear Economisch emphasis does not inherit a Marktanalyse
+    # default just because the first opgave is missing a domain marker.
+    accent_token = majority_shared_domain(opgaven)
+    primary_domain = 'Economisch'
     if opgaven:
-        primary_domain = opgaven[0].get('domain', 'Marktanalyse')
+        primary_domain = opgaven[0].get('domain') or 'Economisch'
     di = get_domain_info(primary_domain)
     dcls, dprimary, dlight, ddark = di
+    # Override dcls so it is always one of the three shared accent tokens
+    # (voorkennis.css defines selectors for them plus their legacy aliases).
+    dcls = accent_token
 
     # Build sidebar
     sidebar_items = ''
@@ -485,7 +523,7 @@ def generate_html(opgaven, samenvatting, para_number, para_name, asset_prefix=".
           <span class="opgave-num">{opg['nr']}</span>
           <div class="opgave-title-group">
             <div class="opgave-title">{esc(opg['title'])}</div>
-            <span class="opgave-badge">{esc(opg.get('domain', 'Marktanalyse'))}</span>
+            <span class="opgave-badge">{esc(opg.get('domain') or 'Economisch')}</span>
           </div>
         </div>
 {ctx}{intro}{questions_html}

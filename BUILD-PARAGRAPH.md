@@ -169,7 +169,7 @@ A complete Part B companion set has **24 required root files including `index.ht
 | 8 | `X.Y.Z [Naam] – uitleg vaardigheden.html` | Leren | Yes | `convert_vaardigheden.py` | File #7 (.docx) | Converted |
 | 9 | `X.Y.Z [Naam] – nieuws met visual.docx` | Leren | Yes | Adapt `nieuws-351-352-afsluiting.js` | Recent Dutch news + SVG visual | Scripted-manual |
 | 10 | `X.Y.Z [Naam] – samenvatting.docx` | Leren | Yes | Adapt `samenvatting-351-352-rebuild.js` | Key concepts from paragraph | Scripted-manual |
-| 11 | `X.Y.Z [Naam] – youtube-videos.html` | Leren | Yes | Write directly | 3 real YouTube video IDs | Manual |
+| 11 | `X.Y.Z [Naam] – youtube-videos.html` | Leren | Yes | Small per-paragraph generator (e.g. `b1-111-youtube-videos.js`) using shared voorkennis.css | 3 real YouTube video IDs | Scripted-manual |
 | 12 | `X.Y.Z [Naam] – stappenplan.html` | Leren | Yes | `build-procedure-shells.js` (auto) | `shared/procedure/X.Y.Z.js` | Generated |
 | 13 | `X.Y.Z [Naam] – redeneer-spel.html` | Oefenen | Yes | `build-reasoning-engine.js` (auto) | `shared/reasoning/X.Y.Z.js` | Generated |
 | 14 | `X.Y.Z [Naam] – wiskundevaardigheden.html` | Oefenen | Yes | `build-skilltree-shells.js` (auto) | `skilltree` field in book manifest | Generated |
@@ -225,7 +225,8 @@ Each scripted-manual asset follows the same pattern: **read source → write bui
 | **Reusable (don't change)** | `lib-pptx.js` exports: PC/SC/HEX palettes, T typography presets, `defineMasters()`, `svgToPng()`, `ICON`/`placeIcon()`, `svgHeader()`, `editorialTitle()`, `fixPptxFile()`, `roundtripWithLibreOffice()`. |
 | **Custom (must write)** | Slide sequence, text content per slide, SVG graph code per concept, speaker notes. |
 | **Skills to read first** | `econ-pptx-templates` + `economic-graph` |
-| **Hard rules** | Theory + worked examples only, NEVER exercise instructions. Min 3 SVG→PNG graphs. Min 18pt font. After `writeFile()` always call `fixPptxFile()` + `roundtripWithLibreOffice()` — raw PptxGenJS output triggers PowerPoint repair dialog. |
+| **Hard rules** | Theory + worked examples only, NEVER exercise instructions. Min 3 SVG→PNG graphs. Min 18pt font. After `writeFile()` always call `fixPptxFile()` + `roundtripWithLibreOffice()` — raw PptxGenJS output triggers PowerPoint repair dialog. **Teacher-supporting slide rules** (see `econ-pptx-templates` skill): one idea per slide, on-slide prose ≤ one sentence per concept, long explanations live in speaker notes using the `Vraag / Uitleg / Pitfall / Overgang` template, complex graphs use progressive disclosure across 2–3 slides. |
+| **QA gate — teacher read-through** | After LibreOffice round-trip, render to PDF+PNG (`soffice --convert-to pdf` → `pdftoppm -r 90`). Read the speaker notes aloud at ~45s per slide while looking only at the slide PNG. Confirm: the slide never forces reading during narration, every slide has a clear visual anchor, the `Overgang` cues flow naturally into the next slide. Log failure modes in the paragraph review notes before shipping. |
 
 #### Uitleg voorkennis (.docx)
 | | |

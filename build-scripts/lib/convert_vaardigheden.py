@@ -45,6 +45,28 @@ def get_domain_info(domain_name):
     slug = domain_name.lower().replace(' ', '')[:8]
     return (slug, '#1A5276', '#EBF5FB', '#154360')
 
+# ═══════════════════════════════════════════════════════════
+# Shared voorkennis.css domain tokens — the only three the
+# platform stylesheet actually defines selectors for. Every
+# per-paragraph flavor collapses onto one of these.
+# ═══════════════════════════════════════════════════════════
+SHARED_DOMAIN_TOKENS = {
+    'wiskunde':   'wiskunde',
+    'economisch': 'economisch',
+    'grafisch':   'grafisch',
+    'bedrijf':    'economisch',
+    'markt':      'wiskunde',
+    'marktwerk':  'wiskunde',
+    'overheid':   'grafisch',
+    'arbeids':    'economisch',
+    'extern':     'grafisch',
+}
+
+def shared_domain_class(domain_name):
+    """Return one of {wiskunde, economisch, grafisch} for any domain name."""
+    slug = get_domain_info(domain_name)[0]
+    return SHARED_DOMAIN_TOKENS.get(slug, 'economisch')
+
 def esc(text):
     """HTML-escape text."""
     return html_mod.escape(text)
@@ -526,7 +548,7 @@ def render_callout(callout_type, text):
 '''
 
 
-def generate_html(data, para_number, para_name, asset_prefix="../_assets", web_variant_bases=None):
+def generate_html(data, para_number, para_name, asset_prefix="../_assets", shared_prefix=None, web_variant_bases=None):
     """Generate the full HTML string."""
     sections = data['sections']
     checklist = data['checklist']
@@ -573,7 +595,7 @@ def generate_html(data, para_number, para_name, asset_prefix="../_assets", web_v
     # Build sidebar nav items
     sidebar_items = ''
     for s in sections:
-        dcls = get_domain_info(s['domain'])[0]
+        dcls = shared_domain_class(s['domain'])
         sidebar_items += f'''    <a class="nav-item domain-{dcls}" href="#sectie-{s['nr']}" data-section="sectie-{s['nr']}">
       <span class="nav-number">{s['nr']}</span>
       <span class="nav-text">
@@ -586,7 +608,7 @@ def generate_html(data, para_number, para_name, asset_prefix="../_assets", web_v
     # Build hero cards
     hero_cards = ''
     for s in sections:
-        dcls = get_domain_info(s['domain'])[0]
+        dcls = shared_domain_class(s['domain'])
         hero_cards += f'''          <div class="hero-card card-{dcls}" data-target="sectie-{s['nr']}">
             <div class="hero-card-num">{s['nr'].zfill(2)}</div>
             <div class="hero-card-title">{esc(s['title'])}</div>
@@ -597,7 +619,7 @@ def generate_html(data, para_number, para_name, asset_prefix="../_assets", web_v
     # Build section content
     sections_html = ''
     for s in sections:
-        dcls = get_domain_info(s['domain'])[0]
+        dcls = shared_domain_class(s['domain'])
 
         content_html = ''
         for etype, edata in s['content']:
@@ -680,7 +702,59 @@ def generate_html(data, para_number, para_name, asset_prefix="../_assets", web_v
     n = len(sections)
     grid_cols = f'repeat({n}, 1fr)' if n <= 5 else f'repeat({min(n,4)}, 1fr)'
 
-    # Assemble full HTML
+    if shared_prefix:
+        return f'''<!DOCTYPE html>
+<html lang="nl" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>(function(){{try{{var m=localStorage.getItem('quizMode')||'light';document.documentElement.setAttribute('data-theme',m);}}catch(e){{}}}})();</script>
+<title>{para_number} {esc(para_name)} – Uitleg vaardigheden</title>
+<link rel="stylesheet" href="{shared_prefix}/voorkennis.css">
+</head>
+<body data-layout="vaardigheden-v1">
+
+<button class="sidebar-toggle" id="sidebarToggle" aria-label="Menu openen">
+  <svg viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+</button>
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+<div class="page-layout">
+  <nav class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <h2>{para_number} {esc(para_name)}</h2>
+      <p>Uitleg vaardigheden</p>
+    </div>
+{sidebar_items}
+  </nav>
+
+  <div class="content">
+    <header class="hero">
+      <div class="hero-inner">
+        <a class="back-link" href="index.html"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg> Terug naar overzicht</a>
+        <span class="hero-badge">{para_number} &middot; Vaardigheden</span>
+        <h1>{esc(para_name)} &mdash; Vaardigheden</h1>
+        <p class="hero-sub">{esc(data['subtitle'])}</p>
+        <div class="hero-cards">
+{hero_cards}
+        </div>
+      </div>
+    </header>
+
+    <main>
+{sections_html}
+{valkuilen_html}
+{checklist_html}
+    </main>
+  </div>
+</div>
+
+<script src="{shared_prefix}/voorkennis.js"></script>
+</body>
+</html>'''
+
+    # Assemble full HTML (legacy inline-CSS fallback; reskin-vaardigheden.js
+    # post-processes this into the shared-CSS form when not using shared_prefix.)
     return f'''<!DOCTYPE html>
 <html lang="nl">
 <head>
@@ -1035,10 +1109,12 @@ def process_paragraph(para_folder):
         docx_path = flat_files[0]
         html_path = os.path.join(para_folder, f'{para_number} {para_name} \u2013 uitleg vaardigheden.html')
         asset_prefix = '_assets'
+        shared_prefix = '../../shared'
     elif legacy_files:
         docx_path = legacy_files[0]
         html_path = os.path.join(para_folder, '2. Leren', f'{para_number} {para_name} \u2013 uitleg vaardigheden.html')
         asset_prefix = '../_assets'
+        shared_prefix = '../../../shared'
     else:
         print(f'  SKIP {para_number}: no vaardigheden.docx found')
         return False
@@ -1056,7 +1132,9 @@ def process_paragraph(para_folder):
     assets_dir = os.path.join(para_folder, '_assets')
     web_variant_bases = find_web_variant_bases(assets_dir)
 
-    html_content = generate_html(data, para_number, para_name, asset_prefix, web_variant_bases)
+    html_content = generate_html(data, para_number, para_name, asset_prefix,
+                                 shared_prefix=shared_prefix,
+                                 web_variant_bases=web_variant_bases)
 
     with open(html_path, 'w', encoding='utf-8') as f:
         f.write(html_content)
