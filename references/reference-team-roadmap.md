@@ -15,7 +15,7 @@ Compatibility decisions:
 - Sprint `R0.1` now means the sprint-execution scaffold.
 - The older local `R0.1` / `R0.2` history is preserved as completed historical `H0.x` work, not as active roadmap numbering.
 - `R0.1 Sprint Execution Scaffold` is completed.
-- `R0.2 Reference Baseline Inventory` is completed; the next planned sprint is `R1.1 Source-of-Truth Decision`.
+- `R1.1 Source-of-Truth Decision` is completed; the next planned sprint is `R1.2 Core JSON Schemas`.
 - Current catalog metrics are updated after the labor-market unit additions.
 - The reference CLI exists; CLI documentation still needs cleanup because parts of the README still read like a future contract.
 
@@ -41,7 +41,6 @@ Open items are listed first; completed items are kept below them.
 
 | Sprint | Name | Completed | Current State |
 |--------|------|-----------|---------------|
-| R1.1 | Source-of-Truth Decision | no | Planned. Record canonical/projection status for every reference surface. |
 | R1.2 | Core JSON Schemas | no | Planned. Define schemas before broad rewrites. |
 | R1.3 | Unit Prior-Knowledge Schema Extension | no | Planned. Add explicit zero-needs and assumed-prior-knowledge governance. |
 | R2.1 | Full Empty-Needs Audit | no | Planned. Non-mutating audit over the full current unit catalog. |
@@ -61,6 +60,7 @@ Open items are listed first; completed items are kept below them.
 | R7.2 | Hybrid Retrieval | no | Planned. Add lexical/entity/graph retrieval before optional vector search. |
 | R7.3 | Retrieval Evaluation Set | no | Planned. Make retrieval quality regressions visible. |
 | R7.4 | RAG Review Gate | no | Planned. Approve internal/teacher-facing RAG only after evaluation. |
+| R1.1 | Source-of-Truth Decision | yes | Completed. `references/SOURCE_OF_TRUTH.md` defines canonical source, projection, authority, and edit-policy rules. |
 | R0.2 | Reference Baseline Inventory | yes | Completed. Source manifest, document inventory, builder, and validators now define the baseline reference/report/tooling surface. |
 | R0.1 | Sprint Execution Scaffold | yes | Completed. Sprint templates, example fixtures, JSON sprint metadata, and plan/result validators exist. |
 | H0.1 | A-Domain Skilltree Consistency | yes | Historical completed work. `A38` through `A44` implemented; A-domain skilltree coverage matches the catalog. |
@@ -287,17 +287,17 @@ Do not invert this order.
 
 ## Immediate Next Sprint
 
-Proceed with `R1.1 Source-of-Truth Decision`.
+Proceed with `R1.2 Core JSON Schemas`.
 
 Create:
 
-- `docs/sprints/R1.1-plan.md`
-- `references/data/sprints/R1.1.plan.json`
-- `reports/sprints/R1.1-baseline.md`
-- `references/SOURCE_OF_TRUTH.md`
-- `build-scripts/references/check-source-of-truth.js`
+- `docs/sprints/R1.2-plan.md`
+- `references/data/sprints/R1.2.plan.json`
+- `reports/sprints/R1.2-baseline.md`
+- core schema files under `references/schemas/`
+- `build-scripts/references/validate-core-schemas.js`
 
-Use the R0.2 inventories as the starting map for classifying canonical sources, generated projections, external authority, authored judgement, and legacy migration surfaces.
+Use `references/SOURCE_OF_TRUTH.md` and the R0.2 inventories as the policy and file map for schema decisions.
 
 ## Final Rule
 

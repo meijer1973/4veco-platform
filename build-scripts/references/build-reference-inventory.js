@@ -117,6 +117,18 @@ function classify(pathRel) {
       downstream_dependencies: ['qc-runs', 'review-gates'],
     };
   }
+  if (pathRel === 'references/SOURCE_OF_TRUTH.md') {
+    return {
+      layer: 'governance_policy',
+      authority_level: 'authored_judgement',
+      source_type: 'source_of_truth_policy',
+      generated_status: 'manual_source',
+      edit_policy: 'human_reviewed_edit',
+      owner: 'references_team',
+      refresh_policy: 'roadmap_update',
+      downstream_dependencies: ['schemas', 'validators', 'review-gates'],
+    };
+  }
   if (pathRel.startsWith('references/data/')) {
     return {
       layer: 'governance_data',

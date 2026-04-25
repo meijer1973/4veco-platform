@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-25T18:39:53.399Z",
+  "generatedAt": "2026-04-25T19:28:52.227Z",
   "internalOnly": true,
   "teams": [
     {
@@ -163,13 +163,6 @@
           "summary": "References Team Roadmap Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Scope: references/, build-scripts/references/, build-scripts/reports/, reference dashboards, and generated reference reports under reports/ Adoption Decision The handoff roadmap has been adopted as the main operating roadmap for the references team. No blocking incompatibility was found. The roadmap direction fits the repository: machine-edited references, evidence-first unit growth, JSON-first reports, review gates for pedagogical auth...",
           "sprints": [
             {
-              "sprint": "R1.1",
-              "name": "Source-of-Truth Decision",
-              "completed": "no",
-              "currentState": "Planned. Record canonical/projection status for every reference surface.",
-              "exitGate": ""
-            },
-            {
               "sprint": "R1.2",
               "name": "Core JSON Schemas",
               "completed": "no",
@@ -303,6 +296,13 @@
               "exitGate": ""
             },
             {
+              "sprint": "R1.1",
+              "name": "Source-of-Truth Decision",
+              "completed": "yes",
+              "currentState": "Completed. `references/SOURCE_OF_TRUTH.md` defines canonical source, projection, authority, and edit-policy rules.",
+              "exitGate": ""
+            },
+            {
               "sprint": "R0.2",
               "name": "Reference Baseline Inventory",
               "completed": "yes",
@@ -341,14 +341,6 @@
         }
       ],
       "sprints": [
-        {
-          "sprint": "R1.1",
-          "name": "Source-of-Truth Decision",
-          "completed": "no",
-          "currentState": "Planned. Record canonical/projection status for every reference surface.",
-          "exitGate": "",
-          "roadmap": "References roadmap"
-        },
         {
           "sprint": "R1.2",
           "name": "Core JSON Schemas",
@@ -502,6 +494,14 @@
           "roadmap": "References roadmap"
         },
         {
+          "sprint": "R1.1",
+          "name": "Source-of-Truth Decision",
+          "completed": "yes",
+          "currentState": "Completed. `references/SOURCE_OF_TRUTH.md` defines canonical source, projection, authority, and edit-policy rules.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
           "sprint": "R0.2",
           "name": "Reference Baseline Inventory",
           "completed": "yes",
@@ -542,8 +542,8 @@
           "roadmap": "References roadmap"
         }
       ],
-      "completedCount": 5,
-      "openCount": 20
+      "completedCount": 6,
+      "openCount": 19
     },
     {
       "id": "lessen",
