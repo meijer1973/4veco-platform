@@ -33,7 +33,8 @@
     "node build-scripts/references/build-reference-inventory.js",
     "node build-scripts/references/check-source-manifest.js",
     "node build-scripts/references/check-document-inventory.js",
-    "node build-scripts/sprints/check-sprint-result.js reports/sprints/R0.2-result.md"
+    "node build-scripts/sprints/check-sprint-result.js reports/sprints/R0.2-result.md",
+    "node build-scripts/sprints/check-sprint-bundle.js R0.2 --complete"
   ],
   "protected_reference_data_changes_allowed": false
 }

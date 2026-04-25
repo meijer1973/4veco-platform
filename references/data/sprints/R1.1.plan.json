@@ -12,6 +12,7 @@
     "node build-scripts/references/build-reference-inventory.js",
     "node build-scripts/references/check-source-manifest.js",
     "node build-scripts/references/check-document-inventory.js",
-    "node build-scripts/sprints/check-sprint-result.js reports/sprints/R1.1-result.md"
+    "node build-scripts/sprints/check-sprint-result.js reports/sprints/R1.1-result.md",
+    "node build-scripts/sprints/check-sprint-bundle.js R1.1 --complete"
   ]
 }

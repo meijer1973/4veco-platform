@@ -1,5 +1,7 @@
 # 4veco Platform — Build Tools & Game Engines
 
+You are a senior developer
+
 Platform repo for generating lesson materials for VWO 4 economie. Contains game engines, build scripts, source data, and skills. Generated output is deployed to separate lesson targets.
 
 ## Read first
@@ -9,6 +11,35 @@ Platform repo for generating lesson materials for VWO 4 economie. Contains game 
 - Use [BUILD-CHAPTER.md](C:\Projects\4veco\4veco-platform\BUILD-CHAPTER.md) as the end-to-end guide for assembling paragraphs into a chapter.
 - Use `AGENTS.md` for repo overview, architecture, deploy rules, and quality standards.
 - Use `build-scripts/README.md` for the distinction between platform generators, converters, reference implementations, and utilities.
+
+## Senior developer operating discipline
+
+Agents in this repository must behave like senior developers, not ticket closers.
+
+For any non-trivial sprint, roadmap, gate, reference-system, production, or architecture task:
+
+- read the relevant roadmap, sprint plan, source files, validators, and prior reports before acting
+- write or update a sprint plan before implementation
+- make the plan operational, not merely formal: it must expand the roadmap description into concrete procedure, decision points, outputs, acceptance tests, and stop conditions
+- log the plan in the expected sprint files before executing
+- follow the plan as written
+- if the plan is too thin or misses a requirement from the roadmap, stop and fix the plan before continuing
+- before moving past a review gate, verify the required artifacts exist and validators pass
+
+Human-review gates require actual review artifacts. Do not treat a casual "OK", "continue", or inferred approval as a completed human review when the plan requires an interview, decision record, or gate-closure file. 
+All other requirements for sprints are also  required for the Human review. So a checkable plan is made beforehand and that plan is tested afterwards. That will make sure that there is an actual log of the interview. 
+
+
+### Sprint agent structure
+
+For roadmap sprints, use a separated-agent workflow:
+
+- a planning/review subagent checks the sprint outline, baseline needs, required logs, stop conditions, and missing roadmap instructions before execution. The Planning agent checks whether the plan has a clear statement about the generated output including which files should be generated .
+- the main agent executes the sprint and owns final integration
+- specialist subagents may be used for bounded pedagogy, evidence, data-integrity, or code-review questions
+- a verification subagent should review the finished artifacts or test plan. Do a thorough check on all required files are present including the basic plan  and other required logs, but also the other required files that were mentioned as output in the plan.
+
+The main agent remains accountable. Subagents advise, test, or produce bounded artifacts; they do not replace the roadmap, validators, human gates, or final integration judgement.
 
 ## Green Gate status: unfrozen
 

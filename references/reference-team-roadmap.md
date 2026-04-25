@@ -26,14 +26,47 @@ Every sprint must keep plans and completion status explicit.
 Each sprint must have:
 
 - a committed sprint plan
+- an operationalized sprint procedure that expands the roadmap description into executable steps, decision points, stop conditions, outputs, and acceptance tests
 - a baseline report
 - bounded allowed and forbidden paths
 - acceptance tests
 - a result report
 - a diff summary
 - a completion status in this roadmap
+- a deterministic sprint-bundle check before completion
+
+The sprint plan must be more detailed than the sprint row in this roadmap. It must preserve every substantive instruction from the roadmap phase, sprint description, review-gate model, and current-state notes. If an instruction exists in the roadmap but is missing from the sprint plan, the plan is incomplete and the sprint must not proceed.
 
 Machine-reference changes must go through CLI scripts. Do not hand-edit `references/machine/` or `references/external/`.
+
+## Sprint Planning Contract
+
+This contract applies to every sprint in the ledger.
+
+Before execution, the sprint plan must include an `Operationalized sprint procedure` section that answers:
+
+- what exact sequence of work will happen
+- which roadmap instructions are being carried forward
+- what artifacts prove the work happened
+- what validators must pass
+- what requires human review
+- where the agent must stop
+
+For human-review gates, the procedure must include the full interview or review protocol, not only the final gate status. R2.3 is the reference example: the plan must include calibration questions, answer recording, pattern analysis, targeted follow-ups, closure proposal, explicit human confirmation, and only then gate records.
+
+## Subagent And Verification Structure
+
+Subagents are part of the sprint control system, not a substitute for it.
+
+Default sprint structure:
+
+1. A planning/review subagent checks whether the sprint plan fully operationalizes the roadmap description, baseline, required logs, stop conditions, and review gates.
+2. The main agent executes the sprint and keeps ownership of integration, file changes, and roadmap state.
+3. Specialist subagents may review bounded pedagogy, evidence, data-integrity, code, or dashboard questions.
+4. A verification subagent reviews the completed artifacts or test evidence before the sprint is considered done when the sprint has meaningful risk.
+5. The deterministic sprint-bundle checker verifies that required logs exist and point to each other.
+
+The deterministic checker cannot prove pedagogical quality. It must prove the mechanical part: plan, plan JSON, baseline, result, diff summary, result JSON, protected-surface declarations, and validator references.
 
 ## Sprint Ledger
 
@@ -300,6 +333,17 @@ Create:
 
 Ask the human reviewer to decide whether the empty-needs gate is `pass`, `pass_with_conditions`, `hold`, or `fail`. Do not apply dependency corrections before the gate is closed.
 
+R2.3 must use the adaptive human interview protocol:
+
+1. Ask about 8-10 calibration questions grounded in the review packet.
+2. Record the human answers in `human-interview.md`.
+3. Analyze answer patterns.
+4. Choose one next mode: `continue_targeted`, `batch_confirm_low_risk`, `pause_for_missing_evidence`, `rerun_audit_with_revised_rubric`, `schema_change_required`, or `propose_gate_closure`.
+5. Ask targeted follow-ups or batch-confirm low-risk rules.
+6. Draft a closure proposal.
+7. Get explicit human confirmation.
+8. Write `gate-closure.json` and validate it.
+
 ## Final Rule
 
 Use this sequence:
@@ -310,6 +354,7 @@ Plan
 -> Execute
 -> Verify
 -> Review gate if needed
+-> Deterministic bundle check
 -> Commit
 -> Tag
 -> Proceed only to the allowed next sprint
