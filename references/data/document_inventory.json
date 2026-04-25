@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1",
-  "generated_at": "2026-04-25T19:43:13.008Z",
+  "generated_at": "2026-04-25T19:44:11.385Z",
   "sprint_id": "R0.2",
   "scope": [
     "references",
@@ -10,28 +10,28 @@
   ],
   "note": "Inventory covers reference sources, generated reports, and reference/report tooling.",
   "summary": {
-    "file_count": 176,
+    "file_count": 178,
     "by_layer": {
       "reference_tooling": 42,
       "report_tooling": 9,
       "authored_judgement": 7,
-      "governance_data": 15,
+      "governance_data": 16,
       "external_authority": 32,
       "machine_registry": 5,
       "quality_protocol": 5,
       "planning": 1,
       "schema_contract": 18,
       "governance_policy": 1,
-      "generated_report": 41
+      "generated_report": 42
     },
     "by_edit_policy": {
       "code_review": 69,
       "human_reviewed_edit": 14,
       "generated_by_inventory_script": 3,
-      "sprint_process": 12,
+      "sprint_process": 13,
       "external_refresh_only": 32,
       "cli_only": 5,
-      "generated_by_script": 41
+      "generated_by_script": 42
     }
   },
   "files": [
@@ -1487,6 +1487,26 @@
       "self_generated_inventory_file": false
     },
     {
+      "path": "references/data/sprints/R2.3.plan.json",
+      "file_name": "R2.3.plan.json",
+      "extension": "json",
+      "size_bytes": 1036,
+      "sha256": "b756fd579ee8bc648ae6a45ca6b8ee365c29eb06a0713afaa499d46c4b283f93",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
       "path": "references/external/amstelveencollege_quality_standards.md",
       "file_name": "amstelveencollege_quality_standards.md",
       "extension": "md",
@@ -2330,8 +2350,8 @@
       "path": "references/reference-team-roadmap.md",
       "file_name": "reference-team-roadmap.md",
       "extension": "md",
-      "size_bytes": 13558,
-      "sha256": "0f05455e6c47524a8f6693a852dc6d308939958d2f9ad26637fa95d2008c03a0",
+      "size_bytes": 13590,
+      "sha256": "7f55e659c819907cadbf569670b8bba7ee778811f10c08a3eb1bbfbe03551a37",
       "layer": "planning",
       "authority_level": "authored_judgement",
       "source_type": "roadmap",
@@ -2847,8 +2867,8 @@
       "path": "reports/internal-dashboard/dashboard-data.json",
       "file_name": "dashboard-data.json",
       "extension": "json",
-      "size_bytes": 53464,
-      "sha256": "73c520a68fad514b8acb784c5c3f06774311d388d35ff0265892328ce6c8a185",
+      "size_bytes": 53474,
+      "sha256": "4c216a612d58f58ce891f7001f2b0f2df78773724e5d12becf8466274dc6a435",
       "layer": "generated_report",
       "authority_level": "generated_report",
       "source_type": "report_json",
@@ -2867,8 +2887,8 @@
       "path": "reports/internal-dashboard/index.html",
       "file_name": "index.html",
       "extension": "html",
-      "size_bytes": 33743,
-      "sha256": "7e09a2068a528773d4368894af2f0998e3ebe16d07ebe78923f28ce298f8c5e3",
+      "size_bytes": 33748,
+      "sha256": "2e8abd0286055c313a943423e20889657e8b6bf8b3c2ab749c47f435e015d1f0",
       "layer": "generated_report",
       "authority_level": "generated_report",
       "source_type": "dashboard_html",
@@ -3489,6 +3509,26 @@
       "extension": "md",
       "size_bytes": 2420,
       "sha256": "47f942fab2023e2b182975974922bd3857115dbbe17ef9a6eb53f347ba7924a5",
+      "layer": "generated_report",
+      "authority_level": "generated_report",
+      "source_type": "report_md",
+      "generated_status": "generated_projection",
+      "edit_policy": "generated_by_script",
+      "owner": "platform_team",
+      "refresh_policy": "regenerate",
+      "downstream_dependencies": [
+        "dashboards",
+        "planning",
+        "qc-review"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "reports/sprints/R2.3-baseline.md",
+      "file_name": "R2.3-baseline.md",
+      "extension": "md",
+      "size_bytes": 1299,
+      "sha256": "37a5328858582eef179fe74272ed8e074a5ae23571cf4532ca3bd22d2337fff9",
       "layer": "generated_report",
       "authority_level": "generated_report",
       "source_type": "report_md",

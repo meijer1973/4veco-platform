@@ -15,7 +15,7 @@ Compatibility decisions:
 - Sprint `R0.1` now means the sprint-execution scaffold.
 - The older local `R0.1` / `R0.2` history is preserved as completed historical `H0.x` work, not as active roadmap numbering.
 - `R0.1 Sprint Execution Scaffold` is completed.
-- `R2.2 Subagent Review For Empty Needs` is completed; the next sprint is `R2.3 Human Review And Gate Closure`.
+- `R2.2 Subagent Review For Empty Needs` is completed; `R2.3 Human Review And Gate Closure` is active and waiting for human gate decision.
 - Current catalog metrics are updated after the labor-market unit additions.
 - The reference CLI exists; CLI documentation still needs cleanup because parts of the README still read like a future contract.
 
@@ -41,7 +41,7 @@ Open items are listed first; completed items are kept below them.
 
 | Sprint | Name | Completed | Current State |
 |--------|------|-----------|---------------|
-| R2.3 | Human Review And Gate Closure | no | Planned. Human economics reviewer closes or conditions the empty-needs gate. |
+| R2.3 | Human Review And Gate Closure | no | Active; waiting for human gate decision on the GATE-R2 empty-needs review packet. |
 | R3.1 | Reference CLI And Documentation Completion | no | Planned. Fill any CLI gaps needed for reviewed corrections and update stale CLI docs. |
 | R3.2 | Apply Reviewed Empty-Needs Corrections | no | Planned. Apply only reviewed prerequisite corrections through CLI. |
 | R4.1 | Unit-Term Slug Migration | no | Planned. Migrate unit `terms` fields to canonical `begrippen.json` slug IDs. |

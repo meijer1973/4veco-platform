@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-25T19:43:12.851Z",
+  "generatedAt": "2026-04-25T19:44:11.241Z",
   "internalOnly": true,
   "teams": [
     {
@@ -166,7 +166,7 @@
               "sprint": "R2.3",
               "name": "Human Review And Gate Closure",
               "completed": "no",
-              "currentState": "Planned. Human economics reviewer closes or conditions the empty-needs gate.",
+              "currentState": "Active; waiting for human gate decision on the GATE-R2 empty-needs review packet.",
               "exitGate": ""
             },
             {
@@ -345,7 +345,7 @@
           "sprint": "R2.3",
           "name": "Human Review And Gate Closure",
           "completed": "no",
-          "currentState": "Planned. Human economics reviewer closes or conditions the empty-needs gate.",
+          "currentState": "Active; waiting for human gate decision on the GATE-R2 empty-needs review packet.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
