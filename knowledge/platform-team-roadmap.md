@@ -1,7 +1,7 @@
 # Platform Team Roadmap
 
 Generated: 2026-04-23  
-Updated: 2026-04-25 after splitting reference planning into `references/reference-team-roadmap.md`  
+Updated: 2026-04-25 after adding completed history for the references split and research-agent map rewrite  
 Source: split from `knowledge/three-month-roadmap.md` after Sprint 0.5 sign-off
 
 ## Sprint Ledger
@@ -16,6 +16,8 @@ Open items are listed first; completed items are kept below them.
 | P1.1 | Book 1 Companion Proof Sprint | yes | `1.1.1` companion path proven end-to-end. |
 | P1.2 | Companion Scaling And Handoff Sprint | yes | `1.1.2` passed as a technical probe; its test materials were removed for didactic rebuild. |
 | P1.3 | Internal Review Dashboard Sprint | yes | Internal three-team dashboard MVP generates from team roadmap sources and quality-gate issues. |
+| P1.3a | References Roadmap Split And Dashboard Tab | yes | Reference planning moved to `references/reference-team-roadmap.md`; dashboard now has a dedicated References tab. |
+| P1.3b | References Research Agent Map Rewrite | yes | Root research-agent map rewritten so research agents search and reason over the full `references/` folder. |
 
 Detailed bootstrap plan for the first Book 1 companion MVP:
 
@@ -337,16 +339,83 @@ Evidence:
 - `reports/internal-dashboard/dashboard-data.json` stores the parsed source data.
 - `npm.cmd run dashboard:internal` completed successfully.
 - `node --check build-scripts\reports\internal-dashboard.js` passed.
-- Dashboard data verification passed: 3 teams, all roadmap sources found, 33 sprint rows, and 6 parsed quality-gate issues across the dashboard quality categories.
+- Dashboard data verification passed after the References split: 4 teams, all roadmap sources found, 43 sprint rows, and parsed quality-gate issues across the dashboard quality categories.
 
 Exit criteria:
 
 - A first internal HTML dashboard can be generated locally. Done.
-- It has separate tabs for Platform, Lessen, and Innovation. Done.
+- It has separate tabs for Platform, References, Lessen, and Innovation. Done.
 - It shows sprint completion status and open issues by the eight categories above. Done.
 - It lists each tab's source roadmap and last known status. Done.
 - It clearly labels itself as internal/developer-facing. Done.
 - The dashboard generation path is documented and does not touch student-facing output. Done; output stays under `reports/internal-dashboard/`.
+
+### Sprint P1.3a: References Roadmap Split And Dashboard Tab
+
+Completed: yes.
+
+Completed on: 2026-04-25.
+
+Goal:
+
+Separate reference planning from the rest of the platform roadmap and make References visible as its own dashboard team.
+
+Work:
+
+- Moved the reference roadmap from `knowledge/reference-three-month-roadmap.md` to `references/reference-team-roadmap.md`.
+- Removed the reference data-quality sprint from the platform roadmap backlog.
+- Added a dedicated References / Knowledge Control tab to the internal dashboard.
+- Regenerated the dashboard output and unresolved-reference report so stale roadmap paths were removed.
+
+Evidence:
+
+- Commit `ef9b25c Split references roadmap from platform`.
+- `references/reference-team-roadmap.md`.
+- `build-scripts/reports/internal-dashboard.js`.
+- `reports/internal-dashboard/index.html`.
+- `reports/internal-dashboard/dashboard-data.json`.
+- `reports/unresolved-refs.md`.
+- `node --check build-scripts\reports\internal-dashboard.js` passed.
+- `npm.cmd run dashboard:internal` completed successfully.
+- Dashboard data verification passed: 4 teams and a dedicated `references` tab; Platform no longer owns the Reference Data Quality sprint.
+- `rg -n "reference-three-month-roadmap|reference quality control" .` found no stale references.
+
+Exit criteria:
+
+- Reference planning lives under `references/`. Done.
+- The platform roadmap only keeps non-reference platform work. Done.
+- The dashboard has a References tab with sprint status from the reference roadmap. Done.
+- Generated reports no longer point to the old reference-roadmap path. Done.
+
+### Sprint P1.3b: References Research Agent Map Rewrite
+
+Completed: yes.
+
+Completed on: 2026-04-25.
+
+Goal:
+
+Replace the old-project research-agent map with a 4veco-specific map that lets a research agent search and reason over the full references folder.
+
+Work:
+
+- Rewrote `RESEARCH_AGENT_MAP.md` around the 4veco references corpus.
+- Defined entry points for `references/reference-team-roadmap.md`, `references/authored/`, `references/external/`, `references/machine/`, and `references/qc-prompts/`.
+- Added traversal rules for whole-folder `rg` search, evidence hierarchy, machine-reference read-only boundaries, and output constraints.
+- Removed old AZWA/IZA/GALA corpus paths and policy-specific routing from the map.
+
+Evidence:
+
+- `RESEARCH_AGENT_MAP.md`.
+- `rg -n "AZWA|IZA|GALA|Almere|Flevoland|data/extracted|source-curation|sources/manifest|meijer1973/azwa" RESEARCH_AGENT_MAP.md` found no old-project leftovers.
+- `rg --files references` confirms the references corpus is the declared research surface.
+
+Exit criteria:
+
+- The root research-agent map is specific to 4veco references. Done.
+- The map explicitly allows searching the entire `references/` folder. Done.
+- The map preserves machine-only and external-source edit boundaries. Done.
+- The map routes research tasks by reference surface and related reports. Done.
 
 ### Sprint P1.4: Platform Issue Catalog And Improvement Plan
 

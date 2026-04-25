@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-25T08:15:37.699Z",
+  "generatedAt": "2026-04-25T08:20:37.254Z",
   "internalOnly": true,
   "teams": [
     {
@@ -14,7 +14,7 @@
           "exists": true,
           "absolutePath": "C:/Projects/4veco/4veco-platform/knowledge/platform-team-roadmap.md",
           "generated": "2026-04-23",
-          "updated": "2026-04-25 after splitting reference planning into `references/reference-team-roadmap.md`",
+          "updated": "2026-04-25 after adding completed history for the references split and research-agent map rewrite",
           "scope": "",
           "summary": "Sprint 0.5 is signed off for Part A textbook/book production, Sprint P1.1 has proven the first Book 1 companion paragraph path, and Sprint P1.2 has technically proven the pattern on a second Book 1 companion paragraph.",
           "sprints": [
@@ -58,6 +58,20 @@
               "name": "Internal Review Dashboard Sprint",
               "completed": "yes",
               "currentState": "Internal three-team dashboard MVP generates from team roadmap sources and quality-gate issues.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "P1.3a",
+              "name": "References Roadmap Split And Dashboard Tab",
+              "completed": "yes",
+              "currentState": "Reference planning moved to `references/reference-team-roadmap.md`; dashboard now has a dedicated References tab.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "P1.3b",
+              "name": "References Research Agent Map Rewrite",
+              "completed": "yes",
+              "currentState": "Root research-agent map rewritten so research agents search and reason over the full `references/` folder.",
               "exitGate": ""
             }
           ]
@@ -111,9 +125,25 @@
           "currentState": "Internal three-team dashboard MVP generates from team roadmap sources and quality-gate issues.",
           "exitGate": "",
           "roadmap": "Platform roadmap"
+        },
+        {
+          "sprint": "P1.3a",
+          "name": "References Roadmap Split And Dashboard Tab",
+          "completed": "yes",
+          "currentState": "Reference planning moved to `references/reference-team-roadmap.md`; dashboard now has a dedicated References tab.",
+          "exitGate": "",
+          "roadmap": "Platform roadmap"
+        },
+        {
+          "sprint": "P1.3b",
+          "name": "References Research Agent Map Rewrite",
+          "completed": "yes",
+          "currentState": "Root research-agent map rewritten so research agents search and reason over the full `references/` folder.",
+          "exitGate": "",
+          "roadmap": "Platform roadmap"
         }
       ],
-      "completedCount": 4,
+      "completedCount": 6,
       "openCount": 2
     },
     {
