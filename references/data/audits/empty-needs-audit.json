@@ -1,0 +1,1126 @@
+{
+  "schema_version": "0.1",
+  "sprint_id": "R2.1",
+  "generated_at": "2026-04-25T19:37:46.927Z",
+  "source_path": "references/machine/micro-teaching-units.json",
+  "live_unit_count": 190,
+  "empty_needs_count": 61,
+  "summary": {
+    "by_status": {
+      "underbouw_assumed": 8,
+      "false_zero": 17,
+      "true_zero": 1,
+      "ambiguous": 35
+    },
+    "by_severity": {
+      "low": 9,
+      "high": 7,
+      "medium": 45
+    },
+    "by_domain": {
+      "A": 11,
+      "B": 1,
+      "D": 12,
+      "E": 2,
+      "F": 6,
+      "G": 5,
+      "H": 9,
+      "I": 5,
+      "L": 10
+    }
+  },
+  "entries": [
+    {
+      "unit_id": "A01",
+      "unit_name": "Lineaire functie opstellen",
+      "layer": 0,
+      "mastery_target": "apply",
+      "current_needs": [],
+      "assumed_prior_knowledge": [
+        "lower-secondary mathematics or general reasoning"
+      ],
+      "recommended_status": "underbouw_assumed",
+      "recommended_needs": [],
+      "severity": "low",
+      "rationale": "A-domain foundational math/skill unit can plausibly rely on lower-school or general mathematical prior knowledge rather than platform prerequisites.",
+      "human_question": null,
+      "review_status": "machine_suggested",
+      "evidence_paths": [
+        "references/machine/micro-teaching-units.json"
+      ]
+    },
+    {
+      "unit_id": "A02",
+      "unit_name": "Vergelijking oplossen",
+      "layer": 0,
+      "mastery_target": "apply",
+      "current_needs": [],
+      "assumed_prior_knowledge": [
+        "lower-secondary mathematics or general reasoning"
+      ],
+      "recommended_status": "underbouw_assumed",
+      "recommended_needs": [],
+      "severity": "low",
+      "rationale": "A-domain foundational math/skill unit can plausibly rely on lower-school or general mathematical prior knowledge rather than platform prerequisites.",
+      "human_question": null,
+      "review_status": "machine_suggested",
+      "evidence_paths": [
+        "references/machine/micro-teaching-units.json"
+      ]
+    },
+    {
+      "unit_id": "A03",
+      "unit_name": "Functie omschrijven (P↔Q)",
+      "layer": 0,
+      "mastery_target": "apply",
+      "current_needs": [],
+      "assumed_prior_knowledge": [
+        "lower-secondary mathematics or general reasoning"
+      ],
+      "recommended_status": "underbouw_assumed",
+      "recommended_needs": [],
+      "severity": "low",
+      "rationale": "A-domain foundational math/skill unit can plausibly rely on lower-school or general mathematical prior knowledge rather than platform prerequisites.",
+      "human_question": null,
+      "review_status": "machine_suggested",
+      "evidence_paths": [
+        "references/machine/micro-teaching-units.json"
+      ]
+    },
+    {
+      "unit_id": "A04",
+      "unit_name": "Substitueren",
+      "layer": 0,
+      "mastery_target": "apply",
+      "current_needs": [],
+      "assumed_prior_knowledge": [
+        "lower-secondary mathematics or general reasoning"
+      ],
+      "recommended_status": "underbouw_assumed",
+      "recommended_needs": [],
+      "severity": "low",
+      "rationale": "A-domain foundational math/skill unit can plausibly rely on lower-school or general mathematical prior knowledge rather than platform prerequisites.",
+      "human_question": null,
+      "review_status": "machine_suggested",
+      "evidence_paths": [
+        "references/machine/micro-teaching-units.json"
+      ]
+    },
+    {
+      "unit_id": "A05",
+      "unit_name": "Snijpunt met P-as berekenen",
+      "layer": 0,
+      "mastery_target": "apply",
+      "current_needs": [],
+      "assumed_prior_knowledge": [
+        "lower-secondary mathematics or general reasoning"
+      ],
+      "recommended_status": "underbouw_assumed",
+      "recommended_needs": [],
+      "severity": "low",
+      "rationale": "A-domain foundational math/skill unit can plausibly rely on lower-school or general mathematical prior knowledge rather than platform prerequisites.",
+      "human_question": null,
+      "review_status": "machine_suggested",
+      "evidence_paths": [
+        "references/machine/micro-teaching-units.json"
+      ]
+    },
+    {
+      "unit_id": "A16",
+      "unit_name": "Kruiselasticiteit",
+      "layer": 1,
+      "mastery_target": "apply",
+      "current_needs": [],
+      "assumed_prior_knowledge": [],
+      "recommended_status": "false_zero",
+      "recommended_needs": [
+        "A15"
+      ],
+      "severity": "high",
+      "rationale": "Machine audit found likely hidden prerequisite(s): A15.",
+      "human_question": "Should A16 depend on A15, or should the prerequisite be represented differently?",
+      "review_status": "machine_suggested",
+      "evidence_paths": [
+        "references/machine/micro-teaching-units.json"
+      ]
+    },
+    {
+      "unit_id": "A17",
+      "unit_name": "Inkomenselasticiteit",
+      "layer": 1,
+      "mastery_target": "apply",
+      "current_needs": [],
+      "assumed_prior_knowledge": [],
+      "recommended_status": "false_zero",
+      "recommended_needs": [
+        "A15"
+      ],
+      "severity": "high",
+      "rationale": "Machine audit found likely hidden prerequisite(s): A15.",
+      "human_question": "Should A17 depend on A15, or should the prerequisite be represented differently?",
+      "review_status": "machine_suggested",
+      "evidence_paths": [
+        "references/machine/micro-teaching-units.json"
+      ]
+    },
+    {
+      "unit_id": "A18",
+      "unit_name": "Comparatief voordeel bepalen",
+      "layer": 1,
+      "mastery_target": "apply",
+      "current_needs": [],
+      "assumed_prior_knowledge": [
+        "lower-secondary mathematics or general reasoning"
+      ],
+      "recommended_status": "underbouw_assumed",
+      "recommended_needs": [],
+      "severity": "low",
+      "rationale": "A-domain foundational math/skill unit can plausibly rely on lower-school or general mathematical prior knowledge rather than platform prerequisites.",
+      "human_question": null,
+      "review_status": "machine_suggested",
+      "evidence_paths": [
+        "references/machine/micro-teaching-units.json"
+      ]
+    },
+    {
+      "unit_id": "A38",
+      "unit_name": "Procentuele verandering berekenen",
+      "layer": 0,
+      "mastery_target": "apply",
+      "current_needs": [],
+      "assumed_prior_knowledge": [
+        "lower-secondary mathematics or general reasoning"
+      ],
+      "recommended_status": "underbouw_assumed",
+      "recommended_needs": [],
+      "severity": "low",
+      "rationale": "A-domain foundational math/skill unit can plausibly rely on lower-school or general mathematical prior knowledge rather than platform prerequisites.",
+      "human_question": null,
+      "review_status": "machine_suggested",
+      "evidence_paths": [
+        "references/machine/micro-teaching-units.json"
+      ]
+    },
+    {
+      "unit_id": "A42",
+      "unit_name": "Grafische verschuiving met voor-en-na pijlen",
+      "layer": 1,
+      "mastery_target": "apply",
+      "current_needs": [],
+      "assumed_prior_knowledge": [
+        "lower-secondary mathematics or general reasoning"
+      ],
+      "recommended_status": "underbouw_assumed",
+      "recommended_needs": [],
+      "severity": "low",
+      "rationale": "A-domain foundational math/skill unit can plausibly rely on lower-school or general mathematical prior knowledge rather than platform prerequisites.",
+      "human_question": null,
+      "review_status": "machine_suggested",
+      "evidence_paths": [
+        "references/machine/micro-teaching-units.json"
+      ]
+    },
+    {
+      "unit_id": "A43",
+      "unit_name": "Totale winst uit gemengde allocatie berekenen",
+      "layer": 0,
+      "mastery_target": "apply",
+      "current_needs": [],
+      "assumed_prior_knowledge": [],
+      "recommended_status": "false_zero",
+      "recommended_needs": [
+        "A10",
+        "A38"
+      ],
+      "severity": "high",
+      "rationale": "Machine audit found likely hidden prerequisite(s): A10, A38.",
+      "human_question": "Should A43 depend on A10, A38, or should the prerequisite be represented differently?",
+      "review_status": "machine_suggested",
+      "evidence_paths": [
+        "references/machine/micro-teaching-units.json"
+      ]
+    },
+    {
+      "unit_id": "B01",
+      "unit_name": "Schaarste als kerneconomisch probleem",
+      "layer": 1,
+      "mastery_target": "understand",
+      "current_needs": [],
+      "assumed_prior_knowledge": [],
+      "recommended_status": "true_zero",
+      "recommended_needs": [],
+      "severity": "low",
+      "rationale": "Layer-0 or foundational concept with no obvious internal platform prerequisite.",
+      "human_question": null,
+      "review_status": "machine_suggested",
+      "evidence_paths": [
+        "references/machine/micro-teaching-units.json"
+      ]
+    },
+    {
+      "unit_id": "D02",
+      "unit_name": "Constante kosten en winst",
+      "layer": 1,
+      "mastery_target": "understand",
+      "current_needs": [],
+      "assumed_prior_knowledge": [],
+      "recommended_status": "ambiguous",
+      "recommended_needs": [],
+      "severity": "medium",
+      "rationale": "Empty-needs status needs reviewer judgement.",
+      "human_question": "Should D02 remain zero-needs or receive internal prerequisites?",
+      "review_status": "machine_suggested",
+      "evidence_paths": [
+        "references/machine/micro-teaching-units.json"
+      ]
+    },
+    {
+      "unit_id": "D04",
+      "unit_name": "Elasticiteit en goederenclassificatie",
+      "layer": 1,
+      "mastery_target": "understand",
+      "current_needs": [],
+      "assumed_prior_knowledge": [],
+      "recommended_status": "false_zero",
+      "recommended_needs": [
+        "A15"
+      ],
+      "severity": "medium",
+      "rationale": "Machine audit found likely hidden prerequisite(s): A15.",
+      "human_question": "Should D04 depend on A15, or should the prerequisite be represented differently?",
+      "review_status": "machine_suggested",
+      "evidence_paths": [
+        "references/machine/micro-teaching-units.json"
+      ]
+    },
+    {
+      "unit_id": "D06",
+      "unit_name": "Vraagreactie via prijselasticiteit interpreteren",
+      "layer": 1,
+      "mastery_target": "understand",
+      "current_needs": [],
+      "assumed_prior_knowledge": [],
+      "recommended_status": "false_zero",
+      "recommended_needs": [
+        "A15"
+      ],
+      "severity": "medium",
+      "rationale": "Machine audit found likely hidden prerequisite(s): A15.",
+      "human_question": "Should D06 depend on A15, or should the prerequisite be represented differently?",
+      "review_status": "machine_suggested",
+      "evidence_paths": [
+        "references/machine/micro-teaching-units.json"
+      ]
+    },
+    {
+      "unit_id": "D09",
+      "unit_name": "Homogene en heterogene goederen",
+      "layer": 1,
+      "mastery_target": "understand",
+      "current_needs": [],
+      "assumed_prior_knowledge": [],
+      "recommended_status": "ambiguous",
+      "recommended_needs": [],
+      "severity": "medium",
+      "rationale": "Empty-needs status needs reviewer judgement.",
+      "human_question": "Should D09 remain zero-needs or receive internal prerequisites?",
+      "review_status": "machine_suggested",
+      "evidence_paths": [
+        "references/machine/micro-teaching-units.json"
+      ]
+    },
+    {
+      "unit_id": "D10",
+      "unit_name": "Vraag/aanbod-verschuiving bij conjunctuurschok",
+      "layer": 1,
+      "mastery_target": "analyze",
+      "current_needs": [],
+      "assumed_prior_knowledge": [],
+      "recommended_status": "false_zero",
+      "recommended_needs": [
+        "D01",
+        "D03"
+      ],
+      "severity": "high",
+      "rationale": "Machine audit found likely hidden prerequisite(s): D01, D03.",
+      "human_question": "Should D10 depend on D01, D03, or should the prerequisite be represented differently?",
+      "review_status": "machine_suggested",
+      "evidence_paths": [
+        "references/machine/micro-teaching-units.json"
+      ]
+    },
+    {
+      "unit_id": "D13",
+      "unit_name": "Kostenstijging en aanbodverschuiving",
+      "layer": 1,
+      "mastery_target": "analyze",
+      "current_needs": [],
+      "assumed_prior_knowledge": [],
+      "recommended_status": "false_zero",
+      "recommended_needs": [
+        "D03"
+      ],
+      "severity": "high",
+      "rationale": "Machine audit found likely hidden prerequisite(s): D03.",
+      "human_question": "Should D13 depend on D03, or should the prerequisite be represented differently?",
+      "review_status": "machine_suggested",
+      "evidence_paths": [
+        "references/machine/micro-teaching-units.json"
+      ]
+    },
+    {
+      "unit_id": "D15",
+      "unit_name": "Marktvormen classificeren",
+      "layer": 1,
+      "mastery_target": "understand",
+      "current_needs": [],
+      "assumed_prior_knowledge": [],
+      "recommended_status": "ambiguous",
+      "recommended_needs": [],
+      "severity": "medium",
+      "rationale": "Empty-needs status needs reviewer judgement.",
+      "human_question": "Should D15 remain zero-needs or receive internal prerequisites?",
+      "review_status": "machine_suggested",
+      "evidence_paths": [
+        "references/machine/micro-teaching-units.json"
+      ]
+    },
+    {
+      "unit_id": "D16",
+      "unit_name": "Minimumprijs en werkloosheid",
+      "layer": 1,
+      "mastery_target": "understand",
+      "current_needs": [],
+      "assumed_prior_knowledge": [],
+      "recommended_status": "false_zero",
+      "recommended_needs": [
+        "D34"
+      ],
+      "severity": "medium",
+      "rationale": "Machine audit found likely hidden prerequisite(s): D34.",
+      "human_question": "Should D16 depend on D34, or should the prerequisite be represented differently?",
+      "review_status": "machine_suggested",
+      "evidence_paths": [
+        "references/machine/micro-teaching-units.json"
+      ]
+    },
+    {
+      "unit_id": "D24",
+      "unit_name": "Drie voorwaarden prijsdiscriminatie",
+      "layer": 1,
+      "mastery_target": "understand",
+      "current_needs": [],
+      "assumed_prior_knowledge": [],
+      "recommended_status": "ambiguous",
+      "recommended_needs": [],
+      "severity": "medium",
+      "rationale": "Empty-needs status needs reviewer judgement.",
+      "human_question": "Should D24 remain zero-needs or receive internal prerequisites?",
+      "review_status": "machine_suggested",
+      "evidence_paths": [
+        "references/machine/micro-teaching-units.json"
+      ]
+    },
+    {
+      "unit_id": "D27",
+      "unit_name": "Substituten en complementen",
+      "layer": 1,
+      "mastery_target": "understand",
+      "current_needs": [],
+      "assumed_prior_knowledge": [],
+      "recommended_status": "ambiguous",
+      "recommended_needs": [],
+      "severity": "medium",
+      "rationale": "Empty-needs status needs reviewer judgement.",
+      "human_question": "Should D27 remain zero-needs or receive internal prerequisites?",
+      "review_status": "machine_suggested",
+      "evidence_paths": [
+        "references/machine/micro-teaching-units.json"
+      ]
+    },
+    {
+      "unit_id": "D32",
+      "unit_name": "Verschuiving versus beweging langs de curve",
+      "layer": 1,
+      "mastery_target": "understand",
+      "current_needs": [],
+      "assumed_prior_knowledge": [],
+      "recommended_status": "false_zero",
+      "recommended_needs": [
+        "D01",
+        "D03"
+      ],
+      "severity": "medium",
+      "rationale": "Machine audit found likely hidden prerequisite(s): D01, D03.",
+      "human_question": "Should D32 depend on D01, D03, or should the prerequisite be represented differently?",
+      "review_status": "machine_suggested",
+      "evidence_paths": [
+        "references/machine/micro-teaching-units.json"
+      ]
+    },
+    {
+      "unit_id": "D35",
+      "unit_name": "Betalingsbereidheid definiëren",
+      "layer": 1,
+      "mastery_target": "understand",
+      "current_needs": [],
+      "assumed_prior_knowledge": [],
+      "recommended_status": "ambiguous",
+      "recommended_needs": [],
+      "severity": "medium",
+      "rationale": "Empty-needs status needs reviewer judgement.",
+      "human_question": "Should D35 remain zero-needs or receive internal prerequisites?",
+      "review_status": "machine_suggested",
+      "evidence_paths": [
+        "references/machine/micro-teaching-units.json"
+      ]
+    },
+    {
+      "unit_id": "E02",
+      "unit_name": "Intertemporele ruil in pensioenstelsels",
+      "layer": 1,
+      "mastery_target": "understand",
+      "current_needs": [],
+      "assumed_prior_knowledge": [],
+      "recommended_status": "ambiguous",
+      "recommended_needs": [],
+      "severity": "medium",
+      "rationale": "Empty-needs status needs reviewer judgement.",
+      "human_question": "Should E02 remain zero-needs or receive internal prerequisites?",
+      "review_status": "machine_suggested",
+      "evidence_paths": [
+        "references/machine/micro-teaching-units.json"
+      ]
+    },
+    {
+      "unit_id": "E06",
+      "unit_name": "Voorraad- en stroomgrootheden onderscheiden",
+      "layer": 1,
+      "mastery_target": "understand",
+      "current_needs": [],
+      "assumed_prior_knowledge": [],
+      "recommended_status": "ambiguous",
+      "recommended_needs": [],
+      "severity": "medium",
+      "rationale": "Empty-needs status needs reviewer judgement.",
+      "human_question": "Should E06 remain zero-needs or receive internal prerequisites?",
+      "review_status": "machine_suggested",
+      "evidence_paths": [
+        "references/machine/micro-teaching-units.json"
+      ]
+    },
+    {
+      "unit_id": "F01",
+      "unit_name": "Berovingsprobleem herkennen",
+      "layer": 1,
+      "mastery_target": "understand",
+      "current_needs": [],
+      "assumed_prior_knowledge": [],
+      "recommended_status": "ambiguous",
+      "recommended_needs": [],
+      "severity": "medium",
+      "rationale": "Empty-needs status needs reviewer judgement.",
+      "human_question": "Should F01 remain zero-needs or receive internal prerequisites?",
+      "review_status": "machine_suggested",
+      "evidence_paths": [
+        "references/machine/micro-teaching-units.json"
+      ]
+    },
+    {
+      "unit_id": "F02",
+      "unit_name": "Collectief goed classificeren",
+      "layer": 1,
+      "mastery_target": "understand",
+      "current_needs": [],
+      "assumed_prior_knowledge": [],
+      "recommended_status": "ambiguous",
+      "recommended_needs": [],
+      "severity": "medium",
+      "rationale": "Empty-needs status needs reviewer judgement.",
+      "human_question": "Should F02 remain zero-needs or receive internal prerequisites?",
+      "review_status": "machine_suggested",
+      "evidence_paths": [
+        "references/machine/micro-teaching-units.json"
+      ]
+    },
+    {
+      "unit_id": "F03",
+      "unit_name": "Dominante strategie",
+      "layer": 1,
+      "mastery_target": "understand",
+      "current_needs": [],
+      "assumed_prior_knowledge": [],
+      "recommended_status": "ambiguous",
+      "recommended_needs": [],
+      "severity": "medium",
+      "rationale": "Empty-needs status needs reviewer judgement.",
+      "human_question": "Should F03 remain zero-needs or receive internal prerequisites?",
+      "review_status": "machine_suggested",
+      "evidence_paths": [
+        "references/machine/micro-teaching-units.json"
+      ]
+    },
+    {
+      "unit_id": "F07",
+      "unit_name": "Overproductie bij negatieve externe effecten",
+      "layer": 1,
+      "mastery_target": "understand",
+      "current_needs": [],
+      "assumed_prior_knowledge": [],
+      "recommended_status": "ambiguous",
+      "recommended_needs": [],
+      "severity": "medium",
+      "rationale": "Empty-needs status needs reviewer judgement.",
+      "human_question": "Should F07 remain zero-needs or receive internal prerequisites?",
+      "review_status": "machine_suggested",
+      "evidence_paths": [
+        "references/machine/micro-teaching-units.json"
+      ]
+    },
+    {
+      "unit_id": "F15",
+      "unit_name": "Verzonken kosten negeren in beslissingen",
+      "layer": 1,
+      "mastery_target": "understand",
+      "current_needs": [],
+      "assumed_prior_knowledge": [],
+      "recommended_status": "ambiguous",
+      "recommended_needs": [],
+      "severity": "medium",
+      "rationale": "Empty-needs status needs reviewer judgement.",
+      "human_question": "Should F15 remain zero-needs or receive internal prerequisites?",
+      "review_status": "machine_suggested",
+      "evidence_paths": [
+        "references/machine/micro-teaching-units.json"
+      ]
+    },
+    {
+      "unit_id": "F16",
+      "unit_name": "MPC–MSC en MPB–MSB onderscheiden",
+      "layer": 1,
+      "mastery_target": "understand",
+      "current_needs": [],
+      "assumed_prior_knowledge": [],
+      "recommended_status": "ambiguous",
+      "recommended_needs": [],
+      "severity": "medium",
+      "rationale": "Empty-needs status needs reviewer judgement.",
+      "human_question": "Should F16 remain zero-needs or receive internal prerequisites?",
+      "review_status": "machine_suggested",
+      "evidence_paths": [
+        "references/machine/micro-teaching-units.json"
+      ]
+    },
+    {
+      "unit_id": "G06",
+      "unit_name": "Principaal-agentprobleem identificeren",
+      "layer": 1,
+      "mastery_target": "understand",
+      "current_needs": [],
+      "assumed_prior_knowledge": [],
+      "recommended_status": "ambiguous",
+      "recommended_needs": [],
+      "severity": "medium",
+      "rationale": "Empty-needs status needs reviewer judgement.",
+      "human_question": "Should G06 remain zero-needs or receive internal prerequisites?",
+      "review_status": "machine_suggested",
+      "evidence_paths": [
+        "references/machine/micro-teaching-units.json"
+      ]
+    },
+    {
+      "unit_id": "G07",
+      "unit_name": "Transactiekosten berekenen en interpreteren",
+      "layer": 1,
+      "mastery_target": "apply",
+      "current_needs": [],
+      "assumed_prior_knowledge": [],
+      "recommended_status": "ambiguous",
+      "recommended_needs": [],
+      "severity": "medium",
+      "rationale": "Non-foundational unit has empty needs but no deterministic prerequisite recommendation from the machine audit.",
+      "human_question": "Which internal prerequisite(s), if any, should G07 require?",
+      "review_status": "machine_suggested",
+      "evidence_paths": [
+        "references/machine/micro-teaching-units.json"
+      ]
+    },
+    {
+      "unit_id": "G08",
+      "unit_name": "Risicodeling via gemeenschappelijk fonds",
+      "layer": 1,
+      "mastery_target": "understand",
+      "current_needs": [],
+      "assumed_prior_knowledge": [],
+      "recommended_status": "ambiguous",
+      "recommended_needs": [],
+      "severity": "medium",
+      "rationale": "Empty-needs status needs reviewer judgement.",
+      "human_question": "Should G08 remain zero-needs or receive internal prerequisites?",
+      "review_status": "machine_suggested",
+      "evidence_paths": [
+        "references/machine/micro-teaching-units.json"
+      ]
+    },
+    {
+      "unit_id": "G10",
+      "unit_name": "Informatieasymmetrie verzekeringsmarkt",
+      "layer": 1,
+      "mastery_target": "understand",
+      "current_needs": [],
+      "assumed_prior_knowledge": [],
+      "recommended_status": "ambiguous",
+      "recommended_needs": [],
+      "severity": "medium",
+      "rationale": "Empty-needs status needs reviewer judgement.",
+      "human_question": "Should G10 remain zero-needs or receive internal prerequisites?",
+      "review_status": "machine_suggested",
+      "evidence_paths": [
+        "references/machine/micro-teaching-units.json"
+      ]
+    },
+    {
+      "unit_id": "G11",
+      "unit_name": "Wisselkoersrisico bij internationale handel",
+      "layer": 1,
+      "mastery_target": "understand",
+      "current_needs": [],
+      "assumed_prior_knowledge": [],
+      "recommended_status": "ambiguous",
+      "recommended_needs": [],
+      "severity": "medium",
+      "rationale": "Empty-needs status needs reviewer judgement.",
+      "human_question": "Should G11 remain zero-needs or receive internal prerequisites?",
+      "review_status": "machine_suggested",
+      "evidence_paths": [
+        "references/machine/micro-teaching-units.json"
+      ]
+    },
+    {
+      "unit_id": "H01",
+      "unit_name": "AOW-leeftijd als houdbaarheidsinstrument",
+      "layer": 1,
+      "mastery_target": "understand",
+      "current_needs": [],
+      "assumed_prior_knowledge": [],
+      "recommended_status": "ambiguous",
+      "recommended_needs": [],
+      "severity": "medium",
+      "rationale": "Empty-needs status needs reviewer judgement.",
+      "human_question": "Should H01 remain zero-needs or receive internal prerequisites?",
+      "review_status": "machine_suggested",
+      "evidence_paths": [
+        "references/machine/micro-teaching-units.json"
+      ]
+    },
+    {
+      "unit_id": "H05",
+      "unit_name": "Circulaire economie in groen bbp",
+      "layer": 1,
+      "mastery_target": "understand",
+      "current_needs": [],
+      "assumed_prior_knowledge": [],
+      "recommended_status": "ambiguous",
+      "recommended_needs": [],
+      "severity": "medium",
+      "rationale": "Empty-needs status needs reviewer judgement.",
+      "human_question": "Should H05 remain zero-needs or receive internal prerequisites?",
+      "review_status": "machine_suggested",
+      "evidence_paths": [
+        "references/machine/micro-teaching-units.json"
+      ]
+    },
+    {
+      "unit_id": "H10",
+      "unit_name": "Gini-coefficient bij recessie",
+      "layer": 1,
+      "mastery_target": "understand",
+      "current_needs": [],
+      "assumed_prior_knowledge": [],
+      "recommended_status": "ambiguous",
+      "recommended_needs": [],
+      "severity": "medium",
+      "rationale": "Empty-needs status needs reviewer judgement.",
+      "human_question": "Should H10 remain zero-needs or receive internal prerequisites?",
+      "review_status": "machine_suggested",
+      "evidence_paths": [
+        "references/machine/micro-teaching-units.json"
+      ]
+    },
+    {
+      "unit_id": "H13",
+      "unit_name": "Minimumuurloon: kostenkanaal naar concurrentiepositie",
+      "layer": 1,
+      "mastery_target": "analyze",
+      "current_needs": [],
+      "assumed_prior_knowledge": [],
+      "recommended_status": "false_zero",
+      "recommended_needs": [
+        "D13"
+      ],
+      "severity": "high",
+      "rationale": "Machine audit found likely hidden prerequisite(s): D13.",
+      "human_question": "Should H13 depend on D13, or should the prerequisite be represented differently?",
+      "review_status": "machine_suggested",
+      "evidence_paths": [
+        "references/machine/micro-teaching-units.json"
+      ]
+    },
+    {
+      "unit_id": "H14",
+      "unit_name": "Minimumuurloon: vraagkanaal naar bbp-groei",
+      "layer": 1,
+      "mastery_target": "analyze",
+      "current_needs": [],
+      "assumed_prior_knowledge": [],
+      "recommended_status": "false_zero",
+      "recommended_needs": [
+        "I14"
+      ],
+      "severity": "high",
+      "rationale": "Machine audit found likely hidden prerequisite(s): I14.",
+      "human_question": "Should H14 depend on I14, or should the prerequisite be represented differently?",
+      "review_status": "machine_suggested",
+      "evidence_paths": [
+        "references/machine/micro-teaching-units.json"
+      ]
+    },
+    {
+      "unit_id": "H16",
+      "unit_name": "Soepeler ontslagrecht en werkgeversrisico",
+      "layer": 1,
+      "mastery_target": "understand",
+      "current_needs": [],
+      "assumed_prior_knowledge": [],
+      "recommended_status": "false_zero",
+      "recommended_needs": [
+        "L10"
+      ],
+      "severity": "medium",
+      "rationale": "Machine audit found likely hidden prerequisite(s): L10.",
+      "human_question": "Should H16 depend on L10, or should the prerequisite be represented differently?",
+      "review_status": "machine_suggested",
+      "evidence_paths": [
+        "references/machine/micro-teaching-units.json"
+      ]
+    },
+    {
+      "unit_id": "H21",
+      "unit_name": "Staatsschuldquote berekenen",
+      "layer": 1,
+      "mastery_target": "apply",
+      "current_needs": [],
+      "assumed_prior_knowledge": [],
+      "recommended_status": "ambiguous",
+      "recommended_needs": [],
+      "severity": "medium",
+      "rationale": "Non-foundational unit has empty needs but no deterministic prerequisite recommendation from the machine audit.",
+      "human_question": "Which internal prerequisite(s), if any, should H21 require?",
+      "review_status": "machine_suggested",
+      "evidence_paths": [
+        "references/machine/micro-teaching-units.json"
+      ]
+    },
+    {
+      "unit_id": "H24",
+      "unit_name": "Wisselkoers en depreciatie",
+      "layer": 1,
+      "mastery_target": "apply",
+      "current_needs": [],
+      "assumed_prior_knowledge": [],
+      "recommended_status": "ambiguous",
+      "recommended_needs": [],
+      "severity": "medium",
+      "rationale": "Non-foundational unit has empty needs but no deterministic prerequisite recommendation from the machine audit.",
+      "human_question": "Which internal prerequisite(s), if any, should H24 require?",
+      "review_status": "machine_suggested",
+      "evidence_paths": [
+        "references/machine/micro-teaching-units.json"
+      ]
+    },
+    {
+      "unit_id": "H29",
+      "unit_name": "Obligatie als verhandelbaar schuldpapier",
+      "layer": 1,
+      "mastery_target": "understand",
+      "current_needs": [],
+      "assumed_prior_knowledge": [],
+      "recommended_status": "ambiguous",
+      "recommended_needs": [],
+      "severity": "medium",
+      "rationale": "Empty-needs status needs reviewer judgement.",
+      "human_question": "Should H29 remain zero-needs or receive internal prerequisites?",
+      "review_status": "machine_suggested",
+      "evidence_paths": [
+        "references/machine/micro-teaching-units.json"
+      ]
+    },
+    {
+      "unit_id": "I01",
+      "unit_name": "Anticyclisch begrotingsbeleid",
+      "layer": 1,
+      "mastery_target": "understand",
+      "current_needs": [],
+      "assumed_prior_knowledge": [],
+      "recommended_status": "ambiguous",
+      "recommended_needs": [],
+      "severity": "medium",
+      "rationale": "Empty-needs status needs reviewer judgement.",
+      "human_question": "Should I01 remain zero-needs or receive internal prerequisites?",
+      "review_status": "machine_suggested",
+      "evidence_paths": [
+        "references/machine/micro-teaching-units.json"
+      ]
+    },
+    {
+      "unit_id": "I04",
+      "unit_name": "CAO-looptijd en loonrigiditeit",
+      "layer": 1,
+      "mastery_target": "understand",
+      "current_needs": [],
+      "assumed_prior_knowledge": [],
+      "recommended_status": "false_zero",
+      "recommended_needs": [
+        "L17",
+        "L19"
+      ],
+      "severity": "medium",
+      "rationale": "Machine audit found likely hidden prerequisite(s): L17, L19.",
+      "human_question": "Should I04 depend on L17, L19, or should the prerequisite be represented differently?",
+      "review_status": "machine_suggested",
+      "evidence_paths": [
+        "references/machine/micro-teaching-units.json"
+      ]
+    },
+    {
+      "unit_id": "I06",
+      "unit_name": "Deflatiespiraal",
+      "layer": 1,
+      "mastery_target": "understand",
+      "current_needs": [],
+      "assumed_prior_knowledge": [],
+      "recommended_status": "ambiguous",
+      "recommended_needs": [],
+      "severity": "medium",
+      "rationale": "Empty-needs status needs reviewer judgement.",
+      "human_question": "Should I06 remain zero-needs or receive internal prerequisites?",
+      "review_status": "machine_suggested",
+      "evidence_paths": [
+        "references/machine/micro-teaching-units.json"
+      ]
+    },
+    {
+      "unit_id": "I10",
+      "unit_name": "Loonrigiditeit en helling GA-curve",
+      "layer": 1,
+      "mastery_target": "understand",
+      "current_needs": [],
+      "assumed_prior_knowledge": [],
+      "recommended_status": "false_zero",
+      "recommended_needs": [
+        "L19"
+      ],
+      "severity": "medium",
+      "rationale": "Machine audit found likely hidden prerequisite(s): L19.",
+      "human_question": "Should I10 depend on L19, or should the prerequisite be represented differently?",
+      "review_status": "machine_suggested",
+      "evidence_paths": [
+        "references/machine/micro-teaching-units.json"
+      ]
+    },
+    {
+      "unit_id": "I14",
+      "unit_name": "Multiplier en lekkages",
+      "layer": 1,
+      "mastery_target": "understand",
+      "current_needs": [],
+      "assumed_prior_knowledge": [],
+      "recommended_status": "ambiguous",
+      "recommended_needs": [],
+      "severity": "medium",
+      "rationale": "Empty-needs status needs reviewer judgement.",
+      "human_question": "Should I14 remain zero-needs or receive internal prerequisites?",
+      "review_status": "machine_suggested",
+      "evidence_paths": [
+        "references/machine/micro-teaching-units.json"
+      ]
+    },
+    {
+      "unit_id": "L01",
+      "unit_name": "Waarde marginaal product (VMP)",
+      "layer": 1,
+      "mastery_target": "apply",
+      "current_needs": [],
+      "assumed_prior_knowledge": [],
+      "recommended_status": "ambiguous",
+      "recommended_needs": [],
+      "severity": "medium",
+      "rationale": "Non-foundational unit has empty needs but no deterministic prerequisite recommendation from the machine audit.",
+      "human_question": "Which internal prerequisite(s), if any, should L01 require?",
+      "review_status": "machine_suggested",
+      "evidence_paths": [
+        "references/machine/micro-teaching-units.json"
+      ]
+    },
+    {
+      "unit_id": "L03",
+      "unit_name": "Afgeleide vraag (derived demand)",
+      "layer": 1,
+      "mastery_target": "understand",
+      "current_needs": [],
+      "assumed_prior_knowledge": [],
+      "recommended_status": "ambiguous",
+      "recommended_needs": [],
+      "severity": "medium",
+      "rationale": "Empty-needs status needs reviewer judgement.",
+      "human_question": "Should L03 remain zero-needs or receive internal prerequisites?",
+      "review_status": "machine_suggested",
+      "evidence_paths": [
+        "references/machine/micro-teaching-units.json"
+      ]
+    },
+    {
+      "unit_id": "L05",
+      "unit_name": "Beroepsbevolking, niet-beroepsbevolking, werkloze beroepsbevolking",
+      "layer": 1,
+      "mastery_target": "understand",
+      "current_needs": [],
+      "assumed_prior_knowledge": [],
+      "recommended_status": "ambiguous",
+      "recommended_needs": [],
+      "severity": "medium",
+      "rationale": "Empty-needs status needs reviewer judgement.",
+      "human_question": "Should L05 remain zero-needs or receive internal prerequisites?",
+      "review_status": "machine_suggested",
+      "evidence_paths": [
+        "references/machine/micro-teaching-units.json"
+      ]
+    },
+    {
+      "unit_id": "L09",
+      "unit_name": "Krappe versus ruime arbeidsmarkt",
+      "layer": 1,
+      "mastery_target": "understand",
+      "current_needs": [],
+      "assumed_prior_knowledge": [],
+      "recommended_status": "false_zero",
+      "recommended_needs": [
+        "L05",
+        "L03"
+      ],
+      "severity": "medium",
+      "rationale": "Machine audit found likely hidden prerequisite(s): L05, L03.",
+      "human_question": "Should L09 depend on L05, L03, or should the prerequisite be represented differently?",
+      "review_status": "machine_suggested",
+      "evidence_paths": [
+        "references/machine/micro-teaching-units.json"
+      ]
+    },
+    {
+      "unit_id": "L11",
+      "unit_name": "Conjuncturele werkloosheid",
+      "layer": 1,
+      "mastery_target": "understand",
+      "current_needs": [],
+      "assumed_prior_knowledge": [],
+      "recommended_status": "ambiguous",
+      "recommended_needs": [],
+      "severity": "medium",
+      "rationale": "Empty-needs status needs reviewer judgement.",
+      "human_question": "Should L11 remain zero-needs or receive internal prerequisites?",
+      "review_status": "machine_suggested",
+      "evidence_paths": [
+        "references/machine/micro-teaching-units.json"
+      ]
+    },
+    {
+      "unit_id": "L12",
+      "unit_name": "Structurele werkloosheid",
+      "layer": 1,
+      "mastery_target": "understand",
+      "current_needs": [],
+      "assumed_prior_knowledge": [],
+      "recommended_status": "ambiguous",
+      "recommended_needs": [],
+      "severity": "medium",
+      "rationale": "Empty-needs status needs reviewer judgement.",
+      "human_question": "Should L12 remain zero-needs or receive internal prerequisites?",
+      "review_status": "machine_suggested",
+      "evidence_paths": [
+        "references/machine/micro-teaching-units.json"
+      ]
+    },
+    {
+      "unit_id": "L13",
+      "unit_name": "Frictiewerkloosheid",
+      "layer": 1,
+      "mastery_target": "understand",
+      "current_needs": [],
+      "assumed_prior_knowledge": [],
+      "recommended_status": "ambiguous",
+      "recommended_needs": [],
+      "severity": "medium",
+      "rationale": "Empty-needs status needs reviewer judgement.",
+      "human_question": "Should L13 remain zero-needs or receive internal prerequisites?",
+      "review_status": "machine_suggested",
+      "evidence_paths": [
+        "references/machine/micro-teaching-units.json"
+      ]
+    },
+    {
+      "unit_id": "L17",
+      "unit_name": "CAO als bindende loonafspraak",
+      "layer": 1,
+      "mastery_target": "understand",
+      "current_needs": [],
+      "assumed_prior_knowledge": [],
+      "recommended_status": "false_zero",
+      "recommended_needs": [
+        "D16"
+      ],
+      "severity": "medium",
+      "rationale": "Machine audit found likely hidden prerequisite(s): D16.",
+      "human_question": "Should L17 depend on D16, or should the prerequisite be represented differently?",
+      "review_status": "machine_suggested",
+      "evidence_paths": [
+        "references/machine/micro-teaching-units.json"
+      ]
+    },
+    {
+      "unit_id": "L18",
+      "unit_name": "Voordelen en nadelen van vakbonden",
+      "layer": 1,
+      "mastery_target": "understand",
+      "current_needs": [],
+      "assumed_prior_knowledge": [],
+      "recommended_status": "ambiguous",
+      "recommended_needs": [],
+      "severity": "medium",
+      "rationale": "Empty-needs status needs reviewer judgement.",
+      "human_question": "Should L18 remain zero-needs or receive internal prerequisites?",
+      "review_status": "machine_suggested",
+      "evidence_paths": [
+        "references/machine/micro-teaching-units.json"
+      ]
+    },
+    {
+      "unit_id": "L19",
+      "unit_name": "Loonstarheid",
+      "layer": 1,
+      "mastery_target": "understand",
+      "current_needs": [],
+      "assumed_prior_knowledge": [],
+      "recommended_status": "false_zero",
+      "recommended_needs": [
+        "L09"
+      ],
+      "severity": "medium",
+      "rationale": "Machine audit found likely hidden prerequisite(s): L09.",
+      "human_question": "Should L19 depend on L09, or should the prerequisite be represented differently?",
+      "review_status": "machine_suggested",
+      "evidence_paths": [
+        "references/machine/micro-teaching-units.json"
+      ]
+    }
+  ]
+}

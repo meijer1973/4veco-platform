@@ -15,7 +15,7 @@ Compatibility decisions:
 - Sprint `R0.1` now means the sprint-execution scaffold.
 - The older local `R0.1` / `R0.2` history is preserved as completed historical `H0.x` work, not as active roadmap numbering.
 - `R0.1 Sprint Execution Scaffold` is completed.
-- `R1.3 Unit Prior-Knowledge Schema Extension` is completed; the next planned sprint is `R2.1 Full Empty-Needs Audit`.
+- `R2.1 Full Empty-Needs Audit` is completed; the next planned sprint is `R2.2 Subagent Review For Empty Needs`.
 - Current catalog metrics are updated after the labor-market unit additions.
 - The reference CLI exists; CLI documentation still needs cleanup because parts of the README still read like a future contract.
 
@@ -41,7 +41,6 @@ Open items are listed first; completed items are kept below them.
 
 | Sprint | Name | Completed | Current State |
 |--------|------|-----------|---------------|
-| R2.1 | Full Empty-Needs Audit | no | Planned. Non-mutating audit over the full current unit catalog. |
 | R2.2 | Subagent Review For Empty Needs | no | Planned. Pedagogy, data-integrity, and evidence auditors triage hidden prerequisites. |
 | R2.3 | Human Review And Gate Closure | no | Planned. Human economics reviewer closes or conditions the empty-needs gate. |
 | R3.1 | Reference CLI And Documentation Completion | no | Planned. Fill any CLI gaps needed for reviewed corrections and update stale CLI docs. |
@@ -58,6 +57,7 @@ Open items are listed first; completed items are kept below them.
 | R7.2 | Hybrid Retrieval | no | Planned. Add lexical/entity/graph retrieval before optional vector search. |
 | R7.3 | Retrieval Evaluation Set | no | Planned. Make retrieval quality regressions visible. |
 | R7.4 | RAG Review Gate | no | Planned. Approve internal/teacher-facing RAG only after evaluation. |
+| R2.1 | Full Empty-Needs Audit | yes | Completed. Non-mutating audit generated 61 machine-suggested empty-needs review entries for the current branch catalog. |
 | R1.3 | Unit Prior-Knowledge Schema Extension | yes | Completed. Unit and review schemas now support zero-needs status, assumed prior knowledge, and review records. |
 | R1.2 | Core JSON Schemas | yes | Completed. Initial JSON schema contracts exist for units, terms, evidence, graph edges, reports, RAG chunks, feedback, games, and simulations. |
 | R1.1 | Source-of-Truth Decision | yes | Completed. `references/SOURCE_OF_TRUTH.md` defines canonical source, projection, authority, and edit-policy rules. |
@@ -287,18 +287,18 @@ Do not invert this order.
 
 ## Immediate Next Sprint
 
-Proceed with `R2.1 Full Empty-Needs Audit`.
+Proceed with `R2.2 Subagent Review For Empty Needs`.
 
 Create:
 
-- `docs/sprints/R2.1-plan.md`
-- `references/data/sprints/R2.1.plan.json`
-- `reports/sprints/R2.1-baseline.md`
-- `references/data/audits/empty-needs-audit.json`
-- `reports/reference-audits/empty-needs-audit.md`
-- audit script under `build-scripts/references/`
+- `docs/sprints/R2.2-plan.md`
+- `references/data/sprints/R2.2.plan.json`
+- `reports/sprints/R2.2-baseline.md`
+- `reports/review-gates/GATE-R2-empty-needs/subagent-*.json`
+- `reports/review-gates/GATE-R2-empty-needs/review-packet.md`
+- review preparation script under `build-scripts/references/`
 
-Run a non-mutating audit over the full current unit catalog. Do not apply dependency corrections in R2.1.
+Review the R2.1 audit and prepare the packet for human review. Do not apply dependency corrections in R2.2.
 
 ## Final Rule
 
