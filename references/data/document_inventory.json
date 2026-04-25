@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1",
-  "generated_at": "2026-04-25T19:37:47.166Z",
+  "generated_at": "2026-04-25T19:43:13.008Z",
   "sprint_id": "R0.2",
   "scope": [
     "references",
@@ -10,28 +10,28 @@
   ],
   "note": "Inventory covers reference sources, generated reports, and reference/report tooling.",
   "summary": {
-    "file_count": 165,
+    "file_count": 176,
     "by_layer": {
-      "reference_tooling": 40,
+      "reference_tooling": 42,
       "report_tooling": 9,
       "authored_judgement": 7,
-      "governance_data": 13,
+      "governance_data": 15,
       "external_authority": 32,
       "machine_registry": 5,
       "quality_protocol": 5,
       "planning": 1,
       "schema_contract": 18,
       "governance_policy": 1,
-      "generated_report": 34
+      "generated_report": 41
     },
     "by_edit_policy": {
-      "code_review": 67,
+      "code_review": 69,
       "human_reviewed_edit": 14,
       "generated_by_inventory_script": 3,
-      "sprint_process": 10,
+      "sprint_process": 12,
       "external_refresh_only": 32,
       "cli_only": 5,
-      "generated_by_script": 34
+      "generated_by_script": 41
     }
   },
   "files": [
@@ -216,6 +216,26 @@
       "self_generated_inventory_file": false
     },
     {
+      "path": "build-scripts/references/check-empty-needs-review.js",
+      "file_name": "check-empty-needs-review.js",
+      "extension": "js",
+      "size_bytes": 1598,
+      "sha256": "f73c6603b5809b282855ec949da87f1b6b8112f423a22946fdc7f0089c7ae052",
+      "layer": "reference_tooling",
+      "authority_level": "tooling",
+      "source_type": "reference_cli_script",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "platform_team",
+      "refresh_policy": "code_change",
+      "downstream_dependencies": [
+        "reference-cli",
+        "reports",
+        "validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
       "path": "build-scripts/references/check-source-manifest.js",
       "file_name": "check-source-manifest.js",
       "extension": "js",
@@ -381,6 +401,26 @@
       "extension": "js",
       "size_bytes": 4958,
       "sha256": "08b30a5f2fb1a6d6291bceb8fd65953a5227b821547b632589f6877dffc4cee6",
+      "layer": "reference_tooling",
+      "authority_level": "tooling",
+      "source_type": "reference_cli_script",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "platform_team",
+      "refresh_policy": "code_change",
+      "downstream_dependencies": [
+        "reference-cli",
+        "reports",
+        "validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "build-scripts/references/prepare-empty-needs-review.js",
+      "file_name": "prepare-empty-needs-review.js",
+      "extension": "js",
+      "size_bytes": 3086,
+      "sha256": "c99c6e519816c9beffa45229af5619f5ace94fbbbe5edef59c9992c129f7d212",
       "layer": "reference_tooling",
       "authority_level": "tooling",
       "source_type": "reference_cli_script",
@@ -1407,6 +1447,46 @@
       "self_generated_inventory_file": false
     },
     {
+      "path": "references/data/sprints/R2.2.plan.json",
+      "file_name": "R2.2.plan.json",
+      "extension": "json",
+      "size_bytes": 794,
+      "sha256": "c38b3651ed12b841aceee02afc161f366cb8cd53c187e2e0212e1c053510e3a2",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/data/sprints/R2.2.result.json",
+      "file_name": "R2.2.result.json",
+      "extension": "json",
+      "size_bytes": 1680,
+      "sha256": "27a21d02d7dbe9c660fec58d989acde5efc5818b08058dd28d66dc2c5772f08d",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
       "path": "references/external/amstelveencollege_quality_standards.md",
       "file_name": "amstelveencollege_quality_standards.md",
       "extension": "md",
@@ -2250,8 +2330,8 @@
       "path": "references/reference-team-roadmap.md",
       "file_name": "reference-team-roadmap.md",
       "extension": "md",
-      "size_bytes": 13465,
-      "sha256": "11fabcdb42b4f639f8caf7dd4edca5e2c72f2075629149a2af268b5d6cf61e23",
+      "size_bytes": 13558,
+      "sha256": "0f05455e6c47524a8f6693a852dc6d308939958d2f9ad26637fa95d2008c03a0",
       "layer": "planning",
       "authority_level": "authored_judgement",
       "source_type": "roadmap",
@@ -2767,8 +2847,8 @@
       "path": "reports/internal-dashboard/dashboard-data.json",
       "file_name": "dashboard-data.json",
       "extension": "json",
-      "size_bytes": 53403,
-      "sha256": "5dedabe7f27a8c9c9f97491265e2e9468211d79def1f3b0f7d69a9bdcd9dc447",
+      "size_bytes": 53464,
+      "sha256": "73c520a68fad514b8acb784c5c3f06774311d388d35ff0265892328ce6c8a185",
       "layer": "generated_report",
       "authority_level": "generated_report",
       "source_type": "report_json",
@@ -2787,8 +2867,8 @@
       "path": "reports/internal-dashboard/index.html",
       "file_name": "index.html",
       "extension": "html",
-      "size_bytes": 33712,
-      "sha256": "9e7252f21a12ab6bc374fe556d2f0c3f7aa0cde2cc73e778c7a859082c15b87a",
+      "size_bytes": 33743,
+      "sha256": "7e09a2068a528773d4368894af2f0998e3ebe16d07ebe78923f28ce298f8c5e3",
       "layer": "generated_report",
       "authority_level": "generated_report",
       "source_type": "dashboard_html",
@@ -2952,6 +3032,86 @@
       "layer": "generated_report",
       "authority_level": "generated_report",
       "source_type": "report_md",
+      "generated_status": "generated_projection",
+      "edit_policy": "generated_by_script",
+      "owner": "platform_team",
+      "refresh_policy": "regenerate",
+      "downstream_dependencies": [
+        "dashboards",
+        "planning",
+        "qc-review"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "reports/review-gates/GATE-R2-empty-needs/review-packet.md",
+      "file_name": "review-packet.md",
+      "extension": "md",
+      "size_bytes": 6957,
+      "sha256": "366f4cd7beee977e10e7ea0e75d97ab8dbe9e24cefee2bad022060c2deb49019",
+      "layer": "generated_report",
+      "authority_level": "generated_report",
+      "source_type": "report_md",
+      "generated_status": "generated_projection",
+      "edit_policy": "generated_by_script",
+      "owner": "platform_team",
+      "refresh_policy": "regenerate",
+      "downstream_dependencies": [
+        "dashboards",
+        "planning",
+        "qc-review"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "reports/review-gates/GATE-R2-empty-needs/subagent-data-integrity.json",
+      "file_name": "subagent-data-integrity.json",
+      "extension": "json",
+      "size_bytes": 2298,
+      "sha256": "85b308ead1e184bc4c4a2f012280079ff3bfb009da5f046dc4c5d54e9858998f",
+      "layer": "generated_report",
+      "authority_level": "generated_report",
+      "source_type": "report_json",
+      "generated_status": "generated_projection",
+      "edit_policy": "generated_by_script",
+      "owner": "platform_team",
+      "refresh_policy": "regenerate",
+      "downstream_dependencies": [
+        "dashboards",
+        "planning",
+        "qc-review"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "reports/review-gates/GATE-R2-empty-needs/subagent-evidence.json",
+      "file_name": "subagent-evidence.json",
+      "extension": "json",
+      "size_bytes": 2017,
+      "sha256": "7632cf79f092d11fa56898fa836dd5bd343b23b6aa0c53fe34639aafd0b90cae",
+      "layer": "generated_report",
+      "authority_level": "generated_report",
+      "source_type": "report_json",
+      "generated_status": "generated_projection",
+      "edit_policy": "generated_by_script",
+      "owner": "platform_team",
+      "refresh_policy": "regenerate",
+      "downstream_dependencies": [
+        "dashboards",
+        "planning",
+        "qc-review"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "reports/review-gates/GATE-R2-empty-needs/subagent-pedagogy.json",
+      "file_name": "subagent-pedagogy.json",
+      "extension": "json",
+      "size_bytes": 2786,
+      "sha256": "5cea7b8a3ee4bdc8f093b61341ef618c440b62390b15eb1b32464e3831229578",
+      "layer": "generated_report",
+      "authority_level": "generated_report",
+      "source_type": "report_json",
       "generated_status": "generated_projection",
       "edit_policy": "generated_by_script",
       "owner": "platform_team",
@@ -3269,6 +3429,66 @@
       "extension": "md",
       "size_bytes": 2277,
       "sha256": "512c7e8fbae65cef31f8c955de7309a49ed63f750d3b55af42715b2bc8d19df7",
+      "layer": "generated_report",
+      "authority_level": "generated_report",
+      "source_type": "report_md",
+      "generated_status": "generated_projection",
+      "edit_policy": "generated_by_script",
+      "owner": "platform_team",
+      "refresh_policy": "regenerate",
+      "downstream_dependencies": [
+        "dashboards",
+        "planning",
+        "qc-review"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "reports/sprints/R2.2-baseline.md",
+      "file_name": "R2.2-baseline.md",
+      "extension": "md",
+      "size_bytes": 895,
+      "sha256": "a02c25a1289d5a82946905ecf17b9d95f7512e6c52575fb1e4fac9df5f9675f4",
+      "layer": "generated_report",
+      "authority_level": "generated_report",
+      "source_type": "report_md",
+      "generated_status": "generated_projection",
+      "edit_policy": "generated_by_script",
+      "owner": "platform_team",
+      "refresh_policy": "regenerate",
+      "downstream_dependencies": [
+        "dashboards",
+        "planning",
+        "qc-review"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "reports/sprints/R2.2-diff-summary.md",
+      "file_name": "R2.2-diff-summary.md",
+      "extension": "md",
+      "size_bytes": 704,
+      "sha256": "9142ac32fe0a3df7115dce6d0b0e836049044825ad63795c9d3ba4e76191e9c8",
+      "layer": "generated_report",
+      "authority_level": "generated_report",
+      "source_type": "report_md",
+      "generated_status": "generated_projection",
+      "edit_policy": "generated_by_script",
+      "owner": "platform_team",
+      "refresh_policy": "regenerate",
+      "downstream_dependencies": [
+        "dashboards",
+        "planning",
+        "qc-review"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "reports/sprints/R2.2-result.md",
+      "file_name": "R2.2-result.md",
+      "extension": "md",
+      "size_bytes": 2420,
+      "sha256": "47f942fab2023e2b182975974922bd3857115dbbe17ef9a6eb53f347ba7924a5",
       "layer": "generated_report",
       "authority_level": "generated_report",
       "source_type": "report_md",

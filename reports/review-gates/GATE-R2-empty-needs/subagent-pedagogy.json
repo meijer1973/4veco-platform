@@ -1,0 +1,39 @@
+{
+  "gate_id": "GATE-R2-empty-needs",
+  "sprint_id": "R2.2",
+  "reviewer": "subagent-pedagogy",
+  "status": "completed",
+  "files_read": [
+    "references/data/audits/empty-needs-audit.json",
+    "reports/reference-audits/empty-needs-audit.md",
+    "references/machine/micro-teaching-units.json",
+    "references/SOURCE_OF_TRUTH.md"
+  ],
+  "findings": [
+    "A16 and A17 are likely false_zero; they need at least percentage-change skill A38, while A15 only works if it is intended as the generic elasticity template.",
+    "D04 is likely false_zero, but the machine recommendation A15 is probably wrong because D04 is about inkomenselasticiteit; A17 or D11 is a better review candidate.",
+    "D06 -> A15 is pedagogically plausible because D06 interprets prijselasticiteit.",
+    "A18 may be a missed false_zero and should be reviewed for dependency on B02 Alternatieve kosten.",
+    "D10, D13, and D32 are likely false_zero, but the machine suggestions D01/D03 are pedagogically suspect because they are downstream or specialized accijns/surplus units.",
+    "H13 -> D13 and H14 -> I14 are plausible; H14 is especially strong because its procedure explicitly uses multiplier/lekkages.",
+    "Labor-market sequence should be made explicit: L05/L03 -> L09 -> L19, with D16/D34/L10 sequencing reviewed carefully.",
+    "Layer-0 A-domain units A01, A02, A03, A04, A05, and A38 are plausible underbouw_assumed.",
+    "B01 is plausible true_zero.",
+    "Some self-contained recognition or vocabulary units can remain zero-needs if taught as definitions rather than graph/application tasks."
+  ],
+  "human_questions": [
+    "Should A15 itself depend on A38, since its procedure uses percentage changes?",
+    "Should the platform introduce a generic elasticity prerequisite instead of routing A16, A17, and D04 through A15?",
+    "Should A18 depend on B02 Alternatieve kosten?",
+    "For D10, D13, and D32, what is the canonical prerequisite chain for drawing and interpreting demand-supply shifts?",
+    "Are layer inversions acceptable, especially D10 -> D01/D03, D13 -> D03, D16 -> D34, and H16 -> L10?",
+    "Should H24 Wisselkoers en depreciatie require A38 because its procedure calculates percentage depreciation?",
+    "Is A43 genuinely an economics prerequisite unit, or just underbouw arithmetic in a scarcity/allocation context?"
+  ],
+  "residual_risks": [
+    "Dependency changes still require human review and CLI mutation.",
+    "The audit covers empty needs only; hidden weak dependencies inside non-empty units remain possible.",
+    "Machine suggestions appear keyword-driven in places and can pull in downstream or specialized units as prerequisites.",
+    "The branch has 192 total units and 190 live units; review tooling should keep deprecated filtering explicit."
+  ]
+}

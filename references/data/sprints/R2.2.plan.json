@@ -1,0 +1,18 @@
+{
+  "sprint_id": "R2.2",
+  "name": "Subagent Review For Empty Needs",
+  "status": "planned",
+  "planned_on": "2026-04-25",
+  "plan": "docs/sprints/R2.2-plan.md",
+  "protected_reference_data_changes_allowed": false,
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js docs/sprints/R2.2-plan.md",
+    "node build-scripts/references/prepare-empty-needs-review.js",
+    "node build-scripts/references/check-empty-needs-review.js",
+    "node build-scripts/reports/internal-dashboard.js",
+    "node build-scripts/references/build-reference-inventory.js",
+    "node build-scripts/references/check-source-manifest.js",
+    "node build-scripts/references/check-document-inventory.js",
+    "node build-scripts/sprints/check-sprint-result.js reports/sprints/R2.2-result.md"
+  ]
+}

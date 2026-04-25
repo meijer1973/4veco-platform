@@ -1,0 +1,32 @@
+{
+  "gate_id": "GATE-R2-empty-needs",
+  "sprint_id": "R2.2",
+  "reviewer": "subagent-evidence",
+  "status": "completed",
+  "files_read": [
+    "references/data/audits/empty-needs-audit.json",
+    "references/machine/micro-teaching-units.json",
+    "references/external/exam-questions.json",
+    "references/SOURCE_OF_TRUTH.md"
+  ],
+  "findings": [
+    "R2 work must not promote prerequisite recommendations to authoritative dependency changes before human review.",
+    "All 61 audit entries cite only references/machine/micro-teaching-units.json as evidence_path, which is insufficient for authoritative dependency correction.",
+    "Strong evidence candidates include D06 -> A15, D16 -> D34, H14 -> I14, I04 -> L17/L19, I10 -> L19, L09 -> L05/L03, and L17 -> D16.",
+    "A01, A02, A03, A04, A05, and A38 can plausibly remain zero-needs or underbouw_assumed because they are basic math or graph skills.",
+    "Medium evidence candidates include A16 -> A15, A17 -> A15, H13 -> D13, H16 -> L10, and L19 -> L09.",
+    "Weak or suspicious machine suggestions include A43 -> A10/A38, D04 -> A15, D10 -> D01/D03, D13 -> D03, and D32 -> D01/D03.",
+    "A18 and A42 are concerning as underbouw_assumed because the registry says prior_learning=new_this_year."
+  ],
+  "human_questions": [
+    "For each proposed edge, does the target unit genuinely require the prerequisite before it can be taught or assessed?",
+    "Is the proposed prerequisite the minimal prerequisite, rather than a more advanced or more specific sibling?",
+    "Should suspicious edges A43, D04, D10, D13, and D32 be rejected, revised, or held?",
+    "What exact evidence should be recorded for accepted edges before CLI mutation?"
+  ],
+  "residual_risks": [
+    "Real exam-question co-occurrence and target-exercise evidence are not yet attached to individual recommendations.",
+    "Several recommendations are semantic rather than evidence anchored.",
+    "Accepted edges should record exact rationale and evidence IDs before any CLI mutation."
+  ]
+}
