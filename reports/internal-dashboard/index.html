@@ -186,7 +186,7 @@
     <div class="internal-mark">Internal Dashboard</div>
     <h1>4veco Project Dashboard</h1>
     <p>Developer-facing overview generated from team roadmaps and platform quality reports. This page is not student-facing and must stay out of lesson output.</p>
-    <p>Generated: 2026-04-25T08:20:37.254Z</p>
+    <p>Generated: 2026-04-25T18:39:53.399Z</p>
   </header>
   <main>
     <nav class="tabs" role="tablist" aria-label="Team dashboard tabs">
@@ -243,8 +243,8 @@
           <p>Owns reference quality, inspection and accountability evidence, exam alignment, skill and goal efficiency, and the question of what should be taught versus omitted.</p>
         </div>
         <div class="metric-strip" aria-label="Sprint summary">
-          <div><strong>2</strong><span>completed</span></div>
-          <div><strong>3</strong><span>open</span></div>
+          <div><strong>5</strong><span>completed</span></div>
+          <div><strong>20</strong><span>open</span></div>
         </div>
       </div>
       <h3>Roadmap Sources</h3>
@@ -253,8 +253,8 @@
           <strong>References roadmap</strong>
           <span class="pill ok">found</span>
           <code>references/reference-team-roadmap.md</code>
-          <p>2026-04-25 after splitting reference planning out of the platform roadmap</p>
-          <p>Reference planning has been split out of the platform roadmap. The current priority is to build a structured reference issue log before changing machine references, then use that log to plan the next reference data-quality and reference health sprints.</p>
+          <p>2026-04-23</p>
+          <p>References Team Roadmap Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Scope: references/, build-scripts/references/, build-scripts/reports/, reference dashboards, and generated reference reports under reports/ Adoption Decision The handoff roadmap has been adopted as the main operating roadmap for the references team. No blocking incompatibility was found. The roadmap direction fits the repository: machine-edited references, evidence-first unit growth, JSON-first reports, review gates for pedagogical auth...</p>
         </li></ul>
       <h3>Sprint Ledger</h3>
       <div class="table-wrap">
@@ -262,11 +262,31 @@
           <thead>
             <tr><th>Sprint</th><th>Name</th><th>Completed</th><th>Current State</th><th>Source</th></tr>
           </thead>
-          <tbody><tr><td>R1.1</td><td>Reference Issue Catalog And Improvement Plan</td><td><span class="status open">no</span></td><td>Current reference priority; create the authoritative issue log for reference quality, inspection proof, exam alignment, and teaching-efficiency evidence.</td><td>References roadmap</td></tr>
-<tr><td>R1.2</td><td>Reference Data Quality Sprint</td><td><span class="status open">no</span></td><td>Planned from the issue catalog; clean unit/term/exam-link backlog and reference trust problems.</td><td>References roadmap</td></tr>
-<tr><td>R1.3</td><td>Reference Health Routine Sprint</td><td><span class="status open">no</span></td><td>Planned; make reference reports and QC prompts routine enough to trust during production.</td><td>References roadmap</td></tr>
-<tr><td>R0.1</td><td>A-Domain Skilltree Consistency</td><td><span class="status done">yes</span></td><td>`A38` through `A44` implemented; A-domain skilltree coverage matches the catalog.</td><td>References roadmap</td></tr>
-<tr><td>R0.2</td><td>Reference Report Regeneration</td><td><span class="status done">yes</span></td><td>Core reports regenerated in Sprint 0.4 and aligned with the current catalog.</td><td>References roadmap</td></tr></tbody>
+          <tbody><tr><td>R1.1</td><td>Source-of-Truth Decision</td><td><span class="status open">no</span></td><td>Planned. Record canonical/projection status for every reference surface.</td><td>References roadmap</td></tr>
+<tr><td>R1.2</td><td>Core JSON Schemas</td><td><span class="status open">no</span></td><td>Planned. Define schemas before broad rewrites.</td><td>References roadmap</td></tr>
+<tr><td>R1.3</td><td>Unit Prior-Knowledge Schema Extension</td><td><span class="status open">no</span></td><td>Planned. Add explicit zero-needs and assumed-prior-knowledge governance.</td><td>References roadmap</td></tr>
+<tr><td>R2.1</td><td>Full Empty-Needs Audit</td><td><span class="status open">no</span></td><td>Planned. Non-mutating audit over the full current unit catalog.</td><td>References roadmap</td></tr>
+<tr><td>R2.2</td><td>Subagent Review For Empty Needs</td><td><span class="status open">no</span></td><td>Planned. Pedagogy, data-integrity, and evidence auditors triage hidden prerequisites.</td><td>References roadmap</td></tr>
+<tr><td>R2.3</td><td>Human Review And Gate Closure</td><td><span class="status open">no</span></td><td>Planned. Human economics reviewer closes or conditions the empty-needs gate.</td><td>References roadmap</td></tr>
+<tr><td>R3.1</td><td>Reference CLI And Documentation Completion</td><td><span class="status open">no</span></td><td>Planned. Fill any CLI gaps needed for reviewed corrections and update stale CLI docs.</td><td>References roadmap</td></tr>
+<tr><td>R3.2</td><td>Apply Reviewed Empty-Needs Corrections</td><td><span class="status open">no</span></td><td>Planned. Apply only reviewed prerequisite corrections through CLI.</td><td>References roadmap</td></tr>
+<tr><td>R4.1</td><td>Unit-Term Slug Migration</td><td><span class="status open">no</span></td><td>Planned. Migrate unit `terms` fields to canonical `begrippen.json` slug IDs.</td><td>References roadmap</td></tr>
+<tr><td>R4.2</td><td>Exam-Question Extraction Gap Closure</td><td><span class="status open">no</span></td><td>Planned. Complete missing required-skill and exam-code links where evidence supports it.</td><td>References roadmap</td></tr>
+<tr><td>R4.3</td><td>Blueprint Flag Triage</td><td><span class="status open">no</span></td><td>Planned. Convert raw missing-unit flags into curated decisions.</td><td>References roadmap</td></tr>
+<tr><td>R5.1</td><td>Evidence-Anchor Layer</td><td><span class="status open">no</span></td><td>Planned. Add exact proof anchors for important claims.</td><td>References roadmap</td></tr>
+<tr><td>R5.2</td><td>Alignment Graph</td><td><span class="status open">no</span></td><td>Planned. Create graph edges only after evidence and prerequisite work.</td><td>References roadmap</td></tr>
+<tr><td>R5.3</td><td>Alignment Graph Review Gate</td><td><span class="status open">no</span></td><td>Planned. Human-reviewed gate before graph powers retrieval or diagnostics.</td><td>References roadmap</td></tr>
+<tr><td>R6.1</td><td>JSON-First Reports</td><td><span class="status open">no</span></td><td>Planned. Markdown reports become projections of JSON.</td><td>References roadmap</td></tr>
+<tr><td>R6.2</td><td>Reference Health Dashboard Data</td><td><span class="status open">no</span></td><td>Planned. Produce one generated reference-health state file for dashboards and planning.</td><td>References roadmap</td></tr>
+<tr><td>R7.1</td><td>Deterministic Chunk Layer</td><td><span class="status open">no</span></td><td>Planned. Build source-ranked retrieval chunks.</td><td>References roadmap</td></tr>
+<tr><td>R7.2</td><td>Hybrid Retrieval</td><td><span class="status open">no</span></td><td>Planned. Add lexical/entity/graph retrieval before optional vector search.</td><td>References roadmap</td></tr>
+<tr><td>R7.3</td><td>Retrieval Evaluation Set</td><td><span class="status open">no</span></td><td>Planned. Make retrieval quality regressions visible.</td><td>References roadmap</td></tr>
+<tr><td>R7.4</td><td>RAG Review Gate</td><td><span class="status open">no</span></td><td>Planned. Approve internal/teacher-facing RAG only after evaluation.</td><td>References roadmap</td></tr>
+<tr><td>R0.2</td><td>Reference Baseline Inventory</td><td><span class="status done">yes</span></td><td>Completed. Source manifest, document inventory, builder, and validators now define the baseline reference/report/tooling surface.</td><td>References roadmap</td></tr>
+<tr><td>R0.1</td><td>Sprint Execution Scaffold</td><td><span class="status done">yes</span></td><td>Completed. Sprint templates, example fixtures, JSON sprint metadata, and plan/result validators exist.</td><td>References roadmap</td></tr>
+<tr><td>H0.1</td><td>A-Domain Skilltree Consistency</td><td><span class="status done">yes</span></td><td>Historical completed work. `A38` through `A44` implemented; A-domain skilltree coverage matches the catalog.</td><td>References roadmap</td></tr>
+<tr><td>H0.2</td><td>Reference Report Regeneration</td><td><span class="status done">yes</span></td><td>Historical completed work. Core reports regenerated and aligned with the catalog.</td><td>References roadmap</td></tr>
+<tr><td>H0.3</td><td>Labor-Market Unit And Dependency Patch</td><td><span class="status done">yes</span></td><td>Historical completed work. Added `L22` through `L27`, added the wage-elasticity term, and updated labor-market dependencies through CLI.</td><td>References roadmap</td></tr></tbody>
         </table>
       </div>
     </section>
@@ -279,8 +299,8 @@
           <p>Owns front-end quality, lesson usability, differentiation, games, visuals, companion material quality, and turning technically valid material into effective teaching.</p>
         </div>
         <div class="metric-strip" aria-label="Sprint summary">
-          <div><strong>3</strong><span>completed</span></div>
-          <div><strong>9</strong><span>open</span></div>
+          <div><strong>6</strong><span>completed</span></div>
+          <div><strong>6</strong><span>open</span></div>
         </div>
       </div>
       <h3>Roadmap Sources</h3>
@@ -289,7 +309,7 @@
           <strong>Lessen roadmap</strong>
           <span class="pill ok">found</span>
           <code>../4veco-lessen/lessen-team-roadmap.md</code>
-          <p>2026-04-24 after companion pilot review, layout/UI reprioritization, visual-variant direction, L1.3A-C split, L1.3B platform integration (news variant system, symmetry validator, game-visuals decision), and L1.4-L1.6 pipeline-regression + layout-round-2 sprints inserted before scaling decision</p>
+          <p>2026-04-25 after Sprint L1.3A-C close — basic HTML layout, companion SVG variant system with light/dark symmetry validator, and PPTX teacher-supporting slide rules all landed in platform; L1.4 (pipeline regression on `1.1.2 Percentages en indexcijfers`) is now active.</p>
           <p>Sprint 0.5 is signed off for Part A textbook/book production.</p>
         </li></ul>
       <h3>Sprint Ledger</h3>
@@ -298,10 +318,7 @@
           <thead>
             <tr><th>Sprint</th><th>Name</th><th>Completed</th><th>Current State</th><th>Source</th></tr>
           </thead>
-          <tbody><tr><td>L1.3A</td><td>Basic HTML Layout And Front-End Usability</td><td><span class="status open">no</span></td><td>Pilot run completed for `1.1.1` `uitleg voorkennis`, `uitleg vaardigheden`, and `begeleide inoefening`; needs human usability sign-off.</td><td>Lessen roadmap</td></tr>
-<tr><td>L1.3B</td><td>Companion SVGs And Light/Dark Visual Variants</td><td><span class="status open">no</span></td><td>Proper SVG/variant workflow is running for `1.1.1`; game/interactive visual slots still need a decision.</td><td>Lessen roadmap</td></tr>
-<tr><td>L1.3C</td><td>PowerPoint Presentation Improvement</td><td><span class="status open">no</span></td><td>`1.1.1` PPTX regenerated with adapted slide visuals and LibreOffice roundtrip; needs presentation-quality review.</td><td>Lessen roadmap</td></tr>
-<tr><td>L1.4</td><td>First Pipeline Regression Paragraph</td><td><span class="status open">no</span></td><td>Build one additional Book 1 companion paragraph against the L1.3A-C platform state to prove the pipeline still works on fresh content.</td><td>Lessen roadmap</td></tr>
+          <tbody><tr><td>L1.4</td><td>First Pipeline Regression Paragraph</td><td><span class="status open">no</span></td><td>Active 2026-04-25. Building `1.1.2 Percentages en indexcijfers` end-to-end against the L1.3A-C platform state to prove the pipeline still works on fresh content.</td><td>Lessen roadmap</td></tr>
 <tr><td>L1.5</td><td>Layout Round 2</td><td><span class="status open">no</span></td><td>Tighten layout/UI based on the L1.3A-C usability review and anything L1.4 surfaced. Platform-owned only.</td><td>Lessen roadmap</td></tr>
 <tr><td>L1.6</td><td>Second Pipeline Regression Paragraph</td><td><span class="status open">no</span></td><td>Build one more Book 1 companion paragraph after L1.5 to confirm the layout changes did not break the pipeline.</td><td>Lessen roadmap</td></tr>
 <tr><td>L1.7</td><td>Post-Layout Scaling Decision</td><td><span class="status open">no</span></td><td>Decide whether to expand broadly after L1.3A-C + L1.4-L1.6 prove the layout survives two independent paragraph builds.</td><td>Lessen roadmap</td></tr>
@@ -309,7 +326,10 @@
 <tr><td>L2.2</td><td>Book 2 Part A Textbook Layer</td><td><span class="status open">no</span></td><td>Start Book 2 Part A only under the chapter/paragraph hard gates.</td><td>Lessen roadmap</td></tr>
 <tr><td>L0.5</td><td>Green Gate Handoff</td><td><span class="status done">yes</span></td><td>Book 1 Part A and the platform/book health routine are green.</td><td>Lessen roadmap</td></tr>
 <tr><td>L1.1</td><td>First Companion Technical Pilot</td><td><span class="status done">yes</span></td><td>`1.1.1` passes the current complete technical gate.</td><td>Lessen roadmap</td></tr>
-<tr><td>L1.2</td><td>Second Companion Technical Probe</td><td><span class="status done">yes</span></td><td>`1.1.2` proved the technical pattern can repeat; probe materials were removed for didactic rebuild.</td><td>Lessen roadmap</td></tr></tbody>
+<tr><td>L1.2</td><td>Second Companion Technical Probe</td><td><span class="status done">yes</span></td><td>`1.1.2` proved the technical pattern can repeat; probe materials were removed for didactic rebuild.</td><td>Lessen roadmap</td></tr>
+<tr><td>L1.3A</td><td>Basic HTML Layout And Front-End Usability</td><td><span class="status done">yes</span></td><td>Closed 2026-04-25. `1.1.1` companions on shared platform layout/theme; converters and landing-page generator landed in platform; browser smoke + technical gates green.</td><td>Lessen roadmap</td></tr>
+<tr><td>L1.3B</td><td>Companion SVGs And Light/Dark Visual Variants</td><td><span class="status done">yes</span></td><td>Closed 2026-04-25. `lib-visual-surfaces.js` is the shared SURFACES/THEMES module; light/dark symmetry validator enforced; news visual on the variant system; game-visuals decision recorded per paragraph.</td><td>Lessen roadmap</td></tr>
+<tr><td>L1.3C</td><td>PowerPoint Presentation Improvement</td><td><span class="status done">yes</span></td><td>Closed 2026-04-25. `1.1.1` PPTX regenerated with adapted slide visuals; teacher-supporting slide rules + read-through QA gate documented in `econ-pptx-templates`; LibreOffice roundtrip clean.</td><td>Lessen roadmap</td></tr></tbody>
         </table>
       </div>
     </section>

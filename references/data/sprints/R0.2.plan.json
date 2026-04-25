@@ -1,0 +1,39 @@
+{
+  "sprint_id": "R0.2",
+  "name": "Reference Baseline Inventory",
+  "status": "planned",
+  "planned_on": "2026-04-25",
+  "plan": "docs/sprints/R0.2-plan.md",
+  "allowed_paths": [
+    "docs/sprints/R0.2-plan.md",
+    "reports/sprints/R0.2-baseline.md",
+    "reports/sprints/R0.2-result.md",
+    "reports/sprints/R0.2-diff-summary.md",
+    "references/data/source_manifest.json",
+    "references/data/document_inventory.json",
+    "references/data/sprints/R0.2.plan.json",
+    "references/data/sprints/R0.2.result.json",
+    "build-scripts/references/build-reference-inventory.js",
+    "build-scripts/references/check-source-manifest.js",
+    "build-scripts/references/check-document-inventory.js",
+    "references/reference-team-roadmap.md",
+    "reports/internal-dashboard/dashboard-data.json",
+    "reports/internal-dashboard/index.html"
+  ],
+  "forbidden_paths": [
+    "references/machine/",
+    "references/external/",
+    "../4veco-lessen/",
+    "../4veco-platform-collab/",
+    "../4veco-lessen-collab/"
+  ],
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js docs/sprints/R0.2-plan.md",
+    "node build-scripts/reports/internal-dashboard.js",
+    "node build-scripts/references/build-reference-inventory.js",
+    "node build-scripts/references/check-source-manifest.js",
+    "node build-scripts/references/check-document-inventory.js",
+    "node build-scripts/sprints/check-sprint-result.js reports/sprints/R0.2-result.md"
+  ],
+  "protected_reference_data_changes_allowed": false
+}

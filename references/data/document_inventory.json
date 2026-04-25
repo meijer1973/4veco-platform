@@ -1,0 +1,2407 @@
+{
+  "schema_version": "0.1",
+  "generated_at": "2026-04-25T18:39:56.530Z",
+  "sprint_id": "R0.2",
+  "scope": [
+    "references",
+    "reports",
+    "build-scripts/references",
+    "build-scripts/reports"
+  ],
+  "note": "Inventory covers reference sources, generated reports, and reference/report tooling.",
+  "summary": {
+    "file_count": 119,
+    "by_layer": {
+      "reference_tooling": 35,
+      "report_tooling": 9,
+      "authored_judgement": 7,
+      "governance_data": 4,
+      "external_authority": 32,
+      "machine_registry": 5,
+      "quality_protocol": 5,
+      "planning": 1,
+      "generated_report": 21
+    },
+    "by_edit_policy": {
+      "code_review": 44,
+      "human_reviewed_edit": 13,
+      "generated_by_inventory_script": 2,
+      "sprint_process": 2,
+      "external_refresh_only": 32,
+      "cli_only": 5,
+      "generated_by_script": 21
+    }
+  },
+  "files": [
+    {
+      "path": "build-scripts/references/apply-audit.js",
+      "file_name": "apply-audit.js",
+      "extension": "js",
+      "size_bytes": 7109,
+      "sha256": "2b3b842ea5defc096201b2c3af5656e645738564c00794d4037c62b84b8b0fd9",
+      "layer": "reference_tooling",
+      "authority_level": "tooling",
+      "source_type": "reference_cli_script",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "platform_team",
+      "refresh_policy": "code_change",
+      "downstream_dependencies": [
+        "reference-cli",
+        "reports",
+        "validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "build-scripts/references/audit-2023-2024.json",
+      "file_name": "audit-2023-2024.json",
+      "extension": "json",
+      "size_bytes": 44060,
+      "sha256": "3026bd7da8b816029f14bbd407737d91d8eb562ba4060f5775b6872afbb5e870",
+      "layer": "reference_tooling",
+      "authority_level": "tooling",
+      "source_type": "reference_tool_data",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "platform_team",
+      "refresh_policy": "code_change",
+      "downstream_dependencies": [
+        "reference-cli",
+        "reports",
+        "validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "build-scripts/references/audit-2025.json",
+      "file_name": "audit-2025.json",
+      "extension": "json",
+      "size_bytes": 33425,
+      "sha256": "ce942b93f4e984fa18eee842c477b7e0776f0859b60aff83d20d6fd9521318a1",
+      "layer": "reference_tooling",
+      "authority_level": "tooling",
+      "source_type": "reference_tool_data",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "platform_team",
+      "refresh_policy": "code_change",
+      "downstream_dependencies": [
+        "reference-cli",
+        "reports",
+        "validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "build-scripts/references/build-begrippen-index.js",
+      "file_name": "build-begrippen-index.js",
+      "extension": "js",
+      "size_bytes": 14790,
+      "sha256": "efb5b29e4c56c4fb91b92fff7e799b67426096420c2d06b41f78884307e5634d",
+      "layer": "reference_tooling",
+      "authority_level": "tooling",
+      "source_type": "reference_cli_script",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "platform_team",
+      "refresh_policy": "code_change",
+      "downstream_dependencies": [
+        "reference-cli",
+        "reports",
+        "validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "build-scripts/references/build-reference-inventory.js",
+      "file_name": "build-reference-inventory.js",
+      "extension": "js",
+      "size_bytes": 9059,
+      "sha256": "5cb8dd1213839e9822e7feb595640cc5c7549412c8e8beb1f09d193b9f03e825",
+      "layer": "reference_tooling",
+      "authority_level": "tooling",
+      "source_type": "reference_cli_script",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "platform_team",
+      "refresh_policy": "code_change",
+      "downstream_dependencies": [
+        "reference-cli",
+        "reports",
+        "validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "build-scripts/references/build-unit-index.js",
+      "file_name": "build-unit-index.js",
+      "extension": "js",
+      "size_bytes": 15580,
+      "sha256": "291c8c2b19070ed357df08eb21ec93f23614d5510bac340380e12eb423fafc7b",
+      "layer": "reference_tooling",
+      "authority_level": "tooling",
+      "source_type": "reference_cli_script",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "platform_team",
+      "refresh_policy": "code_change",
+      "downstream_dependencies": [
+        "reference-cli",
+        "reports",
+        "validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "build-scripts/references/check-document-inventory.js",
+      "file_name": "check-document-inventory.js",
+      "extension": "js",
+      "size_bytes": 2844,
+      "sha256": "a17725df4b34d18845b1f11665b90151739177d382905af3652791f177df122f",
+      "layer": "reference_tooling",
+      "authority_level": "tooling",
+      "source_type": "reference_cli_script",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "platform_team",
+      "refresh_policy": "code_change",
+      "downstream_dependencies": [
+        "reference-cli",
+        "reports",
+        "validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "build-scripts/references/check-source-manifest.js",
+      "file_name": "check-source-manifest.js",
+      "extension": "js",
+      "size_bytes": 2552,
+      "sha256": "b1f9af47327f7ade3220fd1a4b1d7efadbecf10513168dd318537e3a12ba2ed0",
+      "layer": "reference_tooling",
+      "authority_level": "tooling",
+      "source_type": "reference_cli_script",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "platform_team",
+      "refresh_policy": "code_change",
+      "downstream_dependencies": [
+        "reference-cli",
+        "reports",
+        "validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "build-scripts/references/derive-exam-codes.js",
+      "file_name": "derive-exam-codes.js",
+      "extension": "js",
+      "size_bytes": 2813,
+      "sha256": "5851456efd0c7a64fb745350c9166f22b34b0e4419d330375643f21b2a9dbafe",
+      "layer": "reference_tooling",
+      "authority_level": "tooling",
+      "source_type": "reference_cli_script",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "platform_team",
+      "refresh_policy": "code_change",
+      "downstream_dependencies": [
+        "reference-cli",
+        "reports",
+        "validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "build-scripts/references/download-exams.js",
+      "file_name": "download-exams.js",
+      "extension": "js",
+      "size_bytes": 4102,
+      "sha256": "95ccb269602bd0106a171d3a674141f2dfc7737813822bb4591aa071b248ca8c",
+      "layer": "reference_tooling",
+      "authority_level": "tooling",
+      "source_type": "reference_cli_script",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "platform_team",
+      "refresh_policy": "code_change",
+      "downstream_dependencies": [
+        "reference-cli",
+        "reports",
+        "validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "build-scripts/references/extract-eindtermen.js",
+      "file_name": "extract-eindtermen.js",
+      "extension": "js",
+      "size_bytes": 16735,
+      "sha256": "9b8f4fc0df0258944073066da2ad8c521ce1d40adddf1e37a4fb053d897d1a3c",
+      "layer": "reference_tooling",
+      "authority_level": "tooling",
+      "source_type": "reference_cli_script",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "platform_team",
+      "refresh_policy": "code_change",
+      "downstream_dependencies": [
+        "reference-cli",
+        "reports",
+        "validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "build-scripts/references/extract-exam-questions.js",
+      "file_name": "extract-exam-questions.js",
+      "extension": "js",
+      "size_bytes": 7899,
+      "sha256": "86deefa1ade40086632c3195f3782642136167644137fc80bb310ebc08c1ee26",
+      "layer": "reference_tooling",
+      "authority_level": "tooling",
+      "source_type": "reference_cli_script",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "platform_team",
+      "refresh_policy": "code_change",
+      "downstream_dependencies": [
+        "reference-cli",
+        "reports",
+        "validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "build-scripts/references/math-migration-map.json",
+      "file_name": "math-migration-map.json",
+      "extension": "json",
+      "size_bytes": 561,
+      "sha256": "c47ae8a0e81f87bd7db7b99064cdf06c5381695f012c87f518103869fedaf728",
+      "layer": "reference_tooling",
+      "authority_level": "tooling",
+      "source_type": "reference_tool_data",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "platform_team",
+      "refresh_policy": "code_change",
+      "downstream_dependencies": [
+        "reference-cli",
+        "reports",
+        "validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "build-scripts/references/migrate-l0-to-l1-economic.js",
+      "file_name": "migrate-l0-to-l1-economic.js",
+      "extension": "js",
+      "size_bytes": 4655,
+      "sha256": "64b6ada0b36eefc65f8894f9a268cb91e1cb5fc289722891e8746d6ab864877e",
+      "layer": "reference_tooling",
+      "authority_level": "tooling",
+      "source_type": "reference_cli_script",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "platform_team",
+      "refresh_policy": "code_change",
+      "downstream_dependencies": [
+        "reference-cli",
+        "reports",
+        "validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "build-scripts/references/migrate-paths.js",
+      "file_name": "migrate-paths.js",
+      "extension": "js",
+      "size_bytes": 4958,
+      "sha256": "08b30a5f2fb1a6d6291bceb8fd65953a5227b821547b632589f6877dffc4cee6",
+      "layer": "reference_tooling",
+      "authority_level": "tooling",
+      "source_type": "reference_cli_script",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "platform_team",
+      "refresh_policy": "code_change",
+      "downstream_dependencies": [
+        "reference-cli",
+        "reports",
+        "validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "build-scripts/references/README.md",
+      "file_name": "README.md",
+      "extension": "md",
+      "size_bytes": 5788,
+      "sha256": "0de7c5db59331d117e922782bdf02d8e82dfebf32af247d517b30cb1109f0c5b",
+      "layer": "reference_tooling",
+      "authority_level": "tooling",
+      "source_type": "reference_tool_data",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "platform_team",
+      "refresh_policy": "code_change",
+      "downstream_dependencies": [
+        "reference-cli",
+        "reports",
+        "validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "build-scripts/references/refresh-math-procedures.js",
+      "file_name": "refresh-math-procedures.js",
+      "extension": "js",
+      "size_bytes": 4432,
+      "sha256": "9eb2438f301840c610cd701d5322e28c7139fa23248f91f4b5e26ea7953a49d9",
+      "layer": "reference_tooling",
+      "authority_level": "tooling",
+      "source_type": "reference_cli_script",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "platform_team",
+      "refresh_policy": "code_change",
+      "downstream_dependencies": [
+        "reference-cli",
+        "reports",
+        "validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "build-scripts/references/rewire-skilltree.js",
+      "file_name": "rewire-skilltree.js",
+      "extension": "js",
+      "size_bytes": 9209,
+      "sha256": "48e30127f1456bf2d947176238d6c0142cb95ed7103fb329108610564f804fbc",
+      "layer": "reference_tooling",
+      "authority_level": "tooling",
+      "source_type": "reference_cli_script",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "platform_team",
+      "refresh_policy": "code_change",
+      "downstream_dependencies": [
+        "reference-cli",
+        "reports",
+        "validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "build-scripts/references/rewrite-skilltree-test-ids.js",
+      "file_name": "rewrite-skilltree-test-ids.js",
+      "extension": "js",
+      "size_bytes": 1253,
+      "sha256": "bc99b97332f37dc37b19ca4dc85cf470e8406902a7c2836f074341b41c1f4f98",
+      "layer": "reference_tooling",
+      "authority_level": "tooling",
+      "source_type": "reference_cli_script",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "platform_team",
+      "refresh_policy": "code_change",
+      "downstream_dependencies": [
+        "reference-cli",
+        "reports",
+        "validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "build-scripts/references/seed-begrippen.js",
+      "file_name": "seed-begrippen.js",
+      "extension": "js",
+      "size_bytes": 11241,
+      "sha256": "33259a8e7887d77d80e3920181a0bfae8e6e10dd9dec264a70d19451658d69f0",
+      "layer": "reference_tooling",
+      "authority_level": "tooling",
+      "source_type": "reference_cli_script",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "platform_team",
+      "refresh_policy": "code_change",
+      "downstream_dependencies": [
+        "reference-cli",
+        "reports",
+        "validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "build-scripts/references/seed-math-units.js",
+      "file_name": "seed-math-units.js",
+      "extension": "js",
+      "size_bytes": 4823,
+      "sha256": "a6b3eb4ea452cf3f8fa6f38137b8acf608ce64e9d1dbe212afeb8a8fd1391e65",
+      "layer": "reference_tooling",
+      "authority_level": "tooling",
+      "source_type": "reference_cli_script",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "platform_team",
+      "refresh_policy": "code_change",
+      "downstream_dependencies": [
+        "reference-cli",
+        "reports",
+        "validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "build-scripts/references/term-add.js",
+      "file_name": "term-add.js",
+      "extension": "js",
+      "size_bytes": 1923,
+      "sha256": "6ea26dfd3a7943ea40efd79907296f03d8ae7b56adf2a30fbc5a8e512c525b45",
+      "layer": "reference_tooling",
+      "authority_level": "tooling",
+      "source_type": "reference_cli_script",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "platform_team",
+      "refresh_policy": "code_change",
+      "downstream_dependencies": [
+        "reference-cli",
+        "reports",
+        "validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "build-scripts/references/term-deprecate.js",
+      "file_name": "term-deprecate.js",
+      "extension": "js",
+      "size_bytes": 2080,
+      "sha256": "e84ffb535413b0bc88e90cd979a5d4b1bcd0031d89cde3fe8074dccd5802ade3",
+      "layer": "reference_tooling",
+      "authority_level": "tooling",
+      "source_type": "reference_cli_script",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "platform_team",
+      "refresh_policy": "code_change",
+      "downstream_dependencies": [
+        "reference-cli",
+        "reports",
+        "validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "build-scripts/references/term-lib.js",
+      "file_name": "term-lib.js",
+      "extension": "js",
+      "size_bytes": 9482,
+      "sha256": "4278386fd55448afb34c6eef6df7fe8cc6a16ce1ce7170371130f38063c81aba",
+      "layer": "reference_tooling",
+      "authority_level": "tooling",
+      "source_type": "reference_cli_script",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "platform_team",
+      "refresh_policy": "code_change",
+      "downstream_dependencies": [
+        "reference-cli",
+        "reports",
+        "validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "build-scripts/references/term-rename.js",
+      "file_name": "term-rename.js",
+      "extension": "js",
+      "size_bytes": 2724,
+      "sha256": "30d6b5d2a1bc2be886c311865aa2d44708e2930c1c316adfbeae9720b3d8871e",
+      "layer": "reference_tooling",
+      "authority_level": "tooling",
+      "source_type": "reference_cli_script",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "platform_team",
+      "refresh_policy": "code_change",
+      "downstream_dependencies": [
+        "reference-cli",
+        "reports",
+        "validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "build-scripts/references/term-update.js",
+      "file_name": "term-update.js",
+      "extension": "js",
+      "size_bytes": 1789,
+      "sha256": "a717b220657aaf5cab5a88cda0feffcdc75d873f3523c2e69dedf9bf80708cfb",
+      "layer": "reference_tooling",
+      "authority_level": "tooling",
+      "source_type": "reference_cli_script",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "platform_team",
+      "refresh_policy": "code_change",
+      "downstream_dependencies": [
+        "reference-cli",
+        "reports",
+        "validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "build-scripts/references/unit-add-dep.js",
+      "file_name": "unit-add-dep.js",
+      "extension": "js",
+      "size_bytes": 1470,
+      "sha256": "40082605f50c021cc28a24ea4a522d16087feb60d7379ab07dc08c0855077508",
+      "layer": "reference_tooling",
+      "authority_level": "tooling",
+      "source_type": "reference_cli_script",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "platform_team",
+      "refresh_policy": "code_change",
+      "downstream_dependencies": [
+        "reference-cli",
+        "reports",
+        "validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "build-scripts/references/unit-add.js",
+      "file_name": "unit-add.js",
+      "extension": "js",
+      "size_bytes": 9665,
+      "sha256": "c5319df50c0125a4004366f072b2a19098c3df52ac3b1f1af03b0620227735f2",
+      "layer": "reference_tooling",
+      "authority_level": "tooling",
+      "source_type": "reference_cli_script",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "platform_team",
+      "refresh_policy": "code_change",
+      "downstream_dependencies": [
+        "reference-cli",
+        "reports",
+        "validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "build-scripts/references/unit-deprecate.js",
+      "file_name": "unit-deprecate.js",
+      "extension": "js",
+      "size_bytes": 1694,
+      "sha256": "e0d13588231d6555e4fd794a5c1a2b9961107d633be345bdbd11fc58ac8b7b48",
+      "layer": "reference_tooling",
+      "authority_level": "tooling",
+      "source_type": "reference_cli_script",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "platform_team",
+      "refresh_policy": "code_change",
+      "downstream_dependencies": [
+        "reference-cli",
+        "reports",
+        "validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "build-scripts/references/unit-lib.js",
+      "file_name": "unit-lib.js",
+      "extension": "js",
+      "size_bytes": 4495,
+      "sha256": "ceff7b06f0220bdf7f49c8fa31a0602832baa8d8168a4dd758ab4940eeee9165",
+      "layer": "reference_tooling",
+      "authority_level": "tooling",
+      "source_type": "reference_cli_script",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "platform_team",
+      "refresh_policy": "code_change",
+      "downstream_dependencies": [
+        "reference-cli",
+        "reports",
+        "validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "build-scripts/references/unit-merge.js",
+      "file_name": "unit-merge.js",
+      "extension": "js",
+      "size_bytes": 3560,
+      "sha256": "65d6dd76428033c586f030dfb8aeeca7e57c407ac774af49776dc821c7fb981a",
+      "layer": "reference_tooling",
+      "authority_level": "tooling",
+      "source_type": "reference_cli_script",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "platform_team",
+      "refresh_policy": "code_change",
+      "downstream_dependencies": [
+        "reference-cli",
+        "reports",
+        "validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "build-scripts/references/unit-remove-dep.js",
+      "file_name": "unit-remove-dep.js",
+      "extension": "js",
+      "size_bytes": 1287,
+      "sha256": "3d52166a1b5524b7dc7667e7b52cd64c4bc6e7e0c3889e3107e4641d6d85b08b",
+      "layer": "reference_tooling",
+      "authority_level": "tooling",
+      "source_type": "reference_cli_script",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "platform_team",
+      "refresh_policy": "code_change",
+      "downstream_dependencies": [
+        "reference-cli",
+        "reports",
+        "validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "build-scripts/references/unit-rename.js",
+      "file_name": "unit-rename.js",
+      "extension": "js",
+      "size_bytes": 1002,
+      "sha256": "2738c7883c89ad9ceeec6551a10b0e0c2b253c57ed8532b49189430ba0162708",
+      "layer": "reference_tooling",
+      "authority_level": "tooling",
+      "source_type": "reference_cli_script",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "platform_team",
+      "refresh_policy": "code_change",
+      "downstream_dependencies": [
+        "reference-cli",
+        "reports",
+        "validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "build-scripts/references/unit-split.js",
+      "file_name": "unit-split.js",
+      "extension": "js",
+      "size_bytes": 2294,
+      "sha256": "4b592fa4eb9e89655140b3577fbf5d4e02a69c1fe7dc033bb47934fcc421250b",
+      "layer": "reference_tooling",
+      "authority_level": "tooling",
+      "source_type": "reference_cli_script",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "platform_team",
+      "refresh_policy": "code_change",
+      "downstream_dependencies": [
+        "reference-cli",
+        "reports",
+        "validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "build-scripts/references/unit-update.js",
+      "file_name": "unit-update.js",
+      "extension": "js",
+      "size_bytes": 1470,
+      "sha256": "c2b06b1b8937dd942975aaa2a7326cdad08f246f50848f481fc698005c0813e0",
+      "layer": "reference_tooling",
+      "authority_level": "tooling",
+      "source_type": "reference_cli_script",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "platform_team",
+      "refresh_policy": "code_change",
+      "downstream_dependencies": [
+        "reference-cli",
+        "reports",
+        "validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "build-scripts/reports/aspects-coverage.js",
+      "file_name": "aspects-coverage.js",
+      "extension": "js",
+      "size_bytes": 3979,
+      "sha256": "254f3890b825cd6ca8379d148c199b66782f402b83a3216d7af8d6a092ee40af",
+      "layer": "report_tooling",
+      "authority_level": "tooling",
+      "source_type": "report_generator",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "platform_team",
+      "refresh_policy": "code_change",
+      "downstream_dependencies": [
+        "reports",
+        "dashboards"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "build-scripts/reports/dag-integrity.js",
+      "file_name": "dag-integrity.js",
+      "extension": "js",
+      "size_bytes": 2403,
+      "sha256": "9d47be5243e7b0071825e0a9b9bcf8e6ad6af11c2edb33e7cc8e9077e8bcca75",
+      "layer": "report_tooling",
+      "authority_level": "tooling",
+      "source_type": "report_generator",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "platform_team",
+      "refresh_policy": "code_change",
+      "downstream_dependencies": [
+        "reports",
+        "dashboards"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "build-scripts/reports/dead-units.js",
+      "file_name": "dead-units.js",
+      "extension": "js",
+      "size_bytes": 3963,
+      "sha256": "bb1451dd7aa20d724d824e33c8bc16adee935c4680b5df76b44ec7fc4db9c05f",
+      "layer": "report_tooling",
+      "authority_level": "tooling",
+      "source_type": "report_generator",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "platform_team",
+      "refresh_policy": "code_change",
+      "downstream_dependencies": [
+        "reports",
+        "dashboards"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "build-scripts/reports/internal-dashboard.js",
+      "file_name": "internal-dashboard.js",
+      "extension": "js",
+      "size_bytes": 23000,
+      "sha256": "e3ef3514f0de635768c8b8ef7e0aa57355714ca7a1f6dcb6393c4d449447440d",
+      "layer": "report_tooling",
+      "authority_level": "tooling",
+      "source_type": "report_generator",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "platform_team",
+      "refresh_policy": "code_change",
+      "downstream_dependencies": [
+        "reports",
+        "dashboards"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "build-scripts/reports/needs-coverage.js",
+      "file_name": "needs-coverage.js",
+      "extension": "js",
+      "size_bytes": 2148,
+      "sha256": "77865cefc9ba345de73e545a7cdaacbc9d9b133d6f9bd5f1f60f75e747a1f454",
+      "layer": "report_tooling",
+      "authority_level": "tooling",
+      "source_type": "report_generator",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "platform_team",
+      "refresh_policy": "code_change",
+      "downstream_dependencies": [
+        "reports",
+        "dashboards"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "build-scripts/reports/procedure-coverage.js",
+      "file_name": "procedure-coverage.js",
+      "extension": "js",
+      "size_bytes": 3517,
+      "sha256": "40714a7144ac73955278774200613ca305dcea14994f87894a23739c94b9b504",
+      "layer": "report_tooling",
+      "authority_level": "tooling",
+      "source_type": "report_generator",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "platform_team",
+      "refresh_policy": "code_change",
+      "downstream_dependencies": [
+        "reports",
+        "dashboards"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "build-scripts/reports/terminology-drift.js",
+      "file_name": "terminology-drift.js",
+      "extension": "js",
+      "size_bytes": 5962,
+      "sha256": "7c2a737544dd8dd6a2b0a8c424d98730c966a595e5988bc08edaae6fc7d8c798",
+      "layer": "report_tooling",
+      "authority_level": "tooling",
+      "source_type": "report_generator",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "platform_team",
+      "refresh_policy": "code_change",
+      "downstream_dependencies": [
+        "reports",
+        "dashboards"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "build-scripts/reports/terms-coverage.js",
+      "file_name": "terms-coverage.js",
+      "extension": "js",
+      "size_bytes": 2111,
+      "sha256": "6ab85e9522d201b03cae7364a0ec673638abfaf219b516f627ed3b3372b6447c",
+      "layer": "report_tooling",
+      "authority_level": "tooling",
+      "source_type": "report_generator",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "platform_team",
+      "refresh_policy": "code_change",
+      "downstream_dependencies": [
+        "reports",
+        "dashboards"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "build-scripts/reports/unresolved-refs.js",
+      "file_name": "unresolved-refs.js",
+      "extension": "js",
+      "size_bytes": 4858,
+      "sha256": "85519a8fac8c7cbffeceb6d5b9a9b429c7c38c86b2459e2e611cc735070f9822",
+      "layer": "report_tooling",
+      "authority_level": "tooling",
+      "source_type": "report_generator",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "platform_team",
+      "refresh_policy": "code_change",
+      "downstream_dependencies": [
+        "reports",
+        "dashboards"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/authored/course-target-exercises.json",
+      "file_name": "course-target-exercises.json",
+      "extension": "json",
+      "size_bytes": 134346,
+      "sha256": "0c26ad5df84e0098eb234853a4e40ebd4b5a3b80b3a57b2f4dd132e41a7c2f10",
+      "layer": "authored_judgement",
+      "authority_level": "authored_judgement",
+      "source_type": "authored_json",
+      "generated_status": "manual_source",
+      "edit_policy": "human_reviewed_edit",
+      "owner": "references_team",
+      "refresh_policy": "manual_review",
+      "downstream_dependencies": [
+        "reports",
+        "planning",
+        "future-migration"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/authored/didactiek-principes.md",
+      "file_name": "didactiek-principes.md",
+      "extension": "md",
+      "size_bytes": 59626,
+      "sha256": "8b5a965bd86f3c6ce674c0e895926a123b9808974249d24f542abd51814a127d",
+      "layer": "authored_judgement",
+      "authority_level": "authored_judgement",
+      "source_type": "authored_markdown",
+      "generated_status": "manual_source",
+      "edit_policy": "human_reviewed_edit",
+      "owner": "references_team",
+      "refresh_policy": "manual_review",
+      "downstream_dependencies": [
+        "reports",
+        "planning",
+        "future-migration"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/authored/economic_mathematical_precision_reference.md",
+      "file_name": "economic_mathematical_precision_reference.md",
+      "extension": "md",
+      "size_bytes": 19267,
+      "sha256": "240f3c20259e989fd47f41a1970e0367e220e3bd1f035369c7f67050b1ca4bcb",
+      "layer": "authored_judgement",
+      "authority_level": "authored_judgement",
+      "source_type": "authored_markdown",
+      "generated_status": "manual_source",
+      "edit_policy": "human_reviewed_edit",
+      "owner": "references_team",
+      "refresh_policy": "manual_review",
+      "downstream_dependencies": [
+        "reports",
+        "planning",
+        "future-migration"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/authored/economie-terminologie.md",
+      "file_name": "economie-terminologie.md",
+      "extension": "md",
+      "size_bytes": 26087,
+      "sha256": "3612aad5da042dd62e3e629178cde9f6e86873f1e3c7b1666fe33534e5e53b5e",
+      "layer": "authored_judgement",
+      "authority_level": "authored_judgement",
+      "source_type": "authored_markdown",
+      "generated_status": "manual_source",
+      "edit_policy": "human_reviewed_edit",
+      "owner": "references_team",
+      "refresh_policy": "manual_review",
+      "downstream_dependencies": [
+        "reports",
+        "planning",
+        "future-migration"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/authored/README.md",
+      "file_name": "README.md",
+      "extension": "md",
+      "size_bytes": 2359,
+      "sha256": "e7615359381ecfbb521901f97ae64a1343161330a548d8d77b1855af7e080584",
+      "layer": "authored_judgement",
+      "authority_level": "authored_judgement",
+      "source_type": "authored_markdown",
+      "generated_status": "manual_source",
+      "edit_policy": "human_reviewed_edit",
+      "owner": "references_team",
+      "refresh_policy": "manual_review",
+      "downstream_dependencies": [
+        "reports",
+        "planning",
+        "future-migration"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/authored/skill-categories.md",
+      "file_name": "skill-categories.md",
+      "extension": "md",
+      "size_bytes": 15589,
+      "sha256": "65ca9a34922700dc4af6d10a06db7fc7c58149cf4474735e2e1332b87f3bb33b",
+      "layer": "authored_judgement",
+      "authority_level": "authored_judgement",
+      "source_type": "authored_markdown",
+      "generated_status": "manual_source",
+      "edit_policy": "human_reviewed_edit",
+      "owner": "references_team",
+      "refresh_policy": "manual_review",
+      "downstream_dependencies": [
+        "reports",
+        "planning",
+        "future-migration"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/authored/vraagtypen-en-opgaveontwerp.md",
+      "file_name": "vraagtypen-en-opgaveontwerp.md",
+      "extension": "md",
+      "size_bytes": 24396,
+      "sha256": "0184460c04e91871214c50d8fa3aed99c00c07b0f7cd702885a6ccaae69de0f6",
+      "layer": "authored_judgement",
+      "authority_level": "authored_judgement",
+      "source_type": "authored_markdown",
+      "generated_status": "manual_source",
+      "edit_policy": "human_reviewed_edit",
+      "owner": "references_team",
+      "refresh_policy": "manual_review",
+      "downstream_dependencies": [
+        "reports",
+        "planning",
+        "future-migration"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/data/document_inventory.json",
+      "file_name": "document_inventory.json",
+      "extension": "json",
+      "size_bytes": null,
+      "sha256": null,
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "inventory",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "generated_by_inventory_script",
+      "owner": "references_team",
+      "refresh_policy": "regenerate",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": true
+    },
+    {
+      "path": "references/data/source_manifest.json",
+      "file_name": "source_manifest.json",
+      "extension": "json",
+      "size_bytes": null,
+      "sha256": null,
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "inventory",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "generated_by_inventory_script",
+      "owner": "references_team",
+      "refresh_policy": "regenerate",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": true
+    },
+    {
+      "path": "references/data/sprints/R0.2.plan.json",
+      "file_name": "R0.2.plan.json",
+      "extension": "json",
+      "size_bytes": 1515,
+      "sha256": "27747b33b31ab595057bef844785b07cc281355bc3c64ee93766c6765c76c7a4",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/data/sprints/R0.2.result.json",
+      "file_name": "R0.2.result.json",
+      "extension": "json",
+      "size_bytes": 1428,
+      "sha256": "e5616c1b179c54f506d8bac7e5841a269d718625bd0347f7e0529c2cc21030ae",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/amstelveencollege_quality_standards.md",
+      "file_name": "amstelveencollege_quality_standards.md",
+      "extension": "md",
+      "size_bytes": 2747,
+      "sha256": "3959e089e3c26ef2e4dd6f183d28ffca6d69768013b4a5193358d46aaca7080e",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_reference",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/exam-questions.json",
+      "file_name": "exam-questions.json",
+      "extension": "json",
+      "size_bytes": 246095,
+      "sha256": "c9c054b523bde68a3358ed218d4686bd8fb0bf95af416429b2b7021570d04053",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_reference",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/exams/ha-1022-a-23-1-c.pdf",
+      "file_name": "ha-1022-a-23-1-c.pdf",
+      "extension": "pdf",
+      "size_bytes": 1669304,
+      "sha256": "e1bcf98aa57d79c883b5ca233954293f85073d4707b96df75493cc8912487b31",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_pdf",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/exams/ha-1022-a-23-1-o.pdf",
+      "file_name": "ha-1022-a-23-1-o.pdf",
+      "extension": "pdf",
+      "size_bytes": 2116011,
+      "sha256": "d57164b995c0a26c41865dd78973f55385dc20a5e29b0b3b9827a778494f2198",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_pdf",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/exams/ha-1022-a-23-2-c.pdf",
+      "file_name": "ha-1022-a-23-2-c.pdf",
+      "extension": "pdf",
+      "size_bytes": 1619506,
+      "sha256": "155b7adfdd6c711dd933fff4256045714d6fee4c75a52a5589f02b98064622e3",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_pdf",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/exams/ha-1022-a-23-2-o.pdf",
+      "file_name": "ha-1022-a-23-2-o.pdf",
+      "extension": "pdf",
+      "size_bytes": 1715137,
+      "sha256": "2eca63d9fc6828e1e68018b113b3b8ab0f637a1d21e662a0d6f2e4f1519fb880",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_pdf",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/exams/ha-1022-a-24-1-c.pdf",
+      "file_name": "ha-1022-a-24-1-c.pdf",
+      "extension": "pdf",
+      "size_bytes": 1522219,
+      "sha256": "53f722084f3fcff6fcb684bf540c5240f210aae1fd5c2c8b3c0c0c77eda85f62",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_pdf",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/exams/ha-1022-a-24-1-o.pdf",
+      "file_name": "ha-1022-a-24-1-o.pdf",
+      "extension": "pdf",
+      "size_bytes": 1545211,
+      "sha256": "ec3f1e7b12540d7478311163d8b9b41bb3dfea823523a64cc4dddfb18863ba8b",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_pdf",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/exams/ha-1022-a-24-2-c.pdf",
+      "file_name": "ha-1022-a-24-2-c.pdf",
+      "extension": "pdf",
+      "size_bytes": 1518669,
+      "sha256": "acd6144b691e9303a9c961cb61a9b35467f3bfe36a141a08e6d88424b71c74cf",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_pdf",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/exams/ha-1022-a-24-2-o.pdf",
+      "file_name": "ha-1022-a-24-2-o.pdf",
+      "extension": "pdf",
+      "size_bytes": 1552523,
+      "sha256": "3444556a6c6974dbe4c1078147cfba2f2924efb74e5f9fb3505bdae0c86bd0f8",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_pdf",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/exams/ha-1022-a-25-1-c.pdf",
+      "file_name": "ha-1022-a-25-1-c.pdf",
+      "extension": "pdf",
+      "size_bytes": 1587720,
+      "sha256": "a9b5fcf0f994a657fd2273568c9950edea017b22c4b6b14c38a6bcea29c540ee",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_pdf",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/exams/ha-1022-a-25-1-o.pdf",
+      "file_name": "ha-1022-a-25-1-o.pdf",
+      "extension": "pdf",
+      "size_bytes": 2651713,
+      "sha256": "ead90d620944bf2e69ea6873bb42aed80d4e9d4221c364628f1fab1c2be82ebd",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_pdf",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/exams/ha-1022-a-25-2-c.pdf",
+      "file_name": "ha-1022-a-25-2-c.pdf",
+      "extension": "pdf",
+      "size_bytes": 2239886,
+      "sha256": "2f71cc2fc8f9e88bca97c61c4bbc731a90b4ee88a577b141a3a6fd7ccd7dde9f",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_pdf",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/exams/ha-1022-a-25-2-o.pdf",
+      "file_name": "ha-1022-a-25-2-o.pdf",
+      "extension": "pdf",
+      "size_bytes": 1560692,
+      "sha256": "e9bf94941a4071d82fc9e9ecb46c1d010debd1207a5498c04c16e5996049b685",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_pdf",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/exams/README.md",
+      "file_name": "README.md",
+      "extension": "md",
+      "size_bytes": 3223,
+      "sha256": "69139a1b0d538d32403b48493f9b121a1a989d63d98d7d8517387c419ac571c7",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_reference",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/exams/vw-1022-a-23-1-c.pdf",
+      "file_name": "vw-1022-a-23-1-c.pdf",
+      "extension": "pdf",
+      "size_bytes": 2090748,
+      "sha256": "ee51dd433d35609aa6e0c3174cb84cc5acc0c68f37e04d4406f7d865e736b08f",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_pdf",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/exams/vw-1022-a-23-1-o.pdf",
+      "file_name": "vw-1022-a-23-1-o.pdf",
+      "extension": "pdf",
+      "size_bytes": 1735326,
+      "sha256": "1bfc3dfd67382143a171b23d703e72c80dcf87ac7b76198e034a92af037f5759",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_pdf",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/exams/vw-1022-a-23-2-c.pdf",
+      "file_name": "vw-1022-a-23-2-c.pdf",
+      "extension": "pdf",
+      "size_bytes": 1752500,
+      "sha256": "5e1ce21751e52f760c5dfe2882afe91e06717219c6afbf036dadd2797f3b36ba",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_pdf",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/exams/vw-1022-a-23-2-o.pdf",
+      "file_name": "vw-1022-a-23-2-o.pdf",
+      "extension": "pdf",
+      "size_bytes": 2119945,
+      "sha256": "5d54e348b3360edaec50a6129d24fb8e58ca446ebe1f2c2e5e6a23e01137733b",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_pdf",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/exams/vw-1022-a-24-1-c.pdf",
+      "file_name": "vw-1022-a-24-1-c.pdf",
+      "extension": "pdf",
+      "size_bytes": 1688351,
+      "sha256": "faad3d1db469c529834e11288d99d88e0193b4a435261496863a57215373c70f",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_pdf",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/exams/vw-1022-a-24-1-o.pdf",
+      "file_name": "vw-1022-a-24-1-o.pdf",
+      "extension": "pdf",
+      "size_bytes": 1875921,
+      "sha256": "4239099731dec0aac021d0377602a71f11be5450590c278cc864d7650090686f",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_pdf",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/exams/vw-1022-a-24-2-c.pdf",
+      "file_name": "vw-1022-a-24-2-c.pdf",
+      "extension": "pdf",
+      "size_bytes": 1617619,
+      "sha256": "8981461d5c43d8b072c605273ab3d555ccf15270062cf3d6d98ef832cd693045",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_pdf",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/exams/vw-1022-a-24-2-o.pdf",
+      "file_name": "vw-1022-a-24-2-o.pdf",
+      "extension": "pdf",
+      "size_bytes": 7064017,
+      "sha256": "08a26f8deea66bf92b99817fdcc311792e08a4b8cfa79d62339a2fffd9a3d210",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_pdf",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/exams/vw-1022-a-25-1-c.pdf",
+      "file_name": "vw-1022-a-25-1-c.pdf",
+      "extension": "pdf",
+      "size_bytes": 1830543,
+      "sha256": "d10773314c943fb2082dd81368f25ac41936855a3125435b52f0406c6f5fd617",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_pdf",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/exams/vw-1022-a-25-1-o.pdf",
+      "file_name": "vw-1022-a-25-1-o.pdf",
+      "extension": "pdf",
+      "size_bytes": 1875110,
+      "sha256": "1b0f56fa3794e92584979e8407c4b8f61c59285047efe8ad1b25d7294bdd83fc",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_pdf",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/exams/vw-1022-a-25-2-c.pdf",
+      "file_name": "vw-1022-a-25-2-c.pdf",
+      "extension": "pdf",
+      "size_bytes": 3450482,
+      "sha256": "3a932cfd5d33a6130f3bd48d6f1d72ec9663e79534887c8e1d8e4ee14357c3c0",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_pdf",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/exams/vw-1022-a-25-2-o.pdf",
+      "file_name": "vw-1022-a-25-2-o.pdf",
+      "extension": "pdf",
+      "size_bytes": 1761903,
+      "sha256": "a15a0766c22f2c4c670646159c9f4193324cba1446dcdfa84b6db55aa9ab2410",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_pdf",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/inspectie-standaarden.md",
+      "file_name": "inspectie-standaarden.md",
+      "extension": "md",
+      "size_bytes": 9586,
+      "sha256": "623f05ed173cd55814f133f30181131b477cd94ea54125c8fb1c1f29bb2858ed",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_reference",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/README.md",
+      "file_name": "README.md",
+      "extension": "md",
+      "size_bytes": 1901,
+      "sha256": "5f7d9b6ab0f575318b15c42c3e7b673ec9d83592529efabea62fc0f412f3b757",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_reference",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/syllabus-economie-vwo-2026-versie-2.pdf",
+      "file_name": "syllabus-economie-vwo-2026-versie-2.pdf",
+      "extension": "pdf",
+      "size_bytes": 689102,
+      "sha256": "8def05a04706016b0bd3bd9b6a820091d3791d33239722d20806737784d45862",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_pdf",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/syllabus-eindtermen.json",
+      "file_name": "syllabus-eindtermen.json",
+      "extension": "json",
+      "size_bytes": 82910,
+      "sha256": "22991145a17e8c9598c01ce27c0117c2f063a2c42f42d7442c067f56cc424a6b",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_reference",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/syllabus-eindtermen.md",
+      "file_name": "syllabus-eindtermen.md",
+      "extension": "md",
+      "size_bytes": 63076,
+      "sha256": "2d651fe032c9533d610398b7da2a173b1bd8ebf11bc2023d51557dd534d57b19",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_reference",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/machine/begrippen.json",
+      "file_name": "begrippen.json",
+      "extension": "json",
+      "size_bytes": 216967,
+      "sha256": "9e34779145e298de0e953aa7038207b7da8439bcfbe150a8a1379f399bdfb7a7",
+      "layer": "machine_registry",
+      "authority_level": "machine_registry",
+      "source_type": "machine_json",
+      "generated_status": "machine_consumed_projection",
+      "edit_policy": "cli_only",
+      "owner": "references_team",
+      "refresh_policy": "reference_cli",
+      "downstream_dependencies": [
+        "reports",
+        "lesson-production",
+        "dashboards",
+        "future-alignment-graph"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/machine/begrippen.md",
+      "file_name": "begrippen.md",
+      "extension": "md",
+      "size_bytes": 125346,
+      "sha256": "79a188be696c92785a77bc4ce424b5c19e455a375f7cd8a1809bd8864cfdfff6",
+      "layer": "machine_registry",
+      "authority_level": "machine_registry",
+      "source_type": "machine_projection",
+      "generated_status": "machine_authored_projection",
+      "edit_policy": "cli_only",
+      "owner": "references_team",
+      "refresh_policy": "reference_cli",
+      "downstream_dependencies": [
+        "reports",
+        "lesson-production",
+        "dashboards",
+        "future-alignment-graph"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/machine/micro-teaching-units.json",
+      "file_name": "micro-teaching-units.json",
+      "extension": "json",
+      "size_bytes": 177825,
+      "sha256": "53515c2bfa9f0febd2b21efb59d62a972b2549f895d90f502bb3b431f6d5ecbd",
+      "layer": "machine_registry",
+      "authority_level": "machine_registry",
+      "source_type": "machine_json",
+      "generated_status": "machine_consumed_projection",
+      "edit_policy": "cli_only",
+      "owner": "references_team",
+      "refresh_policy": "reference_cli",
+      "downstream_dependencies": [
+        "reports",
+        "lesson-production",
+        "dashboards",
+        "future-alignment-graph"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/machine/micro-teaching-units.md",
+      "file_name": "micro-teaching-units.md",
+      "extension": "md",
+      "size_bytes": 139692,
+      "sha256": "d04351c9a4ad30a9cadd609c9d47b30886b8aa02db88aec3a5efa23593b149cc",
+      "layer": "machine_registry",
+      "authority_level": "machine_registry",
+      "source_type": "machine_projection",
+      "generated_status": "machine_authored_projection",
+      "edit_policy": "cli_only",
+      "owner": "references_team",
+      "refresh_policy": "reference_cli",
+      "downstream_dependencies": [
+        "reports",
+        "lesson-production",
+        "dashboards",
+        "future-alignment-graph"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/machine/README.md",
+      "file_name": "README.md",
+      "extension": "md",
+      "size_bytes": 2110,
+      "sha256": "513f02b64ee424a2ab643a87c0603e375642a8a5cf4738539bc00e754ab08bb9",
+      "layer": "machine_registry",
+      "authority_level": "machine_registry",
+      "source_type": "machine_projection",
+      "generated_status": "machine_authored_projection",
+      "edit_policy": "cli_only",
+      "owner": "references_team",
+      "refresh_policy": "reference_cli",
+      "downstream_dependencies": [
+        "reports",
+        "lesson-production",
+        "dashboards",
+        "future-alignment-graph"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/qc-prompts/exam-derived-skills.md",
+      "file_name": "exam-derived-skills.md",
+      "extension": "md",
+      "size_bytes": 3669,
+      "sha256": "9f2d97eaed64755ee5acb9b2cfe36e67ed3c0fe4c0968cea65fb9f96d4372298",
+      "layer": "quality_protocol",
+      "authority_level": "authored_judgement",
+      "source_type": "qc_prompt",
+      "generated_status": "manual_source",
+      "edit_policy": "human_reviewed_edit",
+      "owner": "references_team",
+      "refresh_policy": "manual_review",
+      "downstream_dependencies": [
+        "qc-runs",
+        "review-gates"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/qc-prompts/foundation-audit.md",
+      "file_name": "foundation-audit.md",
+      "extension": "md",
+      "size_bytes": 7239,
+      "sha256": "603eeceac3397543028430a6417410c41e516d95f694ca95c232e9c0db2136ef",
+      "layer": "quality_protocol",
+      "authority_level": "authored_judgement",
+      "source_type": "qc_prompt",
+      "generated_status": "manual_source",
+      "edit_policy": "human_reviewed_edit",
+      "owner": "references_team",
+      "refresh_policy": "manual_review",
+      "downstream_dependencies": [
+        "qc-runs",
+        "review-gates"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/qc-prompts/probe-questions.md",
+      "file_name": "probe-questions.md",
+      "extension": "md",
+      "size_bytes": 3389,
+      "sha256": "e1cd57adb27a91ccd074cdadd0bc7ce547528944d6eb59d1ce275392a7d885b5",
+      "layer": "quality_protocol",
+      "authority_level": "authored_judgement",
+      "source_type": "qc_prompt",
+      "generated_status": "manual_source",
+      "edit_policy": "human_reviewed_edit",
+      "owner": "references_team",
+      "refresh_policy": "manual_review",
+      "downstream_dependencies": [
+        "qc-runs",
+        "review-gates"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/qc-prompts/README.md",
+      "file_name": "README.md",
+      "extension": "md",
+      "size_bytes": 3359,
+      "sha256": "f9f4ce2853df2e8664c86813aa5e0e66a454d6c5f86c241b806bd81e66e3af63",
+      "layer": "quality_protocol",
+      "authority_level": "authored_judgement",
+      "source_type": "qc_prompt",
+      "generated_status": "manual_source",
+      "edit_policy": "human_reviewed_edit",
+      "owner": "references_team",
+      "refresh_policy": "manual_review",
+      "downstream_dependencies": [
+        "qc-runs",
+        "review-gates"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/qc-prompts/tree-integrity-audit.md",
+      "file_name": "tree-integrity-audit.md",
+      "extension": "md",
+      "size_bytes": 3966,
+      "sha256": "e903e71a04c7149f476057238ac14e55042f7cff25de7f806f5475b07284b6f3",
+      "layer": "quality_protocol",
+      "authority_level": "authored_judgement",
+      "source_type": "qc_prompt",
+      "generated_status": "manual_source",
+      "edit_policy": "human_reviewed_edit",
+      "owner": "references_team",
+      "refresh_policy": "manual_review",
+      "downstream_dependencies": [
+        "qc-runs",
+        "review-gates"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/reference-team-roadmap.md",
+      "file_name": "reference-team-roadmap.md",
+      "extension": "md",
+      "size_bytes": 13190,
+      "sha256": "372d58d33a88574a4f2fb12d27e91d243cd107c3ee6980269a1c399bf3ccea19",
+      "layer": "planning",
+      "authority_level": "authored_judgement",
+      "source_type": "roadmap",
+      "generated_status": "manual_source",
+      "edit_policy": "human_reviewed_edit",
+      "owner": "references_team",
+      "refresh_policy": "roadmap_update",
+      "downstream_dependencies": [
+        "internal-dashboard",
+        "sprint-planning"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "reports/aspects-coverage.md",
+      "file_name": "aspects-coverage.md",
+      "extension": "md",
+      "size_bytes": 6350,
+      "sha256": "1258cb2a913b4d6dfe6cb93a0140a82739a921430e38c0865327a76272d440c4",
+      "layer": "generated_report",
+      "authority_level": "generated_report",
+      "source_type": "report_md",
+      "generated_status": "generated_projection",
+      "edit_policy": "generated_by_script",
+      "owner": "platform_team",
+      "refresh_policy": "regenerate",
+      "downstream_dependencies": [
+        "dashboards",
+        "planning",
+        "qc-review"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "reports/begrippen-coverage.md",
+      "file_name": "begrippen-coverage.md",
+      "extension": "md",
+      "size_bytes": 905,
+      "sha256": "d4853f1e267247b0e5a2454db3cdf13d28ce700577aaba631a4eb6948a5202a9",
+      "layer": "generated_report",
+      "authority_level": "generated_report",
+      "source_type": "report_md",
+      "generated_status": "generated_projection",
+      "edit_policy": "generated_by_script",
+      "owner": "platform_team",
+      "refresh_policy": "regenerate",
+      "downstream_dependencies": [
+        "dashboards",
+        "planning",
+        "qc-review"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "reports/dag-integrity.md",
+      "file_name": "dag-integrity.md",
+      "extension": "md",
+      "size_bytes": 384,
+      "sha256": "d15e7dd4b2387aebd3bcd590d5e9324bb08c39d89477dfb9769a260239a427d5",
+      "layer": "generated_report",
+      "authority_level": "generated_report",
+      "source_type": "report_md",
+      "generated_status": "generated_projection",
+      "edit_policy": "generated_by_script",
+      "owner": "platform_team",
+      "refresh_policy": "regenerate",
+      "downstream_dependencies": [
+        "dashboards",
+        "planning",
+        "qc-review"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "reports/dead-units.md",
+      "file_name": "dead-units.md",
+      "extension": "md",
+      "size_bytes": 7459,
+      "sha256": "b3906469ba0d7e9818c2fb644c63f221614d0d4a680c4f74bd0f1a7e95e8abdb",
+      "layer": "generated_report",
+      "authority_level": "generated_report",
+      "source_type": "report_md",
+      "generated_status": "generated_projection",
+      "edit_policy": "generated_by_script",
+      "owner": "platform_team",
+      "refresh_policy": "regenerate",
+      "downstream_dependencies": [
+        "dashboards",
+        "planning",
+        "qc-review"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "reports/flag-backlog.md",
+      "file_name": "flag-backlog.md",
+      "extension": "md",
+      "size_bytes": 14047,
+      "sha256": "5d60e00d5e420f1ff542a9d41e75ab77d6f0628fdc88a9970be52fd02791250c",
+      "layer": "generated_report",
+      "authority_level": "generated_report",
+      "source_type": "report_md",
+      "generated_status": "generated_projection",
+      "edit_policy": "generated_by_script",
+      "owner": "platform_team",
+      "refresh_policy": "regenerate",
+      "downstream_dependencies": [
+        "dashboards",
+        "planning",
+        "qc-review"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "reports/internal-dashboard/dashboard-data.json",
+      "file_name": "dashboard-data.json",
+      "extension": "json",
+      "size_bytes": 52931,
+      "sha256": "44793cc722cec47e12525747095a21d606aee25acc91d1743035b2ae6ac5a87b",
+      "layer": "generated_report",
+      "authority_level": "generated_report",
+      "source_type": "report_json",
+      "generated_status": "generated_projection",
+      "edit_policy": "generated_by_script",
+      "owner": "platform_team",
+      "refresh_policy": "regenerate",
+      "downstream_dependencies": [
+        "dashboards",
+        "planning",
+        "qc-review"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "reports/internal-dashboard/index.html",
+      "file_name": "index.html",
+      "extension": "html",
+      "size_bytes": 33476,
+      "sha256": "56be93e96d8b6b05f521df957b2410597142f1bc7f34360d6f39dfb5d166e77d",
+      "layer": "generated_report",
+      "authority_level": "generated_report",
+      "source_type": "dashboard_html",
+      "generated_status": "generated_projection",
+      "edit_policy": "generated_by_script",
+      "owner": "platform_team",
+      "refresh_policy": "regenerate",
+      "downstream_dependencies": [
+        "dashboards",
+        "planning",
+        "qc-review"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "reports/needs-coverage.md",
+      "file_name": "needs-coverage.md",
+      "extension": "md",
+      "size_bytes": 3277,
+      "sha256": "0cb31568a6b3174ff177930e3ca0ebbae4d758c8885a3b120c193e4ef482b8f6",
+      "layer": "generated_report",
+      "authority_level": "generated_report",
+      "source_type": "report_md",
+      "generated_status": "generated_projection",
+      "edit_policy": "generated_by_script",
+      "owner": "platform_team",
+      "refresh_policy": "regenerate",
+      "downstream_dependencies": [
+        "dashboards",
+        "planning",
+        "qc-review"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "reports/procedure-coverage.md",
+      "file_name": "procedure-coverage.md",
+      "extension": "md",
+      "size_bytes": 696,
+      "sha256": "a5d2453501d14f2b286c14341383049ba69cc15dca4c04b224fddb61744aa77b",
+      "layer": "generated_report",
+      "authority_level": "generated_report",
+      "source_type": "report_md",
+      "generated_status": "generated_projection",
+      "edit_policy": "generated_by_script",
+      "owner": "platform_team",
+      "refresh_policy": "regenerate",
+      "downstream_dependencies": [
+        "dashboards",
+        "planning",
+        "qc-review"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "reports/qc/qc-run-2026-04-21.md",
+      "file_name": "qc-run-2026-04-21.md",
+      "extension": "md",
+      "size_bytes": 7474,
+      "sha256": "4272cc778b1fa7d29befc468c3cc7d3bcdb42cb3eaa50663a018cc6a428dee5c",
+      "layer": "generated_report",
+      "authority_level": "generated_report",
+      "source_type": "report_md",
+      "generated_status": "generated_projection",
+      "edit_policy": "generated_by_script",
+      "owner": "platform_team",
+      "refresh_policy": "regenerate",
+      "downstream_dependencies": [
+        "dashboards",
+        "planning",
+        "qc-review"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "reports/qc/qc-run-2026-04-22.md",
+      "file_name": "qc-run-2026-04-22.md",
+      "extension": "md",
+      "size_bytes": 11379,
+      "sha256": "31ff9eef90ad20981902e59811f29641310134e02bf010c60c3accddb9c97e93",
+      "layer": "generated_report",
+      "authority_level": "generated_report",
+      "source_type": "report_md",
+      "generated_status": "generated_projection",
+      "edit_policy": "generated_by_script",
+      "owner": "platform_team",
+      "refresh_policy": "regenerate",
+      "downstream_dependencies": [
+        "dashboards",
+        "planning",
+        "qc-review"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "reports/qc/README.md",
+      "file_name": "README.md",
+      "extension": "md",
+      "size_bytes": 1771,
+      "sha256": "25842a3fea2d6b0ef472cb8c5a4bbc3ce3389d3c7b18ea7056c00d11ba840e41",
+      "layer": "generated_report",
+      "authority_level": "generated_report",
+      "source_type": "report_md",
+      "generated_status": "generated_projection",
+      "edit_policy": "generated_by_script",
+      "owner": "platform_team",
+      "refresh_policy": "regenerate",
+      "downstream_dependencies": [
+        "dashboards",
+        "planning",
+        "qc-review"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "reports/qc/SUMMARY.md",
+      "file_name": "SUMMARY.md",
+      "extension": "md",
+      "size_bytes": 1919,
+      "sha256": "8697b90e105c611e98b461ddf000bd8a4c77c330c3340323327942e1f09c1e24",
+      "layer": "generated_report",
+      "authority_level": "generated_report",
+      "source_type": "report_md",
+      "generated_status": "generated_projection",
+      "edit_policy": "generated_by_script",
+      "owner": "platform_team",
+      "refresh_policy": "regenerate",
+      "downstream_dependencies": [
+        "dashboards",
+        "planning",
+        "qc-review"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "reports/README.md",
+      "file_name": "README.md",
+      "extension": "md",
+      "size_bytes": 3264,
+      "sha256": "bd538d842f6000f9cc01f25211b23a102eca41154d19eebe7736bf79abf25d74",
+      "layer": "generated_report",
+      "authority_level": "generated_report",
+      "source_type": "report_md",
+      "generated_status": "generated_projection",
+      "edit_policy": "generated_by_script",
+      "owner": "platform_team",
+      "refresh_policy": "regenerate",
+      "downstream_dependencies": [
+        "dashboards",
+        "planning",
+        "qc-review"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "reports/sprints/example-result.md",
+      "file_name": "example-result.md",
+      "extension": "md",
+      "size_bytes": 616,
+      "sha256": "491c65199d541d6ab1c73a9336a666d1ccbfce898b09398e0fd7aa651f77ec0a",
+      "layer": "generated_report",
+      "authority_level": "generated_report",
+      "source_type": "report_md",
+      "generated_status": "generated_projection",
+      "edit_policy": "generated_by_script",
+      "owner": "platform_team",
+      "refresh_policy": "regenerate",
+      "downstream_dependencies": [
+        "dashboards",
+        "planning",
+        "qc-review"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "reports/sprints/R0.2-baseline.md",
+      "file_name": "R0.2-baseline.md",
+      "extension": "md",
+      "size_bytes": 1551,
+      "sha256": "68ab8316e2586391f230a89b7e85961fb831aa2a2f27f0ee4e1c0e4da41fcc06",
+      "layer": "generated_report",
+      "authority_level": "generated_report",
+      "source_type": "report_md",
+      "generated_status": "generated_projection",
+      "edit_policy": "generated_by_script",
+      "owner": "platform_team",
+      "refresh_policy": "regenerate",
+      "downstream_dependencies": [
+        "dashboards",
+        "planning",
+        "qc-review"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "reports/sprints/R0.2-diff-summary.md",
+      "file_name": "R0.2-diff-summary.md",
+      "extension": "md",
+      "size_bytes": 924,
+      "sha256": "10f1d0b77d536504d0f37760ff1d6357edb3f2df1d1d38d6830ec529154d171b",
+      "layer": "generated_report",
+      "authority_level": "generated_report",
+      "source_type": "report_md",
+      "generated_status": "generated_projection",
+      "edit_policy": "generated_by_script",
+      "owner": "platform_team",
+      "refresh_policy": "regenerate",
+      "downstream_dependencies": [
+        "dashboards",
+        "planning",
+        "qc-review"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "reports/sprints/R0.2-result.md",
+      "file_name": "R0.2-result.md",
+      "extension": "md",
+      "size_bytes": 2461,
+      "sha256": "5d36d764f3fcfc5a9add2bec920a6456f221c784a85e7b49448897b534244a32",
+      "layer": "generated_report",
+      "authority_level": "generated_report",
+      "source_type": "report_md",
+      "generated_status": "generated_projection",
+      "edit_policy": "generated_by_script",
+      "owner": "platform_team",
+      "refresh_policy": "regenerate",
+      "downstream_dependencies": [
+        "dashboards",
+        "planning",
+        "qc-review"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "reports/terminology-drift.md",
+      "file_name": "terminology-drift.md",
+      "extension": "md",
+      "size_bytes": 333,
+      "sha256": "1b61414d767a106aa28283debd054055db58a288be49edc395088ced7a95eee3",
+      "layer": "generated_report",
+      "authority_level": "generated_report",
+      "source_type": "report_md",
+      "generated_status": "generated_projection",
+      "edit_policy": "generated_by_script",
+      "owner": "platform_team",
+      "refresh_policy": "regenerate",
+      "downstream_dependencies": [
+        "dashboards",
+        "planning",
+        "qc-review"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "reports/terms-coverage.md",
+      "file_name": "terms-coverage.md",
+      "extension": "md",
+      "size_bytes": 2365,
+      "sha256": "0060e9f59e78f69e441be3350dbea0c727f9417a436f9cfb2530aade90495bc8",
+      "layer": "generated_report",
+      "authority_level": "generated_report",
+      "source_type": "report_md",
+      "generated_status": "generated_projection",
+      "edit_policy": "generated_by_script",
+      "owner": "platform_team",
+      "refresh_policy": "regenerate",
+      "downstream_dependencies": [
+        "dashboards",
+        "planning",
+        "qc-review"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "reports/unresolved-refs.md",
+      "file_name": "unresolved-refs.md",
+      "extension": "md",
+      "size_bytes": 395,
+      "sha256": "83937fb4b458a2e2aa5d500c70c94b1bafa66e028e87340565dd4b670f4f829f",
+      "layer": "generated_report",
+      "authority_level": "generated_report",
+      "source_type": "report_md",
+      "generated_status": "generated_projection",
+      "edit_policy": "generated_by_script",
+      "owner": "platform_team",
+      "refresh_policy": "regenerate",
+      "downstream_dependencies": [
+        "dashboards",
+        "planning",
+        "qc-review"
+      ],
+      "self_generated_inventory_file": false
+    }
+  ]
+}

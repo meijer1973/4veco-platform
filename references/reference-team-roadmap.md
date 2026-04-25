@@ -1,8 +1,39 @@
 # References Team Roadmap
 
-Generated: 2026-04-23  
-Updated: 2026-04-25 after splitting reference planning out of the platform roadmap  
-Scope: `references/`, `build-scripts/references/`, `build-scripts/reports/`, and reference reports under `reports/`
+Generated: 2026-04-23
+Adopted main roadmap: 2026-04-25
+Scope: `references/`, `build-scripts/references/`, `build-scripts/reports/`, reference dashboards, and generated reference reports under `reports/`
+
+## Adoption Decision
+
+The handoff roadmap has been adopted as the main operating roadmap for the references team.
+
+No blocking incompatibility was found. The roadmap direction fits the repository: machine-edited references, evidence-first unit growth, JSON-first reports, review gates for pedagogical authority, and bounded later AI.
+
+Compatibility decisions:
+
+- Sprint `R0.1` now means the sprint-execution scaffold.
+- The older local `R0.1` / `R0.2` history is preserved as completed historical `H0.x` work, not as active roadmap numbering.
+- `R0.1 Sprint Execution Scaffold` is completed.
+- `R0.2 Reference Baseline Inventory` is completed; the next planned sprint is `R1.1 Source-of-Truth Decision`.
+- Current catalog metrics are updated after the labor-market unit additions.
+- The reference CLI exists; CLI documentation still needs cleanup because parts of the README still read like a future contract.
+
+## Operating Rule
+
+Every sprint must keep plans and completion status explicit.
+
+Each sprint must have:
+
+- a committed sprint plan
+- a baseline report
+- bounded allowed and forbidden paths
+- acceptance tests
+- a result report
+- a diff summary
+- a completion status in this roadmap
+
+Machine-reference changes must go through CLI scripts. Do not hand-edit `references/machine/` or `references/external/`.
 
 ## Sprint Ledger
 
@@ -10,266 +41,277 @@ Open items are listed first; completed items are kept below them.
 
 | Sprint | Name | Completed | Current State |
 |--------|------|-----------|---------------|
-| R1.1 | Reference Issue Catalog And Improvement Plan | no | Current reference priority; create the authoritative issue log for reference quality, inspection proof, exam alignment, and teaching-efficiency evidence. |
-| R1.2 | Reference Data Quality Sprint | no | Planned from the issue catalog; clean unit/term/exam-link backlog and reference trust problems. |
-| R1.3 | Reference Health Routine Sprint | no | Planned; make reference reports and QC prompts routine enough to trust during production. |
-| R0.1 | A-Domain Skilltree Consistency | yes | `A38` through `A44` implemented; A-domain skilltree coverage matches the catalog. |
-| R0.2 | Reference Report Regeneration | yes | Core reports regenerated in Sprint 0.4 and aligned with the current catalog. |
+| R1.1 | Source-of-Truth Decision | no | Planned. Record canonical/projection status for every reference surface. |
+| R1.2 | Core JSON Schemas | no | Planned. Define schemas before broad rewrites. |
+| R1.3 | Unit Prior-Knowledge Schema Extension | no | Planned. Add explicit zero-needs and assumed-prior-knowledge governance. |
+| R2.1 | Full Empty-Needs Audit | no | Planned. Non-mutating audit over the full current unit catalog. |
+| R2.2 | Subagent Review For Empty Needs | no | Planned. Pedagogy, data-integrity, and evidence auditors triage hidden prerequisites. |
+| R2.3 | Human Review And Gate Closure | no | Planned. Human economics reviewer closes or conditions the empty-needs gate. |
+| R3.1 | Reference CLI And Documentation Completion | no | Planned. Fill any CLI gaps needed for reviewed corrections and update stale CLI docs. |
+| R3.2 | Apply Reviewed Empty-Needs Corrections | no | Planned. Apply only reviewed prerequisite corrections through CLI. |
+| R4.1 | Unit-Term Slug Migration | no | Planned. Migrate unit `terms` fields to canonical `begrippen.json` slug IDs. |
+| R4.2 | Exam-Question Extraction Gap Closure | no | Planned. Complete missing required-skill and exam-code links where evidence supports it. |
+| R4.3 | Blueprint Flag Triage | no | Planned. Convert raw missing-unit flags into curated decisions. |
+| R5.1 | Evidence-Anchor Layer | no | Planned. Add exact proof anchors for important claims. |
+| R5.2 | Alignment Graph | no | Planned. Create graph edges only after evidence and prerequisite work. |
+| R5.3 | Alignment Graph Review Gate | no | Planned. Human-reviewed gate before graph powers retrieval or diagnostics. |
+| R6.1 | JSON-First Reports | no | Planned. Markdown reports become projections of JSON. |
+| R6.2 | Reference Health Dashboard Data | no | Planned. Produce one generated reference-health state file for dashboards and planning. |
+| R7.1 | Deterministic Chunk Layer | no | Planned. Build source-ranked retrieval chunks. |
+| R7.2 | Hybrid Retrieval | no | Planned. Add lexical/entity/graph retrieval before optional vector search. |
+| R7.3 | Retrieval Evaluation Set | no | Planned. Make retrieval quality regressions visible. |
+| R7.4 | RAG Review Gate | no | Planned. Approve internal/teacher-facing RAG only after evaluation. |
+| R0.2 | Reference Baseline Inventory | yes | Completed. Source manifest, document inventory, builder, and validators now define the baseline reference/report/tooling surface. |
+| R0.1 | Sprint Execution Scaffold | yes | Completed. Sprint templates, example fixtures, JSON sprint metadata, and plan/result validators exist. |
+| H0.1 | A-Domain Skilltree Consistency | yes | Historical completed work. `A38` through `A44` implemented; A-domain skilltree coverage matches the catalog. |
+| H0.2 | Reference Report Regeneration | yes | Historical completed work. Core reports regenerated and aligned with the catalog. |
+| H0.3 | Labor-Market Unit And Dependency Patch | yes | Historical completed work. Added `L22` through `L27`, added the wage-elasticity term, and updated labor-market dependencies through CLI. |
 
 ## Executive Direction
 
-The reference folder is no longer just background documentation. It is becoming the production backbone for lesson goals, unit coverage, terminology, exam alignment, and quality control.
+The reference folder is becoming the platform's governed educational knowledge base.
 
-The next three months should make that backbone dependable:
+Target flow:
 
-> Bring reports back in sync with the current catalog, close structural drift between units and terms, repair skilltree/catalog consistency, and turn the blueprint/exam data into a curated production backlog.
+```text
+owned book/source material
+-> machine-readable reference data
+-> evidence anchors
+-> alignment graph
+-> JSON-first reports
+-> retrieval/RAG layer
+-> diagnostics and feedback
+-> simulations/games
+-> teacher cockpit
+-> bounded AI
+-> evidence-driven improvement
+```
 
-## Current Status
+Do not proceed directly to RAG, adaptive diagnostics, or student-facing AI before prerequisite integrity, evidence anchors, alignment graph validation, and the relevant review gates are complete.
 
-Reference planning has been split out of the platform roadmap. The current priority is to build a structured reference issue log before changing machine references, then use that log to plan the next reference data-quality and reference health sprints.
+## Current Catalog State
 
-## Current State
-
-### Folder Roles
-
-| Folder | Role | Current assessment |
-|---|---|---|
-| `references/authored/` | Human-authored expert judgement and planning data | Useful, but still a legacy maintenance surface |
-| `references/external/` | Mirrored/extracted outside authority: CvTE, inspectie, school standards | Strong source base; should remain machine-refreshed |
-| `references/machine/` | Validated machine-edited registries | Strong core, but moving faster than reports/tests |
-| `references/qc-prompts/` | Versioned audit prompts | Good early QC system, not yet wired into routine build gates |
+Last regenerated: 2026-04-25
 
 ### Machine Unit Catalog
 
-- `192` total units.
-- `190` live units.
+- `198` total units.
+- `196` live units.
 - `2` deprecated units: `D23`, `H26`.
-- Domain spread:
+- Domain spread, live units:
   - `A`: 44
+  - `B`: 2
   - `D`: 36
-  - `H`: 30
-  - `L`: 21
-  - `I`: 20
+  - `E`: 7
   - `F`: 18
   - `G`: 12
-  - `E`: 7
-  - `B`: 2
-- Mastery spread:
-  - `understand`: 89
-  - `apply`: 80
-  - `analyze`: 18
+  - `H`: 30
+  - `I`: 20
+  - `L`: 27
+- Mastery spread, live units:
+  - `understand`: 91
+  - `apply`: 83
+  - `analyze`: 19
   - `evaluate`: 3
 - Dependency graph:
-  - `199` prerequisite edges.
-  - `61` live units still have no `needs` edges.
+  - `241` live prerequisite edges.
+  - `52` live units still have no `needs` edges.
 - Coverage:
-  - `188/190` live units have exam-code links.
-  - `146/190` live units have term links.
-  - `101/101` apply/analyze/evaluate units have procedures.
-
-### Skilltree Consistency
-
-- The catalog has `44` A-domain units.
-- Skilltree generators now cover all `44` A-domain units.
-- `A38` through `A44` were implemented in Sprint 0.1.
-- Skilltree tests are now catalog-driven and pass.
+  - `194/196` live units have exam-code links.
+  - `152/196` live units have term links.
+  - `105/105` apply/analyze/evaluate live units have procedures.
 
 ### Begrippen Registry
 
-- `225` live terms.
-- `225/225` have definitions.
-- `225/225` have examples.
-- `60/225` have pitfall text.
-- `94/225` are reverse-linked to teaching units.
-- `34/225` carry formulas.
-- Main risk: unit `terms` fields still include many old canonical text strings, while `begrippen.json` uses slug IDs. This needs a deliberate migration.
+- `226` live terms.
+- `226/226` have definitions.
+- `226/226` have examples.
+- `61/226` have pitfall text.
+- `94/226` are reverse-linked to teaching units.
+- `34/226` carry formulas.
 
-### External Exam Data
-
-- `24` PDFs are present: havo/vwo, 2023-2025, opgaven and correctievoorschriften.
-- `349` extracted question records.
-- `322/349` question records have required-skill links.
-- `330/349` question records have exam-code links.
-- Question type distribution:
-  - `uitleg_dat`: 171
-  - `berekenen`: 76
-  - `uitleg_of`: 33
-  - `noem`: 25
-  - `classificatie`: 23
-  - `bron`: 12
-  - `grafisch`: 9
-
-### Blueprint Target Exercises
-
-- `49` target exercises across Books 1-4.
-- All `49` have required skills.
-- `223` total required-skill citations.
-- `84` `missing_units_flagged` entries remain across `39` exercises.
-- These flags are a useful backlog, but some are likely stale because units have since been minted.
+Main risk: unit `terms` fields still include old canonical text strings while `begrippen.json` uses slug IDs. This needs the planned unit-term slug migration.
 
 ### Reports
 
-The report layer was regenerated in Sprint 0.4.
+Current generated reports:
 
-- Core reports now reflect the current catalog: `192` total units, `190` live units, `2` deprecated units.
-- `dag-integrity.md` passes.
-- `terminology-drift.md` passes.
-- `unresolved-refs.md` has warnings only, not unresolved IDs.
-- Coverage reports are informational backlog, not Green Gate blockers.
-- Detailed status lives in `knowledge/reference-report-sanity.md`.
+- `reports/dag-integrity.md`: pass, all `198` units validate.
+- `reports/needs-coverage.md`: informational backlog, `52` live units without `needs`.
+- `reports/terms-coverage.md`: informational backlog, `44` live units without terms.
+- `reports/procedure-coverage.md`: pass for apply+ units.
+- `reports/aspects-coverage.md`: informational, remaining exam-citation gaps.
+- `reports/unresolved-refs.md`: warnings only for deprecated references.
+- `reports/dead-units.md`: informational scanner output; should be improved after JSON-first reports.
 
-## Priority Tasks
+## Roadmap Phases
 
-### 0. Build The Reference Issue Log First
+### Phase R0: Governance And Sprint Machinery
 
-Before changing machine references, create a structured issue log that separates:
+Goal: make reference work rollback-safe and auditable before more data work.
 
-- inspection/accountability proof issues
-- reference quality issues
-- didactic efficiency issues: what is necessary to teach, what is redundant, and where goals/skills/complexes overlap
-- assessment and exam-fit issues
-- production-readiness issues for generated reports and QC routines
+- `R0.1` completed: sprint execution scaffold.
+- `R0.2` completed: source manifest and document inventory.
 
-The categories are provisional while cataloging. If the issue set shows that the taxonomy is wrong, update the category model and migrate the logged issues before planning fixes.
+### Phase R1: Source Of Truth And Schemas
 
-Required fields:
+Goal: remove ambiguity about canonical data and generated projections.
 
-- issue id
-- title
-- quality category
-- source/evidence link
-- affected reference surface
-- severity
-- status
-- next action
-- target sprint or defer/reject decision
-- proof required to close
+Key outputs:
 
-Exit output:
+- `references/SOURCE_OF_TRUTH.md`
+- core JSON schemas for units, terms, exam questions, source documents, evidence anchors, claims, alignment edges, reports, retrieval chunks, feedback, misconceptions, worked examples, game items, and simulations
+- prior-knowledge schema extension for empty `needs`
 
-- an issue log visible through the internal dashboard
-- a next-period reference improvement plan ordered by risk, educational value, and platform leverage
+### Phase R2: Empty-Needs And Prior-Knowledge Review
 
-### 1. Make Reports Trustworthy Again
+Goal: distinguish true zero-prerequisite units from hidden prerequisite gaps.
 
-- Keep reports current after catalog changes.
-- Add a compact reference-health report if this becomes a recurring manual step, with:
-  - unit counts
-  - term counts
-  - exam-question coverage
-  - target-exercise coverage
-  - deprecated refs
-  - missing term links
-  - stale report warnings
+Rules:
 
-### 2. Close Unit-Term Drift
+- `R2.1` is non-mutating.
+- subagents can propose corrections
+- human review closes the gate
+- broad dependency corrections are not applied until the review gate allows them
 
-- Decide the canonical unit `terms` format: slug IDs from `begrippen.json`.
-- Build or run a migration that maps old canonical text strings to slugs.
-- Fail loudly when a unit cites a term that does not exist in `begrippen.json`.
-- Increase teaching-unit reverse links from `42%` toward at least `80%`.
+### Phase R3: CLI-Only Corrections
 
-### 3. Repair A-Domain and Skilltree Consistency
+Goal: complete any missing mutation scripts, update CLI documentation, and apply reviewed corrections only through CLI.
 
-- Keep A-domain skilltree generators in sync with the catalog.
-- `GEN.A38` through `GEN.A44` are now implemented.
-- Keep the skilltree tests aligned with the machine catalog, not with hard-coded historical counts.
+### Phase R4: Term, Exam, Blueprint, And Authored-Bucket Cleanup
 
-### 4. Curate Blueprint Missing-Unit Flags
+Goal: turn raw backlog into production signal.
 
-- Convert all `84` raw flags into statuses:
-  - minted
-  - duplicate
-  - still needed
-  - defer
-  - reject
-- Prioritize repeated/high-leverage hubs:
-  - graph region shading on P-Q diagrams
-  - percentage/index family
-  - movement along vs shift of curve
-  - externality mirror logic
-  - tax/subsidy supply transformations
-  - labor-market transfer skills
-- Do not bulk-mint from syllabus prose.
+Priority work:
 
-### 5. Improve Exam Extraction Completeness
+- migrate unit terms to canonical slugs
+- close exam-question skill/code gaps
+- triage blueprint missing-unit flags
+- classify authored-bucket files by migration status
 
-- Fill missing required-skill links for the remaining `27` exam-question records.
-- Fill missing exam-code links for the remaining `19` records.
-- Replace deprecated `D23` references in `exam-questions.json`.
-- Refresh exam-vs-program and blueprint-vs-exam diagnostic reports.
+### Phase R5: Evidence Anchors And Alignment Graph
 
-### 6. Keep Machine Editing Real
+Goal: connect claims to exact proof and make graph relationships explicit.
 
-- Update `build-scripts/references/README.md` to reflect implemented scripts.
-- Ensure every machine-reference mutation goes through CLI scripts.
-- Add tests around term and unit CLI behavior where gaps are easiest to regress.
+Do not let the graph become pedagogically authoritative until the alignment-graph review gate is closed.
 
-## Timeline
+### Phase R6: JSON-First Reports And Dashboard Data
 
-### Month 1: Stabilize
+Goal: make reports and dashboards consume structured data rather than scraping Markdown.
 
-Primary goal: make the reference system tell the truth about itself.
+The reference dashboard should eventually read `reports/json/reference-health.json` or its successor, not scattered Markdown files.
 
-- Keep regenerated reports current.
-- Use `knowledge/reference-report-sanity.md` as the current Green Gate report summary.
-- Resolve deprecated `D23` references.
-- Keep A38-A44 skilltree/generator coverage green.
-- Update stale CLI documentation.
+### Phase R7: RAG And Technical Retrieval Layer
 
-Deliverable:
+Goal: deterministic, source-ranked retrieval with evaluation before any teacher-facing use.
 
-- Current reports match the current catalog.
-- Platform tests related to references and skilltree are green or have explicit documented exceptions.
+No vector-first shortcut. Build lexical/entity/graph retrieval and evaluation first.
 
-### Month 2: Curate
+### Phase R8: QC Automation And Production Integration
 
-Primary goal: turn raw backlog into usable production signal.
+Goal: make QC findings machine-readable and block silent drift during lesson production.
 
-- Triage all `84` blueprint missing-unit flags.
-- Mint/update only high-leverage and active-production units.
-- Fill the remaining exam-question skill/code gaps.
-- Run a fresh reference QC pass and close severe findings.
+### Phase R9: Book/Source Integration And Content Graph
 
-Deliverable:
+Goal: connect owned book material to the reference graph without confusing authored exposition with machine reference data.
 
-- Blueprint flags become a curated backlog instead of raw text debt.
-- Exam extraction becomes nearly complete for 2023-2025.
+### Phase R10: Pedagogical Retrieval Practice, Diagnostics, And Feedback
 
-### Month 3: Integrate
+Goal: model diagnostic items, mastery signals, misconceptions, feedback, hints, worked examples, and retry items.
 
-Primary goal: make the reference system useful during Book 2 production.
+Pedagogical retrieval practice is not the same thing as technical retrieval/RAG.
 
-- Push `begrippen` teaching-unit reverse links toward `80%`.
-- Add pitfall text for high-use terms first.
-- Verify formula-bearing terms against the precision reference.
-- Use the cleaned references directly in Book 2 chapter planning and QC.
+### Phase R11: Simulation And Game Content Models
 
-Deliverable:
+Goal: map games and simulations explicitly to economics concepts, units, misconceptions, feedback, and debrief prompts.
 
-- A reference layer that actively guides production instead of merely documenting it.
+### Phase R12: Teacher Cockpit, Privacy, Accessibility, And Deployment
 
-## Realistic End State
+Goal: model teacher dashboard data while keeping student data separate from reference data.
 
-By 2026-07-23, the team can plausibly have:
+Privacy and accessibility gates are required before broad student-data deployment.
 
-- Current, trustworthy generated reports.
-- Green reference/skilltree tests.
-- A curated missing-unit backlog.
-- Clean unit-to-term linkage policy.
-- Nearly complete exam-question skill/code coverage.
-- A `begrippen` registry that is usable in production, not just seeded.
+### Phase R13: Bounded AI Tutor And Authoring Assistant
 
-## Metrics To Track
+Goal: keep AI late-stage and bounded.
 
-| Metric | Current | Three-month target |
-|---|---:|---:|
-| Live units | 190 | Stable, only exercise-driven growth |
-| Apply/analyze/evaluate units with procedures | 101/101 | 100% maintained |
-| Units with exam codes | 188/190 | 100% or justified exceptions |
-| Units with term links | 146/190 | 85%+ |
-| Begrippen with teaching-unit reverse links | 94/225 | 180/225+ |
-| Begrippen with pitfalls | 60/225 | High-use terms covered first |
-| Exam questions with required skills | 322/349 | 345+ |
-| Exam questions with exam codes | 330/349 | 345+ |
-| Blueprint missing flags | 84 raw | 0 raw; all triaged |
+Internal authoring assistance may come before student-facing AI, but all generated content needs human review. Student-facing AI requires stable graph, evidence anchors, retrieval evaluations, guardrails, and an AI review gate.
+
+### Phase R14: Evidence Platform And Continuous Improvement
+
+Goal: use quality signals, curriculum versioning, and light evaluation without surveillance or unnecessary student data.
+
+## Review Gates
+
+| Gate | When | Subagents | Human Review | Required Before |
+|---|---:|---:|---:|---|
+| GATE-R1-schema | after schemas | optional | no | schema-dependent migrations |
+| GATE-R2-empty-needs | before broad dependency corrections | yes | yes | authoritative prerequisite graph |
+| GATE-R5-alignment-graph | before graph powers retrieval/diagnostics | yes | yes | retrieval, diagnostics |
+| GATE-R7-rag | before teacher-facing RAG | yes | sampled | teacher-facing retrieval |
+| GATE-R10-diagnostics | before adaptive student routing | yes | yes | adaptive diagnostics |
+| GATE-R12-privacy | before student-data deployment | yes | yes | learner data use |
+| GATE-R12-accessibility | before broader deployment | yes | yes | broader student-facing release |
+| GATE-R13-ai | before student-facing AI | yes | yes | AI tutor use |
+| GATE-R14-evidence-platform | before external evidence claims | yes | yes | external claims about learning impact |
+
+## Critical Path
+
+Use this order when capacity is limited:
+
+```text
+R0.2 Reference baseline inventory
+R1.1 Source-of-truth decision
+R1.2 Core JSON schemas
+R1.3 Unit prior-knowledge schema extension
+R2.1 Full empty-needs audit, non-mutating
+R2.2 Subagent review
+R2.3 Adaptive human review and gate closure
+R3.1 Reference CLI and documentation completion
+R3.2 Apply reviewed empty-needs corrections
+R4.1 Unit-term slug migration
+R4.2 Exam-question extraction gap closure
+R4.3 Blueprint flag triage
+R5.1 Evidence anchors
+R5.2 Alignment graph
+R5.3 Alignment graph gate
+R6.1 JSON-first reports
+R6.2 Reference-health dashboard
+R7.1 Chunk index
+R7.2 Hybrid retrieval
+R7.3 Retrieval evals
+R7.4 RAG gate
+```
+
+Do not invert this order.
+
+## Immediate Next Sprint
+
+Proceed with `R1.1 Source-of-Truth Decision`.
+
+Create:
+
+- `docs/sprints/R1.1-plan.md`
+- `references/data/sprints/R1.1.plan.json`
+- `reports/sprints/R1.1-baseline.md`
+- `references/SOURCE_OF_TRUTH.md`
+- `build-scripts/references/check-source-of-truth.js`
+
+Use the R0.2 inventories as the starting map for classifying canonical sources, generated projections, external authority, authored judgement, and legacy migration surfaces.
+
+## Final Rule
+
+Use this sequence:
+
+```text
+Plan
+-> Baseline
+-> Execute
+-> Verify
+-> Review gate if needed
+-> Commit
+-> Tag
+-> Proceed only to the allowed next sprint
+```
+
+Subagents find and frame issues. Humans make pedagogical decisions. Validators enforce completeness. Git records the state.

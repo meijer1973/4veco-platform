@@ -1,0 +1,1106 @@
+{
+  "schema_version": "0.1",
+  "generated_at": "2026-04-25T18:39:56.530Z",
+  "sprint_id": "R0.2",
+  "scope": "references/",
+  "note": "Self-generated inventory files intentionally omit size and sha256 to avoid unstable self-checksums.",
+  "summary": {
+    "file_count": 54,
+    "by_layer": {
+      "authored_judgement": 7,
+      "governance_data": 4,
+      "external_authority": 32,
+      "machine_registry": 5,
+      "quality_protocol": 5,
+      "planning": 1
+    },
+    "by_edit_policy": {
+      "human_reviewed_edit": 13,
+      "generated_by_inventory_script": 2,
+      "sprint_process": 2,
+      "external_refresh_only": 32,
+      "cli_only": 5
+    }
+  },
+  "files": [
+    {
+      "path": "references/authored/course-target-exercises.json",
+      "file_name": "course-target-exercises.json",
+      "extension": "json",
+      "size_bytes": 134346,
+      "sha256": "0c26ad5df84e0098eb234853a4e40ebd4b5a3b80b3a57b2f4dd132e41a7c2f10",
+      "layer": "authored_judgement",
+      "authority_level": "authored_judgement",
+      "source_type": "authored_json",
+      "generated_status": "manual_source",
+      "edit_policy": "human_reviewed_edit",
+      "owner": "references_team",
+      "refresh_policy": "manual_review",
+      "downstream_dependencies": [
+        "reports",
+        "planning",
+        "future-migration"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/authored/didactiek-principes.md",
+      "file_name": "didactiek-principes.md",
+      "extension": "md",
+      "size_bytes": 59626,
+      "sha256": "8b5a965bd86f3c6ce674c0e895926a123b9808974249d24f542abd51814a127d",
+      "layer": "authored_judgement",
+      "authority_level": "authored_judgement",
+      "source_type": "authored_markdown",
+      "generated_status": "manual_source",
+      "edit_policy": "human_reviewed_edit",
+      "owner": "references_team",
+      "refresh_policy": "manual_review",
+      "downstream_dependencies": [
+        "reports",
+        "planning",
+        "future-migration"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/authored/economic_mathematical_precision_reference.md",
+      "file_name": "economic_mathematical_precision_reference.md",
+      "extension": "md",
+      "size_bytes": 19267,
+      "sha256": "240f3c20259e989fd47f41a1970e0367e220e3bd1f035369c7f67050b1ca4bcb",
+      "layer": "authored_judgement",
+      "authority_level": "authored_judgement",
+      "source_type": "authored_markdown",
+      "generated_status": "manual_source",
+      "edit_policy": "human_reviewed_edit",
+      "owner": "references_team",
+      "refresh_policy": "manual_review",
+      "downstream_dependencies": [
+        "reports",
+        "planning",
+        "future-migration"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/authored/economie-terminologie.md",
+      "file_name": "economie-terminologie.md",
+      "extension": "md",
+      "size_bytes": 26087,
+      "sha256": "3612aad5da042dd62e3e629178cde9f6e86873f1e3c7b1666fe33534e5e53b5e",
+      "layer": "authored_judgement",
+      "authority_level": "authored_judgement",
+      "source_type": "authored_markdown",
+      "generated_status": "manual_source",
+      "edit_policy": "human_reviewed_edit",
+      "owner": "references_team",
+      "refresh_policy": "manual_review",
+      "downstream_dependencies": [
+        "reports",
+        "planning",
+        "future-migration"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/authored/README.md",
+      "file_name": "README.md",
+      "extension": "md",
+      "size_bytes": 2359,
+      "sha256": "e7615359381ecfbb521901f97ae64a1343161330a548d8d77b1855af7e080584",
+      "layer": "authored_judgement",
+      "authority_level": "authored_judgement",
+      "source_type": "authored_markdown",
+      "generated_status": "manual_source",
+      "edit_policy": "human_reviewed_edit",
+      "owner": "references_team",
+      "refresh_policy": "manual_review",
+      "downstream_dependencies": [
+        "reports",
+        "planning",
+        "future-migration"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/authored/skill-categories.md",
+      "file_name": "skill-categories.md",
+      "extension": "md",
+      "size_bytes": 15589,
+      "sha256": "65ca9a34922700dc4af6d10a06db7fc7c58149cf4474735e2e1332b87f3bb33b",
+      "layer": "authored_judgement",
+      "authority_level": "authored_judgement",
+      "source_type": "authored_markdown",
+      "generated_status": "manual_source",
+      "edit_policy": "human_reviewed_edit",
+      "owner": "references_team",
+      "refresh_policy": "manual_review",
+      "downstream_dependencies": [
+        "reports",
+        "planning",
+        "future-migration"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/authored/vraagtypen-en-opgaveontwerp.md",
+      "file_name": "vraagtypen-en-opgaveontwerp.md",
+      "extension": "md",
+      "size_bytes": 24396,
+      "sha256": "0184460c04e91871214c50d8fa3aed99c00c07b0f7cd702885a6ccaae69de0f6",
+      "layer": "authored_judgement",
+      "authority_level": "authored_judgement",
+      "source_type": "authored_markdown",
+      "generated_status": "manual_source",
+      "edit_policy": "human_reviewed_edit",
+      "owner": "references_team",
+      "refresh_policy": "manual_review",
+      "downstream_dependencies": [
+        "reports",
+        "planning",
+        "future-migration"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/data/document_inventory.json",
+      "file_name": "document_inventory.json",
+      "extension": "json",
+      "size_bytes": null,
+      "sha256": null,
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "inventory",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "generated_by_inventory_script",
+      "owner": "references_team",
+      "refresh_policy": "regenerate",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": true
+    },
+    {
+      "path": "references/data/source_manifest.json",
+      "file_name": "source_manifest.json",
+      "extension": "json",
+      "size_bytes": null,
+      "sha256": null,
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "inventory",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "generated_by_inventory_script",
+      "owner": "references_team",
+      "refresh_policy": "regenerate",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": true
+    },
+    {
+      "path": "references/data/sprints/R0.2.plan.json",
+      "file_name": "R0.2.plan.json",
+      "extension": "json",
+      "size_bytes": 1515,
+      "sha256": "27747b33b31ab595057bef844785b07cc281355bc3c64ee93766c6765c76c7a4",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/data/sprints/R0.2.result.json",
+      "file_name": "R0.2.result.json",
+      "extension": "json",
+      "size_bytes": 1428,
+      "sha256": "e5616c1b179c54f506d8bac7e5841a269d718625bd0347f7e0529c2cc21030ae",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/amstelveencollege_quality_standards.md",
+      "file_name": "amstelveencollege_quality_standards.md",
+      "extension": "md",
+      "size_bytes": 2747,
+      "sha256": "3959e089e3c26ef2e4dd6f183d28ffca6d69768013b4a5193358d46aaca7080e",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_reference",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/exam-questions.json",
+      "file_name": "exam-questions.json",
+      "extension": "json",
+      "size_bytes": 246095,
+      "sha256": "c9c054b523bde68a3358ed218d4686bd8fb0bf95af416429b2b7021570d04053",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_reference",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/exams/ha-1022-a-23-1-c.pdf",
+      "file_name": "ha-1022-a-23-1-c.pdf",
+      "extension": "pdf",
+      "size_bytes": 1669304,
+      "sha256": "e1bcf98aa57d79c883b5ca233954293f85073d4707b96df75493cc8912487b31",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_pdf",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/exams/ha-1022-a-23-1-o.pdf",
+      "file_name": "ha-1022-a-23-1-o.pdf",
+      "extension": "pdf",
+      "size_bytes": 2116011,
+      "sha256": "d57164b995c0a26c41865dd78973f55385dc20a5e29b0b3b9827a778494f2198",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_pdf",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/exams/ha-1022-a-23-2-c.pdf",
+      "file_name": "ha-1022-a-23-2-c.pdf",
+      "extension": "pdf",
+      "size_bytes": 1619506,
+      "sha256": "155b7adfdd6c711dd933fff4256045714d6fee4c75a52a5589f02b98064622e3",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_pdf",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/exams/ha-1022-a-23-2-o.pdf",
+      "file_name": "ha-1022-a-23-2-o.pdf",
+      "extension": "pdf",
+      "size_bytes": 1715137,
+      "sha256": "2eca63d9fc6828e1e68018b113b3b8ab0f637a1d21e662a0d6f2e4f1519fb880",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_pdf",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/exams/ha-1022-a-24-1-c.pdf",
+      "file_name": "ha-1022-a-24-1-c.pdf",
+      "extension": "pdf",
+      "size_bytes": 1522219,
+      "sha256": "53f722084f3fcff6fcb684bf540c5240f210aae1fd5c2c8b3c0c0c77eda85f62",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_pdf",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/exams/ha-1022-a-24-1-o.pdf",
+      "file_name": "ha-1022-a-24-1-o.pdf",
+      "extension": "pdf",
+      "size_bytes": 1545211,
+      "sha256": "ec3f1e7b12540d7478311163d8b9b41bb3dfea823523a64cc4dddfb18863ba8b",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_pdf",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/exams/ha-1022-a-24-2-c.pdf",
+      "file_name": "ha-1022-a-24-2-c.pdf",
+      "extension": "pdf",
+      "size_bytes": 1518669,
+      "sha256": "acd6144b691e9303a9c961cb61a9b35467f3bfe36a141a08e6d88424b71c74cf",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_pdf",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/exams/ha-1022-a-24-2-o.pdf",
+      "file_name": "ha-1022-a-24-2-o.pdf",
+      "extension": "pdf",
+      "size_bytes": 1552523,
+      "sha256": "3444556a6c6974dbe4c1078147cfba2f2924efb74e5f9fb3505bdae0c86bd0f8",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_pdf",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/exams/ha-1022-a-25-1-c.pdf",
+      "file_name": "ha-1022-a-25-1-c.pdf",
+      "extension": "pdf",
+      "size_bytes": 1587720,
+      "sha256": "a9b5fcf0f994a657fd2273568c9950edea017b22c4b6b14c38a6bcea29c540ee",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_pdf",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/exams/ha-1022-a-25-1-o.pdf",
+      "file_name": "ha-1022-a-25-1-o.pdf",
+      "extension": "pdf",
+      "size_bytes": 2651713,
+      "sha256": "ead90d620944bf2e69ea6873bb42aed80d4e9d4221c364628f1fab1c2be82ebd",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_pdf",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/exams/ha-1022-a-25-2-c.pdf",
+      "file_name": "ha-1022-a-25-2-c.pdf",
+      "extension": "pdf",
+      "size_bytes": 2239886,
+      "sha256": "2f71cc2fc8f9e88bca97c61c4bbc731a90b4ee88a577b141a3a6fd7ccd7dde9f",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_pdf",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/exams/ha-1022-a-25-2-o.pdf",
+      "file_name": "ha-1022-a-25-2-o.pdf",
+      "extension": "pdf",
+      "size_bytes": 1560692,
+      "sha256": "e9bf94941a4071d82fc9e9ecb46c1d010debd1207a5498c04c16e5996049b685",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_pdf",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/exams/README.md",
+      "file_name": "README.md",
+      "extension": "md",
+      "size_bytes": 3223,
+      "sha256": "69139a1b0d538d32403b48493f9b121a1a989d63d98d7d8517387c419ac571c7",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_reference",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/exams/vw-1022-a-23-1-c.pdf",
+      "file_name": "vw-1022-a-23-1-c.pdf",
+      "extension": "pdf",
+      "size_bytes": 2090748,
+      "sha256": "ee51dd433d35609aa6e0c3174cb84cc5acc0c68f37e04d4406f7d865e736b08f",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_pdf",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/exams/vw-1022-a-23-1-o.pdf",
+      "file_name": "vw-1022-a-23-1-o.pdf",
+      "extension": "pdf",
+      "size_bytes": 1735326,
+      "sha256": "1bfc3dfd67382143a171b23d703e72c80dcf87ac7b76198e034a92af037f5759",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_pdf",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/exams/vw-1022-a-23-2-c.pdf",
+      "file_name": "vw-1022-a-23-2-c.pdf",
+      "extension": "pdf",
+      "size_bytes": 1752500,
+      "sha256": "5e1ce21751e52f760c5dfe2882afe91e06717219c6afbf036dadd2797f3b36ba",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_pdf",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/exams/vw-1022-a-23-2-o.pdf",
+      "file_name": "vw-1022-a-23-2-o.pdf",
+      "extension": "pdf",
+      "size_bytes": 2119945,
+      "sha256": "5d54e348b3360edaec50a6129d24fb8e58ca446ebe1f2c2e5e6a23e01137733b",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_pdf",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/exams/vw-1022-a-24-1-c.pdf",
+      "file_name": "vw-1022-a-24-1-c.pdf",
+      "extension": "pdf",
+      "size_bytes": 1688351,
+      "sha256": "faad3d1db469c529834e11288d99d88e0193b4a435261496863a57215373c70f",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_pdf",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/exams/vw-1022-a-24-1-o.pdf",
+      "file_name": "vw-1022-a-24-1-o.pdf",
+      "extension": "pdf",
+      "size_bytes": 1875921,
+      "sha256": "4239099731dec0aac021d0377602a71f11be5450590c278cc864d7650090686f",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_pdf",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/exams/vw-1022-a-24-2-c.pdf",
+      "file_name": "vw-1022-a-24-2-c.pdf",
+      "extension": "pdf",
+      "size_bytes": 1617619,
+      "sha256": "8981461d5c43d8b072c605273ab3d555ccf15270062cf3d6d98ef832cd693045",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_pdf",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/exams/vw-1022-a-24-2-o.pdf",
+      "file_name": "vw-1022-a-24-2-o.pdf",
+      "extension": "pdf",
+      "size_bytes": 7064017,
+      "sha256": "08a26f8deea66bf92b99817fdcc311792e08a4b8cfa79d62339a2fffd9a3d210",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_pdf",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/exams/vw-1022-a-25-1-c.pdf",
+      "file_name": "vw-1022-a-25-1-c.pdf",
+      "extension": "pdf",
+      "size_bytes": 1830543,
+      "sha256": "d10773314c943fb2082dd81368f25ac41936855a3125435b52f0406c6f5fd617",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_pdf",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/exams/vw-1022-a-25-1-o.pdf",
+      "file_name": "vw-1022-a-25-1-o.pdf",
+      "extension": "pdf",
+      "size_bytes": 1875110,
+      "sha256": "1b0f56fa3794e92584979e8407c4b8f61c59285047efe8ad1b25d7294bdd83fc",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_pdf",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/exams/vw-1022-a-25-2-c.pdf",
+      "file_name": "vw-1022-a-25-2-c.pdf",
+      "extension": "pdf",
+      "size_bytes": 3450482,
+      "sha256": "3a932cfd5d33a6130f3bd48d6f1d72ec9663e79534887c8e1d8e4ee14357c3c0",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_pdf",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/exams/vw-1022-a-25-2-o.pdf",
+      "file_name": "vw-1022-a-25-2-o.pdf",
+      "extension": "pdf",
+      "size_bytes": 1761903,
+      "sha256": "a15a0766c22f2c4c670646159c9f4193324cba1446dcdfa84b6db55aa9ab2410",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_pdf",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/inspectie-standaarden.md",
+      "file_name": "inspectie-standaarden.md",
+      "extension": "md",
+      "size_bytes": 9586,
+      "sha256": "623f05ed173cd55814f133f30181131b477cd94ea54125c8fb1c1f29bb2858ed",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_reference",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/README.md",
+      "file_name": "README.md",
+      "extension": "md",
+      "size_bytes": 1901,
+      "sha256": "5f7d9b6ab0f575318b15c42c3e7b673ec9d83592529efabea62fc0f412f3b757",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_reference",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/syllabus-economie-vwo-2026-versie-2.pdf",
+      "file_name": "syllabus-economie-vwo-2026-versie-2.pdf",
+      "extension": "pdf",
+      "size_bytes": 689102,
+      "sha256": "8def05a04706016b0bd3bd9b6a820091d3791d33239722d20806737784d45862",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_pdf",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/syllabus-eindtermen.json",
+      "file_name": "syllabus-eindtermen.json",
+      "extension": "json",
+      "size_bytes": 82910,
+      "sha256": "22991145a17e8c9598c01ce27c0117c2f063a2c42f42d7442c067f56cc424a6b",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_reference",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/syllabus-eindtermen.md",
+      "file_name": "syllabus-eindtermen.md",
+      "extension": "md",
+      "size_bytes": 63076,
+      "sha256": "2d651fe032c9533d610398b7da2a173b1bd8ebf11bc2023d51557dd534d57b19",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_reference",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/machine/begrippen.json",
+      "file_name": "begrippen.json",
+      "extension": "json",
+      "size_bytes": 216967,
+      "sha256": "9e34779145e298de0e953aa7038207b7da8439bcfbe150a8a1379f399bdfb7a7",
+      "layer": "machine_registry",
+      "authority_level": "machine_registry",
+      "source_type": "machine_json",
+      "generated_status": "machine_consumed_projection",
+      "edit_policy": "cli_only",
+      "owner": "references_team",
+      "refresh_policy": "reference_cli",
+      "downstream_dependencies": [
+        "reports",
+        "lesson-production",
+        "dashboards",
+        "future-alignment-graph"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/machine/begrippen.md",
+      "file_name": "begrippen.md",
+      "extension": "md",
+      "size_bytes": 125346,
+      "sha256": "79a188be696c92785a77bc4ce424b5c19e455a375f7cd8a1809bd8864cfdfff6",
+      "layer": "machine_registry",
+      "authority_level": "machine_registry",
+      "source_type": "machine_projection",
+      "generated_status": "machine_authored_projection",
+      "edit_policy": "cli_only",
+      "owner": "references_team",
+      "refresh_policy": "reference_cli",
+      "downstream_dependencies": [
+        "reports",
+        "lesson-production",
+        "dashboards",
+        "future-alignment-graph"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/machine/micro-teaching-units.json",
+      "file_name": "micro-teaching-units.json",
+      "extension": "json",
+      "size_bytes": 177825,
+      "sha256": "53515c2bfa9f0febd2b21efb59d62a972b2549f895d90f502bb3b431f6d5ecbd",
+      "layer": "machine_registry",
+      "authority_level": "machine_registry",
+      "source_type": "machine_json",
+      "generated_status": "machine_consumed_projection",
+      "edit_policy": "cli_only",
+      "owner": "references_team",
+      "refresh_policy": "reference_cli",
+      "downstream_dependencies": [
+        "reports",
+        "lesson-production",
+        "dashboards",
+        "future-alignment-graph"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/machine/micro-teaching-units.md",
+      "file_name": "micro-teaching-units.md",
+      "extension": "md",
+      "size_bytes": 139692,
+      "sha256": "d04351c9a4ad30a9cadd609c9d47b30886b8aa02db88aec3a5efa23593b149cc",
+      "layer": "machine_registry",
+      "authority_level": "machine_registry",
+      "source_type": "machine_projection",
+      "generated_status": "machine_authored_projection",
+      "edit_policy": "cli_only",
+      "owner": "references_team",
+      "refresh_policy": "reference_cli",
+      "downstream_dependencies": [
+        "reports",
+        "lesson-production",
+        "dashboards",
+        "future-alignment-graph"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/machine/README.md",
+      "file_name": "README.md",
+      "extension": "md",
+      "size_bytes": 2110,
+      "sha256": "513f02b64ee424a2ab643a87c0603e375642a8a5cf4738539bc00e754ab08bb9",
+      "layer": "machine_registry",
+      "authority_level": "machine_registry",
+      "source_type": "machine_projection",
+      "generated_status": "machine_authored_projection",
+      "edit_policy": "cli_only",
+      "owner": "references_team",
+      "refresh_policy": "reference_cli",
+      "downstream_dependencies": [
+        "reports",
+        "lesson-production",
+        "dashboards",
+        "future-alignment-graph"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/qc-prompts/exam-derived-skills.md",
+      "file_name": "exam-derived-skills.md",
+      "extension": "md",
+      "size_bytes": 3669,
+      "sha256": "9f2d97eaed64755ee5acb9b2cfe36e67ed3c0fe4c0968cea65fb9f96d4372298",
+      "layer": "quality_protocol",
+      "authority_level": "authored_judgement",
+      "source_type": "qc_prompt",
+      "generated_status": "manual_source",
+      "edit_policy": "human_reviewed_edit",
+      "owner": "references_team",
+      "refresh_policy": "manual_review",
+      "downstream_dependencies": [
+        "qc-runs",
+        "review-gates"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/qc-prompts/foundation-audit.md",
+      "file_name": "foundation-audit.md",
+      "extension": "md",
+      "size_bytes": 7239,
+      "sha256": "603eeceac3397543028430a6417410c41e516d95f694ca95c232e9c0db2136ef",
+      "layer": "quality_protocol",
+      "authority_level": "authored_judgement",
+      "source_type": "qc_prompt",
+      "generated_status": "manual_source",
+      "edit_policy": "human_reviewed_edit",
+      "owner": "references_team",
+      "refresh_policy": "manual_review",
+      "downstream_dependencies": [
+        "qc-runs",
+        "review-gates"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/qc-prompts/probe-questions.md",
+      "file_name": "probe-questions.md",
+      "extension": "md",
+      "size_bytes": 3389,
+      "sha256": "e1cd57adb27a91ccd074cdadd0bc7ce547528944d6eb59d1ce275392a7d885b5",
+      "layer": "quality_protocol",
+      "authority_level": "authored_judgement",
+      "source_type": "qc_prompt",
+      "generated_status": "manual_source",
+      "edit_policy": "human_reviewed_edit",
+      "owner": "references_team",
+      "refresh_policy": "manual_review",
+      "downstream_dependencies": [
+        "qc-runs",
+        "review-gates"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/qc-prompts/README.md",
+      "file_name": "README.md",
+      "extension": "md",
+      "size_bytes": 3359,
+      "sha256": "f9f4ce2853df2e8664c86813aa5e0e66a454d6c5f86c241b806bd81e66e3af63",
+      "layer": "quality_protocol",
+      "authority_level": "authored_judgement",
+      "source_type": "qc_prompt",
+      "generated_status": "manual_source",
+      "edit_policy": "human_reviewed_edit",
+      "owner": "references_team",
+      "refresh_policy": "manual_review",
+      "downstream_dependencies": [
+        "qc-runs",
+        "review-gates"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/qc-prompts/tree-integrity-audit.md",
+      "file_name": "tree-integrity-audit.md",
+      "extension": "md",
+      "size_bytes": 3966,
+      "sha256": "e903e71a04c7149f476057238ac14e55042f7cff25de7f806f5475b07284b6f3",
+      "layer": "quality_protocol",
+      "authority_level": "authored_judgement",
+      "source_type": "qc_prompt",
+      "generated_status": "manual_source",
+      "edit_policy": "human_reviewed_edit",
+      "owner": "references_team",
+      "refresh_policy": "manual_review",
+      "downstream_dependencies": [
+        "qc-runs",
+        "review-gates"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/reference-team-roadmap.md",
+      "file_name": "reference-team-roadmap.md",
+      "extension": "md",
+      "size_bytes": 13190,
+      "sha256": "372d58d33a88574a4f2fb12d27e91d243cd107c3ee6980269a1c399bf3ccea19",
+      "layer": "planning",
+      "authority_level": "authored_judgement",
+      "source_type": "roadmap",
+      "generated_status": "manual_source",
+      "edit_policy": "human_reviewed_edit",
+      "owner": "references_team",
+      "refresh_policy": "roadmap_update",
+      "downstream_dependencies": [
+        "internal-dashboard",
+        "sprint-planning"
+      ],
+      "self_generated_inventory_file": false
+    }
+  ]
+}

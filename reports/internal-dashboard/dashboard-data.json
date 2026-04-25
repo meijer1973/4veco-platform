@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-25T08:20:37.254Z",
+  "generatedAt": "2026-04-25T18:39:53.399Z",
   "internalOnly": true,
   "teams": [
     {
@@ -158,43 +158,183 @@
           "exists": true,
           "absolutePath": "C:/Projects/4veco/4veco-platform/references/reference-team-roadmap.md",
           "generated": "2026-04-23",
-          "updated": "2026-04-25 after splitting reference planning out of the platform roadmap",
-          "scope": "`references/`, `build-scripts/references/`, `build-scripts/reports/`, and reference reports under `reports/`",
-          "summary": "Reference planning has been split out of the platform roadmap. The current priority is to build a structured reference issue log before changing machine references, then use that log to plan the next reference data-quality and reference health sprints.",
+          "updated": "",
+          "scope": "`references/`, `build-scripts/references/`, `build-scripts/reports/`, reference dashboards, and generated reference reports under `reports/`",
+          "summary": "References Team Roadmap Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Scope: references/, build-scripts/references/, build-scripts/reports/, reference dashboards, and generated reference reports under reports/ Adoption Decision The handoff roadmap has been adopted as the main operating roadmap for the references team. No blocking incompatibility was found. The roadmap direction fits the repository: machine-edited references, evidence-first unit growth, JSON-first reports, review gates for pedagogical auth...",
           "sprints": [
             {
               "sprint": "R1.1",
-              "name": "Reference Issue Catalog And Improvement Plan",
+              "name": "Source-of-Truth Decision",
               "completed": "no",
-              "currentState": "Current reference priority; create the authoritative issue log for reference quality, inspection proof, exam alignment, and teaching-efficiency evidence.",
+              "currentState": "Planned. Record canonical/projection status for every reference surface.",
               "exitGate": ""
             },
             {
               "sprint": "R1.2",
-              "name": "Reference Data Quality Sprint",
+              "name": "Core JSON Schemas",
               "completed": "no",
-              "currentState": "Planned from the issue catalog; clean unit/term/exam-link backlog and reference trust problems.",
+              "currentState": "Planned. Define schemas before broad rewrites.",
               "exitGate": ""
             },
             {
               "sprint": "R1.3",
-              "name": "Reference Health Routine Sprint",
+              "name": "Unit Prior-Knowledge Schema Extension",
               "completed": "no",
-              "currentState": "Planned; make reference reports and QC prompts routine enough to trust during production.",
+              "currentState": "Planned. Add explicit zero-needs and assumed-prior-knowledge governance.",
               "exitGate": ""
             },
             {
-              "sprint": "R0.1",
-              "name": "A-Domain Skilltree Consistency",
-              "completed": "yes",
-              "currentState": "`A38` through `A44` implemented; A-domain skilltree coverage matches the catalog.",
+              "sprint": "R2.1",
+              "name": "Full Empty-Needs Audit",
+              "completed": "no",
+              "currentState": "Planned. Non-mutating audit over the full current unit catalog.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "R2.2",
+              "name": "Subagent Review For Empty Needs",
+              "completed": "no",
+              "currentState": "Planned. Pedagogy, data-integrity, and evidence auditors triage hidden prerequisites.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "R2.3",
+              "name": "Human Review And Gate Closure",
+              "completed": "no",
+              "currentState": "Planned. Human economics reviewer closes or conditions the empty-needs gate.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "R3.1",
+              "name": "Reference CLI And Documentation Completion",
+              "completed": "no",
+              "currentState": "Planned. Fill any CLI gaps needed for reviewed corrections and update stale CLI docs.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "R3.2",
+              "name": "Apply Reviewed Empty-Needs Corrections",
+              "completed": "no",
+              "currentState": "Planned. Apply only reviewed prerequisite corrections through CLI.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "R4.1",
+              "name": "Unit-Term Slug Migration",
+              "completed": "no",
+              "currentState": "Planned. Migrate unit `terms` fields to canonical `begrippen.json` slug IDs.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "R4.2",
+              "name": "Exam-Question Extraction Gap Closure",
+              "completed": "no",
+              "currentState": "Planned. Complete missing required-skill and exam-code links where evidence supports it.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "R4.3",
+              "name": "Blueprint Flag Triage",
+              "completed": "no",
+              "currentState": "Planned. Convert raw missing-unit flags into curated decisions.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "R5.1",
+              "name": "Evidence-Anchor Layer",
+              "completed": "no",
+              "currentState": "Planned. Add exact proof anchors for important claims.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "R5.2",
+              "name": "Alignment Graph",
+              "completed": "no",
+              "currentState": "Planned. Create graph edges only after evidence and prerequisite work.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "R5.3",
+              "name": "Alignment Graph Review Gate",
+              "completed": "no",
+              "currentState": "Planned. Human-reviewed gate before graph powers retrieval or diagnostics.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "R6.1",
+              "name": "JSON-First Reports",
+              "completed": "no",
+              "currentState": "Planned. Markdown reports become projections of JSON.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "R6.2",
+              "name": "Reference Health Dashboard Data",
+              "completed": "no",
+              "currentState": "Planned. Produce one generated reference-health state file for dashboards and planning.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "R7.1",
+              "name": "Deterministic Chunk Layer",
+              "completed": "no",
+              "currentState": "Planned. Build source-ranked retrieval chunks.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "R7.2",
+              "name": "Hybrid Retrieval",
+              "completed": "no",
+              "currentState": "Planned. Add lexical/entity/graph retrieval before optional vector search.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "R7.3",
+              "name": "Retrieval Evaluation Set",
+              "completed": "no",
+              "currentState": "Planned. Make retrieval quality regressions visible.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "R7.4",
+              "name": "RAG Review Gate",
+              "completed": "no",
+              "currentState": "Planned. Approve internal/teacher-facing RAG only after evaluation.",
               "exitGate": ""
             },
             {
               "sprint": "R0.2",
+              "name": "Reference Baseline Inventory",
+              "completed": "yes",
+              "currentState": "Completed. Source manifest, document inventory, builder, and validators now define the baseline reference/report/tooling surface.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "R0.1",
+              "name": "Sprint Execution Scaffold",
+              "completed": "yes",
+              "currentState": "Completed. Sprint templates, example fixtures, JSON sprint metadata, and plan/result validators exist.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "H0.1",
+              "name": "A-Domain Skilltree Consistency",
+              "completed": "yes",
+              "currentState": "Historical completed work. `A38` through `A44` implemented; A-domain skilltree coverage matches the catalog.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "H0.2",
               "name": "Reference Report Regeneration",
               "completed": "yes",
-              "currentState": "Core reports regenerated in Sprint 0.4 and aligned with the current catalog.",
+              "currentState": "Historical completed work. Core reports regenerated and aligned with the catalog.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "H0.3",
+              "name": "Labor-Market Unit And Dependency Patch",
+              "completed": "yes",
+              "currentState": "Historical completed work. Added `L22` through `L27`, added the wage-elasticity term, and updated labor-market dependencies through CLI.",
               "exitGate": ""
             }
           ]
@@ -203,47 +343,207 @@
       "sprints": [
         {
           "sprint": "R1.1",
-          "name": "Reference Issue Catalog And Improvement Plan",
+          "name": "Source-of-Truth Decision",
           "completed": "no",
-          "currentState": "Current reference priority; create the authoritative issue log for reference quality, inspection proof, exam alignment, and teaching-efficiency evidence.",
+          "currentState": "Planned. Record canonical/projection status for every reference surface.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
         {
           "sprint": "R1.2",
-          "name": "Reference Data Quality Sprint",
+          "name": "Core JSON Schemas",
           "completed": "no",
-          "currentState": "Planned from the issue catalog; clean unit/term/exam-link backlog and reference trust problems.",
+          "currentState": "Planned. Define schemas before broad rewrites.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
         {
           "sprint": "R1.3",
-          "name": "Reference Health Routine Sprint",
+          "name": "Unit Prior-Knowledge Schema Extension",
           "completed": "no",
-          "currentState": "Planned; make reference reports and QC prompts routine enough to trust during production.",
+          "currentState": "Planned. Add explicit zero-needs and assumed-prior-knowledge governance.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
         {
-          "sprint": "R0.1",
-          "name": "A-Domain Skilltree Consistency",
-          "completed": "yes",
-          "currentState": "`A38` through `A44` implemented; A-domain skilltree coverage matches the catalog.",
+          "sprint": "R2.1",
+          "name": "Full Empty-Needs Audit",
+          "completed": "no",
+          "currentState": "Planned. Non-mutating audit over the full current unit catalog.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "R2.2",
+          "name": "Subagent Review For Empty Needs",
+          "completed": "no",
+          "currentState": "Planned. Pedagogy, data-integrity, and evidence auditors triage hidden prerequisites.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "R2.3",
+          "name": "Human Review And Gate Closure",
+          "completed": "no",
+          "currentState": "Planned. Human economics reviewer closes or conditions the empty-needs gate.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "R3.1",
+          "name": "Reference CLI And Documentation Completion",
+          "completed": "no",
+          "currentState": "Planned. Fill any CLI gaps needed for reviewed corrections and update stale CLI docs.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "R3.2",
+          "name": "Apply Reviewed Empty-Needs Corrections",
+          "completed": "no",
+          "currentState": "Planned. Apply only reviewed prerequisite corrections through CLI.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "R4.1",
+          "name": "Unit-Term Slug Migration",
+          "completed": "no",
+          "currentState": "Planned. Migrate unit `terms` fields to canonical `begrippen.json` slug IDs.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "R4.2",
+          "name": "Exam-Question Extraction Gap Closure",
+          "completed": "no",
+          "currentState": "Planned. Complete missing required-skill and exam-code links where evidence supports it.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "R4.3",
+          "name": "Blueprint Flag Triage",
+          "completed": "no",
+          "currentState": "Planned. Convert raw missing-unit flags into curated decisions.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "R5.1",
+          "name": "Evidence-Anchor Layer",
+          "completed": "no",
+          "currentState": "Planned. Add exact proof anchors for important claims.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "R5.2",
+          "name": "Alignment Graph",
+          "completed": "no",
+          "currentState": "Planned. Create graph edges only after evidence and prerequisite work.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "R5.3",
+          "name": "Alignment Graph Review Gate",
+          "completed": "no",
+          "currentState": "Planned. Human-reviewed gate before graph powers retrieval or diagnostics.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "R6.1",
+          "name": "JSON-First Reports",
+          "completed": "no",
+          "currentState": "Planned. Markdown reports become projections of JSON.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "R6.2",
+          "name": "Reference Health Dashboard Data",
+          "completed": "no",
+          "currentState": "Planned. Produce one generated reference-health state file for dashboards and planning.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "R7.1",
+          "name": "Deterministic Chunk Layer",
+          "completed": "no",
+          "currentState": "Planned. Build source-ranked retrieval chunks.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "R7.2",
+          "name": "Hybrid Retrieval",
+          "completed": "no",
+          "currentState": "Planned. Add lexical/entity/graph retrieval before optional vector search.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "R7.3",
+          "name": "Retrieval Evaluation Set",
+          "completed": "no",
+          "currentState": "Planned. Make retrieval quality regressions visible.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "R7.4",
+          "name": "RAG Review Gate",
+          "completed": "no",
+          "currentState": "Planned. Approve internal/teacher-facing RAG only after evaluation.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
         {
           "sprint": "R0.2",
+          "name": "Reference Baseline Inventory",
+          "completed": "yes",
+          "currentState": "Completed. Source manifest, document inventory, builder, and validators now define the baseline reference/report/tooling surface.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "R0.1",
+          "name": "Sprint Execution Scaffold",
+          "completed": "yes",
+          "currentState": "Completed. Sprint templates, example fixtures, JSON sprint metadata, and plan/result validators exist.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "H0.1",
+          "name": "A-Domain Skilltree Consistency",
+          "completed": "yes",
+          "currentState": "Historical completed work. `A38` through `A44` implemented; A-domain skilltree coverage matches the catalog.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "H0.2",
           "name": "Reference Report Regeneration",
           "completed": "yes",
-          "currentState": "Core reports regenerated in Sprint 0.4 and aligned with the current catalog.",
+          "currentState": "Historical completed work. Core reports regenerated and aligned with the catalog.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "H0.3",
+          "name": "Labor-Market Unit And Dependency Patch",
+          "completed": "yes",
+          "currentState": "Historical completed work. Added `L22` through `L27`, added the wage-elasticity term, and updated labor-market dependencies through CLI.",
           "exitGate": "",
           "roadmap": "References roadmap"
         }
       ],
-      "completedCount": 2,
-      "openCount": 3
+      "completedCount": 5,
+      "openCount": 20
     },
     {
       "id": "lessen",
@@ -257,7 +557,7 @@
           "exists": true,
           "absolutePath": "C:/Projects/4veco/4veco-lessen/lessen-team-roadmap.md",
           "generated": "2026-04-23",
-          "updated": "2026-04-24 after companion pilot review, layout/UI reprioritization, visual-variant direction, L1.3A-C split, L1.3B platform integration (news variant system, symmetry validator, game-visuals decision), and L1.4-L1.6 pipeline-regression + layout-round-2 sprints inserted before scaling decision",
+          "updated": "2026-04-25 after Sprint L1.3A-C close — basic HTML layout, companion SVG variant system with light/dark symmetry validator, and PPTX teacher-supporting slide rules all landed in platform; L1.4 (pipeline regression on `1.1.2 Percentages en indexcijfers`) is now active.",
           "scope": "- `uitleg voorkennis.html`",
           "summary": "Sprint 0.5 is signed off for Part A textbook/book production.",
           "sprints": [
@@ -285,29 +585,29 @@
             {
               "sprint": "L1.3A",
               "name": "Basic HTML Layout And Front-End Usability",
-              "completed": "no",
-              "currentState": "Pilot run completed for `1.1.1` `uitleg voorkennis`, `uitleg vaardigheden`, and `begeleide inoefening`; needs human usability sign-off.",
+              "completed": "yes",
+              "currentState": "Closed 2026-04-25. `1.1.1` companions on shared platform layout/theme; converters and landing-page generator landed in platform; browser smoke + technical gates green.",
               "exitGate": ""
             },
             {
               "sprint": "L1.3B",
               "name": "Companion SVGs And Light/Dark Visual Variants",
-              "completed": "no",
-              "currentState": "Proper SVG/variant workflow is running for `1.1.1`; game/interactive visual slots still need a decision.",
+              "completed": "yes",
+              "currentState": "Closed 2026-04-25. `lib-visual-surfaces.js` is the shared SURFACES/THEMES module; light/dark symmetry validator enforced; news visual on the variant system; game-visuals decision recorded per paragraph.",
               "exitGate": ""
             },
             {
               "sprint": "L1.3C",
               "name": "PowerPoint Presentation Improvement",
-              "completed": "no",
-              "currentState": "`1.1.1` PPTX regenerated with adapted slide visuals and LibreOffice roundtrip; needs presentation-quality review.",
+              "completed": "yes",
+              "currentState": "Closed 2026-04-25. `1.1.1` PPTX regenerated with adapted slide visuals; teacher-supporting slide rules + read-through QA gate documented in `econ-pptx-templates`; LibreOffice roundtrip clean.",
               "exitGate": ""
             },
             {
               "sprint": "L1.4",
               "name": "First Pipeline Regression Paragraph",
               "completed": "no",
-              "currentState": "Build one additional Book 1 companion paragraph against the L1.3A-C platform state to prove the pipeline still works on fresh content.",
+              "currentState": "Active 2026-04-25. Building `1.1.2 Percentages en indexcijfers` end-to-end against the L1.3A-C platform state to prove the pipeline still works on fresh content.",
               "exitGate": ""
             },
             {
@@ -350,34 +650,10 @@
       ],
       "sprints": [
         {
-          "sprint": "L1.3A",
-          "name": "Basic HTML Layout And Front-End Usability",
-          "completed": "no",
-          "currentState": "Pilot run completed for `1.1.1` `uitleg voorkennis`, `uitleg vaardigheden`, and `begeleide inoefening`; needs human usability sign-off.",
-          "exitGate": "",
-          "roadmap": "Lessen roadmap"
-        },
-        {
-          "sprint": "L1.3B",
-          "name": "Companion SVGs And Light/Dark Visual Variants",
-          "completed": "no",
-          "currentState": "Proper SVG/variant workflow is running for `1.1.1`; game/interactive visual slots still need a decision.",
-          "exitGate": "",
-          "roadmap": "Lessen roadmap"
-        },
-        {
-          "sprint": "L1.3C",
-          "name": "PowerPoint Presentation Improvement",
-          "completed": "no",
-          "currentState": "`1.1.1` PPTX regenerated with adapted slide visuals and LibreOffice roundtrip; needs presentation-quality review.",
-          "exitGate": "",
-          "roadmap": "Lessen roadmap"
-        },
-        {
           "sprint": "L1.4",
           "name": "First Pipeline Regression Paragraph",
           "completed": "no",
-          "currentState": "Build one additional Book 1 companion paragraph against the L1.3A-C platform state to prove the pipeline still works on fresh content.",
+          "currentState": "Active 2026-04-25. Building `1.1.2 Percentages en indexcijfers` end-to-end against the L1.3A-C platform state to prove the pipeline still works on fresh content.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
@@ -444,10 +720,34 @@
           "currentState": "`1.1.2` proved the technical pattern can repeat; probe materials were removed for didactic rebuild.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "L1.3A",
+          "name": "Basic HTML Layout And Front-End Usability",
+          "completed": "yes",
+          "currentState": "Closed 2026-04-25. `1.1.1` companions on shared platform layout/theme; converters and landing-page generator landed in platform; browser smoke + technical gates green.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "L1.3B",
+          "name": "Companion SVGs And Light/Dark Visual Variants",
+          "completed": "yes",
+          "currentState": "Closed 2026-04-25. `lib-visual-surfaces.js` is the shared SURFACES/THEMES module; light/dark symmetry validator enforced; news visual on the variant system; game-visuals decision recorded per paragraph.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "L1.3C",
+          "name": "PowerPoint Presentation Improvement",
+          "completed": "yes",
+          "currentState": "Closed 2026-04-25. `1.1.1` PPTX regenerated with adapted slide visuals; teacher-supporting slide rules + read-through QA gate documented in `econ-pptx-templates`; LibreOffice roundtrip clean.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
         }
       ],
-      "completedCount": 3,
-      "openCount": 9
+      "completedCount": 6,
+      "openCount": 6
     },
     {
       "id": "innovation",
