@@ -1,54 +1,64 @@
 # Research Agent Map
 
-Agent-executable navigation and search specification for the 4veco platform reference corpus.
+Agent-executable access and traversal specification for the `4veco-platform` reference corpus.
 
-This map is for research agents that need to inspect the full `references/` folder: external curriculum/exam sources, authored judgement references, machine registries, QC prompts, and the reference roadmap. It replaces the old-project corpus map.
+This file is for remote research agents. It is not just a repository orientation note: every path below is intended to be fetchable through raw GitHub URL construction or readable through a GitHub connector.
 
 ## Minimal Research Guidance
 
-The reference corpus answers questions about what the platform should teach, why it should teach it, how it proves alignment, and which quality issues remain open.
+The reference corpus answers:
 
-Use the whole `references/` tree as the research surface:
+- what the platform should teach
+- why it should teach it
+- which evidence proves exam, inspection, and school alignment
+- which machine registries the platform consumes
+- which reference-quality issues remain open
 
-- `references/external/` for outside authority: CvTE syllabus, exam papers, inspection standards, and school standards.
-- `references/machine/` for the canonical machine-readable registries: micro teaching units and terms.
-- `references/authored/` for expert judgement, didactic principles, question-type design, and legacy hand-maintained references.
-- `references/qc-prompts/` for versioned audit prompts that define how reference quality is reviewed.
-- `references/reference-team-roadmap.md` for current reference-team planning and sprint state.
+The core research surface is the full `references/` folder.
 
-Generated reports under `reports/` are useful evidence of current health, but this map is centered on `references/`. When a report and a reference file disagree, inspect the reference source and the report generator before drawing a conclusion.
+Generated reports under `reports/` are useful derived evidence, but reports do not replace source inspection. When a report and a reference source disagree, inspect the reference source and the report generator before drawing a conclusion.
 
 ## Access Layer
 
-Primary access is local filesystem access from the repository root:
+Repository:
 
 ```text
-C:\Projects\4veco\4veco-platform
+https://github.com/meijer1973/4veco-platform
 ```
 
-All paths in this document are relative to that root. Use forward slashes in written notes and generated path lists.
+Raw base URL:
 
-Research agents may search the entire references folder:
-
-```powershell
-rg -n "<query>" references
-rg --files references
+```text
+https://raw.githubusercontent.com/meijer1973/4veco-platform/main/
 ```
 
-Agents may also inspect directly related support files when needed:
+Agents MUST construct file URLs as:
 
-- `build-scripts/references/` for reference mutation and extraction contracts.
-- `build-scripts/reports/` for report-generation logic.
-- `reports/` for generated quality, coverage, and drift reports.
-- `knowledge/platform-team-roadmap.md` when platform/reference ownership boundaries matter.
-- `knowledge/three-month-roadmap.md` when the high-level program split matters.
+```text
+<raw_base_url><relative_path>
+```
 
-Do not search unrelated source or lesson-output folders unless the research task explicitly requires cross-checking citations, generated output, or platform behavior.
+Example:
+
+```text
+references/reference-team-roadmap.md ->
+https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/reference-team-roadmap.md
+```
+
+Access rules:
+
+- All file references in this document are relative paths from the repository root.
+- Use forward slashes in constructed URLs.
+- Preserve spaces in relative paths; URL-encode them only when required by the HTTP client.
+- Directories are path namespaces, not fetch targets.
+- Fetch files only by declared path, declared namespace search, or declared path template.
+- If raw URL access fails, retry through authenticated GitHub connector access before concluding the file is unavailable.
 
 ## Entry Points
 
 Human-readable:
 
+- `RESEARCH_AGENT_PROMPT.md`
 - `references/reference-team-roadmap.md`
 - `references/authored/README.md`
 - `references/external/README.md`
@@ -66,39 +76,35 @@ Machine-readable:
     "references/machine/begrippen.json",
     "references/external/syllabus-eindtermen.json",
     "references/external/exam-questions.json",
-    "references/authored/course-target-exercises.json"
+    "references/authored/course-target-exercises.json",
+    "reports/internal-dashboard/dashboard-data.json"
   ]
 }
 ```
 
-## Machine Index
+## Index Anchors
+
+4veco does not yet have one central curation manifest. Use these files as manifest-like navigation anchors.
 
 ```json
 {
-  "path_root": "references/",
-  "layers": [
-    "references/external",
-    "references/machine",
-    "references/authored",
-    "references/qc-prompts"
-  ],
-  "preferred_start": "references/reference-team-roadmap.md",
-  "primary_machine_registries": [
-    "references/machine/micro-teaching-units.json",
-    "references/machine/begrippen.json"
-  ],
-  "primary_external_sources": [
-    "references/external/syllabus-eindtermen.json",
-    "references/external/exam-questions.json",
-    "references/external/exams"
-  ]
+  "reference_team_plan": "references/reference-team-roadmap.md",
+  "machine_unit_index": "references/machine/micro-teaching-units.json",
+  "machine_term_index": "references/machine/begrippen.json",
+  "syllabus_index": "references/external/syllabus-eindtermen.json",
+  "exam_question_index": "references/external/exam-questions.json",
+  "target_exercise_index": "references/authored/course-target-exercises.json",
+  "dashboard_index": "reports/internal-dashboard/dashboard-data.json"
 }
 ```
+
+Use these index anchors before free-form browsing. They reduce inference and connect source evidence to derived registries.
 
 ## Path Registry
 
 ```json
 {
+  "root": "https://raw.githubusercontent.com/meijer1973/4veco-platform/main/",
   "declared_path_namespaces": [
     "references",
     "references/authored",
@@ -108,10 +114,13 @@ Machine-readable:
     "references/qc-prompts",
     "build-scripts/references",
     "build-scripts/reports",
-    "reports"
+    "reports",
+    "reports/internal-dashboard"
   ],
   "roadmap_paths": [
-    "references/reference-team-roadmap.md"
+    "references/reference-team-roadmap.md",
+    "knowledge/platform-team-roadmap.md",
+    "knowledge/three-month-roadmap.md"
   ],
   "readme_paths": [
     "references/authored/README.md",
@@ -159,48 +168,119 @@ Machine-readable:
     "reports/procedure-coverage.md",
     "reports/aspects-coverage.md",
     "reports/dead-units.md",
-    "reports/begrippen-coverage.md"
+    "reports/begrippen-coverage.md",
+    "reports/internal-dashboard/dashboard-data.json"
   ]
 }
 ```
+
+## Path Construction
+
+Use these templates only after loading the relevant index or README.
+
+```json
+{
+  "raw_file": "<raw_base_url>{relative_path}",
+  "exam_pdf": "references/external/exams/{exam_file_from_task_or_exam_readme}",
+  "machine_unit": "references/machine/micro-teaching-units.json -> find unit by id",
+  "machine_term": "references/machine/begrippen.json -> find term by slug or label",
+  "syllabus_eindterm": "references/external/syllabus-eindtermen.json -> find eindterm by code",
+  "exam_question": "references/external/exam-questions.json -> find question by exam metadata, question id, skill id, or exam code",
+  "target_exercise": "references/authored/course-target-exercises.json -> find exercise by book/chapter/paragraph metadata"
+}
+```
+
+If a constructed path fails, apply `Failure Handling`.
+
+## Layer Semantics
+
+```json
+{
+  "references/external": {
+    "epistemic_role": "outside authority",
+    "contains": "CvTE syllabus, extracted eindtermen, exam papers, inspection standards, school standards",
+    "preferred_use": "primary evidence for exam, syllabus, inspection, and school-alignment claims",
+    "edit_policy": "machine-refresh or source-refresh only; no hand edits"
+  },
+  "references/authored": {
+    "epistemic_role": "expert judgement and legacy hand-maintained knowledge",
+    "contains": "didactic principles, target exercises, question-type design, precision standards",
+    "preferred_use": "didactic interpretation, teaching-efficiency reasoning, target exercise anchors",
+    "edit_policy": "hand-edits allowed for now, but candidates for migration"
+  },
+  "references/machine": {
+    "epistemic_role": "canonical platform-consumed registry layer",
+    "contains": "micro teaching units and term registry",
+    "preferred_use": "unit lookup, dependency reasoning, term lookup, coverage analysis",
+    "edit_policy": "CLI-only through build-scripts/references; no hand edits"
+  },
+  "references/qc-prompts": {
+    "epistemic_role": "quality-control method layer",
+    "contains": "versioned audit prompts",
+    "preferred_use": "quality triage design and audit scope",
+    "edit_policy": "policy changes only; do not edit mid-run"
+  },
+  "reports": {
+    "epistemic_role": "derived health and synthesis layer",
+    "contains": "coverage, drift, integrity, unresolved-reference, QC, and dashboard outputs",
+    "preferred_use": "issue discovery and current status checks, not primary evidence",
+    "edit_policy": "regenerate where possible"
+  },
+  "roadmaps": {
+    "epistemic_role": "planning and ownership layer",
+    "contains": "sprints, status, priorities, handoffs",
+    "preferred_use": "roadmap implications and ownership routing",
+    "edit_policy": "planning updates only"
+  }
+}
+```
+
+## Evidence Hierarchy
+
+Use this hierarchy when evidence conflicts:
+
+1. Real CvTE exam questions and correction models in `references/external/exams/` and `references/external/exam-questions.json`.
+2. Blueprint or target exercises in `references/authored/course-target-exercises.json`.
+3. Machine registries in `references/machine/`.
+4. CvTE syllabus/eindtermen in `references/external/syllabus-eindtermen.json` for grouping and coverage, not automatic unit creation.
+5. Authored didactic judgement in `references/authored/`.
+6. Generated reports under `reports/` as diagnostic/synthesis evidence.
+7. Roadmaps as planning state, not factual source evidence.
+
+Do not mint or propose a new teaching unit from syllabus text alone. The project principle is exercise-first.
 
 ## Agent Traversal Protocol
 
 Agents MUST follow this sequence:
 
-1. Load `references/reference-team-roadmap.md`.
+1. Load this map.
+2. Load `references/reference-team-roadmap.md`.
    - Identify current reference sprint priorities.
    - Identify whether the task is cataloging, evidence lookup, quality control, or improvement planning.
-2. Load the relevant README files:
-   - Always load `references/machine/README.md` before interpreting machine registries.
-   - Always load `references/external/README.md` before interpreting external authority files.
-   - Load `references/external/exams/README.md` for exam-paper questions.
-   - Load `references/qc-prompts/README.md` for QC prompt or audit questions.
-   - Load `references/authored/README.md` for expert-judgement or didactic references.
-3. Search the whole references tree with `rg` before narrowing:
-
-```powershell
-rg -n "<Dutch or English search term>" references
-rg -n "<unit_id|term_slug|exam_code|question_type>" references
-```
-
-4. For machine registry questions, inspect both markdown and JSON:
-   - JSON is the machine-consumed form.
-   - Markdown is the human-readable projection.
+3. Load all relevant bucket READMEs:
+   - `references/machine/README.md` before interpreting machine registries.
+   - `references/external/README.md` before interpreting external authority files.
+   - `references/external/exams/README.md` before interpreting exam PDFs or filenames.
+   - `references/authored/README.md` before using authored judgement files.
+   - `references/qc-prompts/README.md` before using QC prompts.
+4. Load the index anchors that match the task:
+   - unit task -> `micro-teaching-units.json`
+   - term task -> `begrippen.json`
+   - exam task -> `exam-questions.json` and relevant exam PDFs
+   - syllabus task -> `syllabus-eindtermen.json`
+   - target-exercise task -> `course-target-exercises.json`
+   - dashboard/status task -> `reports/internal-dashboard/dashboard-data.json`
+5. Search declared namespaces only when indexes do not answer the question.
+   - Prefer Dutch search terms for curriculum content, exam wording, terms, skills, and didactic concepts.
+   - Use English terms for code, file names, planning language, and report names.
+6. For machine registry questions, inspect both JSON and markdown projections.
+   - JSON is machine-consumed.
+   - Markdown is human-readable.
    - If they disagree, report the mismatch and inspect `build-scripts/references/`.
-5. For evidence and alignment questions, follow the evidence hierarchy:
-   - real CvTE exam questions and correction models
-   - course target exercises
-   - current machine units and term registry
-   - syllabus eindtermen for grouping and coverage
-   - authored didactic judgement
-6. For quality status questions, inspect related reports after the reference source:
-   - coverage reports
-   - drift reports
-   - unresolved-reference report
-   - QC run outputs if present
-7. Label output as one of:
-   - verified from reference source
+7. For quality status questions, inspect source first and generated reports second.
+8. Label every conclusion as one of:
+   - verified from source
+   - verified from machine registry
    - inferred from generated report
    - interpretation
    - proposal
@@ -209,25 +289,26 @@ rg -n "<unit_id|term_slug|exam_code|question_type>" references
 ## Dependency Flow
 
 ```text
-external authority + authored judgement -> machine registries -> reports/QC -> roadmap/planning
+external authority + authored target exercises -> machine registries -> reports/QC -> roadmap/planning
 ```
 
 Rules:
 
-- `references/external/` is outside authority, not platform-authored content.
-- `references/authored/` is expert judgement and legacy hand-maintained knowledge.
-- `references/machine/` is canonical for platform-consumed units and terms.
+- Upstream source changes can invalidate downstream registry/report claims.
+- `references/external/` and `references/authored/course-target-exercises.json` anchor what should be taught.
+- `references/machine/` is the current platform registry, not proof that the registry is complete.
+- `reports/` surfaces drift and gaps; it does not settle source truth.
 - `references/qc-prompts/` defines review methods; it does not itself prove content quality.
-- Reports under `reports/` are derived views and should not replace source inspection.
 
 ## Research Task Routing
 
 ```json
 {
-  "reference_planning": [
+  "source_discovery": [
     "references/reference-team-roadmap.md",
-    "knowledge/platform-team-roadmap.md",
-    "reports/internal-dashboard/dashboard-data.json"
+    "references/external/README.md",
+    "references/external/exams/README.md",
+    "references/authored/README.md"
   ],
   "unit_catalog_search": [
     "references/machine/micro-teaching-units.json",
@@ -267,12 +348,18 @@ Rules:
     "reports/qc",
     "reports/dag-integrity.md",
     "reports/terminology-drift.md",
-    "reports/dead-units.md"
+    "reports/dead-units.md",
+    "reports/internal-dashboard/dashboard-data.json"
   ],
   "reference_pipeline": [
     "build-scripts/references/README.md",
     "build-scripts/references",
     "build-scripts/reports"
+  ],
+  "roadmap_implications": [
+    "references/reference-team-roadmap.md",
+    "knowledge/platform-team-roadmap.md",
+    "reports/internal-dashboard/dashboard-data.json"
   ]
 }
 ```
@@ -281,21 +368,21 @@ Rules:
 
 Agents MAY:
 
-- Search the entire `references/` folder.
-- Read every file under `references/`, including PDFs when the task requires exam or syllabus evidence.
-- Use related generated reports to understand current known issues.
-- Use `build-scripts/references/README.md` to understand how machine references should be changed.
-- Propose new issue categories while cataloging reference improvements.
+- Fetch files via raw GitHub URLs.
+- Use authenticated GitHub connector access if raw access fails or a tool cannot read PDFs.
+- Search all declared `references/` namespaces.
+- Use generated reports to discover issues.
+- Propose issue categories and roadmap implications.
 
 Agents MUST:
 
-- Read the relevant README before making claims about a bucket's meaning or edit policy.
-- Treat `references/machine/` as machine-edited and read-only for research purposes.
-- Treat `references/external/` as mirrored outside authority and read-only for research purposes.
-- Ground factual claims in a concrete path, report, or performed verification step.
-- Prefer Dutch search terms for curriculum content, term names, question types, and exam text.
-- Keep references research separate from lesson-material production unless the task explicitly asks for a cross-check.
-- Record uncertainty when a source is missing, stale, generated, or only inferential.
+- Load entry points and relevant READMEs before drawing conclusions.
+- Ground factual claims in a concrete source path, registry path, report path, or performed verification step.
+- Treat `references/machine/` as read-only for research purposes.
+- Treat `references/external/` as read-only for research purposes.
+- Prefer Dutch search terms for economics curriculum content.
+- Report uncertainty when a source is missing, stale, generated, or only inferential.
+- Report unimplemented reference CLI workflows as workflow gaps, not as permission to hand-edit machine files.
 
 Agents MUST NOT:
 
@@ -303,59 +390,58 @@ Agents MUST NOT:
 - Hand-edit `references/external/*`.
 - Mint, update, merge, split, or deprecate units by editing files directly.
 - Treat syllabus text as sufficient reason to create a teaching unit without exercise or exam evidence.
-- Treat generated reports as primary evidence when the underlying reference source is available.
+- Treat generated reports as primary evidence when underlying references are available.
 - Crawl unrelated lesson output or legacy module folders by default.
 - Present unsupported inspection, exam, didactic, or quality conclusions as fact.
 
-## Layer Semantics
+## Failure Handling
+
+If a file cannot be retrieved:
+
+1. Retry with the constructed raw URL.
+2. Verify that the relative path uses forward slashes.
+3. Verify URL encoding for spaces.
+4. Verify the branch is `main`.
+5. Try the GitHub blob URL: `https://github.com/meijer1973/4veco-platform/blob/main/<relative_path>`.
+6. Try authenticated GitHub connector access.
+7. If the file is in a namespace, search that namespace by distinctive filename, unit id, term slug, exam code, or title.
+8. If the missing file is a generated report, inspect `build-scripts/reports/` for its generator.
+9. If the missing file is a machine projection, inspect `build-scripts/references/README.md`.
+10. Stop if a required evidence source is unavailable and no declared fallback exists.
+11. Report unavailable evidence as unavailable, not absent from the corpus.
+
+## Quality Log Schema
+
+For each reference-quality issue, record:
 
 ```json
 {
-  "references/external": {
-    "purpose": "mirrored or extracted outside authority: CvTE, inspection, school standards, exam papers",
-    "edit_policy": "machine-refresh only; no hand-edits",
-    "preferred_use": "evidence, accountability, exam and syllabus alignment"
-  },
-  "references/machine": {
-    "purpose": "canonical platform-consumed registries for teaching units and terms",
-    "edit_policy": "CLI-only through build-scripts/references; no hand-edits",
-    "preferred_use": "unit lookup, dependency analysis, term lookup, platform coverage"
-  },
-  "references/authored": {
-    "purpose": "human-authored expert judgement and legacy reference material",
-    "edit_policy": "hand-edits allowed for now, but candidates for migration",
-    "preferred_use": "didactic judgement, question design, precision standards, target exercises"
-  },
-  "references/qc-prompts": {
-    "purpose": "versioned prompts that define reference quality-control audits",
-    "edit_policy": "policy changes only; do not edit mid-run",
-    "preferred_use": "quality triage and audit design"
-  },
-  "reports": {
-    "purpose": "generated health, coverage, drift, and QC reports",
-    "edit_policy": "regenerate where possible",
-    "preferred_use": "current issue detection and dashboard evidence"
-  }
+  "title": "",
+  "quality_category": "",
+  "evidence_path_or_url": "",
+  "affected_reference_surface": "",
+  "severity": "",
+  "status": "open",
+  "next_action": "",
+  "target_sprint_or_decision": "",
+  "proof_required_to_close": ""
 }
 ```
 
-## Failure Handling
+Suggested categories:
 
-If a file cannot be read:
-
-1. Verify the path with `rg --files references`.
-2. Check whether the file moved between buckets.
-3. Check the relevant README for the current source of truth.
-4. Search by ID, slug, exam code, or distinctive title across all `references/`.
-5. If the missing file is a generated report, inspect its generator under `build-scripts/reports/`.
-6. If the missing file is a machine reference projection, inspect `build-scripts/references/README.md`.
-7. Stop if the required evidence source is unavailable and no declared fallback exists.
-8. Report unavailable evidence as unavailable, not absent from the corpus.
+- inspection/accountability evidence
+- reference quality
+- didactic efficiency
+- assessment and exam fit
+- platform/report reliability
+- production readiness
+- roadmap/ownership clarity
 
 ## Output Constraints
 
 - Cite or name supporting paths for factual findings.
 - Separate evidence, interpretation, proposal, and unresolved issue lists.
-- For reference-quality issue logs, include: issue id, title, quality category, evidence path, affected reference surface, severity, status, next action, target sprint or defer/reject decision, and proof required to close.
+- Use raw URLs or relative paths consistently.
 - Keep internal technical categories inside developer-facing reports and dashboards.
 - Do not write public-facing lesson text from this map. This file is for research navigation, not student material production.
