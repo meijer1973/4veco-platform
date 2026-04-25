@@ -21,9 +21,19 @@ const TEAM_TABS = [
     title: 'Platform',
     subtitle: 'Control Center',
     description:
-      'Owns platform guardrails, validator and deploy health, reference quality control, year and multi-year planning, and the efficiency question of what should be taught versus omitted.',
+      'Owns platform guardrails, validator and deploy health, architecture quality, year and multi-year planning, reporting, and cross-team visibility.',
     roadmaps: [
       { label: 'Platform roadmap', path: 'knowledge/platform-team-roadmap.md' },
+    ],
+  },
+  {
+    id: 'references',
+    title: 'References',
+    subtitle: 'Knowledge Control',
+    description:
+      'Owns reference quality, inspection and accountability evidence, exam alignment, skill and goal efficiency, and the question of what should be taught versus omitted.',
+    roadmaps: [
+      { label: 'References roadmap', path: 'references/reference-team-roadmap.md' },
     ],
   },
   {
@@ -204,7 +214,7 @@ function parseRoadmap(source) {
     };
   }
 
-  const currentStatus = extractSection(markdown, 'Current Status');
+  const currentStatus = extractSection(markdown, 'Current Status') || extractSection(markdown, 'Current State');
   const mission = extractSection(markdown, 'Mission');
   return {
     ...source,

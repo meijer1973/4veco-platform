@@ -1,7 +1,20 @@
-# Reference Folder Three-Month Roadmap
+# References Team Roadmap
 
 Generated: 2026-04-23  
-Scope: `references/`, `build-scripts/references/`, `build-scripts/reports/`, and `reports/`
+Updated: 2026-04-25 after splitting reference planning out of the platform roadmap  
+Scope: `references/`, `build-scripts/references/`, `build-scripts/reports/`, and reference reports under `reports/`
+
+## Sprint Ledger
+
+Open items are listed first; completed items are kept below them.
+
+| Sprint | Name | Completed | Current State |
+|--------|------|-----------|---------------|
+| R1.1 | Reference Issue Catalog And Improvement Plan | no | Current reference priority; create the authoritative issue log for reference quality, inspection proof, exam alignment, and teaching-efficiency evidence. |
+| R1.2 | Reference Data Quality Sprint | no | Planned from the issue catalog; clean unit/term/exam-link backlog and reference trust problems. |
+| R1.3 | Reference Health Routine Sprint | no | Planned; make reference reports and QC prompts routine enough to trust during production. |
+| R0.1 | A-Domain Skilltree Consistency | yes | `A38` through `A44` implemented; A-domain skilltree coverage matches the catalog. |
+| R0.2 | Reference Report Regeneration | yes | Core reports regenerated in Sprint 0.4 and aligned with the current catalog. |
 
 ## Executive Direction
 
@@ -10,6 +23,10 @@ The reference folder is no longer just background documentation. It is becoming 
 The next three months should make that backbone dependable:
 
 > Bring reports back in sync with the current catalog, close structural drift between units and terms, repair skilltree/catalog consistency, and turn the blueprint/exam data into a curated production backlog.
+
+## Current Status
+
+Reference planning has been split out of the platform roadmap. The current priority is to build a structured reference issue log before changing machine references, then use that log to plan the next reference data-quality and reference health sprints.
 
 ## Current State
 
@@ -102,6 +119,36 @@ The report layer was regenerated in Sprint 0.4.
 - Detailed status lives in `knowledge/reference-report-sanity.md`.
 
 ## Priority Tasks
+
+### 0. Build The Reference Issue Log First
+
+Before changing machine references, create a structured issue log that separates:
+
+- inspection/accountability proof issues
+- reference quality issues
+- didactic efficiency issues: what is necessary to teach, what is redundant, and where goals/skills/complexes overlap
+- assessment and exam-fit issues
+- production-readiness issues for generated reports and QC routines
+
+The categories are provisional while cataloging. If the issue set shows that the taxonomy is wrong, update the category model and migrate the logged issues before planning fixes.
+
+Required fields:
+
+- issue id
+- title
+- quality category
+- source/evidence link
+- affected reference surface
+- severity
+- status
+- next action
+- target sprint or defer/reject decision
+- proof required to close
+
+Exit output:
+
+- an issue log visible through the internal dashboard
+- a next-period reference improvement plan ordered by risk, educational value, and platform leverage
 
 ### 1. Make Reports Trustworthy Again
 

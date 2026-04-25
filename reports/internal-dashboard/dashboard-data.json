@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-04-24T21:02:43.322Z",
+  "generatedAt": "2026-04-25T08:15:37.699Z",
   "internalOnly": true,
   "teams": [
     {
       "id": "platform",
       "title": "Platform",
       "subtitle": "Control Center",
-      "description": "Owns platform guardrails, validator and deploy health, reference quality control, year and multi-year planning, and the efficiency question of what should be taught versus omitted.",
+      "description": "Owns platform guardrails, validator and deploy health, architecture quality, year and multi-year planning, reporting, and cross-team visibility.",
       "roadmaps": [
         {
           "label": "Platform roadmap",
@@ -14,26 +14,19 @@
           "exists": true,
           "absolutePath": "C:/Projects/4veco/4veco-platform/knowledge/platform-team-roadmap.md",
           "generated": "2026-04-23",
-          "updated": "2026-04-24 after adding the quality issue catalog and improvement-planning phase",
+          "updated": "2026-04-25 after splitting reference planning into `references/reference-team-roadmap.md`",
           "scope": "",
           "summary": "Sprint 0.5 is signed off for Part A textbook/book production, Sprint P1.1 has proven the first Book 1 companion paragraph path, and Sprint P1.2 has technically proven the pattern on a second Book 1 companion paragraph.",
           "sprints": [
             {
               "sprint": "P1.4",
-              "name": "Quality Issue Catalog And Improvement Plan",
+              "name": "Platform Issue Catalog And Improvement Plan",
               "completed": "no",
-              "currentState": "Current platform priority; create the authoritative issue log by quality category and turn it into the next-period improvement plan.",
+              "currentState": "Current platform priority; create the non-reference platform issue log by quality category and turn it into the next-period improvement plan.",
               "exitGate": ""
             },
             {
               "sprint": "P1.5",
-              "name": "Reference Data Quality Sprint",
-              "completed": "no",
-              "currentState": "Planned from the issue catalog; clean unit/term/exam-link backlog and reference trust problems.",
-              "exitGate": ""
-            },
-            {
-              "sprint": "P1.6",
               "name": "CI And Health Check Routine Sprint",
               "completed": "no",
               "currentState": "Planned; make routine health checks harder to skip.",
@@ -73,22 +66,14 @@
       "sprints": [
         {
           "sprint": "P1.4",
-          "name": "Quality Issue Catalog And Improvement Plan",
+          "name": "Platform Issue Catalog And Improvement Plan",
           "completed": "no",
-          "currentState": "Current platform priority; create the authoritative issue log by quality category and turn it into the next-period improvement plan.",
+          "currentState": "Current platform priority; create the non-reference platform issue log by quality category and turn it into the next-period improvement plan.",
           "exitGate": "",
           "roadmap": "Platform roadmap"
         },
         {
           "sprint": "P1.5",
-          "name": "Reference Data Quality Sprint",
-          "completed": "no",
-          "currentState": "Planned from the issue catalog; clean unit/term/exam-link backlog and reference trust problems.",
-          "exitGate": "",
-          "roadmap": "Platform roadmap"
-        },
-        {
-          "sprint": "P1.6",
           "name": "CI And Health Check Routine Sprint",
           "completed": "no",
           "currentState": "Planned; make routine health checks harder to skip.",
@@ -129,6 +114,105 @@
         }
       ],
       "completedCount": 4,
+      "openCount": 2
+    },
+    {
+      "id": "references",
+      "title": "References",
+      "subtitle": "Knowledge Control",
+      "description": "Owns reference quality, inspection and accountability evidence, exam alignment, skill and goal efficiency, and the question of what should be taught versus omitted.",
+      "roadmaps": [
+        {
+          "label": "References roadmap",
+          "path": "references/reference-team-roadmap.md",
+          "exists": true,
+          "absolutePath": "C:/Projects/4veco/4veco-platform/references/reference-team-roadmap.md",
+          "generated": "2026-04-23",
+          "updated": "2026-04-25 after splitting reference planning out of the platform roadmap",
+          "scope": "`references/`, `build-scripts/references/`, `build-scripts/reports/`, and reference reports under `reports/`",
+          "summary": "Reference planning has been split out of the platform roadmap. The current priority is to build a structured reference issue log before changing machine references, then use that log to plan the next reference data-quality and reference health sprints.",
+          "sprints": [
+            {
+              "sprint": "R1.1",
+              "name": "Reference Issue Catalog And Improvement Plan",
+              "completed": "no",
+              "currentState": "Current reference priority; create the authoritative issue log for reference quality, inspection proof, exam alignment, and teaching-efficiency evidence.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "R1.2",
+              "name": "Reference Data Quality Sprint",
+              "completed": "no",
+              "currentState": "Planned from the issue catalog; clean unit/term/exam-link backlog and reference trust problems.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "R1.3",
+              "name": "Reference Health Routine Sprint",
+              "completed": "no",
+              "currentState": "Planned; make reference reports and QC prompts routine enough to trust during production.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "R0.1",
+              "name": "A-Domain Skilltree Consistency",
+              "completed": "yes",
+              "currentState": "`A38` through `A44` implemented; A-domain skilltree coverage matches the catalog.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "R0.2",
+              "name": "Reference Report Regeneration",
+              "completed": "yes",
+              "currentState": "Core reports regenerated in Sprint 0.4 and aligned with the current catalog.",
+              "exitGate": ""
+            }
+          ]
+        }
+      ],
+      "sprints": [
+        {
+          "sprint": "R1.1",
+          "name": "Reference Issue Catalog And Improvement Plan",
+          "completed": "no",
+          "currentState": "Current reference priority; create the authoritative issue log for reference quality, inspection proof, exam alignment, and teaching-efficiency evidence.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "R1.2",
+          "name": "Reference Data Quality Sprint",
+          "completed": "no",
+          "currentState": "Planned from the issue catalog; clean unit/term/exam-link backlog and reference trust problems.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "R1.3",
+          "name": "Reference Health Routine Sprint",
+          "completed": "no",
+          "currentState": "Planned; make reference reports and QC prompts routine enough to trust during production.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "R0.1",
+          "name": "A-Domain Skilltree Consistency",
+          "completed": "yes",
+          "currentState": "`A38` through `A44` implemented; A-domain skilltree coverage matches the catalog.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "R0.2",
+          "name": "Reference Report Regeneration",
+          "completed": "yes",
+          "currentState": "Core reports regenerated in Sprint 0.4 and aligned with the current catalog.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        }
+      ],
+      "completedCount": 2,
       "openCount": 3
     },
     {

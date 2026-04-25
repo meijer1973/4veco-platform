@@ -1,7 +1,7 @@
 # Platform Team Roadmap
 
 Generated: 2026-04-23  
-Updated: 2026-04-24 after adding the quality issue catalog and improvement-planning phase  
+Updated: 2026-04-25 after splitting reference planning into `references/reference-team-roadmap.md`  
 Source: split from `knowledge/three-month-roadmap.md` after Sprint 0.5 sign-off
 
 ## Sprint Ledger
@@ -10,9 +10,8 @@ Open items are listed first; completed items are kept below them.
 
 | Sprint | Name | Completed | Current State |
 |--------|------|-----------|---------------|
-| P1.4 | Quality Issue Catalog And Improvement Plan | no | Current platform priority; create the authoritative issue log by quality category and turn it into the next-period improvement plan. |
-| P1.5 | Reference Data Quality Sprint | no | Planned from the issue catalog; clean unit/term/exam-link backlog and reference trust problems. |
-| P1.6 | CI And Health Check Routine Sprint | no | Planned; make routine health checks harder to skip. |
+| P1.4 | Platform Issue Catalog And Improvement Plan | no | Current platform priority; create the non-reference platform issue log by quality category and turn it into the next-period improvement plan. |
+| P1.5 | CI And Health Check Routine Sprint | no | Planned; make routine health checks harder to skip. |
 | 0.5 | Phase 0 Green Gate | yes | Signed off for Part A textbook/book production. |
 | P1.1 | Book 1 Companion Proof Sprint | yes | `1.1.1` companion path proven end-to-end. |
 | P1.2 | Companion Scaling And Handoff Sprint | yes | `1.1.2` passed as a technical probe; its test materials were removed for didactic rebuild. |
@@ -30,6 +29,10 @@ Companion quality-gate review:
 
 - `knowledge/platform-team-companion-quality-gate-review.md`
 
+Reference roadmap:
+
+- `references/reference-team-roadmap.md`
+
 ## Mission
 
 Own the platform guardrails that make material production trustworthy:
@@ -37,7 +40,6 @@ Own the platform guardrails that make material production trustworthy:
 - validators
 - deploy/config plumbing
 - generators
-- reference quality
 - architecture quality
 - CI and repeatable health checks
 - internal developer-facing project oversight
@@ -50,7 +52,7 @@ The temporary Green Gate deployment/output freeze is lifted as of 2026-04-24. Co
 
 The companion pilot is still open. The technical pipeline now repeats, but the 1.1.2 probe materials were testing material only and have been removed from both `4veco-lessen` and the platform build inputs. That paragraph must be recreated by an agent explicitly instructed for teaching and didactic design.
 
-Companion layout/front-end improvement has been handed off to the lessen team. The next platform-owned priority is the quality issue catalog and next-period improvement plan, using the internal dashboard as the control surface.
+Companion layout/front-end improvement has been handed off to the lessen team. Reference planning has been split into `references/reference-team-roadmap.md`. The next platform-owned priority is the non-reference platform issue catalog and next-period improvement plan, using the internal dashboard as the control surface.
 
 Verified:
 
@@ -96,15 +98,15 @@ Definition of complete:
 - Relevant checks have run or the reason for not running them is written down.
 - Any remaining risks are either resolved, moved to a later sprint, or recorded as escalation triggers.
 
-## Program Phase: Quality Issue Catalog And Improvement Planning
+## Program Phase: Platform Issue Catalog And Improvement Planning
 
-This phase starts after the internal dashboard MVP. The first order of business is not fixing every visible problem immediately; it is making a good log of improvement issues per quality category, with enough evidence and ownership that the next period can be planned intelligently.
+This phase starts after the internal dashboard MVP. The first order of business is not fixing every visible platform problem immediately; it is making a good log of non-reference platform improvement issues per quality category, with enough evidence and ownership that the next period can be planned intelligently. Reference-specific cataloging lives in `references/reference-team-roadmap.md`.
 
 Purpose:
 
-- Build one authoritative issue log for platform-facing quality work.
+- Build one authoritative issue log for non-reference platform-facing quality work.
 - Use the dashboard categories as the first taxonomy, but allow the categories to change while cataloging if the real issue set shows a better structure.
-- Distinguish proof problems from production problems: can we prove inspection/exam alignment, can we trust references, can we show that a skill is worth teaching, can we prove generated material is ready to scale?
+- Distinguish proof problems from production problems: can we prove generated material is ready to scale, are validators/reporting checks trustworthy, are deploy/generator assumptions stable, and are platform risks visible before they block teams?
 - Convert the issue log into a practical improvement plan for the next period instead of treating every issue as equally urgent.
 
 Issue log fields:
@@ -132,7 +134,7 @@ Exit output for the phase:
 
 - An internal issue log visible through the dashboard.
 - A next-period improvement plan ordered by quality risk, educational value, and platform leverage.
-- Clear separation between platform-owned fixes, lessen-team teaching/material fixes, and innovation experiments.
+- Clear separation between platform-owned fixes, reference-team fixes, lessen-team teaching/material fixes, and innovation experiments.
 
 ## Sprint Details
 
@@ -298,18 +300,20 @@ Dashboard scope:
 - open validator/report issues by category
 - green-gate command status and last known evidence
 - companion pipeline status by paragraph
-- reference-data backlog summary
+- reference roadmap summary and links
 - links to source reports, roadmap sections, and escalation notes
 
 Team tabs:
 
-- Platform / Control Center: owns platform guardrails, validator/deploy health, reference quality control, year and multi-year planning, and the efficiency question of exactly which skills, complexes, and goals should be taught versus omitted as unnecessary.
+- Platform / Control Center: owns platform guardrails, validator/deploy health, architecture quality, year and multi-year planning, reporting, and cross-team visibility.
+- References / Knowledge Control: owns reference quality, inspection/accountability evidence, exam alignment, skill/goal efficiency, and the question of exactly which skills, complexes, and goals should be taught versus omitted as unnecessary.
 - Lessen / Effective Teaching: owns front-end quality, lesson usability, differentiation, games, visuals, companion material quality, and turning technically valid material into effective teaching.
 - Innovation / Collab Experiments: owns controlled experiments in the collab worktrees, where riskier presentation, web-native, narration, and future product ideas can be tried before adoption into production workflows.
 
 Baseline roadmap sources:
 
 - Platform tab: `knowledge/platform-team-roadmap.md`
+- References tab: `references/reference-team-roadmap.md`
 - Lessen tab: `../4veco-lessen/lessen-team-roadmap.md`
 - Innovation tab, platform side: `../4veco-platform-collab/knowledge/innovation-team-roadmap.md`
 - Innovation tab, lesson-output side: `../4veco-lessen-collab/innovation-team-roadmap.md`
@@ -324,7 +328,7 @@ Implementation direction:
 
 Next action:
 
-- Use the dashboard as the visible control surface for Sprint P1.4 quality issue cataloging and improvement planning.
+- Use the dashboard as the visible control surface for Sprint P1.4 platform issue cataloging and improvement planning.
 
 Evidence:
 
@@ -344,13 +348,13 @@ Exit criteria:
 - It clearly labels itself as internal/developer-facing. Done.
 - The dashboard generation path is documented and does not touch student-facing output. Done; output stays under `reports/internal-dashboard/`.
 
-### Sprint P1.4: Quality Issue Catalog And Improvement Plan
+### Sprint P1.4: Platform Issue Catalog And Improvement Plan
 
 Completed: no.
 
 Goal:
 
-Create the authoritative quality issue log by category, then turn that log into a next-period improvement plan.
+Create the authoritative non-reference platform issue log by category, then turn that log into a next-period improvement plan.
 
 Work:
 
@@ -360,6 +364,7 @@ Work:
   - platform roadmap residual risks
   - lessen roadmap handoff items
   - innovation roadmap transfer risks
+- Route reference-specific issues to `references/reference-team-roadmap.md` instead of keeping them in the platform backlog.
 - Record each issue with category, owner, evidence, severity, status, next action, and proof required to close.
 - Treat the current quality categories as provisional during cataloging.
 - Propose category changes if the real issue set shows that the taxonomy is wrong or too broad.
@@ -383,40 +388,7 @@ Exit criteria:
 - Category changes, if any, are documented and reflected in the dashboard generator.
 - The next-period improvement plan is written and ordered by quality risk, educational value, and platform leverage.
 
-### Sprint P1.5: Reference Data Quality Sprint
-
-Completed: no.
-
-Goal:
-
-Improve trust in machine/reference data by cleaning known unit, term, and exam-link drift after Sprint P1.4 identifies and prioritizes the reference-quality issues.
-
-Work:
-
-- Regenerate stale reports when needed.
-- Clean unit-term drift between `micro-teaching-units.json` and `begrippen.json`.
-- Triage `missing_units_flagged` into:
-  - minted
-  - duplicate
-  - still needed
-  - defer
-  - reject
-- Improve exam-question coverage:
-  - missing required-skill links
-  - missing exam-code links
-  - deprecated `D23` cleanup
-
-Next action:
-
-- Wait for Sprint P1.4 to identify the authoritative reference-quality issue list before editing machine references.
-
-Exit criteria:
-
-- The main reference backlog report separates true blockers from deferred/non-actionable items.
-- Machine references are changed only through the intended CLI scripts.
-- Any remaining drift is recorded with owner and reason.
-
-### Sprint P1.6: CI And Health Check Routine Sprint
+### Sprint P1.5: CI And Health Check Routine Sprint
 
 Completed: no.
 
@@ -462,7 +434,8 @@ Exit criteria:
 
 - Sprint P1.2 has proven the next representative companion paragraph.
 - Sprint P1.3 is complete: internal dashboard and quality-gate visibility now have a first generated surface.
-- Sprint P1.4 starts as the current platform priority: quality issue catalog and next-period improvement planning.
+- Sprint P1.4 starts as the current platform priority: non-reference platform issue catalog and next-period improvement planning.
+- Reference quality planning continues in `references/reference-team-roadmap.md`.
 - Green gate stays green.
 - Lessen team can continue one real companion paragraph without platform ambiguity.
 
@@ -471,13 +444,13 @@ Exit criteria:
 - At least two representative paragraphs pass `--mode complete`. Technically observed for `1.1.1` and `1.1.2`; 1.1.2 must be recreated didactically before it counts as approved material.
 - Reusable Book 1 companion build scripts exist under `build-scripts/content/book-1/` only for approved content; the temporary 1.1.2 probe scripts have been removed.
 - Deploy/config assumptions for flat Book output are stable enough to repeat.
-- Sprint P1.4 produces the issue log and next-period improvement plan.
+- Sprint P1.4 produces the platform issue log and next-period improvement plan.
 - Sprint P1.3 dashboard can be extended with richer issue-log and report inputs as Sprint P1.4 discovers the real work.
 
 ### Months 1-3
 
-- Quality issue categories are stable enough to guide planning, or category changes are documented with migrations.
-- Reference backlog is cleaner and better trusted.
+- Platform issue categories are stable enough to guide planning, or category changes are documented with migrations.
+- Reference backlog is cleaner and better trusted through the references roadmap.
 - Companion pipeline is proven on repeated real work, not just documented.
 - Internal dashboard gives developers a reliable overview of sprint state and open quality issues.
 - Platform quality is better than merely "green".

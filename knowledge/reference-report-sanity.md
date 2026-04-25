@@ -66,7 +66,7 @@ Live unit domain spread:
 
 - `reports/unresolved-refs.md` warns about deprecated unit IDs in planning docs:
   - `knowledge/current-state-detailed-analysis.md`
-  - `knowledge/reference-three-month-roadmap.md`
+  - `references/reference-team-roadmap.md`
   - `knowledge/three-month-roadmap.md`
 - `D23` still appears in `references/external/exam-questions.json`, but the current unresolved-reference scan does not include external JSON. Treat this as reference cleanup, not a Phase 0 platform blocker.
 - `reports/dead-units.md` is a weak signal while the book-production layer is still young. Many units are intentionally ahead of current built material.

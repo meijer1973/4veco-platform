@@ -305,9 +305,10 @@ Purpose: start the two-team split without losing the discipline created in Phase
 - Platform team stays available for validator defects only, not content decisions.
 - Any repeated manual fix should be turned into a script or checklist.
 
-### Priority 3: Start Platform Quality Tracks
+### Priority 3: Start Platform And Reference Quality Tracks
 
-- Platform team starts the reference report and architecture tracks.
+- Platform team starts architecture, validator, dashboard, and companion-pipeline tracks.
+- References team starts the reference report and data-quality tracks from `references/reference-team-roadmap.md`.
 - Do not reopen Phase 0 unless the health command regresses.
 - Start companion-pipeline work as an MVP track: one representative paragraph, complete Part B output, complete-mode validation, then decide whether to scale.
 
@@ -319,7 +320,9 @@ The team split is active, Book 1 cleanup has started, and the health command rem
 
 Once Phase 1 is done, split work clearly.
 
-## Platform Team Roadmap
+## References Team Roadmap
+
+Detailed source: `references/reference-team-roadmap.md`
 
 ### Track A: Reference Data Quality
 
@@ -340,7 +343,11 @@ Target: months 1-3.
   - fill missing exam-code links.
   - remove deprecated `D23` usage.
 
-### Track B: Architecture Quality
+## Platform Team Roadmap
+
+Detailed source: `knowledge/platform-team-roadmap.md`
+
+### Track A: Architecture Quality
 
 - Make validators layout-aware and explicit.
 - Keep generated output separate from source.
@@ -349,7 +356,7 @@ Target: months 1-3.
 - Update stale docs where they conflict with current behavior.
 - Keep architecture work focused on `4veco-platform` and `4veco-lessen`.
 
-### Track C: Companion Pipeline
+### Track B: Companion Pipeline
 
 - Build a reliable flat-layout Part B path.
 - Create `build-scripts/content/book-1/`.

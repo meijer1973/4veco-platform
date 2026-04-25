@@ -186,11 +186,12 @@
     <div class="internal-mark">Internal Dashboard</div>
     <h1>4veco Project Dashboard</h1>
     <p>Developer-facing overview generated from team roadmaps and platform quality reports. This page is not student-facing and must stay out of lesson output.</p>
-    <p>Generated: 2026-04-24T21:02:43.322Z</p>
+    <p>Generated: 2026-04-25T08:15:37.699Z</p>
   </header>
   <main>
     <nav class="tabs" role="tablist" aria-label="Team dashboard tabs">
       <button id="button-platform" class="tab-button active" role="tab" aria-selected="true" aria-controls="tab-platform" data-tab="platform">Platform</button>
+<button id="button-references" class="tab-button " role="tab" aria-selected="false" aria-controls="tab-references" data-tab="references">References</button>
 <button id="button-lessen" class="tab-button " role="tab" aria-selected="false" aria-controls="tab-lessen" data-tab="lessen">Lessen</button>
 <button id="button-innovation" class="tab-button " role="tab" aria-selected="false" aria-controls="tab-innovation" data-tab="innovation">Innovation</button>
     </nav>
@@ -200,11 +201,11 @@
         <div>
           <p class="eyebrow">Control Center</p>
           <h2>Platform</h2>
-          <p>Owns platform guardrails, validator and deploy health, reference quality control, year and multi-year planning, and the efficiency question of what should be taught versus omitted.</p>
+          <p>Owns platform guardrails, validator and deploy health, architecture quality, year and multi-year planning, reporting, and cross-team visibility.</p>
         </div>
         <div class="metric-strip" aria-label="Sprint summary">
           <div><strong>4</strong><span>completed</span></div>
-          <div><strong>3</strong><span>open</span></div>
+          <div><strong>2</strong><span>open</span></div>
         </div>
       </div>
       <h3>Roadmap Sources</h3>
@@ -213,7 +214,7 @@
           <strong>Platform roadmap</strong>
           <span class="pill ok">found</span>
           <code>knowledge/platform-team-roadmap.md</code>
-          <p>2026-04-24 after adding the quality issue catalog and improvement-planning phase</p>
+          <p>2026-04-25 after splitting reference planning into `references/reference-team-roadmap.md`</p>
           <p>Sprint 0.5 is signed off for Part A textbook/book production, Sprint P1.1 has proven the first Book 1 companion paragraph path, and Sprint P1.2 has technically proven the pattern on a second Book 1 companion paragraph.</p>
         </li></ul>
       <h3>Sprint Ledger</h3>
@@ -222,13 +223,48 @@
           <thead>
             <tr><th>Sprint</th><th>Name</th><th>Completed</th><th>Current State</th><th>Source</th></tr>
           </thead>
-          <tbody><tr><td>P1.4</td><td>Quality Issue Catalog And Improvement Plan</td><td><span class="status open">no</span></td><td>Current platform priority; create the authoritative issue log by quality category and turn it into the next-period improvement plan.</td><td>Platform roadmap</td></tr>
-<tr><td>P1.5</td><td>Reference Data Quality Sprint</td><td><span class="status open">no</span></td><td>Planned from the issue catalog; clean unit/term/exam-link backlog and reference trust problems.</td><td>Platform roadmap</td></tr>
-<tr><td>P1.6</td><td>CI And Health Check Routine Sprint</td><td><span class="status open">no</span></td><td>Planned; make routine health checks harder to skip.</td><td>Platform roadmap</td></tr>
+          <tbody><tr><td>P1.4</td><td>Platform Issue Catalog And Improvement Plan</td><td><span class="status open">no</span></td><td>Current platform priority; create the non-reference platform issue log by quality category and turn it into the next-period improvement plan.</td><td>Platform roadmap</td></tr>
+<tr><td>P1.5</td><td>CI And Health Check Routine Sprint</td><td><span class="status open">no</span></td><td>Planned; make routine health checks harder to skip.</td><td>Platform roadmap</td></tr>
 <tr><td>0.5</td><td>Phase 0 Green Gate</td><td><span class="status done">yes</span></td><td>Signed off for Part A textbook/book production.</td><td>Platform roadmap</td></tr>
 <tr><td>P1.1</td><td>Book 1 Companion Proof Sprint</td><td><span class="status done">yes</span></td><td>`1.1.1` companion path proven end-to-end.</td><td>Platform roadmap</td></tr>
 <tr><td>P1.2</td><td>Companion Scaling And Handoff Sprint</td><td><span class="status done">yes</span></td><td>`1.1.2` passed as a technical probe; its test materials were removed for didactic rebuild.</td><td>Platform roadmap</td></tr>
 <tr><td>P1.3</td><td>Internal Review Dashboard Sprint</td><td><span class="status done">yes</span></td><td>Internal three-team dashboard MVP generates from team roadmap sources and quality-gate issues.</td><td>Platform roadmap</td></tr></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="tab-references" class="tab-panel " role="tabpanel" aria-labelledby="button-references">
+      <div class="team-header">
+        <div>
+          <p class="eyebrow">Knowledge Control</p>
+          <h2>References</h2>
+          <p>Owns reference quality, inspection and accountability evidence, exam alignment, skill and goal efficiency, and the question of what should be taught versus omitted.</p>
+        </div>
+        <div class="metric-strip" aria-label="Sprint summary">
+          <div><strong>2</strong><span>completed</span></div>
+          <div><strong>3</strong><span>open</span></div>
+        </div>
+      </div>
+      <h3>Roadmap Sources</h3>
+      <ul class="source-list">
+        <li>
+          <strong>References roadmap</strong>
+          <span class="pill ok">found</span>
+          <code>references/reference-team-roadmap.md</code>
+          <p>2026-04-25 after splitting reference planning out of the platform roadmap</p>
+          <p>Reference planning has been split out of the platform roadmap. The current priority is to build a structured reference issue log before changing machine references, then use that log to plan the next reference data-quality and reference health sprints.</p>
+        </li></ul>
+      <h3>Sprint Ledger</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Sprint</th><th>Name</th><th>Completed</th><th>Current State</th><th>Source</th></tr>
+          </thead>
+          <tbody><tr><td>R1.1</td><td>Reference Issue Catalog And Improvement Plan</td><td><span class="status open">no</span></td><td>Current reference priority; create the authoritative issue log for reference quality, inspection proof, exam alignment, and teaching-efficiency evidence.</td><td>References roadmap</td></tr>
+<tr><td>R1.2</td><td>Reference Data Quality Sprint</td><td><span class="status open">no</span></td><td>Planned from the issue catalog; clean unit/term/exam-link backlog and reference trust problems.</td><td>References roadmap</td></tr>
+<tr><td>R1.3</td><td>Reference Health Routine Sprint</td><td><span class="status open">no</span></td><td>Planned; make reference reports and QC prompts routine enough to trust during production.</td><td>References roadmap</td></tr>
+<tr><td>R0.1</td><td>A-Domain Skilltree Consistency</td><td><span class="status done">yes</span></td><td>`A38` through `A44` implemented; A-domain skilltree coverage matches the catalog.</td><td>References roadmap</td></tr>
+<tr><td>R0.2</td><td>Reference Report Regeneration</td><td><span class="status done">yes</span></td><td>Core reports regenerated in Sprint 0.4 and aligned with the current catalog.</td><td>References roadmap</td></tr></tbody>
         </table>
       </div>
     </section>
