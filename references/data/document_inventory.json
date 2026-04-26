@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1",
-  "generated_at": "2026-04-26T07:14:05.602Z",
+  "generated_at": "2026-04-26T08:01:39.030Z",
   "sprint_id": "R0.2",
   "scope": [
     "references",
@@ -10,13 +10,14 @@
   ],
   "note": "Inventory covers reference sources, generated reports, and reference/report tooling.",
   "summary": {
-    "file_count": 183,
+    "file_count": 184,
     "by_layer": {
       "reference_tooling": 42,
       "report_tooling": 9,
       "authored_judgement": 7,
       "governance_data": 17,
       "external_authority": 32,
+      "unclassified": 1,
       "machine_registry": 5,
       "quality_protocol": 5,
       "planning": 1,
@@ -30,6 +31,7 @@
       "generated_by_inventory_script": 3,
       "sprint_process": 14,
       "external_refresh_only": 32,
+      "review_required": 1,
       "cli_only": 5,
       "generated_by_script": 46
     }
@@ -2167,6 +2169,22 @@
       "self_generated_inventory_file": false
     },
     {
+      "path": "references/final-codex-handoff-roadmap original.md",
+      "file_name": "final-codex-handoff-roadmap original.md",
+      "extension": "md",
+      "size_bytes": 47737,
+      "sha256": "7085e15adaa8e3b38d30145822035c2923d27d44c970211929838ae5299283ff",
+      "layer": "unclassified",
+      "authority_level": "unknown",
+      "source_type": "file_md",
+      "generated_status": "manual_source",
+      "edit_policy": "review_required",
+      "owner": "references_team",
+      "refresh_policy": "review_required",
+      "downstream_dependencies": [],
+      "self_generated_inventory_file": false
+    },
+    {
       "path": "references/machine/begrippen.json",
       "file_name": "begrippen.json",
       "extension": "json",
@@ -2370,8 +2388,8 @@
       "path": "references/reference-team-roadmap.md",
       "file_name": "reference-team-roadmap.md",
       "extension": "md",
-      "size_bytes": 17305,
-      "sha256": "0c9938bce6285e2d3df34aae1cbfad36c50d9f64b36178aed4ed0256d7ba6368",
+      "size_bytes": 39221,
+      "sha256": "f7ff696e5539196b2097818d95225edf36507cbf34cf37f3e795878cf5684948",
       "layer": "planning",
       "authority_level": "authored_judgement",
       "source_type": "roadmap",
@@ -2887,8 +2905,8 @@
       "path": "reports/internal-dashboard/dashboard-data.json",
       "file_name": "dashboard-data.json",
       "extension": "json",
-      "size_bytes": 54525,
-      "sha256": "10c70d214bafeec21b5f2801acb47d18ad41b77058d33d20399b64bde2074f79",
+      "size_bytes": 65251,
+      "sha256": "d39b728dda3621efbab85cc6a90d22bc2483a00d1750d14005ae1b5e00d45f2c",
       "layer": "generated_report",
       "authority_level": "generated_report",
       "source_type": "report_json",
@@ -2907,8 +2925,8 @@
       "path": "reports/internal-dashboard/index.html",
       "file_name": "index.html",
       "extension": "html",
-      "size_bytes": 34195,
-      "sha256": "0c4b0d889bfc51f37d63f439cc4152705b67309396bd092fb3036dd1bed28e2b",
+      "size_bytes": 38145,
+      "sha256": "5d2571e71d0d5fcb87a7d9bb55d557626413c8451653c5a1b0e01ab90c0ef669",
       "layer": "generated_report",
       "authority_level": "generated_report",
       "source_type": "dashboard_html",

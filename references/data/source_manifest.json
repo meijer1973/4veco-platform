@@ -1,15 +1,16 @@
 {
   "schema_version": "0.1",
-  "generated_at": "2026-04-26T07:14:05.602Z",
+  "generated_at": "2026-04-26T08:01:39.030Z",
   "sprint_id": "R0.2",
   "scope": "references/",
   "note": "Self-generated inventory files intentionally omit size and sha256 to avoid unstable self-checksums.",
   "summary": {
-    "file_count": 86,
+    "file_count": 87,
     "by_layer": {
       "authored_judgement": 7,
       "governance_data": 17,
       "external_authority": 32,
+      "unclassified": 1,
       "machine_registry": 5,
       "quality_protocol": 5,
       "planning": 1,
@@ -21,6 +22,7 @@
       "generated_by_inventory_script": 3,
       "sprint_process": 14,
       "external_refresh_only": 32,
+      "review_required": 1,
       "cli_only": 5,
       "code_review": 18
     }
@@ -1147,6 +1149,22 @@
       "self_generated_inventory_file": false
     },
     {
+      "path": "references/final-codex-handoff-roadmap original.md",
+      "file_name": "final-codex-handoff-roadmap original.md",
+      "extension": "md",
+      "size_bytes": 47737,
+      "sha256": "7085e15adaa8e3b38d30145822035c2923d27d44c970211929838ae5299283ff",
+      "layer": "unclassified",
+      "authority_level": "unknown",
+      "source_type": "file_md",
+      "generated_status": "manual_source",
+      "edit_policy": "review_required",
+      "owner": "references_team",
+      "refresh_policy": "review_required",
+      "downstream_dependencies": [],
+      "self_generated_inventory_file": false
+    },
+    {
       "path": "references/machine/begrippen.json",
       "file_name": "begrippen.json",
       "extension": "json",
@@ -1350,8 +1368,8 @@
       "path": "references/reference-team-roadmap.md",
       "file_name": "reference-team-roadmap.md",
       "extension": "md",
-      "size_bytes": 17305,
-      "sha256": "0c9938bce6285e2d3df34aae1cbfad36c50d9f64b36178aed4ed0256d7ba6368",
+      "size_bytes": 39221,
+      "sha256": "f7ff696e5539196b2097818d95225edf36507cbf34cf37f3e795878cf5684948",
       "layer": "planning",
       "authority_level": "authored_judgement",
       "source_type": "roadmap",
