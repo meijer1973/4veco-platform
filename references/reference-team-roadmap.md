@@ -16,7 +16,7 @@ Compatibility decisions:
 - The older local `R0.1` / `R0.2` history is preserved as completed historical `H0.x` work, not as active roadmap numbering.
 - `R0.1 Sprint Execution Scaffold` is completed.
 - `R2.3 Human Review And Gate Closure` is completed with `GATE-R2-empty-needs` status `hold`.
-- `R2.4 Evidence And Unit-Design Cleanup` is the immediate next sprint before R3.2 can proceed.
+- `R2.4 Evidence And Unit-Design Cleanup` is completed as a non-mutating review packet before R3.2 can proceed.
 - Current catalog metrics reflect the current branch state after R2.3 closure.
 - The reference CLI exists; CLI documentation still needs cleanup because parts of the README still read like a future contract.
 
@@ -77,9 +77,8 @@ Open items are listed first; completed items are kept below them.
 
 | Sprint | Name | Completed | Current State |
 |--------|------|-----------|---------------|
-| R2.4 | Evidence And Unit-Design Cleanup | no | Next. Attach exact evidence to candidate edges, resolve D04 unit scope, classify foundational A-domain zero-needs, and run a labor-market/unemployment second pass before R3.2. |
-| R3.1 | Reference CLI And Documentation Completion | no | Planned. Fill any CLI gaps needed for reviewed corrections and update stale CLI docs. |
-| R3.2 | Apply Reviewed Empty-Needs Corrections | no | Blocked by GATE-R2 hold. Do not apply empty-needs dependency corrections until R2.4 supplies exact evidence and unit-design decisions. |
+| R3.1 | Reference CLI And Documentation Completion | no | Next. Fill any CLI gaps needed for reviewed corrections and update stale CLI docs. |
+| R3.2 | Apply Reviewed Empty-Needs Corrections | no | Blocked. Do not apply empty-needs dependency corrections until the R2.4 packet is human-reviewed for mutation and R3.1 confirms CLI/validator readiness. |
 | R4.1 | Unit-Term Slug Migration | no | Planned. Migrate unit `terms` fields to canonical `begrippen.json` slug IDs. |
 | R4.2 | Exam-Question Extraction Gap Closure | no | Planned. Complete missing required-skill and exam-code links where evidence supports it. |
 | R4.3 | Blueprint Flag Triage | no | Planned. Convert raw missing-unit flags into curated decisions. |
@@ -110,7 +109,8 @@ Open items are listed first; completed items are kept below them.
 | R14.1 | Curriculum Versioning | no | Planned. Track curriculum/source versions and reference migrations. |
 | R14.2 | Evidence Signal Model | no | Planned. Model quality and learning signals without surveillance or unnecessary student data. |
 | R14.3 | Continuous Improvement Reports | no | Planned. Produce evidence-platform reports and require review before external claims. |
-| R2.3 | Human Review And Gate Closure | yes | Completed with GATE-R2 status `hold`. The audit is diagnostic only; R3.2 is blocked until R2.4 evidence and unit-design cleanup is complete. |
+| R2.4 | Evidence And Unit-Design Cleanup | yes | Completed. Non-mutating packet attaches exact evidence to selected candidate edges, resolves D04 as unit-design-required, classifies foundational A-domain zero-needs candidates, preserves rejected market-graph suggestions, and records a bounded labor-market/unemployment second pass. |
+| R2.3 | Human Review And Gate Closure | yes | Completed with GATE-R2 status `hold`. The audit is diagnostic only; R2.4 produced a non-mutating packet, and R3.2 remains blocked until human mutation review plus CLI readiness. |
 | R2.2 | Subagent Review For Empty Needs | yes | Completed. Pedagogy, data-integrity, and evidence reviews plus a GATE-R2 review packet are ready for human review. |
 | R2.1 | Full Empty-Needs Audit | yes | Completed. Non-mutating audit generated 61 machine-suggested empty-needs review entries for the current branch catalog. |
 | R1.3 | Unit Prior-Knowledge Schema Extension | yes | Completed. Unit and review schemas now support zero-needs status, assumed prior knowledge, and review records. |
@@ -168,7 +168,7 @@ Required work:
 
 Required output: CLI mutation log, regenerated reports, and a diff summary proving protected changes were script-produced.
 
-Stop condition: blocked while `GATE-R2-empty-needs` remains on `hold` and R2.4 is incomplete.
+Stop condition: blocked while the R2.4 packet has not been human-reviewed for mutation decisions or while R3.1 has not confirmed CLI/validator readiness.
 
 ### R4.1 Unit-Term Slug Migration
 
@@ -702,7 +702,7 @@ Sprints:
 - `R2.1` completed: full empty-needs audit, non-mutating.
 - `R2.2` completed: subagent review and human-review packet.
 - `R2.3` completed: adaptive human review and gate closure as `hold`.
-- `R2.4` next: evidence and unit-design cleanup after the hold decision.
+- `R2.4` completed: evidence and unit-design cleanup after the hold decision.
 
 ### Phase R3: CLI-Only Corrections
 
@@ -710,7 +710,7 @@ Goal: complete any missing mutation scripts, update CLI documentation, and apply
 
 Sprints:
 
-- `R3.1` planned: reference CLI and documentation completion.
+- `R3.1` next: reference CLI and documentation completion.
 - `R3.2` blocked: apply reviewed empty-needs corrections only after `R2.4`.
 
 ### Phase R4: Term, Exam, Blueprint, And Authored-Bucket Cleanup
@@ -904,18 +904,17 @@ Do not invert this order.
 
 ## Immediate Next Sprint
 
-Proceed with `R2.4 Evidence And Unit-Design Cleanup`.
+Proceed with `R3.1 Reference CLI And Documentation Completion`.
 
-R2.3 closed `GATE-R2-empty-needs` as `hold`, so R3.2 must not proceed yet.
+R2.4 completed a non-mutating evidence and unit-design packet. R3.2 must not proceed yet.
 
-R2.4 must:
+R3.1 must:
 
-- attach exact exam or target-exercise evidence to candidate dependency edges before any edge can later be applied
-- resolve `D04 Elasticiteit en goederenclassificatie` as a unit-design issue, likely merge/retire/redistribute into the relevant elasticity units
-- classify foundational A-domain empty-needs units, especially `underbouw_assumed` cases
-- run a second pedagogical pass for labor-market and unemployment sequencing
-- preserve rejected machine suggestions such as `D10 -> D01/D03`, `D13 -> D03`, and `D32 -> D01/D03` as rejected unless new evidence proves otherwise
-- produce a review-ready packet before R3.2 is reconsidered
+- audit the existing `build-scripts/references/` CLI commands against the mutations implied by the R2.4 packet
+- update stale CLI documentation that still describes already-built scripts as future-only
+- add or specify missing validators for dependency, zero-needs status, unit status, term-link, and evidence-anchor mutations
+- prove which R2.4 packet items are expressible through CLI and which need CLI work first
+- keep `references/machine/` and `references/external/` protected; do not apply R2.4 corrections during R3.1
 
 ## Final Rule
 

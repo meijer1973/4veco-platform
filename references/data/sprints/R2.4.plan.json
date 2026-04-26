@@ -1,0 +1,19 @@
+{
+  "sprint_id": "R2.4",
+  "name": "Evidence And Unit-Design Cleanup",
+  "status": "in_progress",
+  "planned_on": "2026-04-26",
+  "plan": "docs/sprints/R2.4-plan.md",
+  "protected_reference_data_changes_allowed": false,
+  "human_review_required": false,
+  "gate_id": "GATE-R2-empty-needs",
+  "review_packet": "reports/review-gates/GATE-R2-empty-needs/R2.4-evidence-unit-design-packet.md",
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js docs/sprints/R2.4-plan.md",
+    "node build-scripts/sprints/check-sprint-bundle.js R2.4",
+    "node build-scripts/review-gates/check-r2-4-packet.js reports/review-gates/GATE-R2-empty-needs/R2.4-evidence-unit-design-packet.json",
+    "node build-scripts/references/check-empty-needs-audit.js",
+    "node build-scripts/sprints/check-sprint-result.js reports/sprints/R2.4-result.md",
+    "node build-scripts/sprints/check-sprint-bundle.js R2.4 --complete"
+  ]
+}
