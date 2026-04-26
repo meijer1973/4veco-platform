@@ -830,7 +830,7 @@ function renderParagraafPage(paragraaf, files, _resolvedMap) {
 
   .resource-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     gap: 0.9rem;
   }
   .resource-card {
