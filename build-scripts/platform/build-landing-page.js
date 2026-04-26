@@ -781,13 +781,24 @@ function renderParagraafPage(paragraaf, files, _resolvedMap) {
   const hasL = lerenCards.trim().length > 0;
   const hasT = !HIDE_TASK_ROWS && taskCards.trim().length > 0;
 
-  const sections = [];
-  if (hasV) sections.push({ id: "voorbereiden", num: 1, title: "Voorbereiden", hint: "Check wat je al weet en wat je nog nodig hebt", body: voorbereidenCards });
-  if (hasO) sections.push({ id: "oefenen",      num: 2, title: "Oefenen",      hint: "Kies een interactieve oefening",               body: oefenenCards });
-  if (hasL) sections.push({ id: "leren",        num: 3, title: "Leren",        hint: "De les doorwerken: presentatie, uitleg en video’s", body: lerenCards });
-  if (hasT) sections.push({ id: "opgaven",      num: 4, title: "Opgaven",      hint: "Oefen op je eigen niveau",                     body: taskCards });
+  // Per-section accent: the four section roles get distinct accents drawn
+  // from the three shared tokens (economisch / wiskunde / grafisch) defined
+  // in engines/voorkennis.css. The hero gradient and back-link continue to
+  // use the paragraph-level accentToken; only the section chrome rotates.
+  const SECTION_ACCENT = {
+    voorbereiden: "wiskunde",
+    oefenen:      "economisch",
+    leren:        "grafisch",
+    opgaven:      "economisch",
+  };
 
-  const sidebarItems = sections.map(s => `      <a class="nav-item domain-${accentToken}" href="#${s.id}" data-section="${s.id}">
+  const sections = [];
+  if (hasV) sections.push({ id: "voorbereiden", num: 1, title: "Voorbereiden", hint: "Check wat je al weet en wat je nog nodig hebt", body: voorbereidenCards, accent: SECTION_ACCENT.voorbereiden });
+  if (hasO) sections.push({ id: "oefenen",      num: 2, title: "Oefenen",      hint: "Kies een interactieve oefening",               body: oefenenCards,      accent: SECTION_ACCENT.oefenen });
+  if (hasL) sections.push({ id: "leren",        num: 3, title: "Leren",        hint: "De les doorwerken: presentatie, uitleg en video’s", body: lerenCards,        accent: SECTION_ACCENT.leren });
+  if (hasT) sections.push({ id: "opgaven",      num: 4, title: "Opgaven",      hint: "Oefen op je eigen niveau",                     body: taskCards,         accent: SECTION_ACCENT.opgaven });
+
+  const sidebarItems = sections.map(s => `      <a class="nav-item domain-${s.accent}" href="#${s.id}" data-section="${s.id}">
         <span class="nav-number">${s.num}</span>
         <span class="nav-text">
           <span class="nav-title">${s.title}</span>
@@ -797,11 +808,11 @@ function renderParagraafPage(paragraaf, files, _resolvedMap) {
 
   const sectionsHTML = sections.map(s => `
       <section class="section" id="${s.id}">
-        <div class="section-header border-${accentToken}">
-          <span class="section-num bg-${accentToken}">${s.num}</span>
+        <div class="section-header border-${s.accent}">
+          <span class="section-num bg-${s.accent}">${s.num}</span>
           <div class="section-title-group">
             <div class="section-title">${s.title}</div>
-            <span class="section-badge">${s.hint}</span>
+            <span class="section-badge badge-${s.accent}">${s.hint}</span>
           </div>
         </div>
         <div class="resource-grid">${s.body}
