@@ -92,7 +92,7 @@ function renderHTML() {
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script>(function(){try{var m=localStorage.getItem('quizMode')||'light';document.documentElement.setAttribute('data-theme',m);}catch(e){}})();</script>
+<script>(function(){try{var m=localStorage.getItem('quizMode')||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',m);}catch(e){}})();</script>
 <title>${PARAGRAAF_NR} ${esc(ONDERWERP)} – YouTube-video's</title>
 <link rel="stylesheet" href="../../shared/voorkennis.css">
 <style>
