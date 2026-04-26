@@ -86,6 +86,19 @@
   .chip.active { background: var(--accent); color: white; border-color: var(--accent); }
   .chip.dom-chip.active { color: white; border-color: transparent; }
   .filter-label { font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; margin-top: 6px; }
+  .filter-select {
+    width: 100%;
+    margin-top: 8px;
+    padding: 6px 8px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    background: #fff;
+    color: var(--text);
+    font-family: inherit;
+    font-size: 12px;
+    outline: none;
+  }
+  .filter-select:focus { border-color: var(--accent); }
 
   #unit-list { flex: 1; overflow-y: auto; padding: 4px 0; }
   .unit-row {
@@ -132,6 +145,28 @@
     border-radius: 3px;
     background: #eceff1;
     color: #546e7a;
+    flex-shrink: 0;
+  }
+  .unit-row .component-badge {
+    min-width: 22px;
+    text-align: center;
+    font-size: 9px;
+    font-weight: 600;
+    padding: 1px 4px;
+    border-radius: 3px;
+    background: #fff8e1;
+    color: #ef6c00;
+    flex-shrink: 0;
+  }
+  .unit-row .needs-badge {
+    min-width: 22px;
+    text-align: center;
+    font-size: 9px;
+    font-weight: 600;
+    padding: 1px 4px;
+    border-radius: 3px;
+    background: #e8f5e9;
+    color: #2e7d32;
     flex-shrink: 0;
   }
   .tier-U { background: #eceff1; color: #546e7a; }
@@ -400,6 +435,24 @@
         <span class="chip" data-tier="analyze">analyze</span>
         <span class="chip" data-tier="evaluate">evaluate</span>
       </div>
+      <div class="filter-label">Aantal needs</div>
+      <select class="filter-select" id="needs-count-filter" title="Aantal directe voorwaarden in needs">
+        <option value="all">alle aantallen</option>
+        <option value="0">0 - geen directe voorwaarden</option>
+        <option value="1">1 - een directe voorwaarde</option>
+        <option value="2">2 - twee directe voorwaarden</option>
+        <option value="3">3 - drie directe voorwaarden</option>
+        <option value="4+">4+ - veel directe voorwaarden</option>
+      </select>
+      <div class="filter-label">Boomgrootte</div>
+      <select class="filter-select" id="component-size-filter" title="Aantal units in dezelfde verbonden needs-boom">
+        <option value="all">alle bomen</option>
+        <option value="1">1 - geisoleerde units</option>
+        <option value="2-3">2-3 - kleine verdachte bomen</option>
+        <option value="1-3">1-3 - geisoleerd of klein</option>
+        <option value="4-10">4-10 - middelgroot</option>
+        <option value="11+">11+ - sterk verbonden</option>
+      </select>
     </div>
     <div id="unit-list"></div>
   </aside>
@@ -459,6 +512,74 @@
       if (dependents.has(n)) dependents.get(n).push(u.id);
     });
   });
+  const componentInfo = computeConnectedComponents();
+
+  function computeConnectedComponents() {
+    const adjacency = new Map();
+    UNITS.forEach(u => adjacency.set(u.id, new Set()));
+    UNITS.forEach(u => {
+      (u.needs || []).forEach(need => {
+        if (!adjacency.has(need)) return;
+        adjacency.get(u.id).add(need);
+        adjacency.get(need).add(u.id);
+      });
+    });
+
+    const info = new Map();
+    const seen = new Set();
+    let componentId = 0;
+    for (const u of UNITS) {
+      if (seen.has(u.id)) continue;
+      const members = [];
+      const queue = [u.id];
+      seen.add(u.id);
+      while (queue.length) {
+        const id = queue.shift();
+        members.push(id);
+        for (const next of adjacency.get(id) || []) {
+          if (seen.has(next)) continue;
+          seen.add(next);
+          queue.push(next);
+        }
+      }
+      componentId += 1;
+      const size = members.length;
+      members.forEach(id => info.set(id, { id: componentId, size, members }));
+    }
+    return info;
+  }
+
+  function componentSize(u) {
+    return componentInfo.get(u.id)?.size || 1;
+  }
+
+  function needsCount(u) {
+    return (u.needs || []).length;
+  }
+
+  function matchesNeedsCount(u) {
+    const count = needsCount(u);
+    switch (state.needsCountFilter) {
+      case '0': return count === 0;
+      case '1': return count === 1;
+      case '2': return count === 2;
+      case '3': return count === 3;
+      case '4+': return count >= 4;
+      default: return true;
+    }
+  }
+
+  function matchesComponentSize(u) {
+    const size = componentSize(u);
+    switch (state.componentSizeFilter) {
+      case '1': return size === 1;
+      case '2-3': return size >= 2 && size <= 3;
+      case '1-3': return size >= 1 && size <= 3;
+      case '4-10': return size >= 4 && size <= 10;
+      case '11+': return size >= 11;
+      default: return true;
+    }
+  }
 
   // ─── Domain palette ──────────────────────────────────────
   const DOM_NAMES = {
@@ -497,6 +618,8 @@
     search: '',
     domainFilter: new Set(),    // empty = all
     tierFilter: new Set(),      // empty = all
+    needsCountFilter: 'all',
+    componentSizeFilter: 'all',
   };
 
   // ─── Sidebar: filters + list ─────────────────────────────
@@ -542,9 +665,21 @@
     renderList();
   });
 
+  document.getElementById('needs-count-filter').addEventListener('change', (e) => {
+    state.needsCountFilter = e.target.value;
+    renderList();
+  });
+
+  document.getElementById('component-size-filter').addEventListener('change', (e) => {
+    state.componentSizeFilter = e.target.value;
+    renderList();
+  });
+
   function matchesFilters(u) {
     if (state.domainFilter.size && !state.domainFilter.has(u.id[0])) return false;
     if (state.tierFilter.size && !state.tierFilter.has(u.mastery_target)) return false;
+    if (!matchesNeedsCount(u)) return false;
+    if (!matchesComponentSize(u)) return false;
     if (state.search) {
       const haystack = [
         u.id,
@@ -577,6 +712,8 @@
         <span class="uid">${u.id}</span>
         <span class="uname" title="${escapeAttr(u.name)}">${escapeHtml(u.name)}</span>
         ${deprArrow}
+        <span class="needs-badge" title="Aantal directe needs: ${needsCount(u)}">N${needsCount(u)}</span>
+        <span class="component-badge" title="Boomgrootte: ${componentSize(u)} units">T${componentSize(u)}</span>
         <span class="tier-badge tier-${tierLabel(u.mastery_target)}">${tierLabel(u.mastery_target)}</span>
       `;
       row.addEventListener('click', () => selectUnit(u.id));
@@ -635,6 +772,8 @@
         terms: u.terms || [],
         procedure: u.procedure || [],
         pitfalls: u.pitfalls || [],
+        needsCount: needsCount(u),
+        componentSize: componentSize(u),
         isRoot: id === rootId,
         isUpstream: up.has(id) && id !== rootId,
         isDownstream: down.has(id) && id !== rootId,
@@ -886,7 +1025,7 @@
     el.innerHTML = `
       <span class="sid" style="color: ${domColor(u.id[0])}">${u.id}</span>
       <span>${escapeHtml(u.name)}</span>
-      <span class="sname"> · ${up.size} voorwaarden, ${down.size} afhankelijk</span>
+      <span class="sname"> · ${needsCount(u)} directe needs · boom ${componentSize(u)} units · ${up.size} voorwaarden, ${down.size} afhankelijk</span>
     `;
   }
 
@@ -902,6 +1041,8 @@
       <strong>${DOM_NAMES[u.id[0]] || ''}</strong>
       &nbsp;·&nbsp; layer ${u.layer || 0}
       &nbsp;·&nbsp; ${u.mastery_target || '?'}
+      &nbsp;·&nbsp; ${needsCount(u)} directe needs
+      &nbsp;·&nbsp; boom ${componentSize(u)} units
       ${u.aspects ? '&nbsp;·&nbsp; ' + u.aspects.join(', ') : ''}
     `;
     document.getElementById('ip-kern').textContent = u.kern || '';
@@ -942,7 +1083,7 @@
   function showTooltip(event, d) {
     tooltip.innerHTML = `
       <div class="tt-title">${d.id} — ${escapeHtml(d.name)}</div>
-      <div class="tt-meta">${DOM_NAMES[d.domain] || ''} · layer ${d.layer} · ${d.mastery}</div>
+      <div class="tt-meta">${DOM_NAMES[d.domain] || ''} · layer ${d.layer} · ${d.mastery} · ${d.needsCount} needs · boom ${d.componentSize} units</div>
       ${d.kern ? `<div class="tt-kern">${escapeHtml(d.kern)}</div>` : ''}
       ${d.exam_codes.length ? `<div class="tt-codes">exam: ${d.exam_codes.join(', ')}</div>` : ''}
       ${d.terms.length ? `<div class="tt-terms">terms: ${d.terms.join(', ')}</div>` : ''}
