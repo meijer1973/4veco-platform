@@ -77,7 +77,6 @@ Open items are listed first; completed items are kept below them.
 
 | Sprint | Name | Completed | Current State |
 |--------|------|-----------|---------------|
-| R5.1 | Evidence-Anchor Layer | no | Planned. Add exact proof anchors for important claims. |
 | R5.2 | Alignment Graph | no | Planned. Create graph edges only after evidence and prerequisite work. |
 | R5.3 | Alignment Graph Review Gate | no | Planned. Human-reviewed gate before graph powers retrieval or diagnostics. |
 | R6.1 | JSON-First Reports | no | Planned. Markdown reports become projections of JSON. |
@@ -104,6 +103,7 @@ Open items are listed first; completed items are kept below them.
 | R14.1 | Curriculum Versioning | no | Planned. Track curriculum/source versions and reference migrations. |
 | R14.2 | Evidence Signal Model | no | Planned. Model quality and learning signals without surveillance or unnecessary student data. |
 | R14.3 | Continuous Improvement Reports | no | Planned. Produce evidence-platform reports and require review before external claims. |
+| R5.1 | Evidence-Anchor Layer | yes | Completed. Created the first governed evidence-anchor layer: source-ranking policy, 15 anchors, 13 claims, schemas, validator, and status reports. |
 | R4.3 | Blueprint Flag Triage | yes | Completed. Triaged all 84 current raw target-exercise missing-unit flags into a curated backlog: 68 still needed, 4 existing-unit match candidates, 1 duplicate, and 11 deferred. |
 | R4.2 | Exam-Question Extraction Gap Closure | yes | Completed. Produced a non-mutating gap report and patch queue for 27 exam-question records with missing required-skill annotations; protected references were not changed. |
 | R4.1 | Unit-Term Slug Migration | yes | Completed. Migrated safe unit `terms` values to canonical `begrippen.json` slug IDs through a validated migration script; left `alternatieve kosten` and `schaarste` unresolved for later term-registry review. |
@@ -235,6 +235,8 @@ Required work:
 Required output: evidence-anchor records plus validator.
 
 Stop condition: do not let reports or summaries become primary evidence.
+
+Completion: completed on 2026-04-26. R5.1 added `references/data/evidence-anchors.json`, operational evidence-anchor and claim schemas, `build-scripts/references/check-evidence-anchors.js`, and status reports. The first layer contains 15 evidence anchors and 13 claims. Generated reports are explicitly secondary and the validator rejects generated-report anchors marked as primary.
 
 ### R5.2 Alignment Graph
 
@@ -675,6 +677,7 @@ Current generated reports:
 - `reports/terminology-drift.md`: pass against machine-registry-first term validation.
 - `reports/exam-question-extraction-gaps.md`: patch queue, `27` exam-question records need required-skill review; `19` also need exam-code review.
 - `reports/blueprint-flag-triage.md`: curated backlog, `84` raw target-exercise flags triaged.
+- `reports/evidence-anchor-status.md`: pass, `15` evidence anchors and `13` claims.
 - `reports/procedure-coverage.md`: pass for apply+ units.
 - `reports/aspects-coverage.md`: informational, remaining exam-citation gaps.
 - `reports/unresolved-refs.md`: warnings only for deprecated references.
@@ -751,7 +754,7 @@ Do not let the graph become pedagogically authoritative until the alignment-grap
 
 Sprints:
 
-- `R5.1` planned: evidence-anchor layer.
+- `R5.1` completed: evidence-anchor layer.
 - `R5.2` planned: alignment graph.
 - `R5.3` planned: alignment graph review gate.
 
@@ -917,22 +920,23 @@ Do not invert this order.
 
 ## Immediate Next Sprint
 
-Do not proceed directly to graph construction or retrieval.
+Do not proceed directly to retrieval or diagnostics.
 
-Proceed with `R5.1 Evidence-Anchor Layer`.
+Proceed with `R5.2 Alignment Graph`.
 
-R4.3 completion state:
+R5.1 completion state:
 
-- blueprint flags are cataloged in `reports/blueprint-flag-triage.md` and `.json`
-- 84 current raw flags are triaged
-- 68 still needed, 4 existing-unit match candidates, 1 duplicate, and 11 deferred
-- no unit minting, merging, splitting, deprecating, or protected reference mutation happened
+- evidence-anchor schema and claim schema are operational
+- source-ranking policy exists in `references/data/evidence-anchors.json`
+- 15 evidence anchors and 13 claims validate
+- generated reports are secondary evidence and cannot be marked primary by the validator
+- no alignment graph edges were built yet
 
-R5.1 must:
+R5.2 must:
 
-- define evidence-anchor schema and source ranking
-- attach anchors first to high-risk decisions: prerequisite edges, elasticity decisions, labor-market sequencing, and exam links
-- keep reports and summaries secondary to source evidence
+- build graph edges only from evidence-backed relationships
+- separate prerequisite, supports, assesses, explains, contradicts, and derived-from edge types
+- keep the graph non-authoritative until the R5.3 review gate closes
 
 ## Final Rule
 

@@ -1,0 +1,16 @@
+{
+  "sprint_id": "R5.1",
+  "name": "Evidence-Anchor Layer",
+  "status": "in_progress",
+  "planned_on": "2026-04-26",
+  "plan": "docs/sprints/R5.1-plan.md",
+  "protected_reference_data_changes_allowed": false,
+  "human_review_required": false,
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js docs/sprints/R5.1-plan.md",
+    "node build-scripts/references/validate-core-schemas.js",
+    "node build-scripts/references/check-evidence-anchors.js",
+    "node build-scripts/sprints/check-sprint-result.js reports/sprints/R5.1-result.md",
+    "node build-scripts/sprints/check-sprint-bundle.js R5.1 --complete"
+  ]
+}

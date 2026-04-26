@@ -4,13 +4,29 @@
   "title": "Claim",
   "type": "object",
   "additionalProperties": false,
-  "required": ["claim_id", "claim_type", "subject_id", "object_id", "status"],
+  "required": ["claim_id", "claim_type", "subject_id", "object_id", "status", "evidence_ids"],
   "properties": {
-    "claim_id": { "type": "string" },
-    "claim_type": { "type": "string" },
+    "claim_id": { "type": "string", "pattern": "^CL-[A-Z0-9.-]+$" },
+    "claim_type": {
+      "type": "string",
+      "enum": [
+        "unit_prerequisite",
+        "unit_design_decision",
+        "exam_question_gap",
+        "term_definition",
+        "blueprint_flag_decision",
+        "source_policy"
+      ]
+    },
     "subject_id": { "type": "string" },
     "object_id": { "type": "string" },
     "evidence_ids": { "type": "array", "items": { "type": "string" } },
-    "status": { "type": "string" }
+    "status": {
+      "type": "string",
+      "enum": ["accepted", "review_ready", "hold", "rejected", "diagnostic"]
+    },
+    "decision_source": { "type": ["string", "null"] },
+    "review_required_before_use": { "type": "boolean" },
+    "notes": { "type": ["string", "null"] }
   }
 }
