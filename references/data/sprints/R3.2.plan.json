@@ -1,0 +1,22 @@
+{
+  "sprint_id": "R3.2",
+  "name": "Apply Reviewed Empty-Needs Corrections",
+  "status": "in_progress",
+  "planned_on": "2026-04-26",
+  "plan": "docs/sprints/R3.2-plan.md",
+  "protected_reference_data_changes_allowed": true,
+  "human_review_required": true,
+  "gate_id": "R2.4-mutation-review",
+  "review_packet": "reports/review-gates/GATE-R2-empty-needs/R2.4-mutation-review.json",
+  "valid_gate_statuses": ["authorize_with_limits"],
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js docs/sprints/R3.2-plan.md",
+    "node build-scripts/references/build-unit-index.js",
+    "node build-scripts/references/validate-prior-knowledge-schema.js",
+    "node build-scripts/reports/dag-integrity.js",
+    "node build-scripts/reports/needs-coverage.js",
+    "node build-scripts/reports/unresolved-refs.js",
+    "node build-scripts/sprints/check-sprint-result.js reports/sprints/R3.2-result.md",
+    "node build-scripts/sprints/check-sprint-bundle.js R3.2 --complete"
+  ]
+}

@@ -32,10 +32,14 @@ function main() {
   for (const k of changedKeys) u[k] = spec[k];
 
   try {
-    saveCatalog({ preamble, units });
+    saveCatalog({ preamble, units, dryRun: flags['dry-run'] === true });
   } catch (err) {
     reportValidationErrors(err);
     process.exit(1);
+  }
+  if (flags['dry-run'] === true) {
+    console.log(`DRY RUN  would update ${flags.id}: ${changedKeys.join(', ')}`);
+    return;
   }
   console.log(`OK  updated ${flags.id}: ${changedKeys.join(', ')}`);
 }

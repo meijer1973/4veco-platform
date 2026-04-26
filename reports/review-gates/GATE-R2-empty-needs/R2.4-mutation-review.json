@@ -1,0 +1,56 @@
+{
+  "gate_id": "R2.4-mutation-review",
+  "status": "authorize_with_limits",
+  "decision_date": "2026-04-26",
+  "authorized_sprint": "R3.2",
+  "approved_edges": [
+    ["A15", "A38"],
+    ["A16", "A15"],
+    ["A17", "A15"],
+    ["D06", "A15"],
+    ["L09", "L05"],
+    ["L11", "L05"],
+    ["L12", "L05"],
+    ["L13", "L05"],
+    ["D16", "D34"],
+    ["D16", "L10"],
+    ["L17", "D16"],
+    ["L19", "L09"],
+    ["I04", "L19"],
+    ["I10", "L19"],
+    ["H14", "I14"]
+  ],
+  "approved_zero_needs_status_updates": {
+    "underbouw_assumed": ["A01", "A02", "A03", "A04", "A05", "A38"]
+  },
+  "approved_non_mutation_decisions": [
+    {
+      "unit": "D04",
+      "decision": "do_not_add_simple_dependency",
+      "follow_up": "retire_merge_or_redistribute"
+    }
+  ],
+  "rejected_for_R3_2": [
+    ["D10", "D01"],
+    ["D10", "D03"],
+    ["D13", "D03"],
+    ["D32", "D01"],
+    ["D32", "D03"]
+  ],
+  "held_for_later_review": [
+    "A18",
+    "A42",
+    "A43",
+    ["L09", "L03"],
+    ["H13", "D13"],
+    ["H13", "D16"]
+  ],
+  "constraints": [
+    "apply only through CLI",
+    "run CLI dry-run first",
+    "no hand edits to references/machine",
+    "no opportunistic extra edges",
+    "stop if validation fails",
+    "regenerate affected reports"
+  ]
+}

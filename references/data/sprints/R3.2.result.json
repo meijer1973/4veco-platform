@@ -1,0 +1,48 @@
+{
+  "sprint_id": "R3.2",
+  "name": "Apply Reviewed Empty-Needs Corrections",
+  "status": "stopped_during_dry_run",
+  "completed_on": null,
+  "plan": "docs/sprints/R3.2-plan.md",
+  "baseline": "reports/sprints/R3.2-baseline.md",
+  "result": "reports/sprints/R3.2-result.md",
+  "diff_summary": "reports/sprints/R3.2-diff-summary.md",
+  "mutation_log": "reports/review-gates/GATE-R2-empty-needs/R3.2-mutation-log.json",
+  "outputs": [
+    "reports/review-gates/GATE-R2-empty-needs/R2.4-mutation-review.md",
+    "reports/review-gates/GATE-R2-empty-needs/R2.4-mutation-review.json",
+    "reports/review-gates/GATE-R2-empty-needs/R3.2-mutation-log.md",
+    "reports/review-gates/GATE-R2-empty-needs/R3.2-mutation-log.json",
+    "reports/sprints/R3.2-result.md",
+    "reports/sprints/R3.2-diff-summary.md"
+  ],
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js docs/sprints/R3.2-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js R3.2",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/unit-add-dep.js --dry-run --from A15 --to A38",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/unit-add-dep.js --dry-run --from A16 --to A15",
+      "status": "failed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js R3.2 --complete",
+      "status": "skipped_with_reason",
+      "reason": "mutation dry-run failed before protected reference writes"
+    }
+  ],
+  "protected_reference_data_changed": false,
+  "next_sprint": "fix CLI dependency layer recomputation before rerunning R3.2",
+  "blocked_sprints": [
+    "R3.2 completion",
+    "R4.1"
+  ]
+}

@@ -65,7 +65,7 @@ function rebuildMarkdown(preamble, units) {
   return renderPreamble(preamble, units) + '\n' + blocks.join('\n\n') + '\n';
 }
 
-function saveCatalog({ preamble, units }) {
+function saveCatalog({ preamble, units, dryRun = false }) {
   const newContent = rebuildMarkdown(preamble, units);
   const nextUnits = parseMarkdown(newContent);
   const { errors, byId } = validate(nextUnits, {
@@ -79,6 +79,7 @@ function saveCatalog({ preamble, units }) {
   }
   computeLayers(nextUnits, byId);
   const jsonEntries = sortUnits(nextUnits).map(buildJsonEntry);
+  if (dryRun) return nextUnits.length;
   fs.writeFileSync(UNITS_MD, newContent);
   fs.writeFileSync(UNITS_JSON, JSON.stringify(jsonEntries, null, 2) + '\n');
   return nextUnits.length;

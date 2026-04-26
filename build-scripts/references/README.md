@@ -87,6 +87,7 @@ Changes editable schema fields for an existing unit.
 
 ```powershell
 node build-scripts/references/unit-update.js --id <ID> --spec '<JSON patch>'
+node build-scripts/references/unit-update.js --dry-run --id <ID> --spec '<JSON patch>'
 ```
 
 Use this for accepted zero-needs review classifications, term-link updates, status fields, and other schema-preserving corrections.
@@ -106,6 +107,7 @@ Adds or removes prerequisite edges in the unit DAG.
 ```powershell
 node build-scripts/references/unit-add-dep.js --from <ID> --to <prereq>
 node build-scripts/references/unit-remove-dep.js --from <ID> --to <prereq>
+node build-scripts/references/unit-add-dep.js --dry-run --from <ID> --to <prereq>
 ```
 
 Use these only after the edge has human-reviewed evidence. The validator recomputes layers and rejects unresolved IDs or cycles.

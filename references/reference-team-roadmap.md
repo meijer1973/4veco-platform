@@ -77,7 +77,7 @@ Open items are listed first; completed items are kept below them.
 
 | Sprint | Name | Completed | Current State |
 |--------|------|-----------|---------------|
-| R3.2 | Apply Reviewed Empty-Needs Corrections | no | Blocked. Do not apply empty-needs dependency corrections until the R2.4 packet is human-reviewed for mutation. R3.1 confirms CLI readiness with documented blockers. |
+| R3.2 | Apply Reviewed Empty-Needs Corrections | no | Stopped during required dry-run. Human mutation review authorized a bounded mutation set, but `unit-add-dep --dry-run --from A16 --to A15` failed because stored layer validation runs before dependency-layer recomputation. No protected data changed. |
 | R4.1 | Unit-Term Slug Migration | no | Planned. Migrate unit `terms` fields to canonical `begrippen.json` slug IDs. |
 | R4.2 | Exam-Question Extraction Gap Closure | no | Planned. Complete missing required-skill and exam-code links where evidence supports it. |
 | R4.3 | Blueprint Flag Triage | no | Planned. Convert raw missing-unit flags into curated decisions. |
@@ -171,6 +171,8 @@ Required work:
 Required output: CLI mutation log, regenerated reports, and a diff summary proving protected changes were script-produced.
 
 Stop condition: blocked while the R2.4 packet has not been human-reviewed for mutation decisions or while R3.1 has not confirmed CLI/validator readiness.
+
+Status update, 2026-04-26: human mutation review now exists at `reports/review-gates/GATE-R2-empty-needs/R2.4-mutation-review.md` and `.json`. R3.2 started but stopped during dry-run before mutation. The next action is to fix the dependency CLI layer-recomputation workflow, then rerun the R3.2 dry-run from the beginning. Do not hand-edit `references/machine/`.
 
 ### R4.1 Unit-Term Slug Migration
 
@@ -713,7 +715,7 @@ Goal: complete any missing mutation scripts, update CLI documentation, and apply
 Sprints:
 
 - `R3.1` completed: reference CLI and documentation completion.
-- `R3.2` blocked: apply reviewed empty-needs corrections only after human mutation review of `R2.4`.
+- `R3.2` stopped during dry-run: human mutation review exists, but dependency CLI layer recomputation must be fixed before rerun.
 
 ### Phase R4: Term, Exam, Blueprint, And Authored-Bucket Cleanup
 
@@ -908,16 +910,19 @@ Do not invert this order.
 
 Do not proceed directly to protected-reference mutation.
 
-Next action: complete the human mutation review of the R2.4 evidence and unit-design packet. R3.2 can start only after that review explicitly authorizes which packet items may be applied through CLI.
+Next action: fix the dependency-mutation CLI layer-recomputation workflow, then rerun the R3.2 dry-run from the beginning.
 
 Current R3.2 readiness:
 
-- CLI/documentation readiness: completed by R3.1 with status `ready_with_blockers`
+- human mutation review: completed with status `authorize_with_limits`
+- CLI/documentation readiness: R3.1 completed with status `ready_with_blockers`
+- R3.2 dry-run status: stopped before mutation at `A16 -> A15`
+- stop reason: stored layer validation rejects the derived layer increase before the dependency CLI can safely recompute/persist layers
 - dependency-edge mutation path: available through `unit-add-dep.js` after review
 - zero-needs classification mutation path: available through `unit-update.js` after review
 - D04 lifecycle mutation path: available through `unit-deprecate.js`, `unit-split.js`, or `unit-merge.js`, but blocked until the human design decision is specific
 - evidence-anchor storage: deferred to R5.1 and not an R3.2 blocker while the R2.4 packet remains provenance
-- protected surfaces: keep `references/machine/` and `references/external/` protected until the reviewed CLI mutation sprint starts
+- protected surfaces: no protected reference data changed during the failed dry-run; continue to avoid hand edits
 
 ## Final Rule
 

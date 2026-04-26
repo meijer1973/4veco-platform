@@ -1,0 +1,23 @@
+{
+  "sprint_id": "R3.2",
+  "status": "stopped_during_dry_run",
+  "protected_reference_data_changed": false,
+  "decision_source": "reports/review-gates/GATE-R2-empty-needs/R2.4-mutation-review.json",
+  "dry_run_results": [
+    {
+      "step": 1,
+      "command": "node build-scripts/references/unit-add-dep.js --dry-run --from A15 --to A38",
+      "status": "passed",
+      "stdout": "DRY RUN  A15 would depend on A38"
+    },
+    {
+      "step": 2,
+      "command": "node build-scripts/references/unit-add-dep.js --dry-run --from A16 --to A15",
+      "status": "failed",
+      "stderr": "CATALOG  A16: stored layer 1 below derived minimum 2\n\n1 validation error(s). Catalog NOT written."
+    }
+  ],
+  "applied_mutations": [],
+  "stop_reason": "Dependency CLI validates stored layer values before dependency edits can recompute stored layers.",
+  "required_next_action": "Fix the unit dependency CLI layer recomputation workflow, then rerun R3.2 dry-run from the start."
+}
