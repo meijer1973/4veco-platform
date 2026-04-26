@@ -16,6 +16,10 @@
   ],
   "acceptance_tests": [
     "node build-scripts/sprints/check-sprint-plan.js docs/sprints/R2.3-plan.md",
+    "node build-scripts/references/audit-empty-needs.js",
+    "node build-scripts/references/check-empty-needs-audit.js",
+    "node build-scripts/references/prepare-empty-needs-review.js",
+    "node build-scripts/references/check-empty-needs-review.js",
     "node build-scripts/review-gates/validate-gate.js reports/review-gates/GATE-R2-empty-needs/gate-closure.json",
     "node build-scripts/reports/internal-dashboard.js",
     "node build-scripts/references/build-reference-inventory.js",

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-25T19:44:11.241Z",
+  "generatedAt": "2026-04-26T07:14:05.342Z",
   "internalOnly": true,
   "teams": [
     {
@@ -163,10 +163,10 @@
           "summary": "References Team Roadmap Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Scope: references/, build-scripts/references/, build-scripts/reports/, reference dashboards, and generated reference reports under reports/ Adoption Decision The handoff roadmap has been adopted as the main operating roadmap for the references team. No blocking incompatibility was found. The roadmap direction fits the repository: machine-edited references, evidence-first unit growth, JSON-first reports, review gates for pedagogical auth...",
           "sprints": [
             {
-              "sprint": "R2.3",
-              "name": "Human Review And Gate Closure",
+              "sprint": "R2.4",
+              "name": "Evidence And Unit-Design Cleanup",
               "completed": "no",
-              "currentState": "Active; waiting for human gate decision on the GATE-R2 empty-needs review packet.",
+              "currentState": "Next. Attach exact evidence to candidate edges, resolve D04 unit scope, classify foundational A-domain zero-needs, and run a labor-market/unemployment second pass before R3.2.",
               "exitGate": ""
             },
             {
@@ -180,7 +180,7 @@
               "sprint": "R3.2",
               "name": "Apply Reviewed Empty-Needs Corrections",
               "completed": "no",
-              "currentState": "Planned. Apply only reviewed prerequisite corrections through CLI.",
+              "currentState": "Blocked by GATE-R2 hold. Do not apply empty-needs dependency corrections until R2.4 supplies exact evidence and unit-design decisions.",
               "exitGate": ""
             },
             {
@@ -268,6 +268,13 @@
               "exitGate": ""
             },
             {
+              "sprint": "R2.3",
+              "name": "Human Review And Gate Closure",
+              "completed": "yes",
+              "currentState": "Completed with GATE-R2 status `hold`. The audit is diagnostic only; R3.2 is blocked until R2.4 evidence and unit-design cleanup is complete.",
+              "exitGate": ""
+            },
+            {
               "sprint": "R2.2",
               "name": "Subagent Review For Empty Needs",
               "completed": "yes",
@@ -342,10 +349,10 @@
       ],
       "sprints": [
         {
-          "sprint": "R2.3",
-          "name": "Human Review And Gate Closure",
+          "sprint": "R2.4",
+          "name": "Evidence And Unit-Design Cleanup",
           "completed": "no",
-          "currentState": "Active; waiting for human gate decision on the GATE-R2 empty-needs review packet.",
+          "currentState": "Next. Attach exact evidence to candidate edges, resolve D04 unit scope, classify foundational A-domain zero-needs, and run a labor-market/unemployment second pass before R3.2.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -361,7 +368,7 @@
           "sprint": "R3.2",
           "name": "Apply Reviewed Empty-Needs Corrections",
           "completed": "no",
-          "currentState": "Planned. Apply only reviewed prerequisite corrections through CLI.",
+          "currentState": "Blocked by GATE-R2 hold. Do not apply empty-needs dependency corrections until R2.4 supplies exact evidence and unit-design decisions.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -462,6 +469,14 @@
           "roadmap": "References roadmap"
         },
         {
+          "sprint": "R2.3",
+          "name": "Human Review And Gate Closure",
+          "completed": "yes",
+          "currentState": "Completed with GATE-R2 status `hold`. The audit is diagnostic only; R3.2 is blocked until R2.4 evidence and unit-design cleanup is complete.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
           "sprint": "R2.2",
           "name": "Subagent Review For Empty Needs",
           "completed": "yes",
@@ -542,7 +557,7 @@
           "roadmap": "References roadmap"
         }
       ],
-      "completedCount": 10,
+      "completedCount": 11,
       "openCount": 15
     },
     {

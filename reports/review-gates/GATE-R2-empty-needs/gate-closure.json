@@ -1,0 +1,61 @@
+{
+  "gate_id": "GATE-R2-empty-needs",
+  "sprint_id": "R2.3",
+  "status": "hold",
+  "closed_on": "2026-04-26",
+  "closure_confirmed_by_human": true,
+  "human_interview": "reports/review-gates/GATE-R2-empty-needs/human-interview.md",
+  "review_packet": "reports/review-gates/GATE-R2-empty-needs/review-packet.md",
+  "audit": "references/data/audits/empty-needs-audit.json",
+  "summary": "The empty-needs audit is useful diagnostic input, but it does not authorize dependency mutation. Exact exam or target-exercise evidence is required before applying prerequisite edges.",
+  "accepted_outcomes": [
+    "R2.1/R2.2 audit and review packet are accepted as diagnostic inputs.",
+    "Foundational A-domain units may be treated as underbouw_assumed rather than given artificial platform prerequisites.",
+    "The elasticity chain direction is pedagogically useful but still needs evidence anchors before mutation."
+  ],
+  "blocked_outcomes": [
+    "Do not apply empty-needs dependency corrections through CLI yet.",
+    "Do not treat machine suggestions as accepted human decisions.",
+    "Do not proceed to authoritative prerequisite graph work from this packet.",
+    "Do not proceed to R3.2 as the immediate next sprint."
+  ],
+  "explicit_decisions": [
+    {
+      "topic": "evidence threshold",
+      "decision": "Hold all dependency corrections until exact exam or target-exercise evidence is attached per edge."
+    },
+    {
+      "topic": "foundational A-domain units",
+      "decision": "Treat foundational A-domain empty-needs units as underbouw_assumed where appropriate."
+    },
+    {
+      "topic": "elasticity chain",
+      "decision": "A15 Prijselasticiteit van de vraag should depend on A38 Percentage change, and A16/A17 should route through A15, but mutation waits for exact evidence."
+    },
+    {
+      "topic": "D04 Elasticiteit en goederenclassificatie",
+      "decision": "Treat D04 as a unit-design issue, likely merge/retire/redistribute into the relevant elasticity units."
+    },
+    {
+      "topic": "market graph suggestions",
+      "decision": "Reject D10 -> D01/D03, D13 -> D03, and D32 -> D01/D03 as wrong-layer or too advanced."
+    },
+    {
+      "topic": "labor-market sequence",
+      "decision": "Hold labor-market and unemployment sequencing for a separate second pedagogical pass."
+    }
+  ],
+  "allowed_next_sprint": "R2.4",
+  "allowed_next_sprint_name": "Evidence And Unit-Design Cleanup",
+  "blocked_next_sprints": [
+    "R3.2"
+  ],
+  "conditions_to_reopen_or_pass": [
+    "Attach exact exam or target-exercise evidence to candidate dependency edges.",
+    "Resolve D04 unit scope before applying any D04 dependency edge.",
+    "Classify foundational A-domain empty-needs units with an explicit workflow.",
+    "Run a separate labor-market/unemployment sequencing review.",
+    "Keep all machine-reference mutations behind CLI scripts."
+  ],
+  "protected_reference_data_changed": false
+}

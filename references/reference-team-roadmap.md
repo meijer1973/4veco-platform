@@ -54,6 +54,8 @@ Before execution, the sprint plan must include an `Operationalized sprint proced
 
 For human-review gates, the procedure must include the full interview or review protocol, not only the final gate status. R2.3 is the reference example: the plan must include calibration questions, answer recording, pattern analysis, targeted follow-ups, closure proposal, explicit human confirmation, and only then gate records.
 
+Human-review interviews must be interactive: ask one question at a time, offer clear multiple-choice options where useful plus an open-answer option, record the answer, and then choose the next question or next interview mode. Do not dump a full interview list at the human reviewer. Include enough context in each question that the reviewer does not need to look up unit IDs or shorthand labels.
+
 ## Subagent And Verification Structure
 
 Subagents are part of the sprint control system, not a substitute for it.
@@ -74,9 +76,9 @@ Open items are listed first; completed items are kept below them.
 
 | Sprint | Name | Completed | Current State |
 |--------|------|-----------|---------------|
-| R2.3 | Human Review And Gate Closure | no | Active; waiting for human gate decision on the GATE-R2 empty-needs review packet. |
+| R2.4 | Evidence And Unit-Design Cleanup | no | Next. Attach exact evidence to candidate edges, resolve D04 unit scope, classify foundational A-domain zero-needs, and run a labor-market/unemployment second pass before R3.2. |
 | R3.1 | Reference CLI And Documentation Completion | no | Planned. Fill any CLI gaps needed for reviewed corrections and update stale CLI docs. |
-| R3.2 | Apply Reviewed Empty-Needs Corrections | no | Planned. Apply only reviewed prerequisite corrections through CLI. |
+| R3.2 | Apply Reviewed Empty-Needs Corrections | no | Blocked by GATE-R2 hold. Do not apply empty-needs dependency corrections until R2.4 supplies exact evidence and unit-design decisions. |
 | R4.1 | Unit-Term Slug Migration | no | Planned. Migrate unit `terms` fields to canonical `begrippen.json` slug IDs. |
 | R4.2 | Exam-Question Extraction Gap Closure | no | Planned. Complete missing required-skill and exam-code links where evidence supports it. |
 | R4.3 | Blueprint Flag Triage | no | Planned. Convert raw missing-unit flags into curated decisions. |
@@ -89,6 +91,7 @@ Open items are listed first; completed items are kept below them.
 | R7.2 | Hybrid Retrieval | no | Planned. Add lexical/entity/graph retrieval before optional vector search. |
 | R7.3 | Retrieval Evaluation Set | no | Planned. Make retrieval quality regressions visible. |
 | R7.4 | RAG Review Gate | no | Planned. Approve internal/teacher-facing RAG only after evaluation. |
+| R2.3 | Human Review And Gate Closure | yes | Completed with GATE-R2 status `hold`. The audit is diagnostic only; R3.2 is blocked until R2.4 evidence and unit-design cleanup is complete. |
 | R2.2 | Subagent Review For Empty Needs | yes | Completed. Pedagogy, data-integrity, and evidence reviews plus a GATE-R2 review packet are ready for human review. |
 | R2.1 | Full Empty-Needs Audit | yes | Completed. Non-mutating audit generated 61 machine-suggested empty-needs review entries for the current branch catalog. |
 | R1.3 | Unit Prior-Knowledge Schema Extension | yes | Completed. Unit and review schemas now support zero-needs status, assumed prior knowledge, and review records. |
@@ -300,6 +303,7 @@ R1.3 Unit prior-knowledge schema extension
 R2.1 Full empty-needs audit, non-mutating
 R2.2 Subagent review
 R2.3 Adaptive human review and gate closure
+R2.4 Evidence and unit-design cleanup after GATE-R2 hold
 R3.1 Reference CLI and documentation completion
 R3.2 Apply reviewed empty-needs corrections
 R4.1 Unit-term slug migration
@@ -320,29 +324,18 @@ Do not invert this order.
 
 ## Immediate Next Sprint
 
-Proceed with `R2.3 Human Review And Gate Closure`.
+Proceed with `R2.4 Evidence And Unit-Design Cleanup`.
 
-Create:
+R2.3 closed `GATE-R2-empty-needs` as `hold`, so R3.2 must not proceed yet.
 
-- `docs/sprints/R2.3-plan.md`
-- `references/data/sprints/R2.3.plan.json`
-- `reports/sprints/R2.3-baseline.md`
-- `reports/review-gates/GATE-R2-empty-needs/human-interview.md`
-- `reports/review-gates/GATE-R2-empty-needs/gate-closure.json`
-- gate validator under `build-scripts/review-gates/`
+R2.4 must:
 
-Ask the human reviewer to decide whether the empty-needs gate is `pass`, `pass_with_conditions`, `hold`, or `fail`. Do not apply dependency corrections before the gate is closed.
-
-R2.3 must use the adaptive human interview protocol:
-
-1. Ask about 8-10 calibration questions grounded in the review packet.
-2. Record the human answers in `human-interview.md`.
-3. Analyze answer patterns.
-4. Choose one next mode: `continue_targeted`, `batch_confirm_low_risk`, `pause_for_missing_evidence`, `rerun_audit_with_revised_rubric`, `schema_change_required`, or `propose_gate_closure`.
-5. Ask targeted follow-ups or batch-confirm low-risk rules.
-6. Draft a closure proposal.
-7. Get explicit human confirmation.
-8. Write `gate-closure.json` and validate it.
+- attach exact exam or target-exercise evidence to candidate dependency edges before any edge can later be applied
+- resolve `D04 Elasticiteit en goederenclassificatie` as a unit-design issue, likely merge/retire/redistribute into the relevant elasticity units
+- classify foundational A-domain empty-needs units, especially `underbouw_assumed` cases
+- run a second pedagogical pass for labor-market and unemployment sequencing
+- preserve rejected machine suggestions such as `D10 -> D01/D03`, `D13 -> D03`, and `D32 -> D01/D03` as rejected unless new evidence proves otherwise
+- produce a review-ready packet before R3.2 is reconsidered
 
 ## Final Rule
 
