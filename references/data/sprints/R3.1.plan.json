@@ -1,0 +1,17 @@
+{
+  "sprint_id": "R3.1",
+  "name": "Reference CLI And Documentation Completion",
+  "status": "in_progress",
+  "planned_on": "2026-04-26",
+  "plan": "docs/sprints/R3.1-plan.md",
+  "protected_reference_data_changes_allowed": false,
+  "human_review_required": false,
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js docs/sprints/R3.1-plan.md",
+    "node build-scripts/references/build-unit-index.js",
+    "node build-scripts/references/validate-prior-knowledge-schema.js",
+    "node build-scripts/references/check-reference-cli-coverage.js",
+    "node build-scripts/sprints/check-sprint-result.js reports/sprints/R3.1-result.md",
+    "node build-scripts/sprints/check-sprint-bundle.js R3.1 --complete"
+  ]
+}

@@ -45,6 +45,8 @@ const APPLY_OR_HIGHER = new Set(['apply', 'analyze', 'evaluate']);
 const PRIOR_LEARNING = ['previously_taught', 'new_this_year', 'review_and_extend'];
 const ASPECTS = ['verbaal', 'grafisch', 'rekenen'];
 const REQUIRED_FIELDS = ['kern', 'needs', 'mastery_target', 'prior_learning', 'terms', 'aspects'];
+const ZERO_NEEDS_STATUS = ['true_zero', 'underbouw_assumed', 'false_zero', 'ambiguous', 'not_reviewed'];
+const REVIEW_SEVERITY = ['low', 'medium', 'high'];
 
 // ----- parsing -----
 
@@ -98,6 +100,8 @@ function parseInlineValue(raw) {
     if (!inner) return [];
     return inner.split(',').map(s => s.trim().replace(/^["']|["']$/g, ''));
   }
+  // JSON object form for structured review metadata.
+  if (/^\{.*\}$/.test(raw)) return JSON.parse(raw);
   // Quoted string
   if (/^".*"$/.test(raw) || /^'.*'$/.test(raw)) return raw.slice(1, -1);
   // Boolean
@@ -166,6 +170,27 @@ function validate(units, { terms, eindtermen }) {
     }
     if (u.id.startsWith('A') && u.generator === undefined && !u.deprecated) {
       errors.push(`${u.id}: A-domain units require a generator field`);
+    }
+    if (u.assumed_prior_knowledge !== undefined && !Array.isArray(u.assumed_prior_knowledge)) {
+      errors.push(`${u.id}: assumed_prior_knowledge must be a list`);
+    }
+    if (u.zero_needs_status !== undefined && !ZERO_NEEDS_STATUS.includes(u.zero_needs_status)) {
+      errors.push(`${u.id}: zero_needs_status "${u.zero_needs_status}" not in ${ZERO_NEEDS_STATUS.join('|')}`);
+    }
+    if (u.zero_needs_review !== undefined) {
+      if (!u.zero_needs_review || typeof u.zero_needs_review !== 'object' || Array.isArray(u.zero_needs_review)) {
+        errors.push(`${u.id}: zero_needs_review must be an object`);
+      } else {
+        for (const field of ['reviewed_on', 'reviewer', 'rationale', 'recommended_needs', 'severity']) {
+          if (u.zero_needs_review[field] === undefined) errors.push(`${u.id}: zero_needs_review missing ${field}`);
+        }
+        if (u.zero_needs_review.recommended_needs !== undefined && !Array.isArray(u.zero_needs_review.recommended_needs)) {
+          errors.push(`${u.id}: zero_needs_review.recommended_needs must be a list`);
+        }
+        if (u.zero_needs_review.severity !== undefined && !REVIEW_SEVERITY.includes(u.zero_needs_review.severity)) {
+          errors.push(`${u.id}: zero_needs_review.severity "${u.zero_needs_review.severity}" not in ${REVIEW_SEVERITY.join('|')}`);
+        }
+      }
     }
 
     if (Array.isArray(u.terms) && terms) {
@@ -372,6 +397,7 @@ function buildJsonEntry(u) {
   const passthrough = [
     'duration_min', 'kern', 'needs', 'exam_codes', 'mastery_target',
     'prior_learning', 'aspects', 'terms', 'procedure', 'pitfalls', 'generator',
+    'assumed_prior_knowledge', 'zero_needs_status', 'zero_needs_review',
     'deprecated', 'deprecated_in_favor_of',
   ];
   for (const k of passthrough) if (u[k] !== undefined) entry[k] = u[k];
