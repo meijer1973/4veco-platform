@@ -1,0 +1,41 @@
+{
+  "schema_version": "0.1",
+  "sprint_id": "R5.2",
+  "generated_on": "2026-04-26",
+  "status": "pass",
+  "source": "references/data/alignment-graph.json",
+  "evidence_source": "references/data/evidence-anchors.json",
+  "summary": {
+    "edge_count": 31,
+    "claim_count": 13,
+    "evidence_anchor_count": 15,
+    "human_approved_edge_count": 0,
+    "generated_report_edge_count": 2,
+    "pending_main_edge_count": 13,
+    "by_relation": {
+      "assesses": 1,
+      "derived_from": 18,
+      "explains": 1,
+      "prerequisite": 9,
+      "supports": 2
+    },
+    "by_review_status": {
+      "diagnostic_only": 1,
+      "pending_r5_3_review": 30
+    },
+    "by_strength": {
+      "diagnostic": 2,
+      "medium": 6,
+      "strong": 23
+    },
+    "by_source_layer": {
+      "authored_judgement": 16,
+      "external_authority": 6,
+      "generated_report": 2,
+      "governance_data": 2,
+      "human_gate_decision": 4,
+      "machine_registry": 6
+    }
+  },
+  "errors": []
+}

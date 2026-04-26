@@ -1,0 +1,516 @@
+{
+  "schema_version": "0.1",
+  "sprint_id": "R5.2",
+  "generated_on": "2026-04-26",
+  "graph_status": "draft_pending_r5_3_review",
+  "source": "references/data/evidence-anchors.json",
+  "edge_count": 31,
+  "edges": [
+    {
+      "edge_id": "EDGE-SUPPORTS-EVIDENCE-LAYER-SOURCE-RANKING",
+      "from": "policy:evidence-layer",
+      "to": "policy:source-ranking",
+      "relation": "supports",
+      "evidence_ids": [
+        "EV-R5.1-SOURCE-RANK-POLICY"
+      ],
+      "claim_id": "CL-SOURCE-RANK-POLICY",
+      "strength": "medium",
+      "source_layers": [
+        "governance_data"
+      ],
+      "notes": "Projected from validated R5.1 claim; graph still awaits R5.3 review.",
+      "review_status": "pending_r5_3_review"
+    },
+    {
+      "edge_id": "EDGE-DERIVED-FROM-CL-SOURCE-RANK-POLICY-EV-R5.1-SOURCE-RANK-POLICY",
+      "from": "claim:CL-SOURCE-RANK-POLICY",
+      "to": "evidence:EV-R5.1-SOURCE-RANK-POLICY",
+      "relation": "derived_from",
+      "evidence_ids": [
+        "EV-R5.1-SOURCE-RANK-POLICY"
+      ],
+      "claim_id": "CL-SOURCE-RANK-POLICY",
+      "strength": "strong",
+      "source_layers": [
+        "governance_data"
+      ],
+      "review_status": "pending_r5_3_review",
+      "notes": "Traceability edge from claim to evidence anchor."
+    },
+    {
+      "edge_id": "EDGE-PREREQUISITE-A15-A38",
+      "from": "unit:A15",
+      "to": "unit:A38",
+      "relation": "prerequisite",
+      "evidence_ids": [
+        "EV-A15-A38-TARGET",
+        "EV-A15-A38-MACHINE"
+      ],
+      "claim_id": "CL-EDGE-A15-A38",
+      "strength": "strong",
+      "source_layers": [
+        "authored_judgement",
+        "machine_registry"
+      ],
+      "notes": "Projected from validated R5.1 claim; graph still awaits R5.3 review.",
+      "review_status": "pending_r5_3_review"
+    },
+    {
+      "edge_id": "EDGE-DERIVED-FROM-CL-EDGE-A15-A38-EV-A15-A38-TARGET",
+      "from": "claim:CL-EDGE-A15-A38",
+      "to": "evidence:EV-A15-A38-TARGET",
+      "relation": "derived_from",
+      "evidence_ids": [
+        "EV-A15-A38-TARGET"
+      ],
+      "claim_id": "CL-EDGE-A15-A38",
+      "strength": "strong",
+      "source_layers": [
+        "authored_judgement"
+      ],
+      "review_status": "pending_r5_3_review",
+      "notes": "Traceability edge from claim to evidence anchor."
+    },
+    {
+      "edge_id": "EDGE-DERIVED-FROM-CL-EDGE-A15-A38-EV-A15-A38-MACHINE",
+      "from": "claim:CL-EDGE-A15-A38",
+      "to": "evidence:EV-A15-A38-MACHINE",
+      "relation": "derived_from",
+      "evidence_ids": [
+        "EV-A15-A38-MACHINE"
+      ],
+      "claim_id": "CL-EDGE-A15-A38",
+      "strength": "strong",
+      "source_layers": [
+        "machine_registry"
+      ],
+      "review_status": "pending_r5_3_review",
+      "notes": "Traceability edge from claim to evidence anchor."
+    },
+    {
+      "edge_id": "EDGE-PREREQUISITE-A16-A15",
+      "from": "unit:A16",
+      "to": "unit:A15",
+      "relation": "prerequisite",
+      "evidence_ids": [
+        "EV-A16-A17-A15-TARGET",
+        "EV-A16-A17-A15-HUMAN"
+      ],
+      "claim_id": "CL-EDGE-A16-A15",
+      "strength": "strong",
+      "source_layers": [
+        "authored_judgement",
+        "human_gate_decision"
+      ],
+      "notes": "Projected from validated R5.1 claim; graph still awaits R5.3 review.",
+      "review_status": "pending_r5_3_review"
+    },
+    {
+      "edge_id": "EDGE-DERIVED-FROM-CL-EDGE-A16-A15-EV-A16-A17-A15-TARGET",
+      "from": "claim:CL-EDGE-A16-A15",
+      "to": "evidence:EV-A16-A17-A15-TARGET",
+      "relation": "derived_from",
+      "evidence_ids": [
+        "EV-A16-A17-A15-TARGET"
+      ],
+      "claim_id": "CL-EDGE-A16-A15",
+      "strength": "strong",
+      "source_layers": [
+        "authored_judgement"
+      ],
+      "review_status": "pending_r5_3_review",
+      "notes": "Traceability edge from claim to evidence anchor."
+    },
+    {
+      "edge_id": "EDGE-DERIVED-FROM-CL-EDGE-A16-A15-EV-A16-A17-A15-HUMAN",
+      "from": "claim:CL-EDGE-A16-A15",
+      "to": "evidence:EV-A16-A17-A15-HUMAN",
+      "relation": "derived_from",
+      "evidence_ids": [
+        "EV-A16-A17-A15-HUMAN"
+      ],
+      "claim_id": "CL-EDGE-A16-A15",
+      "strength": "strong",
+      "source_layers": [
+        "human_gate_decision"
+      ],
+      "review_status": "pending_r5_3_review",
+      "notes": "Traceability edge from claim to evidence anchor."
+    },
+    {
+      "edge_id": "EDGE-PREREQUISITE-A17-A15",
+      "from": "unit:A17",
+      "to": "unit:A15",
+      "relation": "prerequisite",
+      "evidence_ids": [
+        "EV-A16-A17-A15-TARGET",
+        "EV-A16-A17-A15-HUMAN"
+      ],
+      "claim_id": "CL-EDGE-A17-A15",
+      "strength": "strong",
+      "source_layers": [
+        "authored_judgement",
+        "human_gate_decision"
+      ],
+      "notes": "Projected from validated R5.1 claim; graph still awaits R5.3 review.",
+      "review_status": "pending_r5_3_review"
+    },
+    {
+      "edge_id": "EDGE-DERIVED-FROM-CL-EDGE-A17-A15-EV-A16-A17-A15-TARGET",
+      "from": "claim:CL-EDGE-A17-A15",
+      "to": "evidence:EV-A16-A17-A15-TARGET",
+      "relation": "derived_from",
+      "evidence_ids": [
+        "EV-A16-A17-A15-TARGET"
+      ],
+      "claim_id": "CL-EDGE-A17-A15",
+      "strength": "strong",
+      "source_layers": [
+        "authored_judgement"
+      ],
+      "review_status": "pending_r5_3_review",
+      "notes": "Traceability edge from claim to evidence anchor."
+    },
+    {
+      "edge_id": "EDGE-DERIVED-FROM-CL-EDGE-A17-A15-EV-A16-A17-A15-HUMAN",
+      "from": "claim:CL-EDGE-A17-A15",
+      "to": "evidence:EV-A16-A17-A15-HUMAN",
+      "relation": "derived_from",
+      "evidence_ids": [
+        "EV-A16-A17-A15-HUMAN"
+      ],
+      "claim_id": "CL-EDGE-A17-A15",
+      "strength": "strong",
+      "source_layers": [
+        "human_gate_decision"
+      ],
+      "review_status": "pending_r5_3_review",
+      "notes": "Traceability edge from claim to evidence anchor."
+    },
+    {
+      "edge_id": "EDGE-PREREQUISITE-D06-A15",
+      "from": "unit:D06",
+      "to": "unit:A15",
+      "relation": "prerequisite",
+      "evidence_ids": [
+        "EV-D06-A15-EXAM"
+      ],
+      "claim_id": "CL-EDGE-D06-A15",
+      "strength": "strong",
+      "source_layers": [
+        "external_authority"
+      ],
+      "notes": "Projected from validated R5.1 claim; graph still awaits R5.3 review.",
+      "review_status": "pending_r5_3_review"
+    },
+    {
+      "edge_id": "EDGE-DERIVED-FROM-CL-EDGE-D06-A15-EV-D06-A15-EXAM",
+      "from": "claim:CL-EDGE-D06-A15",
+      "to": "evidence:EV-D06-A15-EXAM",
+      "relation": "derived_from",
+      "evidence_ids": [
+        "EV-D06-A15-EXAM"
+      ],
+      "claim_id": "CL-EDGE-D06-A15",
+      "strength": "strong",
+      "source_layers": [
+        "external_authority"
+      ],
+      "review_status": "pending_r5_3_review",
+      "notes": "Traceability edge from claim to evidence anchor."
+    },
+    {
+      "edge_id": "EDGE-SUPPORTS-D04-RETIRE-MERGE-OR-REDISTRIBUTE",
+      "from": "unit:D04",
+      "to": "decision:retire-merge-or-redistribute",
+      "relation": "supports",
+      "evidence_ids": [
+        "EV-D04-DESIGN-TARGET"
+      ],
+      "claim_id": "CL-D04-DESIGN",
+      "strength": "medium",
+      "source_layers": [
+        "authored_judgement"
+      ],
+      "notes": "Underlying claim requires review before use.",
+      "review_status": "pending_r5_3_review"
+    },
+    {
+      "edge_id": "EDGE-DERIVED-FROM-CL-D04-DESIGN-EV-D04-DESIGN-TARGET",
+      "from": "claim:CL-D04-DESIGN",
+      "to": "evidence:EV-D04-DESIGN-TARGET",
+      "relation": "derived_from",
+      "evidence_ids": [
+        "EV-D04-DESIGN-TARGET"
+      ],
+      "claim_id": "CL-D04-DESIGN",
+      "strength": "strong",
+      "source_layers": [
+        "authored_judgement"
+      ],
+      "review_status": "pending_r5_3_review",
+      "notes": "Traceability edge from claim to evidence anchor."
+    },
+    {
+      "edge_id": "EDGE-PREREQUISITE-L09-L05",
+      "from": "unit:L09",
+      "to": "unit:L05",
+      "relation": "prerequisite",
+      "evidence_ids": [
+        "EV-L09-L05-TARGET"
+      ],
+      "claim_id": "CL-EDGE-L09-L05",
+      "strength": "medium",
+      "source_layers": [
+        "authored_judgement"
+      ],
+      "notes": "Projected from validated R5.1 claim; graph still awaits R5.3 review.",
+      "review_status": "pending_r5_3_review"
+    },
+    {
+      "edge_id": "EDGE-DERIVED-FROM-CL-EDGE-L09-L05-EV-L09-L05-TARGET",
+      "from": "claim:CL-EDGE-L09-L05",
+      "to": "evidence:EV-L09-L05-TARGET",
+      "relation": "derived_from",
+      "evidence_ids": [
+        "EV-L09-L05-TARGET"
+      ],
+      "claim_id": "CL-EDGE-L09-L05",
+      "strength": "strong",
+      "source_layers": [
+        "authored_judgement"
+      ],
+      "review_status": "pending_r5_3_review",
+      "notes": "Traceability edge from claim to evidence anchor."
+    },
+    {
+      "edge_id": "EDGE-PREREQUISITE-D16-L10",
+      "from": "unit:D16",
+      "to": "unit:L10",
+      "relation": "prerequisite",
+      "evidence_ids": [
+        "EV-D16-L10-TARGET",
+        "EV-D16-EXAM"
+      ],
+      "claim_id": "CL-EDGE-D16-L10",
+      "strength": "strong",
+      "source_layers": [
+        "authored_judgement",
+        "external_authority"
+      ],
+      "notes": "Projected from validated R5.1 claim; graph still awaits R5.3 review.",
+      "review_status": "pending_r5_3_review"
+    },
+    {
+      "edge_id": "EDGE-DERIVED-FROM-CL-EDGE-D16-L10-EV-D16-L10-TARGET",
+      "from": "claim:CL-EDGE-D16-L10",
+      "to": "evidence:EV-D16-L10-TARGET",
+      "relation": "derived_from",
+      "evidence_ids": [
+        "EV-D16-L10-TARGET"
+      ],
+      "claim_id": "CL-EDGE-D16-L10",
+      "strength": "strong",
+      "source_layers": [
+        "authored_judgement"
+      ],
+      "review_status": "pending_r5_3_review",
+      "notes": "Traceability edge from claim to evidence anchor."
+    },
+    {
+      "edge_id": "EDGE-DERIVED-FROM-CL-EDGE-D16-L10-EV-D16-EXAM",
+      "from": "claim:CL-EDGE-D16-L10",
+      "to": "evidence:EV-D16-EXAM",
+      "relation": "derived_from",
+      "evidence_ids": [
+        "EV-D16-EXAM"
+      ],
+      "claim_id": "CL-EDGE-D16-L10",
+      "strength": "strong",
+      "source_layers": [
+        "external_authority"
+      ],
+      "review_status": "pending_r5_3_review",
+      "notes": "Traceability edge from claim to evidence anchor."
+    },
+    {
+      "edge_id": "EDGE-PREREQUISITE-I04-L19",
+      "from": "unit:I04",
+      "to": "unit:L19",
+      "relation": "prerequisite",
+      "evidence_ids": [
+        "EV-I04-I10-L19-TARGET"
+      ],
+      "claim_id": "CL-EDGE-I04-L19",
+      "strength": "medium",
+      "source_layers": [
+        "authored_judgement"
+      ],
+      "notes": "Projected from validated R5.1 claim; graph still awaits R5.3 review.",
+      "review_status": "pending_r5_3_review"
+    },
+    {
+      "edge_id": "EDGE-DERIVED-FROM-CL-EDGE-I04-L19-EV-I04-I10-L19-TARGET",
+      "from": "claim:CL-EDGE-I04-L19",
+      "to": "evidence:EV-I04-I10-L19-TARGET",
+      "relation": "derived_from",
+      "evidence_ids": [
+        "EV-I04-I10-L19-TARGET"
+      ],
+      "claim_id": "CL-EDGE-I04-L19",
+      "strength": "strong",
+      "source_layers": [
+        "authored_judgement"
+      ],
+      "review_status": "pending_r5_3_review",
+      "notes": "Traceability edge from claim to evidence anchor."
+    },
+    {
+      "edge_id": "EDGE-PREREQUISITE-I10-L19",
+      "from": "unit:I10",
+      "to": "unit:L19",
+      "relation": "prerequisite",
+      "evidence_ids": [
+        "EV-I04-I10-L19-TARGET"
+      ],
+      "claim_id": "CL-EDGE-I10-L19",
+      "strength": "medium",
+      "source_layers": [
+        "authored_judgement"
+      ],
+      "notes": "Projected from validated R5.1 claim; graph still awaits R5.3 review.",
+      "review_status": "pending_r5_3_review"
+    },
+    {
+      "edge_id": "EDGE-DERIVED-FROM-CL-EDGE-I10-L19-EV-I04-I10-L19-TARGET",
+      "from": "claim:CL-EDGE-I10-L19",
+      "to": "evidence:EV-I04-I10-L19-TARGET",
+      "relation": "derived_from",
+      "evidence_ids": [
+        "EV-I04-I10-L19-TARGET"
+      ],
+      "claim_id": "CL-EDGE-I10-L19",
+      "strength": "strong",
+      "source_layers": [
+        "authored_judgement"
+      ],
+      "review_status": "pending_r5_3_review",
+      "notes": "Traceability edge from claim to evidence anchor."
+    },
+    {
+      "edge_id": "EDGE-PREREQUISITE-H14-I14",
+      "from": "unit:H14",
+      "to": "unit:I14",
+      "relation": "prerequisite",
+      "evidence_ids": [
+        "EV-H14-I14-MACHINE",
+        "EV-H14-I14-EXAM"
+      ],
+      "claim_id": "CL-EDGE-H14-I14",
+      "strength": "strong",
+      "source_layers": [
+        "external_authority",
+        "machine_registry"
+      ],
+      "notes": "Projected from validated R5.1 claim; graph still awaits R5.3 review.",
+      "review_status": "pending_r5_3_review"
+    },
+    {
+      "edge_id": "EDGE-DERIVED-FROM-CL-EDGE-H14-I14-EV-H14-I14-MACHINE",
+      "from": "claim:CL-EDGE-H14-I14",
+      "to": "evidence:EV-H14-I14-MACHINE",
+      "relation": "derived_from",
+      "evidence_ids": [
+        "EV-H14-I14-MACHINE"
+      ],
+      "claim_id": "CL-EDGE-H14-I14",
+      "strength": "strong",
+      "source_layers": [
+        "machine_registry"
+      ],
+      "review_status": "pending_r5_3_review",
+      "notes": "Traceability edge from claim to evidence anchor."
+    },
+    {
+      "edge_id": "EDGE-DERIVED-FROM-CL-EDGE-H14-I14-EV-H14-I14-EXAM",
+      "from": "claim:CL-EDGE-H14-I14",
+      "to": "evidence:EV-H14-I14-EXAM",
+      "relation": "derived_from",
+      "evidence_ids": [
+        "EV-H14-I14-EXAM"
+      ],
+      "claim_id": "CL-EDGE-H14-I14",
+      "strength": "strong",
+      "source_layers": [
+        "external_authority"
+      ],
+      "review_status": "pending_r5_3_review",
+      "notes": "Traceability edge from claim to evidence anchor."
+    },
+    {
+      "edge_id": "EDGE-ASSESSES-REFERENCES-EXTERNAL-EXAM-QUESTIONS.JSON-REQUIRED-SKILL-AND-EXAM-CODE-GAP-QUEUE",
+      "from": "source:references/external/exam-questions.json",
+      "to": "issue:required-skill-and-exam-code-gap-queue",
+      "relation": "assesses",
+      "evidence_ids": [
+        "EV-R4.2-EXAM-GAP-QUEUE"
+      ],
+      "claim_id": "CL-EXAM-GAP-R4.2",
+      "strength": "diagnostic",
+      "source_layers": [
+        "generated_report"
+      ],
+      "notes": "Underlying claim requires review before use.",
+      "review_status": "pending_r5_3_review"
+    },
+    {
+      "edge_id": "EDGE-DERIVED-FROM-CL-EXAM-GAP-R4.2-EV-R4.2-EXAM-GAP-QUEUE",
+      "from": "claim:CL-EXAM-GAP-R4.2",
+      "to": "evidence:EV-R4.2-EXAM-GAP-QUEUE",
+      "relation": "derived_from",
+      "evidence_ids": [
+        "EV-R4.2-EXAM-GAP-QUEUE"
+      ],
+      "claim_id": "CL-EXAM-GAP-R4.2",
+      "strength": "diagnostic",
+      "source_layers": [
+        "generated_report"
+      ],
+      "review_status": "diagnostic_only",
+      "notes": "Traceability edge from claim to evidence anchor."
+    },
+    {
+      "edge_id": "EDGE-EXPLAINS-PRIJSELASTICITEIT-VAN-DE-VRAAG-BEGRIPPEN",
+      "from": "term:prijselasticiteit-van-de-vraag",
+      "to": "registry:begrippen",
+      "relation": "explains",
+      "evidence_ids": [
+        "EV-TERM-PRICE-ELASTICITY-MACHINE"
+      ],
+      "claim_id": "CL-TERM-PRICE-ELASTICITY",
+      "strength": "medium",
+      "source_layers": [
+        "machine_registry"
+      ],
+      "notes": "Projected from validated R5.1 claim; graph still awaits R5.3 review.",
+      "review_status": "pending_r5_3_review"
+    },
+    {
+      "edge_id": "EDGE-DERIVED-FROM-CL-TERM-PRICE-ELASTICITY-EV-TERM-PRICE-ELASTICITY-MACHINE",
+      "from": "claim:CL-TERM-PRICE-ELASTICITY",
+      "to": "evidence:EV-TERM-PRICE-ELASTICITY-MACHINE",
+      "relation": "derived_from",
+      "evidence_ids": [
+        "EV-TERM-PRICE-ELASTICITY-MACHINE"
+      ],
+      "claim_id": "CL-TERM-PRICE-ELASTICITY",
+      "strength": "strong",
+      "source_layers": [
+        "machine_registry"
+      ],
+      "review_status": "pending_r5_3_review",
+      "notes": "Traceability edge from claim to evidence anchor."
+    }
+  ]
+}

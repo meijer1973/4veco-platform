@@ -4,14 +4,26 @@
   "title": "AlignmentEdge",
   "type": "object",
   "additionalProperties": false,
-  "required": ["edge_id", "from", "to", "relation", "review_status"],
+  "required": ["edge_id", "from", "to", "relation", "evidence_ids", "claim_id", "strength", "review_status"],
   "properties": {
-    "edge_id": { "type": "string" },
-    "from": { "type": "string" },
-    "to": { "type": "string" },
-    "relation": { "type": "string" },
+    "edge_id": { "type": "string", "pattern": "^EDGE-[A-Z0-9.-]+$" },
+    "from": { "type": "string", "pattern": "^[a-z_]+:.+" },
+    "to": { "type": "string", "pattern": "^[a-z_]+:.+" },
+    "relation": {
+      "type": "string",
+      "enum": ["prerequisite", "supports", "assesses", "explains", "contradicts", "derived_from"]
+    },
     "evidence_ids": { "type": "array", "items": { "type": "string" } },
-    "strength": { "type": "string" },
-    "review_status": { "type": "string" }
+    "claim_id": { "type": "string" },
+    "strength": {
+      "type": "string",
+      "enum": ["strong", "medium", "weak", "diagnostic"]
+    },
+    "source_layers": { "type": "array", "items": { "type": "string" } },
+    "review_status": {
+      "type": "string",
+      "enum": ["pending_r5_3_review", "human_approved", "rejected", "diagnostic_only"]
+    },
+    "notes": { "type": ["string", "null"] }
   }
 }

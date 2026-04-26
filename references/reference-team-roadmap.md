@@ -77,7 +77,6 @@ Open items are listed first; completed items are kept below them.
 
 | Sprint | Name | Completed | Current State |
 |--------|------|-----------|---------------|
-| R5.2 | Alignment Graph | no | Planned. Create graph edges only after evidence and prerequisite work. |
 | R5.3 | Alignment Graph Review Gate | no | Planned. Human-reviewed gate before graph powers retrieval or diagnostics. |
 | R6.1 | JSON-First Reports | no | Planned. Markdown reports become projections of JSON. |
 | R6.2 | Reference Health Dashboard Data | no | Planned. Produce one generated reference-health state file for dashboards and planning. |
@@ -103,6 +102,7 @@ Open items are listed first; completed items are kept below them.
 | R14.1 | Curriculum Versioning | no | Planned. Track curriculum/source versions and reference migrations. |
 | R14.2 | Evidence Signal Model | no | Planned. Model quality and learning signals without surveillance or unnecessary student data. |
 | R14.3 | Continuous Improvement Reports | no | Planned. Produce evidence-platform reports and require review before external claims. |
+| R5.2 | Alignment Graph | yes | Completed. Built the first draft alignment graph from R5.1 evidence anchors: 31 edges, 13 pending main edges, 18 traceability edges, and 0 human-approved edges. |
 | R5.1 | Evidence-Anchor Layer | yes | Completed. Created the first governed evidence-anchor layer: source-ranking policy, 15 anchors, 13 claims, schemas, validator, and status reports. |
 | R4.3 | Blueprint Flag Triage | yes | Completed. Triaged all 84 current raw target-exercise missing-unit flags into a curated backlog: 68 still needed, 4 existing-unit match candidates, 1 duplicate, and 11 deferred. |
 | R4.2 | Exam-Question Extraction Gap Closure | yes | Completed. Produced a non-mutating gap report and patch queue for 27 exam-question records with missing required-skill annotations; protected references were not changed. |
@@ -251,6 +251,8 @@ Required work:
 Required output: alignment graph data and integrity report.
 
 Stop condition: graph must not become pedagogically authoritative before R5.3 closes.
+
+Completion: completed on 2026-04-26. R5.2 added `references/data/alignment-graph.json`, `build-scripts/references/build-alignment-graph.js`, `build-scripts/references/check-alignment-graph.js`, and graph integrity reports. The draft graph contains 31 edges: 13 pending main alignment edges and 18 `derived_from` traceability edges. No edge is `human_approved`; the graph remains `draft_pending_r5_3_review` until R5.3 closes.
 
 ### R5.3 Alignment Graph Review Gate
 
@@ -755,7 +757,7 @@ Do not let the graph become pedagogically authoritative until the alignment-grap
 Sprints:
 
 - `R5.1` completed: evidence-anchor layer.
-- `R5.2` planned: alignment graph.
+- `R5.2` completed: alignment graph.
 - `R5.3` planned: alignment graph review gate.
 
 ### Phase R6: JSON-First Reports And Dashboard Data
@@ -922,21 +924,21 @@ Do not invert this order.
 
 Do not proceed directly to retrieval or diagnostics.
 
-Proceed with `R5.2 Alignment Graph`.
+Proceed with `R5.3 Alignment Graph Review Gate`.
 
-R5.1 completion state:
+R5.2 completion state:
 
-- evidence-anchor schema and claim schema are operational
-- source-ranking policy exists in `references/data/evidence-anchors.json`
-- 15 evidence anchors and 13 claims validate
-- generated reports are secondary evidence and cannot be marked primary by the validator
-- no alignment graph edges were built yet
+- alignment graph data exists at `references/data/alignment-graph.json`
+- graph integrity report passes at `reports/alignment-graph-integrity.md`
+- 31 edges exist: 13 pending main alignment edges and 18 traceability edges
+- 0 edges are human-approved
+- graph status is `draft_pending_r5_3_review`
 
-R5.2 must:
+R5.3 must:
 
-- build graph edges only from evidence-backed relationships
-- separate prerequisite, supports, assesses, explains, contradicts, and derived-from edge types
-- keep the graph non-authoritative until the R5.3 review gate closes
+- prepare a graph review packet with high-risk samples
+- conduct an interactive human review and record the gate decision
+- keep retrieval, diagnostics, dashboards, and adaptive decisions from treating the graph as authoritative until the gate closes
 
 ## Final Rule
 
