@@ -290,7 +290,7 @@
       "verbaal"
     ],
     "terms": [
-      "variabele kosten"
+      "variabele-kosten"
     ],
     "procedure": [
       "Splits de TK-functie in een term zonder Q (= TCK) en termen met Q (= TVK).",
@@ -449,7 +449,7 @@
       "rekenen"
     ],
     "terms": [
-      "marginale kosten"
+      "marginale-kosten"
     ],
     "procedure": [
       "Identificeer de TK-functie en haar termen.",
@@ -482,7 +482,7 @@
       "verbaal"
     ],
     "terms": [
-      "gemiddelde totale kosten"
+      "gemiddelde-totale-kosten"
     ],
     "procedure": [
       "Noteer de TK-functie.",
@@ -518,7 +518,7 @@
       "verbaal"
     ],
     "terms": [
-      "prijselasticiteit van de vraag"
+      "prijselasticiteit-van-de-vraag"
     ],
     "procedure": [
       "Noteer de oude en nieuwe waarden van P en Q.",
@@ -723,8 +723,8 @@
       "verbaal"
     ],
     "terms": [
-      "totale kosten",
-      "totale opbrengst",
+      "totale-kosten",
+      "totale-opbrengst",
       "winst"
     ],
     "procedure": [
@@ -1620,7 +1620,7 @@
       "verbaal"
     ],
     "terms": [
-      "constante kosten",
+      "constante-kosten",
       "winst"
     ]
   },
@@ -1726,7 +1726,7 @@
       "verbaal"
     ],
     "terms": [
-      "prijselasticiteit van de vraag"
+      "prijselasticiteit-van-de-vraag"
     ]
   },
   {
@@ -1803,8 +1803,8 @@
       "verbaal"
     ],
     "terms": [
-      "homogeen goed",
-      "heterogene goederen"
+      "homogeen-goed",
+      "heterogene-goederen"
     ]
   },
   {
@@ -1824,8 +1824,8 @@
       "verbaal"
     ],
     "terms": [
-      "collectieve aanbodlijn",
-      "collectieve vraaglijn",
+      "collectieve-aanbodlijn",
+      "collectieve-vraaglijn",
       "evenwichtsprijs"
     ],
     "procedure": [
@@ -1911,7 +1911,7 @@
       "verbaal"
     ],
     "terms": [
-      "collectieve aanbodlijn",
+      "collectieve-aanbodlijn",
       "evenwichtsprijs"
     ],
     "procedure": [
@@ -2016,8 +2016,8 @@
       "verbaal"
     ],
     "terms": [
-      "marginale kosten",
-      "totale opbrengst"
+      "marginale-kosten",
+      "totale-opbrengst"
     ]
   },
   {
@@ -2070,7 +2070,7 @@
       "verbaal"
     ],
     "terms": [
-      "Pareto efficiënt",
+      "pareto-efficient",
       "subsidies"
     ]
   },
@@ -2092,7 +2092,7 @@
       "verbaal"
     ],
     "terms": [
-      "Pareto efficiënt",
+      "pareto-efficient",
       "marktevenwicht"
     ]
   },
@@ -2117,7 +2117,7 @@
     ],
     "terms": [
       "prijsdiscriminatie",
-      "totale surplus"
+      "totale-surplus"
     ],
     "procedure": [
       "Identificeer de inkomensgroepen en hun vraagfuncties (lage vs. hoge Ev)",
@@ -2213,8 +2213,8 @@
       "verbaal"
     ],
     "terms": [
-      "prijselasticiteit van de vraag",
-      "totale opbrengst"
+      "prijselasticiteit-van-de-vraag",
+      "totale-opbrengst"
     ]
   },
   {
@@ -2235,7 +2235,7 @@
       "verbaal"
     ],
     "terms": [
-      "variabele kosten"
+      "variabele-kosten"
     ]
   },
   {
@@ -2301,7 +2301,7 @@
     ],
     "terms": [
       "subsidies",
-      "verloren surplus"
+      "verloren-surplus"
     ],
     "procedure": [
       "Teken vraag- en aanbodlijn en markeer het oorspronkelijke evenwicht (P*, Q*)",
@@ -2332,8 +2332,8 @@
       "verbaal"
     ],
     "terms": [
-      "marginale kosten",
-      "marginale opbrengsten",
+      "marginale-kosten",
+      "marginale-opbrengsten",
       "winst"
     ],
     "procedure": [
@@ -2539,7 +2539,7 @@
       "verbaal"
     ],
     "terms": [
-      "intertemporele ruil"
+      "intertemporele-ruil"
     ],
     "procedure": [
       "Benoem de twee generaties in het stelsel: de huidige premiebetalers (werkenden) en de huidige uitkeringsontvangers (gepensioneerden)",
@@ -2565,7 +2565,7 @@
       "verbaal"
     ],
     "terms": [
-      "intertemporele ruil"
+      "intertemporele-ruil"
     ]
   },
   {
@@ -2588,8 +2588,8 @@
     ],
     "terms": [
       "rente",
-      "waardevaste pensioenen",
-      "welvaartsvaste pensioenen"
+      "waardevaste-pensioenen",
+      "welvaartsvaste-pensioenen"
     ],
     "procedure": [
       "Beschrijf kort het kapitaaldekkingsstelsel: premies worden belegd en het rendement betaalt de latere uitkering",
@@ -2618,7 +2618,7 @@
       "verbaal"
     ],
     "terms": [
-      "welvaartsvaste pensioenen"
+      "welvaartsvaste-pensioenen"
     ]
   },
   {
@@ -2640,8 +2640,8 @@
       "verbaal"
     ],
     "terms": [
-      "waardevaste pensioenen",
-      "welvaartsvaste pensioenen"
+      "waardevaste-pensioenen",
+      "welvaartsvaste-pensioenen"
     ],
     "procedure": [
       "Identificeer de twee groepen: jongere premiebetalers en oudere uitkeringsontvangers in het omslagstelsel",
@@ -2667,7 +2667,7 @@
       "verbaal"
     ],
     "terms": [
-      "voorraad- en stroomgrootheden"
+      "voorraad-en-stroomgrootheden"
     ]
   },
   {
@@ -2718,7 +2718,7 @@
     ],
     "terms": [
       "berovingsprobleem",
-      "contracten en prikkels",
+      "contracten-en-prikkels",
       "investeringen",
       "risico"
     ]
@@ -2740,7 +2740,7 @@
       "verbaal"
     ],
     "terms": [
-      "collectieve goederen"
+      "collectieve-goederen"
     ]
   },
   {
@@ -2759,7 +2759,7 @@
       "verbaal"
     ],
     "terms": [
-      "dominante strategie"
+      "dominante-strategie"
     ]
   },
   {
@@ -2780,8 +2780,8 @@
       "rekenen"
     ],
     "terms": [
-      "dominante strategie",
-      "pay-off matrix",
+      "dominante-strategie",
+      "pay-off-matrix",
       "winst"
     ],
     "procedure": [
@@ -2811,7 +2811,7 @@
       "verbaal"
     ],
     "terms": [
-      "externe effecten"
+      "externe-effecten"
     ]
   },
   {
@@ -2832,7 +2832,7 @@
       "verbaal"
     ],
     "terms": [
-      "externe effecten",
+      "externe-effecten",
       "heffingen"
     ]
   },
@@ -2852,7 +2852,7 @@
       "verbaal"
     ],
     "terms": [
-      "externe effecten",
+      "externe-effecten",
       "marktevenwicht"
     ]
   },
@@ -2874,9 +2874,9 @@
       "verbaal"
     ],
     "terms": [
-      "externe effecten",
-      "maatschappelijke welvaart",
-      "verloren surplus"
+      "externe-effecten",
+      "maatschappelijke-welvaart",
+      "verloren-surplus"
     ]
   },
   {
@@ -2897,7 +2897,7 @@
       "verbaal"
     ],
     "terms": [
-      "dominante strategie",
+      "dominante-strategie",
       "gevangenendilemma"
     ]
   },
@@ -2920,7 +2920,7 @@
       "verbaal"
     ],
     "terms": [
-      "externe effecten",
+      "externe-effecten",
       "heffingen",
       "subsidies"
     ]
@@ -2943,7 +2943,7 @@
       "verbaal"
     ],
     "terms": [
-      "externe effecten",
+      "externe-effecten",
       "subsidies"
     ]
   },
@@ -2966,9 +2966,9 @@
       "verbaal"
     ],
     "terms": [
-      "Nash-evenwicht",
-      "dominante strategie",
-      "pay-off matrix"
+      "nash-evenwicht",
+      "dominante-strategie",
+      "pay-off-matrix"
     ],
     "procedure": [
       "Markeer voor speler 1 per kolom (strategie van speler 2) de hoogste uitbetaling",
@@ -2997,7 +2997,7 @@
     ],
     "terms": [
       "berovingsprobleem",
-      "contracten en prikkels",
+      "contracten-en-prikkels",
       "risico"
     ]
   },
@@ -3019,7 +3019,7 @@
       "verbaal"
     ],
     "terms": [
-      "externe effecten"
+      "externe-effecten"
     ],
     "procedure": [
       "Identificeer het externe effect dat door concentratie ontstaat (bv. files, luchtvervuiling, overbelaste infrastructuur)",
@@ -3045,7 +3045,7 @@
       "verbaal"
     ],
     "terms": [
-      "verzonken kosten"
+      "verzonken-kosten"
     ]
   },
   {
@@ -3195,7 +3195,7 @@
       "verbaal"
     ],
     "terms": [
-      "collectieve verzekering",
+      "collectieve-verzekering",
       "informatieasymmetrie",
       "risico"
     ]
@@ -3219,8 +3219,8 @@
       "verbaal"
     ],
     "terms": [
-      "contracten en prikkels",
-      "eigen risico"
+      "contracten-en-prikkels",
+      "eigen-risico"
     ]
   },
   {
@@ -3241,7 +3241,7 @@
       "verbaal"
     ],
     "terms": [
-      "contracten en prikkels",
+      "contracten-en-prikkels",
       "principaal-agentrelatie"
     ]
   },
@@ -3261,7 +3261,7 @@
       "verbaal"
     ],
     "terms": [
-      "contracten en prikkels",
+      "contracten-en-prikkels",
       "principaal-agentrelatie"
     ]
   },
@@ -3307,7 +3307,7 @@
       "verbaal"
     ],
     "terms": [
-      "collectieve verzekering",
+      "collectieve-verzekering",
       "risico"
     ]
   },
@@ -3330,7 +3330,7 @@
     ],
     "terms": [
       "bonus-malussysteem",
-      "collectieve verzekering",
+      "collectieve-verzekering",
       "risico"
     ]
   },
@@ -3369,7 +3369,7 @@
       "verbaal"
     ],
     "terms": [
-      "financieel risico",
+      "financieel-risico",
       "onzekerheid",
       "wisselkoers"
     ]
@@ -3421,8 +3421,8 @@
       "verbaal"
     ],
     "terms": [
-      "waardevaste pensioenen",
-      "welvaartsvaste pensioenen"
+      "waardevaste-pensioenen",
+      "welvaartsvaste-pensioenen"
     ]
   },
   {
@@ -3444,7 +3444,7 @@
       "verbaal"
     ],
     "terms": [
-      "primair inkomen"
+      "primair-inkomen"
     ],
     "procedure": [
       "Bepaal het totale arbeidsinkomen (loonsom incl. toegerekend loon zelfstandigen)",
@@ -3472,7 +3472,7 @@
       "rekenen"
     ],
     "terms": [
-      "prijselasticiteit van de vraag"
+      "prijselasticiteit-van-de-vraag"
     ],
     "procedure": [
       "Noteer de procentuele verandering in de relatieve prijs van buitenlands versus binnenlands goed (%ΔP)",
@@ -3501,8 +3501,8 @@
       "verbaal"
     ],
     "terms": [
-      "gemiddeld tarief",
-      "marginaal tarief"
+      "gemiddeld-tarief",
+      "marginaal-tarief"
     ],
     "procedure": [
       "Noteer per schijf het marginale tarief en de bovengrens",
@@ -3529,7 +3529,7 @@
       "verbaal"
     ],
     "terms": [
-      "groen bbp per hoofd"
+      "groen-bbp-per-hoofd"
     ]
   },
   {
@@ -3600,7 +3600,7 @@
     ],
     "terms": [
       "denivelleren",
-      "marginaal tarief"
+      "marginaal-tarief"
     ]
   },
   {
@@ -3648,8 +3648,8 @@
       "verbaal"
     ],
     "terms": [
-      "Gini-coefficient",
-      "conjuncturele werkloosheid"
+      "gini-coefficient",
+      "conjuncturele-werkloosheid"
     ]
   },
   {
@@ -3671,7 +3671,7 @@
       "verbaal"
     ],
     "terms": [
-      "groen bbp per hoofd"
+      "groen-bbp-per-hoofd"
     ]
   },
   {
@@ -3832,8 +3832,8 @@
       "rekenen"
     ],
     "terms": [
-      "gemiddeld tarief",
-      "marginaal tarief"
+      "gemiddeld-tarief",
+      "marginaal-tarief"
     ],
     "procedure": [
       "Noteer per schijf het marginale tarief",
@@ -3883,7 +3883,7 @@
       "verbaal"
     ],
     "terms": [
-      "primair inkomen"
+      "primair-inkomen"
     ]
   },
   {
@@ -3933,8 +3933,8 @@
       "verbaal"
     ],
     "terms": [
-      "marginaal tarief",
-      "secundair inkomen"
+      "marginaal-tarief",
+      "secundair-inkomen"
     ],
     "procedure": [
       "Bepaal de verandering in het marginaal tarief en bereken het effect op het besteedbaar inkomen van een representatief huishouden (methode uit H04)",
@@ -3963,7 +3963,7 @@
     ],
     "terms": [
       "arbeidsaanbod",
-      "marginaal tarief",
+      "marginaal-tarief",
       "uitverdieneffecten"
     ]
   },
@@ -4236,8 +4236,8 @@
     ],
     "terms": [
       "anticyclisch",
-      "automatische stabilisatoren",
-      "secundair inkomen"
+      "automatische-stabilisatoren",
+      "secundair-inkomen"
     ]
   },
   {
@@ -4259,7 +4259,7 @@
       "verbaal"
     ],
     "terms": [
-      "effectieve ondergrens nominale rente",
+      "effectieve-ondergrens-nominale-rente",
       "investeringen"
     ]
   },
@@ -4305,8 +4305,8 @@
       "verbaal"
     ],
     "terms": [
-      "duaal mandaat",
-      "effectieve ondergrens nominale rente",
+      "duaal-mandaat",
+      "effectieve-ondergrens-nominale-rente",
       "hoogconjunctuur"
     ],
     "procedure": [
@@ -4357,9 +4357,9 @@
       "verbaal"
     ],
     "terms": [
-      "GA-curve",
-      "IS-curve",
-      "MB-curve",
+      "ga-curve",
+      "is-curve",
+      "mb-curve",
       "hoogconjunctuur",
       "rente"
     ],
@@ -4392,7 +4392,7 @@
       "verbaal"
     ],
     "terms": [
-      "Keynesiaanse kruis",
+      "keynesiaanse-kruis",
       "investeringen"
     ],
     "procedure": [
@@ -4422,7 +4422,7 @@
     ],
     "terms": [
       "koopkracht",
-      "nominale en reele grootheden"
+      "nominale-en-reele-grootheden"
     ],
     "procedure": [
       "Noteer het oude nominale loon of uitkering L0 en het inflatiepercentage π over de periode",
@@ -4452,7 +4452,7 @@
       "verbaal"
     ],
     "terms": [
-      "GA-curve"
+      "ga-curve"
     ]
   },
   {
@@ -4475,8 +4475,8 @@
       "verbaal"
     ],
     "terms": [
-      "GA-curve",
-      "MB-curve",
+      "ga-curve",
+      "mb-curve",
       "arbeidsaanbod",
       "rente"
     ],
@@ -4509,7 +4509,7 @@
       "verbaal"
     ],
     "terms": [
-      "monetair beleid",
+      "monetair-beleid",
       "wisselkoers"
     ]
   },
@@ -4531,7 +4531,7 @@
       "verbaal"
     ],
     "terms": [
-      "monetair beleid",
+      "monetair-beleid",
       "muntunie",
       "wisselkoers"
     ],
@@ -4585,10 +4585,10 @@
       "verbaal"
     ],
     "terms": [
-      "GA-curve",
-      "IS-curve",
-      "automatische stabilisatoren",
-      "conjuncturele werkloosheid",
+      "ga-curve",
+      "is-curve",
+      "automatische-stabilisatoren",
+      "conjuncturele-werkloosheid",
       "hoogconjunctuur"
     ],
     "procedure": [
@@ -4619,7 +4619,7 @@
       "verbaal"
     ],
     "terms": [
-      "automatische stabilisatoren",
+      "automatische-stabilisatoren",
       "overheidstekort",
       "staatsschuld"
     ]
@@ -4644,7 +4644,7 @@
     ],
     "terms": [
       "investeringen",
-      "monetair beleid"
+      "monetair-beleid"
     ]
   },
   {
@@ -4665,9 +4665,9 @@
       "verbaal"
     ],
     "terms": [
-      "eigen risico",
+      "eigen-risico",
       "koopkracht",
-      "nominale en reele grootheden"
+      "nominale-en-reele-grootheden"
     ]
   },
   {
@@ -4691,7 +4691,7 @@
     ],
     "terms": [
       "bbp-groei",
-      "monetair beleid",
+      "monetair-beleid",
       "wisselkoers"
     ]
   },
@@ -4736,7 +4736,7 @@
       "rekenen"
     ],
     "terms": [
-      "arbeidsvraag (= werkgelegenheid + vacatures)"
+      "arbeidsvraag"
     ],
     "procedure": [
       "Lees marginaal product per werkende af uit de tabel.",
@@ -4790,7 +4790,7 @@
       "verbaal"
     ],
     "terms": [
-      "arbeidsvraag (= werkgelegenheid + vacatures)"
+      "arbeidsvraag"
     ],
     "pitfalls": [
       "Denken dat arbeidsvraag alleen door loon bepaald wordt — bij dalende productvraag daalt arbeidsvraag zelfs bij ongewijzigd loon."
@@ -4839,7 +4839,7 @@
       "verbaal"
     ],
     "terms": [
-      "arbeidsaanbod (= beroepsbevolking)",
+      "arbeidsaanbod",
       "werkloosheid"
     ],
     "pitfalls": [
@@ -4975,8 +4975,8 @@
       "grafisch"
     ],
     "terms": [
-      "arbeidsaanbod (= beroepsbevolking)",
-      "arbeidsvraag (= werkgelegenheid + vacatures)"
+      "arbeidsaanbod",
+      "arbeidsvraag"
     ],
     "procedure": [
       "Identificeer W als prijs en aantal werkenden als hoeveelheid op de assen.",
@@ -5006,7 +5006,7 @@
       "verbaal"
     ],
     "terms": [
-      "conjuncturele werkloosheid"
+      "conjuncturele-werkloosheid"
     ],
     "pitfalls": [
       "Conjuncturele werkloosheid verwarren met structurele — conjunctureel is tijdelijk en keert om bij herstel."
@@ -5031,7 +5031,7 @@
       "verbaal"
     ],
     "terms": [
-      "structurele werkloosheid"
+      "structurele-werkloosheid"
     ],
     "pitfalls": [
       "Denken dat conjunctuurherstel structurele werkloosheid oplost — zonder herscholing blijft de mismatch bestaan."

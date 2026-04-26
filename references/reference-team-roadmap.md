@@ -77,7 +77,6 @@ Open items are listed first; completed items are kept below them.
 
 | Sprint | Name | Completed | Current State |
 |--------|------|-----------|---------------|
-| R4.1 | Unit-Term Slug Migration | no | Planned. Migrate unit `terms` fields to canonical `begrippen.json` slug IDs. |
 | R4.2 | Exam-Question Extraction Gap Closure | no | Planned. Complete missing required-skill and exam-code links where evidence supports it. |
 | R4.3 | Blueprint Flag Triage | no | Planned. Convert raw missing-unit flags into curated decisions. |
 | R5.1 | Evidence-Anchor Layer | no | Planned. Add exact proof anchors for important claims. |
@@ -107,6 +106,7 @@ Open items are listed first; completed items are kept below them.
 | R14.1 | Curriculum Versioning | no | Planned. Track curriculum/source versions and reference migrations. |
 | R14.2 | Evidence Signal Model | no | Planned. Model quality and learning signals without surveillance or unnecessary student data. |
 | R14.3 | Continuous Improvement Reports | no | Planned. Produce evidence-platform reports and require review before external claims. |
+| R4.1 | Unit-Term Slug Migration | yes | Completed. Migrated safe unit `terms` values to canonical `begrippen.json` slug IDs through a validated migration script; left `alternatieve kosten` and `schaarste` unresolved for later term-registry review. |
 | R3.2 | Apply Reviewed Empty-Needs Corrections | yes | Completed. Applied the bounded R2.4 mutation-review set through CLI: 15 dependency edges and 6 `underbouw_assumed` classifications. No D04, rejected market-graph, held A-domain, L09->L03, or H13 mutations were applied. |
 | R3.1 | Reference CLI And Documentation Completion | yes | Completed. CLI docs now reflect implemented scripts; coverage report status is `ready_with_blockers`; zero-needs review fields round-trip through parser, formatter, validation, and JSON projection. |
 | R2.4 | Evidence And Unit-Design Cleanup | yes | Completed. Non-mutating packet attaches exact evidence to selected candidate edges, resolves D04 as unit-design-required, classifies foundational A-domain zero-needs candidates, preserves rejected market-graph suggestions, and records a bounded labor-market/unemployment second pass. |
@@ -187,6 +187,8 @@ Required work:
 Required output: migration report, unresolved mapping queue, regenerated term coverage.
 
 Stop condition: do not silently create new term slugs or rewrite term meaning during migration.
+
+Completion: completed on 2026-04-26. `build-scripts/references/unit-term-slug-migration.js` applied only safe exact mappings. Initial write changed 79 units, left `alternatieve kosten` and `schaarste` unresolved, and created no new term slugs. `reports/terminology-drift.md` now validates against `begrippen.json` as the primary registry so migrated slug IDs are not false positives.
 
 ### R4.2 Exam-Question Extraction Gap Closure
 
@@ -641,8 +643,8 @@ Last regenerated: 2026-04-26
   - `analyze`: 18
   - `evaluate`: 3
 - Dependency graph:
-  - `199` live prerequisite edges.
-  - `61` live units still have no `needs` edges.
+  - `214` live prerequisite edges.
+  - `48` live units still have no `needs` edges.
 - Coverage:
   - `188/190` live units have exam-code links.
   - `146/190` live units have term links.
@@ -654,18 +656,19 @@ Last regenerated: 2026-04-26
 - `225/225` have definitions.
 - `225/225` have examples.
 - `60/225` have pitfall text.
-- `94/225` are reverse-linked to teaching units.
+- `95/225` are reverse-linked to teaching units.
 - `34/225` carry formulas.
 
-Main risk: unit `terms` fields still include old canonical text strings while `begrippen.json` uses slug IDs. This needs the planned unit-term slug migration.
+Main risk: two unit term strings remain unresolved against `begrippen.json`: `alternatieve kosten` and `schaarste`. They are intentionally left for later term-registry review rather than silently creating new slugs.
 
 ### Reports
 
 Current generated reports:
 
 - `reports/dag-integrity.md`: pass.
-- `reports/needs-coverage.md`: informational backlog, `61` live units without `needs`.
+- `reports/needs-coverage.md`: informational backlog, `48` live units without `needs`.
 - `reports/terms-coverage.md`: informational backlog, `44` live units without terms.
+- `reports/terminology-drift.md`: pass against machine-registry-first term validation.
 - `reports/procedure-coverage.md`: pass for apply+ units.
 - `reports/aspects-coverage.md`: informational, remaining exam-citation gaps.
 - `reports/unresolved-refs.md`: warnings only for deprecated references.
@@ -730,7 +733,7 @@ Priority work:
 
 Sprints:
 
-- `R4.1` planned: unit-term slug migration.
+- `R4.1` completed: unit-term slug migration.
 - `R4.2` planned: exam-question extraction gap closure.
 - `R4.3` planned: blueprint flag triage.
 
@@ -908,24 +911,22 @@ Do not invert this order.
 
 ## Immediate Next Sprint
 
-Do not proceed directly to protected-reference mutation.
+Do not proceed directly to broad unit cleanup.
 
-Proceed with `R4.1 Unit-Term Slug Migration`.
+Proceed with `R4.2 Exam-Question Extraction Gap Closure`.
 
-R3.2 completion state:
+R4.1 completion state:
 
-- human mutation review: completed with status `authorize_with_limits`
-- applied through CLI: 15 approved dependency edges
-- applied through CLI: 6 foundational A-domain `underbouw_assumed` classifications
-- not applied: D04 lifecycle mutation, rejected market-graph suggestions, A18/A42/A43 changes, L09->L03, H13->D13/D16, opportunistic extra edges
-- generated reports: DAG integrity, needs coverage, unresolved refs
-- protected surfaces: `references/machine/` changed through CLI; `references/external/` unchanged
+- safe unit term strings migrated to canonical `begrippen.json` slug IDs
+- unresolved queue: `alternatieve kosten`, `schaarste`
+- generated reports: unit-term slug migration, terms coverage, begrippen coverage, terminology drift
+- protected surfaces: `references/machine/` changed through validated migration/index scripts; `references/external/` unchanged
 
-R4.1 must:
+R4.2 must:
 
-- migrate unit `terms` fields toward canonical `begrippen.json` slug IDs
-- create a mapping and unresolved queue before mutation
-- avoid silently creating new term slugs or changing term meaning
+- identify exam-question records with missing required-skill or exam-code links
+- use actual CvTE questions or target exercises as evidence
+- avoid minting skills from syllabus prose alone
 
 ## Final Rule
 

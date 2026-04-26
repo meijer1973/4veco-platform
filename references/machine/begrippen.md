@@ -3,7 +3,7 @@
 **Niet met de hand bewerken.** Alle mutaties gaan via `build-scripts/references/term-*.js`.
 Regenereer met `node build-scripts/references/build-begrippen-index.js`.
 
-*Versie 1.0.0 — gegenereerd 2026-04-23.*
+*Versie 1.0.0 — gegenereerd 2026-04-26.*
 
 Elk begrip heeft een stabiele id (slug van de Nederlandse term), een student-facing Nederlandse definitie, een syllabus-clause (indien van toepassing), en cross-links naar gerelateerde termen en teaching-units.
 
@@ -595,6 +595,7 @@ Elk begrip heeft een stabiele id (slug van de Nederlandse term), een student-fac
 - **Engels:** nominal and real values
 - **Voorbeeld:** Steeg je salaris van € 3.000 naar € 3.060 bij 2% inflatie, dan is het nominale loon met 2% gestegen maar het reële loon vrijwel onveranderd.
 - **Let op:** Nominaal − inflatie ≈ reëel. Is de inflatie hoger dan de nominale toename, dan daal je reëel — ook al stijgen de eurobedragen op papier.
+- **Teaching-units:** I09, I18
 
 ### omslagstelsel
 - **Term:** omslagstelsel

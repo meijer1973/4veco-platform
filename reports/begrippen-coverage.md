@@ -1,6 +1,6 @@
 # Begrippen coverage
 
-*Gegenereerd 2026-04-23 door `build-scripts/references/build-begrippen-index.js`.*
+*Gegenereerd 2026-04-26 door `build-scripts/references/build-begrippen-index.js`.*
 
 Totaal: **225** begrippen (225 live, 0 deprecated).
 
@@ -11,7 +11,7 @@ Totaal: **225** begrippen (225 live, 0 deprecated).
 | definition_nl | 0 | 0% |
 | example_nl | 0 | 0% |
 | pitfall_nl | 165 | 73% |
-| teaching_units (reverse-link) | 131 | 58% |
+| teaching_units (reverse-link) | 130 | 58% |
 | syllabus_clause | 2 | 1% |
 
 Terms with at least one formula: **34** of 225. (Not every term carries a formula, so this counts coverage, not a backlog.)

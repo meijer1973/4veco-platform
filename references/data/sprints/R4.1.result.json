@@ -1,0 +1,66 @@
+{
+  "sprint_id": "R4.1",
+  "name": "Unit-Term Slug Migration",
+  "status": "completed",
+  "completed_on": "2026-04-26",
+  "plan": "docs/sprints/R4.1-plan.md",
+  "baseline": "reports/sprints/R4.1-baseline.md",
+  "result": "reports/sprints/R4.1-result.md",
+  "diff_summary": "reports/sprints/R4.1-diff-summary.md",
+  "migration_report": "reports/json/unit-term-slug-migration.json",
+  "outputs": [
+    "build-scripts/references/unit-term-slug-migration.js",
+    "reports/unit-term-slug-migration.md",
+    "reports/json/unit-term-slug-migration.json",
+    "reports/sprints/R4.1-result.md",
+    "reports/sprints/R4.1-diff-summary.md"
+  ],
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js docs/sprints/R4.1-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js R4.1",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/unit-term-slug-migration.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/unit-term-slug-migration.js --write",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/build-unit-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/build-begrippen-index.js --allow-empty-definitions",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/terms-coverage.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/terminology-drift.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-result.js reports/sprints/R4.1-result.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js R4.1 --complete",
+      "status": "passed"
+    }
+  ],
+  "protected_reference_data_changed": true,
+  "next_sprint": "R4.2",
+  "open_follow_ups": [
+    "Review whether alternatieve kosten belongs in begrippen.json or should remain authored-only.",
+    "Review whether schaarste belongs in begrippen.json or should remain authored-only."
+  ]
+}

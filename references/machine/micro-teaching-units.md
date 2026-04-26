@@ -271,7 +271,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - mastery_target: apply
 - prior_learning: new_this_year
 - aspects: [rekenen, verbaal]
-- terms: [variabele kosten]
+- terms: [variabele-kosten]
 - procedure:
   1. Splits de TK-functie in een term zonder Q (= TCK) en termen met Q (= TVK).
   2. Controleer door Q = 0 in te vullen: de uitkomst is de TCK.
@@ -369,7 +369,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - mastery_target: apply
 - prior_learning: new_this_year
 - aspects: [rekenen]
-- terms: [marginale kosten]
+- terms: [marginale-kosten]
 - procedure:
   1. Identificeer de TK-functie en haar termen.
   2. Bepaal MK als afgeleide van TK naar Q (zoals in A11); de vaste kosten vallen weg.
@@ -388,7 +388,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - mastery_target: apply
 - prior_learning: new_this_year
 - aspects: [rekenen, verbaal]
-- terms: [gemiddelde totale kosten]
+- terms: [gemiddelde-totale-kosten]
 - procedure:
   1. Noteer de TK-functie.
   2. Deel elke term afzonderlijk door Q: TCK/Q + v + cQ.
@@ -408,7 +408,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - mastery_target: apply
 - prior_learning: new_this_year
 - aspects: [rekenen, verbaal]
-- terms: [prijselasticiteit van de vraag]
+- terms: [prijselasticiteit-van-de-vraag]
 - procedure:
   1. Noteer de oude en nieuwe waarden van P en Q.
   2. Bereken %ΔQv = (ΔQv / Qv_oud) × 100% en %ΔP = (ΔP / P_oud) × 100% met correct teken.
@@ -526,7 +526,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - mastery_target: apply
 - prior_learning: new_this_year
 - aspects: [rekenen, verbaal]
-- terms: [totale kosten, totale opbrengst, winst]
+- terms: [totale-kosten, totale-opbrengst, winst]
 - procedure:
   1. Bereken TO bij de gegeven Q door substitutie in de TO-functie (zoals in A04).
   2. Bereken TK bij dezelfde Q door substitutie in de TK-functie.
@@ -1039,7 +1039,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: [constante kosten, winst]
+- terms: [constante-kosten, winst]
 
 ### D03 Consumentensurplus en accijns
 - kern: "Accijns verhoogt prijs, consumenten betalen meer, consumentensurplus daalt."
@@ -1089,7 +1089,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: [prijselasticiteit van de vraag]
+- terms: [prijselasticiteit-van-de-vraag]
 
 ### D07 Heffing doorberekenen in prijs
 - kern: "Bereken welk percentage van een heffing wordt doorberekend in de consumentenprijs via evenwichtsanalyse."
@@ -1129,7 +1129,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - mastery_target: understand
 - prior_learning: previously_taught
 - aspects: [verbaal]
-- terms: [homogeen goed, heterogene goederen]
+- terms: [homogeen-goed, heterogene-goederen]
 
 ### D10 Vraag/aanbod-verschuiving bij conjunctuurschok
 - layer: 1
@@ -1139,7 +1139,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - mastery_target: analyze
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: [collectieve aanbodlijn, collectieve vraaglijn, evenwichtsprijs]
+- terms: [collectieve-aanbodlijn, collectieve-vraaglijn, evenwichtsprijs]
 - procedure:
   1. Identificeer de schok en benoem welk kanaal loopt: beïnvloedt die de collectieve vraaglijn of de collectieve aanbodlijn
   2. Beredeneer de richting van de verschuiving (naar links of naar rechts) en onderbouw met het onderliggende gedrag van consumenten of producenten
@@ -1185,7 +1185,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - mastery_target: analyze
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: [collectieve aanbodlijn, evenwichtsprijs]
+- terms: [collectieve-aanbodlijn, evenwichtsprijs]
 - procedure:
   1. Identificeer de kostenstijging en benoem of die per eenheid product is (bv. loon per eenheid) of een vaste component
   2. Beredeneer dat hogere variabele kosten de collectieve aanbodlijn verticaal omhoog en dus naar links verschuiven
@@ -1236,7 +1236,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: [marginale kosten, totale opbrengst]
+- terms: [marginale-kosten, totale-opbrengst]
 
 ### D18 Monopolie met prijsdiscriminatie
 - kern: "Bepaal hoe monopolist winst behaalt via prijsdiscriminatie over verschillende markten."
@@ -1260,7 +1260,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: [Pareto efficiënt, subsidies]
+- terms: [pareto-efficient, subsidies]
 
 ### D20 Pareto-efficiëntie in marktevenwicht
 - kern: "Leg uit wanneer een marktevenwicht Pareto-efficiënt is."
@@ -1269,7 +1269,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: [Pareto efficiënt, marktevenwicht]
+- terms: [pareto-efficient, marktevenwicht]
 
 ### D21 Prijsdiscriminatie over inkomensgroepen
 - kern: "Analyseer hoe bedrijven prijzen differentieren en welvaartsgevolgen per inkomensgroep."
@@ -1278,7 +1278,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - mastery_target: analyze
 - prior_learning: new_this_year
 - aspects: [rekenen, verbaal]
-- terms: [prijsdiscriminatie, totale surplus]
+- terms: [prijsdiscriminatie, totale-surplus]
 - procedure:
   1. Identificeer de inkomensgroepen en hun vraagfuncties (lage vs. hoge Ev)
   2. Bereken prijs en hoeveelheid per groep bij prijsdiscriminatie (zoals in D18)
@@ -1323,7 +1323,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: [prijselasticiteit van de vraag, totale opbrengst]
+- terms: [prijselasticiteit-van-de-vraag, totale-opbrengst]
 
 ### D26 Soorten variabele kosten classificeren
 - kern: "Onderscheid tussen degressief, progressief en proportioneel variabele kosten."
@@ -1332,7 +1332,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - mastery_target: understand
 - prior_learning: previously_taught
 - aspects: [verbaal]
-- terms: [variabele kosten]
+- terms: [variabele-kosten]
 
 ### D27 Substituten en complementen
 - layer: 1
@@ -1360,7 +1360,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - mastery_target: apply
 - prior_learning: new_this_year
 - aspects: [grafisch, rekenen]
-- terms: [subsidies, verloren surplus]
+- terms: [subsidies, verloren-surplus]
 - procedure:
   1. Teken vraag- en aanbodlijn en markeer het oorspronkelijke evenwicht (P*, Q*)
   2. Verschuif de aanbodlijn omlaag met het subsidiebedrag s en bepaal Q_na
@@ -1375,7 +1375,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - mastery_target: apply
 - prior_learning: new_this_year
 - aspects: [rekenen, verbaal]
-- terms: [marginale kosten, marginale opbrengsten, winst]
+- terms: [marginale-kosten, marginale-opbrengsten, winst]
 - procedure:
   1. Bepaal MO uit de TO-functie (zoals in A12)
   2. Bepaal MK uit de TK-functie (zoals in A13)
@@ -1481,7 +1481,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - mastery_target: analyze
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: [intertemporele ruil]
+- terms: [intertemporele-ruil]
 - procedure:
   1. Benoem de twee generaties in het stelsel: de huidige premiebetalers (werkenden) en de huidige uitkeringsontvangers (gepensioneerden)
   2. Beschrijf de geldstroom: wie betaalt premie, wie ontvangt pensioen, en op welk moment
@@ -1497,7 +1497,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: [intertemporele ruil]
+- terms: [intertemporele-ruil]
 
 ### E03 Kapitaaldekking en renteeffecten
 - kern: "Analyseer hoe rentes de betaalbaarheid van kapitaalgedekte pensioenen onder druk zetten."
@@ -1506,7 +1506,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - mastery_target: analyze
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: [rente, waardevaste pensioenen, welvaartsvaste pensioenen]
+- terms: [rente, waardevaste-pensioenen, welvaartsvaste-pensioenen]
 - procedure:
   1. Beschrijf kort het kapitaaldekkingsstelsel: premies worden belegd en het rendement betaalt de latere uitkering
   2. Identificeer de rol van de rente: bepaal hoe lagere rentes de verdisconteerde waarde van toekomstige verplichtingen verhogen (zie H15)
@@ -1521,7 +1521,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - mastery_target: understand
 - prior_learning: previously_taught
 - aspects: [verbaal]
-- terms: [welvaartsvaste pensioenen]
+- terms: [welvaartsvaste-pensioenen]
 
 ### E05 Pensioenkorting en intergenerationele solidariteit
 - kern: "Analyseer hoe een korting op pensioenuitkeringen de solidariteit tussen jongere premiebetalers en oudere ontvangers beïnvloedt."
@@ -1530,7 +1530,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - mastery_target: analyze
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: [waardevaste pensioenen, welvaartsvaste pensioenen]
+- terms: [waardevaste-pensioenen, welvaartsvaste-pensioenen]
 - procedure:
   1. Identificeer de twee groepen: jongere premiebetalers en oudere uitkeringsontvangers in het omslagstelsel
   2. Beschrijf de pensioenkorting: met hoeveel procent daalt de nominale uitkering, en hoe werkt dat op de koopkracht via de inflatie
@@ -1546,7 +1546,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - mastery_target: understand
 - prior_learning: previously_taught
 - aspects: [verbaal]
-- terms: [voorraad- en stroomgrootheden]
+- terms: [voorraad-en-stroomgrootheden]
 
 ### E07 Koop- versus huurlasten vergelijken
 - kern: "Vergelijk netto woonlasten van kopen en huren door rente, aflossing, onderhoud en huurprijs systematisch tegen elkaar af te zetten."
@@ -1571,7 +1571,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: [berovingsprobleem, contracten en prikkels, investeringen, risico]
+- terms: [berovingsprobleem, contracten-en-prikkels, investeringen, risico]
 
 ### F02 Collectief goed classificeren
 - layer: 1
@@ -1581,7 +1581,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [rekenen, verbaal]
-- terms: [collectieve goederen]
+- terms: [collectieve-goederen]
 
 ### F03 Dominante strategie
 - layer: 1
@@ -1591,7 +1591,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - mastery_target: understand
 - prior_learning: previously_taught
 - aspects: [verbaal]
-- terms: [dominante strategie]
+- terms: [dominante-strategie]
 
 ### F04 Dominante strategieën in pay-off matrix
 - kern: "Identificeer dominante strategieën van beide spelers in een pay-off matrix en bepaal de uitkomst waarbij elke speler zijn dominante strategie kiest."
@@ -1600,7 +1600,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - mastery_target: apply
 - prior_learning: new_this_year
 - aspects: [rekenen]
-- terms: [dominante strategie, pay-off matrix, winst]
+- terms: [dominante-strategie, pay-off-matrix, winst]
 - procedure:
   1. Noteer voor elke speler de uitbetalingen bij elke combinatie van strategieen uit de pay-off matrix
   2. Vergelijk per speler de uitbetalingen per kolom (speler 1) of rij (speler 2) en onderstreep de hoogste per strategie van de tegenspeler
@@ -1615,7 +1615,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: [externe effecten]
+- terms: [externe-effecten]
 
 ### F06 Heffing op externe effecten als innovatieprikkel
 - kern: "Een heffing op negatieve externe effecten verhoogt de private kosten van vervuilen en geeft bedrijven daarmee een prikkel om te investeren in schonere technologie."
@@ -1624,7 +1624,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: [externe effecten, heffingen]
+- terms: [externe-effecten, heffingen]
 
 ### F07 Overproductie bij negatieve externe effecten
 - layer: 1
@@ -1634,7 +1634,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: [externe effecten, marktevenwicht]
+- terms: [externe-effecten, marktevenwicht]
 
 ### F08 Verloren surplus door negatieve externe effecten
 - kern: "Productie of consumptie voorbij het maatschappelijk optimum leidt tot verloren surplus: het verschil tussen maatschappelijke kosten en baten op de extra eenheden."
@@ -1643,7 +1643,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: [externe effecten, maatschappelijke welvaart, verloren surplus]
+- terms: [externe-effecten, maatschappelijke-welvaart, verloren-surplus]
 
 ### F09 Gevangenendilemma
 - kern: "Situatie waarbij dominante strategie leidt tot suboptimale uitkomst voor beide spelers."
@@ -1652,7 +1652,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: [dominante strategie, gevangenendilemma]
+- terms: [dominante-strategie, gevangenendilemma]
 
 ### F10 Internalisatie van externe effecten
 - kern: "Door de externe kosten of baten via heffing, subsidie of rechten in de prijs op te nemen, komt de marktuitkomst dichter bij het maatschappelijk optimum."
@@ -1661,7 +1661,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: [externe effecten, heffingen, subsidies]
+- terms: [externe-effecten, heffingen, subsidies]
 
 ### F11 Lumpsum-subsidie bij positieve externe effecten
 - kern: "Een lumpsum-subsidie vergoedt de producent voor positieve externe effecten zonder de marginale beslissing te verstoren, zodat een maatschappelijk gewenste activiteit rendabel wordt."
@@ -1670,7 +1670,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: [externe effecten, subsidies]
+- terms: [externe-effecten, subsidies]
 
 ### F12 Nash-evenwicht in pay-off matrix
 - kern: "Bepaal het Nash-evenwicht in een pay-off matrix: de uitkomst waarbij geen van beide spelers zijn strategie wil veranderen gegeven de keuze van de ander."
@@ -1679,7 +1679,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - mastery_target: apply
 - prior_learning: new_this_year
 - aspects: [rekenen, verbaal]
-- terms: [Nash-evenwicht, dominante strategie, pay-off matrix]
+- terms: [nash-evenwicht, dominante-strategie, pay-off-matrix]
 - procedure:
   1. Markeer voor speler 1 per kolom (strategie van speler 2) de hoogste uitbetaling
   2. Markeer voor speler 2 per rij (strategie van speler 1) de hoogste uitbetaling
@@ -1694,7 +1694,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: [berovingsprobleem, contracten en prikkels, risico]
+- terms: [berovingsprobleem, contracten-en-prikkels, risico]
 
 ### F14 Concentratie-externaliteiten analyseren
 - kern: "Analyseer hoe ruimtelijke of sectorale concentratie van economische activiteit negatieve externe effecten versterkt en wanneer ingrijpen maatschappelijk gewenst is."
@@ -1703,7 +1703,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - mastery_target: analyze
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: [externe effecten]
+- terms: [externe-effecten]
 - procedure:
   1. Identificeer het externe effect dat door concentratie ontstaat (bv. files, luchtvervuiling, overbelaste infrastructuur)
   2. Beredeneer waarom de schade meer dan evenredig toeneemt met het aantal activiteiten op dezelfde plek (niet-lineaire effecten)
@@ -1719,7 +1719,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: [verzonken kosten]
+- terms: [verzonken-kosten]
 
 ### F16 MPC–MSC en MPB–MSB onderscheiden
 - layer: 1
@@ -1793,7 +1793,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: [collectieve verzekering, informatieasymmetrie, risico]
+- terms: [collectieve-verzekering, informatieasymmetrie, risico]
 
 ### G04 Eigen risico en moral hazard
 - kern: "Eigen risico geeft verzekerden een prikkel om voorzichtiger te handelen."
@@ -1802,7 +1802,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [rekenen, verbaal]
-- terms: [contracten en prikkels, eigen risico]
+- terms: [contracten-en-prikkels, eigen-risico]
 
 ### G05 Belangentegenstelling in principaal-agentrelatie
 - kern: "In een principaal-agentrelatie verschillen de belangen van principaal en agent, waardoor de agent keuzes kan maken die ten koste gaan van de principaal."
@@ -1811,7 +1811,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: [contracten en prikkels, principaal-agentrelatie]
+- terms: [contracten-en-prikkels, principaal-agentrelatie]
 
 ### G06 Principaal-agentprobleem identificeren
 - layer: 1
@@ -1821,7 +1821,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: [contracten en prikkels, principaal-agentrelatie]
+- terms: [contracten-en-prikkels, principaal-agentrelatie]
 
 ### G07 Transactiekosten berekenen en interpreteren
 - layer: 1
@@ -1846,7 +1846,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: [collectieve verzekering, risico]
+- terms: [collectieve-verzekering, risico]
 
 ### G09 Gepersonaliseerde premies ondermijnen solidariteit
 - kern: "Premies gebaseerd op individuele risicoprofielen verkleinen de herverdeling tussen lage- en hogerrisicogroepen en ondermijnen zo de solidariteit in een collectieve verzekering."
@@ -1855,7 +1855,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: [bonus-malussysteem, collectieve verzekering, risico]
+- terms: [bonus-malussysteem, collectieve-verzekering, risico]
 
 ### G10 Informatieasymmetrie verzekeringsmarkt
 - layer: 1
@@ -1875,7 +1875,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: [financieel risico, onzekerheid, wisselkoers]
+- terms: [financieel-risico, onzekerheid, wisselkoers]
 
 ### G12 Verzekeringspremie berekenen uit verwachte schade
 - kern: "Bereken een verzekeringspremie als verwachte schade (kans × schadebedrag) plus opslag voor administratiekosten en risico-/winstmarge; interpreteer verschillen in premie tussen risicogroepen."
@@ -1903,7 +1903,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: [waardevaste pensioenen, welvaartsvaste pensioenen]
+- terms: [waardevaste-pensioenen, welvaartsvaste-pensioenen]
 
 ### H02 AIQ (arbeidsinkomenquote) berekenen
 - kern: "Bereken de arbeidsinkomenquote: (arbeidsinkomen / nationaal inkomen) x 100%."
@@ -1912,7 +1912,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - mastery_target: apply
 - prior_learning: new_this_year
 - aspects: [rekenen, verbaal]
-- terms: [primair inkomen]
+- terms: [primair-inkomen]
 - procedure:
   1. Bepaal het totale arbeidsinkomen (loonsom incl. toegerekend loon zelfstandigen)
   2. Bepaal het nationaal inkomen (of bbp tegen factorkosten, afhankelijk van definitie in de bron)
@@ -1927,7 +1927,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - mastery_target: apply
 - prior_learning: new_this_year
 - aspects: [rekenen]
-- terms: [prijselasticiteit van de vraag]
+- terms: [prijselasticiteit-van-de-vraag]
 - procedure:
   1. Noteer de procentuele verandering in de relatieve prijs van buitenlands versus binnenlands goed (%ΔP)
   2. Noteer de procentuele verandering in de relatieve importvraag (%ΔQ)
@@ -1942,7 +1942,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - mastery_target: apply
 - prior_learning: previously_taught
 - aspects: [rekenen, verbaal]
-- terms: [gemiddeld tarief, marginaal tarief]
+- terms: [gemiddeld-tarief, marginaal-tarief]
 - procedure:
   1. Noteer per schijf het marginale tarief en de bovengrens
   2. Bepaal in welke schijf het belastbaar inkomen valt
@@ -1959,7 +1959,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: [groen bbp per hoofd]
+- terms: [groen-bbp-per-hoofd]
 
 ### H06 Totale CO2-uitstoot berekenen
 - kern: "Bereken totale milieueffect van marktveranderingen door per-eenheid emissie met hoeveelheid te vermenigvuldigen."
@@ -1992,7 +1992,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: [denivelleren, marginaal tarief]
+- terms: [denivelleren, marginaal-tarief]
 
 ### H09 Kostenvoordeel exporteurs als protectionisme
 - kern: "Beargumenteer wanneer een kostenvoordeel voor binnenlandse exporteurs (bv. gratis toegewezen emissierechten) feitelijk werkt als protectionisme tegen buitenlandse concurrenten."
@@ -2017,7 +2017,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: [Gini-coefficient, conjuncturele werkloosheid]
+- terms: [gini-coefficient, conjuncturele-werkloosheid]
 
 ### H11 Groen bbp en CO2
 - kern: "Lagere CO2-uitstoot vergroot groen bbp; minder productie wegens minder emissierechten verkleint het."
@@ -2026,7 +2026,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: [groen bbp per hoofd]
+- terms: [groen-bbp-per-hoofd]
 
 ### H12 Houdbaarheidssaldo
 - kern: "Het houdbaarheidssaldo geeft aan of overheidsvoorzieningen op lange termijn betaalbaar blijven; stijgende grijze druk verslechtert het saldo."
@@ -2105,7 +2105,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - mastery_target: apply
 - prior_learning: new_this_year
 - aspects: [rekenen]
-- terms: [gemiddeld tarief, marginaal tarief]
+- terms: [gemiddeld-tarief, marginaal-tarief]
 - procedure:
   1. Noteer per schijf het marginale tarief
   2. Voer de stapsgewijze berekening uit zoals in H04 (totale inkomstenbelasting)
@@ -2129,7 +2129,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: [primair inkomen]
+- terms: [primair-inkomen]
 
 ### H21 Staatsschuldquote berekenen
 - layer: 1
@@ -2154,7 +2154,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - mastery_target: analyze
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: [marginaal tarief, secundair inkomen]
+- terms: [marginaal-tarief, secundair-inkomen]
 - procedure:
   1. Bepaal de verandering in het marginaal tarief en bereken het effect op het besteedbaar inkomen van een representatief huishouden (methode uit H04)
   2. Identificeer hoeveel extra (of minder) consumptie hieruit volgt: koppel de inkomensverandering aan de marginale consumptiequote c
@@ -2169,7 +2169,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: [arbeidsaanbod, marginaal tarief, uitverdieneffecten]
+- terms: [arbeidsaanbod, marginaal-tarief, uitverdieneffecten]
 
 ### H24 Wisselkoers en depreciatie
 - layer: 1
@@ -2306,7 +2306,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: [anticyclisch, automatische stabilisatoren, secundair inkomen]
+- terms: [anticyclisch, automatische-stabilisatoren, secundair-inkomen]
 
 ### I03 Renteongevoeligheid van investeringen bij ondergrens
 - kern: "Leg uit waarom bedrijfsinvesteringen beperkt reageren op renteverlagingen als de vraag laag is of de effectieve ondergrens nominale rente nadert."
@@ -2315,7 +2315,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: [effectieve ondergrens nominale rente, investeringen]
+- terms: [effectieve-ondergrens-nominale-rente, investeringen]
 
 ### I04 CAO-looptijd en loonrigiditeit
 - layer: 4
@@ -2334,7 +2334,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - mastery_target: apply
 - prior_learning: previously_taught
 - aspects: [rekenen, verbaal]
-- terms: [duaal mandaat, effectieve ondergrens nominale rente, hoogconjunctuur]
+- terms: [duaal-mandaat, effectieve-ondergrens-nominale-rente, hoogconjunctuur]
 - procedure:
   1. Noteer het mandaat van de centrale bank (enkelvoudig: alleen inflatiedoel; duaal: inflatie én outputgap).
   2. Kwantificeer de afwijkingen: inflatie π versus doel, en outputgap Y − Y* (zie I15 voor outputgap-berekening).
@@ -2358,7 +2358,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - mastery_target: analyze
 - prior_learning: new_this_year
 - aspects: [grafisch, verbaal]
-- terms: [GA-curve, IS-curve, MB-curve, hoogconjunctuur, rente]
+- terms: [ga-curve, is-curve, mb-curve, hoogconjunctuur, rente]
 - procedure:
   1. Teken IS-curve (Y dalend in reële rente r), MB-curve (beleidsregel) en GA-curve (π stijgend in outputgap Y − Y*). Label assen: r verticaal voor IS-MB, π verticaal voor GA.
   2. Identificeer het beginevenwicht: snijpunt IS-MB bepaalt Y en r; GA bepaalt π bij die Y.
@@ -2373,7 +2373,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - mastery_target: analyze
 - prior_learning: new_this_year
 - aspects: [grafisch, rekenen, verbaal]
-- terms: [Keynesiaanse kruis, investeringen]
+- terms: [keynesiaanse-kruis, investeringen]
 - procedure:
   1. Teken het Keynesiaans kruis: 45°-lijn (Y = EB) naast de bestedingenlijn EB = C + I + G + (X − M) met autonome component A en helling gelijk aan de marginale bestedingsquote c.
   2. Lees het beginevenwicht af als snijpunt van EB met de 45°-lijn (Y = EB).
@@ -2388,7 +2388,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - mastery_target: apply
 - prior_learning: new_this_year
 - aspects: [rekenen]
-- terms: [koopkracht, nominale en reele grootheden]
+- terms: [koopkracht, nominale-en-reele-grootheden]
 - procedure:
   1. Noteer het oude nominale loon of uitkering L0 en het inflatiepercentage π over de periode
   2. Bereken het nieuwe nominale bedrag L1 = L0 × (1 + π/100) om exact mee te stijgen met de prijzen
@@ -2405,7 +2405,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [grafisch, verbaal]
-- terms: [GA-curve]
+- terms: [ga-curve]
 
 ### I11 Monetair beleid: starre versus flexibele arbeidsmarkt
 - kern: "Vergelijk het effect van een renteverlaging op bbp en prijsniveau tussen een starre en een flexibele arbeidsmarkt en verklaar het verschil via de helling van de GA-curve."
@@ -2414,7 +2414,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - mastery_target: analyze
 - prior_learning: new_this_year
 - aspects: [grafisch, verbaal]
-- terms: [GA-curve, MB-curve, arbeidsaanbod, rente]
+- terms: [ga-curve, mb-curve, arbeidsaanbod, rente]
 - procedure:
   1. Teken het IS-MB-GA-diagram (zie I07) voor een economie met starre lonen: vlakke GA-curve op korte termijn
   2. Pas een renteverlaging toe: MB-curve schuift omlaag, IS-evenwicht verschuift naar hogere Y
@@ -2431,7 +2431,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: [monetair beleid, wisselkoers]
+- terms: [monetair-beleid, wisselkoers]
 
 ### I13 Monetair trilemma
 - kern: "Analyseer waarom een land hooguit twee van de drie doelen — vaste wisselkoers, vrij kapitaalverkeer en zelfstandig rentebeleid — tegelijk kan bereiken."
@@ -2440,7 +2440,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - mastery_target: analyze
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: [monetair beleid, muntunie, wisselkoers]
+- terms: [monetair-beleid, muntunie, wisselkoers]
 - procedure:
   1. Benoem de drie doelen van het trilemma: vaste wisselkoers, vrij kapitaalverkeer, zelfstandig rentebeleid
   2. Analyseer paar 1 (vaste wisselkoers + vrij kapitaalverkeer): toon dat de centrale bank de rente moet aanpassen aan het buitenland, dus geen zelfstandig rentebeleid
@@ -2465,7 +2465,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - mastery_target: analyze
 - prior_learning: new_this_year
 - aspects: [grafisch, rekenen, verbaal]
-- terms: [GA-curve, IS-curve, automatische stabilisatoren, conjuncturele werkloosheid, hoogconjunctuur]
+- terms: [ga-curve, is-curve, automatische-stabilisatoren, conjuncturele-werkloosheid, hoogconjunctuur]
 - procedure:
   1. Bepaal het potentieel bbp Y* (structurele productiecapaciteit) en het feitelijke bbp Y
   2. Bereken de outputgap = (Y − Y*) / Y* × 100%
@@ -2481,7 +2481,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: [automatische stabilisatoren, overheidstekort, staatsschuld]
+- terms: [automatische-stabilisatoren, overheidstekort, staatsschuld]
 
 ### I17 Rentebeleid en transmissiemechanisme
 - kern: "Leg uit hoe een renteverhoging via duurder krediet consumptie en investeringen afremt en hoe een renteverlaging deze bestedingen stimuleert."
@@ -2490,7 +2490,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: [investeringen, monetair beleid]
+- terms: [investeringen, monetair-beleid]
 
 ### I18 Reële waarde van nominaal eigen risico
 - kern: "Leg uit hoe inflatie de reële last van een nominaal vast eigen risico verlaagt en waarom herziening nodig is om het beleidsdoel vast te houden."
@@ -2499,7 +2499,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: [eigen risico, koopkracht, nominale en reele grootheden]
+- terms: [eigen-risico, koopkracht, nominale-en-reele-grootheden]
 
 ### I19 Wisselkoerseffect van monetair beleid op conjunctuur
 - kern: "Leg uit hoe rentebeleid via de wisselkoers de netto export verandert en zo de binnenlandse conjunctuur beïnvloedt."
@@ -2508,7 +2508,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [rekenen, verbaal]
-- terms: [bbp-groei, monetair beleid, wisselkoers]
+- terms: [bbp-groei, monetair-beleid, wisselkoers]
 
 ### I20 Internationale kapitaalmobiliteit en rentepariteit
 - kern: "Leg uit waarom een relatief hogere binnenlandse rente buitenlands kapitaal aantrekt en een relatieve renteverlaging kapitaal doet wegvloeien; deze kapitaalbewegingen drijven via vraag en aanbod op de valutamarkt de wisselkoers."
@@ -2530,7 +2530,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - mastery_target: apply
 - prior_learning: new_this_year
 - aspects: [rekenen]
-- terms: [arbeidsvraag (= werkgelegenheid + vacatures)]
+- terms: [arbeidsvraag]
 - procedure:
   1. Lees marginaal product per werkende af uit de tabel.
   2. Vermenigvuldig met de prijs per eenheid output om VMP te krijgen.
@@ -2561,7 +2561,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: [arbeidsvraag (= werkgelegenheid + vacatures)]
+- terms: [arbeidsvraag]
 - pitfalls:
   - Denken dat arbeidsvraag alleen door loon bepaald wordt — bij dalende productvraag daalt arbeidsvraag zelfs bij ongewijzigd loon.
 
@@ -2588,7 +2588,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: [arbeidsaanbod (= beroepsbevolking), werkloosheid]
+- terms: [arbeidsaanbod, werkloosheid]
 - pitfalls:
   - "Niet-werkend" verwarren met "werkloos" — scholieren/gepensioneerden zitten in de niet-beroepsbevolking, niet in de werkloze beroepsbevolking.
 
@@ -2652,7 +2652,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - mastery_target: apply
 - prior_learning: review_and_extend
 - aspects: [rekenen, grafisch]
-- terms: [arbeidsaanbod (= beroepsbevolking), arbeidsvraag (= werkgelegenheid + vacatures)]
+- terms: [arbeidsaanbod, arbeidsvraag]
 - procedure:
   1. Identificeer W als prijs en aantal werkenden als hoeveelheid op de assen.
   2. Stel Qa = Qv en los op voor W* (zelfde rekenwerk als §1.4.1).
@@ -2669,7 +2669,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: [conjuncturele werkloosheid]
+- terms: [conjuncturele-werkloosheid]
 - pitfalls:
   - Conjuncturele werkloosheid verwarren met structurele — conjunctureel is tijdelijk en keert om bij herstel.
 
@@ -2681,7 +2681,7 @@ A future `/unit` skill will accept Dutch natural language ("maak nieuwe unit D12
 - mastery_target: understand
 - prior_learning: new_this_year
 - aspects: [verbaal]
-- terms: [structurele werkloosheid]
+- terms: [structurele-werkloosheid]
 - pitfalls:
   - Denken dat conjunctuurherstel structurele werkloosheid oplost — zonder herscholing blijft de mismatch bestaan.
 

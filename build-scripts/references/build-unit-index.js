@@ -202,7 +202,7 @@ function validate(units, { terms, eindtermen, skipStoredLayerValidation = false 
 
     if (Array.isArray(u.terms) && terms) {
       for (const t of u.terms) {
-        if (!terms.has(t)) errors.push(`${u.id}: term "${t}" not found in economie-terminologie.md`);
+        if (!terms.has(t)) errors.push(`${u.id}: term "${t}" not found in begrippen.json or terminology fallback`);
       }
     }
     if (Array.isArray(u.exam_codes) && eindtermen) {
@@ -327,13 +327,19 @@ function loadTerminology() {
     try {
       const data = JSON.parse(fs.readFileSync(BEGRIPPEN_JSON, 'utf8'));
       if (data && typeof data.terms === 'object') {
-        for (const entry of Object.values(data.terms)) {
+        for (const [id, entry] of Object.entries(data.terms)) {
+          if (id && typeof id === 'string') terms.add(id.trim());
           if (entry && typeof entry.term_nl === 'string' && entry.term_nl.trim()) {
             terms.add(entry.term_nl.trim());
           }
           if (Array.isArray(entry && entry.synonyms_nl)) {
             for (const syn of entry.synonyms_nl) {
               if (typeof syn === 'string' && syn.trim()) terms.add(syn.trim());
+            }
+          }
+          if (Array.isArray(entry && entry.deprecated_forms)) {
+            for (const deprecated of entry.deprecated_forms) {
+              if (typeof deprecated === 'string' && deprecated.trim()) terms.add(deprecated.trim());
             }
           }
         }
