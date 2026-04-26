@@ -77,7 +77,6 @@ Open items are listed first; completed items are kept below them.
 
 | Sprint | Name | Completed | Current State |
 |--------|------|-----------|---------------|
-| R4.2 | Exam-Question Extraction Gap Closure | no | Planned. Complete missing required-skill and exam-code links where evidence supports it. |
 | R4.3 | Blueprint Flag Triage | no | Planned. Convert raw missing-unit flags into curated decisions. |
 | R5.1 | Evidence-Anchor Layer | no | Planned. Add exact proof anchors for important claims. |
 | R5.2 | Alignment Graph | no | Planned. Create graph edges only after evidence and prerequisite work. |
@@ -106,6 +105,7 @@ Open items are listed first; completed items are kept below them.
 | R14.1 | Curriculum Versioning | no | Planned. Track curriculum/source versions and reference migrations. |
 | R14.2 | Evidence Signal Model | no | Planned. Model quality and learning signals without surveillance or unnecessary student data. |
 | R14.3 | Continuous Improvement Reports | no | Planned. Produce evidence-platform reports and require review before external claims. |
+| R4.2 | Exam-Question Extraction Gap Closure | yes | Completed. Produced a non-mutating gap report and patch queue for 27 exam-question records with missing required-skill annotations; protected references were not changed. |
 | R4.1 | Unit-Term Slug Migration | yes | Completed. Migrated safe unit `terms` values to canonical `begrippen.json` slug IDs through a validated migration script; left `alternatieve kosten` and `schaarste` unresolved for later term-registry review. |
 | R3.2 | Apply Reviewed Empty-Needs Corrections | yes | Completed. Applied the bounded R2.4 mutation-review set through CLI: 15 dependency edges and 6 `underbouw_assumed` classifications. No D04, rejected market-graph, held A-domain, L09->L03, or H13 mutations were applied. |
 | R3.1 | Reference CLI And Documentation Completion | yes | Completed. CLI docs now reflect implemented scripts; coverage report status is `ready_with_blockers`; zero-needs review fields round-trip through parser, formatter, validation, and JSON projection. |
@@ -203,6 +203,8 @@ Required work:
 Required output: extraction gap report and reviewed patch queue.
 
 Stop condition: do not invent skills from syllabus prose alone.
+
+Completion: completed on 2026-04-26 as a non-mutating audit. `build-scripts/references/exam-question-gap-audit.js` produced `reports/exam-question-extraction-gaps.md` and `.json`. The queue contains 27 records with missing `required_skills`; 19 also miss `exam_codes`. Current annotations contain 0 invalid unit IDs and 0 invalid exam codes. No files in `references/external/` or `references/machine/` were changed.
 
 ### R4.3 Blueprint Flag Triage
 
@@ -669,6 +671,7 @@ Current generated reports:
 - `reports/needs-coverage.md`: informational backlog, `48` live units without `needs`.
 - `reports/terms-coverage.md`: informational backlog, `44` live units without terms.
 - `reports/terminology-drift.md`: pass against machine-registry-first term validation.
+- `reports/exam-question-extraction-gaps.md`: patch queue, `27` exam-question records need required-skill review; `19` also need exam-code review.
 - `reports/procedure-coverage.md`: pass for apply+ units.
 - `reports/aspects-coverage.md`: informational, remaining exam-citation gaps.
 - `reports/unresolved-refs.md`: warnings only for deprecated references.
@@ -734,7 +737,7 @@ Priority work:
 Sprints:
 
 - `R4.1` completed: unit-term slug migration.
-- `R4.2` planned: exam-question extraction gap closure.
+- `R4.2` completed: exam-question extraction gap closure.
 - `R4.3` planned: blueprint flag triage.
 
 ### Phase R5: Evidence Anchors And Alignment Graph
@@ -913,20 +916,21 @@ Do not invert this order.
 
 Do not proceed directly to broad unit cleanup.
 
-Proceed with `R4.2 Exam-Question Extraction Gap Closure`.
+Proceed with `R4.3 Blueprint Flag Triage`.
 
-R4.1 completion state:
+R4.2 completion state:
 
-- safe unit term strings migrated to canonical `begrippen.json` slug IDs
-- unresolved queue: `alternatieve kosten`, `schaarste`
-- generated reports: unit-term slug migration, terms coverage, begrippen coverage, terminology drift
-- protected surfaces: `references/machine/` changed through validated migration/index scripts; `references/external/` unchanged
+- exam-question extraction gaps are cataloged in `reports/exam-question-extraction-gaps.md` and `.json`
+- 27 records need required-skill review
+- 19 of those records also need exam-code review
+- no invalid current unit IDs or exam codes were found
+- protected surfaces: `references/external/` unchanged; `references/machine/` unchanged
 
-R4.2 must:
+R4.3 must:
 
-- identify exam-question records with missing required-skill or exam-code links
-- use actual CvTE questions or target exercises as evidence
-- avoid minting skills from syllabus prose alone
+- triage raw blueprint missing-unit flags into true missing units, existing-unit matches, duplicates, low-priority ideas, and reject/hold cases
+- prioritize flags backed by target exercises
+- avoid auto-minting units from blueprint prose
 
 ## Final Rule
 
