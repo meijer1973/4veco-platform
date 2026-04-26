@@ -77,7 +77,6 @@ Open items are listed first; completed items are kept below them.
 
 | Sprint | Name | Completed | Current State |
 |--------|------|-----------|---------------|
-| R3.2 | Apply Reviewed Empty-Needs Corrections | no | Stopped during required dry-run. Human mutation review authorized a bounded mutation set, but `unit-add-dep --dry-run --from A16 --to A15` failed because stored layer validation runs before dependency-layer recomputation. No protected data changed. |
 | R4.1 | Unit-Term Slug Migration | no | Planned. Migrate unit `terms` fields to canonical `begrippen.json` slug IDs. |
 | R4.2 | Exam-Question Extraction Gap Closure | no | Planned. Complete missing required-skill and exam-code links where evidence supports it. |
 | R4.3 | Blueprint Flag Triage | no | Planned. Convert raw missing-unit flags into curated decisions. |
@@ -108,6 +107,7 @@ Open items are listed first; completed items are kept below them.
 | R14.1 | Curriculum Versioning | no | Planned. Track curriculum/source versions and reference migrations. |
 | R14.2 | Evidence Signal Model | no | Planned. Model quality and learning signals without surveillance or unnecessary student data. |
 | R14.3 | Continuous Improvement Reports | no | Planned. Produce evidence-platform reports and require review before external claims. |
+| R3.2 | Apply Reviewed Empty-Needs Corrections | yes | Completed. Applied the bounded R2.4 mutation-review set through CLI: 15 dependency edges and 6 `underbouw_assumed` classifications. No D04, rejected market-graph, held A-domain, L09->L03, or H13 mutations were applied. |
 | R3.1 | Reference CLI And Documentation Completion | yes | Completed. CLI docs now reflect implemented scripts; coverage report status is `ready_with_blockers`; zero-needs review fields round-trip through parser, formatter, validation, and JSON projection. |
 | R2.4 | Evidence And Unit-Design Cleanup | yes | Completed. Non-mutating packet attaches exact evidence to selected candidate edges, resolves D04 as unit-design-required, classifies foundational A-domain zero-needs candidates, preserves rejected market-graph suggestions, and records a bounded labor-market/unemployment second pass. |
 | R2.3 | Human Review And Gate Closure | yes | Completed with GATE-R2 status `hold`. The audit is diagnostic only; R2.4 produced a non-mutating packet, and R3.2 remains blocked until human mutation review plus CLI readiness. |
@@ -172,7 +172,7 @@ Required output: CLI mutation log, regenerated reports, and a diff summary provi
 
 Stop condition: blocked while the R2.4 packet has not been human-reviewed for mutation decisions or while R3.1 has not confirmed CLI/validator readiness.
 
-Status update, 2026-04-26: human mutation review now exists at `reports/review-gates/GATE-R2-empty-needs/R2.4-mutation-review.md` and `.json`. R3.2 started but stopped during dry-run before mutation. The next action is to fix the dependency CLI layer-recomputation workflow, then rerun the R3.2 dry-run from the beginning. Do not hand-edit `references/machine/`.
+Completion: completed on 2026-04-26. Human mutation review exists at `reports/review-gates/GATE-R2-empty-needs/R2.4-mutation-review.md` and `.json`. R3.2 applied only the approved bounded mutation set through CLI. Mutation log: `reports/review-gates/GATE-R2-empty-needs/R3.2-mutation-log.md`.
 
 ### R4.1 Unit-Term Slug Migration
 
@@ -715,7 +715,7 @@ Goal: complete any missing mutation scripts, update CLI documentation, and apply
 Sprints:
 
 - `R3.1` completed: reference CLI and documentation completion.
-- `R3.2` stopped during dry-run: human mutation review exists, but dependency CLI layer recomputation must be fixed before rerun.
+- `R3.2` completed: reviewed empty-needs corrections applied through CLI.
 
 ### Phase R4: Term, Exam, Blueprint, And Authored-Bucket Cleanup
 
@@ -910,19 +910,22 @@ Do not invert this order.
 
 Do not proceed directly to protected-reference mutation.
 
-Next action: fix the dependency-mutation CLI layer-recomputation workflow, then rerun the R3.2 dry-run from the beginning.
+Proceed with `R4.1 Unit-Term Slug Migration`.
 
-Current R3.2 readiness:
+R3.2 completion state:
 
 - human mutation review: completed with status `authorize_with_limits`
-- CLI/documentation readiness: R3.1 completed with status `ready_with_blockers`
-- R3.2 dry-run status: stopped before mutation at `A16 -> A15`
-- stop reason: stored layer validation rejects the derived layer increase before the dependency CLI can safely recompute/persist layers
-- dependency-edge mutation path: available through `unit-add-dep.js` after review
-- zero-needs classification mutation path: available through `unit-update.js` after review
-- D04 lifecycle mutation path: available through `unit-deprecate.js`, `unit-split.js`, or `unit-merge.js`, but blocked until the human design decision is specific
-- evidence-anchor storage: deferred to R5.1 and not an R3.2 blocker while the R2.4 packet remains provenance
-- protected surfaces: no protected reference data changed during the failed dry-run; continue to avoid hand edits
+- applied through CLI: 15 approved dependency edges
+- applied through CLI: 6 foundational A-domain `underbouw_assumed` classifications
+- not applied: D04 lifecycle mutation, rejected market-graph suggestions, A18/A42/A43 changes, L09->L03, H13->D13/D16, opportunistic extra edges
+- generated reports: DAG integrity, needs coverage, unresolved refs
+- protected surfaces: `references/machine/` changed through CLI; `references/external/` unchanged
+
+R4.1 must:
+
+- migrate unit `terms` fields toward canonical `begrippen.json` slug IDs
+- create a mapping and unresolved queue before mutation
+- avoid silently creating new term slugs or changing term meaning
 
 ## Final Rule
 

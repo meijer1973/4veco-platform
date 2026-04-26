@@ -1,22 +1,20 @@
 # Needs-Coverage Report
 
-Generated: 2026-04-23T14:05:51.757Z
+Generated: 2026-04-26T20:33:30.188Z
 Live units:      190
-With no needs:   61
+With no needs:   48
 
 ## Status: **INFORMATIONAL**
 
 Units with empty `needs` are not broken — they simply have no prerequisite edges wired up yet. Wire them via `unit-add-dep` when a paragraph plan, exercise, or explanatory document surfaces a concrete prerequisite.
 
-## Domain A (11)
+## Domain A (9)
 
 - **A01** Lineaire functie opstellen
 - **A02** Vergelijking oplossen
 - **A03** Functie omschrijven (P↔Q)
 - **A04** Substitueren
 - **A05** Snijpunt met P-as berekenen
-- **A16** Kruiselasticiteit
-- **A17** Inkomenselasticiteit
 - **A18** Comparatief voordeel bepalen
 - **A38** Procentuele verandering berekenen
 - **A42** Grafische verschuiving met voor-en-na pijlen
@@ -26,16 +24,14 @@ Units with empty `needs` are not broken — they simply have no prerequisite edg
 
 - **B01** Schaarste als kerneconomisch probleem
 
-## Domain D (12)
+## Domain D (10)
 
 - **D02** Constante kosten en winst
 - **D04** Elasticiteit en goederenclassificatie
-- **D06** Vraagreactie via prijselasticiteit interpreteren
 - **D09** Homogene en heterogene goederen
 - **D10** Vraag/aanbod-verschuiving bij conjunctuurschok
 - **D13** Kostenstijging en aanbodverschuiving
 - **D15** Marktvormen classificeren
-- **D16** Minimumprijs en werkloosheid
 - **D24** Drie voorwaarden prijsdiscriminatie
 - **D27** Substituten en complementen
 - **D32** Verschuiving versus beweging langs de curve
@@ -63,36 +59,27 @@ Units with empty `needs` are not broken — they simply have no prerequisite edg
 - **G10** Informatieasymmetrie verzekeringsmarkt
 - **G11** Wisselkoersrisico bij internationale handel
 
-## Domain H (9)
+## Domain H (8)
 
 - **H01** AOW-leeftijd als houdbaarheidsinstrument
 - **H05** Circulaire economie in groen bbp
 - **H10** Gini-coefficient bij recessie
 - **H13** Minimumuurloon: kostenkanaal naar concurrentiepositie
-- **H14** Minimumuurloon: vraagkanaal naar bbp-groei
 - **H16** Soepeler ontslagrecht en werkgeversrisico
 - **H21** Staatsschuldquote berekenen
 - **H24** Wisselkoers en depreciatie
 - **H29** Obligatie als verhandelbaar schuldpapier
 
-## Domain I (5)
+## Domain I (3)
 
 - **I01** Anticyclisch begrotingsbeleid
-- **I04** CAO-looptijd en loonrigiditeit
 - **I06** Deflatiespiraal
-- **I10** Loonrigiditeit en helling GA-curve
 - **I14** Multiplier en lekkages
 
-## Domain L (10)
+## Domain L (4)
 
 - **L01** Waarde marginaal product (VMP)
 - **L03** Afgeleide vraag (derived demand)
 - **L05** Beroepsbevolking, niet-beroepsbevolking, werkloze beroepsbevolking
-- **L09** Krappe versus ruime arbeidsmarkt
-- **L11** Conjuncturele werkloosheid
-- **L12** Structurele werkloosheid
-- **L13** Frictiewerkloosheid
-- **L17** CAO als bindende loonafspraak
 - **L18** Voordelen en nadelen van vakbonden
-- **L19** Loonstarheid
 

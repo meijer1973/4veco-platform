@@ -68,19 +68,37 @@ function rebuildMarkdown(preamble, units) {
 function saveCatalog({ preamble, units, dryRun = false }) {
   const newContent = rebuildMarkdown(preamble, units);
   const nextUnits = parseMarkdown(newContent);
-  const { errors, byId } = validate(nextUnits, {
+  const storedLayerIds = new Set(nextUnits.filter(u => typeof u.layer === 'number').map(u => u.id));
+  const context = {
     terms: loadTerminology(),
     eindtermen: loadEindtermen(),
+  };
+  const initial = validate(nextUnits, {
+    ...context,
+    skipStoredLayerValidation: true,
   });
-  if (errors.length) {
+  if (initial.errors.length) {
     const err = new Error('validation failed');
-    err.errors = errors;
+    err.errors = initial.errors;
     throw err;
   }
-  computeLayers(nextUnits, byId);
+  computeLayers(nextUnits, initial.byId);
+  const final = validate(nextUnits, context);
+  if (final.errors.length) {
+    const err = new Error('validation failed');
+    err.errors = final.errors;
+    throw err;
+  }
   const jsonEntries = sortUnits(nextUnits).map(buildJsonEntry);
+  const markdownUnits = nextUnits.map((u) => {
+    if (storedLayerIds.has(u.id)) return u;
+    const copy = { ...u };
+    delete copy.layer;
+    return copy;
+  });
+  const finalContent = rebuildMarkdown(preamble, markdownUnits);
   if (dryRun) return nextUnits.length;
-  fs.writeFileSync(UNITS_MD, newContent);
+  fs.writeFileSync(UNITS_MD, finalContent);
   fs.writeFileSync(UNITS_JSON, JSON.stringify(jsonEntries, null, 2) + '\n');
   return nextUnits.length;
 }
