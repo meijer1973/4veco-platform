@@ -77,7 +77,6 @@ Open items are listed first; completed items are kept below them.
 
 | Sprint | Name | Completed | Current State |
 |--------|------|-----------|---------------|
-| R4.3 | Blueprint Flag Triage | no | Planned. Convert raw missing-unit flags into curated decisions. |
 | R5.1 | Evidence-Anchor Layer | no | Planned. Add exact proof anchors for important claims. |
 | R5.2 | Alignment Graph | no | Planned. Create graph edges only after evidence and prerequisite work. |
 | R5.3 | Alignment Graph Review Gate | no | Planned. Human-reviewed gate before graph powers retrieval or diagnostics. |
@@ -105,6 +104,7 @@ Open items are listed first; completed items are kept below them.
 | R14.1 | Curriculum Versioning | no | Planned. Track curriculum/source versions and reference migrations. |
 | R14.2 | Evidence Signal Model | no | Planned. Model quality and learning signals without surveillance or unnecessary student data. |
 | R14.3 | Continuous Improvement Reports | no | Planned. Produce evidence-platform reports and require review before external claims. |
+| R4.3 | Blueprint Flag Triage | yes | Completed. Triaged all 84 current raw target-exercise missing-unit flags into a curated backlog: 68 still needed, 4 existing-unit match candidates, 1 duplicate, and 11 deferred. |
 | R4.2 | Exam-Question Extraction Gap Closure | yes | Completed. Produced a non-mutating gap report and patch queue for 27 exam-question records with missing required-skill annotations; protected references were not changed. |
 | R4.1 | Unit-Term Slug Migration | yes | Completed. Migrated safe unit `terms` values to canonical `begrippen.json` slug IDs through a validated migration script; left `alternatieve kosten` and `schaarste` unresolved for later term-registry review. |
 | R3.2 | Apply Reviewed Empty-Needs Corrections | yes | Completed. Applied the bounded R2.4 mutation-review set through CLI: 15 dependency edges and 6 `underbouw_assumed` classifications. No D04, rejected market-graph, held A-domain, L09->L03, or H13 mutations were applied. |
@@ -219,6 +219,8 @@ Required work:
 Required output: curated blueprint flag backlog with decision category, evidence, and next action.
 
 Stop condition: do not auto-mint units from blueprint prose.
+
+Completion: completed on 2026-04-26 as a non-mutating triage. `build-scripts/references/check-target-exercise-flags.js` produced `reports/blueprint-flag-triage.md` and `.json`. All 84 current raw flags are triaged: 68 `still_needed`, 4 `existing_unit_match`, 1 `duplicate`, and 11 `defer`. No files in `references/machine/`, `references/external/`, or `references/authored/course-target-exercises.json` were changed.
 
 ### R5.1 Evidence-Anchor Layer
 
@@ -672,6 +674,7 @@ Current generated reports:
 - `reports/terms-coverage.md`: informational backlog, `44` live units without terms.
 - `reports/terminology-drift.md`: pass against machine-registry-first term validation.
 - `reports/exam-question-extraction-gaps.md`: patch queue, `27` exam-question records need required-skill review; `19` also need exam-code review.
+- `reports/blueprint-flag-triage.md`: curated backlog, `84` raw target-exercise flags triaged.
 - `reports/procedure-coverage.md`: pass for apply+ units.
 - `reports/aspects-coverage.md`: informational, remaining exam-citation gaps.
 - `reports/unresolved-refs.md`: warnings only for deprecated references.
@@ -738,7 +741,7 @@ Sprints:
 
 - `R4.1` completed: unit-term slug migration.
 - `R4.2` completed: exam-question extraction gap closure.
-- `R4.3` planned: blueprint flag triage.
+- `R4.3` completed: blueprint flag triage.
 
 ### Phase R5: Evidence Anchors And Alignment Graph
 
@@ -914,23 +917,22 @@ Do not invert this order.
 
 ## Immediate Next Sprint
 
-Do not proceed directly to broad unit cleanup.
+Do not proceed directly to graph construction or retrieval.
 
-Proceed with `R4.3 Blueprint Flag Triage`.
+Proceed with `R5.1 Evidence-Anchor Layer`.
 
-R4.2 completion state:
+R4.3 completion state:
 
-- exam-question extraction gaps are cataloged in `reports/exam-question-extraction-gaps.md` and `.json`
-- 27 records need required-skill review
-- 19 of those records also need exam-code review
-- no invalid current unit IDs or exam codes were found
-- protected surfaces: `references/external/` unchanged; `references/machine/` unchanged
+- blueprint flags are cataloged in `reports/blueprint-flag-triage.md` and `.json`
+- 84 current raw flags are triaged
+- 68 still needed, 4 existing-unit match candidates, 1 duplicate, and 11 deferred
+- no unit minting, merging, splitting, deprecating, or protected reference mutation happened
 
-R4.3 must:
+R5.1 must:
 
-- triage raw blueprint missing-unit flags into true missing units, existing-unit matches, duplicates, low-priority ideas, and reject/hold cases
-- prioritize flags backed by target exercises
-- avoid auto-minting units from blueprint prose
+- define evidence-anchor schema and source ranking
+- attach anchors first to high-risk decisions: prerequisite edges, elasticity decisions, labor-market sequencing, and exam links
+- keep reports and summaries secondary to source evidence
 
 ## Final Rule
 
