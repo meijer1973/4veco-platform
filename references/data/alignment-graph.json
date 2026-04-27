@@ -713,7 +713,7 @@
       "notes": "Traceability edge from claim to evidence anchor."
     }
   ],
-  "gate_id": "GATE-R5.3-alignment-graph",
+  "gate_id": "GATE-R5-alignment-graph",
   "graph_approval_scope": "named_edge_groups_only",
   "whole_graph_authority": false,
   "allowed_downstream_uses": [

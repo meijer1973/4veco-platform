@@ -2,7 +2,7 @@
   "eval_set_id": "R7.3-retrieval-eval-set",
   "schema_version": 1,
   "generated_by": "build-scripts/rag/run-retrieval-evals.js",
-  "generated_on": "2026-04-27T06:49:48.683Z",
+  "generated_on": "2026-04-27T08:43:48.068Z",
   "source_files": [
     "references/data/rag/retrieval_eval_set.json",
     "references/data/rag/chunk_index.jsonl",
@@ -1021,7 +1021,7 @@
           "not_primary_evidence": true,
           "curriculum_authority": false,
           "allowed_for_public_citation": false,
-          "text_excerpt": "unresolved-refs: status warn; issues 21; summary {\"deprecated_units\":2,\"deprecated_citations\":21}"
+          "text_excerpt": "unresolved-refs: status warn; issues 24; summary {\"deprecated_units\":2,\"deprecated_citations\":24}"
         },
         {
           "chunk_id": "quality-report:aspects-coverage.json",

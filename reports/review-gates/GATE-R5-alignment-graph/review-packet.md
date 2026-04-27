@@ -1,7 +1,7 @@
 # GATE-R5.3 Alignment Graph Review Packet
 
 Sprint: R5.3
-Gate: GATE-R5.3-alignment-graph
+Gate: GATE-R5-alignment-graph
 Prepared: 2026-04-27
 
 ## Purpose

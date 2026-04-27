@@ -1,0 +1,68 @@
+{
+  "review_id": "R0.2-R7.4-merge-readiness",
+  "sprint_id": "R7.5",
+  "generated_on": "2026-04-27",
+  "branch": "refsys/R0.2-reference-baseline-inventory",
+  "base_branch": "origin/main",
+  "branch_synced_with_origin_main": true,
+  "ahead_behind_after_sync": {
+    "behind_origin_main": 0,
+    "ahead_origin_main": 34
+  },
+  "conflicts_encountered": false,
+  "conflicts_resolved": [],
+  "duplicate_gate_paths_resolved": true,
+  "canonical_r5_gate_path": "reports/review-gates/GATE-R5-alignment-graph/",
+  "stray_roadmap_artifact_resolved": true,
+  "stray_roadmap_artifact_new_path": "docs/roadmaps/final-codex-handoff-roadmap-original.md",
+  "protected_machine_changes_backed_by_mutation_log": true,
+  "mutation_log_paths": [
+    "reports/review-gates/GATE-R2-empty-needs/R3.2-mutation-log.json",
+    "reports/review-gates/GATE-R2-empty-needs/R3.2-mutation-log.md"
+  ],
+  "reference_health_regenerated_after_main_sync": true,
+  "retrieval_eval_status_after_main_sync": "pass",
+  "validate_all_available": false,
+  "validate_all_substitutes": [
+    "node build-scripts/references/build-unit-index.js",
+    "node build-scripts/references/validate-prior-knowledge-schema.js",
+    "node build-scripts/references/validate-alignment-graph.js",
+    "node build-scripts/references/validate-core-schemas.js",
+    "node build-scripts/references/build-reference-inventory.js",
+    "node build-scripts/references/check-source-manifest.js",
+    "node build-scripts/references/check-document-inventory.js",
+    "node build-scripts/references/check-source-of-truth.js"
+  ],
+  "tests_passed": [
+    "node build-scripts/sprints/check-sprint-plan.js docs/sprints/R7.5-plan.md",
+    "node build-scripts/review-gates/validate-gate.js reports/review-gates/GATE-R5-alignment-graph/gate-closure.json",
+    "node build-scripts/review-gates/validate-gate.js reports/review-gates/GATE-R7-rag/gate-closure.json",
+    "node build-scripts/references/validate-alignment-graph.js",
+    "node build-scripts/references/validate-core-schemas.js",
+    "node build-scripts/references/build-unit-index.js",
+    "node build-scripts/references/validate-prior-knowledge-schema.js",
+    "node build-scripts/reports/generate-all.js",
+    "node build-scripts/reports/validate-report-json.js",
+    "node build-scripts/reports/generate-reference-health.js",
+    "node build-scripts/reports/check-reference-health.js",
+    "node build-scripts/rag/build-chunks.js",
+    "node build-scripts/rag/validate-chunks.js",
+    "node build-scripts/rag/validate-query-output.js",
+    "node build-scripts/rag/run-retrieval-evals.js",
+    "node build-scripts/rag/validate-retrieval-eval-results.js",
+    "node build-scripts/sprints/check-sprint-bundle.js R7.4 --complete",
+    "node build-scripts/references/build-reference-inventory.js",
+    "node build-scripts/references/check-source-manifest.js",
+    "node build-scripts/references/check-document-inventory.js",
+    "node build-scripts/references/check-source-of-truth.js"
+  ],
+  "tests_failed": [],
+  "notes": [
+    "The merge from origin/main completed with no conflicts.",
+    "R5 gate artifacts were moved into the canonical GATE-R5-alignment-graph namespace and the duplicate GATE-R5.3 directory was removed.",
+    "The handoff roadmap artifact was moved out of references/ into docs/roadmaps/.",
+    "validate-all.js does not exist, so the listed reference validators were used as substitutes.",
+    "Inventory checks must run after derived RAG/report regeneration because generated JSONL and eval files change hashes."
+  ],
+  "ready_for_merge": true
+}

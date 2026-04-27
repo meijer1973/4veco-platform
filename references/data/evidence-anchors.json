@@ -386,7 +386,7 @@
       "object_id": "D34",
       "evidence_ids": ["EV-D16-L10-TARGET", "EV-D16-EXAM"],
       "status": "accepted",
-      "decision_source": "reports/review-gates/GATE-R5.3-alignment-graph/gate-closure.json",
+      "decision_source": "reports/review-gates/GATE-R5-alignment-graph/gate-closure.json",
       "review_required_before_use": false,
       "notes": "R5.3 confirmed D16 minimum-wage reasoning needs both L10 labor-market equilibrium transfer and D34 binding price-regulation logic."
     },

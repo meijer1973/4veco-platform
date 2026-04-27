@@ -1,7 +1,7 @@
 # GATE-R5.3 Alignment Graph Human Interview
 
 Sprint: R5.3
-Gate: GATE-R5.3-alignment-graph
+Gate: GATE-R5-alignment-graph
 Started: 2026-04-27
 
 ## Interview Protocol
@@ -13,7 +13,7 @@ No graph edge is approved until the human reviewer explicitly confirms the final
 ## Baseline
 
 - Graph: `references/data/alignment-graph.json`
-- Review packet: `reports/review-gates/GATE-R5.3-alignment-graph/review-packet.md`
+- Review packet: `reports/review-gates/GATE-R5-alignment-graph/review-packet.md`
 - Total edges: 31
 - Pending main edges: 13
 - Human-approved edges: 0

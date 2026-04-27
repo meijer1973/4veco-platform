@@ -6,14 +6,14 @@
   "plan": "docs/sprints/R5.3-plan.md",
   "protected_reference_data_changes_allowed": false,
   "human_review_required": true,
-  "gate_id": "GATE-R5.3-alignment-graph",
-  "review_packet": "reports/review-gates/GATE-R5.3-alignment-graph/review-packet.md",
+  "gate_id": "GATE-R5-alignment-graph",
+  "review_packet": "reports/review-gates/GATE-R5-alignment-graph/review-packet.md",
   "valid_gate_statuses": ["pass", "pass_with_conditions", "hold", "fail"],
   "acceptance_tests": [
     "node build-scripts/sprints/check-sprint-plan.js docs/sprints/R5.3-plan.md",
     "node build-scripts/references/check-evidence-anchors.js",
     "node build-scripts/references/check-alignment-graph.js",
-    "node build-scripts/review-gates/validate-gate.js reports/review-gates/GATE-R5.3-alignment-graph/gate-closure.json",
+    "node build-scripts/review-gates/validate-gate.js reports/review-gates/GATE-R5-alignment-graph/gate-closure.json",
     "node build-scripts/sprints/check-sprint-result.js reports/sprints/R5.3-result.md",
     "node build-scripts/sprints/check-sprint-bundle.js R5.3 --complete"
   ]
