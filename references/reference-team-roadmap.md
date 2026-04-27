@@ -16,9 +16,11 @@ Compatibility decisions:
 - The older local `R0.1` / `R0.2` history is preserved as completed historical `H0.x` work, not as active roadmap numbering.
 - `R0.1 Sprint Execution Scaffold` is completed.
 - `R2.3 Human Review And Gate Closure` is completed with `GATE-R2-empty-needs` status `hold`.
-- `R2.4 Evidence And Unit-Design Cleanup` is completed as a non-mutating review packet before R3.2 can proceed.
-- Current catalog metrics reflect the current branch state after R2.3 closure.
+- `R2.4 Evidence And Unit-Design Cleanup` is completed as a non-mutating review packet.
+- `R3.2 Apply Reviewed Empty-Needs Corrections` is completed; the approved mutation set was applied through CLI.
+- Current catalog metrics reflect the post-merge `main` state after R7.5 validation.
 - `R3.1 Reference CLI And Documentation Completion` is completed. CLI documentation and command coverage now distinguish ready mutation paths from remaining blockers.
+- The active roadmap is narrowed to reference and RAG data quality. Delayed product surfaces such as diagnostics, adaptive routing, teacher cockpit, student-facing AI, games, simulations, privacy deployment, accessibility deployment, and continuous-improvement claims are intentionally out of scope for this roadmap until the data foundation is stronger.
 
 ## Operating Rule
 
@@ -77,24 +79,11 @@ Open items are listed first; completed items are kept below them.
 
 | Sprint | Name | Completed | Current State |
 |--------|------|-----------|---------------|
-| R8.1 | QC Issue Model | no | Planned. Define machine-readable quality issue categories, severity, evidence, proof-to-close, and ownership. |
-| R8.2 | Production QC Gates | no | Planned. Connect reference QC signals to lesson-production checks without mutating protected references. |
-| R9.1 | Owned Source Registry | no | Planned. Register owned book/source material as source surfaces distinct from external authority and generated reports. |
-| R9.2 | Content Graph Projection | no | Planned. Project owned content to the reference graph without making exposition authoritative. |
-| R10.1 | Diagnostic Item Model | no | Planned. Model diagnostic items, mastery signals, misconceptions, hints, and retry items. |
-| R10.2 | Feedback Library | no | Planned. Create reusable feedback and worked-example records linked to units and misconceptions. |
-| R10.3 | Diagnostics Review Gate | no | Planned. Human-reviewed gate before adaptive student routing. |
-| R11.1 | Game Content Mapping | no | Planned. Map games to units, concepts, misconceptions, feedback, and debrief prompts. |
-| R11.2 | Simulation Content Model | no | Planned. Define simulation schemas and evidence/debrief links. |
-| R12.1 | Teacher Cockpit Data Contract | no | Planned. Define teacher-facing dashboard data while keeping student data separate from references. |
-| R12.2 | Privacy Review Gate | no | Planned. Human-reviewed gate before student-data deployment. |
-| R12.3 | Accessibility Review Gate | no | Planned. Human-reviewed gate before broader student-facing deployment. |
-| R13.1 | Internal Authoring Assistant | no | Planned. Bound AI assistance to internal authoring with human review. |
-| R13.2 | AI Tutor Guardrails | no | Planned. Define student-facing AI constraints, retrieval dependencies, and refusal/uncertainty behavior. |
-| R13.3 | AI Review Gate | no | Planned. Human-reviewed gate before any student-facing AI tutor use. |
-| R14.1 | Curriculum Versioning | no | Planned. Track curriculum/source versions and reference migrations. |
-| R14.2 | Evidence Signal Model | no | Planned. Model quality and learning signals without surveillance or unnecessary student data. |
-| R14.3 | Continuous Improvement Reports | no | Planned. Produce evidence-platform reports and require review before external claims. |
+| R9.1 | Owned Source Registry | no | Next. Register owned book/source material as source surfaces so RAG can retrieve from actual lesson and blueprint material without treating exposition as authority. |
+| R9.2 | Content Graph Projection | no | Planned next after R9.1. Project owned content to the reference graph using projection edges, not evidence edges. |
+| R7.6 | RAG Quality Hardening | no | Planned. Close R7.4 follow-ups, expand retrieval eval coverage, backfill evidence anchors, and improve approved/pending/diagnostic labels. |
+| R8.1 | QC Issue Model | no | Planned, scoped down. Define only the lightweight issue schema needed to expose evidence weakness, stale data, and proof-to-close in retrieval and reports. |
+| R14.1 | Curriculum Versioning | no | Planned, minimal. Track source/curriculum versions so retrieval does not silently mix syllabus or exam-program versions. |
 | R7.4 | RAG Review Gate | yes | Completed with `pass_with_conditions`. Internal and teacher-facing non-authoritative retrieval plus human-reviewed lesson-authoring support are allowed; student-facing diagnostics, adaptive routing, AI, automatic sequencing, mastery decisions, and summative use remain blocked. |
 | R7.5 | Merge Readiness and Main Sync | yes | Completed. Branch synced with `origin/main`, duplicate R5 gate namespace resolved, stray roadmap artifact moved to `docs/roadmaps/`, validators pass, and merge-readiness report says ready for merge review. |
 | R7.3 | Retrieval Evaluation Set | yes | Completed. Added fixed retrieval eval set, runner, validator, JSON results, and Markdown report; 10/10 cases pass with zero authority violations. |
@@ -111,11 +100,11 @@ Open items are listed first; completed items are kept below them.
 | R3.2 | Apply Reviewed Empty-Needs Corrections | yes | Completed. Applied the bounded R2.4 mutation-review set through CLI: 15 dependency edges and 6 `underbouw_assumed` classifications. No D04, rejected market-graph, held A-domain, L09->L03, or H13 mutations were applied. |
 | R3.1 | Reference CLI And Documentation Completion | yes | Completed. CLI docs now reflect implemented scripts; coverage report status is `ready_with_blockers`; zero-needs review fields round-trip through parser, formatter, validation, and JSON projection. |
 | R2.4 | Evidence And Unit-Design Cleanup | yes | Completed. Non-mutating packet attaches exact evidence to selected candidate edges, resolves D04 as unit-design-required, classifies foundational A-domain zero-needs candidates, preserves rejected market-graph suggestions, and records a bounded labor-market/unemployment second pass. |
-| R2.3 | Human Review And Gate Closure | yes | Completed with GATE-R2 status `hold`. The audit is diagnostic only; R2.4 produced a non-mutating packet, and R3.2 remains blocked until human mutation review plus CLI readiness. |
+| R2.3 | Human Review And Gate Closure | yes | Completed with GATE-R2 status `hold`. The audit was diagnostic only; R2.4 produced the non-mutating packet and R3.2 later applied only the human-approved CLI mutation set. |
 | R2.2 | Subagent Review For Empty Needs | yes | Completed. Pedagogy, data-integrity, and evidence reviews plus a GATE-R2 review packet are ready for human review. |
 | R2.1 | Full Empty-Needs Audit | yes | Completed. Non-mutating audit generated 61 machine-suggested empty-needs review entries for the current branch catalog. |
 | R1.3 | Unit Prior-Knowledge Schema Extension | yes | Completed. Unit and review schemas now support zero-needs status, assumed prior knowledge, and review records. |
-| R1.2 | Core JSON Schemas | yes | Completed. Initial JSON schema contracts exist for units, terms, evidence, graph edges, reports, RAG chunks, feedback, games, and simulations. |
+| R1.2 | Core JSON Schemas | yes | Completed. Initial JSON schema contracts exist for units, terms, evidence, graph edges, reports, RAG chunks, and reference-quality records. |
 | R1.1 | Source-of-Truth Decision | yes | Completed. `references/SOURCE_OF_TRUTH.md` defines canonical source, projection, authority, and edit-policy rules. |
 | R0.2 | Reference Baseline Inventory | yes | Completed. Source manifest, document inventory, builder, and validators now define the baseline reference/report/tooling surface. |
 | R0.1 | Sprint Execution Scaffold | yes | Completed. Sprint templates, example fixtures, JSON sprint metadata, and plan/result validators exist. |
@@ -157,7 +146,7 @@ Required output: CLI documentation and command coverage report.
 
 Stop condition: if a required correction cannot be expressed through CLI, build or specify the CLI first; do not hand-edit machine references.
 
-Completion: completed on 2026-04-26. `reports/reference-cli-coverage.md` and `reports/json/reference-cli-coverage.json` record status `ready_with_blockers`. The remaining blocker for R3.2 is human mutation review of the R2.4 packet, plus a specific design decision for D04 if any D04 lifecycle mutation is requested.
+Completion: completed on 2026-04-26. `reports/reference-cli-coverage.md` and `reports/json/reference-cli-coverage.json` record status `ready_with_blockers`. Human mutation review later authorized a bounded R3.2 mutation set. D04 lifecycle work remains out of scope until a separate unit-design decision is made.
 
 ### R3.2 Apply Reviewed Empty-Needs Corrections
 
@@ -253,7 +242,7 @@ Required output: alignment graph data and integrity report.
 
 Stop condition: graph must not become pedagogically authoritative before R5.3 closes.
 
-Completion: completed on 2026-04-26. R5.2 added `references/data/alignment-graph.json`, `build-scripts/references/build-alignment-graph.js`, `build-scripts/references/check-alignment-graph.js`, and graph integrity reports. The draft graph contains 31 edges: 13 pending main alignment edges and 18 `derived_from` traceability edges. No edge is `human_approved`; the graph remains `draft_pending_r5_3_review` until R5.3 closes.
+Completion: completed on 2026-04-26. R5.2 added `references/data/alignment-graph.json`, `build-scripts/references/build-alignment-graph.js`, `build-scripts/references/check-alignment-graph.js`, and graph integrity reports. R5.3 later approved only named edge groups with conditions; unreviewed graph edges remain pending or diagnostic.
 
 ### R5.3 Alignment Graph Review Gate
 
@@ -361,35 +350,9 @@ Required work:
 
 Required output: RAG gate packet, human decision, and closure record.
 
-Stop condition: no student-facing AI from this gate; that is R13.
+Stop condition: no student-facing AI, diagnostics, adaptive routing, automatic sequencing, mastery decisions, or summative use from this gate.
 
-### R8.1 QC Issue Model
-
-Purpose: define machine-readable quality issue categories that match this repository's work.
-
-Required work:
-
-- Model categories such as inspection-standard proof, reference quality, evidence sufficiency, curriculum alignment, unit design, extraction integrity, report drift, and production readiness.
-- Include severity, owner/team, affected surface, evidence, next action, and proof required to close.
-- Ensure categories are internal-facing and not exposed to public lesson material.
-
-Required output: QC issue schema, example issue log, and dashboard data hook.
-
-Stop condition: do not copy issue categories from unrelated data-analysis projects.
-
-### R8.2 Production QC Gates
-
-Purpose: connect reference QC signals to lesson-production checks.
-
-Required work:
-
-- Define which reference issues block paragraph/chapter production.
-- Create checks that surface unresolved evidence, unit-design, or inspection-standard issues before production.
-- Keep production checks readable for developers and lesson builders.
-
-Required output: QC gate scripts and report.
-
-Stop condition: do not mutate protected references from production QC scripts.
+Completion: completed on 2026-04-27 with `pass_with_conditions`. Internal dashboard use, internal retrieval development, retrieval evaluation, teacher-facing non-authoritative lookup, and human-reviewed lesson-authoring support are allowed. Student-facing diagnostics, adaptive routing, student-facing AI, automatic lesson sequencing, automatic mastery decisions, summative assessment decisions, and unreviewed student-facing publication remain blocked.
 
 ### R9.1 Owned Source Registry
 
@@ -397,11 +360,13 @@ Purpose: register owned book/source material as source surfaces without confusin
 
 Required work:
 
-- List owned book materials, paragraph plans, generated textbook surfaces, and source status.
+- List owned book materials, paragraph plans, generated textbook surfaces, target exercises, answer models, chapter plans, course blueprint material, and active lesson markdown.
+- Define source status for each surface: authored source, generated projection, exercise evidence, answer model, planning artifact, or implementation output.
 - Define what can be used as evidence and what is exposition or generated projection.
 - Connect owned sources to source manifest and document inventory.
+- Keep lesson-output references separate from external authority and protected machine registries.
 
-Required output: owned source registry and validator.
+Required output: owned source registry, schema, validator, source-manifest integration, and report.
 
 Stop condition: owned exposition cannot override external authority or reviewed machine references.
 
@@ -411,209 +376,63 @@ Purpose: project owned content into the reference graph for navigation and cover
 
 Required work:
 
-- Link paragraphs, exercises, visuals, procedures, summaries, and games to units and terms.
+- Link paragraphs, exercises, visuals, procedures, summaries, and answer models to units and terms.
 - Mark projection edges separately from evidence edges.
+- Preserve source type, source path, authority level, and generated/projection status in every edge.
 - Produce coverage reports for owned content against the reference graph.
+- Regenerate RAG chunks so owned-source retrieval works without weakening evidence hierarchy.
 
-Required output: content graph projection and report.
+Required output: content graph projection, graph/report validators, owned-content coverage report, regenerated chunk index, and retrieval smoke tests.
 
 Stop condition: do not use generated lesson text as primary proof for reference claims.
 
-### R10.1 Diagnostic Item Model
+### R7.6 RAG Quality Hardening
 
-Purpose: model diagnostic items, mastery signals, misconceptions, hints, and retry items.
-
-Required work:
-
-- Define schemas for diagnostic items and mastery observations.
-- Link items to units, procedures, misconceptions, feedback, and evidence.
-- Keep adaptive routing separate from technical retrieval/RAG.
-
-Required output: diagnostic item schema and examples.
-
-Stop condition: no adaptive student routing before R10.3.
-
-### R10.2 Feedback Library
-
-Purpose: create reusable feedback and worked-example records linked to units and misconceptions.
+Purpose: improve retrieval quality before new product features. This sprint closes the R7.4 follow-up conditions and expands the proof layer enough that RAG quality is more than a smoke test.
 
 Required work:
 
-- Model feedback messages, hints, worked examples, and retry prompts.
-- Link feedback to specific errors or misconceptions.
-- Require human review for generated feedback.
+- RAG-01: make retrieval labels explicit for approved, approved-with-conditions, pending-review, diagnostic-only, generated-report diagnostic, external-primary, machine-registry, and authored-judgement results.
+- RAG-02: add score, match-strength, and weak-match warnings; very low-score matches must be hidden by default or grouped as possible weak matches.
+- RAG-03: split target exercises into stable per-exercise chunks with exercise IDs, source paths, unit links, term links where available, evidence metadata, and target-exercise status.
+- RAG-04: create evidence-anchor coverage reports for retrieval by chunk type, entity type, source type, and authority level.
+- Expand retrieval evaluation from the 10-case smoke suite toward a meaningful regression suite covering unit lookup, terms, exam phrasings, known ambiguity, deprecated units, missing-needs queries, generated-report-only results, pending-review graph edges, and out-of-corpus queries.
+- Backfill evidence anchors for high-traffic concepts and currently weak surfaces, especially elasticity, A-domain foundations, labor-market sequencing, `alternatieve kosten`, and `schaarste`.
+- Review the first backfilled graph edge batch so the graph has meaningful approved edges instead of relying mainly on draft/pending traceability.
 
-Required output: feedback library schema, examples, and validator.
+Required output: updated RAG scripts, expanded eval set and results, evidence-anchor coverage report, backfilled evidence-anchor records, graph integrity report, and sprint result.
 
-Stop condition: feedback must not make unsupported claims about student ability.
+Stop condition: do not expand into diagnostics, adaptive routing, student-facing AI, or new product surfaces.
 
-### R10.3 Diagnostics Review Gate
+### R8.1 QC Issue Model
 
-Purpose: human-review diagnostics before they route students adaptively.
-
-Required work:
-
-- Prepare review packet with item samples, feedback samples, and routing logic.
-- Review for pedagogy, fairness, privacy, and evidence.
-- Record human gate decision.
-
-Required output: diagnostics gate artifacts.
-
-Stop condition: no adaptive routing until gate allows it.
-
-### R11.1 Game Content Mapping
-
-Purpose: map games to economics concepts, units, misconceptions, feedback, and debrief prompts.
+Purpose: define a lightweight, machine-readable quality issue model that directly improves reference/RAG trust.
 
 Required work:
 
-- Link existing games and game items to reference units and procedures.
-- Identify weak or unlinked game content.
-- Add debrief and misconception hooks.
+- Model only categories needed now: reference quality, evidence sufficiency, unit design, extraction integrity, report drift, source-version drift, term-link gaps, needs gaps, and production-readiness warnings.
+- Include severity, owner/team, affected surface, evidence, next action, and proof required to close.
+- Make issues retrievable and dashboard-friendly without turning them into curriculum authority.
+- Ensure categories are internal-facing and not exposed as student material.
 
-Required output: game mapping report and schema updates.
+Required output: QC issue schema, example issue log, validator, and dashboard/RAG data hook.
 
-Stop condition: do not refactor retiring legacy game target unless explicitly approved.
-
-### R11.2 Simulation Content Model
-
-Purpose: define how simulations connect to units, economic models, evidence, misconceptions, and debrief prompts.
-
-Required work:
-
-- Define simulation schema and graph links.
-- Model inputs, outputs, learning targets, and interpretation boundaries.
-- Add validation for simulation-to-reference mappings.
-
-Required output: simulation content model and examples.
-
-Stop condition: simulations must not imply unsupported causal claims.
-
-### R12.1 Teacher Cockpit Data Contract
-
-Purpose: define teacher-facing dashboard data while keeping student data separate from reference data.
-
-Required work:
-
-- Define dashboard contract for reference health, curriculum coverage, QC status, and production readiness.
-- Separate aggregate/status data from learner data.
-- Keep developer dashboard internals out of public-facing material.
-
-Required output: teacher cockpit data contract.
-
-Stop condition: privacy gate required before student data enters deployment.
-
-### R12.2 Privacy Review Gate
-
-Purpose: review student-data handling before deployment.
-
-Required work:
-
-- Prepare data-flow inventory and minimization plan.
-- Review storage, retention, access, and consent assumptions.
-- Record gate decision.
-
-Required output: privacy gate artifacts.
-
-Stop condition: no student-data deployment before closure.
-
-### R12.3 Accessibility Review Gate
-
-Purpose: review accessibility before broader student-facing release.
-
-Required work:
-
-- Review dashboards, games, generated materials, and interactive components.
-- Check keyboard navigation, contrast, alt text, readable structure, and export formats.
-- Record gate decision and blockers.
-
-Required output: accessibility gate artifacts.
-
-Stop condition: no broad deployment while blockers remain.
-
-### R13.1 Internal Authoring Assistant
-
-Purpose: allow bounded AI assistance for internal authoring before any student-facing AI.
-
-Required work:
-
-- Define allowed tasks, source requirements, refusal behavior, and human-review requirements.
-- Connect assistant outputs to evidence and QC logs.
-- Keep generated content marked as needing review.
-
-Required output: internal assistant contract and evaluation examples.
-
-Stop condition: assistant cannot publish directly to student material.
-
-### R13.2 AI Tutor Guardrails
-
-Purpose: define constraints for any future student-facing AI tutor.
-
-Required work:
-
-- Specify retrieval dependencies, source citation rules, uncertainty handling, privacy limits, and escalation paths.
-- Require stable graph, evidence anchors, retrieval evaluation, and review gates.
-- Define unacceptable behaviors.
-
-Required output: AI tutor guardrail spec.
-
-Stop condition: no student-facing tutor before R13.3.
-
-### R13.3 AI Review Gate
-
-Purpose: human-review any student-facing AI tutor before use.
-
-Required work:
-
-- Review retrieval quality, hallucination risks, privacy, safety, pedagogy, and failure handling.
-- Use evaluation cases and adversarial prompts.
-- Record gate decision.
-
-Required output: AI gate artifacts.
-
-Stop condition: no student-facing AI without explicit gate approval.
+Stop condition: do not gold-plate a general issue tracker and do not copy categories from unrelated data-analysis projects.
 
 ### R14.1 Curriculum Versioning
 
-Purpose: track curriculum/source versions and migrations.
+Purpose: track curriculum/source versions and migrations so retrieval cannot silently mix incompatible source generations.
 
 Required work:
 
 - Record versioned exam programs, syllabi, owned source versions, and migration status.
 - Make stale references visible.
 - Link version changes to affected units, terms, and evidence anchors.
+- Keep the first pass minimal: enough to tag current external, machine, authored, and owned-source surfaces with version provenance.
 
 Required output: curriculum version registry and stale-reference report.
 
 Stop condition: do not silently mix curriculum versions.
-
-### R14.2 Evidence Signal Model
-
-Purpose: model quality and learning signals without surveillance or unnecessary student data.
-
-Required work:
-
-- Define which signals are acceptable, aggregated, and useful for improvement.
-- Keep learner privacy and minimization central.
-- Separate evidence about reference quality from evidence about student performance.
-
-Required output: evidence signal schema and policy.
-
-Stop condition: no external learning-impact claims from weak or invasive signals.
-
-### R14.3 Continuous Improvement Reports
-
-Purpose: produce improvement reports while preventing overclaiming.
-
-Required work:
-
-- Generate reports from quality issues, curriculum versions, evidence anchors, and allowed aggregate signals.
-- Separate internal improvement findings from external claims.
-- Require review before publishing claims about learning impact.
-
-Required output: continuous improvement reports and external-claim review checklist.
-
-Stop condition: external claims require the R14 evidence-platform gate.
 
 ## Executive Direction
 
@@ -628,18 +447,15 @@ owned book/source material
 -> alignment graph
 -> JSON-first reports
 -> retrieval/RAG layer
--> diagnostics and feedback
--> simulations/games
--> teacher cockpit
--> bounded AI
--> evidence-driven improvement
 ```
 
-Do not proceed directly to RAG, adaptive diagnostics, or student-facing AI before prerequisite integrity, evidence anchors, alignment graph validation, and the relevant review gates are complete.
+Current focus: improve data quality inside this flow before adding new product surfaces.
+
+Do not proceed to diagnostics, adaptive routing, student-facing AI, automatic sequencing, mastery decisions, summative decisions, teacher cockpit deployment, game/simulation product mapping, or continuous-improvement claims from this roadmap.
 
 ## Current Catalog State
 
-Last regenerated: 2026-04-26
+Last regenerated: 2026-04-27
 
 ### Machine Unit Catalog
 
@@ -712,7 +528,7 @@ Goal: remove ambiguity about canonical data and generated projections.
 Key outputs:
 
 - `references/SOURCE_OF_TRUTH.md`
-- core JSON schemas for units, terms, exam questions, source documents, evidence anchors, claims, alignment edges, reports, retrieval chunks, feedback, misconceptions, worked examples, game items, and simulations
+- core JSON schemas for units, terms, exam questions, source documents, evidence anchors, claims, alignment edges, reports, retrieval chunks, and reference-quality issues
 - prior-knowledge schema extension for empty `needs`
 
 ### Phase R2: Empty-Needs And Prior-Knowledge Review
@@ -730,7 +546,7 @@ Sprints:
 
 - `R2.1` completed: full empty-needs audit, non-mutating.
 - `R2.2` completed: subagent review and human-review packet.
-- `R2.3` completed: adaptive human review and gate closure as `hold`.
+- `R2.3` completed: interactive human review and gate closure as `hold`.
 - `R2.4` completed: evidence and unit-design cleanup after the hold decision.
 
 ### Phase R3: CLI-Only Corrections
@@ -786,87 +602,41 @@ Sprints:
 
 Goal: deterministic, source-ranked retrieval with evaluation before any teacher-facing use.
 
-No vector-first shortcut. Build lexical/entity/graph retrieval and evaluation first.
+No vector-first shortcut. Build lexical/entity/graph retrieval, evaluation, owned-source coverage, evidence-anchor density, and warning behavior first.
 
 Sprints:
 
 - `R7.1` completed: deterministic chunk layer.
 - `R7.2` completed: hybrid retrieval.
 - `R7.3` completed: retrieval evaluation set.
-- `R7.4` planned: RAG review gate.
+- `R7.4` completed: RAG review gate with `pass_with_conditions`.
+- `R7.5` completed: merge readiness and main sync.
+- `R7.6` planned: RAG quality hardening, retrieval eval expansion, target-exercise chunking, evidence-anchor coverage, and anchor backfill.
 
-### Phase R8: QC Automation And Production Integration
+### Phase R9: Owned Source Integration And Content Graph
 
-Goal: make QC findings machine-readable and block silent drift during lesson production.
-
-Sprints:
-
-- `R8.1` planned: QC issue model.
-- `R8.2` planned: production QC gates.
-
-### Phase R9: Book/Source Integration And Content Graph
-
-Goal: connect owned book material to the reference graph without confusing authored exposition with machine reference data.
+Goal: connect owned book and lesson material to the reference graph without confusing authored exposition with machine reference data.
 
 Sprints:
 
 - `R9.1` planned: owned source registry.
 - `R9.2` planned: content graph projection.
 
-### Phase R10: Pedagogical Retrieval Practice, Diagnostics, And Feedback
+### Phase R8: QC Issue Model
 
-Goal: model diagnostic items, mastery signals, misconceptions, feedback, hints, worked examples, and retry items.
-
-Pedagogical retrieval practice is not the same thing as technical retrieval/RAG.
+Goal: make quality issues machine-readable only where doing so improves reference and RAG trust.
 
 Sprints:
 
-- `R10.1` planned: diagnostic item model.
-- `R10.2` planned: feedback library.
-- `R10.3` planned: diagnostics review gate.
+- `R8.1` planned: scoped QC issue model.
 
-### Phase R11: Simulation And Game Content Models
+### Phase R14: Minimal Curriculum Versioning
 
-Goal: map games and simulations explicitly to economics concepts, units, misconceptions, feedback, and debrief prompts.
+Goal: prevent retrieval and reports from silently mixing curriculum/source versions.
 
-Sprints:
+Sprint:
 
-- `R11.1` planned: game content mapping.
-- `R11.2` planned: simulation content model.
-
-### Phase R12: Teacher Cockpit, Privacy, Accessibility, And Deployment
-
-Goal: model teacher dashboard data while keeping student data separate from reference data.
-
-Privacy and accessibility gates are required before broad student-data deployment.
-
-Sprints:
-
-- `R12.1` planned: teacher cockpit data contract.
-- `R12.2` planned: privacy review gate.
-- `R12.3` planned: accessibility review gate.
-
-### Phase R13: Bounded AI Tutor And Authoring Assistant
-
-Goal: keep AI late-stage and bounded.
-
-Internal authoring assistance may come before student-facing AI, but all generated content needs human review. Student-facing AI requires stable graph, evidence anchors, retrieval evaluations, guardrails, and an AI review gate.
-
-Sprints:
-
-- `R13.1` planned: internal authoring assistant.
-- `R13.2` planned: AI tutor guardrails.
-- `R13.3` planned: AI review gate.
-
-### Phase R14: Evidence Platform And Continuous Improvement
-
-Goal: use quality signals, curriculum versioning, and light evaluation without surveillance or unnecessary student data.
-
-Sprints:
-
-- `R14.1` planned: curriculum versioning.
-- `R14.2` planned: evidence signal model.
-- `R14.3` planned: continuous improvement reports.
+- `R14.1` planned: minimal curriculum versioning.
 
 ## Review Gates
 
@@ -876,11 +646,6 @@ Sprints:
 | GATE-R2-empty-needs | before broad dependency corrections | yes | yes | authoritative prerequisite graph |
 | GATE-R5-alignment-graph | before graph powers retrieval/diagnostics | yes | yes | retrieval, diagnostics |
 | GATE-R7-rag | before teacher-facing RAG | yes | sampled | teacher-facing retrieval |
-| GATE-R10-diagnostics | before adaptive student routing | yes | yes | adaptive diagnostics |
-| GATE-R12-privacy | before student-data deployment | yes | yes | learner data use |
-| GATE-R12-accessibility | before broader deployment | yes | yes | broader student-facing release |
-| GATE-R13-ai | before student-facing AI | yes | yes | AI tutor use |
-| GATE-R14-evidence-platform | before external evidence claims | yes | yes | external claims about learning impact |
 
 ## Critical Path
 
@@ -909,65 +674,38 @@ R7.1 Chunk index
 R7.2 Hybrid retrieval
 R7.3 Retrieval evals
 R7.4 RAG gate
-R8.1 QC issue model
-R8.2 Production QC gates
+R7.5 Merge readiness and main sync
 R9.1 Owned source registry
 R9.2 Content graph projection
-R10.1 Diagnostic item model
-R10.2 Feedback library
-R10.3 Diagnostics review gate
-R11.1 Game content mapping
-R11.2 Simulation content model
-R12.1 Teacher cockpit data contract
-R12.2 Privacy review gate
-R12.3 Accessibility review gate
-R13.1 Internal authoring assistant
-R13.2 AI tutor guardrails
-R13.3 AI review gate
-R14.1 Curriculum versioning
-R14.2 Evidence signal model
-R14.3 Continuous improvement reports
+R7.6 RAG quality hardening
+R8.1 Scoped QC issue model
+R14.1 Minimal curriculum versioning
 ```
 
 Do not invert this order.
 
 ## Immediate Next Sprint
 
-Do not proceed directly to retrieval or diagnostics.
+Proceed with `R9.1 Owned Source Registry`.
 
-Proceed with `R7.4 RAG Review Gate` preparation.
+Do not start diagnostics, adaptive routing, student-facing AI, automatic lesson sequencing, mastery decisions, summative decisions, teacher cockpit deployment, game/simulation product mapping, or continuous-improvement claims from this roadmap.
 
-R6.2 completion state:
+R7.4/R7.5 completion state:
 
-- reference-health JSON exists at `reports/json/reference-health.json`
-- reference-health Markdown projection exists at `reports/markdown/reference-health.md`
-- graph authority is whole-graph false and named-edge-groups only
-- student diagnostics, adaptive routing, and student-facing AI are explicitly blocked
+- R7.4 closed as `pass_with_conditions`.
+- R7.5 merged the reference foundation to `main`.
+- Post-merge validation passed on `main`.
+- Retrieval evaluation has 10/10 passing cases and 0 authority violations.
+- RAG-01 through RAG-04 remain required quality follow-ups.
+- Student diagnostics, adaptive routing, student-facing AI, automatic sequencing, mastery decisions, summative use, and unreviewed student-facing publication are explicitly blocked.
 
-R7.3 completion state:
+R9.1 must:
 
-- fixed retrieval evaluation set exists at `references/data/rag/retrieval_eval_set.json`
-- retrieval evaluation results exist at `references/data/rag/retrieval_eval_results.json`
-- retrieval evaluation report exists at `reports/markdown/retrieval-eval-results.md`
-- 10/10 retrieval eval cases pass
-- generated-report and pending-review behavior is visible in evaluation results
-
-R7.4 preparation must:
-
-- prepare the RAG review packet
-- summarize retrieval results and known failure surfaces
-- propose allowed and blocked downstream uses
-- stop before final gate closure
-
-R7.4 preparation state:
-
-- review packet exists at `reports/review-gates/GATE-R7-rag/review-packet.md`
-- machine-readable packet exists at `reports/review-gates/GATE-R7-rag/review-packet.json`
-- review-lens artifacts exist under `reports/review-gates/GATE-R7-rag/`
-- human interview exists at `reports/review-gates/GATE-R7-rag/human-interview.md`
-- gate closure exists at `reports/review-gates/GATE-R7-rag/gate-closure.json`
-- final gate status is `pass_with_conditions`
-- RAG-01 through RAG-04 are recorded as follow-up issues
+- create a plan that fully operationalizes owned-source discovery and classification
+- register owned sources without making generated exposition primary evidence
+- update source manifest/document inventory where appropriate
+- add validators and reports that make missing or stale owned-source coverage visible
+- stop before mutating protected `references/machine/` or `references/external/`
 
 ## Final Rule
 
