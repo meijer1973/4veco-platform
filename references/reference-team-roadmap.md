@@ -77,7 +77,6 @@ Open items are listed first; completed items are kept below them.
 
 | Sprint | Name | Completed | Current State |
 |--------|------|-----------|---------------|
-| R6.1 | JSON-First Reports | no | Planned. Markdown reports become projections of JSON. |
 | R6.2 | Reference Health Dashboard Data | no | Planned. Produce one generated reference-health state file for dashboards and planning. |
 | R7.1 | Deterministic Chunk Layer | no | Planned. Build source-ranked retrieval chunks. |
 | R7.2 | Hybrid Retrieval | no | Planned. Add lexical/entity/graph retrieval before optional vector search. |
@@ -101,6 +100,7 @@ Open items are listed first; completed items are kept below them.
 | R14.1 | Curriculum Versioning | no | Planned. Track curriculum/source versions and reference migrations. |
 | R14.2 | Evidence Signal Model | no | Planned. Model quality and learning signals without surveillance or unnecessary student data. |
 | R14.3 | Continuous Improvement Reports | no | Planned. Produce evidence-platform reports and require review before external claims. |
+| R6.1 | JSON-First Reports | yes | Completed. Added JSON-first report generation and validation for 10 required health/coverage reports, plus Markdown projections under `reports/markdown/`. |
 | R5.3 | Alignment Graph Review Gate | yes | Completed with `pass_with_conditions`. Named graph edge groups are approved for internal dashboard/reporting and internal retrieval development/evaluation; student diagnostics, adaptive routing, and student-facing AI remain blocked. |
 | R5.2 | Alignment Graph | yes | Completed. Built the first draft alignment graph from R5.1 evidence anchors: 31 edges, 13 pending main edges, 18 traceability edges, and 0 human-approved edges. |
 | R5.1 | Evidence-Anchor Layer | yes | Completed. Created the first governed evidence-anchor layer: source-ranking policy, 15 anchors, 13 claims, schemas, validator, and status reports. |
@@ -283,6 +283,8 @@ Required work:
 Required output: JSON report files, Markdown projections, report validators.
 
 Stop condition: do not make dashboards scrape Markdown as the long-term data interface.
+
+Completion: completed on 2026-04-27. R6.1 added `build-scripts/reports/generate-all.js`, `build-scripts/reports/validate-report-json.js`, 10 required JSON report files under `reports/json/`, and readable projections under `reports/markdown/`. Generated reports remain diagnostic and do not replace source evidence.
 
 ### R6.2 Reference Health Dashboard Data
 
@@ -770,7 +772,7 @@ The reference dashboard should eventually read `reports/json/reference-health.js
 
 Sprints:
 
-- `R6.1` planned: JSON-first reports.
+- `R6.1` completed: JSON-first reports.
 - `R6.2` planned: reference health dashboard data.
 
 ### Phase R7: RAG And Technical Retrieval Layer
@@ -926,7 +928,7 @@ Do not invert this order.
 
 Do not proceed directly to retrieval or diagnostics.
 
-Proceed with `R6.1 JSON-First Reports`.
+Proceed with `R6.2 Reference Health Dashboard Data`.
 
 R5.3 completion state:
 
@@ -936,11 +938,11 @@ R5.3 completion state:
 - internal dashboard/reporting and internal retrieval development/evaluation are allowed with status/source visibility
 - student diagnostics, adaptive routing, and student-facing AI remain blocked
 
-R6.1 must:
+R6.2 must:
 
-- make priority Markdown reports projections of structured JSON
-- preserve readable Markdown output while moving dashboards away from Markdown scraping
-- avoid treating diagnostic/generated report data as primary evidence
+- produce one generated reference-health state file for dashboards and planning
+- include R5.3 graph-authority constraints explicitly
+- keep student diagnostics, adaptive routing, and student-facing AI blocked
 
 ## Final Rule
 

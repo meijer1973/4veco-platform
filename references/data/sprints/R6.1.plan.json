@@ -1,0 +1,16 @@
+{
+  "sprint_id": "R6.1",
+  "name": "JSON-First Reports",
+  "status": "in_progress",
+  "planned_on": "2026-04-27",
+  "plan": "docs/sprints/R6.1-plan.md",
+  "protected_reference_data_changes_allowed": false,
+  "human_review_required": false,
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js docs/sprints/R6.1-plan.md",
+    "node build-scripts/reports/generate-all.js",
+    "node build-scripts/reports/validate-report-json.js",
+    "node build-scripts/sprints/check-sprint-result.js reports/sprints/R6.1-result.md",
+    "node build-scripts/sprints/check-sprint-bundle.js R6.1 --complete"
+  ]
+}

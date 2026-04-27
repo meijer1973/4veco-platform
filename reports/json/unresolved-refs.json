@@ -1,0 +1,209 @@
+{
+  "report_id": "unresolved-refs",
+  "generated_by": "build-scripts/reports/generate-all.js",
+  "generated_on": "2026-04-27T06:29:57.875Z",
+  "source_files": [
+    "references/machine/micro-teaching-units.json",
+    "references/",
+    "reports/",
+    "knowledge/",
+    "docs/"
+  ],
+  "schema_version": 1,
+  "status": "warn",
+  "summary": {
+    "deprecated_units": 2,
+    "deprecated_citations": 21
+  },
+  "issues": [
+    {
+      "issue_id": "unresolved-refs-0001",
+      "severity": "low",
+      "affected_entity": "D23",
+      "category": "deprecated_reference",
+      "evidence_path": "references/reference-team-roadmap.md",
+      "next_action": "Remove or migrate deprecated unit citation.",
+      "proof_required_to_close": "No deprecated unit ID is cited from active docs/reports."
+    },
+    {
+      "issue_id": "unresolved-refs-0002",
+      "severity": "low",
+      "affected_entity": "H26",
+      "category": "deprecated_reference",
+      "evidence_path": "references/reference-team-roadmap.md",
+      "next_action": "Remove or migrate deprecated unit citation.",
+      "proof_required_to_close": "No deprecated unit ID is cited from active docs/reports."
+    },
+    {
+      "issue_id": "unresolved-refs-0003",
+      "severity": "low",
+      "affected_entity": "D23",
+      "category": "deprecated_reference",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Remove or migrate deprecated unit citation.",
+      "proof_required_to_close": "No deprecated unit ID is cited from active docs/reports."
+    },
+    {
+      "issue_id": "unresolved-refs-0004",
+      "severity": "low",
+      "affected_entity": "H26",
+      "category": "deprecated_reference",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Remove or migrate deprecated unit citation.",
+      "proof_required_to_close": "No deprecated unit ID is cited from active docs/reports."
+    },
+    {
+      "issue_id": "unresolved-refs-0005",
+      "severity": "low",
+      "affected_entity": "D23",
+      "category": "deprecated_reference",
+      "evidence_path": "references/machine/begrippen.md",
+      "next_action": "Remove or migrate deprecated unit citation.",
+      "proof_required_to_close": "No deprecated unit ID is cited from active docs/reports."
+    },
+    {
+      "issue_id": "unresolved-refs-0006",
+      "severity": "low",
+      "affected_entity": "H26",
+      "category": "deprecated_reference",
+      "evidence_path": "references/machine/begrippen.md",
+      "next_action": "Remove or migrate deprecated unit citation.",
+      "proof_required_to_close": "No deprecated unit ID is cited from active docs/reports."
+    },
+    {
+      "issue_id": "unresolved-refs-0007",
+      "severity": "low",
+      "affected_entity": "D23",
+      "category": "deprecated_reference",
+      "evidence_path": "references/machine/micro-teaching-units.json",
+      "next_action": "Remove or migrate deprecated unit citation.",
+      "proof_required_to_close": "No deprecated unit ID is cited from active docs/reports."
+    },
+    {
+      "issue_id": "unresolved-refs-0008",
+      "severity": "low",
+      "affected_entity": "H26",
+      "category": "deprecated_reference",
+      "evidence_path": "references/machine/micro-teaching-units.json",
+      "next_action": "Remove or migrate deprecated unit citation.",
+      "proof_required_to_close": "No deprecated unit ID is cited from active docs/reports."
+    },
+    {
+      "issue_id": "unresolved-refs-0009",
+      "severity": "low",
+      "affected_entity": "D23",
+      "category": "deprecated_reference",
+      "evidence_path": "references/machine/micro-teaching-units.md",
+      "next_action": "Remove or migrate deprecated unit citation.",
+      "proof_required_to_close": "No deprecated unit ID is cited from active docs/reports."
+    },
+    {
+      "issue_id": "unresolved-refs-0010",
+      "severity": "low",
+      "affected_entity": "H26",
+      "category": "deprecated_reference",
+      "evidence_path": "references/machine/micro-teaching-units.md",
+      "next_action": "Remove or migrate deprecated unit citation.",
+      "proof_required_to_close": "No deprecated unit ID is cited from active docs/reports."
+    },
+    {
+      "issue_id": "unresolved-refs-0011",
+      "severity": "low",
+      "affected_entity": "D23",
+      "category": "deprecated_reference",
+      "evidence_path": "references/external/exam-questions.json",
+      "next_action": "Remove or migrate deprecated unit citation.",
+      "proof_required_to_close": "No deprecated unit ID is cited from active docs/reports."
+    },
+    {
+      "issue_id": "unresolved-refs-0012",
+      "severity": "low",
+      "affected_entity": "D23",
+      "category": "deprecated_reference",
+      "evidence_path": "reports/unresolved-refs.md",
+      "next_action": "Remove or migrate deprecated unit citation.",
+      "proof_required_to_close": "No deprecated unit ID is cited from active docs/reports."
+    },
+    {
+      "issue_id": "unresolved-refs-0013",
+      "severity": "low",
+      "affected_entity": "H26",
+      "category": "deprecated_reference",
+      "evidence_path": "reports/unresolved-refs.md",
+      "next_action": "Remove or migrate deprecated unit citation.",
+      "proof_required_to_close": "No deprecated unit ID is cited from active docs/reports."
+    },
+    {
+      "issue_id": "unresolved-refs-0014",
+      "severity": "low",
+      "affected_entity": "D23",
+      "category": "deprecated_reference",
+      "evidence_path": "reports/markdown/unresolved-refs.md",
+      "next_action": "Remove or migrate deprecated unit citation.",
+      "proof_required_to_close": "No deprecated unit ID is cited from active docs/reports."
+    },
+    {
+      "issue_id": "unresolved-refs-0015",
+      "severity": "low",
+      "affected_entity": "H26",
+      "category": "deprecated_reference",
+      "evidence_path": "reports/markdown/unresolved-refs.md",
+      "next_action": "Remove or migrate deprecated unit citation.",
+      "proof_required_to_close": "No deprecated unit ID is cited from active docs/reports."
+    },
+    {
+      "issue_id": "unresolved-refs-0016",
+      "severity": "low",
+      "affected_entity": "D23",
+      "category": "deprecated_reference",
+      "evidence_path": "reports/json/unresolved-refs.json",
+      "next_action": "Remove or migrate deprecated unit citation.",
+      "proof_required_to_close": "No deprecated unit ID is cited from active docs/reports."
+    },
+    {
+      "issue_id": "unresolved-refs-0017",
+      "severity": "low",
+      "affected_entity": "H26",
+      "category": "deprecated_reference",
+      "evidence_path": "reports/json/unresolved-refs.json",
+      "next_action": "Remove or migrate deprecated unit citation.",
+      "proof_required_to_close": "No deprecated unit ID is cited from active docs/reports."
+    },
+    {
+      "issue_id": "unresolved-refs-0018",
+      "severity": "low",
+      "affected_entity": "D23",
+      "category": "deprecated_reference",
+      "evidence_path": "knowledge/current-state-detailed-analysis.md",
+      "next_action": "Remove or migrate deprecated unit citation.",
+      "proof_required_to_close": "No deprecated unit ID is cited from active docs/reports."
+    },
+    {
+      "issue_id": "unresolved-refs-0019",
+      "severity": "low",
+      "affected_entity": "H26",
+      "category": "deprecated_reference",
+      "evidence_path": "knowledge/current-state-detailed-analysis.md",
+      "next_action": "Remove or migrate deprecated unit citation.",
+      "proof_required_to_close": "No deprecated unit ID is cited from active docs/reports."
+    },
+    {
+      "issue_id": "unresolved-refs-0020",
+      "severity": "low",
+      "affected_entity": "D23",
+      "category": "deprecated_reference",
+      "evidence_path": "knowledge/reference-report-sanity.md",
+      "next_action": "Remove or migrate deprecated unit citation.",
+      "proof_required_to_close": "No deprecated unit ID is cited from active docs/reports."
+    },
+    {
+      "issue_id": "unresolved-refs-0021",
+      "severity": "low",
+      "affected_entity": "D23",
+      "category": "deprecated_reference",
+      "evidence_path": "knowledge/three-month-roadmap.md",
+      "next_action": "Remove or migrate deprecated unit citation.",
+      "proof_required_to_close": "No deprecated unit ID is cited from active docs/reports."
+    }
+  ]
+}

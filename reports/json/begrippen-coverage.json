@@ -1,0 +1,1187 @@
+{
+  "report_id": "begrippen-coverage",
+  "generated_by": "build-scripts/reports/generate-all.js",
+  "generated_on": "2026-04-27T06:29:57.880Z",
+  "source_files": [
+    "references/machine/begrippen.json",
+    "references/machine/micro-teaching-units.json"
+  ],
+  "schema_version": 1,
+  "status": "warn",
+  "summary": {
+    "terms": 225,
+    "terms_without_teaching_units": 130
+  },
+  "issues": [
+    {
+      "issue_id": "begrippen-coverage-0001",
+      "severity": "low",
+      "affected_entity": "aandelen",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0002",
+      "severity": "low",
+      "affected_entity": "accijnzen",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0003",
+      "severity": "low",
+      "affected_entity": "afnemende-meeropbrengsten",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0004",
+      "severity": "low",
+      "affected_entity": "aftrekposten-en-bijtellingen",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0005",
+      "severity": "low",
+      "affected_entity": "appreciatie",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0006",
+      "severity": "low",
+      "affected_entity": "arbeid",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0007",
+      "severity": "low",
+      "affected_entity": "arbeidsinkomen",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0008",
+      "severity": "low",
+      "affected_entity": "arbeidsinkomenquote",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0009",
+      "severity": "low",
+      "affected_entity": "autonome-bestedingen",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0010",
+      "severity": "low",
+      "affected_entity": "autonome-consumptie",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0011",
+      "severity": "low",
+      "affected_entity": "averechtse-selectie",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0012",
+      "severity": "low",
+      "affected_entity": "bankrun",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0013",
+      "severity": "low",
+      "affected_entity": "begrotingsaldo",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0014",
+      "severity": "low",
+      "affected_entity": "belastinglek",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0015",
+      "severity": "low",
+      "affected_entity": "belastingspreiding",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0016",
+      "severity": "low",
+      "affected_entity": "belastingwig",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0017",
+      "severity": "low",
+      "affected_entity": "beperkte-toetredingsmogelijkheden",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0018",
+      "severity": "low",
+      "affected_entity": "bestedingsmethode",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0019",
+      "severity": "low",
+      "affected_entity": "break-even-afzet",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0020",
+      "severity": "low",
+      "affected_entity": "brede-welvaart",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0021",
+      "severity": "low",
+      "affected_entity": "bruto-binnenlands-product",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0022",
+      "severity": "low",
+      "affected_entity": "btw",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0023",
+      "severity": "low",
+      "affected_entity": "categoriale-inkomensverdeling",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0024",
+      "severity": "low",
+      "affected_entity": "constante-schaalopbrengsten",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0025",
+      "severity": "low",
+      "affected_entity": "consumentenprijsindex",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0026",
+      "severity": "low",
+      "affected_entity": "degressief-belastingstelsel",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0027",
+      "severity": "low",
+      "affected_entity": "depositogarantiestelsel",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0028",
+      "severity": "low",
+      "affected_entity": "depreciatie",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0029",
+      "severity": "low",
+      "affected_entity": "economische-doelmatigheid",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0030",
+      "severity": "low",
+      "affected_entity": "economische-kringloop",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0031",
+      "severity": "low",
+      "affected_entity": "emu",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0032",
+      "severity": "low",
+      "affected_entity": "enkelvoudig-mandaat",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0033",
+      "severity": "low",
+      "affected_entity": "europese-centrale-bank",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0034",
+      "severity": "low",
+      "affected_entity": "evenwichtsopbrengst",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0035",
+      "severity": "low",
+      "affected_entity": "feitelijke-productie",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0036",
+      "severity": "low",
+      "affected_entity": "financiele-sector",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0037",
+      "severity": "low",
+      "affected_entity": "flexwerk-en-zzp",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0038",
+      "severity": "low",
+      "affected_entity": "geldhoeveelheid",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0039",
+      "severity": "low",
+      "affected_entity": "geldillusie",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0040",
+      "severity": "low",
+      "affected_entity": "geldschepping",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0041",
+      "severity": "low",
+      "affected_entity": "geldvernietiging",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0042",
+      "severity": "low",
+      "affected_entity": "harberger-driehoek",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0043",
+      "severity": "low",
+      "affected_entity": "heffingskortingen",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0044",
+      "severity": "low",
+      "affected_entity": "individuele-aanbodlijn",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0045",
+      "severity": "low",
+      "affected_entity": "individuele-vraaglijn",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0046",
+      "severity": "low",
+      "affected_entity": "inferieure-goederen",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0047",
+      "severity": "low",
+      "affected_entity": "inflatie",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0048",
+      "severity": "low",
+      "affected_entity": "inflatieverwachtingen",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0049",
+      "severity": "low",
+      "affected_entity": "innovatie-r-d-onderwijs-instituties",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0050",
+      "severity": "low",
+      "affected_entity": "intergenerationele-ruil",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0051",
+      "severity": "low",
+      "affected_entity": "internationale-concurrentiepositie",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0052",
+      "severity": "low",
+      "affected_entity": "kapitaal",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0053",
+      "severity": "low",
+      "affected_entity": "kapitaaldekkingsstelsel",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0054",
+      "severity": "low",
+      "affected_entity": "kapitaalinkomen",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0055",
+      "severity": "low",
+      "affected_entity": "kapitaalinvoer",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0056",
+      "severity": "low",
+      "affected_entity": "kapitaaluitvoer",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0057",
+      "severity": "low",
+      "affected_entity": "kartelafspraken",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0058",
+      "severity": "low",
+      "affected_entity": "keynesianen",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0059",
+      "severity": "low",
+      "affected_entity": "laagconjunctuur",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0060",
+      "severity": "low",
+      "affected_entity": "lenen-en-sparen",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0061",
+      "severity": "low",
+      "affected_entity": "lener-in-laatste-instantie",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0062",
+      "severity": "low",
+      "affected_entity": "loon-en-prijsrigiditeit",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0063",
+      "severity": "low",
+      "affected_entity": "loonkosten-per-eenheid-product",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0064",
+      "severity": "low",
+      "affected_entity": "luxe-goederen",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0065",
+      "severity": "low",
+      "affected_entity": "marginale-consumptiequote",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0066",
+      "severity": "low",
+      "affected_entity": "marginale-spaarquote",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0067",
+      "severity": "low",
+      "affected_entity": "markt-als-coordinatiemechanisme",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0068",
+      "severity": "low",
+      "affected_entity": "maximale-totale-winst-per-marktvorm",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0069",
+      "severity": "low",
+      "affected_entity": "maximumprijzen",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0070",
+      "severity": "low",
+      "affected_entity": "meeliftersgedrag",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0071",
+      "severity": "low",
+      "affected_entity": "monetaristen",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0072",
+      "severity": "low",
+      "affected_entity": "monopolie",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0073",
+      "severity": "low",
+      "affected_entity": "monopolistische-concurrentie",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0074",
+      "severity": "low",
+      "affected_entity": "moral-hazard",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0075",
+      "severity": "low",
+      "affected_entity": "multiplier",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0076",
+      "severity": "low",
+      "affected_entity": "nationaal-spaarsaldo",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0077",
+      "severity": "low",
+      "affected_entity": "natuurlijke-werkloosheid",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0078",
+      "severity": "low",
+      "affected_entity": "neo-klassieken",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0079",
+      "severity": "low",
+      "affected_entity": "nivelleren",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0080",
+      "severity": "low",
+      "affected_entity": "nominale-rente-centrale-bank",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0081",
+      "severity": "low",
+      "affected_entity": "normale-goederen",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0082",
+      "severity": "low",
+      "affected_entity": "objectieve-methode",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0083",
+      "severity": "low",
+      "affected_entity": "octrooien",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0084",
+      "severity": "low",
+      "affected_entity": "oligopolie",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0085",
+      "severity": "low",
+      "affected_entity": "omslagstelsel",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0086",
+      "severity": "low",
+      "affected_entity": "onderbesteding",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0087",
+      "severity": "low",
+      "affected_entity": "onderpand",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0088",
+      "severity": "low",
+      "affected_entity": "onvolkomen-concurrentie",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0089",
+      "severity": "low",
+      "affected_entity": "output-gap",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0090",
+      "severity": "low",
+      "affected_entity": "overbesteding",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0091",
+      "severity": "low",
+      "affected_entity": "parallelle-verschuiving",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0092",
+      "severity": "low",
+      "affected_entity": "patenten",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0093",
+      "severity": "low",
+      "affected_entity": "percentielenratio",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0094",
+      "severity": "low",
+      "affected_entity": "potentiele-productie",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0095",
+      "severity": "low",
+      "affected_entity": "prijsdiscriminatie-en-consumentensurplus",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0096",
+      "severity": "low",
+      "affected_entity": "prijselasticiteit-en-to",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0097",
+      "severity": "low",
+      "affected_entity": "prijselastische-vraag",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0098",
+      "severity": "low",
+      "affected_entity": "prijsinelastische-vraag",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0099",
+      "severity": "low",
+      "affected_entity": "prijzenoorlog",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0100",
+      "severity": "low",
+      "affected_entity": "procyclisch-begrotingsbeleid",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0101",
+      "severity": "low",
+      "affected_entity": "progressief",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0102",
+      "severity": "low",
+      "affected_entity": "reele-rente",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0103",
+      "severity": "low",
+      "affected_entity": "reele-rente-formule",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0104",
+      "severity": "low",
+      "affected_entity": "refi-rente",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0105",
+      "severity": "low",
+      "affected_entity": "risico-aversie",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0106",
+      "severity": "low",
+      "affected_entity": "risicoaversie",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0107",
+      "severity": "low",
+      "affected_entity": "sequentieel-spel",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0108",
+      "severity": "low",
+      "affected_entity": "simultaan-spel",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0109",
+      "severity": "low",
+      "affected_entity": "spaarlek",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0110",
+      "severity": "low",
+      "affected_entity": "spelboom",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0111",
+      "severity": "low",
+      "affected_entity": "stabiliteits-en-groeipact",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0112",
+      "severity": "low",
+      "affected_entity": "stimulerend",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0113",
+      "severity": "low",
+      "affected_entity": "subjectieve-methode",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0114",
+      "severity": "low",
+      "affected_entity": "theorie-optimale-valutagebieden",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0115",
+      "severity": "low",
+      "affected_entity": "tijdsvoorkeur",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0116",
+      "severity": "low",
+      "affected_entity": "toegevoegde-waarde",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0117",
+      "severity": "low",
+      "affected_entity": "toezichthouders",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0118",
+      "severity": "low",
+      "affected_entity": "totale-factorproductiviteit",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0119",
+      "severity": "low",
+      "affected_entity": "trilemma-monetair-beleid",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0120",
+      "severity": "low",
+      "affected_entity": "vaste-wisselkoersen",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0121",
+      "severity": "low",
+      "affected_entity": "vennootschapsbelasting",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0122",
+      "severity": "low",
+      "affected_entity": "verkrappend-begrotingsbeleid",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0123",
+      "severity": "low",
+      "affected_entity": "vermogensongelijkheid",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0124",
+      "severity": "low",
+      "affected_entity": "verschuiving-collectieve-aanbodlijn",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0125",
+      "severity": "low",
+      "affected_entity": "verschuiving-collectieve-vraaglijn",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0126",
+      "severity": "low",
+      "affected_entity": "vlaktaks",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0127",
+      "severity": "low",
+      "affected_entity": "volkomen-concurrentie",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0128",
+      "severity": "low",
+      "affected_entity": "welzijn",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0129",
+      "severity": "low",
+      "affected_entity": "zelfbinding",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    },
+    {
+      "issue_id": "begrippen-coverage-0130",
+      "severity": "low",
+      "affected_entity": "zwevende-wisselkoersen",
+      "category": "term_without_teaching_units",
+      "evidence_path": "references/machine/begrippen.json",
+      "next_action": "Link term to teaching units when used in production.",
+      "proof_required_to_close": "Term has teaching_units or explicit orphan rationale."
+    }
+  ]
+}
