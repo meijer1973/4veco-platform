@@ -79,7 +79,8 @@ Open items are listed first; completed items are kept below them.
 
 | Sprint | Name | Completed | Current State |
 |--------|------|-----------|---------------|
-| R9.1 | Owned Source Registry | no | Next. Register owned book/source material as source surfaces so RAG can retrieve from actual lesson and blueprint material without treating exposition as authority. |
+| R4.5 | Apply Reviewed Micro-Unit Corrections | no | Blocked on human review of R4.4 packet. Apply only reviewed packet items through CLI with mutation logs and validation. |
+| R9.1 | Owned Source Registry | no | Planned after R4.4/R4.5. Register owned book/source material as source surfaces so RAG can retrieve from actual lesson and blueprint material without treating exposition as authority. |
 | R9.2 | Content Graph Projection | no | Planned next after R9.1. Project owned content to the reference graph using projection edges, not evidence edges. |
 | R7.6 | RAG Quality Hardening | no | Planned. Close R7.4 follow-ups, expand retrieval eval coverage, backfill evidence anchors, and improve approved/pending/diagnostic labels. |
 | R8.1 | QC Issue Model | no | Planned, scoped down. Define only the lightweight issue schema needed to expose evidence weakness, stale data, and proof-to-close in retrieval and reports. |
@@ -97,6 +98,7 @@ Open items are listed first; completed items are kept below them.
 | R5.2 | Alignment Graph | yes | Completed. Built the first draft alignment graph from R5.1 evidence anchors: 31 edges, 13 pending main edges, 18 traceability edges, and 0 human-approved edges. |
 | R5.1 | Evidence-Anchor Layer | yes | Completed. Created the first governed evidence-anchor layer: source-ranking policy, 15 anchors, 13 claims, schemas, validator, and status reports. |
 | R4.3 | Blueprint Flag Triage | yes | Completed. Triaged all 84 current raw target-exercise missing-unit flags into a curated backlog: 68 still needed, 4 existing-unit match candidates, 1 duplicate, and 11 deferred. |
+| R4.4 | Micro-Teaching Unit Quality Packet | yes | Completed. Created non-mutating packet for 48 empty-needs units, 44 missing term-link units, 2 unresolved term strings, and 84 blueprint flags; R4.5 requires human review before mutation. |
 | R4.2 | Exam-Question Extraction Gap Closure | yes | Completed. Produced a non-mutating gap report and patch queue for 27 exam-question records with missing required-skill annotations; protected references were not changed. |
 | R4.1 | Unit-Term Slug Migration | yes | Completed. Migrated safe unit `terms` values to canonical `begrippen.json` slug IDs through a validated migration script; left `alternatieve kosten` and `schaarste` unresolved for later term-registry review. |
 | R3.2 | Apply Reviewed Empty-Needs Corrections | yes | Completed. Applied the bounded R2.4 mutation-review set through CLI: 15 dependency edges and 6 `underbouw_assumed` classifications. No D04, rejected market-graph, held A-domain, L09->L03, or H13 mutations were applied. |
@@ -213,6 +215,41 @@ Required output: curated blueprint flag backlog with decision category, evidence
 Stop condition: do not auto-mint units from blueprint prose.
 
 Completion: completed on 2026-04-26 as a non-mutating triage. `build-scripts/references/check-target-exercise-flags.js` produced `reports/blueprint-flag-triage.md` and `.json`. All 84 current raw flags are triaged: 68 `still_needed`, 4 `existing_unit_match`, 1 `duplicate`, and 11 `defer`. No files in `references/machine/`, `references/external/`, or `references/authored/course-target-exercises.json` were changed.
+
+### R4.4 Micro-Teaching Unit Quality Packet
+
+Purpose: gather the remaining micro-teaching-unit quality issues into a single review packet before any further machine-reference mutation.
+
+Required work:
+
+- classify the remaining empty-needs units after R3.2
+- classify live units without term links
+- carry forward unresolved term strings from R4.1
+- carry forward R4.3 blueprint missing-unit triage into mutation-review categories
+- separate reviewed non-mutations, ready-for-review candidates, unit-design issues, existing-unit-match candidates, duplicates, and deferred items
+- produce a packet that can be reviewed before R4.5
+
+Required output: `reports/review-gates/GATE-R4-micro-unit-quality/R4.4-micro-unit-quality-packet.md` and `.json`.
+
+Stop condition: do not edit `references/machine/`; R4.4 is non-mutating.
+
+Completion: completed on 2026-04-27. Packet produced at `reports/review-gates/GATE-R4-micro-unit-quality/R4.4-micro-unit-quality-packet.md` and `.json`. The packet authorizes no mutation by itself; R4.5 is blocked on human review of the packet.
+
+### R4.5 Apply Reviewed Micro-Unit Corrections
+
+Purpose: apply only reviewed R4.4 packet items through the reference CLI.
+
+Required work:
+
+- use R4.4 packet decisions as the only mutation source
+- apply approved dependency edges, term links, unit additions, unit deprecations, or unit-design changes through CLI only
+- generate a mutation log and diff summary
+- regenerate reference reports, reference health, RAG chunks, and retrieval evals
+- stop if validation fails, creates a cycle, creates unresolved IDs, or requires hand editing machine references
+
+Required output: CLI mutation log, regenerated reports, and a reviewed result report.
+
+Stop condition: no mutation is allowed unless it is explicitly approved from the R4.4 packet or a follow-up human decision record.
 
 ### R5.1 Evidence-Anchor Layer
 
@@ -630,6 +667,8 @@ Sprints:
 - `R4.1` completed: unit-term slug migration.
 - `R4.2` completed: exam-question extraction gap closure.
 - `R4.3` completed: blueprint flag triage.
+- `R4.4` completed: micro-teaching-unit quality packet.
+- `R4.5` planned: apply reviewed micro-unit corrections through CLI after human review.
 
 ### Phase R5: Evidence Anchors And Alignment Graph
 
@@ -721,6 +760,8 @@ R3.2 Apply reviewed empty-needs corrections
 R4.1 Unit-term slug migration
 R4.2 Exam-question extraction gap closure
 R4.3 Blueprint flag triage
+R4.4 Micro-teaching unit quality packet
+R4.5 Apply reviewed micro-unit corrections
 R5.1 Evidence anchors
 R5.2 Alignment graph
 R5.3 Alignment graph gate
@@ -744,7 +785,7 @@ Do not invert this order.
 
 ## Immediate Next Sprint
 
-Proceed with `R9.1 Owned Source Registry`.
+Next decision: review the `R4.4 Micro-Teaching Unit Quality Packet`. Proceed to `R4.5 Apply Reviewed Micro-Unit Corrections` only after human review authorizes a bounded mutation set. If R4.5 is held, return to `R9.1 Owned Source Registry`.
 
 Do not start diagnostics, adaptive routing, student-facing AI, automatic lesson sequencing, mastery decisions, summative decisions, teacher cockpit deployment, game/simulation product mapping, or continuous-improvement claims from this roadmap.
 

@@ -1,0 +1,49 @@
+{
+  "sprint_id": "R4.4",
+  "name": "Micro-Teaching Unit Quality Packet",
+  "status": "completed",
+  "completed_on": "2026-04-27",
+  "plan": "docs/sprints/R4.4-plan.md",
+  "baseline": "reports/sprints/R4.4-baseline.md",
+  "result": "reports/sprints/R4.4-result.md",
+  "diff_summary": "reports/sprints/R4.4-diff-summary.md",
+  "protected_reference_data_changed": false,
+  "packet_json": "reports/review-gates/GATE-R4-micro-unit-quality/R4.4-micro-unit-quality-packet.json",
+  "packet_markdown": "reports/review-gates/GATE-R4-micro-unit-quality/R4.4-micro-unit-quality-packet.md",
+  "mutation_authorized": false,
+  "r4_5_requires_human_review": true,
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js docs/sprints/R4.4-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js R4.4",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/build-micro-unit-quality-packet.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/build-reference-inventory.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-source-manifest.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-document-inventory.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-result.js reports/sprints/R4.4-result.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js R4.4 --complete",
+      "status": "passed"
+    }
+  ]
+}
