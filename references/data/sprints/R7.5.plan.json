@@ -1,0 +1,35 @@
+{
+  "sprint_id": "R7.5",
+  "name": "Merge Readiness and Main Sync",
+  "status": "in_progress",
+  "planned_on": "2026-04-27",
+  "plan": "docs/sprints/R7.5-plan.md",
+  "protected_reference_data_changes_allowed": false,
+  "human_review_required": true,
+  "gate_id": "MERGE-01-R0.2-R7.4-main-sync",
+  "review_packet": "reports/merge-review/R0.2-R7.4-merge-readiness.md",
+  "valid_gate_statuses": [
+    "ready_for_merge",
+    "repair_required",
+    "hold"
+  ],
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js docs/sprints/R7.5-plan.md",
+    "node build-scripts/review-gates/validate-gate.js reports/review-gates/GATE-R5-alignment-graph/gate-closure.json",
+    "node build-scripts/review-gates/validate-gate.js reports/review-gates/GATE-R7-rag/gate-closure.json",
+    "node build-scripts/references/validate-alignment-graph.js",
+    "node build-scripts/references/validate-core-schemas.js",
+    "node build-scripts/reports/generate-all.js",
+    "node build-scripts/reports/validate-report-json.js",
+    "node build-scripts/reports/generate-reference-health.js",
+    "node build-scripts/reports/check-reference-health.js",
+    "node build-scripts/rag/build-chunks.js",
+    "node build-scripts/rag/validate-chunks.js",
+    "node build-scripts/rag/validate-query-output.js",
+    "node build-scripts/rag/run-retrieval-evals.js",
+    "node build-scripts/rag/validate-retrieval-eval-results.js",
+    "node build-scripts/sprints/check-sprint-bundle.js R7.4 --complete",
+    "node build-scripts/sprints/check-sprint-result.js reports/sprints/R7.5-result.md",
+    "node build-scripts/sprints/check-sprint-bundle.js R7.5 --complete"
+  ]
+}

@@ -77,6 +77,7 @@ Open items are listed first; completed items are kept below them.
 
 | Sprint | Name | Completed | Current State |
 |--------|------|-----------|---------------|
+| R7.5 | Merge Readiness and Main Sync | no | In progress. Sync branch with `origin/main`, normalize merge-readiness artifacts, rerun validators, and produce merge-readiness report. |
 | R8.1 | QC Issue Model | no | Planned. Define machine-readable quality issue categories, severity, evidence, proof-to-close, and ownership. |
 | R8.2 | Production QC Gates | no | Planned. Connect reference QC signals to lesson-production checks without mutating protected references. |
 | R9.1 | Owned Source Registry | no | Planned. Register owned book/source material as source surfaces distinct from external authority and generated reports. |
