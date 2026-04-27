@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "generated_by": "build-scripts/reports/generate-reference-health.js",
-  "generated_on": "2026-04-27T06:32:45.732Z",
+  "generated_on": "2026-04-27T06:50:54.140Z",
   "source_files": [
     "references/machine/micro-teaching-units.json",
     "references/machine/begrippen.json",
@@ -112,9 +112,9 @@
     "student_facing_ai_allowed": false
   },
   "retrieval_evaluation_status": {
-    "status": "not_available_yet",
-    "passed": null,
-    "failed": null
+    "status": "available",
+    "passed": 10,
+    "failed": 0
   },
   "allowed_downstream_uses": [
     "internal_dashboard",

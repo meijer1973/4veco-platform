@@ -144,8 +144,8 @@ function main() {
     retrieval_evaluation_status: retrievalEval
       ? {
           status: retrievalEval.status || 'available',
-          passed: retrievalEval.summary && retrievalEval.summary.passed,
-          failed: retrievalEval.summary && retrievalEval.summary.failed,
+          passed: retrievalEval.summary && (retrievalEval.summary.passed || retrievalEval.summary.pass_count),
+          failed: retrievalEval.summary && (retrievalEval.summary.failed || retrievalEval.summary.fail_count),
         }
       : {
           status: 'not_available_yet',
