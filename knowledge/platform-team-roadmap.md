@@ -1,7 +1,7 @@
 # Platform Team Roadmap
 
 Generated: 2026-04-23  
-Updated: 2026-04-25 after adding completed history for the references split and research-agent map rewrite  
+Updated: 2026-04-27 after splitting research-agent maps/prompts into full-repository and references-only versions
 Source: split from `knowledge/three-month-roadmap.md` after Sprint 0.5 sign-off
 
 ## Sprint Ledger
@@ -17,7 +17,7 @@ Open items are listed first; completed items are kept below them.
 | P1.2 | Companion Scaling And Handoff Sprint | yes | `1.1.2` passed as a technical probe; its test materials were removed for didactic rebuild. |
 | P1.3 | Internal Review Dashboard Sprint | yes | Internal three-team dashboard MVP generates from team roadmap sources and quality-gate issues. |
 | P1.3a | References Roadmap Split And Dashboard Tab | yes | Reference planning moved to `references/reference-team-roadmap.md`; dashboard now has a dedicated References tab. |
-| P1.3b | References Research Agent Map Rewrite | yes | Root research-agent map rewritten so research agents search and reason over the full `references/` folder. |
+| P1.3b | References Research Agent Map Rewrite | yes | Completed as a references map, then split on 2026-04-27 into full-repository and references-only map/prompt pairs. |
 
 Detailed bootstrap plan for the first Book 1 companion MVP:
 
@@ -393,6 +393,8 @@ Completed: yes.
 
 Completed on: 2026-04-25.
 
+Follow-up: 2026-04-27 split the research-agent entry points into full-repository and references-only versions.
+
 Goal:
 
 Replace the old-project research-agent map with a 4veco-specific map that lets a research agent search and reason over the full references folder.
@@ -400,6 +402,8 @@ Replace the old-project research-agent map with a 4veco-specific map that lets a
 Work:
 
 - Rewrote `RESEARCH_AGENT_MAP.md` around the 4veco references corpus.
+- Follow-up split: `RESEARCH_AGENT_MAP.md` is now the full-repository map; `RESEARCH_AGENT_MAP_REFERENCES.md` is the references-only map.
+- Follow-up split: `RESEARCH_AGENT_PROMPT.md` is now the full-repository prompt; `RESEARCH_AGENT_PROMPT_REFERENCES.md` is the references-only prompt.
 - Defined entry points for `references/reference-team-roadmap.md`, `references/authored/`, `references/external/`, `references/machine/`, and `references/qc-prompts/`.
 - Added traversal rules for whole-folder `rg` search, evidence hierarchy, machine-reference read-only boundaries, and output constraints.
 - Removed old AZWA/IZA/GALA corpus paths and policy-specific routing from the map.
@@ -407,15 +411,18 @@ Work:
 Evidence:
 
 - `RESEARCH_AGENT_MAP.md`.
+- `RESEARCH_AGENT_MAP_REFERENCES.md`.
+- `RESEARCH_AGENT_PROMPT.md`.
+- `RESEARCH_AGENT_PROMPT_REFERENCES.md`.
 - `rg -n "AZWA|IZA|GALA|Almere|Flevoland|data/extracted|source-curation|sources/manifest|meijer1973/azwa" RESEARCH_AGENT_MAP.md` found no old-project leftovers.
 - `rg --files references` confirms the references corpus is the declared research surface.
 
 Exit criteria:
 
-- The root research-agent map is specific to 4veco references. Done.
-- The map explicitly allows searching the entire `references/` folder. Done.
-- The map preserves machine-only and external-source edit boundaries. Done.
-- The map routes research tasks by reference surface and related reports. Done.
+- The root research-agent map is specific to the full 4veco repository after the 2026-04-27 follow-up. Done.
+- The references-only map explicitly allows searching the entire `references/` folder. Done.
+- The references-only map preserves machine-only and external-source edit boundaries. Done.
+- Both prompt/map pairs route research tasks by surface and related reports. Done.
 
 ### Sprint P1.4: Platform Issue Catalog And Improvement Plan
 

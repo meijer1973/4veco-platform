@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-26T08:01:38.817Z",
+  "generatedAt": "2026-04-27T12:26:14.527Z",
   "internalOnly": true,
   "teams": [
     {
@@ -14,7 +14,7 @@
           "exists": true,
           "absolutePath": "C:/Projects/4veco/4veco-platform/knowledge/platform-team-roadmap.md",
           "generated": "2026-04-23",
-          "updated": "2026-04-25 after adding completed history for the references split and research-agent map rewrite",
+          "updated": "2026-04-27 after splitting research-agent maps/prompts into full-repository and references-only versions",
           "scope": "",
           "summary": "Sprint 0.5 is signed off for Part A textbook/book production, Sprint P1.1 has proven the first Book 1 companion paragraph path, and Sprint P1.2 has technically proven the pattern on a second Book 1 companion paragraph.",
           "sprints": [
@@ -71,7 +71,7 @@
               "sprint": "P1.3b",
               "name": "References Research Agent Map Rewrite",
               "completed": "yes",
-              "currentState": "Root research-agent map rewritten so research agents search and reason over the full `references/` folder.",
+              "currentState": "Completed as a references map, then split on 2026-04-27 into full-repository and references-only map/prompt pairs.",
               "exitGate": ""
             }
           ]
@@ -138,7 +138,7 @@
           "sprint": "P1.3b",
           "name": "References Research Agent Map Rewrite",
           "completed": "yes",
-          "currentState": "Root research-agent map rewritten so research agents search and reason over the full `references/` folder.",
+          "currentState": "Completed as a references map, then split on 2026-04-27 into full-repository and references-only map/prompt pairs.",
           "exitGate": "",
           "roadmap": "Platform roadmap"
         }
@@ -163,241 +163,171 @@
           "summary": "References Team Roadmap Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Scope: references/, build-scripts/references/, build-scripts/reports/, reference dashboards, and generated reference reports under reports/ Adoption Decision The handoff roadmap has been adopted as the main operating roadmap for the references team. No blocking incompatibility was found. The roadmap direction fits the repository: machine-edited references, evidence-first unit growth, JSON-first reports, review gates for pedagogical auth...",
           "sprints": [
             {
-              "sprint": "R2.4",
-              "name": "Evidence And Unit-Design Cleanup",
-              "completed": "no",
-              "currentState": "Next. Attach exact evidence to candidate edges, resolve D04 unit scope, classify foundational A-domain zero-needs, and run a labor-market/unemployment second pass before R3.2.",
-              "exitGate": ""
-            },
-            {
-              "sprint": "R3.1",
-              "name": "Reference CLI And Documentation Completion",
-              "completed": "no",
-              "currentState": "Planned. Fill any CLI gaps needed for reviewed corrections and update stale CLI docs.",
-              "exitGate": ""
-            },
-            {
-              "sprint": "R3.2",
-              "name": "Apply Reviewed Empty-Needs Corrections",
-              "completed": "no",
-              "currentState": "Blocked by GATE-R2 hold. Do not apply empty-needs dependency corrections until R2.4 supplies exact evidence and unit-design decisions.",
-              "exitGate": ""
-            },
-            {
-              "sprint": "R4.1",
-              "name": "Unit-Term Slug Migration",
-              "completed": "no",
-              "currentState": "Planned. Migrate unit `terms` fields to canonical `begrippen.json` slug IDs.",
-              "exitGate": ""
-            },
-            {
-              "sprint": "R4.2",
-              "name": "Exam-Question Extraction Gap Closure",
-              "completed": "no",
-              "currentState": "Planned. Complete missing required-skill and exam-code links where evidence supports it.",
-              "exitGate": ""
-            },
-            {
-              "sprint": "R4.3",
-              "name": "Blueprint Flag Triage",
-              "completed": "no",
-              "currentState": "Planned. Convert raw missing-unit flags into curated decisions.",
-              "exitGate": ""
-            },
-            {
-              "sprint": "R5.1",
-              "name": "Evidence-Anchor Layer",
-              "completed": "no",
-              "currentState": "Planned. Add exact proof anchors for important claims.",
-              "exitGate": ""
-            },
-            {
-              "sprint": "R5.2",
-              "name": "Alignment Graph",
-              "completed": "no",
-              "currentState": "Planned. Create graph edges only after evidence and prerequisite work.",
-              "exitGate": ""
-            },
-            {
-              "sprint": "R5.3",
-              "name": "Alignment Graph Review Gate",
-              "completed": "no",
-              "currentState": "Planned. Human-reviewed gate before graph powers retrieval or diagnostics.",
-              "exitGate": ""
-            },
-            {
-              "sprint": "R6.1",
-              "name": "JSON-First Reports",
-              "completed": "no",
-              "currentState": "Planned. Markdown reports become projections of JSON.",
-              "exitGate": ""
-            },
-            {
-              "sprint": "R6.2",
-              "name": "Reference Health Dashboard Data",
-              "completed": "no",
-              "currentState": "Planned. Produce one generated reference-health state file for dashboards and planning.",
-              "exitGate": ""
-            },
-            {
-              "sprint": "R7.1",
-              "name": "Deterministic Chunk Layer",
-              "completed": "no",
-              "currentState": "Planned. Build source-ranked retrieval chunks.",
-              "exitGate": ""
-            },
-            {
-              "sprint": "R7.2",
-              "name": "Hybrid Retrieval",
-              "completed": "no",
-              "currentState": "Planned. Add lexical/entity/graph retrieval before optional vector search.",
-              "exitGate": ""
-            },
-            {
-              "sprint": "R7.3",
-              "name": "Retrieval Evaluation Set",
-              "completed": "no",
-              "currentState": "Planned. Make retrieval quality regressions visible.",
-              "exitGate": ""
-            },
-            {
-              "sprint": "R7.4",
-              "name": "RAG Review Gate",
-              "completed": "no",
-              "currentState": "Planned. Approve internal/teacher-facing RAG only after evaluation.",
-              "exitGate": ""
-            },
-            {
-              "sprint": "R8.1",
-              "name": "QC Issue Model",
-              "completed": "no",
-              "currentState": "Planned. Define machine-readable quality issue categories, severity, evidence, proof-to-close, and ownership.",
-              "exitGate": ""
-            },
-            {
-              "sprint": "R8.2",
-              "name": "Production QC Gates",
-              "completed": "no",
-              "currentState": "Planned. Connect reference QC signals to lesson-production checks without mutating protected references.",
-              "exitGate": ""
-            },
-            {
               "sprint": "R9.1",
               "name": "Owned Source Registry",
               "completed": "no",
-              "currentState": "Planned. Register owned book/source material as source surfaces distinct from external authority and generated reports.",
+              "currentState": "Next. Register owned book/source material as source surfaces so RAG can retrieve from actual lesson and blueprint material without treating exposition as authority.",
               "exitGate": ""
             },
             {
               "sprint": "R9.2",
               "name": "Content Graph Projection",
               "completed": "no",
-              "currentState": "Planned. Project owned content to the reference graph without making exposition authoritative.",
+              "currentState": "Planned next after R9.1. Project owned content to the reference graph using projection edges, not evidence edges.",
               "exitGate": ""
             },
             {
-              "sprint": "R10.1",
-              "name": "Diagnostic Item Model",
+              "sprint": "R7.6",
+              "name": "RAG Quality Hardening",
               "completed": "no",
-              "currentState": "Planned. Model diagnostic items, mastery signals, misconceptions, hints, and retry items.",
+              "currentState": "Planned. Close R7.4 follow-ups, expand retrieval eval coverage, backfill evidence anchors, and improve approved/pending/diagnostic labels.",
               "exitGate": ""
             },
             {
-              "sprint": "R10.2",
-              "name": "Feedback Library",
+              "sprint": "R8.1",
+              "name": "QC Issue Model",
               "completed": "no",
-              "currentState": "Planned. Create reusable feedback and worked-example records linked to units and misconceptions.",
-              "exitGate": ""
-            },
-            {
-              "sprint": "R10.3",
-              "name": "Diagnostics Review Gate",
-              "completed": "no",
-              "currentState": "Planned. Human-reviewed gate before adaptive student routing.",
-              "exitGate": ""
-            },
-            {
-              "sprint": "R11.1",
-              "name": "Game Content Mapping",
-              "completed": "no",
-              "currentState": "Planned. Map games to units, concepts, misconceptions, feedback, and debrief prompts.",
-              "exitGate": ""
-            },
-            {
-              "sprint": "R11.2",
-              "name": "Simulation Content Model",
-              "completed": "no",
-              "currentState": "Planned. Define simulation schemas and evidence/debrief links.",
-              "exitGate": ""
-            },
-            {
-              "sprint": "R12.1",
-              "name": "Teacher Cockpit Data Contract",
-              "completed": "no",
-              "currentState": "Planned. Define teacher-facing dashboard data while keeping student data separate from references.",
-              "exitGate": ""
-            },
-            {
-              "sprint": "R12.2",
-              "name": "Privacy Review Gate",
-              "completed": "no",
-              "currentState": "Planned. Human-reviewed gate before student-data deployment.",
-              "exitGate": ""
-            },
-            {
-              "sprint": "R12.3",
-              "name": "Accessibility Review Gate",
-              "completed": "no",
-              "currentState": "Planned. Human-reviewed gate before broader student-facing deployment.",
-              "exitGate": ""
-            },
-            {
-              "sprint": "R13.1",
-              "name": "Internal Authoring Assistant",
-              "completed": "no",
-              "currentState": "Planned. Bound AI assistance to internal authoring with human review.",
-              "exitGate": ""
-            },
-            {
-              "sprint": "R13.2",
-              "name": "AI Tutor Guardrails",
-              "completed": "no",
-              "currentState": "Planned. Define student-facing AI constraints, retrieval dependencies, and refusal/uncertainty behavior.",
-              "exitGate": ""
-            },
-            {
-              "sprint": "R13.3",
-              "name": "AI Review Gate",
-              "completed": "no",
-              "currentState": "Planned. Human-reviewed gate before any student-facing AI tutor use.",
+              "currentState": "Planned, scoped down. Define only the lightweight issue schema needed to expose evidence weakness, stale data, and proof-to-close in retrieval and reports.",
               "exitGate": ""
             },
             {
               "sprint": "R14.1",
               "name": "Curriculum Versioning",
               "completed": "no",
-              "currentState": "Planned. Track curriculum/source versions and reference migrations.",
+              "currentState": "Planned, minimal. Track source/curriculum versions so retrieval does not silently mix syllabus or exam-program versions.",
               "exitGate": ""
             },
             {
-              "sprint": "R14.2",
-              "name": "Evidence Signal Model",
-              "completed": "no",
-              "currentState": "Planned. Model quality and learning signals without surveillance or unnecessary student data.",
+              "sprint": "R7.4",
+              "name": "RAG Review Gate",
+              "completed": "yes",
+              "currentState": "Completed with `pass_with_conditions`. Internal and teacher-facing non-authoritative retrieval plus human-reviewed lesson-authoring support are allowed; student-facing diagnostics, adaptive routing, AI, automatic sequencing, mastery decisions, and summative use remain blocked.",
               "exitGate": ""
             },
             {
-              "sprint": "R14.3",
-              "name": "Continuous Improvement Reports",
-              "completed": "no",
-              "currentState": "Planned. Produce evidence-platform reports and require review before external claims.",
+              "sprint": "R7.5",
+              "name": "Merge Readiness and Main Sync",
+              "completed": "yes",
+              "currentState": "Completed. Branch synced with `origin/main`, duplicate R5 gate namespace resolved, stray roadmap artifact moved to `docs/roadmaps/`, validators pass, and merge-readiness report says ready for merge review.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "R9.0",
+              "name": "Legacy Target Reference Minimization",
+              "completed": "yes",
+              "currentState": "Completed. Minimized the frozen legacy target as a conceptual anchor before R9.1 while preserving functional legacy paths and guardrails.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "R9.01",
+              "name": "Legacy Folder Rename",
+              "completed": "yes",
+              "currentState": "Completed. Renamed repo-local legacy folders to `legacy-target` while preserving the frozen external lesson target.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "R7.3",
+              "name": "Retrieval Evaluation Set",
+              "completed": "yes",
+              "currentState": "Completed. Added fixed retrieval eval set, runner, validator, JSON results, and Markdown report; 10/10 cases pass with zero authority violations.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "R7.2",
+              "name": "Hybrid Retrieval",
+              "completed": "yes",
+              "currentState": "Completed. Added internal deterministic query prototype preserving source authority, evidence IDs, edge status, and generated-report warnings.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "R7.1",
+              "name": "Deterministic Chunk Layer",
+              "completed": "yes",
+              "currentState": "Completed. Added deterministic internal RAG chunk index with 842 chunks and authority metadata preserving generated-report safeguards.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "R6.2",
+              "name": "Reference Health Dashboard Data",
+              "completed": "yes",
+              "currentState": "Completed. Added `reports/json/reference-health.json` and Markdown projection with R5.3 graph-authority constraints and dashboard health summaries.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "R6.1",
+              "name": "JSON-First Reports",
+              "completed": "yes",
+              "currentState": "Completed. Added JSON-first report generation and validation for 10 required health/coverage reports, plus Markdown projections under `reports/markdown/`.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "R5.3",
+              "name": "Alignment Graph Review Gate",
+              "completed": "yes",
+              "currentState": "Completed with `pass_with_conditions`. Named graph edge groups are approved for internal dashboard/reporting and internal retrieval development/evaluation; student diagnostics, adaptive routing, and student-facing AI remain blocked.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "R5.2",
+              "name": "Alignment Graph",
+              "completed": "yes",
+              "currentState": "Completed. Built the first draft alignment graph from R5.1 evidence anchors: 31 edges, 13 pending main edges, 18 traceability edges, and 0 human-approved edges.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "R5.1",
+              "name": "Evidence-Anchor Layer",
+              "completed": "yes",
+              "currentState": "Completed. Created the first governed evidence-anchor layer: source-ranking policy, 15 anchors, 13 claims, schemas, validator, and status reports.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "R4.3",
+              "name": "Blueprint Flag Triage",
+              "completed": "yes",
+              "currentState": "Completed. Triaged all 84 current raw target-exercise missing-unit flags into a curated backlog: 68 still needed, 4 existing-unit match candidates, 1 duplicate, and 11 deferred.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "R4.2",
+              "name": "Exam-Question Extraction Gap Closure",
+              "completed": "yes",
+              "currentState": "Completed. Produced a non-mutating gap report and patch queue for 27 exam-question records with missing required-skill annotations; protected references were not changed.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "R4.1",
+              "name": "Unit-Term Slug Migration",
+              "completed": "yes",
+              "currentState": "Completed. Migrated safe unit `terms` values to canonical `begrippen.json` slug IDs through a validated migration script; left `alternatieve kosten` and `schaarste` unresolved for later term-registry review.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "R3.2",
+              "name": "Apply Reviewed Empty-Needs Corrections",
+              "completed": "yes",
+              "currentState": "Completed. Applied the bounded R2.4 mutation-review set through CLI: 15 dependency edges and 6 `underbouw_assumed` classifications. No D04, rejected market-graph, held A-domain, L09->L03, or H13 mutations were applied.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "R3.1",
+              "name": "Reference CLI And Documentation Completion",
+              "completed": "yes",
+              "currentState": "Completed. CLI docs now reflect implemented scripts; coverage report status is `ready_with_blockers`; zero-needs review fields round-trip through parser, formatter, validation, and JSON projection.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "R2.4",
+              "name": "Evidence And Unit-Design Cleanup",
+              "completed": "yes",
+              "currentState": "Completed. Non-mutating packet attaches exact evidence to selected candidate edges, resolves D04 as unit-design-required, classifies foundational A-domain zero-needs candidates, preserves rejected market-graph suggestions, and records a bounded labor-market/unemployment second pass.",
               "exitGate": ""
             },
             {
               "sprint": "R2.3",
               "name": "Human Review And Gate Closure",
               "completed": "yes",
-              "currentState": "Completed with GATE-R2 status `hold`. The audit is diagnostic only; R3.2 is blocked until R2.4 evidence and unit-design cleanup is complete.",
+              "currentState": "Completed with GATE-R2 status `hold`. The audit was diagnostic only; R2.4 produced the non-mutating packet and R3.2 later applied only the human-approved CLI mutation set.",
               "exitGate": ""
             },
             {
@@ -425,7 +355,7 @@
               "sprint": "R1.2",
               "name": "Core JSON Schemas",
               "completed": "yes",
-              "currentState": "Completed. Initial JSON schema contracts exist for units, terms, evidence, graph edges, reports, RAG chunks, feedback, games, and simulations.",
+              "currentState": "Completed. Initial JSON schema contracts exist for units, terms, evidence, graph edges, reports, RAG chunks, and reference-quality records.",
               "exitGate": ""
             },
             {
@@ -475,146 +405,10 @@
       ],
       "sprints": [
         {
-          "sprint": "R2.4",
-          "name": "Evidence And Unit-Design Cleanup",
-          "completed": "no",
-          "currentState": "Next. Attach exact evidence to candidate edges, resolve D04 unit scope, classify foundational A-domain zero-needs, and run a labor-market/unemployment second pass before R3.2.",
-          "exitGate": "",
-          "roadmap": "References roadmap"
-        },
-        {
-          "sprint": "R3.1",
-          "name": "Reference CLI And Documentation Completion",
-          "completed": "no",
-          "currentState": "Planned. Fill any CLI gaps needed for reviewed corrections and update stale CLI docs.",
-          "exitGate": "",
-          "roadmap": "References roadmap"
-        },
-        {
-          "sprint": "R3.2",
-          "name": "Apply Reviewed Empty-Needs Corrections",
-          "completed": "no",
-          "currentState": "Blocked by GATE-R2 hold. Do not apply empty-needs dependency corrections until R2.4 supplies exact evidence and unit-design decisions.",
-          "exitGate": "",
-          "roadmap": "References roadmap"
-        },
-        {
-          "sprint": "R4.1",
-          "name": "Unit-Term Slug Migration",
-          "completed": "no",
-          "currentState": "Planned. Migrate unit `terms` fields to canonical `begrippen.json` slug IDs.",
-          "exitGate": "",
-          "roadmap": "References roadmap"
-        },
-        {
-          "sprint": "R4.2",
-          "name": "Exam-Question Extraction Gap Closure",
-          "completed": "no",
-          "currentState": "Planned. Complete missing required-skill and exam-code links where evidence supports it.",
-          "exitGate": "",
-          "roadmap": "References roadmap"
-        },
-        {
-          "sprint": "R4.3",
-          "name": "Blueprint Flag Triage",
-          "completed": "no",
-          "currentState": "Planned. Convert raw missing-unit flags into curated decisions.",
-          "exitGate": "",
-          "roadmap": "References roadmap"
-        },
-        {
-          "sprint": "R5.1",
-          "name": "Evidence-Anchor Layer",
-          "completed": "no",
-          "currentState": "Planned. Add exact proof anchors for important claims.",
-          "exitGate": "",
-          "roadmap": "References roadmap"
-        },
-        {
-          "sprint": "R5.2",
-          "name": "Alignment Graph",
-          "completed": "no",
-          "currentState": "Planned. Create graph edges only after evidence and prerequisite work.",
-          "exitGate": "",
-          "roadmap": "References roadmap"
-        },
-        {
-          "sprint": "R5.3",
-          "name": "Alignment Graph Review Gate",
-          "completed": "no",
-          "currentState": "Planned. Human-reviewed gate before graph powers retrieval or diagnostics.",
-          "exitGate": "",
-          "roadmap": "References roadmap"
-        },
-        {
-          "sprint": "R6.1",
-          "name": "JSON-First Reports",
-          "completed": "no",
-          "currentState": "Planned. Markdown reports become projections of JSON.",
-          "exitGate": "",
-          "roadmap": "References roadmap"
-        },
-        {
-          "sprint": "R6.2",
-          "name": "Reference Health Dashboard Data",
-          "completed": "no",
-          "currentState": "Planned. Produce one generated reference-health state file for dashboards and planning.",
-          "exitGate": "",
-          "roadmap": "References roadmap"
-        },
-        {
-          "sprint": "R7.1",
-          "name": "Deterministic Chunk Layer",
-          "completed": "no",
-          "currentState": "Planned. Build source-ranked retrieval chunks.",
-          "exitGate": "",
-          "roadmap": "References roadmap"
-        },
-        {
-          "sprint": "R7.2",
-          "name": "Hybrid Retrieval",
-          "completed": "no",
-          "currentState": "Planned. Add lexical/entity/graph retrieval before optional vector search.",
-          "exitGate": "",
-          "roadmap": "References roadmap"
-        },
-        {
-          "sprint": "R7.3",
-          "name": "Retrieval Evaluation Set",
-          "completed": "no",
-          "currentState": "Planned. Make retrieval quality regressions visible.",
-          "exitGate": "",
-          "roadmap": "References roadmap"
-        },
-        {
-          "sprint": "R7.4",
-          "name": "RAG Review Gate",
-          "completed": "no",
-          "currentState": "Planned. Approve internal/teacher-facing RAG only after evaluation.",
-          "exitGate": "",
-          "roadmap": "References roadmap"
-        },
-        {
-          "sprint": "R8.1",
-          "name": "QC Issue Model",
-          "completed": "no",
-          "currentState": "Planned. Define machine-readable quality issue categories, severity, evidence, proof-to-close, and ownership.",
-          "exitGate": "",
-          "roadmap": "References roadmap"
-        },
-        {
-          "sprint": "R8.2",
-          "name": "Production QC Gates",
-          "completed": "no",
-          "currentState": "Planned. Connect reference QC signals to lesson-production checks without mutating protected references.",
-          "exitGate": "",
-          "roadmap": "References roadmap"
-        },
-        {
           "sprint": "R9.1",
           "name": "Owned Source Registry",
           "completed": "no",
-          "currentState": "Planned. Register owned book/source material as source surfaces distinct from external authority and generated reports.",
+          "currentState": "Next. Register owned book/source material as source surfaces so RAG can retrieve from actual lesson and blueprint material without treating exposition as authority.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -622,95 +416,23 @@
           "sprint": "R9.2",
           "name": "Content Graph Projection",
           "completed": "no",
-          "currentState": "Planned. Project owned content to the reference graph without making exposition authoritative.",
+          "currentState": "Planned next after R9.1. Project owned content to the reference graph using projection edges, not evidence edges.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
         {
-          "sprint": "R10.1",
-          "name": "Diagnostic Item Model",
+          "sprint": "R7.6",
+          "name": "RAG Quality Hardening",
           "completed": "no",
-          "currentState": "Planned. Model diagnostic items, mastery signals, misconceptions, hints, and retry items.",
+          "currentState": "Planned. Close R7.4 follow-ups, expand retrieval eval coverage, backfill evidence anchors, and improve approved/pending/diagnostic labels.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
         {
-          "sprint": "R10.2",
-          "name": "Feedback Library",
+          "sprint": "R8.1",
+          "name": "QC Issue Model",
           "completed": "no",
-          "currentState": "Planned. Create reusable feedback and worked-example records linked to units and misconceptions.",
-          "exitGate": "",
-          "roadmap": "References roadmap"
-        },
-        {
-          "sprint": "R10.3",
-          "name": "Diagnostics Review Gate",
-          "completed": "no",
-          "currentState": "Planned. Human-reviewed gate before adaptive student routing.",
-          "exitGate": "",
-          "roadmap": "References roadmap"
-        },
-        {
-          "sprint": "R11.1",
-          "name": "Game Content Mapping",
-          "completed": "no",
-          "currentState": "Planned. Map games to units, concepts, misconceptions, feedback, and debrief prompts.",
-          "exitGate": "",
-          "roadmap": "References roadmap"
-        },
-        {
-          "sprint": "R11.2",
-          "name": "Simulation Content Model",
-          "completed": "no",
-          "currentState": "Planned. Define simulation schemas and evidence/debrief links.",
-          "exitGate": "",
-          "roadmap": "References roadmap"
-        },
-        {
-          "sprint": "R12.1",
-          "name": "Teacher Cockpit Data Contract",
-          "completed": "no",
-          "currentState": "Planned. Define teacher-facing dashboard data while keeping student data separate from references.",
-          "exitGate": "",
-          "roadmap": "References roadmap"
-        },
-        {
-          "sprint": "R12.2",
-          "name": "Privacy Review Gate",
-          "completed": "no",
-          "currentState": "Planned. Human-reviewed gate before student-data deployment.",
-          "exitGate": "",
-          "roadmap": "References roadmap"
-        },
-        {
-          "sprint": "R12.3",
-          "name": "Accessibility Review Gate",
-          "completed": "no",
-          "currentState": "Planned. Human-reviewed gate before broader student-facing deployment.",
-          "exitGate": "",
-          "roadmap": "References roadmap"
-        },
-        {
-          "sprint": "R13.1",
-          "name": "Internal Authoring Assistant",
-          "completed": "no",
-          "currentState": "Planned. Bound AI assistance to internal authoring with human review.",
-          "exitGate": "",
-          "roadmap": "References roadmap"
-        },
-        {
-          "sprint": "R13.2",
-          "name": "AI Tutor Guardrails",
-          "completed": "no",
-          "currentState": "Planned. Define student-facing AI constraints, retrieval dependencies, and refusal/uncertainty behavior.",
-          "exitGate": "",
-          "roadmap": "References roadmap"
-        },
-        {
-          "sprint": "R13.3",
-          "name": "AI Review Gate",
-          "completed": "no",
-          "currentState": "Planned. Human-reviewed gate before any student-facing AI tutor use.",
+          "currentState": "Planned, scoped down. Define only the lightweight issue schema needed to expose evidence weakness, stale data, and proof-to-close in retrieval and reports.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -718,23 +440,151 @@
           "sprint": "R14.1",
           "name": "Curriculum Versioning",
           "completed": "no",
-          "currentState": "Planned. Track curriculum/source versions and reference migrations.",
+          "currentState": "Planned, minimal. Track source/curriculum versions so retrieval does not silently mix syllabus or exam-program versions.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
         {
-          "sprint": "R14.2",
-          "name": "Evidence Signal Model",
-          "completed": "no",
-          "currentState": "Planned. Model quality and learning signals without surveillance or unnecessary student data.",
+          "sprint": "R7.4",
+          "name": "RAG Review Gate",
+          "completed": "yes",
+          "currentState": "Completed with `pass_with_conditions`. Internal and teacher-facing non-authoritative retrieval plus human-reviewed lesson-authoring support are allowed; student-facing diagnostics, adaptive routing, AI, automatic sequencing, mastery decisions, and summative use remain blocked.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
         {
-          "sprint": "R14.3",
-          "name": "Continuous Improvement Reports",
-          "completed": "no",
-          "currentState": "Planned. Produce evidence-platform reports and require review before external claims.",
+          "sprint": "R7.5",
+          "name": "Merge Readiness and Main Sync",
+          "completed": "yes",
+          "currentState": "Completed. Branch synced with `origin/main`, duplicate R5 gate namespace resolved, stray roadmap artifact moved to `docs/roadmaps/`, validators pass, and merge-readiness report says ready for merge review.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "R9.0",
+          "name": "Legacy Target Reference Minimization",
+          "completed": "yes",
+          "currentState": "Completed. Minimized the frozen legacy target as a conceptual anchor before R9.1 while preserving functional legacy paths and guardrails.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "R9.01",
+          "name": "Legacy Folder Rename",
+          "completed": "yes",
+          "currentState": "Completed. Renamed repo-local legacy folders to `legacy-target` while preserving the frozen external lesson target.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "R7.3",
+          "name": "Retrieval Evaluation Set",
+          "completed": "yes",
+          "currentState": "Completed. Added fixed retrieval eval set, runner, validator, JSON results, and Markdown report; 10/10 cases pass with zero authority violations.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "R7.2",
+          "name": "Hybrid Retrieval",
+          "completed": "yes",
+          "currentState": "Completed. Added internal deterministic query prototype preserving source authority, evidence IDs, edge status, and generated-report warnings.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "R7.1",
+          "name": "Deterministic Chunk Layer",
+          "completed": "yes",
+          "currentState": "Completed. Added deterministic internal RAG chunk index with 842 chunks and authority metadata preserving generated-report safeguards.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "R6.2",
+          "name": "Reference Health Dashboard Data",
+          "completed": "yes",
+          "currentState": "Completed. Added `reports/json/reference-health.json` and Markdown projection with R5.3 graph-authority constraints and dashboard health summaries.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "R6.1",
+          "name": "JSON-First Reports",
+          "completed": "yes",
+          "currentState": "Completed. Added JSON-first report generation and validation for 10 required health/coverage reports, plus Markdown projections under `reports/markdown/`.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "R5.3",
+          "name": "Alignment Graph Review Gate",
+          "completed": "yes",
+          "currentState": "Completed with `pass_with_conditions`. Named graph edge groups are approved for internal dashboard/reporting and internal retrieval development/evaluation; student diagnostics, adaptive routing, and student-facing AI remain blocked.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "R5.2",
+          "name": "Alignment Graph",
+          "completed": "yes",
+          "currentState": "Completed. Built the first draft alignment graph from R5.1 evidence anchors: 31 edges, 13 pending main edges, 18 traceability edges, and 0 human-approved edges.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "R5.1",
+          "name": "Evidence-Anchor Layer",
+          "completed": "yes",
+          "currentState": "Completed. Created the first governed evidence-anchor layer: source-ranking policy, 15 anchors, 13 claims, schemas, validator, and status reports.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "R4.3",
+          "name": "Blueprint Flag Triage",
+          "completed": "yes",
+          "currentState": "Completed. Triaged all 84 current raw target-exercise missing-unit flags into a curated backlog: 68 still needed, 4 existing-unit match candidates, 1 duplicate, and 11 deferred.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "R4.2",
+          "name": "Exam-Question Extraction Gap Closure",
+          "completed": "yes",
+          "currentState": "Completed. Produced a non-mutating gap report and patch queue for 27 exam-question records with missing required-skill annotations; protected references were not changed.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "R4.1",
+          "name": "Unit-Term Slug Migration",
+          "completed": "yes",
+          "currentState": "Completed. Migrated safe unit `terms` values to canonical `begrippen.json` slug IDs through a validated migration script; left `alternatieve kosten` and `schaarste` unresolved for later term-registry review.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "R3.2",
+          "name": "Apply Reviewed Empty-Needs Corrections",
+          "completed": "yes",
+          "currentState": "Completed. Applied the bounded R2.4 mutation-review set through CLI: 15 dependency edges and 6 `underbouw_assumed` classifications. No D04, rejected market-graph, held A-domain, L09->L03, or H13 mutations were applied.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "R3.1",
+          "name": "Reference CLI And Documentation Completion",
+          "completed": "yes",
+          "currentState": "Completed. CLI docs now reflect implemented scripts; coverage report status is `ready_with_blockers`; zero-needs review fields round-trip through parser, formatter, validation, and JSON projection.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "R2.4",
+          "name": "Evidence And Unit-Design Cleanup",
+          "completed": "yes",
+          "currentState": "Completed. Non-mutating packet attaches exact evidence to selected candidate edges, resolves D04 as unit-design-required, classifies foundational A-domain zero-needs candidates, preserves rejected market-graph suggestions, and records a bounded labor-market/unemployment second pass.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -742,7 +592,7 @@
           "sprint": "R2.3",
           "name": "Human Review And Gate Closure",
           "completed": "yes",
-          "currentState": "Completed with GATE-R2 status `hold`. The audit is diagnostic only; R3.2 is blocked until R2.4 evidence and unit-design cleanup is complete.",
+          "currentState": "Completed with GATE-R2 status `hold`. The audit was diagnostic only; R2.4 produced the non-mutating packet and R3.2 later applied only the human-approved CLI mutation set.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -774,7 +624,7 @@
           "sprint": "R1.2",
           "name": "Core JSON Schemas",
           "completed": "yes",
-          "currentState": "Completed. Initial JSON schema contracts exist for units, terms, evidence, graph edges, reports, RAG chunks, feedback, games, and simulations.",
+          "currentState": "Completed. Initial JSON schema contracts exist for units, terms, evidence, graph edges, reports, RAG chunks, and reference-quality records.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -827,8 +677,8 @@
           "roadmap": "References roadmap"
         }
       ],
-      "completedCount": 11,
-      "openCount": 33
+      "completedCount": 29,
+      "openCount": 5
     },
     {
       "id": "lessen",
@@ -1130,7 +980,7 @@
           "generated": "2026-04-24",
           "updated": "",
           "scope": "collab work 3 innovation track for presentations, web-native lesson media, and later experiments",
-          "summary": "The Innovation Team owns controlled experiments that may break the mold before they become production workflow. This track is allowed to take more risk than normal material production, but the risk stays inside the collab setup and becomes useful only when the learning can be turned into platform workflows, reusable builders, or clear product decisions.",
+          "summary": "The Innovation Team owns controlled experiments that may break the mold before they become production workflow. This track is not a production team and does not need to deliver production-ready presentations. Its job is to improve quality standards, create strong concept samples, expose weak spots in the current pipeline, and prepare a clear handoff to the team that makes lesson material.",
           "sprints": [
             {
               "sprint": "Sprint I0",

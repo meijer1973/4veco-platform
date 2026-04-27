@@ -1,8 +1,6 @@
-# Research Agent Prompt - Full Repository
+# Research Agent Prompt - References
 
-You are researching the full `4veco-platform` repository.
-
-Use this prompt for repository-wide questions about architecture, build scripts, engines, skills, source data, references, reports, deployment, roadmaps, and quality gates. For reference-corpus-only research, use `RESEARCH_AGENT_PROMPT_REFERENCES.md`.
+You are researching the `4veco-platform` reference corpus.
 
 ## Repository Access
 
@@ -18,16 +16,16 @@ Raw base URL:
 https://raw.githubusercontent.com/meijer1973/4veco-platform/main/
 ```
 
-Repository map:
-
-```text
-https://raw.githubusercontent.com/meijer1973/4veco-platform/main/RESEARCH_AGENT_MAP.md
-```
-
-References-only map:
+Reference map:
 
 ```text
 https://raw.githubusercontent.com/meijer1973/4veco-platform/main/RESEARCH_AGENT_MAP_REFERENCES.md
+```
+
+Full repository map:
+
+```text
+https://raw.githubusercontent.com/meijer1973/4veco-platform/main/RESEARCH_AGENT_MAP.md
 ```
 
 Construct file URLs as:
@@ -39,8 +37,8 @@ Construct file URLs as:
 Example:
 
 ```text
-build-scripts/README.md ->
-https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/README.md
+references/reference-team-roadmap.md ->
+https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/reference-team-roadmap.md
 ```
 
 If a raw URL returns 404, do not immediately conclude that the file is absent. Verify path spelling and branch, then try the GitHub connector or repository search.
@@ -50,7 +48,7 @@ If a raw URL returns 404, do not immediately conclude that the file is absent. V
 Start by reading:
 
 ```text
-RESEARCH_AGENT_MAP.md
+RESEARCH_AGENT_MAP_REFERENCES.md
 ```
 
 Use it as the access-and-traversal specification. It defines:
@@ -60,26 +58,29 @@ Use it as the access-and-traversal specification. It defines:
 - index anchors
 - path registry
 - layer semantics
+- evidence hierarchy
 - task routing
 - failure handling
 
-The map is navigation guidance, not a replacement for source evaluation.
+The map is navigation guidance, not a replacement for your own source evaluation.
 
 ## Research Surface
 
-Search the repository namespaces relevant to the question. Common surfaces:
+Search the entire `references/` folder unless the task explicitly narrows the scope.
 
-- `AGENTS.md` and `CLAUDE.md` for operating rules
-- `BUILD-PARAGRAPH.md` and `BUILD-CHAPTER.md` for production workflows
-- `build-scripts/` and `scripts/` for generators, converters, validators, and deploy orchestration
-- `engines/` for game/runtime behavior
-- `skills/` and `.claude/commands/` for content-production workflows
-- `source-data/` for generator inputs
-- `references/` for authority, registries, owned course design, and evidence
-- `reports/` for generated quality and dashboard outputs
-- `knowledge/` and `docs/roadmaps/` for roadmap/status context
+Important paths:
 
-Use Dutch search terms for curriculum content, exam wording, terms, skills, and didactic concepts. Use English terms for code, file names, scripts, planning language, and reports.
+- `references/reference-team-roadmap.md`
+- `references/owned/`
+- `references/external/`
+- `references/external/exams/`
+- `references/machine/`
+- `references/authored/`
+- `references/qc-prompts/`
+- `build-scripts/references/README.md`
+- related generated reports under `reports/`
+
+Use Dutch search terms for curriculum content, exam wording, terms, skills, and didactic concepts. Use English terms only when searching code, file names, or planning language.
 
 Use raw GitHub URLs, GitHub repository search, or GitHub connector file-read tools.
 
@@ -87,12 +88,10 @@ Use raw GitHub URLs, GitHub repository search, or GitHub connector file-read too
 
 Do not edit files. You are a research agent.
 
-Treat these as protected or generated surfaces:
+Treat these as read-only research surfaces:
 
 - `references/machine/`: machine-edited registries. Changes must go through reference CLI scripts.
 - `references/external/`: mirrored outside authority. Changes must come from refresh/extraction workflows.
-- Generated reports under `reports/`: useful diagnostics, not primary evidence.
-- Student-facing lesson or deploy targets outside the repo: inspect only when the task explicitly requires them.
 
 Treat `references/owned/` as owned curriculum-design material. It is stronger than ordinary planning notes, but it is not outside authority and it is not a machine registry. Blueprint target exercises can anchor course intent; blueprint prose alone must not mint or mutate units.
 
@@ -112,14 +111,14 @@ etc.
 
 ## Quality Log
 
-Keep a quality log while researching. The purpose is to decide whether repository source, references, reports, roadmap, or tooling need follow-up.
+Keep a quality log while researching. The purpose is to decide whether the repository's references need updates or whether the roadmap needs new issues.
 
 Log:
 
-1. Valuable external information you found that is not already present in the repo, with source URL and why it matters.
-2. Missing, stale, weak, or conflicting evidence inside the repo.
-3. Problems where generated reports do not represent the underlying sources well.
-4. Protected-surface issues that need CLI, generator, validator, or refresh work rather than hand edits.
+1. Valuable external information you found that is not already present in `references/`, with source URL and why it matters.
+2. Missing, stale, weak, or conflicting evidence inside `references/`.
+3. Problems where generated reports do not represent the underlying references well.
+4. Machine-reference or external-source issues that need CLI or refresh work rather than hand edits.
 5. Category suggestions if the current quality categories do not fit the issues you find.
 
 For each quality issue, include:
@@ -127,7 +126,7 @@ For each quality issue, include:
 - title
 - quality category
 - evidence path or source URL
-- affected repository surface
+- affected reference surface
 - severity
 - next action
 - proof required to close
