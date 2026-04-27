@@ -1,0 +1,64 @@
+{
+  "report_id": "R0.2-R7.5-post-merge-main",
+  "schema_version": 1,
+  "generated_on": "2026-04-27T10:10:11Z",
+  "generated_by": "Codex",
+  "branch": "main",
+  "merge_commit": "1c5686a75ca0b7009bb664727680b425c76ce8e0",
+  "integrated_branch": "refsys/R0.2-reference-baseline-inventory",
+  "integrated_branch_tip": "339c08e",
+  "integration_tag": "checkpoint/reference-foundation-r7.5-integrated",
+  "status": "pass",
+  "post_merge_validation": {
+    "ran_on_main": true,
+    "tests_passed": [
+      "node build-scripts/review-gates/validate-gate.js reports/review-gates/GATE-R5-alignment-graph/gate-closure.json",
+      "node build-scripts/review-gates/validate-gate.js reports/review-gates/GATE-R7-rag/gate-closure.json",
+      "node build-scripts/references/validate-alignment-graph.js",
+      "node build-scripts/references/validate-core-schemas.js",
+      "node build-scripts/references/build-unit-index.js",
+      "node build-scripts/references/validate-prior-knowledge-schema.js",
+      "node build-scripts/reports/generate-all.js",
+      "node build-scripts/reports/validate-report-json.js",
+      "node build-scripts/reports/generate-reference-health.js",
+      "node build-scripts/reports/check-reference-health.js",
+      "node build-scripts/rag/build-chunks.js",
+      "node build-scripts/rag/validate-chunks.js",
+      "node build-scripts/rag/validate-query-output.js",
+      "node build-scripts/rag/run-retrieval-evals.js",
+      "node build-scripts/rag/validate-retrieval-eval-results.js",
+      "node build-scripts/references/build-reference-inventory.js",
+      "node build-scripts/references/check-source-manifest.js",
+      "node build-scripts/references/check-document-inventory.js",
+      "node build-scripts/references/check-source-of-truth.js"
+    ],
+    "tests_failed": []
+  },
+  "r7_4_gate_status": "pass_with_conditions",
+  "retrieval_eval_summary": {
+    "case_count": 10,
+    "pass_count": 10,
+    "fail_count": 0,
+    "authority_violation_count": 0
+  },
+  "allowed_downstream_uses": [
+    "internal_dashboard",
+    "reference_health_reports",
+    "internal_retrieval_development",
+    "retrieval_evaluation",
+    "teacher_facing_non_authoritative_lookup",
+    "lesson_authoring_support_with_human_review"
+  ],
+  "blocked_downstream_uses": [
+    "student_diagnostics",
+    "adaptive_routing",
+    "student_facing_ai",
+    "automatic_lesson_sequencing",
+    "automatic_mastery_decisions",
+    "summative_assessment_decisions",
+    "unreviewed_student_facing_publication"
+  ],
+  "next_authorized_block": "R7.6 - RAG Follow-Up Hardening",
+  "next_block_started": false,
+  "ready_for_R7_6": true
+}
