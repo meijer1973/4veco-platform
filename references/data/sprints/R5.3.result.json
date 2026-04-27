@@ -1,0 +1,62 @@
+{
+  "sprint_id": "R5.3",
+  "name": "Alignment Graph Review Gate",
+  "status": "completed",
+  "completed_on": "2026-04-27",
+  "plan": "docs/sprints/R5.3-plan.md",
+  "baseline": "reports/sprints/R5.3-baseline.md",
+  "result": "reports/sprints/R5.3-result.md",
+  "diff_summary": "reports/sprints/R5.3-diff-summary.md",
+  "gate_id": "GATE-R5.3-alignment-graph",
+  "gate_closure": "reports/review-gates/GATE-R5.3-alignment-graph/gate-closure.json",
+  "gate_status": "pass_with_conditions",
+  "outputs": [
+    "reports/review-gates/GATE-R5.3-alignment-graph/gate-closure.json",
+    "reports/review-gates/GATE-R5.3-alignment-graph/human-interview.md",
+    "references/data/alignment-graph.json",
+    "reports/alignment-graph-integrity.md",
+    "reports/json/alignment-graph-integrity.json",
+    "reports/sprints/R5.3-result.md",
+    "reports/sprints/R5.3-diff-summary.md"
+  ],
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js docs/sprints/R5.3-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-evidence-anchors.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-alignment-graph.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/validate-core-schemas.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/review-gates/validate-gate.js reports/review-gates/GATE-R5.3-alignment-graph/gate-closure.json",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-result.js reports/sprints/R5.3-result.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js R5.3 --complete",
+      "status": "passed"
+    }
+  ],
+  "protected_reference_data_changed": false,
+  "next_sprint": "R6.1",
+  "summary": {
+    "graph_edges": 34,
+    "approved_edges": 8,
+    "approved_with_conditions_edges": 5,
+    "diagnostic_only_edges": 2,
+    "pending_main_edges": 0,
+    "whole_graph_authority": false
+  }
+}

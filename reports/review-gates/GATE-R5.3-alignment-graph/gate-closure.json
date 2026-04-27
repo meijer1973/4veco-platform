@@ -1,0 +1,120 @@
+{
+  "gate_id": "GATE-R5.3-alignment-graph",
+  "sprint_id": "R5.3",
+  "status": "pass_with_conditions",
+  "closed_on": "2026-04-27",
+  "closure_confirmed_by_human": true,
+  "human_interview": "reports/review-gates/GATE-R5.3-alignment-graph/human-interview.md",
+  "review_packet": "reports/review-gates/GATE-R5.3-alignment-graph/review-packet.md",
+  "summary": "The alignment graph may proceed for internal dashboard/reporting use and internal retrieval development/evaluation, but only named approved edge groups are reviewed graph knowledge. The graph is not approved for student diagnostics, adaptive routing, student-facing AI, automatic mastery decisions, or summative assessment decisions.",
+  "graph_approval_scope": "named_edge_groups_only",
+  "whole_graph_authority": false,
+  "accepted_outcomes": [
+    "The graph container and schema may exist.",
+    "Named approved prerequisite edges may be treated as reviewed graph knowledge.",
+    "Source ranking may be used as a governance and ranking signal only.",
+    "Term-registry links may appear in the alignment graph.",
+    "Diagnostic quality edges may appear for reference health and review planning.",
+    "Internal dashboard/reporting use may proceed.",
+    "Internal retrieval development and retrieval evaluation may proceed when edge status and source authority are preserved."
+  ],
+  "blocked_outcomes": [
+    "Do not treat the whole draft graph as pedagogically authoritative.",
+    "Do not use the graph for student diagnostics.",
+    "Do not use the graph for student adaptive routing.",
+    "Do not use the graph for student-facing AI tutor behavior.",
+    "Do not use the graph for automatic lesson sequencing.",
+    "Do not use the graph for automatic mastery decisions.",
+    "Do not use the graph for summative assessment decisions."
+  ],
+  "explicit_decisions": [
+    {
+      "topic": "approval scope",
+      "decision": "Approve only named edge groups; unreviewed edges remain pending_review or diagnostic_only."
+    },
+    {
+      "topic": "source-ranking policy",
+      "decision": "Use source_rank as governance/ranking signal only, not as proof or automatic approval."
+    },
+    {
+      "topic": "approved prerequisite edges",
+      "decision": "Approve A15->A38, A16->A15, A17->A15, D06->A15, L09->L05, D16->L10, D16->D34, I04->L19, I10->L19, and H14->I14."
+    },
+    {
+      "topic": "D04 design issue",
+      "decision": "Represent D04 as a unit-design issue for retire/merge/redistribute, not as a prerequisite edge."
+    },
+    {
+      "topic": "diagnostic edges",
+      "decision": "Exam-question gap and generated-report edges may remain diagnostic quality signals, not curriculum authority."
+    },
+    {
+      "topic": "term edges",
+      "decision": "Term-registry definition links may be graph edges for retrieval, glossary lookup, unit-term coverage, and feedback generation."
+    },
+    {
+      "topic": "downstream use",
+      "decision": "Allow internal dashboard/reporting and internal retrieval development/evaluation; block student diagnostics, adaptive routing, and student-facing AI."
+    }
+  ],
+  "approved_edges": [
+    ["A15", "A38"],
+    ["A16", "A15"],
+    ["A17", "A15"],
+    ["D06", "A15"],
+    ["L09", "L05"],
+    ["D16", "L10"],
+    ["D16", "D34"],
+    ["I04", "L19"],
+    ["I10", "L19"],
+    ["H14", "I14"]
+  ],
+  "approved_design_issue_edges": [
+    {
+      "unit": "D04",
+      "relation": "has_unit_design_issue",
+      "decision": "retire_merge_or_redistribute_later",
+      "not_prerequisite_edge": true
+    }
+  ],
+  "approved_diagnostic_edge_types": [
+    "exam_question_has_gap",
+    "exam_question_missing_required_skill_link",
+    "exam_question_missing_exam_code_link",
+    "quality_issue_affects_exam_question",
+    "generated_report_warns_about_entity"
+  ],
+  "approved_term_edge_types": [
+    "term_defined_in_registry",
+    "unit_uses_term",
+    "term_related_to_term",
+    "term_has_formula",
+    "term_has_pitfall"
+  ],
+  "allowed_downstream_uses": [
+    "internal_dashboard",
+    "reference_health_reports",
+    "graph_inspection_tools",
+    "internal_retrieval_development",
+    "retrieval_evaluation",
+    "teacher_facing_internal_research_assistance_when_marked_non_authoritative"
+  ],
+  "blocked_downstream_uses": [
+    "student_diagnostics",
+    "adaptive_routing",
+    "student_facing_ai",
+    "automatic_lesson_sequencing",
+    "automatic_mastery_decisions",
+    "summative_assessment_decisions"
+  ],
+  "conditions_to_reopen_or_pass": [
+    "Unreviewed edges must remain pending_review or diagnostic_only.",
+    "Generated-report edges must not be primary evidence.",
+    "Exam-question gap edges must remain diagnostic_only.",
+    "Retrieval must expose or preserve edge status and source authority.",
+    "D04 must be represented as a unit-design issue, not as a simple prerequisite edge.",
+    "D16 must carry both L10 and D34 prerequisite logic.",
+    "No student-facing diagnostics or adaptive routing may use the graph until a later diagnostic gate passes."
+  ],
+  "protected_reference_data_changed": false
+}

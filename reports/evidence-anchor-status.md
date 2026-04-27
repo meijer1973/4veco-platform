@@ -1,13 +1,13 @@
 # Evidence Anchor Status
 
-Generated: 2026-04-26
+Generated: 2026-04-27
 Status: PASS
 Source: `references/data/evidence-anchors.json`
 
 ## Summary
 
 - Evidence anchors: 15
-- Claims: 13
+- Claims: 14
 - Primary evidence anchors: 12
 - Generated-report anchors: 1
 
@@ -26,7 +26,7 @@ Source: `references/data/evidence-anchors.json`
 - source_policy: 1
 - term_definition: 1
 - unit_design_decision: 1
-- unit_prerequisite: 9
+- unit_prerequisite: 10
 
 ## Errors
 

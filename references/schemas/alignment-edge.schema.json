@@ -11,7 +11,25 @@
     "to": { "type": "string", "pattern": "^[a-z_]+:.+" },
     "relation": {
       "type": "string",
-      "enum": ["prerequisite", "supports", "assesses", "explains", "contradicts", "derived_from"]
+      "enum": [
+        "prerequisite",
+        "supports",
+        "assesses",
+        "explains",
+        "contradicts",
+        "derived_from",
+        "has_unit_design_issue",
+        "exam_question_has_gap",
+        "exam_question_missing_required_skill_link",
+        "exam_question_missing_exam_code_link",
+        "quality_issue_affects_exam_question",
+        "generated_report_warns_about_entity",
+        "term_defined_in_registry",
+        "unit_uses_term",
+        "term_related_to_term",
+        "term_has_formula",
+        "term_has_pitfall"
+      ]
     },
     "evidence_ids": { "type": "array", "items": { "type": "string" } },
     "claim_id": { "type": "string" },
@@ -22,8 +40,19 @@
     "source_layers": { "type": "array", "items": { "type": "string" } },
     "review_status": {
       "type": "string",
-      "enum": ["pending_r5_3_review", "human_approved", "rejected", "diagnostic_only"]
+      "enum": ["approved", "approved_with_conditions", "diagnostic_only", "pending_review", "rejected", "deprecated_design_issue"]
     },
+    "source_rank": {
+      "type": ["string", "null"],
+      "enum": ["external_primary", "machine_registry", "authored_judgement", "generated_report", "diagnostic", null]
+    },
+    "governance_use": {
+      "type": ["string", "null"],
+      "enum": ["ranking_signal_only", "reviewed_graph_knowledge", "quality_control", "design_cleanup", "registry_lookup", "traceability", "diagnostic", null]
+    },
+    "curriculum_authority": { "type": ["boolean", "null"] },
+    "retrieval_authority": { "type": ["boolean", "null"] },
+    "not_curriculum_prerequisite": { "type": ["boolean", "null"] },
     "notes": { "type": ["string", "null"] }
   }
 }

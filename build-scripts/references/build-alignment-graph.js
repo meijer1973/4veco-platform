@@ -2,8 +2,8 @@
 /**
  * build-alignment-graph.js
  *
- * Projects validated R5.1 claims into a draft R5.2 alignment graph.
- * The graph is not authoritative until R5.3 closes.
+ * Projects validated claims into an alignment graph.
+ * Edges default to pending_review until a human gate changes the status.
  */
 
 const fs = require('fs');
@@ -41,7 +41,9 @@ function strengthFor(claim, evidenceById) {
 function addEdge(edges, edge) {
   edges.push({
     ...edge,
-    review_status: edge.review_status || 'pending_r5_3_review',
+    review_status: edge.review_status || 'pending_review',
+    curriculum_authority: edge.curriculum_authority ?? false,
+    retrieval_authority: edge.retrieval_authority ?? false,
   });
 }
 
@@ -50,13 +52,14 @@ function relationForClaim(claim) {
     case 'unit_prerequisite':
       return 'prerequisite';
     case 'term_definition':
-      return 'explains';
+      return 'term_defined_in_registry';
     case 'unit_design_decision':
+      return 'has_unit_design_issue';
     case 'source_policy':
     case 'blueprint_flag_decision':
       return 'supports';
     case 'exam_question_gap':
-      return 'assesses';
+      return 'quality_issue_affects_exam_question';
     default:
       return 'supports';
   }
@@ -74,7 +77,16 @@ function namespacedObject(claim) {
   if (claim.claim_type === 'term_definition') return `registry:${claim.object_id}`;
   if (claim.claim_type === 'exam_question_gap') return `issue:${claim.object_id}`;
   if (claim.claim_type === 'source_policy') return `policy:${claim.object_id}`;
+  if (claim.claim_type === 'unit_design_decision') return `quality_issue:${claim.subject_id}-${claim.object_id}`;
   return `decision:${claim.object_id}`;
+}
+
+function sourceRankFor(sourceLayers) {
+  if (sourceLayers.includes('external_authority')) return 'external_primary';
+  if (sourceLayers.includes('machine_registry')) return 'machine_registry';
+  if (sourceLayers.includes('authored_judgement') || sourceLayers.includes('human_gate_decision')) return 'authored_judgement';
+  if (sourceLayers.includes('generated_report')) return 'generated_report';
+  return 'diagnostic';
 }
 
 function buildGraph(data) {
@@ -97,9 +109,18 @@ function buildGraph(data) {
       claim_id: claim.claim_id,
       strength,
       source_layers: sourceLayers,
+      source_rank: sourceRankFor(sourceLayers),
+      governance_use: claim.claim_type === 'source_policy' ? 'ranking_signal_only'
+        : claim.claim_type === 'exam_question_gap' ? 'quality_control'
+          : claim.claim_type === 'unit_design_decision' ? 'design_cleanup'
+            : claim.claim_type === 'term_definition' ? 'registry_lookup'
+              : 'reviewed_graph_knowledge',
+      curriculum_authority: false,
+      retrieval_authority: false,
+      not_curriculum_prerequisite: claim.claim_type === 'unit_design_decision' || claim.claim_type === 'exam_question_gap',
       notes: claim.review_required_before_use
         ? 'Underlying claim requires review before use.'
-        : 'Projected from validated R5.1 claim; graph still awaits R5.3 review.',
+        : 'Projected from validated claim; graph edge awaits human review unless status is updated by a gate.',
     });
 
     for (const evidenceId of claim.evidence_ids || []) {
@@ -114,9 +135,17 @@ function buildGraph(data) {
           ? 'diagnostic'
           : 'strong',
         source_layers: evidenceById.get(evidenceId) ? [evidenceById.get(evidenceId).source_layer] : [],
+        source_rank: evidenceById.get(evidenceId) && evidenceById.get(evidenceId).source_layer === 'generated_report'
+          ? 'generated_report'
+          : sourceRankFor(evidenceById.get(evidenceId) ? [evidenceById.get(evidenceId).source_layer] : []),
+        governance_use: evidenceById.get(evidenceId) && evidenceById.get(evidenceId).source_layer === 'generated_report'
+          ? 'diagnostic'
+          : 'traceability',
         review_status: evidenceById.get(evidenceId) && evidenceById.get(evidenceId).source_layer === 'generated_report'
           ? 'diagnostic_only'
-          : 'pending_r5_3_review',
+          : 'pending_review',
+        curriculum_authority: false,
+        retrieval_authority: false,
         notes: 'Traceability edge from claim to evidence anchor.',
       });
     }
@@ -126,7 +155,7 @@ function buildGraph(data) {
     schema_version: '0.1',
     sprint_id: 'R5.2',
     generated_on: new Date().toISOString().slice(0, 10),
-    graph_status: 'draft_pending_r5_3_review',
+    graph_status: 'draft_pending_review',
     source: 'references/data/evidence-anchors.json',
     edge_count: edges.length,
     edges,

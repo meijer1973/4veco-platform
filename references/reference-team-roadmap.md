@@ -77,7 +77,6 @@ Open items are listed first; completed items are kept below them.
 
 | Sprint | Name | Completed | Current State |
 |--------|------|-----------|---------------|
-| R5.3 | Alignment Graph Review Gate | no | Planned. Human-reviewed gate before graph powers retrieval or diagnostics. |
 | R6.1 | JSON-First Reports | no | Planned. Markdown reports become projections of JSON. |
 | R6.2 | Reference Health Dashboard Data | no | Planned. Produce one generated reference-health state file for dashboards and planning. |
 | R7.1 | Deterministic Chunk Layer | no | Planned. Build source-ranked retrieval chunks. |
@@ -102,6 +101,7 @@ Open items are listed first; completed items are kept below them.
 | R14.1 | Curriculum Versioning | no | Planned. Track curriculum/source versions and reference migrations. |
 | R14.2 | Evidence Signal Model | no | Planned. Model quality and learning signals without surveillance or unnecessary student data. |
 | R14.3 | Continuous Improvement Reports | no | Planned. Produce evidence-platform reports and require review before external claims. |
+| R5.3 | Alignment Graph Review Gate | yes | Completed with `pass_with_conditions`. Named graph edge groups are approved for internal dashboard/reporting and internal retrieval development/evaluation; student diagnostics, adaptive routing, and student-facing AI remain blocked. |
 | R5.2 | Alignment Graph | yes | Completed. Built the first draft alignment graph from R5.1 evidence anchors: 31 edges, 13 pending main edges, 18 traceability edges, and 0 human-approved edges. |
 | R5.1 | Evidence-Anchor Layer | yes | Completed. Created the first governed evidence-anchor layer: source-ranking policy, 15 anchors, 13 claims, schemas, validator, and status reports. |
 | R4.3 | Blueprint Flag Triage | yes | Completed. Triaged all 84 current raw target-exercise missing-unit flags into a curated backlog: 68 still needed, 4 existing-unit match candidates, 1 duplicate, and 11 deferred. |
@@ -267,6 +267,8 @@ Required work:
 Required output: gate packet, human interview, gate closure JSON, validator.
 
 Stop condition: retrieval and diagnostics cannot depend on the graph until this gate allows it.
+
+Completion: completed on 2026-04-27 with `pass_with_conditions`. The gate approves only named edge groups, not the whole graph as pedagogically authoritative. Internal dashboard/reporting and internal retrieval development/evaluation may proceed if edge status, source authority, evidence anchors, diagnostic flags, and generated-report warnings are preserved. Student diagnostics, adaptive routing, student-facing AI, automatic mastery decisions, and summative assessment decisions remain blocked.
 
 ### R6.1 JSON-First Reports
 
@@ -758,7 +760,7 @@ Sprints:
 
 - `R5.1` completed: evidence-anchor layer.
 - `R5.2` completed: alignment graph.
-- `R5.3` planned: alignment graph review gate.
+- `R5.3` completed: alignment graph review gate.
 
 ### Phase R6: JSON-First Reports And Dashboard Data
 
@@ -924,21 +926,21 @@ Do not invert this order.
 
 Do not proceed directly to retrieval or diagnostics.
 
-Proceed with `R5.3 Alignment Graph Review Gate`.
+Proceed with `R6.1 JSON-First Reports`.
 
-R5.2 completion state:
+R5.3 completion state:
 
-- alignment graph data exists at `references/data/alignment-graph.json`
-- graph integrity report passes at `reports/alignment-graph-integrity.md`
-- 31 edges exist: 13 pending main alignment edges and 18 traceability edges
-- 0 edges are human-approved
-- graph status is `draft_pending_r5_3_review`
+- gate status is `pass_with_conditions`
+- named edge groups are approved; whole-graph authority is false
+- graph integrity report passes with 34 edges
+- internal dashboard/reporting and internal retrieval development/evaluation are allowed with status/source visibility
+- student diagnostics, adaptive routing, and student-facing AI remain blocked
 
-R5.3 must:
+R6.1 must:
 
-- prepare a graph review packet with high-risk samples
-- conduct an interactive human review and record the gate decision
-- keep retrieval, diagnostics, dashboards, and adaptive decisions from treating the graph as authoritative until the gate closes
+- make priority Markdown reports projections of structured JSON
+- preserve readable Markdown output while moving dashboards away from Markdown scraping
+- avoid treating diagnostic/generated report data as primary evidence
 
 ## Final Rule
 

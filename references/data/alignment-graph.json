@@ -1,10 +1,10 @@
 {
   "schema_version": "0.1",
   "sprint_id": "R5.2",
-  "generated_on": "2026-04-26",
-  "graph_status": "draft_pending_r5_3_review",
+  "generated_on": "2026-04-27",
+  "graph_status": "gate_passed_with_conditions",
   "source": "references/data/evidence-anchors.json",
-  "edge_count": 31,
+  "edge_count": 34,
   "edges": [
     {
       "edge_id": "EDGE-SUPPORTS-EVIDENCE-LAYER-SOURCE-RANKING",
@@ -19,8 +19,13 @@
       "source_layers": [
         "governance_data"
       ],
-      "notes": "Projected from validated R5.1 claim; graph still awaits R5.3 review.",
-      "review_status": "pending_r5_3_review"
+      "source_rank": "diagnostic",
+      "governance_use": "ranking_signal_only",
+      "curriculum_authority": false,
+      "retrieval_authority": false,
+      "not_curriculum_prerequisite": false,
+      "notes": "Projected from validated claim; graph edge awaits human review unless status is updated by a gate.",
+      "review_status": "approved_with_conditions"
     },
     {
       "edge_id": "EDGE-DERIVED-FROM-CL-SOURCE-RANK-POLICY-EV-R5.1-SOURCE-RANK-POLICY",
@@ -35,7 +40,11 @@
       "source_layers": [
         "governance_data"
       ],
-      "review_status": "pending_r5_3_review",
+      "source_rank": "diagnostic",
+      "governance_use": "traceability",
+      "review_status": "pending_review",
+      "curriculum_authority": false,
+      "retrieval_authority": false,
       "notes": "Traceability edge from claim to evidence anchor."
     },
     {
@@ -53,8 +62,13 @@
         "authored_judgement",
         "machine_registry"
       ],
-      "notes": "Projected from validated R5.1 claim; graph still awaits R5.3 review.",
-      "review_status": "pending_r5_3_review"
+      "source_rank": "machine_registry",
+      "governance_use": "reviewed_graph_knowledge",
+      "curriculum_authority": true,
+      "retrieval_authority": true,
+      "not_curriculum_prerequisite": false,
+      "notes": "Projected from validated claim; graph edge awaits human review unless status is updated by a gate.",
+      "review_status": "approved"
     },
     {
       "edge_id": "EDGE-DERIVED-FROM-CL-EDGE-A15-A38-EV-A15-A38-TARGET",
@@ -69,7 +83,11 @@
       "source_layers": [
         "authored_judgement"
       ],
-      "review_status": "pending_r5_3_review",
+      "source_rank": "authored_judgement",
+      "governance_use": "traceability",
+      "review_status": "pending_review",
+      "curriculum_authority": false,
+      "retrieval_authority": false,
       "notes": "Traceability edge from claim to evidence anchor."
     },
     {
@@ -85,7 +103,11 @@
       "source_layers": [
         "machine_registry"
       ],
-      "review_status": "pending_r5_3_review",
+      "source_rank": "machine_registry",
+      "governance_use": "traceability",
+      "review_status": "pending_review",
+      "curriculum_authority": false,
+      "retrieval_authority": false,
       "notes": "Traceability edge from claim to evidence anchor."
     },
     {
@@ -103,8 +125,13 @@
         "authored_judgement",
         "human_gate_decision"
       ],
-      "notes": "Projected from validated R5.1 claim; graph still awaits R5.3 review.",
-      "review_status": "pending_r5_3_review"
+      "source_rank": "authored_judgement",
+      "governance_use": "reviewed_graph_knowledge",
+      "curriculum_authority": true,
+      "retrieval_authority": true,
+      "not_curriculum_prerequisite": false,
+      "notes": "Projected from validated claim; graph edge awaits human review unless status is updated by a gate.",
+      "review_status": "approved_with_conditions"
     },
     {
       "edge_id": "EDGE-DERIVED-FROM-CL-EDGE-A16-A15-EV-A16-A17-A15-TARGET",
@@ -119,7 +146,11 @@
       "source_layers": [
         "authored_judgement"
       ],
-      "review_status": "pending_r5_3_review",
+      "source_rank": "authored_judgement",
+      "governance_use": "traceability",
+      "review_status": "pending_review",
+      "curriculum_authority": false,
+      "retrieval_authority": false,
       "notes": "Traceability edge from claim to evidence anchor."
     },
     {
@@ -135,7 +166,11 @@
       "source_layers": [
         "human_gate_decision"
       ],
-      "review_status": "pending_r5_3_review",
+      "source_rank": "authored_judgement",
+      "governance_use": "traceability",
+      "review_status": "pending_review",
+      "curriculum_authority": false,
+      "retrieval_authority": false,
       "notes": "Traceability edge from claim to evidence anchor."
     },
     {
@@ -153,8 +188,13 @@
         "authored_judgement",
         "human_gate_decision"
       ],
-      "notes": "Projected from validated R5.1 claim; graph still awaits R5.3 review.",
-      "review_status": "pending_r5_3_review"
+      "source_rank": "authored_judgement",
+      "governance_use": "reviewed_graph_knowledge",
+      "curriculum_authority": true,
+      "retrieval_authority": true,
+      "not_curriculum_prerequisite": false,
+      "notes": "Projected from validated claim; graph edge awaits human review unless status is updated by a gate.",
+      "review_status": "approved_with_conditions"
     },
     {
       "edge_id": "EDGE-DERIVED-FROM-CL-EDGE-A17-A15-EV-A16-A17-A15-TARGET",
@@ -169,7 +209,11 @@
       "source_layers": [
         "authored_judgement"
       ],
-      "review_status": "pending_r5_3_review",
+      "source_rank": "authored_judgement",
+      "governance_use": "traceability",
+      "review_status": "pending_review",
+      "curriculum_authority": false,
+      "retrieval_authority": false,
       "notes": "Traceability edge from claim to evidence anchor."
     },
     {
@@ -185,7 +229,11 @@
       "source_layers": [
         "human_gate_decision"
       ],
-      "review_status": "pending_r5_3_review",
+      "source_rank": "authored_judgement",
+      "governance_use": "traceability",
+      "review_status": "pending_review",
+      "curriculum_authority": false,
+      "retrieval_authority": false,
       "notes": "Traceability edge from claim to evidence anchor."
     },
     {
@@ -201,8 +249,13 @@
       "source_layers": [
         "external_authority"
       ],
-      "notes": "Projected from validated R5.1 claim; graph still awaits R5.3 review.",
-      "review_status": "pending_r5_3_review"
+      "source_rank": "external_primary",
+      "governance_use": "reviewed_graph_knowledge",
+      "curriculum_authority": true,
+      "retrieval_authority": true,
+      "not_curriculum_prerequisite": false,
+      "notes": "Projected from validated claim; graph edge awaits human review unless status is updated by a gate.",
+      "review_status": "approved"
     },
     {
       "edge_id": "EDGE-DERIVED-FROM-CL-EDGE-D06-A15-EV-D06-A15-EXAM",
@@ -217,14 +270,18 @@
       "source_layers": [
         "external_authority"
       ],
-      "review_status": "pending_r5_3_review",
+      "source_rank": "external_primary",
+      "governance_use": "traceability",
+      "review_status": "pending_review",
+      "curriculum_authority": false,
+      "retrieval_authority": false,
       "notes": "Traceability edge from claim to evidence anchor."
     },
     {
-      "edge_id": "EDGE-SUPPORTS-D04-RETIRE-MERGE-OR-REDISTRIBUTE",
+      "edge_id": "EDGE-HAS-UNIT-DESIGN-ISSUE-D04-RETIRE-MERGE-OR-REDISTRIBUTE",
       "from": "unit:D04",
-      "to": "decision:retire-merge-or-redistribute",
-      "relation": "supports",
+      "to": "quality_issue:D04-retire-merge-or-redistribute",
+      "relation": "has_unit_design_issue",
       "evidence_ids": [
         "EV-D04-DESIGN-TARGET"
       ],
@@ -233,8 +290,13 @@
       "source_layers": [
         "authored_judgement"
       ],
+      "source_rank": "authored_judgement",
+      "governance_use": "design_cleanup",
+      "curriculum_authority": false,
+      "retrieval_authority": false,
+      "not_curriculum_prerequisite": true,
       "notes": "Underlying claim requires review before use.",
-      "review_status": "pending_r5_3_review"
+      "review_status": "approved_with_conditions"
     },
     {
       "edge_id": "EDGE-DERIVED-FROM-CL-D04-DESIGN-EV-D04-DESIGN-TARGET",
@@ -249,7 +311,11 @@
       "source_layers": [
         "authored_judgement"
       ],
-      "review_status": "pending_r5_3_review",
+      "source_rank": "authored_judgement",
+      "governance_use": "traceability",
+      "review_status": "pending_review",
+      "curriculum_authority": false,
+      "retrieval_authority": false,
       "notes": "Traceability edge from claim to evidence anchor."
     },
     {
@@ -265,8 +331,13 @@
       "source_layers": [
         "authored_judgement"
       ],
-      "notes": "Projected from validated R5.1 claim; graph still awaits R5.3 review.",
-      "review_status": "pending_r5_3_review"
+      "source_rank": "authored_judgement",
+      "governance_use": "reviewed_graph_knowledge",
+      "curriculum_authority": true,
+      "retrieval_authority": true,
+      "not_curriculum_prerequisite": false,
+      "notes": "Projected from validated claim; graph edge awaits human review unless status is updated by a gate.",
+      "review_status": "approved"
     },
     {
       "edge_id": "EDGE-DERIVED-FROM-CL-EDGE-L09-L05-EV-L09-L05-TARGET",
@@ -281,7 +352,11 @@
       "source_layers": [
         "authored_judgement"
       ],
-      "review_status": "pending_r5_3_review",
+      "source_rank": "authored_judgement",
+      "governance_use": "traceability",
+      "review_status": "pending_review",
+      "curriculum_authority": false,
+      "retrieval_authority": false,
       "notes": "Traceability edge from claim to evidence anchor."
     },
     {
@@ -299,8 +374,13 @@
         "authored_judgement",
         "external_authority"
       ],
-      "notes": "Projected from validated R5.1 claim; graph still awaits R5.3 review.",
-      "review_status": "pending_r5_3_review"
+      "source_rank": "external_primary",
+      "governance_use": "reviewed_graph_knowledge",
+      "curriculum_authority": true,
+      "retrieval_authority": true,
+      "not_curriculum_prerequisite": false,
+      "notes": "Projected from validated claim; graph edge awaits human review unless status is updated by a gate.",
+      "review_status": "approved"
     },
     {
       "edge_id": "EDGE-DERIVED-FROM-CL-EDGE-D16-L10-EV-D16-L10-TARGET",
@@ -315,7 +395,11 @@
       "source_layers": [
         "authored_judgement"
       ],
-      "review_status": "pending_r5_3_review",
+      "source_rank": "authored_judgement",
+      "governance_use": "traceability",
+      "review_status": "pending_review",
+      "curriculum_authority": false,
+      "retrieval_authority": false,
       "notes": "Traceability edge from claim to evidence anchor."
     },
     {
@@ -331,7 +415,74 @@
       "source_layers": [
         "external_authority"
       ],
-      "review_status": "pending_r5_3_review",
+      "source_rank": "external_primary",
+      "governance_use": "traceability",
+      "review_status": "pending_review",
+      "curriculum_authority": false,
+      "retrieval_authority": false,
+      "notes": "Traceability edge from claim to evidence anchor."
+    },
+    {
+      "edge_id": "EDGE-PREREQUISITE-D16-D34",
+      "from": "unit:D16",
+      "to": "unit:D34",
+      "relation": "prerequisite",
+      "evidence_ids": [
+        "EV-D16-L10-TARGET",
+        "EV-D16-EXAM"
+      ],
+      "claim_id": "CL-EDGE-D16-D34",
+      "strength": "strong",
+      "source_layers": [
+        "authored_judgement",
+        "external_authority"
+      ],
+      "source_rank": "external_primary",
+      "governance_use": "reviewed_graph_knowledge",
+      "curriculum_authority": true,
+      "retrieval_authority": true,
+      "not_curriculum_prerequisite": false,
+      "notes": "Projected from validated claim; graph edge awaits human review unless status is updated by a gate.",
+      "review_status": "approved"
+    },
+    {
+      "edge_id": "EDGE-DERIVED-FROM-CL-EDGE-D16-D34-EV-D16-L10-TARGET",
+      "from": "claim:CL-EDGE-D16-D34",
+      "to": "evidence:EV-D16-L10-TARGET",
+      "relation": "derived_from",
+      "evidence_ids": [
+        "EV-D16-L10-TARGET"
+      ],
+      "claim_id": "CL-EDGE-D16-D34",
+      "strength": "strong",
+      "source_layers": [
+        "authored_judgement"
+      ],
+      "source_rank": "authored_judgement",
+      "governance_use": "traceability",
+      "review_status": "pending_review",
+      "curriculum_authority": false,
+      "retrieval_authority": false,
+      "notes": "Traceability edge from claim to evidence anchor."
+    },
+    {
+      "edge_id": "EDGE-DERIVED-FROM-CL-EDGE-D16-D34-EV-D16-EXAM",
+      "from": "claim:CL-EDGE-D16-D34",
+      "to": "evidence:EV-D16-EXAM",
+      "relation": "derived_from",
+      "evidence_ids": [
+        "EV-D16-EXAM"
+      ],
+      "claim_id": "CL-EDGE-D16-D34",
+      "strength": "strong",
+      "source_layers": [
+        "external_authority"
+      ],
+      "source_rank": "external_primary",
+      "governance_use": "traceability",
+      "review_status": "pending_review",
+      "curriculum_authority": false,
+      "retrieval_authority": false,
       "notes": "Traceability edge from claim to evidence anchor."
     },
     {
@@ -347,8 +498,13 @@
       "source_layers": [
         "authored_judgement"
       ],
-      "notes": "Projected from validated R5.1 claim; graph still awaits R5.3 review.",
-      "review_status": "pending_r5_3_review"
+      "source_rank": "authored_judgement",
+      "governance_use": "reviewed_graph_knowledge",
+      "curriculum_authority": true,
+      "retrieval_authority": true,
+      "not_curriculum_prerequisite": false,
+      "notes": "Projected from validated claim; graph edge awaits human review unless status is updated by a gate.",
+      "review_status": "approved_with_conditions"
     },
     {
       "edge_id": "EDGE-DERIVED-FROM-CL-EDGE-I04-L19-EV-I04-I10-L19-TARGET",
@@ -363,7 +519,11 @@
       "source_layers": [
         "authored_judgement"
       ],
-      "review_status": "pending_r5_3_review",
+      "source_rank": "authored_judgement",
+      "governance_use": "traceability",
+      "review_status": "pending_review",
+      "curriculum_authority": false,
+      "retrieval_authority": false,
       "notes": "Traceability edge from claim to evidence anchor."
     },
     {
@@ -379,8 +539,13 @@
       "source_layers": [
         "authored_judgement"
       ],
-      "notes": "Projected from validated R5.1 claim; graph still awaits R5.3 review.",
-      "review_status": "pending_r5_3_review"
+      "source_rank": "authored_judgement",
+      "governance_use": "reviewed_graph_knowledge",
+      "curriculum_authority": true,
+      "retrieval_authority": true,
+      "not_curriculum_prerequisite": false,
+      "notes": "Projected from validated claim; graph edge awaits human review unless status is updated by a gate.",
+      "review_status": "approved"
     },
     {
       "edge_id": "EDGE-DERIVED-FROM-CL-EDGE-I10-L19-EV-I04-I10-L19-TARGET",
@@ -395,7 +560,11 @@
       "source_layers": [
         "authored_judgement"
       ],
-      "review_status": "pending_r5_3_review",
+      "source_rank": "authored_judgement",
+      "governance_use": "traceability",
+      "review_status": "pending_review",
+      "curriculum_authority": false,
+      "retrieval_authority": false,
       "notes": "Traceability edge from claim to evidence anchor."
     },
     {
@@ -413,8 +582,13 @@
         "external_authority",
         "machine_registry"
       ],
-      "notes": "Projected from validated R5.1 claim; graph still awaits R5.3 review.",
-      "review_status": "pending_r5_3_review"
+      "source_rank": "external_primary",
+      "governance_use": "reviewed_graph_knowledge",
+      "curriculum_authority": true,
+      "retrieval_authority": true,
+      "not_curriculum_prerequisite": false,
+      "notes": "Projected from validated claim; graph edge awaits human review unless status is updated by a gate.",
+      "review_status": "approved"
     },
     {
       "edge_id": "EDGE-DERIVED-FROM-CL-EDGE-H14-I14-EV-H14-I14-MACHINE",
@@ -429,7 +603,11 @@
       "source_layers": [
         "machine_registry"
       ],
-      "review_status": "pending_r5_3_review",
+      "source_rank": "machine_registry",
+      "governance_use": "traceability",
+      "review_status": "pending_review",
+      "curriculum_authority": false,
+      "retrieval_authority": false,
       "notes": "Traceability edge from claim to evidence anchor."
     },
     {
@@ -445,14 +623,18 @@
       "source_layers": [
         "external_authority"
       ],
-      "review_status": "pending_r5_3_review",
+      "source_rank": "external_primary",
+      "governance_use": "traceability",
+      "review_status": "pending_review",
+      "curriculum_authority": false,
+      "retrieval_authority": false,
       "notes": "Traceability edge from claim to evidence anchor."
     },
     {
-      "edge_id": "EDGE-ASSESSES-REFERENCES-EXTERNAL-EXAM-QUESTIONS.JSON-REQUIRED-SKILL-AND-EXAM-CODE-GAP-QUEUE",
+      "edge_id": "EDGE-QUALITY-ISSUE-AFFECTS-EXAM-QUESTION-REFERENCES-EXTERNAL-EXAM-QUESTIONS.JSON-REQUIRED-SKILL-AND-EXAM-CODE-GAP-QUEUE",
       "from": "source:references/external/exam-questions.json",
       "to": "issue:required-skill-and-exam-code-gap-queue",
-      "relation": "assesses",
+      "relation": "quality_issue_affects_exam_question",
       "evidence_ids": [
         "EV-R4.2-EXAM-GAP-QUEUE"
       ],
@@ -461,8 +643,13 @@
       "source_layers": [
         "generated_report"
       ],
+      "source_rank": "generated_report",
+      "governance_use": "quality_control",
+      "curriculum_authority": false,
+      "retrieval_authority": false,
+      "not_curriculum_prerequisite": true,
       "notes": "Underlying claim requires review before use.",
-      "review_status": "pending_r5_3_review"
+      "review_status": "diagnostic_only"
     },
     {
       "edge_id": "EDGE-DERIVED-FROM-CL-EXAM-GAP-R4.2-EV-R4.2-EXAM-GAP-QUEUE",
@@ -477,14 +664,18 @@
       "source_layers": [
         "generated_report"
       ],
+      "source_rank": "generated_report",
+      "governance_use": "diagnostic",
       "review_status": "diagnostic_only",
+      "curriculum_authority": false,
+      "retrieval_authority": false,
       "notes": "Traceability edge from claim to evidence anchor."
     },
     {
-      "edge_id": "EDGE-EXPLAINS-PRIJSELASTICITEIT-VAN-DE-VRAAG-BEGRIPPEN",
+      "edge_id": "EDGE-TERM-DEFINED-IN-REGISTRY-PRIJSELASTICITEIT-VAN-DE-VRAAG-BEGRIPPEN",
       "from": "term:prijselasticiteit-van-de-vraag",
       "to": "registry:begrippen",
-      "relation": "explains",
+      "relation": "term_defined_in_registry",
       "evidence_ids": [
         "EV-TERM-PRICE-ELASTICITY-MACHINE"
       ],
@@ -493,8 +684,13 @@
       "source_layers": [
         "machine_registry"
       ],
-      "notes": "Projected from validated R5.1 claim; graph still awaits R5.3 review.",
-      "review_status": "pending_r5_3_review"
+      "source_rank": "machine_registry",
+      "governance_use": "registry_lookup",
+      "curriculum_authority": false,
+      "retrieval_authority": true,
+      "not_curriculum_prerequisite": false,
+      "notes": "Projected from validated claim; graph edge awaits human review unless status is updated by a gate.",
+      "review_status": "approved"
     },
     {
       "edge_id": "EDGE-DERIVED-FROM-CL-TERM-PRICE-ELASTICITY-EV-TERM-PRICE-ELASTICITY-MACHINE",
@@ -509,8 +705,31 @@
       "source_layers": [
         "machine_registry"
       ],
-      "review_status": "pending_r5_3_review",
+      "source_rank": "machine_registry",
+      "governance_use": "traceability",
+      "review_status": "pending_review",
+      "curriculum_authority": false,
+      "retrieval_authority": false,
       "notes": "Traceability edge from claim to evidence anchor."
     }
+  ],
+  "gate_id": "GATE-R5.3-alignment-graph",
+  "graph_approval_scope": "named_edge_groups_only",
+  "whole_graph_authority": false,
+  "allowed_downstream_uses": [
+    "internal_dashboard",
+    "reference_health_reports",
+    "graph_inspection_tools",
+    "internal_retrieval_development",
+    "retrieval_evaluation",
+    "teacher_facing_internal_research_assistance_when_marked_non_authoritative"
+  ],
+  "blocked_downstream_uses": [
+    "student_diagnostics",
+    "adaptive_routing",
+    "student_facing_ai",
+    "automatic_lesson_sequencing",
+    "automatic_mastery_decisions",
+    "summative_assessment_decisions"
   ]
 }

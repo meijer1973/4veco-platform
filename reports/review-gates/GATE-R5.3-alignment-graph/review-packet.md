@@ -10,7 +10,7 @@ Review the R5.2 draft alignment graph before it powers retrieval, diagnostics, d
 
 The graph is mechanically valid, but not yet pedagogically authoritative.
 
-## Current Graph State
+## Initial Graph State At Review Prep
 
 - Source graph: `references/data/alignment-graph.json`
 - Evidence source: `references/data/evidence-anchors.json`
@@ -20,6 +20,14 @@ The graph is mechanically valid, but not yet pedagogically authoritative.
 - Traceability `derived_from` edges: 18
 - Human-approved edges: 0
 - Graph status: `draft_pending_r5_3_review`
+
+## Post-Decision Graph Repair
+
+The human decision record required a schema/status repair before closure:
+
+- `D16 -> D34` was added as a reviewed graph edge, because `D16 -> L10` was explicitly judged incomplete without binding minimum-price logic.
+- Review statuses were changed to the gate-approved vocabulary: `approved`, `approved_with_conditions`, `diagnostic_only`, `pending_review`, `rejected`, and `deprecated_design_issue`.
+- The graph now has 34 edges and is closed as `gate_passed_with_conditions`.
 
 ## Review Standard
 

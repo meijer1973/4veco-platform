@@ -3,7 +3,8 @@
  * check-alignment-graph.js
  *
  * Validates the R5.2 alignment graph projection and writes integrity reports.
- * The graph remains draft-only until the R5.3 human review gate closes.
+ * The graph may be draft, held, or approved with conditions depending on
+ * the latest human gate closure.
  */
 
 const fs = require('fs');
@@ -15,9 +16,30 @@ const EVIDENCE_FILE = path.join(REPO_ROOT, 'references/data/evidence-anchors.jso
 const REPORT_MD = path.join(REPO_ROOT, 'reports/alignment-graph-integrity.md');
 const REPORT_JSON = path.join(REPO_ROOT, 'reports/json/alignment-graph-integrity.json');
 
-const RELATIONS = new Set(['prerequisite', 'supports', 'assesses', 'explains', 'contradicts', 'derived_from']);
+const RELATIONS = new Set([
+  'prerequisite',
+  'supports',
+  'assesses',
+  'explains',
+  'contradicts',
+  'derived_from',
+  'has_unit_design_issue',
+  'exam_question_has_gap',
+  'exam_question_missing_required_skill_link',
+  'exam_question_missing_exam_code_link',
+  'quality_issue_affects_exam_question',
+  'generated_report_warns_about_entity',
+  'term_defined_in_registry',
+  'unit_uses_term',
+  'term_related_to_term',
+  'term_has_formula',
+  'term_has_pitfall',
+]);
 const STRENGTHS = new Set(['strong', 'medium', 'weak', 'diagnostic']);
-const REVIEW_STATUSES = new Set(['pending_r5_3_review', 'human_approved', 'rejected', 'diagnostic_only']);
+const REVIEW_STATUSES = new Set(['approved', 'approved_with_conditions', 'diagnostic_only', 'pending_review', 'rejected', 'deprecated_design_issue']);
+const GRAPH_STATUSES = new Set(['draft_pending_review', 'draft_pending_r5_3_review', 'gate_passed_with_conditions', 'gate_passed', 'held', 'failed']);
+const SOURCE_RANKS = new Set(['external_primary', 'machine_registry', 'authored_judgement', 'generated_report', 'diagnostic']);
+const GOVERNANCE_USES = new Set(['ranking_signal_only', 'reviewed_graph_knowledge', 'quality_control', 'design_cleanup', 'registry_lookup', 'traceability', 'diagnostic']);
 
 function rel(file) {
   return path.relative(REPO_ROOT, file).replace(/\\/g, '/');
@@ -47,9 +69,7 @@ function validate(graph, evidenceData) {
 
   if (graph.schema_version !== '0.1') errors.push('schema_version must be 0.1');
   if (graph.sprint_id !== 'R5.2') errors.push('sprint_id must be R5.2');
-  if (graph.graph_status !== 'draft_pending_r5_3_review') {
-    errors.push('graph_status must be draft_pending_r5_3_review');
-  }
+  if (!GRAPH_STATUSES.has(graph.graph_status)) errors.push(`invalid graph_status: ${graph.graph_status}`);
   if (graph.source !== 'references/data/evidence-anchors.json') {
     errors.push('source must be references/data/evidence-anchors.json');
   }
@@ -59,9 +79,11 @@ function validate(graph, evidenceData) {
   }
 
   const edgeIds = new Set();
-  let humanApprovedCount = 0;
+  let approvedCount = 0;
+  let approvedWithConditionsCount = 0;
   let generatedReportEdgeCount = 0;
   let pendingMainEdgeCount = 0;
+  let diagnosticOnlyCount = 0;
 
   for (const edge of graph.edges || []) {
     if (!/^EDGE-[A-Z0-9.-]+$/.test(edge.edge_id || '')) errors.push(`invalid edge_id: ${edge.edge_id}`);
@@ -73,7 +95,19 @@ function validate(graph, evidenceData) {
     if (!RELATIONS.has(edge.relation)) errors.push(`${edge.edge_id}: invalid relation ${edge.relation}`);
     if (!STRENGTHS.has(edge.strength)) errors.push(`${edge.edge_id}: invalid strength ${edge.strength}`);
     if (!REVIEW_STATUSES.has(edge.review_status)) errors.push(`${edge.edge_id}: invalid review_status ${edge.review_status}`);
-    if (edge.review_status === 'human_approved') humanApprovedCount++;
+    if (edge.review_status === 'approved') approvedCount++;
+    if (edge.review_status === 'approved_with_conditions') approvedWithConditionsCount++;
+    if (edge.review_status === 'diagnostic_only') diagnosticOnlyCount++;
+    if (edge.source_rank != null && !SOURCE_RANKS.has(edge.source_rank)) errors.push(`${edge.edge_id}: invalid source_rank ${edge.source_rank}`);
+    if (edge.governance_use != null && !GOVERNANCE_USES.has(edge.governance_use)) {
+      errors.push(`${edge.edge_id}: invalid governance_use ${edge.governance_use}`);
+    }
+    if (edge.curriculum_authority != null && typeof edge.curriculum_authority !== 'boolean') {
+      errors.push(`${edge.edge_id}: curriculum_authority must be boolean when present`);
+    }
+    if (edge.retrieval_authority != null && typeof edge.retrieval_authority !== 'boolean') {
+      errors.push(`${edge.edge_id}: retrieval_authority must be boolean when present`);
+    }
     if (!Array.isArray(edge.evidence_ids) || edge.evidence_ids.length === 0) {
       errors.push(`${edge.edge_id}: evidence_ids must be non-empty`);
     }
@@ -89,17 +123,24 @@ function validate(graph, evidenceData) {
 
     const edgeSources = (edge.evidence_ids || []).map((id) => evidenceById.get(id)).filter(Boolean);
     if (edgeSources.some((anchor) => anchor.source_layer === 'generated_report')) generatedReportEdgeCount++;
-    if (edge.review_status === 'diagnostic_only' && !edgeSources.some((anchor) => anchor.source_layer === 'generated_report')) {
-      errors.push(`${edge.edge_id}: diagnostic_only status is reserved for generated-report traceability`);
+    if (edge.review_status === 'diagnostic_only' && edge.curriculum_authority === true) {
+      errors.push(`${edge.edge_id}: diagnostic_only edges cannot have curriculum_authority=true`);
     }
-    if (edge.review_status === 'pending_r5_3_review' && edge.relation !== 'derived_from') pendingMainEdgeCount++;
-    if (edge.relation !== 'derived_from' && edge.review_status !== 'pending_r5_3_review') {
-      errors.push(`${edge.edge_id}: non-traceability edges must remain pending R5.3 review`);
+    if (edge.review_status === 'pending_review' && edge.relation !== 'derived_from') pendingMainEdgeCount++;
+    if (edge.relation === 'derived_from' && edge.review_status === 'approved') {
+      errors.push(`${edge.edge_id}: traceability edges must not be approved as pedagogical knowledge`);
+    }
+    if (edge.source_rank === 'generated_report' && edge.curriculum_authority === true) {
+      errors.push(`${edge.edge_id}: generated-report edges cannot have curriculum_authority=true`);
+    }
+    if (edge.source_rank === 'generated_report' && !['diagnostic', 'quality_control'].includes(edge.governance_use)) {
+      errors.push(`${edge.edge_id}: generated-report edges must use diagnostic or quality_control governance`);
     }
   }
 
-  if (humanApprovedCount > 0) errors.push('R5.2 graph must not contain human_approved edges');
-  if (pendingMainEdgeCount === 0) errors.push('graph must contain pending main alignment edges');
+  if (graph.graph_status === 'gate_passed_with_conditions' && approvedCount + approvedWithConditionsCount === 0) {
+    errors.push('gate_passed_with_conditions graph must contain approved or approved_with_conditions edges');
+  }
 
   return {
     errors,
@@ -107,7 +148,9 @@ function validate(graph, evidenceData) {
       edge_count: (graph.edges || []).length,
       claim_count: claimsById.size,
       evidence_anchor_count: evidenceById.size,
-      human_approved_edge_count: humanApprovedCount,
+      approved_edge_count: approvedCount,
+      approved_with_conditions_edge_count: approvedWithConditionsCount,
+      diagnostic_only_edge_count: diagnosticOnlyCount,
       generated_report_edge_count: generatedReportEdgeCount,
       pending_main_edge_count: pendingMainEdgeCount,
       by_relation: countBy(graph.edges || [], (edge) => edge.relation),
@@ -147,7 +190,9 @@ function writeReports(result) {
   lines.push(`- Claims: ${result.summary.claim_count}`);
   lines.push(`- Evidence anchors: ${result.summary.evidence_anchor_count}`);
   lines.push(`- Pending main alignment edges: ${result.summary.pending_main_edge_count}`);
-  lines.push(`- Human-approved edges: ${result.summary.human_approved_edge_count}`);
+  lines.push(`- Approved edges: ${result.summary.approved_edge_count}`);
+  lines.push(`- Approved-with-conditions edges: ${result.summary.approved_with_conditions_edge_count}`);
+  lines.push(`- Diagnostic-only edges: ${result.summary.diagnostic_only_edge_count}`);
   lines.push('');
   lines.push('## By Relation');
   lines.push('');
