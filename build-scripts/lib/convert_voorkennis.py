@@ -632,7 +632,7 @@ def generate_html(data, para_number, para_name, asset_prefix="../_assets", share
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-{test_meta}<script>(function(){{try{{var m=localStorage.getItem('quizMode')||'light';document.documentElement.setAttribute('data-theme',m);}}catch(e){{}}}})();</script>
+{test_meta}<script>(function(){{try{{var m=localStorage.getItem('quizMode')||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',m);}}catch(e){{}}}})();</script>
 <title>{para_number} {esc(para_name)} \u2013 Uitleg voorkennis{title_suffix}</title>
 <link rel="stylesheet" href="{shared_prefix}/voorkennis.css">
 </head>
@@ -655,6 +655,7 @@ def generate_html(data, para_number, para_name, asset_prefix="../_assets", share
   <div class="content">
     <header class="hero">
       <div class="hero-inner">
+        <a class="back-link" href="../index.html"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg> Terug naar overzicht</a>
         <span class="hero-badge">{para_number} &middot; Voorkennis{badge_suffix}</span>
         <h1>{esc(para_name)} &mdash; Voorkennis</h1>
         <p class="hero-sub">{esc(data['subtitle'])}</p>

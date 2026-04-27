@@ -416,7 +416,7 @@ def generate_html(opgaven, samenvatting, para_number, para_name, asset_prefix=".
         sidebar_items += f'''    <div class="nav-opgave{expanded}">
       <div class="nav-opgave-title" data-toggle="opgave" data-scroll="opgave-{opg['nr']}">
         <span class="nav-dot"></span>
-        <span class="nav-opgave-label">{opg['nr']} &middot; {esc(opg['title'][:30])}</span>
+        <span class="nav-opgave-label" title="{esc(opg['title'])}">{opg['nr']} &middot; {esc(opg['title'])}</span>
         <svg class="nav-arrow" viewBox="0 0 14 14"><polyline points="3 5 7 9 11 5"/></svg>
       </div>
       <div class="nav-questions">
@@ -430,7 +430,7 @@ def generate_html(opgaven, samenvatting, para_number, para_name, asset_prefix=".
         nq = len(opg['questions'])
         hero_cards += f'''          <div class="hero-card" data-target="opgave-{opg['nr']}">
             <div class="hero-card-num">Opgave {opg['nr']}</div>
-            <div class="hero-card-title">{esc(opg['title'][:35])}</div>
+            <div class="hero-card-title">{esc(opg['title'])}</div>
             <div class="hero-card-count">{nq} deelvra{"ag" if nq == 1 else "gen"}</div>
           </div>
 '''
@@ -555,7 +555,7 @@ def generate_html(opgaven, samenvatting, para_number, para_name, asset_prefix=".
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script>(function(){{try{{var m=localStorage.getItem('quizMode')||'light';document.documentElement.setAttribute('data-theme',m);}}catch(e){{}}}})();</script>
+<script>(function(){{try{{var m=localStorage.getItem('quizMode')||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',m);}}catch(e){{}}}})();</script>
 <title>{para_number} {esc(para_name)} \u2013 Begeleide inoefening</title>
 <link rel="stylesheet" href="{shared_prefix}/voorkennis.css">
 </head>

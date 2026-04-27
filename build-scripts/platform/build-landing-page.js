@@ -231,76 +231,39 @@ function renderNav(resolvedMap, pageType, currentId) {
 // SHARED CSS
 // ═══════════════════════════════════════════════════════════════════════════
 
-function sharedCSS(dc) {
+function sharedCSS() {
+  // Book/chapter-page-specific overrides on top of voorkennis.css.
+  // The shared editorial stylesheet owns body, hero, sidebar baseline,
+  // .content, main, .section, responsive sidebar collapse, and theme tokens.
+  // This block only adds selectors voorkennis.css doesn't define:
+  // landing-sidebar nav (book + chapter), .chapter-card, .para-card, footer,
+  // and the docx/pptx in-browser viewer panel.
   return `
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  body {
-    font-family: Arial, sans-serif;
-    background: #F7F8FA;
-    color: #2D3748;
-    line-height: 1.5;
-    min-height: 100vh;
-  }
-  a { color: inherit; text-decoration: none; }
-
-  :root {
-    --navy: #1E2761;
-    --domain: ${dc.main};
-    --domain-lt: ${dc.light};
-    --domain-dk: ${dc.dark};
-    --dark: #2D3748;
-    --gray: #718096;
-    --light-gray: #F7F8FA;
-    --border-gray: #CBD5E0;
-    --cream: #F9F6F1;
-    --white: #FFFFFF;
-    --amber: #E67E22;
-    --step-bg: #FFF8E1;
-    --step-border: #F9A825;
-    --sidebar-w: 260px;
-  }
-
-  /* ── Layout ── */
-  .page-layout { display: flex; min-height: 100vh; }
-
-  /* ── Sidebar ── */
-  .sidebar {
-    width: var(--sidebar-w); flex-shrink: 0;
-    background: var(--white); border-right: 1px solid var(--border-gray);
-    position: sticky; top: 0; height: 100vh; overflow-y: auto;
-    padding: 1.2rem 0; z-index: 10;
-  }
-  .sidebar-toggle {
-    display: none; position: fixed; top: 0.75rem; left: 0.75rem; z-index: 20;
-    width: 36px; height: 36px; border-radius: 6px; border: 1px solid var(--border-gray);
-    background: var(--white); cursor: pointer;
-    align-items: center; justify-content: center;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
-  }
-  .sidebar-toggle svg { width: 20px; height: 20px; stroke: var(--dark); stroke-width: 2; fill: none; }
-
+  /* Sidebar — book page top-level + chapter expandable list */
   .nav-module {
-    display: block; padding: 0.5rem 1rem 0.7rem; font-size: 0.8rem; font-weight: bold;
-    color: var(--navy); border-bottom: 1px solid var(--border-gray); margin-bottom: 0.5rem;
+    display: block; padding: 0.5rem 1rem 0.7rem; font-size: 0.78rem; font-weight: 700;
+    color: var(--ink); border-bottom: 1px solid var(--border); margin-bottom: 0.5rem;
+    text-decoration: none;
   }
-  .nav-module:hover { color: var(--domain); }
-  .nav-module.active { color: var(--navy); background: var(--light-gray); }
+  .nav-module:hover { color: var(--accent); }
+  .nav-module.active { color: var(--ink); background: var(--bg-lift); }
 
   .nav-chapter { margin-bottom: 0.15rem; }
   .nav-ch-title {
     display: flex; align-items: center; gap: 0.45rem;
-    padding: 0.4rem 1rem; font-size: 0.78rem; font-weight: bold; color: var(--dark);
+    padding: 0.4rem 1rem; font-size: 0.78rem; font-weight: 700; color: var(--ink);
     cursor: pointer; border-left: 3px solid transparent;
+    text-decoration: none;
   }
-  .nav-ch-title:hover { background: #F7FAFC; }
-  .nav-ch-title.active { border-left-color: var(--ch-color); background: var(--light-gray); }
+  .nav-ch-title:hover { background: var(--bg-lift); }
+  .nav-ch-title.active { border-left-color: var(--ch-color); background: var(--bg-lift); }
   .nav-dot {
     width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0;
     background: var(--ch-color);
   }
   .nav-ch-label { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   .nav-arrow {
-    width: 14px; height: 14px; flex-shrink: 0; stroke: var(--gray); fill: none;
+    width: 14px; height: 14px; flex-shrink: 0; stroke: var(--ink-soft); fill: none;
     stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
     transition: transform 0.2s;
   }
@@ -308,150 +271,74 @@ function sharedCSS(dc) {
 
   .nav-items { display: none; padding: 0.1rem 0 0.3rem; }
   .nav-chapter.expanded .nav-items { display: block; }
-  .nav-item {
+  /* Scope landing-sidebar .nav-item override so editorial .nav-item
+     rules in voorkennis.css don't apply to book/chapter sidebar links. */
+  .landing-sidebar .nav-item {
     display: block; padding: 0.3rem 1rem 0.3rem 2.2rem;
-    font-size: 0.72rem; color: var(--gray); border-left: 3px solid transparent;
+    font-size: 0.72rem; color: var(--ink-soft); border-left: 3px solid transparent;
     overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+    text-decoration: none;
+    background: transparent;
   }
-  .nav-item:hover { color: var(--dark); background: #F7FAFC; }
-  .nav-item.active { color: var(--dark); font-weight: bold; border-left-color: var(--ch-color); background: var(--light-gray); }
-
-  /* ── Content area ── */
-  .content { flex: 1; min-width: 0; }
-
-  /* ── Hero ── */
-  .hero {
-    background: var(--navy); color: var(--white);
-    padding: 2.5rem 2rem 2rem; position: relative;
-  }
-  .hero::before {
-    content: ""; position: absolute; top: 0; left: 0; right: 0;
-    height: 5px; background: var(--domain);
-  }
-  .hero-inner { max-width: 860px; margin: 0 auto; }
-  .back-link {
-    display: inline-flex; align-items: center; gap: 0.35rem;
-    font-size: 0.82rem; color: rgba(255,255,255,0.7);
-    margin-bottom: 0.6rem; transition: color 0.15s;
-  }
-  .back-link:hover { color: #fff; }
-  .back-link svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 2; }
-  .hero-badge {
-    display: inline-block; background: rgba(255,255,255,0.12);
-    border: 1px solid rgba(255,255,255,0.2); padding: 0.25rem 0.85rem;
-    border-radius: 4px; font-size: 0.85rem; color: rgba(255,255,255,0.85);
-  }
-  .hero h1 { font-size: 2.1rem; font-weight: bold; margin: 0.6rem 0 0.35rem; }
-  .hero-sub { font-size: 0.95rem; color: var(--gray); }
-
-  main { max-width: 860px; margin: 0 auto; padding: 1.5rem 2rem 3rem; }
-
-  /* ── Sections ── */
-  .section { margin-bottom: 2.2rem; }
-  .section-header { display: flex; align-items: center; gap: 0.65rem; margin-bottom: 0.9rem; }
-  .step-number {
-    display: inline-flex; align-items: center; justify-content: center;
-    width: 30px; height: 30px; border-radius: 50%;
-    background: var(--domain); color: var(--white);
-    font-size: 0.85rem; font-weight: bold; flex-shrink: 0;
-  }
-  .section-header h2 { font-size: 1.2rem; color: var(--domain-dk); }
-  .section-hint {
-    font-size: 0.85rem; color: var(--gray);
-    margin: -0.5rem 0 0.9rem 2.9rem; font-style: italic;
+  .landing-sidebar .nav-item:hover { color: var(--ink); background: var(--bg-lift); }
+  .landing-sidebar .nav-item.active {
+    color: var(--ink); font-weight: 700;
+    border-left-color: var(--ch-color); background: var(--bg-lift);
   }
 
-  /* ── Cards ── */
-  .card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 0.85rem;
-  }
-  .card {
-    background: var(--white); border-radius: 8px;
-    border-left: 4px solid var(--domain);
-    box-shadow: 0 1px 4px rgba(0,0,0,0.07);
-    padding: 1rem 1.15rem;
-    display: flex; gap: 0.85rem; align-items: flex-start;
-    transition: transform 0.15s ease, box-shadow 0.15s ease; cursor: pointer;
-  }
-  .card:hover { transform: translateY(-2px); box-shadow: 0 4px 14px rgba(0,0,0,0.1); }
-  .card-icon {
-    flex-shrink: 0; width: 36px; height: 36px; border-radius: 8px;
-    background: var(--domain-lt);
-    display: flex; align-items: center; justify-content: center; color: var(--domain);
-  }
-  .card-icon svg {
-    width: 20px; height: 20px; fill: none; stroke: currentColor;
-    stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
-  }
-  .card-body h3 { font-size: 0.95rem; font-weight: bold; color: var(--dark); margin-bottom: 0.15rem; }
-  .card-body p { font-size: 0.8rem; color: var(--gray); line-height: 1.4; }
-  .card-body .file-type {
-    display: inline-block; font-size: 0.65rem; text-transform: uppercase;
-    letter-spacing: 0.04em; color: var(--gray);
-    background: var(--light-gray); border: 1px solid var(--border-gray);
-    padding: 0.1rem 0.4rem; border-radius: 3px; margin-top: 0.35rem;
-  }
-  .card-exercise { grid-column: 1 / -1; border-left-color: var(--step-border); }
-  .card-exercise .card-icon { background: var(--step-bg); color: var(--amber); }
-  .card-exercise-normal { border-left-color: var(--domain); }
-  .card-exercise-normal .card-icon { background: var(--domain-lt); color: var(--domain); }
-  .sub-links { display: flex; gap: 0.5rem; margin-top: 0.55rem; flex-wrap: wrap; }
-  .sub-link {
-    display: inline-block; font-size: 0.75rem;
-    padding: 0.3rem 0.7rem; border: 1px solid var(--border-gray);
-    border-radius: 5px; color: var(--domain); background: var(--white);
-    transition: background 0.12s, border-color 0.12s; cursor: pointer;
-  }
-  .sub-link:hover { background: var(--domain-lt); border-color: var(--domain); }
-  .card-guide { border-left-color: var(--border-gray); background: var(--cream); }
-  .card-guide .card-icon { background: rgba(0,0,0,0.04); color: var(--gray); }
-
-  /* ── Chapter card (book page) ── */
+  /* Chapter card (book page) */
   .chapter-card {
-    display: block; background: var(--white); border-radius: 10px;
-    border-left: 5px solid var(--ch-color, var(--domain));
-    box-shadow: 0 1px 6px rgba(0,0,0,0.07); padding: 1.5rem 1.8rem;
+    display: block; background: var(--bg-card); border-radius: 10px;
+    border-left: 5px solid var(--ch-color, var(--accent));
+    box-shadow: var(--shadow-card); padding: 1.5rem 1.8rem;
     margin-bottom: 1.2rem;
     transition: transform 0.15s ease, box-shadow 0.15s ease;
+    text-decoration: none; color: inherit;
   }
-  .chapter-card:hover { transform: translateY(-2px); box-shadow: 0 4px 14px rgba(0,0,0,0.1); }
-  .chapter-card h3 { font-size: 1.15rem; font-weight: bold; color: var(--dark); margin-bottom: 0.75rem; }
-  .chapter-card h3 .ch-num { color: var(--ch-color, var(--domain)); margin-right: 0.3rem; }
-  .chapter-card-count { font-size: 0.8rem; color: var(--gray); margin-bottom: 0.75rem; }
+  .chapter-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-lift); }
+  .chapter-card h3 {
+    font-family: var(--heading-font); font-weight: var(--heading-weight); font-style: var(--heading-style);
+    font-size: 1.3rem; color: var(--ink); margin-bottom: 0.75rem;
+  }
+  .chapter-card h3 .ch-num { color: var(--ch-color, var(--accent)); margin-right: 0.3rem; }
+  .chapter-card-count { font-size: 0.8rem; color: var(--ink-soft); margin-bottom: 0.75rem; }
   .chapter-card-items { display: flex; flex-wrap: wrap; gap: 0.45rem; }
   .chapter-card-item {
     font-size: 0.75rem; padding: 0.3rem 0.75rem; border-radius: 5px;
-    background: var(--light-gray); color: var(--dark);
-    border: 1px solid var(--border-gray);
+    background: var(--bg-lift); color: var(--ink);
+    border: 1px solid var(--border);
   }
 
-  /* ── Paragraaf card (chapter page) ── */
+  /* Paragraaf card (chapter page) */
   .para-card {
     display: flex; align-items: center; gap: 1rem;
-    background: var(--white); border-radius: 10px;
-    border-left: 5px solid var(--ch-color, var(--domain));
-    box-shadow: 0 1px 6px rgba(0,0,0,0.07); padding: 1.2rem 1.5rem;
+    background: var(--bg-card); border-radius: 10px;
+    border-left: 5px solid var(--ch-color, var(--accent));
+    box-shadow: var(--shadow-card); padding: 1.2rem 1.5rem;
     margin-bottom: 0.75rem;
     transition: transform 0.15s ease, box-shadow 0.15s ease;
+    text-decoration: none; color: inherit;
   }
-  .para-card:hover { transform: translateY(-2px); box-shadow: 0 4px 14px rgba(0,0,0,0.1); }
+  .para-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-lift); }
   .para-num {
     flex-shrink: 0; width: 44px; height: 44px; border-radius: 10px;
-    background: var(--ch-color, var(--domain)); color: var(--white);
+    background: var(--ch-color, var(--accent)); color: #fff;
     display: flex; align-items: center; justify-content: center;
-    font-size: 0.85rem; font-weight: bold;
+    font-size: 0.85rem; font-weight: 700;
   }
-  .para-info h3 { font-size: 1rem; font-weight: bold; color: var(--dark); margin-bottom: 0.15rem; }
-  .para-info p { font-size: 0.8rem; color: var(--gray); }
+  .para-info h3 {
+    font-family: var(--heading-font); font-weight: var(--heading-weight); font-style: var(--heading-style);
+    font-size: 1.1rem; color: var(--ink); margin-bottom: 0.15rem;
+  }
+  .para-info p { font-size: 0.8rem; color: var(--ink-soft); }
 
+  /* Footer */
   footer {
     text-align: center; padding: 1.5rem 2rem; font-size: 0.75rem;
-    color: var(--gray); border-top: 1px solid var(--border-gray);
+    color: var(--ink-soft); border-top: 1px solid var(--border);
   }
 
-  /* ── Document Viewer ── */
+  /* Document viewer (chapter page docx/pptx in-browser preview) */
   .viewer-panel {
     display: none; flex-direction: column;
     width: 100%; height: 100vh; position: sticky; top: 0;
@@ -460,33 +347,21 @@ function sharedCSS(dc) {
   .content.hidden { display: none; }
   .viewer-bar {
     display: flex; align-items: center; gap: 0.75rem;
-    padding: 0.5rem 1rem; background: var(--navy); color: #fff;
+    padding: 0.5rem 1rem; background: var(--ink); color: var(--bg);
     font-size: 0.85rem; min-height: 2.5rem; flex-shrink: 0;
   }
   .viewer-title { flex: 1; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .viewer-download {
-    color: #fff; background: var(--domain); padding: 0.3rem 0.8rem;
+    color: var(--bg); background: var(--accent); padding: 0.3rem 0.8rem;
     border-radius: 4px; font-size: 0.8rem; text-decoration: none;
   }
   .viewer-download:hover { opacity: 0.9; }
   .viewer-close {
-    background: none; border: 1px solid rgba(255,255,255,0.3); color: #fff;
+    background: none; border: 1px solid var(--border-lift); color: var(--bg);
     padding: 0.3rem 0.8rem; border-radius: 4px; cursor: pointer; font-size: 0.8rem;
   }
-  .viewer-close:hover { background: rgba(255,255,255,0.1); }
-  .viewer-frame { flex: 1; border: none; width: 100%; background: #fff; }
-
-  /* ── Responsive ── */
-  @media (max-width: 768px) {
-    .sidebar {
-      position: fixed; left: -280px; top: 0; width: 280px;
-      transition: left 0.25s ease; box-shadow: none; z-index: 100;
-    }
-    .sidebar.open { left: 0; box-shadow: 4px 0 20px rgba(0,0,0,0.15); }
-    .sidebar-toggle { display: flex; }
-    .content { width: 100%; }
-    .hero { padding-left: 3.5rem; }
-  }`;
+  .viewer-close:hover { background: var(--bg-lift); color: var(--ink); }
+  .viewer-frame { flex: 1; border: none; width: 100%; background: var(--bg-card); }`;
 }
 
 // ═══════════════════════════════════════════════════════════════════════════
@@ -517,24 +392,26 @@ const ICONS = {
 // PAGE SHELL — wraps nav + content
 // ═══════════════════════════════════════════════════════════════════════════
 
-function pageShell(title, dc, navHTML, bodyContent) {
+function pageShell(title, dc, navHTML, bodyContent, sharedPrefix, accentToken) {
+  const layoutName = sharedPrefix === "shared" ? "landing-book-v1" : "landing-chapter-v1";
   return `<!DOCTYPE html>
-<html lang="nl">
+<html lang="nl" data-theme="light">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>(function(){try{var m=localStorage.getItem('quizMode')||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',m);}catch(e){}})();</script>
 <title>${title}</title>
-<style>${sharedCSS(dc)}</style>
+<link rel="stylesheet" href="${sharedPrefix}/voorkennis.css">
+<style>${sharedCSS()}</style>
 </head>
-<body>
+<body data-layout="${layoutName}" data-accent-domain="${accentToken}">
+<button class="sidebar-toggle" id="sidebarToggle" aria-label="Menu openen">
+  <svg viewBox="0 0 24 24">${ICONS.hamburger}</svg>
+</button>
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
 <div class="page-layout">
-  <nav class="sidebar" id="sidebar">
-    <button class="sidebar-toggle" onclick="document.getElementById('sidebar').classList.toggle('open')">
-      <svg viewBox="0 0 24 24">${ICONS.hamburger}</svg>
-    </button>
-    <div class="sidebar-content">
+  <nav class="sidebar landing-sidebar" id="sidebar">
 ${navHTML}
-    </div>
   </nav>
   <div class="content" id="content">
 ${bodyContent}
@@ -548,6 +425,7 @@ ${bodyContent}
     <iframe id="viewerFrame" class="viewer-frame" sandbox="allow-scripts allow-same-origin allow-forms allow-popups"></iframe>
   </div>
 </div>
+<script src="${sharedPrefix}/voorkennis.js"></script>
 <script>
 document.querySelectorAll('.nav-ch-title').forEach(el => {
   el.addEventListener('click', function(e) {
@@ -631,7 +509,7 @@ function renderBookPage(resolvedMap) {
 </main>
 <footer>Economie VWO 4 &middot; ${CONFIG.displayLabel}</footer>`;
 
-  return pageShell(`${CONFIG.displayLabel}`, dc, navHTML, bodyHTML);
+  return pageShell(`${CONFIG.displayLabel}`, dc, navHTML, bodyHTML, "shared", "wiskunde");
 }
 
 // ═══════════════════════════════════════════════════════════════════════════
@@ -674,7 +552,8 @@ function renderChapterPage(chapterId, resolvedMap) {
 </main>
 <footer>Economie VWO 4 &middot; ${CONFIG.displayLabel}</footer>`;
 
-  return pageShell(`${CONFIG.chapterFullLabel(chapterId)} – Lesmateriaal`, dc, navHTML, bodyHTML);
+  const accentToken = DOMAIN_SHARED_TOKEN[ch.domain] || "wiskunde";
+  return pageShell(`${CONFIG.chapterFullLabel(chapterId)} – Lesmateriaal`, dc, navHTML, bodyHTML, "../shared", accentToken);
 }
 
 // ═══════════════════════════════════════════════════════════════════════════
@@ -781,13 +660,24 @@ function renderParagraafPage(paragraaf, files, _resolvedMap) {
   const hasL = lerenCards.trim().length > 0;
   const hasT = !HIDE_TASK_ROWS && taskCards.trim().length > 0;
 
-  const sections = [];
-  if (hasV) sections.push({ id: "voorbereiden", num: 1, title: "Voorbereiden", hint: "Check wat je al weet en wat je nog nodig hebt", body: voorbereidenCards });
-  if (hasO) sections.push({ id: "oefenen",      num: 2, title: "Oefenen",      hint: "Kies een interactieve oefening",               body: oefenenCards });
-  if (hasL) sections.push({ id: "leren",        num: 3, title: "Leren",        hint: "De les doorwerken: presentatie, uitleg en video’s", body: lerenCards });
-  if (hasT) sections.push({ id: "opgaven",      num: 4, title: "Opgaven",      hint: "Oefen op je eigen niveau",                     body: taskCards });
+  // Per-section accent: the four section roles get distinct accents drawn
+  // from the three shared tokens (economisch / wiskunde / grafisch) defined
+  // in engines/voorkennis.css. The hero gradient and back-link continue to
+  // use the paragraph-level accentToken; only the section chrome rotates.
+  const SECTION_ACCENT = {
+    voorbereiden: "wiskunde",
+    oefenen:      "economisch",
+    leren:        "grafisch",
+    opgaven:      "economisch",
+  };
 
-  const sidebarItems = sections.map(s => `      <a class="nav-item domain-${accentToken}" href="#${s.id}" data-section="${s.id}">
+  const sections = [];
+  if (hasV) sections.push({ id: "voorbereiden", num: 1, title: "Voorbereiden", hint: "Check wat je al weet en wat je nog nodig hebt", body: voorbereidenCards, accent: SECTION_ACCENT.voorbereiden });
+  if (hasO) sections.push({ id: "oefenen",      num: 2, title: "Oefenen",      hint: "Kies een interactieve oefening",               body: oefenenCards,      accent: SECTION_ACCENT.oefenen });
+  if (hasL) sections.push({ id: "leren",        num: 3, title: "Leren",        hint: "De les doorwerken: presentatie, uitleg en video’s", body: lerenCards,        accent: SECTION_ACCENT.leren });
+  if (hasT) sections.push({ id: "opgaven",      num: 4, title: "Opgaven",      hint: "Oefen op je eigen niveau",                     body: taskCards,         accent: SECTION_ACCENT.opgaven });
+
+  const sidebarItems = sections.map(s => `      <a class="nav-item domain-${s.accent}" href="#${s.id}" data-section="${s.id}">
         <span class="nav-number">${s.num}</span>
         <span class="nav-text">
           <span class="nav-title">${s.title}</span>
@@ -797,11 +687,11 @@ function renderParagraafPage(paragraaf, files, _resolvedMap) {
 
   const sectionsHTML = sections.map(s => `
       <section class="section" id="${s.id}">
-        <div class="section-header border-${accentToken}">
-          <span class="section-num bg-${accentToken}">${s.num}</span>
+        <div class="section-header border-${s.accent}">
+          <span class="section-num bg-${s.accent}">${s.num}</span>
           <div class="section-title-group">
             <div class="section-title">${s.title}</div>
-            <span class="section-badge">${s.hint}</span>
+            <span class="section-badge badge-${s.accent}">${s.hint}</span>
           </div>
         </div>
         <div class="resource-grid">${s.body}
@@ -816,7 +706,7 @@ function renderParagraafPage(paragraaf, files, _resolvedMap) {
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script>(function(){try{var m=localStorage.getItem('quizMode')||'light';document.documentElement.setAttribute('data-theme',m);}catch(e){}})();</script>
+<script>(function(){try{var m=localStorage.getItem('quizMode')||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',m);}catch(e){}})();</script>
 <title>${paragraaf.id} ${paragraaf.name} – Lesmateriaal</title>
 <link rel="stylesheet" href="../../shared/voorkennis.css">
 <style>
@@ -830,7 +720,7 @@ function renderParagraafPage(paragraaf, files, _resolvedMap) {
 
   .resource-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     gap: 0.9rem;
   }
   .resource-card {

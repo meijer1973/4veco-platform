@@ -499,6 +499,10 @@ html[data-theme="dark"] .hero-card.card-grafisch   { background: linear-gradient
   letter-spacing: -0.2px;
   line-height: 1.25;
   color: var(--ink);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 .hero-card-domain {
   display: inline-block;

@@ -92,7 +92,7 @@ function renderHTML() {
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script>(function(){try{var m=localStorage.getItem('quizMode')||'light';document.documentElement.setAttribute('data-theme',m);}catch(e){}})();</script>
+<script>(function(){try{var m=localStorage.getItem('quizMode')||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',m);}catch(e){}})();</script>
 <title>${PARAGRAAF_NR} ${esc(ONDERWERP)} – YouTube-video's</title>
 <link rel="stylesheet" href="../../shared/voorkennis.css">
 <style>
@@ -164,7 +164,33 @@ function renderHTML() {
 </head>
 <body data-layout="youtube-v1" data-accent-domain="${ACCENT}">
 
+<button class="sidebar-toggle" id="sidebarToggle" aria-label="Menu openen">
+  <svg viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+</button>
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
 <div class="page-layout">
+  <!-- TODO(L1.4): extract sidebar+nav into shared helper when 1.1.2 youtube page lands. -->
+  <nav class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <h2>${PARAGRAAF_NR} ${esc(ONDERWERP)}</h2>
+      <p>YouTube-video's</p>
+    </div>
+    <a class="nav-item domain-${ACCENT}" href="#sectie-over" data-section="sectie-over">
+      <span class="nav-number">1</span>
+      <span class="nav-text">
+        <span class="nav-title">Over deze video's</span>
+        <span class="nav-badge">Tip</span>
+      </span>
+    </a>
+    <a class="nav-item domain-${ACCENT}" href="#sectie-lijst" data-section="sectie-lijst">
+      <span class="nav-number">2</span>
+      <span class="nav-text">
+        <span class="nav-title">Video-lijst</span>
+        <span class="nav-badge">${VIDEOS.length} video's</span>
+      </span>
+    </a>
+  </nav>
   <div class="content">
     <header class="hero">
       <div class="hero-inner">
@@ -176,7 +202,7 @@ function renderHTML() {
     </header>
 
     <main>
-      <section class="section">
+      <section class="section" id="sectie-over">
         <div class="section-header border-${ACCENT}">
           <span class="section-num bg-${ACCENT}">1</span>
           <div class="section-title-group">
@@ -192,7 +218,7 @@ function renderHTML() {
         </div>
       </section>
 
-      <section class="section">
+      <section class="section" id="sectie-lijst">
         <div class="section-header border-${ACCENT}">
           <span class="section-num bg-${ACCENT}">2</span>
           <div class="section-title-group">
