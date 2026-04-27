@@ -1,0 +1,43 @@
+{
+  "sprint_id": "R7.1",
+  "name": "Deterministic Chunk Layer",
+  "status": "completed",
+  "completed_on": "2026-04-27",
+  "plan": "docs/sprints/R7.1-plan.md",
+  "baseline": "reports/sprints/R7.1-baseline.md",
+  "result": "reports/sprints/R7.1-result.md",
+  "diff_summary": "reports/sprints/R7.1-diff-summary.md",
+  "outputs": [
+    "build-scripts/rag/build-chunks.js",
+    "build-scripts/rag/validate-chunks.js",
+    "references/data/rag/chunk_index.jsonl"
+  ],
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js docs/sprints/R7.1-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/rag/build-chunks.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/rag/validate-chunks.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-result.js reports/sprints/R7.1-result.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js R7.1 --complete",
+      "status": "passed"
+    }
+  ],
+  "protected_reference_data_changed": false,
+  "next_sprint": "R7.2",
+  "summary": {
+    "chunks": 842,
+    "generated_report_chunks": 21
+  }
+}

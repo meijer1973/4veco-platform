@@ -77,7 +77,6 @@ Open items are listed first; completed items are kept below them.
 
 | Sprint | Name | Completed | Current State |
 |--------|------|-----------|---------------|
-| R7.1 | Deterministic Chunk Layer | no | Planned. Build source-ranked retrieval chunks. |
 | R7.2 | Hybrid Retrieval | no | Planned. Add lexical/entity/graph retrieval before optional vector search. |
 | R7.3 | Retrieval Evaluation Set | no | Planned. Make retrieval quality regressions visible. |
 | R7.4 | RAG Review Gate | no | Planned. Approve internal/teacher-facing RAG only after evaluation. |
@@ -99,6 +98,7 @@ Open items are listed first; completed items are kept below them.
 | R14.1 | Curriculum Versioning | no | Planned. Track curriculum/source versions and reference migrations. |
 | R14.2 | Evidence Signal Model | no | Planned. Model quality and learning signals without surveillance or unnecessary student data. |
 | R14.3 | Continuous Improvement Reports | no | Planned. Produce evidence-platform reports and require review before external claims. |
+| R7.1 | Deterministic Chunk Layer | yes | Completed. Added deterministic internal RAG chunk index with 842 chunks and authority metadata preserving generated-report safeguards. |
 | R6.2 | Reference Health Dashboard Data | yes | Completed. Added `reports/json/reference-health.json` and Markdown projection with R5.3 graph-authority constraints and dashboard health summaries. |
 | R6.1 | JSON-First Reports | yes | Completed. Added JSON-first report generation and validation for 10 required health/coverage reports, plus Markdown projections under `reports/markdown/`. |
 | R5.3 | Alignment Graph Review Gate | yes | Completed with `pass_with_conditions`. Named graph edge groups are approved for internal dashboard/reporting and internal retrieval development/evaluation; student diagnostics, adaptive routing, and student-facing AI remain blocked. |
@@ -315,6 +315,8 @@ Required work:
 Required output: chunk index and validator.
 
 Stop condition: no vector-first shortcut.
+
+Completion: completed on 2026-04-27. R7.1 added `build-scripts/rag/build-chunks.js`, `build-scripts/rag/validate-chunks.js`, and `references/data/rag/chunk_index.jsonl`. Generated-report chunks are non-primary and non-authoritative.
 
 ### R7.2 Hybrid Retrieval
 
@@ -785,7 +787,7 @@ No vector-first shortcut. Build lexical/entity/graph retrieval and evaluation fi
 
 Sprints:
 
-- `R7.1` planned: deterministic chunk layer.
+- `R7.1` completed: deterministic chunk layer.
 - `R7.2` planned: hybrid retrieval.
 - `R7.3` planned: retrieval evaluation set.
 - `R7.4` planned: RAG review gate.
@@ -930,7 +932,7 @@ Do not invert this order.
 
 Do not proceed directly to retrieval or diagnostics.
 
-Proceed with `R7.1 Deterministic Chunk Layer`.
+Proceed with `R7.2 Hybrid Retrieval`.
 
 R6.2 completion state:
 
@@ -939,11 +941,11 @@ R6.2 completion state:
 - graph authority is whole-graph false and named-edge-groups only
 - student diagnostics, adaptive routing, and student-facing AI are explicitly blocked
 
-R7.1 must:
+R7.2 must:
 
-- build source-ranked retrieval chunks for internal use only
-- preserve authority level, evidence IDs, edge statuses, and generated-report warnings
-- keep generated-report chunks non-primary and non-authoritative
+- implement internal retrieval over chunks and graph
+- preserve source path, source type, authority, entity IDs, evidence IDs, edge status, and diagnostic/generated-report warnings
+- fail if retrieval flattens all edges into equal truth
 
 ## Final Rule
 
