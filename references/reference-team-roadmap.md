@@ -77,7 +77,6 @@ Open items are listed first; completed items are kept below them.
 
 | Sprint | Name | Completed | Current State |
 |--------|------|-----------|---------------|
-| R6.2 | Reference Health Dashboard Data | no | Planned. Produce one generated reference-health state file for dashboards and planning. |
 | R7.1 | Deterministic Chunk Layer | no | Planned. Build source-ranked retrieval chunks. |
 | R7.2 | Hybrid Retrieval | no | Planned. Add lexical/entity/graph retrieval before optional vector search. |
 | R7.3 | Retrieval Evaluation Set | no | Planned. Make retrieval quality regressions visible. |
@@ -100,6 +99,7 @@ Open items are listed first; completed items are kept below them.
 | R14.1 | Curriculum Versioning | no | Planned. Track curriculum/source versions and reference migrations. |
 | R14.2 | Evidence Signal Model | no | Planned. Model quality and learning signals without surveillance or unnecessary student data. |
 | R14.3 | Continuous Improvement Reports | no | Planned. Produce evidence-platform reports and require review before external claims. |
+| R6.2 | Reference Health Dashboard Data | yes | Completed. Added `reports/json/reference-health.json` and Markdown projection with R5.3 graph-authority constraints and dashboard health summaries. |
 | R6.1 | JSON-First Reports | yes | Completed. Added JSON-first report generation and validation for 10 required health/coverage reports, plus Markdown projections under `reports/markdown/`. |
 | R5.3 | Alignment Graph Review Gate | yes | Completed with `pass_with_conditions`. Named graph edge groups are approved for internal dashboard/reporting and internal retrieval development/evaluation; student diagnostics, adaptive routing, and student-facing AI remain blocked. |
 | R5.2 | Alignment Graph | yes | Completed. Built the first draft alignment graph from R5.1 evidence anchors: 31 edges, 13 pending main edges, 18 traceability edges, and 0 human-approved edges. |
@@ -299,6 +299,8 @@ Required work:
 Required output: `reports/json/reference-health.json` or successor plus dashboard integration.
 
 Stop condition: dashboard must remain internal/developer-facing.
+
+Completion: completed on 2026-04-27. R6.2 added `build-scripts/reports/generate-reference-health.js`, `build-scripts/reports/check-reference-health.js`, `reports/json/reference-health.json`, and `reports/markdown/reference-health.md`. The state file explicitly blocks student diagnostics, adaptive routing, and student-facing AI.
 
 ### R7.1 Deterministic Chunk Layer
 
@@ -773,7 +775,7 @@ The reference dashboard should eventually read `reports/json/reference-health.js
 Sprints:
 
 - `R6.1` completed: JSON-first reports.
-- `R6.2` planned: reference health dashboard data.
+- `R6.2` completed: reference health dashboard data.
 
 ### Phase R7: RAG And Technical Retrieval Layer
 
@@ -928,21 +930,20 @@ Do not invert this order.
 
 Do not proceed directly to retrieval or diagnostics.
 
-Proceed with `R6.2 Reference Health Dashboard Data`.
+Proceed with `R7.1 Deterministic Chunk Layer`.
 
-R5.3 completion state:
+R6.2 completion state:
 
-- gate status is `pass_with_conditions`
-- named edge groups are approved; whole-graph authority is false
-- graph integrity report passes with 34 edges
-- internal dashboard/reporting and internal retrieval development/evaluation are allowed with status/source visibility
-- student diagnostics, adaptive routing, and student-facing AI remain blocked
+- reference-health JSON exists at `reports/json/reference-health.json`
+- reference-health Markdown projection exists at `reports/markdown/reference-health.md`
+- graph authority is whole-graph false and named-edge-groups only
+- student diagnostics, adaptive routing, and student-facing AI are explicitly blocked
 
-R6.2 must:
+R7.1 must:
 
-- produce one generated reference-health state file for dashboards and planning
-- include R5.3 graph-authority constraints explicitly
-- keep student diagnostics, adaptive routing, and student-facing AI blocked
+- build source-ranked retrieval chunks for internal use only
+- preserve authority level, evidence IDs, edge statuses, and generated-report warnings
+- keep generated-report chunks non-primary and non-authoritative
 
 ## Final Rule
 
