@@ -1,0 +1,21 @@
+{
+  "sprint_id": "R7.2",
+  "name": "Hybrid Retrieval",
+  "status": "in_progress",
+  "planned_on": "2026-04-27",
+  "plan": "docs/sprints/R7.2-plan.md",
+  "protected_reference_data_changes_allowed": false,
+  "human_review_required": false,
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js docs/sprints/R7.2-plan.md",
+    "node build-scripts/rag/query.js --unit A15",
+    "node build-scripts/rag/query.js --term prijselasticiteit_van_de_vraag",
+    "node build-scripts/rag/query.js --exam-code A2.5",
+    "node build-scripts/rag/query.js --quality-issue empty-needs",
+    "node build-scripts/rag/query.js --unit A15 --json",
+    "node build-scripts/rag/query.js --term prijselasticiteit_van_de_vraag --json",
+    "node build-scripts/rag/validate-query-output.js",
+    "node build-scripts/sprints/check-sprint-result.js reports/sprints/R7.2-result.md",
+    "node build-scripts/sprints/check-sprint-bundle.js R7.2 --complete"
+  ]
+}

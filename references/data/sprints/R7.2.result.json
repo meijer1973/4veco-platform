@@ -1,0 +1,62 @@
+{
+  "sprint_id": "R7.2",
+  "name": "Hybrid Retrieval",
+  "status": "completed",
+  "completed_on": "2026-04-27",
+  "plan": "docs/sprints/R7.2-plan.md",
+  "baseline": "reports/sprints/R7.2-baseline.md",
+  "result": "reports/sprints/R7.2-result.md",
+  "diff_summary": "reports/sprints/R7.2-diff-summary.md",
+  "outputs": [
+    "build-scripts/rag/query.js",
+    "build-scripts/rag/validate-query-output.js"
+  ],
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js docs/sprints/R7.2-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/rag/query.js --unit A15",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/rag/query.js --term prijselasticiteit_van_de_vraag",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/rag/query.js --exam-code A2.5",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/rag/query.js --quality-issue empty-needs",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/rag/query.js --unit A15 --json",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/rag/query.js --term prijselasticiteit_van_de_vraag --json",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/rag/validate-query-output.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-result.js reports/sprints/R7.2-result.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js R7.2 --complete",
+      "status": "passed"
+    }
+  ],
+  "protected_reference_data_changed": false,
+  "next_sprint": "R7.3",
+  "summary": {
+    "query_modes": ["unit", "term", "exam-code", "quality-issue"],
+    "authority_metadata_preserved": true
+  }
+}

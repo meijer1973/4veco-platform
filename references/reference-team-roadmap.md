@@ -77,7 +77,6 @@ Open items are listed first; completed items are kept below them.
 
 | Sprint | Name | Completed | Current State |
 |--------|------|-----------|---------------|
-| R7.2 | Hybrid Retrieval | no | Planned. Add lexical/entity/graph retrieval before optional vector search. |
 | R7.3 | Retrieval Evaluation Set | no | Planned. Make retrieval quality regressions visible. |
 | R7.4 | RAG Review Gate | no | Planned. Approve internal/teacher-facing RAG only after evaluation. |
 | R8.1 | QC Issue Model | no | Planned. Define machine-readable quality issue categories, severity, evidence, proof-to-close, and ownership. |
@@ -98,6 +97,7 @@ Open items are listed first; completed items are kept below them.
 | R14.1 | Curriculum Versioning | no | Planned. Track curriculum/source versions and reference migrations. |
 | R14.2 | Evidence Signal Model | no | Planned. Model quality and learning signals without surveillance or unnecessary student data. |
 | R14.3 | Continuous Improvement Reports | no | Planned. Produce evidence-platform reports and require review before external claims. |
+| R7.2 | Hybrid Retrieval | yes | Completed. Added internal deterministic query prototype preserving source authority, evidence IDs, edge status, and generated-report warnings. |
 | R7.1 | Deterministic Chunk Layer | yes | Completed. Added deterministic internal RAG chunk index with 842 chunks and authority metadata preserving generated-report safeguards. |
 | R6.2 | Reference Health Dashboard Data | yes | Completed. Added `reports/json/reference-health.json` and Markdown projection with R5.3 graph-authority constraints and dashboard health summaries. |
 | R6.1 | JSON-First Reports | yes | Completed. Added JSON-first report generation and validation for 10 required health/coverage reports, plus Markdown projections under `reports/markdown/`. |
@@ -331,6 +331,8 @@ Required work:
 Required output: retrieval API or script plus evaluation hooks.
 
 Stop condition: retrieval must not hide source rank or evidence weakness.
+
+Completion: completed on 2026-04-27. R7.2 added `build-scripts/rag/query.js` and `build-scripts/rag/validate-query-output.js`. Retrieval is internal only and preserves authority metadata and generated-report warnings.
 
 ### R7.3 Retrieval Evaluation Set
 
@@ -788,7 +790,7 @@ No vector-first shortcut. Build lexical/entity/graph retrieval and evaluation fi
 Sprints:
 
 - `R7.1` completed: deterministic chunk layer.
-- `R7.2` planned: hybrid retrieval.
+- `R7.2` completed: hybrid retrieval.
 - `R7.3` planned: retrieval evaluation set.
 - `R7.4` planned: RAG review gate.
 
@@ -932,7 +934,7 @@ Do not invert this order.
 
 Do not proceed directly to retrieval or diagnostics.
 
-Proceed with `R7.2 Hybrid Retrieval`.
+Proceed with `R7.3 Retrieval Evaluation Set`.
 
 R6.2 completion state:
 
@@ -941,11 +943,11 @@ R6.2 completion state:
 - graph authority is whole-graph false and named-edge-groups only
 - student diagnostics, adaptive routing, and student-facing AI are explicitly blocked
 
-R7.2 must:
+R7.3 must:
 
-- implement internal retrieval over chunks and graph
-- preserve source path, source type, authority, entity IDs, evidence IDs, edge status, and diagnostic/generated-report warnings
-- fail if retrieval flattens all edges into equal truth
+- create a fixed retrieval evaluation set
+- prove retrieval returns expected entities and warning metadata
+- make generated-report and pending-review behavior visible in evaluation results
 
 ## Final Rule
 
