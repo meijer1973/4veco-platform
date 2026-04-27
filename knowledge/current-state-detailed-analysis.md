@@ -247,7 +247,7 @@ The active build-script architecture is clear:
 Current rich document builders are split between current Book 1 work and retained legacy references:
 
 - `build-scripts/content/book-1/`
-- `build-scripts/content/module-3/`
+- `build-scripts/content/legacy-target/`
 
 This supports the conclusion that Book 1 Part A is broad, while Book 1 Part B still needs a new flat-layout production pattern.
 

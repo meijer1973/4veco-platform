@@ -87,6 +87,7 @@ Open items are listed first; completed items are kept below them.
 | R7.4 | RAG Review Gate | yes | Completed with `pass_with_conditions`. Internal and teacher-facing non-authoritative retrieval plus human-reviewed lesson-authoring support are allowed; student-facing diagnostics, adaptive routing, AI, automatic sequencing, mastery decisions, and summative use remain blocked. |
 | R7.5 | Merge Readiness and Main Sync | yes | Completed. Branch synced with `origin/main`, duplicate R5 gate namespace resolved, stray roadmap artifact moved to `docs/roadmaps/`, validators pass, and merge-readiness report says ready for merge review. |
 | R9.0 | Legacy Target Reference Minimization | yes | Completed. Minimized the frozen legacy target as a conceptual anchor before R9.1 while preserving functional legacy paths and guardrails. |
+| R9.01 | Legacy Folder Rename | yes | Completed. Renamed repo-local legacy folders to `legacy-target` while preserving the frozen external lesson target. |
 | R7.3 | Retrieval Evaluation Set | yes | Completed. Added fixed retrieval eval set, runner, validator, JSON results, and Markdown report; 10/10 cases pass with zero authority violations. |
 | R7.2 | Hybrid Retrieval | yes | Completed. Added internal deterministic query prototype preserving source authority, evidence IDs, edge status, and generated-report warnings. |
 | R7.1 | Deterministic Chunk Layer | yes | Completed. Added deterministic internal RAG chunk index with 842 chunks and authority metadata preserving generated-report safeguards. |
@@ -377,6 +378,28 @@ Acceptance:
 Stop condition: do not delete or refactor functional legacy paths in this sprint.
 
 Completion: completed on 2026-04-27. Active authored references and generic guidance no longer use the frozen legacy target as the course-design shorthand; remaining frozen-legacy-target references are guardrails, functional legacy paths, historical planning notes, or the R9.0 audit record itself.
+
+### R9.01 Legacy Folder Rename
+
+Purpose: rename repo-local legacy folders so the active repository no longer has folders named after the frozen legacy target.
+
+Required work:
+
+- rename the repo-local legacy source-data folder to `source-data/legacy-target/`
+- rename the repo-local legacy content-builder folder to `build-scripts/content/legacy-target/`
+- update repo-local script and README references to the new paths
+- preserve the external frozen lesson target name and storage behavior
+- regenerate inventories and validate the sprint bundle
+
+Acceptance:
+
+- no repo-local directory remains named after the frozen legacy target
+- legacy helper scripts resolve the renamed paths
+- no hand edits to `references/machine/` or `references/external/`
+
+Stop condition: do not rename or mutate the external frozen lesson target.
+
+Completion: completed on 2026-04-27. Repo-local legacy source-data and content-builder folders now use `legacy-target`; the external frozen lesson target name and storage behavior were not changed.
 
 ### R9.1 Owned Source Registry
 
@@ -709,6 +732,7 @@ R7.3 Retrieval evals
 R7.4 RAG gate
 R7.5 Merge readiness and main sync
 R9.0 Legacy target reference minimization
+R9.01 Legacy folder rename
 R9.1 Owned source registry
 R9.2 Content graph projection
 R7.6 RAG quality hardening

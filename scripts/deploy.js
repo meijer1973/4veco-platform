@@ -82,7 +82,7 @@ function copyEngines() {
     // Reasoning shared metadata
     const reasoningDir = path.join(sharedDir, 'reasoning');
     if (!fs.existsSync(reasoningDir)) fs.mkdirSync(reasoningDir, { recursive: true });
-    const reasoningMetaSrc = path.join(PLATFORM_ROOT, 'source-data', 'module-3', 'reasoning', 'meta-categories.js');
+    const reasoningMetaSrc = path.join(PLATFORM_ROOT, 'source-data', 'legacy-target', 'reasoning', 'meta-categories.js');
     const reasoningMetaDst = path.join(reasoningDir, 'meta-categories.js');
     if (fs.existsSync(reasoningMetaSrc)) {
         fs.writeFileSync(reasoningMetaDst, HEADER + fs.readFileSync(reasoningMetaSrc, 'utf8'), 'utf8');

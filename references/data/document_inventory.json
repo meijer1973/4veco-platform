@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1",
-  "generated_at": "2026-04-27T12:15:57.737Z",
+  "generated_at": "2026-04-27T12:20:23.832Z",
   "sprint_id": "R0.2",
   "scope": [
     "references",
@@ -10,12 +10,12 @@
   ],
   "note": "Inventory covers reference sources, generated reports, and reference/report tooling.",
   "summary": {
-    "file_count": 353,
+    "file_count": 358,
     "by_layer": {
       "reference_tooling": 50,
       "report_tooling": 13,
       "authored_judgement": 7,
-      "governance_data": 56,
+      "governance_data": 58,
       "external_authority": 32,
       "machine_registry": 5,
       "owned_curriculum_design": 3,
@@ -23,17 +23,17 @@
       "planning": 1,
       "schema_contract": 18,
       "governance_policy": 1,
-      "generated_report": 162
+      "generated_report": 165
     },
     "by_edit_policy": {
       "code_review": 81,
       "human_reviewed_edit": 14,
       "generated_by_inventory_script": 8,
-      "sprint_process": 48,
+      "sprint_process": 50,
       "external_refresh_only": 32,
       "cli_only": 5,
       "versioned_human_reviewed_edit": 3,
-      "generated_by_script": 162
+      "generated_by_script": 165
     }
   },
   "files": [
@@ -601,8 +601,8 @@
       "path": "build-scripts/references/rewire-skilltree.js",
       "file_name": "rewire-skilltree.js",
       "extension": "js",
-      "size_bytes": 9209,
-      "sha256": "48e30127f1456bf2d947176238d6c0142cb95ed7103fb329108610564f804fbc",
+      "size_bytes": 9214,
+      "sha256": "c0b85f417e829dadfcd21aa32378ba7f186835efe0290c150fb574dca0184aad",
       "layer": "reference_tooling",
       "authority_level": "tooling",
       "source_type": "reference_cli_script",
@@ -2545,6 +2545,46 @@
       "self_generated_inventory_file": false
     },
     {
+      "path": "references/data/sprints/R9.01.plan.json",
+      "file_name": "R9.01.plan.json",
+      "extension": "json",
+      "size_bytes": 774,
+      "sha256": "f5c9e0402609d017db40592d8de7d26e3cc713557b887a626df15e35319ec1b9",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/data/sprints/R9.01.result.json",
+      "file_name": "R9.01.result.json",
+      "extension": "json",
+      "size_bytes": 1465,
+      "sha256": "5f21cf00788e929d38b1aaa378c0997fd4aa83b68a5e5cc839fcb3f459c66d73",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
       "path": "references/external/amstelveencollege_quality_standards.md",
       "file_name": "amstelveencollege_quality_standards.md",
       "extension": "md",
@@ -3451,8 +3491,8 @@
       "path": "references/reference-team-roadmap.md",
       "file_name": "reference-team-roadmap.md",
       "extension": "md",
-      "size_bytes": 43131,
-      "sha256": "df02cb5c096f37450289e3127133ad826dad3a125a6a2682ad4d1b362454c2c1",
+      "size_bytes": 44340,
+      "sha256": "f427548445245eb2f92ff7c737956279eb9580b3fd8360b12ea4f3e129c8b6b3",
       "layer": "planning",
       "authority_level": "authored_judgement",
       "source_type": "roadmap",
@@ -6968,8 +7008,8 @@
       "path": "reports/sprints/R9.0-baseline.md",
       "file_name": "R9.0-baseline.md",
       "extension": "md",
-      "size_bytes": 1082,
-      "sha256": "0c1d0b19a74f448f1e005f8afe734f0aae42ba76454ee2886c3bf9b1ec959772",
+      "size_bytes": 1070,
+      "sha256": "3d614532cb66066af5396114fd0af21ffd94f726f8b9444ce4e4a70f69d7c48a",
       "layer": "generated_report",
       "authority_level": "generated_report",
       "source_type": "report_md",
@@ -6988,8 +7028,8 @@
       "path": "reports/sprints/R9.0-diff-summary.md",
       "file_name": "R9.0-diff-summary.md",
       "extension": "md",
-      "size_bytes": 1825,
-      "sha256": "f60461bc95a1011a6c6d2bd1ef22b5e3d8f63e5f3da1e794df2e6f5ca614f01e",
+      "size_bytes": 1773,
+      "sha256": "5ded3bb4335805416a063ba67b7dcd476bafbe3e8805cfc88a792baad022b08a",
       "layer": "generated_report",
       "authority_level": "generated_report",
       "source_type": "report_md",
@@ -7008,8 +7048,68 @@
       "path": "reports/sprints/R9.0-result.md",
       "file_name": "R9.0-result.md",
       "extension": "md",
-      "size_bytes": 4483,
-      "sha256": "48989e37f59c86a73ffb04f01e1089e959ebdb2f4dcb196ced0b1ed1a0639c91",
+      "size_bytes": 4458,
+      "sha256": "10835524c2b96608be8a45a49c5baa147c8e1049bcf733934a364f9adf9b0c81",
+      "layer": "generated_report",
+      "authority_level": "generated_report",
+      "source_type": "report_md",
+      "generated_status": "generated_projection",
+      "edit_policy": "generated_by_script",
+      "owner": "platform_team",
+      "refresh_policy": "regenerate",
+      "downstream_dependencies": [
+        "dashboards",
+        "planning",
+        "qc-review"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "reports/sprints/R9.01-baseline.md",
+      "file_name": "R9.01-baseline.md",
+      "extension": "md",
+      "size_bytes": 604,
+      "sha256": "9b651bcc46c35a15d8f6ddadb695c243577b6f1ebfd029aec4b51d3d4d601bd2",
+      "layer": "generated_report",
+      "authority_level": "generated_report",
+      "source_type": "report_md",
+      "generated_status": "generated_projection",
+      "edit_policy": "generated_by_script",
+      "owner": "platform_team",
+      "refresh_policy": "regenerate",
+      "downstream_dependencies": [
+        "dashboards",
+        "planning",
+        "qc-review"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "reports/sprints/R9.01-diff-summary.md",
+      "file_name": "R9.01-diff-summary.md",
+      "extension": "md",
+      "size_bytes": 961,
+      "sha256": "11ea8e139ffffd80f73dfe129084ead63fbe4e29a334f6cd454aa830aef9fc22",
+      "layer": "generated_report",
+      "authority_level": "generated_report",
+      "source_type": "report_md",
+      "generated_status": "generated_projection",
+      "edit_policy": "generated_by_script",
+      "owner": "platform_team",
+      "refresh_policy": "regenerate",
+      "downstream_dependencies": [
+        "dashboards",
+        "planning",
+        "qc-review"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "reports/sprints/R9.01-result.md",
+      "file_name": "R9.01-result.md",
+      "extension": "md",
+      "size_bytes": 2235,
+      "sha256": "b11b3012422d6dab85a8d97c686441ca6e92f1a3f1a55a88bd88a421fe5c2eb3",
       "layer": "generated_report",
       "authority_level": "generated_report",
       "source_type": "report_md",

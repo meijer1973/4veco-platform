@@ -20,19 +20,19 @@ Store data here when:
 - Consumed by `build-scripts/platform/build-reasoning-questions.js`
 - Output becomes `shared/reasoning/X.Y.Z.js` in the target book
 
-### `module-3/reasoning/` (legacy)
+### `legacy-target/reasoning/`
 
 - One CSV per paragraph: `X.Y.Z.csv`
 - Source-of-truth for the reasoning game
 - Consumed by `build-scripts/platform/build-reasoning-questions.js`
-- Output becomes `shared/reasoning/X.Y.Z.js` in the legacy target
+- Output becomes `shared/reasoning/X.Y.Z.js` in the frozen legacy target
 
-### `module-3/skilltree/` (legacy)
+### `legacy-target/skilltree/`
 
 - One JS config per paragraph: `X.Y.Z.js`
 - Source-of-truth for visible skills / paragraph skill mapping
 - Used by `build-scripts/platform/build-skilltree-shells.js`
-- Output becomes `shared/skilltree/X.Y.Z.js` plus the paragraph HTML shell
+- Output becomes `shared/skilltree/X.Y.Z.js` plus the paragraph HTML shell in the frozen legacy target
 
 ## What Does Not Yet Live Here
 

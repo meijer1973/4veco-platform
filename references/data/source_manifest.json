@@ -1,14 +1,14 @@
 {
   "schema_version": "0.1",
-  "generated_at": "2026-04-27T12:15:57.737Z",
+  "generated_at": "2026-04-27T12:20:23.832Z",
   "sprint_id": "R0.2",
   "scope": "references/",
   "note": "Self-generated inventory files intentionally omit size and sha256 to avoid unstable self-checksums.",
   "summary": {
-    "file_count": 128,
+    "file_count": 130,
     "by_layer": {
       "authored_judgement": 7,
-      "governance_data": 56,
+      "governance_data": 58,
       "external_authority": 32,
       "machine_registry": 5,
       "owned_curriculum_design": 3,
@@ -20,7 +20,7 @@
     "by_edit_policy": {
       "human_reviewed_edit": 14,
       "generated_by_inventory_script": 8,
-      "sprint_process": 48,
+      "sprint_process": 50,
       "external_refresh_only": 32,
       "cli_only": 5,
       "versioned_human_reviewed_edit": 3,
@@ -1289,6 +1289,46 @@
       "self_generated_inventory_file": false
     },
     {
+      "path": "references/data/sprints/R9.01.plan.json",
+      "file_name": "R9.01.plan.json",
+      "extension": "json",
+      "size_bytes": 774,
+      "sha256": "f5c9e0402609d017db40592d8de7d26e3cc713557b887a626df15e35319ec1b9",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/data/sprints/R9.01.result.json",
+      "file_name": "R9.01.result.json",
+      "extension": "json",
+      "size_bytes": 1465,
+      "sha256": "5f21cf00788e929d38b1aaa378c0997fd4aa83b68a5e5cc839fcb3f459c66d73",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
       "path": "references/external/amstelveencollege_quality_standards.md",
       "file_name": "amstelveencollege_quality_standards.md",
       "extension": "md",
@@ -2195,8 +2235,8 @@
       "path": "references/reference-team-roadmap.md",
       "file_name": "reference-team-roadmap.md",
       "extension": "md",
-      "size_bytes": 43131,
-      "sha256": "df02cb5c096f37450289e3127133ad826dad3a125a6a2682ad4d1b362454c2c1",
+      "size_bytes": 44340,
+      "sha256": "f427548445245eb2f92ff7c737956279eb9580b3fd8360b12ea4f3e129c8b6b3",
       "layer": "planning",
       "authority_level": "authored_judgement",
       "source_type": "roadmap",

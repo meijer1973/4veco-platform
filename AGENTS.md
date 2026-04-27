@@ -165,7 +165,7 @@ The current legacy game target (historically Module 3) is frozen until September
 ├── source-data/
 │   ├── book-1/
 │   │   └── reasoning/          ← Boekgerichte reasoning-CSV's (actieve richting)
-│   └── module-3/               ← Legacy input voor het oude game-target
+│   └── legacy-target/          ← Legacy input voor het oude game-target
 │       ├── reasoning/*.csv     ← Bron-CSV's voor redeneer-spel
 │       └── skilltree/*.js      ← Per-paragraaf skill config
 ├── scripts/

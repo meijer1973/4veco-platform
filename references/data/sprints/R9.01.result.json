@@ -1,0 +1,46 @@
+{
+  "sprint_id": "R9.01",
+  "name": "Legacy Folder Rename",
+  "status": "completed",
+  "completed_on": "2026-04-27",
+  "plan": "docs/sprints/R9.01-plan.md",
+  "baseline": "reports/sprints/R9.01-baseline.md",
+  "result": "reports/sprints/R9.01-result.md",
+  "diff_summary": "reports/sprints/R9.01-diff-summary.md",
+  "protected_reference_data_changed": false,
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js docs/sprints/R9.01-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js R9.01",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/build-reference-inventory.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-source-manifest.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-document-inventory.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-result.js reports/sprints/R9.01-result.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js R9.01 --complete",
+      "status": "passed"
+    }
+  ],
+  "renamed_repo_local_folders": [
+    "source-data legacy folder -> source-data/legacy-target",
+    "content-builder legacy folder -> build-scripts/content/legacy-target"
+  ],
+  "external_frozen_target_renamed": false
+}

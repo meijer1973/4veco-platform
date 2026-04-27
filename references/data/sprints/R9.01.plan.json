@@ -1,0 +1,18 @@
+{
+  "sprint_id": "R9.01",
+  "name": "Legacy Folder Rename",
+  "status": "in_progress",
+  "planned_on": "2026-04-27",
+  "plan": "docs/sprints/R9.01-plan.md",
+  "protected_reference_data_changes_allowed": false,
+  "human_review_required": false,
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js docs/sprints/R9.01-plan.md",
+    "node build-scripts/sprints/check-sprint-bundle.js R9.01",
+    "node build-scripts/references/build-reference-inventory.js",
+    "node build-scripts/references/check-source-manifest.js",
+    "node build-scripts/references/check-document-inventory.js",
+    "node build-scripts/sprints/check-sprint-result.js reports/sprints/R9.01-result.md",
+    "node build-scripts/sprints/check-sprint-bundle.js R9.01 --complete"
+  ]
+}
