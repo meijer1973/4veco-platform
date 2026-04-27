@@ -601,10 +601,12 @@
     "id": "A18",
     "name": "Comparatief voordeel bepalen",
     "category": "vaardigheden",
-    "layer": 1,
+    "layer": 3,
     "duration_min": 5,
     "kern": "Vergelijk de alternatieve kosten van twee producenten om te bepalen wie een comparatief voordeel heeft.",
-    "needs": [],
+    "needs": [
+      "B02"
+    ],
     "exam_codes": [
       "A2.6",
       "A4.3"
@@ -1467,9 +1469,11 @@
     "id": "A43",
     "name": "Totale winst uit gemengde allocatie berekenen",
     "category": "vaardigheden",
-    "layer": 0,
+    "layer": 3,
     "kern": "Bereken de totale winst van een verdeling van beperkte middelen over meerdere activiteiten door per activiteit (hoeveelheid × winst/eenheid) te berekenen en op te tellen.",
-    "needs": [],
+    "needs": [
+      "B02"
+    ],
     "exam_codes": [
       "A2.1"
     ],
@@ -1525,6 +1529,398 @@
     "generator": "GEN_A44"
   },
   {
+    "id": "A45",
+    "name": "P-Q grafiek tekenen uit tabel",
+    "category": "vaardigheden",
+    "layer": 0,
+    "kern": "Teken een prijs-hoeveelheidsgrafiek uit tabelwaarden met prijs op de verticale as en hoeveelheid op de horizontale as.",
+    "needs": [],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "aspects": [
+      "grafisch"
+    ],
+    "terms": [],
+    "procedure": [
+      "Zet prijs op de verticale as en hoeveelheid op de horizontale as.",
+      "Kies een passende schaal op beide assen.",
+      "Plaats elk punt uit de tabel in de grafiek.",
+      "Verbind de punten alleen als de context een lijn of curve ondersteunt."
+    ],
+    "pitfalls": [
+      "Assen omdraaien: in economie staat P meestal verticaal en Q horizontaal."
+    ],
+    "generator": "GEN_A45",
+    "assumed_prior_knowledge": [
+      "Coordinatenstelsel uit de onderbouw"
+    ],
+    "zero_needs_status": "underbouw_assumed",
+    "zero_needs_review": {
+      "reviewed_on": "2026-04-28",
+      "reviewer": "human R4.4 review",
+      "rationale": "Approved as a missing graph-instrument root before analytical demand/supply graph work.",
+      "recommended_needs": [],
+      "severity": "low"
+    }
+  },
+  {
+    "id": "A46",
+    "name": "Waarden aflezen en interpoleren in P-Q grafiek",
+    "category": "vaardigheden",
+    "layer": 1,
+    "kern": "Lees prijs- en hoeveelheidswaarden af uit een P-Q grafiek en schat tussenliggende waarden door interpolatie.",
+    "needs": [
+      "A45"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "aspects": [
+      "grafisch",
+      "rekenen"
+    ],
+    "terms": [],
+    "procedure": [
+      "Zoek de gegeven prijs of hoeveelheid op de juiste as.",
+      "Ga horizontaal of verticaal naar de grafiek.",
+      "Lees de bijbehorende waarde op de andere as af.",
+      "Schat tussen twee bekende punten lineair als de opdracht om een benadering vraagt."
+    ],
+    "generator": "GEN_A46"
+  },
+  {
+    "id": "A47",
+    "name": "Collectieve vraag uit tabellen optellen",
+    "category": "vaardigheden",
+    "layer": 2,
+    "kern": "Bereken collectieve vraag door individuele gevraagde hoeveelheden bij dezelfde prijs op te tellen.",
+    "needs": [
+      "A46"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "aspects": [
+      "rekenen",
+      "grafisch"
+    ],
+    "terms": [],
+    "procedure": [
+      "Neem een prijsniveau dat in alle individuele vraagtabellen voorkomt.",
+      "Lees per vrager de gevraagde hoeveelheid af.",
+      "Tel de hoeveelheden horizontaal op tot de collectieve vraag.",
+      "Herhaal dit voor meerdere prijzen om een collectieve vraagtabel of grafiek te maken."
+    ],
+    "generator": "GEN_A47"
+  },
+  {
+    "id": "A48",
+    "name": "Collectieve vraagfunctie algebraisch optellen",
+    "category": "vaardigheden",
+    "layer": 3,
+    "kern": "Tel lineaire individuele vraagfuncties horizontaal op door bij dezelfde prijs de gevraagde hoeveelheden te sommeren.",
+    "needs": [
+      "A03",
+      "A47"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "aspects": [
+      "rekenen",
+      "grafisch"
+    ],
+    "terms": [],
+    "procedure": [
+      "Schrijf elke individuele vraagfunctie als Q in termen van P.",
+      "Tel de Q-termen bij elkaar op.",
+      "Vereenvoudig de uitdrukking tot een collectieve vraagfunctie.",
+      "Controleer of het prijsbereik van de individuele functies geldig blijft."
+    ],
+    "generator": "GEN_A48"
+  },
+  {
+    "id": "A49",
+    "name": "Aanbodcurve tekenen met economenassen",
+    "category": "vaardigheden",
+    "layer": 1,
+    "kern": "Teken een stijgende aanbodcurve met prijs op de verticale as en aangeboden hoeveelheid op de horizontale as.",
+    "needs": [
+      "A45"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "aspects": [
+      "grafisch"
+    ],
+    "terms": [],
+    "procedure": [
+      "Zet P op de verticale as en Qa op de horizontale as.",
+      "Plaats de aanbodpunten uit tabel of functie.",
+      "Teken de aanbodcurve stijgend als hogere prijzen tot meer aanbod leiden.",
+      "Label de curve als aanbod of S."
+    ],
+    "generator": "GEN_A49"
+  },
+  {
+    "id": "A50",
+    "name": "GVK en GCK berekenen",
+    "category": "vaardigheden",
+    "layer": 2,
+    "kern": "Bereken gemiddelde variabele kosten en gemiddelde constante kosten uit totale kosten en productiehoeveelheid.",
+    "needs": [
+      "A08"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "aspects": [
+      "rekenen"
+    ],
+    "terms": [],
+    "procedure": [
+      "Splits totale kosten in constante kosten en variabele kosten.",
+      "Bereken GCK = TCK / Q.",
+      "Bereken GVK = TVK / Q.",
+      "Controleer dat GTK = GCK + GVK."
+    ],
+    "generator": "GEN_A50"
+  },
+  {
+    "id": "A51",
+    "name": "Overschot en tekort bij niet-evenwichtsprijs berekenen",
+    "category": "vaardigheden",
+    "layer": 2,
+    "kern": "Bepaal bij een opgelegde prijs of er een overschot of tekort ontstaat en bereken de omvang als verschil tussen Qa en Qv.",
+    "needs": [
+      "A06"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "aspects": [
+      "grafisch",
+      "rekenen"
+    ],
+    "terms": [],
+    "procedure": [
+      "Lees bij de opgelegde prijs de gevraagde hoeveelheid af.",
+      "Lees bij dezelfde prijs de aangeboden hoeveelheid af.",
+      "Vergelijk Qa en Qv.",
+      "Bereken het verschil en benoem overschot als Qa groter is dan Qv en tekort als Qv groter is dan Qa."
+    ],
+    "generator": "GEN_A51"
+  },
+  {
+    "id": "A52",
+    "name": "MK en MO uit tabelverschillen berekenen",
+    "category": "vaardigheden",
+    "layer": 2,
+    "kern": "Bereken marginale kosten en marginale opbrengsten uit opeenvolgende verschillen in een tabel.",
+    "needs": [
+      "A08"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "aspects": [
+      "rekenen"
+    ],
+    "terms": [],
+    "procedure": [
+      "Neem twee opeenvolgende productiehoeveelheden.",
+      "Bereken de verandering in totale kosten of totale opbrengsten.",
+      "Deel door de verandering in Q.",
+      "Noteer de uitkomst als MK of MO bij het bijbehorende productie-interval."
+    ],
+    "generator": "GEN_A52"
+  },
+  {
+    "id": "A53",
+    "name": "MK benaderen uit kwadratische TK-functie",
+    "category": "vaardigheden",
+    "layer": 3,
+    "kern": "Gebruik de precalculus-regel dat bij TK = a + bQ² de marginale kosten ongeveer gelijk zijn aan 2bQ.",
+    "needs": [
+      "A52"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "aspects": [
+      "rekenen"
+    ],
+    "terms": [],
+    "procedure": [
+      "Herken de kwadratische term bQ² in de TK-functie.",
+      "Neem twee keer de coefficient b.",
+      "Vermenigvuldig met Q.",
+      "Gebruik de uitkomst als benadering van MK bij die hoeveelheid."
+    ],
+    "generator": "GEN_A53"
+  },
+  {
+    "id": "A54",
+    "name": "Winstoptimum controleren met Q-1, Q en Q+1",
+    "category": "vaardigheden",
+    "layer": 3,
+    "kern": "Controleer een voorgesteld winstoptimum door totale winst bij de naburige hoeveelheden Q-1 en Q+1 te vergelijken.",
+    "needs": [
+      "A52"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "aspects": [
+      "rekenen"
+    ],
+    "terms": [],
+    "procedure": [
+      "Bereken totale winst bij Q.",
+      "Bereken totale winst bij Q-1.",
+      "Bereken totale winst bij Q+1.",
+      "Kies de hoeveelheid met de hoogste totale winst."
+    ],
+    "generator": "GEN_A54"
+  },
+  {
+    "id": "A55",
+    "name": "Gevraagde hoeveelheid voorspellen met elasticiteit",
+    "category": "vaardigheden",
+    "layer": 2,
+    "kern": "Bereken de procentuele verandering van de gevraagde hoeveelheid met prijselasticiteit en zet die om naar een nieuwe hoeveelheid.",
+    "needs": [
+      "A15",
+      "A38"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "aspects": [
+      "rekenen"
+    ],
+    "terms": [],
+    "procedure": [
+      "Bepaal de procentuele verandering van de prijs of andere driver.",
+      "Vermenigvuldig met de relevante elasticiteit.",
+      "Pas de procentuele verandering toe op de beginsituatie van Qv.",
+      "Controleer het teken: bij prijselasticiteit bewegen prijs en Qv meestal tegengesteld."
+    ],
+    "generator": "GEN_A55"
+  },
+  {
+    "id": "A56",
+    "name": "Korte zijde bepalen bij bindende prijs",
+    "category": "vaardigheden",
+    "layer": 3,
+    "kern": "Bepaal bij een bindende minimum- of maximumprijs welke marktzijde de verhandelde hoeveelheid beperkt.",
+    "needs": [
+      "A51",
+      "D34"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "aspects": [
+      "grafisch",
+      "rekenen"
+    ],
+    "terms": [],
+    "procedure": [
+      "Controleer of de opgelegde prijs bindend is.",
+      "Lees Qv en Qa af bij de opgelegde prijs.",
+      "Neem de kleinste van Qv en Qa als verhandelde hoeveelheid.",
+      "Benoem welke zijde de korte zijde is."
+    ],
+    "generator": "GEN_A56"
+  },
+  {
+    "id": "A57",
+    "name": "Afwentelingspercentage berekenen",
+    "category": "vaardigheden",
+    "layer": 3,
+    "kern": "Bereken welk percentage van een heffing of kostenstijging wordt doorberekend in de prijs.",
+    "needs": [
+      "A38",
+      "D34"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "aspects": [
+      "rekenen"
+    ],
+    "terms": [],
+    "procedure": [
+      "Bepaal de prijsstijging voor consumenten.",
+      "Bepaal de heffing of kostenstijging per eenheid.",
+      "Deel de prijsstijging door de heffing of kostenstijging.",
+      "Vermenigvuldig met 100 procent."
+    ],
+    "generator": "GEN_A57"
+  },
+  {
+    "id": "A58",
+    "name": "Subsidie-uitgaven berekenen",
+    "category": "vaardigheden",
+    "layer": 1,
+    "kern": "Bereken totale subsidie-uitgaven als subsidie per eenheid maal de nieuwe verhandelde hoeveelheid.",
+    "needs": [
+      "A04"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "aspects": [
+      "rekenen"
+    ],
+    "terms": [],
+    "procedure": [
+      "Bepaal de subsidie per eenheid.",
+      "Bepaal de nieuwe verhandelde hoeveelheid.",
+      "Vermenigvuldig subsidie per eenheid met Q nieuw.",
+      "Noteer de totale overheidsuitgaven met juiste eenheid."
+    ],
+    "generator": "GEN_A58"
+  },
+  {
+    "id": "A59",
+    "name": "Opkoopkosten bij minimumprijs berekenen",
+    "category": "vaardigheden",
+    "layer": 4,
+    "kern": "Bereken wat de overheid betaalt als zij het overschot bij een minimumprijs opkoopt.",
+    "needs": [
+      "A51",
+      "A56"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "aspects": [
+      "grafisch",
+      "rekenen"
+    ],
+    "terms": [],
+    "procedure": [
+      "Bepaal het overschot bij de minimumprijs.",
+      "Bepaal de prijs waartegen de overheid opkoopt.",
+      "Vermenigvuldig overschot met opkoopprijs.",
+      "Controleer of de vraagzijde niet als opkoophoeveelheid is gebruikt."
+    ],
+    "generator": "GEN_A59"
+  },
+  {
+    "id": "A60",
+    "name": "Vraagfunctie inverteren bij quotumhoeveelheid",
+    "category": "vaardigheden",
+    "layer": 1,
+    "kern": "Bereken welke prijs hoort bij een gegeven quotumhoeveelheid door de vraagfunctie om te schrijven.",
+    "needs": [
+      "A03"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "aspects": [
+      "rekenen",
+      "grafisch"
+    ],
+    "terms": [],
+    "procedure": [
+      "Neem de gevraagde hoeveelheid uit het quotum.",
+      "Vul deze hoeveelheid in de vraagfunctie in.",
+      "Los de vergelijking op naar P.",
+      "Interpreteer P als de maximale prijs die bij het quotum past."
+    ],
+    "generator": "GEN_A60"
+  },
+  {
     "id": "B01",
     "name": "Schaarste als kerneconomisch probleem",
     "category": "schaarste",
@@ -1560,7 +1956,7 @@
       "rekenen"
     ],
     "terms": [
-      "alternatieve kosten"
+      "alternatieve-kosten"
     ],
     "procedure": [
       "Benoem alle beschikbare alternatieven voor de middelen (tijd, geld, grondstoffen).",
@@ -1811,9 +2207,12 @@
     "id": "D10",
     "name": "Vraag/aanbod-verschuiving bij conjunctuurschok",
     "category": "markt",
-    "layer": 1,
+    "layer": 3,
     "kern": "Analyseer hoe een conjunctuurschok de collectieve vraaglijn of aanbodlijn verschuift en wat dit doet met evenwichtsprijs en -hoeveelheid.",
-    "needs": [],
+    "needs": [
+      "A06",
+      "D33"
+    ],
     "exam_codes": [
       "D1.24",
       "D1.4b"
@@ -1898,9 +2297,12 @@
     "id": "D13",
     "name": "Kostenstijging en aanbodverschuiving",
     "category": "markt",
-    "layer": 1,
+    "layer": 3,
     "kern": "Analyseer hoe een stijging van productiekosten (zoals loon per eenheid product) de collectieve aanbodlijn verschuift en doorwerkt in evenwichtsprijs.",
-    "needs": [],
+    "needs": [
+      "A06",
+      "D33"
+    ],
     "exam_codes": [
       "D1.12",
       "D1.24"
@@ -2178,9 +2580,12 @@
     "id": "D24",
     "name": "Drie voorwaarden prijsdiscriminatie",
     "category": "markt",
-    "layer": 1,
+    "layer": 2,
     "kern": "Leg uit de drie voorwaarden voor prijsdiscriminatie: voldoende marktmacht, scheidbare deelmarkten met verschillende prijselasticiteiten en betalingsbereidheid.",
-    "needs": [],
+    "needs": [
+      "D35",
+      "D15"
+    ],
     "exam_codes": [
       "D2.3"
     ],
@@ -2522,6 +2927,73 @@
     ]
   },
   {
+    "id": "D38",
+    "name": "GCK daalt door spreiding van constante kosten",
+    "category": "markt",
+    "layer": 3,
+    "kern": "Leg uit dat gemiddelde constante kosten dalen wanneer dezelfde constante kosten over meer producten worden verdeeld.",
+    "needs": [
+      "D02",
+      "A50"
+    ],
+    "mastery_target": "understand",
+    "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal",
+      "rekenen"
+    ],
+    "terms": [],
+    "pitfalls": [
+      "GCK verwarren met totale constante kosten: TCK blijven gelijk, GCK dalen bij hogere Q."
+    ]
+  },
+  {
+    "id": "D39",
+    "name": "Totale surplus als CS plus PS",
+    "category": "markt",
+    "layer": 6,
+    "kern": "Bereken totale surplus als de som van consumentensurplus en producentensurplus.",
+    "needs": [
+      "D28"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "aspects": [
+      "grafisch",
+      "rekenen"
+    ],
+    "terms": [],
+    "procedure": [
+      "Bepaal consumentensurplus.",
+      "Bepaal producentensurplus.",
+      "Tel beide bedragen op.",
+      "Controleer of beide surplusdelen dezelfde eenheid hebben."
+    ]
+  },
+  {
+    "id": "D40",
+    "name": "Surplusrekening bij marktinterventie controleren",
+    "category": "markt",
+    "layer": 7,
+    "kern": "Controleer of de veranderingen in surplus, overheidsinkomsten of -uitgaven en verloren surplus samen consistent zijn.",
+    "needs": [
+      "D39"
+    ],
+    "mastery_target": "analyze",
+    "prior_learning": "new_this_year",
+    "aspects": [
+      "grafisch",
+      "rekenen"
+    ],
+    "terms": [],
+    "procedure": [
+      "Noteer de beginsituatie voor consumentensurplus en producentensurplus.",
+      "Noteer de nieuwe surplusdelen na de interventie.",
+      "Voeg overheidsinkomsten of overheidsuitgaven toe.",
+      "Controleer of het verschil overeenkomt met het verloren of gewonnen surplus."
+    ]
+  },
+  {
     "id": "E01",
     "name": "Intergenerationele ruil",
     "category": "ruilen over tijd",
@@ -2625,7 +3097,7 @@
     "id": "E05",
     "name": "Pensioenkorting en intergenerationele solidariteit",
     "category": "ruilen over tijd",
-    "layer": 4,
+    "layer": 5,
     "kern": "Analyseer hoe een korting op pensioenuitkeringen de solidariteit tussen jongere premiebetalers en oudere ontvangers beïnvloedt.",
     "needs": [
       "E04",
@@ -2796,7 +3268,7 @@
     "id": "F05",
     "name": "Emissierechten als prikkel",
     "category": "samenwerken en onderhandelen",
-    "layer": 4,
+    "layer": 5,
     "kern": "Verhandelbare emissierechten zetten een prijs op vervuiling, waardoor bedrijven een prikkel krijgen om uitstoot te verminderen of schoner te produceren.",
     "needs": [
       "F07",
@@ -2818,7 +3290,7 @@
     "id": "F06",
     "name": "Heffing op externe effecten als innovatieprikkel",
     "category": "samenwerken en onderhandelen",
-    "layer": 2,
+    "layer": 3,
     "kern": "Een heffing op negatieve externe effecten verhoogt de private kosten van vervuilen en geeft bedrijven daarmee een prikkel om te investeren in schonere technologie.",
     "needs": [
       "F07"
@@ -2840,9 +3312,11 @@
     "id": "F07",
     "name": "Overproductie bij negatieve externe effecten",
     "category": "samenwerken en onderhandelen",
-    "layer": 1,
+    "layer": 2,
     "kern": "Bij negatieve externe effecten liggen de maatschappelijke kosten hoger dan de private kosten, waardoor de markt meer produceert dan maatschappelijk optimaal is.",
-    "needs": [],
+    "needs": [
+      "F16"
+    ],
     "exam_codes": [
       "F2.4"
     ],
@@ -2860,7 +3334,7 @@
     "id": "F08",
     "name": "Verloren surplus door negatieve externe effecten",
     "category": "samenwerken en onderhandelen",
-    "layer": 2,
+    "layer": 3,
     "kern": "Productie of consumptie voorbij het maatschappelijk optimum leidt tot verloren surplus: het verschil tussen maatschappelijke kosten en baten op de extra eenheden.",
     "needs": [
       "F07"
@@ -2905,7 +3379,7 @@
     "id": "F10",
     "name": "Internalisatie van externe effecten",
     "category": "samenwerken en onderhandelen",
-    "layer": 3,
+    "layer": 4,
     "kern": "Door de externe kosten of baten via heffing, subsidie of rechten in de prijs op te nemen, komt de marktuitkomst dichter bij het maatschappelijk optimum.",
     "needs": [
       "F07",
@@ -2929,7 +3403,7 @@
     "id": "F11",
     "name": "Lumpsum-subsidie bij positieve externe effecten",
     "category": "samenwerken en onderhandelen",
-    "layer": 4,
+    "layer": 5,
     "kern": "Een lumpsum-subsidie vergoedt de producent voor positieve externe effecten zonder de marginale beslissing te verstoren, zodat een maatschappelijk gewenste activiteit rendabel wordt.",
     "needs": [
       "F10"
@@ -3005,7 +3479,7 @@
     "id": "F14",
     "name": "Concentratie-externaliteiten analyseren",
     "category": "samenwerken en onderhandelen",
-    "layer": 3,
+    "layer": 4,
     "kern": "Analyseer hoe ruimtelijke of sectorale concentratie van economische activiteit negatieve externe effecten versterkt en wanneer ingrijpen maatschappelijk gewenst is.",
     "needs": [
       "F08"
@@ -3409,9 +3883,11 @@
     "id": "H01",
     "name": "AOW-leeftijd als houdbaarheidsinstrument",
     "category": "welvaart en groei",
-    "layer": 1,
+    "layer": 4,
     "kern": "Leg uit hoe een hogere AOW-leeftijd via premiegrondslag en uitkeringsduur de houdbaarheid van het AOW-stelsel verbetert bij vergrijzing.",
-    "needs": [],
+    "needs": [
+      "E04"
+    ],
     "exam_codes": [
       "H5.1"
     ],
@@ -3564,7 +4040,7 @@
     "id": "H07",
     "name": "Vergrijzing, spaarquote en rente",
     "category": "welvaart en groei",
-    "layer": 2,
+    "layer": 5,
     "kern": "Hogere sparende populatie vergroot kapitaalaanbod, wat de evenwichtsrente drukt.",
     "needs": [
       "H01"
@@ -3678,7 +4154,7 @@
     "id": "H12",
     "name": "Houdbaarheidssaldo",
     "category": "welvaart en groei",
-    "layer": 2,
+    "layer": 5,
     "kern": "Het houdbaarheidssaldo geeft aan of overheidsvoorzieningen op lange termijn betaalbaar blijven; stijgende grijze druk verslechtert het saldo.",
     "needs": [
       "H01"
@@ -3699,9 +4175,11 @@
     "id": "H13",
     "name": "Minimumuurloon: kostenkanaal naar concurrentiepositie",
     "category": "welvaart en groei",
-    "layer": 1,
+    "layer": 4,
     "kern": "Redeneer via het kostenkanaal hoe een hoger minimumuurloon de internationale concurrentiepositie kan verslechteren.",
-    "needs": [],
+    "needs": [
+      "D13"
+    ],
     "exam_codes": [
       "H1.1"
     ],
@@ -3797,7 +4275,7 @@
     "id": "H17",
     "name": "Arbeidsproductiviteit, werkgelegenheid en lange termijn",
     "category": "welvaart en groei",
-    "layer": 2,
+    "layer": 5,
     "kern": "Onderscheid het korte-termijn werkgelegenheidseffect van productiviteitsverhogende investeringen van het lange-termijn concurrentie-effect.",
     "needs": [
       "H13"
@@ -3973,7 +4451,9 @@
     "category": "welvaart en groei",
     "layer": 1,
     "kern": "Bereken wisselkoerseffecten van depreciatie en leg uit hoe deze reële inkomens beïnvloeden.",
-    "needs": [],
+    "needs": [
+      "A38"
+    ],
     "exam_codes": [
       "H1.1"
     ],
@@ -4050,7 +4530,7 @@
     "id": "H27",
     "name": "Productiefunctie Y = A·f(K, L) toepassen",
     "category": "welvaart en groei",
-    "layer": 3,
+    "layer": 6,
     "kern": "Pas de productiefunctie Y = A·f(K, L) toe: verklaar hoe groei in kapitaal K, arbeid L en totale factorproductiviteit A bijdraagt aan lange-termijn productie; herken afnemend grensproduct wanneer K óf L alleen toeneemt.",
     "needs": [
       "H17"
@@ -5180,9 +5660,11 @@
     "id": "L18",
     "name": "Voordelen en nadelen van vakbonden",
     "category": "arbeidsmarkt",
-    "layer": 1,
+    "layer": 5,
     "kern": "Noem voordelen van vakbonden voor werkenden (hogere lonen, betere voorwaarden, collectieve onderhandelingsmacht) en nadelen (hogere loonkosten voor werkgevers, lagere werkgelegenheid, insiders vs outsiders).",
-    "needs": [],
+    "needs": [
+      "L17"
+    ],
     "exam_codes": [
       "H5.1"
     ],

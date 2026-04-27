@@ -2,7 +2,7 @@
   "eval_set_id": "R7.3-retrieval-eval-set",
   "schema_version": 1,
   "generated_by": "build-scripts/rag/run-retrieval-evals.js",
-  "generated_on": "2026-04-27T11:54:09.384Z",
+  "generated_on": "2026-04-27T22:30:38.800Z",
   "source_files": [
     "references/data/rag/retrieval_eval_set.json",
     "references/data/rag/chunk_index.jsonl",
@@ -36,6 +36,7 @@
         "dead-units",
         "A2.4",
         "A2.5",
+        "A55",
         "D1.3",
         "D2.3",
         "D24",
@@ -48,8 +49,7 @@
         "A2.10",
         "A2.9",
         "A02",
-        "A2.12",
-        "A03"
+        "A2.12"
       ],
       "found_source_types": [
         "alignment_edge",
@@ -154,7 +154,7 @@
           "not_primary_evidence": true,
           "curriculum_authority": false,
           "allowed_for_public_citation": false,
-          "text_excerpt": "dead-units: status warn; issues 10; summary {\"live_units\":190,\"cited_live_units\":180,\"uncited_live_units\":10}"
+          "text_excerpt": "dead-units: status warn; issues 29; summary {\"live_units\":209,\"cited_live_units\":180,\"uncited_live_units\":29}"
         },
         {
           "chunk_id": "machine-unit:A15",
@@ -194,22 +194,22 @@
         "A20",
         "D1.21",
         "D30",
-        "ha-1022-a-25-1-o-545",
+        "ha-1022-a-25-1-o-566",
         "D3.1",
-        "ha-1022-a-25-1-o-546",
+        "ha-1022-a-25-1-o-567",
         "A15",
         "A17",
         "A2.4",
         "A2.5",
-        "ha-1022-a-25-2-o-573",
+        "ha-1022-a-25-2-o-594",
         "D01",
         "D03",
-        "ha-1022-a-25-2-o-574",
+        "ha-1022-a-25-2-o-595",
         "A16",
-        "vw-1022-a-24-2-o-697",
+        "vw-1022-a-24-2-o-718",
         "A2.16",
         "A2.17",
-        "vw-1022-a-24-2-o-698",
+        "vw-1022-a-24-2-o-719",
         "consumentensurplus",
         "A36",
         "D18",
@@ -257,7 +257,7 @@
           "text_excerpt": "producentensurplus producentensurplus. Het verschil tussen de marktprijs en de minimumprijs waarvoor aanbieders bereid zijn te leveren. In een vraag-aanbod-diagram is het de driehoek onder de marktprijs en boven de aanbodlijn. Formula: PS = ½ × (P* − P_min) × Q* (bij lineaire aanbod). Pitfall: Het aanbieders-surplus is niet hetzelfde als winst: PS zegt niets over de constante kosten (TCK). Winst = PS − TCK op de lange termijn.."
         },
         {
-          "chunk_id": "exam-question:ha-1022-a-25-1-o-545",
+          "chunk_id": "exam-question:ha-1022-a-25-1-o-566",
           "score": 26,
           "source_path": "references/external/exam-questions.json",
           "source_type": "exam_question",
@@ -266,7 +266,7 @@
             "A20",
             "D1.21",
             "D30",
-            "ha-1022-a-25-1-o-545"
+            "ha-1022-a-25-1-o-566"
           ],
           "evidence_ids": [],
           "edge_statuses": [],
@@ -276,10 +276,10 @@
           "not_primary_evidence": false,
           "curriculum_authority": true,
           "allowed_for_public_citation": true,
-          "text_excerpt": "ha-1022-a-25-1-o-545. Bereken het resultaat per dag van Hopi Bon. De welvaart die ontstaat op deze fietsverhuurmarkt kan worden gemeten aan de hand van het consumenten- en producentensurplus. Door een prijsverlaging stijgt de welvaart. Gebruik bron 1. Required skills: A20, D30. Exam codes: D1.21."
+          "text_excerpt": "ha-1022-a-25-1-o-566. Bereken het resultaat per dag van Hopi Bon. De welvaart die ontstaat op deze fietsverhuurmarkt kan worden gemeten aan de hand van het consumenten- en producentensurplus. Door een prijsverlaging stijgt de welvaart. Gebruik bron 1. Required skills: A20, D30. Exam codes: D1.21."
         },
         {
-          "chunk_id": "exam-question:ha-1022-a-25-1-o-546",
+          "chunk_id": "exam-question:ha-1022-a-25-1-o-567",
           "score": 26,
           "source_path": "references/external/exam-questions.json",
           "source_type": "exam_question",
@@ -287,7 +287,7 @@
           "entity_ids": [
             "D28",
             "D3.1",
-            "ha-1022-a-25-1-o-546"
+            "ha-1022-a-25-1-o-567"
           ],
           "evidence_ids": [],
           "edge_statuses": [],
@@ -297,10 +297,10 @@
           "not_primary_evidence": false,
           "curriculum_authority": true,
           "allowed_for_public_citation": true,
-          "text_excerpt": "ha-1022-a-25-1-o-546. Leg het welvaartseffect uit als Hopi Bon een lagere prijs rekent dan de prijs bij maximale winst. Doe het als volgt: Leg het effect van een lagere prijs uit op het consumentensurplus. Leg het effect van een lagere prijs uit op het dalende producentensurplus. Leg het effect van een lagere prijs uit op het stijgende producentensurplus. Hopi Bon wil starten met een huurprijs van $ 16, om daarna deze te verhogen naar $ 24. De directeur onderzoekt of het starten met een lage pri"
+          "text_excerpt": "ha-1022-a-25-1-o-567. Leg het welvaartseffect uit als Hopi Bon een lagere prijs rekent dan de prijs bij maximale winst. Doe het als volgt: Leg het effect van een lagere prijs uit op het consumentensurplus. Leg het effect van een lagere prijs uit op het dalende producentensurplus. Leg het effect van een lagere prijs uit op het stijgende producentensurplus. Hopi Bon wil starten met een huurprijs van $ 16, om daarna deze te verhogen naar $ 24. De directeur onderzoekt of het starten met een lage pri"
         },
         {
-          "chunk_id": "exam-question:ha-1022-a-25-2-o-573",
+          "chunk_id": "exam-question:ha-1022-a-25-2-o-594",
           "score": 26,
           "source_path": "references/external/exam-questions.json",
           "source_type": "exam_question",
@@ -310,7 +310,7 @@
             "A17",
             "A2.4",
             "A2.5",
-            "ha-1022-a-25-2-o-573"
+            "ha-1022-a-25-2-o-594"
           ],
           "evidence_ids": [],
           "edge_statuses": [],
@@ -320,10 +320,10 @@
           "not_primary_evidence": false,
           "curriculum_authority": true,
           "allowed_for_public_citation": true,
-          "text_excerpt": "ha-1022-a-25-2-o-573. Laat met een berekening zien dat de doelstelling van de Mexicaanse overheid wordt bereikt. noot 1 een pond = 500 gram De invoering van de suikeraccijns heeft gevolgen voor zowel het consumentensurplus als het producentensurplus op de markt van suiker (zie bron 2). Gebruik bron 2. Required skills: A15, A17. Exam codes: A2.4, A2.5."
+          "text_excerpt": "ha-1022-a-25-2-o-594. Laat met een berekening zien dat de doelstelling van de Mexicaanse overheid wordt bereikt. noot 1 een pond = 500 gram De invoering van de suikeraccijns heeft gevolgen voor zowel het consumentensurplus als het producentensurplus op de markt van suiker (zie bron 2). Gebruik bron 2. Required skills: A15, A17. Exam codes: A2.4, A2.5."
         },
         {
-          "chunk_id": "exam-question:ha-1022-a-25-2-o-574",
+          "chunk_id": "exam-question:ha-1022-a-25-2-o-595",
           "score": 26,
           "source_path": "references/external/exam-questions.json",
           "source_type": "exam_question",
@@ -332,7 +332,7 @@
             "D01",
             "D03",
             "D3.1",
-            "ha-1022-a-25-2-o-574"
+            "ha-1022-a-25-2-o-595"
           ],
           "evidence_ids": [],
           "edge_statuses": [],
@@ -342,7 +342,7 @@
           "not_primary_evidence": false,
           "curriculum_authority": true,
           "allowed_for_public_citation": true,
-          "text_excerpt": "ha-1022-a-25-2-o-574. Geef met letters het oppervlak aan dat het consumenten- en producentensurplus weergeeft en het oppervlak dat de accijnsopbrengst weergeeft na het heffen van de suikeraccijns. Neem daarvoor onderstaande tabel over op het antwoordblad en vul aan op de stippellijnen. oppervlak consumentensurplus ……….. oppervlak producentensurplus ……….. oppervlak accijnsopbrengst ……….. Required skills: D03, D01. Exam codes: D3.1."
+          "text_excerpt": "ha-1022-a-25-2-o-595. Geef met letters het oppervlak aan dat het consumenten- en producentensurplus weergeeft en het oppervlak dat de accijnsopbrengst weergeeft na het heffen van de suikeraccijns. Neem daarvoor onderstaande tabel over op het antwoordblad en vul aan op de stippellijnen. oppervlak consumentensurplus ……….. oppervlak producentensurplus ……….. oppervlak accijnsopbrengst ……….. Required skills: D03, D01. Exam codes: D3.1."
         }
       ],
       "notes": "Checks whether exam evidence and the surplus unit/term surface for producer-surplus search."
@@ -398,7 +398,7 @@
           "not_primary_evidence": true,
           "curriculum_authority": false,
           "allowed_for_public_citation": false,
-          "text_excerpt": "terms-coverage: status warn; issues 44; summary {\"live_units\":190,\"units_without_terms\":44}"
+          "text_excerpt": "terms-coverage: status warn; issues 63; summary {\"live_units\":209,\"units_without_terms\":63}"
         },
         {
           "chunk_id": "quality-report:dead-units.json",
@@ -417,7 +417,7 @@
           "not_primary_evidence": true,
           "curriculum_authority": false,
           "allowed_for_public_citation": false,
-          "text_excerpt": "dead-units: status warn; issues 10; summary {\"live_units\":190,\"cited_live_units\":180,\"uncited_live_units\":10}"
+          "text_excerpt": "dead-units: status warn; issues 29; summary {\"live_units\":209,\"cited_live_units\":180,\"uncited_live_units\":29}"
         },
         {
           "chunk_id": "quality-report:terminology-drift.json",
@@ -436,7 +436,7 @@
           "not_primary_evidence": true,
           "curriculum_authority": false,
           "allowed_for_public_citation": false,
-          "text_excerpt": "terminology-drift: status fail; issues 2; summary {\"term_registry_entries\":225,\"unit_term_citations\":265}"
+          "text_excerpt": "terminology-drift: status pass; issues 0; summary {\"term_registry_entries\":227,\"unit_term_citations\":265}"
         },
         {
           "chunk_id": "quality-report:unit-term-slug-migration.json",
@@ -474,7 +474,7 @@
           "not_primary_evidence": true,
           "curriculum_authority": false,
           "allowed_for_public_citation": false,
-          "text_excerpt": "aspects-coverage: status pass; issues 0; summary {\"live_units\":190,\"units_without_aspects\":0}"
+          "text_excerpt": "aspects-coverage: status pass; issues 0; summary {\"live_units\":209,\"units_without_aspects\":0}"
         }
       ],
       "notes": "This is a health-report question; generated reports may guide review but must remain non-authoritative."
@@ -557,7 +557,7 @@
           "not_primary_evidence": true,
           "curriculum_authority": false,
           "allowed_for_public_citation": false,
-          "text_excerpt": "needs-coverage: status warn; issues 48; summary {\"live_units\":190,\"empty_needs\":48}"
+          "text_excerpt": "needs-coverage: status warn; issues 39; summary {\"live_units\":209,\"empty_needs\":39}"
         },
         {
           "chunk_id": "quality-report:dead-units.json",
@@ -576,7 +576,7 @@
           "not_primary_evidence": true,
           "curriculum_authority": false,
           "allowed_for_public_citation": false,
-          "text_excerpt": "dead-units: status warn; issues 10; summary {\"live_units\":190,\"cited_live_units\":180,\"uncited_live_units\":10}"
+          "text_excerpt": "dead-units: status warn; issues 29; summary {\"live_units\":209,\"cited_live_units\":180,\"uncited_live_units\":29}"
         },
         {
           "chunk_id": "machine-unit:H16",
@@ -795,20 +795,15 @@
         "H2.2",
         "afnemende-meeropbrengsten",
         "aftrekposten-en-bijtellingen",
+        "B02",
+        "alternatieve-kosten",
         "I01",
         "I02",
         "I2.1",
         "anticyclisch",
         "I3.8",
         "appreciatie",
-        "arbeid",
-        "H23",
-        "H5.1",
-        "I04",
-        "I11",
-        "L05",
-        "L10",
-        "arbeidsaanbod"
+        "arbeid"
       ],
       "found_source_types": [
         "evidence_anchor",
@@ -892,7 +887,7 @@
           "not_primary_evidence": true,
           "curriculum_authority": false,
           "allowed_for_public_citation": false,
-          "text_excerpt": "begrippen-coverage: status warn; issues 130; summary {\"terms\":225,\"terms_without_teaching_units\":130}"
+          "text_excerpt": "begrippen-coverage: status warn; issues 130; summary {\"terms\":227,\"terms_without_teaching_units\":130}"
         },
         {
           "chunk_id": "authored-reference:references-authored-skill-categories.md",
@@ -983,7 +978,7 @@
           "not_primary_evidence": true,
           "curriculum_authority": false,
           "allowed_for_public_citation": false,
-          "text_excerpt": "dead-units: status warn; issues 10; summary {\"live_units\":190,\"cited_live_units\":180,\"uncited_live_units\":10}"
+          "text_excerpt": "dead-units: status warn; issues 29; summary {\"live_units\":209,\"cited_live_units\":180,\"uncited_live_units\":29}"
         },
         {
           "chunk_id": "quality-report:dag-integrity.json",
@@ -1002,7 +997,7 @@
           "not_primary_evidence": true,
           "curriculum_authority": false,
           "allowed_for_public_citation": false,
-          "text_excerpt": "dag-integrity: status pass; issues 0; summary {\"units\":192,\"live_units\":190,\"deprecated_units\":2}"
+          "text_excerpt": "dag-integrity: status pass; issues 0; summary {\"units\":211,\"live_units\":209,\"deprecated_units\":2}"
         },
         {
           "chunk_id": "quality-report:unresolved-refs.json",
@@ -1040,7 +1035,7 @@
           "not_primary_evidence": true,
           "curriculum_authority": false,
           "allowed_for_public_citation": false,
-          "text_excerpt": "aspects-coverage: status pass; issues 0; summary {\"live_units\":190,\"units_without_aspects\":0}"
+          "text_excerpt": "aspects-coverage: status pass; issues 0; summary {\"live_units\":209,\"units_without_aspects\":0}"
         },
         {
           "chunk_id": "quality-report:begrippen-coverage.json",
@@ -1059,7 +1054,7 @@
           "not_primary_evidence": true,
           "curriculum_authority": false,
           "allowed_for_public_citation": false,
-          "text_excerpt": "begrippen-coverage: status warn; issues 130; summary {\"terms\":225,\"terms_without_teaching_units\":130}"
+          "text_excerpt": "begrippen-coverage: status warn; issues 130; summary {\"terms\":227,\"terms_without_teaching_units\":130}"
         }
       ],
       "notes": "Checks deprecated/citation health surfacing as diagnostics."
@@ -1527,7 +1522,7 @@
           "not_primary_evidence": true,
           "curriculum_authority": false,
           "allowed_for_public_citation": false,
-          "text_excerpt": "aspects-coverage: status pass; issues 0; summary {\"live_units\":190,\"units_without_aspects\":0}"
+          "text_excerpt": "aspects-coverage: status pass; issues 0; summary {\"live_units\":209,\"units_without_aspects\":0}"
         },
         {
           "chunk_id": "quality-report:begrippen-coverage.json",
@@ -1546,7 +1541,7 @@
           "not_primary_evidence": true,
           "curriculum_authority": false,
           "allowed_for_public_citation": false,
-          "text_excerpt": "begrippen-coverage: status warn; issues 130; summary {\"terms\":225,\"terms_without_teaching_units\":130}"
+          "text_excerpt": "begrippen-coverage: status warn; issues 130; summary {\"terms\":227,\"terms_without_teaching_units\":130}"
         },
         {
           "chunk_id": "quality-report:blueprint-flag-triage.json",

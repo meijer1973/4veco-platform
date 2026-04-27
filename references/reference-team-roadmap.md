@@ -79,7 +79,6 @@ Open items are listed first; completed items are kept below them.
 
 | Sprint | Name | Completed | Current State |
 |--------|------|-----------|---------------|
-| R4.5 | Apply Reviewed Micro-Unit Corrections | no | Blocked on human review of R4.4 packet. Apply only reviewed packet items through CLI with mutation logs and validation. |
 | R9.1 | Owned Source Registry | no | Planned after R4.4/R4.5. Register owned book/source material as source surfaces so RAG can retrieve from actual lesson and blueprint material without treating exposition as authority. |
 | R9.2 | Content Graph Projection | no | Planned next after R9.1. Project owned content to the reference graph using projection edges, not evidence edges. |
 | R7.6 | RAG Quality Hardening | no | Planned. Close R7.4 follow-ups, expand retrieval eval coverage, backfill evidence anchors, and improve approved/pending/diagnostic labels. |
@@ -99,6 +98,7 @@ Open items are listed first; completed items are kept below them.
 | R5.1 | Evidence-Anchor Layer | yes | Completed. Created the first governed evidence-anchor layer: source-ranking policy, 15 anchors, 13 claims, schemas, validator, and status reports. |
 | R4.3 | Blueprint Flag Triage | yes | Completed. Triaged all 84 current raw target-exercise missing-unit flags into a curated backlog: 68 still needed, 4 existing-unit match candidates, 1 duplicate, and 11 deferred. |
 | R4.4 | Micro-Teaching Unit Quality Packet | yes | Completed. Created non-mutating packet for 48 empty-needs units, 44 missing term-link units, 2 unresolved term strings, and 84 blueprint flags; R4.5 requires human review before mutation. |
+| R4.5 | Apply Reviewed Micro-Unit Corrections | yes | Completed. Applied the bounded human-reviewed mutation set through CLI: 2 B-domain terms, 13 dependency edges, 19 micro-units, regenerated reports/RAG surfaces, and preserved held design-review items. |
 | R4.2 | Exam-Question Extraction Gap Closure | yes | Completed. Produced a non-mutating gap report and patch queue for 27 exam-question records with missing required-skill annotations; protected references were not changed. |
 | R4.1 | Unit-Term Slug Migration | yes | Completed. Migrated safe unit `terms` values to canonical `begrippen.json` slug IDs through a validated migration script; left `alternatieve kosten` and `schaarste` unresolved for later term-registry review. |
 | R3.2 | Apply Reviewed Empty-Needs Corrections | yes | Completed. Applied the bounded R2.4 mutation-review set through CLI: 15 dependency edges and 6 `underbouw_assumed` classifications. No D04, rejected market-graph, held A-domain, L09->L03, or H13 mutations were applied. |
@@ -250,6 +250,8 @@ Required work:
 Required output: CLI mutation log, regenerated reports, and a reviewed result report.
 
 Stop condition: no mutation is allowed unless it is explicitly approved from the R4.4 packet or a follow-up human decision record.
+
+Completion: completed on 2026-04-28. Human decision recorded at `reports/review-gates/GATE-R4-micro-unit-quality/R4.5-human-review-decision.md` and `.json`. Mutation log recorded at `reports/review-gates/GATE-R4-micro-unit-quality/R4.5-mutation-log.md` and `.json`. R4.5 added `schaarste` and `alternatieve-kosten`, updated `B02` to the canonical term slug, applied 13 approved dependency edges, and minted 19 approved Book 1/2 foundation micro-units through CLI only. Held items (`A42`, `D32`, `D02`, `G11`, `H16`, `H21`, `A11`/`3.1.2`, and `F16` terminology) remain future review work.
 
 ### R5.1 Evidence-Anchor Layer
 
@@ -542,17 +544,17 @@ Do not proceed to diagnostics, adaptive routing, student-facing AI, automatic se
 
 ## Current Catalog State
 
-Last regenerated: 2026-04-27
+Last regenerated: 2026-04-28
 
 ### Machine Unit Catalog
 
-- `192` total units.
-- `190` live units.
+- `211` total units.
+- `209` live units.
 - `2` deprecated units: `D23`, `H26`.
 - Domain spread, live units:
-  - `A`: 44
+  - `A`: 60
   - `B`: 2
-  - `D`: 36
+  - `D`: 39
   - `E`: 7
   - `F`: 18
   - `G`: 12
@@ -560,36 +562,36 @@ Last regenerated: 2026-04-27
   - `I`: 20
   - `L`: 21
 - Mastery spread, live units:
-  - `understand`: 89
-  - `apply`: 80
-  - `analyze`: 18
+  - `understand`: 90
+  - `apply`: 97
+  - `analyze`: 19
   - `evaluate`: 3
 - Dependency graph:
-  - `214` live prerequisite edges.
-  - `48` live units still have no `needs` edges.
+  - `251` live prerequisite edges.
+  - `39` live units still have no `needs` edges.
 - Coverage:
-  - `188/190` live units have exam-code links.
-  - `146/190` live units have term links.
-  - `101/101` apply/analyze/evaluate live units have procedures.
+  - `188/209` live units have exam-code links.
+  - `146/209` live units have term links.
+  - `119/119` apply/analyze/evaluate live units have procedures.
 
 ### Begrippen Registry
 
-- `225` live terms.
-- `225/225` have definitions.
-- `225/225` have examples.
-- `60/225` have pitfall text.
-- `95/225` are reverse-linked to teaching units.
-- `34/225` carry formulas.
+- `227` live terms.
+- `227/227` have definitions.
+- `227/227` have examples.
+- `62/227` have pitfall text.
+- `97/227` are reverse-linked to teaching units.
+- `34/227` carry formulas.
 
-Main risk: two unit term strings remain unresolved against `begrippen.json`: `alternatieve kosten` and `schaarste`. They are intentionally left for later term-registry review rather than silently creating new slugs.
+Main risk: the former unresolved term strings `alternatieve kosten` and `schaarste` are resolved. The current quality risk is that many newly minted A-domain foundation units are intentionally procedure/instrument units without term links; a later QC rule should distinguish true missing term links from procedure-only exemptions.
 
 ### Reports
 
 Current generated reports:
 
 - `reports/dag-integrity.md`: pass.
-- `reports/needs-coverage.md`: informational backlog, `48` live units without `needs`.
-- `reports/terms-coverage.md`: informational backlog, `44` live units without terms.
+- `reports/needs-coverage.md`: informational backlog, `39` live units without `needs`.
+- `reports/terms-coverage.md`: informational backlog, `63` live units without terms.
 - `reports/terminology-drift.md`: pass against machine-registry-first term validation.
 - `reports/exam-question-extraction-gaps.md`: patch queue, `27` exam-question records need required-skill review; `19` also need exam-code review.
 - `reports/blueprint-flag-triage.md`: curated backlog, `84` raw target-exercise flags triaged.
@@ -668,7 +670,7 @@ Sprints:
 - `R4.2` completed: exam-question extraction gap closure.
 - `R4.3` completed: blueprint flag triage.
 - `R4.4` completed: micro-teaching-unit quality packet.
-- `R4.5` planned: apply reviewed micro-unit corrections through CLI after human review.
+- `R4.5` completed: reviewed micro-unit corrections applied through CLI.
 
 ### Phase R5: Evidence Anchors And Alignment Graph
 
@@ -785,7 +787,9 @@ Do not invert this order.
 
 ## Immediate Next Sprint
 
-Next decision: review the `R4.4 Micro-Teaching Unit Quality Packet`. Proceed to `R4.5 Apply Reviewed Micro-Unit Corrections` only after human review authorizes a bounded mutation set. If R4.5 is held, return to `R9.1 Owned Source Registry`.
+Next sprint: `R9.1 Owned Source Registry`.
+
+R4.5 has closed the bounded micro-unit mutation lane. The next highest-value data-quality step is to register owned lesson/book/blueprint sources so RAG can retrieve active course material without weakening the evidence hierarchy.
 
 Do not start diagnostics, adaptive routing, student-facing AI, automatic lesson sequencing, mastery decisions, summative decisions, teacher cockpit deployment, game/simulation product mapping, or continuous-improvement claims from this roadmap.
 

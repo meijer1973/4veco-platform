@@ -1,7 +1,7 @@
 {
   "report_id": "unresolved-refs",
   "generated_by": "build-scripts/reports/generate-all.js",
-  "generated_on": "2026-04-27T10:09:10.084Z",
+  "generated_on": "2026-04-27T22:30:20.557Z",
   "source_files": [
     "references/machine/micro-teaching-units.json",
     "references/",
@@ -201,7 +201,7 @@
       "severity": "low",
       "affected_entity": "D23",
       "category": "deprecated_reference",
-      "evidence_path": "knowledge/current-state-detailed-analysis.md",
+      "evidence_path": "knowledge/old/current-state-detailed-analysis.md",
       "next_action": "Remove or migrate deprecated unit citation.",
       "proof_required_to_close": "No deprecated unit ID is cited from active docs/reports."
     },
@@ -210,7 +210,7 @@
       "severity": "low",
       "affected_entity": "H26",
       "category": "deprecated_reference",
-      "evidence_path": "knowledge/current-state-detailed-analysis.md",
+      "evidence_path": "knowledge/old/current-state-detailed-analysis.md",
       "next_action": "Remove or migrate deprecated unit citation.",
       "proof_required_to_close": "No deprecated unit ID is cited from active docs/reports."
     },
@@ -219,7 +219,7 @@
       "severity": "low",
       "affected_entity": "D23",
       "category": "deprecated_reference",
-      "evidence_path": "knowledge/reference-report-sanity.md",
+      "evidence_path": "knowledge/old/reference-report-sanity.md",
       "next_action": "Remove or migrate deprecated unit citation.",
       "proof_required_to_close": "No deprecated unit ID is cited from active docs/reports."
     },
@@ -228,7 +228,7 @@
       "severity": "low",
       "affected_entity": "D23",
       "category": "deprecated_reference",
-      "evidence_path": "knowledge/three-month-roadmap.md",
+      "evidence_path": "knowledge/old/three-month-roadmap.md",
       "next_action": "Remove or migrate deprecated unit citation.",
       "proof_required_to_close": "No deprecated unit ID is cited from active docs/reports."
     }

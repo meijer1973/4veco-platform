@@ -1,6 +1,6 @@
 {
   "generated_by": "build-scripts/reports/generate-all.js",
-  "generated_on": "2026-04-27T10:09:10.094Z",
+  "generated_on": "2026-04-27T22:30:20.570Z",
   "report_count": 10,
   "reports": [
     {
@@ -9,15 +9,15 @@
       "issue_count": 0,
       "json_path": "reports/json/dag-integrity.json",
       "markdown_path": "reports/markdown/dag-integrity.md",
-      "content_hash": "83edc19c333ee5db900599391b7d26d0ca332d3e63dad643f943c96fd9565a6b"
+      "content_hash": "f5d90bdd6babc0334a6d211cd559b3aed35499087b99fdab47e20f3acaad6f38"
     },
     {
       "report_id": "terminology-drift",
-      "status": "fail",
-      "issue_count": 2,
+      "status": "pass",
+      "issue_count": 0,
       "json_path": "reports/json/terminology-drift.json",
       "markdown_path": "reports/markdown/terminology-drift.md",
-      "content_hash": "8c0f0e639a1039dc53c14716bdad77e5fa238ec25e1f9e716b537a5c13ab7448"
+      "content_hash": "f697fc785db902d39a7ecb09eab1249519b639c596f823b9018a28ce01f426a4"
     },
     {
       "report_id": "unresolved-refs",
@@ -25,23 +25,23 @@
       "issue_count": 24,
       "json_path": "reports/json/unresolved-refs.json",
       "markdown_path": "reports/markdown/unresolved-refs.md",
-      "content_hash": "e858f8e49a912d3a5958728703bbc958a39e08c5fc3217de177b21be2537e97c"
+      "content_hash": "7b0dd5283145857f65ba50475db2e328852dd87eacd6990071335e690fb94a8f"
     },
     {
       "report_id": "needs-coverage",
       "status": "warn",
-      "issue_count": 48,
+      "issue_count": 39,
       "json_path": "reports/json/needs-coverage.json",
       "markdown_path": "reports/markdown/needs-coverage.md",
-      "content_hash": "1f790d94c03817d4832774627a9b6119d87fbab16e66b9e6bbd5df06f4c47831"
+      "content_hash": "6afb8091401b470a1e55b4d57b6f2b94e127cc593abcb43fe194726e4f86ebd8"
     },
     {
       "report_id": "terms-coverage",
       "status": "warn",
-      "issue_count": 44,
+      "issue_count": 63,
       "json_path": "reports/json/terms-coverage.json",
       "markdown_path": "reports/markdown/terms-coverage.md",
-      "content_hash": "d598346f43b8503ca3e98d3994c18a26636f6bb33c7c5323dc6e0964a5a4309b"
+      "content_hash": "fff12ccea54285ac5206bb665da9efac42942d913748409c666f1961601f937f"
     },
     {
       "report_id": "procedure-coverage",
@@ -49,7 +49,7 @@
       "issue_count": 0,
       "json_path": "reports/json/procedure-coverage.json",
       "markdown_path": "reports/markdown/procedure-coverage.md",
-      "content_hash": "2c28b2d7916daf0a7c860f1d6cc4a16e83cb5e136b9f48b3add0061a18db6877"
+      "content_hash": "136955e166579bf90109e8f1042507948c736a6b89522332ab374b9ec273f3fc"
     },
     {
       "report_id": "aspects-coverage",
@@ -57,15 +57,15 @@
       "issue_count": 0,
       "json_path": "reports/json/aspects-coverage.json",
       "markdown_path": "reports/markdown/aspects-coverage.md",
-      "content_hash": "0cc6df3a54f23b2a1fc26236eca431f0cff38eaee2142407bcce75bb162a15b5"
+      "content_hash": "4d5b3b354fcc8c8cc8210e802af76b3a194dec182b6cca7995a2467c074941c9"
     },
     {
       "report_id": "dead-units",
       "status": "warn",
-      "issue_count": 10,
+      "issue_count": 29,
       "json_path": "reports/json/dead-units.json",
       "markdown_path": "reports/markdown/dead-units.md",
-      "content_hash": "31b71d1112bd6d42c6d60ead5adcf1be9b8063b98cab22a75dff387afe96d2c6"
+      "content_hash": "46020b28a3b7c6d5e0d3e6e389b9afe0624b0e69a71b8c48791a5440b15f7292"
     },
     {
       "report_id": "begrippen-coverage",
@@ -73,7 +73,7 @@
       "issue_count": 130,
       "json_path": "reports/json/begrippen-coverage.json",
       "markdown_path": "reports/markdown/begrippen-coverage.md",
-      "content_hash": "3aeec7ef7f1991b0c67140f9d19bee8c6fc3fcdb2244f80ef2c96660c2d474c5"
+      "content_hash": "ce7754137bb68e8c96289ec88a9e8ea30a67ed560d1baf8499ee32265d5443bd"
     },
     {
       "report_id": "empty-needs-audit-summary",
@@ -81,7 +81,7 @@
       "issue_count": 52,
       "json_path": "reports/json/empty-needs-audit-summary.json",
       "markdown_path": "reports/markdown/empty-needs-audit-summary.md",
-      "content_hash": "14cd706358399f8169321d2f9d0b2943fe133325a5788d55858bb952282e9a94"
+      "content_hash": "8b774b3acf46464d2f13dc87c0f05ce0939f5973ad09c161fba10bf8801334b7"
     }
   ]
 }

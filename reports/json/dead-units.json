@@ -1,7 +1,7 @@
 {
   "report_id": "dead-units",
   "generated_by": "build-scripts/reports/generate-all.js",
-  "generated_on": "2026-04-27T10:09:10.088Z",
+  "generated_on": "2026-04-27T22:30:20.561Z",
   "source_files": [
     "references/machine/micro-teaching-units.json",
     "references/external/exam-questions.json",
@@ -10,9 +10,9 @@
   "schema_version": 1,
   "status": "warn",
   "summary": {
-    "live_units": 190,
+    "live_units": 209,
     "cited_live_units": 180,
-    "uncited_live_units": 10
+    "uncited_live_units": 29
   },
   "issues": [
     {
@@ -45,7 +45,7 @@
     {
       "issue_id": "dead-units-0004",
       "severity": "low",
-      "affected_entity": "G12",
+      "affected_entity": "A45",
       "category": "uncited_live_unit",
       "evidence_path": "references/machine/micro-teaching-units.json",
       "next_action": "Check whether this unit is future-needed, should be cited, or should be deprecated.",
@@ -54,7 +54,7 @@
     {
       "issue_id": "dead-units-0005",
       "severity": "low",
-      "affected_entity": "H27",
+      "affected_entity": "A46",
       "category": "uncited_live_unit",
       "evidence_path": "references/machine/micro-teaching-units.json",
       "next_action": "Check whether this unit is future-needed, should be cited, or should be deprecated.",
@@ -63,7 +63,7 @@
     {
       "issue_id": "dead-units-0006",
       "severity": "low",
-      "affected_entity": "H28",
+      "affected_entity": "A47",
       "category": "uncited_live_unit",
       "evidence_path": "references/machine/micro-teaching-units.json",
       "next_action": "Check whether this unit is future-needed, should be cited, or should be deprecated.",
@@ -72,7 +72,7 @@
     {
       "issue_id": "dead-units-0007",
       "severity": "low",
-      "affected_entity": "H29",
+      "affected_entity": "A48",
       "category": "uncited_live_unit",
       "evidence_path": "references/machine/micro-teaching-units.json",
       "next_action": "Check whether this unit is future-needed, should be cited, or should be deprecated.",
@@ -81,7 +81,7 @@
     {
       "issue_id": "dead-units-0008",
       "severity": "low",
-      "affected_entity": "H30",
+      "affected_entity": "A49",
       "category": "uncited_live_unit",
       "evidence_path": "references/machine/micro-teaching-units.json",
       "next_action": "Check whether this unit is future-needed, should be cited, or should be deprecated.",
@@ -90,7 +90,7 @@
     {
       "issue_id": "dead-units-0009",
       "severity": "low",
-      "affected_entity": "H31",
+      "affected_entity": "A50",
       "category": "uncited_live_unit",
       "evidence_path": "references/machine/micro-teaching-units.json",
       "next_action": "Check whether this unit is future-needed, should be cited, or should be deprecated.",
@@ -98,6 +98,177 @@
     },
     {
       "issue_id": "dead-units-0010",
+      "severity": "low",
+      "affected_entity": "A51",
+      "category": "uncited_live_unit",
+      "evidence_path": "references/machine/micro-teaching-units.json",
+      "next_action": "Check whether this unit is future-needed, should be cited, or should be deprecated.",
+      "proof_required_to_close": "Unit is cited by exam/target evidence or explicitly marked intentionally uncited."
+    },
+    {
+      "issue_id": "dead-units-0011",
+      "severity": "low",
+      "affected_entity": "A52",
+      "category": "uncited_live_unit",
+      "evidence_path": "references/machine/micro-teaching-units.json",
+      "next_action": "Check whether this unit is future-needed, should be cited, or should be deprecated.",
+      "proof_required_to_close": "Unit is cited by exam/target evidence or explicitly marked intentionally uncited."
+    },
+    {
+      "issue_id": "dead-units-0012",
+      "severity": "low",
+      "affected_entity": "A53",
+      "category": "uncited_live_unit",
+      "evidence_path": "references/machine/micro-teaching-units.json",
+      "next_action": "Check whether this unit is future-needed, should be cited, or should be deprecated.",
+      "proof_required_to_close": "Unit is cited by exam/target evidence or explicitly marked intentionally uncited."
+    },
+    {
+      "issue_id": "dead-units-0013",
+      "severity": "low",
+      "affected_entity": "A54",
+      "category": "uncited_live_unit",
+      "evidence_path": "references/machine/micro-teaching-units.json",
+      "next_action": "Check whether this unit is future-needed, should be cited, or should be deprecated.",
+      "proof_required_to_close": "Unit is cited by exam/target evidence or explicitly marked intentionally uncited."
+    },
+    {
+      "issue_id": "dead-units-0014",
+      "severity": "low",
+      "affected_entity": "A55",
+      "category": "uncited_live_unit",
+      "evidence_path": "references/machine/micro-teaching-units.json",
+      "next_action": "Check whether this unit is future-needed, should be cited, or should be deprecated.",
+      "proof_required_to_close": "Unit is cited by exam/target evidence or explicitly marked intentionally uncited."
+    },
+    {
+      "issue_id": "dead-units-0015",
+      "severity": "low",
+      "affected_entity": "A56",
+      "category": "uncited_live_unit",
+      "evidence_path": "references/machine/micro-teaching-units.json",
+      "next_action": "Check whether this unit is future-needed, should be cited, or should be deprecated.",
+      "proof_required_to_close": "Unit is cited by exam/target evidence or explicitly marked intentionally uncited."
+    },
+    {
+      "issue_id": "dead-units-0016",
+      "severity": "low",
+      "affected_entity": "A57",
+      "category": "uncited_live_unit",
+      "evidence_path": "references/machine/micro-teaching-units.json",
+      "next_action": "Check whether this unit is future-needed, should be cited, or should be deprecated.",
+      "proof_required_to_close": "Unit is cited by exam/target evidence or explicitly marked intentionally uncited."
+    },
+    {
+      "issue_id": "dead-units-0017",
+      "severity": "low",
+      "affected_entity": "A58",
+      "category": "uncited_live_unit",
+      "evidence_path": "references/machine/micro-teaching-units.json",
+      "next_action": "Check whether this unit is future-needed, should be cited, or should be deprecated.",
+      "proof_required_to_close": "Unit is cited by exam/target evidence or explicitly marked intentionally uncited."
+    },
+    {
+      "issue_id": "dead-units-0018",
+      "severity": "low",
+      "affected_entity": "A59",
+      "category": "uncited_live_unit",
+      "evidence_path": "references/machine/micro-teaching-units.json",
+      "next_action": "Check whether this unit is future-needed, should be cited, or should be deprecated.",
+      "proof_required_to_close": "Unit is cited by exam/target evidence or explicitly marked intentionally uncited."
+    },
+    {
+      "issue_id": "dead-units-0019",
+      "severity": "low",
+      "affected_entity": "A60",
+      "category": "uncited_live_unit",
+      "evidence_path": "references/machine/micro-teaching-units.json",
+      "next_action": "Check whether this unit is future-needed, should be cited, or should be deprecated.",
+      "proof_required_to_close": "Unit is cited by exam/target evidence or explicitly marked intentionally uncited."
+    },
+    {
+      "issue_id": "dead-units-0020",
+      "severity": "low",
+      "affected_entity": "D38",
+      "category": "uncited_live_unit",
+      "evidence_path": "references/machine/micro-teaching-units.json",
+      "next_action": "Check whether this unit is future-needed, should be cited, or should be deprecated.",
+      "proof_required_to_close": "Unit is cited by exam/target evidence or explicitly marked intentionally uncited."
+    },
+    {
+      "issue_id": "dead-units-0021",
+      "severity": "low",
+      "affected_entity": "D39",
+      "category": "uncited_live_unit",
+      "evidence_path": "references/machine/micro-teaching-units.json",
+      "next_action": "Check whether this unit is future-needed, should be cited, or should be deprecated.",
+      "proof_required_to_close": "Unit is cited by exam/target evidence or explicitly marked intentionally uncited."
+    },
+    {
+      "issue_id": "dead-units-0022",
+      "severity": "low",
+      "affected_entity": "D40",
+      "category": "uncited_live_unit",
+      "evidence_path": "references/machine/micro-teaching-units.json",
+      "next_action": "Check whether this unit is future-needed, should be cited, or should be deprecated.",
+      "proof_required_to_close": "Unit is cited by exam/target evidence or explicitly marked intentionally uncited."
+    },
+    {
+      "issue_id": "dead-units-0023",
+      "severity": "low",
+      "affected_entity": "G12",
+      "category": "uncited_live_unit",
+      "evidence_path": "references/machine/micro-teaching-units.json",
+      "next_action": "Check whether this unit is future-needed, should be cited, or should be deprecated.",
+      "proof_required_to_close": "Unit is cited by exam/target evidence or explicitly marked intentionally uncited."
+    },
+    {
+      "issue_id": "dead-units-0024",
+      "severity": "low",
+      "affected_entity": "H27",
+      "category": "uncited_live_unit",
+      "evidence_path": "references/machine/micro-teaching-units.json",
+      "next_action": "Check whether this unit is future-needed, should be cited, or should be deprecated.",
+      "proof_required_to_close": "Unit is cited by exam/target evidence or explicitly marked intentionally uncited."
+    },
+    {
+      "issue_id": "dead-units-0025",
+      "severity": "low",
+      "affected_entity": "H28",
+      "category": "uncited_live_unit",
+      "evidence_path": "references/machine/micro-teaching-units.json",
+      "next_action": "Check whether this unit is future-needed, should be cited, or should be deprecated.",
+      "proof_required_to_close": "Unit is cited by exam/target evidence or explicitly marked intentionally uncited."
+    },
+    {
+      "issue_id": "dead-units-0026",
+      "severity": "low",
+      "affected_entity": "H29",
+      "category": "uncited_live_unit",
+      "evidence_path": "references/machine/micro-teaching-units.json",
+      "next_action": "Check whether this unit is future-needed, should be cited, or should be deprecated.",
+      "proof_required_to_close": "Unit is cited by exam/target evidence or explicitly marked intentionally uncited."
+    },
+    {
+      "issue_id": "dead-units-0027",
+      "severity": "low",
+      "affected_entity": "H30",
+      "category": "uncited_live_unit",
+      "evidence_path": "references/machine/micro-teaching-units.json",
+      "next_action": "Check whether this unit is future-needed, should be cited, or should be deprecated.",
+      "proof_required_to_close": "Unit is cited by exam/target evidence or explicitly marked intentionally uncited."
+    },
+    {
+      "issue_id": "dead-units-0028",
+      "severity": "low",
+      "affected_entity": "H31",
+      "category": "uncited_live_unit",
+      "evidence_path": "references/machine/micro-teaching-units.json",
+      "next_action": "Check whether this unit is future-needed, should be cited, or should be deprecated.",
+      "proof_required_to_close": "Unit is cited by exam/target evidence or explicitly marked intentionally uncited."
+    },
+    {
+      "issue_id": "dead-units-0029",
       "severity": "low",
       "affected_entity": "I20",
       "category": "uncited_live_unit",

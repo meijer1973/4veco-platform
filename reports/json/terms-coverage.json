@@ -1,7 +1,7 @@
 {
   "report_id": "terms-coverage",
   "generated_by": "build-scripts/reports/generate-all.js",
-  "generated_on": "2026-04-27T10:09:10.084Z",
+  "generated_on": "2026-04-27T22:30:20.557Z",
   "source_files": [
     "references/machine/micro-teaching-units.json",
     "references/machine/begrippen.json"
@@ -9,8 +9,8 @@
   "schema_version": 1,
   "status": "warn",
   "summary": {
-    "live_units": 190,
-    "units_without_terms": 44
+    "live_units": 209,
+    "units_without_terms": 63
   },
   "issues": [
     {
@@ -241,7 +241,7 @@
     {
       "issue_id": "terms-coverage-0026",
       "severity": "medium",
-      "affected_entity": "D31",
+      "affected_entity": "A45",
       "category": "missing_term_links",
       "evidence_path": "references/machine/micro-teaching-units.json",
       "next_action": "Add canonical term slugs when this unit uses glossary concepts.",
@@ -250,7 +250,7 @@
     {
       "issue_id": "terms-coverage-0027",
       "severity": "medium",
-      "affected_entity": "D32",
+      "affected_entity": "A46",
       "category": "missing_term_links",
       "evidence_path": "references/machine/micro-teaching-units.json",
       "next_action": "Add canonical term slugs when this unit uses glossary concepts.",
@@ -259,7 +259,7 @@
     {
       "issue_id": "terms-coverage-0028",
       "severity": "medium",
-      "affected_entity": "D33",
+      "affected_entity": "A47",
       "category": "missing_term_links",
       "evidence_path": "references/machine/micro-teaching-units.json",
       "next_action": "Add canonical term slugs when this unit uses glossary concepts.",
@@ -268,7 +268,7 @@
     {
       "issue_id": "terms-coverage-0029",
       "severity": "medium",
-      "affected_entity": "D34",
+      "affected_entity": "A48",
       "category": "missing_term_links",
       "evidence_path": "references/machine/micro-teaching-units.json",
       "next_action": "Add canonical term slugs when this unit uses glossary concepts.",
@@ -277,7 +277,7 @@
     {
       "issue_id": "terms-coverage-0030",
       "severity": "medium",
-      "affected_entity": "D37",
+      "affected_entity": "A49",
       "category": "missing_term_links",
       "evidence_path": "references/machine/micro-teaching-units.json",
       "next_action": "Add canonical term slugs when this unit uses glossary concepts.",
@@ -286,7 +286,7 @@
     {
       "issue_id": "terms-coverage-0031",
       "severity": "medium",
-      "affected_entity": "F16",
+      "affected_entity": "A50",
       "category": "missing_term_links",
       "evidence_path": "references/machine/micro-teaching-units.json",
       "next_action": "Add canonical term slugs when this unit uses glossary concepts.",
@@ -295,7 +295,7 @@
     {
       "issue_id": "terms-coverage-0032",
       "severity": "medium",
-      "affected_entity": "F17",
+      "affected_entity": "A51",
       "category": "missing_term_links",
       "evidence_path": "references/machine/micro-teaching-units.json",
       "next_action": "Add canonical term slugs when this unit uses glossary concepts.",
@@ -304,7 +304,7 @@
     {
       "issue_id": "terms-coverage-0033",
       "severity": "medium",
-      "affected_entity": "F18",
+      "affected_entity": "A52",
       "category": "missing_term_links",
       "evidence_path": "references/machine/micro-teaching-units.json",
       "next_action": "Add canonical term slugs when this unit uses glossary concepts.",
@@ -313,7 +313,7 @@
     {
       "issue_id": "terms-coverage-0034",
       "severity": "medium",
-      "affected_entity": "G12",
+      "affected_entity": "A53",
       "category": "missing_term_links",
       "evidence_path": "references/machine/micro-teaching-units.json",
       "next_action": "Add canonical term slugs when this unit uses glossary concepts.",
@@ -322,7 +322,7 @@
     {
       "issue_id": "terms-coverage-0035",
       "severity": "medium",
-      "affected_entity": "L02",
+      "affected_entity": "A54",
       "category": "missing_term_links",
       "evidence_path": "references/machine/micro-teaching-units.json",
       "next_action": "Add canonical term slugs when this unit uses glossary concepts.",
@@ -331,7 +331,7 @@
     {
       "issue_id": "terms-coverage-0036",
       "severity": "medium",
-      "affected_entity": "L04",
+      "affected_entity": "A55",
       "category": "missing_term_links",
       "evidence_path": "references/machine/micro-teaching-units.json",
       "next_action": "Add canonical term slugs when this unit uses glossary concepts.",
@@ -340,7 +340,7 @@
     {
       "issue_id": "terms-coverage-0037",
       "severity": "medium",
-      "affected_entity": "L06",
+      "affected_entity": "A56",
       "category": "missing_term_links",
       "evidence_path": "references/machine/micro-teaching-units.json",
       "next_action": "Add canonical term slugs when this unit uses glossary concepts.",
@@ -349,7 +349,7 @@
     {
       "issue_id": "terms-coverage-0038",
       "severity": "medium",
-      "affected_entity": "L09",
+      "affected_entity": "A57",
       "category": "missing_term_links",
       "evidence_path": "references/machine/micro-teaching-units.json",
       "next_action": "Add canonical term slugs when this unit uses glossary concepts.",
@@ -358,7 +358,7 @@
     {
       "issue_id": "terms-coverage-0039",
       "severity": "medium",
-      "affected_entity": "L14",
+      "affected_entity": "A58",
       "category": "missing_term_links",
       "evidence_path": "references/machine/micro-teaching-units.json",
       "next_action": "Add canonical term slugs when this unit uses glossary concepts.",
@@ -367,7 +367,7 @@
     {
       "issue_id": "terms-coverage-0040",
       "severity": "medium",
-      "affected_entity": "L15",
+      "affected_entity": "A59",
       "category": "missing_term_links",
       "evidence_path": "references/machine/micro-teaching-units.json",
       "next_action": "Add canonical term slugs when this unit uses glossary concepts.",
@@ -376,7 +376,7 @@
     {
       "issue_id": "terms-coverage-0041",
       "severity": "medium",
-      "affected_entity": "L16",
+      "affected_entity": "A60",
       "category": "missing_term_links",
       "evidence_path": "references/machine/micro-teaching-units.json",
       "next_action": "Add canonical term slugs when this unit uses glossary concepts.",
@@ -385,7 +385,7 @@
     {
       "issue_id": "terms-coverage-0042",
       "severity": "medium",
-      "affected_entity": "L18",
+      "affected_entity": "D31",
       "category": "missing_term_links",
       "evidence_path": "references/machine/micro-teaching-units.json",
       "next_action": "Add canonical term slugs when this unit uses glossary concepts.",
@@ -394,7 +394,7 @@
     {
       "issue_id": "terms-coverage-0043",
       "severity": "medium",
-      "affected_entity": "L20",
+      "affected_entity": "D32",
       "category": "missing_term_links",
       "evidence_path": "references/machine/micro-teaching-units.json",
       "next_action": "Add canonical term slugs when this unit uses glossary concepts.",
@@ -402,6 +402,177 @@
     },
     {
       "issue_id": "terms-coverage-0044",
+      "severity": "medium",
+      "affected_entity": "D33",
+      "category": "missing_term_links",
+      "evidence_path": "references/machine/micro-teaching-units.json",
+      "next_action": "Add canonical term slugs when this unit uses glossary concepts.",
+      "proof_required_to_close": "Unit terms are either populated or explicitly marked not applicable."
+    },
+    {
+      "issue_id": "terms-coverage-0045",
+      "severity": "medium",
+      "affected_entity": "D34",
+      "category": "missing_term_links",
+      "evidence_path": "references/machine/micro-teaching-units.json",
+      "next_action": "Add canonical term slugs when this unit uses glossary concepts.",
+      "proof_required_to_close": "Unit terms are either populated or explicitly marked not applicable."
+    },
+    {
+      "issue_id": "terms-coverage-0046",
+      "severity": "medium",
+      "affected_entity": "D37",
+      "category": "missing_term_links",
+      "evidence_path": "references/machine/micro-teaching-units.json",
+      "next_action": "Add canonical term slugs when this unit uses glossary concepts.",
+      "proof_required_to_close": "Unit terms are either populated or explicitly marked not applicable."
+    },
+    {
+      "issue_id": "terms-coverage-0047",
+      "severity": "medium",
+      "affected_entity": "D38",
+      "category": "missing_term_links",
+      "evidence_path": "references/machine/micro-teaching-units.json",
+      "next_action": "Add canonical term slugs when this unit uses glossary concepts.",
+      "proof_required_to_close": "Unit terms are either populated or explicitly marked not applicable."
+    },
+    {
+      "issue_id": "terms-coverage-0048",
+      "severity": "medium",
+      "affected_entity": "D39",
+      "category": "missing_term_links",
+      "evidence_path": "references/machine/micro-teaching-units.json",
+      "next_action": "Add canonical term slugs when this unit uses glossary concepts.",
+      "proof_required_to_close": "Unit terms are either populated or explicitly marked not applicable."
+    },
+    {
+      "issue_id": "terms-coverage-0049",
+      "severity": "medium",
+      "affected_entity": "D40",
+      "category": "missing_term_links",
+      "evidence_path": "references/machine/micro-teaching-units.json",
+      "next_action": "Add canonical term slugs when this unit uses glossary concepts.",
+      "proof_required_to_close": "Unit terms are either populated or explicitly marked not applicable."
+    },
+    {
+      "issue_id": "terms-coverage-0050",
+      "severity": "medium",
+      "affected_entity": "F16",
+      "category": "missing_term_links",
+      "evidence_path": "references/machine/micro-teaching-units.json",
+      "next_action": "Add canonical term slugs when this unit uses glossary concepts.",
+      "proof_required_to_close": "Unit terms are either populated or explicitly marked not applicable."
+    },
+    {
+      "issue_id": "terms-coverage-0051",
+      "severity": "medium",
+      "affected_entity": "F17",
+      "category": "missing_term_links",
+      "evidence_path": "references/machine/micro-teaching-units.json",
+      "next_action": "Add canonical term slugs when this unit uses glossary concepts.",
+      "proof_required_to_close": "Unit terms are either populated or explicitly marked not applicable."
+    },
+    {
+      "issue_id": "terms-coverage-0052",
+      "severity": "medium",
+      "affected_entity": "F18",
+      "category": "missing_term_links",
+      "evidence_path": "references/machine/micro-teaching-units.json",
+      "next_action": "Add canonical term slugs when this unit uses glossary concepts.",
+      "proof_required_to_close": "Unit terms are either populated or explicitly marked not applicable."
+    },
+    {
+      "issue_id": "terms-coverage-0053",
+      "severity": "medium",
+      "affected_entity": "G12",
+      "category": "missing_term_links",
+      "evidence_path": "references/machine/micro-teaching-units.json",
+      "next_action": "Add canonical term slugs when this unit uses glossary concepts.",
+      "proof_required_to_close": "Unit terms are either populated or explicitly marked not applicable."
+    },
+    {
+      "issue_id": "terms-coverage-0054",
+      "severity": "medium",
+      "affected_entity": "L02",
+      "category": "missing_term_links",
+      "evidence_path": "references/machine/micro-teaching-units.json",
+      "next_action": "Add canonical term slugs when this unit uses glossary concepts.",
+      "proof_required_to_close": "Unit terms are either populated or explicitly marked not applicable."
+    },
+    {
+      "issue_id": "terms-coverage-0055",
+      "severity": "medium",
+      "affected_entity": "L04",
+      "category": "missing_term_links",
+      "evidence_path": "references/machine/micro-teaching-units.json",
+      "next_action": "Add canonical term slugs when this unit uses glossary concepts.",
+      "proof_required_to_close": "Unit terms are either populated or explicitly marked not applicable."
+    },
+    {
+      "issue_id": "terms-coverage-0056",
+      "severity": "medium",
+      "affected_entity": "L06",
+      "category": "missing_term_links",
+      "evidence_path": "references/machine/micro-teaching-units.json",
+      "next_action": "Add canonical term slugs when this unit uses glossary concepts.",
+      "proof_required_to_close": "Unit terms are either populated or explicitly marked not applicable."
+    },
+    {
+      "issue_id": "terms-coverage-0057",
+      "severity": "medium",
+      "affected_entity": "L09",
+      "category": "missing_term_links",
+      "evidence_path": "references/machine/micro-teaching-units.json",
+      "next_action": "Add canonical term slugs when this unit uses glossary concepts.",
+      "proof_required_to_close": "Unit terms are either populated or explicitly marked not applicable."
+    },
+    {
+      "issue_id": "terms-coverage-0058",
+      "severity": "medium",
+      "affected_entity": "L14",
+      "category": "missing_term_links",
+      "evidence_path": "references/machine/micro-teaching-units.json",
+      "next_action": "Add canonical term slugs when this unit uses glossary concepts.",
+      "proof_required_to_close": "Unit terms are either populated or explicitly marked not applicable."
+    },
+    {
+      "issue_id": "terms-coverage-0059",
+      "severity": "medium",
+      "affected_entity": "L15",
+      "category": "missing_term_links",
+      "evidence_path": "references/machine/micro-teaching-units.json",
+      "next_action": "Add canonical term slugs when this unit uses glossary concepts.",
+      "proof_required_to_close": "Unit terms are either populated or explicitly marked not applicable."
+    },
+    {
+      "issue_id": "terms-coverage-0060",
+      "severity": "medium",
+      "affected_entity": "L16",
+      "category": "missing_term_links",
+      "evidence_path": "references/machine/micro-teaching-units.json",
+      "next_action": "Add canonical term slugs when this unit uses glossary concepts.",
+      "proof_required_to_close": "Unit terms are either populated or explicitly marked not applicable."
+    },
+    {
+      "issue_id": "terms-coverage-0061",
+      "severity": "medium",
+      "affected_entity": "L18",
+      "category": "missing_term_links",
+      "evidence_path": "references/machine/micro-teaching-units.json",
+      "next_action": "Add canonical term slugs when this unit uses glossary concepts.",
+      "proof_required_to_close": "Unit terms are either populated or explicitly marked not applicable."
+    },
+    {
+      "issue_id": "terms-coverage-0062",
+      "severity": "medium",
+      "affected_entity": "L20",
+      "category": "missing_term_links",
+      "evidence_path": "references/machine/micro-teaching-units.json",
+      "next_action": "Add canonical term slugs when this unit uses glossary concepts.",
+      "proof_required_to_close": "Unit terms are either populated or explicitly marked not applicable."
+    },
+    {
+      "issue_id": "terms-coverage-0063",
       "severity": "medium",
       "affected_entity": "L21",
       "category": "missing_term_links",

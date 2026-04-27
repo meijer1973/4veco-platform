@@ -1,31 +1,26 @@
 {
   "schema_version": "0.1",
   "sprint_id": "R4.1",
-  "generated_on": "2026-04-26",
+  "generated_on": "2026-04-27",
   "mode": "dry_run",
-  "unit_count": 192,
-  "term_registry_count": 225,
+  "unit_count": 211,
+  "term_registry_count": 227,
   "unique_unit_terms": 97,
   "safe_mappings": 0,
-  "already_slug": 95,
-  "unresolved": 2,
+  "already_slug": 97,
+  "unresolved": 0,
   "ambiguous": 0,
   "changed_units": [],
-  "unresolved_queue": [
-    {
-      "term": "alternatieve kosten",
-      "next_action": "review whether term belongs in begrippen.json or should stay authored-only"
-    },
-    {
-      "term": "schaarste",
-      "next_action": "review whether term belongs in begrippen.json or should stay authored-only"
-    }
-  ],
+  "unresolved_queue": [],
   "ambiguous_queue": [],
   "mapping": {
-    "alternatieve kosten": {
-      "status": "unresolved",
-      "candidate_ids": []
+    "alternatieve-kosten": {
+      "status": "already_slug",
+      "id": "alternatieve-kosten",
+      "via": [
+        "id",
+        "slugify(term_nl)"
+      ]
     },
     "anticyclisch": {
       "status": "already_slug",
@@ -679,8 +674,13 @@
       ]
     },
     "schaarste": {
-      "status": "unresolved",
-      "candidate_ids": []
+      "status": "already_slug",
+      "id": "schaarste",
+      "via": [
+        "id",
+        "term_nl",
+        "slugify(term_nl)"
+      ]
     },
     "secundair-inkomen": {
       "status": "already_slug",

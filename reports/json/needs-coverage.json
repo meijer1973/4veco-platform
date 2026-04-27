@@ -1,15 +1,15 @@
 {
   "report_id": "needs-coverage",
   "generated_by": "build-scripts/reports/generate-all.js",
-  "generated_on": "2026-04-27T10:09:10.084Z",
+  "generated_on": "2026-04-27T22:30:20.557Z",
   "source_files": [
     "references/machine/micro-teaching-units.json"
   ],
   "schema_version": 1,
   "status": "warn",
   "summary": {
-    "live_units": 190,
-    "empty_needs": 48
+    "live_units": 209,
+    "empty_needs": 39
   },
   "issues": [
     {
@@ -59,15 +59,6 @@
     },
     {
       "issue_id": "needs-coverage-0006",
-      "severity": "medium",
-      "affected_entity": "A18",
-      "category": "empty_needs:unclassified",
-      "evidence_path": "references/machine/micro-teaching-units.json",
-      "next_action": "Review whether this is true zero, underbouw assumed, or false zero.",
-      "proof_required_to_close": "Unit has explicit zero-needs status or at least one validated prerequisite."
-    },
-    {
-      "issue_id": "needs-coverage-0007",
       "severity": "info",
       "affected_entity": "A38",
       "category": "empty_needs:underbouw_assumed",
@@ -76,7 +67,7 @@
       "proof_required_to_close": "Unit has explicit zero-needs status or at least one validated prerequisite."
     },
     {
-      "issue_id": "needs-coverage-0008",
+      "issue_id": "needs-coverage-0007",
       "severity": "medium",
       "affected_entity": "A42",
       "category": "empty_needs:unclassified",
@@ -85,16 +76,16 @@
       "proof_required_to_close": "Unit has explicit zero-needs status or at least one validated prerequisite."
     },
     {
-      "issue_id": "needs-coverage-0009",
-      "severity": "medium",
-      "affected_entity": "A43",
-      "category": "empty_needs:unclassified",
+      "issue_id": "needs-coverage-0008",
+      "severity": "info",
+      "affected_entity": "A45",
+      "category": "empty_needs:underbouw_assumed",
       "evidence_path": "references/machine/micro-teaching-units.json",
       "next_action": "Review whether this is true zero, underbouw assumed, or false zero.",
       "proof_required_to_close": "Unit has explicit zero-needs status or at least one validated prerequisite."
     },
     {
-      "issue_id": "needs-coverage-0010",
+      "issue_id": "needs-coverage-0009",
       "severity": "medium",
       "affected_entity": "B01",
       "category": "empty_needs:unclassified",
@@ -103,7 +94,7 @@
       "proof_required_to_close": "Unit has explicit zero-needs status or at least one validated prerequisite."
     },
     {
-      "issue_id": "needs-coverage-0011",
+      "issue_id": "needs-coverage-0010",
       "severity": "medium",
       "affected_entity": "D02",
       "category": "empty_needs:unclassified",
@@ -112,7 +103,7 @@
       "proof_required_to_close": "Unit has explicit zero-needs status or at least one validated prerequisite."
     },
     {
-      "issue_id": "needs-coverage-0012",
+      "issue_id": "needs-coverage-0011",
       "severity": "medium",
       "affected_entity": "D04",
       "category": "empty_needs:unclassified",
@@ -121,7 +112,7 @@
       "proof_required_to_close": "Unit has explicit zero-needs status or at least one validated prerequisite."
     },
     {
-      "issue_id": "needs-coverage-0013",
+      "issue_id": "needs-coverage-0012",
       "severity": "medium",
       "affected_entity": "D09",
       "category": "empty_needs:unclassified",
@@ -130,25 +121,7 @@
       "proof_required_to_close": "Unit has explicit zero-needs status or at least one validated prerequisite."
     },
     {
-      "issue_id": "needs-coverage-0014",
-      "severity": "medium",
-      "affected_entity": "D10",
-      "category": "empty_needs:unclassified",
-      "evidence_path": "references/machine/micro-teaching-units.json",
-      "next_action": "Review whether this is true zero, underbouw assumed, or false zero.",
-      "proof_required_to_close": "Unit has explicit zero-needs status or at least one validated prerequisite."
-    },
-    {
-      "issue_id": "needs-coverage-0015",
-      "severity": "medium",
-      "affected_entity": "D13",
-      "category": "empty_needs:unclassified",
-      "evidence_path": "references/machine/micro-teaching-units.json",
-      "next_action": "Review whether this is true zero, underbouw assumed, or false zero.",
-      "proof_required_to_close": "Unit has explicit zero-needs status or at least one validated prerequisite."
-    },
-    {
-      "issue_id": "needs-coverage-0016",
+      "issue_id": "needs-coverage-0013",
       "severity": "medium",
       "affected_entity": "D15",
       "category": "empty_needs:unclassified",
@@ -157,16 +130,7 @@
       "proof_required_to_close": "Unit has explicit zero-needs status or at least one validated prerequisite."
     },
     {
-      "issue_id": "needs-coverage-0017",
-      "severity": "medium",
-      "affected_entity": "D24",
-      "category": "empty_needs:unclassified",
-      "evidence_path": "references/machine/micro-teaching-units.json",
-      "next_action": "Review whether this is true zero, underbouw assumed, or false zero.",
-      "proof_required_to_close": "Unit has explicit zero-needs status or at least one validated prerequisite."
-    },
-    {
-      "issue_id": "needs-coverage-0018",
+      "issue_id": "needs-coverage-0014",
       "severity": "medium",
       "affected_entity": "D27",
       "category": "empty_needs:unclassified",
@@ -175,7 +139,7 @@
       "proof_required_to_close": "Unit has explicit zero-needs status or at least one validated prerequisite."
     },
     {
-      "issue_id": "needs-coverage-0019",
+      "issue_id": "needs-coverage-0015",
       "severity": "medium",
       "affected_entity": "D32",
       "category": "empty_needs:unclassified",
@@ -184,7 +148,7 @@
       "proof_required_to_close": "Unit has explicit zero-needs status or at least one validated prerequisite."
     },
     {
-      "issue_id": "needs-coverage-0020",
+      "issue_id": "needs-coverage-0016",
       "severity": "medium",
       "affected_entity": "D35",
       "category": "empty_needs:unclassified",
@@ -193,7 +157,7 @@
       "proof_required_to_close": "Unit has explicit zero-needs status or at least one validated prerequisite."
     },
     {
-      "issue_id": "needs-coverage-0021",
+      "issue_id": "needs-coverage-0017",
       "severity": "medium",
       "affected_entity": "E02",
       "category": "empty_needs:unclassified",
@@ -202,7 +166,7 @@
       "proof_required_to_close": "Unit has explicit zero-needs status or at least one validated prerequisite."
     },
     {
-      "issue_id": "needs-coverage-0022",
+      "issue_id": "needs-coverage-0018",
       "severity": "medium",
       "affected_entity": "E06",
       "category": "empty_needs:unclassified",
@@ -211,7 +175,7 @@
       "proof_required_to_close": "Unit has explicit zero-needs status or at least one validated prerequisite."
     },
     {
-      "issue_id": "needs-coverage-0023",
+      "issue_id": "needs-coverage-0019",
       "severity": "medium",
       "affected_entity": "F01",
       "category": "empty_needs:unclassified",
@@ -220,7 +184,7 @@
       "proof_required_to_close": "Unit has explicit zero-needs status or at least one validated prerequisite."
     },
     {
-      "issue_id": "needs-coverage-0024",
+      "issue_id": "needs-coverage-0020",
       "severity": "medium",
       "affected_entity": "F02",
       "category": "empty_needs:unclassified",
@@ -229,7 +193,7 @@
       "proof_required_to_close": "Unit has explicit zero-needs status or at least one validated prerequisite."
     },
     {
-      "issue_id": "needs-coverage-0025",
+      "issue_id": "needs-coverage-0021",
       "severity": "medium",
       "affected_entity": "F03",
       "category": "empty_needs:unclassified",
@@ -238,16 +202,7 @@
       "proof_required_to_close": "Unit has explicit zero-needs status or at least one validated prerequisite."
     },
     {
-      "issue_id": "needs-coverage-0026",
-      "severity": "medium",
-      "affected_entity": "F07",
-      "category": "empty_needs:unclassified",
-      "evidence_path": "references/machine/micro-teaching-units.json",
-      "next_action": "Review whether this is true zero, underbouw assumed, or false zero.",
-      "proof_required_to_close": "Unit has explicit zero-needs status or at least one validated prerequisite."
-    },
-    {
-      "issue_id": "needs-coverage-0027",
+      "issue_id": "needs-coverage-0022",
       "severity": "medium",
       "affected_entity": "F15",
       "category": "empty_needs:unclassified",
@@ -256,7 +211,7 @@
       "proof_required_to_close": "Unit has explicit zero-needs status or at least one validated prerequisite."
     },
     {
-      "issue_id": "needs-coverage-0028",
+      "issue_id": "needs-coverage-0023",
       "severity": "medium",
       "affected_entity": "F16",
       "category": "empty_needs:unclassified",
@@ -265,7 +220,7 @@
       "proof_required_to_close": "Unit has explicit zero-needs status or at least one validated prerequisite."
     },
     {
-      "issue_id": "needs-coverage-0029",
+      "issue_id": "needs-coverage-0024",
       "severity": "medium",
       "affected_entity": "G06",
       "category": "empty_needs:unclassified",
@@ -274,7 +229,7 @@
       "proof_required_to_close": "Unit has explicit zero-needs status or at least one validated prerequisite."
     },
     {
-      "issue_id": "needs-coverage-0030",
+      "issue_id": "needs-coverage-0025",
       "severity": "medium",
       "affected_entity": "G07",
       "category": "empty_needs:unclassified",
@@ -283,7 +238,7 @@
       "proof_required_to_close": "Unit has explicit zero-needs status or at least one validated prerequisite."
     },
     {
-      "issue_id": "needs-coverage-0031",
+      "issue_id": "needs-coverage-0026",
       "severity": "medium",
       "affected_entity": "G08",
       "category": "empty_needs:unclassified",
@@ -292,7 +247,7 @@
       "proof_required_to_close": "Unit has explicit zero-needs status or at least one validated prerequisite."
     },
     {
-      "issue_id": "needs-coverage-0032",
+      "issue_id": "needs-coverage-0027",
       "severity": "medium",
       "affected_entity": "G10",
       "category": "empty_needs:unclassified",
@@ -301,7 +256,7 @@
       "proof_required_to_close": "Unit has explicit zero-needs status or at least one validated prerequisite."
     },
     {
-      "issue_id": "needs-coverage-0033",
+      "issue_id": "needs-coverage-0028",
       "severity": "medium",
       "affected_entity": "G11",
       "category": "empty_needs:unclassified",
@@ -310,16 +265,7 @@
       "proof_required_to_close": "Unit has explicit zero-needs status or at least one validated prerequisite."
     },
     {
-      "issue_id": "needs-coverage-0034",
-      "severity": "medium",
-      "affected_entity": "H01",
-      "category": "empty_needs:unclassified",
-      "evidence_path": "references/machine/micro-teaching-units.json",
-      "next_action": "Review whether this is true zero, underbouw assumed, or false zero.",
-      "proof_required_to_close": "Unit has explicit zero-needs status or at least one validated prerequisite."
-    },
-    {
-      "issue_id": "needs-coverage-0035",
+      "issue_id": "needs-coverage-0029",
       "severity": "medium",
       "affected_entity": "H05",
       "category": "empty_needs:unclassified",
@@ -328,7 +274,7 @@
       "proof_required_to_close": "Unit has explicit zero-needs status or at least one validated prerequisite."
     },
     {
-      "issue_id": "needs-coverage-0036",
+      "issue_id": "needs-coverage-0030",
       "severity": "medium",
       "affected_entity": "H10",
       "category": "empty_needs:unclassified",
@@ -337,16 +283,7 @@
       "proof_required_to_close": "Unit has explicit zero-needs status or at least one validated prerequisite."
     },
     {
-      "issue_id": "needs-coverage-0037",
-      "severity": "medium",
-      "affected_entity": "H13",
-      "category": "empty_needs:unclassified",
-      "evidence_path": "references/machine/micro-teaching-units.json",
-      "next_action": "Review whether this is true zero, underbouw assumed, or false zero.",
-      "proof_required_to_close": "Unit has explicit zero-needs status or at least one validated prerequisite."
-    },
-    {
-      "issue_id": "needs-coverage-0038",
+      "issue_id": "needs-coverage-0031",
       "severity": "medium",
       "affected_entity": "H16",
       "category": "empty_needs:unclassified",
@@ -355,7 +292,7 @@
       "proof_required_to_close": "Unit has explicit zero-needs status or at least one validated prerequisite."
     },
     {
-      "issue_id": "needs-coverage-0039",
+      "issue_id": "needs-coverage-0032",
       "severity": "medium",
       "affected_entity": "H21",
       "category": "empty_needs:unclassified",
@@ -364,16 +301,7 @@
       "proof_required_to_close": "Unit has explicit zero-needs status or at least one validated prerequisite."
     },
     {
-      "issue_id": "needs-coverage-0040",
-      "severity": "medium",
-      "affected_entity": "H24",
-      "category": "empty_needs:unclassified",
-      "evidence_path": "references/machine/micro-teaching-units.json",
-      "next_action": "Review whether this is true zero, underbouw assumed, or false zero.",
-      "proof_required_to_close": "Unit has explicit zero-needs status or at least one validated prerequisite."
-    },
-    {
-      "issue_id": "needs-coverage-0041",
+      "issue_id": "needs-coverage-0033",
       "severity": "medium",
       "affected_entity": "H29",
       "category": "empty_needs:unclassified",
@@ -382,7 +310,7 @@
       "proof_required_to_close": "Unit has explicit zero-needs status or at least one validated prerequisite."
     },
     {
-      "issue_id": "needs-coverage-0042",
+      "issue_id": "needs-coverage-0034",
       "severity": "medium",
       "affected_entity": "I01",
       "category": "empty_needs:unclassified",
@@ -391,7 +319,7 @@
       "proof_required_to_close": "Unit has explicit zero-needs status or at least one validated prerequisite."
     },
     {
-      "issue_id": "needs-coverage-0043",
+      "issue_id": "needs-coverage-0035",
       "severity": "medium",
       "affected_entity": "I06",
       "category": "empty_needs:unclassified",
@@ -400,7 +328,7 @@
       "proof_required_to_close": "Unit has explicit zero-needs status or at least one validated prerequisite."
     },
     {
-      "issue_id": "needs-coverage-0044",
+      "issue_id": "needs-coverage-0036",
       "severity": "medium",
       "affected_entity": "I14",
       "category": "empty_needs:unclassified",
@@ -409,7 +337,7 @@
       "proof_required_to_close": "Unit has explicit zero-needs status or at least one validated prerequisite."
     },
     {
-      "issue_id": "needs-coverage-0045",
+      "issue_id": "needs-coverage-0037",
       "severity": "medium",
       "affected_entity": "L01",
       "category": "empty_needs:unclassified",
@@ -418,7 +346,7 @@
       "proof_required_to_close": "Unit has explicit zero-needs status or at least one validated prerequisite."
     },
     {
-      "issue_id": "needs-coverage-0046",
+      "issue_id": "needs-coverage-0038",
       "severity": "medium",
       "affected_entity": "L03",
       "category": "empty_needs:unclassified",
@@ -427,18 +355,9 @@
       "proof_required_to_close": "Unit has explicit zero-needs status or at least one validated prerequisite."
     },
     {
-      "issue_id": "needs-coverage-0047",
+      "issue_id": "needs-coverage-0039",
       "severity": "medium",
       "affected_entity": "L05",
-      "category": "empty_needs:unclassified",
-      "evidence_path": "references/machine/micro-teaching-units.json",
-      "next_action": "Review whether this is true zero, underbouw assumed, or false zero.",
-      "proof_required_to_close": "Unit has explicit zero-needs status or at least one validated prerequisite."
-    },
-    {
-      "issue_id": "needs-coverage-0048",
-      "severity": "medium",
-      "affected_entity": "L18",
       "category": "empty_needs:unclassified",
       "evidence_path": "references/machine/micro-teaching-units.json",
       "next_action": "Review whether this is true zero, underbouw assumed, or false zero.",

@@ -1,8 +1,8 @@
 # Begrippen coverage
 
-*Gegenereerd 2026-04-26 door `build-scripts/references/build-begrippen-index.js`.*
+*Gegenereerd 2026-04-27 door `build-scripts/references/build-begrippen-index.js`.*
 
-Totaal: **225** begrippen (225 live, 0 deprecated).
+Totaal: **227** begrippen (227 live, 0 deprecated).
 
 ## Backlog per veld (live termen)
 
@@ -11,15 +11,16 @@ Totaal: **225** begrippen (225 live, 0 deprecated).
 | definition_nl | 0 | 0% |
 | example_nl | 0 | 0% |
 | pitfall_nl | 165 | 73% |
-| teaching_units (reverse-link) | 130 | 58% |
-| syllabus_clause | 2 | 1% |
+| teaching_units (reverse-link) | 130 | 57% |
+| syllabus_clause | 4 | 2% |
 
-Terms with at least one formula: **34** of 225. (Not every term carries a formula, so this counts coverage, not a backlog.)
+Terms with at least one formula: **34** of 227. (Not every term carries a formula, so this counts coverage, not a backlog.)
 
 ## Definities per domein
 
 | Domein | Termen | Missend | Dekking |
 |---|---:|---:|---:|
+| B — Schaarste | 2 | 0 | 100% |
 | D — Markt | 58 | 0 | 100% |
 | E — Ruilen over de tijd | 20 | 0 | 100% |
 | F — Samenwerken en onderhandelen | 15 | 0 | 100% |

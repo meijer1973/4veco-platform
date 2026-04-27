@@ -1,35 +1,16 @@
 {
   "report_id": "terminology-drift",
   "generated_by": "build-scripts/reports/generate-all.js",
-  "generated_on": "2026-04-27T10:09:10.062Z",
+  "generated_on": "2026-04-27T22:30:20.446Z",
   "source_files": [
     "references/machine/micro-teaching-units.json",
     "references/machine/begrippen.json"
   ],
   "schema_version": 1,
-  "status": "fail",
+  "status": "pass",
   "summary": {
-    "term_registry_entries": 225,
+    "term_registry_entries": 227,
     "unit_term_citations": 265
   },
-  "issues": [
-    {
-      "issue_id": "terminology-drift-0001",
-      "severity": "medium",
-      "affected_entity": "B01",
-      "category": "noncanonical_term",
-      "evidence_path": "references/machine/micro-teaching-units.json",
-      "next_action": "Resolve term schaarste through term registry or unit update.",
-      "proof_required_to_close": "Unit term resolves to begrippen.json."
-    },
-    {
-      "issue_id": "terminology-drift-0002",
-      "severity": "medium",
-      "affected_entity": "B02",
-      "category": "noncanonical_term",
-      "evidence_path": "references/machine/micro-teaching-units.json",
-      "next_action": "Resolve term alternatieve kosten through term registry or unit update.",
-      "proof_required_to_close": "Unit term resolves to begrippen.json."
-    }
-  ]
+  "issues": []
 }

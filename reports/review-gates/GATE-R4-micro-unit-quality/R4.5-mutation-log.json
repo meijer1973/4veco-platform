@@ -1,0 +1,494 @@
+{
+  "sprint_id": "R4.5",
+  "generated_on": "2026-04-27T22:29:43.616Z",
+  "status": "completed",
+  "spec_path": "references/data/sprints/R4.5-approved-mutations.json",
+  "decision_source": "reports/review-gates/GATE-R4-micro-unit-quality/R4.5-human-review-decision.md",
+  "commands": [
+    {
+      "step": "add term schaarste",
+      "command": "node build-scripts/references/term-add.js --spec {\"id\":\"schaarste\",\"term_nl\":\"schaarste\",\"definition_nl\":\"Situatie waarin middelen beperkt zijn ten opzichte van behoeften, waardoor kiezen noodzakelijk is.\",\"domain\":\"B\",\"english_equivalent\":\"scarcity\",\"related_terms\":[],\"example_nl\":\"Een leerling heeft maar twee uur studietijd en moet kiezen tussen economie en wiskunde.\",\"pitfall_nl\":\"Schaarste betekent niet simpelweg dat iets zeldzaam is; het gaat om beperktheid ten opzichte van behoeften.\"}",
+      "status": "passed",
+      "stdout": "OK  added \"schaarste\" (schaarste)",
+      "stderr": ""
+    },
+    {
+      "step": "add term alternatieve-kosten",
+      "command": "node build-scripts/references/term-add.js --spec {\"id\":\"alternatieve-kosten\",\"term_nl\":\"alternatieve kosten\",\"definition_nl\":\"De opbrengst of waarde van het beste niet-gekozen alternatief.\",\"domain\":\"B\",\"english_equivalent\":\"opportunity cost\",\"related_terms\":[],\"example_nl\":\"Als je een uur werkt in plaats van studeert, zijn de gemiste studie-opbrengsten de alternatieve kosten.\",\"pitfall_nl\":\"Alternatieve kosten zijn niet alle opgegeven alternatieven bij elkaar, maar alleen het beste opgegeven alternatief.\"}",
+      "status": "passed",
+      "stdout": "OK  added \"alternatieve-kosten\" (alternatieve kosten)",
+      "stderr": ""
+    },
+    {
+      "step": "update related terms schaarste",
+      "command": "node build-scripts/references/term-update.js --id schaarste --spec {\"related_terms\":[\"alternatieve-kosten\"]}",
+      "status": "passed",
+      "stdout": "OK  updated schaarste: related_terms",
+      "stderr": ""
+    },
+    {
+      "step": "update related terms alternatieve-kosten",
+      "command": "node build-scripts/references/term-update.js --id alternatieve-kosten --spec {\"related_terms\":[\"schaarste\"]}",
+      "status": "passed",
+      "stdout": "OK  updated alternatieve-kosten: related_terms",
+      "stderr": ""
+    },
+    {
+      "step": "update terms B02",
+      "command": "node build-scripts/references/unit-update.js --id B02 --spec {\"terms\":[\"alternatieve-kosten\"]}",
+      "status": "passed",
+      "stdout": "OK  updated B02: terms",
+      "stderr": ""
+    },
+    {
+      "step": "dry-run edge A18->B02",
+      "command": "node build-scripts/references/unit-add-dep.js --from A18 --to B02 --dry-run",
+      "status": "passed",
+      "stdout": "DRY RUN  A18 would depend on B02",
+      "stderr": ""
+    },
+    {
+      "step": "dry-run edge A43->B02",
+      "command": "node build-scripts/references/unit-add-dep.js --from A43 --to B02 --dry-run",
+      "status": "passed",
+      "stdout": "DRY RUN  A43 would depend on B02",
+      "stderr": ""
+    },
+    {
+      "step": "dry-run edge D10->A06",
+      "command": "node build-scripts/references/unit-add-dep.js --from D10 --to A06 --dry-run",
+      "status": "passed",
+      "stdout": "DRY RUN  D10 would depend on A06",
+      "stderr": ""
+    },
+    {
+      "step": "dry-run edge D10->D33",
+      "command": "node build-scripts/references/unit-add-dep.js --from D10 --to D33 --dry-run",
+      "status": "passed",
+      "stdout": "DRY RUN  D10 would depend on D33",
+      "stderr": ""
+    },
+    {
+      "step": "dry-run edge D13->A06",
+      "command": "node build-scripts/references/unit-add-dep.js --from D13 --to A06 --dry-run",
+      "status": "passed",
+      "stdout": "DRY RUN  D13 would depend on A06",
+      "stderr": ""
+    },
+    {
+      "step": "dry-run edge D13->D33",
+      "command": "node build-scripts/references/unit-add-dep.js --from D13 --to D33 --dry-run",
+      "status": "passed",
+      "stdout": "DRY RUN  D13 would depend on D33",
+      "stderr": ""
+    },
+    {
+      "step": "dry-run edge D24->D35",
+      "command": "node build-scripts/references/unit-add-dep.js --from D24 --to D35 --dry-run",
+      "status": "passed",
+      "stdout": "DRY RUN  D24 would depend on D35",
+      "stderr": ""
+    },
+    {
+      "step": "dry-run edge D24->D15",
+      "command": "node build-scripts/references/unit-add-dep.js --from D24 --to D15 --dry-run",
+      "status": "passed",
+      "stdout": "DRY RUN  D24 would depend on D15",
+      "stderr": ""
+    },
+    {
+      "step": "dry-run edge F07->F16",
+      "command": "node build-scripts/references/unit-add-dep.js --from F07 --to F16 --dry-run",
+      "status": "passed",
+      "stdout": "DRY RUN  F07 would depend on F16",
+      "stderr": ""
+    },
+    {
+      "step": "dry-run edge H01->E04",
+      "command": "node build-scripts/references/unit-add-dep.js --from H01 --to E04 --dry-run",
+      "status": "passed",
+      "stdout": "DRY RUN  H01 would depend on E04",
+      "stderr": ""
+    },
+    {
+      "step": "dry-run edge H13->D13",
+      "command": "node build-scripts/references/unit-add-dep.js --from H13 --to D13 --dry-run",
+      "status": "passed",
+      "stdout": "DRY RUN  H13 would depend on D13",
+      "stderr": ""
+    },
+    {
+      "step": "dry-run edge H24->A38",
+      "command": "node build-scripts/references/unit-add-dep.js --from H24 --to A38 --dry-run",
+      "status": "passed",
+      "stdout": "DRY RUN  H24 would depend on A38",
+      "stderr": ""
+    },
+    {
+      "step": "dry-run edge L18->L17",
+      "command": "node build-scripts/references/unit-add-dep.js --from L18 --to L17 --dry-run",
+      "status": "passed",
+      "stdout": "DRY RUN  L18 would depend on L17",
+      "stderr": ""
+    },
+    {
+      "step": "apply edge A18->B02",
+      "command": "node build-scripts/references/unit-add-dep.js --from A18 --to B02",
+      "status": "passed",
+      "stdout": "OK  A18 now depends on B02",
+      "stderr": ""
+    },
+    {
+      "step": "apply edge A43->B02",
+      "command": "node build-scripts/references/unit-add-dep.js --from A43 --to B02",
+      "status": "passed",
+      "stdout": "OK  A43 now depends on B02",
+      "stderr": ""
+    },
+    {
+      "step": "apply edge D10->A06",
+      "command": "node build-scripts/references/unit-add-dep.js --from D10 --to A06",
+      "status": "passed",
+      "stdout": "OK  D10 now depends on A06",
+      "stderr": ""
+    },
+    {
+      "step": "apply edge D10->D33",
+      "command": "node build-scripts/references/unit-add-dep.js --from D10 --to D33",
+      "status": "passed",
+      "stdout": "OK  D10 now depends on D33",
+      "stderr": ""
+    },
+    {
+      "step": "apply edge D13->A06",
+      "command": "node build-scripts/references/unit-add-dep.js --from D13 --to A06",
+      "status": "passed",
+      "stdout": "OK  D13 now depends on A06",
+      "stderr": ""
+    },
+    {
+      "step": "apply edge D13->D33",
+      "command": "node build-scripts/references/unit-add-dep.js --from D13 --to D33",
+      "status": "passed",
+      "stdout": "OK  D13 now depends on D33",
+      "stderr": ""
+    },
+    {
+      "step": "apply edge D24->D35",
+      "command": "node build-scripts/references/unit-add-dep.js --from D24 --to D35",
+      "status": "passed",
+      "stdout": "OK  D24 now depends on D35",
+      "stderr": ""
+    },
+    {
+      "step": "apply edge D24->D15",
+      "command": "node build-scripts/references/unit-add-dep.js --from D24 --to D15",
+      "status": "passed",
+      "stdout": "OK  D24 now depends on D15",
+      "stderr": ""
+    },
+    {
+      "step": "apply edge F07->F16",
+      "command": "node build-scripts/references/unit-add-dep.js --from F07 --to F16",
+      "status": "passed",
+      "stdout": "OK  F07 now depends on F16",
+      "stderr": ""
+    },
+    {
+      "step": "apply edge H01->E04",
+      "command": "node build-scripts/references/unit-add-dep.js --from H01 --to E04",
+      "status": "passed",
+      "stdout": "OK  H01 now depends on E04",
+      "stderr": ""
+    },
+    {
+      "step": "apply edge H13->D13",
+      "command": "node build-scripts/references/unit-add-dep.js --from H13 --to D13",
+      "status": "passed",
+      "stdout": "OK  H13 now depends on D13",
+      "stderr": ""
+    },
+    {
+      "step": "apply edge H24->A38",
+      "command": "node build-scripts/references/unit-add-dep.js --from H24 --to A38",
+      "status": "passed",
+      "stdout": "OK  H24 now depends on A38",
+      "stderr": ""
+    },
+    {
+      "step": "apply edge L18->L17",
+      "command": "node build-scripts/references/unit-add-dep.js --from L18 --to L17",
+      "status": "passed",
+      "stdout": "OK  L18 now depends on L17",
+      "stderr": ""
+    },
+    {
+      "step": "add unit A45",
+      "command": "node build-scripts/references/unit-add.js --spec {\"id\":\"A45\",\"name\":\"P-Q grafiek tekenen uit tabel\",\"kern\":\"Teken een prijs-hoeveelheidsgrafiek uit tabelwaarden met prijs op de verticale as en hoeveelheid op de horizontale as.\",\"needs\":[],\"mastery_target\":\"apply\",\"prior_learning\":\"new_this_year\",\"aspects\":[\"grafisch\"],\"terms\":[],\"assumed_prior_knowledge\":[\"Coordinatenstelsel uit de onderbouw\"],\"zero_needs_status\":\"underbouw_assumed\",\"zero_needs_review\":{\"reviewed_on\":\"2026-04-28\",\"reviewer\":\"human R4.4 review\",\"rationale\":\"Approved as a missing graph-instrument root before analytical demand/supply graph work.\",\"recommended_needs\":[],\"severity\":\"low\"},\"procedure\":[\"Zet prijs op de verticale as en hoeveelheid op de horizontale as.\",\"Kies een passende schaal op beide assen.\",\"Plaats elk punt uit de tabel in de grafiek.\",\"Verbind de punten alleen als de context een lijn of curve ondersteunt.\"],\"pitfalls\":[\"Assen omdraaien: in economie staat P meestal verticaal en Q horizontaal.\"],\"generator\":\"GEN_A45\"}",
+      "status": "passed",
+      "stdout": "OK  minted A45 \"P-Q grafiek tekenen uit tabel\" (catalog now 193 units)",
+      "stderr": "(node:38504) Warning: Accessing non-existent property 'formatEntry' of module exports inside circular dependency\n(Use `node --trace-warnings ...` to show where the warning was created)"
+    },
+    {
+      "step": "add unit A46",
+      "command": "node build-scripts/references/unit-add.js --spec {\"id\":\"A46\",\"name\":\"Waarden aflezen en interpoleren in P-Q grafiek\",\"kern\":\"Lees prijs- en hoeveelheidswaarden af uit een P-Q grafiek en schat tussenliggende waarden door interpolatie.\",\"needs\":[\"A45\"],\"mastery_target\":\"apply\",\"prior_learning\":\"new_this_year\",\"aspects\":[\"grafisch\",\"rekenen\"],\"terms\":[],\"procedure\":[\"Zoek de gegeven prijs of hoeveelheid op de juiste as.\",\"Ga horizontaal of verticaal naar de grafiek.\",\"Lees de bijbehorende waarde op de andere as af.\",\"Schat tussen twee bekende punten lineair als de opdracht om een benadering vraagt.\"],\"generator\":\"GEN_A46\"}",
+      "status": "passed",
+      "stdout": "OK  minted A46 \"Waarden aflezen en interpoleren in P-Q grafiek\" (catalog now 194 units)",
+      "stderr": "(node:39520) Warning: Accessing non-existent property 'formatEntry' of module exports inside circular dependency\n(Use `node --trace-warnings ...` to show where the warning was created)"
+    },
+    {
+      "step": "add unit A47",
+      "command": "node build-scripts/references/unit-add.js --spec {\"id\":\"A47\",\"name\":\"Collectieve vraag uit tabellen optellen\",\"kern\":\"Bereken collectieve vraag door individuele gevraagde hoeveelheden bij dezelfde prijs op te tellen.\",\"needs\":[\"A46\"],\"mastery_target\":\"apply\",\"prior_learning\":\"new_this_year\",\"aspects\":[\"rekenen\",\"grafisch\"],\"terms\":[],\"procedure\":[\"Neem een prijsniveau dat in alle individuele vraagtabellen voorkomt.\",\"Lees per vrager de gevraagde hoeveelheid af.\",\"Tel de hoeveelheden horizontaal op tot de collectieve vraag.\",\"Herhaal dit voor meerdere prijzen om een collectieve vraagtabel of grafiek te maken.\"],\"generator\":\"GEN_A47\"}",
+      "status": "passed",
+      "stdout": "OK  minted A47 \"Collectieve vraag uit tabellen optellen\" (catalog now 195 units)",
+      "stderr": "(node:27368) Warning: Accessing non-existent property 'formatEntry' of module exports inside circular dependency\n(Use `node --trace-warnings ...` to show where the warning was created)"
+    },
+    {
+      "step": "add unit A48",
+      "command": "node build-scripts/references/unit-add.js --spec {\"id\":\"A48\",\"name\":\"Collectieve vraagfunctie algebraisch optellen\",\"kern\":\"Tel lineaire individuele vraagfuncties horizontaal op door bij dezelfde prijs de gevraagde hoeveelheden te sommeren.\",\"needs\":[\"A03\",\"A47\"],\"mastery_target\":\"apply\",\"prior_learning\":\"new_this_year\",\"aspects\":[\"rekenen\",\"grafisch\"],\"terms\":[],\"procedure\":[\"Schrijf elke individuele vraagfunctie als Q in termen van P.\",\"Tel de Q-termen bij elkaar op.\",\"Vereenvoudig de uitdrukking tot een collectieve vraagfunctie.\",\"Controleer of het prijsbereik van de individuele functies geldig blijft.\"],\"generator\":\"GEN_A48\"}",
+      "status": "passed",
+      "stdout": "OK  minted A48 \"Collectieve vraagfunctie algebraisch optellen\" (catalog now 196 units)",
+      "stderr": "(node:38148) Warning: Accessing non-existent property 'formatEntry' of module exports inside circular dependency\n(Use `node --trace-warnings ...` to show where the warning was created)"
+    },
+    {
+      "step": "add unit A49",
+      "command": "node build-scripts/references/unit-add.js --spec {\"id\":\"A49\",\"name\":\"Aanbodcurve tekenen met economenassen\",\"kern\":\"Teken een stijgende aanbodcurve met prijs op de verticale as en aangeboden hoeveelheid op de horizontale as.\",\"needs\":[\"A45\"],\"mastery_target\":\"apply\",\"prior_learning\":\"new_this_year\",\"aspects\":[\"grafisch\"],\"terms\":[],\"procedure\":[\"Zet P op de verticale as en Qa op de horizontale as.\",\"Plaats de aanbodpunten uit tabel of functie.\",\"Teken de aanbodcurve stijgend als hogere prijzen tot meer aanbod leiden.\",\"Label de curve als aanbod of S.\"],\"generator\":\"GEN_A49\"}",
+      "status": "passed",
+      "stdout": "OK  minted A49 \"Aanbodcurve tekenen met economenassen\" (catalog now 197 units)",
+      "stderr": "(node:40352) Warning: Accessing non-existent property 'formatEntry' of module exports inside circular dependency\n(Use `node --trace-warnings ...` to show where the warning was created)"
+    },
+    {
+      "step": "add unit A50",
+      "command": "node build-scripts/references/unit-add.js --spec {\"id\":\"A50\",\"name\":\"GVK en GCK berekenen\",\"kern\":\"Bereken gemiddelde variabele kosten en gemiddelde constante kosten uit totale kosten en productiehoeveelheid.\",\"needs\":[\"A08\"],\"mastery_target\":\"apply\",\"prior_learning\":\"new_this_year\",\"aspects\":[\"rekenen\"],\"terms\":[],\"procedure\":[\"Splits totale kosten in constante kosten en variabele kosten.\",\"Bereken GCK = TCK / Q.\",\"Bereken GVK = TVK / Q.\",\"Controleer dat GTK = GCK + GVK.\"],\"generator\":\"GEN_A50\"}",
+      "status": "passed",
+      "stdout": "OK  minted A50 \"GVK en GCK berekenen\" (catalog now 198 units)",
+      "stderr": "(node:40612) Warning: Accessing non-existent property 'formatEntry' of module exports inside circular dependency\n(Use `node --trace-warnings ...` to show where the warning was created)"
+    },
+    {
+      "step": "add unit A51",
+      "command": "node build-scripts/references/unit-add.js --spec {\"id\":\"A51\",\"name\":\"Overschot en tekort bij niet-evenwichtsprijs berekenen\",\"kern\":\"Bepaal bij een opgelegde prijs of er een overschot of tekort ontstaat en bereken de omvang als verschil tussen Qa en Qv.\",\"needs\":[\"A06\"],\"mastery_target\":\"apply\",\"prior_learning\":\"new_this_year\",\"aspects\":[\"grafisch\",\"rekenen\"],\"terms\":[],\"procedure\":[\"Lees bij de opgelegde prijs de gevraagde hoeveelheid af.\",\"Lees bij dezelfde prijs de aangeboden hoeveelheid af.\",\"Vergelijk Qa en Qv.\",\"Bereken het verschil en benoem overschot als Qa groter is dan Qv en tekort als Qv groter is dan Qa.\"],\"generator\":\"GEN_A51\"}",
+      "status": "passed",
+      "stdout": "OK  minted A51 \"Overschot en tekort bij niet-evenwichtsprijs berekenen\" (catalog now 199 units)",
+      "stderr": "(node:32604) Warning: Accessing non-existent property 'formatEntry' of module exports inside circular dependency\n(Use `node --trace-warnings ...` to show where the warning was created)"
+    },
+    {
+      "step": "add unit A52",
+      "command": "node build-scripts/references/unit-add.js --spec {\"id\":\"A52\",\"name\":\"MK en MO uit tabelverschillen berekenen\",\"kern\":\"Bereken marginale kosten en marginale opbrengsten uit opeenvolgende verschillen in een tabel.\",\"needs\":[\"A08\"],\"mastery_target\":\"apply\",\"prior_learning\":\"new_this_year\",\"aspects\":[\"rekenen\"],\"terms\":[],\"procedure\":[\"Neem twee opeenvolgende productiehoeveelheden.\",\"Bereken de verandering in totale kosten of totale opbrengsten.\",\"Deel door de verandering in Q.\",\"Noteer de uitkomst als MK of MO bij het bijbehorende productie-interval.\"],\"generator\":\"GEN_A52\"}",
+      "status": "passed",
+      "stdout": "OK  minted A52 \"MK en MO uit tabelverschillen berekenen\" (catalog now 200 units)",
+      "stderr": "(node:21008) Warning: Accessing non-existent property 'formatEntry' of module exports inside circular dependency\n(Use `node --trace-warnings ...` to show where the warning was created)"
+    },
+    {
+      "step": "add unit A53",
+      "command": "node build-scripts/references/unit-add.js --spec {\"id\":\"A53\",\"name\":\"MK benaderen uit kwadratische TK-functie\",\"kern\":\"Gebruik de precalculus-regel dat bij TK = a + bQ² de marginale kosten ongeveer gelijk zijn aan 2bQ.\",\"needs\":[\"A52\"],\"mastery_target\":\"apply\",\"prior_learning\":\"new_this_year\",\"aspects\":[\"rekenen\"],\"terms\":[],\"procedure\":[\"Herken de kwadratische term bQ² in de TK-functie.\",\"Neem twee keer de coefficient b.\",\"Vermenigvuldig met Q.\",\"Gebruik de uitkomst als benadering van MK bij die hoeveelheid.\"],\"generator\":\"GEN_A53\"}",
+      "status": "passed",
+      "stdout": "OK  minted A53 \"MK benaderen uit kwadratische TK-functie\" (catalog now 201 units)",
+      "stderr": "(node:31948) Warning: Accessing non-existent property 'formatEntry' of module exports inside circular dependency\n(Use `node --trace-warnings ...` to show where the warning was created)"
+    },
+    {
+      "step": "add unit A54",
+      "command": "node build-scripts/references/unit-add.js --spec {\"id\":\"A54\",\"name\":\"Winstoptimum controleren met Q-1, Q en Q+1\",\"kern\":\"Controleer een voorgesteld winstoptimum door totale winst bij de naburige hoeveelheden Q-1 en Q+1 te vergelijken.\",\"needs\":[\"A52\"],\"mastery_target\":\"apply\",\"prior_learning\":\"new_this_year\",\"aspects\":[\"rekenen\"],\"terms\":[],\"procedure\":[\"Bereken totale winst bij Q.\",\"Bereken totale winst bij Q-1.\",\"Bereken totale winst bij Q+1.\",\"Kies de hoeveelheid met de hoogste totale winst.\"],\"generator\":\"GEN_A54\"}",
+      "status": "passed",
+      "stdout": "OK  minted A54 \"Winstoptimum controleren met Q-1, Q en Q+1\" (catalog now 202 units)",
+      "stderr": "(node:27772) Warning: Accessing non-existent property 'formatEntry' of module exports inside circular dependency\n(Use `node --trace-warnings ...` to show where the warning was created)"
+    },
+    {
+      "step": "add unit A55",
+      "command": "node build-scripts/references/unit-add.js --spec {\"id\":\"A55\",\"name\":\"Gevraagde hoeveelheid voorspellen met elasticiteit\",\"kern\":\"Bereken de procentuele verandering van de gevraagde hoeveelheid met prijselasticiteit en zet die om naar een nieuwe hoeveelheid.\",\"needs\":[\"A15\",\"A38\"],\"mastery_target\":\"apply\",\"prior_learning\":\"new_this_year\",\"aspects\":[\"rekenen\"],\"terms\":[],\"procedure\":[\"Bepaal de procentuele verandering van de prijs of andere driver.\",\"Vermenigvuldig met de relevante elasticiteit.\",\"Pas de procentuele verandering toe op de beginsituatie van Qv.\",\"Controleer het teken: bij prijselasticiteit bewegen prijs en Qv meestal tegengesteld.\"],\"generator\":\"GEN_A55\"}",
+      "status": "passed",
+      "stdout": "OK  minted A55 \"Gevraagde hoeveelheid voorspellen met elasticiteit\" (catalog now 203 units)",
+      "stderr": "(node:33156) Warning: Accessing non-existent property 'formatEntry' of module exports inside circular dependency\n(Use `node --trace-warnings ...` to show where the warning was created)"
+    },
+    {
+      "step": "add unit A56",
+      "command": "node build-scripts/references/unit-add.js --spec {\"id\":\"A56\",\"name\":\"Korte zijde bepalen bij bindende prijs\",\"kern\":\"Bepaal bij een bindende minimum- of maximumprijs welke marktzijde de verhandelde hoeveelheid beperkt.\",\"needs\":[\"A51\",\"D34\"],\"mastery_target\":\"apply\",\"prior_learning\":\"new_this_year\",\"aspects\":[\"grafisch\",\"rekenen\"],\"terms\":[],\"procedure\":[\"Controleer of de opgelegde prijs bindend is.\",\"Lees Qv en Qa af bij de opgelegde prijs.\",\"Neem de kleinste van Qv en Qa als verhandelde hoeveelheid.\",\"Benoem welke zijde de korte zijde is.\"],\"generator\":\"GEN_A56\"}",
+      "status": "passed",
+      "stdout": "OK  minted A56 \"Korte zijde bepalen bij bindende prijs\" (catalog now 204 units)",
+      "stderr": "(node:2624) Warning: Accessing non-existent property 'formatEntry' of module exports inside circular dependency\n(Use `node --trace-warnings ...` to show where the warning was created)"
+    },
+    {
+      "step": "add unit A57",
+      "command": "node build-scripts/references/unit-add.js --spec {\"id\":\"A57\",\"name\":\"Afwentelingspercentage berekenen\",\"kern\":\"Bereken welk percentage van een heffing of kostenstijging wordt doorberekend in de prijs.\",\"needs\":[\"A38\",\"D34\"],\"mastery_target\":\"apply\",\"prior_learning\":\"new_this_year\",\"aspects\":[\"rekenen\"],\"terms\":[],\"procedure\":[\"Bepaal de prijsstijging voor consumenten.\",\"Bepaal de heffing of kostenstijging per eenheid.\",\"Deel de prijsstijging door de heffing of kostenstijging.\",\"Vermenigvuldig met 100 procent.\"],\"generator\":\"GEN_A57\"}",
+      "status": "passed",
+      "stdout": "OK  minted A57 \"Afwentelingspercentage berekenen\" (catalog now 205 units)",
+      "stderr": "(node:39972) Warning: Accessing non-existent property 'formatEntry' of module exports inside circular dependency\n(Use `node --trace-warnings ...` to show where the warning was created)"
+    },
+    {
+      "step": "add unit A58",
+      "command": "node build-scripts/references/unit-add.js --spec {\"id\":\"A58\",\"name\":\"Subsidie-uitgaven berekenen\",\"kern\":\"Bereken totale subsidie-uitgaven als subsidie per eenheid maal de nieuwe verhandelde hoeveelheid.\",\"needs\":[\"A04\"],\"mastery_target\":\"apply\",\"prior_learning\":\"new_this_year\",\"aspects\":[\"rekenen\"],\"terms\":[],\"procedure\":[\"Bepaal de subsidie per eenheid.\",\"Bepaal de nieuwe verhandelde hoeveelheid.\",\"Vermenigvuldig subsidie per eenheid met Q nieuw.\",\"Noteer de totale overheidsuitgaven met juiste eenheid.\"],\"generator\":\"GEN_A58\"}",
+      "status": "passed",
+      "stdout": "OK  minted A58 \"Subsidie-uitgaven berekenen\" (catalog now 206 units)",
+      "stderr": "(node:10924) Warning: Accessing non-existent property 'formatEntry' of module exports inside circular dependency\n(Use `node --trace-warnings ...` to show where the warning was created)"
+    },
+    {
+      "step": "add unit A59",
+      "command": "node build-scripts/references/unit-add.js --spec {\"id\":\"A59\",\"name\":\"Opkoopkosten bij minimumprijs berekenen\",\"kern\":\"Bereken wat de overheid betaalt als zij het overschot bij een minimumprijs opkoopt.\",\"needs\":[\"A51\",\"A56\"],\"mastery_target\":\"apply\",\"prior_learning\":\"new_this_year\",\"aspects\":[\"grafisch\",\"rekenen\"],\"terms\":[],\"procedure\":[\"Bepaal het overschot bij de minimumprijs.\",\"Bepaal de prijs waartegen de overheid opkoopt.\",\"Vermenigvuldig overschot met opkoopprijs.\",\"Controleer of de vraagzijde niet als opkoophoeveelheid is gebruikt.\"],\"generator\":\"GEN_A59\"}",
+      "status": "passed",
+      "stdout": "OK  minted A59 \"Opkoopkosten bij minimumprijs berekenen\" (catalog now 207 units)",
+      "stderr": "(node:37044) Warning: Accessing non-existent property 'formatEntry' of module exports inside circular dependency\n(Use `node --trace-warnings ...` to show where the warning was created)"
+    },
+    {
+      "step": "add unit A60",
+      "command": "node build-scripts/references/unit-add.js --spec {\"id\":\"A60\",\"name\":\"Vraagfunctie inverteren bij quotumhoeveelheid\",\"kern\":\"Bereken welke prijs hoort bij een gegeven quotumhoeveelheid door de vraagfunctie om te schrijven.\",\"needs\":[\"A03\"],\"mastery_target\":\"apply\",\"prior_learning\":\"new_this_year\",\"aspects\":[\"rekenen\",\"grafisch\"],\"terms\":[],\"procedure\":[\"Neem de gevraagde hoeveelheid uit het quotum.\",\"Vul deze hoeveelheid in de vraagfunctie in.\",\"Los de vergelijking op naar P.\",\"Interpreteer P als de maximale prijs die bij het quotum past.\"],\"generator\":\"GEN_A60\"}",
+      "status": "passed",
+      "stdout": "OK  minted A60 \"Vraagfunctie inverteren bij quotumhoeveelheid\" (catalog now 208 units)",
+      "stderr": "(node:36532) Warning: Accessing non-existent property 'formatEntry' of module exports inside circular dependency\n(Use `node --trace-warnings ...` to show where the warning was created)"
+    },
+    {
+      "step": "add unit D38",
+      "command": "node build-scripts/references/unit-add.js --spec {\"id\":\"D38\",\"name\":\"GCK daalt door spreiding van constante kosten\",\"kern\":\"Leg uit dat gemiddelde constante kosten dalen wanneer dezelfde constante kosten over meer producten worden verdeeld.\",\"needs\":[\"D02\",\"A50\"],\"mastery_target\":\"understand\",\"prior_learning\":\"new_this_year\",\"aspects\":[\"verbaal\",\"rekenen\"],\"terms\":[],\"pitfalls\":[\"GCK verwarren met totale constante kosten: TCK blijven gelijk, GCK dalen bij hogere Q.\"]}",
+      "status": "passed",
+      "stdout": "OK  minted D38 \"GCK daalt door spreiding van constante kosten\" (catalog now 209 units)",
+      "stderr": "(node:3692) Warning: Accessing non-existent property 'formatEntry' of module exports inside circular dependency\n(Use `node --trace-warnings ...` to show where the warning was created)"
+    },
+    {
+      "step": "add unit D39",
+      "command": "node build-scripts/references/unit-add.js --spec {\"id\":\"D39\",\"name\":\"Totale surplus als CS plus PS\",\"kern\":\"Bereken totale surplus als de som van consumentensurplus en producentensurplus.\",\"needs\":[\"D28\"],\"mastery_target\":\"apply\",\"prior_learning\":\"new_this_year\",\"aspects\":[\"grafisch\",\"rekenen\"],\"terms\":[],\"procedure\":[\"Bepaal consumentensurplus.\",\"Bepaal producentensurplus.\",\"Tel beide bedragen op.\",\"Controleer of beide surplusdelen dezelfde eenheid hebben.\"]}",
+      "status": "passed",
+      "stdout": "OK  minted D39 \"Totale surplus als CS plus PS\" (catalog now 210 units)",
+      "stderr": "(node:22992) Warning: Accessing non-existent property 'formatEntry' of module exports inside circular dependency\n(Use `node --trace-warnings ...` to show where the warning was created)"
+    },
+    {
+      "step": "add unit D40",
+      "command": "node build-scripts/references/unit-add.js --spec {\"id\":\"D40\",\"name\":\"Surplusrekening bij marktinterventie controleren\",\"kern\":\"Controleer of de veranderingen in surplus, overheidsinkomsten of -uitgaven en verloren surplus samen consistent zijn.\",\"needs\":[\"D39\"],\"mastery_target\":\"analyze\",\"prior_learning\":\"new_this_year\",\"aspects\":[\"grafisch\",\"rekenen\"],\"terms\":[],\"procedure\":[\"Noteer de beginsituatie voor consumentensurplus en producentensurplus.\",\"Noteer de nieuwe surplusdelen na de interventie.\",\"Voeg overheidsinkomsten of overheidsuitgaven toe.\",\"Controleer of het verschil overeenkomt met het verloren of gewonnen surplus.\"]}",
+      "status": "passed",
+      "stdout": "OK  minted D40 \"Surplusrekening bij marktinterventie controleren\" (catalog now 211 units)",
+      "stderr": "(node:21788) Warning: Accessing non-existent property 'formatEntry' of module exports inside circular dependency\n(Use `node --trace-warnings ...` to show where the warning was created)"
+    },
+    {
+      "step": "rebuild unit index",
+      "command": "node build-scripts/references/build-unit-index.js",
+      "status": "passed",
+      "stdout": "OK  211 unit(s) validated; wrote references\\machine\\micro-teaching-units.json",
+      "stderr": ""
+    },
+    {
+      "step": "rebuild begrippen index",
+      "command": "node build-scripts/references/build-begrippen-index.js",
+      "status": "passed",
+      "stdout": "OK  227 begrippen (227 live); wrote references\\machine\\begrippen.json, references\\machine\\begrippen.md, reports\\begrippen-coverage.md",
+      "stderr": ""
+    }
+  ],
+  "applied": {
+    "terms_added": [
+      "schaarste",
+      "alternatieve-kosten"
+    ],
+    "unit_term_updates": [
+      {
+        "id": "B02",
+        "terms": [
+          "alternatieve-kosten"
+        ]
+      }
+    ],
+    "dependency_edges": [
+      [
+        "A18",
+        "B02"
+      ],
+      [
+        "A43",
+        "B02"
+      ],
+      [
+        "D10",
+        "A06"
+      ],
+      [
+        "D10",
+        "D33"
+      ],
+      [
+        "D13",
+        "A06"
+      ],
+      [
+        "D13",
+        "D33"
+      ],
+      [
+        "D24",
+        "D35"
+      ],
+      [
+        "D24",
+        "D15"
+      ],
+      [
+        "F07",
+        "F16"
+      ],
+      [
+        "H01",
+        "E04"
+      ],
+      [
+        "H13",
+        "D13"
+      ],
+      [
+        "H24",
+        "A38"
+      ],
+      [
+        "L18",
+        "L17"
+      ]
+    ],
+    "units_added": [
+      "A45",
+      "A46",
+      "A47",
+      "A48",
+      "A49",
+      "A50",
+      "A51",
+      "A52",
+      "A53",
+      "A54",
+      "A55",
+      "A56",
+      "A57",
+      "A58",
+      "A59",
+      "A60",
+      "D38",
+      "D39",
+      "D40"
+    ]
+  },
+  "noops": {
+    "terms_existing": [],
+    "unit_term_updates_already_current": [],
+    "dependency_edges_existing": [],
+    "units_existing": []
+  },
+  "held_for_design_review": [
+    "A42",
+    "D32",
+    "D02",
+    "G11",
+    "H16",
+    "H21",
+    "A11_vs_3.1.2_calculus_boundary",
+    "F16_term_decision_MPC_MSC_MPB_MSB"
+  ],
+  "constraints": [
+    "CLI-only mutation",
+    "no hand edits to references/machine",
+    "stop on validation failure",
+    "no unapproved dependency edges",
+    "do not create units from syllabus text alone"
+  ],
+  "summary": {
+    "terms_added": 2,
+    "terms_existing": 0,
+    "unit_term_updates_applied": 1,
+    "dependency_edges_applied": 13,
+    "dependency_edges_existing": 0,
+    "units_added": 19,
+    "units_existing": 0
+  }
+}

@@ -3,9 +3,29 @@
 **Niet met de hand bewerken.** Alle mutaties gaan via `build-scripts/references/term-*.js`.
 Regenereer met `node build-scripts/references/build-begrippen-index.js`.
 
-*Versie 1.0.0 — gegenereerd 2026-04-26.*
+*Versie 1.0.0 — gegenereerd 2026-04-27.*
 
 Elk begrip heeft een stabiele id (slug van de Nederlandse term), een student-facing Nederlandse definitie, een syllabus-clause (indien van toepassing), en cross-links naar gerelateerde termen en teaching-units.
+
+## Domein B: Schaarste
+
+### alternatieve-kosten
+- **Term:** alternatieve kosten
+- **Definitie:** De opbrengst of waarde van het beste niet-gekozen alternatief.
+- **Engels:** opportunity cost
+- **Gerelateerd:** schaarste
+- **Voorbeeld:** Als je een uur werkt in plaats van studeert, zijn de gemiste studie-opbrengsten de alternatieve kosten.
+- **Let op:** Alternatieve kosten zijn niet alle opgegeven alternatieven bij elkaar, maar alleen het beste opgegeven alternatief.
+- **Teaching-units:** B02
+
+### schaarste
+- **Term:** schaarste
+- **Definitie:** Situatie waarin middelen beperkt zijn ten opzichte van behoeften, waardoor kiezen noodzakelijk is.
+- **Engels:** scarcity
+- **Gerelateerd:** alternatieve-kosten
+- **Voorbeeld:** Een leerling heeft maar twee uur studietijd en moet kiezen tussen economie en wiskunde.
+- **Let op:** Schaarste betekent niet simpelweg dat iets zeldzaam is; het gaat om beperktheid ten opzichte van behoeften.
+- **Teaching-units:** B01
 
 ## Domein D: Markt
 

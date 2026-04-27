@@ -24,8 +24,9 @@ const COVERAGE_REPORT = path.join(REPO_ROOT, 'reports/begrippen-coverage.md');
 
 const VERSION = '1.0.0';
 
-const DOMAINS = ['D', 'E', 'F', 'G', 'H', 'I'];
+const DOMAINS = ['B', 'D', 'E', 'F', 'G', 'H', 'I'];
 const DOMAIN_TITLES = {
+  B: 'Schaarste',
   D: 'Markt',
   E: 'Ruilen over de tijd',
   F: 'Samenwerken en onderhandelen',

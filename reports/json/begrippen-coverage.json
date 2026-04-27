@@ -1,7 +1,7 @@
 {
   "report_id": "begrippen-coverage",
   "generated_by": "build-scripts/reports/generate-all.js",
-  "generated_on": "2026-04-27T10:09:10.088Z",
+  "generated_on": "2026-04-27T22:30:20.561Z",
   "source_files": [
     "references/machine/begrippen.json",
     "references/machine/micro-teaching-units.json"
@@ -9,7 +9,7 @@
   "schema_version": 1,
   "status": "warn",
   "summary": {
-    "terms": 225,
+    "terms": 227,
     "terms_without_teaching_units": 130
   },
   "issues": [

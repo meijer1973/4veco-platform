@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "generated_at": "2026-04-26T20:45:52.692Z",
+  "generated_at": "2026-04-27T22:30:15.727Z",
   "terms": {
     "aandelen": {
       "id": "aandelen",
@@ -75,6 +75,29 @@
       "example_nl": "Hypotheekrente is een aftrekpost (verlaagt het belastbaar inkomen); privégebruik van een leaseauto is een bijtelling (verhoogt het).",
       "pitfall_nl": null,
       "teaching_units": [],
+      "deprecated": false,
+      "deprecated_in_favor_of": null
+    },
+    "alternatieve-kosten": {
+      "id": "alternatieve-kosten",
+      "term_nl": "alternatieve kosten",
+      "definition_nl": "De opbrengst of waarde van het beste niet-gekozen alternatief.",
+      "domain": "B",
+      "syllabus_clause": null,
+      "abbreviation": null,
+      "english_equivalent": "opportunity cost",
+      "synonyms_nl": [],
+      "deprecated_forms": [],
+      "related_terms": [
+        "schaarste"
+      ],
+      "notation_markers": [],
+      "formulas": [],
+      "example_nl": "Als je een uur werkt in plaats van studeert, zijn de gemiste studie-opbrengsten de alternatieve kosten.",
+      "pitfall_nl": "Alternatieve kosten zijn niet alle opgegeven alternatieven bij elkaar, maar alleen het beste opgegeven alternatief.",
+      "teaching_units": [
+        "B02"
+      ],
       "deprecated": false,
       "deprecated_in_favor_of": null
     },
@@ -3879,6 +3902,29 @@
       "example_nl": "Een huiseigenaar betaalt jaarlijks € 300 aan opstalverzekering, ook al is de verwachte schade slechts € 150 per jaar: de zekerheid is hem extra geld waard.",
       "pitfall_nl": "Risicoavers ≠ risicomijdend. Risico-averse mensen nemen wel degelijk risico, maar vragen er compensatie voor — vandaar de risicopremie op aandelen.",
       "teaching_units": [],
+      "deprecated": false,
+      "deprecated_in_favor_of": null
+    },
+    "schaarste": {
+      "id": "schaarste",
+      "term_nl": "schaarste",
+      "definition_nl": "Situatie waarin middelen beperkt zijn ten opzichte van behoeften, waardoor kiezen noodzakelijk is.",
+      "domain": "B",
+      "syllabus_clause": null,
+      "abbreviation": null,
+      "english_equivalent": "scarcity",
+      "synonyms_nl": [],
+      "deprecated_forms": [],
+      "related_terms": [
+        "alternatieve-kosten"
+      ],
+      "notation_markers": [],
+      "formulas": [],
+      "example_nl": "Een leerling heeft maar twee uur studietijd en moet kiezen tussen economie en wiskunde.",
+      "pitfall_nl": "Schaarste betekent niet simpelweg dat iets zeldzaam is; het gaat om beperktheid ten opzichte van behoeften.",
+      "teaching_units": [
+        "B01"
+      ],
       "deprecated": false,
       "deprecated_in_favor_of": null
     },
