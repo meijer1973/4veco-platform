@@ -1,0 +1,32 @@
+{
+  "review_lens": "evidence_surfacing",
+  "status": "prepared",
+  "verdict": "pass_with_conditions",
+  "evidence": [
+    "references/data/rag/chunk_index.jsonl",
+    "references/data/rag/retrieval_eval_results.json",
+    "references/data/evidence-anchors.json"
+  ],
+  "findings": [
+    {
+      "title": "Evidence IDs are exposed",
+      "severity": "info",
+      "detail": "Chunk and query outputs preserve evidence_ids where available."
+    },
+    {
+      "title": "Exam question body text is now retrievable",
+      "severity": "info",
+      "detail": "Exam-question chunks include body text when present, allowing concept terms such as producentensurplus to retrieve relevant exam questions."
+    },
+    {
+      "title": "Source inspection remains required",
+      "severity": "medium",
+      "detail": "Retrieved chunks are excerpts and indexes. They must route users to source paths rather than replacing source inspection."
+    }
+  ],
+  "recommended_conditions": [
+    "Every answer must cite source_path or evidence_id.",
+    "Generated report hits must be presented as diagnostics, not source proof.",
+    "Pending-review edges must remain visibly pending in answers."
+  ]
+}

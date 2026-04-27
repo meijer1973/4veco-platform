@@ -1,0 +1,32 @@
+{
+  "review_lens": "authority_ranking",
+  "status": "prepared",
+  "verdict": "pass_with_conditions",
+  "evidence": [
+    "reports/review-gates/GATE-R5-alignment-graph/gate-closure.json",
+    "references/data/rag/retrieval_eval_results.json",
+    "reports/json/reference-health.json"
+  ],
+  "findings": [
+    {
+      "title": "Authority metadata is preserved",
+      "severity": "info",
+      "detail": "Retrieval results preserve source type, authority level, edge status, and non-primary evidence warnings."
+    },
+    {
+      "title": "Generated reports remain non-authoritative",
+      "severity": "info",
+      "detail": "Generated-report results are marked with generated_report_warning and not_primary_evidence."
+    },
+    {
+      "title": "Whole graph remains non-authoritative",
+      "severity": "info",
+      "detail": "Reference health keeps whole_graph_authority=false and named_edge_groups_only scope."
+    }
+  ],
+  "recommended_conditions": [
+    "Do not allow retrieval consumers to flatten authority levels.",
+    "Generated reports may rank review priorities but may not become primary evidence.",
+    "Student-facing and adaptive uses remain blocked."
+  ]
+}

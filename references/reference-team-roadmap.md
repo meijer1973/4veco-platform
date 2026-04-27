@@ -77,7 +77,7 @@ Open items are listed first; completed items are kept below them.
 
 | Sprint | Name | Completed | Current State |
 |--------|------|-----------|---------------|
-| R7.4 | RAG Review Gate | no | Planned. Approve internal/teacher-facing RAG only after evaluation. |
+| R7.4 | RAG Review Gate | no | Review packet prepared. Awaiting interactive human review; gate is not closed. |
 | R8.1 | QC Issue Model | no | Planned. Define machine-readable quality issue categories, severity, evidence, proof-to-close, and ownership. |
 | R8.2 | Production QC Gates | no | Planned. Connect reference QC signals to lesson-production checks without mutating protected references. |
 | R9.1 | Owned Source Registry | no | Planned. Register owned book/source material as source surfaces distinct from external authority and generated reports. |
@@ -957,6 +957,14 @@ R7.4 preparation must:
 - summarize retrieval results and known failure surfaces
 - propose allowed and blocked downstream uses
 - stop before final gate closure
+
+R7.4 preparation state:
+
+- review packet exists at `reports/review-gates/GATE-R7-rag/review-packet.md`
+- machine-readable packet exists at `reports/review-gates/GATE-R7-rag/review-packet.json`
+- review-lens artifacts exist under `reports/review-gates/GATE-R7-rag/`
+- proposed gate status is `pass_with_conditions`
+- final gate closure has not been created
 
 ## Final Rule
 

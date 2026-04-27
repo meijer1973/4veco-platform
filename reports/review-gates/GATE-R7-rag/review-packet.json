@@ -1,0 +1,95 @@
+{
+  "gate_id": "GATE-R7-rag",
+  "sprint_id": "R7.4",
+  "packet_status": "prepared_for_review",
+  "gate_closure_status": "not_closed",
+  "prepared_on": "2026-04-27",
+  "proposed_gate_status": "pass_with_conditions",
+  "proposed_status_rationale": "R7 retrieval is usable for internal retrieval development, evaluation, and carefully marked teacher/internal research assistance, but it remains too limited for student-facing or automated decision use.",
+  "source_artifacts": [
+    "references/data/rag/chunk_index.jsonl",
+    "references/data/rag/retrieval_eval_set.json",
+    "references/data/rag/retrieval_eval_results.json",
+    "reports/markdown/retrieval-eval-results.md",
+    "reports/json/reference-health.json",
+    "reports/review-gates/GATE-R5-alignment-graph/gate-closure.json"
+  ],
+  "retrieval_eval_summary": {
+    "case_count": 10,
+    "pass_count": 10,
+    "fail_count": 0,
+    "authority_violation_count": 0
+  },
+  "sample_queries": [
+    "Welke units ondersteunen prijselasticiteit?",
+    "Welke examenvragen testen producentensurplus?",
+    "Welke live units missen term links?",
+    "Welke edges zijn diagnostic_only?",
+    "Welke graph edges zijn pending_review?",
+    "Welke informatie komt alleen uit generated reports?"
+  ],
+  "authority_handling": {
+    "generated_report_primary_evidence": false,
+    "diagnostic_only_curriculum_authority": false,
+    "pending_review_curriculum_authority": false,
+    "edge_status_preserved": true,
+    "source_authority_preserved": true
+  },
+  "known_failures_or_limits": [
+    "Lexical ranking can include broad low-score unit matches when a query contains generic words such as units.",
+    "The target-exercise chunk is currently a large whole-file chunk rather than per-exercise chunks.",
+    "Retrieval is deterministic lexical/entity search, not semantic vector search.",
+    "Generated reports are useful diagnostics but cannot be primary evidence.",
+    "Unreviewed graph edges must remain pending_review or diagnostic_only."
+  ],
+  "proposed_allowed_downstream_uses": [
+    "internal_retrieval_development",
+    "retrieval_evaluation",
+    "reference_health_reports",
+    "internal_dashboard",
+    "teacher_facing_internal_research_assistance_when_marked_non_authoritative"
+  ],
+  "proposed_blocked_downstream_uses": [
+    "student_diagnostics",
+    "adaptive_routing",
+    "student_facing_ai",
+    "automatic_lesson_sequencing",
+    "automatic_mastery_decisions",
+    "summative_assessment_decisions"
+  ],
+  "review_questions": [
+    {
+      "id": "R7Q1",
+      "question": "May the deterministic chunk and query layer be used for internal retrieval development and evaluation?"
+    },
+    {
+      "id": "R7Q2",
+      "question": "May teacher-facing/internal research assistance use this retrieval layer if every answer preserves source authority and non-authoritative warnings?"
+    },
+    {
+      "id": "R7Q3",
+      "question": "Are generated-report chunks allowed as retrieval warnings only, with not_primary_evidence=true?"
+    },
+    {
+      "id": "R7Q4",
+      "question": "Are diagnostic_only and pending_review graph edges sufficiently visible for internal retrieval use?"
+    },
+    {
+      "id": "R7Q5",
+      "question": "Does the lexical ranking weakness require a hold, or is it acceptable as a known limitation for internal use?"
+    },
+    {
+      "id": "R7Q6",
+      "question": "Should target-exercise chunking be split per exercise before teacher-facing use?"
+    },
+    {
+      "id": "R7Q7",
+      "question": "Which downstream uses remain blocked after R7.4?"
+    },
+    {
+      "id": "R7Q8",
+      "question": "Should the gate close as pass_with_conditions, hold, or fail?"
+    }
+  ],
+  "closure_instruction": "Do not create final gate closure until the human review answers are recorded and explicitly confirmed."
+}
