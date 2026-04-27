@@ -21,7 +21,7 @@
  *
  * Run:
  *   node build-scripts/platform/reskin-vaardigheden.js <module-dir>
- *   node build-scripts/platform/reskin-vaardigheden.js "../3-Module-3-rewire-test"
+ *   node build-scripts/platform/reskin-vaardigheden.js "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod"
  */
 
 'use strict';

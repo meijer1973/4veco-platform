@@ -706,7 +706,7 @@
         "A2.1",
         "D1.21"
       ],
-      "difficulty_notes": "This paragraph introduces the concepts and calculation only — NOT yet the profit maximisation rule. Students work with tables and subtraction, discovering patterns. No differentiation yet. The quadratic cost function in exercise (d) prepares students for rising MK, which they will encounter in Module 3. One lesson works well because the focus is on understanding, not on a complex procedure.",
+      "difficulty_notes": "This paragraph introduces the concepts and calculation only — NOT yet the profit maximisation rule. Students work with tables and subtraction, discovering patterns. No differentiation yet. The quadratic cost function in exercise (d) prepares students for rising MK, which they will encounter later in the producer and market-power sequence. One lesson works well because the focus is on understanding, not on a complex procedure.",
       "source_ref": "knowledge/course_blueprint_v4.md §1.4.3"
     },
     {
@@ -778,7 +778,7 @@
         "A2.12",
         "D1.21"
       ],
-      "difficulty_notes": "Exercise (e) is the bridge to algebraic application. The hint deliberately uses an approximate MK ('each extra unit costs approximately 4Q') rather than formal differentiation — that comes in Module 3. Students learn the logic of the rule here; the calculus technique comes later. Exercise (f) builds verification habits. One lesson works because the rule emerges naturally from the table work in §1.4.3.",
+      "difficulty_notes": "Exercise (e) is the bridge to algebraic application. The hint deliberately uses an approximate MK ('each extra unit costs approximately 4Q') rather than formal differentiation — the formal calculus technique comes later in the producer and market-power sequence. Students learn the logic of the rule here; the calculus technique comes later. Exercise (f) builds verification habits. One lesson works because the rule emerges naturally from the table work in §1.4.3.",
       "source_ref": "knowledge/course_blueprint_v4.md §1.4.4"
     },
     {
@@ -1099,7 +1099,7 @@
         "A2.17",
         "D3.1"
       ],
-      "difficulty_notes": "The graphical work for PS mirrors CS — students pick it up quickly. The challenging element is exercise (e): connecting PS to marginal cost. The supply curve has been treated as 'willingness to sell' so far; now students must see it as the MC curve. This dual interpretation (supply = MC) is critical for understanding welfare effects of monopoly in Module 3. Spend time on this connection — it is more important than the triangle calculation itself. One lesson works if you prioritise the MC connection over drilling calculations.",
+      "difficulty_notes": "The graphical work for PS mirrors CS — students pick it up quickly. The challenging element is exercise (e): connecting PS to marginal cost. The supply curve has been treated as 'willingness to sell' so far; now students must see it as the MC curve. This dual interpretation (supply = MC) is critical for later welfare effects of monopoly and market-power analysis. Spend time on this connection — it is more important than the triangle calculation itself. One lesson works if you prioritise the MC connection over drilling calculations.",
       "source_ref": "knowledge/course_blueprint_v4.md §2.2.2"
     },
     {

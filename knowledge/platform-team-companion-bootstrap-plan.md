@@ -262,9 +262,9 @@ Document the concrete source path for:
 
 - `Lees dit als je niet weet hoe je moet beginnen met deze les.docx`
 
-Current verified legacy source:
+Current preferred source:
 
-- `C:\Projects\4veco\3-Module-3-rewire-test\3.1 Hoofdstuk 1 - Markten\3.1.1 Paragraaf 1 - Markt en marktstructuur\1. Voorbereiden\Lees dit als je niet weet hoe je moet beginnen met deze les.docx`
+- a verified book-local helper document under `../4veco-lessen/`, or an owned reference template when one exists
 
 Exit criteria:
 

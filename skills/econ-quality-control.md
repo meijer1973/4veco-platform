@@ -586,11 +586,11 @@ Store quality_refs in the paragraph folder:
 For reports, store in a `_quality/` folder at the appropriate level:
 
 ```
-Module 3/
+Course/
 ├── _quality/
-│   ├── module-3-curriculum-rapport.md
-│   └── module-3-differentiatie-rapport.md
-├── H1 Markten/
+│   ├── course-curriculum-rapport.md
+│   └── course-differentiatie-rapport.md
+├── H1 Example/
 │   ├── _quality/
 │   │   └── h1-quality-rapport.md
 │   └── ...

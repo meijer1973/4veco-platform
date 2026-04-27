@@ -120,7 +120,7 @@ Elke opgave op het platform kan getagd worden met **één primaire** categorie e
 
 **Gekoppelde F/B/S/E-skills.**
 - B-laag: B8–B10 (elasticiteiten → classificeren van goederen als normaal/inferieur, substituten/complementen).
-- Marktvormen (monopolie, oligopolie, volledige mededinging) — behandeld in module 3.
+- Marktvormen (monopolie, oligopolie, volledige mededinging) — behandeld in de latere marktvormen- en marktwerkingsequentie.
 - Begrippenkennis uit `economie-terminologie.md`.
 
 **Veelvoorkomende misconcepties.**
@@ -176,7 +176,7 @@ Elke opgave op het platform kan getagd worden met **één primaire** categorie e
 
 **Voorbeeldopgave.** "In een duopolie overwegen bedrijf A en bedrijf B hun prijs te verlagen of gelijk te houden. Bepaal op basis van de pay-off matrix in figuur 3 welke uitkomst Nash-evenwicht is en leg uit waarom."
 
-**Gekoppelde F/B/S/E-skills.** Behandeld in module met marktvormen (module 3) en gedragseconomie; pay-off-matrices komen ook terug in `econ-consolidation-builder` als standaard-bronmateriaal.
+**Gekoppelde F/B/S/E-skills.** Behandeld in de latere marktvormen- en gedragseconomiesequentie; pay-off-matrices komen ook terug in `econ-consolidation-builder` als standaard-bronmateriaal.
 
 **Veelvoorkomende misconcepties.**
 - Samenwerking aannemen waar dominant strategy theorie individueel gedrag voorspelt.

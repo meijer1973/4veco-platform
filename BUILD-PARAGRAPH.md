@@ -144,9 +144,7 @@ For Book 1, the manifest path is:
 
 `../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/deploy-config.json`
 
-The static helper file `Lees dit als je niet weet hoe je moet beginnen met deze les.docx` can be seeded from the verified legacy source:
-
-`C:\Projects\4veco\3-Module-3-rewire-test\3.1 Hoofdstuk 1 - Markten\3.1.1 Paragraaf 1 - Markt en marktstructuur\1. Voorbereiden\Lees dit als je niet weet hoe je moet beginnen met deze les.docx`
+The static helper file `Lees dit als je niet weet hoe je moet beginnen met deze les.docx` can be seeded from a verified helper-source document in the current book/source workflow. Prefer a book-local source under `../4veco-lessen/` or an owned reference template when one exists.
 
 Important:
 

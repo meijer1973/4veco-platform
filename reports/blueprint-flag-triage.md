@@ -1,6 +1,6 @@
 # Blueprint Flag Triage
 
-Generated: 2026-04-26
+Generated: 2026-04-27
 Target exercises: 49
 Exercises with flags: 39
 Raw flags: 84

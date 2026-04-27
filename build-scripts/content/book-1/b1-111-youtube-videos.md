@@ -4,7 +4,7 @@
 
 Pad: `4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – youtube-videos.html`
 
-Manueel gemaakt (§B1-regel: geen build-script voor dit artefact). Structuur is overgenomen van de Module 3-youtube-videos-pagina's maar gekleurd naar het domein van Boek 1 (teal, `#148F83` accent).
+Manueel gemaakt (§B1-regel: geen build-script voor dit artefact). Structuur is gebaseerd op de legacy youtube-video-pagina's maar gekleurd naar het domein van Boek 1 (teal, `#148F83` accent).
 
 ## Welke 3 video's
 
@@ -37,9 +37,9 @@ De validator accepteert elke URL met `watch?v=` of `results?search_query=` als a
    - Canonieke termen (schaarste, alternatieve kosten) — niet &quot;opportuniteitskosten&quot;.
 4. Vervang in de HTML per kaart:
    - `https://www.youtube.com/results?search_query=…` → `https://www.youtube.com/watch?v=<VIDEO_ID>`
-   - De `thumb-link` van het teal-gradient-blok naar een `<img src="https://img.youtube.com/vi/<VIDEO_ID>/mqdefault.jpg" …>` (zie Module 3 voorbeelden zoals `3.1.1 Markt en marktstructuur – youtube-videos.html`).
+   - De `thumb-link` van het teal-gradient-blok naar een `<img src="https://img.youtube.com/vi/<VIDEO_ID>/mqdefault.jpg" …>` (zie oudere youtube-video-pagina's voor de HTML-structuur).
    - Titel (`<h3>`) en kanaalnaam aanpassen aan de echte video.
-5. Houd de domain-kleur `#148F83` (teal) als accent — niet het Module 3-blauw overnemen.
+5. Houd de domain-kleur `#148F83` (teal) als accent; neem geen legacy domeinkleur over.
 
 ## Verificatie
 

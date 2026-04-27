@@ -1,7 +1,7 @@
 {
   "schema_version": "0.1",
   "sprint_id": "R4.3",
-  "generated_on": "2026-04-26",
+  "generated_on": "2026-04-27",
   "source": "references/authored/course-target-exercises.json",
   "exercise_count": 49,
   "exercises_with_flags": 39,

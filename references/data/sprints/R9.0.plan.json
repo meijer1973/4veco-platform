@@ -1,0 +1,22 @@
+{
+  "sprint_id": "R9.0",
+  "name": "Legacy Module-3 Reference Minimization",
+  "status": "in_progress",
+  "planned_on": "2026-04-27",
+  "plan": "docs/sprints/R9.0-plan.md",
+  "protected_reference_data_changes_allowed": false,
+  "human_review_required": false,
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js docs/sprints/R9.0-plan.md",
+    "node build-scripts/sprints/check-sprint-bundle.js R9.0",
+    "node build-scripts/references/build-reference-inventory.js",
+    "node build-scripts/references/check-source-manifest.js",
+    "node build-scripts/references/check-document-inventory.js",
+    "node build-scripts/references/check-source-of-truth.js",
+    "node build-scripts/rag/build-chunks.js",
+    "node build-scripts/rag/validate-chunks.js",
+    "node build-scripts/rag/validate-query-output.js",
+    "node build-scripts/sprints/check-sprint-result.js reports/sprints/R9.0-result.md",
+    "node build-scripts/sprints/check-sprint-bundle.js R9.0 --complete"
+  ]
+}

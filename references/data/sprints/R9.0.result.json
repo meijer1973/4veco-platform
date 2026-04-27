@@ -1,0 +1,87 @@
+{
+  "sprint_id": "R9.0",
+  "name": "Legacy Module-3 Reference Minimization",
+  "status": "completed",
+  "completed_on": "2026-04-27",
+  "plan": "docs/sprints/R9.0-plan.md",
+  "baseline": "reports/sprints/R9.0-baseline.md",
+  "result": "reports/sprints/R9.0-result.md",
+  "diff_summary": "reports/sprints/R9.0-diff-summary.md",
+  "protected_reference_data_changed": false,
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js docs/sprints/R9.0-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js R9.0",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/build-reference-inventory.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-source-manifest.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-document-inventory.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-source-of-truth.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-target-exercise-flags.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/validate-report-json.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/generate-reference-health.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/check-reference-health.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/rag/build-chunks.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/rag/validate-chunks.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/rag/validate-query-output.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/rag/run-retrieval-evals.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/rag/validate-retrieval-eval-results.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-result.js reports/sprints/R9.0-result.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js R9.0 --complete",
+      "status": "passed"
+    }
+  ],
+  "remaining_module_3_reference_categories": [
+    "frozen_target_guardrails",
+    "functional_legacy_paths",
+    "historical_planning_notes",
+    "r9_0_audit_records"
+  ]
+}

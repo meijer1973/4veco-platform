@@ -20,7 +20,7 @@
  * Run from C:/Projects/4veco/4veco-platform:
  *   node build-scripts/content/book-1/b1-111-samenvatting.js
  *
- * Adapted from build-scripts/content/module-3/samenvatting-351-352-rebuild.js.
+ * Adapted from the legacy summary-builder pattern.
  */
 const fs = require("fs");
 const path = require("path");
@@ -37,7 +37,7 @@ const PAGE = {
 const CW = 10826;                              // content width in dxa
 const halfW = Math.floor((CW - 200) / 2);      // two-column width (200 spacer)
 
-// ── COLOURS (same palette family as module-3 samenvatting) ──
+// ── COLOURS (same palette family as the legacy samenvatting style) ──
 const C = {
   teal:      "117A65",
   tealLt:    "E8F6F3",

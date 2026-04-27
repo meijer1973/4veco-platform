@@ -94,7 +94,7 @@ Read each slide PNG. Look for: title/subtitle collisions, clipped text, stacked 
 
 ## RECOMMENDED — use the editorial design system
 
-`build-scripts/lib/lib-pptx.js` is the shared library. New book-side builders belong under `build-scripts/content/book-N/`; older legacy references still live under `build-scripts/content/module-3/`.
+`build-scripts/lib/lib-pptx.js` is the shared library. New book-side builders belong under `build-scripts/content/book-N/`; older legacy reference builders remain under `build-scripts/content/` and should not be used as the default direction for new work.
 
 Exports:
 
