@@ -29,7 +29,7 @@ For any non-trivial sprint, roadmap, gate, reference-system, production, or arch
 Human-review gates require actual review artifacts. Do not treat a casual "OK", "continue", or inferred approval as a completed human review when the plan requires an interview, decision record, or gate-closure file. 
 All other requirements for sprints are also  required for the Human review. So a checkable plan is made beforehand and that plan is tested afterwards. That will make sure that there is an actual log of the interview. 
 
-Human-review interviews must be interactive. Ask one question at a time, preferably with clear multiple-choice options and an explicit open-answer option. Do not dump the full question list at once. Include enough context in each question that the human reviewer does not have to look up unit IDs, file names, or shorthand labels. After each answer, record or summarize the answer, then decide the next question or next interview mode.
+Human-review interviews must be interactive. Before starting the one-question-at-a-time interview, provide the human reviewer with the full list of planned review questions so they can see the scope of the gate. After that, ask one question at a time, preferably with clear multiple-choice options and an explicit open-answer option. Include enough context in each question that the human reviewer does not have to look up unit IDs, file names, or shorthand labels. After each answer, record or summarize the answer, then decide the next question or next interview mode.
 
 
 ### Sprint agent structure
