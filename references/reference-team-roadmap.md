@@ -86,7 +86,7 @@ Open items are listed first; completed items are kept below them.
 | R14.1 | Curriculum Versioning | no | Planned, minimal. Track source/curriculum versions so retrieval does not silently mix syllabus or exam-program versions. |
 | R7.4 | RAG Review Gate | yes | Completed with `pass_with_conditions`. Internal and teacher-facing non-authoritative retrieval plus human-reviewed lesson-authoring support are allowed; student-facing diagnostics, adaptive routing, AI, automatic sequencing, mastery decisions, and summative use remain blocked. |
 | R7.5 | Merge Readiness and Main Sync | yes | Completed. Branch synced with `origin/main`, duplicate R5 gate namespace resolved, stray roadmap artifact moved to `docs/roadmaps/`, validators pass, and merge-readiness report says ready for merge review. |
-| R9.0 | Legacy Module-3 Reference Minimization | yes | Completed. Minimized Module 3 as a conceptual anchor before R9.1 while preserving frozen legacy paths and guardrails. |
+| R9.0 | Legacy Target Reference Minimization | yes | Completed. Minimized the frozen legacy target as a conceptual anchor before R9.1 while preserving functional legacy paths and guardrails. |
 | R7.3 | Retrieval Evaluation Set | yes | Completed. Added fixed retrieval eval set, runner, validator, JSON results, and Markdown report; 10/10 cases pass with zero authority violations. |
 | R7.2 | Hybrid Retrieval | yes | Completed. Added internal deterministic query prototype preserving source authority, evidence IDs, edge status, and generated-report warnings. |
 | R7.1 | Deterministic Chunk Layer | yes | Completed. Added deterministic internal RAG chunk index with 842 chunks and authority metadata preserving generated-report safeguards. |
@@ -355,28 +355,28 @@ Stop condition: no student-facing AI, diagnostics, adaptive routing, automatic s
 
 Completion: completed on 2026-04-27 with `pass_with_conditions`. Internal dashboard use, internal retrieval development, retrieval evaluation, teacher-facing non-authoritative lookup, and human-reviewed lesson-authoring support are allowed. Student-facing diagnostics, adaptive routing, student-facing AI, automatic lesson sequencing, automatic mastery decisions, summative assessment decisions, and unreviewed student-facing publication remain blocked.
 
-### R9.0 Legacy Module-3 Reference Minimization
+### R9.0 Legacy Target Reference Minimization
 
-Purpose: reduce non-functional references to Module 3 before owned-source integration begins. Module 3 remains a frozen legacy target, but it should not remain the default example or course-design backbone for new reference/RAG work.
+Purpose: reduce non-functional references to the frozen legacy target before owned-source integration begins. The frozen legacy target remains operationally protected, but it should not remain the default example or course-design backbone for new reference/RAG work.
 
 Required work:
 
-- scan the repository for `Module 3`, `module-3`, and legacy path references
+- scan the repository for frozen-legacy-target labels and legacy path references
 - classify each occurrence as functional legacy path, frozen-target guardrail, historical planning note, generated artifact, or safe cleanup target
 - update safe cleanup targets in current guidance, authored course-design notes, and generic examples
-- preserve `source-data/module-3/`, `build-scripts/content/module-3/`, `deploy:legacy`, and explicit frozen-target warnings
+- preserve legacy source-data paths, legacy content-builder paths, `deploy:legacy`, and explicit frozen-target warnings
 - regenerate derived inventories/RAG chunks if authored-reference changes affect generated data
-- report remaining Module 3 references by category
+- report remaining frozen-legacy-target references by category
 
 Acceptance:
 
 - R9.0 sprint bundle passes
 - no hand edits to `references/machine/` or `references/external/`
-- remaining Module 3 references are intentional, categorized, and reported
+- remaining frozen-legacy-target references are intentional, categorized, and reported
 
 Stop condition: do not delete or refactor functional legacy paths in this sprint.
 
-Completion: completed on 2026-04-27. Active authored references and generic guidance no longer use Module 3 as the course-design shorthand; remaining Module 3 references are frozen-target guardrails, functional legacy paths, historical planning notes, or the R9.0 audit record itself.
+Completion: completed on 2026-04-27. Active authored references and generic guidance no longer use the frozen legacy target as the course-design shorthand; remaining frozen-legacy-target references are guardrails, functional legacy paths, historical planning notes, or the R9.0 audit record itself.
 
 ### R9.1 Owned Source Registry
 
@@ -708,7 +708,7 @@ R7.2 Hybrid retrieval
 R7.3 Retrieval evals
 R7.4 RAG gate
 R7.5 Merge readiness and main sync
-R9.0 Legacy Module-3 reference minimization
+R9.0 Legacy target reference minimization
 R9.1 Owned source registry
 R9.2 Content graph projection
 R7.6 RAG quality hardening
