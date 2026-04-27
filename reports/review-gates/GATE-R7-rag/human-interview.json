@@ -1,0 +1,103 @@
+{
+  "gate_id": "GATE-R7-rag",
+  "sprint_id": "R7.4",
+  "interview_date": "2026-04-27",
+  "decision": "pass_with_conditions",
+  "closure_authorized": true,
+  "plain_pass_authorized": false,
+  "answers": [
+    {
+      "question_id": "Q1",
+      "topic": "overall_retrieval_clarity",
+      "answer": "B",
+      "answer_label": "Mostly, but labels need improvement",
+      "condition": "Every retrieval result must expose status and authority labels in a non-optional field."
+    },
+    {
+      "question_id": "Q2",
+      "topic": "authority_labels",
+      "answer": "B",
+      "answer_label": "Yes, but improve wording",
+      "condition": "Use explicit authority labels and avoid vague equalizing labels."
+    },
+    {
+      "question_id": "Q3",
+      "topic": "generated_reports",
+      "answer": "B",
+      "answer_label": "Mostly, with minor wording fixes",
+      "condition": "Generated reports must be diagnostic_only, primary_evidence=false, and curriculum_authority=false."
+    },
+    {
+      "question_id": "Q4",
+      "topic": "pending_edges",
+      "answer": "B",
+      "answer_label": "Yes, but warning should be stronger",
+      "condition": "Pending-review edges must not be displayed as approved curriculum knowledge."
+    },
+    {
+      "question_id": "Q5",
+      "topic": "diagnostic_only_edges",
+      "answer": "B",
+      "answer_label": "Yes, with stronger warnings",
+      "condition": "Diagnostic-only edges must be visibly marked as quality-control signals, not curriculum authority."
+    },
+    {
+      "question_id": "Q6",
+      "topic": "evidence_anchors",
+      "answer": "B",
+      "answer_label": "Partly",
+      "condition": "Evidence anchors must be surfaced where available, and missing anchors must be explicit."
+    },
+    {
+      "question_id": "Q7",
+      "topic": "lexical_broad_matches",
+      "answer": "B",
+      "answer_label": "Yes, but add a minimum-score warning",
+      "condition": "Low-score lexical matches must show match strength and weak-match warnings."
+    },
+    {
+      "question_id": "Q8",
+      "topic": "target_exercise_chunking",
+      "answer": "B",
+      "answer_label": "Yes, but must be a follow-up before teacher-facing use",
+      "condition": "Target exercises must be split into per-exercise chunks before production teacher-facing use."
+    },
+    {
+      "question_id": "Q9",
+      "topic": "allowed_downstream_use",
+      "answer": "C",
+      "answer_label": "Internal plus teacher-facing lookup plus lesson-authoring support",
+      "condition": "Lesson-authoring support must remain warning-preserving, human-reviewed, and non-authoritative."
+    },
+    {
+      "question_id": "Q10",
+      "topic": "gate_status",
+      "answer": "B",
+      "answer_label": "Pass with conditions",
+      "condition": "Close R7.4 as pass_with_conditions, not pass."
+    }
+  ],
+  "allowed_downstream_uses": [
+    "internal_dashboard",
+    "reference_health_reports",
+    "internal_retrieval_development",
+    "retrieval_evaluation",
+    "teacher_facing_non_authoritative_lookup",
+    "lesson_authoring_support_with_human_review"
+  ],
+  "blocked_downstream_uses": [
+    "student_diagnostics",
+    "adaptive_routing",
+    "student_facing_ai",
+    "automatic_lesson_sequencing",
+    "automatic_mastery_decisions",
+    "summative_assessment_decisions",
+    "unreviewed_student_facing_publication"
+  ],
+  "follow_up_issue_ids": [
+    "RAG-01",
+    "RAG-02",
+    "RAG-03",
+    "RAG-04"
+  ]
+}

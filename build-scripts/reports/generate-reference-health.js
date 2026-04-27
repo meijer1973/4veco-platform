@@ -42,6 +42,7 @@ function main() {
   const targets = readJson('references/authored/course-target-exercises.json', {});
   const graph = readJson('references/data/alignment-graph.json', { edges: [] });
   const gate = readJson('reports/review-gates/GATE-R5-alignment-graph/gate-closure.json', {});
+  const ragGate = readJson('reports/review-gates/GATE-R7-rag/gate-closure.json', null);
 
   const live = units.filter((unit) => !unit.deprecated);
   const deprecated = units.filter((unit) => unit.deprecated);
@@ -80,6 +81,7 @@ function main() {
       'references/authored/course-target-exercises.json',
       'references/data/alignment-graph.json',
       'reports/review-gates/GATE-R5-alignment-graph/gate-closure.json',
+      'reports/review-gates/GATE-R7-rag/gate-closure.json',
       'reports/json/*.json',
     ],
     unit_counts: {
@@ -134,6 +136,19 @@ function main() {
       graph_approval_scope: gate.graph_approval_scope,
       whole_graph_authority: gate.whole_graph_authority === true,
     },
+    r7_4_gate_status: ragGate
+      ? {
+          gate_id: ragGate.gate_id,
+          status: ragGate.status,
+          teacher_facing_non_authoritative_lookup_allowed: (ragGate.allowed_downstream_uses || []).includes('teacher_facing_non_authoritative_lookup'),
+          lesson_authoring_support_allowed: (ragGate.allowed_downstream_uses || []).includes('lesson_authoring_support_with_human_review'),
+        }
+      : {
+          gate_id: 'GATE-R7-rag',
+          status: 'not_closed',
+          teacher_facing_non_authoritative_lookup_allowed: false,
+          lesson_authoring_support_allowed: false,
+        },
     graph_authority: {
       whole_graph_authority: false,
       approved_scope: 'named_edge_groups_only',
@@ -152,8 +167,8 @@ function main() {
           passed: null,
           failed: null,
         },
-    allowed_downstream_uses: gate.allowed_downstream_uses || [],
-    blocked_downstream_uses: gate.blocked_downstream_uses || [],
+    allowed_downstream_uses: ragGate ? (ragGate.allowed_downstream_uses || []) : (gate.allowed_downstream_uses || []),
+    blocked_downstream_uses: ragGate ? (ragGate.blocked_downstream_uses || []) : (gate.blocked_downstream_uses || []),
   };
 
   fs.mkdirSync(path.dirname(JSON_OUT), { recursive: true });
@@ -188,6 +203,7 @@ function main() {
   lines.push('## Retrieval Evaluation');
   lines.push('');
   lines.push(`- Status: ${state.retrieval_evaluation_status.status}`);
+  lines.push(`- R7.4 gate: ${state.r7_4_gate_status.status}`);
   fs.writeFileSync(MD_OUT, lines.join('\n').replace(/\n+$/g, '') + '\n');
 
   console.log(`OK reference health: reports/json/reference-health.json`);

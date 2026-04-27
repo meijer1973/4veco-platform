@@ -1,0 +1,88 @@
+{
+  "gate_id": "GATE-R7-rag",
+  "sprint_id": "R7.4",
+  "status": "pass_with_conditions",
+  "closed_on": "2026-04-27",
+  "closure_confirmed_by_human": true,
+  "human_interview": "reports/review-gates/GATE-R7-rag/human-interview.md",
+  "review_packet": "reports/review-gates/GATE-R7-rag/review-packet.md",
+  "follow_up_issues": "reports/review-gates/GATE-R7-rag/follow-up-issues.json",
+  "summary": "The R7 retrieval layer is approved for continued internal use, teacher-facing non-authoritative lookup, and lesson-authoring support with warnings and human review. It is not approved for student diagnostics, adaptive routing, student-facing AI, automatic lesson sequencing, automatic mastery decisions, summative assessment decisions, or unreviewed student-facing publication.",
+  "accepted_outcomes": [
+    "Internal dashboard use may continue.",
+    "Reference health reports may use retrieval outputs.",
+    "Internal retrieval development may continue.",
+    "Retrieval evaluation may continue.",
+    "Teacher-facing non-authoritative lookup may use the retrieval layer when authority and warning labels are preserved.",
+    "Lesson-authoring support may use retrieval to find units, terms, evidence, related exercises, and warnings when human review remains required."
+  ],
+  "blocked_outcomes": [
+    "Do not use retrieval for student diagnostics.",
+    "Do not use retrieval for adaptive routing.",
+    "Do not use retrieval for student-facing AI.",
+    "Do not use retrieval for automatic lesson sequencing.",
+    "Do not use retrieval for automatic mastery decisions.",
+    "Do not use retrieval for summative assessment decisions.",
+    "Do not use retrieval for unreviewed student-facing publication."
+  ],
+  "explicit_decisions": [
+    {
+      "topic": "overall status",
+      "decision": "Close R7.4 as pass_with_conditions, not pass."
+    },
+    {
+      "topic": "allowed use",
+      "decision": "Allow internal retrieval, teacher-facing non-authoritative lookup, and lesson-authoring support with warnings and human review."
+    },
+    {
+      "topic": "generated reports",
+      "decision": "Generated reports may appear only as diagnostics or warnings and must not be primary evidence or curriculum authority."
+    },
+    {
+      "topic": "pending and diagnostic edges",
+      "decision": "Pending-review and diagnostic-only edges may appear only when visibly marked and not displayed as approved knowledge."
+    },
+    {
+      "topic": "teacher-facing production readiness",
+      "decision": "Target exercises must be split into per-exercise chunks before production teacher-facing use."
+    }
+  ],
+  "allowed_downstream_uses": [
+    "internal_dashboard",
+    "reference_health_reports",
+    "internal_retrieval_development",
+    "retrieval_evaluation",
+    "teacher_facing_non_authoritative_lookup",
+    "lesson_authoring_support_with_human_review"
+  ],
+  "blocked_downstream_uses": [
+    "student_diagnostics",
+    "adaptive_routing",
+    "student_facing_ai",
+    "automatic_lesson_sequencing",
+    "automatic_mastery_decisions",
+    "summative_assessment_decisions",
+    "unreviewed_student_facing_publication"
+  ],
+  "conditions_to_reopen_or_pass": [
+    "Retrieval output must preserve and display source authority.",
+    "Retrieval output must preserve and display edge status.",
+    "Generated-report results must be marked diagnostic_only and not primary evidence.",
+    "Pending-review edges must be visibly marked and not displayed as approved knowledge.",
+    "Diagnostic-only edges must be visibly marked as quality-control signals, not curriculum authority.",
+    "Evidence anchors must be surfaced where available.",
+    "Results without evidence anchors must not imply direct evidence.",
+    "Low-score lexical matches must show score or match-strength warnings.",
+    "Target-exercise retrieval must display the current large-chunk limitation.",
+    "Target exercises must be split into per-exercise chunks before production teacher-facing use.",
+    "Lesson-authoring support must remain human-reviewed and non-authoritative.",
+    "Student diagnostics, adaptive routing, and student-facing AI remain blocked."
+  ],
+  "follow_up_issue_ids": [
+    "RAG-01",
+    "RAG-02",
+    "RAG-03",
+    "RAG-04"
+  ],
+  "protected_reference_data_changed": false
+}

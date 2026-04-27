@@ -1,6 +1,6 @@
 # Reference Health
 
-Generated: 2026-04-27T06:50:54.140Z
+Generated: 2026-04-27T07:35:55.231Z
 
 ## Unit Counts
 
@@ -25,3 +25,4 @@ Generated: 2026-04-27T06:50:54.140Z
 ## Retrieval Evaluation
 
 - Status: available
+- R7.4 gate: pass_with_conditions

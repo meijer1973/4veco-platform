@@ -91,7 +91,20 @@ function main() {
   const closurePath = path.join(GATE_DIR, 'gate-closure.json');
   if (fs.existsSync(closurePath)) {
     const closure = JSON.parse(fs.readFileSync(closurePath, 'utf8'));
-    if (closure.status !== 'draft_not_closed') fail('gate-closure.json exists but is not draft_not_closed');
+    if (closure.status === 'draft_not_closed') {
+      console.log('OK RAG review packet');
+      return;
+    }
+    if (closure.gate_id !== 'GATE-R7-rag') fail('gate-closure.json has wrong gate_id');
+    if (!['pass', 'pass_with_conditions', 'hold', 'fail'].includes(closure.status)) {
+      fail('gate-closure.json has invalid final status');
+    }
+    if (closure.closure_confirmed_by_human !== true) {
+      fail('final gate-closure.json must have closure_confirmed_by_human=true');
+    }
+    if (!closure.human_interview || !fs.existsSync(path.join(REPO_ROOT, closure.human_interview))) {
+      fail('final gate-closure.json must reference an existing human interview');
+    }
   }
 
   console.log('OK RAG review packet');

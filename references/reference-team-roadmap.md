@@ -77,7 +77,6 @@ Open items are listed first; completed items are kept below them.
 
 | Sprint | Name | Completed | Current State |
 |--------|------|-----------|---------------|
-| R7.4 | RAG Review Gate | no | Review packet prepared. Awaiting interactive human review; gate is not closed. |
 | R8.1 | QC Issue Model | no | Planned. Define machine-readable quality issue categories, severity, evidence, proof-to-close, and ownership. |
 | R8.2 | Production QC Gates | no | Planned. Connect reference QC signals to lesson-production checks without mutating protected references. |
 | R9.1 | Owned Source Registry | no | Planned. Register owned book/source material as source surfaces distinct from external authority and generated reports. |
@@ -96,6 +95,7 @@ Open items are listed first; completed items are kept below them.
 | R14.1 | Curriculum Versioning | no | Planned. Track curriculum/source versions and reference migrations. |
 | R14.2 | Evidence Signal Model | no | Planned. Model quality and learning signals without surveillance or unnecessary student data. |
 | R14.3 | Continuous Improvement Reports | no | Planned. Produce evidence-platform reports and require review before external claims. |
+| R7.4 | RAG Review Gate | yes | Completed with `pass_with_conditions`. Internal and teacher-facing non-authoritative retrieval plus human-reviewed lesson-authoring support are allowed; student-facing diagnostics, adaptive routing, AI, automatic sequencing, mastery decisions, and summative use remain blocked. |
 | R7.3 | Retrieval Evaluation Set | yes | Completed. Added fixed retrieval eval set, runner, validator, JSON results, and Markdown report; 10/10 cases pass with zero authority violations. |
 | R7.2 | Hybrid Retrieval | yes | Completed. Added internal deterministic query prototype preserving source authority, evidence IDs, edge status, and generated-report warnings. |
 | R7.1 | Deterministic Chunk Layer | yes | Completed. Added deterministic internal RAG chunk index with 842 chunks and authority metadata preserving generated-report safeguards. |
@@ -963,8 +963,10 @@ R7.4 preparation state:
 - review packet exists at `reports/review-gates/GATE-R7-rag/review-packet.md`
 - machine-readable packet exists at `reports/review-gates/GATE-R7-rag/review-packet.json`
 - review-lens artifacts exist under `reports/review-gates/GATE-R7-rag/`
-- proposed gate status is `pass_with_conditions`
-- final gate closure has not been created
+- human interview exists at `reports/review-gates/GATE-R7-rag/human-interview.md`
+- gate closure exists at `reports/review-gates/GATE-R7-rag/gate-closure.json`
+- final gate status is `pass_with_conditions`
+- RAG-01 through RAG-04 are recorded as follow-up issues
 
 ## Final Rule
 
