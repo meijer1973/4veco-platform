@@ -360,13 +360,15 @@ Purpose: register owned book/source material as source surfaces without confusin
 
 Required work:
 
+- Promote `references/owned/course-blueprint-v4.md` as the canonical owned curriculum-design source for the current partial blueprint.
+- Keep `references/owned/course-blueprint-v4.meta.json` attached so retrieval can see that the blueprint is partial, owned, and not external authority.
 - List owned book materials, paragraph plans, generated textbook surfaces, target exercises, answer models, chapter plans, course blueprint material, and active lesson markdown.
 - Define source status for each surface: authored source, generated projection, exercise evidence, answer model, planning artifact, or implementation output.
 - Define what can be used as evidence and what is exposition or generated projection.
 - Connect owned sources to source manifest and document inventory.
 - Keep lesson-output references separate from external authority and protected machine registries.
 
-Required output: owned source registry, schema, validator, source-manifest integration, and report.
+Required output: owned source registry, schema, validator, blueprint metadata validation, source-manifest integration, and report.
 
 Stop condition: owned exposition cannot override external authority or reviewed machine references.
 
@@ -376,6 +378,7 @@ Purpose: project owned content into the reference graph for navigation and cover
 
 Required work:
 
+- Use `references/owned/course-blueprint-v4.md` as the course-design backbone for blueprint paragraph, chapter, target-exercise, and difficulty-note projection edges.
 - Link paragraphs, exercises, visuals, procedures, summaries, and answer models to units and terms.
 - Mark projection edges separately from evidence edges.
 - Preserve source type, source path, authority level, and generated/projection status in every edge.
@@ -511,6 +514,12 @@ Current generated reports:
 - `reports/aspects-coverage.md`: informational, remaining exam-citation gaps.
 - `reports/unresolved-refs.md`: warnings only for deprecated references.
 - `reports/dead-units.md`: informational scanner output; should be improved after JSON-first reports.
+
+### Owned Sources
+
+- `references/owned/course-blueprint-v4.md`: canonical owned curriculum-design blueprint for the currently designed year. It is partial (`year 1 of 3`) and carries metadata in `references/owned/course-blueprint-v4.meta.json`.
+- Blueprint target exercises and sequencing are strong owned course-design signals.
+- Blueprint prose is contextual/design rationale and cannot by itself mint or mutate machine units.
 
 ## Roadmap Phases
 

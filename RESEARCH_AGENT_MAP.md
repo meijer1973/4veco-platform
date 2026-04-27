@@ -10,6 +10,7 @@ The reference corpus answers:
 
 - what the platform should teach
 - why it should teach it
+- which owned course-design sources define intended lesson structure
 - which evidence proves exam, inspection, and school alignment
 - which machine registries the platform consumes
 - which reference-quality issues remain open
@@ -61,6 +62,7 @@ Human-readable:
 - `RESEARCH_AGENT_PROMPT.md`
 - `references/reference-team-roadmap.md`
 - `references/authored/README.md`
+- `references/owned/README.md`
 - `references/external/README.md`
 - `references/external/exams/README.md`
 - `references/machine/README.md`
@@ -76,6 +78,7 @@ Machine-readable:
     "references/machine/begrippen.json",
     "references/external/syllabus-eindtermen.json",
     "references/external/exam-questions.json",
+    "references/owned/course-blueprint-v4.meta.json",
     "references/authored/course-target-exercises.json",
     "reports/internal-dashboard/dashboard-data.json"
   ]
@@ -93,6 +96,8 @@ Machine-readable:
   "machine_term_index": "references/machine/begrippen.json",
   "syllabus_index": "references/external/syllabus-eindtermen.json",
   "exam_question_index": "references/external/exam-questions.json",
+  "owned_course_blueprint": "references/owned/course-blueprint-v4.md",
+  "owned_course_blueprint_meta": "references/owned/course-blueprint-v4.meta.json",
   "target_exercise_index": "references/authored/course-target-exercises.json",
   "dashboard_index": "reports/internal-dashboard/dashboard-data.json"
 }
@@ -108,6 +113,7 @@ Use these index anchors before free-form browsing. They reduce inference and con
   "declared_path_namespaces": [
     "references",
     "references/authored",
+    "references/owned",
     "references/external",
     "references/external/exams",
     "references/machine",
@@ -124,6 +130,7 @@ Use these index anchors before free-form browsing. They reduce inference and con
   ],
   "readme_paths": [
     "references/authored/README.md",
+    "references/owned/README.md",
     "references/external/README.md",
     "references/external/exams/README.md",
     "references/machine/README.md",
@@ -152,6 +159,11 @@ Use these index anchors before free-form browsing. They reduce inference and con
     "references/authored/economie-terminologie.md",
     "references/authored/skill-categories.md",
     "references/authored/vraagtypen-en-opgaveontwerp.md"
+  ],
+  "owned_reference_paths": [
+    "references/owned/README.md",
+    "references/owned/course-blueprint-v4.md",
+    "references/owned/course-blueprint-v4.meta.json"
   ],
   "qc_prompt_paths": [
     "references/qc-prompts/probe-questions.md",
@@ -186,7 +198,8 @@ Use these templates only after loading the relevant index or README.
   "machine_term": "references/machine/begrippen.json -> find term by slug or label",
   "syllabus_eindterm": "references/external/syllabus-eindtermen.json -> find eindterm by code",
   "exam_question": "references/external/exam-questions.json -> find question by exam metadata, question id, skill id, or exam code",
-  "target_exercise": "references/authored/course-target-exercises.json -> find exercise by book/chapter/paragraph metadata"
+  "target_exercise": "references/authored/course-target-exercises.json -> find exercise by book/chapter/paragraph metadata",
+  "owned_course_blueprint": "references/owned/course-blueprint-v4.md -> find blueprint paragraph, chapter, target exercise, or difficulty note"
 }
 ```
 
@@ -207,6 +220,12 @@ If a constructed path fails, apply `Failure Handling`.
     "contains": "didactic principles, target exercises, question-type design, precision standards",
     "preferred_use": "didactic interpretation, teaching-efficiency reasoning, target exercise anchors",
     "edit_policy": "hand-edits allowed for now, but candidates for migration"
+  },
+  "references/owned": {
+    "epistemic_role": "owned curriculum-design source",
+    "contains": "platform-created course blueprint and later owned lesson/source registries",
+    "preferred_use": "course design, target-exercise alignment, paragraph sequencing, RAG source coverage, projection edges",
+    "edit_policy": "versioned owned-source edits; do not treat owned prose as external authority or machine registry data"
   },
   "references/machine": {
     "epistemic_role": "canonical platform-consumed registry layer",
@@ -240,7 +259,7 @@ If a constructed path fails, apply `Failure Handling`.
 Use this hierarchy when evidence conflicts:
 
 1. Real CvTE exam questions and correction models in `references/external/exams/` and `references/external/exam-questions.json`.
-2. Blueprint or target exercises in `references/authored/course-target-exercises.json`.
+2. Blueprint target exercises and owned course design in `references/owned/course-blueprint-v4.md`, plus structured target exercises in `references/authored/course-target-exercises.json`.
 3. Machine registries in `references/machine/`.
 4. CvTE syllabus/eindtermen in `references/external/syllabus-eindtermen.json` for grouping and coverage, not automatic unit creation.
 5. Authored didactic judgement in `references/authored/`.
@@ -261,6 +280,7 @@ Agents MUST follow this sequence:
    - `references/machine/README.md` before interpreting machine registries.
    - `references/external/README.md` before interpreting external authority files.
    - `references/external/exams/README.md` before interpreting exam PDFs or filenames.
+   - `references/owned/README.md` before using owned course-design sources.
    - `references/authored/README.md` before using authored judgement files.
    - `references/qc-prompts/README.md` before using QC prompts.
 4. Load the index anchors that match the task:
@@ -268,6 +288,7 @@ Agents MUST follow this sequence:
    - term task -> `begrippen.json`
    - exam task -> `exam-questions.json` and relevant exam PDFs
    - syllabus task -> `syllabus-eindtermen.json`
+   - blueprint/course-design task -> `references/owned/course-blueprint-v4.md` and `references/owned/course-blueprint-v4.meta.json`
    - target-exercise task -> `course-target-exercises.json`
    - dashboard/status task -> `reports/internal-dashboard/dashboard-data.json`
 5. Search declared namespaces only when indexes do not answer the question.
@@ -289,13 +310,14 @@ Agents MUST follow this sequence:
 ## Dependency Flow
 
 ```text
-external authority + authored target exercises -> machine registries -> reports/QC -> roadmap/planning
+external authority + owned course design + authored target exercises -> machine registries -> reports/QC -> roadmap/planning
 ```
 
 Rules:
 
 - Upstream source changes can invalidate downstream registry/report claims.
-- `references/external/` and `references/authored/course-target-exercises.json` anchor what should be taught.
+- `references/external/`, `references/owned/course-blueprint-v4.md`, and `references/authored/course-target-exercises.json` anchor what should be taught.
+- Owned blueprint prose is design rationale; it cannot by itself mint a unit without exercise evidence.
 - `references/machine/` is the current platform registry, not proof that the registry is complete.
 - `reports/` surfaces drift and gaps; it does not settle source truth.
 - `references/qc-prompts/` defines review methods; it does not itself prove content quality.
@@ -306,9 +328,18 @@ Rules:
 {
   "source_discovery": [
     "references/reference-team-roadmap.md",
+    "references/owned/README.md",
+    "references/owned/course-blueprint-v4.md",
     "references/external/README.md",
     "references/external/exams/README.md",
     "references/authored/README.md"
+  ],
+  "owned_source_integration": [
+    "references/owned/README.md",
+    "references/owned/course-blueprint-v4.md",
+    "references/owned/course-blueprint-v4.meta.json",
+    "references/authored/course-target-exercises.json",
+    "reports/blueprint-flag-triage.md"
   ],
   "unit_catalog_search": [
     "references/machine/micro-teaching-units.json",
@@ -328,6 +359,7 @@ Rules:
     "references/external/exams",
     "references/external/exam-questions.json",
     "references/external/syllabus-eindtermen.json",
+    "references/owned/course-blueprint-v4.md",
     "references/authored/vraagtypen-en-opgaveontwerp.md",
     "references/authored/course-target-exercises.json"
   ],
@@ -338,6 +370,7 @@ Rules:
     "reports/unresolved-refs.md"
   ],
   "didactic_efficiency": [
+    "references/owned/course-blueprint-v4.md",
     "references/authored/didactiek-principes.md",
     "references/authored/skill-categories.md",
     "references/authored/course-target-exercises.json",

@@ -65,6 +65,7 @@ Search the entire `references/` folder unless the task explicitly narrows the sc
 Important paths:
 
 - `references/reference-team-roadmap.md`
+- `references/owned/`
 - `references/external/`
 - `references/external/exams/`
 - `references/machine/`
@@ -85,6 +86,8 @@ Treat these as read-only research surfaces:
 
 - `references/machine/`: machine-edited registries. Changes must go through reference CLI scripts.
 - `references/external/`: mirrored outside authority. Changes must come from refresh/extraction workflows.
+
+Treat `references/owned/` as owned curriculum-design material. It is stronger than ordinary planning notes, but it is not outside authority and it is not a machine registry. Blueprint target exercises can anchor course intent; blueprint prose alone must not mint or mutate units.
 
 Do not propose new teaching units from syllabus text alone. The platform principle is exercise-first: real CvTE exam questions and target exercises are stronger evidence than syllabus abstractions.
 

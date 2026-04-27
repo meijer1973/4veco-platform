@@ -19,6 +19,7 @@ const REQUIRED_SURFACES = [
   'references/external/',
   'references/machine/',
   'references/authored/',
+  'references/owned/',
   'references/qc-prompts/',
   'references/data/',
   'reports/',

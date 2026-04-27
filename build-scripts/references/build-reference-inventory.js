@@ -105,6 +105,18 @@ function classify(pathRel) {
       downstream_dependencies: ['reports', 'planning', 'future-migration'],
     };
   }
+  if (pathRel.startsWith('references/owned/')) {
+    return {
+      layer: 'owned_curriculum_design',
+      authority_level: 'owned_curriculum_design',
+      source_type: pathRel.endsWith('.meta.json') ? 'owned_source_metadata' : pathRel.endsWith('README.md') ? 'owned_source_readme' : 'course_blueprint',
+      generated_status: 'manual_source',
+      edit_policy: 'versioned_human_reviewed_edit',
+      owner: 'references_team',
+      refresh_policy: 'owned_source_review',
+      downstream_dependencies: ['rag', 'owned-source-registry', 'content-graph-projection', 'planning'],
+    };
+  }
   if (pathRel.startsWith('references/qc-prompts/')) {
     return {
       layer: 'quality_protocol',

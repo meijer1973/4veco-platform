@@ -1,0 +1,28 @@
+{
+  "source_id": "owned:course-blueprint-v4",
+  "title": "Course Blueprint v4",
+  "path": "references/owned/course-blueprint-v4.md",
+  "source_type": "course_blueprint",
+  "authority_level": "owned_curriculum_design",
+  "completion_status": "partial_year_1_of_3",
+  "canonical_owned_source": true,
+  "origin_path": "knowledge/course_blueprint_v4.md",
+  "allowed_use": [
+    "rag_retrieval",
+    "course_design",
+    "target_exercise_alignment",
+    "owned_source_projection",
+    "paragraph_and_chapter_planning"
+  ],
+  "not_allowed_use": [
+    "external_authority",
+    "automatic_unit_minting_from_prose",
+    "overriding_reviewed_machine_references",
+    "overriding_external_exam_or_syllabus_authority"
+  ],
+  "authority_notes": [
+    "Target exercises in the blueprint are strong owned curriculum-design evidence.",
+    "Blueprint prose is contextual and design-oriented; it is not sufficient by itself to mint or mutate machine units.",
+    "The blueprint currently covers only part of the intended multi-year course and must carry version/completion metadata in retrieval."
+  ]
+}

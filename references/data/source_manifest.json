@@ -1,16 +1,17 @@
 {
   "schema_version": "0.1",
-  "generated_at": "2026-04-27T11:02:13.450Z",
+  "generated_at": "2026-04-27T11:44:36.372Z",
   "sprint_id": "R0.2",
   "scope": "references/",
   "note": "Self-generated inventory files intentionally omit size and sha256 to avoid unstable self-checksums.",
   "summary": {
-    "file_count": 123,
+    "file_count": 126,
     "by_layer": {
       "authored_judgement": 7,
       "governance_data": 54,
       "external_authority": 32,
       "machine_registry": 5,
+      "owned_curriculum_design": 3,
       "quality_protocol": 5,
       "planning": 1,
       "schema_contract": 18,
@@ -22,6 +23,7 @@
       "sprint_process": 46,
       "external_refresh_only": 32,
       "cli_only": 5,
+      "versioned_human_reviewed_edit": 3,
       "code_review": 18
     }
   },
@@ -1992,6 +1994,69 @@
       "self_generated_inventory_file": false
     },
     {
+      "path": "references/owned/course-blueprint-v4.md",
+      "file_name": "course-blueprint-v4.md",
+      "extension": "md",
+      "size_bytes": 112423,
+      "sha256": "b775eeca5c1108a83ebedcc20fcd9df603009cd9b76689f2e4f57c242401e158",
+      "layer": "owned_curriculum_design",
+      "authority_level": "owned_curriculum_design",
+      "source_type": "course_blueprint",
+      "generated_status": "manual_source",
+      "edit_policy": "versioned_human_reviewed_edit",
+      "owner": "references_team",
+      "refresh_policy": "owned_source_review",
+      "downstream_dependencies": [
+        "rag",
+        "owned-source-registry",
+        "content-graph-projection",
+        "planning"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/owned/course-blueprint-v4.meta.json",
+      "file_name": "course-blueprint-v4.meta.json",
+      "extension": "json",
+      "size_bytes": 1087,
+      "sha256": "0d68b549b2368e6250b9f2f3f8ea854ab3588854ef47f65fc363d38173c12216",
+      "layer": "owned_curriculum_design",
+      "authority_level": "owned_curriculum_design",
+      "source_type": "owned_source_metadata",
+      "generated_status": "manual_source",
+      "edit_policy": "versioned_human_reviewed_edit",
+      "owner": "references_team",
+      "refresh_policy": "owned_source_review",
+      "downstream_dependencies": [
+        "rag",
+        "owned-source-registry",
+        "content-graph-projection",
+        "planning"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/owned/README.md",
+      "file_name": "README.md",
+      "extension": "md",
+      "size_bytes": 891,
+      "sha256": "59eb2f1bac959a4fd1f522ee9adc44c88cd11c15204e0b42752faa6e0ab1a351",
+      "layer": "owned_curriculum_design",
+      "authority_level": "owned_curriculum_design",
+      "source_type": "owned_source_readme",
+      "generated_status": "manual_source",
+      "edit_policy": "versioned_human_reviewed_edit",
+      "owner": "references_team",
+      "refresh_policy": "owned_source_review",
+      "downstream_dependencies": [
+        "rag",
+        "owned-source-registry",
+        "content-graph-projection",
+        "planning"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
       "path": "references/qc-prompts/exam-derived-skills.md",
       "file_name": "exam-derived-skills.md",
       "extension": "md",
@@ -2090,8 +2155,8 @@
       "path": "references/reference-team-roadmap.md",
       "file_name": "reference-team-roadmap.md",
       "extension": "md",
-      "size_bytes": 40462,
-      "sha256": "3bd0cb0a200d1efc83141ddca771aa45328b6c64e3420644bddd4d232823e88e",
+      "size_bytes": 41375,
+      "sha256": "c6c3ec3831f2b596d0fbf06e173251bf37033a17da44c603dd85b5517619e424",
       "layer": "planning",
       "authority_level": "authored_judgement",
       "source_type": "roadmap",
@@ -2487,8 +2552,8 @@
       "path": "references/SOURCE_OF_TRUTH.md",
       "file_name": "SOURCE_OF_TRUTH.md",
       "extension": "md",
-      "size_bytes": 3600,
-      "sha256": "782cd662596af62a4490dea93dba84ad74f1b0e179f41d281580985da1827bba",
+      "size_bytes": 4024,
+      "sha256": "f7dc965f37f045b909ba0f2c1220ad21ef36d7dc6582f09942e04e18d7a89032",
       "layer": "governance_policy",
       "authority_level": "authored_judgement",
       "source_type": "source_of_truth_policy",

@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1",
-  "generated_at": "2026-04-27T11:02:13.450Z",
+  "generated_at": "2026-04-27T11:44:36.372Z",
   "sprint_id": "R0.2",
   "scope": [
     "references",
@@ -10,7 +10,7 @@
   ],
   "note": "Inventory covers reference sources, generated reports, and reference/report tooling.",
   "summary": {
-    "file_count": 345,
+    "file_count": 348,
     "by_layer": {
       "reference_tooling": 50,
       "report_tooling": 13,
@@ -18,6 +18,7 @@
       "governance_data": 54,
       "external_authority": 32,
       "machine_registry": 5,
+      "owned_curriculum_design": 3,
       "quality_protocol": 5,
       "planning": 1,
       "schema_contract": 18,
@@ -31,6 +32,7 @@
       "sprint_process": 46,
       "external_refresh_only": 32,
       "cli_only": 5,
+      "versioned_human_reviewed_edit": 3,
       "generated_by_script": 159
     }
   },
@@ -159,8 +161,8 @@
       "path": "build-scripts/references/build-reference-inventory.js",
       "file_name": "build-reference-inventory.js",
       "extension": "js",
-      "size_bytes": 10207,
-      "sha256": "33be6d38fd384d9cb367c99d0070e2b618ba31b542f3d09d9707f74177baa943",
+      "size_bytes": 10792,
+      "sha256": "784694eca3ce23727a8c458a80cc7dc4f90bf072c913e3dda1408d1c04d55912",
       "layer": "reference_tooling",
       "authority_level": "tooling",
       "source_type": "reference_cli_script",
@@ -339,8 +341,8 @@
       "path": "build-scripts/references/check-source-of-truth.js",
       "file_name": "check-source-of-truth.js",
       "extension": "js",
-      "size_bytes": 2374,
-      "sha256": "d082415678191be010564fd7468bc7e84fb296574e2b0c0f235409ce3e39db51",
+      "size_bytes": 2393,
+      "sha256": "725f9ea0761bfd0050b1e5f3f614a589f42bac88bf1352e190e7b23241c6efc6",
       "layer": "reference_tooling",
       "authority_level": "tooling",
       "source_type": "reference_cli_script",
@@ -3248,6 +3250,69 @@
       "self_generated_inventory_file": false
     },
     {
+      "path": "references/owned/course-blueprint-v4.md",
+      "file_name": "course-blueprint-v4.md",
+      "extension": "md",
+      "size_bytes": 112423,
+      "sha256": "b775eeca5c1108a83ebedcc20fcd9df603009cd9b76689f2e4f57c242401e158",
+      "layer": "owned_curriculum_design",
+      "authority_level": "owned_curriculum_design",
+      "source_type": "course_blueprint",
+      "generated_status": "manual_source",
+      "edit_policy": "versioned_human_reviewed_edit",
+      "owner": "references_team",
+      "refresh_policy": "owned_source_review",
+      "downstream_dependencies": [
+        "rag",
+        "owned-source-registry",
+        "content-graph-projection",
+        "planning"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/owned/course-blueprint-v4.meta.json",
+      "file_name": "course-blueprint-v4.meta.json",
+      "extension": "json",
+      "size_bytes": 1087,
+      "sha256": "0d68b549b2368e6250b9f2f3f8ea854ab3588854ef47f65fc363d38173c12216",
+      "layer": "owned_curriculum_design",
+      "authority_level": "owned_curriculum_design",
+      "source_type": "owned_source_metadata",
+      "generated_status": "manual_source",
+      "edit_policy": "versioned_human_reviewed_edit",
+      "owner": "references_team",
+      "refresh_policy": "owned_source_review",
+      "downstream_dependencies": [
+        "rag",
+        "owned-source-registry",
+        "content-graph-projection",
+        "planning"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/owned/README.md",
+      "file_name": "README.md",
+      "extension": "md",
+      "size_bytes": 891,
+      "sha256": "59eb2f1bac959a4fd1f522ee9adc44c88cd11c15204e0b42752faa6e0ab1a351",
+      "layer": "owned_curriculum_design",
+      "authority_level": "owned_curriculum_design",
+      "source_type": "owned_source_readme",
+      "generated_status": "manual_source",
+      "edit_policy": "versioned_human_reviewed_edit",
+      "owner": "references_team",
+      "refresh_policy": "owned_source_review",
+      "downstream_dependencies": [
+        "rag",
+        "owned-source-registry",
+        "content-graph-projection",
+        "planning"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
       "path": "references/qc-prompts/exam-derived-skills.md",
       "file_name": "exam-derived-skills.md",
       "extension": "md",
@@ -3346,8 +3411,8 @@
       "path": "references/reference-team-roadmap.md",
       "file_name": "reference-team-roadmap.md",
       "extension": "md",
-      "size_bytes": 40462,
-      "sha256": "3bd0cb0a200d1efc83141ddca771aa45328b6c64e3420644bddd4d232823e88e",
+      "size_bytes": 41375,
+      "sha256": "c6c3ec3831f2b596d0fbf06e173251bf37033a17da44c603dd85b5517619e424",
       "layer": "planning",
       "authority_level": "authored_judgement",
       "source_type": "roadmap",
@@ -3743,8 +3808,8 @@
       "path": "references/SOURCE_OF_TRUTH.md",
       "file_name": "SOURCE_OF_TRUTH.md",
       "extension": "md",
-      "size_bytes": 3600,
-      "sha256": "782cd662596af62a4490dea93dba84ad74f1b0e179f41d281580985da1827bba",
+      "size_bytes": 4024,
+      "sha256": "f7dc965f37f045b909ba0f2c1220ad21ef36d7dc6582f09942e04e18d7a89032",
       "layer": "governance_policy",
       "authority_level": "authored_judgement",
       "source_type": "source_of_truth_policy",
