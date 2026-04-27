@@ -1,0 +1,1359 @@
+{
+  "schema_version": "0.1",
+  "sprint_id": "R4.2",
+  "generated_on": "2026-04-26",
+  "source": "references/external/exam-questions.json",
+  "question_count": 349,
+  "exam_count": 12,
+  "by_exam": {
+    "ha-1022-a-23-1-o": 31,
+    "ha-1022-a-23-2-o": 30,
+    "ha-1022-a-24-1-o": 30,
+    "ha-1022-a-24-2-o": 28,
+    "ha-1022-a-25-1-o": 29,
+    "ha-1022-a-25-2-o": 27,
+    "vw-1022-a-23-1-o": 29,
+    "vw-1022-a-23-2-o": 29,
+    "vw-1022-a-24-1-o": 29,
+    "vw-1022-a-24-2-o": 29,
+    "vw-1022-a-25-1-o": 29,
+    "vw-1022-a-25-2-o": 29
+  },
+  "summary": {
+    "gap_records": 27,
+    "gap_type_counts": {
+      "missing_required_skills": 27,
+      "missing_exam_codes": 19
+    },
+    "recommended_next_action_counts": {
+      "manual_required_skill_review": 26,
+      "map_or_mint_unresolved_audit_skills": 1
+    }
+  },
+  "patch_queue": [
+    {
+      "id": "ha-1022-a-23-1-o:q20",
+      "status": "needs_review",
+      "gap_types": [
+        "missing_required_skills",
+        "missing_exam_codes"
+      ],
+      "recommended_next_action": "manual_required_skill_review",
+      "evidence": {
+        "exam": "ha-1022-a-23-1-o",
+        "level": "havo",
+        "year": 2023,
+        "tijdvak": 1,
+        "opgave_num": 5,
+        "opgave_name": "Olieprijzenoorlog in het vat",
+        "question_num": 20,
+        "points": 1,
+        "pages": [
+          8,
+          8
+        ],
+        "text_snippet": "Citeer de zin uit het krantenbericht waaruit blijkt dat de prijsdaling van ruwe olie mede wordt veroorzaakt door een verandering van de vraag. Gebruik het krantenbericht."
+      },
+      "current": {
+        "required_skills": [],
+        "exam_codes": [],
+        "question_type": "noem",
+        "invalid_required_skills": [],
+        "invalid_exam_codes": []
+      },
+      "candidates": {
+        "audit_annotation": {
+          "source_file": "build-scripts/references/audit-2023-2024.json",
+          "required_skills": [],
+          "exam_codes": [],
+          "question_type": "noem"
+        },
+        "audit_skill_status": {
+          "existing": [],
+          "unresolved": [],
+          "all_existing": true
+        },
+        "derived_exam_codes_from_current_skills": {
+          "codes": [],
+          "missing_unit_ids": []
+        }
+      }
+    },
+    {
+      "id": "ha-1022-a-24-1-o:q1",
+      "status": "needs_review",
+      "gap_types": [
+        "missing_required_skills",
+        "missing_exam_codes"
+      ],
+      "recommended_next_action": "manual_required_skill_review",
+      "evidence": {
+        "exam": "ha-1022-a-24-1-o",
+        "level": "havo",
+        "year": 2024,
+        "tijdvak": 1,
+        "opgave_num": 1,
+        "opgave_name": "Een nieuwe cao",
+        "question_num": 1,
+        "points": 2,
+        "pages": [
+          2,
+          2
+        ],
+        "text_snippet": "Leg uit dat er sprake is van nivelleren, als de looneis van de vakbond wordt ingewilligd. Els Middelkoop is medewerker van een supermarkt. Ze leest in de krant over de looneis van de vakbond. Els verdiende in 2019 een jaarsalaris van € 24.998,- en is benieu..."
+      },
+      "current": {
+        "required_skills": [],
+        "exam_codes": [],
+        "question_type": "uitleg_dat",
+        "invalid_required_skills": [],
+        "invalid_exam_codes": []
+      },
+      "candidates": {
+        "audit_annotation": {
+          "source_file": "build-scripts/references/audit-2023-2024.json",
+          "required_skills": [],
+          "exam_codes": [],
+          "question_type": "uitleg_dat"
+        },
+        "audit_skill_status": {
+          "existing": [],
+          "unresolved": [],
+          "all_existing": true
+        },
+        "derived_exam_codes_from_current_skills": {
+          "codes": [],
+          "missing_unit_ids": []
+        }
+      }
+    },
+    {
+      "id": "ha-1022-a-24-1-o:q26",
+      "status": "needs_review",
+      "gap_types": [
+        "missing_required_skills",
+        "missing_exam_codes"
+      ],
+      "recommended_next_action": "manual_required_skill_review",
+      "evidence": {
+        "exam": "ha-1022-a-24-1-o",
+        "level": "havo",
+        "year": 2024,
+        "tijdvak": 1,
+        "opgave_num": 5,
+        "opgave_name": "Toerisme",
+        "question_num": 26,
+        "points": 2,
+        "pages": [
+          10,
+          10
+        ],
+        "text_snippet": "Zijn de bestedingen van buitenlandse toeristen voor de Nederlandse economie in Nederland een vorm van import, van export of geen van beide? Leg je keuze uit."
+      },
+      "current": {
+        "required_skills": [],
+        "exam_codes": [],
+        "question_type": "uitleg_of",
+        "invalid_required_skills": [],
+        "invalid_exam_codes": []
+      },
+      "candidates": {
+        "audit_annotation": {
+          "source_file": "build-scripts/references/audit-2023-2024.json",
+          "required_skills": [],
+          "exam_codes": [],
+          "question_type": "uitleg_of"
+        },
+        "audit_skill_status": {
+          "existing": [],
+          "unresolved": [],
+          "all_existing": true
+        },
+        "derived_exam_codes_from_current_skills": {
+          "codes": [],
+          "missing_unit_ids": []
+        }
+      }
+    },
+    {
+      "id": "ha-1022-a-24-1-o:q6",
+      "status": "needs_review",
+      "gap_types": [
+        "missing_required_skills",
+        "missing_exam_codes"
+      ],
+      "recommended_next_action": "manual_required_skill_review",
+      "evidence": {
+        "exam": "ha-1022-a-24-1-o",
+        "level": "havo",
+        "year": 2024,
+        "tijdvak": 1,
+        "opgave_num": 1,
+        "opgave_name": "Een nieuwe cao",
+        "question_num": 6,
+        "points": 2,
+        "pages": [
+          3,
+          4
+        ],
+        "text_snippet": "Leg uit dat er in toenemende mate sprake is van meeliftgedrag bij de cao-onderhandelingen."
+      },
+      "current": {
+        "required_skills": [],
+        "exam_codes": [],
+        "question_type": "uitleg_dat",
+        "invalid_required_skills": [],
+        "invalid_exam_codes": []
+      },
+      "candidates": {
+        "audit_annotation": {
+          "source_file": "build-scripts/references/audit-2023-2024.json",
+          "required_skills": [],
+          "exam_codes": [],
+          "question_type": "uitleg_dat"
+        },
+        "audit_skill_status": {
+          "existing": [],
+          "unresolved": [],
+          "all_existing": true
+        },
+        "derived_exam_codes_from_current_skills": {
+          "codes": [],
+          "missing_unit_ids": []
+        }
+      }
+    },
+    {
+      "id": "ha-1022-a-25-2-o:q26",
+      "status": "needs_review",
+      "gap_types": [
+        "missing_required_skills",
+        "missing_exam_codes"
+      ],
+      "recommended_next_action": "manual_required_skill_review",
+      "evidence": {
+        "exam": "ha-1022-a-25-2-o",
+        "level": "havo",
+        "year": 2025,
+        "tijdvak": 2,
+        "opgave_num": 5,
+        "opgave_name": "Economisch beleid",
+        "question_num": 26,
+        "points": 2,
+        "pages": [
+          11,
+          11
+        ],
+        "text_snippet": "Leg uit of de voorgestelde verhoging van de heffingskorting een nivellerend of denivellerend effect heeft op de secundaire inkomensverdeling."
+      },
+      "current": {
+        "required_skills": [],
+        "exam_codes": [],
+        "question_type": "uitleg_of",
+        "invalid_required_skills": [],
+        "invalid_exam_codes": []
+      },
+      "candidates": {
+        "audit_annotation": {
+          "source_file": "build-scripts/references/audit-2025.json",
+          "required_skills": [],
+          "exam_codes": [],
+          "question_type": "uitleg_of"
+        },
+        "audit_skill_status": {
+          "existing": [],
+          "unresolved": [],
+          "all_existing": true
+        },
+        "derived_exam_codes_from_current_skills": {
+          "codes": [],
+          "missing_unit_ids": []
+        }
+      }
+    },
+    {
+      "id": "ha-1022-a-25-2-o:q7",
+      "status": "needs_review",
+      "gap_types": [
+        "missing_required_skills",
+        "missing_exam_codes"
+      ],
+      "recommended_next_action": "map_or_mint_unresolved_audit_skills",
+      "evidence": {
+        "exam": "ha-1022-a-25-2-o",
+        "level": "havo",
+        "year": 2025,
+        "tijdvak": 2,
+        "opgave_num": 2,
+        "opgave_name": "Neem accijns met een korreltje suiker",
+        "question_num": 7,
+        "points": 1,
+        "pages": [
+          4,
+          4
+        ],
+        "text_snippet": "Bereken de gemiddelde consumptie van suiker per persoon in 2014, na de invoering van de suikeraccijns. Gebruik bovenstaand krantenartikel en bron 1."
+      },
+      "current": {
+        "required_skills": [],
+        "exam_codes": [],
+        "question_type": "berekenen",
+        "invalid_required_skills": [],
+        "invalid_exam_codes": []
+      },
+      "candidates": {
+        "audit_annotation": {
+          "source_file": "build-scripts/references/audit-2025.json",
+          "required_skills": [
+            "gemiddelde-berekening"
+          ],
+          "exam_codes": [],
+          "question_type": "berekenen"
+        },
+        "audit_skill_status": {
+          "existing": [],
+          "unresolved": [
+            "gemiddelde-berekening"
+          ],
+          "all_existing": false
+        },
+        "derived_exam_codes_from_current_skills": {
+          "codes": [],
+          "missing_unit_ids": []
+        }
+      }
+    },
+    {
+      "id": "vw-1022-a-23-1-o:q17",
+      "status": "needs_review",
+      "gap_types": [
+        "missing_required_skills",
+        "missing_exam_codes"
+      ],
+      "recommended_next_action": "manual_required_skill_review",
+      "evidence": {
+        "exam": "vw-1022-a-23-1-o",
+        "level": "vwo",
+        "year": 2023,
+        "tijdvak": 1,
+        "opgave_num": 4,
+        "opgave_name": "Achter het net vissen",
+        "question_num": 17,
+        "points": 3,
+        "pages": [
+          9,
+          9
+        ],
+        "text_snippet": "Leg de reactie van econoom Haddok uit met behulp van figuur 1. Om overbevissing te stoppen moet de visvangst gelijk zijn aan de groei. Om dit te bereiken zou de overheid een heffing per ton vis kunnen opleggen."
+      },
+      "current": {
+        "required_skills": [],
+        "exam_codes": [],
+        "question_type": "uitleg_dat",
+        "invalid_required_skills": [],
+        "invalid_exam_codes": []
+      },
+      "candidates": {
+        "audit_annotation": {
+          "source_file": "build-scripts/references/audit-2023-2024.json",
+          "required_skills": [],
+          "exam_codes": [],
+          "question_type": "uitleg_dat"
+        },
+        "audit_skill_status": {
+          "existing": [],
+          "unresolved": [],
+          "all_existing": true
+        },
+        "derived_exam_codes_from_current_skills": {
+          "codes": [],
+          "missing_unit_ids": []
+        }
+      }
+    },
+    {
+      "id": "vw-1022-a-23-2-o:q18",
+      "status": "needs_review",
+      "gap_types": [
+        "missing_required_skills",
+        "missing_exam_codes"
+      ],
+      "recommended_next_action": "manual_required_skill_review",
+      "evidence": {
+        "exam": "vw-1022-a-23-2-o",
+        "level": "vwo",
+        "year": 2023,
+        "tijdvak": 2,
+        "opgave_num": 4,
+        "opgave_name": "Doelbewust depreciëren",
+        "question_num": 18,
+        "points": 2,
+        "pages": [
+          8,
+          8
+        ],
+        "text_snippet": "Leg uit hoe het rentebeleid van de JCB leidt tot een depreciatie van de yen ten opzichte van de dollar. De depreciatie van de yen heeft gevolgen voor de koopkracht van Amerikaanse huishoudens. Een woordvoerder van de FED stelt dat de hogere waarde van de do..."
+      },
+      "current": {
+        "required_skills": [],
+        "exam_codes": [],
+        "question_type": "uitleg_dat",
+        "invalid_required_skills": [],
+        "invalid_exam_codes": []
+      },
+      "candidates": {
+        "audit_annotation": {
+          "source_file": "build-scripts/references/audit-2023-2024.json",
+          "required_skills": [],
+          "exam_codes": [],
+          "question_type": "uitleg_dat"
+        },
+        "audit_skill_status": {
+          "existing": [],
+          "unresolved": [],
+          "all_existing": true
+        },
+        "derived_exam_codes_from_current_skills": {
+          "codes": [],
+          "missing_unit_ids": []
+        }
+      }
+    },
+    {
+      "id": "vw-1022-a-23-2-o:q19",
+      "status": "needs_review",
+      "gap_types": [
+        "missing_required_skills",
+        "missing_exam_codes"
+      ],
+      "recommended_next_action": "manual_required_skill_review",
+      "evidence": {
+        "exam": "vw-1022-a-23-2-o",
+        "level": "vwo",
+        "year": 2023,
+        "tijdvak": 2,
+        "opgave_num": 4,
+        "opgave_name": "Doelbewust depreciëren",
+        "question_num": 19,
+        "points": 2,
+        "pages": [
+          8,
+          9
+        ],
+        "text_snippet": "Leg de stelling van de woordvoerder uit. Figuur 1 toont een model. Hierin heeft het monetair beleid van de JCB en de FED via de valutamarkt een sterke invloed op de onderlinge exportopbrengsten. Figuur 1 Exportopbrengsten Japan en VS De getallen betreffen u..."
+      },
+      "current": {
+        "required_skills": [],
+        "exam_codes": [],
+        "question_type": "uitleg_dat",
+        "invalid_required_skills": [],
+        "invalid_exam_codes": []
+      },
+      "candidates": {
+        "audit_annotation": {
+          "source_file": "build-scripts/references/audit-2023-2024.json",
+          "required_skills": [],
+          "exam_codes": [],
+          "question_type": "uitleg_dat"
+        },
+        "audit_skill_status": {
+          "existing": [],
+          "unresolved": [],
+          "all_existing": true
+        },
+        "derived_exam_codes_from_current_skills": {
+          "codes": [],
+          "missing_unit_ids": []
+        }
+      }
+    },
+    {
+      "id": "vw-1022-a-24-1-o:q10",
+      "status": "needs_review",
+      "gap_types": [
+        "missing_required_skills"
+      ],
+      "recommended_next_action": "manual_required_skill_review",
+      "evidence": {
+        "exam": "vw-1022-a-24-1-o",
+        "level": "vwo",
+        "year": 2024,
+        "tijdvak": 1,
+        "opgave_num": 2,
+        "opgave_name": "Staat van de schulden",
+        "question_num": 10,
+        "points": 2,
+        "pages": [
+          5,
+          5
+        ],
+        "text_snippet": "Leg uit dat een verhoging van de inkomstenbelasting leidt tot een grotere belastingwig en dat daardoor het bbp kan dalen. Colomba stelt: “De overheidsinvesteringen kunnen via het publiek kapitaal op termijn tot een lagere staatsschuldquote leiden.”"
+      },
+      "current": {
+        "required_skills": [],
+        "exam_codes": [
+          "H4.6"
+        ],
+        "question_type": "uitleg_dat",
+        "invalid_required_skills": [],
+        "invalid_exam_codes": []
+      },
+      "candidates": {
+        "audit_annotation": {
+          "source_file": "build-scripts/references/audit-2023-2024.json",
+          "required_skills": [],
+          "exam_codes": [
+            "H4.6"
+          ],
+          "question_type": "uitleg_dat"
+        },
+        "audit_skill_status": {
+          "existing": [],
+          "unresolved": [],
+          "all_existing": true
+        },
+        "derived_exam_codes_from_current_skills": {
+          "codes": [],
+          "missing_unit_ids": []
+        }
+      }
+    },
+    {
+      "id": "vw-1022-a-24-1-o:q12",
+      "status": "needs_review",
+      "gap_types": [
+        "missing_required_skills",
+        "missing_exam_codes"
+      ],
+      "recommended_next_action": "manual_required_skill_review",
+      "evidence": {
+        "exam": "vw-1022-a-24-1-o",
+        "level": "vwo",
+        "year": 2024,
+        "tijdvak": 1,
+        "opgave_num": 2,
+        "opgave_name": "Staat van de schulden",
+        "question_num": 12,
+        "points": 2,
+        "pages": [
+          5,
+          6
+        ],
+        "text_snippet": "Leg uit dat een positief overheidssaldo via de vermogensmarkt kan leiden tot toenemende binnenlandse bestedingen."
+      },
+      "current": {
+        "required_skills": [],
+        "exam_codes": [],
+        "question_type": "uitleg_dat",
+        "invalid_required_skills": [],
+        "invalid_exam_codes": []
+      },
+      "candidates": {
+        "audit_annotation": {
+          "source_file": "build-scripts/references/audit-2023-2024.json",
+          "required_skills": [],
+          "exam_codes": [],
+          "question_type": "uitleg_dat"
+        },
+        "audit_skill_status": {
+          "existing": [],
+          "unresolved": [],
+          "all_existing": true
+        },
+        "derived_exam_codes_from_current_skills": {
+          "codes": [],
+          "missing_unit_ids": []
+        }
+      }
+    },
+    {
+      "id": "vw-1022-a-24-1-o:q26",
+      "status": "needs_review",
+      "gap_types": [
+        "missing_required_skills"
+      ],
+      "recommended_next_action": "manual_required_skill_review",
+      "evidence": {
+        "exam": "vw-1022-a-24-1-o",
+        "level": "vwo",
+        "year": 2024,
+        "tijdvak": 1,
+        "opgave_num": 6,
+        "opgave_name": "Groeien tot de top",
+        "question_num": 26,
+        "points": 2,
+        "pages": [
+          12,
+          12
+        ],
+        "text_snippet": "Leg uit of er bij figuur 1 sprake is van een Keynesiaans model of een Nieuw klassiek model. De econoom analyseert met behulp van figuur 1 twee opties om de economische groei op korte termijn te stimuleren: de autonome overheidsbestedingen stimuleren. de aut..."
+      },
+      "current": {
+        "required_skills": [],
+        "exam_codes": [
+          "I1.1"
+        ],
+        "question_type": "uitleg_of",
+        "invalid_required_skills": [],
+        "invalid_exam_codes": []
+      },
+      "candidates": {
+        "audit_annotation": {
+          "source_file": "build-scripts/references/audit-2023-2024.json",
+          "required_skills": [],
+          "exam_codes": [
+            "I1.1"
+          ],
+          "question_type": "uitleg_of"
+        },
+        "audit_skill_status": {
+          "existing": [],
+          "unresolved": [],
+          "all_existing": true
+        },
+        "derived_exam_codes_from_current_skills": {
+          "codes": [],
+          "missing_unit_ids": []
+        }
+      }
+    },
+    {
+      "id": "vw-1022-a-24-1-o:q27",
+      "status": "needs_review",
+      "gap_types": [
+        "missing_required_skills"
+      ],
+      "recommended_next_action": "manual_required_skill_review",
+      "evidence": {
+        "exam": "vw-1022-a-24-1-o",
+        "level": "vwo",
+        "year": 2024,
+        "tijdvak": 1,
+        "opgave_num": 6,
+        "opgave_name": "Groeien tot de top",
+        "question_num": 27,
+        "points": 2,
+        "pages": [
+          12,
+          13
+        ],
+        "text_snippet": "Leg uit welke optie het sterkste effect heeft op de groei van het nationaal inkomen. De economische groei op lange termijn kan worden bestudeerd met behulp van de productiefunctie: Y = A*f(K,L) waarbij: Y = potentieel nationaal inkomen A = factorproductivit..."
+      },
+      "current": {
+        "required_skills": [],
+        "exam_codes": [
+          "I1.1"
+        ],
+        "question_type": "uitleg_dat",
+        "invalid_required_skills": [],
+        "invalid_exam_codes": []
+      },
+      "candidates": {
+        "audit_annotation": {
+          "source_file": "build-scripts/references/audit-2023-2024.json",
+          "required_skills": [],
+          "exam_codes": [
+            "I1.1"
+          ],
+          "question_type": "uitleg_dat"
+        },
+        "audit_skill_status": {
+          "existing": [],
+          "unresolved": [],
+          "all_existing": true
+        },
+        "derived_exam_codes_from_current_skills": {
+          "codes": [],
+          "missing_unit_ids": []
+        }
+      }
+    },
+    {
+      "id": "vw-1022-a-24-2-o:q25",
+      "status": "needs_review",
+      "gap_types": [
+        "missing_required_skills",
+        "missing_exam_codes"
+      ],
+      "recommended_next_action": "manual_required_skill_review",
+      "evidence": {
+        "exam": "vw-1022-a-24-2-o",
+        "level": "vwo",
+        "year": 2024,
+        "tijdvak": 2,
+        "opgave_num": 5,
+        "opgave_name": "Cyberrisicoverzekering",
+        "question_num": 25,
+        "points": 2,
+        "pages": [
+          11,
+          11
+        ],
+        "text_snippet": "Leg uit dat een eigen risico leidt tot zowel een verschuiving van de vraaglijn als een verschuiving langs de vraaglijn van de cyberrisicoverzekering. De verzekeraar ziet een winstmogelijkheid bij de genoemde eigen risico’s en stelt de jaarlijkse premie vast..."
+      },
+      "current": {
+        "required_skills": [],
+        "exam_codes": [],
+        "question_type": "uitleg_of",
+        "invalid_required_skills": [],
+        "invalid_exam_codes": []
+      },
+      "candidates": {
+        "audit_annotation": {
+          "source_file": "build-scripts/references/audit-2023-2024.json",
+          "required_skills": [],
+          "exam_codes": [],
+          "question_type": "uitleg_of"
+        },
+        "audit_skill_status": {
+          "existing": [],
+          "unresolved": [],
+          "all_existing": true
+        },
+        "derived_exam_codes_from_current_skills": {
+          "codes": [],
+          "missing_unit_ids": []
+        }
+      }
+    },
+    {
+      "id": "vw-1022-a-25-1-o:q10",
+      "status": "needs_review",
+      "gap_types": [
+        "missing_required_skills"
+      ],
+      "recommended_next_action": "manual_required_skill_review",
+      "evidence": {
+        "exam": "vw-1022-a-25-1-o",
+        "level": "vwo",
+        "year": 2025,
+        "tijdvak": 1,
+        "opgave_num": 2,
+        "opgave_name": "Concurreren met zekerheid",
+        "question_num": 10,
+        "points": 2,
+        "pages": [
+          5,
+          5
+        ],
+        "text_snippet": "Leg met behulp van figuur 1 uit dat marktwerking tot een lagere premie kan leiden. Naar verwachting hebben de pensioenfondsen over 25 jaar een bedrag nodig van € 450 miljard. Momenteel is de gemiddelde dekkingsgraad van alle pensioenfondsen samen gelijk aan..."
+      },
+      "current": {
+        "required_skills": [],
+        "exam_codes": [
+          "I2.1"
+        ],
+        "question_type": "bron",
+        "invalid_required_skills": [],
+        "invalid_exam_codes": []
+      },
+      "candidates": {
+        "audit_annotation": {
+          "source_file": "build-scripts/references/audit-2025.json",
+          "required_skills": [],
+          "exam_codes": [
+            "I2.1"
+          ],
+          "question_type": "bron"
+        },
+        "audit_skill_status": {
+          "existing": [],
+          "unresolved": [],
+          "all_existing": true
+        },
+        "derived_exam_codes_from_current_skills": {
+          "codes": [],
+          "missing_unit_ids": []
+        }
+      }
+    },
+    {
+      "id": "vw-1022-a-25-1-o:q15",
+      "status": "needs_review",
+      "gap_types": [
+        "missing_required_skills"
+      ],
+      "recommended_next_action": "manual_required_skill_review",
+      "evidence": {
+        "exam": "vw-1022-a-25-1-o",
+        "level": "vwo",
+        "year": 2025,
+        "tijdvak": 1,
+        "opgave_num": 3,
+        "opgave_name": "IJssalon",
+        "question_num": 15,
+        "points": 2,
+        "pages": [
+          7,
+          7
+        ],
+        "text_snippet": "Leg uit dat Guarda en Orso Bianco in een gevangenendilemma kunnen belanden als consumenten de ijsjes als perfecte substituten zien. Guarda wil een prijzenoorlog vermijden. Guarda past zelfbinding toe door advertenties op sociale media te plaatsen. In deze a..."
+      },
+      "current": {
+        "required_skills": [],
+        "exam_codes": [
+          "D1.9"
+        ],
+        "question_type": "uitleg_dat",
+        "invalid_required_skills": [],
+        "invalid_exam_codes": []
+      },
+      "candidates": {
+        "audit_annotation": {
+          "source_file": "build-scripts/references/audit-2025.json",
+          "required_skills": [],
+          "exam_codes": [
+            "D1.9"
+          ],
+          "question_type": "uitleg_dat"
+        },
+        "audit_skill_status": {
+          "existing": [],
+          "unresolved": [],
+          "all_existing": true
+        },
+        "derived_exam_codes_from_current_skills": {
+          "codes": [],
+          "missing_unit_ids": []
+        }
+      }
+    },
+    {
+      "id": "vw-1022-a-25-1-o:q16",
+      "status": "needs_review",
+      "gap_types": [
+        "missing_required_skills",
+        "missing_exam_codes"
+      ],
+      "recommended_next_action": "manual_required_skill_review",
+      "evidence": {
+        "exam": "vw-1022-a-25-1-o",
+        "level": "vwo",
+        "year": 2025,
+        "tijdvak": 1,
+        "opgave_num": 3,
+        "opgave_name": "IJssalon",
+        "question_num": 16,
+        "points": 2,
+        "pages": [
+          7,
+          8
+        ],
+        "text_snippet": "Leg uit dat door deze manier van zelfbinding het risico op een prijzenoorlog wordt beperkt."
+      },
+      "current": {
+        "required_skills": [],
+        "exam_codes": [],
+        "question_type": "uitleg_dat",
+        "invalid_required_skills": [],
+        "invalid_exam_codes": []
+      },
+      "candidates": {
+        "audit_annotation": {
+          "source_file": "build-scripts/references/audit-2025.json",
+          "required_skills": [],
+          "exam_codes": [],
+          "question_type": "uitleg_dat"
+        },
+        "audit_skill_status": {
+          "existing": [],
+          "unresolved": [],
+          "all_existing": true
+        },
+        "derived_exam_codes_from_current_skills": {
+          "codes": [],
+          "missing_unit_ids": []
+        }
+      }
+    },
+    {
+      "id": "vw-1022-a-25-1-o:q19",
+      "status": "needs_review",
+      "gap_types": [
+        "missing_required_skills",
+        "missing_exam_codes"
+      ],
+      "recommended_next_action": "manual_required_skill_review",
+      "evidence": {
+        "exam": "vw-1022-a-25-1-o",
+        "level": "vwo",
+        "year": 2025,
+        "tijdvak": 1,
+        "opgave_num": 4,
+        "opgave_name": "Eilanden verbonden",
+        "question_num": 19,
+        "points": 2,
+        "pages": [
+          8,
+          8
+        ],
+        "text_snippet": "Teken deze oorzaak en gevolgen in de uitwerkbijlage. Doe het als volgt: Teken de nieuwe vraag en/of aanbodlijnen op: de Curaçaose arbeidsmarkt, de Curaçaose goederen- en dienstenmarkt, de Arubaanse goederen- en dienstenmarkt. (Verschuif de nieuwe vraag en/o..."
+      },
+      "current": {
+        "required_skills": [],
+        "exam_codes": [],
+        "question_type": "bron",
+        "invalid_required_skills": [],
+        "invalid_exam_codes": []
+      },
+      "candidates": {
+        "audit_annotation": {
+          "source_file": "build-scripts/references/audit-2025.json",
+          "required_skills": [],
+          "exam_codes": [],
+          "question_type": "bron"
+        },
+        "audit_skill_status": {
+          "existing": [],
+          "unresolved": [],
+          "all_existing": true
+        },
+        "derived_exam_codes_from_current_skills": {
+          "codes": [],
+          "missing_unit_ids": []
+        }
+      }
+    },
+    {
+      "id": "vw-1022-a-25-1-o:q22",
+      "status": "needs_review",
+      "gap_types": [
+        "missing_required_skills",
+        "missing_exam_codes"
+      ],
+      "recommended_next_action": "manual_required_skill_review",
+      "evidence": {
+        "exam": "vw-1022-a-25-1-o",
+        "level": "vwo",
+        "year": 2025,
+        "tijdvak": 1,
+        "opgave_num": 5,
+        "opgave_name": "Groen ontgroeien",
+        "question_num": 22,
+        "points": 2,
+        "pages": [
+          10,
+          11
+        ],
+        "text_snippet": "Leg uit dat door de hogere overheidsbestedingen het groen bbp zowel kan dalen als kan stijgen. De econoom wil ook analyseren of het monetaire beleid invloed heeft na de gedragsverandering. De econoom schetst daarom een nieuw model (zie figuur 2). Figuur 2 I..."
+      },
+      "current": {
+        "required_skills": [],
+        "exam_codes": [],
+        "question_type": "uitleg_dat",
+        "invalid_required_skills": [],
+        "invalid_exam_codes": []
+      },
+      "candidates": {
+        "audit_annotation": {
+          "source_file": "build-scripts/references/audit-2025.json",
+          "required_skills": [],
+          "exam_codes": [],
+          "question_type": "uitleg_dat"
+        },
+        "audit_skill_status": {
+          "existing": [],
+          "unresolved": [],
+          "all_existing": true
+        },
+        "derived_exam_codes_from_current_skills": {
+          "codes": [],
+          "missing_unit_ids": []
+        }
+      }
+    },
+    {
+      "id": "vw-1022-a-25-1-o:q23",
+      "status": "needs_review",
+      "gap_types": [
+        "missing_required_skills",
+        "missing_exam_codes"
+      ],
+      "recommended_next_action": "manual_required_skill_review",
+      "evidence": {
+        "exam": "vw-1022-a-25-1-o",
+        "level": "vwo",
+        "year": 2025,
+        "tijdvak": 1,
+        "opgave_num": 5,
+        "opgave_name": "Groen ontgroeien",
+        "question_num": 23,
+        "points": 2,
+        "pages": [
+          11,
+          11
+        ],
+        "text_snippet": "Leg uit of monetair beleid effectiever of minder effectief is geworden door de gedragsverandering. De econoom concludeert: “In dit model zal monetair beleid ervoor zorgen dat de economie weer terugkeert in het oude evenwicht van voor de gedragsverandering.”"
+      },
+      "current": {
+        "required_skills": [],
+        "exam_codes": [],
+        "question_type": "uitleg_of",
+        "invalid_required_skills": [],
+        "invalid_exam_codes": []
+      },
+      "candidates": {
+        "audit_annotation": {
+          "source_file": "build-scripts/references/audit-2025.json",
+          "required_skills": [],
+          "exam_codes": [],
+          "question_type": "uitleg_of"
+        },
+        "audit_skill_status": {
+          "existing": [],
+          "unresolved": [],
+          "all_existing": true
+        },
+        "derived_exam_codes_from_current_skills": {
+          "codes": [],
+          "missing_unit_ids": []
+        }
+      }
+    },
+    {
+      "id": "vw-1022-a-25-1-o:q24",
+      "status": "needs_review",
+      "gap_types": [
+        "missing_required_skills",
+        "missing_exam_codes"
+      ],
+      "recommended_next_action": "manual_required_skill_review",
+      "evidence": {
+        "exam": "vw-1022-a-25-1-o",
+        "level": "vwo",
+        "year": 2025,
+        "tijdvak": 1,
+        "opgave_num": 5,
+        "opgave_name": "Groen ontgroeien",
+        "question_num": 24,
+        "points": 2,
+        "pages": [
+          11,
+          11
+        ],
+        "text_snippet": "Leg uit welk monetair beleid de centrale bank zal voeren waardoor het oude evenwicht wordt bereikt. Noem de nieuwe reële evenwichtsrente. Consumenten hebben een sociale norm uitgesproken: zij gaan minder consumeren en dus is een lager inkomen voor hen voldo..."
+      },
+      "current": {
+        "required_skills": [],
+        "exam_codes": [],
+        "question_type": "uitleg_dat",
+        "invalid_required_skills": [],
+        "invalid_exam_codes": []
+      },
+      "candidates": {
+        "audit_annotation": {
+          "source_file": "build-scripts/references/audit-2025.json",
+          "required_skills": [],
+          "exam_codes": [],
+          "question_type": "uitleg_dat"
+        },
+        "audit_skill_status": {
+          "existing": [],
+          "unresolved": [],
+          "all_existing": true
+        },
+        "derived_exam_codes_from_current_skills": {
+          "codes": [],
+          "missing_unit_ids": []
+        }
+      }
+    },
+    {
+      "id": "vw-1022-a-25-1-o:q25",
+      "status": "needs_review",
+      "gap_types": [
+        "missing_required_skills",
+        "missing_exam_codes"
+      ],
+      "recommended_next_action": "manual_required_skill_review",
+      "evidence": {
+        "exam": "vw-1022-a-25-1-o",
+        "level": "vwo",
+        "year": 2025,
+        "tijdvak": 1,
+        "opgave_num": 5,
+        "opgave_name": "Groen ontgroeien",
+        "question_num": 25,
+        "points": 2,
+        "pages": [
+          11,
+          12
+        ],
+        "text_snippet": "Leg de stelling van de econoom uit."
+      },
+      "current": {
+        "required_skills": [],
+        "exam_codes": [],
+        "question_type": "uitleg_dat",
+        "invalid_required_skills": [],
+        "invalid_exam_codes": []
+      },
+      "candidates": {
+        "audit_annotation": {
+          "source_file": "build-scripts/references/audit-2025.json",
+          "required_skills": [],
+          "exam_codes": [],
+          "question_type": "uitleg_dat"
+        },
+        "audit_skill_status": {
+          "existing": [],
+          "unresolved": [],
+          "all_existing": true
+        },
+        "derived_exam_codes_from_current_skills": {
+          "codes": [],
+          "missing_unit_ids": []
+        }
+      }
+    },
+    {
+      "id": "vw-1022-a-25-1-o:q4",
+      "status": "needs_review",
+      "gap_types": [
+        "missing_required_skills",
+        "missing_exam_codes"
+      ],
+      "recommended_next_action": "manual_required_skill_review",
+      "evidence": {
+        "exam": "vw-1022-a-25-1-o",
+        "level": "vwo",
+        "year": 2025,
+        "tijdvak": 1,
+        "opgave_num": 1,
+        "opgave_name": "Zorgverzekering",
+        "question_num": 4,
+        "points": 2,
+        "pages": [
+          2,
+          3
+        ],
+        "text_snippet": "Leg uit dat de totale zorgkosten kunnen afnemen door het besluit van de overheid. Zorgverzekeraars zijn actief op een heterogene oligopolistische markt, waarbij hun zorgverzekeringen verschillen in voorwaarden en premies. Vergelijkingssites vergelijken deze..."
+      },
+      "current": {
+        "required_skills": [],
+        "exam_codes": [],
+        "question_type": "uitleg_dat",
+        "invalid_required_skills": [],
+        "invalid_exam_codes": []
+      },
+      "candidates": {
+        "audit_annotation": {
+          "source_file": "build-scripts/references/audit-2025.json",
+          "required_skills": [],
+          "exam_codes": [],
+          "question_type": "uitleg_dat"
+        },
+        "audit_skill_status": {
+          "existing": [],
+          "unresolved": [],
+          "all_existing": true
+        },
+        "derived_exam_codes_from_current_skills": {
+          "codes": [],
+          "missing_unit_ids": []
+        }
+      }
+    },
+    {
+      "id": "vw-1022-a-25-1-o:q5",
+      "status": "needs_review",
+      "gap_types": [
+        "missing_required_skills",
+        "missing_exam_codes"
+      ],
+      "recommended_next_action": "manual_required_skill_review",
+      "evidence": {
+        "exam": "vw-1022-a-25-1-o",
+        "level": "vwo",
+        "year": 2025,
+        "tijdvak": 1,
+        "opgave_num": 1,
+        "opgave_name": "Zorgverzekering",
+        "question_num": 5,
+        "points": 2,
+        "pages": [
+          3,
+          3
+        ],
+        "text_snippet": "Leg uit dat de opkomst van vergelijkingssites de doelmatigheid van de zorgverzekeringsmarkt kan vergroten. Per afgesloten verzekering betalen zorgverzekeraars een vaste vergoeding aan een vergelijkingssite. De econoom: “Uit mijn onderzoek blijkt dat vergeli..."
+      },
+      "current": {
+        "required_skills": [],
+        "exam_codes": [],
+        "question_type": "uitleg_dat",
+        "invalid_required_skills": [],
+        "invalid_exam_codes": []
+      },
+      "candidates": {
+        "audit_annotation": {
+          "source_file": "build-scripts/references/audit-2025.json",
+          "required_skills": [],
+          "exam_codes": [],
+          "question_type": "uitleg_dat"
+        },
+        "audit_skill_status": {
+          "existing": [],
+          "unresolved": [],
+          "all_existing": true
+        },
+        "derived_exam_codes_from_current_skills": {
+          "codes": [],
+          "missing_unit_ids": []
+        }
+      }
+    },
+    {
+      "id": "vw-1022-a-25-1-o:q8",
+      "status": "needs_review",
+      "gap_types": [
+        "missing_required_skills"
+      ],
+      "recommended_next_action": "manual_required_skill_review",
+      "evidence": {
+        "exam": "vw-1022-a-25-1-o",
+        "level": "vwo",
+        "year": 2025,
+        "tijdvak": 1,
+        "opgave_num": 2,
+        "opgave_name": "Concurreren met zekerheid",
+        "question_num": 8,
+        "points": 2,
+        "pages": [
+          4,
+          5
+        ],
+        "text_snippet": "Leg uit dat de premie voor het aanvullend pensioen kan dalen als de inflatie stijgt. De pensioenfondsen beleggen hun vermogen in aandelen en obligaties. Pensioenfondsen concurreren met elkaar (= marktwerking) op basis van de ingelegde pensioenpremie. Werkne..."
+      },
+      "current": {
+        "required_skills": [],
+        "exam_codes": [
+          "E1.1"
+        ],
+        "question_type": "uitleg_dat",
+        "invalid_required_skills": [],
+        "invalid_exam_codes": []
+      },
+      "candidates": {
+        "audit_annotation": {
+          "source_file": "build-scripts/references/audit-2025.json",
+          "required_skills": [],
+          "exam_codes": [
+            "E1.1"
+          ],
+          "question_type": "uitleg_dat"
+        },
+        "audit_skill_status": {
+          "existing": [],
+          "unresolved": [],
+          "all_existing": true
+        },
+        "derived_exam_codes_from_current_skills": {
+          "codes": [],
+          "missing_unit_ids": []
+        }
+      }
+    },
+    {
+      "id": "vw-1022-a-25-1-o:q9",
+      "status": "needs_review",
+      "gap_types": [
+        "missing_required_skills"
+      ],
+      "recommended_next_action": "manual_required_skill_review",
+      "evidence": {
+        "exam": "vw-1022-a-25-1-o",
+        "level": "vwo",
+        "year": 2025,
+        "tijdvak": 1,
+        "opgave_num": 2,
+        "opgave_name": "Concurreren met zekerheid",
+        "question_num": 9,
+        "points": 2,
+        "pages": [
+          5,
+          5
+        ],
+        "text_snippet": "Leg met behulp van figuur 1 uit dat deze hogere inflatie zorgt voor een stijgende dekkingsgraad."
+      },
+      "current": {
+        "required_skills": [],
+        "exam_codes": [
+          "I1.1"
+        ],
+        "question_type": "bron",
+        "invalid_required_skills": [],
+        "invalid_exam_codes": []
+      },
+      "candidates": {
+        "audit_annotation": {
+          "source_file": "build-scripts/references/audit-2025.json",
+          "required_skills": [],
+          "exam_codes": [
+            "I1.1"
+          ],
+          "question_type": "bron"
+        },
+        "audit_skill_status": {
+          "existing": [],
+          "unresolved": [],
+          "all_existing": true
+        },
+        "derived_exam_codes_from_current_skills": {
+          "codes": [],
+          "missing_unit_ids": []
+        }
+      }
+    },
+    {
+      "id": "vw-1022-a-25-2-o:q10",
+      "status": "needs_review",
+      "gap_types": [
+        "missing_required_skills"
+      ],
+      "recommended_next_action": "manual_required_skill_review",
+      "evidence": {
+        "exam": "vw-1022-a-25-2-o",
+        "level": "vwo",
+        "year": 2025,
+        "tijdvak": 2,
+        "opgave_num": 2,
+        "opgave_name": "Pensioenmodel",
+        "question_num": 10,
+        "points": 2,
+        "pages": [
+          5,
+          5
+        ],
+        "text_snippet": "Leg uit dat de premies als percentage van het totale pensioenvermogen dalen. De econoom heeft geen rekening gehouden met de pensioenleeftijd. De econoom geeft aan dat het verhogen van de pensioenleeftijd kan leiden tot een hogere koopkracht van de huidige p..."
+      },
+      "current": {
+        "required_skills": [],
+        "exam_codes": [
+          "E1.1"
+        ],
+        "question_type": "bron",
+        "invalid_required_skills": [],
+        "invalid_exam_codes": []
+      },
+      "candidates": {
+        "audit_annotation": {
+          "source_file": "build-scripts/references/audit-2025.json",
+          "required_skills": [],
+          "exam_codes": [
+            "E1.1"
+          ],
+          "question_type": "bron"
+        },
+        "audit_skill_status": {
+          "existing": [],
+          "unresolved": [],
+          "all_existing": true
+        },
+        "derived_exam_codes_from_current_skills": {
+          "codes": [],
+          "missing_unit_ids": []
+        }
+      }
+    }
+  ]
+}

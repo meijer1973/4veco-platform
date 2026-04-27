@@ -1,0 +1,846 @@
+{
+  "schema_version": "0.1",
+  "sprint_id": "R4.1",
+  "generated_on": "2026-04-26",
+  "mode": "dry_run",
+  "unit_count": 192,
+  "term_registry_count": 225,
+  "unique_unit_terms": 97,
+  "safe_mappings": 0,
+  "already_slug": 95,
+  "unresolved": 2,
+  "ambiguous": 0,
+  "changed_units": [],
+  "unresolved_queue": [
+    {
+      "term": "alternatieve kosten",
+      "next_action": "review whether term belongs in begrippen.json or should stay authored-only"
+    },
+    {
+      "term": "schaarste",
+      "next_action": "review whether term belongs in begrippen.json or should stay authored-only"
+    }
+  ],
+  "ambiguous_queue": [],
+  "mapping": {
+    "alternatieve kosten": {
+      "status": "unresolved",
+      "candidate_ids": []
+    },
+    "anticyclisch": {
+      "status": "already_slug",
+      "id": "anticyclisch",
+      "via": [
+        "id"
+      ]
+    },
+    "arbeidsaanbod": {
+      "status": "already_slug",
+      "id": "arbeidsaanbod",
+      "via": [
+        "id",
+        "term_nl",
+        "slugify(term_nl)"
+      ]
+    },
+    "arbeidsvraag": {
+      "status": "already_slug",
+      "id": "arbeidsvraag",
+      "via": [
+        "id",
+        "term_nl",
+        "slugify(term_nl)"
+      ]
+    },
+    "automatische-stabilisatoren": {
+      "status": "already_slug",
+      "id": "automatische-stabilisatoren",
+      "via": [
+        "id",
+        "slugify(term_nl)"
+      ]
+    },
+    "bbp-groei": {
+      "status": "already_slug",
+      "id": "bbp-groei",
+      "via": [
+        "id",
+        "term_nl",
+        "slugify(term_nl)"
+      ]
+    },
+    "bbp-niveau": {
+      "status": "already_slug",
+      "id": "bbp-niveau",
+      "via": [
+        "id",
+        "term_nl",
+        "slugify(term_nl)"
+      ]
+    },
+    "berovingsprobleem": {
+      "status": "already_slug",
+      "id": "berovingsprobleem",
+      "via": [
+        "id",
+        "term_nl",
+        "slugify(term_nl)"
+      ]
+    },
+    "betalingsbalans": {
+      "status": "already_slug",
+      "id": "betalingsbalans",
+      "via": [
+        "id",
+        "term_nl",
+        "slugify(term_nl)"
+      ]
+    },
+    "betalingsbereidheid": {
+      "status": "already_slug",
+      "id": "betalingsbereidheid",
+      "via": [
+        "id",
+        "term_nl",
+        "slugify(term_nl)"
+      ]
+    },
+    "bonus-malussysteem": {
+      "status": "already_slug",
+      "id": "bonus-malussysteem",
+      "via": [
+        "id",
+        "term_nl",
+        "slugify(term_nl)"
+      ]
+    },
+    "collectieve-aanbodlijn": {
+      "status": "already_slug",
+      "id": "collectieve-aanbodlijn",
+      "via": [
+        "id",
+        "slugify(term_nl)"
+      ]
+    },
+    "collectieve-goederen": {
+      "status": "already_slug",
+      "id": "collectieve-goederen",
+      "via": [
+        "id",
+        "slugify(term_nl)"
+      ]
+    },
+    "collectieve-verzekering": {
+      "status": "already_slug",
+      "id": "collectieve-verzekering",
+      "via": [
+        "id",
+        "slugify(term_nl)"
+      ]
+    },
+    "collectieve-vraaglijn": {
+      "status": "already_slug",
+      "id": "collectieve-vraaglijn",
+      "via": [
+        "id",
+        "slugify(term_nl)"
+      ]
+    },
+    "complementariteit": {
+      "status": "already_slug",
+      "id": "complementariteit",
+      "via": [
+        "id",
+        "term_nl",
+        "slugify(term_nl)"
+      ]
+    },
+    "conjuncturele-werkloosheid": {
+      "status": "already_slug",
+      "id": "conjuncturele-werkloosheid",
+      "via": [
+        "id",
+        "slugify(term_nl)"
+      ]
+    },
+    "conjunctuurpolitiek": {
+      "status": "already_slug",
+      "id": "conjunctuurpolitiek",
+      "via": [
+        "id",
+        "term_nl",
+        "slugify(term_nl)"
+      ]
+    },
+    "constante-kosten": {
+      "status": "already_slug",
+      "id": "constante-kosten",
+      "via": [
+        "id",
+        "slugify(term_nl)"
+      ]
+    },
+    "consumentensurplus": {
+      "status": "already_slug",
+      "id": "consumentensurplus",
+      "via": [
+        "id",
+        "term_nl",
+        "slugify(term_nl)"
+      ]
+    },
+    "contracten-en-prikkels": {
+      "status": "already_slug",
+      "id": "contracten-en-prikkels",
+      "via": [
+        "id",
+        "slugify(term_nl)"
+      ]
+    },
+    "denivelleren": {
+      "status": "already_slug",
+      "id": "denivelleren",
+      "via": [
+        "id",
+        "term_nl",
+        "slugify(term_nl)"
+      ]
+    },
+    "dominante-strategie": {
+      "status": "already_slug",
+      "id": "dominante-strategie",
+      "via": [
+        "id",
+        "slugify(term_nl)"
+      ]
+    },
+    "duaal-mandaat": {
+      "status": "already_slug",
+      "id": "duaal-mandaat",
+      "via": [
+        "id",
+        "slugify(term_nl)"
+      ]
+    },
+    "effectieve-ondergrens-nominale-rente": {
+      "status": "already_slug",
+      "id": "effectieve-ondergrens-nominale-rente",
+      "via": [
+        "id",
+        "slugify(term_nl)"
+      ]
+    },
+    "eigen-risico": {
+      "status": "already_slug",
+      "id": "eigen-risico",
+      "via": [
+        "id",
+        "slugify(term_nl)"
+      ]
+    },
+    "evenwichtshoeveelheid": {
+      "status": "already_slug",
+      "id": "evenwichtshoeveelheid",
+      "via": [
+        "id",
+        "term_nl",
+        "slugify(term_nl)"
+      ]
+    },
+    "evenwichtsprijs": {
+      "status": "already_slug",
+      "id": "evenwichtsprijs",
+      "via": [
+        "id",
+        "term_nl",
+        "slugify(term_nl)"
+      ]
+    },
+    "externe-effecten": {
+      "status": "already_slug",
+      "id": "externe-effecten",
+      "via": [
+        "id",
+        "slugify(term_nl)"
+      ]
+    },
+    "financieel-risico": {
+      "status": "already_slug",
+      "id": "financieel-risico",
+      "via": [
+        "id",
+        "slugify(term_nl)"
+      ]
+    },
+    "frictiewerkloosheid": {
+      "status": "already_slug",
+      "id": "frictiewerkloosheid",
+      "via": [
+        "id",
+        "term_nl",
+        "slugify(term_nl)"
+      ]
+    },
+    "ga-curve": {
+      "status": "already_slug",
+      "id": "ga-curve",
+      "via": [
+        "id",
+        "term_nl",
+        "slugify(term_nl)"
+      ]
+    },
+    "gemiddeld-tarief": {
+      "status": "already_slug",
+      "id": "gemiddeld-tarief",
+      "via": [
+        "id",
+        "slugify(term_nl)"
+      ]
+    },
+    "gemiddelde-totale-kosten": {
+      "status": "already_slug",
+      "id": "gemiddelde-totale-kosten",
+      "via": [
+        "id",
+        "slugify(term_nl)"
+      ]
+    },
+    "gevangenendilemma": {
+      "status": "already_slug",
+      "id": "gevangenendilemma",
+      "via": [
+        "id",
+        "term_nl",
+        "slugify(term_nl)"
+      ]
+    },
+    "gini-coefficient": {
+      "status": "already_slug",
+      "id": "gini-coefficient",
+      "via": [
+        "id",
+        "term_nl",
+        "slugify(term_nl)"
+      ]
+    },
+    "groen-bbp-per-hoofd": {
+      "status": "already_slug",
+      "id": "groen-bbp-per-hoofd",
+      "via": [
+        "id",
+        "slugify(term_nl)"
+      ]
+    },
+    "heffingen": {
+      "status": "already_slug",
+      "id": "heffingen",
+      "via": [
+        "id",
+        "term_nl",
+        "slugify(term_nl)"
+      ]
+    },
+    "heterogene-goederen": {
+      "status": "already_slug",
+      "id": "heterogene-goederen",
+      "via": [
+        "id",
+        "slugify(term_nl)"
+      ]
+    },
+    "homogeen-goed": {
+      "status": "already_slug",
+      "id": "homogeen-goed",
+      "via": [
+        "id",
+        "slugify(term_nl)"
+      ]
+    },
+    "hoogconjunctuur": {
+      "status": "already_slug",
+      "id": "hoogconjunctuur",
+      "via": [
+        "id",
+        "term_nl",
+        "slugify(term_nl)"
+      ]
+    },
+    "informatieasymmetrie": {
+      "status": "already_slug",
+      "id": "informatieasymmetrie",
+      "via": [
+        "id",
+        "term_nl",
+        "slugify(term_nl)"
+      ]
+    },
+    "inkomenselasticiteit": {
+      "status": "already_slug",
+      "id": "inkomenselasticiteit",
+      "via": [
+        "id",
+        "term_nl",
+        "slugify(term_nl)"
+      ]
+    },
+    "intertemporele-ruil": {
+      "status": "already_slug",
+      "id": "intertemporele-ruil",
+      "via": [
+        "id",
+        "slugify(term_nl)"
+      ]
+    },
+    "inverdieneffecten": {
+      "status": "already_slug",
+      "id": "inverdieneffecten",
+      "via": [
+        "id",
+        "term_nl",
+        "slugify(term_nl)"
+      ]
+    },
+    "investeringen": {
+      "status": "already_slug",
+      "id": "investeringen",
+      "via": [
+        "id",
+        "term_nl",
+        "slugify(term_nl)"
+      ]
+    },
+    "is-curve": {
+      "status": "already_slug",
+      "id": "is-curve",
+      "via": [
+        "id",
+        "term_nl",
+        "slugify(term_nl)"
+      ]
+    },
+    "keynesiaanse-kruis": {
+      "status": "already_slug",
+      "id": "keynesiaanse-kruis",
+      "via": [
+        "id",
+        "slugify(term_nl)"
+      ]
+    },
+    "koopkracht": {
+      "status": "already_slug",
+      "id": "koopkracht",
+      "via": [
+        "id",
+        "term_nl",
+        "slugify(term_nl)"
+      ]
+    },
+    "loonontwikkeling": {
+      "status": "already_slug",
+      "id": "loonontwikkeling",
+      "via": [
+        "id",
+        "term_nl",
+        "slugify(term_nl)"
+      ]
+    },
+    "maatschappelijke-welvaart": {
+      "status": "already_slug",
+      "id": "maatschappelijke-welvaart",
+      "via": [
+        "id",
+        "slugify(term_nl)"
+      ]
+    },
+    "marginaal-tarief": {
+      "status": "already_slug",
+      "id": "marginaal-tarief",
+      "via": [
+        "id",
+        "slugify(term_nl)"
+      ]
+    },
+    "marginale-kosten": {
+      "status": "already_slug",
+      "id": "marginale-kosten",
+      "via": [
+        "id",
+        "slugify(term_nl)"
+      ]
+    },
+    "marginale-opbrengsten": {
+      "status": "already_slug",
+      "id": "marginale-opbrengsten",
+      "via": [
+        "id",
+        "slugify(term_nl)"
+      ]
+    },
+    "marktevenwicht": {
+      "status": "already_slug",
+      "id": "marktevenwicht",
+      "via": [
+        "id",
+        "term_nl",
+        "slugify(term_nl)"
+      ]
+    },
+    "marktmacht": {
+      "status": "already_slug",
+      "id": "marktmacht",
+      "via": [
+        "id",
+        "term_nl",
+        "slugify(term_nl)"
+      ]
+    },
+    "marktvormen": {
+      "status": "already_slug",
+      "id": "marktvormen",
+      "via": [
+        "id",
+        "term_nl",
+        "slugify(term_nl)"
+      ]
+    },
+    "mb-curve": {
+      "status": "already_slug",
+      "id": "mb-curve",
+      "via": [
+        "id",
+        "term_nl",
+        "slugify(term_nl)"
+      ]
+    },
+    "minimumprijzen": {
+      "status": "already_slug",
+      "id": "minimumprijzen",
+      "via": [
+        "id",
+        "term_nl",
+        "slugify(term_nl)"
+      ]
+    },
+    "monetair-beleid": {
+      "status": "already_slug",
+      "id": "monetair-beleid",
+      "via": [
+        "id",
+        "slugify(term_nl)"
+      ]
+    },
+    "muntunie": {
+      "status": "already_slug",
+      "id": "muntunie",
+      "via": [
+        "id",
+        "term_nl",
+        "slugify(term_nl)"
+      ]
+    },
+    "nash-evenwicht": {
+      "status": "already_slug",
+      "id": "nash-evenwicht",
+      "via": [
+        "id",
+        "term_nl",
+        "slugify(term_nl)"
+      ]
+    },
+    "nominale-en-reele-grootheden": {
+      "status": "already_slug",
+      "id": "nominale-en-reele-grootheden",
+      "via": [
+        "id",
+        "slugify(term_nl)"
+      ]
+    },
+    "obligaties": {
+      "status": "already_slug",
+      "id": "obligaties",
+      "via": [
+        "id",
+        "term_nl",
+        "slugify(term_nl)"
+      ]
+    },
+    "onzekerheid": {
+      "status": "already_slug",
+      "id": "onzekerheid",
+      "via": [
+        "id",
+        "term_nl",
+        "slugify(term_nl)"
+      ]
+    },
+    "overheidstekort": {
+      "status": "already_slug",
+      "id": "overheidstekort",
+      "via": [
+        "id",
+        "term_nl",
+        "slugify(term_nl)"
+      ]
+    },
+    "pareto-efficient": {
+      "status": "already_slug",
+      "id": "pareto-efficient",
+      "via": [
+        "id",
+        "slugify(term_nl)"
+      ]
+    },
+    "pay-off-matrix": {
+      "status": "already_slug",
+      "id": "pay-off-matrix",
+      "via": [
+        "id",
+        "slugify(term_nl)"
+      ]
+    },
+    "prijsdiscriminatie": {
+      "status": "already_slug",
+      "id": "prijsdiscriminatie",
+      "via": [
+        "id",
+        "term_nl",
+        "slugify(term_nl)"
+      ]
+    },
+    "prijselasticiteit-van-de-vraag": {
+      "status": "already_slug",
+      "id": "prijselasticiteit-van-de-vraag",
+      "via": [
+        "id",
+        "slugify(term_nl)"
+      ]
+    },
+    "primair-inkomen": {
+      "status": "already_slug",
+      "id": "primair-inkomen",
+      "via": [
+        "id",
+        "slugify(term_nl)"
+      ]
+    },
+    "principaal-agentrelatie": {
+      "status": "already_slug",
+      "id": "principaal-agentrelatie",
+      "via": [
+        "id",
+        "term_nl",
+        "slugify(term_nl)"
+      ]
+    },
+    "producentensurplus": {
+      "status": "already_slug",
+      "id": "producentensurplus",
+      "via": [
+        "id",
+        "term_nl",
+        "slugify(term_nl)"
+      ]
+    },
+    "productiefunctie": {
+      "status": "already_slug",
+      "id": "productiefunctie",
+      "via": [
+        "id",
+        "term_nl",
+        "slugify(term_nl)"
+      ]
+    },
+    "rendement": {
+      "status": "already_slug",
+      "id": "rendement",
+      "via": [
+        "id",
+        "term_nl",
+        "slugify(term_nl)"
+      ]
+    },
+    "rente": {
+      "status": "already_slug",
+      "id": "rente",
+      "via": [
+        "id",
+        "term_nl",
+        "slugify(term_nl)"
+      ]
+    },
+    "risico": {
+      "status": "already_slug",
+      "id": "risico",
+      "via": [
+        "id",
+        "term_nl",
+        "slugify(term_nl)"
+      ]
+    },
+    "schaarste": {
+      "status": "unresolved",
+      "candidate_ids": []
+    },
+    "secundair-inkomen": {
+      "status": "already_slug",
+      "id": "secundair-inkomen",
+      "via": [
+        "id",
+        "slugify(term_nl)"
+      ]
+    },
+    "staatsschuld": {
+      "status": "already_slug",
+      "id": "staatsschuld",
+      "via": [
+        "id",
+        "term_nl",
+        "slugify(term_nl)"
+      ]
+    },
+    "structurele-werkloosheid": {
+      "status": "already_slug",
+      "id": "structurele-werkloosheid",
+      "via": [
+        "id",
+        "slugify(term_nl)"
+      ]
+    },
+    "subsidies": {
+      "status": "already_slug",
+      "id": "subsidies",
+      "via": [
+        "id",
+        "term_nl",
+        "slugify(term_nl)"
+      ]
+    },
+    "substitueerbaarheid": {
+      "status": "already_slug",
+      "id": "substitueerbaarheid",
+      "via": [
+        "id",
+        "term_nl",
+        "slugify(term_nl)"
+      ]
+    },
+    "totale-kosten": {
+      "status": "already_slug",
+      "id": "totale-kosten",
+      "via": [
+        "id",
+        "slugify(term_nl)"
+      ]
+    },
+    "totale-opbrengst": {
+      "status": "already_slug",
+      "id": "totale-opbrengst",
+      "via": [
+        "id",
+        "slugify(term_nl)"
+      ]
+    },
+    "totale-surplus": {
+      "status": "already_slug",
+      "id": "totale-surplus",
+      "via": [
+        "id",
+        "slugify(term_nl)"
+      ]
+    },
+    "transactiekosten": {
+      "status": "already_slug",
+      "id": "transactiekosten",
+      "via": [
+        "id",
+        "term_nl",
+        "slugify(term_nl)"
+      ]
+    },
+    "uitverdieneffecten": {
+      "status": "already_slug",
+      "id": "uitverdieneffecten",
+      "via": [
+        "id",
+        "term_nl",
+        "slugify(term_nl)"
+      ]
+    },
+    "variabele-kosten": {
+      "status": "already_slug",
+      "id": "variabele-kosten",
+      "via": [
+        "id",
+        "slugify(term_nl)"
+      ]
+    },
+    "verloren-surplus": {
+      "status": "already_slug",
+      "id": "verloren-surplus",
+      "via": [
+        "id",
+        "slugify(term_nl)"
+      ]
+    },
+    "verzonken-kosten": {
+      "status": "already_slug",
+      "id": "verzonken-kosten",
+      "via": [
+        "id",
+        "slugify(term_nl)"
+      ]
+    },
+    "voorraad-en-stroomgrootheden": {
+      "status": "already_slug",
+      "id": "voorraad-en-stroomgrootheden",
+      "via": [
+        "id",
+        "slugify(term_nl)"
+      ]
+    },
+    "waardevaste-pensioenen": {
+      "status": "already_slug",
+      "id": "waardevaste-pensioenen",
+      "via": [
+        "id",
+        "slugify(term_nl)"
+      ]
+    },
+    "welvaartsvaste-pensioenen": {
+      "status": "already_slug",
+      "id": "welvaartsvaste-pensioenen",
+      "via": [
+        "id",
+        "slugify(term_nl)"
+      ]
+    },
+    "werkloosheid": {
+      "status": "already_slug",
+      "id": "werkloosheid",
+      "via": [
+        "id",
+        "term_nl",
+        "slugify(term_nl)"
+      ]
+    },
+    "winst": {
+      "status": "already_slug",
+      "id": "winst",
+      "via": [
+        "id",
+        "term_nl",
+        "slugify(term_nl)"
+      ]
+    },
+    "wisselkoers": {
+      "status": "already_slug",
+      "id": "wisselkoers",
+      "via": [
+        "id",
+        "term_nl",
+        "slugify(term_nl)"
+      ]
+    }
+  }
+}

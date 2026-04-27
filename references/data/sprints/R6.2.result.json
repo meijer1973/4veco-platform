@@ -1,0 +1,46 @@
+{
+  "sprint_id": "R6.2",
+  "name": "Reference Health Dashboard Data",
+  "status": "completed",
+  "completed_on": "2026-04-27",
+  "plan": "docs/sprints/R6.2-plan.md",
+  "baseline": "reports/sprints/R6.2-baseline.md",
+  "result": "reports/sprints/R6.2-result.md",
+  "diff_summary": "reports/sprints/R6.2-diff-summary.md",
+  "outputs": [
+    "build-scripts/reports/generate-reference-health.js",
+    "build-scripts/reports/check-reference-health.js",
+    "reports/json/reference-health.json",
+    "reports/markdown/reference-health.md"
+  ],
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js docs/sprints/R6.2-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/generate-reference-health.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/check-reference-health.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-result.js reports/sprints/R6.2-result.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js R6.2 --complete",
+      "status": "passed"
+    }
+  ],
+  "protected_reference_data_changed": false,
+  "next_sprint": "R7.1",
+  "summary": {
+    "graph_authority_whole_graph": false,
+    "student_diagnostics_allowed": false,
+    "adaptive_routing_allowed": false,
+    "student_facing_ai_allowed": false
+  }
+}

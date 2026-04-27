@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://4veco.local/references/schemas/report.schema.json",
+  "title": "Report",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["report_id", "generated_at", "status"],
+  "properties": {
+    "report_id": { "type": "string" },
+    "generated_at": { "type": "string" },
+    "status": { "type": "string" },
+    "summary": { "type": "object" },
+    "items": { "type": "array" },
+    "source_paths": { "type": "array", "items": { "type": "string" } }
+  }
+}

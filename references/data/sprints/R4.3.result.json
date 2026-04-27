@@ -1,0 +1,52 @@
+{
+  "sprint_id": "R4.3",
+  "name": "Blueprint Flag Triage",
+  "status": "completed",
+  "completed_on": "2026-04-26",
+  "plan": "docs/sprints/R4.3-plan.md",
+  "baseline": "reports/sprints/R4.3-baseline.md",
+  "result": "reports/sprints/R4.3-result.md",
+  "diff_summary": "reports/sprints/R4.3-diff-summary.md",
+  "triage_report": "reports/json/blueprint-flag-triage.json",
+  "outputs": [
+    "build-scripts/references/check-target-exercise-flags.js",
+    "reports/blueprint-flag-triage.md",
+    "reports/json/blueprint-flag-triage.json",
+    "reports/sprints/R4.3-result.md",
+    "reports/sprints/R4.3-diff-summary.md"
+  ],
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js docs/sprints/R4.3-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js R4.3",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-target-exercise-flags.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-result.js reports/sprints/R4.3-result.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js R4.3 --complete",
+      "status": "passed"
+    }
+  ],
+  "protected_reference_data_changed": false,
+  "next_sprint": "R5.1",
+  "summary": {
+    "raw_flags": 84,
+    "triaged_flags": 84,
+    "still_needed": 68,
+    "existing_unit_match": 4,
+    "duplicate": 1,
+    "defer": 11,
+    "reject": 0,
+    "needs_evidence": 0
+  }
+}

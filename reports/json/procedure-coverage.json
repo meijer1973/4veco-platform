@@ -1,0 +1,15 @@
+{
+  "report_id": "procedure-coverage",
+  "generated_by": "build-scripts/reports/generate-all.js",
+  "generated_on": "2026-04-27T08:43:47.520Z",
+  "source_files": [
+    "references/machine/micro-teaching-units.json"
+  ],
+  "schema_version": 1,
+  "status": "pass",
+  "summary": {
+    "live_units": 190,
+    "apply_units_without_procedure": 0
+  },
+  "issues": []
+}

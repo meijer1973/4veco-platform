@@ -1,0 +1,16 @@
+{
+  "sprint_id": "R6.2",
+  "name": "Reference Health Dashboard Data",
+  "status": "in_progress",
+  "planned_on": "2026-04-27",
+  "plan": "docs/sprints/R6.2-plan.md",
+  "protected_reference_data_changes_allowed": false,
+  "human_review_required": false,
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js docs/sprints/R6.2-plan.md",
+    "node build-scripts/reports/generate-reference-health.js",
+    "node build-scripts/reports/check-reference-health.js",
+    "node build-scripts/sprints/check-sprint-result.js reports/sprints/R6.2-result.md",
+    "node build-scripts/sprints/check-sprint-bundle.js R6.2 --complete"
+  ]
+}

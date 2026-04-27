@@ -1,0 +1,60 @@
+{
+  "sprint_id": "R7.4",
+  "name": "RAG Review Gate Preparation",
+  "status": "completed",
+  "prepared_on": "2026-04-27",
+  "completed_on": "2026-04-27",
+  "plan": "docs/sprints/R7.4-plan.md",
+  "baseline": "reports/sprints/R7.4-baseline.md",
+  "result": "reports/sprints/R7.4-result.md",
+  "diff_summary": "reports/sprints/R7.4-diff-summary.md",
+  "outputs": [
+    "reports/review-gates/GATE-R7-rag/review-packet.md",
+    "reports/review-gates/GATE-R7-rag/review-packet.json",
+    "reports/review-gates/GATE-R7-rag/subagent-rag-retrieval.json",
+    "reports/review-gates/GATE-R7-rag/subagent-authority-ranking.json",
+    "reports/review-gates/GATE-R7-rag/subagent-evidence-surfacing.json",
+    "reports/review-gates/GATE-R7-rag/subagent-summary.md",
+    "reports/review-gates/GATE-R7-rag/human-interview.md",
+    "reports/review-gates/GATE-R7-rag/human-interview.json",
+    "reports/review-gates/GATE-R7-rag/follow-up-issues.md",
+    "reports/review-gates/GATE-R7-rag/follow-up-issues.json",
+    "reports/review-gates/GATE-R7-rag/gate-closure.md",
+    "reports/review-gates/GATE-R7-rag/gate-closure.json",
+    "build-scripts/review-gates/validate-rag-review-packet.js"
+  ],
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js docs/sprints/R7.4-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/rag/validate-retrieval-eval-results.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/check-reference-health.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/review-gates/validate-rag-review-packet.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js R7.4",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-result.js reports/sprints/R7.4-result.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/review-gates/validate-gate.js reports/review-gates/GATE-R7-rag/gate-closure.json",
+      "status": "passed"
+    }
+  ],
+  "protected_reference_data_changed": false,
+  "gate_closed": true,
+  "gate_status": "pass_with_conditions",
+  "next_step": "lead_developer_merge_or_repair_review"
+}

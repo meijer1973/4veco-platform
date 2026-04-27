@@ -1,0 +1,46 @@
+{
+  "sprint_id": "R4.2",
+  "name": "Exam-Question Extraction Gap Closure",
+  "status": "completed",
+  "completed_on": "2026-04-26",
+  "plan": "docs/sprints/R4.2-plan.md",
+  "baseline": "reports/sprints/R4.2-baseline.md",
+  "result": "reports/sprints/R4.2-result.md",
+  "diff_summary": "reports/sprints/R4.2-diff-summary.md",
+  "gap_report": "reports/json/exam-question-extraction-gaps.json",
+  "outputs": [
+    "build-scripts/references/exam-question-gap-audit.js",
+    "reports/exam-question-extraction-gaps.md",
+    "reports/json/exam-question-extraction-gaps.json",
+    "reports/sprints/R4.2-result.md",
+    "reports/sprints/R4.2-diff-summary.md"
+  ],
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js docs/sprints/R4.2-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js R4.2",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/exam-question-gap-audit.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-result.js reports/sprints/R4.2-result.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js R4.2 --complete",
+      "status": "passed"
+    }
+  ],
+  "protected_reference_data_changed": false,
+  "next_sprint": "R4.3",
+  "open_follow_ups": [
+    "Review the 27-question patch queue before applying any annotation changes.",
+    "Decide whether gemiddelde-berekening maps to an existing A-domain unit or needs a new reviewed unit."
+  ]
+}

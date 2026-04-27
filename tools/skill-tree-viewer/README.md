@@ -5,7 +5,7 @@ Visuele DAG-verkenner voor de `references/machine/micro-teaching-units` catalogu
 ## Gebruik
 
 1. Open `index.html` in een browser (gewoon dubbelklikken werkt — geen server nodig).
-2. Links: zoek/filter op domein, beheersingsniveau, of tekst. Klik een unit om zijn skill-tree te zien.
+2. Links: zoek/filter op domein, beheersingsniveau, aantal needs, boomgrootte, of tekst. Klik een unit om zijn skill-tree te zien.
 3. Rechts: layered graph met de unit in het midden. Voorwaarden in blauw (upstream), afhankelijken in groen (downstream).
 4. Klik elke node om die tot nieuwe root te maken. `fit` past de zoom aan; `reset` centreert.
 5. Deep-link: `index.html#A06` opent direct op unit A06.
@@ -41,6 +41,8 @@ Zie `memory/project_skill_tree_viewer_roadmap.md` voor de volledige visie.
 - **D3 v7** via CDN. Geen build step nodig voor de viewer-code zelf.
 - **Layered force simulation**: y-positie = `layer`, x-positie via force-spread.
 - **Kleurcodering**: elk domein (A-L) krijgt een vaste kleur; mastery-niveau (U/A/An/E) als hoek-badge.
+- **Aantal-needs-filter**: filtert op directe voorwaarden (`needs.length`). Dit is nuttig om units zonder prereqs of units met opvallend veel directe prereqs te vinden.
+- **Boomgrootte-filter**: berekent per unit de grootte van de verbonden component in de `needs`-graaf. Grootte 1 toont volledig geisoleerde units; 2-3 toont kleine verdachte eilandjes.
 - **Offline klaar**: D3 komt van CDN; alles anders is inline. Zonder internet werkt de lay-out niet, maar dat is triviaal op te lossen door D3 lokaal mee te bundelen indien nodig.
 
 ## Beperkingen (v1)

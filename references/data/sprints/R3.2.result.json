@@ -1,0 +1,64 @@
+{
+  "sprint_id": "R3.2",
+  "name": "Apply Reviewed Empty-Needs Corrections",
+  "status": "completed",
+  "completed_on": "2026-04-26",
+  "plan": "docs/sprints/R3.2-plan.md",
+  "baseline": "reports/sprints/R3.2-baseline.md",
+  "result": "reports/sprints/R3.2-result.md",
+  "diff_summary": "reports/sprints/R3.2-diff-summary.md",
+  "mutation_log": "reports/review-gates/GATE-R2-empty-needs/R3.2-mutation-log.json",
+  "outputs": [
+    "reports/review-gates/GATE-R2-empty-needs/R2.4-mutation-review.md",
+    "reports/review-gates/GATE-R2-empty-needs/R2.4-mutation-review.json",
+    "reports/review-gates/GATE-R2-empty-needs/R3.2-mutation-log.md",
+    "reports/review-gates/GATE-R2-empty-needs/R3.2-mutation-log.json",
+    "reports/sprints/R3.2-result.md",
+    "reports/sprints/R3.2-diff-summary.md"
+  ],
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js docs/sprints/R3.2-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "full dry-run for all approved R3.2 CLI commands",
+      "status": "passed"
+    },
+    {
+      "command": "full apply for all approved R3.2 CLI commands",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/build-unit-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/validate-prior-knowledge-schema.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/dag-integrity.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/needs-coverage.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/unresolved-refs.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-result.js reports/sprints/R3.2-result.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js R3.2 --complete",
+      "status": "passed"
+    }
+  ],
+  "protected_reference_data_changed": true,
+  "next_sprint": "R4.1",
+  "blocked_sprints": []
+}

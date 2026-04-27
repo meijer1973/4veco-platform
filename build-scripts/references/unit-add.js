@@ -127,6 +127,11 @@ function formatEntry(u) {
   lines.push(`- prior_learning: ${u.prior_learning}`);
   lines.push(`- aspects: [${(u.aspects || []).join(', ')}]`);
   lines.push(`- terms: [${(u.terms || []).join(', ')}]`);
+  if (Array.isArray(u.assumed_prior_knowledge) && u.assumed_prior_knowledge.length)
+    lines.push(`- assumed_prior_knowledge: [${u.assumed_prior_knowledge.join(', ')}]`);
+  if (u.zero_needs_status) lines.push(`- zero_needs_status: ${u.zero_needs_status}`);
+  if (u.zero_needs_review && typeof u.zero_needs_review === 'object')
+    lines.push(`- zero_needs_review: ${JSON.stringify(u.zero_needs_review)}`);
   if (Array.isArray(u.procedure) && u.procedure.length) {
     lines.push('- procedure:');
     u.procedure.forEach((step, idx) => lines.push(`  ${idx + 1}. ${step}`));

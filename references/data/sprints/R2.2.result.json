@@ -1,0 +1,52 @@
+{
+  "sprint_id": "R2.2",
+  "name": "Subagent Review For Empty Needs",
+  "status": "completed",
+  "completed_on": "2026-04-25",
+  "plan": "docs/sprints/R2.2-plan.md",
+  "baseline": "reports/sprints/R2.2-baseline.md",
+  "result": "reports/sprints/R2.2-result.md",
+  "diff_summary": "reports/sprints/R2.2-diff-summary.md",
+  "outputs": [
+    "reports/review-gates/GATE-R2-empty-needs/subagent-pedagogy.json",
+    "reports/review-gates/GATE-R2-empty-needs/subagent-data-integrity.json",
+    "reports/review-gates/GATE-R2-empty-needs/subagent-evidence.json",
+    "reports/review-gates/GATE-R2-empty-needs/review-packet.md"
+  ],
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js docs/sprints/R2.2-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/prepare-empty-needs-review.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-empty-needs-review.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/internal-dashboard.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/build-reference-inventory.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-source-manifest.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-document-inventory.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-result.js reports/sprints/R2.2-result.md",
+      "status": "passed"
+    }
+  ],
+  "protected_reference_data_changed": false,
+  "next_sprint": "R2.3"
+}

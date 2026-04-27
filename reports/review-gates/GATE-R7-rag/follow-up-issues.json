@@ -1,0 +1,39 @@
+{
+  "gate_id": "GATE-R7-rag",
+  "created_on": "2026-04-27",
+  "source": "reports/review-gates/GATE-R7-rag/human-interview.json",
+  "issues": [
+    {
+      "issue_id": "RAG-01",
+      "title": "Improve retrieval label wording",
+      "severity": "medium",
+      "reason": "Authority and status labels exist but need clearer user-facing wording.",
+      "next_action": "Add explicit display labels for approved, pending_review, diagnostic_only, and generated_report_diagnostic results.",
+      "proof_required_to_close": "Sample retrieval output shows approved, pending, diagnostic, and generated labels clearly."
+    },
+    {
+      "issue_id": "RAG-02",
+      "title": "Add weak-match warning / score threshold",
+      "severity": "medium",
+      "reason": "Broad lexical matches can surface low-score results.",
+      "next_action": "Add match_strength and weak_match_warning to retrieval output, with very low scores hidden or grouped as possible weak matches.",
+      "proof_required_to_close": "Retrieval output includes match_strength and weak_match_warning."
+    },
+    {
+      "issue_id": "RAG-03",
+      "title": "Split target exercises into per-exercise chunks",
+      "severity": "high before production teacher-facing use",
+      "reason": "One large chunk reduces traceability and precision.",
+      "next_action": "Create stable per-exercise chunks with exercise IDs, unit links, and evidence metadata.",
+      "proof_required_to_close": "Each target exercise has a stable chunk ID, exercise ID, unit links, and evidence metadata."
+    },
+    {
+      "issue_id": "RAG-04",
+      "title": "Evidence-anchor coverage report for retrieval",
+      "severity": "medium",
+      "reason": "Retrieval partially surfaces evidence anchors, but coverage needs visibility.",
+      "next_action": "Generate a report showing which chunk/entity types have evidence_ids and which do not.",
+      "proof_required_to_close": "Report shows evidence_id coverage by chunk type and entity type."
+    }
+  ]
+}

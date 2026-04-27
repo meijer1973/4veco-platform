@@ -1,0 +1,2507 @@
+{
+  "schema_version": "0.1",
+  "generated_at": "2026-04-27T08:43:48.482Z",
+  "sprint_id": "R0.2",
+  "scope": "references/",
+  "note": "Self-generated inventory files intentionally omit size and sha256 to avoid unstable self-checksums.",
+  "summary": {
+    "file_count": 123,
+    "by_layer": {
+      "authored_judgement": 7,
+      "governance_data": 54,
+      "external_authority": 32,
+      "machine_registry": 5,
+      "quality_protocol": 5,
+      "planning": 1,
+      "schema_contract": 18,
+      "governance_policy": 1
+    },
+    "by_edit_policy": {
+      "human_reviewed_edit": 14,
+      "generated_by_inventory_script": 8,
+      "sprint_process": 46,
+      "external_refresh_only": 32,
+      "cli_only": 5,
+      "code_review": 18
+    }
+  },
+  "files": [
+    {
+      "path": "references/authored/course-target-exercises.json",
+      "file_name": "course-target-exercises.json",
+      "extension": "json",
+      "size_bytes": 134346,
+      "sha256": "0c26ad5df84e0098eb234853a4e40ebd4b5a3b80b3a57b2f4dd132e41a7c2f10",
+      "layer": "authored_judgement",
+      "authority_level": "authored_judgement",
+      "source_type": "authored_json",
+      "generated_status": "manual_source",
+      "edit_policy": "human_reviewed_edit",
+      "owner": "references_team",
+      "refresh_policy": "manual_review",
+      "downstream_dependencies": [
+        "reports",
+        "planning",
+        "future-migration"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/authored/didactiek-principes.md",
+      "file_name": "didactiek-principes.md",
+      "extension": "md",
+      "size_bytes": 59626,
+      "sha256": "8b5a965bd86f3c6ce674c0e895926a123b9808974249d24f542abd51814a127d",
+      "layer": "authored_judgement",
+      "authority_level": "authored_judgement",
+      "source_type": "authored_markdown",
+      "generated_status": "manual_source",
+      "edit_policy": "human_reviewed_edit",
+      "owner": "references_team",
+      "refresh_policy": "manual_review",
+      "downstream_dependencies": [
+        "reports",
+        "planning",
+        "future-migration"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/authored/economic_mathematical_precision_reference.md",
+      "file_name": "economic_mathematical_precision_reference.md",
+      "extension": "md",
+      "size_bytes": 19267,
+      "sha256": "240f3c20259e989fd47f41a1970e0367e220e3bd1f035369c7f67050b1ca4bcb",
+      "layer": "authored_judgement",
+      "authority_level": "authored_judgement",
+      "source_type": "authored_markdown",
+      "generated_status": "manual_source",
+      "edit_policy": "human_reviewed_edit",
+      "owner": "references_team",
+      "refresh_policy": "manual_review",
+      "downstream_dependencies": [
+        "reports",
+        "planning",
+        "future-migration"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/authored/economie-terminologie.md",
+      "file_name": "economie-terminologie.md",
+      "extension": "md",
+      "size_bytes": 26087,
+      "sha256": "3612aad5da042dd62e3e629178cde9f6e86873f1e3c7b1666fe33534e5e53b5e",
+      "layer": "authored_judgement",
+      "authority_level": "authored_judgement",
+      "source_type": "authored_markdown",
+      "generated_status": "manual_source",
+      "edit_policy": "human_reviewed_edit",
+      "owner": "references_team",
+      "refresh_policy": "manual_review",
+      "downstream_dependencies": [
+        "reports",
+        "planning",
+        "future-migration"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/authored/README.md",
+      "file_name": "README.md",
+      "extension": "md",
+      "size_bytes": 2359,
+      "sha256": "e7615359381ecfbb521901f97ae64a1343161330a548d8d77b1855af7e080584",
+      "layer": "authored_judgement",
+      "authority_level": "authored_judgement",
+      "source_type": "authored_markdown",
+      "generated_status": "manual_source",
+      "edit_policy": "human_reviewed_edit",
+      "owner": "references_team",
+      "refresh_policy": "manual_review",
+      "downstream_dependencies": [
+        "reports",
+        "planning",
+        "future-migration"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/authored/skill-categories.md",
+      "file_name": "skill-categories.md",
+      "extension": "md",
+      "size_bytes": 15589,
+      "sha256": "65ca9a34922700dc4af6d10a06db7fc7c58149cf4474735e2e1332b87f3bb33b",
+      "layer": "authored_judgement",
+      "authority_level": "authored_judgement",
+      "source_type": "authored_markdown",
+      "generated_status": "manual_source",
+      "edit_policy": "human_reviewed_edit",
+      "owner": "references_team",
+      "refresh_policy": "manual_review",
+      "downstream_dependencies": [
+        "reports",
+        "planning",
+        "future-migration"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/authored/vraagtypen-en-opgaveontwerp.md",
+      "file_name": "vraagtypen-en-opgaveontwerp.md",
+      "extension": "md",
+      "size_bytes": 24396,
+      "sha256": "0184460c04e91871214c50d8fa3aed99c00c07b0f7cd702885a6ccaae69de0f6",
+      "layer": "authored_judgement",
+      "authority_level": "authored_judgement",
+      "source_type": "authored_markdown",
+      "generated_status": "manual_source",
+      "edit_policy": "human_reviewed_edit",
+      "owner": "references_team",
+      "refresh_policy": "manual_review",
+      "downstream_dependencies": [
+        "reports",
+        "planning",
+        "future-migration"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/data/alignment-graph.json",
+      "file_name": "alignment-graph.json",
+      "extension": "json",
+      "size_bytes": 24451,
+      "sha256": "8361aa1fccec348e7b2f1677efc89d181db20ad0a804d0f18d6991f8e6d5c8f4",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "inventory",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "generated_by_inventory_script",
+      "owner": "references_team",
+      "refresh_policy": "regenerate",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/data/audits/empty-needs-audit.json",
+      "file_name": "empty-needs-audit.json",
+      "extension": "json",
+      "size_bytes": 40567,
+      "sha256": "34e8d054483ff325905c7ef5bdc25283eef14f4307ba746a567ca46b39b5aaab",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "inventory",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "generated_by_inventory_script",
+      "owner": "references_team",
+      "refresh_policy": "regenerate",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/data/document_inventory.json",
+      "file_name": "document_inventory.json",
+      "extension": "json",
+      "size_bytes": null,
+      "sha256": null,
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "inventory",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "generated_by_inventory_script",
+      "owner": "references_team",
+      "refresh_policy": "regenerate",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": true
+    },
+    {
+      "path": "references/data/evidence-anchors.json",
+      "file_name": "evidence-anchors.json",
+      "extension": "json",
+      "size_bytes": 18251,
+      "sha256": "81c7e10ed9218e5821bea3f2fea84afb1a63a6442e6c28a45c8a26c1ef2516cc",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "inventory",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "generated_by_inventory_script",
+      "owner": "references_team",
+      "refresh_policy": "regenerate",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/data/rag/chunk_index.jsonl",
+      "file_name": "chunk_index.jsonl",
+      "extension": "jsonl",
+      "size_bytes": 865649,
+      "sha256": "c6ceb144fbe42ea6b154932522d5318043909d0788f38c65ba38e4aae425d1b6",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "inventory",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "generated_by_inventory_script",
+      "owner": "references_team",
+      "refresh_policy": "regenerate",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/data/rag/retrieval_eval_results.json",
+      "file_name": "retrieval_eval_results.json",
+      "extension": "json",
+      "size_bytes": 65973,
+      "sha256": "08fd8f6425dd468adb4346b922beed96a0f64c55d22e5e98a3644b77596d5fb1",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "inventory",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "generated_by_inventory_script",
+      "owner": "references_team",
+      "refresh_policy": "regenerate",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/data/rag/retrieval_eval_set.json",
+      "file_name": "retrieval_eval_set.json",
+      "extension": "json",
+      "size_bytes": 4702,
+      "sha256": "68eed9c3bc88c6b33844f57ae88354f2235ae084fda8d3542a4a2fa3b4cbf9b9",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "inventory",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "generated_by_inventory_script",
+      "owner": "references_team",
+      "refresh_policy": "regenerate",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/data/source_manifest.json",
+      "file_name": "source_manifest.json",
+      "extension": "json",
+      "size_bytes": null,
+      "sha256": null,
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "inventory",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "generated_by_inventory_script",
+      "owner": "references_team",
+      "refresh_policy": "regenerate",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": true
+    },
+    {
+      "path": "references/data/sprints/R0.2.plan.json",
+      "file_name": "R0.2.plan.json",
+      "extension": "json",
+      "size_bytes": 1628,
+      "sha256": "16452c2035fcd84e370ebe7824e2acd231540204199d69e7661d619bd5845a9c",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/data/sprints/R0.2.result.json",
+      "file_name": "R0.2.result.json",
+      "extension": "json",
+      "size_bytes": 1473,
+      "sha256": "c9d4ac53898a729bd79577e3a99abff7c2e469c01a4167368c2ceeb25b0853fc",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/data/sprints/R1.1.plan.json",
+      "file_name": "R1.1.plan.json",
+      "extension": "json",
+      "size_bytes": 808,
+      "sha256": "bfd4db9f845b4918430cbaa24d1d5be45dcbbb7a4ff9a8af397f99f48af07293",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/data/sprints/R1.1.result.json",
+      "file_name": "R1.1.result.json",
+      "extension": "json",
+      "size_bytes": 1408,
+      "sha256": "240d2c3c6bd853bf53cd09dcf9120311e83e669d544d4e818d7c6e569a0d2932",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/data/sprints/R1.2.plan.json",
+      "file_name": "R1.2.plan.json",
+      "extension": "json",
+      "size_bytes": 801,
+      "sha256": "63595db878886aad9fbe706922db46e5910b96d970084a067fa6e50cebfdf33e",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/data/sprints/R1.2.result.json",
+      "file_name": "R1.2.result.json",
+      "extension": "json",
+      "size_bytes": 1391,
+      "sha256": "c2dfbc803f08a91738d2fb8058d3c57a13344f139c1235e876021773ffb4b3e2",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/data/sprints/R1.3.plan.json",
+      "file_name": "R1.3.plan.json",
+      "extension": "json",
+      "size_bytes": 894,
+      "sha256": "753bf061c4a09f9774dc88a32b1c11e06e0065bd2dea1a0437d21d7a9e7b60ea",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/data/sprints/R1.3.result.json",
+      "file_name": "R1.3.result.json",
+      "extension": "json",
+      "size_bytes": 1626,
+      "sha256": "b5aca54101419da012b34a91c1fc2b7a8c037a12bfedded5c48ad83f99cc4082",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/data/sprints/R2.1.plan.json",
+      "file_name": "R2.1.plan.json",
+      "extension": "json",
+      "size_bytes": 867,
+      "sha256": "d0dde09487add9731831d187b8a4f26e38e01d0056609452b6c16d0160e72bec",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/data/sprints/R2.1.result.json",
+      "file_name": "R2.1.result.json",
+      "extension": "json",
+      "size_bytes": 1647,
+      "sha256": "6b1e17e3d3f553ec96a0fec56eb6f501ed49ea93c06683aa7b7cee015168958e",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/data/sprints/R2.2.plan.json",
+      "file_name": "R2.2.plan.json",
+      "extension": "json",
+      "size_bytes": 886,
+      "sha256": "f7b0dbbdf761c288aa3730498fe53ea313107f5468c59df6b6d5587ac5018849",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/data/sprints/R2.2.result.json",
+      "file_name": "R2.2.result.json",
+      "extension": "json",
+      "size_bytes": 1732,
+      "sha256": "0e7cdd78076c186a0492e5af00b004e00e5216aa8bebb71aa8270fb8290d5af5",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/data/sprints/R2.3.plan.json",
+      "file_name": "R2.3.plan.json",
+      "extension": "json",
+      "size_bytes": 1394,
+      "sha256": "2049e463d2ce566d49c82ece6cad54953dc3d6dcf7684d9ab18e067c4823893b",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/data/sprints/R2.3.result.json",
+      "file_name": "R2.3.result.json",
+      "extension": "json",
+      "size_bytes": 2348,
+      "sha256": "8164bd2baa1a459cba0c61544474197cd42c4b6b34823720ec7b11e8e79a1b79",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/data/sprints/R2.4.plan.json",
+      "file_name": "R2.4.plan.json",
+      "extension": "json",
+      "size_bytes": 944,
+      "sha256": "ef3b022e6b74439dccc0afd0a9749d241dccf6b5efd6bea4ef07bc2947deb29a",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/data/sprints/R2.4.result.json",
+      "file_name": "R2.4.result.json",
+      "extension": "json",
+      "size_bytes": 1683,
+      "sha256": "dade0eb7e9b490bb4c8cf57b8a7b97b68970dcd2849c29a0634bd16c9b59f2c2",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/data/sprints/R3.1.plan.json",
+      "file_name": "R3.1.plan.json",
+      "extension": "json",
+      "size_bytes": 750,
+      "sha256": "fa35e0591c601fc45e86e8233b9db75d2b353130c3a3901c3b5459aa73248ed7",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/data/sprints/R3.1.result.json",
+      "file_name": "R3.1.result.json",
+      "extension": "json",
+      "size_bytes": 1561,
+      "sha256": "c66c4796ab09193627014852862cddcf3f38e3721f07304284b04fb71f646f57",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/data/sprints/R3.2.plan.json",
+      "file_name": "R3.2.plan.json",
+      "extension": "json",
+      "size_bytes": 992,
+      "sha256": "d6fe5db2d1aeacf1bcce39bc24c37a2e23fb205741af69d3b88c27c34c4fc8eb",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/data/sprints/R3.2.result.json",
+      "file_name": "R3.2.result.json",
+      "extension": "json",
+      "size_bytes": 2067,
+      "sha256": "68d77ad6e4a8e7da22c1e46031c1dda850b3716a3b6b621994015472bbc0f713",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/data/sprints/R4.1.plan.json",
+      "file_name": "R4.1.plan.json",
+      "extension": "json",
+      "size_bytes": 906,
+      "sha256": "9cde48d08d861bb08c076a1a0fcc2f84a09b11b2292cb8f8863b400689da8275",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/data/sprints/R4.1.result.json",
+      "file_name": "R4.1.result.json",
+      "extension": "json",
+      "size_bytes": 2154,
+      "sha256": "fcd5c23f597c257c3047fc29ce2fbc7130bf1b653cc9e80aeb4fff35aa132e25",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/data/sprints/R4.2.plan.json",
+      "file_name": "R4.2.plan.json",
+      "extension": "json",
+      "size_bytes": 593,
+      "sha256": "e1fc9120f9f9ddb9c205701d922fd216fde28cdb9935b551ef49ab65d514a25e",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/data/sprints/R4.2.result.json",
+      "file_name": "R4.2.result.json",
+      "extension": "json",
+      "size_bytes": 1594,
+      "sha256": "c13fde67d82b29d4cfd23e35828d8b5e636ca01c9eba7a95f6c5f383e674e5a7",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/data/sprints/R4.3.plan.json",
+      "file_name": "R4.3.plan.json",
+      "extension": "json",
+      "size_bytes": 582,
+      "sha256": "99d076ac8262b469556ad79054181728769ed0dba5c222177413b6539e0e062a",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/data/sprints/R4.3.result.json",
+      "file_name": "R4.3.result.json",
+      "extension": "json",
+      "size_bytes": 1547,
+      "sha256": "4f17f357fdd86a87dad97db342ce8a89b4946e1ca9b09ff75fd8343ec73bb239",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/data/sprints/R5.1.plan.json",
+      "file_name": "R5.1.plan.json",
+      "extension": "json",
+      "size_bytes": 639,
+      "sha256": "2312e683131ee66940ab17acaa5f08685ba02ef6df7640594ba9361a8cb67076",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/data/sprints/R5.1.result.json",
+      "file_name": "R5.1.result.json",
+      "extension": "json",
+      "size_bytes": 1687,
+      "sha256": "233c3a2bf6b891cb8c8720132d43d067471eccfc7499c25428a3ac09dffd2242",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/data/sprints/R5.2.plan.json",
+      "file_name": "R5.2.plan.json",
+      "extension": "json",
+      "size_bytes": 757,
+      "sha256": "bc32373c23134938ff1e9b3a47bc70838c965c085f584d5a3af52057f2565887",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/data/sprints/R5.2.result.json",
+      "file_name": "R5.2.result.json",
+      "extension": "json",
+      "size_bytes": 1899,
+      "sha256": "1aadd1ac5c9735789bbadc328ebc050cd5df90355df566af70df328994ae7b25",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/data/sprints/R5.3.plan.json",
+      "file_name": "R5.3.plan.json",
+      "extension": "json",
+      "size_bytes": 962,
+      "sha256": "10c164246f890cf2269e72f4f675b1c1a63d3f49b3e1e2e9c0a2be086d934e21",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/data/sprints/R5.3.result.json",
+      "file_name": "R5.3.result.json",
+      "extension": "json",
+      "size_bytes": 2071,
+      "sha256": "e6f434de273f8aa5bc3d2291a71f12f4249c0c6de1f86bc076cc705034dee89d",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/data/sprints/R6.1.plan.json",
+      "file_name": "R6.1.plan.json",
+      "extension": "json",
+      "size_bytes": 619,
+      "sha256": "8ea13cd7a6914c5f3f4ce6b09e95a34e790f6bf80ed6e1b90b42b993b17255f9",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/data/sprints/R6.1.result.json",
+      "file_name": "R6.1.result.json",
+      "extension": "json",
+      "size_bytes": 1675,
+      "sha256": "5d95c2ce94b4572d3af82c7b21b935f0a051bee7ae35673003d4eebbc767964a",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/data/sprints/R6.2.plan.json",
+      "file_name": "R6.2.plan.json",
+      "extension": "json",
+      "size_bytes": 647,
+      "sha256": "17d5d8c739a8a6df9f0b00418607b8a600349afa90f3b6625e69f94b37ab54ad",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/data/sprints/R6.2.result.json",
+      "file_name": "R6.2.result.json",
+      "extension": "json",
+      "size_bytes": 1439,
+      "sha256": "e62a51d86f06ade6790c7f9f928409ba27f61b20fdbc1653a22b095c09bda335",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/data/sprints/R7.1.plan.json",
+      "file_name": "R7.1.plan.json",
+      "extension": "json",
+      "size_bytes": 613,
+      "sha256": "fe79727770faacc5fb6f45f9c99667681fcd2bf4efbb89583ec29ec79297961b",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/data/sprints/R7.1.result.json",
+      "file_name": "R7.1.result.json",
+      "extension": "json",
+      "size_bytes": 1227,
+      "sha256": "45e776ff0849adf91eedd5f8d40a6cf24a7827f49742dda934950255e7bd3ac0",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/data/sprints/R7.2.plan.json",
+      "file_name": "R7.2.plan.json",
+      "extension": "json",
+      "size_bytes": 955,
+      "sha256": "15e64160304041cd9bccc632fd1fe68a31fccfcc05dd14fd60bd8bf7c6567828",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/data/sprints/R7.2.result.json",
+      "file_name": "R7.2.result.json",
+      "extension": "json",
+      "size_bytes": 1833,
+      "sha256": "fc3a6c3278f8921768a3a3106047b7d3292f858ef7bc09ab72c0e7d74bb46896",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/data/sprints/R7.3.plan.json",
+      "file_name": "R7.3.plan.json",
+      "extension": "json",
+      "size_bytes": 831,
+      "sha256": "f1d74dc11007a2d7c510b35c12129cf1a54bbe26fba6936d5c18c12293fe04f5",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/data/sprints/R7.3.result.json",
+      "file_name": "R7.3.result.json",
+      "extension": "json",
+      "size_bytes": 1766,
+      "sha256": "db232d0db65d01a2a4b3067f1521a87ca526aecaba7a5f5168bc58e424456aca",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/data/sprints/R7.4.plan.json",
+      "file_name": "R7.4.plan.json",
+      "extension": "json",
+      "size_bytes": 897,
+      "sha256": "e6215a845dffa9953d9dd32dd4e96659f6321d0d8032358efde337be5e6e6f41",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/data/sprints/R7.4.result.json",
+      "file_name": "R7.4.result.json",
+      "extension": "json",
+      "size_bytes": 2258,
+      "sha256": "280f2b63039cb1bf0bf6564e8fe80936cb9558168378aeb99613fab893128d1e",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/data/sprints/R7.5.plan.json",
+      "file_name": "R7.5.plan.json",
+      "extension": "json",
+      "size_bytes": 1652,
+      "sha256": "ddff2c54a7aec605b9500fdeee412a430ce2f2bf970aceb2337eaeaa269f5ed1",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/data/sprints/R7.5.result.json",
+      "file_name": "R7.5.result.json",
+      "extension": "json",
+      "size_bytes": 3482,
+      "sha256": "7d88ec385855b9f736d7d92d2431168a96f893625296e9025076756de0989c79",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/amstelveencollege_quality_standards.md",
+      "file_name": "amstelveencollege_quality_standards.md",
+      "extension": "md",
+      "size_bytes": 2747,
+      "sha256": "3959e089e3c26ef2e4dd6f183d28ffca6d69768013b4a5193358d46aaca7080e",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_reference",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/exam-questions.json",
+      "file_name": "exam-questions.json",
+      "extension": "json",
+      "size_bytes": 246095,
+      "sha256": "c9c054b523bde68a3358ed218d4686bd8fb0bf95af416429b2b7021570d04053",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_reference",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/exams/ha-1022-a-23-1-c.pdf",
+      "file_name": "ha-1022-a-23-1-c.pdf",
+      "extension": "pdf",
+      "size_bytes": 1669304,
+      "sha256": "e1bcf98aa57d79c883b5ca233954293f85073d4707b96df75493cc8912487b31",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_pdf",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/exams/ha-1022-a-23-1-o.pdf",
+      "file_name": "ha-1022-a-23-1-o.pdf",
+      "extension": "pdf",
+      "size_bytes": 2116011,
+      "sha256": "d57164b995c0a26c41865dd78973f55385dc20a5e29b0b3b9827a778494f2198",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_pdf",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/exams/ha-1022-a-23-2-c.pdf",
+      "file_name": "ha-1022-a-23-2-c.pdf",
+      "extension": "pdf",
+      "size_bytes": 1619506,
+      "sha256": "155b7adfdd6c711dd933fff4256045714d6fee4c75a52a5589f02b98064622e3",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_pdf",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/exams/ha-1022-a-23-2-o.pdf",
+      "file_name": "ha-1022-a-23-2-o.pdf",
+      "extension": "pdf",
+      "size_bytes": 1715137,
+      "sha256": "2eca63d9fc6828e1e68018b113b3b8ab0f637a1d21e662a0d6f2e4f1519fb880",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_pdf",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/exams/ha-1022-a-24-1-c.pdf",
+      "file_name": "ha-1022-a-24-1-c.pdf",
+      "extension": "pdf",
+      "size_bytes": 1522219,
+      "sha256": "53f722084f3fcff6fcb684bf540c5240f210aae1fd5c2c8b3c0c0c77eda85f62",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_pdf",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/exams/ha-1022-a-24-1-o.pdf",
+      "file_name": "ha-1022-a-24-1-o.pdf",
+      "extension": "pdf",
+      "size_bytes": 1545211,
+      "sha256": "ec3f1e7b12540d7478311163d8b9b41bb3dfea823523a64cc4dddfb18863ba8b",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_pdf",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/exams/ha-1022-a-24-2-c.pdf",
+      "file_name": "ha-1022-a-24-2-c.pdf",
+      "extension": "pdf",
+      "size_bytes": 1518669,
+      "sha256": "acd6144b691e9303a9c961cb61a9b35467f3bfe36a141a08e6d88424b71c74cf",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_pdf",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/exams/ha-1022-a-24-2-o.pdf",
+      "file_name": "ha-1022-a-24-2-o.pdf",
+      "extension": "pdf",
+      "size_bytes": 1552523,
+      "sha256": "3444556a6c6974dbe4c1078147cfba2f2924efb74e5f9fb3505bdae0c86bd0f8",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_pdf",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/exams/ha-1022-a-25-1-c.pdf",
+      "file_name": "ha-1022-a-25-1-c.pdf",
+      "extension": "pdf",
+      "size_bytes": 1587720,
+      "sha256": "a9b5fcf0f994a657fd2273568c9950edea017b22c4b6b14c38a6bcea29c540ee",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_pdf",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/exams/ha-1022-a-25-1-o.pdf",
+      "file_name": "ha-1022-a-25-1-o.pdf",
+      "extension": "pdf",
+      "size_bytes": 2651713,
+      "sha256": "ead90d620944bf2e69ea6873bb42aed80d4e9d4221c364628f1fab1c2be82ebd",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_pdf",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/exams/ha-1022-a-25-2-c.pdf",
+      "file_name": "ha-1022-a-25-2-c.pdf",
+      "extension": "pdf",
+      "size_bytes": 2239886,
+      "sha256": "2f71cc2fc8f9e88bca97c61c4bbc731a90b4ee88a577b141a3a6fd7ccd7dde9f",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_pdf",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/exams/ha-1022-a-25-2-o.pdf",
+      "file_name": "ha-1022-a-25-2-o.pdf",
+      "extension": "pdf",
+      "size_bytes": 1560692,
+      "sha256": "e9bf94941a4071d82fc9e9ecb46c1d010debd1207a5498c04c16e5996049b685",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_pdf",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/exams/README.md",
+      "file_name": "README.md",
+      "extension": "md",
+      "size_bytes": 3223,
+      "sha256": "69139a1b0d538d32403b48493f9b121a1a989d63d98d7d8517387c419ac571c7",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_reference",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/exams/vw-1022-a-23-1-c.pdf",
+      "file_name": "vw-1022-a-23-1-c.pdf",
+      "extension": "pdf",
+      "size_bytes": 2090748,
+      "sha256": "ee51dd433d35609aa6e0c3174cb84cc5acc0c68f37e04d4406f7d865e736b08f",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_pdf",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/exams/vw-1022-a-23-1-o.pdf",
+      "file_name": "vw-1022-a-23-1-o.pdf",
+      "extension": "pdf",
+      "size_bytes": 1735326,
+      "sha256": "1bfc3dfd67382143a171b23d703e72c80dcf87ac7b76198e034a92af037f5759",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_pdf",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/exams/vw-1022-a-23-2-c.pdf",
+      "file_name": "vw-1022-a-23-2-c.pdf",
+      "extension": "pdf",
+      "size_bytes": 1752500,
+      "sha256": "5e1ce21751e52f760c5dfe2882afe91e06717219c6afbf036dadd2797f3b36ba",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_pdf",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/exams/vw-1022-a-23-2-o.pdf",
+      "file_name": "vw-1022-a-23-2-o.pdf",
+      "extension": "pdf",
+      "size_bytes": 2119945,
+      "sha256": "5d54e348b3360edaec50a6129d24fb8e58ca446ebe1f2c2e5e6a23e01137733b",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_pdf",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/exams/vw-1022-a-24-1-c.pdf",
+      "file_name": "vw-1022-a-24-1-c.pdf",
+      "extension": "pdf",
+      "size_bytes": 1688351,
+      "sha256": "faad3d1db469c529834e11288d99d88e0193b4a435261496863a57215373c70f",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_pdf",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/exams/vw-1022-a-24-1-o.pdf",
+      "file_name": "vw-1022-a-24-1-o.pdf",
+      "extension": "pdf",
+      "size_bytes": 1875921,
+      "sha256": "4239099731dec0aac021d0377602a71f11be5450590c278cc864d7650090686f",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_pdf",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/exams/vw-1022-a-24-2-c.pdf",
+      "file_name": "vw-1022-a-24-2-c.pdf",
+      "extension": "pdf",
+      "size_bytes": 1617619,
+      "sha256": "8981461d5c43d8b072c605273ab3d555ccf15270062cf3d6d98ef832cd693045",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_pdf",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/exams/vw-1022-a-24-2-o.pdf",
+      "file_name": "vw-1022-a-24-2-o.pdf",
+      "extension": "pdf",
+      "size_bytes": 7064017,
+      "sha256": "08a26f8deea66bf92b99817fdcc311792e08a4b8cfa79d62339a2fffd9a3d210",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_pdf",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/exams/vw-1022-a-25-1-c.pdf",
+      "file_name": "vw-1022-a-25-1-c.pdf",
+      "extension": "pdf",
+      "size_bytes": 1830543,
+      "sha256": "d10773314c943fb2082dd81368f25ac41936855a3125435b52f0406c6f5fd617",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_pdf",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/exams/vw-1022-a-25-1-o.pdf",
+      "file_name": "vw-1022-a-25-1-o.pdf",
+      "extension": "pdf",
+      "size_bytes": 1875110,
+      "sha256": "1b0f56fa3794e92584979e8407c4b8f61c59285047efe8ad1b25d7294bdd83fc",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_pdf",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/exams/vw-1022-a-25-2-c.pdf",
+      "file_name": "vw-1022-a-25-2-c.pdf",
+      "extension": "pdf",
+      "size_bytes": 3450482,
+      "sha256": "3a932cfd5d33a6130f3bd48d6f1d72ec9663e79534887c8e1d8e4ee14357c3c0",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_pdf",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/exams/vw-1022-a-25-2-o.pdf",
+      "file_name": "vw-1022-a-25-2-o.pdf",
+      "extension": "pdf",
+      "size_bytes": 1761903,
+      "sha256": "a15a0766c22f2c4c670646159c9f4193324cba1446dcdfa84b6db55aa9ab2410",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_pdf",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/inspectie-standaarden.md",
+      "file_name": "inspectie-standaarden.md",
+      "extension": "md",
+      "size_bytes": 9586,
+      "sha256": "623f05ed173cd55814f133f30181131b477cd94ea54125c8fb1c1f29bb2858ed",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_reference",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/README.md",
+      "file_name": "README.md",
+      "extension": "md",
+      "size_bytes": 1901,
+      "sha256": "5f7d9b6ab0f575318b15c42c3e7b673ec9d83592529efabea62fc0f412f3b757",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_reference",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/syllabus-economie-vwo-2026-versie-2.pdf",
+      "file_name": "syllabus-economie-vwo-2026-versie-2.pdf",
+      "extension": "pdf",
+      "size_bytes": 689102,
+      "sha256": "8def05a04706016b0bd3bd9b6a820091d3791d33239722d20806737784d45862",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_pdf",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/syllabus-eindtermen.json",
+      "file_name": "syllabus-eindtermen.json",
+      "extension": "json",
+      "size_bytes": 82910,
+      "sha256": "22991145a17e8c9598c01ce27c0117c2f063a2c42f42d7442c067f56cc424a6b",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_reference",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/external/syllabus-eindtermen.md",
+      "file_name": "syllabus-eindtermen.md",
+      "extension": "md",
+      "size_bytes": 63076,
+      "sha256": "2d651fe032c9533d610398b7da2a173b1bd8ebf11bc2023d51557dd534d57b19",
+      "layer": "external_authority",
+      "authority_level": "external_primary",
+      "source_type": "external_reference",
+      "generated_status": "mirrored_or_extracted",
+      "edit_policy": "external_refresh_only",
+      "owner": "references_team",
+      "refresh_policy": "refresh_from_external_authority",
+      "downstream_dependencies": [
+        "reports",
+        "reference-qc",
+        "future-evidence-anchors"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/machine/begrippen.json",
+      "file_name": "begrippen.json",
+      "extension": "json",
+      "size_bytes": 212189,
+      "sha256": "3fcb160ec8d1a6e6101dde7ceaf1f1704783d2030c0eb07ae31a4bb714e92fb4",
+      "layer": "machine_registry",
+      "authority_level": "machine_registry",
+      "source_type": "machine_json",
+      "generated_status": "machine_consumed_projection",
+      "edit_policy": "cli_only",
+      "owner": "references_team",
+      "refresh_policy": "reference_cli",
+      "downstream_dependencies": [
+        "reports",
+        "lesson-production",
+        "dashboards",
+        "future-alignment-graph"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/machine/begrippen.md",
+      "file_name": "begrippen.md",
+      "extension": "md",
+      "size_bytes": 123517,
+      "sha256": "8920e0e09f5efaa994094ddb1609365a752b1060c5fe56f0e177e4fa52bce952",
+      "layer": "machine_registry",
+      "authority_level": "machine_registry",
+      "source_type": "machine_projection",
+      "generated_status": "machine_authored_projection",
+      "edit_policy": "cli_only",
+      "owner": "references_team",
+      "refresh_policy": "reference_cli",
+      "downstream_dependencies": [
+        "reports",
+        "lesson-production",
+        "dashboards",
+        "future-alignment-graph"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/machine/micro-teaching-units.json",
+      "file_name": "micro-teaching-units.json",
+      "extension": "json",
+      "size_bytes": 171561,
+      "sha256": "364d45c215506d50903e429d02ba042a8edaad6b17ff144d3db6cb3fc109fec3",
+      "layer": "machine_registry",
+      "authority_level": "machine_registry",
+      "source_type": "machine_json",
+      "generated_status": "machine_consumed_projection",
+      "edit_policy": "cli_only",
+      "owner": "references_team",
+      "refresh_policy": "reference_cli",
+      "downstream_dependencies": [
+        "reports",
+        "lesson-production",
+        "dashboards",
+        "future-alignment-graph"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/machine/micro-teaching-units.md",
+      "file_name": "micro-teaching-units.md",
+      "extension": "md",
+      "size_bytes": 139381,
+      "sha256": "0bc88613a92f219ad611630252cbd591bfb0602bafcfefdcd466c887877836df",
+      "layer": "machine_registry",
+      "authority_level": "machine_registry",
+      "source_type": "machine_projection",
+      "generated_status": "machine_authored_projection",
+      "edit_policy": "cli_only",
+      "owner": "references_team",
+      "refresh_policy": "reference_cli",
+      "downstream_dependencies": [
+        "reports",
+        "lesson-production",
+        "dashboards",
+        "future-alignment-graph"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/machine/README.md",
+      "file_name": "README.md",
+      "extension": "md",
+      "size_bytes": 2110,
+      "sha256": "513f02b64ee424a2ab643a87c0603e375642a8a5cf4738539bc00e754ab08bb9",
+      "layer": "machine_registry",
+      "authority_level": "machine_registry",
+      "source_type": "machine_projection",
+      "generated_status": "machine_authored_projection",
+      "edit_policy": "cli_only",
+      "owner": "references_team",
+      "refresh_policy": "reference_cli",
+      "downstream_dependencies": [
+        "reports",
+        "lesson-production",
+        "dashboards",
+        "future-alignment-graph"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/qc-prompts/exam-derived-skills.md",
+      "file_name": "exam-derived-skills.md",
+      "extension": "md",
+      "size_bytes": 3669,
+      "sha256": "9f2d97eaed64755ee5acb9b2cfe36e67ed3c0fe4c0968cea65fb9f96d4372298",
+      "layer": "quality_protocol",
+      "authority_level": "authored_judgement",
+      "source_type": "qc_prompt",
+      "generated_status": "manual_source",
+      "edit_policy": "human_reviewed_edit",
+      "owner": "references_team",
+      "refresh_policy": "manual_review",
+      "downstream_dependencies": [
+        "qc-runs",
+        "review-gates"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/qc-prompts/foundation-audit.md",
+      "file_name": "foundation-audit.md",
+      "extension": "md",
+      "size_bytes": 7239,
+      "sha256": "603eeceac3397543028430a6417410c41e516d95f694ca95c232e9c0db2136ef",
+      "layer": "quality_protocol",
+      "authority_level": "authored_judgement",
+      "source_type": "qc_prompt",
+      "generated_status": "manual_source",
+      "edit_policy": "human_reviewed_edit",
+      "owner": "references_team",
+      "refresh_policy": "manual_review",
+      "downstream_dependencies": [
+        "qc-runs",
+        "review-gates"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/qc-prompts/probe-questions.md",
+      "file_name": "probe-questions.md",
+      "extension": "md",
+      "size_bytes": 3389,
+      "sha256": "e1cd57adb27a91ccd074cdadd0bc7ce547528944d6eb59d1ce275392a7d885b5",
+      "layer": "quality_protocol",
+      "authority_level": "authored_judgement",
+      "source_type": "qc_prompt",
+      "generated_status": "manual_source",
+      "edit_policy": "human_reviewed_edit",
+      "owner": "references_team",
+      "refresh_policy": "manual_review",
+      "downstream_dependencies": [
+        "qc-runs",
+        "review-gates"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/qc-prompts/README.md",
+      "file_name": "README.md",
+      "extension": "md",
+      "size_bytes": 3359,
+      "sha256": "f9f4ce2853df2e8664c86813aa5e0e66a454d6c5f86c241b806bd81e66e3af63",
+      "layer": "quality_protocol",
+      "authority_level": "authored_judgement",
+      "source_type": "qc_prompt",
+      "generated_status": "manual_source",
+      "edit_policy": "human_reviewed_edit",
+      "owner": "references_team",
+      "refresh_policy": "manual_review",
+      "downstream_dependencies": [
+        "qc-runs",
+        "review-gates"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/qc-prompts/tree-integrity-audit.md",
+      "file_name": "tree-integrity-audit.md",
+      "extension": "md",
+      "size_bytes": 3966,
+      "sha256": "e903e71a04c7149f476057238ac14e55042f7cff25de7f806f5475b07284b6f3",
+      "layer": "quality_protocol",
+      "authority_level": "authored_judgement",
+      "source_type": "qc_prompt",
+      "generated_status": "manual_source",
+      "edit_policy": "human_reviewed_edit",
+      "owner": "references_team",
+      "refresh_policy": "manual_review",
+      "downstream_dependencies": [
+        "qc-runs",
+        "review-gates"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/reference-team-roadmap.md",
+      "file_name": "reference-team-roadmap.md",
+      "extension": "md",
+      "size_bytes": 47398,
+      "sha256": "6a09b65d0071afb1e15ea4f011a08fa3a882cc754371c6f1425492bd9713447b",
+      "layer": "planning",
+      "authority_level": "authored_judgement",
+      "source_type": "roadmap",
+      "generated_status": "manual_source",
+      "edit_policy": "human_reviewed_edit",
+      "owner": "references_team",
+      "refresh_policy": "roadmap_update",
+      "downstream_dependencies": [
+        "internal-dashboard",
+        "sprint-planning"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/schemas/alignment-edge.schema.json",
+      "file_name": "alignment-edge.schema.json",
+      "extension": "json",
+      "size_bytes": 2273,
+      "sha256": "f3e010a9178c7025b24ddc18688c07c5c594231fa912b592ca012b8cc1242230",
+      "layer": "schema_contract",
+      "authority_level": "machine_contract",
+      "source_type": "json_schema",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "references_team",
+      "refresh_policy": "schema_review",
+      "downstream_dependencies": [
+        "validators",
+        "reference-cli",
+        "reports",
+        "future-rag"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/schemas/claim.schema.json",
+      "file_name": "claim.schema.json",
+      "extension": "json",
+      "size_bytes": 1081,
+      "sha256": "8e82217671a44bfbc858ee2c93ef7559ebc6c7a561077f95b624b3cf59acb173",
+      "layer": "schema_contract",
+      "authority_level": "machine_contract",
+      "source_type": "json_schema",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "references_team",
+      "refresh_policy": "schema_review",
+      "downstream_dependencies": [
+        "validators",
+        "reference-cli",
+        "reports",
+        "future-rag"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/schemas/evidence-anchor.schema.json",
+      "file_name": "evidence-anchor.schema.json",
+      "extension": "json",
+      "size_bytes": 1464,
+      "sha256": "3a543b78c793f285b1cb3d9da728b92ac573cff42967be30396e6d3b5fdd3d89",
+      "layer": "schema_contract",
+      "authority_level": "machine_contract",
+      "source_type": "json_schema",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "references_team",
+      "refresh_policy": "schema_review",
+      "downstream_dependencies": [
+        "validators",
+        "reference-cli",
+        "reports",
+        "future-rag"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/schemas/exam-question.schema.json",
+      "file_name": "exam-question.schema.json",
+      "extension": "json",
+      "size_bytes": 717,
+      "sha256": "ba0ee860ab9fec81c0547351836d1f27c739eb2f9122a6b780f8e492174fb23c",
+      "layer": "schema_contract",
+      "authority_level": "machine_contract",
+      "source_type": "json_schema",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "references_team",
+      "refresh_policy": "schema_review",
+      "downstream_dependencies": [
+        "validators",
+        "reference-cli",
+        "reports",
+        "future-rag"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/schemas/feedback.schema.json",
+      "file_name": "feedback.schema.json",
+      "extension": "json",
+      "size_bytes": 673,
+      "sha256": "fa9cf4d76ce616cd447b8c93fe26d6aa4bcfecae3d7002cdefbeea832ddd9433",
+      "layer": "schema_contract",
+      "authority_level": "machine_contract",
+      "source_type": "json_schema",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "references_team",
+      "refresh_policy": "schema_review",
+      "downstream_dependencies": [
+        "validators",
+        "reference-cli",
+        "reports",
+        "future-rag"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/schemas/game-item.schema.json",
+      "file_name": "game-item.schema.json",
+      "extension": "json",
+      "size_bytes": 629,
+      "sha256": "cfffd7ae69512e3f7cd6fc7bc955541b45f7d5d65181b71a8ce22e4540da1a35",
+      "layer": "schema_contract",
+      "authority_level": "machine_contract",
+      "source_type": "json_schema",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "references_team",
+      "refresh_policy": "schema_review",
+      "downstream_dependencies": [
+        "validators",
+        "reference-cli",
+        "reports",
+        "future-rag"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/schemas/misconception.schema.json",
+      "file_name": "misconception.schema.json",
+      "extension": "json",
+      "size_bytes": 581,
+      "sha256": "e0c9d357a85946e934de487fb0d6669c0e64c79800135067b00df9ecc3ddc300",
+      "layer": "schema_contract",
+      "authority_level": "machine_contract",
+      "source_type": "json_schema",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "references_team",
+      "refresh_policy": "schema_review",
+      "downstream_dependencies": [
+        "validators",
+        "reference-cli",
+        "reports",
+        "future-rag"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/schemas/prior-knowledge-review.schema.json",
+      "file_name": "prior-knowledge-review.schema.json",
+      "extension": "json",
+      "size_bytes": 1234,
+      "sha256": "c574820dcab7c1ddd6f0dd83c9b9794ca3c47220a3e9eaf1a93643d21308487b",
+      "layer": "schema_contract",
+      "authority_level": "machine_contract",
+      "source_type": "json_schema",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "references_team",
+      "refresh_policy": "schema_review",
+      "downstream_dependencies": [
+        "validators",
+        "reference-cli",
+        "reports",
+        "future-rag"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/schemas/quality-issue.schema.json",
+      "file_name": "quality-issue.schema.json",
+      "extension": "json",
+      "size_bytes": 735,
+      "sha256": "8317c8883c989a41799e782bb720187d9a0cc21626d8bad6982393470e2639ea",
+      "layer": "schema_contract",
+      "authority_level": "machine_contract",
+      "source_type": "json_schema",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "references_team",
+      "refresh_policy": "schema_review",
+      "downstream_dependencies": [
+        "validators",
+        "reference-cli",
+        "reports",
+        "future-rag"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/schemas/rag-chunk.schema.json",
+      "file_name": "rag-chunk.schema.json",
+      "extension": "json",
+      "size_bytes": 737,
+      "sha256": "6063158a09fb8662676ec10480ea85a27cf3e2d6acf6b996a4f141cd7dd6528f",
+      "layer": "schema_contract",
+      "authority_level": "machine_contract",
+      "source_type": "json_schema",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "references_team",
+      "refresh_policy": "schema_review",
+      "downstream_dependencies": [
+        "validators",
+        "reference-cli",
+        "reports",
+        "future-rag"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/schemas/report.schema.json",
+      "file_name": "report.schema.json",
+      "extension": "json",
+      "size_bytes": 561,
+      "sha256": "296f8f60b4d2379a520a477d4f98a1fdeeaedcf1e9dc9af9f04e40ea79796e5b",
+      "layer": "schema_contract",
+      "authority_level": "machine_contract",
+      "source_type": "json_schema",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "references_team",
+      "refresh_policy": "schema_review",
+      "downstream_dependencies": [
+        "validators",
+        "reference-cli",
+        "reports",
+        "future-rag"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/schemas/simulation.schema.json",
+      "file_name": "simulation.schema.json",
+      "extension": "json",
+      "size_bytes": 734,
+      "sha256": "e25758c03ed450ccc62a7d256b74a11e5133a423841e7fc3b56c443776ad17df",
+      "layer": "schema_contract",
+      "authority_level": "machine_contract",
+      "source_type": "json_schema",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "references_team",
+      "refresh_policy": "schema_review",
+      "downstream_dependencies": [
+        "validators",
+        "reference-cli",
+        "reports",
+        "future-rag"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/schemas/source-document.schema.json",
+      "file_name": "source-document.schema.json",
+      "extension": "json",
+      "size_bytes": 673,
+      "sha256": "8acfa61f5b3657b31a4570ecdbb2e63f8479c1d47123317a8b61ba581de2f6bb",
+      "layer": "schema_contract",
+      "authority_level": "machine_contract",
+      "source_type": "json_schema",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "references_team",
+      "refresh_policy": "schema_review",
+      "downstream_dependencies": [
+        "validators",
+        "reference-cli",
+        "reports",
+        "future-rag"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/schemas/syllabus-code.schema.json",
+      "file_name": "syllabus-code.schema.json",
+      "extension": "json",
+      "size_bytes": 534,
+      "sha256": "1f1777e5dd5a2d256e361b25b666483f3c641519f3b617ab402595b6cc88f6b9",
+      "layer": "schema_contract",
+      "authority_level": "machine_contract",
+      "source_type": "json_schema",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "references_team",
+      "refresh_policy": "schema_review",
+      "downstream_dependencies": [
+        "validators",
+        "reference-cli",
+        "reports",
+        "future-rag"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/schemas/target-exercise.schema.json",
+      "file_name": "target-exercise.schema.json",
+      "extension": "json",
+      "size_bytes": 653,
+      "sha256": "565a1c6685c65fed644d61249c163fd3561b4855fbfa1cb7e72eccbeadc79327",
+      "layer": "schema_contract",
+      "authority_level": "machine_contract",
+      "source_type": "json_schema",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "references_team",
+      "refresh_policy": "schema_review",
+      "downstream_dependencies": [
+        "validators",
+        "reference-cli",
+        "reports",
+        "future-rag"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/schemas/term.schema.json",
+      "file_name": "term.schema.json",
+      "extension": "json",
+      "size_bytes": 751,
+      "sha256": "47fad9d2503c8f6a48754d4f439c7e8cda6197bb6704f71d35cee66cf1a2f9ba",
+      "layer": "schema_contract",
+      "authority_level": "machine_contract",
+      "source_type": "json_schema",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "references_team",
+      "refresh_policy": "schema_review",
+      "downstream_dependencies": [
+        "validators",
+        "reference-cli",
+        "reports",
+        "future-rag"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/schemas/unit.schema.json",
+      "file_name": "unit.schema.json",
+      "extension": "json",
+      "size_bytes": 1608,
+      "sha256": "4ce91a9f000859f44e98589225a8f2a83d0db427cf4dd1d2ef9e3a98fe3cbc5c",
+      "layer": "schema_contract",
+      "authority_level": "machine_contract",
+      "source_type": "json_schema",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "references_team",
+      "refresh_policy": "schema_review",
+      "downstream_dependencies": [
+        "validators",
+        "reference-cli",
+        "reports",
+        "future-rag"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/schemas/worked-example.schema.json",
+      "file_name": "worked-example.schema.json",
+      "extension": "json",
+      "size_bytes": 572,
+      "sha256": "de33f710d6a6b252c9d8bbc2d9a89ffacb6a6ee71dcb2f23af437978ca88b4e3",
+      "layer": "schema_contract",
+      "authority_level": "machine_contract",
+      "source_type": "json_schema",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "references_team",
+      "refresh_policy": "schema_review",
+      "downstream_dependencies": [
+        "validators",
+        "reference-cli",
+        "reports",
+        "future-rag"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/SOURCE_OF_TRUTH.md",
+      "file_name": "SOURCE_OF_TRUTH.md",
+      "extension": "md",
+      "size_bytes": 3600,
+      "sha256": "782cd662596af62a4490dea93dba84ad74f1b0e179f41d281580985da1827bba",
+      "layer": "governance_policy",
+      "authority_level": "authored_judgement",
+      "source_type": "source_of_truth_policy",
+      "generated_status": "manual_source",
+      "edit_policy": "human_reviewed_edit",
+      "owner": "references_team",
+      "refresh_policy": "roadmap_update",
+      "downstream_dependencies": [
+        "schemas",
+        "validators",
+        "review-gates"
+      ],
+      "self_generated_inventory_file": false
+    }
+  ]
+}

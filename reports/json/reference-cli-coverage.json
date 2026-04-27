@@ -1,0 +1,107 @@
+{
+  "schema_version": "0.1",
+  "generated_on": "2026-04-26",
+  "sprint_id": "R3.1",
+  "protected_reference_data_changed": false,
+  "source_packet": "reports/review-gates/GATE-R2-empty-needs/R2.4-evidence-unit-design-packet.json",
+  "summary": {
+    "overall_status": "ready_with_blockers",
+    "ready_for_r3_2_after_human_review": true,
+    "r3_2_still_blocked_by": [
+      "human mutation review of the R2.4 packet",
+      "decision on whether D04 is deprecated, split, merged, or redistributed"
+    ],
+    "not_blocking_r3_2": [
+      "evidence-anchor storage commands, because evidence remains in the R2.4 packet until R5.1"
+    ]
+  },
+  "command_coverage": [
+    {
+      "mutation_type": "unit_dependency_add",
+      "status": "implemented",
+      "commands": ["build-scripts/references/unit-add-dep.js"],
+      "validators": ["build-scripts/references/build-unit-index.js"],
+      "r2_4_items": ["A15->A38", "A16->A15", "A17->A15", "D06->A15", "labor-market review-ready candidate edges"],
+      "notes": "Requires human mutation review before execution."
+    },
+    {
+      "mutation_type": "unit_dependency_remove",
+      "status": "implemented",
+      "commands": ["build-scripts/references/unit-remove-dep.js"],
+      "validators": ["build-scripts/references/build-unit-index.js"],
+      "r2_4_items": [],
+      "notes": "Available if a later review removes stale edges."
+    },
+    {
+      "mutation_type": "zero_needs_review_fields",
+      "status": "implemented_in_r3_1",
+      "commands": ["build-scripts/references/unit-update.js"],
+      "validators": [
+        "build-scripts/references/build-unit-index.js",
+        "build-scripts/references/validate-prior-knowledge-schema.js"
+      ],
+      "r2_4_items": ["A01/A02/A03/A04/A05/A38 underbouw_assumed"],
+      "notes": "R3.1 added parser, formatter, JSON projection, and validation support for assumed_prior_knowledge, zero_needs_status, and zero_needs_review."
+    },
+    {
+      "mutation_type": "unit_status_deprecate",
+      "status": "implemented",
+      "commands": ["build-scripts/references/unit-deprecate.js"],
+      "validators": ["build-scripts/references/build-unit-index.js"],
+      "r2_4_items": ["D04 unit-design-required, if human decision chooses retirement"],
+      "notes": "The command exists; D04 still needs an explicit human design decision before execution."
+    },
+    {
+      "mutation_type": "unit_split_or_merge",
+      "status": "implemented",
+      "commands": ["build-scripts/references/unit-split.js", "build-scripts/references/unit-merge.js"],
+      "validators": ["build-scripts/references/build-unit-index.js"],
+      "r2_4_items": ["D04 unit-design-required, if human decision chooses split/merge"],
+      "notes": "The commands exist; D04 still needs concrete target specs."
+    },
+    {
+      "mutation_type": "unit_terms_update",
+      "status": "implemented",
+      "commands": ["build-scripts/references/unit-update.js"],
+      "validators": ["build-scripts/references/build-unit-index.js"],
+      "r2_4_items": ["future term-link cleanup"],
+      "notes": "Term values are validated against the term registry compatibility set. R4.1 will handle slug migration."
+    },
+    {
+      "mutation_type": "term_registry_update",
+      "status": "implemented",
+      "commands": [
+        "build-scripts/references/term-add.js",
+        "build-scripts/references/term-update.js",
+        "build-scripts/references/term-rename.js",
+        "build-scripts/references/term-deprecate.js"
+      ],
+      "validators": ["build-scripts/references/build-begrippen-index.js"],
+      "r2_4_items": [],
+      "notes": "Term registry mutation path is available, but R2.4 did not require term mutations."
+    },
+    {
+      "mutation_type": "evidence_anchor_storage",
+      "status": "planned_not_r3_2_blocker",
+      "commands": [],
+      "validators": [],
+      "r2_4_items": ["all evidence-backed decisions"],
+      "notes": "Dedicated evidence-anchor records are planned for R5.1. R3.2 may use the R2.4 packet as evidence provenance until that layer exists."
+    }
+  ],
+  "required_scripts": [
+    "build-scripts/references/build-unit-index.js",
+    "build-scripts/references/unit-add.js",
+    "build-scripts/references/unit-update.js",
+    "build-scripts/references/unit-add-dep.js",
+    "build-scripts/references/unit-remove-dep.js",
+    "build-scripts/references/unit-deprecate.js",
+    "build-scripts/references/unit-split.js",
+    "build-scripts/references/unit-merge.js",
+    "build-scripts/references/build-begrippen-index.js",
+    "build-scripts/references/term-add.js",
+    "build-scripts/references/term-update.js",
+    "build-scripts/references/term-rename.js",
+    "build-scripts/references/term-deprecate.js"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://4veco.local/references/schemas/feedback.schema.json",
+  "title": "Feedback",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["feedback_id", "unit_ids", "text_nl"],
+  "properties": {
+    "feedback_id": { "type": "string" },
+    "unit_ids": { "type": "array", "items": { "type": "string" } },
+    "misconception_ids": { "type": "array", "items": { "type": "string" } },
+    "text_nl": { "type": "string" },
+    "hint_ids": { "type": "array", "items": { "type": "string" } },
+    "worked_example_ids": { "type": "array", "items": { "type": "string" } }
+  }
+}

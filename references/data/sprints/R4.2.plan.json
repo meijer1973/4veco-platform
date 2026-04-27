@@ -1,0 +1,15 @@
+{
+  "sprint_id": "R4.2",
+  "name": "Exam-Question Extraction Gap Closure",
+  "status": "in_progress",
+  "planned_on": "2026-04-26",
+  "plan": "docs/sprints/R4.2-plan.md",
+  "protected_reference_data_changes_allowed": false,
+  "human_review_required": false,
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js docs/sprints/R4.2-plan.md",
+    "node build-scripts/references/exam-question-gap-audit.js",
+    "node build-scripts/sprints/check-sprint-result.js reports/sprints/R4.2-result.md",
+    "node build-scripts/sprints/check-sprint-bundle.js R4.2 --complete"
+  ]
+}

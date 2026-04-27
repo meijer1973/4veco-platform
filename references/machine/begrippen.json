@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "generated_at": "2026-04-23T14:05:52.132Z",
+  "generated_at": "2026-04-26T20:45:52.692Z",
   "terms": {
     "aandelen": {
       "id": "aandelen",
@@ -3008,7 +3008,10 @@
       ],
       "example_nl": "Steeg je salaris van € 3.000 naar € 3.060 bij 2% inflatie, dan is het nominale loon met 2% gestegen maar het reële loon vrijwel onveranderd.",
       "pitfall_nl": "Nominaal − inflatie ≈ reëel. Is de inflatie hoger dan de nominale toename, dan daal je reëel — ook al stijgen de eurobedragen op papier.",
-      "teaching_units": [],
+      "teaching_units": [
+        "I09",
+        "I18"
+      ],
       "deprecated": false,
       "deprecated_in_favor_of": null
     },

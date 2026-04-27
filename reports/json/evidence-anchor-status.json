@@ -1,0 +1,42 @@
+{
+  "schema_version": "0.1",
+  "sprint_id": "R5.1",
+  "generated_on": "2026-04-27",
+  "status": "pass",
+  "source": "references/data/evidence-anchors.json",
+  "summary": {
+    "evidence_anchor_count": 15,
+    "claim_count": 14,
+    "primary_evidence_count": 12,
+    "generated_report_anchor_count": 1,
+    "by_source_layer": {
+      "governance_data": 1,
+      "authored_judgement": 6,
+      "machine_registry": 3,
+      "human_gate_decision": 1,
+      "external_authority": 3,
+      "generated_report": 1
+    },
+    "by_authority_rank": {
+      "1": 3,
+      "2": 6,
+      "3": 3,
+      "4": 1,
+      "5": 1,
+      "6": 1
+    },
+    "by_claim_type": {
+      "source_policy": 1,
+      "unit_prerequisite": 10,
+      "unit_design_decision": 1,
+      "exam_question_gap": 1,
+      "term_definition": 1
+    },
+    "by_claim_status": {
+      "accepted": 12,
+      "hold": 1,
+      "diagnostic": 1
+    }
+  },
+  "errors": []
+}

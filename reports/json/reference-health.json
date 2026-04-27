@@ -1,0 +1,143 @@
+{
+  "schema_version": 1,
+  "generated_by": "build-scripts/reports/generate-reference-health.js",
+  "generated_on": "2026-04-27T08:43:47.640Z",
+  "source_files": [
+    "references/machine/micro-teaching-units.json",
+    "references/machine/begrippen.json",
+    "references/external/exam-questions.json",
+    "references/authored/course-target-exercises.json",
+    "references/data/alignment-graph.json",
+    "reports/review-gates/GATE-R5-alignment-graph/gate-closure.json",
+    "reports/review-gates/GATE-R7-rag/gate-closure.json",
+    "reports/json/*.json"
+  ],
+  "unit_counts": {
+    "total": 192,
+    "live": 190,
+    "deprecated": 2,
+    "by_category": {
+      "arbeidsmarkt": 21,
+      "goede en slechte tijden": 20,
+      "markt": 36,
+      "risico en informatie": 12,
+      "ruilen over tijd": 7,
+      "samenwerken en onderhandelen": 18,
+      "schaarste": 2,
+      "vaardigheden": 44,
+      "welvaart en groei": 30
+    },
+    "by_layer": {
+      "0": 7,
+      "1": 54,
+      "2": 56,
+      "3": 29,
+      "4": 18,
+      "5": 15,
+      "6": 7,
+      "7": 4
+    }
+  },
+  "empty_needs_status_distribution": {
+    "unclassified": 42,
+    "underbouw_assumed": 6
+  },
+  "prior_knowledge_review_status": {
+    "not_reviewed": 184,
+    "reviewed": 6
+  },
+  "term_link_coverage": {
+    "terms": 225,
+    "units_without_terms": 44,
+    "status": "warn"
+  },
+  "exam_question_coverage": {
+    "question_count": 349,
+    "status": "warn",
+    "issue_count": null
+  },
+  "target_exercise_triage_status": {
+    "status": "info",
+    "issue_count": null,
+    "source_present": true,
+    "target_surface_present": true
+  },
+  "unresolved_refs": {
+    "status": "warn",
+    "issues": 24
+  },
+  "qc_findings": {
+    "report_count": 12,
+    "total_issues": 310,
+    "high_or_critical_issues": 7,
+    "by_report_status": {
+      "fail": 1,
+      "pass": 5,
+      "warn": 6
+    }
+  },
+  "schema_validation_status": {
+    "report_json_contract": "pass",
+    "alignment_graph": "pass",
+    "evidence_anchors": "pass"
+  },
+  "alignment_graph_status": {
+    "graph_status": "gate_passed_with_conditions",
+    "edge_count": 34,
+    "by_review_status": {
+      "approved": 8,
+      "approved_with_conditions": 5,
+      "diagnostic_only": 2,
+      "pending_review": 19
+    },
+    "by_relation": {
+      "derived_from": 20,
+      "has_unit_design_issue": 1,
+      "prerequisite": 10,
+      "quality_issue_affects_exam_question": 1,
+      "supports": 1,
+      "term_defined_in_registry": 1
+    }
+  },
+  "r5_3_gate_status": {
+    "gate_id": "GATE-R5-alignment-graph",
+    "status": "pass_with_conditions",
+    "graph_approval_scope": "named_edge_groups_only",
+    "whole_graph_authority": false
+  },
+  "r7_4_gate_status": {
+    "gate_id": "GATE-R7-rag",
+    "status": "pass_with_conditions",
+    "teacher_facing_non_authoritative_lookup_allowed": true,
+    "lesson_authoring_support_allowed": true
+  },
+  "graph_authority": {
+    "whole_graph_authority": false,
+    "approved_scope": "named_edge_groups_only",
+    "student_diagnostics_allowed": false,
+    "adaptive_routing_allowed": false,
+    "student_facing_ai_allowed": false
+  },
+  "retrieval_evaluation_status": {
+    "status": "available",
+    "passed": 10,
+    "failed": 0
+  },
+  "allowed_downstream_uses": [
+    "internal_dashboard",
+    "reference_health_reports",
+    "internal_retrieval_development",
+    "retrieval_evaluation",
+    "teacher_facing_non_authoritative_lookup",
+    "lesson_authoring_support_with_human_review"
+  ],
+  "blocked_downstream_uses": [
+    "student_diagnostics",
+    "adaptive_routing",
+    "student_facing_ai",
+    "automatic_lesson_sequencing",
+    "automatic_mastery_decisions",
+    "summative_assessment_decisions",
+    "unreviewed_student_facing_publication"
+  ]
+}

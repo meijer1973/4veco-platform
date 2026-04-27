@@ -1,141 +1,212 @@
 # build-scripts/references/
 
-CLI suite for the machine-edited references under `references/machine/`. Every mutation to those references flows through one of these scripts. Hand-editing machine references is forbidden; see `knowledge/micro-teaching-units-plan.md` §5.
+CLI suite for the machine-edited references under `references/machine/`.
 
-**All scripts in this folder are yet to be built.** This README defines the contract so the implementation session has a clear target.
+Machine references are protected. Do not hand-edit `references/machine/*`; use these commands so markdown, JSON projections, validation, and auditability stay together.
 
----
+## Current Status
 
-## Shared invariants
+The core reference CLI exists. This folder is no longer only a future contract.
 
-Every CLI command in this folder:
+Implemented unit commands:
 
-1. **Accepts flags OR a `--spec` JSON argument.** The JSON spec form is the machine contract; the flags form is the human convenience wrapper. Both paths must yield byte-identical output.
-2. **Validates atomically.** A command either fully succeeds (markdown + JSON both written) or fully fails (neither written). No partial states.
-3. **Runs the full validator after every write.** The validator re-checks the entire catalog, not just the changed entry. A single edit that introduces a cycle elsewhere is caught immediately.
-4. **Fails loudly with a specific error.** Unresolved ref → name the unit. Cycle → name the cycle path. Eindterm unknown → name the code. No silent best-effort.
-5. **Regenerates `references/machine/micro-teaching-units.json` on every successful write.** The JSON is the machine-consumed projection; never hand-committed.
+- `build-unit-index.js`
+- `unit-add.js`
+- `unit-update.js`
+- `unit-rename.js`
+- `unit-add-dep.js`
+- `unit-remove-dep.js`
+- `unit-deprecate.js`
+- `unit-split.js`
+- `unit-merge.js`
 
----
+Implemented term commands:
 
-## Command catalog
+- `build-begrippen-index.js`
+- `term-add.js`
+- `term-update.js`
+- `term-rename.js`
+- `term-deprecate.js`
 
-### `unit-add`
+Known gaps:
 
-Mint a new unit.
+- Dedicated evidence-anchor mutation commands are planned for R5.1.
+- R3.2 corrections still require human mutation review of the R2.4 packet before any protected reference writes.
+- Mutation commands write protected references by design. Do not run mutation commands during review-only or non-mutating sprints.
 
-```
-node build-scripts/references/unit-add.js --spec '<JSON>'
-```
+Coverage status is checked by:
 
-Required JSON fields: `id`, `name`, `kern`, `needs`, `mastery_target`, `prior_learning`, `terms`.
-Required when `mastery_target >= apply`: `procedure`.
-Required when `id.startsWith('A')`: `generator`.
-Optional: `exam_codes`, `pitfalls`, `duration_min`.
-
-Validates:
-- ID is available (not already minted, not a deprecation pointer).
-- ID prefix matches a valid CvTE domain letter (A–K).
-- Every `needs` entry resolves and forms no cycle with the new entry.
-- Every `terms` entry resolves to a canonical term in `economie-terminologie.md`.
-- Every `exam_codes` entry resolves to a real eindterm in `syllabus-eindtermen.json`.
-- `procedure` is present when required, absent when not needed.
-- `generator` is valid for A-units, absent for non-A units.
-- Computes `layer = max(needs.layer) + 1`.
-
-### `unit-rename`
-
-Change the display name of an existing unit. ID stays. All citations unchanged.
-
-```
-node build-scripts/references/unit-rename.js --id <ID> --name "<new name>"
+```powershell
+node build-scripts/references/check-reference-cli-coverage.js
 ```
 
-### `unit-update`
+## Shared Invariants
 
-Change any schema field (except `id`, `layer`, derived fields).
+Every mutation command in this folder:
 
-```
-node build-scripts/references/unit-update.js --id <ID> --spec '<JSON patch>'
-```
+1. Accepts flags or a `--spec` JSON argument when the command supports rich mutation input.
+2. Validates atomically. A command either fully succeeds or fully fails.
+3. Regenerates the machine-consumed JSON projection after successful markdown writes.
+4. Runs the relevant full validator after every write.
+5. Fails loudly with a specific error.
+6. Treats generated reports as diagnostics, not as primary source evidence.
 
-Merge-patches the provided JSON over the existing entry, re-validates everything.
-
-### `unit-add-dep` / `unit-remove-dep`
-
-Edit DAG edges. Triggers layer recomputation cascading to every dependent.
-
-```
-node build-scripts/references/unit-add-dep.js --from <ID> --to <prereq>
-node build-scripts/references/unit-remove-dep.js --from <ID> --to <prereq>
-```
-
-### `unit-deprecate`
-
-Mark a unit as deprecated. Optional replacement pointer. Deprecated units remain in the catalog (as stubs) for at least one release cycle.
-
-```
-node build-scripts/references/unit-deprecate.js --id <ID> [--replaced-by <IDs>]
-```
-
-Every live paragraph plan citing the deprecated ID triggers a warning in `reports/unresolved-refs.md` on next build (warning, not CI failure, since deprecation is an expected transitional state).
-
-### `unit-split`
-
-One unit becomes several. Deprecates the old with `replaced_by: [new IDs]`, mints the new ones, offers optional migration mapping for paragraph plans.
-
-```
-node build-scripts/references/unit-split.js --from <ID> --into <new IDs> --spec '<JSON with full specs for the new IDs>'
-```
-
-### `unit-merge`
-
-Several units collapse into one. Deprecates all but the target, which absorbs the others.
-
-```
-node build-scripts/references/unit-merge.js --from <IDs> --into <ID>
-```
-
----
-
-## Supporting scripts
+## Unit Registry Commands
 
 ### `build-unit-index.js`
 
-Regenerates `references/machine/micro-teaching-units.json` from the markdown. Invoked at the end of every `unit-*` command, but also available stand-alone for full-catalog rebuilds after git operations.
+Regenerates `references/machine/micro-teaching-units.json` from `references/machine/micro-teaching-units.md`.
 
-```
+```powershell
 node build-scripts/references/build-unit-index.js
 ```
 
-### `extract-eindtermen.js`
+R3.1 support:
 
-One-shot (per syllabus year): parse `references/external/syllabus-economie-vwo-2026-versie-2.pdf` into `references/external/syllabus-eindtermen.md` + `.json`. The validator uses the JSON form.
+- parses `assumed_prior_knowledge`
+- parses `zero_needs_status`
+- parses `zero_needs_review`
+- validates zero-needs review enums and object shape
+- projects the fields into the JSON index
 
-```
-node build-scripts/references/extract-eindtermen.js
-```
+### `unit-add.js`
 
-### `seed-math-units.js`
+Mints a new unit through the protected machine-reference workflow.
 
-One-shot: migrate the 37 math skills from `engines/skilltree/base-elements.js` into `micro-teaching-units.md` as `A01–A37`. Records the `F/B/S/E → A*` migration map for the coordinated commit that also updates the 23 per-paragraph `activeSkills` arrays. This is the only bulk seeding script — all other seeding happens exercise-by-exercise via `unit-add`.
-
-```
-node build-scripts/references/seed-math-units.js
-```
-
-### `migrate-paths.js`
-
-Used once for the references folder migration (see `knowledge/references-migration-plan.md`). Walks every file in the repo, rewrites `references/X.md` → `references/<bucket>/X.md` exactly. Reports diffs. Idempotent.
-
-```
-node build-scripts/references/migrate-paths.js
+```powershell
+node build-scripts/references/unit-add.js --spec '<JSON>'
 ```
 
----
+Required JSON fields: `id`, `name`, `kern`, `needs`, `mastery_target`, `prior_learning`, `aspects`, `terms`.
 
-## Future `/unit` skill
+Optional fields include `exam_codes`, `procedure`, `pitfalls`, `duration_min`, `generator`, `assumed_prior_knowledge`, `zero_needs_status`, and `zero_needs_review`.
 
-A Claude Code skill (Phase 2, deferred) will parse Dutch natural language ("maak nieuwe unit D12 voor prijsdiscriminatie berekenen, volgt op D06 en A15, mastery apply"), generate the equivalent `--spec` JSON, echo the exact CLI call for user confirmation, and then shell out to run it.
+### `unit-update.js`
 
-The skill has **no file-write capability of its own.** All edits flow through the CLI. The skill is optional sugar; removing it would not break anything. Keep this dependency direction — skill depends on CLI, not the other way around.
+Changes editable schema fields for an existing unit.
+
+```powershell
+node build-scripts/references/unit-update.js --id <ID> --spec '<JSON patch>'
+node build-scripts/references/unit-update.js --dry-run --id <ID> --spec '<JSON patch>'
+```
+
+Use this for accepted zero-needs review classifications, term-link updates, status fields, and other schema-preserving corrections.
+
+### `unit-rename.js`
+
+Changes a unit display name while preserving the unit ID.
+
+```powershell
+node build-scripts/references/unit-rename.js --id <ID> --name "<new name>"
+```
+
+### `unit-add-dep.js` / `unit-remove-dep.js`
+
+Adds or removes prerequisite edges in the unit DAG.
+
+```powershell
+node build-scripts/references/unit-add-dep.js --from <ID> --to <prereq>
+node build-scripts/references/unit-remove-dep.js --from <ID> --to <prereq>
+node build-scripts/references/unit-add-dep.js --dry-run --from <ID> --to <prereq>
+```
+
+Use these only after the edge has human-reviewed evidence. The validator recomputes layers and rejects unresolved IDs or cycles.
+
+### `unit-deprecate.js`
+
+Marks a unit deprecated, optionally with replacement pointers.
+
+```powershell
+node build-scripts/references/unit-deprecate.js --id <ID> [--replaced-by <IDs>]
+```
+
+### `unit-split.js`
+
+Deprecates one unit and mints several replacement units from a full spec.
+
+```powershell
+node build-scripts/references/unit-split.js --from <ID> --into <new IDs> --spec '<JSON with full specs for the new IDs>'
+```
+
+### `unit-merge.js`
+
+Collapses several units into one target unit.
+
+```powershell
+node build-scripts/references/unit-merge.js --from <IDs> --into <ID>
+```
+
+## Term Registry Commands
+
+### `build-begrippen-index.js`
+
+Regenerates `references/machine/begrippen.json` from the term markdown.
+
+```powershell
+node build-scripts/references/build-begrippen-index.js
+```
+
+### `term-add.js`
+
+Adds a canonical term.
+
+```powershell
+node build-scripts/references/term-add.js --spec '<JSON>'
+```
+
+### `term-update.js`
+
+Updates editable term fields.
+
+```powershell
+node build-scripts/references/term-update.js --slug <slug> --spec '<JSON patch>'
+```
+
+### `term-rename.js`
+
+Renames a term while preserving or migrating references through the term workflow.
+
+```powershell
+node build-scripts/references/term-rename.js --slug <slug> --label "<new label>"
+```
+
+### `term-deprecate.js`
+
+Deprecates a term, optionally with replacement pointers.
+
+```powershell
+node build-scripts/references/term-deprecate.js --slug <slug> [--replaced-by <slugs>]
+```
+
+## R2.4 To R3.2 Readiness
+
+R2.4 produced a non-mutating evidence and unit-design packet. R3.2 must not apply that packet until human mutation review authorizes specific changes.
+
+Current readiness:
+
+| R2.4 decision type | CLI path | R3.2 status |
+|---|---|---|
+| Accepted dependency edge | `unit-add-dep.js` | Ready after human mutation review |
+| Rejected dependency edge | no mutation | Preserve the rejection record |
+| Foundational A-domain `underbouw_assumed` | `unit-update.js` with zero-needs fields | Ready after human mutation review |
+| `D04` retirement, split, merge, or redistribution | `unit-deprecate.js`, `unit-split.js`, or `unit-merge.js` | Blocked until a specific human design decision exists |
+| Unit term-link cleanup | `unit-update.js` | Ready for reviewed unit-side changes |
+| Term registry changes | `term-*` commands | Available, but no R2.4 term mutation is currently required |
+| Evidence-anchor storage | planned R5.1 layer | Not an R3.2 blocker if the R2.4 packet remains the provenance record |
+
+The readiness report is stored in:
+
+- `reports/json/reference-cli-coverage.json`
+- `reports/reference-cli-coverage.md`
+
+## Historical Utility Scripts
+
+Some scripts in this folder are one-shot or migration utilities rather than normal mutation commands.
+
+- `extract-eindtermen.js`: extracts syllabus eindtermen from the source PDF.
+- `seed-math-units.js`: historical A-domain seed migration.
+- `migrate-paths.js`: historical references-folder migration.
+
+## Future `/unit` Skill
+
+A future natural-language unit skill may generate CLI specs and ask for confirmation, but it must not write machine references directly. The dependency direction is skill -> CLI -> validator -> protected reference projection.

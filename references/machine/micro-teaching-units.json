@@ -27,7 +27,18 @@
     "pitfalls": [
       "Let op de volgorde: als je Qv als functie van P opstelt, dan is P de x en Q de y."
     ],
-    "generator": "GEN_A01"
+    "generator": "GEN_A01",
+    "assumed_prior_knowledge": [
+      "linear functions and coordinate-plane basics from lower-secondary mathematics"
+    ],
+    "zero_needs_status": "underbouw_assumed",
+    "zero_needs_review": {
+      "reviewed_on": "2026-04-26",
+      "reviewer": "human mutation review R2.4",
+      "rationale": "A01 accepted as foundational underbouw-assumed prior knowledge for R3.2; do not add artificial internal prerequisites.",
+      "recommended_needs": [],
+      "severity": "low"
+    }
   },
   {
     "id": "A02",
@@ -56,7 +67,18 @@
     "pitfalls": [
       "Als je een term naar de andere kant verplaatst, vergeet dan niet het teken om te draaien."
     ],
-    "generator": "GEN_A02"
+    "generator": "GEN_A02",
+    "assumed_prior_knowledge": [
+      "basic equation solving from lower-secondary mathematics"
+    ],
+    "zero_needs_status": "underbouw_assumed",
+    "zero_needs_review": {
+      "reviewed_on": "2026-04-26",
+      "reviewer": "human mutation review R2.4",
+      "rationale": "A02 accepted as foundational underbouw-assumed prior knowledge for R3.2; do not add artificial internal prerequisites.",
+      "recommended_needs": [],
+      "severity": "low"
+    }
   },
   {
     "id": "A03",
@@ -82,7 +104,18 @@
     "pitfalls": [
       "Bij Qv = 100 − 2P is het verleidelijk om te delen door 2 en dan te schrijven P = 50 − Qv."
     ],
-    "generator": "GEN_A03"
+    "generator": "GEN_A03",
+    "assumed_prior_knowledge": [
+      "formula rearranging and inverse notation from lower-secondary mathematics; diagnostic-sensitive skill"
+    ],
+    "zero_needs_status": "underbouw_assumed",
+    "zero_needs_review": {
+      "reviewed_on": "2026-04-26",
+      "reviewer": "human mutation review R2.4",
+      "rationale": "A03 accepted as foundational underbouw-assumed prior knowledge for R3.2; do not add artificial internal prerequisites.",
+      "recommended_needs": [],
+      "severity": "medium"
+    }
   },
   {
     "id": "A04",
@@ -112,7 +145,18 @@
     "pitfalls": [
       "Bij 0,5Q² moet je eerst Q kwadrateren en dan pas vermenigvuldigen met 0,5."
     ],
-    "generator": "GEN_A04"
+    "generator": "GEN_A04",
+    "assumed_prior_knowledge": [
+      "substitution into formulas from lower-secondary mathematics"
+    ],
+    "zero_needs_status": "underbouw_assumed",
+    "zero_needs_review": {
+      "reviewed_on": "2026-04-26",
+      "reviewer": "human mutation review R2.4",
+      "rationale": "A04 accepted as foundational underbouw-assumed prior knowledge for R3.2; do not add artificial internal prerequisites.",
+      "recommended_needs": [],
+      "severity": "low"
+    }
   },
   {
     "id": "A05",
@@ -142,7 +186,18 @@
     "pitfalls": [
       "Verwar het snijpunt met de P-as niet met het snijpunt met de Q-as."
     ],
-    "generator": "GEN_A05"
+    "generator": "GEN_A05",
+    "assumed_prior_knowledge": [
+      "axis intercept reasoning and solving for zero from lower-secondary mathematics; diagnostic-sensitive skill"
+    ],
+    "zero_needs_status": "underbouw_assumed",
+    "zero_needs_review": {
+      "reviewed_on": "2026-04-26",
+      "reviewer": "human mutation review R2.4",
+      "rationale": "A05 accepted as foundational underbouw-assumed prior knowledge for R3.2; do not add artificial internal prerequisites.",
+      "recommended_needs": [],
+      "severity": "medium"
+    }
   },
   {
     "id": "A06",
@@ -235,7 +290,7 @@
       "verbaal"
     ],
     "terms": [
-      "variabele kosten"
+      "variabele-kosten"
     ],
     "procedure": [
       "Splits de TK-functie in een term zonder Q (= TCK) en termen met Q (= TVK).",
@@ -394,7 +449,7 @@
       "rekenen"
     ],
     "terms": [
-      "marginale kosten"
+      "marginale-kosten"
     ],
     "procedure": [
       "Identificeer de TK-functie en haar termen.",
@@ -427,7 +482,7 @@
       "verbaal"
     ],
     "terms": [
-      "gemiddelde totale kosten"
+      "gemiddelde-totale-kosten"
     ],
     "procedure": [
       "Noteer de TK-functie.",
@@ -449,7 +504,8 @@
     "duration_min": 5,
     "kern": "Bereken de prijselasticiteit: Ev = %ΔQv / %ΔP. Bepaal of de vraag elastisch of inelastisch is.",
     "needs": [
-      "A04"
+      "A04",
+      "A38"
     ],
     "exam_codes": [
       "A2.4",
@@ -462,7 +518,7 @@
       "verbaal"
     ],
     "terms": [
-      "prijselasticiteit van de vraag"
+      "prijselasticiteit-van-de-vraag"
     ],
     "procedure": [
       "Noteer de oude en nieuwe waarden van P en Q.",
@@ -480,10 +536,12 @@
     "id": "A16",
     "name": "Kruiselasticiteit",
     "category": "vaardigheden",
-    "layer": 1,
+    "layer": 2,
     "duration_min": 5,
     "kern": "Bereken de kruiselasticiteit: Ekr = %ΔQa / %ΔPb. Bepaal of goederen substituten of complementen zijn.",
-    "needs": [],
+    "needs": [
+      "A15"
+    ],
     "exam_codes": [
       "A2.4",
       "A2.5"
@@ -510,10 +568,12 @@
     "id": "A17",
     "name": "Inkomenselasticiteit",
     "category": "vaardigheden",
-    "layer": 1,
+    "layer": 2,
     "duration_min": 5,
     "kern": "Bereken de inkomenselasticiteit: Ei = %ΔQ / %ΔY. Bepaal of een goed normaal, inferieur of luxe is.",
-    "needs": [],
+    "needs": [
+      "A15"
+    ],
     "exam_codes": [
       "A2.4",
       "A2.5"
@@ -663,8 +723,8 @@
       "verbaal"
     ],
     "terms": [
-      "totale kosten",
-      "totale opbrengst",
+      "totale-kosten",
+      "totale-opbrengst",
       "winst"
     ],
     "procedure": [
@@ -1269,7 +1329,18 @@
       "De nieuwe waarde als basis gebruiken — leidt tot een andere uitkomst; het basisjaar hoort in de noemer.",
       "Verwarring met procentpunt-verandering (zie D31) — een CPI-sprong van 108 → 112 is 4 punten maar slechts (4/108)·100 ≈ 3,7 % inflatie."
     ],
-    "generator": "GEN_A38"
+    "generator": "GEN_A38",
+    "assumed_prior_knowledge": [
+      "percentage-change calculation from lower-secondary mathematics"
+    ],
+    "zero_needs_status": "underbouw_assumed",
+    "zero_needs_review": {
+      "reviewed_on": "2026-04-26",
+      "reviewer": "human mutation review R2.4",
+      "rationale": "A38 accepted as foundational underbouw-assumed prior knowledge for R3.2; do not add artificial internal prerequisites.",
+      "recommended_needs": [],
+      "severity": "low"
+    }
   },
   {
     "id": "A39",
@@ -1549,7 +1620,7 @@
       "verbaal"
     ],
     "terms": [
-      "constante kosten",
+      "constante-kosten",
       "winst"
     ]
   },
@@ -1641,9 +1712,11 @@
     "id": "D06",
     "name": "Vraagreactie via prijselasticiteit interpreteren",
     "category": "markt",
-    "layer": 1,
+    "layer": 2,
     "kern": "Gebruik de prijselasticiteit van de vraag (Ev) om te voorspellen hoe Qv reageert op een prijsverandering en verklaar het resultaat in context.",
-    "needs": [],
+    "needs": [
+      "A15"
+    ],
     "exam_codes": [
       "D1.3"
     ],
@@ -1653,7 +1726,7 @@
       "verbaal"
     ],
     "terms": [
-      "prijselasticiteit van de vraag"
+      "prijselasticiteit-van-de-vraag"
     ]
   },
   {
@@ -1730,8 +1803,8 @@
       "verbaal"
     ],
     "terms": [
-      "homogeen goed",
-      "heterogene goederen"
+      "homogeen-goed",
+      "heterogene-goederen"
     ]
   },
   {
@@ -1751,8 +1824,8 @@
       "verbaal"
     ],
     "terms": [
-      "collectieve aanbodlijn",
-      "collectieve vraaglijn",
+      "collectieve-aanbodlijn",
+      "collectieve-vraaglijn",
       "evenwichtsprijs"
     ],
     "procedure": [
@@ -1767,7 +1840,7 @@
     "id": "D11",
     "name": "Inkomenselasticiteit berekenen en interpreteren",
     "category": "markt",
-    "layer": 2,
+    "layer": 3,
     "kern": "Bereken Ei uit twee waarnemingen en interpreteer de uitkomst in de context van het goed.",
     "needs": [
       "A17"
@@ -1797,7 +1870,7 @@
     "id": "D12",
     "name": "Kruiselasticiteit en substituten",
     "category": "markt",
-    "layer": 2,
+    "layer": 3,
     "kern": "Bepaal uit kruiselasticiteit of goederen substituten zijn en analyseer vraagverschuivingen.",
     "needs": [
       "A16"
@@ -1838,7 +1911,7 @@
       "verbaal"
     ],
     "terms": [
-      "collectieve aanbodlijn",
+      "collectieve-aanbodlijn",
       "evenwichtsprijs"
     ],
     "procedure": [
@@ -1905,9 +1978,12 @@
     "id": "D16",
     "name": "Minimumprijs en werkloosheid",
     "category": "markt",
-    "layer": 1,
+    "layer": 3,
     "kern": "Minimumloon boven marktloon veroorzaakt vraagoverschot van arbeid en werkloosheid.",
-    "needs": [],
+    "needs": [
+      "D34",
+      "L10"
+    ],
     "exam_codes": [
       "D3.10",
       "H5.2"
@@ -1940,8 +2016,8 @@
       "verbaal"
     ],
     "terms": [
-      "marginale kosten",
-      "totale opbrengst"
+      "marginale-kosten",
+      "totale-opbrengst"
     ]
   },
   {
@@ -1994,7 +2070,7 @@
       "verbaal"
     ],
     "terms": [
-      "Pareto efficiënt",
+      "pareto-efficient",
       "subsidies"
     ]
   },
@@ -2016,7 +2092,7 @@
       "verbaal"
     ],
     "terms": [
-      "Pareto efficiënt",
+      "pareto-efficient",
       "marktevenwicht"
     ]
   },
@@ -2041,7 +2117,7 @@
     ],
     "terms": [
       "prijsdiscriminatie",
-      "totale surplus"
+      "totale-surplus"
     ],
     "procedure": [
       "Identificeer de inkomensgroepen en hun vraagfuncties (lage vs. hoge Ev)",
@@ -2137,8 +2213,8 @@
       "verbaal"
     ],
     "terms": [
-      "prijselasticiteit van de vraag",
-      "totale opbrengst"
+      "prijselasticiteit-van-de-vraag",
+      "totale-opbrengst"
     ]
   },
   {
@@ -2159,7 +2235,7 @@
       "verbaal"
     ],
     "terms": [
-      "variabele kosten"
+      "variabele-kosten"
     ]
   },
   {
@@ -2225,7 +2301,7 @@
     ],
     "terms": [
       "subsidies",
-      "verloren surplus"
+      "verloren-surplus"
     ],
     "procedure": [
       "Teken vraag- en aanbodlijn en markeer het oorspronkelijke evenwicht (P*, Q*)",
@@ -2256,8 +2332,8 @@
       "verbaal"
     ],
     "terms": [
-      "marginale kosten",
-      "marginale opbrengsten",
+      "marginale-kosten",
+      "marginale-opbrengsten",
       "winst"
     ],
     "procedure": [
@@ -2463,7 +2539,7 @@
       "verbaal"
     ],
     "terms": [
-      "intertemporele ruil"
+      "intertemporele-ruil"
     ],
     "procedure": [
       "Benoem de twee generaties in het stelsel: de huidige premiebetalers (werkenden) en de huidige uitkeringsontvangers (gepensioneerden)",
@@ -2489,7 +2565,7 @@
       "verbaal"
     ],
     "terms": [
-      "intertemporele ruil"
+      "intertemporele-ruil"
     ]
   },
   {
@@ -2512,8 +2588,8 @@
     ],
     "terms": [
       "rente",
-      "waardevaste pensioenen",
-      "welvaartsvaste pensioenen"
+      "waardevaste-pensioenen",
+      "welvaartsvaste-pensioenen"
     ],
     "procedure": [
       "Beschrijf kort het kapitaaldekkingsstelsel: premies worden belegd en het rendement betaalt de latere uitkering",
@@ -2542,7 +2618,7 @@
       "verbaal"
     ],
     "terms": [
-      "welvaartsvaste pensioenen"
+      "welvaartsvaste-pensioenen"
     ]
   },
   {
@@ -2564,8 +2640,8 @@
       "verbaal"
     ],
     "terms": [
-      "waardevaste pensioenen",
-      "welvaartsvaste pensioenen"
+      "waardevaste-pensioenen",
+      "welvaartsvaste-pensioenen"
     ],
     "procedure": [
       "Identificeer de twee groepen: jongere premiebetalers en oudere uitkeringsontvangers in het omslagstelsel",
@@ -2591,7 +2667,7 @@
       "verbaal"
     ],
     "terms": [
-      "voorraad- en stroomgrootheden"
+      "voorraad-en-stroomgrootheden"
     ]
   },
   {
@@ -2642,7 +2718,7 @@
     ],
     "terms": [
       "berovingsprobleem",
-      "contracten en prikkels",
+      "contracten-en-prikkels",
       "investeringen",
       "risico"
     ]
@@ -2664,7 +2740,7 @@
       "verbaal"
     ],
     "terms": [
-      "collectieve goederen"
+      "collectieve-goederen"
     ]
   },
   {
@@ -2683,7 +2759,7 @@
       "verbaal"
     ],
     "terms": [
-      "dominante strategie"
+      "dominante-strategie"
     ]
   },
   {
@@ -2704,8 +2780,8 @@
       "rekenen"
     ],
     "terms": [
-      "dominante strategie",
-      "pay-off matrix",
+      "dominante-strategie",
+      "pay-off-matrix",
       "winst"
     ],
     "procedure": [
@@ -2735,7 +2811,7 @@
       "verbaal"
     ],
     "terms": [
-      "externe effecten"
+      "externe-effecten"
     ]
   },
   {
@@ -2756,7 +2832,7 @@
       "verbaal"
     ],
     "terms": [
-      "externe effecten",
+      "externe-effecten",
       "heffingen"
     ]
   },
@@ -2776,7 +2852,7 @@
       "verbaal"
     ],
     "terms": [
-      "externe effecten",
+      "externe-effecten",
       "marktevenwicht"
     ]
   },
@@ -2798,9 +2874,9 @@
       "verbaal"
     ],
     "terms": [
-      "externe effecten",
-      "maatschappelijke welvaart",
-      "verloren surplus"
+      "externe-effecten",
+      "maatschappelijke-welvaart",
+      "verloren-surplus"
     ]
   },
   {
@@ -2821,7 +2897,7 @@
       "verbaal"
     ],
     "terms": [
-      "dominante strategie",
+      "dominante-strategie",
       "gevangenendilemma"
     ]
   },
@@ -2844,7 +2920,7 @@
       "verbaal"
     ],
     "terms": [
-      "externe effecten",
+      "externe-effecten",
       "heffingen",
       "subsidies"
     ]
@@ -2867,7 +2943,7 @@
       "verbaal"
     ],
     "terms": [
-      "externe effecten",
+      "externe-effecten",
       "subsidies"
     ]
   },
@@ -2890,9 +2966,9 @@
       "verbaal"
     ],
     "terms": [
-      "Nash-evenwicht",
-      "dominante strategie",
-      "pay-off matrix"
+      "nash-evenwicht",
+      "dominante-strategie",
+      "pay-off-matrix"
     ],
     "procedure": [
       "Markeer voor speler 1 per kolom (strategie van speler 2) de hoogste uitbetaling",
@@ -2921,7 +2997,7 @@
     ],
     "terms": [
       "berovingsprobleem",
-      "contracten en prikkels",
+      "contracten-en-prikkels",
       "risico"
     ]
   },
@@ -2943,7 +3019,7 @@
       "verbaal"
     ],
     "terms": [
-      "externe effecten"
+      "externe-effecten"
     ],
     "procedure": [
       "Identificeer het externe effect dat door concentratie ontstaat (bv. files, luchtvervuiling, overbelaste infrastructuur)",
@@ -2969,7 +3045,7 @@
       "verbaal"
     ],
     "terms": [
-      "verzonken kosten"
+      "verzonken-kosten"
     ]
   },
   {
@@ -3119,7 +3195,7 @@
       "verbaal"
     ],
     "terms": [
-      "collectieve verzekering",
+      "collectieve-verzekering",
       "informatieasymmetrie",
       "risico"
     ]
@@ -3143,8 +3219,8 @@
       "verbaal"
     ],
     "terms": [
-      "contracten en prikkels",
-      "eigen risico"
+      "contracten-en-prikkels",
+      "eigen-risico"
     ]
   },
   {
@@ -3165,7 +3241,7 @@
       "verbaal"
     ],
     "terms": [
-      "contracten en prikkels",
+      "contracten-en-prikkels",
       "principaal-agentrelatie"
     ]
   },
@@ -3185,7 +3261,7 @@
       "verbaal"
     ],
     "terms": [
-      "contracten en prikkels",
+      "contracten-en-prikkels",
       "principaal-agentrelatie"
     ]
   },
@@ -3231,7 +3307,7 @@
       "verbaal"
     ],
     "terms": [
-      "collectieve verzekering",
+      "collectieve-verzekering",
       "risico"
     ]
   },
@@ -3254,7 +3330,7 @@
     ],
     "terms": [
       "bonus-malussysteem",
-      "collectieve verzekering",
+      "collectieve-verzekering",
       "risico"
     ]
   },
@@ -3293,7 +3369,7 @@
       "verbaal"
     ],
     "terms": [
-      "financieel risico",
+      "financieel-risico",
       "onzekerheid",
       "wisselkoers"
     ]
@@ -3345,8 +3421,8 @@
       "verbaal"
     ],
     "terms": [
-      "waardevaste pensioenen",
-      "welvaartsvaste pensioenen"
+      "waardevaste-pensioenen",
+      "welvaartsvaste-pensioenen"
     ]
   },
   {
@@ -3368,7 +3444,7 @@
       "verbaal"
     ],
     "terms": [
-      "primair inkomen"
+      "primair-inkomen"
     ],
     "procedure": [
       "Bepaal het totale arbeidsinkomen (loonsom incl. toegerekend loon zelfstandigen)",
@@ -3396,7 +3472,7 @@
       "rekenen"
     ],
     "terms": [
-      "prijselasticiteit van de vraag"
+      "prijselasticiteit-van-de-vraag"
     ],
     "procedure": [
       "Noteer de procentuele verandering in de relatieve prijs van buitenlands versus binnenlands goed (%ΔP)",
@@ -3425,8 +3501,8 @@
       "verbaal"
     ],
     "terms": [
-      "gemiddeld tarief",
-      "marginaal tarief"
+      "gemiddeld-tarief",
+      "marginaal-tarief"
     ],
     "procedure": [
       "Noteer per schijf het marginale tarief en de bovengrens",
@@ -3453,7 +3529,7 @@
       "verbaal"
     ],
     "terms": [
-      "groen bbp per hoofd"
+      "groen-bbp-per-hoofd"
     ]
   },
   {
@@ -3524,7 +3600,7 @@
     ],
     "terms": [
       "denivelleren",
-      "marginaal tarief"
+      "marginaal-tarief"
     ]
   },
   {
@@ -3572,8 +3648,8 @@
       "verbaal"
     ],
     "terms": [
-      "Gini-coefficient",
-      "conjuncturele werkloosheid"
+      "gini-coefficient",
+      "conjuncturele-werkloosheid"
     ]
   },
   {
@@ -3595,7 +3671,7 @@
       "verbaal"
     ],
     "terms": [
-      "groen bbp per hoofd"
+      "groen-bbp-per-hoofd"
     ]
   },
   {
@@ -3649,9 +3725,11 @@
     "id": "H14",
     "name": "Minimumuurloon: vraagkanaal naar bbp-groei",
     "category": "welvaart en groei",
-    "layer": 1,
+    "layer": 2,
     "kern": "Redeneer via het bestedingskanaal hoe een hoger minimumuurloon de consumptie en daarmee de bbp-groei kan verhogen.",
-    "needs": [],
+    "needs": [
+      "I14"
+    ],
     "exam_codes": [
       "H1.1"
     ],
@@ -3754,8 +3832,8 @@
       "rekenen"
     ],
     "terms": [
-      "gemiddeld tarief",
-      "marginaal tarief"
+      "gemiddeld-tarief",
+      "marginaal-tarief"
     ],
     "procedure": [
       "Noteer per schijf het marginale tarief",
@@ -3805,7 +3883,7 @@
       "verbaal"
     ],
     "terms": [
-      "primair inkomen"
+      "primair-inkomen"
     ]
   },
   {
@@ -3855,8 +3933,8 @@
       "verbaal"
     ],
     "terms": [
-      "marginaal tarief",
-      "secundair inkomen"
+      "marginaal-tarief",
+      "secundair-inkomen"
     ],
     "procedure": [
       "Bepaal de verandering in het marginaal tarief en bereken het effect op het besteedbaar inkomen van een representatief huishouden (methode uit H04)",
@@ -3885,7 +3963,7 @@
     ],
     "terms": [
       "arbeidsaanbod",
-      "marginaal tarief",
+      "marginaal-tarief",
       "uitverdieneffecten"
     ]
   },
@@ -4158,8 +4236,8 @@
     ],
     "terms": [
       "anticyclisch",
-      "automatische stabilisatoren",
-      "secundair inkomen"
+      "automatische-stabilisatoren",
+      "secundair-inkomen"
     ]
   },
   {
@@ -4181,7 +4259,7 @@
       "verbaal"
     ],
     "terms": [
-      "effectieve ondergrens nominale rente",
+      "effectieve-ondergrens-nominale-rente",
       "investeringen"
     ]
   },
@@ -4189,9 +4267,11 @@
     "id": "I04",
     "name": "CAO-looptijd en loonrigiditeit",
     "category": "goede en slechte tijden",
-    "layer": 1,
+    "layer": 4,
     "kern": "Leg uit hoe langere CAO-looptijden loonaanpassingen vertragen en daarmee de flexibiliteit van de arbeidsmarkt en de effectiviteit van conjunctuurbeleid beïnvloeden.",
-    "needs": [],
+    "needs": [
+      "L19"
+    ],
     "exam_codes": [
       "I4.4"
     ],
@@ -4225,8 +4305,8 @@
       "verbaal"
     ],
     "terms": [
-      "duaal mandaat",
-      "effectieve ondergrens nominale rente",
+      "duaal-mandaat",
+      "effectieve-ondergrens-nominale-rente",
       "hoogconjunctuur"
     ],
     "procedure": [
@@ -4261,7 +4341,7 @@
     "id": "I07",
     "name": "IS-MB-GA-model: outputgap en inflatie",
     "category": "goede en slechte tijden",
-    "layer": 2,
+    "layer": 5,
     "kern": "Analyseer met het IS-MB-GA-model hoe een schok via outputgap en inflatie doorwerkt op rente, bbp en prijsniveau.",
     "needs": [
       "I10",
@@ -4277,9 +4357,9 @@
       "verbaal"
     ],
     "terms": [
-      "GA-curve",
-      "IS-curve",
-      "MB-curve",
+      "ga-curve",
+      "is-curve",
+      "mb-curve",
       "hoogconjunctuur",
       "rente"
     ],
@@ -4312,7 +4392,7 @@
       "verbaal"
     ],
     "terms": [
-      "Keynesiaanse kruis",
+      "keynesiaanse-kruis",
       "investeringen"
     ],
     "procedure": [
@@ -4342,7 +4422,7 @@
     ],
     "terms": [
       "koopkracht",
-      "nominale en reele grootheden"
+      "nominale-en-reele-grootheden"
     ],
     "procedure": [
       "Noteer het oude nominale loon of uitkering L0 en het inflatiepercentage π over de periode",
@@ -4357,9 +4437,11 @@
     "id": "I10",
     "name": "Loonrigiditeit en helling GA-curve",
     "category": "goede en slechte tijden",
-    "layer": 1,
+    "layer": 4,
     "kern": "Leg uit hoe starre lonen leiden tot een vlakkere GA-curve op korte termijn en hoe flexibele lonen de curve steiler maken.",
-    "needs": [],
+    "needs": [
+      "L19"
+    ],
     "exam_codes": [
       "I4.4"
     ],
@@ -4370,7 +4452,7 @@
       "verbaal"
     ],
     "terms": [
-      "GA-curve"
+      "ga-curve"
     ]
   },
   {
@@ -4393,8 +4475,8 @@
       "verbaal"
     ],
     "terms": [
-      "GA-curve",
-      "MB-curve",
+      "ga-curve",
+      "mb-curve",
       "arbeidsaanbod",
       "rente"
     ],
@@ -4427,7 +4509,7 @@
       "verbaal"
     ],
     "terms": [
-      "monetair beleid",
+      "monetair-beleid",
       "wisselkoers"
     ]
   },
@@ -4449,7 +4531,7 @@
       "verbaal"
     ],
     "terms": [
-      "monetair beleid",
+      "monetair-beleid",
       "muntunie",
       "wisselkoers"
     ],
@@ -4486,7 +4568,7 @@
     "id": "I15",
     "name": "Outputgap bij vraag- en aanbodschokken",
     "category": "goede en slechte tijden",
-    "layer": 3,
+    "layer": 6,
     "kern": "Analyseer hoe een positieve of negatieve vraag- of aanbodschok de feitelijke productie ten opzichte van het potentieel bbp verschuift en een output gap veroorzaakt.",
     "needs": [
       "I07",
@@ -4503,10 +4585,10 @@
       "verbaal"
     ],
     "terms": [
-      "GA-curve",
-      "IS-curve",
-      "automatische stabilisatoren",
-      "conjuncturele werkloosheid",
+      "ga-curve",
+      "is-curve",
+      "automatische-stabilisatoren",
+      "conjuncturele-werkloosheid",
       "hoogconjunctuur"
     ],
     "procedure": [
@@ -4537,7 +4619,7 @@
       "verbaal"
     ],
     "terms": [
-      "automatische stabilisatoren",
+      "automatische-stabilisatoren",
       "overheidstekort",
       "staatsschuld"
     ]
@@ -4562,7 +4644,7 @@
     ],
     "terms": [
       "investeringen",
-      "monetair beleid"
+      "monetair-beleid"
     ]
   },
   {
@@ -4583,9 +4665,9 @@
       "verbaal"
     ],
     "terms": [
-      "eigen risico",
+      "eigen-risico",
       "koopkracht",
-      "nominale en reele grootheden"
+      "nominale-en-reele-grootheden"
     ]
   },
   {
@@ -4609,7 +4691,7 @@
     ],
     "terms": [
       "bbp-groei",
-      "monetair beleid",
+      "monetair-beleid",
       "wisselkoers"
     ]
   },
@@ -4654,7 +4736,7 @@
       "rekenen"
     ],
     "terms": [
-      "arbeidsvraag (= werkgelegenheid + vacatures)"
+      "arbeidsvraag"
     ],
     "procedure": [
       "Lees marginaal product per werkende af uit de tabel.",
@@ -4708,7 +4790,7 @@
       "verbaal"
     ],
     "terms": [
-      "arbeidsvraag (= werkgelegenheid + vacatures)"
+      "arbeidsvraag"
     ],
     "pitfalls": [
       "Denken dat arbeidsvraag alleen door loon bepaald wordt — bij dalende productvraag daalt arbeidsvraag zelfs bij ongewijzigd loon."
@@ -4757,7 +4839,7 @@
       "verbaal"
     ],
     "terms": [
-      "arbeidsaanbod (= beroepsbevolking)",
+      "arbeidsaanbod",
       "werkloosheid"
     ],
     "pitfalls": [
@@ -4851,9 +4933,11 @@
     "id": "L09",
     "name": "Krappe versus ruime arbeidsmarkt",
     "category": "arbeidsmarkt",
-    "layer": 1,
+    "layer": 2,
     "kern": "Herken een krappe arbeidsmarkt (arbeidsvraag > arbeidsaanbod, oplopende lonen) versus een ruime arbeidsmarkt (arbeidsaanbod > arbeidsvraag, dalende lonen en oplopende werkloosheid).",
-    "needs": [],
+    "needs": [
+      "L05"
+    ],
     "exam_codes": [
       "H5.1"
     ],
@@ -4891,8 +4975,8 @@
       "grafisch"
     ],
     "terms": [
-      "arbeidsaanbod (= beroepsbevolking)",
-      "arbeidsvraag (= werkgelegenheid + vacatures)"
+      "arbeidsaanbod",
+      "arbeidsvraag"
     ],
     "procedure": [
       "Identificeer W als prijs en aantal werkenden als hoeveelheid op de assen.",
@@ -4908,9 +4992,11 @@
     "id": "L11",
     "name": "Conjuncturele werkloosheid",
     "category": "arbeidsmarkt",
-    "layer": 1,
+    "layer": 2,
     "kern": "Definieer conjuncturele werkloosheid als werkloosheid door tekortschietende bestedingen tijdens laagconjunctuur; verdwijnt als de economie herstelt.",
-    "needs": [],
+    "needs": [
+      "L05"
+    ],
     "exam_codes": [
       "H5.2"
     ],
@@ -4920,7 +5006,7 @@
       "verbaal"
     ],
     "terms": [
-      "conjuncturele werkloosheid"
+      "conjuncturele-werkloosheid"
     ],
     "pitfalls": [
       "Conjuncturele werkloosheid verwarren met structurele — conjunctureel is tijdelijk en keert om bij herstel."
@@ -4930,9 +5016,11 @@
     "id": "L12",
     "name": "Structurele werkloosheid",
     "category": "arbeidsmarkt",
-    "layer": 1,
+    "layer": 2,
     "kern": "Definieer structurele werkloosheid als werkloosheid door blijvende mismatch tussen vaardigheden en vraag (bijvoorbeeld door automatisering of sectorverschuiving); blijft bestaan zonder gericht beleid.",
-    "needs": [],
+    "needs": [
+      "L05"
+    ],
     "exam_codes": [
       "H5.2",
       "H5.3"
@@ -4943,7 +5031,7 @@
       "verbaal"
     ],
     "terms": [
-      "structurele werkloosheid"
+      "structurele-werkloosheid"
     ],
     "pitfalls": [
       "Denken dat conjunctuurherstel structurele werkloosheid oplost — zonder herscholing blijft de mismatch bestaan."
@@ -4953,9 +5041,11 @@
     "id": "L13",
     "name": "Frictiewerkloosheid",
     "category": "arbeidsmarkt",
-    "layer": 1,
+    "layer": 2,
     "kern": "Definieer frictiewerkloosheid als kortdurende werkloosheid tijdens het zoeken naar een nieuwe baan; is normaal en zelfs gezond op een dynamische arbeidsmarkt.",
-    "needs": [],
+    "needs": [
+      "L05"
+    ],
     "exam_codes": [
       "H5.2",
       "H5.3"
@@ -4976,7 +5066,7 @@
     "id": "L14",
     "name": "Werkloosheid classificeren uit context",
     "category": "arbeidsmarkt",
-    "layer": 2,
+    "layer": 3,
     "kern": "Classificeer een werkloosheidssituatie als conjunctureel, structureel of frictioneel op basis van de oorzaak (bestedingstekort, skills-mismatch, of tussen-banen-zoektijd).",
     "needs": [
       "L11",
@@ -5006,7 +5096,7 @@
     "id": "L15",
     "name": "Beleidsinstrument koppelen aan type werkloosheid",
     "category": "arbeidsmarkt",
-    "layer": 3,
+    "layer": 4,
     "kern": "Koppel het juiste beleidsinstrument aan elk type werkloosheid: fiscale stimulus voor conjunctureel, herscholing/onderwijs voor structureel, vacaturebemiddeling voor frictioneel.",
     "needs": [
       "L14"
@@ -5029,7 +5119,7 @@
     "name": "Werknemers- en werkgeverssurplus bij minimumloon",
     "category": "arbeidsmarkt",
     "layer": 4,
-    "kern": "Bereken werknemerssurplus (arbeidsmarkt-CS) en werkgeverssurplus (arbeidsmarkt-PS) voor en na invoering van een minimumloon; identificeer welvaartsverlies als de \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"verloren driehoek\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\" bij W_min > W*.",
+    "kern": "Bereken werknemerssurplus (arbeidsmarkt-CS) en werkgeverssurplus (arbeidsmarkt-PS) voor en na invoering van een minimumloon; identificeer welvaartsverlies als de \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"verloren driehoek\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\" bij W_min > W*.",
     "needs": [
       "A02",
       "A04",
@@ -5065,9 +5155,11 @@
     "id": "L17",
     "name": "CAO als bindende loonafspraak",
     "category": "arbeidsmarkt",
-    "layer": 1,
+    "layer": 4,
     "kern": "Leg uit dat een CAO (collectieve arbeidsovereenkomst) dat lonen boven het evenwichtsloon afspreekt werkt als een bindend minimumloon voor de gehele sector, met werkloosheid als gevolg.",
-    "needs": [],
+    "needs": [
+      "D16"
+    ],
     "exam_codes": [
       "H5.1",
       "D3.10"
@@ -5108,9 +5200,11 @@
     "id": "L19",
     "name": "Loonstarheid",
     "category": "arbeidsmarkt",
-    "layer": 1,
+    "layer": 3,
     "kern": "Definieer loonstarheid als de neiging van lonen om traag (vooral omlaag) aan te passen aan veranderingen in arbeidsmarkt-omstandigheden, met als gevolg persistente werkloosheid na een negatieve schok.",
-    "needs": [],
+    "needs": [
+      "L09"
+    ],
     "exam_codes": [
       "H5.3",
       "A4.5"
@@ -5131,7 +5225,7 @@
     "id": "L20",
     "name": "Loonflexibiliteit versus actief arbeidsmarktbeleid",
     "category": "arbeidsmarkt",
-    "layer": 2,
+    "layer": 4,
     "kern": "Vergelijk twee beleidsreacties op werkloosheid: verlagen van de loonvloer (wacht op loondaling) versus actief arbeidsmarktbeleid (herscholing, bemiddeling); beoordeel op effectiviteit per type werkloosheid.",
     "needs": [
       "L19"

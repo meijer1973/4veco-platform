@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://4veco.local/references/schemas/simulation.schema.json",
+  "title": "Simulation",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["simulation_id", "unit_ids", "model_assumptions"],
+  "properties": {
+    "simulation_id": { "type": "string" },
+    "unit_ids": { "type": "array", "items": { "type": "string" } },
+    "model_assumptions": { "type": "array", "items": { "type": "string" } },
+    "parameter_ids": { "type": "array", "items": { "type": "string" } },
+    "prediction_prompts": { "type": "array", "items": { "type": "string" } },
+    "debrief_prompts": { "type": "array", "items": { "type": "string" } }
+  }
+}

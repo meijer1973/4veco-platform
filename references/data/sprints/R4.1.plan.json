@@ -1,0 +1,20 @@
+{
+  "sprint_id": "R4.1",
+  "name": "Unit-Term Slug Migration",
+  "status": "in_progress",
+  "planned_on": "2026-04-26",
+  "plan": "docs/sprints/R4.1-plan.md",
+  "protected_reference_data_changes_allowed": true,
+  "human_review_required": false,
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js docs/sprints/R4.1-plan.md",
+    "node build-scripts/references/unit-term-slug-migration.js",
+    "node build-scripts/references/unit-term-slug-migration.js --write",
+    "node build-scripts/references/build-unit-index.js",
+    "node build-scripts/references/build-begrippen-index.js --allow-empty-definitions",
+    "node build-scripts/reports/terms-coverage.js",
+    "node build-scripts/reports/terminology-drift.js",
+    "node build-scripts/sprints/check-sprint-result.js reports/sprints/R4.1-result.md",
+    "node build-scripts/sprints/check-sprint-bundle.js R4.1 --complete"
+  ]
+}

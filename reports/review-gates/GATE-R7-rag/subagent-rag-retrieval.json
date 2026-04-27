@@ -1,0 +1,31 @@
+{
+  "review_lens": "rag_retrieval",
+  "status": "prepared",
+  "verdict": "pass_with_conditions",
+  "evidence": [
+    "references/data/rag/retrieval_eval_results.json",
+    "reports/markdown/retrieval-eval-results.md"
+  ],
+  "findings": [
+    {
+      "title": "Evaluation set passes",
+      "severity": "info",
+      "detail": "All 10 R7.3 retrieval evaluation cases pass with zero authority violations."
+    },
+    {
+      "title": "Lexical ranking remains coarse",
+      "severity": "medium",
+      "detail": "Generic query words can bring in broad low-score results. This is acceptable for internal review but should be improved before teacher-facing use is widened."
+    },
+    {
+      "title": "Target exercise chunking is too broad",
+      "severity": "medium",
+      "detail": "The target-exercise source currently appears as one large chunk. Per-exercise chunks would improve precision."
+    }
+  ],
+  "recommended_conditions": [
+    "Keep retrieval internal or clearly non-authoritative.",
+    "Preserve source path, authority level, and warning flags in all outputs.",
+    "Add per-target-exercise chunks before relying on target exercise retrieval for authoring decisions."
+  ]
+}

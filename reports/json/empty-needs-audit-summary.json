@@ -1,0 +1,490 @@
+{
+  "report_id": "empty-needs-audit-summary",
+  "generated_by": "build-scripts/reports/generate-all.js",
+  "generated_on": "2026-04-27T08:43:47.524Z",
+  "source_files": [
+    "references/data/audits/empty-needs-audit.json"
+  ],
+  "schema_version": 1,
+  "status": "warn",
+  "summary": {
+    "live_unit_count": 190,
+    "empty_needs_count": 61,
+    "by_status": {
+      "underbouw_assumed": 8,
+      "false_zero": 17,
+      "true_zero": 1,
+      "ambiguous": 35
+    }
+  },
+  "issues": [
+    {
+      "issue_id": "empty-needs-audit-summary-0001",
+      "severity": "high",
+      "affected_entity": "A16",
+      "category": "empty_needs_review:false_zero",
+      "evidence_path": "references/data/audits/empty-needs-audit.json",
+      "next_action": "Should A16 depend on A15, or should the prerequisite be represented differently?",
+      "proof_required_to_close": "Human review or mutation workflow closes this entry."
+    },
+    {
+      "issue_id": "empty-needs-audit-summary-0002",
+      "severity": "high",
+      "affected_entity": "A17",
+      "category": "empty_needs_review:false_zero",
+      "evidence_path": "references/data/audits/empty-needs-audit.json",
+      "next_action": "Should A17 depend on A15, or should the prerequisite be represented differently?",
+      "proof_required_to_close": "Human review or mutation workflow closes this entry."
+    },
+    {
+      "issue_id": "empty-needs-audit-summary-0003",
+      "severity": "high",
+      "affected_entity": "A43",
+      "category": "empty_needs_review:false_zero",
+      "evidence_path": "references/data/audits/empty-needs-audit.json",
+      "next_action": "Should A43 depend on A10, A38, or should the prerequisite be represented differently?",
+      "proof_required_to_close": "Human review or mutation workflow closes this entry."
+    },
+    {
+      "issue_id": "empty-needs-audit-summary-0004",
+      "severity": "medium",
+      "affected_entity": "D02",
+      "category": "empty_needs_review:ambiguous",
+      "evidence_path": "references/data/audits/empty-needs-audit.json",
+      "next_action": "Should D02 remain zero-needs or receive internal prerequisites?",
+      "proof_required_to_close": "Human review or mutation workflow closes this entry."
+    },
+    {
+      "issue_id": "empty-needs-audit-summary-0005",
+      "severity": "medium",
+      "affected_entity": "D04",
+      "category": "empty_needs_review:false_zero",
+      "evidence_path": "references/data/audits/empty-needs-audit.json",
+      "next_action": "Should D04 depend on A15, or should the prerequisite be represented differently?",
+      "proof_required_to_close": "Human review or mutation workflow closes this entry."
+    },
+    {
+      "issue_id": "empty-needs-audit-summary-0006",
+      "severity": "medium",
+      "affected_entity": "D06",
+      "category": "empty_needs_review:false_zero",
+      "evidence_path": "references/data/audits/empty-needs-audit.json",
+      "next_action": "Should D06 depend on A15, or should the prerequisite be represented differently?",
+      "proof_required_to_close": "Human review or mutation workflow closes this entry."
+    },
+    {
+      "issue_id": "empty-needs-audit-summary-0007",
+      "severity": "medium",
+      "affected_entity": "D09",
+      "category": "empty_needs_review:ambiguous",
+      "evidence_path": "references/data/audits/empty-needs-audit.json",
+      "next_action": "Should D09 remain zero-needs or receive internal prerequisites?",
+      "proof_required_to_close": "Human review or mutation workflow closes this entry."
+    },
+    {
+      "issue_id": "empty-needs-audit-summary-0008",
+      "severity": "high",
+      "affected_entity": "D10",
+      "category": "empty_needs_review:false_zero",
+      "evidence_path": "references/data/audits/empty-needs-audit.json",
+      "next_action": "Should D10 depend on D01, D03, or should the prerequisite be represented differently?",
+      "proof_required_to_close": "Human review or mutation workflow closes this entry."
+    },
+    {
+      "issue_id": "empty-needs-audit-summary-0009",
+      "severity": "high",
+      "affected_entity": "D13",
+      "category": "empty_needs_review:false_zero",
+      "evidence_path": "references/data/audits/empty-needs-audit.json",
+      "next_action": "Should D13 depend on D03, or should the prerequisite be represented differently?",
+      "proof_required_to_close": "Human review or mutation workflow closes this entry."
+    },
+    {
+      "issue_id": "empty-needs-audit-summary-0010",
+      "severity": "medium",
+      "affected_entity": "D15",
+      "category": "empty_needs_review:ambiguous",
+      "evidence_path": "references/data/audits/empty-needs-audit.json",
+      "next_action": "Should D15 remain zero-needs or receive internal prerequisites?",
+      "proof_required_to_close": "Human review or mutation workflow closes this entry."
+    },
+    {
+      "issue_id": "empty-needs-audit-summary-0011",
+      "severity": "medium",
+      "affected_entity": "D16",
+      "category": "empty_needs_review:false_zero",
+      "evidence_path": "references/data/audits/empty-needs-audit.json",
+      "next_action": "Should D16 depend on D34, or should the prerequisite be represented differently?",
+      "proof_required_to_close": "Human review or mutation workflow closes this entry."
+    },
+    {
+      "issue_id": "empty-needs-audit-summary-0012",
+      "severity": "medium",
+      "affected_entity": "D24",
+      "category": "empty_needs_review:ambiguous",
+      "evidence_path": "references/data/audits/empty-needs-audit.json",
+      "next_action": "Should D24 remain zero-needs or receive internal prerequisites?",
+      "proof_required_to_close": "Human review or mutation workflow closes this entry."
+    },
+    {
+      "issue_id": "empty-needs-audit-summary-0013",
+      "severity": "medium",
+      "affected_entity": "D27",
+      "category": "empty_needs_review:ambiguous",
+      "evidence_path": "references/data/audits/empty-needs-audit.json",
+      "next_action": "Should D27 remain zero-needs or receive internal prerequisites?",
+      "proof_required_to_close": "Human review or mutation workflow closes this entry."
+    },
+    {
+      "issue_id": "empty-needs-audit-summary-0014",
+      "severity": "medium",
+      "affected_entity": "D32",
+      "category": "empty_needs_review:false_zero",
+      "evidence_path": "references/data/audits/empty-needs-audit.json",
+      "next_action": "Should D32 depend on D01, D03, or should the prerequisite be represented differently?",
+      "proof_required_to_close": "Human review or mutation workflow closes this entry."
+    },
+    {
+      "issue_id": "empty-needs-audit-summary-0015",
+      "severity": "medium",
+      "affected_entity": "D35",
+      "category": "empty_needs_review:ambiguous",
+      "evidence_path": "references/data/audits/empty-needs-audit.json",
+      "next_action": "Should D35 remain zero-needs or receive internal prerequisites?",
+      "proof_required_to_close": "Human review or mutation workflow closes this entry."
+    },
+    {
+      "issue_id": "empty-needs-audit-summary-0016",
+      "severity": "medium",
+      "affected_entity": "E02",
+      "category": "empty_needs_review:ambiguous",
+      "evidence_path": "references/data/audits/empty-needs-audit.json",
+      "next_action": "Should E02 remain zero-needs or receive internal prerequisites?",
+      "proof_required_to_close": "Human review or mutation workflow closes this entry."
+    },
+    {
+      "issue_id": "empty-needs-audit-summary-0017",
+      "severity": "medium",
+      "affected_entity": "E06",
+      "category": "empty_needs_review:ambiguous",
+      "evidence_path": "references/data/audits/empty-needs-audit.json",
+      "next_action": "Should E06 remain zero-needs or receive internal prerequisites?",
+      "proof_required_to_close": "Human review or mutation workflow closes this entry."
+    },
+    {
+      "issue_id": "empty-needs-audit-summary-0018",
+      "severity": "medium",
+      "affected_entity": "F01",
+      "category": "empty_needs_review:ambiguous",
+      "evidence_path": "references/data/audits/empty-needs-audit.json",
+      "next_action": "Should F01 remain zero-needs or receive internal prerequisites?",
+      "proof_required_to_close": "Human review or mutation workflow closes this entry."
+    },
+    {
+      "issue_id": "empty-needs-audit-summary-0019",
+      "severity": "medium",
+      "affected_entity": "F02",
+      "category": "empty_needs_review:ambiguous",
+      "evidence_path": "references/data/audits/empty-needs-audit.json",
+      "next_action": "Should F02 remain zero-needs or receive internal prerequisites?",
+      "proof_required_to_close": "Human review or mutation workflow closes this entry."
+    },
+    {
+      "issue_id": "empty-needs-audit-summary-0020",
+      "severity": "medium",
+      "affected_entity": "F03",
+      "category": "empty_needs_review:ambiguous",
+      "evidence_path": "references/data/audits/empty-needs-audit.json",
+      "next_action": "Should F03 remain zero-needs or receive internal prerequisites?",
+      "proof_required_to_close": "Human review or mutation workflow closes this entry."
+    },
+    {
+      "issue_id": "empty-needs-audit-summary-0021",
+      "severity": "medium",
+      "affected_entity": "F07",
+      "category": "empty_needs_review:ambiguous",
+      "evidence_path": "references/data/audits/empty-needs-audit.json",
+      "next_action": "Should F07 remain zero-needs or receive internal prerequisites?",
+      "proof_required_to_close": "Human review or mutation workflow closes this entry."
+    },
+    {
+      "issue_id": "empty-needs-audit-summary-0022",
+      "severity": "medium",
+      "affected_entity": "F15",
+      "category": "empty_needs_review:ambiguous",
+      "evidence_path": "references/data/audits/empty-needs-audit.json",
+      "next_action": "Should F15 remain zero-needs or receive internal prerequisites?",
+      "proof_required_to_close": "Human review or mutation workflow closes this entry."
+    },
+    {
+      "issue_id": "empty-needs-audit-summary-0023",
+      "severity": "medium",
+      "affected_entity": "F16",
+      "category": "empty_needs_review:ambiguous",
+      "evidence_path": "references/data/audits/empty-needs-audit.json",
+      "next_action": "Should F16 remain zero-needs or receive internal prerequisites?",
+      "proof_required_to_close": "Human review or mutation workflow closes this entry."
+    },
+    {
+      "issue_id": "empty-needs-audit-summary-0024",
+      "severity": "medium",
+      "affected_entity": "G06",
+      "category": "empty_needs_review:ambiguous",
+      "evidence_path": "references/data/audits/empty-needs-audit.json",
+      "next_action": "Should G06 remain zero-needs or receive internal prerequisites?",
+      "proof_required_to_close": "Human review or mutation workflow closes this entry."
+    },
+    {
+      "issue_id": "empty-needs-audit-summary-0025",
+      "severity": "medium",
+      "affected_entity": "G07",
+      "category": "empty_needs_review:ambiguous",
+      "evidence_path": "references/data/audits/empty-needs-audit.json",
+      "next_action": "Which internal prerequisite(s), if any, should G07 require?",
+      "proof_required_to_close": "Human review or mutation workflow closes this entry."
+    },
+    {
+      "issue_id": "empty-needs-audit-summary-0026",
+      "severity": "medium",
+      "affected_entity": "G08",
+      "category": "empty_needs_review:ambiguous",
+      "evidence_path": "references/data/audits/empty-needs-audit.json",
+      "next_action": "Should G08 remain zero-needs or receive internal prerequisites?",
+      "proof_required_to_close": "Human review or mutation workflow closes this entry."
+    },
+    {
+      "issue_id": "empty-needs-audit-summary-0027",
+      "severity": "medium",
+      "affected_entity": "G10",
+      "category": "empty_needs_review:ambiguous",
+      "evidence_path": "references/data/audits/empty-needs-audit.json",
+      "next_action": "Should G10 remain zero-needs or receive internal prerequisites?",
+      "proof_required_to_close": "Human review or mutation workflow closes this entry."
+    },
+    {
+      "issue_id": "empty-needs-audit-summary-0028",
+      "severity": "medium",
+      "affected_entity": "G11",
+      "category": "empty_needs_review:ambiguous",
+      "evidence_path": "references/data/audits/empty-needs-audit.json",
+      "next_action": "Should G11 remain zero-needs or receive internal prerequisites?",
+      "proof_required_to_close": "Human review or mutation workflow closes this entry."
+    },
+    {
+      "issue_id": "empty-needs-audit-summary-0029",
+      "severity": "medium",
+      "affected_entity": "H01",
+      "category": "empty_needs_review:ambiguous",
+      "evidence_path": "references/data/audits/empty-needs-audit.json",
+      "next_action": "Should H01 remain zero-needs or receive internal prerequisites?",
+      "proof_required_to_close": "Human review or mutation workflow closes this entry."
+    },
+    {
+      "issue_id": "empty-needs-audit-summary-0030",
+      "severity": "medium",
+      "affected_entity": "H05",
+      "category": "empty_needs_review:ambiguous",
+      "evidence_path": "references/data/audits/empty-needs-audit.json",
+      "next_action": "Should H05 remain zero-needs or receive internal prerequisites?",
+      "proof_required_to_close": "Human review or mutation workflow closes this entry."
+    },
+    {
+      "issue_id": "empty-needs-audit-summary-0031",
+      "severity": "medium",
+      "affected_entity": "H10",
+      "category": "empty_needs_review:ambiguous",
+      "evidence_path": "references/data/audits/empty-needs-audit.json",
+      "next_action": "Should H10 remain zero-needs or receive internal prerequisites?",
+      "proof_required_to_close": "Human review or mutation workflow closes this entry."
+    },
+    {
+      "issue_id": "empty-needs-audit-summary-0032",
+      "severity": "high",
+      "affected_entity": "H13",
+      "category": "empty_needs_review:false_zero",
+      "evidence_path": "references/data/audits/empty-needs-audit.json",
+      "next_action": "Should H13 depend on D13, or should the prerequisite be represented differently?",
+      "proof_required_to_close": "Human review or mutation workflow closes this entry."
+    },
+    {
+      "issue_id": "empty-needs-audit-summary-0033",
+      "severity": "high",
+      "affected_entity": "H14",
+      "category": "empty_needs_review:false_zero",
+      "evidence_path": "references/data/audits/empty-needs-audit.json",
+      "next_action": "Should H14 depend on I14, or should the prerequisite be represented differently?",
+      "proof_required_to_close": "Human review or mutation workflow closes this entry."
+    },
+    {
+      "issue_id": "empty-needs-audit-summary-0034",
+      "severity": "medium",
+      "affected_entity": "H16",
+      "category": "empty_needs_review:false_zero",
+      "evidence_path": "references/data/audits/empty-needs-audit.json",
+      "next_action": "Should H16 depend on L10, or should the prerequisite be represented differently?",
+      "proof_required_to_close": "Human review or mutation workflow closes this entry."
+    },
+    {
+      "issue_id": "empty-needs-audit-summary-0035",
+      "severity": "medium",
+      "affected_entity": "H21",
+      "category": "empty_needs_review:ambiguous",
+      "evidence_path": "references/data/audits/empty-needs-audit.json",
+      "next_action": "Which internal prerequisite(s), if any, should H21 require?",
+      "proof_required_to_close": "Human review or mutation workflow closes this entry."
+    },
+    {
+      "issue_id": "empty-needs-audit-summary-0036",
+      "severity": "medium",
+      "affected_entity": "H24",
+      "category": "empty_needs_review:ambiguous",
+      "evidence_path": "references/data/audits/empty-needs-audit.json",
+      "next_action": "Which internal prerequisite(s), if any, should H24 require?",
+      "proof_required_to_close": "Human review or mutation workflow closes this entry."
+    },
+    {
+      "issue_id": "empty-needs-audit-summary-0037",
+      "severity": "medium",
+      "affected_entity": "H29",
+      "category": "empty_needs_review:ambiguous",
+      "evidence_path": "references/data/audits/empty-needs-audit.json",
+      "next_action": "Should H29 remain zero-needs or receive internal prerequisites?",
+      "proof_required_to_close": "Human review or mutation workflow closes this entry."
+    },
+    {
+      "issue_id": "empty-needs-audit-summary-0038",
+      "severity": "medium",
+      "affected_entity": "I01",
+      "category": "empty_needs_review:ambiguous",
+      "evidence_path": "references/data/audits/empty-needs-audit.json",
+      "next_action": "Should I01 remain zero-needs or receive internal prerequisites?",
+      "proof_required_to_close": "Human review or mutation workflow closes this entry."
+    },
+    {
+      "issue_id": "empty-needs-audit-summary-0039",
+      "severity": "medium",
+      "affected_entity": "I04",
+      "category": "empty_needs_review:false_zero",
+      "evidence_path": "references/data/audits/empty-needs-audit.json",
+      "next_action": "Should I04 depend on L17, L19, or should the prerequisite be represented differently?",
+      "proof_required_to_close": "Human review or mutation workflow closes this entry."
+    },
+    {
+      "issue_id": "empty-needs-audit-summary-0040",
+      "severity": "medium",
+      "affected_entity": "I06",
+      "category": "empty_needs_review:ambiguous",
+      "evidence_path": "references/data/audits/empty-needs-audit.json",
+      "next_action": "Should I06 remain zero-needs or receive internal prerequisites?",
+      "proof_required_to_close": "Human review or mutation workflow closes this entry."
+    },
+    {
+      "issue_id": "empty-needs-audit-summary-0041",
+      "severity": "medium",
+      "affected_entity": "I10",
+      "category": "empty_needs_review:false_zero",
+      "evidence_path": "references/data/audits/empty-needs-audit.json",
+      "next_action": "Should I10 depend on L19, or should the prerequisite be represented differently?",
+      "proof_required_to_close": "Human review or mutation workflow closes this entry."
+    },
+    {
+      "issue_id": "empty-needs-audit-summary-0042",
+      "severity": "medium",
+      "affected_entity": "I14",
+      "category": "empty_needs_review:ambiguous",
+      "evidence_path": "references/data/audits/empty-needs-audit.json",
+      "next_action": "Should I14 remain zero-needs or receive internal prerequisites?",
+      "proof_required_to_close": "Human review or mutation workflow closes this entry."
+    },
+    {
+      "issue_id": "empty-needs-audit-summary-0043",
+      "severity": "medium",
+      "affected_entity": "L01",
+      "category": "empty_needs_review:ambiguous",
+      "evidence_path": "references/data/audits/empty-needs-audit.json",
+      "next_action": "Which internal prerequisite(s), if any, should L01 require?",
+      "proof_required_to_close": "Human review or mutation workflow closes this entry."
+    },
+    {
+      "issue_id": "empty-needs-audit-summary-0044",
+      "severity": "medium",
+      "affected_entity": "L03",
+      "category": "empty_needs_review:ambiguous",
+      "evidence_path": "references/data/audits/empty-needs-audit.json",
+      "next_action": "Should L03 remain zero-needs or receive internal prerequisites?",
+      "proof_required_to_close": "Human review or mutation workflow closes this entry."
+    },
+    {
+      "issue_id": "empty-needs-audit-summary-0045",
+      "severity": "medium",
+      "affected_entity": "L05",
+      "category": "empty_needs_review:ambiguous",
+      "evidence_path": "references/data/audits/empty-needs-audit.json",
+      "next_action": "Should L05 remain zero-needs or receive internal prerequisites?",
+      "proof_required_to_close": "Human review or mutation workflow closes this entry."
+    },
+    {
+      "issue_id": "empty-needs-audit-summary-0046",
+      "severity": "medium",
+      "affected_entity": "L09",
+      "category": "empty_needs_review:false_zero",
+      "evidence_path": "references/data/audits/empty-needs-audit.json",
+      "next_action": "Should L09 depend on L05, L03, or should the prerequisite be represented differently?",
+      "proof_required_to_close": "Human review or mutation workflow closes this entry."
+    },
+    {
+      "issue_id": "empty-needs-audit-summary-0047",
+      "severity": "medium",
+      "affected_entity": "L11",
+      "category": "empty_needs_review:ambiguous",
+      "evidence_path": "references/data/audits/empty-needs-audit.json",
+      "next_action": "Should L11 remain zero-needs or receive internal prerequisites?",
+      "proof_required_to_close": "Human review or mutation workflow closes this entry."
+    },
+    {
+      "issue_id": "empty-needs-audit-summary-0048",
+      "severity": "medium",
+      "affected_entity": "L12",
+      "category": "empty_needs_review:ambiguous",
+      "evidence_path": "references/data/audits/empty-needs-audit.json",
+      "next_action": "Should L12 remain zero-needs or receive internal prerequisites?",
+      "proof_required_to_close": "Human review or mutation workflow closes this entry."
+    },
+    {
+      "issue_id": "empty-needs-audit-summary-0049",
+      "severity": "medium",
+      "affected_entity": "L13",
+      "category": "empty_needs_review:ambiguous",
+      "evidence_path": "references/data/audits/empty-needs-audit.json",
+      "next_action": "Should L13 remain zero-needs or receive internal prerequisites?",
+      "proof_required_to_close": "Human review or mutation workflow closes this entry."
+    },
+    {
+      "issue_id": "empty-needs-audit-summary-0050",
+      "severity": "medium",
+      "affected_entity": "L17",
+      "category": "empty_needs_review:false_zero",
+      "evidence_path": "references/data/audits/empty-needs-audit.json",
+      "next_action": "Should L17 depend on D16, or should the prerequisite be represented differently?",
+      "proof_required_to_close": "Human review or mutation workflow closes this entry."
+    },
+    {
+      "issue_id": "empty-needs-audit-summary-0051",
+      "severity": "medium",
+      "affected_entity": "L18",
+      "category": "empty_needs_review:ambiguous",
+      "evidence_path": "references/data/audits/empty-needs-audit.json",
+      "next_action": "Should L18 remain zero-needs or receive internal prerequisites?",
+      "proof_required_to_close": "Human review or mutation workflow closes this entry."
+    },
+    {
+      "issue_id": "empty-needs-audit-summary-0052",
+      "severity": "medium",
+      "affected_entity": "L19",
+      "category": "empty_needs_review:false_zero",
+      "evidence_path": "references/data/audits/empty-needs-audit.json",
+      "next_action": "Should L19 depend on L09, or should the prerequisite be represented differently?",
+      "proof_required_to_close": "Human review or mutation workflow closes this entry."
+    }
+  ]
+}

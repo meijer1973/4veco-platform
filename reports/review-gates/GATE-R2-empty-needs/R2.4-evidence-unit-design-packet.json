@@ -1,0 +1,430 @@
+{
+  "schema_version": "0.1",
+  "sprint_id": "R2.4",
+  "gate_id": "GATE-R2-empty-needs",
+  "created_on": "2026-04-26",
+  "status": "review_ready_packet",
+  "protected_reference_data_changed": false,
+  "mutation_authorized": false,
+  "scope_statement": "Bounded packet for evidence-backed review decisions after the R2.3 hold decision. This packet is not a broad cleanup and does not authorize dependency mutation.",
+  "source_artifacts": [
+    "reports/review-gates/GATE-R2-empty-needs/review-packet.md",
+    "reports/review-gates/GATE-R2-empty-needs/subagent-pedagogy.json",
+    "reports/review-gates/GATE-R2-empty-needs/subagent-data-integrity.json",
+    "reports/review-gates/GATE-R2-empty-needs/subagent-evidence.json",
+    "references/data/audits/empty-needs-audit.json",
+    "references/machine/micro-teaching-units.json",
+    "references/authored/course-target-exercises.json",
+    "references/external/exam-questions.json"
+  ],
+  "status_values": {
+    "review_ready": "Exact evidence is attached, but human review and CLI mutation are still required.",
+    "unit_design_required": "Do not apply an edge until unit scope is changed or retired.",
+    "rejected": "Do not apply this machine suggestion unless new evidence explicitly overturns it.",
+    "hold_for_later_phase": "Useful issue, but outside the bounded R2.4 packet."
+  },
+  "candidate_edges": [
+    {
+      "id": "edge-A15-needs-A38",
+      "unit_id": "A15",
+      "unit_name": "Prijselasticiteit van de vraag",
+      "prerequisite_id": "A38",
+      "prerequisite_name": "Procentuele verandering berekenen",
+      "status": "review_ready",
+      "decision_basis": "A15's formula and target exercise explicitly require calculating percentage changes before calculating Ev.",
+      "evidence": [
+        {
+          "kind": "target_exercise",
+          "path": "references/authored/course-target-exercises.json",
+          "anchor": "knowledge/course_blueprint_v4.md §2.1.1, target exercise subquestions a-c",
+          "supports": "Students first calculate percentage change in price and quantity, then calculate price elasticity."
+        },
+        {
+          "kind": "machine_catalog_readonly",
+          "path": "references/machine/micro-teaching-units.json",
+          "anchor": "unit A15 procedure step 2; unit A38 procedure",
+          "supports": "A15 uses percentage-change calculation; A38 is the reusable percentage-change skill."
+        }
+      ],
+      "next_action": "After human review, apply through CLI as A15 needs A38 if still accepted.",
+      "proof_required_to_close": "CLI mutation log plus regenerated DAG/needs reports."
+    },
+    {
+      "id": "edge-A16-needs-A15",
+      "unit_id": "A16",
+      "unit_name": "Kruiselasticiteit",
+      "prerequisite_id": "A15",
+      "prerequisite_name": "Prijselasticiteit van de vraag",
+      "status": "review_ready",
+      "decision_basis": "Human review chose A15 as the generic elasticity route; target exercise §2.1.3 treats cross elasticity as the same formula structure as Ev with different variables.",
+      "evidence": [
+        {
+          "kind": "target_exercise",
+          "path": "references/authored/course-target-exercises.json",
+          "anchor": "knowledge/course_blueprint_v4.md §2.1.3, target exercise subquestion b and difficulty notes",
+          "supports": "Cross elasticity uses the same formula structure as Ev and classifies substitutes/complements."
+        },
+        {
+          "kind": "human_gate_decision",
+          "path": "reports/review-gates/GATE-R2-empty-needs/human-interview.md",
+          "anchor": "Question 4: A16/A17 Elasticity Prerequisite Route",
+          "supports": "Human reviewer selected A: A16 and A17 should both route through A15."
+        }
+      ],
+      "next_action": "After human review, apply through CLI as A16 needs A15 if still accepted.",
+      "proof_required_to_close": "CLI mutation log plus regenerated DAG/needs reports."
+    },
+    {
+      "id": "edge-A17-needs-A15",
+      "unit_id": "A17",
+      "unit_name": "Inkomenselasticiteit",
+      "prerequisite_id": "A15",
+      "prerequisite_name": "Prijselasticiteit van de vraag",
+      "status": "review_ready",
+      "decision_basis": "Human review chose A15 as the generic elasticity route; target exercise §2.1.3 treats income elasticity as the same formula structure as Ev with different variables.",
+      "evidence": [
+        {
+          "kind": "target_exercise",
+          "path": "references/authored/course-target-exercises.json",
+          "anchor": "knowledge/course_blueprint_v4.md §2.1.3, target exercise subquestion a and difficulty notes",
+          "supports": "Income elasticity uses percentage changes and classifies normal/inferior/luxury goods."
+        },
+        {
+          "kind": "human_gate_decision",
+          "path": "reports/review-gates/GATE-R2-empty-needs/human-interview.md",
+          "anchor": "Question 4: A16/A17 Elasticity Prerequisite Route",
+          "supports": "Human reviewer selected A: A16 and A17 should both route through A15."
+        }
+      ],
+      "next_action": "After human review, apply through CLI as A17 needs A15 if still accepted.",
+      "proof_required_to_close": "CLI mutation log plus regenerated DAG/needs reports."
+    },
+    {
+      "id": "edge-D06-needs-A15",
+      "unit_id": "D06",
+      "unit_name": "Vraagreactie via prijselasticiteit interpreteren",
+      "prerequisite_id": "A15",
+      "prerequisite_name": "Prijselasticiteit van de vraag",
+      "status": "review_ready",
+      "decision_basis": "D06 is interpretation of price elasticity; target and exam evidence pair D06 interpretation with A15 calculation.",
+      "evidence": [
+        {
+          "kind": "target_exercise",
+          "path": "references/authored/course-target-exercises.json",
+          "anchor": "knowledge/course_blueprint_v4.md §2.1.1, required_skills A15 and D06",
+          "supports": "The target exercise calculates Ev and immediately interprets elastic/inelastic demand."
+        },
+        {
+          "kind": "exam_question",
+          "path": "references/external/exam-questions.json",
+          "anchor": "ha-1022-a-23-2-o, opgave 1, q2 required_skills A15 and q4 required_skills D06",
+          "supports": "The same opgave first calculates elasticity and then asks for elasticity interpretation."
+        }
+      ],
+      "next_action": "After human review, apply through CLI as D06 needs A15 if still accepted.",
+      "proof_required_to_close": "CLI mutation log plus regenerated DAG/needs reports."
+    },
+    {
+      "id": "edge-D04-needs-A15",
+      "unit_id": "D04",
+      "unit_name": "Elasticiteit en goederenclassificatie",
+      "prerequisite_id": "A15",
+      "prerequisite_name": "Prijselasticiteit van de vraag",
+      "status": "unit_design_required",
+      "decision_basis": "D04 is not a simple dependency edge. Goods classification belongs inside the relevant elasticity units: A15/D06 for elastic/inelastic demand, A17 for income-elasticity goods, and A16/D27 for cross-elasticity substitutes/complements.",
+      "evidence": [
+        {
+          "kind": "target_exercise",
+          "path": "references/authored/course-target-exercises.json",
+          "anchor": "knowledge/course_blueprint_v4.md §2.1.3, subquestions a-b, required_skills A16/A17/D04/D11/D12/D27",
+          "supports": "The target exercise embeds goods classification inside income and cross elasticity work rather than as a standalone concept."
+        },
+        {
+          "kind": "exam_question",
+          "path": "references/external/exam-questions.json",
+          "anchor": "ha-1022-a-25-2-o, opgave 2, q8 D04 and q9 A15/A17",
+          "supports": "The exam evidence couples classification and elasticity calculation in adjacent questions."
+        },
+        {
+          "kind": "human_gate_decision",
+          "path": "reports/review-gates/GATE-R2-empty-needs/human-interview.md",
+          "anchor": "Question 5: D04 Elasticity And Goods Classification",
+          "supports": "Human reviewer decided there is no need for a separate elasticity-and-goods-classification unit."
+        }
+      ],
+      "next_action": "Do not add D04 needs. Prepare a later CLI-supported unit deprecate/redistribute plan.",
+      "proof_required_to_close": "Human-reviewed unit-design decision plus CLI deprecation or redistribution log."
+    },
+    {
+      "id": "edge-D10-needs-D01-D03",
+      "unit_id": "D10",
+      "unit_name": "Vraag/aanbod-verschuiving bij conjunctuurschok",
+      "prerequisite_id": "D01/D03",
+      "prerequisite_name": "Accijnsopbrengst uit grafiek / Consumentensurplus en accijns",
+      "status": "rejected",
+      "decision_basis": "D01 and D03 are advanced accijns/surplus applications, not prerequisites for basic demand/supply graph-shift reasoning.",
+      "evidence": [
+        {
+          "kind": "human_gate_decision",
+          "path": "reports/review-gates/GATE-R2-empty-needs/human-interview.md",
+          "anchor": "Question 6: Market-Graph Suspicious Machine Suggestions",
+          "supports": "Human reviewer rejected D10 -> D01/D03."
+        },
+        {
+          "kind": "target_exercise",
+          "path": "references/authored/course-target-exercises.json",
+          "anchor": "knowledge/course_blueprint_v4.md §1.2.2, required_skills D32/A42/D27/D33",
+          "supports": "Shift-versus-movement reasoning is introduced before accijns/surplus applications."
+        }
+      ],
+      "next_action": "Do not apply. Later graph-foundation work may propose a different prerequisite chain.",
+      "proof_required_to_close": "No mutation; preserve rejection unless new exact evidence overturns it."
+    },
+    {
+      "id": "edge-D13-needs-D03",
+      "unit_id": "D13",
+      "unit_name": "Kostenstijging en aanbodverschuiving",
+      "prerequisite_id": "D03",
+      "prerequisite_name": "Consumentensurplus en accijns",
+      "status": "rejected",
+      "decision_basis": "D03 is too specialized to be a prerequisite for the general cost-increase supply-shift skill.",
+      "evidence": [
+        {
+          "kind": "human_gate_decision",
+          "path": "reports/review-gates/GATE-R2-empty-needs/human-interview.md",
+          "anchor": "Question 6: Market-Graph Suspicious Machine Suggestions",
+          "supports": "Human reviewer rejected D13 -> D03."
+        }
+      ],
+      "next_action": "Do not apply. Later graph-foundation work may propose a different prerequisite chain.",
+      "proof_required_to_close": "No mutation; preserve rejection unless new exact evidence overturns it."
+    },
+    {
+      "id": "edge-D32-needs-D01-D03",
+      "unit_id": "D32",
+      "unit_name": "Verschuiving versus beweging langs de curve",
+      "prerequisite_id": "D01/D03",
+      "prerequisite_name": "Accijnsopbrengst uit grafiek / Consumentensurplus en accijns",
+      "status": "rejected",
+      "decision_basis": "D32 is foundational graph interpretation; D01/D03 are later tax/surplus applications.",
+      "evidence": [
+        {
+          "kind": "human_gate_decision",
+          "path": "reports/review-gates/GATE-R2-empty-needs/human-interview.md",
+          "anchor": "Question 6: Market-Graph Suspicious Machine Suggestions",
+          "supports": "Human reviewer rejected D32 -> D01/D03."
+        },
+        {
+          "kind": "target_exercise",
+          "path": "references/authored/course-target-exercises.json",
+          "anchor": "knowledge/course_blueprint_v4.md §1.2.2, target exercise subquestions a-b",
+          "supports": "D32 is practiced as the basic shift-versus-movement distinction."
+        }
+      ],
+      "next_action": "Do not apply. Later graph-foundation work may propose a different prerequisite chain.",
+      "proof_required_to_close": "No mutation; preserve rejection unless new exact evidence overturns it."
+    }
+  ],
+  "a_domain_zero_needs": [
+    {
+      "unit_ids": ["A01", "A02", "A03", "A04", "A05", "A38"],
+      "status": "review_ready",
+      "recommended_zero_needs_status": "underbouw_assumed",
+      "decision_basis": "These are foundational math/graph calculation skills. Human review chose underbouw_assumed for foundational A-domain empty-needs units instead of artificial internal prerequisites.",
+      "evidence": [
+        {
+          "kind": "human_gate_decision",
+          "path": "reports/review-gates/GATE-R2-empty-needs/human-interview.md",
+          "anchor": "Question 2: Foundational A-Domain Empty Needs",
+          "supports": "Human reviewer selected underbouw_assumed."
+        }
+      ],
+      "next_action": "After CLI support exists, set explicit zero_needs_status and assumed_prior_knowledge through the approved workflow."
+    },
+    {
+      "unit_ids": ["A18", "A42", "A43"],
+      "status": "hold_for_later_phase",
+      "recommended_zero_needs_status": "not_decided",
+      "decision_basis": "These A-domain units are not safely covered by the foundational underbouw rule. A18 and A42 are flagged because prior_learning is new_this_year; A43 has suspicious suggested edges.",
+      "evidence": [
+        {
+          "kind": "subagent_review",
+          "path": "reports/review-gates/GATE-R2-empty-needs/subagent-evidence.json",
+          "anchor": "Findings on A18, A42, and A43",
+          "supports": "Evidence review marked these as concerning or suspicious."
+        }
+      ],
+      "next_action": "Keep out of R2.4 mutation queue; review in later targeted A-domain cleanup."
+    }
+  ],
+  "unit_design_decisions": [
+    {
+      "unit_id": "D04",
+      "unit_name": "Elasticiteit en goederenclassificatie",
+      "status": "unit_design_required",
+      "decision": "Do not add a prerequisite edge for D04. Treat D04 as a unit-scope problem: retire, merge, or redistribute its content into the relevant elasticity units.",
+      "redistribution_targets": ["A15", "A16", "A17", "D06", "D11", "D12", "D27"],
+      "evidence": [
+        {
+          "kind": "target_exercise",
+          "path": "references/authored/course-target-exercises.json",
+          "anchor": "knowledge/course_blueprint_v4.md §2.1.3",
+          "supports": "Goods classification appears as part of income and cross elasticity tasks."
+        },
+        {
+          "kind": "human_gate_decision",
+          "path": "reports/review-gates/GATE-R2-empty-needs/human-interview.md",
+          "anchor": "Question 5",
+          "supports": "Human reviewer decided separate D04 is not needed."
+        }
+      ],
+      "proof_required_to_close": "Later CLI-supported unit-design change, with references regenerated."
+    }
+  ],
+  "labor_market_second_pass": {
+    "status": "completed_as_bounded_packet",
+    "summary": "Labor-market and unemployment sequencing should be handled as a reviewed sequence, not as blind application of R2.1 machine edges.",
+    "review_ready_edges": [
+      {
+        "id": "edge-L09-needs-L05",
+        "unit_id": "L09",
+        "prerequisite_id": "L05",
+        "decision_basis": "Krappe/ruime arbeidsmarkt uses beroepsbevolking, arbeidsaanbod, arbeidsvraag, and unemployment categories.",
+        "evidence": [
+          {
+            "kind": "target_exercise",
+            "path": "references/authored/course-target-exercises.json",
+            "anchor": "knowledge/course_blueprint_v4.md §4.1.2 and §4.1.3",
+            "supports": "§4.1.2 defines labor-force categories; §4.1.3 uses krappe/ruime arbeidsmarkt."
+          }
+        ]
+      },
+      {
+        "id": "edge-L11-L12-L13-need-L05",
+        "unit_id": "L11/L12/L13",
+        "prerequisite_id": "L05",
+        "decision_basis": "Types of unemployment require the base distinction between beroepsbevolking, niet-beroepsbevolking, and werkloze beroepsbevolking.",
+        "evidence": [
+          {
+            "kind": "target_exercise",
+            "path": "references/authored/course-target-exercises.json",
+            "anchor": "knowledge/course_blueprint_v4.md §4.1.2 and §4.2.1",
+            "supports": "§4.2.1 classifies unemployment types after §4.1.2 defines unemployment-rate categories."
+          }
+        ]
+      },
+      {
+        "id": "edge-D16-needs-D34-and-L10",
+        "unit_id": "D16",
+        "prerequisite_id": "D34/L10",
+        "decision_basis": "Minimum wage is a binding minimum price in the labor market; students need binding price-regulation logic and labor-market equilibrium transfer.",
+        "evidence": [
+          {
+            "kind": "target_exercise",
+            "path": "references/authored/course-target-exercises.json",
+            "anchor": "knowledge/course_blueprint_v4.md §4.2.2",
+            "supports": "Minimum wage is described as direct transfer from minimum price mechanics to the labor market."
+          },
+          {
+            "kind": "exam_question",
+            "path": "references/external/exam-questions.json",
+            "anchor": "ha-1022-a-25-1-o, opgave 1, q3 required_skills D16",
+            "supports": "Exam asks effect of raising minimum wage on unemployment."
+          }
+        ]
+      },
+      {
+        "id": "edge-L17-needs-D16",
+        "unit_id": "L17",
+        "prerequisite_id": "D16",
+        "decision_basis": "CAO wage above equilibrium is explained as similar to a minimum wage.",
+        "evidence": [
+          {
+            "kind": "target_exercise",
+            "path": "references/authored/course-target-exercises.json",
+            "anchor": "knowledge/course_blueprint_v4.md §4.2.3, target exercise subquestion a",
+            "supports": "CAO wage-setting is explicitly compared to minimum wage and its employment effect."
+          }
+        ]
+      },
+      {
+        "id": "edge-L19-needs-L09",
+        "unit_id": "L19",
+        "prerequisite_id": "L09",
+        "decision_basis": "Loonstarheid explains persistent unemployment after labor-market imbalance; krappe/ruime market language is prerequisite vocabulary.",
+        "evidence": [
+          {
+            "kind": "target_exercise",
+            "path": "references/authored/course-target-exercises.json",
+            "anchor": "knowledge/course_blueprint_v4.md §4.2.3, target exercise subquestions c and e",
+            "supports": "Loonstarheid is used to explain persistent unemployment and Dutch wage adjustment."
+          }
+        ]
+      },
+      {
+        "id": "edge-I04-I10-need-L19",
+        "unit_id": "I04/I10",
+        "prerequisite_id": "L19",
+        "decision_basis": "Macro wage rigidity units use the labor-market concept of loonstarheid.",
+        "evidence": [
+          {
+            "kind": "target_exercise",
+            "path": "references/authored/course-target-exercises.json",
+            "anchor": "knowledge/course_blueprint_v4.md §4.2.3, required_skills I04/I10/L19",
+            "supports": "The target exercise groups I04 and I10 with loonstarheid."
+          },
+          {
+            "kind": "exam_question",
+            "path": "references/external/exam-questions.json",
+            "anchor": "vw-1022-a-23-1-o q22 and vw-1022-a-25-2-o q24, required_skills I10",
+            "supports": "VWO exam questions use wage/GA-curve rigidity reasoning."
+          }
+        ]
+      },
+      {
+        "id": "edge-H14-needs-I14",
+        "unit_id": "H14",
+        "prerequisite_id": "I14",
+        "decision_basis": "H14's procedure explicitly reasons through the multiplier and leakage channel.",
+        "evidence": [
+          {
+            "kind": "machine_catalog_readonly",
+            "path": "references/machine/micro-teaching-units.json",
+            "anchor": "unit H14 procedure step 3 references I14",
+            "supports": "The procedure itself says extra consumption works through the multiplier and references I14."
+          },
+          {
+            "kind": "exam_question",
+            "path": "references/external/exam-questions.json",
+            "anchor": "vw-1022-a-23-2-o, opgave 5, q21 required_skills I14",
+            "supports": "Exam evidence confirms multiplier/leakage reasoning as an assessed skill."
+          }
+        ]
+      }
+    ],
+    "held_items": [
+      {
+        "id": "edge-L09-needs-L03",
+        "reason": "L03 is plausible for labor demand vocabulary, but §4.1.3 evidence more directly supports L05/L10 before L09. Keep L03 as a later review candidate rather than mutate now."
+      },
+      {
+        "id": "edge-H13-needs-D13-or-D16",
+        "reason": "H13 is a minimum-wage cost-channel and international-competitiveness unit. Evidence supports needing prior cost/minimum-wage reasoning, but the minimal prerequisite should be decided with R3.1/R3.2 CLI review rather than in R2.4."
+      }
+    ],
+    "next_action": "Use these labor-market edges as review-ready candidates after R3.1 confirms CLI and validation coverage."
+  },
+  "remaining_backlog_policy": {
+    "phase_2_sufficient_for_now": true,
+    "not_resolved_in_r2_4": [
+      "all 35 ambiguous empty-needs entries",
+      "unit-term slug migration",
+      "exam-question extraction gap closure",
+      "blueprint missing-unit triage",
+      "A18/A42/A43 targeted cleanup"
+    ],
+    "next_sprint": "R3.1 Reference CLI And Documentation Completion",
+    "blocked_sprints": ["R3.2 Apply Reviewed Empty-Needs Corrections"],
+    "block_reason": "R3.2 still needs human review of this packet and R3.1 CLI/documentation readiness before protected reference mutation."
+  }
+}

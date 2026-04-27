@@ -1,0 +1,25 @@
+{
+  "sprint_id": "R7.4",
+  "name": "RAG Review Gate Preparation",
+  "status": "in_progress",
+  "planned_on": "2026-04-27",
+  "plan": "docs/sprints/R7.4-plan.md",
+  "protected_reference_data_changes_allowed": false,
+  "human_review_required": true,
+  "gate_id": "GATE-R7-rag",
+  "review_packet": "reports/review-gates/GATE-R7-rag/review-packet.md",
+  "valid_gate_statuses": [
+    "pass",
+    "pass_with_conditions",
+    "hold",
+    "fail"
+  ],
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js docs/sprints/R7.4-plan.md",
+    "node build-scripts/rag/validate-retrieval-eval-results.js",
+    "node build-scripts/reports/check-reference-health.js",
+    "node build-scripts/review-gates/validate-rag-review-packet.js",
+    "node build-scripts/sprints/check-sprint-bundle.js R7.4",
+    "node build-scripts/sprints/check-sprint-result.js reports/sprints/R7.4-result.md"
+  ]
+}

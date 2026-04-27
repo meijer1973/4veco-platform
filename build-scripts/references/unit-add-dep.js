@@ -27,10 +27,14 @@ function main() {
   u.needs = u.needs.concat([flags.to]);
 
   try {
-    saveCatalog({ preamble, units });
+    saveCatalog({ preamble, units, dryRun: flags['dry-run'] === true });
   } catch (err) {
     reportValidationErrors(err);
     process.exit(1);
+  }
+  if (flags['dry-run'] === true) {
+    console.log(`DRY RUN  ${flags.from} would depend on ${flags.to}`);
+    return;
   }
   console.log(`OK  ${flags.from} now depends on ${flags.to}`);
 }

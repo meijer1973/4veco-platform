@@ -45,6 +45,8 @@ const APPLY_OR_HIGHER = new Set(['apply', 'analyze', 'evaluate']);
 const PRIOR_LEARNING = ['previously_taught', 'new_this_year', 'review_and_extend'];
 const ASPECTS = ['verbaal', 'grafisch', 'rekenen'];
 const REQUIRED_FIELDS = ['kern', 'needs', 'mastery_target', 'prior_learning', 'terms', 'aspects'];
+const ZERO_NEEDS_STATUS = ['true_zero', 'underbouw_assumed', 'false_zero', 'ambiguous', 'not_reviewed'];
+const REVIEW_SEVERITY = ['low', 'medium', 'high'];
 
 // ----- parsing -----
 
@@ -98,8 +100,17 @@ function parseInlineValue(raw) {
     if (!inner) return [];
     return inner.split(',').map(s => s.trim().replace(/^["']|["']$/g, ''));
   }
+  // JSON object form for structured review metadata.
+  if (/^\{.*\}$/.test(raw)) return JSON.parse(raw);
   // Quoted string
-  if (/^".*"$/.test(raw) || /^'.*'$/.test(raw)) return raw.slice(1, -1);
+  if (/^".*"$/.test(raw)) {
+    try {
+      return JSON.parse(raw);
+    } catch (err) {
+      return raw.slice(1, -1);
+    }
+  }
+  if (/^'.*'$/.test(raw)) return raw.slice(1, -1);
   // Boolean
   if (raw === 'true') return true;
   if (raw === 'false') return false;
@@ -111,7 +122,7 @@ function parseInlineValue(raw) {
 
 // ----- validation -----
 
-function validate(units, { terms, eindtermen }) {
+function validate(units, { terms, eindtermen, skipStoredLayerValidation = false } = {}) {
   const errors = [];
   const byId = new Map();
 
@@ -167,10 +178,31 @@ function validate(units, { terms, eindtermen }) {
     if (u.id.startsWith('A') && u.generator === undefined && !u.deprecated) {
       errors.push(`${u.id}: A-domain units require a generator field`);
     }
+    if (u.assumed_prior_knowledge !== undefined && !Array.isArray(u.assumed_prior_knowledge)) {
+      errors.push(`${u.id}: assumed_prior_knowledge must be a list`);
+    }
+    if (u.zero_needs_status !== undefined && !ZERO_NEEDS_STATUS.includes(u.zero_needs_status)) {
+      errors.push(`${u.id}: zero_needs_status "${u.zero_needs_status}" not in ${ZERO_NEEDS_STATUS.join('|')}`);
+    }
+    if (u.zero_needs_review !== undefined) {
+      if (!u.zero_needs_review || typeof u.zero_needs_review !== 'object' || Array.isArray(u.zero_needs_review)) {
+        errors.push(`${u.id}: zero_needs_review must be an object`);
+      } else {
+        for (const field of ['reviewed_on', 'reviewer', 'rationale', 'recommended_needs', 'severity']) {
+          if (u.zero_needs_review[field] === undefined) errors.push(`${u.id}: zero_needs_review missing ${field}`);
+        }
+        if (u.zero_needs_review.recommended_needs !== undefined && !Array.isArray(u.zero_needs_review.recommended_needs)) {
+          errors.push(`${u.id}: zero_needs_review.recommended_needs must be a list`);
+        }
+        if (u.zero_needs_review.severity !== undefined && !REVIEW_SEVERITY.includes(u.zero_needs_review.severity)) {
+          errors.push(`${u.id}: zero_needs_review.severity "${u.zero_needs_review.severity}" not in ${REVIEW_SEVERITY.join('|')}`);
+        }
+      }
+    }
 
     if (Array.isArray(u.terms) && terms) {
       for (const t of u.terms) {
-        if (!terms.has(t)) errors.push(`${u.id}: term "${t}" not found in economie-terminologie.md`);
+        if (!terms.has(t)) errors.push(`${u.id}: term "${t}" not found in begrippen.json or terminology fallback`);
       }
     }
     if (Array.isArray(u.exam_codes) && eindtermen) {
@@ -192,7 +224,7 @@ function validate(units, { terms, eindtermen }) {
 
   // Stored-layer consistency: layer must be >= max(needs.layer) + 1.
   // Computed here after cycle check so we don't recurse into cycles.
-  if (cycles.length === 0) {
+  if (!skipStoredLayerValidation && cycles.length === 0) {
     const minMemo = new Map();
     function minLayer(id, visiting) {
       if (minMemo.has(id)) return minMemo.get(id);
@@ -254,27 +286,26 @@ function findCycles(units, byId) {
 // derived minimum. The validator enforces that stored layers are not below
 // the derived minimum.
 function computeLayers(units, byId) {
-  const minMemo = new Map();
-  function minLayerOf(id, path) {
-    if (minMemo.has(id)) return minMemo.get(id);
+  const layerMemo = new Map();
+  function effectiveLayerOf(id, path) {
+    if (layerMemo.has(id)) return layerMemo.get(id);
     if (path.includes(id)) return 0;
     const u = byId.get(id);
-    if (!u || !Array.isArray(u.needs) || u.needs.length === 0) { minMemo.set(id, 0); return 0; }
-    let max = -1;
+    if (!u) return 0;
+    let prereqMax = -1;
     for (const n of u.needs) {
       if (!byId.has(n)) continue;
-      // Use the OTHER unit's effective layer (stored if present, else derived).
-      const other = byId.get(n);
-      const otherLayer = (other && typeof other.layer === 'number') ? other.layer : minLayerOf(n, [...path, id]);
-      if (otherLayer > max) max = otherLayer;
+      const otherLayer = effectiveLayerOf(n, [...path, id]);
+      if (otherLayer > prereqMax) prereqMax = otherLayer;
     }
-    const v = max + 1;
-    minMemo.set(id, v);
+    const derivedMin = prereqMax === -1 ? 0 : prereqMax + 1;
+    const stored = typeof u.layer === 'number' ? u.layer : 0;
+    const v = Math.max(stored, derivedMin);
+    layerMemo.set(id, v);
     return v;
   }
   for (const u of units) {
-    const min = minLayerOf(u.id, []);
-    if (typeof u.layer !== 'number') u.layer = min;
+    u.layer = effectiveLayerOf(u.id, []);
   }
   return units;
 }
@@ -296,13 +327,19 @@ function loadTerminology() {
     try {
       const data = JSON.parse(fs.readFileSync(BEGRIPPEN_JSON, 'utf8'));
       if (data && typeof data.terms === 'object') {
-        for (const entry of Object.values(data.terms)) {
+        for (const [id, entry] of Object.entries(data.terms)) {
+          if (id && typeof id === 'string') terms.add(id.trim());
           if (entry && typeof entry.term_nl === 'string' && entry.term_nl.trim()) {
             terms.add(entry.term_nl.trim());
           }
           if (Array.isArray(entry && entry.synonyms_nl)) {
             for (const syn of entry.synonyms_nl) {
               if (typeof syn === 'string' && syn.trim()) terms.add(syn.trim());
+            }
+          }
+          if (Array.isArray(entry && entry.deprecated_forms)) {
+            for (const deprecated of entry.deprecated_forms) {
+              if (typeof deprecated === 'string' && deprecated.trim()) terms.add(deprecated.trim());
             }
           }
         }
@@ -372,6 +409,7 @@ function buildJsonEntry(u) {
   const passthrough = [
     'duration_min', 'kern', 'needs', 'exam_codes', 'mastery_target',
     'prior_learning', 'aspects', 'terms', 'procedure', 'pitfalls', 'generator',
+    'assumed_prior_knowledge', 'zero_needs_status', 'zero_needs_review',
     'deprecated', 'deprecated_in_favor_of',
   ];
   for (const k of passthrough) if (u[k] !== undefined) entry[k] = u[k];

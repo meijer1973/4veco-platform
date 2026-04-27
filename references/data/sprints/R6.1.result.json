@@ -1,0 +1,54 @@
+{
+  "sprint_id": "R6.1",
+  "name": "JSON-First Reports",
+  "status": "completed",
+  "completed_on": "2026-04-27",
+  "plan": "docs/sprints/R6.1-plan.md",
+  "baseline": "reports/sprints/R6.1-baseline.md",
+  "result": "reports/sprints/R6.1-result.md",
+  "diff_summary": "reports/sprints/R6.1-diff-summary.md",
+  "outputs": [
+    "build-scripts/reports/generate-all.js",
+    "build-scripts/reports/validate-report-json.js",
+    "reports/json/dag-integrity.json",
+    "reports/json/terminology-drift.json",
+    "reports/json/unresolved-refs.json",
+    "reports/json/needs-coverage.json",
+    "reports/json/terms-coverage.json",
+    "reports/json/procedure-coverage.json",
+    "reports/json/aspects-coverage.json",
+    "reports/json/dead-units.json",
+    "reports/json/begrippen-coverage.json",
+    "reports/json/empty-needs-audit-summary.json",
+    "reports/markdown/"
+  ],
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js docs/sprints/R6.1-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/generate-all.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/validate-report-json.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-result.js reports/sprints/R6.1-result.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js R6.1 --complete",
+      "status": "passed"
+    }
+  ],
+  "protected_reference_data_changed": false,
+  "next_sprint": "R6.2",
+  "summary": {
+    "json_reports": 10,
+    "markdown_projections": 10,
+    "validator_errors": 0
+  }
+}

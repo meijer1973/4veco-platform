@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://4veco.local/references/schemas/rag-chunk.schema.json",
+  "title": "RagChunk",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["chunk_id", "source_path", "source_type", "authority_level", "text"],
+  "properties": {
+    "chunk_id": { "type": "string" },
+    "source_path": { "type": "string" },
+    "source_type": { "type": "string" },
+    "authority_level": { "type": "string" },
+    "entity_ids": { "type": "array", "items": { "type": "string" } },
+    "evidence_ids": { "type": "array", "items": { "type": "string" } },
+    "allowed_for_public_citation": { "type": "boolean" },
+    "text": { "type": "string" }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "sprint_id": "R7.1",
+  "name": "Deterministic Chunk Layer",
+  "status": "in_progress",
+  "planned_on": "2026-04-27",
+  "plan": "docs/sprints/R7.1-plan.md",
+  "protected_reference_data_changes_allowed": false,
+  "human_review_required": false,
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js docs/sprints/R7.1-plan.md",
+    "node build-scripts/rag/build-chunks.js",
+    "node build-scripts/rag/validate-chunks.js",
+    "node build-scripts/sprints/check-sprint-result.js reports/sprints/R7.1-result.md",
+    "node build-scripts/sprints/check-sprint-bundle.js R7.1 --complete"
+  ]
+}

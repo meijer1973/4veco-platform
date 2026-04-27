@@ -1,0 +1,66 @@
+{
+  "sprint_id": "R3.2",
+  "status": "completed",
+  "protected_reference_data_changed": true,
+  "decision_source": "reports/review-gates/GATE-R2-empty-needs/R2.4-mutation-review.json",
+  "cli_fixes_before_rerun": [
+    "unit-lib save path validates non-layer invariants before recomputing effective layers and final validation",
+    "build-unit-index parses JSON-quoted strings with JSON.parse to prevent repeated escaping",
+    "unit-add-dep and unit-update support --dry-run"
+  ],
+  "dry_run": {
+    "status": "passed",
+    "commands_passed": 21
+  },
+  "applied_edges": [
+    ["A15", "A38"],
+    ["A16", "A15"],
+    ["A17", "A15"],
+    ["D06", "A15"],
+    ["L09", "L05"],
+    ["L11", "L05"],
+    ["L12", "L05"],
+    ["L13", "L05"],
+    ["D16", "D34"],
+    ["D16", "L10"],
+    ["L17", "D16"],
+    ["L19", "L09"],
+    ["I04", "L19"],
+    ["I10", "L19"],
+    ["H14", "I14"]
+  ],
+  "applied_zero_needs_status_updates": {
+    "underbouw_assumed": ["A01", "A02", "A03", "A04", "A05", "A38"]
+  },
+  "not_applied": [
+    "D04 lifecycle mutation",
+    "rejected market-graph suggestions",
+    "A18/A42/A43 changes",
+    "L09 -> L03",
+    "H13 -> D13",
+    "H13 -> D16",
+    "opportunistic extra edges"
+  ],
+  "validation": [
+    {
+      "command": "node build-scripts/references/build-unit-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/validate-prior-knowledge-schema.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/dag-integrity.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/needs-coverage.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/unresolved-refs.js",
+      "status": "passed_with_deprecated_reference_warnings"
+    }
+  ]
+}

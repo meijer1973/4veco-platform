@@ -1,0 +1,449 @@
+{
+  "schema_version": "0.1",
+  "sprint_id": "R5.1",
+  "generated_on": "2026-04-26",
+  "source_rank_policy": [
+    {
+      "authority_rank": 1,
+      "source_layer": "external_authority",
+      "description": "CvTE exam questions, syllabus, inspection, and school standards. Primary evidence for external factual and alignment claims."
+    },
+    {
+      "authority_rank": 2,
+      "source_layer": "authored_judgement",
+      "description": "Owned target exercises and reviewed expert judgement. Primary evidence for intended teaching flow when exercise-backed."
+    },
+    {
+      "authority_rank": 3,
+      "source_layer": "machine_registry",
+      "description": "Canonical platform registry state for unit IDs, dependencies, term IDs, and procedures."
+    },
+    {
+      "authority_rank": 4,
+      "source_layer": "human_gate_decision",
+      "description": "Recorded human review decisions. Authorizes bounded mutation or holds, but does not replace source evidence."
+    },
+    {
+      "authority_rank": 5,
+      "source_layer": "governance_data",
+      "description": "Sprint, inventory, and audit data. Process evidence, not curriculum proof by itself."
+    },
+    {
+      "authority_rank": 6,
+      "source_layer": "generated_report",
+      "description": "Generated diagnostics and summaries. Useful discovery surface, never primary evidence when source data exists."
+    }
+  ],
+  "evidence_anchors": [
+    {
+      "evidence_id": "EV-R5.1-SOURCE-RANK-POLICY",
+      "source_path": "references/SOURCE_OF_TRUTH.md",
+      "document_id": "source-of-truth",
+      "source_layer": "governance_data",
+      "authority_rank": 5,
+      "locator": {
+        "heading": "Layered Canon Rule"
+      },
+      "excerpt": null,
+      "summary": "Defines external authority, machine registry, authored judgement, governance data, and generated reports as separate evidence layers.",
+      "supports": "Generated reports must not be treated as primary evidence when source references are available.",
+      "extraction_method": "manual_locator",
+      "confidence": "high",
+      "primary": true
+    },
+    {
+      "evidence_id": "EV-A15-A38-TARGET",
+      "source_path": "references/authored/course-target-exercises.json",
+      "document_id": "course-target-exercises-v4",
+      "source_layer": "authored_judgement",
+      "authority_rank": 2,
+      "locator": {
+        "exercise_id": "2.1.1",
+        "source_ref": "knowledge/course_blueprint_v4.md section 2.1.1"
+      },
+      "excerpt": null,
+      "summary": "The target exercise first asks students to calculate percentage changes in price and quantity before calculating price elasticity.",
+      "supports": "A15 price elasticity depends on percentage-change fluency from A38.",
+      "extraction_method": "direct_record",
+      "confidence": "high",
+      "primary": true
+    },
+    {
+      "evidence_id": "EV-A15-A38-MACHINE",
+      "source_path": "references/machine/micro-teaching-units.json",
+      "document_id": "micro-teaching-units",
+      "source_layer": "machine_registry",
+      "authority_rank": 3,
+      "locator": {
+        "unit_ids": ["A15", "A38"],
+        "fields": ["procedure", "kern"]
+      },
+      "excerpt": null,
+      "summary": "A15's procedure uses percentage-change calculation; A38 is the reusable percentage-change unit.",
+      "supports": "The platform registry semantics align A15 with A38 as a prerequisite.",
+      "extraction_method": "direct_record",
+      "confidence": "high",
+      "primary": false
+    },
+    {
+      "evidence_id": "EV-A16-A17-A15-TARGET",
+      "source_path": "references/authored/course-target-exercises.json",
+      "document_id": "course-target-exercises-v4",
+      "source_layer": "authored_judgement",
+      "authority_rank": 2,
+      "locator": {
+        "exercise_id": "2.1.3",
+        "source_ref": "knowledge/course_blueprint_v4.md section 2.1.3"
+      },
+      "excerpt": null,
+      "summary": "Income elasticity and cross elasticity use the same percentage-change-over-percentage-change schema as price elasticity, with different variables.",
+      "supports": "A16 and A17 can route through A15 as the current shared elasticity prerequisite.",
+      "extraction_method": "direct_record",
+      "confidence": "high",
+      "primary": true
+    },
+    {
+      "evidence_id": "EV-A16-A17-A15-HUMAN",
+      "source_path": "reports/review-gates/GATE-R2-empty-needs/human-interview.md",
+      "document_id": "gate-r2-human-interview",
+      "source_layer": "human_gate_decision",
+      "authority_rank": 4,
+      "locator": {
+        "question": "A16/A17 elasticity prerequisite route"
+      },
+      "excerpt": null,
+      "summary": "The human reviewer selected routing A16 and A17 through A15 for the current graph.",
+      "supports": "The direct A15 prerequisite edges were human-authorized for R3.2.",
+      "extraction_method": "manual_locator",
+      "confidence": "high",
+      "primary": false
+    },
+    {
+      "evidence_id": "EV-D06-A15-EXAM",
+      "source_path": "references/external/exam-questions.json",
+      "document_id": "exam-questions",
+      "source_layer": "external_authority",
+      "authority_rank": 1,
+      "locator": {
+        "exam": "ha-1022-a-23-2-o",
+        "opgave": 1,
+        "question_numbers": [2, 4]
+      },
+      "excerpt": null,
+      "summary": "The exam sequence pairs price-elasticity calculation with interpretation of demand reaction via elasticity.",
+      "supports": "D06 interpretation depends on A15 price elasticity.",
+      "extraction_method": "direct_record",
+      "confidence": "high",
+      "primary": true
+    },
+    {
+      "evidence_id": "EV-D04-DESIGN-TARGET",
+      "source_path": "references/authored/course-target-exercises.json",
+      "document_id": "course-target-exercises-v4",
+      "source_layer": "authored_judgement",
+      "authority_rank": 2,
+      "locator": {
+        "exercise_id": "2.1.3",
+        "source_ref": "knowledge/course_blueprint_v4.md section 2.1.3"
+      },
+      "excerpt": null,
+      "summary": "Goods classification appears inside income and cross elasticity work rather than as a clean separate target skill.",
+      "supports": "D04 should be reviewed for retire, merge, or redistribution rather than preserved by adding a simple A15 dependency.",
+      "extraction_method": "direct_record",
+      "confidence": "medium",
+      "primary": true
+    },
+    {
+      "evidence_id": "EV-L09-L05-TARGET",
+      "source_path": "references/authored/course-target-exercises.json",
+      "document_id": "course-target-exercises-v4",
+      "source_layer": "authored_judgement",
+      "authority_rank": 2,
+      "locator": {
+        "exercise_ids": ["4.1.2", "4.1.3"],
+        "source_ref": "knowledge/course_blueprint_v4.md sections 4.1.2 and 4.1.3"
+      },
+      "excerpt": null,
+      "summary": "The labor-market sequence defines beroepsbevolking, arbeidsaanbod, arbeidsvraag, and werkloze beroepsbevolking before krappe/ruime arbeidsmarkt reasoning.",
+      "supports": "L09 krappe/ruime arbeidsmarkt depends on L05 base labor-market categories.",
+      "extraction_method": "direct_record",
+      "confidence": "high",
+      "primary": true
+    },
+    {
+      "evidence_id": "EV-D16-L10-TARGET",
+      "source_path": "references/authored/course-target-exercises.json",
+      "document_id": "course-target-exercises-v4",
+      "source_layer": "authored_judgement",
+      "authority_rank": 2,
+      "locator": {
+        "exercise_id": "4.2.2",
+        "source_ref": "knowledge/course_blueprint_v4.md section 4.2.2"
+      },
+      "excerpt": null,
+      "summary": "Minimum wage is treated as a transfer of minimum-price mechanics to the labor market.",
+      "supports": "D16 minimum wage requires D34 price-floor logic and L10 labor-market equilibrium transfer.",
+      "extraction_method": "direct_record",
+      "confidence": "high",
+      "primary": true
+    },
+    {
+      "evidence_id": "EV-D16-EXAM",
+      "source_path": "references/external/exam-questions.json",
+      "document_id": "exam-questions",
+      "source_layer": "external_authority",
+      "authority_rank": 1,
+      "locator": {
+        "exam": "ha-1022-a-25-1-o",
+        "opgave": 1,
+        "question_number": 3
+      },
+      "excerpt": null,
+      "summary": "The exam-question extraction records D16 as a required skill for a minimum-wage question.",
+      "supports": "D16 is an exam-facing labor-market price-regulation skill.",
+      "extraction_method": "direct_record",
+      "confidence": "high",
+      "primary": true
+    },
+    {
+      "evidence_id": "EV-I04-I10-L19-TARGET",
+      "source_path": "references/authored/course-target-exercises.json",
+      "document_id": "course-target-exercises-v4",
+      "source_layer": "authored_judgement",
+      "authority_rank": 2,
+      "locator": {
+        "exercise_id": "4.2.3",
+        "source_ref": "knowledge/course_blueprint_v4.md section 4.2.3"
+      },
+      "excerpt": null,
+      "summary": "The target exercise groups wage rigidity with GA-curve and macro wage-adjustment reasoning.",
+      "supports": "I04 and I10 can require L19 when they use wage rigidity or GA-curve reasoning.",
+      "extraction_method": "direct_record",
+      "confidence": "medium",
+      "primary": true
+    },
+    {
+      "evidence_id": "EV-H14-I14-MACHINE",
+      "source_path": "references/machine/micro-teaching-units.json",
+      "document_id": "micro-teaching-units",
+      "source_layer": "machine_registry",
+      "authority_rank": 3,
+      "locator": {
+        "unit_id": "H14",
+        "field": "procedure"
+      },
+      "excerpt": null,
+      "summary": "H14 procedure references multiplier and leakage reasoning.",
+      "supports": "H14 depends on I14 when H14 uses multiplier/leakage mechanics.",
+      "extraction_method": "direct_record",
+      "confidence": "high",
+      "primary": true
+    },
+    {
+      "evidence_id": "EV-H14-I14-EXAM",
+      "source_path": "references/external/exam-questions.json",
+      "document_id": "exam-questions",
+      "source_layer": "external_authority",
+      "authority_rank": 1,
+      "locator": {
+        "exam": "vw-1022-a-23-2-o",
+        "opgave": 5,
+        "question_number": 21
+      },
+      "excerpt": null,
+      "summary": "The exam-question extraction records I14 in multiplier/leakage reasoning.",
+      "supports": "I14 is the exam-facing multiplier/leakage skill connected to H14.",
+      "extraction_method": "direct_record",
+      "confidence": "high",
+      "primary": true
+    },
+    {
+      "evidence_id": "EV-R4.2-EXAM-GAP-QUEUE",
+      "source_path": "reports/json/exam-question-extraction-gaps.json",
+      "document_id": "r4.2-exam-question-extraction-gaps",
+      "source_layer": "generated_report",
+      "authority_rank": 6,
+      "locator": {
+        "summary_field": "summary.gap_records"
+      },
+      "excerpt": null,
+      "summary": "R4.2 found 27 exam-question gap records, all missing required_skills, with 19 also missing exam_codes.",
+      "supports": "The exam-link backlog needs review before graph or retrieval layers treat exam-question coverage as complete.",
+      "extraction_method": "generated_report_summary",
+      "confidence": "high",
+      "primary": false
+    },
+    {
+      "evidence_id": "EV-TERM-PRICE-ELASTICITY-MACHINE",
+      "source_path": "references/machine/begrippen.json",
+      "document_id": "begrippen",
+      "source_layer": "machine_registry",
+      "authority_rank": 3,
+      "locator": {
+        "term_id": "prijselasticiteit-van-de-vraag"
+      },
+      "excerpt": null,
+      "summary": "The machine term registry contains the canonical term ID and definition for prijselasticiteit van de vraag.",
+      "supports": "Term definitions can be anchored to the machine term registry while external/source evidence remains separate.",
+      "extraction_method": "direct_record",
+      "confidence": "high",
+      "primary": true
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "CL-SOURCE-RANK-POLICY",
+      "claim_type": "source_policy",
+      "subject_id": "evidence-layer",
+      "object_id": "source-ranking",
+      "evidence_ids": ["EV-R5.1-SOURCE-RANK-POLICY"],
+      "status": "accepted",
+      "decision_source": "references/SOURCE_OF_TRUTH.md",
+      "review_required_before_use": false,
+      "notes": "Generated reports are discovery surfaces and cannot be primary evidence when source references are available."
+    },
+    {
+      "claim_id": "CL-EDGE-A15-A38",
+      "claim_type": "unit_prerequisite",
+      "subject_id": "A15",
+      "object_id": "A38",
+      "evidence_ids": ["EV-A15-A38-TARGET", "EV-A15-A38-MACHINE"],
+      "status": "accepted",
+      "decision_source": "reports/review-gates/GATE-R2-empty-needs/R2.4-mutation-review.json",
+      "review_required_before_use": false,
+      "notes": "Applied in R3.2 after human mutation review."
+    },
+    {
+      "claim_id": "CL-EDGE-A16-A15",
+      "claim_type": "unit_prerequisite",
+      "subject_id": "A16",
+      "object_id": "A15",
+      "evidence_ids": ["EV-A16-A17-A15-TARGET", "EV-A16-A17-A15-HUMAN"],
+      "status": "accepted",
+      "decision_source": "reports/review-gates/GATE-R2-empty-needs/R2.4-mutation-review.json",
+      "review_required_before_use": false,
+      "notes": "Direct A15 route accepted for now; later shared elasticity foundation remains possible."
+    },
+    {
+      "claim_id": "CL-EDGE-A17-A15",
+      "claim_type": "unit_prerequisite",
+      "subject_id": "A17",
+      "object_id": "A15",
+      "evidence_ids": ["EV-A16-A17-A15-TARGET", "EV-A16-A17-A15-HUMAN"],
+      "status": "accepted",
+      "decision_source": "reports/review-gates/GATE-R2-empty-needs/R2.4-mutation-review.json",
+      "review_required_before_use": false,
+      "notes": "Direct A15 route accepted for now; later shared elasticity foundation remains possible."
+    },
+    {
+      "claim_id": "CL-EDGE-D06-A15",
+      "claim_type": "unit_prerequisite",
+      "subject_id": "D06",
+      "object_id": "A15",
+      "evidence_ids": ["EV-D06-A15-EXAM"],
+      "status": "accepted",
+      "decision_source": "reports/review-gates/GATE-R2-empty-needs/R2.4-mutation-review.json",
+      "review_required_before_use": false,
+      "notes": "Applied in R3.2."
+    },
+    {
+      "claim_id": "CL-D04-DESIGN",
+      "claim_type": "unit_design_decision",
+      "subject_id": "D04",
+      "object_id": "retire-merge-or-redistribute",
+      "evidence_ids": ["EV-D04-DESIGN-TARGET"],
+      "status": "hold",
+      "decision_source": "reports/review-gates/GATE-R2-empty-needs/R2.4-mutation-review.json",
+      "review_required_before_use": true,
+      "notes": "Do not preserve D04 by adding a simple A15 dependency."
+    },
+    {
+      "claim_id": "CL-EDGE-L09-L05",
+      "claim_type": "unit_prerequisite",
+      "subject_id": "L09",
+      "object_id": "L05",
+      "evidence_ids": ["EV-L09-L05-TARGET"],
+      "status": "accepted",
+      "decision_source": "reports/review-gates/GATE-R2-empty-needs/R2.4-mutation-review.json",
+      "review_required_before_use": false,
+      "notes": "Applied in R3.2."
+    },
+    {
+      "claim_id": "CL-EDGE-D16-L10",
+      "claim_type": "unit_prerequisite",
+      "subject_id": "D16",
+      "object_id": "L10",
+      "evidence_ids": ["EV-D16-L10-TARGET", "EV-D16-EXAM"],
+      "status": "accepted",
+      "decision_source": "reports/review-gates/GATE-R2-empty-needs/R2.4-mutation-review.json",
+      "review_required_before_use": false,
+      "notes": "Applied in R3.2."
+    },
+    {
+      "claim_id": "CL-EDGE-D16-D34",
+      "claim_type": "unit_prerequisite",
+      "subject_id": "D16",
+      "object_id": "D34",
+      "evidence_ids": ["EV-D16-L10-TARGET", "EV-D16-EXAM"],
+      "status": "accepted",
+      "decision_source": "reports/review-gates/GATE-R5-alignment-graph/gate-closure.json",
+      "review_required_before_use": false,
+      "notes": "R5.3 confirmed D16 minimum-wage reasoning needs both L10 labor-market equilibrium transfer and D34 binding price-regulation logic."
+    },
+    {
+      "claim_id": "CL-EDGE-I04-L19",
+      "claim_type": "unit_prerequisite",
+      "subject_id": "I04",
+      "object_id": "L19",
+      "evidence_ids": ["EV-I04-I10-L19-TARGET"],
+      "status": "accepted",
+      "decision_source": "reports/review-gates/GATE-R2-empty-needs/R2.4-mutation-review.json",
+      "review_required_before_use": false,
+      "notes": "Applied in R3.2; later exact macro evidence anchors can strengthen this."
+    },
+    {
+      "claim_id": "CL-EDGE-I10-L19",
+      "claim_type": "unit_prerequisite",
+      "subject_id": "I10",
+      "object_id": "L19",
+      "evidence_ids": ["EV-I04-I10-L19-TARGET"],
+      "status": "accepted",
+      "decision_source": "reports/review-gates/GATE-R2-empty-needs/R2.4-mutation-review.json",
+      "review_required_before_use": false,
+      "notes": "Applied in R3.2; later exact macro evidence anchors can strengthen this."
+    },
+    {
+      "claim_id": "CL-EDGE-H14-I14",
+      "claim_type": "unit_prerequisite",
+      "subject_id": "H14",
+      "object_id": "I14",
+      "evidence_ids": ["EV-H14-I14-MACHINE", "EV-H14-I14-EXAM"],
+      "status": "accepted",
+      "decision_source": "reports/review-gates/GATE-R2-empty-needs/R2.4-mutation-review.json",
+      "review_required_before_use": false,
+      "notes": "Applied in R3.2."
+    },
+    {
+      "claim_id": "CL-EXAM-GAP-R4.2",
+      "claim_type": "exam_question_gap",
+      "subject_id": "references/external/exam-questions.json",
+      "object_id": "required-skill-and-exam-code-gap-queue",
+      "evidence_ids": ["EV-R4.2-EXAM-GAP-QUEUE"],
+      "status": "diagnostic",
+      "decision_source": "reports/json/exam-question-extraction-gaps.json",
+      "review_required_before_use": true,
+      "notes": "Generated report is secondary evidence; use source question records for each eventual annotation."
+    },
+    {
+      "claim_id": "CL-TERM-PRICE-ELASTICITY",
+      "claim_type": "term_definition",
+      "subject_id": "prijselasticiteit-van-de-vraag",
+      "object_id": "begrippen",
+      "evidence_ids": ["EV-TERM-PRICE-ELASTICITY-MACHINE"],
+      "status": "accepted",
+      "decision_source": "references/machine/begrippen.json",
+      "review_required_before_use": false,
+      "notes": "Machine registry is canonical for the current platform term definition."
+    }
+  ]
+}

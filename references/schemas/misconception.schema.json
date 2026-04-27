@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://4veco.local/references/schemas/misconception.schema.json",
+  "title": "Misconception",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["misconception_id", "title", "unit_ids"],
+  "properties": {
+    "misconception_id": { "type": "string" },
+    "title": { "type": "string" },
+    "unit_ids": { "type": "array", "items": { "type": "string" } },
+    "description_nl": { "type": "string" },
+    "evidence_ids": { "type": "array", "items": { "type": "string" } }
+  }
+}
