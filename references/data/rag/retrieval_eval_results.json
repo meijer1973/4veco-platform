@@ -1,0 +1,1574 @@
+{
+  "eval_set_id": "R7.3-retrieval-eval-set",
+  "schema_version": 1,
+  "generated_by": "build-scripts/rag/run-retrieval-evals.js",
+  "generated_on": "2026-04-27T06:49:48.683Z",
+  "source_files": [
+    "references/data/rag/retrieval_eval_set.json",
+    "references/data/rag/chunk_index.jsonl",
+    "build-scripts/rag/query.js"
+  ],
+  "summary": {
+    "case_count": 10,
+    "pass_count": 10,
+    "fail_count": 0,
+    "authority_violation_count": 0
+  },
+  "results": [
+    {
+      "query_id": "rag-eval-001",
+      "query": "Welke units ondersteunen prijselasticiteit?",
+      "status": "pass",
+      "result_count": 12,
+      "found_entities": [
+        "CL-TERM-PRICE-ELASTICITY",
+        "EDGE-TERM-DEFINED-IN-REGISTRY-PRIJSELASTICITEIT-VAN-DE-VRAAG-BEGRIPPEN",
+        "registry:begrippen",
+        "term:prijselasticiteit-van-de-vraag",
+        "D1.15",
+        "prijselasticiteit-en-to",
+        "A15",
+        "D06",
+        "D1.5",
+        "D25",
+        "H03",
+        "prijselasticiteit-van-de-vraag",
+        "dead-units",
+        "A2.4",
+        "A2.5",
+        "D1.3",
+        "D2.3",
+        "D24",
+        "betalingsbereidheid",
+        "marktmacht",
+        "prijsdiscriminatie",
+        "totale-opbrengst",
+        "H1.1",
+        "A01",
+        "A2.10",
+        "A2.9",
+        "A02",
+        "A2.12",
+        "A03"
+      ],
+      "found_source_types": [
+        "alignment_edge",
+        "machine_term",
+        "quality_report",
+        "machine_unit"
+      ],
+      "warnings_present": [
+        "diagnostic_only",
+        "generated_report_warning",
+        "not_primary_evidence"
+      ],
+      "expected_entities_missing": [],
+      "expected_source_types_missing": [],
+      "warnings_missing": [],
+      "authority_violations": [],
+      "top_results": [
+        {
+          "chunk_id": "alignment-edge:edge-term-defined-in-registry-prijselasticiteit-van-de-vraag-begrippen",
+          "score": 22,
+          "source_path": "references/data/alignment-graph.json",
+          "source_type": "alignment_edge",
+          "authority_level": "machine_registry",
+          "entity_ids": [
+            "CL-TERM-PRICE-ELASTICITY",
+            "EDGE-TERM-DEFINED-IN-REGISTRY-PRIJSELASTICITEIT-VAN-DE-VRAAG-BEGRIPPEN",
+            "registry:begrippen",
+            "term:prijselasticiteit-van-de-vraag"
+          ],
+          "evidence_ids": [
+            "EV-TERM-PRICE-ELASTICITY-MACHINE"
+          ],
+          "edge_statuses": [
+            "approved"
+          ],
+          "diagnostic_only": false,
+          "pending_review": false,
+          "generated_report_warning": false,
+          "not_primary_evidence": false,
+          "curriculum_authority": false,
+          "allowed_for_public_citation": false,
+          "text_excerpt": "EDGE-TERM-DEFINED-IN-REGISTRY-PRIJSELASTICITEIT-VAN-DE-VRAAG-BEGRIPPEN: term:prijselasticiteit-van-de-vraag term_defined_in_registry registry:begrippen. Status: approved. Governance: registry_lookup. Notes: Projected from validated claim; graph edge awaits human review unless status is updated by a gate."
+        },
+        {
+          "chunk_id": "machine-term:prijselasticiteit-en-to",
+          "score": 22,
+          "source_path": "references/machine/begrippen.json",
+          "source_type": "machine_term",
+          "authority_level": "machine_registry",
+          "entity_ids": [
+            "D1.15",
+            "prijselasticiteit-en-to"
+          ],
+          "evidence_ids": [],
+          "edge_statuses": [],
+          "diagnostic_only": false,
+          "pending_review": false,
+          "generated_report_warning": false,
+          "not_primary_evidence": false,
+          "curriculum_authority": true,
+          "allowed_for_public_citation": false,
+          "text_excerpt": "prijselasticiteit-en-to prijselasticiteit en TO. De richting waarin de totale opbrengst verandert bij een prijswijziging hangt af van de prijselasticiteit van de vraag. Bij een elastische vraag daalt TO als de prijs stijgt; bij een inelastische vraag stijgt TO. Formula: none. Pitfall: none."
+        },
+        {
+          "chunk_id": "machine-term:prijselasticiteit-van-de-vraag",
+          "score": 22,
+          "source_path": "references/machine/begrippen.json",
+          "source_type": "machine_term",
+          "authority_level": "machine_registry",
+          "entity_ids": [
+            "A15",
+            "D06",
+            "D1.5",
+            "D25",
+            "H03",
+            "prijselasticiteit-van-de-vraag"
+          ],
+          "evidence_ids": [],
+          "edge_statuses": [],
+          "diagnostic_only": false,
+          "pending_review": false,
+          "generated_report_warning": false,
+          "not_primary_evidence": false,
+          "curriculum_authority": true,
+          "allowed_for_public_citation": false,
+          "text_excerpt": "prijselasticiteit-van-de-vraag prijselasticiteit van de vraag. Maat voor de gevoeligheid van de gevraagde hoeveelheid voor een prijsverandering. De waarde is meestal negatief: een hogere prijs leidt tot een lagere gevraagde hoeveelheid. Formula: Ev = %ΔQv / %ΔP. Pitfall: Ev is meestal negatief. Staat er \"elasticiteit = 2\", dan wordt bijna altijd |Ev| bedoeld. Het teken vergeten is een klassieke fout.."
+        },
+        {
+          "chunk_id": "quality-report:dead-units.json",
+          "score": 22,
+          "source_path": "reports/json/dead-units.json",
+          "source_type": "quality_report",
+          "authority_level": "generated_report",
+          "entity_ids": [
+            "dead-units"
+          ],
+          "evidence_ids": [],
+          "edge_statuses": [],
+          "diagnostic_only": true,
+          "pending_review": false,
+          "generated_report_warning": true,
+          "not_primary_evidence": true,
+          "curriculum_authority": false,
+          "allowed_for_public_citation": false,
+          "text_excerpt": "dead-units: status warn; issues 10; summary {\"live_units\":190,\"cited_live_units\":180,\"uncited_live_units\":10}"
+        },
+        {
+          "chunk_id": "machine-unit:A15",
+          "score": 20,
+          "source_path": "references/machine/micro-teaching-units.json",
+          "source_type": "machine_unit",
+          "authority_level": "machine_registry",
+          "entity_ids": [
+            "A15",
+            "A2.4",
+            "A2.5",
+            "prijselasticiteit-van-de-vraag"
+          ],
+          "evidence_ids": [],
+          "edge_statuses": [],
+          "diagnostic_only": false,
+          "pending_review": false,
+          "generated_report_warning": false,
+          "not_primary_evidence": false,
+          "curriculum_authority": true,
+          "allowed_for_public_citation": false,
+          "text_excerpt": "A15 Prijselasticiteit van de vraag. Bereken de prijselasticiteit: Ev = %ΔQv / %ΔP. Bepaal of de vraag elastisch of inelastisch is. Needs: A04, A38. Terms: prijselasticiteit-van-de-vraag. Exam codes: A2.4, A2.5."
+        }
+      ],
+      "notes": "Checks that the retrieval layer finds the canonical price-elasticity unit and term rather than only generated reports."
+    },
+    {
+      "query_id": "rag-eval-002",
+      "query": "Welke examenvragen testen producentensurplus?",
+      "status": "pass",
+      "result_count": 12,
+      "found_entities": [
+        "A19",
+        "D28",
+        "D3.2",
+        "producentensurplus",
+        "A20",
+        "D1.21",
+        "D30",
+        "ha-1022-a-25-1-o-545",
+        "D3.1",
+        "ha-1022-a-25-1-o-546",
+        "A15",
+        "A17",
+        "A2.4",
+        "A2.5",
+        "ha-1022-a-25-2-o-573",
+        "D01",
+        "D03",
+        "ha-1022-a-25-2-o-574",
+        "A16",
+        "vw-1022-a-24-2-o-697",
+        "A2.16",
+        "A2.17",
+        "vw-1022-a-24-2-o-698",
+        "consumentensurplus",
+        "A36",
+        "D18",
+        "D2.3",
+        "D21",
+        "D22",
+        "D23",
+        "D24",
+        "prijsdiscriminatie",
+        "D3.8",
+        "prijsdiscriminatie-en-consumentensurplus"
+      ],
+      "found_source_types": [
+        "machine_term",
+        "exam_question",
+        "machine_unit",
+        "authored_reference"
+      ],
+      "warnings_present": [],
+      "expected_entities_missing": [],
+      "expected_source_types_missing": [],
+      "warnings_missing": [],
+      "authority_violations": [],
+      "top_results": [
+        {
+          "chunk_id": "machine-term:producentensurplus",
+          "score": 40,
+          "source_path": "references/machine/begrippen.json",
+          "source_type": "machine_term",
+          "authority_level": "machine_registry",
+          "entity_ids": [
+            "A19",
+            "D28",
+            "D3.2",
+            "producentensurplus"
+          ],
+          "evidence_ids": [],
+          "edge_statuses": [],
+          "diagnostic_only": false,
+          "pending_review": false,
+          "generated_report_warning": false,
+          "not_primary_evidence": false,
+          "curriculum_authority": true,
+          "allowed_for_public_citation": false,
+          "text_excerpt": "producentensurplus producentensurplus. Het verschil tussen de marktprijs en de minimumprijs waarvoor aanbieders bereid zijn te leveren. In een vraag-aanbod-diagram is het de driehoek onder de marktprijs en boven de aanbodlijn. Formula: PS = ½ × (P* − P_min) × Q* (bij lineaire aanbod). Pitfall: Het aanbieders-surplus is niet hetzelfde als winst: PS zegt niets over de constante kosten (TCK). Winst = PS − TCK op de lange termijn.."
+        },
+        {
+          "chunk_id": "exam-question:ha-1022-a-25-1-o-545",
+          "score": 26,
+          "source_path": "references/external/exam-questions.json",
+          "source_type": "exam_question",
+          "authority_level": "external_primary",
+          "entity_ids": [
+            "A20",
+            "D1.21",
+            "D30",
+            "ha-1022-a-25-1-o-545"
+          ],
+          "evidence_ids": [],
+          "edge_statuses": [],
+          "diagnostic_only": false,
+          "pending_review": false,
+          "generated_report_warning": false,
+          "not_primary_evidence": false,
+          "curriculum_authority": true,
+          "allowed_for_public_citation": true,
+          "text_excerpt": "ha-1022-a-25-1-o-545. Bereken het resultaat per dag van Hopi Bon. De welvaart die ontstaat op deze fietsverhuurmarkt kan worden gemeten aan de hand van het consumenten- en producentensurplus. Door een prijsverlaging stijgt de welvaart. Gebruik bron 1. Required skills: A20, D30. Exam codes: D1.21."
+        },
+        {
+          "chunk_id": "exam-question:ha-1022-a-25-1-o-546",
+          "score": 26,
+          "source_path": "references/external/exam-questions.json",
+          "source_type": "exam_question",
+          "authority_level": "external_primary",
+          "entity_ids": [
+            "D28",
+            "D3.1",
+            "ha-1022-a-25-1-o-546"
+          ],
+          "evidence_ids": [],
+          "edge_statuses": [],
+          "diagnostic_only": false,
+          "pending_review": false,
+          "generated_report_warning": false,
+          "not_primary_evidence": false,
+          "curriculum_authority": true,
+          "allowed_for_public_citation": true,
+          "text_excerpt": "ha-1022-a-25-1-o-546. Leg het welvaartseffect uit als Hopi Bon een lagere prijs rekent dan de prijs bij maximale winst. Doe het als volgt: Leg het effect van een lagere prijs uit op het consumentensurplus. Leg het effect van een lagere prijs uit op het dalende producentensurplus. Leg het effect van een lagere prijs uit op het stijgende producentensurplus. Hopi Bon wil starten met een huurprijs van $ 16, om daarna deze te verhogen naar $ 24. De directeur onderzoekt of het starten met een lage pri"
+        },
+        {
+          "chunk_id": "exam-question:ha-1022-a-25-2-o-573",
+          "score": 26,
+          "source_path": "references/external/exam-questions.json",
+          "source_type": "exam_question",
+          "authority_level": "external_primary",
+          "entity_ids": [
+            "A15",
+            "A17",
+            "A2.4",
+            "A2.5",
+            "ha-1022-a-25-2-o-573"
+          ],
+          "evidence_ids": [],
+          "edge_statuses": [],
+          "diagnostic_only": false,
+          "pending_review": false,
+          "generated_report_warning": false,
+          "not_primary_evidence": false,
+          "curriculum_authority": true,
+          "allowed_for_public_citation": true,
+          "text_excerpt": "ha-1022-a-25-2-o-573. Laat met een berekening zien dat de doelstelling van de Mexicaanse overheid wordt bereikt. noot 1 een pond = 500 gram De invoering van de suikeraccijns heeft gevolgen voor zowel het consumentensurplus als het producentensurplus op de markt van suiker (zie bron 2). Gebruik bron 2. Required skills: A15, A17. Exam codes: A2.4, A2.5."
+        },
+        {
+          "chunk_id": "exam-question:ha-1022-a-25-2-o-574",
+          "score": 26,
+          "source_path": "references/external/exam-questions.json",
+          "source_type": "exam_question",
+          "authority_level": "external_primary",
+          "entity_ids": [
+            "D01",
+            "D03",
+            "D3.1",
+            "ha-1022-a-25-2-o-574"
+          ],
+          "evidence_ids": [],
+          "edge_statuses": [],
+          "diagnostic_only": false,
+          "pending_review": false,
+          "generated_report_warning": false,
+          "not_primary_evidence": false,
+          "curriculum_authority": true,
+          "allowed_for_public_citation": true,
+          "text_excerpt": "ha-1022-a-25-2-o-574. Geef met letters het oppervlak aan dat het consumenten- en producentensurplus weergeeft en het oppervlak dat de accijnsopbrengst weergeeft na het heffen van de suikeraccijns. Neem daarvoor onderstaande tabel over op het antwoordblad en vul aan op de stippellijnen. oppervlak consumentensurplus ……….. oppervlak producentensurplus ……….. oppervlak accijnsopbrengst ……….. Required skills: D03, D01. Exam codes: D3.1."
+        }
+      ],
+      "notes": "Checks whether exam evidence and the surplus unit/term surface for producer-surplus search."
+    },
+    {
+      "query_id": "rag-eval-003",
+      "query": "Welke live units missen term links?",
+      "status": "pass",
+      "result_count": 12,
+      "found_entities": [
+        "terms-coverage",
+        "dead-units",
+        "terminology-drift",
+        "unit-term-slug-migration.json",
+        "aspects-coverage",
+        "begrippen-coverage",
+        "dag-integrity",
+        "needs-coverage",
+        "procedure-coverage",
+        "D1.12",
+        "verschuiving-collectieve-aanbodlijn",
+        "verschuiving-collectieve-vraaglijn",
+        "alignment-graph-integrity.json"
+      ],
+      "found_source_types": [
+        "quality_report",
+        "machine_term"
+      ],
+      "warnings_present": [
+        "diagnostic_only",
+        "generated_report_warning",
+        "not_primary_evidence"
+      ],
+      "expected_entities_missing": [],
+      "expected_source_types_missing": [],
+      "warnings_missing": [],
+      "authority_violations": [],
+      "top_results": [
+        {
+          "chunk_id": "quality-report:terms-coverage.json",
+          "score": 58,
+          "source_path": "reports/json/terms-coverage.json",
+          "source_type": "quality_report",
+          "authority_level": "generated_report",
+          "entity_ids": [
+            "terms-coverage"
+          ],
+          "evidence_ids": [],
+          "edge_statuses": [],
+          "diagnostic_only": true,
+          "pending_review": false,
+          "generated_report_warning": true,
+          "not_primary_evidence": true,
+          "curriculum_authority": false,
+          "allowed_for_public_citation": false,
+          "text_excerpt": "terms-coverage: status warn; issues 44; summary {\"live_units\":190,\"units_without_terms\":44}"
+        },
+        {
+          "chunk_id": "quality-report:dead-units.json",
+          "score": 50,
+          "source_path": "reports/json/dead-units.json",
+          "source_type": "quality_report",
+          "authority_level": "generated_report",
+          "entity_ids": [
+            "dead-units"
+          ],
+          "evidence_ids": [],
+          "edge_statuses": [],
+          "diagnostic_only": true,
+          "pending_review": false,
+          "generated_report_warning": true,
+          "not_primary_evidence": true,
+          "curriculum_authority": false,
+          "allowed_for_public_citation": false,
+          "text_excerpt": "dead-units: status warn; issues 10; summary {\"live_units\":190,\"cited_live_units\":180,\"uncited_live_units\":10}"
+        },
+        {
+          "chunk_id": "quality-report:terminology-drift.json",
+          "score": 42,
+          "source_path": "reports/json/terminology-drift.json",
+          "source_type": "quality_report",
+          "authority_level": "generated_report",
+          "entity_ids": [
+            "terminology-drift"
+          ],
+          "evidence_ids": [],
+          "edge_statuses": [],
+          "diagnostic_only": true,
+          "pending_review": false,
+          "generated_report_warning": true,
+          "not_primary_evidence": true,
+          "curriculum_authority": false,
+          "allowed_for_public_citation": false,
+          "text_excerpt": "terminology-drift: status fail; issues 2; summary {\"term_registry_entries\":225,\"unit_term_citations\":265}"
+        },
+        {
+          "chunk_id": "quality-report:unit-term-slug-migration.json",
+          "score": 42,
+          "source_path": "reports/json/unit-term-slug-migration.json",
+          "source_type": "quality_report",
+          "authority_level": "generated_report",
+          "entity_ids": [
+            "unit-term-slug-migration.json"
+          ],
+          "evidence_ids": [],
+          "edge_statuses": [],
+          "diagnostic_only": true,
+          "pending_review": false,
+          "generated_report_warning": true,
+          "not_primary_evidence": true,
+          "curriculum_authority": false,
+          "allowed_for_public_citation": false,
+          "text_excerpt": "unit-term-slug-migration.json: status unknown; issues 0; summary {}"
+        },
+        {
+          "chunk_id": "quality-report:aspects-coverage.json",
+          "score": 36,
+          "source_path": "reports/json/aspects-coverage.json",
+          "source_type": "quality_report",
+          "authority_level": "generated_report",
+          "entity_ids": [
+            "aspects-coverage"
+          ],
+          "evidence_ids": [],
+          "edge_statuses": [],
+          "diagnostic_only": true,
+          "pending_review": false,
+          "generated_report_warning": true,
+          "not_primary_evidence": true,
+          "curriculum_authority": false,
+          "allowed_for_public_citation": false,
+          "text_excerpt": "aspects-coverage: status pass; issues 0; summary {\"live_units\":190,\"units_without_aspects\":0}"
+        }
+      ],
+      "notes": "This is a health-report question; generated reports may guide review but must remain non-authoritative."
+    },
+    {
+      "query_id": "rag-eval-004",
+      "query": "Welke units hebben lege needs maar zijn false_zero?",
+      "status": "pass",
+      "result_count": 12,
+      "found_entities": [
+        "empty-needs-audit-summary",
+        "needs-coverage",
+        "dead-units",
+        "H16",
+        "H5.1",
+        "risico",
+        "H1.1",
+        "H17",
+        "investeringen",
+        "A2.10",
+        "A2.12",
+        "A2.15",
+        "L10",
+        "arbeidsaanbod",
+        "arbeidsvraag",
+        "L18",
+        "aspects-coverage",
+        "begrippen-coverage",
+        "dag-integrity",
+        "procedure-coverage",
+        "terms-coverage"
+      ],
+      "found_source_types": [
+        "quality_report",
+        "machine_unit"
+      ],
+      "warnings_present": [
+        "diagnostic_only",
+        "generated_report_warning",
+        "not_primary_evidence"
+      ],
+      "expected_entities_missing": [],
+      "expected_source_types_missing": [],
+      "warnings_missing": [],
+      "authority_violations": [],
+      "top_results": [
+        {
+          "chunk_id": "quality-report:empty-needs-audit-summary.json",
+          "score": 50,
+          "source_path": "reports/json/empty-needs-audit-summary.json",
+          "source_type": "quality_report",
+          "authority_level": "generated_report",
+          "entity_ids": [
+            "empty-needs-audit-summary"
+          ],
+          "evidence_ids": [],
+          "edge_statuses": [],
+          "diagnostic_only": true,
+          "pending_review": false,
+          "generated_report_warning": true,
+          "not_primary_evidence": true,
+          "curriculum_authority": false,
+          "allowed_for_public_citation": false,
+          "text_excerpt": "empty-needs-audit-summary: status warn; issues 52; summary {\"live_unit_count\":190,\"empty_needs_count\":61,\"by_status\":{\"underbouw_assumed\":8,\"false_zero\":17,\"true_zero\":1,\"ambiguous\":35}}"
+        },
+        {
+          "chunk_id": "quality-report:needs-coverage.json",
+          "score": 50,
+          "source_path": "reports/json/needs-coverage.json",
+          "source_type": "quality_report",
+          "authority_level": "generated_report",
+          "entity_ids": [
+            "needs-coverage"
+          ],
+          "evidence_ids": [],
+          "edge_statuses": [],
+          "diagnostic_only": true,
+          "pending_review": false,
+          "generated_report_warning": true,
+          "not_primary_evidence": true,
+          "curriculum_authority": false,
+          "allowed_for_public_citation": false,
+          "text_excerpt": "needs-coverage: status warn; issues 48; summary {\"live_units\":190,\"empty_needs\":48}"
+        },
+        {
+          "chunk_id": "quality-report:dead-units.json",
+          "score": 42,
+          "source_path": "reports/json/dead-units.json",
+          "source_type": "quality_report",
+          "authority_level": "generated_report",
+          "entity_ids": [
+            "dead-units"
+          ],
+          "evidence_ids": [],
+          "edge_statuses": [],
+          "diagnostic_only": true,
+          "pending_review": false,
+          "generated_report_warning": true,
+          "not_primary_evidence": true,
+          "curriculum_authority": false,
+          "allowed_for_public_citation": false,
+          "text_excerpt": "dead-units: status warn; issues 10; summary {\"live_units\":190,\"cited_live_units\":180,\"uncited_live_units\":10}"
+        },
+        {
+          "chunk_id": "machine-unit:H16",
+          "score": 28,
+          "source_path": "references/machine/micro-teaching-units.json",
+          "source_type": "machine_unit",
+          "authority_level": "machine_registry",
+          "entity_ids": [
+            "H16",
+            "H5.1",
+            "risico"
+          ],
+          "evidence_ids": [],
+          "edge_statuses": [],
+          "diagnostic_only": false,
+          "pending_review": false,
+          "generated_report_warning": false,
+          "not_primary_evidence": false,
+          "curriculum_authority": true,
+          "allowed_for_public_citation": false,
+          "text_excerpt": "H16 Soepeler ontslagrecht en werkgeversrisico. Leg uit hoe versoepeling van ontslagrecht het aannamerisico voor werkgevers verlaagt en het effect op werkgelegenheid beredeneer. Needs: none. Terms: risico. Exam codes: H5.1."
+        },
+        {
+          "chunk_id": "machine-unit:H17",
+          "score": 28,
+          "source_path": "references/machine/micro-teaching-units.json",
+          "source_type": "machine_unit",
+          "authority_level": "machine_registry",
+          "entity_ids": [
+            "H1.1",
+            "H17",
+            "investeringen"
+          ],
+          "evidence_ids": [],
+          "edge_statuses": [],
+          "diagnostic_only": false,
+          "pending_review": false,
+          "generated_report_warning": false,
+          "not_primary_evidence": false,
+          "curriculum_authority": true,
+          "allowed_for_public_citation": false,
+          "text_excerpt": "H17 Arbeidsproductiviteit, werkgelegenheid en lange termijn. Onderscheid het korte-termijn werkgelegenheidseffect van productiviteitsverhogende investeringen van het lange-termijn concurrentie-effect. Needs: H13. Terms: investeringen. Exam codes: H1.1."
+        }
+      ],
+      "notes": "Checks that false_zero empty-needs status is visible as a generated diagnostic, not curriculum authority."
+    },
+    {
+      "query_id": "rag-eval-005",
+      "query": "Welke target exercises hebben nog missing-unit flags?",
+      "status": "pass",
+      "result_count": 12,
+      "found_entities": [
+        "blueprint-flag-triage.json",
+        "EV-A15-A38-TARGET",
+        "course-target-exercises-v4",
+        "EV-A16-A17-A15-TARGET",
+        "EV-D04-DESIGN-TARGET",
+        "EV-D16-L10-TARGET",
+        "EV-I04-I10-L19-TARGET",
+        "EV-L09-L05-TARGET",
+        "CL-D04-DESIGN",
+        "EDGE-DERIVED-FROM-CL-D04-DESIGN-EV-D04-DESIGN-TARGET",
+        "claim:CL-D04-DESIGN",
+        "evidence:EV-D04-DESIGN-TARGET",
+        "CL-EDGE-A15-A38",
+        "EDGE-DERIVED-FROM-CL-EDGE-A15-A38-EV-A15-A38-TARGET",
+        "claim:CL-EDGE-A15-A38",
+        "evidence:EV-A15-A38-TARGET",
+        "CL-EDGE-A16-A15",
+        "EDGE-DERIVED-FROM-CL-EDGE-A16-A15-EV-A16-A17-A15-TARGET",
+        "claim:CL-EDGE-A16-A15",
+        "evidence:EV-A16-A17-A15-TARGET",
+        "CL-EDGE-A17-A15",
+        "EDGE-DERIVED-FROM-CL-EDGE-A17-A15-EV-A16-A17-A15-TARGET",
+        "claim:CL-EDGE-A17-A15"
+      ],
+      "found_source_types": [
+        "target_exercise",
+        "quality_report",
+        "evidence_anchor",
+        "alignment_edge"
+      ],
+      "warnings_present": [
+        "diagnostic_only",
+        "generated_report_warning",
+        "not_primary_evidence",
+        "pending_review"
+      ],
+      "expected_entities_missing": [],
+      "expected_source_types_missing": [],
+      "warnings_missing": [],
+      "authority_violations": [],
+      "top_results": [
+        {
+          "chunk_id": "target-exercise:course-target-exercises",
+          "score": 66,
+          "source_path": "references/authored/course-target-exercises.json",
+          "source_type": "target_exercise",
+          "authority_level": "authored_judgement",
+          "entity_ids": [],
+          "evidence_ids": [],
+          "edge_statuses": [],
+          "diagnostic_only": false,
+          "pending_review": false,
+          "generated_report_warning": false,
+          "not_primary_evidence": false,
+          "curriculum_authority": true,
+          "allowed_for_public_citation": false,
+          "text_excerpt": "{\"schema_version\":1,\"blueprint_version\":\"v4\",\"blueprint_source\":\"knowledge/course_blueprint_v4.md\",\"_schema_doc\":{\"id\":\"Stable identifier '<module>.<chapter>.<paragraph>' (matches platform folder convention 3.1.1). Permanent once minted.\",\"module\":\"1-4 (the platform's top-level unit; equals 'Module N' in the blueprint)\",\"chapter\":\"1-5 (5 = test prep)\",\"paragraph\":\"1-5 (last is consolidation in theory chapters)\",\"paragraph_title\":\"Verbatim from blueprint header (without difficulty marker).\",\"diff"
+        },
+        {
+          "chunk_id": "quality-report:blueprint-flag-triage.json",
+          "score": 60,
+          "source_path": "reports/json/blueprint-flag-triage.json",
+          "source_type": "quality_report",
+          "authority_level": "generated_report",
+          "entity_ids": [
+            "blueprint-flag-triage.json"
+          ],
+          "evidence_ids": [],
+          "edge_statuses": [],
+          "diagnostic_only": true,
+          "pending_review": false,
+          "generated_report_warning": true,
+          "not_primary_evidence": true,
+          "curriculum_authority": false,
+          "allowed_for_public_citation": false,
+          "text_excerpt": "blueprint-flag-triage.json: status unknown; issues 0; summary {\"by_decision_category\":{\"still_needed\":68,\"defer\":11,\"duplicate\":1,\"existing_unit_match\":4},\"by_priority\":{\"high\":30,\"medium\":42,\"low\":12},\"by_next_action\":{\"review_for_cli_unit_creation_or_existing_A_domain_merge\":30,\"review_for_concept_unit_or_merge_with_existing_unit\":38,\"keep_for_later_integration_or_verbal-design_review\":11,\"merge_with_existing_triage_record\":1,\"review_existing_unit_scope\":4}}"
+        },
+        {
+          "chunk_id": "evidence-anchor:ev-a15-a38-target",
+          "score": 30,
+          "source_path": "references/data/evidence-anchors.json",
+          "source_type": "evidence_anchor",
+          "authority_level": "authored_judgement",
+          "entity_ids": [
+            "EV-A15-A38-TARGET",
+            "course-target-exercises-v4"
+          ],
+          "evidence_ids": [
+            "EV-A15-A38-TARGET"
+          ],
+          "edge_statuses": [],
+          "diagnostic_only": false,
+          "pending_review": false,
+          "generated_report_warning": false,
+          "not_primary_evidence": false,
+          "curriculum_authority": true,
+          "allowed_for_public_citation": false,
+          "text_excerpt": "EV-A15-A38-TARGET: A15 price elasticity depends on percentage-change fluency from A38.. The target exercise first asks students to calculate percentage changes in price and quantity before calculating price elasticity. Source: references/authored/course-target-exercises.json."
+        },
+        {
+          "chunk_id": "evidence-anchor:ev-a16-a17-a15-target",
+          "score": 30,
+          "source_path": "references/data/evidence-anchors.json",
+          "source_type": "evidence_anchor",
+          "authority_level": "authored_judgement",
+          "entity_ids": [
+            "EV-A16-A17-A15-TARGET",
+            "course-target-exercises-v4"
+          ],
+          "evidence_ids": [
+            "EV-A16-A17-A15-TARGET"
+          ],
+          "edge_statuses": [],
+          "diagnostic_only": false,
+          "pending_review": false,
+          "generated_report_warning": false,
+          "not_primary_evidence": false,
+          "curriculum_authority": true,
+          "allowed_for_public_citation": false,
+          "text_excerpt": "EV-A16-A17-A15-TARGET: A16 and A17 can route through A15 as the current shared elasticity prerequisite.. Income elasticity and cross elasticity use the same percentage-change-over-percentage-change schema as price elasticity, with different variables. Source: references/authored/course-target-exercises.json."
+        },
+        {
+          "chunk_id": "evidence-anchor:ev-d04-design-target",
+          "score": 30,
+          "source_path": "references/data/evidence-anchors.json",
+          "source_type": "evidence_anchor",
+          "authority_level": "authored_judgement",
+          "entity_ids": [
+            "EV-D04-DESIGN-TARGET",
+            "course-target-exercises-v4"
+          ],
+          "evidence_ids": [
+            "EV-D04-DESIGN-TARGET"
+          ],
+          "edge_statuses": [],
+          "diagnostic_only": false,
+          "pending_review": false,
+          "generated_report_warning": false,
+          "not_primary_evidence": false,
+          "curriculum_authority": true,
+          "allowed_for_public_citation": false,
+          "text_excerpt": "EV-D04-DESIGN-TARGET: D04 should be reviewed for retire, merge, or redistribution rather than preserved by adding a simple A15 dependency.. Goods classification appears inside income and cross elasticity work rather than as a clean separate target skill. Source: references/authored/course-target-exercises.json."
+        }
+      ],
+      "notes": "Checks target-exercise missing-unit triage surfacing through diagnostic reports."
+    },
+    {
+      "query_id": "rag-eval-006",
+      "query": "Welke begrippen met formules missen pitfalls?",
+      "status": "pass",
+      "result_count": 12,
+      "found_entities": [
+        "EV-TERM-PRICE-ELASTICITY-MACHINE",
+        "begrippen",
+        "CL-TERM-PRICE-ELASTICITY",
+        "EDGE-TERM-DEFINED-IN-REGISTRY-PRIJSELASTICITEIT-VAN-DE-VRAAG-BEGRIPPEN",
+        "registry:begrippen",
+        "term:prijselasticiteit-van-de-vraag",
+        "begrippen-coverage",
+        "G5.2",
+        "aandelen",
+        "H4.6",
+        "accijnzen",
+        "H2.2",
+        "afnemende-meeropbrengsten",
+        "aftrekposten-en-bijtellingen",
+        "I01",
+        "I02",
+        "I2.1",
+        "anticyclisch",
+        "I3.8",
+        "appreciatie",
+        "arbeid",
+        "H23",
+        "H5.1",
+        "I04",
+        "I11",
+        "L05",
+        "L10",
+        "arbeidsaanbod"
+      ],
+      "found_source_types": [
+        "evidence_anchor",
+        "alignment_edge",
+        "quality_report",
+        "authored_reference",
+        "machine_term"
+      ],
+      "warnings_present": [
+        "diagnostic_only",
+        "generated_report_warning",
+        "not_primary_evidence"
+      ],
+      "expected_entities_missing": [],
+      "expected_source_types_missing": [],
+      "warnings_missing": [],
+      "authority_violations": [],
+      "top_results": [
+        {
+          "chunk_id": "evidence-anchor:ev-term-price-elasticity-machine",
+          "score": 26,
+          "source_path": "references/data/evidence-anchors.json",
+          "source_type": "evidence_anchor",
+          "authority_level": "machine_registry",
+          "entity_ids": [
+            "EV-TERM-PRICE-ELASTICITY-MACHINE",
+            "begrippen"
+          ],
+          "evidence_ids": [
+            "EV-TERM-PRICE-ELASTICITY-MACHINE"
+          ],
+          "edge_statuses": [],
+          "diagnostic_only": false,
+          "pending_review": false,
+          "generated_report_warning": false,
+          "not_primary_evidence": false,
+          "curriculum_authority": true,
+          "allowed_for_public_citation": false,
+          "text_excerpt": "EV-TERM-PRICE-ELASTICITY-MACHINE: Term definitions can be anchored to the machine term registry while external/source evidence remains separate.. The machine term registry contains the canonical term ID and definition for prijselasticiteit van de vraag. Source: references/machine/begrippen.json."
+        },
+        {
+          "chunk_id": "alignment-edge:edge-term-defined-in-registry-prijselasticiteit-van-de-vraag-begrippen",
+          "score": 22,
+          "source_path": "references/data/alignment-graph.json",
+          "source_type": "alignment_edge",
+          "authority_level": "machine_registry",
+          "entity_ids": [
+            "CL-TERM-PRICE-ELASTICITY",
+            "EDGE-TERM-DEFINED-IN-REGISTRY-PRIJSELASTICITEIT-VAN-DE-VRAAG-BEGRIPPEN",
+            "registry:begrippen",
+            "term:prijselasticiteit-van-de-vraag"
+          ],
+          "evidence_ids": [
+            "EV-TERM-PRICE-ELASTICITY-MACHINE"
+          ],
+          "edge_statuses": [
+            "approved"
+          ],
+          "diagnostic_only": false,
+          "pending_review": false,
+          "generated_report_warning": false,
+          "not_primary_evidence": false,
+          "curriculum_authority": false,
+          "allowed_for_public_citation": false,
+          "text_excerpt": "EDGE-TERM-DEFINED-IN-REGISTRY-PRIJSELASTICITEIT-VAN-DE-VRAAG-BEGRIPPEN: term:prijselasticiteit-van-de-vraag term_defined_in_registry registry:begrippen. Status: approved. Governance: registry_lookup. Notes: Projected from validated claim; graph edge awaits human review unless status is updated by a gate."
+        },
+        {
+          "chunk_id": "quality-report:begrippen-coverage.json",
+          "score": 22,
+          "source_path": "reports/json/begrippen-coverage.json",
+          "source_type": "quality_report",
+          "authority_level": "generated_report",
+          "entity_ids": [
+            "begrippen-coverage"
+          ],
+          "evidence_ids": [],
+          "edge_statuses": [],
+          "diagnostic_only": true,
+          "pending_review": false,
+          "generated_report_warning": true,
+          "not_primary_evidence": true,
+          "curriculum_authority": false,
+          "allowed_for_public_citation": false,
+          "text_excerpt": "begrippen-coverage: status warn; issues 130; summary {\"terms\":225,\"terms_without_teaching_units\":130}"
+        },
+        {
+          "chunk_id": "authored-reference:references-authored-skill-categories.md",
+          "score": 16,
+          "source_path": "references/authored/skill-categories.md",
+          "source_type": "authored_reference",
+          "authority_level": "authored_judgement",
+          "entity_ids": [],
+          "evidence_ids": [],
+          "edge_statuses": [],
+          "diagnostic_only": false,
+          "pending_review": false,
+          "generated_report_warning": false,
+          "not_primary_evidence": false,
+          "curriculum_authority": false,
+          "allowed_for_public_citation": false,
+          "text_excerpt": "# Skill-categorieën — Reference for Economics Materials ``` last_verified: 2026-04-19 source: consolidated from vraagtypen-en-opgaveontwerp.md, didactiek-principes.md, economie-terminologie.md, economic_mathematical_precision_reference.md, inspectie-standaarden.md, engines/skilltree/base-elements.js, syllabus-economie-vwo-2026-versie-2.pdf research_base: CvTE examenprogramma economie vwo 2026 (Domein A), Tweede Commissie Teulings, Bloom's taxonomy ``` Dit document is de **single source of truth*"
+        },
+        {
+          "chunk_id": "machine-term:aandelen",
+          "score": 14,
+          "source_path": "references/machine/begrippen.json",
+          "source_type": "machine_term",
+          "authority_level": "machine_registry",
+          "entity_ids": [
+            "G5.2",
+            "aandelen"
+          ],
+          "evidence_ids": [],
+          "edge_statuses": [],
+          "diagnostic_only": false,
+          "pending_review": false,
+          "generated_report_warning": false,
+          "not_primary_evidence": false,
+          "curriculum_authority": true,
+          "allowed_for_public_citation": false,
+          "text_excerpt": "aandelen aandelen. Bewijzen van mede-eigendom in een bedrijf. De houder deelt in winst (dividend) en koersschommelingen; hoger risico dan obligaties maar meestal hoger verwacht rendement. Formula: none. Pitfall: Dividend is NIET gegarandeerd — een bedrijf kan besluiten geen dividend uit te keren. Aandelen lopen daarnaast koersrisico; het verwachte rendement hoort daarom hoger te liggen dan bij obligaties.."
+        }
+      ],
+      "notes": "Checks term registry retrieval for formula/pitfall inspection; exact missing-pitfall diagnosis is not a curriculum claim."
+    },
+    {
+      "query_id": "rag-eval-007",
+      "query": "Welke deprecated units worden nog geciteerd?",
+      "status": "pass",
+      "result_count": 12,
+      "found_entities": [
+        "dead-units",
+        "dag-integrity",
+        "unresolved-refs",
+        "aspects-coverage",
+        "begrippen-coverage",
+        "needs-coverage",
+        "procedure-coverage",
+        "reference-cli-coverage.json",
+        "terms-coverage",
+        "alignment-graph-integrity.json",
+        "blueprint-flag-triage.json",
+        "empty-needs-audit-summary"
+      ],
+      "found_source_types": [
+        "quality_report"
+      ],
+      "warnings_present": [
+        "diagnostic_only",
+        "generated_report_warning",
+        "not_primary_evidence"
+      ],
+      "expected_entities_missing": [],
+      "expected_source_types_missing": [],
+      "warnings_missing": [],
+      "authority_violations": [],
+      "top_results": [
+        {
+          "chunk_id": "quality-report:dead-units.json",
+          "score": 42,
+          "source_path": "reports/json/dead-units.json",
+          "source_type": "quality_report",
+          "authority_level": "generated_report",
+          "entity_ids": [
+            "dead-units"
+          ],
+          "evidence_ids": [],
+          "edge_statuses": [],
+          "diagnostic_only": true,
+          "pending_review": false,
+          "generated_report_warning": true,
+          "not_primary_evidence": true,
+          "curriculum_authority": false,
+          "allowed_for_public_citation": false,
+          "text_excerpt": "dead-units: status warn; issues 10; summary {\"live_units\":190,\"cited_live_units\":180,\"uncited_live_units\":10}"
+        },
+        {
+          "chunk_id": "quality-report:dag-integrity.json",
+          "score": 36,
+          "source_path": "reports/json/dag-integrity.json",
+          "source_type": "quality_report",
+          "authority_level": "generated_report",
+          "entity_ids": [
+            "dag-integrity"
+          ],
+          "evidence_ids": [],
+          "edge_statuses": [],
+          "diagnostic_only": true,
+          "pending_review": false,
+          "generated_report_warning": true,
+          "not_primary_evidence": true,
+          "curriculum_authority": false,
+          "allowed_for_public_citation": false,
+          "text_excerpt": "dag-integrity: status pass; issues 0; summary {\"units\":192,\"live_units\":190,\"deprecated_units\":2}"
+        },
+        {
+          "chunk_id": "quality-report:unresolved-refs.json",
+          "score": 36,
+          "source_path": "reports/json/unresolved-refs.json",
+          "source_type": "quality_report",
+          "authority_level": "generated_report",
+          "entity_ids": [
+            "unresolved-refs"
+          ],
+          "evidence_ids": [],
+          "edge_statuses": [],
+          "diagnostic_only": true,
+          "pending_review": false,
+          "generated_report_warning": true,
+          "not_primary_evidence": true,
+          "curriculum_authority": false,
+          "allowed_for_public_citation": false,
+          "text_excerpt": "unresolved-refs: status warn; issues 21; summary {\"deprecated_units\":2,\"deprecated_citations\":21}"
+        },
+        {
+          "chunk_id": "quality-report:aspects-coverage.json",
+          "score": 28,
+          "source_path": "reports/json/aspects-coverage.json",
+          "source_type": "quality_report",
+          "authority_level": "generated_report",
+          "entity_ids": [
+            "aspects-coverage"
+          ],
+          "evidence_ids": [],
+          "edge_statuses": [],
+          "diagnostic_only": true,
+          "pending_review": false,
+          "generated_report_warning": true,
+          "not_primary_evidence": true,
+          "curriculum_authority": false,
+          "allowed_for_public_citation": false,
+          "text_excerpt": "aspects-coverage: status pass; issues 0; summary {\"live_units\":190,\"units_without_aspects\":0}"
+        },
+        {
+          "chunk_id": "quality-report:begrippen-coverage.json",
+          "score": 28,
+          "source_path": "reports/json/begrippen-coverage.json",
+          "source_type": "quality_report",
+          "authority_level": "generated_report",
+          "entity_ids": [
+            "begrippen-coverage"
+          ],
+          "evidence_ids": [],
+          "edge_statuses": [],
+          "diagnostic_only": true,
+          "pending_review": false,
+          "generated_report_warning": true,
+          "not_primary_evidence": true,
+          "curriculum_authority": false,
+          "allowed_for_public_citation": false,
+          "text_excerpt": "begrippen-coverage: status warn; issues 130; summary {\"terms\":225,\"terms_without_teaching_units\":130}"
+        }
+      ],
+      "notes": "Checks deprecated/citation health surfacing as diagnostics."
+    },
+    {
+      "query_id": "rag-eval-008",
+      "query": "Welke edges zijn diagnostic_only?",
+      "status": "pass",
+      "result_count": 12,
+      "found_entities": [
+        "CL-EXAM-GAP-R4.2",
+        "EDGE-DERIVED-FROM-CL-EXAM-GAP-R4.2-EV-R4.2-EXAM-GAP-QUEUE",
+        "claim:CL-EXAM-GAP-R4.2",
+        "evidence:EV-R4.2-EXAM-GAP-QUEUE",
+        "EDGE-QUALITY-ISSUE-AFFECTS-EXAM-QUESTION-REFERENCES-EXTERNAL-EXAM-QUESTIONS.JSON-REQUIRED-SKILL-AND-EXAM-CODE-GAP-QUEUE",
+        "issue:required-skill-and-exam-code-gap-queue",
+        "source:references/external/exam-questions.json",
+        "CL-D04-DESIGN",
+        "EDGE-DERIVED-FROM-CL-D04-DESIGN-EV-D04-DESIGN-TARGET",
+        "claim:CL-D04-DESIGN",
+        "evidence:EV-D04-DESIGN-TARGET",
+        "CL-EDGE-A15-A38",
+        "EDGE-DERIVED-FROM-CL-EDGE-A15-A38-EV-A15-A38-MACHINE",
+        "claim:CL-EDGE-A15-A38",
+        "evidence:EV-A15-A38-MACHINE",
+        "EDGE-DERIVED-FROM-CL-EDGE-A15-A38-EV-A15-A38-TARGET",
+        "evidence:EV-A15-A38-TARGET",
+        "CL-EDGE-A16-A15",
+        "EDGE-DERIVED-FROM-CL-EDGE-A16-A15-EV-A16-A17-A15-HUMAN",
+        "claim:CL-EDGE-A16-A15",
+        "evidence:EV-A16-A17-A15-HUMAN",
+        "EDGE-DERIVED-FROM-CL-EDGE-A16-A15-EV-A16-A17-A15-TARGET",
+        "evidence:EV-A16-A17-A15-TARGET",
+        "CL-EDGE-A17-A15",
+        "EDGE-DERIVED-FROM-CL-EDGE-A17-A15-EV-A16-A17-A15-HUMAN",
+        "claim:CL-EDGE-A17-A15",
+        "EDGE-DERIVED-FROM-CL-EDGE-A17-A15-EV-A16-A17-A15-TARGET",
+        "CL-EDGE-D06-A15",
+        "EDGE-DERIVED-FROM-CL-EDGE-D06-A15-EV-D06-A15-EXAM",
+        "claim:CL-EDGE-D06-A15",
+        "evidence:EV-D06-A15-EXAM",
+        "CL-EDGE-D16-D34",
+        "EDGE-DERIVED-FROM-CL-EDGE-D16-D34-EV-D16-EXAM",
+        "claim:CL-EDGE-D16-D34",
+        "evidence:EV-D16-EXAM",
+        "EDGE-DERIVED-FROM-CL-EDGE-D16-D34-EV-D16-L10-TARGET",
+        "evidence:EV-D16-L10-TARGET"
+      ],
+      "found_source_types": [
+        "alignment_edge"
+      ],
+      "warnings_present": [
+        "diagnostic_only",
+        "generated_report_warning",
+        "not_primary_evidence",
+        "pending_review"
+      ],
+      "expected_entities_missing": [],
+      "expected_source_types_missing": [],
+      "warnings_missing": [],
+      "authority_violations": [],
+      "top_results": [
+        {
+          "chunk_id": "alignment-edge:edge-derived-from-cl-exam-gap-r4.2-ev-r4.2-exam-gap-queue",
+          "score": 56,
+          "source_path": "references/data/alignment-graph.json",
+          "source_type": "alignment_edge",
+          "authority_level": "generated_report",
+          "entity_ids": [
+            "CL-EXAM-GAP-R4.2",
+            "EDGE-DERIVED-FROM-CL-EXAM-GAP-R4.2-EV-R4.2-EXAM-GAP-QUEUE",
+            "claim:CL-EXAM-GAP-R4.2",
+            "evidence:EV-R4.2-EXAM-GAP-QUEUE"
+          ],
+          "evidence_ids": [
+            "EV-R4.2-EXAM-GAP-QUEUE"
+          ],
+          "edge_statuses": [
+            "diagnostic_only"
+          ],
+          "diagnostic_only": true,
+          "pending_review": false,
+          "generated_report_warning": true,
+          "not_primary_evidence": true,
+          "curriculum_authority": false,
+          "allowed_for_public_citation": false,
+          "text_excerpt": "EDGE-DERIVED-FROM-CL-EXAM-GAP-R4.2-EV-R4.2-EXAM-GAP-QUEUE: claim:CL-EXAM-GAP-R4.2 derived_from evidence:EV-R4.2-EXAM-GAP-QUEUE. Status: diagnostic_only. Governance: diagnostic. Notes: Traceability edge from claim to evidence anchor."
+        },
+        {
+          "chunk_id": "alignment-edge:edge-quality-issue-affects-exam-question-references-external-exam-questions.json-required-skill-and-exam-code-gap-queue",
+          "score": 56,
+          "source_path": "references/data/alignment-graph.json",
+          "source_type": "alignment_edge",
+          "authority_level": "generated_report",
+          "entity_ids": [
+            "CL-EXAM-GAP-R4.2",
+            "EDGE-QUALITY-ISSUE-AFFECTS-EXAM-QUESTION-REFERENCES-EXTERNAL-EXAM-QUESTIONS.JSON-REQUIRED-SKILL-AND-EXAM-CODE-GAP-QUEUE",
+            "issue:required-skill-and-exam-code-gap-queue",
+            "source:references/external/exam-questions.json"
+          ],
+          "evidence_ids": [
+            "EV-R4.2-EXAM-GAP-QUEUE"
+          ],
+          "edge_statuses": [
+            "diagnostic_only"
+          ],
+          "diagnostic_only": true,
+          "pending_review": false,
+          "generated_report_warning": true,
+          "not_primary_evidence": true,
+          "curriculum_authority": false,
+          "allowed_for_public_citation": false,
+          "text_excerpt": "EDGE-QUALITY-ISSUE-AFFECTS-EXAM-QUESTION-REFERENCES-EXTERNAL-EXAM-QUESTIONS.JSON-REQUIRED-SKILL-AND-EXAM-CODE-GAP-QUEUE: source:references/external/exam-questions.json quality_issue_affects_exam_question issue:required-skill-and-exam-code-gap-queue. Status: diagnostic_only. Governance: quality_control. Notes: Underlying claim requires review before use."
+        },
+        {
+          "chunk_id": "alignment-edge:edge-derived-from-cl-d04-design-ev-d04-design-target",
+          "score": 18,
+          "source_path": "references/data/alignment-graph.json",
+          "source_type": "alignment_edge",
+          "authority_level": "authored_judgement",
+          "entity_ids": [
+            "CL-D04-DESIGN",
+            "EDGE-DERIVED-FROM-CL-D04-DESIGN-EV-D04-DESIGN-TARGET",
+            "claim:CL-D04-DESIGN",
+            "evidence:EV-D04-DESIGN-TARGET"
+          ],
+          "evidence_ids": [
+            "EV-D04-DESIGN-TARGET"
+          ],
+          "edge_statuses": [
+            "pending_review"
+          ],
+          "diagnostic_only": false,
+          "pending_review": true,
+          "generated_report_warning": false,
+          "not_primary_evidence": false,
+          "curriculum_authority": false,
+          "allowed_for_public_citation": false,
+          "text_excerpt": "EDGE-DERIVED-FROM-CL-D04-DESIGN-EV-D04-DESIGN-TARGET: claim:CL-D04-DESIGN derived_from evidence:EV-D04-DESIGN-TARGET. Status: pending_review. Governance: traceability. Notes: Traceability edge from claim to evidence anchor."
+        },
+        {
+          "chunk_id": "alignment-edge:edge-derived-from-cl-edge-a15-a38-ev-a15-a38-machine",
+          "score": 18,
+          "source_path": "references/data/alignment-graph.json",
+          "source_type": "alignment_edge",
+          "authority_level": "machine_registry",
+          "entity_ids": [
+            "CL-EDGE-A15-A38",
+            "EDGE-DERIVED-FROM-CL-EDGE-A15-A38-EV-A15-A38-MACHINE",
+            "claim:CL-EDGE-A15-A38",
+            "evidence:EV-A15-A38-MACHINE"
+          ],
+          "evidence_ids": [
+            "EV-A15-A38-MACHINE"
+          ],
+          "edge_statuses": [
+            "pending_review"
+          ],
+          "diagnostic_only": false,
+          "pending_review": true,
+          "generated_report_warning": false,
+          "not_primary_evidence": false,
+          "curriculum_authority": false,
+          "allowed_for_public_citation": false,
+          "text_excerpt": "EDGE-DERIVED-FROM-CL-EDGE-A15-A38-EV-A15-A38-MACHINE: claim:CL-EDGE-A15-A38 derived_from evidence:EV-A15-A38-MACHINE. Status: pending_review. Governance: traceability. Notes: Traceability edge from claim to evidence anchor."
+        },
+        {
+          "chunk_id": "alignment-edge:edge-derived-from-cl-edge-a15-a38-ev-a15-a38-target",
+          "score": 18,
+          "source_path": "references/data/alignment-graph.json",
+          "source_type": "alignment_edge",
+          "authority_level": "authored_judgement",
+          "entity_ids": [
+            "CL-EDGE-A15-A38",
+            "EDGE-DERIVED-FROM-CL-EDGE-A15-A38-EV-A15-A38-TARGET",
+            "claim:CL-EDGE-A15-A38",
+            "evidence:EV-A15-A38-TARGET"
+          ],
+          "evidence_ids": [
+            "EV-A15-A38-TARGET"
+          ],
+          "edge_statuses": [
+            "pending_review"
+          ],
+          "diagnostic_only": false,
+          "pending_review": true,
+          "generated_report_warning": false,
+          "not_primary_evidence": false,
+          "curriculum_authority": false,
+          "allowed_for_public_citation": false,
+          "text_excerpt": "EDGE-DERIVED-FROM-CL-EDGE-A15-A38-EV-A15-A38-TARGET: claim:CL-EDGE-A15-A38 derived_from evidence:EV-A15-A38-TARGET. Status: pending_review. Governance: traceability. Notes: Traceability edge from claim to evidence anchor."
+        }
+      ],
+      "notes": "Checks that diagnostic-only graph edges remain explicitly non-authoritative."
+    },
+    {
+      "query_id": "rag-eval-009",
+      "query": "Welke graph edges zijn pending_review?",
+      "status": "pass",
+      "result_count": 12,
+      "found_entities": [
+        "CL-D04-DESIGN",
+        "EDGE-DERIVED-FROM-CL-D04-DESIGN-EV-D04-DESIGN-TARGET",
+        "claim:CL-D04-DESIGN",
+        "evidence:EV-D04-DESIGN-TARGET",
+        "CL-EDGE-A15-A38",
+        "EDGE-DERIVED-FROM-CL-EDGE-A15-A38-EV-A15-A38-MACHINE",
+        "claim:CL-EDGE-A15-A38",
+        "evidence:EV-A15-A38-MACHINE",
+        "EDGE-DERIVED-FROM-CL-EDGE-A15-A38-EV-A15-A38-TARGET",
+        "evidence:EV-A15-A38-TARGET",
+        "CL-EDGE-A16-A15",
+        "EDGE-DERIVED-FROM-CL-EDGE-A16-A15-EV-A16-A17-A15-HUMAN",
+        "claim:CL-EDGE-A16-A15",
+        "evidence:EV-A16-A17-A15-HUMAN",
+        "EDGE-DERIVED-FROM-CL-EDGE-A16-A15-EV-A16-A17-A15-TARGET",
+        "evidence:EV-A16-A17-A15-TARGET",
+        "CL-EDGE-A17-A15",
+        "EDGE-DERIVED-FROM-CL-EDGE-A17-A15-EV-A16-A17-A15-HUMAN",
+        "claim:CL-EDGE-A17-A15",
+        "EDGE-DERIVED-FROM-CL-EDGE-A17-A15-EV-A16-A17-A15-TARGET",
+        "CL-EDGE-D06-A15",
+        "EDGE-DERIVED-FROM-CL-EDGE-D06-A15-EV-D06-A15-EXAM",
+        "claim:CL-EDGE-D06-A15",
+        "evidence:EV-D06-A15-EXAM",
+        "CL-EDGE-D16-D34",
+        "EDGE-DERIVED-FROM-CL-EDGE-D16-D34-EV-D16-EXAM",
+        "claim:CL-EDGE-D16-D34",
+        "evidence:EV-D16-EXAM",
+        "EDGE-DERIVED-FROM-CL-EDGE-D16-D34-EV-D16-L10-TARGET",
+        "evidence:EV-D16-L10-TARGET",
+        "CL-EDGE-D16-L10",
+        "EDGE-DERIVED-FROM-CL-EDGE-D16-L10-EV-D16-EXAM",
+        "claim:CL-EDGE-D16-L10",
+        "EDGE-DERIVED-FROM-CL-EDGE-D16-L10-EV-D16-L10-TARGET"
+      ],
+      "found_source_types": [
+        "alignment_edge"
+      ],
+      "warnings_present": [
+        "pending_review"
+      ],
+      "expected_entities_missing": [],
+      "expected_source_types_missing": [],
+      "warnings_missing": [],
+      "authority_violations": [],
+      "top_results": [
+        {
+          "chunk_id": "alignment-edge:edge-derived-from-cl-d04-design-ev-d04-design-target",
+          "score": 56,
+          "source_path": "references/data/alignment-graph.json",
+          "source_type": "alignment_edge",
+          "authority_level": "authored_judgement",
+          "entity_ids": [
+            "CL-D04-DESIGN",
+            "EDGE-DERIVED-FROM-CL-D04-DESIGN-EV-D04-DESIGN-TARGET",
+            "claim:CL-D04-DESIGN",
+            "evidence:EV-D04-DESIGN-TARGET"
+          ],
+          "evidence_ids": [
+            "EV-D04-DESIGN-TARGET"
+          ],
+          "edge_statuses": [
+            "pending_review"
+          ],
+          "diagnostic_only": false,
+          "pending_review": true,
+          "generated_report_warning": false,
+          "not_primary_evidence": false,
+          "curriculum_authority": false,
+          "allowed_for_public_citation": false,
+          "text_excerpt": "EDGE-DERIVED-FROM-CL-D04-DESIGN-EV-D04-DESIGN-TARGET: claim:CL-D04-DESIGN derived_from evidence:EV-D04-DESIGN-TARGET. Status: pending_review. Governance: traceability. Notes: Traceability edge from claim to evidence anchor."
+        },
+        {
+          "chunk_id": "alignment-edge:edge-derived-from-cl-edge-a15-a38-ev-a15-a38-machine",
+          "score": 56,
+          "source_path": "references/data/alignment-graph.json",
+          "source_type": "alignment_edge",
+          "authority_level": "machine_registry",
+          "entity_ids": [
+            "CL-EDGE-A15-A38",
+            "EDGE-DERIVED-FROM-CL-EDGE-A15-A38-EV-A15-A38-MACHINE",
+            "claim:CL-EDGE-A15-A38",
+            "evidence:EV-A15-A38-MACHINE"
+          ],
+          "evidence_ids": [
+            "EV-A15-A38-MACHINE"
+          ],
+          "edge_statuses": [
+            "pending_review"
+          ],
+          "diagnostic_only": false,
+          "pending_review": true,
+          "generated_report_warning": false,
+          "not_primary_evidence": false,
+          "curriculum_authority": false,
+          "allowed_for_public_citation": false,
+          "text_excerpt": "EDGE-DERIVED-FROM-CL-EDGE-A15-A38-EV-A15-A38-MACHINE: claim:CL-EDGE-A15-A38 derived_from evidence:EV-A15-A38-MACHINE. Status: pending_review. Governance: traceability. Notes: Traceability edge from claim to evidence anchor."
+        },
+        {
+          "chunk_id": "alignment-edge:edge-derived-from-cl-edge-a15-a38-ev-a15-a38-target",
+          "score": 56,
+          "source_path": "references/data/alignment-graph.json",
+          "source_type": "alignment_edge",
+          "authority_level": "authored_judgement",
+          "entity_ids": [
+            "CL-EDGE-A15-A38",
+            "EDGE-DERIVED-FROM-CL-EDGE-A15-A38-EV-A15-A38-TARGET",
+            "claim:CL-EDGE-A15-A38",
+            "evidence:EV-A15-A38-TARGET"
+          ],
+          "evidence_ids": [
+            "EV-A15-A38-TARGET"
+          ],
+          "edge_statuses": [
+            "pending_review"
+          ],
+          "diagnostic_only": false,
+          "pending_review": true,
+          "generated_report_warning": false,
+          "not_primary_evidence": false,
+          "curriculum_authority": false,
+          "allowed_for_public_citation": false,
+          "text_excerpt": "EDGE-DERIVED-FROM-CL-EDGE-A15-A38-EV-A15-A38-TARGET: claim:CL-EDGE-A15-A38 derived_from evidence:EV-A15-A38-TARGET. Status: pending_review. Governance: traceability. Notes: Traceability edge from claim to evidence anchor."
+        },
+        {
+          "chunk_id": "alignment-edge:edge-derived-from-cl-edge-a16-a15-ev-a16-a17-a15-human",
+          "score": 56,
+          "source_path": "references/data/alignment-graph.json",
+          "source_type": "alignment_edge",
+          "authority_level": "authored_judgement",
+          "entity_ids": [
+            "CL-EDGE-A16-A15",
+            "EDGE-DERIVED-FROM-CL-EDGE-A16-A15-EV-A16-A17-A15-HUMAN",
+            "claim:CL-EDGE-A16-A15",
+            "evidence:EV-A16-A17-A15-HUMAN"
+          ],
+          "evidence_ids": [
+            "EV-A16-A17-A15-HUMAN"
+          ],
+          "edge_statuses": [
+            "pending_review"
+          ],
+          "diagnostic_only": false,
+          "pending_review": true,
+          "generated_report_warning": false,
+          "not_primary_evidence": false,
+          "curriculum_authority": false,
+          "allowed_for_public_citation": false,
+          "text_excerpt": "EDGE-DERIVED-FROM-CL-EDGE-A16-A15-EV-A16-A17-A15-HUMAN: claim:CL-EDGE-A16-A15 derived_from evidence:EV-A16-A17-A15-HUMAN. Status: pending_review. Governance: traceability. Notes: Traceability edge from claim to evidence anchor."
+        },
+        {
+          "chunk_id": "alignment-edge:edge-derived-from-cl-edge-a16-a15-ev-a16-a17-a15-target",
+          "score": 56,
+          "source_path": "references/data/alignment-graph.json",
+          "source_type": "alignment_edge",
+          "authority_level": "authored_judgement",
+          "entity_ids": [
+            "CL-EDGE-A16-A15",
+            "EDGE-DERIVED-FROM-CL-EDGE-A16-A15-EV-A16-A17-A15-TARGET",
+            "claim:CL-EDGE-A16-A15",
+            "evidence:EV-A16-A17-A15-TARGET"
+          ],
+          "evidence_ids": [
+            "EV-A16-A17-A15-TARGET"
+          ],
+          "edge_statuses": [
+            "pending_review"
+          ],
+          "diagnostic_only": false,
+          "pending_review": true,
+          "generated_report_warning": false,
+          "not_primary_evidence": false,
+          "curriculum_authority": false,
+          "allowed_for_public_citation": false,
+          "text_excerpt": "EDGE-DERIVED-FROM-CL-EDGE-A16-A15-EV-A16-A17-A15-TARGET: claim:CL-EDGE-A16-A15 derived_from evidence:EV-A16-A17-A15-TARGET. Status: pending_review. Governance: traceability. Notes: Traceability edge from claim to evidence anchor."
+        }
+      ],
+      "notes": "Checks that pending-review graph status is not hidden."
+    },
+    {
+      "query_id": "rag-eval-010",
+      "query": "Welke informatie komt alleen uit generated reports?",
+      "status": "pass",
+      "result_count": 12,
+      "found_entities": [
+        "alignment-graph-integrity.json",
+        "evidence-anchor-status.json",
+        "aspects-coverage",
+        "begrippen-coverage",
+        "blueprint-flag-triage.json",
+        "dag-integrity",
+        "dead-units",
+        "empty-needs-audit-summary",
+        "exam-question-extraction-gaps.json",
+        "needs-coverage",
+        "procedure-coverage",
+        "reference-cli-coverage.json"
+      ],
+      "found_source_types": [
+        "quality_report"
+      ],
+      "warnings_present": [
+        "diagnostic_only",
+        "generated_report_warning",
+        "not_primary_evidence"
+      ],
+      "expected_entities_missing": [],
+      "expected_source_types_missing": [],
+      "warnings_missing": [],
+      "authority_violations": [],
+      "top_results": [
+        {
+          "chunk_id": "quality-report:alignment-graph-integrity.json",
+          "score": 58,
+          "source_path": "reports/json/alignment-graph-integrity.json",
+          "source_type": "quality_report",
+          "authority_level": "generated_report",
+          "entity_ids": [
+            "alignment-graph-integrity.json"
+          ],
+          "evidence_ids": [],
+          "edge_statuses": [],
+          "diagnostic_only": true,
+          "pending_review": false,
+          "generated_report_warning": true,
+          "not_primary_evidence": true,
+          "curriculum_authority": false,
+          "allowed_for_public_citation": false,
+          "text_excerpt": "alignment-graph-integrity.json: status pass; issues 0; summary {\"edge_count\":34,\"claim_count\":14,\"evidence_anchor_count\":15,\"approved_edge_count\":8,\"approved_with_conditions_edge_count\":5,\"diagnostic_only_edge_count\":2,\"generated_report_edge_count\":2,\"pending_main_edge_count\":0,\"by_relation\":{\"derived_from\":20,\"has_unit_design_issue\":1,\"prerequisite\":10,\"quality_issue_affects_exam_question\":1,\"supports\":1,\"term_defined_in_registry\":1},\"by_review_status\":{\"approved\":8,\"approved_with_conditions\":5"
+        },
+        {
+          "chunk_id": "quality-report:evidence-anchor-status.json",
+          "score": 58,
+          "source_path": "reports/json/evidence-anchor-status.json",
+          "source_type": "quality_report",
+          "authority_level": "generated_report",
+          "entity_ids": [
+            "evidence-anchor-status.json"
+          ],
+          "evidence_ids": [],
+          "edge_statuses": [],
+          "diagnostic_only": true,
+          "pending_review": false,
+          "generated_report_warning": true,
+          "not_primary_evidence": true,
+          "curriculum_authority": false,
+          "allowed_for_public_citation": false,
+          "text_excerpt": "evidence-anchor-status.json: status pass; issues 0; summary {\"evidence_anchor_count\":15,\"claim_count\":14,\"primary_evidence_count\":12,\"generated_report_anchor_count\":1,\"by_source_layer\":{\"governance_data\":1,\"authored_judgement\":6,\"machine_registry\":3,\"human_gate_decision\":1,\"external_authority\":3,\"generated_report\":1},\"by_authority_rank\":{\"1\":3,\"2\":6,\"3\":3,\"4\":1,\"5\":1,\"6\":1},\"by_claim_type\":{\"source_policy\":1,\"unit_prerequisite\":10,\"unit_design_decision\":1,\"exam_question_gap\":1,\"term_definition\":"
+        },
+        {
+          "chunk_id": "quality-report:aspects-coverage.json",
+          "score": 50,
+          "source_path": "reports/json/aspects-coverage.json",
+          "source_type": "quality_report",
+          "authority_level": "generated_report",
+          "entity_ids": [
+            "aspects-coverage"
+          ],
+          "evidence_ids": [],
+          "edge_statuses": [],
+          "diagnostic_only": true,
+          "pending_review": false,
+          "generated_report_warning": true,
+          "not_primary_evidence": true,
+          "curriculum_authority": false,
+          "allowed_for_public_citation": false,
+          "text_excerpt": "aspects-coverage: status pass; issues 0; summary {\"live_units\":190,\"units_without_aspects\":0}"
+        },
+        {
+          "chunk_id": "quality-report:begrippen-coverage.json",
+          "score": 50,
+          "source_path": "reports/json/begrippen-coverage.json",
+          "source_type": "quality_report",
+          "authority_level": "generated_report",
+          "entity_ids": [
+            "begrippen-coverage"
+          ],
+          "evidence_ids": [],
+          "edge_statuses": [],
+          "diagnostic_only": true,
+          "pending_review": false,
+          "generated_report_warning": true,
+          "not_primary_evidence": true,
+          "curriculum_authority": false,
+          "allowed_for_public_citation": false,
+          "text_excerpt": "begrippen-coverage: status warn; issues 130; summary {\"terms\":225,\"terms_without_teaching_units\":130}"
+        },
+        {
+          "chunk_id": "quality-report:blueprint-flag-triage.json",
+          "score": 50,
+          "source_path": "reports/json/blueprint-flag-triage.json",
+          "source_type": "quality_report",
+          "authority_level": "generated_report",
+          "entity_ids": [
+            "blueprint-flag-triage.json"
+          ],
+          "evidence_ids": [],
+          "edge_statuses": [],
+          "diagnostic_only": true,
+          "pending_review": false,
+          "generated_report_warning": true,
+          "not_primary_evidence": true,
+          "curriculum_authority": false,
+          "allowed_for_public_citation": false,
+          "text_excerpt": "blueprint-flag-triage.json: status unknown; issues 0; summary {\"by_decision_category\":{\"still_needed\":68,\"defer\":11,\"duplicate\":1,\"existing_unit_match\":4},\"by_priority\":{\"high\":30,\"medium\":42,\"low\":12},\"by_next_action\":{\"review_for_cli_unit_creation_or_existing_A_domain_merge\":30,\"review_for_concept_unit_or_merge_with_existing_unit\":38,\"keep_for_later_integration_or_verbal-design_review\":11,\"merge_with_existing_triage_record\":1,\"review_existing_unit_scope\":4}}"
+        }
+      ],
+      "notes": "Checks generated-report handling and non-primary evidence warnings."
+    }
+  ]
+}

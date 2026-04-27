@@ -14,6 +14,7 @@ function parseArgs(argv) {
   for (let i = 0; i < argv.length; i++) {
     const arg = argv[i];
     if (arg === '--json') args.json = true;
+    else if (arg === '--text') args.text = argv[++i];
     else if (arg === '--unit') args.unit = argv[++i];
     else if (arg === '--term') args.term = argv[++i];
     else if (arg === '--exam-code') args.examCode = argv[++i];
@@ -31,10 +32,71 @@ function loadChunks() {
     .map((line) => JSON.parse(line));
 }
 
+const STOP_WORDS = new Set([
+  'welke',
+  'hebben',
+  'heeft',
+  'voor',
+  'zijn',
+  'worden',
+  'komt',
+  'alleen',
+  'informatie',
+  'testen',
+  'ondersteunen',
+  'missen',
+  'maar',
+  'nog',
+  'met',
+  'uit',
+  'een',
+  'het',
+  'de',
+  'dat',
+  'die',
+  'wat',
+  'waar',
+]);
+
+function textTerms(text) {
+  return normalize(text)
+    .replace(/[^a-z0-9.-]+/g, ' ')
+    .split(/\s+/)
+    .map((term) => term.trim())
+    .filter((term) => term.length >= 4 && !STOP_WORDS.has(term));
+}
+
+function hasAny(hay, terms) {
+  return terms.some((term) => hay.includes(term));
+}
+
 function scoreChunk(chunk, args) {
   let score = 0;
   const hay = normalize(`${chunk.chunk_id} ${chunk.text} ${(chunk.entity_ids || []).join(' ')} ${(chunk.evidence_ids || []).join(' ')}`);
   const entities = (chunk.entity_ids || []).map(normalize);
+  if (args.text) {
+    const query = normalize(args.text);
+    const terms = textTerms(args.text);
+    if (terms.length > 0) {
+      for (const term of terms) {
+        if (entities.includes(term)) score += 18;
+        if (chunk.chunk_id.includes(term)) score += 14;
+        if (hay.includes(term)) score += 8;
+      }
+      const phrase = terms.join(' ');
+      if (phrase.length > 8 && hay.includes(phrase)) score += 25;
+    }
+    if (hasAny(query, ['examenvragen', 'examvragen', 'examenvraag']) && chunk.source_type === 'exam_question' && score > 0) score += 18;
+    if (query.includes('units') && chunk.source_type === 'machine_unit') score += 12;
+    if (hasAny(query, ['begrippen', 'begrip']) && chunk.source_type === 'machine_term') score += 14;
+    if (hasAny(query, ['target-exercises', 'target exercises', 'target', 'missing-unit']) && chunk.source_type === 'target_exercise') score += 14;
+    if (hasAny(query, ['term-links', 'term links', 'empty-needs', 'lege needs', 'false-zero', 'false_zero', 'deprecated', 'generated reports', 'generated-report']) && chunk.source_type === 'quality_report') score += 20;
+    if (hasAny(query, ['target-exercises', 'target exercises', 'target', 'missing-unit']) && chunk.source_type === 'quality_report' && chunk.chunk_id.includes('blueprint-flag-triage')) score += 60;
+    if (hasAny(query, ['diagnostic-only', 'diagnostic_only', 'pending-review', 'pending_review', 'edges', 'graph']) && chunk.source_type === 'alignment_edge') score += 18;
+    if (hasAny(query, ['diagnostic-only', 'diagnostic_only']) && (chunk.edge_statuses || []).includes('diagnostic_only')) score += 30;
+    if (hasAny(query, ['pending-review', 'pending_review']) && (chunk.edge_statuses || []).includes('pending_review')) score += 30;
+    if (hasAny(query, ['generated reports', 'generated-report', 'generated']) && chunk.authority_level === 'generated_report') score += 30;
+  }
   if (args.unit) {
     const unit = normalize(args.unit);
     if (entities.includes(unit)) score += 50;
@@ -99,6 +161,7 @@ function runQuery(args) {
     generated_by: 'build-scripts/rag/query.js',
     generated_on: new Date().toISOString(),
     query: {
+      text: args.text || null,
       unit: args.unit || null,
       term: args.term || null,
       exam_code: args.examCode || null,
@@ -127,8 +190,8 @@ function printText(output) {
 
 function main() {
   const args = parseArgs(process.argv.slice(2));
-  if (!args.unit && !args.term && !args.examCode && !args.qualityIssue) {
-    console.error('Usage: query.js --unit A15 | --term prijselasticiteit_van_de_vraag | --exam-code A2.5 | --quality-issue empty-needs [--json]');
+  if (!args.text && !args.unit && !args.term && !args.examCode && !args.qualityIssue) {
+    console.error('Usage: query.js --text "vraag" | --unit A15 | --term prijselasticiteit_van_de_vraag | --exam-code A2.5 | --quality-issue empty-needs [--json]');
     process.exit(1);
   }
   const output = runQuery(args);

@@ -1,0 +1,99 @@
+{
+  "eval_set_id": "R7.3-retrieval-eval-set",
+  "schema_version": 1,
+  "created_on": "2026-04-27",
+  "created_by": "docs/sprints/R7.3-plan.md",
+  "purpose": "Fixed internal retrieval checks for authority, warning, and expected-surface behavior before R7.4 review.",
+  "cases": [
+    {
+      "query_id": "rag-eval-001",
+      "query": "Welke units ondersteunen prijselasticiteit?",
+      "expected_entities": ["A15", "prijselasticiteit-van-de-vraag"],
+      "expected_source_types": ["machine_unit", "machine_term"],
+      "must_include_warnings": [],
+      "must_not_treat_as_authority": [],
+      "notes": "Checks that the retrieval layer finds the canonical price-elasticity unit and term rather than only generated reports."
+    },
+    {
+      "query_id": "rag-eval-002",
+      "query": "Welke examenvragen testen producentensurplus?",
+      "expected_entities": ["producentensurplus"],
+      "expected_source_types": ["exam_question", "machine_unit", "machine_term"],
+      "must_include_warnings": [],
+      "must_not_treat_as_authority": [],
+      "notes": "Checks whether exam evidence and the surplus unit/term surface for producer-surplus search."
+    },
+    {
+      "query_id": "rag-eval-003",
+      "query": "Welke live units missen term links?",
+      "expected_entities": ["terms-coverage"],
+      "expected_source_types": ["quality_report"],
+      "must_include_warnings": ["generated_report_warning", "not_primary_evidence"],
+      "must_not_treat_as_authority": ["generated_report"],
+      "notes": "This is a health-report question; generated reports may guide review but must remain non-authoritative."
+    },
+    {
+      "query_id": "rag-eval-004",
+      "query": "Welke units hebben lege needs maar zijn false_zero?",
+      "expected_entities": ["empty-needs-audit-summary"],
+      "expected_source_types": ["quality_report"],
+      "must_include_warnings": ["generated_report_warning", "not_primary_evidence"],
+      "must_not_treat_as_authority": ["generated_report"],
+      "notes": "Checks that false_zero empty-needs status is visible as a generated diagnostic, not curriculum authority."
+    },
+    {
+      "query_id": "rag-eval-005",
+      "query": "Welke target exercises hebben nog missing-unit flags?",
+      "expected_entities": ["blueprint-flag-triage.json"],
+      "expected_source_types": ["quality_report"],
+      "must_include_warnings": ["generated_report_warning", "not_primary_evidence"],
+      "must_not_treat_as_authority": ["generated_report"],
+      "notes": "Checks target-exercise missing-unit triage surfacing through diagnostic reports."
+    },
+    {
+      "query_id": "rag-eval-006",
+      "query": "Welke begrippen met formules missen pitfalls?",
+      "expected_entities": [],
+      "expected_source_types": ["machine_term"],
+      "must_include_warnings": [],
+      "must_not_treat_as_authority": [],
+      "notes": "Checks term registry retrieval for formula/pitfall inspection; exact missing-pitfall diagnosis is not a curriculum claim."
+    },
+    {
+      "query_id": "rag-eval-007",
+      "query": "Welke deprecated units worden nog geciteerd?",
+      "expected_entities": ["unresolved-refs"],
+      "expected_source_types": ["quality_report"],
+      "must_include_warnings": ["generated_report_warning", "not_primary_evidence"],
+      "must_not_treat_as_authority": ["generated_report"],
+      "notes": "Checks deprecated/citation health surfacing as diagnostics."
+    },
+    {
+      "query_id": "rag-eval-008",
+      "query": "Welke edges zijn diagnostic_only?",
+      "expected_entities": ["CL-EXAM-GAP-R4.2"],
+      "expected_source_types": ["alignment_edge"],
+      "must_include_warnings": ["diagnostic_only", "generated_report_warning", "not_primary_evidence"],
+      "must_not_treat_as_authority": ["diagnostic_only", "generated_report"],
+      "notes": "Checks that diagnostic-only graph edges remain explicitly non-authoritative."
+    },
+    {
+      "query_id": "rag-eval-009",
+      "query": "Welke graph edges zijn pending_review?",
+      "expected_entities": [],
+      "expected_source_types": ["alignment_edge"],
+      "must_include_warnings": ["pending_review"],
+      "must_not_treat_as_authority": ["pending_review"],
+      "notes": "Checks that pending-review graph status is not hidden."
+    },
+    {
+      "query_id": "rag-eval-010",
+      "query": "Welke informatie komt alleen uit generated reports?",
+      "expected_entities": [],
+      "expected_source_types": ["quality_report"],
+      "must_include_warnings": ["generated_report_warning", "not_primary_evidence"],
+      "must_not_treat_as_authority": ["generated_report"],
+      "notes": "Checks generated-report handling and non-primary evidence warnings."
+    }
+  ]
+}

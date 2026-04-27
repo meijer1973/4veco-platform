@@ -116,7 +116,7 @@ function main() {
       edgeStatuses: [],
       allowedForPublicCitation: true,
       curriculumAuthority: true,
-      text: `${qid}. ${(item.title || item.prompt || item.summary || '').toString()} Required skills: ${required.join(', ') || 'unknown'}. Exam codes: ${(item.exam_codes || [item.exam_code]).filter(Boolean).join(', ') || 'unknown'}.`,
+      text: `${qid}. ${(item.title || item.prompt || item.summary || item.text || '').toString()} Required skills: ${required.join(', ') || 'unknown'}. Exam codes: ${(item.exam_codes || [item.exam_code]).filter(Boolean).join(', ') || 'unknown'}.`,
     }));
   }
 

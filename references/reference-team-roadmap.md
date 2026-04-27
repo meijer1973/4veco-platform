@@ -77,7 +77,6 @@ Open items are listed first; completed items are kept below them.
 
 | Sprint | Name | Completed | Current State |
 |--------|------|-----------|---------------|
-| R7.3 | Retrieval Evaluation Set | no | Planned. Make retrieval quality regressions visible. |
 | R7.4 | RAG Review Gate | no | Planned. Approve internal/teacher-facing RAG only after evaluation. |
 | R8.1 | QC Issue Model | no | Planned. Define machine-readable quality issue categories, severity, evidence, proof-to-close, and ownership. |
 | R8.2 | Production QC Gates | no | Planned. Connect reference QC signals to lesson-production checks without mutating protected references. |
@@ -97,6 +96,7 @@ Open items are listed first; completed items are kept below them.
 | R14.1 | Curriculum Versioning | no | Planned. Track curriculum/source versions and reference migrations. |
 | R14.2 | Evidence Signal Model | no | Planned. Model quality and learning signals without surveillance or unnecessary student data. |
 | R14.3 | Continuous Improvement Reports | no | Planned. Produce evidence-platform reports and require review before external claims. |
+| R7.3 | Retrieval Evaluation Set | yes | Completed. Added fixed retrieval eval set, runner, validator, JSON results, and Markdown report; 10/10 cases pass with zero authority violations. |
 | R7.2 | Hybrid Retrieval | yes | Completed. Added internal deterministic query prototype preserving source authority, evidence IDs, edge status, and generated-report warnings. |
 | R7.1 | Deterministic Chunk Layer | yes | Completed. Added deterministic internal RAG chunk index with 842 chunks and authority metadata preserving generated-report safeguards. |
 | R6.2 | Reference Health Dashboard Data | yes | Completed. Added `reports/json/reference-health.json` and Markdown projection with R5.3 graph-authority constraints and dashboard health summaries. |
@@ -791,7 +791,7 @@ Sprints:
 
 - `R7.1` completed: deterministic chunk layer.
 - `R7.2` completed: hybrid retrieval.
-- `R7.3` planned: retrieval evaluation set.
+- `R7.3` completed: retrieval evaluation set.
 - `R7.4` planned: RAG review gate.
 
 ### Phase R8: QC Automation And Production Integration
@@ -934,7 +934,7 @@ Do not invert this order.
 
 Do not proceed directly to retrieval or diagnostics.
 
-Proceed with `R7.3 Retrieval Evaluation Set`.
+Proceed with `R7.4 RAG Review Gate` preparation.
 
 R6.2 completion state:
 
@@ -943,11 +943,20 @@ R6.2 completion state:
 - graph authority is whole-graph false and named-edge-groups only
 - student diagnostics, adaptive routing, and student-facing AI are explicitly blocked
 
-R7.3 must:
+R7.3 completion state:
 
-- create a fixed retrieval evaluation set
-- prove retrieval returns expected entities and warning metadata
-- make generated-report and pending-review behavior visible in evaluation results
+- fixed retrieval evaluation set exists at `references/data/rag/retrieval_eval_set.json`
+- retrieval evaluation results exist at `references/data/rag/retrieval_eval_results.json`
+- retrieval evaluation report exists at `reports/markdown/retrieval-eval-results.md`
+- 10/10 retrieval eval cases pass
+- generated-report and pending-review behavior is visible in evaluation results
+
+R7.4 preparation must:
+
+- prepare the RAG review packet
+- summarize retrieval results and known failure surfaces
+- propose allowed and blocked downstream uses
+- stop before final gate closure
 
 ## Final Rule
 
