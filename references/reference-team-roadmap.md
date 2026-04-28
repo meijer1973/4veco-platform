@@ -117,7 +117,7 @@ Open items are listed first; completed items are kept below them.
 
 | Sprint | Name | Completed | Current State |
 |--------|------|-----------|---------------|
-| Sprint 1 | Schema Audit And Exercise Naming Contract | no | Immediate next sprint. Non-mutating audit of current schemas/data, vocabulary collision, overlay strategy, and gate packet for `GATE-CP1-schema-audit`. |
+| S1 | Schema Audit And Exercise Naming Contract | yes | Completed through non-mutating audit and CP-1 review-packet preparation. `GATE-CP1-schema-audit` is prepared for human review and must close before R9.1 starts. |
 | R9.1 | Owned Source Registry | no | First implementation sprint after CP-1. Register owned book/source material, repair blueprint source references, and classify owned course surfaces without treating exposition as authority. |
 | R9.2 | Content Graph Projection | no | Planned after R9.1. Project owned content to the reference graph using projection edges, not evidence edges. |
 | Sprint 4 | Exercise Metadata Overlay MVP | no | Planned after R9.2. Add protected-source-safe exercise overlays with `instructional_role`, `assessment_role`, authority tier, scaffolding object, Bloom, instruction word, graph specs, precision lint status, evidence status, source version, and content status. |
@@ -171,7 +171,7 @@ Open items are listed first; completed items are kept below them.
 
 The sprint ledger is a quick status table. This section is the readable backlog. Sprint plans must operationalize these descriptions, not only copy the ledger row.
 
-### Sprint 1 Schema Audit And Exercise Naming Contract
+### S1 Schema Audit And Exercise Naming Contract
 
 Purpose: start the approved exercise-schema roadmap with a non-mutating audit. The audit must compare the current repository data shapes with the schema and field names proposed by HCS, Head of Engineering, and the repository-checked roadmap.
 
@@ -202,7 +202,7 @@ Required work:
 
 Required output: sprint plan, baseline, schema-audit report, vocabulary decision table, overlay strategy, CP-1 review packet, result report, diff summary, and sprint metadata.
 
-Stop condition: do not mutate `references/machine/`, `references/external/`, or bulk exercise data during Sprint 1. Stop at CP-1 if the schema audit finds a naming or compatibility issue that cannot be represented safely.
+Stop condition: do not mutate `references/machine/`, `references/external/`, or bulk exercise data during S1. Stop at CP-1 if the schema audit finds a naming or compatibility issue that cannot be represented safely.
 
 Checkpoint: `GATE-CP1-schema-audit`.
 
@@ -995,7 +995,7 @@ Goal: make the exercise schema compatible with current repository data before ad
 
 Sprints:
 
-- `Sprint 1` planned: schema audit and exercise naming contract, closing at `GATE-CP1-schema-audit`.
+- `S1` completed through review-packet preparation: schema audit and exercise naming contract; `GATE-CP1-schema-audit` remains the immediate human-review checkpoint.
 - `Sprint 4` planned: exercise metadata overlay MVP, including `instructional_role`, `assessment_role`, scaffolding object, and schema-extension dry run.
 - `Sprint 7` planned: skill and operation registry MVP, closing at `GATE-CP4-skill-registry-coexistence`.
 
@@ -1097,7 +1097,7 @@ R7.4 RAG gate
 R7.5 Merge readiness and main sync
 R9.0 Legacy target reference minimization
 R9.01 Legacy folder rename
-Sprint 1 Schema audit and exercise naming contract (CP-1)
+S1 Schema audit and exercise naming contract (CP-1)
 R9.1 Owned source registry
 R9.2 Content graph projection
 Sprint 4 Exercise metadata overlay MVP (CP-3)
@@ -1121,9 +1121,9 @@ Do not invert this order.
 
 ## Immediate Next Sprint
 
-Next sprint: `Sprint 1 Schema Audit And Exercise Naming Contract`.
+Next checkpoint: `GATE-CP1-schema-audit` human review.
 
-R4.5 has closed the bounded micro-unit mutation lane, and the exercise-schema/RAG-quality roadmap has been approved with corrections. Before owned-source implementation starts, the next highest-value data-quality step is a non-mutating schema audit that makes current data shapes, field names, overlays, and HCS content-quality requirements compatible.
+R4.5 has closed the bounded micro-unit mutation lane, and S1 has prepared the non-mutating schema audit packet. Before owned-source implementation starts, CP-1 must close the naming contract and overlay strategy.
 
 Do not start diagnostics, adaptive routing, student-facing AI, automatic lesson sequencing, mastery decisions, summative decisions, teacher cockpit deployment, game/simulation product mapping, or continuous-improvement claims from this roadmap.
 
@@ -1136,17 +1136,14 @@ R7.4/R7.5 completion state:
 - RAG-01 through RAG-04 remain required quality follow-ups.
 - Student diagnostics, adaptive routing, student-facing AI, automatic sequencing, mastery decisions, summative use, and unreviewed student-facing publication are explicitly blocked.
 
-Sprint 1 must:
+CP-1 review must decide:
 
-- create a plan and baseline report using the standard sprint procedure
-- audit current schemas against current data shapes
-- resolve the naming contract around `required_units`, `exercise_operations`, and `skill_tags`
-- preserve the two-axis role model: `instructional_role` and `assessment_role`
-- preserve the scaffolding object: `verbal_level`, `visual_stage`, `fading_position`, `dual_coding_present`
-- decide source-file fields versus protected-source-safe overlays
-- confirm the precision-lint path or wrapper plan
-- produce `GATE-CP1-schema-audit` review artifacts
-- stop before mutating protected `references/machine/`, `references/external/`, or bulk exercise data
+- whether to approve `required_units`, `exercise_operations`, and `skill_tags` or `skill_category_tags`
+- whether to approve `instructional_role` and `assessment_role` as separate fields
+- whether to approve the scaffolding object: `verbal_level`, `visual_stage`, `fading_position`, `dual_coding_present`
+- whether exercise metadata for external exam questions must use `references/data/exercises/` overlays
+- whether R9.1 may proceed with owned-source registry and blueprint-reference repair only
+- whether CP-1 closes as `pass_with_conditions`, `hold`, or another status
 
 ## Final Rule
 

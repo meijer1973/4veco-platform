@@ -1,0 +1,27 @@
+{
+  "report_id": "CP1-overlay-strategy",
+  "generated_by": "build-scripts/references/audit-exercise-schema-contract.js",
+  "generated_on": "2026-04-28T21:18:06.045Z",
+  "gate_id": "GATE-CP1-schema-audit",
+  "sprint_id": "S1",
+  "strategy": {
+    "external_exam_questions": {
+      "source_file": "references/external/exam-questions.json",
+      "edit_policy": "protected_external_source",
+      "proposed_metadata_location": "references/data/exercises/exam-question-overlays.json",
+      "rationale": "External mirrored authority should not be hand-edited for authored metadata."
+    },
+    "target_exercises": {
+      "source_file": "references/authored/course-target-exercises.json",
+      "edit_policy": "authored_reference_but_schema_sensitive",
+      "proposed_metadata_location": "references/data/exercises/target-exercise-overlays.json for first pass; later migrate if approved",
+      "rationale": "The target-exercise file is authored, but CP-1 should avoid bulk source mutation before names and schema are approved."
+    },
+    "rag_chunks": {
+      "source_file": "references/data/rag/chunk_index.jsonl",
+      "edit_policy": "generated_projection",
+      "proposed_metadata_location": "regenerate from approved source and overlays",
+      "rationale": "Chunk metadata should be generated, not hand-patched."
+    }
+  }
+}

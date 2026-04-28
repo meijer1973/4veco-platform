@@ -1,0 +1,65 @@
+{
+  "report_id": "CP1-vocabulary-decision-table",
+  "generated_by": "build-scripts/references/audit-exercise-schema-contract.js",
+  "generated_on": "2026-04-28T21:18:06.045Z",
+  "gate_id": "GATE-CP1-schema-audit",
+  "sprint_id": "S1",
+  "proposed_contract": [
+    {
+      "field": "required_units",
+      "meaning": "Micro-teaching-unit IDs required by an exam question or target exercise.",
+      "current_conflict": "Current data uses required_skills for this meaning.",
+      "recommendation": "Approve and migrate toward required_units while treating required_skills as legacy/source field until migration."
+    },
+    {
+      "field": "exercise_operations",
+      "meaning": "Fine-grained learner actions inside an exercise, for example calculate, compare, infer, interpret, draw, classify.",
+      "current_conflict": "No current stable field.",
+      "recommendation": "Approve as overlay field after CP-3 dry run."
+    },
+    {
+      "field": "skill_tags",
+      "meaning": "Broad skill/category taxonomy labels.",
+      "current_conflict": "Name could collide with old required_skills if not documented.",
+      "recommendation": "Approve name or choose skill_category_tags at CP-1."
+    },
+    {
+      "field": "instructional_role",
+      "meaning": "What the exercise is for in authored learning flow.",
+      "initial_values": [
+        "worked_example",
+        "startoefening",
+        "independent_practice",
+        "interleaving",
+        "target",
+        "verdieping",
+        "consolidatie",
+        "instapquiz",
+        "diagnostic",
+        "nieuws"
+      ],
+      "recommendation": "Approve as separate from assessment_role."
+    },
+    {
+      "field": "assessment_role",
+      "meaning": "How the exercise relates to exam/evidence graph.",
+      "initial_values": [
+        "exam_mirror",
+        "bridge",
+        "prerequisite"
+      ],
+      "open_question": "Should non-assessment items use null, not_applicable, or omit the field?"
+    },
+    {
+      "field": "scaffolding",
+      "meaning": "Object describing verbal support, visual support, fading, and dual coding.",
+      "object_fields": {
+        "verbal_level": "integer 0-5",
+        "visual_stage": "integer 1-4",
+        "fading_position": "integer",
+        "dual_coding_present": "boolean"
+      },
+      "recommendation": "Approve object; do not collapse to a single scaffolding_level field."
+    }
+  ]
+}

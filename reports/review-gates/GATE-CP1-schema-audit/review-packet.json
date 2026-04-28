@@ -1,0 +1,92 @@
+{
+  "gate_id": "GATE-CP1-schema-audit",
+  "sprint_id": "S1",
+  "packet_status": "prepared_for_human_review",
+  "gate_closure_status": "not_closed",
+  "prepared_on": "2026-04-28",
+  "proposed_gate_status": "pass_with_conditions",
+  "proposed_status_rationale": "The audit found no blocker to proceeding to R9.1 if the naming contract, overlay strategy, role split, scaffolding object, and precision-lint path are accepted as conditions.",
+  "source_artifacts": [
+    "reports/review-gates/GATE-CP1-schema-audit/schema-audit.md",
+    "reports/review-gates/GATE-CP1-schema-audit/vocabulary-decision-table.md",
+    "reports/review-gates/GATE-CP1-schema-audit/overlay-strategy.md"
+  ],
+  "review_questions": [
+    {
+      "id": "CP1-Q1",
+      "question": "Approve required_units as the canonical field for micro-teaching-unit IDs?",
+      "recommended_answer": "approve"
+    },
+    {
+      "id": "CP1-Q2",
+      "question": "Approve exercise_operations as the canonical field for fine-grained exercise actions?",
+      "recommended_answer": "approve"
+    },
+    {
+      "id": "CP1-Q3",
+      "question": "Should the broader taxonomy field be named skill_tags or skill_category_tags?",
+      "recommended_answer": "skill_tags unless the reviewer wants maximum explicitness."
+    },
+    {
+      "id": "CP1-Q4",
+      "question": "Approve instructional_role and assessment_role as separate fields rather than one flat exercise role enum?",
+      "recommended_answer": "approve"
+    },
+    {
+      "id": "CP1-Q5",
+      "question": "Approve the initial instructional_role vocabulary?",
+      "recommended_answer": "approve_with_conditions: allow CP-3 to refine values during dry run."
+    },
+    {
+      "id": "CP1-Q6",
+      "question": "For assessment_role, should non-assessment items use null, not_applicable, or omit the field?",
+      "recommended_answer": "not_applicable for explicitness in overlays."
+    },
+    {
+      "id": "CP1-Q7",
+      "question": "Approve scaffolding as a four-field object with verbal_level, visual_stage, fading_position, and dual_coding_present?",
+      "recommended_answer": "approve"
+    },
+    {
+      "id": "CP1-Q8",
+      "question": "Approve references/data/exercises/ overlays for external exam-question metadata?",
+      "recommended_answer": "approve"
+    },
+    {
+      "id": "CP1-Q9",
+      "question": "For authored target exercises, should Sprint 4 use overlays first and leave source mutation to a later approved migration?",
+      "recommended_answer": "approve overlays first."
+    },
+    {
+      "id": "CP1-Q10",
+      "question": "Approve build-scripts/lib/verify_svg_geometry.py as the canonical precision verifier path, with optional wrapper later?",
+      "recommended_answer": "approve"
+    },
+    {
+      "id": "CP1-Q11",
+      "question": "May R9.1 proceed after CP-1 if it repairs blueprint references and owned-source registry only, without exercise metadata backfill?",
+      "recommended_answer": "approve"
+    },
+    {
+      "id": "CP1-Q12",
+      "question": "Gate status: pass, pass_with_conditions, hold, or fail?",
+      "recommended_answer": "pass_with_conditions"
+    }
+  ],
+  "proposed_conditions": [
+    "Do not bulk-extend exercise metadata until CP-3 schema-extension dry run passes.",
+    "Do not hand-edit references/external/ for exercise metadata.",
+    "Treat required_skills as legacy/source field until migration is approved.",
+    "R9.1 may proceed only with owned-source registry and blueprint reference repair scope."
+  ],
+  "blocked_until_later": [
+    "bulk exercise metadata backfill",
+    "machine registry creation without CLI",
+    "student diagnostics",
+    "adaptive routing",
+    "student-facing AI",
+    "automatic lesson sequencing",
+    "automatic mastery decisions",
+    "summative assessment decisions"
+  ]
+}

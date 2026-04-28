@@ -1,0 +1,406 @@
+{
+  "report_id": "CP1-schema-audit",
+  "generated_by": "build-scripts/references/audit-exercise-schema-contract.js",
+  "generated_on": "2026-04-28T21:18:06.045Z",
+  "gate_id": "GATE-CP1-schema-audit",
+  "sprint_id": "S1",
+  "protected_reference_data_changed": false,
+  "source_files": [
+    "references/schemas/exam-question.schema.json",
+    "references/schemas/target-exercise.schema.json",
+    "references/schemas/rag-chunk.schema.json",
+    "references/external/exam-questions.json",
+    "references/authored/course-target-exercises.json",
+    "references/data/rag/chunk_index.jsonl",
+    "references/reference-team-roadmap.md",
+    "knowledge/Exercise schema and quality/roadmap-updated-repository-checked.md"
+  ],
+  "baseline_counts": {
+    "exam_questions": 349,
+    "target_exercises": 49,
+    "rag_chunks": 863,
+    "target_exercises_source_ref_knowledge_blueprint": 49
+  },
+  "schemas": {
+    "exam_question": {
+      "required": [
+        "id",
+        "source_document_id",
+        "question_number"
+      ],
+      "properties": [
+        "id",
+        "source_document_id",
+        "question_number",
+        "exam_codes",
+        "required_units",
+        "question_type",
+        "evidence_ids"
+      ]
+    },
+    "target_exercise": {
+      "required": [
+        "id",
+        "book",
+        "required_units"
+      ],
+      "properties": [
+        "id",
+        "book",
+        "paragraph",
+        "required_units",
+        "missing_units_flagged",
+        "evidence_ids"
+      ]
+    },
+    "rag_chunk": {
+      "required": [
+        "chunk_id",
+        "source_path",
+        "source_type",
+        "authority_level",
+        "text"
+      ],
+      "properties": [
+        "chunk_id",
+        "source_path",
+        "source_type",
+        "authority_level",
+        "entity_ids",
+        "evidence_ids",
+        "allowed_for_public_citation",
+        "text"
+      ]
+    }
+  },
+  "comparisons": {
+    "exam_question_schema_to_data": {
+      "required_presence": {
+        "id": {
+          "present_count": 0,
+          "missing_count": 349
+        },
+        "source_document_id": {
+          "present_count": 0,
+          "missing_count": 349
+        },
+        "question_number": {
+          "present_count": 0,
+          "missing_count": 349
+        }
+      },
+      "schema_fields_missing_from_all_records": [
+        "evidence_ids",
+        "id",
+        "question_number",
+        "required_units",
+        "source_document_id"
+      ],
+      "data_fields_missing_from_schema": [
+        "exam",
+        "level",
+        "opgave_name",
+        "opgave_num",
+        "page_end",
+        "page_start",
+        "points",
+        "question_num",
+        "required_skills",
+        "text",
+        "tijdvak",
+        "year"
+      ]
+    },
+    "target_exercise_schema_to_data": {
+      "required_presence": {
+        "id": {
+          "present_count": 49,
+          "missing_count": 0
+        },
+        "book": {
+          "present_count": 0,
+          "missing_count": 49
+        },
+        "required_units": {
+          "present_count": 0,
+          "missing_count": 49
+        }
+      },
+      "schema_fields_missing_from_all_records": [
+        "book",
+        "evidence_ids",
+        "required_units"
+      ],
+      "data_fields_missing_from_schema": [
+        "chapter",
+        "difficulty",
+        "difficulty_notes",
+        "exam_codes",
+        "lesson_goals",
+        "module",
+        "new_skills_introduced",
+        "paragraph_title",
+        "prior_knowledge_assumed",
+        "required_skills",
+        "source_ref",
+        "target_exercise"
+      ]
+    },
+    "rag_chunk_schema_to_data": {
+      "required_presence": {
+        "chunk_id": {
+          "present_count": 863,
+          "missing_count": 0
+        },
+        "source_path": {
+          "present_count": 863,
+          "missing_count": 0
+        },
+        "source_type": {
+          "present_count": 863,
+          "missing_count": 0
+        },
+        "authority_level": {
+          "present_count": 863,
+          "missing_count": 0
+        },
+        "text": {
+          "present_count": 863,
+          "missing_count": 0
+        }
+      },
+      "schema_fields_missing_from_all_records": [],
+      "data_fields_missing_from_schema": [
+        "curriculum_authority",
+        "edge_statuses",
+        "generated_by",
+        "generated_on",
+        "primary_evidence",
+        "source_hash"
+      ]
+    }
+  },
+  "hcs_field_presence": {
+    "exam_questions": {
+      "instructional_role": {
+        "present_count": 0,
+        "missing_count": 349
+      },
+      "assessment_role": {
+        "present_count": 0,
+        "missing_count": 349
+      },
+      "authority_tier": {
+        "present_count": 0,
+        "missing_count": 349
+      },
+      "scaffolding": {
+        "present_count": 0,
+        "missing_count": 349
+      },
+      "bloom_level": {
+        "present_count": 0,
+        "missing_count": 349
+      },
+      "instruction_word": {
+        "present_count": 0,
+        "missing_count": 349
+      },
+      "answer_format": {
+        "present_count": 0,
+        "missing_count": 349
+      },
+      "graph_specs": {
+        "present_count": 0,
+        "missing_count": 349
+      },
+      "precision_lint_status": {
+        "present_count": 0,
+        "missing_count": 349
+      },
+      "evidence_status": {
+        "present_count": 0,
+        "missing_count": 349
+      },
+      "source_version": {
+        "present_count": 0,
+        "missing_count": 349
+      },
+      "content_status": {
+        "present_count": 0,
+        "missing_count": 349
+      },
+      "required_units": {
+        "present_count": 0,
+        "missing_count": 349
+      },
+      "exercise_operations": {
+        "present_count": 0,
+        "missing_count": 349
+      },
+      "skill_tags": {
+        "present_count": 0,
+        "missing_count": 349
+      }
+    },
+    "target_exercises": {
+      "instructional_role": {
+        "present_count": 0,
+        "missing_count": 49
+      },
+      "assessment_role": {
+        "present_count": 0,
+        "missing_count": 49
+      },
+      "authority_tier": {
+        "present_count": 0,
+        "missing_count": 49
+      },
+      "scaffolding": {
+        "present_count": 0,
+        "missing_count": 49
+      },
+      "bloom_level": {
+        "present_count": 0,
+        "missing_count": 49
+      },
+      "instruction_word": {
+        "present_count": 0,
+        "missing_count": 49
+      },
+      "answer_format": {
+        "present_count": 0,
+        "missing_count": 49
+      },
+      "graph_specs": {
+        "present_count": 0,
+        "missing_count": 49
+      },
+      "precision_lint_status": {
+        "present_count": 0,
+        "missing_count": 49
+      },
+      "evidence_status": {
+        "present_count": 0,
+        "missing_count": 49
+      },
+      "source_version": {
+        "present_count": 0,
+        "missing_count": 49
+      },
+      "content_status": {
+        "present_count": 0,
+        "missing_count": 49
+      },
+      "required_units": {
+        "present_count": 0,
+        "missing_count": 49
+      },
+      "exercise_operations": {
+        "present_count": 0,
+        "missing_count": 49
+      },
+      "skill_tags": {
+        "present_count": 0,
+        "missing_count": 49
+      }
+    },
+    "rag_chunks": {
+      "evidence_ids": {
+        "present_count": 863,
+        "missing_count": 0
+      },
+      "edge_statuses": {
+        "present_count": 863,
+        "missing_count": 0
+      },
+      "authority_level": {
+        "present_count": 863,
+        "missing_count": 0
+      },
+      "source_type": {
+        "present_count": 863,
+        "missing_count": 0
+      },
+      "primary_evidence": {
+        "present_count": 863,
+        "missing_count": 0
+      },
+      "curriculum_authority": {
+        "present_count": 863,
+        "missing_count": 0
+      }
+    }
+  },
+  "precision_lint_path_check": {
+    "expected_by_hcs_or_prior_roadmap": "build-scripts/verify_svg_geometry.py",
+    "expected_path_exists": false,
+    "actual_repo_path": "build-scripts/lib/verify_svg_geometry.py",
+    "actual_repo_path_exists": true,
+    "recommendation": "Use build-scripts/lib/verify_svg_geometry.py or add a wrapper before requiring precision_lint_status automation."
+  },
+  "findings": [
+    {
+      "id": "CP1-F01",
+      "severity": "high",
+      "title": "Current schemas and current data shapes are not equivalent contracts.",
+      "evidence": [
+        "references/schemas/exam-question.schema.json",
+        "references/schemas/target-exercise.schema.json",
+        "references/external/exam-questions.json",
+        "references/authored/course-target-exercises.json"
+      ],
+      "recommendation": "Treat current schemas as aspirational or partial until CP-1 approves compatibility and migration names."
+    },
+    {
+      "id": "CP1-F02",
+      "severity": "high",
+      "title": "required_skills is currently used for micro-teaching-unit IDs.",
+      "evidence": [
+        "references/external/exam-questions.json",
+        "references/authored/course-target-exercises.json"
+      ],
+      "recommendation": "Adopt required_units for unit IDs, exercise_operations for fine-grained actions, and skill_tags for broader taxonomy tags."
+    },
+    {
+      "id": "CP1-F03",
+      "severity": "high",
+      "title": "External exam-question metadata must use overlays or refresh scripts.",
+      "evidence": [
+        "references/external/exam-questions.json",
+        "references/SOURCE_OF_TRUTH.md"
+      ],
+      "recommendation": "Do not hand-edit references/external/exam-questions.json for role, scaffolding, Bloom, operation, or evidence-status metadata."
+    },
+    {
+      "id": "CP1-F04",
+      "severity": "medium",
+      "title": "Target exercises still point to the old knowledge blueprint path.",
+      "evidence": [
+        "references/authored/course-target-exercises.json",
+        "references/owned/course-blueprint-v4.md"
+      ],
+      "recommendation": "R9.1 should repair 49 target-exercise source_ref values and blueprint_source to references/owned/course-blueprint-v4.md through an approved authored-reference update or migration script."
+    },
+    {
+      "id": "CP1-F05",
+      "severity": "medium",
+      "title": "Precision lint path in planning docs needs correction.",
+      "evidence": [
+        "build-scripts/README.md",
+        "build-scripts/lib/verify_svg_geometry.py"
+      ],
+      "recommendation": "Use build-scripts/lib/verify_svg_geometry.py or add a wrapper path before making precision_lint_status required."
+    }
+  ],
+  "proposed_decisions_for_human_review": [
+    "Approve required_units for micro-teaching-unit IDs.",
+    "Approve exercise_operations for fine-grained exercise actions.",
+    "Approve skill_tags or skill_category_tags for broader taxonomy labels.",
+    "Approve instructional_role and assessment_role as separate fields.",
+    "Approve the four-field scaffolding object.",
+    "Approve protected-source-safe overlays under references/data/exercises/ for external exam-question metadata.",
+    "Approve build-scripts/lib/verify_svg_geometry.py as the canonical verifier path or require a wrapper.",
+    "Confirm whether CP-1 closes as pass_with_conditions or hold."
+  ]
+}

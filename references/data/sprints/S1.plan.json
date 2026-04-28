@@ -1,0 +1,23 @@
+{
+  "sprint_id": "S1",
+  "name": "Schema Audit And Exercise Naming Contract",
+  "status": "in_progress",
+  "planned_on": "2026-04-28",
+  "plan": "docs/sprints/S1-plan.md",
+  "protected_reference_data_changes_allowed": false,
+  "human_review_required": true,
+  "gate_id": "GATE-CP1-schema-audit",
+  "review_packet": "reports/review-gates/GATE-CP1-schema-audit/review-packet.md",
+  "valid_gate_statuses": [
+    "pass",
+    "pass_with_conditions",
+    "hold",
+    "fail"
+  ],
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js docs/sprints/S1-plan.md",
+    "node build-scripts/sprints/check-sprint-bundle.js S1",
+    "node build-scripts/references/audit-exercise-schema-contract.js",
+    "node build-scripts/sprints/check-sprint-result.js reports/sprints/S1-result.md"
+  ]
+}

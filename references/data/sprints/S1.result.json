@@ -1,0 +1,46 @@
+{
+  "sprint_id": "S1",
+  "name": "Schema Audit And Exercise Naming Contract",
+  "status": "completed",
+  "completed_on": "2026-04-28",
+  "plan": "docs/sprints/S1-plan.md",
+  "baseline": "reports/sprints/S1-baseline.md",
+  "result": "reports/sprints/S1-result.md",
+  "diff_summary": "reports/sprints/S1-diff-summary.md",
+  "protected_reference_data_changed": false,
+  "gate_id": "GATE-CP1-schema-audit",
+  "gate_status": "prepared_for_human_review",
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js docs/sprints/S1-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js S1",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/audit-exercise-schema-contract.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-result.js reports/sprints/S1-result.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js S1 --complete",
+      "status": "passed"
+    }
+  ],
+  "outputs": [
+    "reports/review-gates/GATE-CP1-schema-audit/schema-audit.json",
+    "reports/review-gates/GATE-CP1-schema-audit/schema-audit.md",
+    "reports/review-gates/GATE-CP1-schema-audit/vocabulary-decision-table.json",
+    "reports/review-gates/GATE-CP1-schema-audit/vocabulary-decision-table.md",
+    "reports/review-gates/GATE-CP1-schema-audit/overlay-strategy.json",
+    "reports/review-gates/GATE-CP1-schema-audit/overlay-strategy.md",
+    "reports/review-gates/GATE-CP1-schema-audit/review-packet.json",
+    "reports/review-gates/GATE-CP1-schema-audit/review-packet.md"
+  ],
+  "next_required_step": "Human review and closure of GATE-CP1-schema-audit before R9.1 starts"
+}
