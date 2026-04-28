@@ -25,12 +25,16 @@ The script reads current schemas and data, then writes CP-1 audit artifacts. It 
 - Added `reports/review-gates/GATE-CP1-schema-audit/overlay-strategy.json`.
 - Added `reports/review-gates/GATE-CP1-schema-audit/review-packet.md`.
 - Added `reports/review-gates/GATE-CP1-schema-audit/review-packet.json`.
+- Added `reports/review-gates/GATE-CP1-schema-audit/human-interview.md`.
+- Added `reports/review-gates/GATE-CP1-schema-audit/human-interview.json`.
+- Added `reports/review-gates/GATE-CP1-schema-audit/gate-closure.md`.
+- Added `reports/review-gates/GATE-CP1-schema-audit/gate-closure.json`.
 
 ## Roadmap diffs
 
 - Updated `references/reference-team-roadmap.md` to use sprint ID `S1`.
-- Marked S1 as completed through review-packet preparation.
-- Recorded CP-1 human review as the immediate next checkpoint before R9.1.
+- Marked S1 and CP-1 as completed with `pass_with_conditions`.
+- Recorded R9.1 as the immediate next sprint, unblocked at limited owned-source scope.
 
 ## Protected surfaces
 

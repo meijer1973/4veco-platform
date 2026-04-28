@@ -6,9 +6,9 @@
 
 ## Summary
 
-Completed S1 through the non-mutating CP-1 schema audit and review-packet preparation.
+Completed S1 through the non-mutating CP-1 schema audit, review-packet preparation, human review, and gate closure.
 
-S1 did not close `GATE-CP1-schema-audit`. The gate is prepared for human review. R9.1 remains blocked until the CP-1 decision is recorded.
+`GATE-CP1-schema-audit` closed as `pass_with_conditions`. R9.1 is unblocked for owned-source registry and blueprint source-reference repair only.
 
 Main findings:
 
@@ -17,6 +17,7 @@ Main findings:
 - Proposed exercise metadata for external exam questions must use protected-source-safe overlays or refresh scripts.
 - All 49 target exercises still point to `knowledge/course_blueprint_v4.md`; R9.1 should repair this to `references/owned/course-blueprint-v4.md`.
 - The SVG geometry verifier exists at `build-scripts/lib/verify_svg_geometry.py`, not `build-scripts/verify_svg_geometry.py`.
+- Human review approved `required_units`, `exercise_operations`, `skill_tags`, the role split, the scaffolding object, overlay-first storage, and limited R9.1 scope.
 
 ## Acceptance test results
 
@@ -25,6 +26,7 @@ Passed:
 - `node build-scripts/sprints/check-sprint-plan.js docs/sprints/S1-plan.md`
 - `node build-scripts/sprints/check-sprint-bundle.js S1`
 - `node build-scripts/references/audit-exercise-schema-contract.js`
+- `node build-scripts/review-gates/validate-gate.js reports/review-gates/GATE-CP1-schema-audit/gate-closure.json`
 
 Sprint-close checks after this result artifact is written:
 
@@ -48,6 +50,10 @@ Sprint-close checks after this result artifact is written:
 - `reports/review-gates/GATE-CP1-schema-audit/overlay-strategy.md`
 - `reports/review-gates/GATE-CP1-schema-audit/review-packet.json`
 - `reports/review-gates/GATE-CP1-schema-audit/review-packet.md`
+- `reports/review-gates/GATE-CP1-schema-audit/human-interview.json`
+- `reports/review-gates/GATE-CP1-schema-audit/human-interview.md`
+- `reports/review-gates/GATE-CP1-schema-audit/gate-closure.json`
+- `reports/review-gates/GATE-CP1-schema-audit/gate-closure.md`
 - `references/reference-team-roadmap.md`
 
 ## Data integrity notes
@@ -63,9 +69,8 @@ S1 also did not bulk-mutate `references/authored/course-target-exercises.json` o
 
 ## Open follow-ups
 
-- Human reviewer must answer the CP-1 review questions.
-- `GATE-CP1-schema-audit` must be closed before R9.1 starts.
-- R9.1 should repair the 49 target-exercise references to the canonical owned blueprint path after CP-1.
+- R9.1 should repair the 49 target-exercise references to the canonical owned blueprint path.
+- R9.1 must stay limited to owned-source registry, blueprint source-reference repair, source-surface classification, authority weights, and projection/evidence separation.
 - CP-3 must still dry-run one Tier A item and one Tier C target exercise before bulk exercise metadata extension.
 
 ## Rollback instructions

@@ -1,0 +1,86 @@
+{
+  "gate_id": "GATE-CP1-schema-audit",
+  "sprint_id": "S1",
+  "recorded_on": "2026-04-28",
+  "decision": "pass_with_conditions",
+  "closure_authorized": true,
+  "answers": [
+    {
+      "id": "CP1-Q1",
+      "answer": "approve",
+      "decision": "required_units is canonical for micro-teaching-unit IDs"
+    },
+    {
+      "id": "CP1-Q2",
+      "answer": "approve",
+      "decision": "exercise_operations is canonical for fine-grained exercise actions",
+      "condition": "field may be empty until Sprint 12 backfill"
+    },
+    {
+      "id": "CP1-Q3",
+      "answer": "skill_tags",
+      "decision": "use skill_tags for broader taxonomy labels"
+    },
+    {
+      "id": "CP1-Q4",
+      "answer": "approve",
+      "decision": "instructional_role and assessment_role remain separate fields"
+    },
+    {
+      "id": "CP1-Q5",
+      "answer": "approve",
+      "decision": "approve HCS instructional_role v1 vocabulary",
+      "values": [
+        "worked_example",
+        "startoefening",
+        "independent_practice",
+        "interleaving",
+        "target",
+        "verdieping",
+        "consolidatie",
+        "instapquiz",
+        "diagnostic",
+        "nieuws"
+      ]
+    },
+    {
+      "id": "CP1-Q6",
+      "answer": "omit_field",
+      "decision": "assessment_role is optional and absent when not applicable"
+    },
+    {
+      "id": "CP1-Q7",
+      "answer": "approve",
+      "decision": "approve four-field scaffolding object"
+    },
+    {
+      "id": "CP1-Q8",
+      "answer": "approve",
+      "decision": "external exam-question metadata uses references/data/exercises overlays",
+      "condition": "overlay records must carry source stable ID and curriculum version"
+    },
+    {
+      "id": "CP1-Q9",
+      "answer": "approve_overlay_first",
+      "decision": "authored target exercises use overlays first; source mutation waits for later migration sprint"
+    },
+    {
+      "id": "CP1-Q10",
+      "answer": "approve",
+      "decision": "build-scripts/lib/verify_svg_geometry.py is the canonical current verifier path"
+    },
+    {
+      "id": "CP1-Q11",
+      "answer": "approve",
+      "decision": "R9.1 may proceed after CP-1 for blueprint repair and owned-source registry only"
+    },
+    {
+      "id": "CP1-Q12",
+      "answer": "pass_with_conditions",
+      "decision": "close CP-1 as pass_with_conditions"
+    }
+  ],
+  "pattern_analysis": "Answers consistently approve the naming contract, role split, scaffolding object, overlay-first strategy, and limited R9.1 unblock. Bulk exercise metadata remains blocked until Sprint 4 and CP-3.",
+  "targeted_followups_required": false,
+  "plain_pass_authorized": false
+}

@@ -1,0 +1,101 @@
+{
+  "gate_id": "GATE-CP1-schema-audit",
+  "sprint_id": "S1",
+  "status": "pass_with_conditions",
+  "closed_on": "2026-04-28",
+  "closure_confirmed_by_human": true,
+  "human_interview": "reports/review-gates/GATE-CP1-schema-audit/human-interview.md",
+  "review_packet": "reports/review-gates/GATE-CP1-schema-audit/review-packet.md",
+  "audit": "reports/review-gates/GATE-CP1-schema-audit/schema-audit.md",
+  "summary": "CP-1 is closed as pass_with_conditions. The naming contract, role split, scaffolding object, and overlay-first strategy are approved. R9.1 is unblocked only for owned-source registry and blueprint source-reference repair scope.",
+  "protected_reference_data_changed": false,
+  "accepted_outcomes": [
+    "required_units is the canonical field for micro-teaching-unit IDs.",
+    "exercise_operations is the canonical field for fine-grained exercise actions.",
+    "skill_tags is the canonical broader taxonomy field.",
+    "instructional_role and assessment_role are separate fields.",
+    "The HCS v1 instructional_role vocabulary is approved.",
+    "assessment_role is optional and omitted when absent.",
+    "The four-field scaffolding object is approved.",
+    "External exam-question metadata must use overlays under references/data/exercises/.",
+    "Authored target exercises use overlays first; source mutation waits for a later approved migration sprint.",
+    "build-scripts/lib/verify_svg_geometry.py is the canonical current precision verifier path.",
+    "R9.1 may proceed with owned-source registry and blueprint reference repair only."
+  ],
+  "blocked_outcomes": [
+    "Bulk exercise metadata backfill remains blocked until Sprint 4 and CP-3.",
+    "Hand edits to references/external/ remain blocked.",
+    "Machine registry creation without schema, CLI, validator, and mutation log remains blocked.",
+    "Student diagnostics remain blocked.",
+    "Adaptive routing remains blocked.",
+    "Student-facing AI remains blocked.",
+    "Automatic lesson sequencing remains blocked.",
+    "Automatic mastery decisions remain blocked.",
+    "Summative assessment decisions remain blocked."
+  ],
+  "explicit_decisions": [
+    {
+      "topic": "unit field naming",
+      "decision": "Use required_units for micro-teaching-unit IDs. Treat required_skills as legacy/source field until migration."
+    },
+    {
+      "topic": "operation field naming",
+      "decision": "Use exercise_operations for fine-grained exercise actions; allow empty until Sprint 12 backfill."
+    },
+    {
+      "topic": "taxonomy field naming",
+      "decision": "Use skill_tags."
+    },
+    {
+      "topic": "roles",
+      "decision": "Keep instructional_role and assessment_role as orthogonal fields."
+    },
+    {
+      "topic": "assessment_role absence",
+      "decision": "Omit assessment_role when an exercise has no assessment role."
+    },
+    {
+      "topic": "scaffolding",
+      "decision": "Use the four-field scaffolding object with verbal_level, visual_stage, fading_position, and dual_coding_present."
+    },
+    {
+      "topic": "external overlays",
+      "decision": "Use references/data/exercises overlays for external exam-question metadata; overlays must carry source stable ID and curriculum version."
+    },
+    {
+      "topic": "target exercise overlays",
+      "decision": "Use overlays first in Sprint 4; source mutation waits for a later migration sprint."
+    },
+    {
+      "topic": "precision verifier",
+      "decision": "Use build-scripts/lib/verify_svg_geometry.py as the canonical current verifier path; wrapper deferred."
+    },
+    {
+      "topic": "R9.1 unblock",
+      "decision": "R9.1 may proceed only with owned-source registry and blueprint source-reference repair scope."
+    }
+  ],
+  "conditions_to_reopen_or_pass": [
+    "The eleven HCS schema additions remain canonical Sprint 4 input.",
+    "Role split and scaffolding object are non-negotiable for Sprint 4 unless a later review gate changes them.",
+    "CP-1 through CP-8 remain the operating checkpoint structure.",
+    "R9.1 scope is limited to owned-source registry, blueprint source-reference repair, source-surface classification, authority weights, and projection/evidence separation.",
+    "Sprint 4 must include CP-3 dry-run on one Tier A item and one Tier C target exercise before bulk extension.",
+    "exercise_operations may be empty without validation failure until Sprint 12 bootstraps the operations registry.",
+    "External exam-question overlays must carry the source record stable ID and curriculum version."
+  ],
+  "allowed_next_sprint": "R9.1",
+  "allowed_next_sprint_scope": [
+    "owned-source registry",
+    "blueprint source-reference repair",
+    "source-surface classification",
+    "authority weights",
+    "projection edges separated from evidence edges"
+  ],
+  "blocked_next_sprint_scope": [
+    "exercise metadata backfill",
+    "bulk exercise schema extension",
+    "source-file rename of references/external/exam-questions.json",
+    "new machine registries without CLI"
+  ]
+}

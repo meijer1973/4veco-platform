@@ -9,7 +9,7 @@
   "diff_summary": "reports/sprints/S1-diff-summary.md",
   "protected_reference_data_changed": false,
   "gate_id": "GATE-CP1-schema-audit",
-  "gate_status": "prepared_for_human_review",
+  "gate_status": "pass_with_conditions",
   "acceptance_tests": [
     {
       "command": "node build-scripts/sprints/check-sprint-plan.js docs/sprints/S1-plan.md",
@@ -21,6 +21,10 @@
     },
     {
       "command": "node build-scripts/references/audit-exercise-schema-contract.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/review-gates/validate-gate.js reports/review-gates/GATE-CP1-schema-audit/gate-closure.json",
       "status": "passed"
     },
     {
@@ -40,7 +44,11 @@
     "reports/review-gates/GATE-CP1-schema-audit/overlay-strategy.json",
     "reports/review-gates/GATE-CP1-schema-audit/overlay-strategy.md",
     "reports/review-gates/GATE-CP1-schema-audit/review-packet.json",
-    "reports/review-gates/GATE-CP1-schema-audit/review-packet.md"
+    "reports/review-gates/GATE-CP1-schema-audit/review-packet.md",
+    "reports/review-gates/GATE-CP1-schema-audit/human-interview.json",
+    "reports/review-gates/GATE-CP1-schema-audit/human-interview.md",
+    "reports/review-gates/GATE-CP1-schema-audit/gate-closure.json",
+    "reports/review-gates/GATE-CP1-schema-audit/gate-closure.md"
   ],
-  "next_required_step": "Human review and closure of GATE-CP1-schema-audit before R9.1 starts"
+  "next_required_step": "R9.1 owned-source registry and blueprint source-reference repair may start at limited scope"
 }
