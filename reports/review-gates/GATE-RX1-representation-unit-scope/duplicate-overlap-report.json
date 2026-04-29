@@ -1,0 +1,260 @@
+{
+  "schema_version": 1,
+  "report_id": "RX.1-duplicate-overlap-report",
+  "generated_by": "build-scripts/references/build-representation-operation-inventory.js",
+  "generated_on": "2026-04-29T20:28:19.849Z",
+  "source_files": [
+    "references/data/sprints/RX.1-representation-operation-inventory.json",
+    "references/machine/micro-teaching-units.json"
+  ],
+  "status": "warn",
+  "records": [
+    {
+      "operation_id": "HOLD_WELFARE_AREAS_PQ_DIAGRAM",
+      "group": "duplicate_or_hold",
+      "name": "Welvaartsgebieden herkennen in P-Q diagram",
+      "base_operation": "welfare_area_recognition",
+      "representation": "market_surplus_diagram",
+      "economic_context": "market_welfare",
+      "source_values_task": "identify_regions",
+      "composition_pattern": "read_area_then_interpret",
+      "classification": "hold_duplicate_audit",
+      "candidate_unit_id": null,
+      "candidate_unit_name": null,
+      "needs": [],
+      "aspects": [
+        "grafisch",
+        "rekenen"
+      ],
+      "evidence_refs": [
+        {
+          "source_type": "target_exercise",
+          "path": "references/authored/course-target-exercises.json",
+          "entity_id": "target_exercise:2.2.1",
+          "role": "consumer surplus graph",
+          "note": "Consumer surplus and welfare graph work is already present in existing A-units."
+        }
+      ],
+      "overlap_ids": [
+        "A19",
+        "A32",
+        "A40"
+      ],
+      "hold_reason": "Existing A19/A32/A40 already cover core surplus and welfare-area operations; do not mint before detailed overlap review.",
+      "risk": "high",
+      "pitfall": "New unit could duplicate existing welfare diagram operations.",
+      "candidate_id_status": "not_applicable_hold",
+      "evidence_status": "target_exercise_evidence",
+      "mint_decision": "hold",
+      "mutation_authorized": false,
+      "duplicate_overlap": {
+        "overlap_ids": [
+          "A19",
+          "A32",
+          "A40"
+        ],
+        "overlap_count": 3,
+        "verdict": "overlap_requires_review_or_hold",
+        "hold_reason": "Existing A19/A32/A40 already cover core surplus and welfare-area operations; do not mint before detailed overlap review."
+      }
+    },
+    {
+      "operation_id": "HOLD_SHIFT_VS_MOVEMENT",
+      "group": "duplicate_or_hold",
+      "name": "Beweging langs curve versus verschuiving",
+      "base_operation": "graph_interpretation",
+      "representation": "p_q_graph",
+      "economic_context": "demand_supply",
+      "source_values_task": "classify_movement_or_shift",
+      "composition_pattern": "read_scenario_then_classify_graph_change",
+      "classification": "hold_duplicate_audit",
+      "candidate_unit_id": null,
+      "candidate_unit_name": null,
+      "needs": [],
+      "aspects": [
+        "grafisch",
+        "verbaal"
+      ],
+      "evidence_refs": [
+        {
+          "source_type": "target_exercise",
+          "path": "references/authored/course-target-exercises.json",
+          "entity_id": "target_exercise:1.2.2",
+          "role": "movement vs shift target",
+          "note": "Target already requires movement vs shift classification."
+        }
+      ],
+      "overlap_ids": [
+        "D32",
+        "A42"
+      ],
+      "hold_reason": "D32 and A42 already touch this; design review needed before adding another graph-change unit.",
+      "risk": "high",
+      "pitfall": "Could fragment an existing conceptual distinction into a redundant A-domain unit.",
+      "candidate_id_status": "not_applicable_hold",
+      "evidence_status": "target_exercise_evidence",
+      "mint_decision": "hold",
+      "mutation_authorized": false,
+      "duplicate_overlap": {
+        "overlap_ids": [
+          "D32",
+          "A42"
+        ],
+        "overlap_count": 2,
+        "verdict": "overlap_requires_review_or_hold",
+        "hold_reason": "D32 and A42 already touch this; design review needed before adding another graph-change unit."
+      }
+    },
+    {
+      "operation_id": "HOLD_SHORT_SIDE_INTERVENTION_QUANTITY",
+      "group": "duplicate_or_hold",
+      "name": "Korte zijde en interventiehoeveelheid",
+      "base_operation": "short_side_rule",
+      "representation": "p_q_graph",
+      "economic_context": "price_controls",
+      "source_values_task": "read_qd_qs_at_forced_price",
+      "composition_pattern": "read_values_then_apply_min_rule",
+      "classification": "already_covered_hold",
+      "candidate_unit_id": null,
+      "candidate_unit_name": null,
+      "needs": [],
+      "aspects": [
+        "grafisch",
+        "rekenen"
+      ],
+      "evidence_refs": [
+        {
+          "source_type": "target_exercise",
+          "path": "references/authored/course-target-exercises.json",
+          "entity_id": "target_exercise:2.2.3",
+          "role": "short-side missing flag",
+          "note": "Earlier target flag led to A56 in R4.5; do not re-mint."
+        }
+      ],
+      "overlap_ids": [
+        "A51",
+        "A56",
+        "A59"
+      ],
+      "hold_reason": "A51/A56/A59 now cover surplus/shortage and short-side/intervention quantity logic.",
+      "risk": "low",
+      "pitfall": "Would duplicate recently minted R4.5 units.",
+      "candidate_id_status": "not_applicable_hold",
+      "evidence_status": "target_exercise_evidence",
+      "mint_decision": "hold",
+      "mutation_authorized": false,
+      "duplicate_overlap": {
+        "overlap_ids": [
+          "A51",
+          "A56",
+          "A59"
+        ],
+        "overlap_count": 3,
+        "verdict": "overlap_requires_review_or_hold",
+        "hold_reason": "A51/A56/A59 now cover surplus/shortage and short-side/intervention quantity logic."
+      }
+    },
+    {
+      "operation_id": "HOLD_MARGINAL_VALUES_FROM_TABLE",
+      "group": "duplicate_or_hold",
+      "name": "Marginale waarden uit tabel",
+      "base_operation": "table_difference",
+      "representation": "table",
+      "economic_context": "producer",
+      "source_values_task": "take_differences",
+      "composition_pattern": "read_adjacent_rows_then_calculate_delta",
+      "classification": "already_covered_hold",
+      "candidate_unit_id": null,
+      "candidate_unit_name": null,
+      "needs": [],
+      "aspects": [
+        "rekenen"
+      ],
+      "evidence_refs": [
+        {
+          "source_type": "target_exercise",
+          "path": "references/authored/course-target-exercises.json",
+          "entity_id": "target_exercise:1.4.3",
+          "role": "MK/MO table method",
+          "note": "Target led to A52 in R4.5."
+        }
+      ],
+      "overlap_ids": [
+        "A52"
+      ],
+      "hold_reason": "A52 already covers MK and MO from table differences.",
+      "risk": "low",
+      "pitfall": "Would duplicate A52.",
+      "candidate_id_status": "not_applicable_hold",
+      "evidence_status": "target_exercise_evidence",
+      "mint_decision": "hold",
+      "mutation_authorized": false,
+      "duplicate_overlap": {
+        "overlap_ids": [
+          "A52"
+        ],
+        "overlap_count": 1,
+        "verdict": "overlap_requires_review_or_hold",
+        "hold_reason": "A52 already covers MK and MO from table differences."
+      }
+    },
+    {
+      "operation_id": "HOLD_GRAPHICAL_MO_MK_OPTIMUM",
+      "group": "duplicate_or_hold",
+      "name": "Grafische MO=MK optimum bepalen",
+      "base_operation": "profit_maximization",
+      "representation": "producer_graph",
+      "economic_context": "producer",
+      "source_values_task": "read_mo_mk_intersection",
+      "composition_pattern": "read_graph_intersection_then_solve_output",
+      "classification": "hold_duplicate_audit",
+      "candidate_unit_id": null,
+      "candidate_unit_name": null,
+      "needs": [],
+      "aspects": [
+        "grafisch",
+        "rekenen"
+      ],
+      "evidence_refs": [
+        {
+          "source_type": "target_exercise",
+          "path": "references/authored/course-target-exercises.json",
+          "entity_id": "target_exercise:3.1.2",
+          "role": "MO=MK graph/calculation",
+          "note": "Target uses MO=MK and producer graph reasoning."
+        },
+        {
+          "source_type": "target_exercise",
+          "path": "references/authored/course-target-exercises.json",
+          "entity_id": "target_exercise:3.2.3",
+          "role": "monopoly full calculation",
+          "note": "Monopoly procedure may already encode the operation."
+        }
+      ],
+      "overlap_ids": [
+        "A20",
+        "A28",
+        "A33",
+        "A54"
+      ],
+      "hold_reason": "May overlap existing profit optimization and verification units; needs human review before minting.",
+      "risk": "high",
+      "pitfall": "Could conflate graphical optimum reading with algebraic MO=MK solving.",
+      "candidate_id_status": "not_applicable_hold",
+      "evidence_status": "target_exercise_evidence",
+      "mint_decision": "hold",
+      "mutation_authorized": false,
+      "duplicate_overlap": {
+        "overlap_ids": [
+          "A20",
+          "A28",
+          "A33",
+          "A54"
+        ],
+        "overlap_count": 4,
+        "verdict": "overlap_requires_review_or_hold",
+        "hold_reason": "May overlap existing profit optimization and verification units; needs human review before minting."
+      }
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "sprint_id": "RX.1",
+  "name": "Representation-Operation Inventory",
+  "status": "completed",
+  "completed_on": "2026-04-29",
+  "plan": "docs/sprints/RX.1-plan.md",
+  "baseline": "reports/sprints/RX.1-baseline.md",
+  "result": "reports/sprints/RX.1-result.md",
+  "diff_summary": "reports/sprints/RX.1-diff-summary.md",
+  "protected_reference_data_changed": false,
+  "mutation_authorized": false,
+  "source_mutation_authorized": false,
+  "gate_id": "GATE-RX1-representation-unit-scope",
+  "gate_status": "prepared_for_human_review",
+  "rx2_blocked_until_gate_closure": true,
+  "inventory": "references/data/sprints/RX.1-representation-operation-inventory.json",
+  "summary": {
+    "operation_count": 29,
+    "proposed_candidate_count": 24,
+    "held_duplicate_or_overlap_count": 5
+  },
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js docs/sprints/RX.1-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js RX.1",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/build-representation-operation-inventory.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-representation-operation-inventory.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-roadmap-version-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-source-manifest.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-document-inventory.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/validate-core-schemas.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-bundle-urls.js GATE-RX1-representation-unit-scope",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js --check",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-result.js reports/sprints/RX.1-result.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js RX.1 --complete",
+      "status": "passed"
+    }
+  ],
+  "outputs": [
+    "build-scripts/references/build-representation-operation-inventory.js",
+    "build-scripts/references/check-representation-operation-inventory.js",
+    "references/data/sprints/RX.1-representation-operation-inventory.json",
+    "reports/json/representation-operation-inventory.json",
+    "reports/markdown/representation-operation-inventory.md",
+    "reports/review-gates/GATE-RX1-representation-unit-scope/review-packet.json",
+    "reports/review-gates/GATE-RX1-representation-unit-scope/review-packet.md",
+    "reports/review-gates/GATE-RX1-representation-unit-scope/duplicate-overlap-report.json",
+    "reports/review-gates/GATE-RX1-representation-unit-scope/duplicate-overlap-report.md",
+    "reports/review-gates/GATE-RX1-representation-unit-scope/proposed-mutation-queue.json",
+    "reports/review-gates/GATE-RX1-representation-unit-scope/proposed-mutation-queue.md"
+  ],
+  "next_required_step": "Close GATE-RX1-representation-unit-scope before RX.2 mutation planning"
+}

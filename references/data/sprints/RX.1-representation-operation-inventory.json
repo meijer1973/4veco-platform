@@ -1,0 +1,1429 @@
+{
+  "schema_version": 1,
+  "sprint_id": "RX.1",
+  "inventory_id": "representation-operation-inventory",
+  "status": "prepared_for_human_review",
+  "generated_by": "build-scripts/references/build-representation-operation-inventory.js",
+  "generated_on": "2026-04-29T20:28:19.849Z",
+  "source_files": [
+    "references/authored/course-target-exercises.json",
+    "references/external/exam-questions.json",
+    "references/machine/micro-teaching-units.json",
+    "references/data/owned-content-graph.json",
+    "references/data/exercises/graph-spec-representation-plan.json",
+    "reports/review-gates/GATE-CP3-schema-extension-dry-run/gate-closure.json"
+  ],
+  "cp3_gate_status": "pass_with_conditions",
+  "policy": {
+    "mutation_authorized": false,
+    "no_machine_edits": true,
+    "no_external_edits": true,
+    "no_lesson_target_edits": true,
+    "candidate_ids_are_provisional": true,
+    "no_syllabus_only_candidates": true,
+    "existing_a_domain_max_id_at_generation": "A60",
+    "owned_content_graph_edge_count": 1464,
+    "graph_spec_plan_status": "adequate_for_dry_run"
+  },
+  "summary": {
+    "operation_count": 29,
+    "proposed_candidate_count": 24,
+    "hold_count": 5,
+    "mutation_authorized_count": 0,
+    "by_classification": {
+      "needs_new_representation_reading_unit": 5,
+      "needs_new_composed_calculation_unit": 19,
+      "hold_duplicate_audit": 3,
+      "already_covered_hold": 2
+    },
+    "by_group": {
+      "representation_reading_foundation": 6,
+      "percentage_change_from_representations": 5,
+      "index_and_growth_from_representations": 3,
+      "profit_and_producer_representations": 7,
+      "elasticity_from_representations": 3,
+      "duplicate_or_hold": 5
+    },
+    "by_evidence_status": {
+      "target_exercise_evidence": 17,
+      "didactic_prior_rationale": 4,
+      "exam_question_evidence": 8
+    }
+  },
+  "records": [
+    {
+      "operation_id": "REP_TABLE_VALUE_SELECTION",
+      "group": "representation_reading_foundation",
+      "name": "Tabelwaarden selecteren voor berekening",
+      "base_operation": "source_value_selection",
+      "representation": "table",
+      "economic_context": "general_calculation",
+      "source_values_task": "select_row_column_old_new_values",
+      "composition_pattern": "read_values_before_calculation",
+      "classification": "needs_new_representation_reading_unit",
+      "candidate_unit_id": "A61",
+      "candidate_unit_name": "Tabelwaarden selecteren voor berekening",
+      "needs": [],
+      "aspects": [
+        "rekenen",
+        "verbaal"
+      ],
+      "evidence_refs": [
+        {
+          "source_type": "target_exercise",
+          "path": "references/authored/course-target-exercises.json",
+          "entity_id": "target_exercise:1.1.3",
+          "role": "target-exercise table values",
+          "note": "Target exercise asks students to read an ice-cream price/quantity table and interpret a percentage claim."
+        },
+        {
+          "source_type": "target_exercise",
+          "path": "references/authored/course-target-exercises.json",
+          "entity_id": "target_exercise:1.3.2",
+          "role": "target-exercise table values",
+          "note": "Cost-structure target requires selecting TK, TVK, TCK, GTK, GVK, and GCK values from source data."
+        }
+      ],
+      "risk": "low",
+      "pitfall": "Student chooses the visible number but not the relevant row, column, base value, or comparison value.",
+      "candidate_id_status": "provisional_available_at_generation",
+      "evidence_status": "target_exercise_evidence",
+      "mint_decision": "candidate_pending_human_review",
+      "mutation_authorized": false,
+      "duplicate_overlap": {
+        "overlap_ids": [],
+        "overlap_count": 0,
+        "verdict": "no_direct_duplicate_found_in_current_a_units",
+        "hold_reason": null
+      }
+    },
+    {
+      "operation_id": "REP_BAR_CHART_VALUE_READING",
+      "group": "representation_reading_foundation",
+      "name": "Waarden aflezen uit staafdiagram",
+      "base_operation": "source_value_reading",
+      "representation": "bar_chart",
+      "economic_context": "general_source_use",
+      "source_values_task": "read_bar_heights",
+      "composition_pattern": "read_values_before_calculation",
+      "classification": "needs_new_representation_reading_unit",
+      "candidate_unit_id": "A62",
+      "candidate_unit_name": "Waarden aflezen uit staafdiagram",
+      "needs": [],
+      "aspects": [
+        "grafisch"
+      ],
+      "evidence_refs": [
+        {
+          "source_type": "didactic_prior_rationale",
+          "path": "references/authored/didactiek-principes.md",
+          "entity_id": "didactic_prior:representation-transfer",
+          "role": "didactic-prior",
+          "note": "Bar-chart value reading is a common representation-transfer task that cannot be assumed from table reading; no source mutation is proposed in RX.1."
+        }
+      ],
+      "risk": "medium",
+      "pitfall": "Student compares bar height visually without checking scale or category labels.",
+      "candidate_id_status": "provisional_available_at_generation",
+      "evidence_status": "didactic_prior_rationale",
+      "mint_decision": "candidate_pending_human_review",
+      "mutation_authorized": false,
+      "duplicate_overlap": {
+        "overlap_ids": [],
+        "overlap_count": 0,
+        "verdict": "no_direct_duplicate_found_in_current_a_units",
+        "hold_reason": null
+      }
+    },
+    {
+      "operation_id": "REP_LINE_GRAPH_VALUE_READING",
+      "group": "representation_reading_foundation",
+      "name": "Waarden aflezen uit lijngrafiek",
+      "base_operation": "source_value_reading",
+      "representation": "line_chart",
+      "economic_context": "time_series",
+      "source_values_task": "read_points_periods",
+      "composition_pattern": "read_values_before_calculation",
+      "classification": "needs_new_representation_reading_unit",
+      "candidate_unit_id": "A63",
+      "candidate_unit_name": "Waarden aflezen uit lijngrafiek",
+      "needs": [],
+      "aspects": [
+        "grafisch"
+      ],
+      "evidence_refs": [
+        {
+          "source_type": "target_exercise",
+          "path": "references/authored/course-target-exercises.json",
+          "entity_id": "target_exercise:4.4.1",
+          "role": "owned target exercise with CPI over time",
+          "note": "Inflation/CPI target exercise requires comparing values across years and avoiding index-point traps."
+        },
+        {
+          "source_type": "didactic_prior_rationale",
+          "path": "references/authored/didactiek-principes.md",
+          "entity_id": "didactic_prior:representation-transfer",
+          "role": "didactic-prior",
+          "note": "Line graphs introduce period/point selection and interpolation errors distinct from table reading."
+        }
+      ],
+      "risk": "medium",
+      "pitfall": "Student reads the wrong year or treats a period change as a point value.",
+      "candidate_id_status": "provisional_available_at_generation",
+      "evidence_status": "target_exercise_evidence",
+      "mint_decision": "candidate_pending_human_review",
+      "mutation_authorized": false,
+      "duplicate_overlap": {
+        "overlap_ids": [],
+        "overlap_count": 0,
+        "verdict": "no_direct_duplicate_found_in_current_a_units",
+        "hold_reason": null
+      }
+    },
+    {
+      "operation_id": "REP_PIE_SHARE_READING",
+      "group": "representation_reading_foundation",
+      "name": "Aandelen aflezen uit cirkeldiagram",
+      "base_operation": "share_reading",
+      "representation": "pie_chart",
+      "economic_context": "source_shares",
+      "source_values_task": "read_share_percentages",
+      "composition_pattern": "read_share_before_calculation",
+      "classification": "needs_new_representation_reading_unit",
+      "candidate_unit_id": "A64",
+      "candidate_unit_name": "Aandelen aflezen uit cirkeldiagram",
+      "needs": [],
+      "aspects": [
+        "grafisch",
+        "rekenen"
+      ],
+      "evidence_refs": [
+        {
+          "source_type": "didactic_prior_rationale",
+          "path": "references/authored/didactiek-principes.md",
+          "entity_id": "didactic_prior:representation-transfer",
+          "role": "didactic-prior",
+          "note": "Pie charts encode shares, not raw absolute quantities; this is a representation distinction worth reviewing before mutation."
+        }
+      ],
+      "risk": "medium",
+      "pitfall": "Student treats a share from a pie chart as an absolute number.",
+      "candidate_id_status": "provisional_available_at_generation",
+      "evidence_status": "didactic_prior_rationale",
+      "mint_decision": "candidate_pending_human_review",
+      "mutation_authorized": false,
+      "duplicate_overlap": {
+        "overlap_ids": [],
+        "overlap_count": 0,
+        "verdict": "no_direct_duplicate_found_in_current_a_units",
+        "hold_reason": null
+      }
+    },
+    {
+      "operation_id": "REP_SHARE_TOTAL_ABSOLUTE_QUANTITY",
+      "group": "representation_reading_foundation",
+      "name": "Absolute hoeveelheid berekenen uit aandeel en totaal",
+      "base_operation": "percentage_share_application",
+      "representation": "pie_chart_plus_total",
+      "economic_context": "source_shares",
+      "source_values_task": "combine_share_and_total",
+      "composition_pattern": "read_share_then_calculate_absolute_value",
+      "classification": "needs_new_composed_calculation_unit",
+      "candidate_unit_id": "A65",
+      "candidate_unit_name": "Absolute hoeveelheid berekenen uit aandeel en totaal",
+      "needs": [
+        "A64",
+        "A04"
+      ],
+      "aspects": [
+        "grafisch",
+        "rekenen"
+      ],
+      "evidence_refs": [
+        {
+          "source_type": "exam_question",
+          "path": "references/external/exam-questions.json",
+          "entity_id": "external_exam_question:ha-1022-a-23-1-o:opgave-1:question-2",
+          "role": "exam calculation using source values",
+          "note": "Question asks to show more than 40% from bron 1; source values are not extracted yet, so this remains a reviewed candidate pattern."
+        },
+        {
+          "source_type": "didactic_prior_rationale",
+          "path": "references/authored/didactiek-principes.md",
+          "entity_id": "didactic_prior:representation-transfer",
+          "role": "didactic-prior",
+          "note": "Share x total is a separate composed operation from reading the share alone."
+        }
+      ],
+      "risk": "medium",
+      "pitfall": "Student multiplies by the wrong total or forgets to convert percentage to decimal/share form.",
+      "candidate_id_status": "provisional_available_at_generation",
+      "evidence_status": "exam_question_evidence",
+      "mint_decision": "candidate_pending_human_review",
+      "mutation_authorized": false,
+      "duplicate_overlap": {
+        "overlap_ids": [],
+        "overlap_count": 0,
+        "verdict": "no_direct_duplicate_found_in_current_a_units",
+        "hold_reason": null
+      }
+    },
+    {
+      "operation_id": "REP_BASE_COMPARISON_VALUE_IDENTIFICATION",
+      "group": "representation_reading_foundation",
+      "name": "Basiswaarde en vergelijkingswaarde in bron bepalen",
+      "base_operation": "base_value_selection",
+      "representation": "source_text_or_table",
+      "economic_context": "percentage_change",
+      "source_values_task": "identify_old_new_base_comparison",
+      "composition_pattern": "select_base_before_percentage_change",
+      "classification": "needs_new_representation_reading_unit",
+      "candidate_unit_id": "A66",
+      "candidate_unit_name": "Basiswaarde en vergelijkingswaarde in bron bepalen",
+      "needs": [
+        "A61"
+      ],
+      "aspects": [
+        "rekenen",
+        "verbaal"
+      ],
+      "evidence_refs": [
+        {
+          "source_type": "target_exercise",
+          "path": "references/authored/course-target-exercises.json",
+          "entity_id": "target_exercise:1.1.2",
+          "role": "percentage-change target exercise",
+          "note": "Percentage and index exercise includes old/new values and index-point confusion."
+        },
+        {
+          "source_type": "target_exercise",
+          "path": "references/authored/course-target-exercises.json",
+          "entity_id": "target_exercise:1.1.3",
+          "role": "table claim evaluation",
+          "note": "Target asks which table interval could produce a 50% drop."
+        }
+      ],
+      "risk": "low",
+      "pitfall": "Student uses the new value as denominator or reverses old and new values.",
+      "candidate_id_status": "provisional_available_at_generation",
+      "evidence_status": "target_exercise_evidence",
+      "mint_decision": "candidate_pending_human_review",
+      "mutation_authorized": false,
+      "duplicate_overlap": {
+        "overlap_ids": [],
+        "overlap_count": 0,
+        "verdict": "no_direct_duplicate_found_in_current_a_units",
+        "hold_reason": null
+      }
+    },
+    {
+      "operation_id": "REP_PCT_CHANGE_TABLE",
+      "group": "percentage_change_from_representations",
+      "name": "Procentuele verandering berekenen vanuit tabel",
+      "base_operation": "percentage_change",
+      "representation": "table",
+      "economic_context": "general_price_quantity",
+      "source_values_task": "select_table_values",
+      "composition_pattern": "read_values_then_calculate",
+      "classification": "needs_new_composed_calculation_unit",
+      "candidate_unit_id": "A67",
+      "candidate_unit_name": "Procentuele verandering berekenen vanuit tabel",
+      "needs": [
+        "A38",
+        "A61",
+        "A66"
+      ],
+      "aspects": [
+        "rekenen",
+        "verbaal"
+      ],
+      "evidence_refs": [
+        {
+          "source_type": "target_exercise",
+          "path": "references/authored/course-target-exercises.json",
+          "entity_id": "target_exercise:1.1.3",
+          "role": "table percentage claim",
+          "note": "Target asks students to inspect table values and evaluate a 50% sales drop claim."
+        },
+        {
+          "source_type": "target_exercise",
+          "path": "references/authored/course-target-exercises.json",
+          "entity_id": "target_exercise:4.4.3",
+          "role": "real/nominal table application",
+          "note": "Integration target uses mixed source material and table-based real/nominal calculations."
+        }
+      ],
+      "risk": "low",
+      "pitfall": "Student correctly computes percentage change but selects the wrong pair of table values.",
+      "candidate_id_status": "provisional_available_at_generation",
+      "evidence_status": "target_exercise_evidence",
+      "mint_decision": "candidate_pending_human_review",
+      "mutation_authorized": false,
+      "duplicate_overlap": {
+        "overlap_ids": [],
+        "overlap_count": 0,
+        "verdict": "no_direct_duplicate_found_in_current_a_units",
+        "hold_reason": null
+      }
+    },
+    {
+      "operation_id": "REP_PCT_CHANGE_BAR_CHART",
+      "group": "percentage_change_from_representations",
+      "name": "Procentuele verandering berekenen vanuit staafdiagram",
+      "base_operation": "percentage_change",
+      "representation": "bar_chart",
+      "economic_context": "source_chart",
+      "source_values_task": "read_bar_values",
+      "composition_pattern": "read_values_then_calculate",
+      "classification": "needs_new_composed_calculation_unit",
+      "candidate_unit_id": "A68",
+      "candidate_unit_name": "Procentuele verandering berekenen vanuit staafdiagram",
+      "needs": [
+        "A38",
+        "A62",
+        "A66"
+      ],
+      "aspects": [
+        "grafisch",
+        "rekenen"
+      ],
+      "evidence_refs": [
+        {
+          "source_type": "didactic_prior_rationale",
+          "path": "references/authored/didactiek-principes.md",
+          "entity_id": "didactic_prior:representation-transfer",
+          "role": "didactic-prior",
+          "note": "Representation transfer from base percentage-change formula to bar charts should be reviewed before mutation; no syllabus-only basis is used."
+        }
+      ],
+      "risk": "medium",
+      "pitfall": "Student estimates bar heights without reading the axis scale.",
+      "candidate_id_status": "provisional_available_at_generation",
+      "evidence_status": "didactic_prior_rationale",
+      "mint_decision": "candidate_pending_human_review",
+      "mutation_authorized": false,
+      "duplicate_overlap": {
+        "overlap_ids": [],
+        "overlap_count": 0,
+        "verdict": "no_direct_duplicate_found_in_current_a_units",
+        "hold_reason": null
+      }
+    },
+    {
+      "operation_id": "REP_PCT_CHANGE_LINE_GRAPH",
+      "group": "percentage_change_from_representations",
+      "name": "Procentuele verandering berekenen vanuit lijngrafiek",
+      "base_operation": "percentage_change",
+      "representation": "line_chart",
+      "economic_context": "macro_time_series",
+      "source_values_task": "read_two_time_points",
+      "composition_pattern": "read_values_then_calculate",
+      "classification": "needs_new_composed_calculation_unit",
+      "candidate_unit_id": "A69",
+      "candidate_unit_name": "Procentuele verandering berekenen vanuit lijngrafiek",
+      "needs": [
+        "A38",
+        "A63",
+        "A66"
+      ],
+      "aspects": [
+        "grafisch",
+        "rekenen"
+      ],
+      "evidence_refs": [
+        {
+          "source_type": "target_exercise",
+          "path": "references/authored/course-target-exercises.json",
+          "entity_id": "target_exercise:4.4.1",
+          "role": "inflation and index over time",
+          "note": "Book 4 returns to percentage/index interpretation across years."
+        },
+        {
+          "source_type": "didactic_prior_rationale",
+          "path": "references/authored/didactiek-principes.md",
+          "entity_id": "didactic_prior:representation-transfer",
+          "role": "didactic-prior",
+          "note": "Time-series values create old/new selection errors distinct from base percentage calculation."
+        }
+      ],
+      "risk": "medium",
+      "pitfall": "Student subtracts visually or uses index-point change as percentage change.",
+      "candidate_id_status": "provisional_available_at_generation",
+      "evidence_status": "target_exercise_evidence",
+      "mint_decision": "candidate_pending_human_review",
+      "mutation_authorized": false,
+      "duplicate_overlap": {
+        "overlap_ids": [],
+        "overlap_count": 0,
+        "verdict": "no_direct_duplicate_found_in_current_a_units",
+        "hold_reason": null
+      }
+    },
+    {
+      "operation_id": "REP_PERCENTAGE_POINT_CHANGE",
+      "group": "percentage_change_from_representations",
+      "name": "Percentagepuntverandering in aandeel herkennen",
+      "base_operation": "percentage_point_difference",
+      "representation": "share_or_index_source",
+      "economic_context": "shares_inflation",
+      "source_values_task": "compare_percent_values",
+      "composition_pattern": "distinguish_percentage_points_from_percent_change",
+      "classification": "needs_new_composed_calculation_unit",
+      "candidate_unit_id": "A70",
+      "candidate_unit_name": "Percentagepuntverandering in aandeel herkennen",
+      "needs": [
+        "A64"
+      ],
+      "aspects": [
+        "grafisch",
+        "rekenen",
+        "verbaal"
+      ],
+      "evidence_refs": [
+        {
+          "source_type": "target_exercise",
+          "path": "references/authored/course-target-exercises.json",
+          "entity_id": "target_exercise:1.1.2",
+          "role": "index-point trap",
+          "note": "Target explicitly asks why index from 108 to 112 is not automatically 4% inflation."
+        },
+        {
+          "source_type": "target_exercise",
+          "path": "references/authored/course-target-exercises.json",
+          "entity_id": "target_exercise:4.4.1",
+          "role": "critical exam skill",
+          "note": "Blueprint repeats the index-point versus percentage distinction in Book 4."
+        }
+      ],
+      "risk": "low",
+      "pitfall": "Student says a rise from 20% to 25% is 5% instead of 5 percentage points.",
+      "candidate_id_status": "provisional_available_at_generation",
+      "evidence_status": "target_exercise_evidence",
+      "mint_decision": "candidate_pending_human_review",
+      "mutation_authorized": false,
+      "duplicate_overlap": {
+        "overlap_ids": [],
+        "overlap_count": 0,
+        "verdict": "no_direct_duplicate_found_in_current_a_units",
+        "hold_reason": null
+      }
+    },
+    {
+      "operation_id": "REP_PCT_CHANGE_PIE_CHART",
+      "group": "percentage_change_from_representations",
+      "name": "Procentuele verandering berekenen vanuit cirkeldiagram",
+      "base_operation": "percentage_change",
+      "representation": "pie_chart_plus_total",
+      "economic_context": "source_shares",
+      "source_values_task": "convert_shares_to_values",
+      "composition_pattern": "read_share_calculate_absolute_then_percentage_change",
+      "classification": "needs_new_composed_calculation_unit",
+      "candidate_unit_id": "A71",
+      "candidate_unit_name": "Procentuele verandering berekenen vanuit cirkeldiagram",
+      "needs": [
+        "A38",
+        "A64",
+        "A65",
+        "A70"
+      ],
+      "aspects": [
+        "grafisch",
+        "rekenen",
+        "verbaal"
+      ],
+      "evidence_refs": [
+        {
+          "source_type": "didactic_prior_rationale",
+          "path": "references/authored/didactiek-principes.md",
+          "entity_id": "didactic_prior:representation-transfer",
+          "role": "didactic-prior",
+          "note": "Pie-chart percentage change requires reconstructing absolute values before applying percentage-change logic; hold for human review if evidence remains thin."
+        }
+      ],
+      "risk": "high",
+      "pitfall": "Student compares shares directly even when totals differ across periods.",
+      "candidate_id_status": "provisional_available_at_generation",
+      "evidence_status": "didactic_prior_rationale",
+      "mint_decision": "candidate_pending_human_review",
+      "mutation_authorized": false,
+      "duplicate_overlap": {
+        "overlap_ids": [],
+        "overlap_count": 0,
+        "verdict": "no_direct_duplicate_found_in_current_a_units",
+        "hold_reason": null
+      }
+    },
+    {
+      "operation_id": "REP_INDEX_FROM_TABLE",
+      "group": "index_and_growth_from_representations",
+      "name": "Indexcijfer berekenen vanuit tabel",
+      "base_operation": "index_number",
+      "representation": "table",
+      "economic_context": "price_index",
+      "source_values_task": "select_base_year_and_current_year",
+      "composition_pattern": "select_values_then_index",
+      "classification": "needs_new_composed_calculation_unit",
+      "candidate_unit_id": "A72",
+      "candidate_unit_name": "Indexcijfer berekenen vanuit tabel",
+      "needs": [
+        "A39",
+        "A61"
+      ],
+      "aspects": [
+        "rekenen",
+        "verbaal"
+      ],
+      "evidence_refs": [
+        {
+          "source_type": "target_exercise",
+          "path": "references/authored/course-target-exercises.json",
+          "entity_id": "target_exercise:1.1.2",
+          "role": "price index target",
+          "note": "Target asks students to calculate price index from 2023 and 2025 basket values."
+        },
+        {
+          "source_type": "target_exercise",
+          "path": "references/authored/course-target-exercises.json",
+          "entity_id": "target_exercise:4.4.1",
+          "role": "CPI target",
+          "note": "Book 4 target uses CPI/index values to calculate real values."
+        }
+      ],
+      "risk": "low",
+      "pitfall": "Student uses the current year instead of base year as 100.",
+      "candidate_id_status": "provisional_available_at_generation",
+      "evidence_status": "target_exercise_evidence",
+      "mint_decision": "candidate_pending_human_review",
+      "mutation_authorized": false,
+      "duplicate_overlap": {
+        "overlap_ids": [],
+        "overlap_count": 0,
+        "verdict": "no_direct_duplicate_found_in_current_a_units",
+        "hold_reason": null
+      }
+    },
+    {
+      "operation_id": "REP_INDEX_CHANGE_LINE_GRAPH",
+      "group": "index_and_growth_from_representations",
+      "name": "Indexverandering aflezen uit lijngrafiek",
+      "base_operation": "index_number_interpretation",
+      "representation": "line_chart",
+      "economic_context": "index_series",
+      "source_values_task": "read_index_series_points",
+      "composition_pattern": "read_index_points_then_interpret",
+      "classification": "needs_new_composed_calculation_unit",
+      "candidate_unit_id": "A73",
+      "candidate_unit_name": "Indexverandering aflezen uit lijngrafiek",
+      "needs": [
+        "A39",
+        "A63"
+      ],
+      "aspects": [
+        "grafisch",
+        "rekenen"
+      ],
+      "evidence_refs": [
+        {
+          "source_type": "didactic_prior_rationale",
+          "path": "references/authored/didactiek-principes.md",
+          "entity_id": "didactic_prior:representation-transfer",
+          "role": "didactic-prior",
+          "note": "Index series reading is distinct from raw-value line-graph reading because students confuse index-point and percentage changes."
+        },
+        {
+          "source_type": "target_exercise",
+          "path": "references/authored/course-target-exercises.json",
+          "entity_id": "target_exercise:4.4.1",
+          "role": "CPI/index integration",
+          "note": "Book 4 repeats the index-point distinction as a critical exam skill."
+        }
+      ],
+      "risk": "medium",
+      "pitfall": "Student treats an index-point change as a percentage change.",
+      "candidate_id_status": "provisional_available_at_generation",
+      "evidence_status": "target_exercise_evidence",
+      "mint_decision": "candidate_pending_human_review",
+      "mutation_authorized": false,
+      "duplicate_overlap": {
+        "overlap_ids": [],
+        "overlap_count": 0,
+        "verdict": "no_direct_duplicate_found_in_current_a_units",
+        "hold_reason": null
+      }
+    },
+    {
+      "operation_id": "REP_PCT_CHANGE_FROM_INDEX",
+      "group": "index_and_growth_from_representations",
+      "name": "Procentuele verandering berekenen vanuit indexcijfers",
+      "base_operation": "percentage_change",
+      "representation": "index_values",
+      "economic_context": "inflation_real_nominal",
+      "source_values_task": "select_two_index_values",
+      "composition_pattern": "read_index_values_then_percentage_change",
+      "classification": "needs_new_composed_calculation_unit",
+      "candidate_unit_id": "A74",
+      "candidate_unit_name": "Procentuele verandering berekenen vanuit indexcijfers",
+      "needs": [
+        "A38",
+        "A39",
+        "A66"
+      ],
+      "aspects": [
+        "rekenen",
+        "verbaal"
+      ],
+      "evidence_refs": [
+        {
+          "source_type": "target_exercise",
+          "path": "references/authored/course-target-exercises.json",
+          "entity_id": "target_exercise:1.1.2",
+          "role": "index to percentage change",
+          "note": "Target asks for price increase from an index rising to 112 and corrects the 108-to-112 misconception."
+        },
+        {
+          "source_type": "target_exercise",
+          "path": "references/authored/course-target-exercises.json",
+          "entity_id": "target_exercise:4.4.1",
+          "role": "inflation and real wage",
+          "note": "Book 4 target applies CPI/index interpretation to real wage and inflation."
+        }
+      ],
+      "risk": "low",
+      "pitfall": "Student subtracts index values instead of applying percentage change from the old index.",
+      "candidate_id_status": "provisional_available_at_generation",
+      "evidence_status": "target_exercise_evidence",
+      "mint_decision": "candidate_pending_human_review",
+      "mutation_authorized": false,
+      "duplicate_overlap": {
+        "overlap_ids": [],
+        "overlap_count": 0,
+        "verdict": "no_direct_duplicate_found_in_current_a_units",
+        "hold_reason": null
+      }
+    },
+    {
+      "operation_id": "REP_PROFIT_FROM_REVENUE_COST_TABLE",
+      "group": "profit_and_producer_representations",
+      "name": "Totale winst berekenen uit opbrengsten- en kostentabel",
+      "base_operation": "profit",
+      "representation": "table",
+      "economic_context": "producer",
+      "source_values_task": "select_to_tk_values",
+      "composition_pattern": "read_values_then_calculate_profit",
+      "classification": "needs_new_composed_calculation_unit",
+      "candidate_unit_id": "A75",
+      "candidate_unit_name": "Totale winst berekenen uit opbrengsten- en kostentabel",
+      "needs": [
+        "A04",
+        "A61"
+      ],
+      "aspects": [
+        "rekenen",
+        "verbaal"
+      ],
+      "evidence_refs": [
+        {
+          "source_type": "target_exercise",
+          "path": "references/authored/course-target-exercises.json",
+          "entity_id": "target_exercise:1.3.3",
+          "role": "profit from TO and TK",
+          "note": "Target asks students to calculate TO and winst from bakery data."
+        },
+        {
+          "source_type": "target_exercise",
+          "path": "references/authored/course-target-exercises.json",
+          "entity_id": "target_exercise:1.4.3",
+          "role": "table with TK TO Winst MK MO",
+          "note": "Target explicitly builds a Q/TK/TO/Winst table."
+        }
+      ],
+      "risk": "low",
+      "pitfall": "Student reads the wrong row or mixes total and average values.",
+      "candidate_id_status": "provisional_available_at_generation",
+      "evidence_status": "target_exercise_evidence",
+      "mint_decision": "candidate_pending_human_review",
+      "mutation_authorized": false,
+      "duplicate_overlap": {
+        "overlap_ids": [],
+        "overlap_count": 0,
+        "verdict": "no_direct_duplicate_found_in_current_a_units",
+        "hold_reason": null
+      }
+    },
+    {
+      "operation_id": "REP_PROFIT_FROM_P_GTK_Q",
+      "group": "profit_and_producer_representations",
+      "name": "Totale winst berekenen uit P, GTK en Q",
+      "base_operation": "profit",
+      "representation": "producer_data",
+      "economic_context": "producer",
+      "source_values_task": "select_p_gtk_q_values",
+      "composition_pattern": "read_values_then_apply_profit_rectangle_formula",
+      "classification": "needs_new_composed_calculation_unit",
+      "candidate_unit_id": "A76",
+      "candidate_unit_name": "Totale winst berekenen uit P, GTK en Q",
+      "needs": [
+        "A14",
+        "A04"
+      ],
+      "aspects": [
+        "rekenen"
+      ],
+      "evidence_refs": [
+        {
+          "source_type": "exam_question",
+          "path": "references/external/exam-questions.json",
+          "entity_id": "external_exam_question:ha-1022-a-24-1-o:opgave-2:question-9",
+          "role": "exam producer graph/profit area",
+          "note": "Question asks which area gives total profit for Sprinter."
+        },
+        {
+          "source_type": "target_exercise",
+          "path": "references/authored/course-target-exercises.json",
+          "entity_id": "target_exercise:3.1.2",
+          "role": "profit at optimal Q",
+          "note": "Producer target requires calculating winst after finding optimal output."
+        }
+      ],
+      "risk": "medium",
+      "pitfall": "Student uses TK instead of GTK or forgets to multiply the margin by Q.",
+      "candidate_id_status": "provisional_available_at_generation",
+      "evidence_status": "exam_question_evidence",
+      "mint_decision": "candidate_pending_human_review",
+      "mutation_authorized": false,
+      "duplicate_overlap": {
+        "overlap_ids": [],
+        "overlap_count": 0,
+        "verdict": "no_direct_duplicate_found_in_current_a_units",
+        "hold_reason": null
+      }
+    },
+    {
+      "operation_id": "REP_BREAK_EVEN_TO_TK_GRAPH",
+      "group": "profit_and_producer_representations",
+      "name": "Break-even aflezen uit TO-TK-grafiek",
+      "base_operation": "break_even",
+      "representation": "to_tk_graph",
+      "economic_context": "producer",
+      "source_values_task": "read_intersection",
+      "composition_pattern": "read_graph_intersection_then_interpret",
+      "classification": "needs_new_composed_calculation_unit",
+      "candidate_unit_id": "A77",
+      "candidate_unit_name": "Break-even aflezen uit TO-TK-grafiek",
+      "needs": [
+        "A63",
+        "A29"
+      ],
+      "aspects": [
+        "grafisch",
+        "rekenen"
+      ],
+      "evidence_refs": [
+        {
+          "source_type": "target_exercise",
+          "path": "references/authored/course-target-exercises.json",
+          "entity_id": "target_exercise:1.3.3",
+          "role": "TO/TK graph and break-even",
+          "note": "Target asks students to draw TK and TO, mark break-even, and shade profit."
+        }
+      ],
+      "risk": "medium",
+      "pitfall": "Student marks the wrong crossing or treats a profit area as the break-even point.",
+      "candidate_id_status": "provisional_available_at_generation",
+      "evidence_status": "target_exercise_evidence",
+      "mint_decision": "candidate_pending_human_review",
+      "mutation_authorized": false,
+      "duplicate_overlap": {
+        "overlap_ids": [],
+        "overlap_count": 0,
+        "verdict": "no_direct_duplicate_found_in_current_a_units",
+        "hold_reason": null
+      }
+    },
+    {
+      "operation_id": "REP_PROFIT_LOSS_TO_TK_GRAPH",
+      "group": "profit_and_producer_representations",
+      "name": "Winst of verlies aflezen uit TO-TK-grafiek",
+      "base_operation": "profit",
+      "representation": "to_tk_graph",
+      "economic_context": "producer",
+      "source_values_task": "read_vertical_distance",
+      "composition_pattern": "read_graph_distance_then_interpret_profit_loss",
+      "classification": "needs_new_composed_calculation_unit",
+      "candidate_unit_id": "A78",
+      "candidate_unit_name": "Winst of verlies aflezen uit TO-TK-grafiek",
+      "needs": [
+        "A63",
+        "A75"
+      ],
+      "aspects": [
+        "grafisch",
+        "rekenen"
+      ],
+      "evidence_refs": [
+        {
+          "source_type": "target_exercise",
+          "path": "references/authored/course-target-exercises.json",
+          "entity_id": "target_exercise:1.3.3",
+          "role": "profit/loss zones in graph",
+          "note": "Target asks students to show TK and TO in a graph and identify winst/verlies zones."
+        }
+      ],
+      "risk": "medium",
+      "pitfall": "Student reads horizontal distance instead of vertical distance between TO and TK.",
+      "candidate_id_status": "provisional_available_at_generation",
+      "evidence_status": "target_exercise_evidence",
+      "mint_decision": "candidate_pending_human_review",
+      "mutation_authorized": false,
+      "duplicate_overlap": {
+        "overlap_ids": [],
+        "overlap_count": 0,
+        "verdict": "no_direct_duplicate_found_in_current_a_units",
+        "hold_reason": null
+      }
+    },
+    {
+      "operation_id": "REP_MAX_PROFIT_TO_TK_TABLE",
+      "group": "profit_and_producer_representations",
+      "name": "Maximale winst bepalen uit TO-TK-tabel",
+      "base_operation": "profit_maximization_by_comparison",
+      "representation": "table",
+      "economic_context": "producer",
+      "source_values_task": "compare_profit_by_quantity",
+      "composition_pattern": "read_rows_then_choose_maximum",
+      "classification": "needs_new_composed_calculation_unit",
+      "candidate_unit_id": "A79",
+      "candidate_unit_name": "Maximale winst bepalen uit TO-TK-tabel",
+      "needs": [
+        "A75",
+        "A61"
+      ],
+      "aspects": [
+        "rekenen",
+        "verbaal"
+      ],
+      "evidence_refs": [
+        {
+          "source_type": "target_exercise",
+          "path": "references/authored/course-target-exercises.json",
+          "entity_id": "target_exercise:1.4.4",
+          "role": "profit optimum from table",
+          "note": "Target asks students to extend a table and find which Q has highest winst."
+        },
+        {
+          "source_type": "exam_question",
+          "path": "references/external/exam-questions.json",
+          "entity_id": "external_exam_question:ha-1022-a-23-2-o:opgave-4:question-18",
+          "role": "exam maximum total profit",
+          "note": "Question asks to calculate maximum total profit for Fluid."
+        }
+      ],
+      "risk": "low",
+      "pitfall": "Student selects highest revenue rather than highest profit.",
+      "candidate_id_status": "provisional_available_at_generation",
+      "evidence_status": "exam_question_evidence",
+      "mint_decision": "candidate_pending_human_review",
+      "mutation_authorized": false,
+      "duplicate_overlap": {
+        "overlap_ids": [],
+        "overlap_count": 0,
+        "verdict": "no_direct_duplicate_found_in_current_a_units",
+        "hold_reason": null
+      }
+    },
+    {
+      "operation_id": "REP_PROFIT_RECTANGLE_PRODUCER_GRAPH",
+      "group": "profit_and_producer_representations",
+      "name": "Winstrechthoek tekenen in producentengrafiek",
+      "base_operation": "profit_rectangle",
+      "representation": "producer_graph",
+      "economic_context": "producer",
+      "source_values_task": "read_p_gtk_q_from_graph",
+      "composition_pattern": "read_values_then_draw_area",
+      "classification": "needs_new_composed_calculation_unit",
+      "candidate_unit_id": "A80",
+      "candidate_unit_name": "Winstrechthoek tekenen in producentengrafiek",
+      "needs": [
+        "A76",
+        "A45"
+      ],
+      "aspects": [
+        "grafisch",
+        "rekenen"
+      ],
+      "evidence_refs": [
+        {
+          "source_type": "exam_question",
+          "path": "references/external/exam-questions.json",
+          "entity_id": "external_exam_question:ha-1022-a-24-1-o:opgave-2:question-9",
+          "role": "exam producer graph area",
+          "note": "Question asks which area gives total profit."
+        },
+        {
+          "source_type": "target_exercise",
+          "path": "references/authored/course-target-exercises.json",
+          "entity_id": "target_exercise:3.1.2",
+          "role": "producer profit calculation",
+          "note": "Profit maximization target culminates in calculating winst at optimal Q."
+        }
+      ],
+      "risk": "medium",
+      "pitfall": "Student draws rectangle to the wrong average-cost line or quantity.",
+      "candidate_id_status": "provisional_available_at_generation",
+      "evidence_status": "exam_question_evidence",
+      "mint_decision": "candidate_pending_human_review",
+      "mutation_authorized": false,
+      "duplicate_overlap": {
+        "overlap_ids": [],
+        "overlap_count": 0,
+        "verdict": "no_direct_duplicate_found_in_current_a_units",
+        "hold_reason": null
+      }
+    },
+    {
+      "operation_id": "REP_PROFIT_LOSS_BREAK_EVEN_PRODUCER_GRAPH",
+      "group": "profit_and_producer_representations",
+      "name": "Winst, verlies en break-even herkennen in producentengrafiek",
+      "base_operation": "profit_loss_break_even_recognition",
+      "representation": "producer_graph",
+      "economic_context": "producer",
+      "source_values_task": "compare_p_and_gtk",
+      "composition_pattern": "read_graph_condition_then_classify",
+      "classification": "needs_new_composed_calculation_unit",
+      "candidate_unit_id": "A81",
+      "candidate_unit_name": "Winst, verlies en break-even herkennen in producentengrafiek",
+      "needs": [
+        "A76",
+        "A80"
+      ],
+      "aspects": [
+        "grafisch",
+        "verbaal"
+      ],
+      "evidence_refs": [
+        {
+          "source_type": "target_exercise",
+          "path": "references/authored/course-target-exercises.json",
+          "entity_id": "target_exercise:3.1.3",
+          "role": "zero-profit equilibrium graph",
+          "note": "Target asks students to draw long-run equilibrium and show P = minimum GTK = MK."
+        },
+        {
+          "source_type": "exam_question",
+          "path": "references/external/exam-questions.json",
+          "entity_id": "external_exam_question:ha-1022-a-24-1-o:opgave-2:question-9",
+          "role": "exam producer graph area",
+          "note": "Producer graph question requires identifying the relevant profit area."
+        }
+      ],
+      "risk": "medium",
+      "pitfall": "Student recognises output but not whether P is above, equal to, or below GTK.",
+      "candidate_id_status": "provisional_available_at_generation",
+      "evidence_status": "exam_question_evidence",
+      "mint_decision": "candidate_pending_human_review",
+      "mutation_authorized": false,
+      "duplicate_overlap": {
+        "overlap_ids": [],
+        "overlap_count": 0,
+        "verdict": "no_direct_duplicate_found_in_current_a_units",
+        "hold_reason": null
+      }
+    },
+    {
+      "operation_id": "REP_ELASTICITY_FROM_TABLE",
+      "group": "elasticity_from_representations",
+      "name": "Elasticiteit berekenen uit tabelwaarden",
+      "base_operation": "elasticity",
+      "representation": "table",
+      "economic_context": "market",
+      "source_values_task": "select_two_variable_changes",
+      "composition_pattern": "read_values_then_calculate_elasticity",
+      "classification": "needs_new_composed_calculation_unit",
+      "candidate_unit_id": "A82",
+      "candidate_unit_name": "Elasticiteit berekenen uit tabelwaarden",
+      "needs": [
+        "A15",
+        "A61",
+        "A66"
+      ],
+      "aspects": [
+        "rekenen",
+        "verbaal"
+      ],
+      "evidence_refs": [
+        {
+          "source_type": "exam_question",
+          "path": "references/external/exam-questions.json",
+          "entity_id": "external_exam_question:ha-1022-a-23-1-o:opgave-5:question-23",
+          "role": "exam elasticity table",
+          "note": "Question asks to explain a table cell using price elasticity."
+        },
+        {
+          "source_type": "target_exercise",
+          "path": "references/authored/course-target-exercises.json",
+          "entity_id": "target_exercise:2.1.1",
+          "role": "price elasticity calculation",
+          "note": "Elasticity paragraph requires concept and calculation."
+        }
+      ],
+      "risk": "medium",
+      "pitfall": "Student computes one percentage change correctly but pairs it with the wrong driver variable.",
+      "candidate_id_status": "provisional_available_at_generation",
+      "evidence_status": "exam_question_evidence",
+      "mint_decision": "candidate_pending_human_review",
+      "mutation_authorized": false,
+      "duplicate_overlap": {
+        "overlap_ids": [],
+        "overlap_count": 0,
+        "verdict": "no_direct_duplicate_found_in_current_a_units",
+        "hold_reason": null
+      }
+    },
+    {
+      "operation_id": "REP_ELASTICITY_FROM_DEMAND_GRAPH",
+      "group": "elasticity_from_representations",
+      "name": "Elasticiteit berekenen uit vraaggrafiek",
+      "base_operation": "elasticity",
+      "representation": "p_q_graph",
+      "economic_context": "market_demand",
+      "source_values_task": "read_two_price_quantity_pairs",
+      "composition_pattern": "read_graph_pairs_then_calculate_elasticity",
+      "classification": "needs_new_composed_calculation_unit",
+      "candidate_unit_id": "A83",
+      "candidate_unit_name": "Elasticiteit berekenen uit vraaggrafiek",
+      "needs": [
+        "A15",
+        "A46",
+        "A66"
+      ],
+      "aspects": [
+        "grafisch",
+        "rekenen"
+      ],
+      "evidence_refs": [
+        {
+          "source_type": "exam_question",
+          "path": "references/external/exam-questions.json",
+          "entity_id": "external_exam_question:ha-1022-a-24-2-o:opgave-1:question-2",
+          "role": "exam elasticity from supply curve",
+          "note": "Question asks to derive elasticity from a curve; graph extraction is the bottleneck, even though this case is supply-side."
+        },
+        {
+          "source_type": "target_exercise",
+          "path": "references/authored/course-target-exercises.json",
+          "entity_id": "target_exercise:2.1.1",
+          "role": "elasticity calculation",
+          "note": "Price elasticity target requires calculation and interpretation."
+        }
+      ],
+      "risk": "medium",
+      "pitfall": "Student reads only one point or swaps P and Q changes.",
+      "candidate_id_status": "provisional_available_at_generation",
+      "evidence_status": "exam_question_evidence",
+      "mint_decision": "candidate_pending_human_review",
+      "mutation_authorized": false,
+      "duplicate_overlap": {
+        "overlap_ids": [],
+        "overlap_count": 0,
+        "verdict": "no_direct_duplicate_found_in_current_a_units",
+        "hold_reason": null
+      }
+    },
+    {
+      "operation_id": "REP_REVENUE_CHANGE_WITH_ELASTICITY_SOURCE",
+      "group": "elasticity_from_representations",
+      "name": "Omzetverandering beoordelen met elasticiteit uit bron",
+      "base_operation": "elasticity_revenue_interpretation",
+      "representation": "source_text_or_table",
+      "economic_context": "market_revenue",
+      "source_values_task": "read_elasticity_or_change_from_source",
+      "composition_pattern": "read_source_change_then_interpret_revenue_effect",
+      "classification": "needs_new_composed_calculation_unit",
+      "candidate_unit_id": "A84",
+      "candidate_unit_name": "Omzetverandering beoordelen met elasticiteit uit bron",
+      "needs": [
+        "A15",
+        "A67"
+      ],
+      "aspects": [
+        "rekenen",
+        "verbaal"
+      ],
+      "evidence_refs": [
+        {
+          "source_type": "exam_question",
+          "path": "references/external/exam-questions.json",
+          "entity_id": "external_exam_question:ha-1022-a-24-1-o:opgave-1:question-5",
+          "role": "exam revenue and price-inelastic demand",
+          "note": "Question asks to explain how supermarket price rise leads to revenue increase."
+        },
+        {
+          "source_type": "target_exercise",
+          "path": "references/authored/course-target-exercises.json",
+          "entity_id": "target_exercise:2.1.2",
+          "role": "elasticity and omzet",
+          "note": "Target explicitly connects elastic/inelastic demand to revenue direction."
+        }
+      ],
+      "risk": "medium",
+      "pitfall": "Student applies the elasticity sign mechanically without linking it to total revenue direction.",
+      "candidate_id_status": "provisional_available_at_generation",
+      "evidence_status": "exam_question_evidence",
+      "mint_decision": "candidate_pending_human_review",
+      "mutation_authorized": false,
+      "duplicate_overlap": {
+        "overlap_ids": [],
+        "overlap_count": 0,
+        "verdict": "no_direct_duplicate_found_in_current_a_units",
+        "hold_reason": null
+      }
+    },
+    {
+      "operation_id": "HOLD_WELFARE_AREAS_PQ_DIAGRAM",
+      "group": "duplicate_or_hold",
+      "name": "Welvaartsgebieden herkennen in P-Q diagram",
+      "base_operation": "welfare_area_recognition",
+      "representation": "market_surplus_diagram",
+      "economic_context": "market_welfare",
+      "source_values_task": "identify_regions",
+      "composition_pattern": "read_area_then_interpret",
+      "classification": "hold_duplicate_audit",
+      "candidate_unit_id": null,
+      "candidate_unit_name": null,
+      "needs": [],
+      "aspects": [
+        "grafisch",
+        "rekenen"
+      ],
+      "evidence_refs": [
+        {
+          "source_type": "target_exercise",
+          "path": "references/authored/course-target-exercises.json",
+          "entity_id": "target_exercise:2.2.1",
+          "role": "consumer surplus graph",
+          "note": "Consumer surplus and welfare graph work is already present in existing A-units."
+        }
+      ],
+      "overlap_ids": [
+        "A19",
+        "A32",
+        "A40"
+      ],
+      "hold_reason": "Existing A19/A32/A40 already cover core surplus and welfare-area operations; do not mint before detailed overlap review.",
+      "risk": "high",
+      "pitfall": "New unit could duplicate existing welfare diagram operations.",
+      "candidate_id_status": "not_applicable_hold",
+      "evidence_status": "target_exercise_evidence",
+      "mint_decision": "hold",
+      "mutation_authorized": false,
+      "duplicate_overlap": {
+        "overlap_ids": [
+          "A19",
+          "A32",
+          "A40"
+        ],
+        "overlap_count": 3,
+        "verdict": "overlap_requires_review_or_hold",
+        "hold_reason": "Existing A19/A32/A40 already cover core surplus and welfare-area operations; do not mint before detailed overlap review."
+      }
+    },
+    {
+      "operation_id": "HOLD_SHIFT_VS_MOVEMENT",
+      "group": "duplicate_or_hold",
+      "name": "Beweging langs curve versus verschuiving",
+      "base_operation": "graph_interpretation",
+      "representation": "p_q_graph",
+      "economic_context": "demand_supply",
+      "source_values_task": "classify_movement_or_shift",
+      "composition_pattern": "read_scenario_then_classify_graph_change",
+      "classification": "hold_duplicate_audit",
+      "candidate_unit_id": null,
+      "candidate_unit_name": null,
+      "needs": [],
+      "aspects": [
+        "grafisch",
+        "verbaal"
+      ],
+      "evidence_refs": [
+        {
+          "source_type": "target_exercise",
+          "path": "references/authored/course-target-exercises.json",
+          "entity_id": "target_exercise:1.2.2",
+          "role": "movement vs shift target",
+          "note": "Target already requires movement vs shift classification."
+        }
+      ],
+      "overlap_ids": [
+        "D32",
+        "A42"
+      ],
+      "hold_reason": "D32 and A42 already touch this; design review needed before adding another graph-change unit.",
+      "risk": "high",
+      "pitfall": "Could fragment an existing conceptual distinction into a redundant A-domain unit.",
+      "candidate_id_status": "not_applicable_hold",
+      "evidence_status": "target_exercise_evidence",
+      "mint_decision": "hold",
+      "mutation_authorized": false,
+      "duplicate_overlap": {
+        "overlap_ids": [
+          "D32",
+          "A42"
+        ],
+        "overlap_count": 2,
+        "verdict": "overlap_requires_review_or_hold",
+        "hold_reason": "D32 and A42 already touch this; design review needed before adding another graph-change unit."
+      }
+    },
+    {
+      "operation_id": "HOLD_SHORT_SIDE_INTERVENTION_QUANTITY",
+      "group": "duplicate_or_hold",
+      "name": "Korte zijde en interventiehoeveelheid",
+      "base_operation": "short_side_rule",
+      "representation": "p_q_graph",
+      "economic_context": "price_controls",
+      "source_values_task": "read_qd_qs_at_forced_price",
+      "composition_pattern": "read_values_then_apply_min_rule",
+      "classification": "already_covered_hold",
+      "candidate_unit_id": null,
+      "candidate_unit_name": null,
+      "needs": [],
+      "aspects": [
+        "grafisch",
+        "rekenen"
+      ],
+      "evidence_refs": [
+        {
+          "source_type": "target_exercise",
+          "path": "references/authored/course-target-exercises.json",
+          "entity_id": "target_exercise:2.2.3",
+          "role": "short-side missing flag",
+          "note": "Earlier target flag led to A56 in R4.5; do not re-mint."
+        }
+      ],
+      "overlap_ids": [
+        "A51",
+        "A56",
+        "A59"
+      ],
+      "hold_reason": "A51/A56/A59 now cover surplus/shortage and short-side/intervention quantity logic.",
+      "risk": "low",
+      "pitfall": "Would duplicate recently minted R4.5 units.",
+      "candidate_id_status": "not_applicable_hold",
+      "evidence_status": "target_exercise_evidence",
+      "mint_decision": "hold",
+      "mutation_authorized": false,
+      "duplicate_overlap": {
+        "overlap_ids": [
+          "A51",
+          "A56",
+          "A59"
+        ],
+        "overlap_count": 3,
+        "verdict": "overlap_requires_review_or_hold",
+        "hold_reason": "A51/A56/A59 now cover surplus/shortage and short-side/intervention quantity logic."
+      }
+    },
+    {
+      "operation_id": "HOLD_MARGINAL_VALUES_FROM_TABLE",
+      "group": "duplicate_or_hold",
+      "name": "Marginale waarden uit tabel",
+      "base_operation": "table_difference",
+      "representation": "table",
+      "economic_context": "producer",
+      "source_values_task": "take_differences",
+      "composition_pattern": "read_adjacent_rows_then_calculate_delta",
+      "classification": "already_covered_hold",
+      "candidate_unit_id": null,
+      "candidate_unit_name": null,
+      "needs": [],
+      "aspects": [
+        "rekenen"
+      ],
+      "evidence_refs": [
+        {
+          "source_type": "target_exercise",
+          "path": "references/authored/course-target-exercises.json",
+          "entity_id": "target_exercise:1.4.3",
+          "role": "MK/MO table method",
+          "note": "Target led to A52 in R4.5."
+        }
+      ],
+      "overlap_ids": [
+        "A52"
+      ],
+      "hold_reason": "A52 already covers MK and MO from table differences.",
+      "risk": "low",
+      "pitfall": "Would duplicate A52.",
+      "candidate_id_status": "not_applicable_hold",
+      "evidence_status": "target_exercise_evidence",
+      "mint_decision": "hold",
+      "mutation_authorized": false,
+      "duplicate_overlap": {
+        "overlap_ids": [
+          "A52"
+        ],
+        "overlap_count": 1,
+        "verdict": "overlap_requires_review_or_hold",
+        "hold_reason": "A52 already covers MK and MO from table differences."
+      }
+    },
+    {
+      "operation_id": "HOLD_GRAPHICAL_MO_MK_OPTIMUM",
+      "group": "duplicate_or_hold",
+      "name": "Grafische MO=MK optimum bepalen",
+      "base_operation": "profit_maximization",
+      "representation": "producer_graph",
+      "economic_context": "producer",
+      "source_values_task": "read_mo_mk_intersection",
+      "composition_pattern": "read_graph_intersection_then_solve_output",
+      "classification": "hold_duplicate_audit",
+      "candidate_unit_id": null,
+      "candidate_unit_name": null,
+      "needs": [],
+      "aspects": [
+        "grafisch",
+        "rekenen"
+      ],
+      "evidence_refs": [
+        {
+          "source_type": "target_exercise",
+          "path": "references/authored/course-target-exercises.json",
+          "entity_id": "target_exercise:3.1.2",
+          "role": "MO=MK graph/calculation",
+          "note": "Target uses MO=MK and producer graph reasoning."
+        },
+        {
+          "source_type": "target_exercise",
+          "path": "references/authored/course-target-exercises.json",
+          "entity_id": "target_exercise:3.2.3",
+          "role": "monopoly full calculation",
+          "note": "Monopoly procedure may already encode the operation."
+        }
+      ],
+      "overlap_ids": [
+        "A20",
+        "A28",
+        "A33",
+        "A54"
+      ],
+      "hold_reason": "May overlap existing profit optimization and verification units; needs human review before minting.",
+      "risk": "high",
+      "pitfall": "Could conflate graphical optimum reading with algebraic MO=MK solving.",
+      "candidate_id_status": "not_applicable_hold",
+      "evidence_status": "target_exercise_evidence",
+      "mint_decision": "hold",
+      "mutation_authorized": false,
+      "duplicate_overlap": {
+        "overlap_ids": [
+          "A20",
+          "A28",
+          "A33",
+          "A54"
+        ],
+        "overlap_count": 4,
+        "verdict": "overlap_requires_review_or_hold",
+        "hold_reason": "May overlap existing profit optimization and verification units; needs human review before minting."
+      }
+    }
+  ]
+}

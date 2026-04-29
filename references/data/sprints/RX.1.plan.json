@@ -1,0 +1,28 @@
+{
+  "sprint_id": "RX.1",
+  "name": "Representation-Operation Inventory",
+  "status": "in_progress",
+  "planned_on": "2026-04-29",
+  "plan": "docs/sprints/RX.1-plan.md",
+  "protected_reference_data_changes_allowed": false,
+  "human_review_required": true,
+  "gate_id": "GATE-RX1-representation-unit-scope",
+  "review_packet": "reports/review-gates/GATE-RX1-representation-unit-scope/review-packet.md",
+  "valid_gate_statuses": [
+    "pass",
+    "pass_with_conditions",
+    "hold",
+    "fail"
+  ],
+  "mutation_authorized": false,
+  "source_mutation_authorized": false,
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js docs/sprints/RX.1-plan.md",
+    "node build-scripts/sprints/check-sprint-bundle.js RX.1",
+    "node build-scripts/references/build-representation-operation-inventory.js",
+    "node build-scripts/references/check-representation-operation-inventory.js",
+    "node build-scripts/references/check-roadmap-version-index.js",
+    "node build-scripts/references/check-source-manifest.js",
+    "node build-scripts/references/check-document-inventory.js"
+  ]
+}

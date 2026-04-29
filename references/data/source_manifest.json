@@ -1,14 +1,14 @@
 {
   "schema_version": "0.1",
-  "generated_at": "2026-04-29T20:11:16.079Z",
+  "generated_at": "2026-04-29T20:28:23.769Z",
   "sprint_id": "R0.2",
   "scope": "references/",
   "note": "Self-generated inventory files intentionally omit size and sha256 to avoid unstable self-checksums.",
   "summary": {
-    "file_count": 161,
+    "file_count": 164,
     "by_layer": {
       "authored_judgement": 7,
-      "governance_data": 86,
+      "governance_data": 89,
       "external_authority": 32,
       "machine_registry": 5,
       "owned_curriculum_design": 3,
@@ -20,7 +20,7 @@
     "by_edit_policy": {
       "human_reviewed_edit": 15,
       "generated_by_inventory_script": 10,
-      "sprint_process": 75,
+      "sprint_process": 78,
       "external_refresh_only": 32,
       "cli_only": 5,
       "versioned_human_reviewed_edit": 3,
@@ -1769,6 +1769,66 @@
       "self_generated_inventory_file": false
     },
     {
+      "path": "references/data/sprints/RX.1-representation-operation-inventory.json",
+      "file_name": "RX.1-representation-operation-inventory.json",
+      "extension": "json",
+      "size_bytes": 55817,
+      "sha256": "0bc89d4ff5ce4dc72fa61ae3e6b1a64e93a379f849ffe7629bea705933a4c091",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/data/sprints/RX.1.plan.json",
+      "file_name": "RX.1.plan.json",
+      "extension": "json",
+      "size_bytes": 1096,
+      "sha256": "4c2467540abca873f0647a5724603ce5fd67812b3547336f294228b0f084822f",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/data/sprints/RX.1.result.json",
+      "file_name": "RX.1.result.json",
+      "extension": "json",
+      "size_bytes": 3298,
+      "sha256": "0082cb850bc7da85585a84d1a616b0a69d8b364416fbeac82289332e442ea0ea",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
       "path": "references/data/sprints/S1.plan.json",
       "file_name": "S1.plan.json",
       "extension": "json",
@@ -2795,8 +2855,8 @@
       "path": "references/reference-team-roadmap.md",
       "file_name": "reference-team-roadmap.md",
       "extension": "md",
-      "size_bytes": 85660,
-      "sha256": "6c0a383da2f3f782c2c60b69c0275c5096f4785b9c84485ce86ac66264779b8d",
+      "size_bytes": 86095,
+      "sha256": "90e8f0d3187a18955e23fb782eaaf670f84db7a6f561e9b847ee84c87797cab4",
       "layer": "planning",
       "authority_level": "authored_judgement",
       "source_type": "roadmap",

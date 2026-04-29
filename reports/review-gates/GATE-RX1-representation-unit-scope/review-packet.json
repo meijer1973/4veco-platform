@@ -1,0 +1,116 @@
+{
+  "gate_id": "GATE-RX1-representation-unit-scope",
+  "sprint_id": "RX.1",
+  "status": "prepared_for_human_review",
+  "generated_by": "build-scripts/references/build-representation-operation-inventory.js",
+  "generated_on": "2026-04-29T20:28:19.850Z",
+  "purpose": "Review representation-sensitive operation inventory and duplicate audit before any RX.2+ unit mutation.",
+  "review_scope": {
+    "mutation_authorized": false,
+    "proposed_candidates": 24,
+    "held_or_duplicate_records": 5,
+    "candidate_ids_are_provisional": true
+  },
+  "artifacts": [
+    "references/data/sprints/RX.1-representation-operation-inventory.json",
+    "reports/review-gates/GATE-RX1-representation-unit-scope/duplicate-overlap-report.json",
+    "reports/review-gates/GATE-RX1-representation-unit-scope/duplicate-overlap-report.md",
+    "reports/review-gates/GATE-RX1-representation-unit-scope/proposed-mutation-queue.json",
+    "reports/review-gates/GATE-RX1-representation-unit-scope/proposed-mutation-queue.md"
+  ],
+  "acceptance_checks": [
+    "Every proposed candidate has target-exercise evidence, exam-question evidence, or didactic-prior rationale.",
+    "No candidate is proposed from syllabus text alone.",
+    "Duplicate and overlap candidates are held, not minted.",
+    "Candidate records distinguish base operation, representation reading, and composed application.",
+    "Candidate IDs are provisional and mutation_authorized is false."
+  ],
+  "review_questions": [
+    {
+      "id": "RX1-Q1",
+      "question": "Is the inventory complete enough for the current Book 1-4 representation-sensitive calculation surface?",
+      "options": [
+        "A. Yes",
+        "B. Mostly, add specific rows",
+        "C. No, major source class missing",
+        "D. Not enough evidence"
+      ]
+    },
+    {
+      "id": "RX1-Q2",
+      "question": "Are A61-A84 acceptable as provisional candidate IDs, assuming RX.2+ rechecks live numbering before mutation?",
+      "options": [
+        "A. Yes",
+        "B. Yes, but rename/renumber some",
+        "C. No, use operation IDs only for now",
+        "D. Not enough evidence"
+      ]
+    },
+    {
+      "id": "RX1-Q3",
+      "question": "Which RX.2 percentage/index candidates should proceed to mutation review first?",
+      "options": [
+        "A. A61-A74 as a set",
+        "B. Only A61/A66/A67/A70/A72/A74 first",
+        "C. Hold chart-specific units until more exam evidence",
+        "D. Not enough evidence"
+      ]
+    },
+    {
+      "id": "RX1-Q4",
+      "question": "Are chart-only candidates with didactic-prior rationale, such as bar/pie chart units, acceptable for candidate status without immediate mutation approval?",
+      "options": [
+        "A. Yes",
+        "B. Yes, but keep medium/high risk",
+        "C. No, require target/exam evidence before candidate status",
+        "D. Not enough evidence"
+      ]
+    },
+    {
+      "id": "RX1-Q5",
+      "question": "Should producer-table and producer-graph candidates A75-A81 remain in RX.3 after RX.2, or be split further?",
+      "options": [
+        "A. Keep as RX.3",
+        "B. Split table and graph into separate sprints",
+        "C. Hold all producer graph units for later",
+        "D. Not enough evidence"
+      ]
+    },
+    {
+      "id": "RX1-Q6",
+      "question": "Should elasticity representation candidates A82-A84 proceed after producer candidates, or move earlier because exam evidence is strong?",
+      "options": [
+        "A. Keep RX.4 order",
+        "B. Move A82-A84 earlier",
+        "C. Hold graph elasticity until source annex extraction improves",
+        "D. Not enough evidence"
+      ]
+    },
+    {
+      "id": "RX1-Q7",
+      "question": "Are the hold/duplicate decisions correct for welfare areas, shift-vs-movement, short side, table marginal values, and graphical MO=MK?",
+      "options": [
+        "A. Yes",
+        "B. Mostly, revisit named holds",
+        "C. No, some should become candidates now",
+        "D. Not enough evidence"
+      ]
+    },
+    {
+      "id": "RX1-Q8",
+      "question": "What gate status should GATE-RX1-representation-unit-scope receive before RX.2 mutation planning?",
+      "options": [
+        "A. pass",
+        "B. pass_with_conditions",
+        "C. hold",
+        "D. fail"
+      ]
+    }
+  ],
+  "valid_gate_statuses": [
+    "pass",
+    "pass_with_conditions",
+    "hold",
+    "fail"
+  ]
+}

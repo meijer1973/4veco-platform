@@ -4,7 +4,7 @@ Generated: 2026-04-23
 Adopted main roadmap: 2026-04-25
 Last strategic update: 2026-04-29
 Roadmap ID: `references-team-roadmap`
-Roadmap version: `v2.9-rx1-inventory-prepared`
+Roadmap version: `v2.8-s4.1-conditions-calibrated`
 Roadmap status: `active`
 Version index: `docs/roadmaps/roadmap-version-index.json`
 Scope: `references/`, `build-scripts/references/`, `build-scripts/reports/`, reference dashboards, and generated reference reports under `reports/`
@@ -15,7 +15,7 @@ The handoff roadmap has been adopted as the main operating roadmap for the refer
 
 No blocking incompatibility was found. The roadmap direction fits the repository: machine-edited references, evidence-first unit growth, JSON-first reports, review gates for pedagogical authority, and bounded later AI.
 
-Update 2026-04-29: RX.1 Representation-Operation Inventory is completed through the non-mutating inventory and review-packet stop point. `GATE-RX1-representation-unit-scope` is prepared for human review. RX.2 and all A61+ mutations remain blocked until that gate closes.
+Update 2026-04-29: S4.1 Exercise Overlay Conditions And Calibration is completed. CP-3 conditions are now reflected in condition artifacts, validators, reports, and overlay metadata. Bulk exercise metadata extension, source mutation, student diagnostics, adaptive routing, student-facing AI, mastery decisions, summative use, and automatic sequencing remain blocked.
 
 Compatibility decisions:
 
@@ -125,7 +125,7 @@ Open items are listed first; completed items are kept below them.
 
 | Sprint | Name | Completed | Current State |
 |--------|------|-----------|---------------|
-| GATE-RX1 | Representation Unit Scope Review | no | Immediate next checkpoint. Review the RX.1 inventory, provisional A61-A84 candidate queue, and held duplicate/overlap decisions before any RX.2 mutation planning. |
+| RX.1 | Representation-Operation Inventory | no | Immediate next sprint. Non-mutating inventory only: build the base-operation x representation x economic-context matrix and duplicate audit before any A61+ unit mutation. |
 | R8.1 | QC Issue Model | no | Planned early and scoped down. Define only the lightweight issue schema needed to expose evidence weakness, stale data, proof-to-close, and registry/report warnings. |
 | Sprint 6 | Bronnen Registry MVP | no | Planned. Create source-document registry schema/validator first; store under `references/machine/` only after CLI and validators exist. |
 | Sprint 7 | Skill And Operation Registry MVP | no | Planned. Separate unit IDs from fine-grained exercise operations and skill/category tags; preserve useful `skill-categories.md` content where still valid. |
@@ -145,7 +145,6 @@ Open items are listed first; completed items are kept below them.
 | Sprint 13 | Composition Pattern Registry | no | Planned. Define reusable exercise-composition patterns for internal authoring support, not automatic student-facing publication. |
 | Sprint 14 | C-to-B Promotion Workflow | no | Planned only after schema audit, owned-source registry, exercise overlays, D04/unit-design status, R7.6, R14.1, and precision lint path are ready. |
 | Product Gate | Re-Evaluate R10-R13 Product Surfaces | no | Blocked. Diagnostics, adaptive routing, student-facing AI, teacher cockpit deployment, automatic sequencing, mastery, and summative uses remain out of scope until data-quality gates justify them. |
-| RX.1 | Representation-Operation Inventory | yes | Completed through the non-mutating inventory/review-packet stop point. Prepared 29 operation records, 24 provisional candidates, 5 held duplicate/overlap records, and `GATE-RX1-representation-unit-scope`; RX.2 remains blocked pending human review. |
 | S4.1 | Exercise Overlay Conditions And Calibration | yes | Completed on 2026-04-29. Implemented CP-3 condition artifacts, source-annex gap tracker, scaffolding calibration, graph-spec representation plan, product-boundary warnings, condition validator, and condition reports. No bulk extension or source mutation authorized. |
 | R9.2 | Content Graph Projection | yes | Completed. Created a separate owned-content projection graph with 1,464 typed edges, RAG owned-content chunks, coverage reports, and 10/10 retrieval eval pass state while preserving CP-2 evidence boundaries. |
 | S4 | Exercise Metadata Overlay MVP | yes | Completed on 2026-04-29 with CP-3 status `pass_with_conditions`. Created overlay schema, one Tier A dry-run overlay, one Tier C dry-run overlay, validator, and CP-3 closure. No bulk extension or source mutation authorized. |
@@ -774,8 +773,6 @@ Stop condition: no mutation in RX.1.
 
 Checkpoint: `GATE-RX1-representation-unit-scope`.
 
-Completion: completed on 2026-04-29 through the non-mutating inventory/review-packet stop point. The checkpoint remains pending; RX.2 remains blocked until `GATE-RX1-representation-unit-scope` closes.
-
 #### RX.2 Percentage And Index Representation Units
 
 Purpose: implement the highest-value percentage/index representation branch after RX.1 review.
@@ -1371,7 +1368,7 @@ S1 Schema audit and exercise naming contract (CP-1)
 R9.1 Owned source registry
 R9.2 Content graph projection
 Sprint 4 Exercise metadata overlay MVP (CP-3)
-GATE-RX1 Representation unit scope review
+RX.1 Representation-operation inventory (non-mutating)
 R8.1 Scoped QC issue model
 Sprint 6 Bronnen registry MVP
 Sprint 7 Skill and operation registry MVP (CP-4)
@@ -1395,11 +1392,11 @@ Product Gate Re-evaluate R10-R13 product surfaces
 
 Do not invert this order.
 
-## Immediate Next Checkpoint
+## Immediate Next Sprint
 
-Next checkpoint: `GATE-RX1-representation-unit-scope`.
+Next sprint: `RX.1 Representation-Operation Inventory`.
 
-R4.5 has closed the bounded micro-unit mutation lane, CP-1 has closed the non-mutating schema audit gate as `pass_with_conditions`, CP-2 has closed the owned-source scope gate as `pass_with_conditions`, R9.1 has registered the owned-source surfaces, R9.2 has completed owned-content projection, S4/CP-3 has closed as `pass_with_conditions`, S4.1 has implemented the CP-3 condition artifacts, and RX.1 has prepared the non-mutating representation-operation inventory. RX.2 may not start until `GATE-RX1-representation-unit-scope` closes.
+R4.5 has closed the bounded micro-unit mutation lane, CP-1 has closed the non-mutating schema audit gate as `pass_with_conditions`, CP-2 has closed the owned-source scope gate as `pass_with_conditions`, R9.1 has registered the owned-source surfaces, R9.2 has completed owned-content projection, S4/CP-3 has closed as `pass_with_conditions`, and S4.1 has implemented the CP-3 condition artifacts. RX.1 may proceed as non-mutating representation-operation inventory and duplicate audit only.
 
 Do not start diagnostics, adaptive routing, student-facing AI, automatic lesson sequencing, mastery decisions, summative decisions, teacher cockpit deployment, game/simulation product mapping, or continuous-improvement claims from this roadmap.
 
