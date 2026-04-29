@@ -28,23 +28,37 @@
         generators = (root.SKILL_TREE_GENERATORS || { GEN: {}, helpers: {} });
     }
 
-    var skillIds = {};
+    // New catalog units can be valid reference records before their interactive
+    // generators exist. Keep them visible as blocked metadata, not runnable skills.
+    var generatorIds = (generators && generators.GEN) || {};
+    var interactiveSkillIds = {};
     for (var i = 0; i < units.length; i++) {
         var unit = units[i];
         if (unit.id.charAt(0) !== 'A') continue;
         if (unit.deprecated) continue;
-        skillIds[unit.id] = true;
+        if (generatorIds[unit.id]) interactiveSkillIds[unit.id] = true;
     }
 
     var SKILLS = [];
+    var GENERATOR_BLOCKED_SKILLS = [];
     for (var i = 0; i < units.length; i++) {
         var u = units[i];
         if (u.id.charAt(0) !== 'A') continue;
         if (u.deprecated) continue;
+        if (!interactiveSkillIds[u.id]) {
+            GENERATOR_BLOCKED_SKILLS.push({
+                id: u.id,
+                name: u.name,
+                generator: u.generator || ('GEN_' + u.id),
+                status: 'missing_generator_implementation',
+                studentFacingSkilltreeUseAllowed: false
+            });
+            continue;
+        }
         var needs = [];
         var rawNeeds = u.needs || [];
         for (var n = 0; n < rawNeeds.length; n++) {
-            if (skillIds[rawNeeds[n]]) needs.push(rawNeeds[n]);
+            if (interactiveSkillIds[rawNeeds[n]]) needs.push(rawNeeds[n]);
         }
         SKILLS.push({
             id: u.id,
@@ -67,6 +81,7 @@
 
     return {
         SKILLS: SKILLS,
+        GENERATOR_BLOCKED_SKILLS: GENERATOR_BLOCKED_SKILLS,
         LAYER_NAMES: LAYER_NAMES,
         LAYER_COLORS: LAYER_COLORS,
         GEN: generators.GEN,

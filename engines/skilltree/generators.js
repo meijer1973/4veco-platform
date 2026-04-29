@@ -1,4 +1,4 @@
-/* Current coverage: one generator for every active A-domain skill in the catalog. */
+/* Current coverage: one generator for every interactive A-domain skilltree node. */
 /**
  * SkillTree Generators — 37 exercise randomizers, one per unit.
  * Extracted from base-elements.js during the unit-catalog rewire.

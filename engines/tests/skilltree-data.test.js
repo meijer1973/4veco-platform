@@ -35,9 +35,25 @@ const activeCatalogSkillIds = catalog
     .sort();
 
 describe('base-elements', () => {
-    test('exports every active A-domain catalog unit', () => {
+    test('exports every generator-backed active A-domain catalog unit as interactive', () => {
         const skillIds = elements.SKILLS.map(s => s.id).sort();
-        expect(skillIds).toEqual(activeCatalogSkillIds);
+        const generatorBackedCatalogIds = activeCatalogSkillIds
+            .filter(id => elements.GEN[id] !== undefined)
+            .sort();
+        expect(skillIds).toEqual(generatorBackedCatalogIds);
+    });
+
+    test('tracks active A-domain catalog units that are generator-blocked', () => {
+        const skillIds = new Set(elements.SKILLS.map(s => s.id));
+        const blockedIds = elements.GENERATOR_BLOCKED_SKILLS.map(s => s.id).sort();
+        const expectedBlockedIds = activeCatalogSkillIds
+            .filter(id => elements.GEN[id] === undefined)
+            .sort();
+
+        expect(blockedIds).toEqual(expectedBlockedIds);
+        for (const blockedId of blockedIds) {
+            expect(skillIds.has(blockedId)).toBe(false);
+        }
     });
 
     test('exports LAYER_NAMES with 6 entries', () => {
