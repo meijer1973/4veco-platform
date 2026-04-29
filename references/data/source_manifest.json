@@ -1,30 +1,30 @@
 {
   "schema_version": "0.1",
-  "generated_at": "2026-04-29T09:40:00.620Z",
+  "generated_at": "2026-04-29T09:52:24.037Z",
   "sprint_id": "R0.2",
   "scope": "references/",
   "note": "Self-generated inventory files intentionally omit size and sha256 to avoid unstable self-checksums.",
   "summary": {
-    "file_count": 141,
+    "file_count": 145,
     "by_layer": {
       "authored_judgement": 7,
-      "governance_data": 68,
+      "governance_data": 71,
       "external_authority": 32,
       "machine_registry": 5,
       "owned_curriculum_design": 3,
       "quality_protocol": 5,
       "planning": 1,
-      "schema_contract": 19,
+      "schema_contract": 20,
       "governance_policy": 1
     },
     "by_edit_policy": {
       "human_reviewed_edit": 14,
-      "generated_by_inventory_script": 9,
-      "sprint_process": 59,
+      "generated_by_inventory_script": 10,
+      "sprint_process": 61,
       "external_refresh_only": 32,
       "cli_only": 5,
       "versioned_human_reviewed_edit": 3,
-      "code_review": 19
+      "code_review": 20
     }
   },
   "files": [
@@ -249,6 +249,26 @@
       "self_generated_inventory_file": false
     },
     {
+      "path": "references/data/owned-content-graph.json",
+      "file_name": "owned-content-graph.json",
+      "extension": "json",
+      "size_bytes": 2776915,
+      "sha256": "90b906faad94072a338252fd5a9f16d71cdd24cdc6660e63003e526bba202e13",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "inventory",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "generated_by_inventory_script",
+      "owner": "references_team",
+      "refresh_policy": "regenerate",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
       "path": "references/data/owned-source-registry.json",
       "file_name": "owned-source-registry.json",
       "extension": "json",
@@ -272,8 +292,8 @@
       "path": "references/data/rag/chunk_index.jsonl",
       "file_name": "chunk_index.jsonl",
       "extension": "jsonl",
-      "size_bytes": 880186,
-      "sha256": "d6795afb8c34d13a86ec78ecebfe26880e29fc636ed34e511b69d9443f675433",
+      "size_bytes": 4158116,
+      "sha256": "ee2a018a3015a9ab7de95a9d863b51861712b25c6aa1c42d7bf4a8ec711aee4b",
       "layer": "governance_data",
       "authority_level": "generated_report",
       "source_type": "inventory",
@@ -292,8 +312,8 @@
       "path": "references/data/rag/retrieval_eval_results.json",
       "file_name": "retrieval_eval_results.json",
       "extension": "json",
-      "size_bytes": 65903,
-      "sha256": "97561bc1992a870ccf206b6834d6db6ed8368f49c47ebf738171c7eed296ddd6",
+      "size_bytes": 78107,
+      "sha256": "3d238140fe48dd5de052d0dca535323176f387090e82dfa7f8116ee5fbfaf610",
       "layer": "governance_data",
       "authority_level": "generated_report",
       "source_type": "inventory",
@@ -1489,6 +1509,46 @@
       "self_generated_inventory_file": false
     },
     {
+      "path": "references/data/sprints/R9.2.plan.json",
+      "file_name": "R9.2.plan.json",
+      "extension": "json",
+      "size_bytes": 1276,
+      "sha256": "4de0852abd53f5ac6f5a57dda60e464e614e7d26b9947cd5395d2bb9ec9b4f34",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/data/sprints/R9.2.result.json",
+      "file_name": "R9.2.result.json",
+      "extension": "json",
+      "size_bytes": 3381,
+      "sha256": "ba07f8ae7c3424952a43f1f399dad22060c035b66a1aa0d5cd2f785db505b4e2",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
       "path": "references/data/sprints/S1.plan.json",
       "file_name": "S1.plan.json",
       "extension": "json",
@@ -2435,8 +2495,8 @@
       "path": "references/reference-team-roadmap.md",
       "file_name": "reference-team-roadmap.md",
       "extension": "md",
-      "size_bytes": 69605,
-      "sha256": "744dae01fa4eccb6169cb117f9a9b8a4d6f8fe434fca58c3def0c6c1e40d6e41",
+      "size_bytes": 70325,
+      "sha256": "ab2494c0639354d6335cf3db80124fc4a383d8f1da782cc828755dd62a4db400",
       "layer": "planning",
       "authority_level": "authored_judgement",
       "source_type": "roadmap",
@@ -2582,6 +2642,27 @@
       "extension": "json",
       "size_bytes": 581,
       "sha256": "e0c9d357a85946e934de487fb0d6669c0e64c79800135067b00df9ecc3ddc300",
+      "layer": "schema_contract",
+      "authority_level": "machine_contract",
+      "source_type": "json_schema",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "references_team",
+      "refresh_policy": "schema_review",
+      "downstream_dependencies": [
+        "validators",
+        "reference-cli",
+        "reports",
+        "future-rag"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/schemas/owned-content-edge.schema.json",
+      "file_name": "owned-content-edge.schema.json",
+      "extension": "json",
+      "size_bytes": 1591,
+      "sha256": "0486057bf77c5f7310d7d747c6d63e525e0aaed7ab2264db9f06d459fc136d4f",
       "layer": "schema_contract",
       "authority_level": "machine_contract",
       "source_type": "json_schema",

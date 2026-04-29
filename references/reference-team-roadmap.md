@@ -11,7 +11,7 @@ The handoff roadmap has been adopted as the main operating roadmap for the refer
 
 No blocking incompatibility was found. The roadmap direction fits the repository: machine-edited references, evidence-first unit growth, JSON-first reports, review gates for pedagogical authority, and bounded later AI.
 
-Update 2026-04-28: the repository-checked exercise-schema and RAG-quality roadmap has been approved with corrections. The live roadmap is now narrowed further around schema audit, owned-source ingestion, exercise metadata quality, governed registries, and RAG hardening. The immediate next sprint is the non-mutating schema audit. R9.1 remains the first implementation sprint after CP-1.
+Update 2026-04-29: R9.2 content graph projection is completed. The live roadmap is now narrowed further around exercise metadata quality, governed registries, and RAG hardening. The immediate next sprint is Sprint 4 Exercise Metadata Overlay MVP, with CP-3 dry-run before bulk extension.
 
 Compatibility decisions:
 
@@ -26,6 +26,7 @@ Compatibility decisions:
 - The active roadmap is narrowed to reference and RAG data quality. Delayed product surfaces such as diagnostics, adaptive routing, teacher cockpit, student-facing AI, games, simulations, privacy deployment, accessibility deployment, and continuous-improvement claims are intentionally out of scope for this roadmap until the data foundation is stronger.
 - The exercise-schema roadmap restores the HCS two-axis role model (`instructional_role`, `assessment_role`), the four-field `scaffolding` object, and CP-1 through CP-8 cross-team checkpoints.
 - New registries under `references/machine/` remain future end states only. They require schema, CLI, validators, and mutation logs before machine files are created or changed.
+- `R9.2 Content Graph Projection` is completed. Owned-source content is queryable through a separate projection graph without changing R5 alignment authority.
 
 ## Operating Rule
 
@@ -117,8 +118,7 @@ Open items are listed first; completed items are kept below them.
 
 | Sprint | Name | Completed | Current State |
 |--------|------|-----------|---------------|
-| R9.2 | Content Graph Projection | no | Immediate next sprint. Unblocked by CP-2 with conditions: owned-source edges are projection by default; evidence edges require explicitly evidence-qualified records and stricter edge labels. |
-| Sprint 4 | Exercise Metadata Overlay MVP | no | Planned after R9.2. Add protected-source-safe exercise overlays with `instructional_role`, `assessment_role`, authority tier, scaffolding object, Bloom, instruction word, graph specs, precision lint status, evidence status, source version, and content status. |
+| Sprint 4 | Exercise Metadata Overlay MVP | no | Immediate next sprint. Add protected-source-safe exercise overlays with `instructional_role`, `assessment_role`, authority tier, scaffolding object, Bloom, instruction word, graph specs, precision lint status, evidence status, source version, and content status. CP-3 dry-run must pass before bulk extension. |
 | R8.1 | QC Issue Model | no | Planned early and scoped down. Define only the lightweight issue schema needed to expose evidence weakness, stale data, proof-to-close, and registry/report warnings. |
 | Sprint 6 | Bronnen Registry MVP | no | Planned. Create source-document registry schema/validator first; store under `references/machine/` only after CLI and validators exist. |
 | Sprint 7 | Skill And Operation Registry MVP | no | Planned. Separate unit IDs from fine-grained exercise operations and skill/category tags; preserve useful `skill-categories.md` content where still valid. |
@@ -133,6 +133,7 @@ Open items are listed first; completed items are kept below them.
 | Sprint 13 | Composition Pattern Registry | no | Planned. Define reusable exercise-composition patterns for internal authoring support, not automatic student-facing publication. |
 | Sprint 14 | C-to-B Promotion Workflow | no | Planned only after schema audit, owned-source registry, exercise overlays, D04/unit-design status, R7.6, R14.1, and precision lint path are ready. |
 | Product Gate | Re-Evaluate R10-R13 Product Surfaces | no | Blocked. Diagnostics, adaptive routing, student-facing AI, teacher cockpit deployment, automatic sequencing, mastery, and summative uses remain out of scope until data-quality gates justify them. |
+| R9.2 | Content Graph Projection | yes | Completed. Created a separate owned-content projection graph with 1,464 typed edges, RAG owned-content chunks, coverage reports, and 10/10 retrieval eval pass state while preserving CP-2 evidence boundaries. |
 | R9.1 | Owned Source Registry | yes | Completed with `pass_with_conditions`. Registered owned-source surfaces, repaired blueprint refs, prepared CP-2, and authorized R9.2 with projection-edge defaults and evidence-boundary conditions. |
 | S1 | Schema Audit And Exercise Naming Contract | yes | Completed. `GATE-CP1-schema-audit` closed as `pass_with_conditions`; naming contract, role split, scaffolding object, and overlay-first strategy are approved. |
 | R7.4 | RAG Review Gate | yes | Completed with `pass_with_conditions`. Internal and teacher-facing non-authoritative retrieval plus human-reviewed lesson-authoring support are allowed; student-facing diagnostics, adaptive routing, AI, automatic sequencing, mastery decisions, and summative use remain blocked. |
@@ -566,6 +567,8 @@ Required output: content graph projection, graph/report validators, owned-conten
 
 Stop condition: do not use generated lesson text as primary proof for reference claims.
 
+Completion: completed on 2026-04-29. R9.2 created `references/data/owned-content-graph.json` with 1,464 typed edges: 695 projection edges, 332 owned exercise evidence edges, and 437 implementation trace edges. Generated artifacts remain non-evidence with explicit warnings. RAG now indexes owned-content edge chunks and retrieval evals still pass 10/10 with 0 authority violations.
+
 ### Sprint 4 Exercise Metadata Overlay MVP
 
 Purpose: add the HCS exercise-quality fields in a protected-source-safe overlay before any bulk source mutation.
@@ -575,7 +578,7 @@ Required work:
 - Store first-pass exercise metadata under `references/data/exercises/` unless a source-specific CLI/refresh workflow already exists.
 - Preserve the role split:
   - `instructional_role`: `worked_example`, `startoefening`, `independent_practice`, `interleaving`, `target`, `verdieping`, `consolidatie`, `instapquiz`, `diagnostic`, `nieuws`.
-  - `assessment_role`: `exam_mirror`, `bridge`, `prerequisite`, plus a CP-1 decision on nullability or `not_applicable`.
+  - `assessment_role`: optional; omit the field when absent. Allowed v1 values are `exam_mirror`, `bridge`, and `prerequisite`.
 - Preserve the scaffolding object:
   - `verbal_level`: integer 0-5.
   - `visual_stage`: integer 1-4.
@@ -1123,9 +1126,9 @@ Do not invert this order.
 
 ## Immediate Next Sprint
 
-Next sprint: `R9.2 Content Graph Projection`.
+Next sprint: `Sprint 4 Exercise Metadata Overlay MVP`.
 
-R4.5 has closed the bounded micro-unit mutation lane, CP-1 has closed the non-mutating schema audit gate as `pass_with_conditions`, and CP-2 has closed the owned-source scope gate as `pass_with_conditions`. R9.2 may start when the team is ready, but only at the approved content-graph projection scope.
+R4.5 has closed the bounded micro-unit mutation lane, CP-1 has closed the non-mutating schema audit gate as `pass_with_conditions`, CP-2 has closed the owned-source scope gate as `pass_with_conditions`, R9.1 has registered the owned-source surfaces, and R9.2 has completed owned-content projection. Sprint 4 may start when the team is ready, but only as protected-source-safe overlays with CP-3 dry-run before bulk extension.
 
 Do not start diagnostics, adaptive routing, student-facing AI, automatic lesson sequencing, mastery decisions, summative decisions, teacher cockpit deployment, game/simulation product mapping, or continuous-improvement claims from this roadmap.
 
@@ -1153,11 +1156,11 @@ CP-1 decisions now in force:
 CP-2 decisions now in force:
 
 - R9.1 closed as `pass_with_conditions`.
-- R9.2 may proceed with projection edges only by default.
+- R9.2 closed after creating owned-content projection edges with projection defaults.
 - Evidence edges are allowed only for explicitly evidence-qualified records, such as the target-exercise index and owned exercise markdown, and must remain separate from external authority.
 - Generated HTML, PDF, PNG, DOCX, PPTX, shared-engine output, generated navigation, generated quality YAML, and review notes are retrieval context or implementation trace only.
-- R9.2 must strengthen edge labels so projection, owned exercise evidence, external authority, and implementation trace cannot be confused.
-- Companion subtype labels should be refined in R9.2/R9.3 where present.
+- R9.2 strengthened edge labels so projection, owned exercise evidence, external authority, and implementation trace cannot be confused in graph/RAG output.
+- Companion subtype labels should continue to be refined where broad source-surface classes remain.
 - Exercise metadata backfill remains Sprint 4/CP-3 scope.
 
 ## Final Rule

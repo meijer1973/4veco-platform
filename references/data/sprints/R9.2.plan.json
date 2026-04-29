@@ -1,0 +1,26 @@
+{
+  "sprint_id": "R9.2",
+  "name": "Content Graph Projection",
+  "status": "completed",
+  "planned_on": "2026-04-29",
+  "plan": "docs/sprints/R9.2-plan.md",
+  "protected_reference_data_changes_allowed": false,
+  "human_review_required": false,
+  "cp2_gate_status": "pass_with_conditions",
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js docs/sprints/R9.2-plan.md",
+    "node build-scripts/sprints/check-sprint-bundle.js R9.2",
+    "node build-scripts/references/build-owned-content-graph.js",
+    "node build-scripts/references/check-owned-content-graph.js",
+    "node build-scripts/rag/build-chunks.js",
+    "node build-scripts/rag/validate-chunks.js",
+    "node build-scripts/rag/query.js --text \"1.1.1 schaarste owned content\" --json",
+    "node build-scripts/rag/query.js --text \"owned exercise evidence A43\" --json",
+    "node build-scripts/references/build-reference-inventory.js",
+    "node build-scripts/references/check-source-manifest.js",
+    "node build-scripts/references/check-document-inventory.js",
+    "node build-scripts/references/check-source-of-truth.js",
+    "node build-scripts/sprints/check-sprint-result.js reports/sprints/R9.2-result.md",
+    "node build-scripts/sprints/check-sprint-bundle.js R9.2 --complete"
+  ]
+}

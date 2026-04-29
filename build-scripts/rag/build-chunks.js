@@ -71,6 +71,7 @@ function main() {
   const exams = readJson('references/external/exam-questions.json', []);
   const targets = readJson('references/authored/course-target-exercises.json', {});
   const graph = readJson('references/data/alignment-graph.json', { edges: [] });
+  const ownedContentGraph = readJson('references/data/owned-content-graph.json', { edges: [] });
   const evidence = readJson('references/data/evidence-anchors.json', { evidence_anchors: [] });
   const chunks = [];
 
@@ -185,6 +186,43 @@ function main() {
       curriculumAuthority: edge.curriculum_authority === true,
       primaryEvidence: edge.source_rank !== 'generated_report',
       text: `${edge.edge_id}: ${edge.from} ${edge.relation} ${edge.to}. Status: ${edge.review_status}. Governance: ${edge.governance_use || 'none'}. Notes: ${edge.notes || ''}`,
+    }));
+  }
+
+  function ownedContentAuthority(edge) {
+    if (edge.edge_type === 'implementation_trace' || edge.generated_artifact_warning) return 'diagnostic';
+    return 'authored_judgement';
+  }
+
+  for (const edge of ownedContentGraph.edges || []) {
+    chunks.push(chunk({
+      chunkId: `owned-content-edge:${slug(edge.edge_id)}-${hash(edge.edge_id).slice(0, 12)}`,
+      sourcePath: 'references/data/owned-content-graph.json',
+      sourceType: 'owned_content_edge',
+      authorityLevel: ownedContentAuthority(edge),
+      entityIds: [
+        edge.edge_id,
+        edge.from,
+        edge.to,
+        edge.paragraph_id,
+        edge.record_id,
+        edge.source_path,
+        ...(edge.unit_ids || []),
+        ...(edge.term_ids || []),
+      ].filter(Boolean),
+      evidenceIds: [],
+      edgeStatuses: [
+        edge.edge_type,
+        edge.evidence_status,
+        edge.review_status,
+        edge.generated_artifact_warning ? 'generated_artifact_warning' : null,
+        edge.not_external_authority ? 'not_external_authority' : null,
+        edge.not_machine_registry_authority ? 'not_machine_registry_authority' : null,
+      ].filter(Boolean),
+      allowedForPublicCitation: false,
+      curriculumAuthority: false,
+      primaryEvidence: false,
+      text: `${edge.edge_id}: ${edge.from} ${edge.relation} ${edge.to}. Edge type: ${edge.edge_type}. Evidence status: ${edge.evidence_status}. Source: ${edge.source_path} (${edge.source_surface_type}, ${edge.source_status}, ${edge.authority_level}). Paragraph: ${edge.paragraph_id || 'none'}. Units: ${(edge.unit_ids || []).join(', ') || 'none'}. Terms: ${(edge.term_ids || []).join(', ') || 'none'}. Warning: ${edge.generated_artifact_warning ? 'generated artifact; retrieval context or implementation trace only; not primary evidence' : 'owned content projection/evidence boundary preserved; not external authority'}. Notes: ${edge.notes || ''}`,
     }));
   }
 

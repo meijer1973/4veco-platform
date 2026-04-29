@@ -4,7 +4,7 @@ const path = require('path');
 
 const REPO_ROOT = path.resolve(__dirname, '..', '..');
 const FILE = path.join(REPO_ROOT, 'references/data/rag/chunk_index.jsonl');
-const SOURCE_TYPES = new Set(['external_source', 'machine_unit', 'machine_term', 'exam_question', 'target_exercise', 'authored_reference', 'quality_report', 'alignment_edge', 'evidence_anchor']);
+const SOURCE_TYPES = new Set(['external_source', 'machine_unit', 'machine_term', 'exam_question', 'target_exercise', 'authored_reference', 'quality_report', 'alignment_edge', 'owned_content_edge', 'evidence_anchor']);
 const AUTHORITY = new Set(['external_primary', 'machine_registry', 'authored_judgement', 'generated_report', 'diagnostic']);
 
 function fail(errors) {

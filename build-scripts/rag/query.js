@@ -77,6 +77,7 @@ function scoreChunk(chunk, args) {
   if (args.text) {
     const query = normalize(args.text);
     const terms = textTerms(args.text);
+    const qualityQuery = hasAny(query, ['term-links', 'term links', 'empty-needs', 'lege needs', 'false-zero', 'false_zero', 'deprecated', 'generated reports', 'generated-report', 'missing-unit']);
     if (terms.length > 0) {
       for (const term of terms) {
         if (entities.includes(term)) score += 18;
@@ -86,13 +87,16 @@ function scoreChunk(chunk, args) {
       const phrase = terms.join(' ');
       if (phrase.length > 8 && hay.includes(phrase)) score += 25;
     }
-    if (hasAny(query, ['examenvragen', 'examvragen', 'examenvraag']) && chunk.source_type === 'exam_question' && score > 0) score += 18;
-    if (query.includes('units') && chunk.source_type === 'machine_unit') score += 12;
+    if (hasAny(query, ['examenvragen', 'examvragen', 'examenvraag']) && chunk.source_type === 'exam_question' && score > 0) score += 68;
+    if (!qualityQuery && score > 0 && chunk.source_type === 'machine_unit') score += 34;
+    if (!qualityQuery && query.includes('units') && chunk.source_type === 'machine_unit') score += 18;
     if (hasAny(query, ['begrippen', 'begrip']) && chunk.source_type === 'machine_term') score += 14;
     if (hasAny(query, ['target-exercises', 'target exercises', 'target', 'missing-unit']) && chunk.source_type === 'target_exercise') score += 14;
     if (hasAny(query, ['term-links', 'term links', 'empty-needs', 'lege needs', 'false-zero', 'false_zero', 'deprecated', 'generated reports', 'generated-report']) && chunk.source_type === 'quality_report') score += 20;
-    if (hasAny(query, ['target-exercises', 'target exercises', 'target', 'missing-unit']) && chunk.source_type === 'quality_report' && chunk.chunk_id.includes('blueprint-flag-triage')) score += 60;
+    if (hasAny(query, ['target-exercises', 'target exercises', 'target', 'missing-unit']) && chunk.source_type === 'quality_report' && chunk.chunk_id.includes('blueprint-flag-triage')) score += 90;
     if (hasAny(query, ['diagnostic-only', 'diagnostic_only', 'pending-review', 'pending_review', 'edges', 'graph']) && chunk.source_type === 'alignment_edge') score += 18;
+    if (hasAny(query, ['owned', 'content', 'paragraph', 'paragraaf', 'blueprint', 'projection', 'projectie']) && chunk.source_type === 'owned_content_edge') score += 24;
+    if (hasAny(query, ['owned exercise', 'owned-exercise']) && chunk.source_type === 'owned_content_edge' && (chunk.edge_statuses || []).includes('owned_exercise_evidence')) score += 32;
     if (hasAny(query, ['diagnostic-only', 'diagnostic_only']) && (chunk.edge_statuses || []).includes('diagnostic_only')) score += 30;
     if (hasAny(query, ['pending-review', 'pending_review']) && (chunk.edge_statuses || []).includes('pending_review')) score += 30;
     if (hasAny(query, ['generated reports', 'generated-report', 'generated']) && chunk.authority_level === 'generated_report') score += 30;
@@ -128,7 +132,8 @@ function scoreChunk(chunk, args) {
 
 function resultFor(chunk, score) {
   const generatedReport = chunk.authority_level === 'generated_report' || chunk.source_type === 'quality_report';
-  const diagnosticOnly = (chunk.edge_statuses || []).includes('diagnostic_only') || chunk.authority_level === 'diagnostic' || generatedReport;
+  const generatedArtifact = (chunk.edge_statuses || []).includes('generated_artifact_warning');
+  const diagnosticOnly = (chunk.edge_statuses || []).includes('diagnostic_only') || chunk.authority_level === 'diagnostic' || generatedReport || generatedArtifact;
   const pendingReview = (chunk.edge_statuses || []).includes('pending_review');
   return {
     chunk_id: chunk.chunk_id,
@@ -142,6 +147,7 @@ function resultFor(chunk, score) {
     diagnostic_only: diagnosticOnly,
     pending_review: pendingReview,
     generated_report_warning: generatedReport,
+    generated_artifact_warning: generatedArtifact,
     not_primary_evidence: generatedReport || chunk.primary_evidence === false,
     curriculum_authority: chunk.curriculum_authority === true,
     allowed_for_public_citation: chunk.allowed_for_public_citation === true,

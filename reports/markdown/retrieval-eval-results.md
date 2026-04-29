@@ -1,6 +1,6 @@
 # Retrieval Evaluation Results
 
-Generated on: 2026-04-27T22:30:38.800Z
+Generated on: 2026-04-29T09:50:57.306Z
 
 ## Summary
 
@@ -13,13 +13,13 @@ Generated on: 2026-04-27T22:30:38.800Z
 
 | Query ID | Status | Results | Source types | Warnings | Missing |
 |---|---:|---:|---|---|---|
-| rag-eval-001 | pass | 12 | alignment_edge, machine_term, quality_report, machine_unit | diagnostic_only, generated_report_warning, not_primary_evidence | - |
-| rag-eval-002 | pass | 12 | machine_term, exam_question, machine_unit, authored_reference | - | - |
-| rag-eval-003 | pass | 12 | quality_report, machine_term | diagnostic_only, generated_report_warning, not_primary_evidence | - |
-| rag-eval-004 | pass | 12 | quality_report, machine_unit | diagnostic_only, generated_report_warning, not_primary_evidence | - |
-| rag-eval-005 | pass | 12 | target_exercise, quality_report, evidence_anchor, alignment_edge | diagnostic_only, generated_report_warning, not_primary_evidence, pending_review | - |
+| rag-eval-001 | pass | 12 | machine_unit, owned_content_edge, alignment_edge, machine_term | diagnostic_only, not_primary_evidence | - |
+| rag-eval-002 | pass | 12 | exam_question, machine_unit, machine_term, owned_content_edge | diagnostic_only, not_primary_evidence | - |
+| rag-eval-003 | pass | 12 | quality_report, owned_content_edge | diagnostic_only, generated_report_warning, not_primary_evidence | - |
+| rag-eval-004 | pass | 12 | quality_report, external_source, owned_content_edge | diagnostic_only, generated_report_warning, not_primary_evidence | - |
+| rag-eval-005 | pass | 12 | quality_report, target_exercise, owned_content_edge | diagnostic_only, generated_report_warning, not_primary_evidence | - |
 | rag-eval-006 | pass | 12 | evidence_anchor, alignment_edge, quality_report, authored_reference, machine_term | diagnostic_only, generated_report_warning, not_primary_evidence | - |
-| rag-eval-007 | pass | 12 | quality_report | diagnostic_only, generated_report_warning, not_primary_evidence | - |
+| rag-eval-007 | pass | 12 | quality_report, owned_content_edge | diagnostic_only, generated_report_warning, not_primary_evidence | - |
 | rag-eval-008 | pass | 12 | alignment_edge | diagnostic_only, generated_report_warning, not_primary_evidence, pending_review | - |
 | rag-eval-009 | pass | 12 | alignment_edge | pending_review | - |
 | rag-eval-010 | pass | 12 | quality_report | diagnostic_only, generated_report_warning, not_primary_evidence | - |
@@ -36,19 +36,19 @@ Notes: Checks that the retrieval layer finds the canonical price-elasticity unit
 
 Top results:
 
-- alignment-edge:edge-term-defined-in-registry-prijselasticiteit-van-de-vraag-begrippen (alignment_edge, machine_registry)
-  - source: references/data/alignment-graph.json
-  - warnings: -
-- machine-term:prijselasticiteit-en-to (machine_term, machine_registry)
-  - source: references/machine/begrippen.json
-  - warnings: -
-- machine-term:prijselasticiteit-van-de-vraag (machine_term, machine_registry)
-  - source: references/machine/begrippen.json
-  - warnings: -
-- quality-report:dead-units.json (quality_report, generated_report)
-  - source: reports/json/dead-units.json
-  - warnings: diagnostic_only, generated_report_warning, not_primary_evidence
 - machine-unit:A15 (machine_unit, machine_registry)
+  - source: references/machine/micro-teaching-units.json
+  - warnings: -
+- machine-unit:A55 (machine_unit, machine_registry)
+  - source: references/machine/micro-teaching-units.json
+  - warnings: -
+- machine-unit:D06 (machine_unit, machine_registry)
+  - source: references/machine/micro-teaching-units.json
+  - warnings: -
+- machine-unit:D24 (machine_unit, machine_registry)
+  - source: references/machine/micro-teaching-units.json
+  - warnings: -
+- machine-unit:D25 (machine_unit, machine_registry)
   - source: references/machine/micro-teaching-units.json
   - warnings: -
 
@@ -62,9 +62,6 @@ Notes: Checks whether exam evidence and the surplus unit/term surface for produc
 
 Top results:
 
-- machine-term:producentensurplus (machine_term, machine_registry)
-  - source: references/machine/begrippen.json
-  - warnings: -
 - exam-question:ha-1022-a-25-1-o-566 (exam_question, external_primary)
   - source: references/external/exam-questions.json
   - warnings: -
@@ -75,6 +72,9 @@ Top results:
   - source: references/external/exam-questions.json
   - warnings: -
 - exam-question:ha-1022-a-25-2-o-595 (exam_question, external_primary)
+  - source: references/external/exam-questions.json
+  - warnings: -
+- exam-question:vw-1022-a-24-2-o-718 (exam_question, external_primary)
   - source: references/external/exam-questions.json
   - warnings: -
 
@@ -94,15 +94,15 @@ Top results:
 - quality-report:dead-units.json (quality_report, generated_report)
   - source: reports/json/dead-units.json
   - warnings: diagnostic_only, generated_report_warning, not_primary_evidence
-- quality-report:terminology-drift.json (quality_report, generated_report)
-  - source: reports/json/terminology-drift.json
-  - warnings: diagnostic_only, generated_report_warning, not_primary_evidence
-- quality-report:unit-term-slug-migration.json (quality_report, generated_report)
-  - source: reports/json/unit-term-slug-migration.json
-  - warnings: diagnostic_only, generated_report_warning, not_primary_evidence
-- quality-report:aspects-coverage.json (quality_report, generated_report)
-  - source: reports/json/aspects-coverage.json
-  - warnings: diagnostic_only, generated_report_warning, not_primary_evidence
+- owned-content-edge:ocg-projected-unit-uses-term-unit-a06-term-evenwichtshoeveelheid-1.4.1-1.4.1-references-machine-micro-teaching-units.jso-288895008510 (owned_content_edge, diagnostic)
+  - source: references/data/owned-content-graph.json
+  - warnings: diagnostic_only, not_primary_evidence
+- owned-content-edge:ocg-projected-unit-uses-term-unit-a06-term-evenwichtshoeveelheid-1.4.2-1.4.2-references-machine-micro-teaching-units.jso-b15d1e939339 (owned_content_edge, diagnostic)
+  - source: references/data/owned-content-graph.json
+  - warnings: diagnostic_only, not_primary_evidence
+- owned-content-edge:ocg-projected-unit-uses-term-unit-a06-term-evenwichtshoeveelheid-2.2.2-2.2.2-references-machine-micro-teaching-units.jso-db516e99ad85 (owned_content_edge, diagnostic)
+  - source: references/data/owned-content-graph.json
+  - warnings: diagnostic_only, not_primary_evidence
 
 ### rag-eval-004
 
@@ -123,12 +123,12 @@ Top results:
 - quality-report:dead-units.json (quality_report, generated_report)
   - source: reports/json/dead-units.json
   - warnings: diagnostic_only, generated_report_warning, not_primary_evidence
-- machine-unit:H16 (machine_unit, machine_registry)
-  - source: references/machine/micro-teaching-units.json
-  - warnings: -
-- machine-unit:H17 (machine_unit, machine_registry)
-  - source: references/machine/micro-teaching-units.json
-  - warnings: -
+- quality-report:aspects-coverage.json (quality_report, generated_report)
+  - source: reports/json/aspects-coverage.json
+  - warnings: diagnostic_only, generated_report_warning, not_primary_evidence
+- quality-report:begrippen-coverage.json (quality_report, generated_report)
+  - source: reports/json/begrippen-coverage.json
+  - warnings: diagnostic_only, generated_report_warning, not_primary_evidence
 
 ### rag-eval-005
 
@@ -140,21 +140,21 @@ Notes: Checks target-exercise missing-unit triage surfacing through diagnostic r
 
 Top results:
 
-- target-exercise:course-target-exercises (target_exercise, authored_judgement)
-  - source: references/authored/course-target-exercises.json
-  - warnings: -
 - quality-report:blueprint-flag-triage.json (quality_report, generated_report)
   - source: reports/json/blueprint-flag-triage.json
   - warnings: diagnostic_only, generated_report_warning, not_primary_evidence
-- evidence-anchor:ev-a15-a38-target (evidence_anchor, authored_judgement)
-  - source: references/data/evidence-anchors.json
+- target-exercise:course-target-exercises (target_exercise, authored_judgement)
+  - source: references/authored/course-target-exercises.json
   - warnings: -
-- evidence-anchor:ev-a16-a17-a15-target (evidence_anchor, authored_judgement)
-  - source: references/data/evidence-anchors.json
-  - warnings: -
-- evidence-anchor:ev-d04-design-target (evidence_anchor, authored_judgement)
-  - source: references/data/evidence-anchors.json
-  - warnings: -
+- owned-content-edge:ocg-target-exercise-has-missing-unit-flag-target-exercise-1.1.3-quality-issue-1.1.3-missing-unit-1-1.1.3-1.1.3-flag-1-re-6f03d9080aa0 (owned_content_edge, authored_judgement)
+  - source: references/data/owned-content-graph.json
+  - warnings: not_primary_evidence
+- owned-content-edge:ocg-target-exercise-has-missing-unit-flag-target-exercise-1.1.3-quality-issue-1.1.3-missing-unit-2-1.1.3-1.1.3-flag-2-re-903275bc5ef9 (owned_content_edge, authored_judgement)
+  - source: references/data/owned-content-graph.json
+  - warnings: not_primary_evidence
+- owned-content-edge:ocg-target-exercise-has-missing-unit-flag-target-exercise-1.2.2-quality-issue-1.2.2-missing-unit-1-1.2.2-1.2.2-flag-1-re-e7362bd3d0bd (owned_content_edge, authored_judgement)
+  - source: references/data/owned-content-graph.json
+  - warnings: not_primary_evidence
 
 ### rag-eval-006
 
@@ -276,14 +276,14 @@ Top results:
 - quality-report:evidence-anchor-status.json (quality_report, generated_report)
   - source: reports/json/evidence-anchor-status.json
   - warnings: diagnostic_only, generated_report_warning, not_primary_evidence
+- quality-report:owned-content-coverage.json (quality_report, generated_report)
+  - source: reports/json/owned-content-coverage.json
+  - warnings: diagnostic_only, generated_report_warning, not_primary_evidence
+- quality-report:owned-source-registry.json (quality_report, generated_report)
+  - source: reports/json/owned-source-registry.json
+  - warnings: diagnostic_only, generated_report_warning, not_primary_evidence
 - quality-report:aspects-coverage.json (quality_report, generated_report)
   - source: reports/json/aspects-coverage.json
-  - warnings: diagnostic_only, generated_report_warning, not_primary_evidence
-- quality-report:begrippen-coverage.json (quality_report, generated_report)
-  - source: reports/json/begrippen-coverage.json
-  - warnings: diagnostic_only, generated_report_warning, not_primary_evidence
-- quality-report:blueprint-flag-triage.json (quality_report, generated_report)
-  - source: reports/json/blueprint-flag-triage.json
   - warnings: diagnostic_only, generated_report_warning, not_primary_evidence
 
 ## Authority Notes

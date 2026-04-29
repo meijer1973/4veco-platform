@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://4veco.local/references/schemas/owned-content-edge.schema.json",
+  "title": "OwnedContentEdge",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "edge_id",
+    "from",
+    "to",
+    "relation",
+    "edge_type",
+    "source_path",
+    "source_surface_type",
+    "source_status",
+    "authority_level",
+    "authority_weight",
+    "primary_evidence",
+    "evidence_status",
+    "generated_artifact_warning",
+    "not_external_authority",
+    "not_machine_registry_authority"
+  ],
+  "properties": {
+    "edge_id": { "type": "string" },
+    "from": { "type": "string" },
+    "to": { "type": "string" },
+    "relation": { "type": "string" },
+    "edge_type": {
+      "enum": ["projection", "owned_exercise_evidence", "implementation_trace"]
+    },
+    "source_path": { "type": "string" },
+    "source_surface_type": { "type": "string" },
+    "source_status": {
+      "enum": [
+        "authored_source",
+        "generated_projection",
+        "exercise_evidence",
+        "answer_model",
+        "planning_artifact",
+        "implementation_output"
+      ]
+    },
+    "authority_level": { "type": "string" },
+    "authority_weight": { "type": "number" },
+    "primary_evidence": { "type": "boolean" },
+    "evidence_status": {
+      "enum": ["projection_only", "explicit_owned_evidence", "implementation_trace_only"]
+    },
+    "generated_artifact_warning": { "type": "boolean" },
+    "not_external_authority": { "const": true },
+    "not_machine_registry_authority": { "const": true }
+  }
+}

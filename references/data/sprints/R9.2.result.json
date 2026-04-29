@@ -1,0 +1,106 @@
+{
+  "sprint_id": "R9.2",
+  "name": "Content Graph Projection",
+  "status": "completed",
+  "completed_on": "2026-04-29",
+  "plan": "docs/sprints/R9.2-plan.md",
+  "baseline": "reports/sprints/R9.2-baseline.md",
+  "result": "reports/sprints/R9.2-result.md",
+  "diff_summary": "reports/sprints/R9.2-diff-summary.md",
+  "protected_reference_data_changed": false,
+  "external_lesson_target_changed": false,
+  "cp2_gate_status": "pass_with_conditions",
+  "outputs": [
+    "references/data/owned-content-graph.json",
+    "references/schemas/owned-content-edge.schema.json",
+    "reports/json/owned-content-coverage.json",
+    "reports/owned-content-coverage.md",
+    "build-scripts/references/build-owned-content-graph.js",
+    "build-scripts/references/check-owned-content-graph.js",
+    "references/data/rag/chunk_index.jsonl",
+    "references/data/rag/retrieval_eval_results.json",
+    "reports/markdown/retrieval-eval-results.md"
+  ],
+  "owned_content_summary": {
+    "node_count": 1065,
+    "edge_count": 1464,
+    "paragraph_count": 49,
+    "unit_count": 110,
+    "term_count": 50,
+    "projection_edge_count": 695,
+    "implementation_trace_edge_count": 437,
+    "owned_exercise_evidence_edge_count": 332,
+    "generated_artifact_warning_edge_count": 630,
+    "generated_artifacts_are_primary_evidence": false
+  },
+  "rag_summary": {
+    "chunk_count": 2329,
+    "owned_content_edge_chunks": 1464,
+    "retrieval_eval_pass_count": 10,
+    "retrieval_eval_fail_count": 0,
+    "authority_violation_count": 0
+  },
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js docs/sprints/R9.2-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js R9.2",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/build-owned-content-graph.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-owned-content-graph.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/rag/build-chunks.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/rag/validate-chunks.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/rag/query.js --text \"1.1.1 schaarste owned content\" --json",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/rag/query.js --text \"owned exercise evidence A43\" --json",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/rag/validate-query-output.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/rag/run-retrieval-evals.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/rag/validate-retrieval-eval-results.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/build-reference-inventory.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-source-manifest.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-document-inventory.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-source-of-truth.js",
+      "status": "passed"
+    }
+  ],
+  "next_required_step": "Sprint 4 Exercise Metadata Overlay MVP, with CP-3 dry-run before bulk extension"
+}
