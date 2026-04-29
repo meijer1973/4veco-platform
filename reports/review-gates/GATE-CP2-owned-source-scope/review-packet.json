@@ -1,0 +1,78 @@
+{
+  "gate_id": "GATE-CP2-owned-source-scope",
+  "sprint_id": "R9.1",
+  "status": "review_packet_prepared",
+  "generated_on": "2026-04-28T22:18:53Z",
+  "registry": "references/data/owned-source-registry.json",
+  "registry_report": "reports/owned-source-registry.md",
+  "calibration_questions": [
+    {
+      "id": "CP2-Q1",
+      "question": "Does the owned-source registry include all relevant companion artefact types for current Book 1 work?",
+      "options": [
+        "A. Yes",
+        "B. Mostly, with additions needed",
+        "C. No, important source classes are missing",
+        "D. Cannot decide from the packet"
+      ]
+    },
+    {
+      "id": "CP2-Q2",
+      "question": "Are the authority labels clear enough to distinguish owned design, owned lesson exposition, generated projection, answer model, planning artifact, and implementation output?",
+      "options": [
+        "A. Yes",
+        "B. Mostly, wording needs improvement",
+        "C. No",
+        "D. Cannot decide"
+      ]
+    },
+    {
+      "id": "CP2-Q3",
+      "question": "Is it correct that generated HTML/PDF/PNG/shared-engine outputs are not primary evidence?",
+      "options": [
+        "A. Yes",
+        "B. Yes with stronger warnings",
+        "C. No",
+        "D. Cannot decide"
+      ]
+    },
+    {
+      "id": "CP2-Q4",
+      "question": "Is the target-exercise index correctly treated as owned exercise evidence while remaining separate from external authority?",
+      "options": [
+        "A. Yes",
+        "B. Yes with conditions",
+        "C. No",
+        "D. Cannot decide"
+      ]
+    },
+    {
+      "id": "CP2-Q5",
+      "question": "Should R9.2 proceed using projection edges only, with evidence edges reserved for explicitly evidence-qualified records?",
+      "options": [
+        "A. Yes",
+        "B. Yes with stricter labels",
+        "C. Hold R9.2 until registry repair",
+        "D. Cannot decide"
+      ]
+    },
+    {
+      "id": "CP2-Q6",
+      "question": "What CP-2 gate status is appropriate?",
+      "options": [
+        "A. pass",
+        "B. pass_with_conditions",
+        "C. hold"
+      ]
+    }
+  ],
+  "answer_recording_required": true,
+  "pattern_analysis_criteria": [
+    "Any answer indicating missing source classes requires registry repair before R9.1 closure.",
+    "Any answer allowing generated projections as primary evidence requires gate hold.",
+    "R9.2 can proceed only if projection/evidence separation is approved."
+  ],
+  "targeted_followups": [],
+  "closure_proposal": "pass_with_conditions",
+  "explicit_human_confirmation_required": true
+}

@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "blueprint_version": "v4",
-  "blueprint_source": "knowledge/course_blueprint_v4.md",
+  "blueprint_source": "references/owned/course-blueprint-v4.md",
   "_schema_doc": {
     "id": "Stable identifier '<module>.<chapter>.<paragraph>' (matches platform folder convention 3.1.1). Permanent once minted.",
     "module": "1-4 (the platform's top-level unit; equals 'Module N' in the blueprint)",
@@ -67,7 +67,7 @@
       "missing_units_flagged": [],
       "exam_codes": [],
       "difficulty_notes": "Intuitive concepts, concrete examples. Students engage well. No calculation barriers. One lesson is comfortable with time for class discussion.",
-      "source_ref": "knowledge/course_blueprint_v4.md §1.1.1"
+      "source_ref": "references/owned/course-blueprint-v4.md §1.1.1"
     },
     {
       "id": "1.1.2",
@@ -117,7 +117,7 @@
       "missing_units_flagged": [],
       "exam_codes": [],
       "difficulty_notes": "Students are weaker at percentage calculations than teachers expect. The index-point vs percentage trap (exercise d) is a classic exam mistake. This paragraph lays the foundation for ALL later calculations (elasticities, inflation, real/nominal). Worth investing time. One lesson is tight — assign exercise (d) type problems as homework.",
-      "source_ref": "knowledge/course_blueprint_v4.md §1.1.2"
+      "source_ref": "references/owned/course-blueprint-v4.md §1.1.2"
     },
     {
       "id": "1.1.3",
@@ -162,7 +162,7 @@
       ],
       "exam_codes": [],
       "difficulty_notes": "Skill-based, hands-on. Students enjoy the concreteness. The main pitfall is putting axes wrong (price on horizontal instead of vertical). One lesson comfortable.",
-      "source_ref": "knowledge/course_blueprint_v4.md §1.1.3"
+      "source_ref": "references/owned/course-blueprint-v4.md §1.1.3"
     },
     {
       "id": "1.2.1",
@@ -214,7 +214,7 @@
       "missing_units_flagged": [],
       "exam_codes": [],
       "difficulty_notes": "Very intuitive. Pizza/real-life examples work well. Step functions are visual and concrete. One lesson comfortable — use the extra time for a good class discussion about what determines betalingsbereidheid.",
-      "source_ref": "knowledge/course_blueprint_v4.md §1.2.1"
+      "source_ref": "references/owned/course-blueprint-v4.md §1.2.1"
     },
     {
       "id": "1.2.2",
@@ -270,7 +270,7 @@
         "D1.9"
       ],
       "difficulty_notes": "The shift vs movement distinction is the single most common error in all of microeconomics. Students confuse these for months. The lesson must hammer this with at least 4–5 examples. One lesson is tight but essential — this concept returns in every subsequent chapter.",
-      "source_ref": "knowledge/course_blueprint_v4.md §1.2.2"
+      "source_ref": "references/owned/course-blueprint-v4.md §1.2.2"
     },
     {
       "id": "1.2.3",
@@ -322,7 +322,7 @@
         "A2.9"
       ],
       "difficulty_notes": "The horizontal addition (adding Q's, not P's) is counter-intuitive for some students. The algebraic derivation (exercise c) requires comfort with linear equations. One lesson works if algebra skills from §1.1 are solid. The kink (exercise d) can be mentioned but is not essential.",
-      "source_ref": "knowledge/course_blueprint_v4.md §1.2.3"
+      "source_ref": "references/owned/course-blueprint-v4.md §1.2.3"
     },
     {
       "id": "1.3.1",
@@ -378,7 +378,7 @@
         "D1.24"
       ],
       "difficulty_notes": "Mirror of §1.2.2. Students pick this up faster because they have the demand framework. The shift/movement distinction gets reinforced. Exercise (c) deliberately does not give away the answer about own price — if a student lists 'own price' as a shift factor, it reveals they have not grasped the distinction between movement and shift. This diagnostic value is important. One lesson comfortable.",
-      "source_ref": "knowledge/course_blueprint_v4.md §1.3.1"
+      "source_ref": "references/owned/course-blueprint-v4.md §1.3.1"
     },
     {
       "id": "1.3.2",
@@ -444,7 +444,7 @@
         "A2.15"
       ],
       "difficulty_notes": "Seven cost concepts is a lot of terminology. The key insight (GTK falls because fixed costs spread) is intuitive. Exercises (d) and (e) test conceptual understanding, not just calculation. One lesson works because the formulas are all simple divisions — the challenge is keeping the abbreviations straight. Recommend a summary card students keep in their notebook.",
-      "source_ref": "knowledge/course_blueprint_v4.md §1.3.2"
+      "source_ref": "references/owned/course-blueprint-v4.md §1.3.2"
     },
     {
       "id": "1.3.3",
@@ -514,7 +514,7 @@
         "A2.15"
       ],
       "difficulty_notes": "Lighter than §1.3.2 because fewer new concepts. The break-even calculation is straightforward algebra. The graph (exercise e) bridges to visual analysis. One lesson comfortable — good opportunity to check that §1.3.2's cost concepts stuck.",
-      "source_ref": "knowledge/course_blueprint_v4.md §1.3.3"
+      "source_ref": "references/owned/course-blueprint-v4.md §1.3.3"
     },
     {
       "id": "1.4.1",
@@ -571,7 +571,7 @@
         "A2.15"
       ],
       "difficulty_notes": "First real algebraic challenge. Students who struggle with rearranging equations need support. Exercise (b) — checking the answer — builds good habits. Exercise (d) bridges to government intervention (Module 2). One lesson is tight if algebra is weak — provide a worked example first, then let students practice.",
-      "source_ref": "knowledge/course_blueprint_v4.md §1.4.1"
+      "source_ref": "references/owned/course-blueprint-v4.md §1.4.1"
     },
     {
       "id": "1.4.2",
@@ -638,7 +638,7 @@
         "D1.24"
       ],
       "difficulty_notes": "Exercise (e) is the key diagnostic question. When both curves shift right, quantity unambiguously increases, but the price change depends on the relative size of the shifts — it could go up, down, or stay the same. Students who understand the model grasp this; students who are just plugging numbers are surprised. This is an important conceptual checkpoint. One lesson works — the algebra is revision from §1.4.1, the challenge is the reasoning in (e).",
-      "source_ref": "knowledge/course_blueprint_v4.md §1.4.2"
+      "source_ref": "references/owned/course-blueprint-v4.md §1.4.2"
     },
     {
       "id": "1.4.3",
@@ -707,7 +707,7 @@
         "D1.21"
       ],
       "difficulty_notes": "This paragraph introduces the concepts and calculation only — NOT yet the profit maximisation rule. Students work with tables and subtraction, discovering patterns. No differentiation yet. The quadratic cost function in exercise (d) prepares students for rising MK, which they will encounter later in the producer and market-power sequence. One lesson works well because the focus is on understanding, not on a complex procedure.",
-      "source_ref": "knowledge/course_blueprint_v4.md §1.4.3"
+      "source_ref": "references/owned/course-blueprint-v4.md §1.4.3"
     },
     {
       "id": "1.4.4",
@@ -779,7 +779,7 @@
         "D1.21"
       ],
       "difficulty_notes": "Exercise (e) is the bridge to algebraic application. The hint deliberately uses an approximate MK ('each extra unit costs approximately 4Q') rather than formal differentiation — the formal calculus technique comes later in the producer and market-power sequence. Students learn the logic of the rule here; the calculus technique comes later. Exercise (f) builds verification habits. One lesson works because the rule emerges naturally from the table work in §1.4.3.",
-      "source_ref": "knowledge/course_blueprint_v4.md §1.4.4"
+      "source_ref": "references/owned/course-blueprint-v4.md §1.4.4"
     },
     {
       "id": "2.1.1",
@@ -838,7 +838,7 @@
         "D1.3"
       ],
       "difficulty_notes": "The formula itself is simple, but students make errors in the percentage calculation (using new instead of old as base, forgetting the sign). Exercise (e) provides immediate contrast — elastic vs inelastic — which cements understanding. One lesson is doable if the percentage skill from §1.1.2 is solid. If not, this spills.",
-      "source_ref": "knowledge/course_blueprint_v4.md §2.1.1"
+      "source_ref": "references/owned/course-blueprint-v4.md §2.1.1"
     },
     {
       "id": "2.1.2",
@@ -898,7 +898,7 @@
         "D1.15"
       ],
       "difficulty_notes": "This is where elasticity becomes meaningful — students see why businesses care. Note that the formula omzet = P × Q (total revenue) is used here for the first time this year in a formal way. Students have an intuitive notion of revenue, but this is the first time they apply the formula systematically and connect it to a concept (elasticity). The rule 'elastic → price up means omzet down' is counterintuitive for some. One lesson works — the calculations are simple repetitions of §2.1.1, the new element is the interpretation.",
-      "source_ref": "knowledge/course_blueprint_v4.md §2.1.2"
+      "source_ref": "references/owned/course-blueprint-v4.md §2.1.2"
     },
     {
       "id": "2.1.3",
@@ -969,7 +969,7 @@
         "D1.9"
       ],
       "difficulty_notes": "Parts A and B use the same formula structure as Ev — same skill, different variables. Students who mastered §2.1.1 handle this quickly. Part C introduces multi-variable demand functions, which appear in exam questions. Students must be comfortable substituting multiple values and holding other variables constant (ceteris paribus in action). This is the most novel element. One lesson works because parts A and B are fast; part C takes more time but is essential for exam preparation.",
-      "source_ref": "knowledge/course_blueprint_v4.md §2.1.3"
+      "source_ref": "references/owned/course-blueprint-v4.md §2.1.3"
     },
     {
       "id": "2.2.1",
@@ -1030,7 +1030,7 @@
         "D3.1"
       ],
       "difficulty_notes": "The concept is visual and concrete. The calculation (triangle area) is simple geometry. The main stumbling block is correctly identifying which triangle — students sometimes shade the wrong area. One lesson comfortable.",
-      "source_ref": "knowledge/course_blueprint_v4.md §2.2.1"
+      "source_ref": "references/owned/course-blueprint-v4.md §2.2.1"
     },
     {
       "id": "2.2.2",
@@ -1100,7 +1100,7 @@
         "D3.1"
       ],
       "difficulty_notes": "The graphical work for PS mirrors CS — students pick it up quickly. The challenging element is exercise (e): connecting PS to marginal cost. The supply curve has been treated as 'willingness to sell' so far; now students must see it as the MC curve. This dual interpretation (supply = MC) is critical for later welfare effects of monopoly and market-power analysis. Spend time on this connection — it is more important than the triangle calculation itself. One lesson works if you prioritise the MC connection over drilling calculations.",
-      "source_ref": "knowledge/course_blueprint_v4.md §2.2.2"
+      "source_ref": "references/owned/course-blueprint-v4.md §2.2.2"
     },
     {
       "id": "2.2.3",
@@ -1165,7 +1165,7 @@
         "D3.5"
       ],
       "difficulty_notes": "The Pareto concept is abstract but exercise (e) makes it concrete: 'can you improve someone's position without hurting another?' The deadweight loss calculation is straightforward (it's another triangle). The conceptual challenge is that students must see why transactions are 'lost.' One lesson works because the math is revision — the new element is the interpretation.",
-      "source_ref": "knowledge/course_blueprint_v4.md §2.2.3"
+      "source_ref": "references/owned/course-blueprint-v4.md §2.2.3"
     },
     {
       "id": "2.3.1",
@@ -1228,7 +1228,7 @@
         "D1.24"
       ],
       "difficulty_notes": "The concept of 'the supply curve shifts up by the tax amount' is often taught but rarely understood. Students confuse 'upward shift = less supply.' Exercise (d) is essential — the graph makes the wedge visible. One lesson works if you focus on the mechanics (how to calculate) and save the welfare analysis for §2.3.2.",
-      "source_ref": "knowledge/course_blueprint_v4.md §2.3.1"
+      "source_ref": "references/owned/course-blueprint-v4.md §2.3.1"
     },
     {
       "id": "2.3.2",
@@ -1304,7 +1304,7 @@
         "D3.9"
       ],
       "difficulty_notes": "This is a calculation-heavy lesson with 5–6 separate computations. The key insight — 'not all lost CS and PS goes to the government; some is simply lost' — is the deadweight loss. Students need the graph from §2.3.1 in front of them. One lesson is tight. Recommend: do exercises (a–d) in class, assign (e–f) as homework.",
-      "source_ref": "knowledge/course_blueprint_v4.md §2.3.2"
+      "source_ref": "references/owned/course-blueprint-v4.md §2.3.2"
     },
     {
       "id": "2.3.3",
@@ -1383,7 +1383,7 @@
         "D3.9"
       ],
       "difficulty_notes": "If students understood §2.3.1 and §2.3.2, this is mechanical transfer — same skills, different direction. The surprise is that subsidies also cause DWL (students assume subsidies are 'purely good'). One lesson works because the method is identical to taxes.",
-      "source_ref": "knowledge/course_blueprint_v4.md §2.3.3"
+      "source_ref": "references/owned/course-blueprint-v4.md §2.3.3"
     },
     {
       "id": "2.4.1",
@@ -1456,7 +1456,7 @@
         "D3.9"
       ],
       "difficulty_notes": "The welfare analysis here is more nuanced than taxes: some consumers gain, others lose access entirely. Exercise (f) forces critical thinking. One lesson works — the graph is similar to §2.2.3 (forced price deviation), so students recognise the pattern.",
-      "source_ref": "knowledge/course_blueprint_v4.md §2.4.1"
+      "source_ref": "references/owned/course-blueprint-v4.md §2.4.1"
     },
     {
       "id": "2.4.2",
@@ -1526,7 +1526,7 @@
         "D3.9"
       ],
       "difficulty_notes": "Mirror of §2.4.1. Students who understood maximum price handle this quickly. The surplus (aanbodoverschot) vs shortage distinction is important to drill. The EU butter/milk example makes it concrete. One lesson comfortable.",
-      "source_ref": "knowledge/course_blueprint_v4.md §2.4.2"
+      "source_ref": "references/owned/course-blueprint-v4.md §2.4.2"
     },
     {
       "id": "2.4.3",
@@ -1598,7 +1598,7 @@
         "D3.9"
       ],
       "difficulty_notes": "Slightly more complex than §2.4.1 and §2.4.2 because the mechanism is different: quantity is fixed, price adjusts via demand curve. Exercise (e) is the integrative challenge — comparing instruments. This is valuable exam preparation. One lesson works because students now have the surplus analysis routine down.",
-      "source_ref": "knowledge/course_blueprint_v4.md §2.4.3"
+      "source_ref": "references/owned/course-blueprint-v4.md §2.4.3"
     },
     {
       "id": "3.1.1",
@@ -1652,7 +1652,7 @@
         "D2.1"
       ],
       "difficulty_notes": "Conceptual lesson. The P = GO = MO equality is stated and understood visually, not derived mathematically. Students find this intuitive ('if you always get the same price, each extra unit brings in that price'). One lesson comfortable — use the extra time for real-world examples (commodity markets, agriculture).",
-      "source_ref": "knowledge/course_blueprint_v4.md §3.1.1"
+      "source_ref": "references/owned/course-blueprint-v4.md §3.1.1"
     },
     {
       "id": "3.1.2",
@@ -1728,7 +1728,7 @@
         "D1.21"
       ],
       "difficulty_notes": "This is where differentiation enters the course. The power rule on a quadratic is simple ('multiply by 2, drop the Q's power by 1'). Students need to see it as a recipe. The conceptual link ('marginal cost tells you what one more ton costs') was established in §1.4.3–§4. Exercise (f) tests whether they understand the rule, not just apply it. One lesson is tight — spend the first 15 minutes on the differentiation technique, then apply it. An algebra bridge at the end of the lesson previews GTK = TK/Q term-by-term for §3.1.3.",
-      "source_ref": "knowledge/course_blueprint_v4.md §3.1.2"
+      "source_ref": "references/owned/course-blueprint-v4.md §3.1.2"
     },
     {
       "id": "3.1.3",
@@ -1809,7 +1809,7 @@
         "D1.21"
       ],
       "difficulty_notes": "Conceptual reasoning about dynamics plus a meaningful calculation. Exercises (d1)/(d2) are the key new skill: herleiden van GTK en vervolgens GTK = MK oplossen. The 500/Q term is demanding; the scaffold (d1→d2) and the algebra bridge at the end of §3.1.2 are cruciaal — zonder die stappen wordt deze paragraaf overweldigend voor de onderkant van de klas.",
-      "source_ref": "knowledge/course_blueprint_v4.md §3.1.3"
+      "source_ref": "references/owned/course-blueprint-v4.md §3.1.3"
     },
     {
       "id": "3.2.1",
@@ -1863,7 +1863,7 @@
         "D2.2"
       ],
       "difficulty_notes": "Conceptual lesson with no calculations. Exercise (d) is a discussion-starter — Apple has market power but isn't a pure monopolist (substitutes exist). This nuance engages students. One lesson comfortable.",
-      "source_ref": "knowledge/course_blueprint_v4.md §3.2.1"
+      "source_ref": "references/owned/course-blueprint-v4.md §3.2.1"
     },
     {
       "id": "3.2.2",
@@ -1928,7 +1928,7 @@
         "A2.11"
       ],
       "difficulty_notes": "This is the key preparation lesson for §3.2.3. The table method (exercises a–c) builds intuition BEFORE the algebra (exercise e). Students see the pattern in the numbers first, then verify with calculus. The differentiation in (e) uses the same power rule from §3.1.2. One lesson works IF you do the table first — don't start with algebra.",
-      "source_ref": "knowledge/course_blueprint_v4.md §3.2.2"
+      "source_ref": "references/owned/course-blueprint-v4.md §3.2.2"
     },
     {
       "id": "3.2.3",
@@ -2017,7 +2017,7 @@
         "D2.2"
       ],
       "difficulty_notes": "The most demanding lesson in the course. 6 algebraic steps plus a graph. However, students have been prepared: MK differentiation (§3.1.2), MO table and differentiation (§3.2.2), MO = MK rule (§1.4.3–§4). The exercise is scaffolded step-by-step. In class: work through steps (a–f) together as guided practice, assign (g–h) as homework. One lesson is tight but feasible with this scaffolding.",
-      "source_ref": "knowledge/course_blueprint_v4.md §3.2.3"
+      "source_ref": "references/owned/course-blueprint-v4.md §3.2.3"
     },
     {
       "id": "3.3.1",
@@ -2087,7 +2087,7 @@
         "D3.1"
       ],
       "difficulty_notes": "Builds directly on §2.2 (surplus analysis) and §3.2.3 (monopoly mechanics). The calculation involves finding the competitive equilibrium (demand = supply/MK) — which is revision of earlier competitive-equilibrium work. The new element is the comparison. One lesson works because students already have all the component skills.",
-      "source_ref": "knowledge/course_blueprint_v4.md §3.3.1"
+      "source_ref": "references/owned/course-blueprint-v4.md §3.3.1"
     },
     {
       "id": "3.3.2",
@@ -2161,7 +2161,7 @@
         "D2.3"
       ],
       "difficulty_notes": "The combined demand curve is provided in exercise (a) to avoid the aggregation complexity. Exercise (b) applies the MO = MK procedure twice (once per group), which is repetitive but reinforcing. One lesson works with this simplification.",
-      "source_ref": "knowledge/course_blueprint_v4.md §3.3.2"
+      "source_ref": "references/owned/course-blueprint-v4.md §3.3.2"
     },
     {
       "id": "3.3.3",
@@ -2219,7 +2219,7 @@
         "D2.1"
       ],
       "difficulty_notes": "Descriptive/comparative lesson. The table is a study tool students can use for revision. Exercise (e) bridges to game theory (which is covered elsewhere in the full VWO program). One lesson comfortable — good opportunity for class discussion about real-world examples.",
-      "source_ref": "knowledge/course_blueprint_v4.md §3.3.3"
+      "source_ref": "references/owned/course-blueprint-v4.md §3.3.3"
     },
     {
       "id": "3.4.1",
@@ -2287,7 +2287,7 @@
         "A2.17"
       ],
       "difficulty_notes": "New graph type: two supply curves (MPC and MSC). Students must understand why the market uses MPC (because firms don't pay for pollution) while society should use MSC. The math is straightforward — it's the same equilibrium calculation introduced earlier, just done twice. One lesson works.",
-      "source_ref": "knowledge/course_blueprint_v4.md §3.4.1"
+      "source_ref": "references/owned/course-blueprint-v4.md §3.4.1"
     },
     {
       "id": "3.4.2",
@@ -2352,7 +2352,7 @@
         "A2.16"
       ],
       "difficulty_notes": "Mirror of §3.4.1 — if students understood negative externalities, this is the same logic reversed. The policy suggestion (exercise e) connects back to §2.3 (subsidies). One lesson comfortable.",
-      "source_ref": "knowledge/course_blueprint_v4.md §3.4.2"
+      "source_ref": "references/owned/course-blueprint-v4.md §3.4.2"
     },
     {
       "id": "3.4.3",
@@ -2421,7 +2421,7 @@
         "D3.9"
       ],
       "difficulty_notes": "Mix of calculation (a–b) and conceptual reasoning (c–e). The Coase theorem can be kept light — just the basic idea, not formal proof. Exercise (d) is an excellent integrative question connecting market failure to monopoly. One lesson works — the calculation is revision, the new elements are Coase and policy instruments.",
-      "source_ref": "knowledge/course_blueprint_v4.md §3.4.3"
+      "source_ref": "references/owned/course-blueprint-v4.md §3.4.3"
     },
     {
       "id": "4.1.1",
@@ -2478,7 +2478,7 @@
       "missing_units_flagged": [],
       "exam_codes": [],
       "difficulty_notes": "Connects directly to earlier marginal-analysis units (MO = MK is analogous to VMP = W). Students find the restaurant context engaging. The diminishing marginal product is intuitive ('the kitchen gets crowded'). One lesson comfortable.",
-      "source_ref": "knowledge/course_blueprint_v4.md §4.1.1"
+      "source_ref": "references/owned/course-blueprint-v4.md §4.1.1"
     },
     {
       "id": "4.1.2",
@@ -2535,7 +2535,7 @@
       "missing_units_flagged": [],
       "exam_codes": [],
       "difficulty_notes": "The terminology (beroepsbevolking vs niet-beroepsbevolking) is the main challenge — students mix up 'not working' with 'unemployed.' Exercise (c) directly addresses this confusion. The formulas are simple. One lesson works with clear emphasis on definitions.",
-      "source_ref": "knowledge/course_blueprint_v4.md §4.1.2"
+      "source_ref": "references/owned/course-blueprint-v4.md §4.1.2"
     },
     {
       "id": "4.1.3",
@@ -2600,7 +2600,7 @@
         "A2.15"
       ],
       "difficulty_notes": "Direct transfer from §1.4 — same math, different context. Students recognise the framework. Exercise (e) mirrors §1.4.2. One lesson comfortable. This is a confidence-building lesson.",
-      "source_ref": "knowledge/course_blueprint_v4.md §4.1.3"
+      "source_ref": "references/owned/course-blueprint-v4.md §4.1.3"
     },
     {
       "id": "4.2.1",
@@ -2663,7 +2663,7 @@
       "missing_units_flagged": [],
       "exam_codes": [],
       "difficulty_notes": "Definitional lesson. The classification can be ambiguous (is the coal miner structural or frictional?) — this makes for good discussion. Exercise (f) requires policy thinking. One lesson works.",
-      "source_ref": "knowledge/course_blueprint_v4.md §4.2.1"
+      "source_ref": "references/owned/course-blueprint-v4.md §4.2.1"
     },
     {
       "id": "4.2.2",
@@ -2748,7 +2748,7 @@
         "H5.2"
       ],
       "difficulty_notes": "This is a direct transfer from Module 2 (minimumprijs). Students should recognise the framework: a minimum wage IS a minimum price on labor. The welfare calculation is identical. The new element is exercise (f) — a balanced evaluation — which is an exam skill (standpuntbepaling). One lesson works. If there is a long time gap between Module 2 and this lesson, start with a 10-minute revision of minimum price mechanics.",
-      "source_ref": "knowledge/course_blueprint_v4.md §4.2.2"
+      "source_ref": "references/owned/course-blueprint-v4.md §4.2.2"
     },
     {
       "id": "4.2.3",
@@ -2809,7 +2809,7 @@
       "missing_units_flagged": [],
       "exam_codes": [],
       "difficulty_notes": "Mostly conceptual/institutional. The link to minimum wage analysis (§2.4.2) makes the economic reasoning familiar. The new element is loonstarheid as a market imperfection. Exercise (e) connects theory to Dutch reality. One lesson comfortable.",
-      "source_ref": "knowledge/course_blueprint_v4.md §4.2.3"
+      "source_ref": "references/owned/course-blueprint-v4.md §4.2.3"
     },
     {
       "id": "4.3.1",
@@ -2866,7 +2866,7 @@
         "A4.3"
       ],
       "difficulty_notes": "The opportunity cost calculation is the tricky part — students must think in terms of 'what you give up.' The counterintuitive result (B can have a comparative advantage despite being worse at everything) is why the concept is hard. One lesson is tight — allocate time for the 'aha moment.'",
-      "source_ref": "knowledge/course_blueprint_v4.md §4.3.1"
+      "source_ref": "references/owned/course-blueprint-v4.md §4.3.1"
     },
     {
       "id": "4.3.2",
@@ -2924,7 +2924,7 @@
         "A4.3"
       ],
       "difficulty_notes": "Lots of arithmetic but conceptually straightforward once comparative advantage is understood. Exercise (e) requires connecting back to opportunity costs — elegant but potentially confusing. One lesson works if §4.3.1 was solid. If not, this spills.",
-      "source_ref": "knowledge/course_blueprint_v4.md §4.3.2"
+      "source_ref": "references/owned/course-blueprint-v4.md §4.3.2"
     },
     {
       "id": "4.3.3",
@@ -2991,7 +2991,7 @@
         "A4.3"
       ],
       "difficulty_notes": "The graph has two DWL triangles (production inefficiency + consumption loss) — this is more complex than the single DWL triangle from taxes. However, the calculation itself is straightforward (just reading off demand and supply at two prices). The welfare analysis connects directly to Module 2's tax analysis. One lesson works because it's application, not new methodology.",
-      "source_ref": "knowledge/course_blueprint_v4.md §4.3.3"
+      "source_ref": "references/owned/course-blueprint-v4.md §4.3.3"
     },
     {
       "id": "4.4.1",
@@ -3052,7 +3052,7 @@
       ],
       "exam_codes": [],
       "difficulty_notes": "Exercise (c) is the classic trap — students think '108 to 112 = 4% inflation' when it's actually (112−108)/108 = 3.7%. This connects directly to §1.1.2 (percentage changes). The real vs nominal distinction is conceptually important but mathematically simple. One lesson works.",
-      "source_ref": "knowledge/course_blueprint_v4.md §4.4.1"
+      "source_ref": "references/owned/course-blueprint-v4.md §4.4.1"
     },
     {
       "id": "4.4.2",
@@ -3108,7 +3108,7 @@
       ],
       "exam_codes": [],
       "difficulty_notes": "The terminology (waardevast, welvaartsvast, bevroren) is confusing because the words sound similar. Exercises (a–c) force precise calculation for each case. Exercise (e) tests deeper understanding. One lesson works — the math is arithmetic, the challenge is keeping the definitions straight.",
-      "source_ref": "knowledge/course_blueprint_v4.md §4.4.2"
+      "source_ref": "references/owned/course-blueprint-v4.md §4.4.2"
     },
     {
       "id": "4.4.3",
@@ -3168,7 +3168,7 @@
       ],
       "exam_codes": [],
       "difficulty_notes": "This is an integration lesson — no new concepts, just applying the real/nominal distinction from §4.4.1 and the indexering concepts from §4.4.2 to different economic variables. Exercise (e) is a synthesis question that prepares for exam-style evaluative answers. One lesson comfortable.",
-      "source_ref": "knowledge/course_blueprint_v4.md §4.4.3"
+      "source_ref": "references/owned/course-blueprint-v4.md §4.4.3"
     }
   ]
 }

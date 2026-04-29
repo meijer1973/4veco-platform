@@ -1,30 +1,30 @@
 {
   "schema_version": "0.1",
-  "generated_at": "2026-04-27T22:35:33.052Z",
+  "generated_at": "2026-04-28T22:19:10.561Z",
   "sprint_id": "R0.2",
   "scope": "references/",
   "note": "Self-generated inventory files intentionally omit size and sha256 to avoid unstable self-checksums.",
   "summary": {
-    "file_count": 135,
+    "file_count": 140,
     "by_layer": {
       "authored_judgement": 7,
-      "governance_data": 63,
+      "governance_data": 67,
       "external_authority": 32,
       "machine_registry": 5,
       "owned_curriculum_design": 3,
       "quality_protocol": 5,
       "planning": 1,
-      "schema_contract": 18,
+      "schema_contract": 19,
       "governance_policy": 1
     },
     "by_edit_policy": {
       "human_reviewed_edit": 14,
-      "generated_by_inventory_script": 8,
-      "sprint_process": 55,
+      "generated_by_inventory_script": 9,
+      "sprint_process": 58,
       "external_refresh_only": 32,
       "cli_only": 5,
       "versioned_human_reviewed_edit": 3,
-      "code_review": 18
+      "code_review": 19
     }
   },
   "files": [
@@ -32,8 +32,8 @@
       "path": "references/authored/course-target-exercises.json",
       "file_name": "course-target-exercises.json",
       "extension": "json",
-      "size_bytes": 134449,
-      "sha256": "b5b5d7b3829eed4accd34431c027d842baa4508b0172ec0e4a578362250bd680",
+      "size_bytes": 134799,
+      "sha256": "86a93a48344728cdf2fa01685673315e64087c7cf0c5ec8ceb9b17fe99a398e3",
       "layer": "authored_judgement",
       "authority_level": "authored_judgement",
       "source_type": "authored_json",
@@ -234,6 +234,26 @@
       "extension": "json",
       "size_bytes": 18700,
       "sha256": "e3c64a2a4951a3016bf3e8ab243681bd71cb88b74cf13727ac6783f1c6edc951",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "inventory",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "generated_by_inventory_script",
+      "owner": "references_team",
+      "refresh_policy": "regenerate",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/data/owned-source-registry.json",
+      "file_name": "owned-source-registry.json",
+      "extension": "json",
+      "size_bytes": 58260,
+      "sha256": "fd8032003f5a54c562a8eb5d0b8ab6c35e33dc35d07e1ae0c5eb038721ccd80d",
       "layer": "governance_data",
       "authority_level": "generated_report",
       "source_type": "inventory",
@@ -1429,6 +1449,66 @@
       "self_generated_inventory_file": false
     },
     {
+      "path": "references/data/sprints/R9.1.plan.json",
+      "file_name": "R9.1.plan.json",
+      "extension": "json",
+      "size_bytes": 1267,
+      "sha256": "af1f3d403e22a0894fcedabb1169c1d11593dfcf7b65b3215b71c712219ac7fc",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/data/sprints/S1.plan.json",
+      "file_name": "S1.plan.json",
+      "extension": "json",
+      "size_bytes": 798,
+      "sha256": "2a4a6471c5ebf266e31c18a5dc2972967646816754ca9e6e74ec72a109bdab72",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/data/sprints/S1.result.json",
+      "file_name": "S1.result.json",
+      "extension": "json",
+      "size_bytes": 2247,
+      "sha256": "da34eea8973cf55228202d40c684f943e402f2c06e5b9db497b5acaafb2f3c74",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
       "path": "references/external/amstelveencollege_quality_standards.md",
       "file_name": "amstelveencollege_quality_standards.md",
       "extension": "md",
@@ -2335,8 +2415,8 @@
       "path": "references/reference-team-roadmap.md",
       "file_name": "reference-team-roadmap.md",
       "extension": "md",
-      "size_bytes": 47801,
-      "sha256": "994de56994dc082b5d63015793d182e38451690e2db9b8a838ef3e4f80d46fd7",
+      "size_bytes": 68649,
+      "sha256": "fd7d4b2d8db2421a32d68cfb86a19f11156862ef7cdac4a4bc51b83970682f41",
       "layer": "planning",
       "authority_level": "authored_judgement",
       "source_type": "roadmap",
@@ -2482,6 +2562,27 @@
       "extension": "json",
       "size_bytes": 581,
       "sha256": "e0c9d357a85946e934de487fb0d6669c0e64c79800135067b00df9ecc3ddc300",
+      "layer": "schema_contract",
+      "authority_level": "machine_contract",
+      "source_type": "json_schema",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "references_team",
+      "refresh_policy": "schema_review",
+      "downstream_dependencies": [
+        "validators",
+        "reference-cli",
+        "reports",
+        "future-rag"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/schemas/owned-source-registry.schema.json",
+      "file_name": "owned-source-registry.schema.json",
+      "extension": "json",
+      "size_bytes": 2737,
+      "sha256": "a6f9818723885623a8efcc4703c35603564f6a7c3f1ef537c5794597885d3d46",
       "layer": "schema_contract",
       "authority_level": "machine_contract",
       "source_type": "json_schema",

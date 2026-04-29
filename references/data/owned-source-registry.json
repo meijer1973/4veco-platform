@@ -1,0 +1,1483 @@
+{
+  "schema_version": 1,
+  "registry_id": "owned-source-registry",
+  "generated_by": "build-scripts/references/build-owned-source-registry.js",
+  "generated_on": "2026-04-28T22:18:53Z",
+  "source_files": [
+    "references/owned/course-blueprint-v4.md",
+    "references/owned/course-blueprint-v4.meta.json",
+    "references/authored/course-target-exercises.json",
+    "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod"
+  ],
+  "cp1_gate_status": "pass_with_conditions",
+  "cp2_gate_id": "GATE-CP2-owned-source-scope",
+  "authority_policy": {
+    "principle": "Owned sources are important course-design and retrieval surfaces, but they do not override external authority or reviewed machine registry truth.",
+    "projection_edges_must_be_separate_from_evidence_edges": true,
+    "generated_outputs_are_primary_evidence": false,
+    "lesson_exposition_can_override_external_authority": false,
+    "lesson_exposition_can_override_machine_registry": false,
+    "allowed_downstream_uses": [
+      "rag_retrieval",
+      "owned_source_projection",
+      "lesson_authoring_support",
+      "course_design_review"
+    ],
+    "blocked_downstream_uses": [
+      "student_diagnostics",
+      "adaptive_routing",
+      "student_facing_ai",
+      "automatic_lesson_sequencing",
+      "automatic_mastery_decisions",
+      "summative_assessment_decisions"
+    ]
+  },
+  "lesson_roots": [
+    {
+      "root_id": "lesson-root:book-1",
+      "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod",
+      "title": "Boek 1 - Grondslagen, vraag en aanbod",
+      "exists": true,
+      "file_count": 1022,
+      "paragraph_directory_count": 21,
+      "by_extension": {
+        ".svg": 346,
+        ".png": 345,
+        ".md": 94,
+        ".html": 74,
+        ".pdf": 67,
+        ".py": 26,
+        ".js": 21,
+        ".yaml": 21,
+        ".docx": 13,
+        ".css": 6,
+        "<none>": 5,
+        ".pyc": 2,
+        ".json": 1,
+        ".pptx": 1
+      },
+      "by_type": {
+        "visual_svg_source": 346,
+        "visual_png_projection": 345,
+        "answer_model_markdown": 26,
+        "answer_model_pdf": 26,
+        "local_build_helper": 26,
+        "answer_model_html": 22,
+        "quality_reference_yaml": 21,
+        "review_note": 21,
+        "generated_js_surface": 20,
+        "opgaven_markdown": 19,
+        "opgaven_pdf": 19,
+        "opgaven_html": 15,
+        "paragraph_markdown": 13,
+        "paragraph_pdf": 13,
+        "generated_html_surface": 12,
+        "other_owned_lesson_file": 12,
+        "paragraph_html": 11,
+        "companion_docx": 8,
+        "owned_markdown_surface": 8,
+        "generated_pdf_surface": 7,
+        "generated_navigation_html": 6,
+        "chapter_plan": 5,
+        "voorkennis_surface": 5,
+        "summary_surface": 4,
+        "vaardigheden_surface": 4,
+        "guided_practice_surface": 3,
+        "book_html": 1,
+        "book_markdown": 1,
+        "book_pdf": 1,
+        "deployment_config": 1,
+        "presentation_surface": 1
+      }
+    }
+  ],
+  "companion_artifact_types": [
+    {
+      "source_surface_type": "active_lesson_root",
+      "surface_count": 1,
+      "observed_count": 1022,
+      "authority_levels": [
+        "owned_lesson_exposition"
+      ],
+      "source_statuses": [
+        "owned_lesson_surface"
+      ],
+      "primary_evidence_allowed": false
+    },
+    {
+      "source_surface_type": "answer_model_html",
+      "surface_count": 1,
+      "observed_count": 22,
+      "authority_levels": [
+        "generated_projection"
+      ],
+      "source_statuses": [
+        "generated_projection"
+      ],
+      "primary_evidence_allowed": false
+    },
+    {
+      "source_surface_type": "answer_model_markdown",
+      "surface_count": 1,
+      "observed_count": 26,
+      "authority_levels": [
+        "owned_answer_model"
+      ],
+      "source_statuses": [
+        "answer_model"
+      ],
+      "primary_evidence_allowed": false
+    },
+    {
+      "source_surface_type": "answer_model_pdf",
+      "surface_count": 1,
+      "observed_count": 26,
+      "authority_levels": [
+        "generated_projection"
+      ],
+      "source_statuses": [
+        "generated_projection"
+      ],
+      "primary_evidence_allowed": false
+    },
+    {
+      "source_surface_type": "book_html",
+      "surface_count": 1,
+      "observed_count": 1,
+      "authority_levels": [
+        "generated_projection"
+      ],
+      "source_statuses": [
+        "generated_projection"
+      ],
+      "primary_evidence_allowed": false
+    },
+    {
+      "source_surface_type": "book_markdown",
+      "surface_count": 1,
+      "observed_count": 1,
+      "authority_levels": [
+        "owned_lesson_exposition"
+      ],
+      "source_statuses": [
+        "authored_source"
+      ],
+      "primary_evidence_allowed": false
+    },
+    {
+      "source_surface_type": "book_pdf",
+      "surface_count": 1,
+      "observed_count": 1,
+      "authority_levels": [
+        "generated_projection"
+      ],
+      "source_statuses": [
+        "generated_projection"
+      ],
+      "primary_evidence_allowed": false
+    },
+    {
+      "source_surface_type": "chapter_plan",
+      "surface_count": 1,
+      "observed_count": 5,
+      "authority_levels": [
+        "owned_curriculum_design"
+      ],
+      "source_statuses": [
+        "planning_artifact"
+      ],
+      "primary_evidence_allowed": false
+    },
+    {
+      "source_surface_type": "companion_docx",
+      "surface_count": 1,
+      "observed_count": 8,
+      "authority_levels": [
+        "generated_projection"
+      ],
+      "source_statuses": [
+        "generated_projection"
+      ],
+      "primary_evidence_allowed": false
+    },
+    {
+      "source_surface_type": "deployment_config",
+      "surface_count": 1,
+      "observed_count": 1,
+      "authority_levels": [
+        "implementation_output"
+      ],
+      "source_statuses": [
+        "implementation_output"
+      ],
+      "primary_evidence_allowed": false
+    },
+    {
+      "source_surface_type": "generated_html_surface",
+      "surface_count": 1,
+      "observed_count": 12,
+      "authority_levels": [
+        "generated_projection"
+      ],
+      "source_statuses": [
+        "generated_projection"
+      ],
+      "primary_evidence_allowed": false
+    },
+    {
+      "source_surface_type": "generated_js_surface",
+      "surface_count": 1,
+      "observed_count": 20,
+      "authority_levels": [
+        "generated_projection"
+      ],
+      "source_statuses": [
+        "generated_projection"
+      ],
+      "primary_evidence_allowed": false
+    },
+    {
+      "source_surface_type": "generated_navigation_html",
+      "surface_count": 1,
+      "observed_count": 6,
+      "authority_levels": [
+        "generated_projection"
+      ],
+      "source_statuses": [
+        "generated_projection"
+      ],
+      "primary_evidence_allowed": false
+    },
+    {
+      "source_surface_type": "generated_pdf_surface",
+      "surface_count": 1,
+      "observed_count": 7,
+      "authority_levels": [
+        "generated_projection"
+      ],
+      "source_statuses": [
+        "generated_projection"
+      ],
+      "primary_evidence_allowed": false
+    },
+    {
+      "source_surface_type": "guided_practice_surface",
+      "surface_count": 1,
+      "observed_count": 3,
+      "authority_levels": [
+        "generated_projection"
+      ],
+      "source_statuses": [
+        "generated_projection"
+      ],
+      "primary_evidence_allowed": false
+    },
+    {
+      "source_surface_type": "local_build_helper",
+      "surface_count": 1,
+      "observed_count": 26,
+      "authority_levels": [
+        "implementation_output"
+      ],
+      "source_statuses": [
+        "implementation_output"
+      ],
+      "primary_evidence_allowed": false
+    },
+    {
+      "source_surface_type": "opgaven_html",
+      "surface_count": 1,
+      "observed_count": 15,
+      "authority_levels": [
+        "generated_projection"
+      ],
+      "source_statuses": [
+        "generated_projection"
+      ],
+      "primary_evidence_allowed": false
+    },
+    {
+      "source_surface_type": "opgaven_markdown",
+      "surface_count": 1,
+      "observed_count": 19,
+      "authority_levels": [
+        "owned_lesson_exercise"
+      ],
+      "source_statuses": [
+        "exercise_evidence"
+      ],
+      "primary_evidence_allowed": true
+    },
+    {
+      "source_surface_type": "opgaven_pdf",
+      "surface_count": 1,
+      "observed_count": 19,
+      "authority_levels": [
+        "generated_projection"
+      ],
+      "source_statuses": [
+        "generated_projection"
+      ],
+      "primary_evidence_allowed": false
+    },
+    {
+      "source_surface_type": "other_owned_lesson_file",
+      "surface_count": 1,
+      "observed_count": 12,
+      "authority_levels": [
+        "generated_projection"
+      ],
+      "source_statuses": [
+        "generated_projection"
+      ],
+      "primary_evidence_allowed": false
+    },
+    {
+      "source_surface_type": "owned_markdown_surface",
+      "surface_count": 1,
+      "observed_count": 8,
+      "authority_levels": [
+        "generated_projection"
+      ],
+      "source_statuses": [
+        "generated_projection"
+      ],
+      "primary_evidence_allowed": false
+    },
+    {
+      "source_surface_type": "paragraph_html",
+      "surface_count": 1,
+      "observed_count": 11,
+      "authority_levels": [
+        "generated_projection"
+      ],
+      "source_statuses": [
+        "generated_projection"
+      ],
+      "primary_evidence_allowed": false
+    },
+    {
+      "source_surface_type": "paragraph_markdown",
+      "surface_count": 1,
+      "observed_count": 13,
+      "authority_levels": [
+        "owned_lesson_exposition"
+      ],
+      "source_statuses": [
+        "authored_source"
+      ],
+      "primary_evidence_allowed": false
+    },
+    {
+      "source_surface_type": "paragraph_pdf",
+      "surface_count": 1,
+      "observed_count": 13,
+      "authority_levels": [
+        "generated_projection"
+      ],
+      "source_statuses": [
+        "generated_projection"
+      ],
+      "primary_evidence_allowed": false
+    },
+    {
+      "source_surface_type": "presentation_surface",
+      "surface_count": 1,
+      "observed_count": 1,
+      "authority_levels": [
+        "generated_projection"
+      ],
+      "source_statuses": [
+        "generated_projection"
+      ],
+      "primary_evidence_allowed": false
+    },
+    {
+      "source_surface_type": "quality_reference_yaml",
+      "surface_count": 1,
+      "observed_count": 21,
+      "authority_levels": [
+        "generated_projection"
+      ],
+      "source_statuses": [
+        "generated_projection"
+      ],
+      "primary_evidence_allowed": false
+    },
+    {
+      "source_surface_type": "review_note",
+      "surface_count": 1,
+      "observed_count": 21,
+      "authority_levels": [
+        "generated_projection"
+      ],
+      "source_statuses": [
+        "generated_projection"
+      ],
+      "primary_evidence_allowed": false
+    },
+    {
+      "source_surface_type": "summary_surface",
+      "surface_count": 1,
+      "observed_count": 4,
+      "authority_levels": [
+        "generated_projection"
+      ],
+      "source_statuses": [
+        "generated_projection"
+      ],
+      "primary_evidence_allowed": false
+    },
+    {
+      "source_surface_type": "target_exercise_index",
+      "surface_count": 1,
+      "observed_count": 49,
+      "authority_levels": [
+        "owned_curriculum_design"
+      ],
+      "source_statuses": [
+        "exercise_evidence"
+      ],
+      "primary_evidence_allowed": true
+    },
+    {
+      "source_surface_type": "vaardigheden_surface",
+      "surface_count": 1,
+      "observed_count": 4,
+      "authority_levels": [
+        "generated_projection"
+      ],
+      "source_statuses": [
+        "generated_projection"
+      ],
+      "primary_evidence_allowed": false
+    },
+    {
+      "source_surface_type": "visual_png_projection",
+      "surface_count": 1,
+      "observed_count": 345,
+      "authority_levels": [
+        "generated_projection"
+      ],
+      "source_statuses": [
+        "generated_projection"
+      ],
+      "primary_evidence_allowed": false
+    },
+    {
+      "source_surface_type": "visual_svg_source",
+      "surface_count": 1,
+      "observed_count": 346,
+      "authority_levels": [
+        "owned_visual_source"
+      ],
+      "source_statuses": [
+        "authored_source"
+      ],
+      "primary_evidence_allowed": false
+    },
+    {
+      "source_surface_type": "voorkennis_surface",
+      "surface_count": 1,
+      "observed_count": 5,
+      "authority_levels": [
+        "generated_projection"
+      ],
+      "source_statuses": [
+        "generated_projection"
+      ],
+      "primary_evidence_allowed": false
+    }
+  ],
+  "source_surfaces": [
+    {
+      "surface_id": "owned:course-blueprint-v4",
+      "title": "Course Blueprint v4",
+      "path": "references/owned/course-blueprint-v4.md",
+      "source_surface_type": "course_blueprint",
+      "exists": true,
+      "source_hash": "b775eeca5c1108a83ebedcc20fcd9df603009cd9b76689f2e4f57c242401e158",
+      "completion_status": "partial_year_1_of_3",
+      "curriculum_version": "owned:course-blueprint-v4",
+      "notes": [
+        "Target exercises in the blueprint are strong owned curriculum-design evidence.",
+        "Blueprint prose is contextual and design-oriented; it is not sufficient by itself to mint or mutate machine units.",
+        "The blueprint currently covers only part of the intended multi-year course and must carry version/completion metadata in retrieval."
+      ],
+      "source_status": "authored_source",
+      "authority_level": "owned_curriculum_design",
+      "authority_weight": 70,
+      "primary_evidence": false,
+      "evidence_use": "course_design_backbone_and_target_exercise_alignment",
+      "allowed_use": [
+        "course_design",
+        "rag_retrieval",
+        "owned_source_projection",
+        "target_exercise_alignment"
+      ],
+      "not_allowed_use": [
+        "external_authority",
+        "automatic_unit_minting_from_prose",
+        "override_machine_registry"
+      ],
+      "projection_policy": "May create owned-source projection edges in R9.2; blueprint prose is not a direct evidence edge."
+    },
+    {
+      "surface_id": "owned:course-blueprint-v4-meta",
+      "title": "Course Blueprint v4 metadata",
+      "path": "references/owned/course-blueprint-v4.meta.json",
+      "source_surface_type": "course_blueprint_metadata",
+      "exists": true,
+      "source_hash": "0d68b549b2368e6250b9f2f3f8ea854ab3588854ef47f65fc363d38173c12216",
+      "completion_status": "partial_year_1_of_3",
+      "curriculum_version": "owned:course-blueprint-v4",
+      "notes": [
+        "Target exercises in the blueprint are strong owned curriculum-design evidence.",
+        "Blueprint prose is contextual and design-oriented; it is not sufficient by itself to mint or mutate machine units.",
+        "The blueprint currently covers only part of the intended multi-year course and must carry version/completion metadata in retrieval."
+      ],
+      "source_status": "planning_artifact",
+      "authority_level": "owned_curriculum_design",
+      "authority_weight": 50,
+      "primary_evidence": false,
+      "evidence_use": "completion_and_authority_context",
+      "allowed_use": [
+        "retrieval_context",
+        "source_versioning",
+        "owned_source_projection"
+      ],
+      "not_allowed_use": [
+        "curriculum_claim_proof"
+      ],
+      "projection_policy": "Metadata informs authority and completion labels only."
+    },
+    {
+      "surface_id": "authored:course-target-exercises",
+      "title": "Course target exercises",
+      "path": "references/authored/course-target-exercises.json",
+      "source_surface_type": "target_exercise_index",
+      "exists": true,
+      "source_hash": "86a93a48344728cdf2fa01685673315e64087c7cf0c5ec8ceb9b17fe99a398e3",
+      "record_count": 49,
+      "blueprint_source": "references/owned/course-blueprint-v4.md",
+      "stale_blueprint_reference_count": 0,
+      "source_status": "exercise_evidence",
+      "authority_level": "owned_curriculum_design",
+      "authority_weight": 75,
+      "primary_evidence": true,
+      "evidence_use": "owned_target_exercise_evidence",
+      "allowed_use": [
+        "unit_gap_discovery",
+        "target_exercise_alignment",
+        "rag_retrieval",
+        "owned_source_projection"
+      ],
+      "not_allowed_use": [
+        "external_authority",
+        "silent_source_mutation"
+      ],
+      "projection_policy": "Target exercises may support unit-gap discovery; content graph links must be projection/evidence typed explicitly."
+    },
+    {
+      "surface_id": "lesson-root:book-1",
+      "title": "Boek 1 - Grondslagen, vraag en aanbod",
+      "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod",
+      "source_surface_type": "active_lesson_root",
+      "exists": true,
+      "file_count": 1022,
+      "paragraph_directory_count": 21,
+      "source_status": "owned_lesson_surface",
+      "authority_level": "owned_lesson_exposition",
+      "authority_weight": 35,
+      "primary_evidence": false,
+      "evidence_use": "owned_lesson_corpus_context",
+      "allowed_use": [
+        "rag_retrieval",
+        "owned_source_projection",
+        "lesson_authoring_support"
+      ],
+      "not_allowed_use": [
+        "external_authority",
+        "override_machine_registry"
+      ],
+      "projection_policy": "Root is a corpus boundary, not an evidence edge."
+    },
+    {
+      "surface_id": "lesson-root:book-1:answer_model_html",
+      "title": "Boek 1 - Grondslagen, vraag en aanbod: answer_model_html",
+      "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod",
+      "source_surface_type": "answer_model_html",
+      "exists": true,
+      "observed_count": 22,
+      "example_paths": [
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1 Economisch denken en rekenen – antwoorden.html",
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – antwoorden.html",
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – antwoorden.html",
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – antwoorden.html",
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.4 Gemengde opgaven/1.1.4 Gemengde opgaven – antwoorden.html"
+      ],
+      "source_status": "generated_projection",
+      "authority_level": "generated_projection",
+      "authority_weight": 20,
+      "primary_evidence": false,
+      "evidence_use": "generated_output_trace",
+      "allowed_use": [
+        "rag_retrieval_with_warning",
+        "implementation_trace"
+      ],
+      "not_allowed_use": [
+        "primary_evidence",
+        "external_authority"
+      ],
+      "projection_policy": "May support projection, retrieval context, or implementation trace; not a primary evidence edge."
+    },
+    {
+      "surface_id": "lesson-root:book-1:answer_model_markdown",
+      "title": "Boek 1 - Grondslagen, vraag en aanbod: answer_model_markdown",
+      "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod",
+      "source_surface_type": "answer_model_markdown",
+      "exists": true,
+      "observed_count": 26,
+      "example_paths": [
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1 Economisch denken en rekenen – antwoorden.md",
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – antwoorden.md",
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – antwoorden.md",
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – antwoorden.md",
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.4 Gemengde opgaven/1.1.4 Gemengde opgaven – antwoorden.md"
+      ],
+      "source_status": "answer_model",
+      "authority_level": "owned_answer_model",
+      "authority_weight": 55,
+      "primary_evidence": false,
+      "evidence_use": "solution_and_feedback_context",
+      "allowed_use": [
+        "answer_model_lookup",
+        "rag_retrieval",
+        "lesson_authoring_support"
+      ],
+      "not_allowed_use": [
+        "external_authority",
+        "unit_creation_without_exercise"
+      ],
+      "projection_policy": "May support projection, retrieval context, or implementation trace; not a primary evidence edge."
+    },
+    {
+      "surface_id": "lesson-root:book-1:answer_model_pdf",
+      "title": "Boek 1 - Grondslagen, vraag en aanbod: answer_model_pdf",
+      "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod",
+      "source_surface_type": "answer_model_pdf",
+      "exists": true,
+      "observed_count": 26,
+      "example_paths": [
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1 Economisch denken en rekenen – antwoorden.pdf",
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – antwoorden.pdf",
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – antwoorden.pdf",
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – antwoorden.pdf",
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.4 Gemengde opgaven/1.1.4 Gemengde opgaven – antwoorden.pdf"
+      ],
+      "source_status": "generated_projection",
+      "authority_level": "generated_projection",
+      "authority_weight": 20,
+      "primary_evidence": false,
+      "evidence_use": "generated_output_trace",
+      "allowed_use": [
+        "rag_retrieval_with_warning",
+        "implementation_trace"
+      ],
+      "not_allowed_use": [
+        "primary_evidence",
+        "external_authority"
+      ],
+      "projection_policy": "May support projection, retrieval context, or implementation trace; not a primary evidence edge."
+    },
+    {
+      "surface_id": "lesson-root:book-1:book_html",
+      "title": "Boek 1 - Grondslagen, vraag en aanbod: book_html",
+      "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod",
+      "source_surface_type": "book_html",
+      "exists": true,
+      "observed_count": 1,
+      "example_paths": [
+        "Boek 1 Grondslagen, vraag en aanbod – boek.html"
+      ],
+      "source_status": "generated_projection",
+      "authority_level": "generated_projection",
+      "authority_weight": 20,
+      "primary_evidence": false,
+      "evidence_use": "generated_output_trace",
+      "allowed_use": [
+        "rag_retrieval_with_warning",
+        "implementation_trace"
+      ],
+      "not_allowed_use": [
+        "primary_evidence",
+        "external_authority"
+      ],
+      "projection_policy": "May support projection, retrieval context, or implementation trace; not a primary evidence edge."
+    },
+    {
+      "surface_id": "lesson-root:book-1:book_markdown",
+      "title": "Boek 1 - Grondslagen, vraag en aanbod: book_markdown",
+      "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod",
+      "source_surface_type": "book_markdown",
+      "exists": true,
+      "observed_count": 1,
+      "example_paths": [
+        "Boek 1 Grondslagen, vraag en aanbod – boek.md"
+      ],
+      "source_status": "authored_source",
+      "authority_level": "owned_lesson_exposition",
+      "authority_weight": 48,
+      "primary_evidence": false,
+      "evidence_use": "compiled_exposition_context",
+      "allowed_use": [
+        "rag_retrieval",
+        "lesson_authoring_support"
+      ],
+      "not_allowed_use": [
+        "external_authority"
+      ],
+      "projection_policy": "May support projection, retrieval context, or implementation trace; not a primary evidence edge."
+    },
+    {
+      "surface_id": "lesson-root:book-1:book_pdf",
+      "title": "Boek 1 - Grondslagen, vraag en aanbod: book_pdf",
+      "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod",
+      "source_surface_type": "book_pdf",
+      "exists": true,
+      "observed_count": 1,
+      "example_paths": [
+        "Boek 1 Grondslagen, vraag en aanbod – boek.pdf"
+      ],
+      "source_status": "generated_projection",
+      "authority_level": "generated_projection",
+      "authority_weight": 20,
+      "primary_evidence": false,
+      "evidence_use": "generated_output_trace",
+      "allowed_use": [
+        "rag_retrieval_with_warning",
+        "implementation_trace"
+      ],
+      "not_allowed_use": [
+        "primary_evidence",
+        "external_authority"
+      ],
+      "projection_policy": "May support projection, retrieval context, or implementation trace; not a primary evidence edge."
+    },
+    {
+      "surface_id": "lesson-root:book-1:chapter_plan",
+      "title": "Boek 1 - Grondslagen, vraag en aanbod: chapter_plan",
+      "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod",
+      "source_surface_type": "chapter_plan",
+      "exists": true,
+      "observed_count": 5,
+      "example_paths": [
+        "1.1 Hoofdstuk Economisch denken en rekenen/_chapter-plan.md",
+        "1.2 Hoofdstuk Vraag/_chapter-plan.md",
+        "1.3 Hoofdstuk Aanbod en kosten/_chapter-plan.md",
+        "1.4 Hoofdstuk Marktevenwicht en marginale analyse/_chapter-plan-1.4.md",
+        "1.5 Hoofdstuk Toetsvoorbereiding/_chapter-plan.md"
+      ],
+      "source_status": "planning_artifact",
+      "authority_level": "owned_curriculum_design",
+      "authority_weight": 45,
+      "primary_evidence": false,
+      "evidence_use": "planning_context",
+      "allowed_use": [
+        "course_planning",
+        "owned_source_projection",
+        "rag_retrieval"
+      ],
+      "not_allowed_use": [
+        "external_authority",
+        "primary_unit_proof"
+      ],
+      "projection_policy": "May support projection, retrieval context, or implementation trace; not a primary evidence edge."
+    },
+    {
+      "surface_id": "lesson-root:book-1:companion_docx",
+      "title": "Boek 1 - Grondslagen, vraag en aanbod: companion_docx",
+      "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod",
+      "source_surface_type": "companion_docx",
+      "exists": true,
+      "observed_count": 8,
+      "example_paths": [
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – basis – antwoorden.docx",
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – basis – vragen.docx",
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – midden – antwoorden.docx",
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – midden – vragen.docx",
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – nieuws met visual.docx"
+      ],
+      "source_status": "generated_projection",
+      "authority_level": "generated_projection",
+      "authority_weight": 20,
+      "primary_evidence": false,
+      "evidence_use": "generated_output_trace",
+      "allowed_use": [
+        "rag_retrieval_with_warning",
+        "implementation_trace"
+      ],
+      "not_allowed_use": [
+        "primary_evidence",
+        "external_authority"
+      ],
+      "projection_policy": "May support projection, retrieval context, or implementation trace; not a primary evidence edge."
+    },
+    {
+      "surface_id": "lesson-root:book-1:deployment_config",
+      "title": "Boek 1 - Grondslagen, vraag en aanbod: deployment_config",
+      "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod",
+      "source_surface_type": "deployment_config",
+      "exists": true,
+      "observed_count": 1,
+      "example_paths": [
+        "deploy-config.json"
+      ],
+      "source_status": "implementation_output",
+      "authority_level": "implementation_output",
+      "authority_weight": 10,
+      "primary_evidence": false,
+      "evidence_use": "implementation_trace_only",
+      "allowed_use": [
+        "debugging",
+        "implementation_trace"
+      ],
+      "not_allowed_use": [
+        "curriculum_authority",
+        "primary_evidence"
+      ],
+      "projection_policy": "May support projection, retrieval context, or implementation trace; not a primary evidence edge."
+    },
+    {
+      "surface_id": "lesson-root:book-1:generated_html_surface",
+      "title": "Boek 1 - Grondslagen, vraag en aanbod: generated_html_surface",
+      "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod",
+      "source_surface_type": "generated_html_surface",
+      "exists": true,
+      "observed_count": 12,
+      "example_paths": [
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1 Economisch denken en rekenen – hoofdstuk.html",
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – instapquiz.html",
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – nieuws-detective.html",
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – redeneer-spel.html",
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – stappenplan.html"
+      ],
+      "source_status": "generated_projection",
+      "authority_level": "generated_projection",
+      "authority_weight": 20,
+      "primary_evidence": false,
+      "evidence_use": "generated_output_trace",
+      "allowed_use": [
+        "rag_retrieval_with_warning",
+        "implementation_trace"
+      ],
+      "not_allowed_use": [
+        "primary_evidence",
+        "external_authority"
+      ],
+      "projection_policy": "May support projection, retrieval context, or implementation trace; not a primary evidence edge."
+    },
+    {
+      "surface_id": "lesson-root:book-1:generated_js_surface",
+      "title": "Boek 1 - Grondslagen, vraag en aanbod: generated_js_surface",
+      "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod",
+      "source_surface_type": "generated_js_surface",
+      "exists": true,
+      "observed_count": 20,
+      "example_paths": [
+        "shared/newsdetective-engine.js",
+        "shared/newsdetective-ui.js",
+        "shared/newsdetective/1.1.1.js",
+        "shared/procedure-engine.js",
+        "shared/procedure-ui.js"
+      ],
+      "source_status": "generated_projection",
+      "authority_level": "generated_projection",
+      "authority_weight": 20,
+      "primary_evidence": false,
+      "evidence_use": "generated_output_trace",
+      "allowed_use": [
+        "rag_retrieval_with_warning",
+        "implementation_trace"
+      ],
+      "not_allowed_use": [
+        "primary_evidence",
+        "external_authority"
+      ],
+      "projection_policy": "May support projection, retrieval context, or implementation trace; not a primary evidence edge."
+    },
+    {
+      "surface_id": "lesson-root:book-1:generated_navigation_html",
+      "title": "Boek 1 - Grondslagen, vraag en aanbod: generated_navigation_html",
+      "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod",
+      "source_surface_type": "generated_navigation_html",
+      "exists": true,
+      "observed_count": 6,
+      "example_paths": [
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/index.html",
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/index.html",
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/index.html",
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.4 Gemengde opgaven/index.html",
+        "1.1 Hoofdstuk Economisch denken en rekenen/index.html"
+      ],
+      "source_status": "generated_projection",
+      "authority_level": "generated_projection",
+      "authority_weight": 20,
+      "primary_evidence": false,
+      "evidence_use": "generated_output_trace",
+      "allowed_use": [
+        "rag_retrieval_with_warning",
+        "implementation_trace"
+      ],
+      "not_allowed_use": [
+        "primary_evidence",
+        "external_authority"
+      ],
+      "projection_policy": "May support projection, retrieval context, or implementation trace; not a primary evidence edge."
+    },
+    {
+      "surface_id": "lesson-root:book-1:generated_pdf_surface",
+      "title": "Boek 1 - Grondslagen, vraag en aanbod: generated_pdf_surface",
+      "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod",
+      "source_surface_type": "generated_pdf_surface",
+      "exists": true,
+      "observed_count": 7,
+      "example_paths": [
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1 Economisch denken en rekenen – hoofdstuk.pdf",
+        "1.2 Hoofdstuk Vraag/1.2 Vraag – hoofdstuk.pdf",
+        "1.3 Hoofdstuk Aanbod en kosten/1.3 Aanbod en kosten – hoofdstuk.pdf",
+        "1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4 Marktevenwicht en marginale analyse – hoofdstuk.pdf",
+        "1.5 Hoofdstuk Toetsvoorbereiding/1.5 Toetsvoorbereiding – hoofdstuk.pdf"
+      ],
+      "source_status": "generated_projection",
+      "authority_level": "generated_projection",
+      "authority_weight": 20,
+      "primary_evidence": false,
+      "evidence_use": "generated_output_trace",
+      "allowed_use": [
+        "rag_retrieval_with_warning",
+        "implementation_trace"
+      ],
+      "not_allowed_use": [
+        "primary_evidence",
+        "external_authority"
+      ],
+      "projection_policy": "May support projection, retrieval context, or implementation trace; not a primary evidence edge."
+    },
+    {
+      "surface_id": "lesson-root:book-1:guided_practice_surface",
+      "title": "Boek 1 - Grondslagen, vraag en aanbod: guided_practice_surface",
+      "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod",
+      "source_surface_type": "guided_practice_surface",
+      "exists": true,
+      "observed_count": 3,
+      "example_paths": [
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – begeleide inoefening – antwoorden.docx",
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – begeleide inoefening – vragen.docx",
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – begeleide inoefening.html"
+      ],
+      "source_status": "generated_projection",
+      "authority_level": "generated_projection",
+      "authority_weight": 20,
+      "primary_evidence": false,
+      "evidence_use": "generated_output_trace",
+      "allowed_use": [
+        "rag_retrieval_with_warning",
+        "implementation_trace"
+      ],
+      "not_allowed_use": [
+        "primary_evidence",
+        "external_authority"
+      ],
+      "projection_policy": "May support projection, retrieval context, or implementation trace; not a primary evidence edge."
+    },
+    {
+      "surface_id": "lesson-root:book-1:local_build_helper",
+      "title": "Boek 1 - Grondslagen, vraag en aanbod: local_build_helper",
+      "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod",
+      "source_surface_type": "local_build_helper",
+      "exists": true,
+      "observed_count": 26,
+      "example_paths": [
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/build_pdf.py",
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/build_pdf.py",
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/build_pdf.py",
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.4 Gemengde opgaven/build_pdf.py",
+        "1.1 Hoofdstuk Economisch denken en rekenen/build_chapter.py"
+      ],
+      "source_status": "implementation_output",
+      "authority_level": "implementation_output",
+      "authority_weight": 10,
+      "primary_evidence": false,
+      "evidence_use": "implementation_trace_only",
+      "allowed_use": [
+        "debugging",
+        "implementation_trace"
+      ],
+      "not_allowed_use": [
+        "curriculum_authority",
+        "primary_evidence"
+      ],
+      "projection_policy": "May support projection, retrieval context, or implementation trace; not a primary evidence edge."
+    },
+    {
+      "surface_id": "lesson-root:book-1:opgaven_html",
+      "title": "Boek 1 - Grondslagen, vraag en aanbod: opgaven_html",
+      "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod",
+      "source_surface_type": "opgaven_html",
+      "exists": true,
+      "observed_count": 15,
+      "example_paths": [
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – opgaven.html",
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – opgaven.html",
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – opgaven.html",
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.4 Gemengde opgaven/1.1.4 Gemengde opgaven – opgaven.html",
+        "1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/1.2.1 Individuele vraag – opgaven.html"
+      ],
+      "source_status": "generated_projection",
+      "authority_level": "generated_projection",
+      "authority_weight": 20,
+      "primary_evidence": false,
+      "evidence_use": "generated_output_trace",
+      "allowed_use": [
+        "rag_retrieval_with_warning",
+        "implementation_trace"
+      ],
+      "not_allowed_use": [
+        "primary_evidence",
+        "external_authority"
+      ],
+      "projection_policy": "May support projection, retrieval context, or implementation trace; not a primary evidence edge."
+    },
+    {
+      "surface_id": "lesson-root:book-1:opgaven_markdown",
+      "title": "Boek 1 - Grondslagen, vraag en aanbod: opgaven_markdown",
+      "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod",
+      "source_surface_type": "opgaven_markdown",
+      "exists": true,
+      "observed_count": 19,
+      "example_paths": [
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – opgaven.md",
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – opgaven.md",
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – opgaven.md",
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.4 Gemengde opgaven/1.1.4 Gemengde opgaven – opgaven.md",
+        "1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/1.2.1 Individuele vraag – opgaven.md"
+      ],
+      "source_status": "exercise_evidence",
+      "authority_level": "owned_lesson_exercise",
+      "authority_weight": 65,
+      "primary_evidence": true,
+      "evidence_use": "owned_built_exercise_evidence",
+      "allowed_use": [
+        "exercise_lookup",
+        "rag_retrieval",
+        "owned_source_projection"
+      ],
+      "not_allowed_use": [
+        "external_authority"
+      ],
+      "projection_policy": "May support owned-source evidence or projection edges only when individual records are identified later."
+    },
+    {
+      "surface_id": "lesson-root:book-1:opgaven_pdf",
+      "title": "Boek 1 - Grondslagen, vraag en aanbod: opgaven_pdf",
+      "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod",
+      "source_surface_type": "opgaven_pdf",
+      "exists": true,
+      "observed_count": 19,
+      "example_paths": [
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – opgaven.pdf",
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – opgaven.pdf",
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – opgaven.pdf",
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.4 Gemengde opgaven/1.1.4 Gemengde opgaven – opgaven.pdf",
+        "1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/1.2.1 Individuele vraag – opgaven.pdf"
+      ],
+      "source_status": "generated_projection",
+      "authority_level": "generated_projection",
+      "authority_weight": 20,
+      "primary_evidence": false,
+      "evidence_use": "generated_output_trace",
+      "allowed_use": [
+        "rag_retrieval_with_warning",
+        "implementation_trace"
+      ],
+      "not_allowed_use": [
+        "primary_evidence",
+        "external_authority"
+      ],
+      "projection_policy": "May support projection, retrieval context, or implementation trace; not a primary evidence edge."
+    },
+    {
+      "surface_id": "lesson-root:book-1:other_owned_lesson_file",
+      "title": "Boek 1 - Grondslagen, vraag en aanbod: other_owned_lesson_file",
+      "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod",
+      "source_surface_type": "other_owned_lesson_file",
+      "exists": true,
+      "observed_count": 12,
+      "example_paths": [
+        "1.2 Hoofdstuk Vraag/1.2.2 Vraagfactoren/__pycache__/build_pdf.cpython-314.pyc",
+        "1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/__pycache__/build_pdf.cpython-314.pyc",
+        "shared/newsdetective.css",
+        "shared/newsdetective/.gitkeep",
+        "shared/procedure.css"
+      ],
+      "source_status": "generated_projection",
+      "authority_level": "generated_projection",
+      "authority_weight": 20,
+      "primary_evidence": false,
+      "evidence_use": "generated_output_trace",
+      "allowed_use": [
+        "rag_retrieval_with_warning",
+        "implementation_trace"
+      ],
+      "not_allowed_use": [
+        "primary_evidence",
+        "external_authority"
+      ],
+      "projection_policy": "May support projection, retrieval context, or implementation trace; not a primary evidence edge."
+    },
+    {
+      "surface_id": "lesson-root:book-1:owned_markdown_surface",
+      "title": "Boek 1 - Grondslagen, vraag en aanbod: owned_markdown_surface",
+      "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod",
+      "source_surface_type": "owned_markdown_surface",
+      "exists": true,
+      "observed_count": 8,
+      "example_paths": [
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1 Economisch denken en rekenen – hoofdstuk.md",
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_paragraph-plan.md",
+        "1.2 Hoofdstuk Vraag/1.2 Vraag – hoofdstuk.md",
+        "1.3 Hoofdstuk Aanbod en kosten/1.3 Aanbod en kosten – hoofdstuk.md",
+        "1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4 Marktevenwicht en marginale analyse – hoofdstuk.md"
+      ],
+      "source_status": "generated_projection",
+      "authority_level": "generated_projection",
+      "authority_weight": 20,
+      "primary_evidence": false,
+      "evidence_use": "generated_output_trace",
+      "allowed_use": [
+        "rag_retrieval_with_warning",
+        "implementation_trace"
+      ],
+      "not_allowed_use": [
+        "primary_evidence",
+        "external_authority"
+      ],
+      "projection_policy": "May support projection, retrieval context, or implementation trace; not a primary evidence edge."
+    },
+    {
+      "surface_id": "lesson-root:book-1:paragraph_html",
+      "title": "Boek 1 - Grondslagen, vraag en aanbod: paragraph_html",
+      "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod",
+      "source_surface_type": "paragraph_html",
+      "exists": true,
+      "observed_count": 11,
+      "example_paths": [
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – paragraaf.html",
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – paragraaf.html",
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – paragraaf.html",
+        "1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/1.2.1 Individuele vraag – paragraaf.html",
+        "1.2 Hoofdstuk Vraag/1.2.2 Vraagfactoren/1.2.2 Vraagfactoren – paragraaf.html"
+      ],
+      "source_status": "generated_projection",
+      "authority_level": "generated_projection",
+      "authority_weight": 20,
+      "primary_evidence": false,
+      "evidence_use": "generated_output_trace",
+      "allowed_use": [
+        "rag_retrieval_with_warning",
+        "implementation_trace"
+      ],
+      "not_allowed_use": [
+        "primary_evidence",
+        "external_authority"
+      ],
+      "projection_policy": "May support projection, retrieval context, or implementation trace; not a primary evidence edge."
+    },
+    {
+      "surface_id": "lesson-root:book-1:paragraph_markdown",
+      "title": "Boek 1 - Grondslagen, vraag en aanbod: paragraph_markdown",
+      "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod",
+      "source_surface_type": "paragraph_markdown",
+      "exists": true,
+      "observed_count": 13,
+      "example_paths": [
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – paragraaf.md",
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – paragraaf.md",
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – paragraaf.md",
+        "1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/1.2.1 Individuele vraag – paragraaf.md",
+        "1.2 Hoofdstuk Vraag/1.2.2 Vraagfactoren/1.2.2 Vraagfactoren – paragraaf.md"
+      ],
+      "source_status": "authored_source",
+      "authority_level": "owned_lesson_exposition",
+      "authority_weight": 50,
+      "primary_evidence": false,
+      "evidence_use": "lesson_exposition_context",
+      "allowed_use": [
+        "rag_retrieval",
+        "lesson_authoring_support",
+        "owned_source_projection"
+      ],
+      "not_allowed_use": [
+        "external_authority",
+        "override_reviewed_references"
+      ],
+      "projection_policy": "May support projection, retrieval context, or implementation trace; not a primary evidence edge."
+    },
+    {
+      "surface_id": "lesson-root:book-1:paragraph_pdf",
+      "title": "Boek 1 - Grondslagen, vraag en aanbod: paragraph_pdf",
+      "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod",
+      "source_surface_type": "paragraph_pdf",
+      "exists": true,
+      "observed_count": 13,
+      "example_paths": [
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – paragraaf.pdf",
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – paragraaf.pdf",
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – paragraaf.pdf",
+        "1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/1.2.1 Individuele vraag – paragraaf.pdf",
+        "1.2 Hoofdstuk Vraag/1.2.2 Vraagfactoren/1.2.2 Vraagfactoren – paragraaf.pdf"
+      ],
+      "source_status": "generated_projection",
+      "authority_level": "generated_projection",
+      "authority_weight": 20,
+      "primary_evidence": false,
+      "evidence_use": "generated_output_trace",
+      "allowed_use": [
+        "rag_retrieval_with_warning",
+        "implementation_trace"
+      ],
+      "not_allowed_use": [
+        "primary_evidence",
+        "external_authority"
+      ],
+      "projection_policy": "May support projection, retrieval context, or implementation trace; not a primary evidence edge."
+    },
+    {
+      "surface_id": "lesson-root:book-1:presentation_surface",
+      "title": "Boek 1 - Grondslagen, vraag en aanbod: presentation_surface",
+      "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod",
+      "source_surface_type": "presentation_surface",
+      "exists": true,
+      "observed_count": 1,
+      "example_paths": [
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – presentatie.pptx"
+      ],
+      "source_status": "generated_projection",
+      "authority_level": "generated_projection",
+      "authority_weight": 20,
+      "primary_evidence": false,
+      "evidence_use": "generated_output_trace",
+      "allowed_use": [
+        "rag_retrieval_with_warning",
+        "implementation_trace"
+      ],
+      "not_allowed_use": [
+        "primary_evidence",
+        "external_authority"
+      ],
+      "projection_policy": "May support projection, retrieval context, or implementation trace; not a primary evidence edge."
+    },
+    {
+      "surface_id": "lesson-root:book-1:quality_reference_yaml",
+      "title": "Boek 1 - Grondslagen, vraag en aanbod: quality_reference_yaml",
+      "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod",
+      "source_surface_type": "quality_reference_yaml",
+      "exists": true,
+      "observed_count": 21,
+      "example_paths": [
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1-quality-ref.yaml",
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2-quality-ref.yaml",
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3-quality-ref.yaml",
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.4 Gemengde opgaven/1.1.4-quality-ref.yaml",
+        "1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/1.2.1-quality-ref.yaml"
+      ],
+      "source_status": "generated_projection",
+      "authority_level": "generated_projection",
+      "authority_weight": 20,
+      "primary_evidence": false,
+      "evidence_use": "generated_output_trace",
+      "allowed_use": [
+        "rag_retrieval_with_warning",
+        "implementation_trace"
+      ],
+      "not_allowed_use": [
+        "primary_evidence",
+        "external_authority"
+      ],
+      "projection_policy": "May support projection, retrieval context, or implementation trace; not a primary evidence edge."
+    },
+    {
+      "surface_id": "lesson-root:book-1:review_note",
+      "title": "Boek 1 - Grondslagen, vraag en aanbod: review_note",
+      "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod",
+      "source_surface_type": "review_note",
+      "exists": true,
+      "observed_count": 21,
+      "example_paths": [
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1-review.md",
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2-review.md",
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3-review.md",
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.4 Gemengde opgaven/1.1.4-review.md",
+        "1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/1.2.1-review.md"
+      ],
+      "source_status": "generated_projection",
+      "authority_level": "generated_projection",
+      "authority_weight": 20,
+      "primary_evidence": false,
+      "evidence_use": "generated_output_trace",
+      "allowed_use": [
+        "rag_retrieval_with_warning",
+        "implementation_trace"
+      ],
+      "not_allowed_use": [
+        "primary_evidence",
+        "external_authority"
+      ],
+      "projection_policy": "May support projection, retrieval context, or implementation trace; not a primary evidence edge."
+    },
+    {
+      "surface_id": "lesson-root:book-1:summary_surface",
+      "title": "Boek 1 - Grondslagen, vraag en aanbod: summary_surface",
+      "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod",
+      "source_surface_type": "summary_surface",
+      "exists": true,
+      "observed_count": 4,
+      "example_paths": [
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – samenvatting.docx",
+        "1.5 Hoofdstuk Toetsvoorbereiding/1.5.1 Actieve samenvatting/1.5.1 Actieve samenvatting – samenvatting.html",
+        "1.5 Hoofdstuk Toetsvoorbereiding/1.5.1 Actieve samenvatting/1.5.1 Actieve samenvatting – samenvatting.md",
+        "1.5 Hoofdstuk Toetsvoorbereiding/1.5.1 Actieve samenvatting/1.5.1 Actieve samenvatting – samenvatting.pdf"
+      ],
+      "source_status": "generated_projection",
+      "authority_level": "generated_projection",
+      "authority_weight": 20,
+      "primary_evidence": false,
+      "evidence_use": "generated_output_trace",
+      "allowed_use": [
+        "rag_retrieval_with_warning",
+        "implementation_trace"
+      ],
+      "not_allowed_use": [
+        "primary_evidence",
+        "external_authority"
+      ],
+      "projection_policy": "May support projection, retrieval context, or implementation trace; not a primary evidence edge."
+    },
+    {
+      "surface_id": "lesson-root:book-1:vaardigheden_surface",
+      "title": "Boek 1 - Grondslagen, vraag en aanbod: vaardigheden_surface",
+      "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod",
+      "source_surface_type": "vaardigheden_surface",
+      "exists": true,
+      "observed_count": 4,
+      "example_paths": [
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – uitleg vaardigheden.docx",
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – uitleg vaardigheden.html",
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – wiskundevaardigheden.html",
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – wiskundevaardigheden.html"
+      ],
+      "source_status": "generated_projection",
+      "authority_level": "generated_projection",
+      "authority_weight": 20,
+      "primary_evidence": false,
+      "evidence_use": "generated_output_trace",
+      "allowed_use": [
+        "rag_retrieval_with_warning",
+        "implementation_trace"
+      ],
+      "not_allowed_use": [
+        "primary_evidence",
+        "external_authority"
+      ],
+      "projection_policy": "May support projection, retrieval context, or implementation trace; not a primary evidence edge."
+    },
+    {
+      "surface_id": "lesson-root:book-1:visual_png_projection",
+      "title": "Boek 1 - Grondslagen, vraag en aanbod: visual_png_projection",
+      "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod",
+      "source_surface_type": "visual_png_projection",
+      "exists": true,
+      "observed_count": 345,
+      "example_paths": [
+        "_assets/1.1.1_ex_1.png",
+        "_assets/1.1.1_fig_1.png",
+        "_assets/1.1.1_fig_2.png",
+        "_assets/1.1.1_fig_3.png",
+        "_assets/1.1.1_we_1.png"
+      ],
+      "source_status": "generated_projection",
+      "authority_level": "generated_projection",
+      "authority_weight": 20,
+      "primary_evidence": false,
+      "evidence_use": "generated_output_trace",
+      "allowed_use": [
+        "rag_retrieval_with_warning",
+        "implementation_trace"
+      ],
+      "not_allowed_use": [
+        "primary_evidence",
+        "external_authority"
+      ],
+      "projection_policy": "May support projection, retrieval context, or implementation trace; not a primary evidence edge."
+    },
+    {
+      "surface_id": "lesson-root:book-1:visual_svg_source",
+      "title": "Boek 1 - Grondslagen, vraag en aanbod: visual_svg_source",
+      "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod",
+      "source_surface_type": "visual_svg_source",
+      "exists": true,
+      "observed_count": 346,
+      "example_paths": [
+        "_assets/1.1.1_ex_1.svg",
+        "_assets/1.1.1_fig_1.svg",
+        "_assets/1.1.1_fig_2.svg",
+        "_assets/1.1.1_fig_3.svg",
+        "_assets/1.1.1_we_1.svg"
+      ],
+      "source_status": "authored_source",
+      "authority_level": "owned_visual_source",
+      "authority_weight": 40,
+      "primary_evidence": false,
+      "evidence_use": "visual_explanation_context",
+      "allowed_use": [
+        "visual_lookup",
+        "dual_coding_review",
+        "rag_retrieval"
+      ],
+      "not_allowed_use": [
+        "external_authority"
+      ],
+      "projection_policy": "May support projection, retrieval context, or implementation trace; not a primary evidence edge."
+    },
+    {
+      "surface_id": "lesson-root:book-1:voorkennis_surface",
+      "title": "Boek 1 - Grondslagen, vraag en aanbod: voorkennis_surface",
+      "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod",
+      "source_surface_type": "voorkennis_surface",
+      "exists": true,
+      "observed_count": 5,
+      "example_paths": [
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – uitleg voorkennis - layout test v1.html",
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – uitleg voorkennis.docx",
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – uitleg voorkennis.html",
+        "shared/voorkennis.css",
+        "shared/voorkennis.js"
+      ],
+      "source_status": "generated_projection",
+      "authority_level": "generated_projection",
+      "authority_weight": 20,
+      "primary_evidence": false,
+      "evidence_use": "generated_output_trace",
+      "allowed_use": [
+        "rag_retrieval_with_warning",
+        "implementation_trace"
+      ],
+      "not_allowed_use": [
+        "primary_evidence",
+        "external_authority"
+      ],
+      "projection_policy": "May support projection, retrieval context, or implementation trace; not a primary evidence edge."
+    }
+  ]
+}

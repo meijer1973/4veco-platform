@@ -1,0 +1,29 @@
+{
+  "sprint_id": "R9.1",
+  "name": "Owned Source Registry",
+  "status": "in_progress",
+  "planned_on": "2026-04-29",
+  "plan": "docs/sprints/R9.1-plan.md",
+  "protected_reference_data_changes_allowed": false,
+  "human_review_required": true,
+  "gate_id": "GATE-CP2-owned-source-scope",
+  "review_packet": "reports/review-gates/GATE-CP2-owned-source-scope/review-packet.md",
+  "valid_gate_statuses": [
+    "pass",
+    "pass_with_conditions",
+    "hold"
+  ],
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js docs/sprints/R9.1-plan.md",
+    "node build-scripts/sprints/check-sprint-bundle.js R9.1",
+    "node build-scripts/references/build-owned-source-registry.js",
+    "node build-scripts/references/check-owned-source-registry.js",
+    "node build-scripts/references/repair-target-exercise-blueprint-refs.js --check",
+    "node build-scripts/references/build-reference-inventory.js",
+    "node build-scripts/references/check-source-manifest.js",
+    "node build-scripts/references/check-document-inventory.js",
+    "node build-scripts/references/check-source-of-truth.js",
+    "node build-scripts/sprints/check-sprint-result.js reports/sprints/R9.1-result.md",
+    "node build-scripts/sprints/check-sprint-bundle.js R9.1 --complete"
+  ]
+}

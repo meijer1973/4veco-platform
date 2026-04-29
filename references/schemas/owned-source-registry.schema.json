@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://4veco.local/references/schemas/owned-source-registry.schema.json",
+  "title": "OwnedSourceRegistry",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "schema_version",
+    "registry_id",
+    "generated_by",
+    "generated_on",
+    "source_files",
+    "authority_policy",
+    "lesson_roots",
+    "companion_artifact_types",
+    "source_surfaces"
+  ],
+  "properties": {
+    "schema_version": { "const": 1 },
+    "registry_id": { "const": "owned-source-registry" },
+    "generated_by": { "type": "string" },
+    "generated_on": { "type": "string" },
+    "source_files": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "authority_policy": {
+      "type": "object",
+      "required": [
+        "projection_edges_must_be_separate_from_evidence_edges",
+        "generated_outputs_are_primary_evidence",
+        "lesson_exposition_can_override_external_authority",
+        "lesson_exposition_can_override_machine_registry"
+      ],
+      "properties": {
+        "projection_edges_must_be_separate_from_evidence_edges": { "const": true },
+        "generated_outputs_are_primary_evidence": { "const": false },
+        "lesson_exposition_can_override_external_authority": { "const": false },
+        "lesson_exposition_can_override_machine_registry": { "const": false }
+      }
+    },
+    "lesson_roots": {
+      "type": "array",
+      "items": { "type": "object" }
+    },
+    "companion_artifact_types": {
+      "type": "array",
+      "items": { "type": "object" }
+    },
+    "source_surfaces": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "surface_id",
+          "path",
+          "source_surface_type",
+          "source_status",
+          "authority_level",
+          "authority_weight",
+          "primary_evidence",
+          "evidence_use",
+          "projection_policy"
+        ],
+        "properties": {
+          "surface_id": { "type": "string" },
+          "path": { "type": "string" },
+          "source_surface_type": { "type": "string" },
+          "source_status": {
+            "enum": [
+              "authored_source",
+              "generated_projection",
+              "exercise_evidence",
+              "answer_model",
+              "planning_artifact",
+              "implementation_output",
+              "owned_lesson_surface"
+            ]
+          },
+          "authority_level": { "type": "string" },
+          "authority_weight": { "type": "number" },
+          "primary_evidence": { "type": "boolean" },
+          "evidence_use": { "type": "string" },
+          "projection_policy": { "type": "string" }
+        }
+      }
+    }
+  }
+}
