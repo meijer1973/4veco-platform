@@ -26,7 +26,7 @@ for (const field of ['gate_id', 'sprint_id', 'status', 'closed_on', 'human_inter
 
 if (!VALID_STATUSES.has(gate.status)) fail(`invalid status: ${gate.status}`);
 if (gate.closure_confirmed_by_human !== true) fail('closure_confirmed_by_human must be true');
-if (gate.protected_reference_data_changed !== false) fail('protected_reference_data_changed must be false for R2.3');
+if (gate.protected_reference_data_changed !== false) fail('protected_reference_data_changed must be false for gate closure');
 
 for (const relPath of [gate.human_interview, gate.review_packet, gate.audit].filter(Boolean)) {
   if (!fs.existsSync(relPath)) fail(`referenced file does not exist: ${relPath}`);

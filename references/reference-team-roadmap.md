@@ -65,6 +65,8 @@ For human-review gates, the procedure must include the full interview or review 
 
 Human-review interviews must be interactive: ask one question at a time, offer clear multiple-choice options where useful plus an open-answer option, record the answer, and then choose the next question or next interview mode. Do not dump a full interview list at the human reviewer. Include enough context in each question that the reviewer does not need to look up unit IDs or shorthand labels.
 
+After a gate is closed, `gate-closure.json` is the canonical status file. Review packets can remain historically accurate with "prepared/not closed" wording from their creation moment; agents must check the closure file before drawing current gate-status conclusions.
+
 ## Subagent And Verification Structure
 
 Subagents are part of the sprint control system, not a substitute for it.
@@ -191,7 +193,7 @@ Required work:
   - `skill_tags` or `skill_category_tags` for broader skill taxonomy labels.
 - Preserve the HCS role split:
   - `instructional_role`: `worked_example`, `startoefening`, `independent_practice`, `interleaving`, `target`, `verdieping`, `consolidatie`, `instapquiz`, `diagnostic`, `nieuws`.
-  - `assessment_role`: `exam_mirror`, `bridge`, `prerequisite`, plus a decision on nullability or `not_applicable`.
+  - `assessment_role`: optional; omit the field when absent. Allowed v1 values are `exam_mirror`, `bridge`, and `prerequisite`.
 - Preserve the HCS scaffolding object:
   - `verbal_level`: integer 0-5.
   - `visual_stage`: integer 1-4.
@@ -206,6 +208,8 @@ Required output: sprint plan, baseline, schema-audit report, vocabulary decision
 Stop condition: do not mutate `references/machine/`, `references/external/`, or bulk exercise data during S1. Stop at CP-1 if the schema audit finds a naming or compatibility issue that cannot be represented safely.
 
 Checkpoint: `GATE-CP1-schema-audit`.
+
+Completion: completed on 2026-04-28 with `pass_with_conditions`. CP-1 approved the schema naming and storage strategy, not bulk metadata implementation. `required_skills` remains a legacy/source field until explicit migration; `assessment_role` is omitted when absent; external overlays must carry source stable ID and curriculum version; and bulk metadata backfill remains blocked until Sprint 4 and CP-3 dry-run.
 
 ### R2.4 Evidence And Unit-Design Cleanup
 
@@ -576,15 +580,17 @@ Purpose: add the HCS exercise-quality fields in a protected-source-safe overlay 
 Required work:
 
 - Store first-pass exercise metadata under `references/data/exercises/` unless a source-specific CLI/refresh workflow already exists.
+- Treat CP-1 closure files as authoritative over the earlier review packet if wording differs.
 - Preserve the role split:
   - `instructional_role`: `worked_example`, `startoefening`, `independent_practice`, `interleaving`, `target`, `verdieping`, `consolidatie`, `instapquiz`, `diagnostic`, `nieuws`.
   - `assessment_role`: optional; omit the field when absent. Allowed v1 values are `exam_mirror`, `bridge`, and `prerequisite`.
+- Document that `instructional_role: diagnostic` means an authored exercise role only; it does not authorize student diagnostics, adaptive routing, mastery logic, or any diagnostic product layer.
 - Preserve the scaffolding object:
   - `verbal_level`: integer 0-5.
   - `visual_stage`: integer 1-4.
   - `fading_position`: integer.
   - `dual_coding_present`: boolean.
-- Add or stage metadata for authority tier, Bloom level, instruction word, answer format, graph specification, precision lint status, evidence status, source version, and content status.
+- Add or stage metadata for authority tier, Bloom level, instruction word, answer format, graph specification, precision lint status, evidence status, source version, source stable ID, curriculum version, and content status.
 - Use `build-scripts/lib/verify_svg_geometry.py` or create a wrapper if future automation expects `build-scripts/verify_svg_geometry.py`.
 - Dry-run one Tier A item and one Tier C target exercise before bulk extension.
 
@@ -1147,6 +1153,7 @@ CP-1 decisions now in force:
 - `exercise_operations` is canonical for fine-grained exercise actions and may be empty until Sprint 12.
 - `skill_tags` is canonical for broader taxonomy labels.
 - `instructional_role` and `assessment_role` are separate fields.
+- `instructional_role: diagnostic` is an exercise role, not permission for student diagnostics or adaptive products.
 - `assessment_role` is optional and omitted when absent.
 - The scaffolding object is `verbal_level`, `visual_stage`, `fading_position`, `dual_coding_present`.
 - External exam-question metadata must use `references/data/exercises/` overlays with source stable ID and curriculum version.
