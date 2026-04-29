@@ -1,0 +1,36 @@
+{
+  "sprint_id": "RX.2",
+  "name": "First-Lane Mutation Review Packet",
+  "status": "in_progress",
+  "planned_on": "2026-04-29",
+  "plan": "docs/sprints/RX.2-plan.md",
+  "protected_reference_data_changes_allowed": false,
+  "human_review_required": true,
+  "gate_id": "GATE-RX2-first-lane-mutation-review",
+  "review_packet": "reports/review-gates/GATE-RX2-first-lane-mutation-review/review-packet.md",
+  "valid_gate_statuses": [
+    "pass",
+    "pass_with_conditions",
+    "hold",
+    "fail"
+  ],
+  "mutation_authorized": false,
+  "cli_execution_authorized": false,
+  "first_lane_scope": [
+    "A61",
+    "A66",
+    "A67",
+    "A70",
+    "A72",
+    "A74"
+  ],
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js docs/sprints/RX.2-plan.md",
+    "node build-scripts/sprints/check-sprint-bundle.js RX.2",
+    "node build-scripts/references/build-rx2-first-lane-review.js",
+    "node build-scripts/references/check-rx2-first-lane-review.js",
+    "node build-scripts/references/check-roadmap-version-index.js",
+    "node build-scripts/references/check-source-manifest.js",
+    "node build-scripts/references/check-document-inventory.js"
+  ]
+}

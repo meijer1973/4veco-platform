@@ -1,0 +1,423 @@
+{
+  "schema_version": 1,
+  "sprint_id": "RX.2",
+  "artifact_id": "RX.2-first-lane-candidate-specs",
+  "status": "prepared_for_mutation_review",
+  "generated_by": "build-scripts/references/build-rx2-first-lane-review.js",
+  "generated_on": "2026-04-29T21:22:15.709Z",
+  "source_files": [
+    "references/data/sprints/RX.1-representation-operation-inventory.json",
+    "reports/review-gates/GATE-RX1-representation-unit-scope/gate-closure.json",
+    "references/machine/micro-teaching-units.json",
+    "engines/skilltree/generators.js"
+  ],
+  "policy": {
+    "mutation_authorized": false,
+    "cli_execution_authorized": false,
+    "protected_reference_data_changed": false,
+    "candidate_ids_are_provisional_until_execution": true,
+    "live_a_domain_max_id_at_review_generation": "A60",
+    "first_lane_scope": [
+      "A61",
+      "A66",
+      "A67",
+      "A70",
+      "A72",
+      "A74"
+    ],
+    "deferred_candidates": [
+      "A62",
+      "A63",
+      "A64",
+      "A68",
+      "A69",
+      "A71",
+      "A73",
+      "A82",
+      "A83",
+      "A84"
+    ],
+    "held_duplicate_records_remain_blocked": true
+  },
+  "candidates": [
+    {
+      "candidate_id": "A61",
+      "sequence_index": 1,
+      "live_numbering_status": "available_at_review_generation",
+      "rx1_inventory_operation_id": "REP_TABLE_VALUE_SELECTION",
+      "rx1_inventory_name": "Tabelwaarden selecteren voor berekening",
+      "rx1_inventory_needs": [],
+      "rx2_draft_spec": {
+        "id": "A61",
+        "name": "Tabelwaarden selecteren voor berekening",
+        "kern": "Selecteer in een tabel de waarden die nodig zijn voor een berekening: juiste rij, kolom, periode en oude/nieuwe waarde.",
+        "needs": [],
+        "mastery_target": "apply",
+        "prior_learning": "review_and_extend",
+        "aspects": [
+          "rekenen",
+          "verbaal"
+        ],
+        "terms": [],
+        "assumed_prior_knowledge": [
+          "basisvaardigheid tabel lezen uit de onderbouw"
+        ],
+        "zero_needs_status": "underbouw_assumed",
+        "zero_needs_review": {
+          "reviewed_on": "2026-04-29",
+          "reviewer": "RX.2 mutation review pending",
+          "rationale": "Candidate root extends lower-secondary table reading into economic source selection; final mutation requires RX.2 approval.",
+          "recommended_needs": [],
+          "severity": "low"
+        },
+        "procedure": [
+          "Lees eerst de vraag: welke grootheid, periode, rij of kolom heb je nodig?",
+          "Zoek de juiste bron, tabelkop en eenheid.",
+          "Selecteer de oude waarde, nieuwe waarde of gevraagde waarde voordat je rekent.",
+          "Controleer of je totaal, gemiddelde, percentage of indexwaarde gebruikt.",
+          "Noteer de gekozen waarden met label zodat de berekening controleerbaar is."
+        ],
+        "pitfalls": [
+          "Een zichtbaar getal kiezen zonder te controleren of het bij de juiste rij of kolom hoort.",
+          "Totaalwaarden, gemiddelde waarden en procentwaarden door elkaar halen."
+        ],
+        "generator": "GEN_A61"
+      },
+      "evidence_refs": [
+        {
+          "source_type": "target_exercise",
+          "path": "references/authored/course-target-exercises.json",
+          "entity_id": "target_exercise:1.1.3",
+          "role": "target-exercise table values",
+          "note": "Target exercise asks students to read an ice-cream price/quantity table and interpret a percentage claim."
+        },
+        {
+          "source_type": "target_exercise",
+          "path": "references/authored/course-target-exercises.json",
+          "entity_id": "target_exercise:1.3.2",
+          "role": "target-exercise table values",
+          "note": "Cost-structure target requires selecting TK, TVK, TCK, GTK, GVK, and GCK values from source data."
+        }
+      ],
+      "evidence_status": "target_exercise_evidence",
+      "risk": "low",
+      "generator_status": "missing_generator_implementation",
+      "generator_followup_required": true,
+      "mutation_authorized": false,
+      "cli_execution_authorized": false
+    },
+    {
+      "candidate_id": "A66",
+      "sequence_index": 2,
+      "live_numbering_status": "available_at_review_generation",
+      "rx1_inventory_operation_id": "REP_BASE_COMPARISON_VALUE_IDENTIFICATION",
+      "rx1_inventory_name": "Basiswaarde en vergelijkingswaarde in bron bepalen",
+      "rx1_inventory_needs": [
+        "A61"
+      ],
+      "rx2_draft_spec": {
+        "id": "A66",
+        "name": "Basiswaarde en vergelijkingswaarde in bron bepalen",
+        "kern": "Bepaal in een bron welke waarde de basiswaarde is en welke waarde de vergelijkingswaarde is voordat je een procentuele verandering berekent.",
+        "needs": [
+          "A61"
+        ],
+        "mastery_target": "apply",
+        "prior_learning": "new_this_year",
+        "aspects": [
+          "rekenen",
+          "verbaal"
+        ],
+        "terms": [],
+        "procedure": [
+          "Bepaal welke situatie eerder, oorspronkelijk of als basis geldt.",
+          "Bepaal welke situatie nieuw, later of vergelijkend is.",
+          "Label de basiswaarde als oud of basis en de vergelijkingswaarde als nieuw.",
+          "Controleer of de vraag om stijging, daling of vergelijking vraagt.",
+          "Gebruik de basiswaarde als noemer bij een procentuele verandering."
+        ],
+        "pitfalls": [
+          "De nieuwe waarde als basiswaarde gebruiken.",
+          "De volgorde in de tekst volgen zonder te kijken welke situatie de basis is."
+        ],
+        "generator": "GEN_A66"
+      },
+      "evidence_refs": [
+        {
+          "source_type": "target_exercise",
+          "path": "references/authored/course-target-exercises.json",
+          "entity_id": "target_exercise:1.1.2",
+          "role": "percentage-change target exercise",
+          "note": "Percentage and index exercise includes old/new values and index-point confusion."
+        },
+        {
+          "source_type": "target_exercise",
+          "path": "references/authored/course-target-exercises.json",
+          "entity_id": "target_exercise:1.1.3",
+          "role": "table claim evaluation",
+          "note": "Target asks which table interval could produce a 50% drop."
+        }
+      ],
+      "evidence_status": "target_exercise_evidence",
+      "risk": "low",
+      "generator_status": "missing_generator_implementation",
+      "generator_followup_required": true,
+      "mutation_authorized": false,
+      "cli_execution_authorized": false
+    },
+    {
+      "candidate_id": "A67",
+      "sequence_index": 3,
+      "live_numbering_status": "available_at_review_generation",
+      "rx1_inventory_operation_id": "REP_PCT_CHANGE_TABLE",
+      "rx1_inventory_name": "Procentuele verandering berekenen vanuit tabel",
+      "rx1_inventory_needs": [
+        "A38",
+        "A61",
+        "A66"
+      ],
+      "rx2_draft_spec": {
+        "id": "A67",
+        "name": "Procentuele verandering berekenen vanuit tabel",
+        "kern": "Bereken een procentuele verandering nadat je de oude en nieuwe waarde uit een tabel hebt geselecteerd.",
+        "needs": [
+          "A38",
+          "A61",
+          "A66"
+        ],
+        "mastery_target": "apply",
+        "prior_learning": "new_this_year",
+        "aspects": [
+          "rekenen",
+          "verbaal"
+        ],
+        "terms": [],
+        "procedure": [
+          "Selecteer in de tabel de oude waarde en de nieuwe waarde.",
+          "Controleer de eenheid en of beide waarden dezelfde grootheid meten.",
+          "Bereken de verandering: nieuwe waarde min oude waarde.",
+          "Deel de verandering door de oude waarde.",
+          "Vermenigvuldig met 100 procent en controleer teken en context."
+        ],
+        "pitfalls": [
+          "De verkeerde tabelrij vergelijken.",
+          "Het absolute verschil als procentuele verandering noteren."
+        ],
+        "generator": "GEN_A67"
+      },
+      "evidence_refs": [
+        {
+          "source_type": "target_exercise",
+          "path": "references/authored/course-target-exercises.json",
+          "entity_id": "target_exercise:1.1.3",
+          "role": "table percentage claim",
+          "note": "Target asks students to inspect table values and evaluate a 50% sales drop claim."
+        },
+        {
+          "source_type": "target_exercise",
+          "path": "references/authored/course-target-exercises.json",
+          "entity_id": "target_exercise:4.4.3",
+          "role": "real/nominal table application",
+          "note": "Integration target uses mixed source material and table-based real/nominal calculations."
+        }
+      ],
+      "evidence_status": "target_exercise_evidence",
+      "risk": "low",
+      "generator_status": "missing_generator_implementation",
+      "generator_followup_required": true,
+      "mutation_authorized": false,
+      "cli_execution_authorized": false
+    },
+    {
+      "candidate_id": "A70",
+      "sequence_index": 4,
+      "live_numbering_status": "available_at_review_generation",
+      "rx1_inventory_operation_id": "REP_PERCENTAGE_POINT_CHANGE",
+      "rx1_inventory_name": "Percentagepuntverandering in aandeel herkennen",
+      "rx1_inventory_needs": [
+        "A64"
+      ],
+      "rx2_draft_spec": {
+        "id": "A70",
+        "name": "Percentagepuntverandering in aandeel herkennen",
+        "kern": "Herken een verandering in procentpunten tussen twee percentagewaarden en onderscheid die van een procentuele verandering.",
+        "needs": [
+          "A38"
+        ],
+        "mastery_target": "apply",
+        "prior_learning": "new_this_year",
+        "aspects": [
+          "rekenen",
+          "verbaal"
+        ],
+        "terms": [],
+        "procedure": [
+          "Lees de oude en nieuwe percentagewaarde.",
+          "Bereken het verschil in procentpunten: nieuw percentage min oud percentage.",
+          "Benoem de uitkomst als procentpunt of procentpunten.",
+          "Controleer of de vraag toch een procentuele verandering vraagt.",
+          "Gebruik A38 alleen wanneer de relatieve verandering van het percentage zelf gevraagd wordt."
+        ],
+        "pitfalls": [
+          "Een stijging van 20% naar 25% als 5% benoemen in plaats van 5 procentpunt.",
+          "Procentpunten en procentuele veranderingen door elkaar gebruiken."
+        ],
+        "generator": "GEN_A70",
+        "review_flags": [
+          {
+            "flag_id": "A70-needs-adjustment",
+            "severity": "medium",
+            "issue": "RX.1 inventory listed A70 -> A64, but A64 is chart-only and deferred by the RX.1 gate.",
+            "proposed_resolution": "Use A38 as the first-lane prerequisite for a generic percentage-point unit; keep pie-chart share reading in the deferred A64/A71 lane."
+          }
+        ]
+      },
+      "evidence_refs": [
+        {
+          "source_type": "target_exercise",
+          "path": "references/authored/course-target-exercises.json",
+          "entity_id": "target_exercise:1.1.2",
+          "role": "index-point trap",
+          "note": "Target explicitly asks why index from 108 to 112 is not automatically 4% inflation."
+        },
+        {
+          "source_type": "target_exercise",
+          "path": "references/authored/course-target-exercises.json",
+          "entity_id": "target_exercise:4.4.1",
+          "role": "critical exam skill",
+          "note": "Blueprint repeats the index-point versus percentage distinction in Book 4."
+        }
+      ],
+      "evidence_status": "target_exercise_evidence",
+      "risk": "low",
+      "generator_status": "missing_generator_implementation",
+      "generator_followup_required": true,
+      "mutation_authorized": false,
+      "cli_execution_authorized": false
+    },
+    {
+      "candidate_id": "A72",
+      "sequence_index": 5,
+      "live_numbering_status": "available_at_review_generation",
+      "rx1_inventory_operation_id": "REP_INDEX_FROM_TABLE",
+      "rx1_inventory_name": "Indexcijfer berekenen vanuit tabel",
+      "rx1_inventory_needs": [
+        "A39",
+        "A61"
+      ],
+      "rx2_draft_spec": {
+        "id": "A72",
+        "name": "Indexcijfer berekenen vanuit tabel",
+        "kern": "Bereken een indexcijfer vanuit tabelwaarden door het doeljaar te delen door het basisjaar en te vermenigvuldigen met 100.",
+        "needs": [
+          "A39",
+          "A61"
+        ],
+        "mastery_target": "apply",
+        "prior_learning": "new_this_year",
+        "aspects": [
+          "rekenen",
+          "verbaal"
+        ],
+        "terms": [],
+        "procedure": [
+          "Selecteer in de tabel de waarde van het basisjaar.",
+          "Selecteer de waarde van het doeljaar.",
+          "Controleer dat beide waarden dezelfde mand, prijs of grootheid meten.",
+          "Bereken index = waarde doeljaar / waarde basisjaar x 100.",
+          "Controleer of het basisjaar op 100 staat."
+        ],
+        "pitfalls": [
+          "Het doeljaar als basisjaar nemen.",
+          "Indexpunten verwarren met procentuele verandering."
+        ],
+        "generator": "GEN_A72"
+      },
+      "evidence_refs": [
+        {
+          "source_type": "target_exercise",
+          "path": "references/authored/course-target-exercises.json",
+          "entity_id": "target_exercise:1.1.2",
+          "role": "price index target",
+          "note": "Target asks students to calculate price index from 2023 and 2025 basket values."
+        },
+        {
+          "source_type": "target_exercise",
+          "path": "references/authored/course-target-exercises.json",
+          "entity_id": "target_exercise:4.4.1",
+          "role": "CPI target",
+          "note": "Book 4 target uses CPI/index values to calculate real values."
+        }
+      ],
+      "evidence_status": "target_exercise_evidence",
+      "risk": "low",
+      "generator_status": "missing_generator_implementation",
+      "generator_followup_required": true,
+      "mutation_authorized": false,
+      "cli_execution_authorized": false
+    },
+    {
+      "candidate_id": "A74",
+      "sequence_index": 6,
+      "live_numbering_status": "available_at_review_generation",
+      "rx1_inventory_operation_id": "REP_PCT_CHANGE_FROM_INDEX",
+      "rx1_inventory_name": "Procentuele verandering berekenen vanuit indexcijfers",
+      "rx1_inventory_needs": [
+        "A38",
+        "A39",
+        "A66"
+      ],
+      "rx2_draft_spec": {
+        "id": "A74",
+        "name": "Procentuele verandering berekenen vanuit indexcijfers",
+        "kern": "Bereken een procentuele verandering tussen twee indexcijfers door de verandering te delen door het oude indexcijfer.",
+        "needs": [
+          "A38",
+          "A39",
+          "A66"
+        ],
+        "mastery_target": "apply",
+        "prior_learning": "new_this_year",
+        "aspects": [
+          "rekenen",
+          "verbaal"
+        ],
+        "terms": [],
+        "procedure": [
+          "Bepaal welk indexcijfer de oude waarde is.",
+          "Bepaal welk indexcijfer de nieuwe waarde is.",
+          "Bereken het verschil tussen de indexcijfers.",
+          "Deel het verschil door het oude indexcijfer.",
+          "Vermenigvuldig met 100 procent en benoem het als procentuele verandering."
+        ],
+        "pitfalls": [
+          "Alleen indexpunten aftrekken en dat percentage noemen.",
+          "Delen door 100 in plaats van door het oude indexcijfer."
+        ],
+        "generator": "GEN_A74"
+      },
+      "evidence_refs": [
+        {
+          "source_type": "target_exercise",
+          "path": "references/authored/course-target-exercises.json",
+          "entity_id": "target_exercise:1.1.2",
+          "role": "index to percentage change",
+          "note": "Target asks for price increase from an index rising to 112 and corrects the 108-to-112 misconception."
+        },
+        {
+          "source_type": "target_exercise",
+          "path": "references/authored/course-target-exercises.json",
+          "entity_id": "target_exercise:4.4.1",
+          "role": "inflation and real wage",
+          "note": "Book 4 target applies CPI/index interpretation to real wage and inflation."
+        }
+      ],
+      "evidence_status": "target_exercise_evidence",
+      "risk": "low",
+      "generator_status": "missing_generator_implementation",
+      "generator_followup_required": true,
+      "mutation_authorized": false,
+      "cli_execution_authorized": false
+    }
+  ]
+}

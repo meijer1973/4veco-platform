@@ -1,0 +1,145 @@
+{
+  "gate_id": "GATE-RX2-first-lane-mutation-review",
+  "sprint_id": "RX.2",
+  "status": "prepared_for_human_review",
+  "generated_by": "build-scripts/references/build-rx2-first-lane-review.js",
+  "generated_on": "2026-04-29T21:22:15.709Z",
+  "purpose": "Review the bounded RX.2 first-lane candidate specs and decide whether any CLI-only unit mutation may proceed.",
+  "mutation_authorized": false,
+  "cli_execution_authorized": false,
+  "artifacts": [
+    "references/data/sprints/RX.2-first-lane-candidate-specs.json",
+    "reports/review-gates/GATE-RX2-first-lane-mutation-review/candidate-specs.json",
+    "reports/review-gates/GATE-RX2-first-lane-mutation-review/candidate-specs.md",
+    "reports/review-gates/GATE-RX2-first-lane-mutation-review/cli-mutation-plan.json",
+    "reports/review-gates/GATE-RX2-first-lane-mutation-review/cli-mutation-plan.md"
+  ],
+  "first_lane": [
+    "A61",
+    "A66",
+    "A67",
+    "A70",
+    "A72",
+    "A74"
+  ],
+  "blocked_candidates": [
+    "A62",
+    "A63",
+    "A64",
+    "A68",
+    "A69",
+    "A71",
+    "A73",
+    "A82",
+    "A83",
+    "A84"
+  ],
+  "review_questions": [
+    {
+      "id": "RX2-Q1",
+      "question": "Is the RX.2 first-lane scope correctly limited to A61, A66, A67, A70, A72, and A74?",
+      "options": [
+        "A. Yes",
+        "B. Yes, but remove one candidate",
+        "C. No, add more candidates",
+        "D. Not enough evidence"
+      ]
+    },
+    {
+      "id": "RX2-Q2",
+      "question": "Should the provisional IDs be preserved with gaps, or should the first lane be renumbered contiguously before mutation?",
+      "options": [
+        "A. Preserve A61/A66/A67/A70/A72/A74",
+        "B. Renumber contiguously before mutation",
+        "C. Decide at execution time only",
+        "D. Not enough evidence"
+      ]
+    },
+    {
+      "id": "RX2-Q3",
+      "question": "Is A61 acceptable as an underbouw-assumed root for table-value selection?",
+      "options": [
+        "A. Yes",
+        "B. Yes, but strengthen zero-needs rationale",
+        "C. No, add prerequisite",
+        "D. Not enough evidence"
+      ]
+    },
+    {
+      "id": "RX2-Q4",
+      "question": "Is the proposed A70 dependency adjustment acceptable, replacing the deferred A64 prerequisite with A38 for the first-lane generic percentage-point unit?",
+      "options": [
+        "A. Yes",
+        "B. Use D31 instead or also",
+        "C. Hold A70",
+        "D. Not enough evidence"
+      ]
+    },
+    {
+      "id": "RX2-Q5",
+      "question": "Are the draft kern, procedures, pitfalls, needs, aspects, and evidence references strong enough for mutation review?",
+      "options": [
+        "A. Yes",
+        "B. Mostly, with wording fixes",
+        "C. No, revise before approval",
+        "D. Not enough evidence"
+      ]
+    },
+    {
+      "id": "RX2-Q6",
+      "question": "Is it acceptable that all six generators are currently marked as missing implementation if generator follow-up is explicitly tracked?",
+      "options": [
+        "A. Yes",
+        "B. Yes, but mark non-interactive until implemented",
+        "C. No, implement generators before unit mutation",
+        "D. Not enough evidence"
+      ]
+    },
+    {
+      "id": "RX2-Q7",
+      "question": "Does the CLI mutation plan preserve protected-source boundaries and the required unit-add.js execution order?",
+      "options": [
+        "A. Yes",
+        "B. Yes, but add checks",
+        "C. No, repair plan before approval",
+        "D. Not enough evidence"
+      ]
+    },
+    {
+      "id": "RX2-Q8",
+      "question": "Should deferred chart-only, line-graph, elasticity, producer, and held duplicate/overlap candidates remain blocked during this first lane?",
+      "options": [
+        "A. Yes",
+        "B. Mostly, name exceptions",
+        "C. No, expand scope now",
+        "D. Not enough evidence"
+      ]
+    },
+    {
+      "id": "RX2-Q9",
+      "question": "If the gate passes, should it authorize immediate CLI-only unit mutation for the approved first-lane candidates?",
+      "options": [
+        "A. Yes, all six",
+        "B. Yes, approved subset only",
+        "C. No, planning only",
+        "D. Not enough evidence"
+      ]
+    },
+    {
+      "id": "RX2-Q10",
+      "question": "What gate status should GATE-RX2-first-lane-mutation-review receive?",
+      "options": [
+        "A. pass",
+        "B. pass_with_conditions",
+        "C. hold",
+        "D. fail"
+      ]
+    }
+  ],
+  "valid_gate_statuses": [
+    "pass",
+    "pass_with_conditions",
+    "hold",
+    "fail"
+  ]
+}

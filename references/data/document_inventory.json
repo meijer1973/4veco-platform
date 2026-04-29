@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1",
-  "generated_at": "2026-04-29T20:55:10.220Z",
+  "generated_at": "2026-04-29T21:22:33.741Z",
   "sprint_id": "R0.2",
   "scope": [
     "references",
@@ -10,12 +10,12 @@
   ],
   "note": "Inventory covers reference sources, generated reports, and reference/report tooling.",
   "summary": {
-    "file_count": 488,
+    "file_count": 503,
     "by_layer": {
-      "reference_tooling": 63,
+      "reference_tooling": 65,
       "report_tooling": 13,
       "authored_judgement": 7,
-      "governance_data": 89,
+      "governance_data": 92,
       "external_authority": 32,
       "machine_registry": 5,
       "owned_curriculum_design": 3,
@@ -23,17 +23,17 @@
       "planning": 1,
       "schema_contract": 21,
       "governance_policy": 1,
-      "generated_report": 248
+      "generated_report": 258
     },
     "by_edit_policy": {
-      "code_review": 97,
+      "code_review": 99,
       "human_reviewed_edit": 15,
       "generated_by_inventory_script": 10,
-      "sprint_process": 78,
+      "sprint_process": 81,
       "external_refresh_only": 32,
       "cli_only": 5,
       "versioned_human_reviewed_edit": 3,
-      "generated_by_script": 248
+      "generated_by_script": 258
     }
   },
   "files": [
@@ -298,6 +298,26 @@
       "self_generated_inventory_file": false
     },
     {
+      "path": "build-scripts/references/build-rx2-first-lane-review.js",
+      "file_name": "build-rx2-first-lane-review.js",
+      "extension": "js",
+      "size_bytes": 18646,
+      "sha256": "8453be6f4694afd8f752b6710e27cd148b8c8f7d48d01c1cbdcc08c8554ede1e",
+      "layer": "reference_tooling",
+      "authority_level": "tooling",
+      "source_type": "reference_cli_script",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "platform_team",
+      "refresh_policy": "code_change",
+      "downstream_dependencies": [
+        "reference-cli",
+        "reports",
+        "validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
       "path": "build-scripts/references/build-unit-index.js",
       "file_name": "build-unit-index.js",
       "extension": "js",
@@ -543,6 +563,26 @@
       "extension": "js",
       "size_bytes": 3182,
       "sha256": "11a5d1d1ebd03f67594ce5cba03098aefc0654b22650a0dbeb97629bc3683ae2",
+      "layer": "reference_tooling",
+      "authority_level": "tooling",
+      "source_type": "reference_cli_script",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "platform_team",
+      "refresh_policy": "code_change",
+      "downstream_dependencies": [
+        "reference-cli",
+        "reports",
+        "validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "build-scripts/references/check-rx2-first-lane-review.js",
+      "file_name": "check-rx2-first-lane-review.js",
+      "extension": "js",
+      "size_bytes": 7107,
+      "sha256": "c64907d297d55e61ead6142c7b56cce109ebfd148c2feb9db9d9acc56c78171b",
       "layer": "reference_tooling",
       "authority_level": "tooling",
       "source_type": "reference_cli_script",
@@ -3345,6 +3385,66 @@
       "self_generated_inventory_file": false
     },
     {
+      "path": "references/data/sprints/RX.2-first-lane-candidate-specs.json",
+      "file_name": "RX.2-first-lane-candidate-specs.json",
+      "extension": "json",
+      "size_bytes": 16368,
+      "sha256": "26cba05d708e6c869395371226a3cec9272cee21ca580f5a3add8cfa1039abc3",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/data/sprints/RX.2.plan.json",
+      "file_name": "RX.2.plan.json",
+      "extension": "json",
+      "size_bytes": 1163,
+      "sha256": "86b08737acf4c08e6897db2d056c5eb4e721a4b1e90314d697890c43d86c2f6e",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/data/sprints/RX.2.result.json",
+      "file_name": "RX.2.result.json",
+      "extension": "json",
+      "size_bytes": 3017,
+      "sha256": "3851c6276e80a8ac4b874bfb28ab47701bd3541ad5e0f91fe948e3b5c0ebe592",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
       "path": "references/data/sprints/S1.plan.json",
       "file_name": "S1.plan.json",
       "extension": "json",
@@ -4371,8 +4471,8 @@
       "path": "references/reference-team-roadmap.md",
       "file_name": "reference-team-roadmap.md",
       "extension": "md",
-      "size_bytes": 87468,
-      "sha256": "d7fa60fd7cd02f07453c80faf91eba60a9663192390f2450755dac1323a1348d",
+      "size_bytes": 87934,
+      "sha256": "65f70c67583390ca8f4f7c1c872129032125e99640eaf68216fd8b06defad84c",
       "layer": "planning",
       "authority_level": "authored_judgement",
       "source_type": "roadmap",
@@ -7708,6 +7808,146 @@
       "self_generated_inventory_file": false
     },
     {
+      "path": "reports/review-gates/GATE-RX2-first-lane-mutation-review/bundle-urls.md",
+      "file_name": "bundle-urls.md",
+      "extension": "md",
+      "size_bytes": 1262,
+      "sha256": "a212a92674adb593d3ed973671feb0856cd0d4a5fbff1c820dd47988256ea98b",
+      "layer": "generated_report",
+      "authority_level": "generated_report",
+      "source_type": "report_md",
+      "generated_status": "generated_projection",
+      "edit_policy": "generated_by_script",
+      "owner": "platform_team",
+      "refresh_policy": "regenerate",
+      "downstream_dependencies": [
+        "dashboards",
+        "planning",
+        "qc-review"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "reports/review-gates/GATE-RX2-first-lane-mutation-review/candidate-specs.json",
+      "file_name": "candidate-specs.json",
+      "extension": "json",
+      "size_bytes": 16368,
+      "sha256": "26cba05d708e6c869395371226a3cec9272cee21ca580f5a3add8cfa1039abc3",
+      "layer": "generated_report",
+      "authority_level": "generated_report",
+      "source_type": "report_json",
+      "generated_status": "generated_projection",
+      "edit_policy": "generated_by_script",
+      "owner": "platform_team",
+      "refresh_policy": "regenerate",
+      "downstream_dependencies": [
+        "dashboards",
+        "planning",
+        "qc-review"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "reports/review-gates/GATE-RX2-first-lane-mutation-review/candidate-specs.md",
+      "file_name": "candidate-specs.md",
+      "extension": "md",
+      "size_bytes": 1136,
+      "sha256": "20abdc4aef0afb6403c8776b8963b34549c0595a9b7e2dd9a756e5273c74f970",
+      "layer": "generated_report",
+      "authority_level": "generated_report",
+      "source_type": "report_md",
+      "generated_status": "generated_projection",
+      "edit_policy": "generated_by_script",
+      "owner": "platform_team",
+      "refresh_policy": "regenerate",
+      "downstream_dependencies": [
+        "dashboards",
+        "planning",
+        "qc-review"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "reports/review-gates/GATE-RX2-first-lane-mutation-review/cli-mutation-plan.json",
+      "file_name": "cli-mutation-plan.json",
+      "extension": "json",
+      "size_bytes": 7849,
+      "sha256": "09f9b4404957796b447413e894020f083caa8d3d5c5a8bb3cce2b2eefbef7ab5",
+      "layer": "generated_report",
+      "authority_level": "generated_report",
+      "source_type": "report_json",
+      "generated_status": "generated_projection",
+      "edit_policy": "generated_by_script",
+      "owner": "platform_team",
+      "refresh_policy": "regenerate",
+      "downstream_dependencies": [
+        "dashboards",
+        "planning",
+        "qc-review"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "reports/review-gates/GATE-RX2-first-lane-mutation-review/cli-mutation-plan.md",
+      "file_name": "cli-mutation-plan.md",
+      "extension": "md",
+      "size_bytes": 6668,
+      "sha256": "ec641383d73173b24139e1f83fa0517e951cebd2f99403c4504dc1591f37c827",
+      "layer": "generated_report",
+      "authority_level": "generated_report",
+      "source_type": "report_md",
+      "generated_status": "generated_projection",
+      "edit_policy": "generated_by_script",
+      "owner": "platform_team",
+      "refresh_policy": "regenerate",
+      "downstream_dependencies": [
+        "dashboards",
+        "planning",
+        "qc-review"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "reports/review-gates/GATE-RX2-first-lane-mutation-review/review-packet.json",
+      "file_name": "review-packet.json",
+      "extension": "json",
+      "size_bytes": 4507,
+      "sha256": "4a1f5ab9faabc88e4722e1dfca88d8d4a46dda53061ab8d1938ba9256c1ca3ec",
+      "layer": "generated_report",
+      "authority_level": "generated_report",
+      "source_type": "report_json",
+      "generated_status": "generated_projection",
+      "edit_policy": "generated_by_script",
+      "owner": "platform_team",
+      "refresh_policy": "regenerate",
+      "downstream_dependencies": [
+        "dashboards",
+        "planning",
+        "qc-review"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "reports/review-gates/GATE-RX2-first-lane-mutation-review/review-packet.md",
+      "file_name": "review-packet.md",
+      "extension": "md",
+      "size_bytes": 3088,
+      "sha256": "d6db444044500f61d0fe292c3d383d198dd9c671781aad55418e98cf2b904760",
+      "layer": "generated_report",
+      "authority_level": "generated_report",
+      "source_type": "report_md",
+      "generated_status": "generated_projection",
+      "edit_policy": "generated_by_script",
+      "owner": "platform_team",
+      "refresh_policy": "regenerate",
+      "downstream_dependencies": [
+        "dashboards",
+        "planning",
+        "qc-review"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
       "path": "reports/sprints/example-result.md",
       "file_name": "example-result.md",
       "extension": "md",
@@ -9528,6 +9768,66 @@
       "self_generated_inventory_file": false
     },
     {
+      "path": "reports/sprints/RX.2-baseline.md",
+      "file_name": "RX.2-baseline.md",
+      "extension": "md",
+      "size_bytes": 1484,
+      "sha256": "b3b1e09c9603a7f773bc0e06ac59309db2f508277295ea23481282eb9241f7bc",
+      "layer": "generated_report",
+      "authority_level": "generated_report",
+      "source_type": "report_md",
+      "generated_status": "generated_projection",
+      "edit_policy": "generated_by_script",
+      "owner": "platform_team",
+      "refresh_policy": "regenerate",
+      "downstream_dependencies": [
+        "dashboards",
+        "planning",
+        "qc-review"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "reports/sprints/RX.2-diff-summary.md",
+      "file_name": "RX.2-diff-summary.md",
+      "extension": "md",
+      "size_bytes": 1412,
+      "sha256": "6c67ee511f31d4f1ed561d3ec491fda7fd994b7d8260db035c4fd64d58bf60e8",
+      "layer": "generated_report",
+      "authority_level": "generated_report",
+      "source_type": "report_md",
+      "generated_status": "generated_projection",
+      "edit_policy": "generated_by_script",
+      "owner": "platform_team",
+      "refresh_policy": "regenerate",
+      "downstream_dependencies": [
+        "dashboards",
+        "planning",
+        "qc-review"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "reports/sprints/RX.2-result.md",
+      "file_name": "RX.2-result.md",
+      "extension": "md",
+      "size_bytes": 3776,
+      "sha256": "8c35df518cd145528537a35ff559e0ce08d6d932684f50ba34b4625b7c2ec114",
+      "layer": "generated_report",
+      "authority_level": "generated_report",
+      "source_type": "report_md",
+      "generated_status": "generated_projection",
+      "edit_policy": "generated_by_script",
+      "owner": "platform_team",
+      "refresh_policy": "regenerate",
+      "downstream_dependencies": [
+        "dashboards",
+        "planning",
+        "qc-review"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
       "path": "reports/sprints/S1-baseline.md",
       "file_name": "S1-baseline.md",
       "extension": "md",
@@ -9791,8 +10091,8 @@
       "path": "reports/url-index.md",
       "file_name": "url-index.md",
       "extension": "md",
-      "size_bytes": 4778,
-      "sha256": "43b40ce3c9e275a7ceeba56909effca2c7cb233b0b1a837974d85e35b6894e4c",
+      "size_bytes": 4917,
+      "sha256": "83fb84287d9ef425768770bc6984429f572c8ceedf0ae55b0760a3b120bc400e",
       "layer": "generated_report",
       "authority_level": "generated_report",
       "source_type": "report_md",

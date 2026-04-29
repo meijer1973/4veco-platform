@@ -4,7 +4,7 @@ Generated: 2026-04-23
 Adopted main roadmap: 2026-04-25
 Last strategic update: 2026-04-29
 Roadmap ID: `references-team-roadmap`
-Roadmap version: `v2.11-rx2-first-lane-review-prepared`
+Roadmap version: `v2.10-rx1-gate-closed`
 Roadmap status: `active`
 Version index: `docs/roadmaps/roadmap-version-index.json`
 Scope: `references/`, `build-scripts/references/`, `build-scripts/reports/`, reference dashboards, and generated reference reports under `reports/`
@@ -15,7 +15,7 @@ The handoff roadmap has been adopted as the main operating roadmap for the refer
 
 No blocking incompatibility was found. The roadmap direction fits the repository: machine-edited references, evidence-first unit growth, JSON-first reports, review gates for pedagogical authority, and bounded later AI.
 
-Update 2026-04-29: RX.2 First-Lane Mutation Review Packet is prepared. `GATE-RX2-first-lane-mutation-review` is the immediate checkpoint. No unit mutation is authorized until that gate closes and explicitly authorizes CLI execution.
+Update 2026-04-29: `GATE-RX1-representation-unit-scope` closed as `pass_with_conditions`. RX.2 planning is unblocked for the bounded first lane only: `A61`, `A66`, `A67`, `A70`, `A72`, and `A74`. Direct unit mutation is still blocked until the RX.2 mutation review is explicit and CLI-backed.
 
 Compatibility decisions:
 
@@ -31,7 +31,7 @@ Compatibility decisions:
 - The exercise-schema roadmap restores the HCS two-axis role model (`instructional_role`, `assessment_role`), the four-field `scaffolding` object, and CP-1 through CP-8 cross-team checkpoints.
 - New registries under `references/machine/` remain future end states only. They require schema, CLI, validators, and mutation logs before machine files are created or changed.
 - `R9.2 Content Graph Projection` is completed. Owned-source content is queryable through a separate projection graph without changing R5 alignment authority.
-- `Phase RX Representation-Sensitive Micro-Unit Decomposition` is adopted as a dedicated reference-team phase. RX.1 closed as `pass_with_conditions`; RX.2 has prepared the bounded first-lane mutation-review packet, but mutation still requires explicit review, duplicate audit, CLI-only execution, and generator/operation-registry planning.
+- `Phase RX Representation-Sensitive Micro-Unit Decomposition` is adopted as a dedicated reference-team phase. RX.1 closed as `pass_with_conditions`; RX.2 planning may start for the bounded first lane, but mutation still requires explicit review, duplicate audit, CLI-only execution, and generator/operation-registry planning.
 
 ## Operating Rule
 
@@ -125,7 +125,7 @@ Open items are listed first; completed items are kept below them.
 
 | Sprint | Name | Completed | Current State |
 |--------|------|-----------|---------------|
-| GATE-RX2 | First-Lane Mutation Review | no | Immediate next checkpoint. Review RX.2 candidate specs, provisional ID handling, A70 dependency adjustment, generator status, and whether CLI-only mutation may proceed. |
+| RX.2 | Percentage And Index Representation Units | no | Immediate next sprint, planning only until explicit mutation review. First lane is limited to `A61`, `A66`, `A67`, `A70`, `A72`, and `A74`; all candidate IDs must be rechecked and all mutation must be CLI-only. |
 | R8.1 | QC Issue Model | no | Planned early and scoped down. Define only the lightweight issue schema needed to expose evidence weakness, stale data, proof-to-close, and registry/report warnings. |
 | Sprint 6 | Bronnen Registry MVP | no | Planned. Create source-document registry schema/validator first; store under `references/machine/` only after CLI and validators exist. |
 | Sprint 7 | Skill And Operation Registry MVP | no | Planned. Separate unit IDs from fine-grained exercise operations and skill/category tags; preserve useful `skill-categories.md` content where still valid. |
@@ -144,7 +144,6 @@ Open items are listed first; completed items are kept below them.
 | Sprint 13 | Composition Pattern Registry | no | Planned. Define reusable exercise-composition patterns for internal authoring support, not automatic student-facing publication. |
 | Sprint 14 | C-to-B Promotion Workflow | no | Planned only after schema audit, owned-source registry, exercise overlays, D04/unit-design status, R7.6, R14.1, and precision lint path are ready. |
 | Product Gate | Re-Evaluate R10-R13 Product Surfaces | no | Blocked. Diagnostics, adaptive routing, student-facing AI, teacher cockpit deployment, automatic sequencing, mastery, and summative uses remain out of scope until data-quality gates justify them. |
-| RX.2 | First-Lane Mutation Review Packet | yes | Completed through the review-packet stop point. Prepared candidate specs and disabled CLI mutation plan for `A61`, `A66`, `A67`, `A70`, `A72`, and `A74`; mutation remains blocked pending `GATE-RX2-first-lane-mutation-review`. |
 | RX.1 | Representation-Operation Inventory | yes | Completed through the non-mutating inventory/review-packet stop point. Prepared 29 operation records, 24 provisional candidates, 5 held duplicate/overlap records, and `GATE-RX1-representation-unit-scope`. |
 | GATE-RX1 | Representation Unit Scope Review | yes | Closed as `pass_with_conditions`. RX.2 planning is authorized for the bounded first lane only; direct mutation remains blocked until explicit RX.2 mutation review and CLI-backed execution. |
 | S4.1 | Exercise Overlay Conditions And Calibration | yes | Completed on 2026-04-29. Implemented CP-3 condition artifacts, source-annex gap tracker, scaffolding calibration, graph-spec representation plan, product-boundary warnings, condition validator, and condition reports. No bulk extension or source mutation authorized. |
@@ -816,8 +815,6 @@ Acceptance tests:
 - A-domain generator coverage is either implemented or explicitly tracked as blocked;
 - held duplicate/overlap records from RX.1 remain blocked.
 
-Completion: completed on 2026-04-29 through the bounded first-lane mutation-review packet stop point. `GATE-RX2-first-lane-mutation-review` is prepared but not closed; no unit mutation is authorized yet.
-
 #### RX.3 Producer Table And Graph Representation Units
 
 Purpose: add representation-sensitive profit/cost units after duplicate review.
@@ -1386,7 +1383,7 @@ S1 Schema audit and exercise naming contract (CP-1)
 R9.1 Owned source registry
 R9.2 Content graph projection
 Sprint 4 Exercise metadata overlay MVP (CP-3)
-GATE-RX2 First-lane mutation review
+RX.2 Bounded first-lane planning and mutation review
 R8.1 Scoped QC issue model
 Sprint 6 Bronnen registry MVP
 Sprint 7 Skill and operation registry MVP (CP-4)
@@ -1409,13 +1406,13 @@ Product Gate Re-evaluate R10-R13 product surfaces
 
 Do not invert this order.
 
-## Immediate Next Checkpoint
+## Immediate Next Sprint
 
-Next checkpoint: `GATE-RX2-first-lane-mutation-review`.
+Next sprint: `RX.2 Percentage And Index Representation Units`.
 
-R4.5 has closed the bounded micro-unit mutation lane, CP-1 has closed the non-mutating schema audit gate as `pass_with_conditions`, CP-2 has closed the owned-source scope gate as `pass_with_conditions`, R9.1 has registered the owned-source surfaces, R9.2 has completed owned-content projection, S4/CP-3 has closed as `pass_with_conditions`, S4.1 has implemented the CP-3 condition artifacts, RX.1 has prepared the non-mutating representation-operation inventory, `GATE-RX1-representation-unit-scope` has closed as `pass_with_conditions`, and RX.2 has prepared the bounded first-lane mutation-review packet.
+R4.5 has closed the bounded micro-unit mutation lane, CP-1 has closed the non-mutating schema audit gate as `pass_with_conditions`, CP-2 has closed the owned-source scope gate as `pass_with_conditions`, R9.1 has registered the owned-source surfaces, R9.2 has completed owned-content projection, S4/CP-3 has closed as `pass_with_conditions`, S4.1 has implemented the CP-3 condition artifacts, RX.1 has prepared the non-mutating representation-operation inventory, and `GATE-RX1-representation-unit-scope` has closed as `pass_with_conditions`.
 
-`GATE-RX2-first-lane-mutation-review` must decide whether the draft specs for `A61`, `A66`, `A67`, `A70`, `A72`, and `A74` may proceed to CLI-only execution. Direct unit mutation remains blocked until this gate closes and explicitly authorizes CLI execution.
+RX.2 may start as bounded planning and mutation-review work only. The first lane is limited to `A61`, `A66`, `A67`, `A70`, `A72`, and `A74`. Direct unit mutation remains blocked until the RX.2 mutation review is explicit and CLI-backed.
 
 Do not start diagnostics, adaptive routing, student-facing AI, automatic lesson sequencing, mastery decisions, summative decisions, teacher cockpit deployment, game/simulation product mapping, or continuous-improvement claims from this roadmap.
 
