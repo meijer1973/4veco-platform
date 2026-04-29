@@ -1,17 +1,18 @@
 {
   "sprint_id": "RX.2",
-  "name": "First-Lane Mutation Review Packet",
+  "name": "First-Lane Mutation Review And CLI Execution",
   "status": "completed",
   "completed_on": "2026-04-29",
   "plan": "docs/sprints/RX.2-plan.md",
   "baseline": "reports/sprints/RX.2-baseline.md",
   "result": "reports/sprints/RX.2-result.md",
   "diff_summary": "reports/sprints/RX.2-diff-summary.md",
-  "protected_reference_data_changed": false,
-  "mutation_authorized": false,
-  "cli_execution_authorized": false,
+  "protected_reference_data_changed": true,
+  "protected_reference_data_change_mode": "CLI-only via build-scripts/references/unit-add.js",
   "gate_id": "GATE-RX2-first-lane-mutation-review",
-  "gate_status": "prepared_for_human_review",
+  "gate_status": "pass_with_conditions",
+  "mutation_authorized": true,
+  "cli_execution_authorized": true,
   "first_lane_scope": [
     "A61",
     "A66",
@@ -20,7 +21,16 @@
     "A72",
     "A74"
   ],
-  "candidate_specs": "references/data/sprints/RX.2-first-lane-candidate-specs.json",
+  "units_added": [
+    "A61",
+    "A66",
+    "A67",
+    "A70",
+    "A72",
+    "A74"
+  ],
+  "generator_block": "references/data/sprints/RX.2-generator-blocked-units.json",
+  "mutation_log": "reports/review-gates/GATE-RX2-first-lane-mutation-review/RX.2-mutation-log.json",
   "acceptance_tests": [
     {
       "command": "node build-scripts/sprints/check-sprint-plan.js docs/sprints/RX.2-plan.md",
@@ -31,11 +41,51 @@
       "status": "passed"
     },
     {
-      "command": "node build-scripts/references/build-rx2-first-lane-review.js",
+      "command": "node build-scripts/review-gates/validate-gate.js reports/review-gates/GATE-RX2-first-lane-mutation-review/gate-closure.json",
       "status": "passed"
     },
     {
-      "command": "node build-scripts/references/check-rx2-first-lane-review.js",
+      "command": "node build-scripts/references/check-rx2-first-lane-mutations.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/build-unit-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/validate-core-schemas.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/generate-all.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/validate-report-json.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/generate-reference-health.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/check-reference-health.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/rag/build-chunks.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/rag/validate-chunks.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/rag/run-retrieval-evals.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/rag/validate-retrieval-eval-results.js",
       "status": "passed"
     },
     {
@@ -48,10 +98,6 @@
     },
     {
       "command": "node build-scripts/references/check-document-inventory.js",
-      "status": "passed"
-    },
-    {
-      "command": "node build-scripts/references/validate-core-schemas.js",
       "status": "passed"
     },
     {
@@ -72,15 +118,18 @@
     }
   ],
   "outputs": [
-    "build-scripts/references/build-rx2-first-lane-review.js",
-    "build-scripts/references/check-rx2-first-lane-review.js",
-    "references/data/sprints/RX.2-first-lane-candidate-specs.json",
-    "reports/review-gates/GATE-RX2-first-lane-mutation-review/review-packet.json",
-    "reports/review-gates/GATE-RX2-first-lane-mutation-review/review-packet.md",
-    "reports/review-gates/GATE-RX2-first-lane-mutation-review/candidate-specs.json",
-    "reports/review-gates/GATE-RX2-first-lane-mutation-review/candidate-specs.md",
-    "reports/review-gates/GATE-RX2-first-lane-mutation-review/cli-mutation-plan.json",
-    "reports/review-gates/GATE-RX2-first-lane-mutation-review/cli-mutation-plan.md"
+    "build-scripts/references/close-and-apply-rx2-first-lane.js",
+    "build-scripts/references/check-rx2-first-lane-mutations.js",
+    "references/data/sprints/RX.2-generator-blocked-units.json",
+    "reports/review-gates/GATE-RX2-first-lane-mutation-review/human-interview.json",
+    "reports/review-gates/GATE-RX2-first-lane-mutation-review/human-interview.md",
+    "reports/review-gates/GATE-RX2-first-lane-mutation-review/gate-closure.json",
+    "reports/review-gates/GATE-RX2-first-lane-mutation-review/gate-closure.md",
+    "reports/review-gates/GATE-RX2-first-lane-mutation-review/RX.2-mutation-log.json",
+    "reports/review-gates/GATE-RX2-first-lane-mutation-review/RX.2-mutation-log.md",
+    "reports/review-gates/GATE-RX2-first-lane-mutation-review/RX.2-generator-blocked-units.md",
+    "references/machine/micro-teaching-units.json",
+    "references/machine/micro-teaching-units.md"
   ],
-  "next_required_step": "Close GATE-RX2-first-lane-mutation-review before any CLI unit mutation"
+  "next_required_step": "Proceed only to the next roadmap-approved data-quality sprint; generator-blocked units remain non-interactive until generator implementation is approved."
 }

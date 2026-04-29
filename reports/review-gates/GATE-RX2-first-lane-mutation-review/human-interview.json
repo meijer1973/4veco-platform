@@ -1,0 +1,87 @@
+{
+  "gate_id": "GATE-RX2-first-lane-mutation-review",
+  "sprint_id": "RX.2",
+  "recorded_on": "2026-04-29",
+  "reviewer_role": "Head of Content Strategy",
+  "decision": "pass_with_conditions",
+  "closure_authorized": true,
+  "plain_pass_authorized": false,
+  "cli_unit_mutation_authorized": true,
+  "authorized_candidates": [
+    "A61",
+    "A66",
+    "A67",
+    "A70",
+    "A72",
+    "A74"
+  ],
+  "required_execution_order": [
+    "A61",
+    "A66",
+    "A67",
+    "A70",
+    "A72",
+    "A74"
+  ],
+  "answers": [
+    {
+      "id": "RX2-Q1",
+      "answer": "A. Yes",
+      "decision": "The RX.2 first-lane scope remains limited to A61, A66, A67, A70, A72, and A74."
+    },
+    {
+      "id": "RX2-Q2",
+      "answer": "A. Preserve A61/A66/A67/A70/A72/A74",
+      "decision": "The provisional IDs are preserved with gaps so deferred representation candidates can later occupy their intended conceptual slots."
+    },
+    {
+      "id": "RX2-Q3",
+      "answer": "B. Yes, but strengthen zero-needs rationale",
+      "decision": "A61 is acceptable as an underbouw-assumed root only when described as economic source-value selection for a calculation, not generic table reading."
+    },
+    {
+      "id": "RX2-Q4",
+      "answer": "A. Yes",
+      "decision": "A70 uses A38 as the first-lane prerequisite; deferred A64 remains tied to the later pie/chart lane."
+    },
+    {
+      "id": "RX2-Q5",
+      "answer": "B. Mostly, with wording fixes",
+      "decision": "The candidate specs are strong enough for mutation after tightening A61 wording and preserving the A70 dependency decision in closure and mutation logs."
+    },
+    {
+      "id": "RX2-Q6",
+      "answer": "B. Yes, but mark non-interactive until implemented",
+      "decision": "The units may enter the catalog, but student-facing skill-tree use remains blocked until generators exist and validate."
+    },
+    {
+      "id": "RX2-Q7",
+      "answer": "A. Yes",
+      "decision": "The CLI mutation plan preserves execution order and protected-source boundaries."
+    },
+    {
+      "id": "RX2-Q8",
+      "answer": "A. Yes",
+      "decision": "Deferred chart-only, line-graph, elasticity, producer, and held duplicate/overlap candidates remain blocked."
+    },
+    {
+      "id": "RX2-Q9",
+      "answer": "A. Yes, all six",
+      "decision": "CLI-only unit mutation is authorized for all six candidates after gate closure and live checks."
+    },
+    {
+      "id": "RX2-Q10",
+      "answer": "B. pass_with_conditions",
+      "decision": "Close the gate as pass_with_conditions; do not close as clean pass."
+    }
+  ],
+  "pattern_analysis": "The human review authorizes the six-candidate first lane only, preserves ID gaps, approves the A70 dependency adjustment, and requires generator-blocked/non-interactive tracking before any student-facing skill-tree use.",
+  "targeted_followups_required": true,
+  "targeted_followups": [
+    "Re-check live A-domain numbering immediately before mutation.",
+    "Preserve the A61/A66/A67/A70/A72/A74 IDs unless a numbering conflict appears.",
+    "Record the A70 dependency adjustment in the gate closure and mutation log.",
+    "Track all six generator implementations as missing/non-interactive until implemented and validated.",
+    "Keep deferred chart-only, line-graph, elasticity, producer, and held duplicate/overlap candidates blocked."
+  ]
+}

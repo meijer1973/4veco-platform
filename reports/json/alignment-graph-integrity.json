@@ -1,7 +1,7 @@
 {
   "schema_version": "0.1",
   "sprint_id": "R5.2",
-  "generated_on": "2026-04-27",
+  "generated_on": "2026-04-29",
   "status": "pass",
   "source": "references/data/alignment-graph.json",
   "evidence_source": "references/data/evidence-anchors.json",

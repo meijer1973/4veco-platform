@@ -1921,6 +1921,194 @@
     "generator": "GEN_A60"
   },
   {
+    "id": "A61",
+    "name": "Tabelwaarden selecteren voor berekening",
+    "category": "vaardigheden",
+    "layer": 0,
+    "kern": "Selecteer in een economische tabel de waarden die nodig zijn voor een berekening: juiste rij, kolom, periode en oude/nieuwe waarde.",
+    "needs": [],
+    "mastery_target": "apply",
+    "prior_learning": "review_and_extend",
+    "aspects": [
+      "rekenen",
+      "verbaal"
+    ],
+    "terms": [],
+    "procedure": [
+      "Lees eerst de vraag: welke grootheid, periode, rij of kolom heb je nodig?",
+      "Zoek de juiste bron, tabelkop en eenheid.",
+      "Selecteer de oude waarde, nieuwe waarde of gevraagde waarde voordat je rekent.",
+      "Controleer of je totaal, gemiddelde, percentage of indexwaarde gebruikt.",
+      "Noteer de gekozen waarden met label zodat de berekening controleerbaar is."
+    ],
+    "pitfalls": [
+      "Een zichtbaar getal kiezen zonder te controleren of het bij de juiste rij of kolom hoort.",
+      "Totaalwaarden, gemiddelde waarden en procentwaarden door elkaar halen."
+    ],
+    "generator": "GEN_A61",
+    "assumed_prior_knowledge": [
+      "basisvaardigheid tabel lezen uit de onderbouw"
+    ],
+    "zero_needs_status": "underbouw_assumed",
+    "zero_needs_review": {
+      "reviewed_on": "2026-04-29",
+      "reviewer": "Head of Content Strategy RX.2 gate",
+      "rationale": "Approved as an underbouw-assumed root because this is economic source-value selection for a calculation, not generic table reading.",
+      "recommended_needs": [],
+      "severity": "low"
+    }
+  },
+  {
+    "id": "A66",
+    "name": "Basiswaarde en vergelijkingswaarde in bron bepalen",
+    "category": "vaardigheden",
+    "layer": 1,
+    "kern": "Bepaal in een bron welke waarde de basiswaarde is en welke waarde de vergelijkingswaarde is voordat je een procentuele verandering berekent.",
+    "needs": [
+      "A61"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "aspects": [
+      "rekenen",
+      "verbaal"
+    ],
+    "terms": [],
+    "procedure": [
+      "Bepaal welke situatie eerder, oorspronkelijk of als basis geldt.",
+      "Bepaal welke situatie nieuw, later of vergelijkend is.",
+      "Label de basiswaarde als oud of basis en de vergelijkingswaarde als nieuw.",
+      "Controleer of de vraag om stijging, daling of vergelijking vraagt.",
+      "Gebruik de basiswaarde als noemer bij een procentuele verandering."
+    ],
+    "pitfalls": [
+      "De nieuwe waarde als basiswaarde gebruiken.",
+      "De volgorde in de tekst volgen zonder te kijken welke situatie de basis is."
+    ],
+    "generator": "GEN_A66"
+  },
+  {
+    "id": "A67",
+    "name": "Procentuele verandering berekenen vanuit tabel",
+    "category": "vaardigheden",
+    "layer": 2,
+    "kern": "Bereken een procentuele verandering nadat je de oude en nieuwe waarde uit een tabel hebt geselecteerd.",
+    "needs": [
+      "A38",
+      "A61",
+      "A66"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "aspects": [
+      "rekenen",
+      "verbaal"
+    ],
+    "terms": [],
+    "procedure": [
+      "Selecteer in de tabel de oude waarde en de nieuwe waarde.",
+      "Controleer de eenheid en of beide waarden dezelfde grootheid meten.",
+      "Bereken de verandering: nieuwe waarde min oude waarde.",
+      "Deel de verandering door de oude waarde.",
+      "Vermenigvuldig met 100 procent en controleer teken en context."
+    ],
+    "pitfalls": [
+      "De verkeerde tabelrij vergelijken.",
+      "Het absolute verschil als procentuele verandering noteren."
+    ],
+    "generator": "GEN_A67"
+  },
+  {
+    "id": "A70",
+    "name": "Percentagepuntverandering in aandeel herkennen",
+    "category": "vaardigheden",
+    "layer": 1,
+    "kern": "Herken een verandering in procentpunten tussen twee percentagewaarden en onderscheid die van een procentuele verandering.",
+    "needs": [
+      "A38"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "aspects": [
+      "rekenen",
+      "verbaal"
+    ],
+    "terms": [],
+    "procedure": [
+      "Lees de oude en nieuwe percentagewaarde.",
+      "Bereken het verschil in procentpunten: nieuw percentage min oud percentage.",
+      "Benoem de uitkomst als procentpunt of procentpunten.",
+      "Controleer of de vraag toch een procentuele verandering vraagt.",
+      "Gebruik A38 alleen wanneer de relatieve verandering van het percentage zelf gevraagd wordt."
+    ],
+    "pitfalls": [
+      "Een stijging van 20% naar 25% als 5% benoemen in plaats van 5 procentpunt.",
+      "Procentpunten en procentuele veranderingen door elkaar gebruiken."
+    ],
+    "generator": "GEN_A70"
+  },
+  {
+    "id": "A72",
+    "name": "Indexcijfer berekenen vanuit tabel",
+    "category": "vaardigheden",
+    "layer": 2,
+    "kern": "Bereken een indexcijfer vanuit tabelwaarden door het doeljaar te delen door het basisjaar en te vermenigvuldigen met 100.",
+    "needs": [
+      "A39",
+      "A61"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "aspects": [
+      "rekenen",
+      "verbaal"
+    ],
+    "terms": [],
+    "procedure": [
+      "Selecteer in de tabel de waarde van het basisjaar.",
+      "Selecteer de waarde van het doeljaar.",
+      "Controleer dat beide waarden dezelfde mand, prijs of grootheid meten.",
+      "Bereken index = waarde doeljaar / waarde basisjaar x 100.",
+      "Controleer of het basisjaar op 100 staat."
+    ],
+    "pitfalls": [
+      "Het doeljaar als basisjaar nemen.",
+      "Indexpunten verwarren met procentuele verandering."
+    ],
+    "generator": "GEN_A72"
+  },
+  {
+    "id": "A74",
+    "name": "Procentuele verandering berekenen vanuit indexcijfers",
+    "category": "vaardigheden",
+    "layer": 2,
+    "kern": "Bereken een procentuele verandering tussen twee indexcijfers door de verandering te delen door het oude indexcijfer.",
+    "needs": [
+      "A38",
+      "A39",
+      "A66"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "aspects": [
+      "rekenen",
+      "verbaal"
+    ],
+    "terms": [],
+    "procedure": [
+      "Bepaal welk indexcijfer de oude waarde is.",
+      "Bepaal welk indexcijfer de nieuwe waarde is.",
+      "Bereken het verschil tussen de indexcijfers.",
+      "Deel het verschil door het oude indexcijfer.",
+      "Vermenigvuldig met 100 procent en benoem het als procentuele verandering."
+    ],
+    "pitfalls": [
+      "Alleen indexpunten aftrekken en dat percentage noemen.",
+      "Delen door 100 in plaats van door het oude indexcijfer."
+    ],
+    "generator": "GEN_A74"
+  },
+  {
     "id": "B01",
     "name": "Schaarste als kerneconomisch probleem",
     "category": "schaarste",

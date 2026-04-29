@@ -2,7 +2,7 @@
   "eval_set_id": "R7.3-retrieval-eval-set",
   "schema_version": 1,
   "generated_by": "build-scripts/rag/run-retrieval-evals.js",
-  "generated_on": "2026-04-29T09:50:57.306Z",
+  "generated_on": "2026-04-29T21:47:47.655Z",
   "source_files": [
     "references/data/rag/retrieval_eval_set.json",
     "references/data/rag/chunk_index.jsonl",
@@ -193,24 +193,24 @@
         "A20",
         "D1.21",
         "D30",
-        "ha-1022-a-25-1-o-566",
+        "ha-1022-a-25-1-o-572",
         "D28",
         "D3.1",
-        "ha-1022-a-25-1-o-567",
+        "ha-1022-a-25-1-o-573",
         "A15",
         "A17",
         "A2.4",
         "A2.5",
-        "ha-1022-a-25-2-o-594",
+        "ha-1022-a-25-2-o-600",
         "D01",
         "D03",
-        "ha-1022-a-25-2-o-595",
+        "ha-1022-a-25-2-o-601",
         "A16",
-        "vw-1022-a-24-2-o-718",
+        "vw-1022-a-24-2-o-724",
         "A19",
         "A2.16",
         "A2.17",
-        "vw-1022-a-24-2-o-719",
+        "vw-1022-a-24-2-o-725",
         "producentensurplus",
         "consumentensurplus",
         "A40",
@@ -238,7 +238,7 @@
       "authority_violations": [],
       "top_results": [
         {
-          "chunk_id": "exam-question:ha-1022-a-25-1-o-566",
+          "chunk_id": "exam-question:ha-1022-a-25-1-o-572",
           "score": 76,
           "source_path": "references/external/exam-questions.json",
           "source_type": "exam_question",
@@ -247,7 +247,7 @@
             "A20",
             "D1.21",
             "D30",
-            "ha-1022-a-25-1-o-566"
+            "ha-1022-a-25-1-o-572"
           ],
           "evidence_ids": [],
           "edge_statuses": [],
@@ -258,10 +258,10 @@
           "not_primary_evidence": false,
           "curriculum_authority": true,
           "allowed_for_public_citation": true,
-          "text_excerpt": "ha-1022-a-25-1-o-566. Bereken het resultaat per dag van Hopi Bon. De welvaart die ontstaat op deze fietsverhuurmarkt kan worden gemeten aan de hand van het consumenten- en producentensurplus. Door een prijsverlaging stijgt de welvaart. Gebruik bron 1. Required skills: A20, D30. Exam codes: D1.21."
+          "text_excerpt": "ha-1022-a-25-1-o-572. Bereken het resultaat per dag van Hopi Bon. De welvaart die ontstaat op deze fietsverhuurmarkt kan worden gemeten aan de hand van het consumenten- en producentensurplus. Door een prijsverlaging stijgt de welvaart. Gebruik bron 1. Required skills: A20, D30. Exam codes: D1.21."
         },
         {
-          "chunk_id": "exam-question:ha-1022-a-25-1-o-567",
+          "chunk_id": "exam-question:ha-1022-a-25-1-o-573",
           "score": 76,
           "source_path": "references/external/exam-questions.json",
           "source_type": "exam_question",
@@ -269,7 +269,7 @@
           "entity_ids": [
             "D28",
             "D3.1",
-            "ha-1022-a-25-1-o-567"
+            "ha-1022-a-25-1-o-573"
           ],
           "evidence_ids": [],
           "edge_statuses": [],
@@ -280,10 +280,10 @@
           "not_primary_evidence": false,
           "curriculum_authority": true,
           "allowed_for_public_citation": true,
-          "text_excerpt": "ha-1022-a-25-1-o-567. Leg het welvaartseffect uit als Hopi Bon een lagere prijs rekent dan de prijs bij maximale winst. Doe het als volgt: Leg het effect van een lagere prijs uit op het consumentensurplus. Leg het effect van een lagere prijs uit op het dalende producentensurplus. Leg het effect van een lagere prijs uit op het stijgende producentensurplus. Hopi Bon wil starten met een huurprijs van $ 16, om daarna deze te verhogen naar $ 24. De directeur onderzoekt of het starten met een lage pri"
+          "text_excerpt": "ha-1022-a-25-1-o-573. Leg het welvaartseffect uit als Hopi Bon een lagere prijs rekent dan de prijs bij maximale winst. Doe het als volgt: Leg het effect van een lagere prijs uit op het consumentensurplus. Leg het effect van een lagere prijs uit op het dalende producentensurplus. Leg het effect van een lagere prijs uit op het stijgende producentensurplus. Hopi Bon wil starten met een huurprijs van $ 16, om daarna deze te verhogen naar $ 24. De directeur onderzoekt of het starten met een lage pri"
         },
         {
-          "chunk_id": "exam-question:ha-1022-a-25-2-o-594",
+          "chunk_id": "exam-question:ha-1022-a-25-2-o-600",
           "score": 76,
           "source_path": "references/external/exam-questions.json",
           "source_type": "exam_question",
@@ -293,7 +293,7 @@
             "A17",
             "A2.4",
             "A2.5",
-            "ha-1022-a-25-2-o-594"
+            "ha-1022-a-25-2-o-600"
           ],
           "evidence_ids": [],
           "edge_statuses": [],
@@ -304,10 +304,10 @@
           "not_primary_evidence": false,
           "curriculum_authority": true,
           "allowed_for_public_citation": true,
-          "text_excerpt": "ha-1022-a-25-2-o-594. Laat met een berekening zien dat de doelstelling van de Mexicaanse overheid wordt bereikt. noot 1 een pond = 500 gram De invoering van de suikeraccijns heeft gevolgen voor zowel het consumentensurplus als het producentensurplus op de markt van suiker (zie bron 2). Gebruik bron 2. Required skills: A15, A17. Exam codes: A2.4, A2.5."
+          "text_excerpt": "ha-1022-a-25-2-o-600. Laat met een berekening zien dat de doelstelling van de Mexicaanse overheid wordt bereikt. noot 1 een pond = 500 gram De invoering van de suikeraccijns heeft gevolgen voor zowel het consumentensurplus als het producentensurplus op de markt van suiker (zie bron 2). Gebruik bron 2. Required skills: A15, A17. Exam codes: A2.4, A2.5."
         },
         {
-          "chunk_id": "exam-question:ha-1022-a-25-2-o-595",
+          "chunk_id": "exam-question:ha-1022-a-25-2-o-601",
           "score": 76,
           "source_path": "references/external/exam-questions.json",
           "source_type": "exam_question",
@@ -316,7 +316,7 @@
             "D01",
             "D03",
             "D3.1",
-            "ha-1022-a-25-2-o-595"
+            "ha-1022-a-25-2-o-601"
           ],
           "evidence_ids": [],
           "edge_statuses": [],
@@ -327,10 +327,10 @@
           "not_primary_evidence": false,
           "curriculum_authority": true,
           "allowed_for_public_citation": true,
-          "text_excerpt": "ha-1022-a-25-2-o-595. Geef met letters het oppervlak aan dat het consumenten- en producentensurplus weergeeft en het oppervlak dat de accijnsopbrengst weergeeft na het heffen van de suikeraccijns. Neem daarvoor onderstaande tabel over op het antwoordblad en vul aan op de stippellijnen. oppervlak consumentensurplus ……….. oppervlak producentensurplus ……….. oppervlak accijnsopbrengst ……….. Required skills: D03, D01. Exam codes: D3.1."
+          "text_excerpt": "ha-1022-a-25-2-o-601. Geef met letters het oppervlak aan dat het consumenten- en producentensurplus weergeeft en het oppervlak dat de accijnsopbrengst weergeeft na het heffen van de suikeraccijns. Neem daarvoor onderstaande tabel over op het antwoordblad en vul aan op de stippellijnen. oppervlak consumentensurplus ……….. oppervlak producentensurplus ……….. oppervlak accijnsopbrengst ……….. Required skills: D03, D01. Exam codes: D3.1."
         },
         {
-          "chunk_id": "exam-question:vw-1022-a-24-2-o-718",
+          "chunk_id": "exam-question:vw-1022-a-24-2-o-724",
           "score": 76,
           "source_path": "references/external/exam-questions.json",
           "source_type": "exam_question",
@@ -339,7 +339,7 @@
             "A16",
             "A2.4",
             "A2.5",
-            "vw-1022-a-24-2-o-718"
+            "vw-1022-a-24-2-o-724"
           ],
           "evidence_ids": [],
           "edge_statuses": [],
@@ -350,7 +350,7 @@
           "not_primary_evidence": false,
           "curriculum_authority": true,
           "allowed_for_public_citation": true,
-          "text_excerpt": "vw-1022-a-24-2-o-718. Bereken de hoogte van de Armington-elasticiteit. Piethaan: “Een stikstofheffing zal effect hebben op het producentensurplus van de binnenlandse staalmarkt, waardoor de doelmatigheid van de staalmarkt verder zal afnemen. Onze buurlanden hebben echter minder milieuregels, waardoor de mondiale maatschappelijke kosten juist kunnen toenemen.” Required skills: A16. Exam codes: A2.4, A2.5."
+          "text_excerpt": "vw-1022-a-24-2-o-724. Bereken de hoogte van de Armington-elasticiteit. Piethaan: “Een stikstofheffing zal effect hebben op het producentensurplus van de binnenlandse staalmarkt, waardoor de doelmatigheid van de staalmarkt verder zal afnemen. Onze buurlanden hebben echter minder milieuregels, waardoor de mondiale maatschappelijke kosten juist kunnen toenemen.” Required skills: A16. Exam codes: A2.4, A2.5."
         }
       ],
       "notes": "Checks whether exam evidence and the surplus unit/term surface for producer-surplus search."
@@ -421,7 +421,7 @@
           "not_primary_evidence": true,
           "curriculum_authority": false,
           "allowed_for_public_citation": false,
-          "text_excerpt": "terms-coverage: status warn; issues 63; summary {\"live_units\":209,\"units_without_terms\":63}"
+          "text_excerpt": "terms-coverage: status warn; issues 69; summary {\"live_units\":215,\"units_without_terms\":69}"
         },
         {
           "chunk_id": "quality-report:dead-units.json",
@@ -441,7 +441,7 @@
           "not_primary_evidence": true,
           "curriculum_authority": false,
           "allowed_for_public_citation": false,
-          "text_excerpt": "dead-units: status warn; issues 29; summary {\"live_units\":209,\"cited_live_units\":180,\"uncited_live_units\":29}"
+          "text_excerpt": "dead-units: status warn; issues 35; summary {\"live_units\":215,\"cited_live_units\":180,\"uncited_live_units\":35}"
         },
         {
           "chunk_id": "owned-content-edge:ocg-projected-unit-uses-term-unit-a06-term-evenwichtshoeveelheid-1.4.1-1.4.1-references-machine-micro-teaching-units.jso-288895008510",
@@ -558,6 +558,7 @@
         "begrippen-coverage",
         "dag-integrity",
         "procedure-coverage",
+        "representation-operation-inventory.json",
         "terms-coverage",
         "unresolved-refs",
         "1.4.1",
@@ -566,9 +567,7 @@
         "evenwichtshoeveelheid",
         "references/machine/micro-teaching-units.json",
         "term:evenwichtshoeveelheid",
-        "unit:A06",
-        "1.4.2",
-        "OCG-PROJECTED-UNIT-USES-TERM-UNIT-A06-TERM-EVENWICHTSHOEVEELHEID-1.4.2-1.4.2-REFERENCES-MACHINE-MICRO-TEACHING-UNITS.JSON"
+        "unit:A06"
       ],
       "found_source_types": [
         "quality_report",
@@ -623,7 +622,7 @@
           "not_primary_evidence": true,
           "curriculum_authority": false,
           "allowed_for_public_citation": false,
-          "text_excerpt": "needs-coverage: status warn; issues 39; summary {\"live_units\":209,\"empty_needs\":39}"
+          "text_excerpt": "needs-coverage: status warn; issues 40; summary {\"live_units\":215,\"empty_needs\":40}"
         },
         {
           "chunk_id": "quality-report:dead-units.json",
@@ -643,7 +642,7 @@
           "not_primary_evidence": true,
           "curriculum_authority": false,
           "allowed_for_public_citation": false,
-          "text_excerpt": "dead-units: status warn; issues 29; summary {\"live_units\":209,\"cited_live_units\":180,\"uncited_live_units\":29}"
+          "text_excerpt": "dead-units: status warn; issues 35; summary {\"live_units\":215,\"cited_live_units\":180,\"uncited_live_units\":35}"
         },
         {
           "chunk_id": "quality-report:aspects-coverage.json",
@@ -663,7 +662,7 @@
           "not_primary_evidence": true,
           "curriculum_authority": false,
           "allowed_for_public_citation": false,
-          "text_excerpt": "aspects-coverage: status pass; issues 0; summary {\"live_units\":209,\"units_without_aspects\":0}"
+          "text_excerpt": "aspects-coverage: status pass; issues 0; summary {\"live_units\":215,\"units_without_aspects\":0}"
         },
         {
           "chunk_id": "quality-report:begrippen-coverage.json",
@@ -1120,7 +1119,7 @@
           "not_primary_evidence": true,
           "curriculum_authority": false,
           "allowed_for_public_citation": false,
-          "text_excerpt": "dead-units: status warn; issues 29; summary {\"live_units\":209,\"cited_live_units\":180,\"uncited_live_units\":29}"
+          "text_excerpt": "dead-units: status warn; issues 35; summary {\"live_units\":215,\"cited_live_units\":180,\"uncited_live_units\":35}"
         },
         {
           "chunk_id": "quality-report:dag-integrity.json",
@@ -1140,7 +1139,7 @@
           "not_primary_evidence": true,
           "curriculum_authority": false,
           "allowed_for_public_citation": false,
-          "text_excerpt": "dag-integrity: status pass; issues 0; summary {\"units\":211,\"live_units\":209,\"deprecated_units\":2}"
+          "text_excerpt": "dag-integrity: status pass; issues 0; summary {\"units\":217,\"live_units\":215,\"deprecated_units\":2}"
         },
         {
           "chunk_id": "quality-report:unresolved-refs.json",
@@ -1160,7 +1159,7 @@
           "not_primary_evidence": true,
           "curriculum_authority": false,
           "allowed_for_public_citation": false,
-          "text_excerpt": "unresolved-refs: status warn; issues 24; summary {\"deprecated_units\":2,\"deprecated_citations\":24}"
+          "text_excerpt": "unresolved-refs: status warn; issues 43; summary {\"deprecated_units\":2,\"deprecated_citations\":43}"
         },
         {
           "chunk_id": "quality-report:aspects-coverage.json",
@@ -1180,7 +1179,7 @@
           "not_primary_evidence": true,
           "curriculum_authority": false,
           "allowed_for_public_citation": false,
-          "text_excerpt": "aspects-coverage: status pass; issues 0; summary {\"live_units\":209,\"units_without_aspects\":0}"
+          "text_excerpt": "aspects-coverage: status pass; issues 0; summary {\"live_units\":215,\"units_without_aspects\":0}"
         },
         {
           "chunk_id": "quality-report:begrippen-coverage.json",
@@ -1608,7 +1607,7 @@
         "dead-units",
         "empty-needs-audit-summary",
         "exam-question-extraction-gaps.json",
-        "needs-coverage"
+        "exercise-overlay-conditions"
       ],
       "found_source_types": [
         "quality_report"
@@ -1721,7 +1720,7 @@
           "not_primary_evidence": true,
           "curriculum_authority": false,
           "allowed_for_public_citation": false,
-          "text_excerpt": "aspects-coverage: status pass; issues 0; summary {\"live_units\":209,\"units_without_aspects\":0}"
+          "text_excerpt": "aspects-coverage: status pass; issues 0; summary {\"live_units\":215,\"units_without_aspects\":0}"
         }
       ],
       "notes": "Checks generated-report handling and non-primary evidence warnings."

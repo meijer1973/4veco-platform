@@ -1,15 +1,15 @@
 {
   "report_id": "dag-integrity",
   "generated_by": "build-scripts/reports/generate-all.js",
-  "generated_on": "2026-04-27T22:30:20.445Z",
+  "generated_on": "2026-04-29T21:47:32.545Z",
   "source_files": [
     "references/machine/micro-teaching-units.json"
   ],
   "schema_version": 1,
   "status": "pass",
   "summary": {
-    "units": 211,
-    "live_units": 209,
+    "units": 217,
+    "live_units": 215,
     "deprecated_units": 2
   },
   "issues": []

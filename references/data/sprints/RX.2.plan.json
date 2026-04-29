@@ -1,10 +1,11 @@
 {
   "sprint_id": "RX.2",
-  "name": "First-Lane Mutation Review Packet",
+  "name": "First-Lane Mutation Review And CLI Execution",
   "status": "in_progress",
   "planned_on": "2026-04-29",
   "plan": "docs/sprints/RX.2-plan.md",
-  "protected_reference_data_changes_allowed": false,
+  "protected_reference_data_changes_allowed": true,
+  "protected_reference_data_change_mode": "CLI-only via build-scripts/references/unit-add.js after gate closure",
   "human_review_required": true,
   "gate_id": "GATE-RX2-first-lane-mutation-review",
   "review_packet": "reports/review-gates/GATE-RX2-first-lane-mutation-review/review-packet.md",
@@ -14,8 +15,8 @@
     "hold",
     "fail"
   ],
-  "mutation_authorized": false,
-  "cli_execution_authorized": false,
+  "mutation_authorized_after_gate_closure": true,
+  "cli_execution_authorized_after_gate_closure": true,
   "first_lane_scope": [
     "A61",
     "A66",
@@ -24,13 +25,45 @@
     "A72",
     "A74"
   ],
+  "blocked_scope": [
+    "A62",
+    "A63",
+    "A64",
+    "A68",
+    "A69",
+    "A71",
+    "A73",
+    "A82",
+    "A83",
+    "A84",
+    "producer candidates A75-A81",
+    "held duplicate/overlap records",
+    "student diagnostics",
+    "adaptive routing",
+    "student-facing AI",
+    "automatic sequencing",
+    "mastery decisions",
+    "summative decisions"
+  ],
   "acceptance_tests": [
     "node build-scripts/sprints/check-sprint-plan.js docs/sprints/RX.2-plan.md",
     "node build-scripts/sprints/check-sprint-bundle.js RX.2",
-    "node build-scripts/references/build-rx2-first-lane-review.js",
-    "node build-scripts/references/check-rx2-first-lane-review.js",
+    "node build-scripts/review-gates/validate-gate.js reports/review-gates/GATE-RX2-first-lane-mutation-review/gate-closure.json",
+    "node build-scripts/references/check-rx2-first-lane-mutations.js",
+    "node build-scripts/references/build-unit-index.js",
+    "node build-scripts/references/validate-core-schemas.js",
+    "node build-scripts/reports/generate-all.js",
+    "node build-scripts/reports/validate-report-json.js",
+    "node build-scripts/reports/generate-reference-health.js",
+    "node build-scripts/reports/check-reference-health.js",
+    "node build-scripts/rag/build-chunks.js",
+    "node build-scripts/rag/validate-chunks.js",
+    "node build-scripts/rag/run-retrieval-evals.js",
+    "node build-scripts/rag/validate-retrieval-eval-results.js",
     "node build-scripts/references/check-roadmap-version-index.js",
     "node build-scripts/references/check-source-manifest.js",
-    "node build-scripts/references/check-document-inventory.js"
+    "node build-scripts/references/check-document-inventory.js",
+    "node build-scripts/sprints/check-bundle-urls.js GATE-RX2-first-lane-mutation-review",
+    "node build-scripts/sprints/emit-url-index.js --check"
   ]
 }

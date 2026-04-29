@@ -1,11 +1,11 @@
 # Reference Health
 
-Generated: 2026-04-27T22:30:33.394Z
+Generated: 2026-04-29T21:47:40.948Z
 
 ## Unit Counts
 
-- Total: 211
-- Live: 209
+- Total: 217
+- Live: 215
 - Deprecated: 2
 
 ## Graph Authority
@@ -19,7 +19,7 @@ Generated: 2026-04-27T22:30:33.394Z
 ## QC Findings
 
 - Reports: 12
-- Total issues: 337
+- Total issues: 369
 - High/critical issues: 7
 
 ## Retrieval Evaluation

@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "sprint_id": "RX.2",
+  "status": "active_block",
+  "recorded_on": "2026-04-29",
+  "source_gate": "reports/review-gates/GATE-RX2-first-lane-mutation-review/gate-closure.json",
+  "blocked_reason": "first-lane units are catalog-valid but generator implementations are missing",
+  "student_facing_skilltree_use_allowed": false,
+  "units": [
+    {
+      "unit_id": "A61",
+      "generator": "GEN_A61",
+      "generator_implemented": false,
+      "generator_status": "missing_generator_implementation",
+      "student_facing_skilltree_use_allowed": false,
+      "non_interactive_until_generator_validates": true,
+      "proof_required_to_unblock": [
+        "GEN_A61 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A66",
+      "generator": "GEN_A66",
+      "generator_implemented": false,
+      "generator_status": "missing_generator_implementation",
+      "student_facing_skilltree_use_allowed": false,
+      "non_interactive_until_generator_validates": true,
+      "proof_required_to_unblock": [
+        "GEN_A66 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A67",
+      "generator": "GEN_A67",
+      "generator_implemented": false,
+      "generator_status": "missing_generator_implementation",
+      "student_facing_skilltree_use_allowed": false,
+      "non_interactive_until_generator_validates": true,
+      "proof_required_to_unblock": [
+        "GEN_A67 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A70",
+      "generator": "GEN_A70",
+      "generator_implemented": false,
+      "generator_status": "missing_generator_implementation",
+      "student_facing_skilltree_use_allowed": false,
+      "non_interactive_until_generator_validates": true,
+      "proof_required_to_unblock": [
+        "GEN_A70 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A72",
+      "generator": "GEN_A72",
+      "generator_implemented": false,
+      "generator_status": "missing_generator_implementation",
+      "student_facing_skilltree_use_allowed": false,
+      "non_interactive_until_generator_validates": true,
+      "proof_required_to_unblock": [
+        "GEN_A72 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A74",
+      "generator": "GEN_A74",
+      "generator_implemented": false,
+      "generator_status": "missing_generator_implementation",
+      "student_facing_skilltree_use_allowed": false,
+      "non_interactive_until_generator_validates": true,
+      "proof_required_to_unblock": [
+        "GEN_A74 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    }
+  ],
+  "blocked_downstream_uses": [
+    "student-facing skill-tree exposure for A61/A66/A67/A70/A72/A74",
+    "student diagnostics",
+    "adaptive routing",
+    "student-facing AI",
+    "automatic sequencing",
+    "mastery decisions",
+    "summative decisions"
+  ]
+}

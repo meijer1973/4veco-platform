@@ -1,6 +1,6 @@
 # Alignment Graph Integrity
 
-Generated: 2026-04-27
+Generated: 2026-04-29
 Status: PASS
 Source: `references/data/alignment-graph.json`
 Evidence source: `references/data/evidence-anchors.json`
