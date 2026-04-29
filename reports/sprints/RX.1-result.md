@@ -6,7 +6,7 @@
 
 ## Summary
 
-Completed RX.1 through the non-mutating inventory and review-packet stop point.
+Completed RX.1 through the non-mutating inventory, review packet, HCS human review, and gate closure.
 
 What RX.1 accomplished:
 
@@ -16,7 +16,9 @@ What RX.1 accomplished:
 - Identified 24 provisional A61-A84 candidate units for human review.
 - Held 5 duplicate/overlap-prone operation areas instead of proposing mutation.
 - Prepared `GATE-RX1-representation-unit-scope` with all review questions listed.
+- Closed `GATE-RX1-representation-unit-scope` as `pass_with_conditions`.
 - Kept all candidate IDs provisional and all mutation flags false.
+- Unblocked RX.2 planning for the bounded first lane only: `A61`, `A66`, `A67`, `A70`, `A72`, and `A74`.
 
 What RX.1 did not authorize:
 
@@ -25,7 +27,7 @@ What RX.1 did not authorize:
 - no `references/authored/course-target-exercises.json` mutation
 - no `unit-add.js` or `unit-add-dep.js` mutation
 - no governed operation registry
-- no RX.2 mutation planning before human gate closure
+- no direct RX.2 mutation before explicit mutation review and CLI-backed execution
 
 ## Acceptance test results
 
@@ -41,6 +43,7 @@ Passed:
 - `node build-scripts/references/validate-core-schemas.js`
 - `node build-scripts/sprints/check-bundle-urls.js GATE-RX1-representation-unit-scope`
 - `node build-scripts/sprints/emit-url-index.js --check`
+- `node build-scripts/review-gates/validate-gate.js reports/review-gates/GATE-RX1-representation-unit-scope/gate-closure.json`
 
 Sprint-close checks after this result artifact is written:
 
@@ -83,7 +86,7 @@ The inventory uses current protected sources as read-only inputs. Candidate IDs 
 
 ## Open follow-ups
 
-- Human review must close `GATE-RX1-representation-unit-scope` before RX.2 starts.
+- RX.2 may start as bounded planning and mutation-review work only.
 - RX.2 must re-check live A-domain numbering before any CLI mutation.
 - Chart-specific candidates with didactic-prior rationale may need stronger target/exam evidence before mutation.
 - Held duplicate areas must remain blocked unless the gate explicitly moves them into a later mutation queue.

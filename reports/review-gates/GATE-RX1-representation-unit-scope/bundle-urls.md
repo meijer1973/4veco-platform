@@ -5,6 +5,10 @@ This file lists every artifact in this gate's bundle as a full raw-GitHub URL so
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-RX1-representation-unit-scope/bundle-urls.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-RX1-representation-unit-scope/duplicate-overlap-report.json
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-RX1-representation-unit-scope/duplicate-overlap-report.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-RX1-representation-unit-scope/gate-closure.json
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-RX1-representation-unit-scope/gate-closure.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-RX1-representation-unit-scope/human-interview.json
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-RX1-representation-unit-scope/human-interview.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-RX1-representation-unit-scope/proposed-mutation-queue.json
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-RX1-representation-unit-scope/proposed-mutation-queue.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-RX1-representation-unit-scope/review-packet.json

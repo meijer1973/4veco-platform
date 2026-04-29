@@ -11,8 +11,18 @@
   "mutation_authorized": false,
   "source_mutation_authorized": false,
   "gate_id": "GATE-RX1-representation-unit-scope",
-  "gate_status": "prepared_for_human_review",
-  "rx2_blocked_until_gate_closure": true,
+  "gate_status": "pass_with_conditions",
+  "rx2_blocked_until_gate_closure": false,
+  "rx2_planning_authorized": true,
+  "mutation_authorized_by_gate": false,
+  "rx2_first_lane": [
+    "A61",
+    "A66",
+    "A67",
+    "A70",
+    "A72",
+    "A74"
+  ],
   "inventory": "references/data/sprints/RX.1-representation-operation-inventory.json",
   "summary": {
     "operation_count": 29,
@@ -61,6 +71,10 @@
       "status": "passed"
     },
     {
+      "command": "node build-scripts/review-gates/validate-gate.js reports/review-gates/GATE-RX1-representation-unit-scope/gate-closure.json",
+      "status": "passed"
+    },
+    {
       "command": "node build-scripts/sprints/check-sprint-result.js reports/sprints/RX.1-result.md",
       "status": "passed"
     },
@@ -82,5 +96,5 @@
     "reports/review-gates/GATE-RX1-representation-unit-scope/proposed-mutation-queue.json",
     "reports/review-gates/GATE-RX1-representation-unit-scope/proposed-mutation-queue.md"
   ],
-  "next_required_step": "Close GATE-RX1-representation-unit-scope before RX.2 mutation planning"
+  "next_required_step": "Start RX.2 as bounded planning and mutation-review work only; no mutation until explicit RX.2 mutation review and CLI-backed execution"
 }

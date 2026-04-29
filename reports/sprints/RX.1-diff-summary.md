@@ -14,13 +14,15 @@ RX.1 adds a non-mutating representation-operation inventory and review packet. I
 - duplicate/overlap report
 - proposed mutation queue
 - `GATE-RX1-representation-unit-scope` review packet and bundle URLs
+- `GATE-RX1-representation-unit-scope` human interview and gate closure
 - archived roadmap snapshot for version `v2.8-s4.1-conditions-calibrated`
+- archived roadmap snapshot for version `v2.9-rx1-inventory-prepared`
 
 ## Updated
 
-- live roadmap moved to `v2.9-rx1-inventory-prepared`
-- sprint ledger marks RX.1 complete through the review-packet stop point
-- immediate next checkpoint is `GATE-RX1-representation-unit-scope`
+- live roadmap moved to `v2.10-rx1-gate-closed`
+- sprint ledger marks RX.1 and GATE-RX1 complete
+- immediate next sprint is RX.2 bounded planning and mutation review
 - roadmap version index now points to the active v2.9 roadmap
 - source manifest and document inventory were regenerated after adding RX.1 artifacts
 - sprint bundle checker now accepts `RX.1` style sprint IDs
@@ -38,4 +40,4 @@ The candidate queue is explicitly non-mutating and keeps `mutation_authorized: f
 
 ## Human review state
 
-`GATE-RX1-representation-unit-scope` is prepared but not closed. RX.2 remains blocked until the human review answers are recorded and the gate closure is created.
+`GATE-RX1-representation-unit-scope` is closed as `pass_with_conditions`. RX.2 planning is authorized for the bounded first lane only. Direct mutation remains blocked until explicit RX.2 mutation review and CLI-backed execution.

@@ -12,12 +12,13 @@ docs/roadmaps/roadmap-version-index.json
 
 | Roadmap | Version | Path | Notes |
 |---|---|---|---|
-| References Team Roadmap | `v2.9-rx1-inventory-prepared` | `references/reference-team-roadmap.md` | Current operating roadmap with RX.1 representation-operation inventory prepared and GATE-RX1 as the immediate checkpoint before RX.2. |
+| References Team Roadmap | `v2.10-rx1-gate-closed` | `references/reference-team-roadmap.md` | Current operating roadmap with GATE-RX1 closed as pass_with_conditions and RX.2 planning unblocked for the bounded first lane only. |
 
 ## Outdated Archive
 
 | Roadmap | Version | Path | Superseded By |
 |---|---|---|---|
+| References Team Roadmap before RX.1 gate closure | `v2.9-rx1-inventory-prepared` | `docs/roadmaps/outdated/reference-team-roadmap-v2.9-rx1-inventory-prepared.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before RX.1 inventory preparation | `v2.8-s4.1-conditions-calibrated` | `docs/roadmaps/outdated/reference-team-roadmap-v2.8-s4.1-conditions-calibrated.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before S4.1 condition calibration | `v2.7-cp3-closed` | `docs/roadmaps/outdated/reference-team-roadmap-v2.7-cp3-closed.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before CP-3 closure | `v2.6-s4-cp3-dry-run` | `docs/roadmaps/outdated/reference-team-roadmap-v2.6-s4-cp3-dry-run.md` | `references/reference-team-roadmap.md` |
