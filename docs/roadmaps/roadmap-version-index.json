@@ -15,18 +15,30 @@
   "roadmaps": [
     {
       "roadmap_id": "references-team-roadmap",
-      "version": "v2.4-r9.2-plus-cp1-cautions",
+      "version": "v2.5-representation-sensitive-phase",
       "title": "References Team Roadmap",
       "status": "active",
       "path": "references/reference-team-roadmap.md",
       "owner": "references_team",
       "updated_on": "2026-04-29",
       "supersedes": [
+        "docs/roadmaps/outdated/reference-team-roadmap-v2.4-r9.2-plus-cp1-cautions.md",
         "docs/roadmaps/outdated/final-codex-handoff-roadmap-original.md",
         "knowledge/Exercise schema and quality/reference-team-roadmap Live version 28 April.md",
         "knowledge/Exercise schema and quality/roadmap-updated-repository-checked.md"
       ],
-      "notes": "Current operating roadmap for references, RAG data quality, exercise metadata overlays, and cross-team checkpoints."
+      "notes": "Current operating roadmap for references, RAG data quality, exercise metadata overlays, representation-sensitive micro-unit decomposition, and cross-team checkpoints."
+    },
+    {
+      "roadmap_id": "references-team-roadmap-v2.4",
+      "version": "v2.4-r9.2-plus-cp1-cautions",
+      "title": "References Team Roadmap before representation-sensitive phase",
+      "status": "outdated",
+      "path": "docs/roadmaps/outdated/reference-team-roadmap-v2.4-r9.2-plus-cp1-cautions.md",
+      "owner": "references_team",
+      "updated_on": "2026-04-29",
+      "superseded_by": "references/reference-team-roadmap.md",
+      "notes": "Snapshot archived before adding Phase RX Representation-Sensitive Micro-Unit Decomposition."
     },
     {
       "roadmap_id": "reference-system-final-codex-handoff",
@@ -116,4 +128,3 @@
     }
   ]
 }
-

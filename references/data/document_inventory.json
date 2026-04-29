@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1",
-  "generated_at": "2026-04-29T18:21:21.845Z",
+  "generated_at": "2026-04-29T18:26:21.625Z",
   "sprint_id": "R0.2",
   "scope": [
     "references",
@@ -3931,8 +3931,8 @@
       "path": "references/reference-team-roadmap.md",
       "file_name": "reference-team-roadmap.md",
       "extension": "md",
-      "size_bytes": 71636,
-      "sha256": "9f19a065c126cb78fd4548a8a64300178677abf35b6a8dc6cd64acf4d6571304",
+      "size_bytes": 82982,
+      "sha256": "36319bd0f00a8045756fcd5036aec36f5aae3bf1db1cc81e7a674d598e2718de",
       "layer": "planning",
       "authority_level": "authored_judgement",
       "source_type": "roadmap",

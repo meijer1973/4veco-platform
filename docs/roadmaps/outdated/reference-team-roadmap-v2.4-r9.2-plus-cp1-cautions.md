@@ -4,7 +4,7 @@ Generated: 2026-04-23
 Adopted main roadmap: 2026-04-25
 Last strategic update: 2026-04-29
 Roadmap ID: `references-team-roadmap`
-Roadmap version: `v2.5-representation-sensitive-phase`
+Roadmap version: `v2.4-r9.2-plus-cp1-cautions`
 Roadmap status: `active`
 Version index: `docs/roadmaps/roadmap-version-index.json`
 Scope: `references/`, `build-scripts/references/`, `build-scripts/reports/`, reference dashboards, and generated reference reports under `reports/`
@@ -15,7 +15,7 @@ The handoff roadmap has been adopted as the main operating roadmap for the refer
 
 No blocking incompatibility was found. The roadmap direction fits the repository: machine-edited references, evidence-first unit growth, JSON-first reports, review gates for pedagogical authority, and bounded later AI.
 
-Update 2026-04-29: R9.2 content graph projection is completed. The live roadmap is now narrowed further around exercise metadata quality, governed registries, representation-sensitive micro-unit decomposition, and RAG hardening. The immediate next sprint is Sprint 4 Exercise Metadata Overlay MVP, with CP-3 dry-run before bulk extension.
+Update 2026-04-29: R9.2 content graph projection is completed. The live roadmap is now narrowed further around exercise metadata quality, governed registries, and RAG hardening. The immediate next sprint is Sprint 4 Exercise Metadata Overlay MVP, with CP-3 dry-run before bulk extension.
 
 Compatibility decisions:
 
@@ -31,7 +31,6 @@ Compatibility decisions:
 - The exercise-schema roadmap restores the HCS two-axis role model (`instructional_role`, `assessment_role`), the four-field `scaffolding` object, and CP-1 through CP-8 cross-team checkpoints.
 - New registries under `references/machine/` remain future end states only. They require schema, CLI, validators, and mutation logs before machine files are created or changed.
 - `R9.2 Content Graph Projection` is completed. Owned-source content is queryable through a separate projection graph without changing R5 alignment authority.
-- `Phase RX Representation-Sensitive Micro-Unit Decomposition` is adopted as a dedicated reference-team phase. RX.1 is non-mutating inventory work; RX.2 and later mutations require human review, duplicate audit, CLI-only execution, and generator/operation-registry planning.
 
 ## Operating Rule
 
@@ -126,15 +125,9 @@ Open items are listed first; completed items are kept below them.
 | Sprint | Name | Completed | Current State |
 |--------|------|-----------|---------------|
 | Sprint 4 | Exercise Metadata Overlay MVP | no | Immediate next sprint. Add protected-source-safe exercise overlays with `instructional_role`, `assessment_role`, authority tier, scaffolding object, Bloom, instruction word, graph specs, precision lint status, evidence status, source version, and content status. CP-3 dry-run must pass before bulk extension. |
-| RX.1 | Representation-Operation Inventory | no | Planned after Sprint 4 as non-mutating inventory. Build the base-operation x representation x economic-context matrix and duplicate audit before any A61+ unit mutation. |
 | R8.1 | QC Issue Model | no | Planned early and scoped down. Define only the lightweight issue schema needed to expose evidence weakness, stale data, proof-to-close, and registry/report warnings. |
 | Sprint 6 | Bronnen Registry MVP | no | Planned. Create source-document registry schema/validator first; store under `references/machine/` only after CLI and validators exist. |
 | Sprint 7 | Skill And Operation Registry MVP | no | Planned. Separate unit IDs from fine-grained exercise operations and skill/category tags; preserve useful `skill-categories.md` content where still valid. |
-| RX.2 | Percentage And Index Representation Units | no | Planned after RX.1 review and CP4-compatible operation/registry decisions. CLI-only mutation for approved percentage/index representation units; candidate A61-A74 numbering must be verified at execution time. |
-| RX.3 | Producer Table And Graph Representation Units | no | Planned after RX.2. Review profit, break-even, TO/TK, GTK, MO/MK, table-difference, and producer-graph overlap before mutation. |
-| RX.4 | Elasticity And Market Diagram Representation Units | no | Planned after RX.3. Separate table extraction, graph extraction, elasticity interpretation, and existing market-intervention graph operations. |
-| RX.5 | Representation Operation Registry And Reports | no | Planned as the bridge to Sprint 7 output. Promote provisional representation-operation inventory only after schema, validator, and CLI path exist. |
-| RX.6 | Skill-Tree And Generator Integration | no | Planned after approved representation units. Requires generator coverage or explicit non-interactive status before any student-facing skill-tree use. |
 | Sprint 8 | Misconception Registry MVP | no | Planned. Create small misconception schema/validator and link recurring errors to units, terms, operations, and evidence where available. |
 | Sprint 9 | Unit Design Status And D04 Resolution | no | Planned. Resolve D04 as retire/merge/redistribute/split and decide whether `unit_design_status` is derived overlay or CLI-backed machine-unit field. |
 | Content Track 1 | Year-1 Target Exercise Coverage | no | Planned content-track work. Produce Year-1 paragraph coverage and missing-target exercise status for CP-6. |
@@ -660,207 +653,6 @@ Stop condition: do not reuse `required_skills` for a new concept until the migra
 
 Checkpoint: `GATE-CP4-skill-registry-coexistence`.
 
-### Phase RX Representation-Sensitive Micro-Unit Decomposition
-
-Purpose: strengthen the micro-teaching-unit registry by making explicit when students must combine a base calculation, representation reading, and economic interpretation.
-
-Core principle:
-
-```text
-A calculation skill is not complete until the student can execute it across the representations in which exam questions and lesson materials actually present the data.
-```
-
-Design distinction:
-
-- `base_operation`: the underlying calculation, such as percentage change, index calculation, profit, or elasticity.
-- `representation_reading`: the source-reading skill, such as table value selection, bar chart reading, line chart reading, pie chart share reading, P-Q graph reading, or producer graph reading.
-- `composed_application`: the combined skill of extracting values from the representation and then calculating/interpreting correctly.
-
-Do not solve this by bloating `aspects`. Keep `aspects` broad (`verbaal`, `grafisch`, `rekenen`). Use a provisional operation/representation inventory first, then promote to a governed registry only when schema, validator, CLI, and mutation-log workflows exist.
-
-Repository check as of 2026-04-29:
-
-- `A60` is currently the last live A-domain unit.
-- `A45` through `A60` exist and cover selected graph/table foundations from R4.5.
-- Candidate IDs `A61` and later are placeholders until execution; the mutation sprint must re-check the live registry before assigning IDs.
-- `unit-add.js` is the correct mutation mechanism, but CLI-ready specs must satisfy the current schema (`mastery_target`, `prior_learning`, `terms`, non-empty `aspects`, and A-domain generator handling).
-- `references/machine/README.md` still points to missing `knowledge/micro-teaching-units-plan.md`; treat this as a low-severity documentation issue, not a blocker for RX.1.
-
-#### RX.1 Representation-Operation Inventory
-
-Purpose: build the representation-operation inventory before minting any new units.
-
-Required work:
-
-- Scan target exercises, exam-question records, blueprint flags, owned-source projections, and existing A-domain units.
-- Identify every case where a calculation depends on values extracted from a representation.
-- Classify each case as:
-  - already covered;
-  - needs new representation-reading unit;
-  - needs new composed calculation unit;
-  - duplicate/merge candidate;
-  - hold for human review.
-- Produce a matrix:
-
-```text
-base operation x representation x economic context
-```
-
-Example rows:
-
-```text
-percentage_change x bar_chart x demand/sales
-percentage_change x line_chart x macro/time-series
-profit x table x producer
-profit x TO-TK graph x producer
-surplus x P-Q graph x market
-elasticity x demand curve x market
-```
-
-Candidate inventory path:
-
-```text
-references/data/sprints/RX.1-representation-operation-inventory.json
-```
-
-Required output:
-
-- sprint plan, baseline, result, and diff summary;
-- provisional inventory JSON;
-- duplicate/overlap report against existing A-units;
-- proposed mutation queue;
-- review packet under `reports/review-gates/GATE-RX1-representation-unit-scope/`.
-
-Acceptance tests:
-
-- every proposed unit has target-exercise evidence, exam-question evidence, or a clearly marked didactic-prior rationale;
-- no unit is proposed from syllabus text alone;
-- duplicates and overlap candidates are held, not minted;
-- candidate units distinguish base operation, representation reading, and composed application;
-- candidate IDs are marked provisional.
-
-Stop condition: no mutation in RX.1.
-
-Checkpoint: `GATE-RX1-representation-unit-scope`.
-
-#### RX.2 Percentage And Index Representation Units
-
-Purpose: implement the highest-value percentage/index representation branch after RX.1 review.
-
-Candidate scope, subject to duplicate audit and renumbering:
-
-- Representation-reading foundations: table value selection, bar-chart value reading, line-chart value reading, pie-chart share reading, absolute quantity from share and total, and source-based base/comparison value identification.
-- Percentage-change from representations: table, bar chart, line chart, percentage-point changes, and pie chart.
-- Index/growth from representations: index from table, index change from line graph, and percentage change from index numbers.
-
-Required work:
-
-- Run human review on the RX.1 queue.
-- Apply only approved units through `unit-add.js`.
-- Add dependency edges only through CLI.
-- Regenerate unit index, reports, RAG chunks, and health reports.
-- Add generator stubs or mark interactive generators as not yet implemented.
-
-Acceptance tests:
-
-- unit validator passes;
-- no unresolved `needs`;
-- no DAG cycles;
-- percentage-point versus percentage-change distinction is explicit;
-- pie-chart absolute/share distinction is explicit;
-- A-domain generator coverage is either implemented or explicitly tracked as blocked.
-
-#### RX.3 Producer Table And Graph Representation Units
-
-Purpose: add representation-sensitive profit/cost units after duplicate review.
-
-Candidate scope, subject to duplicate audit and renumbering:
-
-- total profit from revenue/cost table;
-- total profit from P, GTK, and Q;
-- break-even from TO-TK graph;
-- profit/loss from TO-TK graph;
-- maximum profit from TO-TK table;
-- profit rectangle in producer graph;
-- profit, loss, and break-even recognition in producer graph.
-
-Required work:
-
-- Review overlap with existing profit, break-even, MO/MK, GTK, table-difference, and producer-graph units.
-- Mint only missing composed representation skills.
-- Distinguish TO/TK graph, P/GTK/Q graph, and table-based profit comparison.
-
-Acceptance tests:
-
-- no duplicate of existing break-even/profit units;
-- every graph unit has a procedure that tells the student exactly what to read from the graph;
-- profit rectangle and vertical-distance logic are not conflated.
-
-#### RX.4 Elasticity And Market Diagram Representation Units
-
-Purpose: extend the representation model to elasticity and market diagrams.
-
-Candidate scope, subject to duplicate audit and renumbering:
-
-- elasticity from table values;
-- elasticity from demand graph;
-- revenue-change judgement with elasticity from source;
-- any approved market-graph gaps after audit.
-
-Required work:
-
-- Separate table extraction for elasticity, graph extraction for elasticity, interpretation of elastic/inelastic after calculation, and market-intervention graph operations already covered by A51/A56/A59.
-- Audit A19/A32/A40/D39/D40 before minting new surplus/welfare units.
-
-Acceptance tests:
-
-- no new unit duplicates A19/A32/A40/D39/D40;
-- graph-reading step is explicit before calculation;
-- elasticity sign and absolute-value interpretation are preserved.
-
-#### RX.5 Representation Operation Registry And Reports
-
-Purpose: make representation-sensitive operations durable.
-
-Required work:
-
-- Promote the provisional RX inventory into a governed registry only if Sprint 7 has provided the schema, validator, and CLI path.
-- Keep new machine registries as end-state only until CLI and validators exist.
-- Generate:
-  - `reports/representation-operation-coverage.md`;
-  - `reports/json/representation-operation-coverage.json`;
-  - `reports/graph-skill-tree.md`;
-  - `reports/representation-transfer-gaps.md`.
-
-Acceptance tests:
-
-- every representation-sensitive unit links to at least one operation record;
-- every operation record has status;
-- reports distinguish "calculation covered" from "calculation from representation covered."
-
-#### RX.6 Skill-Tree And Generator Integration
-
-Purpose: make approved representation-sensitive units usable in the student-facing skill tree only after data and generator readiness are clear.
-
-Required work:
-
-- Implement missing `GEN_A61+` generators or explicitly mark nodes as explanation-only/non-interactive until generators exist.
-- Add graph/representation skill-tree filters:
-  - percentage from representations;
-  - tables and charts;
-  - producer graphs;
-  - market diagrams;
-  - welfare graphs.
-- Update relevant paragraph `skilltree.skills` lists only through the normal platform/lesson workflow and with separate authorization for target output changes.
-
-Acceptance tests:
-
-- generator coverage report passes;
-- no skill-tree node points to a missing generator unless intentionally marked non-interactive;
-- generated lesson target validates after any authorized deploy.
-
-Stop condition: do not mutate `../4veco-lessen/` or student-facing output from a references sprint without explicit platform/lessen authorization.
-
 ### Sprint 8 Misconception Registry MVP
 
 Purpose: make recurring student errors retrievable and usable in exercise design.
@@ -1222,27 +1014,14 @@ Sprints:
 - `Sprint 4` planned: exercise metadata overlay MVP, including `instructional_role`, `assessment_role`, scaffolding object, and schema-extension dry run.
 - `Sprint 7` planned: skill and operation registry MVP, closing at `GATE-CP4-skill-registry-coexistence`.
 
-### Phase RX: Representation-Sensitive Micro-Unit Decomposition
-
-Goal: distinguish base calculations, representation-reading skills, and composed calculation-from-source applications before minting new A-domain transfer units.
-
-Sprints:
-
-- `RX.1` planned after Sprint 4: non-mutating representation-operation inventory and duplicate audit.
-- `RX.2` planned after RX.1 review and CP4-compatible registry decisions: percentage and index representation units.
-- `RX.3` planned: producer table and graph representation units.
-- `RX.4` planned: elasticity and market-diagram representation units.
-- `RX.5` planned: representation operation registry and reports, only after schema/validator/CLI path exists.
-- `RX.6` planned: skill-tree and generator integration, only with generator coverage or explicit non-interactive status.
-
 ### Phase R9: Owned Source Integration And Content Graph
 
 Goal: connect owned book and lesson material to the reference graph without confusing authored exposition with machine reference data.
 
 Sprints:
 
-- `R9.1` completed: owned source registry and blueprint source-reference repair.
-- `R9.2` completed: content graph projection.
+- `R9.1` planned after CP-1: owned source registry and blueprint source-reference repair.
+- `R9.2` planned: content graph projection.
 
 ### Phase R8: QC Issue Model And Registries
 
@@ -1296,7 +1075,6 @@ Sprints:
 | GATE-CP2-owned-source-scope | during R9.1 | yes | yes | content graph projection |
 | GATE-CP3-schema-extension-dry-run | before bulk exercise metadata extension | yes | yes | exercise metadata backfill |
 | GATE-CP4-skill-registry-coexistence | before skill/operation registry promotion | yes | yes | operation registry and exercise decomposition |
-| GATE-RX1-representation-unit-scope | before representation-sensitive unit mutations | yes | yes | RX.2+ unit mutation |
 | GATE-CP5-D04-resolution | before D-domain C-to-B promotion | yes | yes | exercise promotion on D-domain units |
 | GATE-CP6-year-1-paragraph-coverage | before Year-2 extension is considered ready | yes | yes | Year-2 extension confidence |
 | GATE-CP7-year-2-anchoring | before Year-2 Tier C authoring is treated as coherent | yes | yes | Year-2 skeleton progression |
@@ -1338,15 +1116,9 @@ S1 Schema audit and exercise naming contract (CP-1)
 R9.1 Owned source registry
 R9.2 Content graph projection
 Sprint 4 Exercise metadata overlay MVP (CP-3)
-RX.1 Representation-operation inventory (non-mutating)
 R8.1 Scoped QC issue model
 Sprint 6 Bronnen registry MVP
 Sprint 7 Skill and operation registry MVP (CP-4)
-RX.2 Percentage and index representation units
-RX.3 Producer table and graph representation units
-RX.4 Elasticity and market diagram representation units
-RX.5 Representation operation registry and reports
-RX.6 Skill-tree and generator integration
 Sprint 8 Misconception registry MVP
 Sprint 9 Unit design status and D04 resolution (CP-5)
 Content Track 1 Year-1 target exercise coverage (CP-6)

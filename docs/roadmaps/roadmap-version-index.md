@@ -12,12 +12,13 @@ docs/roadmaps/roadmap-version-index.json
 
 | Roadmap | Version | Path | Notes |
 |---|---|---|---|
-| References Team Roadmap | `v2.4-r9.2-plus-cp1-cautions` | `references/reference-team-roadmap.md` | Current operating roadmap for references, RAG data quality, exercise metadata overlays, and cross-team checkpoints. |
+| References Team Roadmap | `v2.5-representation-sensitive-phase` | `references/reference-team-roadmap.md` | Current operating roadmap for references, RAG data quality, exercise metadata overlays, representation-sensitive micro-unit decomposition, and cross-team checkpoints. |
 
 ## Outdated Archive
 
 | Roadmap | Version | Path | Superseded By |
 |---|---|---|---|
+| References Team Roadmap before representation-sensitive phase | `v2.4-r9.2-plus-cp1-cautions` | `docs/roadmaps/outdated/reference-team-roadmap-v2.4-r9.2-plus-cp1-cautions.md` | `references/reference-team-roadmap.md` |
 | 4veco-platform Reference/Data System Final Codex Handoff Roadmap | `legacy-2026-04-27` | `docs/roadmaps/outdated/final-codex-handoff-roadmap-original.md` | `references/reference-team-roadmap.md` |
 
 ## Historical Inputs
@@ -34,4 +35,3 @@ docs/roadmaps/roadmap-version-index.json
 ## Rule For Agents
 
 Do not treat proposal or archived roadmap files as current operating instructions. Check `status` in the JSON index first, then use the active roadmap path.
-
