@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "generated_by": "build-scripts/reports/generate-reference-health.js",
-  "generated_on": "2026-04-29T21:47:40.948Z",
+  "generated_on": "2026-04-29T21:58:10.628Z",
   "source_files": [
     "references/machine/micro-teaching-units.json",
     "references/machine/begrippen.json",
@@ -64,16 +64,44 @@
   },
   "unresolved_refs": {
     "status": "warn",
-    "issues": 43
+    "issues": 47
   },
   "qc_findings": {
-    "report_count": 12,
-    "total_issues": 369,
-    "high_or_critical_issues": 7,
+    "report_count": 13,
+    "total_issues": 381,
+    "high_or_critical_issues": 10,
     "by_report_status": {
       "pass": 6,
-      "warn": 6
+      "warn": 7
     }
+  },
+  "quality_issue_model": {
+    "source": "references/data/qc/reference-quality-issues.json",
+    "report": "reports/json/reference-quality-issues.json",
+    "status": "warn",
+    "issue_log_status": "active_internal_qc",
+    "issue_count": 8,
+    "active_issue_count": 8,
+    "by_status": {
+      "blocked": 2,
+      "deferred": 2,
+      "in_review": 1,
+      "open": 3
+    },
+    "by_category": {
+      "evidence_sufficiency": 1,
+      "extraction_integrity": 1,
+      "needs_gap": 1,
+      "production_readiness_warning": 1,
+      "report_drift": 1,
+      "source_version_drift": 1,
+      "term_link_gap": 1,
+      "unit_design": 1
+    },
+    "internal_only": true,
+    "curriculum_authority": false,
+    "student_facing_exposure": false,
+    "primary_evidence": false
   },
   "schema_validation_status": {
     "report_json_contract": "pass",

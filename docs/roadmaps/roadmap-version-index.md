@@ -12,12 +12,13 @@ docs/roadmaps/roadmap-version-index.json
 
 | Roadmap | Version | Path | Notes |
 |---|---|---|---|
-| References Team Roadmap | `v2.12-rx2-first-lane-applied` | `references/reference-team-roadmap.md` | Current operating roadmap after GATE-RX2 closed as pass_with_conditions and the six-unit RX.2 first lane was applied through CLI-only mutation with generator-blocked status. |
+| References Team Roadmap | `v2.13-r8.1-qc-issue-model` | `references/reference-team-roadmap.md` | Current operating roadmap after R8.1 added the scoped internal QC issue model, reference-quality-issues report, and reference-health/RAG data hook. |
 
 ## Outdated Archive
 
 | Roadmap | Version | Path | Superseded By |
 |---|---|---|---|
+| References Team Roadmap before R8.1 QC issue model | `v2.12-rx2-first-lane-applied` | `docs/roadmaps/outdated/reference-team-roadmap-v2.12-rx2-first-lane-applied.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before RX.2 first-lane CLI execution | `v2.11-rx2-first-lane-review-prepared` | `docs/roadmaps/outdated/reference-team-roadmap-v2.11-rx2-first-lane-review-prepared.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before RX.2 first-lane review packet | `v2.10-rx1-gate-closed` | `docs/roadmaps/outdated/reference-team-roadmap-v2.10-rx1-gate-closed.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before RX.1 gate closure | `v2.9-rx1-inventory-prepared` | `docs/roadmaps/outdated/reference-team-roadmap-v2.9-rx1-inventory-prepared.md` | `references/reference-team-roadmap.md` |

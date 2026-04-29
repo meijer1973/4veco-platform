@@ -1,0 +1,1475 @@
+# References Team Roadmap
+
+Generated: 2026-04-23
+Adopted main roadmap: 2026-04-25
+Last strategic update: 2026-04-29
+Roadmap ID: `references-team-roadmap`
+Roadmap version: `v2.12-rx2-first-lane-applied`
+Roadmap status: `active`
+Version index: `docs/roadmaps/roadmap-version-index.json`
+Scope: `references/`, `build-scripts/references/`, `build-scripts/reports/`, reference dashboards, and generated reference reports under `reports/`
+
+## Adoption Decision
+
+The handoff roadmap has been adopted as the main operating roadmap for the references team.
+
+No blocking incompatibility was found. The roadmap direction fits the repository: machine-edited references, evidence-first unit growth, JSON-first reports, review gates for pedagogical authority, and bounded later AI.
+
+Update 2026-04-29: RX.2 First-Lane Mutation Review closed as `pass_with_conditions`, then the six approved units were added through `unit-add.js`: `A61`, `A66`, `A67`, `A70`, `A72`, and `A74`. These units remain generator-blocked and non-interactive for student-facing skill-tree use until their generators are implemented and validated.
+
+Compatibility decisions:
+
+- Sprint `R0.1` now means the sprint-execution scaffold.
+- The older local `R0.1` / `R0.2` history is preserved as completed historical `H0.x` work, not as active roadmap numbering.
+- `R0.1 Sprint Execution Scaffold` is completed.
+- `R2.3 Human Review And Gate Closure` is completed with `GATE-R2-empty-needs` status `hold`.
+- `R2.4 Evidence And Unit-Design Cleanup` is completed as a non-mutating review packet.
+- `R3.2 Apply Reviewed Empty-Needs Corrections` is completed; the approved mutation set was applied through CLI.
+- Current catalog metrics reflect the post-merge `main` state after R7.5 validation.
+- `R3.1 Reference CLI And Documentation Completion` is completed. CLI documentation and command coverage now distinguish ready mutation paths from remaining blockers.
+- The active roadmap is narrowed to reference and RAG data quality. Delayed product surfaces such as diagnostics, adaptive routing, teacher cockpit, student-facing AI, games, simulations, privacy deployment, accessibility deployment, and continuous-improvement claims are intentionally out of scope for this roadmap until the data foundation is stronger.
+- The exercise-schema roadmap restores the HCS two-axis role model (`instructional_role`, `assessment_role`), the four-field `scaffolding` object, and CP-1 through CP-8 cross-team checkpoints.
+- New registries under `references/machine/` remain future end states only. They require schema, CLI, validators, and mutation logs before machine files are created or changed.
+- `R9.2 Content Graph Projection` is completed. Owned-source content is queryable through a separate projection graph without changing R5 alignment authority.
+- `Phase RX Representation-Sensitive Micro-Unit Decomposition` is adopted as a dedicated reference-team phase. RX.1 and GATE-RX2 closed as `pass_with_conditions`; RX.2 applied the bounded first lane through CLI-only mutation and now blocks student-facing use through explicit generator-block tracking.
+
+## Operating Rule
+
+Every sprint must keep plans and completion status explicit.
+
+Each sprint must have:
+
+- a committed sprint plan
+- an operationalized sprint procedure that expands the roadmap description into executable steps, decision points, stop conditions, outputs, and acceptance tests
+- a baseline report
+- bounded allowed and forbidden paths
+- acceptance tests
+- a result report
+- a diff summary
+- a completion status in this roadmap
+- a deterministic sprint-bundle check before completion
+
+The sprint plan must be more detailed than the sprint row in this roadmap. It must preserve every substantive instruction from the roadmap phase, sprint description, review-gate model, and current-state notes. If an instruction exists in the roadmap but is missing from the sprint plan, the plan is incomplete and the sprint must not proceed.
+
+Machine-reference changes must go through CLI scripts. Do not hand-edit `references/machine/` or `references/external/`.
+
+## Sprint Planning Contract
+
+This contract applies to every sprint in the ledger.
+
+Before execution, the sprint plan must include an `Operationalized sprint procedure` section that answers:
+
+- what exact sequence of work will happen
+- which roadmap instructions are being carried forward
+- what artifacts prove the work happened
+- what validators must pass
+- what requires human review
+- where the agent must stop
+
+For human-review gates, the procedure must include the full interview or review protocol, not only the final gate status. R2.3 is the reference example: the plan must include calibration questions, answer recording, pattern analysis, targeted follow-ups, closure proposal, explicit human confirmation, and only then gate records.
+
+Human-review interviews must be interactive: ask one question at a time, offer clear multiple-choice options where useful plus an open-answer option, record the answer, and then choose the next question or next interview mode. Do not dump a full interview list at the human reviewer. Include enough context in each question that the reviewer does not need to look up unit IDs or shorthand labels.
+
+After a gate is closed, `gate-closure.json` is the canonical status file. Review packets can remain historically accurate with "prepared/not closed" wording from their creation moment; agents must check the closure file before drawing current gate-status conclusions.
+
+## Subagent And Verification Structure
+
+Subagents are part of the sprint control system, not a substitute for it.
+
+Default sprint structure:
+
+1. A planning/review subagent checks whether the sprint plan fully operationalizes the roadmap description, baseline, required logs, stop conditions, and review gates.
+2. The main agent executes the sprint and keeps ownership of integration, file changes, and roadmap state.
+3. Specialist subagents may review bounded pedagogy, evidence, data-integrity, code, or dashboard questions.
+4. A verification subagent reviews the completed artifacts or test evidence before the sprint is considered done when the sprint has meaningful risk.
+5. The deterministic sprint-bundle checker verifies that required logs exist and point to each other.
+
+The deterministic checker cannot prove pedagogical quality. It must prove the mechanical part: plan, plan JSON, baseline, result, diff summary, result JSON, protected-surface declarations, and validator references.
+
+## Cross-Team Checkpoints
+
+The current roadmap uses cross-team checkpoints to keep reference engineering and content strategy synchronized. Target dates are capacity-bound planning targets, not delivery promises.
+
+Each checkpoint follows the existing review-gate discipline:
+
+```text
+subagent review -> human review -> recorded decision
+```
+
+Allowed decisions:
+
+```text
+pass | pass_with_conditions | hold
+```
+
+Checkpoint artifacts belong under:
+
+```text
+reports/review-gates/<gate-id>/
+```
+
+| Checkpoint | Capacity-bound target | Gate ID | Track gate | Engineering produces | Content reviews |
+|---|---:|---|---|---|---|
+| CP-1 Schema audit review | 2026-05-08 | `GATE-CP1-schema-audit` | Pre-R9.1 | Audit table plus vocabulary-rename and overlay proposal | Audit covers Bloom, vraagtype, instruction word, dual-coding stage, level, graph specs, precision lint, and direct eindterm linkage |
+| CP-2 R9.1 owned-source scope review | 2026-05-15 | `GATE-CP2-owned-source-scope` | During R9.1 | Source-surface list with status and authority labels | All relevant companion artefact types are represented; authority weights match content reality |
+| CP-3 Schema extension dry run | 2026-06-05 | `GATE-CP3-schema-extension-dry-run` | Pre-bulk extension | One Tier A item and one Tier C target exercise manually represented in the proposed schema | Round trip is lossless enough that a reviewer can reconstruct the exercise without ambiguity |
+| CP-4 Skill registry coexistence | 2026-06-19 | `GATE-CP4-skill-registry-coexistence` | Pre-skill-registry promotion | Three-layer hierarchy: categories on exercise, aspects on unit, fine-grained exercise operations | `skill-categories.md` content is preserved where still valid, including CvTE A mapping, vraagtype mapping, Bloom levels, and distribution rules |
+| CP-5 D04 resolution | 2026-07-03 | `GATE-CP5-D04-resolution` | Pre-promotion on D-domain | D04 split/retire/redistribute proposal plus dependent-unit audit | VWO economics review checks the decision against actual D-domain exam items |
+| CP-6 Year-1 paragraph-coverage closeout | 2026-07-24 | `GATE-CP6-year-1-paragraph-coverage` | Pre-Year-2 extension | `reports/blueprint-coverage.md` | Year 1 stays open if paragraph target coverage or precision status is not acceptable |
+| CP-7 Year-2 anchoring review | 2026-09-04 | `GATE-CP7-year-2-anchoring` | Parallel content-track gate, pre-Year-2 Tier C authoring | Year-2 skeleton with CvTE-vwo anchor status per paragraph | `concept_orphan` rates and sequencing chains are coherent against Year 1 |
+| CP-8 RAG eval content coverage | 2026-09-25 | `GATE-CP8-rag-eval-content-coverage` | During R7.6 | Expanded retrieval eval set, target 50-100 cases | Includes content-side queries from HCS feedback, including negative and ambiguity cases |
+
+## Sprint Ledger
+
+Open items are listed first; completed items are kept below them.
+
+| Sprint | Name | Completed | Current State |
+|--------|------|-----------|---------------|
+| R8.1 | QC Issue Model | no | Planned early and scoped down. Define only the lightweight issue schema needed to expose evidence weakness, stale data, proof-to-close, and registry/report warnings. |
+| Sprint 6 | Bronnen Registry MVP | no | Planned. Create source-document registry schema/validator first; store under `references/machine/` only after CLI and validators exist. |
+| Sprint 7 | Skill And Operation Registry MVP | no | Planned. Separate unit IDs from fine-grained exercise operations and skill/category tags; preserve useful `skill-categories.md` content where still valid. |
+| RX.3 | Producer Table And Graph Representation Units | no | Planned after RX.2. Review profit, break-even, TO/TK, GTK, MO/MK, table-difference, and producer-graph overlap before mutation. |
+| RX.4 | Elasticity And Market Diagram Representation Units | no | Planned after RX.3. Separate table extraction, graph extraction, elasticity interpretation, and existing market-intervention graph operations. |
+| RX.5 | Representation Operation Registry And Reports | no | Planned as the bridge to Sprint 7 output. Promote provisional representation-operation inventory only after schema, validator, and CLI path exist. |
+| RX.6 | Skill-Tree And Generator Integration | no | Planned after approved representation units. Requires generator coverage or explicit non-interactive status before any student-facing skill-tree use. |
+| Sprint 8 | Misconception Registry MVP | no | Planned. Create small misconception schema/validator and link recurring errors to units, terms, operations, and evidence where available. |
+| Sprint 9 | Unit Design Status And D04 Resolution | no | Planned. Resolve D04 as retire/merge/redistribute/split and decide whether `unit_design_status` is derived overlay or CLI-backed machine-unit field. |
+| Content Track 1 | Year-1 Target Exercise Coverage | no | Planned content-track work. Produce Year-1 paragraph coverage and missing-target exercise status for CP-6. |
+| Content Track 2 | Year-1 Precision And Dual-Coding Audit | no | Planned content-track work. Record precision lint and dual-coding status for exercise surfaces where applicable. |
+| Content Track 3 | Year-2 Skeleton | no | Planned parallel content-track work. Prepare Year-2 skeleton with CvTE-vwo anchor status and `concept_orphan` flags for CP-7; not an engineering Phase E blocker. |
+| R7.6 | RAG Quality Hardening | no | Planned. Close R7.4 follow-ups, split target-exercise chunks, expand retrieval eval coverage, backfill evidence anchors, and improve approved/pending/diagnostic labels. |
+| R14.1 | Curriculum Versioning | no | Planned, minimal. Track source/curriculum versions so retrieval does not silently mix syllabus, exam-program, blueprint, or owned-source versions. |
+| Sprint 12 | Exam And Target Exercise Decomposition Backfill | no | Planned after schema/overlay work. Backfill exercise metadata for the 349 exam questions and 49 target exercises through protected-source-safe overlays. |
+| Sprint 13 | Composition Pattern Registry | no | Planned. Define reusable exercise-composition patterns for internal authoring support, not automatic student-facing publication. |
+| Sprint 14 | C-to-B Promotion Workflow | no | Planned only after schema audit, owned-source registry, exercise overlays, D04/unit-design status, R7.6, R14.1, and precision lint path are ready. |
+| Product Gate | Re-Evaluate R10-R13 Product Surfaces | no | Blocked. Diagnostics, adaptive routing, student-facing AI, teacher cockpit deployment, automatic sequencing, mastery, and summative uses remain out of scope until data-quality gates justify them. |
+| RX.2 | First-Lane Mutation Review And CLI Execution | yes | Completed. `GATE-RX2-first-lane-mutation-review` closed as `pass_with_conditions`; `A61`, `A66`, `A67`, `A70`, `A72`, and `A74` were added through `unit-add.js`; all six remain generator-blocked/non-interactive until generator implementation and validation. |
+| GATE-RX2 | First-Lane Mutation Review | yes | Closed as `pass_with_conditions`. Authorized CLI-only mutation for the six-unit first lane and preserved blocks on deferred candidates, generator exposure, and student-facing/adaptive/product uses. |
+| RX.1 | Representation-Operation Inventory | yes | Completed through the non-mutating inventory/review-packet stop point. Prepared 29 operation records, 24 provisional candidates, 5 held duplicate/overlap records, and `GATE-RX1-representation-unit-scope`. |
+| GATE-RX1 | Representation Unit Scope Review | yes | Closed as `pass_with_conditions`. RX.2 planning is authorized for the bounded first lane only; direct mutation remains blocked until explicit RX.2 mutation review and CLI-backed execution. |
+| S4.1 | Exercise Overlay Conditions And Calibration | yes | Completed on 2026-04-29. Implemented CP-3 condition artifacts, source-annex gap tracker, scaffolding calibration, graph-spec representation plan, product-boundary warnings, condition validator, and condition reports. No bulk extension or source mutation authorized. |
+| R9.2 | Content Graph Projection | yes | Completed. Created a separate owned-content projection graph with 1,464 typed edges, RAG owned-content chunks, coverage reports, and 10/10 retrieval eval pass state while preserving CP-2 evidence boundaries. |
+| S4 | Exercise Metadata Overlay MVP | yes | Completed on 2026-04-29 with CP-3 status `pass_with_conditions`. Created overlay schema, one Tier A dry-run overlay, one Tier C dry-run overlay, validator, and CP-3 closure. No bulk extension or source mutation authorized. |
+| R9.1 | Owned Source Registry | yes | Completed with `pass_with_conditions`. Registered owned-source surfaces, repaired blueprint refs, prepared CP-2, and authorized R9.2 with projection-edge defaults and evidence-boundary conditions. |
+| S1 | Schema Audit And Exercise Naming Contract | yes | Completed. `GATE-CP1-schema-audit` closed as `pass_with_conditions`; naming contract, role split, scaffolding object, and overlay-first strategy are approved. |
+| R7.4 | RAG Review Gate | yes | Completed with `pass_with_conditions`. Internal and teacher-facing non-authoritative retrieval plus human-reviewed lesson-authoring support are allowed; student-facing diagnostics, adaptive routing, AI, automatic sequencing, mastery decisions, and summative use remain blocked. |
+| R7.5 | Merge Readiness and Main Sync | yes | Completed. Branch synced with `origin/main`, duplicate R5 gate namespace resolved, stray roadmap artifact moved to `docs/roadmaps/`, validators pass, and merge-readiness report says ready for merge review. |
+| R9.0 | Legacy Target Reference Minimization | yes | Completed. Minimized the frozen legacy target as a conceptual anchor before R9.1 while preserving functional legacy paths and guardrails. |
+| R9.01 | Legacy Folder Rename | yes | Completed. Renamed repo-local legacy folders to `legacy-target` while preserving the frozen external lesson target. |
+| R7.3 | Retrieval Evaluation Set | yes | Completed. Added fixed retrieval eval set, runner, validator, JSON results, and Markdown report; 10/10 cases pass with zero authority violations. |
+| R7.2 | Hybrid Retrieval | yes | Completed. Added internal deterministic query prototype preserving source authority, evidence IDs, edge status, and generated-report warnings. |
+| R7.1 | Deterministic Chunk Layer | yes | Completed. Added deterministic internal RAG chunk index with 842 chunks and authority metadata preserving generated-report safeguards. |
+| R6.2 | Reference Health Dashboard Data | yes | Completed. Added `reports/json/reference-health.json` and Markdown projection with R5.3 graph-authority constraints and dashboard health summaries. |
+| R6.1 | JSON-First Reports | yes | Completed. Added JSON-first report generation and validation for 10 required health/coverage reports, plus Markdown projections under `reports/markdown/`. |
+| R5.3 | Alignment Graph Review Gate | yes | Completed with `pass_with_conditions`. Named graph edge groups are approved for internal dashboard/reporting and internal retrieval development/evaluation; student diagnostics, adaptive routing, and student-facing AI remain blocked. |
+| R5.2 | Alignment Graph | yes | Completed. Built the first draft alignment graph from R5.1 evidence anchors: 31 edges, 13 pending main edges, 18 traceability edges, and 0 human-approved edges. |
+| R5.1 | Evidence-Anchor Layer | yes | Completed. Created the first governed evidence-anchor layer: source-ranking policy, 15 anchors, 13 claims, schemas, validator, and status reports. |
+| R4.3 | Blueprint Flag Triage | yes | Completed. Triaged all 84 current raw target-exercise missing-unit flags into a curated backlog: 68 still needed, 4 existing-unit match candidates, 1 duplicate, and 11 deferred. |
+| R4.4 | Micro-Teaching Unit Quality Packet | yes | Completed. Created non-mutating packet for 48 empty-needs units, 44 missing term-link units, 2 unresolved term strings, and 84 blueprint flags; R4.5 requires human review before mutation. |
+| R4.5 | Apply Reviewed Micro-Unit Corrections | yes | Completed. Applied the bounded human-reviewed mutation set through CLI: 2 B-domain terms, 13 dependency edges, 19 micro-units, regenerated reports/RAG surfaces, and preserved held design-review items. |
+| R4.2 | Exam-Question Extraction Gap Closure | yes | Completed. Produced a non-mutating gap report and patch queue for 27 exam-question records with missing required-skill annotations; protected references were not changed. |
+| R4.1 | Unit-Term Slug Migration | yes | Completed. Migrated safe unit `terms` values to canonical `begrippen.json` slug IDs through a validated migration script; left `alternatieve kosten` and `schaarste` unresolved for later term-registry review. |
+| R3.2 | Apply Reviewed Empty-Needs Corrections | yes | Completed. Applied the bounded R2.4 mutation-review set through CLI: 15 dependency edges and 6 `underbouw_assumed` classifications. No D04, rejected market-graph, held A-domain, L09->L03, or H13 mutations were applied. |
+| R3.1 | Reference CLI And Documentation Completion | yes | Completed. CLI docs now reflect implemented scripts; coverage report status is `ready_with_blockers`; zero-needs review fields round-trip through parser, formatter, validation, and JSON projection. |
+| R2.4 | Evidence And Unit-Design Cleanup | yes | Completed. Non-mutating packet attaches exact evidence to selected candidate edges, resolves D04 as unit-design-required, classifies foundational A-domain zero-needs candidates, preserves rejected market-graph suggestions, and records a bounded labor-market/unemployment second pass. |
+| R2.3 | Human Review And Gate Closure | yes | Completed with GATE-R2 status `hold`. The audit was diagnostic only; R2.4 produced the non-mutating packet and R3.2 later applied only the human-approved CLI mutation set. |
+| R2.2 | Subagent Review For Empty Needs | yes | Completed. Pedagogy, data-integrity, and evidence reviews plus a GATE-R2 review packet are ready for human review. |
+| R2.1 | Full Empty-Needs Audit | yes | Completed. Non-mutating audit generated 61 machine-suggested empty-needs review entries for the current branch catalog. |
+| R1.3 | Unit Prior-Knowledge Schema Extension | yes | Completed. Unit and review schemas now support zero-needs status, assumed prior knowledge, and review records. |
+| R1.2 | Core JSON Schemas | yes | Completed. Initial JSON schema contracts exist for units, terms, evidence, graph edges, reports, RAG chunks, and reference-quality records. |
+| R1.1 | Source-of-Truth Decision | yes | Completed. `references/SOURCE_OF_TRUTH.md` defines canonical source, projection, authority, and edit-policy rules. |
+| R0.2 | Reference Baseline Inventory | yes | Completed. Source manifest, document inventory, builder, and validators now define the baseline reference/report/tooling surface. |
+| R0.1 | Sprint Execution Scaffold | yes | Completed. Sprint templates, example fixtures, JSON sprint metadata, and plan/result validators exist. |
+| H0.1 | A-Domain Skilltree Consistency | yes | Historical completed work. `A38` through `A44` implemented; A-domain skilltree coverage matches the catalog. |
+| H0.2 | Reference Report Regeneration | yes | Historical completed work. Core reports regenerated and aligned with the catalog. |
+| H0.3 | Labor-Market Unit And Dependency Patch | yes | Historical branch work. Not present in the current 190-live-unit catalog; labor-market/unemployment sequencing is reopened under R2.4. |
+
+## Detailed Sprint Backlog
+
+The sprint ledger is a quick status table. This section is the readable backlog. Sprint plans must operationalize these descriptions, not only copy the ledger row.
+
+### S1 Schema Audit And Exercise Naming Contract
+
+Purpose: start the approved exercise-schema roadmap with a non-mutating audit. The audit must compare the current repository data shapes with the schema and field names proposed by HCS, Head of Engineering, and the repository-checked roadmap.
+
+Required work:
+
+- Compare current data shapes in:
+  - `references/schemas/exam-question.schema.json`
+  - `references/schemas/target-exercise.schema.json`
+  - `references/schemas/rag-chunk.schema.json`
+  - `references/external/exam-questions.json`
+  - `references/authored/course-target-exercises.json`
+  - `references/data/rag/chunk_index.jsonl`
+- Resolve the naming contract:
+  - `required_units` for micro-teaching-unit IDs.
+  - `exercise_operations` for fine-grained exercise actions.
+  - `skill_tags` or `skill_category_tags` for broader skill taxonomy labels.
+- Preserve the HCS role split:
+  - `instructional_role`: `worked_example`, `startoefening`, `independent_practice`, `interleaving`, `target`, `verdieping`, `consolidatie`, `instapquiz`, `diagnostic`, `nieuws`.
+  - `assessment_role`: optional; omit the field when absent. Allowed v1 values are `exam_mirror`, `bridge`, and `prerequisite`.
+- Preserve the HCS scaffolding object:
+  - `verbal_level`: integer 0-5.
+  - `visual_stage`: integer 1-4.
+  - `fading_position`: integer.
+  - `dual_coding_present`: boolean.
+- Decide which fields belong in source files and which belong in protected-source-safe overlays under `references/data/exercises/`.
+- Confirm the corrected SVG verifier path: `build-scripts/lib/verify_svg_geometry.py`, or propose a wrapper if the future field expects a shorter path.
+- Produce the CP-1 review packet and gate artifacts under `reports/review-gates/GATE-CP1-schema-audit/`.
+
+Required output: sprint plan, baseline, schema-audit report, vocabulary decision table, overlay strategy, CP-1 review packet, result report, diff summary, and sprint metadata.
+
+Stop condition: do not mutate `references/machine/`, `references/external/`, or bulk exercise data during S1. Stop at CP-1 if the schema audit finds a naming or compatibility issue that cannot be represented safely.
+
+Checkpoint: `GATE-CP1-schema-audit`.
+
+Completion: completed on 2026-04-28 with `pass_with_conditions`. CP-1 approved the schema naming and storage strategy, not bulk metadata implementation. `required_skills` remains a legacy/source field until explicit migration; `assessment_role` is omitted when absent; external overlays must carry source stable ID and curriculum version; and bulk metadata backfill remains blocked until Sprint 4 and CP-3 dry-run.
+
+### R2.4 Evidence And Unit-Design Cleanup
+
+Purpose: respond to `GATE-R2-empty-needs` closing as `hold`. The empty-needs audit is useful, but it is not enough to authorize dependency mutation.
+
+Required work:
+
+- Attach exact exam or target-exercise evidence to any candidate prerequisite edge before it can later be applied.
+- Resolve `D04 Elasticiteit en goederenclassificatie` as a unit-design issue. Goods classification belongs inside the relevant elasticity units unless evidence proves a separate unit is needed.
+- Classify foundational A-domain empty-needs units, especially `underbouw_assumed` cases.
+- Run a second pedagogical pass for labor-market and unemployment sequencing.
+- Preserve rejected machine suggestions such as `D10 -> D01/D03`, `D13 -> D03`, and `D32 -> D01/D03` as rejected unless new evidence proves otherwise.
+
+Required output: a review-ready evidence and unit-design packet that states which edges are evidence-backed, which units need design changes, and what remains blocked.
+
+Stop condition: do not edit `references/machine/`; do not proceed to R3.2 until this packet exists and is reviewed.
+
+### R3.1 Reference CLI And Documentation Completion
+
+Purpose: make sure the CLI layer can safely apply reviewed reference changes without hand-editing protected files.
+
+Required work:
+
+- Audit the existing `build-scripts/references/` commands against the actual mutations needed after R2.4.
+- Update stale documentation that still describes the CLI as a future contract.
+- Add missing validators for any mutation command that can affect unit dependencies, unit status, term links, or evidence anchors.
+
+Required output: CLI documentation and command coverage report.
+
+Stop condition: if a required correction cannot be expressed through CLI, build or specify the CLI first; do not hand-edit machine references.
+
+Completion: completed on 2026-04-26. `reports/reference-cli-coverage.md` and `reports/json/reference-cli-coverage.json` record status `ready_with_blockers`. Human mutation review later authorized a bounded R3.2 mutation set. D04 lifecycle work remains out of scope until a separate unit-design decision is made.
+
+### R3.2 Apply Reviewed Empty-Needs Corrections
+
+Purpose: apply only reviewed and evidence-backed corrections from R2.4 through CLI.
+
+Required work:
+
+- Apply accepted prerequisite edges only when exact evidence is attached.
+- Apply accepted `underbouw_assumed` classifications only through the approved workflow.
+- Skip blocked items: `D04` until unit design is resolved, labor-market sequencing until the second pass closes, and rejected graph edges unless new evidence overturns the rejection.
+
+Required output: CLI mutation log, regenerated reports, and a diff summary proving protected changes were script-produced.
+
+Stop condition: blocked while the R2.4 packet has not been human-reviewed for mutation decisions or while R3.1 has not confirmed CLI/validator readiness.
+
+Completion: completed on 2026-04-26. Human mutation review exists at `reports/review-gates/GATE-R2-empty-needs/R2.4-mutation-review.md` and `.json`. R3.2 applied only the approved bounded mutation set through CLI. Mutation log: `reports/review-gates/GATE-R2-empty-needs/R3.2-mutation-log.md`.
+
+### R4.1 Unit-Term Slug Migration
+
+Purpose: migrate unit `terms` fields from old canonical text strings to canonical `begrippen.json` slug IDs.
+
+Required work:
+
+- Produce a mapping from current unit term strings to term slugs.
+- Flag ambiguous or missing mappings for human review.
+- Apply safe mappings through CLI or a validated migration script.
+
+Required output: migration report, unresolved mapping queue, regenerated term coverage.
+
+Stop condition: do not silently create new term slugs or rewrite term meaning during migration.
+
+Completion: completed on 2026-04-26. `build-scripts/references/unit-term-slug-migration.js` applied only safe exact mappings. Initial write changed 79 units, left `alternatieve kosten` and `schaarste` unresolved, and created no new term slugs. `reports/terminology-drift.md` now validates against `begrippen.json` as the primary registry so migrated slug IDs are not false positives.
+
+### R4.2 Exam-Question Extraction Gap Closure
+
+Purpose: improve links between exam questions, required skills, exam codes, and teaching units.
+
+Required work:
+
+- Identify exam-question records with missing required-skill or exam-code links.
+- Attach evidence from actual CvTE questions or target exercises.
+- Keep syllabus clauses as grouping/coverage context, not as the reason to mint units.
+
+Required output: extraction gap report and reviewed patch queue.
+
+Stop condition: do not invent skills from syllabus prose alone.
+
+Completion: completed on 2026-04-26 as a non-mutating audit. `build-scripts/references/exam-question-gap-audit.js` produced `reports/exam-question-extraction-gaps.md` and `.json`. The queue contains 27 records with missing `required_skills`; 19 also miss `exam_codes`. Current annotations contain 0 invalid unit IDs and 0 invalid exam codes. No files in `references/external/` or `references/machine/` were changed.
+
+### R4.3 Blueprint Flag Triage
+
+Purpose: convert raw blueprint missing-unit flags into curated decisions.
+
+Required work:
+
+- Separate true missing units, existing-unit matches, duplicates, low-priority ideas, and reject/hold cases.
+- Prioritize flags backed by target exercises.
+- Produce a backlog that can feed later CLI unit creation or evidence work.
+
+Required output: curated blueprint flag backlog with decision category, evidence, and next action.
+
+Stop condition: do not auto-mint units from blueprint prose.
+
+Completion: completed on 2026-04-26 as a non-mutating triage. `build-scripts/references/check-target-exercise-flags.js` produced `reports/blueprint-flag-triage.md` and `.json`. All 84 current raw flags are triaged: 68 `still_needed`, 4 `existing_unit_match`, 1 `duplicate`, and 11 `defer`. No files in `references/machine/`, `references/external/`, or `references/authored/course-target-exercises.json` were changed.
+
+### R4.4 Micro-Teaching Unit Quality Packet
+
+Purpose: gather the remaining micro-teaching-unit quality issues into a single review packet before any further machine-reference mutation.
+
+Required work:
+
+- classify the remaining empty-needs units after R3.2
+- classify live units without term links
+- carry forward unresolved term strings from R4.1
+- carry forward R4.3 blueprint missing-unit triage into mutation-review categories
+- separate reviewed non-mutations, ready-for-review candidates, unit-design issues, existing-unit-match candidates, duplicates, and deferred items
+- produce a packet that can be reviewed before R4.5
+
+Required output: `reports/review-gates/GATE-R4-micro-unit-quality/R4.4-micro-unit-quality-packet.md` and `.json`.
+
+Stop condition: do not edit `references/machine/`; R4.4 is non-mutating.
+
+Completion: completed on 2026-04-27. Packet produced at `reports/review-gates/GATE-R4-micro-unit-quality/R4.4-micro-unit-quality-packet.md` and `.json`. The packet authorizes no mutation by itself; R4.5 is blocked on human review of the packet.
+
+### R4.5 Apply Reviewed Micro-Unit Corrections
+
+Purpose: apply only reviewed R4.4 packet items through the reference CLI.
+
+Required work:
+
+- use R4.4 packet decisions as the only mutation source
+- apply approved dependency edges, term links, unit additions, unit deprecations, or unit-design changes through CLI only
+- generate a mutation log and diff summary
+- regenerate reference reports, reference health, RAG chunks, and retrieval evals
+- stop if validation fails, creates a cycle, creates unresolved IDs, or requires hand editing machine references
+
+Required output: CLI mutation log, regenerated reports, and a reviewed result report.
+
+Stop condition: no mutation is allowed unless it is explicitly approved from the R4.4 packet or a follow-up human decision record.
+
+Completion: completed on 2026-04-28. Human decision recorded at `reports/review-gates/GATE-R4-micro-unit-quality/R4.5-human-review-decision.md` and `.json`. Mutation log recorded at `reports/review-gates/GATE-R4-micro-unit-quality/R4.5-mutation-log.md` and `.json`. R4.5 added `schaarste` and `alternatieve-kosten`, updated `B02` to the canonical term slug, applied 13 approved dependency edges, and minted 19 approved Book 1/2 foundation micro-units through CLI only. Held items (`A42`, `D32`, `D02`, `G11`, `H16`, `H21`, `A11`/`3.1.2`, and `F16` terminology) remain future review work.
+
+### R5.1 Evidence-Anchor Layer
+
+Purpose: create exact proof anchors for important claims, prerequisite edges, term definitions, and unit decisions.
+
+Required work:
+
+- Define evidence-anchor schema and source ranking.
+- Attach anchors to high-risk decisions first: prerequisite edges, elasticity decisions, labor-market sequencing, and exam links.
+- Distinguish external authority, owned source material, machine registry, and generated reports.
+
+Required output: evidence-anchor records plus validator.
+
+Stop condition: do not let reports or summaries become primary evidence.
+
+Completion: completed on 2026-04-26. R5.1 added `references/data/evidence-anchors.json`, operational evidence-anchor and claim schemas, `build-scripts/references/check-evidence-anchors.js`, and status reports. The first layer contains 15 evidence anchors and 13 claims. Generated reports are explicitly secondary and the validator rejects generated-report anchors marked as primary.
+
+### R5.2 Alignment Graph
+
+Purpose: create graph edges between units, terms, evidence, questions, procedures, misconceptions, and later content surfaces.
+
+Required work:
+
+- Build graph edges only from evidence-backed relationships.
+- Separate prerequisite, supports, assesses, explains, contradicts, and derived-from edge types.
+- Produce graph integrity reports.
+
+Required output: alignment graph data and integrity report.
+
+Stop condition: graph must not become pedagogically authoritative before R5.3 closes.
+
+Completion: completed on 2026-04-26. R5.2 added `references/data/alignment-graph.json`, `build-scripts/references/build-alignment-graph.js`, `build-scripts/references/check-alignment-graph.js`, and graph integrity reports. R5.3 later approved only named edge groups with conditions; unreviewed graph edges remain pending or diagnostic.
+
+### R5.3 Alignment Graph Review Gate
+
+Purpose: human-review the alignment graph before it powers retrieval, diagnostics, dashboards, or adaptive decisions.
+
+Required work:
+
+- Prepare a review packet with samples from high-risk domains.
+- Run subagent reviews for pedagogy, evidence, and data integrity.
+- Conduct an interactive human review and record the gate decision.
+
+Required output: gate packet, human interview, gate closure JSON, validator.
+
+Stop condition: retrieval and diagnostics cannot depend on the graph until this gate allows it.
+
+Completion: completed on 2026-04-27 with `pass_with_conditions`. The gate approves only named edge groups, not the whole graph as pedagogically authoritative. Internal dashboard/reporting and internal retrieval development/evaluation may proceed if edge status, source authority, evidence anchors, diagnostic flags, and generated-report warnings are preserved. Student diagnostics, adaptive routing, student-facing AI, automatic mastery decisions, and summative assessment decisions remain blocked.
+
+### R6.1 JSON-First Reports
+
+Purpose: make Markdown reports projections of structured report JSON instead of primary data.
+
+Required work:
+
+- Define report JSON schemas.
+- Convert priority reports: needs, terms, procedures, aspects, unresolved refs, dead units.
+- Keep Markdown readable but generated from JSON.
+
+Required output: JSON report files, Markdown projections, report validators.
+
+Stop condition: do not make dashboards scrape Markdown as the long-term data interface.
+
+Completion: completed on 2026-04-27. R6.1 added `build-scripts/reports/generate-all.js`, `build-scripts/reports/validate-report-json.js`, 10 required JSON report files under `reports/json/`, and readable projections under `reports/markdown/`. Generated reports remain diagnostic and do not replace source evidence.
+
+### R6.2 Reference Health Dashboard Data
+
+Purpose: produce one generated reference-health state file for dashboards and planning.
+
+Required work:
+
+- Combine report JSON into a dashboard-ready state file.
+- Include sprint status, gate status, quality categories, blockers, and trend-friendly counts.
+- Keep teacher/student data out of reference health.
+
+Required output: `reports/json/reference-health.json` or successor plus dashboard integration.
+
+Stop condition: dashboard must remain internal/developer-facing.
+
+Completion: completed on 2026-04-27. R6.2 added `build-scripts/reports/generate-reference-health.js`, `build-scripts/reports/check-reference-health.js`, `reports/json/reference-health.json`, and `reports/markdown/reference-health.md`. The state file explicitly blocks student diagnostics, adaptive routing, and student-facing AI.
+
+### R7.1 Deterministic Chunk Layer
+
+Purpose: build retrieval chunks from source-ranked, deterministic references.
+
+Required work:
+
+- Define chunk schema, source rank, stable IDs, and provenance.
+- Chunk external, authored, machine, and report surfaces according to their authority.
+- Exclude or label generated summaries as secondary evidence.
+
+Required output: chunk index and validator.
+
+Stop condition: no vector-first shortcut.
+
+Completion: completed on 2026-04-27. R7.1 added `build-scripts/rag/build-chunks.js`, `build-scripts/rag/validate-chunks.js`, and `references/data/rag/chunk_index.jsonl`. Generated-report chunks are non-primary and non-authoritative.
+
+### R7.2 Hybrid Retrieval
+
+Purpose: add lexical, entity, and graph retrieval before optional vector search.
+
+Required work:
+
+- Implement deterministic search over terms, units, evidence anchors, exam references, and graph edges.
+- Add ranking rules that prefer source authority and exact identifiers.
+- Make uncertainty visible.
+
+Required output: retrieval API or script plus evaluation hooks.
+
+Stop condition: retrieval must not hide source rank or evidence weakness.
+
+Completion: completed on 2026-04-27. R7.2 added `build-scripts/rag/query.js` and `build-scripts/rag/validate-query-output.js`. Retrieval is internal only and preserves authority metadata and generated-report warnings.
+
+### R7.3 Retrieval Evaluation Set
+
+Purpose: make retrieval quality regressions visible before teacher-facing use.
+
+Required work:
+
+- Create representative queries for units, terms, exam evidence, procedures, and roadmap questions.
+- Record expected source surfaces and unacceptable answers.
+- Add repeatable evaluation commands.
+
+Required output: retrieval eval set and report.
+
+Stop condition: no teacher-facing RAG without passing evaluation.
+
+### R7.4 RAG Review Gate
+
+Purpose: approve internal or teacher-facing RAG only after deterministic retrieval and evaluation.
+
+Required work:
+
+- Prepare retrieval evaluation summary and failure cases.
+- Run review for evidence fidelity, hallucination risk, and source transparency.
+- Conduct human gate review.
+
+Required output: RAG gate packet, human decision, and closure record.
+
+Stop condition: no student-facing AI, diagnostics, adaptive routing, automatic sequencing, mastery decisions, or summative use from this gate.
+
+Completion: completed on 2026-04-27 with `pass_with_conditions`. Internal dashboard use, internal retrieval development, retrieval evaluation, teacher-facing non-authoritative lookup, and human-reviewed lesson-authoring support are allowed. Student-facing diagnostics, adaptive routing, student-facing AI, automatic lesson sequencing, automatic mastery decisions, summative assessment decisions, and unreviewed student-facing publication remain blocked.
+
+### R9.0 Legacy Target Reference Minimization
+
+Purpose: reduce non-functional references to the frozen legacy target before owned-source integration begins. The frozen legacy target remains operationally protected, but it should not remain the default example or course-design backbone for new reference/RAG work.
+
+Required work:
+
+- scan the repository for frozen-legacy-target labels and legacy path references
+- classify each occurrence as functional legacy path, frozen-target guardrail, historical planning note, generated artifact, or safe cleanup target
+- update safe cleanup targets in current guidance, authored course-design notes, and generic examples
+- preserve legacy source-data paths, legacy content-builder paths, `deploy:legacy`, and explicit frozen-target warnings
+- regenerate derived inventories/RAG chunks if authored-reference changes affect generated data
+- report remaining frozen-legacy-target references by category
+
+Acceptance:
+
+- R9.0 sprint bundle passes
+- no hand edits to `references/machine/` or `references/external/`
+- remaining frozen-legacy-target references are intentional, categorized, and reported
+
+Stop condition: do not delete or refactor functional legacy paths in this sprint.
+
+Completion: completed on 2026-04-27. Active authored references and generic guidance no longer use the frozen legacy target as the course-design shorthand; remaining frozen-legacy-target references are guardrails, functional legacy paths, historical planning notes, or the R9.0 audit record itself.
+
+### R9.01 Legacy Folder Rename
+
+Purpose: rename repo-local legacy folders so the active repository no longer has folders named after the frozen legacy target.
+
+Required work:
+
+- rename the repo-local legacy source-data folder to `source-data/legacy-target/`
+- rename the repo-local legacy content-builder folder to `build-scripts/content/legacy-target/`
+- update repo-local script and README references to the new paths
+- preserve the external frozen lesson target name and storage behavior
+- regenerate inventories and validate the sprint bundle
+
+Acceptance:
+
+- no repo-local directory remains named after the frozen legacy target
+- legacy helper scripts resolve the renamed paths
+- no hand edits to `references/machine/` or `references/external/`
+
+Stop condition: do not rename or mutate the external frozen lesson target.
+
+Completion: completed on 2026-04-27. Repo-local legacy source-data and content-builder folders now use `legacy-target`; the external frozen lesson target name and storage behavior were not changed.
+
+### R9.1 Owned Source Registry
+
+Purpose: register owned book/source material as source surfaces without confusing it with external authority. This is the first implementation sprint after `GATE-CP1-schema-audit`.
+
+Required work:
+
+- Promote `references/owned/course-blueprint-v4.md` as the canonical owned curriculum-design source for the current partial blueprint.
+- Keep `references/owned/course-blueprint-v4.meta.json` attached so retrieval can see that the blueprint is partial, owned, and not external authority.
+- Repair target-exercise source references that still point to `knowledge/course_blueprint_v4.md`; the canonical reference-facing source is `references/owned/course-blueprint-v4.md`.
+- List owned book materials, paragraph plans, generated textbook surfaces, target exercises, answer models, chapter plans, course blueprint material, and active lesson markdown.
+- Define source status for each surface: authored source, generated projection, exercise evidence, answer model, planning artifact, or implementation output.
+- Define what can be used as evidence and what is exposition or generated projection.
+- Connect owned sources to source manifest and document inventory.
+- Keep lesson-output references separate from external authority and protected machine registries.
+
+Required output: owned source registry, schema, validator, blueprint metadata validation, source-manifest integration, and report.
+
+Stop condition: owned exposition cannot override external authority or reviewed machine references.
+
+Checkpoint: `GATE-CP2-owned-source-scope`.
+
+Completion: completed on 2026-04-29 with CP-2 status `pass_with_conditions`. R9.1 created the owned-source registry, repaired 50 target-exercise blueprint references to `references/owned/course-blueprint-v4.md`, generated registry/report artifacts, and recorded human review. R9.2 is unblocked only if owned-source edges default to projection edges and evidence edges are reserved for explicitly evidence-qualified records.
+
+### R9.2 Content Graph Projection
+
+Purpose: project owned content into the reference graph for navigation and coverage without making it canonical evidence by accident.
+
+Required work:
+
+- Use `references/owned/course-blueprint-v4.md` as the course-design backbone for blueprint paragraph, chapter, target-exercise, and difficulty-note projection edges.
+- Link paragraphs, exercises, visuals, procedures, summaries, and answer models to units and terms.
+- Mark projection edges separately from evidence edges.
+- Preserve source type, source path, authority level, and generated/projection status in every edge.
+- Produce coverage reports for owned content against the reference graph.
+- Regenerate RAG chunks so owned-source retrieval works without weakening evidence hierarchy.
+
+Required output: content graph projection, graph/report validators, owned-content coverage report, regenerated chunk index, and retrieval smoke tests.
+
+Stop condition: do not use generated lesson text as primary proof for reference claims.
+
+Completion: completed on 2026-04-29. R9.2 created `references/data/owned-content-graph.json` with 1,464 typed edges: 695 projection edges, 332 owned exercise evidence edges, and 437 implementation trace edges. Generated artifacts remain non-evidence with explicit warnings. RAG now indexes owned-content edge chunks and retrieval evals still pass 10/10 with 0 authority violations.
+
+### S4 Exercise Metadata Overlay MVP
+
+Purpose: add the HCS exercise-quality fields in a protected-source-safe overlay before any bulk source mutation.
+
+Required work:
+
+- Store first-pass exercise metadata under `references/data/exercises/` unless a source-specific CLI/refresh workflow already exists.
+- Treat CP-1 closure files as authoritative over the earlier review packet if wording differs.
+- Preserve the role split:
+  - `instructional_role`: `worked_example`, `startoefening`, `independent_practice`, `interleaving`, `target`, `verdieping`, `consolidatie`, `instapquiz`, `diagnostic`, `nieuws`.
+  - `assessment_role`: optional; omit the field when absent. Allowed v1 values are `exam_mirror`, `bridge`, and `prerequisite`.
+- Document that `instructional_role: diagnostic` means an authored exercise role only; it does not authorize student diagnostics, adaptive routing, mastery logic, or any diagnostic product layer.
+- Preserve the scaffolding object:
+  - `verbal_level`: integer 0-5.
+  - `visual_stage`: integer 1-4.
+  - `fading_position`: integer.
+  - `dual_coding_present`: boolean.
+- Add or stage metadata for authority tier, Bloom level, instruction word, answer format, graph specification, precision lint status, evidence status, source version, source stable ID, curriculum version, and content status.
+- Use `build-scripts/lib/verify_svg_geometry.py` or create a wrapper if future automation expects `build-scripts/verify_svg_geometry.py`.
+- Dry-run one Tier A item and one Tier C target exercise before bulk extension.
+
+Required output: overlay schema, dry-run records, validator, and CP-3 review packet.
+
+Stop condition: do not hand-edit protected external exam-question data and do not collapse `instructional_role` and `assessment_role` into one flat enum.
+
+Checkpoint: `GATE-CP3-schema-extension-dry-run`.
+
+Completion: completed on 2026-04-29 with `GATE-CP3-schema-extension-dry-run` status `pass_with_conditions`. S4 created the overlay schema, one Tier A exam-question dry-run overlay, one Tier C target-exercise dry-run overlay, validator, and gate closure. Bulk metadata extension and source mutation remain blocked until the CP-3 conditions are reflected in the next sprint plan.
+
+Conditions carried forward:
+
+- Track Tier A source annex extraction gaps before broad Tier A overlay backfill.
+- Mark `exercise_operations` as provisional until a governed operation registry exists.
+- Add reviewer calibration notes for scaffolding scale values.
+- Refine `graph_spec` representation values during broader coverage work.
+- Strengthen warnings around `instructional_role: diagnostic`.
+- Preserve product-boundary flags: no student diagnostics, adaptive routing, student-facing AI, mastery decisions, summative use, or automatic sequencing.
+
+### S4.1 Exercise Overlay Conditions And Calibration
+
+Purpose: make the CP-3 conditions explicit in artifacts, validators, and reports before any bulk metadata extension.
+
+Completion: completed on 2026-04-29. S4.1 added:
+
+- `references/data/exercises/source-annex-gap-log.json`
+- `references/data/exercises/scaffolding-calibration.json`
+- `references/data/exercises/graph-spec-representation-plan.json`
+- `references/data/exercises/product-boundary-warnings.json`
+- `reports/json/exercise-overlay-conditions.json`
+- `reports/markdown/exercise-overlay-conditions.md`
+- `build-scripts/references/check-exercise-overlay-conditions.js`
+
+S4.1 also updated the overlay schema and dry-run overlay records so `exercise_operations` are explicitly provisional, source annex status is explicit, condition references are attached to each overlay record, and product-boundary warnings are mandatory.
+
+Remaining blocker: broad exercise metadata backfill remains blocked until a later sprint explicitly plans around the open source-annex gap, provisional operation registry status, and graph-spec refinement policy.
+
+### R8.1 QC Issue Model
+
+Purpose: define a lightweight, machine-readable quality issue model that directly improves reference/RAG trust.
+
+Required work:
+
+- Model only categories needed now: reference quality, evidence sufficiency, unit design, extraction integrity, report drift, source-version drift, term-link gaps, needs gaps, and production-readiness warnings.
+- Include severity, owner/team, affected surface, evidence, next action, and proof required to close.
+- Make issues retrievable and dashboard-friendly without turning them into curriculum authority.
+- Ensure categories are internal-facing and not exposed as student material.
+
+Required output: QC issue schema, example issue log, validator, and dashboard/RAG data hook.
+
+Stop condition: do not gold-plate a general issue tracker and do not copy categories from unrelated data-analysis projects.
+
+### Sprint 6 Bronnen Registry MVP
+
+Purpose: create a controlled source-document registry without weakening machine-edit discipline.
+
+Required work:
+
+- Create source-document schema and validator.
+- Decide whether the first implementation belongs under `references/data/` or `references/machine/`.
+- If stored under `references/machine/`, create the CLI before creating the registry.
+- Include source type, authority level, source version, status, owner, citation policy, and public-citation policy.
+
+Required output: registry schema, validator, seed records or derived overlay, and report.
+
+Stop condition: do not create a hand-maintained machine registry.
+
+### Sprint 7 Skill And Operation Registry MVP
+
+Purpose: separate micro-teaching-unit IDs from fine-grained exercise operations and broader skill/category tags.
+
+Required work:
+
+- Promote useful current content from `references/authored/skill-categories.md` into a governed registry or overlay.
+- Preserve the HCS category structure where it survives CP-1 and CP-4 review.
+- Keep `required_units` for micro-teaching-unit IDs.
+- Use `exercise_operations` for fine-grained learner operations.
+- Use `skill_tags` or `skill_category_tags` for broader taxonomy labels if CP-1 approves those names.
+- Map exercise operations to unit IDs where the relationship is known.
+
+Required output: skill/operation registry MVP, validator, coexistence report, and CP-4 review packet.
+
+Stop condition: do not reuse `required_skills` for a new concept until the migration plan is complete.
+
+Checkpoint: `GATE-CP4-skill-registry-coexistence`.
+
+### Phase RX Representation-Sensitive Micro-Unit Decomposition
+
+Purpose: strengthen the micro-teaching-unit registry by making explicit when students must combine a base calculation, representation reading, and economic interpretation.
+
+Core principle:
+
+```text
+A calculation skill is not complete until the student can execute it across the representations in which exam questions and lesson materials actually present the data.
+```
+
+Design distinction:
+
+- `base_operation`: the underlying calculation, such as percentage change, index calculation, profit, or elasticity.
+- `representation_reading`: the source-reading skill, such as table value selection, bar chart reading, line chart reading, pie chart share reading, P-Q graph reading, or producer graph reading.
+- `composed_application`: the combined skill of extracting values from the representation and then calculating/interpreting correctly.
+
+Do not solve this by bloating `aspects`. Keep `aspects` broad (`verbaal`, `grafisch`, `rekenen`). Use a provisional operation/representation inventory first, then promote to a governed registry only when schema, validator, CLI, and mutation-log workflows exist.
+
+Repository check as of 2026-04-29:
+
+- `A60` is currently the last live A-domain unit.
+- `A45` through `A60` exist and cover selected graph/table foundations from R4.5.
+- Candidate IDs `A61` and later are placeholders until execution; the mutation sprint must re-check the live registry before assigning IDs.
+- `unit-add.js` is the correct mutation mechanism, but CLI-ready specs must satisfy the current schema (`mastery_target`, `prior_learning`, `terms`, non-empty `aspects`, and A-domain generator handling).
+- `references/machine/README.md` still points to missing `knowledge/micro-teaching-units-plan.md`; treat this as a low-severity documentation issue, not a blocker for RX.1.
+
+#### RX.1 Representation-Operation Inventory
+
+Purpose: build the representation-operation inventory before minting any new units.
+
+Required work:
+
+- Scan target exercises, exam-question records, blueprint flags, owned-source projections, and existing A-domain units.
+- Identify every case where a calculation depends on values extracted from a representation.
+- Classify each case as:
+  - already covered;
+  - needs new representation-reading unit;
+  - needs new composed calculation unit;
+  - duplicate/merge candidate;
+  - hold for human review.
+- Produce a matrix:
+
+```text
+base operation x representation x economic context
+```
+
+Example rows:
+
+```text
+percentage_change x bar_chart x demand/sales
+percentage_change x line_chart x macro/time-series
+profit x table x producer
+profit x TO-TK graph x producer
+surplus x P-Q graph x market
+elasticity x demand curve x market
+```
+
+Candidate inventory path:
+
+```text
+references/data/sprints/RX.1-representation-operation-inventory.json
+```
+
+Required output:
+
+- sprint plan, baseline, result, and diff summary;
+- provisional inventory JSON;
+- duplicate/overlap report against existing A-units;
+- proposed mutation queue;
+- review packet under `reports/review-gates/GATE-RX1-representation-unit-scope/`.
+
+Acceptance tests:
+
+- every proposed unit has target-exercise evidence, exam-question evidence, or a clearly marked didactic-prior rationale;
+- no unit is proposed from syllabus text alone;
+- duplicates and overlap candidates are held, not minted;
+- candidate units distinguish base operation, representation reading, and composed application;
+- candidate IDs are marked provisional.
+
+Stop condition: no mutation in RX.1.
+
+Checkpoint: `GATE-RX1-representation-unit-scope`.
+
+Completion: completed on 2026-04-29 through the non-mutating inventory/review-packet stop point. `GATE-RX1-representation-unit-scope` closed as `pass_with_conditions`; RX.2 planning is authorized for the bounded first lane only, with mutation still blocked until explicit RX.2 mutation review and CLI-backed execution.
+
+#### RX.2 Percentage And Index Representation Units
+
+Purpose: plan, review, and execute the highest-value percentage/index/table representation branch after RX.1 gate closure. Direct mutation was authorized only after the RX.2 mutation review closed as `pass_with_conditions`.
+
+First-lane mutation scope:
+
+- `A61` Tabelwaarden selecteren voor berekening.
+- `A66` Basiswaarde en vergelijkingswaarde in bron bepalen.
+- `A67` Procentuele verandering berekenen vanuit tabel.
+- `A70` Percentagepuntverandering in aandeel herkennen.
+- `A72` Indexcijfer berekenen vanuit tabel.
+- `A74` Procentuele verandering berekenen vanuit indexcijfers.
+
+Deferred RX.2 candidates:
+
+- Chart-only candidates `A62`, `A64`, `A68`, and `A71` remain medium/high risk until stronger evidence or explicit didactic-prior approval exists. `A71` is especially high risk.
+- Line-graph candidates `A63`, `A69`, and `A73` can become a second wave within RX.2 or RX.2b after representation calibration.
+- Elasticity candidates `A82` and `A84` should move earlier than the full producer-graph lane, but not inside the first RX.2 lane unless a later review expands scope. `A83` remains conditional on P-Q graph/source-value readiness.
+
+Completed work:
+
+- Re-checked live A-domain numbering before mutation review and again before mutation execution.
+- Prepared an explicit RX.2 mutation-review packet for the bounded first lane.
+- Closed `GATE-RX2-first-lane-mutation-review` as `pass_with_conditions`.
+- Confirmed every first-lane candidate still had evidence, procedure, `needs`, aspects, and generator/backlog status.
+- Applied only approved units through `unit-add.js`.
+- Regenerated unit index, reports, RAG chunks, and health reports after approved CLI execution.
+- Tracked all six interactive generators as missing/non-interactive until implementation and validation.
+
+Acceptance tests:
+
+- unit validator passes;
+- no unresolved `needs`;
+- no DAG cycles;
+- percentage-point versus percentage-change distinction is explicit;
+- pie-chart absolute/share candidates remain deferred outside the first lane;
+- A-domain generator coverage is either implemented or explicitly tracked as blocked;
+- held duplicate/overlap records from RX.1 remain blocked.
+
+Completion: completed on 2026-04-29. `GATE-RX2-first-lane-mutation-review` closed as `pass_with_conditions`; `A61`, `A66`, `A67`, `A70`, `A72`, and `A74` were added through `unit-add.js`. Student-facing skill-tree exposure remains blocked until generator implementation and validation.
+
+#### RX.3 Producer Table And Graph Representation Units
+
+Purpose: add representation-sensitive profit/cost units after duplicate review.
+
+Candidate scope, subject to duplicate audit and renumbering:
+
+- total profit from revenue/cost table;
+- total profit from P, GTK, and Q;
+- break-even from TO-TK graph;
+- profit/loss from TO-TK graph;
+- maximum profit from TO-TK table;
+- profit rectangle in producer graph;
+- profit, loss, and break-even recognition in producer graph.
+
+Required work:
+
+- Review overlap with existing profit, break-even, MO/MK, GTK, table-difference, and producer-graph units.
+- Mint only missing composed representation skills.
+- Distinguish TO/TK graph, P/GTK/Q graph, and table-based profit comparison.
+
+Acceptance tests:
+
+- no duplicate of existing break-even/profit units;
+- every graph unit has a procedure that tells the student exactly what to read from the graph;
+- profit rectangle and vertical-distance logic are not conflated.
+
+#### RX.4 Elasticity And Market Diagram Representation Units
+
+Purpose: extend the representation model to elasticity and market diagrams.
+
+Candidate scope, subject to duplicate audit and renumbering:
+
+- elasticity from table values;
+- elasticity from demand graph;
+- revenue-change judgement with elasticity from source;
+- any approved market-graph gaps after audit.
+
+Required work:
+
+- Separate table extraction for elasticity, graph extraction for elasticity, interpretation of elastic/inelastic after calculation, and market-intervention graph operations already covered by A51/A56/A59.
+- Audit A19/A32/A40/D39/D40 before minting new surplus/welfare units.
+
+Acceptance tests:
+
+- no new unit duplicates A19/A32/A40/D39/D40;
+- graph-reading step is explicit before calculation;
+- elasticity sign and absolute-value interpretation are preserved.
+
+#### RX.5 Representation Operation Registry And Reports
+
+Purpose: make representation-sensitive operations durable.
+
+Required work:
+
+- Promote the provisional RX inventory into a governed registry only if Sprint 7 has provided the schema, validator, and CLI path.
+- Keep new machine registries as end-state only until CLI and validators exist.
+- Generate:
+  - `reports/representation-operation-coverage.md`;
+  - `reports/json/representation-operation-coverage.json`;
+  - `reports/graph-skill-tree.md`;
+  - `reports/representation-transfer-gaps.md`.
+
+Acceptance tests:
+
+- every representation-sensitive unit links to at least one operation record;
+- every operation record has status;
+- reports distinguish "calculation covered" from "calculation from representation covered."
+
+#### RX.6 Skill-Tree And Generator Integration
+
+Purpose: make approved representation-sensitive units usable in the student-facing skill tree only after data and generator readiness are clear.
+
+Required work:
+
+- Implement missing `GEN_A61+` generators or explicitly mark nodes as explanation-only/non-interactive until generators exist.
+- Add graph/representation skill-tree filters:
+  - percentage from representations;
+  - tables and charts;
+  - producer graphs;
+  - market diagrams;
+  - welfare graphs.
+- Update relevant paragraph `skilltree.skills` lists only through the normal platform/lesson workflow and with separate authorization for target output changes.
+
+Acceptance tests:
+
+- generator coverage report passes;
+- no skill-tree node points to a missing generator unless intentionally marked non-interactive;
+- generated lesson target validates after any authorized deploy.
+
+Stop condition: do not mutate `../4veco-lessen/` or student-facing output from a references sprint without explicit platform/lessen authorization.
+
+### Sprint 8 Misconception Registry MVP
+
+Purpose: make recurring student errors retrievable and usable in exercise design.
+
+Required work:
+
+- Create misconception schema and validator.
+- Link misconceptions to units, terms, exercise operations, and evidence where available.
+- Keep the first pass small and high-value.
+- Preserve diagnostic/non-authority labels in RAG output.
+
+Required output: misconception registry MVP, validator, and retrieval/report hook.
+
+Stop condition: do not treat misconception records as primary evidence.
+
+### Sprint 9 Unit Design Status And D04 Resolution
+
+Purpose: stop D04 and similar unstable units from silently supporting exercise promotion workflows.
+
+Required work:
+
+- Decide whether `unit_design_status` is a derived overlay or a CLI-backed machine-unit field.
+- Prefer a derived overlay first unless the CLI/schema migration is ready.
+- Resolve D04 as retire, merge, redistribute, or split into successor units.
+- Audit dependent units that currently assume D04-like aggregate behavior.
+- Produce the CP-5 review packet.
+
+Required output: D04 decision record, dependent-unit audit, unit-design status strategy, and gate packet.
+
+Stop condition: do not mutate `references/machine/` by hand and do not promote any exercise that relies on an unstable required unit.
+
+Checkpoint: `GATE-CP5-D04-resolution`.
+
+### Content Track 1 Year-1 Target Exercise Coverage
+
+Purpose: close the current partial-year course-design backbone.
+
+Required work:
+
+- Identify Year-1 paragraphs with no target exercise.
+- Separate missing target exercises from deliberately deferred paragraphs.
+- Connect target exercises to owned blueprint source, unit IDs, and evidence status.
+- Produce `reports/blueprint-coverage.md`.
+
+Required output: Year-1 coverage report and CP-6 review packet.
+
+Stop condition: Year-1 does not close while target-exercise coverage or precision status is not acceptable.
+
+Checkpoint: `GATE-CP6-year-1-paragraph-coverage`.
+
+### Content Track 2 Year-1 Precision And Dual-Coding Audit
+
+Purpose: make sure exercise metadata reflects actual teaching quality, not only administrative fields.
+
+Required work:
+
+- Audit graph-based and visual reasoning exercises.
+- Record precision lint status where the verifier applies.
+- Record `dual_coding_present` for relevant guided-practice and scaffolded surfaces.
+- Record `not_applicable` or equivalent where no graph/visual precision check applies.
+
+Required output: precision and dual-coding audit report.
+
+Stop condition: do not mark graph-heavy guided practice as quality-ready if `dual_coding_present` cannot be established.
+
+### Content Track 3 Year-2 Skeleton
+
+Purpose: prepare the second-year course backbone without weakening Year-1 quality.
+
+Required work:
+
+- Draft Year-2 paragraph skeletons with tentative target exercises.
+- Add CvTE-vwo anchor status where available.
+- Mark unanchored concepts with `concept_orphan` or successor field.
+- Treat CP-7 as a parallel content-track checkpoint, not an engineering Phase E blocker.
+
+Required output: Year-2 skeleton and CP-7 review packet.
+
+Stop condition: do not use Year-2 skeleton work to authorize C-to-B promotion before the engineering gates are ready.
+
+Checkpoint: `GATE-CP7-year-2-anchoring`.
+
+### R7.6 RAG Quality Hardening
+
+Purpose: improve retrieval quality before new product features. This sprint closes the R7.4 follow-up conditions and expands the proof layer enough that RAG quality is more than a smoke test.
+
+Required work:
+
+- RAG-01: make retrieval labels explicit for approved, approved-with-conditions, pending-review, diagnostic-only, generated-report diagnostic, external-primary, machine-registry, and authored-judgement results.
+- RAG-02: add score, match-strength, and weak-match warnings; very low-score matches must be hidden by default or grouped as possible weak matches.
+- RAG-03: split target exercises into stable per-exercise chunks with exercise IDs, source paths, unit links, term links where available, evidence metadata, and target-exercise status.
+- RAG-04: create evidence-anchor coverage reports for retrieval by chunk type, entity type, source type, and authority level.
+- Expand retrieval evaluation from the 10-case smoke suite toward a meaningful regression suite covering unit lookup, terms, exam phrasings, known ambiguity, deprecated units, missing-needs queries, generated-report-only results, pending-review graph edges, and out-of-corpus queries.
+- Backfill evidence anchors for high-traffic concepts and currently weak surfaces, especially elasticity, A-domain foundations, labor-market sequencing, `alternatieve kosten`, and `schaarste`.
+- Review the first backfilled graph edge batch so the graph has meaningful approved edges instead of relying mainly on draft/pending traceability.
+
+Required output: updated RAG scripts, expanded eval set and results, evidence-anchor coverage report, backfilled evidence-anchor records, graph integrity report, and sprint result.
+
+Stop condition: do not expand into diagnostics, adaptive routing, student-facing AI, or new product surfaces.
+
+Checkpoint: `GATE-CP8-rag-eval-content-coverage`.
+
+### R14.1 Curriculum Versioning
+
+Purpose: track curriculum/source versions and migrations so retrieval cannot silently mix incompatible source generations.
+
+Required work:
+
+- Record versioned exam programs, syllabi, owned source versions, and migration status.
+- Make stale references visible.
+- Link version changes to affected units, terms, and evidence anchors.
+- Keep the first pass minimal: enough to tag current external, machine, authored, and owned-source surfaces with version provenance.
+
+Required output: curriculum version registry and stale-reference report.
+
+Stop condition: do not silently mix curriculum versions.
+
+### Sprint 12 Exam And Target Exercise Decomposition Backfill
+
+Purpose: apply the audited schema and overlay model to the existing exam-question and target-exercise corpus.
+
+Required work:
+
+- Backfill protected-source-safe metadata for the 349 exam-question records.
+- Backfill metadata for the 49 current target exercises.
+- Close known exam-question extraction gaps through overlays or refresh scripts, not hand edits to `references/external/`.
+- Record role, authority, Bloom level, instruction word, exercise operations, evidence status, and source version where approved by CP-1/CP-3.
+
+Required output: overlay records, validator, backfill report, and updated RAG/report surfaces.
+
+Stop condition: do not bulk-apply uncertain exercise metadata without review.
+
+### Sprint 13 Composition Pattern Registry
+
+Purpose: define reusable exercise-composition patterns for internal authoring support.
+
+Required work:
+
+- Define composition patterns for exercise types.
+- Link patterns to operations, source authority, scaffolding object, instructional role, assessment role, and evidence status.
+- Keep the registry internal and non-authoritative for student-facing publication.
+
+Required output: composition-pattern schema, seed patterns, validator, and authoring-support report.
+
+Stop condition: do not use patterns to auto-publish student-facing exercises.
+
+### Sprint 14 C-to-B Promotion Workflow
+
+Purpose: create a controlled path from concept blueprint exercises to stronger exercise authority.
+
+Required prerequisites:
+
+- CP-1 schema audit closed.
+- R9.1 owned-source registry closed.
+- Sprint 4 exercise metadata overlay MVP closed.
+- D04/unit-design status usable.
+- R7.6 RAG hardening closed.
+- R14.1 versioning closed.
+- Precision lint path corrected or wrapped.
+
+Required output: promotion schema/rules, first reviewed promotion batch, gate records, and rollback plan.
+
+Stop condition: do not promote any exercise with unstable required units, missing source authority, missing evidence status, unresolved graph precision status, or absent human review.
+
+## Executive Direction
+
+The reference folder is becoming the platform's governed educational knowledge base.
+
+Target flow:
+
+```text
+owned book/source material
+-> machine-readable reference data
+-> evidence anchors
+-> alignment graph
+-> JSON-first reports
+-> retrieval/RAG layer
+```
+
+Current focus: improve data quality inside this flow before adding new product surfaces.
+
+Do not proceed to diagnostics, adaptive routing, student-facing AI, automatic sequencing, mastery decisions, summative decisions, teacher cockpit deployment, game/simulation product mapping, or continuous-improvement claims from this roadmap.
+
+## Current Catalog State
+
+Last regenerated: 2026-04-29
+
+### Machine Unit Catalog
+
+- `217` total units.
+- `215` live units.
+- `2` deprecated units: `D23`, `H26`.
+- Domain spread, live units:
+  - `A`: 66
+  - `B`: 2
+  - `D`: 39
+  - `E`: 7
+  - `F`: 18
+  - `G`: 12
+  - `H`: 30
+  - `I`: 20
+  - `L`: 21
+- Mastery spread, live units:
+  - `understand`: 90
+  - `apply`: 103
+  - `analyze`: 19
+  - `evaluate`: 3
+- Dependency graph:
+  - `261` live prerequisite edges.
+  - `40` live units still have no `needs` edges.
+- Coverage:
+  - `188/215` live units have exam-code links.
+  - `146/215` live units have term links.
+  - `125/125` apply/analyze/evaluate live units have procedures.
+
+### Begrippen Registry
+
+- `227` live terms.
+- `227/227` have definitions.
+- `227/227` have examples.
+- `62/227` have pitfall text.
+- `97/227` are reverse-linked to teaching units.
+- `34/227` carry formulas.
+
+Main risk: the former unresolved term strings `alternatieve kosten` and `schaarste` are resolved. The current quality risk is that many newly minted A-domain foundation units are intentionally procedure/instrument units without term links; a later QC rule should distinguish true missing term links from procedure-only exemptions.
+
+### Reports
+
+Current generated reports:
+
+- `reports/dag-integrity.md`: pass.
+- `reports/needs-coverage.md`: informational backlog, `40` live units without `needs`.
+- `reports/terms-coverage.md`: informational backlog, `69` live units without terms.
+- `reports/terminology-drift.md`: pass against machine-registry-first term validation.
+- `reports/exam-question-extraction-gaps.md`: patch queue, `27` exam-question records need required-skill review; `19` also need exam-code review.
+- `reports/blueprint-flag-triage.md`: curated backlog, `84` raw target-exercise flags triaged.
+- `reports/evidence-anchor-status.md`: pass, `15` evidence anchors and `13` claims.
+- `reports/procedure-coverage.md`: pass for apply+ units.
+- `reports/aspects-coverage.md`: informational, remaining exam-citation gaps.
+- `reports/unresolved-refs.md`: warnings only for deprecated references.
+- `reports/dead-units.md`: informational scanner output; should be improved after JSON-first reports.
+
+### Owned Sources
+
+- `references/owned/course-blueprint-v4.md`: canonical owned curriculum-design blueprint for the currently designed year. It is partial (`year 1 of 3`) and carries metadata in `references/owned/course-blueprint-v4.meta.json`.
+- Blueprint target exercises and sequencing are strong owned course-design signals.
+- Blueprint prose is contextual/design rationale and cannot by itself mint or mutate machine units.
+
+## Roadmap Phases
+
+### Phase R0: Governance And Sprint Machinery
+
+Goal: make reference work rollback-safe and auditable before more data work.
+
+- `R0.1` completed: sprint execution scaffold.
+- `R0.2` completed: source manifest and document inventory.
+
+### Phase R1: Source Of Truth And Schemas
+
+Goal: remove ambiguity about canonical data and generated projections.
+
+Key outputs:
+
+- `references/SOURCE_OF_TRUTH.md`
+- core JSON schemas for units, terms, exam questions, source documents, evidence anchors, claims, alignment edges, reports, retrieval chunks, and reference-quality issues
+- prior-knowledge schema extension for empty `needs`
+
+### Phase R2: Empty-Needs And Prior-Knowledge Review
+
+Goal: distinguish true zero-prerequisite units from hidden prerequisite gaps.
+
+Rules:
+
+- `R2.1` is non-mutating.
+- subagents can propose corrections
+- `R2.3` closed the review gate as `hold`.
+- broad dependency corrections are not applied until `R2.4` supplies exact evidence and unit-design decisions.
+
+Sprints:
+
+- `R2.1` completed: full empty-needs audit, non-mutating.
+- `R2.2` completed: subagent review and human-review packet.
+- `R2.3` completed: interactive human review and gate closure as `hold`.
+- `R2.4` completed: evidence and unit-design cleanup after the hold decision.
+
+### Phase R3: CLI-Only Corrections
+
+Goal: complete any missing mutation scripts, update CLI documentation, and apply reviewed corrections only through CLI.
+
+Sprints:
+
+- `R3.1` completed: reference CLI and documentation completion.
+- `R3.2` completed: reviewed empty-needs corrections applied through CLI.
+
+### Phase R4: Term, Exam, Blueprint, And Authored-Bucket Cleanup
+
+Goal: turn raw backlog into production signal.
+
+Priority work:
+
+- migrate unit terms to canonical slugs
+- close exam-question skill/code gaps
+- triage blueprint missing-unit flags
+- classify authored-bucket files by migration status
+
+Sprints:
+
+- `R4.1` completed: unit-term slug migration.
+- `R4.2` completed: exam-question extraction gap closure.
+- `R4.3` completed: blueprint flag triage.
+- `R4.4` completed: micro-teaching-unit quality packet.
+- `R4.5` completed: reviewed micro-unit corrections applied through CLI.
+
+### Phase R5: Evidence Anchors And Alignment Graph
+
+Goal: connect claims to exact proof and make graph relationships explicit.
+
+Do not let the graph become pedagogically authoritative until the alignment-graph review gate is closed.
+
+Sprints:
+
+- `R5.1` completed: evidence-anchor layer.
+- `R5.2` completed: alignment graph.
+- `R5.3` completed: alignment graph review gate.
+
+### Phase R6: JSON-First Reports And Dashboard Data
+
+Goal: make reports and dashboards consume structured data rather than scraping Markdown.
+
+The reference dashboard should eventually read `reports/json/reference-health.json` or its successor, not scattered Markdown files.
+
+Sprints:
+
+- `R6.1` completed: JSON-first reports.
+- `R6.2` completed: reference health dashboard data.
+
+### Phase R7: RAG And Technical Retrieval Layer
+
+Goal: deterministic, source-ranked retrieval with evaluation before any teacher-facing use.
+
+No vector-first shortcut. Build lexical/entity/graph retrieval, evaluation, owned-source coverage, evidence-anchor density, and warning behavior first.
+
+Sprints:
+
+- `R7.1` completed: deterministic chunk layer.
+- `R7.2` completed: hybrid retrieval.
+- `R7.3` completed: retrieval evaluation set.
+- `R7.4` completed: RAG review gate with `pass_with_conditions`.
+- `R7.5` completed: merge readiness and main sync.
+- `R7.6` planned: RAG quality hardening, retrieval eval expansion, target-exercise chunking, evidence-anchor coverage, and anchor backfill.
+
+### Phase Schema/Exercise Quality: CP-1 Through CP-4
+
+Goal: make the exercise schema compatible with current repository data before adding bulk metadata or registries.
+
+Sprints:
+
+- `S1` completed: schema audit and exercise naming contract; `GATE-CP1-schema-audit` closed as `pass_with_conditions`.
+- `Sprint 4` planned: exercise metadata overlay MVP, including `instructional_role`, `assessment_role`, scaffolding object, and schema-extension dry run.
+- `Sprint 7` planned: skill and operation registry MVP, closing at `GATE-CP4-skill-registry-coexistence`.
+
+### Phase RX: Representation-Sensitive Micro-Unit Decomposition
+
+Goal: distinguish base calculations, representation-reading skills, and composed calculation-from-source applications before minting new A-domain transfer units.
+
+Sprints:
+
+- `RX.1` completed: non-mutating representation-operation inventory and duplicate audit.
+- `RX.2` completed: bounded first-lane percentage/index/table units added through CLI; generator-blocked status remains active.
+- `RX.3` planned: producer table and graph representation units.
+- `RX.4` planned: elasticity and market-diagram representation units.
+- `RX.5` planned: representation operation registry and reports, only after schema/validator/CLI path exists.
+- `RX.6` planned: skill-tree and generator integration, only with generator coverage or explicit non-interactive status.
+
+### Phase R9: Owned Source Integration And Content Graph
+
+Goal: connect owned book and lesson material to the reference graph without confusing authored exposition with machine reference data.
+
+Sprints:
+
+- `R9.1` completed: owned source registry and blueprint source-reference repair.
+- `R9.2` completed: content graph projection.
+
+### Phase R8: QC Issue Model And Registries
+
+Goal: make quality issues machine-readable only where doing so improves reference and RAG trust.
+
+Sprints:
+
+- `R8.1` planned: scoped QC issue model.
+- `Sprint 6` planned: bronnen registry MVP.
+- `Sprint 8` planned: misconception registry MVP.
+- `Sprint 9` planned: unit design status and D04 resolution.
+
+### Content Track: Year-1 Closeout And Year-2 Skeleton
+
+Goal: let content coverage work proceed in parallel with engineering, while keeping promotion and authority gates explicit.
+
+Sprints:
+
+- `Content Track 1` planned: Year-1 target-exercise coverage and `GATE-CP6-year-1-paragraph-coverage`.
+- `Content Track 2` planned: Year-1 precision and dual-coding audit.
+- `Content Track 3` planned: Year-2 skeleton and `GATE-CP7-year-2-anchoring`.
+
+### Phase R14: Minimal Curriculum Versioning
+
+Goal: prevent retrieval and reports from silently mixing curriculum/source versions.
+
+Sprint:
+
+- `R14.1` planned: minimal curriculum versioning.
+
+### Phase Promotion And Product Re-Evaluation
+
+Goal: only promote or productize after the schema, source, evidence, RAG, and unit-design gates make it safe.
+
+Sprints:
+
+- `Sprint 12` planned: exam and target exercise decomposition backfill.
+- `Sprint 13` planned: composition pattern registry.
+- `Sprint 14` planned: C-to-B promotion workflow.
+- `Product Gate` blocked: re-evaluate R10-R13 product surfaces only after the data-quality gates pass.
+
+## Review Gates
+
+| Gate | When | Subagents | Human Review | Required Before |
+|---|---:|---:|---:|---|
+| GATE-R1-schema | after schemas | optional | no | schema-dependent migrations |
+| GATE-R2-empty-needs | before broad dependency corrections | yes | yes | authoritative prerequisite graph |
+| GATE-R5-alignment-graph | before graph powers retrieval/diagnostics | yes | yes | retrieval, diagnostics |
+| GATE-R7-rag | before teacher-facing RAG | yes | sampled | teacher-facing retrieval |
+| GATE-CP1-schema-audit | before R9.1 implementation | yes | yes | owned-source and exercise-schema implementation |
+| GATE-CP2-owned-source-scope | during R9.1 | yes | yes | content graph projection |
+| GATE-CP3-schema-extension-dry-run | before bulk exercise metadata extension | yes | yes | exercise metadata backfill |
+| GATE-CP4-skill-registry-coexistence | before skill/operation registry promotion | yes | yes | operation registry and exercise decomposition |
+| GATE-RX1-representation-unit-scope | before representation-sensitive unit mutations | yes | yes | RX.2+ unit mutation |
+| GATE-RX2-first-lane-mutation-review | before RX.2 first-lane CLI execution | yes | yes | A61/A66/A67/A70/A72/A74 catalog mutation |
+| GATE-CP5-D04-resolution | before D-domain C-to-B promotion | yes | yes | exercise promotion on D-domain units |
+| GATE-CP6-year-1-paragraph-coverage | before Year-2 extension is considered ready | yes | yes | Year-2 extension confidence |
+| GATE-CP7-year-2-anchoring | before Year-2 Tier C authoring is treated as coherent | yes | yes | Year-2 skeleton progression |
+| GATE-CP8-rag-eval-content-coverage | during R7.6 | yes | yes | broader teacher-facing retrieval confidence |
+
+## Critical Path
+
+Use this order when capacity is limited:
+
+```text
+R0.2 Reference baseline inventory
+R1.1 Source-of-truth decision
+R1.2 Core JSON schemas
+R1.3 Unit prior-knowledge schema extension
+R2.1 Full empty-needs audit, non-mutating
+R2.2 Subagent review
+R2.3 Adaptive human review and gate closure
+R2.4 Evidence and unit-design cleanup after GATE-R2 hold
+R3.1 Reference CLI and documentation completion
+R3.2 Apply reviewed empty-needs corrections
+R4.1 Unit-term slug migration
+R4.2 Exam-question extraction gap closure
+R4.3 Blueprint flag triage
+R4.4 Micro-teaching unit quality packet
+R4.5 Apply reviewed micro-unit corrections
+R5.1 Evidence anchors
+R5.2 Alignment graph
+R5.3 Alignment graph gate
+R6.1 JSON-first reports
+R6.2 Reference-health dashboard
+R7.1 Chunk index
+R7.2 Hybrid retrieval
+R7.3 Retrieval evals
+R7.4 RAG gate
+R7.5 Merge readiness and main sync
+R9.0 Legacy target reference minimization
+R9.01 Legacy folder rename
+S1 Schema audit and exercise naming contract (CP-1)
+R9.1 Owned source registry
+R9.2 Content graph projection
+Sprint 4 Exercise metadata overlay MVP (CP-3)
+RX.2 First-lane mutation review and CLI execution
+R8.1 Scoped QC issue model
+Sprint 6 Bronnen registry MVP
+Sprint 7 Skill and operation registry MVP (CP-4)
+RX.3 Producer table and graph representation units
+RX.4 Elasticity and market diagram representation units
+RX.5 Representation operation registry and reports
+RX.6 Skill-tree and generator integration
+Sprint 8 Misconception registry MVP
+Sprint 9 Unit design status and D04 resolution (CP-5)
+Content Track 1 Year-1 target exercise coverage (CP-6)
+Content Track 2 Year-1 precision and dual-coding audit
+Content Track 3 Year-2 skeleton (CP-7, parallel content track)
+R7.6 RAG quality hardening
+R14.1 Minimal curriculum versioning
+Sprint 12 Exam and target exercise decomposition backfill
+Sprint 13 Composition pattern registry
+Sprint 14 C-to-B promotion workflow
+Product Gate Re-evaluate R10-R13 product surfaces
+```
+
+Do not invert this order.
+
+## Immediate Next Sprint
+
+Next sprint: `R8.1 Scoped QC Issue Model`.
+
+R4.5 has closed the bounded micro-unit mutation lane, CP-1 has closed the non-mutating schema audit gate as `pass_with_conditions`, CP-2 has closed the owned-source scope gate as `pass_with_conditions`, R9.1 has registered the owned-source surfaces, R9.2 has completed owned-content projection, S4/CP-3 has closed as `pass_with_conditions`, S4.1 has implemented the CP-3 condition artifacts, RX.1 has prepared the non-mutating representation-operation inventory, `GATE-RX1-representation-unit-scope` has closed as `pass_with_conditions`, and RX.2/GATE-RX2 has added the bounded six-unit first lane through CLI-only mutation.
+
+`A61`, `A66`, `A67`, `A70`, `A72`, and `A74` are now catalog units, but they are generator-blocked and non-interactive for student-facing skill-tree use until their generators are implemented and validated.
+
+`R8.1` should stay scoped down: define only the lightweight QC issue model needed to expose evidence weakness, stale data, proof-to-close, and registry/report warnings. Do not widen it into production QC gates, diagnostics, adaptive routing, or student-facing workflows.
+
+Do not start diagnostics, adaptive routing, student-facing AI, automatic lesson sequencing, mastery decisions, summative decisions, teacher cockpit deployment, game/simulation product mapping, or continuous-improvement claims from this roadmap.
+
+R7.4/R7.5 completion state:
+
+- R7.4 closed as `pass_with_conditions`.
+- R7.5 merged the reference foundation to `main`.
+- Post-merge validation passed on `main`.
+- Retrieval evaluation has 10/10 passing cases and 0 authority violations.
+- RAG-01 through RAG-04 remain required quality follow-ups.
+- Student diagnostics, adaptive routing, student-facing AI, automatic sequencing, mastery decisions, summative use, and unreviewed student-facing publication are explicitly blocked.
+
+CP-1 decisions now in force:
+
+- `required_units` is canonical for micro-teaching-unit IDs.
+- `exercise_operations` is canonical for fine-grained exercise actions and may be empty until Sprint 12.
+- `skill_tags` is canonical for broader taxonomy labels.
+- `instructional_role` and `assessment_role` are separate fields.
+- `instructional_role: diagnostic` is an exercise role, not permission for student diagnostics or adaptive products.
+- `assessment_role` is optional and omitted when absent.
+- The scaffolding object is `verbal_level`, `visual_stage`, `fading_position`, `dual_coding_present`.
+- External exam-question metadata must use `references/data/exercises/` overlays with source stable ID and curriculum version.
+- Authored target exercises use overlay-first strategy until a later approved migration.
+- `build-scripts/lib/verify_svg_geometry.py` is the canonical current precision verifier path.
+- S4/CP-3 approved the dry-run overlay shape only with conditions; it did not authorize source mutation or bulk metadata completion.
+- Tier A source annex extraction gaps, scaffolding calibration, provisional operation labels, graph-spec refinement, and product-boundary warnings must be handled before broad backfill.
+
+CP-2 decisions now in force:
+
+- R9.1 closed as `pass_with_conditions`.
+- R9.2 closed after creating owned-content projection edges with projection defaults.
+- Evidence edges are allowed only for explicitly evidence-qualified records, such as the target-exercise index and owned exercise markdown, and must remain separate from external authority.
+- Generated HTML, PDF, PNG, DOCX, PPTX, shared-engine output, generated navigation, generated quality YAML, and review notes are retrieval context or implementation trace only.
+- R9.2 strengthened edge labels so projection, owned exercise evidence, external authority, and implementation trace cannot be confused in graph/RAG output.
+- Companion subtype labels should continue to be refined where broad source-surface classes remain.
+- Exercise metadata backfill remains Sprint 4/CP-3 scope.
+
+## Final Rule
+
+Use this sequence:
+
+```text
+Plan
+-> Baseline
+-> Execute
+-> Verify
+-> Review gate if needed
+-> Deterministic bundle check
+-> Commit
+-> Tag
+-> Proceed only to the allowed next sprint
+```
+
+Subagents find and frame issues. Humans make pedagogical decisions. Validators enforce completeness. Git records the state.

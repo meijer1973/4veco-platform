@@ -59,6 +59,7 @@ function main() {
     'empty-needs-audit-summary',
     'alignment-graph-integrity',
     'evidence-anchor-status',
+    'reference-quality-issues',
   ].map(report);
 
   const issueCount = reports.reduce((sum, item) => sum + (item.issues || []).length, 0);
@@ -69,6 +70,16 @@ function main() {
   const blueprint = readJson('reports/json/blueprint-flag-triage.json', null);
   const examGaps = readJson('reports/json/exam-question-extraction-gaps.json', null);
   const retrievalEval = readJson('references/data/rag/retrieval_eval_results.json', null);
+  const qualityIssueReport = report('reference-quality-issues');
+  const qualityIssueLog = readJson('references/data/qc/reference-quality-issues.json', {
+    authority_boundary: {
+      internal_only: true,
+      curriculum_authority: false,
+      student_facing_exposure: false,
+      primary_evidence: false,
+    },
+    issues: [],
+  });
 
   const state = {
     schema_version: 1,
@@ -118,6 +129,22 @@ function main() {
       total_issues: issueCount,
       high_or_critical_issues: highIssues.length,
       by_report_status: countBy(reports, (item) => item.status),
+    },
+    quality_issue_model: {
+      source: 'references/data/qc/reference-quality-issues.json',
+      report: 'reports/json/reference-quality-issues.json',
+      status: qualityIssueReport.status,
+      issue_log_status: qualityIssueLog.status || 'unknown',
+      issue_count: Array.isArray(qualityIssueLog.issues) ? qualityIssueLog.issues.length : 0,
+      active_issue_count: Array.isArray(qualityIssueLog.issues)
+        ? qualityIssueLog.issues.filter((item) => item.status !== 'resolved').length
+        : 0,
+      by_status: countBy(qualityIssueLog.issues || [], (item) => item.status),
+      by_category: countBy(qualityIssueLog.issues || [], (item) => item.quality_category),
+      internal_only: qualityIssueLog.authority_boundary && qualityIssueLog.authority_boundary.internal_only === true,
+      curriculum_authority: qualityIssueLog.authority_boundary && qualityIssueLog.authority_boundary.curriculum_authority === true,
+      student_facing_exposure: qualityIssueLog.authority_boundary && qualityIssueLog.authority_boundary.student_facing_exposure === true,
+      primary_evidence: qualityIssueLog.authority_boundary && qualityIssueLog.authority_boundary.primary_evidence === true,
     },
     schema_validation_status: {
       report_json_contract: 'pass',
@@ -199,6 +226,14 @@ function main() {
   lines.push(`- Reports: ${state.qc_findings.report_count}`);
   lines.push(`- Total issues: ${state.qc_findings.total_issues}`);
   lines.push(`- High/critical issues: ${state.qc_findings.high_or_critical_issues}`);
+  lines.push('');
+  lines.push('## Quality Issue Model');
+  lines.push('');
+  lines.push(`- Status: ${state.quality_issue_model.status}`);
+  lines.push(`- Active issues: ${state.quality_issue_model.active_issue_count}`);
+  lines.push(`- Internal only: ${state.quality_issue_model.internal_only}`);
+  lines.push(`- Curriculum authority: ${state.quality_issue_model.curriculum_authority}`);
+  lines.push(`- Student-facing exposure: ${state.quality_issue_model.student_facing_exposure}`);
   lines.push('');
   lines.push('## Retrieval Evaluation');
   lines.push('');

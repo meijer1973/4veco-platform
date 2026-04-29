@@ -1,0 +1,310 @@
+{
+  "schema_version": 1,
+  "artifact_id": "reference-quality-issues",
+  "status": "active_internal_qc",
+  "created_on": "2026-04-29",
+  "updated_on": "2026-04-29",
+  "source_schema": "references/schemas/quality-issue.schema.json",
+  "authority_boundary": {
+    "internal_only": true,
+    "curriculum_authority": false,
+    "student_facing_exposure": false,
+    "primary_evidence": false
+  },
+  "category_registry": [
+    {
+      "quality_category": "reference_quality",
+      "definition": "General integrity issue in reference governance or reference-surface clarity."
+    },
+    {
+      "quality_category": "evidence_sufficiency",
+      "definition": "The evidence layer is too thin, incomplete, or not yet strong enough for broader retrieval or reporting claims."
+    },
+    {
+      "quality_category": "unit_design",
+      "definition": "A micro-teaching unit may need split, merge, retirement, scope review, or promotion decision."
+    },
+    {
+      "quality_category": "extraction_integrity",
+      "definition": "A source extraction or overlay is incomplete enough that broad metadata backfill would be risky."
+    },
+    {
+      "quality_category": "report_drift",
+      "definition": "A generated report or diagnostic projection may not fully reflect the underlying source state."
+    },
+    {
+      "quality_category": "source_version_drift",
+      "definition": "A source, curriculum, blueprint, or exam-program version boundary is not yet explicit enough."
+    },
+    {
+      "quality_category": "term_link_gap",
+      "definition": "A unit or term lacks a canonical link or exemption needed for reference/RAG trust."
+    },
+    {
+      "quality_category": "needs_gap",
+      "definition": "A prerequisite edge or zero-needs classification is missing, weak, or still review-bound."
+    },
+    {
+      "quality_category": "production_readiness_warning",
+      "definition": "The data is useful internally but not ready for student-facing, production teacher-facing, or automated use."
+    }
+  ],
+  "issues": [
+    {
+      "issue_id": "R8-QC-001",
+      "title": "Remaining empty-needs backlog needs explicit classification",
+      "quality_category": "needs_gap",
+      "status": "open",
+      "severity": "medium",
+      "owner_team": "references_team",
+      "affected_surface": "references/machine/micro-teaching-units.json",
+      "affected_entities": ["empty-needs backlog"],
+      "evidence_refs": [
+        {
+          "path": "reports/json/needs-coverage.json",
+          "role": "diagnostic_report",
+          "note": "Reports the current live-unit empty-needs count and status distribution."
+        }
+      ],
+      "next_action": "Review remaining empty-needs units and record true-zero, underbouw-assumed, or explicit prerequisite decisions through the approved reference workflow.",
+      "proof_required_to_close": "Every live empty-needs unit has an approved zero_needs_status or a validated prerequisite list, and the needs-coverage report no longer contains unclassified empty-needs units.",
+      "authority_boundary": {
+        "internal_only": true,
+        "curriculum_authority": false,
+        "student_facing_exposure": false,
+        "primary_evidence": false
+      },
+      "created_on": "2026-04-29",
+      "updated_on": "2026-04-29",
+      "blocked_downstream_uses": [
+        "automatic_lesson_sequencing",
+        "adaptive_routing",
+        "automatic_mastery_decisions"
+      ]
+    },
+    {
+      "issue_id": "R8-QC-002",
+      "title": "Term-link gaps need procedure-only versus missing-term classification",
+      "quality_category": "term_link_gap",
+      "status": "open",
+      "severity": "medium",
+      "owner_team": "references_team",
+      "affected_surface": "references/machine/micro-teaching-units.json",
+      "affected_entities": ["term-link coverage"],
+      "evidence_refs": [
+        {
+          "path": "reports/json/terms-coverage.json",
+          "role": "diagnostic_report",
+          "note": "Reports live units without canonical term links."
+        },
+        {
+          "path": "reports/sprints/RX.2-result.md",
+          "role": "sprint_result",
+          "note": "RX.2 added procedure/instrument A-domain units that intentionally may not have concept terms yet."
+        }
+      ],
+      "next_action": "Split term-link reporting into true missing canonical term links and intentionally procedure-only unit exemptions.",
+      "proof_required_to_close": "Term-link reports separate procedure-only exemptions from concept-bearing units missing canonical term slugs.",
+      "authority_boundary": {
+        "internal_only": true,
+        "curriculum_authority": false,
+        "student_facing_exposure": false,
+        "primary_evidence": false
+      },
+      "created_on": "2026-04-29",
+      "updated_on": "2026-04-29",
+      "blocked_downstream_uses": []
+    },
+    {
+      "issue_id": "R8-QC-003",
+      "title": "RX.2 representation units are generator-blocked",
+      "quality_category": "production_readiness_warning",
+      "status": "blocked",
+      "severity": "high",
+      "owner_team": "platform_team",
+      "affected_surface": "engines/skilltree/generators.js",
+      "affected_entities": ["A61", "A66", "A67", "A70", "A72", "A74"],
+      "evidence_refs": [
+        {
+          "path": "references/data/sprints/RX.2-generator-blocked-units.json",
+          "role": "governance_data",
+          "note": "Tracks the six catalog-valid RX.2 units as non-interactive until generator implementation and validation."
+        }
+      ],
+      "next_action": "Implement and validate GEN_A61, GEN_A66, GEN_A67, GEN_A70, GEN_A72, and GEN_A74 before any student-facing skill-tree exposure.",
+      "proof_required_to_close": "Generator implementations exist, generator coverage validation passes, and a later sprint explicitly approves student-facing skill-tree exposure.",
+      "authority_boundary": {
+        "internal_only": true,
+        "curriculum_authority": false,
+        "student_facing_exposure": false,
+        "primary_evidence": false
+      },
+      "created_on": "2026-04-29",
+      "updated_on": "2026-04-29",
+      "blocked_downstream_uses": [
+        "student-facing skill-tree exposure for A61/A66/A67/A70/A72/A74",
+        "student_diagnostics",
+        "adaptive_routing",
+        "automatic_mastery_decisions"
+      ]
+    },
+    {
+      "issue_id": "R8-QC-004",
+      "title": "Tier A source-annex extraction gap blocks broad exam overlay backfill",
+      "quality_category": "extraction_integrity",
+      "status": "blocked",
+      "severity": "high",
+      "owner_team": "references_team",
+      "affected_surface": "references/data/exercises/",
+      "affected_entities": ["Tier A exam overlays", "source_values_not_extracted"],
+      "evidence_refs": [
+        {
+          "path": "references/data/exercises/source-annex-gap-log.json",
+          "role": "governance_data",
+          "note": "Records the CP-3 source-annex extraction gap before broad Tier A overlay extension."
+        }
+      ],
+      "next_action": "Add source-annex extraction workflow or require explicit source_values_not_extracted records with proof-to-close before broad Tier A overlay backfill.",
+      "proof_required_to_close": "Tier A overlays that require annex/source values either extract those values or carry explicit reviewed gap records with proof-to-close.",
+      "authority_boundary": {
+        "internal_only": true,
+        "curriculum_authority": false,
+        "student_facing_exposure": false,
+        "primary_evidence": false
+      },
+      "created_on": "2026-04-29",
+      "updated_on": "2026-04-29",
+      "blocked_downstream_uses": [
+        "bulk_exam_metadata_backfill",
+        "summative_assessment_decisions"
+      ]
+    },
+    {
+      "issue_id": "R8-QC-005",
+      "title": "Evidence anchor coverage remains thin for broad RAG trust",
+      "quality_category": "evidence_sufficiency",
+      "status": "open",
+      "severity": "high",
+      "owner_team": "references_team",
+      "affected_surface": "references/data/evidence-anchors.json",
+      "affected_entities": ["evidence-anchor coverage", "RAG trust"],
+      "evidence_refs": [
+        {
+          "path": "reports/json/evidence-anchor-status.json",
+          "role": "diagnostic_report",
+          "note": "Reports the current evidence-anchor and claim counts."
+        },
+        {
+          "path": "reports/review-gates/GATE-R7-rag/gate-closure.json",
+          "role": "gate_closure",
+          "note": "R7.4 allowed internal and limited teacher-facing use only with evidence-surfacing conditions."
+        }
+      ],
+      "next_action": "Backfill evidence anchors for high-traffic units, terms, target exercises, and retrieval-evaluation failure modes before expanding use.",
+      "proof_required_to_close": "Evidence-anchor coverage report shows materially improved coverage for high-traffic retrieval surfaces and no result implies evidence where none exists.",
+      "authority_boundary": {
+        "internal_only": true,
+        "curriculum_authority": false,
+        "student_facing_exposure": false,
+        "primary_evidence": false
+      },
+      "created_on": "2026-04-29",
+      "updated_on": "2026-04-29",
+      "blocked_downstream_uses": [
+        "student_facing_ai",
+        "automatic_mastery_decisions",
+        "summative_assessment_decisions"
+      ]
+    },
+    {
+      "issue_id": "R8-QC-006",
+      "title": "Curriculum and source-version registry remains future work",
+      "quality_category": "source_version_drift",
+      "status": "deferred",
+      "severity": "medium",
+      "owner_team": "references_team",
+      "affected_surface": "references/",
+      "affected_entities": ["curriculum_versioning", "source_versioning"],
+      "evidence_refs": [
+        {
+          "path": "references/reference-team-roadmap.md",
+          "role": "roadmap",
+          "note": "R14.1 remains the planned minimal curriculum versioning sprint."
+        }
+      ],
+      "next_action": "Implement R14.1 minimal curriculum versioning before retrieval/reporting can safely mix multi-year source surfaces.",
+      "proof_required_to_close": "Current external, machine, authored, and owned-source surfaces carry explicit source/curriculum version provenance and stale-reference reporting exists.",
+      "authority_boundary": {
+        "internal_only": true,
+        "curriculum_authority": false,
+        "student_facing_exposure": false,
+        "primary_evidence": false
+      },
+      "created_on": "2026-04-29",
+      "updated_on": "2026-04-29",
+      "blocked_downstream_uses": [
+        "automatic_lesson_sequencing",
+        "student_facing_ai"
+      ]
+    },
+    {
+      "issue_id": "R8-QC-007",
+      "title": "D04 unit-design decision remains unresolved before D-domain promotion",
+      "quality_category": "unit_design",
+      "status": "deferred",
+      "severity": "medium",
+      "owner_team": "content_strategy",
+      "affected_surface": "references/machine/micro-teaching-units.json",
+      "affected_entities": ["D04"],
+      "evidence_refs": [
+        {
+          "path": "references/reference-team-roadmap.md",
+          "role": "roadmap",
+          "note": "Sprint 9 and CP-5 retain D04 split/retire/redistribute review before D-domain promotion."
+        }
+      ],
+      "next_action": "Resolve D04 through the planned D-domain unit-design review before any C-to-B promotion workflow depends on it.",
+      "proof_required_to_close": "A D04 decision record exists with dependent-unit audit and VWO economics review outcome.",
+      "authority_boundary": {
+        "internal_only": true,
+        "curriculum_authority": false,
+        "student_facing_exposure": false,
+        "primary_evidence": false
+      },
+      "created_on": "2026-04-29",
+      "updated_on": "2026-04-29",
+      "blocked_downstream_uses": [
+        "C-to-B promotion on D-domain units",
+        "automatic_lesson_sequencing"
+      ]
+    },
+    {
+      "issue_id": "R8-QC-008",
+      "title": "Reference-health report must stay aligned with QC issue model",
+      "quality_category": "report_drift",
+      "status": "in_review",
+      "severity": "low",
+      "owner_team": "references_team",
+      "affected_surface": "reports/json/reference-health.json",
+      "affected_entities": ["reference-health dashboard"],
+      "evidence_refs": [
+        {
+          "path": "reports/json/reference-health.json",
+          "role": "generated_report",
+          "note": "Dashboard state should expose the internal QC issue model without treating it as curriculum authority."
+        }
+      ],
+      "next_action": "Regenerate reference health after R8.1 and verify it includes an internal-only quality_issue_model summary.",
+      "proof_required_to_close": "Reference-health JSON includes quality_issue_model with internal_only true, curriculum_authority false, and student_facing_exposure false.",
+      "authority_boundary": {
+        "internal_only": true,
+        "curriculum_authority": false,
+        "student_facing_exposure": false,
+        "primary_evidence": false
+      },
+      "created_on": "2026-04-29",
+      "updated_on": "2026-04-29",
+      "blocked_downstream_uses": []
+    }
+  ]
+}

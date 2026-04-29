@@ -250,6 +250,10 @@ function main() {
   for (const name of fs.readdirSync(reportDir).filter((name) => name.endsWith('.json')).sort()) {
     const sourcePath = `reports/json/${name}`;
     const report = readJson(sourcePath, {});
+    const issueText = (report.issues || [])
+      .slice(0, 80)
+      .map((item) => `${item.issue_id || ''} ${item.category || ''} ${item.affected_entity || ''} ${item.evidence_path || ''} ${item.next_action || ''} ${item.proof_required_to_close || ''}`)
+      .join(' ');
     chunks.push(chunk({
       chunkId: `quality-report:${slug(name.replace(/\\.json$/, ''))}`,
       sourcePath,
@@ -260,7 +264,7 @@ function main() {
       edgeStatuses: [],
       curriculumAuthority: false,
       primaryEvidence: false,
-      text: `${report.report_id || name}: status ${report.status || 'unknown'}; issues ${(report.issues || []).length}; summary ${JSON.stringify(report.summary || {}).slice(0, 2000)}`,
+      text: `${report.report_id || name}: status ${report.status || 'unknown'}; issues ${(report.issues || []).length}; summary ${JSON.stringify(report.summary || {}).slice(0, 2000)}; issue text ${issueText.slice(0, 8000)}`,
     }));
   }
 

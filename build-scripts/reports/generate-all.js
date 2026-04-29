@@ -18,6 +18,7 @@ const TERMS = 'references/machine/begrippen.json';
 const EXAMS = 'references/external/exam-questions.json';
 const TARGETS = 'references/authored/course-target-exercises.json';
 const EMPTY_NEEDS = 'references/data/audits/empty-needs-audit.json';
+const QUALITY_ISSUES = 'references/data/qc/reference-quality-issues.json';
 
 function readJson(relPath, fallback) {
   const file = path.join(REPO_ROOT, relPath);
@@ -35,6 +36,15 @@ function now() {
 
 function sha(text) {
   return crypto.createHash('sha256').update(text).digest('hex');
+}
+
+function countBy(items, selector) {
+  const counts = {};
+  for (const item of items) {
+    const value = selector(item) || 'unknown';
+    counts[value] = (counts[value] || 0) + 1;
+  }
+  return Object.fromEntries(Object.entries(counts).sort(([a], [b]) => a.localeCompare(b)));
 }
 
 function issue(reportId, index, severity, affectedEntity, category, evidencePath, nextAction, proofRequiredToClose) {
@@ -318,6 +328,34 @@ function buildEmptyNeedsAuditSummary(ctx) {
   });
 }
 
+function buildReferenceQualityIssues(ctx) {
+  const source = ctx.qualityIssues || { issues: [] };
+  const active = (source.issues || []).filter((item) => item.status !== 'resolved');
+  const issues = active.map((item, index) => issue(
+    'reference-quality-issues',
+    index + 1,
+    item.severity,
+    item.issue_id,
+    item.quality_category,
+    (item.evidence_refs && item.evidence_refs[0] && item.evidence_refs[0].path) || QUALITY_ISSUES,
+    item.next_action,
+    item.proof_required_to_close
+  ));
+  const criticalOpen = active.some((item) => item.severity === 'critical' && item.status !== 'deferred');
+  const highOpen = active.some((item) => item.severity === 'high' && !['deferred', 'resolved'].includes(item.status));
+  return makeReport('reference-quality-issues', [QUALITY_ISSUES], criticalOpen ? 'fail' : highOpen || issues.length ? 'warn' : 'pass', issues, {
+    issue_log_status: source.status || 'unknown',
+    total_issues: (source.issues || []).length,
+    active_issues: active.length,
+    by_status: countBy(source.issues || [], (item) => item.status),
+    by_category: countBy(source.issues || [], (item) => item.quality_category),
+    by_severity: countBy(source.issues || [], (item) => item.severity),
+    internal_only: source.authority_boundary && source.authority_boundary.internal_only === true,
+    curriculum_authority: source.authority_boundary && source.authority_boundary.curriculum_authority === true,
+    student_facing_exposure: source.authority_boundary && source.authority_boundary.student_facing_exposure === true,
+  });
+}
+
 function main() {
   const ctx = {
     units: loadUnits(),
@@ -325,6 +363,7 @@ function main() {
     exams: readJson(EXAMS, []),
     targets: readJson(TARGETS, {}),
     emptyNeeds: readJson(EMPTY_NEEDS, { entries: [], summary: {} }),
+    qualityIssues: readJson(QUALITY_ISSUES, { issues: [] }),
   };
 
   const reports = [
@@ -338,6 +377,7 @@ function main() {
     buildDeadUnits(ctx),
     buildBegrippenCoverage(ctx),
     buildEmptyNeedsAuditSummary(ctx),
+    buildReferenceQualityIssues(ctx),
   ];
 
   for (const report of reports) writeReport(report);

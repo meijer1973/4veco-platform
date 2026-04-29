@@ -21,6 +21,7 @@ const REQUIRED = [
   'dead-units',
   'begrippen-coverage',
   'empty-needs-audit-summary',
+  'reference-quality-issues',
 ];
 const STATUSES = new Set(['pass', 'warn', 'fail', 'info']);
 const SEVERITIES = new Set(['info', 'low', 'medium', 'high', 'critical']);

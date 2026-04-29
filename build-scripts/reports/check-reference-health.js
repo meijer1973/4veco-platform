@@ -28,6 +28,7 @@ function main() {
     'target_exercise_triage_status',
     'unresolved_refs',
     'qc_findings',
+    'quality_issue_model',
     'schema_validation_status',
     'alignment_graph_status',
     'r5_3_gate_status',
@@ -45,6 +46,12 @@ function main() {
   if (authority.student_diagnostics_allowed !== false) errors.push('student diagnostics must remain blocked');
   if (authority.adaptive_routing_allowed !== false) errors.push('adaptive routing must remain blocked');
   if (authority.student_facing_ai_allowed !== false) errors.push('student-facing AI must remain blocked');
+
+  const qualityIssueModel = data.quality_issue_model || {};
+  if (qualityIssueModel.internal_only !== true) errors.push('quality_issue_model.internal_only must be true');
+  if (qualityIssueModel.curriculum_authority !== false) errors.push('quality_issue_model.curriculum_authority must be false');
+  if (qualityIssueModel.student_facing_exposure !== false) errors.push('quality_issue_model.student_facing_exposure must be false');
+  if (qualityIssueModel.primary_evidence !== false) errors.push('quality_issue_model.primary_evidence must be false');
 
   for (const blocked of ['student_diagnostics', 'adaptive_routing', 'student_facing_ai']) {
     if (!Array.isArray(data.blocked_downstream_uses) || !data.blocked_downstream_uses.includes(blocked)) {

@@ -4,7 +4,7 @@ Generated: 2026-04-23
 Adopted main roadmap: 2026-04-25
 Last strategic update: 2026-04-29
 Roadmap ID: `references-team-roadmap`
-Roadmap version: `v2.12-rx2-first-lane-applied`
+Roadmap version: `v2.13-r8.1-qc-issue-model`
 Roadmap status: `active`
 Version index: `docs/roadmaps/roadmap-version-index.json`
 Scope: `references/`, `build-scripts/references/`, `build-scripts/reports/`, reference dashboards, and generated reference reports under `reports/`
@@ -15,7 +15,7 @@ The handoff roadmap has been adopted as the main operating roadmap for the refer
 
 No blocking incompatibility was found. The roadmap direction fits the repository: machine-edited references, evidence-first unit growth, JSON-first reports, review gates for pedagogical authority, and bounded later AI.
 
-Update 2026-04-29: RX.2 First-Lane Mutation Review closed as `pass_with_conditions`, then the six approved units were added through `unit-add.js`: `A61`, `A66`, `A67`, `A70`, `A72`, and `A74`. These units remain generator-blocked and non-interactive for student-facing skill-tree use until their generators are implemented and validated.
+Update 2026-04-29: R8.1 Scoped QC Issue Model is completed. The roadmap now has an internal-only quality issue layer under `references/data/qc/`, generated `reference-quality-issues` report output, and a reference-health/RAG data hook. QC issues are diagnostic governance records, not curriculum authority or student-facing material.
 
 Compatibility decisions:
 
@@ -32,6 +32,7 @@ Compatibility decisions:
 - New registries under `references/machine/` remain future end states only. They require schema, CLI, validators, and mutation logs before machine files are created or changed.
 - `R9.2 Content Graph Projection` is completed. Owned-source content is queryable through a separate projection graph without changing R5 alignment authority.
 - `Phase RX Representation-Sensitive Micro-Unit Decomposition` is adopted as a dedicated reference-team phase. RX.1 and GATE-RX2 closed as `pass_with_conditions`; RX.2 applied the bounded first lane through CLI-only mutation and now blocks student-facing use through explicit generator-block tracking.
+- `R8.1 Scoped QC Issue Model` is completed. Quality issues are internal-only governance signals with proof-to-close fields, exposed to dashboards and RAG as diagnostic generated-report context only.
 
 ## Operating Rule
 
@@ -125,7 +126,6 @@ Open items are listed first; completed items are kept below them.
 
 | Sprint | Name | Completed | Current State |
 |--------|------|-----------|---------------|
-| R8.1 | QC Issue Model | no | Planned early and scoped down. Define only the lightweight issue schema needed to expose evidence weakness, stale data, proof-to-close, and registry/report warnings. |
 | Sprint 6 | Bronnen Registry MVP | no | Planned. Create source-document registry schema/validator first; store under `references/machine/` only after CLI and validators exist. |
 | Sprint 7 | Skill And Operation Registry MVP | no | Planned. Separate unit IDs from fine-grained exercise operations and skill/category tags; preserve useful `skill-categories.md` content where still valid. |
 | RX.3 | Producer Table And Graph Representation Units | no | Planned after RX.2. Review profit, break-even, TO/TK, GTK, MO/MK, table-difference, and producer-graph overlap before mutation. |
@@ -145,6 +145,7 @@ Open items are listed first; completed items are kept below them.
 | Product Gate | Re-Evaluate R10-R13 Product Surfaces | no | Blocked. Diagnostics, adaptive routing, student-facing AI, teacher cockpit deployment, automatic sequencing, mastery, and summative uses remain out of scope until data-quality gates justify them. |
 | RX.2 | First-Lane Mutation Review And CLI Execution | yes | Completed. `GATE-RX2-first-lane-mutation-review` closed as `pass_with_conditions`; `A61`, `A66`, `A67`, `A70`, `A72`, and `A74` were added through `unit-add.js`; all six remain generator-blocked/non-interactive until generator implementation and validation. |
 | GATE-RX2 | First-Lane Mutation Review | yes | Closed as `pass_with_conditions`. Authorized CLI-only mutation for the six-unit first lane and preserved blocks on deferred candidates, generator exposure, and student-facing/adaptive/product uses. |
+| R8.1 | QC Issue Model | yes | Completed. Created internal-only quality issue schema/log, validator, `reference-quality-issues` report, and reference-health/RAG data hook; QC issues remain diagnostic governance records, not curriculum authority. |
 | RX.1 | Representation-Operation Inventory | yes | Completed through the non-mutating inventory/review-packet stop point. Prepared 29 operation records, 24 provisional candidates, 5 held duplicate/overlap records, and `GATE-RX1-representation-unit-scope`. |
 | GATE-RX1 | Representation Unit Scope Review | yes | Closed as `pass_with_conditions`. RX.2 planning is authorized for the bounded first lane only; direct mutation remains blocked until explicit RX.2 mutation review and CLI-backed execution. |
 | S4.1 | Exercise Overlay Conditions And Calibration | yes | Completed on 2026-04-29. Implemented CP-3 condition artifacts, source-annex gap tracker, scaffolding calibration, graph-spec representation plan, product-boundary warnings, condition validator, and condition reports. No bulk extension or source mutation authorized. |
@@ -657,6 +658,8 @@ Required work:
 Required output: QC issue schema, example issue log, validator, and dashboard/RAG data hook.
 
 Stop condition: do not gold-plate a general issue tracker and do not copy categories from unrelated data-analysis projects.
+
+Completion: completed on 2026-04-29. Added the internal-only issue log at `references/data/qc/reference-quality-issues.json`, tightened `quality-issue.schema.json`, added `check-quality-issues.js`, generated `reports/json/reference-quality-issues.json`, and exposed a `quality_issue_model` summary in reference health. The records are diagnostic governance data only.
 
 ### Sprint 6 Bronnen Registry MVP
 
@@ -1298,7 +1301,7 @@ Goal: make quality issues machine-readable only where doing so improves referenc
 
 Sprints:
 
-- `R8.1` planned: scoped QC issue model.
+- `R8.1` completed: scoped QC issue model.
 - `Sprint 6` planned: bronnen registry MVP.
 - `Sprint 8` planned: misconception registry MVP.
 - `Sprint 9` planned: unit design status and D04 resolution.
@@ -1388,7 +1391,6 @@ R9.1 Owned source registry
 R9.2 Content graph projection
 Sprint 4 Exercise metadata overlay MVP (CP-3)
 RX.2 First-lane mutation review and CLI execution
-R8.1 Scoped QC issue model
 Sprint 6 Bronnen registry MVP
 Sprint 7 Skill and operation registry MVP (CP-4)
 RX.3 Producer table and graph representation units
@@ -1412,13 +1414,13 @@ Do not invert this order.
 
 ## Immediate Next Sprint
 
-Next sprint: `R8.1 Scoped QC Issue Model`.
+Next sprint: `Sprint 6 Bronnen Registry MVP`.
 
-R4.5 has closed the bounded micro-unit mutation lane, CP-1 has closed the non-mutating schema audit gate as `pass_with_conditions`, CP-2 has closed the owned-source scope gate as `pass_with_conditions`, R9.1 has registered the owned-source surfaces, R9.2 has completed owned-content projection, S4/CP-3 has closed as `pass_with_conditions`, S4.1 has implemented the CP-3 condition artifacts, RX.1 has prepared the non-mutating representation-operation inventory, `GATE-RX1-representation-unit-scope` has closed as `pass_with_conditions`, and RX.2/GATE-RX2 has added the bounded six-unit first lane through CLI-only mutation.
+R4.5 has closed the bounded micro-unit mutation lane, CP-1 has closed the non-mutating schema audit gate as `pass_with_conditions`, CP-2 has closed the owned-source scope gate as `pass_with_conditions`, R9.1 has registered the owned-source surfaces, R9.2 has completed owned-content projection, S4/CP-3 has closed as `pass_with_conditions`, S4.1 has implemented the CP-3 condition artifacts, RX.1 has prepared the non-mutating representation-operation inventory, `GATE-RX1-representation-unit-scope` has closed as `pass_with_conditions`, RX.2/GATE-RX2 has added the bounded six-unit first lane through CLI-only mutation, and R8.1 has added the scoped internal QC issue model.
 
 `A61`, `A66`, `A67`, `A70`, `A72`, and `A74` are now catalog units, but they are generator-blocked and non-interactive for student-facing skill-tree use until their generators are implemented and validated.
 
-`R8.1` should stay scoped down: define only the lightweight QC issue model needed to expose evidence weakness, stale data, proof-to-close, and registry/report warnings. Do not widen it into production QC gates, diagnostics, adaptive routing, or student-facing workflows.
+`Sprint 6` should create a controlled source-document registry without weakening machine-edit discipline. If the first implementation would live under `references/machine/`, create the CLI before creating the registry; otherwise keep the first pass under `references/data/` as a governed overlay.
 
 Do not start diagnostics, adaptive routing, student-facing AI, automatic lesson sequencing, mastery decisions, summative decisions, teacher cockpit deployment, game/simulation product mapping, or continuous-improvement claims from this roadmap.
 

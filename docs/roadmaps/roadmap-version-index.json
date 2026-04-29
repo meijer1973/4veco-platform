@@ -15,13 +15,14 @@
   "roadmaps": [
     {
       "roadmap_id": "references-team-roadmap",
-      "version": "v2.12-rx2-first-lane-applied",
+      "version": "v2.13-r8.1-qc-issue-model",
       "title": "References Team Roadmap",
       "status": "active",
       "path": "references/reference-team-roadmap.md",
       "owner": "references_team",
       "updated_on": "2026-04-29",
       "supersedes": [
+        "docs/roadmaps/outdated/reference-team-roadmap-v2.12-rx2-first-lane-applied.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.11-rx2-first-lane-review-prepared.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.10-rx1-gate-closed.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.9-rx1-inventory-prepared.md",
@@ -34,7 +35,18 @@
         "knowledge/Exercise schema and quality/reference-team-roadmap Live version 28 April.md",
         "knowledge/Exercise schema and quality/roadmap-updated-repository-checked.md"
       ],
-      "notes": "Current operating roadmap after GATE-RX2 closed as pass_with_conditions and the six-unit RX.2 first lane was applied through CLI-only mutation with generator-blocked status."
+      "notes": "Current operating roadmap after R8.1 added the scoped internal QC issue model, reference-quality-issues report, and reference-health/RAG data hook."
+    },
+    {
+      "roadmap_id": "references-team-roadmap-v2.12",
+      "version": "v2.12-rx2-first-lane-applied",
+      "title": "References Team Roadmap before R8.1 QC issue model",
+      "status": "outdated",
+      "path": "docs/roadmaps/outdated/reference-team-roadmap-v2.12-rx2-first-lane-applied.md",
+      "owner": "references_team",
+      "updated_on": "2026-04-29",
+      "superseded_by": "references/reference-team-roadmap.md",
+      "notes": "Snapshot archived before adding the scoped internal QC issue model and dashboard/RAG hook."
     },
     {
       "roadmap_id": "references-team-roadmap-v2.11",

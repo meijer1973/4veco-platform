@@ -1,6 +1,6 @@
 # Retrieval Evaluation Results
 
-Generated on: 2026-04-29T21:47:47.655Z
+Generated on: 2026-04-29T21:58:21.482Z
 
 ## Summary
 
@@ -16,7 +16,7 @@ Generated on: 2026-04-29T21:47:47.655Z
 | rag-eval-001 | pass | 12 | machine_unit, owned_content_edge, alignment_edge, machine_term | diagnostic_only, not_primary_evidence | - |
 | rag-eval-002 | pass | 12 | exam_question, machine_unit, machine_term, owned_content_edge | diagnostic_only, not_primary_evidence | - |
 | rag-eval-003 | pass | 12 | quality_report, owned_content_edge | diagnostic_only, generated_report_warning, not_primary_evidence | - |
-| rag-eval-004 | pass | 12 | quality_report, external_source, owned_content_edge | diagnostic_only, generated_report_warning, not_primary_evidence | - |
+| rag-eval-004 | pass | 12 | quality_report, external_source | diagnostic_only, generated_report_warning, not_primary_evidence | - |
 | rag-eval-005 | pass | 12 | quality_report, target_exercise, owned_content_edge | diagnostic_only, generated_report_warning, not_primary_evidence | - |
 | rag-eval-006 | pass | 12 | evidence_anchor, alignment_edge, quality_report, authored_reference, machine_term | diagnostic_only, generated_report_warning, not_primary_evidence | - |
 | rag-eval-007 | pass | 12 | quality_report, owned_content_edge | diagnostic_only, generated_report_warning, not_primary_evidence | - |
@@ -91,6 +91,9 @@ Top results:
 - quality-report:terms-coverage.json (quality_report, generated_report)
   - source: reports/json/terms-coverage.json
   - warnings: diagnostic_only, generated_report_warning, not_primary_evidence
+- quality-report:reference-quality-issues.json (quality_report, generated_report)
+  - source: reports/json/reference-quality-issues.json
+  - warnings: diagnostic_only, generated_report_warning, not_primary_evidence
 - quality-report:dead-units.json (quality_report, generated_report)
   - source: reports/json/dead-units.json
   - warnings: diagnostic_only, generated_report_warning, not_primary_evidence
@@ -98,9 +101,6 @@ Top results:
   - source: references/data/owned-content-graph.json
   - warnings: diagnostic_only, not_primary_evidence
 - owned-content-edge:ocg-projected-unit-uses-term-unit-a06-term-evenwichtshoeveelheid-1.4.2-1.4.2-references-machine-micro-teaching-units.jso-b15d1e939339 (owned_content_edge, diagnostic)
-  - source: references/data/owned-content-graph.json
-  - warnings: diagnostic_only, not_primary_evidence
-- owned-content-edge:ocg-projected-unit-uses-term-unit-a06-term-evenwichtshoeveelheid-2.2.2-2.2.2-references-machine-micro-teaching-units.jso-db516e99ad85 (owned_content_edge, diagnostic)
   - source: references/data/owned-content-graph.json
   - warnings: diagnostic_only, not_primary_evidence
 
@@ -123,11 +123,11 @@ Top results:
 - quality-report:dead-units.json (quality_report, generated_report)
   - source: reports/json/dead-units.json
   - warnings: diagnostic_only, generated_report_warning, not_primary_evidence
+- quality-report:reference-quality-issues.json (quality_report, generated_report)
+  - source: reports/json/reference-quality-issues.json
+  - warnings: diagnostic_only, generated_report_warning, not_primary_evidence
 - quality-report:aspects-coverage.json (quality_report, generated_report)
   - source: reports/json/aspects-coverage.json
-  - warnings: diagnostic_only, generated_report_warning, not_primary_evidence
-- quality-report:begrippen-coverage.json (quality_report, generated_report)
-  - source: reports/json/begrippen-coverage.json
   - warnings: diagnostic_only, generated_report_warning, not_primary_evidence
 
 ### rag-eval-005
@@ -282,8 +282,8 @@ Top results:
 - quality-report:owned-source-registry.json (quality_report, generated_report)
   - source: reports/json/owned-source-registry.json
   - warnings: diagnostic_only, generated_report_warning, not_primary_evidence
-- quality-report:aspects-coverage.json (quality_report, generated_report)
-  - source: reports/json/aspects-coverage.json
+- quality-report:reference-quality-issues.json (quality_report, generated_report)
+  - source: reports/json/reference-quality-issues.json
   - warnings: diagnostic_only, generated_report_warning, not_primary_evidence
 
 ## Authority Notes

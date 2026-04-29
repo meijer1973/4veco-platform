@@ -1,0 +1,44 @@
+{
+  "sprint_id": "R8.1",
+  "name": "Scoped QC Issue Model",
+  "status": "in_progress",
+  "planned_on": "2026-04-29",
+  "plan": "docs/sprints/R8.1-plan.md",
+  "protected_reference_data_changes_allowed": false,
+  "human_review_required": false,
+  "scope": [
+    "lightweight internal QC issue schema",
+    "example issue log",
+    "validator",
+    "dashboard/RAG data hook"
+  ],
+  "blocked_scope": [
+    "general issue tracker",
+    "production QC gates",
+    "student diagnostics",
+    "adaptive routing",
+    "student-facing AI",
+    "automatic sequencing",
+    "mastery decisions",
+    "summative decisions",
+    "hand edits to references/machine or references/external"
+  ],
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js docs/sprints/R8.1-plan.md",
+    "node build-scripts/sprints/check-sprint-bundle.js R8.1",
+    "node build-scripts/references/check-quality-issues.js",
+    "node build-scripts/references/validate-core-schemas.js",
+    "node build-scripts/reports/generate-all.js",
+    "node build-scripts/reports/validate-report-json.js",
+    "node build-scripts/reports/generate-reference-health.js",
+    "node build-scripts/reports/check-reference-health.js",
+    "node build-scripts/rag/build-chunks.js",
+    "node build-scripts/rag/validate-chunks.js",
+    "node build-scripts/rag/run-retrieval-evals.js",
+    "node build-scripts/rag/validate-retrieval-eval-results.js",
+    "node build-scripts/references/check-roadmap-version-index.js",
+    "node build-scripts/references/check-source-manifest.js",
+    "node build-scripts/references/check-document-inventory.js",
+    "node build-scripts/sprints/emit-url-index.js --check"
+  ]
+}

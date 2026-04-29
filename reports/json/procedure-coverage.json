@@ -1,7 +1,7 @@
 {
   "report_id": "procedure-coverage",
   "generated_by": "build-scripts/reports/generate-all.js",
-  "generated_on": "2026-04-29T21:47:32.647Z",
+  "generated_on": "2026-04-29T21:58:04.922Z",
   "source_files": [
     "references/machine/micro-teaching-units.json"
   ],

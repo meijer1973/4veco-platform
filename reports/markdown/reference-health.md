@@ -1,6 +1,6 @@
 # Reference Health
 
-Generated: 2026-04-29T21:47:40.948Z
+Generated: 2026-04-29T21:58:10.628Z
 
 ## Unit Counts
 
@@ -18,9 +18,17 @@ Generated: 2026-04-29T21:47:40.948Z
 
 ## QC Findings
 
-- Reports: 12
-- Total issues: 369
-- High/critical issues: 7
+- Reports: 13
+- Total issues: 381
+- High/critical issues: 10
+
+## Quality Issue Model
+
+- Status: warn
+- Active issues: 8
+- Internal only: true
+- Curriculum authority: false
+- Student-facing exposure: false
 
 ## Retrieval Evaluation
 

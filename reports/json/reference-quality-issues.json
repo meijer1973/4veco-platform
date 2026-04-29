@@ -1,0 +1,113 @@
+{
+  "report_id": "reference-quality-issues",
+  "generated_by": "build-scripts/reports/generate-all.js",
+  "generated_on": "2026-04-29T21:58:04.951Z",
+  "source_files": [
+    "references/data/qc/reference-quality-issues.json"
+  ],
+  "schema_version": 1,
+  "status": "warn",
+  "summary": {
+    "issue_log_status": "active_internal_qc",
+    "total_issues": 8,
+    "active_issues": 8,
+    "by_status": {
+      "blocked": 2,
+      "deferred": 2,
+      "in_review": 1,
+      "open": 3
+    },
+    "by_category": {
+      "evidence_sufficiency": 1,
+      "extraction_integrity": 1,
+      "needs_gap": 1,
+      "production_readiness_warning": 1,
+      "report_drift": 1,
+      "source_version_drift": 1,
+      "term_link_gap": 1,
+      "unit_design": 1
+    },
+    "by_severity": {
+      "high": 3,
+      "low": 1,
+      "medium": 4
+    },
+    "internal_only": true,
+    "curriculum_authority": false,
+    "student_facing_exposure": false
+  },
+  "issues": [
+    {
+      "issue_id": "reference-quality-issues-0001",
+      "severity": "medium",
+      "affected_entity": "R8-QC-001",
+      "category": "needs_gap",
+      "evidence_path": "reports/json/needs-coverage.json",
+      "next_action": "Review remaining empty-needs units and record true-zero, underbouw-assumed, or explicit prerequisite decisions through the approved reference workflow.",
+      "proof_required_to_close": "Every live empty-needs unit has an approved zero_needs_status or a validated prerequisite list, and the needs-coverage report no longer contains unclassified empty-needs units."
+    },
+    {
+      "issue_id": "reference-quality-issues-0002",
+      "severity": "medium",
+      "affected_entity": "R8-QC-002",
+      "category": "term_link_gap",
+      "evidence_path": "reports/json/terms-coverage.json",
+      "next_action": "Split term-link reporting into true missing canonical term links and intentionally procedure-only unit exemptions.",
+      "proof_required_to_close": "Term-link reports separate procedure-only exemptions from concept-bearing units missing canonical term slugs."
+    },
+    {
+      "issue_id": "reference-quality-issues-0003",
+      "severity": "high",
+      "affected_entity": "R8-QC-003",
+      "category": "production_readiness_warning",
+      "evidence_path": "references/data/sprints/RX.2-generator-blocked-units.json",
+      "next_action": "Implement and validate GEN_A61, GEN_A66, GEN_A67, GEN_A70, GEN_A72, and GEN_A74 before any student-facing skill-tree exposure.",
+      "proof_required_to_close": "Generator implementations exist, generator coverage validation passes, and a later sprint explicitly approves student-facing skill-tree exposure."
+    },
+    {
+      "issue_id": "reference-quality-issues-0004",
+      "severity": "high",
+      "affected_entity": "R8-QC-004",
+      "category": "extraction_integrity",
+      "evidence_path": "references/data/exercises/source-annex-gap-log.json",
+      "next_action": "Add source-annex extraction workflow or require explicit source_values_not_extracted records with proof-to-close before broad Tier A overlay backfill.",
+      "proof_required_to_close": "Tier A overlays that require annex/source values either extract those values or carry explicit reviewed gap records with proof-to-close."
+    },
+    {
+      "issue_id": "reference-quality-issues-0005",
+      "severity": "high",
+      "affected_entity": "R8-QC-005",
+      "category": "evidence_sufficiency",
+      "evidence_path": "reports/json/evidence-anchor-status.json",
+      "next_action": "Backfill evidence anchors for high-traffic units, terms, target exercises, and retrieval-evaluation failure modes before expanding use.",
+      "proof_required_to_close": "Evidence-anchor coverage report shows materially improved coverage for high-traffic retrieval surfaces and no result implies evidence where none exists."
+    },
+    {
+      "issue_id": "reference-quality-issues-0006",
+      "severity": "medium",
+      "affected_entity": "R8-QC-006",
+      "category": "source_version_drift",
+      "evidence_path": "references/reference-team-roadmap.md",
+      "next_action": "Implement R14.1 minimal curriculum versioning before retrieval/reporting can safely mix multi-year source surfaces.",
+      "proof_required_to_close": "Current external, machine, authored, and owned-source surfaces carry explicit source/curriculum version provenance and stale-reference reporting exists."
+    },
+    {
+      "issue_id": "reference-quality-issues-0007",
+      "severity": "medium",
+      "affected_entity": "R8-QC-007",
+      "category": "unit_design",
+      "evidence_path": "references/reference-team-roadmap.md",
+      "next_action": "Resolve D04 through the planned D-domain unit-design review before any C-to-B promotion workflow depends on it.",
+      "proof_required_to_close": "A D04 decision record exists with dependent-unit audit and VWO economics review outcome."
+    },
+    {
+      "issue_id": "reference-quality-issues-0008",
+      "severity": "low",
+      "affected_entity": "R8-QC-008",
+      "category": "report_drift",
+      "evidence_path": "reports/json/reference-health.json",
+      "next_action": "Regenerate reference health after R8.1 and verify it includes an internal-only quality_issue_model summary.",
+      "proof_required_to_close": "Reference-health JSON includes quality_issue_model with internal_only true, curriculum_authority false, and student_facing_exposure false."
+    }
+  ]
+}
