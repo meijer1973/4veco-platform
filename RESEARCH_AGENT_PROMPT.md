@@ -45,6 +45,16 @@ https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/R
 
 If a raw URL returns 404, do not immediately conclude that the file is absent. Verify path spelling and branch, then try the GitHub connector or repository search.
 
+### Note on agents that cannot construct URLs
+
+Some research environments (notably planning Claude in claude.ai) only fetch URLs that have appeared as literal `https://...` strings in context — they cannot concatenate a base URL with a relative path. For those agents, the map and the references-only map both include parallel `<section_name> (full URLs):` blocks listing each path as a complete raw-GitHub URL. There is also a single-fetch entry point that links to every key surface across both repositories:
+
+```text
+https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/url-index.md
+```
+
+Fetch the URL index first if you cannot construct URLs from relative paths.
+
 ## Required First Step
 
 Start by reading:

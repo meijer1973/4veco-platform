@@ -131,6 +131,23 @@ if (requireComplete) {
   if (!/references\/machine\/|references\/external\/|Protected surfaces/i.test(diff)) {
     fail(`${diffPath} must mention protected surfaces`);
   }
+
+  if (planJson.gate_id) {
+    runNode(path.join('build-scripts', 'sprints', 'check-bundle-urls.js'), planJson.gate_id);
+  }
+
+  // url-index.md must reflect the current set of gates and their bundle-urls.md
+  // files; rerun the emitter and diff against disk via the --check mode.
+  const indexResult = spawnSync(
+    process.execPath,
+    [path.join('build-scripts', 'sprints', 'emit-url-index.js'), '--check'],
+    { cwd: process.cwd(), encoding: 'utf8' }
+  );
+  if (indexResult.status !== 0) {
+    process.stderr.write(indexResult.stdout || '');
+    process.stderr.write(indexResult.stderr || '');
+    fail('reports/url-index.md is stale or missing');
+  }
 }
 
 const roadmapPath = path.join('references', 'reference-team-roadmap.md');

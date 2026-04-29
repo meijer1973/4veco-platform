@@ -2,6 +2,10 @@
   "name": "4veco-platform",
   "version": "1.0.0",
   "description": "Build tools and game engines for 4veco economics education",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/meijer1973/4veco-platform.git"
+  },
   "scripts": {
     "test": "jest",
     "check:platform": "jest --runInBand",

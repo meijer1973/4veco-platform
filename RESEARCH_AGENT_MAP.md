@@ -85,6 +85,38 @@ Machine-readable:
 }
 ```
 
+entry_points (full URLs):
+
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/RESEARCH_AGENT_PROMPT.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/RESEARCH_AGENT_MAP.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/RESEARCH_AGENT_PROMPT_REFERENCES.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/RESEARCH_AGENT_MAP_REFERENCES.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/AGENTS.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/CLAUDE.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/BUILD-PARAGRAPH.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/BUILD-CHAPTER.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/README.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/reference-team-roadmap.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/SOURCE_OF_TRUTH.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/knowledge/platform-team-roadmap.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/knowledge/three-month-roadmap.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/package.json
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/machine/micro-teaching-units.json
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/machine/begrippen.json
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/external/exam-questions.json
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/owned/course-blueprint-v4.meta.json
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/authored/course-target-exercises.json
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/internal-dashboard/dashboard-data.json
+
+Cross-repo entry point (4veco-lessen):
+
+- https://raw.githubusercontent.com/meijer1973/4veco-lessen/main/RESEARCH_AGENT_MAP.md
+- https://raw.githubusercontent.com/meijer1973/4veco-lessen/main/RESEARCH_AGENT_PROMPT.md
+
+URL index (single fetch unlocks the rest of the surface):
+
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/url-index.md
+
 ## Index Anchors
 
 Use these anchors before free-form browsing.
@@ -103,6 +135,19 @@ Use these anchors before free-form browsing.
   "dashboard_index": "reports/internal-dashboard/dashboard-data.json"
 }
 ```
+
+index_anchors (full URLs):
+
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/AGENTS.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/CLAUDE.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/BUILD-PARAGRAPH.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/BUILD-CHAPTER.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/README.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/package.json
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/RESEARCH_AGENT_MAP_REFERENCES.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/reference-team-roadmap.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/knowledge/platform-team-roadmap.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/internal-dashboard/dashboard-data.json
 
 ## Path Registry
 
@@ -186,6 +231,56 @@ Use these anchors before free-form browsing.
   ]
 }
 ```
+
+path_registry (full URLs):
+
+root_policy_paths (full URLs):
+
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/AGENTS.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/CLAUDE.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/BUILD-PARAGRAPH.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/BUILD-CHAPTER.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/RESEARCH_AGENT_MAP.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/RESEARCH_AGENT_MAP_REFERENCES.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/RESEARCH_AGENT_PROMPT.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/RESEARCH_AGENT_PROMPT_REFERENCES.md
+
+roadmap_paths (full URLs):
+
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/reference-team-roadmap.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/knowledge/platform-team-roadmap.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/knowledge/three-month-roadmap.md
+
+engine_paths (full URLs):
+
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/engines/quiz-engine.js
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/engines/quiz-ui.js
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/engines/reasoning-engine.js
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/engines/reasoning-ui.js
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/engines/skilltree-engine.js
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/engines/skilltree-ui.js
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/engines/newsdetective-engine.js
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/engines/newsdetective-ui.js
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/engines/procedure-engine.js
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/engines/procedure-ui.js
+
+build_pipeline_paths (full URLs):
+
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/README.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/scripts/deploy.js
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/scripts/check-links.js
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/scripts/pre-push-hook.js
+
+content_workflow_paths (full URLs):
+
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/BUILD-PARAGRAPH.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/BUILD-CHAPTER.md
+
+reference_paths (full URLs):
+
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/RESEARCH_AGENT_MAP_REFERENCES.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/SOURCE_OF_TRUTH.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/reference-team-roadmap.md
 
 ## Layer Semantics
 

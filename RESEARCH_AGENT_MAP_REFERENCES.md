@@ -85,6 +85,29 @@ Machine-readable:
 }
 ```
 
+entry_points (full URLs):
+
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/RESEARCH_AGENT_PROMPT_REFERENCES.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/reference-team-roadmap.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/authored/README.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/owned/README.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/external/README.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/external/exams/README.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/machine/README.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/qc-prompts/README.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/references/README.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/machine/micro-teaching-units.json
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/machine/begrippen.json
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/external/syllabus-eindtermen.json
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/external/exam-questions.json
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/owned/course-blueprint-v4.meta.json
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/authored/course-target-exercises.json
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/internal-dashboard/dashboard-data.json
+
+URL index (single fetch unlocks the rest of the surface):
+
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/url-index.md
+
 ## Index Anchors
 
 4veco does not yet have one central curation manifest. Use these files as manifest-like navigation anchors.
@@ -102,6 +125,18 @@ Machine-readable:
   "dashboard_index": "reports/internal-dashboard/dashboard-data.json"
 }
 ```
+
+index_anchors (full URLs):
+
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/reference-team-roadmap.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/machine/micro-teaching-units.json
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/machine/begrippen.json
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/external/syllabus-eindtermen.json
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/external/exam-questions.json
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/owned/course-blueprint-v4.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/owned/course-blueprint-v4.meta.json
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/authored/course-target-exercises.json
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/internal-dashboard/dashboard-data.json
 
 Use these index anchors before free-form browsing. They reduce inference and connect source evidence to derived registries.
 
@@ -185,6 +220,75 @@ Use these index anchors before free-form browsing. They reduce inference and con
   ]
 }
 ```
+
+path_registry (full URLs):
+
+roadmap_paths (full URLs):
+
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/reference-team-roadmap.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/knowledge/platform-team-roadmap.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/knowledge/three-month-roadmap.md
+
+readme_paths (full URLs):
+
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/authored/README.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/owned/README.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/external/README.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/external/exams/README.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/machine/README.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/qc-prompts/README.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/references/README.md
+
+external_authority_paths (full URLs):
+
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/external/syllabus-economie-vwo-2026-versie-2.pdf
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/external/syllabus-eindtermen.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/external/syllabus-eindtermen.json
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/external/exam-questions.json
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/external/inspectie-standaarden.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/external/amstelveencollege_quality_standards.md
+
+machine_registry_paths (full URLs):
+
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/machine/micro-teaching-units.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/machine/micro-teaching-units.json
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/machine/begrippen.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/machine/begrippen.json
+
+authored_reference_paths (full URLs):
+
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/authored/course-target-exercises.json
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/authored/didactiek-principes.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/authored/economic_mathematical_precision_reference.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/authored/economie-terminologie.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/authored/skill-categories.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/authored/vraagtypen-en-opgaveontwerp.md
+
+owned_reference_paths (full URLs):
+
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/owned/README.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/owned/course-blueprint-v4.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/owned/course-blueprint-v4.meta.json
+
+qc_prompt_paths (full URLs):
+
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/qc-prompts/probe-questions.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/qc-prompts/exam-derived-skills.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/qc-prompts/tree-integrity-audit.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/qc-prompts/foundation-audit.md
+
+related_report_paths (full URLs):
+
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/dag-integrity.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/terminology-drift.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/unresolved-refs.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/needs-coverage.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/terms-coverage.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/procedure-coverage.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/aspects-coverage.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/dead-units.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/begrippen-coverage.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/internal-dashboard/dashboard-data.json
 
 ## Path Construction
 
