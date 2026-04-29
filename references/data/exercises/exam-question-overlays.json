@@ -31,6 +31,7 @@
       "exercise_operations": [
         "calculate_percentage_share_from_source_values"
       ],
+      "exercise_operations_status": "provisional_until_operation_registry",
       "skill_tags": [
         "calculation",
         "source_use",
@@ -50,6 +51,7 @@
         "precision_verifier": "build-scripts/lib/verify_svg_geometry.py"
       },
       "precision_lint_status": "not_applicable",
+      "source_annex_status": "source_values_not_extracted",
       "scaffolding": {
         "verbal_level": 0,
         "visual_stage": 4,
@@ -60,7 +62,14 @@
         "student_diagnostics_authorized": false,
         "adaptive_routing_authorized": false,
         "student_facing_ai_authorized": false,
-        "summative_use_authorized": false
+        "summative_use_authorized": false,
+        "warning_label": "Internal overlay metadata only - no diagnostics, adaptive routing, student-facing AI, mastery, summative use, or automatic sequencing."
+      },
+      "condition_refs": {
+        "source_annex_gap_id": "EXANNEX-001",
+        "scaffolding_calibration_id": "SCAFFOLDING-CALIBRATION-V1",
+        "graph_spec_plan_id": "GRAPH-SPEC-REPRESENTATION-PLAN-V1",
+        "product_boundary_warning_id": "PRODUCT-BOUNDARY-WARNING-V1"
       },
       "round_trip_notes": [
         "The overlay preserves the external exam question identity and the canonical required_units field without mutating the mirrored source.",

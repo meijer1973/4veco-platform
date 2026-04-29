@@ -1,0 +1,51 @@
+{
+  "report_id": "exercise-overlay-conditions",
+  "generated_by": "S4.1-exercise-overlay-conditions",
+  "generated_on": "2026-04-29T19:20:00Z",
+  "source_files": [
+    "reports/review-gates/GATE-CP3-schema-extension-dry-run/gate-closure.json",
+    "references/data/exercises/exam-question-overlays.json",
+    "references/data/exercises/target-exercise-overlays.json",
+    "references/data/exercises/source-annex-gap-log.json",
+    "references/data/exercises/scaffolding-calibration.json",
+    "references/data/exercises/graph-spec-representation-plan.json",
+    "references/data/exercises/product-boundary-warnings.json"
+  ],
+  "schema_version": 1,
+  "status": "warn",
+  "summary": {
+    "cp3_status": "pass_with_conditions",
+    "overlay_record_count": 2,
+    "source_annex_gap_count": 1,
+    "bulk_extension_authorized": false,
+    "source_mutation_authorized": false,
+    "product_boundaries_blocked": true
+  },
+  "conditions_implemented": [
+    "source annex gap tracking added",
+    "exercise_operations marked provisional",
+    "scaffolding calibration notes added",
+    "graph_spec representation refinement plan added",
+    "product-boundary warnings made mandatory"
+  ],
+  "issues": [
+    {
+      "issue_id": "EXANNEX-001",
+      "severity": "high",
+      "affected_entity": "overlay:exam:ha-1022-a-23-1-o:opgave-1:question-2",
+      "category": "source_annex_values_not_extracted",
+      "evidence_path": "references/data/exercises/source-annex-gap-log.json",
+      "next_action": "Add source annex extraction workflow or preserve explicit source_values_not_extracted warning before broad Tier A overlay backfill.",
+      "proof_required_to_close": "The referenced bron 1 values are extractable through a reviewed source-annex record, or downstream tools visibly surface the reviewed extraction gap."
+    },
+    {
+      "issue_id": "OPS-PROVISIONAL-001",
+      "severity": "medium",
+      "affected_entity": "references/data/exercises/*-overlays.json",
+      "category": "provisional_operation_metadata",
+      "evidence_path": "references/data/exercises/graph-spec-representation-plan.json",
+      "next_action": "Keep exercise_operations provisional until Sprint 7, Sprint 12, or RX.5 creates a governed operation registry.",
+      "proof_required_to_close": "A governed operation registry exists with schema, validator, and migration path."
+    }
+  ]
+}

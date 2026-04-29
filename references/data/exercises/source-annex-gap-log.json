@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "log_id": "exercise-source-annex-gap-log",
+  "generated_by": "S4.1-exercise-overlay-conditions",
+  "generated_on": "2026-04-29T19:20:00Z",
+  "cp3_condition": "Track source annex extraction gaps before broad Tier A overlay backfill.",
+  "bulk_tier_a_backfill_allowed": false,
+  "records": [
+    {
+      "gap_id": "EXANNEX-001",
+      "status": "open",
+      "severity": "high_before_bulk_tier_a_backfill",
+      "overlay_record_id": "overlay:exam:ha-1022-a-23-1-o:opgave-1:question-2",
+      "source_stable_id": "external_exam_question:ha-1022-a-23-1-o:opgave-1:question-2",
+      "source_path": "references/external/exam-questions.json",
+      "source_annex_reference": "bron 1",
+      "gap_type": "source_annex_values_not_extracted",
+      "impact": "The question can be reconstructed as a task, but a reviewer cannot fully verify or reproduce the calculation from the mirrored JSON alone.",
+      "blocked_scope": [
+        "silent bulk Tier A overlay backfill for source-value-dependent questions",
+        "treating source-value-dependent Tier A overlays as fully reconstructable when annex values are absent"
+      ],
+      "next_action": "Add a source annex extraction workflow or require explicit source_values_not_extracted records with proof-to-close before broad Tier A overlay backfill.",
+      "proof_required_to_close": "The referenced source values from bron 1 are extractable through a reviewed source-annex record, or the overlay carries a reviewed, explicit gap status and downstream tools surface that warning."
+    }
+  ]
+}

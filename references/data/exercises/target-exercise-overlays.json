@@ -34,6 +34,7 @@
         "read_interpolate_pq_graph",
         "evaluate_percentage_claim_from_table"
       ],
+      "exercise_operations_status": "provisional_until_operation_registry",
       "skill_tags": [
         "graph_reading",
         "table_interpretation",
@@ -54,6 +55,7 @@
         "precision_verifier": "build-scripts/lib/verify_svg_geometry.py"
       },
       "precision_lint_status": "pending",
+      "source_annex_status": "values_available_in_source",
       "scaffolding": {
         "verbal_level": 2,
         "visual_stage": 2,
@@ -64,7 +66,14 @@
         "student_diagnostics_authorized": false,
         "adaptive_routing_authorized": false,
         "student_facing_ai_authorized": false,
-        "summative_use_authorized": false
+        "summative_use_authorized": false,
+        "warning_label": "Internal overlay metadata only - no diagnostics, adaptive routing, student-facing AI, mastery, summative use, or automatic sequencing."
+      },
+      "condition_refs": {
+        "source_annex_gap_id": "not_applicable",
+        "scaffolding_calibration_id": "SCAFFOLDING-CALIBRATION-V1",
+        "graph_spec_plan_id": "GRAPH-SPEC-REPRESENTATION-PLAN-V1",
+        "product_boundary_warning_id": "PRODUCT-BOUNDARY-WARNING-V1"
       },
       "round_trip_notes": [
         "The overlay intentionally omits assessment_role because CP-1 decided absence should be represented by omitting the field.",

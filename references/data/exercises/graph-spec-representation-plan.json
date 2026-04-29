@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "plan_id": "GRAPH-SPEC-REPRESENTATION-PLAN-V1",
+  "generated_by": "S4.1-exercise-overlay-conditions",
+  "generated_on": "2026-04-29T19:20:00Z",
+  "cp3_condition": "Refine graph_spec representation values during broader coverage work.",
+  "current_values": [
+    "none",
+    "table",
+    "bar_chart",
+    "line_chart",
+    "pie_chart",
+    "p_q_graph",
+    "producer_graph",
+    "source_text"
+  ],
+  "current_status": "adequate_for_dry_run",
+  "future_refinement_needed": true,
+  "candidate_future_values": [
+    {
+      "value": "to_tk_graph",
+      "reason": "Producer exercises can require reading vertical distance between total revenue and total cost."
+    },
+    {
+      "value": "market_surplus_diagram",
+      "reason": "Welfare and intervention exercises may require identifying consumer surplus, producer surplus, deadweight loss, and government budget areas."
+    },
+    {
+      "value": "labor_market_graph",
+      "reason": "Minimum wage and labor-market equilibrium tasks use P-Q logic with wage/employment semantics."
+    },
+    {
+      "value": "index_series",
+      "reason": "Index-number exercises often appear as time-series or index tables and need distinction from raw value series."
+    },
+    {
+      "value": "source_annex_table",
+      "reason": "External exam annex tables must be distinguished from values embedded directly in the prompt."
+    }
+  ],
+  "decision_rule": "Do not expand the enum one exercise at a time during bulk backfill. Add representation values when a repeated class of exercises needs different validation, retrieval, or precision-lint behavior.",
+  "blocked_use": "Do not use graph_spec as a complete operation registry; detailed operations remain provisional until Sprint 7, Sprint 12, or RX.5 work creates a governed registry."
+}

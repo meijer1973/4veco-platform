@@ -4,7 +4,7 @@ Generated: 2026-04-23
 Adopted main roadmap: 2026-04-25
 Last strategic update: 2026-04-29
 Roadmap ID: `references-team-roadmap`
-Roadmap version: `v2.8-s4.1-conditions-calibrated`
+Roadmap version: `v2.7-cp3-closed`
 Roadmap status: `active`
 Version index: `docs/roadmaps/roadmap-version-index.json`
 Scope: `references/`, `build-scripts/references/`, `build-scripts/reports/`, reference dashboards, and generated reference reports under `reports/`
@@ -15,7 +15,7 @@ The handoff roadmap has been adopted as the main operating roadmap for the refer
 
 No blocking incompatibility was found. The roadmap direction fits the repository: machine-edited references, evidence-first unit growth, JSON-first reports, review gates for pedagogical authority, and bounded later AI.
 
-Update 2026-04-29: S4.1 Exercise Overlay Conditions And Calibration is completed. CP-3 conditions are now reflected in condition artifacts, validators, reports, and overlay metadata. Bulk exercise metadata extension, source mutation, student diagnostics, adaptive routing, student-facing AI, mastery decisions, summative use, and automatic sequencing remain blocked.
+Update 2026-04-29: S4 Exercise Metadata Overlay MVP and CP-3 are closed as `pass_with_conditions`. The dry-run overlay shape is approved only with conditions. Bulk exercise metadata extension, source mutation, student diagnostics, adaptive routing, student-facing AI, mastery decisions, summative use, and automatic sequencing remain blocked.
 
 Compatibility decisions:
 
@@ -125,7 +125,8 @@ Open items are listed first; completed items are kept below them.
 
 | Sprint | Name | Completed | Current State |
 |--------|------|-----------|---------------|
-| RX.1 | Representation-Operation Inventory | no | Immediate next sprint. Non-mutating inventory only: build the base-operation x representation x economic-context matrix and duplicate audit before any A61+ unit mutation. |
+| S4.1 | Exercise Overlay Conditions And Calibration | no | Immediate next planning sprint. Reflect CP-3 conditions before any bulk extension: source annex gap tracking, provisional `exercise_operations` wording, scaffolding calibration notes, `graph_spec` representation refinement plan, and stronger product-boundary warnings. |
+| RX.1 | Representation-Operation Inventory | no | Planned after S4.1 unless explicitly pulled forward as non-mutating inventory. Build the base-operation x representation x economic-context matrix and duplicate audit before any A61+ unit mutation. |
 | R8.1 | QC Issue Model | no | Planned early and scoped down. Define only the lightweight issue schema needed to expose evidence weakness, stale data, proof-to-close, and registry/report warnings. |
 | Sprint 6 | Bronnen Registry MVP | no | Planned. Create source-document registry schema/validator first; store under `references/machine/` only after CLI and validators exist. |
 | Sprint 7 | Skill And Operation Registry MVP | no | Planned. Separate unit IDs from fine-grained exercise operations and skill/category tags; preserve useful `skill-categories.md` content where still valid. |
@@ -145,7 +146,6 @@ Open items are listed first; completed items are kept below them.
 | Sprint 13 | Composition Pattern Registry | no | Planned. Define reusable exercise-composition patterns for internal authoring support, not automatic student-facing publication. |
 | Sprint 14 | C-to-B Promotion Workflow | no | Planned only after schema audit, owned-source registry, exercise overlays, D04/unit-design status, R7.6, R14.1, and precision lint path are ready. |
 | Product Gate | Re-Evaluate R10-R13 Product Surfaces | no | Blocked. Diagnostics, adaptive routing, student-facing AI, teacher cockpit deployment, automatic sequencing, mastery, and summative uses remain out of scope until data-quality gates justify them. |
-| S4.1 | Exercise Overlay Conditions And Calibration | yes | Completed on 2026-04-29. Implemented CP-3 condition artifacts, source-annex gap tracker, scaffolding calibration, graph-spec representation plan, product-boundary warnings, condition validator, and condition reports. No bulk extension or source mutation authorized. |
 | R9.2 | Content Graph Projection | yes | Completed. Created a separate owned-content projection graph with 1,464 typed edges, RAG owned-content chunks, coverage reports, and 10/10 retrieval eval pass state while preserving CP-2 evidence boundaries. |
 | S4 | Exercise Metadata Overlay MVP | yes | Completed on 2026-04-29 with CP-3 status `pass_with_conditions`. Created overlay schema, one Tier A dry-run overlay, one Tier C dry-run overlay, validator, and CP-3 closure. No bulk extension or source mutation authorized. |
 | R9.1 | Owned Source Registry | yes | Completed with `pass_with_conditions`. Registered owned-source surfaces, repaired blueprint refs, prepared CP-2, and authorized R9.2 with projection-edge defaults and evidence-boundary conditions. |
@@ -622,24 +622,6 @@ Conditions carried forward:
 - Refine `graph_spec` representation values during broader coverage work.
 - Strengthen warnings around `instructional_role: diagnostic`.
 - Preserve product-boundary flags: no student diagnostics, adaptive routing, student-facing AI, mastery decisions, summative use, or automatic sequencing.
-
-### S4.1 Exercise Overlay Conditions And Calibration
-
-Purpose: make the CP-3 conditions explicit in artifacts, validators, and reports before any bulk metadata extension.
-
-Completion: completed on 2026-04-29. S4.1 added:
-
-- `references/data/exercises/source-annex-gap-log.json`
-- `references/data/exercises/scaffolding-calibration.json`
-- `references/data/exercises/graph-spec-representation-plan.json`
-- `references/data/exercises/product-boundary-warnings.json`
-- `reports/json/exercise-overlay-conditions.json`
-- `reports/markdown/exercise-overlay-conditions.md`
-- `build-scripts/references/check-exercise-overlay-conditions.js`
-
-S4.1 also updated the overlay schema and dry-run overlay records so `exercise_operations` are explicitly provisional, source annex status is explicit, condition references are attached to each overlay record, and product-boundary warnings are mandatory.
-
-Remaining blocker: broad exercise metadata backfill remains blocked until a later sprint explicitly plans around the open source-annex gap, provisional operation registry status, and graph-spec refinement policy.
 
 ### R8.1 QC Issue Model
 
@@ -1394,9 +1376,9 @@ Do not invert this order.
 
 ## Immediate Next Sprint
 
-Next sprint: `RX.1 Representation-Operation Inventory`.
+Next sprint: `S4.1 Exercise Overlay Conditions And Calibration`.
 
-R4.5 has closed the bounded micro-unit mutation lane, CP-1 has closed the non-mutating schema audit gate as `pass_with_conditions`, CP-2 has closed the owned-source scope gate as `pass_with_conditions`, R9.1 has registered the owned-source surfaces, R9.2 has completed owned-content projection, S4/CP-3 has closed as `pass_with_conditions`, and S4.1 has implemented the CP-3 condition artifacts. RX.1 may proceed as non-mutating representation-operation inventory and duplicate audit only.
+R4.5 has closed the bounded micro-unit mutation lane, CP-1 has closed the non-mutating schema audit gate as `pass_with_conditions`, CP-2 has closed the owned-source scope gate as `pass_with_conditions`, R9.1 has registered the owned-source surfaces, R9.2 has completed owned-content projection, and S4/CP-3 has closed as `pass_with_conditions`. The next sprint must reflect CP-3 conditions before any bulk exercise metadata extension.
 
 Do not start diagnostics, adaptive routing, student-facing AI, automatic lesson sequencing, mastery decisions, summative decisions, teacher cockpit deployment, game/simulation product mapping, or continuous-improvement claims from this roadmap.
 

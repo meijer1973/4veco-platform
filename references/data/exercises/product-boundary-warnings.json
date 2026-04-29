@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "warning_id": "PRODUCT-BOUNDARY-WARNING-V1",
+  "generated_by": "S4.1-exercise-overlay-conditions",
+  "generated_on": "2026-04-29T19:20:00Z",
+  "cp3_condition": "Strengthen warnings around instructional_role diagnostic and preserve product-boundary flags.",
+  "mandatory_warning_label": "Internal overlay metadata only - no diagnostics, adaptive routing, student-facing AI, mastery, summative use, or automatic sequencing.",
+  "diagnostic_role_note": "instructional_role: diagnostic means an authored exercise role only. It does not authorize a diagnostic product layer.",
+  "blocked_product_uses": [
+    "student_diagnostics",
+    "adaptive_routing",
+    "student_facing_ai",
+    "automatic_mastery_decisions",
+    "summative_assessment_use",
+    "automatic_lesson_sequencing"
+  ],
+  "required_product_boundary_flags": [
+    "student_diagnostics_authorized",
+    "adaptive_routing_authorized",
+    "student_facing_ai_authorized",
+    "summative_use_authorized"
+  ],
+  "required_flag_value": false
+}

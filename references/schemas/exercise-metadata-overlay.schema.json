@@ -50,6 +50,7 @@
         "evidence_status",
         "required_units",
         "exercise_operations",
+        "exercise_operations_status",
         "skill_tags",
         "instructional_role",
         "bloom_level",
@@ -57,8 +58,10 @@
         "answer_format",
         "graph_spec",
         "precision_lint_status",
+        "source_annex_status",
         "scaffolding",
         "product_boundary",
+        "condition_refs",
         "round_trip_notes",
         "unresolved_questions"
       ],
@@ -102,6 +105,10 @@
         "exercise_operations": {
           "type": "array",
           "items": { "type": "string", "pattern": "^[a-z0-9_]+$" }
+        },
+        "exercise_operations_status": {
+          "type": "string",
+          "enum": ["provisional_until_operation_registry", "governed_registry_backed"]
         },
         "skill_tags": {
           "type": "array",
@@ -161,6 +168,10 @@
           "type": "string",
           "enum": ["not_applicable", "pending", "pass", "warn", "fail"]
         },
+        "source_annex_status": {
+          "type": "string",
+          "enum": ["not_required", "values_available_in_source", "source_values_not_extracted", "pending_extraction_review"]
+        },
         "scaffolding": {
           "type": "object",
           "required": ["verbal_level", "visual_stage", "fading_position", "dual_coding_present"],
@@ -178,13 +189,34 @@
             "student_diagnostics_authorized",
             "adaptive_routing_authorized",
             "student_facing_ai_authorized",
-            "summative_use_authorized"
+            "summative_use_authorized",
+            "warning_label"
           ],
           "properties": {
             "student_diagnostics_authorized": { "const": false },
             "adaptive_routing_authorized": { "const": false },
             "student_facing_ai_authorized": { "const": false },
-            "summative_use_authorized": { "const": false }
+            "summative_use_authorized": { "const": false },
+            "warning_label": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "additionalProperties": false
+        },
+        "condition_refs": {
+          "type": "object",
+          "required": [
+            "source_annex_gap_id",
+            "scaffolding_calibration_id",
+            "graph_spec_plan_id",
+            "product_boundary_warning_id"
+          ],
+          "properties": {
+            "source_annex_gap_id": { "type": "string", "minLength": 1 },
+            "scaffolding_calibration_id": { "type": "string", "minLength": 1 },
+            "graph_spec_plan_id": { "type": "string", "minLength": 1 },
+            "product_boundary_warning_id": { "type": "string", "minLength": 1 }
           },
           "additionalProperties": false
         },

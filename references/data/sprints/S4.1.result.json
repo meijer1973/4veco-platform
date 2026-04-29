@@ -1,0 +1,66 @@
+{
+  "sprint_id": "S4.1",
+  "name": "Exercise Overlay Conditions And Calibration",
+  "status": "completed",
+  "completed_on": "2026-04-29",
+  "plan": "docs/sprints/S4.1-plan.md",
+  "baseline": "reports/sprints/S4.1-baseline.md",
+  "result": "reports/sprints/S4.1-result.md",
+  "diff_summary": "reports/sprints/S4.1-diff-summary.md",
+  "protected_reference_data_changed": false,
+  "bulk_extension_authorized": false,
+  "source_mutation_authorized": false,
+  "cp3_gate_status": "pass_with_conditions",
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js docs/sprints/S4.1-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js S4.1",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-exercise-overlays.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-exercise-overlay-conditions.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-roadmap-version-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-source-manifest.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-document-inventory.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/validate-core-schemas.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-result.js reports/sprints/S4.1-result.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js S4.1 --complete",
+      "status": "passed"
+    }
+  ],
+  "outputs": [
+    "references/data/exercises/source-annex-gap-log.json",
+    "references/data/exercises/scaffolding-calibration.json",
+    "references/data/exercises/graph-spec-representation-plan.json",
+    "references/data/exercises/product-boundary-warnings.json",
+    "reports/json/exercise-overlay-conditions.json",
+    "reports/markdown/exercise-overlay-conditions.md",
+    "build-scripts/references/check-exercise-overlay-conditions.js"
+  ],
+  "next_required_step": "RX.1 representation-operation inventory may proceed as non-mutating inventory and duplicate audit only"
+}

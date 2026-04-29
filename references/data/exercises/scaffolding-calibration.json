@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "calibration_id": "SCAFFOLDING-CALIBRATION-V1",
+  "generated_by": "S4.1-exercise-overlay-conditions",
+  "generated_on": "2026-04-29T19:20:00Z",
+  "cp3_condition": "Add reviewer calibration notes for scaffolding scale values.",
+  "verbal_level": [
+    {
+      "value": 0,
+      "label": "no added wording",
+      "review_note": "Exam-like or independent task wording; no scaffold beyond the source prompt."
+    },
+    {
+      "value": 1,
+      "label": "minimal cue",
+      "review_note": "A short cue or reminder is present, but the student chooses the procedure."
+    },
+    {
+      "value": 2,
+      "label": "light guided wording",
+      "review_note": "The task names the representation or operation but does not provide steps."
+    },
+    {
+      "value": 3,
+      "label": "step cueing",
+      "review_note": "The task gives partial procedural sequencing or asks substeps separately."
+    },
+    {
+      "value": 4,
+      "label": "worked scaffold",
+      "review_note": "Most of the procedure is explicitly guided; student fills key values or decisions."
+    },
+    {
+      "value": 5,
+      "label": "full worked example",
+      "review_note": "The procedure is effectively demonstrated before or during the task."
+    }
+  ],
+  "visual_stage": [
+    {
+      "value": 1,
+      "label": "visual provided and labelled",
+      "review_note": "The visual representation is provided with explicit labels or highlighted reading path."
+    },
+    {
+      "value": 2,
+      "label": "visual provided without full guidance",
+      "review_note": "The visual or table is present, but the student must choose values or paths."
+    },
+    {
+      "value": 3,
+      "label": "student constructs visual",
+      "review_note": "The student must draw, complete, or transform the visual representation."
+    },
+    {
+      "value": 4,
+      "label": "no visual support or exam-like source only",
+      "review_note": "No extra instructional visual is supplied beyond the source/exam material."
+    }
+  ],
+  "fading_position": [
+    {
+      "range": "0",
+      "label": "not part of a fading sequence",
+      "review_note": "Use for standalone exam records or records where sequence position is unknown."
+    },
+    {
+      "range": "1",
+      "label": "early guided practice",
+      "review_note": "High support; first or early exercise after explanation."
+    },
+    {
+      "range": "2",
+      "label": "middle practice",
+      "review_note": "Some supports removed; student applies known steps."
+    },
+    {
+      "range": "3+",
+      "label": "late independent practice",
+      "review_note": "Support mostly faded; task resembles target/exam performance."
+    }
+  ],
+  "dual_coding_present_rule": "Use true when the exercise explanation or task relies on a visual/table/graph representation as part of the learning route. Begeleide inoefening graph tasks require true even when verbal support is low.",
+  "reviewer_warning": "These calibration notes support review consistency; they do not authorize student diagnostics or adaptive routing."
+}

@@ -17,3 +17,7 @@ Rules:
 - Omit `assessment_role` when absent; do not use `null` or `not_applicable`.
 - `instructional_role: diagnostic` is an exercise role only and does not authorize student diagnostics or adaptive routing.
 - Generated artifacts and projections are not primary evidence.
+- `exercise_operations` values are provisional until a governed operation registry exists.
+- Source annex gaps must be tracked in `source-annex-gap-log.json` before any broad Tier A overlay backfill.
+- Use `scaffolding-calibration.md` when assigning `verbal_level`, `visual_stage`, `fading_position`, and `dual_coding_present`.
+- Product-boundary warnings are mandatory in every overlay record.

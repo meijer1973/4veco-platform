@@ -71,6 +71,13 @@ const ALLOWED_ANSWER_FORMATS = new Set([
   'pending_review',
 ]);
 const ALLOWED_PRECISION_STATUSES = new Set(['not_applicable', 'pending', 'pass', 'warn', 'fail']);
+const ALLOWED_OPERATION_STATUSES = new Set(['provisional_until_operation_registry', 'governed_registry_backed']);
+const ALLOWED_SOURCE_ANNEX_STATUSES = new Set([
+  'not_required',
+  'values_available_in_source',
+  'source_values_not_extracted',
+  'pending_extraction_review',
+]);
 const ALLOWED_REPRESENTATIONS = new Set([
   'none',
   'table',
@@ -182,6 +189,7 @@ function checkRecord(record, context) {
   checkStringArray(record.exercise_operations, `${label} exercise_operations`, {
     pattern: /^[a-z0-9_]+$/,
   });
+  assert(ALLOWED_OPERATION_STATUSES.has(record.exercise_operations_status), `${label} has invalid exercise_operations_status`);
   checkStringArray(record.skill_tags, `${label} skill_tags`, {
     pattern: /^[a-z0-9_]+$/,
   });
@@ -206,6 +214,7 @@ function checkRecord(record, context) {
   assert(typeof record.graph_spec.source_values_required === 'boolean', `${label} graph_spec.source_values_required must be boolean`);
   assert(record.graph_spec.precision_verifier === PRECISION_VERIFIER, `${label} precision_verifier must be ${PRECISION_VERIFIER}`);
   assert(ALLOWED_PRECISION_STATUSES.has(record.precision_lint_status), `${label} has invalid precision_lint_status`);
+  assert(ALLOWED_SOURCE_ANNEX_STATUSES.has(record.source_annex_status), `${label} has invalid source_annex_status`);
 
   const scaffolding = record.scaffolding;
   assert(scaffolding && typeof scaffolding === 'object', `${label} scaffolding must be an object`);
@@ -223,6 +232,18 @@ function checkRecord(record, context) {
     'summative_use_authorized',
   ]) {
     assert(productBoundary[field] === false, `${label} product_boundary.${field} must be false`);
+  }
+  checkString(productBoundary.warning_label, `${label} product_boundary.warning_label`);
+
+  const conditionRefs = record.condition_refs;
+  assert(conditionRefs && typeof conditionRefs === 'object', `${label} condition_refs must be an object`);
+  for (const field of [
+    'source_annex_gap_id',
+    'scaffolding_calibration_id',
+    'graph_spec_plan_id',
+    'product_boundary_warning_id',
+  ]) {
+    checkString(conditionRefs[field], `${label} condition_refs.${field}`);
   }
 
   checkStringArray(record.round_trip_notes, `${label} round_trip_notes`);

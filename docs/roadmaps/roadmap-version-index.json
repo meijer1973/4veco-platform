@@ -15,13 +15,14 @@
   "roadmaps": [
     {
       "roadmap_id": "references-team-roadmap",
-      "version": "v2.7-cp3-closed",
+      "version": "v2.8-s4.1-conditions-calibrated",
       "title": "References Team Roadmap",
       "status": "active",
       "path": "references/reference-team-roadmap.md",
       "owner": "references_team",
       "updated_on": "2026-04-29",
       "supersedes": [
+        "docs/roadmaps/outdated/reference-team-roadmap-v2.7-cp3-closed.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.6-s4-cp3-dry-run.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.5-representation-sensitive-phase.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.4-r9.2-plus-cp1-cautions.md",
@@ -29,7 +30,18 @@
         "knowledge/Exercise schema and quality/reference-team-roadmap Live version 28 April.md",
         "knowledge/Exercise schema and quality/roadmap-updated-repository-checked.md"
       ],
-      "notes": "Current operating roadmap with S4/CP-3 closed as pass_with_conditions and S4.1 condition implementation as the next sprint."
+      "notes": "Current operating roadmap with S4.1 condition calibration completed and RX.1 representation-operation inventory as the next sprint."
+    },
+    {
+      "roadmap_id": "references-team-roadmap-v2.7",
+      "version": "v2.7-cp3-closed",
+      "title": "References Team Roadmap before S4.1 condition calibration",
+      "status": "outdated",
+      "path": "docs/roadmaps/outdated/reference-team-roadmap-v2.7-cp3-closed.md",
+      "owner": "references_team",
+      "updated_on": "2026-04-29",
+      "superseded_by": "references/reference-team-roadmap.md",
+      "notes": "Snapshot archived before implementing CP-3 condition artifacts and validators in S4.1."
     },
     {
       "roadmap_id": "references-team-roadmap-v2.6",

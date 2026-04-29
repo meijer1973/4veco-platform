@@ -1,0 +1,21 @@
+{
+  "sprint_id": "S4.1",
+  "name": "Exercise Overlay Conditions And Calibration",
+  "status": "in_progress",
+  "planned_on": "2026-04-29",
+  "plan": "docs/sprints/S4.1-plan.md",
+  "protected_reference_data_changes_allowed": false,
+  "human_review_required": false,
+  "cp3_gate_status": "pass_with_conditions",
+  "bulk_extension_authorized": false,
+  "source_mutation_authorized": false,
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js docs/sprints/S4.1-plan.md",
+    "node build-scripts/sprints/check-sprint-bundle.js S4.1",
+    "node build-scripts/references/check-exercise-overlays.js",
+    "node build-scripts/references/check-exercise-overlay-conditions.js",
+    "node build-scripts/references/check-roadmap-version-index.js",
+    "node build-scripts/references/check-source-manifest.js",
+    "node build-scripts/references/check-document-inventory.js"
+  ]
+}
