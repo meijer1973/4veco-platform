@@ -1,0 +1,48 @@
+{
+  "gate_id": "GATE-CP2-owned-source-scope",
+  "sprint_id": "R9.1",
+  "recorded_on": "2026-04-29",
+  "reviewer_role": "Head of Content Strategy",
+  "decision": "pass_with_conditions",
+  "closure_authorized": true,
+  "answers": [
+    {
+      "id": "CP2-Q1",
+      "answer": "B. Mostly, with additions needed",
+      "decision": "Registry covers major surfaces but needs finer companion subtype labels."
+    },
+    {
+      "id": "CP2-Q2",
+      "answer": "B. Mostly, wording needs improvement",
+      "decision": "Authority boundaries are present; broad generated and markdown labels need sharper wording."
+    },
+    {
+      "id": "CP2-Q3",
+      "answer": "B. Yes with stronger warnings",
+      "decision": "Generated outputs remain projection/trace material and are not primary evidence."
+    },
+    {
+      "id": "CP2-Q4",
+      "answer": "B. Yes with conditions",
+      "decision": "Target-exercise index is owned exercise evidence, not external authority."
+    },
+    {
+      "id": "CP2-Q5",
+      "answer": "B. Yes with stricter labels",
+      "decision": "R9.2 may proceed with projection edges by default and explicitly typed evidence edges only."
+    },
+    {
+      "id": "CP2-Q6",
+      "answer": "B. pass_with_conditions",
+      "decision": "Close CP-2 as pass_with_conditions."
+    }
+  ],
+  "pattern_analysis": "The answers approve R9.1 closure and R9.2 continuation while preserving evidence boundaries. Generated artifacts are not evidence, target exercises remain owned evidence, and R9.2 must make edge labels stricter.",
+  "targeted_followups_required": true,
+  "targeted_followups": [
+    "Add finer companion subtype labels in R9.2 or R9.3.",
+    "Strengthen generated-artifact warnings in content graph edge labels.",
+    "Keep projection, owned exercise evidence, external authority, and implementation trace as distinct edge classes."
+  ],
+  "plain_pass_authorized": false
+}

@@ -1,7 +1,7 @@
 {
   "sprint_id": "R9.1",
   "name": "Owned Source Registry",
-  "status": "in_progress",
+  "status": "completed",
   "planned_on": "2026-04-29",
   "plan": "docs/sprints/R9.1-plan.md",
   "protected_reference_data_changes_allowed": false,

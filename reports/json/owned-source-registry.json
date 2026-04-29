@@ -1,7 +1,7 @@
 {
   "report_id": "owned-source-registry",
   "generated_by": "build-scripts/references/build-owned-source-registry.js",
-  "generated_on": "2026-04-28T22:18:53Z",
+  "generated_on": "2026-04-29T09:38:58Z",
   "source_files": [
     "references/owned/course-blueprint-v4.md",
     "references/owned/course-blueprint-v4.meta.json",

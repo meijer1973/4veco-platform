@@ -1,0 +1,77 @@
+{
+  "sprint_id": "R9.1",
+  "name": "Owned Source Registry",
+  "status": "completed",
+  "completed_on": "2026-04-29",
+  "plan": "docs/sprints/R9.1-plan.md",
+  "baseline": "reports/sprints/R9.1-baseline.md",
+  "result": "reports/sprints/R9.1-result.md",
+  "diff_summary": "reports/sprints/R9.1-diff-summary.md",
+  "protected_reference_data_changed": false,
+  "gate_id": "GATE-CP2-owned-source-scope",
+  "gate_status": "pass_with_conditions",
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js docs/sprints/R9.1-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js R9.1",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/build-owned-source-registry.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-owned-source-registry.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/repair-target-exercise-blueprint-refs.js --check",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/review-gates/validate-gate.js reports/review-gates/GATE-CP2-owned-source-scope/gate-closure.json",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/build-reference-inventory.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-source-manifest.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-document-inventory.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-source-of-truth.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-result.js reports/sprints/R9.1-result.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js R9.1 --complete",
+      "status": "passed"
+    }
+  ],
+  "outputs": [
+    "references/data/owned-source-registry.json",
+    "reports/owned-source-registry.md",
+    "reports/json/owned-source-registry.json",
+    "reports/review-gates/GATE-CP2-owned-source-scope/review-packet.json",
+    "reports/review-gates/GATE-CP2-owned-source-scope/review-packet.md",
+    "reports/review-gates/GATE-CP2-owned-source-scope/human-interview.json",
+    "reports/review-gates/GATE-CP2-owned-source-scope/human-interview.md",
+    "reports/review-gates/GATE-CP2-owned-source-scope/gate-closure.json",
+    "reports/review-gates/GATE-CP2-owned-source-scope/gate-closure.md",
+    "reports/review-gates/GATE-CP2-owned-source-scope/bundle-urls.md",
+    "reports/url-index.md"
+  ],
+  "next_required_step": "R9.2 content graph projection may start with CP-2 projection/evidence boundary conditions"
+}

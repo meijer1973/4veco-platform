@@ -1,0 +1,79 @@
+{
+  "gate_id": "GATE-CP2-owned-source-scope",
+  "sprint_id": "R9.1",
+  "status": "pass_with_conditions",
+  "closed_on": "2026-04-29",
+  "closure_confirmed_by_human": true,
+  "human_interview": "reports/review-gates/GATE-CP2-owned-source-scope/human-interview.md",
+  "review_packet": "reports/review-gates/GATE-CP2-owned-source-scope/review-packet.md",
+  "summary": "CP-2 is closed as pass_with_conditions. R9.1 may close, and R9.2 may proceed with projection edges by default and explicitly evidence-qualified evidence edges only.",
+  "protected_reference_data_changed": false,
+  "accepted_outcomes": [
+    "R9.1 registered owned-source surfaces without treating owned exposition as external authority.",
+    "The registry includes 35 source surfaces and 33 companion/source artifact types.",
+    "Target-exercise blueprint references were repaired to references/owned/course-blueprint-v4.md.",
+    "The target-exercise index may be treated as owned exercise evidence, not external authority.",
+    "Generated outputs remain projection or trace material only.",
+    "R9.2 is authorized to proceed with stricter edge labels and projection-edge defaults."
+  ],
+  "blocked_outcomes": [
+    "Generated artifacts must not be used as primary evidence.",
+    "Owned lesson exposition must not override external authority.",
+    "Owned lesson exposition must not override reviewed machine registry truth.",
+    "Target-exercise evidence must not be relabelled as CvTE or external authority.",
+    "R9.2 must not silently promote generated projection edges to evidence edges.",
+    "Student diagnostics remain blocked.",
+    "Adaptive routing remains blocked.",
+    "Student-facing AI remains blocked.",
+    "Automatic lesson sequencing remains blocked.",
+    "Automatic mastery decisions remain blocked.",
+    "Summative assessment decisions remain blocked."
+  ],
+  "explicit_decisions": [
+    {
+      "topic": "gate status",
+      "decision": "Close CP-2 as pass_with_conditions."
+    },
+    {
+      "topic": "R9.2 authorization",
+      "decision": "Proceed with projection edges only by default; reserve evidence edges for explicitly evidence-qualified records."
+    },
+    {
+      "topic": "generated artifacts",
+      "decision": "Generated HTML, PDF, PNG, DOCX, PPTX, shared-engine outputs, navigation, quality YAML, and review notes are not primary evidence."
+    },
+    {
+      "topic": "target exercises",
+      "decision": "Target-exercise index is owned exercise evidence and must remain separate from external authority."
+    },
+    {
+      "topic": "companion subtype labels",
+      "decision": "Add finer companion subtype labels in R9.2 or R9.3."
+    }
+  ],
+  "conditions_to_reopen_or_pass": [
+    "R9.2 default edges from owned sources must be projection edges.",
+    "Evidence edges may only be created for explicitly evidence-qualified records and must remain separate from external authority.",
+    "R9.2 must distinguish projection, owned exercise evidence, external authority, and implementation trace edge labels.",
+    "Generated artifacts may be used for retrieval context or implementation tracing only.",
+    "Companion subtype labels should be refined for instapquiz, wiskundevaardigheden, stappenplan, redeneer-spel, nieuws-detective, basis/midden/verrijking, nieuws met visual, youtube-videos, and shared engine/data outputs.",
+    "External authority and machine registry boundaries must remain intact."
+  ],
+  "allowed_next_sprint": "R9.2",
+  "allowed_next_sprint_scope": [
+    "content graph projection",
+    "projection edges from owned sources by default",
+    "owned exercise evidence edges only for explicitly evidence-qualified records",
+    "external authority edges only from external authority sources",
+    "implementation trace edges for generated/tooling surfaces"
+  ],
+  "blocked_next_sprint_scope": [
+    "generated artifacts as primary evidence",
+    "student diagnostics",
+    "adaptive routing",
+    "student-facing AI",
+    "automatic lesson sequencing",
+    "automatic mastery decisions",
+    "summative assessment decisions"
+  ]
+}
