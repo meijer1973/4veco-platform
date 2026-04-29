@@ -1,30 +1,30 @@
 {
   "schema_version": "0.1",
-  "generated_at": "2026-04-29T18:26:21.625Z",
+  "generated_at": "2026-04-29T18:40:23.803Z",
   "sprint_id": "R0.2",
   "scope": "references/",
   "note": "Self-generated inventory files intentionally omit size and sha256 to avoid unstable self-checksums.",
   "summary": {
-    "file_count": 145,
+    "file_count": 150,
     "by_layer": {
       "authored_judgement": 7,
-      "governance_data": 71,
+      "governance_data": 75,
       "external_authority": 32,
       "machine_registry": 5,
       "owned_curriculum_design": 3,
       "quality_protocol": 5,
       "planning": 1,
-      "schema_contract": 20,
+      "schema_contract": 21,
       "governance_policy": 1
     },
     "by_edit_policy": {
-      "human_reviewed_edit": 14,
+      "human_reviewed_edit": 15,
       "generated_by_inventory_script": 10,
-      "sprint_process": 61,
+      "sprint_process": 64,
       "external_refresh_only": 32,
       "cli_only": 5,
       "versioned_human_reviewed_edit": 3,
-      "code_review": 20
+      "code_review": 21
     }
   },
   "files": [
@@ -245,6 +245,66 @@
         "roadmap",
         "dashboards",
         "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/data/exercises/exam-question-overlays.json",
+      "file_name": "exam-question-overlays.json",
+      "extension": "json",
+      "size_bytes": 2800,
+      "sha256": "b783cc096facdf2a3f926214b7479c96691cc766b41671d2e57b3748e953449f",
+      "layer": "governance_data",
+      "authority_level": "authored_judgement",
+      "source_type": "exercise_metadata_overlay",
+      "generated_status": "dry_run_overlay",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "checkpoint_review",
+      "downstream_dependencies": [
+        "exercise-metadata-validation",
+        "review-gates",
+        "future-exercise-backfill"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/data/exercises/README.md",
+      "file_name": "README.md",
+      "extension": "md",
+      "size_bytes": 935,
+      "sha256": "ad633f8bc1d7a7b62f296e6319a4c5bcaf501b88ea5ffb718c443e9d6355556f",
+      "layer": "governance_data",
+      "authority_level": "authored_judgement",
+      "source_type": "exercise_overlay_readme",
+      "generated_status": "manual_source",
+      "edit_policy": "human_reviewed_edit",
+      "owner": "references_team",
+      "refresh_policy": "checkpoint_review",
+      "downstream_dependencies": [
+        "exercise-metadata-validation",
+        "review-gates",
+        "future-exercise-backfill"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/data/exercises/target-exercise-overlays.json",
+      "file_name": "target-exercise-overlays.json",
+      "extension": "json",
+      "size_bytes": 2931,
+      "sha256": "646234766ae6be1d78618e5420aa976d1f5a86decde33de5ea3f421993191be1",
+      "layer": "governance_data",
+      "authority_level": "authored_judgement",
+      "source_type": "exercise_metadata_overlay",
+      "generated_status": "dry_run_overlay",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "checkpoint_review",
+      "downstream_dependencies": [
+        "exercise-metadata-validation",
+        "review-gates",
+        "future-exercise-backfill"
       ],
       "self_generated_inventory_file": false
     },
@@ -1589,6 +1649,26 @@
       "self_generated_inventory_file": false
     },
     {
+      "path": "references/data/sprints/S4.plan.json",
+      "file_name": "S4.plan.json",
+      "extension": "json",
+      "size_bytes": 912,
+      "sha256": "e45adb8aa7b6890dfba7203b80b5945699bfa4f83b554b8b04128ceb4d4da97b",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
       "path": "references/external/amstelveencollege_quality_standards.md",
       "file_name": "amstelveencollege_quality_standards.md",
       "extension": "md",
@@ -2495,8 +2575,8 @@
       "path": "references/reference-team-roadmap.md",
       "file_name": "reference-team-roadmap.md",
       "extension": "md",
-      "size_bytes": 82982,
-      "sha256": "36319bd0f00a8045756fcd5036aec36f5aae3bf1db1cc81e7a674d598e2718de",
+      "size_bytes": 83138,
+      "sha256": "a38a6e45e89e23de733fbb32d91639b9d87806ba6f07ec3040d889f6a2e7db02",
       "layer": "planning",
       "authority_level": "authored_judgement",
       "source_type": "roadmap",
@@ -2579,6 +2659,27 @@
       "extension": "json",
       "size_bytes": 717,
       "sha256": "ba0ee860ab9fec81c0547351836d1f27c739eb2f9122a6b780f8e492174fb23c",
+      "layer": "schema_contract",
+      "authority_level": "machine_contract",
+      "source_type": "json_schema",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "references_team",
+      "refresh_policy": "schema_review",
+      "downstream_dependencies": [
+        "validators",
+        "reference-cli",
+        "reports",
+        "future-rag"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/schemas/exercise-metadata-overlay.schema.json",
+      "file_name": "exercise-metadata-overlay.schema.json",
+      "extension": "json",
+      "size_bytes": 6887,
+      "sha256": "1d5ceef8824c24329b61576fbf50d0b27c072996e89a752be141930b37fd17e0",
       "layer": "schema_contract",
       "authority_level": "machine_contract",
       "source_type": "json_schema",

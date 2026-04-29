@@ -15,19 +15,31 @@
   "roadmaps": [
     {
       "roadmap_id": "references-team-roadmap",
-      "version": "v2.5-representation-sensitive-phase",
+      "version": "v2.6-s4-cp3-dry-run",
       "title": "References Team Roadmap",
       "status": "active",
       "path": "references/reference-team-roadmap.md",
       "owner": "references_team",
       "updated_on": "2026-04-29",
       "supersedes": [
+        "docs/roadmaps/outdated/reference-team-roadmap-v2.5-representation-sensitive-phase.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.4-r9.2-plus-cp1-cautions.md",
         "docs/roadmaps/outdated/final-codex-handoff-roadmap-original.md",
         "knowledge/Exercise schema and quality/reference-team-roadmap Live version 28 April.md",
         "knowledge/Exercise schema and quality/roadmap-updated-repository-checked.md"
       ],
-      "notes": "Current operating roadmap for references, RAG data quality, exercise metadata overlays, representation-sensitive micro-unit decomposition, and cross-team checkpoints."
+      "notes": "Current operating roadmap with S4 overlay dry-run prepared and CP-3 human review as the next action."
+    },
+    {
+      "roadmap_id": "references-team-roadmap-v2.5",
+      "version": "v2.5-representation-sensitive-phase",
+      "title": "References Team Roadmap before S4 CP-3 dry run",
+      "status": "outdated",
+      "path": "docs/roadmaps/outdated/reference-team-roadmap-v2.5-representation-sensitive-phase.md",
+      "owner": "references_team",
+      "updated_on": "2026-04-29",
+      "superseded_by": "references/reference-team-roadmap.md",
+      "notes": "Snapshot archived before preparing S4 exercise metadata overlays and CP-3 review packet."
     },
     {
       "roadmap_id": "references-team-roadmap-v2.4",

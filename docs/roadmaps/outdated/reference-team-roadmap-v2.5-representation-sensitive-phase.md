@@ -4,7 +4,7 @@ Generated: 2026-04-23
 Adopted main roadmap: 2026-04-25
 Last strategic update: 2026-04-29
 Roadmap ID: `references-team-roadmap`
-Roadmap version: `v2.6-s4-cp3-dry-run`
+Roadmap version: `v2.5-representation-sensitive-phase`
 Roadmap status: `active`
 Version index: `docs/roadmaps/roadmap-version-index.json`
 Scope: `references/`, `build-scripts/references/`, `build-scripts/reports/`, reference dashboards, and generated reference reports under `reports/`
@@ -15,7 +15,7 @@ The handoff roadmap has been adopted as the main operating roadmap for the refer
 
 No blocking incompatibility was found. The roadmap direction fits the repository: machine-edited references, evidence-first unit growth, JSON-first reports, review gates for pedagogical authority, and bounded later AI.
 
-Update 2026-04-29: S4 Exercise Metadata Overlay MVP has prepared the protected-source-safe overlay schema, one Tier A exam-question dry-run record, one Tier C target-exercise dry-run record, validator, and CP-3 review packet. The immediate next action is CP-3 human review before any bulk exercise metadata extension.
+Update 2026-04-29: R9.2 content graph projection is completed. The live roadmap is now narrowed further around exercise metadata quality, governed registries, representation-sensitive micro-unit decomposition, and RAG hardening. The immediate next sprint is Sprint 4 Exercise Metadata Overlay MVP, with CP-3 dry-run before bulk extension.
 
 Compatibility decisions:
 
@@ -125,8 +125,8 @@ Open items are listed first; completed items are kept below them.
 
 | Sprint | Name | Completed | Current State |
 |--------|------|-----------|---------------|
-| S4 | Exercise Metadata Overlay MVP | no | CP-3 review packet prepared. Overlay schema, dry-run exam-question overlay, dry-run target-exercise overlay, and validator exist. Bulk extension remains blocked until `GATE-CP3-schema-extension-dry-run` is reviewed and closed. |
-| RX.1 | Representation-Operation Inventory | no | Planned after S4/CP-3. Build the base-operation x representation x economic-context matrix and duplicate audit before any A61+ unit mutation. |
+| Sprint 4 | Exercise Metadata Overlay MVP | no | Immediate next sprint. Add protected-source-safe exercise overlays with `instructional_role`, `assessment_role`, authority tier, scaffolding object, Bloom, instruction word, graph specs, precision lint status, evidence status, source version, and content status. CP-3 dry-run must pass before bulk extension. |
+| RX.1 | Representation-Operation Inventory | no | Planned after Sprint 4 as non-mutating inventory. Build the base-operation x representation x economic-context matrix and duplicate audit before any A61+ unit mutation. |
 | R8.1 | QC Issue Model | no | Planned early and scoped down. Define only the lightweight issue schema needed to expose evidence weakness, stale data, proof-to-close, and registry/report warnings. |
 | Sprint 6 | Bronnen Registry MVP | no | Planned. Create source-document registry schema/validator first; store under `references/machine/` only after CLI and validators exist. |
 | Sprint 7 | Skill And Operation Registry MVP | no | Planned. Separate unit IDs from fine-grained exercise operations and skill/category tags; preserve useful `skill-categories.md` content where still valid. |
@@ -584,7 +584,7 @@ Stop condition: do not use generated lesson text as primary proof for reference 
 
 Completion: completed on 2026-04-29. R9.2 created `references/data/owned-content-graph.json` with 1,464 typed edges: 695 projection edges, 332 owned exercise evidence edges, and 437 implementation trace edges. Generated artifacts remain non-evidence with explicit warnings. RAG now indexes owned-content edge chunks and retrieval evals still pass 10/10 with 0 authority violations.
 
-### S4 Exercise Metadata Overlay MVP
+### Sprint 4 Exercise Metadata Overlay MVP
 
 Purpose: add the HCS exercise-quality fields in a protected-source-safe overlay before any bulk source mutation.
 
@@ -610,8 +610,6 @@ Required output: overlay schema, dry-run records, validator, and CP-3 review pac
 Stop condition: do not hand-edit protected external exam-question data and do not collapse `instructional_role` and `assessment_role` into one flat enum.
 
 Checkpoint: `GATE-CP3-schema-extension-dry-run`.
-
-Current status: S4 implementation artifacts are prepared and CP-3 is awaiting human review. Do not run bulk metadata extension or source migration until CP-3 closes.
 
 ### R8.1 QC Issue Model
 
@@ -1366,9 +1364,9 @@ Do not invert this order.
 
 ## Immediate Next Sprint
 
-Next action: `GATE-CP3-schema-extension-dry-run` human review.
+Next sprint: `Sprint 4 Exercise Metadata Overlay MVP`.
 
-R4.5 has closed the bounded micro-unit mutation lane, CP-1 has closed the non-mutating schema audit gate as `pass_with_conditions`, CP-2 has closed the owned-source scope gate as `pass_with_conditions`, R9.1 has registered the owned-source surfaces, R9.2 has completed owned-content projection, and S4 has prepared the protected-source-safe exercise metadata dry run. CP-3 must now decide whether the overlay shape is lossless enough before bulk exercise metadata extension.
+R4.5 has closed the bounded micro-unit mutation lane, CP-1 has closed the non-mutating schema audit gate as `pass_with_conditions`, CP-2 has closed the owned-source scope gate as `pass_with_conditions`, R9.1 has registered the owned-source surfaces, and R9.2 has completed owned-content projection. Sprint 4 may start when the team is ready, but only as protected-source-safe overlays with CP-3 dry-run before bulk extension.
 
 Do not start diagnostics, adaptive routing, student-facing AI, automatic lesson sequencing, mastery decisions, summative decisions, teacher cockpit deployment, game/simulation product mapping, or continuous-improvement claims from this roadmap.
 
@@ -1393,7 +1391,6 @@ CP-1 decisions now in force:
 - External exam-question metadata must use `references/data/exercises/` overlays with source stable ID and curriculum version.
 - Authored target exercises use overlay-first strategy until a later approved migration.
 - `build-scripts/lib/verify_svg_geometry.py` is the canonical current precision verifier path.
-- The S4 dry-run overlays are provisional review artifacts, not bulk metadata completion.
 
 CP-2 decisions now in force:
 

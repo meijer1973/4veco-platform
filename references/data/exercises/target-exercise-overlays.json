@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "overlay_id": "target-exercise-overlays",
+  "overlay_status": "dry_run",
+  "generated_by": "S4-exercise-metadata-overlay-mvp",
+  "generated_on": "2026-04-29T18:45:00Z",
+  "source_files": [
+    "references/authored/course-target-exercises.json",
+    "references/owned/course-blueprint-v4.md",
+    "reports/review-gates/GATE-CP1-schema-audit/gate-closure.json"
+  ],
+  "records": [
+    {
+      "overlay_record_id": "overlay:target-exercise:1.1.3",
+      "source_type": "target_exercise",
+      "source_path": "references/authored/course-target-exercises.json",
+      "source_stable_id": "target_exercise:1.1.3",
+      "source_record_locator": {
+        "id": "1.1.3"
+      },
+      "source_version": "references/owned/course-blueprint-v4.md v4",
+      "curriculum_version": "owned-course-blueprint-v4-year-1",
+      "content_status": "dry_run",
+      "authority_tier": "tier_c_owned_target_exercise",
+      "authority_level": "owned_exercise_evidence",
+      "evidence_status": "owned_exercise_evidence",
+      "required_units": [
+        "A38",
+        "A45",
+        "A46"
+      ],
+      "exercise_operations": [
+        "draw_pq_graph_from_table",
+        "read_interpolate_pq_graph",
+        "evaluate_percentage_claim_from_table"
+      ],
+      "skill_tags": [
+        "graph_reading",
+        "table_interpretation",
+        "percentage_reasoning",
+        "dual_coding_graph"
+      ],
+      "instructional_role": "target",
+      "bloom_level": "apply",
+      "instruction_word": "draw_read_explain",
+      "answer_format": "mixed",
+      "graph_spec": {
+        "representation_types": [
+          "table",
+          "p_q_graph"
+        ],
+        "graph_required": true,
+        "source_values_required": true,
+        "precision_verifier": "build-scripts/lib/verify_svg_geometry.py"
+      },
+      "precision_lint_status": "pending",
+      "scaffolding": {
+        "verbal_level": 2,
+        "visual_stage": 2,
+        "fading_position": 1,
+        "dual_coding_present": true
+      },
+      "product_boundary": {
+        "student_diagnostics_authorized": false,
+        "adaptive_routing_authorized": false,
+        "student_facing_ai_authorized": false,
+        "summative_use_authorized": false
+      },
+      "round_trip_notes": [
+        "The overlay intentionally omits assessment_role because CP-1 decided absence should be represented by omitting the field.",
+        "The source target exercise still lists required_skills A38 only; the overlay tests the CP-1 migration strategy by adding required_units A45 and A46 without mutating the authored source.",
+        "This target exercise is useful for CP-3 because it combines table reading, P-Q graph drawing, interpolation, and percentage-claim evaluation."
+      ],
+      "unresolved_questions": [
+        "Should A45 and A46 become required_units for the source target exercise in a later approved migration sprint?"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "gate_id": "GATE-CP3-schema-extension-dry-run",
+  "sprint_id": "S4",
+  "status": "prepared_for_human_review",
+  "generated_by": "S4-exercise-metadata-overlay-mvp",
+  "generated_on": "2026-04-29T18:45:00Z",
+  "source_files": [
+    "references/external/exam-questions.json",
+    "references/authored/course-target-exercises.json",
+    "references/data/exercises/exam-question-overlays.json",
+    "references/data/exercises/target-exercise-overlays.json",
+    "references/schemas/exercise-metadata-overlay.schema.json"
+  ],
+  "cp1_gate_status": "pass_with_conditions",
+  "cp2_gate_status": "pass_with_conditions",
+  "dry_run_records": [
+    {
+      "overlay_record_id": "overlay:exam:ha-1022-a-23-1-o:opgave-1:question-2",
+      "tier": "tier_a_external_exam",
+      "source_stable_id": "external_exam_question:ha-1022-a-23-1-o:opgave-1:question-2",
+      "source_path": "references/external/exam-questions.json",
+      "source_mutated": false,
+      "required_units": ["A04"],
+      "exercise_operations": ["calculate_percentage_share_from_source_values"],
+      "instructional_role": "independent_practice",
+      "assessment_role": "exam_mirror",
+      "evidence_status": "source_values_not_extracted",
+      "round_trip_risk": "medium",
+      "review_note": "The exam question source record is identifiable and preserved, but source annex values from bron 1 are not yet extracted into the mirrored JSON."
+    },
+    {
+      "overlay_record_id": "overlay:target-exercise:1.1.3",
+      "tier": "tier_c_owned_target_exercise",
+      "source_stable_id": "target_exercise:1.1.3",
+      "source_path": "references/authored/course-target-exercises.json",
+      "source_mutated": false,
+      "required_units": ["A38", "A45", "A46"],
+      "exercise_operations": [
+        "draw_pq_graph_from_table",
+        "read_interpolate_pq_graph",
+        "evaluate_percentage_claim_from_table"
+      ],
+      "instructional_role": "target",
+      "assessment_role": "omitted",
+      "evidence_status": "owned_exercise_evidence",
+      "round_trip_risk": "low",
+      "review_note": "The target exercise is reconstructable from owned source plus overlay. The overlay tests the CP-1 decision to omit assessment_role when absent."
+    }
+  ],
+  "validator": {
+    "command": "node build-scripts/references/check-exercise-overlays.js",
+    "status": "passed"
+  },
+  "protected_surface_status": {
+    "references_external_changed": false,
+    "references_machine_changed": false,
+    "bulk_authored_target_source_changed": false
+  },
+  "bulk_extension_authorized": false,
+  "human_review_required": true
+}

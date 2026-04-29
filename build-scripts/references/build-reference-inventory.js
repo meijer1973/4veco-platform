@@ -141,6 +141,18 @@ function classify(pathRel) {
       downstream_dependencies: ['schemas', 'validators', 'review-gates'],
     };
   }
+  if (pathRel.startsWith('references/data/exercises/')) {
+    return {
+      layer: 'governance_data',
+      authority_level: 'authored_judgement',
+      source_type: pathRel.endsWith('README.md') ? 'exercise_overlay_readme' : 'exercise_metadata_overlay',
+      generated_status: pathRel.endsWith('README.md') ? 'manual_source' : 'dry_run_overlay',
+      edit_policy: pathRel.endsWith('README.md') ? 'human_reviewed_edit' : 'sprint_process',
+      owner: 'references_team',
+      refresh_policy: 'checkpoint_review',
+      downstream_dependencies: ['exercise-metadata-validation', 'review-gates', 'future-exercise-backfill'],
+    };
+  }
   if (pathRel.startsWith('references/data/')) {
     return {
       layer: 'governance_data',

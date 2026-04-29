@@ -56,6 +56,7 @@ Single-fetch entry point for external research agents (notably planning Claude i
 
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-CP1-schema-audit/bundle-urls.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-CP2-owned-source-scope/bundle-urls.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-CP3-schema-extension-dry-run/bundle-urls.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-R2-empty-needs/bundle-urls.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-R4-micro-unit-quality/bundle-urls.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-R5-alignment-graph/bundle-urls.md

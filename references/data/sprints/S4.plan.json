@@ -1,0 +1,25 @@
+{
+  "sprint_id": "S4",
+  "name": "Exercise Metadata Overlay MVP",
+  "status": "in_progress",
+  "planned_on": "2026-04-29",
+  "plan": "docs/sprints/S4-plan.md",
+  "protected_reference_data_changes_allowed": false,
+  "human_review_required": true,
+  "gate_id": "GATE-CP3-schema-extension-dry-run",
+  "review_packet": "reports/review-gates/GATE-CP3-schema-extension-dry-run/review-packet.md",
+  "valid_gate_statuses": [
+    "pass",
+    "pass_with_conditions",
+    "hold",
+    "fail"
+  ],
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js docs/sprints/S4-plan.md",
+    "node build-scripts/sprints/check-sprint-bundle.js S4",
+    "node build-scripts/references/check-exercise-overlays.js",
+    "node build-scripts/references/check-roadmap-version-index.js",
+    "node build-scripts/references/check-source-manifest.js",
+    "node build-scripts/references/check-document-inventory.js"
+  ]
+}

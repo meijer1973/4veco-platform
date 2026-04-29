@@ -1,0 +1,204 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://4veco.local/references/schemas/exercise-metadata-overlay.schema.json",
+  "title": "Exercise Metadata Overlay",
+  "description": "Protected-source-safe overlay for exercise metadata approved by CP-1. External and authored source records remain unchanged.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "overlay_id",
+    "overlay_status",
+    "generated_by",
+    "generated_on",
+    "source_files",
+    "records"
+  ],
+  "properties": {
+    "schema_version": { "const": 1 },
+    "overlay_id": { "type": "string", "minLength": 1 },
+    "overlay_status": {
+      "type": "string",
+      "enum": ["dry_run", "active", "deprecated"]
+    },
+    "generated_by": { "type": "string", "minLength": 1 },
+    "generated_on": { "type": "string", "format": "date-time" },
+    "source_files": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1
+    },
+    "records": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/overlay_record" },
+      "minItems": 1
+    }
+  },
+  "$defs": {
+    "overlay_record": {
+      "type": "object",
+      "required": [
+        "overlay_record_id",
+        "source_type",
+        "source_path",
+        "source_stable_id",
+        "source_record_locator",
+        "source_version",
+        "curriculum_version",
+        "content_status",
+        "authority_tier",
+        "authority_level",
+        "evidence_status",
+        "required_units",
+        "exercise_operations",
+        "skill_tags",
+        "instructional_role",
+        "bloom_level",
+        "instruction_word",
+        "answer_format",
+        "graph_spec",
+        "precision_lint_status",
+        "scaffolding",
+        "product_boundary",
+        "round_trip_notes",
+        "unresolved_questions"
+      ],
+      "properties": {
+        "overlay_record_id": { "type": "string", "minLength": 1 },
+        "source_type": {
+          "type": "string",
+          "enum": ["external_exam_question", "target_exercise"]
+        },
+        "source_path": { "type": "string", "minLength": 1 },
+        "source_stable_id": { "type": "string", "minLength": 1 },
+        "source_record_locator": {
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": {
+            "type": ["string", "number", "boolean"]
+          }
+        },
+        "source_version": { "type": "string", "minLength": 1 },
+        "curriculum_version": { "type": "string", "minLength": 1 },
+        "content_status": {
+          "type": "string",
+          "enum": ["dry_run", "active", "deprecated", "needs_review"]
+        },
+        "authority_tier": {
+          "type": "string",
+          "enum": ["tier_a_external_exam", "tier_c_owned_target_exercise"]
+        },
+        "authority_level": {
+          "type": "string",
+          "enum": ["external_primary", "owned_exercise_evidence", "authored_judgement", "generated_report", "diagnostic"]
+        },
+        "evidence_status": {
+          "type": "string",
+          "enum": ["external_primary", "owned_exercise_evidence", "pending_review", "diagnostic_only", "source_values_not_extracted"]
+        },
+        "required_units": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^[A-Z][0-9]{2}$" }
+        },
+        "exercise_operations": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^[a-z0-9_]+$" }
+        },
+        "skill_tags": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^[a-z0-9_]+$" }
+        },
+        "instructional_role": {
+          "type": "string",
+          "enum": [
+            "worked_example",
+            "startoefening",
+            "independent_practice",
+            "interleaving",
+            "target",
+            "verdieping",
+            "consolidatie",
+            "instapquiz",
+            "diagnostic",
+            "nieuws"
+          ]
+        },
+        "assessment_role": {
+          "type": "string",
+          "enum": ["exam_mirror", "bridge", "prerequisite"]
+        },
+        "bloom_level": {
+          "type": "string",
+          "enum": ["remember", "understand", "apply", "analyze", "evaluate", "create", "pending_review"]
+        },
+        "instruction_word": { "type": "string", "minLength": 1 },
+        "answer_format": {
+          "type": "string",
+          "enum": ["calculation", "short_explanation", "graph", "mixed", "multiple_choice", "classification", "pending_review"]
+        },
+        "graph_spec": {
+          "type": "object",
+          "required": [
+            "representation_types",
+            "graph_required",
+            "source_values_required",
+            "precision_verifier"
+          ],
+          "properties": {
+            "representation_types": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": ["none", "table", "bar_chart", "line_chart", "pie_chart", "p_q_graph", "producer_graph", "source_text"]
+              }
+            },
+            "graph_required": { "type": "boolean" },
+            "source_values_required": { "type": "boolean" },
+            "precision_verifier": { "type": "string", "minLength": 1 }
+          },
+          "additionalProperties": false
+        },
+        "precision_lint_status": {
+          "type": "string",
+          "enum": ["not_applicable", "pending", "pass", "warn", "fail"]
+        },
+        "scaffolding": {
+          "type": "object",
+          "required": ["verbal_level", "visual_stage", "fading_position", "dual_coding_present"],
+          "properties": {
+            "verbal_level": { "type": "integer", "minimum": 0, "maximum": 5 },
+            "visual_stage": { "type": "integer", "minimum": 1, "maximum": 4 },
+            "fading_position": { "type": "integer", "minimum": 0 },
+            "dual_coding_present": { "type": "boolean" }
+          },
+          "additionalProperties": false
+        },
+        "product_boundary": {
+          "type": "object",
+          "required": [
+            "student_diagnostics_authorized",
+            "adaptive_routing_authorized",
+            "student_facing_ai_authorized",
+            "summative_use_authorized"
+          ],
+          "properties": {
+            "student_diagnostics_authorized": { "const": false },
+            "adaptive_routing_authorized": { "const": false },
+            "student_facing_ai_authorized": { "const": false },
+            "summative_use_authorized": { "const": false }
+          },
+          "additionalProperties": false
+        },
+        "round_trip_notes": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "unresolved_questions": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

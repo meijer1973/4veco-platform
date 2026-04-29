@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "overlay_id": "exam-question-overlays",
+  "overlay_status": "dry_run",
+  "generated_by": "S4-exercise-metadata-overlay-mvp",
+  "generated_on": "2026-04-29T18:45:00Z",
+  "source_files": [
+    "references/external/exam-questions.json",
+    "reports/review-gates/GATE-CP1-schema-audit/gate-closure.json"
+  ],
+  "records": [
+    {
+      "overlay_record_id": "overlay:exam:ha-1022-a-23-1-o:opgave-1:question-2",
+      "source_type": "external_exam_question",
+      "source_path": "references/external/exam-questions.json",
+      "source_stable_id": "external_exam_question:ha-1022-a-23-1-o:opgave-1:question-2",
+      "source_record_locator": {
+        "exam": "ha-1022-a-23-1-o",
+        "opgave_num": 1,
+        "question_num": 2
+      },
+      "source_version": "CvTE havo 2023 tijdvak 1, mirrored extraction in references/external",
+      "curriculum_version": "vwo-havo-economie-reference-corpus-2026-04",
+      "content_status": "dry_run",
+      "authority_tier": "tier_a_external_exam",
+      "authority_level": "external_primary",
+      "evidence_status": "source_values_not_extracted",
+      "required_units": [
+        "A04"
+      ],
+      "exercise_operations": [
+        "calculate_percentage_share_from_source_values"
+      ],
+      "skill_tags": [
+        "calculation",
+        "source_use",
+        "percentage_reasoning"
+      ],
+      "instructional_role": "independent_practice",
+      "assessment_role": "exam_mirror",
+      "bloom_level": "apply",
+      "instruction_word": "toon_met_een_berekening_aan",
+      "answer_format": "calculation",
+      "graph_spec": {
+        "representation_types": [
+          "source_text"
+        ],
+        "graph_required": false,
+        "source_values_required": true,
+        "precision_verifier": "build-scripts/lib/verify_svg_geometry.py"
+      },
+      "precision_lint_status": "not_applicable",
+      "scaffolding": {
+        "verbal_level": 0,
+        "visual_stage": 4,
+        "fading_position": 0,
+        "dual_coding_present": false
+      },
+      "product_boundary": {
+        "student_diagnostics_authorized": false,
+        "adaptive_routing_authorized": false,
+        "student_facing_ai_authorized": false,
+        "summative_use_authorized": false
+      },
+      "round_trip_notes": [
+        "The overlay preserves the external exam question identity and the canonical required_units field without mutating the mirrored source.",
+        "The source record text refers to bron 1, but the extracted exam-question JSON does not include the source table values; the overlay therefore records source_values_not_extracted."
+      ],
+      "unresolved_questions": [
+        "Should source_values_not_extracted remain acceptable for Tier A overlays until source annex extraction exists?"
+      ]
+    }
+  ]
+}
