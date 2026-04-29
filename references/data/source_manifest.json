@@ -1,14 +1,14 @@
 {
   "schema_version": "0.1",
-  "generated_at": "2026-04-29T18:40:23.803Z",
+  "generated_at": "2026-04-29T20:05:11.655Z",
   "sprint_id": "R0.2",
   "scope": "references/",
   "note": "Self-generated inventory files intentionally omit size and sha256 to avoid unstable self-checksums.",
   "summary": {
-    "file_count": 150,
+    "file_count": 151,
     "by_layer": {
       "authored_judgement": 7,
-      "governance_data": 75,
+      "governance_data": 76,
       "external_authority": 32,
       "machine_registry": 5,
       "owned_curriculum_design": 3,
@@ -20,7 +20,7 @@
     "by_edit_policy": {
       "human_reviewed_edit": 15,
       "generated_by_inventory_script": 10,
-      "sprint_process": 64,
+      "sprint_process": 65,
       "external_refresh_only": 32,
       "cli_only": 5,
       "versioned_human_reviewed_edit": 3,
@@ -1669,6 +1669,26 @@
       "self_generated_inventory_file": false
     },
     {
+      "path": "references/data/sprints/S4.result.json",
+      "file_name": "S4.result.json",
+      "extension": "json",
+      "size_bytes": 3111,
+      "sha256": "468b6fb7152d27cc87e3402082d7848ede2603e5ee31fe99fef7438ce9ba43cb",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
       "path": "references/external/amstelveencollege_quality_standards.md",
       "file_name": "amstelveencollege_quality_standards.md",
       "extension": "md",
@@ -2575,8 +2595,8 @@
       "path": "references/reference-team-roadmap.md",
       "file_name": "reference-team-roadmap.md",
       "extension": "md",
-      "size_bytes": 83138,
-      "sha256": "a38a6e45e89e23de733fbb32d91639b9d87806ba6f07ec3040d889f6a2e7db02",
+      "size_bytes": 84501,
+      "sha256": "9524ecb0133de3c6cf9feaf00ead970122fe187350eeb016bcdbd9a64b6dbd43",
       "layer": "planning",
       "authority_level": "authored_judgement",
       "source_type": "roadmap",

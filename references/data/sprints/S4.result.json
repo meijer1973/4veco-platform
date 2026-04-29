@@ -1,0 +1,81 @@
+{
+  "sprint_id": "S4",
+  "name": "Exercise Metadata Overlay MVP",
+  "status": "completed",
+  "completed_on": "2026-04-29",
+  "plan": "docs/sprints/S4-plan.md",
+  "baseline": "reports/sprints/S4-baseline.md",
+  "result": "reports/sprints/S4-result.md",
+  "diff_summary": "reports/sprints/S4-diff-summary.md",
+  "protected_reference_data_changed": false,
+  "gate_id": "GATE-CP3-schema-extension-dry-run",
+  "gate_status": "pass_with_conditions",
+  "bulk_extension_authorized": false,
+  "source_mutation_authorized": false,
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js docs/sprints/S4-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js S4",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-exercise-overlays.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-roadmap-version-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-source-manifest.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-document-inventory.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/validate-core-schemas.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-bundle-urls.js GATE-CP3-schema-extension-dry-run",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js --check",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/review-gates/validate-gate.js reports/review-gates/GATE-CP3-schema-extension-dry-run/gate-closure.json",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-result.js reports/sprints/S4-result.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js S4 --complete",
+      "status": "passed"
+    }
+  ],
+  "outputs": [
+    "references/schemas/exercise-metadata-overlay.schema.json",
+    "references/data/exercises/README.md",
+    "references/data/exercises/exam-question-overlays.json",
+    "references/data/exercises/target-exercise-overlays.json",
+    "build-scripts/references/check-exercise-overlays.js",
+    "reports/review-gates/GATE-CP3-schema-extension-dry-run/schema-dry-run.json",
+    "reports/review-gates/GATE-CP3-schema-extension-dry-run/schema-dry-run.md",
+    "reports/review-gates/GATE-CP3-schema-extension-dry-run/review-packet.json",
+    "reports/review-gates/GATE-CP3-schema-extension-dry-run/review-packet.md",
+    "reports/review-gates/GATE-CP3-schema-extension-dry-run/human-interview.json",
+    "reports/review-gates/GATE-CP3-schema-extension-dry-run/human-interview.md",
+    "reports/review-gates/GATE-CP3-schema-extension-dry-run/gate-closure.json",
+    "reports/review-gates/GATE-CP3-schema-extension-dry-run/gate-closure.md"
+  ],
+  "next_required_step": "Plan S4.1 to implement CP-3 conditions before any bulk metadata extension"
+}
