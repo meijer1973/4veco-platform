@@ -2,7 +2,11 @@
 
 Generated: 2026-04-23
 Adopted main roadmap: 2026-04-25
-Last strategic update: 2026-04-28
+Last strategic update: 2026-04-29
+Roadmap ID: `references-team-roadmap`
+Roadmap version: `v2.4-r9.2-plus-cp1-cautions`
+Roadmap status: `active`
+Version index: `docs/roadmaps/roadmap-version-index.json`
 Scope: `references/`, `build-scripts/references/`, `build-scripts/reports/`, reference dashboards, and generated reference reports under `reports/`
 
 ## Adoption Decision

@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1",
-  "generated_at": "2026-04-29T09:52:24.037Z",
+  "generated_at": "2026-04-29T18:21:21.845Z",
   "sprint_id": "R0.2",
   "scope": [
     "references",
@@ -10,9 +10,9 @@
   ],
   "note": "Inventory covers reference sources, generated reports, and reference/report tooling.",
   "summary": {
-    "file_count": 431,
+    "file_count": 432,
     "by_layer": {
-      "reference_tooling": 58,
+      "reference_tooling": 59,
       "report_tooling": 13,
       "authored_judgement": 7,
       "governance_data": 71,
@@ -26,7 +26,7 @@
       "generated_report": 215
     },
     "by_edit_policy": {
-      "code_review": 91,
+      "code_review": 92,
       "human_reviewed_edit": 14,
       "generated_by_inventory_script": 10,
       "sprint_process": 61,
@@ -443,6 +443,26 @@
       "extension": "js",
       "size_bytes": 3198,
       "sha256": "e1523f8b315a34e0088a04dd39faf459cb8e7ce22d5dce936051afa658717c66",
+      "layer": "reference_tooling",
+      "authority_level": "tooling",
+      "source_type": "reference_cli_script",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "platform_team",
+      "refresh_policy": "code_change",
+      "downstream_dependencies": [
+        "reference-cli",
+        "reports",
+        "validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "build-scripts/references/check-roadmap-version-index.js",
+      "file_name": "check-roadmap-version-index.js",
+      "extension": "js",
+      "size_bytes": 3182,
+      "sha256": "11a5d1d1ebd03f67594ce5cba03098aefc0654b22650a0dbeb97629bc3683ae2",
       "layer": "reference_tooling",
       "authority_level": "tooling",
       "source_type": "reference_cli_script",
@@ -3911,8 +3931,8 @@
       "path": "references/reference-team-roadmap.md",
       "file_name": "reference-team-roadmap.md",
       "extension": "md",
-      "size_bytes": 70325,
-      "sha256": "ab2494c0639354d6335cf3db80124fc4a383d8f1da782cc828755dd62a4db400",
+      "size_bytes": 71636,
+      "sha256": "9f19a065c126cb78fd4548a8a64300178677abf35b6a8dc6cd64acf4d6571304",
       "layer": "planning",
       "authority_level": "authored_judgement",
       "source_type": "roadmap",

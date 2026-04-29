@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1",
-  "generated_at": "2026-04-29T09:52:24.037Z",
+  "generated_at": "2026-04-29T18:21:21.845Z",
   "sprint_id": "R0.2",
   "scope": "references/",
   "note": "Self-generated inventory files intentionally omit size and sha256 to avoid unstable self-checksums.",
@@ -2495,8 +2495,8 @@
       "path": "references/reference-team-roadmap.md",
       "file_name": "reference-team-roadmap.md",
       "extension": "md",
-      "size_bytes": 70325,
-      "sha256": "ab2494c0639354d6335cf3db80124fc4a383d8f1da782cc828755dd62a4db400",
+      "size_bytes": 71636,
+      "sha256": "9f19a065c126cb78fd4548a8a64300178677abf35b6a8dc6cd64acf4d6571304",
       "layer": "planning",
       "authority_level": "authored_judgement",
       "source_type": "roadmap",

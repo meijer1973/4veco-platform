@@ -1,0 +1,119 @@
+{
+  "schema_version": 1,
+  "updated_on": "2026-04-29",
+  "generated_by": "manual-roadmap-versioning",
+  "canonical_archive_directory": "docs/roadmaps/outdated",
+  "current_operational_roadmaps": [
+    "references/reference-team-roadmap.md"
+  ],
+  "status_values": [
+    "active",
+    "outdated",
+    "historical_input",
+    "pointer"
+  ],
+  "roadmaps": [
+    {
+      "roadmap_id": "references-team-roadmap",
+      "version": "v2.4-r9.2-plus-cp1-cautions",
+      "title": "References Team Roadmap",
+      "status": "active",
+      "path": "references/reference-team-roadmap.md",
+      "owner": "references_team",
+      "updated_on": "2026-04-29",
+      "supersedes": [
+        "docs/roadmaps/outdated/final-codex-handoff-roadmap-original.md",
+        "knowledge/Exercise schema and quality/reference-team-roadmap Live version 28 April.md",
+        "knowledge/Exercise schema and quality/roadmap-updated-repository-checked.md"
+      ],
+      "notes": "Current operating roadmap for references, RAG data quality, exercise metadata overlays, and cross-team checkpoints."
+    },
+    {
+      "roadmap_id": "reference-system-final-codex-handoff",
+      "version": "legacy-2026-04-27",
+      "title": "4veco-platform Reference/Data System Final Codex Handoff Roadmap",
+      "status": "outdated",
+      "path": "docs/roadmaps/outdated/final-codex-handoff-roadmap-original.md",
+      "owner": "references_team",
+      "updated_on": "2026-04-27",
+      "superseded_by": "references/reference-team-roadmap.md",
+      "notes": "Superseded planning snapshot retained for auditability."
+    },
+    {
+      "roadmap_id": "reference-system-final-codex-handoff-pointer",
+      "version": "pointer-2026-04-29",
+      "title": "Pointer from old final handoff path to archived snapshot",
+      "status": "pointer",
+      "path": "docs/roadmaps/final-codex-handoff-roadmap-original.md",
+      "owner": "references_team",
+      "updated_on": "2026-04-29",
+      "points_to": "docs/roadmaps/outdated/final-codex-handoff-roadmap-original.md",
+      "notes": "Compatibility pointer for historical reports that mention the old path."
+    },
+    {
+      "roadmap_id": "references-team-live-snapshot-2026-04-28",
+      "version": "snapshot-2026-04-28",
+      "title": "Reference Team Roadmap Live Version 28 April",
+      "status": "historical_input",
+      "path": "knowledge/Exercise schema and quality/reference-team-roadmap Live version 28 April.md",
+      "owner": "references_team",
+      "updated_on": "2026-04-28",
+      "superseded_by": "references/reference-team-roadmap.md",
+      "notes": "Snapshot used during HCS/engineering comparison."
+    },
+    {
+      "roadmap_id": "exercise-schema-hcs-roadmap",
+      "version": "proposal-2026-04-28",
+      "title": "HCS Exercise Schema Roadmap",
+      "status": "historical_input",
+      "path": "knowledge/Exercise schema and quality/roadmap-HCS.md",
+      "owner": "head_of_content_strategy",
+      "updated_on": "2026-04-28",
+      "superseded_by": "references/reference-team-roadmap.md",
+      "notes": "HCS proposal incorporated into the live roadmap through CP-1 decisions."
+    },
+    {
+      "roadmap_id": "exercise-schema-head-engineering-final-roadmap",
+      "version": "proposal-2026-04-28",
+      "title": "Head of Engineering Final Exercise Schema Roadmap",
+      "status": "historical_input",
+      "path": "knowledge/Exercise schema and quality/roadmap-final-head-of-engineering.md",
+      "owner": "head_of_engineering",
+      "updated_on": "2026-04-28",
+      "superseded_by": "references/reference-team-roadmap.md",
+      "notes": "Engineering proposal incorporated into the live roadmap after repository-checked edits."
+    },
+    {
+      "roadmap_id": "exercise-schema-repository-checked-roadmap",
+      "version": "proposal-2026-04-28",
+      "title": "Repository-Checked Updated Roadmap",
+      "status": "historical_input",
+      "path": "knowledge/Exercise schema and quality/roadmap-updated-repository-checked.md",
+      "owner": "references_team",
+      "updated_on": "2026-04-28",
+      "superseded_by": "references/reference-team-roadmap.md",
+      "notes": "Repository-checked proposal used to update the live roadmap."
+    },
+    {
+      "roadmap_id": "platform-team-roadmap",
+      "version": "legacy-2026-04-27",
+      "title": "Platform Team Roadmap",
+      "status": "historical_input",
+      "path": "knowledge/old/platform-team-roadmap.md",
+      "owner": "platform_team",
+      "updated_on": "2026-04-27",
+      "notes": "Legacy platform-team planning document retained in knowledge/old."
+    },
+    {
+      "roadmap_id": "three-month-roadmap",
+      "version": "legacy-2026-04-24",
+      "title": "Three-Month Roadmap",
+      "status": "historical_input",
+      "path": "knowledge/old/three-month-roadmap.md",
+      "owner": "platform_team",
+      "updated_on": "2026-04-24",
+      "notes": "Legacy cross-team roadmap retained in knowledge/old."
+    }
+  ]
+}
+
