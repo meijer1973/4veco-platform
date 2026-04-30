@@ -60,6 +60,9 @@
     function injectBackLink() {
         var host = document.querySelector('.hero .hero-inner') || document.querySelector('.hero');
         if (!host || host.querySelector('.back-to-overview, .back-link')) return;
+        // Book-root has no parent index on the deployed Pages site; injecting
+        // ../index.html there yields a 404. Skip on the book-landing layout.
+        if (document.body && document.body.dataset && document.body.dataset.layout === 'landing-book-v1') return;
         var a = document.createElement('a');
         a.className = 'back-to-overview';
         a.href = '../index.html';
