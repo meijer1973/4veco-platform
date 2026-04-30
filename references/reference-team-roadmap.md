@@ -4,7 +4,7 @@ Generated: 2026-04-23
 Adopted main roadmap: 2026-04-25
 Last strategic update: 2026-04-30
 Roadmap ID: `references-team-roadmap`
-Roadmap version: `v2.15-sprint-ledger-near-top`
+Roadmap version: `v2.16-rx2b-graphical-foundation-applied`
 Roadmap status: `active`
 Version index: `docs/roadmaps/roadmap-version-index.json`
 Scope: `references/`, `build-scripts/references/`, `build-scripts/reports/`, reference dashboards, and generated reference reports under `reports/`
@@ -21,6 +21,8 @@ Update 2026-04-30: HCS approved inserting `RX.2b Graphical Foundation Coverage A
 
 Update 2026-04-30: The Sprint Ledger was moved near the top of the roadmap, immediately after adoption and compatibility decisions, so agents see current/open work before detailed operating rules and phase background.
 
+Update 2026-04-30: RX.2b closed `GATE-RX2b-graphical-foundation` as `pass_with_conditions` and added `A62`, `A63`, `A64`, `A65`, `A68`, `A69`, and `A73` through `unit-add.js`. `A71` remains held/high-risk. All seven new graphical-foundation units remain generator-blocked and non-interactive until generator implementation and validation.
+
 Compatibility decisions:
 
 - Sprint `R0.1` now means the sprint-execution scaffold.
@@ -35,9 +37,9 @@ Compatibility decisions:
 - The exercise-schema roadmap restores the HCS two-axis role model (`instructional_role`, `assessment_role`), the four-field `scaffolding` object, and CP-1 through CP-8 cross-team checkpoints.
 - New registries under `references/machine/` remain future end states only. They require schema, CLI, validators, and mutation logs before machine files are created or changed.
 - `R9.2 Content Graph Projection` is completed. Owned-source content is queryable through a separate projection graph without changing R5 alignment authority.
-- `Phase RX Representation-Sensitive Micro-Unit Decomposition` is adopted as a dedicated reference-team phase. RX.1 and GATE-RX2 closed as `pass_with_conditions`; RX.2 applied the bounded first lane through CLI-only mutation and now blocks student-facing use through explicit generator-block tracking.
+- `Phase RX Representation-Sensitive Micro-Unit Decomposition` is adopted as a dedicated reference-team phase. RX.1, GATE-RX2, and GATE-RX2b closed as `pass_with_conditions`; RX.2 and RX.2b applied bounded lanes through CLI-only mutation and now block student-facing use through explicit generator-block tracking.
 - `R8.1 Scoped QC Issue Model` is completed. Quality issues are internal-only governance signals with proof-to-close fields, exposed to dashboards and RAG as diagnostic generated-report context only.
-- `RX.2b Graphical Foundation Coverage And Mutation` is inserted before RX.3. Producer/profit graph work must not proceed until the general graphical-reading foundation is reviewed, reported, and either mutated or explicitly held.
+- `RX.2b Graphical Foundation Coverage And Mutation` is completed before RX.3. Producer/profit graph work may now proceed only with the RX.2b dependencies live or explicitly held; `A71` remains held/high-risk.
 
 ## Sprint Ledger
 
@@ -45,7 +47,6 @@ Open items are listed first; completed items are kept below them.
 
 | Sprint | Name | Completed | Current State |
 |--------|------|-----------|---------------|
-| RX.2b | Graphical Foundation Coverage And Mutation | no | Planned next for the RX phase. Inserted before RX.3 by HCS decision. Review and, if approved, CLI-mutate the bar-chart, line-graph, pie-chart, visual percentage-change, and visual index foundations; all new A-units remain generator-blocked/non-interactive until RX.6. |
 | Sprint 6 | Bronnen Registry MVP | no | Planned. Create source-document registry schema/validator first; store under `references/machine/` only after CLI and validators exist. |
 | Sprint 7 | Skill And Operation Registry MVP | no | Planned. Separate unit IDs from fine-grained exercise operations and skill/category tags; preserve useful `skill-categories.md` content where still valid. |
 | RX.3 | Producer Table And Graph Representation Units | no | Planned after RX.2b. Review profit, break-even, TO/TK, GTK, MO/MK, table-difference, and producer-graph overlap before mutation. |
@@ -63,6 +64,8 @@ Open items are listed first; completed items are kept below them.
 | Sprint 13 | Composition Pattern Registry | no | Planned. Define reusable exercise-composition patterns for internal authoring support, not automatic student-facing publication. |
 | Sprint 14 | C-to-B Promotion Workflow | no | Planned only after schema audit, owned-source registry, exercise overlays, D04/unit-design status, R7.6, R14.1, and precision lint path are ready. |
 | Product Gate | Re-Evaluate R10-R13 Product Surfaces | no | Blocked. Diagnostics, adaptive routing, student-facing AI, teacher cockpit deployment, automatic sequencing, mastery, and summative uses remain out of scope until data-quality gates justify them. |
+| RX.2b | Graphical Foundation Coverage And Mutation | yes | Completed. `GATE-RX2b-graphical-foundation` closed as `pass_with_conditions`; `A62`, `A63`, `A64`, `A65`, `A68`, `A69`, and `A73` were added through `unit-add.js`; `A71` remains held/high-risk; all seven new A-units remain generator-blocked/non-interactive until generator implementation and validation. |
+| GATE-RX2b | Graphical Foundation Review | yes | Closed as `pass_with_conditions`. Authorized CLI-only mutation for the seven-unit graphical foundation lane, held `A71`, preserved ID gaps, and preserved student-facing/adaptive/product-use blocks. |
 | RX.2 | First-Lane Mutation Review And CLI Execution | yes | Completed. `GATE-RX2-first-lane-mutation-review` closed as `pass_with_conditions`; `A61`, `A66`, `A67`, `A70`, `A72`, and `A74` were added through `unit-add.js`; all six remain generator-blocked/non-interactive until generator implementation and validation. |
 | GATE-RX2 | First-Lane Mutation Review | yes | Closed as `pass_with_conditions`. Authorized CLI-only mutation for the six-unit first lane and preserved blocks on deferred candidates, generator exposure, and student-facing/adaptive/product uses. |
 | R8.1 | QC Issue Model | yes | Completed. Created internal-only quality issue schema/log, validator, `reference-quality-issues` report, and reference-health/RAG data hook; QC issues remain diagnostic governance records, not curriculum authority. |
@@ -928,6 +931,8 @@ Acceptance tests:
 
 Stop condition: no mutation before `GATE-RX2b-graphical-foundation` records explicit human authorization. Do not hand-edit `references/machine/`, `references/external/`, authored source files, or RAG chunks. Do not authorize student diagnostics, adaptive routing, student-facing AI, sequencing, mastery decisions, or summative use.
 
+Completion: completed on 2026-04-30. `GATE-RX2b-graphical-foundation` closed as `pass_with_conditions`; `A62`, `A63`, `A64`, `A65`, `A68`, `A69`, and `A73` were added through `unit-add.js`; `A71` remains held/high-risk; all seven new A-units remain generator-blocked and non-interactive until generator implementation and validation.
+
 #### RX.3 Producer Table And Graph Representation Units
 
 Purpose: add representation-sensitive profit/cost units after RX.2b closes or explicitly holds the graphical foundation layer.
@@ -1389,7 +1394,7 @@ Sprints:
 
 - `RX.1` completed: non-mutating representation-operation inventory and duplicate audit.
 - `RX.2` completed: bounded first-lane percentage/index/table units added through CLI; generator-blocked status remains active.
-- `RX.2b` planned: graphical foundation coverage and mutation before producer graph work.
+- `RX.2b` completed: graphical foundation units `A62`, `A63`, `A64`, `A65`, `A68`, `A69`, and `A73` added through CLI; `A71` remains held/high-risk; generator-blocked status remains active.
 - `RX.3` planned: producer table and graph representation units after RX.2b.
 - `RX.4` planned: elasticity and market-diagram representation units after RX.2b/RX.3.
 - `RX.5` planned: representation operation registry and reports, only after schema/validator/CLI path exists.
@@ -1525,15 +1530,15 @@ Do not invert this order.
 
 ## Immediate Next Sprint
 
-Next sprint: `RX.2b Graphical Foundation Coverage And Mutation`.
+Next sprint: `Sprint 6 Bronnen Registry MVP`.
 
-R4.5 has closed the bounded micro-unit mutation lane, CP-1 has closed the non-mutating schema audit gate as `pass_with_conditions`, CP-2 has closed the owned-source scope gate as `pass_with_conditions`, R9.1 has registered the owned-source surfaces, R9.2 has completed owned-content projection, S4/CP-3 has closed as `pass_with_conditions`, S4.1 has implemented the CP-3 condition artifacts, RX.1 has prepared the non-mutating representation-operation inventory, `GATE-RX1-representation-unit-scope` has closed as `pass_with_conditions`, RX.2/GATE-RX2 has added the bounded six-unit first lane through CLI-only mutation, and R8.1 has added the scoped internal QC issue model.
+R4.5 has closed the bounded micro-unit mutation lane, CP-1 has closed the non-mutating schema audit gate as `pass_with_conditions`, CP-2 has closed the owned-source scope gate as `pass_with_conditions`, R9.1 has registered the owned-source surfaces, R9.2 has completed owned-content projection, S4/CP-3 has closed as `pass_with_conditions`, S4.1 has implemented the CP-3 condition artifacts, RX.1 has prepared the non-mutating representation-operation inventory, `GATE-RX1-representation-unit-scope` has closed as `pass_with_conditions`, RX.2/GATE-RX2 has added the bounded six-unit first lane through CLI-only mutation, RX.2b/GATE-RX2b has added the bounded seven-unit graphical foundation lane through CLI-only mutation while holding `A71`, and R8.1 has added the scoped internal QC issue model.
 
 `A61`, `A66`, `A67`, `A70`, `A72`, and `A74` are now catalog units, but they are generator-blocked and non-interactive for student-facing skill-tree use until their generators are implemented and validated.
 
-`RX.2b` should close the general graphical-reading foundation before producer/profit graph work proceeds. It must produce graphical foundation coverage reports, prepare `GATE-RX2b-graphical-foundation`, and only mutate approved units through `unit-add.js` after explicit human authorization. `A71` remains conditional and may be held.
+`A62`, `A63`, `A64`, `A65`, `A68`, `A69`, and `A73` are now catalog units, but they are generator-blocked and non-interactive for student-facing skill-tree use until their generators are implemented and validated. `A71` remains held/high-risk for later focused review.
 
-`Sprint 6` remains planned after RX.2b. It should create a controlled source-document registry without weakening machine-edit discipline. If the first implementation would live under `references/machine/`, create the CLI before creating the registry; otherwise keep the first pass under `references/data/` as a governed overlay.
+`Sprint 6` is now the next planned sprint. It should create a controlled source-document registry without weakening machine-edit discipline. If the first implementation would live under `references/machine/`, create the CLI before creating the registry; otherwise keep the first pass under `references/data/` as a governed overlay.
 
 Do not start diagnostics, adaptive routing, student-facing AI, automatic lesson sequencing, mastery decisions, summative decisions, teacher cockpit deployment, game/simulation product mapping, or continuous-improvement claims from this roadmap.
 

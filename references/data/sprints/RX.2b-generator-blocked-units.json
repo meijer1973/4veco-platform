@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "sprint_id": "RX.2b",
+  "status": "active_block",
+  "recorded_on": "2026-04-30",
+  "source_gate": "reports/review-gates/GATE-RX2b-graphical-foundation/gate-closure.json",
+  "blocked_reason": "graphical foundation units are catalog-valid but generator implementations are missing",
+  "student_facing_skilltree_use_allowed": false,
+  "units": [
+    {
+      "unit_id": "A62",
+      "generator": "GEN_A62",
+      "generator_implemented": false,
+      "generator_status": "missing_generator_implementation",
+      "student_facing_skilltree_use_allowed": false,
+      "non_interactive_until_generator_validates": true,
+      "proof_required_to_unblock": [
+        "GEN_A62 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A63",
+      "generator": "GEN_A63",
+      "generator_implemented": false,
+      "generator_status": "missing_generator_implementation",
+      "student_facing_skilltree_use_allowed": false,
+      "non_interactive_until_generator_validates": true,
+      "proof_required_to_unblock": [
+        "GEN_A63 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A64",
+      "generator": "GEN_A64",
+      "generator_implemented": false,
+      "generator_status": "missing_generator_implementation",
+      "student_facing_skilltree_use_allowed": false,
+      "non_interactive_until_generator_validates": true,
+      "proof_required_to_unblock": [
+        "GEN_A64 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A65",
+      "generator": "GEN_A65",
+      "generator_implemented": false,
+      "generator_status": "missing_generator_implementation",
+      "student_facing_skilltree_use_allowed": false,
+      "non_interactive_until_generator_validates": true,
+      "proof_required_to_unblock": [
+        "GEN_A65 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A68",
+      "generator": "GEN_A68",
+      "generator_implemented": false,
+      "generator_status": "missing_generator_implementation",
+      "student_facing_skilltree_use_allowed": false,
+      "non_interactive_until_generator_validates": true,
+      "proof_required_to_unblock": [
+        "GEN_A68 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A69",
+      "generator": "GEN_A69",
+      "generator_implemented": false,
+      "generator_status": "missing_generator_implementation",
+      "student_facing_skilltree_use_allowed": false,
+      "non_interactive_until_generator_validates": true,
+      "proof_required_to_unblock": [
+        "GEN_A69 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A73",
+      "generator": "GEN_A73",
+      "generator_implemented": false,
+      "generator_status": "missing_generator_implementation",
+      "student_facing_skilltree_use_allowed": false,
+      "non_interactive_until_generator_validates": true,
+      "proof_required_to_unblock": [
+        "GEN_A73 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    }
+  ],
+  "held_candidates": [
+    {
+      "unit_id": "A71",
+      "reason": "held_high_risk_for_later_focused_review"
+    }
+  ],
+  "blocked_downstream_uses": [
+    "student-facing skill-tree exposure for A62/A63/A64/A65/A68/A69/A73",
+    "student diagnostics",
+    "adaptive routing",
+    "student-facing AI",
+    "automatic sequencing",
+    "mastery decisions",
+    "summative decisions"
+  ]
+}

@@ -2,7 +2,7 @@
   "eval_set_id": "R7.3-retrieval-eval-set",
   "schema_version": 1,
   "generated_by": "build-scripts/rag/run-retrieval-evals.js",
-  "generated_on": "2026-04-29T21:58:21.482Z",
+  "generated_on": "2026-04-30T08:53:12.221Z",
   "source_files": [
     "references/data/rag/retrieval_eval_set.json",
     "references/data/rag/chunk_index.jsonl",
@@ -193,24 +193,24 @@
         "A20",
         "D1.21",
         "D30",
-        "ha-1022-a-25-1-o-572",
+        "ha-1022-a-25-1-o-579",
         "D28",
         "D3.1",
-        "ha-1022-a-25-1-o-573",
+        "ha-1022-a-25-1-o-580",
         "A15",
         "A17",
         "A2.4",
         "A2.5",
-        "ha-1022-a-25-2-o-600",
+        "ha-1022-a-25-2-o-607",
         "D01",
         "D03",
-        "ha-1022-a-25-2-o-601",
+        "ha-1022-a-25-2-o-608",
         "A16",
-        "vw-1022-a-24-2-o-724",
+        "vw-1022-a-24-2-o-731",
         "A19",
         "A2.16",
         "A2.17",
-        "vw-1022-a-24-2-o-725",
+        "vw-1022-a-24-2-o-732",
         "producentensurplus",
         "consumentensurplus",
         "A40",
@@ -238,7 +238,7 @@
       "authority_violations": [],
       "top_results": [
         {
-          "chunk_id": "exam-question:ha-1022-a-25-1-o-572",
+          "chunk_id": "exam-question:ha-1022-a-25-1-o-579",
           "score": 76,
           "source_path": "references/external/exam-questions.json",
           "source_type": "exam_question",
@@ -247,7 +247,7 @@
             "A20",
             "D1.21",
             "D30",
-            "ha-1022-a-25-1-o-572"
+            "ha-1022-a-25-1-o-579"
           ],
           "evidence_ids": [],
           "edge_statuses": [],
@@ -258,10 +258,10 @@
           "not_primary_evidence": false,
           "curriculum_authority": true,
           "allowed_for_public_citation": true,
-          "text_excerpt": "ha-1022-a-25-1-o-572. Bereken het resultaat per dag van Hopi Bon. De welvaart die ontstaat op deze fietsverhuurmarkt kan worden gemeten aan de hand van het consumenten- en producentensurplus. Door een prijsverlaging stijgt de welvaart. Gebruik bron 1. Required skills: A20, D30. Exam codes: D1.21."
+          "text_excerpt": "ha-1022-a-25-1-o-579. Bereken het resultaat per dag van Hopi Bon. De welvaart die ontstaat op deze fietsverhuurmarkt kan worden gemeten aan de hand van het consumenten- en producentensurplus. Door een prijsverlaging stijgt de welvaart. Gebruik bron 1. Required skills: A20, D30. Exam codes: D1.21."
         },
         {
-          "chunk_id": "exam-question:ha-1022-a-25-1-o-573",
+          "chunk_id": "exam-question:ha-1022-a-25-1-o-580",
           "score": 76,
           "source_path": "references/external/exam-questions.json",
           "source_type": "exam_question",
@@ -269,7 +269,7 @@
           "entity_ids": [
             "D28",
             "D3.1",
-            "ha-1022-a-25-1-o-573"
+            "ha-1022-a-25-1-o-580"
           ],
           "evidence_ids": [],
           "edge_statuses": [],
@@ -280,10 +280,10 @@
           "not_primary_evidence": false,
           "curriculum_authority": true,
           "allowed_for_public_citation": true,
-          "text_excerpt": "ha-1022-a-25-1-o-573. Leg het welvaartseffect uit als Hopi Bon een lagere prijs rekent dan de prijs bij maximale winst. Doe het als volgt: Leg het effect van een lagere prijs uit op het consumentensurplus. Leg het effect van een lagere prijs uit op het dalende producentensurplus. Leg het effect van een lagere prijs uit op het stijgende producentensurplus. Hopi Bon wil starten met een huurprijs van $ 16, om daarna deze te verhogen naar $ 24. De directeur onderzoekt of het starten met een lage pri"
+          "text_excerpt": "ha-1022-a-25-1-o-580. Leg het welvaartseffect uit als Hopi Bon een lagere prijs rekent dan de prijs bij maximale winst. Doe het als volgt: Leg het effect van een lagere prijs uit op het consumentensurplus. Leg het effect van een lagere prijs uit op het dalende producentensurplus. Leg het effect van een lagere prijs uit op het stijgende producentensurplus. Hopi Bon wil starten met een huurprijs van $ 16, om daarna deze te verhogen naar $ 24. De directeur onderzoekt of het starten met een lage pri"
         },
         {
-          "chunk_id": "exam-question:ha-1022-a-25-2-o-600",
+          "chunk_id": "exam-question:ha-1022-a-25-2-o-607",
           "score": 76,
           "source_path": "references/external/exam-questions.json",
           "source_type": "exam_question",
@@ -293,7 +293,7 @@
             "A17",
             "A2.4",
             "A2.5",
-            "ha-1022-a-25-2-o-600"
+            "ha-1022-a-25-2-o-607"
           ],
           "evidence_ids": [],
           "edge_statuses": [],
@@ -304,10 +304,10 @@
           "not_primary_evidence": false,
           "curriculum_authority": true,
           "allowed_for_public_citation": true,
-          "text_excerpt": "ha-1022-a-25-2-o-600. Laat met een berekening zien dat de doelstelling van de Mexicaanse overheid wordt bereikt. noot 1 een pond = 500 gram De invoering van de suikeraccijns heeft gevolgen voor zowel het consumentensurplus als het producentensurplus op de markt van suiker (zie bron 2). Gebruik bron 2. Required skills: A15, A17. Exam codes: A2.4, A2.5."
+          "text_excerpt": "ha-1022-a-25-2-o-607. Laat met een berekening zien dat de doelstelling van de Mexicaanse overheid wordt bereikt. noot 1 een pond = 500 gram De invoering van de suikeraccijns heeft gevolgen voor zowel het consumentensurplus als het producentensurplus op de markt van suiker (zie bron 2). Gebruik bron 2. Required skills: A15, A17. Exam codes: A2.4, A2.5."
         },
         {
-          "chunk_id": "exam-question:ha-1022-a-25-2-o-601",
+          "chunk_id": "exam-question:ha-1022-a-25-2-o-608",
           "score": 76,
           "source_path": "references/external/exam-questions.json",
           "source_type": "exam_question",
@@ -316,7 +316,7 @@
             "D01",
             "D03",
             "D3.1",
-            "ha-1022-a-25-2-o-601"
+            "ha-1022-a-25-2-o-608"
           ],
           "evidence_ids": [],
           "edge_statuses": [],
@@ -327,10 +327,10 @@
           "not_primary_evidence": false,
           "curriculum_authority": true,
           "allowed_for_public_citation": true,
-          "text_excerpt": "ha-1022-a-25-2-o-601. Geef met letters het oppervlak aan dat het consumenten- en producentensurplus weergeeft en het oppervlak dat de accijnsopbrengst weergeeft na het heffen van de suikeraccijns. Neem daarvoor onderstaande tabel over op het antwoordblad en vul aan op de stippellijnen. oppervlak consumentensurplus ……….. oppervlak producentensurplus ……….. oppervlak accijnsopbrengst ……….. Required skills: D03, D01. Exam codes: D3.1."
+          "text_excerpt": "ha-1022-a-25-2-o-608. Geef met letters het oppervlak aan dat het consumenten- en producentensurplus weergeeft en het oppervlak dat de accijnsopbrengst weergeeft na het heffen van de suikeraccijns. Neem daarvoor onderstaande tabel over op het antwoordblad en vul aan op de stippellijnen. oppervlak consumentensurplus ……….. oppervlak producentensurplus ……….. oppervlak accijnsopbrengst ……….. Required skills: D03, D01. Exam codes: D3.1."
         },
         {
-          "chunk_id": "exam-question:vw-1022-a-24-2-o-724",
+          "chunk_id": "exam-question:vw-1022-a-24-2-o-731",
           "score": 76,
           "source_path": "references/external/exam-questions.json",
           "source_type": "exam_question",
@@ -339,7 +339,7 @@
             "A16",
             "A2.4",
             "A2.5",
-            "vw-1022-a-24-2-o-724"
+            "vw-1022-a-24-2-o-731"
           ],
           "evidence_ids": [],
           "edge_statuses": [],
@@ -350,7 +350,7 @@
           "not_primary_evidence": false,
           "curriculum_authority": true,
           "allowed_for_public_citation": true,
-          "text_excerpt": "vw-1022-a-24-2-o-724. Bereken de hoogte van de Armington-elasticiteit. Piethaan: “Een stikstofheffing zal effect hebben op het producentensurplus van de binnenlandse staalmarkt, waardoor de doelmatigheid van de staalmarkt verder zal afnemen. Onze buurlanden hebben echter minder milieuregels, waardoor de mondiale maatschappelijke kosten juist kunnen toenemen.” Required skills: A16. Exam codes: A2.4, A2.5."
+          "text_excerpt": "vw-1022-a-24-2-o-731. Bereken de hoogte van de Armington-elasticiteit. Piethaan: “Een stikstofheffing zal effect hebben op het producentensurplus van de binnenlandse staalmarkt, waardoor de doelmatigheid van de staalmarkt verder zal afnemen. Onze buurlanden hebben echter minder milieuregels, waardoor de mondiale maatschappelijke kosten juist kunnen toenemen.” Required skills: A16. Exam codes: A2.4, A2.5."
         }
       ],
       "notes": "Checks whether exam evidence and the surplus unit/term surface for producer-surplus search."

@@ -1,0 +1,67 @@
+{
+  "sprint_id": "RX.2b",
+  "name": "Graphical Foundation Coverage And Mutation",
+  "status": "in_progress",
+  "planned_on": "2026-04-30",
+  "plan": "docs/sprints/RX.2b-plan.md",
+  "protected_reference_data_changes_allowed": true,
+  "protected_reference_data_change_mode": "CLI-only via build-scripts/references/unit-add.js after gate closure",
+  "human_review_required": true,
+  "gate_id": "GATE-RX2b-graphical-foundation",
+  "review_packet": "reports/review-gates/GATE-RX2b-graphical-foundation/review-packet.md",
+  "valid_gate_statuses": [
+    "pass",
+    "pass_with_conditions",
+    "hold",
+    "fail"
+  ],
+  "mutation_authorized_after_gate_closure": true,
+  "cli_execution_authorized_after_gate_closure": true,
+  "approved_review_queue": [
+    "A62",
+    "A63",
+    "A64",
+    "A65",
+    "A68",
+    "A69",
+    "A73"
+  ],
+  "conditional_queue": [
+    "A71"
+  ],
+  "blocked_scope": [
+    "A75-A81 producer candidates",
+    "A82-A84 elasticity candidates",
+    "held duplicate/overlap records",
+    "student diagnostics",
+    "adaptive routing",
+    "student-facing AI",
+    "automatic sequencing",
+    "mastery decisions",
+    "summative decisions"
+  ],
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js docs/sprints/RX.2b-plan.md",
+    "node build-scripts/references/build-rx2b-graphical-foundation-review.js",
+    "node build-scripts/references/check-rx2b-graphical-foundation-review.js",
+    "node build-scripts/sprints/check-sprint-bundle.js RX.2b",
+    "node build-scripts/review-gates/validate-gate.js reports/review-gates/GATE-RX2b-graphical-foundation/gate-closure.json",
+    "node build-scripts/references/check-rx2b-graphical-foundation-mutations.js",
+    "node build-scripts/references/build-unit-index.js",
+    "node build-scripts/references/validate-core-schemas.js",
+    "node build-scripts/reports/generate-all.js",
+    "node build-scripts/reports/validate-report-json.js",
+    "node build-scripts/reports/generate-reference-health.js",
+    "node build-scripts/reports/check-reference-health.js",
+    "node build-scripts/rag/build-chunks.js",
+    "node build-scripts/rag/validate-chunks.js",
+    "node build-scripts/rag/validate-query-output.js",
+    "node build-scripts/rag/run-retrieval-evals.js",
+    "node build-scripts/rag/validate-retrieval-eval-results.js",
+    "node build-scripts/references/check-roadmap-version-index.js",
+    "node build-scripts/references/check-source-manifest.js",
+    "node build-scripts/references/check-document-inventory.js",
+    "node build-scripts/sprints/check-bundle-urls.js GATE-RX2b-graphical-foundation",
+    "node build-scripts/sprints/emit-url-index.js --check"
+  ]
+}

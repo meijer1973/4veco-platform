@@ -12,12 +12,13 @@ docs/roadmaps/roadmap-version-index.json
 
 | Roadmap | Version | Path | Notes |
 |---|---|---|---|
-| References Team Roadmap | `v2.15-sprint-ledger-near-top` | `references/reference-team-roadmap.md` | Current operating roadmap after moving the Sprint Ledger near the top, immediately after adoption and compatibility decisions. |
+| References Team Roadmap | `v2.16-rx2b-graphical-foundation-applied` | `references/reference-team-roadmap.md` | Current operating roadmap after closing RX.2b and adding the approved graphical-foundation units through CLI-only mutation. |
 
 ## Outdated Archive
 
 | Roadmap | Version | Path | Superseded By |
 |---|---|---|---|
+| References Team Roadmap before RX.2b graphical foundation application | `v2.15-sprint-ledger-near-top` | `docs/roadmaps/outdated/reference-team-roadmap-v2.15-sprint-ledger-near-top.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before Sprint Ledger moved near top | `v2.14-rx2b-graphical-foundation-planned` | `docs/roadmaps/outdated/reference-team-roadmap-v2.14-rx2b-graphical-foundation-planned.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before RX.2b graphical foundation insertion | `v2.13-r8.1-qc-issue-model` | `docs/roadmaps/outdated/reference-team-roadmap-v2.13-r8.1-qc-issue-model.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before R8.1 QC issue model | `v2.12-rx2-first-lane-applied` | `docs/roadmaps/outdated/reference-team-roadmap-v2.12-rx2-first-lane-applied.md` | `references/reference-team-roadmap.md` |

@@ -1,0 +1,148 @@
+{
+  "gate_id": "GATE-RX2b-graphical-foundation",
+  "sprint_id": "RX.2b",
+  "status": "prepared_for_human_review",
+  "generated_by": "build-scripts/references/build-rx2b-graphical-foundation-review.js",
+  "generated_on": "2026-04-30T08:38:17.416Z",
+  "purpose": "Review the RX.2b graphical foundation coverage report and decide whether any CLI-only unit mutation may proceed for the basic graphical representation-reading queue.",
+  "mutation_authorized": false,
+  "cli_execution_authorized": false,
+  "protected_reference_data_changed": false,
+  "artifacts": [
+    "reports/json/graphical-foundation-coverage.json",
+    "reports/markdown/graphical-foundation-coverage.md",
+    "references/data/sprints/RX.2b-candidate-specs.json",
+    "reports/review-gates/GATE-RX2b-graphical-foundation/candidate-specs.json",
+    "reports/review-gates/GATE-RX2b-graphical-foundation/candidate-specs.md",
+    "reports/review-gates/GATE-RX2b-graphical-foundation/cli-mutation-plan.json",
+    "reports/review-gates/GATE-RX2b-graphical-foundation/cli-mutation-plan.md"
+  ],
+  "approved_review_queue": [
+    "A62",
+    "A63",
+    "A64",
+    "A65",
+    "A68",
+    "A69",
+    "A73"
+  ],
+  "conditional_queue": [
+    "A71"
+  ],
+  "required_procedure_standard_for_foundation_units": [
+    "Identify the title/context.",
+    "Identify the variable and unit.",
+    "Check axis, legend, or category labels.",
+    "Check the scale.",
+    "Read the value.",
+    "Decide whether exact reading, estimation, or interpolation is required."
+  ],
+  "review_questions": [
+    {
+      "id": "RX2b-Q1",
+      "question": "Is the graphical foundation queue complete enough for bar, line, pie, percentage-change, and index-reading basics?",
+      "options": [
+        "A. Yes",
+        "B. Mostly, with additions needed",
+        "C. No, hold and expand the queue",
+        "D. Not enough evidence"
+      ]
+    },
+    {
+      "id": "RX2b-Q2",
+      "question": "Are A62, A63, and A64 acceptable as representation-reading foundation units with explicit context, labels, units, scale, exact/estimated reading, and interpolation steps?",
+      "options": [
+        "A. Yes",
+        "B. Yes, with wording fixes",
+        "C. No, procedures are too thin",
+        "D. Not enough evidence"
+      ]
+    },
+    {
+      "id": "RX2b-Q3",
+      "question": "Is A65 justified as a composed share-times-total unit after A64 and A04?",
+      "options": [
+        "A. Yes",
+        "B. Yes, but revise needs or wording",
+        "C. No, hold A65",
+        "D. Not enough evidence"
+      ]
+    },
+    {
+      "id": "RX2b-Q4",
+      "question": "Are A68, A69, and A73 sufficiently grounded for mutation review?",
+      "options": [
+        "A. Yes",
+        "B. Mostly, approve a subset",
+        "C. No, hold all composed visual calculations",
+        "D. Not enough evidence"
+      ]
+    },
+    {
+      "id": "RX2b-Q5",
+      "question": "Is A71 safe to mutate now, or should it remain held because pie-chart percentage-change composition is high risk?",
+      "options": [
+        "A. Approve A71",
+        "B. Hold A71 for later review",
+        "C. Split A71 before approval",
+        "D. Not enough evidence"
+      ]
+    },
+    {
+      "id": "RX2b-Q6",
+      "question": "Should the provisional IDs A62/A63/A64/A65/A68/A69/A73 and conditional A71 be preserved with gaps?",
+      "options": [
+        "A. Preserve IDs with gaps",
+        "B. Renumber before mutation",
+        "C. Decide only at execution time",
+        "D. Not enough evidence"
+      ]
+    },
+    {
+      "id": "RX2b-Q7",
+      "question": "Does the dependency order work without unresolved needs or cycles if approved candidates are applied in the proposed order?",
+      "options": [
+        "A. Yes",
+        "B. Yes, but add checks",
+        "C. No, revise order or needs",
+        "D. Not enough evidence"
+      ]
+    },
+    {
+      "id": "RX2b-Q8",
+      "question": "Does the graphical foundation coverage report clearly distinguish live, candidate, held/high-risk, missing/not-scoped, and generator-blocked skills?",
+      "options": [
+        "A. Yes",
+        "B. Mostly, with report wording fixes",
+        "C. No, revise report before closure",
+        "D. Not enough evidence"
+      ]
+    },
+    {
+      "id": "RX2b-Q9",
+      "question": "Are all newly approved A-units to remain generator-blocked/non-interactive until RX.6 generator implementation and validation?",
+      "options": [
+        "A. Yes",
+        "B. Yes, but strengthen warnings",
+        "C. No, implement generators first",
+        "D. Not enough evidence"
+      ]
+    },
+    {
+      "id": "RX2b-Q10",
+      "question": "What gate status should GATE-RX2b-graphical-foundation receive?",
+      "options": [
+        "A. pass",
+        "B. pass_with_conditions",
+        "C. hold",
+        "D. fail"
+      ]
+    }
+  ],
+  "valid_gate_statuses": [
+    "pass",
+    "pass_with_conditions",
+    "hold",
+    "fail"
+  ]
+}

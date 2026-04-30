@@ -1959,6 +1959,152 @@
     }
   },
   {
+    "id": "A62",
+    "name": "Waarden aflezen uit staafdiagram",
+    "category": "vaardigheden",
+    "layer": 0,
+    "kern": "Lees een waarde af uit een staafdiagram door context, labels, eenheid en schaal te controleren voordat je de staafhoogte gebruikt.",
+    "needs": [],
+    "mastery_target": "apply",
+    "prior_learning": "review_and_extend",
+    "aspects": [
+      "grafisch"
+    ],
+    "terms": [],
+    "procedure": [
+      "Lees de titel en bepaal de economische context van het staafdiagram.",
+      "Bepaal welke variabele wordt weergegeven en in welke eenheid die staat.",
+      "Controleer de categorie- of legendalabels zodat je de juiste staaf kiest.",
+      "Controleer de schaal van de as, inclusief sprongen en of de as bij nul begint.",
+      "Lees de hoogte van de gevraagde staaf af.",
+      "Bepaal of de waarde exact kan worden afgelezen of dat je moet schatten tussen schaalstrepen."
+    ],
+    "pitfalls": [
+      "Staven visueel vergelijken zonder de schaal of asbreuk te controleren.",
+      "Een staaf bij de verkeerde categorie of legenda aflezen."
+    ],
+    "generator": "GEN_A62",
+    "assumed_prior_knowledge": [
+      "basisvaardigheid grafieken lezen uit de onderbouw"
+    ],
+    "zero_needs_status": "underbouw_assumed",
+    "zero_needs_review": {
+      "reviewed_on": "2026-04-30",
+      "reviewer": "Head of Content Strategy RX.2b gate",
+      "rationale": "Approved as an underbouw-assumed graphical-reading foundation only because the unit procedure explicitly teaches context/title, axis or legend labels, units, scale, exact versus estimated reading, and interpolation where relevant.",
+      "recommended_needs": [],
+      "severity": "medium"
+    }
+  },
+  {
+    "id": "A63",
+    "name": "Waarden aflezen uit lijngrafiek",
+    "category": "vaardigheden",
+    "layer": 0,
+    "kern": "Lees een punt of periode af uit een lijngrafiek door context, aslabels, eenheden, schaal en eventuele interpolatie expliciet te controleren.",
+    "needs": [],
+    "mastery_target": "apply",
+    "prior_learning": "review_and_extend",
+    "aspects": [
+      "grafisch"
+    ],
+    "terms": [],
+    "procedure": [
+      "Lees de titel en bepaal welke ontwikkeling of context de lijngrafiek toont.",
+      "Bepaal welke variabelen op de horizontale en verticale as staan en noteer de eenheden.",
+      "Controleer de labels, jaartallen of meetpunten die bij de vraag horen.",
+      "Controleer de schaal op beide assen en let op ongelijke stappen of asbreuken.",
+      "Lees het gevraagde punt of de gevraagde punten af.",
+      "Bepaal of je exact afleest, schat tussen schaalstrepen, of interpoleert tussen twee punten."
+    ],
+    "pitfalls": [
+      "Het verkeerde jaar of meetpunt gebruiken.",
+      "Een lijnstuk behandelen als totaal over een periode in plaats van als waarden op meetpunten."
+    ],
+    "generator": "GEN_A63",
+    "assumed_prior_knowledge": [
+      "basisvaardigheid grafieken lezen uit de onderbouw"
+    ],
+    "zero_needs_status": "underbouw_assumed",
+    "zero_needs_review": {
+      "reviewed_on": "2026-04-30",
+      "reviewer": "Head of Content Strategy RX.2b gate",
+      "rationale": "Approved as an underbouw-assumed graphical-reading foundation only because the unit procedure explicitly teaches context/title, axis or legend labels, units, scale, exact versus estimated reading, and interpolation where relevant.",
+      "recommended_needs": [],
+      "severity": "medium"
+    }
+  },
+  {
+    "id": "A64",
+    "name": "Aandelen aflezen uit cirkeldiagram",
+    "category": "vaardigheden",
+    "layer": 0,
+    "kern": "Lees een aandeel uit een cirkeldiagram door context, categorie, legenda, totaal en de betekenis van procenten of delen te controleren.",
+    "needs": [],
+    "mastery_target": "apply",
+    "prior_learning": "review_and_extend",
+    "aspects": [
+      "grafisch",
+      "rekenen"
+    ],
+    "terms": [],
+    "procedure": [
+      "Lees de titel en bepaal welk totaal het cirkeldiagram verdeelt.",
+      "Bepaal welke categorie of legenda bij het gevraagde deel hoort.",
+      "Controleer welke variabele, eenheid of meetgroep het diagram gebruikt.",
+      "Controleer de schaal of verdeling van de sectoren: percentages, graden, breuken of alleen visuele delen.",
+      "Controleer of er een totaalbedrag of totale hoeveelheid bij de bron hoort.",
+      "Lees het aandeel van de gevraagde categorie af.",
+      "Bepaal of het aandeel exact is gegeven of dat je het moet schatten uit de sector of legenda."
+    ],
+    "pitfalls": [
+      "Een aandeel uit het cirkeldiagram behandelen als een absolute hoeveelheid.",
+      "Aandelen uit twee cirkeldiagrammen vergelijken zonder te controleren of de totalen gelijk zijn."
+    ],
+    "generator": "GEN_A64",
+    "assumed_prior_knowledge": [
+      "basisvaardigheid diagrammen lezen uit de onderbouw"
+    ],
+    "zero_needs_status": "underbouw_assumed",
+    "zero_needs_review": {
+      "reviewed_on": "2026-04-30",
+      "reviewer": "Head of Content Strategy RX.2b gate",
+      "rationale": "Approved as an underbouw-assumed graphical-reading foundation only because the unit procedure explicitly teaches context/title, axis or legend labels, units, scale, exact versus estimated reading, and interpolation where relevant.",
+      "recommended_needs": [],
+      "severity": "medium"
+    }
+  },
+  {
+    "id": "A65",
+    "name": "Absolute hoeveelheid berekenen uit aandeel en totaal",
+    "category": "vaardigheden",
+    "layer": 1,
+    "kern": "Bereken een absolute hoeveelheid door een aandeel uit een bron te vermenigvuldigen met het totale aantal, bedrag of volume.",
+    "needs": [
+      "A64",
+      "A04"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "aspects": [
+      "grafisch",
+      "rekenen"
+    ],
+    "terms": [],
+    "procedure": [
+      "Lees het aandeel uit de bron en zet het om naar een decimaal of breuk.",
+      "Bepaal het totale aantal, bedrag of volume waarop het aandeel slaat.",
+      "Controleer of aandeel en totaal bij dezelfde periode, groep en eenheid horen.",
+      "Bereken absolute hoeveelheid = aandeel x totaal.",
+      "Rond af op de manier die bij de context of vraag past."
+    ],
+    "pitfalls": [
+      "Het percentage als geheel getal gebruiken, bijvoorbeeld 25 x totaal in plaats van 0,25 x totaal.",
+      "Een aandeel gebruiken dat bij een ander totaal of andere periode hoort."
+    ],
+    "generator": "GEN_A65"
+  },
+  {
     "id": "A66",
     "name": "Basiswaarde en vergelijkingswaarde in bron bepalen",
     "category": "vaardigheden",
@@ -2019,6 +2165,70 @@
     "generator": "GEN_A67"
   },
   {
+    "id": "A68",
+    "name": "Procentuele verandering berekenen vanuit staafdiagram",
+    "category": "vaardigheden",
+    "layer": 2,
+    "kern": "Bereken een procentuele verandering nadat je de oude en nieuwe waarde uit een staafdiagram hebt afgelezen met de juiste basiswaarde.",
+    "needs": [
+      "A38",
+      "A62",
+      "A66"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "aspects": [
+      "grafisch",
+      "rekenen"
+    ],
+    "terms": [],
+    "procedure": [
+      "Lees de titel, variabele, eenheid, labels en schaal van het staafdiagram.",
+      "Bepaal welke staaf de oude waarde is en welke staaf de nieuwe waarde is.",
+      "Lees beide staafwaarden zo nauwkeurig mogelijk af.",
+      "Controleer of beide waarden dezelfde grootheid en eenheid hebben.",
+      "Bereken de verandering: nieuwe waarde min oude waarde.",
+      "Deel de verandering door de oude waarde en vermenigvuldig met 100 procent."
+    ],
+    "pitfalls": [
+      "De nieuwe waarde als noemer gebruiken.",
+      "Staafhoogtes visueel vergelijken zonder de as-schaal te gebruiken."
+    ],
+    "generator": "GEN_A68"
+  },
+  {
+    "id": "A69",
+    "name": "Procentuele verandering berekenen vanuit lijngrafiek",
+    "category": "vaardigheden",
+    "layer": 2,
+    "kern": "Bereken een procentuele verandering nadat je de oude en nieuwe waarde uit een lijngrafiek of tijdreeks hebt afgelezen.",
+    "needs": [
+      "A38",
+      "A63",
+      "A66"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "aspects": [
+      "grafisch",
+      "rekenen"
+    ],
+    "terms": [],
+    "procedure": [
+      "Lees de titel, assen, eenheden en schaal van de lijngrafiek.",
+      "Bepaal welk punt de oude waarde is en welk punt de nieuwe waarde is.",
+      "Lees beide waarden exact af, schat tussen schaalstrepen, of interpoleer als dat nodig is.",
+      "Controleer of de periode en grootheid overeenkomen met de vraag.",
+      "Bereken de verandering: nieuwe waarde min oude waarde.",
+      "Deel door de oude waarde en vermenigvuldig met 100 procent."
+    ],
+    "pitfalls": [
+      "Het verkeerde begin- of eindjaar nemen.",
+      "Indexpunten, absolute verandering en procentuele verandering door elkaar halen."
+    ],
+    "generator": "GEN_A69"
+  },
+  {
     "id": "A70",
     "name": "Percentagepuntverandering in aandeel herkennen",
     "category": "vaardigheden",
@@ -2076,6 +2286,37 @@
       "Indexpunten verwarren met procentuele verandering."
     ],
     "generator": "GEN_A72"
+  },
+  {
+    "id": "A73",
+    "name": "Indexverandering aflezen uit lijngrafiek",
+    "category": "vaardigheden",
+    "layer": 2,
+    "kern": "Lees indexcijfers uit een lijngrafiek af en onderscheid een verandering in indexpunten van een procentuele verandering.",
+    "needs": [
+      "A39",
+      "A63"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "aspects": [
+      "grafisch",
+      "rekenen"
+    ],
+    "terms": [],
+    "procedure": [
+      "Lees de titel, assen, eenheden en schaal van de indexgrafiek.",
+      "Bepaal het basisjaar en controleer dat dit op 100 staat of als basis wordt genoemd.",
+      "Lees het oude en nieuwe indexcijfer uit de lijngrafiek af.",
+      "Bereken de verandering in indexpunten door oud van nieuw af te trekken.",
+      "Controleer of de vraag indexpunten of een procentuele verandering vraagt.",
+      "Gebruik A74 als de vraag een procentuele verandering tussen indexcijfers vraagt."
+    ],
+    "pitfalls": [
+      "Een indexpuntverandering direct als procentuele verandering benoemen.",
+      "Een indexgrafiek behandelen alsof de verticale as absolute eurobedragen toont."
+    ],
+    "generator": "GEN_A73"
   },
   {
     "id": "A74",

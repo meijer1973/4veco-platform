@@ -1,0 +1,93 @@
+{
+  "gate_id": "GATE-RX2b-graphical-foundation",
+  "sprint_id": "RX.2b",
+  "recorded_on": "2026-04-30",
+  "reviewer_role": "Head of Content Strategy",
+  "decision": "pass_with_conditions",
+  "closure_authorized": true,
+  "plain_pass_authorized": false,
+  "cli_unit_mutation_authorized": true,
+  "authorized_candidates": [
+    "A62",
+    "A63",
+    "A64",
+    "A65",
+    "A68",
+    "A69",
+    "A73"
+  ],
+  "held_candidates": [
+    "A71"
+  ],
+  "required_execution_order": [
+    "A62",
+    "A63",
+    "A64",
+    "A65",
+    "A68",
+    "A69",
+    "A73"
+  ],
+  "answers": [
+    {
+      "id": "RX2b-Q1",
+      "answer": "A. Yes",
+      "decision": "The graphical foundation queue is complete enough for this first pass; the one missing/not-yet-scoped item remains logged but does not block this lane."
+    },
+    {
+      "id": "RX2b-Q2",
+      "answer": "A. Yes",
+      "decision": "A62, A63, and A64 are valid foundation units and must explicitly teach context/title, axis or legend, unit, scale, exact versus estimated reading, and interpolation where relevant."
+    },
+    {
+      "id": "RX2b-Q3",
+      "answer": "A. Yes",
+      "decision": "A65 is justified as a distinct share-times-total composed operation depending on A64 and A04."
+    },
+    {
+      "id": "RX2b-Q4",
+      "answer": "B. Yes, with conditions",
+      "decision": "A68, A69, and A73 are grounded enough if their procedures separate representation reading from calculation."
+    },
+    {
+      "id": "RX2b-Q5",
+      "answer": "B. Hold A71 for later review",
+      "decision": "A71 remains held/high-risk because pie-chart percentage change involves nested share, total, percentage-point, and reconstruction distinctions."
+    },
+    {
+      "id": "RX2b-Q6",
+      "answer": "A. Preserve IDs with gaps",
+      "decision": "Preserve provisional IDs with gaps; holding A71 must not trigger renumbering."
+    },
+    {
+      "id": "RX2b-Q7",
+      "answer": "A. Yes",
+      "decision": "The approved order A62 -> A63 -> A64 -> A65 -> A68 -> A69 -> A73 resolves dependencies without cycles."
+    },
+    {
+      "id": "RX2b-Q8",
+      "answer": "A. Yes",
+      "decision": "The coverage report distinguishes live, candidate, held/high-risk, missing/not-scoped, and generator-blocked states."
+    },
+    {
+      "id": "RX2b-Q9",
+      "answer": "A. Yes",
+      "decision": "All newly approved A-units remain generator-blocked and non-interactive until RX.6 or later generator implementation and validation."
+    },
+    {
+      "id": "RX2b-Q10",
+      "answer": "B. pass_with_conditions",
+      "decision": "Close GATE-RX2b-graphical-foundation as pass_with_conditions."
+    }
+  ],
+  "pattern_analysis": "The human review authorizes the lower-risk graphical foundation lane, holds A71, preserves ID gaps, and requires generator-blocked/non-interactive tracking before any student-facing skill-tree use.",
+  "targeted_followups_required": true,
+  "targeted_followups": [
+    "Re-check live A-domain numbering immediately before mutation.",
+    "Preserve provisional IDs with gaps.",
+    "Record A71 as held/high-risk, not silently dropped.",
+    "Record the one missing/not-yet-scoped coverage item as backlog with proof-to-close.",
+    "Track all seven new generators as missing/non-interactive until implemented and validated.",
+    "Keep product-boundary blocks active: no student-facing skill tree exposure, diagnostics, adaptive routing, AI, sequencing, mastery, or summative use."
+  ]
+}

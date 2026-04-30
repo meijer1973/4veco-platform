@@ -1,0 +1,569 @@
+{
+  "schema_version": 1,
+  "sprint_id": "RX.2b",
+  "artifact_id": "RX.2b-graphical-foundation-candidate-specs",
+  "status": "prepared_for_mutation_review",
+  "generated_by": "build-scripts/references/build-rx2b-graphical-foundation-review.js",
+  "generated_on": "2026-04-30T08:38:17.416Z",
+  "source_files": [
+    "references/data/sprints/RX.1-representation-operation-inventory.json",
+    "reports/review-gates/GATE-RX1-representation-unit-scope/gate-closure.json",
+    "reports/review-gates/GATE-RX2-first-lane-mutation-review/gate-closure.json",
+    "references/machine/micro-teaching-units.json",
+    "engines/skilltree/generators.js"
+  ],
+  "policy": {
+    "mutation_authorized": false,
+    "cli_execution_authorized": false,
+    "protected_reference_data_changed": false,
+    "candidate_ids_are_provisional_until_execution": true,
+    "live_a_domain_max_id_at_review_generation": "A74",
+    "approved_review_queue": [
+      "A62",
+      "A63",
+      "A64",
+      "A65",
+      "A68",
+      "A69",
+      "A73"
+    ],
+    "conditional_queue": [
+      "A71"
+    ],
+    "required_mutation_order_if_approved": [
+      "A62",
+      "A63",
+      "A64",
+      "A65",
+      "A68",
+      "A69",
+      "A73",
+      "A71"
+    ],
+    "student_facing_skilltree_use_allowed": false
+  },
+  "candidates": [
+    {
+      "candidate_id": "A62",
+      "sequence_index": 1,
+      "lane": "approved_review_queue",
+      "live_numbering_status": "available_at_review_generation",
+      "rx1_inventory_operation_id": "REP_BAR_CHART_VALUE_READING",
+      "rx1_inventory_name": "Waarden aflezen uit staafdiagram",
+      "rx1_inventory_needs": [],
+      "rx2b_draft_spec": {
+        "id": "A62",
+        "name": "Waarden aflezen uit staafdiagram",
+        "kern": "Lees een waarde af uit een staafdiagram door context, labels, eenheid en schaal te controleren voordat je de staafhoogte gebruikt.",
+        "needs": [],
+        "mastery_target": "apply",
+        "prior_learning": "review_and_extend",
+        "aspects": [
+          "grafisch"
+        ],
+        "terms": [],
+        "assumed_prior_knowledge": [
+          "basisvaardigheid grafieken lezen uit de onderbouw"
+        ],
+        "zero_needs_status": "underbouw_assumed",
+        "zero_needs_review": {
+          "reviewed_on": "2026-04-30",
+          "reviewer": "RX.2b graphical foundation review pending",
+          "rationale": "Candidate root extends lower-secondary bar-chart reading into economic source-value reading with explicit context, unit, scale, and estimate checks.",
+          "recommended_needs": [],
+          "severity": "medium"
+        },
+        "procedure": [
+          "Lees de titel en bepaal de economische context van het staafdiagram.",
+          "Bepaal welke variabele wordt weergegeven en in welke eenheid die staat.",
+          "Controleer de categorie- of legendalabels zodat je de juiste staaf kiest.",
+          "Controleer de schaal van de as, inclusief sprongen en of de as bij nul begint.",
+          "Lees de hoogte van de gevraagde staaf af.",
+          "Bepaal of de waarde exact kan worden afgelezen of dat je moet schatten tussen schaalstrepen."
+        ],
+        "pitfalls": [
+          "Staven visueel vergelijken zonder de schaal of asbreuk te controleren.",
+          "Een staaf bij de verkeerde categorie of legenda aflezen."
+        ],
+        "generator": "GEN_A62"
+      },
+      "evidence_refs": [
+        {
+          "source_type": "didactic_prior_rationale",
+          "path": "references/authored/didactiek-principes.md",
+          "entity_id": "didactic_prior:representation-transfer",
+          "role": "didactic-prior",
+          "note": "Bar-chart value reading is a common representation-transfer task that cannot be assumed from table reading; no source mutation is proposed in RX.1."
+        }
+      ],
+      "evidence_status": "didactic_prior_rationale",
+      "risk": "medium",
+      "generator_status": "missing_generator_implementation",
+      "generator_followup_required": true,
+      "spec_validation_errors": [],
+      "unresolved_needs_in_sequence": [],
+      "mutation_authorized": false,
+      "cli_execution_authorized": false
+    },
+    {
+      "candidate_id": "A63",
+      "sequence_index": 2,
+      "lane": "approved_review_queue",
+      "live_numbering_status": "available_at_review_generation",
+      "rx1_inventory_operation_id": "REP_LINE_GRAPH_VALUE_READING",
+      "rx1_inventory_name": "Waarden aflezen uit lijngrafiek",
+      "rx1_inventory_needs": [],
+      "rx2b_draft_spec": {
+        "id": "A63",
+        "name": "Waarden aflezen uit lijngrafiek",
+        "kern": "Lees een punt of periode af uit een lijngrafiek door context, aslabels, eenheden, schaal en eventuele interpolatie expliciet te controleren.",
+        "needs": [],
+        "mastery_target": "apply",
+        "prior_learning": "review_and_extend",
+        "aspects": [
+          "grafisch"
+        ],
+        "terms": [],
+        "assumed_prior_knowledge": [
+          "basisvaardigheid grafieken lezen uit de onderbouw"
+        ],
+        "zero_needs_status": "underbouw_assumed",
+        "zero_needs_review": {
+          "reviewed_on": "2026-04-30",
+          "reviewer": "RX.2b graphical foundation review pending",
+          "rationale": "Candidate root extends lower-secondary line-graph reading into economic time-series source-value selection with explicit point, period, scale, and interpolation checks.",
+          "recommended_needs": [],
+          "severity": "medium"
+        },
+        "procedure": [
+          "Lees de titel en bepaal welke ontwikkeling of context de lijngrafiek toont.",
+          "Bepaal welke variabelen op de horizontale en verticale as staan en noteer de eenheden.",
+          "Controleer de labels, jaartallen of meetpunten die bij de vraag horen.",
+          "Controleer de schaal op beide assen en let op ongelijke stappen of asbreuken.",
+          "Lees het gevraagde punt of de gevraagde punten af.",
+          "Bepaal of je exact afleest, schat tussen schaalstrepen, of interpoleert tussen twee punten."
+        ],
+        "pitfalls": [
+          "Het verkeerde jaar of meetpunt gebruiken.",
+          "Een lijnstuk behandelen als totaal over een periode in plaats van als waarden op meetpunten."
+        ],
+        "generator": "GEN_A63"
+      },
+      "evidence_refs": [
+        {
+          "source_type": "target_exercise",
+          "path": "references/authored/course-target-exercises.json",
+          "entity_id": "target_exercise:4.4.1",
+          "role": "owned target exercise with CPI over time",
+          "note": "Inflation/CPI target exercise requires comparing values across years and avoiding index-point traps."
+        },
+        {
+          "source_type": "didactic_prior_rationale",
+          "path": "references/authored/didactiek-principes.md",
+          "entity_id": "didactic_prior:representation-transfer",
+          "role": "didactic-prior",
+          "note": "Line graphs introduce period/point selection and interpolation errors distinct from table reading."
+        }
+      ],
+      "evidence_status": "target_exercise_evidence",
+      "risk": "medium",
+      "generator_status": "missing_generator_implementation",
+      "generator_followup_required": true,
+      "spec_validation_errors": [],
+      "unresolved_needs_in_sequence": [],
+      "mutation_authorized": false,
+      "cli_execution_authorized": false
+    },
+    {
+      "candidate_id": "A64",
+      "sequence_index": 3,
+      "lane": "approved_review_queue",
+      "live_numbering_status": "available_at_review_generation",
+      "rx1_inventory_operation_id": "REP_PIE_SHARE_READING",
+      "rx1_inventory_name": "Aandelen aflezen uit cirkeldiagram",
+      "rx1_inventory_needs": [],
+      "rx2b_draft_spec": {
+        "id": "A64",
+        "name": "Aandelen aflezen uit cirkeldiagram",
+        "kern": "Lees een aandeel uit een cirkeldiagram door context, categorie, legenda, totaal en de betekenis van procenten of delen te controleren.",
+        "needs": [],
+        "mastery_target": "apply",
+        "prior_learning": "review_and_extend",
+        "aspects": [
+          "grafisch",
+          "rekenen"
+        ],
+        "terms": [],
+        "assumed_prior_knowledge": [
+          "basisvaardigheid diagrammen lezen uit de onderbouw"
+        ],
+        "zero_needs_status": "underbouw_assumed",
+        "zero_needs_review": {
+          "reviewed_on": "2026-04-30",
+          "reviewer": "RX.2b graphical foundation review pending",
+          "rationale": "Candidate root extends lower-secondary pie-chart reading into economic share reading; it must keep shares distinct from absolute amounts.",
+          "recommended_needs": [],
+          "severity": "medium"
+        },
+        "procedure": [
+          "Lees de titel en bepaal welk totaal het cirkeldiagram verdeelt.",
+          "Bepaal welke categorie of legenda bij het gevraagde deel hoort.",
+          "Controleer welke variabele, eenheid of meetgroep het diagram gebruikt.",
+          "Controleer de schaal of verdeling van de sectoren: percentages, graden, breuken of alleen visuele delen.",
+          "Controleer of er een totaalbedrag of totale hoeveelheid bij de bron hoort.",
+          "Lees het aandeel van de gevraagde categorie af.",
+          "Bepaal of het aandeel exact is gegeven of dat je het moet schatten uit de sector of legenda."
+        ],
+        "pitfalls": [
+          "Een aandeel uit het cirkeldiagram behandelen als een absolute hoeveelheid.",
+          "Aandelen uit twee cirkeldiagrammen vergelijken zonder te controleren of de totalen gelijk zijn."
+        ],
+        "generator": "GEN_A64"
+      },
+      "evidence_refs": [
+        {
+          "source_type": "didactic_prior_rationale",
+          "path": "references/authored/didactiek-principes.md",
+          "entity_id": "didactic_prior:representation-transfer",
+          "role": "didactic-prior",
+          "note": "Pie charts encode shares, not raw absolute quantities; this is a representation distinction worth reviewing before mutation."
+        }
+      ],
+      "evidence_status": "didactic_prior_rationale",
+      "risk": "medium",
+      "generator_status": "missing_generator_implementation",
+      "generator_followup_required": true,
+      "spec_validation_errors": [],
+      "unresolved_needs_in_sequence": [],
+      "mutation_authorized": false,
+      "cli_execution_authorized": false
+    },
+    {
+      "candidate_id": "A65",
+      "sequence_index": 4,
+      "lane": "approved_review_queue",
+      "live_numbering_status": "available_at_review_generation",
+      "rx1_inventory_operation_id": "REP_SHARE_TOTAL_ABSOLUTE_QUANTITY",
+      "rx1_inventory_name": "Absolute hoeveelheid berekenen uit aandeel en totaal",
+      "rx1_inventory_needs": [
+        "A64",
+        "A04"
+      ],
+      "rx2b_draft_spec": {
+        "id": "A65",
+        "name": "Absolute hoeveelheid berekenen uit aandeel en totaal",
+        "kern": "Bereken een absolute hoeveelheid door een aandeel uit een bron te vermenigvuldigen met het totale aantal, bedrag of volume.",
+        "needs": [
+          "A64",
+          "A04"
+        ],
+        "mastery_target": "apply",
+        "prior_learning": "new_this_year",
+        "aspects": [
+          "grafisch",
+          "rekenen"
+        ],
+        "terms": [],
+        "procedure": [
+          "Lees het aandeel uit de bron en zet het om naar een decimaal of breuk.",
+          "Bepaal het totale aantal, bedrag of volume waarop het aandeel slaat.",
+          "Controleer of aandeel en totaal bij dezelfde periode, groep en eenheid horen.",
+          "Bereken absolute hoeveelheid = aandeel x totaal.",
+          "Rond af op de manier die bij de context of vraag past."
+        ],
+        "pitfalls": [
+          "Het percentage als geheel getal gebruiken, bijvoorbeeld 25 x totaal in plaats van 0,25 x totaal.",
+          "Een aandeel gebruiken dat bij een ander totaal of andere periode hoort."
+        ],
+        "generator": "GEN_A65"
+      },
+      "evidence_refs": [
+        {
+          "source_type": "exam_question",
+          "path": "references/external/exam-questions.json",
+          "entity_id": "external_exam_question:ha-1022-a-23-1-o:opgave-1:question-2",
+          "role": "exam calculation using source values",
+          "note": "Question asks to show more than 40% from bron 1; source values are not extracted yet, so this remains a reviewed candidate pattern."
+        },
+        {
+          "source_type": "didactic_prior_rationale",
+          "path": "references/authored/didactiek-principes.md",
+          "entity_id": "didactic_prior:representation-transfer",
+          "role": "didactic-prior",
+          "note": "Share x total is a separate composed operation from reading the share alone."
+        }
+      ],
+      "evidence_status": "exam_question_evidence",
+      "risk": "medium",
+      "generator_status": "missing_generator_implementation",
+      "generator_followup_required": true,
+      "spec_validation_errors": [],
+      "unresolved_needs_in_sequence": [],
+      "mutation_authorized": false,
+      "cli_execution_authorized": false
+    },
+    {
+      "candidate_id": "A68",
+      "sequence_index": 5,
+      "lane": "approved_review_queue",
+      "live_numbering_status": "available_at_review_generation",
+      "rx1_inventory_operation_id": "REP_PCT_CHANGE_BAR_CHART",
+      "rx1_inventory_name": "Procentuele verandering berekenen vanuit staafdiagram",
+      "rx1_inventory_needs": [
+        "A38",
+        "A62",
+        "A66"
+      ],
+      "rx2b_draft_spec": {
+        "id": "A68",
+        "name": "Procentuele verandering berekenen vanuit staafdiagram",
+        "kern": "Bereken een procentuele verandering nadat je de oude en nieuwe waarde uit een staafdiagram hebt afgelezen met de juiste basiswaarde.",
+        "needs": [
+          "A38",
+          "A62",
+          "A66"
+        ],
+        "mastery_target": "apply",
+        "prior_learning": "new_this_year",
+        "aspects": [
+          "grafisch",
+          "rekenen"
+        ],
+        "terms": [],
+        "procedure": [
+          "Lees de titel, variabele, eenheid, labels en schaal van het staafdiagram.",
+          "Bepaal welke staaf de oude waarde is en welke staaf de nieuwe waarde is.",
+          "Lees beide staafwaarden zo nauwkeurig mogelijk af.",
+          "Controleer of beide waarden dezelfde grootheid en eenheid hebben.",
+          "Bereken de verandering: nieuwe waarde min oude waarde.",
+          "Deel de verandering door de oude waarde en vermenigvuldig met 100 procent."
+        ],
+        "pitfalls": [
+          "De nieuwe waarde als noemer gebruiken.",
+          "Staafhoogtes visueel vergelijken zonder de as-schaal te gebruiken."
+        ],
+        "generator": "GEN_A68"
+      },
+      "evidence_refs": [
+        {
+          "source_type": "didactic_prior_rationale",
+          "path": "references/authored/didactiek-principes.md",
+          "entity_id": "didactic_prior:representation-transfer",
+          "role": "didactic-prior",
+          "note": "Representation transfer from base percentage-change formula to bar charts should be reviewed before mutation; no syllabus-only basis is used."
+        }
+      ],
+      "evidence_status": "didactic_prior_rationale",
+      "risk": "medium",
+      "generator_status": "missing_generator_implementation",
+      "generator_followup_required": true,
+      "spec_validation_errors": [],
+      "unresolved_needs_in_sequence": [],
+      "mutation_authorized": false,
+      "cli_execution_authorized": false
+    },
+    {
+      "candidate_id": "A69",
+      "sequence_index": 6,
+      "lane": "approved_review_queue",
+      "live_numbering_status": "available_at_review_generation",
+      "rx1_inventory_operation_id": "REP_PCT_CHANGE_LINE_GRAPH",
+      "rx1_inventory_name": "Procentuele verandering berekenen vanuit lijngrafiek",
+      "rx1_inventory_needs": [
+        "A38",
+        "A63",
+        "A66"
+      ],
+      "rx2b_draft_spec": {
+        "id": "A69",
+        "name": "Procentuele verandering berekenen vanuit lijngrafiek",
+        "kern": "Bereken een procentuele verandering nadat je de oude en nieuwe waarde uit een lijngrafiek of tijdreeks hebt afgelezen.",
+        "needs": [
+          "A38",
+          "A63",
+          "A66"
+        ],
+        "mastery_target": "apply",
+        "prior_learning": "new_this_year",
+        "aspects": [
+          "grafisch",
+          "rekenen"
+        ],
+        "terms": [],
+        "procedure": [
+          "Lees de titel, assen, eenheden en schaal van de lijngrafiek.",
+          "Bepaal welk punt de oude waarde is en welk punt de nieuwe waarde is.",
+          "Lees beide waarden exact af, schat tussen schaalstrepen, of interpoleer als dat nodig is.",
+          "Controleer of de periode en grootheid overeenkomen met de vraag.",
+          "Bereken de verandering: nieuwe waarde min oude waarde.",
+          "Deel door de oude waarde en vermenigvuldig met 100 procent."
+        ],
+        "pitfalls": [
+          "Het verkeerde begin- of eindjaar nemen.",
+          "Indexpunten, absolute verandering en procentuele verandering door elkaar halen."
+        ],
+        "generator": "GEN_A69"
+      },
+      "evidence_refs": [
+        {
+          "source_type": "target_exercise",
+          "path": "references/authored/course-target-exercises.json",
+          "entity_id": "target_exercise:4.4.1",
+          "role": "inflation and index over time",
+          "note": "Book 4 returns to percentage/index interpretation across years."
+        },
+        {
+          "source_type": "didactic_prior_rationale",
+          "path": "references/authored/didactiek-principes.md",
+          "entity_id": "didactic_prior:representation-transfer",
+          "role": "didactic-prior",
+          "note": "Time-series values create old/new selection errors distinct from base percentage calculation."
+        }
+      ],
+      "evidence_status": "target_exercise_evidence",
+      "risk": "medium",
+      "generator_status": "missing_generator_implementation",
+      "generator_followup_required": true,
+      "spec_validation_errors": [],
+      "unresolved_needs_in_sequence": [],
+      "mutation_authorized": false,
+      "cli_execution_authorized": false
+    },
+    {
+      "candidate_id": "A73",
+      "sequence_index": 7,
+      "lane": "approved_review_queue",
+      "live_numbering_status": "available_at_review_generation",
+      "rx1_inventory_operation_id": "REP_INDEX_CHANGE_LINE_GRAPH",
+      "rx1_inventory_name": "Indexverandering aflezen uit lijngrafiek",
+      "rx1_inventory_needs": [
+        "A39",
+        "A63"
+      ],
+      "rx2b_draft_spec": {
+        "id": "A73",
+        "name": "Indexverandering aflezen uit lijngrafiek",
+        "kern": "Lees indexcijfers uit een lijngrafiek af en onderscheid een verandering in indexpunten van een procentuele verandering.",
+        "needs": [
+          "A39",
+          "A63"
+        ],
+        "mastery_target": "apply",
+        "prior_learning": "new_this_year",
+        "aspects": [
+          "grafisch",
+          "rekenen"
+        ],
+        "terms": [],
+        "procedure": [
+          "Lees de titel, assen, eenheden en schaal van de indexgrafiek.",
+          "Bepaal het basisjaar en controleer dat dit op 100 staat of als basis wordt genoemd.",
+          "Lees het oude en nieuwe indexcijfer uit de lijngrafiek af.",
+          "Bereken de verandering in indexpunten door oud van nieuw af te trekken.",
+          "Controleer of de vraag indexpunten of een procentuele verandering vraagt.",
+          "Gebruik A74 als de vraag een procentuele verandering tussen indexcijfers vraagt."
+        ],
+        "pitfalls": [
+          "Een indexpuntverandering direct als procentuele verandering benoemen.",
+          "Een indexgrafiek behandelen alsof de verticale as absolute eurobedragen toont."
+        ],
+        "generator": "GEN_A73"
+      },
+      "evidence_refs": [
+        {
+          "source_type": "didactic_prior_rationale",
+          "path": "references/authored/didactiek-principes.md",
+          "entity_id": "didactic_prior:representation-transfer",
+          "role": "didactic-prior",
+          "note": "Index series reading is distinct from raw-value line-graph reading because students confuse index-point and percentage changes."
+        },
+        {
+          "source_type": "target_exercise",
+          "path": "references/authored/course-target-exercises.json",
+          "entity_id": "target_exercise:4.4.1",
+          "role": "CPI/index integration",
+          "note": "Book 4 repeats the index-point distinction as a critical exam skill."
+        }
+      ],
+      "evidence_status": "target_exercise_evidence",
+      "risk": "medium",
+      "generator_status": "missing_generator_implementation",
+      "generator_followup_required": true,
+      "spec_validation_errors": [],
+      "unresolved_needs_in_sequence": [],
+      "mutation_authorized": false,
+      "cli_execution_authorized": false
+    },
+    {
+      "candidate_id": "A71",
+      "sequence_index": 8,
+      "lane": "conditional_high_risk",
+      "live_numbering_status": "available_at_review_generation",
+      "rx1_inventory_operation_id": "REP_PCT_CHANGE_PIE_CHART",
+      "rx1_inventory_name": "Procentuele verandering berekenen vanuit cirkeldiagram",
+      "rx1_inventory_needs": [
+        "A38",
+        "A64",
+        "A65",
+        "A70"
+      ],
+      "rx2b_draft_spec": {
+        "id": "A71",
+        "name": "Procentuele verandering berekenen vanuit cirkeldiagram",
+        "kern": "Bereken een procentuele verandering vanuit cirkeldiagrammen alleen nadat je aandelen, totalen en procentpuntverschillen correct hebt onderscheiden.",
+        "needs": [
+          "A38",
+          "A64",
+          "A65",
+          "A70"
+        ],
+        "mastery_target": "apply",
+        "prior_learning": "new_this_year",
+        "aspects": [
+          "grafisch",
+          "rekenen",
+          "verbaal"
+        ],
+        "terms": [],
+        "procedure": [
+          "Lees per cirkeldiagram de titel, categorie, legenda en het totaal waarop de aandelen slaan.",
+          "Lees het oude en nieuwe aandeel van de relevante categorie af.",
+          "Controleer of de totalen in beide perioden gelijk zijn.",
+          "Als de totalen verschillen, bereken eerst de absolute oude en nieuwe hoeveelheid.",
+          "Bepaal of de vraag een procentpuntverandering of een procentuele verandering vraagt.",
+          "Bereken de procentuele verandering alleen met de oude absolute waarde of oude percentagewaarde als basis."
+        ],
+        "pitfalls": [
+          "Een verschil van aandelen in procentpunten verwarren met een procentuele verandering.",
+          "Aandelen uit twee diagrammen vergelijken terwijl de onderliggende totalen verschillen."
+        ],
+        "generator": "GEN_A71",
+        "review_flags": [
+          {
+            "flag_id": "A71-high-risk-conditional",
+            "severity": "high",
+            "issue": "Pie-chart percentage change can require share reading, share-times-total reconstruction, percentage-point distinction, and total comparison.",
+            "proposed_resolution": "Allow the RX.2b gate to hold A71 while approving the lower-risk graphical foundation queue."
+          }
+        ]
+      },
+      "evidence_refs": [
+        {
+          "source_type": "didactic_prior_rationale",
+          "path": "references/authored/didactiek-principes.md",
+          "entity_id": "didactic_prior:representation-transfer",
+          "role": "didactic-prior",
+          "note": "Pie-chart percentage change requires reconstructing absolute values before applying percentage-change logic; hold for human review if evidence remains thin."
+        }
+      ],
+      "evidence_status": "didactic_prior_rationale",
+      "risk": "high",
+      "generator_status": "missing_generator_implementation",
+      "generator_followup_required": true,
+      "spec_validation_errors": [],
+      "unresolved_needs_in_sequence": [],
+      "mutation_authorized": false,
+      "cli_execution_authorized": false
+    }
+  ]
+}

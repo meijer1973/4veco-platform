@@ -1,0 +1,114 @@
+{
+  "gate_id": "GATE-RX2b-graphical-foundation",
+  "sprint_id": "RX.2b",
+  "status": "pass_with_conditions",
+  "closed_on": "2026-04-30",
+  "closure_confirmed_by_human": true,
+  "human_interview": "reports/review-gates/GATE-RX2b-graphical-foundation/human-interview.md",
+  "review_packet": "reports/review-gates/GATE-RX2b-graphical-foundation/review-packet.md",
+  "audit": "reports/review-gates/GATE-RX2b-graphical-foundation/candidate-specs.json",
+  "summary": "RX.2b graphical foundation review is closed as pass_with_conditions. CLI-only mutation is authorized for A62, A63, A64, A65, A68, A69, and A73 after live numbering and dependency checks. A71 remains held/high-risk for later focused review. All newly added units remain generator-blocked/non-interactive until generator implementation and validation.",
+  "protected_reference_data_changed": false,
+  "cli_unit_mutation_authorized": true,
+  "authorized_execution_mode": "CLI-only via build-scripts/references/unit-add.js",
+  "authorized_candidates": [
+    "A62",
+    "A63",
+    "A64",
+    "A65",
+    "A68",
+    "A69",
+    "A73"
+  ],
+  "held_candidates": [
+    "A71"
+  ],
+  "required_execution_order": [
+    "A62",
+    "A63",
+    "A64",
+    "A65",
+    "A68",
+    "A69",
+    "A73"
+  ],
+  "blocked_scope": [
+    "A71",
+    "A75-A81 producer candidates",
+    "A82-A84 elasticity candidates",
+    "held duplicate/overlap records",
+    "student diagnostics",
+    "adaptive routing",
+    "student-facing AI",
+    "automatic sequencing",
+    "mastery decisions",
+    "summative decisions"
+  ],
+  "accepted_outcomes": [
+    "The graphical foundation queue is complete enough for the first pass.",
+    "A62, A63, and A64 are accepted as foundation units only with explicit context/title, labels, units, scale, exact/estimated reading, and interpolation steps.",
+    "A65 is accepted as a share-times-total composed operation.",
+    "A68, A69, and A73 are accepted with procedures that separate representation reading from calculation.",
+    "The provisional IDs are preserved with gaps.",
+    "CLI-only mutation may proceed for A62, A63, A64, A65, A68, A69, and A73 after live checks.",
+    "Generator implementation may be missing if non-interactive/student-facing blocks are tracked."
+  ],
+  "blocked_outcomes": [
+    "Do not mutate A71 in this gate.",
+    "Do not mutate producer candidates A75-A81 in this gate.",
+    "Do not mutate elasticity candidates A82-A84 in this gate.",
+    "Do not mutate held duplicate/overlap records.",
+    "Do not hand-edit references/machine/.",
+    "Do not hand-edit references/external/.",
+    "Do not mutate authored source files.",
+    "Do not patch RAG chunks by hand.",
+    "Do not expose the new units in student-facing skill-tree use before generator implementation.",
+    "Do not authorize student diagnostics, adaptive routing, student-facing AI, automatic sequencing, mastery decisions, or summative decisions."
+  ],
+  "explicit_decisions": [
+    {
+      "topic": "gate status",
+      "decision": "Close GATE-RX2b-graphical-foundation as pass_with_conditions, not clean pass."
+    },
+    {
+      "topic": "mutation authorization",
+      "decision": "Authorize immediate CLI-only unit mutation for A62, A63, A64, A65, A68, A69, and A73 after live checks."
+    },
+    {
+      "topic": "A71",
+      "decision": "Hold A71 as high risk for later focused review; do not silently drop it."
+    },
+    {
+      "topic": "ID handling",
+      "decision": "Preserve provisional IDs with gaps, including the held A71 gap."
+    },
+    {
+      "topic": "foundation procedure standard",
+      "decision": "A62, A63, and A64 must encode context/title, axis or legend labels, units, scale, exact versus estimated reading, and interpolation where relevant."
+    },
+    {
+      "topic": "generator status",
+      "decision": "Track all seven newly added units as generator-blocked/non-interactive until GEN_A62, GEN_A63, GEN_A64, GEN_A65, GEN_A68, GEN_A69, and GEN_A73 are implemented and validated."
+    }
+  ],
+  "conditions_to_reopen_or_pass": [
+    "Run live numbering and dependency checks immediately before mutation.",
+    "Use only unit-add.js in the approved order.",
+    "Do not mutate A71.",
+    "Record A71 as held/high-risk.",
+    "Record the missing/not-yet-scoped coverage item as backlog with proof-to-close.",
+    "Track all new units as generator-blocked and non-interactive.",
+    "Regenerated reports must distinguish live, candidate, held, missing, and generator-blocked statuses.",
+    "Do not hand-edit references/machine, references/external, authored source files, or RAG chunks.",
+    "No student-facing skill-tree use, diagnostics, adaptive routing, AI, sequencing, mastery, or summative use is authorized."
+  ],
+  "allowed_next_step": "RX.2b CLI-only graphical foundation mutation execution",
+  "allowed_next_step_scope": [
+    "live A-domain numbering check",
+    "dependency resolution check",
+    "unit-add.js execution for A62, A63, A64, A65, A68, A69, and A73 only",
+    "A71 held/high-risk tracking",
+    "generator-blocked/non-interactive tracking",
+    "validation and report regeneration"
+  ]
+}

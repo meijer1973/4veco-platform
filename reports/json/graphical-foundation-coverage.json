@@ -1,0 +1,488 @@
+{
+  "schema_version": 1,
+  "report_id": "graphical-foundation-coverage",
+  "sprint_id": "RX.2b",
+  "status": "updated_after_cli_mutation",
+  "generated_by": "build-scripts/references/build-rx2b-graphical-foundation-review.js",
+  "generated_on": "2026-04-30T08:58:25.930Z",
+  "source_files": [
+    "references/data/sprints/RX.1-representation-operation-inventory.json",
+    "reports/review-gates/GATE-RX1-representation-unit-scope/gate-closure.json",
+    "reports/review-gates/GATE-RX2-first-lane-mutation-review/gate-closure.json",
+    "references/data/sprints/RX.2-generator-blocked-units.json",
+    "references/machine/micro-teaching-units.json",
+    "engines/skilltree/generators.js"
+  ],
+  "policy": {
+    "mutation_authorized": false,
+    "cli_execution_authorized": false,
+    "protected_reference_data_changed": true,
+    "live_a_domain_max_id_at_generation": "A74",
+    "candidate_ids_are_provisional_until_execution": true,
+    "student_facing_skilltree_use_allowed": false,
+    "protected_reference_data_change_mode": "CLI-only via build-scripts/references/unit-add.js"
+  },
+  "summary": {
+    "live_unit_count": 15,
+    "candidate_unit_count": 0,
+    "held_high_risk_count": 1,
+    "missing_not_yet_scoped_count": 1,
+    "deferred_not_rx2b_scope_count": 2,
+    "generator_blocked_live_count": 15
+  },
+  "coverage_rows": [
+    {
+      "coverage_id": "table_value_selection",
+      "label": "Tabelwaarde selecteren voor berekening",
+      "unit_id": "A61",
+      "status": "live_unit",
+      "representation": "table",
+      "base_operation": "source_value_selection",
+      "evidence_status": "target_exercise_evidence",
+      "risk": "low",
+      "aspects": [
+        "rekenen",
+        "verbaal"
+      ],
+      "generator_status": "missing_generator_implementation",
+      "generator_blocked": true,
+      "rx2b_role": "baseline_live_dependency",
+      "note": null
+    },
+    {
+      "coverage_id": "pq_graph_drawing",
+      "label": "P-Q grafiek tekenen uit tabel",
+      "unit_id": "A45",
+      "status": "live_unit",
+      "representation": null,
+      "base_operation": null,
+      "evidence_status": null,
+      "risk": null,
+      "aspects": [
+        "grafisch"
+      ],
+      "generator_status": "missing_generator_implementation",
+      "generator_blocked": true,
+      "rx2b_role": "baseline_live_dependency",
+      "note": null
+    },
+    {
+      "coverage_id": "pq_graph_value_reading",
+      "label": "Waarden aflezen en interpoleren in P-Q grafiek",
+      "unit_id": "A46",
+      "status": "live_unit",
+      "representation": null,
+      "base_operation": null,
+      "evidence_status": null,
+      "risk": null,
+      "aspects": [
+        "grafisch",
+        "rekenen"
+      ],
+      "generator_status": "missing_generator_implementation",
+      "generator_blocked": true,
+      "rx2b_role": "baseline_live_dependency",
+      "note": null
+    },
+    {
+      "coverage_id": "bar_chart_value_reading",
+      "label": "Waarden aflezen uit staafdiagram",
+      "unit_id": "A62",
+      "status": "live_unit",
+      "representation": "bar_chart",
+      "base_operation": "source_value_reading",
+      "evidence_status": "didactic_prior_rationale",
+      "risk": "medium",
+      "aspects": [
+        "grafisch"
+      ],
+      "generator_status": "missing_generator_implementation",
+      "generator_blocked": true,
+      "rx2b_role": "approved_mutated_unit_generator_blocked",
+      "note": null
+    },
+    {
+      "coverage_id": "line_graph_value_reading",
+      "label": "Waarden aflezen uit lijngrafiek",
+      "unit_id": "A63",
+      "status": "live_unit",
+      "representation": "line_chart",
+      "base_operation": "source_value_reading",
+      "evidence_status": "target_exercise_evidence",
+      "risk": "medium",
+      "aspects": [
+        "grafisch"
+      ],
+      "generator_status": "missing_generator_implementation",
+      "generator_blocked": true,
+      "rx2b_role": "approved_mutated_unit_generator_blocked",
+      "note": null
+    },
+    {
+      "coverage_id": "pie_chart_share_reading",
+      "label": "Aandelen aflezen uit cirkeldiagram",
+      "unit_id": "A64",
+      "status": "live_unit",
+      "representation": "pie_chart",
+      "base_operation": "share_reading",
+      "evidence_status": "didactic_prior_rationale",
+      "risk": "medium",
+      "aspects": [
+        "grafisch",
+        "rekenen"
+      ],
+      "generator_status": "missing_generator_implementation",
+      "generator_blocked": true,
+      "rx2b_role": "approved_mutated_unit_generator_blocked",
+      "note": null
+    },
+    {
+      "coverage_id": "share_times_total",
+      "label": "Absolute hoeveelheid berekenen uit aandeel en totaal",
+      "unit_id": "A65",
+      "status": "live_unit",
+      "representation": "pie_chart_plus_total",
+      "base_operation": "percentage_share_application",
+      "evidence_status": "exam_question_evidence",
+      "risk": "medium",
+      "aspects": [
+        "grafisch",
+        "rekenen"
+      ],
+      "generator_status": "missing_generator_implementation",
+      "generator_blocked": true,
+      "rx2b_role": "approved_mutated_unit_generator_blocked",
+      "note": null
+    },
+    {
+      "coverage_id": "base_comparison_value_selection",
+      "label": "Basiswaarde en vergelijkingswaarde in bron bepalen",
+      "unit_id": "A66",
+      "status": "live_unit",
+      "representation": "source_text_or_table",
+      "base_operation": "base_value_selection",
+      "evidence_status": "target_exercise_evidence",
+      "risk": "low",
+      "aspects": [
+        "rekenen",
+        "verbaal"
+      ],
+      "generator_status": "missing_generator_implementation",
+      "generator_blocked": true,
+      "rx2b_role": "baseline_live_dependency",
+      "note": null
+    },
+    {
+      "coverage_id": "percentage_change_table",
+      "label": "Procentuele verandering berekenen vanuit tabel",
+      "unit_id": "A67",
+      "status": "live_unit",
+      "representation": "table",
+      "base_operation": "percentage_change",
+      "evidence_status": "target_exercise_evidence",
+      "risk": "low",
+      "aspects": [
+        "rekenen",
+        "verbaal"
+      ],
+      "generator_status": "missing_generator_implementation",
+      "generator_blocked": true,
+      "rx2b_role": "baseline_live_dependency",
+      "note": null
+    },
+    {
+      "coverage_id": "percentage_point_distinction",
+      "label": "Percentagepuntverandering in aandeel herkennen",
+      "unit_id": "A70",
+      "status": "live_unit",
+      "representation": "share_or_index_source",
+      "base_operation": "percentage_point_difference",
+      "evidence_status": "target_exercise_evidence",
+      "risk": "low",
+      "aspects": [
+        "rekenen",
+        "verbaal"
+      ],
+      "generator_status": "missing_generator_implementation",
+      "generator_blocked": true,
+      "rx2b_role": "baseline_live_dependency",
+      "note": null
+    },
+    {
+      "coverage_id": "percentage_change_bar_chart",
+      "label": "Procentuele verandering berekenen vanuit staafdiagram",
+      "unit_id": "A68",
+      "status": "live_unit",
+      "representation": "bar_chart",
+      "base_operation": "percentage_change",
+      "evidence_status": "didactic_prior_rationale",
+      "risk": "medium",
+      "aspects": [
+        "grafisch",
+        "rekenen"
+      ],
+      "generator_status": "missing_generator_implementation",
+      "generator_blocked": true,
+      "rx2b_role": "approved_mutated_unit_generator_blocked",
+      "note": null
+    },
+    {
+      "coverage_id": "percentage_change_line_graph",
+      "label": "Procentuele verandering berekenen vanuit lijngrafiek",
+      "unit_id": "A69",
+      "status": "live_unit",
+      "representation": "line_chart",
+      "base_operation": "percentage_change",
+      "evidence_status": "target_exercise_evidence",
+      "risk": "medium",
+      "aspects": [
+        "grafisch",
+        "rekenen"
+      ],
+      "generator_status": "missing_generator_implementation",
+      "generator_blocked": true,
+      "rx2b_role": "approved_mutated_unit_generator_blocked",
+      "note": null
+    },
+    {
+      "coverage_id": "percentage_change_pie_chart",
+      "label": "Procentuele verandering berekenen vanuit cirkeldiagram",
+      "unit_id": "A71",
+      "status": "held_high_risk_unit",
+      "representation": "pie_chart_plus_total",
+      "base_operation": "percentage_change",
+      "evidence_status": "didactic_prior_rationale",
+      "risk": "high",
+      "aspects": [
+        "grafisch",
+        "rekenen",
+        "verbaal"
+      ],
+      "generator_status": "not_applicable_until_mutated",
+      "generator_blocked": false,
+      "rx2b_role": "held_high_risk_for_later_focused_review",
+      "note": null
+    },
+    {
+      "coverage_id": "index_from_table",
+      "label": "Indexcijfer berekenen vanuit tabel",
+      "unit_id": "A72",
+      "status": "live_unit",
+      "representation": "table",
+      "base_operation": "index_number",
+      "evidence_status": "target_exercise_evidence",
+      "risk": "low",
+      "aspects": [
+        "rekenen",
+        "verbaal"
+      ],
+      "generator_status": "missing_generator_implementation",
+      "generator_blocked": true,
+      "rx2b_role": "baseline_live_dependency",
+      "note": null
+    },
+    {
+      "coverage_id": "index_change_line_graph",
+      "label": "Indexverandering aflezen uit lijngrafiek",
+      "unit_id": "A73",
+      "status": "live_unit",
+      "representation": "line_chart",
+      "base_operation": "index_number_interpretation",
+      "evidence_status": "target_exercise_evidence",
+      "risk": "medium",
+      "aspects": [
+        "grafisch",
+        "rekenen"
+      ],
+      "generator_status": "missing_generator_implementation",
+      "generator_blocked": true,
+      "rx2b_role": "approved_mutated_unit_generator_blocked",
+      "note": null
+    },
+    {
+      "coverage_id": "percentage_change_index_values",
+      "label": "Procentuele verandering berekenen vanuit indexcijfers",
+      "unit_id": "A74",
+      "status": "live_unit",
+      "representation": "index_values",
+      "base_operation": "percentage_change",
+      "evidence_status": "target_exercise_evidence",
+      "risk": "low",
+      "aspects": [
+        "rekenen",
+        "verbaal"
+      ],
+      "generator_status": "missing_generator_implementation",
+      "generator_blocked": true,
+      "rx2b_role": "baseline_live_dependency",
+      "note": null
+    },
+    {
+      "coverage_id": "producer_graph_foundation",
+      "label": "Producentengrafiek en TO-TK grafiek lezen",
+      "unit_id": "A77/A78/A80/A81",
+      "status": "deferred_not_rx2b_scope",
+      "representation": null,
+      "base_operation": null,
+      "evidence_status": null,
+      "risk": null,
+      "aspects": [],
+      "generator_status": "not_applicable",
+      "generator_blocked": false,
+      "rx2b_role": "deferred_to_later_rx_sprint",
+      "note": null
+    },
+    {
+      "coverage_id": "elasticity_graph_foundation",
+      "label": "Elasticiteit vanuit bron of vraaggrafiek",
+      "unit_id": "A82/A83/A84",
+      "status": "deferred_not_rx2b_scope",
+      "representation": null,
+      "base_operation": null,
+      "evidence_status": null,
+      "risk": null,
+      "aspects": [],
+      "generator_status": "not_applicable",
+      "generator_blocked": false,
+      "rx2b_role": "deferred_to_later_rx_sprint",
+      "note": null
+    },
+    {
+      "coverage_id": "other_chart_forms",
+      "label": "Andere diagramtypen zoals spreidingsdiagram of gestapelde staaf",
+      "unit_id": null,
+      "status": "missing_not_yet_scoped",
+      "representation": null,
+      "base_operation": null,
+      "evidence_status": null,
+      "risk": null,
+      "aspects": [],
+      "generator_status": "not_applicable",
+      "generator_blocked": false,
+      "rx2b_role": "missing_but_not_yet_scoped",
+      "note": "No current RX.1 evidence row scoped this as Book 1-4 graphical foundation work; keep as watch item rather than minting from syllabus or abstract possibility."
+    }
+  ],
+  "generator_blocked_units": [
+    {
+      "unit_id": "A61",
+      "generator": "GEN_A61",
+      "generator_status": "missing_generator_implementation",
+      "source": "prior_generator_block",
+      "student_facing_skilltree_use_allowed": false
+    },
+    {
+      "unit_id": "A45",
+      "generator": "GEN_A45",
+      "generator_status": "missing_generator_implementation",
+      "source": "prior_generator_block",
+      "student_facing_skilltree_use_allowed": false
+    },
+    {
+      "unit_id": "A46",
+      "generator": "GEN_A46",
+      "generator_status": "missing_generator_implementation",
+      "source": "prior_generator_block",
+      "student_facing_skilltree_use_allowed": false
+    },
+    {
+      "unit_id": "A62",
+      "generator": "GEN_A62",
+      "generator_status": "missing_generator_implementation",
+      "source": "RX.2b",
+      "student_facing_skilltree_use_allowed": false
+    },
+    {
+      "unit_id": "A63",
+      "generator": "GEN_A63",
+      "generator_status": "missing_generator_implementation",
+      "source": "RX.2b",
+      "student_facing_skilltree_use_allowed": false
+    },
+    {
+      "unit_id": "A64",
+      "generator": "GEN_A64",
+      "generator_status": "missing_generator_implementation",
+      "source": "RX.2b",
+      "student_facing_skilltree_use_allowed": false
+    },
+    {
+      "unit_id": "A65",
+      "generator": "GEN_A65",
+      "generator_status": "missing_generator_implementation",
+      "source": "RX.2b",
+      "student_facing_skilltree_use_allowed": false
+    },
+    {
+      "unit_id": "A66",
+      "generator": "GEN_A66",
+      "generator_status": "missing_generator_implementation",
+      "source": "prior_generator_block",
+      "student_facing_skilltree_use_allowed": false
+    },
+    {
+      "unit_id": "A67",
+      "generator": "GEN_A67",
+      "generator_status": "missing_generator_implementation",
+      "source": "prior_generator_block",
+      "student_facing_skilltree_use_allowed": false
+    },
+    {
+      "unit_id": "A70",
+      "generator": "GEN_A70",
+      "generator_status": "missing_generator_implementation",
+      "source": "prior_generator_block",
+      "student_facing_skilltree_use_allowed": false
+    },
+    {
+      "unit_id": "A68",
+      "generator": "GEN_A68",
+      "generator_status": "missing_generator_implementation",
+      "source": "RX.2b",
+      "student_facing_skilltree_use_allowed": false
+    },
+    {
+      "unit_id": "A69",
+      "generator": "GEN_A69",
+      "generator_status": "missing_generator_implementation",
+      "source": "RX.2b",
+      "student_facing_skilltree_use_allowed": false
+    },
+    {
+      "unit_id": "A72",
+      "generator": "GEN_A72",
+      "generator_status": "missing_generator_implementation",
+      "source": "prior_generator_block",
+      "student_facing_skilltree_use_allowed": false
+    },
+    {
+      "unit_id": "A73",
+      "generator": "GEN_A73",
+      "generator_status": "missing_generator_implementation",
+      "source": "RX.2b",
+      "student_facing_skilltree_use_allowed": false
+    },
+    {
+      "unit_id": "A74",
+      "generator": "GEN_A74",
+      "generator_status": "missing_generator_implementation",
+      "source": "prior_generator_block",
+      "student_facing_skilltree_use_allowed": false
+    }
+  ],
+  "updated_on": "2026-04-30T08:58:25.931Z",
+  "backlog": [
+    {
+      "item_id": "other_chart_forms",
+      "status": "missing_not_yet_scoped",
+      "next_action": "Do not mint from abstract possibility. Add only if target exercises or exam evidence show scatterplots, stacked bars, or other chart forms requiring explicit representation-reading units.",
+      "proof_required_to_close": "Evidence-backed row exists in a later representation-operation inventory or the item is explicitly closed as out of current course scope."
+    },
+    {
+      "item_id": "A71",
+      "status": "held_high_risk",
+      "next_action": "Run a later focused review for pie-chart percentage-change composition.",
+      "proof_required_to_close": "Procedure and evidence show how to handle share versus absolute quantity, changing totals, percentage-point versus percentage change, and reconstruction before calculation."
+    }
+  ]
+}
