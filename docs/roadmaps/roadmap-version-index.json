@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_on": "2026-04-29",
+  "updated_on": "2026-04-30",
   "generated_by": "manual-roadmap-versioning",
   "canonical_archive_directory": "docs/roadmaps/outdated",
   "current_operational_roadmaps": [
@@ -15,13 +15,14 @@
   "roadmaps": [
     {
       "roadmap_id": "references-team-roadmap",
-      "version": "v2.13-r8.1-qc-issue-model",
+      "version": "v2.14-rx2b-graphical-foundation-planned",
       "title": "References Team Roadmap",
       "status": "active",
       "path": "references/reference-team-roadmap.md",
       "owner": "references_team",
-      "updated_on": "2026-04-29",
+      "updated_on": "2026-04-30",
       "supersedes": [
+        "docs/roadmaps/outdated/reference-team-roadmap-v2.13-r8.1-qc-issue-model.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.12-rx2-first-lane-applied.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.11-rx2-first-lane-review-prepared.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.10-rx1-gate-closed.md",
@@ -35,7 +36,18 @@
         "knowledge/Exercise schema and quality/reference-team-roadmap Live version 28 April.md",
         "knowledge/Exercise schema and quality/roadmap-updated-repository-checked.md"
       ],
-      "notes": "Current operating roadmap after R8.1 added the scoped internal QC issue model, reference-quality-issues report, and reference-health/RAG data hook."
+      "notes": "Current operating roadmap after HCS inserted RX.2b graphical foundation coverage and mutation before RX.3 producer/profit graph work."
+    },
+    {
+      "roadmap_id": "references-team-roadmap-v2.13",
+      "version": "v2.13-r8.1-qc-issue-model",
+      "title": "References Team Roadmap before RX.2b graphical foundation insertion",
+      "status": "outdated",
+      "path": "docs/roadmaps/outdated/reference-team-roadmap-v2.13-r8.1-qc-issue-model.md",
+      "owner": "references_team",
+      "updated_on": "2026-04-29",
+      "superseded_by": "references/reference-team-roadmap.md",
+      "notes": "Snapshot archived before inserting RX.2b graphical foundation coverage and mutation ahead of RX.3."
     },
     {
       "roadmap_id": "references-team-roadmap-v2.12",

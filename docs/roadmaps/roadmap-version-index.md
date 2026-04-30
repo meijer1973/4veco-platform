@@ -1,6 +1,6 @@
 # Roadmap Version Index
 
-Updated: 2026-04-29
+Updated: 2026-04-30
 
 The JSON file is canonical for tooling:
 
@@ -12,12 +12,13 @@ docs/roadmaps/roadmap-version-index.json
 
 | Roadmap | Version | Path | Notes |
 |---|---|---|---|
-| References Team Roadmap | `v2.13-r8.1-qc-issue-model` | `references/reference-team-roadmap.md` | Current operating roadmap after R8.1 added the scoped internal QC issue model, reference-quality-issues report, and reference-health/RAG data hook. |
+| References Team Roadmap | `v2.14-rx2b-graphical-foundation-planned` | `references/reference-team-roadmap.md` | Current operating roadmap after HCS inserted RX.2b graphical foundation coverage and mutation before RX.3 producer/profit graph work. |
 
 ## Outdated Archive
 
 | Roadmap | Version | Path | Superseded By |
 |---|---|---|---|
+| References Team Roadmap before RX.2b graphical foundation insertion | `v2.13-r8.1-qc-issue-model` | `docs/roadmaps/outdated/reference-team-roadmap-v2.13-r8.1-qc-issue-model.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before R8.1 QC issue model | `v2.12-rx2-first-lane-applied` | `docs/roadmaps/outdated/reference-team-roadmap-v2.12-rx2-first-lane-applied.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before RX.2 first-lane CLI execution | `v2.11-rx2-first-lane-review-prepared` | `docs/roadmaps/outdated/reference-team-roadmap-v2.11-rx2-first-lane-review-prepared.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before RX.2 first-lane review packet | `v2.10-rx1-gate-closed` | `docs/roadmaps/outdated/reference-team-roadmap-v2.10-rx1-gate-closed.md` | `references/reference-team-roadmap.md` |

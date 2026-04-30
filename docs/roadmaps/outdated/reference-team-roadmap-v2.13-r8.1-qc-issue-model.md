@@ -2,9 +2,9 @@
 
 Generated: 2026-04-23
 Adopted main roadmap: 2026-04-25
-Last strategic update: 2026-04-30
+Last strategic update: 2026-04-29
 Roadmap ID: `references-team-roadmap`
-Roadmap version: `v2.14-rx2b-graphical-foundation-planned`
+Roadmap version: `v2.13-r8.1-qc-issue-model`
 Roadmap status: `active`
 Version index: `docs/roadmaps/roadmap-version-index.json`
 Scope: `references/`, `build-scripts/references/`, `build-scripts/reports/`, reference dashboards, and generated reference reports under `reports/`
@@ -16,8 +16,6 @@ The handoff roadmap has been adopted as the main operating roadmap for the refer
 No blocking incompatibility was found. The roadmap direction fits the repository: machine-edited references, evidence-first unit growth, JSON-first reports, review gates for pedagogical authority, and bounded later AI.
 
 Update 2026-04-29: R8.1 Scoped QC Issue Model is completed. The roadmap now has an internal-only quality issue layer under `references/data/qc/`, generated `reference-quality-issues` report output, and a reference-health/RAG data hook. QC issues are diagnostic governance records, not curriculum authority or student-facing material.
-
-Update 2026-04-30: HCS approved inserting `RX.2b Graphical Foundation Coverage And Mutation` before `RX.3`. RX.2 was a safe table/index first lane, not a full graphical-foundation completion. RX.2b must cover the missing bar-chart, line-graph, pie-chart, visual percentage-change, and visual index foundations before producer/profit graph units proceed.
 
 Compatibility decisions:
 
@@ -35,7 +33,6 @@ Compatibility decisions:
 - `R9.2 Content Graph Projection` is completed. Owned-source content is queryable through a separate projection graph without changing R5 alignment authority.
 - `Phase RX Representation-Sensitive Micro-Unit Decomposition` is adopted as a dedicated reference-team phase. RX.1 and GATE-RX2 closed as `pass_with_conditions`; RX.2 applied the bounded first lane through CLI-only mutation and now blocks student-facing use through explicit generator-block tracking.
 - `R8.1 Scoped QC Issue Model` is completed. Quality issues are internal-only governance signals with proof-to-close fields, exposed to dashboards and RAG as diagnostic generated-report context only.
-- `RX.2b Graphical Foundation Coverage And Mutation` is inserted before RX.3. Producer/profit graph work must not proceed until the general graphical-reading foundation is reviewed, reported, and either mutated or explicitly held.
 
 ## Operating Rule
 
@@ -129,11 +126,10 @@ Open items are listed first; completed items are kept below them.
 
 | Sprint | Name | Completed | Current State |
 |--------|------|-----------|---------------|
-| RX.2b | Graphical Foundation Coverage And Mutation | no | Planned next for the RX phase. Inserted before RX.3 by HCS decision. Review and, if approved, CLI-mutate the bar-chart, line-graph, pie-chart, visual percentage-change, and visual index foundations; all new A-units remain generator-blocked/non-interactive until RX.6. |
 | Sprint 6 | Bronnen Registry MVP | no | Planned. Create source-document registry schema/validator first; store under `references/machine/` only after CLI and validators exist. |
 | Sprint 7 | Skill And Operation Registry MVP | no | Planned. Separate unit IDs from fine-grained exercise operations and skill/category tags; preserve useful `skill-categories.md` content where still valid. |
-| RX.3 | Producer Table And Graph Representation Units | no | Planned after RX.2b. Review profit, break-even, TO/TK, GTK, MO/MK, table-difference, and producer-graph overlap before mutation. |
-| RX.4 | Elasticity And Market Diagram Representation Units | no | Planned after RX.2b/RX.3. Separate table extraction, graph extraction, elasticity interpretation, and existing market-intervention graph operations. |
+| RX.3 | Producer Table And Graph Representation Units | no | Planned after RX.2. Review profit, break-even, TO/TK, GTK, MO/MK, table-difference, and producer-graph overlap before mutation. |
+| RX.4 | Elasticity And Market Diagram Representation Units | no | Planned after RX.3. Separate table extraction, graph extraction, elasticity interpretation, and existing market-intervention graph operations. |
 | RX.5 | Representation Operation Registry And Reports | no | Planned as the bridge to Sprint 7 output. Promote provisional representation-operation inventory only after schema, validator, and CLI path exist. |
 | RX.6 | Skill-Tree And Generator Integration | no | Planned after approved representation units. Requires generator coverage or explicit non-interactive status before any student-facing skill-tree use. |
 | Sprint 8 | Misconception Registry MVP | no | Planned. Create small misconception schema/validator and link recurring errors to units, terms, operations, and evidence where available. |
@@ -825,110 +821,9 @@ Acceptance tests:
 
 Completion: completed on 2026-04-29. `GATE-RX2-first-lane-mutation-review` closed as `pass_with_conditions`; `A61`, `A66`, `A67`, `A70`, `A72`, and `A74` were added through `unit-add.js`. Student-facing skill-tree exposure remains blocked until generator implementation and validation.
 
-#### RX.2b Graphical Foundation Coverage And Mutation
-
-Purpose: complete the basic graphical representation-reading layer before producer/profit graph units are reviewed or mutated.
-
-HCS decision: approved as the required next RX sprint after RX.2 and before RX.3. RX.2 was a safe table/index lane; it did not complete graphical foundation coverage.
-
-Approved target queue for mutation review:
-
-- `A62` Waarden aflezen uit staafdiagram.
-- `A63` Waarden aflezen uit lijngrafiek.
-- `A64` Aandelen aflezen uit cirkeldiagram.
-- `A65` Absolute hoeveelheid berekenen uit aandeel en totaal.
-- `A68` Procentuele verandering berekenen vanuit staafdiagram.
-- `A69` Procentuele verandering berekenen vanuit lijngrafiek.
-- `A73` Indexverandering aflezen uit lijngrafiek.
-
-Conditional target:
-
-- `A71` Procentuele verandering berekenen vanuit cirkeldiagram.
-
-`A71` may be held if the evidence or procedure remains too thin. The review gate must allow `A62`, `A63`, `A64`, `A65`, `A68`, `A69`, and `A73` to proceed while holding `A71`.
-
-Required procedure standard for `A62`, `A63`, and `A64`:
-
-1. Identify the title/context.
-2. Identify the variable and unit.
-3. Check axis, legend, or category labels.
-4. Check the scale.
-5. Read the value.
-6. Decide whether exact reading, estimation, or interpolation is required.
-
-These units must not become one-line "read the value" records. The point of RX.2b is to make graphical reading teachable and diagnosable.
-
-Required output:
-
-- `reports/json/graphical-foundation-coverage.json`
-- `reports/markdown/graphical-foundation-coverage.md`
-- `reports/review-gates/GATE-RX2b-graphical-foundation/review-packet.md`
-- `reports/review-gates/GATE-RX2b-graphical-foundation/review-packet.json`
-- `references/data/sprints/RX.2b.plan.json`
-- `reports/sprints/RX.2b-baseline.md`
-
-If the gate authorizes mutation, also produce:
-
-- `reports/review-gates/GATE-RX2b-graphical-foundation/human-interview.md`
-- `reports/review-gates/GATE-RX2b-graphical-foundation/human-interview.json`
-- `reports/review-gates/GATE-RX2b-graphical-foundation/gate-closure.md`
-- `reports/review-gates/GATE-RX2b-graphical-foundation/gate-closure.json`
-- `references/data/sprints/RX.2b-generator-blocked-units.json`
-- `references/data/sprints/RX.2b.result.json`
-- `reports/sprints/RX.2b-result.md`
-- `reports/sprints/RX.2b-diff-summary.md`
-
-Coverage-report requirement:
-
-The graphical foundation coverage report must distinguish:
-
-- live units;
-- candidate units;
-- held/high-risk units;
-- missing but not-yet-scoped units;
-- generator-blocked units.
-
-Review questions:
-
-1. Is the graphical foundation queue complete enough for bar, line, pie, percentage-change, and index-reading basics?
-2. Are `A62`, `A63`, and `A64` acceptable as representation-reading foundation units?
-3. Is `A65` justified as a composed share-times-total unit?
-4. Are `A68`, `A69`, and `A73` sufficiently grounded for mutation?
-5. Is `A71` safe to mutate now, or should it remain held because pie-chart composition is high risk?
-6. Should the provisional IDs be preserved with gaps?
-7. Does the dependency order work without cycles?
-8. Does the graphical foundation coverage report clearly distinguish live, candidate, held, missing, and generator-blocked skills?
-9. Are all new units generator-blocked/non-interactive until RX.6?
-10. Gate status: `pass_with_conditions`, `hold`, or `fail`?
-
-Mutation order if approved:
-
-```text
-A62
-A63
-A64
-A65
-A68
-A69
-A73
-A71 only if explicitly approved
-```
-
-Acceptance tests:
-
-- unit validator passes;
-- no unresolved `needs`;
-- no DAG cycles;
-- `A62`, `A63`, and `A64` encode title/context, labels, units, scale, reading, estimation, and interpolation where relevant;
-- graphical foundation coverage report distinguishes live, candidate, held/high-risk, missing/not-scoped, and generator-blocked states;
-- all newly minted A-units are tracked as generator-blocked/non-interactive until RX.6;
-- no student-facing skill-tree exposure is authorized.
-
-Stop condition: no mutation before `GATE-RX2b-graphical-foundation` records explicit human authorization. Do not hand-edit `references/machine/`, `references/external/`, authored source files, or RAG chunks. Do not authorize student diagnostics, adaptive routing, student-facing AI, sequencing, mastery decisions, or summative use.
-
 #### RX.3 Producer Table And Graph Representation Units
 
-Purpose: add representation-sensitive profit/cost units after RX.2b closes or explicitly holds the graphical foundation layer.
+Purpose: add representation-sensitive profit/cost units after duplicate review.
 
 Candidate scope, subject to duplicate audit and renumbering:
 
@@ -942,7 +837,6 @@ Candidate scope, subject to duplicate audit and renumbering:
 
 Required work:
 
-- Confirm RX.2b graphical-reading dependencies are live or explicitly held before producer graph mutation.
 - Review overlap with existing profit, break-even, MO/MK, GTK, table-difference, and producer-graph units.
 - Mint only missing composed representation skills.
 - Distinguish TO/TK graph, P/GTK/Q graph, and table-based profit comparison.
@@ -1387,9 +1281,8 @@ Sprints:
 
 - `RX.1` completed: non-mutating representation-operation inventory and duplicate audit.
 - `RX.2` completed: bounded first-lane percentage/index/table units added through CLI; generator-blocked status remains active.
-- `RX.2b` planned: graphical foundation coverage and mutation before producer graph work.
-- `RX.3` planned: producer table and graph representation units after RX.2b.
-- `RX.4` planned: elasticity and market-diagram representation units after RX.2b/RX.3.
+- `RX.3` planned: producer table and graph representation units.
+- `RX.4` planned: elasticity and market-diagram representation units.
 - `RX.5` planned: representation operation registry and reports, only after schema/validator/CLI path exists.
 - `RX.6` planned: skill-tree and generator integration, only with generator coverage or explicit non-interactive status.
 
@@ -1456,7 +1349,6 @@ Sprints:
 | GATE-CP4-skill-registry-coexistence | before skill/operation registry promotion | yes | yes | operation registry and exercise decomposition |
 | GATE-RX1-representation-unit-scope | before representation-sensitive unit mutations | yes | yes | RX.2+ unit mutation |
 | GATE-RX2-first-lane-mutation-review | before RX.2 first-lane CLI execution | yes | yes | A61/A66/A67/A70/A72/A74 catalog mutation |
-| GATE-RX2b-graphical-foundation | before RX.2b CLI execution | yes | yes | A62/A63/A64/A65/A68/A69/A73 and conditional A71 catalog mutation |
 | GATE-CP5-D04-resolution | before D-domain C-to-B promotion | yes | yes | exercise promotion on D-domain units |
 | GATE-CP6-year-1-paragraph-coverage | before Year-2 extension is considered ready | yes | yes | Year-2 extension confidence |
 | GATE-CP7-year-2-anchoring | before Year-2 Tier C authoring is treated as coherent | yes | yes | Year-2 skeleton progression |
@@ -1499,7 +1391,6 @@ R9.1 Owned source registry
 R9.2 Content graph projection
 Sprint 4 Exercise metadata overlay MVP (CP-3)
 RX.2 First-lane mutation review and CLI execution
-RX.2b Graphical foundation coverage and mutation
 Sprint 6 Bronnen registry MVP
 Sprint 7 Skill and operation registry MVP (CP-4)
 RX.3 Producer table and graph representation units
@@ -1523,15 +1414,13 @@ Do not invert this order.
 
 ## Immediate Next Sprint
 
-Next sprint: `RX.2b Graphical Foundation Coverage And Mutation`.
+Next sprint: `Sprint 6 Bronnen Registry MVP`.
 
 R4.5 has closed the bounded micro-unit mutation lane, CP-1 has closed the non-mutating schema audit gate as `pass_with_conditions`, CP-2 has closed the owned-source scope gate as `pass_with_conditions`, R9.1 has registered the owned-source surfaces, R9.2 has completed owned-content projection, S4/CP-3 has closed as `pass_with_conditions`, S4.1 has implemented the CP-3 condition artifacts, RX.1 has prepared the non-mutating representation-operation inventory, `GATE-RX1-representation-unit-scope` has closed as `pass_with_conditions`, RX.2/GATE-RX2 has added the bounded six-unit first lane through CLI-only mutation, and R8.1 has added the scoped internal QC issue model.
 
 `A61`, `A66`, `A67`, `A70`, `A72`, and `A74` are now catalog units, but they are generator-blocked and non-interactive for student-facing skill-tree use until their generators are implemented and validated.
 
-`RX.2b` should close the general graphical-reading foundation before producer/profit graph work proceeds. It must produce graphical foundation coverage reports, prepare `GATE-RX2b-graphical-foundation`, and only mutate approved units through `unit-add.js` after explicit human authorization. `A71` remains conditional and may be held.
-
-`Sprint 6` remains planned after RX.2b. It should create a controlled source-document registry without weakening machine-edit discipline. If the first implementation would live under `references/machine/`, create the CLI before creating the registry; otherwise keep the first pass under `references/data/` as a governed overlay.
+`Sprint 6` should create a controlled source-document registry without weakening machine-edit discipline. If the first implementation would live under `references/machine/`, create the CLI before creating the registry; otherwise keep the first pass under `references/data/` as a governed overlay.
 
 Do not start diagnostics, adaptive routing, student-facing AI, automatic lesson sequencing, mastery decisions, summative decisions, teacher cockpit deployment, game/simulation product mapping, or continuous-improvement claims from this roadmap.
 
