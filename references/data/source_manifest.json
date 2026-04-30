@@ -1,14 +1,14 @@
 {
   "schema_version": "0.1",
-  "generated_at": "2026-04-30T08:58:32.129Z",
+  "generated_at": "2026-04-30T15:42:31.919Z",
   "sprint_id": "R0.2",
   "scope": "references/",
   "note": "Self-generated inventory files intentionally omit size and sha256 to avoid unstable self-checksums.",
   "summary": {
-    "file_count": 175,
+    "file_count": 178,
     "by_layer": {
       "authored_judgement": 7,
-      "governance_data": 100,
+      "governance_data": 103,
       "external_authority": 32,
       "machine_registry": 5,
       "owned_curriculum_design": 3,
@@ -19,8 +19,8 @@
     },
     "by_edit_policy": {
       "human_reviewed_edit": 15,
-      "generated_by_inventory_script": 11,
-      "sprint_process": 88,
+      "generated_by_inventory_script": 12,
+      "sprint_process": 90,
       "external_refresh_only": 32,
       "cli_only": 5,
       "versioned_human_reviewed_edit": 3,
@@ -607,6 +607,26 @@
         "future-validators"
       ],
       "self_generated_inventory_file": true
+    },
+    {
+      "path": "references/data/source-document-registry.json",
+      "file_name": "source-document-registry.json",
+      "extension": "json",
+      "size_bytes": 261399,
+      "sha256": "22408bfda5c7b0dac2a2f558a06594c22ed2632ca9e05d291f66ff3331fc3632",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "inventory",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "generated_by_inventory_script",
+      "owner": "references_team",
+      "refresh_policy": "regenerate",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
     },
     {
       "path": "references/data/sprints/R0.2.plan.json",
@@ -2169,6 +2189,46 @@
       "self_generated_inventory_file": false
     },
     {
+      "path": "references/data/sprints/S6.plan.json",
+      "file_name": "S6.plan.json",
+      "extension": "json",
+      "size_bytes": 1579,
+      "sha256": "2f418eea802c280b240813ba52010450ceaf7a4b107c5b4d1ef8bbc55a89750d",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/data/sprints/S6.result.json",
+      "file_name": "S6.result.json",
+      "extension": "json",
+      "size_bytes": 2422,
+      "sha256": "f27d5816e710465377f52cdf1da863bfc58e5d7fef0dda4a5c1477143c915a0c",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
       "path": "references/external/amstelveencollege_quality_standards.md",
       "file_name": "amstelveencollege_quality_standards.md",
       "extension": "md",
@@ -3075,8 +3135,8 @@
       "path": "references/reference-team-roadmap.md",
       "file_name": "reference-team-roadmap.md",
       "extension": "md",
-      "size_bytes": 96533,
-      "sha256": "43c7a3121b823d93c549bf92f664c288d667933aafb994e45331671464fcea25",
+      "size_bytes": 97980,
+      "sha256": "f38c4fc7af310c29de76ba3e9b0215e9d7d53fa4aa662c7c2058e390955c5354",
       "layer": "planning",
       "authority_level": "authored_judgement",
       "source_type": "roadmap",
@@ -3409,8 +3469,8 @@
       "path": "references/schemas/source-document.schema.json",
       "file_name": "source-document.schema.json",
       "extension": "json",
-      "size_bytes": 673,
-      "sha256": "8acfa61f5b3657b31a4570ecdbb2e63f8479c1d47123317a8b61ba581de2f6bb",
+      "size_bytes": 2680,
+      "sha256": "d6caaefc497fde518a240d2994733a7c204240a478d9c6642473aed2fbcd85ca",
       "layer": "schema_contract",
       "authority_level": "machine_contract",
       "source_type": "json_schema",

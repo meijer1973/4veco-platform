@@ -1,0 +1,75 @@
+{
+  "sprint_id": "S6",
+  "name": "Bronnen Registry MVP",
+  "status": "completed",
+  "completed_on": "2026-04-30",
+  "plan": "docs/sprints/S6-plan.md",
+  "baseline": "reports/sprints/S6-baseline.md",
+  "result": "reports/sprints/S6-result.md",
+  "diff_summary": "reports/sprints/S6-diff-summary.md",
+  "protected_reference_data_changed": false,
+  "registry": "references/data/source-document-registry.json",
+  "reports": [
+    "reports/json/source-document-registry.json",
+    "reports/markdown/source-document-registry.md"
+  ],
+  "storage_decision": {
+    "registry_location": "references/data/source-document-registry.json",
+    "machine_registry_created": false,
+    "reason": "A references/machine registry requires schema, CLI, validators, mutation logs, and review approval first."
+  },
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js docs/sprints/S6-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/build-source-document-registry.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-source-document-registry.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/validate-core-schemas.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/build-reference-inventory.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-source-manifest.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-document-inventory.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-roadmap-version-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-result.js reports/sprints/S6-result.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js S6 --complete",
+      "status": "passed"
+    }
+  ],
+  "next_sprint": "Sprint 7 Skill And Operation Registry MVP",
+  "blocked_scope_preserved": [
+    "references/machine/source-document-registry.json",
+    "hand edits to references/machine",
+    "hand edits to references/external",
+    "student diagnostics",
+    "adaptive routing",
+    "student-facing AI",
+    "automatic sequencing",
+    "mastery decisions",
+    "summative decisions"
+  ]
+}

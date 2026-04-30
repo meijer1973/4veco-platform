@@ -1,0 +1,38 @@
+{
+  "sprint_id": "S6",
+  "name": "Bronnen Registry MVP",
+  "status": "in_progress",
+  "planned_on": "2026-04-30",
+  "plan": "docs/sprints/S6-plan.md",
+  "protected_reference_data_changes_allowed": false,
+  "protected_reference_data_change_mode": "none",
+  "human_review_required": false,
+  "registry_storage_decision": {
+    "first_implementation": "references/data/source-document-registry.json",
+    "machine_registry_created": false,
+    "reason": "A references/machine registry requires a CLI-backed mutation path first."
+  },
+  "blocked_scope": [
+    "references/machine/source-document-registry.json",
+    "hand edits to references/machine",
+    "hand edits to references/external",
+    "student diagnostics",
+    "adaptive routing",
+    "student-facing AI",
+    "automatic sequencing",
+    "mastery decisions",
+    "summative decisions"
+  ],
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js docs/sprints/S6-plan.md",
+    "node build-scripts/references/build-source-document-registry.js",
+    "node build-scripts/references/check-source-document-registry.js",
+    "node build-scripts/references/validate-core-schemas.js",
+    "node build-scripts/references/build-reference-inventory.js",
+    "node build-scripts/references/check-source-manifest.js",
+    "node build-scripts/references/check-document-inventory.js",
+    "node build-scripts/references/check-roadmap-version-index.js",
+    "node build-scripts/sprints/check-sprint-result.js reports/sprints/S6-result.md",
+    "node build-scripts/sprints/check-sprint-bundle.js S6 --complete"
+  ]
+}

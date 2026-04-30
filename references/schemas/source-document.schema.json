@@ -4,15 +4,123 @@
   "title": "SourceDocument",
   "type": "object",
   "additionalProperties": false,
-  "required": ["document_id", "path", "source_type", "authority_level"],
+  "required": [
+    "document_id",
+    "path",
+    "title",
+    "source_type",
+    "authority_level",
+    "source_version",
+    "status",
+    "owner",
+    "citation_policy",
+    "public_citation_policy"
+  ],
   "properties": {
-    "document_id": { "type": "string" },
-    "path": { "type": "string" },
-    "source_type": { "type": "string" },
-    "authority_level": { "type": "string" },
-    "publisher": { "type": ["string", "null"] },
-    "year": { "type": ["integer", "null"] },
-    "status": { "type": "string" },
-    "refresh_policy": { "type": "string" }
+    "document_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9._:-]*$"
+    },
+    "path": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "source_type": {
+      "type": "string"
+    },
+    "authority_level": {
+      "type": "string",
+      "enum": [
+        "external_primary",
+        "machine_registry",
+        "owned_curriculum_design",
+        "owned_lesson_exposition",
+        "owned_lesson_exercise",
+        "owned_answer_model",
+        "owned_visual_source",
+        "authored_judgement",
+        "generated_report",
+        "governance_data",
+        "machine_contract",
+        "tooling",
+        "planning",
+        "quality_protocol",
+        "unknown"
+      ]
+    },
+    "source_version": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "mirrored",
+        "extracted",
+        "governance_data",
+        "generated_diagnostic",
+        "schema_contract",
+        "tooling",
+        "planning",
+        "review_required"
+      ]
+    },
+    "owner": {
+      "type": "string"
+    },
+    "citation_policy": {
+      "type": "string"
+    },
+    "public_citation_policy": {
+      "type": "string",
+      "enum": [
+        "public_citation_allowed_with_source_name",
+        "internal_only",
+        "internal_diagnostic_only",
+        "not_public_citation_source"
+      ]
+    },
+    "layer": {
+      "type": "string"
+    },
+    "generated_status": {
+      "type": "string"
+    },
+    "edit_policy": {
+      "type": "string"
+    },
+    "refresh_policy": {
+      "type": "string"
+    },
+    "source_hash": {
+      "type": ["string", "null"]
+    },
+    "size_bytes": {
+      "type": ["integer", "null"]
+    },
+    "primary_evidence": {
+      "type": "boolean"
+    },
+    "curriculum_authority": {
+      "type": "boolean"
+    },
+    "allowed_downstream_uses": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "blocked_downstream_uses": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "evidence_anchor_ids": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "notes": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
   }
 }

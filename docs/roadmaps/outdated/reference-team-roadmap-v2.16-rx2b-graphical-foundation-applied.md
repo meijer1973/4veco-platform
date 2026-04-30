@@ -4,7 +4,7 @@ Generated: 2026-04-23
 Adopted main roadmap: 2026-04-25
 Last strategic update: 2026-04-30
 Roadmap ID: `references-team-roadmap`
-Roadmap version: `v2.17-source-document-registry-mvp`
+Roadmap version: `v2.16-rx2b-graphical-foundation-applied`
 Roadmap status: `active`
 Version index: `docs/roadmaps/roadmap-version-index.json`
 Scope: `references/`, `build-scripts/references/`, `build-scripts/reports/`, reference dashboards, and generated reference reports under `reports/`
@@ -23,8 +23,6 @@ Update 2026-04-30: The Sprint Ledger was moved near the top of the roadmap, imme
 
 Update 2026-04-30: RX.2b closed `GATE-RX2b-graphical-foundation` as `pass_with_conditions` and added `A62`, `A63`, `A64`, `A65`, `A68`, `A69`, and `A73` through `unit-add.js`. `A71` remains held/high-risk. All seven new graphical-foundation units remain generator-blocked and non-interactive until generator implementation and validation.
 
-Update 2026-04-30: `S6 Bronnen Registry MVP` is completed. The first source-document registry implementation lives under `references/data/source-document-registry.json` as a governed overlay, not under `references/machine/`. It records source type, authority level, source version, status, owner, citation policy, and public-citation policy while preserving external/machine protected-surface boundaries.
-
 Compatibility decisions:
 
 - Sprint `R0.1` now means the sprint-execution scaffold.
@@ -42,7 +40,6 @@ Compatibility decisions:
 - `Phase RX Representation-Sensitive Micro-Unit Decomposition` is adopted as a dedicated reference-team phase. RX.1, GATE-RX2, and GATE-RX2b closed as `pass_with_conditions`; RX.2 and RX.2b applied bounded lanes through CLI-only mutation and now block student-facing use through explicit generator-block tracking.
 - `R8.1 Scoped QC Issue Model` is completed. Quality issues are internal-only governance signals with proof-to-close fields, exposed to dashboards and RAG as diagnostic generated-report context only.
 - `RX.2b Graphical Foundation Coverage And Mutation` is completed before RX.3. Producer/profit graph work may now proceed only with the RX.2b dependencies live or explicitly held; `A71` remains held/high-risk.
-- `S6 Bronnen Registry MVP` is completed as a `references/data/` registry overlay. No hand-maintained `references/machine/` source-document registry was created.
 
 ## Sprint Ledger
 
@@ -50,6 +47,7 @@ Open items are listed first; completed items are kept below them.
 
 | Sprint | Name | Completed | Current State |
 |--------|------|-----------|---------------|
+| Sprint 6 | Bronnen Registry MVP | no | Planned. Create source-document registry schema/validator first; store under `references/machine/` only after CLI and validators exist. |
 | Sprint 7 | Skill And Operation Registry MVP | no | Planned. Separate unit IDs from fine-grained exercise operations and skill/category tags; preserve useful `skill-categories.md` content where still valid. |
 | RX.3 | Producer Table And Graph Representation Units | no | Planned after RX.2b. Review profit, break-even, TO/TK, GTK, MO/MK, table-difference, and producer-graph overlap before mutation. |
 | RX.4 | Elasticity And Market Diagram Representation Units | no | Planned after RX.2b/RX.3. Separate table extraction, graph extraction, elasticity interpretation, and existing market-intervention graph operations. |
@@ -66,7 +64,6 @@ Open items are listed first; completed items are kept below them.
 | Sprint 13 | Composition Pattern Registry | no | Planned. Define reusable exercise-composition patterns for internal authoring support, not automatic student-facing publication. |
 | Sprint 14 | C-to-B Promotion Workflow | no | Planned only after schema audit, owned-source registry, exercise overlays, D04/unit-design status, R7.6, R14.1, and precision lint path are ready. |
 | Product Gate | Re-Evaluate R10-R13 Product Surfaces | no | Blocked. Diagnostics, adaptive routing, student-facing AI, teacher cockpit deployment, automatic sequencing, mastery, and summative uses remain out of scope until data-quality gates justify them. |
-| S6 | Bronnen Registry MVP | yes | Completed. Created the source-document schema/validator, generated `references/data/source-document-registry.json`, and emitted JSON/Markdown registry reports. The registry is a governed `references/data/` overlay, not a hand-maintained `references/machine/` registry. |
 | RX.2b | Graphical Foundation Coverage And Mutation | yes | Completed. `GATE-RX2b-graphical-foundation` closed as `pass_with_conditions`; `A62`, `A63`, `A64`, `A65`, `A68`, `A69`, and `A73` were added through `unit-add.js`; `A71` remains held/high-risk; all seven new A-units remain generator-blocked/non-interactive until generator implementation and validation. |
 | GATE-RX2b | Graphical Foundation Review | yes | Closed as `pass_with_conditions`. Authorized CLI-only mutation for the seven-unit graphical foundation lane, held `A71`, preserved ID gaps, and preserved student-facing/adaptive/product-use blocks. |
 | RX.2 | First-Lane Mutation Review And CLI Execution | yes | Completed. `GATE-RX2-first-lane-mutation-review` closed as `pass_with_conditions`; `A61`, `A66`, `A67`, `A70`, `A72`, and `A74` were added through `unit-add.js`; all six remain generator-blocked/non-interactive until generator implementation and validation. |
@@ -687,8 +684,6 @@ Required work:
 Required output: registry schema, validator, seed records or derived overlay, and report.
 
 Stop condition: do not create a hand-maintained machine registry.
-
-Completion: completed on 2026-04-30. The MVP registry lives at `references/data/source-document-registry.json` with JSON and Markdown reports at `reports/json/source-document-registry.json` and `reports/markdown/source-document-registry.md`. The schema now requires source version, status, owner, citation policy, and public-citation policy. `check-source-document-registry.js` verifies evidence-anchor document coverage, generated-report diagnostic boundaries, external/machine protected-surface policies, and confirms no `references/machine/source-document-registry.json` exists.
 
 ### Sprint 7 Skill And Operation Registry MVP
 
@@ -1421,7 +1416,7 @@ Goal: make quality issues machine-readable only where doing so improves referenc
 Sprints:
 
 - `R8.1` completed: scoped QC issue model.
-- `S6` completed: bronnen registry MVP under `references/data/`.
+- `Sprint 6` planned: bronnen registry MVP.
 - `Sprint 8` planned: misconception registry MVP.
 - `Sprint 9` planned: unit design status and D04 resolution.
 
@@ -1512,7 +1507,7 @@ R9.2 Content graph projection
 Sprint 4 Exercise metadata overlay MVP (CP-3)
 RX.2 First-lane mutation review and CLI execution
 RX.2b Graphical foundation coverage and mutation
-S6 Bronnen registry MVP
+Sprint 6 Bronnen registry MVP
 Sprint 7 Skill and operation registry MVP (CP-4)
 RX.3 Producer table and graph representation units
 RX.4 Elasticity and market diagram representation units
@@ -1535,15 +1530,15 @@ Do not invert this order.
 
 ## Immediate Next Sprint
 
-Next sprint: `Sprint 7 Skill And Operation Registry MVP`.
+Next sprint: `Sprint 6 Bronnen Registry MVP`.
 
-R4.5 has closed the bounded micro-unit mutation lane, CP-1 has closed the non-mutating schema audit gate as `pass_with_conditions`, CP-2 has closed the owned-source scope gate as `pass_with_conditions`, R9.1 has registered the owned-source surfaces, R9.2 has completed owned-content projection, S4/CP-3 has closed as `pass_with_conditions`, S4.1 has implemented the CP-3 condition artifacts, RX.1 has prepared the non-mutating representation-operation inventory, `GATE-RX1-representation-unit-scope` has closed as `pass_with_conditions`, RX.2/GATE-RX2 has added the bounded six-unit first lane through CLI-only mutation, RX.2b/GATE-RX2b has added the bounded seven-unit graphical foundation lane through CLI-only mutation while holding `A71`, R8.1 has added the scoped internal QC issue model, and S6 has created the source-document registry MVP under `references/data/`.
+R4.5 has closed the bounded micro-unit mutation lane, CP-1 has closed the non-mutating schema audit gate as `pass_with_conditions`, CP-2 has closed the owned-source scope gate as `pass_with_conditions`, R9.1 has registered the owned-source surfaces, R9.2 has completed owned-content projection, S4/CP-3 has closed as `pass_with_conditions`, S4.1 has implemented the CP-3 condition artifacts, RX.1 has prepared the non-mutating representation-operation inventory, `GATE-RX1-representation-unit-scope` has closed as `pass_with_conditions`, RX.2/GATE-RX2 has added the bounded six-unit first lane through CLI-only mutation, RX.2b/GATE-RX2b has added the bounded seven-unit graphical foundation lane through CLI-only mutation while holding `A71`, and R8.1 has added the scoped internal QC issue model.
 
 `A61`, `A66`, `A67`, `A70`, `A72`, and `A74` are now catalog units, but they are generator-blocked and non-interactive for student-facing skill-tree use until their generators are implemented and validated.
 
 `A62`, `A63`, `A64`, `A65`, `A68`, `A69`, and `A73` are now catalog units, but they are generator-blocked and non-interactive for student-facing skill-tree use until their generators are implemented and validated. `A71` remains held/high-risk for later focused review.
 
-`Sprint 7` is now the next planned sprint. It should create the skill and operation registry MVP, separating micro-teaching-unit IDs from fine-grained `exercise_operations` and broader `skill_tags`. It must preserve the CP-1 naming decisions, keep `required_units` for unit IDs, and avoid promoting provisional operation labels into a machine registry before schema, validator, and CLI discipline exist.
+`Sprint 6` is now the next planned sprint. It should create a controlled source-document registry without weakening machine-edit discipline. If the first implementation would live under `references/machine/`, create the CLI before creating the registry; otherwise keep the first pass under `references/data/` as a governed overlay.
 
 Do not start diagnostics, adaptive routing, student-facing AI, automatic lesson sequencing, mastery decisions, summative decisions, teacher cockpit deployment, game/simulation product mapping, or continuous-improvement claims from this roadmap.
 
