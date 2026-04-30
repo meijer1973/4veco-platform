@@ -575,6 +575,7 @@ def generate_html(opgaven, samenvatting, para_number, para_name, asset_prefix=".
   <div class="content">
     <header class="hero">
       <div class="hero-inner">
+        <a class="back-link" href="../index.html"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg> Terug naar overzicht</a>
         <span class="hero-badge">{para_number} &middot; Begeleide inoefening</span>
         <h1>{esc(para_name)} &mdash; Begeleide inoefening</h1>
         <p class="hero-sub">Oefeningen met denkstappen, formule-herinneringen en hints.</p>
