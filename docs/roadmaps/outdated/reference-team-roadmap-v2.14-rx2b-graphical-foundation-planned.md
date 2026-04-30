@@ -4,7 +4,7 @@ Generated: 2026-04-23
 Adopted main roadmap: 2026-04-25
 Last strategic update: 2026-04-30
 Roadmap ID: `references-team-roadmap`
-Roadmap version: `v2.15-sprint-ledger-near-top`
+Roadmap version: `v2.14-rx2b-graphical-foundation-planned`
 Roadmap status: `active`
 Version index: `docs/roadmaps/roadmap-version-index.json`
 Scope: `references/`, `build-scripts/references/`, `build-scripts/reports/`, reference dashboards, and generated reference reports under `reports/`
@@ -18,8 +18,6 @@ No blocking incompatibility was found. The roadmap direction fits the repository
 Update 2026-04-29: R8.1 Scoped QC Issue Model is completed. The roadmap now has an internal-only quality issue layer under `references/data/qc/`, generated `reference-quality-issues` report output, and a reference-health/RAG data hook. QC issues are diagnostic governance records, not curriculum authority or student-facing material.
 
 Update 2026-04-30: HCS approved inserting `RX.2b Graphical Foundation Coverage And Mutation` before `RX.3`. RX.2 was a safe table/index first lane, not a full graphical-foundation completion. RX.2b must cover the missing bar-chart, line-graph, pie-chart, visual percentage-change, and visual index foundations before producer/profit graph units proceed.
-
-Update 2026-04-30: The Sprint Ledger was moved near the top of the roadmap, immediately after adoption and compatibility decisions, so agents see current/open work before detailed operating rules and phase background.
 
 Compatibility decisions:
 
@@ -38,72 +36,6 @@ Compatibility decisions:
 - `Phase RX Representation-Sensitive Micro-Unit Decomposition` is adopted as a dedicated reference-team phase. RX.1 and GATE-RX2 closed as `pass_with_conditions`; RX.2 applied the bounded first lane through CLI-only mutation and now blocks student-facing use through explicit generator-block tracking.
 - `R8.1 Scoped QC Issue Model` is completed. Quality issues are internal-only governance signals with proof-to-close fields, exposed to dashboards and RAG as diagnostic generated-report context only.
 - `RX.2b Graphical Foundation Coverage And Mutation` is inserted before RX.3. Producer/profit graph work must not proceed until the general graphical-reading foundation is reviewed, reported, and either mutated or explicitly held.
-
-## Sprint Ledger
-
-Open items are listed first; completed items are kept below them.
-
-| Sprint | Name | Completed | Current State |
-|--------|------|-----------|---------------|
-| RX.2b | Graphical Foundation Coverage And Mutation | no | Planned next for the RX phase. Inserted before RX.3 by HCS decision. Review and, if approved, CLI-mutate the bar-chart, line-graph, pie-chart, visual percentage-change, and visual index foundations; all new A-units remain generator-blocked/non-interactive until RX.6. |
-| Sprint 6 | Bronnen Registry MVP | no | Planned. Create source-document registry schema/validator first; store under `references/machine/` only after CLI and validators exist. |
-| Sprint 7 | Skill And Operation Registry MVP | no | Planned. Separate unit IDs from fine-grained exercise operations and skill/category tags; preserve useful `skill-categories.md` content where still valid. |
-| RX.3 | Producer Table And Graph Representation Units | no | Planned after RX.2b. Review profit, break-even, TO/TK, GTK, MO/MK, table-difference, and producer-graph overlap before mutation. |
-| RX.4 | Elasticity And Market Diagram Representation Units | no | Planned after RX.2b/RX.3. Separate table extraction, graph extraction, elasticity interpretation, and existing market-intervention graph operations. |
-| RX.5 | Representation Operation Registry And Reports | no | Planned as the bridge to Sprint 7 output. Promote provisional representation-operation inventory only after schema, validator, and CLI path exist. |
-| RX.6 | Skill-Tree And Generator Integration | no | Planned after approved representation units. Requires generator coverage or explicit non-interactive status before any student-facing skill-tree use. |
-| Sprint 8 | Misconception Registry MVP | no | Planned. Create small misconception schema/validator and link recurring errors to units, terms, operations, and evidence where available. |
-| Sprint 9 | Unit Design Status And D04 Resolution | no | Planned. Resolve D04 as retire/merge/redistribute/split and decide whether `unit_design_status` is derived overlay or CLI-backed machine-unit field. |
-| Content Track 1 | Year-1 Target Exercise Coverage | no | Planned content-track work. Produce Year-1 paragraph coverage and missing-target exercise status for CP-6. |
-| Content Track 2 | Year-1 Precision And Dual-Coding Audit | no | Planned content-track work. Record precision lint and dual-coding status for exercise surfaces where applicable. |
-| Content Track 3 | Year-2 Skeleton | no | Planned parallel content-track work. Prepare Year-2 skeleton with CvTE-vwo anchor status and `concept_orphan` flags for CP-7; not an engineering Phase E blocker. |
-| R7.6 | RAG Quality Hardening | no | Planned. Close R7.4 follow-ups, split target-exercise chunks, expand retrieval eval coverage, backfill evidence anchors, and improve approved/pending/diagnostic labels. |
-| R14.1 | Curriculum Versioning | no | Planned, minimal. Track source/curriculum versions so retrieval does not silently mix syllabus, exam-program, blueprint, or owned-source versions. |
-| Sprint 12 | Exam And Target Exercise Decomposition Backfill | no | Planned after schema/overlay work. Backfill exercise metadata for the 349 exam questions and 49 target exercises through protected-source-safe overlays. |
-| Sprint 13 | Composition Pattern Registry | no | Planned. Define reusable exercise-composition patterns for internal authoring support, not automatic student-facing publication. |
-| Sprint 14 | C-to-B Promotion Workflow | no | Planned only after schema audit, owned-source registry, exercise overlays, D04/unit-design status, R7.6, R14.1, and precision lint path are ready. |
-| Product Gate | Re-Evaluate R10-R13 Product Surfaces | no | Blocked. Diagnostics, adaptive routing, student-facing AI, teacher cockpit deployment, automatic sequencing, mastery, and summative uses remain out of scope until data-quality gates justify them. |
-| RX.2 | First-Lane Mutation Review And CLI Execution | yes | Completed. `GATE-RX2-first-lane-mutation-review` closed as `pass_with_conditions`; `A61`, `A66`, `A67`, `A70`, `A72`, and `A74` were added through `unit-add.js`; all six remain generator-blocked/non-interactive until generator implementation and validation. |
-| GATE-RX2 | First-Lane Mutation Review | yes | Closed as `pass_with_conditions`. Authorized CLI-only mutation for the six-unit first lane and preserved blocks on deferred candidates, generator exposure, and student-facing/adaptive/product uses. |
-| R8.1 | QC Issue Model | yes | Completed. Created internal-only quality issue schema/log, validator, `reference-quality-issues` report, and reference-health/RAG data hook; QC issues remain diagnostic governance records, not curriculum authority. |
-| RX.1 | Representation-Operation Inventory | yes | Completed through the non-mutating inventory/review-packet stop point. Prepared 29 operation records, 24 provisional candidates, 5 held duplicate/overlap records, and `GATE-RX1-representation-unit-scope`. |
-| GATE-RX1 | Representation Unit Scope Review | yes | Closed as `pass_with_conditions`. RX.2 planning is authorized for the bounded first lane only; direct mutation remains blocked until explicit RX.2 mutation review and CLI-backed execution. |
-| S4.1 | Exercise Overlay Conditions And Calibration | yes | Completed on 2026-04-29. Implemented CP-3 condition artifacts, source-annex gap tracker, scaffolding calibration, graph-spec representation plan, product-boundary warnings, condition validator, and condition reports. No bulk extension or source mutation authorized. |
-| R9.2 | Content Graph Projection | yes | Completed. Created a separate owned-content projection graph with 1,464 typed edges, RAG owned-content chunks, coverage reports, and 10/10 retrieval eval pass state while preserving CP-2 evidence boundaries. |
-| S4 | Exercise Metadata Overlay MVP | yes | Completed on 2026-04-29 with CP-3 status `pass_with_conditions`. Created overlay schema, one Tier A dry-run overlay, one Tier C dry-run overlay, validator, and CP-3 closure. No bulk extension or source mutation authorized. |
-| R9.1 | Owned Source Registry | yes | Completed with `pass_with_conditions`. Registered owned-source surfaces, repaired blueprint refs, prepared CP-2, and authorized R9.2 with projection-edge defaults and evidence-boundary conditions. |
-| S1 | Schema Audit And Exercise Naming Contract | yes | Completed. `GATE-CP1-schema-audit` closed as `pass_with_conditions`; naming contract, role split, scaffolding object, and overlay-first strategy are approved. |
-| R7.4 | RAG Review Gate | yes | Completed with `pass_with_conditions`. Internal and teacher-facing non-authoritative retrieval plus human-reviewed lesson-authoring support are allowed; student-facing diagnostics, adaptive routing, AI, automatic sequencing, mastery decisions, and summative use remain blocked. |
-| R7.5 | Merge Readiness and Main Sync | yes | Completed. Branch synced with `origin/main`, duplicate R5 gate namespace resolved, stray roadmap artifact moved to `docs/roadmaps/`, validators pass, and merge-readiness report says ready for merge review. |
-| R9.0 | Legacy Target Reference Minimization | yes | Completed. Minimized the frozen legacy target as a conceptual anchor before R9.1 while preserving functional legacy paths and guardrails. |
-| R9.01 | Legacy Folder Rename | yes | Completed. Renamed repo-local legacy folders to `legacy-target` while preserving the frozen external lesson target. |
-| R7.3 | Retrieval Evaluation Set | yes | Completed. Added fixed retrieval eval set, runner, validator, JSON results, and Markdown report; 10/10 cases pass with zero authority violations. |
-| R7.2 | Hybrid Retrieval | yes | Completed. Added internal deterministic query prototype preserving source authority, evidence IDs, edge status, and generated-report warnings. |
-| R7.1 | Deterministic Chunk Layer | yes | Completed. Added deterministic internal RAG chunk index with 842 chunks and authority metadata preserving generated-report safeguards. |
-| R6.2 | Reference Health Dashboard Data | yes | Completed. Added `reports/json/reference-health.json` and Markdown projection with R5.3 graph-authority constraints and dashboard health summaries. |
-| R6.1 | JSON-First Reports | yes | Completed. Added JSON-first report generation and validation for 10 required health/coverage reports, plus Markdown projections under `reports/markdown/`. |
-| R5.3 | Alignment Graph Review Gate | yes | Completed with `pass_with_conditions`. Named graph edge groups are approved for internal dashboard/reporting and internal retrieval development/evaluation; student diagnostics, adaptive routing, and student-facing AI remain blocked. |
-| R5.2 | Alignment Graph | yes | Completed. Built the first draft alignment graph from R5.1 evidence anchors: 31 edges, 13 pending main edges, 18 traceability edges, and 0 human-approved edges. |
-| R5.1 | Evidence-Anchor Layer | yes | Completed. Created the first governed evidence-anchor layer: source-ranking policy, 15 anchors, 13 claims, schemas, validator, and status reports. |
-| R4.3 | Blueprint Flag Triage | yes | Completed. Triaged all 84 current raw target-exercise missing-unit flags into a curated backlog: 68 still needed, 4 existing-unit match candidates, 1 duplicate, and 11 deferred. |
-| R4.4 | Micro-Teaching Unit Quality Packet | yes | Completed. Created non-mutating packet for 48 empty-needs units, 44 missing term-link units, 2 unresolved term strings, and 84 blueprint flags; R4.5 requires human review before mutation. |
-| R4.5 | Apply Reviewed Micro-Unit Corrections | yes | Completed. Applied the bounded human-reviewed mutation set through CLI: 2 B-domain terms, 13 dependency edges, 19 micro-units, regenerated reports/RAG surfaces, and preserved held design-review items. |
-| R4.2 | Exam-Question Extraction Gap Closure | yes | Completed. Produced a non-mutating gap report and patch queue for 27 exam-question records with missing required-skill annotations; protected references were not changed. |
-| R4.1 | Unit-Term Slug Migration | yes | Completed. Migrated safe unit `terms` values to canonical `begrippen.json` slug IDs through a validated migration script; left `alternatieve kosten` and `schaarste` unresolved for later term-registry review. |
-| R3.2 | Apply Reviewed Empty-Needs Corrections | yes | Completed. Applied the bounded R2.4 mutation-review set through CLI: 15 dependency edges and 6 `underbouw_assumed` classifications. No D04, rejected market-graph, held A-domain, L09->L03, or H13 mutations were applied. |
-| R3.1 | Reference CLI And Documentation Completion | yes | Completed. CLI docs now reflect implemented scripts; coverage report status is `ready_with_blockers`; zero-needs review fields round-trip through parser, formatter, validation, and JSON projection. |
-| R2.4 | Evidence And Unit-Design Cleanup | yes | Completed. Non-mutating packet attaches exact evidence to selected candidate edges, resolves D04 as unit-design-required, classifies foundational A-domain zero-needs candidates, preserves rejected market-graph suggestions, and records a bounded labor-market/unemployment second pass. |
-| R2.3 | Human Review And Gate Closure | yes | Completed with GATE-R2 status `hold`. The audit was diagnostic only; R2.4 produced the non-mutating packet and R3.2 later applied only the human-approved CLI mutation set. |
-| R2.2 | Subagent Review For Empty Needs | yes | Completed. Pedagogy, data-integrity, and evidence reviews plus a GATE-R2 review packet are ready for human review. |
-| R2.1 | Full Empty-Needs Audit | yes | Completed. Non-mutating audit generated 61 machine-suggested empty-needs review entries for the current branch catalog. |
-| R1.3 | Unit Prior-Knowledge Schema Extension | yes | Completed. Unit and review schemas now support zero-needs status, assumed prior knowledge, and review records. |
-| R1.2 | Core JSON Schemas | yes | Completed. Initial JSON schema contracts exist for units, terms, evidence, graph edges, reports, RAG chunks, and reference-quality records. |
-| R1.1 | Source-of-Truth Decision | yes | Completed. `references/SOURCE_OF_TRUTH.md` defines canonical source, projection, authority, and edit-policy rules. |
-| R0.2 | Reference Baseline Inventory | yes | Completed. Source manifest, document inventory, builder, and validators now define the baseline reference/report/tooling surface. |
-| R0.1 | Sprint Execution Scaffold | yes | Completed. Sprint templates, example fixtures, JSON sprint metadata, and plan/result validators exist. |
-| H0.1 | A-Domain Skilltree Consistency | yes | Historical completed work. `A38` through `A44` implemented; A-domain skilltree coverage matches the catalog. |
-| H0.2 | Reference Report Regeneration | yes | Historical completed work. Core reports regenerated and aligned with the catalog. |
-| H0.3 | Labor-Market Unit And Dependency Patch | yes | Historical branch work. Not present in the current 190-live-unit catalog; labor-market/unemployment sequencing is reopened under R2.4. |
 
 ## Operating Rule
 
@@ -190,6 +122,72 @@ reports/review-gates/<gate-id>/
 | CP-6 Year-1 paragraph-coverage closeout | 2026-07-24 | `GATE-CP6-year-1-paragraph-coverage` | Pre-Year-2 extension | `reports/blueprint-coverage.md` | Year 1 stays open if paragraph target coverage or precision status is not acceptable |
 | CP-7 Year-2 anchoring review | 2026-09-04 | `GATE-CP7-year-2-anchoring` | Parallel content-track gate, pre-Year-2 Tier C authoring | Year-2 skeleton with CvTE-vwo anchor status per paragraph | `concept_orphan` rates and sequencing chains are coherent against Year 1 |
 | CP-8 RAG eval content coverage | 2026-09-25 | `GATE-CP8-rag-eval-content-coverage` | During R7.6 | Expanded retrieval eval set, target 50-100 cases | Includes content-side queries from HCS feedback, including negative and ambiguity cases |
+
+## Sprint Ledger
+
+Open items are listed first; completed items are kept below them.
+
+| Sprint | Name | Completed | Current State |
+|--------|------|-----------|---------------|
+| RX.2b | Graphical Foundation Coverage And Mutation | no | Planned next for the RX phase. Inserted before RX.3 by HCS decision. Review and, if approved, CLI-mutate the bar-chart, line-graph, pie-chart, visual percentage-change, and visual index foundations; all new A-units remain generator-blocked/non-interactive until RX.6. |
+| Sprint 6 | Bronnen Registry MVP | no | Planned. Create source-document registry schema/validator first; store under `references/machine/` only after CLI and validators exist. |
+| Sprint 7 | Skill And Operation Registry MVP | no | Planned. Separate unit IDs from fine-grained exercise operations and skill/category tags; preserve useful `skill-categories.md` content where still valid. |
+| RX.3 | Producer Table And Graph Representation Units | no | Planned after RX.2b. Review profit, break-even, TO/TK, GTK, MO/MK, table-difference, and producer-graph overlap before mutation. |
+| RX.4 | Elasticity And Market Diagram Representation Units | no | Planned after RX.2b/RX.3. Separate table extraction, graph extraction, elasticity interpretation, and existing market-intervention graph operations. |
+| RX.5 | Representation Operation Registry And Reports | no | Planned as the bridge to Sprint 7 output. Promote provisional representation-operation inventory only after schema, validator, and CLI path exist. |
+| RX.6 | Skill-Tree And Generator Integration | no | Planned after approved representation units. Requires generator coverage or explicit non-interactive status before any student-facing skill-tree use. |
+| Sprint 8 | Misconception Registry MVP | no | Planned. Create small misconception schema/validator and link recurring errors to units, terms, operations, and evidence where available. |
+| Sprint 9 | Unit Design Status And D04 Resolution | no | Planned. Resolve D04 as retire/merge/redistribute/split and decide whether `unit_design_status` is derived overlay or CLI-backed machine-unit field. |
+| Content Track 1 | Year-1 Target Exercise Coverage | no | Planned content-track work. Produce Year-1 paragraph coverage and missing-target exercise status for CP-6. |
+| Content Track 2 | Year-1 Precision And Dual-Coding Audit | no | Planned content-track work. Record precision lint and dual-coding status for exercise surfaces where applicable. |
+| Content Track 3 | Year-2 Skeleton | no | Planned parallel content-track work. Prepare Year-2 skeleton with CvTE-vwo anchor status and `concept_orphan` flags for CP-7; not an engineering Phase E blocker. |
+| R7.6 | RAG Quality Hardening | no | Planned. Close R7.4 follow-ups, split target-exercise chunks, expand retrieval eval coverage, backfill evidence anchors, and improve approved/pending/diagnostic labels. |
+| R14.1 | Curriculum Versioning | no | Planned, minimal. Track source/curriculum versions so retrieval does not silently mix syllabus, exam-program, blueprint, or owned-source versions. |
+| Sprint 12 | Exam And Target Exercise Decomposition Backfill | no | Planned after schema/overlay work. Backfill exercise metadata for the 349 exam questions and 49 target exercises through protected-source-safe overlays. |
+| Sprint 13 | Composition Pattern Registry | no | Planned. Define reusable exercise-composition patterns for internal authoring support, not automatic student-facing publication. |
+| Sprint 14 | C-to-B Promotion Workflow | no | Planned only after schema audit, owned-source registry, exercise overlays, D04/unit-design status, R7.6, R14.1, and precision lint path are ready. |
+| Product Gate | Re-Evaluate R10-R13 Product Surfaces | no | Blocked. Diagnostics, adaptive routing, student-facing AI, teacher cockpit deployment, automatic sequencing, mastery, and summative uses remain out of scope until data-quality gates justify them. |
+| RX.2 | First-Lane Mutation Review And CLI Execution | yes | Completed. `GATE-RX2-first-lane-mutation-review` closed as `pass_with_conditions`; `A61`, `A66`, `A67`, `A70`, `A72`, and `A74` were added through `unit-add.js`; all six remain generator-blocked/non-interactive until generator implementation and validation. |
+| GATE-RX2 | First-Lane Mutation Review | yes | Closed as `pass_with_conditions`. Authorized CLI-only mutation for the six-unit first lane and preserved blocks on deferred candidates, generator exposure, and student-facing/adaptive/product uses. |
+| R8.1 | QC Issue Model | yes | Completed. Created internal-only quality issue schema/log, validator, `reference-quality-issues` report, and reference-health/RAG data hook; QC issues remain diagnostic governance records, not curriculum authority. |
+| RX.1 | Representation-Operation Inventory | yes | Completed through the non-mutating inventory/review-packet stop point. Prepared 29 operation records, 24 provisional candidates, 5 held duplicate/overlap records, and `GATE-RX1-representation-unit-scope`. |
+| GATE-RX1 | Representation Unit Scope Review | yes | Closed as `pass_with_conditions`. RX.2 planning is authorized for the bounded first lane only; direct mutation remains blocked until explicit RX.2 mutation review and CLI-backed execution. |
+| S4.1 | Exercise Overlay Conditions And Calibration | yes | Completed on 2026-04-29. Implemented CP-3 condition artifacts, source-annex gap tracker, scaffolding calibration, graph-spec representation plan, product-boundary warnings, condition validator, and condition reports. No bulk extension or source mutation authorized. |
+| R9.2 | Content Graph Projection | yes | Completed. Created a separate owned-content projection graph with 1,464 typed edges, RAG owned-content chunks, coverage reports, and 10/10 retrieval eval pass state while preserving CP-2 evidence boundaries. |
+| S4 | Exercise Metadata Overlay MVP | yes | Completed on 2026-04-29 with CP-3 status `pass_with_conditions`. Created overlay schema, one Tier A dry-run overlay, one Tier C dry-run overlay, validator, and CP-3 closure. No bulk extension or source mutation authorized. |
+| R9.1 | Owned Source Registry | yes | Completed with `pass_with_conditions`. Registered owned-source surfaces, repaired blueprint refs, prepared CP-2, and authorized R9.2 with projection-edge defaults and evidence-boundary conditions. |
+| S1 | Schema Audit And Exercise Naming Contract | yes | Completed. `GATE-CP1-schema-audit` closed as `pass_with_conditions`; naming contract, role split, scaffolding object, and overlay-first strategy are approved. |
+| R7.4 | RAG Review Gate | yes | Completed with `pass_with_conditions`. Internal and teacher-facing non-authoritative retrieval plus human-reviewed lesson-authoring support are allowed; student-facing diagnostics, adaptive routing, AI, automatic sequencing, mastery decisions, and summative use remain blocked. |
+| R7.5 | Merge Readiness and Main Sync | yes | Completed. Branch synced with `origin/main`, duplicate R5 gate namespace resolved, stray roadmap artifact moved to `docs/roadmaps/`, validators pass, and merge-readiness report says ready for merge review. |
+| R9.0 | Legacy Target Reference Minimization | yes | Completed. Minimized the frozen legacy target as a conceptual anchor before R9.1 while preserving functional legacy paths and guardrails. |
+| R9.01 | Legacy Folder Rename | yes | Completed. Renamed repo-local legacy folders to `legacy-target` while preserving the frozen external lesson target. |
+| R7.3 | Retrieval Evaluation Set | yes | Completed. Added fixed retrieval eval set, runner, validator, JSON results, and Markdown report; 10/10 cases pass with zero authority violations. |
+| R7.2 | Hybrid Retrieval | yes | Completed. Added internal deterministic query prototype preserving source authority, evidence IDs, edge status, and generated-report warnings. |
+| R7.1 | Deterministic Chunk Layer | yes | Completed. Added deterministic internal RAG chunk index with 842 chunks and authority metadata preserving generated-report safeguards. |
+| R6.2 | Reference Health Dashboard Data | yes | Completed. Added `reports/json/reference-health.json` and Markdown projection with R5.3 graph-authority constraints and dashboard health summaries. |
+| R6.1 | JSON-First Reports | yes | Completed. Added JSON-first report generation and validation for 10 required health/coverage reports, plus Markdown projections under `reports/markdown/`. |
+| R5.3 | Alignment Graph Review Gate | yes | Completed with `pass_with_conditions`. Named graph edge groups are approved for internal dashboard/reporting and internal retrieval development/evaluation; student diagnostics, adaptive routing, and student-facing AI remain blocked. |
+| R5.2 | Alignment Graph | yes | Completed. Built the first draft alignment graph from R5.1 evidence anchors: 31 edges, 13 pending main edges, 18 traceability edges, and 0 human-approved edges. |
+| R5.1 | Evidence-Anchor Layer | yes | Completed. Created the first governed evidence-anchor layer: source-ranking policy, 15 anchors, 13 claims, schemas, validator, and status reports. |
+| R4.3 | Blueprint Flag Triage | yes | Completed. Triaged all 84 current raw target-exercise missing-unit flags into a curated backlog: 68 still needed, 4 existing-unit match candidates, 1 duplicate, and 11 deferred. |
+| R4.4 | Micro-Teaching Unit Quality Packet | yes | Completed. Created non-mutating packet for 48 empty-needs units, 44 missing term-link units, 2 unresolved term strings, and 84 blueprint flags; R4.5 requires human review before mutation. |
+| R4.5 | Apply Reviewed Micro-Unit Corrections | yes | Completed. Applied the bounded human-reviewed mutation set through CLI: 2 B-domain terms, 13 dependency edges, 19 micro-units, regenerated reports/RAG surfaces, and preserved held design-review items. |
+| R4.2 | Exam-Question Extraction Gap Closure | yes | Completed. Produced a non-mutating gap report and patch queue for 27 exam-question records with missing required-skill annotations; protected references were not changed. |
+| R4.1 | Unit-Term Slug Migration | yes | Completed. Migrated safe unit `terms` values to canonical `begrippen.json` slug IDs through a validated migration script; left `alternatieve kosten` and `schaarste` unresolved for later term-registry review. |
+| R3.2 | Apply Reviewed Empty-Needs Corrections | yes | Completed. Applied the bounded R2.4 mutation-review set through CLI: 15 dependency edges and 6 `underbouw_assumed` classifications. No D04, rejected market-graph, held A-domain, L09->L03, or H13 mutations were applied. |
+| R3.1 | Reference CLI And Documentation Completion | yes | Completed. CLI docs now reflect implemented scripts; coverage report status is `ready_with_blockers`; zero-needs review fields round-trip through parser, formatter, validation, and JSON projection. |
+| R2.4 | Evidence And Unit-Design Cleanup | yes | Completed. Non-mutating packet attaches exact evidence to selected candidate edges, resolves D04 as unit-design-required, classifies foundational A-domain zero-needs candidates, preserves rejected market-graph suggestions, and records a bounded labor-market/unemployment second pass. |
+| R2.3 | Human Review And Gate Closure | yes | Completed with GATE-R2 status `hold`. The audit was diagnostic only; R2.4 produced the non-mutating packet and R3.2 later applied only the human-approved CLI mutation set. |
+| R2.2 | Subagent Review For Empty Needs | yes | Completed. Pedagogy, data-integrity, and evidence reviews plus a GATE-R2 review packet are ready for human review. |
+| R2.1 | Full Empty-Needs Audit | yes | Completed. Non-mutating audit generated 61 machine-suggested empty-needs review entries for the current branch catalog. |
+| R1.3 | Unit Prior-Knowledge Schema Extension | yes | Completed. Unit and review schemas now support zero-needs status, assumed prior knowledge, and review records. |
+| R1.2 | Core JSON Schemas | yes | Completed. Initial JSON schema contracts exist for units, terms, evidence, graph edges, reports, RAG chunks, and reference-quality records. |
+| R1.1 | Source-of-Truth Decision | yes | Completed. `references/SOURCE_OF_TRUTH.md` defines canonical source, projection, authority, and edit-policy rules. |
+| R0.2 | Reference Baseline Inventory | yes | Completed. Source manifest, document inventory, builder, and validators now define the baseline reference/report/tooling surface. |
+| R0.1 | Sprint Execution Scaffold | yes | Completed. Sprint templates, example fixtures, JSON sprint metadata, and plan/result validators exist. |
+| H0.1 | A-Domain Skilltree Consistency | yes | Historical completed work. `A38` through `A44` implemented; A-domain skilltree coverage matches the catalog. |
+| H0.2 | Reference Report Regeneration | yes | Historical completed work. Core reports regenerated and aligned with the catalog. |
+| H0.3 | Labor-Market Unit And Dependency Patch | yes | Historical branch work. Not present in the current 190-live-unit catalog; labor-market/unemployment sequencing is reopened under R2.4. |
 
 ## Detailed Sprint Backlog
 
