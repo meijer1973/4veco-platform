@@ -1,0 +1,1013 @@
+{
+  "schema_version": 1,
+  "registry_id": "skill-operation-registry",
+  "generated_by": "build-scripts/references/build-skill-operation-registry.js",
+  "generated_on": "2026-04-30T15:48:21.946Z",
+  "status": "prepared_for_cp4_review",
+  "storage_decision": {
+    "registry_location": "references/data/skill-operation-registry.json",
+    "machine_registry_created": false,
+    "reason": "S7 prepares a governed data overlay. Machine promotion remains blocked until schema, CLI, validators, mutation logs, and CP-4 approval exist."
+  },
+  "source_files": [
+    "references/authored/skill-categories.md",
+    "references/data/sprints/RX.1-representation-operation-inventory.json",
+    "references/data/exercises/exam-question-overlays.json",
+    "references/data/exercises/target-exercise-overlays.json",
+    "references/machine/micro-teaching-units.json",
+    "reports/review-gates/GATE-CP1-schema-audit/gate-closure.json",
+    "reports/review-gates/GATE-CP3-schema-extension-dry-run/gate-closure.json"
+  ],
+  "field_policy": {
+    "required_units": {
+      "status": "canonical",
+      "meaning": "Micro-teaching-unit IDs required by an exercise or exam question."
+    },
+    "required_skills": {
+      "status": "legacy_source_field_only",
+      "meaning": "Legacy/source field currently used in external and authored source data; do not reuse for new skill-tag or operation semantics."
+    },
+    "exercise_operations": {
+      "status": "provisional_until_cp4",
+      "meaning": "Fine-grained learner actions inside an exercise."
+    },
+    "skill_tags": {
+      "status": "canonical_field_name_pending_cp4_vocabulary",
+      "meaning": "Broader taxonomy labels; CP-4 must decide vocabulary coexistence and migration rules."
+    }
+  },
+  "cp1_gate_status": "pass_with_conditions",
+  "cp3_gate_status": "pass_with_conditions",
+  "summary": {
+    "skill_tag_count": 9,
+    "overlay_skill_tag_count": 6,
+    "exercise_operation_count": 33,
+    "operation_count_by_status": {
+      "held_for_duplicate_or_scope_review": 5,
+      "overlay_provisional": 4,
+      "live_unit_mapped": 13,
+      "candidate_pending_review": 11
+    },
+    "mapped_operation_count": 17,
+    "live_unit_mapped_operation_count": 13,
+    "coexistence_issue_count": 3
+  },
+  "skill_tags": [
+    {
+      "tag_id": "rekenen",
+      "label_nl": "Rekenen",
+      "description": "Numerieke berekeningen, formulegebruik, data-extractie, substitutie, eenheden, en afronding.",
+      "source_section": "2.1 Rekenen",
+      "status": "authored_taxonomy_candidate_pending_cp4",
+      "source_path": "references/authored/skill-categories.md",
+      "field_name": "skill_tags",
+      "notes": [
+        "Promoted from authored skill-categories reference into S7 review overlay.",
+        "CP-4 must decide whether this vocabulary becomes the governed broad-tag vocabulary."
+      ]
+    },
+    {
+      "tag_id": "grafisch",
+      "label_nl": "Grafisch werken",
+      "description": "Grafieken lezen, interpreteren, tekenen, verschuiven, arceren, en grafische conclusies trekken.",
+      "source_section": "2.2 Grafisch werken",
+      "status": "authored_taxonomy_candidate_pending_cp4",
+      "source_path": "references/authored/skill-categories.md",
+      "field_name": "skill_tags",
+      "notes": [
+        "Promoted from authored skill-categories reference into S7 review overlay.",
+        "CP-4 must decide whether this vocabulary becomes the governed broad-tag vocabulary."
+      ]
+    },
+    {
+      "tag_id": "redeneren",
+      "label_nl": "Redeneren",
+      "description": "Causale ketens construeren en economische mechanismen uitleggen.",
+      "source_section": "2.3 Redeneren",
+      "status": "authored_taxonomy_candidate_pending_cp4",
+      "source_path": "references/authored/skill-categories.md",
+      "field_name": "skill_tags",
+      "notes": [
+        "Promoted from authored skill-categories reference into S7 review overlay.",
+        "CP-4 must decide whether this vocabulary becomes the governed broad-tag vocabulary."
+      ]
+    },
+    {
+      "tag_id": "begrippen",
+      "label_nl": "Begrippen en classificatie",
+      "description": "Definities oproepen en toepassen op concrete casussen.",
+      "source_section": "2.4 Begrippen & classificatie",
+      "status": "authored_taxonomy_candidate_pending_cp4",
+      "source_path": "references/authored/skill-categories.md",
+      "field_name": "skill_tags",
+      "notes": [
+        "Promoted from authored skill-categories reference into S7 review overlay.",
+        "CP-4 must decide whether this vocabulary becomes the governed broad-tag vocabulary."
+      ]
+    },
+    {
+      "tag_id": "bron-info",
+      "label_nl": "Bron- en informatievaardigheden",
+      "description": "Relevante informatie uit tekst, tabel, figuur, of nieuwsbericht halen.",
+      "source_section": "2.5 Bron- en informatievaardigheden",
+      "status": "authored_taxonomy_candidate_pending_cp4",
+      "source_path": "references/authored/skill-categories.md",
+      "field_name": "skill_tags",
+      "notes": [
+        "Promoted from authored skill-categories reference into S7 review overlay.",
+        "CP-4 must decide whether this vocabulary becomes the governed broad-tag vocabulary."
+      ]
+    },
+    {
+      "tag_id": "standpunt",
+      "label_nl": "Standpunt en evaluatie",
+      "description": "Argumenten wegen en een onderbouwde conclusie formuleren.",
+      "source_section": "2.6 Standpunt & evaluatie",
+      "status": "authored_taxonomy_candidate_pending_cp4",
+      "source_path": "references/authored/skill-categories.md",
+      "field_name": "skill_tags",
+      "notes": [
+        "Promoted from authored skill-categories reference into S7 review overlay.",
+        "CP-4 must decide whether this vocabulary becomes the governed broad-tag vocabulary."
+      ]
+    },
+    {
+      "tag_id": "strategisch",
+      "label_nl": "Strategisch inzicht",
+      "description": "Strategische interactie, prikkels, commitment, en speltheorie analyseren.",
+      "source_section": "2.7 Strategisch inzicht",
+      "status": "authored_taxonomy_candidate_pending_cp4",
+      "source_path": "references/authored/skill-categories.md",
+      "field_name": "skill_tags",
+      "notes": [
+        "Promoted from authored skill-categories reference into S7 review overlay.",
+        "CP-4 must decide whether this vocabulary becomes the governed broad-tag vocabulary."
+      ]
+    },
+    {
+      "tag_id": "toetsvaardigheden",
+      "label_nl": "Toetsvaardigheden",
+      "description": "Instructiewoord, antwoordvorm, tijd, en integratievaardigheden onder toetscondities.",
+      "source_section": "2.8 Toetsvaardigheden",
+      "status": "authored_taxonomy_candidate_pending_cp4",
+      "source_path": "references/authored/skill-categories.md",
+      "field_name": "skill_tags",
+      "notes": [
+        "Promoted from authored skill-categories reference into S7 review overlay.",
+        "CP-4 must decide whether this vocabulary becomes the governed broad-tag vocabulary."
+      ]
+    },
+    {
+      "tag_id": "onderzoek",
+      "label_nl": "Onderzoek en experimenten",
+      "description": "Economische experimenten ontwerpen, uitvoeren, en interpreteren; optioneel SE-context.",
+      "source_section": "Part 3 Onderzoek / experimenten",
+      "status": "authored_taxonomy_candidate_pending_cp4",
+      "source_path": "references/authored/skill-categories.md",
+      "field_name": "skill_tags",
+      "notes": [
+        "Promoted from authored skill-categories reference into S7 review overlay.",
+        "CP-4 must decide whether this vocabulary becomes the governed broad-tag vocabulary."
+      ]
+    }
+  ],
+  "overlay_skill_tags_observed": [
+    {
+      "tag_id": "calculation",
+      "status": "observed_overlay_tag_needs_cp4_mapping",
+      "observed_in": [
+        "references/data/exercises/exam-question-overlays.json"
+      ],
+      "example_record_id": "overlay:exam:ha-1022-a-23-1-o:opgave-1:question-2"
+    },
+    {
+      "tag_id": "dual_coding_graph",
+      "status": "observed_overlay_tag_needs_cp4_mapping",
+      "observed_in": [
+        "references/data/exercises/target-exercise-overlays.json"
+      ],
+      "example_record_id": "overlay:target-exercise:1.1.3"
+    },
+    {
+      "tag_id": "graph_reading",
+      "status": "observed_overlay_tag_needs_cp4_mapping",
+      "observed_in": [
+        "references/data/exercises/target-exercise-overlays.json"
+      ],
+      "example_record_id": "overlay:target-exercise:1.1.3"
+    },
+    {
+      "tag_id": "percentage_reasoning",
+      "status": "observed_overlay_tag_needs_cp4_mapping",
+      "observed_in": [
+        "references/data/exercises/exam-question-overlays.json",
+        "references/data/exercises/target-exercise-overlays.json"
+      ],
+      "example_record_id": "overlay:exam:ha-1022-a-23-1-o:opgave-1:question-2"
+    },
+    {
+      "tag_id": "source_use",
+      "status": "observed_overlay_tag_needs_cp4_mapping",
+      "observed_in": [
+        "references/data/exercises/exam-question-overlays.json"
+      ],
+      "example_record_id": "overlay:exam:ha-1022-a-23-1-o:opgave-1:question-2"
+    },
+    {
+      "tag_id": "table_interpretation",
+      "status": "observed_overlay_tag_needs_cp4_mapping",
+      "observed_in": [
+        "references/data/exercises/target-exercise-overlays.json"
+      ],
+      "example_record_id": "overlay:target-exercise:1.1.3"
+    }
+  ],
+  "exercise_operations": [
+    {
+      "operation_id": "HOLD_GRAPHICAL_MO_MK_OPTIMUM",
+      "operation_key": "grafische_mo_mk_optimum_bepalen",
+      "name": "Grafische MO=MK optimum bepalen",
+      "status": "held_for_duplicate_or_scope_review",
+      "governance_status": "provisional_until_cp4",
+      "source_path": "references/data/sprints/RX.1-representation-operation-inventory.json",
+      "source_record_id": "HOLD_GRAPHICAL_MO_MK_OPTIMUM",
+      "base_operation": "profit_maximization",
+      "representation": "producer_graph",
+      "economic_context": "producer",
+      "source_values_task": "read_mo_mk_intersection",
+      "composition_pattern": "read_graph_intersection_then_solve_output",
+      "evidence_status": "target_exercise_evidence",
+      "candidate_unit_id": null,
+      "mapped_unit_ids": [],
+      "held_reason": "May overlap existing profit optimization and verification units; needs human review before minting.",
+      "notes": [
+        "Imported from RX.1 representation-operation inventory.",
+        "Operation remains provisional until CP-4 approves coexistence and promotion rules."
+      ]
+    },
+    {
+      "operation_id": "HOLD_MARGINAL_VALUES_FROM_TABLE",
+      "operation_key": "marginale_waarden_uit_tabel",
+      "name": "Marginale waarden uit tabel",
+      "status": "held_for_duplicate_or_scope_review",
+      "governance_status": "provisional_until_cp4",
+      "source_path": "references/data/sprints/RX.1-representation-operation-inventory.json",
+      "source_record_id": "HOLD_MARGINAL_VALUES_FROM_TABLE",
+      "base_operation": "table_difference",
+      "representation": "table",
+      "economic_context": "producer",
+      "source_values_task": "take_differences",
+      "composition_pattern": "read_adjacent_rows_then_calculate_delta",
+      "evidence_status": "target_exercise_evidence",
+      "candidate_unit_id": null,
+      "mapped_unit_ids": [],
+      "held_reason": "A52 already covers MK and MO from table differences.",
+      "notes": [
+        "Imported from RX.1 representation-operation inventory.",
+        "Operation remains provisional until CP-4 approves coexistence and promotion rules."
+      ]
+    },
+    {
+      "operation_id": "HOLD_SHIFT_VS_MOVEMENT",
+      "operation_key": "beweging_langs_curve_versus_verschuiving",
+      "name": "Beweging langs curve versus verschuiving",
+      "status": "held_for_duplicate_or_scope_review",
+      "governance_status": "provisional_until_cp4",
+      "source_path": "references/data/sprints/RX.1-representation-operation-inventory.json",
+      "source_record_id": "HOLD_SHIFT_VS_MOVEMENT",
+      "base_operation": "graph_interpretation",
+      "representation": "p_q_graph",
+      "economic_context": "demand_supply",
+      "source_values_task": "classify_movement_or_shift",
+      "composition_pattern": "read_scenario_then_classify_graph_change",
+      "evidence_status": "target_exercise_evidence",
+      "candidate_unit_id": null,
+      "mapped_unit_ids": [],
+      "held_reason": "D32 and A42 already touch this; design review needed before adding another graph-change unit.",
+      "notes": [
+        "Imported from RX.1 representation-operation inventory.",
+        "Operation remains provisional until CP-4 approves coexistence and promotion rules."
+      ]
+    },
+    {
+      "operation_id": "HOLD_SHORT_SIDE_INTERVENTION_QUANTITY",
+      "operation_key": "korte_zijde_en_interventiehoeveelheid",
+      "name": "Korte zijde en interventiehoeveelheid",
+      "status": "held_for_duplicate_or_scope_review",
+      "governance_status": "provisional_until_cp4",
+      "source_path": "references/data/sprints/RX.1-representation-operation-inventory.json",
+      "source_record_id": "HOLD_SHORT_SIDE_INTERVENTION_QUANTITY",
+      "base_operation": "short_side_rule",
+      "representation": "p_q_graph",
+      "economic_context": "price_controls",
+      "source_values_task": "read_qd_qs_at_forced_price",
+      "composition_pattern": "read_values_then_apply_min_rule",
+      "evidence_status": "target_exercise_evidence",
+      "candidate_unit_id": null,
+      "mapped_unit_ids": [],
+      "held_reason": "A51/A56/A59 now cover surplus/shortage and short-side/intervention quantity logic.",
+      "notes": [
+        "Imported from RX.1 representation-operation inventory.",
+        "Operation remains provisional until CP-4 approves coexistence and promotion rules."
+      ]
+    },
+    {
+      "operation_id": "HOLD_WELFARE_AREAS_PQ_DIAGRAM",
+      "operation_key": "welvaartsgebieden_herkennen_in_p_q_diagram",
+      "name": "Welvaartsgebieden herkennen in P-Q diagram",
+      "status": "held_for_duplicate_or_scope_review",
+      "governance_status": "provisional_until_cp4",
+      "source_path": "references/data/sprints/RX.1-representation-operation-inventory.json",
+      "source_record_id": "HOLD_WELFARE_AREAS_PQ_DIAGRAM",
+      "base_operation": "welfare_area_recognition",
+      "representation": "market_surplus_diagram",
+      "economic_context": "market_welfare",
+      "source_values_task": "identify_regions",
+      "composition_pattern": "read_area_then_interpret",
+      "evidence_status": "target_exercise_evidence",
+      "candidate_unit_id": null,
+      "mapped_unit_ids": [],
+      "held_reason": "Existing A19/A32/A40 already cover core surplus and welfare-area operations; do not mint before detailed overlap review.",
+      "notes": [
+        "Imported from RX.1 representation-operation inventory.",
+        "Operation remains provisional until CP-4 approves coexistence and promotion rules."
+      ]
+    },
+    {
+      "operation_id": "OVERLAY_CALCULATE_PERCENTAGE_SHARE_FROM_SOURCE_VALUES",
+      "operation_key": "calculate_percentage_share_from_source_values",
+      "name": "calculate percentage share from source values",
+      "status": "overlay_provisional",
+      "governance_status": "provisional_until_cp4",
+      "source_path": "references/data/exercises/exam-question-overlays.json",
+      "source_record_id": "overlay:exam:ha-1022-a-23-1-o:opgave-1:question-2",
+      "base_operation": "not_yet_normalized",
+      "representation": "source_text",
+      "economic_context": "external_exam_question",
+      "source_values_task": "source_values_required",
+      "composition_pattern": "overlay_dry_run_label",
+      "evidence_status": "source_values_not_extracted",
+      "candidate_unit_id": null,
+      "mapped_unit_ids": [
+        "A04",
+        "A61"
+      ],
+      "held_reason": null,
+      "notes": [
+        "Observed in S4 dry-run overlay.",
+        "This operation label is not yet governed and may need renaming or mapping in CP-4."
+      ]
+    },
+    {
+      "operation_id": "OVERLAY_DRAW_PQ_GRAPH_FROM_TABLE",
+      "operation_key": "draw_pq_graph_from_table",
+      "name": "draw pq graph from table",
+      "status": "overlay_provisional",
+      "governance_status": "provisional_until_cp4",
+      "source_path": "references/data/exercises/target-exercise-overlays.json",
+      "source_record_id": "overlay:target-exercise:1.1.3",
+      "base_operation": "not_yet_normalized",
+      "representation": "table+p_q_graph",
+      "economic_context": "target_exercise",
+      "source_values_task": "source_values_required",
+      "composition_pattern": "overlay_dry_run_label",
+      "evidence_status": "owned_exercise_evidence",
+      "candidate_unit_id": null,
+      "mapped_unit_ids": [
+        "A45"
+      ],
+      "held_reason": null,
+      "notes": [
+        "Observed in S4 dry-run overlay.",
+        "This operation label is not yet governed and may need renaming or mapping in CP-4."
+      ]
+    },
+    {
+      "operation_id": "OVERLAY_EVALUATE_PERCENTAGE_CLAIM_FROM_TABLE",
+      "operation_key": "evaluate_percentage_claim_from_table",
+      "name": "evaluate percentage claim from table",
+      "status": "overlay_provisional",
+      "governance_status": "provisional_until_cp4",
+      "source_path": "references/data/exercises/target-exercise-overlays.json",
+      "source_record_id": "overlay:target-exercise:1.1.3",
+      "base_operation": "not_yet_normalized",
+      "representation": "table+p_q_graph",
+      "economic_context": "target_exercise",
+      "source_values_task": "source_values_required",
+      "composition_pattern": "overlay_dry_run_label",
+      "evidence_status": "owned_exercise_evidence",
+      "candidate_unit_id": null,
+      "mapped_unit_ids": [
+        "A38",
+        "A61",
+        "A67"
+      ],
+      "held_reason": null,
+      "notes": [
+        "Observed in S4 dry-run overlay.",
+        "This operation label is not yet governed and may need renaming or mapping in CP-4."
+      ]
+    },
+    {
+      "operation_id": "OVERLAY_READ_INTERPOLATE_PQ_GRAPH",
+      "operation_key": "read_interpolate_pq_graph",
+      "name": "read interpolate pq graph",
+      "status": "overlay_provisional",
+      "governance_status": "provisional_until_cp4",
+      "source_path": "references/data/exercises/target-exercise-overlays.json",
+      "source_record_id": "overlay:target-exercise:1.1.3",
+      "base_operation": "not_yet_normalized",
+      "representation": "table+p_q_graph",
+      "economic_context": "target_exercise",
+      "source_values_task": "source_values_required",
+      "composition_pattern": "overlay_dry_run_label",
+      "evidence_status": "owned_exercise_evidence",
+      "candidate_unit_id": null,
+      "mapped_unit_ids": [
+        "A46"
+      ],
+      "held_reason": null,
+      "notes": [
+        "Observed in S4 dry-run overlay.",
+        "This operation label is not yet governed and may need renaming or mapping in CP-4."
+      ]
+    },
+    {
+      "operation_id": "REP_BAR_CHART_VALUE_READING",
+      "operation_key": "waarden_aflezen_uit_staafdiagram",
+      "name": "Waarden aflezen uit staafdiagram",
+      "status": "live_unit_mapped",
+      "governance_status": "provisional_until_cp4",
+      "source_path": "references/data/sprints/RX.1-representation-operation-inventory.json",
+      "source_record_id": "REP_BAR_CHART_VALUE_READING",
+      "base_operation": "source_value_reading",
+      "representation": "bar_chart",
+      "economic_context": "general_source_use",
+      "source_values_task": "read_bar_heights",
+      "composition_pattern": "read_values_before_calculation",
+      "evidence_status": "didactic_prior_rationale",
+      "candidate_unit_id": "A62",
+      "mapped_unit_ids": [
+        "A62"
+      ],
+      "held_reason": null,
+      "notes": [
+        "Imported from RX.1 representation-operation inventory.",
+        "Operation remains provisional until CP-4 approves coexistence and promotion rules."
+      ]
+    },
+    {
+      "operation_id": "REP_BASE_COMPARISON_VALUE_IDENTIFICATION",
+      "operation_key": "basiswaarde_en_vergelijkingswaarde_in_bron_bepalen",
+      "name": "Basiswaarde en vergelijkingswaarde in bron bepalen",
+      "status": "live_unit_mapped",
+      "governance_status": "provisional_until_cp4",
+      "source_path": "references/data/sprints/RX.1-representation-operation-inventory.json",
+      "source_record_id": "REP_BASE_COMPARISON_VALUE_IDENTIFICATION",
+      "base_operation": "base_value_selection",
+      "representation": "source_text_or_table",
+      "economic_context": "percentage_change",
+      "source_values_task": "identify_old_new_base_comparison",
+      "composition_pattern": "select_base_before_percentage_change",
+      "evidence_status": "target_exercise_evidence",
+      "candidate_unit_id": "A66",
+      "mapped_unit_ids": [
+        "A66"
+      ],
+      "held_reason": null,
+      "notes": [
+        "Imported from RX.1 representation-operation inventory.",
+        "Operation remains provisional until CP-4 approves coexistence and promotion rules."
+      ]
+    },
+    {
+      "operation_id": "REP_BREAK_EVEN_TO_TK_GRAPH",
+      "operation_key": "break_even_aflezen_uit_to_tk_grafiek",
+      "name": "Break-even aflezen uit TO-TK-grafiek",
+      "status": "candidate_pending_review",
+      "governance_status": "provisional_until_cp4",
+      "source_path": "references/data/sprints/RX.1-representation-operation-inventory.json",
+      "source_record_id": "REP_BREAK_EVEN_TO_TK_GRAPH",
+      "base_operation": "break_even",
+      "representation": "to_tk_graph",
+      "economic_context": "producer",
+      "source_values_task": "read_intersection",
+      "composition_pattern": "read_graph_intersection_then_interpret",
+      "evidence_status": "target_exercise_evidence",
+      "candidate_unit_id": "A77",
+      "mapped_unit_ids": [],
+      "held_reason": null,
+      "notes": [
+        "Imported from RX.1 representation-operation inventory.",
+        "Operation remains provisional until CP-4 approves coexistence and promotion rules."
+      ]
+    },
+    {
+      "operation_id": "REP_ELASTICITY_FROM_DEMAND_GRAPH",
+      "operation_key": "elasticiteit_berekenen_uit_vraaggrafiek",
+      "name": "Elasticiteit berekenen uit vraaggrafiek",
+      "status": "candidate_pending_review",
+      "governance_status": "provisional_until_cp4",
+      "source_path": "references/data/sprints/RX.1-representation-operation-inventory.json",
+      "source_record_id": "REP_ELASTICITY_FROM_DEMAND_GRAPH",
+      "base_operation": "elasticity",
+      "representation": "p_q_graph",
+      "economic_context": "market_demand",
+      "source_values_task": "read_two_price_quantity_pairs",
+      "composition_pattern": "read_graph_pairs_then_calculate_elasticity",
+      "evidence_status": "exam_question_evidence",
+      "candidate_unit_id": "A83",
+      "mapped_unit_ids": [],
+      "held_reason": null,
+      "notes": [
+        "Imported from RX.1 representation-operation inventory.",
+        "Operation remains provisional until CP-4 approves coexistence and promotion rules."
+      ]
+    },
+    {
+      "operation_id": "REP_ELASTICITY_FROM_TABLE",
+      "operation_key": "elasticiteit_berekenen_uit_tabelwaarden",
+      "name": "Elasticiteit berekenen uit tabelwaarden",
+      "status": "candidate_pending_review",
+      "governance_status": "provisional_until_cp4",
+      "source_path": "references/data/sprints/RX.1-representation-operation-inventory.json",
+      "source_record_id": "REP_ELASTICITY_FROM_TABLE",
+      "base_operation": "elasticity",
+      "representation": "table",
+      "economic_context": "market",
+      "source_values_task": "select_two_variable_changes",
+      "composition_pattern": "read_values_then_calculate_elasticity",
+      "evidence_status": "exam_question_evidence",
+      "candidate_unit_id": "A82",
+      "mapped_unit_ids": [],
+      "held_reason": null,
+      "notes": [
+        "Imported from RX.1 representation-operation inventory.",
+        "Operation remains provisional until CP-4 approves coexistence and promotion rules."
+      ]
+    },
+    {
+      "operation_id": "REP_INDEX_CHANGE_LINE_GRAPH",
+      "operation_key": "indexverandering_aflezen_uit_lijngrafiek",
+      "name": "Indexverandering aflezen uit lijngrafiek",
+      "status": "live_unit_mapped",
+      "governance_status": "provisional_until_cp4",
+      "source_path": "references/data/sprints/RX.1-representation-operation-inventory.json",
+      "source_record_id": "REP_INDEX_CHANGE_LINE_GRAPH",
+      "base_operation": "index_number_interpretation",
+      "representation": "line_chart",
+      "economic_context": "index_series",
+      "source_values_task": "read_index_series_points",
+      "composition_pattern": "read_index_points_then_interpret",
+      "evidence_status": "target_exercise_evidence",
+      "candidate_unit_id": "A73",
+      "mapped_unit_ids": [
+        "A73"
+      ],
+      "held_reason": null,
+      "notes": [
+        "Imported from RX.1 representation-operation inventory.",
+        "Operation remains provisional until CP-4 approves coexistence and promotion rules."
+      ]
+    },
+    {
+      "operation_id": "REP_INDEX_FROM_TABLE",
+      "operation_key": "indexcijfer_berekenen_vanuit_tabel",
+      "name": "Indexcijfer berekenen vanuit tabel",
+      "status": "live_unit_mapped",
+      "governance_status": "provisional_until_cp4",
+      "source_path": "references/data/sprints/RX.1-representation-operation-inventory.json",
+      "source_record_id": "REP_INDEX_FROM_TABLE",
+      "base_operation": "index_number",
+      "representation": "table",
+      "economic_context": "price_index",
+      "source_values_task": "select_base_year_and_current_year",
+      "composition_pattern": "select_values_then_index",
+      "evidence_status": "target_exercise_evidence",
+      "candidate_unit_id": "A72",
+      "mapped_unit_ids": [
+        "A72"
+      ],
+      "held_reason": null,
+      "notes": [
+        "Imported from RX.1 representation-operation inventory.",
+        "Operation remains provisional until CP-4 approves coexistence and promotion rules."
+      ]
+    },
+    {
+      "operation_id": "REP_LINE_GRAPH_VALUE_READING",
+      "operation_key": "waarden_aflezen_uit_lijngrafiek",
+      "name": "Waarden aflezen uit lijngrafiek",
+      "status": "live_unit_mapped",
+      "governance_status": "provisional_until_cp4",
+      "source_path": "references/data/sprints/RX.1-representation-operation-inventory.json",
+      "source_record_id": "REP_LINE_GRAPH_VALUE_READING",
+      "base_operation": "source_value_reading",
+      "representation": "line_chart",
+      "economic_context": "time_series",
+      "source_values_task": "read_points_periods",
+      "composition_pattern": "read_values_before_calculation",
+      "evidence_status": "target_exercise_evidence",
+      "candidate_unit_id": "A63",
+      "mapped_unit_ids": [
+        "A63"
+      ],
+      "held_reason": null,
+      "notes": [
+        "Imported from RX.1 representation-operation inventory.",
+        "Operation remains provisional until CP-4 approves coexistence and promotion rules."
+      ]
+    },
+    {
+      "operation_id": "REP_MAX_PROFIT_TO_TK_TABLE",
+      "operation_key": "maximale_winst_bepalen_uit_to_tk_tabel",
+      "name": "Maximale winst bepalen uit TO-TK-tabel",
+      "status": "candidate_pending_review",
+      "governance_status": "provisional_until_cp4",
+      "source_path": "references/data/sprints/RX.1-representation-operation-inventory.json",
+      "source_record_id": "REP_MAX_PROFIT_TO_TK_TABLE",
+      "base_operation": "profit_maximization_by_comparison",
+      "representation": "table",
+      "economic_context": "producer",
+      "source_values_task": "compare_profit_by_quantity",
+      "composition_pattern": "read_rows_then_choose_maximum",
+      "evidence_status": "exam_question_evidence",
+      "candidate_unit_id": "A79",
+      "mapped_unit_ids": [],
+      "held_reason": null,
+      "notes": [
+        "Imported from RX.1 representation-operation inventory.",
+        "Operation remains provisional until CP-4 approves coexistence and promotion rules."
+      ]
+    },
+    {
+      "operation_id": "REP_PCT_CHANGE_BAR_CHART",
+      "operation_key": "procentuele_verandering_berekenen_vanuit_staafdiagram",
+      "name": "Procentuele verandering berekenen vanuit staafdiagram",
+      "status": "live_unit_mapped",
+      "governance_status": "provisional_until_cp4",
+      "source_path": "references/data/sprints/RX.1-representation-operation-inventory.json",
+      "source_record_id": "REP_PCT_CHANGE_BAR_CHART",
+      "base_operation": "percentage_change",
+      "representation": "bar_chart",
+      "economic_context": "source_chart",
+      "source_values_task": "read_bar_values",
+      "composition_pattern": "read_values_then_calculate",
+      "evidence_status": "didactic_prior_rationale",
+      "candidate_unit_id": "A68",
+      "mapped_unit_ids": [
+        "A68"
+      ],
+      "held_reason": null,
+      "notes": [
+        "Imported from RX.1 representation-operation inventory.",
+        "Operation remains provisional until CP-4 approves coexistence and promotion rules."
+      ]
+    },
+    {
+      "operation_id": "REP_PCT_CHANGE_FROM_INDEX",
+      "operation_key": "procentuele_verandering_berekenen_vanuit_indexcijfers",
+      "name": "Procentuele verandering berekenen vanuit indexcijfers",
+      "status": "live_unit_mapped",
+      "governance_status": "provisional_until_cp4",
+      "source_path": "references/data/sprints/RX.1-representation-operation-inventory.json",
+      "source_record_id": "REP_PCT_CHANGE_FROM_INDEX",
+      "base_operation": "percentage_change",
+      "representation": "index_values",
+      "economic_context": "inflation_real_nominal",
+      "source_values_task": "select_two_index_values",
+      "composition_pattern": "read_index_values_then_percentage_change",
+      "evidence_status": "target_exercise_evidence",
+      "candidate_unit_id": "A74",
+      "mapped_unit_ids": [
+        "A74"
+      ],
+      "held_reason": null,
+      "notes": [
+        "Imported from RX.1 representation-operation inventory.",
+        "Operation remains provisional until CP-4 approves coexistence and promotion rules."
+      ]
+    },
+    {
+      "operation_id": "REP_PCT_CHANGE_LINE_GRAPH",
+      "operation_key": "procentuele_verandering_berekenen_vanuit_lijngrafiek",
+      "name": "Procentuele verandering berekenen vanuit lijngrafiek",
+      "status": "live_unit_mapped",
+      "governance_status": "provisional_until_cp4",
+      "source_path": "references/data/sprints/RX.1-representation-operation-inventory.json",
+      "source_record_id": "REP_PCT_CHANGE_LINE_GRAPH",
+      "base_operation": "percentage_change",
+      "representation": "line_chart",
+      "economic_context": "macro_time_series",
+      "source_values_task": "read_two_time_points",
+      "composition_pattern": "read_values_then_calculate",
+      "evidence_status": "target_exercise_evidence",
+      "candidate_unit_id": "A69",
+      "mapped_unit_ids": [
+        "A69"
+      ],
+      "held_reason": null,
+      "notes": [
+        "Imported from RX.1 representation-operation inventory.",
+        "Operation remains provisional until CP-4 approves coexistence and promotion rules."
+      ]
+    },
+    {
+      "operation_id": "REP_PCT_CHANGE_PIE_CHART",
+      "operation_key": "procentuele_verandering_berekenen_vanuit_cirkeldiagram",
+      "name": "Procentuele verandering berekenen vanuit cirkeldiagram",
+      "status": "candidate_pending_review",
+      "governance_status": "provisional_until_cp4",
+      "source_path": "references/data/sprints/RX.1-representation-operation-inventory.json",
+      "source_record_id": "REP_PCT_CHANGE_PIE_CHART",
+      "base_operation": "percentage_change",
+      "representation": "pie_chart_plus_total",
+      "economic_context": "source_shares",
+      "source_values_task": "convert_shares_to_values",
+      "composition_pattern": "read_share_calculate_absolute_then_percentage_change",
+      "evidence_status": "didactic_prior_rationale",
+      "candidate_unit_id": "A71",
+      "mapped_unit_ids": [],
+      "held_reason": null,
+      "notes": [
+        "Imported from RX.1 representation-operation inventory.",
+        "Operation remains provisional until CP-4 approves coexistence and promotion rules."
+      ]
+    },
+    {
+      "operation_id": "REP_PCT_CHANGE_TABLE",
+      "operation_key": "procentuele_verandering_berekenen_vanuit_tabel",
+      "name": "Procentuele verandering berekenen vanuit tabel",
+      "status": "live_unit_mapped",
+      "governance_status": "provisional_until_cp4",
+      "source_path": "references/data/sprints/RX.1-representation-operation-inventory.json",
+      "source_record_id": "REP_PCT_CHANGE_TABLE",
+      "base_operation": "percentage_change",
+      "representation": "table",
+      "economic_context": "general_price_quantity",
+      "source_values_task": "select_table_values",
+      "composition_pattern": "read_values_then_calculate",
+      "evidence_status": "target_exercise_evidence",
+      "candidate_unit_id": "A67",
+      "mapped_unit_ids": [
+        "A67"
+      ],
+      "held_reason": null,
+      "notes": [
+        "Imported from RX.1 representation-operation inventory.",
+        "Operation remains provisional until CP-4 approves coexistence and promotion rules."
+      ]
+    },
+    {
+      "operation_id": "REP_PERCENTAGE_POINT_CHANGE",
+      "operation_key": "percentagepuntverandering_in_aandeel_herkennen",
+      "name": "Percentagepuntverandering in aandeel herkennen",
+      "status": "live_unit_mapped",
+      "governance_status": "provisional_until_cp4",
+      "source_path": "references/data/sprints/RX.1-representation-operation-inventory.json",
+      "source_record_id": "REP_PERCENTAGE_POINT_CHANGE",
+      "base_operation": "percentage_point_difference",
+      "representation": "share_or_index_source",
+      "economic_context": "shares_inflation",
+      "source_values_task": "compare_percent_values",
+      "composition_pattern": "distinguish_percentage_points_from_percent_change",
+      "evidence_status": "target_exercise_evidence",
+      "candidate_unit_id": "A70",
+      "mapped_unit_ids": [
+        "A70"
+      ],
+      "held_reason": null,
+      "notes": [
+        "Imported from RX.1 representation-operation inventory.",
+        "Operation remains provisional until CP-4 approves coexistence and promotion rules."
+      ]
+    },
+    {
+      "operation_id": "REP_PIE_SHARE_READING",
+      "operation_key": "aandelen_aflezen_uit_cirkeldiagram",
+      "name": "Aandelen aflezen uit cirkeldiagram",
+      "status": "live_unit_mapped",
+      "governance_status": "provisional_until_cp4",
+      "source_path": "references/data/sprints/RX.1-representation-operation-inventory.json",
+      "source_record_id": "REP_PIE_SHARE_READING",
+      "base_operation": "share_reading",
+      "representation": "pie_chart",
+      "economic_context": "source_shares",
+      "source_values_task": "read_share_percentages",
+      "composition_pattern": "read_share_before_calculation",
+      "evidence_status": "didactic_prior_rationale",
+      "candidate_unit_id": "A64",
+      "mapped_unit_ids": [
+        "A64"
+      ],
+      "held_reason": null,
+      "notes": [
+        "Imported from RX.1 representation-operation inventory.",
+        "Operation remains provisional until CP-4 approves coexistence and promotion rules."
+      ]
+    },
+    {
+      "operation_id": "REP_PROFIT_FROM_P_GTK_Q",
+      "operation_key": "totale_winst_berekenen_uit_p_gtk_en_q",
+      "name": "Totale winst berekenen uit P, GTK en Q",
+      "status": "candidate_pending_review",
+      "governance_status": "provisional_until_cp4",
+      "source_path": "references/data/sprints/RX.1-representation-operation-inventory.json",
+      "source_record_id": "REP_PROFIT_FROM_P_GTK_Q",
+      "base_operation": "profit",
+      "representation": "producer_data",
+      "economic_context": "producer",
+      "source_values_task": "select_p_gtk_q_values",
+      "composition_pattern": "read_values_then_apply_profit_rectangle_formula",
+      "evidence_status": "exam_question_evidence",
+      "candidate_unit_id": "A76",
+      "mapped_unit_ids": [],
+      "held_reason": null,
+      "notes": [
+        "Imported from RX.1 representation-operation inventory.",
+        "Operation remains provisional until CP-4 approves coexistence and promotion rules."
+      ]
+    },
+    {
+      "operation_id": "REP_PROFIT_FROM_REVENUE_COST_TABLE",
+      "operation_key": "totale_winst_berekenen_uit_opbrengsten_en_kostentabel",
+      "name": "Totale winst berekenen uit opbrengsten- en kostentabel",
+      "status": "candidate_pending_review",
+      "governance_status": "provisional_until_cp4",
+      "source_path": "references/data/sprints/RX.1-representation-operation-inventory.json",
+      "source_record_id": "REP_PROFIT_FROM_REVENUE_COST_TABLE",
+      "base_operation": "profit",
+      "representation": "table",
+      "economic_context": "producer",
+      "source_values_task": "select_to_tk_values",
+      "composition_pattern": "read_values_then_calculate_profit",
+      "evidence_status": "target_exercise_evidence",
+      "candidate_unit_id": "A75",
+      "mapped_unit_ids": [],
+      "held_reason": null,
+      "notes": [
+        "Imported from RX.1 representation-operation inventory.",
+        "Operation remains provisional until CP-4 approves coexistence and promotion rules."
+      ]
+    },
+    {
+      "operation_id": "REP_PROFIT_LOSS_BREAK_EVEN_PRODUCER_GRAPH",
+      "operation_key": "winst_verlies_en_break_even_herkennen_in_producentengrafiek",
+      "name": "Winst, verlies en break-even herkennen in producentengrafiek",
+      "status": "candidate_pending_review",
+      "governance_status": "provisional_until_cp4",
+      "source_path": "references/data/sprints/RX.1-representation-operation-inventory.json",
+      "source_record_id": "REP_PROFIT_LOSS_BREAK_EVEN_PRODUCER_GRAPH",
+      "base_operation": "profit_loss_break_even_recognition",
+      "representation": "producer_graph",
+      "economic_context": "producer",
+      "source_values_task": "compare_p_and_gtk",
+      "composition_pattern": "read_graph_condition_then_classify",
+      "evidence_status": "exam_question_evidence",
+      "candidate_unit_id": "A81",
+      "mapped_unit_ids": [],
+      "held_reason": null,
+      "notes": [
+        "Imported from RX.1 representation-operation inventory.",
+        "Operation remains provisional until CP-4 approves coexistence and promotion rules."
+      ]
+    },
+    {
+      "operation_id": "REP_PROFIT_LOSS_TO_TK_GRAPH",
+      "operation_key": "winst_of_verlies_aflezen_uit_to_tk_grafiek",
+      "name": "Winst of verlies aflezen uit TO-TK-grafiek",
+      "status": "candidate_pending_review",
+      "governance_status": "provisional_until_cp4",
+      "source_path": "references/data/sprints/RX.1-representation-operation-inventory.json",
+      "source_record_id": "REP_PROFIT_LOSS_TO_TK_GRAPH",
+      "base_operation": "profit",
+      "representation": "to_tk_graph",
+      "economic_context": "producer",
+      "source_values_task": "read_vertical_distance",
+      "composition_pattern": "read_graph_distance_then_interpret_profit_loss",
+      "evidence_status": "target_exercise_evidence",
+      "candidate_unit_id": "A78",
+      "mapped_unit_ids": [],
+      "held_reason": null,
+      "notes": [
+        "Imported from RX.1 representation-operation inventory.",
+        "Operation remains provisional until CP-4 approves coexistence and promotion rules."
+      ]
+    },
+    {
+      "operation_id": "REP_PROFIT_RECTANGLE_PRODUCER_GRAPH",
+      "operation_key": "winstrechthoek_tekenen_in_producentengrafiek",
+      "name": "Winstrechthoek tekenen in producentengrafiek",
+      "status": "candidate_pending_review",
+      "governance_status": "provisional_until_cp4",
+      "source_path": "references/data/sprints/RX.1-representation-operation-inventory.json",
+      "source_record_id": "REP_PROFIT_RECTANGLE_PRODUCER_GRAPH",
+      "base_operation": "profit_rectangle",
+      "representation": "producer_graph",
+      "economic_context": "producer",
+      "source_values_task": "read_p_gtk_q_from_graph",
+      "composition_pattern": "read_values_then_draw_area",
+      "evidence_status": "exam_question_evidence",
+      "candidate_unit_id": "A80",
+      "mapped_unit_ids": [],
+      "held_reason": null,
+      "notes": [
+        "Imported from RX.1 representation-operation inventory.",
+        "Operation remains provisional until CP-4 approves coexistence and promotion rules."
+      ]
+    },
+    {
+      "operation_id": "REP_REVENUE_CHANGE_WITH_ELASTICITY_SOURCE",
+      "operation_key": "omzetverandering_beoordelen_met_elasticiteit_uit_bron",
+      "name": "Omzetverandering beoordelen met elasticiteit uit bron",
+      "status": "candidate_pending_review",
+      "governance_status": "provisional_until_cp4",
+      "source_path": "references/data/sprints/RX.1-representation-operation-inventory.json",
+      "source_record_id": "REP_REVENUE_CHANGE_WITH_ELASTICITY_SOURCE",
+      "base_operation": "elasticity_revenue_interpretation",
+      "representation": "source_text_or_table",
+      "economic_context": "market_revenue",
+      "source_values_task": "read_elasticity_or_change_from_source",
+      "composition_pattern": "read_source_change_then_interpret_revenue_effect",
+      "evidence_status": "exam_question_evidence",
+      "candidate_unit_id": "A84",
+      "mapped_unit_ids": [],
+      "held_reason": null,
+      "notes": [
+        "Imported from RX.1 representation-operation inventory.",
+        "Operation remains provisional until CP-4 approves coexistence and promotion rules."
+      ]
+    },
+    {
+      "operation_id": "REP_SHARE_TOTAL_ABSOLUTE_QUANTITY",
+      "operation_key": "absolute_hoeveelheid_berekenen_uit_aandeel_en_totaal",
+      "name": "Absolute hoeveelheid berekenen uit aandeel en totaal",
+      "status": "live_unit_mapped",
+      "governance_status": "provisional_until_cp4",
+      "source_path": "references/data/sprints/RX.1-representation-operation-inventory.json",
+      "source_record_id": "REP_SHARE_TOTAL_ABSOLUTE_QUANTITY",
+      "base_operation": "percentage_share_application",
+      "representation": "pie_chart_plus_total",
+      "economic_context": "source_shares",
+      "source_values_task": "combine_share_and_total",
+      "composition_pattern": "read_share_then_calculate_absolute_value",
+      "evidence_status": "exam_question_evidence",
+      "candidate_unit_id": "A65",
+      "mapped_unit_ids": [
+        "A65"
+      ],
+      "held_reason": null,
+      "notes": [
+        "Imported from RX.1 representation-operation inventory.",
+        "Operation remains provisional until CP-4 approves coexistence and promotion rules."
+      ]
+    },
+    {
+      "operation_id": "REP_TABLE_VALUE_SELECTION",
+      "operation_key": "tabelwaarden_selecteren_voor_berekening",
+      "name": "Tabelwaarden selecteren voor berekening",
+      "status": "live_unit_mapped",
+      "governance_status": "provisional_until_cp4",
+      "source_path": "references/data/sprints/RX.1-representation-operation-inventory.json",
+      "source_record_id": "REP_TABLE_VALUE_SELECTION",
+      "base_operation": "source_value_selection",
+      "representation": "table",
+      "economic_context": "general_calculation",
+      "source_values_task": "select_row_column_old_new_values",
+      "composition_pattern": "read_values_before_calculation",
+      "evidence_status": "target_exercise_evidence",
+      "candidate_unit_id": "A61",
+      "mapped_unit_ids": [
+        "A61"
+      ],
+      "held_reason": null,
+      "notes": [
+        "Imported from RX.1 representation-operation inventory.",
+        "Operation remains provisional until CP-4 approves coexistence and promotion rules."
+      ]
+    }
+  ],
+  "coexistence_issues": [
+    {
+      "issue_id": "S7-COEX-001",
+      "severity": "medium",
+      "summary": "Dry-run overlays use English-style skill_tags while skill-categories.md uses Dutch broad categories.",
+      "next_action": "CP-4 should decide whether to normalize overlay tags to Dutch broad categories, keep English sub-tags as aliases, or split broad tags from operation labels.",
+      "proof_required_to_close": "Registry records show approved tag IDs, alias policy, and validator rules."
+    },
+    {
+      "issue_id": "S7-COEX-002",
+      "severity": "high",
+      "summary": "exercise_operations are useful but not yet governed machine registry records.",
+      "next_action": "Keep operations provisional until CP-4 approves governance and a later CLI-backed registry path exists.",
+      "proof_required_to_close": "Operation records have stable IDs, statuses, source provenance, validator coverage, and promotion policy."
+    },
+    {
+      "issue_id": "S7-COEX-003",
+      "severity": "high",
+      "summary": "required_skills remains a legacy/source field and must not be reused for a new concept.",
+      "next_action": "Validators and review packet should preserve required_units/exercise_operations/skill_tags separation.",
+      "proof_required_to_close": "CP-4 closure confirms field semantics and blocks required_skills reuse until migration."
+    }
+  ]
+}

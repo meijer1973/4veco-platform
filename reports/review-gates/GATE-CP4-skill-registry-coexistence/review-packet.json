@@ -1,0 +1,100 @@
+{
+  "gate_id": "GATE-CP4-skill-registry-coexistence",
+  "sprint_id": "S7",
+  "status": "prepared_for_human_review",
+  "generated_by": "build-scripts/references/build-skill-operation-registry.js",
+  "generated_on": "2026-04-30T15:48:21.946Z",
+  "registry": "references/data/skill-operation-registry.json",
+  "report": "reports/json/skill-operation-registry.json",
+  "summary": {
+    "skill_tag_count": 9,
+    "overlay_skill_tag_count": 6,
+    "exercise_operation_count": 33,
+    "operation_count_by_status": {
+      "held_for_duplicate_or_scope_review": 5,
+      "overlay_provisional": 4,
+      "live_unit_mapped": 13,
+      "candidate_pending_review": 11
+    },
+    "mapped_operation_count": 17,
+    "live_unit_mapped_operation_count": 13,
+    "coexistence_issue_count": 3
+  },
+  "field_policy": {
+    "required_units": {
+      "status": "canonical",
+      "meaning": "Micro-teaching-unit IDs required by an exercise or exam question."
+    },
+    "required_skills": {
+      "status": "legacy_source_field_only",
+      "meaning": "Legacy/source field currently used in external and authored source data; do not reuse for new skill-tag or operation semantics."
+    },
+    "exercise_operations": {
+      "status": "provisional_until_cp4",
+      "meaning": "Fine-grained learner actions inside an exercise."
+    },
+    "skill_tags": {
+      "status": "canonical_field_name_pending_cp4_vocabulary",
+      "meaning": "Broader taxonomy labels; CP-4 must decide vocabulary coexistence and migration rules."
+    }
+  },
+  "review_questions": [
+    {
+      "id": "CP4-Q1",
+      "question": "Is references/data/ the correct storage location for the S7 MVP, with machine-registry promotion blocked until CLI support exists?",
+      "recommendation": "Yes. Keep S7 as a governed data overlay."
+    },
+    {
+      "id": "CP4-Q2",
+      "question": "Should required_units, exercise_operations, and skill_tags remain the three canonical fields, with required_skills legacy/source-only?",
+      "recommendation": "Yes. This preserves CP-1 semantics."
+    },
+    {
+      "id": "CP4-Q3",
+      "question": "Are the broad Dutch skill_tags from skill-categories.md acceptable as the v1 broad taxonomy?",
+      "recommendation": "Mostly, but CP-4 should decide alias and naming rules."
+    },
+    {
+      "id": "CP4-Q4",
+      "question": "How should the English-style dry-run overlay skill_tags coexist with the Dutch broad categories?",
+      "recommendation": "Treat them as provisional aliases/sub-tags until CP-4 decides whether to normalize or split them."
+    },
+    {
+      "id": "CP4-Q5",
+      "question": "Are RX.1 exercise_operations ready to become governed operation records?",
+      "recommendation": "Not yet. Keep them provisional and approve only the coexistence structure."
+    },
+    {
+      "id": "CP4-Q6",
+      "question": "Are operation-to-unit mappings clear enough where live units or dry-run overlays make the relation explicit?",
+      "recommendation": "Mostly. Approve mapped records as provisional; require proof before bulk backfill."
+    },
+    {
+      "id": "CP4-Q7",
+      "question": "Should S7 authorize a references/machine operation or skill-tag registry now?",
+      "recommendation": "No. Machine promotion requires CLI and mutation logs."
+    },
+    {
+      "id": "CP4-Q8",
+      "question": "What gate status should GATE-CP4-skill-registry-coexistence receive?",
+      "recommendation": "Expected status is pass_with_conditions unless field separation or tag coexistence is rejected."
+    }
+  ],
+  "required_human_decisions": [
+    "Confirm field separation and required_skills legacy status.",
+    "Decide broad skill_tags vocabulary and alias policy.",
+    "Decide whether exercise_operations stay provisional or receive limited approval.",
+    "Confirm no references/machine registry is authorized in S7."
+  ],
+  "blocked_until_gate_closure": [
+    "S7 sprint closure",
+    "bulk exercise metadata backfill",
+    "machine registry promotion",
+    "student diagnostics",
+    "adaptive routing",
+    "student-facing AI",
+    "automatic sequencing",
+    "mastery decisions",
+    "summative decisions"
+  ]
+}

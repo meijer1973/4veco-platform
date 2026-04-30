@@ -1,0 +1,44 @@
+{
+  "sprint_id": "S7",
+  "name": "Skill And Operation Registry MVP",
+  "status": "in_progress",
+  "planned_on": "2026-04-30",
+  "plan": "docs/sprints/S7-plan.md",
+  "protected_reference_data_changes_allowed": false,
+  "protected_reference_data_change_mode": "none",
+  "human_review_required": true,
+  "gate_id": "GATE-CP4-skill-registry-coexistence",
+  "review_packet": "reports/review-gates/GATE-CP4-skill-registry-coexistence/review-packet.md",
+  "valid_gate_statuses": [
+    "pass",
+    "pass_with_conditions",
+    "hold",
+    "fail"
+  ],
+  "registry_storage_decision": {
+    "first_implementation": "references/data/skill-operation-registry.json",
+    "machine_registry_created": false,
+    "reason": "The registry is a CP-4 review overlay until schema, CLI, validators, mutation logs, and human approval exist for machine promotion."
+  },
+  "blocked_scope": [
+    "references/machine/exercise-operations.json",
+    "references/machine/skill-tags.json",
+    "hand edits to references/machine",
+    "hand edits to references/external",
+    "reuse of required_skills for a new concept",
+    "bulk exercise metadata backfill",
+    "student diagnostics",
+    "adaptive routing",
+    "student-facing AI",
+    "automatic sequencing",
+    "mastery decisions",
+    "summative decisions"
+  ],
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js docs/sprints/S7-plan.md",
+    "node build-scripts/references/build-skill-operation-registry.js",
+    "node build-scripts/references/check-skill-operation-registry.js",
+    "node build-scripts/references/validate-core-schemas.js",
+    "node build-scripts/sprints/check-sprint-bundle.js S7"
+  ]
+}

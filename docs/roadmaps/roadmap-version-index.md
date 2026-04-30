@@ -12,12 +12,13 @@ docs/roadmaps/roadmap-version-index.json
 
 | Roadmap | Version | Path | Notes |
 |---|---|---|---|
-| References Team Roadmap | `v2.17-source-document-registry-mvp` | `references/reference-team-roadmap.md` | Current operating roadmap after completing S6 Bronnen Registry MVP with a source-document registry overlay under `references/data/`. |
+| References Team Roadmap | `v2.18-s7-skill-operation-review-prepared` | `references/reference-team-roadmap.md` | Current operating roadmap after preparing S7 Skill And Operation Registry MVP for CP-4 review. |
 
 ## Outdated Archive
 
 | Roadmap | Version | Path | Superseded By |
 |---|---|---|---|
+| References Team Roadmap before S7 skill/operation review preparation | `v2.17-source-document-registry-mvp` | `docs/roadmaps/outdated/reference-team-roadmap-v2.17-source-document-registry-mvp.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before S6 source-document registry MVP | `v2.16-rx2b-graphical-foundation-applied` | `docs/roadmaps/outdated/reference-team-roadmap-v2.16-rx2b-graphical-foundation-applied.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before RX.2b graphical foundation application | `v2.15-sprint-ledger-near-top` | `docs/roadmaps/outdated/reference-team-roadmap-v2.15-sprint-ledger-near-top.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before Sprint Ledger moved near top | `v2.14-rx2b-graphical-foundation-planned` | `docs/roadmaps/outdated/reference-team-roadmap-v2.14-rx2b-graphical-foundation-planned.md` | `references/reference-team-roadmap.md` |

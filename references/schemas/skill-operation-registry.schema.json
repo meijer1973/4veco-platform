@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://4veco.local/references/schemas/skill-operation-registry.schema.json",
+  "title": "SkillOperationRegistry",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "registry_id",
+    "storage_decision",
+    "field_policy",
+    "skill_tags",
+    "exercise_operations",
+    "coexistence_issues"
+  ],
+  "properties": {
+    "schema_version": { "type": "integer" },
+    "registry_id": { "type": "string" },
+    "generated_by": { "type": "string" },
+    "generated_on": { "type": "string" },
+    "status": { "type": "string" },
+    "storage_decision": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "field_policy": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "summary": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "skill_tags": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["tag_id", "label_nl", "status", "source_path"],
+        "additionalProperties": true
+      }
+    },
+    "overlay_skill_tags_observed": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["tag_id", "status", "observed_in"],
+        "additionalProperties": true
+      }
+    },
+    "exercise_operations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["operation_id", "name", "status", "mapped_unit_ids", "source_path"],
+        "additionalProperties": true
+      }
+    },
+    "coexistence_issues": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["issue_id", "severity", "summary", "next_action"],
+        "additionalProperties": true
+      }
+    }
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "generated_by": "build-scripts/references/build-skill-operation-registry.js",
+  "generated_on": "2026-04-30T15:48:21.946Z",
+  "status": "prepared_for_cp4_review",
+  "summary": {
+    "skill_tag_count": 9,
+    "overlay_skill_tag_count": 6,
+    "exercise_operation_count": 33,
+    "operation_count_by_status": {
+      "held_for_duplicate_or_scope_review": 5,
+      "overlay_provisional": 4,
+      "live_unit_mapped": 13,
+      "candidate_pending_review": 11
+    },
+    "mapped_operation_count": 17,
+    "live_unit_mapped_operation_count": 13,
+    "coexistence_issue_count": 3
+  },
+  "field_policy": {
+    "required_units": {
+      "status": "canonical",
+      "meaning": "Micro-teaching-unit IDs required by an exercise or exam question."
+    },
+    "required_skills": {
+      "status": "legacy_source_field_only",
+      "meaning": "Legacy/source field currently used in external and authored source data; do not reuse for new skill-tag or operation semantics."
+    },
+    "exercise_operations": {
+      "status": "provisional_until_cp4",
+      "meaning": "Fine-grained learner actions inside an exercise."
+    },
+    "skill_tags": {
+      "status": "canonical_field_name_pending_cp4_vocabulary",
+      "meaning": "Broader taxonomy labels; CP-4 must decide vocabulary coexistence and migration rules."
+    }
+  },
+  "coexistence_issues": [
+    {
+      "issue_id": "S7-COEX-001",
+      "severity": "medium",
+      "summary": "Dry-run overlays use English-style skill_tags while skill-categories.md uses Dutch broad categories.",
+      "next_action": "CP-4 should decide whether to normalize overlay tags to Dutch broad categories, keep English sub-tags as aliases, or split broad tags from operation labels.",
+      "proof_required_to_close": "Registry records show approved tag IDs, alias policy, and validator rules."
+    },
+    {
+      "issue_id": "S7-COEX-002",
+      "severity": "high",
+      "summary": "exercise_operations are useful but not yet governed machine registry records.",
+      "next_action": "Keep operations provisional until CP-4 approves governance and a later CLI-backed registry path exists.",
+      "proof_required_to_close": "Operation records have stable IDs, statuses, source provenance, validator coverage, and promotion policy."
+    },
+    {
+      "issue_id": "S7-COEX-003",
+      "severity": "high",
+      "summary": "required_skills remains a legacy/source field and must not be reused for a new concept.",
+      "next_action": "Validators and review packet should preserve required_units/exercise_operations/skill_tags separation.",
+      "proof_required_to_close": "CP-4 closure confirms field semantics and blocks required_skills reuse until migration."
+    }
+  ]
+}

@@ -1,30 +1,30 @@
 {
   "schema_version": "0.1",
-  "generated_at": "2026-04-30T15:42:31.919Z",
+  "generated_at": "2026-04-30T15:49:16.173Z",
   "sprint_id": "R0.2",
   "scope": "references/",
   "note": "Self-generated inventory files intentionally omit size and sha256 to avoid unstable self-checksums.",
   "summary": {
-    "file_count": 178,
+    "file_count": 181,
     "by_layer": {
       "authored_judgement": 7,
-      "governance_data": 103,
+      "governance_data": 105,
       "external_authority": 32,
       "machine_registry": 5,
       "owned_curriculum_design": 3,
       "quality_protocol": 5,
       "planning": 1,
-      "schema_contract": 21,
+      "schema_contract": 22,
       "governance_policy": 1
     },
     "by_edit_policy": {
       "human_reviewed_edit": 15,
-      "generated_by_inventory_script": 12,
-      "sprint_process": 90,
+      "generated_by_inventory_script": 13,
+      "sprint_process": 91,
       "external_refresh_only": 32,
       "cli_only": 5,
       "versioned_human_reviewed_edit": 3,
-      "code_review": 21
+      "code_review": 22
     }
   },
   "files": [
@@ -589,6 +589,26 @@
       "self_generated_inventory_file": false
     },
     {
+      "path": "references/data/skill-operation-registry.json",
+      "file_name": "skill-operation-registry.json",
+      "extension": "json",
+      "size_bytes": 45108,
+      "sha256": "f2784617a299d282b34d2b23568da78f63abed6b9534845dda652ae304f840e3",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "inventory",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "generated_by_inventory_script",
+      "owner": "references_team",
+      "refresh_policy": "regenerate",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
       "path": "references/data/source_manifest.json",
       "file_name": "source_manifest.json",
       "extension": "json",
@@ -612,8 +632,8 @@
       "path": "references/data/source-document-registry.json",
       "file_name": "source-document-registry.json",
       "extension": "json",
-      "size_bytes": 261399,
-      "sha256": "22408bfda5c7b0dac2a2f558a06594c22ed2632ca9e05d291f66ff3331fc3632",
+      "size_bytes": 265829,
+      "sha256": "ce38610330559523c5acff12f4774ef05af684ebfd8fb5f9431d8e9b02d3f9b0",
       "layer": "governance_data",
       "authority_level": "generated_report",
       "source_type": "inventory",
@@ -2229,6 +2249,26 @@
       "self_generated_inventory_file": false
     },
     {
+      "path": "references/data/sprints/S7.plan.json",
+      "file_name": "S7.plan.json",
+      "extension": "json",
+      "size_bytes": 1660,
+      "sha256": "93ba0b8e7d2ba708b1d13267670c109d976d886446e1f707af0a8b1f7b46ef2e",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
       "path": "references/external/amstelveencollege_quality_standards.md",
       "file_name": "amstelveencollege_quality_standards.md",
       "extension": "md",
@@ -3135,8 +3175,8 @@
       "path": "references/reference-team-roadmap.md",
       "file_name": "reference-team-roadmap.md",
       "extension": "md",
-      "size_bytes": 97980,
-      "sha256": "f38c4fc7af310c29de76ba3e9b0215e9d7d53fa4aa662c7c2058e390955c5354",
+      "size_bytes": 98644,
+      "sha256": "6c26d5e91307ee057b0f7250fa2c6e91e910a86908e399bf4dba0401c5f995d5",
       "layer": "planning",
       "authority_level": "authored_judgement",
       "source_type": "roadmap",
@@ -3450,6 +3490,27 @@
       "extension": "json",
       "size_bytes": 734,
       "sha256": "e25758c03ed450ccc62a7d256b74a11e5133a423841e7fc3b56c443776ad17df",
+      "layer": "schema_contract",
+      "authority_level": "machine_contract",
+      "source_type": "json_schema",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "references_team",
+      "refresh_policy": "schema_review",
+      "downstream_dependencies": [
+        "validators",
+        "reference-cli",
+        "reports",
+        "future-rag"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/schemas/skill-operation-registry.schema.json",
+      "file_name": "skill-operation-registry.schema.json",
+      "extension": "json",
+      "size_bytes": 1783,
+      "sha256": "f9d5fee3ab755e0b91be505ea52514237cb2e1312ca46440cd4548d337ce7d29",
       "layer": "schema_contract",
       "authority_level": "machine_contract",
       "source_type": "json_schema",

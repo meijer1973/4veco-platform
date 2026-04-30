@@ -1,20 +1,20 @@
 {
   "generated_by": "build-scripts/references/build-source-document-registry.js",
-  "generated_on": "2026-04-30T15:42:28.403Z",
+  "generated_on": "2026-04-30T15:48:18.110Z",
   "status": "pass",
   "summary": {
-    "record_count": 175,
-    "source_manifest_file_count": 178,
+    "record_count": 178,
+    "source_manifest_file_count": 181,
     "by_authority_level": {
       "external_primary": 30,
       "machine_registry": 5,
       "owned_curriculum_design": 3,
       "authored_judgement": 8,
       "generated_report": 2,
-      "governance_data": 100,
+      "governance_data": 102,
       "quality_protocol": 5,
       "planning": 1,
-      "machine_contract": 21
+      "machine_contract": 22
     },
     "by_source_type": {
       "external_reference": 7,
@@ -25,15 +25,15 @@
       "report_md": 1,
       "external_pdf": 25,
       "authored_markdown": 6,
-      "inventory": 11,
+      "inventory": 12,
       "exercise_metadata_overlay": 6,
       "exercise_overlay_readme": 1,
-      "sprint_metadata": 80,
+      "sprint_metadata": 81,
       "machine_projection": 3,
       "owned_source_readme": 1,
       "qc_prompt": 5,
       "roadmap": 1,
-      "json_schema": 21,
+      "json_schema": 22,
       "report_json": 1,
       "source_of_truth_policy": 1
     },
@@ -42,15 +42,15 @@
       "active": 23,
       "generated_diagnostic": 2,
       "mirrored": 25,
-      "governance_data": 98,
+      "governance_data": 100,
       "planning": 1,
-      "schema_contract": 21
+      "schema_contract": 22
     },
     "by_public_citation_policy": {
       "public_citation_allowed_with_source_name": 30,
       "internal_only": 16,
       "internal_diagnostic_only": 2,
-      "not_public_citation_source": 127
+      "not_public_citation_source": 130
     },
     "evidence_anchor_coverage": {
       "required_document_ids": [
@@ -1764,6 +1764,44 @@
       "refresh_policy": "regenerate",
       "source_hash": "4eb4c45282315d94244221cdcdea0717fc3aa693930e803dca015983b20c26ca",
       "size_bytes": 4801,
+      "primary_evidence": false,
+      "curriculum_authority": false,
+      "allowed_downstream_uses": [
+        "internal_reference_context",
+        "rag_retrieval_with_authority_label"
+      ],
+      "blocked_downstream_uses": [
+        "student_diagnostics",
+        "adaptive_routing",
+        "student_facing_ai",
+        "automatic_lesson_sequencing",
+        "automatic_mastery_decisions",
+        "summative_assessment_decisions",
+        "external_authority",
+        "override_machine_registry"
+      ],
+      "evidence_anchor_ids": [],
+      "notes": [
+        "Governance data is canonical only for its declared governance artifact."
+      ]
+    },
+    {
+      "document_id": "path-references-data-skill-operation-registry",
+      "path": "references/data/skill-operation-registry.json",
+      "title": "Skill Operation Registry",
+      "source_type": "inventory",
+      "authority_level": "governance_data",
+      "source_version": "sha256:6cf0e361133c01a9b01ab5b4c616c262f0fc0ce595d66e8c4af450b2d609a8cd",
+      "status": "governance_data",
+      "owner": "references_team",
+      "citation_policy": "cite_as_governance_record_only",
+      "public_citation_policy": "not_public_citation_source",
+      "layer": "governance_data",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "generated_by_inventory_script",
+      "refresh_policy": "regenerate",
+      "source_hash": "6cf0e361133c01a9b01ab5b4c616c262f0fc0ce595d66e8c4af450b2d609a8cd",
+      "size_bytes": 45108,
       "primary_evidence": false,
       "curriculum_authority": false,
       "allowed_downstream_uses": [
@@ -4864,6 +4902,44 @@
       ]
     },
     {
+      "document_id": "path-references-data-sprints-s7-plan",
+      "path": "references/data/sprints/S7.plan.json",
+      "title": "S7.Plan",
+      "source_type": "sprint_metadata",
+      "authority_level": "governance_data",
+      "source_version": "sha256:93ba0b8e7d2ba708b1d13267670c109d976d886446e1f707af0a8b1f7b46ef2e",
+      "status": "governance_data",
+      "owner": "references_team",
+      "citation_policy": "cite_as_governance_record_only",
+      "public_citation_policy": "not_public_citation_source",
+      "layer": "governance_data",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "refresh_policy": "sprint_lifecycle",
+      "source_hash": "93ba0b8e7d2ba708b1d13267670c109d976d886446e1f707af0a8b1f7b46ef2e",
+      "size_bytes": 1660,
+      "primary_evidence": false,
+      "curriculum_authority": false,
+      "allowed_downstream_uses": [
+        "internal_reference_context",
+        "rag_retrieval_with_authority_label"
+      ],
+      "blocked_downstream_uses": [
+        "student_diagnostics",
+        "adaptive_routing",
+        "student_facing_ai",
+        "automatic_lesson_sequencing",
+        "automatic_mastery_decisions",
+        "summative_assessment_decisions",
+        "external_authority",
+        "override_machine_registry"
+      ],
+      "evidence_anchor_ids": [],
+      "notes": [
+        "Governance data is canonical only for its declared governance artifact."
+      ]
+    },
+    {
       "document_id": "path-references-external-exams-readme",
       "path": "references/external/exams/README.md",
       "title": "README",
@@ -5285,7 +5361,7 @@
       "title": "Reference Team Roadmap",
       "source_type": "roadmap",
       "authority_level": "planning",
-      "source_version": "sha256:f38c4fc7af310c29de76ba3e9b0215e9d7d53fa4aa662c7c2058e390955c5354",
+      "source_version": "sha256:6c26d5e91307ee057b0f7250fa2c6e91e910a86908e399bf4dba0401c5f995d5",
       "status": "planning",
       "owner": "references_team",
       "citation_policy": "citation_requires_review",
@@ -5294,8 +5370,8 @@
       "generated_status": "manual_source",
       "edit_policy": "human_reviewed_edit",
       "refresh_policy": "roadmap_update",
-      "source_hash": "f38c4fc7af310c29de76ba3e9b0215e9d7d53fa4aa662c7c2058e390955c5354",
-      "size_bytes": 97980,
+      "source_hash": "6c26d5e91307ee057b0f7250fa2c6e91e910a86908e399bf4dba0401c5f995d5",
+      "size_bytes": 98644,
       "primary_evidence": false,
       "curriculum_authority": false,
       "allowed_downstream_uses": [
@@ -5836,6 +5912,42 @@
       "refresh_policy": "schema_review",
       "source_hash": "e25758c03ed450ccc62a7d256b74a11e5133a423841e7fc3b56c443776ad17df",
       "size_bytes": 734,
+      "primary_evidence": false,
+      "curriculum_authority": false,
+      "allowed_downstream_uses": [
+        "internal_reference_context",
+        "rag_retrieval_with_authority_label"
+      ],
+      "blocked_downstream_uses": [
+        "student_diagnostics",
+        "adaptive_routing",
+        "student_facing_ai",
+        "automatic_lesson_sequencing",
+        "automatic_mastery_decisions",
+        "summative_assessment_decisions",
+        "external_authority",
+        "override_machine_registry"
+      ],
+      "evidence_anchor_ids": [],
+      "notes": []
+    },
+    {
+      "document_id": "path-references-schemas-skill-operation-registry-schema",
+      "path": "references/schemas/skill-operation-registry.schema.json",
+      "title": "Skill Operation Registry.Schema",
+      "source_type": "json_schema",
+      "authority_level": "machine_contract",
+      "source_version": "sha256:f9d5fee3ab755e0b91be505ea52514237cb2e1312ca46440cd4548d337ce7d29",
+      "status": "schema_contract",
+      "owner": "references_team",
+      "citation_policy": "cite_as_implementation_contract_not_curriculum_evidence",
+      "public_citation_policy": "not_public_citation_source",
+      "layer": "schema_contract",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "refresh_policy": "schema_review",
+      "source_hash": "f9d5fee3ab755e0b91be505ea52514237cb2e1312ca46440cd4548d337ce7d29",
+      "size_bytes": 1783,
       "primary_evidence": false,
       "curriculum_authority": false,
       "allowed_downstream_uses": [

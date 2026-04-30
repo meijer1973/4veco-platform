@@ -4,7 +4,7 @@ Generated: 2026-04-23
 Adopted main roadmap: 2026-04-25
 Last strategic update: 2026-04-30
 Roadmap ID: `references-team-roadmap`
-Roadmap version: `v2.18-s7-skill-operation-review-prepared`
+Roadmap version: `v2.17-source-document-registry-mvp`
 Roadmap status: `active`
 Version index: `docs/roadmaps/roadmap-version-index.json`
 Scope: `references/`, `build-scripts/references/`, `build-scripts/reports/`, reference dashboards, and generated reference reports under `reports/`
@@ -24,8 +24,6 @@ Update 2026-04-30: The Sprint Ledger was moved near the top of the roadmap, imme
 Update 2026-04-30: RX.2b closed `GATE-RX2b-graphical-foundation` as `pass_with_conditions` and added `A62`, `A63`, `A64`, `A65`, `A68`, `A69`, and `A73` through `unit-add.js`. `A71` remains held/high-risk. All seven new graphical-foundation units remain generator-blocked and non-interactive until generator implementation and validation.
 
 Update 2026-04-30: `S6 Bronnen Registry MVP` is completed. The first source-document registry implementation lives under `references/data/source-document-registry.json` as a governed overlay, not under `references/machine/`. It records source type, authority level, source version, status, owner, citation policy, and public-citation policy while preserving external/machine protected-surface boundaries.
-
-Update 2026-04-30: `S7 Skill And Operation Registry MVP` is prepared for `GATE-CP4-skill-registry-coexistence` review. The registry remains a `references/data/` overlay and keeps `required_units`, provisional `exercise_operations`, and `skill_tags` separate while preserving `required_skills` as legacy/source-only.
 
 Compatibility decisions:
 
@@ -52,7 +50,7 @@ Open items are listed first; completed items are kept below them.
 
 | Sprint | Name | Completed | Current State |
 |--------|------|-----------|---------------|
-| S7 | Skill And Operation Registry MVP | no | Prepared for CP-4 review. Generated `references/data/skill-operation-registry.json`, coexistence reports, and `GATE-CP4-skill-registry-coexistence` review packet; no machine registry promotion or bulk backfill authorized. |
+| Sprint 7 | Skill And Operation Registry MVP | no | Planned. Separate unit IDs from fine-grained exercise operations and skill/category tags; preserve useful `skill-categories.md` content where still valid. |
 | RX.3 | Producer Table And Graph Representation Units | no | Planned after RX.2b. Review profit, break-even, TO/TK, GTK, MO/MK, table-difference, and producer-graph overlap before mutation. |
 | RX.4 | Elasticity And Market Diagram Representation Units | no | Planned after RX.2b/RX.3. Separate table extraction, graph extraction, elasticity interpretation, and existing market-intervention graph operations. |
 | RX.5 | Representation Operation Registry And Reports | no | Planned as the bridge to Sprint 7 output. Promote provisional representation-operation inventory only after schema, validator, and CLI path exist. |
@@ -710,8 +708,6 @@ Required output: skill/operation registry MVP, validator, coexistence report, an
 Stop condition: do not reuse `required_skills` for a new concept until the migration plan is complete.
 
 Checkpoint: `GATE-CP4-skill-registry-coexistence`.
-
-Current stop point: S7 has prepared the governed `references/data/skill-operation-registry.json` overlay and CP-4 review packet. It is not complete until `GATE-CP4-skill-registry-coexistence` records a human decision. Machine registry promotion, bulk exercise metadata backfill, and `required_skills` reuse remain blocked.
 
 ### Phase RX Representation-Sensitive Micro-Unit Decomposition
 
@@ -1393,7 +1389,7 @@ Sprints:
 
 - `S1` completed: schema audit and exercise naming contract; `GATE-CP1-schema-audit` closed as `pass_with_conditions`.
 - `Sprint 4` planned: exercise metadata overlay MVP, including `instructional_role`, `assessment_role`, scaffolding object, and schema-extension dry run.
-- `S7` prepared: skill and operation registry MVP, now waiting for `GATE-CP4-skill-registry-coexistence`.
+- `Sprint 7` planned: skill and operation registry MVP, closing at `GATE-CP4-skill-registry-coexistence`.
 
 ### Phase RX: Representation-Sensitive Micro-Unit Decomposition
 
@@ -1517,7 +1513,7 @@ Sprint 4 Exercise metadata overlay MVP (CP-3)
 RX.2 First-lane mutation review and CLI execution
 RX.2b Graphical foundation coverage and mutation
 S6 Bronnen registry MVP
-S7 Skill and operation registry MVP (CP-4)
+Sprint 7 Skill and operation registry MVP (CP-4)
 RX.3 Producer table and graph representation units
 RX.4 Elasticity and market diagram representation units
 RX.5 Representation operation registry and reports
@@ -1539,7 +1535,7 @@ Do not invert this order.
 
 ## Immediate Next Sprint
 
-Next checkpoint: `GATE-CP4-skill-registry-coexistence`.
+Next sprint: `Sprint 7 Skill And Operation Registry MVP`.
 
 R4.5 has closed the bounded micro-unit mutation lane, CP-1 has closed the non-mutating schema audit gate as `pass_with_conditions`, CP-2 has closed the owned-source scope gate as `pass_with_conditions`, R9.1 has registered the owned-source surfaces, R9.2 has completed owned-content projection, S4/CP-3 has closed as `pass_with_conditions`, S4.1 has implemented the CP-3 condition artifacts, RX.1 has prepared the non-mutating representation-operation inventory, `GATE-RX1-representation-unit-scope` has closed as `pass_with_conditions`, RX.2/GATE-RX2 has added the bounded six-unit first lane through CLI-only mutation, RX.2b/GATE-RX2b has added the bounded seven-unit graphical foundation lane through CLI-only mutation while holding `A71`, R8.1 has added the scoped internal QC issue model, and S6 has created the source-document registry MVP under `references/data/`.
 
@@ -1547,7 +1543,7 @@ R4.5 has closed the bounded micro-unit mutation lane, CP-1 has closed the non-mu
 
 `A62`, `A63`, `A64`, `A65`, `A68`, `A69`, and `A73` are now catalog units, but they are generator-blocked and non-interactive for student-facing skill-tree use until their generators are implemented and validated. `A71` remains held/high-risk for later focused review.
 
-`S7` is now at its planned review stop point. The next action is CP-4 human review of the skill/operation coexistence packet. Until CP-4 closes, the registry remains a `references/data/` overlay; `exercise_operations` remain provisional; `required_skills` remains legacy/source-only; and machine registry promotion plus bulk exercise metadata backfill remain blocked.
+`Sprint 7` is now the next planned sprint. It should create the skill and operation registry MVP, separating micro-teaching-unit IDs from fine-grained `exercise_operations` and broader `skill_tags`. It must preserve the CP-1 naming decisions, keep `required_units` for unit IDs, and avoid promoting provisional operation labels into a machine registry before schema, validator, and CLI discipline exist.
 
 Do not start diagnostics, adaptive routing, student-facing AI, automatic lesson sequencing, mastery decisions, summative decisions, teacher cockpit deployment, game/simulation product mapping, or continuous-improvement claims from this roadmap.
 

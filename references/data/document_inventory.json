@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1",
-  "generated_at": "2026-04-30T15:42:31.919Z",
+  "generated_at": "2026-04-30T15:49:16.173Z",
   "sprint_id": "R0.2",
   "scope": [
     "references",
@@ -10,30 +10,30 @@
   ],
   "note": "Inventory covers reference sources, generated reports, and reference/report tooling.",
   "summary": {
-    "file_count": 559,
+    "file_count": 570,
     "by_layer": {
-      "reference_tooling": 74,
+      "reference_tooling": 76,
       "report_tooling": 13,
       "authored_judgement": 7,
-      "governance_data": 103,
+      "governance_data": 105,
       "external_authority": 32,
       "machine_registry": 5,
       "owned_curriculum_design": 3,
       "quality_protocol": 5,
       "planning": 1,
-      "schema_contract": 21,
+      "schema_contract": 22,
       "governance_policy": 1,
-      "generated_report": 294
+      "generated_report": 300
     },
     "by_edit_policy": {
-      "code_review": 108,
+      "code_review": 111,
       "human_reviewed_edit": 15,
-      "generated_by_inventory_script": 12,
-      "sprint_process": 90,
+      "generated_by_inventory_script": 13,
+      "sprint_process": 91,
       "external_refresh_only": 32,
       "cli_only": 5,
       "versioned_human_reviewed_edit": 3,
-      "generated_by_script": 294
+      "generated_by_script": 300
     }
   },
   "files": [
@@ -323,6 +323,26 @@
       "extension": "js",
       "size_bytes": 40051,
       "sha256": "c20e0f2178512a039090714e1a203510f6fdda33f13defb4f9b5724c1efceaf1",
+      "layer": "reference_tooling",
+      "authority_level": "tooling",
+      "source_type": "reference_cli_script",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "platform_team",
+      "refresh_policy": "code_change",
+      "downstream_dependencies": [
+        "reference-cli",
+        "reports",
+        "validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "build-scripts/references/build-skill-operation-registry.js",
+      "file_name": "build-skill-operation-registry.js",
+      "extension": "js",
+      "size_bytes": 21062,
+      "sha256": "fc2f430a2bb1ba692cf3ef06cde659b731fd742bd9c7442b7d6485bae7f2d13d",
       "layer": "reference_tooling",
       "authority_level": "tooling",
       "source_type": "reference_cli_script",
@@ -703,6 +723,26 @@
       "extension": "js",
       "size_bytes": 9210,
       "sha256": "9cafa5af0a1dad335519e551759495e8bf90629465f3f0eef813ee04b2d5e6f2",
+      "layer": "reference_tooling",
+      "authority_level": "tooling",
+      "source_type": "reference_cli_script",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "platform_team",
+      "refresh_policy": "code_change",
+      "downstream_dependencies": [
+        "reference-cli",
+        "reports",
+        "validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "build-scripts/references/check-skill-operation-registry.js",
+      "file_name": "check-skill-operation-registry.js",
+      "extension": "js",
+      "size_bytes": 6351,
+      "sha256": "71e2de96bf9beea12820610a806b5255aae94be077582af895e922aa96af166d",
       "layer": "reference_tooling",
       "authority_level": "tooling",
       "source_type": "reference_cli_script",
@@ -2325,6 +2365,26 @@
       "self_generated_inventory_file": false
     },
     {
+      "path": "references/data/skill-operation-registry.json",
+      "file_name": "skill-operation-registry.json",
+      "extension": "json",
+      "size_bytes": 45108,
+      "sha256": "f2784617a299d282b34d2b23568da78f63abed6b9534845dda652ae304f840e3",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "inventory",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "generated_by_inventory_script",
+      "owner": "references_team",
+      "refresh_policy": "regenerate",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
       "path": "references/data/source_manifest.json",
       "file_name": "source_manifest.json",
       "extension": "json",
@@ -2348,8 +2408,8 @@
       "path": "references/data/source-document-registry.json",
       "file_name": "source-document-registry.json",
       "extension": "json",
-      "size_bytes": 261399,
-      "sha256": "22408bfda5c7b0dac2a2f558a06594c22ed2632ca9e05d291f66ff3331fc3632",
+      "size_bytes": 265829,
+      "sha256": "ce38610330559523c5acff12f4774ef05af684ebfd8fb5f9431d8e9b02d3f9b0",
       "layer": "governance_data",
       "authority_level": "generated_report",
       "source_type": "inventory",
@@ -3965,6 +4025,26 @@
       "self_generated_inventory_file": false
     },
     {
+      "path": "references/data/sprints/S7.plan.json",
+      "file_name": "S7.plan.json",
+      "extension": "json",
+      "size_bytes": 1660,
+      "sha256": "93ba0b8e7d2ba708b1d13267670c109d976d886446e1f707af0a8b1f7b46ef2e",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
       "path": "references/external/amstelveencollege_quality_standards.md",
       "file_name": "amstelveencollege_quality_standards.md",
       "extension": "md",
@@ -4871,8 +4951,8 @@
       "path": "references/reference-team-roadmap.md",
       "file_name": "reference-team-roadmap.md",
       "extension": "md",
-      "size_bytes": 97980,
-      "sha256": "f38c4fc7af310c29de76ba3e9b0215e9d7d53fa4aa662c7c2058e390955c5354",
+      "size_bytes": 98644,
+      "sha256": "6c26d5e91307ee057b0f7250fa2c6e91e910a86908e399bf4dba0401c5f995d5",
       "layer": "planning",
       "authority_level": "authored_judgement",
       "source_type": "roadmap",
@@ -5186,6 +5266,27 @@
       "extension": "json",
       "size_bytes": 734,
       "sha256": "e25758c03ed450ccc62a7d256b74a11e5133a423841e7fc3b56c443776ad17df",
+      "layer": "schema_contract",
+      "authority_level": "machine_contract",
+      "source_type": "json_schema",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "references_team",
+      "refresh_policy": "schema_review",
+      "downstream_dependencies": [
+        "validators",
+        "reference-cli",
+        "reports",
+        "future-rag"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/schemas/skill-operation-registry.schema.json",
+      "file_name": "skill-operation-registry.schema.json",
+      "extension": "json",
+      "size_bytes": 1783,
+      "sha256": "f9d5fee3ab755e0b91be505ea52514237cb2e1312ca46440cd4548d337ce7d29",
       "layer": "schema_contract",
       "authority_level": "machine_contract",
       "source_type": "json_schema",
@@ -5968,11 +6069,31 @@
       "self_generated_inventory_file": false
     },
     {
+      "path": "reports/json/skill-operation-registry.json",
+      "file_name": "skill-operation-registry.json",
+      "extension": "json",
+      "size_bytes": 2700,
+      "sha256": "db0d21c61e4f1b359ddf822db284daec37ba91e1b61107ab1a43c21685482610",
+      "layer": "generated_report",
+      "authority_level": "generated_report",
+      "source_type": "report_json",
+      "generated_status": "generated_projection",
+      "edit_policy": "generated_by_script",
+      "owner": "platform_team",
+      "refresh_policy": "regenerate",
+      "downstream_dependencies": [
+        "dashboards",
+        "planning",
+        "qc-review"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
       "path": "reports/json/source-document-registry.json",
       "file_name": "source-document-registry.json",
       "extension": "json",
-      "size_bytes": 261154,
-      "sha256": "21cb2caaea57c15ea4db40c0b8e611689d1ef0465a6206805ef19b13e9273e2a",
+      "size_bytes": 265584,
+      "sha256": "706fd891777f145941038f338ae55091be69984bd2d70afeb2e91219132789e4",
       "layer": "generated_report",
       "authority_level": "generated_report",
       "source_type": "report_json",
@@ -6328,11 +6449,31 @@
       "self_generated_inventory_file": false
     },
     {
+      "path": "reports/markdown/skill-operation-registry.md",
+      "file_name": "skill-operation-registry.md",
+      "extension": "md",
+      "size_bytes": 3179,
+      "sha256": "c47170d1d48626785aa65f3ced42b53ef66254c27c5bb68ae3716efe8ce1fcb1",
+      "layer": "generated_report",
+      "authority_level": "generated_report",
+      "source_type": "report_md",
+      "generated_status": "generated_projection",
+      "edit_policy": "generated_by_script",
+      "owner": "platform_team",
+      "refresh_policy": "regenerate",
+      "downstream_dependencies": [
+        "dashboards",
+        "planning",
+        "qc-review"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
       "path": "reports/markdown/source-document-registry.md",
       "file_name": "source-document-registry.md",
       "extension": "md",
-      "size_bytes": 7759,
-      "sha256": "72183c26a750db9e6648d732394044105c03c35671dea441b1876b80904506b8",
+      "size_bytes": 7760,
+      "sha256": "a4c0aa802239dfaf34180de899ee399b38e997b586118d3842cd4985fc4273cc",
       "layer": "generated_report",
       "authority_level": "generated_report",
       "source_type": "report_md",
@@ -7273,6 +7414,66 @@
       "extension": "md",
       "size_bytes": 2192,
       "sha256": "cc985ecb1c74e5bfd3bcc70d783df39a0452c3c45022d584284e58ef78b2fd75",
+      "layer": "generated_report",
+      "authority_level": "generated_report",
+      "source_type": "report_md",
+      "generated_status": "generated_projection",
+      "edit_policy": "generated_by_script",
+      "owner": "platform_team",
+      "refresh_policy": "regenerate",
+      "downstream_dependencies": [
+        "dashboards",
+        "planning",
+        "qc-review"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "reports/review-gates/GATE-CP4-skill-registry-coexistence/bundle-urls.md",
+      "file_name": "bundle-urls.md",
+      "extension": "md",
+      "size_bytes": 682,
+      "sha256": "d7084f4ab90187e538b2e0cf05668fda155e9f802bb6b2bffb1ea66b9ae16ece",
+      "layer": "generated_report",
+      "authority_level": "generated_report",
+      "source_type": "report_md",
+      "generated_status": "generated_projection",
+      "edit_policy": "generated_by_script",
+      "owner": "platform_team",
+      "refresh_policy": "regenerate",
+      "downstream_dependencies": [
+        "dashboards",
+        "planning",
+        "qc-review"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "reports/review-gates/GATE-CP4-skill-registry-coexistence/review-packet.json",
+      "file_name": "review-packet.json",
+      "extension": "json",
+      "size_bytes": 4128,
+      "sha256": "d4e464e9a93881febde5bce386dbd6e208badc08dfe56d1d936883a82e697698",
+      "layer": "generated_report",
+      "authority_level": "generated_report",
+      "source_type": "report_json",
+      "generated_status": "generated_projection",
+      "edit_policy": "generated_by_script",
+      "owner": "platform_team",
+      "refresh_policy": "regenerate",
+      "downstream_dependencies": [
+        "dashboards",
+        "planning",
+        "qc-review"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "reports/review-gates/GATE-CP4-skill-registry-coexistence/review-packet.md",
+      "file_name": "review-packet.md",
+      "extension": "md",
+      "size_bytes": 3175,
+      "sha256": "8c9fd30b3af68faab76b65e98a8fe2610338035ba2d1f617fdbc9ce2da6258e6",
       "layer": "generated_report",
       "authority_level": "generated_report",
       "source_type": "report_md",
@@ -11128,6 +11329,26 @@
       "self_generated_inventory_file": false
     },
     {
+      "path": "reports/sprints/S7-baseline.md",
+      "file_name": "S7-baseline.md",
+      "extension": "md",
+      "size_bytes": 1286,
+      "sha256": "d8b8c8a0840dfb70cfb3b283461300b142c2b72d6513a0c1d71c6bde84cd0b92",
+      "layer": "generated_report",
+      "authority_level": "generated_report",
+      "source_type": "report_md",
+      "generated_status": "generated_projection",
+      "edit_policy": "generated_by_script",
+      "owner": "platform_team",
+      "refresh_policy": "regenerate",
+      "downstream_dependencies": [
+        "dashboards",
+        "planning",
+        "qc-review"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
       "path": "reports/terminology-drift.md",
       "file_name": "terminology-drift.md",
       "extension": "md",
@@ -11211,8 +11432,8 @@
       "path": "reports/url-index.md",
       "file_name": "url-index.md",
       "extension": "md",
-      "size_bytes": 5051,
-      "sha256": "0ce17b84c64a655a9fb6aacb00246f1b22b782b183019362efd3ac9fbaa5e077",
+      "size_bytes": 5190,
+      "sha256": "b924a41308561b39b13469c4a1c78b36eabbce66ecd573d25caaef55c374d078",
       "layer": "generated_report",
       "authority_level": "generated_report",
       "source_type": "report_md",

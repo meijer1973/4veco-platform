@@ -15,13 +15,14 @@
   "roadmaps": [
     {
       "roadmap_id": "references-team-roadmap",
-      "version": "v2.17-source-document-registry-mvp",
+      "version": "v2.18-s7-skill-operation-review-prepared",
       "title": "References Team Roadmap",
       "status": "active",
       "path": "references/reference-team-roadmap.md",
       "owner": "references_team",
       "updated_on": "2026-04-30",
       "supersedes": [
+        "docs/roadmaps/outdated/reference-team-roadmap-v2.17-source-document-registry-mvp.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.16-rx2b-graphical-foundation-applied.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.15-sprint-ledger-near-top.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.14-rx2b-graphical-foundation-planned.md",
@@ -39,7 +40,18 @@
         "knowledge/Exercise schema and quality/reference-team-roadmap Live version 28 April.md",
         "knowledge/Exercise schema and quality/roadmap-updated-repository-checked.md"
       ],
-      "notes": "Current operating roadmap after completing S6 Bronnen Registry MVP with a source-document registry overlay under references/data/."
+      "notes": "Current operating roadmap after preparing S7 Skill And Operation Registry MVP for CP-4 review."
+    },
+    {
+      "roadmap_id": "references-team-roadmap-v2.17",
+      "version": "v2.17-source-document-registry-mvp",
+      "title": "References Team Roadmap before S7 skill/operation review preparation",
+      "status": "outdated",
+      "path": "docs/roadmaps/outdated/reference-team-roadmap-v2.17-source-document-registry-mvp.md",
+      "owner": "references_team",
+      "updated_on": "2026-04-30",
+      "superseded_by": "references/reference-team-roadmap.md",
+      "notes": "Snapshot archived before preparing S7 Skill And Operation Registry MVP and CP-4 review packet."
     },
     {
       "roadmap_id": "references-team-roadmap-v2.16",
