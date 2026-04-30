@@ -435,6 +435,12 @@
         <span class="chip" data-tier="analyze">analyze</span>
         <span class="chip" data-tier="evaluate">evaluate</span>
       </div>
+      <div class="filter-label">Aspect</div>
+      <div class="filter-row" id="aspect-filters">
+        <span class="chip" data-aspect="grafisch" title="Toon units met grafisch als aspect">grafisch</span>
+        <span class="chip" data-aspect="rekenen" title="Toon units met rekenen/wiskundig als aspect">rekenen</span>
+        <span class="chip" data-aspect="verbaal" title="Toon units met verbaal als aspect">verbaal</span>
+      </div>
       <div class="filter-label">Aantal needs</div>
       <select class="filter-select" id="needs-count-filter" title="Aantal directe voorwaarden in needs">
         <option value="all">alle aantallen</option>
@@ -618,6 +624,7 @@
     search: '',
     domainFilter: new Set(),    // empty = all
     tierFilter: new Set(),      // empty = all
+    aspectFilter: new Set(),    // empty = all
     needsCountFilter: 'all',
     componentSizeFilter: 'all',
   };
@@ -660,6 +667,20 @@
     });
   });
 
+  document.querySelectorAll('#aspect-filters .chip').forEach(chip => {
+    chip.addEventListener('click', () => {
+      const aspect = chip.dataset.aspect;
+      if (state.aspectFilter.has(aspect)) {
+        state.aspectFilter.delete(aspect);
+        chip.classList.remove('active');
+      } else {
+        state.aspectFilter.add(aspect);
+        chip.classList.add('active');
+      }
+      renderList();
+    });
+  });
+
   document.getElementById('search').addEventListener('input', (e) => {
     state.search = e.target.value.trim().toLowerCase();
     renderList();
@@ -678,6 +699,14 @@
   function matchesFilters(u) {
     if (state.domainFilter.size && !state.domainFilter.has(u.id[0])) return false;
     if (state.tierFilter.size && !state.tierFilter.has(u.mastery_target)) return false;
+    if (state.aspectFilter.size) {
+      const aspects = new Set(u.aspects || []);
+      let hasSelectedAspect = false;
+      for (const selectedAspect of state.aspectFilter) {
+        if (aspects.has(selectedAspect)) hasSelectedAspect = true;
+      }
+      if (!hasSelectedAspect) return false;
+    }
     if (!matchesNeedsCount(u)) return false;
     if (!matchesComponentSize(u)) return false;
     if (state.search) {
@@ -685,6 +714,7 @@
         u.id,
         u.name,
         u.kern || '',
+        (u.aspects || []).join(' '),
         (u.terms || []).join(' '),
         (u.exam_codes || []).join(' '),
       ].join(' ').toLowerCase();
