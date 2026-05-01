@@ -1,0 +1,67 @@
+{
+  "sprint_id": "PV.1",
+  "name": "Procedure-Visual Inventory",
+  "status": "completed",
+  "completed_on": "2026-05-01",
+  "plan": "docs/sprints/PV.1-plan.md",
+  "baseline": "reports/sprints/PV.1-baseline.md",
+  "result": "reports/sprints/PV.1-result.md",
+  "diff_summary": "reports/sprints/PV.1-diff-summary.md",
+  "protected_reference_data_changed": false,
+  "protected_reference_data_change_mode": "none; PV.1 is references/data inventory only",
+  "human_review_required": false,
+  "inventory": "references/data/procedure-visual/inventory.json",
+  "json_report": "reports/json/procedure-visual-inventory.json",
+  "markdown_report": "reports/markdown/procedure-visual-inventory.md",
+  "ranked_pilot_template_count": 12,
+  "machine_registry_authorized": false,
+  "student_facing_projection_authorized": false,
+  "next_required_step": "Proceed to PV.2 Procedure-Visual Schema And Validator MVP.",
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js docs/sprints/PV.1-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/build-procedure-visual-inventory.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-procedure-visual-inventory.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js PV.1",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-result.js reports/sprints/PV.1-result.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js PV.1 --complete",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-roadmap-version-index.js",
+      "status": "passed"
+    }
+  ],
+  "outputs": [
+    "build-scripts/references/build-procedure-visual-inventory.js",
+    "build-scripts/references/check-procedure-visual-inventory.js",
+    "references/data/procedure-visual/inventory.json",
+    "reports/json/procedure-visual-inventory.json",
+    "reports/markdown/procedure-visual-inventory.md",
+    "docs/sprints/PV.1-plan.md",
+    "references/data/sprints/PV.1.plan.json",
+    "reports/sprints/PV.1-baseline.md",
+    "reports/sprints/PV.1-result.md",
+    "reports/sprints/PV.1-diff-summary.md",
+    "references/data/sprints/PV.1.result.json",
+    "references/reference-team-roadmap.md",
+    "docs/roadmaps/outdated/reference-team-roadmap-v2.20-cp4-skill-operation-gate-closed.md",
+    "docs/roadmaps/roadmap-version-index.json",
+    "docs/roadmaps/roadmap-version-index.md"
+  ]
+}

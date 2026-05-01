@@ -12,12 +12,13 @@ docs/roadmaps/roadmap-version-index.json
 
 | Roadmap | Version | Path | Notes |
 |---|---|---|---|
-| References Team Roadmap | `v2.20-cp4-skill-operation-gate-closed` | `references/reference-team-roadmap.md` | Current operating roadmap after closing CP-4 as pass_with_conditions and setting PV.1 as the next sprint. |
+| References Team Roadmap | `v2.21-pv1-procedure-visual-inventory` | `references/reference-team-roadmap.md` | Current operating roadmap after completing PV.1 Procedure-Visual Inventory and setting PV.2 as the next sprint. |
 
 ## Outdated Archive
 
 | Roadmap | Version | Path | Superseded By |
 |---|---|---|---|
+| References Team Roadmap before PV.1 procedure-visual inventory | `v2.20-cp4-skill-operation-gate-closed` | `docs/roadmaps/outdated/reference-team-roadmap-v2.20-cp4-skill-operation-gate-closed.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before CP-4 skill/operation gate closure | `v2.19-procedure-visual-track-adopted` | `docs/roadmaps/outdated/reference-team-roadmap-v2.19-procedure-visual-track-adopted.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before Procedure-Visual track adoption | `v2.18-s7-skill-operation-review-prepared` | `docs/roadmaps/outdated/reference-team-roadmap-v2.18-s7-skill-operation-review-prepared.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before S7 skill/operation review preparation | `v2.17-source-document-registry-mvp` | `docs/roadmaps/outdated/reference-team-roadmap-v2.17-source-document-registry-mvp.md` | `references/reference-team-roadmap.md` |
