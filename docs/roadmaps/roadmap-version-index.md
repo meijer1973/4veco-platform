@@ -12,12 +12,13 @@ docs/roadmaps/roadmap-version-index.json
 
 | Roadmap | Version | Path | Notes |
 |---|---|---|---|
-| References Team Roadmap | `v2.27-rx3b-graph-lane-review-prepared` | `references/reference-team-roadmap.md` | Current operating roadmap after preparing GATE-RX3b-producer-graph-lane-review and stopping before A77/A78 CLI mutation. |
+| References Team Roadmap | `v2.28-rx3b-graph-lane-applied` | `references/reference-team-roadmap.md` | Current operating roadmap after closing GATE-RX3b and applying A77/A78 through CLI-only mutation; RX.4 is the next RX representation step. |
 
 ## Outdated Archive
 
 | Roadmap | Version | Path | Superseded By |
 |---|---|---|---|
+| References Team Roadmap before RX.3b graph-lane CLI execution | `v2.27-rx3b-graph-lane-review-prepared` | `docs/roadmaps/outdated/reference-team-roadmap-v2.27-rx3b-graph-lane-review-prepared.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before RX.3b graph-lane review preparation | `v2.26-rx3a-first-lane-applied` | `docs/roadmaps/outdated/reference-team-roadmap-v2.26-rx3a-first-lane-applied.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before RX.3a first-lane CLI execution | `v2.25-rx3a-first-lane-review-prepared` | `docs/roadmaps/outdated/reference-team-roadmap-v2.25-rx3a-first-lane-review-prepared.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before RX.3a first-lane review preparation | `v2.24-rx3-gate-closed` | `docs/roadmaps/outdated/reference-team-roadmap-v2.24-rx3-gate-closed.md` | `references/reference-team-roadmap.md` |

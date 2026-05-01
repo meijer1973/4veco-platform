@@ -4,10 +4,16 @@ This file lists every artifact in this gate's bundle as a full raw-GitHub URL so
 
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-RX3b-producer-graph-lane-review/RX.3b-generator-blocked-units.json
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-RX3b-producer-graph-lane-review/RX.3b-generator-blocked-units.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-RX3b-producer-graph-lane-review/RX.3b-mutation-log.json
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-RX3b-producer-graph-lane-review/RX.3b-mutation-log.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-RX3b-producer-graph-lane-review/bundle-urls.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-RX3b-producer-graph-lane-review/candidate-specs.json
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-RX3b-producer-graph-lane-review/candidate-specs.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-RX3b-producer-graph-lane-review/cli-mutation-plan.json
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-RX3b-producer-graph-lane-review/cli-mutation-plan.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-RX3b-producer-graph-lane-review/gate-closure.json
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-RX3b-producer-graph-lane-review/gate-closure.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-RX3b-producer-graph-lane-review/human-interview.json
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-RX3b-producer-graph-lane-review/human-interview.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-RX3b-producer-graph-lane-review/review-packet.json
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-RX3b-producer-graph-lane-review/review-packet.md

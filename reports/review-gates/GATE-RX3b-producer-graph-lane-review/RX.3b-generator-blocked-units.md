@@ -1,8 +1,8 @@
 # RX.3b Generator-Blocked Units
 
-Status: `prepared_for_mutation_review`
+Status: `active_block`
 
-If a later gate authorizes CLI mutation, these units must remain non-interactive until generator/projection support exists and validates:
+The following units are live catalog entries but remain non-interactive until generators and projection support exist and validate:
 
 - `A77` / `GEN_A77`
 - `A78` / `GEN_A78`

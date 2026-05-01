@@ -1,0 +1,118 @@
+{
+  "sprint_id": "RX.3b",
+  "generated_on": "2026-05-01T17:56:28.787Z",
+  "status": "completed",
+  "decision_source": "reports/review-gates/GATE-RX3b-producer-graph-lane-review/gate-closure.json",
+  "execution_mode": "CLI-only via build-scripts/references/unit-add.js",
+  "pre_execution_check": {
+    "checked_on": "2026-05-01T17:56:28.612Z",
+    "live_a_domain_max_id_before_mutation": "A79",
+    "authorized_ids_available": true,
+    "occupied_authorized_ids": [],
+    "held_candidates_absent": true,
+    "dependency_check": "passed",
+    "required_dependencies": {
+      "A77": [
+        "A63",
+        "A29"
+      ],
+      "A78": [
+        "A63",
+        "A75",
+        "A77"
+      ]
+    }
+  },
+  "commands": [
+    {
+      "step": "add unit A77",
+      "unit_id": "A77",
+      "command": "node build-scripts/references/unit-add.js --spec '{\"id\":\"A77\",\"name\":\"Break-even aflezen uit TO-TK-grafiek\",\"kern\":\"Lees in een TO-TK-grafiek het snijpunt van totale opbrengsten en totale kosten af en interpreteer dit als break-evenhoeveelheid.\",\"needs\":[\"A63\",\"A29\"],\"mastery_target\":\"apply\",\"prior_learning\":\"new_this_year\",\"aspects\":[\"grafisch\",\"rekenen\"],\"terms\":[],\"procedure\":[\"Lees de titel en bepaal dat de grafiek totale opbrengsten en totale kosten van een producent toont.\",\"Controleer de horizontale as, verticale as, eenheden en schaal.\",\"Identificeer welke lijn of kromme TO is en welke lijn of kromme TK is, via labels of legenda.\",\"Zoek het snijpunt of de snijpunten waar TO en TK gelijk zijn.\",\"Lees de bijbehorende hoeveelheid Q op de horizontale as af.\",\"Interpreteer dit punt als break-even: de totale winst is nul.\"],\"pitfalls\":[\"De grootste verticale afstand tussen TO en TK markeren als break-even.\",\"Een winstgebied of verliesgebied verwarren met het snijpunt.\",\"Niet controleren of er een of twee break-evenpunten zijn.\"],\"generator\":\"GEN_A77\"}'",
+      "status": "passed",
+      "exit_code": 0,
+      "stdout": "OK  minted A77 \"Break-even aflezen uit TO-TK-grafiek\" (catalog now 228 units)",
+      "stderr": "(node:21412) Warning: Accessing non-existent property 'formatEntry' of module exports inside circular dependency\n(Use `node --trace-warnings ...` to show where the warning was created)"
+    },
+    {
+      "step": "add unit A78",
+      "unit_id": "A78",
+      "command": "node build-scripts/references/unit-add.js --spec '{\"id\":\"A78\",\"name\":\"Winst of verlies aflezen uit TO-TK-grafiek\",\"kern\":\"Lees bij een hoeveelheid Q de TO- en TK-waarden in een TO-TK-grafiek af, gebruik de verticale afstand en bepaal of er winst of verlies is.\",\"needs\":[\"A63\",\"A75\",\"A77\"],\"mastery_target\":\"apply\",\"prior_learning\":\"new_this_year\",\"aspects\":[\"grafisch\",\"rekenen\"],\"terms\":[],\"procedure\":[\"Lees de titel en bepaal dat de grafiek totale opbrengsten en totale kosten van een producent toont.\",\"Controleer de horizontale as, verticale as, eenheden en schaal.\",\"Identificeer welke lijn of kromme TO is en welke lijn of kromme TK is, via labels of legenda.\",\"Kies de gevraagde hoeveelheid Q en lees TO en TK bij diezelfde hoeveelheid af.\",\"Bepaal de verticale afstand: TO min TK.\",\"Interpreteer de uitkomst: TO boven TK betekent winst, TO onder TK betekent verlies, en TO gelijk aan TK betekent break-even.\"],\"pitfalls\":[\"Horizontale afstand lezen in plaats van verticale afstand.\",\"TO en TK bij verschillende hoeveelheden vergelijken.\",\"Alleen kijken welke lijn hoger ligt zonder de schaal of eenheden te controleren.\"],\"generator\":\"GEN_A78\"}'",
+      "status": "passed",
+      "exit_code": 0,
+      "stdout": "OK  minted A78 \"Winst of verlies aflezen uit TO-TK-grafiek\" (catalog now 229 units)",
+      "stderr": "(node:44400) Warning: Accessing non-existent property 'formatEntry' of module exports inside circular dependency\n(Use `node --trace-warnings ...` to show where the warning was created)"
+    }
+  ],
+  "applied": {
+    "units_added": [
+      "A77",
+      "A78"
+    ],
+    "required_execution_order": [
+      "A77",
+      "A78"
+    ],
+    "required_dependencies": {
+      "A77": [
+        "A63",
+        "A29"
+      ],
+      "A78": [
+        "A63",
+        "A75",
+        "A77"
+      ]
+    }
+  },
+  "a78_dependency_decision": {
+    "decision": "add_A77",
+    "rationale": "A78 profit/loss reading in a TO-TK graph should build on A77 break-even reading because break-even anchors the profit/loss zones in the same graph representation."
+  },
+  "generator_block": {
+    "tracked_in": "reports/review-gates/GATE-RX3b-producer-graph-lane-review/RX.3b-generator-blocked-units.json",
+    "status": "active_block",
+    "units": [
+      {
+        "unit_id": "A77",
+        "generator": "GEN_A77",
+        "generator_implemented": false,
+        "student_facing_skilltree_use_allowed": false,
+        "pv_projection_allowed": false
+      },
+      {
+        "unit_id": "A78",
+        "generator": "GEN_A78",
+        "generator_implemented": false,
+        "student_facing_skilltree_use_allowed": false,
+        "pv_projection_allowed": false
+      }
+    ]
+  },
+  "blocked_scope": [
+    "A80",
+    "A81",
+    "HOLD_GRAPHICAL_MO_MK_OPTIMUM",
+    "held duplicate/overlap records",
+    "student diagnostics",
+    "adaptive routing",
+    "student-facing AI",
+    "automatic sequencing",
+    "mastery decisions",
+    "summative use",
+    "student-facing PV projection"
+  ],
+  "constraints": [
+    "CLI-only mutation",
+    "no hand edits to references/machine",
+    "no hand edits to references/external",
+    "no authored-source mutation",
+    "no RAG chunk patching",
+    "no real PV producer-graph templates in this gate",
+    "no student-facing skill-tree or PV projection before generator/projection support"
+  ],
+  "summary": {
+    "units_added": 2,
+    "commands_passed": 2,
+    "commands_failed": 0
+  }
+}

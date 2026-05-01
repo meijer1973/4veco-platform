@@ -1,0 +1,138 @@
+{
+  "gate_id": "GATE-RX3b-producer-graph-lane-review",
+  "sprint_id": "RX.3b",
+  "status": "pass_with_conditions",
+  "closed_on": "2026-05-01",
+  "closure_confirmed_by_human": true,
+  "human_interview": "reports/review-gates/GATE-RX3b-producer-graph-lane-review/human-interview.md",
+  "review_packet": "reports/review-gates/GATE-RX3b-producer-graph-lane-review/review-packet.md",
+  "audit": "reports/review-gates/GATE-RX3b-producer-graph-lane-review/candidate-specs.json",
+  "summary": "RX.3b producer graph-lane review is closed as pass_with_conditions. CLI-only mutation is authorized for A77 and A78 after live numbering and dependency checks. A77 must include A63 and A29. A78 must include A63, A75, and A77 after A77 is minted. Both units remain generator-blocked/non-interactive; PV projection and product-surface uses remain blocked.",
+  "protected_reference_data_changed": false,
+  "cli_unit_mutation_authorized": true,
+  "authorized_execution_mode": "CLI-only via build-scripts/references/unit-add.js",
+  "authorized_candidates": [
+    "A77",
+    "A78"
+  ],
+  "required_execution_order": [
+    "A77",
+    "A78"
+  ],
+  "required_dependencies": {
+    "A77": [
+      "A63",
+      "A29"
+    ],
+    "A78": [
+      "A63",
+      "A75",
+      "A77"
+    ]
+  },
+  "a78_dependency_decision": {
+    "decision": "add_A77",
+    "rationale": "A78 profit/loss reading in a TO-TK graph should build on A77 break-even reading because break-even anchors the profit/loss zones in the same graph representation."
+  },
+  "pv_constraints_required": [
+    "title and economic context",
+    "horizontal and vertical axes",
+    "units and scale",
+    "TO and TK labels or legend",
+    "exact versus estimated reading where relevant",
+    "graph-reading before calculation or interpretation",
+    "non-color fallback requirement for later PV visual-state templates"
+  ],
+  "generator_block_required": true,
+  "student_facing_use_authorized": false,
+  "pv_projection_authorized": false,
+  "blocked_scope": [
+    "A80",
+    "A81",
+    "HOLD_GRAPHICAL_MO_MK_OPTIMUM",
+    "held duplicate/overlap records",
+    "student diagnostics",
+    "adaptive routing",
+    "student-facing AI",
+    "automatic sequencing",
+    "mastery decisions",
+    "summative use",
+    "student-facing PV projection"
+  ],
+  "accepted_outcomes": [
+    "RX.3b is correctly limited to the TO-TK graph lane.",
+    "A77 is accepted with needs A63 and A29.",
+    "A78 is accepted with needs A63, A75, and A77 after A77 is minted.",
+    "PV graph-stage constraints must be represented in the unit procedures without creating real PV templates in this gate.",
+    "CLI-only mutation may proceed for A77 and A78 after live checks.",
+    "Missing generators are acceptable only if both units remain generator-blocked and non-interactive."
+  ],
+  "blocked_outcomes": [
+    "Do not mutate A80 in this gate.",
+    "Do not mutate A81 in this gate.",
+    "Do not mutate HOLD_GRAPHICAL_MO_MK_OPTIMUM.",
+    "Do not mutate held duplicate/overlap records.",
+    "Do not create real PV producer-graph templates in this gate.",
+    "Do not hand-edit references/machine/.",
+    "Do not hand-edit references/external/.",
+    "Do not mutate authored source files.",
+    "Do not patch RAG chunks by hand.",
+    "Do not expose A77 or A78 in student-facing skill-tree or PV projection before generator/projection support exists.",
+    "Do not authorize diagnostics, adaptive routing, student-facing AI, automatic sequencing, mastery decisions, summative use, or student-facing PV projection."
+  ],
+  "explicit_decisions": [
+    {
+      "topic": "gate status",
+      "decision": "Close GATE-RX3b-producer-graph-lane-review as pass_with_conditions, not clean pass."
+    },
+    {
+      "topic": "mutation authorization",
+      "decision": "Authorize CLI-only unit mutation for A77 and A78 after live numbering and dependency checks."
+    },
+    {
+      "topic": "execution order",
+      "decision": "Use the order A77, A78; A78 must not be minted before A77 exists."
+    },
+    {
+      "topic": "A77 dependencies",
+      "decision": "A77 must include A63 and A29 as needs."
+    },
+    {
+      "topic": "A78 dependencies",
+      "decision": "A78 must include A63, A75, and A77 as needs."
+    },
+    {
+      "topic": "PV constraints",
+      "decision": "Record PV graph-stage requirements in procedures but do not create real PV producer-graph templates in this gate."
+    },
+    {
+      "topic": "generator status",
+      "decision": "A77 and A78 remain generator-blocked/non-interactive until GEN_A77 and GEN_A78 exist and validate."
+    },
+    {
+      "topic": "blocked producer graph lane",
+      "decision": "A80, A81, and graphical MO=MK remain held."
+    }
+  ],
+  "conditions_to_reopen_or_pass": [
+    "Run live numbering check immediately before any later mutation.",
+    "Use only unit-add.js, in the order A77, A78.",
+    "Record the A78 dependency decision in the gate closure and mutation log.",
+    "A78 must include A63, A75, and A77 as needs after A77 is minted.",
+    "Do not mutate A80, A81, HOLD_GRAPHICAL_MO_MK_OPTIMUM, or held duplicate/overlap records.",
+    "Mark A77 and A78 generator-blocked and non-interactive until generators exist and validate.",
+    "Do not expose A77 or A78 in student-facing skill-tree or PV projection before generator/projection support exists.",
+    "Do not create real PV producer-graph templates in this gate; keep those for PV.3/PV.5.",
+    "Do not hand-edit references/machine, references/external, authored source files, or RAG chunks.",
+    "No diagnostics, adaptive routing, student-facing AI, automatic sequencing, mastery decisions, summative use, or student-facing PV projection is authorized."
+  ],
+  "allowed_next_step": "RX.3b CLI-only producer TO-TK graph-lane mutation execution",
+  "allowed_next_step_scope": [
+    "live A-domain numbering check",
+    "dependency resolution check",
+    "unit-add.js execution for A77 and A78 only",
+    "A78 dependency adjustment to include A77",
+    "generator-blocked/non-interactive tracking",
+    "validation and report regeneration"
+  ]
+}

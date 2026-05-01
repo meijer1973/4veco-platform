@@ -2,7 +2,7 @@
   "eval_set_id": "R7.3-retrieval-eval-set",
   "schema_version": 1,
   "generated_by": "build-scripts/rag/run-retrieval-evals.js",
-  "generated_on": "2026-05-01T10:59:03.335Z",
+  "generated_on": "2026-05-01T17:56:41.565Z",
   "source_files": [
     "references/data/rag/retrieval_eval_set.json",
     "references/data/rag/chunk_index.jsonl",
@@ -193,24 +193,24 @@
         "A20",
         "D1.21",
         "D30",
-        "ha-1022-a-25-1-o-582",
+        "ha-1022-a-25-1-o-584",
         "D28",
         "D3.1",
-        "ha-1022-a-25-1-o-583",
+        "ha-1022-a-25-1-o-585",
         "A15",
         "A17",
         "A2.4",
         "A2.5",
-        "ha-1022-a-25-2-o-610",
+        "ha-1022-a-25-2-o-612",
         "D01",
         "D03",
-        "ha-1022-a-25-2-o-611",
+        "ha-1022-a-25-2-o-613",
         "A16",
-        "vw-1022-a-24-2-o-734",
+        "vw-1022-a-24-2-o-736",
         "A19",
         "A2.16",
         "A2.17",
-        "vw-1022-a-24-2-o-735",
+        "vw-1022-a-24-2-o-737",
         "producentensurplus",
         "consumentensurplus",
         "A40",
@@ -238,7 +238,7 @@
       "authority_violations": [],
       "top_results": [
         {
-          "chunk_id": "exam-question:ha-1022-a-25-1-o-582",
+          "chunk_id": "exam-question:ha-1022-a-25-1-o-584",
           "score": 76,
           "source_path": "references/external/exam-questions.json",
           "source_type": "exam_question",
@@ -247,7 +247,7 @@
             "A20",
             "D1.21",
             "D30",
-            "ha-1022-a-25-1-o-582"
+            "ha-1022-a-25-1-o-584"
           ],
           "evidence_ids": [],
           "edge_statuses": [],
@@ -258,10 +258,10 @@
           "not_primary_evidence": false,
           "curriculum_authority": true,
           "allowed_for_public_citation": true,
-          "text_excerpt": "ha-1022-a-25-1-o-582. Bereken het resultaat per dag van Hopi Bon. De welvaart die ontstaat op deze fietsverhuurmarkt kan worden gemeten aan de hand van het consumenten- en producentensurplus. Door een prijsverlaging stijgt de welvaart. Gebruik bron 1. Required skills: A20, D30. Exam codes: D1.21."
+          "text_excerpt": "ha-1022-a-25-1-o-584. Bereken het resultaat per dag van Hopi Bon. De welvaart die ontstaat op deze fietsverhuurmarkt kan worden gemeten aan de hand van het consumenten- en producentensurplus. Door een prijsverlaging stijgt de welvaart. Gebruik bron 1. Required skills: A20, D30. Exam codes: D1.21."
         },
         {
-          "chunk_id": "exam-question:ha-1022-a-25-1-o-583",
+          "chunk_id": "exam-question:ha-1022-a-25-1-o-585",
           "score": 76,
           "source_path": "references/external/exam-questions.json",
           "source_type": "exam_question",
@@ -269,7 +269,7 @@
           "entity_ids": [
             "D28",
             "D3.1",
-            "ha-1022-a-25-1-o-583"
+            "ha-1022-a-25-1-o-585"
           ],
           "evidence_ids": [],
           "edge_statuses": [],
@@ -280,10 +280,10 @@
           "not_primary_evidence": false,
           "curriculum_authority": true,
           "allowed_for_public_citation": true,
-          "text_excerpt": "ha-1022-a-25-1-o-583. Leg het welvaartseffect uit als Hopi Bon een lagere prijs rekent dan de prijs bij maximale winst. Doe het als volgt: Leg het effect van een lagere prijs uit op het consumentensurplus. Leg het effect van een lagere prijs uit op het dalende producentensurplus. Leg het effect van een lagere prijs uit op het stijgende producentensurplus. Hopi Bon wil starten met een huurprijs van $ 16, om daarna deze te verhogen naar $ 24. De directeur onderzoekt of het starten met een lage pri"
+          "text_excerpt": "ha-1022-a-25-1-o-585. Leg het welvaartseffect uit als Hopi Bon een lagere prijs rekent dan de prijs bij maximale winst. Doe het als volgt: Leg het effect van een lagere prijs uit op het consumentensurplus. Leg het effect van een lagere prijs uit op het dalende producentensurplus. Leg het effect van een lagere prijs uit op het stijgende producentensurplus. Hopi Bon wil starten met een huurprijs van $ 16, om daarna deze te verhogen naar $ 24. De directeur onderzoekt of het starten met een lage pri"
         },
         {
-          "chunk_id": "exam-question:ha-1022-a-25-2-o-610",
+          "chunk_id": "exam-question:ha-1022-a-25-2-o-612",
           "score": 76,
           "source_path": "references/external/exam-questions.json",
           "source_type": "exam_question",
@@ -293,7 +293,7 @@
             "A17",
             "A2.4",
             "A2.5",
-            "ha-1022-a-25-2-o-610"
+            "ha-1022-a-25-2-o-612"
           ],
           "evidence_ids": [],
           "edge_statuses": [],
@@ -304,10 +304,10 @@
           "not_primary_evidence": false,
           "curriculum_authority": true,
           "allowed_for_public_citation": true,
-          "text_excerpt": "ha-1022-a-25-2-o-610. Laat met een berekening zien dat de doelstelling van de Mexicaanse overheid wordt bereikt. noot 1 een pond = 500 gram De invoering van de suikeraccijns heeft gevolgen voor zowel het consumentensurplus als het producentensurplus op de markt van suiker (zie bron 2). Gebruik bron 2. Required skills: A15, A17. Exam codes: A2.4, A2.5."
+          "text_excerpt": "ha-1022-a-25-2-o-612. Laat met een berekening zien dat de doelstelling van de Mexicaanse overheid wordt bereikt. noot 1 een pond = 500 gram De invoering van de suikeraccijns heeft gevolgen voor zowel het consumentensurplus als het producentensurplus op de markt van suiker (zie bron 2). Gebruik bron 2. Required skills: A15, A17. Exam codes: A2.4, A2.5."
         },
         {
-          "chunk_id": "exam-question:ha-1022-a-25-2-o-611",
+          "chunk_id": "exam-question:ha-1022-a-25-2-o-613",
           "score": 76,
           "source_path": "references/external/exam-questions.json",
           "source_type": "exam_question",
@@ -316,7 +316,7 @@
             "D01",
             "D03",
             "D3.1",
-            "ha-1022-a-25-2-o-611"
+            "ha-1022-a-25-2-o-613"
           ],
           "evidence_ids": [],
           "edge_statuses": [],
@@ -327,10 +327,10 @@
           "not_primary_evidence": false,
           "curriculum_authority": true,
           "allowed_for_public_citation": true,
-          "text_excerpt": "ha-1022-a-25-2-o-611. Geef met letters het oppervlak aan dat het consumenten- en producentensurplus weergeeft en het oppervlak dat de accijnsopbrengst weergeeft na het heffen van de suikeraccijns. Neem daarvoor onderstaande tabel over op het antwoordblad en vul aan op de stippellijnen. oppervlak consumentensurplus ……….. oppervlak producentensurplus ……….. oppervlak accijnsopbrengst ……….. Required skills: D03, D01. Exam codes: D3.1."
+          "text_excerpt": "ha-1022-a-25-2-o-613. Geef met letters het oppervlak aan dat het consumenten- en producentensurplus weergeeft en het oppervlak dat de accijnsopbrengst weergeeft na het heffen van de suikeraccijns. Neem daarvoor onderstaande tabel over op het antwoordblad en vul aan op de stippellijnen. oppervlak consumentensurplus ……….. oppervlak producentensurplus ……….. oppervlak accijnsopbrengst ……….. Required skills: D03, D01. Exam codes: D3.1."
         },
         {
-          "chunk_id": "exam-question:vw-1022-a-24-2-o-734",
+          "chunk_id": "exam-question:vw-1022-a-24-2-o-736",
           "score": 76,
           "source_path": "references/external/exam-questions.json",
           "source_type": "exam_question",
@@ -339,7 +339,7 @@
             "A16",
             "A2.4",
             "A2.5",
-            "vw-1022-a-24-2-o-734"
+            "vw-1022-a-24-2-o-736"
           ],
           "evidence_ids": [],
           "edge_statuses": [],
@@ -350,7 +350,7 @@
           "not_primary_evidence": false,
           "curriculum_authority": true,
           "allowed_for_public_citation": true,
-          "text_excerpt": "vw-1022-a-24-2-o-734. Bereken de hoogte van de Armington-elasticiteit. Piethaan: “Een stikstofheffing zal effect hebben op het producentensurplus van de binnenlandse staalmarkt, waardoor de doelmatigheid van de staalmarkt verder zal afnemen. Onze buurlanden hebben echter minder milieuregels, waardoor de mondiale maatschappelijke kosten juist kunnen toenemen.” Required skills: A16. Exam codes: A2.4, A2.5."
+          "text_excerpt": "vw-1022-a-24-2-o-736. Bereken de hoogte van de Armington-elasticiteit. Piethaan: “Een stikstofheffing zal effect hebben op het producentensurplus van de binnenlandse staalmarkt, waardoor de doelmatigheid van de staalmarkt verder zal afnemen. Onze buurlanden hebben echter minder milieuregels, waardoor de mondiale maatschappelijke kosten juist kunnen toenemen.” Required skills: A16. Exam codes: A2.4, A2.5."
         }
       ],
       "notes": "Checks whether exam evidence and the surplus unit/term surface for producer-surplus search."
@@ -420,7 +420,7 @@
           "not_primary_evidence": true,
           "curriculum_authority": false,
           "allowed_for_public_citation": false,
-          "text_excerpt": "terms-coverage: status warn; issues 79; summary {\"live_units\":225,\"units_without_terms\":79}; issue text terms-coverage-0001 missing_term_links A01 references/machine/micro-teaching-units.json Add canonical term slugs when this unit uses glossary concepts. Unit terms are either populated or explicitly marked not applicable. terms-coverage-0002 missing_term_links A02 references/machine/micro-teaching-units.json Add canonical term slugs when this unit uses glossary concepts. Unit terms are either p"
+          "text_excerpt": "terms-coverage: status warn; issues 81; summary {\"live_units\":227,\"units_without_terms\":81}; issue text terms-coverage-0001 missing_term_links A01 references/machine/micro-teaching-units.json Add canonical term slugs when this unit uses glossary concepts. Unit terms are either populated or explicitly marked not applicable. terms-coverage-0002 missing_term_links A02 references/machine/micro-teaching-units.json Add canonical term slugs when this unit uses glossary concepts. Unit terms are either p"
         },
         {
           "chunk_id": "quality-report:reference-quality-issues.json",
@@ -460,7 +460,7 @@
           "not_primary_evidence": true,
           "curriculum_authority": false,
           "allowed_for_public_citation": false,
-          "text_excerpt": "dead-units: status warn; issues 45; summary {\"live_units\":225,\"cited_live_units\":180,\"uncited_live_units\":45}; issue text dead-units-0001 uncited_live_unit A05 references/machine/micro-teaching-units.json Check whether this unit is future-needed, should be cited, or should be deprecated. Unit is cited by exam/target evidence or explicitly marked intentionally uncited. dead-units-0002 uncited_live_unit A09 references/machine/micro-teaching-units.json Check whether this unit is future-needed, shou"
+          "text_excerpt": "dead-units: status warn; issues 47; summary {\"live_units\":227,\"cited_live_units\":180,\"uncited_live_units\":47}; issue text dead-units-0001 uncited_live_unit A05 references/machine/micro-teaching-units.json Check whether this unit is future-needed, should be cited, or should be deprecated. Unit is cited by exam/target evidence or explicitly marked intentionally uncited. dead-units-0002 uncited_live_unit A09 references/machine/micro-teaching-units.json Check whether this unit is future-needed, shou"
         },
         {
           "chunk_id": "owned-content-edge:ocg-projected-unit-uses-term-unit-a06-term-evenwichtshoeveelheid-1.4.1-1.4.1-references-machine-micro-teaching-units.jso-288895008510",
@@ -601,7 +601,7 @@
           "not_primary_evidence": true,
           "curriculum_authority": false,
           "allowed_for_public_citation": false,
-          "text_excerpt": "needs-coverage: status warn; issues 43; summary {\"live_units\":225,\"empty_needs\":43}; issue text needs-coverage-0001 empty_needs:underbouw_assumed A01 references/machine/micro-teaching-units.json Review whether this is true zero, underbouw assumed, or false zero. Unit has explicit zero-needs status or at least one validated prerequisite. needs-coverage-0002 empty_needs:underbouw_assumed A02 references/machine/micro-teaching-units.json Review whether this is true zero, underbouw assumed, or false "
+          "text_excerpt": "needs-coverage: status warn; issues 43; summary {\"live_units\":227,\"empty_needs\":43}; issue text needs-coverage-0001 empty_needs:underbouw_assumed A01 references/machine/micro-teaching-units.json Review whether this is true zero, underbouw assumed, or false zero. Unit has explicit zero-needs status or at least one validated prerequisite. needs-coverage-0002 empty_needs:underbouw_assumed A02 references/machine/micro-teaching-units.json Review whether this is true zero, underbouw assumed, or false "
         },
         {
           "chunk_id": "quality-report:dead-units.json",
@@ -621,7 +621,7 @@
           "not_primary_evidence": true,
           "curriculum_authority": false,
           "allowed_for_public_citation": false,
-          "text_excerpt": "dead-units: status warn; issues 45; summary {\"live_units\":225,\"cited_live_units\":180,\"uncited_live_units\":45}; issue text dead-units-0001 uncited_live_unit A05 references/machine/micro-teaching-units.json Check whether this unit is future-needed, should be cited, or should be deprecated. Unit is cited by exam/target evidence or explicitly marked intentionally uncited. dead-units-0002 uncited_live_unit A09 references/machine/micro-teaching-units.json Check whether this unit is future-needed, shou"
+          "text_excerpt": "dead-units: status warn; issues 47; summary {\"live_units\":227,\"cited_live_units\":180,\"uncited_live_units\":47}; issue text dead-units-0001 uncited_live_unit A05 references/machine/micro-teaching-units.json Check whether this unit is future-needed, should be cited, or should be deprecated. Unit is cited by exam/target evidence or explicitly marked intentionally uncited. dead-units-0002 uncited_live_unit A09 references/machine/micro-teaching-units.json Check whether this unit is future-needed, shou"
         },
         {
           "chunk_id": "quality-report:reference-quality-issues.json",
@@ -661,7 +661,7 @@
           "not_primary_evidence": true,
           "curriculum_authority": false,
           "allowed_for_public_citation": false,
-          "text_excerpt": "aspects-coverage: status pass; issues 0; summary {\"live_units\":225,\"units_without_aspects\":0}; issue text"
+          "text_excerpt": "aspects-coverage: status pass; issues 0; summary {\"live_units\":227,\"units_without_aspects\":0}; issue text"
         }
       ],
       "notes": "Checks that false_zero empty-needs status is visible as a generated diagnostic, not curriculum authority."
@@ -1089,7 +1089,7 @@
           "not_primary_evidence": true,
           "curriculum_authority": false,
           "allowed_for_public_citation": false,
-          "text_excerpt": "dead-units: status warn; issues 45; summary {\"live_units\":225,\"cited_live_units\":180,\"uncited_live_units\":45}; issue text dead-units-0001 uncited_live_unit A05 references/machine/micro-teaching-units.json Check whether this unit is future-needed, should be cited, or should be deprecated. Unit is cited by exam/target evidence or explicitly marked intentionally uncited. dead-units-0002 uncited_live_unit A09 references/machine/micro-teaching-units.json Check whether this unit is future-needed, shou"
+          "text_excerpt": "dead-units: status warn; issues 47; summary {\"live_units\":227,\"cited_live_units\":180,\"uncited_live_units\":47}; issue text dead-units-0001 uncited_live_unit A05 references/machine/micro-teaching-units.json Check whether this unit is future-needed, should be cited, or should be deprecated. Unit is cited by exam/target evidence or explicitly marked intentionally uncited. dead-units-0002 uncited_live_unit A09 references/machine/micro-teaching-units.json Check whether this unit is future-needed, shou"
         },
         {
           "chunk_id": "quality-report:dag-integrity.json",
@@ -1109,7 +1109,7 @@
           "not_primary_evidence": true,
           "curriculum_authority": false,
           "allowed_for_public_citation": false,
-          "text_excerpt": "dag-integrity: status pass; issues 0; summary {\"units\":227,\"live_units\":225,\"deprecated_units\":2}; issue text"
+          "text_excerpt": "dag-integrity: status pass; issues 0; summary {\"units\":229,\"live_units\":227,\"deprecated_units\":2}; issue text"
         },
         {
           "chunk_id": "quality-report:unresolved-refs.json",
@@ -1129,7 +1129,7 @@
           "not_primary_evidence": true,
           "curriculum_authority": false,
           "allowed_for_public_citation": false,
-          "text_excerpt": "unresolved-refs: status warn; issues 71; summary {\"deprecated_units\":2,\"deprecated_citations\":71}; issue text unresolved-refs-0001 deprecated_reference D23 references/reference-team-roadmap.md Remove or migrate deprecated unit citation. No deprecated unit ID is cited from active docs/reports. unresolved-refs-0002 deprecated_reference H26 references/reference-team-roadmap.md Remove or migrate deprecated unit citation. No deprecated unit ID is cited from active docs/reports. unresolved-refs-0003 d"
+          "text_excerpt": "unresolved-refs: status warn; issues 75; summary {\"deprecated_units\":2,\"deprecated_citations\":75}; issue text unresolved-refs-0001 deprecated_reference D23 references/reference-team-roadmap.md Remove or migrate deprecated unit citation. No deprecated unit ID is cited from active docs/reports. unresolved-refs-0002 deprecated_reference H26 references/reference-team-roadmap.md Remove or migrate deprecated unit citation. No deprecated unit ID is cited from active docs/reports. unresolved-refs-0003 d"
         },
         {
           "chunk_id": "quality-report:aspects-coverage.json",
@@ -1149,7 +1149,7 @@
           "not_primary_evidence": true,
           "curriculum_authority": false,
           "allowed_for_public_citation": false,
-          "text_excerpt": "aspects-coverage: status pass; issues 0; summary {\"live_units\":225,\"units_without_aspects\":0}; issue text"
+          "text_excerpt": "aspects-coverage: status pass; issues 0; summary {\"live_units\":227,\"units_without_aspects\":0}; issue text"
         },
         {
           "chunk_id": "quality-report:begrippen-coverage.json",

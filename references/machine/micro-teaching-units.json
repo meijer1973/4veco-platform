@@ -2413,6 +2413,71 @@
     "generator": "GEN_A76"
   },
   {
+    "id": "A77",
+    "name": "Break-even aflezen uit TO-TK-grafiek",
+    "category": "vaardigheden",
+    "layer": 5,
+    "kern": "Lees in een TO-TK-grafiek het snijpunt van totale opbrengsten en totale kosten af en interpreteer dit als break-evenhoeveelheid.",
+    "needs": [
+      "A63",
+      "A29"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "aspects": [
+      "grafisch",
+      "rekenen"
+    ],
+    "terms": [],
+    "procedure": [
+      "Lees de titel en bepaal dat de grafiek totale opbrengsten en totale kosten van een producent toont.",
+      "Controleer de horizontale as, verticale as, eenheden en schaal.",
+      "Identificeer welke lijn of kromme TO is en welke lijn of kromme TK is, via labels of legenda.",
+      "Zoek het snijpunt of de snijpunten waar TO en TK gelijk zijn.",
+      "Lees de bijbehorende hoeveelheid Q op de horizontale as af.",
+      "Interpreteer dit punt als break-even: de totale winst is nul."
+    ],
+    "pitfalls": [
+      "De grootste verticale afstand tussen TO en TK markeren als break-even.",
+      "Een winstgebied of verliesgebied verwarren met het snijpunt.",
+      "Niet controleren of er een of twee break-evenpunten zijn."
+    ],
+    "generator": "GEN_A77"
+  },
+  {
+    "id": "A78",
+    "name": "Winst of verlies aflezen uit TO-TK-grafiek",
+    "category": "vaardigheden",
+    "layer": 6,
+    "kern": "Lees bij een hoeveelheid Q de TO- en TK-waarden in een TO-TK-grafiek af, gebruik de verticale afstand en bepaal of er winst of verlies is.",
+    "needs": [
+      "A63",
+      "A75",
+      "A77"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "aspects": [
+      "grafisch",
+      "rekenen"
+    ],
+    "terms": [],
+    "procedure": [
+      "Lees de titel en bepaal dat de grafiek totale opbrengsten en totale kosten van een producent toont.",
+      "Controleer de horizontale as, verticale as, eenheden en schaal.",
+      "Identificeer welke lijn of kromme TO is en welke lijn of kromme TK is, via labels of legenda.",
+      "Kies de gevraagde hoeveelheid Q en lees TO en TK bij diezelfde hoeveelheid af.",
+      "Bepaal de verticale afstand: TO min TK.",
+      "Interpreteer de uitkomst: TO boven TK betekent winst, TO onder TK betekent verlies, en TO gelijk aan TK betekent break-even."
+    ],
+    "pitfalls": [
+      "Horizontale afstand lezen in plaats van verticale afstand.",
+      "TO en TK bij verschillende hoeveelheden vergelijken.",
+      "Alleen kijken welke lijn hoger ligt zonder de schaal of eenheden te controleren."
+    ],
+    "generator": "GEN_A78"
+  },
+  {
     "id": "A79",
     "name": "Maximale winst bepalen uit TO-TK-tabel",
     "category": "vaardigheden",

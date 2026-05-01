@@ -1,0 +1,99 @@
+{
+  "gate_id": "GATE-RX3b-producer-graph-lane-review",
+  "sprint_id": "RX.3b",
+  "recorded_on": "2026-05-01",
+  "reviewer_role": "Head of Content Strategy",
+  "decision": "pass_with_conditions",
+  "closure_authorized": true,
+  "plain_pass_authorized": false,
+  "cli_unit_mutation_authorized": true,
+  "authorized_candidates": [
+    "A77",
+    "A78"
+  ],
+  "authorized_execution_mode": "CLI-only via build-scripts/references/unit-add.js",
+  "required_execution_order": [
+    "A77",
+    "A78"
+  ],
+  "required_dependencies": {
+    "A77": [
+      "A63",
+      "A29"
+    ],
+    "A78": [
+      "A63",
+      "A75",
+      "A77"
+    ]
+  },
+  "a78_dependency_decision": {
+    "decision": "add_A77",
+    "rationale": "A78 profit/loss reading in a TO-TK graph should build on A77 break-even reading because break-even anchors the profit/loss zones in the same graph representation."
+  },
+  "pv_constraints_required": [
+    "title and economic context",
+    "horizontal and vertical axes",
+    "units and scale",
+    "TO and TK labels or legend",
+    "exact versus estimated reading where relevant",
+    "graph-reading before calculation or interpretation",
+    "non-color fallback requirement for later PV visual-state templates"
+  ],
+  "generator_block_required": true,
+  "student_facing_use_authorized": false,
+  "pv_projection_authorized": false,
+  "answers": [
+    {
+      "id": "RX3B-Q1",
+      "answer": "A. Yes, keep the scope limited to the TO-TK graph lane",
+      "decision": "RX.3b is limited to A77 and A78."
+    },
+    {
+      "id": "RX3B-Q2",
+      "answer": "A. Yes, preserve A63/A29",
+      "decision": "A77 is approved with needs A63 and A29."
+    },
+    {
+      "id": "RX3B-Q3",
+      "answer": "B. Mostly; add A77 after A77 is minted",
+      "decision": "A78 is approved with needs A63, A75, and A77."
+    },
+    {
+      "id": "RX3B-Q4",
+      "answer": "A. Yes, record PV requirements now but keep real PV templates for PV.3/PV.5",
+      "decision": "Procedures must satisfy PV graph-stage constraints, but no real PV templates are created in this gate."
+    },
+    {
+      "id": "RX3B-Q5",
+      "answer": "A. Yes, keep A80, A81, and HOLD_GRAPHICAL_MO_MK_OPTIMUM held",
+      "decision": "A80, A81, and graphical MO=MK remain outside the lane."
+    },
+    {
+      "id": "RX3B-Q6",
+      "answer": "A. Yes, hard block student-facing use",
+      "decision": "Missing generators are acceptable only with non-interactive generator-block tracking."
+    },
+    {
+      "id": "RX3B-Q7",
+      "answer": "A. Yes, after live numbering/dependency checks",
+      "decision": "Authorize CLI-only mutation for A77 and A78 after live checks."
+    },
+    {
+      "id": "RX3B-Q8",
+      "answer": "pass_with_conditions",
+      "decision": "Close the gate as pass_with_conditions, not clean pass."
+    }
+  ],
+  "pattern_analysis": "RX.3b remains limited to the TO-TK graph lane. A77 and A78 are approved for CLI-only mutation, with A78 dependent on A77. PV constraints are required in procedures, but real PV templates and product surfaces remain blocked.",
+  "targeted_followups_required": true,
+  "targeted_followups": [
+    "Run live numbering and dependency checks immediately before mutation.",
+    "Use only unit-add.js in the order A77, A78.",
+    "Add A77 to A78 needs after A77 is minted.",
+    "Keep A80, A81, and graphical MO=MK held.",
+    "Track A77 and A78 as generator-blocked/non-interactive until generators exist and validate.",
+    "Do not create real PV producer-graph templates in this gate.",
+    "Keep student-facing skill-tree use, PV projection, diagnostics, adaptive routing, AI, sequencing, mastery, and summative use blocked."
+  ]
+}

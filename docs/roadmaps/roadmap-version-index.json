@@ -15,13 +15,14 @@
   "roadmaps": [
     {
       "roadmap_id": "references-team-roadmap",
-      "version": "v2.27-rx3b-graph-lane-review-prepared",
+      "version": "v2.28-rx3b-graph-lane-applied",
       "title": "References Team Roadmap",
       "status": "active",
       "path": "references/reference-team-roadmap.md",
       "owner": "references_team",
       "updated_on": "2026-05-01",
       "supersedes": [
+        "docs/roadmaps/outdated/reference-team-roadmap-v2.27-rx3b-graph-lane-review-prepared.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.26-rx3a-first-lane-applied.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.25-rx3a-first-lane-review-prepared.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.24-rx3-gate-closed.md",
@@ -49,7 +50,18 @@
         "knowledge/Exercise schema and quality/reference-team-roadmap Live version 28 April.md",
         "knowledge/Exercise schema and quality/roadmap-updated-repository-checked.md"
       ],
-      "notes": "Current operating roadmap after preparing GATE-RX3b-producer-graph-lane-review and stopping before A77/A78 CLI mutation."
+      "notes": "Current operating roadmap after closing GATE-RX3b and applying A77/A78 through CLI-only mutation; RX.4 is the next RX representation step."
+    },
+    {
+      "roadmap_id": "references-team-roadmap-v2.27",
+      "version": "v2.27-rx3b-graph-lane-review-prepared",
+      "title": "References Team Roadmap before RX.3b graph-lane CLI execution",
+      "status": "outdated",
+      "path": "docs/roadmaps/outdated/reference-team-roadmap-v2.27-rx3b-graph-lane-review-prepared.md",
+      "owner": "references_team",
+      "updated_on": "2026-05-01",
+      "superseded_by": "references/reference-team-roadmap.md",
+      "notes": "Snapshot archived before closing GATE-RX3b-producer-graph-lane-review and applying A77/A78 through unit-add.js."
     },
     {
       "roadmap_id": "references-team-roadmap-v2.26",

@@ -1,6 +1,6 @@
 # Retrieval Evaluation Results
 
-Generated on: 2026-05-01T10:59:03.335Z
+Generated on: 2026-05-01T17:56:41.565Z
 
 ## Summary
 
@@ -62,19 +62,19 @@ Notes: Checks whether exam evidence and the surplus unit/term surface for produc
 
 Top results:
 
-- exam-question:ha-1022-a-25-1-o-582 (exam_question, external_primary)
+- exam-question:ha-1022-a-25-1-o-584 (exam_question, external_primary)
   - source: references/external/exam-questions.json
   - warnings: -
-- exam-question:ha-1022-a-25-1-o-583 (exam_question, external_primary)
+- exam-question:ha-1022-a-25-1-o-585 (exam_question, external_primary)
   - source: references/external/exam-questions.json
   - warnings: -
-- exam-question:ha-1022-a-25-2-o-610 (exam_question, external_primary)
+- exam-question:ha-1022-a-25-2-o-612 (exam_question, external_primary)
   - source: references/external/exam-questions.json
   - warnings: -
-- exam-question:ha-1022-a-25-2-o-611 (exam_question, external_primary)
+- exam-question:ha-1022-a-25-2-o-613 (exam_question, external_primary)
   - source: references/external/exam-questions.json
   - warnings: -
-- exam-question:vw-1022-a-24-2-o-734 (exam_question, external_primary)
+- exam-question:vw-1022-a-24-2-o-736 (exam_question, external_primary)
   - source: references/external/exam-questions.json
   - warnings: -
 

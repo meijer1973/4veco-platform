@@ -4,7 +4,7 @@ Generated: 2026-04-23
 Adopted main roadmap: 2026-04-25
 Last strategic update: 2026-05-01
 Roadmap ID: `references-team-roadmap`
-Roadmap version: `v2.27-rx3b-graph-lane-review-prepared`
+Roadmap version: `v2.28-rx3b-graph-lane-applied`
 Roadmap status: `active`
 Version index: `docs/roadmaps/roadmap-version-index.json`
 Scope: `references/`, `build-scripts/references/`, `build-scripts/reports/`, reference dashboards, and generated reference reports under `reports/`
@@ -45,6 +45,8 @@ Update 2026-05-01: `GATE-RX3a-first-lane-mutation-review` closed as `pass_with_c
 
 Update 2026-05-01: `RX.3b Producer TO-TK Graph-Lane Mutation Review` is prepared for `GATE-RX3b-producer-graph-lane-review`. Candidate specs and a blocked CLI plan are ready for `A77` and `A78`; the packet records PV graph-stage constraints and asks HCS whether `A78` should add `A77` as a dependency. No mutation is authorized before HCS decision. `A80`, `A81`, and graphical MO=MK remain held.
 
+Update 2026-05-01: `GATE-RX3b-producer-graph-lane-review` closed as `pass_with_conditions` and RX.3b applied the authorized TO-TK graph lane through `unit-add.js`. `A77` and `A78` are now live catalog units; `A78` includes `A63`, `A75`, and `A77` as required needs. Both remain generator-blocked/non-interactive. `A80`, `A81`, graphical MO=MK, real PV producer-graph templates, and student-facing PV projection remain blocked.
+
 Compatibility decisions:
 
 - Sprint `R0.1` now means the sprint-execution scaffold.
@@ -70,7 +72,6 @@ Open items are listed first; completed items are kept below them.
 
 | Sprint | Name | Completed | Current State |
 |--------|------|-----------|---------------|
-| RX.3b | Producer TO-TK Graph-Lane Mutation Review | no | Prepared for `GATE-RX3b-producer-graph-lane-review`. Candidate specs and blocked CLI plan are ready for A77/A78; HCS must decide the A78 dependency question before any mutation. |
 | RX.4 | Elasticity And Market Diagram Representation Units | no | Planned after RX.2b/RX.3 with PV constraints. Separate table extraction, graph extraction, elasticity interpretation, and existing market-intervention graph operations. |
 | PV.3 | Pilot Procedure-Visual Templates | no | Build 5+ pilot templates and 2+ visual-state sequences, including formula trace, graph-stage, table-trace, and flowchart-style coverage. |
 | PV.4 | Procedure/Game Projection Contract | no | Add backward-compatible `formal_step_id` support so procedure-game data can map to formal PV steps while legacy unmapped games continue to run. |
@@ -96,6 +97,7 @@ Open items are listed first; completed items are kept below them.
 | PV.2 | Procedure-Visual Schema And Validator MVP | yes | Completed. Added PV schema files, vocabulary, empty real overlay registries, validator, schema-status reports, and `GATE-PV-G1-schema` technical proof; real pilot templates wait for PV.3 and student-facing projection remains blocked. |
 | RX.3 | Producer Table And Graph Representation Review | yes | Completed as non-mutating review. `GATE-RX3-producer-representation` closed as `pass_with_conditions`; A75/A76/A79 may enter first-lane mutation review; A77/A78 are later graph-lane candidates; A80/A81 and graphical MO=MK remain held. |
 | RX.3a | Producer Table/Data First-Lane Mutation Review And CLI Execution | yes | Completed. `GATE-RX3a-first-lane-mutation-review` closed as `pass_with_conditions`; `A75`, `A76`, and `A79` were added through `unit-add.js`; `A76` needs `A14`, `A04`, and `A61`; all three remain generator-blocked/non-interactive. |
+| RX.3b | Producer TO-TK Graph-Lane Mutation Review And CLI Execution | yes | Completed. `GATE-RX3b-producer-graph-lane-review` closed as `pass_with_conditions`; `A77` and `A78` were added through `unit-add.js`; `A78` needs `A63`, `A75`, and `A77`; both remain generator-blocked/non-interactive. |
 | S6 | Bronnen Registry MVP | yes | Completed. Created the source-document schema/validator, generated `references/data/source-document-registry.json`, and emitted JSON/Markdown registry reports. The registry is a governed `references/data/` overlay, not a hand-maintained `references/machine/` registry. |
 | RX.2b | Graphical Foundation Coverage And Mutation | yes | Completed. `GATE-RX2b-graphical-foundation` closed as `pass_with_conditions`; `A62`, `A63`, `A64`, `A65`, `A68`, `A69`, and `A73` were added through `unit-add.js`; `A71` remains held/high-risk; all seven new A-units remain generator-blocked/non-interactive until generator implementation and validation. |
 | GATE-RX2b | Graphical Foundation Review | yes | Closed as `pass_with_conditions`. Authorized CLI-only mutation for the seven-unit graphical foundation lane, held `A71`, preserved ID gaps, and preserved student-facing/adaptive/product-use blocks. |

@@ -2,13 +2,13 @@
 
 ## Goal
 
-Prepare the bounded producer TO-TK graph-lane mutation-review packet for `A77` and `A78` without executing `unit-add.js`.
+Close the bounded producer TO-TK graph-lane mutation-review gate for `A77` and `A78`, then execute the authorized CLI-only mutation if human gate closure explicitly permits it.
 
 ## Context
 
 `GATE-RX3-producer-representation` closed as `pass_with_conditions` and allowed `A77`/`A78` to proceed after `A75` exists, with PV graph-stage constraints. `RX.3a` then added `A75`, `A76`, and `A79` through CLI-only mutation. `A80`, `A81`, and graphical `MO=MK` remain held until PV producer-graph pilot templates or a later explicit gate.
 
-RX.3b prepares candidate specs, a CLI mutation plan, and generator-block tracking for the TO-TK graph lane. It does not mutate the unit catalog.
+RX.3b prepares candidate specs, a CLI mutation plan, and generator-block tracking for the TO-TK graph lane. Before human review it must not mutate the unit catalog. After `GATE-RX3b-producer-graph-lane-review` closes with explicit CLI authorization, RX.3b may apply only the approved `A77` and `A78` mutations through `unit-add.js`.
 
 ## Allowed paths
 
@@ -25,6 +25,19 @@ RX.3b prepares candidate specs, a CLI mutation plan, and generator-block trackin
 - `reports/review-gates/GATE-RX3b-producer-graph-lane-review/RX.3b-generator-blocked-units.md`
 - `reports/review-gates/GATE-RX3b-producer-graph-lane-review/bundle-urls.md`
 - `build-scripts/references/check-rx3b-producer-graph-lane-review.js`
+- `build-scripts/references/close-and-apply-rx3b-producer-graph-lane.js`
+- `build-scripts/references/check-rx3b-producer-graph-lane-mutations.js`
+- `reports/review-gates/GATE-RX3b-producer-graph-lane-review/human-interview.json`
+- `reports/review-gates/GATE-RX3b-producer-graph-lane-review/human-interview.md`
+- `reports/review-gates/GATE-RX3b-producer-graph-lane-review/gate-closure.json`
+- `reports/review-gates/GATE-RX3b-producer-graph-lane-review/gate-closure.md`
+- `reports/review-gates/GATE-RX3b-producer-graph-lane-review/RX.3b-mutation-log.json`
+- `reports/review-gates/GATE-RX3b-producer-graph-lane-review/RX.3b-mutation-log.md`
+- `references/machine/micro-teaching-units.json` via `unit-add.js` only after gate authorization
+- `references/machine/micro-teaching-units.md` via `unit-add.js` only after gate authorization
+- `reports/sprints/RX.3b-result.md`
+- `reports/sprints/RX.3b-diff-summary.md`
+- `references/data/sprints/RX.3b.result.json`
 - `reports/url-index.md`
 - `references/reference-team-roadmap.md`
 - `docs/roadmaps/outdated/reference-team-roadmap-v2.26-rx3a-first-lane-applied.md`
@@ -35,7 +48,7 @@ RX.3b prepares candidate specs, a CLI mutation plan, and generator-block trackin
 
 - hand edits to `references/machine/`
 - hand edits to `references/external/`
-- execution of `unit-add.js`
+- execution of `unit-add.js` before `GATE-RX3b-producer-graph-lane-review` explicitly authorizes CLI mutation
 - execution of `unit-add-dep.js`
 - mutation of `references/authored/course-target-exercises.json`
 - mutation of `references/external/exam-questions.json`
@@ -74,15 +87,34 @@ RX.3b prepares candidate specs, a CLI mutation plan, and generator-block trackin
 9. During human review, use calibration questions `RX3B-Q1` through `RX3B-Q8`, record each answer, analyze the answer pattern for contradictions, list targeted follow-ups, prepare a closure proposal, and require explicit human confirmation before any later mutation gate can close.
 10. Validate the packet with a read-only checker and emit gate bundle URLs.
 11. Stop for human review before any CLI mutation, dependency edit, machine-reference mutation, or student-facing exposure.
+12. If the human gate closes with explicit CLI authorization, record `human-interview.*` and `gate-closure.*`.
+13. Re-run the live numbering and dependency checks immediately before mutation.
+14. Execute `unit-add.js` only for `A77` and `A78`, in that order, applying the approved `A78` dependency decision.
+15. Record the CLI mutation log and update generator-block tracking.
+16. Regenerate and validate reference reports/RAG surfaces.
+17. Mark RX.3b completed only after result, diff summary, roadmap, URL bundle, and sprint-bundle checks pass.
 
 ## Acceptance tests
 
 ```bash
 node build-scripts/sprints/check-sprint-plan.js docs/sprints/RX.3b-plan.md
-node build-scripts/references/check-rx3b-producer-graph-lane-review.js
+node build-scripts/review-gates/validate-gate.js reports/review-gates/GATE-RX3b-producer-graph-lane-review/gate-closure.json
+node build-scripts/references/check-rx3b-producer-graph-lane-mutations.js
+node build-scripts/references/build-unit-index.js
+node build-scripts/references/validate-core-schemas.js
+node build-scripts/reports/generate-all.js
+node build-scripts/reports/validate-report-json.js
+node build-scripts/reports/generate-reference-health.js
+node build-scripts/reports/check-reference-health.js
+node build-scripts/rag/build-chunks.js
+node build-scripts/rag/validate-chunks.js
+node build-scripts/rag/validate-query-output.js
+node build-scripts/rag/run-retrieval-evals.js
+node build-scripts/rag/validate-retrieval-eval-results.js
 node build-scripts/sprints/emit-gate-bundle-urls.js GATE-RX3b-producer-graph-lane-review
 node build-scripts/sprints/check-bundle-urls.js GATE-RX3b-producer-graph-lane-review
-node build-scripts/sprints/check-sprint-bundle.js RX.3b
+node build-scripts/sprints/check-sprint-result.js reports/sprints/RX.3b-result.md
+node build-scripts/sprints/check-sprint-bundle.js RX.3b --complete
 node build-scripts/references/check-roadmap-version-index.js
 node build-scripts/references/check-source-manifest.js
 node build-scripts/references/check-document-inventory.js
@@ -91,9 +123,9 @@ node build-scripts/sprints/emit-url-index.js --check
 
 ## Rollback plan
 
-Revert the RX.3b review-preparation commit. That removes the graph-lane review packet, candidate specs, CLI plan, generator-blocked records, checker, sprint plan/baseline, roadmap version update, and URL-index changes.
+Revert the RX.3b applied-state commit. That removes the gate closure, mutation log, generator-block tracking updates, helper scripts, roadmap/version-index update, generated reports/RAG surfaces, and the CLI-added `A77` and `A78` machine-unit entries.
 
-No protected reference data rollback is needed because RX.3b must not mutate `references/machine/` or `references/external/`.
+Do not manually patch `references/machine/` for rollback.
 
 ## Human review required
 
