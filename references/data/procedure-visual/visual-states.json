@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "registry_id": "visual-states",
+  "status": "empty_pending_pv3",
+  "generated_by": "PV.2 schema MVP",
+  "generated_on": "2026-05-01",
+  "storage_decision": {
+    "registry_location": "references/data/procedure-visual/visual-states.json",
+    "machine_registry_created": false,
+    "reason": "PV.2 defines the schema and validator only. Pilot visual states are deferred to PV.3."
+  },
+  "visual_states": [],
+  "publication_policy": {
+    "student_facing_projection_allowed": false,
+    "reason": "PV.2 does not authorize student-facing Procedure-Visual projection."
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "report_id": "procedure-visual-schema-status",
+  "sprint_id": "PV.2",
+  "generated_by": "build-scripts/references/build-procedure-visual-schema-status.js",
+  "generated_on": "2026-05-01T09:33:24.101Z",
+  "status": "passed",
+  "summary": {
+    "schema_file_count": 3,
+    "registry_file_count": 4,
+    "action_count": 21,
+    "visual_type_count": 7,
+    "element_type_count": 14,
+    "procedure_template_count": 0,
+    "visual_state_count": 0,
+    "unit_template_link_count": 0,
+    "schema_example_template_count": 2,
+    "schema_example_visual_state_count": 2,
+    "provisional_operation_reference_count": 2,
+    "machine_registry_created": false,
+    "student_facing_projection_allowed": false
+  },
+  "checks": [
+    {
+      "id": "required_files_exist",
+      "status": "passed",
+      "detail": "schema, registry, unit, operation, and CP-4 files are present"
+    },
+    {
+      "id": "no_machine_pv_registry",
+      "status": "passed",
+      "detail": "no references/machine PV registry files exist"
+    },
+    {
+      "id": "schema_contracts",
+      "status": "passed",
+      "detail": "PV schema files expose required root fields and strict roots"
+    },
+    {
+      "id": "cp4_and_operation_boundary",
+      "status": "passed",
+      "detail": "CP-4 allows provisional operation references only; operation registry is not machine-promoted"
+    },
+    {
+      "id": "vocab_policy",
+      "status": "passed",
+      "detail": "21 actions, 7 visual types, 14 element types"
+    },
+    {
+      "id": "empty_registries_pass",
+      "status": "passed",
+      "detail": "real PV registries are present, empty, and publication-blocked"
+    },
+    {
+      "id": "visual_state:pv_example_table_cell_highlighted",
+      "status": "passed",
+      "detail": "table_trace/table"
+    },
+    {
+      "id": "visual_state:pv_example_bar_chart_axis_checked",
+      "status": "passed",
+      "detail": "graph_stage/bar_chart"
+    },
+    {
+      "id": "template:pv_example_select_table_values",
+      "status": "passed",
+      "detail": "2 steps, 1 provisional operation refs"
+    },
+    {
+      "id": "template:pv_example_read_bar_chart_value",
+      "status": "passed",
+      "detail": "3 steps, 1 provisional operation refs"
+    },
+    {
+      "id": "example_records_pass",
+      "status": "passed",
+      "detail": "2 procedure examples, 2 visual-state examples"
+    },
+    {
+      "id": "graph_axis_and_accessibility_rules",
+      "status": "passed",
+      "detail": "1 graph/chart example(s) validated for axes, units, labels, and non-color fallback"
+    }
+  ],
+  "acceptance_commands": [
+    "node build-scripts/references/validate-procedure-visual-registry.js",
+    "node build-scripts/references/build-procedure-visual-schema-status.js"
+  ]
+}

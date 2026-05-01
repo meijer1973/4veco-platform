@@ -1,0 +1,29 @@
+{
+  "gate_id": "GATE-PV-G1-schema",
+  "sprint_id": "PV.2",
+  "status": "pass",
+  "human_review_required": false,
+  "closed_by": "technical validator",
+  "generated_by": "build-scripts/references/build-procedure-visual-schema-status.js",
+  "generated_on": "2026-05-01T09:33:24.101Z",
+  "closure_basis": [
+    "PV schema files exist.",
+    "PV validator exists and passes on empty real registries plus schema examples.",
+    "Unit IDs and visual-state refs resolve.",
+    "Provisional operation refs are status-aware under CP-4.",
+    "Graph/chart examples declare axes, units, direct labels, and non-color fallback.",
+    "No references/machine PV registry exists."
+  ],
+  "next_sprint_unblocked": "RX.3 Producer Table And Graph Representation Units may resume using PV constraints.",
+  "not_authorized": [
+    "PV machine registry promotion",
+    "real PV pilot-template scaling before PV.3",
+    "student-facing PV projection",
+    "student diagnostics",
+    "adaptive routing",
+    "student-facing AI",
+    "automatic sequencing",
+    "mastery decisions",
+    "summative decisions"
+  ]
+}

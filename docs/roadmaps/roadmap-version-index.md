@@ -12,12 +12,13 @@ docs/roadmaps/roadmap-version-index.json
 
 | Roadmap | Version | Path | Notes |
 |---|---|---|---|
-| References Team Roadmap | `v2.21-pv1-procedure-visual-inventory` | `references/reference-team-roadmap.md` | Current operating roadmap after completing PV.1 Procedure-Visual Inventory and setting PV.2 as the next sprint. |
+| References Team Roadmap | `v2.22-pv2-procedure-visual-schema-validator` | `references/reference-team-roadmap.md` | Current operating roadmap after completing PV.2 Procedure-Visual Schema And Validator MVP and setting RX.3 as the next sprint. |
 
 ## Outdated Archive
 
 | Roadmap | Version | Path | Superseded By |
 |---|---|---|---|
+| References Team Roadmap before PV.2 procedure-visual schema validator | `v2.21-pv1-procedure-visual-inventory` | `docs/roadmaps/outdated/reference-team-roadmap-v2.21-pv1-procedure-visual-inventory.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before PV.1 procedure-visual inventory | `v2.20-cp4-skill-operation-gate-closed` | `docs/roadmaps/outdated/reference-team-roadmap-v2.20-cp4-skill-operation-gate-closed.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before CP-4 skill/operation gate closure | `v2.19-procedure-visual-track-adopted` | `docs/roadmaps/outdated/reference-team-roadmap-v2.19-procedure-visual-track-adopted.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before Procedure-Visual track adoption | `v2.18-s7-skill-operation-review-prepared` | `docs/roadmaps/outdated/reference-team-roadmap-v2.18-s7-skill-operation-review-prepared.md` | `references/reference-team-roadmap.md` |

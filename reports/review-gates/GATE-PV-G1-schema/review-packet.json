@@ -1,0 +1,111 @@
+{
+  "gate_id": "GATE-PV-G1-schema",
+  "sprint_id": "PV.2",
+  "status": "technical_packet_prepared",
+  "human_review_required": false,
+  "generated_by": "build-scripts/references/build-procedure-visual-schema-status.js",
+  "generated_on": "2026-05-01T09:33:24.101Z",
+  "purpose": "Technical schema gate before Procedure-Visual pilot data scales.",
+  "review_questions": [
+    {
+      "id": "PVG1-Q1",
+      "question": "Do the Procedure-Visual schemas exist and define strict root contracts?",
+      "answer": "A. Yes, procedure-template, visual-state, and visual-grammar schemas exist with strict root contracts."
+    },
+    {
+      "id": "PVG1-Q2",
+      "question": "Can empty real registries and schema examples pass validation?",
+      "answer": "A. Yes, real registries are empty and blocked; schema examples validate unit IDs, visual-state refs, operation refs, graph axes, units, and accessibility."
+    },
+    {
+      "id": "PVG1-Q3",
+      "question": "Are provisional exercise operation references status-aware?",
+      "answer": "A. Yes, examples may reference S7 exercise_operations only with provisional status under CP-4 conditions."
+    },
+    {
+      "id": "PVG1-Q4",
+      "question": "Did PV.2 create or authorize any references/machine PV registry?",
+      "answer": "A. No, machine promotion remains blocked."
+    },
+    {
+      "id": "PVG1-Q5",
+      "question": "Does PV.2 authorize student-facing projection or product-surface decisions?",
+      "answer": "A. No, student-facing PV projection and product-surface uses remain blocked."
+    }
+  ],
+  "acceptance_evidence": [
+    {
+      "id": "required_files_exist",
+      "status": "passed",
+      "detail": "schema, registry, unit, operation, and CP-4 files are present"
+    },
+    {
+      "id": "no_machine_pv_registry",
+      "status": "passed",
+      "detail": "no references/machine PV registry files exist"
+    },
+    {
+      "id": "schema_contracts",
+      "status": "passed",
+      "detail": "PV schema files expose required root fields and strict roots"
+    },
+    {
+      "id": "cp4_and_operation_boundary",
+      "status": "passed",
+      "detail": "CP-4 allows provisional operation references only; operation registry is not machine-promoted"
+    },
+    {
+      "id": "vocab_policy",
+      "status": "passed",
+      "detail": "21 actions, 7 visual types, 14 element types"
+    },
+    {
+      "id": "empty_registries_pass",
+      "status": "passed",
+      "detail": "real PV registries are present, empty, and publication-blocked"
+    },
+    {
+      "id": "visual_state:pv_example_table_cell_highlighted",
+      "status": "passed",
+      "detail": "table_trace/table"
+    },
+    {
+      "id": "visual_state:pv_example_bar_chart_axis_checked",
+      "status": "passed",
+      "detail": "graph_stage/bar_chart"
+    },
+    {
+      "id": "template:pv_example_select_table_values",
+      "status": "passed",
+      "detail": "2 steps, 1 provisional operation refs"
+    },
+    {
+      "id": "template:pv_example_read_bar_chart_value",
+      "status": "passed",
+      "detail": "3 steps, 1 provisional operation refs"
+    },
+    {
+      "id": "example_records_pass",
+      "status": "passed",
+      "detail": "2 procedure examples, 2 visual-state examples"
+    },
+    {
+      "id": "graph_axis_and_accessibility_rules",
+      "status": "passed",
+      "detail": "1 graph/chart example(s) validated for axes, units, labels, and non-color fallback"
+    }
+  ],
+  "blocked_scope": [
+    "references/machine/procedure-templates.json",
+    "references/machine/visual-states.json",
+    "references/machine/procedure-visual-vocab.json",
+    "real PV pilot templates before PV.3",
+    "student-facing PV projection",
+    "student diagnostics",
+    "adaptive routing",
+    "student-facing AI",
+    "automatic sequencing",
+    "mastery decisions",
+    "summative decisions"
+  ]
+}

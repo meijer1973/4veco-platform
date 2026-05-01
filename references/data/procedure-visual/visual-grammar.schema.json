@@ -1,0 +1,169 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://4veco.local/references/data/procedure-visual/visual-grammar.schema.json",
+  "title": "Procedure-Visual Vocabulary And Grammar",
+  "description": "Schema for the PV vocabulary overlay: actions, visual types, element types, surfaces, publication blockers, and schema examples.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "registry_id",
+    "status",
+    "storage_decision",
+    "operation_reference_policy",
+    "actions",
+    "visual_types",
+    "element_types",
+    "surface_ids",
+    "publication_blockers",
+    "schema_examples"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "integer",
+      "const": 1
+    },
+    "registry_id": {
+      "type": "string",
+      "const": "procedure-visual-vocab"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "schema_mvp",
+        "pilot",
+        "reviewed"
+      ]
+    },
+    "storage_decision": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "registry_location",
+        "machine_registry_created",
+        "reason"
+      ],
+      "properties": {
+        "registry_location": {
+          "type": "string",
+          "pattern": "^references/data/procedure-visual/"
+        },
+        "machine_registry_created": {
+          "type": "boolean"
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "operation_reference_policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "exercise_operations_may_be_referenced",
+        "required_status",
+        "machine_promotion_authorized"
+      ],
+      "properties": {
+        "exercise_operations_may_be_referenced": {
+          "type": "boolean"
+        },
+        "required_status": {
+          "type": "string",
+          "enum": [
+            "provisional",
+            "governed"
+          ]
+        },
+        "machine_promotion_authorized": {
+          "type": "boolean"
+        },
+        "source_gate": {
+          "type": "string"
+        }
+      }
+    },
+    "actions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "action_id",
+          "label_nl",
+          "status"
+        ],
+        "properties": {
+          "action_id": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_]*$"
+          },
+          "label_nl": {
+            "type": "string",
+            "minLength": 1
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "pv_vocab",
+              "provisional",
+              "deprecated"
+            ]
+          },
+          "notes": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "visual_types": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z][a-z0-9_]*$"
+      }
+    },
+    "element_types": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z][a-z0-9_]*$"
+      }
+    },
+    "surface_ids": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z][a-z0-9_]*$"
+      }
+    },
+    "publication_blockers": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "schema_examples": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "procedure_templates",
+        "visual_states"
+      ],
+      "properties": {
+        "procedure_templates": {
+          "type": "array"
+        },
+        "visual_states": {
+          "type": "array"
+        }
+      }
+    }
+  }
+}

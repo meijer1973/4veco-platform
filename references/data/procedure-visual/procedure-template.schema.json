@@ -1,0 +1,199 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://4veco.local/references/data/procedure-visual/procedure-template.schema.json",
+  "title": "Procedure-Visual Procedure Template",
+  "description": "Schema for one student-visible procedure template in the Procedure-Visual overlay.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "template_id",
+    "status",
+    "source_unit_ids",
+    "representation",
+    "economic_context",
+    "operation_reference_status",
+    "procedure_steps",
+    "projections",
+    "publication"
+  ],
+  "properties": {
+    "template_id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*$"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "example",
+        "draft",
+        "pilot",
+        "reviewed",
+        "deprecated"
+      ]
+    },
+    "source_unit_ids": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^[A-Z][0-9]{2,3}$"
+      }
+    },
+    "representation": {
+      "type": "string",
+      "minLength": 1
+    },
+    "economic_context": {
+      "type": "string",
+      "minLength": 1
+    },
+    "operation_reference_status": {
+      "type": "string",
+      "enum": [
+        "none",
+        "provisional",
+        "governed"
+      ]
+    },
+    "procedure_steps": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "step_id",
+          "label_nl",
+          "action",
+          "input_refs",
+          "output_refs"
+        ],
+        "properties": {
+          "step_id": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_]*$"
+          },
+          "label_nl": {
+            "type": "string",
+            "minLength": 1
+          },
+          "action": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_]*$"
+          },
+          "input_refs": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "output_refs": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "source_unit_ref": {
+            "type": "string",
+            "pattern": "^[A-Z][0-9]{2,3}$"
+          },
+          "operation_ref": {
+            "type": "string",
+            "pattern": "^[A-Z0-9_]+$"
+          },
+          "operation_ref_status": {
+            "type": "string",
+            "enum": [
+              "none",
+              "provisional",
+              "governed"
+            ]
+          },
+          "visual_state_ref": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_]*$"
+          },
+          "student_visible": {
+            "type": "boolean"
+          },
+          "notes": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "projections": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "vaardigheden",
+        "answer_model",
+        "procedure_game",
+        "flowchart",
+        "formula_trace",
+        "graph_stage_sequence",
+        "table_trace"
+      ],
+      "properties": {
+        "vaardigheden": {
+          "type": "boolean"
+        },
+        "answer_model": {
+          "type": "boolean"
+        },
+        "procedure_game": {
+          "type": "boolean"
+        },
+        "flowchart": {
+          "type": "boolean"
+        },
+        "formula_trace": {
+          "type": "boolean"
+        },
+        "graph_stage_sequence": {
+          "type": "boolean"
+        },
+        "table_trace": {
+          "type": "boolean"
+        }
+      }
+    },
+    "publication": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "student_facing_allowed",
+        "reason"
+      ],
+      "properties": {
+        "student_facing_allowed": {
+          "type": "boolean"
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        },
+        "blocked_by": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "blockers": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

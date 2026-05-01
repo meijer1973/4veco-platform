@@ -4,7 +4,7 @@ Generated: 2026-04-23
 Adopted main roadmap: 2026-04-25
 Last strategic update: 2026-05-01
 Roadmap ID: `references-team-roadmap`
-Roadmap version: `v2.22-pv2-procedure-visual-schema-validator`
+Roadmap version: `v2.21-pv1-procedure-visual-inventory`
 Roadmap status: `active`
 Version index: `docs/roadmaps/roadmap-version-index.json`
 Scope: `references/`, `build-scripts/references/`, `build-scripts/reports/`, reference dashboards, and generated reference reports under `reports/`
@@ -33,8 +33,6 @@ Update 2026-05-01: `GATE-CP4-skill-registry-coexistence` closed as `pass_with_co
 
 Update 2026-05-01: `PV.1 Procedure-Visual Inventory` is completed. The inventory now lives at `references/data/procedure-visual/inventory.json` with 12 ranked pilot templates, runtime-surface findings, provisional operation-reference status, generator/projection blockers, and PV.2 schema requirements. No `references/machine/` or `references/external/` mutation occurred, and no student-facing PV projection is authorized.
 
-Update 2026-05-01: `PV.2 Procedure-Visual Schema And Validator MVP` is completed. The PV overlay now has strict schema files, vocabulary, empty real registries, a read-only validator, schema-status reports, and `GATE-PV-G1-schema` technical proof artifacts. Real templates and visual states remain deferred to PV.3, no PV `references/machine/` registry exists, and student-facing PV projection remains blocked.
-
 Compatibility decisions:
 
 - Sprint `R0.1` now means the sprint-execution scaffold.
@@ -60,6 +58,7 @@ Open items are listed first; completed items are kept below them.
 
 | Sprint | Name | Completed | Current State |
 |--------|------|-----------|---------------|
+| PV.2 | Procedure-Visual Schema And Validator MVP | no | Define `references/data/procedure-visual/` schemas, vocabulary, validator, and schema-status reports before pilot content scales. |
 | RX.3 | Producer Table And Graph Representation Units | no | Planned after RX.2b and PV.1/PV.2 constraints. Review profit, break-even, TO/TK, GTK, MO/MK, table-difference, producer-graph overlap, and PV visual-state fit before mutation. |
 | RX.4 | Elasticity And Market Diagram Representation Units | no | Planned after RX.2b/RX.3 with PV constraints. Separate table extraction, graph extraction, elasticity interpretation, and existing market-intervention graph operations. |
 | PV.3 | Pilot Procedure-Visual Templates | no | Build 5+ pilot templates and 2+ visual-state sequences, including formula trace, graph-stage, table-trace, and flowchart-style coverage. |
@@ -82,8 +81,7 @@ Open items are listed first; completed items are kept below them.
 | Product Gate | Re-Evaluate R10-R13 Product Surfaces | no | Blocked. Diagnostics, adaptive routing, student-facing AI, teacher cockpit deployment, automatic sequencing, mastery, and summative uses remain out of scope until data-quality gates justify them. |
 | S7 | Skill And Operation Registry MVP | yes | Completed with `pass_with_conditions`. Generated `references/data/skill-operation-registry.json`, coexistence reports, and `GATE-CP4-skill-registry-coexistence` closure; `exercise_operations` remain provisional; no machine registry promotion or bulk backfill authorized. |
 | PV.0 | CP-4 Procedure-Visual Addendum | yes | Completed with CP-4. PV templates may reference provisional `exercise_operations` only with explicit provisional status and no operation promotion; no machine registry creation or student-facing PV projection is authorized. |
-| PV.1 | Procedure-Visual Inventory | yes | Completed. Generated `references/data/procedure-visual/inventory.json`, JSON/Markdown reports, and 12 ranked pilot templates spanning flowchart, formula trace, graph-stage, table-trace, and blocked generator/projection cases. |
-| PV.2 | Procedure-Visual Schema And Validator MVP | yes | Completed. Added PV schema files, vocabulary, empty real overlay registries, validator, schema-status reports, and `GATE-PV-G1-schema` technical proof; real pilot templates wait for PV.3 and student-facing projection remains blocked. |
+| PV.1 | Procedure-Visual Inventory | yes | Completed. Generated `references/data/procedure-visual/inventory.json`, JSON/Markdown reports, and 12 ranked pilot templates spanning flowchart, formula trace, graph-stage, table-trace, and blocked generator/projection cases; PV.2 is now the next allowed sprint. |
 | S6 | Bronnen Registry MVP | yes | Completed. Created the source-document schema/validator, generated `references/data/source-document-registry.json`, and emitted JSON/Markdown registry reports. The registry is a governed `references/data/` overlay, not a hand-maintained `references/machine/` registry. |
 | RX.2b | Graphical Foundation Coverage And Mutation | yes | Completed. `GATE-RX2b-graphical-foundation` closed as `pass_with_conditions`; `A62`, `A63`, `A64`, `A65`, `A68`, `A69`, and `A73` were added through `unit-add.js`; `A71` remains held/high-risk; all seven new A-units remain generator-blocked/non-interactive until generator implementation and validation. |
 | GATE-RX2b | Graphical Foundation Review | yes | Closed as `pass_with_conditions`. Authorized CLI-only mutation for the seven-unit graphical foundation lane, held `A71`, preserved ID gaps, and preserved student-facing/adaptive/product-use blocks. |
@@ -772,7 +770,7 @@ Sprint sequence:
 
 - `PV.0 CP-4 Addendum`: completed through CP-4. PV may reference provisional `exercise_operations` only with explicit provisional status; no machine registry is created.
 - `PV.1 Procedure-Visual Inventory`: inspect `micro-teaching-units.json`, `skill-operation-registry.json`, `source-data/book-1/`, procedure and skilltree engines/builders, `didactiek-principes.md`, and `economic_mathematical_precision_reference.md`; deliver inventory JSON and Markdown/JSON reports with an 8-12 candidate pilot list.
-- `PV.2 Schema And Validator MVP`: completed. Created schemas, vocabulary, empty real overlay registries, validator, schema-status reports, and `GATE-PV-G1-schema` technical proof; validator resolves unit IDs, step IDs, actions, visual-state refs, graph axes/units, non-color accessibility fallback, pilot publication blockers, and no machine registry mutation.
+- `PV.2 Schema And Validator MVP`: create schemas, vocabulary, validator, and schema-status reports; validator must resolve unit IDs, step IDs, actions, visual-state refs, graph axes/units, non-color accessibility fallback, pilot publication blockers, and no machine registry mutation.
 - `RX.3 Producer Table/Graph Units`: proceed using PV constraints once PV.1/PV.2 define the relevant procedure/visual boundary.
 - `RX.4 Elasticity/Market Diagram Units`: proceed using PV constraints for graph, table, elasticity, and market-intervention records.
 - `PV.3 Pilot Procedure-Visual Templates`: create at least five validated templates, two visual-state sequences, and one formula trace, graph stage, table trace, and flowchart-style template across the approved pilot set.
@@ -1471,7 +1469,7 @@ Sprints:
 - `S1` completed: schema audit and exercise naming contract; `GATE-CP1-schema-audit` closed as `pass_with_conditions`.
 - `Sprint 4` planned: exercise metadata overlay MVP, including `instructional_role`, `assessment_role`, scaffolding object, and schema-extension dry run.
 - `S7` completed: skill and operation registry MVP closed at `GATE-CP4-skill-registry-coexistence` as `pass_with_conditions`.
-- `PV Track` adopted: Procedure-Visual Backbone starts as a `references/data/` overlay; PV.1 and PV.2 are completed, so large RX.3/RX.4 mutation work can proceed only under PV constraints.
+- `PV Track` adopted: Procedure-Visual Backbone starts as a `references/data/` overlay; PV.1 is completed and PV.2 must precede large RX.3/RX.4 mutation work.
 
 ### Phase RX: Representation-Sensitive Micro-Unit Decomposition
 
@@ -1484,7 +1482,7 @@ Sprints:
 - `RX.2b` completed: graphical foundation units `A62`, `A63`, `A64`, `A65`, `A68`, `A69`, and `A73` added through CLI; `A71` remains held/high-risk; generator-blocked status remains active.
 - `PV.0` completed: CP-4 addendum for provisional `exercise_operations` dependency handling; no machine registry creation.
 - `PV.1` completed: procedure-visual inventory and pilot-candidate ranking.
-- `PV.2` completed: procedure-visual schemas, vocabulary, empty real overlay registries, validator, schema-status reports, and `GATE-PV-G1-schema` technical proof.
+- `PV.2` planned: procedure-visual schemas, vocabulary, validator, and schema-status reports.
 - `RX.3` planned: producer table and graph representation units after RX.2b and PV.1/PV.2 constraints.
 - `RX.4` planned: elasticity and market-diagram representation units after RX.2b/RX.3 with PV constraints.
 - `PV.3` planned: pilot templates and visual-state sequences.
@@ -1637,7 +1635,7 @@ Do not invert this order.
 
 ## Immediate Next Sprint
 
-Next sprint: `RX.3 Producer Table And Graph Representation Units`.
+Next sprint: `PV.2 Procedure-Visual Schema And Validator MVP`.
 
 R4.5 has closed the bounded micro-unit mutation lane, CP-1 has closed the non-mutating schema audit gate as `pass_with_conditions`, CP-2 has closed the owned-source scope gate as `pass_with_conditions`, R9.1 has registered the owned-source surfaces, R9.2 has completed owned-content projection, S4/CP-3 has closed as `pass_with_conditions`, S4.1 has implemented the CP-3 condition artifacts, RX.1 has prepared the non-mutating representation-operation inventory, `GATE-RX1-representation-unit-scope` has closed as `pass_with_conditions`, RX.2/GATE-RX2 has added the bounded six-unit first lane through CLI-only mutation, RX.2b/GATE-RX2b has added the bounded seven-unit graphical foundation lane through CLI-only mutation while holding `A71`, R8.1 has added the scoped internal QC issue model, S6 has created the source-document registry MVP under `references/data/`, and S7/CP-4 has closed as `pass_with_conditions`.
 
@@ -1647,7 +1645,7 @@ R4.5 has closed the bounded micro-unit mutation lane, CP-1 has closed the non-mu
 
 `S7` is closed. The skill/operation registry remains a `references/data/` overlay; `exercise_operations` remain provisional; PV templates may reference them only as provisional records; `required_skills` remains legacy/source-only; and machine registry promotion plus bulk exercise metadata backfill remain blocked.
 
-PV.1 has completed the non-mutating inventory: `references/data/procedure-visual/inventory.json`, `reports/json/procedure-visual-inventory.json`, and `reports/markdown/procedure-visual-inventory.md` record 12 ranked pilot templates and runtime/schema blockers. PV.2 has completed the schema and validator MVP: `references/data/procedure-visual/` now contains schema files, vocabulary, empty real overlay registries, and validator-backed schema-status reports. RX.3 may now proceed using PV constraints. The Procedure-Visual Registry remains under `references/data/procedure-visual/`; do not create `references/machine/procedure-templates.json` or `references/machine/visual-states.json` before the PV.7 machine-promotion review gate.
+PV.1 has completed the non-mutating inventory: `references/data/procedure-visual/inventory.json`, `reports/json/procedure-visual-inventory.json`, and `reports/markdown/procedure-visual-inventory.md` now record 12 ranked pilot templates and the runtime/schema blockers for PV.2. PV.2 must run before large RX.3/RX.4 mutation work expands. The Procedure-Visual Registry starts under `references/data/procedure-visual/`; do not create `references/machine/procedure-templates.json` or `references/machine/visual-states.json` before the PV.7 machine-promotion review gate.
 
 Do not start diagnostics, adaptive routing, student-facing AI, automatic lesson sequencing, mastery decisions, summative decisions, teacher cockpit deployment, game/simulation product mapping, or continuous-improvement claims from this roadmap.
 

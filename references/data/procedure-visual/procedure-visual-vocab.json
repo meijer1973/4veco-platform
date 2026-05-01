@@ -1,0 +1,420 @@
+{
+  "schema_version": 1,
+  "registry_id": "procedure-visual-vocab",
+  "status": "schema_mvp",
+  "generated_by": "PV.2 schema MVP",
+  "generated_on": "2026-05-01",
+  "storage_decision": {
+    "registry_location": "references/data/procedure-visual/procedure-visual-vocab.json",
+    "machine_registry_created": false,
+    "reason": "PV remains a references/data overlay until schema stability, CLI support, validators, mutation logs, reports, lesson regressions, and a later human promotion gate exist."
+  },
+  "operation_reference_policy": {
+    "exercise_operations_may_be_referenced": true,
+    "required_status": "provisional",
+    "machine_promotion_authorized": false,
+    "source_gate": "GATE-CP4-skill-registry-coexistence"
+  },
+  "actions": [
+    {
+      "action_id": "identify_context",
+      "label_nl": "Bepaal titel en context.",
+      "status": "pv_vocab"
+    },
+    {
+      "action_id": "check_labels",
+      "label_nl": "Controleer labels, legenda en eenheden.",
+      "status": "pv_vocab"
+    },
+    {
+      "action_id": "check_scale",
+      "label_nl": "Controleer de schaal.",
+      "status": "pv_vocab"
+    },
+    {
+      "action_id": "read_value",
+      "label_nl": "Lees de waarde af.",
+      "status": "pv_vocab"
+    },
+    {
+      "action_id": "estimate_or_interpolate",
+      "label_nl": "Bepaal of schatten of interpoleren nodig is.",
+      "status": "pv_vocab"
+    },
+    {
+      "action_id": "select_table_value",
+      "label_nl": "Selecteer de juiste tabelwaarde.",
+      "status": "pv_vocab"
+    },
+    {
+      "action_id": "read_share",
+      "label_nl": "Lees het aandeel af.",
+      "status": "pv_vocab"
+    },
+    {
+      "action_id": "calculate_absolute_from_share",
+      "label_nl": "Bereken de absolute hoeveelheid uit aandeel en totaal.",
+      "status": "pv_vocab"
+    },
+    {
+      "action_id": "calculate_difference",
+      "label_nl": "Bereken het verschil.",
+      "status": "pv_vocab"
+    },
+    {
+      "action_id": "calculate_percentage_change",
+      "label_nl": "Bereken de procentuele verandering.",
+      "status": "pv_vocab"
+    },
+    {
+      "action_id": "compare_percentage_points",
+      "label_nl": "Vergelijk procentpunten met procentuele verandering.",
+      "status": "pv_vocab"
+    },
+    {
+      "action_id": "calculate_index",
+      "label_nl": "Bereken het indexcijfer.",
+      "status": "pv_vocab"
+    },
+    {
+      "action_id": "differentiate",
+      "label_nl": "Differentieer de functie.",
+      "status": "pv_vocab"
+    },
+    {
+      "action_id": "substitute",
+      "label_nl": "Vul de waarde in.",
+      "status": "pv_vocab"
+    },
+    {
+      "action_id": "multiply",
+      "label_nl": "Vermenigvuldig de factoren.",
+      "status": "pv_vocab"
+    },
+    {
+      "action_id": "equate_and_solve",
+      "label_nl": "Stel gelijk en los op.",
+      "status": "pv_vocab"
+    },
+    {
+      "action_id": "interpret_result",
+      "label_nl": "Interpreteer de uitkomst economisch.",
+      "status": "pv_vocab"
+    },
+    {
+      "action_id": "rank_alternatives",
+      "label_nl": "Rangschik de alternatieven.",
+      "status": "pv_vocab"
+    },
+    {
+      "action_id": "calculate_payoff",
+      "label_nl": "Bereken de opbrengst of opoffering.",
+      "status": "pv_vocab"
+    },
+    {
+      "action_id": "choose_best_alternative",
+      "label_nl": "Kies het alternatief met de beste afweging.",
+      "status": "pv_vocab"
+    },
+    {
+      "action_id": "flow_step",
+      "label_nl": "Volg de volgende stap in de redeneerlijn.",
+      "status": "pv_vocab"
+    }
+  ],
+  "visual_types": [
+    "formula_trace",
+    "table_trace",
+    "graph_stage",
+    "flowchart",
+    "graph_stage_and_formula_trace",
+    "table_trace_and_formula_trace",
+    "formula_trace_and_future_graph_stage"
+  ],
+  "element_types": [
+    "axis",
+    "curve",
+    "line",
+    "bar",
+    "slice",
+    "point",
+    "annotation",
+    "formula_box",
+    "table",
+    "table_cell",
+    "highlight",
+    "arrow",
+    "flow_node",
+    "legend"
+  ],
+  "surface_ids": [
+    "web_light",
+    "web_dark",
+    "slide",
+    "docx",
+    "summary_thumbnail"
+  ],
+  "publication_blockers": [
+    "schema_mvp_only",
+    "operation_ids_provisional_until_registry_gate",
+    "generator_support_pending",
+    "visual_renderer_pending",
+    "procedure_game_mapping_pending",
+    "human_publication_gate_pending"
+  ],
+  "schema_examples": {
+    "procedure_templates": [
+      {
+        "template_id": "pv_example_select_table_values",
+        "status": "example",
+        "source_unit_ids": [
+          "A61"
+        ],
+        "representation": "table",
+        "economic_context": "source_value_selection",
+        "operation_reference_status": "provisional",
+        "procedure_steps": [
+          {
+            "step_id": "identify_table_context",
+            "label_nl": "Bepaal welke grootheid en periode de tabel beschrijft.",
+            "action": "identify_context",
+            "input_refs": [
+              "source_table"
+            ],
+            "output_refs": [
+              "table_context"
+            ],
+            "source_unit_ref": "A61",
+            "student_visible": true
+          },
+          {
+            "step_id": "select_cell",
+            "label_nl": "Selecteer de rij en kolom met de waarde die je nodig hebt.",
+            "action": "select_table_value",
+            "input_refs": [
+              "source_table",
+              "table_context"
+            ],
+            "output_refs": [
+              "selected_value"
+            ],
+            "source_unit_ref": "A61",
+            "operation_ref": "REP_TABLE_VALUE_SELECTION",
+            "operation_ref_status": "provisional",
+            "visual_state_ref": "pv_example_table_cell_highlighted",
+            "student_visible": true
+          }
+        ],
+        "projections": {
+          "vaardigheden": true,
+          "answer_model": true,
+          "procedure_game": false,
+          "flowchart": false,
+          "formula_trace": false,
+          "graph_stage_sequence": false,
+          "table_trace": true
+        },
+        "publication": {
+          "student_facing_allowed": false,
+          "reason": "PV.2 examples validate the schema only.",
+          "blocked_by": [
+            "schema_mvp_only",
+            "human_publication_gate_pending"
+          ]
+        },
+        "blockers": [
+          "operation_ids_provisional_until_registry_gate",
+          "visual_renderer_pending"
+        ]
+      },
+      {
+        "template_id": "pv_example_read_bar_chart_value",
+        "status": "example",
+        "source_unit_ids": [
+          "A62"
+        ],
+        "representation": "bar_chart",
+        "economic_context": "source_chart_reading",
+        "operation_reference_status": "provisional",
+        "procedure_steps": [
+          {
+            "step_id": "identify_chart_context",
+            "label_nl": "Bepaal titel, variabele en categorieen in het staafdiagram.",
+            "action": "identify_context",
+            "input_refs": [
+              "bar_chart"
+            ],
+            "output_refs": [
+              "chart_context"
+            ],
+            "source_unit_ref": "A62",
+            "student_visible": true
+          },
+          {
+            "step_id": "check_chart_scale",
+            "label_nl": "Controleer aslabel, eenheid en schaal voordat je de staaf afleest.",
+            "action": "check_scale",
+            "input_refs": [
+              "bar_chart",
+              "chart_context"
+            ],
+            "output_refs": [
+              "scale_interpretation"
+            ],
+            "source_unit_ref": "A62",
+            "visual_state_ref": "pv_example_bar_chart_axis_checked",
+            "student_visible": true
+          },
+          {
+            "step_id": "read_bar_value",
+            "label_nl": "Lees de staafhoogte af en bepaal of schatten nodig is.",
+            "action": "read_value",
+            "input_refs": [
+              "bar_chart",
+              "scale_interpretation"
+            ],
+            "output_refs": [
+              "selected_bar_value"
+            ],
+            "source_unit_ref": "A62",
+            "operation_ref": "REP_BAR_CHART_VALUE_READING",
+            "operation_ref_status": "provisional",
+            "visual_state_ref": "pv_example_bar_chart_axis_checked",
+            "student_visible": true
+          }
+        ],
+        "projections": {
+          "vaardigheden": true,
+          "answer_model": true,
+          "procedure_game": false,
+          "flowchart": false,
+          "formula_trace": false,
+          "graph_stage_sequence": true,
+          "table_trace": false
+        },
+        "publication": {
+          "student_facing_allowed": false,
+          "reason": "PV.2 examples validate the schema only.",
+          "blocked_by": [
+            "schema_mvp_only",
+            "generator_support_pending",
+            "human_publication_gate_pending"
+          ]
+        },
+        "blockers": [
+          "operation_ids_provisional_until_registry_gate",
+          "generator_support_pending",
+          "visual_renderer_pending"
+        ]
+      }
+    ],
+    "visual_states": [
+      {
+        "visual_state_id": "pv_example_table_cell_highlighted",
+        "status": "example",
+        "visual_type": "table_trace",
+        "semantic_focus": "selected_source_value",
+        "representation": "table",
+        "elements": [
+          {
+            "type": "table",
+            "role": "source_table",
+            "label": "Brongegevens"
+          },
+          {
+            "type": "table_cell",
+            "role": "selected_value",
+            "label": "gezochte waarde"
+          },
+          {
+            "type": "highlight",
+            "role": "student_focus",
+            "visual_encoding": "border_and_label"
+          },
+          {
+            "type": "annotation",
+            "role": "reading_instruction",
+            "text_nl": "Gebruik de waarde op het kruispunt van de juiste rij en kolom."
+          }
+        ],
+        "surface_requirements": {
+          "web_light": true,
+          "web_dark": true,
+          "slide": true,
+          "docx": true,
+          "summary_thumbnail": false
+        },
+        "accessibility": {
+          "meaning_not_color_only": true,
+          "direct_labels_required": true,
+          "non_color_fallback": "The selected cell uses a border and direct label, not color alone."
+        },
+        "publication": {
+          "student_facing_allowed": false,
+          "reason": "PV.2 examples validate the schema only.",
+          "blocked_by": [
+            "schema_mvp_only",
+            "visual_renderer_pending"
+          ]
+        }
+      },
+      {
+        "visual_state_id": "pv_example_bar_chart_axis_checked",
+        "status": "example",
+        "visual_type": "graph_stage",
+        "semantic_focus": "scale_checked_before_value_reading",
+        "representation": "bar_chart",
+        "elements": [
+          {
+            "type": "axis",
+            "role": "horizontal_axis",
+            "axis_role": "horizontal_axis",
+            "label": "jaar"
+          },
+          {
+            "type": "axis",
+            "role": "vertical_axis",
+            "axis_role": "vertical_axis",
+            "label": "omzet",
+            "unit": "euro"
+          },
+          {
+            "type": "bar",
+            "role": "selected_category",
+            "label": "2025"
+          },
+          {
+            "type": "annotation",
+            "role": "scale_instruction",
+            "text_nl": "Controleer de schaal voordat je de staafhoogte afleest."
+          },
+          {
+            "type": "highlight",
+            "role": "student_focus",
+            "visual_encoding": "outline_and_direct_label"
+          }
+        ],
+        "surface_requirements": {
+          "web_light": true,
+          "web_dark": true,
+          "slide": true,
+          "docx": true,
+          "summary_thumbnail": true
+        },
+        "accessibility": {
+          "meaning_not_color_only": true,
+          "direct_labels_required": true,
+          "non_color_fallback": "The selected bar uses an outline and direct label, not color alone."
+        },
+        "publication": {
+          "student_facing_allowed": false,
+          "reason": "PV.2 examples validate the schema only.",
+          "blocked_by": [
+            "schema_mvp_only",
+            "visual_renderer_pending"
+          ]
+        }
+      }
+    ]
+  }
+}
