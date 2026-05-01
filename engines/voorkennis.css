@@ -549,6 +549,14 @@ body[data-layout="begeleide-inoefening-v1"] .hero-card-count {
 
 /* ── Samenvatting (one-A4 infographic rendered as web) ──────────────── */
 
+/* Lift the editorial prose-width cap (820px is right for long-form
+   reading; samenvatting is an infographic with short cell content, so
+   a wider canvas is appropriate). The auto-fit grid below will still
+   choose the column count based on actual available width. */
+body[data-layout="samenvatting-v1"] {
+  --content-max: 1500px;
+}
+
 body[data-layout="samenvatting-v1"] .hero-actions {
   display: flex;
   gap: 12px;
@@ -575,10 +583,12 @@ body[data-layout="samenvatting-v1"] .hero-action:hover {
 
 body[data-layout="samenvatting-v1"] .samenvatting-grid {
   display: grid;
-  /* Auto-fit: as many columns as fit at 320px minimum, then collapse smoothly
-     as viewport / zoom / sidebar state changes. Wide desktops get 3+ tiles
-     per row; tablets get 2; phones get 1. No hard-coded breakpoint counts. */
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  /* Auto-fit: as many columns as fit at 280px minimum, then collapse smoothly
+     as viewport / zoom / sidebar state changes. Wide desktops get 3-4 tiles
+     per row; standard laptops get 3; tablets get 2; phones get 1. No
+     hard-coded breakpoint counts — the grid recalculates against the
+     actual container width that the surrounding layout permits. */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 18px;
   padding: 24px 40px 48px;
 }
