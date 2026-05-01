@@ -4,7 +4,7 @@ Generated: 2026-04-23
 Adopted main roadmap: 2026-04-25
 Last strategic update: 2026-05-01
 Roadmap ID: `references-team-roadmap`
-Roadmap version: `v2.29-rx4-elasticity-market-review-prepared`
+Roadmap version: `v2.28-rx3b-graph-lane-applied`
 Roadmap status: `active`
 Version index: `docs/roadmaps/roadmap-version-index.json`
 Scope: `references/`, `build-scripts/references/`, `build-scripts/reports/`, reference dashboards, and generated reference reports under `reports/`
@@ -47,8 +47,6 @@ Update 2026-05-01: `RX.3b Producer TO-TK Graph-Lane Mutation Review` is prepared
 
 Update 2026-05-01: `GATE-RX3b-producer-graph-lane-review` closed as `pass_with_conditions` and RX.3b applied the authorized TO-TK graph lane through `unit-add.js`. `A77` and `A78` are now live catalog units; `A78` includes `A63`, `A75`, and `A77` as required needs. Both remain generator-blocked/non-interactive. `A80`, `A81`, graphical MO=MK, real PV producer-graph templates, and student-facing PV projection remain blocked.
 
-Update 2026-05-01: `RX.4 Elasticity And Market Diagram Representation Units` is prepared for `GATE-RX4-elasticity-market-diagram-review` human review. The packet treats `A82` and `A84` as the lower-risk elasticity table/source lane, keeps `A83` conditional on the demand-graph versus P-Q graph evidence/naming decision, and holds new market/welfare/surplus/intervention graph units that overlap `A19`, `A32`, `A40`, `D39`, `D40`, `A51`, `A56`, or `A59`. No mutation is authorized before HCS decision.
-
 Compatibility decisions:
 
 - Sprint `R0.1` now means the sprint-execution scaffold.
@@ -74,7 +72,7 @@ Open items are listed first; completed items are kept below them.
 
 | Sprint | Name | Completed | Current State |
 |--------|------|-----------|---------------|
-| RX.4 | Elasticity And Market Diagram Representation Units | no | Prepared for `GATE-RX4-elasticity-market-diagram-review`. `A82`/`A84` are the lower-risk elasticity table/source lane; `A83` remains conditional on the graph-source naming/evidence decision; market/welfare duplicate areas remain held. |
+| RX.4 | Elasticity And Market Diagram Representation Units | no | Planned after RX.2b/RX.3 with PV constraints. Separate table extraction, graph extraction, elasticity interpretation, and existing market-intervention graph operations. |
 | PV.3 | Pilot Procedure-Visual Templates | no | Build 5+ pilot templates and 2+ visual-state sequences, including formula trace, graph-stage, table-trace, and flowchart-style coverage. |
 | PV.4 | Procedure/Game Projection Contract | no | Add backward-compatible `formal_step_id` support so procedure-game data can map to formal PV steps while legacy unmapped games continue to run. |
 | RX.5 | Representation Operation Registry And Reports | no | Planned as the bridge to Sprint 7 output and PV. Promote provisional representation-operation inventory only after schema, validator, CLI path, and PV operation/visual-state report requirements exist. |
@@ -1068,8 +1066,6 @@ Acceptance tests:
 
 Purpose: extend the representation model to elasticity and market diagrams.
 
-Current review state: `GATE-RX4-elasticity-market-diagram-review` is prepared for human review. The proposed lower-risk lane is `A82` and `A84`; `A83` is conditional on an explicit graph-source naming/evidence decision; new market/welfare/surplus/intervention graph units remain held to avoid duplicating existing units.
-
 Candidate scope, subject to duplicate audit and renumbering:
 
 - elasticity from table values;
@@ -1505,8 +1501,8 @@ Sprints:
 - `PV.0` completed: CP-4 addendum for provisional `exercise_operations` dependency handling; no machine registry creation.
 - `PV.1` completed: procedure-visual inventory and pilot-candidate ranking.
 - `PV.2` completed: procedure-visual schemas, vocabulary, empty real overlay registries, validator, schema-status reports, and `GATE-PV-G1-schema` technical proof.
-- `RX.3` completed: `GATE-RX3-producer-representation` closed as `pass_with_conditions`; `RX.3a` and `RX.3b` applied producer table/data and TO-TK graph lanes through CLI-only mutation.
-- `RX.4` prepared for human review: `A82`/`A84` lower-risk elasticity table/source lane; `A83` conditional graph-source lane; market/welfare duplicate areas held.
+- `RX.3` completed as non-mutating review: `GATE-RX3-producer-representation` closed as `pass_with_conditions`; `RX.3a` first-lane mutation review is the next allowed step.
+- `RX.4` planned: elasticity and market-diagram representation units after RX.2b/RX.3 with PV constraints.
 - `PV.3` planned: pilot templates and visual-state sequences.
 - `PV.4` planned: backward-compatible procedure/game projection contract.
 - `RX.5` planned: representation operation registry and reports, expanded with PV operation/visual-state dimensions, only after schema/validator/CLI path exists.

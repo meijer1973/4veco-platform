@@ -1,0 +1,54 @@
+{
+  "sprint_id": "RX.4",
+  "name": "Elasticity And Market Diagram Representation Review",
+  "status": "planned_for_human_review",
+  "planned_on": "2026-05-01",
+  "plan": "docs/sprints/RX.4-plan.md",
+  "protected_reference_data_changes_allowed": false,
+  "protected_reference_data_change_mode": "none during review preparation; any later mutation requires explicit gate closure and unit-add.js",
+  "human_review_required": true,
+  "gate_id": "GATE-RX4-elasticity-market-diagram-review",
+  "review_packet": "reports/review-gates/GATE-RX4-elasticity-market-diagram-review/review-packet.md",
+  "valid_gate_statuses": [
+    "pass",
+    "pass_with_conditions",
+    "hold"
+  ],
+  "allowed_outputs": [
+    "reports/review-gates/GATE-RX4-elasticity-market-diagram-review/review-packet.json",
+    "reports/review-gates/GATE-RX4-elasticity-market-diagram-review/review-packet.md",
+    "reports/review-gates/GATE-RX4-elasticity-market-diagram-review/candidate-specs.json",
+    "reports/review-gates/GATE-RX4-elasticity-market-diagram-review/candidate-specs.md",
+    "reports/review-gates/GATE-RX4-elasticity-market-diagram-review/cli-mutation-plan.json",
+    "reports/review-gates/GATE-RX4-elasticity-market-diagram-review/cli-mutation-plan.md",
+    "reports/review-gates/GATE-RX4-elasticity-market-diagram-review/RX.4-generator-blocked-units.json",
+    "reports/review-gates/GATE-RX4-elasticity-market-diagram-review/RX.4-generator-blocked-units.md",
+    "reports/review-gates/GATE-RX4-elasticity-market-diagram-review/bundle-urls.md"
+  ],
+  "blocked_scope": [
+    "references/machine mutation",
+    "references/external mutation",
+    "unit-add.js execution before explicit gate authorization",
+    "unit-add-dep.js execution",
+    "held market/welfare duplicate areas",
+    "lesson repo commits",
+    "student diagnostics",
+    "adaptive routing",
+    "student-facing AI",
+    "automatic sequencing",
+    "mastery decisions",
+    "summative decisions",
+    "student-facing skill-tree or PV projection use of A82/A83/A84"
+  ],
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js docs/sprints/RX.4-plan.md",
+    "node build-scripts/references/check-rx4-elasticity-market-diagram-review.js",
+    "node build-scripts/sprints/emit-gate-bundle-urls.js GATE-RX4-elasticity-market-diagram-review",
+    "node build-scripts/sprints/check-bundle-urls.js GATE-RX4-elasticity-market-diagram-review",
+    "node build-scripts/sprints/check-sprint-bundle.js RX.4",
+    "node build-scripts/references/check-roadmap-version-index.js",
+    "node build-scripts/references/check-source-manifest.js",
+    "node build-scripts/references/check-document-inventory.js",
+    "node build-scripts/sprints/emit-url-index.js --check"
+  ]
+}

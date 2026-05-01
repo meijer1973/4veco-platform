@@ -1,0 +1,211 @@
+{
+  "schema_version": 1,
+  "sprint_id": "RX.4",
+  "artifact_id": "RX.4-elasticity-market-diagram-candidate-specs",
+  "status": "prepared_for_mutation_review",
+  "generated_on": "2026-05-01",
+  "source_files": [
+    "reports/review-gates/GATE-RX1-representation-unit-scope/gate-closure.json",
+    "references/data/sprints/RX.1-representation-operation-inventory.json",
+    "references/machine/micro-teaching-units.json"
+  ],
+  "policy": {
+    "mutation_authorized": false,
+    "cli_execution_authorized": false,
+    "protected_reference_data_changed": false,
+    "candidate_ids_are_provisional_until_execution": true,
+    "lower_risk_first_lane": [
+      "A82",
+      "A84"
+    ],
+    "conditional_graph_lane": [
+      "A83"
+    ],
+    "held_market_welfare_records_remain_blocked": [
+      "new surplus/welfare area units",
+      "new short-side or intervention-quantity units",
+      "new graphical MO=MK optimum units"
+    ]
+  },
+  "blocked_scope": [
+    "held duplicate/overlap records",
+    "market/welfare/surplus units overlapping A19/A32/A40/D39/D40",
+    "market-intervention graph units overlapping A51/A56/A59",
+    "student diagnostics",
+    "adaptive routing",
+    "student-facing AI",
+    "automatic sequencing",
+    "mastery decisions",
+    "summative use",
+    "student-facing PV projection"
+  ],
+  "market_welfare_duplicate_audit": {
+    "existing_surplus_welfare_units": [
+      "A19",
+      "A32",
+      "A40",
+      "D39",
+      "D40"
+    ],
+    "existing_intervention_graph_units": [
+      "A51",
+      "A56",
+      "A59"
+    ],
+    "decision_for_this_gate": "hold_new_market_welfare_units",
+    "rationale": "RX.4 may review elasticity representation units, but new surplus, welfare, short-side, intervention-quantity, or graphical MO=MK candidates risk duplicating live units and require a later focused design review."
+  },
+  "pv_graph_stage_constraints": [
+    "Procedure steps must separate graph-reading from calculation or interpretation.",
+    "P-Q graph procedures must identify title/context, axes, units, scale, and direct labels or legend.",
+    "Students must read two coherent price/quantity pairs before computing percentage changes.",
+    "Any later PV visual-state template must use direct labels or a legend and must not rely on color alone.",
+    "No student-facing PV projection is authorized by this packet."
+  ],
+  "candidates": [
+    {
+      "candidate_id": "A82",
+      "sequence_index": 1,
+      "lane": "lower_risk_first_lane",
+      "live_numbering_status": "available_at_review_generation",
+      "rx1_inventory_operation_id": "REP_ELASTICITY_FROM_TABLE",
+      "rx1_inventory_name": "Elasticiteit berekenen uit tabelwaarden",
+      "rx4_draft_spec": {
+        "id": "A82",
+        "name": "Elasticiteit berekenen uit tabelwaarden",
+        "kern": "Bereken elasticiteit nadat je twee waardenparen uit een tabel hebt geselecteerd en de procentuele verandering van oorzaak en gevolg correct hebt gekoppeld.",
+        "needs": [
+          "A15",
+          "A61",
+          "A66"
+        ],
+        "mastery_target": "apply",
+        "prior_learning": "new_this_year",
+        "aspects": [
+          "rekenen",
+          "verbaal"
+        ],
+        "terms": [],
+        "procedure": [
+          "Lees de vraag en bepaal welke oorzaakvariabele en gevolgvariabele bij de elasticiteit horen.",
+          "Selecteer in de tabel de oude en nieuwe waarden van beide variabelen en controleer rij, kolom, periode en eenheid.",
+          "Label per variabele de basiswaarde en vergelijkingswaarde.",
+          "Bereken de procentuele verandering van de gevolgvariabele.",
+          "Bereken de procentuele verandering van de oorzaakvariabele.",
+          "Deel de procentuele verandering van het gevolg door de procentuele verandering van de oorzaak.",
+          "Interpreteer teken en absolute waarde in de economische context."
+        ],
+        "pitfalls": [
+          "De verkeerde tabelrijen of perioden koppelen.",
+          "Oorzaak en gevolg omwisselen in de elasticiteitsbreuk.",
+          "Absolute veranderingen gebruiken in plaats van procentuele veranderingen.",
+          "Het minteken of de absolute waarde negeren bij de interpretatie."
+        ],
+        "generator": "GEN_A82"
+      },
+      "evidence_status": "exam_question_evidence",
+      "risk": "medium",
+      "generator_status": "missing_generator_implementation",
+      "generator_followup_required": true,
+      "mutation_authorized": false,
+      "cli_execution_authorized": false,
+      "dependency_note": "Draft keeps RX.1 needs A15, A61, and A66 so table selection and basis/comparison identification remain explicit."
+    },
+    {
+      "candidate_id": "A84",
+      "sequence_index": 2,
+      "lane": "lower_risk_first_lane",
+      "live_numbering_status": "available_at_review_generation",
+      "rx1_inventory_operation_id": "REP_REVENUE_CHANGE_WITH_ELASTICITY_SOURCE",
+      "rx1_inventory_name": "Omzetverandering beoordelen met elasticiteit uit bron",
+      "rx4_draft_spec": {
+        "id": "A84",
+        "name": "Omzetverandering beoordelen met elasticiteit uit bron",
+        "kern": "Beoordeel met elasticiteit en brongegevens of totale omzet stijgt, daalt of gelijk blijft na een prijs- of hoeveelheidsverandering.",
+        "needs": [
+          "A15",
+          "A67"
+        ],
+        "mastery_target": "apply",
+        "prior_learning": "new_this_year",
+        "aspects": [
+          "rekenen",
+          "verbaal"
+        ],
+        "terms": [],
+        "procedure": [
+          "Lees uit de bron welke prijsverandering, hoeveelheidsverandering of elasticiteitswaarde gegeven is.",
+          "Bepaal of de vraag elastisch, inelastisch of unitair is met de absolute waarde van de elasticiteit.",
+          "Koppel de prijsverandering aan de verwachte hoeveelheidsverandering.",
+          "Gebruik TO = P maal Q of vergelijk de procentuele effecten om de richting van de omzetverandering te bepalen.",
+          "Controleer of je omzet niet verwart met winst en of het teken past bij de context.",
+          "Formuleer het oordeel met verwijzing naar de brongegevens."
+        ],
+        "pitfalls": [
+          "Het minteken mechanisch gebruiken zonder de omzetbetekenis te controleren.",
+          "Omzet en winst door elkaar halen.",
+          "Een prijsstijging bij inelastische vraag behandelen alsof omzet altijd daalt.",
+          "Een procentuele verandering berekenen zonder te controleren welke bronwaarde de basis is."
+        ],
+        "generator": "GEN_A84"
+      },
+      "evidence_status": "exam_question_evidence",
+      "risk": "medium",
+      "generator_status": "missing_generator_implementation",
+      "generator_followup_required": true,
+      "mutation_authorized": false,
+      "cli_execution_authorized": false,
+      "dependency_question": "Should A84 keep the RX.1 needs A15/A67, or should HCS require an explicit conceptual prerequisite for elasticity-and-omzet before mutation?"
+    },
+    {
+      "candidate_id": "A83",
+      "sequence_index": 3,
+      "lane": "conditional_graph_lane",
+      "live_numbering_status": "available_at_review_generation",
+      "rx1_inventory_operation_id": "REP_ELASTICITY_FROM_DEMAND_GRAPH",
+      "rx1_inventory_name": "Elasticiteit berekenen uit vraaggrafiek",
+      "rx4_draft_spec": {
+        "id": "A83",
+        "name": "Elasticiteit berekenen uit vraaggrafiek",
+        "kern": "Lees twee prijs-hoeveelheidsparen uit een vraaggrafiek af en bereken de prijselasticiteit met correcte procentuele veranderingen.",
+        "needs": [
+          "A15",
+          "A46",
+          "A66"
+        ],
+        "mastery_target": "apply",
+        "prior_learning": "new_this_year",
+        "aspects": [
+          "grafisch",
+          "rekenen"
+        ],
+        "terms": [],
+        "procedure": [
+          "Lees de titel en bepaal dat de grafiek een prijs-hoeveelheidsrelatie toont.",
+          "Controleer horizontale as, verticale as, eenheden, schaal en labels of legenda.",
+          "Kies twee punten of twee situaties die bij de vraag horen.",
+          "Lees bij elk punt de prijs en hoeveelheid af en noteer beide waardenparen.",
+          "Bepaal voor prijs en hoeveelheid welke waarde basis en welke waarde vergelijking is.",
+          "Bereken de procentuele verandering van Q en de procentuele verandering van P.",
+          "Bereken Ev = procentuele verandering Q gedeeld door procentuele verandering P.",
+          "Interpreteer teken en absolute waarde en controleer of de uitkomst past bij de grafiek."
+        ],
+        "pitfalls": [
+          "Slechts een punt aflezen en daarna een helling berekenen.",
+          "P en Q of de assen verwisselen.",
+          "Absolute veranderingen gebruiken in plaats van procentuele veranderingen.",
+          "De grafiekhelling behandelen alsof die hetzelfde is als elasticiteit.",
+          "Het minteken of de absolute waarde negeren bij de interpretatie."
+        ],
+        "generator": "GEN_A83"
+      },
+      "evidence_status": "exam_question_evidence_but_name_requires_review",
+      "risk": "medium",
+      "generator_status": "missing_generator_implementation",
+      "generator_followup_required": true,
+      "mutation_authorized": false,
+      "cli_execution_authorized": false,
+      "naming_evidence_question": "RX.1 evidence says graph extraction is the bottleneck, but the cited external example is supply-side. HCS should approve the demand-graph name, generalize to P-Q graph elasticity, or hold A83 until demand-graph-specific evidence is stronger."
+    }
+  ]
+}

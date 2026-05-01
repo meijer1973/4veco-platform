@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1",
-  "generated_at": "2026-05-01T17:58:25.575Z",
+  "generated_at": "2026-05-01T19:20:55.656Z",
   "sprint_id": "R0.2",
   "scope": [
     "references",
@@ -10,12 +10,12 @@
   ],
   "note": "Inventory covers reference sources, generated reports, and reference/report tooling.",
   "summary": {
-    "file_count": 671,
+    "file_count": 683,
     "by_layer": {
-      "reference_tooling": 87,
+      "reference_tooling": 88,
       "report_tooling": 13,
       "authored_judgement": 7,
-      "governance_data": 124,
+      "governance_data": 125,
       "external_authority": 32,
       "machine_registry": 5,
       "owned_curriculum_design": 3,
@@ -23,17 +23,17 @@
       "planning": 1,
       "schema_contract": 22,
       "governance_policy": 1,
-      "generated_report": 371
+      "generated_report": 381
     },
     "by_edit_policy": {
-      "code_review": 122,
+      "code_review": 123,
       "human_reviewed_edit": 15,
       "generated_by_inventory_script": 22,
-      "sprint_process": 101,
+      "sprint_process": 102,
       "external_refresh_only": 32,
       "cli_only": 5,
       "versioned_human_reviewed_edit": 3,
-      "generated_by_script": 371
+      "generated_by_script": 381
     }
   },
   "files": [
@@ -883,6 +883,26 @@
       "extension": "js",
       "size_bytes": 7787,
       "sha256": "9ebc1516e2f2be95e64d7e2f1391d861b3aa92349d5777124046c8493beaaf63",
+      "layer": "reference_tooling",
+      "authority_level": "tooling",
+      "source_type": "reference_cli_script",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "platform_team",
+      "refresh_policy": "code_change",
+      "downstream_dependencies": [
+        "reference-cli",
+        "reports",
+        "validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "build-scripts/references/check-rx4-elasticity-market-diagram-review.js",
+      "file_name": "check-rx4-elasticity-market-diagram-review.js",
+      "extension": "js",
+      "size_bytes": 10074,
+      "sha256": "2d946fa65d92fe48b63ba86613344983d2c06241f2bfd467e7622d0660cac857",
       "layer": "reference_tooling",
       "authority_level": "tooling",
       "source_type": "reference_cli_script",
@@ -4465,6 +4485,26 @@
       "self_generated_inventory_file": false
     },
     {
+      "path": "references/data/sprints/RX.4.plan.json",
+      "file_name": "RX.4.plan.json",
+      "extension": "json",
+      "size_bytes": 2725,
+      "sha256": "4f28a84efe31928a4cdacd2beb88b47c28cbf1f3385bb4e6fba306c6c557a2da",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
       "path": "references/data/sprints/S1.plan.json",
       "file_name": "S1.plan.json",
       "extension": "json",
@@ -5551,8 +5591,8 @@
       "path": "references/reference-team-roadmap.md",
       "file_name": "reference-team-roadmap.md",
       "extension": "md",
-      "size_bytes": 113997,
-      "sha256": "7cee47d51c61345fe4385304ea388ea9f8043b58857e98b7104ffb04d132f5eb",
+      "size_bytes": 114970,
+      "sha256": "2e421d91df49f14592d8d3a8037a02ae610acb419232c7ef5d0278a427573537",
       "layer": "planning",
       "authority_level": "authored_judgement",
       "source_type": "roadmap",
@@ -10809,6 +10849,186 @@
       "self_generated_inventory_file": false
     },
     {
+      "path": "reports/review-gates/GATE-RX4-elasticity-market-diagram-review/bundle-urls.md",
+      "file_name": "bundle-urls.md",
+      "extension": "md",
+      "size_bytes": 1636,
+      "sha256": "c1a15d80622f77d841ee7e7f43ebb491ec36df669d3bfee727b34705af999f9d",
+      "layer": "generated_report",
+      "authority_level": "generated_report",
+      "source_type": "report_md",
+      "generated_status": "generated_projection",
+      "edit_policy": "generated_by_script",
+      "owner": "platform_team",
+      "refresh_policy": "regenerate",
+      "downstream_dependencies": [
+        "dashboards",
+        "planning",
+        "qc-review"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "reports/review-gates/GATE-RX4-elasticity-market-diagram-review/candidate-specs.json",
+      "file_name": "candidate-specs.json",
+      "extension": "json",
+      "size_bytes": 9534,
+      "sha256": "388f903538967d7f445b81e467bf58335f547031a8849cf03f2d8147eb0fd7c4",
+      "layer": "generated_report",
+      "authority_level": "generated_report",
+      "source_type": "report_json",
+      "generated_status": "generated_projection",
+      "edit_policy": "generated_by_script",
+      "owner": "platform_team",
+      "refresh_policy": "regenerate",
+      "downstream_dependencies": [
+        "dashboards",
+        "planning",
+        "qc-review"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "reports/review-gates/GATE-RX4-elasticity-market-diagram-review/candidate-specs.md",
+      "file_name": "candidate-specs.md",
+      "extension": "md",
+      "size_bytes": 2299,
+      "sha256": "d9de33ebf2b12f304e590a31f7f63e5832430d472add3cd1bdeaf8f57c15a80a",
+      "layer": "generated_report",
+      "authority_level": "generated_report",
+      "source_type": "report_md",
+      "generated_status": "generated_projection",
+      "edit_policy": "generated_by_script",
+      "owner": "platform_team",
+      "refresh_policy": "regenerate",
+      "downstream_dependencies": [
+        "dashboards",
+        "planning",
+        "qc-review"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "reports/review-gates/GATE-RX4-elasticity-market-diagram-review/cli-mutation-plan.json",
+      "file_name": "cli-mutation-plan.json",
+      "extension": "json",
+      "size_bytes": 5865,
+      "sha256": "f0e6723178b5d3ba70127f3056a5028cd8e79afbbb235e073f2a112dd88011cb",
+      "layer": "generated_report",
+      "authority_level": "generated_report",
+      "source_type": "report_json",
+      "generated_status": "generated_projection",
+      "edit_policy": "generated_by_script",
+      "owner": "platform_team",
+      "refresh_policy": "regenerate",
+      "downstream_dependencies": [
+        "dashboards",
+        "planning",
+        "qc-review"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "reports/review-gates/GATE-RX4-elasticity-market-diagram-review/cli-mutation-plan.md",
+      "file_name": "cli-mutation-plan.md",
+      "extension": "md",
+      "size_bytes": 1230,
+      "sha256": "dc025baea69f47fa6bb3799960500fd75a34b2b15c1cc28ab58dc060ea3f1f6f",
+      "layer": "generated_report",
+      "authority_level": "generated_report",
+      "source_type": "report_md",
+      "generated_status": "generated_projection",
+      "edit_policy": "generated_by_script",
+      "owner": "platform_team",
+      "refresh_policy": "regenerate",
+      "downstream_dependencies": [
+        "dashboards",
+        "planning",
+        "qc-review"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "reports/review-gates/GATE-RX4-elasticity-market-diagram-review/review-packet.json",
+      "file_name": "review-packet.json",
+      "extension": "json",
+      "size_bytes": 3696,
+      "sha256": "44dcd7c5f14993a5a6ad6a4fd2a3f6e9bbd8dbb71654368e58280b66730debc9",
+      "layer": "generated_report",
+      "authority_level": "generated_report",
+      "source_type": "report_json",
+      "generated_status": "generated_projection",
+      "edit_policy": "generated_by_script",
+      "owner": "platform_team",
+      "refresh_policy": "regenerate",
+      "downstream_dependencies": [
+        "dashboards",
+        "planning",
+        "qc-review"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "reports/review-gates/GATE-RX4-elasticity-market-diagram-review/review-packet.md",
+      "file_name": "review-packet.md",
+      "extension": "md",
+      "size_bytes": 4391,
+      "sha256": "71b6c5eecbc6dfffb64f8afe41f694bbb68f457978947c5b17040944317e77b9",
+      "layer": "generated_report",
+      "authority_level": "generated_report",
+      "source_type": "report_md",
+      "generated_status": "generated_projection",
+      "edit_policy": "generated_by_script",
+      "owner": "platform_team",
+      "refresh_policy": "regenerate",
+      "downstream_dependencies": [
+        "dashboards",
+        "planning",
+        "qc-review"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "reports/review-gates/GATE-RX4-elasticity-market-diagram-review/RX.4-generator-blocked-units.json",
+      "file_name": "RX.4-generator-blocked-units.json",
+      "extension": "json",
+      "size_bytes": 1691,
+      "sha256": "ebe2271a297896ef3ceb1ea1322a5fadab0a86abaae4bc2bf44f7a7af2b96fb1",
+      "layer": "generated_report",
+      "authority_level": "generated_report",
+      "source_type": "report_json",
+      "generated_status": "generated_projection",
+      "edit_policy": "generated_by_script",
+      "owner": "platform_team",
+      "refresh_policy": "regenerate",
+      "downstream_dependencies": [
+        "dashboards",
+        "planning",
+        "qc-review"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "reports/review-gates/GATE-RX4-elasticity-market-diagram-review/RX.4-generator-blocked-units.md",
+      "file_name": "RX.4-generator-blocked-units.md",
+      "extension": "md",
+      "size_bytes": 591,
+      "sha256": "2870fb7d8990bc55f259e9ac2ed09fcdaf5a00d65ddec75429d736b8dd03b2f0",
+      "layer": "generated_report",
+      "authority_level": "generated_report",
+      "source_type": "report_md",
+      "generated_status": "generated_projection",
+      "edit_policy": "generated_by_script",
+      "owner": "platform_team",
+      "refresh_policy": "regenerate",
+      "downstream_dependencies": [
+        "dashboards",
+        "planning",
+        "qc-review"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
       "path": "reports/sprints/example-result.md",
       "file_name": "example-result.md",
       "extension": "md",
@@ -13109,6 +13329,26 @@
       "self_generated_inventory_file": false
     },
     {
+      "path": "reports/sprints/RX.4-baseline.md",
+      "file_name": "RX.4-baseline.md",
+      "extension": "md",
+      "size_bytes": 2086,
+      "sha256": "64e8c4c7fc68cb1cee2dbaf554b55a4ba0334eb9ab935aa937a41cda9cc4de3c",
+      "layer": "generated_report",
+      "authority_level": "generated_report",
+      "source_type": "report_md",
+      "generated_status": "generated_projection",
+      "edit_policy": "generated_by_script",
+      "owner": "platform_team",
+      "refresh_policy": "regenerate",
+      "downstream_dependencies": [
+        "dashboards",
+        "planning",
+        "qc-review"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
       "path": "reports/sprints/S1-baseline.md",
       "file_name": "S1-baseline.md",
       "extension": "md",
@@ -13452,8 +13692,8 @@
       "path": "reports/url-index.md",
       "file_name": "url-index.md",
       "extension": "md",
-      "size_bytes": 5727,
-      "sha256": "2c4d1526e4a7412a01220da854de3efe8c5ce1d424b43d12341603a983900a35",
+      "size_bytes": 5872,
+      "sha256": "3dc038660b051ba71d808b875a1751ab58b053eb53ef454688af5627662825c2",
       "layer": "generated_report",
       "authority_level": "generated_report",
       "source_type": "report_md",

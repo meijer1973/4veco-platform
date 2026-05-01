@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "sprint_id": "RX.4",
+  "plan_id": "RX.4-elasticity-market-diagram-cli-mutation-plan",
+  "status": "draft_pending_human_review",
+  "execution_authorized": false,
+  "mutation_authorized": false,
+  "lower_risk_first_lane_order": [
+    "A82",
+    "A84"
+  ],
+  "conditional_graph_lane": [
+    "A83"
+  ],
+  "required_pre_execution_checks": [
+    "Re-run live A-domain numbering check.",
+    "Confirm GATE-RX4-elasticity-market-diagram-review closure authorizes CLI execution.",
+    "Confirm A82 and A84 needs are approved by HCS.",
+    "Confirm A83 naming/evidence decision is approved by HCS before any A83 mutation.",
+    "Confirm all candidate needs are live units.",
+    "Confirm generator status is tracked as blocked/non-interactive."
+  ],
+  "ordered_steps": [
+    {
+      "candidate_id": "A82",
+      "lane": "lower_risk_first_lane",
+      "command_template": "node build-scripts/references/unit-add.js --spec '{\"id\":\"A82\",\"name\":\"Elasticiteit berekenen uit tabelwaarden\",\"kern\":\"Bereken elasticiteit nadat je twee waardenparen uit een tabel hebt geselecteerd en de procentuele verandering van oorzaak en gevolg correct hebt gekoppeld.\",\"needs\":[\"A15\",\"A61\",\"A66\"],\"mastery_target\":\"apply\",\"prior_learning\":\"new_this_year\",\"aspects\":[\"rekenen\",\"verbaal\"],\"terms\":[],\"procedure\":[\"Lees de vraag en bepaal welke oorzaakvariabele en gevolgvariabele bij de elasticiteit horen.\",\"Selecteer in de tabel de oude en nieuwe waarden van beide variabelen en controleer rij, kolom, periode en eenheid.\",\"Label per variabele de basiswaarde en vergelijkingswaarde.\",\"Bereken de procentuele verandering van de gevolgvariabele.\",\"Bereken de procentuele verandering van de oorzaakvariabele.\",\"Deel de procentuele verandering van het gevolg door de procentuele verandering van de oorzaak.\",\"Interpreteer teken en absolute waarde in de economische context.\"],\"pitfalls\":[\"De verkeerde tabelrijen of perioden koppelen.\",\"Oorzaak en gevolg omwisselen in de elasticiteitsbreuk.\",\"Absolute veranderingen gebruiken in plaats van procentuele veranderingen.\",\"Het minteken of de absolute waarde negeren bij de interpretatie.\"],\"generator\":\"GEN_A82\"}'",
+      "execution_authorized": false
+    },
+    {
+      "candidate_id": "A84",
+      "lane": "lower_risk_first_lane",
+      "command_template": "node build-scripts/references/unit-add.js --spec '{\"id\":\"A84\",\"name\":\"Omzetverandering beoordelen met elasticiteit uit bron\",\"kern\":\"Beoordeel met elasticiteit en brongegevens of totale omzet stijgt, daalt of gelijk blijft na een prijs- of hoeveelheidsverandering.\",\"needs\":[\"A15\",\"A67\"],\"mastery_target\":\"apply\",\"prior_learning\":\"new_this_year\",\"aspects\":[\"rekenen\",\"verbaal\"],\"terms\":[],\"procedure\":[\"Lees uit de bron welke prijsverandering, hoeveelheidsverandering of elasticiteitswaarde gegeven is.\",\"Bepaal of de vraag elastisch, inelastisch of unitair is met de absolute waarde van de elasticiteit.\",\"Koppel de prijsverandering aan de verwachte hoeveelheidsverandering.\",\"Gebruik TO = P maal Q of vergelijk de procentuele effecten om de richting van de omzetverandering te bepalen.\",\"Controleer of je omzet niet verwart met winst en of het teken past bij de context.\",\"Formuleer het oordeel met verwijzing naar de brongegevens.\"],\"pitfalls\":[\"Het minteken mechanisch gebruiken zonder de omzetbetekenis te controleren.\",\"Omzet en winst door elkaar halen.\",\"Een prijsstijging bij inelastische vraag behandelen alsof omzet altijd daalt.\",\"Een procentuele verandering berekenen zonder te controleren welke bronwaarde de basis is.\"],\"generator\":\"GEN_A84\"}'",
+      "execution_authorized": false
+    },
+    {
+      "candidate_id": "A83",
+      "lane": "conditional_graph_lane",
+      "command_template": "node build-scripts/references/unit-add.js --spec '{\"id\":\"A83\",\"name\":\"Elasticiteit berekenen uit vraaggrafiek\",\"kern\":\"Lees twee prijs-hoeveelheidsparen uit een vraaggrafiek af en bereken de prijselasticiteit met correcte procentuele veranderingen.\",\"needs\":[\"A15\",\"A46\",\"A66\"],\"mastery_target\":\"apply\",\"prior_learning\":\"new_this_year\",\"aspects\":[\"grafisch\",\"rekenen\"],\"terms\":[],\"procedure\":[\"Lees de titel en bepaal dat de grafiek een prijs-hoeveelheidsrelatie toont.\",\"Controleer horizontale as, verticale as, eenheden, schaal en labels of legenda.\",\"Kies twee punten of twee situaties die bij de vraag horen.\",\"Lees bij elk punt de prijs en hoeveelheid af en noteer beide waardenparen.\",\"Bepaal voor prijs en hoeveelheid welke waarde basis en welke waarde vergelijking is.\",\"Bereken de procentuele verandering van Q en de procentuele verandering van P.\",\"Bereken Ev = procentuele verandering Q gedeeld door procentuele verandering P.\",\"Interpreteer teken en absolute waarde en controleer of de uitkomst past bij de grafiek.\"],\"pitfalls\":[\"Slechts een punt aflezen en daarna een helling berekenen.\",\"P en Q of de assen verwisselen.\",\"Absolute veranderingen gebruiken in plaats van procentuele veranderingen.\",\"De grafiekhelling behandelen alsof die hetzelfde is als elasticiteit.\",\"Het minteken of de absolute waarde negeren bij de interpretatie.\"],\"generator\":\"GEN_A83\"}'",
+      "execution_authorized": false,
+      "condition": "May execute only if HCS resolves the A83 demand-graph versus P-Q graph naming/evidence decision."
+    }
+  ],
+  "forbidden_actions": [
+    "Do not execute unit-add.js before gate closure explicitly authorizes CLI execution.",
+    "Do not hand-edit references/machine/.",
+    "Do not hand-edit references/external/.",
+    "Do not mutate authored source files.",
+    "Do not patch RAG chunks by hand.",
+    "Do not expose these units in student-facing skill-tree or PV projection before generator/projection implementation."
+  ]
+}

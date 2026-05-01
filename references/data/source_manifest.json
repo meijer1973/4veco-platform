@@ -1,14 +1,14 @@
 {
   "schema_version": "0.1",
-  "generated_at": "2026-05-01T17:58:25.575Z",
+  "generated_at": "2026-05-01T19:20:55.656Z",
   "sprint_id": "R0.2",
   "scope": "references/",
   "note": "Self-generated inventory files intentionally omit size and sha256 to avoid unstable self-checksums.",
   "summary": {
-    "file_count": 200,
+    "file_count": 201,
     "by_layer": {
       "authored_judgement": 7,
-      "governance_data": 124,
+      "governance_data": 125,
       "external_authority": 32,
       "machine_registry": 5,
       "owned_curriculum_design": 3,
@@ -20,7 +20,7 @@
     "by_edit_policy": {
       "human_reviewed_edit": 15,
       "generated_by_inventory_script": 22,
-      "sprint_process": 101,
+      "sprint_process": 102,
       "external_refresh_only": 32,
       "cli_only": 5,
       "versioned_human_reviewed_edit": 3,
@@ -2469,6 +2469,26 @@
       "self_generated_inventory_file": false
     },
     {
+      "path": "references/data/sprints/RX.4.plan.json",
+      "file_name": "RX.4.plan.json",
+      "extension": "json",
+      "size_bytes": 2725,
+      "sha256": "4f28a84efe31928a4cdacd2beb88b47c28cbf1f3385bb4e6fba306c6c557a2da",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
       "path": "references/data/sprints/S1.plan.json",
       "file_name": "S1.plan.json",
       "extension": "json",
@@ -3555,8 +3575,8 @@
       "path": "references/reference-team-roadmap.md",
       "file_name": "reference-team-roadmap.md",
       "extension": "md",
-      "size_bytes": 113997,
-      "sha256": "7cee47d51c61345fe4385304ea388ea9f8043b58857e98b7104ffb04d132f5eb",
+      "size_bytes": 114970,
+      "sha256": "2e421d91df49f14592d8d3a8037a02ae610acb419232c7ef5d0278a427573537",
       "layer": "planning",
       "authority_level": "authored_judgement",
       "source_type": "roadmap",

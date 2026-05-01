@@ -1,0 +1,80 @@
+{
+  "gate_id": "GATE-RX4-elasticity-market-diagram-review",
+  "sprint_id": "RX.4",
+  "status": "prepared_for_human_review",
+  "generated_on": "2026-05-01",
+  "cli_unit_mutation_authorized": false,
+  "summary": {
+    "candidate_count": 3,
+    "candidate_ids": [
+      "A82",
+      "A83",
+      "A84"
+    ],
+    "lower_risk_first_lane": [
+      "A82",
+      "A84"
+    ],
+    "conditional_graph_lane": [
+      "A83"
+    ],
+    "student_facing_use_authorized": false,
+    "pv_projection_authorized": false
+  },
+  "review_questions": [
+    {
+      "id": "RX4-Q1",
+      "question": "Is RX.4 correctly scoped to A82, A83, A84, plus a market/welfare duplicate audit?",
+      "recommended_answer": "A. Yes, keep RX.4 limited to elasticity representation candidates and duplicate-audit holds."
+    },
+    {
+      "id": "RX4-Q2",
+      "question": "Should A82 proceed as the lower-risk table elasticity candidate with needs A15, A61, and A66?",
+      "recommended_answer": "A. Yes, authorize mutation review for A82 with source-value pairing emphasized."
+    },
+    {
+      "id": "RX4-Q3",
+      "question": "Should A84 proceed as the lower-risk source/revenue interpretation candidate with needs A15 and A67?",
+      "recommended_answer": "B. Mostly; preserve A15/A67 unless HCS wants an explicit conceptual prerequisite for elasticity-and-omzet before mutation."
+    },
+    {
+      "id": "RX4-Q4",
+      "question": "Is A83 ready as Elasticiteit berekenen uit vraaggrafiek, or should it be renamed/generalized or held?",
+      "recommended_answer": "B. Conditional: decide explicitly whether to approve the demand-graph name, generalize to P-Q graph elasticity, or hold until graph-source evidence is stronger."
+    },
+    {
+      "id": "RX4-Q5",
+      "question": "Do A82, A83, and A84 procedures preserve elasticity sign and absolute-value interpretation?",
+      "recommended_answer": "A. Yes, require sign and absolute-value interpretation in every approved spec."
+    },
+    {
+      "id": "RX4-Q6",
+      "question": "Should market/welfare duplicate areas remain held because existing units already cover surplus, welfare, and intervention graph operations?",
+      "recommended_answer": "A. Yes, keep new market/welfare units held unless a later focused review moves one into scope."
+    },
+    {
+      "id": "RX4-Q7",
+      "question": "Should all approved A82-A84 units remain generator-blocked and non-interactive until generator/projection support exists?",
+      "recommended_answer": "A. Yes, hard block student-facing use."
+    },
+    {
+      "id": "RX4-Q8",
+      "question": "If the gate passes, authorize later CLI-only mutation for A82 and A84, with A83 conditional on the naming/evidence decision?",
+      "recommended_answer": "A. Yes for A82/A84 after live checks; A83 only if the graph-source decision is explicit."
+    },
+    {
+      "id": "RX4-Q9",
+      "question": "What gate status should GATE-RX4-elasticity-market-diagram-review receive?",
+      "recommended_answer": "pass_with_conditions"
+    }
+  ],
+  "required_conditions_if_passes": [
+    "Run live numbering check immediately before any later mutation.",
+    "Use only unit-add.js; no hand edits to references/machine.",
+    "Record the A83 naming/evidence decision in the gate closure and mutation log.",
+    "Keep market/welfare duplicate areas held unless explicitly re-approved.",
+    "Mark any newly approved A-domain units generator-blocked and non-interactive.",
+    "Do not hand-edit references/external, authored source files, or RAG chunks.",
+    "Do not authorize diagnostics, adaptive routing, student-facing AI, automatic sequencing, mastery decisions, summative use, or student-facing PV projection."
+  ]
+}

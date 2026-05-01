@@ -12,12 +12,13 @@ docs/roadmaps/roadmap-version-index.json
 
 | Roadmap | Version | Path | Notes |
 |---|---|---|---|
-| References Team Roadmap | `v2.28-rx3b-graph-lane-applied` | `references/reference-team-roadmap.md` | Current operating roadmap after closing GATE-RX3b and applying A77/A78 through CLI-only mutation; RX.4 is the next RX representation step. |
+| References Team Roadmap | `v2.29-rx4-elasticity-market-review-prepared` | `references/reference-team-roadmap.md` | Current operating roadmap after preparing GATE-RX4-elasticity-market-diagram-review; no RX.4 unit mutation is authorized before HCS decision. |
 
 ## Outdated Archive
 
 | Roadmap | Version | Path | Superseded By |
 |---|---|---|---|
+| References Team Roadmap before RX.4 elasticity market-diagram review preparation | `v2.28-rx3b-graph-lane-applied` | `docs/roadmaps/outdated/reference-team-roadmap-v2.28-rx3b-graph-lane-applied.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before RX.3b graph-lane CLI execution | `v2.27-rx3b-graph-lane-review-prepared` | `docs/roadmaps/outdated/reference-team-roadmap-v2.27-rx3b-graph-lane-review-prepared.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before RX.3b graph-lane review preparation | `v2.26-rx3a-first-lane-applied` | `docs/roadmaps/outdated/reference-team-roadmap-v2.26-rx3a-first-lane-applied.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before RX.3a first-lane CLI execution | `v2.25-rx3a-first-lane-review-prepared` | `docs/roadmaps/outdated/reference-team-roadmap-v2.25-rx3a-first-lane-review-prepared.md` | `references/reference-team-roadmap.md` |
