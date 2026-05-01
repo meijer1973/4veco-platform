@@ -1,0 +1,55 @@
+{
+  "sprint_id": "RX.3a",
+  "name": "Producer Table/Data First-Lane Mutation Review",
+  "status": "prepared_for_human_review",
+  "planned_on": "2026-05-01",
+  "plan": "docs/sprints/RX.3a-plan.md",
+  "protected_reference_data_changes_allowed": false,
+  "protected_reference_data_change_mode": "none; RX.3a review preparation is non-mutating",
+  "human_review_required": true,
+  "gate_id": "GATE-RX3a-first-lane-mutation-review",
+  "review_packet": "reports/review-gates/GATE-RX3a-first-lane-mutation-review/review-packet.md",
+  "valid_gate_statuses": [
+    "pass",
+    "pass_with_conditions",
+    "hold"
+  ],
+  "allowed_outputs": [
+    "reports/review-gates/GATE-RX3a-first-lane-mutation-review/review-packet.json",
+    "reports/review-gates/GATE-RX3a-first-lane-mutation-review/review-packet.md",
+    "reports/review-gates/GATE-RX3a-first-lane-mutation-review/candidate-specs.json",
+    "reports/review-gates/GATE-RX3a-first-lane-mutation-review/candidate-specs.md",
+    "reports/review-gates/GATE-RX3a-first-lane-mutation-review/cli-mutation-plan.json",
+    "reports/review-gates/GATE-RX3a-first-lane-mutation-review/cli-mutation-plan.md",
+    "reports/review-gates/GATE-RX3a-first-lane-mutation-review/RX.3a-generator-blocked-units.json",
+    "reports/review-gates/GATE-RX3a-first-lane-mutation-review/RX.3a-generator-blocked-units.md"
+  ],
+  "blocked_scope": [
+    "references/machine mutation",
+    "references/external mutation",
+    "unit-add.js execution",
+    "unit-add-dep.js execution",
+    "A77",
+    "A78",
+    "A80",
+    "A81",
+    "HOLD_GRAPHICAL_MO_MK_OPTIMUM",
+    "lesson repo commits",
+    "student diagnostics",
+    "adaptive routing",
+    "student-facing AI",
+    "automatic sequencing",
+    "mastery decisions",
+    "summative decisions",
+    "student-facing use of A75/A76/A79"
+  ],
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js docs/sprints/RX.3a-plan.md",
+    "node build-scripts/references/check-rx3a-first-lane-mutation-review.js",
+    "node build-scripts/sprints/emit-gate-bundle-urls.js GATE-RX3a-first-lane-mutation-review",
+    "node build-scripts/sprints/check-bundle-urls.js GATE-RX3a-first-lane-mutation-review",
+    "node build-scripts/sprints/check-sprint-bundle.js RX.3a",
+    "node build-scripts/references/check-roadmap-version-index.js",
+    "node build-scripts/sprints/emit-url-index.js --check"
+  ]
+}

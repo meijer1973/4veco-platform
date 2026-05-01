@@ -1,0 +1,112 @@
+{
+  "gate_id": "GATE-RX3-producer-representation",
+  "sprint_id": "RX.3",
+  "status": "pass_with_conditions",
+  "closed_on": "2026-05-01",
+  "closure_confirmed_by_human": true,
+  "human_interview": "reports/review-gates/GATE-RX3-producer-representation/human-interview.md",
+  "review_packet": "reports/review-gates/GATE-RX3-producer-representation/review-packet.md",
+  "audit": "reports/review-gates/GATE-RX3-producer-representation/proposed-mutation-queue.json",
+  "summary": "RX.3 producer representation review is closed as pass_with_conditions. The table/data first-lane mutation review is authorized for A75, A76, and A79; A76 must include A14, A04, and A61 as needs. A77 and A78 may proceed later as graph-lane review candidates after A75 and with PV graph-stage constraints. A80, A81, and graphical MO=MK remain held. No unit mutation is authorized by this gate closure.",
+  "protected_reference_data_changed": false,
+  "mutation_authorized": false,
+  "first_lane_mutation_review_authorized": [
+    "A75",
+    "A76",
+    "A79"
+  ],
+  "a76_dependency_decision": {
+    "decision": "add_A61",
+    "required_needs": [
+      "A14",
+      "A04",
+      "A61"
+    ],
+    "rationale": "A76 is source-value aware because P, GTK, and Q are often selected from producer data before applying the profit formula."
+  },
+  "graph_lane_review_authorized_after_first_lane": [
+    "A77",
+    "A78"
+  ],
+  "held_until_pv_producer_graph_templates": [
+    "A80",
+    "A81"
+  ],
+  "still_held": [
+    "HOLD_GRAPHICAL_MO_MK_OPTIMUM"
+  ],
+  "generator_block_required": true,
+  "student_facing_use_authorized": false,
+  "accepted_outcomes": [
+    "The producer surface remains split into table/data and graph lanes.",
+    "A75, A76, and A79 are authorized for bounded first-lane mutation review.",
+    "A76 must include A61 in addition to A14 and A04 because it is source-value aware.",
+    "A77 and A78 may proceed later as graph-lane review candidates after A75 and with PV graph-stage constraints.",
+    "All newly approved A-domain producer-representation units must remain generator-blocked and non-interactive until generator/projection support exists."
+  ],
+  "blocked_outcomes": [
+    "Do not mutate A75, A76, or A79 until a separate mutation-review gate explicitly authorizes CLI execution.",
+    "Do not mutate A77 or A78 in the first table/data lane.",
+    "Do not mutate A80 or A81 until PV producer-graph pilot templates exist.",
+    "Do not move HOLD_GRAPHICAL_MO_MK_OPTIMUM out of held status without separate design review.",
+    "Do not hand-edit references/machine/.",
+    "Do not hand-edit references/external/.",
+    "Do not mutate authored source files.",
+    "Do not patch RAG chunks by hand.",
+    "Do not expose new producer-representation units in student-facing skill-tree use before generator implementation.",
+    "Do not authorize student diagnostics, adaptive routing, student-facing AI, automatic sequencing, mastery decisions, summative decisions, or student-facing PV projection."
+  ],
+  "explicit_decisions": [
+    {
+      "topic": "gate status",
+      "decision": "Close GATE-RX3-producer-representation as pass_with_conditions."
+    },
+    {
+      "topic": "lane split",
+      "decision": "Keep table/data producer work split from graph-stage producer work."
+    },
+    {
+      "topic": "first mutation-review lane",
+      "decision": "Authorize bounded mutation review for A75, A76, and A79 only."
+    },
+    {
+      "topic": "A76 dependency",
+      "decision": "A76 must include A14, A04, and A61 as needs."
+    },
+    {
+      "topic": "graph lane",
+      "decision": "A77 and A78 may proceed after A75 and with PV graph-stage constraints."
+    },
+    {
+      "topic": "producer-graph hold",
+      "decision": "Hold A80 and A81 until PV producer-graph pilot templates exist."
+    },
+    {
+      "topic": "graphical MO=MK hold",
+      "decision": "Keep HOLD_GRAPHICAL_MO_MK_OPTIMUM held."
+    },
+    {
+      "topic": "student-facing use",
+      "decision": "Hard block student-facing use until generator/projection support exists."
+    }
+  ],
+  "conditions_to_reopen_or_pass": [
+    "Run live numbering check immediately before mutation.",
+    "Use unit-add.js only; no hand edits to references/machine.",
+    "Preserve the split between table/data lane and graph lane.",
+    "Record the A76 dependency decision in the next mutation-review closure and mutation log.",
+    "A76 must include A14, A04, and A61 as needs.",
+    "Keep graphical MO=MK held unless explicitly re-approved.",
+    "Keep A80 and A81 held until PV producer-graph pilot templates exist.",
+    "Mark any newly added A-domain units generator-blocked and non-interactive.",
+    "Do not authorize diagnostics, adaptive routing, student-facing AI, automatic sequencing, mastery decisions, summative use, or student-facing PV projection."
+  ],
+  "allowed_next_step": "RX.3a bounded first-lane mutation review",
+  "allowed_next_step_scope": [
+    "prepare A75/A76/A79 candidate specs",
+    "prepare CLI mutation plan without executing it",
+    "record A76 needs as A14, A04, A61",
+    "prepare generator-blocked tracking plan",
+    "stop for explicit mutation authorization before unit-add.js execution"
+  ]
+}

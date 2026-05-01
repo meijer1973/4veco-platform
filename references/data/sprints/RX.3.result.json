@@ -1,0 +1,63 @@
+{
+  "sprint_id": "RX.3",
+  "name": "Producer Table And Graph Representation Review",
+  "status": "completed",
+  "completed_on": "2026-05-01",
+  "plan": "docs/sprints/RX.3-plan.md",
+  "baseline": "reports/sprints/RX.3-baseline.md",
+  "result": "reports/sprints/RX.3-result.md",
+  "diff_summary": "reports/sprints/RX.3-diff-summary.md",
+  "gate_id": "GATE-RX3-producer-representation",
+  "gate_closure": "reports/review-gates/GATE-RX3-producer-representation/gate-closure.json",
+  "gate_status": "pass_with_conditions",
+  "protected_reference_data_changed": false,
+  "unit_mutation_authorized": false,
+  "first_lane_mutation_review_authorized": [
+    "A75",
+    "A76",
+    "A79"
+  ],
+  "next_required_step": "Prepare RX.3a bounded first-lane mutation review for A75, A76, and A79.",
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js docs/sprints/RX.3-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-rx3-producer-representation-review.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-gate-bundle-urls.js GATE-RX3-producer-representation",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-bundle-urls.js GATE-RX3-producer-representation",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/review-gates/validate-gate.js reports/review-gates/GATE-RX3-producer-representation/gate-closure.json",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js RX.3",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-result.js reports/sprints/RX.3-result.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js RX.3 --complete",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-roadmap-version-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js --check",
+      "status": "passed"
+    }
+  ]
+}

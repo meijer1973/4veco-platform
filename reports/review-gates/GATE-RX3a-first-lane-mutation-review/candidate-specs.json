@@ -1,0 +1,169 @@
+{
+  "schema_version": 1,
+  "sprint_id": "RX.3a",
+  "artifact_id": "RX.3a-first-lane-candidate-specs",
+  "status": "prepared_for_mutation_review",
+  "generated_on": "2026-05-01",
+  "source_files": [
+    "reports/review-gates/GATE-RX3-producer-representation/gate-closure.json",
+    "reports/review-gates/GATE-RX3-producer-representation/proposed-mutation-queue.json",
+    "references/machine/micro-teaching-units.json"
+  ],
+  "policy": {
+    "mutation_authorized": false,
+    "cli_execution_authorized": false,
+    "protected_reference_data_changed": false,
+    "candidate_ids_are_provisional_until_execution": true,
+    "first_lane_scope": [
+      "A75",
+      "A76",
+      "A79"
+    ],
+    "deferred_candidates": [
+      "A77",
+      "A78",
+      "A80",
+      "A81"
+    ],
+    "held_records_remain_blocked": [
+      "HOLD_GRAPHICAL_MO_MK_OPTIMUM"
+    ]
+  },
+  "blocked_scope": [
+    "A77",
+    "A78",
+    "A80",
+    "A81",
+    "HOLD_GRAPHICAL_MO_MK_OPTIMUM"
+  ],
+  "candidates": [
+    {
+      "candidate_id": "A75",
+      "sequence_index": 1,
+      "live_numbering_status": "available_at_review_generation",
+      "rx1_inventory_operation_id": "REP_PROFIT_FROM_REVENUE_COST_TABLE",
+      "rx1_inventory_name": "Totale winst berekenen uit opbrengsten- en kostentabel",
+      "rx3a_draft_spec": {
+        "id": "A75",
+        "name": "Totale winst berekenen uit opbrengsten- en kostentabel",
+        "kern": "Bereken totale winst door TO en TK uit een opbrengsten- en kostentabel te selecteren en TO - TK toe te passen.",
+        "needs": [
+          "A04",
+          "A61"
+        ],
+        "mastery_target": "apply",
+        "prior_learning": "new_this_year",
+        "aspects": [
+          "rekenen",
+          "verbaal"
+        ],
+        "terms": [],
+        "procedure": [
+          "Lees welke hoeveelheid, periode of situatie de vraag bedoelt.",
+          "Selecteer in de tabel de bijbehorende totale opbrengst TO.",
+          "Selecteer in dezelfde rij of situatie de totale kosten TK.",
+          "Bereken totale winst: TO min TK.",
+          "Controleer of de uitkomst positief, nul of negatief is."
+        ],
+        "pitfalls": [
+          "De hoogste opbrengst kiezen in plaats van de winst te berekenen.",
+          "Totale kosten verwarren met gemiddelde kosten.",
+          "TO en TK uit verschillende rijen vergelijken."
+        ],
+        "generator": "GEN_A75"
+      },
+      "evidence_status": "target_exercise_evidence",
+      "risk": "low",
+      "generator_status": "missing_generator_implementation",
+      "generator_followup_required": true,
+      "mutation_authorized": false,
+      "cli_execution_authorized": false
+    },
+    {
+      "candidate_id": "A76",
+      "sequence_index": 2,
+      "live_numbering_status": "available_at_review_generation",
+      "rx1_inventory_operation_id": "REP_PROFIT_FROM_P_GTK_Q",
+      "rx1_inventory_name": "Totale winst berekenen uit P, GTK en Q",
+      "rx3a_draft_spec": {
+        "id": "A76",
+        "name": "Totale winst berekenen uit P, GTK en Q",
+        "kern": "Bereken totale winst met TW = (P - GTK) x Q nadat je P, GTK en Q uit de producentengegevens hebt geselecteerd.",
+        "needs": [
+          "A14",
+          "A04",
+          "A61"
+        ],
+        "mastery_target": "apply",
+        "prior_learning": "new_this_year",
+        "aspects": [
+          "rekenen",
+          "verbaal"
+        ],
+        "terms": [],
+        "procedure": [
+          "Selecteer P, GTK en Q uit de bron, tabel, grafieklabels of casusgegevens.",
+          "Controleer dat P en GTK bij dezelfde hoeveelheid Q horen.",
+          "Bereken de winst per product: P min GTK.",
+          "Vermenigvuldig de winst per product met Q.",
+          "Controleer of P boven, gelijk aan of onder GTK ligt."
+        ],
+        "pitfalls": [
+          "TK gebruiken in plaats van GTK.",
+          "De winstmarge P - GTK niet met Q vermenigvuldigen.",
+          "P, GTK en Q uit verschillende situaties combineren."
+        ],
+        "generator": "GEN_A76"
+      },
+      "evidence_status": "exam_question_evidence",
+      "risk": "medium",
+      "generator_status": "missing_generator_implementation",
+      "generator_followup_required": true,
+      "mutation_authorized": false,
+      "cli_execution_authorized": false,
+      "hcs_dependency_decision": "A76 needs A14, A04, and A61."
+    },
+    {
+      "candidate_id": "A79",
+      "sequence_index": 3,
+      "live_numbering_status": "available_at_review_generation",
+      "rx1_inventory_operation_id": "REP_MAX_PROFIT_TO_TK_TABLE",
+      "rx1_inventory_name": "Maximale winst bepalen uit TO-TK-tabel",
+      "rx3a_draft_spec": {
+        "id": "A79",
+        "name": "Maximale winst bepalen uit TO-TK-tabel",
+        "kern": "Bepaal de maximale winst door per hoeveelheid de winst uit een TO-TK-tabel te vergelijken.",
+        "needs": [
+          "A75",
+          "A61"
+        ],
+        "mastery_target": "apply",
+        "prior_learning": "new_this_year",
+        "aspects": [
+          "rekenen",
+          "verbaal"
+        ],
+        "terms": [],
+        "procedure": [
+          "Lees per hoeveelheid Q de totale opbrengst TO en totale kosten TK.",
+          "Bereken of controleer per Q de winst: TO min TK.",
+          "Vergelijk de winstwaarden per hoeveelheid.",
+          "Kies de hoeveelheid met de hoogste winst.",
+          "Controleer dat je niet de hoogste omzet of laagste kosten hebt gekozen."
+        ],
+        "pitfalls": [
+          "De hoeveelheid met de hoogste TO kiezen in plaats van de hoogste winst.",
+          "Alleen naar kosten kijken en opbrengsten negeren.",
+          "Een negatieve winst als hoogste waarde verkeerd interpreteren."
+        ],
+        "generator": "GEN_A79"
+      },
+      "evidence_status": "exam_question_evidence",
+      "risk": "low",
+      "generator_status": "missing_generator_implementation",
+      "generator_followup_required": true,
+      "mutation_authorized": false,
+      "cli_execution_authorized": false
+    }
+  ]
+}

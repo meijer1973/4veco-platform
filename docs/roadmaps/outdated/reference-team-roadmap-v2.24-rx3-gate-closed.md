@@ -4,7 +4,7 @@ Generated: 2026-04-23
 Adopted main roadmap: 2026-04-25
 Last strategic update: 2026-05-01
 Roadmap ID: `references-team-roadmap`
-Roadmap version: `v2.25-rx3a-first-lane-review-prepared`
+Roadmap version: `v2.24-rx3-gate-closed`
 Roadmap status: `active`
 Version index: `docs/roadmaps/roadmap-version-index.json`
 Scope: `references/`, `build-scripts/references/`, `build-scripts/reports/`, reference dashboards, and generated reference reports under `reports/`
@@ -39,8 +39,6 @@ Update 2026-05-01: `RX.3 Producer Table And Graph Representation Units` is prepa
 
 Update 2026-05-01: `GATE-RX3-producer-representation` closed as `pass_with_conditions`. RX.3 is completed as a non-mutating review sprint. The next allowed step is `RX.3a` bounded first-lane mutation review for `A75`, `A76`, and `A79`; `A76` must include `A14`, `A04`, and `A61` as needs. `A77`/`A78` may proceed later after `A75`, while `A80`, `A81`, and graphical MO=MK remain held.
 
-Update 2026-05-01: `RX.3a Producer Table/Data First-Lane Mutation Review` is prepared for `GATE-RX3a-first-lane-mutation-review`. Candidate specs, CLI mutation plan, and generator-block records are ready for `A75`, `A76`, and `A79`; execution is still blocked until HCS explicitly authorizes CLI mutation.
-
 Compatibility decisions:
 
 - Sprint `R0.1` now means the sprint-execution scaffold.
@@ -66,7 +64,7 @@ Open items are listed first; completed items are kept below them.
 
 | Sprint | Name | Completed | Current State |
 |--------|------|-----------|---------------|
-| RX.3a | Producer Table/Data First-Lane Mutation Review | no | Prepared for `GATE-RX3a-first-lane-mutation-review`. Candidate specs and CLI plan are ready for A75/A76/A79; no mutation until explicit gate authorization. |
+| RX.3a | Producer Table/Data First-Lane Mutation Review | no | Planned next. Prepare candidate specs and CLI mutation plan for A75/A76/A79 only; A76 needs A14/A04/A61; no mutation until explicit gate authorization. |
 | RX.4 | Elasticity And Market Diagram Representation Units | no | Planned after RX.2b/RX.3 with PV constraints. Separate table extraction, graph extraction, elasticity interpretation, and existing market-intervention graph operations. |
 | PV.3 | Pilot Procedure-Visual Templates | no | Build 5+ pilot templates and 2+ visual-state sequences, including formula trace, graph-stage, table-trace, and flowchart-style coverage. |
 | PV.4 | Procedure/Game Projection Contract | no | Add backward-compatible `formal_step_id` support so procedure-game data can map to formal PV steps while legacy unmapped games continue to run. |
@@ -1646,7 +1644,7 @@ Do not invert this order.
 
 ## Immediate Next Sprint
 
-Next action: `GATE-RX3a-first-lane-mutation-review` human review before any A75/A76/A79 mutation.
+Next action: `RX.3a Producer Table/Data First-Lane Mutation Review`.
 
 R4.5 has closed the bounded micro-unit mutation lane, CP-1 has closed the non-mutating schema audit gate as `pass_with_conditions`, CP-2 has closed the owned-source scope gate as `pass_with_conditions`, R9.1 has registered the owned-source surfaces, R9.2 has completed owned-content projection, S4/CP-3 has closed as `pass_with_conditions`, S4.1 has implemented the CP-3 condition artifacts, RX.1 has prepared the non-mutating representation-operation inventory, `GATE-RX1-representation-unit-scope` has closed as `pass_with_conditions`, RX.2/GATE-RX2 has added the bounded six-unit first lane through CLI-only mutation, RX.2b/GATE-RX2b has added the bounded seven-unit graphical foundation lane through CLI-only mutation while holding `A71`, R8.1 has added the scoped internal QC issue model, S6 has created the source-document registry MVP under `references/data/`, and S7/CP-4 has closed as `pass_with_conditions`.
 
@@ -1656,7 +1654,7 @@ R4.5 has closed the bounded micro-unit mutation lane, CP-1 has closed the non-mu
 
 `S7` is closed. The skill/operation registry remains a `references/data/` overlay; `exercise_operations` remain provisional; PV templates may reference them only as provisional records; `required_skills` remains legacy/source-only; and machine registry promotion plus bulk exercise metadata backfill remain blocked.
 
-PV.1 has completed the non-mutating inventory: `references/data/procedure-visual/inventory.json`, `reports/json/procedure-visual-inventory.json`, and `reports/markdown/procedure-visual-inventory.md` record 12 ranked pilot templates and runtime/schema blockers. PV.2 has completed the schema and validator MVP: `references/data/procedure-visual/` now contains schema files, vocabulary, empty real overlay registries, and validator-backed schema-status reports. RX.3 has closed the producer representation gate as `pass_with_conditions`. RX.3a has prepared candidate specs and a CLI mutation plan for `A75`, `A76`, and `A79`, but no A75-A79 mutation is authorized until `GATE-RX3a-first-lane-mutation-review` explicitly authorizes `unit-add.js` execution. The Procedure-Visual Registry remains under `references/data/procedure-visual/`; do not create `references/machine/procedure-templates.json` or `references/machine/visual-states.json` before the PV.7 machine-promotion review gate.
+PV.1 has completed the non-mutating inventory: `references/data/procedure-visual/inventory.json`, `reports/json/procedure-visual-inventory.json`, and `reports/markdown/procedure-visual-inventory.md` record 12 ranked pilot templates and runtime/schema blockers. PV.2 has completed the schema and validator MVP: `references/data/procedure-visual/` now contains schema files, vocabulary, empty real overlay registries, and validator-backed schema-status reports. RX.3 has closed the producer representation gate as `pass_with_conditions`. RX.3a may prepare candidate specs and a CLI mutation plan for `A75`, `A76`, and `A79`, but no A75-A79 mutation is authorized until a separate mutation-review gate explicitly authorizes `unit-add.js` execution. The Procedure-Visual Registry remains under `references/data/procedure-visual/`; do not create `references/machine/procedure-templates.json` or `references/machine/visual-states.json` before the PV.7 machine-promotion review gate.
 
 Do not start diagnostics, adaptive routing, student-facing AI, automatic lesson sequencing, mastery decisions, summative decisions, teacher cockpit deployment, game/simulation product mapping, or continuous-improvement claims from this roadmap.
 

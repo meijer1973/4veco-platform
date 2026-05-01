@@ -1,0 +1,77 @@
+{
+  "gate_id": "GATE-RX3a-first-lane-mutation-review",
+  "sprint_id": "RX.3a",
+  "status": "prepared_for_human_review",
+  "generated_on": "2026-05-01",
+  "cli_unit_mutation_authorized": false,
+  "summary": {
+    "candidate_count": 3,
+    "candidate_ids": [
+      "A75",
+      "A76",
+      "A79"
+    ],
+    "required_execution_order": [
+      "A75",
+      "A76",
+      "A79"
+    ],
+    "a76_needs": [
+      "A14",
+      "A04",
+      "A61"
+    ],
+    "student_facing_use_authorized": false
+  },
+  "review_questions": [
+    {
+      "id": "RX3A-Q1",
+      "question": "Is RX.3a correctly limited to A75, A76, and A79?",
+      "recommended_answer": "A. Yes, keep the scope limited to A75/A76/A79"
+    },
+    {
+      "id": "RX3A-Q2",
+      "question": "Is the A75 draft spec acceptable with needs A04 and A61?",
+      "recommended_answer": "A. Yes"
+    },
+    {
+      "id": "RX3A-Q3",
+      "question": "Is the A76 draft spec acceptable with needs A14, A04, and A61?",
+      "recommended_answer": "A. Yes, preserve the HCS dependency decision"
+    },
+    {
+      "id": "RX3A-Q4",
+      "question": "Is the A79 draft spec acceptable with needs A75 and A61?",
+      "recommended_answer": "A. Yes, provided A75 is minted first"
+    },
+    {
+      "id": "RX3A-Q5",
+      "question": "Should the execution order remain A75, A76, A79?",
+      "recommended_answer": "A. Yes"
+    },
+    {
+      "id": "RX3A-Q6",
+      "question": "Is missing generator implementation acceptable if all three remain generator-blocked and non-interactive?",
+      "recommended_answer": "B. Yes, but hard-block student-facing use"
+    },
+    {
+      "id": "RX3A-Q7",
+      "question": "If the gate passes, authorize CLI-only unit mutation for all three candidates?",
+      "recommended_answer": "A. Yes, after live numbering/dependency checks, if HCS accepts the specs"
+    },
+    {
+      "id": "RX3A-Q8",
+      "question": "What gate status should GATE-RX3a-first-lane-mutation-review receive?",
+      "recommended_answer": "pass_with_conditions"
+    }
+  ],
+  "required_conditions_if_passes": [
+    "Run live numbering check immediately before mutation.",
+    "Use only unit-add.js, in the order A75, A76, A79.",
+    "A76 must include A14, A04, and A61 as needs.",
+    "Do not mutate A77, A78, A80, A81, or held duplicate/overlap records.",
+    "Mark A75, A76, and A79 generator-blocked and non-interactive until generators exist and validate.",
+    "Do not hand-edit references/machine, references/external, authored source files, or RAG chunks.",
+    "Do not authorize diagnostics, adaptive routing, student-facing AI, automatic sequencing, mastery decisions, summative use, or student-facing PV projection."
+  ]
+}

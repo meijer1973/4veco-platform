@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "sprint_id": "RX.3a",
+  "status": "prepared_for_mutation_review",
+  "generator_blocked_units": [
+    "A75",
+    "A76",
+    "A79"
+  ],
+  "missing_generators": [
+    "GEN_A75",
+    "GEN_A76",
+    "GEN_A79"
+  ],
+  "student_facing_use_authorized": false,
+  "notes": [
+    "These units may enter the catalog only as generator-blocked/non-interactive if a later gate authorizes CLI mutation.",
+    "No student-facing skill-tree or PV projection use is authorized before generator/projection support exists and validates."
+  ]
+}
