@@ -85,7 +85,6 @@ Recommended answer: Yes, with explicit provisional status on every operation ref
 - Decide broad skill_tags vocabulary and alias policy.
 - Decide whether exercise_operations stay provisional or receive limited approval.
 - Confirm no references/machine registry is authorized in S7.
-- Decide whether PV templates may reference provisional `exercise_operations` under the conditions in `pv-addendum.md`.
 - Decide whether PV may reference provisional exercise_operations without promoting them.
 
 ## Blocked Until Gate Closure
