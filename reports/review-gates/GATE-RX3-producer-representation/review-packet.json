@@ -1,0 +1,117 @@
+{
+  "gate_id": "GATE-RX3-producer-representation",
+  "sprint_id": "RX.3",
+  "status": "prepared_for_human_review",
+  "generated_on": "2026-05-01",
+  "mutation_authorized": false,
+  "summary": {
+    "candidate_count": 7,
+    "first_lane": [
+      "A75",
+      "A76",
+      "A79"
+    ],
+    "graph_lane": [
+      "A77",
+      "A78",
+      "A80",
+      "A81"
+    ],
+    "held_records": [
+      "HOLD_GRAPHICAL_MO_MK_OPTIMUM"
+    ],
+    "pv_g1_status": "pass"
+  },
+  "review_questions": [
+    {
+      "id": "RX3-Q1",
+      "question": "Is the producer scope correctly split into table/data lane A75/A76/A79 and graph lane A77/A78/A80/A81?",
+      "options": [
+        "A. Yes, keep the split",
+        "B. Move one or more graph candidates into the first lane",
+        "C. Hold the whole producer lane"
+      ],
+      "recommended_answer": "A. Yes, keep the split"
+    },
+    {
+      "id": "RX3-Q2",
+      "question": "Should A75, A76, and A79 be the first mutation-review lane?",
+      "options": [
+        "A. Yes, authorize review for all three",
+        "B. Authorize only A75 and A79",
+        "C. Hold A76 for dependency review",
+        "D. Hold all three"
+      ],
+      "recommended_answer": "A. Yes, authorize review for all three, with A76 dependency confirmed explicitly"
+    },
+    {
+      "id": "RX3-Q3",
+      "question": "Should A76 keep needs A14/A04, or add A61 because P, GTK, and Q are often source values?",
+      "options": [
+        "A. Keep A14/A04 only",
+        "B. Add A61",
+        "C. Hold A76 until representation-specific siblings are clearer"
+      ],
+      "recommended_answer": "B. Add A61 if HCS wants A76 to be source-value aware; otherwise keep A76 formula-level and document the boundary"
+    },
+    {
+      "id": "RX3-Q4",
+      "question": "Can A77 and A78 proceed as a graph-lane mutation review after A75 exists?",
+      "options": [
+        "A. Yes, after A75 and with PV graph-stage constraints",
+        "B. A77 may proceed but A78 waits",
+        "C. Hold both until PV.3 pilot visual states"
+      ],
+      "recommended_answer": "A. Yes, after A75 and with PV graph-stage constraints"
+    },
+    {
+      "id": "RX3-Q5",
+      "question": "Can A80 and A81 proceed in the same RX.3 mutation sprint, or should they wait for PV.3/PV.5 producer-graph modeling?",
+      "options": [
+        "A. Proceed after A76 with PV conditions",
+        "B. A80 may proceed, A81 waits",
+        "C. Hold both until PV producer-graph pilot templates"
+      ],
+      "recommended_answer": "C. Hold both until PV producer-graph pilot templates, unless HCS accepts the medium risk"
+    },
+    {
+      "id": "RX3-Q6",
+      "question": "Should HOLD_GRAPHICAL_MO_MK_OPTIMUM remain held?",
+      "options": [
+        "A. Yes, keep held",
+        "B. Move into RX.3 graph lane",
+        "C. Create a separate focused review"
+      ],
+      "recommended_answer": "A. Yes, keep held"
+    },
+    {
+      "id": "RX3-Q7",
+      "question": "Should all approved A75-A81 units remain generator-blocked and non-interactive until generator/projection support exists?",
+      "options": [
+        "A. Yes, hard block student-facing use",
+        "B. Allow limited non-interactive display",
+        "C. Allow skill-tree exposure immediately"
+      ],
+      "recommended_answer": "A. Yes, hard block student-facing use"
+    },
+    {
+      "id": "RX3-Q8",
+      "question": "What gate status should GATE-RX3-producer-representation receive?",
+      "options": [
+        "pass",
+        "pass_with_conditions",
+        "hold"
+      ],
+      "recommended_answer": "pass_with_conditions"
+    }
+  ],
+  "required_conditions_if_passes": [
+    "Run live numbering check immediately before mutation.",
+    "Use unit-add.js only; no hand edits to references/machine.",
+    "Preserve the split between table/data lane and graph lane unless HCS explicitly changes it.",
+    "Record the A76 dependency decision in the gate closure and mutation log.",
+    "Keep graphical MO=MK held unless explicitly re-approved.",
+    "Mark any newly added A-domain units generator-blocked and non-interactive.",
+    "Do not authorize diagnostics, adaptive routing, student-facing AI, automatic sequencing, mastery, summative use, or student-facing PV projection."
+  ]
+}

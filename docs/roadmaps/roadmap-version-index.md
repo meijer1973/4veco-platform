@@ -12,12 +12,13 @@ docs/roadmaps/roadmap-version-index.json
 
 | Roadmap | Version | Path | Notes |
 |---|---|---|---|
-| References Team Roadmap | `v2.22-pv2-procedure-visual-schema-validator` | `references/reference-team-roadmap.md` | Current operating roadmap after completing PV.2 Procedure-Visual Schema And Validator MVP and setting RX.3 as the next sprint. |
+| References Team Roadmap | `v2.23-rx3-producer-review-prepared` | `references/reference-team-roadmap.md` | Current operating roadmap after preparing GATE-RX3-producer-representation and stopping RX.3 for HCS review before mutation. |
 
 ## Outdated Archive
 
 | Roadmap | Version | Path | Superseded By |
 |---|---|---|---|
+| References Team Roadmap before RX.3 producer review preparation | `v2.22-pv2-procedure-visual-schema-validator` | `docs/roadmaps/outdated/reference-team-roadmap-v2.22-pv2-procedure-visual-schema-validator.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before PV.2 procedure-visual schema validator | `v2.21-pv1-procedure-visual-inventory` | `docs/roadmaps/outdated/reference-team-roadmap-v2.21-pv1-procedure-visual-inventory.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before PV.1 procedure-visual inventory | `v2.20-cp4-skill-operation-gate-closed` | `docs/roadmaps/outdated/reference-team-roadmap-v2.20-cp4-skill-operation-gate-closed.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before CP-4 skill/operation gate closure | `v2.19-procedure-visual-track-adopted` | `docs/roadmaps/outdated/reference-team-roadmap-v2.19-procedure-visual-track-adopted.md` | `references/reference-team-roadmap.md` |

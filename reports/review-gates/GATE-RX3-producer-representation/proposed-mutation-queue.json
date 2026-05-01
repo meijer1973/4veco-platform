@@ -1,0 +1,242 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-RX3-producer-representation",
+  "sprint_id": "RX.3",
+  "status": "prepared_for_human_review",
+  "generated_on": "2026-05-01",
+  "source_queue": "reports/review-gates/GATE-RX1-representation-unit-scope/proposed-mutation-queue.json",
+  "pv_constraint_source": "reports/review-gates/GATE-PV-G1-schema/technical-closure.json",
+  "mutation_authorized": false,
+  "live_numbering_check": {
+    "required_absent_before_mutation": [
+      "A75",
+      "A76",
+      "A77",
+      "A78",
+      "A79",
+      "A80",
+      "A81"
+    ],
+    "required_live_prerequisites": [
+      "A04",
+      "A14",
+      "A29",
+      "A45",
+      "A61",
+      "A63"
+    ]
+  },
+  "recommended_lanes": {
+    "first_mutation_review": [
+      "A75",
+      "A76",
+      "A79"
+    ],
+    "graph_lane_review": [
+      "A77",
+      "A78",
+      "A80",
+      "A81"
+    ],
+    "held_records": [
+      "HOLD_GRAPHICAL_MO_MK_OPTIMUM"
+    ]
+  },
+  "pv_conditions": [
+    "Graph candidates must declare title/context, axes, units, curve/line labels, exact-versus-estimated reading, and non-color fallback in their later PV visual-state templates.",
+    "Procedure steps must separate representation reading from calculation or interpretation.",
+    "Any approved A-domain units remain generator-blocked and non-interactive until generator/projection support exists.",
+    "No student-facing PV projection is authorized by this gate."
+  ],
+  "candidates": [
+    {
+      "candidate_unit_id": "A75",
+      "candidate_unit_name": "Totale winst berekenen uit opbrengsten- en kostentabel",
+      "lane": "first_mutation_review",
+      "operation_id": "REP_PROFIT_FROM_REVENUE_COST_TABLE",
+      "representation": "table",
+      "economic_context": "producer",
+      "needs": [
+        "A04",
+        "A61"
+      ],
+      "aspects": [
+        "rekenen",
+        "verbaal"
+      ],
+      "evidence_status": "target_exercise_evidence",
+      "risk": "low",
+      "procedure_requirements": [
+        "Selecteer de juiste hoeveelheid of periode in de tabel.",
+        "Lees TO en TK als totale waarden, niet als gemiddelden.",
+        "Bereken totale winst als TO min TK.",
+        "Controleer of de uitkomst winst of verlies aangeeft."
+      ],
+      "review_note": "Strong first-lane candidate because it composes existing profit arithmetic with live A61 table/source-value selection.",
+      "mutation_authorized": false
+    },
+    {
+      "candidate_unit_id": "A76",
+      "candidate_unit_name": "Totale winst berekenen uit P, GTK en Q",
+      "lane": "first_mutation_review",
+      "operation_id": "REP_PROFIT_FROM_P_GTK_Q",
+      "representation": "producer_data",
+      "economic_context": "producer",
+      "needs": [
+        "A14",
+        "A04"
+      ],
+      "dependency_question": "Should A61 be added because P, GTK, and Q are often source/table/graph values, or should A76 stay as formula-level profit computation with A61 handled by representation-specific siblings?",
+      "aspects": [
+        "rekenen"
+      ],
+      "evidence_status": "exam_question_evidence",
+      "risk": "medium",
+      "procedure_requirements": [
+        "Bepaal P, GTK en Q uit de bron of opgave.",
+        "Bereken de winstmarge per product als P min GTK.",
+        "Vermenigvuldig de marge met Q.",
+        "Controleer of P boven, gelijk aan of onder GTK ligt."
+      ],
+      "review_note": "Exam-grounded, but the dependency decision needs explicit HCS confirmation before mutation.",
+      "mutation_authorized": false
+    },
+    {
+      "candidate_unit_id": "A79",
+      "candidate_unit_name": "Maximale winst bepalen uit TO-TK-tabel",
+      "lane": "first_mutation_review",
+      "operation_id": "REP_MAX_PROFIT_TO_TK_TABLE",
+      "representation": "table",
+      "economic_context": "producer",
+      "needs": [
+        "A75",
+        "A61"
+      ],
+      "aspects": [
+        "rekenen",
+        "verbaal"
+      ],
+      "evidence_status": "exam_question_evidence",
+      "risk": "low",
+      "procedure_requirements": [
+        "Bereken of lees de winst per hoeveelheid.",
+        "Vergelijk de winstrijen per Q.",
+        "Kies de hoogste winst, niet de hoogste omzet.",
+        "Noteer de bijbehorende hoeveelheid en winst."
+      ],
+      "review_note": "Good first-lane candidate after A75 because it is table-based and has both target and exam evidence.",
+      "mutation_authorized": false
+    },
+    {
+      "candidate_unit_id": "A77",
+      "candidate_unit_name": "Break-even aflezen uit TO-TK-grafiek",
+      "lane": "graph_lane_review",
+      "operation_id": "REP_BREAK_EVEN_TO_TK_GRAPH",
+      "representation": "to_tk_graph",
+      "economic_context": "producer",
+      "needs": [
+        "A63",
+        "A29"
+      ],
+      "aspects": [
+        "grafisch",
+        "rekenen"
+      ],
+      "evidence_status": "target_exercise_evidence",
+      "risk": "medium",
+      "procedure_requirements": [
+        "Controleer titel, assen, eenheden en schaal.",
+        "Identificeer TO en TK als aparte lijnen.",
+        "Lees het snijpunt van TO en TK af.",
+        "Interpreteer het snijpunt als break-even."
+      ],
+      "review_note": "Graph-lane candidate; A63 now exists, but PV graph-stage expectations should be explicit before mutation.",
+      "mutation_authorized": false
+    },
+    {
+      "candidate_unit_id": "A78",
+      "candidate_unit_name": "Winst of verlies aflezen uit TO-TK-grafiek",
+      "lane": "graph_lane_review",
+      "operation_id": "REP_PROFIT_LOSS_TO_TK_GRAPH",
+      "representation": "to_tk_graph",
+      "economic_context": "producer",
+      "needs": [
+        "A63",
+        "A75"
+      ],
+      "aspects": [
+        "grafisch",
+        "rekenen"
+      ],
+      "evidence_status": "target_exercise_evidence",
+      "risk": "medium",
+      "procedure_requirements": [
+        "Controleer titel, assen, eenheden en schaal.",
+        "Lees TO en TK bij dezelfde hoeveelheid Q.",
+        "Gebruik de verticale afstand tussen TO en TK.",
+        "Bepaal of TO boven of onder TK ligt."
+      ],
+      "review_note": "Should not mutate before A75 exists; it must teach vertical distance rather than generic graph reading.",
+      "mutation_authorized": false
+    },
+    {
+      "candidate_unit_id": "A80",
+      "candidate_unit_name": "Winstrechthoek tekenen in producentengrafiek",
+      "lane": "graph_lane_review",
+      "operation_id": "REP_PROFIT_RECTANGLE_PRODUCER_GRAPH",
+      "representation": "producer_graph",
+      "economic_context": "producer",
+      "needs": [
+        "A76",
+        "A45"
+      ],
+      "aspects": [
+        "grafisch",
+        "rekenen"
+      ],
+      "evidence_status": "exam_question_evidence",
+      "risk": "medium",
+      "procedure_requirements": [
+        "Lees P, GTK en Q in de producentengrafiek.",
+        "Bepaal de hoogte van de rechthoek als P min GTK.",
+        "Bepaal de breedte als Q.",
+        "Teken en interpreteer de rechthoek als totale winst of verlies."
+      ],
+      "review_note": "Exam-grounded, but should wait for A76 and explicit PV producer-graph visual-state requirements.",
+      "mutation_authorized": false
+    },
+    {
+      "candidate_unit_id": "A81",
+      "candidate_unit_name": "Winst, verlies en break-even herkennen in producentengrafiek",
+      "lane": "graph_lane_review",
+      "operation_id": "REP_PROFIT_LOSS_BREAK_EVEN_PRODUCER_GRAPH",
+      "representation": "producer_graph",
+      "economic_context": "producer",
+      "needs": [
+        "A76",
+        "A80"
+      ],
+      "aspects": [
+        "grafisch",
+        "verbaal"
+      ],
+      "evidence_status": "exam_question_evidence",
+      "risk": "medium",
+      "procedure_requirements": [
+        "Lees P en GTK bij dezelfde hoeveelheid Q.",
+        "Vergelijk P met GTK.",
+        "Classificeer winst, verlies of break-even.",
+        "Leg uit wat de vergelijking betekent voor de producent."
+      ],
+      "review_note": "Should wait until the profit-rectangle unit or an equivalent producer-graph visual-state model is approved.",
+      "mutation_authorized": false
+    }
+  ],
+  "held_records": [
+    {
+      "operation_id": "HOLD_GRAPHICAL_MO_MK_OPTIMUM",
+      "name": "Grafische MO=MK optimum bepalen",
+      "reason": "May overlap A20, A28, A33, and A54; keep held unless a later review explicitly separates graphical optimum reading from algebraic MO=MK solving."
+    }
+  ]
+}

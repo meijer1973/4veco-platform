@@ -1,0 +1,45 @@
+{
+  "sprint_id": "RX.3",
+  "name": "Producer Table And Graph Representation Review",
+  "status": "prepared_for_human_review",
+  "planned_on": "2026-05-01",
+  "plan": "docs/sprints/RX.3-plan.md",
+  "protected_reference_data_changes_allowed": false,
+  "protected_reference_data_change_mode": "none; RX.3 review preparation is non-mutating",
+  "human_review_required": true,
+  "gate_id": "GATE-RX3-producer-representation",
+  "review_packet": "reports/review-gates/GATE-RX3-producer-representation/review-packet.md",
+  "valid_gate_statuses": [
+    "pass",
+    "pass_with_conditions",
+    "hold"
+  ],
+  "allowed_outputs": [
+    "reports/review-gates/GATE-RX3-producer-representation/review-packet.json",
+    "reports/review-gates/GATE-RX3-producer-representation/review-packet.md",
+    "reports/review-gates/GATE-RX3-producer-representation/proposed-mutation-queue.json",
+    "reports/review-gates/GATE-RX3-producer-representation/proposed-mutation-queue.md"
+  ],
+  "blocked_scope": [
+    "references/machine mutation",
+    "references/external mutation",
+    "unit-add.js execution",
+    "lesson repo commits",
+    "student diagnostics",
+    "adaptive routing",
+    "student-facing AI",
+    "automatic sequencing",
+    "mastery decisions",
+    "summative decisions",
+    "student-facing use of A75-A81"
+  ],
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js docs/sprints/RX.3-plan.md",
+    "node build-scripts/references/check-rx3-producer-representation-review.js",
+    "node build-scripts/sprints/emit-gate-bundle-urls.js GATE-RX3-producer-representation",
+    "node build-scripts/sprints/check-bundle-urls.js GATE-RX3-producer-representation",
+    "node build-scripts/sprints/check-sprint-bundle.js RX.3",
+    "node build-scripts/references/check-roadmap-version-index.js",
+    "node build-scripts/sprints/emit-url-index.js --check"
+  ]
+}
