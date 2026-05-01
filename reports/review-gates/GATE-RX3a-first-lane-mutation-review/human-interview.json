@@ -1,0 +1,91 @@
+{
+  "gate_id": "GATE-RX3a-first-lane-mutation-review",
+  "sprint_id": "RX.3a",
+  "recorded_on": "2026-05-01",
+  "reviewer_role": "Head of Content Strategy",
+  "decision": "pass_with_conditions",
+  "closure_authorized": true,
+  "plain_pass_authorized": false,
+  "cli_unit_mutation_authorized": true,
+  "authorized_candidates": [
+    "A75",
+    "A76",
+    "A79"
+  ],
+  "authorized_execution_mode": "CLI-only via build-scripts/references/unit-add.js",
+  "required_execution_order": [
+    "A75",
+    "A76",
+    "A79"
+  ],
+  "required_dependencies": {
+    "A75": [
+      "A04",
+      "A61"
+    ],
+    "A76": [
+      "A14",
+      "A04",
+      "A61"
+    ],
+    "A79": [
+      "A75",
+      "A61"
+    ]
+  },
+  "generator_block_required": true,
+  "student_facing_use_authorized": false,
+  "graph_lane_mutation_authorized": false,
+  "answers": [
+    {
+      "id": "RX3A-Q1",
+      "answer": "A. Yes, keep the scope limited to A75/A76/A79",
+      "decision": "RX.3a is limited to the producer table/data first lane."
+    },
+    {
+      "id": "RX3A-Q2",
+      "answer": "A. Yes",
+      "decision": "A75 correctly combines profit calculation with source-value selection from a TO/TK table."
+    },
+    {
+      "id": "RX3A-Q3",
+      "answer": "A. Yes, preserve the HCS dependency decision",
+      "decision": "A76 must keep needs A14, A04, and A61."
+    },
+    {
+      "id": "RX3A-Q4",
+      "answer": "A. Yes, provided A75 is minted first",
+      "decision": "A79 depends on A75 and A61."
+    },
+    {
+      "id": "RX3A-Q5",
+      "answer": "A. Yes",
+      "decision": "The execution order remains A75 -> A76 -> A79."
+    },
+    {
+      "id": "RX3A-Q6",
+      "answer": "B. Yes, but hard-block student-facing use",
+      "decision": "Missing generators are acceptable only with non-interactive generator-block tracking."
+    },
+    {
+      "id": "RX3A-Q7",
+      "answer": "A. Yes, after live numbering/dependency checks",
+      "decision": "Authorize CLI-only mutation for A75, A76, and A79 after live checks."
+    },
+    {
+      "id": "RX3A-Q8",
+      "answer": "pass_with_conditions",
+      "decision": "Close the gate as pass_with_conditions, not clean pass."
+    }
+  ],
+  "pattern_analysis": "RX.3a remains limited to the producer table/data first lane. A75, A76, and A79 are approved for CLI-only mutation; graph-lane candidates and product surfaces remain blocked.",
+  "targeted_followups_required": true,
+  "targeted_followups": [
+    "Run live numbering and dependency checks immediately before mutation.",
+    "Use only unit-add.js in the order A75, A76, A79.",
+    "Keep A76 needs as A14, A04, and A61.",
+    "Do not mutate A77, A78, A80, A81, graphical MO=MK, or held duplicate/overlap records.",
+    "Track A75, A76, and A79 as generator-blocked/non-interactive until generators exist and validate.",
+    "Keep student-facing skill-tree use, PV projection, diagnostics, adaptive routing, AI, sequencing, mastery, and summative use blocked."
+  ]
+}

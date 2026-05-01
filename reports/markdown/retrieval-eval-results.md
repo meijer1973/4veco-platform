@@ -1,6 +1,6 @@
 # Retrieval Evaluation Results
 
-Generated on: 2026-04-30T08:53:12.221Z
+Generated on: 2026-05-01T10:59:03.335Z
 
 ## Summary
 
@@ -16,10 +16,10 @@ Generated on: 2026-04-30T08:53:12.221Z
 | rag-eval-001 | pass | 12 | machine_unit, owned_content_edge, alignment_edge, machine_term | diagnostic_only, not_primary_evidence | - |
 | rag-eval-002 | pass | 12 | exam_question, machine_unit, machine_term, owned_content_edge | diagnostic_only, not_primary_evidence | - |
 | rag-eval-003 | pass | 12 | quality_report, owned_content_edge | diagnostic_only, generated_report_warning, not_primary_evidence | - |
-| rag-eval-004 | pass | 12 | quality_report, external_source | diagnostic_only, generated_report_warning, not_primary_evidence | - |
+| rag-eval-004 | pass | 12 | quality_report | diagnostic_only, generated_report_warning, not_primary_evidence | - |
 | rag-eval-005 | pass | 12 | quality_report, target_exercise, owned_content_edge | diagnostic_only, generated_report_warning, not_primary_evidence | - |
 | rag-eval-006 | pass | 12 | evidence_anchor, alignment_edge, quality_report, authored_reference, machine_term | diagnostic_only, generated_report_warning, not_primary_evidence | - |
-| rag-eval-007 | pass | 12 | quality_report, owned_content_edge | diagnostic_only, generated_report_warning, not_primary_evidence | - |
+| rag-eval-007 | pass | 12 | quality_report | diagnostic_only, generated_report_warning, not_primary_evidence | - |
 | rag-eval-008 | pass | 12 | alignment_edge | diagnostic_only, generated_report_warning, not_primary_evidence, pending_review | - |
 | rag-eval-009 | pass | 12 | alignment_edge | pending_review | - |
 | rag-eval-010 | pass | 12 | quality_report | diagnostic_only, generated_report_warning, not_primary_evidence | - |
@@ -62,19 +62,19 @@ Notes: Checks whether exam evidence and the surplus unit/term surface for produc
 
 Top results:
 
-- exam-question:ha-1022-a-25-1-o-579 (exam_question, external_primary)
+- exam-question:ha-1022-a-25-1-o-582 (exam_question, external_primary)
   - source: references/external/exam-questions.json
   - warnings: -
-- exam-question:ha-1022-a-25-1-o-580 (exam_question, external_primary)
+- exam-question:ha-1022-a-25-1-o-583 (exam_question, external_primary)
   - source: references/external/exam-questions.json
   - warnings: -
-- exam-question:ha-1022-a-25-2-o-607 (exam_question, external_primary)
+- exam-question:ha-1022-a-25-2-o-610 (exam_question, external_primary)
   - source: references/external/exam-questions.json
   - warnings: -
-- exam-question:ha-1022-a-25-2-o-608 (exam_question, external_primary)
+- exam-question:ha-1022-a-25-2-o-611 (exam_question, external_primary)
   - source: references/external/exam-questions.json
   - warnings: -
-- exam-question:vw-1022-a-24-2-o-731 (exam_question, external_primary)
+- exam-question:vw-1022-a-24-2-o-734 (exam_question, external_primary)
   - source: references/external/exam-questions.json
   - warnings: -
 
@@ -270,6 +270,9 @@ Notes: Checks generated-report handling and non-primary evidence warnings.
 
 Top results:
 
+- quality-report:source-document-registry.json (quality_report, generated_report)
+  - source: reports/json/source-document-registry.json
+  - warnings: diagnostic_only, generated_report_warning, not_primary_evidence
 - quality-report:alignment-graph-integrity.json (quality_report, generated_report)
   - source: reports/json/alignment-graph-integrity.json
   - warnings: diagnostic_only, generated_report_warning, not_primary_evidence
@@ -281,9 +284,6 @@ Top results:
   - warnings: diagnostic_only, generated_report_warning, not_primary_evidence
 - quality-report:owned-source-registry.json (quality_report, generated_report)
   - source: reports/json/owned-source-registry.json
-  - warnings: diagnostic_only, generated_report_warning, not_primary_evidence
-- quality-report:reference-quality-issues.json (quality_report, generated_report)
-  - source: reports/json/reference-quality-issues.json
   - warnings: diagnostic_only, generated_report_warning, not_primary_evidence
 
 ## Authority Notes

@@ -1,7 +1,8 @@
 {
   "schema_version": 1,
   "sprint_id": "RX.3a",
-  "status": "prepared_for_mutation_review",
+  "status": "active_block",
+  "generated_on": "2026-05-01T10:58:51.208Z",
   "generator_blocked_units": [
     "A75",
     "A76",
@@ -13,8 +14,36 @@
     "GEN_A79"
   ],
   "student_facing_use_authorized": false,
+  "student_facing_skilltree_use_allowed": false,
+  "pv_projection_allowed": false,
+  "units": [
+    {
+      "unit_id": "A75",
+      "generator": "GEN_A75",
+      "generator_implemented": false,
+      "student_facing_skilltree_use_allowed": false,
+      "pv_projection_allowed": false,
+      "blocker": "generator/projection support missing; student-facing use blocked until implementation and validation"
+    },
+    {
+      "unit_id": "A76",
+      "generator": "GEN_A76",
+      "generator_implemented": false,
+      "student_facing_skilltree_use_allowed": false,
+      "pv_projection_allowed": false,
+      "blocker": "generator/projection support missing; student-facing use blocked until implementation and validation"
+    },
+    {
+      "unit_id": "A79",
+      "generator": "GEN_A79",
+      "generator_implemented": false,
+      "student_facing_skilltree_use_allowed": false,
+      "pv_projection_allowed": false,
+      "blocker": "generator/projection support missing; student-facing use blocked until implementation and validation"
+    }
+  ],
   "notes": [
-    "These units may enter the catalog only as generator-blocked/non-interactive if a later gate authorizes CLI mutation.",
+    "These units are live catalog entries only after RX.3a CLI mutation.",
     "No student-facing skill-tree or PV projection use is authorized before generator/projection support exists and validates."
   ]
 }

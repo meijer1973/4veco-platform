@@ -1,11 +1,11 @@
 # RX.3a Generator-Blocked Units
 
-Status: `prepared_for_mutation_review`
+Status: `active_block`
 
-If a later gate authorizes CLI mutation, these units must be recorded as generator-blocked and non-interactive:
+The following units are live catalog entries but remain non-interactive until generators and projection support exist and validate:
 
-- `A75` -> missing `GEN_A75`
-- `A76` -> missing `GEN_A76`
-- `A79` -> missing `GEN_A79`
+- `A75` / `GEN_A75`
+- `A76` / `GEN_A76`
+- `A79` / `GEN_A79`
 
-No student-facing skill-tree or PV projection use is authorized before generator/projection support exists and validates.
+No student-facing skill-tree use, PV projection, diagnostics, adaptive routing, AI, sequencing, mastery, or summative use is authorized.

@@ -2350,6 +2350,100 @@
     "generator": "GEN_A74"
   },
   {
+    "id": "A75",
+    "name": "Totale winst berekenen uit opbrengsten- en kostentabel",
+    "category": "vaardigheden",
+    "layer": 1,
+    "kern": "Bereken totale winst door TO en TK uit een opbrengsten- en kostentabel te selecteren en TO - TK toe te passen.",
+    "needs": [
+      "A04",
+      "A61"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "aspects": [
+      "rekenen",
+      "verbaal"
+    ],
+    "terms": [],
+    "procedure": [
+      "Lees welke hoeveelheid, periode of situatie de vraag bedoelt.",
+      "Selecteer in de tabel de bijbehorende totale opbrengst TO.",
+      "Selecteer in dezelfde rij of situatie de totale kosten TK.",
+      "Bereken totale winst: TO min TK.",
+      "Controleer of de uitkomst positief, nul of negatief is."
+    ],
+    "pitfalls": [
+      "De hoogste opbrengst kiezen in plaats van de winst te berekenen.",
+      "Totale kosten verwarren met gemiddelde kosten.",
+      "TO en TK uit verschillende rijen vergelijken."
+    ],
+    "generator": "GEN_A75"
+  },
+  {
+    "id": "A76",
+    "name": "Totale winst berekenen uit P, GTK en Q",
+    "category": "vaardigheden",
+    "layer": 3,
+    "kern": "Bereken totale winst met TW = (P - GTK) x Q nadat je P, GTK en Q uit de producentengegevens hebt geselecteerd.",
+    "needs": [
+      "A14",
+      "A04",
+      "A61"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "aspects": [
+      "rekenen",
+      "verbaal"
+    ],
+    "terms": [],
+    "procedure": [
+      "Selecteer P, GTK en Q uit de bron, tabel, grafieklabels of casusgegevens.",
+      "Controleer dat P en GTK bij dezelfde hoeveelheid Q horen.",
+      "Bereken de winst per product: P min GTK.",
+      "Vermenigvuldig de winst per product met Q.",
+      "Controleer of P boven, gelijk aan of onder GTK ligt."
+    ],
+    "pitfalls": [
+      "TK gebruiken in plaats van GTK.",
+      "De winstmarge P - GTK niet met Q vermenigvuldigen.",
+      "P, GTK en Q uit verschillende situaties combineren."
+    ],
+    "generator": "GEN_A76"
+  },
+  {
+    "id": "A79",
+    "name": "Maximale winst bepalen uit TO-TK-tabel",
+    "category": "vaardigheden",
+    "layer": 2,
+    "kern": "Bepaal de maximale winst door per hoeveelheid de winst uit een TO-TK-tabel te vergelijken.",
+    "needs": [
+      "A75",
+      "A61"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "aspects": [
+      "rekenen",
+      "verbaal"
+    ],
+    "terms": [],
+    "procedure": [
+      "Lees per hoeveelheid Q de totale opbrengst TO en totale kosten TK.",
+      "Bereken of controleer per Q de winst: TO min TK.",
+      "Vergelijk de winstwaarden per hoeveelheid.",
+      "Kies de hoeveelheid met de hoogste winst.",
+      "Controleer dat je niet de hoogste omzet of laagste kosten hebt gekozen."
+    ],
+    "pitfalls": [
+      "De hoeveelheid met de hoogste TO kiezen in plaats van de hoogste winst.",
+      "Alleen naar kosten kijken en opbrengsten negeren.",
+      "Een negatieve winst als hoogste waarde verkeerd interpreteren."
+    ],
+    "generator": "GEN_A79"
+  },
+  {
     "id": "B01",
     "name": "Schaarste als kerneconomisch probleem",
     "category": "schaarste",

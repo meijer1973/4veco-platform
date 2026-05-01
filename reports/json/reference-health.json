@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "generated_by": "build-scripts/reports/generate-reference-health.js",
-  "generated_on": "2026-04-30T08:53:05.708Z",
+  "generated_on": "2026-05-01T10:59:02.521Z",
   "source_files": [
     "references/machine/micro-teaching-units.json",
     "references/machine/begrippen.json",
@@ -13,8 +13,8 @@
     "reports/json/*.json"
   ],
   "unit_counts": {
-    "total": 224,
-    "live": 222,
+    "total": 227,
+    "live": 225,
     "deprecated": 2,
     "by_category": {
       "arbeidsmarkt": 21,
@@ -24,14 +24,14 @@
       "ruilen over tijd": 7,
       "samenwerken en onderhandelen": 18,
       "schaarste": 2,
-      "vaardigheden": 73,
+      "vaardigheden": 76,
       "welvaart en groei": 30
     },
     "by_layer": {
       "0": 11,
-      "1": 53,
-      "2": 64,
-      "3": 38,
+      "1": 54,
+      "2": 65,
+      "3": 39,
       "4": 20,
       "5": 22,
       "6": 9,
@@ -43,12 +43,12 @@
     "underbouw_assumed": 11
   },
   "prior_knowledge_review_status": {
-    "not_reviewed": 211,
+    "not_reviewed": 214,
     "reviewed": 11
   },
   "term_link_coverage": {
     "terms": 227,
-    "units_without_terms": 76,
+    "units_without_terms": 79,
     "status": "warn"
   },
   "exam_question_coverage": {
@@ -64,11 +64,11 @@
   },
   "unresolved_refs": {
     "status": "warn",
-    "issues": 51
+    "issues": 71
   },
   "qc_findings": {
     "report_count": 13,
-    "total_issues": 402,
+    "total_issues": 428,
     "high_or_critical_issues": 10,
     "by_report_status": {
       "pass": 6,

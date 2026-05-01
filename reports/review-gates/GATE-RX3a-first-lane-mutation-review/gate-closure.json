@@ -1,0 +1,125 @@
+{
+  "gate_id": "GATE-RX3a-first-lane-mutation-review",
+  "sprint_id": "RX.3a",
+  "status": "pass_with_conditions",
+  "closed_on": "2026-05-01",
+  "closure_confirmed_by_human": true,
+  "human_interview": "reports/review-gates/GATE-RX3a-first-lane-mutation-review/human-interview.md",
+  "review_packet": "reports/review-gates/GATE-RX3a-first-lane-mutation-review/review-packet.md",
+  "audit": "reports/review-gates/GATE-RX3a-first-lane-mutation-review/candidate-specs.json",
+  "summary": "RX.3a first-lane mutation review is closed as pass_with_conditions. CLI-only mutation is authorized for A75, A76, and A79 after live numbering and dependency checks. A76 must include A14, A04, and A61. All three units remain generator-blocked/non-interactive until generator implementation and validation; graph-lane and product-surface uses remain blocked.",
+  "protected_reference_data_changed": false,
+  "cli_unit_mutation_authorized": true,
+  "authorized_execution_mode": "CLI-only via build-scripts/references/unit-add.js",
+  "authorized_candidates": [
+    "A75",
+    "A76",
+    "A79"
+  ],
+  "required_execution_order": [
+    "A75",
+    "A76",
+    "A79"
+  ],
+  "required_dependencies": {
+    "A75": [
+      "A04",
+      "A61"
+    ],
+    "A76": [
+      "A14",
+      "A04",
+      "A61"
+    ],
+    "A79": [
+      "A75",
+      "A61"
+    ]
+  },
+  "generator_block_required": true,
+  "student_facing_use_authorized": false,
+  "graph_lane_mutation_authorized": false,
+  "blocked_scope": [
+    "A77",
+    "A78",
+    "A80",
+    "A81",
+    "HOLD_GRAPHICAL_MO_MK_OPTIMUM",
+    "held duplicate/overlap records",
+    "student diagnostics",
+    "adaptive routing",
+    "student-facing AI",
+    "automatic sequencing",
+    "mastery decisions",
+    "summative use",
+    "student-facing PV projection"
+  ],
+  "accepted_outcomes": [
+    "RX.3a is correctly limited to A75, A76, and A79.",
+    "A75 is accepted with needs A04 and A61.",
+    "A76 is accepted with needs A14, A04, and A61.",
+    "A79 is accepted with needs A75 and A61, provided A75 is minted first.",
+    "The required execution order is A75 -> A76 -> A79.",
+    "CLI-only mutation may proceed for A75, A76, and A79 after live checks.",
+    "Missing generators are acceptable only if all three units remain generator-blocked and non-interactive."
+  ],
+  "blocked_outcomes": [
+    "Do not mutate A77 in this gate.",
+    "Do not mutate A78 in this gate.",
+    "Do not mutate A80 in this gate.",
+    "Do not mutate A81 in this gate.",
+    "Do not mutate HOLD_GRAPHICAL_MO_MK_OPTIMUM.",
+    "Do not mutate held duplicate/overlap records.",
+    "Do not hand-edit references/machine/.",
+    "Do not hand-edit references/external/.",
+    "Do not mutate authored source files.",
+    "Do not patch RAG chunks by hand.",
+    "Do not expose A75, A76, or A79 in student-facing skill-tree or PV projection before generator/projection support exists.",
+    "Do not authorize diagnostics, adaptive routing, student-facing AI, automatic sequencing, mastery decisions, summative use, or student-facing PV projection."
+  ],
+  "explicit_decisions": [
+    {
+      "topic": "gate status",
+      "decision": "Close GATE-RX3a-first-lane-mutation-review as pass_with_conditions, not clean pass."
+    },
+    {
+      "topic": "mutation authorization",
+      "decision": "Authorize CLI-only unit mutation for A75, A76, and A79 after live numbering and dependency checks."
+    },
+    {
+      "topic": "execution order",
+      "decision": "Use the order A75, A76, A79; A79 must not be minted before A75 exists."
+    },
+    {
+      "topic": "A76 dependencies",
+      "decision": "A76 must include A14, A04, and A61 because P, GTK, and Q are source-value aware producer data."
+    },
+    {
+      "topic": "generator status",
+      "decision": "A75, A76, and A79 remain generator-blocked/non-interactive until GEN_A75, GEN_A76, and GEN_A79 exist and validate."
+    },
+    {
+      "topic": "blocked graph lane",
+      "decision": "A77, A78, A80, A81, and graphical MO=MK remain outside RX.3a mutation scope."
+    }
+  ],
+  "conditions_to_reopen_or_pass": [
+    "Run live numbering check immediately before mutation.",
+    "Use only unit-add.js, in the order A75, A76, A79.",
+    "A76 must include A14, A04, and A61 as needs.",
+    "A79 must not be minted before A75 exists.",
+    "Do not mutate A77, A78, A80, A81, or held duplicate/overlap records.",
+    "Track A75, A76, and A79 as generator-blocked and non-interactive until generators exist and validate.",
+    "Do not expose A75, A76, or A79 in student-facing skill-tree or PV projection before generator/projection support exists.",
+    "Do not hand-edit references/machine, references/external, authored source files, or RAG chunks.",
+    "No diagnostics, adaptive routing, student-facing AI, automatic sequencing, mastery decisions, summative use, or student-facing PV projection is authorized."
+  ],
+  "allowed_next_step": "RX.3a CLI-only producer table/data first-lane mutation execution",
+  "allowed_next_step_scope": [
+    "live A-domain numbering check",
+    "dependency resolution check",
+    "unit-add.js execution for A75, A76, and A79 only",
+    "generator-blocked/non-interactive tracking",
+    "validation and report regeneration"
+  ]
+}

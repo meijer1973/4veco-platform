@@ -1,0 +1,140 @@
+{
+  "sprint_id": "RX.3a",
+  "generated_on": "2026-05-01T10:58:51.209Z",
+  "status": "completed",
+  "decision_source": "reports/review-gates/GATE-RX3a-first-lane-mutation-review/gate-closure.json",
+  "execution_mode": "CLI-only via build-scripts/references/unit-add.js",
+  "pre_execution_check": {
+    "checked_on": "2026-05-01T10:58:51.005Z",
+    "live_a_domain_max_id_before_mutation": "A74",
+    "authorized_ids_available": true,
+    "occupied_authorized_ids": [],
+    "dependency_check": "passed",
+    "required_dependencies": {
+      "A75": [
+        "A04",
+        "A61"
+      ],
+      "A76": [
+        "A14",
+        "A04",
+        "A61"
+      ],
+      "A79": [
+        "A75",
+        "A61"
+      ]
+    }
+  },
+  "commands": [
+    {
+      "step": "add unit A75",
+      "unit_id": "A75",
+      "command": "node build-scripts/references/unit-add.js --spec '{\"id\":\"A75\",\"name\":\"Totale winst berekenen uit opbrengsten- en kostentabel\",\"kern\":\"Bereken totale winst door TO en TK uit een opbrengsten- en kostentabel te selecteren en TO - TK toe te passen.\",\"needs\":[\"A04\",\"A61\"],\"mastery_target\":\"apply\",\"prior_learning\":\"new_this_year\",\"aspects\":[\"rekenen\",\"verbaal\"],\"terms\":[],\"procedure\":[\"Lees welke hoeveelheid, periode of situatie de vraag bedoelt.\",\"Selecteer in de tabel de bijbehorende totale opbrengst TO.\",\"Selecteer in dezelfde rij of situatie de totale kosten TK.\",\"Bereken totale winst: TO min TK.\",\"Controleer of de uitkomst positief, nul of negatief is.\"],\"pitfalls\":[\"De hoogste opbrengst kiezen in plaats van de winst te berekenen.\",\"Totale kosten verwarren met gemiddelde kosten.\",\"TO en TK uit verschillende rijen vergelijken.\"],\"generator\":\"GEN_A75\"}'",
+      "status": "passed",
+      "exit_code": 0,
+      "stdout": "OK  minted A75 \"Totale winst berekenen uit opbrengsten- en kostentabel\" (catalog now 225 units)",
+      "stderr": "(node:23888) Warning: Accessing non-existent property 'formatEntry' of module exports inside circular dependency\n(Use `node --trace-warnings ...` to show where the warning was created)"
+    },
+    {
+      "step": "add unit A76",
+      "unit_id": "A76",
+      "command": "node build-scripts/references/unit-add.js --spec '{\"id\":\"A76\",\"name\":\"Totale winst berekenen uit P, GTK en Q\",\"kern\":\"Bereken totale winst met TW = (P - GTK) x Q nadat je P, GTK en Q uit de producentengegevens hebt geselecteerd.\",\"needs\":[\"A14\",\"A04\",\"A61\"],\"mastery_target\":\"apply\",\"prior_learning\":\"new_this_year\",\"aspects\":[\"rekenen\",\"verbaal\"],\"terms\":[],\"procedure\":[\"Selecteer P, GTK en Q uit de bron, tabel, grafieklabels of casusgegevens.\",\"Controleer dat P en GTK bij dezelfde hoeveelheid Q horen.\",\"Bereken de winst per product: P min GTK.\",\"Vermenigvuldig de winst per product met Q.\",\"Controleer of P boven, gelijk aan of onder GTK ligt.\"],\"pitfalls\":[\"TK gebruiken in plaats van GTK.\",\"De winstmarge P - GTK niet met Q vermenigvuldigen.\",\"P, GTK en Q uit verschillende situaties combineren.\"],\"generator\":\"GEN_A76\"}'",
+      "status": "passed",
+      "exit_code": 0,
+      "stdout": "OK  minted A76 \"Totale winst berekenen uit P, GTK en Q\" (catalog now 226 units)",
+      "stderr": "(node:10412) Warning: Accessing non-existent property 'formatEntry' of module exports inside circular dependency\n(Use `node --trace-warnings ...` to show where the warning was created)"
+    },
+    {
+      "step": "add unit A79",
+      "unit_id": "A79",
+      "command": "node build-scripts/references/unit-add.js --spec '{\"id\":\"A79\",\"name\":\"Maximale winst bepalen uit TO-TK-tabel\",\"kern\":\"Bepaal de maximale winst door per hoeveelheid de winst uit een TO-TK-tabel te vergelijken.\",\"needs\":[\"A75\",\"A61\"],\"mastery_target\":\"apply\",\"prior_learning\":\"new_this_year\",\"aspects\":[\"rekenen\",\"verbaal\"],\"terms\":[],\"procedure\":[\"Lees per hoeveelheid Q de totale opbrengst TO en totale kosten TK.\",\"Bereken of controleer per Q de winst: TO min TK.\",\"Vergelijk de winstwaarden per hoeveelheid.\",\"Kies de hoeveelheid met de hoogste winst.\",\"Controleer dat je niet de hoogste omzet of laagste kosten hebt gekozen.\"],\"pitfalls\":[\"De hoeveelheid met de hoogste TO kiezen in plaats van de hoogste winst.\",\"Alleen naar kosten kijken en opbrengsten negeren.\",\"Een negatieve winst als hoogste waarde verkeerd interpreteren.\"],\"generator\":\"GEN_A79\"}'",
+      "status": "passed",
+      "exit_code": 0,
+      "stdout": "OK  minted A79 \"Maximale winst bepalen uit TO-TK-tabel\" (catalog now 227 units)",
+      "stderr": "(node:21284) Warning: Accessing non-existent property 'formatEntry' of module exports inside circular dependency\n(Use `node --trace-warnings ...` to show where the warning was created)"
+    }
+  ],
+  "applied": {
+    "units_added": [
+      "A75",
+      "A76",
+      "A79"
+    ],
+    "required_execution_order": [
+      "A75",
+      "A76",
+      "A79"
+    ],
+    "required_dependencies": {
+      "A75": [
+        "A04",
+        "A61"
+      ],
+      "A76": [
+        "A14",
+        "A04",
+        "A61"
+      ],
+      "A79": [
+        "A75",
+        "A61"
+      ]
+    }
+  },
+  "generator_block": {
+    "tracked_in": "reports/review-gates/GATE-RX3a-first-lane-mutation-review/RX.3a-generator-blocked-units.json",
+    "status": "active_block",
+    "units": [
+      {
+        "unit_id": "A75",
+        "generator": "GEN_A75",
+        "generator_implemented": false,
+        "student_facing_skilltree_use_allowed": false,
+        "pv_projection_allowed": false
+      },
+      {
+        "unit_id": "A76",
+        "generator": "GEN_A76",
+        "generator_implemented": false,
+        "student_facing_skilltree_use_allowed": false,
+        "pv_projection_allowed": false
+      },
+      {
+        "unit_id": "A79",
+        "generator": "GEN_A79",
+        "generator_implemented": false,
+        "student_facing_skilltree_use_allowed": false,
+        "pv_projection_allowed": false
+      }
+    ]
+  },
+  "blocked_scope": [
+    "A77",
+    "A78",
+    "A80",
+    "A81",
+    "HOLD_GRAPHICAL_MO_MK_OPTIMUM",
+    "held duplicate/overlap records",
+    "student diagnostics",
+    "adaptive routing",
+    "student-facing AI",
+    "automatic sequencing",
+    "mastery decisions",
+    "summative use",
+    "student-facing PV projection"
+  ],
+  "constraints": [
+    "CLI-only mutation",
+    "no hand edits to references/machine",
+    "no hand edits to references/external",
+    "no authored-source mutation",
+    "no RAG chunk patching",
+    "no student-facing skill-tree or PV projection before generator/projection support"
+  ],
+  "summary": {
+    "units_added": 3,
+    "commands_passed": 3,
+    "commands_failed": 0
+  }
+}

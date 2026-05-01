@@ -15,13 +15,14 @@
   "roadmaps": [
     {
       "roadmap_id": "references-team-roadmap",
-      "version": "v2.25-rx3a-first-lane-review-prepared",
+      "version": "v2.26-rx3a-first-lane-applied",
       "title": "References Team Roadmap",
       "status": "active",
       "path": "references/reference-team-roadmap.md",
       "owner": "references_team",
       "updated_on": "2026-05-01",
       "supersedes": [
+        "docs/roadmaps/outdated/reference-team-roadmap-v2.25-rx3a-first-lane-review-prepared.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.24-rx3-gate-closed.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.23-rx3-producer-review-prepared.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.22-pv2-procedure-visual-schema-validator.md",
@@ -47,7 +48,18 @@
         "knowledge/Exercise schema and quality/reference-team-roadmap Live version 28 April.md",
         "knowledge/Exercise schema and quality/roadmap-updated-repository-checked.md"
       ],
-      "notes": "Current operating roadmap after preparing GATE-RX3a-first-lane-mutation-review and stopping before A75/A76/A79 CLI mutation."
+      "notes": "Current operating roadmap after closing GATE-RX3a and applying A75/A76/A79 through CLI-only mutation; RX.3b graph-lane review is the next RX producer step."
+    },
+    {
+      "roadmap_id": "references-team-roadmap-v2.25",
+      "version": "v2.25-rx3a-first-lane-review-prepared",
+      "title": "References Team Roadmap before RX.3a first-lane CLI execution",
+      "status": "outdated",
+      "path": "docs/roadmaps/outdated/reference-team-roadmap-v2.25-rx3a-first-lane-review-prepared.md",
+      "owner": "references_team",
+      "updated_on": "2026-05-01",
+      "superseded_by": "references/reference-team-roadmap.md",
+      "notes": "Snapshot archived before closing GATE-RX3a-first-lane-mutation-review and applying A75/A76/A79 through unit-add.js."
     },
     {
       "roadmap_id": "references-team-roadmap-v2.24",

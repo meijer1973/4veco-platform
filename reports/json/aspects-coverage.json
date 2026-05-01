@@ -1,14 +1,14 @@
 {
   "report_id": "aspects-coverage",
   "generated_by": "build-scripts/reports/generate-all.js",
-  "generated_on": "2026-04-30T08:53:00.668Z",
+  "generated_on": "2026-05-01T10:59:02.404Z",
   "source_files": [
     "references/machine/micro-teaching-units.json"
   ],
   "schema_version": 1,
   "status": "pass",
   "summary": {
-    "live_units": 222,
+    "live_units": 225,
     "units_without_aspects": 0
   },
   "issues": []

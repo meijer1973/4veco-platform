@@ -4,10 +4,16 @@ This file lists every artifact in this gate's bundle as a full raw-GitHub URL so
 
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-RX3a-first-lane-mutation-review/RX.3a-generator-blocked-units.json
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-RX3a-first-lane-mutation-review/RX.3a-generator-blocked-units.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-RX3a-first-lane-mutation-review/RX.3a-mutation-log.json
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-RX3a-first-lane-mutation-review/RX.3a-mutation-log.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-RX3a-first-lane-mutation-review/bundle-urls.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-RX3a-first-lane-mutation-review/candidate-specs.json
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-RX3a-first-lane-mutation-review/candidate-specs.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-RX3a-first-lane-mutation-review/cli-mutation-plan.json
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-RX3a-first-lane-mutation-review/cli-mutation-plan.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-RX3a-first-lane-mutation-review/gate-closure.json
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-RX3a-first-lane-mutation-review/gate-closure.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-RX3a-first-lane-mutation-review/human-interview.json
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-RX3a-first-lane-mutation-review/human-interview.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-RX3a-first-lane-mutation-review/review-packet.json
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-RX3a-first-lane-mutation-review/review-packet.md

@@ -2,13 +2,13 @@
 
 ## Goal
 
-Prepare the bounded producer table/data mutation-review packet for `A75`, `A76`, and `A79` without executing `unit-add.js`.
+Close the bounded producer table/data mutation-review gate for `A75`, `A76`, and `A79`, then execute the authorized CLI-only mutation if human gate closure explicitly permits it.
 
 ## Context
 
 `GATE-RX3-producer-representation` closed as `pass_with_conditions`. HCS authorized first-lane mutation review for `A75`, `A76`, and `A79`, required `A76` to include `A14`, `A04`, and `A61` as needs, allowed `A77`/`A78` only later after `A75`, and held `A80`, `A81`, and graphical `MO=MK`.
 
-RX.3a prepares candidate specs, a CLI mutation plan, and generator-block tracking for the first lane. It does not mutate the unit catalog.
+RX.3a prepares candidate specs, a CLI mutation plan, and generator-block tracking for the first lane. Before human review it must not mutate the unit catalog. After `GATE-RX3a-first-lane-mutation-review` closes with explicit CLI authorization, RX.3a may apply only the approved `A75`, `A76`, and `A79` mutations through `unit-add.js`.
 
 ## Allowed paths
 
@@ -25,6 +25,19 @@ RX.3a prepares candidate specs, a CLI mutation plan, and generator-block trackin
 - `reports/review-gates/GATE-RX3a-first-lane-mutation-review/RX.3a-generator-blocked-units.md`
 - `reports/review-gates/GATE-RX3a-first-lane-mutation-review/bundle-urls.md`
 - `build-scripts/references/check-rx3a-first-lane-mutation-review.js`
+- `build-scripts/references/close-and-apply-rx3a-first-lane.js`
+- `build-scripts/references/check-rx3a-first-lane-mutations.js`
+- `reports/review-gates/GATE-RX3a-first-lane-mutation-review/human-interview.json`
+- `reports/review-gates/GATE-RX3a-first-lane-mutation-review/human-interview.md`
+- `reports/review-gates/GATE-RX3a-first-lane-mutation-review/gate-closure.json`
+- `reports/review-gates/GATE-RX3a-first-lane-mutation-review/gate-closure.md`
+- `reports/review-gates/GATE-RX3a-first-lane-mutation-review/RX.3a-mutation-log.json`
+- `reports/review-gates/GATE-RX3a-first-lane-mutation-review/RX.3a-mutation-log.md`
+- `references/machine/micro-teaching-units.json` via `unit-add.js` only after gate authorization
+- `references/machine/micro-teaching-units.md` via `unit-add.js` only after gate authorization
+- `reports/sprints/RX.3a-result.md`
+- `reports/sprints/RX.3a-diff-summary.md`
+- `references/data/sprints/RX.3a.result.json`
 - `reports/url-index.md`
 - `references/reference-team-roadmap.md`
 - `docs/roadmaps/outdated/reference-team-roadmap-v2.24-rx3-gate-closed.md`
@@ -35,7 +48,7 @@ RX.3a prepares candidate specs, a CLI mutation plan, and generator-block trackin
 
 - hand edits to `references/machine/`
 - hand edits to `references/external/`
-- execution of `unit-add.js`
+- execution of `unit-add.js` before `GATE-RX3a-first-lane-mutation-review` explicitly authorizes CLI mutation
 - execution of `unit-add-dep.js`
 - mutation of `references/authored/course-target-exercises.json`
 - mutation of `references/external/exam-questions.json`
@@ -70,24 +83,46 @@ RX.3a prepares candidate specs, a CLI mutation plan, and generator-block trackin
 6. Record generator-blocked status for `GEN_A75`, `GEN_A76`, and `GEN_A79`.
 7. Validate the packet with a read-only checker and emit gate bundle URLs.
 8. Stop for human review before any CLI mutation, dependency edit, machine-reference mutation, or student-facing exposure.
+9. During human review, use the review packet's calibration questions `RX3A-Q1` through `RX3A-Q8`, record each answer, analyze the answer pattern for contradictions, list targeted follow-ups, prepare a closure proposal, and require explicit human confirmation before closing the gate.
+10. If the human gate closes with explicit CLI authorization, record `human-interview.*` and `gate-closure.*`.
+11. Re-run the live numbering and dependency checks immediately before mutation.
+12. Execute `unit-add.js` only for `A75`, `A76`, and `A79`, in that order.
+13. Record the CLI mutation log and update generator-block tracking.
+14. Regenerate and validate reference reports/RAG surfaces.
+15. Mark RX.3a completed only after result, diff summary, roadmap, URL bundle, and sprint-bundle checks pass.
 
 ## Acceptance tests
 
 ```bash
 node build-scripts/sprints/check-sprint-plan.js docs/sprints/RX.3a-plan.md
-node build-scripts/references/check-rx3a-first-lane-mutation-review.js
+node build-scripts/review-gates/validate-gate.js reports/review-gates/GATE-RX3a-first-lane-mutation-review/gate-closure.json
+node build-scripts/references/check-rx3a-first-lane-mutations.js
+node build-scripts/references/build-unit-index.js
+node build-scripts/references/validate-core-schemas.js
+node build-scripts/reports/generate-all.js
+node build-scripts/reports/validate-report-json.js
+node build-scripts/reports/generate-reference-health.js
+node build-scripts/reports/check-reference-health.js
+node build-scripts/rag/build-chunks.js
+node build-scripts/rag/validate-chunks.js
+node build-scripts/rag/validate-query-output.js
+node build-scripts/rag/run-retrieval-evals.js
+node build-scripts/rag/validate-retrieval-eval-results.js
 node build-scripts/sprints/emit-gate-bundle-urls.js GATE-RX3a-first-lane-mutation-review
 node build-scripts/sprints/check-bundle-urls.js GATE-RX3a-first-lane-mutation-review
-node build-scripts/sprints/check-sprint-bundle.js RX.3a
+node build-scripts/sprints/check-sprint-result.js reports/sprints/RX.3a-result.md
+node build-scripts/sprints/check-sprint-bundle.js RX.3a --complete
 node build-scripts/references/check-roadmap-version-index.js
+node build-scripts/references/check-source-manifest.js
+node build-scripts/references/check-document-inventory.js
 node build-scripts/sprints/emit-url-index.js --check
 ```
 
 ## Rollback plan
 
-Revert the RX.3a review-preparation commit. That removes the first-lane review packet, candidate specs, CLI plan, generator-blocked records, checker, sprint plan/baseline, roadmap version update, and URL-index changes.
+Revert the RX.3a applied-state commit. That removes the gate closure, mutation log, generator-block tracking updates, helper scripts, roadmap/version-index update, generated reports/RAG surfaces, and the CLI-added `A75`, `A76`, and `A79` machine-unit entries.
 
-No protected reference data rollback is needed because RX.3a must not mutate `references/machine/` or `references/external/`.
+Do not manually patch `references/machine/` for rollback.
 
 ## Human review required
 
