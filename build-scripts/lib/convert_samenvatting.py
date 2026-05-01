@@ -252,11 +252,36 @@ def render_inner_table_html(rows):
     return '\n'.join(out) + '\n'
 
 
+def render_pitfall_callout(line):
+    """Render a single ✘-prefixed pitfall paragraph as a callout-letop block.
+    Body is split on the first '.  ' or '. ' into <strong>title</strong> + rest;
+    if no clean split is found the whole text becomes the body."""
+    text = line.lstrip('✘').strip()
+    # Split on first sentence boundary (period followed by 1+ spaces).
+    m = re.match(r'^(.+?\.)\s+(.*)$', text)
+    if m:
+        title_html = f'<strong>{esc(m.group(1))}</strong> '
+        body_html = esc(m.group(2))
+    else:
+        title_html = ''
+        body_html = esc(text)
+    return (
+        '        <div class="callout callout-letop">\n'
+        '          <span class="callout-icon">&#9888;&#65039;</span>\n'
+        f'          <div class="callout-body">{title_html}{body_html}</div>\n'
+        '        </div>'
+    )
+
+
 def render_section_body(section, asset_prefix, web_variant_bases):
     """Render the inner HTML of one .samenvatting-cell."""
     parts = []
+    is_pitfalls_cell = section.get('domain') == 'Pitfall'
     for para in section['paragraphs']:
-        parts.append(f'        <p class="cell-para">{esc(para)}</p>')
+        if is_pitfalls_cell and para.lstrip().startswith('✘'):
+            parts.append(render_pitfall_callout(para))
+        else:
+            parts.append(f'        <p class="cell-para">{esc(para)}</p>')
     for itable in section['inner_tables']:
         parts.append(render_inner_table_html(itable))
     for asset_name in section['assets']:
