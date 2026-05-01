@@ -6,6 +6,12 @@
   "generated_on": "2026-04-30T15:48:21.946Z",
   "registry": "references/data/skill-operation-registry.json",
   "report": "reports/json/skill-operation-registry.json",
+  "pv_addendum": {
+    "addendum_id": "PV.0",
+    "status": "prepared_for_human_review",
+    "path": "reports/review-gates/GATE-CP4-skill-registry-coexistence/pv-addendum.md",
+    "decision_needed": "Decide whether Procedure-Visual templates may reference provisional exercise_operations without promoting them to governed operation records."
+  },
   "summary": {
     "skill_tag_count": 9,
     "overlay_skill_tag_count": 6,
@@ -78,13 +84,19 @@
       "id": "CP4-Q8",
       "question": "What gate status should GATE-CP4-skill-registry-coexistence receive?",
       "recommendation": "Expected status is pass_with_conditions unless field separation or tag coexistence is rejected."
+    },
+    {
+      "id": "CP4-Q9",
+      "question": "May Procedure-Visual templates reference provisional exercise_operations while PV remains a references/data/procedure-visual overlay?",
+      "recommendation": "Yes, with explicit provisional status on every operation reference. PV may not promote those operations to governed records, create references/machine PV registries, or authorize student-facing projection before later PV gates approve schema, validators, reports, and publication controls."
     }
   ],
   "required_human_decisions": [
     "Confirm field separation and required_skills legacy status.",
     "Decide broad skill_tags vocabulary and alias policy.",
     "Decide whether exercise_operations stay provisional or receive limited approval.",
-    "Confirm no references/machine registry is authorized in S7."
+    "Confirm no references/machine registry is authorized in S7.",
+    "Decide whether PV may reference provisional exercise_operations without promoting them."
   ],
   "blocked_until_gate_closure": [
     "S7 sprint closure",
@@ -95,6 +107,8 @@
     "student-facing AI",
     "automatic sequencing",
     "mastery decisions",
-    "summative decisions"
+    "summative decisions",
+    "Procedure-Visual machine registry promotion",
+    "Procedure-Visual student-facing projection"
   ]
 }

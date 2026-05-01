@@ -4,6 +4,8 @@ Status: `prepared_for_human_review`
 
 S7 prepared a governed `references/data/` skill-and-operation registry overlay. It does not close the sprint, promote a machine registry, or authorize bulk exercise metadata backfill.
 
+Addendum: `pv-addendum.md` adds the Procedure-Visual dependency decision. CP-4 should explicitly decide whether PV templates may reference provisional `exercise_operations` while keeping operation promotion and machine registry creation blocked.
+
 ## Registry Summary
 
 - Skill tags: `9`
@@ -71,12 +73,20 @@ What gate status should GATE-CP4-skill-registry-coexistence receive?
 
 Recommended answer: Expected status is pass_with_conditions unless field separation or tag coexistence is rejected.
 
+### CP4-Q9
+
+May Procedure-Visual templates reference provisional `exercise_operations` while PV remains a `references/data/procedure-visual/` overlay?
+
+Recommended answer: Yes, with explicit provisional status on every operation reference. PV may not promote those operations to governed records, create `references/machine/` PV registries, or authorize student-facing projection before later PV gates approve schema, validators, reports, and publication controls.
+
 ## Required Human Decisions
 
 - Confirm field separation and required_skills legacy status.
 - Decide broad skill_tags vocabulary and alias policy.
 - Decide whether exercise_operations stay provisional or receive limited approval.
 - Confirm no references/machine registry is authorized in S7.
+- Decide whether PV templates may reference provisional `exercise_operations` under the conditions in `pv-addendum.md`.
+- Decide whether PV may reference provisional exercise_operations without promoting them.
 
 ## Blocked Until Gate Closure
 
@@ -89,3 +99,5 @@ Recommended answer: Expected status is pass_with_conditions unless field separat
 - automatic sequencing
 - mastery decisions
 - summative decisions
+- Procedure-Visual machine registry promotion
+- Procedure-Visual student-facing projection

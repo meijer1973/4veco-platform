@@ -1,0 +1,25 @@
+{
+  "gate_id": "GATE-CP4-skill-registry-coexistence",
+  "addendum_id": "PV.0",
+  "status": "prepared_for_human_review",
+  "decision_question": "Can Procedure-Visual templates reference provisional exercise_operations while PV remains a references/data/procedure-visual overlay?",
+  "recommended_answer": "yes_with_conditions",
+  "conditions": [
+    "PV templates may reference exercise_operations only with explicit provisional status.",
+    "PV references do not promote operations to governed operation records.",
+    "PV.0 through PV.6 must not create references/machine PV registries.",
+    "PV schema, validators, reports, renderer contracts, lesson regressions, and a human promotion gate are required before any machine promotion.",
+    "Student-facing projection remains blocked unless a later PV gate explicitly authorizes it for generator-supported or explicitly non-interactive records."
+  ],
+  "blocked_scope": [
+    "machine registry promotion",
+    "bulk exercise metadata backfill",
+    "student diagnostics",
+    "adaptive routing",
+    "student-facing AI",
+    "automatic sequencing",
+    "mastery decisions",
+    "summative decisions",
+    "unreviewed PV projection into generated lesson output"
+  ]
+}

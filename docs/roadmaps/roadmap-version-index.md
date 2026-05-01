@@ -1,6 +1,6 @@
 # Roadmap Version Index
 
-Updated: 2026-04-30
+Updated: 2026-05-01
 
 The JSON file is canonical for tooling:
 
@@ -12,12 +12,13 @@ docs/roadmaps/roadmap-version-index.json
 
 | Roadmap | Version | Path | Notes |
 |---|---|---|---|
-| References Team Roadmap | `v2.18-s7-skill-operation-review-prepared` | `references/reference-team-roadmap.md` | Current operating roadmap after preparing S7 Skill And Operation Registry MVP for CP-4 review. |
+| References Team Roadmap | `v2.19-procedure-visual-track-adopted` | `references/reference-team-roadmap.md` | Current operating roadmap after adopting the Procedure-Visual Backbone track and inserting PV.0/PV.1/PV.2 before large RX.3/RX.4 mutation work. |
 
 ## Outdated Archive
 
 | Roadmap | Version | Path | Superseded By |
 |---|---|---|---|
+| References Team Roadmap before Procedure-Visual track adoption | `v2.18-s7-skill-operation-review-prepared` | `docs/roadmaps/outdated/reference-team-roadmap-v2.18-s7-skill-operation-review-prepared.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before S7 skill/operation review preparation | `v2.17-source-document-registry-mvp` | `docs/roadmaps/outdated/reference-team-roadmap-v2.17-source-document-registry-mvp.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before S6 source-document registry MVP | `v2.16-rx2b-graphical-foundation-applied` | `docs/roadmaps/outdated/reference-team-roadmap-v2.16-rx2b-graphical-foundation-applied.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before RX.2b graphical foundation application | `v2.15-sprint-ledger-near-top` | `docs/roadmaps/outdated/reference-team-roadmap-v2.15-sprint-ledger-near-top.md` | `references/reference-team-roadmap.md` |

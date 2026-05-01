@@ -2,9 +2,9 @@
 
 Generated: 2026-04-23
 Adopted main roadmap: 2026-04-25
-Last strategic update: 2026-05-01
+Last strategic update: 2026-04-30
 Roadmap ID: `references-team-roadmap`
-Roadmap version: `v2.19-procedure-visual-track-adopted`
+Roadmap version: `v2.18-s7-skill-operation-review-prepared`
 Roadmap status: `active`
 Version index: `docs/roadmaps/roadmap-version-index.json`
 Scope: `references/`, `build-scripts/references/`, `build-scripts/reports/`, reference dashboards, and generated reference reports under `reports/`
@@ -26,8 +26,6 @@ Update 2026-04-30: RX.2b closed `GATE-RX2b-graphical-foundation` as `pass_with_c
 Update 2026-04-30: `S6 Bronnen Registry MVP` is completed. The first source-document registry implementation lives under `references/data/source-document-registry.json` as a governed overlay, not under `references/machine/`. It records source type, authority level, source version, status, owner, citation policy, and public-citation policy while preserving external/machine protected-surface boundaries.
 
 Update 2026-04-30: `S7 Skill And Operation Registry MVP` is prepared for `GATE-CP4-skill-registry-coexistence` review. The registry remains a `references/data/` overlay and keeps `required_units`, provisional `exercise_operations`, and `skill_tags` separate while preserving `required_skills` as legacy/source-only.
-
-Update 2026-05-01: Leadership approved the Procedure-Visual Backbone as a formal PV track. PV starts as a governed `references/data/procedure-visual/` overlay, not a `references/machine/` registry. PV.0/PV.1/PV.2 are inserted after S7/CP-4 and before large RX.3/RX.4 mutation work so producer graphs, elasticity diagrams, market diagrams, procedure games, and surface-specific visuals share one student-visible reasoning model.
 
 Compatibility decisions:
 
@@ -55,18 +53,10 @@ Open items are listed first; completed items are kept below them.
 | Sprint | Name | Completed | Current State |
 |--------|------|-----------|---------------|
 | S7 | Skill And Operation Registry MVP | no | Prepared for CP-4 review. Generated `references/data/skill-operation-registry.json`, coexistence reports, and `GATE-CP4-skill-registry-coexistence` review packet; no machine registry promotion or bulk backfill authorized. |
-| PV.0 | CP-4 Procedure-Visual Addendum | no | Add a CP-4 dependency decision: PV templates may reference provisional `exercise_operations`, but must not promote them to governed operation records before CP-4. No machine registry creation authorized. |
-| PV.1 | Procedure-Visual Inventory | no | Inventory procedure prose, game/runtime data, operation blockers, visual needs, and candidate pilot templates before large RX.3/RX.4 mutation work expands. |
-| PV.2 | Procedure-Visual Schema And Validator MVP | no | Define `references/data/procedure-visual/` schemas, vocabulary, validator, and schema-status reports before pilot content scales. |
-| RX.3 | Producer Table And Graph Representation Units | no | Planned after RX.2b and PV.1/PV.2 constraints. Review profit, break-even, TO/TK, GTK, MO/MK, table-difference, producer-graph overlap, and PV visual-state fit before mutation. |
-| RX.4 | Elasticity And Market Diagram Representation Units | no | Planned after RX.2b/RX.3 with PV constraints. Separate table extraction, graph extraction, elasticity interpretation, and existing market-intervention graph operations. |
-| PV.3 | Pilot Procedure-Visual Templates | no | Build 5+ pilot templates and 2+ visual-state sequences, including formula trace, graph-stage, table-trace, and flowchart-style coverage. |
-| PV.4 | Procedure/Game Projection Contract | no | Add backward-compatible `formal_step_id` support so procedure-game data can map to formal PV steps while legacy unmapped games continue to run. |
-| RX.5 | Representation Operation Registry And Reports | no | Planned as the bridge to Sprint 7 output and PV. Promote provisional representation-operation inventory only after schema, validator, CLI path, and PV operation/visual-state report requirements exist. |
-| PV.5 | Visual Projection MVP | no | Build non-dynamic PV render/validation libraries for formula trace, flowchart, table trace, and static staged graph before dynamic graph manipulation. |
-| PV.6 | Coverage Reports And Dashboard Integration | no | Add PV coverage reports and reference-health summary without treating PV as curriculum authority; preserve generator-blocked status. |
-| RX.6 | Skill-Tree And Generator Integration | no | Planned after approved representation units and PV projection contracts. Requires generator coverage or explicit non-interactive status before any student-facing skill-tree use. |
-| PV.7 | Machine-Promotion Review Gate | no | Decide whether any PV records move from `references/data/` to `references/machine/` only after schema, CLI, validators, mutation logs, reports, lesson regressions, and human gate approval exist. |
+| RX.3 | Producer Table And Graph Representation Units | no | Planned after RX.2b. Review profit, break-even, TO/TK, GTK, MO/MK, table-difference, and producer-graph overlap before mutation. |
+| RX.4 | Elasticity And Market Diagram Representation Units | no | Planned after RX.2b/RX.3. Separate table extraction, graph extraction, elasticity interpretation, and existing market-intervention graph operations. |
+| RX.5 | Representation Operation Registry And Reports | no | Planned as the bridge to Sprint 7 output. Promote provisional representation-operation inventory only after schema, validator, and CLI path exist. |
+| RX.6 | Skill-Tree And Generator Integration | no | Planned after approved representation units. Requires generator coverage or explicit non-interactive status before any student-facing skill-tree use. |
 | Sprint 8 | Misconception Registry MVP | no | Planned. Create small misconception schema/validator and link recurring errors to units, terms, operations, and evidence where available. |
 | Sprint 9 | Unit Design Status And D04 Resolution | no | Planned. Resolve D04 as retire/merge/redistribute/split and decide whether `unit_design_status` is derived overlay or CLI-backed machine-unit field. |
 | Content Track 1 | Year-1 Target Exercise Coverage | no | Planned content-track work. Produce Year-1 paragraph coverage and missing-target exercise status for CP-6. |
@@ -722,67 +712,6 @@ Stop condition: do not reuse `required_skills` for a new concept until the migra
 Checkpoint: `GATE-CP4-skill-registry-coexistence`.
 
 Current stop point: S7 has prepared the governed `references/data/skill-operation-registry.json` overlay and CP-4 review packet. It is not complete until `GATE-CP4-skill-registry-coexistence` records a human decision. Machine registry promotion, bulk exercise metadata backfill, and `required_skills` reuse remain blocked.
-
-PV dependency decision required in CP-4: Procedure-Visual templates may reference provisional `exercise_operations` only with explicit provisional status. PV must not promote those operations to governed operation records before CP-4, and must not create `references/machine/` PV registries during PV.0 through PV.6.
-
-### PV Track Procedure-Visual Backbone
-
-Strategic purpose: make visual teaching and dual coding part of the repository backbone by storing student-visible reasoning procedures, visual states, and representation-specific operation sequences as governed reference data.
-
-Boundary: PV starts as a `references/data/procedure-visual/` overlay. No `references/machine/` promotion is allowed until schema, CLI, validators, mutation logs, reports, at least two lesson-side regressions, and a human review gate exist.
-
-Canonical overlay target:
-
-```text
-references/data/procedure-visual/
-  procedure-template.schema.json
-  visual-state.schema.json
-  visual-grammar.schema.json
-  procedure-templates.json
-  visual-states.json
-  unit-template-links.json
-  procedure-visual-vocab.json
-```
-
-Planned validators and reports:
-
-```text
-build-scripts/references/validate-procedure-visual-registry.js
-build-scripts/reports/build-procedure-visual-coverage.js
-reports/json/procedure-visual-coverage.json
-reports/markdown/procedure-visual-coverage.md
-```
-
-Do not create these future-state files yet:
-
-```text
-references/machine/procedure-templates.json
-references/machine/visual-states.json
-```
-
-Conceptual rule: the central PV object is a student-visible reasoning trace with visual states, not an image asset. Keep micro teaching units, actors, variables, operations, relations, visual primitives, visual states, procedure templates, and lesson/game projections separate. Consumer, producer, price, increase, and decrease are typed parts of procedures and visuals unless a reviewed evidence path shows they should become teaching units.
-
-Sprint sequence:
-
-- `PV.0 CP-4 Addendum`: approve how PV may reference provisional `exercise_operations`; deliver `reports/review-gates/GATE-CP4-skill-registry-coexistence/pv-addendum.md` and update roadmap indexes; no machine registry is created.
-- `PV.1 Procedure-Visual Inventory`: inspect `micro-teaching-units.json`, `skill-operation-registry.json`, `source-data/book-1/`, procedure and skilltree engines/builders, `didactiek-principes.md`, and `economic_mathematical_precision_reference.md`; deliver inventory JSON and Markdown/JSON reports with an 8-12 candidate pilot list.
-- `PV.2 Schema And Validator MVP`: create schemas, vocabulary, validator, and schema-status reports; validator must resolve unit IDs, step IDs, actions, visual-state refs, graph axes/units, non-color accessibility fallback, pilot publication blockers, and no machine registry mutation.
-- `RX.3 Producer Table/Graph Units`: proceed using PV constraints once PV.1/PV.2 define the relevant procedure/visual boundary.
-- `RX.4 Elasticity/Market Diagram Units`: proceed using PV constraints for graph, table, elasticity, and market-intervention records.
-- `PV.3 Pilot Procedure-Visual Templates`: create at least five validated templates, two visual-state sequences, and one formula trace, graph stage, table trace, and flowchart-style template across the approved pilot set.
-- `PV.4 Procedure/Game Projection Contract`: add optional `formal_step_id` mapping first; existing procedure games without mappings report as `legacy_unmapped` and continue to run.
-- `RX.5 Representation Operation Registry And Reports`: expand representation-operation reporting with PV operation/visual-state dimensions.
-- `PV.5 Visual Projection MVP`: render or validate non-dynamic formula traces, flowcharts, table traces, and static staged graphs from PV state sequences.
-- `PV.6 Coverage Reports And Dashboard Integration`: report PV coverage in JSON/Markdown and reference health without treating PV as curriculum authority.
-- `RX.6 Skill-Tree And Generator Integration`: consume only PV records with generator support or explicit non-interactive status.
-- `PV.7 Machine-Promotion Review Gate`: decide whether PV remains an overlay or partly moves to machine registry; a likely safe split is promoting unit-template links first and keeping visual states as governed data until renderers stabilize.
-
-Quality gates:
-
-- `PV-G1 Schema Gate`: schema exists, validator exists, empty/example registry passes, unit IDs and visual-state IDs resolve, operation references are status-aware, and no machine registry is edited.
-- `PV-G2 Pilot Content Gate`: 5+ templates pass, 2+ visual-state sequences pass, formula/graph/table/flowchart examples exist, and all blockers are explicit.
-- `PV-G3 Projection Gate`: one pilot unit aligns vaardigheden explanation, procedure game, answer model, visual sequence, and surface-variant requirement.
-- `PV-G4 Lesson Regression Gate`: one fresh paragraph build uses or validates PV data, complete paragraph validation and Book 1 check pass, and no hand-built generated lesson artifacts are introduced.
 
 ### Phase RX Representation-Sensitive Micro-Unit Decomposition
 
@@ -1465,7 +1394,6 @@ Sprints:
 - `S1` completed: schema audit and exercise naming contract; `GATE-CP1-schema-audit` closed as `pass_with_conditions`.
 - `Sprint 4` planned: exercise metadata overlay MVP, including `instructional_role`, `assessment_role`, scaffolding object, and schema-extension dry run.
 - `S7` prepared: skill and operation registry MVP, now waiting for `GATE-CP4-skill-registry-coexistence`.
-- `PV Track` adopted: Procedure-Visual Backbone starts as a `references/data/` overlay after CP-4 dependency handling; PV.1/PV.2 must precede large RX.3/RX.4 mutation work.
 
 ### Phase RX: Representation-Sensitive Micro-Unit Decomposition
 
@@ -1476,18 +1404,10 @@ Sprints:
 - `RX.1` completed: non-mutating representation-operation inventory and duplicate audit.
 - `RX.2` completed: bounded first-lane percentage/index/table units added through CLI; generator-blocked status remains active.
 - `RX.2b` completed: graphical foundation units `A62`, `A63`, `A64`, `A65`, `A68`, `A69`, and `A73` added through CLI; `A71` remains held/high-risk; generator-blocked status remains active.
-- `PV.0` planned: CP-4 addendum for provisional `exercise_operations` dependency handling; no machine registry creation.
-- `PV.1` planned: procedure-visual inventory and pilot-candidate ranking.
-- `PV.2` planned: procedure-visual schemas, vocabulary, validator, and schema-status reports.
-- `RX.3` planned: producer table and graph representation units after RX.2b and PV.1/PV.2 constraints.
-- `RX.4` planned: elasticity and market-diagram representation units after RX.2b/RX.3 with PV constraints.
-- `PV.3` planned: pilot templates and visual-state sequences.
-- `PV.4` planned: backward-compatible procedure/game projection contract.
-- `RX.5` planned: representation operation registry and reports, expanded with PV operation/visual-state dimensions, only after schema/validator/CLI path exists.
-- `PV.5` planned: non-dynamic visual projection MVP.
-- `PV.6` planned: PV coverage reports and dashboard integration.
-- `RX.6` planned: skill-tree and generator integration, only with generator coverage or explicit non-interactive status and PV projection contracts.
-- `PV.7` planned: machine-promotion review gate after schemas, validators, CLI, mutation logs, reports, lesson regressions, and human approval.
+- `RX.3` planned: producer table and graph representation units after RX.2b.
+- `RX.4` planned: elasticity and market-diagram representation units after RX.2b/RX.3.
+- `RX.5` planned: representation operation registry and reports, only after schema/validator/CLI path exists.
+- `RX.6` planned: skill-tree and generator integration, only with generator coverage or explicit non-interactive status.
 
 ### Phase R9: Owned Source Integration And Content Graph
 
@@ -1550,10 +1470,6 @@ Sprints:
 | GATE-CP2-owned-source-scope | during R9.1 | yes | yes | content graph projection |
 | GATE-CP3-schema-extension-dry-run | before bulk exercise metadata extension | yes | yes | exercise metadata backfill |
 | GATE-CP4-skill-registry-coexistence | before skill/operation registry promotion | yes | yes | operation registry and exercise decomposition |
-| GATE-PV-G1-schema | before Procedure-Visual pilot data scales | optional | no | PV schema and validator MVP |
-| GATE-PV-G2-pilot-content | before Procedure-Visual generator or game integration | yes | no | pilot procedure templates and visual-state sequences |
-| GATE-PV-G3-projection | before lesson-side dependency | yes | sampled | procedure/game, answer-model, and visual projection alignment |
-| GATE-PV-G4-lesson-regression | before Lessen Team L1.7 scaling decision | yes | yes | fresh paragraph PV regression and no generated-output hand patching |
 | GATE-RX1-representation-unit-scope | before representation-sensitive unit mutations | yes | yes | RX.2+ unit mutation |
 | GATE-RX2-first-lane-mutation-review | before RX.2 first-lane CLI execution | yes | yes | A61/A66/A67/A70/A72/A74 catalog mutation |
 | GATE-RX2b-graphical-foundation | before RX.2b CLI execution | yes | yes | A62/A63/A64/A65/A68/A69/A73 and conditional A71 catalog mutation |
@@ -1602,18 +1518,10 @@ RX.2 First-lane mutation review and CLI execution
 RX.2b Graphical foundation coverage and mutation
 S6 Bronnen registry MVP
 S7 Skill and operation registry MVP (CP-4)
-PV.0 CP-4 Procedure-Visual addendum
-PV.1 Procedure-Visual inventory
-PV.2 Procedure-Visual schema and validator MVP
-RX.3 Producer table and graph representation units using PV constraints
-RX.4 Elasticity and market diagram representation units using PV constraints
-PV.3 Pilot Procedure-Visual templates
-PV.4 Procedure/game projection contract
-RX.5 Representation operation registry and reports expanded with PV
-PV.5 Visual projection MVP
-PV.6 Coverage reports and dashboard integration
+RX.3 Producer table and graph representation units
+RX.4 Elasticity and market diagram representation units
+RX.5 Representation operation registry and reports
 RX.6 Skill-tree and generator integration
-PV.7 Machine-promotion review gate
 Sprint 8 Misconception registry MVP
 Sprint 9 Unit design status and D04 resolution (CP-5)
 Content Track 1 Year-1 target exercise coverage (CP-6)
@@ -1639,9 +1547,7 @@ R4.5 has closed the bounded micro-unit mutation lane, CP-1 has closed the non-mu
 
 `A62`, `A63`, `A64`, `A65`, `A68`, `A69`, and `A73` are now catalog units, but they are generator-blocked and non-interactive for student-facing skill-tree use until their generators are implemented and validated. `A71` remains held/high-risk for later focused review.
 
-`S7` is now at its planned review stop point. The next action is CP-4 human review of the skill/operation coexistence packet, with the PV.0 addendum included as a dependency decision. Until CP-4 closes, the registry remains a `references/data/` overlay; `exercise_operations` remain provisional; PV templates may reference them only as provisional records; `required_skills` remains legacy/source-only; and machine registry promotion plus bulk exercise metadata backfill remain blocked.
-
-After CP-4 dependency handling, PV.1 and PV.2 must run before large RX.3/RX.4 mutation work expands. The Procedure-Visual Registry starts under `references/data/procedure-visual/`; do not create `references/machine/procedure-templates.json` or `references/machine/visual-states.json` before the PV.7 machine-promotion review gate.
+`S7` is now at its planned review stop point. The next action is CP-4 human review of the skill/operation coexistence packet. Until CP-4 closes, the registry remains a `references/data/` overlay; `exercise_operations` remain provisional; `required_skills` remains legacy/source-only; and machine registry promotion plus bulk exercise metadata backfill remain blocked.
 
 Do not start diagnostics, adaptive routing, student-facing AI, automatic lesson sequencing, mastery decisions, summative decisions, teacher cockpit deployment, game/simulation product mapping, or continuous-improvement claims from this roadmap.
 
