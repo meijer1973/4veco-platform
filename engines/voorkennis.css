@@ -547,6 +547,154 @@ body[data-layout="begeleide-inoefening-v1"] .hero-card-count {
   margin-top: 8px;
 }
 
+/* ── Samenvatting (one-A4 infographic rendered as web) ──────────────── */
+
+body[data-layout="samenvatting-v1"] .hero-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 14px;
+}
+body[data-layout="samenvatting-v1"] .hero-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: var(--accent);
+  color: var(--bg);
+  border-radius: 6px;
+  text-decoration: none;
+  font-family: var(--mono);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  transition: opacity 0.15s;
+}
+body[data-layout="samenvatting-v1"] .hero-action:hover {
+  opacity: 0.85;
+}
+
+body[data-layout="samenvatting-v1"] .samenvatting-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  padding: 24px 40px 48px;
+}
+@media (max-width: 900px) {
+  body[data-layout="samenvatting-v1"] .samenvatting-grid {
+    grid-template-columns: 1fr;
+    padding: 20px 24px 40px;
+  }
+}
+
+body[data-layout="samenvatting-v1"] .samenvatting-cell {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--border-lift);
+  border-radius: 8px;
+  padding: 18px 22px;
+  scroll-margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+body[data-layout="samenvatting-v1"] .samenvatting-cell.domain-economisch { border-left-color: var(--economisch); }
+body[data-layout="samenvatting-v1"] .samenvatting-cell.domain-wiskunde   { border-left-color: var(--wiskundig); }
+body[data-layout="samenvatting-v1"] .samenvatting-cell.domain-grafisch   { border-left-color: var(--grafisch); }
+
+body[data-layout="samenvatting-v1"] .cell-header {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 10px;
+  margin: 0;
+}
+body[data-layout="samenvatting-v1"] .cell-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--bg-lift);
+  color: var(--ink);
+  font-family: var(--mono);
+  font-size: 13px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+body[data-layout="samenvatting-v1"] .domain-economisch .cell-num { background: var(--economisch-tint); color: var(--economisch); }
+body[data-layout="samenvatting-v1"] .domain-wiskunde   .cell-num { background: var(--wiskundig-tint); color: var(--wiskundig); }
+body[data-layout="samenvatting-v1"] .domain-grafisch   .cell-num { background: var(--grafisch-tint);  color: var(--grafisch); }
+
+body[data-layout="samenvatting-v1"] .cell-title {
+  font-family: var(--heading-font);
+  font-style: var(--heading-style);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--ink);
+  flex: 1;
+  margin: 0;
+  line-height: 1.3;
+}
+body[data-layout="samenvatting-v1"] .cell-badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+body[data-layout="samenvatting-v1"] .cell-body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+body[data-layout="samenvatting-v1"] .cell-para {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--ink-soft);
+}
+body[data-layout="samenvatting-v1"] .cell-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+body[data-layout="samenvatting-v1"] .cell-table th,
+body[data-layout="samenvatting-v1"] .cell-table td {
+  padding: 6px 10px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+body[data-layout="samenvatting-v1"] .cell-table th {
+  background: var(--bg-lift);
+  font-family: var(--mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--ink-soft);
+  font-weight: 700;
+}
+body[data-layout="samenvatting-v1"] .cell-table tr:last-child td {
+  border-bottom: 0;
+}
+
+body[data-layout="samenvatting-v1"] .asset-figure {
+  margin: 0;
+}
+body[data-layout="samenvatting-v1"] .asset-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+body[data-layout="samenvatting-v1"] .callout-body {
+  font-size: 13.5px;
+  line-height: 1.5;
+}
+
 .opgave-section {
   margin-bottom: 44px;
   scroll-margin-top: 1rem;
