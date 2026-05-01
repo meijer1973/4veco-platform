@@ -1,0 +1,72 @@
+{
+  "gate_id": "GATE-CP4-skill-registry-coexistence",
+  "sprint_id": "S7",
+  "recorded_on": "2026-05-01",
+  "reviewer_role": "Head of Content Strategy",
+  "decision": "pass_with_conditions",
+  "closure_authorized": true,
+  "s7_closure_authorized": true,
+  "machine_registry_authorized": false,
+  "bulk_backfill_authorized": false,
+  "pv_dependency_authorized": "provisional references only",
+  "answers": [
+    {
+      "id": "CP4-Q1",
+      "answer": "A. Yes, references/data is correct for S7 MVP storage",
+      "decision": "S7 remains a governed data overlay. Promotion to references/machine is blocked until schema stability, CLI support, validators, mutation logs, and explicit human promotion approval exist."
+    },
+    {
+      "id": "CP4-Q2",
+      "answer": "A. Yes, keep required_units, exercise_operations, and skill_tags separated; required_skills remains legacy/source-only",
+      "decision": "Do not reuse required_skills for new semantics. It remains a source/legacy field until an explicit migration sprint changes it."
+    },
+    {
+      "id": "CP4-Q3",
+      "answer": "B. Mostly, accept Dutch broad skill_tags as v1 with alias/naming follow-up",
+      "decision": "The Dutch broad tags are acceptable as the initial broad taxonomy, but alias handling and normalization rules need follow-up before broader backfill."
+    },
+    {
+      "id": "CP4-Q4",
+      "answer": "B. Treat English dry-run skill_tags as provisional aliases/sub-tags until normalization is reviewed",
+      "decision": "English dry-run tags must not become the canonical broad taxonomy by accident. Treat them as provisional aliases, sub-tags, or implementation labels until a normalization review resolves them."
+    },
+    {
+      "id": "CP4-Q5",
+      "answer": "B. Not yet; exercise_operations stay provisional and only the coexistence structure is approved",
+      "decision": "CP-4 approves the coexistence model, not full governance of operation records. A later registry path must define stable operation IDs, naming, CLI support, validators, and mutation logs."
+    },
+    {
+      "id": "CP4-Q6",
+      "answer": "B. Mostly; mapped operation records may remain provisional but require proof before bulk backfill",
+      "decision": "Current mappings can support planning and review, but they are not enough for uncontrolled bulk backfill. Each mapped operation should keep evidence/proof-to-close before being used at scale."
+    },
+    {
+      "id": "CP4-Q7",
+      "answer": "A. No, do not authorize references/machine operation or skill-tag registries now",
+      "decision": "Do not create references/machine/exercise-operations.json or references/machine/skill-tags.json in S7. Machine promotion requires a later approved sprint with schema, CLI, validator, mutation-log, and human-review discipline."
+    },
+    {
+      "id": "CP4-Q8",
+      "answer": "pass_with_conditions",
+      "decision": "The field separation and overlay structure are accepted. The gate is not a clean pass because tag normalization, operation governance, machine-promotion path, and PV dependency constraints remain open conditions."
+    },
+    {
+      "id": "CP4-Q9",
+      "answer": "A. Yes, PV templates may reference provisional exercise_operations with explicit provisional status and no operation promotion",
+      "decision": "PV may reference provisional operations for planning and template structure only. PV may not promote those operations, create machine registries, or authorize student-facing PV projection before later PV gates approve schema, validators, reports, generator support, and publication controls."
+    }
+  ],
+  "pattern_analysis": "The answers preserve field separation, keep required_skills legacy/source-only, accept skill_tags as a broad taxonomy field with normalization conditions, keep exercise_operations provisional, block machine registry promotion, allow PV provisional operation references only under overlay constraints, and preserve product-surface blocks.",
+  "targeted_followups_required_before_closure": false,
+  "plain_pass_authorized": false,
+  "required_conditions": [
+    "Keep S7 skill/operation data in references/data until schema, CLI, validators, mutation logs, and human promotion approval exist.",
+    "Do not reuse required_skills for new semantics; it remains legacy/source-only.",
+    "Keep exercise_operations provisional until a later governed registry path is approved.",
+    "Treat English dry-run skill_tags as provisional aliases/sub-tags until normalization is reviewed.",
+    "Do not create references/machine/exercise-operations.json or references/machine/skill-tags.json in S7.",
+    "PV templates may reference provisional exercise_operations only with explicit provisional status.",
+    "PV may not create references/machine/procedure-templates.json or references/machine/visual-states.json before the later PV machine-promotion gate.",
+    "No student diagnostics, adaptive routing, student-facing AI, automatic sequencing, mastery decisions, summative decisions, or unreviewed student-facing PV projection is authorized."
+  ]
+}

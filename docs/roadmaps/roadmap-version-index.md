@@ -12,12 +12,13 @@ docs/roadmaps/roadmap-version-index.json
 
 | Roadmap | Version | Path | Notes |
 |---|---|---|---|
-| References Team Roadmap | `v2.19-procedure-visual-track-adopted` | `references/reference-team-roadmap.md` | Current operating roadmap after adopting the Procedure-Visual Backbone track and inserting PV.0/PV.1/PV.2 before large RX.3/RX.4 mutation work. |
+| References Team Roadmap | `v2.20-cp4-skill-operation-gate-closed` | `references/reference-team-roadmap.md` | Current operating roadmap after closing CP-4 as pass_with_conditions and setting PV.1 as the next sprint. |
 
 ## Outdated Archive
 
 | Roadmap | Version | Path | Superseded By |
 |---|---|---|---|
+| References Team Roadmap before CP-4 skill/operation gate closure | `v2.19-procedure-visual-track-adopted` | `docs/roadmaps/outdated/reference-team-roadmap-v2.19-procedure-visual-track-adopted.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before Procedure-Visual track adoption | `v2.18-s7-skill-operation-review-prepared` | `docs/roadmaps/outdated/reference-team-roadmap-v2.18-s7-skill-operation-review-prepared.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before S7 skill/operation review preparation | `v2.17-source-document-registry-mvp` | `docs/roadmaps/outdated/reference-team-roadmap-v2.17-source-document-registry-mvp.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before S6 source-document registry MVP | `v2.16-rx2b-graphical-foundation-applied` | `docs/roadmaps/outdated/reference-team-roadmap-v2.16-rx2b-graphical-foundation-applied.md` | `references/reference-team-roadmap.md` |

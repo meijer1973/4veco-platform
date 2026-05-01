@@ -1,0 +1,103 @@
+{
+  "gate_id": "GATE-CP4-skill-registry-coexistence",
+  "sprint_id": "S7",
+  "status": "pass_with_conditions",
+  "closed_on": "2026-05-01",
+  "closure_confirmed_by_human": true,
+  "human_interview": "reports/review-gates/GATE-CP4-skill-registry-coexistence/human-interview.md",
+  "review_packet": "reports/review-gates/GATE-CP4-skill-registry-coexistence/review-packet.md",
+  "pv_addendum": "reports/review-gates/GATE-CP4-skill-registry-coexistence/pv-addendum.md",
+  "summary": "CP-4 is closed as pass_with_conditions. S7 may close with the skill/operation registry remaining a governed references/data overlay. CP-4 accepts field separation and coexistence structure, authorizes PV provisional operation references only, and blocks machine registry promotion, bulk backfill, and product-surface use.",
+  "protected_reference_data_changed": false,
+  "machine_registry_authorized": false,
+  "bulk_backfill_authorized": false,
+  "pv_dependency_authorized": "provisional references only",
+  "accepted_outcomes": [
+    "references/data is the correct S7 MVP storage location.",
+    "required_units, exercise_operations, and skill_tags remain separate fields.",
+    "required_skills remains legacy/source-only.",
+    "Dutch broad skill_tags are accepted as the v1 broad taxonomy with alias/naming follow-up.",
+    "English dry-run skill_tags are treated as provisional aliases/sub-tags until normalization review.",
+    "exercise_operations remain provisional.",
+    "Operation-to-unit mappings may support planning and review while remaining provisional.",
+    "PV templates may reference provisional exercise_operations with explicit provisional status."
+  ],
+  "blocked_outcomes": [
+    "No references/machine/exercise-operations.json registry is authorized.",
+    "No references/machine/skill-tags.json registry is authorized.",
+    "No PV machine registry is authorized.",
+    "No bulk exercise metadata backfill is authorized.",
+    "Do not reuse required_skills for new semantics.",
+    "Do not treat mapped operations as proof for uncontrolled backfill.",
+    "Do not authorize student diagnostics.",
+    "Do not authorize adaptive routing.",
+    "Do not authorize student-facing AI.",
+    "Do not authorize automatic sequencing.",
+    "Do not authorize mastery decisions.",
+    "Do not authorize summative decisions.",
+    "Do not authorize unreviewed student-facing PV projection."
+  ],
+  "explicit_decisions": [
+    {
+      "topic": "gate status",
+      "decision": "Close CP-4 as pass_with_conditions."
+    },
+    {
+      "topic": "S7 closure",
+      "decision": "S7 closure is authorized after recording human-interview and gate-closure files."
+    },
+    {
+      "topic": "storage location",
+      "decision": "S7 remains a governed references/data overlay."
+    },
+    {
+      "topic": "field separation",
+      "decision": "required_units, exercise_operations, and skill_tags remain separate; required_skills remains legacy/source-only."
+    },
+    {
+      "topic": "skill tags",
+      "decision": "Dutch broad skill_tags are accepted as v1 with alias/naming follow-up; English dry-run tags are provisional aliases/sub-tags."
+    },
+    {
+      "topic": "exercise operations",
+      "decision": "exercise_operations remain provisional; mapped records may support planning but require proof before bulk backfill."
+    },
+    {
+      "topic": "machine registry",
+      "decision": "No references/machine operation, skill-tag, or PV registry is authorized now."
+    },
+    {
+      "topic": "PV dependency",
+      "decision": "PV templates may reference provisional exercise_operations with explicit provisional status and no operation promotion."
+    }
+  ],
+  "conditions_to_reopen_or_pass": [
+    "Keep S7 skill/operation data in references/data until schema, CLI, validators, mutation logs, and human promotion approval exist.",
+    "Do not reuse required_skills for new semantics; it remains legacy/source-only.",
+    "Keep exercise_operations provisional until a later governed registry path is approved.",
+    "Treat English dry-run skill_tags as provisional aliases/sub-tags until normalization is reviewed.",
+    "Do not create references/machine/exercise-operations.json or references/machine/skill-tags.json in S7.",
+    "PV templates may reference provisional exercise_operations only with explicit provisional status.",
+    "PV may not create references/machine/procedure-templates.json or references/machine/visual-states.json before the later PV machine-promotion gate.",
+    "No student diagnostics, adaptive routing, student-facing AI, automatic sequencing, mastery decisions, summative decisions, or unreviewed student-facing PV projection is authorized."
+  ],
+  "allowed_next_sprint": "PV.1",
+  "allowed_next_sprint_scope": [
+    "Procedure-Visual inventory under references/data/procedure-visual/.",
+    "inventory of procedure prose, game/runtime data, operation blockers, visual needs, and candidate pilot templates.",
+    "provisional references to exercise_operations only when status is explicit.",
+    "PV.2 schema/validator planning after inventory preparation."
+  ],
+  "blocked_next_sprint_scope": [
+    "machine registry promotion",
+    "bulk exercise metadata backfill",
+    "source mutation in references/external or references/machine",
+    "student diagnostics",
+    "adaptive routing",
+    "student-facing AI",
+    "automatic sequencing",
+    "mastery decisions",
+    "summative use",
+    "student-facing PV projection without later PV gates, generator support, and publication controls"
+  ]
+}

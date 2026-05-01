@@ -4,7 +4,7 @@ Generated: 2026-04-23
 Adopted main roadmap: 2026-04-25
 Last strategic update: 2026-05-01
 Roadmap ID: `references-team-roadmap`
-Roadmap version: `v2.20-cp4-skill-operation-gate-closed`
+Roadmap version: `v2.19-procedure-visual-track-adopted`
 Roadmap status: `active`
 Version index: `docs/roadmaps/roadmap-version-index.json`
 Scope: `references/`, `build-scripts/references/`, `build-scripts/reports/`, reference dashboards, and generated reference reports under `reports/`
@@ -28,8 +28,6 @@ Update 2026-04-30: `S6 Bronnen Registry MVP` is completed. The first source-docu
 Update 2026-04-30: `S7 Skill And Operation Registry MVP` is prepared for `GATE-CP4-skill-registry-coexistence` review. The registry remains a `references/data/` overlay and keeps `required_units`, provisional `exercise_operations`, and `skill_tags` separate while preserving `required_skills` as legacy/source-only.
 
 Update 2026-05-01: Leadership approved the Procedure-Visual Backbone as a formal PV track. PV starts as a governed `references/data/procedure-visual/` overlay, not a `references/machine/` registry. PV.0/PV.1/PV.2 are inserted after S7/CP-4 and before large RX.3/RX.4 mutation work so producer graphs, elasticity diagrams, market diagrams, procedure games, and surface-specific visuals share one student-visible reasoning model.
-
-Update 2026-05-01: `GATE-CP4-skill-registry-coexistence` closed as `pass_with_conditions`. S7 is completed as a governed `references/data/` overlay. `exercise_operations` remain provisional, Dutch broad `skill_tags` are accepted as v1 with alias/naming follow-up, English dry-run `skill_tags` remain provisional aliases/sub-tags, and no machine registry or bulk backfill is authorized. PV.0 is completed: PV templates may reference provisional `exercise_operations` only with explicit provisional status and no operation promotion.
 
 Compatibility decisions:
 
@@ -56,6 +54,8 @@ Open items are listed first; completed items are kept below them.
 
 | Sprint | Name | Completed | Current State |
 |--------|------|-----------|---------------|
+| S7 | Skill And Operation Registry MVP | no | Prepared for CP-4 review. Generated `references/data/skill-operation-registry.json`, coexistence reports, and `GATE-CP4-skill-registry-coexistence` review packet; no machine registry promotion or bulk backfill authorized. |
+| PV.0 | CP-4 Procedure-Visual Addendum | no | Add a CP-4 dependency decision: PV templates may reference provisional `exercise_operations`, but must not promote them to governed operation records before CP-4. No machine registry creation authorized. |
 | PV.1 | Procedure-Visual Inventory | no | Inventory procedure prose, game/runtime data, operation blockers, visual needs, and candidate pilot templates before large RX.3/RX.4 mutation work expands. |
 | PV.2 | Procedure-Visual Schema And Validator MVP | no | Define `references/data/procedure-visual/` schemas, vocabulary, validator, and schema-status reports before pilot content scales. |
 | RX.3 | Producer Table And Graph Representation Units | no | Planned after RX.2b and PV.1/PV.2 constraints. Review profit, break-even, TO/TK, GTK, MO/MK, table-difference, producer-graph overlap, and PV visual-state fit before mutation. |
@@ -78,8 +78,6 @@ Open items are listed first; completed items are kept below them.
 | Sprint 13 | Composition Pattern Registry | no | Planned. Define reusable exercise-composition patterns for internal authoring support, not automatic student-facing publication. |
 | Sprint 14 | C-to-B Promotion Workflow | no | Planned only after schema audit, owned-source registry, exercise overlays, D04/unit-design status, R7.6, R14.1, and precision lint path are ready. |
 | Product Gate | Re-Evaluate R10-R13 Product Surfaces | no | Blocked. Diagnostics, adaptive routing, student-facing AI, teacher cockpit deployment, automatic sequencing, mastery, and summative uses remain out of scope until data-quality gates justify them. |
-| S7 | Skill And Operation Registry MVP | yes | Completed with `pass_with_conditions`. Generated `references/data/skill-operation-registry.json`, coexistence reports, and `GATE-CP4-skill-registry-coexistence` closure; `exercise_operations` remain provisional; no machine registry promotion or bulk backfill authorized. |
-| PV.0 | CP-4 Procedure-Visual Addendum | yes | Completed with CP-4. PV templates may reference provisional `exercise_operations` only with explicit provisional status and no operation promotion; no machine registry creation or student-facing PV projection is authorized. |
 | S6 | Bronnen Registry MVP | yes | Completed. Created the source-document schema/validator, generated `references/data/source-document-registry.json`, and emitted JSON/Markdown registry reports. The registry is a governed `references/data/` overlay, not a hand-maintained `references/machine/` registry. |
 | RX.2b | Graphical Foundation Coverage And Mutation | yes | Completed. `GATE-RX2b-graphical-foundation` closed as `pass_with_conditions`; `A62`, `A63`, `A64`, `A65`, `A68`, `A69`, and `A73` were added through `unit-add.js`; `A71` remains held/high-risk; all seven new A-units remain generator-blocked/non-interactive until generator implementation and validation. |
 | GATE-RX2b | Graphical Foundation Review | yes | Closed as `pass_with_conditions`. Authorized CLI-only mutation for the seven-unit graphical foundation lane, held `A71`, preserved ID gaps, and preserved student-facing/adaptive/product-use blocks. |
@@ -723,9 +721,9 @@ Stop condition: do not reuse `required_skills` for a new concept until the migra
 
 Checkpoint: `GATE-CP4-skill-registry-coexistence`.
 
-Completion: completed on 2026-05-01 with `GATE-CP4-skill-registry-coexistence` status `pass_with_conditions`. S7 is closed as a governed `references/data/skill-operation-registry.json` overlay. Machine registry promotion, bulk exercise metadata backfill, and `required_skills` reuse remain blocked.
+Current stop point: S7 has prepared the governed `references/data/skill-operation-registry.json` overlay and CP-4 review packet. It is not complete until `GATE-CP4-skill-registry-coexistence` records a human decision. Machine registry promotion, bulk exercise metadata backfill, and `required_skills` reuse remain blocked.
 
-PV dependency decision from CP-4: Procedure-Visual templates may reference provisional `exercise_operations` only with explicit provisional status. PV must not promote those operations to governed operation records, and must not create `references/machine/` PV registries during PV.0 through PV.6.
+PV dependency decision required in CP-4: Procedure-Visual templates may reference provisional `exercise_operations` only with explicit provisional status. PV must not promote those operations to governed operation records before CP-4, and must not create `references/machine/` PV registries during PV.0 through PV.6.
 
 ### PV Track Procedure-Visual Backbone
 
@@ -766,7 +764,7 @@ Conceptual rule: the central PV object is a student-visible reasoning trace with
 
 Sprint sequence:
 
-- `PV.0 CP-4 Addendum`: completed through CP-4. PV may reference provisional `exercise_operations` only with explicit provisional status; no machine registry is created.
+- `PV.0 CP-4 Addendum`: approve how PV may reference provisional `exercise_operations`; deliver `reports/review-gates/GATE-CP4-skill-registry-coexistence/pv-addendum.md` and update roadmap indexes; no machine registry is created.
 - `PV.1 Procedure-Visual Inventory`: inspect `micro-teaching-units.json`, `skill-operation-registry.json`, `source-data/book-1/`, procedure and skilltree engines/builders, `didactiek-principes.md`, and `economic_mathematical_precision_reference.md`; deliver inventory JSON and Markdown/JSON reports with an 8-12 candidate pilot list.
 - `PV.2 Schema And Validator MVP`: create schemas, vocabulary, validator, and schema-status reports; validator must resolve unit IDs, step IDs, actions, visual-state refs, graph axes/units, non-color accessibility fallback, pilot publication blockers, and no machine registry mutation.
 - `RX.3 Producer Table/Graph Units`: proceed using PV constraints once PV.1/PV.2 define the relevant procedure/visual boundary.
@@ -1466,8 +1464,8 @@ Sprints:
 
 - `S1` completed: schema audit and exercise naming contract; `GATE-CP1-schema-audit` closed as `pass_with_conditions`.
 - `Sprint 4` planned: exercise metadata overlay MVP, including `instructional_role`, `assessment_role`, scaffolding object, and schema-extension dry run.
-- `S7` completed: skill and operation registry MVP closed at `GATE-CP4-skill-registry-coexistence` as `pass_with_conditions`.
-- `PV Track` adopted: Procedure-Visual Backbone starts as a `references/data/` overlay; PV.1/PV.2 must precede large RX.3/RX.4 mutation work.
+- `S7` prepared: skill and operation registry MVP, now waiting for `GATE-CP4-skill-registry-coexistence`.
+- `PV Track` adopted: Procedure-Visual Backbone starts as a `references/data/` overlay after CP-4 dependency handling; PV.1/PV.2 must precede large RX.3/RX.4 mutation work.
 
 ### Phase RX: Representation-Sensitive Micro-Unit Decomposition
 
@@ -1478,7 +1476,7 @@ Sprints:
 - `RX.1` completed: non-mutating representation-operation inventory and duplicate audit.
 - `RX.2` completed: bounded first-lane percentage/index/table units added through CLI; generator-blocked status remains active.
 - `RX.2b` completed: graphical foundation units `A62`, `A63`, `A64`, `A65`, `A68`, `A69`, and `A73` added through CLI; `A71` remains held/high-risk; generator-blocked status remains active.
-- `PV.0` completed: CP-4 addendum for provisional `exercise_operations` dependency handling; no machine registry creation.
+- `PV.0` planned: CP-4 addendum for provisional `exercise_operations` dependency handling; no machine registry creation.
 - `PV.1` planned: procedure-visual inventory and pilot-candidate ranking.
 - `PV.2` planned: procedure-visual schemas, vocabulary, validator, and schema-status reports.
 - `RX.3` planned: producer table and graph representation units after RX.2b and PV.1/PV.2 constraints.
@@ -1633,17 +1631,17 @@ Do not invert this order.
 
 ## Immediate Next Sprint
 
-Next sprint: `PV.1 Procedure-Visual Inventory`.
+Next checkpoint: `GATE-CP4-skill-registry-coexistence`.
 
-R4.5 has closed the bounded micro-unit mutation lane, CP-1 has closed the non-mutating schema audit gate as `pass_with_conditions`, CP-2 has closed the owned-source scope gate as `pass_with_conditions`, R9.1 has registered the owned-source surfaces, R9.2 has completed owned-content projection, S4/CP-3 has closed as `pass_with_conditions`, S4.1 has implemented the CP-3 condition artifacts, RX.1 has prepared the non-mutating representation-operation inventory, `GATE-RX1-representation-unit-scope` has closed as `pass_with_conditions`, RX.2/GATE-RX2 has added the bounded six-unit first lane through CLI-only mutation, RX.2b/GATE-RX2b has added the bounded seven-unit graphical foundation lane through CLI-only mutation while holding `A71`, R8.1 has added the scoped internal QC issue model, S6 has created the source-document registry MVP under `references/data/`, and S7/CP-4 has closed as `pass_with_conditions`.
+R4.5 has closed the bounded micro-unit mutation lane, CP-1 has closed the non-mutating schema audit gate as `pass_with_conditions`, CP-2 has closed the owned-source scope gate as `pass_with_conditions`, R9.1 has registered the owned-source surfaces, R9.2 has completed owned-content projection, S4/CP-3 has closed as `pass_with_conditions`, S4.1 has implemented the CP-3 condition artifacts, RX.1 has prepared the non-mutating representation-operation inventory, `GATE-RX1-representation-unit-scope` has closed as `pass_with_conditions`, RX.2/GATE-RX2 has added the bounded six-unit first lane through CLI-only mutation, RX.2b/GATE-RX2b has added the bounded seven-unit graphical foundation lane through CLI-only mutation while holding `A71`, R8.1 has added the scoped internal QC issue model, and S6 has created the source-document registry MVP under `references/data/`.
 
 `A61`, `A66`, `A67`, `A70`, `A72`, and `A74` are now catalog units, but they are generator-blocked and non-interactive for student-facing skill-tree use until their generators are implemented and validated.
 
 `A62`, `A63`, `A64`, `A65`, `A68`, `A69`, and `A73` are now catalog units, but they are generator-blocked and non-interactive for student-facing skill-tree use until their generators are implemented and validated. `A71` remains held/high-risk for later focused review.
 
-`S7` is closed. The skill/operation registry remains a `references/data/` overlay; `exercise_operations` remain provisional; PV templates may reference them only as provisional records; `required_skills` remains legacy/source-only; and machine registry promotion plus bulk exercise metadata backfill remain blocked.
+`S7` is now at its planned review stop point. The next action is CP-4 human review of the skill/operation coexistence packet, with the PV.0 addendum included as a dependency decision. Until CP-4 closes, the registry remains a `references/data/` overlay; `exercise_operations` remain provisional; PV templates may reference them only as provisional records; `required_skills` remains legacy/source-only; and machine registry promotion plus bulk exercise metadata backfill remain blocked.
 
-PV.1 and PV.2 must run before large RX.3/RX.4 mutation work expands. The Procedure-Visual Registry starts under `references/data/procedure-visual/`; do not create `references/machine/procedure-templates.json` or `references/machine/visual-states.json` before the PV.7 machine-promotion review gate.
+After CP-4 dependency handling, PV.1 and PV.2 must run before large RX.3/RX.4 mutation work expands. The Procedure-Visual Registry starts under `references/data/procedure-visual/`; do not create `references/machine/procedure-templates.json` or `references/machine/visual-states.json` before the PV.7 machine-promotion review gate.
 
 Do not start diagnostics, adaptive routing, student-facing AI, automatic lesson sequencing, mastery decisions, summative decisions, teacher cockpit deployment, game/simulation product mapping, or continuous-improvement claims from this roadmap.
 
