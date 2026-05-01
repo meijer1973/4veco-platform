@@ -2,7 +2,7 @@
  * Build script: 1.1.1 Schaarste en economisch denken — Opgavensets
  * Generates 6 documents: vragen + antwoorden for basis, midden, verrijking.
  *
- * Basis (8): MC schaarste herkennen, term-matching, eenvoudige alt.kosten, pitfall.
+ * Basis (8): MC schaarste herkennen, term-matching, eenvoudige alternatieve kosten, pitfall.
  * Midden (6): 3+ alternatieven, winst op schaarse middelen, 3-stappen-procedure toepassen.
  * Verrijking (4): gemengde allocatie, gratis-is-niet-gratis, claim beoordelen, overheidskeuze.
  *

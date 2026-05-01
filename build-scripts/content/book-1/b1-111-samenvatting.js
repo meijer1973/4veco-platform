@@ -259,7 +259,7 @@ function cell_R2C1() {
     new Paragraph({
       alignment: AlignmentType.CENTER, spacing: { before: 40, after: 40 },
       children: [new TextRun({
-        text: "alt.kosten = opbrengst beste niet-gekozen alternatief",
+        text: "alternatieve kosten = opbrengst beste niet-gekozen alternatief",
         font: "Consolas", size: 16, bold: true, color: C.blueDk,
       })],
     }),
@@ -275,7 +275,7 @@ function cell_R2C2() {
     heading("⚠  Pitfalls", C.amberDk),
     new Paragraph({ spacing: { after: 40 }, children: [
       new TextRun({ text: "✘  ", font: "Arial", size: 18, bold: true, color: C.amberDk }),
-      new TextRun({ text: "alt.kosten ≠ prijs.  ", font: "Arial", size: 17, bold: true, color: C.dark }),
+      new TextRun({ text: "alternatieve kosten ≠ prijs.  ", font: "Arial", size: 17, bold: true, color: C.dark }),
       new TextRun({
         text: "Het gaat om de opbrengst die je misloopt, niet om wat je betaalt.",
         font: "Arial", size: 17, color: C.dark,
@@ -320,7 +320,7 @@ function cell_R3C1() {
       new TextRun({ text: "3.  ", font: "Arial", size: 17, bold: true, color: C.greenDk }),
       new TextRun({ text: "Wat ", font: "Arial", size: 17, color: C.dark }),
       new TextRun({ text: "geef je op", font: "Arial", size: 17, bold: true, color: C.dark }),
-      new TextRun({ text: " als je kiest? (= alt.kosten)", font: "Arial", size: 17, color: C.dark }),
+      new TextRun({ text: " als je kiest? (= alternatieve kosten)", font: "Arial", size: 17, color: C.dark }),
     ]}),
     embeddedImage("1.1.1_fig_3_summary.png", 230, 133, "1.1.1_fig_3"),
     bodyLine("Alternatieven → Opbrengsten → Wat geef je op?",
@@ -372,12 +372,12 @@ function cell_R3C2() {
       ],
     }),
     new Paragraph({ spacing: { before: 60, after: 30 }, children: [
-      new TextRun({ text: "Kies tarwe → alt.kosten = ", font: "Arial", size: 15, color: C.dark }),
+      new TextRun({ text: "Kies tarwe → alternatieve kosten = ", font: "Arial", size: 15, color: C.dark }),
       new TextRun({ text: "€ 3.500", font: "Consolas", size: 15, bold: true, color: C.greenDk }),
       new TextRun({ text: " (gemiste maïsopbrengst).", font: "Arial", size: 15, color: C.dark }),
     ]}),
     embeddedImage("1.1.1_we_1_summary.png", 230, 133, "1.1.1_we_1"),
-    bodyLine("Vergelijking tarwe vs maïs met alt.kosten-annotatie.",
+    bodyLine("Vergelijking tarwe vs maïs met alternatieve kosten-annotatie.",
       { size: 14, color: C.gray, italics: true, after: 0 }),
   ]);
 }
