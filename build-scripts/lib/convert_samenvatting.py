@@ -373,7 +373,7 @@ def generate_html(data, para_number, para_name, asset_prefix='_assets',
 <body data-layout="samenvatting-v1" data-accent-domain="economisch">
 <button class="sidebar-toggle" id="sidebarToggle" aria-label="Menu">&#9776;</button>
 <div class="sidebarOverlay" id="sidebarOverlay"></div>
-<div class="layout">
+<div class="page-layout">
 {sidebar}  <div class="content">
 {hero}{main_grid}  </div>
 </div>
