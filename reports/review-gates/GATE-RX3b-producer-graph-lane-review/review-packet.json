@@ -1,0 +1,71 @@
+{
+  "gate_id": "GATE-RX3b-producer-graph-lane-review",
+  "sprint_id": "RX.3b",
+  "status": "prepared_for_human_review",
+  "generated_on": "2026-05-01",
+  "cli_unit_mutation_authorized": false,
+  "summary": {
+    "candidate_count": 2,
+    "candidate_ids": [
+      "A77",
+      "A78"
+    ],
+    "required_execution_order": [
+      "A77",
+      "A78"
+    ],
+    "student_facing_use_authorized": false,
+    "pv_projection_authorized": false
+  },
+  "review_questions": [
+    {
+      "id": "RX3B-Q1",
+      "question": "Is RX.3b correctly limited to A77 and A78?",
+      "recommended_answer": "A. Yes, keep the scope limited to the TO-TK graph lane."
+    },
+    {
+      "id": "RX3B-Q2",
+      "question": "Is the A77 draft spec acceptable with needs A63 and A29?",
+      "recommended_answer": "A. Yes, preserve A63/A29 unless HCS wants a separate lighter break-even concept unit first."
+    },
+    {
+      "id": "RX3B-Q3",
+      "question": "Is the A78 draft spec acceptable with needs A63 and A75?",
+      "recommended_answer": "B. Mostly; decide explicitly whether A78 should add A77 after A77 is minted."
+    },
+    {
+      "id": "RX3B-Q4",
+      "question": "Should A77 and A78 procedures satisfy the PV graph-stage constraints without creating real PV templates yet?",
+      "recommended_answer": "A. Yes, record PV requirements now but keep real PV templates for PV.3/PV.5."
+    },
+    {
+      "id": "RX3B-Q5",
+      "question": "Should A80, A81, and HOLD_GRAPHICAL_MO_MK_OPTIMUM remain held?",
+      "recommended_answer": "A. Yes, keep them held until PV producer-graph templates or separate design review."
+    },
+    {
+      "id": "RX3B-Q6",
+      "question": "Should A77 and A78 remain generator-blocked and non-interactive if later mutated?",
+      "recommended_answer": "A. Yes, hard block student-facing use."
+    },
+    {
+      "id": "RX3B-Q7",
+      "question": "If the gate passes, authorize later CLI-only unit mutation for A77 and A78?",
+      "recommended_answer": "A. Yes, after live numbering/dependency checks, if HCS accepts the specs and dependency decision."
+    },
+    {
+      "id": "RX3B-Q8",
+      "question": "What gate status should GATE-RX3b-producer-graph-lane-review receive?",
+      "recommended_answer": "pass_with_conditions"
+    }
+  ],
+  "required_conditions_if_passes": [
+    "Run live numbering check immediately before any later mutation.",
+    "Use only unit-add.js, in the order A77, A78.",
+    "Record the A78 dependency decision in the gate closure and mutation log.",
+    "Do not mutate A80, A81, HOLD_GRAPHICAL_MO_MK_OPTIMUM, or held duplicate/overlap records.",
+    "Mark A77 and A78 generator-blocked and non-interactive until generators exist and validate.",
+    "Do not hand-edit references/machine, references/external, authored source files, or RAG chunks.",
+    "Do not authorize diagnostics, adaptive routing, student-facing AI, automatic sequencing, mastery decisions, summative use, or student-facing PV projection."
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "sprint_id": "RX.3b",
+  "artifact_id": "RX.3b-producer-graph-lane-candidate-specs",
+  "status": "prepared_for_mutation_review",
+  "generated_on": "2026-05-01",
+  "source_files": [
+    "reports/review-gates/GATE-RX3-producer-representation/gate-closure.json",
+    "reports/review-gates/GATE-RX3a-first-lane-mutation-review/gate-closure.json",
+    "reports/review-gates/GATE-RX1-representation-unit-scope/proposed-mutation-queue.json",
+    "references/machine/micro-teaching-units.json"
+  ],
+  "policy": {
+    "mutation_authorized": false,
+    "cli_execution_authorized": false,
+    "protected_reference_data_changed": false,
+    "candidate_ids_are_provisional_until_execution": true,
+    "graph_lane_scope": [
+      "A77",
+      "A78"
+    ],
+    "held_records_remain_blocked": [
+      "A80",
+      "A81",
+      "HOLD_GRAPHICAL_MO_MK_OPTIMUM"
+    ]
+  },
+  "blocked_scope": [
+    "A80",
+    "A81",
+    "HOLD_GRAPHICAL_MO_MK_OPTIMUM",
+    "held duplicate/overlap records",
+    "student diagnostics",
+    "adaptive routing",
+    "student-facing AI",
+    "automatic sequencing",
+    "mastery decisions",
+    "summative use",
+    "student-facing PV projection"
+  ],
+  "pv_graph_stage_constraints": [
+    "Procedure steps must separate graph-reading from calculation or interpretation.",
+    "TO-TK graph procedures must identify title/context, axes, units, scale, and line labels.",
+    "Students must read TO and TK from the same Q when comparing vertical distance.",
+    "Any later PV visual-state template must use direct labels or a legend and must not rely on color alone.",
+    "No student-facing PV projection is authorized by this packet."
+  ],
+  "candidates": [
+    {
+      "candidate_id": "A77",
+      "sequence_index": 1,
+      "live_numbering_status": "available_at_review_generation",
+      "rx1_inventory_operation_id": "REP_BREAK_EVEN_TO_TK_GRAPH",
+      "rx1_inventory_name": "Break-even aflezen uit TO-TK-grafiek",
+      "rx3b_draft_spec": {
+        "id": "A77",
+        "name": "Break-even aflezen uit TO-TK-grafiek",
+        "kern": "Lees in een TO-TK-grafiek het snijpunt van totale opbrengsten en totale kosten af en interpreteer dit als break-evenhoeveelheid.",
+        "needs": [
+          "A63",
+          "A29"
+        ],
+        "mastery_target": "apply",
+        "prior_learning": "new_this_year",
+        "aspects": [
+          "grafisch",
+          "rekenen"
+        ],
+        "terms": [],
+        "procedure": [
+          "Lees de titel en bepaal dat de grafiek totale opbrengsten en totale kosten van een producent toont.",
+          "Controleer de horizontale as, verticale as, eenheden en schaal.",
+          "Identificeer welke lijn of kromme TO is en welke lijn of kromme TK is, via labels of legenda.",
+          "Zoek het snijpunt of de snijpunten waar TO en TK gelijk zijn.",
+          "Lees de bijbehorende hoeveelheid Q op de horizontale as af.",
+          "Interpreteer dit punt als break-even: de totale winst is nul."
+        ],
+        "pitfalls": [
+          "De grootste verticale afstand tussen TO en TK markeren als break-even.",
+          "Een winstgebied of verliesgebied verwarren met het snijpunt.",
+          "Niet controleren of er een of twee break-evenpunten zijn."
+        ],
+        "generator": "GEN_A77"
+      },
+      "evidence_status": "target_exercise_evidence",
+      "risk": "medium",
+      "generator_status": "missing_generator_implementation",
+      "generator_followup_required": true,
+      "mutation_authorized": false,
+      "cli_execution_authorized": false,
+      "dependency_note": "Draft keeps RX.1 needs A63 and A29. A29 is the current live break-even precursor; no lighter break-even concept unit exists yet."
+    },
+    {
+      "candidate_id": "A78",
+      "sequence_index": 2,
+      "live_numbering_status": "available_at_review_generation",
+      "rx1_inventory_operation_id": "REP_PROFIT_LOSS_TO_TK_GRAPH",
+      "rx1_inventory_name": "Winst of verlies aflezen uit TO-TK-grafiek",
+      "rx3b_draft_spec": {
+        "id": "A78",
+        "name": "Winst of verlies aflezen uit TO-TK-grafiek",
+        "kern": "Lees bij een hoeveelheid Q de TO- en TK-waarden in een TO-TK-grafiek af, gebruik de verticale afstand en bepaal of er winst of verlies is.",
+        "needs": [
+          "A63",
+          "A75"
+        ],
+        "mastery_target": "apply",
+        "prior_learning": "new_this_year",
+        "aspects": [
+          "grafisch",
+          "rekenen"
+        ],
+        "terms": [],
+        "procedure": [
+          "Lees de titel en bepaal dat de grafiek totale opbrengsten en totale kosten van een producent toont.",
+          "Controleer de horizontale as, verticale as, eenheden en schaal.",
+          "Identificeer welke lijn of kromme TO is en welke lijn of kromme TK is, via labels of legenda.",
+          "Kies de gevraagde hoeveelheid Q en lees TO en TK bij diezelfde hoeveelheid af.",
+          "Bepaal de verticale afstand: TO min TK.",
+          "Interpreteer de uitkomst: TO boven TK betekent winst, TO onder TK betekent verlies, en TO gelijk aan TK betekent break-even."
+        ],
+        "pitfalls": [
+          "Horizontale afstand lezen in plaats van verticale afstand.",
+          "TO en TK bij verschillende hoeveelheden vergelijken.",
+          "Alleen kijken welke lijn hoger ligt zonder de schaal of eenheden te controleren."
+        ],
+        "generator": "GEN_A78"
+      },
+      "evidence_status": "target_exercise_evidence",
+      "risk": "medium",
+      "generator_status": "missing_generator_implementation",
+      "generator_followup_required": true,
+      "mutation_authorized": false,
+      "cli_execution_authorized": false,
+      "dependency_question": "Should A78 add A77 as a dependency after A77 is minted, or keep the RX.1 dependency set A63/A75 because this unit focuses on profit/loss at a given Q rather than break-even-point reading?"
+    }
+  ]
+}

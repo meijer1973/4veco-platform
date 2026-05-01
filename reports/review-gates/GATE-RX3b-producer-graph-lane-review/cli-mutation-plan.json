@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "sprint_id": "RX.3b",
+  "plan_id": "RX.3b-producer-graph-lane-cli-mutation-plan",
+  "status": "draft_pending_human_review",
+  "execution_authorized": false,
+  "mutation_authorized": false,
+  "required_execution_order": [
+    "A77",
+    "A78"
+  ],
+  "required_pre_execution_checks": [
+    "Re-run live A-domain numbering check.",
+    "Confirm GATE-RX3b-producer-graph-lane-review closure authorizes CLI execution.",
+    "Confirm A77 needs are approved by HCS.",
+    "Confirm A78 dependency decision is approved by HCS.",
+    "Confirm all candidate needs are live units or earlier approved graph-lane candidates.",
+    "Confirm generator status is tracked as blocked/non-interactive."
+  ],
+  "ordered_steps": [
+    {
+      "candidate_id": "A77",
+      "command_template": "node build-scripts/references/unit-add.js --spec '{\"id\":\"A77\",\"name\":\"Break-even aflezen uit TO-TK-grafiek\",\"kern\":\"Lees in een TO-TK-grafiek het snijpunt van totale opbrengsten en totale kosten af en interpreteer dit als break-evenhoeveelheid.\",\"needs\":[\"A63\",\"A29\"],\"mastery_target\":\"apply\",\"prior_learning\":\"new_this_year\",\"aspects\":[\"grafisch\",\"rekenen\"],\"terms\":[],\"procedure\":[\"Lees de titel en bepaal dat de grafiek totale opbrengsten en totale kosten van een producent toont.\",\"Controleer de horizontale as, verticale as, eenheden en schaal.\",\"Identificeer welke lijn of kromme TO is en welke lijn of kromme TK is, via labels of legenda.\",\"Zoek het snijpunt of de snijpunten waar TO en TK gelijk zijn.\",\"Lees de bijbehorende hoeveelheid Q op de horizontale as af.\",\"Interpreteer dit punt als break-even: de totale winst is nul.\"],\"pitfalls\":[\"De grootste verticale afstand tussen TO en TK markeren als break-even.\",\"Een winstgebied of verliesgebied verwarren met het snijpunt.\",\"Niet controleren of er een of twee break-evenpunten zijn.\"],\"generator\":\"GEN_A77\"}'",
+      "execution_authorized": false
+    },
+    {
+      "candidate_id": "A78",
+      "command_template": "node build-scripts/references/unit-add.js --spec '{\"id\":\"A78\",\"name\":\"Winst of verlies aflezen uit TO-TK-grafiek\",\"kern\":\"Lees bij een hoeveelheid Q de TO- en TK-waarden in een TO-TK-grafiek af, gebruik de verticale afstand en bepaal of er winst of verlies is.\",\"needs\":[\"A63\",\"A75\"],\"mastery_target\":\"apply\",\"prior_learning\":\"new_this_year\",\"aspects\":[\"grafisch\",\"rekenen\"],\"terms\":[],\"procedure\":[\"Lees de titel en bepaal dat de grafiek totale opbrengsten en totale kosten van een producent toont.\",\"Controleer de horizontale as, verticale as, eenheden en schaal.\",\"Identificeer welke lijn of kromme TO is en welke lijn of kromme TK is, via labels of legenda.\",\"Kies de gevraagde hoeveelheid Q en lees TO en TK bij diezelfde hoeveelheid af.\",\"Bepaal de verticale afstand: TO min TK.\",\"Interpreteer de uitkomst: TO boven TK betekent winst, TO onder TK betekent verlies, en TO gelijk aan TK betekent break-even.\"],\"pitfalls\":[\"Horizontale afstand lezen in plaats van verticale afstand.\",\"TO en TK bij verschillende hoeveelheden vergelijken.\",\"Alleen kijken welke lijn hoger ligt zonder de schaal of eenheden te controleren.\"],\"generator\":\"GEN_A78\"}'",
+      "execution_authorized": false
+    }
+  ],
+  "forbidden_actions": [
+    "Do not execute unit-add.js before gate closure explicitly authorizes CLI execution.",
+    "Do not hand-edit references/machine/.",
+    "Do not hand-edit references/external/.",
+    "Do not mutate authored source files.",
+    "Do not patch RAG chunks by hand.",
+    "Do not expose these units in student-facing skill-tree or PV projection before generator/projection implementation."
+  ]
+}

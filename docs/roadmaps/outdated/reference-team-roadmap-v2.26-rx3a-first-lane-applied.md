@@ -4,7 +4,7 @@ Generated: 2026-04-23
 Adopted main roadmap: 2026-04-25
 Last strategic update: 2026-05-01
 Roadmap ID: `references-team-roadmap`
-Roadmap version: `v2.27-rx3b-graph-lane-review-prepared`
+Roadmap version: `v2.26-rx3a-first-lane-applied`
 Roadmap status: `active`
 Version index: `docs/roadmaps/roadmap-version-index.json`
 Scope: `references/`, `build-scripts/references/`, `build-scripts/reports/`, reference dashboards, and generated reference reports under `reports/`
@@ -43,8 +43,6 @@ Update 2026-05-01: `RX.3a Producer Table/Data First-Lane Mutation Review` is pre
 
 Update 2026-05-01: `GATE-RX3a-first-lane-mutation-review` closed as `pass_with_conditions` and RX.3a applied the authorized producer table/data lane through `unit-add.js`. `A75`, `A76`, and `A79` are now live catalog units; `A76` includes `A14`, `A04`, and `A61` as required needs. All three remain generator-blocked/non-interactive. `A77`/`A78` move to a later graph-lane review, while `A80`, `A81`, and graphical MO=MK remain held.
 
-Update 2026-05-01: `RX.3b Producer TO-TK Graph-Lane Mutation Review` is prepared for `GATE-RX3b-producer-graph-lane-review`. Candidate specs and a blocked CLI plan are ready for `A77` and `A78`; the packet records PV graph-stage constraints and asks HCS whether `A78` should add `A77` as a dependency. No mutation is authorized before HCS decision. `A80`, `A81`, and graphical MO=MK remain held.
-
 Compatibility decisions:
 
 - Sprint `R0.1` now means the sprint-execution scaffold.
@@ -70,7 +68,7 @@ Open items are listed first; completed items are kept below them.
 
 | Sprint | Name | Completed | Current State |
 |--------|------|-----------|---------------|
-| RX.3b | Producer TO-TK Graph-Lane Mutation Review | no | Prepared for `GATE-RX3b-producer-graph-lane-review`. Candidate specs and blocked CLI plan are ready for A77/A78; HCS must decide the A78 dependency question before any mutation. |
+| RX.3b | Producer TO-TK Graph-Lane Mutation Review | no | Planned after A75 is live. Prepare A77/A78 under PV graph-stage constraints; keep A80/A81 and graphical MO=MK held until PV producer-graph templates or a later explicit gate. |
 | RX.4 | Elasticity And Market Diagram Representation Units | no | Planned after RX.2b/RX.3 with PV constraints. Separate table extraction, graph extraction, elasticity interpretation, and existing market-intervention graph operations. |
 | PV.3 | Pilot Procedure-Visual Templates | no | Build 5+ pilot templates and 2+ visual-state sequences, including formula trace, graph-stage, table-trace, and flowchart-style coverage. |
 | PV.4 | Procedure/Game Projection Contract | no | Add backward-compatible `formal_step_id` support so procedure-game data can map to formal PV steps while legacy unmapped games continue to run. |
