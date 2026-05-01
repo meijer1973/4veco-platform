@@ -575,14 +575,17 @@ body[data-layout="samenvatting-v1"] .hero-action:hover {
 
 body[data-layout="samenvatting-v1"] .samenvatting-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  /* Auto-fit: as many columns as fit at 320px minimum, then collapse smoothly
+     as viewport / zoom / sidebar state changes. Wide desktops get 3+ tiles
+     per row; tablets get 2; phones get 1. No hard-coded breakpoint counts. */
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 18px;
   padding: 24px 40px 48px;
 }
-@media (max-width: 900px) {
+@media (max-width: 600px) {
   body[data-layout="samenvatting-v1"] .samenvatting-grid {
-    grid-template-columns: 1fr;
-    padding: 20px 24px 40px;
+    padding: 20px 16px 40px;
+    gap: 14px;
   }
 }
 
