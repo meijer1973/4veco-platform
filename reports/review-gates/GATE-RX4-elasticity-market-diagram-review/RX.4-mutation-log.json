@@ -1,0 +1,263 @@
+{
+  "sprint_id": "RX.4",
+  "generated_on": "2026-05-02T07:08:37.607Z",
+  "status": "completed",
+  "decision_source": "reports/review-gates/GATE-RX4-elasticity-market-diagram-review/gate-closure.json",
+  "execution_mode": "CLI-only via build-scripts/references/unit-add.js",
+  "pre_execution_check": {
+    "checked_on": "2026-05-02T07:08:37.301Z",
+    "live_a_domain_max_id_before_mutation": "A79",
+    "authorized_ids_available": true,
+    "occupied_authorized_ids": [],
+    "dependency_check": "passed",
+    "required_dependencies": {
+      "A82": [
+        "A15",
+        "A61",
+        "A66"
+      ],
+      "A83": [
+        "A15",
+        "A46",
+        "A66"
+      ],
+      "A84": [
+        "A15",
+        "A67"
+      ]
+    },
+    "execution_order": [
+      "A82",
+      "A84",
+      "A83"
+    ]
+  },
+  "commands": [
+    {
+      "step": "add unit A82",
+      "unit_id": "A82",
+      "command": "node build-scripts/references/unit-add.js --spec '{\"id\":\"A82\",\"name\":\"Elasticiteit berekenen uit tabelwaarden\",\"kern\":\"Bereken prijselasticiteit nadat je oude en nieuwe prijs- en hoeveelheidswaarden uit een tabel hebt geselecteerd en de juiste waardenparen hebt gekoppeld.\",\"needs\":[\"A15\",\"A61\",\"A66\"],\"mastery_target\":\"apply\",\"prior_learning\":\"new_this_year\",\"aspects\":[\"rekenen\",\"verbaal\"],\"terms\":[],\"procedure\":[\"Lees de vraag en bepaal welke prijs- en hoeveelheidsvariabelen bij de elasticiteit horen.\",\"Selecteer in de tabel de oude prijs, oude hoeveelheid, nieuwe prijs en nieuwe hoeveelheid en controleer rij, kolom, periode en eenheid.\",\"Controleer dat oude prijs en oude hoeveelheid bij dezelfde situatie horen en dat nieuwe prijs en nieuwe hoeveelheid bij dezelfde situatie horen.\",\"Label per variabele de basiswaarde en vergelijkingswaarde.\",\"Bereken de procentuele verandering van Q en de procentuele verandering van P.\",\"Bereken Ev = procentuele verandering Q gedeeld door procentuele verandering P.\",\"Interpreteer teken, absolute waarde en elastisch, inelastisch of unitair elastisch in de economische context.\"],\"pitfalls\":[\"De verkeerde tabelrijen of perioden koppelen.\",\"Oude prijs bij nieuwe hoeveelheid gebruiken of andersom.\",\"P en Q omwisselen in de elasticiteitsbreuk.\",\"Absolute veranderingen gebruiken in plaats van procentuele veranderingen.\",\"Het teken of de absolute waarde negeren bij de interpretatie.\"],\"generator\":\"GEN_A82\"}'",
+      "final_spec": {
+        "id": "A82",
+        "name": "Elasticiteit berekenen uit tabelwaarden",
+        "kern": "Bereken prijselasticiteit nadat je oude en nieuwe prijs- en hoeveelheidswaarden uit een tabel hebt geselecteerd en de juiste waardenparen hebt gekoppeld.",
+        "needs": [
+          "A15",
+          "A61",
+          "A66"
+        ],
+        "mastery_target": "apply",
+        "prior_learning": "new_this_year",
+        "aspects": [
+          "rekenen",
+          "verbaal"
+        ],
+        "terms": [],
+        "procedure": [
+          "Lees de vraag en bepaal welke prijs- en hoeveelheidsvariabelen bij de elasticiteit horen.",
+          "Selecteer in de tabel de oude prijs, oude hoeveelheid, nieuwe prijs en nieuwe hoeveelheid en controleer rij, kolom, periode en eenheid.",
+          "Controleer dat oude prijs en oude hoeveelheid bij dezelfde situatie horen en dat nieuwe prijs en nieuwe hoeveelheid bij dezelfde situatie horen.",
+          "Label per variabele de basiswaarde en vergelijkingswaarde.",
+          "Bereken de procentuele verandering van Q en de procentuele verandering van P.",
+          "Bereken Ev = procentuele verandering Q gedeeld door procentuele verandering P.",
+          "Interpreteer teken, absolute waarde en elastisch, inelastisch of unitair elastisch in de economische context."
+        ],
+        "pitfalls": [
+          "De verkeerde tabelrijen of perioden koppelen.",
+          "Oude prijs bij nieuwe hoeveelheid gebruiken of andersom.",
+          "P en Q omwisselen in de elasticiteitsbreuk.",
+          "Absolute veranderingen gebruiken in plaats van procentuele veranderingen.",
+          "Het teken of de absolute waarde negeren bij de interpretatie."
+        ],
+        "generator": "GEN_A82"
+      },
+      "status": "passed",
+      "exit_code": 0,
+      "stdout": "OK  minted A82 \"Elasticiteit berekenen uit tabelwaarden\" (catalog now 230 units)",
+      "stderr": "(node:49748) Warning: Accessing non-existent property 'formatEntry' of module exports inside circular dependency\n(Use `node --trace-warnings ...` to show where the warning was created)"
+    },
+    {
+      "step": "add unit A84",
+      "unit_id": "A84",
+      "command": "node build-scripts/references/unit-add.js --spec '{\"id\":\"A84\",\"name\":\"Omzetverandering beoordelen met elasticiteit uit bron\",\"kern\":\"Beoordeel met brongegevens en prijselasticiteit of omzet stijgt, daalt of ongeveer gelijk blijft: bij elastische vraag beweegt omzet tegengesteld aan de prijs, bij inelastische vraag mee met de prijs, en bij unitair elastische vraag ongeveer niet.\",\"needs\":[\"A15\",\"A67\"],\"mastery_target\":\"apply\",\"prior_learning\":\"new_this_year\",\"aspects\":[\"rekenen\",\"verbaal\"],\"terms\":[],\"procedure\":[\"Lees uit de bron welke prijsverandering, hoeveelheidsverandering of elasticiteitswaarde gegeven is.\",\"Bepaal met de absolute waarde van de elasticiteit of de vraag elastisch, inelastisch of unitair elastisch is.\",\"Bij elastische vraag beweegt omzet tegengesteld aan de prijs: prijs omhoog betekent omzet omlaag en prijs omlaag betekent omzet omhoog.\",\"Bij inelastische vraag beweegt omzet mee met de prijs: prijs omhoog betekent omzet omhoog en prijs omlaag betekent omzet omlaag.\",\"Bij unitair elastische vraag blijft omzet ongeveer gelijk omdat prijs- en hoeveelheidsverandering elkaar ongeveer compenseren.\",\"Gebruik TO = P maal Q of vergelijk de procentuele effecten om de richting van de omzetverandering te onderbouwen.\",\"Controleer teken, absolute waarde en context, en formuleer het oordeel met verwijzing naar de brongegevens.\"],\"pitfalls\":[\"Elastische en inelastische vraag omdraaien bij de omzetrichting.\",\"Het minteken mechanisch gebruiken zonder de omzetbetekenis te controleren.\",\"Omzet en winst door elkaar halen.\",\"Alleen een procentuele verandering berekenen zonder de elasticiteitscategorie te interpreteren.\"],\"generator\":\"GEN_A84\"}'",
+      "final_spec": {
+        "id": "A84",
+        "name": "Omzetverandering beoordelen met elasticiteit uit bron",
+        "kern": "Beoordeel met brongegevens en prijselasticiteit of omzet stijgt, daalt of ongeveer gelijk blijft: bij elastische vraag beweegt omzet tegengesteld aan de prijs, bij inelastische vraag mee met de prijs, en bij unitair elastische vraag ongeveer niet.",
+        "needs": [
+          "A15",
+          "A67"
+        ],
+        "mastery_target": "apply",
+        "prior_learning": "new_this_year",
+        "aspects": [
+          "rekenen",
+          "verbaal"
+        ],
+        "terms": [],
+        "procedure": [
+          "Lees uit de bron welke prijsverandering, hoeveelheidsverandering of elasticiteitswaarde gegeven is.",
+          "Bepaal met de absolute waarde van de elasticiteit of de vraag elastisch, inelastisch of unitair elastisch is.",
+          "Bij elastische vraag beweegt omzet tegengesteld aan de prijs: prijs omhoog betekent omzet omlaag en prijs omlaag betekent omzet omhoog.",
+          "Bij inelastische vraag beweegt omzet mee met de prijs: prijs omhoog betekent omzet omhoog en prijs omlaag betekent omzet omlaag.",
+          "Bij unitair elastische vraag blijft omzet ongeveer gelijk omdat prijs- en hoeveelheidsverandering elkaar ongeveer compenseren.",
+          "Gebruik TO = P maal Q of vergelijk de procentuele effecten om de richting van de omzetverandering te onderbouwen.",
+          "Controleer teken, absolute waarde en context, en formuleer het oordeel met verwijzing naar de brongegevens."
+        ],
+        "pitfalls": [
+          "Elastische en inelastische vraag omdraaien bij de omzetrichting.",
+          "Het minteken mechanisch gebruiken zonder de omzetbetekenis te controleren.",
+          "Omzet en winst door elkaar halen.",
+          "Alleen een procentuele verandering berekenen zonder de elasticiteitscategorie te interpreteren."
+        ],
+        "generator": "GEN_A84"
+      },
+      "status": "passed",
+      "exit_code": 0,
+      "stdout": "OK  minted A84 \"Omzetverandering beoordelen met elasticiteit uit bron\" (catalog now 231 units)",
+      "stderr": "(node:48676) Warning: Accessing non-existent property 'formatEntry' of module exports inside circular dependency\n(Use `node --trace-warnings ...` to show where the warning was created)"
+    },
+    {
+      "step": "add unit A83",
+      "unit_id": "A83",
+      "command": "node build-scripts/references/unit-add.js --spec '{\"id\":\"A83\",\"name\":\"Prijselasticiteit van de vraag berekenen uit P-Q-grafiek\",\"kern\":\"Lees twee prijs-hoeveelheidsparen uit een P-Q-grafiek van de vraag af en bereken de prijselasticiteit van de vraag met correcte procentuele veranderingen.\",\"needs\":[\"A15\",\"A46\",\"A66\"],\"mastery_target\":\"apply\",\"prior_learning\":\"new_this_year\",\"aspects\":[\"grafisch\",\"rekenen\"],\"terms\":[],\"procedure\":[\"Lees de titel en bepaal dat de grafiek een vraagrelatie tussen prijs en gevraagde hoeveelheid toont.\",\"Controleer horizontale as, verticale as, eenheden, schaal en directe labels of legenda.\",\"Kies twee punten of twee situaties die bij de vraag horen en bepaal of de waarden exact of geschat moeten worden afgelezen.\",\"Lees bij elk punt de prijs en hoeveelheid af en noteer beide P,Q-paren.\",\"Bepaal voor prijs en hoeveelheid welke waarde oud of basis is en welke waarde nieuw of vergelijking is.\",\"Bereken de procentuele verandering van Q en de procentuele verandering van P.\",\"Bereken Ev = procentuele verandering Q gedeeld door procentuele verandering P.\",\"Interpreteer teken, absolute waarde en elastisch, inelastisch of unitair elastisch, en controleer of de uitkomst past bij de grafiek.\"],\"pitfalls\":[\"Slechts een punt aflezen en daarna een helling berekenen.\",\"P en Q of de assen verwisselen.\",\"Geschatte grafiekwaarden behandelen alsof ze exact zijn.\",\"Absolute veranderingen gebruiken in plaats van procentuele veranderingen.\",\"De grafiekhelling behandelen alsof die hetzelfde is als elasticiteit.\",\"Het teken of de absolute waarde negeren bij de interpretatie.\"],\"generator\":\"GEN_A83\"}'",
+      "final_spec": {
+        "id": "A83",
+        "name": "Prijselasticiteit van de vraag berekenen uit P-Q-grafiek",
+        "kern": "Lees twee prijs-hoeveelheidsparen uit een P-Q-grafiek van de vraag af en bereken de prijselasticiteit van de vraag met correcte procentuele veranderingen.",
+        "needs": [
+          "A15",
+          "A46",
+          "A66"
+        ],
+        "mastery_target": "apply",
+        "prior_learning": "new_this_year",
+        "aspects": [
+          "grafisch",
+          "rekenen"
+        ],
+        "terms": [],
+        "procedure": [
+          "Lees de titel en bepaal dat de grafiek een vraagrelatie tussen prijs en gevraagde hoeveelheid toont.",
+          "Controleer horizontale as, verticale as, eenheden, schaal en directe labels of legenda.",
+          "Kies twee punten of twee situaties die bij de vraag horen en bepaal of de waarden exact of geschat moeten worden afgelezen.",
+          "Lees bij elk punt de prijs en hoeveelheid af en noteer beide P,Q-paren.",
+          "Bepaal voor prijs en hoeveelheid welke waarde oud of basis is en welke waarde nieuw of vergelijking is.",
+          "Bereken de procentuele verandering van Q en de procentuele verandering van P.",
+          "Bereken Ev = procentuele verandering Q gedeeld door procentuele verandering P.",
+          "Interpreteer teken, absolute waarde en elastisch, inelastisch of unitair elastisch, en controleer of de uitkomst past bij de grafiek."
+        ],
+        "pitfalls": [
+          "Slechts een punt aflezen en daarna een helling berekenen.",
+          "P en Q of de assen verwisselen.",
+          "Geschatte grafiekwaarden behandelen alsof ze exact zijn.",
+          "Absolute veranderingen gebruiken in plaats van procentuele veranderingen.",
+          "De grafiekhelling behandelen alsof die hetzelfde is als elasticiteit.",
+          "Het teken of de absolute waarde negeren bij de interpretatie."
+        ],
+        "generator": "GEN_A83"
+      },
+      "status": "passed",
+      "exit_code": 0,
+      "stdout": "OK  minted A83 \"Prijselasticiteit van de vraag berekenen uit P-Q-grafiek\" (catalog now 232 units)",
+      "stderr": "(node:49508) Warning: Accessing non-existent property 'formatEntry' of module exports inside circular dependency\n(Use `node --trace-warnings ...` to show where the warning was created)"
+    }
+  ],
+  "applied": {
+    "units_added": [
+      "A82",
+      "A84",
+      "A83"
+    ],
+    "required_execution_order": [
+      "A82",
+      "A84",
+      "A83"
+    ],
+    "required_dependencies": {
+      "A82": [
+        "A15",
+        "A61",
+        "A66"
+      ],
+      "A83": [
+        "A15",
+        "A46",
+        "A66"
+      ],
+      "A84": [
+        "A15",
+        "A67"
+      ]
+    }
+  },
+  "a83_naming_decision": {
+    "final_name": "Prijselasticiteit van de vraag berekenen uit P-Q-grafiek",
+    "scope": "demand-elasticity from a P-Q graph, not a broad all-elasticities graph unit"
+  },
+  "elasticity_interpretation_requirements": [
+    "preserve sign of elasticity",
+    "interpret absolute value of elasticity",
+    "distinguish elastic, inelastic, and unitary elastic demand",
+    "apply interpretation to economic context",
+    "for A84, explicitly connect elasticity to omzet effect"
+  ],
+  "generator_block": {
+    "tracked_in": "reports/review-gates/GATE-RX4-elasticity-market-diagram-review/RX.4-generator-blocked-units.json",
+    "status": "active_block",
+    "units": [
+      {
+        "unit_id": "A82",
+        "generator": "GEN_A82",
+        "generator_implemented": false,
+        "student_facing_skilltree_use_allowed": false,
+        "pv_projection_allowed": false
+      },
+      {
+        "unit_id": "A84",
+        "generator": "GEN_A84",
+        "generator_implemented": false,
+        "student_facing_skilltree_use_allowed": false,
+        "pv_projection_allowed": false
+      },
+      {
+        "unit_id": "A83",
+        "generator": "GEN_A83",
+        "generator_implemented": false,
+        "student_facing_skilltree_use_allowed": false,
+        "pv_projection_allowed": false
+      }
+    ]
+  },
+  "blocked_scope": [
+    "market/welfare duplicate areas",
+    "new welfare/surplus units overlapping A19",
+    "new welfare/surplus units overlapping A32",
+    "new welfare/surplus units overlapping A40",
+    "new intervention graph units overlapping D39",
+    "new intervention graph units overlapping D40",
+    "new short-side/intervention units overlapping A51",
+    "new short-side/intervention units overlapping A56",
+    "new short-side/intervention units overlapping A59",
+    "student diagnostics",
+    "adaptive routing",
+    "student-facing AI",
+    "automatic sequencing",
+    "mastery decisions",
+    "summative use",
+    "student-facing PV projection"
+  ],
+  "constraints": [
+    "CLI-only mutation",
+    "no hand edits to references/machine",
+    "no hand edits to references/external",
+    "no authored-source mutation",
+    "no RAG chunk patching",
+    "no student-facing skill-tree or PV projection before generator/projection support"
+  ],
+  "summary": {
+    "units_added": 3,
+    "commands_passed": 3,
+    "commands_failed": 0
+  }
+}

@@ -1,6 +1,6 @@
 # Retrieval Evaluation Results
 
-Generated on: 2026-05-01T17:56:41.565Z
+Generated on: 2026-05-02T07:11:50.857Z
 
 ## Summary
 
@@ -13,12 +13,12 @@ Generated on: 2026-05-01T17:56:41.565Z
 
 | Query ID | Status | Results | Source types | Warnings | Missing |
 |---|---:|---:|---|---|---|
-| rag-eval-001 | pass | 12 | machine_unit, owned_content_edge, alignment_edge, machine_term | diagnostic_only, not_primary_evidence | - |
-| rag-eval-002 | pass | 12 | exam_question, machine_unit, machine_term, owned_content_edge | diagnostic_only, not_primary_evidence | - |
+| rag-eval-001 | pass | 12 | machine_unit, machine_term | - | - |
+| rag-eval-002 | pass | 12 | exam_question, machine_term, machine_unit | - | - |
 | rag-eval-003 | pass | 12 | quality_report, owned_content_edge | diagnostic_only, generated_report_warning, not_primary_evidence | - |
 | rag-eval-004 | pass | 12 | quality_report | diagnostic_only, generated_report_warning, not_primary_evidence | - |
 | rag-eval-005 | pass | 12 | quality_report, target_exercise, owned_content_edge | diagnostic_only, generated_report_warning, not_primary_evidence | - |
-| rag-eval-006 | pass | 12 | evidence_anchor, alignment_edge, quality_report, authored_reference, machine_term | diagnostic_only, generated_report_warning, not_primary_evidence | - |
+| rag-eval-006 | pass | 12 | machine_term | - | - |
 | rag-eval-007 | pass | 12 | quality_report | diagnostic_only, generated_report_warning, not_primary_evidence | - |
 | rag-eval-008 | pass | 12 | alignment_edge | diagnostic_only, generated_report_warning, not_primary_evidence, pending_review | - |
 | rag-eval-009 | pass | 12 | alignment_edge | pending_review | - |
@@ -42,13 +42,13 @@ Top results:
 - machine-unit:A55 (machine_unit, machine_registry)
   - source: references/machine/micro-teaching-units.json
   - warnings: -
-- machine-unit:D06 (machine_unit, machine_registry)
+- machine-unit:A82 (machine_unit, machine_registry)
   - source: references/machine/micro-teaching-units.json
   - warnings: -
-- machine-unit:D24 (machine_unit, machine_registry)
+- machine-unit:A83 (machine_unit, machine_registry)
   - source: references/machine/micro-teaching-units.json
   - warnings: -
-- machine-unit:D25 (machine_unit, machine_registry)
+- machine-unit:A84 (machine_unit, machine_registry)
   - source: references/machine/micro-teaching-units.json
   - warnings: -
 
@@ -62,19 +62,19 @@ Notes: Checks whether exam evidence and the surplus unit/term surface for produc
 
 Top results:
 
-- exam-question:ha-1022-a-25-1-o-584 (exam_question, external_primary)
+- exam-question:ha-1022-a-25-1-o-587 (exam_question, external_primary)
   - source: references/external/exam-questions.json
   - warnings: -
-- exam-question:ha-1022-a-25-1-o-585 (exam_question, external_primary)
+- exam-question:ha-1022-a-25-1-o-588 (exam_question, external_primary)
   - source: references/external/exam-questions.json
   - warnings: -
-- exam-question:ha-1022-a-25-2-o-612 (exam_question, external_primary)
+- exam-question:ha-1022-a-25-2-o-615 (exam_question, external_primary)
   - source: references/external/exam-questions.json
   - warnings: -
-- exam-question:ha-1022-a-25-2-o-613 (exam_question, external_primary)
+- exam-question:ha-1022-a-25-2-o-616 (exam_question, external_primary)
   - source: references/external/exam-questions.json
   - warnings: -
-- exam-question:vw-1022-a-24-2-o-736 (exam_question, external_primary)
+- exam-question:vw-1022-a-24-2-o-739 (exam_question, external_primary)
   - source: references/external/exam-questions.json
   - warnings: -
 
@@ -166,19 +166,19 @@ Notes: Checks term registry retrieval for formula/pitfall inspection; exact miss
 
 Top results:
 
-- evidence-anchor:ev-term-price-elasticity-machine (evidence_anchor, machine_registry)
-  - source: references/data/evidence-anchors.json
-  - warnings: -
-- alignment-edge:edge-term-defined-in-registry-prijselasticiteit-van-de-vraag-begrippen (alignment_edge, machine_registry)
-  - source: references/data/alignment-graph.json
-  - warnings: -
-- quality-report:begrippen-coverage.json (quality_report, generated_report)
-  - source: reports/json/begrippen-coverage.json
-  - warnings: diagnostic_only, generated_report_warning, not_primary_evidence
-- authored-reference:references-authored-skill-categories.md (authored_reference, authored_judgement)
-  - source: references/authored/skill-categories.md
-  - warnings: -
 - machine-term:aandelen (machine_term, machine_registry)
+  - source: references/machine/begrippen.json
+  - warnings: -
+- machine-term:accijnzen (machine_term, machine_registry)
+  - source: references/machine/begrippen.json
+  - warnings: -
+- machine-term:afnemende-meeropbrengsten (machine_term, machine_registry)
+  - source: references/machine/begrippen.json
+  - warnings: -
+- machine-term:aftrekposten-en-bijtellingen (machine_term, machine_registry)
+  - source: references/machine/begrippen.json
+  - warnings: -
+- machine-term:alternatieve-kosten (machine_term, machine_registry)
   - source: references/machine/begrippen.json
   - warnings: -
 

@@ -91,6 +91,7 @@ function scoreChunk(chunk, args) {
     if (!qualityQuery && score > 0 && chunk.source_type === 'machine_unit') score += 34;
     if (!qualityQuery && query.includes('units') && chunk.source_type === 'machine_unit') score += 18;
     if (hasAny(query, ['begrippen', 'begrip']) && chunk.source_type === 'machine_term') score += 14;
+    if (!qualityQuery && score > 0 && chunk.source_type === 'machine_term') score += 34;
     if (hasAny(query, ['target-exercises', 'target exercises', 'target', 'missing-unit']) && chunk.source_type === 'target_exercise') score += 14;
     if (hasAny(query, ['term-links', 'term links', 'empty-needs', 'lege needs', 'false-zero', 'false_zero', 'deprecated', 'generated reports', 'generated-report']) && chunk.source_type === 'quality_report') score += 20;
     if (hasAny(query, ['target-exercises', 'target exercises', 'target', 'missing-unit']) && chunk.source_type === 'quality_report' && chunk.chunk_id.includes('blueprint-flag-triage')) score += 90;

@@ -1,0 +1,165 @@
+{
+  "gate_id": "GATE-RX4-elasticity-market-diagram-review",
+  "sprint_id": "RX.4",
+  "status": "pass_with_conditions",
+  "closed_on": "2026-05-02",
+  "closure_confirmed_by_human": true,
+  "human_interview": "reports/review-gates/GATE-RX4-elasticity-market-diagram-review/human-interview.md",
+  "review_packet": "reports/review-gates/GATE-RX4-elasticity-market-diagram-review/review-packet.md",
+  "audit": "reports/review-gates/GATE-RX4-elasticity-market-diagram-review/candidate-specs.json",
+  "summary": "RX.4 elasticity and market-diagram review is closed as pass_with_conditions. CLI-only mutation is authorized for A82 and A84, and conditionally for A83 with the final name Prijselasticiteit van de vraag berekenen uit P-Q-grafiek and explicit demand-elasticity P-Q graph scope. All units remain generator-blocked/non-interactive; PV projection and product-surface uses remain blocked.",
+  "protected_reference_data_changed": false,
+  "cli_unit_mutation_authorized": true,
+  "authorized_execution_mode": "CLI-only via build-scripts/references/unit-add.js",
+  "authorized_candidates": [
+    "A82",
+    "A84"
+  ],
+  "conditionally_authorized_candidates": [
+    "A83"
+  ],
+  "required_execution_order": [
+    "A82",
+    "A84",
+    "A83"
+  ],
+  "required_dependencies": {
+    "A82": [
+      "A15",
+      "A61",
+      "A66"
+    ],
+    "A83": [
+      "A15",
+      "A46",
+      "A66"
+    ],
+    "A84": [
+      "A15",
+      "A67"
+    ]
+  },
+  "a83_naming_decision": {
+    "preferred_name": "Prijselasticiteit van de vraag berekenen uit P-Q-grafiek",
+    "scope": "demand-elasticity from a P-Q graph, not a broad all-elasticities graph unit",
+    "condition": "Final name and graph-source scope must be recorded in gate closure and mutation log before mutation."
+  },
+  "elasticity_interpretation_requirements": [
+    "preserve sign of elasticity",
+    "interpret absolute value of elasticity",
+    "distinguish elastic, inelastic, and unitary elastic demand",
+    "apply interpretation to economic context",
+    "for A84, explicitly connect elasticity to omzet effect"
+  ],
+  "pv_graph_constraints_required_for_A83": [
+    "title and economic context",
+    "horizontal and vertical axes",
+    "units and scale",
+    "direct labels or legend",
+    "exact versus estimated reading where relevant",
+    "reading two price/quantity pairs before calculating",
+    "non-color fallback requirement for later PV visual-state templates"
+  ],
+  "held_scope": [
+    "market/welfare duplicate areas",
+    "new welfare/surplus units overlapping A19",
+    "new welfare/surplus units overlapping A32",
+    "new welfare/surplus units overlapping A40",
+    "new intervention graph units overlapping D39",
+    "new intervention graph units overlapping D40",
+    "new short-side/intervention units overlapping A51",
+    "new short-side/intervention units overlapping A56",
+    "new short-side/intervention units overlapping A59"
+  ],
+  "generator_block_required": true,
+  "student_facing_use_authorized": false,
+  "pv_projection_authorized": false,
+  "blocked_scope": [
+    "market/welfare duplicate areas",
+    "new welfare/surplus units overlapping A19",
+    "new welfare/surplus units overlapping A32",
+    "new welfare/surplus units overlapping A40",
+    "new intervention graph units overlapping D39",
+    "new intervention graph units overlapping D40",
+    "new short-side/intervention units overlapping A51",
+    "new short-side/intervention units overlapping A56",
+    "new short-side/intervention units overlapping A59",
+    "student diagnostics",
+    "adaptive routing",
+    "student-facing AI",
+    "automatic sequencing",
+    "mastery decisions",
+    "summative use",
+    "student-facing PV projection"
+  ],
+  "accepted_outcomes": [
+    "RX.4 is limited to elasticity representation candidates and market/welfare duplicate-audit holds.",
+    "A82 is accepted with needs A15, A61, and A66.",
+    "A84 is accepted with needs A15 and A67, provided elasticity-and-omzet reasoning is explicit.",
+    "A83 is conditionally accepted with the final name Prijselasticiteit van de vraag berekenen uit P-Q-grafiek.",
+    "A83 remains demand-elasticity specific and must not become a broad all-elasticities graph unit.",
+    "All approved specs must preserve sign, absolute-value interpretation, elastic/inelastic/unitary distinction, and economic context.",
+    "CLI-only mutation may proceed after live checks.",
+    "Missing generators are acceptable only if the units remain generator-blocked and non-interactive."
+  ],
+  "blocked_outcomes": [
+    "Do not mint new market/welfare units in RX.4.",
+    "Do not mutate surplus/welfare units overlapping A19, A32, A40, D39, or D40.",
+    "Do not mutate short-side or intervention graph units overlapping A51, A56, or A59.",
+    "Do not hand-edit references/machine/.",
+    "Do not hand-edit references/external/.",
+    "Do not mutate authored source files.",
+    "Do not patch RAG chunks by hand.",
+    "Do not expose A82, A83, or A84 in student-facing skill-tree or PV projection before generator/projection support exists.",
+    "Do not authorize diagnostics, adaptive routing, student-facing AI, automatic sequencing, mastery decisions, summative use, or student-facing PV projection."
+  ],
+  "explicit_decisions": [
+    {
+      "topic": "gate status",
+      "decision": "Close GATE-RX4-elasticity-market-diagram-review as pass_with_conditions, not clean pass."
+    },
+    {
+      "topic": "mutation authorization",
+      "decision": "Authorize CLI-only unit mutation for A82 and A84, and conditionally for A83 with the final naming/scope decision recorded."
+    },
+    {
+      "topic": "A82 dependencies",
+      "decision": "A82 must include A15, A61, and A66 as needs."
+    },
+    {
+      "topic": "A84 dependencies and concept boundary",
+      "decision": "A84 must include A15 and A67 as needs and explicitly encode the elasticity-to-omzet relationship."
+    },
+    {
+      "topic": "A83 naming and scope",
+      "decision": "A83 must use the name Prijselasticiteit van de vraag berekenen uit P-Q-grafiek and stay scoped to demand elasticity from a P-Q graph."
+    },
+    {
+      "topic": "market/welfare duplicate areas",
+      "decision": "Keep market/welfare duplicate areas held unless a later focused review moves one into scope."
+    },
+    {
+      "topic": "generator status",
+      "decision": "A82, A83, and A84 remain generator-blocked/non-interactive until their generators exist and validate."
+    }
+  ],
+  "conditions_to_reopen_or_pass": [
+    "Run live numbering check immediately before any later mutation.",
+    "Use only unit-add.js; no hand edits to references/machine.",
+    "Record the A83 naming/evidence decision in the gate closure and mutation log.",
+    "A83 may be mutated only if the final spec uses an explicit P-Q graph demand-elasticity scope.",
+    "Keep market/welfare duplicate areas held unless explicitly re-approved by a later focused review.",
+    "Mark any newly approved A-domain units generator-blocked and non-interactive.",
+    "Do not hand-edit references/external, authored source files, or RAG chunks.",
+    "No diagnostics, adaptive routing, student-facing AI, automatic sequencing, mastery decisions, summative use, or student-facing PV projection is authorized."
+  ],
+  "allowed_next_step": "RX.4 CLI-only elasticity representation mutation execution",
+  "allowed_next_step_scope": [
+    "live A-domain numbering check",
+    "dependency resolution check",
+    "unit-add.js execution for A82, A84, and conditionally approved A83",
+    "A83 naming/scope application",
+    "generator-blocked/non-interactive tracking",
+    "validation and report regeneration"
+  ]
+}

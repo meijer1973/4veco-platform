@@ -2,7 +2,7 @@
   "eval_set_id": "R7.3-retrieval-eval-set",
   "schema_version": 1,
   "generated_by": "build-scripts/rag/run-retrieval-evals.js",
-  "generated_on": "2026-05-01T17:56:41.565Z",
+  "generated_on": "2026-05-02T07:11:50.857Z",
   "source_files": [
     "references/data/rag/retrieval_eval_set.json",
     "references/data/rag/chunk_index.jsonl",
@@ -26,6 +26,9 @@
         "A2.5",
         "prijselasticiteit-van-de-vraag",
         "A55",
+        "A82",
+        "A83",
+        "A84",
         "D06",
         "D1.3",
         "D2.3",
@@ -38,32 +41,16 @@
         "totale-opbrengst",
         "H03",
         "H1.1",
-        "2.1.1",
-        "OCG-PROJECTED-UNIT-USES-TERM-UNIT-A15-TERM-PRIJSELASTICITEIT-VAN-DE-VRAAG-2.1.1-2.1.1-REFERENCES-MACHINE-MICRO-TEACHING-UNITS.JSON",
-        "references/machine/micro-teaching-units.json",
-        "term:prijselasticiteit-van-de-vraag",
-        "unit:A15",
-        "2.1.2",
-        "OCG-PROJECTED-UNIT-USES-TERM-UNIT-A15-TERM-PRIJSELASTICITEIT-VAN-DE-VRAAG-2.1.2-2.1.2-REFERENCES-MACHINE-MICRO-TEACHING-UNITS.JSON",
-        "OCG-PROJECTED-UNIT-USES-TERM-UNIT-D06-TERM-PRIJSELASTICITEIT-VAN-DE-VRAAG-2.1.1-2.1.1-REFERENCES-MACHINE-MICRO-TEACHING-UNITS.JSON",
-        "unit:D06",
-        "OCG-PROJECTED-UNIT-USES-TERM-UNIT-D25-TERM-PRIJSELASTICITEIT-VAN-DE-VRAAG-2.1.2-2.1.2-REFERENCES-MACHINE-MICRO-TEACHING-UNITS.JSON",
-        "unit:D25",
-        "CL-TERM-PRICE-ELASTICITY",
-        "EDGE-TERM-DEFINED-IN-REGISTRY-PRIJSELASTICITEIT-VAN-DE-VRAAG-BEGRIPPEN",
-        "registry:begrippen",
-        "prijselasticiteit-en-to"
+        "prijselasticiteit-en-to",
+        "D1.5",
+        "D1.6",
+        "prijselastische-vraag"
       ],
       "found_source_types": [
         "machine_unit",
-        "owned_content_edge",
-        "alignment_edge",
         "machine_term"
       ],
-      "warnings_present": [
-        "diagnostic_only",
-        "not_primary_evidence"
-      ],
+      "warnings_present": [],
       "expected_entities_missing": [],
       "expected_source_types_missing": [],
       "warnings_missing": [],
@@ -113,15 +100,13 @@
           "text_excerpt": "A55 Gevraagde hoeveelheid voorspellen met elasticiteit. Bereken de procentuele verandering van de gevraagde hoeveelheid met prijselasticiteit en zet die om naar een nieuwe hoeveelheid. Needs: A15, A38. Terms: none. Exam codes: none."
         },
         {
-          "chunk_id": "machine-unit:D06",
+          "chunk_id": "machine-unit:A82",
           "score": 60,
           "source_path": "references/machine/micro-teaching-units.json",
           "source_type": "machine_unit",
           "authority_level": "machine_registry",
           "entity_ids": [
-            "D06",
-            "D1.3",
-            "prijselasticiteit-van-de-vraag"
+            "A82"
           ],
           "evidence_ids": [],
           "edge_statuses": [],
@@ -132,20 +117,16 @@
           "not_primary_evidence": false,
           "curriculum_authority": true,
           "allowed_for_public_citation": false,
-          "text_excerpt": "D06 Vraagreactie via prijselasticiteit interpreteren. Gebruik de prijselasticiteit van de vraag (Ev) om te voorspellen hoe Qv reageert op een prijsverandering en verklaar het resultaat in context. Needs: A15. Terms: prijselasticiteit-van-de-vraag. Exam codes: D1.3."
+          "text_excerpt": "A82 Elasticiteit berekenen uit tabelwaarden. Bereken prijselasticiteit nadat je oude en nieuwe prijs- en hoeveelheidswaarden uit een tabel hebt geselecteerd en de juiste waardenparen hebt gekoppeld. Needs: A15, A61, A66. Terms: none. Exam codes: none."
         },
         {
-          "chunk_id": "machine-unit:D24",
+          "chunk_id": "machine-unit:A83",
           "score": 60,
           "source_path": "references/machine/micro-teaching-units.json",
           "source_type": "machine_unit",
           "authority_level": "machine_registry",
           "entity_ids": [
-            "D2.3",
-            "D24",
-            "betalingsbereidheid",
-            "marktmacht",
-            "prijsdiscriminatie"
+            "A83"
           ],
           "evidence_ids": [],
           "edge_statuses": [],
@@ -156,19 +137,16 @@
           "not_primary_evidence": false,
           "curriculum_authority": true,
           "allowed_for_public_citation": false,
-          "text_excerpt": "D24 Drie voorwaarden prijsdiscriminatie. Leg uit de drie voorwaarden voor prijsdiscriminatie: voldoende marktmacht, scheidbare deelmarkten met verschillende prijselasticiteiten en betalingsbereidheid. Needs: D35, D15. Terms: betalingsbereidheid, marktmacht, prijsdiscriminatie. Exam codes: D2.3."
+          "text_excerpt": "A83 Prijselasticiteit van de vraag berekenen uit P-Q-grafiek. Lees twee prijs-hoeveelheidsparen uit een P-Q-grafiek van de vraag af en bereken de prijselasticiteit van de vraag met correcte procentuele veranderingen. Needs: A15, A46, A66. Terms: none. Exam codes: none."
         },
         {
-          "chunk_id": "machine-unit:D25",
+          "chunk_id": "machine-unit:A84",
           "score": 60,
           "source_path": "references/machine/micro-teaching-units.json",
           "source_type": "machine_unit",
           "authority_level": "machine_registry",
           "entity_ids": [
-            "D1.15",
-            "D25",
-            "prijselasticiteit-van-de-vraag",
-            "totale-opbrengst"
+            "A84"
           ],
           "evidence_ids": [],
           "edge_statuses": [],
@@ -179,7 +157,7 @@
           "not_primary_evidence": false,
           "curriculum_authority": true,
           "allowed_for_public_citation": false,
-          "text_excerpt": "D25 Prijselasticiteit en omzet. Bij inelastische vraag leidt grotere hoeveelheid tot lagere prijs; totale omzet kan dalen. Needs: A15. Terms: prijselasticiteit-van-de-vraag, totale-opbrengst. Exam codes: D1.15."
+          "text_excerpt": "A84 Omzetverandering beoordelen met elasticiteit uit bron. Beoordeel met brongegevens en prijselasticiteit of omzet stijgt, daalt of ongeveer gelijk blijft: bij elastische vraag beweegt omzet tegengesteld aan de prijs, bij inelastische vraag mee met de prijs, en bij unitair elastische vraag ongeveer niet. Needs: A15, A67. Terms: none. Exam codes: none."
         }
       ],
       "notes": "Checks that the retrieval layer finds the canonical price-elasticity unit and term rather than only generated reports."
@@ -193,52 +171,53 @@
         "A20",
         "D1.21",
         "D30",
-        "ha-1022-a-25-1-o-584",
+        "ha-1022-a-25-1-o-587",
         "D28",
         "D3.1",
-        "ha-1022-a-25-1-o-585",
+        "ha-1022-a-25-1-o-588",
         "A15",
         "A17",
         "A2.4",
         "A2.5",
-        "ha-1022-a-25-2-o-612",
+        "ha-1022-a-25-2-o-615",
         "D01",
         "D03",
-        "ha-1022-a-25-2-o-613",
+        "ha-1022-a-25-2-o-616",
         "A16",
-        "vw-1022-a-24-2-o-736",
+        "vw-1022-a-24-2-o-739",
         "A19",
         "A2.16",
         "A2.17",
-        "vw-1022-a-24-2-o-737",
+        "vw-1022-a-24-2-o-740",
+        "D3.2",
         "producentensurplus",
         "consumentensurplus",
-        "A40",
-        "D39",
-        "D3.2",
-        "2.2.1",
-        "OCG-PROJECTED-UNIT-USES-TERM-UNIT-A19-TERM-PRODUCENTENSURPLUS-2.2.1-2.2.1-REFERENCES-MACHINE-MICRO-TEACHING-UNITS.JSON",
-        "references/machine/micro-teaching-units.json",
-        "term:producentensurplus",
-        "unit:A19"
+        "A36",
+        "D18",
+        "D2.3",
+        "D21",
+        "D22",
+        "D23",
+        "D24",
+        "prijsdiscriminatie",
+        "D3.8",
+        "prijsdiscriminatie-en-consumentensurplus",
+        "D3.3",
+        "totale-surplus"
       ],
       "found_source_types": [
         "exam_question",
-        "machine_unit",
         "machine_term",
-        "owned_content_edge"
+        "machine_unit"
       ],
-      "warnings_present": [
-        "diagnostic_only",
-        "not_primary_evidence"
-      ],
+      "warnings_present": [],
       "expected_entities_missing": [],
       "expected_source_types_missing": [],
       "warnings_missing": [],
       "authority_violations": [],
       "top_results": [
         {
-          "chunk_id": "exam-question:ha-1022-a-25-1-o-584",
+          "chunk_id": "exam-question:ha-1022-a-25-1-o-587",
           "score": 76,
           "source_path": "references/external/exam-questions.json",
           "source_type": "exam_question",
@@ -247,7 +226,7 @@
             "A20",
             "D1.21",
             "D30",
-            "ha-1022-a-25-1-o-584"
+            "ha-1022-a-25-1-o-587"
           ],
           "evidence_ids": [],
           "edge_statuses": [],
@@ -258,10 +237,10 @@
           "not_primary_evidence": false,
           "curriculum_authority": true,
           "allowed_for_public_citation": true,
-          "text_excerpt": "ha-1022-a-25-1-o-584. Bereken het resultaat per dag van Hopi Bon. De welvaart die ontstaat op deze fietsverhuurmarkt kan worden gemeten aan de hand van het consumenten- en producentensurplus. Door een prijsverlaging stijgt de welvaart. Gebruik bron 1. Required skills: A20, D30. Exam codes: D1.21."
+          "text_excerpt": "ha-1022-a-25-1-o-587. Bereken het resultaat per dag van Hopi Bon. De welvaart die ontstaat op deze fietsverhuurmarkt kan worden gemeten aan de hand van het consumenten- en producentensurplus. Door een prijsverlaging stijgt de welvaart. Gebruik bron 1. Required skills: A20, D30. Exam codes: D1.21."
         },
         {
-          "chunk_id": "exam-question:ha-1022-a-25-1-o-585",
+          "chunk_id": "exam-question:ha-1022-a-25-1-o-588",
           "score": 76,
           "source_path": "references/external/exam-questions.json",
           "source_type": "exam_question",
@@ -269,7 +248,7 @@
           "entity_ids": [
             "D28",
             "D3.1",
-            "ha-1022-a-25-1-o-585"
+            "ha-1022-a-25-1-o-588"
           ],
           "evidence_ids": [],
           "edge_statuses": [],
@@ -280,10 +259,10 @@
           "not_primary_evidence": false,
           "curriculum_authority": true,
           "allowed_for_public_citation": true,
-          "text_excerpt": "ha-1022-a-25-1-o-585. Leg het welvaartseffect uit als Hopi Bon een lagere prijs rekent dan de prijs bij maximale winst. Doe het als volgt: Leg het effect van een lagere prijs uit op het consumentensurplus. Leg het effect van een lagere prijs uit op het dalende producentensurplus. Leg het effect van een lagere prijs uit op het stijgende producentensurplus. Hopi Bon wil starten met een huurprijs van $ 16, om daarna deze te verhogen naar $ 24. De directeur onderzoekt of het starten met een lage pri"
+          "text_excerpt": "ha-1022-a-25-1-o-588. Leg het welvaartseffect uit als Hopi Bon een lagere prijs rekent dan de prijs bij maximale winst. Doe het als volgt: Leg het effect van een lagere prijs uit op het consumentensurplus. Leg het effect van een lagere prijs uit op het dalende producentensurplus. Leg het effect van een lagere prijs uit op het stijgende producentensurplus. Hopi Bon wil starten met een huurprijs van $ 16, om daarna deze te verhogen naar $ 24. De directeur onderzoekt of het starten met een lage pri"
         },
         {
-          "chunk_id": "exam-question:ha-1022-a-25-2-o-612",
+          "chunk_id": "exam-question:ha-1022-a-25-2-o-615",
           "score": 76,
           "source_path": "references/external/exam-questions.json",
           "source_type": "exam_question",
@@ -293,7 +272,7 @@
             "A17",
             "A2.4",
             "A2.5",
-            "ha-1022-a-25-2-o-612"
+            "ha-1022-a-25-2-o-615"
           ],
           "evidence_ids": [],
           "edge_statuses": [],
@@ -304,10 +283,10 @@
           "not_primary_evidence": false,
           "curriculum_authority": true,
           "allowed_for_public_citation": true,
-          "text_excerpt": "ha-1022-a-25-2-o-612. Laat met een berekening zien dat de doelstelling van de Mexicaanse overheid wordt bereikt. noot 1 een pond = 500 gram De invoering van de suikeraccijns heeft gevolgen voor zowel het consumentensurplus als het producentensurplus op de markt van suiker (zie bron 2). Gebruik bron 2. Required skills: A15, A17. Exam codes: A2.4, A2.5."
+          "text_excerpt": "ha-1022-a-25-2-o-615. Laat met een berekening zien dat de doelstelling van de Mexicaanse overheid wordt bereikt. noot 1 een pond = 500 gram De invoering van de suikeraccijns heeft gevolgen voor zowel het consumentensurplus als het producentensurplus op de markt van suiker (zie bron 2). Gebruik bron 2. Required skills: A15, A17. Exam codes: A2.4, A2.5."
         },
         {
-          "chunk_id": "exam-question:ha-1022-a-25-2-o-613",
+          "chunk_id": "exam-question:ha-1022-a-25-2-o-616",
           "score": 76,
           "source_path": "references/external/exam-questions.json",
           "source_type": "exam_question",
@@ -316,7 +295,7 @@
             "D01",
             "D03",
             "D3.1",
-            "ha-1022-a-25-2-o-613"
+            "ha-1022-a-25-2-o-616"
           ],
           "evidence_ids": [],
           "edge_statuses": [],
@@ -327,10 +306,10 @@
           "not_primary_evidence": false,
           "curriculum_authority": true,
           "allowed_for_public_citation": true,
-          "text_excerpt": "ha-1022-a-25-2-o-613. Geef met letters het oppervlak aan dat het consumenten- en producentensurplus weergeeft en het oppervlak dat de accijnsopbrengst weergeeft na het heffen van de suikeraccijns. Neem daarvoor onderstaande tabel over op het antwoordblad en vul aan op de stippellijnen. oppervlak consumentensurplus ……….. oppervlak producentensurplus ……….. oppervlak accijnsopbrengst ……….. Required skills: D03, D01. Exam codes: D3.1."
+          "text_excerpt": "ha-1022-a-25-2-o-616. Geef met letters het oppervlak aan dat het consumenten- en producentensurplus weergeeft en het oppervlak dat de accijnsopbrengst weergeeft na het heffen van de suikeraccijns. Neem daarvoor onderstaande tabel over op het antwoordblad en vul aan op de stippellijnen. oppervlak consumentensurplus ……….. oppervlak producentensurplus ……….. oppervlak accijnsopbrengst ……….. Required skills: D03, D01. Exam codes: D3.1."
         },
         {
-          "chunk_id": "exam-question:vw-1022-a-24-2-o-736",
+          "chunk_id": "exam-question:vw-1022-a-24-2-o-739",
           "score": 76,
           "source_path": "references/external/exam-questions.json",
           "source_type": "exam_question",
@@ -339,7 +318,7 @@
             "A16",
             "A2.4",
             "A2.5",
-            "vw-1022-a-24-2-o-736"
+            "vw-1022-a-24-2-o-739"
           ],
           "evidence_ids": [],
           "edge_statuses": [],
@@ -350,7 +329,7 @@
           "not_primary_evidence": false,
           "curriculum_authority": true,
           "allowed_for_public_citation": true,
-          "text_excerpt": "vw-1022-a-24-2-o-736. Bereken de hoogte van de Armington-elasticiteit. Piethaan: “Een stikstofheffing zal effect hebben op het producentensurplus van de binnenlandse staalmarkt, waardoor de doelmatigheid van de staalmarkt verder zal afnemen. Onze buurlanden hebben echter minder milieuregels, waardoor de mondiale maatschappelijke kosten juist kunnen toenemen.” Required skills: A16. Exam codes: A2.4, A2.5."
+          "text_excerpt": "vw-1022-a-24-2-o-739. Bereken de hoogte van de Armington-elasticiteit. Piethaan: “Een stikstofheffing zal effect hebben op het producentensurplus van de binnenlandse staalmarkt, waardoor de doelmatigheid van de staalmarkt verder zal afnemen. Onze buurlanden hebben echter minder milieuregels, waardoor de mondiale maatschappelijke kosten juist kunnen toenemen.” Required skills: A16. Exam codes: A2.4, A2.5."
         }
       ],
       "notes": "Checks whether exam evidence and the surplus unit/term surface for producer-surplus search."
@@ -420,7 +399,7 @@
           "not_primary_evidence": true,
           "curriculum_authority": false,
           "allowed_for_public_citation": false,
-          "text_excerpt": "terms-coverage: status warn; issues 81; summary {\"live_units\":227,\"units_without_terms\":81}; issue text terms-coverage-0001 missing_term_links A01 references/machine/micro-teaching-units.json Add canonical term slugs when this unit uses glossary concepts. Unit terms are either populated or explicitly marked not applicable. terms-coverage-0002 missing_term_links A02 references/machine/micro-teaching-units.json Add canonical term slugs when this unit uses glossary concepts. Unit terms are either p"
+          "text_excerpt": "terms-coverage: status warn; issues 84; summary {\"live_units\":230,\"units_without_terms\":84}; issue text terms-coverage-0001 missing_term_links A01 references/machine/micro-teaching-units.json Add canonical term slugs when this unit uses glossary concepts. Unit terms are either populated or explicitly marked not applicable. terms-coverage-0002 missing_term_links A02 references/machine/micro-teaching-units.json Add canonical term slugs when this unit uses glossary concepts. Unit terms are either p"
         },
         {
           "chunk_id": "quality-report:reference-quality-issues.json",
@@ -460,7 +439,7 @@
           "not_primary_evidence": true,
           "curriculum_authority": false,
           "allowed_for_public_citation": false,
-          "text_excerpt": "dead-units: status warn; issues 47; summary {\"live_units\":227,\"cited_live_units\":180,\"uncited_live_units\":47}; issue text dead-units-0001 uncited_live_unit A05 references/machine/micro-teaching-units.json Check whether this unit is future-needed, should be cited, or should be deprecated. Unit is cited by exam/target evidence or explicitly marked intentionally uncited. dead-units-0002 uncited_live_unit A09 references/machine/micro-teaching-units.json Check whether this unit is future-needed, shou"
+          "text_excerpt": "dead-units: status warn; issues 50; summary {\"live_units\":230,\"cited_live_units\":180,\"uncited_live_units\":50}; issue text dead-units-0001 uncited_live_unit A05 references/machine/micro-teaching-units.json Check whether this unit is future-needed, should be cited, or should be deprecated. Unit is cited by exam/target evidence or explicitly marked intentionally uncited. dead-units-0002 uncited_live_unit A09 references/machine/micro-teaching-units.json Check whether this unit is future-needed, shou"
         },
         {
           "chunk_id": "owned-content-edge:ocg-projected-unit-uses-term-unit-a06-term-evenwichtshoeveelheid-1.4.1-1.4.1-references-machine-micro-teaching-units.jso-288895008510",
@@ -601,7 +580,7 @@
           "not_primary_evidence": true,
           "curriculum_authority": false,
           "allowed_for_public_citation": false,
-          "text_excerpt": "needs-coverage: status warn; issues 43; summary {\"live_units\":227,\"empty_needs\":43}; issue text needs-coverage-0001 empty_needs:underbouw_assumed A01 references/machine/micro-teaching-units.json Review whether this is true zero, underbouw assumed, or false zero. Unit has explicit zero-needs status or at least one validated prerequisite. needs-coverage-0002 empty_needs:underbouw_assumed A02 references/machine/micro-teaching-units.json Review whether this is true zero, underbouw assumed, or false "
+          "text_excerpt": "needs-coverage: status warn; issues 43; summary {\"live_units\":230,\"empty_needs\":43}; issue text needs-coverage-0001 empty_needs:underbouw_assumed A01 references/machine/micro-teaching-units.json Review whether this is true zero, underbouw assumed, or false zero. Unit has explicit zero-needs status or at least one validated prerequisite. needs-coverage-0002 empty_needs:underbouw_assumed A02 references/machine/micro-teaching-units.json Review whether this is true zero, underbouw assumed, or false "
         },
         {
           "chunk_id": "quality-report:dead-units.json",
@@ -621,7 +600,7 @@
           "not_primary_evidence": true,
           "curriculum_authority": false,
           "allowed_for_public_citation": false,
-          "text_excerpt": "dead-units: status warn; issues 47; summary {\"live_units\":227,\"cited_live_units\":180,\"uncited_live_units\":47}; issue text dead-units-0001 uncited_live_unit A05 references/machine/micro-teaching-units.json Check whether this unit is future-needed, should be cited, or should be deprecated. Unit is cited by exam/target evidence or explicitly marked intentionally uncited. dead-units-0002 uncited_live_unit A09 references/machine/micro-teaching-units.json Check whether this unit is future-needed, shou"
+          "text_excerpt": "dead-units: status warn; issues 50; summary {\"live_units\":230,\"cited_live_units\":180,\"uncited_live_units\":50}; issue text dead-units-0001 uncited_live_unit A05 references/machine/micro-teaching-units.json Check whether this unit is future-needed, should be cited, or should be deprecated. Unit is cited by exam/target evidence or explicitly marked intentionally uncited. dead-units-0002 uncited_live_unit A09 references/machine/micro-teaching-units.json Check whether this unit is future-needed, shou"
         },
         {
           "chunk_id": "quality-report:reference-quality-issues.json",
@@ -661,7 +640,7 @@
           "not_primary_evidence": true,
           "curriculum_authority": false,
           "allowed_for_public_citation": false,
-          "text_excerpt": "aspects-coverage: status pass; issues 0; summary {\"live_units\":227,\"units_without_aspects\":0}; issue text"
+          "text_excerpt": "aspects-coverage: status pass; issues 0; summary {\"live_units\":230,\"units_without_aspects\":0}; issue text"
         }
       ],
       "notes": "Checks that false_zero empty-needs status is visible as a generated diagnostic, not curriculum authority."
@@ -886,13 +865,6 @@
       "status": "pass",
       "result_count": 12,
       "found_entities": [
-        "EV-TERM-PRICE-ELASTICITY-MACHINE",
-        "begrippen",
-        "CL-TERM-PRICE-ELASTICITY",
-        "EDGE-TERM-DEFINED-IN-REGISTRY-PRIJSELASTICITEIT-VAN-DE-VRAAG-BEGRIPPEN",
-        "registry:begrippen",
-        "term:prijselasticiteit-van-de-vraag",
-        "begrippen-coverage",
         "G5.2",
         "aandelen",
         "H4.6",
@@ -908,116 +880,34 @@
         "anticyclisch",
         "I3.8",
         "appreciatie",
-        "arbeid"
+        "arbeid",
+        "H23",
+        "H5.1",
+        "I04",
+        "I11",
+        "L05",
+        "L10",
+        "arbeidsaanbod",
+        "H4.2",
+        "arbeidsinkomen",
+        "H1.1",
+        "arbeidsinkomenquote",
+        "L01",
+        "L03",
+        "arbeidsvraag"
       ],
       "found_source_types": [
-        "evidence_anchor",
-        "alignment_edge",
-        "quality_report",
-        "authored_reference",
         "machine_term"
       ],
-      "warnings_present": [
-        "diagnostic_only",
-        "generated_report_warning",
-        "not_primary_evidence"
-      ],
+      "warnings_present": [],
       "expected_entities_missing": [],
       "expected_source_types_missing": [],
       "warnings_missing": [],
       "authority_violations": [],
       "top_results": [
         {
-          "chunk_id": "evidence-anchor:ev-term-price-elasticity-machine",
-          "score": 26,
-          "source_path": "references/data/evidence-anchors.json",
-          "source_type": "evidence_anchor",
-          "authority_level": "machine_registry",
-          "entity_ids": [
-            "EV-TERM-PRICE-ELASTICITY-MACHINE",
-            "begrippen"
-          ],
-          "evidence_ids": [
-            "EV-TERM-PRICE-ELASTICITY-MACHINE"
-          ],
-          "edge_statuses": [],
-          "diagnostic_only": false,
-          "pending_review": false,
-          "generated_report_warning": false,
-          "generated_artifact_warning": false,
-          "not_primary_evidence": false,
-          "curriculum_authority": true,
-          "allowed_for_public_citation": false,
-          "text_excerpt": "EV-TERM-PRICE-ELASTICITY-MACHINE: Term definitions can be anchored to the machine term registry while external/source evidence remains separate.. The machine term registry contains the canonical term ID and definition for prijselasticiteit van de vraag. Source: references/machine/begrippen.json."
-        },
-        {
-          "chunk_id": "alignment-edge:edge-term-defined-in-registry-prijselasticiteit-van-de-vraag-begrippen",
-          "score": 22,
-          "source_path": "references/data/alignment-graph.json",
-          "source_type": "alignment_edge",
-          "authority_level": "machine_registry",
-          "entity_ids": [
-            "CL-TERM-PRICE-ELASTICITY",
-            "EDGE-TERM-DEFINED-IN-REGISTRY-PRIJSELASTICITEIT-VAN-DE-VRAAG-BEGRIPPEN",
-            "registry:begrippen",
-            "term:prijselasticiteit-van-de-vraag"
-          ],
-          "evidence_ids": [
-            "EV-TERM-PRICE-ELASTICITY-MACHINE"
-          ],
-          "edge_statuses": [
-            "approved"
-          ],
-          "diagnostic_only": false,
-          "pending_review": false,
-          "generated_report_warning": false,
-          "generated_artifact_warning": false,
-          "not_primary_evidence": false,
-          "curriculum_authority": false,
-          "allowed_for_public_citation": false,
-          "text_excerpt": "EDGE-TERM-DEFINED-IN-REGISTRY-PRIJSELASTICITEIT-VAN-DE-VRAAG-BEGRIPPEN: term:prijselasticiteit-van-de-vraag term_defined_in_registry registry:begrippen. Status: approved. Governance: registry_lookup. Notes: Projected from validated claim; graph edge awaits human review unless status is updated by a gate."
-        },
-        {
-          "chunk_id": "quality-report:begrippen-coverage.json",
-          "score": 22,
-          "source_path": "reports/json/begrippen-coverage.json",
-          "source_type": "quality_report",
-          "authority_level": "generated_report",
-          "entity_ids": [
-            "begrippen-coverage"
-          ],
-          "evidence_ids": [],
-          "edge_statuses": [],
-          "diagnostic_only": true,
-          "pending_review": false,
-          "generated_report_warning": true,
-          "generated_artifact_warning": false,
-          "not_primary_evidence": true,
-          "curriculum_authority": false,
-          "allowed_for_public_citation": false,
-          "text_excerpt": "begrippen-coverage: status warn; issues 130; summary {\"terms\":227,\"terms_without_teaching_units\":130}; issue text begrippen-coverage-0001 term_without_teaching_units aandelen references/machine/begrippen.json Link term to teaching units when used in production. Term has teaching_units or explicit orphan rationale. begrippen-coverage-0002 term_without_teaching_units accijnzen references/machine/begrippen.json Link term to teaching units when used in production. Term has teaching_units or explicit"
-        },
-        {
-          "chunk_id": "authored-reference:references-authored-skill-categories.md",
-          "score": 16,
-          "source_path": "references/authored/skill-categories.md",
-          "source_type": "authored_reference",
-          "authority_level": "authored_judgement",
-          "entity_ids": [],
-          "evidence_ids": [],
-          "edge_statuses": [],
-          "diagnostic_only": false,
-          "pending_review": false,
-          "generated_report_warning": false,
-          "generated_artifact_warning": false,
-          "not_primary_evidence": false,
-          "curriculum_authority": false,
-          "allowed_for_public_citation": false,
-          "text_excerpt": "# Skill-categorieën — Reference for Economics Materials ``` last_verified: 2026-04-19 source: consolidated from vraagtypen-en-opgaveontwerp.md, didactiek-principes.md, economie-terminologie.md, economic_mathematical_precision_reference.md, inspectie-standaarden.md, engines/skilltree/base-elements.js, syllabus-economie-vwo-2026-versie-2.pdf research_base: CvTE examenprogramma economie vwo 2026 (Domein A), Tweede Commissie Teulings, Bloom's taxonomy ``` Dit document is de **single source of truth*"
-        },
-        {
           "chunk_id": "machine-term:aandelen",
-          "score": 14,
+          "score": 48,
           "source_path": "references/machine/begrippen.json",
           "source_type": "machine_term",
           "authority_level": "machine_registry",
@@ -1035,6 +925,90 @@
           "curriculum_authority": true,
           "allowed_for_public_citation": false,
           "text_excerpt": "aandelen aandelen. Bewijzen van mede-eigendom in een bedrijf. De houder deelt in winst (dividend) en koersschommelingen; hoger risico dan obligaties maar meestal hoger verwacht rendement. Formula: none. Pitfall: Dividend is NIET gegarandeerd — een bedrijf kan besluiten geen dividend uit te keren. Aandelen lopen daarnaast koersrisico; het verwachte rendement hoort daarom hoger te liggen dan bij obligaties.."
+        },
+        {
+          "chunk_id": "machine-term:accijnzen",
+          "score": 48,
+          "source_path": "references/machine/begrippen.json",
+          "source_type": "machine_term",
+          "authority_level": "machine_registry",
+          "entity_ids": [
+            "H4.6",
+            "accijnzen"
+          ],
+          "evidence_ids": [],
+          "edge_statuses": [],
+          "diagnostic_only": false,
+          "pending_review": false,
+          "generated_report_warning": false,
+          "generated_artifact_warning": false,
+          "not_primary_evidence": false,
+          "curriculum_authority": true,
+          "allowed_for_public_citation": false,
+          "text_excerpt": "accijnzen accijnzen. Bijzondere verbruiksbelastingen op specifieke producten zoals benzine, alcohol en tabak. Meestal bedoeld om ongewenst gebruik te ontmoedigen en/of om extra belastinginkomsten te genereren. Formula: none. Pitfall: none."
+        },
+        {
+          "chunk_id": "machine-term:afnemende-meeropbrengsten",
+          "score": 48,
+          "source_path": "references/machine/begrippen.json",
+          "source_type": "machine_term",
+          "authority_level": "machine_registry",
+          "entity_ids": [
+            "H2.2",
+            "afnemende-meeropbrengsten"
+          ],
+          "evidence_ids": [],
+          "edge_statuses": [],
+          "diagnostic_only": false,
+          "pending_review": false,
+          "generated_report_warning": false,
+          "generated_artifact_warning": false,
+          "not_primary_evidence": false,
+          "curriculum_authority": true,
+          "allowed_for_public_citation": false,
+          "text_excerpt": "afnemende-meeropbrengsten afnemende meeropbrengsten. Eigenschap waarbij het toevoegen van één productiefactor (terwijl andere gelijk blijven) steeds minder extra productie oplevert. Geldt op korte termijn voor zowel kapitaal als arbeid. Formula: none. Pitfall: none."
+        },
+        {
+          "chunk_id": "machine-term:aftrekposten-en-bijtellingen",
+          "score": 48,
+          "source_path": "references/machine/begrippen.json",
+          "source_type": "machine_term",
+          "authority_level": "machine_registry",
+          "entity_ids": [
+            "H4.6",
+            "aftrekposten-en-bijtellingen"
+          ],
+          "evidence_ids": [],
+          "edge_statuses": [],
+          "diagnostic_only": false,
+          "pending_review": false,
+          "generated_report_warning": false,
+          "generated_artifact_warning": false,
+          "not_primary_evidence": false,
+          "curriculum_authority": true,
+          "allowed_for_public_citation": false,
+          "text_excerpt": "aftrekposten-en-bijtellingen aftrekposten en bijtellingen. Uitgaven die mogen worden afgetrokken van (aftrekposten) of inkomsten die moeten worden opgeteld bij (bijtellingen) het belastbaar inkomen. Beïnvloeden de grondslag waarover belasting wordt berekend. Formula: none. Pitfall: none."
+        },
+        {
+          "chunk_id": "machine-term:alternatieve-kosten",
+          "score": 48,
+          "source_path": "references/machine/begrippen.json",
+          "source_type": "machine_term",
+          "authority_level": "machine_registry",
+          "entity_ids": [
+            "B02",
+            "alternatieve-kosten"
+          ],
+          "evidence_ids": [],
+          "edge_statuses": [],
+          "diagnostic_only": false,
+          "pending_review": false,
+          "generated_report_warning": false,
+          "generated_artifact_warning": false,
+          "not_primary_evidence": false,
+          "curriculum_authority": true,
+          "allowed_for_public_citation": false,
+          "text_excerpt": "alternatieve-kosten alternatieve kosten. De opbrengst of waarde van het beste niet-gekozen alternatief. Formula: none. Pitfall: Alternatieve kosten zijn niet alle opgegeven alternatieven bij elkaar, maar alleen het beste opgegeven alternatief.."
         }
       ],
       "notes": "Checks term registry retrieval for formula/pitfall inspection; exact missing-pitfall diagnosis is not a curriculum claim."
@@ -1089,7 +1063,7 @@
           "not_primary_evidence": true,
           "curriculum_authority": false,
           "allowed_for_public_citation": false,
-          "text_excerpt": "dead-units: status warn; issues 47; summary {\"live_units\":227,\"cited_live_units\":180,\"uncited_live_units\":47}; issue text dead-units-0001 uncited_live_unit A05 references/machine/micro-teaching-units.json Check whether this unit is future-needed, should be cited, or should be deprecated. Unit is cited by exam/target evidence or explicitly marked intentionally uncited. dead-units-0002 uncited_live_unit A09 references/machine/micro-teaching-units.json Check whether this unit is future-needed, shou"
+          "text_excerpt": "dead-units: status warn; issues 50; summary {\"live_units\":230,\"cited_live_units\":180,\"uncited_live_units\":50}; issue text dead-units-0001 uncited_live_unit A05 references/machine/micro-teaching-units.json Check whether this unit is future-needed, should be cited, or should be deprecated. Unit is cited by exam/target evidence or explicitly marked intentionally uncited. dead-units-0002 uncited_live_unit A09 references/machine/micro-teaching-units.json Check whether this unit is future-needed, shou"
         },
         {
           "chunk_id": "quality-report:dag-integrity.json",
@@ -1109,7 +1083,7 @@
           "not_primary_evidence": true,
           "curriculum_authority": false,
           "allowed_for_public_citation": false,
-          "text_excerpt": "dag-integrity: status pass; issues 0; summary {\"units\":229,\"live_units\":227,\"deprecated_units\":2}; issue text"
+          "text_excerpt": "dag-integrity: status pass; issues 0; summary {\"units\":232,\"live_units\":230,\"deprecated_units\":2}; issue text"
         },
         {
           "chunk_id": "quality-report:unresolved-refs.json",
@@ -1129,7 +1103,7 @@
           "not_primary_evidence": true,
           "curriculum_authority": false,
           "allowed_for_public_citation": false,
-          "text_excerpt": "unresolved-refs: status warn; issues 75; summary {\"deprecated_units\":2,\"deprecated_citations\":75}; issue text unresolved-refs-0001 deprecated_reference D23 references/reference-team-roadmap.md Remove or migrate deprecated unit citation. No deprecated unit ID is cited from active docs/reports. unresolved-refs-0002 deprecated_reference H26 references/reference-team-roadmap.md Remove or migrate deprecated unit citation. No deprecated unit ID is cited from active docs/reports. unresolved-refs-0003 d"
+          "text_excerpt": "unresolved-refs: status warn; issues 79; summary {\"deprecated_units\":2,\"deprecated_citations\":79}; issue text unresolved-refs-0001 deprecated_reference D23 references/reference-team-roadmap.md Remove or migrate deprecated unit citation. No deprecated unit ID is cited from active docs/reports. unresolved-refs-0002 deprecated_reference H26 references/reference-team-roadmap.md Remove or migrate deprecated unit citation. No deprecated unit ID is cited from active docs/reports. unresolved-refs-0003 d"
         },
         {
           "chunk_id": "quality-report:aspects-coverage.json",
@@ -1149,7 +1123,7 @@
           "not_primary_evidence": true,
           "curriculum_authority": false,
           "allowed_for_public_citation": false,
-          "text_excerpt": "aspects-coverage: status pass; issues 0; summary {\"live_units\":227,\"units_without_aspects\":0}; issue text"
+          "text_excerpt": "aspects-coverage: status pass; issues 0; summary {\"live_units\":230,\"units_without_aspects\":0}; issue text"
         },
         {
           "chunk_id": "quality-report:begrippen-coverage.json",

@@ -1,7 +1,7 @@
 {
   "report_id": "terminology-drift",
   "generated_by": "build-scripts/reports/generate-all.js",
-  "generated_on": "2026-05-01T17:56:40.429Z",
+  "generated_on": "2026-05-02T07:11:45.385Z",
   "source_files": [
     "references/machine/micro-teaching-units.json",
     "references/machine/begrippen.json"

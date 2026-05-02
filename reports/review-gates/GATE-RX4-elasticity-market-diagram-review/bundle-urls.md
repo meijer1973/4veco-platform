@@ -4,10 +4,16 @@ This file lists every artifact in this gate's bundle as a full raw-GitHub URL so
 
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-RX4-elasticity-market-diagram-review/RX.4-generator-blocked-units.json
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-RX4-elasticity-market-diagram-review/RX.4-generator-blocked-units.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-RX4-elasticity-market-diagram-review/RX.4-mutation-log.json
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-RX4-elasticity-market-diagram-review/RX.4-mutation-log.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-RX4-elasticity-market-diagram-review/bundle-urls.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-RX4-elasticity-market-diagram-review/candidate-specs.json
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-RX4-elasticity-market-diagram-review/candidate-specs.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-RX4-elasticity-market-diagram-review/cli-mutation-plan.json
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-RX4-elasticity-market-diagram-review/cli-mutation-plan.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-RX4-elasticity-market-diagram-review/gate-closure.json
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-RX4-elasticity-market-diagram-review/gate-closure.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-RX4-elasticity-market-diagram-review/human-interview.json
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-RX4-elasticity-market-diagram-review/human-interview.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-RX4-elasticity-market-diagram-review/review-packet.json
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-RX4-elasticity-market-diagram-review/review-packet.md

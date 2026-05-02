@@ -25,9 +25,24 @@ RX.4 prepares the next human gate. It must distinguish elasticity from table/sou
 - `reports/review-gates/GATE-RX4-elasticity-market-diagram-review/RX.4-generator-blocked-units.md`
 - `reports/review-gates/GATE-RX4-elasticity-market-diagram-review/bundle-urls.md`
 - `build-scripts/references/check-rx4-elasticity-market-diagram-review.js`
+- `build-scripts/references/close-and-apply-rx4-elasticity-market-diagram.js`
+- `build-scripts/references/check-rx4-elasticity-market-diagram-mutations.js`
+- `build-scripts/rag/query.js` only if retrieval eval ranking needs a narrow canonical-term visibility fix after approved unit mutation
+- `reports/review-gates/GATE-RX4-elasticity-market-diagram-review/human-interview.json`
+- `reports/review-gates/GATE-RX4-elasticity-market-diagram-review/human-interview.md`
+- `reports/review-gates/GATE-RX4-elasticity-market-diagram-review/gate-closure.json`
+- `reports/review-gates/GATE-RX4-elasticity-market-diagram-review/gate-closure.md`
+- `reports/review-gates/GATE-RX4-elasticity-market-diagram-review/RX.4-mutation-log.json`
+- `reports/review-gates/GATE-RX4-elasticity-market-diagram-review/RX.4-mutation-log.md`
+- `references/machine/micro-teaching-units.json` via `unit-add.js` only after gate authorization
+- `references/machine/micro-teaching-units.md` via `unit-add.js` only after gate authorization
+- `reports/sprints/RX.4-result.md`
+- `reports/sprints/RX.4-diff-summary.md`
+- `references/data/sprints/RX.4.result.json`
 - `reports/url-index.md`
 - `references/reference-team-roadmap.md`
 - `docs/roadmaps/outdated/reference-team-roadmap-v2.28-rx3b-graph-lane-applied.md`
+- `docs/roadmaps/outdated/reference-team-roadmap-v2.29-rx4-elasticity-market-review-prepared.md`
 - `docs/roadmaps/roadmap-version-index.json`
 - `docs/roadmaps/roadmap-version-index.md`
 
@@ -41,6 +56,7 @@ RX.4 prepares the next human gate. It must distinguish elasticity from table/sou
 - mutation of `references/external/exam-questions.json`
 - lesson repo commits or generated lesson target edits
 - RAG chunk hand-patching
+- broad retrieval behavior rewrites beyond the canonical-term visibility fix required by validation
 - mutation review for held market/welfare duplicate areas unless a later human gate moves them into scope
 - student diagnostics, adaptive routing, student-facing AI, automatic sequencing, mastery decisions, or summative decisions
 - student-facing skill-tree or PV projection use of `A82`, `A83`, or `A84` before generators/projection support exist
@@ -76,15 +92,34 @@ RX.4 prepares the next human gate. It must distinguish elasticity from table/sou
 10. During human review, use calibration questions `RX4-Q1` through `RX4-Q9`, record each answer, analyze the answer pattern for contradictions, list targeted follow-ups, prepare a closure proposal, and require explicit human confirmation before any mutation gate can close.
 11. Validate the packet with a read-only checker and emit gate bundle URLs.
 12. Stop for human review before any CLI mutation, dependency edit, machine-reference mutation, or student-facing exposure.
+13. If the human gate closes with explicit CLI authorization, record `human-interview.*` and `gate-closure.*`.
+14. Re-run the live numbering and dependency checks immediately before mutation.
+15. Execute `unit-add.js` only for `A82`, `A84`, and conditionally approved `A83`, applying the approved A83 naming/scope decision.
+16. Record the CLI mutation log and update generator-block tracking.
+17. Regenerate and validate reference reports/RAG surfaces.
+18. Mark RX.4 completed only after result, diff summary, roadmap, URL bundle, and sprint-bundle checks pass.
 
 ## Acceptance tests
 
 ```bash
 node build-scripts/sprints/check-sprint-plan.js docs/sprints/RX.4-plan.md
-node build-scripts/references/check-rx4-elasticity-market-diagram-review.js
+node build-scripts/review-gates/validate-gate.js reports/review-gates/GATE-RX4-elasticity-market-diagram-review/gate-closure.json
+node build-scripts/references/check-rx4-elasticity-market-diagram-mutations.js
+node build-scripts/references/build-unit-index.js
+node build-scripts/references/validate-core-schemas.js
+node build-scripts/reports/generate-all.js
+node build-scripts/reports/validate-report-json.js
+node build-scripts/reports/generate-reference-health.js
+node build-scripts/reports/check-reference-health.js
+node build-scripts/rag/build-chunks.js
+node build-scripts/rag/validate-chunks.js
+node build-scripts/rag/validate-query-output.js
+node build-scripts/rag/run-retrieval-evals.js
+node build-scripts/rag/validate-retrieval-eval-results.js
 node build-scripts/sprints/emit-gate-bundle-urls.js GATE-RX4-elasticity-market-diagram-review
 node build-scripts/sprints/check-bundle-urls.js GATE-RX4-elasticity-market-diagram-review
-node build-scripts/sprints/check-sprint-bundle.js RX.4
+node build-scripts/sprints/check-sprint-result.js reports/sprints/RX.4-result.md
+node build-scripts/sprints/check-sprint-bundle.js RX.4 --complete
 node build-scripts/references/check-roadmap-version-index.js
 node build-scripts/references/check-source-manifest.js
 node build-scripts/references/check-document-inventory.js
@@ -93,7 +128,7 @@ node build-scripts/sprints/emit-url-index.js --check
 
 ## Rollback plan
 
-Revert the RX.4 review-preparation commit. That removes the review packet, candidate specs, blocked CLI plan, generator-block tracking, checker, bundle URL update, roadmap version update, and version-index snapshot.
+Revert the RX.4 applied-state commit. That removes the gate closure, mutation log, generator-block tracking updates, helper scripts, roadmap/version-index update, generated reports/RAG surfaces, and the CLI-added `A82`, `A83`, and `A84` machine-unit entries.
 
 Do not manually patch `references/machine/` for rollback.
 
