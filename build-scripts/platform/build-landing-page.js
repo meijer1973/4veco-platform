@@ -99,19 +99,29 @@ function scanFiles(paragraafPath) {
   // Helper: find first file matching a pattern.
   const find = (re) => files.find(f => re.test(f)) || null;
 
+  // Helper: capture both .html and .docx for resources that have web
+  // companions. Returns null if neither exists, otherwise an object with
+  // {html, docx} (either or both may be null).
+  const findHtmlDocx = (htmlRe, docxRe) => {
+    const html = files.find(f => htmlRe.test(f)) || null;
+    const docx = files.find(f => docxRe.test(f)) || null;
+    if (!html && !docx) return null;
+    return { html, docx };
+  };
+
   // Voorbereiden
   result.voorbereiden.instapquiz      = find(/instapquiz\.html$/i);
   result.voorbereiden.nieuwsdetective = find(/nieuws-detective\.html$/i);
-  result.voorbereiden.voorkennis      = find(/uitleg voorkennis\.html$/i) || find(/uitleg voorkennis\.docx$/i);
+  result.voorbereiden.voorkennis      = findHtmlDocx(/uitleg voorkennis\.html$/i, /uitleg voorkennis\.docx$/i);
   result.voorbereiden.leesdit         = find(/^Lees dit/i);
 
   // Leren
   result.leren.presentatie   = find(/presentatie\.pptx$/i);
-  result.leren.vaardigheden  = find(/uitleg vaardigheden\.html$/i) || find(/uitleg vaardigheden\.docx$/i);
+  result.leren.vaardigheden  = findHtmlDocx(/uitleg vaardigheden\.html$/i, /uitleg vaardigheden\.docx$/i);
   result.leren.stappenplan   = find(/stappenplan\.html$/i);
   result.leren.youtube       = find(/youtube.videos\.html$/i);
-  result.leren.nieuws        = find(/nieuws met visual\.docx$/i);
-  result.leren.samenvatting  = find(/samenvatting\.docx$/i);
+  result.leren.nieuws        = findHtmlDocx(/nieuws met visual\.html$/i, /nieuws met visual\.docx$/i);
+  result.leren.samenvatting  = findHtmlDocx(/samenvatting\.html$/i, /samenvatting\.docx$/i);
 
   // Oefenen — interactive shells sit at paragraph root; opgaven are flat files
   // with "– basis –", "– midden –", "– verrijking –", "– begeleide inoefening –"
@@ -579,6 +589,33 @@ function renderParagraafPage(paragraaf, files, _resolvedMap) {
         </a>`;
   }
 
+  // Card for resources that have both an .html web companion and a .docx
+  // download. Primary action: open the HTML (whole card clickable via a
+  // cover-link). Secondary action: download the .docx (sub-link with a
+  // higher z-index so it's clickable independently of the cover).
+  // If only one format exists, falls through to the regular resourceCard.
+  function resourceCardWithSource(pair, icon, title, desc) {
+    if (!pair) return "";
+    if (pair.html && !pair.docx) return resourceCard(encPath([pair.html]), icon, title, desc, "html");
+    if (!pair.html && pair.docx) return resourceCard(encPath([pair.docx]), icon, title, desc, "docx");
+    // Both formats present — emit primary HTML cover-link + Word sub-link.
+    const htmlHref = encPath([pair.html]);
+    const docxHref = encPath([pair.docx]);
+    return `
+        <div class="resource-card resource-card-with-source">
+          <a class="resource-card-cover-link" href="${htmlHref}" aria-label="${title} (web)"></a>
+          <div class="resource-card-icon"><svg viewBox="0 0 24 24">${icon}</svg></div>
+          <div class="resource-card-body">
+            <h3>${title}</h3>
+            <p>${desc}</p>
+            <span class="resource-card-type">html</span>
+            <div class="resource-sub-links">
+              <a class="resource-sub-link" href="${docxHref}" download>&darr; Download als Word</a>
+            </div>
+          </div>
+        </div>`;
+  }
+
   function exercisePairCard(pair, icon, title, desc) {
     if (!pair) return "";
     const vragenHref = pair.vragen ? encPath([pair.vragen]) : null;
@@ -629,17 +666,17 @@ function renderParagraafPage(paragraaf, files, _resolvedMap) {
 
   const voorbereidenCards = [
     files.voorbereiden.instapquiz      ? resourceCard(encPath([files.voorbereiden.instapquiz]),      ICONS.quiz,   "Instapquiz",       "Test wat je al weet over deze stof", "html") : "",
-    files.voorbereiden.voorkennis      ? resourceCard(encPath([files.voorbereiden.voorkennis]),      ICONS.book,   "Voorkennis",       "Herhaal wat je nodig hebt voor deze les", ext(files.voorbereiden.voorkennis)) : "",
+    files.voorbereiden.voorkennis      ? resourceCardWithSource(files.voorbereiden.voorkennis,       ICONS.book,   "Voorkennis",       "Herhaal wat je nodig hebt voor deze les") : "",
     files.voorbereiden.nieuwsdetective ? resourceCard(encPath([files.voorbereiden.nieuwsdetective]), ICONS.search, "Nieuws-detective", "Ontdek de economie achter het nieuws", "html") : "",
   ].filter(Boolean).join("\n");
 
   const lerenCards = [
     files.leren.presentatie  ? resourceCard(encPath([files.leren.presentatie]),  ICONS.monitor,   "Presentatie",         "De les-presentatie met kernpunten", "pptx") : "",
-    files.leren.vaardigheden ? resourceCard(encPath([files.leren.vaardigheden]), ICONS.doc,       "Uitleg vaardigheden", "Stap-voor-stap uitleg van de lesstof", ext(files.leren.vaardigheden)) : "",
+    files.leren.vaardigheden ? resourceCardWithSource(files.leren.vaardigheden,  ICONS.doc,       "Uitleg vaardigheden", "Stap-voor-stap uitleg van de lesstof") : "",
     files.leren.stappenplan  ? resourceCard(encPath([files.leren.stappenplan]),  ICONS.steps,     "Stappenplan",         "Oefen de stappen van elke vaardigheid", "html") : "",
     files.leren.youtube      ? resourceCard(encPath([files.leren.youtube]),      ICONS.play,      "YouTube-video’s", "Video-uitleg bij de stof", "html") : "",
-    files.leren.nieuws       ? resourceCard(encPath([files.leren.nieuws]),       ICONS.newspaper, "Nieuws",              "Actueel artikel met verwerkingsvragen", "docx") : "",
-    files.leren.samenvatting ? resourceCard(encPath([files.leren.samenvatting]), ICONS.check,     "Samenvatting",        "Overzicht van deze paragraaf", "docx") : "",
+    files.leren.nieuws       ? resourceCardWithSource(files.leren.nieuws,        ICONS.newspaper, "Nieuws",              "Actueel artikel met verwerkingsvragen") : "",
+    files.leren.samenvatting ? resourceCardWithSource(files.leren.samenvatting,  ICONS.check,     "Samenvatting",        "Overzicht van deze paragraaf") : "",
   ].filter(Boolean).join("\n");
 
   const oefenenRow = [];
@@ -786,6 +823,20 @@ function renderParagraafPage(paragraaf, files, _resolvedMap) {
   }
   .resource-card-pair { border-left-color: var(--accent); }
   .resource-card-interactive { border-left-color: var(--accent); }
+  .resource-card-with-source { position: relative; border-left-color: var(--accent); }
+  .resource-card-with-source:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  }
+  .resource-card-cover-link {
+    position: absolute; inset: 0;
+    z-index: 1;
+    text-decoration: none;
+    border-radius: 10px;
+  }
+  .resource-card-with-source > .resource-card-icon,
+  .resource-card-with-source > .resource-card-body { position: relative; z-index: 0; pointer-events: none; }
+  .resource-card-with-source .resource-sub-links { position: relative; z-index: 2; pointer-events: auto; }
 
   @media (max-width: 640px) {
     .resource-grid { grid-template-columns: 1fr; }
