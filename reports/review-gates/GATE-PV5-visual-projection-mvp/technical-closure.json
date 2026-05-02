@@ -1,0 +1,46 @@
+{
+  "gate_id": "GATE-PV5-visual-projection-mvp",
+  "sprint_id": "PV.5",
+  "status": "pass_with_conditions",
+  "closure_type": "technical",
+  "closed_on": "2026-05-02",
+  "machine_registry_created": false,
+  "student_facing_projection_authorized": false,
+  "dynamic_graph_manipulation_authorized": false,
+  "report_outputs": [
+    "reports/json/procedure-visual-projection-mvp.json",
+    "reports/markdown/procedure-visual-projection-mvp.md",
+    "reports/procedure-visual-projections"
+  ],
+  "summary": {
+    "template_count": 6,
+    "visual_state_count": 6,
+    "render_result_count": 28,
+    "renderer_counts": {
+      "flowchart": 10,
+      "formula_trace": 4,
+      "table_trace": 9,
+      "graph_stage": 5
+    },
+    "surface_counts": {
+      "web_light": 6,
+      "web_dark": 6,
+      "slide": 6,
+      "docx": 6,
+      "summary_thumbnail": 4
+    },
+    "all_required_renderers_present": true,
+    "all_required_surfaces_present": true,
+    "one_pilot_all_core_surfaces": true,
+    "mapped_procedure_game_pilot_count": 1,
+    "publication_blocked_template_count": 6,
+    "publication_blocked_visual_state_count": 6
+  },
+  "conditions": [
+    "Keep SVG projection proofs under reports/ until a later publication gate.",
+    "Do not create references/machine Procedure-Visual registries before PV.7 or an equivalent human promotion gate.",
+    "Do not expose PV projections to students before generator/projection support and publication controls exist.",
+    "Do not treat static graph-stage rendering as dynamic graph manipulation.",
+    "Do not authorize diagnostics, adaptive routing, AI, sequencing, mastery, or summative use."
+  ]
+}

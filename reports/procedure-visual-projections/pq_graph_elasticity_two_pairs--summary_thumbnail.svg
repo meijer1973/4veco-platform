@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="440" viewBox="0 0 760 440" role="img" aria-label="two_price_quantity_pairs_before_elasticity_calculation">
+    
+    <rect width="760" height="440" rx="20" fill="#fbf8ef"/>
+    <rect x="22" y="22" width="716" height="396" rx="18" fill="#ffffff" stroke="#d9d0be" stroke-width="1.5"/>
+    <text x="54" y="64" text-anchor="start" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="800" letter-spacing="2" font-style="" fill="#17A2B8">COMPANION VISUAL</text>
+    <text x="54" y="104" text-anchor="start" font-family="Fraunces, Georgia, serif" font-size="25" font-weight="700" letter-spacing="0" font-style="italic" fill="#1b1a17">Grafiekfase</text>
+    <text x="54" y="136" text-anchor="start" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="500" letter-spacing="0" font-style="" fill="#4a463d">two_price_quantity_pairs_before_elasticity_calculation</text>
+  
+    <line x1="245.5" y1="142" x2="245.5" y2="346" stroke="#e9dfcc" stroke-width="1"/><line x1="92" y1="301" x2="706" y2="301" stroke="#e9dfcc" stroke-width="1"/><line x1="399" y1="142" x2="399" y2="346" stroke="#e9dfcc" stroke-width="1"/><line x1="92" y1="256" x2="706" y2="256" stroke="#e9dfcc" stroke-width="1"/><line x1="552.5" y1="142" x2="552.5" y2="346" stroke="#e9dfcc" stroke-width="1"/><line x1="92" y1="211" x2="706" y2="211" stroke="#e9dfcc" stroke-width="1"/><line x1="706" y1="142" x2="706" y2="346" stroke="#e9dfcc" stroke-width="1"/><line x1="92" y1="166" x2="706" y2="166" stroke="#e9dfcc" stroke-width="1"/>
+    <line x1="92" y1="346" x2="706" y2="346" stroke="#1b1a17" stroke-width="3"/>
+    <line x1="92" y1="346" x2="92" y2="142" stroke="#1b1a17" stroke-width="3"/>
+    <text x="706" y="380" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="800" letter-spacing="0" font-style="" fill="#1b1a17">Q</text>
+    <text x="64" y="160" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="800" letter-spacing="0" font-style="" fill="#1b1a17">P</text>
+    <text x="62" y="184" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="600" letter-spacing="0" font-style="" fill="#4a463d">euro</text>
+    
+        <path d="M 110 205.6 C 306.9 167.6, 478.82 355.6, 688 313.6" fill="none" stroke="#17A2B8" stroke-width="4"/>
+        <text x="616" y="303.6" text-anchor="start" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" letter-spacing="0" font-style="" fill="#17A2B8">vraag</text>
+      
+    
+      <line x1="288.48" y1="281.2" x2="288.48" y2="346" stroke="#82796d" stroke-width="1.5" stroke-dasharray="5 5"/>
+      <line x1="92" y1="281.2" x2="288.48" y2="281.2" stroke="#82796d" stroke-width="1.5" stroke-dasharray="5 5"/>
+      <circle cx="288.48" cy="281.2" r="7" fill="#d08732" stroke="#ffffff" stroke-width="3"/>
+      <text x="300.48" y="271.2" text-anchor="start" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="800" letter-spacing="0" font-style="" fill="#1b1a17">P oud, Q oud</text>
+    
+      <line x1="497.24" y1="234.4" x2="497.24" y2="346" stroke="#82796d" stroke-width="1.5" stroke-dasharray="5 5"/>
+      <line x1="92" y1="234.4" x2="497.24" y2="234.4" stroke="#82796d" stroke-width="1.5" stroke-dasharray="5 5"/>
+      <circle cx="497.24" cy="234.4" r="7" fill="#d08732" stroke="#ffffff" stroke-width="3"/>
+      <text x="509.24" y="224.4" text-anchor="start" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="800" letter-spacing="0" font-style="" fill="#1b1a17">P nieuw, Q nieuw</text>
+    
+    
+    <rect x="153.4" y="154" width="491.20000000000005" height="58" rx="10" fill="#efe8d7" stroke="#d9d0be" stroke-width="1" opacity="0.96"/>
+    <text x="171.4" y="182" text-anchor="start" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="600" letter-spacing="0" font-style="" fill="#1b1a17">Lees eerst twee P,Q-paren af; pas daarna bereken je elasticiteit.</text>
+  
+  </svg>

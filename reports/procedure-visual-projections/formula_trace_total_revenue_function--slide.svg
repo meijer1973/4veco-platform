@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="648" viewBox="0 0 960 648" role="img" aria-label="to_function_from_price_times_quantity">
+    
+      <rect width="960" height="648" rx="28" fill="#fbf8ef"/>
+      <rect x="32" y="32" width="896" height="584" rx="24" fill="#ffffff" stroke="#d9d0be" stroke-width="1.5"/>
+    
+    
+      <rect x="68" y="78" width="260" height="98" rx="10" fill="#dff6f8" stroke="#17A2B8" stroke-width="2"/>
+      <text x="86" y="108" text-anchor="start" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="0" font-style="" fill="#4a463d">1. input_relation</text>
+      <text x="198" y="142" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800" letter-spacing="0" font-style="" fill="#1b1a17">P(Q)</text>
+      <text x="339" y="135" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="800" letter-spacing="0" font-style="" fill="#82796d">&gt;</text>
+    
+      <rect x="350" y="78" width="260" height="98" rx="10" fill="#dff6f8" stroke="#17A2B8" stroke-width="2"/>
+      <text x="368" y="108" text-anchor="start" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="0" font-style="" fill="#4a463d">2. operation</text>
+      <text x="480" y="142" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800" letter-spacing="0" font-style="" fill="#1b1a17">TO = P x Q</text>
+      <text x="621" y="135" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="800" letter-spacing="0" font-style="" fill="#82796d">&gt;</text>
+    
+      <rect x="632" y="78" width="260" height="98" rx="10" fill="#dff6f8" stroke="#17A2B8" stroke-width="2"/>
+      <text x="650" y="108" text-anchor="start" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="0" font-style="" fill="#4a463d">3. output_relation</text>
+      <text x="762" y="142" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800" letter-spacing="0" font-style="" fill="#1b1a17">TO(Q)</text>
+      
+    
+    
+    <rect x="68" y="234" width="824" height="92" rx="10" fill="#efe8d7" stroke="#d9d0be" stroke-width="1"/>
+    <text x="92" y="264" text-anchor="start" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="500" letter-spacing="0" font-style="" fill="#1b1a17">Controleer met een ingevulde Q of TO gelijk is aan P(Q) x Q.</text>
+  
+  </svg>

@@ -4,7 +4,7 @@ Generated: 2026-04-23
 Adopted main roadmap: 2026-04-25
 Last strategic update: 2026-05-01
 Roadmap ID: `references-team-roadmap`
-Roadmap version: `v2.34-pv5-visual-projection-mvp`
+Roadmap version: `v2.33-rx5-representation-operation-reports`
 Roadmap status: `active`
 Version index: `docs/roadmaps/roadmap-version-index.json`
 Scope: `references/`, `build-scripts/references/`, `build-scripts/reports/`, reference dashboards, and generated reference reports under `reports/`
@@ -57,8 +57,6 @@ Update 2026-05-02: `PV.4 Procedure/Game Projection Contract` is completed. The p
 
 Update 2026-05-02: `RX.5 Representation Operation Registry And Reports` is completed as a report-only bridge. New representation-operation coverage, graph-skill-tree, and representation-transfer-gap reports distinguish live units, stale provisional registry statuses, held/high-risk records, generator-blocked live units, and PV pilot links without creating a `references/machine/` operation registry or authorizing student-facing use.
 
-Update 2026-05-02: `PV.5 Visual Projection MVP` is completed. The platform now has report-side PV renderer libraries for formula trace, flowchart, table trace, and static graph-stage visual states, plus 28 SVG proof artifacts under `reports/procedure-visual-projections/`. These are validation/proof outputs only: no lesson target writes, dynamic graph manipulation, PV machine promotion, or student-facing PV projection is authorized.
-
 Compatibility decisions:
 
 - Sprint `R0.1` now means the sprint-execution scaffold.
@@ -84,6 +82,7 @@ Open items are listed first; completed items are kept below them.
 
 | Sprint | Name | Completed | Current State |
 |--------|------|-----------|---------------|
+| PV.5 | Visual Projection MVP | no | Build non-dynamic PV render/validation libraries for formula trace, flowchart, table trace, and static staged graph before dynamic graph manipulation. |
 | PV.6 | Coverage Reports And Dashboard Integration | no | Add PV coverage reports and reference-health summary without treating PV as curriculum authority; preserve generator-blocked status. |
 | RX.6 | Skill-Tree And Generator Integration | no | Planned after approved representation units and PV projection contracts. Requires generator coverage or explicit non-interactive status before any student-facing skill-tree use. |
 | PV.7 | Machine-Promotion Review Gate | no | Decide whether any PV records move from `references/data/` to `references/machine/` only after schema, CLI, validators, mutation logs, reports, lesson regressions, and human gate approval exist. |
@@ -105,7 +104,6 @@ Open items are listed first; completed items are kept below them.
 | PV.3 | Pilot Procedure-Visual Templates | yes | Completed. Added six pilot templates, six visual states, six unit-template links, and `GATE-PV-G2-pilot-content` technical proof; formula trace, graph-stage, table-trace, and flowchart-style coverage are present, while machine promotion and student-facing PV projection remain blocked. |
 | PV.4 | Procedure/Game Projection Contract | yes | Completed. Added optional `formal_step_id` engine support, a procedure-game alignment fixture/report, and `GATE-PV4-procedure-game-contract` technical proof; mapped PV game records are now possible while legacy unmapped games remain valid and publication remains blocked. |
 | RX.5 | Representation Operation Registry And Reports | yes | Completed as report-only bridge. Added representation-operation coverage, graph-skill-tree, and representation-transfer-gap reports; operation records remain provisional, stale/live status differences are explicit, held records stay held, and generator/PV publication blocks remain active. |
-| PV.5 | Visual Projection MVP | yes | Completed. Added reusable report-side render/validation libraries for formula trace, flowchart, table trace, and static graph-stage PV visual states, generated SVG proof artifacts under `reports/`, and preserved publication, dynamic-graph, machine-promotion, and student-facing blocks. |
 | RX.3 | Producer Table And Graph Representation Review | yes | Completed as non-mutating review. `GATE-RX3-producer-representation` closed as `pass_with_conditions`; A75/A76/A79 may enter first-lane mutation review; A77/A78 are later graph-lane candidates; A80/A81 and graphical MO=MK remain held. |
 | RX.3a | Producer Table/Data First-Lane Mutation Review And CLI Execution | yes | Completed. `GATE-RX3a-first-lane-mutation-review` closed as `pass_with_conditions`; `A75`, `A76`, and `A79` were added through `unit-add.js`; `A76` needs `A14`, `A04`, and `A61`; all three remain generator-blocked/non-interactive. |
 | RX.3b | Producer TO-TK Graph-Lane Mutation Review And CLI Execution | yes | Completed. `GATE-RX3b-producer-graph-lane-review` closed as `pass_with_conditions`; `A77` and `A78` were added through `unit-add.js`; `A78` needs `A63`, `A75`, and `A77`; both remain generator-blocked/non-interactive. |

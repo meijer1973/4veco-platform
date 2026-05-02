@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="648" viewBox="0 0 960 648" role="img" aria-label="paired_old_new_price_quantity_values">
+    
+      <rect width="960" height="648" rx="28" fill="#fbf8ef"/>
+      <rect x="32" y="32" width="896" height="584" rx="24" fill="#ffffff" stroke="#d9d0be" stroke-width="1.5"/>
+    
+    <rect x="84" y="72" width="792" height="180" rx="8" fill="#ffffff" stroke="#d9d0be" stroke-width="1.5"/>
+    <line x1="84" y1="72" x2="876" y2="72" stroke="#d9d0be" stroke-width="1.5"/><line x1="84" y1="132" x2="876" y2="132" stroke="#d9d0be" stroke-width="1.5"/><line x1="84" y1="192" x2="876" y2="192" stroke="#d9d0be" stroke-width="1.5"/><line x1="84" y1="252" x2="876" y2="252" stroke="#d9d0be" stroke-width="1.5"/><line x1="84" y1="72" x2="84" y2="252" stroke="#d9d0be" stroke-width="1.5"/><line x1="282" y1="72" x2="282" y2="252" stroke="#d9d0be" stroke-width="1.5"/><line x1="480" y1="72" x2="480" y2="252" stroke="#d9d0be" stroke-width="1.5"/><line x1="678" y1="72" x2="678" y2="252" stroke="#d9d0be" stroke-width="1.5"/><line x1="876" y1="72" x2="876" y2="252" stroke="#d9d0be" stroke-width="1.5"/>
+    <text x="183" y="106" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="800" letter-spacing="0" font-style="" fill="#4a463d">bron</text><text x="381" y="106" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="800" letter-spacing="0" font-style="" fill="#4a463d">waarde 1</text><text x="579" y="106" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="800" letter-spacing="0" font-style="" fill="#4a463d">waarde 2</text><text x="777" y="106" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="800" letter-spacing="0" font-style="" fill="#4a463d">waarde 3</text>
+    
+      <rect x="92" y="140" width="182" height="44" rx="8" fill="#f5ead8" stroke="#d08732" stroke-width="2"/>
+      <text x="183" y="170" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="750" letter-spacing="0" font-style="" fill="#1b1a17">oude P</text>
+    
+      <rect x="290" y="140" width="182" height="44" rx="8" fill="#f5ead8" stroke="#d08732" stroke-width="2"/>
+      <text x="381" y="170" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="750" letter-spacing="0" font-style="" fill="#1b1a17">oude Q</text>
+    
+      <rect x="488" y="140" width="182" height="44" rx="8" fill="#f5ead8" stroke="#d08732" stroke-width="2"/>
+      <text x="579" y="170" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="750" letter-spacing="0" font-style="" fill="#1b1a17">nieuwe P</text>
+    
+      <rect x="686" y="140" width="182" height="44" rx="8" fill="#f5ead8" stroke="#d08732" stroke-width="2"/>
+      <text x="777" y="170" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="750" letter-spacing="0" font-style="" fill="#1b1a17">nieuwe Q</text>
+    
+    
+    <rect x="84" y="294" width="792" height="92" rx="10" fill="#efe8d7" stroke="#d9d0be" stroke-width="1"/>
+    <text x="108" y="324" text-anchor="start" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="500" letter-spacing="0" font-style="" fill="#1b1a17">Koppel oude P aan oude Q en nieuwe P aan nieuwe Q voordat je procentuele veranderingen berekent.</text>
+  
+  </svg>

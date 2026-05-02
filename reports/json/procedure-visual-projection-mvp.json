@@ -1,0 +1,1551 @@
+{
+  "report_id": "procedure-visual-projection-mvp",
+  "sprint_id": "PV.5",
+  "gate_id": "GATE-PV5-visual-projection-mvp",
+  "generated_by": "build-scripts/references/build-procedure-visual-projection-mvp.js",
+  "generated_on": "2026-05-02T11:42:06.432Z",
+  "status": "passed",
+  "policy": {
+    "report_only": true,
+    "machine_registry_created": false,
+    "student_facing_projection_authorized": false,
+    "dynamic_graph_manipulation_authorized": false,
+    "lesson_target_write_authorized": false
+  },
+  "summary": {
+    "template_count": 6,
+    "visual_state_count": 6,
+    "render_result_count": 28,
+    "renderer_counts": {
+      "flowchart": 10,
+      "formula_trace": 4,
+      "table_trace": 9,
+      "graph_stage": 5
+    },
+    "surface_counts": {
+      "web_light": 6,
+      "web_dark": 6,
+      "slide": 6,
+      "docx": 6,
+      "summary_thumbnail": 4
+    },
+    "all_required_renderers_present": true,
+    "all_required_surfaces_present": true,
+    "one_pilot_all_core_surfaces": true,
+    "mapped_procedure_game_pilot_count": 1,
+    "publication_blocked_template_count": 6,
+    "publication_blocked_visual_state_count": 6
+  },
+  "template_projection_models": [
+    {
+      "template_id": "choose_by_opportunity_cost_flow",
+      "source_unit_ids": [
+        "B02"
+      ],
+      "representation": "choice_context",
+      "economic_context": "scarcity_and_choice",
+      "status": "pilot",
+      "operation_reference_status": "none",
+      "visual_state_sequence": [
+        {
+          "visual_state_id": "flowchart_opportunity_cost_choice",
+          "found": true,
+          "visual_type": "flowchart",
+          "semantic_focus": "highest_not_chosen_alternative",
+          "representation": "choice_context"
+        }
+      ],
+      "answer_model_step_order": [
+        {
+          "order": 1,
+          "step_id": "list_alternatives",
+          "label_nl": "Benoem de beschikbare alternatieven voor dezelfde schaarse middelen.",
+          "action": "identify_context",
+          "input_refs": [
+            "choice_context",
+            "scarce_resource"
+          ],
+          "output_refs": [
+            "alternative_list"
+          ],
+          "visual_state_ref": "flowchart_opportunity_cost_choice"
+        },
+        {
+          "order": 2,
+          "step_id": "calculate_payoffs",
+          "label_nl": "Bepaal of bereken de opbrengst van elk alternatief.",
+          "action": "calculate_payoff",
+          "input_refs": [
+            "alternative_list"
+          ],
+          "output_refs": [
+            "alternative_payoffs"
+          ],
+          "visual_state_ref": "flowchart_opportunity_cost_choice"
+        },
+        {
+          "order": 3,
+          "step_id": "rank_not_chosen",
+          "label_nl": "Rangschik de alternatieven en markeer het beste niet-gekozen alternatief.",
+          "action": "rank_alternatives",
+          "input_refs": [
+            "alternative_payoffs",
+            "chosen_alternative"
+          ],
+          "output_refs": [
+            "best_not_chosen_alternative"
+          ],
+          "visual_state_ref": "flowchart_opportunity_cost_choice"
+        },
+        {
+          "order": 4,
+          "step_id": "interpret_net_choice_value",
+          "label_nl": "Vergelijk de gekozen opbrengst met de alternatieve kosten en interpreteer de nettowaarde.",
+          "action": "interpret_result",
+          "input_refs": [
+            "chosen_payoff",
+            "best_not_chosen_alternative"
+          ],
+          "output_refs": [
+            "net_choice_value"
+          ],
+          "visual_state_ref": "flowchart_opportunity_cost_choice"
+        }
+      ],
+      "publication_blocked": true,
+      "projection_flags": {
+        "vaardigheden": true,
+        "answer_model": true,
+        "procedure_game": true,
+        "flowchart": true,
+        "formula_trace": false,
+        "graph_stage_sequence": false,
+        "table_trace": false
+      },
+      "blockers": [
+        "visual_renderer_pending",
+        "procedure_game_mapping_pending",
+        "human_publication_gate_pending"
+      ],
+      "rendered_surfaces": [
+        "docx",
+        "slide",
+        "summary_thumbnail",
+        "web_dark",
+        "web_light"
+      ],
+      "rendered_visual_states": [
+        {
+          "visual_state_id": "flowchart_opportunity_cost_choice",
+          "rendered_surfaces": [
+            {
+              "surface_id": "web_light",
+              "renderer": "flowchart",
+              "svg_path": "reports/procedure-visual-projections/flowchart_opportunity_cost_choice--web_light.svg",
+              "svg_sha256": "728a2fe8a2998cdd3f5910cdea4bc114e45e868f5b4f28ee628325464f735eb1"
+            },
+            {
+              "surface_id": "web_dark",
+              "renderer": "flowchart",
+              "svg_path": "reports/procedure-visual-projections/flowchart_opportunity_cost_choice--web_dark.svg",
+              "svg_sha256": "a358b4dccfb292124e6e516b0e5f3ddcd91c28a441216d91670992691e4e5d7c"
+            },
+            {
+              "surface_id": "slide",
+              "renderer": "flowchart",
+              "svg_path": "reports/procedure-visual-projections/flowchart_opportunity_cost_choice--slide.svg",
+              "svg_sha256": "d03417b10c63154125ff4590a4ab619713deef70cf7f6d30332f22c1acd51f5e"
+            },
+            {
+              "surface_id": "docx",
+              "renderer": "flowchart",
+              "svg_path": "reports/procedure-visual-projections/flowchart_opportunity_cost_choice--docx.svg",
+              "svg_sha256": "d229a8735a211248f10d8cc76756f23f81ff98edccaf92dad6b0e957561a88c2"
+            },
+            {
+              "surface_id": "summary_thumbnail",
+              "renderer": "flowchart",
+              "svg_path": "reports/procedure-visual-projections/flowchart_opportunity_cost_choice--summary_thumbnail.svg",
+              "svg_sha256": "319ee41f828f84891ea9c2fd8345d1b3704de7709e4695590a385dda7adefbd0"
+            }
+          ]
+        }
+      ],
+      "all_visual_states_rendered": true
+    },
+    {
+      "template_id": "build_total_revenue_function_trace",
+      "source_unit_ids": [
+        "A07"
+      ],
+      "representation": "formula",
+      "economic_context": "producer_revenue",
+      "status": "pilot",
+      "operation_reference_status": "none",
+      "visual_state_sequence": [
+        {
+          "visual_state_id": "formula_trace_total_revenue_function",
+          "found": true,
+          "visual_type": "formula_trace",
+          "semantic_focus": "to_function_from_price_times_quantity",
+          "representation": "formula"
+        }
+      ],
+      "answer_model_step_order": [
+        {
+          "order": 1,
+          "step_id": "make_price_function_available",
+          "label_nl": "Zorg dat P als functie van Q beschikbaar is.",
+          "action": "identify_context",
+          "input_refs": [
+            "price_quantity_relation"
+          ],
+          "output_refs": [
+            "P(Q)"
+          ],
+          "visual_state_ref": "formula_trace_total_revenue_function"
+        },
+        {
+          "order": 2,
+          "step_id": "multiply_price_by_quantity",
+          "label_nl": "Vermenigvuldig TO = P x Q met haakjes om elke term van P mee te nemen.",
+          "action": "multiply",
+          "input_refs": [
+            "P(Q)",
+            "Q"
+          ],
+          "output_refs": [
+            "unsimplified_TO(Q)"
+          ],
+          "visual_state_ref": "formula_trace_total_revenue_function"
+        },
+        {
+          "order": 3,
+          "step_id": "simplify_to_function",
+          "label_nl": "Werk uit tot een nette TO-functie in Q.",
+          "action": "substitute",
+          "input_refs": [
+            "unsimplified_TO(Q)"
+          ],
+          "output_refs": [
+            "TO(Q)"
+          ],
+          "visual_state_ref": "formula_trace_total_revenue_function"
+        },
+        {
+          "order": 4,
+          "step_id": "check_to_with_sample_q",
+          "label_nl": "Controleer met een ingevulde Q dat TO gelijk is aan P(Q) x Q.",
+          "action": "interpret_result",
+          "input_refs": [
+            "TO(Q)",
+            "P(Q)",
+            "sample_Q"
+          ],
+          "output_refs": [
+            "checked_TO_function"
+          ],
+          "visual_state_ref": "formula_trace_total_revenue_function"
+        }
+      ],
+      "publication_blocked": true,
+      "projection_flags": {
+        "vaardigheden": true,
+        "answer_model": true,
+        "procedure_game": false,
+        "flowchart": false,
+        "formula_trace": true,
+        "graph_stage_sequence": false,
+        "table_trace": false
+      },
+      "blockers": [
+        "visual_renderer_pending",
+        "answer_model_projection_pending",
+        "human_publication_gate_pending"
+      ],
+      "rendered_surfaces": [
+        "docx",
+        "slide",
+        "web_dark",
+        "web_light"
+      ],
+      "rendered_visual_states": [
+        {
+          "visual_state_id": "formula_trace_total_revenue_function",
+          "rendered_surfaces": [
+            {
+              "surface_id": "web_light",
+              "renderer": "formula_trace",
+              "svg_path": "reports/procedure-visual-projections/formula_trace_total_revenue_function--web_light.svg",
+              "svg_sha256": "922e5f6525ef8ee2953e0247af237ef0690fb1788baa1bd38467e4e0b36b913f"
+            },
+            {
+              "surface_id": "web_dark",
+              "renderer": "formula_trace",
+              "svg_path": "reports/procedure-visual-projections/formula_trace_total_revenue_function--web_dark.svg",
+              "svg_sha256": "8e5150117a59cde1602376f0abd5d4175141d38f85e1fb809f933fc755465899"
+            },
+            {
+              "surface_id": "slide",
+              "renderer": "formula_trace",
+              "svg_path": "reports/procedure-visual-projections/formula_trace_total_revenue_function--slide.svg",
+              "svg_sha256": "7a842841393f36b866ce06b676ada79c61aa6822a926dc55b5c0b8f5f29c5879"
+            },
+            {
+              "surface_id": "docx",
+              "renderer": "formula_trace",
+              "svg_path": "reports/procedure-visual-projections/formula_trace_total_revenue_function--docx.svg",
+              "svg_sha256": "f1ec7715270cef05545757ba54f3ac05b7d85380a278b34238911f281d0ed90c"
+            }
+          ]
+        }
+      ],
+      "all_visual_states_rendered": true
+    },
+    {
+      "template_id": "select_table_values_trace",
+      "source_unit_ids": [
+        "A61"
+      ],
+      "representation": "table",
+      "economic_context": "source_value_selection",
+      "status": "pilot",
+      "operation_reference_status": "provisional",
+      "visual_state_sequence": [
+        {
+          "visual_state_id": "table_trace_source_values_selected",
+          "found": true,
+          "visual_type": "table_trace",
+          "semantic_focus": "selected_source_values_for_calculation",
+          "representation": "table"
+        }
+      ],
+      "answer_model_step_order": [
+        {
+          "order": 1,
+          "step_id": "read_question_target",
+          "label_nl": "Lees de vraag en bepaal welke grootheid, periode, rij of kolom nodig is.",
+          "action": "identify_context",
+          "input_refs": [
+            "question",
+            "source_table"
+          ],
+          "output_refs": [
+            "target_value_description"
+          ],
+          "visual_state_ref": "table_trace_source_values_selected"
+        },
+        {
+          "order": 2,
+          "step_id": "check_table_headers_units",
+          "label_nl": "Controleer bron, tabelkop, rijlabel, kolomlabel en eenheid.",
+          "action": "check_labels",
+          "input_refs": [
+            "source_table",
+            "target_value_description"
+          ],
+          "output_refs": [
+            "table_header_unit_check"
+          ],
+          "visual_state_ref": "table_trace_source_values_selected"
+        },
+        {
+          "order": 3,
+          "step_id": "select_needed_values",
+          "label_nl": "Selecteer de oude waarde, nieuwe waarde of gevraagde waarde voordat je rekent.",
+          "action": "select_table_value",
+          "input_refs": [
+            "source_table",
+            "table_header_unit_check"
+          ],
+          "output_refs": [
+            "selected_source_values"
+          ],
+          "visual_state_ref": "table_trace_source_values_selected"
+        },
+        {
+          "order": 4,
+          "step_id": "label_selected_values",
+          "label_nl": "Noteer de gekozen waarden met label zodat de berekening controleerbaar is.",
+          "action": "interpret_result",
+          "input_refs": [
+            "selected_source_values"
+          ],
+          "output_refs": [
+            "labeled_source_values"
+          ],
+          "visual_state_ref": "table_trace_source_values_selected"
+        }
+      ],
+      "publication_blocked": true,
+      "projection_flags": {
+        "vaardigheden": true,
+        "answer_model": true,
+        "procedure_game": true,
+        "flowchart": false,
+        "formula_trace": false,
+        "graph_stage_sequence": false,
+        "table_trace": true
+      },
+      "blockers": [
+        "operation_ids_provisional_until_registry_gate",
+        "generator_support_pending",
+        "visual_renderer_pending",
+        "procedure_game_mapping_pending",
+        "human_publication_gate_pending"
+      ],
+      "rendered_surfaces": [
+        "docx",
+        "slide",
+        "summary_thumbnail",
+        "web_dark",
+        "web_light"
+      ],
+      "rendered_visual_states": [
+        {
+          "visual_state_id": "table_trace_source_values_selected",
+          "rendered_surfaces": [
+            {
+              "surface_id": "web_light",
+              "renderer": "table_trace",
+              "svg_path": "reports/procedure-visual-projections/table_trace_source_values_selected--web_light.svg",
+              "svg_sha256": "03a1b461e44814028aa89a6baceee29cc6c6841d709d06ecacd06f852ac19351"
+            },
+            {
+              "surface_id": "web_dark",
+              "renderer": "table_trace",
+              "svg_path": "reports/procedure-visual-projections/table_trace_source_values_selected--web_dark.svg",
+              "svg_sha256": "425e77d9bd505507ebdf2b621c936b7007ccad6e119295061cd19e36c2d5733a"
+            },
+            {
+              "surface_id": "slide",
+              "renderer": "table_trace",
+              "svg_path": "reports/procedure-visual-projections/table_trace_source_values_selected--slide.svg",
+              "svg_sha256": "39b886ec53dcca64e81f914183899c42e1ebc3b8140f4cd43ef0130ca1d1321a"
+            },
+            {
+              "surface_id": "docx",
+              "renderer": "table_trace",
+              "svg_path": "reports/procedure-visual-projections/table_trace_source_values_selected--docx.svg",
+              "svg_sha256": "7620459b6764afbc0b58f3f243659b8860fb79b9f1992024db67f4ccaa4412e5"
+            },
+            {
+              "surface_id": "summary_thumbnail",
+              "renderer": "table_trace",
+              "svg_path": "reports/procedure-visual-projections/table_trace_source_values_selected--summary_thumbnail.svg",
+              "svg_sha256": "153c178cd97000bf4df0fde33aca008459f1dc0191497b6005ef255b3b8c8c9b"
+            }
+          ]
+        }
+      ],
+      "all_visual_states_rendered": true
+    },
+    {
+      "template_id": "calculate_elasticity_from_table_values",
+      "source_unit_ids": [
+        "A82"
+      ],
+      "representation": "table",
+      "economic_context": "market_demand_elasticity",
+      "status": "pilot",
+      "operation_reference_status": "provisional",
+      "visual_state_sequence": [
+        {
+          "visual_state_id": "table_trace_elasticity_pairs_selected",
+          "found": true,
+          "visual_type": "table_trace",
+          "semantic_focus": "paired_old_new_price_quantity_values",
+          "representation": "table"
+        }
+      ],
+      "answer_model_step_order": [
+        {
+          "order": 1,
+          "step_id": "identify_elasticity_variables",
+          "label_nl": "Bepaal welke prijs- en hoeveelheidsvariabelen bij de elasticiteit horen.",
+          "action": "identify_context",
+          "input_refs": [
+            "question",
+            "source_table"
+          ],
+          "output_refs": [
+            "elasticity_variable_set"
+          ],
+          "visual_state_ref": "table_trace_elasticity_pairs_selected"
+        },
+        {
+          "order": 2,
+          "step_id": "select_old_new_pairs",
+          "label_nl": "Selecteer oude P, oude Q, nieuwe P en nieuwe Q en controleer dat de paren bij dezelfde situatie horen.",
+          "action": "select_table_value",
+          "input_refs": [
+            "source_table",
+            "elasticity_variable_set"
+          ],
+          "output_refs": [
+            "paired_old_new_price_quantity_values"
+          ],
+          "visual_state_ref": "table_trace_elasticity_pairs_selected"
+        },
+        {
+          "order": 3,
+          "step_id": "calculate_percentage_changes",
+          "label_nl": "Bereken de procentuele verandering van Q en de procentuele verandering van P.",
+          "action": "calculate_percentage_change",
+          "input_refs": [
+            "paired_old_new_price_quantity_values"
+          ],
+          "output_refs": [
+            "percent_change_q",
+            "percent_change_p"
+          ],
+          "visual_state_ref": "table_trace_elasticity_pairs_selected"
+        },
+        {
+          "order": 4,
+          "step_id": "calculate_elasticity_ratio",
+          "label_nl": "Bereken Ev = procentuele verandering Q gedeeld door procentuele verandering P.",
+          "action": "substitute",
+          "input_refs": [
+            "percent_change_q",
+            "percent_change_p"
+          ],
+          "output_refs": [
+            "elasticity_value"
+          ],
+          "visual_state_ref": null
+        },
+        {
+          "order": 5,
+          "step_id": "interpret_elasticity_value",
+          "label_nl": "Interpreteer teken, absolute waarde en elastisch, inelastisch of unitair elastisch in context.",
+          "action": "interpret_result",
+          "input_refs": [
+            "elasticity_value",
+            "market_context"
+          ],
+          "output_refs": [
+            "elasticity_interpretation"
+          ],
+          "visual_state_ref": null
+        }
+      ],
+      "publication_blocked": true,
+      "projection_flags": {
+        "vaardigheden": true,
+        "answer_model": true,
+        "procedure_game": false,
+        "flowchart": false,
+        "formula_trace": true,
+        "graph_stage_sequence": false,
+        "table_trace": true
+      },
+      "blockers": [
+        "operation_ids_provisional_until_registry_gate",
+        "generator_support_pending",
+        "visual_renderer_pending",
+        "human_publication_gate_pending"
+      ],
+      "rendered_surfaces": [
+        "docx",
+        "slide",
+        "web_dark",
+        "web_light"
+      ],
+      "rendered_visual_states": [
+        {
+          "visual_state_id": "table_trace_elasticity_pairs_selected",
+          "rendered_surfaces": [
+            {
+              "surface_id": "web_light",
+              "renderer": "table_trace",
+              "svg_path": "reports/procedure-visual-projections/table_trace_elasticity_pairs_selected--web_light.svg",
+              "svg_sha256": "86c879639df9380acb4da6c96487d0487d9a58c816f6eb31bd80b2382a69fedc"
+            },
+            {
+              "surface_id": "web_dark",
+              "renderer": "table_trace",
+              "svg_path": "reports/procedure-visual-projections/table_trace_elasticity_pairs_selected--web_dark.svg",
+              "svg_sha256": "a89bdf5ccee4d63b9f1e09283cd8c36177701234c3f77db5a5c3e840cf25b652"
+            },
+            {
+              "surface_id": "slide",
+              "renderer": "table_trace",
+              "svg_path": "reports/procedure-visual-projections/table_trace_elasticity_pairs_selected--slide.svg",
+              "svg_sha256": "afcf9279ac0dbff23b0a6cb4b7bf3612b7e0a68bb6694ad25bd9ef3b6de54925"
+            },
+            {
+              "surface_id": "docx",
+              "renderer": "table_trace",
+              "svg_path": "reports/procedure-visual-projections/table_trace_elasticity_pairs_selected--docx.svg",
+              "svg_sha256": "b51e0bd466d70fe750c9e80e2e12629f841edd11557263a396c025d065ef3572"
+            }
+          ]
+        }
+      ],
+      "all_visual_states_rendered": true
+    },
+    {
+      "template_id": "calculate_demand_elasticity_from_pq_graph",
+      "source_unit_ids": [
+        "A83"
+      ],
+      "representation": "p_q_graph",
+      "economic_context": "demand_elasticity",
+      "status": "pilot",
+      "operation_reference_status": "provisional",
+      "visual_state_sequence": [
+        {
+          "visual_state_id": "pq_graph_elasticity_two_pairs",
+          "found": true,
+          "visual_type": "graph_stage",
+          "semantic_focus": "two_price_quantity_pairs_before_elasticity_calculation",
+          "representation": "p_q_graph"
+        }
+      ],
+      "answer_model_step_order": [
+        {
+          "order": 1,
+          "step_id": "identify_demand_graph",
+          "label_nl": "Lees titel en context en bepaal dat de grafiek een vraagrelatie toont.",
+          "action": "identify_context",
+          "input_refs": [
+            "p_q_graph",
+            "question"
+          ],
+          "output_refs": [
+            "demand_graph_context"
+          ],
+          "visual_state_ref": "pq_graph_elasticity_two_pairs"
+        },
+        {
+          "order": 2,
+          "step_id": "check_axes_units_scale",
+          "label_nl": "Controleer horizontale as, verticale as, eenheden, schaal en labels of legenda.",
+          "action": "check_scale",
+          "input_refs": [
+            "p_q_graph",
+            "demand_graph_context"
+          ],
+          "output_refs": [
+            "axis_scale_check"
+          ],
+          "visual_state_ref": "pq_graph_elasticity_two_pairs"
+        },
+        {
+          "order": 3,
+          "step_id": "read_two_pq_pairs",
+          "label_nl": "Lees twee P,Q-paren af en noteer of waarden exact of geschat zijn.",
+          "action": "read_value",
+          "input_refs": [
+            "p_q_graph",
+            "axis_scale_check"
+          ],
+          "output_refs": [
+            "old_price_quantity_pair",
+            "new_price_quantity_pair"
+          ],
+          "visual_state_ref": "pq_graph_elasticity_two_pairs"
+        },
+        {
+          "order": 4,
+          "step_id": "label_basis_and_comparison",
+          "label_nl": "Bepaal voor prijs en hoeveelheid welke waarde oud/basis is en welke nieuw/vergelijking is.",
+          "action": "interpret_result",
+          "input_refs": [
+            "old_price_quantity_pair",
+            "new_price_quantity_pair"
+          ],
+          "output_refs": [
+            "basis_comparison_labels"
+          ],
+          "visual_state_ref": null
+        },
+        {
+          "order": 5,
+          "step_id": "calculate_graph_elasticity",
+          "label_nl": "Bereken procentuele verandering van Q en P en deel %Delta Q door %Delta P.",
+          "action": "calculate_percentage_change",
+          "input_refs": [
+            "basis_comparison_labels"
+          ],
+          "output_refs": [
+            "graph_elasticity_value"
+          ],
+          "visual_state_ref": null
+        },
+        {
+          "order": 6,
+          "step_id": "interpret_graph_elasticity",
+          "label_nl": "Interpreteer teken, absolute waarde en elasticiteitscategorie en controleer of dit past bij de grafiek.",
+          "action": "interpret_result",
+          "input_refs": [
+            "graph_elasticity_value",
+            "p_q_graph"
+          ],
+          "output_refs": [
+            "graph_elasticity_interpretation"
+          ],
+          "visual_state_ref": null
+        }
+      ],
+      "publication_blocked": true,
+      "projection_flags": {
+        "vaardigheden": true,
+        "answer_model": true,
+        "procedure_game": false,
+        "flowchart": false,
+        "formula_trace": true,
+        "graph_stage_sequence": true,
+        "table_trace": false
+      },
+      "blockers": [
+        "operation_ids_provisional_until_registry_gate",
+        "generator_support_pending",
+        "visual_renderer_pending",
+        "human_publication_gate_pending"
+      ],
+      "rendered_surfaces": [
+        "docx",
+        "slide",
+        "summary_thumbnail",
+        "web_dark",
+        "web_light"
+      ],
+      "rendered_visual_states": [
+        {
+          "visual_state_id": "pq_graph_elasticity_two_pairs",
+          "rendered_surfaces": [
+            {
+              "surface_id": "web_light",
+              "renderer": "graph_stage",
+              "svg_path": "reports/procedure-visual-projections/pq_graph_elasticity_two_pairs--web_light.svg",
+              "svg_sha256": "b67ada896b5f05b658d6d3fe610a77e07040876d0ccca4fbc4f1dbdd13dc9ada"
+            },
+            {
+              "surface_id": "web_dark",
+              "renderer": "graph_stage",
+              "svg_path": "reports/procedure-visual-projections/pq_graph_elasticity_two_pairs--web_dark.svg",
+              "svg_sha256": "c6c8399be8c735728618a43774903a68267956bf077f753d91d1433064a1296f"
+            },
+            {
+              "surface_id": "slide",
+              "renderer": "graph_stage",
+              "svg_path": "reports/procedure-visual-projections/pq_graph_elasticity_two_pairs--slide.svg",
+              "svg_sha256": "a074916b7f46b8a40e9a8fccee101e078888f0db13fdb40faad2fa734af758c5"
+            },
+            {
+              "surface_id": "docx",
+              "renderer": "graph_stage",
+              "svg_path": "reports/procedure-visual-projections/pq_graph_elasticity_two_pairs--docx.svg",
+              "svg_sha256": "25336bc4fd6fb3b80d3e0c3b0c166f5bf6e0d3e119676883664c8511517a47ec"
+            },
+            {
+              "surface_id": "summary_thumbnail",
+              "renderer": "graph_stage",
+              "svg_path": "reports/procedure-visual-projections/pq_graph_elasticity_two_pairs--summary_thumbnail.svg",
+              "svg_sha256": "eafc45cab828d404cf893519a8281d1de7f811c013f38e9cf01d670639881399"
+            }
+          ]
+        }
+      ],
+      "all_visual_states_rendered": true
+    },
+    {
+      "template_id": "judge_revenue_change_with_elasticity",
+      "source_unit_ids": [
+        "A84"
+      ],
+      "representation": "source_text_or_table",
+      "economic_context": "market_revenue",
+      "status": "pilot",
+      "operation_reference_status": "provisional",
+      "visual_state_sequence": [
+        {
+          "visual_state_id": "flowchart_elasticity_revenue_effect",
+          "found": true,
+          "visual_type": "flowchart",
+          "semantic_focus": "elasticity_class_to_revenue_direction",
+          "representation": "source_text_or_table"
+        }
+      ],
+      "answer_model_step_order": [
+        {
+          "order": 1,
+          "step_id": "read_elasticity_source",
+          "label_nl": "Lees uit de bron welke prijsverandering, hoeveelheidsverandering of elasticiteitswaarde gegeven is.",
+          "action": "identify_context",
+          "input_refs": [
+            "source_text",
+            "source_table"
+          ],
+          "output_refs": [
+            "elasticity_source_data"
+          ],
+          "visual_state_ref": "flowchart_elasticity_revenue_effect"
+        },
+        {
+          "order": 2,
+          "step_id": "classify_absolute_elasticity",
+          "label_nl": "Bepaal met de absolute waarde of de vraag elastisch, inelastisch of unitair elastisch is.",
+          "action": "interpret_result",
+          "input_refs": [
+            "elasticity_source_data"
+          ],
+          "output_refs": [
+            "elasticity_class"
+          ],
+          "visual_state_ref": "flowchart_elasticity_revenue_effect"
+        },
+        {
+          "order": 3,
+          "step_id": "map_elasticity_to_revenue",
+          "label_nl": "Gebruik de elasticiteitscategorie om te bepalen of omzet mee of tegengesteld beweegt met de prijs.",
+          "action": "flow_step",
+          "input_refs": [
+            "price_change",
+            "elasticity_class"
+          ],
+          "output_refs": [
+            "revenue_direction"
+          ],
+          "visual_state_ref": "flowchart_elasticity_revenue_effect"
+        },
+        {
+          "order": 4,
+          "step_id": "support_with_to_relation",
+          "label_nl": "Onderbouw met TO = P x Q of met de procentuele prijs- en hoeveelheidsverandering.",
+          "action": "interpret_result",
+          "input_refs": [
+            "revenue_direction",
+            "elasticity_source_data"
+          ],
+          "output_refs": [
+            "supported_revenue_judgement"
+          ],
+          "visual_state_ref": "flowchart_elasticity_revenue_effect"
+        }
+      ],
+      "publication_blocked": true,
+      "projection_flags": {
+        "vaardigheden": true,
+        "answer_model": true,
+        "procedure_game": true,
+        "flowchart": true,
+        "formula_trace": false,
+        "graph_stage_sequence": false,
+        "table_trace": false
+      },
+      "blockers": [
+        "operation_ids_provisional_until_registry_gate",
+        "generator_support_pending",
+        "procedure_game_mapping_pending",
+        "visual_renderer_pending",
+        "human_publication_gate_pending"
+      ],
+      "rendered_surfaces": [
+        "docx",
+        "slide",
+        "summary_thumbnail",
+        "web_dark",
+        "web_light"
+      ],
+      "rendered_visual_states": [
+        {
+          "visual_state_id": "flowchart_elasticity_revenue_effect",
+          "rendered_surfaces": [
+            {
+              "surface_id": "web_light",
+              "renderer": "flowchart",
+              "svg_path": "reports/procedure-visual-projections/flowchart_elasticity_revenue_effect--web_light.svg",
+              "svg_sha256": "cd4e649e3c43733f9e43819679367c16cca218020af4b85c4c2de41e288aac2f"
+            },
+            {
+              "surface_id": "web_dark",
+              "renderer": "flowchart",
+              "svg_path": "reports/procedure-visual-projections/flowchart_elasticity_revenue_effect--web_dark.svg",
+              "svg_sha256": "3e21de186af16018875512eabf8d443027d620a8a7605242ca8697a9d920551f"
+            },
+            {
+              "surface_id": "slide",
+              "renderer": "flowchart",
+              "svg_path": "reports/procedure-visual-projections/flowchart_elasticity_revenue_effect--slide.svg",
+              "svg_sha256": "2b5038d0e0fd24961ff954d96bc4cea33012334f71f250f677de271073e08e27"
+            },
+            {
+              "surface_id": "docx",
+              "renderer": "flowchart",
+              "svg_path": "reports/procedure-visual-projections/flowchart_elasticity_revenue_effect--docx.svg",
+              "svg_sha256": "99d4a48498dca24ffc3d348bc151b1c1191f0bf1f3ea9c3ccb318ca45864482a"
+            },
+            {
+              "surface_id": "summary_thumbnail",
+              "renderer": "flowchart",
+              "svg_path": "reports/procedure-visual-projections/flowchart_elasticity_revenue_effect--summary_thumbnail.svg",
+              "svg_sha256": "4f30933339fd44586ad1bf630a6309155390244ad084d6993fbd9a1bc8d3fa01"
+            }
+          ]
+        }
+      ],
+      "all_visual_states_rendered": true
+    }
+  ],
+  "render_results": [
+    {
+      "visual_state_id": "flowchart_opportunity_cost_choice",
+      "visual_type": "flowchart",
+      "surface_id": "web_light",
+      "surface_key": "web_light",
+      "renderer": "flowchart",
+      "status": "rendered",
+      "svg_path": "reports/procedure-visual-projections/flowchart_opportunity_cost_choice--web_light.svg",
+      "svg_sha256": "728a2fe8a2998cdd3f5910cdea4bc114e45e868f5b4f28ee628325464f735eb1",
+      "svg_char_count": 3972,
+      "checks": [
+        "flow_nodes_rendered",
+        "numbered_order_rendered",
+        "annotation_rendered",
+        "meaning_not_color_only",
+        "direct_labels_required"
+      ],
+      "warnings": [],
+      "publication_allowed": false
+    },
+    {
+      "visual_state_id": "flowchart_opportunity_cost_choice",
+      "visual_type": "flowchart",
+      "surface_id": "web_dark",
+      "surface_key": "web_dark",
+      "renderer": "flowchart",
+      "status": "rendered",
+      "svg_path": "reports/procedure-visual-projections/flowchart_opportunity_cost_choice--web_dark.svg",
+      "svg_sha256": "a358b4dccfb292124e6e516b0e5f3ddcd91c28a441216d91670992691e4e5d7c",
+      "svg_char_count": 3972,
+      "checks": [
+        "flow_nodes_rendered",
+        "numbered_order_rendered",
+        "annotation_rendered",
+        "meaning_not_color_only",
+        "direct_labels_required"
+      ],
+      "warnings": [],
+      "publication_allowed": false
+    },
+    {
+      "visual_state_id": "flowchart_opportunity_cost_choice",
+      "visual_type": "flowchart",
+      "surface_id": "slide",
+      "surface_key": "slide",
+      "renderer": "flowchart",
+      "status": "rendered",
+      "svg_path": "reports/procedure-visual-projections/flowchart_opportunity_cost_choice--slide.svg",
+      "svg_sha256": "d03417b10c63154125ff4590a4ab619713deef70cf7f6d30332f22c1acd51f5e",
+      "svg_char_count": 3393,
+      "checks": [
+        "flow_nodes_rendered",
+        "numbered_order_rendered",
+        "annotation_rendered",
+        "meaning_not_color_only",
+        "direct_labels_required"
+      ],
+      "warnings": [],
+      "publication_allowed": false
+    },
+    {
+      "visual_state_id": "flowchart_opportunity_cost_choice",
+      "visual_type": "flowchart",
+      "surface_id": "docx",
+      "surface_key": "doc",
+      "renderer": "flowchart",
+      "status": "rendered",
+      "svg_path": "reports/procedure-visual-projections/flowchart_opportunity_cost_choice--docx.svg",
+      "svg_sha256": "d229a8735a211248f10d8cc76756f23f81ff98edccaf92dad6b0e957561a88c2",
+      "svg_char_count": 3975,
+      "checks": [
+        "flow_nodes_rendered",
+        "numbered_order_rendered",
+        "annotation_rendered",
+        "meaning_not_color_only",
+        "direct_labels_required"
+      ],
+      "warnings": [],
+      "publication_allowed": false
+    },
+    {
+      "visual_state_id": "flowchart_opportunity_cost_choice",
+      "visual_type": "flowchart",
+      "surface_id": "summary_thumbnail",
+      "surface_key": "summary",
+      "renderer": "flowchart",
+      "status": "rendered",
+      "svg_path": "reports/procedure-visual-projections/flowchart_opportunity_cost_choice--summary_thumbnail.svg",
+      "svg_sha256": "319ee41f828f84891ea9c2fd8345d1b3704de7709e4695590a385dda7adefbd0",
+      "svg_char_count": 4304,
+      "checks": [
+        "flow_nodes_rendered",
+        "numbered_order_rendered",
+        "annotation_rendered",
+        "meaning_not_color_only",
+        "direct_labels_required"
+      ],
+      "warnings": [],
+      "publication_allowed": false
+    },
+    {
+      "visual_state_id": "formula_trace_total_revenue_function",
+      "visual_type": "formula_trace",
+      "surface_id": "web_light",
+      "surface_key": "web_light",
+      "renderer": "formula_trace",
+      "status": "rendered",
+      "svg_path": "reports/procedure-visual-projections/formula_trace_total_revenue_function--web_light.svg",
+      "svg_sha256": "922e5f6525ef8ee2953e0247af237ef0690fb1788baa1bd38467e4e0b36b913f",
+      "svg_char_count": 3119,
+      "checks": [
+        "formula_boxes_rendered",
+        "ordered_formula_trace",
+        "annotation_rendered",
+        "meaning_not_color_only",
+        "direct_labels_required"
+      ],
+      "warnings": [],
+      "publication_allowed": false
+    },
+    {
+      "visual_state_id": "formula_trace_total_revenue_function",
+      "visual_type": "formula_trace",
+      "surface_id": "web_dark",
+      "surface_key": "web_dark",
+      "renderer": "formula_trace",
+      "status": "rendered",
+      "svg_path": "reports/procedure-visual-projections/formula_trace_total_revenue_function--web_dark.svg",
+      "svg_sha256": "8e5150117a59cde1602376f0abd5d4175141d38f85e1fb809f933fc755465899",
+      "svg_char_count": 3119,
+      "checks": [
+        "formula_boxes_rendered",
+        "ordered_formula_trace",
+        "annotation_rendered",
+        "meaning_not_color_only",
+        "direct_labels_required"
+      ],
+      "warnings": [],
+      "publication_allowed": false
+    },
+    {
+      "visual_state_id": "formula_trace_total_revenue_function",
+      "visual_type": "formula_trace",
+      "surface_id": "slide",
+      "surface_key": "slide",
+      "renderer": "formula_trace",
+      "status": "rendered",
+      "svg_path": "reports/procedure-visual-projections/formula_trace_total_revenue_function--slide.svg",
+      "svg_sha256": "7a842841393f36b866ce06b676ada79c61aa6822a926dc55b5c0b8f5f29c5879",
+      "svg_char_count": 2533,
+      "checks": [
+        "formula_boxes_rendered",
+        "ordered_formula_trace",
+        "annotation_rendered",
+        "meaning_not_color_only",
+        "direct_labels_required"
+      ],
+      "warnings": [],
+      "publication_allowed": false
+    },
+    {
+      "visual_state_id": "formula_trace_total_revenue_function",
+      "visual_type": "formula_trace",
+      "surface_id": "docx",
+      "surface_key": "doc",
+      "renderer": "formula_trace",
+      "status": "rendered",
+      "svg_path": "reports/procedure-visual-projections/formula_trace_total_revenue_function--docx.svg",
+      "svg_sha256": "f1ec7715270cef05545757ba54f3ac05b7d85380a278b34238911f281d0ed90c",
+      "svg_char_count": 3128,
+      "checks": [
+        "formula_boxes_rendered",
+        "ordered_formula_trace",
+        "annotation_rendered",
+        "meaning_not_color_only",
+        "direct_labels_required"
+      ],
+      "warnings": [],
+      "publication_allowed": false
+    },
+    {
+      "visual_state_id": "table_trace_source_values_selected",
+      "visual_type": "table_trace",
+      "surface_id": "web_light",
+      "surface_key": "web_light",
+      "renderer": "table_trace",
+      "status": "rendered",
+      "svg_path": "reports/procedure-visual-projections/table_trace_source_values_selected--web_light.svg",
+      "svg_sha256": "03a1b461e44814028aa89a6baceee29cc6c6841d709d06ecacd06f852ac19351",
+      "svg_char_count": 3161,
+      "checks": [
+        "table_grid_rendered",
+        "selected_cells_labeled",
+        "annotation_rendered",
+        "meaning_not_color_only",
+        "direct_labels_required"
+      ],
+      "warnings": [],
+      "publication_allowed": false
+    },
+    {
+      "visual_state_id": "table_trace_source_values_selected",
+      "visual_type": "table_trace",
+      "surface_id": "web_dark",
+      "surface_key": "web_dark",
+      "renderer": "table_trace",
+      "status": "rendered",
+      "svg_path": "reports/procedure-visual-projections/table_trace_source_values_selected--web_dark.svg",
+      "svg_sha256": "425e77d9bd505507ebdf2b621c936b7007ccad6e119295061cd19e36c2d5733a",
+      "svg_char_count": 3161,
+      "checks": [
+        "table_grid_rendered",
+        "selected_cells_labeled",
+        "annotation_rendered",
+        "meaning_not_color_only",
+        "direct_labels_required"
+      ],
+      "warnings": [],
+      "publication_allowed": false
+    },
+    {
+      "visual_state_id": "table_trace_source_values_selected",
+      "visual_type": "table_trace",
+      "surface_id": "slide",
+      "surface_key": "slide",
+      "renderer": "table_trace",
+      "status": "rendered",
+      "svg_path": "reports/procedure-visual-projections/table_trace_source_values_selected--slide.svg",
+      "svg_sha256": "39b886ec53dcca64e81f914183899c42e1ebc3b8140f4cd43ef0130ca1d1321a",
+      "svg_char_count": 2572,
+      "checks": [
+        "table_grid_rendered",
+        "selected_cells_labeled",
+        "annotation_rendered",
+        "meaning_not_color_only",
+        "direct_labels_required"
+      ],
+      "warnings": [],
+      "publication_allowed": false
+    },
+    {
+      "visual_state_id": "table_trace_source_values_selected",
+      "visual_type": "table_trace",
+      "surface_id": "docx",
+      "surface_key": "doc",
+      "renderer": "table_trace",
+      "status": "rendered",
+      "svg_path": "reports/procedure-visual-projections/table_trace_source_values_selected--docx.svg",
+      "svg_sha256": "7620459b6764afbc0b58f3f243659b8860fb79b9f1992024db67f4ccaa4412e5",
+      "svg_char_count": 3174,
+      "checks": [
+        "table_grid_rendered",
+        "selected_cells_labeled",
+        "annotation_rendered",
+        "meaning_not_color_only",
+        "direct_labels_required"
+      ],
+      "warnings": [],
+      "publication_allowed": false
+    },
+    {
+      "visual_state_id": "table_trace_source_values_selected",
+      "visual_type": "table_trace",
+      "surface_id": "summary_thumbnail",
+      "surface_key": "summary",
+      "renderer": "table_trace",
+      "status": "rendered",
+      "svg_path": "reports/procedure-visual-projections/table_trace_source_values_selected--summary_thumbnail.svg",
+      "svg_sha256": "153c178cd97000bf4df0fde33aca008459f1dc0191497b6005ef255b3b8c8c9b",
+      "svg_char_count": 3160,
+      "checks": [
+        "table_grid_rendered",
+        "selected_cells_labeled",
+        "annotation_rendered",
+        "meaning_not_color_only",
+        "direct_labels_required"
+      ],
+      "warnings": [],
+      "publication_allowed": false
+    },
+    {
+      "visual_state_id": "table_trace_elasticity_pairs_selected",
+      "visual_type": "table_trace",
+      "surface_id": "web_light",
+      "surface_key": "web_light",
+      "renderer": "table_trace",
+      "status": "rendered",
+      "svg_path": "reports/procedure-visual-projections/table_trace_elasticity_pairs_selected--web_light.svg",
+      "svg_sha256": "86c879639df9380acb4da6c96487d0487d9a58c816f6eb31bd80b2382a69fedc",
+      "svg_char_count": 4040,
+      "checks": [
+        "table_grid_rendered",
+        "selected_cells_labeled",
+        "annotation_rendered",
+        "meaning_not_color_only",
+        "direct_labels_required"
+      ],
+      "warnings": [],
+      "publication_allowed": false
+    },
+    {
+      "visual_state_id": "table_trace_elasticity_pairs_selected",
+      "visual_type": "table_trace",
+      "surface_id": "web_dark",
+      "surface_key": "web_dark",
+      "renderer": "table_trace",
+      "status": "rendered",
+      "svg_path": "reports/procedure-visual-projections/table_trace_elasticity_pairs_selected--web_dark.svg",
+      "svg_sha256": "a89bdf5ccee4d63b9f1e09283cd8c36177701234c3f77db5a5c3e840cf25b652",
+      "svg_char_count": 4040,
+      "checks": [
+        "table_grid_rendered",
+        "selected_cells_labeled",
+        "annotation_rendered",
+        "meaning_not_color_only",
+        "direct_labels_required"
+      ],
+      "warnings": [],
+      "publication_allowed": false
+    },
+    {
+      "visual_state_id": "table_trace_elasticity_pairs_selected",
+      "visual_type": "table_trace",
+      "surface_id": "slide",
+      "surface_key": "slide",
+      "renderer": "table_trace",
+      "status": "rendered",
+      "svg_path": "reports/procedure-visual-projections/table_trace_elasticity_pairs_selected--slide.svg",
+      "svg_sha256": "afcf9279ac0dbff23b0a6cb4b7bf3612b7e0a68bb6694ad25bd9ef3b6de54925",
+      "svg_char_count": 3452,
+      "checks": [
+        "table_grid_rendered",
+        "selected_cells_labeled",
+        "annotation_rendered",
+        "meaning_not_color_only",
+        "direct_labels_required"
+      ],
+      "warnings": [],
+      "publication_allowed": false
+    },
+    {
+      "visual_state_id": "table_trace_elasticity_pairs_selected",
+      "visual_type": "table_trace",
+      "surface_id": "docx",
+      "surface_key": "doc",
+      "renderer": "table_trace",
+      "status": "rendered",
+      "svg_path": "reports/procedure-visual-projections/table_trace_elasticity_pairs_selected--docx.svg",
+      "svg_sha256": "b51e0bd466d70fe750c9e80e2e12629f841edd11557263a396c025d065ef3572",
+      "svg_char_count": 4043,
+      "checks": [
+        "table_grid_rendered",
+        "selected_cells_labeled",
+        "annotation_rendered",
+        "meaning_not_color_only",
+        "direct_labels_required"
+      ],
+      "warnings": [],
+      "publication_allowed": false
+    },
+    {
+      "visual_state_id": "pq_graph_elasticity_two_pairs",
+      "visual_type": "graph_stage",
+      "surface_id": "web_light",
+      "surface_key": "web_light",
+      "renderer": "graph_stage",
+      "status": "rendered",
+      "svg_path": "reports/procedure-visual-projections/pq_graph_elasticity_two_pairs--web_light.svg",
+      "svg_sha256": "b67ada896b5f05b658d6d3fe610a77e07040876d0ccca4fbc4f1dbdd13dc9ada",
+      "svg_char_count": 4121,
+      "checks": [
+        "axes_rendered",
+        "direct_labels_rendered",
+        "points_or_curves_rendered",
+        "annotation_rendered",
+        "meaning_not_color_only",
+        "direct_labels_required"
+      ],
+      "warnings": [],
+      "publication_allowed": false
+    },
+    {
+      "visual_state_id": "pq_graph_elasticity_two_pairs",
+      "visual_type": "graph_stage",
+      "surface_id": "web_dark",
+      "surface_key": "web_dark",
+      "renderer": "graph_stage",
+      "status": "rendered",
+      "svg_path": "reports/procedure-visual-projections/pq_graph_elasticity_two_pairs--web_dark.svg",
+      "svg_sha256": "c6c8399be8c735728618a43774903a68267956bf077f753d91d1433064a1296f",
+      "svg_char_count": 4121,
+      "checks": [
+        "axes_rendered",
+        "direct_labels_rendered",
+        "points_or_curves_rendered",
+        "annotation_rendered",
+        "meaning_not_color_only",
+        "direct_labels_required"
+      ],
+      "warnings": [],
+      "publication_allowed": false
+    },
+    {
+      "visual_state_id": "pq_graph_elasticity_two_pairs",
+      "visual_type": "graph_stage",
+      "surface_id": "slide",
+      "surface_key": "slide",
+      "renderer": "graph_stage",
+      "status": "rendered",
+      "svg_path": "reports/procedure-visual-projections/pq_graph_elasticity_two_pairs--slide.svg",
+      "svg_sha256": "a074916b7f46b8a40e9a8fccee101e078888f0db13fdb40faad2fa734af758c5",
+      "svg_char_count": 3540,
+      "checks": [
+        "axes_rendered",
+        "direct_labels_rendered",
+        "points_or_curves_rendered",
+        "annotation_rendered",
+        "meaning_not_color_only",
+        "direct_labels_required"
+      ],
+      "warnings": [],
+      "publication_allowed": false
+    },
+    {
+      "visual_state_id": "pq_graph_elasticity_two_pairs",
+      "visual_type": "graph_stage",
+      "surface_id": "docx",
+      "surface_key": "doc",
+      "renderer": "graph_stage",
+      "status": "rendered",
+      "svg_path": "reports/procedure-visual-projections/pq_graph_elasticity_two_pairs--docx.svg",
+      "svg_sha256": "25336bc4fd6fb3b80d3e0c3b0c166f5bf6e0d3e119676883664c8511517a47ec",
+      "svg_char_count": 4125,
+      "checks": [
+        "axes_rendered",
+        "direct_labels_rendered",
+        "points_or_curves_rendered",
+        "annotation_rendered",
+        "meaning_not_color_only",
+        "direct_labels_required"
+      ],
+      "warnings": [],
+      "publication_allowed": false
+    },
+    {
+      "visual_state_id": "pq_graph_elasticity_two_pairs",
+      "visual_type": "graph_stage",
+      "surface_id": "summary_thumbnail",
+      "surface_key": "summary",
+      "renderer": "graph_stage",
+      "status": "rendered",
+      "svg_path": "reports/procedure-visual-projections/pq_graph_elasticity_two_pairs--summary_thumbnail.svg",
+      "svg_sha256": "eafc45cab828d404cf893519a8281d1de7f811c013f38e9cf01d670639881399",
+      "svg_char_count": 4031,
+      "checks": [
+        "axes_rendered",
+        "direct_labels_rendered",
+        "points_or_curves_rendered",
+        "annotation_rendered",
+        "meaning_not_color_only",
+        "direct_labels_required"
+      ],
+      "warnings": [],
+      "publication_allowed": false
+    },
+    {
+      "visual_state_id": "flowchart_elasticity_revenue_effect",
+      "visual_type": "flowchart",
+      "surface_id": "web_light",
+      "surface_key": "web_light",
+      "renderer": "flowchart",
+      "status": "rendered",
+      "svg_path": "reports/procedure-visual-projections/flowchart_elasticity_revenue_effect--web_light.svg",
+      "svg_sha256": "cd4e649e3c43733f9e43819679367c16cca218020af4b85c4c2de41e288aac2f",
+      "svg_char_count": 4188,
+      "checks": [
+        "flow_nodes_rendered",
+        "numbered_order_rendered",
+        "annotation_rendered",
+        "meaning_not_color_only",
+        "direct_labels_required"
+      ],
+      "warnings": [],
+      "publication_allowed": false
+    },
+    {
+      "visual_state_id": "flowchart_elasticity_revenue_effect",
+      "visual_type": "flowchart",
+      "surface_id": "web_dark",
+      "surface_key": "web_dark",
+      "renderer": "flowchart",
+      "status": "rendered",
+      "svg_path": "reports/procedure-visual-projections/flowchart_elasticity_revenue_effect--web_dark.svg",
+      "svg_sha256": "3e21de186af16018875512eabf8d443027d620a8a7605242ca8697a9d920551f",
+      "svg_char_count": 4188,
+      "checks": [
+        "flow_nodes_rendered",
+        "numbered_order_rendered",
+        "annotation_rendered",
+        "meaning_not_color_only",
+        "direct_labels_required"
+      ],
+      "warnings": [],
+      "publication_allowed": false
+    },
+    {
+      "visual_state_id": "flowchart_elasticity_revenue_effect",
+      "visual_type": "flowchart",
+      "surface_id": "slide",
+      "surface_key": "slide",
+      "renderer": "flowchart",
+      "status": "rendered",
+      "svg_path": "reports/procedure-visual-projections/flowchart_elasticity_revenue_effect--slide.svg",
+      "svg_sha256": "2b5038d0e0fd24961ff954d96bc4cea33012334f71f250f677de271073e08e27",
+      "svg_char_count": 3602,
+      "checks": [
+        "flow_nodes_rendered",
+        "numbered_order_rendered",
+        "annotation_rendered",
+        "meaning_not_color_only",
+        "direct_labels_required"
+      ],
+      "warnings": [],
+      "publication_allowed": false
+    },
+    {
+      "visual_state_id": "flowchart_elasticity_revenue_effect",
+      "visual_type": "flowchart",
+      "surface_id": "docx",
+      "surface_key": "doc",
+      "renderer": "flowchart",
+      "status": "rendered",
+      "svg_path": "reports/procedure-visual-projections/flowchart_elasticity_revenue_effect--docx.svg",
+      "svg_sha256": "99d4a48498dca24ffc3d348bc151b1c1191f0bf1f3ea9c3ccb318ca45864482a",
+      "svg_char_count": 4191,
+      "checks": [
+        "flow_nodes_rendered",
+        "numbered_order_rendered",
+        "annotation_rendered",
+        "meaning_not_color_only",
+        "direct_labels_required"
+      ],
+      "warnings": [],
+      "publication_allowed": false
+    },
+    {
+      "visual_state_id": "flowchart_elasticity_revenue_effect",
+      "visual_type": "flowchart",
+      "surface_id": "summary_thumbnail",
+      "surface_key": "summary",
+      "renderer": "flowchart",
+      "status": "rendered",
+      "svg_path": "reports/procedure-visual-projections/flowchart_elasticity_revenue_effect--summary_thumbnail.svg",
+      "svg_sha256": "4f30933339fd44586ad1bf630a6309155390244ad084d6993fbd9a1bc8d3fa01",
+      "svg_char_count": 4184,
+      "checks": [
+        "flow_nodes_rendered",
+        "numbered_order_rendered",
+        "annotation_rendered",
+        "meaning_not_color_only",
+        "direct_labels_required"
+      ],
+      "warnings": [],
+      "publication_allowed": false
+    }
+  ],
+  "procedure_game_alignment_proof": {
+    "source_report": "reports/json/procedure-game-template-alignment.json",
+    "mapped_pilot_count": 1,
+    "legacy_unmapped_count": 1,
+    "student_facing_projection_allowed": false
+  },
+  "checks": [
+    {
+      "id": "pv_registry_validates",
+      "status": "passed",
+      "detail": "undefined templates and undefined visual states validate."
+    },
+    {
+      "id": "renderer:formula_trace",
+      "status": "passed",
+      "detail": "4 SVG projection(s) rendered."
+    },
+    {
+      "id": "renderer:flowchart",
+      "status": "passed",
+      "detail": "10 SVG projection(s) rendered."
+    },
+    {
+      "id": "renderer:table_trace",
+      "status": "passed",
+      "detail": "9 SVG projection(s) rendered."
+    },
+    {
+      "id": "renderer:graph_stage",
+      "status": "passed",
+      "detail": "5 SVG projection(s) rendered."
+    },
+    {
+      "id": "surface:web_light",
+      "status": "passed",
+      "detail": "6 SVG projection(s) rendered."
+    },
+    {
+      "id": "surface:web_dark",
+      "status": "passed",
+      "detail": "6 SVG projection(s) rendered."
+    },
+    {
+      "id": "surface:slide",
+      "status": "passed",
+      "detail": "6 SVG projection(s) rendered."
+    },
+    {
+      "id": "surface:docx",
+      "status": "passed",
+      "detail": "6 SVG projection(s) rendered."
+    },
+    {
+      "id": "one_pilot_core_surfaces",
+      "status": "passed",
+      "detail": "At least one pilot template renders web_light, web_dark, slide, and docx/doc proof surfaces."
+    },
+    {
+      "id": "procedure_game_alignment_available",
+      "status": "passed",
+      "detail": "1 mapped procedure-game pilot(s) available from PV.4."
+    },
+    {
+      "id": "answer_model_step_order_available",
+      "status": "passed",
+      "detail": "6 template(s) expose ordered student-visible procedure steps."
+    },
+    {
+      "id": "publication_blocked",
+      "status": "passed",
+      "detail": "6/6 templates and 6/6 visual states block student-facing publication."
+    },
+    {
+      "id": "no_machine_pv_registry",
+      "status": "passed",
+      "detail": "No references/machine Procedure-Visual registry exists."
+    }
+  ],
+  "blocked_scope": [
+    "references/machine Procedure-Visual registries",
+    "student-facing PV projection",
+    "dynamic graph manipulation",
+    "forced procedure-game migration",
+    "visual publication into lesson targets",
+    "student diagnostics",
+    "adaptive routing",
+    "student-facing AI",
+    "automatic sequencing",
+    "mastery decisions",
+    "summative use"
+  ]
+}

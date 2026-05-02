@@ -1,0 +1,85 @@
+{
+  "sprint_id": "PV.5",
+  "name": "Visual Projection MVP",
+  "status": "completed",
+  "completed_on": "2026-05-02",
+  "plan": "docs/sprints/PV.5-plan.md",
+  "baseline": "reports/sprints/PV.5-baseline.md",
+  "result": "reports/sprints/PV.5-result.md",
+  "diff_summary": "reports/sprints/PV.5-diff-summary.md",
+  "technical_gate_id": "GATE-PV5-visual-projection-mvp",
+  "protected_reference_data_changed": false,
+  "machine_registry_created": false,
+  "student_facing_projection_authorized": false,
+  "dynamic_graph_manipulation_authorized": false,
+  "lesson_target_write_authorized": false,
+  "render_result_count": 28,
+  "renderer_counts": {
+    "flowchart": 10,
+    "formula_trace": 4,
+    "table_trace": 9,
+    "graph_stage": 5
+  },
+  "surface_counts": {
+    "web_light": 6,
+    "web_dark": 6,
+    "slide": 6,
+    "docx": 6,
+    "summary_thumbnail": 4
+  },
+  "mapped_procedure_game_pilot_count": 1,
+  "outputs": [
+    "build-scripts/lib/lib-procedure-visual.js",
+    "build-scripts/lib/lib-visual-state-renderer.js",
+    "build-scripts/lib/lib-formula-trace-renderer.js",
+    "build-scripts/lib/lib-flowchart-renderer.js",
+    "build-scripts/lib/lib-table-trace-renderer.js",
+    "build-scripts/lib/lib-graph-stage-renderer.js",
+    "reports/json/procedure-visual-projection-mvp.json",
+    "reports/markdown/procedure-visual-projection-mvp.md",
+    "reports/procedure-visual-projections"
+  ],
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js docs/sprints/PV.5-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/validate-procedure-visual-registry.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/build-procedure-visual-projection-mvp.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-procedure-visual-projection-mvp.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-gate-bundle-urls.js GATE-PV5-visual-projection-mvp",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-bundle-urls.js GATE-PV5-visual-projection-mvp",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js PV.5",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-result.js reports/sprints/PV.5-result.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js PV.5 --complete",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-roadmap-version-index.js",
+      "status": "passed"
+    }
+  ],
+  "next_required_step": "Proceed to PV.6 Coverage Reports And Dashboard Integration. Keep PV render output report-side only until later publication gates."
+}

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="648" viewBox="0 0 960 648" role="img" aria-label="two_price_quantity_pairs_before_elasticity_calculation">
+    
+      <rect width="960" height="648" rx="28" fill="#fbf8ef"/>
+      <rect x="32" y="32" width="896" height="584" rx="24" fill="#ffffff" stroke="#d9d0be" stroke-width="1.5"/>
+    
+    <line x1="307.5" y1="50" x2="307.5" y2="524" stroke="#e9dfcc" stroke-width="1"/><line x1="124" y1="416.5" x2="858" y2="416.5" stroke="#e9dfcc" stroke-width="1"/><line x1="491" y1="50" x2="491" y2="524" stroke="#e9dfcc" stroke-width="1"/><line x1="124" y1="309" x2="858" y2="309" stroke="#e9dfcc" stroke-width="1"/><line x1="674.5" y1="50" x2="674.5" y2="524" stroke="#e9dfcc" stroke-width="1"/><line x1="124" y1="201.5" x2="858" y2="201.5" stroke="#e9dfcc" stroke-width="1"/><line x1="858" y1="50" x2="858" y2="524" stroke="#e9dfcc" stroke-width="1"/><line x1="124" y1="94" x2="858" y2="94" stroke="#e9dfcc" stroke-width="1"/>
+    <line x1="124" y1="524" x2="858" y2="524" stroke="#1b1a17" stroke-width="3"/>
+    <line x1="124" y1="524" x2="124" y2="50" stroke="#1b1a17" stroke-width="3"/>
+    <text x="858" y="558" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="800" letter-spacing="0" font-style="" fill="#1b1a17">Q</text>
+    <text x="96" y="68" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="800" letter-spacing="0" font-style="" fill="#1b1a17">P</text>
+    <text x="94" y="92" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="600" letter-spacing="0" font-style="" fill="#4a463d">euro</text>
+    
+        <path d="M 142 188.59999999999997 C 380.9 150.59999999999997, 586.4200000000001 488.6, 840 446.6" fill="none" stroke="#17A2B8" stroke-width="4"/>
+        <text x="768" y="436.6" text-anchor="start" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="800" letter-spacing="0" font-style="" fill="#17A2B8">vraag</text>
+      
+    
+      <line x1="358.88" y1="369.20000000000005" x2="358.88" y2="524" stroke="#82796d" stroke-width="1.5" stroke-dasharray="5 5"/>
+      <line x1="124" y1="369.20000000000005" x2="358.88" y2="369.20000000000005" stroke="#82796d" stroke-width="1.5" stroke-dasharray="5 5"/>
+      <circle cx="358.88" cy="369.20000000000005" r="9" fill="#d08732" stroke="#ffffff" stroke-width="3"/>
+      <text x="370.88" y="359.20000000000005" text-anchor="start" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="800" letter-spacing="0" font-style="" fill="#1b1a17">P oud, Q oud</text>
+    
+      <line x1="608.44" y1="257.4" x2="608.44" y2="524" stroke="#82796d" stroke-width="1.5" stroke-dasharray="5 5"/>
+      <line x1="124" y1="257.4" x2="608.44" y2="257.4" stroke="#82796d" stroke-width="1.5" stroke-dasharray="5 5"/>
+      <circle cx="608.44" cy="257.4" r="9" fill="#d08732" stroke="#ffffff" stroke-width="3"/>
+      <text x="620.44" y="247.39999999999998" text-anchor="start" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="800" letter-spacing="0" font-style="" fill="#1b1a17">P nieuw, Q nieuw</text>
+    
+    
+    <rect x="197.4" y="62" width="587.2" height="72" rx="10" fill="#efe8d7" stroke="#d9d0be" stroke-width="1" opacity="0.96"/>
+    <text x="215.4" y="90" text-anchor="start" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="600" letter-spacing="0" font-style="" fill="#1b1a17">Lees eerst twee P,Q-paren af; pas daarna bereken je elasticiteit.</text>
+  
+  </svg>

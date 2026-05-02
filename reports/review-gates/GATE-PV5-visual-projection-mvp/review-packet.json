@@ -1,0 +1,23 @@
+{
+  "gate_id": "GATE-PV5-visual-projection-mvp",
+  "sprint_id": "PV.5",
+  "status": "technical_report_gate",
+  "generated_by": "build-scripts/references/build-procedure-visual-projection-mvp.js",
+  "generated_on": "2026-05-02T11:42:06.432Z",
+  "mutation_authorized": false,
+  "machine_registry_created": false,
+  "student_facing_projection_authorized": false,
+  "dynamic_graph_manipulation_authorized": false,
+  "evidence": {
+    "projection_report": "reports/json/procedure-visual-projection-mvp.json",
+    "svg_directory": "reports/procedure-visual-projections",
+    "procedure_game_alignment_report": "reports/json/procedure-game-template-alignment.json"
+  },
+  "review_questions": [
+    "Do all four non-dynamic PV renderer families produce proof artifacts?",
+    "Do core surfaces render for at least one pilot template?",
+    "Is procedure-game alignment available without forced migration?",
+    "Are answer-model step orders available from PV templates?",
+    "Are publication and machine-promotion blocks preserved?"
+  ]
+}

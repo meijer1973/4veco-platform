@@ -1,0 +1,30 @@
+{
+  "sprint_id": "PV.5",
+  "name": "Visual Projection MVP",
+  "status": "planned",
+  "plan": "docs/sprints/PV.5-plan.md",
+  "baseline": "reports/sprints/PV.5-baseline.md",
+  "gate_id": "GATE-PV5-visual-projection-mvp",
+  "human_review_required": false,
+  "protected_reference_data_changes_allowed": false,
+  "machine_registry_promotion_authorized": false,
+  "student_facing_projection_authorized": false,
+  "dynamic_graph_manipulation_authorized": false,
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js docs/sprints/PV.5-plan.md",
+    "node build-scripts/references/validate-procedure-visual-registry.js",
+    "node build-scripts/references/build-procedure-visual-projection-mvp.js",
+    "node build-scripts/references/check-procedure-visual-projection-mvp.js",
+    "node build-scripts/sprints/emit-gate-bundle-urls.js GATE-PV5-visual-projection-mvp",
+    "node build-scripts/sprints/check-bundle-urls.js GATE-PV5-visual-projection-mvp",
+    "node build-scripts/sprints/check-sprint-bundle.js PV.5",
+    "node build-scripts/sprints/check-sprint-result.js reports/sprints/PV.5-result.md",
+    "node build-scripts/sprints/check-sprint-bundle.js PV.5 --complete",
+    "node build-scripts/references/check-roadmap-version-index.js"
+  ],
+  "forbidden_outputs": [
+    "references/machine/procedure-templates.json",
+    "references/machine/visual-states.json",
+    "references/machine/procedure-visual-vocab.json"
+  ]
+}

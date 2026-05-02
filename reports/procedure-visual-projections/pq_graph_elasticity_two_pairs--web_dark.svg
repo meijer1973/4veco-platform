@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-label="two_price_quantity_pairs_before_elasticity_calculation">
+    
+    <rect width="960" height="540" rx="28" fill="#0f1419"/>
+    <rect x="32" y="32" width="896" height="476" rx="24" fill="#1c232c" stroke="#364253" stroke-width="1.5"/>
+    <text x="64" y="74" text-anchor="start" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="800" letter-spacing="2" font-style="" fill="#17A2B8">COMPANION VISUAL</text>
+    <text x="64" y="114" text-anchor="start" font-family="Fraunces, Georgia, serif" font-size="34" font-weight="700" letter-spacing="0" font-style="italic" fill="#f2efe8">Grafiekfase</text>
+    <text x="64" y="146" text-anchor="start" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="500" letter-spacing="0" font-style="" fill="#c9c2b8">two_price_quantity_pairs_before_elasticity_calculation</text>
+  
+    <line x1="307.5" y1="154" x2="307.5" y2="416" stroke="#2a3440" stroke-width="1"/><line x1="124" y1="361.5" x2="858" y2="361.5" stroke="#2a3440" stroke-width="1"/><line x1="491" y1="154" x2="491" y2="416" stroke="#2a3440" stroke-width="1"/><line x1="124" y1="307" x2="858" y2="307" stroke="#2a3440" stroke-width="1"/><line x1="674.5" y1="154" x2="674.5" y2="416" stroke="#2a3440" stroke-width="1"/><line x1="124" y1="252.5" x2="858" y2="252.5" stroke="#2a3440" stroke-width="1"/><line x1="858" y1="154" x2="858" y2="416" stroke="#2a3440" stroke-width="1"/><line x1="124" y1="198" x2="858" y2="198" stroke="#2a3440" stroke-width="1"/>
+    <line x1="124" y1="416" x2="858" y2="416" stroke="#f2efe8" stroke-width="3"/>
+    <line x1="124" y1="416" x2="124" y2="154" stroke="#f2efe8" stroke-width="3"/>
+    <text x="858" y="450" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="800" letter-spacing="0" font-style="" fill="#f2efe8">Q</text>
+    <text x="96" y="172" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="800" letter-spacing="0" font-style="" fill="#f2efe8">P</text>
+    <text x="94" y="196" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="600" letter-spacing="0" font-style="" fill="#c9c2b8">euro</text>
+    
+        <path d="M 142 245.96 C 380.9 207.96, 586.4200000000001 418.76, 840 376.76" fill="none" stroke="#2dd4bf" stroke-width="4"/>
+        <text x="768" y="366.76" text-anchor="start" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="800" letter-spacing="0" font-style="" fill="#2dd4bf">vraag</text>
+      
+    
+      <line x1="358.88" y1="337.52" x2="358.88" y2="416" stroke="#909aa8" stroke-width="1.5" stroke-dasharray="5 5"/>
+      <line x1="124" y1="337.52" x2="358.88" y2="337.52" stroke="#909aa8" stroke-width="1.5" stroke-dasharray="5 5"/>
+      <circle cx="358.88" cy="337.52" r="9" fill="#fbbf24" stroke="#1c232c" stroke-width="3"/>
+      <text x="370.88" y="327.52" text-anchor="start" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="800" letter-spacing="0" font-style="" fill="#f2efe8">P oud, Q oud</text>
+    
+      <line x1="608.44" y1="280.84000000000003" x2="608.44" y2="416" stroke="#909aa8" stroke-width="1.5" stroke-dasharray="5 5"/>
+      <line x1="124" y1="280.84000000000003" x2="608.44" y2="280.84000000000003" stroke="#909aa8" stroke-width="1.5" stroke-dasharray="5 5"/>
+      <circle cx="608.44" cy="280.84000000000003" r="9" fill="#fbbf24" stroke="#1c232c" stroke-width="3"/>
+      <text x="620.44" y="270.84000000000003" text-anchor="start" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="800" letter-spacing="0" font-style="" fill="#f2efe8">P nieuw, Q nieuw</text>
+    
+    
+    <rect x="197.4" y="166" width="587.2" height="72" rx="10" fill="#0c1015" stroke="#364253" stroke-width="1" opacity="0.96"/>
+    <text x="215.4" y="194" text-anchor="start" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="600" letter-spacing="0" font-style="" fill="#f2efe8">Lees eerst twee P,Q-paren af; pas daarna bereken je elasticiteit.</text>
+  
+  </svg>

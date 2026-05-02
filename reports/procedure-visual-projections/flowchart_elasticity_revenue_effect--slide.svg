@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="648" viewBox="0 0 960 648" role="img" aria-label="elasticity_class_to_revenue_direction">
+    
+      <rect width="960" height="648" rx="28" fill="#fbf8ef"/>
+      <rect x="32" y="32" width="896" height="584" rx="24" fill="#ffffff" stroke="#d9d0be" stroke-width="1.5"/>
+    
+    
+      <rect x="68" y="76" width="192" height="112" rx="12" fill="#e5f4ea" stroke="#2f7d4a" stroke-width="2"/>
+      <text x="84" y="104" text-anchor="start" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="800" letter-spacing="0" font-style="" fill="#2f7d4a">Stap 1</text>
+      <text x="84" y="132" text-anchor="start" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="650" letter-spacing="0" font-style="" fill="#1b1a17">prijsverandering</text>
+      <text x="269" y="140" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="800" letter-spacing="0" font-style="" fill="#2f7d4a">&gt;</text>
+    
+      <rect x="278" y="76" width="192" height="112" rx="12" fill="#e5f4ea" stroke="#2f7d4a" stroke-width="2"/>
+      <text x="294" y="104" text-anchor="start" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="800" letter-spacing="0" font-style="" fill="#2f7d4a">Stap 2</text>
+      <text x="294" y="132" text-anchor="start" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="650" letter-spacing="0" font-style="" fill="#1b1a17">|Ev| elastisch,</text><text x="294" y="154" text-anchor="start" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="650" letter-spacing="0" font-style="" fill="#1b1a17">inelastisch of</text><text x="294" y="176" text-anchor="start" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="650" letter-spacing="0" font-style="" fill="#1b1a17">unitair</text>
+      <text x="479" y="140" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="800" letter-spacing="0" font-style="" fill="#2f7d4a">&gt;</text>
+    
+      <rect x="488" y="76" width="192" height="112" rx="12" fill="#e5f4ea" stroke="#2f7d4a" stroke-width="2"/>
+      <text x="504" y="104" text-anchor="start" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="800" letter-spacing="0" font-style="" fill="#2f7d4a">Stap 3</text>
+      <text x="504" y="132" text-anchor="start" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="650" letter-spacing="0" font-style="" fill="#1b1a17">hoeveelheidsreactie</text>
+      <text x="689" y="140" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="800" letter-spacing="0" font-style="" fill="#2f7d4a">&gt;</text>
+    
+      <rect x="698" y="76" width="192" height="112" rx="12" fill="#e5f4ea" stroke="#2f7d4a" stroke-width="2"/>
+      <text x="714" y="104" text-anchor="start" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="800" letter-spacing="0" font-style="" fill="#2f7d4a">Stap 4</text>
+      <text x="714" y="132" text-anchor="start" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="650" letter-spacing="0" font-style="" fill="#1b1a17">omzeteffect</text>
+      
+    
+    
+    <rect x="68" y="236" width="824" height="94" rx="10" fill="#efe8d7" stroke="#d9d0be" stroke-width="1"/>
+    <text x="92" y="266" text-anchor="start" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="500" letter-spacing="0" font-style="" fill="#1b1a17">Bij elastische vraag beweegt omzet tegengesteld aan de prijs; bij inelastische vraag beweegt omzet mee.</text>
+  
+  </svg>
