@@ -1,6 +1,6 @@
 # Reference Health
 
-Generated: 2026-05-02T07:11:45.374Z
+Generated: 2026-05-02T12:13:00.855Z
 
 ## Unit Counts
 
@@ -18,8 +18,8 @@ Generated: 2026-05-02T07:11:45.374Z
 
 ## QC Findings
 
-- Reports: 13
-- Total issues: 446
+- Reports: 14
+- Total issues: 448
 - High/critical issues: 10
 
 ## Quality Issue Model
@@ -29,6 +29,18 @@ Generated: 2026-05-02T07:11:45.374Z
 - Internal only: true
 - Curriculum authority: false
 - Student-facing exposure: false
+
+## Procedure-Visual Backbone
+
+- Status: passed
+- Diagnostic only: true
+- Curriculum authority: false
+- Student-facing projection authorized: false
+- PV-linked units: 6
+- Templates: 6
+- Visual states: 6
+- Units with surface variants: 6
+- Units generator-blocked: 4
 
 ## Retrieval Evaluation
 

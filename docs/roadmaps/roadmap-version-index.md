@@ -12,12 +12,13 @@ docs/roadmaps/roadmap-version-index.json
 
 | Roadmap | Version | Path | Notes |
 |---|---|---|---|
-| References Team Roadmap | `v2.34-pv5-visual-projection-mvp` | `references/reference-team-roadmap.md` | Current operating roadmap after completing PV.5 visual projection MVP; PV.6 is the next sprint. |
+| References Team Roadmap | `v2.35-pv6-coverage-dashboard` | `references/reference-team-roadmap.md` | Current operating roadmap after completing PV.6 coverage dashboard integration; RX.6 is the next sprint. |
 
 ## Outdated Archive
 
 | Roadmap | Version | Path | Superseded By |
 |---|---|---|---|
+| References Team Roadmap before PV.6 coverage dashboard integration | `v2.34-pv5-visual-projection-mvp` | `docs/roadmaps/outdated/reference-team-roadmap-v2.34-pv5-visual-projection-mvp.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before PV.5 visual projection MVP | `v2.33-rx5-representation-operation-reports` | `docs/roadmaps/outdated/reference-team-roadmap-v2.33-rx5-representation-operation-reports.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before RX.5 representation-operation reports | `v2.32-pv4-procedure-game-contract` | `docs/roadmaps/outdated/reference-team-roadmap-v2.32-pv4-procedure-game-contract.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before PV.4 procedure-game contract | `v2.31-pv3-pilot-procedure-visual-templates` | `docs/roadmaps/outdated/reference-team-roadmap-v2.31-pv3-pilot-procedure-visual-templates.md` | `references/reference-team-roadmap.md` |

@@ -60,6 +60,7 @@ function main() {
     'alignment-graph-integrity',
     'evidence-anchor-status',
     'reference-quality-issues',
+    'procedure-visual-coverage',
   ].map(report);
 
   const issueCount = reports.reduce((sum, item) => sum + (item.issues || []).length, 0);
@@ -71,6 +72,7 @@ function main() {
   const examGaps = readJson('reports/json/exam-question-extraction-gaps.json', null);
   const retrievalEval = readJson('references/data/rag/retrieval_eval_results.json', null);
   const qualityIssueReport = report('reference-quality-issues');
+  const procedureVisualCoverage = report('procedure-visual-coverage');
   const qualityIssueLog = readJson('references/data/qc/reference-quality-issues.json', {
     authority_boundary: {
       internal_only: true,
@@ -93,6 +95,7 @@ function main() {
       'references/data/alignment-graph.json',
       'reports/review-gates/GATE-R5-alignment-graph/gate-closure.json',
       'reports/review-gates/GATE-R7-rag/gate-closure.json',
+      'reports/json/procedure-visual-coverage.json',
       'reports/json/*.json',
     ],
     unit_counts: {
@@ -145,6 +148,25 @@ function main() {
       curriculum_authority: qualityIssueLog.authority_boundary && qualityIssueLog.authority_boundary.curriculum_authority === true,
       student_facing_exposure: qualityIssueLog.authority_boundary && qualityIssueLog.authority_boundary.student_facing_exposure === true,
       primary_evidence: qualityIssueLog.authority_boundary && qualityIssueLog.authority_boundary.primary_evidence === true,
+    },
+    procedure_visual_backbone: {
+      source: 'reports/json/procedure-visual-coverage.json',
+      status: procedureVisualCoverage.status,
+      diagnostic_only: procedureVisualCoverage.policy && procedureVisualCoverage.policy.diagnostic_only === true,
+      curriculum_authority: procedureVisualCoverage.policy && procedureVisualCoverage.policy.curriculum_authority === true,
+      machine_registry_created: procedureVisualCoverage.policy && procedureVisualCoverage.policy.machine_registry_created === true,
+      student_facing_projection_authorized: procedureVisualCoverage.policy && procedureVisualCoverage.policy.student_facing_projection_authorized === true,
+      generator_exposure_authorized: procedureVisualCoverage.policy && procedureVisualCoverage.policy.generator_exposure_authorized === true,
+      pv_linked_unit_count: procedureVisualCoverage.summary && procedureVisualCoverage.summary.pv_linked_unit_count || 0,
+      template_count: procedureVisualCoverage.summary && procedureVisualCoverage.summary.template_count || 0,
+      visual_state_count: procedureVisualCoverage.summary && procedureVisualCoverage.summary.visual_state_count || 0,
+      linked_units_with_surface_variants: procedureVisualCoverage.summary && procedureVisualCoverage.summary.linked_units_with_surface_variants || 0,
+      linked_units_with_game_mapping: procedureVisualCoverage.summary && procedureVisualCoverage.summary.linked_units_with_game_mapping || 0,
+      linked_units_with_answer_model_projection: procedureVisualCoverage.summary && procedureVisualCoverage.summary.linked_units_with_answer_model_projection || 0,
+      linked_units_with_generator_support: procedureVisualCoverage.summary && procedureVisualCoverage.summary.linked_units_with_generator_support || 0,
+      linked_units_generator_blocked: procedureVisualCoverage.summary && procedureVisualCoverage.summary.linked_units_generator_blocked || 0,
+      linked_units_publication_allowed: procedureVisualCoverage.summary && procedureVisualCoverage.summary.linked_units_publication_allowed || 0,
+      blocker_reason_counts: procedureVisualCoverage.summary && procedureVisualCoverage.summary.blocker_reason_counts || {},
     },
     schema_validation_status: {
       report_json_contract: 'pass',
@@ -234,6 +256,18 @@ function main() {
   lines.push(`- Internal only: ${state.quality_issue_model.internal_only}`);
   lines.push(`- Curriculum authority: ${state.quality_issue_model.curriculum_authority}`);
   lines.push(`- Student-facing exposure: ${state.quality_issue_model.student_facing_exposure}`);
+  lines.push('');
+  lines.push('## Procedure-Visual Backbone');
+  lines.push('');
+  lines.push(`- Status: ${state.procedure_visual_backbone.status}`);
+  lines.push(`- Diagnostic only: ${state.procedure_visual_backbone.diagnostic_only}`);
+  lines.push(`- Curriculum authority: ${state.procedure_visual_backbone.curriculum_authority}`);
+  lines.push(`- Student-facing projection authorized: ${state.procedure_visual_backbone.student_facing_projection_authorized}`);
+  lines.push(`- PV-linked units: ${state.procedure_visual_backbone.pv_linked_unit_count}`);
+  lines.push(`- Templates: ${state.procedure_visual_backbone.template_count}`);
+  lines.push(`- Visual states: ${state.procedure_visual_backbone.visual_state_count}`);
+  lines.push(`- Units with surface variants: ${state.procedure_visual_backbone.linked_units_with_surface_variants}`);
+  lines.push(`- Units generator-blocked: ${state.procedure_visual_backbone.linked_units_generator_blocked}`);
   lines.push('');
   lines.push('## Retrieval Evaluation');
   lines.push('');

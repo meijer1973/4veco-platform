@@ -1,0 +1,31 @@
+{
+  "sprint_id": "PV.6",
+  "name": "Coverage Reports And Dashboard Integration",
+  "status": "planned",
+  "plan": "docs/sprints/PV.6-plan.md",
+  "baseline": "reports/sprints/PV.6-baseline.md",
+  "gate_id": "GATE-PV6-coverage-dashboard",
+  "human_review_required": false,
+  "protected_reference_data_changes_allowed": false,
+  "machine_registry_promotion_authorized": false,
+  "student_facing_projection_authorized": false,
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js docs/sprints/PV.6-plan.md",
+    "node build-scripts/references/validate-procedure-visual-registry.js",
+    "node build-scripts/references/build-procedure-visual-coverage.js",
+    "node build-scripts/references/check-procedure-visual-coverage.js",
+    "node build-scripts/reports/generate-reference-health.js",
+    "node build-scripts/reports/check-reference-health.js",
+    "node build-scripts/sprints/emit-gate-bundle-urls.js GATE-PV6-coverage-dashboard",
+    "node build-scripts/sprints/check-bundle-urls.js GATE-PV6-coverage-dashboard",
+    "node build-scripts/sprints/check-sprint-bundle.js PV.6",
+    "node build-scripts/sprints/check-sprint-result.js reports/sprints/PV.6-result.md",
+    "node build-scripts/sprints/check-sprint-bundle.js PV.6 --complete",
+    "node build-scripts/references/check-roadmap-version-index.js"
+  ],
+  "forbidden_outputs": [
+    "references/machine/procedure-templates.json",
+    "references/machine/visual-states.json",
+    "references/machine/procedure-visual-vocab.json"
+  ]
+}

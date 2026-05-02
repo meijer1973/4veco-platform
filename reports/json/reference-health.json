@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "generated_by": "build-scripts/reports/generate-reference-health.js",
-  "generated_on": "2026-05-02T07:11:45.374Z",
+  "generated_on": "2026-05-02T12:13:00.855Z",
   "source_files": [
     "references/machine/micro-teaching-units.json",
     "references/machine/begrippen.json",
@@ -10,6 +10,7 @@
     "references/data/alignment-graph.json",
     "reports/review-gates/GATE-R5-alignment-graph/gate-closure.json",
     "reports/review-gates/GATE-R7-rag/gate-closure.json",
+    "reports/json/procedure-visual-coverage.json",
     "reports/json/*.json"
   ],
   "unit_counts": {
@@ -64,14 +65,15 @@
   },
   "unresolved_refs": {
     "status": "warn",
-    "issues": 79
+    "issues": 81
   },
   "qc_findings": {
-    "report_count": 13,
-    "total_issues": 446,
+    "report_count": 14,
+    "total_issues": 448,
     "high_or_critical_issues": 10,
     "by_report_status": {
       "pass": 6,
+      "passed": 1,
       "warn": 7
     }
   },
@@ -102,6 +104,35 @@
     "curriculum_authority": false,
     "student_facing_exposure": false,
     "primary_evidence": false
+  },
+  "procedure_visual_backbone": {
+    "source": "reports/json/procedure-visual-coverage.json",
+    "status": "passed",
+    "diagnostic_only": true,
+    "curriculum_authority": false,
+    "machine_registry_created": false,
+    "student_facing_projection_authorized": false,
+    "generator_exposure_authorized": false,
+    "pv_linked_unit_count": 6,
+    "template_count": 6,
+    "visual_state_count": 6,
+    "linked_units_with_surface_variants": 6,
+    "linked_units_with_game_mapping": 1,
+    "linked_units_with_answer_model_projection": 6,
+    "linked_units_with_generator_support": 1,
+    "linked_units_generator_blocked": 4,
+    "linked_units_publication_allowed": 0,
+    "blocker_reason_counts": {
+      "answer_model_projection_pending": 1,
+      "generator_blocked_non_interactive": 4,
+      "generator_missing": 4,
+      "generator_support_pending": 4,
+      "human_publication_gate_pending": 6,
+      "operation_ids_provisional_until_registry_gate": 4,
+      "procedure_game_mapping_pending": 3,
+      "student_facing_projection_blocked": 6,
+      "visual_renderer_pending": 6
+    }
   },
   "schema_validation_status": {
     "report_json_contract": "pass",

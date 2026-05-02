@@ -1,0 +1,19 @@
+{
+  "gate_id": "GATE-PV6-coverage-dashboard",
+  "sprint_id": "PV.6",
+  "status": "technical_report_gate",
+  "generated_by": "build-scripts/references/build-procedure-visual-coverage.js",
+  "generated_on": "2026-05-02T12:13:00.838Z",
+  "human_review_required": false,
+  "machine_registry_created": false,
+  "student_facing_projection_authorized": false,
+  "evidence": {
+    "coverage_report": "reports/json/procedure-visual-coverage.json",
+    "reference_health": "reports/json/reference-health.json"
+  },
+  "review_questions": [
+    "Does PV coverage distinguish templates, visual states, surface variants, game mapping, answer-model step order, generator support, and blockers?",
+    "Does the dashboard summary preserve diagnostic-only and non-authority flags?",
+    "Are generator-blocked units still visible as blocked?"
+  ]
+}

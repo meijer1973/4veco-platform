@@ -1,0 +1,693 @@
+{
+  "report_id": "procedure-visual-coverage",
+  "sprint_id": "PV.6",
+  "gate_id": "GATE-PV6-coverage-dashboard",
+  "generated_by": "build-scripts/references/build-procedure-visual-coverage.js",
+  "generated_on": "2026-05-02T12:13:00.838Z",
+  "status": "passed",
+  "policy": {
+    "diagnostic_only": true,
+    "curriculum_authority": false,
+    "machine_registry_created": false,
+    "student_facing_projection_authorized": false,
+    "generator_exposure_authorized": false,
+    "lesson_target_write_authorized": false
+  },
+  "source_files": [
+    "references/data/procedure-visual/procedure-templates.json",
+    "references/data/procedure-visual/visual-states.json",
+    "references/data/procedure-visual/unit-template-links.json",
+    "reports/json/procedure-visual-projection-mvp.json",
+    "reports/json/procedure-game-template-alignment.json",
+    "references/machine/micro-teaching-units.json",
+    "engines/skilltree/generators.js"
+  ],
+  "summary": {
+    "live_unit_count": 230,
+    "pv_linked_unit_count": 6,
+    "template_count": 6,
+    "visual_state_count": 6,
+    "linked_units_with_visual_state_sequence": 6,
+    "linked_units_with_surface_variants": 6,
+    "linked_units_with_game_mapping": 1,
+    "linked_units_with_answer_model_projection": 6,
+    "linked_units_with_generator_support": 1,
+    "linked_units_generator_blocked": 4,
+    "linked_units_publication_allowed": 0,
+    "render_proof_count": 28,
+    "blocker_reason_counts": {
+      "answer_model_projection_pending": 1,
+      "generator_blocked_non_interactive": 4,
+      "generator_missing": 4,
+      "generator_support_pending": 4,
+      "human_publication_gate_pending": 6,
+      "operation_ids_provisional_until_registry_gate": 4,
+      "procedure_game_mapping_pending": 3,
+      "student_facing_projection_blocked": 6,
+      "visual_renderer_pending": 6
+    }
+  },
+  "linked_unit_coverage": [
+    {
+      "unit_id": "B02",
+      "unit_name": "Alternatieve kosten in een keuze-situatie",
+      "template_id": "choose_by_opportunity_cost_flow",
+      "link_status": "pilot",
+      "has_procedure_template": true,
+      "has_visual_state_sequence": true,
+      "visual_state_ids": [
+        "flowchart_opportunity_cost_choice"
+      ],
+      "has_surface_variants": true,
+      "surface_variants": [
+        "docx",
+        "slide",
+        "summary_thumbnail",
+        "web_dark",
+        "web_light"
+      ],
+      "render_proof_count": 5,
+      "render_proofs": [
+        {
+          "visual_state_id": "flowchart_opportunity_cost_choice",
+          "surface_id": "web_light",
+          "svg_path": "reports/procedure-visual-projections/flowchart_opportunity_cost_choice--web_light.svg"
+        },
+        {
+          "visual_state_id": "flowchart_opportunity_cost_choice",
+          "surface_id": "web_dark",
+          "svg_path": "reports/procedure-visual-projections/flowchart_opportunity_cost_choice--web_dark.svg"
+        },
+        {
+          "visual_state_id": "flowchart_opportunity_cost_choice",
+          "surface_id": "slide",
+          "svg_path": "reports/procedure-visual-projections/flowchart_opportunity_cost_choice--slide.svg"
+        },
+        {
+          "visual_state_id": "flowchart_opportunity_cost_choice",
+          "surface_id": "docx",
+          "svg_path": "reports/procedure-visual-projections/flowchart_opportunity_cost_choice--docx.svg"
+        },
+        {
+          "visual_state_id": "flowchart_opportunity_cost_choice",
+          "surface_id": "summary_thumbnail",
+          "svg_path": "reports/procedure-visual-projections/flowchart_opportunity_cost_choice--summary_thumbnail.svg"
+        }
+      ],
+      "has_game_mapping": true,
+      "game_mapping_status": "mapped",
+      "has_answer_model_projection": true,
+      "answer_model_step_count": 4,
+      "has_generator_support": false,
+      "generator_status": "not_applicable_or_not_skilltree",
+      "generator_blocked": false,
+      "generator_block_sources": [],
+      "publication_allowed": false,
+      "blocker_reasons": [
+        "human_publication_gate_pending",
+        "procedure_game_mapping_pending",
+        "student_facing_projection_blocked",
+        "visual_renderer_pending"
+      ],
+      "template_publication_blocked": true
+    },
+    {
+      "unit_id": "A07",
+      "unit_name": "TO-functie opstellen",
+      "template_id": "build_total_revenue_function_trace",
+      "link_status": "pilot",
+      "has_procedure_template": true,
+      "has_visual_state_sequence": true,
+      "visual_state_ids": [
+        "formula_trace_total_revenue_function"
+      ],
+      "has_surface_variants": true,
+      "surface_variants": [
+        "docx",
+        "slide",
+        "web_dark",
+        "web_light"
+      ],
+      "render_proof_count": 4,
+      "render_proofs": [
+        {
+          "visual_state_id": "formula_trace_total_revenue_function",
+          "surface_id": "web_light",
+          "svg_path": "reports/procedure-visual-projections/formula_trace_total_revenue_function--web_light.svg"
+        },
+        {
+          "visual_state_id": "formula_trace_total_revenue_function",
+          "surface_id": "web_dark",
+          "svg_path": "reports/procedure-visual-projections/formula_trace_total_revenue_function--web_dark.svg"
+        },
+        {
+          "visual_state_id": "formula_trace_total_revenue_function",
+          "surface_id": "slide",
+          "svg_path": "reports/procedure-visual-projections/formula_trace_total_revenue_function--slide.svg"
+        },
+        {
+          "visual_state_id": "formula_trace_total_revenue_function",
+          "surface_id": "docx",
+          "svg_path": "reports/procedure-visual-projections/formula_trace_total_revenue_function--docx.svg"
+        }
+      ],
+      "has_game_mapping": false,
+      "game_mapping_status": "not_mapped_or_not_applicable",
+      "has_answer_model_projection": true,
+      "answer_model_step_count": 4,
+      "has_generator_support": true,
+      "generator_status": "implemented",
+      "generator_blocked": false,
+      "generator_block_sources": [],
+      "publication_allowed": false,
+      "blocker_reasons": [
+        "answer_model_projection_pending",
+        "human_publication_gate_pending",
+        "student_facing_projection_blocked",
+        "visual_renderer_pending"
+      ],
+      "template_publication_blocked": true
+    },
+    {
+      "unit_id": "A61",
+      "unit_name": "Tabelwaarden selecteren voor berekening",
+      "template_id": "select_table_values_trace",
+      "link_status": "pilot",
+      "has_procedure_template": true,
+      "has_visual_state_sequence": true,
+      "visual_state_ids": [
+        "table_trace_source_values_selected"
+      ],
+      "has_surface_variants": true,
+      "surface_variants": [
+        "docx",
+        "slide",
+        "summary_thumbnail",
+        "web_dark",
+        "web_light"
+      ],
+      "render_proof_count": 5,
+      "render_proofs": [
+        {
+          "visual_state_id": "table_trace_source_values_selected",
+          "surface_id": "web_light",
+          "svg_path": "reports/procedure-visual-projections/table_trace_source_values_selected--web_light.svg"
+        },
+        {
+          "visual_state_id": "table_trace_source_values_selected",
+          "surface_id": "web_dark",
+          "svg_path": "reports/procedure-visual-projections/table_trace_source_values_selected--web_dark.svg"
+        },
+        {
+          "visual_state_id": "table_trace_source_values_selected",
+          "surface_id": "slide",
+          "svg_path": "reports/procedure-visual-projections/table_trace_source_values_selected--slide.svg"
+        },
+        {
+          "visual_state_id": "table_trace_source_values_selected",
+          "surface_id": "docx",
+          "svg_path": "reports/procedure-visual-projections/table_trace_source_values_selected--docx.svg"
+        },
+        {
+          "visual_state_id": "table_trace_source_values_selected",
+          "surface_id": "summary_thumbnail",
+          "svg_path": "reports/procedure-visual-projections/table_trace_source_values_selected--summary_thumbnail.svg"
+        }
+      ],
+      "has_game_mapping": false,
+      "game_mapping_status": "not_mapped_or_not_applicable",
+      "has_answer_model_projection": true,
+      "answer_model_step_count": 4,
+      "has_generator_support": false,
+      "generator_status": "missing_or_blocked",
+      "generator_blocked": true,
+      "generator_block_sources": [
+        "references/data/sprints/RX.2-generator-blocked-units.json"
+      ],
+      "publication_allowed": false,
+      "blocker_reasons": [
+        "generator_blocked_non_interactive",
+        "generator_missing",
+        "generator_support_pending",
+        "human_publication_gate_pending",
+        "operation_ids_provisional_until_registry_gate",
+        "procedure_game_mapping_pending",
+        "student_facing_projection_blocked",
+        "visual_renderer_pending"
+      ],
+      "template_publication_blocked": true
+    },
+    {
+      "unit_id": "A82",
+      "unit_name": "Elasticiteit berekenen uit tabelwaarden",
+      "template_id": "calculate_elasticity_from_table_values",
+      "link_status": "pilot",
+      "has_procedure_template": true,
+      "has_visual_state_sequence": true,
+      "visual_state_ids": [
+        "table_trace_elasticity_pairs_selected"
+      ],
+      "has_surface_variants": true,
+      "surface_variants": [
+        "docx",
+        "slide",
+        "web_dark",
+        "web_light"
+      ],
+      "render_proof_count": 4,
+      "render_proofs": [
+        {
+          "visual_state_id": "table_trace_elasticity_pairs_selected",
+          "surface_id": "web_light",
+          "svg_path": "reports/procedure-visual-projections/table_trace_elasticity_pairs_selected--web_light.svg"
+        },
+        {
+          "visual_state_id": "table_trace_elasticity_pairs_selected",
+          "surface_id": "web_dark",
+          "svg_path": "reports/procedure-visual-projections/table_trace_elasticity_pairs_selected--web_dark.svg"
+        },
+        {
+          "visual_state_id": "table_trace_elasticity_pairs_selected",
+          "surface_id": "slide",
+          "svg_path": "reports/procedure-visual-projections/table_trace_elasticity_pairs_selected--slide.svg"
+        },
+        {
+          "visual_state_id": "table_trace_elasticity_pairs_selected",
+          "surface_id": "docx",
+          "svg_path": "reports/procedure-visual-projections/table_trace_elasticity_pairs_selected--docx.svg"
+        }
+      ],
+      "has_game_mapping": false,
+      "game_mapping_status": "not_mapped_or_not_applicable",
+      "has_answer_model_projection": true,
+      "answer_model_step_count": 5,
+      "has_generator_support": false,
+      "generator_status": "missing_or_blocked",
+      "generator_blocked": true,
+      "generator_block_sources": [
+        "reports/review-gates/GATE-RX4-elasticity-market-diagram-review/RX.4-generator-blocked-units.json"
+      ],
+      "publication_allowed": false,
+      "blocker_reasons": [
+        "generator_blocked_non_interactive",
+        "generator_missing",
+        "generator_support_pending",
+        "human_publication_gate_pending",
+        "operation_ids_provisional_until_registry_gate",
+        "student_facing_projection_blocked",
+        "visual_renderer_pending"
+      ],
+      "template_publication_blocked": true
+    },
+    {
+      "unit_id": "A83",
+      "unit_name": "Prijselasticiteit van de vraag berekenen uit P-Q-grafiek",
+      "template_id": "calculate_demand_elasticity_from_pq_graph",
+      "link_status": "pilot",
+      "has_procedure_template": true,
+      "has_visual_state_sequence": true,
+      "visual_state_ids": [
+        "pq_graph_elasticity_two_pairs"
+      ],
+      "has_surface_variants": true,
+      "surface_variants": [
+        "docx",
+        "slide",
+        "summary_thumbnail",
+        "web_dark",
+        "web_light"
+      ],
+      "render_proof_count": 5,
+      "render_proofs": [
+        {
+          "visual_state_id": "pq_graph_elasticity_two_pairs",
+          "surface_id": "web_light",
+          "svg_path": "reports/procedure-visual-projections/pq_graph_elasticity_two_pairs--web_light.svg"
+        },
+        {
+          "visual_state_id": "pq_graph_elasticity_two_pairs",
+          "surface_id": "web_dark",
+          "svg_path": "reports/procedure-visual-projections/pq_graph_elasticity_two_pairs--web_dark.svg"
+        },
+        {
+          "visual_state_id": "pq_graph_elasticity_two_pairs",
+          "surface_id": "slide",
+          "svg_path": "reports/procedure-visual-projections/pq_graph_elasticity_two_pairs--slide.svg"
+        },
+        {
+          "visual_state_id": "pq_graph_elasticity_two_pairs",
+          "surface_id": "docx",
+          "svg_path": "reports/procedure-visual-projections/pq_graph_elasticity_two_pairs--docx.svg"
+        },
+        {
+          "visual_state_id": "pq_graph_elasticity_two_pairs",
+          "surface_id": "summary_thumbnail",
+          "svg_path": "reports/procedure-visual-projections/pq_graph_elasticity_two_pairs--summary_thumbnail.svg"
+        }
+      ],
+      "has_game_mapping": false,
+      "game_mapping_status": "not_mapped_or_not_applicable",
+      "has_answer_model_projection": true,
+      "answer_model_step_count": 6,
+      "has_generator_support": false,
+      "generator_status": "missing_or_blocked",
+      "generator_blocked": true,
+      "generator_block_sources": [
+        "reports/review-gates/GATE-RX4-elasticity-market-diagram-review/RX.4-generator-blocked-units.json"
+      ],
+      "publication_allowed": false,
+      "blocker_reasons": [
+        "generator_blocked_non_interactive",
+        "generator_missing",
+        "generator_support_pending",
+        "human_publication_gate_pending",
+        "operation_ids_provisional_until_registry_gate",
+        "student_facing_projection_blocked",
+        "visual_renderer_pending"
+      ],
+      "template_publication_blocked": true
+    },
+    {
+      "unit_id": "A84",
+      "unit_name": "Omzetverandering beoordelen met elasticiteit uit bron",
+      "template_id": "judge_revenue_change_with_elasticity",
+      "link_status": "pilot",
+      "has_procedure_template": true,
+      "has_visual_state_sequence": true,
+      "visual_state_ids": [
+        "flowchart_elasticity_revenue_effect"
+      ],
+      "has_surface_variants": true,
+      "surface_variants": [
+        "docx",
+        "slide",
+        "summary_thumbnail",
+        "web_dark",
+        "web_light"
+      ],
+      "render_proof_count": 5,
+      "render_proofs": [
+        {
+          "visual_state_id": "flowchart_elasticity_revenue_effect",
+          "surface_id": "web_light",
+          "svg_path": "reports/procedure-visual-projections/flowchart_elasticity_revenue_effect--web_light.svg"
+        },
+        {
+          "visual_state_id": "flowchart_elasticity_revenue_effect",
+          "surface_id": "web_dark",
+          "svg_path": "reports/procedure-visual-projections/flowchart_elasticity_revenue_effect--web_dark.svg"
+        },
+        {
+          "visual_state_id": "flowchart_elasticity_revenue_effect",
+          "surface_id": "slide",
+          "svg_path": "reports/procedure-visual-projections/flowchart_elasticity_revenue_effect--slide.svg"
+        },
+        {
+          "visual_state_id": "flowchart_elasticity_revenue_effect",
+          "surface_id": "docx",
+          "svg_path": "reports/procedure-visual-projections/flowchart_elasticity_revenue_effect--docx.svg"
+        },
+        {
+          "visual_state_id": "flowchart_elasticity_revenue_effect",
+          "surface_id": "summary_thumbnail",
+          "svg_path": "reports/procedure-visual-projections/flowchart_elasticity_revenue_effect--summary_thumbnail.svg"
+        }
+      ],
+      "has_game_mapping": false,
+      "game_mapping_status": "not_mapped_or_not_applicable",
+      "has_answer_model_projection": true,
+      "answer_model_step_count": 4,
+      "has_generator_support": false,
+      "generator_status": "missing_or_blocked",
+      "generator_blocked": true,
+      "generator_block_sources": [
+        "reports/review-gates/GATE-RX4-elasticity-market-diagram-review/RX.4-generator-blocked-units.json"
+      ],
+      "publication_allowed": false,
+      "blocker_reasons": [
+        "generator_blocked_non_interactive",
+        "generator_missing",
+        "generator_support_pending",
+        "human_publication_gate_pending",
+        "operation_ids_provisional_until_registry_gate",
+        "procedure_game_mapping_pending",
+        "student_facing_projection_blocked",
+        "visual_renderer_pending"
+      ],
+      "template_publication_blocked": true
+    }
+  ],
+  "template_coverage": [
+    {
+      "template_id": "choose_by_opportunity_cost_flow",
+      "source_unit_ids": [
+        "B02"
+      ],
+      "representation": "choice_context",
+      "projections": {
+        "vaardigheden": true,
+        "answer_model": true,
+        "procedure_game": true,
+        "flowchart": true,
+        "formula_trace": false,
+        "graph_stage_sequence": false,
+        "table_trace": false
+      },
+      "visual_state_ids": [
+        "flowchart_opportunity_cost_choice"
+      ],
+      "rendered_surfaces": [
+        "docx",
+        "slide",
+        "summary_thumbnail",
+        "web_dark",
+        "web_light"
+      ],
+      "answer_model_step_count": 4,
+      "publication_blocked": true,
+      "blockers": [
+        "visual_renderer_pending",
+        "procedure_game_mapping_pending",
+        "human_publication_gate_pending"
+      ]
+    },
+    {
+      "template_id": "build_total_revenue_function_trace",
+      "source_unit_ids": [
+        "A07"
+      ],
+      "representation": "formula",
+      "projections": {
+        "vaardigheden": true,
+        "answer_model": true,
+        "procedure_game": false,
+        "flowchart": false,
+        "formula_trace": true,
+        "graph_stage_sequence": false,
+        "table_trace": false
+      },
+      "visual_state_ids": [
+        "formula_trace_total_revenue_function"
+      ],
+      "rendered_surfaces": [
+        "docx",
+        "slide",
+        "web_dark",
+        "web_light"
+      ],
+      "answer_model_step_count": 4,
+      "publication_blocked": true,
+      "blockers": [
+        "visual_renderer_pending",
+        "answer_model_projection_pending",
+        "human_publication_gate_pending"
+      ]
+    },
+    {
+      "template_id": "select_table_values_trace",
+      "source_unit_ids": [
+        "A61"
+      ],
+      "representation": "table",
+      "projections": {
+        "vaardigheden": true,
+        "answer_model": true,
+        "procedure_game": true,
+        "flowchart": false,
+        "formula_trace": false,
+        "graph_stage_sequence": false,
+        "table_trace": true
+      },
+      "visual_state_ids": [
+        "table_trace_source_values_selected"
+      ],
+      "rendered_surfaces": [
+        "docx",
+        "slide",
+        "summary_thumbnail",
+        "web_dark",
+        "web_light"
+      ],
+      "answer_model_step_count": 4,
+      "publication_blocked": true,
+      "blockers": [
+        "operation_ids_provisional_until_registry_gate",
+        "generator_support_pending",
+        "visual_renderer_pending",
+        "procedure_game_mapping_pending",
+        "human_publication_gate_pending"
+      ]
+    },
+    {
+      "template_id": "calculate_elasticity_from_table_values",
+      "source_unit_ids": [
+        "A82"
+      ],
+      "representation": "table",
+      "projections": {
+        "vaardigheden": true,
+        "answer_model": true,
+        "procedure_game": false,
+        "flowchart": false,
+        "formula_trace": true,
+        "graph_stage_sequence": false,
+        "table_trace": true
+      },
+      "visual_state_ids": [
+        "table_trace_elasticity_pairs_selected"
+      ],
+      "rendered_surfaces": [
+        "docx",
+        "slide",
+        "web_dark",
+        "web_light"
+      ],
+      "answer_model_step_count": 5,
+      "publication_blocked": true,
+      "blockers": [
+        "operation_ids_provisional_until_registry_gate",
+        "generator_support_pending",
+        "visual_renderer_pending",
+        "human_publication_gate_pending"
+      ]
+    },
+    {
+      "template_id": "calculate_demand_elasticity_from_pq_graph",
+      "source_unit_ids": [
+        "A83"
+      ],
+      "representation": "p_q_graph",
+      "projections": {
+        "vaardigheden": true,
+        "answer_model": true,
+        "procedure_game": false,
+        "flowchart": false,
+        "formula_trace": true,
+        "graph_stage_sequence": true,
+        "table_trace": false
+      },
+      "visual_state_ids": [
+        "pq_graph_elasticity_two_pairs"
+      ],
+      "rendered_surfaces": [
+        "docx",
+        "slide",
+        "summary_thumbnail",
+        "web_dark",
+        "web_light"
+      ],
+      "answer_model_step_count": 6,
+      "publication_blocked": true,
+      "blockers": [
+        "operation_ids_provisional_until_registry_gate",
+        "generator_support_pending",
+        "visual_renderer_pending",
+        "human_publication_gate_pending"
+      ]
+    },
+    {
+      "template_id": "judge_revenue_change_with_elasticity",
+      "source_unit_ids": [
+        "A84"
+      ],
+      "representation": "source_text_or_table",
+      "projections": {
+        "vaardigheden": true,
+        "answer_model": true,
+        "procedure_game": true,
+        "flowchart": true,
+        "formula_trace": false,
+        "graph_stage_sequence": false,
+        "table_trace": false
+      },
+      "visual_state_ids": [
+        "flowchart_elasticity_revenue_effect"
+      ],
+      "rendered_surfaces": [
+        "docx",
+        "slide",
+        "summary_thumbnail",
+        "web_dark",
+        "web_light"
+      ],
+      "answer_model_step_count": 4,
+      "publication_blocked": true,
+      "blockers": [
+        "operation_ids_provisional_until_registry_gate",
+        "generator_support_pending",
+        "procedure_game_mapping_pending",
+        "visual_renderer_pending",
+        "human_publication_gate_pending"
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "id": "pv_linked_units_present",
+      "status": "passed",
+      "detail": "6 PV-linked unit row(s)."
+    },
+    {
+      "id": "surface_variants_available",
+      "status": "passed",
+      "detail": "6/6 linked units have rendered surface variants."
+    },
+    {
+      "id": "game_mapping_visible",
+      "status": "passed",
+      "detail": "1 mapped procedure-game unit(s)."
+    },
+    {
+      "id": "answer_model_projection_visible",
+      "status": "passed",
+      "detail": "6/6 linked units expose answer-model step order."
+    },
+    {
+      "id": "generator_blocks_preserved",
+      "status": "passed",
+      "detail": "4 linked unit(s) remain generator-blocked."
+    },
+    {
+      "id": "publication_blocks_preserved",
+      "status": "passed",
+      "detail": "6/6 linked units block publication."
+    },
+    {
+      "id": "no_machine_pv_registry",
+      "status": "passed",
+      "detail": "No references/machine Procedure-Visual registry exists."
+    }
+  ],
+  "blocked_scope": [
+    "PV machine registry promotion",
+    "student-facing PV projection",
+    "generator exposure for blocked units",
+    "lesson target writes",
+    "student diagnostics",
+    "adaptive routing",
+    "student-facing AI",
+    "automatic sequencing",
+    "mastery decisions",
+    "summative use"
+  ]
+}

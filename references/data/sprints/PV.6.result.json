@@ -1,0 +1,79 @@
+{
+  "sprint_id": "PV.6",
+  "name": "Coverage Reports And Dashboard Integration",
+  "status": "completed",
+  "completed_on": "2026-05-02",
+  "plan": "docs/sprints/PV.6-plan.md",
+  "baseline": "reports/sprints/PV.6-baseline.md",
+  "result": "reports/sprints/PV.6-result.md",
+  "diff_summary": "reports/sprints/PV.6-diff-summary.md",
+  "technical_gate_id": "GATE-PV6-coverage-dashboard",
+  "protected_reference_data_changed": false,
+  "machine_registry_created": false,
+  "student_facing_projection_authorized": false,
+  "generator_exposure_authorized": false,
+  "pv_linked_unit_count": 6,
+  "linked_units_with_surface_variants": 6,
+  "linked_units_with_game_mapping": 1,
+  "linked_units_with_answer_model_projection": 6,
+  "linked_units_with_generator_support": 1,
+  "linked_units_generator_blocked": 4,
+  "linked_units_publication_allowed": 0,
+  "outputs": [
+    "reports/json/procedure-visual-coverage.json",
+    "reports/markdown/procedure-visual-coverage.md",
+    "reports/json/reference-health.json",
+    "reports/markdown/reference-health.md"
+  ],
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js docs/sprints/PV.6-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/validate-procedure-visual-registry.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/build-procedure-visual-coverage.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-procedure-visual-coverage.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/generate-reference-health.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/check-reference-health.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-gate-bundle-urls.js GATE-PV6-coverage-dashboard",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-bundle-urls.js GATE-PV6-coverage-dashboard",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js PV.6",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-result.js reports/sprints/PV.6-result.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js PV.6 --complete",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-roadmap-version-index.js",
+      "status": "passed"
+    }
+  ],
+  "next_required_step": "Proceed to RX.6 Skill-Tree And Generator Integration. Preserve PV publication and generator-block controls."
+}

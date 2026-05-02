@@ -29,6 +29,7 @@ function main() {
     'unresolved_refs',
     'qc_findings',
     'quality_issue_model',
+    'procedure_visual_backbone',
     'schema_validation_status',
     'alignment_graph_status',
     'r5_3_gate_status',
@@ -52,6 +53,18 @@ function main() {
   if (qualityIssueModel.curriculum_authority !== false) errors.push('quality_issue_model.curriculum_authority must be false');
   if (qualityIssueModel.student_facing_exposure !== false) errors.push('quality_issue_model.student_facing_exposure must be false');
   if (qualityIssueModel.primary_evidence !== false) errors.push('quality_issue_model.primary_evidence must be false');
+
+  const pv = data.procedure_visual_backbone || {};
+  if (pv.diagnostic_only !== true) errors.push('procedure_visual_backbone.diagnostic_only must be true');
+  if (pv.curriculum_authority !== false) errors.push('procedure_visual_backbone.curriculum_authority must be false');
+  if (pv.machine_registry_created !== false) errors.push('procedure_visual_backbone.machine_registry_created must be false');
+  if (pv.student_facing_projection_authorized !== false) errors.push('procedure_visual_backbone.student_facing_projection_authorized must be false');
+  if (pv.generator_exposure_authorized !== false) errors.push('procedure_visual_backbone.generator_exposure_authorized must be false');
+  if (!(pv.pv_linked_unit_count >= 6)) errors.push('procedure_visual_backbone.pv_linked_unit_count must be at least 6');
+  if (!(pv.linked_units_with_surface_variants >= 6)) errors.push('procedure_visual_backbone must report surface variants for linked units');
+  if (!(pv.linked_units_with_game_mapping >= 1)) errors.push('procedure_visual_backbone must report at least one game mapping');
+  if (!(pv.linked_units_generator_blocked >= 1)) errors.push('procedure_visual_backbone must preserve generator-blocked units');
+  if (pv.linked_units_publication_allowed !== 0) errors.push('procedure_visual_backbone.linked_units_publication_allowed must be 0');
 
   for (const blocked of ['student_diagnostics', 'adaptive_routing', 'student_facing_ai']) {
     if (!Array.isArray(data.blocked_downstream_uses) || !data.blocked_downstream_uses.includes(blocked)) {
