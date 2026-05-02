@@ -718,6 +718,157 @@ body[data-layout="samenvatting-v1"] .callout-body {
   line-height: 1.5;
 }
 
+/* ── Nieuws met visual (article + visual + Q&A as web) ──────────────── */
+
+/* Text-heavy reading surface — narrower than samenvatting's 1500px so
+   article paragraphs stay at a comfortable line length, but wider than
+   the editorial 820px prose default to fit the visual + Q&A stack. */
+body[data-layout="nieuws-v1"] {
+  --content-max: 1100px;
+}
+
+body[data-layout="nieuws-v1"] .sidebar .nav-title {
+  flex: 1;
+  min-width: 0;
+}
+
+body[data-layout="nieuws-v1"] .hero-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 14px;
+}
+body[data-layout="nieuws-v1"] .hero-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: var(--accent);
+  color: var(--bg);
+  border-radius: 6px;
+  text-decoration: none;
+  font-family: var(--mono);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  transition: opacity 0.15s;
+}
+body[data-layout="nieuws-v1"] .hero-action:hover {
+  opacity: 0.85;
+}
+
+/* Single-column flow — article reads top-to-bottom, not as a grid. */
+body[data-layout="nieuws-v1"] .nieuws-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 24px 40px 48px;
+}
+@media (max-width: 600px) {
+  body[data-layout="nieuws-v1"] .nieuws-grid {
+    padding: 20px 16px 40px;
+    gap: 14px;
+  }
+}
+
+/* Reuses .samenvatting-cell visuals (border-left domain stripe, padding,
+   rounded card framing) via the inherited class on each section. */
+
+/* Article body typography — slightly larger, comfortable line height. */
+body[data-layout="nieuws-v1"] .nieuws-article .cell-para {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--ink);
+  margin-bottom: 0.6em;
+}
+
+/* Source line — small, italic, with a subtle external-link arrow. */
+body[data-layout="nieuws-v1"] .nieuws-source {
+  margin-top: 14px;
+  font-size: 13px;
+  font-style: italic;
+  color: var(--ink-soft);
+}
+body[data-layout="nieuws-v1"] .external-source {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--accent);
+}
+body[data-layout="nieuws-v1"] .external-source::after {
+  content: " ↗";
+  font-style: normal;
+  font-weight: 700;
+  margin-left: 2px;
+}
+body[data-layout="nieuws-v1"] .external-source:hover {
+  border-bottom-style: solid;
+}
+
+/* Question / answer ordered lists. */
+body[data-layout="nieuws-v1"] .nieuws-q-list {
+  margin: 6px 0 0 0;
+  padding-left: 1.4em;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+body[data-layout="nieuws-v1"] .nieuws-q-list li {
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--ink);
+  padding-left: 4px;
+}
+body[data-layout="nieuws-v1"] .nieuws-q-list li::marker {
+  font-family: var(--mono);
+  color: var(--wiskundig);
+  font-weight: 700;
+}
+
+/* Antwoordmodel disclosure — make <summary> a proper button affordance.
+   Default browser rendering puts a triangle marker; we style a chevron
+   indicator and a button-like surface so it's obviously interactive. */
+body[data-layout="nieuws-v1"] .nieuws-answers {
+  /* still a samenvatting-cell underneath — keep the card framing. */
+}
+body[data-layout="nieuws-v1"] .nieuws-answers > summary {
+  list-style: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 18px;
+  background: var(--bg-lift);
+  color: var(--ink);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: background 0.15s, border-color 0.15s;
+  user-select: none;
+}
+body[data-layout="nieuws-v1"] .nieuws-answers > summary::-webkit-details-marker {
+  display: none;
+}
+body[data-layout="nieuws-v1"] .nieuws-answers > summary::before {
+  content: "▶";
+  font-size: 9px;
+  transition: transform 0.2s;
+}
+body[data-layout="nieuws-v1"] .nieuws-answers[open] > summary::before {
+  transform: rotate(90deg);
+}
+body[data-layout="nieuws-v1"] .nieuws-answers > summary:hover {
+  background: var(--bg-card);
+  border-color: var(--border-lift);
+}
+body[data-layout="nieuws-v1"] .nieuws-answers > .cell-body {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+}
+
 .opgave-section {
   margin-bottom: 44px;
   scroll-margin-top: 1rem;
