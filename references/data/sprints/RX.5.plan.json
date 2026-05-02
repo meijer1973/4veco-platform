@@ -1,0 +1,31 @@
+{
+  "sprint_id": "RX.5",
+  "name": "Representation Operation Registry And Reports",
+  "status": "planned",
+  "plan": "docs/sprints/RX.5-plan.md",
+  "baseline": "reports/sprints/RX.5-baseline.md",
+  "gate_id": "GATE-RX5-representation-operation-reports",
+  "human_review_required": false,
+  "protected_reference_data_changes_allowed": false,
+  "machine_registry_promotion_authorized": false,
+  "student_facing_use_authorized": false,
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js docs/sprints/RX.5-plan.md",
+    "node build-scripts/references/build-representation-operation-coverage.js",
+    "node build-scripts/references/check-representation-operation-coverage.js",
+    "node build-scripts/references/validate-procedure-visual-registry.js",
+    "node build-scripts/sprints/emit-gate-bundle-urls.js GATE-RX5-representation-operation-reports",
+    "node build-scripts/sprints/check-bundle-urls.js GATE-RX5-representation-operation-reports",
+    "node build-scripts/sprints/check-sprint-bundle.js RX.5",
+    "node build-scripts/sprints/check-sprint-result.js reports/sprints/RX.5-result.md",
+    "node build-scripts/sprints/check-sprint-bundle.js RX.5 --complete",
+    "node build-scripts/references/check-roadmap-version-index.js"
+  ],
+  "forbidden_outputs": [
+    "references/machine/exercise-operations.json",
+    "references/machine/skill-tags.json",
+    "references/machine/representation-operations.json",
+    "references/machine/procedure-templates.json",
+    "references/machine/visual-states.json"
+  ]
+}

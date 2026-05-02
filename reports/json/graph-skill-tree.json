@@ -1,0 +1,798 @@
+{
+  "schema_version": 1,
+  "report_id": "graph-skill-tree",
+  "generated_by": "build-scripts/references/build-representation-operation-coverage.js",
+  "generated_on": "2026-05-02T11:22:25.509Z",
+  "policy": {
+    "student_facing_use_authorized": false,
+    "reason": "RX.5 reports graph-skill structure only. Generator and publication gates still control student-facing use."
+  },
+  "summary": {
+    "graph_unit_count": 32,
+    "graph_units_with_operation_links": 12,
+    "graph_units_with_pv_templates": 2,
+    "graph_units_generator_blocked": 10,
+    "graph_units_with_generators": 13,
+    "dependency_edge_count": 46
+  },
+  "nodes": [
+    {
+      "unit_id": "A05",
+      "name": "Snijpunt met P-as berekenen",
+      "aspects": [
+        "grafisch",
+        "rekenen"
+      ],
+      "needs": [],
+      "linked_operation_ids": [],
+      "pv_template_ids": [],
+      "generator": "GEN_A05",
+      "generator_implemented": true,
+      "generator_blocked": false
+    },
+    {
+      "unit_id": "A07",
+      "name": "TO-functie opstellen",
+      "aspects": [
+        "grafisch",
+        "rekenen",
+        "verbaal"
+      ],
+      "needs": [
+        "A01",
+        "A03"
+      ],
+      "linked_operation_ids": [],
+      "pv_template_ids": [
+        "build_total_revenue_function_trace"
+      ],
+      "generator": "GEN_A07",
+      "generator_implemented": true,
+      "generator_blocked": false
+    },
+    {
+      "unit_id": "A10",
+      "name": "Oppervlakte driehoek",
+      "aspects": [
+        "grafisch",
+        "rekenen"
+      ],
+      "needs": [
+        "A04"
+      ],
+      "linked_operation_ids": [],
+      "pv_template_ids": [],
+      "generator": "GEN_A10",
+      "generator_implemented": true,
+      "generator_blocked": false
+    },
+    {
+      "unit_id": "A12",
+      "name": "MO bepalen",
+      "aspects": [
+        "grafisch",
+        "rekenen"
+      ],
+      "needs": [
+        "A11",
+        "A07"
+      ],
+      "linked_operation_ids": [],
+      "pv_template_ids": [],
+      "generator": "GEN_A12",
+      "generator_implemented": true,
+      "generator_blocked": false
+    },
+    {
+      "unit_id": "A19",
+      "name": "Surplus berekenen (CS/PS)",
+      "aspects": [
+        "grafisch",
+        "rekenen",
+        "verbaal"
+      ],
+      "needs": [
+        "A06",
+        "A10"
+      ],
+      "linked_operation_ids": [],
+      "pv_template_ids": [],
+      "generator": "GEN_A19",
+      "generator_implemented": true,
+      "generator_blocked": false
+    },
+    {
+      "unit_id": "A25",
+      "name": "Minimumprijs analyseren",
+      "aspects": [
+        "grafisch",
+        "rekenen",
+        "verbaal"
+      ],
+      "needs": [
+        "A06"
+      ],
+      "linked_operation_ids": [],
+      "pv_template_ids": [],
+      "generator": "GEN_A25",
+      "generator_implemented": true,
+      "generator_blocked": false
+    },
+    {
+      "unit_id": "A26",
+      "name": "Maximumprijs analyseren",
+      "aspects": [
+        "grafisch",
+        "rekenen",
+        "verbaal"
+      ],
+      "needs": [
+        "A06"
+      ],
+      "linked_operation_ids": [],
+      "pv_template_ids": [],
+      "generator": "GEN_A26",
+      "generator_implemented": true,
+      "generator_blocked": false
+    },
+    {
+      "unit_id": "A27",
+      "name": "Subsidie analyseren",
+      "aspects": [
+        "grafisch",
+        "rekenen",
+        "verbaal"
+      ],
+      "needs": [
+        "A06",
+        "A01"
+      ],
+      "linked_operation_ids": [],
+      "pv_template_ids": [],
+      "generator": "GEN_A27",
+      "generator_implemented": true,
+      "generator_blocked": false
+    },
+    {
+      "unit_id": "A28",
+      "name": "MK = GTK oplossen",
+      "aspects": [
+        "grafisch",
+        "rekenen"
+      ],
+      "needs": [
+        "A13",
+        "A14"
+      ],
+      "linked_operation_ids": [],
+      "pv_template_ids": [],
+      "generator": "GEN_A28",
+      "generator_implemented": true,
+      "generator_blocked": false
+    },
+    {
+      "unit_id": "A32",
+      "name": "Welvaartsverlies belasting",
+      "aspects": [
+        "grafisch",
+        "rekenen"
+      ],
+      "needs": [
+        "A19",
+        "A23"
+      ],
+      "linked_operation_ids": [],
+      "pv_template_ids": [],
+      "generator": "GEN_A32",
+      "generator_implemented": true,
+      "generator_blocked": false
+    },
+    {
+      "unit_id": "A40",
+      "name": "Welvaartsgebied op P–Q diagram arceren",
+      "aspects": [
+        "grafisch"
+      ],
+      "needs": [
+        "A10"
+      ],
+      "linked_operation_ids": [],
+      "pv_template_ids": [],
+      "generator": "GEN_A40",
+      "generator_implemented": true,
+      "generator_blocked": false
+    },
+    {
+      "unit_id": "A42",
+      "name": "Grafische verschuiving met voor-en-na pijlen",
+      "aspects": [
+        "grafisch"
+      ],
+      "needs": [],
+      "linked_operation_ids": [],
+      "pv_template_ids": [],
+      "generator": "GEN_A42",
+      "generator_implemented": true,
+      "generator_blocked": false
+    },
+    {
+      "unit_id": "A44",
+      "name": "Individuele stapfunctie-vraagcurve tekenen uit betalingsbereidheid",
+      "aspects": [
+        "grafisch"
+      ],
+      "needs": [
+        "D35"
+      ],
+      "linked_operation_ids": [],
+      "pv_template_ids": [],
+      "generator": "GEN_A44",
+      "generator_implemented": true,
+      "generator_blocked": false
+    },
+    {
+      "unit_id": "A45",
+      "name": "P-Q grafiek tekenen uit tabel",
+      "aspects": [
+        "grafisch"
+      ],
+      "needs": [],
+      "linked_operation_ids": [
+        "OVERLAY_DRAW_PQ_GRAPH_FROM_TABLE"
+      ],
+      "pv_template_ids": [],
+      "generator": "GEN_A45",
+      "generator_implemented": false,
+      "generator_blocked": false
+    },
+    {
+      "unit_id": "A46",
+      "name": "Waarden aflezen en interpoleren in P-Q grafiek",
+      "aspects": [
+        "grafisch",
+        "rekenen"
+      ],
+      "needs": [
+        "A45"
+      ],
+      "linked_operation_ids": [
+        "OVERLAY_READ_INTERPOLATE_PQ_GRAPH"
+      ],
+      "pv_template_ids": [],
+      "generator": "GEN_A46",
+      "generator_implemented": false,
+      "generator_blocked": false
+    },
+    {
+      "unit_id": "A47",
+      "name": "Collectieve vraag uit tabellen optellen",
+      "aspects": [
+        "rekenen",
+        "grafisch"
+      ],
+      "needs": [
+        "A46"
+      ],
+      "linked_operation_ids": [],
+      "pv_template_ids": [],
+      "generator": "GEN_A47",
+      "generator_implemented": false,
+      "generator_blocked": false
+    },
+    {
+      "unit_id": "A48",
+      "name": "Collectieve vraagfunctie algebraisch optellen",
+      "aspects": [
+        "rekenen",
+        "grafisch"
+      ],
+      "needs": [
+        "A03",
+        "A47"
+      ],
+      "linked_operation_ids": [],
+      "pv_template_ids": [],
+      "generator": "GEN_A48",
+      "generator_implemented": false,
+      "generator_blocked": false
+    },
+    {
+      "unit_id": "A49",
+      "name": "Aanbodcurve tekenen met economenassen",
+      "aspects": [
+        "grafisch"
+      ],
+      "needs": [
+        "A45"
+      ],
+      "linked_operation_ids": [],
+      "pv_template_ids": [],
+      "generator": "GEN_A49",
+      "generator_implemented": false,
+      "generator_blocked": false
+    },
+    {
+      "unit_id": "A51",
+      "name": "Overschot en tekort bij niet-evenwichtsprijs berekenen",
+      "aspects": [
+        "grafisch",
+        "rekenen"
+      ],
+      "needs": [
+        "A06"
+      ],
+      "linked_operation_ids": [],
+      "pv_template_ids": [],
+      "generator": "GEN_A51",
+      "generator_implemented": false,
+      "generator_blocked": false
+    },
+    {
+      "unit_id": "A56",
+      "name": "Korte zijde bepalen bij bindende prijs",
+      "aspects": [
+        "grafisch",
+        "rekenen"
+      ],
+      "needs": [
+        "A51",
+        "D34"
+      ],
+      "linked_operation_ids": [],
+      "pv_template_ids": [],
+      "generator": "GEN_A56",
+      "generator_implemented": false,
+      "generator_blocked": false
+    },
+    {
+      "unit_id": "A59",
+      "name": "Opkoopkosten bij minimumprijs berekenen",
+      "aspects": [
+        "grafisch",
+        "rekenen"
+      ],
+      "needs": [
+        "A51",
+        "A56"
+      ],
+      "linked_operation_ids": [],
+      "pv_template_ids": [],
+      "generator": "GEN_A59",
+      "generator_implemented": false,
+      "generator_blocked": false
+    },
+    {
+      "unit_id": "A60",
+      "name": "Vraagfunctie inverteren bij quotumhoeveelheid",
+      "aspects": [
+        "rekenen",
+        "grafisch"
+      ],
+      "needs": [
+        "A03"
+      ],
+      "linked_operation_ids": [],
+      "pv_template_ids": [],
+      "generator": "GEN_A60",
+      "generator_implemented": false,
+      "generator_blocked": false
+    },
+    {
+      "unit_id": "A62",
+      "name": "Waarden aflezen uit staafdiagram",
+      "aspects": [
+        "grafisch"
+      ],
+      "needs": [],
+      "linked_operation_ids": [
+        "REP_BAR_CHART_VALUE_READING"
+      ],
+      "pv_template_ids": [],
+      "generator": "GEN_A62",
+      "generator_implemented": false,
+      "generator_blocked": true
+    },
+    {
+      "unit_id": "A63",
+      "name": "Waarden aflezen uit lijngrafiek",
+      "aspects": [
+        "grafisch"
+      ],
+      "needs": [],
+      "linked_operation_ids": [
+        "REP_LINE_GRAPH_VALUE_READING"
+      ],
+      "pv_template_ids": [],
+      "generator": "GEN_A63",
+      "generator_implemented": false,
+      "generator_blocked": true
+    },
+    {
+      "unit_id": "A64",
+      "name": "Aandelen aflezen uit cirkeldiagram",
+      "aspects": [
+        "grafisch",
+        "rekenen"
+      ],
+      "needs": [],
+      "linked_operation_ids": [
+        "REP_PIE_SHARE_READING"
+      ],
+      "pv_template_ids": [],
+      "generator": "GEN_A64",
+      "generator_implemented": false,
+      "generator_blocked": true
+    },
+    {
+      "unit_id": "A65",
+      "name": "Absolute hoeveelheid berekenen uit aandeel en totaal",
+      "aspects": [
+        "grafisch",
+        "rekenen"
+      ],
+      "needs": [
+        "A64",
+        "A04"
+      ],
+      "linked_operation_ids": [
+        "REP_SHARE_TOTAL_ABSOLUTE_QUANTITY"
+      ],
+      "pv_template_ids": [],
+      "generator": "GEN_A65",
+      "generator_implemented": false,
+      "generator_blocked": true
+    },
+    {
+      "unit_id": "A68",
+      "name": "Procentuele verandering berekenen vanuit staafdiagram",
+      "aspects": [
+        "grafisch",
+        "rekenen"
+      ],
+      "needs": [
+        "A38",
+        "A62",
+        "A66"
+      ],
+      "linked_operation_ids": [
+        "REP_PCT_CHANGE_BAR_CHART"
+      ],
+      "pv_template_ids": [],
+      "generator": "GEN_A68",
+      "generator_implemented": false,
+      "generator_blocked": true
+    },
+    {
+      "unit_id": "A69",
+      "name": "Procentuele verandering berekenen vanuit lijngrafiek",
+      "aspects": [
+        "grafisch",
+        "rekenen"
+      ],
+      "needs": [
+        "A38",
+        "A63",
+        "A66"
+      ],
+      "linked_operation_ids": [
+        "REP_PCT_CHANGE_LINE_GRAPH"
+      ],
+      "pv_template_ids": [],
+      "generator": "GEN_A69",
+      "generator_implemented": false,
+      "generator_blocked": true
+    },
+    {
+      "unit_id": "A73",
+      "name": "Indexverandering aflezen uit lijngrafiek",
+      "aspects": [
+        "grafisch",
+        "rekenen"
+      ],
+      "needs": [
+        "A39",
+        "A63"
+      ],
+      "linked_operation_ids": [
+        "REP_INDEX_CHANGE_LINE_GRAPH"
+      ],
+      "pv_template_ids": [],
+      "generator": "GEN_A73",
+      "generator_implemented": false,
+      "generator_blocked": true
+    },
+    {
+      "unit_id": "A77",
+      "name": "Break-even aflezen uit TO-TK-grafiek",
+      "aspects": [
+        "grafisch",
+        "rekenen"
+      ],
+      "needs": [
+        "A63",
+        "A29"
+      ],
+      "linked_operation_ids": [
+        "REP_BREAK_EVEN_TO_TK_GRAPH"
+      ],
+      "pv_template_ids": [],
+      "generator": "GEN_A77",
+      "generator_implemented": false,
+      "generator_blocked": true
+    },
+    {
+      "unit_id": "A78",
+      "name": "Winst of verlies aflezen uit TO-TK-grafiek",
+      "aspects": [
+        "grafisch",
+        "rekenen"
+      ],
+      "needs": [
+        "A63",
+        "A75",
+        "A77"
+      ],
+      "linked_operation_ids": [
+        "REP_PROFIT_LOSS_TO_TK_GRAPH"
+      ],
+      "pv_template_ids": [],
+      "generator": "GEN_A78",
+      "generator_implemented": false,
+      "generator_blocked": true
+    },
+    {
+      "unit_id": "A83",
+      "name": "Prijselasticiteit van de vraag berekenen uit P-Q-grafiek",
+      "aspects": [
+        "grafisch",
+        "rekenen"
+      ],
+      "needs": [
+        "A15",
+        "A46",
+        "A66"
+      ],
+      "linked_operation_ids": [
+        "REP_ELASTICITY_FROM_DEMAND_GRAPH"
+      ],
+      "pv_template_ids": [
+        "calculate_demand_elasticity_from_pq_graph"
+      ],
+      "generator": "GEN_A83",
+      "generator_implemented": false,
+      "generator_blocked": true
+    }
+  ],
+  "edges": [
+    {
+      "from": "A01",
+      "to": "A07",
+      "dependency_is_graph_node": false
+    },
+    {
+      "from": "A03",
+      "to": "A07",
+      "dependency_is_graph_node": false
+    },
+    {
+      "from": "A04",
+      "to": "A10",
+      "dependency_is_graph_node": false
+    },
+    {
+      "from": "A11",
+      "to": "A12",
+      "dependency_is_graph_node": false
+    },
+    {
+      "from": "A07",
+      "to": "A12",
+      "dependency_is_graph_node": true
+    },
+    {
+      "from": "A06",
+      "to": "A19",
+      "dependency_is_graph_node": false
+    },
+    {
+      "from": "A10",
+      "to": "A19",
+      "dependency_is_graph_node": true
+    },
+    {
+      "from": "A06",
+      "to": "A25",
+      "dependency_is_graph_node": false
+    },
+    {
+      "from": "A06",
+      "to": "A26",
+      "dependency_is_graph_node": false
+    },
+    {
+      "from": "A06",
+      "to": "A27",
+      "dependency_is_graph_node": false
+    },
+    {
+      "from": "A01",
+      "to": "A27",
+      "dependency_is_graph_node": false
+    },
+    {
+      "from": "A13",
+      "to": "A28",
+      "dependency_is_graph_node": false
+    },
+    {
+      "from": "A14",
+      "to": "A28",
+      "dependency_is_graph_node": false
+    },
+    {
+      "from": "A19",
+      "to": "A32",
+      "dependency_is_graph_node": true
+    },
+    {
+      "from": "A23",
+      "to": "A32",
+      "dependency_is_graph_node": false
+    },
+    {
+      "from": "A10",
+      "to": "A40",
+      "dependency_is_graph_node": true
+    },
+    {
+      "from": "D35",
+      "to": "A44",
+      "dependency_is_graph_node": false
+    },
+    {
+      "from": "A45",
+      "to": "A46",
+      "dependency_is_graph_node": true
+    },
+    {
+      "from": "A46",
+      "to": "A47",
+      "dependency_is_graph_node": true
+    },
+    {
+      "from": "A03",
+      "to": "A48",
+      "dependency_is_graph_node": false
+    },
+    {
+      "from": "A47",
+      "to": "A48",
+      "dependency_is_graph_node": true
+    },
+    {
+      "from": "A45",
+      "to": "A49",
+      "dependency_is_graph_node": true
+    },
+    {
+      "from": "A06",
+      "to": "A51",
+      "dependency_is_graph_node": false
+    },
+    {
+      "from": "A51",
+      "to": "A56",
+      "dependency_is_graph_node": true
+    },
+    {
+      "from": "D34",
+      "to": "A56",
+      "dependency_is_graph_node": false
+    },
+    {
+      "from": "A51",
+      "to": "A59",
+      "dependency_is_graph_node": true
+    },
+    {
+      "from": "A56",
+      "to": "A59",
+      "dependency_is_graph_node": true
+    },
+    {
+      "from": "A03",
+      "to": "A60",
+      "dependency_is_graph_node": false
+    },
+    {
+      "from": "A64",
+      "to": "A65",
+      "dependency_is_graph_node": true
+    },
+    {
+      "from": "A04",
+      "to": "A65",
+      "dependency_is_graph_node": false
+    },
+    {
+      "from": "A38",
+      "to": "A68",
+      "dependency_is_graph_node": false
+    },
+    {
+      "from": "A62",
+      "to": "A68",
+      "dependency_is_graph_node": true
+    },
+    {
+      "from": "A66",
+      "to": "A68",
+      "dependency_is_graph_node": false
+    },
+    {
+      "from": "A38",
+      "to": "A69",
+      "dependency_is_graph_node": false
+    },
+    {
+      "from": "A63",
+      "to": "A69",
+      "dependency_is_graph_node": true
+    },
+    {
+      "from": "A66",
+      "to": "A69",
+      "dependency_is_graph_node": false
+    },
+    {
+      "from": "A39",
+      "to": "A73",
+      "dependency_is_graph_node": false
+    },
+    {
+      "from": "A63",
+      "to": "A73",
+      "dependency_is_graph_node": true
+    },
+    {
+      "from": "A63",
+      "to": "A77",
+      "dependency_is_graph_node": true
+    },
+    {
+      "from": "A29",
+      "to": "A77",
+      "dependency_is_graph_node": false
+    },
+    {
+      "from": "A63",
+      "to": "A78",
+      "dependency_is_graph_node": true
+    },
+    {
+      "from": "A75",
+      "to": "A78",
+      "dependency_is_graph_node": false
+    },
+    {
+      "from": "A77",
+      "to": "A78",
+      "dependency_is_graph_node": true
+    },
+    {
+      "from": "A15",
+      "to": "A83",
+      "dependency_is_graph_node": false
+    },
+    {
+      "from": "A46",
+      "to": "A83",
+      "dependency_is_graph_node": true
+    },
+    {
+      "from": "A66",
+      "to": "A83",
+      "dependency_is_graph_node": false
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-RX5-representation-operation-reports",
+  "sprint_id": "RX.5",
+  "status": "technical_report_gate",
+  "generated_on": "2026-05-02T11:22:25.517Z",
+  "mutation_authorized": false,
+  "machine_registry_created": false,
+  "student_facing_use_authorized": false,
+  "purpose": "Validate that RX.5 reports bridge provisional S7/RX operation records, live unit status, generator blocks, and PV links without promoting an operation registry.",
+  "evidence": {
+    "coverage_report": "reports/json/representation-operation-coverage.json",
+    "graph_skill_tree": "reports/json/graph-skill-tree.json",
+    "transfer_gaps": "reports/json/representation-transfer-gaps.json"
+  },
+  "checks": [
+    "coverage report distinguishes live, candidate, held, stale, generator-blocked, and PV-linked states",
+    "graph skill tree is reference/report-only and preserves publication blocks",
+    "transfer gaps include proof-to-close fields",
+    "no references/machine operation or skill-tag registry exists",
+    "no student-facing use is authorized"
+  ]
+}

@@ -1,0 +1,515 @@
+{
+  "schema_version": 1,
+  "report_id": "representation-transfer-gaps",
+  "generated_by": "build-scripts/references/build-representation-operation-coverage.js",
+  "generated_on": "2026-05-02T11:22:25.510Z",
+  "policy": {
+    "diagnostic_only": true,
+    "student_facing_use_authorized": false,
+    "machine_registry_promotion_authorized": false
+  },
+  "summary": {
+    "gap_count": 54,
+    "by_category": {
+      "held_or_duplicate_review": 8,
+      "generator_blocked_live_unit": 23,
+      "pv_template_missing": 13,
+      "registry_status_stale": 8,
+      "operation_unit_name_alignment": 1,
+      "graph_skill_tree_generator_blocks": 1
+    },
+    "by_severity": {
+      "medium": 21,
+      "high_for_student_facing_release": 24,
+      "low": 9
+    }
+  },
+  "gaps": [
+    {
+      "gap_id": "generator-block:OVERLAY_CALCULATE_PERCENTAGE_SHARE_FROM_SOURCE_VALUES",
+      "severity": "high_for_student_facing_release",
+      "category": "generator_blocked_live_unit",
+      "operation_id": "OVERLAY_CALCULATE_PERCENTAGE_SHARE_FROM_SOURCE_VALUES",
+      "unit_id": "A04,A61",
+      "summary": "calculate percentage share from source values maps to live unit(s) that remain generator-blocked.",
+      "proof_to_close": "RX.6 or equivalent generator/projection validation implements or intentionally disables student-facing nodes."
+    },
+    {
+      "gap_id": "generator-block:OVERLAY_EVALUATE_PERCENTAGE_CLAIM_FROM_TABLE",
+      "severity": "high_for_student_facing_release",
+      "category": "generator_blocked_live_unit",
+      "operation_id": "OVERLAY_EVALUATE_PERCENTAGE_CLAIM_FROM_TABLE",
+      "unit_id": "A38,A61,A67",
+      "summary": "evaluate percentage claim from table maps to live unit(s) that remain generator-blocked.",
+      "proof_to_close": "RX.6 or equivalent generator/projection validation implements or intentionally disables student-facing nodes."
+    },
+    {
+      "gap_id": "generator-block:REP_BAR_CHART_VALUE_READING",
+      "severity": "high_for_student_facing_release",
+      "category": "generator_blocked_live_unit",
+      "operation_id": "REP_BAR_CHART_VALUE_READING",
+      "unit_id": "A62",
+      "summary": "Waarden aflezen uit staafdiagram maps to live unit(s) that remain generator-blocked.",
+      "proof_to_close": "RX.6 or equivalent generator/projection validation implements or intentionally disables student-facing nodes."
+    },
+    {
+      "gap_id": "generator-block:REP_BASE_COMPARISON_VALUE_IDENTIFICATION",
+      "severity": "high_for_student_facing_release",
+      "category": "generator_blocked_live_unit",
+      "operation_id": "REP_BASE_COMPARISON_VALUE_IDENTIFICATION",
+      "unit_id": "A66",
+      "summary": "Basiswaarde en vergelijkingswaarde in bron bepalen maps to live unit(s) that remain generator-blocked.",
+      "proof_to_close": "RX.6 or equivalent generator/projection validation implements or intentionally disables student-facing nodes."
+    },
+    {
+      "gap_id": "generator-block:REP_BREAK_EVEN_TO_TK_GRAPH",
+      "severity": "high_for_student_facing_release",
+      "category": "generator_blocked_live_unit",
+      "operation_id": "REP_BREAK_EVEN_TO_TK_GRAPH",
+      "unit_id": "A77",
+      "summary": "Break-even aflezen uit TO-TK-grafiek maps to live unit(s) that remain generator-blocked.",
+      "proof_to_close": "RX.6 or equivalent generator/projection validation implements or intentionally disables student-facing nodes."
+    },
+    {
+      "gap_id": "generator-block:REP_ELASTICITY_FROM_DEMAND_GRAPH",
+      "severity": "high_for_student_facing_release",
+      "category": "generator_blocked_live_unit",
+      "operation_id": "REP_ELASTICITY_FROM_DEMAND_GRAPH",
+      "unit_id": "A83",
+      "summary": "Elasticiteit berekenen uit vraaggrafiek maps to live unit(s) that remain generator-blocked.",
+      "proof_to_close": "RX.6 or equivalent generator/projection validation implements or intentionally disables student-facing nodes."
+    },
+    {
+      "gap_id": "generator-block:REP_ELASTICITY_FROM_TABLE",
+      "severity": "high_for_student_facing_release",
+      "category": "generator_blocked_live_unit",
+      "operation_id": "REP_ELASTICITY_FROM_TABLE",
+      "unit_id": "A82",
+      "summary": "Elasticiteit berekenen uit tabelwaarden maps to live unit(s) that remain generator-blocked.",
+      "proof_to_close": "RX.6 or equivalent generator/projection validation implements or intentionally disables student-facing nodes."
+    },
+    {
+      "gap_id": "generator-block:REP_INDEX_CHANGE_LINE_GRAPH",
+      "severity": "high_for_student_facing_release",
+      "category": "generator_blocked_live_unit",
+      "operation_id": "REP_INDEX_CHANGE_LINE_GRAPH",
+      "unit_id": "A73",
+      "summary": "Indexverandering aflezen uit lijngrafiek maps to live unit(s) that remain generator-blocked.",
+      "proof_to_close": "RX.6 or equivalent generator/projection validation implements or intentionally disables student-facing nodes."
+    },
+    {
+      "gap_id": "generator-block:REP_INDEX_FROM_TABLE",
+      "severity": "high_for_student_facing_release",
+      "category": "generator_blocked_live_unit",
+      "operation_id": "REP_INDEX_FROM_TABLE",
+      "unit_id": "A72",
+      "summary": "Indexcijfer berekenen vanuit tabel maps to live unit(s) that remain generator-blocked.",
+      "proof_to_close": "RX.6 or equivalent generator/projection validation implements or intentionally disables student-facing nodes."
+    },
+    {
+      "gap_id": "generator-block:REP_LINE_GRAPH_VALUE_READING",
+      "severity": "high_for_student_facing_release",
+      "category": "generator_blocked_live_unit",
+      "operation_id": "REP_LINE_GRAPH_VALUE_READING",
+      "unit_id": "A63",
+      "summary": "Waarden aflezen uit lijngrafiek maps to live unit(s) that remain generator-blocked.",
+      "proof_to_close": "RX.6 or equivalent generator/projection validation implements or intentionally disables student-facing nodes."
+    },
+    {
+      "gap_id": "generator-block:REP_MAX_PROFIT_TO_TK_TABLE",
+      "severity": "high_for_student_facing_release",
+      "category": "generator_blocked_live_unit",
+      "operation_id": "REP_MAX_PROFIT_TO_TK_TABLE",
+      "unit_id": "A79",
+      "summary": "Maximale winst bepalen uit TO-TK-tabel maps to live unit(s) that remain generator-blocked.",
+      "proof_to_close": "RX.6 or equivalent generator/projection validation implements or intentionally disables student-facing nodes."
+    },
+    {
+      "gap_id": "generator-block:REP_PCT_CHANGE_BAR_CHART",
+      "severity": "high_for_student_facing_release",
+      "category": "generator_blocked_live_unit",
+      "operation_id": "REP_PCT_CHANGE_BAR_CHART",
+      "unit_id": "A68",
+      "summary": "Procentuele verandering berekenen vanuit staafdiagram maps to live unit(s) that remain generator-blocked.",
+      "proof_to_close": "RX.6 or equivalent generator/projection validation implements or intentionally disables student-facing nodes."
+    },
+    {
+      "gap_id": "generator-block:REP_PCT_CHANGE_FROM_INDEX",
+      "severity": "high_for_student_facing_release",
+      "category": "generator_blocked_live_unit",
+      "operation_id": "REP_PCT_CHANGE_FROM_INDEX",
+      "unit_id": "A74",
+      "summary": "Procentuele verandering berekenen vanuit indexcijfers maps to live unit(s) that remain generator-blocked.",
+      "proof_to_close": "RX.6 or equivalent generator/projection validation implements or intentionally disables student-facing nodes."
+    },
+    {
+      "gap_id": "generator-block:REP_PCT_CHANGE_LINE_GRAPH",
+      "severity": "high_for_student_facing_release",
+      "category": "generator_blocked_live_unit",
+      "operation_id": "REP_PCT_CHANGE_LINE_GRAPH",
+      "unit_id": "A69",
+      "summary": "Procentuele verandering berekenen vanuit lijngrafiek maps to live unit(s) that remain generator-blocked.",
+      "proof_to_close": "RX.6 or equivalent generator/projection validation implements or intentionally disables student-facing nodes."
+    },
+    {
+      "gap_id": "generator-block:REP_PCT_CHANGE_TABLE",
+      "severity": "high_for_student_facing_release",
+      "category": "generator_blocked_live_unit",
+      "operation_id": "REP_PCT_CHANGE_TABLE",
+      "unit_id": "A67",
+      "summary": "Procentuele verandering berekenen vanuit tabel maps to live unit(s) that remain generator-blocked.",
+      "proof_to_close": "RX.6 or equivalent generator/projection validation implements or intentionally disables student-facing nodes."
+    },
+    {
+      "gap_id": "generator-block:REP_PERCENTAGE_POINT_CHANGE",
+      "severity": "high_for_student_facing_release",
+      "category": "generator_blocked_live_unit",
+      "operation_id": "REP_PERCENTAGE_POINT_CHANGE",
+      "unit_id": "A70",
+      "summary": "Percentagepuntverandering in aandeel herkennen maps to live unit(s) that remain generator-blocked.",
+      "proof_to_close": "RX.6 or equivalent generator/projection validation implements or intentionally disables student-facing nodes."
+    },
+    {
+      "gap_id": "generator-block:REP_PIE_SHARE_READING",
+      "severity": "high_for_student_facing_release",
+      "category": "generator_blocked_live_unit",
+      "operation_id": "REP_PIE_SHARE_READING",
+      "unit_id": "A64",
+      "summary": "Aandelen aflezen uit cirkeldiagram maps to live unit(s) that remain generator-blocked.",
+      "proof_to_close": "RX.6 or equivalent generator/projection validation implements or intentionally disables student-facing nodes."
+    },
+    {
+      "gap_id": "generator-block:REP_PROFIT_FROM_P_GTK_Q",
+      "severity": "high_for_student_facing_release",
+      "category": "generator_blocked_live_unit",
+      "operation_id": "REP_PROFIT_FROM_P_GTK_Q",
+      "unit_id": "A76",
+      "summary": "Totale winst berekenen uit P, GTK en Q maps to live unit(s) that remain generator-blocked.",
+      "proof_to_close": "RX.6 or equivalent generator/projection validation implements or intentionally disables student-facing nodes."
+    },
+    {
+      "gap_id": "generator-block:REP_PROFIT_FROM_REVENUE_COST_TABLE",
+      "severity": "high_for_student_facing_release",
+      "category": "generator_blocked_live_unit",
+      "operation_id": "REP_PROFIT_FROM_REVENUE_COST_TABLE",
+      "unit_id": "A75",
+      "summary": "Totale winst berekenen uit opbrengsten- en kostentabel maps to live unit(s) that remain generator-blocked.",
+      "proof_to_close": "RX.6 or equivalent generator/projection validation implements or intentionally disables student-facing nodes."
+    },
+    {
+      "gap_id": "generator-block:REP_PROFIT_LOSS_TO_TK_GRAPH",
+      "severity": "high_for_student_facing_release",
+      "category": "generator_blocked_live_unit",
+      "operation_id": "REP_PROFIT_LOSS_TO_TK_GRAPH",
+      "unit_id": "A78",
+      "summary": "Winst of verlies aflezen uit TO-TK-grafiek maps to live unit(s) that remain generator-blocked.",
+      "proof_to_close": "RX.6 or equivalent generator/projection validation implements or intentionally disables student-facing nodes."
+    },
+    {
+      "gap_id": "generator-block:REP_REVENUE_CHANGE_WITH_ELASTICITY_SOURCE",
+      "severity": "high_for_student_facing_release",
+      "category": "generator_blocked_live_unit",
+      "operation_id": "REP_REVENUE_CHANGE_WITH_ELASTICITY_SOURCE",
+      "unit_id": "A84",
+      "summary": "Omzetverandering beoordelen met elasticiteit uit bron maps to live unit(s) that remain generator-blocked.",
+      "proof_to_close": "RX.6 or equivalent generator/projection validation implements or intentionally disables student-facing nodes."
+    },
+    {
+      "gap_id": "generator-block:REP_SHARE_TOTAL_ABSOLUTE_QUANTITY",
+      "severity": "high_for_student_facing_release",
+      "category": "generator_blocked_live_unit",
+      "operation_id": "REP_SHARE_TOTAL_ABSOLUTE_QUANTITY",
+      "unit_id": "A65",
+      "summary": "Absolute hoeveelheid berekenen uit aandeel en totaal maps to live unit(s) that remain generator-blocked.",
+      "proof_to_close": "RX.6 or equivalent generator/projection validation implements or intentionally disables student-facing nodes."
+    },
+    {
+      "gap_id": "generator-block:REP_TABLE_VALUE_SELECTION",
+      "severity": "high_for_student_facing_release",
+      "category": "generator_blocked_live_unit",
+      "operation_id": "REP_TABLE_VALUE_SELECTION",
+      "unit_id": "A61",
+      "summary": "Tabelwaarden selecteren voor berekening maps to live unit(s) that remain generator-blocked.",
+      "proof_to_close": "RX.6 or equivalent generator/projection validation implements or intentionally disables student-facing nodes."
+    },
+    {
+      "gap_id": "graph-skill-tree:generator-blocks",
+      "severity": "high_for_student_facing_release",
+      "category": "graph_skill_tree_generator_blocks",
+      "operation_id": null,
+      "unit_id": null,
+      "summary": "10 graphical A-domain units are not ready for student-facing skill-tree use.",
+      "proof_to_close": "RX.6 implements generators or records intentional non-interactive status for each graph unit."
+    },
+    {
+      "gap_id": "held:HOLD_GRAPHICAL_MO_MK_OPTIMUM",
+      "severity": "medium",
+      "category": "held_or_duplicate_review",
+      "operation_id": "HOLD_GRAPHICAL_MO_MK_OPTIMUM",
+      "unit_id": null,
+      "summary": "Grafische MO=MK optimum bepalen remains held or duplicate-audit scoped.",
+      "proof_to_close": "Later human review moves the operation into a mutation lane or confirms the hold remains correct."
+    },
+    {
+      "gap_id": "held:HOLD_MARGINAL_VALUES_FROM_TABLE",
+      "severity": "medium",
+      "category": "held_or_duplicate_review",
+      "operation_id": "HOLD_MARGINAL_VALUES_FROM_TABLE",
+      "unit_id": null,
+      "summary": "Marginale waarden uit tabel remains held or duplicate-audit scoped.",
+      "proof_to_close": "Later human review moves the operation into a mutation lane or confirms the hold remains correct."
+    },
+    {
+      "gap_id": "held:HOLD_SHIFT_VS_MOVEMENT",
+      "severity": "medium",
+      "category": "held_or_duplicate_review",
+      "operation_id": "HOLD_SHIFT_VS_MOVEMENT",
+      "unit_id": null,
+      "summary": "Beweging langs curve versus verschuiving remains held or duplicate-audit scoped.",
+      "proof_to_close": "Later human review moves the operation into a mutation lane or confirms the hold remains correct."
+    },
+    {
+      "gap_id": "held:HOLD_SHORT_SIDE_INTERVENTION_QUANTITY",
+      "severity": "medium",
+      "category": "held_or_duplicate_review",
+      "operation_id": "HOLD_SHORT_SIDE_INTERVENTION_QUANTITY",
+      "unit_id": null,
+      "summary": "Korte zijde en interventiehoeveelheid remains held or duplicate-audit scoped.",
+      "proof_to_close": "Later human review moves the operation into a mutation lane or confirms the hold remains correct."
+    },
+    {
+      "gap_id": "held:HOLD_WELFARE_AREAS_PQ_DIAGRAM",
+      "severity": "medium",
+      "category": "held_or_duplicate_review",
+      "operation_id": "HOLD_WELFARE_AREAS_PQ_DIAGRAM",
+      "unit_id": null,
+      "summary": "Welvaartsgebieden herkennen in P-Q diagram remains held or duplicate-audit scoped.",
+      "proof_to_close": "Later human review moves the operation into a mutation lane or confirms the hold remains correct."
+    },
+    {
+      "gap_id": "held:REP_PCT_CHANGE_PIE_CHART",
+      "severity": "medium",
+      "category": "held_or_duplicate_review",
+      "operation_id": "REP_PCT_CHANGE_PIE_CHART",
+      "unit_id": "A71",
+      "summary": "Procentuele verandering berekenen vanuit cirkeldiagram remains held or duplicate-audit scoped.",
+      "proof_to_close": "Later human review moves the operation into a mutation lane or confirms the hold remains correct."
+    },
+    {
+      "gap_id": "held:REP_PROFIT_LOSS_BREAK_EVEN_PRODUCER_GRAPH",
+      "severity": "medium",
+      "category": "held_or_duplicate_review",
+      "operation_id": "REP_PROFIT_LOSS_BREAK_EVEN_PRODUCER_GRAPH",
+      "unit_id": "A81",
+      "summary": "Winst, verlies en break-even herkennen in producentengrafiek remains held or duplicate-audit scoped.",
+      "proof_to_close": "Later human review moves the operation into a mutation lane or confirms the hold remains correct."
+    },
+    {
+      "gap_id": "held:REP_PROFIT_RECTANGLE_PRODUCER_GRAPH",
+      "severity": "medium",
+      "category": "held_or_duplicate_review",
+      "operation_id": "REP_PROFIT_RECTANGLE_PRODUCER_GRAPH",
+      "unit_id": "A80",
+      "summary": "Winstrechthoek tekenen in producentengrafiek remains held or duplicate-audit scoped.",
+      "proof_to_close": "Later human review moves the operation into a mutation lane or confirms the hold remains correct."
+    },
+    {
+      "gap_id": "name-alignment:REP_ELASTICITY_FROM_DEMAND_GRAPH",
+      "severity": "low",
+      "category": "operation_unit_name_alignment",
+      "operation_id": "REP_ELASTICITY_FROM_DEMAND_GRAPH",
+      "unit_id": "A83",
+      "summary": "Elasticiteit berekenen uit vraaggrafiek differs from the live unit label.",
+      "proof_to_close": "Later operation normalization records the preferred operation label and aliases."
+    },
+    {
+      "gap_id": "pv-template:OVERLAY_DRAW_PQ_GRAPH_FROM_TABLE",
+      "severity": "medium",
+      "category": "pv_template_missing",
+      "operation_id": "OVERLAY_DRAW_PQ_GRAPH_FROM_TABLE",
+      "unit_id": "A45",
+      "summary": "draw pq graph from table is representation-composed but has no PV pilot template yet.",
+      "proof_to_close": "PV.3/PV.5 adds or validates a template/visual-state path, or records why no PV template is needed."
+    },
+    {
+      "gap_id": "pv-template:OVERLAY_READ_INTERPOLATE_PQ_GRAPH",
+      "severity": "medium",
+      "category": "pv_template_missing",
+      "operation_id": "OVERLAY_READ_INTERPOLATE_PQ_GRAPH",
+      "unit_id": "A46",
+      "summary": "read interpolate pq graph is representation-composed but has no PV pilot template yet.",
+      "proof_to_close": "PV.3/PV.5 adds or validates a template/visual-state path, or records why no PV template is needed."
+    },
+    {
+      "gap_id": "pv-template:REP_BREAK_EVEN_TO_TK_GRAPH",
+      "severity": "medium",
+      "category": "pv_template_missing",
+      "operation_id": "REP_BREAK_EVEN_TO_TK_GRAPH",
+      "unit_id": "A77",
+      "summary": "Break-even aflezen uit TO-TK-grafiek is representation-composed but has no PV pilot template yet.",
+      "proof_to_close": "PV.3/PV.5 adds or validates a template/visual-state path, or records why no PV template is needed."
+    },
+    {
+      "gap_id": "pv-template:REP_INDEX_CHANGE_LINE_GRAPH",
+      "severity": "medium",
+      "category": "pv_template_missing",
+      "operation_id": "REP_INDEX_CHANGE_LINE_GRAPH",
+      "unit_id": "A73",
+      "summary": "Indexverandering aflezen uit lijngrafiek is representation-composed but has no PV pilot template yet.",
+      "proof_to_close": "PV.3/PV.5 adds or validates a template/visual-state path, or records why no PV template is needed."
+    },
+    {
+      "gap_id": "pv-template:REP_INDEX_FROM_TABLE",
+      "severity": "medium",
+      "category": "pv_template_missing",
+      "operation_id": "REP_INDEX_FROM_TABLE",
+      "unit_id": "A72",
+      "summary": "Indexcijfer berekenen vanuit tabel is representation-composed but has no PV pilot template yet.",
+      "proof_to_close": "PV.3/PV.5 adds or validates a template/visual-state path, or records why no PV template is needed."
+    },
+    {
+      "gap_id": "pv-template:REP_MAX_PROFIT_TO_TK_TABLE",
+      "severity": "medium",
+      "category": "pv_template_missing",
+      "operation_id": "REP_MAX_PROFIT_TO_TK_TABLE",
+      "unit_id": "A79",
+      "summary": "Maximale winst bepalen uit TO-TK-tabel is representation-composed but has no PV pilot template yet.",
+      "proof_to_close": "PV.3/PV.5 adds or validates a template/visual-state path, or records why no PV template is needed."
+    },
+    {
+      "gap_id": "pv-template:REP_PCT_CHANGE_BAR_CHART",
+      "severity": "medium",
+      "category": "pv_template_missing",
+      "operation_id": "REP_PCT_CHANGE_BAR_CHART",
+      "unit_id": "A68",
+      "summary": "Procentuele verandering berekenen vanuit staafdiagram is representation-composed but has no PV pilot template yet.",
+      "proof_to_close": "PV.3/PV.5 adds or validates a template/visual-state path, or records why no PV template is needed."
+    },
+    {
+      "gap_id": "pv-template:REP_PCT_CHANGE_LINE_GRAPH",
+      "severity": "medium",
+      "category": "pv_template_missing",
+      "operation_id": "REP_PCT_CHANGE_LINE_GRAPH",
+      "unit_id": "A69",
+      "summary": "Procentuele verandering berekenen vanuit lijngrafiek is representation-composed but has no PV pilot template yet.",
+      "proof_to_close": "PV.3/PV.5 adds or validates a template/visual-state path, or records why no PV template is needed."
+    },
+    {
+      "gap_id": "pv-template:REP_PCT_CHANGE_TABLE",
+      "severity": "medium",
+      "category": "pv_template_missing",
+      "operation_id": "REP_PCT_CHANGE_TABLE",
+      "unit_id": "A67",
+      "summary": "Procentuele verandering berekenen vanuit tabel is representation-composed but has no PV pilot template yet.",
+      "proof_to_close": "PV.3/PV.5 adds or validates a template/visual-state path, or records why no PV template is needed."
+    },
+    {
+      "gap_id": "pv-template:REP_PERCENTAGE_POINT_CHANGE",
+      "severity": "medium",
+      "category": "pv_template_missing",
+      "operation_id": "REP_PERCENTAGE_POINT_CHANGE",
+      "unit_id": "A70",
+      "summary": "Percentagepuntverandering in aandeel herkennen is representation-composed but has no PV pilot template yet.",
+      "proof_to_close": "PV.3/PV.5 adds or validates a template/visual-state path, or records why no PV template is needed."
+    },
+    {
+      "gap_id": "pv-template:REP_PROFIT_FROM_REVENUE_COST_TABLE",
+      "severity": "medium",
+      "category": "pv_template_missing",
+      "operation_id": "REP_PROFIT_FROM_REVENUE_COST_TABLE",
+      "unit_id": "A75",
+      "summary": "Totale winst berekenen uit opbrengsten- en kostentabel is representation-composed but has no PV pilot template yet.",
+      "proof_to_close": "PV.3/PV.5 adds or validates a template/visual-state path, or records why no PV template is needed."
+    },
+    {
+      "gap_id": "pv-template:REP_PROFIT_LOSS_TO_TK_GRAPH",
+      "severity": "medium",
+      "category": "pv_template_missing",
+      "operation_id": "REP_PROFIT_LOSS_TO_TK_GRAPH",
+      "unit_id": "A78",
+      "summary": "Winst of verlies aflezen uit TO-TK-grafiek is representation-composed but has no PV pilot template yet.",
+      "proof_to_close": "PV.3/PV.5 adds or validates a template/visual-state path, or records why no PV template is needed."
+    },
+    {
+      "gap_id": "pv-template:REP_SHARE_TOTAL_ABSOLUTE_QUANTITY",
+      "severity": "medium",
+      "category": "pv_template_missing",
+      "operation_id": "REP_SHARE_TOTAL_ABSOLUTE_QUANTITY",
+      "unit_id": "A65",
+      "summary": "Absolute hoeveelheid berekenen uit aandeel en totaal is representation-composed but has no PV pilot template yet.",
+      "proof_to_close": "PV.3/PV.5 adds or validates a template/visual-state path, or records why no PV template is needed."
+    },
+    {
+      "gap_id": "registry-status:REP_BREAK_EVEN_TO_TK_GRAPH",
+      "severity": "low",
+      "category": "registry_status_stale",
+      "operation_id": "REP_BREAK_EVEN_TO_TK_GRAPH",
+      "unit_id": "A77",
+      "summary": "Break-even aflezen uit TO-TK-grafiek now has a live unit but the S7 registry source status is still candidate_pending_review.",
+      "proof_to_close": "A later governed registry refresh updates the provisional operation record status, without machine promotion."
+    },
+    {
+      "gap_id": "registry-status:REP_ELASTICITY_FROM_DEMAND_GRAPH",
+      "severity": "low",
+      "category": "registry_status_stale",
+      "operation_id": "REP_ELASTICITY_FROM_DEMAND_GRAPH",
+      "unit_id": "A83",
+      "summary": "Elasticiteit berekenen uit vraaggrafiek now has a live unit but the S7 registry source status is still candidate_pending_review.",
+      "proof_to_close": "A later governed registry refresh updates the provisional operation record status, without machine promotion."
+    },
+    {
+      "gap_id": "registry-status:REP_ELASTICITY_FROM_TABLE",
+      "severity": "low",
+      "category": "registry_status_stale",
+      "operation_id": "REP_ELASTICITY_FROM_TABLE",
+      "unit_id": "A82",
+      "summary": "Elasticiteit berekenen uit tabelwaarden now has a live unit but the S7 registry source status is still candidate_pending_review.",
+      "proof_to_close": "A later governed registry refresh updates the provisional operation record status, without machine promotion."
+    },
+    {
+      "gap_id": "registry-status:REP_MAX_PROFIT_TO_TK_TABLE",
+      "severity": "low",
+      "category": "registry_status_stale",
+      "operation_id": "REP_MAX_PROFIT_TO_TK_TABLE",
+      "unit_id": "A79",
+      "summary": "Maximale winst bepalen uit TO-TK-tabel now has a live unit but the S7 registry source status is still candidate_pending_review.",
+      "proof_to_close": "A later governed registry refresh updates the provisional operation record status, without machine promotion."
+    },
+    {
+      "gap_id": "registry-status:REP_PROFIT_FROM_P_GTK_Q",
+      "severity": "low",
+      "category": "registry_status_stale",
+      "operation_id": "REP_PROFIT_FROM_P_GTK_Q",
+      "unit_id": "A76",
+      "summary": "Totale winst berekenen uit P, GTK en Q now has a live unit but the S7 registry source status is still candidate_pending_review.",
+      "proof_to_close": "A later governed registry refresh updates the provisional operation record status, without machine promotion."
+    },
+    {
+      "gap_id": "registry-status:REP_PROFIT_FROM_REVENUE_COST_TABLE",
+      "severity": "low",
+      "category": "registry_status_stale",
+      "operation_id": "REP_PROFIT_FROM_REVENUE_COST_TABLE",
+      "unit_id": "A75",
+      "summary": "Totale winst berekenen uit opbrengsten- en kostentabel now has a live unit but the S7 registry source status is still candidate_pending_review.",
+      "proof_to_close": "A later governed registry refresh updates the provisional operation record status, without machine promotion."
+    },
+    {
+      "gap_id": "registry-status:REP_PROFIT_LOSS_TO_TK_GRAPH",
+      "severity": "low",
+      "category": "registry_status_stale",
+      "operation_id": "REP_PROFIT_LOSS_TO_TK_GRAPH",
+      "unit_id": "A78",
+      "summary": "Winst of verlies aflezen uit TO-TK-grafiek now has a live unit but the S7 registry source status is still candidate_pending_review.",
+      "proof_to_close": "A later governed registry refresh updates the provisional operation record status, without machine promotion."
+    },
+    {
+      "gap_id": "registry-status:REP_REVENUE_CHANGE_WITH_ELASTICITY_SOURCE",
+      "severity": "low",
+      "category": "registry_status_stale",
+      "operation_id": "REP_REVENUE_CHANGE_WITH_ELASTICITY_SOURCE",
+      "unit_id": "A84",
+      "summary": "Omzetverandering beoordelen met elasticiteit uit bron now has a live unit but the S7 registry source status is still candidate_pending_review.",
+      "proof_to_close": "A later governed registry refresh updates the provisional operation record status, without machine promotion."
+    }
+  ]
+}

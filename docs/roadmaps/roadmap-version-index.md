@@ -12,12 +12,13 @@ docs/roadmaps/roadmap-version-index.json
 
 | Roadmap | Version | Path | Notes |
 |---|---|---|---|
-| References Team Roadmap | `v2.32-pv4-procedure-game-contract` | `references/reference-team-roadmap.md` | Current operating roadmap after completing PV.4 procedure-game projection contract; RX.5 is the next sprint. |
+| References Team Roadmap | `v2.33-rx5-representation-operation-reports` | `references/reference-team-roadmap.md` | Current operating roadmap after completing RX.5 representation-operation reports; PV.5 is the next sprint. |
 
 ## Outdated Archive
 
 | Roadmap | Version | Path | Superseded By |
 |---|---|---|---|
+| References Team Roadmap before RX.5 representation-operation reports | `v2.32-pv4-procedure-game-contract` | `docs/roadmaps/outdated/reference-team-roadmap-v2.32-pv4-procedure-game-contract.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before PV.4 procedure-game contract | `v2.31-pv3-pilot-procedure-visual-templates` | `docs/roadmaps/outdated/reference-team-roadmap-v2.31-pv3-pilot-procedure-visual-templates.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before PV.3 pilot procedure-visual templates | `v2.30-rx4-elasticity-market-applied` | `docs/roadmaps/outdated/reference-team-roadmap-v2.30-rx4-elasticity-market-applied.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before RX.4 elasticity market-diagram CLI execution | `v2.29-rx4-elasticity-market-review-prepared` | `docs/roadmaps/outdated/reference-team-roadmap-v2.29-rx4-elasticity-market-review-prepared.md` | `references/reference-team-roadmap.md` |

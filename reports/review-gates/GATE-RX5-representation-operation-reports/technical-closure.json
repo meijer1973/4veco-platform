@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-RX5-representation-operation-reports",
+  "sprint_id": "RX.5",
+  "status": "pass_with_conditions",
+  "closed_on": "2026-05-02",
+  "closure_type": "technical",
+  "mutation_authorized": false,
+  "machine_registry_created": false,
+  "student_facing_use_authorized": false,
+  "report_outputs": [
+    "reports/json/representation-operation-coverage.json",
+    "reports/representation-operation-coverage.md",
+    "reports/json/graph-skill-tree.json",
+    "reports/graph-skill-tree.md",
+    "reports/json/representation-transfer-gaps.json",
+    "reports/representation-transfer-gaps.md"
+  ],
+  "summary": {
+    "operation_count": 33,
+    "transfer_gap_count": 54,
+    "generator_blocked_operation_count": 23,
+    "pv_linked_operation_count": 6
+  },
+  "conditions": [
+    "Keep operation records provisional until a later schema, validator, CLI, mutation-log, and human-promotion gate exists.",
+    "Do not create references/machine/exercise-operations.json or references/machine/skill-tags.json.",
+    "Use the transfer-gap report as diagnostic planning input only, not as an automatic mutation queue.",
+    "Keep generator-blocked units non-interactive until RX.6 or a later approved generator/projection sprint.",
+    "Do not authorize student diagnostics, adaptive routing, student-facing AI, sequencing, mastery, summative use, or student-facing PV projection."
+  ]
+}

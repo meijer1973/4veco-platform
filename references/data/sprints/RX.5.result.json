@@ -1,0 +1,73 @@
+{
+  "sprint_id": "RX.5",
+  "name": "Representation Operation Registry And Reports",
+  "status": "completed",
+  "completed_on": "2026-05-02",
+  "plan": "docs/sprints/RX.5-plan.md",
+  "baseline": "reports/sprints/RX.5-baseline.md",
+  "result": "reports/sprints/RX.5-result.md",
+  "diff_summary": "reports/sprints/RX.5-diff-summary.md",
+  "technical_gate_id": "GATE-RX5-representation-operation-reports",
+  "protected_reference_data_changed": false,
+  "machine_registry_created": false,
+  "student_facing_use_authorized": false,
+  "pv_projection_authorized": false,
+  "operation_count": 33,
+  "foundation_live_count": 16,
+  "foundation_held_count": 3,
+  "registry_status_stale_operation_count": 8,
+  "generator_blocked_operation_count": 23,
+  "pv_linked_operation_count": 6,
+  "transfer_gap_count": 54,
+  "outputs": [
+    "reports/json/representation-operation-coverage.json",
+    "reports/representation-operation-coverage.md",
+    "reports/json/graph-skill-tree.json",
+    "reports/graph-skill-tree.md",
+    "reports/json/representation-transfer-gaps.json",
+    "reports/representation-transfer-gaps.md"
+  ],
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js docs/sprints/RX.5-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/build-representation-operation-coverage.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-representation-operation-coverage.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/validate-procedure-visual-registry.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-gate-bundle-urls.js GATE-RX5-representation-operation-reports",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-bundle-urls.js GATE-RX5-representation-operation-reports",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js RX.5",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-result.js reports/sprints/RX.5-result.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js RX.5 --complete",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-roadmap-version-index.js",
+      "status": "passed"
+    }
+  ],
+  "next_required_step": "Proceed to PV.5 Visual Projection MVP. Keep operation records provisional and generator-blocked units non-interactive."
+}

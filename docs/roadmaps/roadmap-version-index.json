@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_on": "2026-05-01",
+  "updated_on": "2026-05-02",
   "generated_by": "manual-roadmap-versioning",
   "canonical_archive_directory": "docs/roadmaps/outdated",
   "current_operational_roadmaps": [
@@ -15,13 +15,14 @@
   "roadmaps": [
     {
       "roadmap_id": "references-team-roadmap",
-      "version": "v2.32-pv4-procedure-game-contract",
+      "version": "v2.33-rx5-representation-operation-reports",
       "title": "References Team Roadmap",
       "status": "active",
       "path": "references/reference-team-roadmap.md",
       "owner": "references_team",
       "updated_on": "2026-05-02",
       "supersedes": [
+        "docs/roadmaps/outdated/reference-team-roadmap-v2.32-pv4-procedure-game-contract.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.31-pv3-pilot-procedure-visual-templates.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.30-rx4-elasticity-market-applied.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.29-rx4-elasticity-market-review-prepared.md",
@@ -54,7 +55,18 @@
         "knowledge/Exercise schema and quality/reference-team-roadmap Live version 28 April.md",
         "knowledge/Exercise schema and quality/roadmap-updated-repository-checked.md"
       ],
-      "notes": "Current operating roadmap after completing PV.4 procedure-game projection contract; RX.5 is the next sprint."
+      "notes": "Current operating roadmap after completing RX.5 representation-operation reports; PV.5 is the next sprint."
+    },
+    {
+      "roadmap_id": "references-team-roadmap-v2.32",
+      "version": "v2.32-pv4-procedure-game-contract",
+      "title": "References Team Roadmap before RX.5 representation-operation reports",
+      "status": "outdated",
+      "path": "docs/roadmaps/outdated/reference-team-roadmap-v2.32-pv4-procedure-game-contract.md",
+      "owner": "references_team",
+      "updated_on": "2026-05-02",
+      "superseded_by": "references/reference-team-roadmap.md",
+      "notes": "Snapshot archived before adding RX.5 representation-operation coverage, graph-skill-tree, and transfer-gap reports."
     },
     {
       "roadmap_id": "references-team-roadmap-v2.31",

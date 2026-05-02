@@ -1,0 +1,1708 @@
+{
+  "schema_version": 1,
+  "report_id": "representation-operation-coverage",
+  "sprint_id": "RX.5",
+  "generated_by": "build-scripts/references/build-representation-operation-coverage.js",
+  "generated_on": "2026-05-02T11:22:25.510Z",
+  "storage_decision": {
+    "source_registry": "references/data/skill-operation-registry.json",
+    "machine_registry_created": false,
+    "operation_governance_status": "provisional_report_only",
+    "reason": "RX.5 reports current coverage but does not promote operations to references/machine/."
+  },
+  "source_files": [
+    "references/data/skill-operation-registry.json",
+    "references/data/sprints/RX.1-representation-operation-inventory.json",
+    "references/machine/micro-teaching-units.json",
+    "references/data/procedure-visual/procedure-templates.json",
+    "references/data/procedure-visual/visual-states.json",
+    "references/data/procedure-visual/unit-template-links.json",
+    "engines/skilltree/generators.js"
+  ],
+  "policy": {
+    "diagnostic_only": true,
+    "student_facing_use_authorized": false,
+    "bulk_backfill_authorized": false,
+    "machine_registry_promotion_authorized": false,
+    "pv_projection_authorized": false
+  },
+  "rx1_inventory_summary": {
+    "operation_count": 29,
+    "proposed_candidate_count": 24,
+    "hold_count": 5,
+    "mutation_authorized_count": 0,
+    "by_classification": {
+      "needs_new_representation_reading_unit": 5,
+      "needs_new_composed_calculation_unit": 19,
+      "hold_duplicate_audit": 3,
+      "already_covered_hold": 2
+    },
+    "by_group": {
+      "representation_reading_foundation": 6,
+      "percentage_change_from_representations": 5,
+      "index_and_growth_from_representations": 3,
+      "profit_and_producer_representations": 7,
+      "elasticity_from_representations": 3,
+      "duplicate_or_hold": 5
+    },
+    "by_evidence_status": {
+      "target_exercise_evidence": 17,
+      "didactic_prior_rationale": 4,
+      "exam_question_evidence": 8
+    }
+  },
+  "summary": {
+    "operation_count": 33,
+    "operation_count_by_coverage_state": {
+      "held_or_duplicate_review": 8,
+      "overlay_provisional": 4,
+      "live_unit_mapped": 13,
+      "live_unit_live_registry_status_stale": 8
+    },
+    "operation_count_by_coverage_type": {
+      "calculation_from_representation": 26,
+      "representation_reading_foundation": 5,
+      "representation_related": 2
+    },
+    "generator_blocked_operation_count": 23,
+    "pv_linked_operation_count": 6,
+    "foundation_requirement_count": 19,
+    "foundation_live_count": 16,
+    "foundation_held_count": 3,
+    "graph_skill_tree_node_count": 32,
+    "transfer_gap_count": 54
+  },
+  "foundation_coverage": [
+    {
+      "requirement_id": "table_value_selection",
+      "label": "table value selection",
+      "expected_unit_id": "A61",
+      "expected_operation_id": "REP_TABLE_VALUE_SELECTION",
+      "category": "foundation",
+      "status": "live_unit_mapped",
+      "live_unit": true,
+      "unit_name": "Tabelwaarden selecteren voor berekening",
+      "generator_blocked": true,
+      "pv_template_ids": [
+        "select_table_values_trace"
+      ]
+    },
+    {
+      "requirement_id": "bar_chart_value_reading",
+      "label": "bar chart value reading",
+      "expected_unit_id": "A62",
+      "expected_operation_id": "REP_BAR_CHART_VALUE_READING",
+      "category": "foundation",
+      "status": "live_unit_mapped",
+      "live_unit": true,
+      "unit_name": "Waarden aflezen uit staafdiagram",
+      "generator_blocked": true,
+      "pv_template_ids": []
+    },
+    {
+      "requirement_id": "line_graph_value_reading",
+      "label": "line graph value reading",
+      "expected_unit_id": "A63",
+      "expected_operation_id": "REP_LINE_GRAPH_VALUE_READING",
+      "category": "foundation",
+      "status": "live_unit_mapped",
+      "live_unit": true,
+      "unit_name": "Waarden aflezen uit lijngrafiek",
+      "generator_blocked": true,
+      "pv_template_ids": []
+    },
+    {
+      "requirement_id": "pie_chart_share_reading",
+      "label": "pie chart share reading",
+      "expected_unit_id": "A64",
+      "expected_operation_id": "REP_PIE_SHARE_READING",
+      "category": "foundation",
+      "status": "live_unit_mapped",
+      "live_unit": true,
+      "unit_name": "Aandelen aflezen uit cirkeldiagram",
+      "generator_blocked": true,
+      "pv_template_ids": []
+    },
+    {
+      "requirement_id": "share_times_total",
+      "label": "absolute quantity from share and total",
+      "expected_unit_id": "A65",
+      "expected_operation_id": "REP_SHARE_TOTAL_ABSOLUTE_QUANTITY",
+      "category": "foundation",
+      "status": "live_unit_mapped",
+      "live_unit": true,
+      "unit_name": "Absolute hoeveelheid berekenen uit aandeel en totaal",
+      "generator_blocked": true,
+      "pv_template_ids": []
+    },
+    {
+      "requirement_id": "percentage_change_bar_chart",
+      "label": "percentage change from bar chart",
+      "expected_unit_id": "A68",
+      "expected_operation_id": "REP_PCT_CHANGE_BAR_CHART",
+      "category": "composed_calculation",
+      "status": "live_unit_mapped",
+      "live_unit": true,
+      "unit_name": "Procentuele verandering berekenen vanuit staafdiagram",
+      "generator_blocked": true,
+      "pv_template_ids": []
+    },
+    {
+      "requirement_id": "percentage_change_line_graph",
+      "label": "percentage change from line graph",
+      "expected_unit_id": "A69",
+      "expected_operation_id": "REP_PCT_CHANGE_LINE_GRAPH",
+      "category": "composed_calculation",
+      "status": "live_unit_mapped",
+      "live_unit": true,
+      "unit_name": "Procentuele verandering berekenen vanuit lijngrafiek",
+      "generator_blocked": true,
+      "pv_template_ids": []
+    },
+    {
+      "requirement_id": "percentage_change_pie_chart",
+      "label": "percentage change from pie chart",
+      "expected_unit_id": "A71",
+      "expected_operation_id": "REP_PCT_CHANGE_PIE_CHART",
+      "category": "held_high_risk",
+      "status": "held_or_duplicate_review",
+      "live_unit": false,
+      "unit_name": null,
+      "generator_blocked": false,
+      "pv_template_ids": []
+    },
+    {
+      "requirement_id": "index_change_line_graph",
+      "label": "index change from line graph",
+      "expected_unit_id": "A73",
+      "expected_operation_id": "REP_INDEX_CHANGE_LINE_GRAPH",
+      "category": "composed_calculation",
+      "status": "live_unit_mapped",
+      "live_unit": true,
+      "unit_name": "Indexverandering aflezen uit lijngrafiek",
+      "generator_blocked": true,
+      "pv_template_ids": []
+    },
+    {
+      "requirement_id": "profit_revenue_cost_table",
+      "label": "profit from revenue/cost table",
+      "expected_unit_id": "A75",
+      "expected_operation_id": "REP_PROFIT_FROM_REVENUE_COST_TABLE",
+      "category": "producer_table",
+      "status": "live_unit_live_registry_status_stale",
+      "live_unit": true,
+      "unit_name": "Totale winst berekenen uit opbrengsten- en kostentabel",
+      "generator_blocked": true,
+      "pv_template_ids": []
+    },
+    {
+      "requirement_id": "profit_p_gtk_q",
+      "label": "profit from P, GTK, and Q",
+      "expected_unit_id": "A76",
+      "expected_operation_id": "REP_PROFIT_FROM_P_GTK_Q",
+      "category": "producer_table",
+      "status": "live_unit_live_registry_status_stale",
+      "live_unit": true,
+      "unit_name": "Totale winst berekenen uit P, GTK en Q",
+      "generator_blocked": true,
+      "pv_template_ids": []
+    },
+    {
+      "requirement_id": "break_even_to_tk_graph",
+      "label": "break-even from TO-TK graph",
+      "expected_unit_id": "A77",
+      "expected_operation_id": "REP_BREAK_EVEN_TO_TK_GRAPH",
+      "category": "producer_graph",
+      "status": "live_unit_live_registry_status_stale",
+      "live_unit": true,
+      "unit_name": "Break-even aflezen uit TO-TK-grafiek",
+      "generator_blocked": true,
+      "pv_template_ids": []
+    },
+    {
+      "requirement_id": "profit_loss_to_tk_graph",
+      "label": "profit/loss from TO-TK graph",
+      "expected_unit_id": "A78",
+      "expected_operation_id": "REP_PROFIT_LOSS_TO_TK_GRAPH",
+      "category": "producer_graph",
+      "status": "live_unit_live_registry_status_stale",
+      "live_unit": true,
+      "unit_name": "Winst of verlies aflezen uit TO-TK-grafiek",
+      "generator_blocked": true,
+      "pv_template_ids": []
+    },
+    {
+      "requirement_id": "max_profit_to_tk_table",
+      "label": "maximum profit from TO-TK table",
+      "expected_unit_id": "A79",
+      "expected_operation_id": "REP_MAX_PROFIT_TO_TK_TABLE",
+      "category": "producer_table",
+      "status": "live_unit_live_registry_status_stale",
+      "live_unit": true,
+      "unit_name": "Maximale winst bepalen uit TO-TK-tabel",
+      "generator_blocked": true,
+      "pv_template_ids": []
+    },
+    {
+      "requirement_id": "profit_rectangle_producer_graph",
+      "label": "profit rectangle in producer graph",
+      "expected_unit_id": "A80",
+      "expected_operation_id": "REP_PROFIT_RECTANGLE_PRODUCER_GRAPH",
+      "category": "held_until_pv_producer_graph",
+      "status": "held_or_duplicate_review",
+      "live_unit": false,
+      "unit_name": null,
+      "generator_blocked": false,
+      "pv_template_ids": []
+    },
+    {
+      "requirement_id": "producer_graph_profit_loss_break_even",
+      "label": "profit/loss/break-even in producer graph",
+      "expected_unit_id": "A81",
+      "expected_operation_id": "REP_PROFIT_LOSS_BREAK_EVEN_PRODUCER_GRAPH",
+      "category": "held_until_pv_producer_graph",
+      "status": "held_or_duplicate_review",
+      "live_unit": false,
+      "unit_name": null,
+      "generator_blocked": false,
+      "pv_template_ids": []
+    },
+    {
+      "requirement_id": "elasticity_table",
+      "label": "elasticity from table values",
+      "expected_unit_id": "A82",
+      "expected_operation_id": "REP_ELASTICITY_FROM_TABLE",
+      "category": "elasticity",
+      "status": "live_unit_live_registry_status_stale",
+      "live_unit": true,
+      "unit_name": "Elasticiteit berekenen uit tabelwaarden",
+      "generator_blocked": true,
+      "pv_template_ids": [
+        "calculate_elasticity_from_table_values"
+      ]
+    },
+    {
+      "requirement_id": "elasticity_pq_graph",
+      "label": "demand elasticity from P-Q graph",
+      "expected_unit_id": "A83",
+      "expected_operation_id": "REP_ELASTICITY_FROM_DEMAND_GRAPH",
+      "category": "elasticity_graph",
+      "status": "live_unit_live_registry_status_stale",
+      "live_unit": true,
+      "unit_name": "Prijselasticiteit van de vraag berekenen uit P-Q-grafiek",
+      "generator_blocked": true,
+      "pv_template_ids": [
+        "calculate_demand_elasticity_from_pq_graph"
+      ]
+    },
+    {
+      "requirement_id": "revenue_change_elasticity_source",
+      "label": "revenue change with elasticity from source",
+      "expected_unit_id": "A84",
+      "expected_operation_id": "REP_REVENUE_CHANGE_WITH_ELASTICITY_SOURCE",
+      "category": "elasticity",
+      "status": "live_unit_live_registry_status_stale",
+      "live_unit": true,
+      "unit_name": "Omzetverandering beoordelen met elasticiteit uit bron",
+      "generator_blocked": true,
+      "pv_template_ids": [
+        "judge_revenue_change_with_elasticity"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "operation_id": "HOLD_GRAPHICAL_MO_MK_OPTIMUM",
+      "operation_name": "Grafische MO=MK optimum bepalen",
+      "source_status": "held_for_duplicate_or_scope_review",
+      "governance_status": "provisional_until_cp4",
+      "coverage_state": "held_or_duplicate_review",
+      "coverage_type": "calculation_from_representation",
+      "representation": "producer_graph",
+      "base_operation": "profit_maximization",
+      "economic_context": "producer",
+      "candidate_unit_id": null,
+      "candidate_unit_live": false,
+      "live_unit_ids": [],
+      "live_unit_names": [],
+      "mapped_unit_ids": [],
+      "generator_info": [],
+      "any_generator_blocked": false,
+      "any_generator_implemented": false,
+      "pv_template_ids": [],
+      "pv_visual_state_ids": [],
+      "pv_projection_allowed": false,
+      "name_alignment": "aligned_or_not_applicable",
+      "held_reason": "May overlap existing profit optimization and verification units; needs human review before minting.",
+      "evidence_status": "target_exercise_evidence",
+      "notes": [
+        "Imported from RX.1 representation-operation inventory.",
+        "Operation remains provisional until CP-4 approves coexistence and promotion rules."
+      ]
+    },
+    {
+      "operation_id": "HOLD_MARGINAL_VALUES_FROM_TABLE",
+      "operation_name": "Marginale waarden uit tabel",
+      "source_status": "held_for_duplicate_or_scope_review",
+      "governance_status": "provisional_until_cp4",
+      "coverage_state": "held_or_duplicate_review",
+      "coverage_type": "calculation_from_representation",
+      "representation": "table",
+      "base_operation": "table_difference",
+      "economic_context": "producer",
+      "candidate_unit_id": null,
+      "candidate_unit_live": false,
+      "live_unit_ids": [],
+      "live_unit_names": [],
+      "mapped_unit_ids": [],
+      "generator_info": [],
+      "any_generator_blocked": false,
+      "any_generator_implemented": false,
+      "pv_template_ids": [],
+      "pv_visual_state_ids": [],
+      "pv_projection_allowed": false,
+      "name_alignment": "aligned_or_not_applicable",
+      "held_reason": "A52 already covers MK and MO from table differences.",
+      "evidence_status": "target_exercise_evidence",
+      "notes": [
+        "Imported from RX.1 representation-operation inventory.",
+        "Operation remains provisional until CP-4 approves coexistence and promotion rules."
+      ]
+    },
+    {
+      "operation_id": "HOLD_SHIFT_VS_MOVEMENT",
+      "operation_name": "Beweging langs curve versus verschuiving",
+      "source_status": "held_for_duplicate_or_scope_review",
+      "governance_status": "provisional_until_cp4",
+      "coverage_state": "held_or_duplicate_review",
+      "coverage_type": "calculation_from_representation",
+      "representation": "p_q_graph",
+      "base_operation": "graph_interpretation",
+      "economic_context": "demand_supply",
+      "candidate_unit_id": null,
+      "candidate_unit_live": false,
+      "live_unit_ids": [],
+      "live_unit_names": [],
+      "mapped_unit_ids": [],
+      "generator_info": [],
+      "any_generator_blocked": false,
+      "any_generator_implemented": false,
+      "pv_template_ids": [],
+      "pv_visual_state_ids": [],
+      "pv_projection_allowed": false,
+      "name_alignment": "aligned_or_not_applicable",
+      "held_reason": "D32 and A42 already touch this; design review needed before adding another graph-change unit.",
+      "evidence_status": "target_exercise_evidence",
+      "notes": [
+        "Imported from RX.1 representation-operation inventory.",
+        "Operation remains provisional until CP-4 approves coexistence and promotion rules."
+      ]
+    },
+    {
+      "operation_id": "HOLD_SHORT_SIDE_INTERVENTION_QUANTITY",
+      "operation_name": "Korte zijde en interventiehoeveelheid",
+      "source_status": "held_for_duplicate_or_scope_review",
+      "governance_status": "provisional_until_cp4",
+      "coverage_state": "held_or_duplicate_review",
+      "coverage_type": "calculation_from_representation",
+      "representation": "p_q_graph",
+      "base_operation": "short_side_rule",
+      "economic_context": "price_controls",
+      "candidate_unit_id": null,
+      "candidate_unit_live": false,
+      "live_unit_ids": [],
+      "live_unit_names": [],
+      "mapped_unit_ids": [],
+      "generator_info": [],
+      "any_generator_blocked": false,
+      "any_generator_implemented": false,
+      "pv_template_ids": [],
+      "pv_visual_state_ids": [],
+      "pv_projection_allowed": false,
+      "name_alignment": "aligned_or_not_applicable",
+      "held_reason": "A51/A56/A59 now cover surplus/shortage and short-side/intervention quantity logic.",
+      "evidence_status": "target_exercise_evidence",
+      "notes": [
+        "Imported from RX.1 representation-operation inventory.",
+        "Operation remains provisional until CP-4 approves coexistence and promotion rules."
+      ]
+    },
+    {
+      "operation_id": "HOLD_WELFARE_AREAS_PQ_DIAGRAM",
+      "operation_name": "Welvaartsgebieden herkennen in P-Q diagram",
+      "source_status": "held_for_duplicate_or_scope_review",
+      "governance_status": "provisional_until_cp4",
+      "coverage_state": "held_or_duplicate_review",
+      "coverage_type": "calculation_from_representation",
+      "representation": "market_surplus_diagram",
+      "base_operation": "welfare_area_recognition",
+      "economic_context": "market_welfare",
+      "candidate_unit_id": null,
+      "candidate_unit_live": false,
+      "live_unit_ids": [],
+      "live_unit_names": [],
+      "mapped_unit_ids": [],
+      "generator_info": [],
+      "any_generator_blocked": false,
+      "any_generator_implemented": false,
+      "pv_template_ids": [],
+      "pv_visual_state_ids": [],
+      "pv_projection_allowed": false,
+      "name_alignment": "aligned_or_not_applicable",
+      "held_reason": "Existing A19/A32/A40 already cover core surplus and welfare-area operations; do not mint before detailed overlap review.",
+      "evidence_status": "target_exercise_evidence",
+      "notes": [
+        "Imported from RX.1 representation-operation inventory.",
+        "Operation remains provisional until CP-4 approves coexistence and promotion rules."
+      ]
+    },
+    {
+      "operation_id": "OVERLAY_CALCULATE_PERCENTAGE_SHARE_FROM_SOURCE_VALUES",
+      "operation_name": "calculate percentage share from source values",
+      "source_status": "overlay_provisional",
+      "governance_status": "provisional_until_cp4",
+      "coverage_state": "overlay_provisional",
+      "coverage_type": "calculation_from_representation",
+      "representation": "source_text",
+      "base_operation": "not_yet_normalized",
+      "economic_context": "external_exam_question",
+      "candidate_unit_id": null,
+      "candidate_unit_live": false,
+      "live_unit_ids": [
+        "A04",
+        "A61"
+      ],
+      "live_unit_names": [
+        "Substitueren",
+        "Tabelwaarden selecteren voor berekening"
+      ],
+      "mapped_unit_ids": [
+        "A04",
+        "A61"
+      ],
+      "generator_info": [
+        {
+          "unit_id": "A04",
+          "declared_generator": "GEN_A04",
+          "generator_implemented": true,
+          "generator_blocked": false,
+          "generator_block_sources": []
+        },
+        {
+          "unit_id": "A61",
+          "declared_generator": "GEN_A61",
+          "generator_implemented": false,
+          "generator_blocked": true,
+          "generator_block_sources": [
+            "references/data/sprints/RX.2-generator-blocked-units.json"
+          ]
+        }
+      ],
+      "any_generator_blocked": true,
+      "any_generator_implemented": true,
+      "pv_template_ids": [
+        "select_table_values_trace"
+      ],
+      "pv_visual_state_ids": [
+        "table_trace_source_values_selected"
+      ],
+      "pv_projection_allowed": false,
+      "name_alignment": "aligned_or_not_applicable",
+      "held_reason": null,
+      "evidence_status": "source_values_not_extracted",
+      "notes": [
+        "Observed in S4 dry-run overlay.",
+        "This operation label is not yet governed and may need renaming or mapping in CP-4."
+      ]
+    },
+    {
+      "operation_id": "OVERLAY_DRAW_PQ_GRAPH_FROM_TABLE",
+      "operation_name": "draw pq graph from table",
+      "source_status": "overlay_provisional",
+      "governance_status": "provisional_until_cp4",
+      "coverage_state": "overlay_provisional",
+      "coverage_type": "calculation_from_representation",
+      "representation": "table+p_q_graph",
+      "base_operation": "not_yet_normalized",
+      "economic_context": "target_exercise",
+      "candidate_unit_id": null,
+      "candidate_unit_live": false,
+      "live_unit_ids": [
+        "A45"
+      ],
+      "live_unit_names": [
+        "P-Q grafiek tekenen uit tabel"
+      ],
+      "mapped_unit_ids": [
+        "A45"
+      ],
+      "generator_info": [
+        {
+          "unit_id": "A45",
+          "declared_generator": "GEN_A45",
+          "generator_implemented": false,
+          "generator_blocked": false,
+          "generator_block_sources": []
+        }
+      ],
+      "any_generator_blocked": false,
+      "any_generator_implemented": false,
+      "pv_template_ids": [],
+      "pv_visual_state_ids": [],
+      "pv_projection_allowed": false,
+      "name_alignment": "aligned_or_not_applicable",
+      "held_reason": null,
+      "evidence_status": "owned_exercise_evidence",
+      "notes": [
+        "Observed in S4 dry-run overlay.",
+        "This operation label is not yet governed and may need renaming or mapping in CP-4."
+      ]
+    },
+    {
+      "operation_id": "OVERLAY_EVALUATE_PERCENTAGE_CLAIM_FROM_TABLE",
+      "operation_name": "evaluate percentage claim from table",
+      "source_status": "overlay_provisional",
+      "governance_status": "provisional_until_cp4",
+      "coverage_state": "overlay_provisional",
+      "coverage_type": "calculation_from_representation",
+      "representation": "table+p_q_graph",
+      "base_operation": "not_yet_normalized",
+      "economic_context": "target_exercise",
+      "candidate_unit_id": null,
+      "candidate_unit_live": false,
+      "live_unit_ids": [
+        "A38",
+        "A61",
+        "A67"
+      ],
+      "live_unit_names": [
+        "Procentuele verandering berekenen",
+        "Tabelwaarden selecteren voor berekening",
+        "Procentuele verandering berekenen vanuit tabel"
+      ],
+      "mapped_unit_ids": [
+        "A38",
+        "A61",
+        "A67"
+      ],
+      "generator_info": [
+        {
+          "unit_id": "A38",
+          "declared_generator": "GEN_A38",
+          "generator_implemented": true,
+          "generator_blocked": false,
+          "generator_block_sources": []
+        },
+        {
+          "unit_id": "A61",
+          "declared_generator": "GEN_A61",
+          "generator_implemented": false,
+          "generator_blocked": true,
+          "generator_block_sources": [
+            "references/data/sprints/RX.2-generator-blocked-units.json"
+          ]
+        },
+        {
+          "unit_id": "A67",
+          "declared_generator": "GEN_A67",
+          "generator_implemented": false,
+          "generator_blocked": true,
+          "generator_block_sources": [
+            "references/data/sprints/RX.2-generator-blocked-units.json"
+          ]
+        }
+      ],
+      "any_generator_blocked": true,
+      "any_generator_implemented": true,
+      "pv_template_ids": [
+        "select_table_values_trace"
+      ],
+      "pv_visual_state_ids": [
+        "table_trace_source_values_selected"
+      ],
+      "pv_projection_allowed": false,
+      "name_alignment": "aligned_or_not_applicable",
+      "held_reason": null,
+      "evidence_status": "owned_exercise_evidence",
+      "notes": [
+        "Observed in S4 dry-run overlay.",
+        "This operation label is not yet governed and may need renaming or mapping in CP-4."
+      ]
+    },
+    {
+      "operation_id": "OVERLAY_READ_INTERPOLATE_PQ_GRAPH",
+      "operation_name": "read interpolate pq graph",
+      "source_status": "overlay_provisional",
+      "governance_status": "provisional_until_cp4",
+      "coverage_state": "overlay_provisional",
+      "coverage_type": "calculation_from_representation",
+      "representation": "table+p_q_graph",
+      "base_operation": "not_yet_normalized",
+      "economic_context": "target_exercise",
+      "candidate_unit_id": null,
+      "candidate_unit_live": false,
+      "live_unit_ids": [
+        "A46"
+      ],
+      "live_unit_names": [
+        "Waarden aflezen en interpoleren in P-Q grafiek"
+      ],
+      "mapped_unit_ids": [
+        "A46"
+      ],
+      "generator_info": [
+        {
+          "unit_id": "A46",
+          "declared_generator": "GEN_A46",
+          "generator_implemented": false,
+          "generator_blocked": false,
+          "generator_block_sources": []
+        }
+      ],
+      "any_generator_blocked": false,
+      "any_generator_implemented": false,
+      "pv_template_ids": [],
+      "pv_visual_state_ids": [],
+      "pv_projection_allowed": false,
+      "name_alignment": "aligned_or_not_applicable",
+      "held_reason": null,
+      "evidence_status": "owned_exercise_evidence",
+      "notes": [
+        "Observed in S4 dry-run overlay.",
+        "This operation label is not yet governed and may need renaming or mapping in CP-4."
+      ]
+    },
+    {
+      "operation_id": "REP_BAR_CHART_VALUE_READING",
+      "operation_name": "Waarden aflezen uit staafdiagram",
+      "source_status": "live_unit_mapped",
+      "governance_status": "provisional_until_cp4",
+      "coverage_state": "live_unit_mapped",
+      "coverage_type": "representation_reading_foundation",
+      "representation": "bar_chart",
+      "base_operation": "source_value_reading",
+      "economic_context": "general_source_use",
+      "candidate_unit_id": "A62",
+      "candidate_unit_live": true,
+      "live_unit_ids": [
+        "A62"
+      ],
+      "live_unit_names": [
+        "Waarden aflezen uit staafdiagram"
+      ],
+      "mapped_unit_ids": [
+        "A62"
+      ],
+      "generator_info": [
+        {
+          "unit_id": "A62",
+          "declared_generator": "GEN_A62",
+          "generator_implemented": false,
+          "generator_blocked": true,
+          "generator_block_sources": [
+            "references/data/sprints/RX.2b-generator-blocked-units.json"
+          ]
+        }
+      ],
+      "any_generator_blocked": true,
+      "any_generator_implemented": false,
+      "pv_template_ids": [],
+      "pv_visual_state_ids": [],
+      "pv_projection_allowed": false,
+      "name_alignment": "aligned_or_not_applicable",
+      "held_reason": null,
+      "evidence_status": "didactic_prior_rationale",
+      "notes": [
+        "Imported from RX.1 representation-operation inventory.",
+        "Operation remains provisional until CP-4 approves coexistence and promotion rules."
+      ]
+    },
+    {
+      "operation_id": "REP_BASE_COMPARISON_VALUE_IDENTIFICATION",
+      "operation_name": "Basiswaarde en vergelijkingswaarde in bron bepalen",
+      "source_status": "live_unit_mapped",
+      "governance_status": "provisional_until_cp4",
+      "coverage_state": "live_unit_mapped",
+      "coverage_type": "representation_reading_foundation",
+      "representation": "source_text_or_table",
+      "base_operation": "base_value_selection",
+      "economic_context": "percentage_change",
+      "candidate_unit_id": "A66",
+      "candidate_unit_live": true,
+      "live_unit_ids": [
+        "A66"
+      ],
+      "live_unit_names": [
+        "Basiswaarde en vergelijkingswaarde in bron bepalen"
+      ],
+      "mapped_unit_ids": [
+        "A66"
+      ],
+      "generator_info": [
+        {
+          "unit_id": "A66",
+          "declared_generator": "GEN_A66",
+          "generator_implemented": false,
+          "generator_blocked": true,
+          "generator_block_sources": [
+            "references/data/sprints/RX.2-generator-blocked-units.json"
+          ]
+        }
+      ],
+      "any_generator_blocked": true,
+      "any_generator_implemented": false,
+      "pv_template_ids": [],
+      "pv_visual_state_ids": [],
+      "pv_projection_allowed": false,
+      "name_alignment": "aligned_or_not_applicable",
+      "held_reason": null,
+      "evidence_status": "target_exercise_evidence",
+      "notes": [
+        "Imported from RX.1 representation-operation inventory.",
+        "Operation remains provisional until CP-4 approves coexistence and promotion rules."
+      ]
+    },
+    {
+      "operation_id": "REP_BREAK_EVEN_TO_TK_GRAPH",
+      "operation_name": "Break-even aflezen uit TO-TK-grafiek",
+      "source_status": "candidate_pending_review",
+      "governance_status": "provisional_until_cp4",
+      "coverage_state": "live_unit_live_registry_status_stale",
+      "coverage_type": "calculation_from_representation",
+      "representation": "to_tk_graph",
+      "base_operation": "break_even",
+      "economic_context": "producer",
+      "candidate_unit_id": "A77",
+      "candidate_unit_live": true,
+      "live_unit_ids": [
+        "A77"
+      ],
+      "live_unit_names": [
+        "Break-even aflezen uit TO-TK-grafiek"
+      ],
+      "mapped_unit_ids": [],
+      "generator_info": [
+        {
+          "unit_id": "A77",
+          "declared_generator": "GEN_A77",
+          "generator_implemented": false,
+          "generator_blocked": true,
+          "generator_block_sources": [
+            "reports/review-gates/GATE-RX3b-producer-graph-lane-review/RX.3b-generator-blocked-units.json"
+          ]
+        }
+      ],
+      "any_generator_blocked": true,
+      "any_generator_implemented": false,
+      "pv_template_ids": [],
+      "pv_visual_state_ids": [],
+      "pv_projection_allowed": false,
+      "name_alignment": "aligned_or_not_applicable",
+      "held_reason": null,
+      "evidence_status": "target_exercise_evidence",
+      "notes": [
+        "Imported from RX.1 representation-operation inventory.",
+        "Operation remains provisional until CP-4 approves coexistence and promotion rules."
+      ]
+    },
+    {
+      "operation_id": "REP_ELASTICITY_FROM_DEMAND_GRAPH",
+      "operation_name": "Elasticiteit berekenen uit vraaggrafiek",
+      "source_status": "candidate_pending_review",
+      "governance_status": "provisional_until_cp4",
+      "coverage_state": "live_unit_live_registry_status_stale",
+      "coverage_type": "calculation_from_representation",
+      "representation": "p_q_graph",
+      "base_operation": "elasticity",
+      "economic_context": "market_demand",
+      "candidate_unit_id": "A83",
+      "candidate_unit_live": true,
+      "live_unit_ids": [
+        "A83"
+      ],
+      "live_unit_names": [
+        "Prijselasticiteit van de vraag berekenen uit P-Q-grafiek"
+      ],
+      "mapped_unit_ids": [],
+      "generator_info": [
+        {
+          "unit_id": "A83",
+          "declared_generator": "GEN_A83",
+          "generator_implemented": false,
+          "generator_blocked": true,
+          "generator_block_sources": [
+            "reports/review-gates/GATE-RX4-elasticity-market-diagram-review/RX.4-generator-blocked-units.json"
+          ]
+        }
+      ],
+      "any_generator_blocked": true,
+      "any_generator_implemented": false,
+      "pv_template_ids": [
+        "calculate_demand_elasticity_from_pq_graph"
+      ],
+      "pv_visual_state_ids": [
+        "pq_graph_elasticity_two_pairs"
+      ],
+      "pv_projection_allowed": false,
+      "name_alignment": "live_unit_name_differs_from_operation_label",
+      "held_reason": null,
+      "evidence_status": "exam_question_evidence",
+      "notes": [
+        "Imported from RX.1 representation-operation inventory.",
+        "Operation remains provisional until CP-4 approves coexistence and promotion rules."
+      ]
+    },
+    {
+      "operation_id": "REP_ELASTICITY_FROM_TABLE",
+      "operation_name": "Elasticiteit berekenen uit tabelwaarden",
+      "source_status": "candidate_pending_review",
+      "governance_status": "provisional_until_cp4",
+      "coverage_state": "live_unit_live_registry_status_stale",
+      "coverage_type": "calculation_from_representation",
+      "representation": "table",
+      "base_operation": "elasticity",
+      "economic_context": "market",
+      "candidate_unit_id": "A82",
+      "candidate_unit_live": true,
+      "live_unit_ids": [
+        "A82"
+      ],
+      "live_unit_names": [
+        "Elasticiteit berekenen uit tabelwaarden"
+      ],
+      "mapped_unit_ids": [],
+      "generator_info": [
+        {
+          "unit_id": "A82",
+          "declared_generator": "GEN_A82",
+          "generator_implemented": false,
+          "generator_blocked": true,
+          "generator_block_sources": [
+            "reports/review-gates/GATE-RX4-elasticity-market-diagram-review/RX.4-generator-blocked-units.json"
+          ]
+        }
+      ],
+      "any_generator_blocked": true,
+      "any_generator_implemented": false,
+      "pv_template_ids": [
+        "calculate_elasticity_from_table_values"
+      ],
+      "pv_visual_state_ids": [
+        "table_trace_elasticity_pairs_selected"
+      ],
+      "pv_projection_allowed": false,
+      "name_alignment": "aligned_or_not_applicable",
+      "held_reason": null,
+      "evidence_status": "exam_question_evidence",
+      "notes": [
+        "Imported from RX.1 representation-operation inventory.",
+        "Operation remains provisional until CP-4 approves coexistence and promotion rules."
+      ]
+    },
+    {
+      "operation_id": "REP_INDEX_CHANGE_LINE_GRAPH",
+      "operation_name": "Indexverandering aflezen uit lijngrafiek",
+      "source_status": "live_unit_mapped",
+      "governance_status": "provisional_until_cp4",
+      "coverage_state": "live_unit_mapped",
+      "coverage_type": "calculation_from_representation",
+      "representation": "line_chart",
+      "base_operation": "index_number_interpretation",
+      "economic_context": "index_series",
+      "candidate_unit_id": "A73",
+      "candidate_unit_live": true,
+      "live_unit_ids": [
+        "A73"
+      ],
+      "live_unit_names": [
+        "Indexverandering aflezen uit lijngrafiek"
+      ],
+      "mapped_unit_ids": [
+        "A73"
+      ],
+      "generator_info": [
+        {
+          "unit_id": "A73",
+          "declared_generator": "GEN_A73",
+          "generator_implemented": false,
+          "generator_blocked": true,
+          "generator_block_sources": [
+            "references/data/sprints/RX.2b-generator-blocked-units.json"
+          ]
+        }
+      ],
+      "any_generator_blocked": true,
+      "any_generator_implemented": false,
+      "pv_template_ids": [],
+      "pv_visual_state_ids": [],
+      "pv_projection_allowed": false,
+      "name_alignment": "aligned_or_not_applicable",
+      "held_reason": null,
+      "evidence_status": "target_exercise_evidence",
+      "notes": [
+        "Imported from RX.1 representation-operation inventory.",
+        "Operation remains provisional until CP-4 approves coexistence and promotion rules."
+      ]
+    },
+    {
+      "operation_id": "REP_INDEX_FROM_TABLE",
+      "operation_name": "Indexcijfer berekenen vanuit tabel",
+      "source_status": "live_unit_mapped",
+      "governance_status": "provisional_until_cp4",
+      "coverage_state": "live_unit_mapped",
+      "coverage_type": "calculation_from_representation",
+      "representation": "table",
+      "base_operation": "index_number",
+      "economic_context": "price_index",
+      "candidate_unit_id": "A72",
+      "candidate_unit_live": true,
+      "live_unit_ids": [
+        "A72"
+      ],
+      "live_unit_names": [
+        "Indexcijfer berekenen vanuit tabel"
+      ],
+      "mapped_unit_ids": [
+        "A72"
+      ],
+      "generator_info": [
+        {
+          "unit_id": "A72",
+          "declared_generator": "GEN_A72",
+          "generator_implemented": false,
+          "generator_blocked": true,
+          "generator_block_sources": [
+            "references/data/sprints/RX.2-generator-blocked-units.json"
+          ]
+        }
+      ],
+      "any_generator_blocked": true,
+      "any_generator_implemented": false,
+      "pv_template_ids": [],
+      "pv_visual_state_ids": [],
+      "pv_projection_allowed": false,
+      "name_alignment": "aligned_or_not_applicable",
+      "held_reason": null,
+      "evidence_status": "target_exercise_evidence",
+      "notes": [
+        "Imported from RX.1 representation-operation inventory.",
+        "Operation remains provisional until CP-4 approves coexistence and promotion rules."
+      ]
+    },
+    {
+      "operation_id": "REP_LINE_GRAPH_VALUE_READING",
+      "operation_name": "Waarden aflezen uit lijngrafiek",
+      "source_status": "live_unit_mapped",
+      "governance_status": "provisional_until_cp4",
+      "coverage_state": "live_unit_mapped",
+      "coverage_type": "representation_reading_foundation",
+      "representation": "line_chart",
+      "base_operation": "source_value_reading",
+      "economic_context": "time_series",
+      "candidate_unit_id": "A63",
+      "candidate_unit_live": true,
+      "live_unit_ids": [
+        "A63"
+      ],
+      "live_unit_names": [
+        "Waarden aflezen uit lijngrafiek"
+      ],
+      "mapped_unit_ids": [
+        "A63"
+      ],
+      "generator_info": [
+        {
+          "unit_id": "A63",
+          "declared_generator": "GEN_A63",
+          "generator_implemented": false,
+          "generator_blocked": true,
+          "generator_block_sources": [
+            "references/data/sprints/RX.2b-generator-blocked-units.json"
+          ]
+        }
+      ],
+      "any_generator_blocked": true,
+      "any_generator_implemented": false,
+      "pv_template_ids": [],
+      "pv_visual_state_ids": [],
+      "pv_projection_allowed": false,
+      "name_alignment": "aligned_or_not_applicable",
+      "held_reason": null,
+      "evidence_status": "target_exercise_evidence",
+      "notes": [
+        "Imported from RX.1 representation-operation inventory.",
+        "Operation remains provisional until CP-4 approves coexistence and promotion rules."
+      ]
+    },
+    {
+      "operation_id": "REP_MAX_PROFIT_TO_TK_TABLE",
+      "operation_name": "Maximale winst bepalen uit TO-TK-tabel",
+      "source_status": "candidate_pending_review",
+      "governance_status": "provisional_until_cp4",
+      "coverage_state": "live_unit_live_registry_status_stale",
+      "coverage_type": "calculation_from_representation",
+      "representation": "table",
+      "base_operation": "profit_maximization_by_comparison",
+      "economic_context": "producer",
+      "candidate_unit_id": "A79",
+      "candidate_unit_live": true,
+      "live_unit_ids": [
+        "A79"
+      ],
+      "live_unit_names": [
+        "Maximale winst bepalen uit TO-TK-tabel"
+      ],
+      "mapped_unit_ids": [],
+      "generator_info": [
+        {
+          "unit_id": "A79",
+          "declared_generator": "GEN_A79",
+          "generator_implemented": false,
+          "generator_blocked": true,
+          "generator_block_sources": [
+            "reports/review-gates/GATE-RX3a-first-lane-mutation-review/RX.3a-generator-blocked-units.json"
+          ]
+        }
+      ],
+      "any_generator_blocked": true,
+      "any_generator_implemented": false,
+      "pv_template_ids": [],
+      "pv_visual_state_ids": [],
+      "pv_projection_allowed": false,
+      "name_alignment": "aligned_or_not_applicable",
+      "held_reason": null,
+      "evidence_status": "exam_question_evidence",
+      "notes": [
+        "Imported from RX.1 representation-operation inventory.",
+        "Operation remains provisional until CP-4 approves coexistence and promotion rules."
+      ]
+    },
+    {
+      "operation_id": "REP_PCT_CHANGE_BAR_CHART",
+      "operation_name": "Procentuele verandering berekenen vanuit staafdiagram",
+      "source_status": "live_unit_mapped",
+      "governance_status": "provisional_until_cp4",
+      "coverage_state": "live_unit_mapped",
+      "coverage_type": "calculation_from_representation",
+      "representation": "bar_chart",
+      "base_operation": "percentage_change",
+      "economic_context": "source_chart",
+      "candidate_unit_id": "A68",
+      "candidate_unit_live": true,
+      "live_unit_ids": [
+        "A68"
+      ],
+      "live_unit_names": [
+        "Procentuele verandering berekenen vanuit staafdiagram"
+      ],
+      "mapped_unit_ids": [
+        "A68"
+      ],
+      "generator_info": [
+        {
+          "unit_id": "A68",
+          "declared_generator": "GEN_A68",
+          "generator_implemented": false,
+          "generator_blocked": true,
+          "generator_block_sources": [
+            "references/data/sprints/RX.2b-generator-blocked-units.json"
+          ]
+        }
+      ],
+      "any_generator_blocked": true,
+      "any_generator_implemented": false,
+      "pv_template_ids": [],
+      "pv_visual_state_ids": [],
+      "pv_projection_allowed": false,
+      "name_alignment": "aligned_or_not_applicable",
+      "held_reason": null,
+      "evidence_status": "didactic_prior_rationale",
+      "notes": [
+        "Imported from RX.1 representation-operation inventory.",
+        "Operation remains provisional until CP-4 approves coexistence and promotion rules."
+      ]
+    },
+    {
+      "operation_id": "REP_PCT_CHANGE_FROM_INDEX",
+      "operation_name": "Procentuele verandering berekenen vanuit indexcijfers",
+      "source_status": "live_unit_mapped",
+      "governance_status": "provisional_until_cp4",
+      "coverage_state": "live_unit_mapped",
+      "coverage_type": "representation_related",
+      "representation": "index_values",
+      "base_operation": "percentage_change",
+      "economic_context": "inflation_real_nominal",
+      "candidate_unit_id": "A74",
+      "candidate_unit_live": true,
+      "live_unit_ids": [
+        "A74"
+      ],
+      "live_unit_names": [
+        "Procentuele verandering berekenen vanuit indexcijfers"
+      ],
+      "mapped_unit_ids": [
+        "A74"
+      ],
+      "generator_info": [
+        {
+          "unit_id": "A74",
+          "declared_generator": "GEN_A74",
+          "generator_implemented": false,
+          "generator_blocked": true,
+          "generator_block_sources": [
+            "references/data/sprints/RX.2-generator-blocked-units.json"
+          ]
+        }
+      ],
+      "any_generator_blocked": true,
+      "any_generator_implemented": false,
+      "pv_template_ids": [],
+      "pv_visual_state_ids": [],
+      "pv_projection_allowed": false,
+      "name_alignment": "aligned_or_not_applicable",
+      "held_reason": null,
+      "evidence_status": "target_exercise_evidence",
+      "notes": [
+        "Imported from RX.1 representation-operation inventory.",
+        "Operation remains provisional until CP-4 approves coexistence and promotion rules."
+      ]
+    },
+    {
+      "operation_id": "REP_PCT_CHANGE_LINE_GRAPH",
+      "operation_name": "Procentuele verandering berekenen vanuit lijngrafiek",
+      "source_status": "live_unit_mapped",
+      "governance_status": "provisional_until_cp4",
+      "coverage_state": "live_unit_mapped",
+      "coverage_type": "calculation_from_representation",
+      "representation": "line_chart",
+      "base_operation": "percentage_change",
+      "economic_context": "macro_time_series",
+      "candidate_unit_id": "A69",
+      "candidate_unit_live": true,
+      "live_unit_ids": [
+        "A69"
+      ],
+      "live_unit_names": [
+        "Procentuele verandering berekenen vanuit lijngrafiek"
+      ],
+      "mapped_unit_ids": [
+        "A69"
+      ],
+      "generator_info": [
+        {
+          "unit_id": "A69",
+          "declared_generator": "GEN_A69",
+          "generator_implemented": false,
+          "generator_blocked": true,
+          "generator_block_sources": [
+            "references/data/sprints/RX.2b-generator-blocked-units.json"
+          ]
+        }
+      ],
+      "any_generator_blocked": true,
+      "any_generator_implemented": false,
+      "pv_template_ids": [],
+      "pv_visual_state_ids": [],
+      "pv_projection_allowed": false,
+      "name_alignment": "aligned_or_not_applicable",
+      "held_reason": null,
+      "evidence_status": "target_exercise_evidence",
+      "notes": [
+        "Imported from RX.1 representation-operation inventory.",
+        "Operation remains provisional until CP-4 approves coexistence and promotion rules."
+      ]
+    },
+    {
+      "operation_id": "REP_PCT_CHANGE_PIE_CHART",
+      "operation_name": "Procentuele verandering berekenen vanuit cirkeldiagram",
+      "source_status": "candidate_pending_review",
+      "governance_status": "provisional_until_cp4",
+      "coverage_state": "held_or_duplicate_review",
+      "coverage_type": "calculation_from_representation",
+      "representation": "pie_chart_plus_total",
+      "base_operation": "percentage_change",
+      "economic_context": "source_shares",
+      "candidate_unit_id": "A71",
+      "candidate_unit_live": false,
+      "live_unit_ids": [],
+      "live_unit_names": [],
+      "mapped_unit_ids": [],
+      "generator_info": [],
+      "any_generator_blocked": false,
+      "any_generator_implemented": false,
+      "pv_template_ids": [],
+      "pv_visual_state_ids": [],
+      "pv_projection_allowed": false,
+      "name_alignment": "aligned_or_not_applicable",
+      "held_reason": null,
+      "evidence_status": "didactic_prior_rationale",
+      "notes": [
+        "Imported from RX.1 representation-operation inventory.",
+        "Operation remains provisional until CP-4 approves coexistence and promotion rules."
+      ]
+    },
+    {
+      "operation_id": "REP_PCT_CHANGE_TABLE",
+      "operation_name": "Procentuele verandering berekenen vanuit tabel",
+      "source_status": "live_unit_mapped",
+      "governance_status": "provisional_until_cp4",
+      "coverage_state": "live_unit_mapped",
+      "coverage_type": "calculation_from_representation",
+      "representation": "table",
+      "base_operation": "percentage_change",
+      "economic_context": "general_price_quantity",
+      "candidate_unit_id": "A67",
+      "candidate_unit_live": true,
+      "live_unit_ids": [
+        "A67"
+      ],
+      "live_unit_names": [
+        "Procentuele verandering berekenen vanuit tabel"
+      ],
+      "mapped_unit_ids": [
+        "A67"
+      ],
+      "generator_info": [
+        {
+          "unit_id": "A67",
+          "declared_generator": "GEN_A67",
+          "generator_implemented": false,
+          "generator_blocked": true,
+          "generator_block_sources": [
+            "references/data/sprints/RX.2-generator-blocked-units.json"
+          ]
+        }
+      ],
+      "any_generator_blocked": true,
+      "any_generator_implemented": false,
+      "pv_template_ids": [],
+      "pv_visual_state_ids": [],
+      "pv_projection_allowed": false,
+      "name_alignment": "aligned_or_not_applicable",
+      "held_reason": null,
+      "evidence_status": "target_exercise_evidence",
+      "notes": [
+        "Imported from RX.1 representation-operation inventory.",
+        "Operation remains provisional until CP-4 approves coexistence and promotion rules."
+      ]
+    },
+    {
+      "operation_id": "REP_PERCENTAGE_POINT_CHANGE",
+      "operation_name": "Percentagepuntverandering in aandeel herkennen",
+      "source_status": "live_unit_mapped",
+      "governance_status": "provisional_until_cp4",
+      "coverage_state": "live_unit_mapped",
+      "coverage_type": "calculation_from_representation",
+      "representation": "share_or_index_source",
+      "base_operation": "percentage_point_difference",
+      "economic_context": "shares_inflation",
+      "candidate_unit_id": "A70",
+      "candidate_unit_live": true,
+      "live_unit_ids": [
+        "A70"
+      ],
+      "live_unit_names": [
+        "Percentagepuntverandering in aandeel herkennen"
+      ],
+      "mapped_unit_ids": [
+        "A70"
+      ],
+      "generator_info": [
+        {
+          "unit_id": "A70",
+          "declared_generator": "GEN_A70",
+          "generator_implemented": false,
+          "generator_blocked": true,
+          "generator_block_sources": [
+            "references/data/sprints/RX.2-generator-blocked-units.json"
+          ]
+        }
+      ],
+      "any_generator_blocked": true,
+      "any_generator_implemented": false,
+      "pv_template_ids": [],
+      "pv_visual_state_ids": [],
+      "pv_projection_allowed": false,
+      "name_alignment": "aligned_or_not_applicable",
+      "held_reason": null,
+      "evidence_status": "target_exercise_evidence",
+      "notes": [
+        "Imported from RX.1 representation-operation inventory.",
+        "Operation remains provisional until CP-4 approves coexistence and promotion rules."
+      ]
+    },
+    {
+      "operation_id": "REP_PIE_SHARE_READING",
+      "operation_name": "Aandelen aflezen uit cirkeldiagram",
+      "source_status": "live_unit_mapped",
+      "governance_status": "provisional_until_cp4",
+      "coverage_state": "live_unit_mapped",
+      "coverage_type": "representation_reading_foundation",
+      "representation": "pie_chart",
+      "base_operation": "share_reading",
+      "economic_context": "source_shares",
+      "candidate_unit_id": "A64",
+      "candidate_unit_live": true,
+      "live_unit_ids": [
+        "A64"
+      ],
+      "live_unit_names": [
+        "Aandelen aflezen uit cirkeldiagram"
+      ],
+      "mapped_unit_ids": [
+        "A64"
+      ],
+      "generator_info": [
+        {
+          "unit_id": "A64",
+          "declared_generator": "GEN_A64",
+          "generator_implemented": false,
+          "generator_blocked": true,
+          "generator_block_sources": [
+            "references/data/sprints/RX.2b-generator-blocked-units.json"
+          ]
+        }
+      ],
+      "any_generator_blocked": true,
+      "any_generator_implemented": false,
+      "pv_template_ids": [],
+      "pv_visual_state_ids": [],
+      "pv_projection_allowed": false,
+      "name_alignment": "aligned_or_not_applicable",
+      "held_reason": null,
+      "evidence_status": "didactic_prior_rationale",
+      "notes": [
+        "Imported from RX.1 representation-operation inventory.",
+        "Operation remains provisional until CP-4 approves coexistence and promotion rules."
+      ]
+    },
+    {
+      "operation_id": "REP_PROFIT_FROM_P_GTK_Q",
+      "operation_name": "Totale winst berekenen uit P, GTK en Q",
+      "source_status": "candidate_pending_review",
+      "governance_status": "provisional_until_cp4",
+      "coverage_state": "live_unit_live_registry_status_stale",
+      "coverage_type": "representation_related",
+      "representation": "producer_data",
+      "base_operation": "profit",
+      "economic_context": "producer",
+      "candidate_unit_id": "A76",
+      "candidate_unit_live": true,
+      "live_unit_ids": [
+        "A76"
+      ],
+      "live_unit_names": [
+        "Totale winst berekenen uit P, GTK en Q"
+      ],
+      "mapped_unit_ids": [],
+      "generator_info": [
+        {
+          "unit_id": "A76",
+          "declared_generator": "GEN_A76",
+          "generator_implemented": false,
+          "generator_blocked": true,
+          "generator_block_sources": [
+            "reports/review-gates/GATE-RX3a-first-lane-mutation-review/RX.3a-generator-blocked-units.json"
+          ]
+        }
+      ],
+      "any_generator_blocked": true,
+      "any_generator_implemented": false,
+      "pv_template_ids": [],
+      "pv_visual_state_ids": [],
+      "pv_projection_allowed": false,
+      "name_alignment": "aligned_or_not_applicable",
+      "held_reason": null,
+      "evidence_status": "exam_question_evidence",
+      "notes": [
+        "Imported from RX.1 representation-operation inventory.",
+        "Operation remains provisional until CP-4 approves coexistence and promotion rules."
+      ]
+    },
+    {
+      "operation_id": "REP_PROFIT_FROM_REVENUE_COST_TABLE",
+      "operation_name": "Totale winst berekenen uit opbrengsten- en kostentabel",
+      "source_status": "candidate_pending_review",
+      "governance_status": "provisional_until_cp4",
+      "coverage_state": "live_unit_live_registry_status_stale",
+      "coverage_type": "calculation_from_representation",
+      "representation": "table",
+      "base_operation": "profit",
+      "economic_context": "producer",
+      "candidate_unit_id": "A75",
+      "candidate_unit_live": true,
+      "live_unit_ids": [
+        "A75"
+      ],
+      "live_unit_names": [
+        "Totale winst berekenen uit opbrengsten- en kostentabel"
+      ],
+      "mapped_unit_ids": [],
+      "generator_info": [
+        {
+          "unit_id": "A75",
+          "declared_generator": "GEN_A75",
+          "generator_implemented": false,
+          "generator_blocked": true,
+          "generator_block_sources": [
+            "reports/review-gates/GATE-RX3a-first-lane-mutation-review/RX.3a-generator-blocked-units.json"
+          ]
+        }
+      ],
+      "any_generator_blocked": true,
+      "any_generator_implemented": false,
+      "pv_template_ids": [],
+      "pv_visual_state_ids": [],
+      "pv_projection_allowed": false,
+      "name_alignment": "aligned_or_not_applicable",
+      "held_reason": null,
+      "evidence_status": "target_exercise_evidence",
+      "notes": [
+        "Imported from RX.1 representation-operation inventory.",
+        "Operation remains provisional until CP-4 approves coexistence and promotion rules."
+      ]
+    },
+    {
+      "operation_id": "REP_PROFIT_LOSS_BREAK_EVEN_PRODUCER_GRAPH",
+      "operation_name": "Winst, verlies en break-even herkennen in producentengrafiek",
+      "source_status": "candidate_pending_review",
+      "governance_status": "provisional_until_cp4",
+      "coverage_state": "held_or_duplicate_review",
+      "coverage_type": "calculation_from_representation",
+      "representation": "producer_graph",
+      "base_operation": "profit_loss_break_even_recognition",
+      "economic_context": "producer",
+      "candidate_unit_id": "A81",
+      "candidate_unit_live": false,
+      "live_unit_ids": [],
+      "live_unit_names": [],
+      "mapped_unit_ids": [],
+      "generator_info": [],
+      "any_generator_blocked": false,
+      "any_generator_implemented": false,
+      "pv_template_ids": [],
+      "pv_visual_state_ids": [],
+      "pv_projection_allowed": false,
+      "name_alignment": "aligned_or_not_applicable",
+      "held_reason": null,
+      "evidence_status": "exam_question_evidence",
+      "notes": [
+        "Imported from RX.1 representation-operation inventory.",
+        "Operation remains provisional until CP-4 approves coexistence and promotion rules."
+      ]
+    },
+    {
+      "operation_id": "REP_PROFIT_LOSS_TO_TK_GRAPH",
+      "operation_name": "Winst of verlies aflezen uit TO-TK-grafiek",
+      "source_status": "candidate_pending_review",
+      "governance_status": "provisional_until_cp4",
+      "coverage_state": "live_unit_live_registry_status_stale",
+      "coverage_type": "calculation_from_representation",
+      "representation": "to_tk_graph",
+      "base_operation": "profit",
+      "economic_context": "producer",
+      "candidate_unit_id": "A78",
+      "candidate_unit_live": true,
+      "live_unit_ids": [
+        "A78"
+      ],
+      "live_unit_names": [
+        "Winst of verlies aflezen uit TO-TK-grafiek"
+      ],
+      "mapped_unit_ids": [],
+      "generator_info": [
+        {
+          "unit_id": "A78",
+          "declared_generator": "GEN_A78",
+          "generator_implemented": false,
+          "generator_blocked": true,
+          "generator_block_sources": [
+            "reports/review-gates/GATE-RX3b-producer-graph-lane-review/RX.3b-generator-blocked-units.json"
+          ]
+        }
+      ],
+      "any_generator_blocked": true,
+      "any_generator_implemented": false,
+      "pv_template_ids": [],
+      "pv_visual_state_ids": [],
+      "pv_projection_allowed": false,
+      "name_alignment": "aligned_or_not_applicable",
+      "held_reason": null,
+      "evidence_status": "target_exercise_evidence",
+      "notes": [
+        "Imported from RX.1 representation-operation inventory.",
+        "Operation remains provisional until CP-4 approves coexistence and promotion rules."
+      ]
+    },
+    {
+      "operation_id": "REP_PROFIT_RECTANGLE_PRODUCER_GRAPH",
+      "operation_name": "Winstrechthoek tekenen in producentengrafiek",
+      "source_status": "candidate_pending_review",
+      "governance_status": "provisional_until_cp4",
+      "coverage_state": "held_or_duplicate_review",
+      "coverage_type": "calculation_from_representation",
+      "representation": "producer_graph",
+      "base_operation": "profit_rectangle",
+      "economic_context": "producer",
+      "candidate_unit_id": "A80",
+      "candidate_unit_live": false,
+      "live_unit_ids": [],
+      "live_unit_names": [],
+      "mapped_unit_ids": [],
+      "generator_info": [],
+      "any_generator_blocked": false,
+      "any_generator_implemented": false,
+      "pv_template_ids": [],
+      "pv_visual_state_ids": [],
+      "pv_projection_allowed": false,
+      "name_alignment": "aligned_or_not_applicable",
+      "held_reason": null,
+      "evidence_status": "exam_question_evidence",
+      "notes": [
+        "Imported from RX.1 representation-operation inventory.",
+        "Operation remains provisional until CP-4 approves coexistence and promotion rules."
+      ]
+    },
+    {
+      "operation_id": "REP_REVENUE_CHANGE_WITH_ELASTICITY_SOURCE",
+      "operation_name": "Omzetverandering beoordelen met elasticiteit uit bron",
+      "source_status": "candidate_pending_review",
+      "governance_status": "provisional_until_cp4",
+      "coverage_state": "live_unit_live_registry_status_stale",
+      "coverage_type": "calculation_from_representation",
+      "representation": "source_text_or_table",
+      "base_operation": "elasticity_revenue_interpretation",
+      "economic_context": "market_revenue",
+      "candidate_unit_id": "A84",
+      "candidate_unit_live": true,
+      "live_unit_ids": [
+        "A84"
+      ],
+      "live_unit_names": [
+        "Omzetverandering beoordelen met elasticiteit uit bron"
+      ],
+      "mapped_unit_ids": [],
+      "generator_info": [
+        {
+          "unit_id": "A84",
+          "declared_generator": "GEN_A84",
+          "generator_implemented": false,
+          "generator_blocked": true,
+          "generator_block_sources": [
+            "reports/review-gates/GATE-RX4-elasticity-market-diagram-review/RX.4-generator-blocked-units.json"
+          ]
+        }
+      ],
+      "any_generator_blocked": true,
+      "any_generator_implemented": false,
+      "pv_template_ids": [
+        "judge_revenue_change_with_elasticity"
+      ],
+      "pv_visual_state_ids": [
+        "flowchart_elasticity_revenue_effect"
+      ],
+      "pv_projection_allowed": false,
+      "name_alignment": "aligned_or_not_applicable",
+      "held_reason": null,
+      "evidence_status": "exam_question_evidence",
+      "notes": [
+        "Imported from RX.1 representation-operation inventory.",
+        "Operation remains provisional until CP-4 approves coexistence and promotion rules."
+      ]
+    },
+    {
+      "operation_id": "REP_SHARE_TOTAL_ABSOLUTE_QUANTITY",
+      "operation_name": "Absolute hoeveelheid berekenen uit aandeel en totaal",
+      "source_status": "live_unit_mapped",
+      "governance_status": "provisional_until_cp4",
+      "coverage_state": "live_unit_mapped",
+      "coverage_type": "calculation_from_representation",
+      "representation": "pie_chart_plus_total",
+      "base_operation": "percentage_share_application",
+      "economic_context": "source_shares",
+      "candidate_unit_id": "A65",
+      "candidate_unit_live": true,
+      "live_unit_ids": [
+        "A65"
+      ],
+      "live_unit_names": [
+        "Absolute hoeveelheid berekenen uit aandeel en totaal"
+      ],
+      "mapped_unit_ids": [
+        "A65"
+      ],
+      "generator_info": [
+        {
+          "unit_id": "A65",
+          "declared_generator": "GEN_A65",
+          "generator_implemented": false,
+          "generator_blocked": true,
+          "generator_block_sources": [
+            "references/data/sprints/RX.2b-generator-blocked-units.json"
+          ]
+        }
+      ],
+      "any_generator_blocked": true,
+      "any_generator_implemented": false,
+      "pv_template_ids": [],
+      "pv_visual_state_ids": [],
+      "pv_projection_allowed": false,
+      "name_alignment": "aligned_or_not_applicable",
+      "held_reason": null,
+      "evidence_status": "exam_question_evidence",
+      "notes": [
+        "Imported from RX.1 representation-operation inventory.",
+        "Operation remains provisional until CP-4 approves coexistence and promotion rules."
+      ]
+    },
+    {
+      "operation_id": "REP_TABLE_VALUE_SELECTION",
+      "operation_name": "Tabelwaarden selecteren voor berekening",
+      "source_status": "live_unit_mapped",
+      "governance_status": "provisional_until_cp4",
+      "coverage_state": "live_unit_mapped",
+      "coverage_type": "representation_reading_foundation",
+      "representation": "table",
+      "base_operation": "source_value_selection",
+      "economic_context": "general_calculation",
+      "candidate_unit_id": "A61",
+      "candidate_unit_live": true,
+      "live_unit_ids": [
+        "A61"
+      ],
+      "live_unit_names": [
+        "Tabelwaarden selecteren voor berekening"
+      ],
+      "mapped_unit_ids": [
+        "A61"
+      ],
+      "generator_info": [
+        {
+          "unit_id": "A61",
+          "declared_generator": "GEN_A61",
+          "generator_implemented": false,
+          "generator_blocked": true,
+          "generator_block_sources": [
+            "references/data/sprints/RX.2-generator-blocked-units.json"
+          ]
+        }
+      ],
+      "any_generator_blocked": true,
+      "any_generator_implemented": false,
+      "pv_template_ids": [
+        "select_table_values_trace"
+      ],
+      "pv_visual_state_ids": [
+        "table_trace_source_values_selected"
+      ],
+      "pv_projection_allowed": false,
+      "name_alignment": "aligned_or_not_applicable",
+      "held_reason": null,
+      "evidence_status": "target_exercise_evidence",
+      "notes": [
+        "Imported from RX.1 representation-operation inventory.",
+        "Operation remains provisional until CP-4 approves coexistence and promotion rules."
+      ]
+    }
+  ]
+}
