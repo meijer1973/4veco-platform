@@ -557,6 +557,16 @@ body[data-layout="samenvatting-v1"] {
   --content-max: 1500px;
 }
 
+/* Sidebar nav-item: stretch the title to fill remaining space so the
+   domain badge always lands on the right edge — consistent regardless
+   of how short or long the title is. The default voorkennis pattern
+   wraps title+badge in a .nav-text container; samenvatting emits them
+   as siblings, so we pin .nav-title to flex:1 here instead. */
+body[data-layout="samenvatting-v1"] .sidebar .nav-title {
+  flex: 1;
+  min-width: 0;
+}
+
 body[data-layout="samenvatting-v1"] .hero-actions {
   display: flex;
   gap: 12px;
