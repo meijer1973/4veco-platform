@@ -1,0 +1,39 @@
+{
+  "sprint_id": "PV.3",
+  "name": "Pilot Procedure-Visual Templates",
+  "status": "planned",
+  "plan": "docs/sprints/PV.3-plan.md",
+  "baseline": "reports/sprints/PV.3-baseline.md",
+  "gate_id": "GATE-PV-G2-pilot-content",
+  "technical_gate": true,
+  "human_review_required": false,
+  "protected_reference_data_changes_allowed": false,
+  "machine_registry_creation_allowed": false,
+  "student_facing_projection_authorized": false,
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js docs/sprints/PV.3-plan.md",
+    "node build-scripts/references/validate-procedure-visual-registry.js",
+    "node build-scripts/references/build-procedure-visual-pilot-status.js",
+    "node build-scripts/sprints/emit-gate-bundle-urls.js GATE-PV-G2-pilot-content",
+    "node build-scripts/sprints/check-bundle-urls.js GATE-PV-G2-pilot-content",
+    "node build-scripts/sprints/check-sprint-bundle.js PV.3",
+    "node build-scripts/sprints/check-sprint-result.js reports/sprints/PV.3-result.md",
+    "node build-scripts/sprints/check-sprint-bundle.js PV.3 --complete",
+    "node build-scripts/references/check-roadmap-version-index.js"
+  ],
+  "blocked_scope": [
+    "references/machine Procedure-Visual registries",
+    "references/external mutation",
+    "authored source mutation",
+    "RAG chunk hand-patching",
+    "lesson repo edits",
+    "generator implementation",
+    "student-facing PV projection",
+    "student diagnostics",
+    "adaptive routing",
+    "student-facing AI",
+    "automatic sequencing",
+    "mastery decisions",
+    "summative use"
+  ]
+}

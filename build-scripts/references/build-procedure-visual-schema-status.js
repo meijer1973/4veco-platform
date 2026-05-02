@@ -2,7 +2,7 @@
 /**
  * HOW TO ADAPT
  * - Keep this builder read-only with respect to protected references.
- * - Extend the status report when PV.3 adds real templates and visual states.
+ * - Keep the status report current as later PV sprints add real overlay records.
  */
 
 const fs = require('fs');
@@ -63,11 +63,12 @@ Status: \`${report.status}\`
 - Real unit-template links: ${report.summary.unit_template_link_count}
 - Schema example templates: ${report.summary.schema_example_template_count}
 - Schema example visual states: ${report.summary.schema_example_visual_state_count}
-- Provisional operation references validated: ${report.summary.provisional_operation_reference_count}
+- Schema-example provisional operation references validated: ${report.summary.provisional_operation_reference_count}
+- Real provisional operation references validated: ${report.summary.real_provisional_operation_reference_count}
 
 ## Boundary
 
-No \`references/machine/\` Procedure-Visual registry exists or is authorized. The real PV registries under \`references/data/procedure-visual/\` are present but empty until PV.3. The examples in \`procedure-visual-vocab.json\` validate the schema contract only; they do not authorize student-facing projection.
+No \`references/machine/\` Procedure-Visual registry exists or is authorized. Real PV registries under \`references/data/procedure-visual/\` may contain pilot records after PV.3, but every record must remain publication-blocked until later PV gates, generator/projection support, and publication controls exist.
 
 Blocked product uses remain blocked: student diagnostics, adaptive routing, student-facing AI, automatic sequencing, mastery decisions, summative decisions, and unreviewed student-facing PV projection.
 
@@ -100,8 +101,8 @@ function buildGatePacket(report) {
       },
       {
         id: 'PVG1-Q2',
-        question: 'Can empty real registries and schema examples pass validation?',
-        answer: 'A. Yes, real registries are empty and blocked; schema examples validate unit IDs, visual-state refs, operation refs, graph axes, units, and accessibility.'
+        question: 'Can real registries and schema examples pass validation?',
+        answer: 'A. Yes, real registries and schema examples validate unit IDs, visual-state refs, operation refs, graph axes, units, and accessibility; real records remain publication-blocked.'
       },
       {
         id: 'PVG1-Q3',
@@ -124,7 +125,6 @@ function buildGatePacket(report) {
       'references/machine/procedure-templates.json',
       'references/machine/visual-states.json',
       'references/machine/procedure-visual-vocab.json',
-      'real PV pilot templates before PV.3',
       'student-facing PV projection',
       'student diagnostics',
       'adaptive routing',
@@ -177,16 +177,15 @@ function buildTechnicalClosure(report) {
     generated_on: report.generated_on,
     closure_basis: [
       'PV schema files exist.',
-      'PV validator exists and passes on empty real registries plus schema examples.',
+      'PV validator exists and passes on real registries plus schema examples.',
       'Unit IDs and visual-state refs resolve.',
       'Provisional operation refs are status-aware under CP-4.',
       'Graph/chart examples declare axes, units, direct labels, and non-color fallback.',
       'No references/machine PV registry exists.'
     ],
-    next_sprint_unblocked: 'RX.3 Producer Table And Graph Representation Units may resume using PV constraints.',
+    next_sprint_unblocked: 'PV schema validation remains available for later PV/RX sprints using PV constraints.',
     not_authorized: [
       'PV machine registry promotion',
-      'real PV pilot-template scaling before PV.3',
       'student-facing PV projection',
       'student diagnostics',
       'adaptive routing',

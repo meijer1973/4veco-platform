@@ -1,0 +1,31 @@
+{
+  "gate_id": "GATE-PV-G2-pilot-content",
+  "sprint_id": "PV.3",
+  "status": "pass",
+  "human_review_required": false,
+  "closed_by": "technical validator",
+  "generated_by": "build-scripts/references/build-procedure-visual-pilot-status.js",
+  "generated_on": "2026-05-02T07:30:02.529Z",
+  "closure_basis": [
+    "6 pilot procedure templates validate.",
+    "6 pilot visual states validate.",
+    "Formula trace, graph-stage, table-trace, and flowchart coverage are all present.",
+    "Unit-template links resolve to live units and real templates.",
+    "Operation references remain provisional under CP-4 conditions.",
+    "No references/machine PV registry exists.",
+    "All pilot templates, visual states, and links block student-facing projection."
+  ],
+  "next_sprint_unblocked": "PV.4 Procedure/Game Projection Contract may proceed with backward-compatible formal_step_id planning.",
+  "not_authorized": [
+    "references/machine Procedure-Visual registries",
+    "student-facing PV projection",
+    "procedure-game migration requirement",
+    "visual renderer publication",
+    "student diagnostics",
+    "adaptive routing",
+    "student-facing AI",
+    "automatic sequencing",
+    "mastery decisions",
+    "summative use"
+  ]
+}

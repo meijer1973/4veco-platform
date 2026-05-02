@@ -1,0 +1,56 @@
+{
+  "sprint_id": "PV.3",
+  "name": "Pilot Procedure-Visual Templates",
+  "status": "completed",
+  "completed_on": "2026-05-02",
+  "plan": "docs/sprints/PV.3-plan.md",
+  "baseline": "reports/sprints/PV.3-baseline.md",
+  "result": "reports/sprints/PV.3-result.md",
+  "diff_summary": "reports/sprints/PV.3-diff-summary.md",
+  "technical_gate_id": "GATE-PV-G2-pilot-content",
+  "pilot_template_count": 6,
+  "pilot_visual_state_count": 6,
+  "unit_template_link_count": 6,
+  "protected_reference_data_changed": false,
+  "machine_registry_created": false,
+  "student_facing_projection_authorized": false,
+  "next_required_step": "Proceed to PV.4 Procedure/Game Projection Contract with backward-compatible formal_step_id support.",
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js docs/sprints/PV.3-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/validate-procedure-visual-registry.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/build-procedure-visual-pilot-status.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-gate-bundle-urls.js GATE-PV-G2-pilot-content",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-bundle-urls.js GATE-PV-G2-pilot-content",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js PV.3",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-result.js reports/sprints/PV.3-result.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js PV.3 --complete",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-roadmap-version-index.js",
+      "status": "passed"
+    }
+  ]
+}

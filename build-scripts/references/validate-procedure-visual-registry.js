@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
  * HOW TO ADAPT
- * - Add stricter PV checks as PV.3 adds pilot templates and visual states.
+ * - Add stricter PV checks as later PV sprints add projection/rendering rules.
  * - Keep this validator read-only. PV starts under references/data/ and must
  *   not create references/machine PV registries before the promotion gate.
  */
@@ -51,6 +51,16 @@ const GRAPH_REPRESENTATIONS_REQUIRING_AXES = new Set([
   'producer_graph',
   'market_graph',
 ]);
+
+const REQUIRED_PROJECTION_KEYS = [
+  'vaardigheden',
+  'answer_model',
+  'procedure_game',
+  'flowchart',
+  'formula_trace',
+  'graph_stage_sequence',
+  'table_trace',
+];
 
 function repoPath(relPath) {
   return path.join(REPO_ROOT, relPath);
@@ -110,6 +120,7 @@ function validateTemplate(template, context) {
   const {
     actionIds,
     operationIds,
+    operationById,
     unitIds,
     visualStateIds,
     checks,
@@ -120,7 +131,7 @@ function validateTemplate(template, context) {
   for (const unitId of template.source_unit_ids) {
     assert(unitIds.has(unitId), `${template.template_id} references missing source unit ${unitId}`);
   }
-  assert(template.operation_reference_status !== 'governed', `${template.template_id} cannot use governed operation status in PV.2`);
+  assert(template.operation_reference_status !== 'governed', `${template.template_id} cannot use governed operation status before PV machine-promotion review`);
   assert(Array.isArray(template.procedure_steps) && template.procedure_steps.length > 0, `${template.template_id} missing procedure_steps`);
   const stepIds = new Set();
   let provisionalOperationRefs = 0;
@@ -143,12 +154,18 @@ function validateTemplate(template, context) {
     if (step.operation_ref) {
       assert(step.operation_ref_status === 'provisional', `${template.template_id}/${step.step_id} operation_ref_status must be provisional`);
       assert(operationIds.has(step.operation_ref), `${template.template_id}/${step.step_id} references missing operation ${step.operation_ref}`);
+      const operation = operationById.get(step.operation_ref);
+      assert(operation.governance_status === 'provisional_until_cp4', `${template.template_id}/${step.step_id} operation ${step.operation_ref} must remain provisional_until_cp4`);
       provisionalOperationRefs += 1;
     }
   }
 
+  assert(template.projections, `${template.template_id} missing projections`);
+  for (const key of REQUIRED_PROJECTION_KEYS) {
+    assert(typeof template.projections[key] === 'boolean', `${template.template_id} projections.${key} must be boolean`);
+  }
   assert(template.publication, `${template.template_id} missing publication`);
-  assert(template.publication.student_facing_allowed === false, `${template.template_id} must not allow student-facing projection in PV.2`);
+  assert(template.publication.student_facing_allowed === false, `${template.template_id} must not allow student-facing projection before later PV publication gates`);
   if (provisionalOperationRefs > 0) {
     assert(template.operation_reference_status === 'provisional', `${template.template_id} must mark operation_reference_status provisional`);
   }
@@ -197,9 +214,25 @@ function validateVisualState(state, context) {
   assert(accessibility.meaning_not_color_only === true, `${state.visual_state_id} must not encode meaning by color alone`);
   assert(accessibility.direct_labels_required === true, `${state.visual_state_id} must require direct labels`);
   assert(accessibility.non_color_fallback, `${state.visual_state_id} must describe non-color fallback`);
-  assert(state.publication && state.publication.student_facing_allowed === false, `${state.visual_state_id} must not allow student-facing projection in PV.2`);
+  assert(state.publication && state.publication.student_facing_allowed === false, `${state.visual_state_id} must not allow student-facing projection before later PV publication gates`);
 
   pushCheck(checks, `visual_state:${state.visual_state_id}`, `${state.visual_type}/${state.representation}`);
+}
+
+function validateUnitTemplateLink(link, context) {
+  const {
+    unitIds,
+    templateIds,
+    checks,
+  } = context;
+
+  assert(link.unit_id && unitIds.has(link.unit_id), `unit-template link references missing unit ${link.unit_id}`);
+  assert(link.template_id && templateIds.has(link.template_id), `unit-template link for ${link.unit_id} references missing template ${link.template_id}`);
+  assert(['draft', 'pilot', 'reviewed', 'deprecated'].includes(link.status), `${link.unit_id}/${link.template_id} has invalid link status`);
+  assert(Array.isArray(link.projection_blockers), `${link.unit_id}/${link.template_id} projection_blockers must be an array`);
+  assert(link.publication && link.publication.student_facing_allowed === false, `${link.unit_id}/${link.template_id} must block student-facing publication`);
+
+  pushCheck(checks, `unit_template_link:${link.unit_id}:${link.template_id}`, `${link.status}, ${link.projection_blockers.length} blockers`);
 }
 
 function validateProcedureVisualRegistry() {
@@ -254,13 +287,11 @@ function validateProcedureVisualRegistry() {
   validateWrapper(procedureTemplates, PROCEDURE_TEMPLATES_PATH, 'templates');
   validateWrapper(visualStates, VISUAL_STATES_PATH, 'visual_states');
   validateWrapper(unitTemplateLinks, UNIT_TEMPLATE_LINKS_PATH, 'links');
-  assert((procedureTemplates.templates || []).length === 0, 'PV.2 must not add real procedure templates before PV.3');
-  assert((visualStates.visual_states || []).length === 0, 'PV.2 must not add real visual states before PV.3');
-  assert((unitTemplateLinks.links || []).length === 0, 'PV.2 must not add unit-template links before PV.3');
-  pushCheck(checks, 'empty_registries_pass', 'real PV registries are present, empty, and publication-blocked');
+  pushCheck(checks, 'real_registries_pass', `${procedureTemplates.templates.length} templates, ${visualStates.visual_states.length} visual states, ${unitTemplateLinks.links.length} unit-template links are publication-blocked`);
 
   const unitIds = new Set(units.map((unit) => unit.id));
-  const operationIds = new Set((skillOperationRegistry.exercise_operations || []).map((op) => op.operation_id));
+  const operationById = new Map((skillOperationRegistry.exercise_operations || []).map((op) => [op.operation_id, op]));
+  const operationIds = new Set(operationById.keys());
   for (const op of skillOperationRegistry.exercise_operations || []) {
     if ((vocab.schema_examples.procedure_templates || []).some((template) =>
       (template.procedure_steps || []).some((step) => step.operation_ref === op.operation_id)
@@ -273,6 +304,11 @@ function validateProcedureVisualRegistry() {
   const exampleVisualStates = vocab.schema_examples.visual_states || [];
   assert(exampleTemplates.length >= 2, 'PV.2 vocab must include at least two procedure template examples');
   assert(exampleVisualStates.length >= 2, 'PV.2 vocab must include at least two visual state examples');
+  const realTemplates = procedureTemplates.templates || [];
+  const realVisualStates = visualStates.visual_states || [];
+  const realLinks = unitTemplateLinks.links || [];
+  const realVisualStateIds = uniqueIds(realVisualStates, 'visual_state_id', 'real visual state');
+  const realTemplateIds = uniqueIds(realTemplates, 'template_id', 'real template');
   const visualStateIds = uniqueIds(exampleVisualStates, 'visual_state_id', 'schema example visual state');
   uniqueIds(exampleTemplates, 'template_id', 'schema example template');
 
@@ -281,13 +317,26 @@ function validateProcedureVisualRegistry() {
     validateVisualState(state, { visualTypes, elementTypes, checks });
   }
   for (const template of exampleTemplates) {
-    const result = validateTemplate(template, { actionIds, operationIds, unitIds, visualStateIds, checks });
+    const result = validateTemplate(template, { actionIds, operationIds, operationById, unitIds, visualStateIds, checks });
     provisionalOperationRefCount += result.provisionalOperationRefs;
   }
   assert(provisionalOperationRefCount > 0, 'PV.2 examples must prove provisional operation-reference validation');
   pushCheck(checks, 'example_records_pass', `${exampleTemplates.length} procedure examples, ${exampleVisualStates.length} visual-state examples`);
 
-  const graphExampleCount = exampleVisualStates.filter((state) => GRAPH_REPRESENTATIONS_REQUIRING_AXES.has(state.representation)).length;
+  let realProvisionalOperationRefCount = 0;
+  for (const state of realVisualStates) {
+    validateVisualState(state, { visualTypes, elementTypes, checks });
+  }
+  for (const template of realTemplates) {
+    const result = validateTemplate(template, { actionIds, operationIds, operationById, unitIds, visualStateIds: realVisualStateIds, checks });
+    realProvisionalOperationRefCount += result.provisionalOperationRefs;
+  }
+  for (const link of realLinks) {
+    validateUnitTemplateLink(link, { unitIds, templateIds: realTemplateIds, checks });
+  }
+  pushCheck(checks, 'real_records_pass', `${realTemplates.length} procedure templates, ${realVisualStates.length} visual states, ${realLinks.length} unit-template links`);
+
+  const graphExampleCount = [...exampleVisualStates, ...realVisualStates].filter((state) => GRAPH_REPRESENTATIONS_REQUIRING_AXES.has(state.representation)).length;
   assert(graphExampleCount > 0, 'PV.2 examples must include at least one axis-validated graph/chart state');
   pushCheck(checks, 'graph_axis_and_accessibility_rules', `${graphExampleCount} graph/chart example(s) validated for axes, units, labels, and non-color fallback`);
 
@@ -306,6 +355,7 @@ function validateProcedureVisualRegistry() {
       schema_example_template_count: exampleTemplates.length,
       schema_example_visual_state_count: exampleVisualStates.length,
       provisional_operation_reference_count: provisionalOperationRefCount,
+      real_provisional_operation_reference_count: realProvisionalOperationRefCount,
       machine_registry_created: false,
       student_facing_projection_allowed: false,
     },
@@ -316,7 +366,7 @@ function validateProcedureVisualRegistry() {
 function main() {
   try {
     const result = validateProcedureVisualRegistry();
-    console.log(`OK Procedure-Visual registry: ${result.summary.schema_file_count} schemas, ${result.summary.schema_example_template_count} template examples, ${result.summary.provisional_operation_reference_count} provisional operation refs`);
+    console.log(`OK Procedure-Visual registry: ${result.summary.schema_file_count} schemas, ${result.summary.procedure_template_count} real templates, ${result.summary.visual_state_count} visual states, ${result.summary.real_provisional_operation_reference_count} real provisional operation refs`);
   } catch (error) {
     console.error(`Procedure-Visual registry validation failed: ${error.message}`);
     process.exit(1);

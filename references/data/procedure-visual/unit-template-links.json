@@ -1,17 +1,114 @@
 {
   "schema_version": 1,
   "registry_id": "unit-template-links",
-  "status": "empty_pending_pv3",
-  "generated_by": "PV.2 schema MVP",
-  "generated_on": "2026-05-01",
+  "status": "pilot",
+  "generated_by": "PV.3 pilot template sprint",
+  "generated_on": "2026-05-02",
   "storage_decision": {
     "registry_location": "references/data/procedure-visual/unit-template-links.json",
     "machine_registry_created": false,
-    "reason": "PV.2 defines the schema and validator only. Unit-template links are deferred to PV.3."
+    "reason": "PV.3 links pilot templates to live micro-teaching units as a governed references/data overlay only. Machine promotion remains blocked until PV.7 or a later human promotion gate."
   },
-  "links": [],
+  "links": [
+    {
+      "unit_id": "B02",
+      "template_id": "choose_by_opportunity_cost_flow",
+      "status": "pilot",
+      "projection_blockers": [
+        "visual_renderer_pending",
+        "procedure_game_mapping_pending",
+        "human_publication_gate_pending"
+      ],
+      "publication": {
+        "student_facing_allowed": false,
+        "reason": "PV.3 links are reference-side pilot data only."
+      },
+      "notes": "Flowchart-style Book 1 pilot."
+    },
+    {
+      "unit_id": "A07",
+      "template_id": "build_total_revenue_function_trace",
+      "status": "pilot",
+      "projection_blockers": [
+        "visual_renderer_pending",
+        "answer_model_projection_pending",
+        "human_publication_gate_pending"
+      ],
+      "publication": {
+        "student_facing_allowed": false,
+        "reason": "PV.3 links are reference-side pilot data only."
+      },
+      "notes": "Formula-trace pilot with existing generator support, but no PV projection is authorized."
+    },
+    {
+      "unit_id": "A61",
+      "template_id": "select_table_values_trace",
+      "status": "pilot",
+      "projection_blockers": [
+        "operation_ids_provisional_until_registry_gate",
+        "generator_support_pending",
+        "visual_renderer_pending",
+        "procedure_game_mapping_pending",
+        "human_publication_gate_pending"
+      ],
+      "publication": {
+        "student_facing_allowed": false,
+        "reason": "PV.3 links are reference-side pilot data only."
+      },
+      "notes": "Root table-trace pilot; A61 remains generator-blocked."
+    },
+    {
+      "unit_id": "A82",
+      "template_id": "calculate_elasticity_from_table_values",
+      "status": "pilot",
+      "projection_blockers": [
+        "operation_ids_provisional_until_registry_gate",
+        "generator_support_pending",
+        "visual_renderer_pending",
+        "human_publication_gate_pending"
+      ],
+      "publication": {
+        "student_facing_allowed": false,
+        "reason": "PV.3 links are reference-side pilot data only."
+      },
+      "notes": "Elasticity table/source-value pairing pilot; A82 remains generator-blocked."
+    },
+    {
+      "unit_id": "A83",
+      "template_id": "calculate_demand_elasticity_from_pq_graph",
+      "status": "pilot",
+      "projection_blockers": [
+        "operation_ids_provisional_until_registry_gate",
+        "generator_support_pending",
+        "visual_renderer_pending",
+        "human_publication_gate_pending"
+      ],
+      "publication": {
+        "student_facing_allowed": false,
+        "reason": "PV.3 links are reference-side pilot data only."
+      },
+      "notes": "P-Q graph demand-elasticity pilot; A83 remains generator-blocked."
+    },
+    {
+      "unit_id": "A84",
+      "template_id": "judge_revenue_change_with_elasticity",
+      "status": "pilot",
+      "projection_blockers": [
+        "operation_ids_provisional_until_registry_gate",
+        "generator_support_pending",
+        "procedure_game_mapping_pending",
+        "visual_renderer_pending",
+        "human_publication_gate_pending"
+      ],
+      "publication": {
+        "student_facing_allowed": false,
+        "reason": "PV.3 links are reference-side pilot data only."
+      },
+      "notes": "Elasticity-to-revenue reasoning flowchart pilot; A84 remains generator-blocked."
+    }
+  ],
   "publication_policy": {
     "student_facing_projection_allowed": false,
-    "reason": "PV.2 does not authorize student-facing Procedure-Visual projection."
+    "reason": "PV.3 unit-template links are reference-side planning data only. Student-facing projection waits for renderer, generator/procedure-game integration, validation, and later publication gate."
   }
 }

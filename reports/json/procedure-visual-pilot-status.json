@@ -1,0 +1,424 @@
+{
+  "report_id": "procedure-visual-pilot-status",
+  "sprint_id": "PV.3",
+  "gate_id": "GATE-PV-G2-pilot-content",
+  "generated_by": "build-scripts/references/build-procedure-visual-pilot-status.js",
+  "generated_on": "2026-05-02T07:30:02.529Z",
+  "status": "passed",
+  "summary": {
+    "template_count": 6,
+    "visual_state_count": 6,
+    "unit_template_link_count": 6,
+    "projection_counts": {
+      "formula_trace": 3,
+      "graph_stage_sequence": 1,
+      "table_trace": 2,
+      "flowchart": 2
+    },
+    "visual_type_counts": {
+      "flowchart": 2,
+      "formula_trace": 1,
+      "table_trace": 2,
+      "graph_stage": 1
+    },
+    "operation_reference_count": 4,
+    "machine_registry_created": false,
+    "student_facing_projection_allowed": false
+  },
+  "pilot_templates": [
+    {
+      "template_id": "choose_by_opportunity_cost_flow",
+      "source_unit_ids": [
+        "B02"
+      ],
+      "representation": "choice_context",
+      "economic_context": "scarcity_and_choice",
+      "projections": {
+        "vaardigheden": true,
+        "answer_model": true,
+        "procedure_game": true,
+        "flowchart": true,
+        "formula_trace": false,
+        "graph_stage_sequence": false,
+        "table_trace": false
+      },
+      "blocker_count": 3
+    },
+    {
+      "template_id": "build_total_revenue_function_trace",
+      "source_unit_ids": [
+        "A07"
+      ],
+      "representation": "formula",
+      "economic_context": "producer_revenue",
+      "projections": {
+        "vaardigheden": true,
+        "answer_model": true,
+        "procedure_game": false,
+        "flowchart": false,
+        "formula_trace": true,
+        "graph_stage_sequence": false,
+        "table_trace": false
+      },
+      "blocker_count": 3
+    },
+    {
+      "template_id": "select_table_values_trace",
+      "source_unit_ids": [
+        "A61"
+      ],
+      "representation": "table",
+      "economic_context": "source_value_selection",
+      "projections": {
+        "vaardigheden": true,
+        "answer_model": true,
+        "procedure_game": true,
+        "flowchart": false,
+        "formula_trace": false,
+        "graph_stage_sequence": false,
+        "table_trace": true
+      },
+      "blocker_count": 5
+    },
+    {
+      "template_id": "calculate_elasticity_from_table_values",
+      "source_unit_ids": [
+        "A82"
+      ],
+      "representation": "table",
+      "economic_context": "market_demand_elasticity",
+      "projections": {
+        "vaardigheden": true,
+        "answer_model": true,
+        "procedure_game": false,
+        "flowchart": false,
+        "formula_trace": true,
+        "graph_stage_sequence": false,
+        "table_trace": true
+      },
+      "blocker_count": 4
+    },
+    {
+      "template_id": "calculate_demand_elasticity_from_pq_graph",
+      "source_unit_ids": [
+        "A83"
+      ],
+      "representation": "p_q_graph",
+      "economic_context": "demand_elasticity",
+      "projections": {
+        "vaardigheden": true,
+        "answer_model": true,
+        "procedure_game": false,
+        "flowchart": false,
+        "formula_trace": true,
+        "graph_stage_sequence": true,
+        "table_trace": false
+      },
+      "blocker_count": 4
+    },
+    {
+      "template_id": "judge_revenue_change_with_elasticity",
+      "source_unit_ids": [
+        "A84"
+      ],
+      "representation": "source_text_or_table",
+      "economic_context": "market_revenue",
+      "projections": {
+        "vaardigheden": true,
+        "answer_model": true,
+        "procedure_game": true,
+        "flowchart": true,
+        "formula_trace": false,
+        "graph_stage_sequence": false,
+        "table_trace": false
+      },
+      "blocker_count": 5
+    }
+  ],
+  "visual_states": [
+    {
+      "visual_state_id": "flowchart_opportunity_cost_choice",
+      "visual_type": "flowchart",
+      "representation": "choice_context",
+      "semantic_focus": "highest_not_chosen_alternative"
+    },
+    {
+      "visual_state_id": "formula_trace_total_revenue_function",
+      "visual_type": "formula_trace",
+      "representation": "formula",
+      "semantic_focus": "to_function_from_price_times_quantity"
+    },
+    {
+      "visual_state_id": "table_trace_source_values_selected",
+      "visual_type": "table_trace",
+      "representation": "table",
+      "semantic_focus": "selected_source_values_for_calculation"
+    },
+    {
+      "visual_state_id": "table_trace_elasticity_pairs_selected",
+      "visual_type": "table_trace",
+      "representation": "table",
+      "semantic_focus": "paired_old_new_price_quantity_values"
+    },
+    {
+      "visual_state_id": "pq_graph_elasticity_two_pairs",
+      "visual_type": "graph_stage",
+      "representation": "p_q_graph",
+      "semantic_focus": "two_price_quantity_pairs_before_elasticity_calculation"
+    },
+    {
+      "visual_state_id": "flowchart_elasticity_revenue_effect",
+      "visual_type": "flowchart",
+      "representation": "source_text_or_table",
+      "semantic_focus": "elasticity_class_to_revenue_direction"
+    }
+  ],
+  "checks": [
+    {
+      "id": "template_count",
+      "status": "passed",
+      "detail": "6 pilot templates present; PV-G2 requires at least 5."
+    },
+    {
+      "id": "visual_state_count",
+      "status": "passed",
+      "detail": "6 pilot visual states present; PV-G2 requires at least 2."
+    },
+    {
+      "id": "unit_template_links",
+      "status": "passed",
+      "detail": "6 unit-template links present."
+    },
+    {
+      "id": "projection:formula_trace",
+      "status": "passed",
+      "detail": "3 template(s) declare formula_trace."
+    },
+    {
+      "id": "projection:graph_stage_sequence",
+      "status": "passed",
+      "detail": "1 template(s) declare graph_stage_sequence."
+    },
+    {
+      "id": "projection:table_trace",
+      "status": "passed",
+      "detail": "2 template(s) declare table_trace."
+    },
+    {
+      "id": "projection:flowchart",
+      "status": "passed",
+      "detail": "2 template(s) declare flowchart."
+    },
+    {
+      "id": "visual_type:formula_trace",
+      "status": "passed",
+      "detail": "1 visual state(s) use formula_trace."
+    },
+    {
+      "id": "visual_type:graph_stage",
+      "status": "passed",
+      "detail": "1 visual state(s) use graph_stage."
+    },
+    {
+      "id": "visual_type:table_trace",
+      "status": "passed",
+      "detail": "2 visual state(s) use table_trace."
+    },
+    {
+      "id": "visual_type:flowchart",
+      "status": "passed",
+      "detail": "2 visual state(s) use flowchart."
+    },
+    {
+      "id": "publication_blocked_templates",
+      "status": "passed",
+      "detail": "6/6 templates are student-facing blocked and have blockers."
+    },
+    {
+      "id": "publication_blocked_links",
+      "status": "passed",
+      "detail": "6/6 unit-template links are student-facing blocked and have blockers."
+    },
+    {
+      "id": "operation_refs_provisional",
+      "status": "passed",
+      "detail": "4 real operation reference(s) validated as provisional."
+    },
+    {
+      "id": "no_machine_pv_registry",
+      "status": "passed",
+      "detail": "No references/machine Procedure-Visual registry exists."
+    },
+    {
+      "id": "required_files_exist",
+      "status": "passed",
+      "detail": "schema, registry, unit, operation, and CP-4 files are present"
+    },
+    {
+      "id": "no_machine_pv_registry",
+      "status": "passed",
+      "detail": "no references/machine PV registry files exist"
+    },
+    {
+      "id": "schema_contracts",
+      "status": "passed",
+      "detail": "PV schema files expose required root fields and strict roots"
+    },
+    {
+      "id": "cp4_and_operation_boundary",
+      "status": "passed",
+      "detail": "CP-4 allows provisional operation references only; operation registry is not machine-promoted"
+    },
+    {
+      "id": "vocab_policy",
+      "status": "passed",
+      "detail": "21 actions, 7 visual types, 14 element types"
+    },
+    {
+      "id": "real_registries_pass",
+      "status": "passed",
+      "detail": "6 templates, 6 visual states, 6 unit-template links are publication-blocked"
+    },
+    {
+      "id": "visual_state:pv_example_table_cell_highlighted",
+      "status": "passed",
+      "detail": "table_trace/table"
+    },
+    {
+      "id": "visual_state:pv_example_bar_chart_axis_checked",
+      "status": "passed",
+      "detail": "graph_stage/bar_chart"
+    },
+    {
+      "id": "template:pv_example_select_table_values",
+      "status": "passed",
+      "detail": "2 steps, 1 provisional operation refs"
+    },
+    {
+      "id": "template:pv_example_read_bar_chart_value",
+      "status": "passed",
+      "detail": "3 steps, 1 provisional operation refs"
+    },
+    {
+      "id": "example_records_pass",
+      "status": "passed",
+      "detail": "2 procedure examples, 2 visual-state examples"
+    },
+    {
+      "id": "visual_state:flowchart_opportunity_cost_choice",
+      "status": "passed",
+      "detail": "flowchart/choice_context"
+    },
+    {
+      "id": "visual_state:formula_trace_total_revenue_function",
+      "status": "passed",
+      "detail": "formula_trace/formula"
+    },
+    {
+      "id": "visual_state:table_trace_source_values_selected",
+      "status": "passed",
+      "detail": "table_trace/table"
+    },
+    {
+      "id": "visual_state:table_trace_elasticity_pairs_selected",
+      "status": "passed",
+      "detail": "table_trace/table"
+    },
+    {
+      "id": "visual_state:pq_graph_elasticity_two_pairs",
+      "status": "passed",
+      "detail": "graph_stage/p_q_graph"
+    },
+    {
+      "id": "visual_state:flowchart_elasticity_revenue_effect",
+      "status": "passed",
+      "detail": "flowchart/source_text_or_table"
+    },
+    {
+      "id": "template:choose_by_opportunity_cost_flow",
+      "status": "passed",
+      "detail": "4 steps, 0 provisional operation refs"
+    },
+    {
+      "id": "template:build_total_revenue_function_trace",
+      "status": "passed",
+      "detail": "4 steps, 0 provisional operation refs"
+    },
+    {
+      "id": "template:select_table_values_trace",
+      "status": "passed",
+      "detail": "4 steps, 1 provisional operation refs"
+    },
+    {
+      "id": "template:calculate_elasticity_from_table_values",
+      "status": "passed",
+      "detail": "5 steps, 1 provisional operation refs"
+    },
+    {
+      "id": "template:calculate_demand_elasticity_from_pq_graph",
+      "status": "passed",
+      "detail": "6 steps, 1 provisional operation refs"
+    },
+    {
+      "id": "template:judge_revenue_change_with_elasticity",
+      "status": "passed",
+      "detail": "4 steps, 1 provisional operation refs"
+    },
+    {
+      "id": "unit_template_link:B02:choose_by_opportunity_cost_flow",
+      "status": "passed",
+      "detail": "pilot, 3 blockers"
+    },
+    {
+      "id": "unit_template_link:A07:build_total_revenue_function_trace",
+      "status": "passed",
+      "detail": "pilot, 3 blockers"
+    },
+    {
+      "id": "unit_template_link:A61:select_table_values_trace",
+      "status": "passed",
+      "detail": "pilot, 5 blockers"
+    },
+    {
+      "id": "unit_template_link:A82:calculate_elasticity_from_table_values",
+      "status": "passed",
+      "detail": "pilot, 4 blockers"
+    },
+    {
+      "id": "unit_template_link:A83:calculate_demand_elasticity_from_pq_graph",
+      "status": "passed",
+      "detail": "pilot, 4 blockers"
+    },
+    {
+      "id": "unit_template_link:A84:judge_revenue_change_with_elasticity",
+      "status": "passed",
+      "detail": "pilot, 5 blockers"
+    },
+    {
+      "id": "real_records_pass",
+      "status": "passed",
+      "detail": "6 procedure templates, 6 visual states, 6 unit-template links"
+    },
+    {
+      "id": "graph_axis_and_accessibility_rules",
+      "status": "passed",
+      "detail": "2 graph/chart example(s) validated for axes, units, labels, and non-color fallback"
+    }
+  ],
+  "acceptance_commands": [
+    "node build-scripts/references/validate-procedure-visual-registry.js",
+    "node build-scripts/references/build-procedure-visual-pilot-status.js"
+  ],
+  "blocked_scope": [
+    "references/machine Procedure-Visual registries",
+    "student-facing PV projection",
+    "procedure-game migration requirement",
+    "visual renderer publication",
+    "student diagnostics",
+    "adaptive routing",
+    "student-facing AI",
+    "automatic sequencing",
+    "mastery decisions",
+    "summative use"
+  ]
+}

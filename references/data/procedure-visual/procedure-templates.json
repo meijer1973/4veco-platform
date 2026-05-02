@@ -1,17 +1,650 @@
 {
   "schema_version": 1,
   "registry_id": "procedure-templates",
-  "status": "empty_pending_pv3",
-  "generated_by": "PV.2 schema MVP",
-  "generated_on": "2026-05-01",
+  "status": "pilot",
+  "generated_by": "PV.3 pilot template sprint",
+  "generated_on": "2026-05-02",
   "storage_decision": {
     "registry_location": "references/data/procedure-visual/procedure-templates.json",
     "machine_registry_created": false,
-    "reason": "PV.2 defines the schema and validator only. Pilot templates are deferred to PV.3."
+    "reason": "PV.3 adds pilot procedure templates as a governed references/data overlay only. Machine promotion remains blocked until PV.7 or a later human promotion gate."
   },
-  "templates": [],
+  "templates": [
+    {
+      "template_id": "choose_by_opportunity_cost_flow",
+      "status": "pilot",
+      "source_unit_ids": [
+        "B02"
+      ],
+      "representation": "choice_context",
+      "economic_context": "scarcity_and_choice",
+      "operation_reference_status": "none",
+      "procedure_steps": [
+        {
+          "step_id": "list_alternatives",
+          "label_nl": "Benoem de beschikbare alternatieven voor dezelfde schaarse middelen.",
+          "action": "identify_context",
+          "input_refs": [
+            "choice_context",
+            "scarce_resource"
+          ],
+          "output_refs": [
+            "alternative_list"
+          ],
+          "source_unit_ref": "B02",
+          "visual_state_ref": "flowchart_opportunity_cost_choice",
+          "student_visible": true
+        },
+        {
+          "step_id": "calculate_payoffs",
+          "label_nl": "Bepaal of bereken de opbrengst van elk alternatief.",
+          "action": "calculate_payoff",
+          "input_refs": [
+            "alternative_list"
+          ],
+          "output_refs": [
+            "alternative_payoffs"
+          ],
+          "source_unit_ref": "B02",
+          "visual_state_ref": "flowchart_opportunity_cost_choice",
+          "student_visible": true
+        },
+        {
+          "step_id": "rank_not_chosen",
+          "label_nl": "Rangschik de alternatieven en markeer het beste niet-gekozen alternatief.",
+          "action": "rank_alternatives",
+          "input_refs": [
+            "alternative_payoffs",
+            "chosen_alternative"
+          ],
+          "output_refs": [
+            "best_not_chosen_alternative"
+          ],
+          "source_unit_ref": "B02",
+          "visual_state_ref": "flowchart_opportunity_cost_choice",
+          "student_visible": true
+        },
+        {
+          "step_id": "interpret_net_choice_value",
+          "label_nl": "Vergelijk de gekozen opbrengst met de alternatieve kosten en interpreteer de nettowaarde.",
+          "action": "interpret_result",
+          "input_refs": [
+            "chosen_payoff",
+            "best_not_chosen_alternative"
+          ],
+          "output_refs": [
+            "net_choice_value"
+          ],
+          "source_unit_ref": "B02",
+          "visual_state_ref": "flowchart_opportunity_cost_choice",
+          "student_visible": true
+        }
+      ],
+      "projections": {
+        "vaardigheden": true,
+        "answer_model": true,
+        "procedure_game": true,
+        "flowchart": true,
+        "formula_trace": false,
+        "graph_stage_sequence": false,
+        "table_trace": false
+      },
+      "publication": {
+        "student_facing_allowed": false,
+        "reason": "PV.3 stores the formal pilot template only. Procedure-game mapping and publication gates are pending.",
+        "blocked_by": [
+          "visual_renderer_pending",
+          "procedure_game_mapping_pending",
+          "human_publication_gate_pending"
+        ]
+      },
+      "blockers": [
+        "visual_renderer_pending",
+        "procedure_game_mapping_pending",
+        "human_publication_gate_pending"
+      ],
+      "notes": "Low-risk Book 1 pilot for flowchart-style procedure consistency."
+    },
+    {
+      "template_id": "build_total_revenue_function_trace",
+      "status": "pilot",
+      "source_unit_ids": [
+        "A07"
+      ],
+      "representation": "formula",
+      "economic_context": "producer_revenue",
+      "operation_reference_status": "none",
+      "procedure_steps": [
+        {
+          "step_id": "make_price_function_available",
+          "label_nl": "Zorg dat P als functie van Q beschikbaar is.",
+          "action": "identify_context",
+          "input_refs": [
+            "price_quantity_relation"
+          ],
+          "output_refs": [
+            "P(Q)"
+          ],
+          "source_unit_ref": "A07",
+          "visual_state_ref": "formula_trace_total_revenue_function",
+          "student_visible": true
+        },
+        {
+          "step_id": "multiply_price_by_quantity",
+          "label_nl": "Vermenigvuldig TO = P x Q met haakjes om elke term van P mee te nemen.",
+          "action": "multiply",
+          "input_refs": [
+            "P(Q)",
+            "Q"
+          ],
+          "output_refs": [
+            "unsimplified_TO(Q)"
+          ],
+          "source_unit_ref": "A07",
+          "visual_state_ref": "formula_trace_total_revenue_function",
+          "student_visible": true
+        },
+        {
+          "step_id": "simplify_to_function",
+          "label_nl": "Werk uit tot een nette TO-functie in Q.",
+          "action": "substitute",
+          "input_refs": [
+            "unsimplified_TO(Q)"
+          ],
+          "output_refs": [
+            "TO(Q)"
+          ],
+          "source_unit_ref": "A07",
+          "visual_state_ref": "formula_trace_total_revenue_function",
+          "student_visible": true
+        },
+        {
+          "step_id": "check_to_with_sample_q",
+          "label_nl": "Controleer met een ingevulde Q dat TO gelijk is aan P(Q) x Q.",
+          "action": "interpret_result",
+          "input_refs": [
+            "TO(Q)",
+            "P(Q)",
+            "sample_Q"
+          ],
+          "output_refs": [
+            "checked_TO_function"
+          ],
+          "source_unit_ref": "A07",
+          "visual_state_ref": "formula_trace_total_revenue_function",
+          "student_visible": true
+        }
+      ],
+      "projections": {
+        "vaardigheden": true,
+        "answer_model": true,
+        "procedure_game": false,
+        "flowchart": false,
+        "formula_trace": true,
+        "graph_stage_sequence": false,
+        "table_trace": false
+      },
+      "publication": {
+        "student_facing_allowed": false,
+        "reason": "PV.3 stores the formal pilot template only. Formula-trace rendering and publication gates are pending.",
+        "blocked_by": [
+          "visual_renderer_pending",
+          "answer_model_projection_pending",
+          "human_publication_gate_pending"
+        ]
+      },
+      "blockers": [
+        "visual_renderer_pending",
+        "answer_model_projection_pending",
+        "human_publication_gate_pending"
+      ],
+      "notes": "Existing A-domain generator support makes A07 useful as a formula-trace pilot without authorizing PV projection."
+    },
+    {
+      "template_id": "select_table_values_trace",
+      "status": "pilot",
+      "source_unit_ids": [
+        "A61"
+      ],
+      "representation": "table",
+      "economic_context": "source_value_selection",
+      "operation_reference_status": "provisional",
+      "procedure_steps": [
+        {
+          "step_id": "read_question_target",
+          "label_nl": "Lees de vraag en bepaal welke grootheid, periode, rij of kolom nodig is.",
+          "action": "identify_context",
+          "input_refs": [
+            "question",
+            "source_table"
+          ],
+          "output_refs": [
+            "target_value_description"
+          ],
+          "source_unit_ref": "A61",
+          "visual_state_ref": "table_trace_source_values_selected",
+          "student_visible": true
+        },
+        {
+          "step_id": "check_table_headers_units",
+          "label_nl": "Controleer bron, tabelkop, rijlabel, kolomlabel en eenheid.",
+          "action": "check_labels",
+          "input_refs": [
+            "source_table",
+            "target_value_description"
+          ],
+          "output_refs": [
+            "table_header_unit_check"
+          ],
+          "source_unit_ref": "A61",
+          "visual_state_ref": "table_trace_source_values_selected",
+          "student_visible": true
+        },
+        {
+          "step_id": "select_needed_values",
+          "label_nl": "Selecteer de oude waarde, nieuwe waarde of gevraagde waarde voordat je rekent.",
+          "action": "select_table_value",
+          "input_refs": [
+            "source_table",
+            "table_header_unit_check"
+          ],
+          "output_refs": [
+            "selected_source_values"
+          ],
+          "source_unit_ref": "A61",
+          "operation_ref": "REP_TABLE_VALUE_SELECTION",
+          "operation_ref_status": "provisional",
+          "visual_state_ref": "table_trace_source_values_selected",
+          "student_visible": true
+        },
+        {
+          "step_id": "label_selected_values",
+          "label_nl": "Noteer de gekozen waarden met label zodat de berekening controleerbaar is.",
+          "action": "interpret_result",
+          "input_refs": [
+            "selected_source_values"
+          ],
+          "output_refs": [
+            "labeled_source_values"
+          ],
+          "source_unit_ref": "A61",
+          "visual_state_ref": "table_trace_source_values_selected",
+          "student_visible": true
+        }
+      ],
+      "projections": {
+        "vaardigheden": true,
+        "answer_model": true,
+        "procedure_game": true,
+        "flowchart": false,
+        "formula_trace": false,
+        "graph_stage_sequence": false,
+        "table_trace": true
+      },
+      "publication": {
+        "student_facing_allowed": false,
+        "reason": "PV.3 stores the formal pilot template only. A61 remains generator-blocked and table-trace rendering is pending.",
+        "blocked_by": [
+          "operation_ids_provisional_until_registry_gate",
+          "generator_support_pending",
+          "visual_renderer_pending",
+          "procedure_game_mapping_pending",
+          "human_publication_gate_pending"
+        ]
+      },
+      "blockers": [
+        "operation_ids_provisional_until_registry_gate",
+        "generator_support_pending",
+        "visual_renderer_pending",
+        "procedure_game_mapping_pending",
+        "human_publication_gate_pending"
+      ],
+      "notes": "Root table-trace pilot for later percentage, producer, and elasticity procedures."
+    },
+    {
+      "template_id": "calculate_elasticity_from_table_values",
+      "status": "pilot",
+      "source_unit_ids": [
+        "A82"
+      ],
+      "representation": "table",
+      "economic_context": "market_demand_elasticity",
+      "operation_reference_status": "provisional",
+      "procedure_steps": [
+        {
+          "step_id": "identify_elasticity_variables",
+          "label_nl": "Bepaal welke prijs- en hoeveelheidsvariabelen bij de elasticiteit horen.",
+          "action": "identify_context",
+          "input_refs": [
+            "question",
+            "source_table"
+          ],
+          "output_refs": [
+            "elasticity_variable_set"
+          ],
+          "source_unit_ref": "A82",
+          "visual_state_ref": "table_trace_elasticity_pairs_selected",
+          "student_visible": true
+        },
+        {
+          "step_id": "select_old_new_pairs",
+          "label_nl": "Selecteer oude P, oude Q, nieuwe P en nieuwe Q en controleer dat de paren bij dezelfde situatie horen.",
+          "action": "select_table_value",
+          "input_refs": [
+            "source_table",
+            "elasticity_variable_set"
+          ],
+          "output_refs": [
+            "paired_old_new_price_quantity_values"
+          ],
+          "source_unit_ref": "A82",
+          "operation_ref": "REP_ELASTICITY_FROM_TABLE",
+          "operation_ref_status": "provisional",
+          "visual_state_ref": "table_trace_elasticity_pairs_selected",
+          "student_visible": true
+        },
+        {
+          "step_id": "calculate_percentage_changes",
+          "label_nl": "Bereken de procentuele verandering van Q en de procentuele verandering van P.",
+          "action": "calculate_percentage_change",
+          "input_refs": [
+            "paired_old_new_price_quantity_values"
+          ],
+          "output_refs": [
+            "percent_change_q",
+            "percent_change_p"
+          ],
+          "source_unit_ref": "A82",
+          "visual_state_ref": "table_trace_elasticity_pairs_selected",
+          "student_visible": true
+        },
+        {
+          "step_id": "calculate_elasticity_ratio",
+          "label_nl": "Bereken Ev = procentuele verandering Q gedeeld door procentuele verandering P.",
+          "action": "substitute",
+          "input_refs": [
+            "percent_change_q",
+            "percent_change_p"
+          ],
+          "output_refs": [
+            "elasticity_value"
+          ],
+          "source_unit_ref": "A82",
+          "student_visible": true
+        },
+        {
+          "step_id": "interpret_elasticity_value",
+          "label_nl": "Interpreteer teken, absolute waarde en elastisch, inelastisch of unitair elastisch in context.",
+          "action": "interpret_result",
+          "input_refs": [
+            "elasticity_value",
+            "market_context"
+          ],
+          "output_refs": [
+            "elasticity_interpretation"
+          ],
+          "source_unit_ref": "A82",
+          "student_visible": true
+        }
+      ],
+      "projections": {
+        "vaardigheden": true,
+        "answer_model": true,
+        "procedure_game": false,
+        "flowchart": false,
+        "formula_trace": true,
+        "graph_stage_sequence": false,
+        "table_trace": true
+      },
+      "publication": {
+        "student_facing_allowed": false,
+        "reason": "PV.3 stores the formal pilot template only. A82 remains generator-blocked and operation governance is provisional.",
+        "blocked_by": [
+          "operation_ids_provisional_until_registry_gate",
+          "generator_support_pending",
+          "visual_renderer_pending",
+          "human_publication_gate_pending"
+        ]
+      },
+      "blockers": [
+        "operation_ids_provisional_until_registry_gate",
+        "generator_support_pending",
+        "visual_renderer_pending",
+        "human_publication_gate_pending"
+      ],
+      "notes": "Pilot table/formula trace for elasticity source-value pairing."
+    },
+    {
+      "template_id": "calculate_demand_elasticity_from_pq_graph",
+      "status": "pilot",
+      "source_unit_ids": [
+        "A83"
+      ],
+      "representation": "p_q_graph",
+      "economic_context": "demand_elasticity",
+      "operation_reference_status": "provisional",
+      "procedure_steps": [
+        {
+          "step_id": "identify_demand_graph",
+          "label_nl": "Lees titel en context en bepaal dat de grafiek een vraagrelatie toont.",
+          "action": "identify_context",
+          "input_refs": [
+            "p_q_graph",
+            "question"
+          ],
+          "output_refs": [
+            "demand_graph_context"
+          ],
+          "source_unit_ref": "A83",
+          "visual_state_ref": "pq_graph_elasticity_two_pairs",
+          "student_visible": true
+        },
+        {
+          "step_id": "check_axes_units_scale",
+          "label_nl": "Controleer horizontale as, verticale as, eenheden, schaal en labels of legenda.",
+          "action": "check_scale",
+          "input_refs": [
+            "p_q_graph",
+            "demand_graph_context"
+          ],
+          "output_refs": [
+            "axis_scale_check"
+          ],
+          "source_unit_ref": "A83",
+          "visual_state_ref": "pq_graph_elasticity_two_pairs",
+          "student_visible": true
+        },
+        {
+          "step_id": "read_two_pq_pairs",
+          "label_nl": "Lees twee P,Q-paren af en noteer of waarden exact of geschat zijn.",
+          "action": "read_value",
+          "input_refs": [
+            "p_q_graph",
+            "axis_scale_check"
+          ],
+          "output_refs": [
+            "old_price_quantity_pair",
+            "new_price_quantity_pair"
+          ],
+          "source_unit_ref": "A83",
+          "operation_ref": "REP_ELASTICITY_FROM_DEMAND_GRAPH",
+          "operation_ref_status": "provisional",
+          "visual_state_ref": "pq_graph_elasticity_two_pairs",
+          "student_visible": true
+        },
+        {
+          "step_id": "label_basis_and_comparison",
+          "label_nl": "Bepaal voor prijs en hoeveelheid welke waarde oud/basis is en welke nieuw/vergelijking is.",
+          "action": "interpret_result",
+          "input_refs": [
+            "old_price_quantity_pair",
+            "new_price_quantity_pair"
+          ],
+          "output_refs": [
+            "basis_comparison_labels"
+          ],
+          "source_unit_ref": "A83",
+          "student_visible": true
+        },
+        {
+          "step_id": "calculate_graph_elasticity",
+          "label_nl": "Bereken procentuele verandering van Q en P en deel %Delta Q door %Delta P.",
+          "action": "calculate_percentage_change",
+          "input_refs": [
+            "basis_comparison_labels"
+          ],
+          "output_refs": [
+            "graph_elasticity_value"
+          ],
+          "source_unit_ref": "A83",
+          "student_visible": true
+        },
+        {
+          "step_id": "interpret_graph_elasticity",
+          "label_nl": "Interpreteer teken, absolute waarde en elasticiteitscategorie en controleer of dit past bij de grafiek.",
+          "action": "interpret_result",
+          "input_refs": [
+            "graph_elasticity_value",
+            "p_q_graph"
+          ],
+          "output_refs": [
+            "graph_elasticity_interpretation"
+          ],
+          "source_unit_ref": "A83",
+          "student_visible": true
+        }
+      ],
+      "projections": {
+        "vaardigheden": true,
+        "answer_model": true,
+        "procedure_game": false,
+        "flowchart": false,
+        "formula_trace": true,
+        "graph_stage_sequence": true,
+        "table_trace": false
+      },
+      "publication": {
+        "student_facing_allowed": false,
+        "reason": "PV.3 stores the formal pilot template only. A83 remains generator-blocked; graph-stage rendering and PV projection are blocked.",
+        "blocked_by": [
+          "operation_ids_provisional_until_registry_gate",
+          "generator_support_pending",
+          "visual_renderer_pending",
+          "human_publication_gate_pending"
+        ]
+      },
+      "blockers": [
+        "operation_ids_provisional_until_registry_gate",
+        "generator_support_pending",
+        "visual_renderer_pending",
+        "human_publication_gate_pending"
+      ],
+      "notes": "Pilot graph-stage/formula trace for HCS-approved demand-elasticity P-Q graph scope."
+    },
+    {
+      "template_id": "judge_revenue_change_with_elasticity",
+      "status": "pilot",
+      "source_unit_ids": [
+        "A84"
+      ],
+      "representation": "source_text_or_table",
+      "economic_context": "market_revenue",
+      "operation_reference_status": "provisional",
+      "procedure_steps": [
+        {
+          "step_id": "read_elasticity_source",
+          "label_nl": "Lees uit de bron welke prijsverandering, hoeveelheidsverandering of elasticiteitswaarde gegeven is.",
+          "action": "identify_context",
+          "input_refs": [
+            "source_text",
+            "source_table"
+          ],
+          "output_refs": [
+            "elasticity_source_data"
+          ],
+          "source_unit_ref": "A84",
+          "operation_ref": "REP_REVENUE_CHANGE_WITH_ELASTICITY_SOURCE",
+          "operation_ref_status": "provisional",
+          "visual_state_ref": "flowchart_elasticity_revenue_effect",
+          "student_visible": true
+        },
+        {
+          "step_id": "classify_absolute_elasticity",
+          "label_nl": "Bepaal met de absolute waarde of de vraag elastisch, inelastisch of unitair elastisch is.",
+          "action": "interpret_result",
+          "input_refs": [
+            "elasticity_source_data"
+          ],
+          "output_refs": [
+            "elasticity_class"
+          ],
+          "source_unit_ref": "A84",
+          "visual_state_ref": "flowchart_elasticity_revenue_effect",
+          "student_visible": true
+        },
+        {
+          "step_id": "map_elasticity_to_revenue",
+          "label_nl": "Gebruik de elasticiteitscategorie om te bepalen of omzet mee of tegengesteld beweegt met de prijs.",
+          "action": "flow_step",
+          "input_refs": [
+            "price_change",
+            "elasticity_class"
+          ],
+          "output_refs": [
+            "revenue_direction"
+          ],
+          "source_unit_ref": "A84",
+          "visual_state_ref": "flowchart_elasticity_revenue_effect",
+          "student_visible": true
+        },
+        {
+          "step_id": "support_with_to_relation",
+          "label_nl": "Onderbouw met TO = P x Q of met de procentuele prijs- en hoeveelheidsverandering.",
+          "action": "interpret_result",
+          "input_refs": [
+            "revenue_direction",
+            "elasticity_source_data"
+          ],
+          "output_refs": [
+            "supported_revenue_judgement"
+          ],
+          "source_unit_ref": "A84",
+          "visual_state_ref": "flowchart_elasticity_revenue_effect",
+          "student_visible": true
+        }
+      ],
+      "projections": {
+        "vaardigheden": true,
+        "answer_model": true,
+        "procedure_game": true,
+        "flowchart": true,
+        "formula_trace": false,
+        "graph_stage_sequence": false,
+        "table_trace": false
+      },
+      "publication": {
+        "student_facing_allowed": false,
+        "reason": "PV.3 stores the formal pilot template only. A84 remains generator-blocked and procedure-game mapping is pending.",
+        "blocked_by": [
+          "operation_ids_provisional_until_registry_gate",
+          "generator_support_pending",
+          "procedure_game_mapping_pending",
+          "visual_renderer_pending",
+          "human_publication_gate_pending"
+        ]
+      },
+      "blockers": [
+        "operation_ids_provisional_until_registry_gate",
+        "generator_support_pending",
+        "procedure_game_mapping_pending",
+        "visual_renderer_pending",
+        "human_publication_gate_pending"
+      ],
+      "notes": "Pilot flowchart for elasticity-to-revenue interpretation."
+    }
+  ],
   "publication_policy": {
     "student_facing_projection_allowed": false,
-    "reason": "PV.2 does not authorize student-facing Procedure-Visual projection."
+    "reason": "PV.3 pilot procedure templates are reference-side planning data only. Student-facing projection waits for renderer, generator/procedure-game integration, validation, and later publication gate."
   }
 }

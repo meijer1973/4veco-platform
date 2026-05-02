@@ -15,13 +15,14 @@
   "roadmaps": [
     {
       "roadmap_id": "references-team-roadmap",
-      "version": "v2.30-rx4-elasticity-market-applied",
+      "version": "v2.31-pv3-pilot-procedure-visual-templates",
       "title": "References Team Roadmap",
       "status": "active",
       "path": "references/reference-team-roadmap.md",
       "owner": "references_team",
       "updated_on": "2026-05-02",
       "supersedes": [
+        "docs/roadmaps/outdated/reference-team-roadmap-v2.30-rx4-elasticity-market-applied.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.29-rx4-elasticity-market-review-prepared.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.28-rx3b-graph-lane-applied.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.27-rx3b-graph-lane-review-prepared.md",
@@ -52,7 +53,18 @@
         "knowledge/Exercise schema and quality/reference-team-roadmap Live version 28 April.md",
         "knowledge/Exercise schema and quality/roadmap-updated-repository-checked.md"
       ],
-      "notes": "Current operating roadmap after closing GATE-RX4 and applying A82/A84/A83 through CLI-only mutation; PV.3 is the next PV track sprint."
+      "notes": "Current operating roadmap after completing PV.3 pilot procedure-visual templates; PV.4 is the next PV track sprint."
+    },
+    {
+      "roadmap_id": "references-team-roadmap-v2.30",
+      "version": "v2.30-rx4-elasticity-market-applied",
+      "title": "References Team Roadmap before PV.3 pilot procedure-visual templates",
+      "status": "outdated",
+      "path": "docs/roadmaps/outdated/reference-team-roadmap-v2.30-rx4-elasticity-market-applied.md",
+      "owner": "references_team",
+      "updated_on": "2026-05-02",
+      "superseded_by": "references/reference-team-roadmap.md",
+      "notes": "Snapshot archived before adding PV.3 pilot Procedure-Visual templates, visual states, unit-template links, and PV-G2 technical proof."
     },
     {
       "roadmap_id": "references-team-roadmap-v2.29",

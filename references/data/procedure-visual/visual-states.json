@@ -1,17 +1,390 @@
 {
   "schema_version": 1,
   "registry_id": "visual-states",
-  "status": "empty_pending_pv3",
-  "generated_by": "PV.2 schema MVP",
-  "generated_on": "2026-05-01",
+  "status": "pilot",
+  "generated_by": "PV.3 pilot template sprint",
+  "generated_on": "2026-05-02",
   "storage_decision": {
     "registry_location": "references/data/procedure-visual/visual-states.json",
     "machine_registry_created": false,
-    "reason": "PV.2 defines the schema and validator only. Pilot visual states are deferred to PV.3."
+    "reason": "PV.3 adds pilot visual states as a governed references/data overlay only. Machine promotion remains blocked until PV.7 or a later human promotion gate."
   },
-  "visual_states": [],
+  "visual_states": [
+    {
+      "visual_state_id": "flowchart_opportunity_cost_choice",
+      "status": "pilot",
+      "visual_type": "flowchart",
+      "semantic_focus": "highest_not_chosen_alternative",
+      "representation": "choice_context",
+      "elements": [
+        {
+          "type": "flow_node",
+          "role": "alternatives",
+          "label": "alternatieven"
+        },
+        {
+          "type": "flow_node",
+          "role": "payoffs",
+          "label": "opbrengsten"
+        },
+        {
+          "type": "flow_node",
+          "role": "best_not_chosen",
+          "label": "beste niet-gekozen alternatief"
+        },
+        {
+          "type": "flow_node",
+          "role": "net_value",
+          "label": "nettowaarde keuze"
+        },
+        {
+          "type": "arrow",
+          "role": "procedure_order",
+          "visual_encoding": "numbered_arrow_labels"
+        },
+        {
+          "type": "annotation",
+          "role": "student_focus",
+          "text_nl": "Alternatieve kosten zijn de opbrengst van het beste alternatief dat je niet kiest."
+        }
+      ],
+      "surface_requirements": {
+        "web_light": true,
+        "web_dark": true,
+        "slide": true,
+        "docx": true,
+        "summary_thumbnail": true
+      },
+      "accessibility": {
+        "meaning_not_color_only": true,
+        "direct_labels_required": true,
+        "non_color_fallback": "Flow nodes use numbered arrows and direct labels, not color alone."
+      },
+      "publication": {
+        "student_facing_allowed": false,
+        "reason": "PV.3 records pilot semantics only; no renderer, procedure-game mapping, or publication gate exists yet.",
+        "blocked_by": [
+          "visual_renderer_pending",
+          "procedure_game_mapping_pending",
+          "human_publication_gate_pending"
+        ]
+      },
+      "notes": "Pilot flowchart state for B02. Useful as a low-risk Book 1 procedure consistency surface."
+    },
+    {
+      "visual_state_id": "formula_trace_total_revenue_function",
+      "status": "pilot",
+      "visual_type": "formula_trace",
+      "semantic_focus": "to_function_from_price_times_quantity",
+      "representation": "formula",
+      "elements": [
+        {
+          "type": "formula_box",
+          "role": "input_relation",
+          "label": "P(Q)"
+        },
+        {
+          "type": "formula_box",
+          "role": "operation",
+          "label": "TO = P x Q"
+        },
+        {
+          "type": "formula_box",
+          "role": "output_relation",
+          "label": "TO(Q)"
+        },
+        {
+          "type": "highlight",
+          "role": "student_focus",
+          "visual_encoding": "border_and_step_number"
+        },
+        {
+          "type": "annotation",
+          "role": "check_instruction",
+          "text_nl": "Controleer met een ingevulde Q of TO gelijk is aan P(Q) x Q."
+        }
+      ],
+      "surface_requirements": {
+        "web_light": true,
+        "web_dark": true,
+        "slide": true,
+        "docx": true,
+        "summary_thumbnail": false
+      },
+      "accessibility": {
+        "meaning_not_color_only": true,
+        "direct_labels_required": true,
+        "non_color_fallback": "Formula boxes are ordered and labeled; the active formula is also bordered."
+      },
+      "publication": {
+        "student_facing_allowed": false,
+        "reason": "PV.3 records pilot semantics only; formula-trace rendering and publication controls are not complete.",
+        "blocked_by": [
+          "visual_renderer_pending",
+          "answer_model_projection_pending",
+          "human_publication_gate_pending"
+        ]
+      },
+      "notes": "Pilot formula trace for A07."
+    },
+    {
+      "visual_state_id": "table_trace_source_values_selected",
+      "status": "pilot",
+      "visual_type": "table_trace",
+      "semantic_focus": "selected_source_values_for_calculation",
+      "representation": "table",
+      "elements": [
+        {
+          "type": "table",
+          "role": "source_table",
+          "label": "brontabel"
+        },
+        {
+          "type": "table_cell",
+          "role": "old_value",
+          "label": "oude waarde"
+        },
+        {
+          "type": "table_cell",
+          "role": "new_value",
+          "label": "nieuwe waarde"
+        },
+        {
+          "type": "highlight",
+          "role": "student_focus",
+          "visual_encoding": "border_and_direct_label"
+        },
+        {
+          "type": "annotation",
+          "role": "unit_check",
+          "text_nl": "Noteer rij, kolom, grootheid en eenheid voordat je rekent."
+        }
+      ],
+      "surface_requirements": {
+        "web_light": true,
+        "web_dark": true,
+        "slide": true,
+        "docx": true,
+        "summary_thumbnail": true
+      },
+      "accessibility": {
+        "meaning_not_color_only": true,
+        "direct_labels_required": true,
+        "non_color_fallback": "Selected cells use direct old/new labels and borders, not color alone."
+      },
+      "publication": {
+        "student_facing_allowed": false,
+        "reason": "PV.3 records pilot semantics only; table-trace rendering and generator publication remain blocked.",
+        "blocked_by": [
+          "generator_support_pending",
+          "visual_renderer_pending",
+          "human_publication_gate_pending"
+        ]
+      },
+      "notes": "Pilot table trace used by A61 and source-value calculation templates."
+    },
+    {
+      "visual_state_id": "table_trace_elasticity_pairs_selected",
+      "status": "pilot",
+      "visual_type": "table_trace",
+      "semantic_focus": "paired_old_new_price_quantity_values",
+      "representation": "table",
+      "elements": [
+        {
+          "type": "table",
+          "role": "source_table",
+          "label": "prijs- en hoeveelheidstabel"
+        },
+        {
+          "type": "table_cell",
+          "role": "old_price",
+          "label": "oude P"
+        },
+        {
+          "type": "table_cell",
+          "role": "old_quantity",
+          "label": "oude Q"
+        },
+        {
+          "type": "table_cell",
+          "role": "new_price",
+          "label": "nieuwe P"
+        },
+        {
+          "type": "table_cell",
+          "role": "new_quantity",
+          "label": "nieuwe Q"
+        },
+        {
+          "type": "highlight",
+          "role": "pairing",
+          "visual_encoding": "paired_brackets_and_labels"
+        },
+        {
+          "type": "annotation",
+          "role": "student_focus",
+          "text_nl": "Koppel oude P aan oude Q en nieuwe P aan nieuwe Q voordat je procentuele veranderingen berekent."
+        }
+      ],
+      "surface_requirements": {
+        "web_light": true,
+        "web_dark": true,
+        "slide": true,
+        "docx": true,
+        "summary_thumbnail": false
+      },
+      "accessibility": {
+        "meaning_not_color_only": true,
+        "direct_labels_required": true,
+        "non_color_fallback": "Old/new pairs use labels and bracket markers in addition to any color."
+      },
+      "publication": {
+        "student_facing_allowed": false,
+        "reason": "PV.3 records pilot semantics only; table-trace rendering and generator publication remain blocked.",
+        "blocked_by": [
+          "operation_ids_provisional_until_registry_gate",
+          "generator_support_pending",
+          "visual_renderer_pending",
+          "human_publication_gate_pending"
+        ]
+      },
+      "notes": "Pilot table trace for A82."
+    },
+    {
+      "visual_state_id": "pq_graph_elasticity_two_pairs",
+      "status": "pilot",
+      "visual_type": "graph_stage",
+      "semantic_focus": "two_price_quantity_pairs_before_elasticity_calculation",
+      "representation": "p_q_graph",
+      "elements": [
+        {
+          "type": "axis",
+          "role": "horizontal_axis",
+          "axis_role": "horizontal_axis",
+          "label": "Q"
+        },
+        {
+          "type": "axis",
+          "role": "vertical_axis",
+          "axis_role": "vertical_axis",
+          "label": "P",
+          "unit": "euro"
+        },
+        {
+          "type": "curve",
+          "role": "demand_curve",
+          "label": "vraag"
+        },
+        {
+          "type": "point",
+          "role": "old_pair",
+          "label": "P oud, Q oud"
+        },
+        {
+          "type": "point",
+          "role": "new_pair",
+          "label": "P nieuw, Q nieuw"
+        },
+        {
+          "type": "highlight",
+          "role": "student_focus",
+          "visual_encoding": "point_labels_and_guidelines"
+        },
+        {
+          "type": "annotation",
+          "role": "reading_instruction",
+          "text_nl": "Lees eerst twee P,Q-paren af; pas daarna bereken je elasticiteit."
+        }
+      ],
+      "surface_requirements": {
+        "web_light": true,
+        "web_dark": true,
+        "slide": true,
+        "docx": true,
+        "summary_thumbnail": true
+      },
+      "accessibility": {
+        "meaning_not_color_only": true,
+        "direct_labels_required": true,
+        "non_color_fallback": "Old/new points use direct labels and guide lines, not color alone."
+      },
+      "publication": {
+        "student_facing_allowed": false,
+        "reason": "PV.3 records pilot semantics only; graph-stage rendering, generator support, and publication gate are pending.",
+        "blocked_by": [
+          "operation_ids_provisional_until_registry_gate",
+          "generator_support_pending",
+          "visual_renderer_pending",
+          "human_publication_gate_pending"
+        ]
+      },
+      "notes": "Pilot graph-stage state for A83."
+    },
+    {
+      "visual_state_id": "flowchart_elasticity_revenue_effect",
+      "status": "pilot",
+      "visual_type": "flowchart",
+      "semantic_focus": "elasticity_class_to_revenue_direction",
+      "representation": "source_text_or_table",
+      "elements": [
+        {
+          "type": "flow_node",
+          "role": "price_change",
+          "label": "prijsverandering"
+        },
+        {
+          "type": "flow_node",
+          "role": "elasticity_class",
+          "label": "|Ev| elastisch, inelastisch of unitair"
+        },
+        {
+          "type": "flow_node",
+          "role": "quantity_response",
+          "label": "hoeveelheidsreactie"
+        },
+        {
+          "type": "flow_node",
+          "role": "revenue_effect",
+          "label": "omzeteffect"
+        },
+        {
+          "type": "arrow",
+          "role": "reasoning_order",
+          "visual_encoding": "numbered_arrow_labels"
+        },
+        {
+          "type": "annotation",
+          "role": "student_focus",
+          "text_nl": "Bij elastische vraag beweegt omzet tegengesteld aan de prijs; bij inelastische vraag beweegt omzet mee."
+        }
+      ],
+      "surface_requirements": {
+        "web_light": true,
+        "web_dark": true,
+        "slide": true,
+        "docx": true,
+        "summary_thumbnail": true
+      },
+      "accessibility": {
+        "meaning_not_color_only": true,
+        "direct_labels_required": true,
+        "non_color_fallback": "Flow direction is shown by arrows and labels, not color alone."
+      },
+      "publication": {
+        "student_facing_allowed": false,
+        "reason": "PV.3 records pilot semantics only; visual projection and publication controls are pending.",
+        "blocked_by": [
+          "operation_ids_provisional_until_registry_gate",
+          "generator_support_pending",
+          "visual_renderer_pending",
+          "human_publication_gate_pending"
+        ]
+      },
+      "notes": "Pilot flowchart state for A84."
+    }
+  ],
   "publication_policy": {
     "student_facing_projection_allowed": false,
-    "reason": "PV.2 does not authorize student-facing Procedure-Visual projection."
+    "reason": "PV.3 pilot visual states are reference-side planning data only. Student-facing projection waits for renderer, generator/procedure-game integration, validation, and later publication gate."
   }
 }

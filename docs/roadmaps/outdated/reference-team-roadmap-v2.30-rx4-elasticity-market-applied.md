@@ -4,7 +4,7 @@ Generated: 2026-04-23
 Adopted main roadmap: 2026-04-25
 Last strategic update: 2026-05-01
 Roadmap ID: `references-team-roadmap`
-Roadmap version: `v2.31-pv3-pilot-procedure-visual-templates`
+Roadmap version: `v2.30-rx4-elasticity-market-applied`
 Roadmap status: `active`
 Version index: `docs/roadmaps/roadmap-version-index.json`
 Scope: `references/`, `build-scripts/references/`, `build-scripts/reports/`, reference dashboards, and generated reference reports under `reports/`
@@ -51,8 +51,6 @@ Update 2026-05-01: `RX.4 Elasticity And Market Diagram Representation Units` is 
 
 Update 2026-05-02: `GATE-RX4-elasticity-market-diagram-review` closed as `pass_with_conditions` and RX.4 applied the approved elasticity representation lane through `unit-add.js`. `A82`, `A84`, and conditionally approved `A83` are now live catalog units; `A83` uses the HCS-approved name `Prijselasticiteit van de vraag berekenen uit P-Q-grafiek`. All three remain generator-blocked/non-interactive. Market/welfare duplicate areas, student-facing skill-tree use, PV projection, diagnostics, adaptive routing, AI, sequencing, mastery, and summative use remain blocked.
 
-Update 2026-05-02: `PV.3 Pilot Procedure-Visual Templates` is completed. The PV overlay now contains six pilot procedure templates, six pilot visual states, and six unit-template links under `references/data/procedure-visual/`, with PV-G2 technical proof for formula trace, graph-stage, table-trace, and flowchart-style coverage. No PV `references/machine/` registry exists, all PV records block student-facing projection, and PV.4 is the next sprint.
-
 Compatibility decisions:
 
 - Sprint `R0.1` now means the sprint-execution scaffold.
@@ -78,6 +76,7 @@ Open items are listed first; completed items are kept below them.
 
 | Sprint | Name | Completed | Current State |
 |--------|------|-----------|---------------|
+| PV.3 | Pilot Procedure-Visual Templates | no | Build 5+ pilot templates and 2+ visual-state sequences, including formula trace, graph-stage, table-trace, and flowchart-style coverage. |
 | PV.4 | Procedure/Game Projection Contract | no | Add backward-compatible `formal_step_id` support so procedure-game data can map to formal PV steps while legacy unmapped games continue to run. |
 | RX.5 | Representation Operation Registry And Reports | no | Planned as the bridge to Sprint 7 output and PV. Promote provisional representation-operation inventory only after schema, validator, CLI path, and PV operation/visual-state report requirements exist. |
 | PV.5 | Visual Projection MVP | no | Build non-dynamic PV render/validation libraries for formula trace, flowchart, table trace, and static staged graph before dynamic graph manipulation. |
@@ -99,7 +98,6 @@ Open items are listed first; completed items are kept below them.
 | PV.0 | CP-4 Procedure-Visual Addendum | yes | Completed with CP-4. PV templates may reference provisional `exercise_operations` only with explicit provisional status and no operation promotion; no machine registry creation or student-facing PV projection is authorized. |
 | PV.1 | Procedure-Visual Inventory | yes | Completed. Generated `references/data/procedure-visual/inventory.json`, JSON/Markdown reports, and 12 ranked pilot templates spanning flowchart, formula trace, graph-stage, table-trace, and blocked generator/projection cases. |
 | PV.2 | Procedure-Visual Schema And Validator MVP | yes | Completed. Added PV schema files, vocabulary, empty real overlay registries, validator, schema-status reports, and `GATE-PV-G1-schema` technical proof; real pilot templates wait for PV.3 and student-facing projection remains blocked. |
-| PV.3 | Pilot Procedure-Visual Templates | yes | Completed. Added six pilot templates, six visual states, six unit-template links, and `GATE-PV-G2-pilot-content` technical proof; formula trace, graph-stage, table-trace, and flowchart-style coverage are present, while machine promotion and student-facing PV projection remain blocked. |
 | RX.3 | Producer Table And Graph Representation Review | yes | Completed as non-mutating review. `GATE-RX3-producer-representation` closed as `pass_with_conditions`; A75/A76/A79 may enter first-lane mutation review; A77/A78 are later graph-lane candidates; A80/A81 and graphical MO=MK remain held. |
 | RX.3a | Producer Table/Data First-Lane Mutation Review And CLI Execution | yes | Completed. `GATE-RX3a-first-lane-mutation-review` closed as `pass_with_conditions`; `A75`, `A76`, and `A79` were added through `unit-add.js`; `A76` needs `A14`, `A04`, and `A61`; all three remain generator-blocked/non-interactive. |
 | RX.3b | Producer TO-TK Graph-Lane Mutation Review And CLI Execution | yes | Completed. `GATE-RX3b-producer-graph-lane-review` closed as `pass_with_conditions`; `A77` and `A78` were added through `unit-add.js`; `A78` needs `A63`, `A75`, and `A77`; both remain generator-blocked/non-interactive. |
