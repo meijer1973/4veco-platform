@@ -1,0 +1,87 @@
+{
+  "report_id": "procedure-game-template-alignment",
+  "sprint_id": "PV.4",
+  "gate_id": "GATE-PV4-procedure-game-contract",
+  "generated_by": "build-scripts/references/build-procedure-game-template-alignment.js",
+  "generated_on": "2026-05-02T07:55:36.335Z",
+  "status": "passed",
+  "summary": {
+    "pilot_procedure_count": 2,
+    "mapped_pilot_count": 1,
+    "legacy_unmapped_count": 1,
+    "machine_registry_created": false,
+    "student_facing_projection_allowed": false
+  },
+  "alignments": [
+    {
+      "alignment_id": "pv4_b02_opportunity_cost_flow",
+      "procedure_id": "pv4-b02-opportunity-cost",
+      "unit_id": "B02",
+      "procedure_template_id": "choose_by_opportunity_cost_flow",
+      "status": "mapped",
+      "step_count": 4,
+      "mapped_step_count": 4,
+      "unmapped_step_count": 0,
+      "formal_step_ids": [
+        "list_alternatives",
+        "calculate_payoffs",
+        "rank_not_chosen",
+        "interpret_net_choice_value"
+      ]
+    },
+    {
+      "alignment_id": "pv4_legacy_unmapped_example",
+      "procedure_id": "pv4-legacy-unmapped",
+      "unit_id": null,
+      "procedure_template_id": null,
+      "status": "legacy_unmapped",
+      "step_count": 3,
+      "mapped_step_count": 0,
+      "unmapped_step_count": 3,
+      "formal_step_ids": []
+    }
+  ],
+  "checks": [
+    {
+      "id": "mapped_pilot_present",
+      "status": "passed",
+      "detail": "1 fully mapped pilot procedure(s)."
+    },
+    {
+      "id": "legacy_unmapped_present",
+      "status": "passed",
+      "detail": "1 legacy unmapped procedure(s) continue to validate."
+    },
+    {
+      "id": "no_machine_pv_registry",
+      "status": "passed",
+      "detail": "No references/machine PV procedure-game alignment registry exists."
+    },
+    {
+      "id": "alignment:pv4_b02_opportunity_cost_flow",
+      "status": "passed",
+      "detail": "mapped, 4/4 mapped steps"
+    },
+    {
+      "id": "alignment:pv4_legacy_unmapped_example",
+      "status": "passed",
+      "detail": "legacy_unmapped, 0/3 mapped steps"
+    }
+  ],
+  "acceptance_commands": [
+    "node build-scripts/references/build-procedure-game-template-alignment.js",
+    "npx.cmd jest engines/tests/procedure-engine.test.js engines/tests/procedure-data-formal-step.test.js --runInBand"
+  ],
+  "blocked_scope": [
+    "references/machine Procedure-Visual registries",
+    "required migration of existing procedure-game data",
+    "student-facing PV projection",
+    "visual renderer publication",
+    "student diagnostics",
+    "adaptive routing",
+    "student-facing AI",
+    "automatic sequencing",
+    "mastery decisions",
+    "summative use"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "gate_id": "GATE-PV4-procedure-game-contract",
+  "sprint_id": "PV.4",
+  "status": "pass",
+  "human_review_required": false,
+  "closed_by": "technical validator",
+  "generated_by": "build-scripts/references/build-procedure-game-template-alignment.js",
+  "generated_on": "2026-05-02T07:55:36.335Z",
+  "closure_basis": [
+    "ProcedureEngine exposes optional formal_step_id alignment status.",
+    "1 mapped pilot procedure validates against PV template steps.",
+    "1 legacy unmapped procedure validates without formal_step_id.",
+    "Procedure-game alignment remains a references/data contract fixture.",
+    "No references/machine PV registry exists.",
+    "Student-facing PV projection and forced migration remain blocked."
+  ],
+  "next_sprint_unblocked": "RX.5 or PV.5 may proceed according to the roadmap; PV.4 does not force lesson-side migration.",
+  "not_authorized": [
+    "references/machine Procedure-Visual registries",
+    "required migration of existing procedure-game data",
+    "student-facing PV projection",
+    "visual renderer publication",
+    "student diagnostics",
+    "adaptive routing",
+    "student-facing AI",
+    "automatic sequencing",
+    "mastery decisions",
+    "summative use"
+  ]
+}

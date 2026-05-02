@@ -135,6 +135,58 @@
     return count;
   };
 
+  // Optional Procedure-Visual alignment metadata. Legacy procedure data does
+  // not need these fields; mapped data can add procedure_template_id on the
+  // procedure and formal_step_id on individual steps.
+  ProcedureEngine.prototype.getFormalStepId = function (stepIndex) {
+    var step = this.current && this.current.steps[stepIndex];
+    if (!step || typeof step.formal_step_id !== "string" || step.formal_step_id.length === 0) return null;
+    return step.formal_step_id;
+  };
+
+  ProcedureEngine.prototype.getFormalAlignmentStatus = function () {
+    if (!this.current || !Array.isArray(this.current.steps)) return null;
+
+    var templateId = null;
+    if (typeof this.current.procedure_template_id === "string" && this.current.procedure_template_id.length > 0) {
+      templateId = this.current.procedure_template_id;
+    }
+
+    var mapped = 0;
+    var unmapped = 0;
+    var unmappedIndexes = [];
+    var formalStepIds = [];
+
+    for (var i = 0; i < this.current.steps.length; i++) {
+      var formalStepId = this.getFormalStepId(i);
+      if (formalStepId) {
+        mapped++;
+        formalStepIds.push(formalStepId);
+      } else {
+        unmapped++;
+        unmappedIndexes.push(i);
+      }
+    }
+
+    var status = "legacy_unmapped";
+    if (mapped > 0 && templateId && unmapped === 0) {
+      status = "mapped";
+    } else if (mapped > 0) {
+      status = "partial_mapping";
+    }
+
+    return {
+      procedure_id: this.current.id || null,
+      procedure_template_id: templateId,
+      status: status,
+      step_count: this.current.steps.length,
+      mapped_step_count: mapped,
+      unmapped_step_count: unmapped,
+      unmapped_step_indexes: unmappedIndexes,
+      formal_step_ids: formalStepIds
+    };
+  };
+
   ProcedureEngine.prototype.reset = function () {
     if (this.current) {
       var idx = this.procedures.indexOf(this.current);

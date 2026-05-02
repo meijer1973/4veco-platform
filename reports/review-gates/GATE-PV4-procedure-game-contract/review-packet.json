@@ -1,0 +1,65 @@
+{
+  "gate_id": "GATE-PV4-procedure-game-contract",
+  "sprint_id": "PV.4",
+  "status": "technical_packet_prepared",
+  "human_review_required": false,
+  "generated_by": "build-scripts/references/build-procedure-game-template-alignment.js",
+  "generated_on": "2026-05-02T07:55:36.335Z",
+  "purpose": "Technical contract gate proving optional formal_step_id mapping works while legacy procedure games remain valid.",
+  "review_questions": [
+    {
+      "id": "PV4-Q1",
+      "question": "Can procedure-game data optionally map steps to formal PV template steps?",
+      "answer": "A. Yes, 1 pilot procedure(s) map every game step to a PV template step."
+    },
+    {
+      "id": "PV4-Q2",
+      "question": "Can existing procedure-game data remain unmapped?",
+      "answer": "A. Yes, 1 legacy_unmapped proof record validates and remains runnable."
+    },
+    {
+      "id": "PV4-Q3",
+      "question": "Does this authorize student-facing PV projection or forced migration?",
+      "answer": "A. No, PV.4 only adds the optional contract and keeps publication/migration blocked."
+    }
+  ],
+  "acceptance_evidence": [
+    {
+      "id": "mapped_pilot_present",
+      "status": "passed",
+      "detail": "1 fully mapped pilot procedure(s)."
+    },
+    {
+      "id": "legacy_unmapped_present",
+      "status": "passed",
+      "detail": "1 legacy unmapped procedure(s) continue to validate."
+    },
+    {
+      "id": "no_machine_pv_registry",
+      "status": "passed",
+      "detail": "No references/machine PV procedure-game alignment registry exists."
+    },
+    {
+      "id": "alignment:pv4_b02_opportunity_cost_flow",
+      "status": "passed",
+      "detail": "mapped, 4/4 mapped steps"
+    },
+    {
+      "id": "alignment:pv4_legacy_unmapped_example",
+      "status": "passed",
+      "detail": "legacy_unmapped, 0/3 mapped steps"
+    }
+  ],
+  "blocked_scope": [
+    "references/machine Procedure-Visual registries",
+    "required migration of existing procedure-game data",
+    "student-facing PV projection",
+    "visual renderer publication",
+    "student diagnostics",
+    "adaptive routing",
+    "student-facing AI",
+    "automatic sequencing",
+    "mastery decisions",
+    "summative use"
+  ]
+}

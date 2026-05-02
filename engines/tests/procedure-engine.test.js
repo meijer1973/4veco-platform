@@ -38,7 +38,25 @@ const TEST_DATA = {
                         { text: 'Correct B', correct: true }
                     ]
                 },
-                { type: 'given', label: 'End', text: 'Conclusion' }
+        { type: 'given', label: 'End', text: 'Conclusion' }
+            ]
+        },
+        {
+            id: 'formal-proc',
+            title: 'Formal Procedure',
+            icon: 'fa-test',
+            description: 'A procedure with PV step mapping',
+            procedure_template_id: 'choose_by_opportunity_cost_flow',
+            steps: [
+                { type: 'given', label: 'Step 1', text: 'Given formal step', formal_step_id: 'list_alternatives' },
+                {
+                    type: 'choose', label: 'Step 2', formal_step_id: 'calculate_payoffs',
+                    options: [
+                        { text: 'Right', correct: true },
+                        { text: 'Wrong', correct: false, feedback: 'Nope' }
+                    ]
+                },
+                { type: 'given', label: 'Step 3', text: 'Done', formal_step_id: 'rank_not_chosen' }
             ]
         },
         {
@@ -69,7 +87,7 @@ describe('ProcedureEngine', () => {
 
     test('constructor initialises with procedures', () => {
         const engine = new ProcedureEngine({ procedures: TEST_DATA.procedures, parNr: '0.0.0' });
-        expect(engine.procedures).toHaveLength(2);
+        expect(engine.procedures).toHaveLength(3);
         expect(engine.current).toBeNull();
         expect(engine.checked).toBe(false);
     });
@@ -159,6 +177,42 @@ describe('ProcedureEngine', () => {
         const engine = new ProcedureEngine({ procedures: TEST_DATA.procedures, parNr: '0.0.0' });
         engine.startProcedure(0);
         expect(engine.getChooseStepCount()).toBe(2);
+    });
+
+    test('getFormalStepId returns optional PV formal step ids', () => {
+        const engine = new ProcedureEngine({ procedures: TEST_DATA.procedures, parNr: '0.0.0' });
+        engine.startProcedure(1);
+        expect(engine.getFormalStepId(0)).toBe('list_alternatives');
+        expect(engine.getFormalStepId(1)).toBe('calculate_payoffs');
+        expect(engine.getFormalStepId(99)).toBeNull();
+    });
+
+    test('getFormalAlignmentStatus reports mapped procedure data', () => {
+        const engine = new ProcedureEngine({ procedures: TEST_DATA.procedures, parNr: '0.0.0' });
+        engine.startProcedure(1);
+        expect(engine.getFormalAlignmentStatus()).toEqual({
+            procedure_id: 'formal-proc',
+            procedure_template_id: 'choose_by_opportunity_cost_flow',
+            status: 'mapped',
+            step_count: 3,
+            mapped_step_count: 3,
+            unmapped_step_count: 0,
+            unmapped_step_indexes: [],
+            formal_step_ids: ['list_alternatives', 'calculate_payoffs', 'rank_not_chosen']
+        });
+    });
+
+    test('getFormalAlignmentStatus reports legacy unmapped procedure data', () => {
+        const engine = new ProcedureEngine({ procedures: TEST_DATA.procedures, parNr: '0.0.0' });
+        engine.startProcedure(0);
+        expect(engine.getFormalAlignmentStatus()).toMatchObject({
+            procedure_id: 'test-proc',
+            procedure_template_id: null,
+            status: 'legacy_unmapped',
+            step_count: 4,
+            mapped_step_count: 0,
+            unmapped_step_count: 4
+        });
     });
 
     test('reset restarts current procedure', () => {

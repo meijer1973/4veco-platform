@@ -1,0 +1,41 @@
+{
+  "sprint_id": "PV.4",
+  "name": "Procedure/Game Projection Contract",
+  "status": "planned",
+  "plan": "docs/sprints/PV.4-plan.md",
+  "baseline": "reports/sprints/PV.4-baseline.md",
+  "gate_id": "GATE-PV4-procedure-game-contract",
+  "technical_gate": true,
+  "human_review_required": false,
+  "protected_reference_data_changes_allowed": false,
+  "machine_registry_creation_allowed": false,
+  "student_facing_projection_authorized": false,
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js docs/sprints/PV.4-plan.md",
+    "node build-scripts/references/validate-procedure-visual-registry.js",
+    "node build-scripts/references/build-procedure-game-template-alignment.js",
+    "npx.cmd jest engines/tests/procedure-engine.test.js engines/tests/procedure-data-formal-step.test.js --runInBand",
+    "node build-scripts/sprints/emit-gate-bundle-urls.js GATE-PV4-procedure-game-contract",
+    "node build-scripts/sprints/check-bundle-urls.js GATE-PV4-procedure-game-contract",
+    "node build-scripts/sprints/check-sprint-bundle.js PV.4",
+    "node build-scripts/sprints/check-sprint-result.js reports/sprints/PV.4-result.md",
+    "node build-scripts/sprints/check-sprint-bundle.js PV.4 --complete",
+    "node build-scripts/references/check-roadmap-version-index.js"
+  ],
+  "blocked_scope": [
+    "references/machine Procedure-Visual registries",
+    "references/external mutation",
+    "authored source mutation",
+    "RAG chunk hand-patching",
+    "lesson repo edits",
+    "forced migration of existing procedure-game data",
+    "visual renderer publication",
+    "student-facing PV projection",
+    "student diagnostics",
+    "adaptive routing",
+    "student-facing AI",
+    "automatic sequencing",
+    "mastery decisions",
+    "summative use"
+  ]
+}

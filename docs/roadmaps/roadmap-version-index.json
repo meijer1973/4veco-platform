@@ -15,13 +15,14 @@
   "roadmaps": [
     {
       "roadmap_id": "references-team-roadmap",
-      "version": "v2.31-pv3-pilot-procedure-visual-templates",
+      "version": "v2.32-pv4-procedure-game-contract",
       "title": "References Team Roadmap",
       "status": "active",
       "path": "references/reference-team-roadmap.md",
       "owner": "references_team",
       "updated_on": "2026-05-02",
       "supersedes": [
+        "docs/roadmaps/outdated/reference-team-roadmap-v2.31-pv3-pilot-procedure-visual-templates.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.30-rx4-elasticity-market-applied.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.29-rx4-elasticity-market-review-prepared.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.28-rx3b-graph-lane-applied.md",
@@ -53,7 +54,18 @@
         "knowledge/Exercise schema and quality/reference-team-roadmap Live version 28 April.md",
         "knowledge/Exercise schema and quality/roadmap-updated-repository-checked.md"
       ],
-      "notes": "Current operating roadmap after completing PV.3 pilot procedure-visual templates; PV.4 is the next PV track sprint."
+      "notes": "Current operating roadmap after completing PV.4 procedure-game projection contract; RX.5 is the next sprint."
+    },
+    {
+      "roadmap_id": "references-team-roadmap-v2.31",
+      "version": "v2.31-pv3-pilot-procedure-visual-templates",
+      "title": "References Team Roadmap before PV.4 procedure-game contract",
+      "status": "outdated",
+      "path": "docs/roadmaps/outdated/reference-team-roadmap-v2.31-pv3-pilot-procedure-visual-templates.md",
+      "owner": "references_team",
+      "updated_on": "2026-05-02",
+      "superseded_by": "references/reference-team-roadmap.md",
+      "notes": "Snapshot archived before adding optional formal_step_id procedure-game support, alignment fixtures, and PV4 technical proof."
     },
     {
       "roadmap_id": "references-team-roadmap-v2.30",

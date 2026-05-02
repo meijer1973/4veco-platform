@@ -1,0 +1,132 @@
+{
+  "schema_version": 1,
+  "registry_id": "procedure-game-alignment-pilots",
+  "status": "pilot",
+  "generated_by": "PV.4 procedure-game projection contract",
+  "generated_on": "2026-05-02",
+  "storage_decision": {
+    "registry_location": "references/data/procedure-visual/procedure-game-alignment-pilots.json",
+    "machine_registry_created": false,
+    "reason": "PV.4 records alignment fixtures as references/data contract evidence only. Machine promotion and student-facing projection remain blocked."
+  },
+  "alignment_policy": {
+    "formal_step_id_required_for_new_mapped_records": true,
+    "legacy_unmapped_records_allowed": true,
+    "procedure_template_id_required_when_any_formal_step_id_is_present": true,
+    "student_facing_projection_authorized": false
+  },
+  "pilot_procedures": [
+    {
+      "alignment_id": "pv4_b02_opportunity_cost_flow",
+      "paragraph_ref": "PV.4-contract-pilot",
+      "unit_id": "B02",
+      "procedure_template_id": "choose_by_opportunity_cost_flow",
+      "expected_alignment_status": "mapped",
+      "procedure": {
+        "id": "pv4-b02-opportunity-cost",
+        "title": "Alternatieve kosten stap voor stap",
+        "icon": "fa-route",
+        "description": "Pilotprocedure die elke game-stap aan een formele PV-stap koppelt.",
+        "procedure_template_id": "choose_by_opportunity_cost_flow",
+        "steps": [
+          {
+            "type": "given",
+            "label": "Stap 1",
+            "text": "Benoem eerst alle alternatieven voor hetzelfde schaarse middel.",
+            "formal_step_id": "list_alternatives"
+          },
+          {
+            "type": "choose",
+            "label": "Stap 2",
+            "formal_step_id": "calculate_payoffs",
+            "options": [
+              {
+                "text": "Bepaal of bereken de opbrengst van elk alternatief.",
+                "correct": true
+              },
+              {
+                "text": "Kies meteen het goedkoopste alternatief.",
+                "correct": false,
+                "feedback": "Je moet eerst de opbrengsten van alle alternatieven kennen."
+              }
+            ]
+          },
+          {
+            "type": "choose",
+            "label": "Stap 3",
+            "formal_step_id": "rank_not_chosen",
+            "options": [
+              {
+                "text": "Rangschik de alternatieven en markeer het beste niet-gekozen alternatief.",
+                "correct": true
+              },
+              {
+                "text": "Neem het alternatief met de laagste opbrengst als alternatieve kosten.",
+                "correct": false,
+                "feedback": "Alternatieve kosten zijn de opbrengst van het beste niet-gekozen alternatief."
+              }
+            ]
+          },
+          {
+            "type": "given",
+            "label": "Stap 4",
+            "text": "Vergelijk de gekozen opbrengst met de alternatieve kosten en interpreteer de nettowaarde.",
+            "formal_step_id": "interpret_net_choice_value"
+          }
+        ]
+      },
+      "publication": {
+        "student_facing_allowed": false,
+        "reason": "PV.4 alignment pilot is contract evidence only; it is not generated lesson output."
+      }
+    },
+    {
+      "alignment_id": "pv4_legacy_unmapped_example",
+      "paragraph_ref": "PV.4-contract-pilot",
+      "unit_id": null,
+      "procedure_template_id": null,
+      "expected_alignment_status": "legacy_unmapped",
+      "procedure": {
+        "id": "pv4-legacy-unmapped",
+        "title": "Legacy stappenplan zonder PV-koppeling",
+        "icon": "fa-list-check",
+        "description": "Contractfixture die bewijst dat bestaande proceduregames zonder formal_step_id blijven werken.",
+        "steps": [
+          {
+            "type": "given",
+            "label": "Start",
+            "text": "Lees de vraag."
+          },
+          {
+            "type": "choose",
+            "label": "Kies",
+            "options": [
+              {
+                "text": "Kies de passende stap.",
+                "correct": true
+              },
+              {
+                "text": "Kies een willekeurige stap.",
+                "correct": false,
+                "feedback": "Een legacy procedure mag unmapped zijn, maar de game-inhoud blijft inhoudelijk gestructureerd."
+              }
+            ]
+          },
+          {
+            "type": "given",
+            "label": "Einde",
+            "text": "Controleer je antwoord."
+          }
+        ]
+      },
+      "publication": {
+        "student_facing_allowed": false,
+        "reason": "PV.4 legacy fixture is contract evidence only; it is not generated lesson output."
+      }
+    }
+  ],
+  "publication_policy": {
+    "student_facing_projection_allowed": false,
+    "reason": "PV.4 alignment pilots are reference-side contract fixtures only."
+  }
+}

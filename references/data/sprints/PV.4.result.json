@@ -1,0 +1,60 @@
+{
+  "sprint_id": "PV.4",
+  "name": "Procedure/Game Projection Contract",
+  "status": "completed",
+  "completed_on": "2026-05-02",
+  "plan": "docs/sprints/PV.4-plan.md",
+  "baseline": "reports/sprints/PV.4-baseline.md",
+  "result": "reports/sprints/PV.4-result.md",
+  "diff_summary": "reports/sprints/PV.4-diff-summary.md",
+  "technical_gate_id": "GATE-PV4-procedure-game-contract",
+  "mapped_pilot_count": 1,
+  "legacy_unmapped_count": 1,
+  "protected_reference_data_changed": false,
+  "machine_registry_created": false,
+  "student_facing_projection_authorized": false,
+  "forced_migration_authorized": false,
+  "next_required_step": "Proceed to RX.5 Representation Operation Registry And Reports, or PV.5 if the roadmap is reprioritized.",
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js docs/sprints/PV.4-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/validate-procedure-visual-registry.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/build-procedure-game-template-alignment.js",
+      "status": "passed"
+    },
+    {
+      "command": "npx.cmd jest engines/tests/procedure-engine.test.js engines/tests/procedure-data-formal-step.test.js --runInBand",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-gate-bundle-urls.js GATE-PV4-procedure-game-contract",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-bundle-urls.js GATE-PV4-procedure-game-contract",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js PV.4",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-result.js reports/sprints/PV.4-result.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js PV.4 --complete",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-roadmap-version-index.js",
+      "status": "passed"
+    }
+  ]
+}
