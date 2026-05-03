@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "registry_id": "procedure-visual-lesson-regression-proof-requirements",
+  "sprint_id": "PV-G4",
+  "gate_id": "GATE-PV-G4-lesson-regression",
+  "status": "evidence_intake_prepared",
+  "generated_by": "build-scripts/references/build-procedure-visual-lesson-regression-proof-intake.js",
+  "generated_on": "2026-05-03T13:24:50.218Z",
+  "policy": {
+    "references_machine_write_authorized": false,
+    "references_external_write_authorized": false,
+    "lesson_target_write_authorized_by_references_team": false,
+    "student_facing_projection_authorized": false,
+    "diagnostics_or_adaptive_use_authorized": false
+  },
+  "required_proof_count": 2,
+  "proof_must_show": [
+    "fresh paragraph build or pilot surface uses or validates PV data",
+    "proof is owned and committed by the lesson team when it changes lesson-side output",
+    "no hand-built generated-output patching",
+    "complete paragraph validation passes where applicable",
+    "Book 1 check passes where applicable",
+    "PV data remains a references/data overlay and no PV machine registry is created"
+  ],
+  "acceptable_proof_types": [
+    "procedure game maps to formal PV steps in a fresh paragraph or pilot surface",
+    "visual-state sequence is used or validated in a companion visual surface",
+    "answer model validates against PV step order",
+    "surface-variant check proves the same semantic visual anchor across web/docx/slide surfaces"
+  ],
+  "rejected_proof_types": [
+    "manual patch inside generated lesson output",
+    "screenshot-only evidence without reproducible command or artifact path",
+    "platform-only report proof with no lesson-side use or validation",
+    "student-facing PV projection without a publication gate",
+    "any proof that requires PV records to move into references/machine"
+  ],
+  "proof_record_required_fields": [
+    "proof_id",
+    "lesson_repo_commit",
+    "paragraph_or_surface",
+    "pv_records_used",
+    "validation_commands",
+    "generated_output_touched",
+    "hand_patch_absent",
+    "proof_artifacts",
+    "owner",
+    "review_status"
+  ]
+}

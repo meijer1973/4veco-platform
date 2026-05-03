@@ -50,7 +50,7 @@ const sprintId = args.find((arg) => !arg.startsWith('--'));
 const requireComplete = args.includes('--complete');
 
 if (!sprintId) fail('missing sprint id, for example R2.3');
-if (!/^(?:[A-Z]\d+(?:\.\d+)?[a-z]?|[A-Z]{2,}\.\d+[a-z]?)$/.test(sprintId) && sprintId !== 'EXAMPLE') {
+if (!/^(?:[A-Z]\d+(?:\.\d+)?[a-z]?|[A-Z]{2,}\.\d+[a-z]?|[A-Z]{2,}-[A-Z]\d+)$/.test(sprintId) && sprintId !== 'EXAMPLE') {
   fail(`unexpected sprint id format: ${sprintId}`);
 }
 

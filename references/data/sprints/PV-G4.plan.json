@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "sprint_id": "PV-G4",
+  "name": "Lesson Regression Proof",
+  "status": "evidence_intake_prepared_pending_lesson_team_proofs",
+  "planned_on": "2026-05-03",
+  "plan": "docs/sprints/PV-G4-plan.md",
+  "protected_reference_data_changes_allowed": false,
+  "protected_reference_data_change_mode": "none; proof-intake preparation only",
+  "human_review_required": true,
+  "gate_id": "GATE-PV-G4-lesson-regression",
+  "review_packet": "reports/review-gates/GATE-PV-G4-lesson-regression/review-packet.md",
+  "valid_gate_statuses": [
+    "pass_with_conditions",
+    "hold_pending_lesson_evidence",
+    "fail"
+  ],
+  "allowed_outputs": [
+    "references/data/procedure-visual/lesson-regression-proof-requirements.json",
+    "reports/json/procedure-visual-lesson-regression-proof-intake.json",
+    "reports/markdown/procedure-visual-lesson-regression-proof-intake.md",
+    "reports/review-gates/GATE-PV-G4-lesson-regression/review-packet.json",
+    "reports/review-gates/GATE-PV-G4-lesson-regression/review-packet.md",
+    "reports/review-gates/GATE-PV-G4-lesson-regression/proof-intake.json",
+    "reports/review-gates/GATE-PV-G4-lesson-regression/proof-intake.md",
+    "reports/review-gates/GATE-PV-G4-lesson-regression/proof-template.json",
+    "reports/review-gates/GATE-PV-G4-lesson-regression/proof-template.md",
+    "reports/review-gates/GATE-PV-G4-lesson-regression/bundle-urls.md"
+  ],
+  "blocked_scope": [
+    "references/machine Procedure-Visual registry creation",
+    "references/external mutation",
+    "lesson repo commits by references team",
+    "generated lesson-output hand patching",
+    "student-facing PV projection",
+    "generator exposure for blocked units",
+    "student diagnostics",
+    "adaptive routing",
+    "student-facing AI",
+    "automatic sequencing",
+    "mastery decisions",
+    "summative decisions"
+  ],
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js docs/sprints/PV-G4-plan.md",
+    "node build-scripts/references/validate-procedure-visual-registry.js",
+    "node build-scripts/references/build-procedure-visual-lesson-regression-proof-intake.js",
+    "node build-scripts/references/check-procedure-visual-lesson-regression-proof-intake.js",
+    "node build-scripts/sprints/emit-gate-bundle-urls.js GATE-PV-G4-lesson-regression",
+    "node build-scripts/sprints/check-bundle-urls.js GATE-PV-G4-lesson-regression",
+    "node build-scripts/sprints/check-sprint-bundle.js PV-G4",
+    "node build-scripts/references/check-roadmap-version-index.js",
+    "node build-scripts/sprints/emit-url-index.js --check"
+  ]
+}

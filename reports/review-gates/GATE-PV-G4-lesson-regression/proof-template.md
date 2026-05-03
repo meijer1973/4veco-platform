@@ -1,0 +1,33 @@
+# PV-G4 Lesson Regression Proof Template
+
+Use this template once per lesson-side PV regression proof. The lesson team owns lesson-output changes and commits.
+
+```json
+{
+  "proof_id": "PVG4-proof-001",
+  "lesson_repo_commit": "<lesson-team-commit-sha>",
+  "paragraph_or_surface": "<paragraph id or pilot surface>",
+  "pv_records_used": {
+    "procedure_template_ids": [],
+    "visual_state_ids": [],
+    "unit_template_link_ids": []
+  },
+  "validation_commands": [
+    {
+      "command": "<lesson-side build or validation command>",
+      "status": "passed",
+      "evidence_artifact": "<path or URL>"
+    }
+  ],
+  "generated_output_touched": true,
+  "hand_patch_absent": true,
+  "proof_artifacts": [
+    "<path or URL to lesson-team proof artifact>"
+  ],
+  "owner": "lesson_team",
+  "review_status": "submitted_for_pv_g4_review",
+  "notes": "Use one record per lesson-side PV regression proof."
+}
+```
+
+A valid PV-G4 closure needs at least two proof records plus validation output showing no hand-built generated-output patching.

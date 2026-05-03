@@ -4,7 +4,7 @@ Generated: 2026-04-23
 Adopted main roadmap: 2026-04-25
 Last strategic update: 2026-05-01
 Roadmap ID: `references-team-roadmap`
-Roadmap version: `v2.40-pvg4-proof-intake-prepared`
+Roadmap version: `v2.39-pv8-promotion-pipeline-design`
 Roadmap status: `active`
 Version index: `docs/roadmaps/roadmap-version-index.json`
 Scope: `references/`, `build-scripts/references/`, `build-scripts/reports/`, reference dashboards, and generated reference reports under `reports/`
@@ -69,8 +69,6 @@ Update 2026-05-03: `GATE-PV7-machine-promotion-review` closed as `pass_with_cond
 
 Update 2026-05-03: `PV.8 Promotion Pipeline Design` is completed as a design-only technical sprint. It defines the future unit-template-link-first promotion path, proposed CLI contracts, mutation-log schema, rollback expectations, validators, and future gate questions. No PV promotion CLI was implemented, no mutation log was created, no PV `references/machine/` registry was created, and no student-facing PV projection is authorized. PV-G4 lesson-regression proof is now the next required step before any future promotion attempt.
 
-Update 2026-05-03: `PV-G4 Lesson Regression Proof` evidence intake is prepared. The new proof template and review packet define the two required lesson-team-owned PV regression proofs, validation expectations, and no-hand-patch requirement. PV-G4 is not closed: there are currently 0/2 recorded lesson-side proofs, no lesson-team output was committed by the references team, and PV machine promotion plus student-facing PV projection remain blocked.
-
 Compatibility decisions:
 
 - Sprint `R0.1` now means the sprint-execution scaffold.
@@ -96,7 +94,7 @@ Open items are listed first; completed items are kept below them.
 
 | Sprint | Name | Completed | Current State |
 |--------|------|-----------|---------------|
-| PV-G4 | Lesson Regression Proof | no | Evidence intake prepared; waiting for two lesson-team-owned PV regression proofs before reopening student-facing or machine-authoritative PV promotion. |
+| PV-G4 | Lesson Regression Proof | no | New required proof item from PV.7. Record at least two lesson-side PV regression proofs before reopening student-facing or machine-authoritative PV promotion. |
 | Sprint 8 | Misconception Registry MVP | no | Planned. Create small misconception schema/validator and link recurring errors to units, terms, operations, and evidence where available. |
 | Sprint 9 | Unit Design Status And D04 Resolution | no | Planned. Resolve D04 as retire/merge/redistribute/split and decide whether `unit_design_status` is derived overlay or CLI-backed machine-unit field. |
 | Content Track 1 | Year-1 Target Exercise Coverage | no | Planned content-track work. Produce Year-1 paragraph coverage and missing-target exercise status for CP-6. |
@@ -823,7 +821,7 @@ Sprint sequence:
 - `RX.6 Skill-Tree And Generator Integration`: completed. Source and deployed skill-tree bundles now consume only generator-backed units as interactive and keep missing-generator units explicitly non-interactive.
 - `PV.7 Machine-Promotion Review Gate`: completed as `pass_with_conditions`; PV remains an overlay and no machine promotion is authorized.
 - `PV.8 Promotion Pipeline Design`: completed. Designed CLI contracts, validators, mutation logs, rollback, and later gate criteria before any future promotion attempt.
-- `PV-G4 Lesson Regression Proof`: evidence intake prepared; record at least two lesson-side PV regression proofs before reopening machine-authoritative or student-facing PV promotion.
+- `PV-G4 Lesson Regression Proof`: record at least two lesson-side PV regression proofs before reopening machine-authoritative or student-facing PV promotion.
 
 Quality gates:
 
@@ -1214,8 +1212,6 @@ Required work:
 
 Stop condition: the references team must not commit lesson-team output unless explicitly authorized; lesson-side proof artifacts may be referenced from platform reports after the lesson team owns its commits.
 
-Preparation: proof intake prepared on 2026-05-03. `GATE-PV-G4-lesson-regression` now has a proof template, proof-intake report, and evidence review packet. Current proof count is 0/2, so the gate remains blocked pending lesson-team-owned regression evidence.
-
 ### Sprint 8 Misconception Registry MVP
 
 Purpose: make recurring student errors retrievable and usable in exercise design.
@@ -1600,7 +1596,7 @@ Sprints:
 - `RX.6` completed: source and deployed skill-tree generator readiness now distinguish interactive generator-backed units from explicit non-interactive generator-blocked catalog units.
 - `PV.7` completed: machine-promotion review closed as `pass_with_conditions`; no PV `references/machine/` promotion authorized.
 - `PV.8` completed: design-only promotion pipeline recorded; no promotion CLI implemented and no machine registry created.
-- `PV-G4` proof intake prepared: at least two lesson-regression proofs are still required before reopening machine-authoritative or student-facing PV promotion.
+- `PV-G4` required: at least two lesson-regression proofs before reopening machine-authoritative or student-facing PV promotion.
 
 ### Phase R9: Owned Source Integration And Content Graph
 
@@ -1746,9 +1742,9 @@ Do not invert this order.
 
 ## Immediate Next Sprint
 
-Next action: stop PV promotion work at `PV-G4` until the lesson team supplies two owned PV regression proof records. The references team may review those proofs after they arrive, but must not commit lesson-side generated output or reopen PV machine promotion now.
+Next action: `PV-G4 Lesson Regression Proof` coordination. Record at least two lesson-side PV regression proofs before reopening machine-authoritative or student-facing PV promotion.
 
-R4.5 has closed the bounded micro-unit mutation lane, CP-1 has closed the non-mutating schema audit gate as `pass_with_conditions`, CP-2 has closed the owned-source scope gate as `pass_with_conditions`, R9.1 has registered the owned-source surfaces, R9.2 has completed owned-content projection, S4/CP-3 has closed as `pass_with_conditions`, S4.1 has implemented the CP-3 condition artifacts, RX.1 has prepared the non-mutating representation-operation inventory, `GATE-RX1-representation-unit-scope` has closed as `pass_with_conditions`, RX.2/GATE-RX2 has added the bounded six-unit first lane through CLI-only mutation, RX.2b/GATE-RX2b has added the bounded seven-unit graphical foundation lane through CLI-only mutation while holding `A71`, R8.1 has added the scoped internal QC issue model, S6 has created the source-document registry MVP under `references/data/`, S7/CP-4 has closed as `pass_with_conditions`, RX.3a/RX.3b/RX.4 have applied producer and elasticity representation lanes through CLI-only mutation, PV.3 through PV.6 have completed pilot templates, projection proof, and coverage dashboards, RX.5 has added representation-operation reports, RX.6 has completed skill-tree generator readiness, PV.7 has closed the machine-promotion review gate without authorizing promotion, PV.8 has completed the promotion-pipeline design, and PV-G4 proof intake is prepared but blocked pending lesson-team evidence.
+R4.5 has closed the bounded micro-unit mutation lane, CP-1 has closed the non-mutating schema audit gate as `pass_with_conditions`, CP-2 has closed the owned-source scope gate as `pass_with_conditions`, R9.1 has registered the owned-source surfaces, R9.2 has completed owned-content projection, S4/CP-3 has closed as `pass_with_conditions`, S4.1 has implemented the CP-3 condition artifacts, RX.1 has prepared the non-mutating representation-operation inventory, `GATE-RX1-representation-unit-scope` has closed as `pass_with_conditions`, RX.2/GATE-RX2 has added the bounded six-unit first lane through CLI-only mutation, RX.2b/GATE-RX2b has added the bounded seven-unit graphical foundation lane through CLI-only mutation while holding `A71`, R8.1 has added the scoped internal QC issue model, S6 has created the source-document registry MVP under `references/data/`, S7/CP-4 has closed as `pass_with_conditions`, RX.3a/RX.3b/RX.4 have applied producer and elasticity representation lanes through CLI-only mutation, PV.3 through PV.6 have completed pilot templates, projection proof, and coverage dashboards, RX.5 has added representation-operation reports, RX.6 has completed skill-tree generator readiness, PV.7 has closed the machine-promotion review gate without authorizing promotion, and PV.8 has completed the promotion-pipeline design.
 
 All active A-domain units without generators are now explicitly generator-blocked/non-interactive. The skill-tree currently has 44 generator-backed interactive A-domain units and 37 generator-blocked A-domain units. Blocked units must not be exposed in student-facing skill-tree or PV projection until their generators exist, validators pass, and a later sprint explicitly authorizes exposure.
 

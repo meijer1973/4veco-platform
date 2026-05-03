@@ -12,12 +12,13 @@ docs/roadmaps/roadmap-version-index.json
 
 | Roadmap | Version | Path | Notes |
 |---|---|---|---|
-| References Team Roadmap | `v2.39-pv8-promotion-pipeline-design` | `references/reference-team-roadmap.md` | Current operating roadmap after completing PV.8 promotion-pipeline design; PV-G4 lesson-regression proof is next and no PV machine promotion is authorized yet. |
+| References Team Roadmap | `v2.40-pvg4-proof-intake-prepared` | `references/reference-team-roadmap.md` | Current operating roadmap after preparing PV-G4 proof intake; PV-G4 remains blocked pending two lesson-team-owned PV regression proofs and no PV machine promotion is authorized yet. |
 
 ## Outdated Archive
 
 | Roadmap | Version | Path | Superseded By |
 |---|---|---|---|
+| References Team Roadmap before PV-G4 proof intake preparation | `v2.39-pv8-promotion-pipeline-design` | `docs/roadmaps/outdated/reference-team-roadmap-v2.39-pv8-promotion-pipeline-design.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before PV.8 promotion-pipeline design | `v2.38-pv7-gate-closed` | `docs/roadmaps/outdated/reference-team-roadmap-v2.38-pv7-gate-closed.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before PV.7 gate closure | `v2.37-pv7-machine-promotion-review-prepared` | `docs/roadmaps/outdated/reference-team-roadmap-v2.37-pv7-machine-promotion-review-prepared.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before PV.7 machine-promotion review preparation | `v2.36-rx6-skilltree-generator-integration` | `docs/roadmaps/outdated/reference-team-roadmap-v2.36-rx6-skilltree-generator-integration.md` | `references/reference-team-roadmap.md` |

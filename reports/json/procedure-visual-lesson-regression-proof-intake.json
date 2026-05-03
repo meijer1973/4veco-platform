@@ -1,0 +1,124 @@
+{
+  "schema_version": 1,
+  "report_id": "procedure-visual-lesson-regression-proof-intake",
+  "sprint_id": "PV-G4",
+  "gate_id": "GATE-PV-G4-lesson-regression",
+  "status": "blocked_pending_lesson_team_evidence",
+  "generated_by": "build-scripts/references/build-procedure-visual-lesson-regression-proof-intake.js",
+  "generated_on": "2026-05-03T13:24:50.220Z",
+  "source_evidence": {
+    "promotion_pipeline_design": "references/data/procedure-visual/promotion-pipeline-design.json",
+    "promotion_pipeline_status": "design_only",
+    "pv_template_count": 6,
+    "pv_visual_state_count": 6,
+    "pv_unit_template_link_count": 6
+  },
+  "policy": {
+    "references_machine_write_authorized": false,
+    "references_external_write_authorized": false,
+    "lesson_target_write_authorized_by_references_team": false,
+    "student_facing_projection_authorized": false,
+    "diagnostics_or_adaptive_use_authorized": false
+  },
+  "required_proof_count": 2,
+  "recorded_proof_count": 0,
+  "recorded_proofs": [],
+  "missing_evidence": [
+    "first lesson-team-owned PV regression proof",
+    "second lesson-team-owned PV regression proof",
+    "validation output for each proof",
+    "evidence that generated lesson output was not hand-patched"
+  ],
+  "next_action_for_lesson_team": [
+    "Choose two fresh paragraph or pilot surfaces that can use or validate existing PV records.",
+    "Run the lesson-side build and validation commands in the lesson-team workflow.",
+    "Commit lesson-side changes in the lesson team repository only.",
+    "Return proof records using the PV-G4 proof template."
+  ],
+  "proof_requirements": {
+    "schema_version": 1,
+    "registry_id": "procedure-visual-lesson-regression-proof-requirements",
+    "sprint_id": "PV-G4",
+    "gate_id": "GATE-PV-G4-lesson-regression",
+    "status": "evidence_intake_prepared",
+    "generated_by": "build-scripts/references/build-procedure-visual-lesson-regression-proof-intake.js",
+    "generated_on": "2026-05-03T13:24:50.218Z",
+    "policy": {
+      "references_machine_write_authorized": false,
+      "references_external_write_authorized": false,
+      "lesson_target_write_authorized_by_references_team": false,
+      "student_facing_projection_authorized": false,
+      "diagnostics_or_adaptive_use_authorized": false
+    },
+    "required_proof_count": 2,
+    "proof_must_show": [
+      "fresh paragraph build or pilot surface uses or validates PV data",
+      "proof is owned and committed by the lesson team when it changes lesson-side output",
+      "no hand-built generated-output patching",
+      "complete paragraph validation passes where applicable",
+      "Book 1 check passes where applicable",
+      "PV data remains a references/data overlay and no PV machine registry is created"
+    ],
+    "acceptable_proof_types": [
+      "procedure game maps to formal PV steps in a fresh paragraph or pilot surface",
+      "visual-state sequence is used or validated in a companion visual surface",
+      "answer model validates against PV step order",
+      "surface-variant check proves the same semantic visual anchor across web/docx/slide surfaces"
+    ],
+    "rejected_proof_types": [
+      "manual patch inside generated lesson output",
+      "screenshot-only evidence without reproducible command or artifact path",
+      "platform-only report proof with no lesson-side use or validation",
+      "student-facing PV projection without a publication gate",
+      "any proof that requires PV records to move into references/machine"
+    ],
+    "proof_record_required_fields": [
+      "proof_id",
+      "lesson_repo_commit",
+      "paragraph_or_surface",
+      "pv_records_used",
+      "validation_commands",
+      "generated_output_touched",
+      "hand_patch_absent",
+      "proof_artifacts",
+      "owner",
+      "review_status"
+    ]
+  },
+  "forbidden_machine_files_checked": [
+    "references/machine/procedure-templates.json",
+    "references/machine/visual-states.json",
+    "references/machine/unit-template-links.json",
+    "references/machine/procedure-visual-vocab.json",
+    "references/machine/procedure-visual.json",
+    "references/machine/procedure-visual-unit-template-links.json"
+  ],
+  "forbidden_machine_files_found": [],
+  "checks": [
+    {
+      "id": "required_proof_count_not_met",
+      "status": "passed",
+      "detail": "0 of 2 required lesson-side PV regression proofs are recorded."
+    },
+    {
+      "id": "no_forbidden_machine_files",
+      "status": "passed",
+      "detail": "No PV machine registry files found."
+    },
+    {
+      "id": "references_team_lesson_write_block",
+      "status": "passed",
+      "detail": "The proof-intake packet does not authorize references-team commits to lesson-side output."
+    },
+    {
+      "id": "student_facing_projection_block",
+      "status": "passed",
+      "detail": "PV-G4 proof intake does not authorize student-facing PV projection or generator exposure."
+    }
+  ],
+  "gate_recommendation": {
+    "ready_for_hcs_closure": false,
+    "recommended_status_now": "hold_pending_lesson_evidence",
+    "reason": "PV-G4 requires at least two lesson-side regression proofs before HCS can close the gate."
+  }
+}

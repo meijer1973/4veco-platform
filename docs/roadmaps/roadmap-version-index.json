@@ -15,13 +15,14 @@
   "roadmaps": [
     {
       "roadmap_id": "references-team-roadmap",
-      "version": "v2.39-pv8-promotion-pipeline-design",
+      "version": "v2.40-pvg4-proof-intake-prepared",
       "title": "References Team Roadmap",
       "status": "active",
       "path": "references/reference-team-roadmap.md",
       "owner": "references_team",
       "updated_on": "2026-05-03",
       "supersedes": [
+        "docs/roadmaps/outdated/reference-team-roadmap-v2.39-pv8-promotion-pipeline-design.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.38-pv7-gate-closed.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.37-pv7-machine-promotion-review-prepared.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.36-rx6-skilltree-generator-integration.md",
@@ -61,7 +62,18 @@
         "knowledge/Exercise schema and quality/reference-team-roadmap Live version 28 April.md",
         "knowledge/Exercise schema and quality/roadmap-updated-repository-checked.md"
       ],
-      "notes": "Current operating roadmap after completing PV.8 promotion-pipeline design; PV-G4 lesson-regression proof is next and no PV machine promotion is authorized yet."
+      "notes": "Current operating roadmap after preparing PV-G4 proof intake; PV-G4 remains blocked pending two lesson-team-owned PV regression proofs and no PV machine promotion is authorized yet."
+    },
+    {
+      "roadmap_id": "references-team-roadmap-v2.39",
+      "version": "v2.39-pv8-promotion-pipeline-design",
+      "title": "References Team Roadmap before PV-G4 proof intake preparation",
+      "status": "outdated",
+      "path": "docs/roadmaps/outdated/reference-team-roadmap-v2.39-pv8-promotion-pipeline-design.md",
+      "owner": "references_team",
+      "updated_on": "2026-05-03",
+      "superseded_by": "references/reference-team-roadmap.md",
+      "notes": "Snapshot archived before preparing PV-G4 lesson-regression proof intake and evidence template."
     },
     {
       "roadmap_id": "references-team-roadmap-v2.38",
