@@ -1,7 +1,7 @@
 {
   "sprint_id": "PV.7",
   "name": "Machine-Promotion Review Gate",
-  "status": "prepared_for_human_review",
+  "status": "gate_closed_pass_with_conditions",
   "planned_on": "2026-05-03",
   "plan": "docs/sprints/PV.7-plan.md",
   "protected_reference_data_changes_allowed": false,
@@ -21,7 +21,14 @@
     "reports/review-gates/GATE-PV7-machine-promotion-review/review-packet.md",
     "reports/review-gates/GATE-PV7-machine-promotion-review/promotion-readiness.json",
     "reports/review-gates/GATE-PV7-machine-promotion-review/promotion-readiness.md",
-    "reports/review-gates/GATE-PV7-machine-promotion-review/bundle-urls.md"
+    "reports/review-gates/GATE-PV7-machine-promotion-review/bundle-urls.md",
+    "reports/review-gates/GATE-PV7-machine-promotion-review/human-interview.json",
+    "reports/review-gates/GATE-PV7-machine-promotion-review/human-interview.md",
+    "reports/review-gates/GATE-PV7-machine-promotion-review/gate-closure.json",
+    "reports/review-gates/GATE-PV7-machine-promotion-review/gate-closure.md",
+    "reports/sprints/PV.7-result.md",
+    "reports/sprints/PV.7-diff-summary.md",
+    "references/data/sprints/PV.7.result.json"
   ],
   "blocked_scope": [
     "references/machine Procedure-Visual registry creation",
@@ -42,9 +49,12 @@
     "node build-scripts/references/validate-procedure-visual-registry.js",
     "node build-scripts/references/build-procedure-visual-machine-promotion-review.js",
     "node build-scripts/references/check-procedure-visual-machine-promotion-review.js",
+    "node build-scripts/review-gates/validate-gate.js reports/review-gates/GATE-PV7-machine-promotion-review/gate-closure.json",
     "node build-scripts/sprints/emit-gate-bundle-urls.js GATE-PV7-machine-promotion-review",
     "node build-scripts/sprints/check-bundle-urls.js GATE-PV7-machine-promotion-review",
     "node build-scripts/sprints/check-sprint-bundle.js PV.7",
+    "node build-scripts/sprints/check-sprint-result.js reports/sprints/PV.7-result.md",
+    "node build-scripts/sprints/check-sprint-bundle.js PV.7 --complete",
     "node build-scripts/references/check-roadmap-version-index.js",
     "node build-scripts/sprints/emit-url-index.js --check"
   ]

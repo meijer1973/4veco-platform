@@ -3,7 +3,7 @@
   "sprint_id": "PV.7",
   "gate_id": "GATE-PV7-machine-promotion-review",
   "generated_by": "build-scripts/references/build-procedure-visual-machine-promotion-review.js",
-  "generated_on": "2026-05-03T10:07:09.139Z",
+  "generated_on": "2026-05-03T12:26:56.983Z",
   "status": "promotion_not_ready",
   "summary": {
     "template_count": 6,

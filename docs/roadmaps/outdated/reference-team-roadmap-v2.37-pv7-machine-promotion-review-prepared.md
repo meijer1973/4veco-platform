@@ -4,7 +4,7 @@ Generated: 2026-04-23
 Adopted main roadmap: 2026-04-25
 Last strategic update: 2026-05-01
 Roadmap ID: `references-team-roadmap`
-Roadmap version: `v2.38-pv7-gate-closed`
+Roadmap version: `v2.37-pv7-machine-promotion-review-prepared`
 Roadmap status: `active`
 Version index: `docs/roadmaps/roadmap-version-index.json`
 Scope: `references/`, `build-scripts/references/`, `build-scripts/reports/`, reference dashboards, and generated reference reports under `reports/`
@@ -65,8 +65,6 @@ Update 2026-05-03: `RX.6 Skill-Tree And Generator Integration` is completed. Sou
 
 Update 2026-05-03: `PV.7 Machine-Promotion Review Gate` is prepared for HCS review. The readiness report shows PV has schemas, validator, six pilot templates, six visual states, six unit-template links, projection proof, and coverage reports, but lacks a PV machine-edit CLI, machine-promotion mutation logs, and two lesson-side PV regression proofs. The packet recommends no `references/machine/` PV promotion in PV.7; all PV records should remain under `references/data/procedure-visual/` unless HCS explicitly decides otherwise.
 
-Update 2026-05-03: `GATE-PV7-machine-promotion-review` closed as `pass_with_conditions`. No Procedure-Visual records may move to `references/machine/` now. HCS confirmed that `unit-template-links` are the safest future first candidate only after CLI, validators, mutation logs, and lesson-regression proof exist. `PV.8 Promotion Pipeline Design` is inserted before any future promotion attempt, and PV-G4 lesson-regression proof remains required before reopening machine promotion.
-
 Compatibility decisions:
 
 - Sprint `R0.1` now means the sprint-execution scaffold.
@@ -92,8 +90,7 @@ Open items are listed first; completed items are kept below them.
 
 | Sprint | Name | Completed | Current State |
 |--------|------|-----------|---------------|
-| PV.8 | Promotion Pipeline Design | no | New bounded follow-up from PV.7. Design the CLI-backed promotion path, validators, mutation-log schema, rollback model, and future gate criteria without creating any PV references/machine registry. |
-| PV-G4 | Lesson Regression Proof | no | New required proof item from PV.7. Record at least two lesson-side PV regression proofs before reopening student-facing or machine-authoritative PV promotion. |
+| PV.7 | Machine-Promotion Review Gate | no | Prepared for HCS review. Readiness report recommends no PV machine promotion yet because PV machine-edit CLI, promotion mutation logs, and two lesson-side PV regression proofs are missing. |
 | Sprint 8 | Misconception Registry MVP | no | Planned. Create small misconception schema/validator and link recurring errors to units, terms, operations, and evidence where available. |
 | Sprint 9 | Unit Design Status And D04 Resolution | no | Planned. Resolve D04 as retire/merge/redistribute/split and decide whether `unit_design_status` is derived overlay or CLI-backed machine-unit field. |
 | Content Track 1 | Year-1 Target Exercise Coverage | no | Planned content-track work. Produce Year-1 paragraph coverage and missing-target exercise status for CP-6. |
@@ -115,7 +112,6 @@ Open items are listed first; completed items are kept below them.
 | PV.5 | Visual Projection MVP | yes | Completed. Added reusable report-side render/validation libraries for formula trace, flowchart, table trace, and static graph-stage PV visual states, generated SVG proof artifacts under `reports/`, and preserved publication, dynamic-graph, machine-promotion, and student-facing blocks. |
 | PV.6 | Coverage Reports And Dashboard Integration | yes | Completed. Added `procedure-visual-coverage` reports and reference-health PV summary with diagnostic-only authority flags, surface/game/answer-model coverage, generator support, generator-block status, and blocker reasons; PV publication remains blocked. |
 | RX.6 | Skill-Tree And Generator Integration | yes | Completed. Source and deployed skill-tree bundles now expose 44 generator-backed A-domain units as interactive and 37 missing-generator units as explicit generator-blocked/non-interactive rows; no student-facing skill-tree or PV exposure is authorized for blocked units. |
-| PV.7 | Machine-Promotion Review Gate | yes | Closed as `pass_with_conditions`. No Procedure-Visual records may move to `references/machine/` now; future promotion requires PV.8 promotion-pipeline design, CLI, validators, mutation logs, and at least two PV-G4 lesson-regression proofs. |
 | RX.3 | Producer Table And Graph Representation Review | yes | Completed as non-mutating review. `GATE-RX3-producer-representation` closed as `pass_with_conditions`; A75/A76/A79 may enter first-lane mutation review; A77/A78 are later graph-lane candidates; A80/A81 and graphical MO=MK remain held. |
 | RX.3a | Producer Table/Data First-Lane Mutation Review And CLI Execution | yes | Completed. `GATE-RX3a-first-lane-mutation-review` closed as `pass_with_conditions`; `A75`, `A76`, and `A79` were added through `unit-add.js`; `A76` needs `A14`, `A04`, and `A61`; all three remain generator-blocked/non-interactive. |
 | RX.3b | Producer TO-TK Graph-Lane Mutation Review And CLI Execution | yes | Completed. `GATE-RX3b-producer-graph-lane-review` closed as `pass_with_conditions`; `A77` and `A78` were added through `unit-add.js`; `A78` needs `A63`, `A75`, and `A77`; both remain generator-blocked/non-interactive. |
@@ -817,9 +813,7 @@ Sprint sequence:
 - `PV.5 Visual Projection MVP`: render or validate non-dynamic formula traces, flowcharts, table traces, and static staged graphs from PV state sequences.
 - `PV.6 Coverage Reports And Dashboard Integration`: report PV coverage in JSON/Markdown and reference health without treating PV as curriculum authority.
 - `RX.6 Skill-Tree And Generator Integration`: completed. Source and deployed skill-tree bundles now consume only generator-backed units as interactive and keep missing-generator units explicitly non-interactive.
-- `PV.7 Machine-Promotion Review Gate`: completed as `pass_with_conditions`; PV remains an overlay and no machine promotion is authorized.
-- `PV.8 Promotion Pipeline Design`: design CLI, validators, mutation logs, rollback, and later gate criteria before any future promotion attempt.
-- `PV-G4 Lesson Regression Proof`: record at least two lesson-side PV regression proofs before reopening machine-authoritative or student-facing PV promotion.
+- `PV.7 Machine-Promotion Review Gate`: decide whether PV remains an overlay or partly moves to machine registry; a likely safe split is promoting unit-template links first and keeping visual states as governed data until renderers stabilize.
 
 Quality gates:
 
@@ -1171,42 +1165,6 @@ Required review artifacts:
 - `reports/review-gates/GATE-PV7-machine-promotion-review/review-packet.json`
 
 Stop condition: do not create `references/machine/procedure-templates.json`, `references/machine/visual-states.json`, `references/machine/unit-template-links.json`, `references/machine/procedure-visual-vocab.json`, or any equivalent PV machine registry before explicit human promotion approval and a CLI-backed mutation path exist. Do not authorize student-facing PV projection, generator exposure for blocked units, diagnostics, adaptive routing, AI, sequencing, mastery, or summative use.
-
-Completion: completed on 2026-05-03. `GATE-PV7-machine-promotion-review` closed as `pass_with_conditions`; no PV machine promotion is authorized. HCS confirmed that `unit-template-links` are the safest future first candidate only after prerequisites are met, while procedure templates and visual states remain governed data overlays. The next required work is `PV.8 Promotion Pipeline Design` plus PV-G4 lesson-regression proof before reopening promotion.
-
-#### PV.8 Promotion Pipeline Design
-
-Purpose: design the future Procedure-Visual machine-promotion path without executing it.
-
-Required work:
-
-- Define the proposed PV promotion CLI surface, likely starting with unit-template links only.
-- Define mutation-log schema and rollback expectations.
-- Define validators for promoted PV records, overlay/machine coexistence, and no student-facing leakage.
-- Define promotion-gate review questions and proof requirements.
-- Define how PV-G4 lesson-regression evidence is recorded before any future promotion attempt.
-
-Required output:
-
-- promotion-pipeline design document;
-- proposed CLI contract;
-- proposed mutation-log schema;
-- validator plan;
-- review-gate packet for the later promotion attempt.
-
-Stop condition: do not create or edit PV `references/machine/` registries in PV.8. Do not promote unit-template links, procedure templates, visual states, vocabulary, or provisional `exercise_operations`.
-
-#### PV-G4 Lesson Regression Proof
-
-Purpose: prove PV data can survive lesson-side use before reopening student-facing or machine-authoritative PV promotion.
-
-Required work:
-
-- Record at least two lesson-side PV regression proofs.
-- Each proof must show a fresh paragraph or pilot surface using or validating PV data without hand-built generated-output patching.
-- Complete paragraph validation and Book 1 checks must pass for each proof where applicable.
-
-Stop condition: the references team must not commit lesson-team output unless explicitly authorized; lesson-side proof artifacts may be referenced from platform reports after the lesson team owns its commits.
 
 ### Sprint 8 Misconception Registry MVP
 
@@ -1590,9 +1548,7 @@ Sprints:
 - `PV.5` completed: non-dynamic visual projection MVP.
 - `PV.6` completed: PV coverage reports and dashboard integration.
 - `RX.6` completed: source and deployed skill-tree generator readiness now distinguish interactive generator-backed units from explicit non-interactive generator-blocked catalog units.
-- `PV.7` completed: machine-promotion review closed as `pass_with_conditions`; no PV `references/machine/` promotion authorized.
-- `PV.8` planned: promotion-pipeline design before any future promotion attempt.
-- `PV-G4` required: at least two lesson-regression proofs before reopening machine-authoritative or student-facing PV promotion.
+- `PV.7` prepared: machine-promotion review packet recommends no PV `references/machine/` promotion yet because CLI, promotion mutation logs, and two lesson-side regressions are missing.
 
 ### Phase R9: Owned Source Integration And Content Graph
 
@@ -1719,8 +1675,6 @@ PV.5 Visual projection MVP
 PV.6 Coverage reports and dashboard integration
 RX.6 Skill-tree and generator integration
 PV.7 Machine-promotion review gate
-PV.8 Promotion pipeline design
-PV-G4 Lesson regression proof
 Sprint 8 Misconception registry MVP
 Sprint 9 Unit design status and D04 resolution (CP-5)
 Content Track 1 Year-1 target exercise coverage (CP-6)
@@ -1738,15 +1692,15 @@ Do not invert this order.
 
 ## Immediate Next Sprint
 
-Next action: `PV.8 Promotion Pipeline Design`. PV.8 should design the CLI-backed promotion path, validators, mutation-log schema, rollback model, and future gate criteria without creating any PV `references/machine/` registry.
+Next action: HCS review of `GATE-PV7-machine-promotion-review`. PV.7 is prepared for human decision and currently recommends no `references/machine/` PV promotion because a PV machine-edit CLI, machine-promotion mutation logs, and two lesson-side PV regression proofs are missing.
 
-R4.5 has closed the bounded micro-unit mutation lane, CP-1 has closed the non-mutating schema audit gate as `pass_with_conditions`, CP-2 has closed the owned-source scope gate as `pass_with_conditions`, R9.1 has registered the owned-source surfaces, R9.2 has completed owned-content projection, S4/CP-3 has closed as `pass_with_conditions`, S4.1 has implemented the CP-3 condition artifacts, RX.1 has prepared the non-mutating representation-operation inventory, `GATE-RX1-representation-unit-scope` has closed as `pass_with_conditions`, RX.2/GATE-RX2 has added the bounded six-unit first lane through CLI-only mutation, RX.2b/GATE-RX2b has added the bounded seven-unit graphical foundation lane through CLI-only mutation while holding `A71`, R8.1 has added the scoped internal QC issue model, S6 has created the source-document registry MVP under `references/data/`, S7/CP-4 has closed as `pass_with_conditions`, RX.3a/RX.3b/RX.4 have applied producer and elasticity representation lanes through CLI-only mutation, PV.3 through PV.6 have completed pilot templates, projection proof, and coverage dashboards, RX.5 has added representation-operation reports, RX.6 has completed skill-tree generator readiness, and PV.7 has closed the machine-promotion review gate without authorizing promotion.
+R4.5 has closed the bounded micro-unit mutation lane, CP-1 has closed the non-mutating schema audit gate as `pass_with_conditions`, CP-2 has closed the owned-source scope gate as `pass_with_conditions`, R9.1 has registered the owned-source surfaces, R9.2 has completed owned-content projection, S4/CP-3 has closed as `pass_with_conditions`, S4.1 has implemented the CP-3 condition artifacts, RX.1 has prepared the non-mutating representation-operation inventory, `GATE-RX1-representation-unit-scope` has closed as `pass_with_conditions`, RX.2/GATE-RX2 has added the bounded six-unit first lane through CLI-only mutation, RX.2b/GATE-RX2b has added the bounded seven-unit graphical foundation lane through CLI-only mutation while holding `A71`, R8.1 has added the scoped internal QC issue model, S6 has created the source-document registry MVP under `references/data/`, S7/CP-4 has closed as `pass_with_conditions`, RX.3a/RX.3b/RX.4 have applied producer and elasticity representation lanes through CLI-only mutation, PV.3 through PV.6 have completed pilot templates, projection proof, and coverage dashboards, RX.5 has added representation-operation reports, RX.6 has completed skill-tree generator readiness, and PV.7 has prepared the machine-promotion review packet.
 
 All active A-domain units without generators are now explicitly generator-blocked/non-interactive. The skill-tree currently has 44 generator-backed interactive A-domain units and 37 generator-blocked A-domain units. Blocked units must not be exposed in student-facing skill-tree or PV projection until their generators exist, validators pass, and a later sprint explicitly authorizes exposure.
 
 `S7` is closed. The skill/operation registry remains a `references/data/` overlay; `exercise_operations` remain provisional; PV templates may reference them only as provisional records; `required_skills` remains legacy/source-only; and machine registry promotion plus bulk exercise metadata backfill remain blocked.
 
-The Procedure-Visual Registry remains under `references/data/procedure-visual/`; do not create `references/machine/procedure-templates.json`, `references/machine/visual-states.json`, `references/machine/unit-template-links.json`, or equivalent PV machine registries before PV.8 designs the CLI-backed path, PV-G4 records the required lesson regressions, and a later human promotion gate explicitly authorizes machine promotion.
+The Procedure-Visual Registry remains under `references/data/procedure-visual/`; do not create `references/machine/procedure-templates.json`, `references/machine/visual-states.json`, `references/machine/unit-template-links.json`, or equivalent PV machine registries before PV.7 closes with explicit human promotion approval and a CLI-backed mutation path.
 
 Do not start diagnostics, adaptive routing, student-facing AI, automatic lesson sequencing, mastery decisions, summative decisions, teacher cockpit deployment, game/simulation product mapping, or continuous-improvement claims from this roadmap.
 

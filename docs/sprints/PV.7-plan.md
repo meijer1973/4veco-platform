@@ -30,6 +30,9 @@ The roadmap boundary still applies: no PV machine promotion is allowed until sch
 - `reports/review-gates/GATE-PV7-machine-promotion-review/human-interview.md`
 - `reports/review-gates/GATE-PV7-machine-promotion-review/gate-closure.json`
 - `reports/review-gates/GATE-PV7-machine-promotion-review/gate-closure.md`
+- `reports/sprints/PV.7-result.md`
+- `reports/sprints/PV.7-diff-summary.md`
+- `references/data/sprints/PV.7.result.json`
 - `reports/url-index.md`
 - `references/reference-team-roadmap.md`
 - `docs/roadmaps/outdated/reference-team-roadmap-v2.36-rx6-skilltree-generator-integration.md`
@@ -94,9 +97,12 @@ node build-scripts/sprints/check-sprint-plan.js docs/sprints/PV.7-plan.md
 node build-scripts/references/validate-procedure-visual-registry.js
 node build-scripts/references/build-procedure-visual-machine-promotion-review.js
 node build-scripts/references/check-procedure-visual-machine-promotion-review.js
+node build-scripts/review-gates/validate-gate.js reports/review-gates/GATE-PV7-machine-promotion-review/gate-closure.json
 node build-scripts/sprints/emit-gate-bundle-urls.js GATE-PV7-machine-promotion-review
 node build-scripts/sprints/check-bundle-urls.js GATE-PV7-machine-promotion-review
 node build-scripts/sprints/check-sprint-bundle.js PV.7
+node build-scripts/sprints/check-sprint-result.js reports/sprints/PV.7-result.md
+node build-scripts/sprints/check-sprint-bundle.js PV.7 --complete
 node build-scripts/references/check-roadmap-version-index.js
 node build-scripts/sprints/emit-url-index.js --check
 ```

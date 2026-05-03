@@ -12,12 +12,13 @@ docs/roadmaps/roadmap-version-index.json
 
 | Roadmap | Version | Path | Notes |
 |---|---|---|---|
-| References Team Roadmap | `v2.37-pv7-machine-promotion-review-prepared` | `references/reference-team-roadmap.md` | Current operating roadmap after preparing PV.7 machine-promotion review; HCS review is next and no PV machine promotion is authorized yet. |
+| References Team Roadmap | `v2.38-pv7-gate-closed` | `references/reference-team-roadmap.md` | Current operating roadmap after closing PV.7 as pass_with_conditions; PV.8 promotion-pipeline design is next and no PV machine promotion is authorized yet. |
 
 ## Outdated Archive
 
 | Roadmap | Version | Path | Superseded By |
 |---|---|---|---|
+| References Team Roadmap before PV.7 gate closure | `v2.37-pv7-machine-promotion-review-prepared` | `docs/roadmaps/outdated/reference-team-roadmap-v2.37-pv7-machine-promotion-review-prepared.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before PV.7 machine-promotion review preparation | `v2.36-rx6-skilltree-generator-integration` | `docs/roadmaps/outdated/reference-team-roadmap-v2.36-rx6-skilltree-generator-integration.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before RX.6 skill-tree generator integration | `v2.35-pv6-coverage-dashboard` | `docs/roadmaps/outdated/reference-team-roadmap-v2.35-pv6-coverage-dashboard.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before PV.6 coverage dashboard integration | `v2.34-pv5-visual-projection-mvp` | `docs/roadmaps/outdated/reference-team-roadmap-v2.34-pv5-visual-projection-mvp.md` | `references/reference-team-roadmap.md` |

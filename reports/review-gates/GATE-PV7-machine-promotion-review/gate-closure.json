@@ -1,0 +1,84 @@
+{
+  "gate_id": "GATE-PV7-machine-promotion-review",
+  "sprint_id": "PV.7",
+  "status": "pass_with_conditions",
+  "closed_on": "2026-05-03",
+  "closure_confirmed_by_human": true,
+  "human_interview": "reports/review-gates/GATE-PV7-machine-promotion-review/human-interview.md",
+  "review_packet": "reports/review-gates/GATE-PV7-machine-promotion-review/review-packet.md",
+  "audit": "reports/review-gates/GATE-PV7-machine-promotion-review/promotion-readiness.md",
+  "summary": "PV.7 is closed as pass_with_conditions. No Procedure-Visual records are authorized for promotion to references/machine. PV remains a governed references/data overlay until CLI-backed promotion tooling, mutation logs, and at least two lesson-side PV regression proofs exist.",
+  "protected_reference_data_changed": false,
+  "machine_promotion_authorized": false,
+  "records_to_promote_now": [],
+  "future_first_candidate_if_prerequisites_met": "unit-template-links",
+  "accepted_outcomes": [
+    "PV schemas, validator, overlay records, and reports are sufficient for governed overlay use.",
+    "PV.7 may close because the decision is clear: no machine promotion now.",
+    "PV templates may continue referencing provisional exercise_operations only with explicit provisional status.",
+    "Unit-template links are the safest future first candidate if promotion prerequisites are later met."
+  ],
+  "blocked_outcomes": [
+    "No references/machine/procedure-templates.json registry is authorized.",
+    "No references/machine/visual-states.json registry is authorized.",
+    "No references/machine/unit-template-links.json registry is authorized.",
+    "No references/machine/procedure-visual-vocab.json registry is authorized.",
+    "No provisional exercise_operation promotion is authorized through PV.7.",
+    "No student-facing PV projection is authorized.",
+    "No generator exposure for blocked units is authorized.",
+    "No diagnostics, adaptive routing, student-facing AI, automatic sequencing, mastery decisions, or summative use is authorized."
+  ],
+  "explicit_decisions": [
+    {
+      "topic": "gate status",
+      "decision": "Close PV.7 as pass_with_conditions."
+    },
+    {
+      "topic": "machine promotion",
+      "decision": "Do not promote any Procedure-Visual records to references/machine in PV.7."
+    },
+    {
+      "topic": "future first candidate",
+      "decision": "If prerequisites are later met, consider unit-template links first."
+    },
+    {
+      "topic": "procedure templates and visual states",
+      "decision": "Keep procedure templates and visual states under references/data/procedure-visual until renderer, surface-variant, accessibility, and lesson-regression maturity is stronger."
+    },
+    {
+      "topic": "operation references",
+      "decision": "PV may reference provisional exercise_operations only with explicit provisional status and no operation promotion."
+    },
+    {
+      "topic": "next required work",
+      "decision": "Add a bounded PV promotion-pipeline design sprint and PV-G4 lesson-regression proof before reopening machine promotion."
+    }
+  ],
+  "conditions_to_reopen_or_pass": [
+    "Do not create or edit any references/machine Procedure-Visual registry in PV.7.",
+    "Keep procedure templates, visual states, vocabulary, and unit-template links under references/data/procedure-visual.",
+    "PV templates may reference provisional exercise_operations only with explicit provisional status.",
+    "Do not promote provisional exercise_operations to governed operation records through PV.7.",
+    "Design any future promotion path as CLI-backed with validators and mutation logs before machine registry creation.",
+    "Require at least two lesson-side PV regression proofs before reopening promotion for student-facing or machine-authoritative PV records.",
+    "Consider unit-template-links first in any future promotion attempt; keep procedure templates and visual states as data overlays until renderer and lesson-regression maturity is stronger.",
+    "Do not authorize student-facing PV projection, generator exposure for blocked units, diagnostics, adaptive routing, student-facing AI, automatic sequencing, mastery decisions, or summative use."
+  ],
+  "allowed_next_sprint": "PV.8",
+  "allowed_next_sprint_scope": [
+    "Design a PV promotion-pipeline architecture under references/data and reports.",
+    "Define CLI commands, validators, mutation-log schema, rollback model, and review gates for a future promotion attempt.",
+    "Keep the work non-mutating and do not create PV references/machine registries."
+  ],
+  "blocked_next_sprint_scope": [
+    "references/machine Procedure-Visual registry creation",
+    "student-facing PV projection",
+    "generator exposure for blocked units",
+    "diagnostics",
+    "adaptive routing",
+    "student-facing AI",
+    "automatic sequencing",
+    "mastery decisions",
+    "summative use"
+  ]
+}
