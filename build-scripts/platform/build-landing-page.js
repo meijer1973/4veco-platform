@@ -681,7 +681,7 @@ function renderParagraafPage(paragraaf, files, _resolvedMap) {
 
   const oefenenRow = [];
   if (files.oefenen.redeneerSpel)         oefenenRow.push(interactiveCard(encPath([files.oefenen.redeneerSpel]),         ICONS.puzzle, "Redeneer-spel",        "Train je redeneervaardigheid met 5 spelmodi"));
-  if (files.oefenen.wiskundevaardigheden) oefenenRow.push(interactiveCard(encPath([files.oefenen.wiskundevaardigheden]), ICONS.layers, "Wiskundevaardigheden", "Oefen de wiskundevaardigheden voor deze paragraaf"));
+  if (files.oefenen.wiskundevaardigheden) oefenenRow.push(interactiveCard(encPath([files.oefenen.wiskundevaardigheden]), ICONS.layers, "Wiskunde vaardigheden", "Oefen de wiskunde vaardigheden voor deze paragraaf"));
   const begeleidHTML = begeleidCard(files.oefenen.begeleide);
   if (begeleidHTML) oefenenRow.push(begeleidHTML);
   const oefenenCards = oefenenRow.join("\n");
