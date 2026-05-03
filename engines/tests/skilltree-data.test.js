@@ -11,6 +11,7 @@ const path = require('path');
 const fs = require('fs');
 const elements = require('../skilltree/base-elements');
 const catalog = require('../../references/machine/micro-teaching-units.json');
+const { buildSkilltreeBundleData } = require('../../scripts/deploy');
 
 const MODULE_ROOT = process.env.MODULE_ROOT
     ? path.resolve(process.env.MODULE_ROOT)
@@ -54,6 +55,13 @@ describe('base-elements', () => {
         for (const blockedId of blockedIds) {
             expect(skillIds.has(blockedId)).toBe(false);
         }
+    });
+
+    test('deployed browser bundle uses the same interactive/block split', () => {
+        const bundleData = buildSkilltreeBundleData(catalog, elements.GEN);
+        expect(bundleData.skills.map(s => s.id).sort()).toEqual(elements.SKILLS.map(s => s.id).sort());
+        expect(bundleData.generatorBlockedSkills.map(s => s.id).sort())
+            .toEqual(elements.GENERATOR_BLOCKED_SKILLS.map(s => s.id).sort());
     });
 
     test('exports LAYER_NAMES with 6 entries', () => {

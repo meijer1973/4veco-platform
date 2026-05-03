@@ -61,6 +61,7 @@ function main() {
     'evidence-anchor-status',
     'reference-quality-issues',
     'procedure-visual-coverage',
+    'skilltree-generator-readiness',
   ].map(report);
 
   const issueCount = reports.reduce((sum, item) => sum + (item.issues || []).length, 0);
@@ -73,6 +74,7 @@ function main() {
   const retrievalEval = readJson('references/data/rag/retrieval_eval_results.json', null);
   const qualityIssueReport = report('reference-quality-issues');
   const procedureVisualCoverage = report('procedure-visual-coverage');
+  const skilltreeGeneratorReadiness = report('skilltree-generator-readiness');
   const qualityIssueLog = readJson('references/data/qc/reference-quality-issues.json', {
     authority_boundary: {
       internal_only: true,
@@ -96,6 +98,7 @@ function main() {
       'reports/review-gates/GATE-R5-alignment-graph/gate-closure.json',
       'reports/review-gates/GATE-R7-rag/gate-closure.json',
       'reports/json/procedure-visual-coverage.json',
+      'reports/json/skilltree-generator-readiness.json',
       'reports/json/*.json',
     ],
     unit_counts: {
@@ -167,6 +170,21 @@ function main() {
       linked_units_generator_blocked: procedureVisualCoverage.summary && procedureVisualCoverage.summary.linked_units_generator_blocked || 0,
       linked_units_publication_allowed: procedureVisualCoverage.summary && procedureVisualCoverage.summary.linked_units_publication_allowed || 0,
       blocker_reason_counts: procedureVisualCoverage.summary && procedureVisualCoverage.summary.blocker_reason_counts || {},
+    },
+    skilltree_generator_readiness: {
+      source: 'reports/json/skilltree-generator-readiness.json',
+      status: skilltreeGeneratorReadiness.status,
+      diagnostic_only: skilltreeGeneratorReadiness.policy && skilltreeGeneratorReadiness.policy.diagnostic_only === true,
+      student_facing_skilltree_use_authorized: skilltreeGeneratorReadiness.policy && skilltreeGeneratorReadiness.policy.student_facing_skilltree_use_authorized === true,
+      generator_exposure_for_blocked_units_authorized: skilltreeGeneratorReadiness.policy && skilltreeGeneratorReadiness.policy.generator_exposure_for_blocked_units_authorized === true,
+      pv_projection_authorized: skilltreeGeneratorReadiness.policy && skilltreeGeneratorReadiness.policy.pv_projection_authorized === true,
+      machine_registry_created: skilltreeGeneratorReadiness.policy && skilltreeGeneratorReadiness.policy.machine_registry_created === true,
+      active_a_domain_count: skilltreeGeneratorReadiness.summary && skilltreeGeneratorReadiness.summary.active_a_domain_count || 0,
+      interactive_skill_count: skilltreeGeneratorReadiness.summary && skilltreeGeneratorReadiness.summary.interactive_skill_count || 0,
+      generator_blocked_count: skilltreeGeneratorReadiness.summary && skilltreeGeneratorReadiness.summary.generator_blocked_count || 0,
+      explicit_generator_block_count: skilltreeGeneratorReadiness.summary && skilltreeGeneratorReadiness.summary.explicit_generator_block_count || 0,
+      untracked_missing_generator_count: skilltreeGeneratorReadiness.summary && skilltreeGeneratorReadiness.summary.untracked_missing_generator_count || 0,
+      blocked_interactive_leak_count: skilltreeGeneratorReadiness.summary && skilltreeGeneratorReadiness.summary.blocked_interactive_leak_count || 0,
     },
     schema_validation_status: {
       report_json_contract: 'pass',
@@ -268,6 +286,16 @@ function main() {
   lines.push(`- Visual states: ${state.procedure_visual_backbone.visual_state_count}`);
   lines.push(`- Units with surface variants: ${state.procedure_visual_backbone.linked_units_with_surface_variants}`);
   lines.push(`- Units generator-blocked: ${state.procedure_visual_backbone.linked_units_generator_blocked}`);
+  lines.push('');
+  lines.push('## Skilltree Generator Readiness');
+  lines.push('');
+  lines.push(`- Status: ${state.skilltree_generator_readiness.status}`);
+  lines.push(`- Diagnostic only: ${state.skilltree_generator_readiness.diagnostic_only}`);
+  lines.push(`- Student-facing skilltree use authorized: ${state.skilltree_generator_readiness.student_facing_skilltree_use_authorized}`);
+  lines.push(`- Active A-domain units: ${state.skilltree_generator_readiness.active_a_domain_count}`);
+  lines.push(`- Interactive units: ${state.skilltree_generator_readiness.interactive_skill_count}`);
+  lines.push(`- Generator-blocked units: ${state.skilltree_generator_readiness.generator_blocked_count}`);
+  lines.push(`- Untracked missing generators: ${state.skilltree_generator_readiness.untracked_missing_generator_count}`);
   lines.push('');
   lines.push('## Retrieval Evaluation');
   lines.push('');

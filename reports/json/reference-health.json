@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "generated_by": "build-scripts/reports/generate-reference-health.js",
-  "generated_on": "2026-05-02T12:13:00.855Z",
+  "generated_on": "2026-05-03T09:58:23.667Z",
   "source_files": [
     "references/machine/micro-teaching-units.json",
     "references/machine/begrippen.json",
@@ -11,6 +11,7 @@
     "reports/review-gates/GATE-R5-alignment-graph/gate-closure.json",
     "reports/review-gates/GATE-R7-rag/gate-closure.json",
     "reports/json/procedure-visual-coverage.json",
+    "reports/json/skilltree-generator-readiness.json",
     "reports/json/*.json"
   ],
   "unit_counts": {
@@ -68,12 +69,12 @@
     "issues": 81
   },
   "qc_findings": {
-    "report_count": 14,
+    "report_count": 15,
     "total_issues": 448,
     "high_or_critical_issues": 10,
     "by_report_status": {
       "pass": 6,
-      "passed": 1,
+      "passed": 2,
       "warn": 7
     }
   },
@@ -133,6 +134,21 @@
       "student_facing_projection_blocked": 6,
       "visual_renderer_pending": 6
     }
+  },
+  "skilltree_generator_readiness": {
+    "source": "reports/json/skilltree-generator-readiness.json",
+    "status": "passed",
+    "diagnostic_only": true,
+    "student_facing_skilltree_use_authorized": false,
+    "generator_exposure_for_blocked_units_authorized": false,
+    "pv_projection_authorized": false,
+    "machine_registry_created": false,
+    "active_a_domain_count": 81,
+    "interactive_skill_count": 44,
+    "generator_blocked_count": 37,
+    "explicit_generator_block_count": 37,
+    "untracked_missing_generator_count": 0,
+    "blocked_interactive_leak_count": 0
   },
   "schema_validation_status": {
     "report_json_contract": "pass",

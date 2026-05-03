@@ -25,6 +25,6 @@ RX.5 completed the representation-operation report bridge without machine-regist
 ## Summary
 
 - Operation records: 33
-- Transfer gaps: 54
-- Generator-blocked operation rows: 23
+- Transfer gaps: 56
+- Generator-blocked operation rows: 25
 - PV-linked operation rows: 6

@@ -1,0 +1,654 @@
+{
+  "schema_version": 1,
+  "sprint_id": "RX.6",
+  "status": "active_block",
+  "generated_on": "2026-05-03T09:58:20.505Z",
+  "source_gate": "reports/review-gates/GATE-RX6-skilltree-generator-integration/technical-closure.json",
+  "blocked_reason": "active A-domain catalog units without generator implementations must be non-interactive until a later generator sprint implements and validates them",
+  "student_facing_skilltree_use_allowed": false,
+  "pv_projection_allowed": false,
+  "unit_count": 37,
+  "generator_blocked_units": [
+    "A45",
+    "A46",
+    "A47",
+    "A48",
+    "A49",
+    "A50",
+    "A51",
+    "A52",
+    "A53",
+    "A54",
+    "A55",
+    "A56",
+    "A57",
+    "A58",
+    "A59",
+    "A60",
+    "A61",
+    "A62",
+    "A63",
+    "A64",
+    "A65",
+    "A66",
+    "A67",
+    "A68",
+    "A69",
+    "A70",
+    "A72",
+    "A73",
+    "A74",
+    "A75",
+    "A76",
+    "A77",
+    "A78",
+    "A79",
+    "A82",
+    "A83",
+    "A84"
+  ],
+  "units": [
+    {
+      "unit_id": "A45",
+      "name": "P-Q grafiek tekenen uit tabel",
+      "generator": "GEN_A45",
+      "generator_implemented": false,
+      "generator_status": "missing_generator_implementation",
+      "student_facing_skilltree_use_allowed": false,
+      "pv_projection_allowed": false,
+      "non_interactive_until_generator_validates": true,
+      "proof_required_to_unblock": [
+        "GEN_A45 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "deployed browser bundle exports the unit as interactive",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A46",
+      "name": "Waarden aflezen en interpoleren in P-Q grafiek",
+      "generator": "GEN_A46",
+      "generator_implemented": false,
+      "generator_status": "missing_generator_implementation",
+      "student_facing_skilltree_use_allowed": false,
+      "pv_projection_allowed": false,
+      "non_interactive_until_generator_validates": true,
+      "proof_required_to_unblock": [
+        "GEN_A46 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "deployed browser bundle exports the unit as interactive",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A47",
+      "name": "Collectieve vraag uit tabellen optellen",
+      "generator": "GEN_A47",
+      "generator_implemented": false,
+      "generator_status": "missing_generator_implementation",
+      "student_facing_skilltree_use_allowed": false,
+      "pv_projection_allowed": false,
+      "non_interactive_until_generator_validates": true,
+      "proof_required_to_unblock": [
+        "GEN_A47 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "deployed browser bundle exports the unit as interactive",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A48",
+      "name": "Collectieve vraagfunctie algebraisch optellen",
+      "generator": "GEN_A48",
+      "generator_implemented": false,
+      "generator_status": "missing_generator_implementation",
+      "student_facing_skilltree_use_allowed": false,
+      "pv_projection_allowed": false,
+      "non_interactive_until_generator_validates": true,
+      "proof_required_to_unblock": [
+        "GEN_A48 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "deployed browser bundle exports the unit as interactive",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A49",
+      "name": "Aanbodcurve tekenen met economenassen",
+      "generator": "GEN_A49",
+      "generator_implemented": false,
+      "generator_status": "missing_generator_implementation",
+      "student_facing_skilltree_use_allowed": false,
+      "pv_projection_allowed": false,
+      "non_interactive_until_generator_validates": true,
+      "proof_required_to_unblock": [
+        "GEN_A49 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "deployed browser bundle exports the unit as interactive",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A50",
+      "name": "GVK en GCK berekenen",
+      "generator": "GEN_A50",
+      "generator_implemented": false,
+      "generator_status": "missing_generator_implementation",
+      "student_facing_skilltree_use_allowed": false,
+      "pv_projection_allowed": false,
+      "non_interactive_until_generator_validates": true,
+      "proof_required_to_unblock": [
+        "GEN_A50 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "deployed browser bundle exports the unit as interactive",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A51",
+      "name": "Overschot en tekort bij niet-evenwichtsprijs berekenen",
+      "generator": "GEN_A51",
+      "generator_implemented": false,
+      "generator_status": "missing_generator_implementation",
+      "student_facing_skilltree_use_allowed": false,
+      "pv_projection_allowed": false,
+      "non_interactive_until_generator_validates": true,
+      "proof_required_to_unblock": [
+        "GEN_A51 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "deployed browser bundle exports the unit as interactive",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A52",
+      "name": "MK en MO uit tabelverschillen berekenen",
+      "generator": "GEN_A52",
+      "generator_implemented": false,
+      "generator_status": "missing_generator_implementation",
+      "student_facing_skilltree_use_allowed": false,
+      "pv_projection_allowed": false,
+      "non_interactive_until_generator_validates": true,
+      "proof_required_to_unblock": [
+        "GEN_A52 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "deployed browser bundle exports the unit as interactive",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A53",
+      "name": "MK benaderen uit kwadratische TK-functie",
+      "generator": "GEN_A53",
+      "generator_implemented": false,
+      "generator_status": "missing_generator_implementation",
+      "student_facing_skilltree_use_allowed": false,
+      "pv_projection_allowed": false,
+      "non_interactive_until_generator_validates": true,
+      "proof_required_to_unblock": [
+        "GEN_A53 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "deployed browser bundle exports the unit as interactive",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A54",
+      "name": "Winstoptimum controleren met Q-1, Q en Q+1",
+      "generator": "GEN_A54",
+      "generator_implemented": false,
+      "generator_status": "missing_generator_implementation",
+      "student_facing_skilltree_use_allowed": false,
+      "pv_projection_allowed": false,
+      "non_interactive_until_generator_validates": true,
+      "proof_required_to_unblock": [
+        "GEN_A54 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "deployed browser bundle exports the unit as interactive",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A55",
+      "name": "Gevraagde hoeveelheid voorspellen met elasticiteit",
+      "generator": "GEN_A55",
+      "generator_implemented": false,
+      "generator_status": "missing_generator_implementation",
+      "student_facing_skilltree_use_allowed": false,
+      "pv_projection_allowed": false,
+      "non_interactive_until_generator_validates": true,
+      "proof_required_to_unblock": [
+        "GEN_A55 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "deployed browser bundle exports the unit as interactive",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A56",
+      "name": "Korte zijde bepalen bij bindende prijs",
+      "generator": "GEN_A56",
+      "generator_implemented": false,
+      "generator_status": "missing_generator_implementation",
+      "student_facing_skilltree_use_allowed": false,
+      "pv_projection_allowed": false,
+      "non_interactive_until_generator_validates": true,
+      "proof_required_to_unblock": [
+        "GEN_A56 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "deployed browser bundle exports the unit as interactive",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A57",
+      "name": "Afwentelingspercentage berekenen",
+      "generator": "GEN_A57",
+      "generator_implemented": false,
+      "generator_status": "missing_generator_implementation",
+      "student_facing_skilltree_use_allowed": false,
+      "pv_projection_allowed": false,
+      "non_interactive_until_generator_validates": true,
+      "proof_required_to_unblock": [
+        "GEN_A57 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "deployed browser bundle exports the unit as interactive",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A58",
+      "name": "Subsidie-uitgaven berekenen",
+      "generator": "GEN_A58",
+      "generator_implemented": false,
+      "generator_status": "missing_generator_implementation",
+      "student_facing_skilltree_use_allowed": false,
+      "pv_projection_allowed": false,
+      "non_interactive_until_generator_validates": true,
+      "proof_required_to_unblock": [
+        "GEN_A58 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "deployed browser bundle exports the unit as interactive",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A59",
+      "name": "Opkoopkosten bij minimumprijs berekenen",
+      "generator": "GEN_A59",
+      "generator_implemented": false,
+      "generator_status": "missing_generator_implementation",
+      "student_facing_skilltree_use_allowed": false,
+      "pv_projection_allowed": false,
+      "non_interactive_until_generator_validates": true,
+      "proof_required_to_unblock": [
+        "GEN_A59 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "deployed browser bundle exports the unit as interactive",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A60",
+      "name": "Vraagfunctie inverteren bij quotumhoeveelheid",
+      "generator": "GEN_A60",
+      "generator_implemented": false,
+      "generator_status": "missing_generator_implementation",
+      "student_facing_skilltree_use_allowed": false,
+      "pv_projection_allowed": false,
+      "non_interactive_until_generator_validates": true,
+      "proof_required_to_unblock": [
+        "GEN_A60 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "deployed browser bundle exports the unit as interactive",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A61",
+      "name": "Tabelwaarden selecteren voor berekening",
+      "generator": "GEN_A61",
+      "generator_implemented": false,
+      "generator_status": "missing_generator_implementation",
+      "student_facing_skilltree_use_allowed": false,
+      "pv_projection_allowed": false,
+      "non_interactive_until_generator_validates": true,
+      "proof_required_to_unblock": [
+        "GEN_A61 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "deployed browser bundle exports the unit as interactive",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A62",
+      "name": "Waarden aflezen uit staafdiagram",
+      "generator": "GEN_A62",
+      "generator_implemented": false,
+      "generator_status": "missing_generator_implementation",
+      "student_facing_skilltree_use_allowed": false,
+      "pv_projection_allowed": false,
+      "non_interactive_until_generator_validates": true,
+      "proof_required_to_unblock": [
+        "GEN_A62 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "deployed browser bundle exports the unit as interactive",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A63",
+      "name": "Waarden aflezen uit lijngrafiek",
+      "generator": "GEN_A63",
+      "generator_implemented": false,
+      "generator_status": "missing_generator_implementation",
+      "student_facing_skilltree_use_allowed": false,
+      "pv_projection_allowed": false,
+      "non_interactive_until_generator_validates": true,
+      "proof_required_to_unblock": [
+        "GEN_A63 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "deployed browser bundle exports the unit as interactive",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A64",
+      "name": "Aandelen aflezen uit cirkeldiagram",
+      "generator": "GEN_A64",
+      "generator_implemented": false,
+      "generator_status": "missing_generator_implementation",
+      "student_facing_skilltree_use_allowed": false,
+      "pv_projection_allowed": false,
+      "non_interactive_until_generator_validates": true,
+      "proof_required_to_unblock": [
+        "GEN_A64 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "deployed browser bundle exports the unit as interactive",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A65",
+      "name": "Absolute hoeveelheid berekenen uit aandeel en totaal",
+      "generator": "GEN_A65",
+      "generator_implemented": false,
+      "generator_status": "missing_generator_implementation",
+      "student_facing_skilltree_use_allowed": false,
+      "pv_projection_allowed": false,
+      "non_interactive_until_generator_validates": true,
+      "proof_required_to_unblock": [
+        "GEN_A65 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "deployed browser bundle exports the unit as interactive",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A66",
+      "name": "Basiswaarde en vergelijkingswaarde in bron bepalen",
+      "generator": "GEN_A66",
+      "generator_implemented": false,
+      "generator_status": "missing_generator_implementation",
+      "student_facing_skilltree_use_allowed": false,
+      "pv_projection_allowed": false,
+      "non_interactive_until_generator_validates": true,
+      "proof_required_to_unblock": [
+        "GEN_A66 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "deployed browser bundle exports the unit as interactive",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A67",
+      "name": "Procentuele verandering berekenen vanuit tabel",
+      "generator": "GEN_A67",
+      "generator_implemented": false,
+      "generator_status": "missing_generator_implementation",
+      "student_facing_skilltree_use_allowed": false,
+      "pv_projection_allowed": false,
+      "non_interactive_until_generator_validates": true,
+      "proof_required_to_unblock": [
+        "GEN_A67 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "deployed browser bundle exports the unit as interactive",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A68",
+      "name": "Procentuele verandering berekenen vanuit staafdiagram",
+      "generator": "GEN_A68",
+      "generator_implemented": false,
+      "generator_status": "missing_generator_implementation",
+      "student_facing_skilltree_use_allowed": false,
+      "pv_projection_allowed": false,
+      "non_interactive_until_generator_validates": true,
+      "proof_required_to_unblock": [
+        "GEN_A68 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "deployed browser bundle exports the unit as interactive",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A69",
+      "name": "Procentuele verandering berekenen vanuit lijngrafiek",
+      "generator": "GEN_A69",
+      "generator_implemented": false,
+      "generator_status": "missing_generator_implementation",
+      "student_facing_skilltree_use_allowed": false,
+      "pv_projection_allowed": false,
+      "non_interactive_until_generator_validates": true,
+      "proof_required_to_unblock": [
+        "GEN_A69 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "deployed browser bundle exports the unit as interactive",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A70",
+      "name": "Percentagepuntverandering in aandeel herkennen",
+      "generator": "GEN_A70",
+      "generator_implemented": false,
+      "generator_status": "missing_generator_implementation",
+      "student_facing_skilltree_use_allowed": false,
+      "pv_projection_allowed": false,
+      "non_interactive_until_generator_validates": true,
+      "proof_required_to_unblock": [
+        "GEN_A70 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "deployed browser bundle exports the unit as interactive",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A72",
+      "name": "Indexcijfer berekenen vanuit tabel",
+      "generator": "GEN_A72",
+      "generator_implemented": false,
+      "generator_status": "missing_generator_implementation",
+      "student_facing_skilltree_use_allowed": false,
+      "pv_projection_allowed": false,
+      "non_interactive_until_generator_validates": true,
+      "proof_required_to_unblock": [
+        "GEN_A72 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "deployed browser bundle exports the unit as interactive",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A73",
+      "name": "Indexverandering aflezen uit lijngrafiek",
+      "generator": "GEN_A73",
+      "generator_implemented": false,
+      "generator_status": "missing_generator_implementation",
+      "student_facing_skilltree_use_allowed": false,
+      "pv_projection_allowed": false,
+      "non_interactive_until_generator_validates": true,
+      "proof_required_to_unblock": [
+        "GEN_A73 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "deployed browser bundle exports the unit as interactive",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A74",
+      "name": "Procentuele verandering berekenen vanuit indexcijfers",
+      "generator": "GEN_A74",
+      "generator_implemented": false,
+      "generator_status": "missing_generator_implementation",
+      "student_facing_skilltree_use_allowed": false,
+      "pv_projection_allowed": false,
+      "non_interactive_until_generator_validates": true,
+      "proof_required_to_unblock": [
+        "GEN_A74 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "deployed browser bundle exports the unit as interactive",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A75",
+      "name": "Totale winst berekenen uit opbrengsten- en kostentabel",
+      "generator": "GEN_A75",
+      "generator_implemented": false,
+      "generator_status": "missing_generator_implementation",
+      "student_facing_skilltree_use_allowed": false,
+      "pv_projection_allowed": false,
+      "non_interactive_until_generator_validates": true,
+      "proof_required_to_unblock": [
+        "GEN_A75 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "deployed browser bundle exports the unit as interactive",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A76",
+      "name": "Totale winst berekenen uit P, GTK en Q",
+      "generator": "GEN_A76",
+      "generator_implemented": false,
+      "generator_status": "missing_generator_implementation",
+      "student_facing_skilltree_use_allowed": false,
+      "pv_projection_allowed": false,
+      "non_interactive_until_generator_validates": true,
+      "proof_required_to_unblock": [
+        "GEN_A76 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "deployed browser bundle exports the unit as interactive",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A77",
+      "name": "Break-even aflezen uit TO-TK-grafiek",
+      "generator": "GEN_A77",
+      "generator_implemented": false,
+      "generator_status": "missing_generator_implementation",
+      "student_facing_skilltree_use_allowed": false,
+      "pv_projection_allowed": false,
+      "non_interactive_until_generator_validates": true,
+      "proof_required_to_unblock": [
+        "GEN_A77 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "deployed browser bundle exports the unit as interactive",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A78",
+      "name": "Winst of verlies aflezen uit TO-TK-grafiek",
+      "generator": "GEN_A78",
+      "generator_implemented": false,
+      "generator_status": "missing_generator_implementation",
+      "student_facing_skilltree_use_allowed": false,
+      "pv_projection_allowed": false,
+      "non_interactive_until_generator_validates": true,
+      "proof_required_to_unblock": [
+        "GEN_A78 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "deployed browser bundle exports the unit as interactive",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A79",
+      "name": "Maximale winst bepalen uit TO-TK-tabel",
+      "generator": "GEN_A79",
+      "generator_implemented": false,
+      "generator_status": "missing_generator_implementation",
+      "student_facing_skilltree_use_allowed": false,
+      "pv_projection_allowed": false,
+      "non_interactive_until_generator_validates": true,
+      "proof_required_to_unblock": [
+        "GEN_A79 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "deployed browser bundle exports the unit as interactive",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A82",
+      "name": "Elasticiteit berekenen uit tabelwaarden",
+      "generator": "GEN_A82",
+      "generator_implemented": false,
+      "generator_status": "missing_generator_implementation",
+      "student_facing_skilltree_use_allowed": false,
+      "pv_projection_allowed": false,
+      "non_interactive_until_generator_validates": true,
+      "proof_required_to_unblock": [
+        "GEN_A82 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "deployed browser bundle exports the unit as interactive",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A83",
+      "name": "Prijselasticiteit van de vraag berekenen uit P-Q-grafiek",
+      "generator": "GEN_A83",
+      "generator_implemented": false,
+      "generator_status": "missing_generator_implementation",
+      "student_facing_skilltree_use_allowed": false,
+      "pv_projection_allowed": false,
+      "non_interactive_until_generator_validates": true,
+      "proof_required_to_unblock": [
+        "GEN_A83 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "deployed browser bundle exports the unit as interactive",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A84",
+      "name": "Omzetverandering beoordelen met elasticiteit uit bron",
+      "generator": "GEN_A84",
+      "generator_implemented": false,
+      "generator_status": "missing_generator_implementation",
+      "student_facing_skilltree_use_allowed": false,
+      "pv_projection_allowed": false,
+      "non_interactive_until_generator_validates": true,
+      "proof_required_to_unblock": [
+        "GEN_A84 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "deployed browser bundle exports the unit as interactive",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    }
+  ],
+  "blocked_downstream_uses": [
+    "student-facing skill-tree exposure for generator-blocked units",
+    "student diagnostics",
+    "adaptive routing",
+    "student-facing AI",
+    "automatic sequencing",
+    "mastery decisions",
+    "summative decisions",
+    "student-facing PV projection for generator-blocked units"
+  ]
+}

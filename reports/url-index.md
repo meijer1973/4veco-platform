@@ -75,3 +75,4 @@ Single-fetch entry point for external research agents (notably planning Claude i
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-RX3b-producer-graph-lane-review/bundle-urls.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-RX4-elasticity-market-diagram-review/bundle-urls.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-RX5-representation-operation-reports/bundle-urls.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-RX6-skilltree-generator-integration/bundle-urls.md

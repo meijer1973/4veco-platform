@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_on": "2026-05-02",
+  "updated_on": "2026-05-03",
   "generated_by": "manual-roadmap-versioning",
   "canonical_archive_directory": "docs/roadmaps/outdated",
   "current_operational_roadmaps": [
@@ -15,13 +15,14 @@
   "roadmaps": [
     {
       "roadmap_id": "references-team-roadmap",
-      "version": "v2.35-pv6-coverage-dashboard",
+      "version": "v2.36-rx6-skilltree-generator-integration",
       "title": "References Team Roadmap",
       "status": "active",
       "path": "references/reference-team-roadmap.md",
       "owner": "references_team",
-      "updated_on": "2026-05-02",
+      "updated_on": "2026-05-03",
       "supersedes": [
+        "docs/roadmaps/outdated/reference-team-roadmap-v2.35-pv6-coverage-dashboard.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.34-pv5-visual-projection-mvp.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.33-rx5-representation-operation-reports.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.32-pv4-procedure-game-contract.md",
@@ -57,7 +58,18 @@
         "knowledge/Exercise schema and quality/reference-team-roadmap Live version 28 April.md",
         "knowledge/Exercise schema and quality/roadmap-updated-repository-checked.md"
       ],
-      "notes": "Current operating roadmap after completing PV.6 coverage dashboard integration; RX.6 is the next sprint."
+      "notes": "Current operating roadmap after completing RX.6 skill-tree generator integration; PV.7 is the next sprint."
+    },
+    {
+      "roadmap_id": "references-team-roadmap-v2.35",
+      "version": "v2.35-pv6-coverage-dashboard",
+      "title": "References Team Roadmap before RX.6 skill-tree generator integration",
+      "status": "outdated",
+      "path": "docs/roadmaps/outdated/reference-team-roadmap-v2.35-pv6-coverage-dashboard.md",
+      "owner": "references_team",
+      "updated_on": "2026-05-02",
+      "superseded_by": "references/reference-team-roadmap.md",
+      "notes": "Snapshot archived before adding skill-tree generator readiness, deploy bundle split, and explicit RX.6 generator-block records."
     },
     {
       "roadmap_id": "references-team-roadmap-v2.34",

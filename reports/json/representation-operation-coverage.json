@@ -3,7 +3,7 @@
   "report_id": "representation-operation-coverage",
   "sprint_id": "RX.5",
   "generated_by": "build-scripts/references/build-representation-operation-coverage.js",
-  "generated_on": "2026-05-02T11:22:25.510Z",
+  "generated_on": "2026-05-03T09:58:23.224Z",
   "storage_decision": {
     "source_registry": "references/data/skill-operation-registry.json",
     "machine_registry_created": false,
@@ -64,13 +64,13 @@
       "representation_reading_foundation": 5,
       "representation_related": 2
     },
-    "generator_blocked_operation_count": 23,
+    "generator_blocked_operation_count": 25,
     "pv_linked_operation_count": 6,
     "foundation_requirement_count": 19,
     "foundation_live_count": 16,
     "foundation_held_count": 3,
     "graph_skill_tree_node_count": 32,
-    "transfer_gap_count": 54
+    "transfer_gap_count": 56
   },
   "foundation_coverage": [
     {
@@ -494,7 +494,8 @@
           "generator_implemented": false,
           "generator_blocked": true,
           "generator_block_sources": [
-            "references/data/sprints/RX.2-generator-blocked-units.json"
+            "references/data/sprints/RX.2-generator-blocked-units.json",
+            "references/data/sprints/RX.6-generator-blocked-units.json"
           ]
         }
       ],
@@ -541,11 +542,13 @@
           "unit_id": "A45",
           "declared_generator": "GEN_A45",
           "generator_implemented": false,
-          "generator_blocked": false,
-          "generator_block_sources": []
+          "generator_blocked": true,
+          "generator_block_sources": [
+            "references/data/sprints/RX.6-generator-blocked-units.json"
+          ]
         }
       ],
-      "any_generator_blocked": false,
+      "any_generator_blocked": true,
       "any_generator_implemented": false,
       "pv_template_ids": [],
       "pv_visual_state_ids": [],
@@ -599,7 +602,8 @@
           "generator_implemented": false,
           "generator_blocked": true,
           "generator_block_sources": [
-            "references/data/sprints/RX.2-generator-blocked-units.json"
+            "references/data/sprints/RX.2-generator-blocked-units.json",
+            "references/data/sprints/RX.6-generator-blocked-units.json"
           ]
         },
         {
@@ -608,7 +612,8 @@
           "generator_implemented": false,
           "generator_blocked": true,
           "generator_block_sources": [
-            "references/data/sprints/RX.2-generator-blocked-units.json"
+            "references/data/sprints/RX.2-generator-blocked-units.json",
+            "references/data/sprints/RX.6-generator-blocked-units.json"
           ]
         }
       ],
@@ -655,11 +660,13 @@
           "unit_id": "A46",
           "declared_generator": "GEN_A46",
           "generator_implemented": false,
-          "generator_blocked": false,
-          "generator_block_sources": []
+          "generator_blocked": true,
+          "generator_block_sources": [
+            "references/data/sprints/RX.6-generator-blocked-units.json"
+          ]
         }
       ],
-      "any_generator_blocked": false,
+      "any_generator_blocked": true,
       "any_generator_implemented": false,
       "pv_template_ids": [],
       "pv_visual_state_ids": [],
@@ -700,7 +707,8 @@
           "generator_implemented": false,
           "generator_blocked": true,
           "generator_block_sources": [
-            "references/data/sprints/RX.2b-generator-blocked-units.json"
+            "references/data/sprints/RX.2b-generator-blocked-units.json",
+            "references/data/sprints/RX.6-generator-blocked-units.json"
           ]
         }
       ],
@@ -745,7 +753,8 @@
           "generator_implemented": false,
           "generator_blocked": true,
           "generator_block_sources": [
-            "references/data/sprints/RX.2-generator-blocked-units.json"
+            "references/data/sprints/RX.2-generator-blocked-units.json",
+            "references/data/sprints/RX.6-generator-blocked-units.json"
           ]
         }
       ],
@@ -788,6 +797,7 @@
           "generator_implemented": false,
           "generator_blocked": true,
           "generator_block_sources": [
+            "references/data/sprints/RX.6-generator-blocked-units.json",
             "reports/review-gates/GATE-RX3b-producer-graph-lane-review/RX.3b-generator-blocked-units.json"
           ]
         }
@@ -831,6 +841,7 @@
           "generator_implemented": false,
           "generator_blocked": true,
           "generator_block_sources": [
+            "references/data/sprints/RX.6-generator-blocked-units.json",
             "reports/review-gates/GATE-RX4-elasticity-market-diagram-review/RX.4-generator-blocked-units.json"
           ]
         }
@@ -878,6 +889,7 @@
           "generator_implemented": false,
           "generator_blocked": true,
           "generator_block_sources": [
+            "references/data/sprints/RX.6-generator-blocked-units.json",
             "reports/review-gates/GATE-RX4-elasticity-market-diagram-review/RX.4-generator-blocked-units.json"
           ]
         }
@@ -927,7 +939,8 @@
           "generator_implemented": false,
           "generator_blocked": true,
           "generator_block_sources": [
-            "references/data/sprints/RX.2b-generator-blocked-units.json"
+            "references/data/sprints/RX.2b-generator-blocked-units.json",
+            "references/data/sprints/RX.6-generator-blocked-units.json"
           ]
         }
       ],
@@ -972,7 +985,8 @@
           "generator_implemented": false,
           "generator_blocked": true,
           "generator_block_sources": [
-            "references/data/sprints/RX.2-generator-blocked-units.json"
+            "references/data/sprints/RX.2-generator-blocked-units.json",
+            "references/data/sprints/RX.6-generator-blocked-units.json"
           ]
         }
       ],
@@ -1017,7 +1031,8 @@
           "generator_implemented": false,
           "generator_blocked": true,
           "generator_block_sources": [
-            "references/data/sprints/RX.2b-generator-blocked-units.json"
+            "references/data/sprints/RX.2b-generator-blocked-units.json",
+            "references/data/sprints/RX.6-generator-blocked-units.json"
           ]
         }
       ],
@@ -1060,6 +1075,7 @@
           "generator_implemented": false,
           "generator_blocked": true,
           "generator_block_sources": [
+            "references/data/sprints/RX.6-generator-blocked-units.json",
             "reports/review-gates/GATE-RX3a-first-lane-mutation-review/RX.3a-generator-blocked-units.json"
           ]
         }
@@ -1105,7 +1121,8 @@
           "generator_implemented": false,
           "generator_blocked": true,
           "generator_block_sources": [
-            "references/data/sprints/RX.2b-generator-blocked-units.json"
+            "references/data/sprints/RX.2b-generator-blocked-units.json",
+            "references/data/sprints/RX.6-generator-blocked-units.json"
           ]
         }
       ],
@@ -1150,7 +1167,8 @@
           "generator_implemented": false,
           "generator_blocked": true,
           "generator_block_sources": [
-            "references/data/sprints/RX.2-generator-blocked-units.json"
+            "references/data/sprints/RX.2-generator-blocked-units.json",
+            "references/data/sprints/RX.6-generator-blocked-units.json"
           ]
         }
       ],
@@ -1195,7 +1213,8 @@
           "generator_implemented": false,
           "generator_blocked": true,
           "generator_block_sources": [
-            "references/data/sprints/RX.2b-generator-blocked-units.json"
+            "references/data/sprints/RX.2b-generator-blocked-units.json",
+            "references/data/sprints/RX.6-generator-blocked-units.json"
           ]
         }
       ],
@@ -1269,7 +1288,8 @@
           "generator_implemented": false,
           "generator_blocked": true,
           "generator_block_sources": [
-            "references/data/sprints/RX.2-generator-blocked-units.json"
+            "references/data/sprints/RX.2-generator-blocked-units.json",
+            "references/data/sprints/RX.6-generator-blocked-units.json"
           ]
         }
       ],
@@ -1314,7 +1334,8 @@
           "generator_implemented": false,
           "generator_blocked": true,
           "generator_block_sources": [
-            "references/data/sprints/RX.2-generator-blocked-units.json"
+            "references/data/sprints/RX.2-generator-blocked-units.json",
+            "references/data/sprints/RX.6-generator-blocked-units.json"
           ]
         }
       ],
@@ -1359,7 +1380,8 @@
           "generator_implemented": false,
           "generator_blocked": true,
           "generator_block_sources": [
-            "references/data/sprints/RX.2b-generator-blocked-units.json"
+            "references/data/sprints/RX.2b-generator-blocked-units.json",
+            "references/data/sprints/RX.6-generator-blocked-units.json"
           ]
         }
       ],
@@ -1402,6 +1424,7 @@
           "generator_implemented": false,
           "generator_blocked": true,
           "generator_block_sources": [
+            "references/data/sprints/RX.6-generator-blocked-units.json",
             "reports/review-gates/GATE-RX3a-first-lane-mutation-review/RX.3a-generator-blocked-units.json"
           ]
         }
@@ -1445,6 +1468,7 @@
           "generator_implemented": false,
           "generator_blocked": true,
           "generator_block_sources": [
+            "references/data/sprints/RX.6-generator-blocked-units.json",
             "reports/review-gates/GATE-RX3a-first-lane-mutation-review/RX.3a-generator-blocked-units.json"
           ]
         }
@@ -1517,6 +1541,7 @@
           "generator_implemented": false,
           "generator_blocked": true,
           "generator_block_sources": [
+            "references/data/sprints/RX.6-generator-blocked-units.json",
             "reports/review-gates/GATE-RX3b-producer-graph-lane-review/RX.3b-generator-blocked-units.json"
           ]
         }
@@ -1589,6 +1614,7 @@
           "generator_implemented": false,
           "generator_blocked": true,
           "generator_block_sources": [
+            "references/data/sprints/RX.6-generator-blocked-units.json",
             "reports/review-gates/GATE-RX4-elasticity-market-diagram-review/RX.4-generator-blocked-units.json"
           ]
         }
@@ -1638,7 +1664,8 @@
           "generator_implemented": false,
           "generator_blocked": true,
           "generator_block_sources": [
-            "references/data/sprints/RX.2b-generator-blocked-units.json"
+            "references/data/sprints/RX.2b-generator-blocked-units.json",
+            "references/data/sprints/RX.6-generator-blocked-units.json"
           ]
         }
       ],
@@ -1683,7 +1710,8 @@
           "generator_implemented": false,
           "generator_blocked": true,
           "generator_block_sources": [
-            "references/data/sprints/RX.2-generator-blocked-units.json"
+            "references/data/sprints/RX.2-generator-blocked-units.json",
+            "references/data/sprints/RX.6-generator-blocked-units.json"
           ]
         }
       ],

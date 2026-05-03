@@ -1,0 +1,37 @@
+{
+  "sprint_id": "RX.6",
+  "name": "Skill-Tree And Generator Integration",
+  "status": "planned",
+  "plan": "docs/sprints/RX.6-plan.md",
+  "baseline": "reports/sprints/RX.6-baseline.md",
+  "gate_id": "GATE-RX6-skilltree-generator-integration",
+  "human_review_required": false,
+  "protected_reference_data_changes_allowed": false,
+  "machine_registry_promotion_authorized": false,
+  "student_facing_skilltree_use_authorized": false,
+  "pv_projection_authorized": false,
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js docs/sprints/RX.6-plan.md",
+    "node build-scripts/references/build-skilltree-generator-readiness.js",
+    "node build-scripts/references/check-skilltree-generator-readiness.js",
+    "npx.cmd jest engines/tests/skilltree-data.test.js --runInBand",
+    "node build-scripts/references/build-representation-operation-coverage.js",
+    "node build-scripts/references/check-representation-operation-coverage.js",
+    "node build-scripts/references/build-procedure-visual-coverage.js",
+    "node build-scripts/references/check-procedure-visual-coverage.js",
+    "node build-scripts/reports/generate-reference-health.js",
+    "node build-scripts/reports/check-reference-health.js",
+    "node build-scripts/sprints/emit-gate-bundle-urls.js GATE-RX6-skilltree-generator-integration",
+    "node build-scripts/sprints/check-bundle-urls.js GATE-RX6-skilltree-generator-integration",
+    "node build-scripts/sprints/check-sprint-bundle.js RX.6",
+    "node build-scripts/sprints/check-sprint-result.js reports/sprints/RX.6-result.md",
+    "node build-scripts/sprints/check-sprint-bundle.js RX.6 --complete",
+    "node build-scripts/references/check-roadmap-version-index.js"
+  ],
+  "forbidden_outputs": [
+    "references/machine/skilltree-generator-readiness.json",
+    "references/machine/skilltree-generator-blocks.json",
+    "references/machine/procedure-templates.json",
+    "references/machine/visual-states.json"
+  ]
+}

@@ -1,0 +1,1844 @@
+{
+  "schema_version": 1,
+  "report_id": "skilltree-generator-readiness",
+  "sprint_id": "RX.6",
+  "gate_id": "GATE-RX6-skilltree-generator-integration",
+  "generated_by": "build-scripts/references/build-skilltree-generator-readiness.js",
+  "generated_on": "2026-05-03T09:58:20.524Z",
+  "status": "passed",
+  "policy": {
+    "diagnostic_only": true,
+    "student_facing_skilltree_use_authorized": false,
+    "generator_exposure_for_blocked_units_authorized": false,
+    "pv_projection_authorized": false,
+    "lesson_target_write_authorized": false,
+    "machine_registry_created": false
+  },
+  "source_files": [
+    "references/machine/micro-teaching-units.json",
+    "engines/skilltree/generators.js",
+    "engines/skilltree/base-elements.js",
+    "scripts/deploy.js",
+    "references/data/sprints/RX.6-generator-blocked-units.json"
+  ],
+  "summary": {
+    "active_a_domain_count": 81,
+    "interactive_skill_count": 44,
+    "generator_blocked_count": 37,
+    "explicit_generator_block_count": 37,
+    "untracked_missing_generator_count": 0,
+    "deploy_interactive_skill_count": 44,
+    "deploy_generator_blocked_count": 37,
+    "blocked_interactive_leak_count": 0
+  },
+  "rows": [
+    {
+      "unit_id": "A01",
+      "name": "Lineaire functie opstellen",
+      "aspects": [
+        "rekenen"
+      ],
+      "declared_generator": "GEN_A01",
+      "generator_implemented": true,
+      "generator_blocked": false,
+      "generator_block_sources": [],
+      "interactive_skilltree_use_allowed": true,
+      "student_facing_skilltree_use_allowed": true,
+      "base_elements_export": "interactive",
+      "deploy_bundle_export": "interactive",
+      "needs_filtered_for_interactive_tree": [],
+      "proof_required_to_unblock": []
+    },
+    {
+      "unit_id": "A02",
+      "name": "Vergelijking oplossen",
+      "aspects": [
+        "rekenen",
+        "verbaal"
+      ],
+      "declared_generator": "GEN_A02",
+      "generator_implemented": true,
+      "generator_blocked": false,
+      "generator_block_sources": [],
+      "interactive_skilltree_use_allowed": true,
+      "student_facing_skilltree_use_allowed": true,
+      "base_elements_export": "interactive",
+      "deploy_bundle_export": "interactive",
+      "needs_filtered_for_interactive_tree": [],
+      "proof_required_to_unblock": []
+    },
+    {
+      "unit_id": "A03",
+      "name": "Functie omschrijven (P↔Q)",
+      "aspects": [
+        "rekenen"
+      ],
+      "declared_generator": "GEN_A03",
+      "generator_implemented": true,
+      "generator_blocked": false,
+      "generator_block_sources": [],
+      "interactive_skilltree_use_allowed": true,
+      "student_facing_skilltree_use_allowed": true,
+      "base_elements_export": "interactive",
+      "deploy_bundle_export": "interactive",
+      "needs_filtered_for_interactive_tree": [],
+      "proof_required_to_unblock": []
+    },
+    {
+      "unit_id": "A04",
+      "name": "Substitueren",
+      "aspects": [
+        "rekenen",
+        "verbaal"
+      ],
+      "declared_generator": "GEN_A04",
+      "generator_implemented": true,
+      "generator_blocked": false,
+      "generator_block_sources": [],
+      "interactive_skilltree_use_allowed": true,
+      "student_facing_skilltree_use_allowed": true,
+      "base_elements_export": "interactive",
+      "deploy_bundle_export": "interactive",
+      "needs_filtered_for_interactive_tree": [],
+      "proof_required_to_unblock": []
+    },
+    {
+      "unit_id": "A05",
+      "name": "Snijpunt met P-as berekenen",
+      "aspects": [
+        "grafisch",
+        "rekenen"
+      ],
+      "declared_generator": "GEN_A05",
+      "generator_implemented": true,
+      "generator_blocked": false,
+      "generator_block_sources": [],
+      "interactive_skilltree_use_allowed": true,
+      "student_facing_skilltree_use_allowed": true,
+      "base_elements_export": "interactive",
+      "deploy_bundle_export": "interactive",
+      "needs_filtered_for_interactive_tree": [],
+      "proof_required_to_unblock": []
+    },
+    {
+      "unit_id": "A06",
+      "name": "Evenwichtsprijs & -hoeveelheid",
+      "aspects": [
+        "rekenen",
+        "verbaal"
+      ],
+      "declared_generator": "GEN_A06",
+      "generator_implemented": true,
+      "generator_blocked": false,
+      "generator_block_sources": [],
+      "interactive_skilltree_use_allowed": true,
+      "student_facing_skilltree_use_allowed": true,
+      "base_elements_export": "interactive",
+      "deploy_bundle_export": "interactive",
+      "needs_filtered_for_interactive_tree": [
+        "A01",
+        "A02"
+      ],
+      "proof_required_to_unblock": []
+    },
+    {
+      "unit_id": "A07",
+      "name": "TO-functie opstellen",
+      "aspects": [
+        "grafisch",
+        "rekenen",
+        "verbaal"
+      ],
+      "declared_generator": "GEN_A07",
+      "generator_implemented": true,
+      "generator_blocked": false,
+      "generator_block_sources": [],
+      "interactive_skilltree_use_allowed": true,
+      "student_facing_skilltree_use_allowed": true,
+      "base_elements_export": "interactive",
+      "deploy_bundle_export": "interactive",
+      "needs_filtered_for_interactive_tree": [
+        "A01",
+        "A03"
+      ],
+      "proof_required_to_unblock": []
+    },
+    {
+      "unit_id": "A08",
+      "name": "TK-functie herkennen",
+      "aspects": [
+        "rekenen",
+        "verbaal"
+      ],
+      "declared_generator": "GEN_A08",
+      "generator_implemented": true,
+      "generator_blocked": false,
+      "generator_block_sources": [],
+      "interactive_skilltree_use_allowed": true,
+      "student_facing_skilltree_use_allowed": true,
+      "base_elements_export": "interactive",
+      "deploy_bundle_export": "interactive",
+      "needs_filtered_for_interactive_tree": [
+        "A01"
+      ],
+      "proof_required_to_unblock": []
+    },
+    {
+      "unit_id": "A09",
+      "name": "Collectief aanbod",
+      "aspects": [
+        "rekenen"
+      ],
+      "declared_generator": "GEN_A09",
+      "generator_implemented": true,
+      "generator_blocked": false,
+      "generator_block_sources": [],
+      "interactive_skilltree_use_allowed": true,
+      "student_facing_skilltree_use_allowed": true,
+      "base_elements_export": "interactive",
+      "deploy_bundle_export": "interactive",
+      "needs_filtered_for_interactive_tree": [
+        "A03"
+      ],
+      "proof_required_to_unblock": []
+    },
+    {
+      "unit_id": "A10",
+      "name": "Oppervlakte driehoek",
+      "aspects": [
+        "grafisch",
+        "rekenen"
+      ],
+      "declared_generator": "GEN_A10",
+      "generator_implemented": true,
+      "generator_blocked": false,
+      "generator_block_sources": [],
+      "interactive_skilltree_use_allowed": true,
+      "student_facing_skilltree_use_allowed": true,
+      "base_elements_export": "interactive",
+      "deploy_bundle_export": "interactive",
+      "needs_filtered_for_interactive_tree": [
+        "A04"
+      ],
+      "proof_required_to_unblock": []
+    },
+    {
+      "unit_id": "A11",
+      "name": "Afgeleide bepalen",
+      "aspects": [
+        "rekenen"
+      ],
+      "declared_generator": "GEN_A11",
+      "generator_implemented": true,
+      "generator_blocked": false,
+      "generator_block_sources": [],
+      "interactive_skilltree_use_allowed": true,
+      "student_facing_skilltree_use_allowed": true,
+      "base_elements_export": "interactive",
+      "deploy_bundle_export": "interactive",
+      "needs_filtered_for_interactive_tree": [
+        "A01"
+      ],
+      "proof_required_to_unblock": []
+    },
+    {
+      "unit_id": "A12",
+      "name": "MO bepalen",
+      "aspects": [
+        "grafisch",
+        "rekenen"
+      ],
+      "declared_generator": "GEN_A12",
+      "generator_implemented": true,
+      "generator_blocked": false,
+      "generator_block_sources": [],
+      "interactive_skilltree_use_allowed": true,
+      "student_facing_skilltree_use_allowed": true,
+      "base_elements_export": "interactive",
+      "deploy_bundle_export": "interactive",
+      "needs_filtered_for_interactive_tree": [
+        "A11",
+        "A07"
+      ],
+      "proof_required_to_unblock": []
+    },
+    {
+      "unit_id": "A13",
+      "name": "MK bepalen",
+      "aspects": [
+        "rekenen"
+      ],
+      "declared_generator": "GEN_A13",
+      "generator_implemented": true,
+      "generator_blocked": false,
+      "generator_block_sources": [],
+      "interactive_skilltree_use_allowed": true,
+      "student_facing_skilltree_use_allowed": true,
+      "base_elements_export": "interactive",
+      "deploy_bundle_export": "interactive",
+      "needs_filtered_for_interactive_tree": [
+        "A11",
+        "A08"
+      ],
+      "proof_required_to_unblock": []
+    },
+    {
+      "unit_id": "A14",
+      "name": "GTK bepalen",
+      "aspects": [
+        "rekenen",
+        "verbaal"
+      ],
+      "declared_generator": "GEN_A14",
+      "generator_implemented": true,
+      "generator_blocked": false,
+      "generator_block_sources": [],
+      "interactive_skilltree_use_allowed": true,
+      "student_facing_skilltree_use_allowed": true,
+      "base_elements_export": "interactive",
+      "deploy_bundle_export": "interactive",
+      "needs_filtered_for_interactive_tree": [
+        "A08"
+      ],
+      "proof_required_to_unblock": []
+    },
+    {
+      "unit_id": "A15",
+      "name": "Prijselasticiteit van de vraag",
+      "aspects": [
+        "rekenen",
+        "verbaal"
+      ],
+      "declared_generator": "GEN_A15",
+      "generator_implemented": true,
+      "generator_blocked": false,
+      "generator_block_sources": [],
+      "interactive_skilltree_use_allowed": true,
+      "student_facing_skilltree_use_allowed": true,
+      "base_elements_export": "interactive",
+      "deploy_bundle_export": "interactive",
+      "needs_filtered_for_interactive_tree": [
+        "A04",
+        "A38"
+      ],
+      "proof_required_to_unblock": []
+    },
+    {
+      "unit_id": "A16",
+      "name": "Kruiselasticiteit",
+      "aspects": [
+        "rekenen",
+        "verbaal"
+      ],
+      "declared_generator": "GEN_A16",
+      "generator_implemented": true,
+      "generator_blocked": false,
+      "generator_block_sources": [],
+      "interactive_skilltree_use_allowed": true,
+      "student_facing_skilltree_use_allowed": true,
+      "base_elements_export": "interactive",
+      "deploy_bundle_export": "interactive",
+      "needs_filtered_for_interactive_tree": [
+        "A15"
+      ],
+      "proof_required_to_unblock": []
+    },
+    {
+      "unit_id": "A17",
+      "name": "Inkomenselasticiteit",
+      "aspects": [
+        "rekenen"
+      ],
+      "declared_generator": "GEN_A17",
+      "generator_implemented": true,
+      "generator_blocked": false,
+      "generator_block_sources": [],
+      "interactive_skilltree_use_allowed": true,
+      "student_facing_skilltree_use_allowed": true,
+      "base_elements_export": "interactive",
+      "deploy_bundle_export": "interactive",
+      "needs_filtered_for_interactive_tree": [
+        "A15"
+      ],
+      "proof_required_to_unblock": []
+    },
+    {
+      "unit_id": "A18",
+      "name": "Comparatief voordeel bepalen",
+      "aspects": [
+        "rekenen",
+        "verbaal"
+      ],
+      "declared_generator": "GEN_A18",
+      "generator_implemented": true,
+      "generator_blocked": false,
+      "generator_block_sources": [],
+      "interactive_skilltree_use_allowed": true,
+      "student_facing_skilltree_use_allowed": true,
+      "base_elements_export": "interactive",
+      "deploy_bundle_export": "interactive",
+      "needs_filtered_for_interactive_tree": [],
+      "proof_required_to_unblock": []
+    },
+    {
+      "unit_id": "A19",
+      "name": "Surplus berekenen (CS/PS)",
+      "aspects": [
+        "grafisch",
+        "rekenen",
+        "verbaal"
+      ],
+      "declared_generator": "GEN_A19",
+      "generator_implemented": true,
+      "generator_blocked": false,
+      "generator_block_sources": [],
+      "interactive_skilltree_use_allowed": true,
+      "student_facing_skilltree_use_allowed": true,
+      "base_elements_export": "interactive",
+      "deploy_bundle_export": "interactive",
+      "needs_filtered_for_interactive_tree": [
+        "A06",
+        "A10"
+      ],
+      "proof_required_to_unblock": []
+    },
+    {
+      "unit_id": "A20",
+      "name": "MO = MK oplossen",
+      "aspects": [
+        "rekenen",
+        "verbaal"
+      ],
+      "declared_generator": "GEN_A20",
+      "generator_implemented": true,
+      "generator_blocked": false,
+      "generator_block_sources": [],
+      "interactive_skilltree_use_allowed": true,
+      "student_facing_skilltree_use_allowed": true,
+      "base_elements_export": "interactive",
+      "deploy_bundle_export": "interactive",
+      "needs_filtered_for_interactive_tree": [
+        "A12",
+        "A13",
+        "A02"
+      ],
+      "proof_required_to_unblock": []
+    },
+    {
+      "unit_id": "A21",
+      "name": "Winst = TO − TK",
+      "aspects": [
+        "rekenen",
+        "verbaal"
+      ],
+      "declared_generator": "GEN_A21",
+      "generator_implemented": true,
+      "generator_blocked": false,
+      "generator_block_sources": [],
+      "interactive_skilltree_use_allowed": true,
+      "student_facing_skilltree_use_allowed": true,
+      "base_elements_export": "interactive",
+      "deploy_bundle_export": "interactive",
+      "needs_filtered_for_interactive_tree": [
+        "A07",
+        "A08",
+        "A04"
+      ],
+      "proof_required_to_unblock": []
+    },
+    {
+      "unit_id": "A22",
+      "name": "Break-even (TO = TK)",
+      "aspects": [
+        "rekenen",
+        "verbaal"
+      ],
+      "declared_generator": "GEN_A22",
+      "generator_implemented": true,
+      "generator_blocked": false,
+      "generator_block_sources": [],
+      "interactive_skilltree_use_allowed": true,
+      "student_facing_skilltree_use_allowed": true,
+      "base_elements_export": "interactive",
+      "deploy_bundle_export": "interactive",
+      "needs_filtered_for_interactive_tree": [
+        "A07",
+        "A08",
+        "A02"
+      ],
+      "proof_required_to_unblock": []
+    },
+    {
+      "unit_id": "A23",
+      "name": "Evenwicht met heffing",
+      "aspects": [
+        "rekenen"
+      ],
+      "declared_generator": "GEN_A23",
+      "generator_implemented": true,
+      "generator_blocked": false,
+      "generator_block_sources": [],
+      "interactive_skilltree_use_allowed": true,
+      "student_facing_skilltree_use_allowed": true,
+      "base_elements_export": "interactive",
+      "deploy_bundle_export": "interactive",
+      "needs_filtered_for_interactive_tree": [
+        "A06",
+        "A01",
+        "A15"
+      ],
+      "proof_required_to_unblock": []
+    },
+    {
+      "unit_id": "A24",
+      "name": "Collectief aanbod bepalen",
+      "aspects": [
+        "rekenen"
+      ],
+      "declared_generator": "GEN_A24",
+      "generator_implemented": true,
+      "generator_blocked": false,
+      "generator_block_sources": [],
+      "interactive_skilltree_use_allowed": true,
+      "student_facing_skilltree_use_allowed": true,
+      "base_elements_export": "interactive",
+      "deploy_bundle_export": "interactive",
+      "needs_filtered_for_interactive_tree": [
+        "A09",
+        "A03"
+      ],
+      "proof_required_to_unblock": []
+    },
+    {
+      "unit_id": "A25",
+      "name": "Minimumprijs analyseren",
+      "aspects": [
+        "grafisch",
+        "rekenen",
+        "verbaal"
+      ],
+      "declared_generator": "GEN_A25",
+      "generator_implemented": true,
+      "generator_blocked": false,
+      "generator_block_sources": [],
+      "interactive_skilltree_use_allowed": true,
+      "student_facing_skilltree_use_allowed": true,
+      "base_elements_export": "interactive",
+      "deploy_bundle_export": "interactive",
+      "needs_filtered_for_interactive_tree": [
+        "A06"
+      ],
+      "proof_required_to_unblock": []
+    },
+    {
+      "unit_id": "A26",
+      "name": "Maximumprijs analyseren",
+      "aspects": [
+        "grafisch",
+        "rekenen",
+        "verbaal"
+      ],
+      "declared_generator": "GEN_A26",
+      "generator_implemented": true,
+      "generator_blocked": false,
+      "generator_block_sources": [],
+      "interactive_skilltree_use_allowed": true,
+      "student_facing_skilltree_use_allowed": true,
+      "base_elements_export": "interactive",
+      "deploy_bundle_export": "interactive",
+      "needs_filtered_for_interactive_tree": [
+        "A06"
+      ],
+      "proof_required_to_unblock": []
+    },
+    {
+      "unit_id": "A27",
+      "name": "Subsidie analyseren",
+      "aspects": [
+        "grafisch",
+        "rekenen",
+        "verbaal"
+      ],
+      "declared_generator": "GEN_A27",
+      "generator_implemented": true,
+      "generator_blocked": false,
+      "generator_block_sources": [],
+      "interactive_skilltree_use_allowed": true,
+      "student_facing_skilltree_use_allowed": true,
+      "base_elements_export": "interactive",
+      "deploy_bundle_export": "interactive",
+      "needs_filtered_for_interactive_tree": [
+        "A06",
+        "A01"
+      ],
+      "proof_required_to_unblock": []
+    },
+    {
+      "unit_id": "A28",
+      "name": "MK = GTK oplossen",
+      "aspects": [
+        "grafisch",
+        "rekenen"
+      ],
+      "declared_generator": "GEN_A28",
+      "generator_implemented": true,
+      "generator_blocked": false,
+      "generator_block_sources": [],
+      "interactive_skilltree_use_allowed": true,
+      "student_facing_skilltree_use_allowed": true,
+      "base_elements_export": "interactive",
+      "deploy_bundle_export": "interactive",
+      "needs_filtered_for_interactive_tree": [
+        "A13",
+        "A14"
+      ],
+      "proof_required_to_unblock": []
+    },
+    {
+      "unit_id": "A29",
+      "name": "Break-even analyse",
+      "aspects": [
+        "rekenen"
+      ],
+      "declared_generator": "GEN_A29",
+      "generator_implemented": true,
+      "generator_blocked": false,
+      "generator_block_sources": [],
+      "interactive_skilltree_use_allowed": true,
+      "student_facing_skilltree_use_allowed": true,
+      "base_elements_export": "interactive",
+      "deploy_bundle_export": "interactive",
+      "needs_filtered_for_interactive_tree": [
+        "A22"
+      ],
+      "proof_required_to_unblock": []
+    },
+    {
+      "unit_id": "A30",
+      "name": "Consumentensurplus",
+      "aspects": [
+        "rekenen"
+      ],
+      "declared_generator": "GEN_A30",
+      "generator_implemented": true,
+      "generator_blocked": false,
+      "generator_block_sources": [],
+      "interactive_skilltree_use_allowed": true,
+      "student_facing_skilltree_use_allowed": true,
+      "base_elements_export": "interactive",
+      "deploy_bundle_export": "interactive",
+      "needs_filtered_for_interactive_tree": [
+        "A19"
+      ],
+      "proof_required_to_unblock": []
+    },
+    {
+      "unit_id": "A31",
+      "name": "Individueel → collectief aanbod",
+      "aspects": [
+        "rekenen"
+      ],
+      "declared_generator": "GEN_A31",
+      "generator_implemented": true,
+      "generator_blocked": false,
+      "generator_block_sources": [],
+      "interactive_skilltree_use_allowed": true,
+      "student_facing_skilltree_use_allowed": true,
+      "base_elements_export": "interactive",
+      "deploy_bundle_export": "interactive",
+      "needs_filtered_for_interactive_tree": [
+        "A24"
+      ],
+      "proof_required_to_unblock": []
+    },
+    {
+      "unit_id": "A32",
+      "name": "Welvaartsverlies belasting",
+      "aspects": [
+        "grafisch",
+        "rekenen"
+      ],
+      "declared_generator": "GEN_A32",
+      "generator_implemented": true,
+      "generator_blocked": false,
+      "generator_block_sources": [],
+      "interactive_skilltree_use_allowed": true,
+      "student_facing_skilltree_use_allowed": true,
+      "base_elements_export": "interactive",
+      "deploy_bundle_export": "interactive",
+      "needs_filtered_for_interactive_tree": [
+        "A19",
+        "A23"
+      ],
+      "proof_required_to_unblock": []
+    },
+    {
+      "unit_id": "A33",
+      "name": "Optimale productie bij VM",
+      "aspects": [
+        "rekenen"
+      ],
+      "declared_generator": "GEN_A33",
+      "generator_implemented": true,
+      "generator_blocked": false,
+      "generator_block_sources": [],
+      "interactive_skilltree_use_allowed": true,
+      "student_facing_skilltree_use_allowed": true,
+      "base_elements_export": "interactive",
+      "deploy_bundle_export": "interactive",
+      "needs_filtered_for_interactive_tree": [
+        "A13",
+        "A14",
+        "A04"
+      ],
+      "proof_required_to_unblock": []
+    },
+    {
+      "unit_id": "A34",
+      "name": "Effecten invoerrecht",
+      "aspects": [
+        "rekenen",
+        "verbaal"
+      ],
+      "declared_generator": "GEN_A34",
+      "generator_implemented": true,
+      "generator_blocked": false,
+      "generator_block_sources": [],
+      "interactive_skilltree_use_allowed": true,
+      "student_facing_skilltree_use_allowed": true,
+      "base_elements_export": "interactive",
+      "deploy_bundle_export": "interactive",
+      "needs_filtered_for_interactive_tree": [
+        "A19",
+        "A23",
+        "A06"
+      ],
+      "proof_required_to_unblock": []
+    },
+    {
+      "unit_id": "A35",
+      "name": "Max. winst monopolist",
+      "aspects": [
+        "rekenen"
+      ],
+      "declared_generator": "GEN_A35",
+      "generator_implemented": true,
+      "generator_blocked": false,
+      "generator_block_sources": [],
+      "interactive_skilltree_use_allowed": true,
+      "student_facing_skilltree_use_allowed": true,
+      "base_elements_export": "interactive",
+      "deploy_bundle_export": "interactive",
+      "needs_filtered_for_interactive_tree": [
+        "A20",
+        "A21",
+        "A04"
+      ],
+      "proof_required_to_unblock": []
+    },
+    {
+      "unit_id": "A36",
+      "name": "Prijsdiscriminatie",
+      "aspects": [
+        "rekenen"
+      ],
+      "declared_generator": "GEN_A36",
+      "generator_implemented": true,
+      "generator_blocked": false,
+      "generator_block_sources": [],
+      "interactive_skilltree_use_allowed": true,
+      "student_facing_skilltree_use_allowed": true,
+      "base_elements_export": "interactive",
+      "deploy_bundle_export": "interactive",
+      "needs_filtered_for_interactive_tree": [
+        "A20",
+        "A21"
+      ],
+      "proof_required_to_unblock": []
+    },
+    {
+      "unit_id": "A37",
+      "name": "Lange-termijnevenwicht VM",
+      "aspects": [
+        "rekenen"
+      ],
+      "declared_generator": "GEN_A37",
+      "generator_implemented": true,
+      "generator_blocked": false,
+      "generator_block_sources": [],
+      "interactive_skilltree_use_allowed": true,
+      "student_facing_skilltree_use_allowed": true,
+      "base_elements_export": "interactive",
+      "deploy_bundle_export": "interactive",
+      "needs_filtered_for_interactive_tree": [
+        "A28"
+      ],
+      "proof_required_to_unblock": []
+    },
+    {
+      "unit_id": "A38",
+      "name": "Procentuele verandering berekenen",
+      "aspects": [
+        "rekenen"
+      ],
+      "declared_generator": "GEN_A38",
+      "generator_implemented": true,
+      "generator_blocked": false,
+      "generator_block_sources": [],
+      "interactive_skilltree_use_allowed": true,
+      "student_facing_skilltree_use_allowed": true,
+      "base_elements_export": "interactive",
+      "deploy_bundle_export": "interactive",
+      "needs_filtered_for_interactive_tree": [],
+      "proof_required_to_unblock": []
+    },
+    {
+      "unit_id": "A39",
+      "name": "Prijsindex (CPI) berekenen",
+      "aspects": [
+        "rekenen"
+      ],
+      "declared_generator": "GEN_A39",
+      "generator_implemented": true,
+      "generator_blocked": false,
+      "generator_block_sources": [],
+      "interactive_skilltree_use_allowed": true,
+      "student_facing_skilltree_use_allowed": true,
+      "base_elements_export": "interactive",
+      "deploy_bundle_export": "interactive",
+      "needs_filtered_for_interactive_tree": [
+        "A38"
+      ],
+      "proof_required_to_unblock": []
+    },
+    {
+      "unit_id": "A40",
+      "name": "Welvaartsgebied op P–Q diagram arceren",
+      "aspects": [
+        "grafisch"
+      ],
+      "declared_generator": "GEN_A40",
+      "generator_implemented": true,
+      "generator_blocked": false,
+      "generator_block_sources": [],
+      "interactive_skilltree_use_allowed": true,
+      "student_facing_skilltree_use_allowed": true,
+      "base_elements_export": "interactive",
+      "deploy_bundle_export": "interactive",
+      "needs_filtered_for_interactive_tree": [
+        "A10"
+      ],
+      "proof_required_to_unblock": []
+    },
+    {
+      "unit_id": "A41",
+      "name": "Na-belasting of na-subsidie aanbodfunctie afleiden",
+      "aspects": [
+        "rekenen"
+      ],
+      "declared_generator": "GEN_A41",
+      "generator_implemented": true,
+      "generator_blocked": false,
+      "generator_block_sources": [],
+      "interactive_skilltree_use_allowed": true,
+      "student_facing_skilltree_use_allowed": true,
+      "base_elements_export": "interactive",
+      "deploy_bundle_export": "interactive",
+      "needs_filtered_for_interactive_tree": [
+        "A03"
+      ],
+      "proof_required_to_unblock": []
+    },
+    {
+      "unit_id": "A42",
+      "name": "Grafische verschuiving met voor-en-na pijlen",
+      "aspects": [
+        "grafisch"
+      ],
+      "declared_generator": "GEN_A42",
+      "generator_implemented": true,
+      "generator_blocked": false,
+      "generator_block_sources": [],
+      "interactive_skilltree_use_allowed": true,
+      "student_facing_skilltree_use_allowed": true,
+      "base_elements_export": "interactive",
+      "deploy_bundle_export": "interactive",
+      "needs_filtered_for_interactive_tree": [],
+      "proof_required_to_unblock": []
+    },
+    {
+      "unit_id": "A43",
+      "name": "Totale winst uit gemengde allocatie berekenen",
+      "aspects": [
+        "rekenen"
+      ],
+      "declared_generator": "GEN_A43",
+      "generator_implemented": true,
+      "generator_blocked": false,
+      "generator_block_sources": [],
+      "interactive_skilltree_use_allowed": true,
+      "student_facing_skilltree_use_allowed": true,
+      "base_elements_export": "interactive",
+      "deploy_bundle_export": "interactive",
+      "needs_filtered_for_interactive_tree": [],
+      "proof_required_to_unblock": []
+    },
+    {
+      "unit_id": "A44",
+      "name": "Individuele stapfunctie-vraagcurve tekenen uit betalingsbereidheid",
+      "aspects": [
+        "grafisch"
+      ],
+      "declared_generator": "GEN_A44",
+      "generator_implemented": true,
+      "generator_blocked": false,
+      "generator_block_sources": [],
+      "interactive_skilltree_use_allowed": true,
+      "student_facing_skilltree_use_allowed": true,
+      "base_elements_export": "interactive",
+      "deploy_bundle_export": "interactive",
+      "needs_filtered_for_interactive_tree": [],
+      "proof_required_to_unblock": []
+    },
+    {
+      "unit_id": "A45",
+      "name": "P-Q grafiek tekenen uit tabel",
+      "aspects": [
+        "grafisch"
+      ],
+      "declared_generator": "GEN_A45",
+      "generator_implemented": false,
+      "generator_blocked": true,
+      "generator_block_sources": [
+        "references/data/sprints/RX.6-generator-blocked-units.json"
+      ],
+      "interactive_skilltree_use_allowed": false,
+      "student_facing_skilltree_use_allowed": false,
+      "base_elements_export": "generator_blocked",
+      "deploy_bundle_export": "generator_blocked",
+      "needs_filtered_for_interactive_tree": [],
+      "proof_required_to_unblock": [
+        "GEN_A45 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A46",
+      "name": "Waarden aflezen en interpoleren in P-Q grafiek",
+      "aspects": [
+        "grafisch",
+        "rekenen"
+      ],
+      "declared_generator": "GEN_A46",
+      "generator_implemented": false,
+      "generator_blocked": true,
+      "generator_block_sources": [
+        "references/data/sprints/RX.6-generator-blocked-units.json"
+      ],
+      "interactive_skilltree_use_allowed": false,
+      "student_facing_skilltree_use_allowed": false,
+      "base_elements_export": "generator_blocked",
+      "deploy_bundle_export": "generator_blocked",
+      "needs_filtered_for_interactive_tree": [],
+      "proof_required_to_unblock": [
+        "GEN_A46 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A47",
+      "name": "Collectieve vraag uit tabellen optellen",
+      "aspects": [
+        "rekenen",
+        "grafisch"
+      ],
+      "declared_generator": "GEN_A47",
+      "generator_implemented": false,
+      "generator_blocked": true,
+      "generator_block_sources": [
+        "references/data/sprints/RX.6-generator-blocked-units.json"
+      ],
+      "interactive_skilltree_use_allowed": false,
+      "student_facing_skilltree_use_allowed": false,
+      "base_elements_export": "generator_blocked",
+      "deploy_bundle_export": "generator_blocked",
+      "needs_filtered_for_interactive_tree": [],
+      "proof_required_to_unblock": [
+        "GEN_A47 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A48",
+      "name": "Collectieve vraagfunctie algebraisch optellen",
+      "aspects": [
+        "rekenen",
+        "grafisch"
+      ],
+      "declared_generator": "GEN_A48",
+      "generator_implemented": false,
+      "generator_blocked": true,
+      "generator_block_sources": [
+        "references/data/sprints/RX.6-generator-blocked-units.json"
+      ],
+      "interactive_skilltree_use_allowed": false,
+      "student_facing_skilltree_use_allowed": false,
+      "base_elements_export": "generator_blocked",
+      "deploy_bundle_export": "generator_blocked",
+      "needs_filtered_for_interactive_tree": [],
+      "proof_required_to_unblock": [
+        "GEN_A48 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A49",
+      "name": "Aanbodcurve tekenen met economenassen",
+      "aspects": [
+        "grafisch"
+      ],
+      "declared_generator": "GEN_A49",
+      "generator_implemented": false,
+      "generator_blocked": true,
+      "generator_block_sources": [
+        "references/data/sprints/RX.6-generator-blocked-units.json"
+      ],
+      "interactive_skilltree_use_allowed": false,
+      "student_facing_skilltree_use_allowed": false,
+      "base_elements_export": "generator_blocked",
+      "deploy_bundle_export": "generator_blocked",
+      "needs_filtered_for_interactive_tree": [],
+      "proof_required_to_unblock": [
+        "GEN_A49 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A50",
+      "name": "GVK en GCK berekenen",
+      "aspects": [
+        "rekenen"
+      ],
+      "declared_generator": "GEN_A50",
+      "generator_implemented": false,
+      "generator_blocked": true,
+      "generator_block_sources": [
+        "references/data/sprints/RX.6-generator-blocked-units.json"
+      ],
+      "interactive_skilltree_use_allowed": false,
+      "student_facing_skilltree_use_allowed": false,
+      "base_elements_export": "generator_blocked",
+      "deploy_bundle_export": "generator_blocked",
+      "needs_filtered_for_interactive_tree": [],
+      "proof_required_to_unblock": [
+        "GEN_A50 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A51",
+      "name": "Overschot en tekort bij niet-evenwichtsprijs berekenen",
+      "aspects": [
+        "grafisch",
+        "rekenen"
+      ],
+      "declared_generator": "GEN_A51",
+      "generator_implemented": false,
+      "generator_blocked": true,
+      "generator_block_sources": [
+        "references/data/sprints/RX.6-generator-blocked-units.json"
+      ],
+      "interactive_skilltree_use_allowed": false,
+      "student_facing_skilltree_use_allowed": false,
+      "base_elements_export": "generator_blocked",
+      "deploy_bundle_export": "generator_blocked",
+      "needs_filtered_for_interactive_tree": [],
+      "proof_required_to_unblock": [
+        "GEN_A51 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A52",
+      "name": "MK en MO uit tabelverschillen berekenen",
+      "aspects": [
+        "rekenen"
+      ],
+      "declared_generator": "GEN_A52",
+      "generator_implemented": false,
+      "generator_blocked": true,
+      "generator_block_sources": [
+        "references/data/sprints/RX.6-generator-blocked-units.json"
+      ],
+      "interactive_skilltree_use_allowed": false,
+      "student_facing_skilltree_use_allowed": false,
+      "base_elements_export": "generator_blocked",
+      "deploy_bundle_export": "generator_blocked",
+      "needs_filtered_for_interactive_tree": [],
+      "proof_required_to_unblock": [
+        "GEN_A52 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A53",
+      "name": "MK benaderen uit kwadratische TK-functie",
+      "aspects": [
+        "rekenen"
+      ],
+      "declared_generator": "GEN_A53",
+      "generator_implemented": false,
+      "generator_blocked": true,
+      "generator_block_sources": [
+        "references/data/sprints/RX.6-generator-blocked-units.json"
+      ],
+      "interactive_skilltree_use_allowed": false,
+      "student_facing_skilltree_use_allowed": false,
+      "base_elements_export": "generator_blocked",
+      "deploy_bundle_export": "generator_blocked",
+      "needs_filtered_for_interactive_tree": [],
+      "proof_required_to_unblock": [
+        "GEN_A53 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A54",
+      "name": "Winstoptimum controleren met Q-1, Q en Q+1",
+      "aspects": [
+        "rekenen"
+      ],
+      "declared_generator": "GEN_A54",
+      "generator_implemented": false,
+      "generator_blocked": true,
+      "generator_block_sources": [
+        "references/data/sprints/RX.6-generator-blocked-units.json"
+      ],
+      "interactive_skilltree_use_allowed": false,
+      "student_facing_skilltree_use_allowed": false,
+      "base_elements_export": "generator_blocked",
+      "deploy_bundle_export": "generator_blocked",
+      "needs_filtered_for_interactive_tree": [],
+      "proof_required_to_unblock": [
+        "GEN_A54 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A55",
+      "name": "Gevraagde hoeveelheid voorspellen met elasticiteit",
+      "aspects": [
+        "rekenen"
+      ],
+      "declared_generator": "GEN_A55",
+      "generator_implemented": false,
+      "generator_blocked": true,
+      "generator_block_sources": [
+        "references/data/sprints/RX.6-generator-blocked-units.json"
+      ],
+      "interactive_skilltree_use_allowed": false,
+      "student_facing_skilltree_use_allowed": false,
+      "base_elements_export": "generator_blocked",
+      "deploy_bundle_export": "generator_blocked",
+      "needs_filtered_for_interactive_tree": [],
+      "proof_required_to_unblock": [
+        "GEN_A55 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A56",
+      "name": "Korte zijde bepalen bij bindende prijs",
+      "aspects": [
+        "grafisch",
+        "rekenen"
+      ],
+      "declared_generator": "GEN_A56",
+      "generator_implemented": false,
+      "generator_blocked": true,
+      "generator_block_sources": [
+        "references/data/sprints/RX.6-generator-blocked-units.json"
+      ],
+      "interactive_skilltree_use_allowed": false,
+      "student_facing_skilltree_use_allowed": false,
+      "base_elements_export": "generator_blocked",
+      "deploy_bundle_export": "generator_blocked",
+      "needs_filtered_for_interactive_tree": [],
+      "proof_required_to_unblock": [
+        "GEN_A56 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A57",
+      "name": "Afwentelingspercentage berekenen",
+      "aspects": [
+        "rekenen"
+      ],
+      "declared_generator": "GEN_A57",
+      "generator_implemented": false,
+      "generator_blocked": true,
+      "generator_block_sources": [
+        "references/data/sprints/RX.6-generator-blocked-units.json"
+      ],
+      "interactive_skilltree_use_allowed": false,
+      "student_facing_skilltree_use_allowed": false,
+      "base_elements_export": "generator_blocked",
+      "deploy_bundle_export": "generator_blocked",
+      "needs_filtered_for_interactive_tree": [],
+      "proof_required_to_unblock": [
+        "GEN_A57 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A58",
+      "name": "Subsidie-uitgaven berekenen",
+      "aspects": [
+        "rekenen"
+      ],
+      "declared_generator": "GEN_A58",
+      "generator_implemented": false,
+      "generator_blocked": true,
+      "generator_block_sources": [
+        "references/data/sprints/RX.6-generator-blocked-units.json"
+      ],
+      "interactive_skilltree_use_allowed": false,
+      "student_facing_skilltree_use_allowed": false,
+      "base_elements_export": "generator_blocked",
+      "deploy_bundle_export": "generator_blocked",
+      "needs_filtered_for_interactive_tree": [],
+      "proof_required_to_unblock": [
+        "GEN_A58 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A59",
+      "name": "Opkoopkosten bij minimumprijs berekenen",
+      "aspects": [
+        "grafisch",
+        "rekenen"
+      ],
+      "declared_generator": "GEN_A59",
+      "generator_implemented": false,
+      "generator_blocked": true,
+      "generator_block_sources": [
+        "references/data/sprints/RX.6-generator-blocked-units.json"
+      ],
+      "interactive_skilltree_use_allowed": false,
+      "student_facing_skilltree_use_allowed": false,
+      "base_elements_export": "generator_blocked",
+      "deploy_bundle_export": "generator_blocked",
+      "needs_filtered_for_interactive_tree": [],
+      "proof_required_to_unblock": [
+        "GEN_A59 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A60",
+      "name": "Vraagfunctie inverteren bij quotumhoeveelheid",
+      "aspects": [
+        "rekenen",
+        "grafisch"
+      ],
+      "declared_generator": "GEN_A60",
+      "generator_implemented": false,
+      "generator_blocked": true,
+      "generator_block_sources": [
+        "references/data/sprints/RX.6-generator-blocked-units.json"
+      ],
+      "interactive_skilltree_use_allowed": false,
+      "student_facing_skilltree_use_allowed": false,
+      "base_elements_export": "generator_blocked",
+      "deploy_bundle_export": "generator_blocked",
+      "needs_filtered_for_interactive_tree": [],
+      "proof_required_to_unblock": [
+        "GEN_A60 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A61",
+      "name": "Tabelwaarden selecteren voor berekening",
+      "aspects": [
+        "rekenen",
+        "verbaal"
+      ],
+      "declared_generator": "GEN_A61",
+      "generator_implemented": false,
+      "generator_blocked": true,
+      "generator_block_sources": [
+        "references/data/sprints/RX.2-generator-blocked-units.json",
+        "references/data/sprints/RX.6-generator-blocked-units.json"
+      ],
+      "interactive_skilltree_use_allowed": false,
+      "student_facing_skilltree_use_allowed": false,
+      "base_elements_export": "generator_blocked",
+      "deploy_bundle_export": "generator_blocked",
+      "needs_filtered_for_interactive_tree": [],
+      "proof_required_to_unblock": [
+        "GEN_A61 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A62",
+      "name": "Waarden aflezen uit staafdiagram",
+      "aspects": [
+        "grafisch"
+      ],
+      "declared_generator": "GEN_A62",
+      "generator_implemented": false,
+      "generator_blocked": true,
+      "generator_block_sources": [
+        "references/data/sprints/RX.2b-generator-blocked-units.json",
+        "references/data/sprints/RX.6-generator-blocked-units.json"
+      ],
+      "interactive_skilltree_use_allowed": false,
+      "student_facing_skilltree_use_allowed": false,
+      "base_elements_export": "generator_blocked",
+      "deploy_bundle_export": "generator_blocked",
+      "needs_filtered_for_interactive_tree": [],
+      "proof_required_to_unblock": [
+        "GEN_A62 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A63",
+      "name": "Waarden aflezen uit lijngrafiek",
+      "aspects": [
+        "grafisch"
+      ],
+      "declared_generator": "GEN_A63",
+      "generator_implemented": false,
+      "generator_blocked": true,
+      "generator_block_sources": [
+        "references/data/sprints/RX.2b-generator-blocked-units.json",
+        "references/data/sprints/RX.6-generator-blocked-units.json"
+      ],
+      "interactive_skilltree_use_allowed": false,
+      "student_facing_skilltree_use_allowed": false,
+      "base_elements_export": "generator_blocked",
+      "deploy_bundle_export": "generator_blocked",
+      "needs_filtered_for_interactive_tree": [],
+      "proof_required_to_unblock": [
+        "GEN_A63 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A64",
+      "name": "Aandelen aflezen uit cirkeldiagram",
+      "aspects": [
+        "grafisch",
+        "rekenen"
+      ],
+      "declared_generator": "GEN_A64",
+      "generator_implemented": false,
+      "generator_blocked": true,
+      "generator_block_sources": [
+        "references/data/sprints/RX.2b-generator-blocked-units.json",
+        "references/data/sprints/RX.6-generator-blocked-units.json"
+      ],
+      "interactive_skilltree_use_allowed": false,
+      "student_facing_skilltree_use_allowed": false,
+      "base_elements_export": "generator_blocked",
+      "deploy_bundle_export": "generator_blocked",
+      "needs_filtered_for_interactive_tree": [],
+      "proof_required_to_unblock": [
+        "GEN_A64 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A65",
+      "name": "Absolute hoeveelheid berekenen uit aandeel en totaal",
+      "aspects": [
+        "grafisch",
+        "rekenen"
+      ],
+      "declared_generator": "GEN_A65",
+      "generator_implemented": false,
+      "generator_blocked": true,
+      "generator_block_sources": [
+        "references/data/sprints/RX.2b-generator-blocked-units.json",
+        "references/data/sprints/RX.6-generator-blocked-units.json"
+      ],
+      "interactive_skilltree_use_allowed": false,
+      "student_facing_skilltree_use_allowed": false,
+      "base_elements_export": "generator_blocked",
+      "deploy_bundle_export": "generator_blocked",
+      "needs_filtered_for_interactive_tree": [],
+      "proof_required_to_unblock": [
+        "GEN_A65 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A66",
+      "name": "Basiswaarde en vergelijkingswaarde in bron bepalen",
+      "aspects": [
+        "rekenen",
+        "verbaal"
+      ],
+      "declared_generator": "GEN_A66",
+      "generator_implemented": false,
+      "generator_blocked": true,
+      "generator_block_sources": [
+        "references/data/sprints/RX.2-generator-blocked-units.json",
+        "references/data/sprints/RX.6-generator-blocked-units.json"
+      ],
+      "interactive_skilltree_use_allowed": false,
+      "student_facing_skilltree_use_allowed": false,
+      "base_elements_export": "generator_blocked",
+      "deploy_bundle_export": "generator_blocked",
+      "needs_filtered_for_interactive_tree": [],
+      "proof_required_to_unblock": [
+        "GEN_A66 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A67",
+      "name": "Procentuele verandering berekenen vanuit tabel",
+      "aspects": [
+        "rekenen",
+        "verbaal"
+      ],
+      "declared_generator": "GEN_A67",
+      "generator_implemented": false,
+      "generator_blocked": true,
+      "generator_block_sources": [
+        "references/data/sprints/RX.2-generator-blocked-units.json",
+        "references/data/sprints/RX.6-generator-blocked-units.json"
+      ],
+      "interactive_skilltree_use_allowed": false,
+      "student_facing_skilltree_use_allowed": false,
+      "base_elements_export": "generator_blocked",
+      "deploy_bundle_export": "generator_blocked",
+      "needs_filtered_for_interactive_tree": [],
+      "proof_required_to_unblock": [
+        "GEN_A67 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A68",
+      "name": "Procentuele verandering berekenen vanuit staafdiagram",
+      "aspects": [
+        "grafisch",
+        "rekenen"
+      ],
+      "declared_generator": "GEN_A68",
+      "generator_implemented": false,
+      "generator_blocked": true,
+      "generator_block_sources": [
+        "references/data/sprints/RX.2b-generator-blocked-units.json",
+        "references/data/sprints/RX.6-generator-blocked-units.json"
+      ],
+      "interactive_skilltree_use_allowed": false,
+      "student_facing_skilltree_use_allowed": false,
+      "base_elements_export": "generator_blocked",
+      "deploy_bundle_export": "generator_blocked",
+      "needs_filtered_for_interactive_tree": [],
+      "proof_required_to_unblock": [
+        "GEN_A68 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A69",
+      "name": "Procentuele verandering berekenen vanuit lijngrafiek",
+      "aspects": [
+        "grafisch",
+        "rekenen"
+      ],
+      "declared_generator": "GEN_A69",
+      "generator_implemented": false,
+      "generator_blocked": true,
+      "generator_block_sources": [
+        "references/data/sprints/RX.2b-generator-blocked-units.json",
+        "references/data/sprints/RX.6-generator-blocked-units.json"
+      ],
+      "interactive_skilltree_use_allowed": false,
+      "student_facing_skilltree_use_allowed": false,
+      "base_elements_export": "generator_blocked",
+      "deploy_bundle_export": "generator_blocked",
+      "needs_filtered_for_interactive_tree": [],
+      "proof_required_to_unblock": [
+        "GEN_A69 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A70",
+      "name": "Percentagepuntverandering in aandeel herkennen",
+      "aspects": [
+        "rekenen",
+        "verbaal"
+      ],
+      "declared_generator": "GEN_A70",
+      "generator_implemented": false,
+      "generator_blocked": true,
+      "generator_block_sources": [
+        "references/data/sprints/RX.2-generator-blocked-units.json",
+        "references/data/sprints/RX.6-generator-blocked-units.json"
+      ],
+      "interactive_skilltree_use_allowed": false,
+      "student_facing_skilltree_use_allowed": false,
+      "base_elements_export": "generator_blocked",
+      "deploy_bundle_export": "generator_blocked",
+      "needs_filtered_for_interactive_tree": [],
+      "proof_required_to_unblock": [
+        "GEN_A70 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A72",
+      "name": "Indexcijfer berekenen vanuit tabel",
+      "aspects": [
+        "rekenen",
+        "verbaal"
+      ],
+      "declared_generator": "GEN_A72",
+      "generator_implemented": false,
+      "generator_blocked": true,
+      "generator_block_sources": [
+        "references/data/sprints/RX.2-generator-blocked-units.json",
+        "references/data/sprints/RX.6-generator-blocked-units.json"
+      ],
+      "interactive_skilltree_use_allowed": false,
+      "student_facing_skilltree_use_allowed": false,
+      "base_elements_export": "generator_blocked",
+      "deploy_bundle_export": "generator_blocked",
+      "needs_filtered_for_interactive_tree": [],
+      "proof_required_to_unblock": [
+        "GEN_A72 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A73",
+      "name": "Indexverandering aflezen uit lijngrafiek",
+      "aspects": [
+        "grafisch",
+        "rekenen"
+      ],
+      "declared_generator": "GEN_A73",
+      "generator_implemented": false,
+      "generator_blocked": true,
+      "generator_block_sources": [
+        "references/data/sprints/RX.2b-generator-blocked-units.json",
+        "references/data/sprints/RX.6-generator-blocked-units.json"
+      ],
+      "interactive_skilltree_use_allowed": false,
+      "student_facing_skilltree_use_allowed": false,
+      "base_elements_export": "generator_blocked",
+      "deploy_bundle_export": "generator_blocked",
+      "needs_filtered_for_interactive_tree": [],
+      "proof_required_to_unblock": [
+        "GEN_A73 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A74",
+      "name": "Procentuele verandering berekenen vanuit indexcijfers",
+      "aspects": [
+        "rekenen",
+        "verbaal"
+      ],
+      "declared_generator": "GEN_A74",
+      "generator_implemented": false,
+      "generator_blocked": true,
+      "generator_block_sources": [
+        "references/data/sprints/RX.2-generator-blocked-units.json",
+        "references/data/sprints/RX.6-generator-blocked-units.json"
+      ],
+      "interactive_skilltree_use_allowed": false,
+      "student_facing_skilltree_use_allowed": false,
+      "base_elements_export": "generator_blocked",
+      "deploy_bundle_export": "generator_blocked",
+      "needs_filtered_for_interactive_tree": [],
+      "proof_required_to_unblock": [
+        "GEN_A74 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A75",
+      "name": "Totale winst berekenen uit opbrengsten- en kostentabel",
+      "aspects": [
+        "rekenen",
+        "verbaal"
+      ],
+      "declared_generator": "GEN_A75",
+      "generator_implemented": false,
+      "generator_blocked": true,
+      "generator_block_sources": [
+        "references/data/sprints/RX.6-generator-blocked-units.json",
+        "reports/review-gates/GATE-RX3a-first-lane-mutation-review/RX.3a-generator-blocked-units.json"
+      ],
+      "interactive_skilltree_use_allowed": false,
+      "student_facing_skilltree_use_allowed": false,
+      "base_elements_export": "generator_blocked",
+      "deploy_bundle_export": "generator_blocked",
+      "needs_filtered_for_interactive_tree": [],
+      "proof_required_to_unblock": [
+        "GEN_A75 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A76",
+      "name": "Totale winst berekenen uit P, GTK en Q",
+      "aspects": [
+        "rekenen",
+        "verbaal"
+      ],
+      "declared_generator": "GEN_A76",
+      "generator_implemented": false,
+      "generator_blocked": true,
+      "generator_block_sources": [
+        "references/data/sprints/RX.6-generator-blocked-units.json",
+        "reports/review-gates/GATE-RX3a-first-lane-mutation-review/RX.3a-generator-blocked-units.json"
+      ],
+      "interactive_skilltree_use_allowed": false,
+      "student_facing_skilltree_use_allowed": false,
+      "base_elements_export": "generator_blocked",
+      "deploy_bundle_export": "generator_blocked",
+      "needs_filtered_for_interactive_tree": [],
+      "proof_required_to_unblock": [
+        "GEN_A76 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A77",
+      "name": "Break-even aflezen uit TO-TK-grafiek",
+      "aspects": [
+        "grafisch",
+        "rekenen"
+      ],
+      "declared_generator": "GEN_A77",
+      "generator_implemented": false,
+      "generator_blocked": true,
+      "generator_block_sources": [
+        "references/data/sprints/RX.6-generator-blocked-units.json",
+        "reports/review-gates/GATE-RX3b-producer-graph-lane-review/RX.3b-generator-blocked-units.json"
+      ],
+      "interactive_skilltree_use_allowed": false,
+      "student_facing_skilltree_use_allowed": false,
+      "base_elements_export": "generator_blocked",
+      "deploy_bundle_export": "generator_blocked",
+      "needs_filtered_for_interactive_tree": [],
+      "proof_required_to_unblock": [
+        "GEN_A77 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A78",
+      "name": "Winst of verlies aflezen uit TO-TK-grafiek",
+      "aspects": [
+        "grafisch",
+        "rekenen"
+      ],
+      "declared_generator": "GEN_A78",
+      "generator_implemented": false,
+      "generator_blocked": true,
+      "generator_block_sources": [
+        "references/data/sprints/RX.6-generator-blocked-units.json",
+        "reports/review-gates/GATE-RX3b-producer-graph-lane-review/RX.3b-generator-blocked-units.json"
+      ],
+      "interactive_skilltree_use_allowed": false,
+      "student_facing_skilltree_use_allowed": false,
+      "base_elements_export": "generator_blocked",
+      "deploy_bundle_export": "generator_blocked",
+      "needs_filtered_for_interactive_tree": [],
+      "proof_required_to_unblock": [
+        "GEN_A78 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A79",
+      "name": "Maximale winst bepalen uit TO-TK-tabel",
+      "aspects": [
+        "rekenen",
+        "verbaal"
+      ],
+      "declared_generator": "GEN_A79",
+      "generator_implemented": false,
+      "generator_blocked": true,
+      "generator_block_sources": [
+        "references/data/sprints/RX.6-generator-blocked-units.json",
+        "reports/review-gates/GATE-RX3a-first-lane-mutation-review/RX.3a-generator-blocked-units.json"
+      ],
+      "interactive_skilltree_use_allowed": false,
+      "student_facing_skilltree_use_allowed": false,
+      "base_elements_export": "generator_blocked",
+      "deploy_bundle_export": "generator_blocked",
+      "needs_filtered_for_interactive_tree": [],
+      "proof_required_to_unblock": [
+        "GEN_A79 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A82",
+      "name": "Elasticiteit berekenen uit tabelwaarden",
+      "aspects": [
+        "rekenen",
+        "verbaal"
+      ],
+      "declared_generator": "GEN_A82",
+      "generator_implemented": false,
+      "generator_blocked": true,
+      "generator_block_sources": [
+        "references/data/sprints/RX.6-generator-blocked-units.json",
+        "reports/review-gates/GATE-RX4-elasticity-market-diagram-review/RX.4-generator-blocked-units.json"
+      ],
+      "interactive_skilltree_use_allowed": false,
+      "student_facing_skilltree_use_allowed": false,
+      "base_elements_export": "generator_blocked",
+      "deploy_bundle_export": "generator_blocked",
+      "needs_filtered_for_interactive_tree": [],
+      "proof_required_to_unblock": [
+        "GEN_A82 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A83",
+      "name": "Prijselasticiteit van de vraag berekenen uit P-Q-grafiek",
+      "aspects": [
+        "grafisch",
+        "rekenen"
+      ],
+      "declared_generator": "GEN_A83",
+      "generator_implemented": false,
+      "generator_blocked": true,
+      "generator_block_sources": [
+        "references/data/sprints/RX.6-generator-blocked-units.json",
+        "reports/review-gates/GATE-RX4-elasticity-market-diagram-review/RX.4-generator-blocked-units.json"
+      ],
+      "interactive_skilltree_use_allowed": false,
+      "student_facing_skilltree_use_allowed": false,
+      "base_elements_export": "generator_blocked",
+      "deploy_bundle_export": "generator_blocked",
+      "needs_filtered_for_interactive_tree": [],
+      "proof_required_to_unblock": [
+        "GEN_A83 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A84",
+      "name": "Omzetverandering beoordelen met elasticiteit uit bron",
+      "aspects": [
+        "rekenen",
+        "verbaal"
+      ],
+      "declared_generator": "GEN_A84",
+      "generator_implemented": false,
+      "generator_blocked": true,
+      "generator_block_sources": [
+        "references/data/sprints/RX.6-generator-blocked-units.json",
+        "reports/review-gates/GATE-RX4-elasticity-market-diagram-review/RX.4-generator-blocked-units.json"
+      ],
+      "interactive_skilltree_use_allowed": false,
+      "student_facing_skilltree_use_allowed": false,
+      "base_elements_export": "generator_blocked",
+      "deploy_bundle_export": "generator_blocked",
+      "needs_filtered_for_interactive_tree": [],
+      "proof_required_to_unblock": [
+        "GEN_A84 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "id": "source_base_elements_split_matches_generators",
+      "status": "passed",
+      "detail": "44 interactive and 37 blocked rows in source base-elements."
+    },
+    {
+      "id": "deploy_bundle_split_matches_source",
+      "status": "passed",
+      "detail": "44 interactive and 37 blocked rows in deploy bundle data."
+    },
+    {
+      "id": "blocked_units_have_explicit_noninteractive_status",
+      "status": "passed",
+      "detail": "37/37 missing-generator units have explicit generator-block records."
+    },
+    {
+      "id": "no_missing_generator_unit_is_interactive",
+      "status": "passed",
+      "detail": "0 blocked unit(s) leaked into interactive exports."
+    },
+    {
+      "id": "student_facing_controls_preserved",
+      "status": "passed",
+      "detail": "Missing-generator rows are marked student_facing_skilltree_use_allowed=false."
+    },
+    {
+      "id": "rx6_generator_block_file_written",
+      "status": "passed",
+      "detail": "references/data/sprints/RX.6-generator-blocked-units.json records 37 blocked unit(s)."
+    }
+  ],
+  "blocked_scope": [
+    "student-facing skill-tree exposure for generator-blocked units",
+    "student diagnostics",
+    "adaptive routing",
+    "student-facing AI",
+    "automatic sequencing",
+    "mastery decisions",
+    "summative decisions",
+    "student-facing PV projection for generator-blocked units"
+  ]
+}

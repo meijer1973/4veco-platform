@@ -3,7 +3,7 @@
   "sprint_id": "PV.6",
   "gate_id": "GATE-PV6-coverage-dashboard",
   "generated_by": "build-scripts/references/build-procedure-visual-coverage.js",
-  "generated_on": "2026-05-02T12:13:00.838Z",
+  "generated_on": "2026-05-03T09:58:23.454Z",
   "status": "passed",
   "policy": {
     "diagnostic_only": true,
@@ -222,7 +222,8 @@
       "generator_status": "missing_or_blocked",
       "generator_blocked": true,
       "generator_block_sources": [
-        "references/data/sprints/RX.2-generator-blocked-units.json"
+        "references/data/sprints/RX.2-generator-blocked-units.json",
+        "references/data/sprints/RX.6-generator-blocked-units.json"
       ],
       "publication_allowed": false,
       "blocker_reasons": [
@@ -285,6 +286,7 @@
       "generator_status": "missing_or_blocked",
       "generator_blocked": true,
       "generator_block_sources": [
+        "references/data/sprints/RX.6-generator-blocked-units.json",
         "reports/review-gates/GATE-RX4-elasticity-market-diagram-review/RX.4-generator-blocked-units.json"
       ],
       "publication_allowed": false,
@@ -353,6 +355,7 @@
       "generator_status": "missing_or_blocked",
       "generator_blocked": true,
       "generator_block_sources": [
+        "references/data/sprints/RX.6-generator-blocked-units.json",
         "reports/review-gates/GATE-RX4-elasticity-market-diagram-review/RX.4-generator-blocked-units.json"
       ],
       "publication_allowed": false,
@@ -421,6 +424,7 @@
       "generator_status": "missing_or_blocked",
       "generator_blocked": true,
       "generator_block_sources": [
+        "references/data/sprints/RX.6-generator-blocked-units.json",
         "reports/review-gates/GATE-RX4-elasticity-market-diagram-review/RX.4-generator-blocked-units.json"
       ],
       "publication_allowed": false,

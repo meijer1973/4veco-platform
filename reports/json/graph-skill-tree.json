@@ -2,7 +2,7 @@
   "schema_version": 1,
   "report_id": "graph-skill-tree",
   "generated_by": "build-scripts/references/build-representation-operation-coverage.js",
-  "generated_on": "2026-05-02T11:22:25.509Z",
+  "generated_on": "2026-05-03T09:58:23.222Z",
   "policy": {
     "student_facing_use_authorized": false,
     "reason": "RX.5 reports graph-skill structure only. Generator and publication gates still control student-facing use."
@@ -11,7 +11,7 @@
     "graph_unit_count": 32,
     "graph_units_with_operation_links": 12,
     "graph_units_with_pv_templates": 2,
-    "graph_units_generator_blocked": 10,
+    "graph_units_generator_blocked": 19,
     "graph_units_with_generators": 13,
     "dependency_edge_count": 46
   },
@@ -243,7 +243,7 @@
       "pv_template_ids": [],
       "generator": "GEN_A45",
       "generator_implemented": false,
-      "generator_blocked": false
+      "generator_blocked": true
     },
     {
       "unit_id": "A46",
@@ -261,7 +261,7 @@
       "pv_template_ids": [],
       "generator": "GEN_A46",
       "generator_implemented": false,
-      "generator_blocked": false
+      "generator_blocked": true
     },
     {
       "unit_id": "A47",
@@ -277,7 +277,7 @@
       "pv_template_ids": [],
       "generator": "GEN_A47",
       "generator_implemented": false,
-      "generator_blocked": false
+      "generator_blocked": true
     },
     {
       "unit_id": "A48",
@@ -294,7 +294,7 @@
       "pv_template_ids": [],
       "generator": "GEN_A48",
       "generator_implemented": false,
-      "generator_blocked": false
+      "generator_blocked": true
     },
     {
       "unit_id": "A49",
@@ -309,7 +309,7 @@
       "pv_template_ids": [],
       "generator": "GEN_A49",
       "generator_implemented": false,
-      "generator_blocked": false
+      "generator_blocked": true
     },
     {
       "unit_id": "A51",
@@ -325,7 +325,7 @@
       "pv_template_ids": [],
       "generator": "GEN_A51",
       "generator_implemented": false,
-      "generator_blocked": false
+      "generator_blocked": true
     },
     {
       "unit_id": "A56",
@@ -342,7 +342,7 @@
       "pv_template_ids": [],
       "generator": "GEN_A56",
       "generator_implemented": false,
-      "generator_blocked": false
+      "generator_blocked": true
     },
     {
       "unit_id": "A59",
@@ -359,7 +359,7 @@
       "pv_template_ids": [],
       "generator": "GEN_A59",
       "generator_implemented": false,
-      "generator_blocked": false
+      "generator_blocked": true
     },
     {
       "unit_id": "A60",
@@ -375,7 +375,7 @@
       "pv_template_ids": [],
       "generator": "GEN_A60",
       "generator_implemented": false,
-      "generator_blocked": false
+      "generator_blocked": true
     },
     {
       "unit_id": "A62",

@@ -27,17 +27,21 @@ const ENGINES_DIR = path.join(PLATFORM_ROOT, 'engines');
 
 // ── Parse arguments ──────────────────────────────────────────────
 
-const targetArg = process.argv[2];
-if (!targetArg) {
-    console.error('Usage: node scripts/deploy.js <target-book-path>');
-    console.error('Example: node scripts/deploy.js "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod"');
-    process.exit(1);
-}
+let MODULE_ROOT = null;
 
-const MODULE_ROOT = path.resolve(targetArg);
-if (!fs.existsSync(MODULE_ROOT)) {
-    console.error(`Target does not exist: ${MODULE_ROOT}`);
-    process.exit(1);
+function resolveModuleRoot(targetArg) {
+    if (!targetArg) {
+        console.error('Usage: node scripts/deploy.js <target-book-path>');
+        console.error('Example: node scripts/deploy.js "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod"');
+        process.exit(1);
+    }
+
+    const moduleRoot = path.resolve(targetArg);
+    if (!fs.existsSync(moduleRoot)) {
+        console.error(`Target does not exist: ${moduleRoot}`);
+        process.exit(1);
+    }
+    return moduleRoot;
 }
 
 const HEADER_JS  = '// AUTO-COPIED FROM 4veco-platform/engines/ \u2014 DO NOT EDIT HERE\n';
@@ -113,6 +117,34 @@ function copyEngines() {
 // Produce a self-contained base-elements.js that inlines the catalog's
 // A-domain units + all GEN functions, so the deployed module loads in the
 // browser with a single <script src="shared/skilltree/base-elements.js">.
+function buildSkilltreeBundleData(units, generatorMap) {
+    const activeUnits = units.filter(u => u.id.charAt(0) === 'A' && !u.deprecated);
+    const interactiveSkillIds = new Set(
+        activeUnits
+            .filter(u => generatorMap[u.id])
+            .map(u => u.id)
+    );
+    const skills = activeUnits
+        .filter(u => interactiveSkillIds.has(u.id))
+        .map(u => ({
+            id: u.id,
+            name: u.name,
+            layer: u.layer,
+            needs: (u.needs || []).filter(id => interactiveSkillIds.has(id)),
+            desc: u.kern || (u.procedure && u.procedure[0]) || ''
+        }));
+    const generatorBlockedSkills = activeUnits
+        .filter(u => !interactiveSkillIds.has(u.id))
+        .map(u => ({
+            id: u.id,
+            name: u.name,
+            generator: u.generator || ('GEN_' + u.id),
+            status: 'missing_generator_implementation',
+            studentFacingSkilltreeUseAllowed: false
+        }));
+    return { skills, generatorBlockedSkills };
+}
+
 function bundleSkilltreeBaseElements(skilltreeDir) {
     const catalogPath = path.join(PLATFORM_ROOT, 'references/machine/micro-teaching-units.json');
     const generatorsPath = path.join(ENGINES_DIR, 'skilltree/generators.js');
@@ -133,6 +165,8 @@ function bundleSkilltreeBaseElements(skilltreeDir) {
 
     const units = JSON.parse(fs.readFileSync(catalogPath, 'utf8'));
     const generatorsSrc = fs.readFileSync(generatorsPath, 'utf8');
+    const generatorModule = require(generatorsPath);
+    const generatorMap = generatorModule.GEN || generatorModule;
 
     // Extract the inner guts of generators.js (between `'use strict';` and
     // the module-level closing `return { GEN: ... }`). The generator
@@ -148,21 +182,7 @@ function bundleSkilltreeBaseElements(skilltreeDir) {
     }
     const innerGuts = generatorsSrc.slice(startIdx + startMarker.length, returnIdx).trim();
 
-    // Build SKILLS array literal from the A-domain slice of the catalog.
-    const skillIds = new Set(
-        units
-            .filter(u => u.id.charAt(0) === 'A' && !u.deprecated)
-            .map(u => u.id)
-    );
-    const skills = units
-        .filter(u => skillIds.has(u.id))
-        .map(u => ({
-            id: u.id,
-            name: u.name,
-            layer: u.layer,
-            needs: (u.needs || []).filter(id => skillIds.has(id)),
-            desc: u.kern || (u.procedure && u.procedure[0]) || ''
-        }));
+    const { skills, generatorBlockedSkills } = buildSkilltreeBundleData(units, generatorMap);
 
     const bundle = [
         HEADER.trimEnd(),
@@ -184,6 +204,7 @@ function bundleSkilltreeBaseElements(skilltreeDir) {
         '    ' + innerGuts,
         '',
         '    var SKILLS = ' + JSON.stringify(skills, null, 8).replace(/\n/g, '\n    ') + ';',
+        '    var GENERATOR_BLOCKED_SKILLS = ' + JSON.stringify(generatorBlockedSkills, null, 8).replace(/\n/g, '\n    ') + ';',
         '',
         '    var LAYER_NAMES = [\'Fundament\', \'Bouwstenen\', \'Marginale grootheden\', \'Samengesteld\', \'Gevorderd\', \'Eindbazen\'];',
         '    var LAYER_COLORS = [',
@@ -197,6 +218,7 @@ function bundleSkilltreeBaseElements(skilltreeDir) {
         '',
         '    return {',
         '        SKILLS: SKILLS,',
+        '        GENERATOR_BLOCKED_SKILLS: GENERATOR_BLOCKED_SKILLS,',
         '        LAYER_NAMES: LAYER_NAMES,',
         '        LAYER_COLORS: LAYER_COLORS,',
         '        GEN: GEN,',
@@ -207,7 +229,7 @@ function bundleSkilltreeBaseElements(skilltreeDir) {
     ].join('\n');
 
     fs.writeFileSync(dst, bundle, 'utf8');
-    console.log(`  \u2713 skilltree/base-elements.js (bundled ${skills.length} units + generators)`);
+    console.log(`  \u2713 skilltree/base-elements.js (bundled ${skills.length} interactive units + ${generatorBlockedSkills.length} blocked units)`);
 }
 
 // ── Step 2: Run build scripts ────────────────────────────────────
@@ -279,6 +301,15 @@ function verify() {
 
 // ── Run ──────────────────────────────────────────────────────────
 
-copyEngines();
-runBuildScripts();
-verify();
+if (require.main === module) {
+    MODULE_ROOT = resolveModuleRoot(process.argv[2]);
+    copyEngines();
+    runBuildScripts();
+    verify();
+}
+
+module.exports = {
+    buildSkilltreeBundleData,
+    bundleSkilltreeBaseElements,
+    resolveModuleRoot,
+};

@@ -4,7 +4,7 @@ Generated: 2026-04-23
 Adopted main roadmap: 2026-04-25
 Last strategic update: 2026-05-01
 Roadmap ID: `references-team-roadmap`
-Roadmap version: `v2.36-rx6-skilltree-generator-integration`
+Roadmap version: `v2.35-pv6-coverage-dashboard`
 Roadmap status: `active`
 Version index: `docs/roadmaps/roadmap-version-index.json`
 Scope: `references/`, `build-scripts/references/`, `build-scripts/reports/`, reference dashboards, and generated reference reports under `reports/`
@@ -61,8 +61,6 @@ Update 2026-05-02: `PV.5 Visual Projection MVP` is completed. The platform now h
 
 Update 2026-05-02: `PV.6 Coverage Reports And Dashboard Integration` is completed. The new `procedure-visual-coverage` report and `reference-health` PV summary show PV-linked units, templates, visual states, surface variants, game mapping, answer-model step order, generator support, generator blocks, and blocker reasons while preserving diagnostic-only, non-authoritative, non-student-facing PV boundaries.
 
-Update 2026-05-03: `RX.6 Skill-Tree And Generator Integration` is completed. Source and deployed skill-tree base elements now expose only generator-backed active A-domain units as interactive skill-tree nodes. The 37 active A-domain units without generators are explicitly recorded as generator-blocked/non-interactive, including older R4.5 units `A45` through `A60` that predated the generator-block convention. Student-facing skill-tree exposure, PV projection, diagnostics, adaptive routing, AI, sequencing, mastery, and summative use remain blocked for generator-blocked units.
-
 Compatibility decisions:
 
 - Sprint `R0.1` now means the sprint-execution scaffold.
@@ -88,6 +86,7 @@ Open items are listed first; completed items are kept below them.
 
 | Sprint | Name | Completed | Current State |
 |--------|------|-----------|---------------|
+| RX.6 | Skill-Tree And Generator Integration | no | Planned after approved representation units and PV projection contracts. Requires generator coverage or explicit non-interactive status before any student-facing skill-tree use. |
 | PV.7 | Machine-Promotion Review Gate | no | Decide whether any PV records move from `references/data/` to `references/machine/` only after schema, CLI, validators, mutation logs, reports, lesson regressions, and human gate approval exist. |
 | Sprint 8 | Misconception Registry MVP | no | Planned. Create small misconception schema/validator and link recurring errors to units, terms, operations, and evidence where available. |
 | Sprint 9 | Unit Design Status And D04 Resolution | no | Planned. Resolve D04 as retire/merge/redistribute/split and decide whether `unit_design_status` is derived overlay or CLI-backed machine-unit field. |
@@ -109,7 +108,6 @@ Open items are listed first; completed items are kept below them.
 | RX.5 | Representation Operation Registry And Reports | yes | Completed as report-only bridge. Added representation-operation coverage, graph-skill-tree, and representation-transfer-gap reports; operation records remain provisional, stale/live status differences are explicit, held records stay held, and generator/PV publication blocks remain active. |
 | PV.5 | Visual Projection MVP | yes | Completed. Added reusable report-side render/validation libraries for formula trace, flowchart, table trace, and static graph-stage PV visual states, generated SVG proof artifacts under `reports/`, and preserved publication, dynamic-graph, machine-promotion, and student-facing blocks. |
 | PV.6 | Coverage Reports And Dashboard Integration | yes | Completed. Added `procedure-visual-coverage` reports and reference-health PV summary with diagnostic-only authority flags, surface/game/answer-model coverage, generator support, generator-block status, and blocker reasons; PV publication remains blocked. |
-| RX.6 | Skill-Tree And Generator Integration | yes | Completed. Source and deployed skill-tree bundles now expose 44 generator-backed A-domain units as interactive and 37 missing-generator units as explicit generator-blocked/non-interactive rows; no student-facing skill-tree or PV exposure is authorized for blocked units. |
 | RX.3 | Producer Table And Graph Representation Review | yes | Completed as non-mutating review. `GATE-RX3-producer-representation` closed as `pass_with_conditions`; A75/A76/A79 may enter first-lane mutation review; A77/A78 are later graph-lane candidates; A80/A81 and graphical MO=MK remain held. |
 | RX.3a | Producer Table/Data First-Lane Mutation Review And CLI Execution | yes | Completed. `GATE-RX3a-first-lane-mutation-review` closed as `pass_with_conditions`; `A75`, `A76`, and `A79` were added through `unit-add.js`; `A76` needs `A14`, `A04`, and `A61`; all three remain generator-blocked/non-interactive. |
 | RX.3b | Producer TO-TK Graph-Lane Mutation Review And CLI Execution | yes | Completed. `GATE-RX3b-producer-graph-lane-review` closed as `pass_with_conditions`; `A77` and `A78` were added through `unit-add.js`; `A78` needs `A63`, `A75`, and `A77`; both remain generator-blocked/non-interactive. |
@@ -810,7 +808,7 @@ Sprint sequence:
 - `RX.5 Representation Operation Registry And Reports`: expand representation-operation reporting with PV operation/visual-state dimensions.
 - `PV.5 Visual Projection MVP`: render or validate non-dynamic formula traces, flowcharts, table traces, and static staged graphs from PV state sequences.
 - `PV.6 Coverage Reports And Dashboard Integration`: report PV coverage in JSON/Markdown and reference health without treating PV as curriculum authority.
-- `RX.6 Skill-Tree And Generator Integration`: completed. Source and deployed skill-tree bundles now consume only generator-backed units as interactive and keep missing-generator units explicitly non-interactive.
+- `RX.6 Skill-Tree And Generator Integration`: consume only PV records with generator support or explicit non-interactive status.
 - `PV.7 Machine-Promotion Review Gate`: decide whether PV remains an overlay or partly moves to machine registry; a likely safe split is promoting unit-template links first and keeping visual states as governed data until renderers stabilize.
 
 Quality gates:
@@ -1144,8 +1142,6 @@ Acceptance tests:
 - generated lesson target validates after any authorized deploy.
 
 Stop condition: do not mutate `../4veco-lessen/` or student-facing output from a references sprint without explicit platform/lessen authorization.
-
-Completion: completed on 2026-05-03. RX.6 did not implement missing generators. It made the current readiness boundary explicit: 44 active A-domain units are generator-backed and interactive, while 37 active A-domain units are generator-blocked/non-interactive until a later generator sprint implements and validates their `GEN_A*` functions. The deployed browser bundle now uses the same interactive/block split as source `base-elements.js`.
 
 ### Sprint 8 Misconception Registry MVP
 
@@ -1523,12 +1519,12 @@ Sprints:
 - `PV.2` completed: procedure-visual schemas, vocabulary, empty real overlay registries, validator, schema-status reports, and `GATE-PV-G1-schema` technical proof.
 - `RX.3` completed: `GATE-RX3-producer-representation` closed as `pass_with_conditions`; `RX.3a` and `RX.3b` applied producer table/data and TO-TK graph lanes through CLI-only mutation.
 - `RX.4` completed: `A82`, `A84`, and `A83` added through CLI-only mutation; `A83` uses the HCS-approved P-Q graph demand-elasticity scope; all three remain generator-blocked/non-interactive.
-- `PV.3` completed: pilot templates and visual-state sequences.
-- `PV.4` completed: backward-compatible procedure/game projection contract.
-- `RX.5` completed: representation operation registry and reports, expanded with PV operation/visual-state dimensions, only after schema/validator/CLI path exists.
-- `PV.5` completed: non-dynamic visual projection MVP.
-- `PV.6` completed: PV coverage reports and dashboard integration.
-- `RX.6` completed: source and deployed skill-tree generator readiness now distinguish interactive generator-backed units from explicit non-interactive generator-blocked catalog units.
+- `PV.3` planned: pilot templates and visual-state sequences.
+- `PV.4` planned: backward-compatible procedure/game projection contract.
+- `RX.5` planned: representation operation registry and reports, expanded with PV operation/visual-state dimensions, only after schema/validator/CLI path exists.
+- `PV.5` planned: non-dynamic visual projection MVP.
+- `PV.6` planned: PV coverage reports and dashboard integration.
+- `RX.6` planned: skill-tree and generator integration, only with generator coverage or explicit non-interactive status and PV projection contracts.
 - `PV.7` planned: machine-promotion review gate after schemas, validators, CLI, mutation logs, reports, lesson regressions, and human approval.
 
 ### Phase R9: Owned Source Integration And Content Graph
@@ -1673,15 +1669,17 @@ Do not invert this order.
 
 ## Immediate Next Sprint
 
-Next action: `PV.7 Machine-Promotion Review Gate` preparation. PV.7 may decide whether any PV records move from `references/data/` to `references/machine/`, but only after schema, CLI, validators, mutation logs, reports, lesson regressions, and explicit human approval exist.
+Next action: `GATE-RX3a-first-lane-mutation-review` human review before any A75/A76/A79 mutation.
 
-R4.5 has closed the bounded micro-unit mutation lane, CP-1 has closed the non-mutating schema audit gate as `pass_with_conditions`, CP-2 has closed the owned-source scope gate as `pass_with_conditions`, R9.1 has registered the owned-source surfaces, R9.2 has completed owned-content projection, S4/CP-3 has closed as `pass_with_conditions`, S4.1 has implemented the CP-3 condition artifacts, RX.1 has prepared the non-mutating representation-operation inventory, `GATE-RX1-representation-unit-scope` has closed as `pass_with_conditions`, RX.2/GATE-RX2 has added the bounded six-unit first lane through CLI-only mutation, RX.2b/GATE-RX2b has added the bounded seven-unit graphical foundation lane through CLI-only mutation while holding `A71`, R8.1 has added the scoped internal QC issue model, S6 has created the source-document registry MVP under `references/data/`, S7/CP-4 has closed as `pass_with_conditions`, RX.3a/RX.3b/RX.4 have applied producer and elasticity representation lanes through CLI-only mutation, PV.3 through PV.6 have completed pilot templates, projection proof, and coverage dashboards, RX.5 has added representation-operation reports, and RX.6 has completed skill-tree generator readiness.
+R4.5 has closed the bounded micro-unit mutation lane, CP-1 has closed the non-mutating schema audit gate as `pass_with_conditions`, CP-2 has closed the owned-source scope gate as `pass_with_conditions`, R9.1 has registered the owned-source surfaces, R9.2 has completed owned-content projection, S4/CP-3 has closed as `pass_with_conditions`, S4.1 has implemented the CP-3 condition artifacts, RX.1 has prepared the non-mutating representation-operation inventory, `GATE-RX1-representation-unit-scope` has closed as `pass_with_conditions`, RX.2/GATE-RX2 has added the bounded six-unit first lane through CLI-only mutation, RX.2b/GATE-RX2b has added the bounded seven-unit graphical foundation lane through CLI-only mutation while holding `A71`, R8.1 has added the scoped internal QC issue model, S6 has created the source-document registry MVP under `references/data/`, and S7/CP-4 has closed as `pass_with_conditions`.
 
-All active A-domain units without generators are now explicitly generator-blocked/non-interactive. The skill-tree currently has 44 generator-backed interactive A-domain units and 37 generator-blocked A-domain units. Blocked units must not be exposed in student-facing skill-tree or PV projection until their generators exist, validators pass, and a later sprint explicitly authorizes exposure.
+`A61`, `A66`, `A67`, `A70`, `A72`, and `A74` are now catalog units, but they are generator-blocked and non-interactive for student-facing skill-tree use until their generators are implemented and validated.
+
+`A62`, `A63`, `A64`, `A65`, `A68`, `A69`, and `A73` are now catalog units, but they are generator-blocked and non-interactive for student-facing skill-tree use until their generators are implemented and validated. `A71` remains held/high-risk for later focused review.
 
 `S7` is closed. The skill/operation registry remains a `references/data/` overlay; `exercise_operations` remain provisional; PV templates may reference them only as provisional records; `required_skills` remains legacy/source-only; and machine registry promotion plus bulk exercise metadata backfill remain blocked.
 
-The Procedure-Visual Registry remains under `references/data/procedure-visual/`; do not create `references/machine/procedure-templates.json` or `references/machine/visual-states.json` before the PV.7 machine-promotion review gate.
+PV.1 has completed the non-mutating inventory: `references/data/procedure-visual/inventory.json`, `reports/json/procedure-visual-inventory.json`, and `reports/markdown/procedure-visual-inventory.md` record 12 ranked pilot templates and runtime/schema blockers. PV.2 has completed the schema and validator MVP: `references/data/procedure-visual/` now contains schema files, vocabulary, empty real overlay registries, and validator-backed schema-status reports. RX.3 has closed the producer representation gate as `pass_with_conditions`. RX.3a has prepared candidate specs and a CLI mutation plan for `A75`, `A76`, and `A79`, but no A75-A79 mutation is authorized until `GATE-RX3a-first-lane-mutation-review` explicitly authorizes `unit-add.js` execution. The Procedure-Visual Registry remains under `references/data/procedure-visual/`; do not create `references/machine/procedure-templates.json` or `references/machine/visual-states.json` before the PV.7 machine-promotion review gate.
 
 Do not start diagnostics, adaptive routing, student-facing AI, automatic lesson sequencing, mastery decisions, summative decisions, teacher cockpit deployment, game/simulation product mapping, or continuous-improvement claims from this roadmap.
 

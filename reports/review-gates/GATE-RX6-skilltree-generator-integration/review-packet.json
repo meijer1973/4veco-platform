@@ -1,0 +1,21 @@
+{
+  "gate_id": "GATE-RX6-skilltree-generator-integration",
+  "sprint_id": "RX.6",
+  "status": "technical_release_readiness_gate",
+  "generated_by": "build-scripts/references/build-skilltree-generator-readiness.js",
+  "generated_on": "2026-05-03T09:58:20.524Z",
+  "human_review_required": false,
+  "machine_registry_created": false,
+  "student_facing_skilltree_use_authorized": false,
+  "evidence": {
+    "readiness_report": "reports/json/skilltree-generator-readiness.json",
+    "generator_block_file": "references/data/sprints/RX.6-generator-blocked-units.json",
+    "skilltree_test": "npx.cmd jest engines/tests/skilltree-data.test.js --runInBand"
+  },
+  "review_questions": [
+    "Does the skill-tree expose only generator-backed units as interactive?",
+    "Are all missing-generator units explicitly marked non-interactive?",
+    "Does the deploy browser bundle preserve the same split as source base-elements?",
+    "Are student-facing skill-tree/PV/diagnostic/adaptive uses still blocked for missing-generator units?"
+  ]
+}

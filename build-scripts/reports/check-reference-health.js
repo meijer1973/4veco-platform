@@ -30,6 +30,7 @@ function main() {
     'qc_findings',
     'quality_issue_model',
     'procedure_visual_backbone',
+    'skilltree_generator_readiness',
     'schema_validation_status',
     'alignment_graph_status',
     'r5_3_gate_status',
@@ -65,6 +66,17 @@ function main() {
   if (!(pv.linked_units_with_game_mapping >= 1)) errors.push('procedure_visual_backbone must report at least one game mapping');
   if (!(pv.linked_units_generator_blocked >= 1)) errors.push('procedure_visual_backbone must preserve generator-blocked units');
   if (pv.linked_units_publication_allowed !== 0) errors.push('procedure_visual_backbone.linked_units_publication_allowed must be 0');
+
+  const skilltree = data.skilltree_generator_readiness || {};
+  if (skilltree.diagnostic_only !== true) errors.push('skilltree_generator_readiness.diagnostic_only must be true');
+  if (skilltree.student_facing_skilltree_use_authorized !== false) errors.push('skilltree_generator_readiness.student_facing_skilltree_use_authorized must be false');
+  if (skilltree.generator_exposure_for_blocked_units_authorized !== false) errors.push('skilltree_generator_readiness.generator_exposure_for_blocked_units_authorized must be false');
+  if (skilltree.pv_projection_authorized !== false) errors.push('skilltree_generator_readiness.pv_projection_authorized must be false');
+  if (skilltree.machine_registry_created !== false) errors.push('skilltree_generator_readiness.machine_registry_created must be false');
+  if (!(skilltree.interactive_skill_count >= 1)) errors.push('skilltree_generator_readiness.interactive_skill_count must be at least 1');
+  if (!(skilltree.generator_blocked_count >= 1)) errors.push('skilltree_generator_readiness.generator_blocked_count must be at least 1');
+  if (skilltree.untracked_missing_generator_count !== 0) errors.push('skilltree_generator_readiness.untracked_missing_generator_count must be 0');
+  if (skilltree.blocked_interactive_leak_count !== 0) errors.push('skilltree_generator_readiness.blocked_interactive_leak_count must be 0');
 
   for (const blocked of ['student_diagnostics', 'adaptive_routing', 'student_facing_ai']) {
     if (!Array.isArray(data.blocked_downstream_uses) || !data.blocked_downstream_uses.includes(blocked)) {

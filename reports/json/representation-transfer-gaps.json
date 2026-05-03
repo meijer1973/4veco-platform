@@ -2,17 +2,17 @@
   "schema_version": 1,
   "report_id": "representation-transfer-gaps",
   "generated_by": "build-scripts/references/build-representation-operation-coverage.js",
-  "generated_on": "2026-05-02T11:22:25.510Z",
+  "generated_on": "2026-05-03T09:58:23.223Z",
   "policy": {
     "diagnostic_only": true,
     "student_facing_use_authorized": false,
     "machine_registry_promotion_authorized": false
   },
   "summary": {
-    "gap_count": 54,
+    "gap_count": 56,
     "by_category": {
       "held_or_duplicate_review": 8,
-      "generator_blocked_live_unit": 23,
+      "generator_blocked_live_unit": 25,
       "pv_template_missing": 13,
       "registry_status_stale": 8,
       "operation_unit_name_alignment": 1,
@@ -20,7 +20,7 @@
     },
     "by_severity": {
       "medium": 21,
-      "high_for_student_facing_release": 24,
+      "high_for_student_facing_release": 26,
       "low": 9
     }
   },
@@ -35,12 +35,30 @@
       "proof_to_close": "RX.6 or equivalent generator/projection validation implements or intentionally disables student-facing nodes."
     },
     {
+      "gap_id": "generator-block:OVERLAY_DRAW_PQ_GRAPH_FROM_TABLE",
+      "severity": "high_for_student_facing_release",
+      "category": "generator_blocked_live_unit",
+      "operation_id": "OVERLAY_DRAW_PQ_GRAPH_FROM_TABLE",
+      "unit_id": "A45",
+      "summary": "draw pq graph from table maps to live unit(s) that remain generator-blocked.",
+      "proof_to_close": "RX.6 or equivalent generator/projection validation implements or intentionally disables student-facing nodes."
+    },
+    {
       "gap_id": "generator-block:OVERLAY_EVALUATE_PERCENTAGE_CLAIM_FROM_TABLE",
       "severity": "high_for_student_facing_release",
       "category": "generator_blocked_live_unit",
       "operation_id": "OVERLAY_EVALUATE_PERCENTAGE_CLAIM_FROM_TABLE",
       "unit_id": "A38,A61,A67",
       "summary": "evaluate percentage claim from table maps to live unit(s) that remain generator-blocked.",
+      "proof_to_close": "RX.6 or equivalent generator/projection validation implements or intentionally disables student-facing nodes."
+    },
+    {
+      "gap_id": "generator-block:OVERLAY_READ_INTERPOLATE_PQ_GRAPH",
+      "severity": "high_for_student_facing_release",
+      "category": "generator_blocked_live_unit",
+      "operation_id": "OVERLAY_READ_INTERPOLATE_PQ_GRAPH",
+      "unit_id": "A46",
+      "summary": "read interpolate pq graph maps to live unit(s) that remain generator-blocked.",
       "proof_to_close": "RX.6 or equivalent generator/projection validation implements or intentionally disables student-facing nodes."
     },
     {
@@ -238,7 +256,7 @@
       "category": "graph_skill_tree_generator_blocks",
       "operation_id": null,
       "unit_id": null,
-      "summary": "10 graphical A-domain units are not ready for student-facing skill-tree use.",
+      "summary": "19 graphical A-domain units are not ready for student-facing skill-tree use.",
       "proof_to_close": "RX.6 implements generators or records intentional non-interactive status for each graph unit."
     },
     {

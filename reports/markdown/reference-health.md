@@ -1,6 +1,6 @@
 # Reference Health
 
-Generated: 2026-05-02T12:13:00.855Z
+Generated: 2026-05-03T09:58:23.667Z
 
 ## Unit Counts
 
@@ -18,7 +18,7 @@ Generated: 2026-05-02T12:13:00.855Z
 
 ## QC Findings
 
-- Reports: 14
+- Reports: 15
 - Total issues: 448
 - High/critical issues: 10
 
@@ -41,6 +41,16 @@ Generated: 2026-05-02T12:13:00.855Z
 - Visual states: 6
 - Units with surface variants: 6
 - Units generator-blocked: 4
+
+## Skilltree Generator Readiness
+
+- Status: passed
+- Diagnostic only: true
+- Student-facing skilltree use authorized: false
+- Active A-domain units: 81
+- Interactive units: 44
+- Generator-blocked units: 37
+- Untracked missing generators: 0
 
 ## Retrieval Evaluation
 
