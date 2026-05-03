@@ -13,6 +13,16 @@ The full repository answers:
 - which files should be inspected before making architecture, production, or quality conclusions
 - which surfaces are generated, protected, or deploy targets
 
+Repository boundary:
+
+- `4veco-platform` contains the platform layer: tools, game engines, build scripts, skills, validators, references, source data, roadmaps, and reports.
+- Final student-facing lesson output lives in the separate `4veco-lessen` repository. Student-facing markdown, HTML, PDF, DOCX/PPTX companion files, generated assets, and book/chapter/paragraph folders must be checked there.
+- Agents must not infer lesson artifact existence from platform files alone. A builder, template, reference, source CSV, roadmap item, or validator in this repo proves capability or intent, not that a generated lesson artifact currently exists.
+- Agents must not infer platform capability from lesson artifacts alone. A copied `shared/` engine or generated HTML in `4veco-lessen` may be stale or deployed output; inspect this repo to understand authoring/build logic.
+- For cross-repo questions, read both repository maps before concluding anything:
+  - `4veco-platform/RESEARCH_AGENT_MAP.md`
+  - `4veco-lessen/RESEARCH_AGENT_MAP.md`
+
 The platform repository does not contain final student-facing book output. Student-facing markdown/PDF output is built in sibling targets such as `../4veco-lessen/`; legacy deploy output lives outside this repo.
 
 ## Access Layer
