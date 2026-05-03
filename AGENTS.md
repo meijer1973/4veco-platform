@@ -25,6 +25,9 @@ For any non-trivial sprint, roadmap, gate, reference-system, production, or arch
 - follow the plan as written
 - if the plan is too thin or misses a requirement from the roadmap, stop and fix the plan before continuing
 - before moving past a review gate, verify the required artifacts exist and validators pass
+- close every non-trivial response with a clear direction for what should happen next: proceed to the next sprint, send a human-review packet, run a specific validation/build step, commit/push, insert a new sprint, or deliberately stop/pause
+- when blockers, evidence gaps, planning contradictions, or architectural uncertainty appear, say so plainly at the end and recommend the strategic pause or roadmap adjustment needed before continuing
+- do not leave the user to infer the next step from a status summary; the final paragraph must make the operational next action explicit
 
 Human-review gates require actual review artifacts. Do not treat a casual "OK", "continue", or inferred approval as a completed human review when the plan requires an interview, decision record, or gate-closure file. 
 All other requirements for sprints are also  required for the Human review. So a checkable plan is made beforehand and that plan is tested afterwards. That will make sure that there is an actual log of the interview. 

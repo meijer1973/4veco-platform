@@ -1,5 +1,7 @@
 # 4veco Platform
 
+**Close with direction.** Every non-trivial final response in this repo must end with a clear operational next step: continue to the next sprint, send a human-review packet, run validation/build, commit/push, insert a new sprint, or stop for a strategic pause. If blockers, evidence gaps, planning contradictions, or architecture concerns appear, say that plainly and recommend the pause or roadmap adjustment instead of leaving the next move implicit.
+
 **Working agreement** — read `../CLAUDE.md` "Working agreement — how Claude operates in this repo". Seven non-negotiable operating rules (read-first, sanity-check-plans, be-honest-about-mistakes, quality-over-patchwork). Apply to every task in this repo, not just the root.
 
 **Deze directory bevat geen student-facing output.** Er zijn twee outputpaden, beide naar sibling-directories:
