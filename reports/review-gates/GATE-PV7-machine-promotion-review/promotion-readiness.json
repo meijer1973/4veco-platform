@@ -1,0 +1,167 @@
+{
+  "report_id": "procedure-visual-machine-promotion-readiness",
+  "sprint_id": "PV.7",
+  "gate_id": "GATE-PV7-machine-promotion-review",
+  "generated_by": "build-scripts/references/build-procedure-visual-machine-promotion-review.js",
+  "generated_on": "2026-05-03T10:07:09.139Z",
+  "status": "promotion_not_ready",
+  "summary": {
+    "template_count": 6,
+    "visual_state_count": 6,
+    "unit_template_link_count": 6,
+    "render_proof_count": 28,
+    "mapped_procedure_game_pilot_count": 1,
+    "pv_linked_unit_count": 6,
+    "linked_units_publication_allowed": 0,
+    "machine_registry_created": false,
+    "existing_forbidden_machine_files": [],
+    "machine_promotion_cli_count": 0,
+    "machine_promotion_mutation_log_count": 0,
+    "lesson_regression_proof_count": 0,
+    "blocking_preconditions": [
+      "pv_machine_edit_cli_exists",
+      "pv_machine_mutation_logs_exist",
+      "two_lesson_side_regressions_recorded"
+    ],
+    "recommended_decision": "do_not_promote_yet"
+  },
+  "policy": {
+    "references_machine_promotion_authorized": false,
+    "student_facing_projection_authorized": false,
+    "operation_promotion_authorized": false,
+    "diagnostics_or_adaptive_use_authorized": false
+  },
+  "preconditions": [
+    {
+      "id": "pv_schema_files_exist",
+      "status": "met",
+      "evidence": [
+        "references/data/procedure-visual/procedure-template.schema.json",
+        "references/data/procedure-visual/visual-state.schema.json",
+        "references/data/procedure-visual/visual-grammar.schema.json"
+      ],
+      "required_for_promotion": true
+    },
+    {
+      "id": "pv_validator_exists",
+      "status": "met",
+      "evidence": [
+        "build-scripts/references/validate-procedure-visual-registry.js"
+      ],
+      "required_for_promotion": true
+    },
+    {
+      "id": "pv_overlay_records_exist",
+      "status": "met",
+      "evidence": [
+        "references/data/procedure-visual/procedure-visual-vocab.json",
+        "references/data/procedure-visual/procedure-templates.json",
+        "references/data/procedure-visual/visual-states.json",
+        "references/data/procedure-visual/unit-template-links.json"
+      ],
+      "required_for_promotion": true
+    },
+    {
+      "id": "pv_reports_exist",
+      "status": "met",
+      "evidence": [
+        "reports/json/procedure-visual-inventory.json",
+        "reports/json/procedure-visual-schema-status.json",
+        "reports/json/procedure-visual-pilot-status.json",
+        "reports/json/procedure-game-template-alignment.json",
+        "reports/json/procedure-visual-projection-mvp.json",
+        "reports/json/procedure-visual-coverage.json"
+      ],
+      "required_for_promotion": true
+    },
+    {
+      "id": "pv_machine_registry_absent",
+      "status": "met",
+      "evidence": [
+        "No PV references/machine files exist."
+      ],
+      "required_for_promotion": true
+    },
+    {
+      "id": "pv_machine_edit_cli_exists",
+      "status": "not_met",
+      "evidence": [
+        "No PV add/edit/promote CLI exists under build-scripts/references/."
+      ],
+      "required_for_promotion": true
+    },
+    {
+      "id": "pv_machine_mutation_logs_exist",
+      "status": "not_met",
+      "evidence": [
+        "No PV machine-promotion mutation log exists."
+      ],
+      "required_for_promotion": true
+    },
+    {
+      "id": "two_lesson_side_regressions_recorded",
+      "status": "not_met",
+      "evidence": [
+        "No PV lesson-regression gate/proof artifacts found in platform reports."
+      ],
+      "required_for_promotion": true
+    },
+    {
+      "id": "student_facing_projection_blocked",
+      "status": "met",
+      "evidence": [
+        "reports/json/procedure-visual-coverage.json"
+      ],
+      "required_for_promotion": true
+    },
+    {
+      "id": "human_promotion_gate_prepared",
+      "status": "met",
+      "evidence": [
+        "reports/review-gates/GATE-PV7-machine-promotion-review/review-packet.md",
+        "reports/review-gates/GATE-PV7-machine-promotion-review/review-packet.json"
+      ],
+      "required_for_promotion": true
+    }
+  ],
+  "candidate_records": [
+    {
+      "record_class": "unit_template_links",
+      "current_location": "references/data/procedure-visual/unit-template-links.json",
+      "record_count": 6,
+      "readiness": "not_ready",
+      "future_safe_path": "Potential first promotion candidate after a PV machine-edit CLI, mutation log, and lesson-regression proof exist.",
+      "current_decision_recommendation": "Do not promote in PV.7."
+    },
+    {
+      "record_class": "procedure_templates",
+      "current_location": "references/data/procedure-visual/procedure-templates.json",
+      "record_count": 6,
+      "readiness": "not_ready",
+      "future_safe_path": "Keep as governed data overlay until template schema is stable across more than pilot records and a CLI exists.",
+      "current_decision_recommendation": "Do not promote in PV.7."
+    },
+    {
+      "record_class": "visual_states",
+      "current_location": "references/data/procedure-visual/visual-states.json",
+      "record_count": 6,
+      "readiness": "not_ready",
+      "future_safe_path": "Keep as governed data overlay until renderers, surface variants, accessibility proofs, and lesson regressions stabilize.",
+      "current_decision_recommendation": "Do not promote in PV.7."
+    },
+    {
+      "record_class": "procedure_visual_vocab_and_schemas",
+      "current_location": "references/data/procedure-visual/",
+      "record_count": 21,
+      "readiness": "not_ready",
+      "future_safe_path": "Keep as schema/vocabulary contracts; promotion would need a separate governance design.",
+      "current_decision_recommendation": "Do not promote in PV.7."
+    }
+  ],
+  "recommended_future_sequence": [
+    "Keep PV records in references/data/procedure-visual after PV.7 unless HCS explicitly overrides.",
+    "Add a PV machine-edit CLI and mutation-log design before any promotion sprint.",
+    "Record at least two lesson-side PV regression proofs before promoting student-facing or machine-authoritative PV records.",
+    "If a later gate promotes anything first, prefer unit-template links only; keep procedure templates and visual states as governed data until renderer and lesson regressions mature."
+  ]
+}

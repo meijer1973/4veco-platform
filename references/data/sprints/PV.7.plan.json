@@ -1,0 +1,51 @@
+{
+  "sprint_id": "PV.7",
+  "name": "Machine-Promotion Review Gate",
+  "status": "prepared_for_human_review",
+  "planned_on": "2026-05-03",
+  "plan": "docs/sprints/PV.7-plan.md",
+  "protected_reference_data_changes_allowed": false,
+  "protected_reference_data_change_mode": "none; review preparation only",
+  "human_review_required": true,
+  "gate_id": "GATE-PV7-machine-promotion-review",
+  "review_packet": "reports/review-gates/GATE-PV7-machine-promotion-review/review-packet.md",
+  "valid_gate_statuses": [
+    "pass_with_conditions",
+    "hold",
+    "fail"
+  ],
+  "allowed_outputs": [
+    "reports/json/procedure-visual-machine-promotion-readiness.json",
+    "reports/markdown/procedure-visual-machine-promotion-readiness.md",
+    "reports/review-gates/GATE-PV7-machine-promotion-review/review-packet.json",
+    "reports/review-gates/GATE-PV7-machine-promotion-review/review-packet.md",
+    "reports/review-gates/GATE-PV7-machine-promotion-review/promotion-readiness.json",
+    "reports/review-gates/GATE-PV7-machine-promotion-review/promotion-readiness.md",
+    "reports/review-gates/GATE-PV7-machine-promotion-review/bundle-urls.md"
+  ],
+  "blocked_scope": [
+    "references/machine Procedure-Visual registry creation",
+    "references/external mutation",
+    "PV machine-promotion mutation",
+    "lesson repo commits",
+    "student-facing PV projection",
+    "generator exposure for blocked units",
+    "student diagnostics",
+    "adaptive routing",
+    "student-facing AI",
+    "automatic sequencing",
+    "mastery decisions",
+    "summative decisions"
+  ],
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js docs/sprints/PV.7-plan.md",
+    "node build-scripts/references/validate-procedure-visual-registry.js",
+    "node build-scripts/references/build-procedure-visual-machine-promotion-review.js",
+    "node build-scripts/references/check-procedure-visual-machine-promotion-review.js",
+    "node build-scripts/sprints/emit-gate-bundle-urls.js GATE-PV7-machine-promotion-review",
+    "node build-scripts/sprints/check-bundle-urls.js GATE-PV7-machine-promotion-review",
+    "node build-scripts/sprints/check-sprint-bundle.js PV.7",
+    "node build-scripts/references/check-roadmap-version-index.js",
+    "node build-scripts/sprints/emit-url-index.js --check"
+  ]
+}
