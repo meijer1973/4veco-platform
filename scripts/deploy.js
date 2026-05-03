@@ -234,11 +234,88 @@ function bundleSkilltreeBaseElements(skilltreeDir) {
 
 // ── Step 2: Run build scripts ────────────────────────────────────
 
+// Walk paragraph folders under <book-root>: <book>/<chapter-dir>/<paragraph-dir>
+// (skips '_'-prefixed dirs like _assets and the shared/ engine folder).
+function walkParagraphFolders(bookRoot) {
+    const folders = [];
+    for (const chap of fs.readdirSync(bookRoot, { withFileTypes: true })) {
+        if (!chap.isDirectory()) continue;
+        if (chap.name.startsWith('_') || chap.name === 'shared') continue;
+        const chapPath = path.join(bookRoot, chap.name);
+        for (const para of fs.readdirSync(chapPath, { withFileTypes: true })) {
+            if (!para.isDirectory()) continue;
+            if (para.name.startsWith('_')) continue;
+            folders.push(path.join(chapPath, para.name));
+        }
+    }
+    return folders;
+}
+
+// Run the Python docx-to-web converters across every paragraph folder
+// under MODULE_ROOT. Must run before the landing-page builder so the new
+// .html sibling files exist when scanFiles scans the paragraph dir.
+function runDocxConverters() {
+    const PYTHON = process.env.PYTHON || (process.platform === 'win32' ? 'python' : 'python3');
+
+    // Probe Python availability up front. Without Python the docx-as-web
+    // pipeline can't run; the paragraph index would link only to .docx.
+    try {
+        execSync(`${PYTHON} --version`, { stdio: 'ignore' });
+    } catch (_e) {
+        console.error(`  \u2717 ${PYTHON} not found in PATH.`);
+        console.error('    Install Python and `pip install python-docx`, or set the PYTHON env var.');
+        process.exit(1);
+    }
+
+    const converters = [
+        { name: 'voorkennis',           script: 'build-scripts/lib/convert_voorkennis.py' },
+        { name: 'vaardigheden',         script: 'build-scripts/lib/convert_vaardigheden.py' },
+        { name: 'begeleide-inoefening', script: 'build-scripts/lib/convert_begeleide_inoefening.py' },
+        { name: 'samenvatting',         script: 'build-scripts/lib/convert_samenvatting.py' },
+        { name: 'nieuws',               script: 'build-scripts/lib/convert_nieuws.py' },
+    ];
+
+    console.log(`\n  \u25b6 Docx-as-web converters...`);
+    const paragraphFolders = walkParagraphFolders(MODULE_ROOT);
+    console.log(`    Walking ${paragraphFolders.length} paragraph folder${paragraphFolders.length === 1 ? '' : 's'} under MODULE_ROOT.`);
+
+    for (const conv of converters) {
+        let okCount = 0, skipCount = 0, errCount = 0;
+        for (const para of paragraphFolders) {
+            try {
+                const out = execSync(`${PYTHON} ${conv.script} "${para}"`, {
+                    cwd: PLATFORM_ROOT,
+                    env: { ...process.env, MODULE_ROOT },
+                    encoding: 'utf8',
+                });
+                if (/^\s*OK\s/m.test(out)) okCount++;
+                else if (/^\s*SKIP\s/m.test(out)) skipCount++;
+                else okCount++;
+            } catch (e) {
+                errCount++;
+                const stderr = (e.stderr ? e.stderr.toString() : '').trim();
+                if (stderr) console.warn(`      WARN ${conv.name} on ${path.basename(para)}: ${stderr.split('\n').pop()}`);
+            }
+        }
+        const summary = `${okCount} OK, ${skipCount} skipped${errCount ? `, ${errCount} errors` : ''}`;
+        console.log(`    \u2713 ${conv.name.padEnd(22)} ${summary}`);
+        if (errCount > 0) {
+            console.error(`  \u2717 ${conv.name} hit ${errCount} errors \u2014 aborting deploy.`);
+            process.exit(1);
+        }
+    }
+    console.log(`  \u2713 Docx converters done.`);
+}
+
 function runBuildScripts() {
     console.log('\u2501\u2501 Step 2: Running build scripts \u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\n');
 
     const env = { ...process.env, MODULE_ROOT };
     const opts = { cwd: PLATFORM_ROOT, env, stdio: 'inherit' };
+
+    // Run docx-to-web converters first so the resulting .html files are on
+    // disk when the landing-page builder scans paragraph dirs.
+    runDocxConverters();
 
     const scripts = [
         { name: 'Skilltree shells + data', cmd: 'node build-scripts/platform/build-skilltree-shells.js' },
