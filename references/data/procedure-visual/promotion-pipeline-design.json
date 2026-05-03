@@ -1,0 +1,259 @@
+{
+  "schema_version": 1,
+  "registry_id": "procedure-visual-promotion-pipeline-design",
+  "sprint_id": "PV.8",
+  "gate_id": "GATE-PV8-promotion-pipeline-design",
+  "status": "design_only",
+  "generated_by": "build-scripts/references/build-procedure-visual-promotion-pipeline-design.js",
+  "generated_on": "2026-05-03T13:20:13.219Z",
+  "storage_decision": {
+    "registry_location": "references/data/procedure-visual/promotion-pipeline-design.json",
+    "machine_registry_created": false,
+    "reason": "PV.8 defines a future promotion path only. It does not execute promotion or create references/machine PV registries."
+  },
+  "source_evidence": {
+    "pv7_gate_closure": "reports/review-gates/GATE-PV7-machine-promotion-review/gate-closure.json",
+    "pv7_decision": "pass_with_conditions",
+    "pv7_machine_promotion_authorized": false,
+    "readiness_report": "reports/json/procedure-visual-machine-promotion-readiness.json",
+    "readiness_status": "promotion_not_ready",
+    "coverage_report": "reports/json/procedure-visual-coverage.json",
+    "pv_linked_unit_count": 6,
+    "skilltree_generator_readiness": "reports/json/skilltree-generator-readiness.json",
+    "generator_blocked_count": 37
+  },
+  "policy": {
+    "design_only": true,
+    "references_machine_write_authorized": false,
+    "student_facing_projection_authorized": false,
+    "operation_promotion_authorized": false,
+    "lesson_target_write_authorized": false,
+    "diagnostics_or_adaptive_use_authorized": false
+  },
+  "forbidden_machine_files_checked": [
+    "references/machine/procedure-templates.json",
+    "references/machine/visual-states.json",
+    "references/machine/unit-template-links.json",
+    "references/machine/procedure-visual-vocab.json",
+    "references/machine/procedure-visual.json"
+  ],
+  "forbidden_machine_files_found": [],
+  "future_promotion_sequence": [
+    {
+      "order": 1,
+      "phase_id": "PV8_DESIGN",
+      "name": "Promotion pipeline design",
+      "status": "this_sprint",
+      "exit_proof": [
+        "references/data/procedure-visual/promotion-pipeline-design.json",
+        "reports/json/procedure-visual-promotion-pipeline-design.json",
+        "reports/markdown/procedure-visual-promotion-pipeline-design.md"
+      ]
+    },
+    {
+      "order": 2,
+      "phase_id": "PVG4_LESSON_REGRESSION",
+      "name": "Lesson regression proof",
+      "status": "required_before_promotion",
+      "exit_proof": [
+        "At least two recorded PV-G4 lesson-side regression proofs",
+        "Complete paragraph validation and Book 1 checks where applicable",
+        "No hand-built generated-output patching"
+      ]
+    },
+    {
+      "order": 3,
+      "phase_id": "PV9_CLI_IMPLEMENTATION",
+      "name": "Promotion CLI implementation",
+      "status": "future_only",
+      "exit_proof": [
+        "CLI scripts implemented under build-scripts/references/",
+        "machine-registry validators implemented",
+        "mutation-log checker implemented",
+        "dry-run mode proves no write by default"
+      ]
+    },
+    {
+      "order": 4,
+      "phase_id": "PV10_UNIT_TEMPLATE_LINK_PROMOTION_GATE",
+      "name": "Unit-template link promotion gate",
+      "status": "future_only",
+      "exit_proof": [
+        "human-interview.*",
+        "gate-closure.*",
+        "dry-run promotion report",
+        "rollback plan"
+      ]
+    }
+  ],
+  "first_candidate": {
+    "record_class": "unit_template_links",
+    "current_location": "references/data/procedure-visual/unit-template-links.json",
+    "future_machine_location": "references/machine/procedure-visual-unit-template-links.json",
+    "rationale": "Links are the thinnest PV record class. They connect existing unit IDs to existing PV template IDs without promoting renderer-facing procedure templates or visual states.",
+    "promotion_status": "not_authorized_in_pv8",
+    "required_before_promotion": [
+      "PV-G4 lesson regression proofs recorded",
+      "PV promotion CLI implemented and validated",
+      "mutation log schema implemented",
+      "future human gate explicitly authorizes the exact record set"
+    ]
+  },
+  "records_to_keep_as_overlay": [
+    {
+      "record_class": "procedure_templates",
+      "reason": "Templates contain procedure semantics and operation references; they should remain governed data until more renderer and lesson-regression proof exists."
+    },
+    {
+      "record_class": "visual_states",
+      "reason": "Visual states are renderer and surface-variant facing; they need stronger accessibility, surface, and lesson-regression proof before machine authority."
+    },
+    {
+      "record_class": "procedure_visual_vocab_and_schemas",
+      "reason": "Vocabulary and schema governance needs its own promotion design and should not be bundled into first link promotion."
+    }
+  ],
+  "proposed_cli_contract": [
+    {
+      "command_name": "build-scripts/references/pv-promotion-plan.js",
+      "implementation_status": "proposed_not_implemented",
+      "default_mode": "dry_run",
+      "purpose": "Build a reviewed promotion candidate set without writing references/machine.",
+      "required_args": [
+        "--scope unit-template-links",
+        "--gate <gate-id>",
+        "--output reports/review-gates/<gate-id>/promotion-plan.json"
+      ],
+      "forbidden_behavior": [
+        "no references/machine writes",
+        "no lesson target writes",
+        "no student-facing projection authorization"
+      ]
+    },
+    {
+      "command_name": "build-scripts/references/pv-machine-promote.js",
+      "implementation_status": "proposed_not_implemented",
+      "default_mode": "blocked_without_gate_closure",
+      "purpose": "Apply an explicitly authorized machine promotion set.",
+      "required_args": [
+        "--scope unit-template-links",
+        "--gate-closure reports/review-gates/<gate-id>/gate-closure.json",
+        "--mutation-log reports/review-gates/<gate-id>/PV-promotion-mutation-log.json"
+      ],
+      "forbidden_behavior": [
+        "no execution without closure_confirmed_by_human true",
+        "no procedure_templates or visual_states promotion unless the gate explicitly names them",
+        "no provisional exercise_operation promotion"
+      ]
+    },
+    {
+      "command_name": "build-scripts/references/pv-machine-rollback.js",
+      "implementation_status": "proposed_not_implemented",
+      "default_mode": "blocked_without_mutation_log",
+      "purpose": "Rollback a prior PV machine promotion using the recorded mutation log.",
+      "required_args": [
+        "--mutation-log reports/review-gates/<gate-id>/PV-promotion-mutation-log.json"
+      ],
+      "forbidden_behavior": [
+        "no rollback without exact preimage hashes",
+        "no rollback of unrelated user changes"
+      ]
+    }
+  ],
+  "proposed_mutation_log_schema": {
+    "schema_version": 1,
+    "required_fields": [
+      "mutation_id",
+      "gate_id",
+      "sprint_id",
+      "authorized_scope",
+      "executed_by",
+      "executed_on",
+      "source_records",
+      "target_records",
+      "preimage_hashes",
+      "postimage_hashes",
+      "validators_run",
+      "rollback_instructions",
+      "protected_surfaces_touched"
+    ],
+    "protected_surfaces_touched_must_equal": [
+      "references/machine/procedure-visual-unit-template-links.json"
+    ],
+    "must_not_include": [
+      "references/external",
+      "lesson targets",
+      "RAG chunk hand patches",
+      "provisional exercise_operation promotion"
+    ]
+  },
+  "proposed_validators": [
+    {
+      "validator": "build-scripts/references/validate-procedure-visual-machine-links.js",
+      "implementation_status": "proposed_not_implemented",
+      "checks": [
+        "Every promoted unit_id exists in micro-teaching-units.json.",
+        "Every promoted template_id exists in references/data/procedure-visual/procedure-templates.json or an explicitly promoted template registry.",
+        "No promoted link has student_facing_allowed true.",
+        "Every promoted link records source overlay path and gate id."
+      ]
+    },
+    {
+      "validator": "build-scripts/references/check-procedure-visual-promotion-log.js",
+      "implementation_status": "proposed_not_implemented",
+      "checks": [
+        "Mutation log schema is valid.",
+        "Gate closure authorizes the exact scope.",
+        "Preimage and postimage hashes resolve.",
+        "Rollback instructions are present."
+      ]
+    },
+    {
+      "validator": "build-scripts/references/check-procedure-visual-publication-boundary.js",
+      "implementation_status": "proposed_not_implemented",
+      "checks": [
+        "Machine promotion does not imply student-facing projection.",
+        "Generator-blocked units remain blocked.",
+        "Diagnostics, adaptive routing, AI, sequencing, mastery, and summative use remain unauthorized."
+      ]
+    }
+  ],
+  "future_gate_template": {
+    "proposed_gate_id": "GATE-PV10-unit-template-link-promotion",
+    "required_questions": [
+      "Are at least two PV-G4 lesson-side regression proofs recorded and valid?",
+      "Is the promotion scope limited to unit-template links?",
+      "Does the promotion CLI dry run produce the expected candidate set without writing references/machine?",
+      "Does the mutation-log schema support rollback and protected-surface auditing?",
+      "Do promoted links keep student-facing projection, generator exposure, diagnostics, adaptive routing, AI, sequencing, mastery, and summative use blocked?",
+      "Does HCS explicitly authorize CLI-only promotion for the named record set?"
+    ],
+    "valid_statuses": [
+      "pass_with_conditions",
+      "hold",
+      "fail"
+    ]
+  },
+  "checks": [
+    {
+      "id": "pv7_blocks_promotion",
+      "status": "passed",
+      "detail": "PV.7 gate closure does not authorize machine promotion."
+    },
+    {
+      "id": "no_forbidden_machine_files",
+      "status": "passed",
+      "detail": "No PV machine registry files exist."
+    },
+    {
+      "id": "design_only_policy",
+      "status": "passed",
+      "detail": "PV.8 records contracts only and does not implement promotion."
+    },
+    {
+      "id": "first_candidate_limited_to_links",
+      "status": "passed",
+      "detail": "Unit-template links are the only first candidate; templates and visual states remain overlays."
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "gate_id": "GATE-PV8-promotion-pipeline-design",
+  "sprint_id": "PV.8",
+  "status": "technical_design_closed",
+  "generated_on": "2026-05-03",
+  "design_report": "reports/json/procedure-visual-promotion-pipeline-design.json",
+  "machine_promotion_authorized": false,
+  "summary": {
+    "first_candidate": "unit_template_links",
+    "proposed_cli_count": 3,
+    "proposed_validator_count": 3,
+    "future_gate": "GATE-PV10-unit-template-link-promotion"
+  },
+  "decisions": [
+    "PV.8 is design-only.",
+    "Unit-template links are the only future first candidate.",
+    "Procedure templates and visual states remain references/data overlays.",
+    "PV-G4 lesson-regression proof remains required before reopening promotion."
+  ],
+  "blocked_scope": [
+    "references/machine Procedure-Visual registry creation",
+    "student-facing PV projection",
+    "generator exposure for blocked units",
+    "provisional exercise_operation promotion",
+    "diagnostics",
+    "adaptive routing",
+    "student-facing AI",
+    "automatic sequencing",
+    "mastery decisions",
+    "summative use"
+  ]
+}

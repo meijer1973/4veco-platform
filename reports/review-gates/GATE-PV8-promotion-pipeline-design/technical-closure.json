@@ -1,0 +1,22 @@
+{
+  "gate_id": "GATE-PV8-promotion-pipeline-design",
+  "sprint_id": "PV.8",
+  "status": "pass_with_conditions",
+  "closure_type": "technical",
+  "closed_on": "2026-05-03",
+  "machine_promotion_authorized": false,
+  "protected_reference_data_changed": false,
+  "design_report": "reports/json/procedure-visual-promotion-pipeline-design.json",
+  "accepted_outcomes": [
+    "PV promotion pipeline design exists.",
+    "Future first candidate is limited to unit-template links.",
+    "Proposed CLI contract, mutation-log schema, validators, rollback model, and future gate questions are documented."
+  ],
+  "blocked_outcomes": [
+    "No PV references/machine registry is created.",
+    "No unit-template link is promoted.",
+    "No procedure template or visual state is promoted.",
+    "No student-facing PV projection is authorized."
+  ],
+  "next_required_step": "PV-G4 lesson-regression proof and later CLI implementation before any future promotion gate."
+}

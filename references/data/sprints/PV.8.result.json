@@ -1,0 +1,61 @@
+{
+  "sprint_id": "PV.8",
+  "name": "Promotion Pipeline Design",
+  "status": "completed",
+  "completed_on": "2026-05-03",
+  "plan": "docs/sprints/PV.8-plan.md",
+  "baseline": "reports/sprints/PV.8-baseline.md",
+  "result": "reports/sprints/PV.8-result.md",
+  "diff_summary": "reports/sprints/PV.8-diff-summary.md",
+  "gate_id": "GATE-PV8-promotion-pipeline-design",
+  "technical_closure": "reports/review-gates/GATE-PV8-promotion-pipeline-design/technical-closure.json",
+  "machine_promotion_authorized": false,
+  "protected_reference_data_changed": false,
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js docs/sprints/PV.8-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/validate-procedure-visual-registry.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/build-procedure-visual-promotion-pipeline-design.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-procedure-visual-promotion-pipeline-design.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-gate-bundle-urls.js GATE-PV8-promotion-pipeline-design",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-bundle-urls.js GATE-PV8-promotion-pipeline-design",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js PV.8",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-result.js reports/sprints/PV.8-result.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js PV.8 --complete",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-roadmap-version-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js --check",
+      "status": "passed"
+    }
+  ],
+  "next_required_step": "Proceed to PV-G4 lesson-regression proof coordination. Do not implement a PV promotion CLI or attempt machine promotion until at least two lesson-side PV regression proofs exist and a later sprint explicitly scopes CLI implementation."
+}

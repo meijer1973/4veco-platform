@@ -15,13 +15,14 @@
   "roadmaps": [
     {
       "roadmap_id": "references-team-roadmap",
-      "version": "v2.38-pv7-gate-closed",
+      "version": "v2.39-pv8-promotion-pipeline-design",
       "title": "References Team Roadmap",
       "status": "active",
       "path": "references/reference-team-roadmap.md",
       "owner": "references_team",
       "updated_on": "2026-05-03",
       "supersedes": [
+        "docs/roadmaps/outdated/reference-team-roadmap-v2.38-pv7-gate-closed.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.37-pv7-machine-promotion-review-prepared.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.36-rx6-skilltree-generator-integration.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.35-pv6-coverage-dashboard.md",
@@ -60,7 +61,18 @@
         "knowledge/Exercise schema and quality/reference-team-roadmap Live version 28 April.md",
         "knowledge/Exercise schema and quality/roadmap-updated-repository-checked.md"
       ],
-      "notes": "Current operating roadmap after closing PV.7 as pass_with_conditions; PV.8 promotion-pipeline design is next and no PV machine promotion is authorized yet."
+      "notes": "Current operating roadmap after completing PV.8 promotion-pipeline design; PV-G4 lesson-regression proof is next and no PV machine promotion is authorized yet."
+    },
+    {
+      "roadmap_id": "references-team-roadmap-v2.38",
+      "version": "v2.38-pv7-gate-closed",
+      "title": "References Team Roadmap before PV.8 promotion-pipeline design",
+      "status": "outdated",
+      "path": "docs/roadmaps/outdated/reference-team-roadmap-v2.38-pv7-gate-closed.md",
+      "owner": "references_team",
+      "updated_on": "2026-05-03",
+      "superseded_by": "references/reference-team-roadmap.md",
+      "notes": "Snapshot archived before adding PV.8 promotion-pipeline design artifacts and technical closure."
     },
     {
       "roadmap_id": "references-team-roadmap-v2.37",
