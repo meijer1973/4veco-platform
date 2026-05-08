@@ -439,6 +439,14 @@ node scripts/deploy.js "$BOOK"
 
 This command writes to the target book. It is a build/deploy step, not a read-only validation probe.
 
+### Phase 6a: Companion visual review gate
+
+Run `agents/econ-companion-visual-review.md` after Phase 6 when the generated HTML/game shells and converted companion pages can be inspected as rendered output:
+
+> "You are the econ-companion-visual-review agent. Read `agents/econ-companion-visual-review.md`, `AGENTS.md`, and `BUILD-PARAGRAPH.md`. Review paragraph [path]. Inspect the available student-facing HTML, DOCX/PPTX/PDF companions, rendered browser/document views where possible, `_paragraph-plan.md`, `_assets/`, source builders, canonical units/procedures/terminology, and quality records. Return the required report format and save it as `X.Y.Z-companion-visual-review.md` in the paragraph folder."
+
+Hard fails from this agent block completion. Fix the source, generator, CSS/JS, asset builder, or registry issue; regenerate; then rerun the companion review. Do not close a generated-output defect by hand-editing the generated lesson artifact unless the team explicitly requests a temporary patch.
+
 ### B-verify: Part B checklist
 
 **Part A prerequisites (skip if running Part B only with existing content):**
@@ -459,6 +467,7 @@ This command writes to the target book. It is a build/deploy step, not a read-on
 - [ ] **Theme variants**: every themed web visual has a light and dark variant, and the HTML/JS swaps to the correct one
 - [ ] **Unified experience**: stappenplan game procedures use the same step labels and sequence as vaardigheden skills
 - [ ] **Visuelen-toewijzing**: every visual listed for a builder in the plan is actually embedded in that builder's output
+- [ ] `X.Y.Z-companion-visual-review.md` exists and has verdict PASS or PASS WITH FLAGS (no hard fails)
 
 **Deployment:**
 - [ ] Browser: all 4 games load, all section cards appear in landing page

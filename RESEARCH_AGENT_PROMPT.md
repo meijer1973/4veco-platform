@@ -81,6 +81,7 @@ Search the repository namespaces relevant to the question. Common surfaces:
 
 - `AGENTS.md` and `CLAUDE.md` for operating rules
 - `BUILD-PARAGRAPH.md` and `BUILD-CHAPTER.md` for production workflows
+- `agents/` for bounded reviewer-role protocols such as companion visual review
 - `build-scripts/` and `scripts/` for generators, converters, validators, and deploy orchestration
 - `engines/` for game/runtime behavior
 - `skills/` and `.claude/commands/` for content-production workflows

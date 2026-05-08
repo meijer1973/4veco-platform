@@ -103,6 +103,8 @@ A student working through all materials for one paragraph should feel like they'
 
 **How to enforce:** The `_paragraph-plan.md` contains a **procedure-stappen-plan** that defines the canonical step sequence for each skill. All builders — vaardigheden, stappenplan game, presentatie, inoefening — must follow these exact steps. A **visual-variants plan** maps each concept visual to its surface-specific files, and a **visuelen-toewijzing** table maps those variants to every builder that must embed them.
 
+For companion artifact review, use `agents/econ-companion-visual-review.md`. It checks the rendered student experience, not just source files: visual-text synchronization, procedure fidelity, affordance, cognitive load, accessibility, and source-output parity. A companion surface with missing visual variants, conflicting visual/text examples, broken procedure steps, debug labels, or no next-step routing is not done.
+
 ## Architectural principles
 
 Three decisions that govern what lives in this platform and how it evolves. These are not style preferences — they determine which proposals fit the project and which are reasoning backwards into a dying direction.
@@ -177,6 +179,7 @@ The current legacy game target (historically Module 3) is frozen until September
 │   ├── verify-deployment.sh    ← Post-push verificatie
 │   └── pre-push-hook.js        ← Git hook
 ├── skills/                     ← Shared skills (didactiek, templates, grafieken, quality control) — for Claude, Codex, and any agent
+├── agents/                     ← Reusable review-agent specifications for bounded QA roles
 ├── references/                 ← Authoritative standards, organised by maintenance status:
 │   ├── external/                ←   Mirrored from outside bodies (CvTE, inspectie, school); machine-refreshed
 │   ├── authored/                ←   Hand-edited (legacy bucket; target to shrink)

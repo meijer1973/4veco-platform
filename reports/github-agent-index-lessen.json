@@ -2,7 +2,7 @@
   "repo": "4veco-lessen",
   "root": "C:\\Projects\\4veco\\4veco-lessen",
   "available": true,
-  "generated_at": "2026-05-03T07:58:05.791Z",
+  "generated_at": "2026-05-08T20:06:47.437Z",
   "file_count": 1032,
   "inventory_scope": "git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees",
   "skipped_directories": [
@@ -26,6 +26,7 @@
       "RESEARCH_AGENT_MAP.md",
       "RESEARCH_AGENT_PROMPT.md"
     ],
+    "agents": [],
     "engines": [
       "Boek 1 - Grondslagen, vraag en aanbod/shared/newsdetective-engine.js",
       "Boek 1 - Grondslagen, vraag en aanbod/shared/newsdetective-ui.js",

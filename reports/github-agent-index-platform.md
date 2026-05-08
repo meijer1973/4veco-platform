@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-05-03T07:58:05.762Z
+Generated: 2026-05-08T20:06:47.410Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 1163
+Files indexed: 1236
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -25,6 +25,13 @@ Count: 11
 - RESEARCH_AGENT_MAP.md
 - RESEARCH_AGENT_PROMPT_REFERENCES.md
 - RESEARCH_AGENT_PROMPT.md
+
+## agents
+
+Count: 2
+
+- agents/econ-companion-visual-review.md
+- agents/README.md
 
 ## engines
 
@@ -70,7 +77,7 @@ Count: 37
 
 ## build scripts
 
-Count: 219
+Count: 227
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -169,8 +176,11 @@ Count: 219
 - build-scripts/references/build-procedure-game-template-alignment.js
 - build-scripts/references/build-procedure-visual-coverage.js
 - build-scripts/references/build-procedure-visual-inventory.js
+- build-scripts/references/build-procedure-visual-lesson-regression-proof-intake.js
+- build-scripts/references/build-procedure-visual-machine-promotion-review.js
 - build-scripts/references/build-procedure-visual-pilot-status.js
 - build-scripts/references/build-procedure-visual-projection-mvp.js
+- build-scripts/references/build-procedure-visual-promotion-pipeline-design.js
 - build-scripts/references/build-procedure-visual-schema-status.js
 - build-scripts/references/build-reference-inventory.js
 - build-scripts/references/build-representation-operation-coverage.js
@@ -178,6 +188,7 @@ Count: 219
 - build-scripts/references/build-rx2-first-lane-review.js
 - build-scripts/references/build-rx2b-graphical-foundation-review.js
 - build-scripts/references/build-skill-operation-registry.js
+- build-scripts/references/build-skilltree-generator-readiness.js
 - build-scripts/references/build-source-document-registry.js
 - build-scripts/references/build-unit-index.js
 - build-scripts/references/check-alignment-graph.js
@@ -191,7 +202,10 @@ Count: 219
 - build-scripts/references/check-owned-source-registry.js
 - build-scripts/references/check-procedure-visual-coverage.js
 - build-scripts/references/check-procedure-visual-inventory.js
+- build-scripts/references/check-procedure-visual-lesson-regression-proof-intake.js
+- build-scripts/references/check-procedure-visual-machine-promotion-review.js
 - build-scripts/references/check-procedure-visual-projection-mvp.js
+- build-scripts/references/check-procedure-visual-promotion-pipeline-design.js
 - build-scripts/references/check-quality-issues.js
 - build-scripts/references/check-reference-cli-coverage.js
 - build-scripts/references/check-representation-operation-coverage.js
@@ -209,6 +223,7 @@ Count: 219
 - build-scripts/references/check-rx4-elasticity-market-diagram-mutations.js
 - build-scripts/references/check-rx4-elasticity-market-diagram-review.js
 - build-scripts/references/check-skill-operation-registry.js
+- build-scripts/references/check-skilltree-generator-readiness.js
 - build-scripts/references/check-source-document-registry.js
 - build-scripts/references/check-source-manifest.js
 - build-scripts/references/check-source-of-truth.js
@@ -339,7 +354,7 @@ Count: 40
 
 ## validators
 
-Count: 57
+Count: 61
 
 - build-scripts/rag/validate-chunks.js
 - build-scripts/rag/validate-query-output.js
@@ -355,7 +370,10 @@ Count: 57
 - build-scripts/references/check-owned-source-registry.js
 - build-scripts/references/check-procedure-visual-coverage.js
 - build-scripts/references/check-procedure-visual-inventory.js
+- build-scripts/references/check-procedure-visual-lesson-regression-proof-intake.js
+- build-scripts/references/check-procedure-visual-machine-promotion-review.js
 - build-scripts/references/check-procedure-visual-projection-mvp.js
+- build-scripts/references/check-procedure-visual-promotion-pipeline-design.js
 - build-scripts/references/check-quality-issues.js
 - build-scripts/references/check-reference-cli-coverage.js
 - build-scripts/references/check-representation-operation-coverage.js
@@ -373,6 +391,7 @@ Count: 57
 - build-scripts/references/check-rx4-elasticity-market-diagram-mutations.js
 - build-scripts/references/check-rx4-elasticity-market-diagram-review.js
 - build-scripts/references/check-skill-operation-registry.js
+- build-scripts/references/check-skilltree-generator-readiness.js
 - build-scripts/references/check-source-document-registry.js
 - build-scripts/references/check-source-manifest.js
 - build-scripts/references/check-source-of-truth.js
@@ -401,7 +420,7 @@ Count: 57
 
 ## references
 
-Count: 213
+Count: 223
 
 - references/authored/course-target-exercises.json
 - references/authored/didactiek-principes.md
@@ -428,10 +447,12 @@ Count: 213
 - references/data/owned-content-graph.json
 - references/data/owned-source-registry.json
 - references/data/procedure-visual/inventory.json
+- references/data/procedure-visual/lesson-regression-proof-requirements.json
 - references/data/procedure-visual/procedure-game-alignment-pilots.json
 - references/data/procedure-visual/procedure-template.schema.json
 - references/data/procedure-visual/procedure-templates.json
 - references/data/procedure-visual/procedure-visual-vocab.json
+- references/data/procedure-visual/promotion-pipeline-design.json
 - references/data/procedure-visual/README.md
 - references/data/procedure-visual/unit-template-links.json
 - references/data/procedure-visual/visual-grammar.schema.json
@@ -444,6 +465,7 @@ Count: 213
 - references/data/skill-operation-registry.json
 - references/data/source_manifest.json
 - references/data/source-document-registry.json
+- references/data/sprints/PV-G4.plan.json
 - references/data/sprints/PV.1.plan.json
 - references/data/sprints/PV.1.result.json
 - references/data/sprints/PV.2.plan.json
@@ -456,6 +478,10 @@ Count: 213
 - references/data/sprints/PV.5.result.json
 - references/data/sprints/PV.6.plan.json
 - references/data/sprints/PV.6.result.json
+- references/data/sprints/PV.7.plan.json
+- references/data/sprints/PV.7.result.json
+- references/data/sprints/PV.8.plan.json
+- references/data/sprints/PV.8.result.json
 - references/data/sprints/R0.2.plan.json
 - references/data/sprints/R0.2.result.json
 - references/data/sprints/R1.1.plan.json
@@ -538,6 +564,9 @@ Count: 213
 - references/data/sprints/RX.4.result.json
 - references/data/sprints/RX.5.plan.json
 - references/data/sprints/RX.5.result.json
+- references/data/sprints/RX.6-generator-blocked-units.json
+- references/data/sprints/RX.6.plan.json
+- references/data/sprints/RX.6.result.json
 - references/data/sprints/S1.plan.json
 - references/data/sprints/S1.result.json
 - references/data/sprints/S4.1.plan.json
@@ -619,7 +648,7 @@ Count: 213
 
 ## reports
 
-Count: 478
+Count: 522
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -656,8 +685,11 @@ Count: 478
 - reports/json/procedure-game-template-alignment.json
 - reports/json/procedure-visual-coverage.json
 - reports/json/procedure-visual-inventory.json
+- reports/json/procedure-visual-lesson-regression-proof-intake.json
+- reports/json/procedure-visual-machine-promotion-readiness.json
 - reports/json/procedure-visual-pilot-status.json
 - reports/json/procedure-visual-projection-mvp.json
+- reports/json/procedure-visual-promotion-pipeline-design.json
 - reports/json/procedure-visual-schema-status.json
 - reports/json/reference-cli-coverage.json
 - reports/json/reference-health.json
@@ -667,6 +699,7 @@ Count: 478
 - reports/json/representation-operation-inventory.json
 - reports/json/representation-transfer-gaps.json
 - reports/json/skill-operation-registry.json
+- reports/json/skilltree-generator-readiness.json
 - reports/json/source-document-registry.json
 - reports/json/terminology-drift.json
 - reports/json/terms-coverage.json
@@ -685,8 +718,11 @@ Count: 478
 - reports/markdown/procedure-game-template-alignment.md
 - reports/markdown/procedure-visual-coverage.md
 - reports/markdown/procedure-visual-inventory.md
+- reports/markdown/procedure-visual-lesson-regression-proof-intake.md
+- reports/markdown/procedure-visual-machine-promotion-readiness.md
 - reports/markdown/procedure-visual-pilot-status.md
 - reports/markdown/procedure-visual-projection-mvp.md
+- reports/markdown/procedure-visual-promotion-pipeline-design.md
 - reports/markdown/procedure-visual-schema-status.md
 - reports/markdown/reference-health.md
 - reports/markdown/reference-quality-issues.md
@@ -695,6 +731,7 @@ Count: 478
 - reports/markdown/representation-transfer-gaps.md
 - reports/markdown/retrieval-eval-results.md
 - reports/markdown/skill-operation-registry.md
+- reports/markdown/skilltree-generator-readiness.md
 - reports/markdown/source-document-registry.md
 - reports/markdown/terminology-drift.md
 - reports/markdown/terms-coverage.md
@@ -794,6 +831,13 @@ Count: 478
 - reports/review-gates/GATE-PV-G2-pilot-content/review-packet.md
 - reports/review-gates/GATE-PV-G2-pilot-content/technical-closure.json
 - reports/review-gates/GATE-PV-G2-pilot-content/technical-closure.md
+- reports/review-gates/GATE-PV-G4-lesson-regression/bundle-urls.md
+- reports/review-gates/GATE-PV-G4-lesson-regression/proof-intake.json
+- reports/review-gates/GATE-PV-G4-lesson-regression/proof-intake.md
+- reports/review-gates/GATE-PV-G4-lesson-regression/proof-template.json
+- reports/review-gates/GATE-PV-G4-lesson-regression/proof-template.md
+- reports/review-gates/GATE-PV-G4-lesson-regression/review-packet.json
+- reports/review-gates/GATE-PV-G4-lesson-regression/review-packet.md
 - reports/review-gates/GATE-PV4-procedure-game-contract/bundle-urls.md
 - reports/review-gates/GATE-PV4-procedure-game-contract/review-packet.json
 - reports/review-gates/GATE-PV4-procedure-game-contract/review-packet.md
@@ -809,6 +853,20 @@ Count: 478
 - reports/review-gates/GATE-PV6-coverage-dashboard/review-packet.md
 - reports/review-gates/GATE-PV6-coverage-dashboard/technical-closure.json
 - reports/review-gates/GATE-PV6-coverage-dashboard/technical-closure.md
+- reports/review-gates/GATE-PV7-machine-promotion-review/bundle-urls.md
+- reports/review-gates/GATE-PV7-machine-promotion-review/gate-closure.json
+- reports/review-gates/GATE-PV7-machine-promotion-review/gate-closure.md
+- reports/review-gates/GATE-PV7-machine-promotion-review/human-interview.json
+- reports/review-gates/GATE-PV7-machine-promotion-review/human-interview.md
+- reports/review-gates/GATE-PV7-machine-promotion-review/promotion-readiness.json
+- reports/review-gates/GATE-PV7-machine-promotion-review/promotion-readiness.md
+- reports/review-gates/GATE-PV7-machine-promotion-review/review-packet.json
+- reports/review-gates/GATE-PV7-machine-promotion-review/review-packet.md
+- reports/review-gates/GATE-PV8-promotion-pipeline-design/bundle-urls.md
+- reports/review-gates/GATE-PV8-promotion-pipeline-design/review-packet.json
+- reports/review-gates/GATE-PV8-promotion-pipeline-design/review-packet.md
+- reports/review-gates/GATE-PV8-promotion-pipeline-design/technical-closure.json
+- reports/review-gates/GATE-PV8-promotion-pipeline-design/technical-closure.md
 - reports/review-gates/GATE-R2-empty-needs/bundle-urls.md
 - reports/review-gates/GATE-R2-empty-needs/gate-closure.json
 - reports/review-gates/GATE-R2-empty-needs/human-interview.md
@@ -948,7 +1006,13 @@ Count: 478
 - reports/review-gates/GATE-RX5-representation-operation-reports/review-packet.md
 - reports/review-gates/GATE-RX5-representation-operation-reports/technical-closure.json
 - reports/review-gates/GATE-RX5-representation-operation-reports/technical-closure.md
+- reports/review-gates/GATE-RX6-skilltree-generator-integration/bundle-urls.md
+- reports/review-gates/GATE-RX6-skilltree-generator-integration/review-packet.json
+- reports/review-gates/GATE-RX6-skilltree-generator-integration/review-packet.md
+- reports/review-gates/GATE-RX6-skilltree-generator-integration/technical-closure.json
+- reports/review-gates/GATE-RX6-skilltree-generator-integration/technical-closure.md
 - reports/sprints/example-result.md
+- reports/sprints/PV-G4-baseline.md
 - reports/sprints/PV.1-baseline.md
 - reports/sprints/PV.1-diff-summary.md
 - reports/sprints/PV.1-result.md
@@ -967,6 +1031,12 @@ Count: 478
 - reports/sprints/PV.6-baseline.md
 - reports/sprints/PV.6-diff-summary.md
 - reports/sprints/PV.6-result.md
+- reports/sprints/PV.7-baseline.md
+- reports/sprints/PV.7-diff-summary.md
+- reports/sprints/PV.7-result.md
+- reports/sprints/PV.8-baseline.md
+- reports/sprints/PV.8-diff-summary.md
+- reports/sprints/PV.8-result.md
 - reports/sprints/R0.2-baseline.md
 - reports/sprints/R0.2-diff-summary.md
 - reports/sprints/R0.2-result.md
@@ -1081,6 +1151,9 @@ Count: 478
 - reports/sprints/RX.5-baseline.md
 - reports/sprints/RX.5-diff-summary.md
 - reports/sprints/RX.5-result.md
+- reports/sprints/RX.6-baseline.md
+- reports/sprints/RX.6-diff-summary.md
+- reports/sprints/RX.6-result.md
 - reports/sprints/S1-baseline.md
 - reports/sprints/S1-diff-summary.md
 - reports/sprints/S1-result.md
@@ -1120,7 +1193,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 169
+Count: 178
 
 - .gitignore
 - BUILD-CHAPTER.md
@@ -1153,6 +1226,11 @@ Count: 169
 - docs/roadmaps/outdated/reference-team-roadmap-v2.32-pv4-procedure-game-contract.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.33-rx5-representation-operation-reports.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.34-pv5-visual-projection-mvp.md
+- docs/roadmaps/outdated/reference-team-roadmap-v2.35-pv6-coverage-dashboard.md
+- docs/roadmaps/outdated/reference-team-roadmap-v2.36-rx6-skilltree-generator-integration.md
+- docs/roadmaps/outdated/reference-team-roadmap-v2.37-pv7-machine-promotion-review-prepared.md
+- docs/roadmaps/outdated/reference-team-roadmap-v2.38-pv7-gate-closed.md
+- docs/roadmaps/outdated/reference-team-roadmap-v2.39-pv8-promotion-pipeline-design.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.4-r9.2-plus-cp1-cautions.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.5-representation-sensitive-phase.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.6-s4-cp3-dry-run.md
@@ -1163,12 +1241,15 @@ Count: 169
 - docs/roadmaps/roadmap-version-index.json
 - docs/roadmaps/roadmap-version-index.md
 - docs/sprints/example-plan.md
+- docs/sprints/PV-G4-plan.md
 - docs/sprints/PV.1-plan.md
 - docs/sprints/PV.2-plan.md
 - docs/sprints/PV.3-plan.md
 - docs/sprints/PV.4-plan.md
 - docs/sprints/PV.5-plan.md
 - docs/sprints/PV.6-plan.md
+- docs/sprints/PV.7-plan.md
+- docs/sprints/PV.8-plan.md
 - docs/sprints/R0.2-plan.md
 - docs/sprints/R1.1-plan.md
 - docs/sprints/R1.2-plan.md
@@ -1208,6 +1289,7 @@ Count: 169
 - docs/sprints/RX.3b-plan.md
 - docs/sprints/RX.4-plan.md
 - docs/sprints/RX.5-plan.md
+- docs/sprints/RX.6-plan.md
 - docs/sprints/S1-plan.md
 - docs/sprints/S4-plan.md
 - docs/sprints/S4.1-plan.md

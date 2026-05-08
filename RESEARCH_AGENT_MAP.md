@@ -59,6 +59,9 @@ Access rules:
 - Preserve spaces in relative paths; URL-encode them only when required by the HTTP client.
 - Directories are path namespaces, not fetch targets.
 - Fetch files only by declared path, declared namespace search, or declared path template.
+- Use exact paths from this file or `AGENT_GITHUB_ENTRY.md` when possible; these curated files are more reliable than GitHub search results.
+- Use `reports/github-agent-index-platform.md` and `reports/github-agent-index-lessen.md` for file-existence checks.
+- Use GitHub search mainly for discovery, not proof. Confirm discoveries by fetching exact paths or checking the generated inventory.
 - If raw URL access fails, retry through authenticated GitHub connector access before concluding the file is unavailable.
 
 ## Entry Points
@@ -69,11 +72,14 @@ Human-readable:
 - `RESEARCH_AGENT_MAP.md`
 - `RESEARCH_AGENT_PROMPT_REFERENCES.md`
 - `RESEARCH_AGENT_MAP_REFERENCES.md`
+- `AGENT_GITHUB_ENTRY.md`
 - `AGENTS.md`
 - `CLAUDE.md`
 - `BUILD-PARAGRAPH.md`
 - `BUILD-CHAPTER.md`
 - `build-scripts/README.md`
+- `agents/README.md`
+- `agents/econ-companion-visual-review.md`
 - `references/reference-team-roadmap.md`
 - `references/SOURCE_OF_TRUTH.md`
 - `knowledge/platform-team-roadmap.md`
@@ -106,6 +112,8 @@ entry_points (full URLs):
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/BUILD-PARAGRAPH.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/BUILD-CHAPTER.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/README.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/agents/README.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/agents/econ-companion-visual-review.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/reference-team-roadmap.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/SOURCE_OF_TRUTH.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/knowledge/platform-team-roadmap.md
@@ -140,6 +148,7 @@ Use these anchors before free-form browsing.
   "build_script_guide": "build-scripts/README.md",
   "package_scripts": "package.json",
   "reference_map": "RESEARCH_AGENT_MAP_REFERENCES.md",
+  "companion_visual_review_agent": "agents/econ-companion-visual-review.md",
   "reference_team_plan": "references/reference-team-roadmap.md",
   "platform_roadmap": "knowledge/platform-team-roadmap.md",
   "dashboard_index": "reports/internal-dashboard/dashboard-data.json"
@@ -155,6 +164,7 @@ index_anchors (full URLs):
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/README.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/package.json
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/RESEARCH_AGENT_MAP_REFERENCES.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/agents/econ-companion-visual-review.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/reference-team-roadmap.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/knowledge/platform-team-roadmap.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/internal-dashboard/dashboard-data.json
@@ -166,6 +176,7 @@ index_anchors (full URLs):
   "root": "https://raw.githubusercontent.com/meijer1973/4veco-platform/main/",
   "declared_path_namespaces": [
     ".claude",
+    "agents",
     "build-scripts",
     "docs",
     "engines",
@@ -216,10 +227,15 @@ index_anchors (full URLs):
     "scripts/pre-push-hook.js"
   ],
   "content_workflow_paths": [
+    "agents",
     "skills",
     ".claude/commands",
     "BUILD-PARAGRAPH.md",
     "BUILD-CHAPTER.md"
+  ],
+  "review_agent_paths": [
+    "agents/README.md",
+    "agents/econ-companion-visual-review.md"
   ],
   "reference_paths": [
     "RESEARCH_AGENT_MAP_REFERENCES.md",
@@ -283,8 +299,15 @@ build_pipeline_paths (full URLs):
 
 content_workflow_paths (full URLs):
 
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/agents/README.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/agents/econ-companion-visual-review.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/BUILD-PARAGRAPH.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/BUILD-CHAPTER.md
+
+review_agent_paths (full URLs):
+
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/agents/README.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/agents/econ-companion-visual-review.md
 
 reference_paths (full URLs):
 
@@ -321,6 +344,11 @@ reference_paths (full URLs):
     "contains": "external sources, owned course design, authored judgement, machine registries, schemas, QC prompts",
     "preferred_use": "what should be taught and what evidence supports it",
     "map": "RESEARCH_AGENT_MAP_REFERENCES.md"
+  },
+  "agents": {
+    "epistemic_role": "bounded reviewer-role protocols",
+    "contains": "agent specifications with evidence hierarchy, hard gates, verdict rules, and report formats",
+    "preferred_use": "how to run specialized reviews such as companion visual review"
   },
   "skills": {
     "epistemic_role": "content-production workflow layer",
@@ -362,6 +390,7 @@ Agents MUST follow this sequence:
 4. Load the matching entry points:
    - reference task -> `RESEARCH_AGENT_MAP_REFERENCES.md` and `RESEARCH_AGENT_PROMPT_REFERENCES.md`
    - paragraph production -> `BUILD-PARAGRAPH.md` plus relevant `skills/`
+   - companion visual review -> `agents/econ-companion-visual-review.md`, `BUILD-PARAGRAPH.md`, rendered lesson artifacts, and the relevant source/generator files
    - chapter production -> `BUILD-CHAPTER.md` plus relevant `skills/`
    - build/deploy -> `build-scripts/README.md`, `scripts/deploy.js`, relevant `build-scripts/platform/*`
    - engine behavior -> relevant `engines/*` files and `engines/tests/*`
@@ -422,9 +451,20 @@ Rules:
   "lesson_production": [
     "BUILD-PARAGRAPH.md",
     "BUILD-CHAPTER.md",
+    "agents",
     "skills",
     ".claude/commands",
     "references"
+  ],
+  "companion_visual_review": [
+    "agents/econ-companion-visual-review.md",
+    "BUILD-PARAGRAPH.md",
+    "AGENTS.md",
+    "references",
+    "build-scripts/content",
+    "build-scripts/lib",
+    "build-scripts/platform",
+    "engines"
   ],
   "report_dashboard": [
     "reports",
