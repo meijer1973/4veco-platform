@@ -279,7 +279,11 @@ def build_sections_from_doc(docx_path):
                 p = doc.paragraphs[para_index]
                 para_index += 1
 
-                # Dual coding: detect asset images via alt-text convention
+                # Dual coding: detect asset images via alt-text convention.
+                # L1.5V Bucket A4: builders now emit `asset-alt:<text>` so the
+                # rendered HTML and DOCX both carry meaningful alt-text.
+                # Legacy `asset:<id>` still parses for backward compat with
+                # paragraphs that haven't migrated; warn so omissions surface.
                 for run in p.runs:
                     blips = run._element.findall('.//' + qn('a:blip'))
                     if blips:
@@ -287,9 +291,19 @@ def build_sections_from_doc(docx_path):
                         if drawing is not None:
                             docPr = drawing.find(qn('wp:docPr'))
                             if docPr is not None:
-                                descr = docPr.get('descr', '')
-                                if descr.startswith('asset:'):
-                                    stream.append(('asset_image', descr[6:]))
+                                descr = docPr.get('descr', '') or ''
+                                title = docPr.get('title', '') or ''
+                                if descr.startswith('asset-alt:'):
+                                    alt = descr[len('asset-alt:'):]
+                                    base = title or alt[:30]
+                                    stream.append(('asset_image', {'base': base, 'alt': alt}))
+                                elif descr.startswith('asset:'):
+                                    base = descr[len('asset:'):]
+                                    sys.stderr.write(
+                                        f"WARNING: legacy 'asset:' prefix for {base!r} in voorkennis "
+                                        f"(migrate builder to pass altText).\n"
+                                    )
+                                    stream.append(('asset_image', {'base': base, 'alt': base}))
 
                 text = p.text.strip()
                 if not text:
@@ -584,12 +598,17 @@ def generate_html(data, para_number, para_name, asset_prefix="../_assets", share
                 lines = edata.replace('\n', '<br>\n            ')
                 content_html += f'        <div class="formula-box">\n            {lines}\n        </div>\n'
             elif etype == 'asset_image':
-                if edata in web_variant_bases:
-                    light_src = f'{asset_prefix}/{edata}_web_light.svg'
-                    dark_src = f'{asset_prefix}/{edata}_web_dark.svg'
-                    content_html += f'        <figure class="asset-figure">\n          <img src="{light_src}" data-light-src="{light_src}" data-dark-src="{dark_src}" data-fallback-src="{asset_prefix}/{esc(edata)}.svg" alt="{esc(edata)}" class="asset-svg">\n        </figure>\n'
+                # L1.5V Bucket A4: edata is now {'base': str, 'alt': str}.
+                # `base` selects the SVG variant; `alt` becomes the meaningful
+                # screen-reader text on the rendered <img>.
+                base = edata['base']
+                alt = edata['alt']
+                if base in web_variant_bases:
+                    light_src = f'{asset_prefix}/{base}_web_light.svg'
+                    dark_src = f'{asset_prefix}/{base}_web_dark.svg'
+                    content_html += f'        <figure class="asset-figure">\n          <img src="{light_src}" data-light-src="{light_src}" data-dark-src="{dark_src}" data-fallback-src="{asset_prefix}/{esc(base)}.svg" alt="{esc(alt)}" class="asset-svg">\n        </figure>\n'
                 else:
-                    content_html += f'        <figure class="asset-figure">\n          <img src="{asset_prefix}/{esc(edata)}.svg" alt="{esc(edata)}" class="asset-svg">\n        </figure>\n'
+                    content_html += f'        <figure class="asset-figure">\n          <img src="{asset_prefix}/{esc(base)}.svg" alt="{esc(alt)}" class="asset-svg">\n        </figure>\n'
             elif etype in ('callout_kernregel', 'callout_letop', 'callout_controle', 'callout_tip'):
                 content_html += render_callout(etype, edata)
             elif etype == 'samenvatting':
