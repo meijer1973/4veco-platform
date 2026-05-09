@@ -124,6 +124,14 @@ function setupPartB(folderName = '9.9.1 Theory', options = {}) {
     else writeZipLike(path.join(dir, name), 300);
   }
 
+  // L1.5V Bucket F2: --mode part-b and --mode complete require an explicit
+  // companion-visual-review.md with a non-FAIL verdict. Seed a passing one
+  // by default; tests that need to exercise FAIL behavior overwrite it.
+  writeText(
+    path.join(dir, `${parNr}-companion-visual-review.md`),
+    `# Companion Visual Review\n\n## 2. Verdict\n\n**PASS**\n`
+  );
+
   writeText(
     path.join(dir, '_paragraph-plan.md'),
     options.planContent || [
