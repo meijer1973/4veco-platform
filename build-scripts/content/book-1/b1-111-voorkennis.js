@@ -388,9 +388,9 @@ function checklistItem(text) {
 // CHAPTER DATA — 3 voorkennis-onderwerpen voor §1.1.1 (intro van het boek)
 // ════════════════════════════════════════════════════
 const chapters = [
-  { nr: "1", title: "Basale rekenvaardigheden",  desc: "Vermenigvuldigen en aftrekken met euro’s",   domain: "wiskunde" },
-  { nr: "2", title: "Staafdiagrammen lezen",     desc: "Assen, balken en hoogtes aflezen",                domain: "grafisch" },
-  { nr: "3", title: "Intuïtie voor kiezen", desc: "Dagelijkse keuzes bij beperkte tijd of geld",     domain: "economisch" },
+  { nr: "1", title: "Rekenen met eenheden",   desc: "Per-eenheid bedragen omrekenen en grote bedragen lezen", domain: "wiskunde" },
+  { nr: "2", title: "Staafdiagrammen lezen",  desc: "Assen, balken en hoogtes aflezen",                       domain: "grafisch" },
+  { nr: "3", title: "Intuïtie voor kiezen",   desc: "Dagelijkse keuzes bij beperkte tijd of geld",            domain: "economisch" },
 ];
 
 // ════════════════════════════════════════════════════
@@ -417,41 +417,53 @@ children.push(sp(60));
 children.push(visualTOC(chapters, VK_DOMAINS));
 
 // ════════════════════════════════════════════════════
-// CHAPTER 1 — Basale rekenvaardigheden (wiskunde / blue)
+// CHAPTER 1 — Rekenen met eenheden (wiskunde / blue)
 // ════════════════════════════════════════════════════
 children.push(new Paragraph({ children: [new PageBreak()] }));
-children.push(domainBanner("wiskunde", 1, "Basale rekenvaardigheden"));
+children.push(domainBanner("wiskunde", 1, "Rekenen met eenheden"));
 children.push(sp(120));
 
-children.push(h2d("Vermenigvuldigen en aftrekken met euro’s", VK_DOMAINS.wiskunde.color));
-children.push(p("In de economie reken je voortdurend met bedragen. Meestal gaat het om twee eenvoudige bewerkingen: vermenigvuldigen (bijvoorbeeld een opbrengst per stuk keer het aantal stuks) en aftrekken (bijvoorbeeld om te kijken hoeveel je overhoudt, of wat het verschil is tussen twee opties). Je kent deze operaties natuurlijk allang — we frissen ze kort op in een economische context."));
+children.push(h2d("Per-eenheid bedragen omrekenen", VK_DOMAINS.wiskunde.color));
+children.push(p("In de economie staat een bedrag bijna nooit op zichzelf. Bedragen horen altijd bij een eenheid: euro per uur, euro per kilo, euro per hectare, euro per maand. Een uitspraak als „de opbrengst is €500” is pas zinvol als je weet waar het bij hoort: per uur? per kilo? per hectare? Voor de rest van het vak moet je vlot kunnen schakelen tussen een bedrag-per-eenheid en het totaalbedrag, en moet je je eenheden netjes meenemen in elke berekening."));
 
-children.push(p("Vermenigvuldigen gebruik je als je een bedrag per eenheid hebt en je wilt weten wat het in totaal oplevert:", { bold: true }));
+children.push(p("De omzetting van bedrag-per-eenheid naar totaal gaat altijd via vermenigvuldigen, en de eenheden vallen netjes weg:", { bold: true }));
 children.push(formulaBox([
-  "totaal = aantal eenheden × bedrag per eenheid",
-  "voorbeeld: 8 hectare × €500 per hectare = €4.000",
+  "totaal (€) = aantal eenheden × bedrag per eenheid (€/eenheid)",
+  "voorbeeld: 12 hectare × €500/hectare = €6.000",
+  "(de eenheden „hectare” en „/hectare” vallen tegen elkaar weg)",
 ], VK_DOMAINS.wiskunde.color));
 
-children.push(p("Aftrekken gebruik je als je het verschil tussen twee bedragen wilt weten — bijvoorbeeld tussen wat een keuze oplevert en wat de andere optie zou hebben opgeleverd:", { bold: true }));
+children.push(p("Andersom kun je een totaal terugrekenen naar een bedrag per eenheid door te delen — handig om opties met verschillende „groottes” eerlijk te vergelijken:", { bold: true }));
 children.push(formulaBox([
-  "verschil = bedrag A − bedrag B",
-  "voorbeeld: €5.000 − €3.500 = €1.500",
+  "bedrag per eenheid = totaal ÷ aantal eenheden",
+  "voorbeeld: €4.500 ÷ 9 hectare = €500/hectare",
+], VK_DOMAINS.wiskunde.color));
+
+children.push(h2d("Grote bedragen in Nederlandse notatie", VK_DOMAINS.wiskunde.color));
+children.push(p("Geldbedragen in deze methode (en in CvTE-examens) zijn in Nederlandse notatie: een punt scheidt duizendtallen, een komma scheidt eurocenten. Dus „€5.000” is vijfduizend euro, niet vijf euro. „€5,00” is vijf euro. Het is belangrijk dat je dit op één blik herkent."));
+children.push(formulaBox([
+  "€500     = vijfhonderd euro",
+  "€5.000   = vijfduizend euro       (punt = duizendtallen)",
+  "€5,00    = vijf euro              (komma = centen)",
+  "€500.000 = vijfhonderdduizend euro",
 ], VK_DOMAINS.wiskunde.color));
 
 children.push(h2d("Uitgewerkt voorbeeld", VK_DOMAINS.wiskunde.color));
-children.push(p("Een boer heeft 10 hectare land en verbouwt tarwe met een opbrengst van €500 per hectare. Hoeveel levert het hem in totaal op?"));
-children.push(bullet("Stap 1: herken de vermenigvuldiging — aantal hectare × opbrengst per hectare."));
-children.push(bullet("Stap 2: reken uit — 10 × €500 = €5.000."));
-children.push(bullet("Stap 3: controleer de orde van grootte — €5.000 klinkt redelijk voor 10 hectare tarwe."));
+children.push(p("Een boer heeft 10 hectare land en kan kiezen tussen tarwe (opbrengst €500 per hectare) en maïs (opbrengst €350 per hectare). Wat is de totale opbrengst per gewas, en hoeveel scheelt het?"));
+children.push(bullet("Stap 1: schrijf de eenheden op — aantal (hectare) × opbrengst (€/hectare) = totaal (€)."));
+children.push(bullet("Stap 2: reken uit — tarwe 10 × €500 = €5.000; maïs 10 × €350 = €3.500."));
+children.push(bullet("Stap 3: bereken het verschil — €5.000 − €3.500 = €1.500 in het voordeel van tarwe."));
+children.push(bullet("Stap 4: controleer de orde van grootte — €5.000 voor 10 hectare tarwe klopt; deze bedragen zijn realistisch."));
 
-children.push(tipBox("Ken de maaltafels tot 10 uit je hoofd. Zo hoef je je rekenmachine niet te pakken voor “aantal × prijs” — dat scheelt tijd bij een toets of opgave."));
+children.push(tipBox("Schrijf de eenheid altijd náást het getal — niet alleen in je hoofd. Wie „10 × 500 = 5000” opschrijft zonder eenheid, weet straks niet meer of het hectare, kilo of euro waren. Met „10 ha × €500/ha = €5.000” valt dat probleem weg."));
 children.push(sp(60));
-children.push(checkBox("Kun je zonder rekenmachine uitrekenen: 8 × €500, en daarna €5.000 − €3.500?"));
+children.push(checkBox("Kun je vlot omzetten: „€350/hectare op 10 hectare” → totaal? En kun je het verschil €5.000 − €3.500 uit je hoofd uitrekenen?"));
 children.push(sp(60));
 children.push(summarySchema([
-  ["Vermenigvuldigen", "totaal = aantal × bedrag per eenheid"],
-  ["Aftrekken",        "verschil = bedrag A − bedrag B"],
-  ["Toepassing",       "totale opbrengst en verschil tussen twee alternatieven uitrekenen"],
+  ["Per-eenheid → totaal", "totaal = aantal × bedrag per eenheid (eenheden vallen weg)"],
+  ["Totaal → per-eenheid", "bedrag per eenheid = totaal ÷ aantal eenheden"],
+  ["Grote getallen",       "Nederlandse notatie: punt = duizendtallen, komma = centen"],
+  ["Toepassing",           "twee alternatieven met dezelfde eenheid eerlijk vergelijken"],
 ], VK_DOMAINS.wiskunde.color));
 
 // ════════════════════════════════════════════════════
@@ -529,8 +541,8 @@ children.push(new Paragraph({
 children.push(p("Controleer of je de volgende zaken beheerst voordat je aan §1.1.1 begint:"));
 children.push(sp(100));
 
-children.push(checklistItem("Ik kan uit mijn hoofd uitrekenen: 8 × €500."));
-children.push(checklistItem("Ik kan uit mijn hoofd uitrekenen: €5.000 − €3.500."));
+children.push(checklistItem("Ik kan een bedrag-per-eenheid omzetten naar een totaal (bijvoorbeeld €500 per hectare op 10 hectare → €5.000)."));
+children.push(checklistItem("Ik herken de Nederlandse notatie voor grote bedragen: €5.000 is vijfduizend euro, €5,00 is vijf euro."));
 children.push(checklistItem("Ik kan in een staafdiagram de x-as en y-as benoemen."));
 children.push(checklistItem("Ik kan de hoogte van een staaf aflezen en de eenheid erbij noemen."));
 children.push(checklistItem("Ik let op of de y-as bij 0 begint vóórdat ik conclusies trek."));
