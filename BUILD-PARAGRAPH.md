@@ -441,7 +441,9 @@ This command writes to the target book. It is a build/deploy step, not a read-on
 
 ### Phase 6a: Companion visual review gate
 
-Run `agents/econ-companion-visual-review.md` after Phase 6 when the generated HTML/game shells and converted companion pages can be inspected as rendered output:
+Author/regenerate every student-facing companion against `skills/econ-companion-artifacts.md` (authoring spec for uitleg voorkennis, uitleg vaardigheden, begeleide inoefening, stappenplan, instapquiz, redeneer-spel, nieuws-detective, differentiated exercise handouts, and matched DOCX/PPTX/PDF outputs). Builder skills (`econ-explainer-docs`, `econ-exercise-builder`, `econ-pptx-templates`, etc.) inherit those rules.
+
+Then run `agents/econ-companion-visual-review.md` as the closure gate when the generated HTML/game shells and converted companion pages can be inspected as rendered output:
 
 > "You are the econ-companion-visual-review agent. Read `agents/econ-companion-visual-review.md`, `AGENTS.md`, and `BUILD-PARAGRAPH.md`. Review paragraph [path]. Inspect the available student-facing HTML, DOCX/PPTX/PDF companions, rendered browser/document views where possible, `_paragraph-plan.md`, `_assets/`, source builders, canonical units/procedures/terminology, and quality records. Return the required report format and save it as `X.Y.Z-companion-visual-review.md` in the paragraph folder."
 

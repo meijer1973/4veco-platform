@@ -103,7 +103,9 @@ A student working through all materials for one paragraph should feel like they'
 
 **How to enforce:** The `_paragraph-plan.md` contains a **procedure-stappen-plan** that defines the canonical step sequence for each skill. All builders — vaardigheden, stappenplan game, presentatie, inoefening — must follow these exact steps. A **visual-variants plan** maps each concept visual to its surface-specific files, and a **visuelen-toewijzing** table maps those variants to every builder that must embed them.
 
-For companion artifact review, use `agents/econ-companion-visual-review.md`. It checks the rendered student experience, not just source files: visual-text synchronization, procedure fidelity, affordance, cognitive load, accessibility, and source-output parity. A companion surface with missing visual variants, conflicting visual/text examples, broken procedure steps, debug labels, or no next-step routing is not done.
+For companion artifact **authoring and regeneration**, use `skills/econ-companion-artifacts.md`. It is the platform-wide standard for student-facing companion artifacts (uitleg voorkennis, uitleg vaardigheden, begeleide inoefening, stappenplan, instapquiz, redeneer-spel, nieuws-detective, differentiated exercise handouts, and matched DOCX/PPTX/PDF outputs). Builder skills (`econ-explainer-docs`, `econ-exercise-builder`, `econ-pptx-templates`, etc.) inherit those rules; if a builder skill conflicts, the companion-artifacts skill wins on student-facing rules.
+
+For companion artifact **review**, use `agents/econ-companion-visual-review.md`. It checks the rendered student experience, not just source files: visual-text synchronization, procedure fidelity, affordance, cognitive load, accessibility, and source-output parity. A companion surface with missing visual variants, conflicting visual/text examples, broken procedure steps, debug labels, or no next-step routing is not done. The skill above and this agent are aligned: the skill is the authoring spec, the agent is the closure gate.
 
 ## Architectural principles
 
