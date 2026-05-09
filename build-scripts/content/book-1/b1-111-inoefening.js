@@ -40,15 +40,21 @@ const PARAGRAAF_DIR = path.resolve(
 const OUTPUT_DIR = PARAGRAAF_DIR;
 const ASSETS_DIR = path.join(PARAGRAAF_DIR, "_assets");
 
+// L1.5V Bucket A4: each image config carries an `altText` string for the
+// shared embedAssetFromPath() helper to emit as the docx descr.
+const ALT = require("./b1-111-alt-text");
+
 const IMG_FIG_2 = {
   path: path.join(ASSETS_DIR, "1.1.1_fig_2_doc.png"),
   assetName: "1.1.1_fig_2",
+  altText: ALT["1.1.1_fig_2"],
   width: 520,
   height: 333,
 };
 const IMG_WE_1 = {
   path: path.join(ASSETS_DIR, "1.1.1_we_1_doc.png"),
   assetName: "1.1.1_we_1",
+  altText: ALT["1.1.1_we_1"],
   width: 520,
   height: 333,
 };
