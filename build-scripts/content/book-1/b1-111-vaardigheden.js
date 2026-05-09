@@ -492,9 +492,25 @@ children.push(h2d("Waarom is dit belangrijk?", DOMAINS.economischBlue.color));
 children.push(p("Wie kiest, geeft iets op. Dat wat je opgeeft — de opbrengst van het beste niet-gekozen alternatief — zijn de alternatieve kosten van je keuze. Alternatieve kosten laten zien wat een beslissing je werkelijk kost, ook als er geen prijskaartje aan hangt. Zonder dit begrip onderschat je stelselmatig de kosten van gemaakte keuzes."));
 children.push(sp(40));
 
+// L1.5V Bucket C4: keuzekaart pre-organizer (Team B scaffold import).
+// Nested under skill 2 (B02), BEFORE the procedure, so students structure
+// the situation before they grab a bedrag. Per the econ-companion-artifacts
+// skill: scaffold appropriateness + cognitive load.
+children.push(h2d("Eerst structuur, daarna bedragen", DOMAINS.economischBlue.color));
+children.push(p("Veel fouten ontstaan doordat leerlingen te snel naar een bedrag zoeken. Begin eerst met de structuur van de keuze: welk middel is schaars, welke opties zijn er, en wat levert elke optie op? Daarna pas reken je."));
+children.push(sp(40));
+children.push(formulaBox([
+  "Maak eerst een keuzekaart:",
+  "• Middel:        wat is beperkt? (geld, tijd, hectare …)",
+  "• Alternatieven: welke opties sluiten elkaar uit?",
+  "• Opbrengst:     wat levert elk alternatief op?",
+  "• Keuze:         welk alternatief kies je daadwerkelijk?",
+], DOMAINS.economischBlue.color));
+children.push(sp(60));
+
 // Hoe — VERBATIM B02 procedure (4 steps)
 children.push(h2d("Hoe werkt het? (4 stappen)", DOMAINS.economischBlue.color));
-children.push(p("Deze vier stappen komen rechtstreeks uit het vaardighedenregister (unit B02) en zijn de standaardprocedure voor elke alternatieve-kosten-opgave:"));
+children.push(p("Met de keuzekaart als basis pas je vervolgens de canonical 4-stappenprocedure toe. Deze stappen komen rechtstreeks uit het vaardighedenregister (unit B02) en zijn de standaardprocedure voor elke alternatieve-kosten-opgave:"));
 children.push(sp(40));
 children.push(formulaBox([
   "Stap 1. " + B02_PROCEDURE[0],
@@ -544,9 +560,25 @@ const we1 = embedAssetImage("1.1.1_we_1_doc", 520, 330, "1.1.1_we_1", ALT["1.1.1
 if (we1) children.push(we1);
 children.push(sp(60));
 
-// Tip — pitfalls from B02 registry
-children.push(tipBox("Alternatieve kosten zijn niet de prijs die je betaalt. Je betaalt €12 voor de bioscoop, maar je alternatieve kosten zijn de waarde van het boek dat je daardoor niet kunt kopen."));
+// L1.5V Bucket C4: prijs-vs-kosten pitfall block (Team B scaffold import,
+// expanded). The pitfall already lived as a one-line tip; now elevated to
+// a dedicated pitfall block under B02 with worked numbers, because this is
+// the single most common confusion students bring to alternatieve kosten.
+children.push(h2d("Pitfall: prijs en kosten uit elkaar houden", DOMAINS.economischBlue.color));
+children.push(p("De prijs die je betaalt en de alternatieve kosten van die keuze zijn twee verschillende dingen. Verwar ze niet."));
+children.push(sp(20));
+children.push(formulaBox([
+  "Prijs:                wat je in geld betaalt voor de gekozen optie",
+  "Alternatieve kosten:  de opbrengst van het beste niet-gekozen alternatief",
+], DOMAINS.economischBlue.color));
+children.push(sp(20));
+children.push(p("Voorbeeld bij Lisa (€20 budget, bioscoop €12 of boek €15):", { italics: true }));
+children.push(bullet("Prijs van bioscoop = €12 (dat geef je af aan de kassa)."));
+children.push(bullet("Alternatieve kosten van bioscoop = waarde van het boek dat ze daardoor niet kan kopen = €15."));
+children.push(p("De prijs zit in haar portemonnee, de alternatieve kosten in wat ze opgeeft.", { italics: true, color: C.gray }));
 children.push(sp(60));
+
+// Tip — pitfalls from B02 registry
 children.push(warningBox("Tel de niet-gekozen alternatieven niet bij elkaar op! Alternatieve kosten = alleen het béste niet-gekozen alternatief. Als er drie alternatieven zijn met opbrengsten €40, €30 en €15 en je kiest de eerste, dan zijn je alternatieve kosten €30 — niet €45."));
 children.push(sp(60));
 
