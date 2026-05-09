@@ -349,16 +349,12 @@ function domainLegend(domainSet = DOMAINS) {
 }
 
 // ─── DOC_STYLES ───
+// Run formatting + paragraph spacing for headings is set inline on every
+// Paragraph/TextRun. The custom paragraphStyles with id "Heading1"/"Heading2"
+// collided with Word's built-in style IDs and broke the artifact-tool renderer
+// (L1.5V QA-1). Removed; inline overrides preserve the rendered look.
 const DOC_STYLES = {
   default: { document: { run: { font: "Arial", size: 22 } } },
-  paragraphStyles: [
-    { id: "Heading1", name: "Heading 1", basedOn: "Normal", next: "Normal", quickFormat: true,
-      run: { size: 30, bold: true, font: "Arial", color: C.navy },
-      paragraph: { spacing: { before: 360, after: 200 }, outlineLevel: 0 } },
-    { id: "Heading2", name: "Heading 2", basedOn: "Normal", next: "Normal", quickFormat: true,
-      run: { size: 24, bold: true, font: "Arial", color: C.blue },
-      paragraph: { spacing: { before: 240, after: 120 }, outlineLevel: 1 } },
-  ],
 };
 
 // ─── Checklist numbering / item ───
