@@ -1,0 +1,2749 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Redeneerketen Builder — economie VWO</title>
+  <style>
+    :root {
+      /* Dark UI shell */
+      --bg: #0c1020;
+      --bg-soft: #11172b;
+      --panel: rgba(255,255,255,0.075);
+      --panel-strong: rgba(255,255,255,0.12);
+      --text: #f8fafc;
+      --text-soft: #cbd5e1;
+      --line: rgba(255,255,255,0.16);
+
+      /* Light card */
+      --card: rgba(255,255,255,0.96);
+      --ink: #101828;
+      --muted: #667085;
+      --soft-bg: #f8fafc;
+      --soft-border: #eaecf0;
+      --soft-stroke: #d0d5dd;
+
+      /* Status */
+      --ok: #bbf7d0;
+      --ok-ink: #14532d;
+      --warn: #fde68a;
+      --warn-ink: #713f12;
+      --danger: #fecaca;
+      --danger-ink: #7f1d1d;
+
+      /* Domain palette — switched per scenario via [data-domain] */
+      --domain: #2563eb;
+      --domain-soft: #dbeafe;
+      --domain-ink: #1e3a8a;
+      --domain-tag-bg: #eff6ff;
+
+      --shadow: 0 24px 80px rgba(0,0,0,0.35);
+      --radius: 24px;
+      --radius-sm: 14px;
+      --max: 1220px;
+    }
+
+    /* Domain themes — match Marcel's three-domain colour system */
+    [data-domain="marktanalyse"] {
+      --domain: #2563eb;        /* blue */
+      --domain-soft: #dbeafe;
+      --domain-ink: #1e3a8a;
+      --domain-tag-bg: #eff6ff;
+    }
+    [data-domain="bedrijfseconomie"] {
+      --domain: #b45309;        /* amber-700 for contrast */
+      --domain-soft: #fef3c7;
+      --domain-ink: #78350f;
+      --domain-tag-bg: #fffbeb;
+    }
+    [data-domain="arbeidsmarkt"] {
+      --domain: #15803d;        /* green-700 */
+      --domain-soft: #dcfce7;
+      --domain-ink: #14532d;
+      --domain-tag-bg: #f0fdf4;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--text);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", sans-serif;
+      background:
+        radial-gradient(circle at 12% -8%, rgba(125, 211, 252, 0.30), transparent 34rem),
+        radial-gradient(circle at 88% 8%, rgba(167, 243, 208, 0.20), transparent 32rem),
+        linear-gradient(145deg, #0c1020 0%, #12172b 48%, #0e1726 100%);
+      overflow-x: hidden;
+    }
+
+    a { color: inherit; }
+    button, select, input { font: inherit; }
+    button { cursor: pointer; }
+    [hidden] { display: none !important; }
+    .wrap { width: min(var(--max), calc(100vw - 32px)); margin: 0 auto; }
+    .sr-only {
+      position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+      overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+    }
+
+    /* ---------- Hero ---------- */
+    .hero { padding: 38px 0 26px; position: relative; }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 24px;
+      align-items: stretch;
+    }
+    .hero-grid-narrow { grid-template-columns: 1fr; max-width: 760px; }
+    .hero-card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.115), rgba(255,255,255,0.058));
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      border-radius: var(--radius);
+      backdrop-filter: blur(18px);
+      padding: 30px;
+    }
+    h1 {
+      margin: 20px 0 12px;
+      font-size: clamp(36px, 6vw, 68px);
+      line-height: .95;
+      letter-spacing: -.05em;
+      max-width: 880px;
+    }
+    .lead {
+      font-size: clamp(17px, 2vw, 21px);
+      color: var(--text-soft);
+      max-width: 760px;
+      line-height: 1.5;
+      margin: 0 0 22px;
+    }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+    .btn {
+      border: 0;
+      border-radius: 999px;
+      padding: 11px 16px;
+      font-weight: 800;
+      background: rgba(255,255,255,0.12);
+      color: var(--text);
+      border: 1px solid var(--line);
+      transition: transform .15s ease, background .15s ease, border-color .15s ease, opacity .15s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 44px;
+      font-size: 14px;
+    }
+    .btn:hover { transform: translateY(-1px); background: rgba(255,255,255,0.18); }
+    .btn:focus-visible { outline: 3px solid #fef08a; outline-offset: 2px; }
+    .btn.primary {
+      background: linear-gradient(90deg, #e0f2fe, #bbf7d0);
+      color: #07111f;
+      border-color: transparent;
+    }
+    .btn.dark { background: #101828; color: white; border-color: rgba(16,24,40,.1); }
+    .btn.light { background: white; color: var(--ink); border-color: rgba(16,24,40,.1); }
+    .btn.small { padding: 7px 11px; min-height: 34px; font-size: 13px; }
+    .btn:disabled { opacity: .5; cursor: not-allowed; transform: none; }
+
+    /* ---------- App shell ---------- */
+    .section { padding: 18px 0 32px; }
+    .app-shell {
+      display: grid;
+      grid-template-columns: minmax(300px, .85fr) minmax(420px, 1.15fr);
+      gap: 20px;
+      align-items: start;
+    }
+    .panel {
+      border-radius: var(--radius);
+      background: rgba(255,255,255,0.96);
+      color: var(--ink);
+      box-shadow: 0 22px 70px rgba(0,0,0,.28);
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.7);
+    }
+    .panel-header {
+      padding: 18px 20px;
+      border-bottom: 1px solid rgba(16,24,40,.08);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+    .panel-title { margin: 0; font-size: 18px; letter-spacing: -.02em; }
+    .panel-subtitle { margin: 5px 0 0; color: var(--muted); line-height: 1.4; font-size: 13.5px; }
+    .panel-body { padding: 20px; }
+
+    .scenario-row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+    select {
+      width: 100%;
+      appearance: none;
+      background: var(--soft-bg);
+      border: 1px solid var(--soft-stroke);
+      color: var(--ink);
+      border-radius: 14px;
+      padding: 11px 14px;
+      font-weight: 700;
+      background-image: linear-gradient(45deg, transparent 50%, var(--ink) 50%), linear-gradient(135deg, var(--ink) 50%, transparent 50%);
+      background-position: calc(100% - 18px) 50%, calc(100% - 12px) 50%;
+      background-size: 6px 6px, 6px 6px;
+      background-repeat: no-repeat;
+      padding-right: 36px;
+    }
+
+    /* Domain ribbon under select */
+    .domain-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: var(--domain-tag-bg);
+      color: var(--domain-ink);
+      border: 1px solid var(--domain-soft);
+      padding: 5px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .01em;
+      margin-bottom: 12px;
+    }
+    .domain-tag::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--domain);
+    }
+
+    /* Mode toggle (differentiation) */
+    .mode-toggle {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 6px;
+      background: var(--soft-bg);
+      border: 1px solid var(--soft-border);
+      padding: 4px;
+      border-radius: 14px;
+      margin-bottom: 14px;
+    }
+    .mode-toggle button {
+      border: 0;
+      background: transparent;
+      color: var(--muted);
+      border-radius: 10px;
+      padding: 8px 6px;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .01em;
+    }
+    .mode-toggle button[aria-pressed="true"] {
+      background: white;
+      color: var(--ink);
+      box-shadow: 0 2px 6px rgba(16,24,40,.08), 0 0 0 1px var(--soft-stroke);
+    }
+    .mode-toggle button:hover { color: var(--ink); }
+
+    .progress {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 6px;
+      margin: 0 0 14px;
+    }
+    .progress-step {
+      border-radius: 12px;
+      padding: 8px 8px;
+      background: #f2f4f7;
+      color: #475467;
+      font-size: 11.5px;
+      font-weight: 900;
+      text-align: center;
+      border: 1px solid #eaecf0;
+      letter-spacing: .02em;
+    }
+    .progress-step.active {
+      background: var(--domain-soft);
+      color: var(--domain-ink);
+      border-color: var(--domain);
+    }
+    .progress-step.done {
+      background: #dcfce7;
+      color: #166534;
+      border-color: #86efac;
+    }
+
+    /* ---------- Article ---------- */
+    .article {
+      background: linear-gradient(180deg, var(--soft-bg), var(--domain-soft));
+      border: 1px solid var(--domain-soft);
+      border-radius: 18px;
+      padding: 16px 18px;
+      line-height: 1.65;
+      color: #172554;
+      font-size: 15.5px;
+    }
+    .article mark {
+      background: rgba(250, 204, 21, .50);
+      color: inherit;
+      border-radius: 5px;
+      padding: 0 3px;
+    }
+    .hint-box,
+    .status-box {
+      margin-top: 12px;
+      border-radius: 14px;
+      padding: 12px 14px;
+      font-size: 13.5px;
+      line-height: 1.45;
+      border: 1px solid var(--soft-stroke);
+      background: var(--soft-bg);
+      color: #344054;
+    }
+    .hint-box strong, .status-box strong { color: #101828; }
+    .status-box.ok   { background: #ecfdf3; border-color: #abefc6; color: var(--ok-ink); }
+    .status-box.warn { background: #fffaeb; border-color: #fedf89; color: var(--warn-ink); }
+    .status-box.bad  { background: #fef3f2; border-color: #fecdca; color: var(--danger-ink); }
+
+    /* ---------- Banks of cards ---------- */
+    .bank-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+    .bank {
+      background: var(--soft-bg);
+      border: 1px solid var(--soft-border);
+      border-radius: 16px;
+      padding: 12px;
+      min-height: 150px;
+    }
+    .bank h3 {
+      margin: 0 0 9px;
+      font-size: 13px;
+      color: #344054;
+      letter-spacing: -.01em;
+      text-transform: uppercase;
+    }
+    .card-list { display: flex; flex-wrap: wrap; gap: 7px; }
+    .chip {
+      border: 1px solid var(--soft-stroke);
+      background: white;
+      color: #101828;
+      border-radius: 999px;
+      padding: 8px 11px;
+      font-size: 13px;
+      line-height: 1.25;
+      box-shadow: 0 1px 2px rgba(16,24,40,.05);
+      transition: transform .12s ease, border-color .12s ease, box-shadow .12s ease, background .12s ease;
+      user-select: none;
+      max-width: 100%;
+      text-align: left;
+      white-space: normal;
+    }
+    .chip:hover { transform: translateY(-1px); border-color: var(--domain); box-shadow: 0 6px 14px rgba(16,24,40,.09); }
+    .chip.selected {
+      background: var(--domain-soft);
+      border-color: var(--domain);
+      box-shadow: 0 0 0 3px color-mix(in srgb, var(--domain) 20%, transparent);
+    }
+    .chip.actor    { border-left: 5px solid var(--domain); padding-left: 12px; }
+    .chip.action   { border-left: 5px solid #d97706; padding-left: 12px; }
+    [data-domain="bedrijfseconomie"] .chip.action { border-left-color: #2563eb; } /* avoid amber/amber clash */
+    .chip.distractor { border-style: dashed; }
+
+    /* ---------- Builder board (slot rows) ---------- */
+    .builder-board { display: grid; gap: 9px; }
+    .slot-row {
+      display: grid;
+      grid-template-columns: 36px 1fr 1fr 28px;
+      gap: 8px;
+      align-items: stretch;
+    }
+    .slot-row.hint-row {
+      outline: 3px dashed #fcd34d;
+      outline-offset: 4px;
+      border-radius: 12px;
+      animation: pulse 1.2s ease-in-out 2;
+    }
+    @keyframes pulse {
+      0%, 100% { outline-color: #fcd34d; }
+      50%      { outline-color: #f59e0b; }
+    }
+    .row-num {
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+      background: #101828;
+      color: white;
+      font-weight: 900;
+      font-size: 12.5px;
+    }
+    .drop-slot {
+      min-height: 50px;
+      border: 1.5px dashed #cbd5e1;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      padding: 8px 10px;
+      background: var(--soft-bg);
+      color: #667085;
+      font-size: 13px;
+      transition: border-color .12s ease, background .12s ease;
+      text-align: left;
+      width: 100%;
+      cursor: pointer;
+    }
+    .drop-slot:hover { border-color: var(--domain); background: #f0f9ff; }
+    .drop-slot.filled { border-style: solid; background: white; color: #101828; font-weight: 700; }
+    .drop-slot.good { border-color: #22c55e; background: #f0fdf4; }
+    .drop-slot.bad  { border-color: #ef4444; background: #fef2f2; }
+    .drop-slot.drop-target {
+      border-style: solid !important;
+      border-color: var(--domain) !important;
+      background: var(--domain-soft) !important;
+      color: var(--domain-strong) !important;
+      transform: scale(1.02);
+    }
+    .chip { cursor: grab; }
+    .chip:active { cursor: grabbing; }
+    .chip.dragging { opacity: 0.4; cursor: grabbing; }
+    .row-state {
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+      font-weight: 900;
+      background: #f2f4f7;
+      color: #667085;
+      font-size: 13px;
+    }
+    .row-state.good { background: #dcfce7; color: #166534; }
+    .row-state.bad  { background: #fee2e2; color: #991b1b; }
+
+    /* Bridge hint shown under slot row in ondersteuning mode */
+    .bridge-hint {
+      grid-column: 2 / span 2;
+      font-size: 12px;
+      color: var(--muted);
+      padding: 0 4px;
+      line-height: 1.35;
+      font-style: italic;
+    }
+
+    .board-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+      align-items: center;
+    }
+    .score-pill {
+      margin-left: auto;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #101828;
+      color: white;
+      border-radius: 999px;
+      padding: 8px 12px;
+      font-weight: 800;
+      font-size: 13px;
+    }
+
+    /* ---------- Order / Graph / Bridge sections ---------- */
+    .order-section,
+    .graph-section,
+    .bridge-section,
+    .results-section {
+      margin-top: 18px;
+      padding-top: 18px;
+      border-top: 1px solid var(--soft-border);
+    }
+    .locked {
+      opacity: .42;
+      pointer-events: none;
+      filter: grayscale(.3);
+    }
+    .order-list { display: grid; gap: 9px; }
+    .order-item {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 10px;
+      align-items: center;
+      border: 1px solid var(--soft-stroke);
+      border-radius: 14px;
+      background: #fff;
+      padding: 11px 12px;
+    }
+    .order-item.correct-pos { border-color: #22c55e; background: #f0fdf4; }
+    .order-item.wrong-pos   { border-color: #f59e0b; background: #fffbeb; }
+    .statement { line-height: 1.35; font-size: 13.5px; }
+    .statement strong { color: #0f172a; }
+    .move-buttons { display: flex; gap: 6px; }
+    .icon-btn {
+      width: 33px;
+      height: 33px;
+      display: grid;
+      place-items: center;
+      border-radius: 10px;
+      border: 1px solid var(--soft-stroke);
+      background: var(--soft-bg);
+      color: #101828;
+      font-weight: 950;
+    }
+    .icon-btn:hover { background: white; border-color: var(--domain); }
+
+    /* ---------- Graph choices (step 4) ---------- */
+    .graph-choices {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .graph-choice {
+      display: grid;
+      grid-template-rows: auto 1fr;
+      gap: 6px;
+      border: 1.5px solid var(--soft-stroke);
+      border-radius: 16px;
+      background: white;
+      padding: 8px;
+      color: #101828;
+      text-align: left;
+      cursor: pointer;
+      transition: border-color .12s ease, box-shadow .12s ease, transform .12s ease;
+    }
+    .graph-choice:hover { border-color: var(--domain); transform: translateY(-1px); }
+    .graph-choice.selected {
+      border-color: var(--domain);
+      box-shadow: 0 0 0 3px color-mix(in srgb, var(--domain) 20%, transparent);
+      background: var(--domain-soft);
+    }
+    .graph-choice.good { border-color: #16a34a; background: #f0fdf4; }
+    .graph-choice.bad  { border-color: #dc2626; background: #fef2f2; }
+    .graph-choice .mini-svg {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      background: #fdfcf8;
+      border-radius: 10px;
+      border: 1px solid #e5e7eb;
+      overflow: hidden;
+    }
+    .graph-choice .mini-svg svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+    .graph-choice .caption {
+      font-size: 12px;
+      line-height: 1.35;
+      padding: 4px 4px 6px;
+      color: #344054;
+    }
+
+    /* Big graph shown after submission */
+    .big-graph {
+      margin-top: 12px;
+      background: #fdfcf8;
+      border: 1px solid var(--soft-stroke);
+      border-radius: 16px;
+      padding: 12px;
+    }
+    .big-graph svg { width: 100%; height: auto; max-height: 320px; display: block; }
+
+    /* Bridge-check (uitdaging only) */
+    .bridge-check { display: grid; gap: 9px; margin-top: 10px; }
+    .bridge-option {
+      border: 1.5px solid var(--soft-stroke);
+      border-radius: 14px;
+      background: white;
+      padding: 11px 13px;
+      text-align: left;
+      cursor: pointer;
+      font-size: 13.5px;
+      line-height: 1.4;
+      color: #101828;
+    }
+    .bridge-option:hover { border-color: var(--domain); }
+    .bridge-option.selected {
+      border-color: var(--domain);
+      background: var(--domain-soft);
+      box-shadow: 0 0 0 3px color-mix(in srgb, var(--domain) 20%, transparent);
+    }
+    .bridge-option.good { border-color: #16a34a; background: #f0fdf4; }
+    .bridge-option.bad  { border-color: #dc2626; background: #fef2f2; }
+
+    /* ---------- Flowchart (results) ---------- */
+    .flowchart {
+      margin-top: 14px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 10px;
+    }
+    .flow-node {
+      min-height: 100px;
+      border-radius: 16px;
+      padding: 12px;
+      background: linear-gradient(180deg, #ffffff, var(--soft-bg));
+      border: 1px solid var(--soft-stroke);
+      border-left: 5px solid var(--domain);
+      position: relative;
+    }
+    .flow-index {
+      display: inline-grid;
+      width: 24px;
+      height: 24px;
+      border-radius: 999px;
+      align-items: center;
+      justify-content: center;
+      background: var(--domain);
+      color: white;
+      font-size: 11.5px;
+      font-weight: 900;
+      margin-bottom: 6px;
+    }
+    .flow-node p { margin: 0; font-size: 12.8px; line-height: 1.4; }
+    .flow-node .actor-line { font-weight: 700; color: #0f172a; }
+    .flow-node .action-line { color: #0f172a; }
+    .flow-node .bridge-line {
+      display: block;
+      margin-top: 6px;
+      padding-top: 6px;
+      border-top: 1px dashed var(--soft-stroke);
+      font-size: 11.8px;
+      color: var(--muted);
+      line-height: 1.4;
+    }
+    /* Sibling / parallel phase markers */
+    .flow-node.flow-sibling {
+      border-left-style: dashed;
+      background: linear-gradient(180deg, #ffffff, var(--domain-soft));
+    }
+    .flow-sib-badge {
+      display: inline-block;
+      margin-top: 4px;
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: var(--domain-soft);
+      color: var(--domain-strong);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+    .order-notice {
+      padding: 10px 12px;
+      border-radius: 12px;
+      background: var(--domain-soft);
+      color: var(--domain-strong);
+      border: 1px solid var(--soft-stroke);
+      font-size: 13px;
+      line-height: 1.5;
+      margin-bottom: 4px;
+    }
+    .order-notice em { font-style: normal; font-weight: 700; }
+    .phase-marker {
+      display: inline-block;
+      min-width: 18px;
+      padding: 0 6px;
+      border-radius: 999px;
+      background: var(--domain);
+      color: white;
+      font-size: 12px;
+      font-weight: 800;
+      text-align: center;
+      margin-right: 4px;
+    }
+
+    /* Schema table */
+    .schema {
+      margin-top: 16px;
+      border: 1px solid var(--soft-stroke);
+      border-radius: 14px;
+      overflow: hidden;
+      background: white;
+    }
+    .schema h3 {
+      margin: 0;
+      padding: 12px 14px;
+      background: var(--domain-soft);
+      color: var(--domain-ink);
+      font-size: 14px;
+      letter-spacing: -.01em;
+    }
+    .schema table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    .schema th, .schema td {
+      padding: 9px 12px;
+      text-align: left;
+      border-top: 1px solid var(--soft-border);
+      vertical-align: top;
+      line-height: 1.4;
+    }
+    .schema th {
+      background: var(--soft-bg);
+      color: #344054;
+      font-weight: 800;
+      width: 28%;
+    }
+    .schema td { color: #475467; }
+
+    /* Misconception diagnosis cards */
+    .diagnosis {
+      margin-top: 16px;
+      display: grid;
+      gap: 8px;
+    }
+    .diag-card {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 10px;
+      align-items: center;
+      border-radius: 14px;
+      padding: 10px 12px;
+      border: 1px solid var(--soft-stroke);
+      background: var(--soft-bg);
+    }
+    .diag-card.hit  { border-color: #fcd34d; background: #fffbeb; }
+    .diag-card.zero { opacity: .55; }
+    .diag-card .diag-icon {
+      width: 32px; height: 32px;
+      display: grid; place-items: center;
+      border-radius: 10px;
+      background: white;
+      border: 1px solid var(--soft-border);
+      font-size: 16px;
+    }
+    .diag-card.hit .diag-icon { background: #fef3c7; border-color: #fcd34d; }
+    .diag-card .diag-text strong { display: block; color: #0f172a; font-size: 13.5px; }
+    .diag-card .diag-text span { display: block; color: var(--muted); font-size: 12.5px; line-height: 1.4; margin-top: 2px; }
+    .diag-card .diag-count {
+      background: #101828;
+      color: white;
+      border-radius: 999px;
+      padding: 4px 10px;
+      font-size: 12px;
+      font-weight: 900;
+      min-width: 28px;
+      text-align: center;
+    }
+    .diag-card.hit .diag-count { background: #d97706; }
+    .diag-card.zero .diag-count { background: #d0d5dd; color: #475467; }
+
+    /* Insight grid (kept simple) */
+    .insight-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+      gap: 9px;
+      margin-top: 12px;
+    }
+    .insight {
+      border-radius: 14px;
+      padding: 10px 12px;
+      border: 1px solid var(--soft-stroke);
+      background: var(--soft-bg);
+    }
+    .insight strong { display: block; font-size: 18px; margin-bottom: 2px; color: #101828; }
+    .insight span { font-size: 11.5px; color: #475467; line-height: 1.35; }
+
+    /* End-of-scenario CTA strip */
+    .completion-cta {
+      margin-top: 18px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 14px;
+      border-radius: 16px;
+      background: linear-gradient(90deg, #ecfdf3, var(--domain-soft));
+      border: 1px solid #abefc6;
+      color: #14532d;
+    }
+    .completion-cta .text {
+      flex: 1 1 240px;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+    .completion-cta strong { color: #0f172a; }
+
+    /* Modal-ish confirm dialog */
+    .confirm-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(7, 15, 30, .72);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      z-index: 100;
+    }
+    .confirm-overlay.open { display: flex; }
+    .confirm-card {
+      background: white;
+      color: var(--ink);
+      border-radius: 18px;
+      padding: 22px;
+      max-width: 380px;
+      width: 100%;
+      box-shadow: 0 30px 80px rgba(0,0,0,.45);
+    }
+    .confirm-card h3 { margin: 0 0 8px; font-size: 18px; }
+    .confirm-card p { margin: 0 0 16px; color: var(--muted); font-size: 14px; line-height: 1.45; }
+    .confirm-actions { display: flex; gap: 10px; justify-content: flex-end; flex-wrap: wrap; }
+
+    .footer {
+      color: var(--text-soft);
+      text-align: center;
+      padding: 18px 0 36px;
+      font-size: 12.5px;
+    }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 1020px) {
+      .hero-grid,
+      .app-shell { grid-template-columns: 1fr; }
+      .graph-choices { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 680px) {
+      .wrap { width: min(100vw - 20px, var(--max)); }
+      .hero-card, .panel-body { padding: 16px; }
+      .bank-grid, .insight-grid { grid-template-columns: 1fr; }
+      .graph-choices { grid-template-columns: 1fr; }
+      .slot-row { grid-template-columns: 28px 1fr; }
+      .slot-row .drop-slot[data-slot-role="action"] { grid-column: 2; }
+      .row-state { display: none; }
+      .drop-slot { min-height: 46px; }
+      .score-pill { margin-left: 0; }
+      .progress { grid-template-columns: 1fr 1fr; }
+      .completion-cta { flex-direction: column; align-items: stretch; }
+      .completion-cta .text { flex: none; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+    }
+
+    @media print {
+      body { background: white; color: black; }
+      .hero-actions, .board-actions, .move-buttons, .bank-grid, .mode-toggle, .completion-cta { display: none !important; }
+      .panel, .hero-card { box-shadow: none; border: 1px solid #ddd; }
+    }
+  </style>
+</head>
+<body data-domain="marktanalyse">
+  <header class="hero">
+    <div class="wrap hero-grid hero-grid-narrow">
+      <div class="hero-card">
+        <h1>Redeneerketen Builder</h1>
+        <p class="lead">Je ontleedt een tekst tot een economische redeneerketen. Elke stap bestaat uit twee keuzes: <strong>wie/wat</strong> + <strong>wat gebeurt er</strong>. Daarna bepaal je de causale volgorde en kies je het bijpassende economische model.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#game">Start de speelronde</a>
+          <button class="btn" id="resetAllTop" type="button">Begin opnieuw</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" id="game">
+      <div class="wrap app-shell">
+        <!-- LEFT panel: text + setup -->
+        <aside class="panel">
+          <div class="panel-header">
+            <div>
+              <h2 class="panel-title">1. Lees de tekst</h2>
+              <p class="panel-subtitle">De tekst bevat een economische redenering. Jouw taak: maak de verborgen keten expliciet.</p>
+            </div>
+          </div>
+          <div class="panel-body">
+            <div class="scenario-row">
+              <select id="scenarioSelect" aria-label="Kies scenario"></select>
+              <button class="btn dark small" id="toggleHighlights" type="button">Markeer tekst</button>
+            </div>
+
+            <div class="domain-tag" id="domainTag" aria-live="polite">Marktanalyse</div>
+
+            <div class="mode-toggle" role="group" aria-label="Differentiatieniveau">
+              <button type="button" data-mode="ondersteuning" aria-pressed="false">Extra ondersteuning</button>
+              <button type="button" data-mode="standaard" aria-pressed="true">Standaard</button>
+              <button type="button" data-mode="uitdaging" aria-pressed="false">Extra uitdaging</button>
+            </div>
+
+            <div class="progress" aria-label="Voortgang">
+              <div class="progress-step active" id="p1">Tekst</div>
+              <div class="progress-step" id="p2">Bouw</div>
+              <div class="progress-step" id="p3">Orden</div>
+              <div class="progress-step" id="p4">Model</div>
+            </div>
+
+            <article class="article" id="articleText"></article>
+            <div class="hint-box" id="learningGoal"></div>
+            <div class="status-box" id="liveStatus"><strong>Werkwijze:</strong> tik op een kaart om deze in het volgende lege vak te plaatsen. Tik op een geplaatste kaart om deze terug te halen. Op desktop kun je ook kaarten naar een specifiek vak slepen.</div>
+          </div>
+        </aside>
+
+        <!-- RIGHT panel: game board -->
+        <section class="panel" aria-label="Speelbord">
+          <div class="panel-header">
+            <div>
+              <h2 class="panel-title">2. Bouw mini-zinnen</h2>
+              <p class="panel-subtitle">Combineer steeds één <em>wie/wat</em> met één <em>wat gebeurt er</em>. De volgorde komt pas in stap 3.</p>
+            </div>
+            <button class="btn light small" id="demoFill" type="button" hidden>Demo-vul (docent)</button>
+          </div>
+          <div class="panel-body">
+
+            <div class="bank-grid">
+              <div class="bank">
+                <h3>Wie / wat?</h3>
+                <div class="card-list" id="actorBank"></div>
+              </div>
+              <div class="bank">
+                <h3>Wat gebeurt er?</h3>
+                <div class="card-list" id="actionBank"></div>
+              </div>
+            </div>
+
+            <div class="builder-board" id="builderBoard"></div>
+
+            <div class="board-actions">
+              <button class="btn dark" id="checkPairs" type="button">Controleer mini-zinnen</button>
+              <button class="btn light" id="hintBtn" type="button">Geef één hint</button>
+              <button class="btn light" id="clearBoard" type="button">Wis bord</button>
+              <span class="score-pill" id="scorePill">Score: 0 / 100</span>
+            </div>
+            <div class="status-box" id="pairFeedback"><strong>Doel:</strong> maak correcte betekenisparen.</div>
+
+            <!-- 3. Order -->
+            <div class="order-section locked" id="orderSection">
+              <div class="panel-header" style="padding:0 0 10px;border-bottom:0;">
+                <div>
+                  <h2 class="panel-title">3. Zet de causale keten in volgorde</h2>
+                  <p class="panel-subtitle">De mini-zinnen kloppen. Nu plaatsen als oorzaak-gevolg-keten.</p>
+                </div>
+              </div>
+              <div class="order-list" id="orderList"></div>
+              <div class="board-actions">
+                <button class="btn dark" id="checkOrder" type="button">Controleer volgorde</button>
+                <button class="btn light" id="shuffleOrder" type="button">Schud volgorde</button>
+              </div>
+              <div class="status-box" id="orderFeedback"><strong>Tip:</strong> begin bij de exogene impuls (beleidsmaatregel of schok in de tekst). Stappen die <em>gelijktijdig</em> zijn (zelfde fase) mogen onderling van plek wisselen.</div>
+            </div>
+
+            <!-- 3b. Bridge check (uitdaging only) -->
+            <div class="bridge-section locked" id="bridgeSection" hidden>
+              <div class="panel-header" style="padding:0 0 10px;border-bottom:0;">
+                <div>
+                  <h2 class="panel-title">3b. Schakellogica (extra uitdaging)</h2>
+                  <p class="panel-subtitle" id="bridgePrompt"></p>
+                </div>
+              </div>
+              <div class="bridge-check" id="bridgeOptions"></div>
+              <div class="board-actions">
+                <button class="btn dark" id="checkBridge" type="button">Controleer schakel</button>
+              </div>
+              <div class="status-box" id="bridgeFeedback"><strong>Vraag:</strong> kies de schakel die de twee stappen logisch verbindt.</div>
+            </div>
+
+            <!-- 4. Graph -->
+            <div class="graph-section locked" id="graphSection">
+              <div class="panel-header" style="padding:0 0 10px;border-bottom:0;">
+                <div>
+                  <h2 class="panel-title">4. Koppel aan economisch model</h2>
+                  <p class="panel-subtitle">Kies het diagram dat past bij jouw redeneerketen.</p>
+                </div>
+              </div>
+              <div id="graphQuestion"></div>
+              <div class="graph-choices" id="graphChoices"></div>
+              <div id="bigGraph" hidden></div>
+              <div class="board-actions">
+                <button class="btn dark" id="checkGraph" type="button">Controleer modelkoppeling</button>
+              </div>
+              <div class="status-box" id="graphFeedback"><strong>Vraag:</strong> welk diagram past bij je keten?</div>
+            </div>
+
+            <!-- 5. Results / uitleg -->
+            <div class="results-section locked" id="resultsSection">
+              <div class="panel-header" style="padding:0 0 10px;border-bottom:0;">
+                <div>
+                  <h2 class="panel-title">Resultaat & uitleg</h2>
+                  <p class="panel-subtitle">Van tekst naar flowchart, met de schakellogica per stap.</p>
+                </div>
+              </div>
+
+              <div class="flowchart" id="flowchart"></div>
+
+              <div class="schema" id="schemaPanel" hidden>
+                <h3>Samenvattend schema</h3>
+                <table>
+                  <tbody id="schemaBody"></tbody>
+                </table>
+              </div>
+
+              <h3 style="margin:16px 0 6px;font-size:14px;color:#0f172a;">Diagnose: wat ging vooral mis?</h3>
+              <div class="diagnosis" id="diagnosis"></div>
+
+              <div class="insight-grid" id="insights"></div>
+
+              <div class="completion-cta" id="completionCta" hidden>
+                <div class="text">
+                  <strong>Klaar!</strong> Je hebt deze keten compleet doorlopen. Wil je nu een ander scenario proberen?
+                </div>
+                <button class="btn dark" id="nextScenarioBtn" type="button">Volgende scenario →</button>
+                <button class="btn light" id="replayBtn" type="button">Opnieuw proberen</button>
+              </div>
+            </div>
+
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <!-- Pitch / data preview -->
+  </main>
+
+  <footer class="footer">
+    &nbsp;
+  </footer>
+
+  <!-- Confirm dialog -->
+  <div class="confirm-overlay" id="confirmOverlay" role="dialog" aria-modal="true" aria-labelledby="confirmTitle">
+    <div class="confirm-card">
+      <h3 id="confirmTitle">Weet je het zeker?</h3>
+      <p id="confirmText">Deze actie kan niet ongedaan gemaakt worden.</p>
+      <div class="confirm-actions">
+        <button class="btn light" id="confirmCancel" type="button">Annuleren</button>
+        <button class="btn dark" id="confirmOk" type="button">Doorgaan</button>
+      </div>
+    </div>
+  </div>
+  <script>
+    "use strict";
+
+    /* =================================================================
+       SVG HELPERS — compact primitives for per-scenario diagrams
+       ================================================================= */
+    const C = {
+      demand: "#2563eb",
+      supply: "#b45309",
+      ms: "#15803d",     // markt-/sociale curve
+      mc: "#7c3aed",     // marginal cost
+      mr: "#be185d",     // marginal revenue
+      ad: "#2563eb",
+      as: "#b45309",
+      ink: "#0f172a",
+      muted: "#475467",
+      dwl: "#fde68a",
+      shortage: "#fecaca",
+      surplus: "#bae6fd",
+      grid: "#e5e7eb"
+    };
+
+    function svgFrame(inner, xLabel, yLabel) {
+      return `<svg viewBox="0 0 400 280" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" role="img" aria-hidden="true">
+        <rect x="0" y="0" width="400" height="280" fill="#fdfcf8"/>
+        <line x1="60" y1="240" x2="370" y2="240" stroke="${C.muted}" stroke-width="2"/>
+        <line x1="60" y1="240" x2="60" y2="20" stroke="${C.muted}" stroke-width="2"/>
+        <polygon points="370,240 362,236 362,244" fill="${C.muted}"/>
+        <polygon points="60,20 56,28 64,28" fill="${C.muted}"/>
+        <text x="364" y="258" font-size="11" fill="${C.muted}" text-anchor="end">${xLabel || "Q"}</text>
+        <text x="52" y="24" font-size="11" fill="${C.muted}" text-anchor="end">${yLabel || "P"}</text>
+        ${inner}
+      </svg>`;
+    }
+
+    function svgLine(x1, y1, x2, y2, color, opts) {
+      opts = opts || {};
+      const dash = opts.dash ? `stroke-dasharray="${opts.dash}"` : "";
+      const op = opts.opacity ? `opacity="${opts.opacity}"` : "";
+      return `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${color}" stroke-width="${opts.width || 2.5}" ${dash} ${op} stroke-linecap="round"/>`;
+    }
+    function svgLabel(x, y, text, color, anchor, weight) {
+      return `<text x="${x}" y="${y}" font-size="11" font-weight="${weight || 700}" fill="${color}" text-anchor="${anchor || "start"}">${text}</text>`;
+    }
+    function svgDot(x, y, color, r) {
+      return `<circle cx="${x}" cy="${y}" r="${r || 4}" fill="${color || C.ink}"/>`;
+    }
+    function svgShade(points, color, opacity) {
+      return `<polygon points="${points}" fill="${color || C.dwl}" opacity="${opacity != null ? opacity : 0.55}"/>`;
+    }
+    function svgHLine(y, x1, x2, color, dash) {
+      return `<line x1="${x1}" y1="${y}" x2="${x2}" y2="${y}" stroke="${color}" stroke-width="2" ${dash ? `stroke-dasharray="${dash}"` : ""}/>`;
+    }
+    function svgArrow(x1, y1, x2, y2, color) {
+      const dx = x2 - x1, dy = y2 - y1;
+      const len = Math.hypot(dx, dy) || 1;
+      const ux = dx / len, uy = dy / len;
+      const head = 7;
+      const ax = x2 - head * ux + head * 0.55 * uy;
+      const ay = y2 - head * uy - head * 0.55 * ux;
+      const bx = x2 - head * ux - head * 0.55 * uy;
+      const by = y2 - head * uy + head * 0.55 * ux;
+      return `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${color || C.muted}" stroke-width="1.8"/>
+              <polygon points="${x2},${y2} ${ax.toFixed(1)},${ay.toFixed(1)} ${bx.toFixed(1)},${by.toFixed(1)}" fill="${color || C.muted}"/>`;
+    }
+    /* =================================================================
+       SCENARIO DATA
+       ================================================================= */
+
+    /* Helper: build an AS-AD diagram for the monetary scenario */
+    function asAdDiagram(variant) {
+      // Common: AS curve (90,230) → (340,70), AD original (90,70) → (320,230)
+      // Equilibrium ~ (210, 153)
+      const ASorig = svgLine(90, 230, 340, 70, C.as);
+      const ASleft = svgLine(120, 230, 350, 30, C.as);  // AS shifted up-left
+      const ADorig = svgLine(90, 70, 320, 230, C.ad);
+      const ADfade = svgLine(90, 70, 320, 230, C.ad, {opacity: 0.30});
+      const ADright = svgLine(160, 70, 370, 230, C.ad);
+      const ADleft = svgLine(40, 70, 260, 230, C.ad);
+      const E1 = svgDot(210, 153) + svgLabel(214, 170, "E₁", C.ink);
+      let inner = "";
+      if (variant === "ad-right") {
+        inner = `${ADfade}${svgLabel(85, 62, "AD", C.ad, "start", 700)}
+                 ${ADright}${svgLabel(372, 64, "AD'", C.ad, "start", 700)}
+                 ${ASorig}${svgLabel(343, 66, "AS", C.as, "start", 700)}
+                 ${E1}
+                 ${svgDot(245, 130)}${svgLabel(249, 122, "E₂", C.ink)}
+                 ${svgArrow(200, 145, 240, 130, C.ad)}`;
+      } else if (variant === "as-left") {
+        inner = `${ADorig}${svgLabel(85, 62, "AD", C.ad, "start", 700)}
+                 ${svgLine(90, 230, 340, 70, C.as, {opacity: 0.30})}
+                 ${svgLabel(343, 66, "AS", C.as, "start", 700)}
+                 ${ASleft}${svgLabel(353, 26, "AS'", C.as, "start", 700)}
+                 ${E1}
+                 ${svgDot(180, 130)}${svgLabel(155, 124, "E₂", C.ink)}
+                 ${svgArrow(210, 153, 184, 134, C.as)}`;
+      } else if (variant === "ad-left") {
+        inner = `${ADfade}${svgLabel(85, 62, "AD", C.ad, "start", 700)}
+                 ${ADleft}${svgLabel(40, 64, "AD'", C.ad, "start", 700)}
+                 ${ASorig}${svgLabel(343, 66, "AS", C.as, "start", 700)}
+                 ${E1}
+                 ${svgDot(170, 175)}${svgLabel(140, 180, "E₂", C.ink)}
+                 ${svgArrow(205, 158, 175, 173, C.ad)}`;
+      }
+      return svgFrame(inner, "Y", "P");
+    }
+
+    /* Helper: build an S/D diagram with optional intervention */
+    function sdDiagram(variant, xLabel, yLabel, marketName) {
+      // D: (90, 75) → (340, 225); S: (90, 225) → (340, 75); eq ~ (215, 150)
+      const D = svgLine(90, 75, 340, 225, C.demand);
+      const S = svgLine(90, 225, 340, 75, C.supply);
+      const Dlabel = svgLabel(345, 226, marketName === "labour" ? "Lᵛ" : "V", C.demand, "start", 700);
+      const Slabel = svgLabel(345, 76, marketName === "labour" ? "Lᵃ" : "A", C.supply, "start", 700);
+      const Eq = svgDot(215, 150) + svgLabel(220, 144, "E", C.ink);
+
+      let inner = `${D}${Dlabel}${S}${Slabel}${Eq}`;
+
+      if (variant === "shortage") {
+        // max price line below eq, shaded shortage band
+        const yMax = 192;
+        const xQs = 130;  // S at y=192 ≈ x=130
+        const xQd = 290;  // D at y=192 ≈ x=290
+        inner += `${svgHLine(yMax, 60, 340, "#dc2626", "5 3")}
+                  ${svgLabel(346, yMax + 4, "P_max", "#dc2626", "start", 800)}
+                  ${svgShade(`${xQs},${yMax} ${xQd},${yMax} ${xQd},${yMax + 8} ${xQs},${yMax + 8}`, C.shortage, 0.85)}
+                  ${svgLine(xQs, yMax, xQs, 240, C.muted, {dash: "3 3", width: 1, opacity: 0.6})}
+                  ${svgLine(xQd, yMax, xQd, 240, C.muted, {dash: "3 3", width: 1, opacity: 0.6})}
+                  ${svgLabel(xQs, 256, "Qᵃ", C.ink, "middle", 700)}
+                  ${svgLabel(xQd, 256, "Qᵛ", C.ink, "middle", 700)}
+                  ${svgLabel((xQs + xQd) / 2, yMax - 6, "Tekort", "#7f1d1d", "middle", 800)}`;
+      } else if (variant === "surplus") {
+        // min price line above eq → surplus
+        const yMin = 108;
+        const xQs = 295;
+        const xQd = 130;
+        inner += `${svgHLine(yMin, 60, 340, "#0369a1", "5 3")}
+                  ${svgLabel(346, yMin + 4, "P_min", "#0369a1", "start", 800)}
+                  ${svgShade(`${xQd},${yMin} ${xQs},${yMin} ${xQs},${yMin + 8} ${xQd},${yMin + 8}`, C.surplus, 0.85)}
+                  ${svgLine(xQd, yMin, xQd, 240, C.muted, {dash: "3 3", width: 1, opacity: 0.6})}
+                  ${svgLine(xQs, yMin, xQs, 240, C.muted, {dash: "3 3", width: 1, opacity: 0.6})}
+                  ${svgLabel(xQd, 256, "Qᵛ", C.ink, "middle", 700)}
+                  ${svgLabel(xQs, 256, "Qᵃ", C.ink, "middle", 700)}
+                  ${svgLabel((xQs + xQd) / 2, yMin - 6, "Overschot", "#075985", "middle", 800)}`;
+      } else if (variant === "clearing") {
+        // No intervention, just convergence arrow
+        inner += `${svgArrow(160, 110, 205, 145, C.ink)}
+                  ${svgLabel(155, 105, "prijs zoekt evenwicht", C.muted, "start", 600)}`;
+      } else if (variant === "demand-right") {
+        // Demand shift right (no intervention shown)
+        inner += `${svgLine(160, 75, 370, 225, C.demand, {dash: "5 4"})}
+                  ${svgLabel(372, 226, "V'", C.demand, "start", 700)}
+                  ${svgDot(255, 120)}${svgLabel(260, 114, "E'", C.ink)}
+                  ${svgArrow(220, 152, 252, 122, C.demand)}`;
+      } else if (variant === "min-wage") {
+        // Labour market with min wage above eq → werkloosheid gap
+        const wMin = 108;
+        const xLd = 138;  // labour demand at y=108
+        const xLs = 290;  // labour supply at y=108
+        inner += `${svgHLine(wMin, 60, 340, "#0369a1", "5 3")}
+                  ${svgLabel(346, wMin + 4, "w_min", "#0369a1", "start", 800)}
+                  ${svgShade(`${xLd},${wMin} ${xLs},${wMin} ${xLs},${wMin + 8} ${xLd},${wMin + 8}`, "#fde68a", 0.9)}
+                  ${svgLine(xLd, wMin, xLd, 240, C.muted, {dash: "3 3", width: 1, opacity: 0.6})}
+                  ${svgLine(xLs, wMin, xLs, 240, C.muted, {dash: "3 3", width: 1, opacity: 0.6})}
+                  ${svgLabel(xLd, 256, "Lᵛ", C.ink, "middle", 700)}
+                  ${svgLabel(xLs, 256, "Lᵃ", C.ink, "middle", 700)}
+                  ${svgLabel((xLd + xLs) / 2, wMin - 6, "Werkloosheid", "#713f12", "middle", 800)}`;
+      } else if (variant === "wage-shortage") {
+        // wrong: min wage below eq → shortage of labour
+        const wMin = 192;
+        const xLd = 290;
+        const xLs = 130;
+        inner += `${svgHLine(wMin, 60, 340, "#dc2626", "5 3")}
+                  ${svgLabel(346, wMin + 4, "w_min", "#dc2626", "start", 800)}
+                  ${svgShade(`${xLs},${wMin} ${xLd},${wMin} ${xLd},${wMin + 8} ${xLs},${wMin + 8}`, C.shortage, 0.85)}
+                  ${svgLabel((xLs + xLd) / 2, wMin - 6, "Tekort arbeid", "#7f1d1d", "middle", 800)}`;
+      }
+
+      return svgFrame(inner, xLabel || "Q", yLabel || "P");
+    }
+
+    /* Helper: monopoly diagram */
+    function monopolyDiagram(variant) {
+      // D: (80, 70) → (340, 230) — slope 160/260 ≈ 0.615
+      // MR: (80, 70) → (210, 230) — half horizontal range, twice slope
+      // MC: horizontal at y = 170
+      const D = svgLine(80, 70, 340, 230, C.demand);
+      const Dlabel = svgLabel(345, 232, "V", C.demand, "start", 700);
+      const MR = svgLine(80, 70, 210, 230, C.mr);
+      const MRlabel = svgLabel(212, 232, "MO", C.mr, "start", 700);
+      const MC = svgHLine(170, 60, 340, C.mc);
+      const MClabel = svgLabel(345, 174, "MK", C.mc, "start", 700);
+      // Q_m where MR = MC (y=170 on MR line): x ≈ 80 + (170-70)/((230-70)/(210-80)) = 80 + 100/(160/130) = 80 + 81.25 = 161.25
+      // P_m on D at x = 161: y = 70 + 0.615 * (161 - 80) = 70 + 49.8 = 119.8
+      const Qm = 161, Pm = 120;
+      // Q_competitive where D = MC: y=170 on D. x = 80 + (170-70)/0.615 = 80 + 162.6 = 242.6
+      const Qc = 243;
+
+      let inner = "";
+      if (variant === "monopoly") {
+        inner = `${MC}${MClabel}
+                 ${MR}${MRlabel}
+                 ${D}${Dlabel}
+                 ${svgShade(`${Qm},${Pm} ${Qc},170 ${Qm},170`, C.dwl, 0.7)}
+                 ${svgLabel((Qm + Qc) / 2 + 4, 150, "DWL", "#7c2d12", "middle", 800)}
+                 ${svgLine(Qm, Pm, Qm, 240, C.muted, {dash: "3 3", width: 1, opacity: 0.7})}
+                 ${svgLine(60, Pm, Qm, Pm, C.muted, {dash: "3 3", width: 1, opacity: 0.7})}
+                 ${svgDot(Qm, Pm)}
+                 ${svgLabel(Qm, 256, "Qₘ", C.ink, "middle", 800)}
+                 ${svgLabel(48, Pm + 4, "Pₘ", C.ink, "end", 800)}
+                 ${svgLabel(48, 174, "MK", C.mc, "end", 700)}`;
+      } else if (variant === "perfect-comp") {
+        // wrong: P=MC, no DWL
+        inner = `${MC}${MClabel}
+                 ${D}${Dlabel}
+                 ${svgLine(Qc, 170, Qc, 240, C.muted, {dash: "3 3", width: 1, opacity: 0.7})}
+                 ${svgDot(Qc, 170)}
+                 ${svgLabel(Qc, 256, "Q*", C.ink, "middle", 800)}
+                 ${svgLabel(48, 174, "P*", C.ink, "end", 800)}
+                 ${svgLabel(220, 100, "P = MK", C.ink, "start", 700)}`;
+      } else if (variant === "demand-shift") {
+        // wrong: D shifts (irrelevant)
+        const Dnew = svgLine(140, 70, 370, 230, C.demand, {dash: "5 4"});
+        inner = `${MC}${MClabel}
+                 ${MR}${MRlabel}
+                 ${D}${Dlabel}${Dnew}
+                 ${svgLabel(372, 232, "V'", C.demand, "start", 700)}
+                 ${svgArrow(220, 175, 260, 175, C.demand)}`;
+      }
+      return svgFrame(inner, "Q", "P");
+    }
+
+    /* Helper: collective goods diagram */
+    function collectiveDiagram(variant) {
+      // D_private: (90, 130) → (260, 230) — lower demand
+      // D_social: (90, 50) → (340, 220)   — higher (vertical sum)
+      // S: (90, 220) → (320, 60)
+      const Dp = svgLine(90, 130, 260, 230, C.demand);
+      const Ds = svgLine(90, 50, 340, 220, C.ms);
+      const S = svgLine(90, 220, 320, 60, C.supply);
+      // private market eq (Dp ∩ S) ~ (155, 175)
+      // social optimum (Ds ∩ S) ~ (240, 105)
+      let inner = "";
+      if (variant === "underprovision") {
+        inner = `${S}${svgLabel(323, 58, "A", C.supply, "start", 700)}
+                 ${Dp}${svgLabel(263, 232, "V_priv", C.demand, "start", 700)}
+                 ${Ds}${svgLabel(343, 222, "V_soc", C.ms, "start", 700)}
+                 ${svgShade("155,175 240,105 240,175", C.dwl, 0.55)}
+                 ${svgDot(155, 175)}${svgLabel(110, 180, "Q_markt", C.ink, "start", 800)}
+                 ${svgDot(240, 105)}${svgLabel(245, 100, "Q_optimaal", C.ink, "start", 800)}
+                 ${svgLine(155, 175, 155, 240, C.muted, {dash: "3 3", width: 1, opacity: 0.6})}
+                 ${svgLine(240, 105, 240, 240, C.muted, {dash: "3 3", width: 1, opacity: 0.6})}
+                 ${svgLabel(195, 145, "welvaartsverlies", "#7c2d12", "middle", 700)}`;
+      } else if (variant === "no-intervention") {
+        // wrong: only private demand drawn, no social demand visible
+        inner = `${S}${svgLabel(323, 58, "A", C.supply, "start", 700)}
+                 ${Dp}${svgLabel(263, 232, "V", C.demand, "start", 700)}
+                 ${svgDot(155, 175)}${svgLabel(160, 168, "E", C.ink)}`;
+      } else if (variant === "shift-supply") {
+        // wrong: government shifts supply rather than financing
+        const Snew = svgLine(40, 220, 270, 60, C.supply, {dash: "5 4"});
+        inner = `${S}${Snew}${svgLabel(323, 58, "A", C.supply, "start", 700)}
+                 ${Dp}${svgLabel(263, 232, "V", C.demand, "start", 700)}
+                 ${svgArrow(180, 165, 130, 165, C.supply)}
+                 ${svgLabel(20, 60, "A'", C.supply, "start", 700)}`;
+      }
+      return svgFrame(inner, "Q", "P");
+    }
+    const scenarios = {
+
+      monetary: {
+        domain: "marktanalyse",
+        title: "Renteverlaging door centrale bank",
+        label: "Macro: renteverlaging",
+        learningGoal: "Onderscheid maken tussen beleidsbeslissing, bankreactie, kredietkanaal, bestedingen en macro-economisch gevolg.",
+        articlePlain: "Na een periode van zwakke groei verlaagt de centrale bank de beleidsrente. Daardoor kunnen commerciële banken goedkoper geld lenen bij de centrale bank. Zij verlagen daarna de rente op leningen aan bedrijven en huishoudens. Goedkoper krediet maakt lenen aantrekkelijker, waardoor bedrijven meer investeren en consumenten meer besteden. De totale bestedingen stijgen; op korte termijn neemt de productie toe en ontstaat er meer opwaartse druk op het prijspeil.",
+        articleMarked: "Na een periode van zwakke groei <mark>verlaagt de centrale bank de beleidsrente</mark>. Daardoor kunnen <mark>commerciële banken goedkoper geld lenen</mark> bij de centrale bank. Zij <mark>verlagen daarna de rente op leningen</mark> aan bedrijven en huishoudens. Goedkoper krediet maakt lenen aantrekkelijker, waardoor <mark>bedrijven meer investeren en consumenten meer besteden</mark>. De <mark>totale bestedingen stijgen</mark>; op korte termijn <mark>neemt de productie toe en ontstaat er meer opwaartse druk op het prijspeil</mark>.",
+        steps: [
+          { id: "s1", actor: "Centrale bank", action: "verlaagt de beleidsrente", bridge: "Dit is de exogene beleidsimpuls: lenen bij de centrale bank wordt goedkoper." },
+          { id: "s2", actor: "Commerciële banken", action: "kunnen goedkoper geld lenen", bridge: "Hun financieringskosten dalen mee met de beleidsrente." },
+          { id: "s3", actor: "Rente op leningen", action: "daalt voor bedrijven en huishoudens", bridge: "Banken geven lagere financieringskosten deels door aan klanten." },
+          { id: "s4", actor: "Bedrijven en huishoudens", action: "lenen en besteden meer", bridge: "Goedkoper krediet maakt investering en consumptie aantrekkelijker." },
+          { id: "s5", actor: "Totale bestedingen", action: "nemen toe", bridge: "Consumptie en investeringen zijn componenten van de totale vraag." },
+          { id: "s6", actor: "Productie en prijspeil", action: "stijgen op korte termijn", bridge: "Bij een rechts-verschuiving van AD groeien Y en P samen." }
+        ],
+        distractors: {
+          actors: ["Overheid", "Aanbodcurve"],
+          actions: ["verhoogt belastingen", "verschuift naar links", "daalt door hogere werkloosheid"]
+        },
+        extraDistractors: {
+          actors: ["Importbedrijven", "Octrooihouder"],
+          actions: ["verhogen exportprijzen", "kiest MO = MK"]
+        },
+        schema: [
+          ["Beleidsimpuls", "Centrale bank verlaagt de beleidsrente."],
+          ["Bankreactie", "Commerciële banken financieren goedkoper en geven dat door."],
+          ["Krediet", "Rente op leningen daalt voor bedrijven en huishoudens."],
+          ["Bestedingen", "Investeringen en consumptie nemen toe."],
+          ["Korte termijn", "Productie stijgt en het prijspeil komt onder opwaartse druk."]
+        ],
+        graphQuestion: "Welk AS-AD-effect past bij deze keten?",
+        graphChoices: [
+          { id: "g1", correct: true,  caption: "AD verschuift naar rechts: Y↑ en P↑.", feedback: "Juist. Rentekanaal → meer bestedingen → AD-shift naar rechts.", svg: () => asAdDiagram("ad-right") },
+          { id: "g2", correct: false, caption: "AS verschuift naar links: P↑ maar Y↓.",   feedback: "Nee. Een renteverlaging is een vraagimpuls, geen kostenschok aan de aanbodzijde.", svg: () => asAdDiagram("as-left") },
+          { id: "g3", correct: false, caption: "AD verschuift naar links: Y↓ en P↓.",     feedback: "Nee. Lagere rente verhoogt juist bestedingen; AD verschuift naar rechts, niet naar links.", svg: () => asAdDiagram("ad-left") }
+        ]
+      },
+
+      rentcap: {
+        domain: "marktanalyse",
+        title: "Maximumhuur onder de evenwichtsprijs",
+        label: "Markten: maximumprijs",
+        learningGoal: "Afleiden waarom een maximumprijs onder de evenwichtsprijs een tekort veroorzaakt.",
+        articlePlain: "De overheid stelt een maximumhuur in die lager ligt dan de vrije marktprijs. Voor huurders wordt wonen goedkoper, waardoor meer mensen een huurwoning willen. Voor verhuurders wordt het minder aantrekkelijk om woningen te verhuren of te onderhouden. Het aanbod van huurwoningen daalt terwijl de gevraagde hoeveelheid stijgt. Daardoor ontstaat een tekort en lopen wachtlijsten op.",
+        articleMarked: "De overheid <mark>stelt een maximumhuur in</mark> die lager ligt dan de vrije marktprijs. Voor huurders <mark>wordt wonen goedkoper</mark>, waardoor <mark>meer mensen een huurwoning willen</mark>. Voor verhuurders wordt het minder aantrekkelijk om woningen te verhuren of te onderhouden. Het <mark>aanbod van huurwoningen daalt</mark> terwijl de <mark>gevraagde hoeveelheid stijgt</mark>. Daardoor <mark>ontstaat een tekort en lopen wachtlijsten op</mark>.",
+        steps: [
+          { id: "s1", actor: "Overheid", action: "stelt maximumhuur onder de marktprijs vast", bridge: "Een wettelijke prijsplafond is bindend onder het evenwicht." },
+          { id: "s2", actor: "Huurprijs voor huurders", action: "wordt lager", bridge: "De maximumprijs ligt onder de vrije marktprijs." },
+          { id: "s3", actor: "Gevraagde hoeveelheid woningen", action: "neemt toe", phase: 2, bridge: "Bij een lagere prijs willen meer mensen huren (vraagcurve)." },
+          { id: "s4", actor: "Aangeboden hoeveelheid woningen", action: "neemt af", phase: 2, bridge: "Verhuren en onderhouden wordt minder aantrekkelijk (aanbodcurve)." },
+          { id: "s5", actor: "Vraag vergeleken met aanbod", action: "wordt groter dan het aanbod", bridge: "Bij P_max geldt Qᵛ > Qᵃ." },
+          { id: "s6", actor: "Wachtlijsten en tekort", action: "nemen toe", bridge: "Niet iedereen die wil huren vindt tegen die prijs een woning." }
+        ],
+        distractors: {
+          actors: ["Centrale bank", "Exporterende bedrijven"],
+          actions: ["verlaagt de beleidsrente", "leidt tot aanbodoverschot", "maakt lenen duurder"]
+        },
+        extraDistractors: {
+          actors: ["Monopolist", "Vakbond"],
+          actions: ["kiest MO = MK", "verhoogt het minimumloon"]
+        },
+        schema: [
+          ["Beleid", "Maximumhuur ligt onder de vrije marktprijs."],
+          ["Vraagzijde", "Gevraagde hoeveelheid stijgt door lagere prijs."],
+          ["Aanbodzijde", "Aangeboden hoeveelheid daalt; verhuren minder aantrekkelijk."],
+          ["Marktbeeld", "Bij P_max: Qᵛ > Qᵃ → tekort."],
+          ["Welvaart", "Wachtlijsten; niet iedereen die wil huren krijgt een woning."]
+        ],
+        graphQuestion: "Welk markteffect hoort bij een bindende maximumprijs?",
+        graphChoices: [
+          { id: "g1", correct: true,  caption: "P_max onder evenwicht: Qᵛ > Qᵃ → tekort.",      feedback: "Juist. Bij de maximumprijs is Qᵛ groter dan Qᵃ; daar zit het tekort.", svg: () => sdDiagram("shortage", "Q huurwoningen", "huur") },
+          { id: "g2", correct: false, caption: "P_min boven evenwicht: Qᵃ > Qᵛ → overschot.",   feedback: "Nee. Een overschot past bij een minimumprijs boven het evenwicht.", svg: () => sdDiagram("surplus", "Q huurwoningen", "huur") },
+          { id: "g3", correct: false, caption: "Markt klaart vanzelf naar evenwicht.",          feedback: "Nee. De maximumprijs verhindert juist dat de prijs vrij naar het evenwicht stijgt.", svg: () => sdDiagram("clearing", "Q huurwoningen", "huur") }
+        ]
+      },
+
+      monopolie: {
+        domain: "bedrijfseconomie",
+        title: "Monopolist en welvaartsverlies",
+        label: "Marktstructuren: monopolie",
+        learningGoal: "Afleiden waarom een monopolist een lagere productie en hogere prijs kiest dan onder volledige mededinging, met welvaartsverlies als gevolg.",
+        articlePlain: "Een fabrikant heeft als enige een octrooi op een nieuw geneesmiddel en is daardoor enige aanbieder. Omdat hij de hele marktvraag bedient, ligt de marginale opbrengst onder de prijs en daalt sneller. De monopolist kiest zijn productie waar de marginale opbrengst gelijk is aan de marginale kosten. Bij die hoeveelheid ligt de prijs duidelijk boven de marginale kosten. Daardoor is de geproduceerde hoeveelheid lager dan onder volledige mededinging, en ontstaat welvaartsverlies omdat sommige consumenten die wel willen betalen wat het kost om te produceren niet bediend worden.",
+        articleMarked: "Een fabrikant heeft als <mark>enige een octrooi</mark> op een nieuw geneesmiddel en is daardoor <mark>enige aanbieder</mark>. Omdat hij de hele marktvraag bedient, <mark>ligt de marginale opbrengst onder de prijs en daalt sneller</mark>. De monopolist kiest <mark>zijn productie waar MO = MK</mark>. Bij die hoeveelheid ligt de <mark>prijs duidelijk boven de marginale kosten</mark>. Daardoor is de <mark>geproduceerde hoeveelheid lager</mark> dan onder volledige mededinging, en ontstaat <mark>welvaartsverlies</mark>.",
+        steps: [
+          { id: "s1", actor: "Fabrikant met octrooi", action: "is enige aanbieder", bridge: "Het octrooi sluit andere aanbieders uit van de markt." },
+          { id: "s2", actor: "Marginale opbrengst", action: "daalt sneller dan de prijs", bridge: "Een monopolist verlaagt voor elke extra eenheid de prijs voor álle eenheden." },
+          { id: "s3", actor: "Monopolist", action: "kiest productie waar MO = MK", bridge: "Dit is de winstmaximaliserende beslisregel." },
+          { id: "s4", actor: "Prijs", action: "ligt boven de marginale kosten", bridge: "Marktmacht: er is geen concurrentie die P naar MK drijft." },
+          { id: "s5", actor: "Geproduceerde hoeveelheid", action: "is lager dan onder volledige mededinging", bridge: "Hogere prijs en lagere hoeveelheid passen bij elkaar op de vraagcurve." },
+          { id: "s6", actor: "Welvaartsverlies", action: "ontstaat", bridge: "Eenheden waarvoor de betalingsbereidheid groter is dan MK worden niet geproduceerd." }
+        ],
+        distractors: {
+          actors: ["Overheid", "Aanbodcurve"],
+          actions: ["verlaagt belastingen", "verschuift naar links", "leidt tot consumentensurplus"]
+        },
+        extraDistractors: {
+          actors: ["Vakbond", "Centrale bank"],
+          actions: ["verhoogt het minimumloon", "verlaagt de rente"]
+        },
+        schema: [
+          ["Marktstructuur", "Eén aanbieder met marktmacht door octrooi."],
+          ["Beslisregel", "Monopolist produceert waar MO = MK."],
+          ["Prijszetting", "Prijs ligt boven MK; consumenten betalen meer."],
+          ["Productie", "Lager dan bij volledige mededinging."],
+          ["Welvaart", "Welvaartsverlies (deadweight loss) door niet-bediende consumenten."]
+        ],
+        graphQuestion: "Welk model-effect past bij deze keten?",
+        graphChoices: [
+          { id: "g1", correct: true,  caption: "MO = MK; P > MK; welvaartsverlies (DWL).",     feedback: "Juist. De monopolist kiest Qₘ waar MO=MK; Pₘ ligt op V boven MK; DWL is het driehoekje naar Q* van volledige mededinging.", svg: () => monopolyDiagram("monopoly") },
+          { id: "g2", correct: false, caption: "P = MK, geen welvaartsverlies.",                feedback: "Nee. Dit is het beeld bij volledige mededinging; daar wordt de marktmacht juist niet gebruikt.", svg: () => monopolyDiagram("perfect-comp") },
+          { id: "g3", correct: false, caption: "Vraagcurve verschuift; geen marktmacht zichtbaar.", feedback: "Nee. De tekst gaat over marktmacht, niet over een vraagverschuiving.", svg: () => monopolyDiagram("demand-shift") }
+        ]
+      },
+
+      collectief: {
+        domain: "marktanalyse",
+        title: "Free-rider-probleem bij collectieve goederen",
+        label: "Markt en overheid: collectieve goederen",
+        learningGoal: "Uitleggen waarom een markt voor collectieve goederen leidt tot een te lage productie en welke rol de overheid speelt.",
+        articlePlain: "Dijkonderhoud is niet-rivaliserend en niet-uitsluitbaar: als de dijk er ligt, profiteert iedereen ervan en niemand kan worden uitgesloten. Daardoor heeft elke individuele consument een prikkel om mee te liften op andermans bijdrage. Private aanbieders kunnen hun kosten niet terugverdienen, want te weinig mensen betalen vrijwillig. De marktproductie blijft daardoor onder de maatschappelijk gewenste hoeveelheid. De overheid kan dit oplossen door dijken uit belastinggeld te financieren.",
+        articleMarked: "Dijkonderhoud is <mark>niet-rivaliserend en niet-uitsluitbaar</mark>: als de dijk er ligt, profiteert iedereen ervan. Daardoor heeft elke <mark>individuele consument een prikkel om mee te liften</mark> op andermans bijdrage. <mark>Private aanbieders kunnen hun kosten niet terugverdienen</mark>, want te weinig mensen betalen vrijwillig. De <mark>marktproductie blijft onder de maatschappelijk gewenste hoeveelheid</mark>. De <mark>overheid kan dit oplossen door dijken uit belastinggeld te financieren</mark>.",
+        steps: [
+          { id: "s1", actor: "Dijkonderhoud", action: "is niet-rivaliserend en niet-uitsluitbaar", bridge: "Twee eigenschappen tegelijk: een collectief goed." },
+          { id: "s2", actor: "Individuele consument", action: "lift mee in plaats van te betalen", bridge: "Free-rider-prikkel: profiteren zonder bijdragen." },
+          { id: "s3", actor: "Private aanbieders", action: "kunnen hun kosten niet terugverdienen", bridge: "Te weinig vrijwillige betalingen dekken de productiekosten." },
+          { id: "s4", actor: "Marktproductie", action: "ligt onder de maatschappelijk gewenste hoeveelheid", bridge: "De som van individuele betalingsbereidheid blijft onbenut." },
+          { id: "s5", actor: "Overheid", action: "financiert dijken uit belastinggeld", bridge: "Verplichte bijdrage haalt de free-rider-prikkel weg." }
+        ],
+        distractors: {
+          actors: ["Aanbodcurve", "Concurrent"],
+          actions: ["verhoogt de prijs", "verschuift naar rechts", "leidt tot een tekort op de markt"]
+        },
+        extraDistractors: {
+          actors: ["Centrale bank", "Octrooihouder"],
+          actions: ["verlaagt de rente", "kiest MO = MK"]
+        },
+        schema: [
+          ["Eigenschappen", "Niet-rivaliserend én niet-uitsluitbaar."],
+          ["Prikkel", "Free-rider: profiteren zonder bijdragen."],
+          ["Markt", "Private aanbieders dekken hun kosten niet."],
+          ["Uitkomst", "Marktproductie ligt onder het maatschappelijk optimum."],
+          ["Oplossing", "Overheid financiert via belastingen."]
+        ],
+        graphQuestion: "Welk model past bij collectieve goederen en de overheidsrol?",
+        graphChoices: [
+          { id: "g1", correct: true,  caption: "Markt onder optimum; welvaartsverlies; overheid financiert.", feedback: "Juist. De individuele vraag ligt onder de sociale vraag; de markt levert te weinig en de overheid past dat aan.", svg: () => collectiveDiagram("underprovision") },
+          { id: "g2", correct: false, caption: "Markt komt vanzelf in evenwicht.",                              feedback: "Nee. Bij collectieve goederen ontstaat juist géén goed werkend marktevenwicht door de free-rider-prikkel.", svg: () => collectiveDiagram("no-intervention") },
+          { id: "g3", correct: false, caption: "Overheid schuift het aanbod naar links.",                       feedback: "Nee. De overheid voorziet juist méér door financiering, niet door het aanbod te beperken.", svg: () => collectiveDiagram("shift-supply") }
+        ]
+      },
+
+      minimumloon: {
+        domain: "arbeidsmarkt",
+        title: "Minimumloon boven het evenwichtsloon",
+        label: "Arbeidsmarkt: minimumloon",
+        learningGoal: "Afleiden waarom een minimumloon boven het evenwichtsloon leidt tot werkloosheid.",
+        articlePlain: "De overheid stelt op de markt voor laaggeschoolde arbeid een minimumloon vast dat hoger ligt dan het evenwichtsloon. Bij dit hogere loon willen meer mensen werken, want werken loont nu meer. Voor werkgevers wordt arbeid duurder, dus zij vragen minder werknemers. De aangeboden hoeveelheid arbeid stijgt en de gevraagde hoeveelheid daalt. Het verschil tussen aanbod en vraag is precies de extra werkloosheid die door het minimumloon ontstaat.",
+        articleMarked: "De overheid <mark>stelt een minimumloon vast dat hoger ligt dan het evenwichtsloon</mark>. Bij dit hogere loon <mark>willen meer mensen werken</mark>, want werken loont nu meer. Voor werkgevers <mark>wordt arbeid duurder, dus zij vragen minder werknemers</mark>. De <mark>aangeboden hoeveelheid arbeid stijgt en de gevraagde hoeveelheid daalt</mark>. Het verschil tussen aanbod en vraag is precies de <mark>extra werkloosheid die door het minimumloon ontstaat</mark>.",
+        steps: [
+          { id: "s1", actor: "Overheid", action: "stelt minimumloon boven evenwichtsloon vast", bridge: "Een wettelijke ondergrens boven het evenwicht is bindend." },
+          { id: "s2", actor: "Werknemers", action: "bieden meer arbeid aan", phase: 1, bridge: "Bij een hoger loon stijgt het arbeidsaanbod." },
+          { id: "s3", actor: "Werkgevers", action: "vragen minder arbeid", phase: 1, bridge: "Bij een hoger loon dalen de marginale opbrengsten van een werknemer eerder onder het loon." },
+          { id: "s4", actor: "Aanbod arbeid", action: "wordt groter dan gevraagde arbeid", bridge: "Bij w_min: Lᵃ > Lᵛ → aanbodoverschot van arbeid." },
+          { id: "s5", actor: "Werkloosheid", action: "neemt toe", bridge: "Het verschil Lᵃ − Lᵛ is precies de werkloosheid door het beleid." }
+        ],
+        distractors: {
+          actors: ["Centrale bank", "Importeur"],
+          actions: ["verlaagt de rente", "verhoogt het prijspeil", "leidt tot een tekort aan arbeid"]
+        },
+        extraDistractors: {
+          actors: ["Octrooihouder", "Aanbodcurve diensten"],
+          actions: ["kiest MO = MK", "verschuift naar links"]
+        },
+        schema: [
+          ["Beleid", "Minimumloon ligt boven evenwichtsloon."],
+          ["Aanbodzijde", "Werknemers bieden méér arbeid aan."],
+          ["Vraagzijde", "Werkgevers vragen minder arbeid."],
+          ["Marktbeeld", "Lᵃ > Lᵛ → aanbodoverschot van arbeid."],
+          ["Welvaart", "Werkloosheid stijgt; sommige werknemers zonder werk."]
+        ],
+        graphQuestion: "Welk arbeidsmarkteffect hoort bij een minimumloon boven het evenwicht?",
+        graphChoices: [
+          { id: "g1", correct: true,  caption: "w_min boven evenwicht: Lᵃ > Lᵛ → werkloosheid.", feedback: "Juist. Het verschil Lᵃ − Lᵛ bij w_min is precies de werkloosheid die door het beleid ontstaat.", svg: () => sdDiagram("min-wage", "L (arbeid)", "w (loon)", "labour") },
+          { id: "g2", correct: false, caption: "w_min onder evenwicht: tekort arbeid.",          feedback: "Nee. Een minimumloon onder het evenwicht is niet bindend en leidt niet tot werkloosheid.", svg: () => sdDiagram("wage-shortage", "L (arbeid)", "w (loon)", "labour") },
+          { id: "g3", correct: false, caption: "Vraag naar arbeid verschuift naar rechts.",      feedback: "Nee. Het beleid verandert niet de vraagcurve; het zet alleen een prijsondergrens.", svg: () => sdDiagram("demand-right", "L (arbeid)", "w (loon)", "labour") }
+        ]
+      }
+
+    };
+
+    const SCENARIO_ORDER = ["monetary", "rentcap", "monopolie", "collectief", "minimumloon"];
+    const DOMAIN_LABELS = {
+      marktanalyse: "Marktanalyse",
+      bedrijfseconomie: "Bedrijfseconomie",
+      arbeidsmarkt: "Arbeidsmarkt"
+    };
+    /* =================================================================
+       STATE & ENGINE
+       ================================================================= */
+
+    const STATE = {
+      scenarioKey: "monetary",
+      mode: "standaard",          // ondersteuning | standaard | uitdaging
+      selectedCard: null,         // card id currently selected
+      cards: { actors: [], actions: [] },
+      placements: [],             // [{ actor: cardId|null, action: cardId|null }]
+      pairMarks: [],              // ["good"|"bad"|null]
+      orderItems: [],             // step ids in user-chosen order
+      orderMarks: [],             // ["good"|"bad"|null] per position
+      selectedGraphChoice: null,
+      graphMark: null,            // "good"|"bad"|null
+      bridgeTransitionIndex: null, // 0..steps.length-2
+      bridgeOptionsList: null,    // [{ stepId, text }]
+      selectedBridgeOption: null, // option index
+      bridgeMark: null,
+      highlighted: false,
+      hintsUsed: 0,
+      hintRowFlash: -1,
+      score: 0,
+      stats: { distractor: 0, cross_pair: 0, order_swap: 0, model_misread: 0, bridge_miss: 0 },
+      completed: { pairs: false, order: false, bridge: false, graph: false },
+      docentMode: false
+    };
+
+    const STORAGE_KEY = "rcb-state-v2";
+
+    function scenario() { return scenarios[STATE.scenarioKey]; }
+    function bridgeRequired() { return STATE.mode === "uitdaging"; }
+
+    function shuffle(arr) {
+      const a = arr.slice();
+      for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        const t = a[i]; a[i] = a[j]; a[j] = t;
+      }
+      return a;
+    }
+
+    function activeDistractors() {
+      const s = scenario();
+      if (STATE.mode === "ondersteuning") return { actors: [], actions: [] };
+      if (STATE.mode === "uitdaging") {
+        return {
+          actors: (s.distractors.actors || []).concat((s.extraDistractors && s.extraDistractors.actors) || []),
+          actions: (s.distractors.actions || []).concat((s.extraDistractors && s.extraDistractors.actions) || [])
+        };
+      }
+      return s.distractors;
+    }
+
+    function buildCards() {
+      const s = scenario();
+      const dist = activeDistractors();
+      const actors = [];
+      const actions = [];
+      s.steps.forEach((step) => {
+        actors.push({ id: "a-" + step.id, type: "actor", text: step.actor, stepId: step.id, distractor: false });
+        actions.push({ id: "b-" + step.id, type: "action", text: step.action, stepId: step.id, distractor: false });
+      });
+      dist.actors.forEach((text, i) => {
+        actors.push({ id: "a-d" + i, type: "actor", text: text, stepId: null, distractor: true });
+      });
+      dist.actions.forEach((text, i) => {
+        actions.push({ id: "b-d" + i, type: "action", text: text, stepId: null, distractor: true });
+      });
+      return { actors: shuffle(actors), actions: shuffle(actions) };
+    }
+
+    function findCard(id) {
+      if (!id) return null;
+      const all = STATE.cards.actors.concat(STATE.cards.actions);
+      for (let i = 0; i < all.length; i++) if (all[i].id === id) return all[i];
+      return null;
+    }
+
+    function isPlaced(cardId) {
+      return STATE.placements.some(p => p && (p.actor === cardId || p.action === cardId));
+    }
+
+    /* ----- INIT ----- */
+    function initScenario(key, opts) {
+      opts = opts || {};
+      STATE.scenarioKey = key;
+      const s = scenarios[key];
+      STATE.placements = s.steps.map(() => ({ actor: null, action: null }));
+      STATE.pairMarks = s.steps.map(() => null);
+      STATE.orderItems = [];
+      STATE.orderMarks = [];
+      STATE.selectedCard = null;
+      STATE.selectedGraphChoice = null;
+      STATE.graphMark = null;
+      STATE.selectedBridgeOption = null;
+      STATE.bridgeTransitionIndex = null;
+      STATE.bridgeOptionsList = null;
+      STATE.bridgeMark = null;
+      STATE.highlighted = false;
+      STATE.hintsUsed = 0;
+      STATE.hintRowFlash = -1;
+      STATE.score = 0;
+      STATE.stats = { distractor: 0, cross_pair: 0, order_swap: 0, model_misread: 0, bridge_miss: 0 };
+      STATE.completed = { pairs: false, order: false, bridge: false, graph: false };
+      STATE.cards = buildCards();
+      document.body.dataset.domain = s.domain;
+      if (!opts.skipSave) saveState();
+    }
+
+    /* ----- SCORING ----- */
+    function recomputeScore() {
+      const s = scenario();
+      let pts = 0;
+      const goodPairs = STATE.pairMarks.filter(m => m === "good").length;
+      pts += goodPairs * (60 / s.steps.length);
+      if (STATE.completed.order)  pts += bridgeRequired() ? 20 : 25;
+      if (STATE.completed.bridge && bridgeRequired()) pts += 5;
+      if (STATE.completed.graph)  pts += 15;
+      pts -= STATE.hintsUsed * 5;
+      STATE.score = Math.max(0, Math.min(100, Math.round(pts)));
+    }
+
+    /* ----- CARD PLACEMENT ----- */
+    /* Three placement modes:
+       1. autoPlaceCard(cardId)   - tap chip: places into first empty matching slot
+       2. placeCardInSpecificSlot - drag chip onto a specific slot
+       3. unplaceFromSlot          - tap a filled slot: removes card back to bank
+       If pairs were already verified (completed.pairs), any edit resets downstream
+       stages so a broken pair cannot leave order/bridge/graph in a stale "unlocked" state.
+    */
+    function resetDownstreamFromPairs() {
+      STATE.completed.pairs = false;
+      STATE.orderItems = [];
+      STATE.orderMarks = [];
+      STATE.completed.order = false;
+      STATE.completed.bridge = false;
+      STATE.completed.graph = false;
+      STATE.bridgeTransitionIndex = null;
+      STATE.bridgeOptionsList = null;
+      STATE.selectedBridgeOption = null;
+      STATE.bridgeMark = null;
+      STATE.selectedGraphChoice = null;
+      STATE.graphMark = null;
+    }
+
+    function autoPlaceCard(cardId) {
+      const card = findCard(cardId);
+      if (!card) return -1;
+      const role = card.type; // "actor" | "action"
+      // remove the card from any slot it might already be in (defensive)
+      STATE.placements.forEach((p, i) => {
+        if (p.actor === cardId)  { p.actor  = null; STATE.pairMarks[i] = null; }
+        if (p.action === cardId) { p.action = null; STATE.pairMarks[i] = null; }
+      });
+      // find first empty matching slot
+      for (let i = 0; i < STATE.placements.length; i++) {
+        if (!STATE.placements[i][role]) {
+          STATE.placements[i][role] = cardId;
+          STATE.pairMarks[i] = null;
+          if (STATE.completed.pairs) resetDownstreamFromPairs();
+          recomputeScore();
+          return i;
+        }
+      }
+      recomputeScore();
+      return -1;
+    }
+
+    function placeCardInSpecificSlot(cardId, rowIndex, role) {
+      const card = findCard(cardId);
+      if (!card) return false;
+      if (card.type !== role) return false; // type mismatch (actor↔action)
+      // remove card from any other slot first; if target slot already had a card, that gets pushed back to bank
+      STATE.placements.forEach((p, i) => {
+        if (p.actor === cardId)  { p.actor  = null; STATE.pairMarks[i] = null; }
+        if (p.action === cardId) { p.action = null; STATE.pairMarks[i] = null; }
+      });
+      STATE.placements[rowIndex][role] = cardId;
+      STATE.pairMarks[rowIndex] = null;
+      if (STATE.completed.pairs) resetDownstreamFromPairs();
+      recomputeScore();
+      return true;
+    }
+
+    function unplaceFromSlot(rowIndex, role) {
+      if (STATE.placements[rowIndex] && STATE.placements[rowIndex][role]) {
+        STATE.placements[rowIndex][role] = null;
+        STATE.pairMarks[rowIndex] = null;
+        if (STATE.completed.pairs) resetDownstreamFromPairs();
+        recomputeScore();
+        return true;
+      }
+      return false;
+    }
+
+    function clearBoard() {
+      STATE.placements = scenario().steps.map(() => ({ actor: null, action: null }));
+      STATE.pairMarks = scenario().steps.map(() => null);
+      STATE.selectedCard = null;
+      STATE.completed.pairs = false;
+      STATE.completed.order = false;
+      STATE.completed.bridge = false;
+      STATE.completed.graph = false;
+      STATE.orderItems = [];
+      STATE.orderMarks = [];
+      STATE.selectedGraphChoice = null;
+      STATE.graphMark = null;
+      STATE.selectedBridgeOption = null;
+      STATE.bridgeMark = null;
+      STATE.bridgeTransitionIndex = null;
+      STATE.bridgeOptionsList = null;
+      recomputeScore();
+    }
+
+    /* ----- PAIR CHECK ----- */
+    function checkPairsLogic() {
+      const s = scenario();
+      let allCorrect = true;
+      let anyBlank = false;
+      STATE.pairMarks = STATE.placements.map(p => {
+        if (!p.actor || !p.action) { anyBlank = true; allCorrect = false; return null; }
+        const a = findCard(p.actor), b = findCard(p.action);
+        if (!a || !b) return null;
+        if (a.distractor || b.distractor) {
+          STATE.stats.distractor++;
+          allCorrect = false;
+          return "bad";
+        }
+        if (a.stepId === b.stepId) return "good";
+        STATE.stats.cross_pair++;
+        allCorrect = false;
+        return "bad";
+      });
+      if (anyBlank) { recomputeScore(); return { state: "incomplete" }; }
+      if (allCorrect) {
+        STATE.completed.pairs = true;
+        // build orderItems: for each row, the (matched) step id
+        STATE.orderItems = STATE.placements.map(p => {
+          const a = findCard(p.actor);
+          return a ? a.stepId : null;
+        });
+        recomputeScore();
+        return { state: "all-correct" };
+      }
+      recomputeScore();
+      return { state: "some-wrong" };
+    }
+
+    /* ----- ORDER ----- */
+    function moveOrderItem(index, dir) {
+      const target = index + dir;
+      if (target < 0 || target >= STATE.orderItems.length) return;
+      const tmp = STATE.orderItems[index];
+      STATE.orderItems[index] = STATE.orderItems[target];
+      STATE.orderItems[target] = tmp;
+      STATE.orderMarks = [];
+      STATE.completed.order = false;
+      STATE.completed.bridge = false;
+      STATE.completed.graph = false;
+      STATE.selectedGraphChoice = null;
+      STATE.graphMark = null;
+      STATE.bridgeMark = null;
+      recomputeScore();
+    }
+
+    function shuffleOrder() {
+      STATE.orderItems = shuffle(STATE.orderItems);
+      STATE.orderMarks = [];
+      STATE.completed.order = false;
+      STATE.completed.bridge = false;
+      STATE.completed.graph = false;
+      STATE.selectedGraphChoice = null;
+      STATE.graphMark = null;
+      STATE.bridgeMark = null;
+      recomputeScore();
+    }
+
+    /* Phases: each step has an optional `phase` field. If present, it groups
+       steps that are causally simultaneous (siblings). If absent, we default
+       to the step's index in the canonical order — so each step is its own
+       phase and the existing behaviour (strict order) is unchanged. */
+    function getPhases(s) {
+      return s.steps.map((st, i) => (typeof st.phase === "number" ? st.phase : i));
+    }
+
+    /* hasSiblings(s): true if any phase contains more than one step */
+    function hasSiblings(s) {
+      const ph = getPhases(s);
+      const counts = {};
+      ph.forEach(p => { counts[p] = (counts[p] || 0) + 1; });
+      return Object.keys(counts).some(k => counts[k] > 1);
+    }
+
+    function checkOrderLogic() {
+      const s = scenario();
+      const canonicalPhases = getPhases(s);
+      // For each canonical position i, the expected phase is canonicalPhases[i].
+      // For each user position i, the step at that position must have a phase
+      // that equals the canonical-phase at position i. Within a phase, any
+      // ordering is accepted; across phases, the order is strict.
+      let mismatches = 0;
+      STATE.orderMarks = STATE.orderItems.map((id, i) => {
+        const stepDef = s.steps.find(st => st.id === id);
+        if (!stepDef) { mismatches++; return "bad"; }
+        const stepPhase = (typeof stepDef.phase === "number") ? stepDef.phase : s.steps.indexOf(stepDef);
+        const expectedPhase = canonicalPhases[i];
+        if (stepPhase === expectedPhase) return "good";
+        mismatches++;
+        return "bad";
+      });
+      if (mismatches === 0) {
+        STATE.completed.order = true;
+        if (bridgeRequired() && STATE.bridgeTransitionIndex === null) {
+          setupBridgeQuestion();
+        }
+        recomputeScore();
+        return { state: "correct" };
+      }
+      STATE.stats.order_swap += mismatches;
+      recomputeScore();
+      return { state: "wrong", mismatches: mismatches };
+    }
+
+    /* ----- BRIDGE QUESTION (uitdaging) -----
+       Bridges only make sense across a phase boundary. Within a phase, the
+       steps are causally simultaneous siblings — there is no "Y follows X"
+       relationship to ask about. So we restrict candidate transitions to
+       indices i where phase(i+1) != phase(i). */
+    function setupBridgeQuestion() {
+      const s = scenario();
+      const phases = getPhases(s);
+      const candidates = [];
+      for (let i = 0; i < s.steps.length - 1; i++) {
+        if (phases[i + 1] !== phases[i]) candidates.push(i);
+      }
+      if (candidates.length === 0) {
+        // Defensive fallback — shouldn't happen for any real scenario, but
+        // if all steps are in one phase, skip the bridge question entirely.
+        STATE.bridgeTransitionIndex = null;
+        STATE.bridgeOptionsList = null;
+        return;
+      }
+      const idx = candidates[Math.floor(Math.random() * candidates.length)];
+      STATE.bridgeTransitionIndex = idx;
+      const correctIdx = idx + 1;
+      // Distractor pool: bridge texts from other steps. Exclude the correct
+      // step. Including sibling-bridges as distractors is fine — they are
+      // genuinely confusable (and that's the pedagogical point).
+      const others = s.steps
+        .map((st, i) => ({ stepId: st.id, text: st.bridge, i: i }))
+        .filter(x => x.i !== correctIdx);
+      const distractors = shuffle(others).slice(0, 2);
+      const opts = shuffle([
+        { stepId: s.steps[correctIdx].id, text: s.steps[correctIdx].bridge, correct: true },
+        { stepId: distractors[0].stepId, text: distractors[0].text, correct: false },
+        { stepId: distractors[1].stepId, text: distractors[1].text, correct: false }
+      ]);
+      STATE.bridgeOptionsList = opts;
+      STATE.selectedBridgeOption = null;
+      STATE.bridgeMark = null;
+    }
+
+    function checkBridgeLogic() {
+      if (STATE.selectedBridgeOption == null) return { state: "incomplete" };
+      const opt = STATE.bridgeOptionsList[STATE.selectedBridgeOption];
+      if (opt && opt.correct) {
+        STATE.bridgeMark = "good";
+        STATE.completed.bridge = true;
+        recomputeScore();
+        return { state: "correct" };
+      }
+      STATE.bridgeMark = "bad";
+      STATE.stats.bridge_miss++;
+      recomputeScore();
+      return { state: "wrong" };
+    }
+
+    /* ----- GRAPH ----- */
+    function checkGraphLogic() {
+      if (!STATE.selectedGraphChoice) return { state: "incomplete" };
+      const choice = scenario().graphChoices.find(c => c.id === STATE.selectedGraphChoice);
+      if (choice && choice.correct) {
+        STATE.graphMark = "good";
+        STATE.completed.graph = true;
+        recomputeScore();
+        return { state: "correct", choice: choice };
+      }
+      STATE.graphMark = "bad";
+      STATE.stats.model_misread++;
+      recomputeScore();
+      return { state: "wrong", choice: choice };
+    }
+
+    /* ----- HINT ----- */
+    function giveHint() {
+      // Find first unfilled or wrongly-filled row; flash it.
+      let target = -1;
+      for (let i = 0; i < STATE.placements.length; i++) {
+        const p = STATE.placements[i];
+        if (!p.actor || !p.action || STATE.pairMarks[i] === "bad") {
+          target = i;
+          break;
+        }
+      }
+      if (target === -1) {
+        // pairs are done; hint about ordering
+        if (!STATE.completed.order) {
+          // suggest: which item is in wrong position? Find first.
+          const s = scenario();
+          for (let i = 0; i < STATE.orderItems.length; i++) {
+            if (STATE.orderItems[i] !== s.steps[i].id) { target = i; break; }
+          }
+        }
+      }
+      STATE.hintRowFlash = target;
+      STATE.hintsUsed++;
+      recomputeScore();
+      return target;
+    }
+
+    /* ----- DEMO FILL (docent only) ----- */
+    function demoFill() {
+      const s = scenario();
+      // 1. fill placements correctly
+      STATE.placements = s.steps.map(step => ({
+        actor: "a-" + step.id,
+        action: "b-" + step.id
+      }));
+      STATE.pairMarks = s.steps.map(() => "good");
+      STATE.completed.pairs = true;
+      // 2. order correct
+      STATE.orderItems = s.steps.map(st => st.id);
+      STATE.orderMarks = s.steps.map(() => "good");
+      STATE.completed.order = true;
+      // 3. bridge if uitdaging
+      if (bridgeRequired()) {
+        if (STATE.bridgeTransitionIndex === null) setupBridgeQuestion();
+        const correctIdx = STATE.bridgeOptionsList.findIndex(o => o.correct);
+        STATE.selectedBridgeOption = correctIdx;
+        STATE.bridgeMark = "good";
+        STATE.completed.bridge = true;
+      }
+      // 4. graph
+      const correctG = s.graphChoices.find(c => c.correct);
+      if (correctG) {
+        STATE.selectedGraphChoice = correctG.id;
+        STATE.graphMark = "good";
+        STATE.completed.graph = true;
+      }
+      recomputeScore();
+    }
+
+    /* ----- DIAGNOSIS ----- */
+    const DIAG_DEFS = [
+      { key: "distractor",   icon: "✋", title: "Niet-relevante kaart geplaatst",
+        tip: "Een kaart die niet bij deze tekst hoort, kwam wel op het bord. Lees de tekst eerst tot het eind voordat je gaat schuiven; markeer de echt actieve actoren." },
+      { key: "cross_pair",   icon: "🔀", title: "Mini-zin verkeerd gekoppeld",
+        tip: "De wie/wat en de wat-gebeurt-er-actie hoorden bij verschillende stappen. Tip: zoek per actor in de tekst de bijpassende werkwoordsvorm." },
+      { key: "order_swap",   icon: "🔁", title: "Volgorde omgewisseld",
+        tip: "De richting van oorzaak naar gevolg liep door elkaar. Tip: begin bij de exogene impuls (beleidsmaatregel of schok) en volg de pijl naar het uiteindelijke gevolg." },
+      { key: "model_misread",icon: "📉", title: "Modelkoppeling onjuist",
+        tip: "Het gekozen diagram past niet bij deze keten. Tip: schrijf eerst zelf op wat het effect is (P↑/↓, Q↑/↓), kies dan het diagram dat exact dat patroon laat zien." },
+      { key: "bridge_miss",  icon: "🔗", title: "Schakellogica gemist",
+        tip: "Bij het verbinden van twee stappen koos je een bridge die hier niet bij hoort. Tip: vraag jezelf bij elke stap af waaróm die volgt op de vorige." }
+    ];
+
+    function buildDiagnosis() {
+      // Hide bridge_miss when not in uitdaging
+      return DIAG_DEFS.filter(d => d.key !== "bridge_miss" || bridgeRequired());
+    }
+
+    /* ----- PERSISTENCE ----- */
+    function saveState() {
+      try {
+        const snap = {
+          scenarioKey: STATE.scenarioKey,
+          mode: STATE.mode,
+          placements: STATE.placements,
+          pairMarks: STATE.pairMarks,
+          orderItems: STATE.orderItems,
+          orderMarks: STATE.orderMarks,
+          selectedGraphChoice: STATE.selectedGraphChoice,
+          graphMark: STATE.graphMark,
+          bridgeTransitionIndex: STATE.bridgeTransitionIndex,
+          bridgeOptionsList: STATE.bridgeOptionsList,
+          selectedBridgeOption: STATE.selectedBridgeOption,
+          bridgeMark: STATE.bridgeMark,
+          highlighted: STATE.highlighted,
+          hintsUsed: STATE.hintsUsed,
+          score: STATE.score,
+          stats: STATE.stats,
+          completed: STATE.completed,
+          cards: STATE.cards
+        };
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(snap));
+      } catch (e) { /* ignore quota errors */ }
+    }
+
+    function loadState() {
+      try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (!raw) return false;
+        const snap = JSON.parse(raw);
+        if (!snap || !snap.scenarioKey || !scenarios[snap.scenarioKey]) return false;
+        STATE.scenarioKey = snap.scenarioKey;
+        STATE.mode = snap.mode || "standaard";
+        STATE.placements = snap.placements || scenarios[snap.scenarioKey].steps.map(() => ({ actor: null, action: null }));
+        STATE.pairMarks = snap.pairMarks || scenarios[snap.scenarioKey].steps.map(() => null);
+        STATE.orderItems = snap.orderItems || [];
+        STATE.orderMarks = snap.orderMarks || [];
+        STATE.selectedGraphChoice = snap.selectedGraphChoice || null;
+        STATE.graphMark = snap.graphMark || null;
+        STATE.bridgeTransitionIndex = (snap.bridgeTransitionIndex != null) ? snap.bridgeTransitionIndex : null;
+        STATE.bridgeOptionsList = snap.bridgeOptionsList || null;
+        STATE.selectedBridgeOption = (snap.selectedBridgeOption != null) ? snap.selectedBridgeOption : null;
+        STATE.bridgeMark = snap.bridgeMark || null;
+        STATE.highlighted = !!snap.highlighted;
+        STATE.hintsUsed = snap.hintsUsed || 0;
+        STATE.score = snap.score || 0;
+        STATE.stats = snap.stats || { distractor: 0, cross_pair: 0, order_swap: 0, model_misread: 0, bridge_miss: 0 };
+        STATE.completed = snap.completed || { pairs: false, order: false, bridge: false, graph: false };
+        STATE.cards = snap.cards || buildCards();
+        document.body.dataset.domain = scenarios[STATE.scenarioKey].domain;
+        return true;
+      } catch (e) { return false; }
+    }
+
+    function clearStorage() {
+      try { localStorage.removeItem(STORAGE_KEY); } catch (e) { /* */ }
+    }
+    /* =================================================================
+       RENDER
+       ================================================================= */
+
+    function el(id) { return document.getElementById(id); }
+
+    function renderScenarioSelect() {
+      const sel = el("scenarioSelect");
+      sel.innerHTML = "";
+      SCENARIO_ORDER.forEach(key => {
+        const opt = document.createElement("option");
+        opt.value = key;
+        opt.textContent = scenarios[key].label + " — " + scenarios[key].title;
+        if (key === STATE.scenarioKey) opt.selected = true;
+        sel.appendChild(opt);
+      });
+    }
+
+    function renderModeToggle() {
+      document.querySelectorAll(".mode-toggle button").forEach(b => {
+        b.setAttribute("aria-pressed", b.dataset.mode === STATE.mode ? "true" : "false");
+      });
+    }
+
+    function renderDomainTag() {
+      const s = scenario();
+      el("domainTag").textContent = (DOMAIN_LABELS[s.domain] || s.domain);
+    }
+
+    function renderArticle() {
+      const s = scenario();
+      el("articleText").innerHTML = STATE.highlighted ? s.articleMarked : s.articlePlain;
+      el("learningGoal").innerHTML = "<strong>Leerdoel:</strong> " + s.learningGoal;
+      el("toggleHighlights").textContent = STATE.highlighted ? "Verberg markering" : "Markeer tekst";
+    }
+
+    function renderProgress() {
+      const ps = [el("p1"), el("p2"), el("p3"), el("p4")];
+      ps.forEach(p => p.classList.remove("active", "done"));
+      if (STATE.completed.graph) {
+        ps[0].classList.add("done"); ps[1].classList.add("done"); ps[2].classList.add("done"); ps[3].classList.add("done");
+      } else if (STATE.completed.order && (!bridgeRequired() || STATE.completed.bridge)) {
+        ps[0].classList.add("done"); ps[1].classList.add("done"); ps[2].classList.add("done"); ps[3].classList.add("active");
+      } else if (STATE.completed.pairs) {
+        ps[0].classList.add("done"); ps[1].classList.add("done"); ps[2].classList.add("active");
+      } else {
+        ps[0].classList.add("done"); ps[1].classList.add("active");
+      }
+    }
+
+    function makeChip(card) {
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "chip " + card.type + (card.distractor ? " distractor" : "");
+      btn.textContent = card.text;
+      btn.dataset.cardId = card.id;
+      btn.draggable = true;
+      return btn;
+    }
+
+    function renderBanks() {
+      const aBank = el("actorBank"), bBank = el("actionBank");
+      aBank.innerHTML = ""; bBank.innerHTML = "";
+      STATE.cards.actors.forEach(c => { if (!isPlaced(c.id)) aBank.appendChild(makeChip(c)); });
+      STATE.cards.actions.forEach(c => { if (!isPlaced(c.id)) bBank.appendChild(makeChip(c)); });
+    }
+
+    function makeSlot(rowIndex, role) {
+      const p = STATE.placements[rowIndex];
+      const slot = document.createElement("button");
+      slot.type = "button";
+      slot.className = "drop-slot";
+      slot.dataset.row = rowIndex;
+      slot.dataset.slotRole = role;
+      if (STATE.pairMarks[rowIndex] === "good") slot.classList.add("good");
+      if (STATE.pairMarks[rowIndex] === "bad") slot.classList.add("bad");
+      const cardId = p[role];
+      if (cardId) {
+        slot.classList.add("filled");
+        const c = findCard(cardId);
+        slot.textContent = c ? c.text : "";
+      } else {
+        slot.textContent = role === "actor" ? "Wie / wat?" : "Wat gebeurt er?";
+      }
+      return slot;
+    }
+
+    function renderBoard() {
+      const board = el("builderBoard");
+      board.innerHTML = "";
+      const s = scenario();
+      STATE.placements.forEach((p, i) => {
+        const row = document.createElement("div");
+        row.className = "slot-row";
+        if (STATE.hintRowFlash === i) row.classList.add("hint-row");
+
+        const num = document.createElement("div");
+        num.className = "row-num";
+        num.textContent = (i + 1);
+        row.appendChild(num);
+
+        row.appendChild(makeSlot(i, "actor"));
+        row.appendChild(makeSlot(i, "action"));
+
+        const stateCell = document.createElement("div");
+        stateCell.className = "row-state";
+        if (STATE.pairMarks[i] === "good") { stateCell.classList.add("good"); stateCell.textContent = "✓"; }
+        else if (STATE.pairMarks[i] === "bad") { stateCell.classList.add("bad"); stateCell.textContent = "✕"; }
+        row.appendChild(stateCell);
+
+        // Ondersteuning: show bridge under correctly paired rows as scaffolding
+        if (STATE.mode === "ondersteuning" && STATE.pairMarks[i] === "good") {
+          const c = findCard(p.actor);
+          if (c && c.stepId) {
+            const step = s.steps.find(st => st.id === c.stepId);
+            if (step) {
+              const bridge = document.createElement("div");
+              bridge.className = "bridge-hint";
+              bridge.textContent = "↳ " + step.bridge;
+              row.appendChild(bridge);
+            }
+          }
+        }
+        board.appendChild(row);
+      });
+    }
+
+    function renderOrderList() {
+      const list = el("orderList");
+      const sec = el("orderSection");
+      list.innerHTML = "";
+      if (!STATE.completed.pairs && !STATE.orderItems.length) {
+        sec.classList.add("locked");
+        return;
+      }
+      sec.classList.remove("locked");
+      const s = scenario();
+      const phases = getPhases(s);
+      // Map stepId -> phase for quick lookup
+      const phaseOf = {};
+      s.steps.forEach((st, i) => { phaseOf[st.id] = phases[i]; });
+      // Set of phases that contain >1 step (sibling phases)
+      const phaseCounts = {};
+      phases.forEach(p => { phaseCounts[p] = (phaseCounts[p] || 0) + 1; });
+
+      // Notice at top when scenario has siblings
+      if (hasSiblings(s)) {
+        const notice = document.createElement("div");
+        notice.className = "order-notice";
+        notice.innerHTML = "<strong>Let op:</strong> sommige stappen zijn <em>gelijktijdige gevolgen</em>. Stappen die hetzelfde " +
+          '<span class="phase-marker">↔</span>-teken dragen mogen onderling van plek wisselen — hun volgorde is causaal niet vastgelegd.';
+        list.appendChild(notice);
+      }
+
+      STATE.orderItems.forEach((stepId, i) => {
+        const step = s.steps.find(st => st.id === stepId);
+        if (!step) return;
+        const item = document.createElement("div");
+        item.className = "order-item";
+        if (STATE.orderMarks[i] === "good") item.classList.add("correct-pos");
+        if (STATE.orderMarks[i] === "bad")  item.classList.add("wrong-pos");
+
+        const stmt = document.createElement("div");
+        stmt.className = "statement";
+        const isSibling = phaseCounts[phaseOf[stepId]] > 1;
+        const badge = isSibling ? '<span class="phase-marker" title="gelijktijdig met een andere stap">↔</span> ' : "";
+        stmt.innerHTML = badge + "<strong>" + step.actor + "</strong> " + step.action;
+        item.appendChild(stmt);
+
+        const moves = document.createElement("div");
+        moves.className = "move-buttons";
+        const up = document.createElement("button");
+        up.type = "button"; up.className = "icon-btn"; up.dataset.move = "up";
+        up.dataset.index = i; up.textContent = "↑"; up.disabled = (i === 0);
+        const down = document.createElement("button");
+        down.type = "button"; down.className = "icon-btn"; down.dataset.move = "down";
+        down.dataset.index = i; down.textContent = "↓"; down.disabled = (i === STATE.orderItems.length - 1);
+        moves.appendChild(up); moves.appendChild(down);
+        item.appendChild(moves);
+
+        list.appendChild(item);
+      });
+    }
+
+    function renderBridgeSection() {
+      const sec = el("bridgeSection");
+      if (!bridgeRequired()) {
+        sec.hidden = true;
+        sec.classList.add("locked");
+        return;
+      }
+      sec.hidden = false;
+      if (!STATE.completed.order || !STATE.bridgeOptionsList) {
+        sec.classList.add("locked");
+        el("bridgePrompt").textContent = "";
+        el("bridgeOptions").innerHTML = "";
+        return;
+      }
+      sec.classList.remove("locked");
+      const s = scenario();
+      const idx = STATE.bridgeTransitionIndex;
+      const fromStep = s.steps[idx];
+      const toStep = s.steps[idx + 1];
+      el("bridgePrompt").innerHTML =
+        "Waarom volgt <strong>" + toStep.actor + " " + toStep.action + "</strong> logisch uit <strong>" +
+        fromStep.actor + " " + fromStep.action + "</strong>?";
+      const opts = el("bridgeOptions");
+      opts.innerHTML = "";
+      STATE.bridgeOptionsList.forEach((opt, i) => {
+        const b = document.createElement("button");
+        b.type = "button";
+        b.className = "bridge-option";
+        b.dataset.bridgeIndex = i;
+        if (STATE.selectedBridgeOption === i) b.classList.add("selected");
+        if (STATE.bridgeMark === "good" && opt.correct) b.classList.add("good");
+        if (STATE.bridgeMark === "bad" && STATE.selectedBridgeOption === i) b.classList.add("bad");
+        b.textContent = opt.text;
+        opts.appendChild(b);
+      });
+    }
+
+    function renderGraphSection() {
+      const sec = el("graphSection");
+      const orderDone = STATE.completed.order;
+      const bridgeDone = !bridgeRequired() || STATE.completed.bridge;
+      if (!orderDone || !bridgeDone) {
+        sec.classList.add("locked");
+        el("graphChoices").innerHTML = "";
+        el("graphQuestion").innerHTML = "";
+        el("bigGraph").hidden = true;
+        return;
+      }
+      sec.classList.remove("locked");
+      const s = scenario();
+      el("graphQuestion").innerHTML = '<p style="margin:0 0 8px;font-size:14px;color:#0f172a;font-weight:700;">' + s.graphQuestion + '</p>';
+      const choices = el("graphChoices");
+      choices.innerHTML = "";
+      s.graphChoices.forEach(c => {
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "graph-choice";
+        btn.dataset.choiceId = c.id;
+        if (STATE.selectedGraphChoice === c.id) btn.classList.add("selected");
+        if (STATE.graphMark === "good" && c.correct) btn.classList.add("good");
+        if (STATE.graphMark === "bad" && STATE.selectedGraphChoice === c.id) btn.classList.add("bad");
+        btn.innerHTML = '<div class="mini-svg">' + c.svg() + '</div><div class="caption">' + c.caption + '</div>';
+        choices.appendChild(btn);
+      });
+      const big = el("bigGraph");
+      if (STATE.graphMark === "good") {
+        const correct = s.graphChoices.find(c => c.correct);
+        big.hidden = false;
+        big.className = "big-graph";
+        big.innerHTML = correct ? correct.svg() : "";
+      } else {
+        big.hidden = true;
+        big.innerHTML = "";
+      }
+    }
+
+    function renderResults() {
+      const sec = el("resultsSection");
+      if (!STATE.completed.graph) {
+        sec.classList.add("locked");
+        el("flowchart").innerHTML = "";
+        el("schemaPanel").hidden = true;
+        el("schemaBody").innerHTML = "";
+        el("diagnosis").innerHTML = "";
+        el("insights").innerHTML = "";
+        el("completionCta").hidden = true;
+        return;
+      }
+      sec.classList.remove("locked");
+      const s = scenario();
+
+      // Flowchart — display canonical order. Mark steps that share a phase
+      // with neighbours as "gelijktijdig" so students see the parallel structure.
+      const flow = el("flowchart");
+      flow.innerHTML = "";
+      const flowPhases = getPhases(s);
+      const flowPhaseCounts = {};
+      flowPhases.forEach(p => { flowPhaseCounts[p] = (flowPhaseCounts[p] || 0) + 1; });
+      // For each sibling group, build a list of step labels other than the current one
+      const siblingsOf = {};
+      s.steps.forEach((st, i) => {
+        const ph = flowPhases[i];
+        if (flowPhaseCounts[ph] > 1) {
+          siblingsOf[st.id] = s.steps
+            .map((st2, j) => (j !== i && flowPhases[j] === ph) ? (j + 1) : null)
+            .filter(x => x !== null);
+        }
+      });
+      s.steps.forEach((step, i) => {
+        const node = document.createElement("div");
+        node.className = "flow-node";
+        if (siblingsOf[step.id]) node.classList.add("flow-sibling");
+        const sibBadge = siblingsOf[step.id]
+          ? '<span class="flow-sib-badge" title="gelijktijdig met stap ' + siblingsOf[step.id].join(", ") +
+            '">↔ tegelijk met stap ' + siblingsOf[step.id].join(" en ") + '</span>'
+          : "";
+        node.innerHTML =
+          '<span class="flow-index">' + (i + 1) + '</span>' +
+          '<p class="actor-line">' + step.actor + '</p>' +
+          '<p class="action-line">' + step.action + '</p>' +
+          sibBadge +
+          '<span class="bridge-line">↳ ' + step.bridge + '</span>';
+        flow.appendChild(node);
+      });
+
+      // Schema
+      const panel = el("schemaPanel");
+      const body = el("schemaBody");
+      if (s.schema && s.schema.length) {
+        panel.hidden = false;
+        body.innerHTML = "";
+        s.schema.forEach(row => {
+          const tr = document.createElement("tr");
+          tr.innerHTML = "<th>" + row[0] + "</th><td>" + row[1] + "</td>";
+          body.appendChild(tr);
+        });
+      } else {
+        panel.hidden = true;
+      }
+
+      // Diagnosis
+      const diag = el("diagnosis");
+      diag.innerHTML = "";
+      buildDiagnosis().forEach(d => {
+        const count = STATE.stats[d.key] || 0;
+        const card = document.createElement("div");
+        card.className = "diag-card" + (count > 0 ? " hit" : " zero");
+        card.innerHTML =
+          '<div class="diag-icon">' + d.icon + '</div>' +
+          '<div class="diag-text"><strong>' + d.title + '</strong><span>' + d.tip + '</span></div>' +
+          '<div class="diag-count">' + count + '</div>';
+        diag.appendChild(card);
+      });
+
+      // Insights
+      const insights = el("insights");
+      insights.innerHTML = "";
+      const totalErr = (STATE.stats.distractor || 0) + (STATE.stats.cross_pair || 0) +
+                       (STATE.stats.order_swap || 0) + (STATE.stats.model_misread || 0) +
+                       (STATE.stats.bridge_miss || 0);
+      [
+        { v: STATE.score, l: "Score (max 100)" },
+        { v: s.steps.length, l: "Stappen in keten" },
+        { v: STATE.hintsUsed, l: "Hints gebruikt" },
+        { v: totalErr, l: "Foutsignalen" }
+      ].forEach(d => {
+        const node = document.createElement("div");
+        node.className = "insight";
+        node.innerHTML = "<strong>" + d.v + "</strong><span>" + d.l + "</span>";
+        insights.appendChild(node);
+      });
+
+      el("completionCta").hidden = false;
+    }
+
+    function renderScore() {
+      el("scorePill").textContent = "Score: " + STATE.score + " / 100";
+    }
+
+    function renderDemoButton() {
+      el("demoFill").hidden = !STATE.docentMode;
+    }
+
+    function renderAll() {
+      renderScenarioSelect();
+      renderModeToggle();
+      renderDomainTag();
+      renderArticle();
+      renderProgress();
+      renderBanks();
+      renderBoard();
+      renderOrderList();
+      renderBridgeSection();
+      renderGraphSection();
+      renderResults();
+      renderScore();
+      renderDemoButton();
+    }
+
+    /* Status helpers (small inline updates without full re-render) */
+    function setBoxKind(node, kind) {
+      node.classList.remove("ok", "warn", "bad");
+      if (kind) node.classList.add(kind);
+    }
+    function setLive(text, kind)        { setBoxKind(el("liveStatus"), kind);    el("liveStatus").innerHTML = text; }
+    function setPairFb(text, kind)      { setBoxKind(el("pairFeedback"), kind);  el("pairFeedback").innerHTML = text; }
+    function setOrderFb(text, kind)     { setBoxKind(el("orderFeedback"), kind); el("orderFeedback").innerHTML = text; }
+    function setBridgeFb(text, kind)    { setBoxKind(el("bridgeFeedback"), kind); el("bridgeFeedback").innerHTML = text; }
+    function setGraphFb(text, kind)     { setBoxKind(el("graphFeedback"), kind); el("graphFeedback").innerHTML = text; }
+    /* =================================================================
+       EVENTS & INIT
+       ================================================================= */
+
+    let _confirmHandler = null;
+    function showConfirm(title, text, onOk) {
+      el("confirmTitle").textContent = title;
+      el("confirmText").textContent = text;
+      el("confirmOverlay").classList.add("open");
+      const oldOk = el("confirmOk");
+      const newOk = oldOk.cloneNode(true);
+      oldOk.parentNode.replaceChild(newOk, oldOk);
+      newOk.addEventListener("click", () => {
+        hideConfirm();
+        if (onOk) onOk();
+      });
+    }
+    function hideConfirm() {
+      el("confirmOverlay").classList.remove("open");
+    }
+
+    function hasMidGameProgress() {
+      return STATE.pairMarks.some(m => m === "good" || m === "bad") || STATE.completed.pairs;
+    }
+
+    function clearHintFlashSoon() {
+      if (STATE.hintRowFlash !== -1) {
+        const idx = STATE.hintRowFlash;
+        setTimeout(() => {
+          if (STATE.hintRowFlash === idx) {
+            STATE.hintRowFlash = -1;
+            renderBoard();
+          }
+        }, 3500);
+      }
+    }
+
+    function bindGlobalEvents() {
+
+      /* Scenario select */
+      el("scenarioSelect").addEventListener("change", e => {
+        initScenario(e.target.value);
+        renderAll();
+        setPairFb("<strong>Doel:</strong> maak correcte betekenisparen.", null);
+        setOrderFb("<strong>Tip:</strong> begin bij de exogene impuls (beleidsmaatregel of schok in de tekst). Stappen die <em>gelijktijdig</em> zijn (zelfde fase) mogen onderling van plek wisselen.", null);
+        setBridgeFb("<strong>Vraag:</strong> kies de schakel die de twee stappen logisch verbindt.", null);
+        setGraphFb("<strong>Vraag:</strong> welk diagram past bij je keten?", null);
+        setLive("<strong>Werkwijze:</strong> tik op een kaart om deze in het volgende lege vak te plaatsen. Tik op een geplaatste kaart om deze terug te halen.", null);
+      });
+
+      /* Mode toggle */
+      document.querySelectorAll(".mode-toggle button").forEach(b => {
+        b.addEventListener("click", () => {
+          if (b.dataset.mode === STATE.mode) return;
+          const apply = () => {
+            STATE.mode = b.dataset.mode;
+            initScenario(STATE.scenarioKey);
+            renderAll();
+            setPairFb("<strong>Niveau gewijzigd.</strong> Bord opnieuw klaargezet voor: " + b.textContent.toLowerCase() + ".", "warn");
+          };
+          if (hasMidGameProgress()) {
+            showConfirm("Niveau wisselen?", "Je voortgang in deze ronde gaat verloren.", apply);
+          } else {
+            apply();
+          }
+        });
+      });
+
+      /* Toggle highlights */
+      el("toggleHighlights").addEventListener("click", () => {
+        STATE.highlighted = !STATE.highlighted;
+        saveState();
+        renderArticle();
+      });
+
+      /* Chip click → auto-fill next empty matching slot.
+         Also wire drag-and-drop for desktop precision placement. */
+      ["actorBank", "actionBank"].forEach(id => {
+        el(id).addEventListener("click", e => {
+          const chip = e.target.closest(".chip");
+          if (!chip) return;
+          STATE.hintRowFlash = -1;
+          const idx = autoPlaceCard(chip.dataset.cardId);
+          if (idx === -1) {
+            setLive("<strong>Geen leeg vak meer voor dit type.</strong> Tik op een geplaatste kaart om er een terug te halen.", "warn");
+          } else {
+            setLive("<strong>Geplaatst</strong> in rij " + (idx + 1) + ". Tik op een geplaatste kaart om deze terug te halen.", "ok");
+          }
+          saveState();
+          renderBanks();
+          renderBoard();
+          renderScore();
+        });
+        el(id).addEventListener("dragstart", e => {
+          const chip = e.target.closest(".chip");
+          if (!chip) return;
+          e.dataTransfer.setData("text/plain", chip.dataset.cardId);
+          e.dataTransfer.effectAllowed = "move";
+          chip.classList.add("dragging");
+        });
+        el(id).addEventListener("dragend", e => {
+          const chip = e.target.closest(".chip");
+          if (chip) chip.classList.remove("dragging");
+        });
+      });
+
+      /* Slot click → unplace card back to bank.
+         Also receive drop events for drag-and-drop placement. */
+      el("builderBoard").addEventListener("click", e => {
+        const slot = e.target.closest(".drop-slot");
+        if (!slot) return;
+        STATE.hintRowFlash = -1;
+        const rowIndex = parseInt(slot.dataset.row, 10);
+        const role = slot.dataset.slotRole;
+        if (unplaceFromSlot(rowIndex, role)) {
+          setLive("<strong>Kaart teruggehaald</strong> naar de voorraad.", null);
+          saveState();
+          renderBanks();
+          renderBoard();
+          renderOrderList();
+          renderProgress();
+          renderScore();
+        }
+      });
+      el("builderBoard").addEventListener("dragover", e => {
+        const slot = e.target.closest(".drop-slot");
+        if (!slot) return;
+        e.preventDefault();
+        e.dataTransfer.dropEffect = "move";
+        slot.classList.add("drop-target");
+      });
+      el("builderBoard").addEventListener("dragleave", e => {
+        const slot = e.target.closest(".drop-slot");
+        if (slot) slot.classList.remove("drop-target");
+      });
+      el("builderBoard").addEventListener("drop", e => {
+        e.preventDefault();
+        const slot = e.target.closest(".drop-slot");
+        if (!slot) return;
+        slot.classList.remove("drop-target");
+        const cardId = e.dataTransfer.getData("text/plain");
+        if (!cardId) return;
+        const rowIndex = parseInt(slot.dataset.row, 10);
+        const role = slot.dataset.slotRole;
+        if (placeCardInSpecificSlot(cardId, rowIndex, role)) {
+          setLive("<strong>Geplaatst via slepen</strong> in rij " + (rowIndex + 1) + ".", "ok");
+          saveState();
+          renderBanks();
+          renderBoard();
+          renderOrderList();
+          renderProgress();
+          renderScore();
+        } else {
+          setLive("<strong>Dit vak accepteert deze kaart niet</strong> — vak is voor " + (role === "actor" ? "wie/wat" : "wat gebeurt er") + ".", "warn");
+        }
+      });
+
+      /* Check pairs */
+      el("checkPairs").addEventListener("click", () => {
+        const r = checkPairsLogic();
+        saveState();
+        renderBanks(); renderBoard(); renderOrderList(); renderProgress(); renderScore();
+        if (r.state === "all-correct") {
+          setPairFb("<strong>Mini-zinnen kloppen!</strong> De rijen staan nu klaar — door naar stap 3: causale volgorde.", "ok");
+        } else if (r.state === "incomplete") {
+          setPairFb("<strong>Nog niet alle vakken zijn gevuld.</strong> Vul eerst elke rij met een actor en een actie.", "warn");
+        } else {
+          setPairFb("<strong>Nog niet alles klopt.</strong> Bekijk de rode rijen: zit er een distractor tussen, of horen actor en actie niet bij elkaar?", "bad");
+        }
+      });
+
+      /* Hint */
+      el("hintBtn").addEventListener("click", () => {
+        const target = giveHint();
+        saveState();
+        renderBoard(); renderScore();
+        if (target === -1) {
+          setPairFb("<strong>Hint:</strong> alles staat al goed; druk op Controleer.", "ok");
+        } else {
+          setPairFb("<strong>Hint (rij " + (target + 1) + "):</strong> deze rij verdient nog aandacht. Score-aftrek: 5 punten per hint.", "warn");
+        }
+        clearHintFlashSoon();
+      });
+
+      /* Clear board */
+      el("clearBoard").addEventListener("click", () => {
+        showConfirm("Bord wissen?", "Alle plaatsingen en voortgang in deze ronde verdwijnen.", () => {
+          clearBoard();
+          saveState();
+          renderAll();
+          setPairFb("<strong>Bord gewist.</strong> Begin opnieuw.", "warn");
+        });
+      });
+
+      /* Order — shuffle / move / check */
+      el("shuffleOrder").addEventListener("click", () => {
+        shuffleOrder();
+        saveState();
+        renderAll();
+        setOrderFb("<strong>Volgorde geschud.</strong> Zet ze nu causaal in de juiste volgorde.", "warn");
+      });
+      el("orderList").addEventListener("click", e => {
+        const btn = e.target.closest(".icon-btn");
+        if (!btn) return;
+        const idx = parseInt(btn.dataset.index, 10);
+        const dir = btn.dataset.move === "up" ? -1 : 1;
+        moveOrderItem(idx, dir);
+        saveState();
+        renderAll();
+      });
+      el("checkOrder").addEventListener("click", () => {
+        const r = checkOrderLogic();
+        saveState();
+        renderAll();
+        if (r.state === "correct") {
+          setOrderFb("<strong>Volgorde klopt!</strong> " + (bridgeRequired() ? "Door naar de schakellogica." : "Door naar de modelkoppeling."), "ok");
+        } else {
+          setOrderFb("<strong>" + r.mismatches + " stap(pen) staan niet op de juiste plek.</strong> Begin bij de exogene impuls (beleidsmaatregel of schok).", "bad");
+        }
+      });
+
+      /* Bridge */
+      el("bridgeOptions").addEventListener("click", e => {
+        const opt = e.target.closest(".bridge-option");
+        if (!opt) return;
+        STATE.selectedBridgeOption = parseInt(opt.dataset.bridgeIndex, 10);
+        STATE.bridgeMark = null;
+        saveState();
+        renderBridgeSection();
+      });
+      el("checkBridge").addEventListener("click", () => {
+        const r = checkBridgeLogic();
+        saveState();
+        renderAll();
+        if (r.state === "correct") {
+          setBridgeFb("<strong>Schakellogica klopt!</strong> Door naar de modelkoppeling.", "ok");
+        } else if (r.state === "incomplete") {
+          setBridgeFb("<strong>Kies eerst een schakel.</strong>", "warn");
+        } else {
+          setBridgeFb("<strong>Niet de juiste schakel.</strong> Welke uitleg legt expliciet de stap-naar-stap-relatie?", "bad");
+        }
+      });
+
+      /* Graph */
+      el("graphChoices").addEventListener("click", e => {
+        const choice = e.target.closest(".graph-choice");
+        if (!choice) return;
+        STATE.selectedGraphChoice = choice.dataset.choiceId;
+        STATE.graphMark = null;
+        saveState();
+        renderGraphSection();
+      });
+      el("checkGraph").addEventListener("click", () => {
+        const r = checkGraphLogic();
+        saveState();
+        renderAll();
+        if (r.state === "correct") {
+          setGraphFb("<strong>Klopt:</strong> " + (r.choice ? r.choice.feedback : ""), "ok");
+        } else if (r.state === "incomplete") {
+          setGraphFb("<strong>Kies eerst een diagram.</strong>", "warn");
+        } else {
+          setGraphFb("<strong>Niet juist:</strong> " + (r.choice ? r.choice.feedback : ""), "bad");
+        }
+      });
+
+      /* Demo fill (docent only) */
+      el("demoFill").addEventListener("click", () => {
+        if (!STATE.docentMode) return;
+        demoFill();
+        saveState();
+        renderAll();
+        setPairFb("<strong>Demo-vulling toegepast.</strong> (docent-modus, ?docent=1)", "warn");
+      });
+
+      /* Completion CTA */
+      el("nextScenarioBtn").addEventListener("click", () => {
+        const idx = SCENARIO_ORDER.indexOf(STATE.scenarioKey);
+        const next = SCENARIO_ORDER[(idx + 1) % SCENARIO_ORDER.length];
+        initScenario(next);
+        renderAll();
+        el("game").scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+      el("replayBtn").addEventListener("click", () => {
+        initScenario(STATE.scenarioKey);
+        renderAll();
+        el("game").scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+
+      /* Reset all */
+      el("resetAllTop").addEventListener("click", () => {
+        showConfirm(
+          "Hele prototype resetten?",
+          "Dit wist je voortgang en zet de game terug naar het beginpunt. Niet ongedaan te maken.",
+          () => {
+            clearStorage();
+            STATE.mode = "standaard";
+            initScenario(SCENARIO_ORDER[0]);
+            renderAll();
+            setPairFb("<strong>Prototype gereset.</strong>", "warn");
+          }
+        );
+      });
+
+      /* Confirm modal cancel + overlay click */
+      el("confirmCancel").addEventListener("click", hideConfirm);
+      el("confirmOverlay").addEventListener("click", e => {
+        if (e.target.id === "confirmOverlay") hideConfirm();
+      });
+      // Esc to close confirm
+      document.addEventListener("keydown", e => {
+        if (e.key === "Escape" && el("confirmOverlay").classList.contains("open")) hideConfirm();
+      });
+    }
+
+    /* INIT */
+    document.addEventListener("DOMContentLoaded", () => {
+      const params = new URLSearchParams(window.location.search);
+      STATE.docentMode = params.get("docent") === "1";
+
+      const loaded = loadState();
+      if (!loaded) initScenario(SCENARIO_ORDER[0], { skipSave: true });
+
+      bindGlobalEvents();
+      renderAll();
+    });
+
+  </script>
+</body>
+</html>

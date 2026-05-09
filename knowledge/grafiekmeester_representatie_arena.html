@@ -1,0 +1,1169 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GrafiekMeester — Representatie Arena</title>
+  <style>
+    :root{
+      --bg-0:#07111f;
+      --bg-1:#0c1730;
+      --bg-2:#11264c;
+      --card:#f8fbff;
+      --card-2:#ffffff;
+      --ink:#0e1728;
+      --muted:#5b6880;
+      --line:#d9e3f2;
+      --brand:#315dff;
+      --brand-2:#6e38ff;
+      --accent:#00b894;
+      --accent-2:#00d1ff;
+      --warn:#ffb020;
+      --danger:#ef476f;
+      --good:#08a66b;
+      --shadow: 0 18px 45px rgba(6, 20, 46, .18);
+      --radius: 22px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      --sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:var(--sans);
+      color:var(--ink);
+      min-height:100vh;
+      background:
+        radial-gradient(circle at 12% 8%, rgba(0, 209, 255, .28), transparent 29rem),
+        radial-gradient(circle at 86% 14%, rgba(110, 56, 255, .27), transparent 31rem),
+        linear-gradient(140deg, var(--bg-0), var(--bg-1) 48%, var(--bg-2));
+      overflow-x:hidden;
+    }
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      opacity:.18;
+      background-image:
+        linear-gradient(rgba(255,255,255,.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.08) 1px, transparent 1px);
+      background-size:44px 44px;
+      mask-image:linear-gradient(to bottom, black, transparent 82%);
+      z-index:-1;
+    }
+    .app-shell{max-width:1460px;margin:0 auto;padding:20px 20px 42px}
+    .topbar{
+      display:flex;align-items:center;justify-content:space-between;gap:16px;
+      color:white;margin-bottom:18px;position:sticky;top:0;z-index:30;padding:10px 0;
+      backdrop-filter: blur(16px);
+    }
+    .brand{display:flex;align-items:center;gap:14px;min-width:280px}
+    .logo{
+      width:52px;height:52px;border-radius:18px;
+      background:linear-gradient(135deg,var(--accent-2),var(--brand),var(--brand-2));
+      display:grid;place-items:center;box-shadow:0 15px 35px rgba(0,0,0,.28);
+      position:relative;overflow:hidden;
+    }
+    .logo svg{width:38px;height:38px;filter:drop-shadow(0 4px 4px rgba(0,0,0,.22))}
+    .brand h1{font-size:21px;margin:0;letter-spacing:.2px;line-height:1.05}
+    .brand p{margin:4px 0 0;color:#c5d5ff;font-size:13px}
+    .scorebar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:flex-end}
+    .score-pill{
+      background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);color:white;
+      padding:10px 12px;border-radius:999px;display:flex;gap:7px;align-items:center;min-height:40px;
+      box-shadow:0 8px 20px rgba(0,0,0,.12)
+    }
+    .score-pill b{font-variant-numeric:tabular-nums}
+    .layout{display:grid;grid-template-columns:340px minmax(0, 1fr) 330px;gap:18px;align-items:start}
+    .panel{
+      background:linear-gradient(180deg, rgba(255,255,255,.98), rgba(242,247,255,.98));
+      border:1px solid rgba(255,255,255,.75);border-radius:var(--radius);box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+    .panel-header{padding:18px 18px 12px;display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
+    .panel-header h2,.panel-header h3{margin:0;font-size:18px;line-height:1.2}
+    .panel-header small{color:var(--muted);display:block;margin-top:4px;line-height:1.35}
+    .panel-body{padding:0 18px 18px}
+    .hero-card{
+      background:
+        linear-gradient(135deg, rgba(49,93,255,.95), rgba(110,56,255,.92)),
+        radial-gradient(circle at 80% 10%, rgba(0,209,255,.48), transparent 18rem);
+      color:white;border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;margin-bottom:18px;position:relative;
+    }
+    .hero-card::after{
+      content:"";position:absolute;inset:auto -80px -120px auto;width:340px;height:340px;border-radius:50%;
+      background:rgba(255,255,255,.12);
+    }
+    .hero-inner{position:relative;padding:28px;z-index:1;display:grid;grid-template-columns:1.18fr .82fr;gap:18px;align-items:center}
+    .hero-card h2{font-size:38px;line-height:1.02;margin:0 0 12px;letter-spacing:-.8px}
+    .hero-card p{margin:0;color:#e7efff;line-height:1.55;font-size:15px;max-width:720px}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+    button,.button{
+      border:0;border-radius:14px;background:var(--brand);color:white;font-weight:800;padding:12px 14px;
+      cursor:pointer;box-shadow:0 10px 22px rgba(49,93,255,.24);transition:.18s transform,.18s box-shadow,.18s background;
+      font-family:var(--sans);font-size:14px;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    }
+    button:hover,.button:hover{transform:translateY(-1px);box-shadow:0 14px 26px rgba(49,93,255,.30)}
+    button:active,.button:active{transform:translateY(0)}
+    button.secondary{background:white;color:var(--brand);box-shadow:0 10px 22px rgba(0,0,0,.12)}
+    button.ghost{background:rgba(255,255,255,.12);color:white;border:1px solid rgba(255,255,255,.22);box-shadow:none}
+    button.flat{background:#eef3ff;color:#2445b8;box-shadow:none}
+    button.success{background:var(--good)}
+    button.warn{background:var(--warn);color:#331d00}
+    button.danger{background:var(--danger)}
+    button[disabled]{opacity:.42;cursor:not-allowed;transform:none;box-shadow:none}
+    .mission-card{padding:0;overflow:hidden}
+    .mission-top{
+      padding:20px 22px;background:linear-gradient(180deg,#fff,#f1f6ff);border-bottom:1px solid var(--line);
+      display:flex;justify-content:space-between;gap:16px;align-items:flex-start;
+    }
+    .mission-title h2{margin:0 0 6px;font-size:25px;letter-spacing:-.2px}
+    .mission-title p{margin:0;color:var(--muted);line-height:1.45}
+    .difficulty{display:flex;gap:7px;flex-wrap:wrap;justify-content:flex-end;min-width:160px}
+    .tag{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:7px 10px;font-size:12px;font-weight:800;background:#eef3ff;color:#314fa8;border:1px solid #d8e2ff}
+    .tag.good{background:#e8fff6;color:#047d51;border-color:#b6f2dc}
+    .tag.warn{background:#fff6df;color:#835000;border-color:#ffe0a0}
+    .tag.danger{background:#fff0f4;color:#a11a42;border-color:#ffd0dc}
+    .challenge-body{padding:22px;display:grid;grid-template-columns:minmax(0,1fr) 270px;gap:18px;align-items:start}
+    .challenge-main{min-width:0}
+    .challenge-side{display:flex;flex-direction:column;gap:12px;position:sticky;top:96px}
+    .prompt{font-size:18px;line-height:1.5;margin:0 0 16px;font-weight:760;color:#101b32}
+    .scenario{background:#f6f9ff;border:1px solid #dfe8f8;border-radius:18px;padding:14px 15px;margin-bottom:15px;color:#31405a;line-height:1.5}
+    .work-area{border:1px solid #dfe8f8;background:#fff;border-radius:18px;padding:16px;box-shadow:0 10px 25px rgba(21,48,95,.06);margin-bottom:16px;overflow:auto}
+    .answer-box{background:#f8fbff;border:1px solid #dfe8f8;border-radius:18px;padding:16px;display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+    .answer-box input[type="number"], .answer-box input[type="text"], .answer-box select{
+      border:1px solid #cdd9ec;border-radius:13px;padding:12px 13px;font-size:16px;min-width:160px;background:white;
+      box-shadow:inset 0 1px 3px rgba(0,0,0,.04);
+    }
+    .answer-box input[type="range"]{width:100%;accent-color:var(--brand)}
+    .unit-hint{color:var(--muted);font-size:13px}
+    .mc-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+    .mc-option,.graph-option{
+      background:#fff;border:2px solid #dfe8f8;border-radius:18px;padding:13px;text-align:left;color:#14203a;
+      box-shadow:0 10px 22px rgba(20,42,86,.06);cursor:pointer;transition:.16s transform,.16s border-color,.16s background;
+      min-height:78px;display:block;width:100%;font-weight:700;
+    }
+    .mc-option:hover,.graph-option:hover{transform:translateY(-1px);border-color:#9bb4ff;background:#f7f9ff;box-shadow:0 14px 25px rgba(20,42,86,.10)}
+    .mc-option.selected,.graph-option.selected{border-color:var(--brand);background:#eef3ff}
+    .mini-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+    .graph-option svg{width:100%;height:auto;display:block}
+    .feedback{
+      display:none;border-radius:18px;padding:15px 16px;margin-top:16px;line-height:1.55;border:1px solid transparent;
+      animation:pop .2s ease-out;
+    }
+    .feedback.show{display:block}
+    .feedback.correct{background:#ebfff7;border-color:#a8f2d5;color:#075c3c}
+    .feedback.wrong{background:#fff1f5;border-color:#ffc8d8;color:#82203d}
+    .feedback.neutral{background:#eef6ff;border-color:#c9ddff;color:#244064}
+    .feedback h4{margin:0 0 6px;font-size:15px}
+    .feedback ol{margin:8px 0 0 19px;padding:0}
+    .feedback li{margin:4px 0}
+    @keyframes pop{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+    .side-card{background:#fff;border:1px solid #dfe8f8;border-radius:18px;padding:14px;box-shadow:0 10px 20px rgba(20,42,86,.06)}
+    .side-card h4{margin:0 0 8px;font-size:14px;text-transform:uppercase;letter-spacing:.06em;color:#5a6680}
+    .side-card p{margin:0;color:#25324c;line-height:1.45;font-size:14px}
+    .side-actions{display:grid;gap:9px}
+    .progress-track{width:100%;height:11px;border-radius:999px;background:#e7edf8;overflow:hidden}
+    .progress-fill{height:100%;border-radius:999px;background:linear-gradient(90deg,var(--accent),var(--accent-2),var(--brand));transition:.35s width}
+    .stat-row{display:flex;justify-content:space-between;gap:10px;margin:8px 0;color:#34435e;font-size:14px}
+    .stat-row b{font-variant-numeric:tabular-nums;color:#121c32}
+    .skill-tree{position:relative;padding:0 14px 16px}
+    .tree-branch{margin:9px 0 16px}
+    .branch-title{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:#66728b;font-weight:900;margin:0 0 8px;display:flex;align-items:center;gap:8px}
+    .skill-node{
+      display:grid;grid-template-columns:38px 1fr auto;gap:10px;align-items:center;
+      border:1px solid #dfe8f8;background:#fff;border-radius:17px;padding:10px;margin:8px 0;cursor:pointer;transition:.16s transform,.16s border-color,.16s opacity;
+      box-shadow:0 8px 18px rgba(18,42,85,.05);
+    }
+    .skill-node:hover{transform:translateY(-1px);border-color:#aabfff}
+    .skill-node.locked{opacity:.56;background:#f4f7fb}
+    .skill-node .icon{width:38px;height:38px;border-radius:14px;background:#eef3ff;display:grid;place-items:center;color:#2445b8;font-weight:900}
+    .skill-node.mastered .icon{background:#e8fff6;color:#08744d}
+    .skill-node .name{font-weight:900;font-size:13px;line-height:1.25}
+    .skill-node .sub{font-size:11px;color:var(--muted);margin-top:3px}
+    .skill-node .pct{font:800 12px/1 var(--mono);color:#33425d}
+    .skill-node .mini-track{grid-column:2/4;height:6px;border-radius:99px;background:#e8eef9;overflow:hidden}
+    .skill-node .mini-fill{height:100%;background:linear-gradient(90deg,var(--accent),var(--brand));border-radius:99px}
+    .badges{display:flex;flex-wrap:wrap;gap:8px}
+    .badge{display:inline-flex;align-items:center;gap:6px;padding:8px 10px;border-radius:999px;background:#f3f6ff;color:#33425d;border:1px solid #dfe8f8;font-weight:800;font-size:12px}
+    .badge.earned{background:#fff6df;border-color:#ffe0a0;color:#6b4100}
+    .tabs{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 14px}
+    .tab{background:#eef3ff;color:#2846a8;box-shadow:none;padding:9px 10px;border-radius:999px;font-size:12px}
+    .tab.active{background:var(--brand);color:white;box-shadow:0 10px 20px rgba(49,93,255,.20)}
+    .explain-list{display:grid;gap:10px;max-height:520px;overflow:auto;padding-right:4px}
+    .explain-card{background:#fff;border:1px solid #dfe8f8;border-radius:17px;padding:13px;box-shadow:0 8px 16px rgba(18,42,85,.05)}
+    .explain-card h4{margin:0 0 6px;font-size:15px}
+    .explain-card p{margin:0;color:#42506b;line-height:1.45;font-size:13px}
+    .explain-card ul{margin:8px 0 0 18px;padding:0;color:#42506b;font-size:13px;line-height:1.45}
+    .formula{font:800 14px/1.55 var(--mono);background:#07172c;color:#e7f3ff;border-radius:12px;padding:10px;margin:8px 0;overflow:auto}
+    .data-table{border-collapse:separate;border-spacing:0;width:100%;font-size:14px;overflow:hidden;border-radius:14px;border:1px solid #dbe6f5}
+    .data-table th,.data-table td{padding:10px 11px;border-bottom:1px solid #e5edf8;text-align:right;background:white}
+    .data-table th:first-child,.data-table td:first-child{text-align:left}
+    .data-table th{background:#eef3ff;color:#253c89;font-size:12px;text-transform:uppercase;letter-spacing:.05em}
+    .data-table tr:last-child td{border-bottom:0}
+    .svg-wrap{width:100%;display:grid;place-items:center}
+    svg.chart{max-width:100%;height:auto;background:#fff;border-radius:14px}
+    .axis{stroke:#1f2937;stroke-width:2}
+    .grid{stroke:#dfe7f3;stroke-width:1}
+    .tick{fill:#51617b;font-size:11px;font-family:var(--sans)}
+    .label{fill:#24324b;font-size:12px;font-weight:800;font-family:var(--sans)}
+    .chart-title{fill:#111b31;font-size:14px;font-weight:900;font-family:var(--sans)}
+    .line-demand{stroke:#315dff;stroke-width:4;fill:none;stroke-linecap:round}
+    .line-supply{stroke:#00a878;stroke-width:4;fill:none;stroke-linecap:round}
+    .line-cost{stroke:#ef476f;stroke-width:4;fill:none;stroke-linecap:round}
+    .line-revenue{stroke:#315dff;stroke-width:4;fill:none;stroke-linecap:round}
+    .marker-line{stroke:#ffb020;stroke-width:3;stroke-dasharray:7 6}
+    .callout{fill:#fff8df;stroke:#ffd46b;stroke-width:1.5}
+    .callout-text{fill:#5a3900;font-size:12px;font-weight:900;font-family:var(--sans)}
+    .chart-note{color:var(--muted);font-size:12px;margin-top:8px;text-align:center}
+    .modal-backdrop{position:fixed;inset:0;background:rgba(3,10,25,.62);display:none;place-items:center;z-index:100;padding:20px;backdrop-filter:blur(10px)}
+    .modal-backdrop.show{display:grid}
+    .modal{max-width:820px;width:min(820px, 100%);background:white;border-radius:26px;box-shadow:0 35px 90px rgba(0,0,0,.35);overflow:hidden}
+    .modal-head{padding:20px 22px;background:linear-gradient(135deg,#eef3ff,#fff);border-bottom:1px solid #dfe8f8;display:flex;justify-content:space-between;align-items:flex-start;gap:15px}
+    .modal-head h3{margin:0;font-size:22px}
+    .modal-body{padding:20px 22px;max-height:72vh;overflow:auto;line-height:1.55;color:#26344f}
+    .toast{position:fixed;right:20px;bottom:20px;background:#07172c;color:white;border-radius:18px;padding:14px 16px;box-shadow:0 22px 50px rgba(0,0,0,.34);z-index:200;display:none;max-width:360px}
+    .toast.show{display:block;animation:pop .2s ease-out}
+    .confetti{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:150}
+    .confetti span{position:absolute;width:9px;height:15px;border-radius:3px;opacity:.9;animation:fall 900ms ease-out forwards}
+    @keyframes fall{to{transform:translateY(105vh) rotate(560deg);opacity:0}}
+    .sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    @media (max-width:1180px){.layout{grid-template-columns:1fr}.challenge-body{grid-template-columns:1fr}.challenge-side{position:static}.hero-inner{grid-template-columns:1fr}.right-panel{order:3}.skill-panel{order:2}.mission-zone{order:1}}
+    @media (max-width:720px){.app-shell{padding:12px}.topbar{align-items:flex-start;flex-direction:column;position:static}.scorebar{justify-content:flex-start}.brand h1{font-size:18px}.hero-card h2{font-size:29px}.hero-inner{padding:20px}.mission-top{flex-direction:column}.mc-grid,.mini-grid{grid-template-columns:1fr}.panel-header{flex-direction:column}.challenge-body{padding:15px}.mission-top{padding:18px}.score-pill{font-size:12px;padding:8px 10px}}
+  </style>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar" aria-label="Spelstatus">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">
+          <svg viewBox="0 0 64 64" role="img">
+            <path d="M11 50 H55" stroke="white" stroke-width="4" stroke-linecap="round"/>
+            <path d="M14 48 V12" stroke="white" stroke-width="4" stroke-linecap="round"/>
+            <path d="M18 44 L30 32 L40 36 L52 18" fill="none" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="30" cy="32" r="5" fill="#00d1ff"/>
+            <circle cx="52" cy="18" r="5" fill="#ffb020"/>
+          </svg>
+        </div>
+        <div>
+          <h1>GrafiekMeester</h1>
+          <p>Representatie Arena · economie 4 vwo</p>
+        </div>
+      </div>
+      <div class="scorebar">
+        <div class="score-pill">XP <b id="xpValue">0</b></div>
+        <div class="score-pill">Level <b id="levelValue">1</b></div>
+        <div class="score-pill">Streak <b id="streakValue">0</b></div>
+        <div class="score-pill">Sterren <b id="starsValue">0</b></div>
+      </div>
+    </header>
+
+    <section class="hero-card">
+      <div class="hero-inner">
+        <div>
+          <h2>Word de leerling die elke bron kan lezen.</h2>
+          <p>Oefen procentuele verandering, indexcijfers, winst, break-even en elasticiteit vanuit tabellen, staafdiagrammen, lijngrafieken, cirkeldiagrammen en producentengrafieken. Eerst lees je de bron. Dan kies je de juiste waarden. Daarna pas reken je.</p>
+          <div class="hero-actions">
+            <button id="startCampaignBtn">Start campagne</button>
+            <button class="secondary" id="startTrainingBtn">Vrij trainen</button>
+            <button class="ghost" id="openCoachBtn">Vraag uitleg</button>
+          </div>
+        </div>
+        <div class="svg-wrap" aria-hidden="true">
+          <svg class="chart" viewBox="0 0 420 260" width="420" height="260">
+            <defs>
+              <linearGradient id="heroBar" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#00d1ff"/>
+                <stop offset="100%" stop-color="#315dff"/>
+              </linearGradient>
+              <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+                <feDropShadow dx="0" dy="12" stdDeviation="10" flood-color="#06142e" flood-opacity=".24"/>
+              </filter>
+            </defs>
+            <rect x="35" y="30" width="350" height="190" rx="24" fill="rgba(255,255,255,.16)" stroke="rgba(255,255,255,.25)"/>
+            <line x1="76" y1="190" x2="350" y2="190" stroke="white" stroke-width="3" stroke-linecap="round"/>
+            <line x1="76" y1="190" x2="76" y2="62" stroke="white" stroke-width="3" stroke-linecap="round"/>
+            <rect x="110" y="123" width="46" height="67" rx="8" fill="url(#heroBar)" filter="url(#softShadow)"/>
+            <rect x="190" y="92" width="46" height="98" rx="8" fill="#00b894" filter="url(#softShadow)"/>
+            <rect x="270" y="72" width="46" height="118" rx="8" fill="#ffb020" filter="url(#softShadow)"/>
+            <path d="M105 152 C155 108, 218 126, 305 76" fill="none" stroke="white" stroke-width="5" stroke-linecap="round"/>
+            <circle cx="305" cy="76" r="10" fill="#ef476f" stroke="white" stroke-width="4"/>
+            <text x="92" y="52" fill="white" font-size="16" font-weight="900">bron → waarden → berekening</text>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <main class="layout">
+      <aside class="panel skill-panel">
+        <div class="panel-header">
+          <div>
+            <h2>Skill tree</h2>
+            <small>Klik een node voor uitleg. Skills ontgrendelen door basisvaardigheden te oefenen.</small>
+          </div>
+          <button class="flat" id="resetBtn" title="Wis lokale voortgang">Reset</button>
+        </div>
+        <div id="skillTree" class="skill-tree"></div>
+      </aside>
+
+      <section class="mission-zone">
+        <div class="panel mission-card">
+          <div class="mission-top">
+            <div class="mission-title">
+              <h2 id="challengeTitle">Missie laden…</h2>
+              <p id="challengeSubtitle">Kies een modus om te starten.</p>
+            </div>
+            <div class="difficulty" id="challengeTags"></div>
+          </div>
+          <div class="challenge-body">
+            <div class="challenge-main">
+              <div id="challengeContent"></div>
+              <div id="feedback" class="feedback"></div>
+            </div>
+            <div class="challenge-side">
+              <div class="side-card">
+                <h4>Missie-score</h4>
+                <div class="stat-row"><span>Basis XP</span><b>100</b></div>
+                <div class="stat-row"><span>Streakbonus</span><b id="comboBonus">+0</b></div>
+                <div class="stat-row"><span>Hint gebruikt</span><b id="hintPenalty">nee</b></div>
+                <div class="progress-track" title="Levelvoortgang"><div id="levelProgress" class="progress-fill" style="width:0%"></div></div>
+              </div>
+              <div class="side-card side-actions">
+                <button id="checkBtn" class="success">Controleer</button>
+                <button id="hintBtn" class="flat">Hint</button>
+                <button id="explainCurrentBtn" class="flat">Uitleg bij deze skill</button>
+                <button id="nextBtn">Volgende missie</button>
+              </div>
+              <div class="side-card">
+                <h4>Leerregel</h4>
+                <p id="missionRule">Eerst bron lezen, dan waarden kiezen, dan pas rekenen.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <aside class="panel right-panel">
+        <div class="panel-header">
+          <div>
+            <h2>Coach & badges</h2>
+            <small>Overzicht van voortgang en uitleg.</small>
+          </div>
+        </div>
+        <div class="panel-body">
+          <div class="tabs" id="sideTabs">
+            <button class="tab active" data-tab="coach">Coach</button>
+            <button class="tab" data-tab="badges">Badges</button>
+            <button class="tab" data-tab="log">Logboek</button>
+          </div>
+          <div id="sidePanelContent"></div>
+        </div>
+      </aside>
+    </main>
+  </div>
+
+  <div id="modalBackdrop" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal">
+      <div class="modal-head">
+        <div>
+          <h3 id="modalTitle">Uitleg</h3>
+          <div id="modalSubtitle" class="unit-hint"></div>
+        </div>
+        <button class="flat" id="closeModalBtn">Sluiten</button>
+      </div>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+  <div id="toast" class="toast"></div>
+  <div id="confetti" class="confetti" aria-hidden="true"></div>
+
+  <script>
+    'use strict';
+
+    const STORE_KEY = 'grafiekmeester-representatie-arena-v1';
+    const $ = (sel, root = document) => root.querySelector(sel);
+    const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
+    const clamp = (n, min, max) => Math.max(min, Math.min(max, n));
+    const rnd = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+    const pick = arr => arr[Math.floor(Math.random() * arr.length)];
+    const shuffle = arr => arr.map(v => [Math.random(), v]).sort((a,b)=>a[0]-b[0]).map(x=>x[1]);
+    const euro = n => '€' + Number(n).toLocaleString('nl-NL');
+    const pct = n => Number(n).toLocaleString('nl-NL', {maximumFractionDigits:1}) + '%';
+    const round1 = n => Math.round(n * 10) / 10;
+    const escapeHtml = s => String(s).replace(/[&<>"]/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[ch]));
+
+    const skills = [
+      {id:'basis', branch:'Fundament', icon:'B', name:'Basiswaarde herkennen', prereq:[], short:'Oud, nieuw en basiswaarde scheiden.', formula:'verandering = nieuw − oud', explanation:'Bij procentuele verandering is de oude waarde de basis. Veel fouten ontstaan doordat leerlingen delen door de nieuwe waarde. De veilige volgorde is: oud markeren, nieuw markeren, verschil berekenen, delen door oud.', tips:['Schrijf eerst OUD en NIEUW boven de waarden.','Bij stijging is het verschil positief; bij daling negatief.','De noemer is de oude waarde, tenzij de opgave expliciet iets anders vraagt.']},
+      {id:'pct', branch:'Fundament', icon:'%', name:'Procentuele verandering', prereq:['basis'], short:'Verandering in procenten berekenen.', formula:'((nieuw − oud) / oud) × 100%', explanation:'Je meet hoe groot de verandering is ten opzichte van de oude situatie. Dit is een rekenvaardigheid, maar nog geen bronvaardigheid: je moet de juiste waarden eerst uit tekst, tabel of grafiek halen.', tips:['Gebruik haakjes rond nieuw − oud.','Controleer of het antwoord logisch is: verdubbeling is +100%.','Rond pas aan het einde af.']},
+      {id:'table', branch:'Bron lezen', icon:'T', name:'Tabelwaarden selecteren', prereq:[], short:'Juiste rij, kolom en periode kiezen.', formula:'bronwaarde → rekenwaarde', explanation:'Een tabel geeft veel waarden tegelijk. De vaardigheid is niet rekenen, maar selecteren: welke rij, welke kolom, welke periode, en welke waarde hoort bij oud of nieuw?', tips:['Lees koppen en eenheden.','Controleer of waarden per stuk, totaal, procent of index zijn.','Markeer de twee waarden voordat je rekent.']},
+      {id:'bar', branch:'Bron lezen', icon:'▥', name:'Staafdiagram aflezen', prereq:[], short:'Hoogte, schaal en labels gebruiken.', formula:'staafhoogte → waarde', explanation:'Bij een staafdiagram lees je de hoogte van een staaf af op de as. Controleer de schaal: begint de as bij nul, wat is de stapgrootte, en horen de labels bij de juiste staaf?', tips:['Gebruik de as, niet alleen je ogen.','Let op afgebroken assen.','Vergelijk pas nadat je de waarden hebt gelezen.']},
+      {id:'line', branch:'Bron lezen', icon:'╱', name:'Lijngrafiek aflezen', prereq:[], short:'Punten, jaren en interpolatie lezen.', formula:'punt op lijn → waarde', explanation:'Een lijngrafiek toont ontwikkeling. Je leest de waarde bij een bepaald moment af. Soms moet je tussen twee punten interpoleren: dan schat je binnen het interval.', tips:['Zoek eerst het juiste jaar of moment.','Lees verticaal omhoog naar de lijn, daarna horizontaal naar de waarde-as.','Verwar stijging van de lijn niet met procentuele stijging.']},
+      {id:'pie', branch:'Bron lezen', icon:'◔', name:'Cirkeldiagram interpreteren', prereq:[], short:'Aandeel, percentagepunt en totaal scheiden.', formula:'absolute waarde = aandeel × totaal', explanation:'Een cirkeldiagram geeft aandelen. Een aandeel van 25% is geen absolute hoeveelheid. Voor absolute waarden heb je het totaal nodig. Een aandeel van 20% naar 25% is +5 procentpunt; de procentuele verandering van het aandeel is +25%.', tips:['Vraag: gaat het om aandeel of absolute hoeveelheid?','Percentagepunt is verschil tussen percentages.','Voor absolute hoeveelheid: percentage × totaal.']},
+      {id:'pp', branch:'Combineren', icon:'pp', name:'Procentpunt vs procent', prereq:['pct','pie'], short:'Verschil tussen aandelen en groei herkennen.', formula:'25% − 20% = 5 procentpunt', explanation:'Een verandering van 20% naar 25% is een stijging van 5 procentpunt. Relatief ten opzichte van 20% is dat 25% stijging. Beide kunnen juist zijn, maar beantwoorden verschillende vragen.', tips:['Procentpunt: aftrekken.','Procentuele verandering: delen door oude waarde.','Bij aandelen in cirkeldiagrammen is deze fout zeer waarschijnlijk.']},
+      {id:'pctRepresent', branch:'Combineren', icon:'↗', name:'Procentuele verandering uit bron', prereq:['pct','table','bar','line','pie'], short:'Eerst lezen, dan rekenen.', formula:'bron → oud/nieuw → ((nieuw − oud) / oud) × 100%', explanation:'Dit is de samengestelde vaardigheid: de leerling moet eerst waarden uit een representatie halen en daarna de procentuele verandering berekenen. Transfer is niet vanzelfsprekend.', tips:['Noteer bronwaarden apart.','Check of de bron aandelen, indexcijfers of absolute waarden geeft.','Gebruik daarna pas de procentformule.']},
+      {id:'index', branch:'Combineren', icon:'100', name:'Indexcijfers', prereq:['basis','pctRepresent'], short:'Basisjaar, indexpunten en groei gebruiken.', formula:'index = (waarde / basiswaarde) × 100', explanation:'Een indexcijfer vergelijkt met een basisjaar dat op 100 staat. Van index 108 naar 112 is +4 indexpunten, maar de procentuele verandering is 4/108 × 100%.', tips:['Basisjaar is 100.','Indexpunten zijn geen procenten.','Voor groei tussen indexjaren: deel door de oude index.']},
+      {id:'profitTable', branch:'Producent', icon:'Π', name:'Winst uit tabel', prereq:['table'], short:'TO, TK en winst uit tabel bepalen.', formula:'TW = TO − TK', explanation:'Bij producentenvragen staan opbrengsten en kosten vaak in tabellen. De bronvaardigheid is eerst de juiste hoeveelheid en kolommen kiezen. Daarna bereken je totale winst.', tips:['TO = totale opbrengst.','TK = totale kosten.','Maximale winst is de hoogste positieve TW.']},
+      {id:'profitGraph', branch:'Producent', icon:'▭', name:'Winst uit grafiek', prereq:['line','profitTable'], short:'Winstrechthoek en break-even herkennen.', formula:'TW = (P − GTK) × Q', explanation:'In een producentengrafiek kun je winst zien als rechthoek: hoogte is P − GTK, breedte is Q. Break-even ligt waar P = GTK of waar TO = TK.', tips:['Lees P, GTK en Q af.','Winst: P boven GTK. Verlies: P onder GTK.','Bij TO-TK grafieken kijk je naar verticale afstand.']},
+      {id:'elasticity', branch:'Markt', icon:'ε', name:'Elasticiteit uit bron', prereq:['pctRepresent'], short:'Twee procentuele veranderingen combineren.', formula:'Ev = %ΔQ / %ΔP', explanation:'Elasticiteit meet hoe sterk de gevraagde hoeveelheid reageert op een prijsverandering. Uit een bron moet je twee oude/nieuwe paren halen: prijs en hoeveelheid.', tips:['Bereken %ΔQ en %ΔP apart.','Vraagelasticiteit is meestal negatief. Vaak gebruik je de absolute waarde voor interpretatie.','Elastisch als |Ev| > 1; inelastisch als |Ev| < 1.']},
+      {id:'marketGraph', branch:'Markt', icon:'E', name:'P-Q grafiek manipuleren', prereq:['bar','line'], short:'Vraag, aanbod, evenwicht en aflezen.', formula:'Q horizontaal, P verticaal', explanation:'Economen zetten prijs op de verticale as en hoeveelheid op de horizontale as. Vraag daalt, aanbod stijgt. Evenwicht ligt waar vraag en aanbod elkaar snijden.', tips:['Geen wiskunde-asverwarring: P staat verticaal.','Lees eerst de snijpunten.','Bij een prijs boven evenwicht ontstaat meestal aanbodoverschot.']}
+    ];
+    const skillMap = Object.fromEntries(skills.map(s => [s.id, s]));
+
+    const defaultState = () => ({
+      xp:0, stars:0, streak:0, bestStreak:0, solved:0, wrong:0, hints:0, mode:'campaign', activeTab:'coach',
+      mastery:Object.fromEntries(skills.map(s => [s.id, s.prereq.length ? 0 : 25])),
+      log:[], badges:{}, seenIntro:false
+    });
+    let state = loadState();
+    let current = null;
+    let selectedChoice = null;
+    let hintUsed = false;
+    let problemFailed = false;
+    let missionStart = Date.now();
+
+    function loadState(){
+      try{
+        const raw = localStorage.getItem(STORE_KEY);
+        if(!raw) return defaultState();
+        const parsed = JSON.parse(raw);
+        const base = defaultState();
+        return {...base, ...parsed, mastery:{...base.mastery, ...(parsed.mastery || {})}, badges:{...base.badges, ...(parsed.badges || {})}};
+      }catch(e){ return defaultState(); }
+    }
+    function saveState(){ localStorage.setItem(STORE_KEY, JSON.stringify(state)); }
+    function level(){ return Math.floor(state.xp / 520) + 1; }
+    function levelPct(){ return Math.round(((state.xp % 520) / 520) * 100); }
+    function unlocked(skill){ return skill.prereq.every(id => (state.mastery[id] || 0) >= 35); }
+    function mastered(id){ return (state.mastery[id] || 0) >= 82; }
+    function skillStatusText(s){
+      if(!unlocked(s)) return 'gesloten';
+      const m = state.mastery[s.id] || 0;
+      if(m >= 82) return 'beheerst';
+      if(m >= 55) return 'stabiel';
+      return 'oefenen';
+    }
+
+    function renderAll(){
+      $('#xpValue').textContent = state.xp;
+      $('#levelValue').textContent = level();
+      $('#streakValue').textContent = state.streak;
+      $('#starsValue').textContent = state.stars;
+      $('#levelProgress').style.width = levelPct() + '%';
+      $('#comboBonus').textContent = '+' + Math.min(50, state.streak * 5);
+      $('#hintPenalty').textContent = hintUsed ? 'ja −20 XP' : 'nee';
+      renderSkillTree();
+      renderSidePanel();
+      checkBadges();
+    }
+
+    function renderSkillTree(){
+      const branches = [...new Set(skills.map(s => s.branch))];
+      const html = branches.map(branch => {
+        const nodes = skills.filter(s => s.branch === branch).map(s => {
+          const m = Math.round(state.mastery[s.id] || 0);
+          const isLocked = !unlocked(s);
+          const classes = ['skill-node', isLocked ? 'locked' : '', m >= 82 ? 'mastered' : ''].filter(Boolean).join(' ');
+          return `<div class="${classes}" role="button" tabindex="0" data-skill="${s.id}" aria-label="${escapeHtml(s.name)}">
+            <div class="icon">${escapeHtml(s.icon)}</div>
+            <div><div class="name">${escapeHtml(s.name)}</div><div class="sub">${escapeHtml(skillStatusText(s))}</div></div>
+            <div class="pct">${m}%</div>
+            <div class="mini-track"><div class="mini-fill" style="width:${m}%"></div></div>
+          </div>`;
+        }).join('');
+        return `<div class="tree-branch"><div class="branch-title">${branch}</div>${nodes}</div>`;
+      }).join('');
+      $('#skillTree').innerHTML = html;
+      $$('.skill-node').forEach(node => {
+        node.addEventListener('click', () => openSkillModal(node.dataset.skill));
+        node.addEventListener('keydown', e => { if(e.key === 'Enter') openSkillModal(node.dataset.skill); });
+      });
+    }
+
+    function renderSidePanel(){
+      $$('#sideTabs .tab').forEach(t => t.classList.toggle('active', t.dataset.tab === state.activeTab));
+      const box = $('#sidePanelContent');
+      if(state.activeTab === 'badges'){
+        const badges = badgeDefs.map(b => `<div class="badge ${state.badges[b.id] ? 'earned' : ''}">${state.badges[b.id] ? '★' : '☆'} ${escapeHtml(b.name)}</div>`).join('');
+        box.innerHTML = `<div class="badges">${badges}</div><div class="side-card" style="margin-top:14px"><h4>Badge-regel</h4><p>Badges verschijnen wanneer je een cluster echt beheerst. Ze zijn bedoeld als feedback, niet alleen als decoratie.</p></div>`;
+      }else if(state.activeTab === 'log'){
+        const log = state.log.slice(-8).reverse().map(item => `<div class="explain-card"><h4>${item.correct ? 'Goed' : 'Nog oefenen'} · ${escapeHtml(item.title)}</h4><p>${escapeHtml(item.note)}</p></div>`).join('') || '<p class="unit-hint">Nog geen missies afgerond.</p>';
+        box.innerHTML = `<div class="explain-list">${log}</div>`;
+      }else{
+        const weakest = skills.filter(unlocked).sort((a,b)=>(state.mastery[a.id]||0)-(state.mastery[b.id]||0))[0] || skills[0];
+        const avg = Math.round(skills.reduce((sum,s)=>sum+(state.mastery[s.id]||0),0)/skills.length);
+        box.innerHTML = `<div class="side-card"><h4>Coachadvies</h4><p>Gemiddelde beheersing: <b>${avg}%</b>. Beste volgende focus: <b>${escapeHtml(weakest.name)}</b>.</p></div>
+          <div class="side-card" style="margin-top:12px"><h4>Strategie</h4><p>Maak bij elke opgave drie kolommen op kladpapier: <b>bron</b>, <b>waarden</b>, <b>berekening</b>. Daardoor voorkom je dat je direct gaat rekenen met verkeerde getallen.</p></div>
+          <div class="side-card" style="margin-top:12px"><h4>Resultaten</h4><div class="stat-row"><span>Opgaven goed</span><b>${state.solved}</b></div><div class="stat-row"><span>Fouten</span><b>${state.wrong}</b></div><div class="stat-row"><span>Beste streak</span><b>${state.bestStreak}</b></div></div>`;
+      }
+    }
+
+    const badgeDefs = [
+      {id:'sourceReader', name:'Bronlezer', condition:()=>['table','bar','line','pie'].every(mastered)},
+      {id:'percentPilot', name:'Procentenpiloot', condition:()=>['basis','pct','pctRepresent','pp'].every(mastered)},
+      {id:'producerArchitect', name:'Winstarchitect', condition:()=>['profitTable','profitGraph'].every(mastered)},
+      {id:'marketAnalyst', name:'Marktanalist', condition:()=>['elasticity','marketGraph'].every(mastered)},
+      {id:'streakSeven', name:'Streak 7', condition:()=>state.bestStreak >= 7},
+      {id:'levelFive', name:'Level 5', condition:()=>level() >= 5}
+    ];
+    function checkBadges(){
+      let newBadges = [];
+      badgeDefs.forEach(b => {
+        if(!state.badges[b.id] && b.condition()){
+          state.badges[b.id] = true;
+          newBadges.push(b.name);
+        }
+      });
+      if(newBadges.length){
+        saveState();
+        toast('Nieuwe badge: ' + newBadges.join(', '));
+        confetti();
+      }
+    }
+
+    let lastGeneratorId = null;
+
+    function chooseGenerator(){
+      const available = generators.filter(g => g.required.every(id => unlocked(skillMap[id])));
+      let candidates = available.length ? available : generators.slice(0,4);
+      // Anti-repeat: voorkom dat dezelfde generator direct opnieuw komt.
+      if(lastGeneratorId && candidates.length > 1){
+        const filtered = candidates.filter(g => g.id !== lastGeneratorId);
+        if(filtered.length) candidates = filtered;
+      }
+      // Gewogen selectie: lage mastery domineert, mid komt regelmatig,
+      // 100%-mastery komt af en toe terug ter herhaling (interleaving).
+      // weight = (110 - avgMastery)^2 + 300
+      //   m=0   → 12400  (verreweg de meeste kans, nieuwe stof)
+      //   m=50  →  3900  (regelmatig, herhaling van wankele stof)
+      //   m=100 →   400  (zeldzaam, sporadische review van beheerste stof)
+      const weighted = candidates.map(g => ({
+        gen: g,
+        weight: Math.pow(110 - avgMastery(g.required), 2) + 300
+      }));
+      const total = weighted.reduce((s,x) => s + x.weight, 0);
+      let r = Math.random() * total;
+      for(const w of weighted){
+        r -= w.weight;
+        if(r <= 0){
+          lastGeneratorId = w.gen.id;
+          return w.gen;
+        }
+      }
+      const last = weighted[weighted.length - 1];
+      lastGeneratorId = last.gen.id;
+      return last.gen;
+    }
+    function avgMastery(ids){ return ids.reduce((sum,id)=>sum+(state.mastery[id]||0),0)/ids.length; }
+
+    function newChallenge(){
+      selectedChoice = null;
+      hintUsed = false;
+      problemFailed = false;
+      const gen = chooseGenerator();
+      current = gen.make();
+      missionStart = Date.now();
+      renderChallenge();
+      renderAll();
+    }
+
+    function renderChallenge(){
+      $('#challengeTitle').textContent = current.title;
+      $('#challengeSubtitle').textContent = current.subtitle;
+      $('#challengeTags').innerHTML = current.skills.map(id => `<span class="tag ${mastered(id) ? 'good' : ''}">${escapeHtml(skillMap[id].name)}</span>`).join('') + `<span class="tag warn">${escapeHtml(current.kindLabel)}</span>`;
+      $('#missionRule').textContent = current.rule || 'Eerst bron lezen, dan waarden kiezen, dan pas rekenen.';
+      $('#feedback').className = 'feedback';
+      $('#feedback').innerHTML = '';
+      $('#nextBtn').disabled = true;
+      $('#checkBtn').disabled = false;
+      let answer = '';
+      if(current.kind === 'numeric'){
+        answer = `<div class="answer-box"><label for="answerInput"><b>Antwoord</b></label><input id="answerInput" type="number" step="0.1" inputmode="decimal" placeholder="bijv. 12,5"/><span class="unit-hint">${escapeHtml(current.unit || '')}</span></div>`;
+      }else if(current.kind === 'mc'){
+        answer = `<div class="mc-grid">${current.choices.map((c,i)=>`<button class="mc-option" data-choice="${i}">${escapeHtml(c)}</button>`).join('')}</div>`;
+      }else if(current.kind === 'graphChoice'){
+        answer = `<div class="mini-grid">${current.choices.map((c,i)=>`<button class="graph-option" data-choice="${i}"><span class="sr-only">optie ${i+1}</span>${c.svg}<div class="unit-hint">${escapeHtml(c.label)}</div></button>`).join('')}</div>`;
+      }else if(current.kind === 'slider'){
+        answer = current.sliderHtml;
+      }
+      $('#challengeContent').innerHTML = `<p class="prompt">${escapeHtml(current.prompt)}</p><div class="scenario">${current.scenario}</div><div class="work-area">${current.visual}</div>${answer}`;
+      if(current.kind === 'mc' || current.kind === 'graphChoice'){
+        $$('[data-choice]', $('#challengeContent')).forEach(btn => btn.addEventListener('click', () => {
+          selectedChoice = Number(btn.dataset.choice);
+          $$('[data-choice]', $('#challengeContent')).forEach(b => b.classList.remove('selected'));
+          btn.classList.add('selected');
+        }));
+      }
+      if(current.afterRender) current.afterRender();
+      const input = $('#answerInput');
+      if(input){ input.focus(); input.addEventListener('keydown', e => { if(e.key === 'Enter') checkAnswer(); }); }
+    }
+
+    function checkAnswer(){
+      if(!current) return;
+      const result = current.evaluate();
+      applyResult(result);
+    }
+
+    function applyResult(result){
+      const correct = !!result.correct;
+      const fb = $('#feedback');
+      const stepsBlock = stepsHtml(result.steps || current.steps);
+
+      if(correct){
+        const isRetrySuccess = problemFailed;
+        let xp, stars, masteryDelta, header;
+        if(isRetrySuccess){
+          // Goed na eerdere fout: kleine erkenning, geen streak-herstel.
+          xp = 25;
+          stars = 1;
+          masteryDelta = 3;
+          header = `Gelukt! +${xp} XP · +${stars} ster`;
+        } else {
+          const elapsed = (Date.now() - missionStart) / 1000;
+          const speedBonus = clamp(Math.round(30 - elapsed), 0, 30);
+          const comboBonus = Math.min(50, state.streak * 5);
+          const hintPenalty = hintUsed ? 20 : 0;
+          xp = Math.max(40, 100 + speedBonus + comboBonus - hintPenalty);
+          stars = hintUsed ? 1 : 2;
+          masteryDelta = 9 + (hintUsed ? 0 : 3);
+          state.streak += 1;
+          state.bestStreak = Math.max(state.bestStreak, state.streak);
+          header = `Correct. +${xp} XP · +${stars} sterren`;
+        }
+        state.xp += xp;
+        state.stars += stars;
+        state.solved += 1;
+        current.skills.forEach(id => state.mastery[id] = clamp((state.mastery[id] || 0) + masteryDelta, 0, 100));
+        state.log.push({title:current.title, correct:true, note:result.note || (isRetrySuccess ? 'Opgelost na correctie.' : 'Correct opgelost.'), time:new Date().toISOString()});
+        state.log = state.log.slice(-40);
+        saveState();
+        fb.className = 'feedback show correct';
+        fb.innerHTML = `<h4>${header}</h4><p>${result.note}</p>${stepsBlock}`;
+        $('#checkBtn').disabled = true;
+        $('#nextBtn').disabled = false;
+        renderAll();
+        if((state.streak > 0 && state.streak % 4 === 0) || stars === 2) confetti();
+        return;
+      }
+
+      // Fout antwoord
+      if(!problemFailed){
+        // Eerste fout op deze opgave: penalty toepassen.
+        state.xp += 12;
+        state.streak = 0;
+        state.wrong += 1;
+        current.skills.forEach(id => state.mastery[id] = clamp((state.mastery[id] || 0) - 4, 0, 100));
+        problemFailed = true;
+        state.log.push({title:current.title, correct:false, note:result.note || 'Bekijk de stappen en probeer opnieuw.', time:new Date().toISOString()});
+        state.log = state.log.slice(-40);
+        saveState();
+        fb.className = 'feedback show wrong';
+        fb.innerHTML = `<h4>Nog niet. +12 oefen-XP</h4><p>${result.note}</p><p style="margin-top:8px"><b>Probeer opnieuw of klik Hint/Uitleg.</b> Een nieuwe poging kost geen extra punten.</p>${stepsBlock}`;
+      } else {
+        // Vervolgfout op dezelfde opgave: geen extra straf.
+        fb.className = 'feedback show wrong';
+        fb.innerHTML = `<h4>Nog niet — geen extra straf</h4><p>${result.note}</p><p style="margin-top:8px">Bekijk de stappen of klik Hint/Uitleg, en probeer opnieuw.</p>${stepsBlock}`;
+      }
+      $('#checkBtn').disabled = false;
+      $('#nextBtn').disabled = false;
+      renderAll();
+    }
+
+    function stepsHtml(steps){
+      if(!steps || !steps.length) return '';
+      return `<ol>${steps.map(s=>`<li>${escapeHtml(s)}</li>`).join('')}</ol>`;
+    }
+
+    function showHint(){
+      if(!current) return;
+      hintUsed = true;
+      state.hints += 1;
+      saveState();
+      $('#hintPenalty').textContent = 'ja −20 XP';
+      const fb = $('#feedback');
+      fb.className = 'feedback show neutral';
+      fb.innerHTML = `<h4>Hint</h4><p>${escapeHtml(current.hint || 'Schrijf eerst de bronwaarden op voordat je rekent.')}</p>`;
+    }
+
+    function explainCurrent(){
+      if(!current) return;
+      const id = current.skills[0];
+      openSkillModal(id);
+    }
+
+    function openSkillModal(id){
+      const s = skillMap[id];
+      if(!s) return;
+      $('#modalTitle').textContent = s.name;
+      $('#modalSubtitle').textContent = `${s.branch} · beheersing ${Math.round(state.mastery[id] || 0)}%`;
+      $('#modalBody').innerHTML = `<p>${escapeHtml(s.explanation)}</p><div class="formula">${escapeHtml(s.formula)}</div><h4>Stappen die je hardop kunt maken</h4><ul>${s.tips.map(t=>`<li>${escapeHtml(t)}</li>`).join('')}</ul><h4>Bijbehorende spelregel</h4><p>${explanationForSkill(id)}</p>`;
+      $('#modalBackdrop').classList.add('show');
+    }
+
+    function explanationForSkill(id){
+      const rules = {
+        basis:'Vraag altijd: wat is de oude situatie? De oude situatie is de basis voor de procentuele vergelijking.',
+        pct:'Een procentuele verandering is een verhouding: verandering gedeeld door oude waarde.',
+        table:'Een tabel is geen som. Het is een bron. Eerst selecteer je, daarna reken je.',
+        bar:'Een staafdiagram vraagt schaalcontrole: de visuele hoogte alleen is niet genoeg.',
+        line:'Een lijngrafiek vraagt periodecontrole: welk beginpunt, welk eindpunt?',
+        pie:'Een cirkeldiagram toont aandelen. Absolute aantallen moet je soms reconstrueren.',
+        pp:'Procentpunt is aftrekken. Procentuele verandering is delen door de oude waarde.',
+        pctRepresent:'Deze skill combineert drie micro-units: basisberekening, representatie lezen, en de berekening uitvoeren.',
+        index:'Bij indexcijfers moet je telkens vragen of je een indexpuntverschil of procentuele verandering zoekt.',
+        profitTable:'Bij winst uit tabellen is de bronselectie net zo belangrijk als TO − TK.',
+        profitGraph:'Bij winstgrafieken gaat het om afstand en oppervlakte: hoogte × breedte.',
+        elasticity:'Elasticiteit bestaat uit twee procentuele veranderingen, dus bronfouten verdubbelen snel.',
+        marketGraph:'In economie staat P op de verticale as en Q op de horizontale as. Dat moet automatisch worden.'
+      };
+      return escapeHtml(rules[id] || 'Lees de bron, kies waarden, voer de bewerking uit.');
+    }
+
+    function openGeneralCoach(){
+      $('#modalTitle').textContent = 'Uitlegcentrum';
+      $('#modalSubtitle').textContent = 'Kies een vaardigheid of gebruik dit als algemeen stappenplan.';
+      $('#modalBody').innerHTML = `<div class="explain-card"><h4>Algemene methode: bron → waarden → berekening</h4><p>De meeste fouten ontstaan niet in de formule, maar daarvoor. Je leest een bron verkeerd, kiest de verkeerde basiswaarde of ziet een aandeel aan voor een absolute hoeveelheid.</p><div class="formula">1. bronsoort herkennen → 2. juiste waarden selecteren → 3. eenheid controleren → 4. formule toepassen → 5. antwoord interpreteren</div></div><div class="explain-list" style="margin-top:12px">${skills.map(s=>`<div class="explain-card"><h4>${escapeHtml(s.name)}</h4><p>${escapeHtml(s.short)}</p><button class="flat" data-open-skill="${s.id}">Open uitleg</button></div>`).join('')}</div>`;
+      $('#modalBackdrop').classList.add('show');
+      $$('[data-open-skill]', $('#modalBody')).forEach(b => b.addEventListener('click', () => openSkillModal(b.dataset.openSkill)));
+    }
+
+    function closeModal(){ $('#modalBackdrop').classList.remove('show'); }
+    function toast(msg){
+      const t = $('#toast'); t.textContent = msg; t.classList.add('show');
+      setTimeout(()=>t.classList.remove('show'), 2800);
+    }
+    function confetti(){
+      const root = $('#confetti');
+      const colors = ['#00d1ff','#315dff','#6e38ff','#00b894','#ffb020','#ef476f'];
+      for(let i=0;i<52;i++){
+        const s = document.createElement('span');
+        s.style.left = rnd(0,100) + 'vw';
+        s.style.top = '-20px';
+        s.style.background = pick(colors);
+        s.style.animationDelay = rnd(0,250) + 'ms';
+        s.style.transform = `rotate(${rnd(0,360)}deg)`;
+        root.appendChild(s);
+        setTimeout(()=>s.remove(), 1400);
+      }
+    }
+
+    function resetProgress(){
+      if(!confirm('Lokale voortgang wissen?')) return;
+      state = defaultState();
+      saveState();
+      newChallenge();
+      toast('Voortgang gewist.');
+    }
+
+    function axisChartFrame(w=520,h=320, opts={}){
+      const left=58, right=24, top=35, bottom=50;
+      return {w,h,left,right,top,bottom,plotW:w-left-right,plotH:h-top-bottom,
+        x:v => left + (v - (opts.xMin ?? 0)) / ((opts.xMax ?? 100) - (opts.xMin ?? 0)) * (w-left-right),
+        y:v => top + ((opts.yMax ?? 100) - v) / ((opts.yMax ?? 100) - (opts.yMin ?? 0)) * (h-top-bottom)
+      };
+    }
+
+    function svgAxes(frame, xLabel='Q', yLabel='P', ticks={x:[], y:[]}){
+      const {w,h,left,top,plotW,plotH,x,y} = frame;
+      const gridY = ticks.y.map(t => `<line class="grid" x1="${left}" y1="${y(t)}" x2="${left+plotW}" y2="${y(t)}"/><text class="tick" x="${left-8}" y="${y(t)+4}" text-anchor="end">${t}</text>`).join('');
+      const gridX = ticks.x.map(t => `<line class="grid" x1="${x(t)}" y1="${top}" x2="${x(t)}" y2="${top+plotH}"/><text class="tick" x="${x(t)}" y="${top+plotH+20}" text-anchor="middle">${t}</text>`).join('');
+      return `${gridY}${gridX}<line class="axis" x1="${left}" y1="${top+plotH}" x2="${left+plotW}" y2="${top+plotH}"/><line class="axis" x1="${left}" y1="${top+plotH}" x2="${left}" y2="${top}"/><text class="label" x="${left+plotW}" y="${top+plotH+40}" text-anchor="end">${xLabel}</text><text class="label" x="${left-38}" y="${top+8}" text-anchor="middle">${yLabel}</text>`;
+    }
+
+    function svgBar(values, labels, opts={}){
+      const w=520,h=300,left=54,right=24,top=38,bottom=52;
+      const max = opts.max || Math.ceil(Math.max(...values)*1.18/10)*10;
+      const plotW=w-left-right, plotH=h-top-bottom;
+      const y=v => top + (max-v)/max*plotH;
+      const barW = Math.min(72, plotW/(values.length*1.9));
+      const gap = (plotW - barW*values.length) / (values.length+1);
+      const ticks = [0, max/4, max/2, max*3/4, max].map(n=>Math.round(n));
+      const bars = values.map((v,i)=>{
+        const x = left + gap + i*(barW+gap);
+        return `<rect x="${x}" y="${y(v)}" width="${barW}" height="${top+plotH-y(v)}" rx="10" fill="${opts.colors?.[i] || (i%2 ? '#00b894' : '#315dff')}"/><text class="label" x="${x+barW/2}" y="${top+plotH+24}" text-anchor="middle">${escapeHtml(labels[i])}</text><text class="tick" x="${x+barW/2}" y="${y(v)-8}" text-anchor="middle">${v}</text>`;
+      }).join('');
+      return `<div class="svg-wrap"><svg class="chart" viewBox="0 0 ${w} ${h}" width="${w}" height="${h}" role="img"><text class="chart-title" x="${left}" y="22">${escapeHtml(opts.title || 'Staafdiagram')}</text>${ticks.map(t=>`<line class="grid" x1="${left}" y1="${y(t)}" x2="${left+plotW}" y2="${y(t)}"/><text class="tick" x="${left-8}" y="${y(t)+4}" text-anchor="end">${t}</text>`).join('')}<line class="axis" x1="${left}" y1="${top+plotH}" x2="${left+plotW}" y2="${top+plotH}"/><line class="axis" x1="${left}" y1="${top+plotH}" x2="${left}" y2="${top}"/>${bars}<text class="label" x="${left-35}" y="${top+6}" text-anchor="middle">${escapeHtml(opts.yLabel || 'waarde')}</text></svg></div>`;
+    }
+
+    function svgLine(points, opts={}){
+      const w=540,h=310,left=60,right=26,top=40,bottom=52;
+      const years = points.map(p=>p.x);
+      const vals = points.map(p=>p.y);
+      const xMin = Math.min(...years), xMax = Math.max(...years), yMax = opts.max || Math.ceil(Math.max(...vals)*1.2/10)*10;
+      const frame = axisChartFrame(w,h,{xMin,xMax,yMin:0,yMax});
+      const path = points.map((p,i)=>`${i?'L':'M'} ${frame.x(p.x)} ${frame.y(p.y)}`).join(' ');
+      const dots = points.map(p=>`<circle cx="${frame.x(p.x)}" cy="${frame.y(p.y)}" r="6" fill="#315dff"/><text class="tick" x="${frame.x(p.x)}" y="${frame.y(p.y)-10}" text-anchor="middle">${p.y}</text>`).join('');
+      const ticksY = [0, yMax/4, yMax/2, yMax*3/4, yMax].map(n=>Math.round(n));
+      return `<div class="svg-wrap"><svg class="chart" viewBox="0 0 ${w} ${h}" width="${w}" height="${h}" role="img"><text class="chart-title" x="${left}" y="24">${escapeHtml(opts.title || 'Lijngrafiek')}</text>${svgAxes(frame, opts.xLabel || 'jaar', opts.yLabel || 'waarde', {x:years, y:ticksY})}<path d="${path}" fill="none" stroke="#315dff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>${dots}</svg></div>`;
+    }
+
+    function describeArc(cx, cy, r, startAngle, endAngle){
+      const start = polarToCartesian(cx, cy, r, endAngle);
+      const end = polarToCartesian(cx, cy, r, startAngle);
+      const largeArcFlag = endAngle - startAngle <= 180 ? '0' : '1';
+      return ['M', cx, cy, 'L', start.x, start.y, 'A', r, r, 0, largeArcFlag, 0, end.x, end.y, 'Z'].join(' ');
+    }
+    function polarToCartesian(cx, cy, r, angleInDegrees){
+      const angleInRadians = (angleInDegrees-90) * Math.PI / 180.0;
+      return {x: cx + (r * Math.cos(angleInRadians)), y: cy + (r * Math.sin(angleInRadians))};
+    }
+    function svgPie(shares, labels, opts={}){
+      const colors = opts.colors || ['#315dff','#00b894','#ffb020','#ef476f','#6e38ff'];
+      let start = 0;
+      const slices = shares.map((share,i)=>{
+        const end = start + share/100*360;
+        const mid = (start+end)/2;
+        const labelPos = polarToCartesian(150,150,68,mid);
+        const d = describeArc(150,150,105,start,end);
+        const out = `<path d="${d}" fill="${colors[i%colors.length]}" stroke="white" stroke-width="3"/><text x="${labelPos.x}" y="${labelPos.y}" fill="white" font-size="15" font-weight="900" text-anchor="middle" dominant-baseline="middle">${share}%</text>`;
+        start = end;
+        return out;
+      }).join('');
+      const legend = shares.map((s,i)=>`<rect x="295" y="${70+i*30}" width="16" height="16" rx="4" fill="${colors[i%colors.length]}"/><text class="label" x="318" y="${83+i*30}">${escapeHtml(labels[i])}: ${s}%</text>`).join('');
+      return `<div class="svg-wrap"><svg class="chart" viewBox="0 0 500 300" width="500" height="300" role="img"><text class="chart-title" x="28" y="28">${escapeHtml(opts.title || 'Cirkeldiagram')}</text>${slices}${legend}</svg></div>`;
+    }
+
+    function svgPQGraph({demand, supply, markerP=null, markerQ=null, title='Vraag en aanbod', xMax=100, yMax=100}){
+      const frame = axisChartFrame(540,330,{xMin:0,xMax,yMin:0,yMax});
+      const demandPath = `M ${frame.x(demand.q1)} ${frame.y(demand.p1)} L ${frame.x(demand.q2)} ${frame.y(demand.p2)}`;
+      const supplyPath = supply ? `M ${frame.x(supply.q1)} ${frame.y(supply.p1)} L ${frame.x(supply.q2)} ${frame.y(supply.p2)}` : '';
+      const supplyLine = supply ? `<path class="line-supply" d="${supplyPath}"/><text class="label" x="${frame.x(supply.q2)+8}" y="${frame.y(supply.p2)+15}">A</text>` : '';
+      const marker = markerP !== null ? `<line class="marker-line" x1="${frame.left}" y1="${frame.y(markerP)}" x2="${frame.left+frame.plotW}" y2="${frame.y(markerP)}"/><text class="callout-text" x="${frame.left+frame.plotW-8}" y="${frame.y(markerP)-8}" text-anchor="end">P=${markerP}</text>` : '';
+      const qMarker = markerQ !== null ? `<line class="marker-line" x1="${frame.x(markerQ)}" y1="${frame.top}" x2="${frame.x(markerQ)}" y2="${frame.top+frame.plotH}"/><text class="callout-text" x="${frame.x(markerQ)+5}" y="${frame.top+14}">Q=${markerQ}</text>` : '';
+      const xTicks = [0,10,20,30,40,50,60,70,80,90,100];
+      const yTicks = [0,10,20,30,40,50,60,70,80,90,100];
+      return `<div class="svg-wrap"><svg class="chart" viewBox="0 0 ${frame.w} ${frame.h}" width="${frame.w}" height="${frame.h}" role="img"><text class="chart-title" x="${frame.left}" y="25">${escapeHtml(title)}</text>${svgAxes(frame,'Q','P',{x:xTicks,y:yTicks})}<path class="line-demand" d="${demandPath}"/>${supplyLine}<text class="label" x="${frame.x(demand.q2)+8}" y="${frame.y(demand.p2)-4}">V</text>${marker}${qMarker}</svg></div>`;
+    }
+
+    function svgToTkGraph(p, fixed, variable, qMax=100){
+      const maxRev = p*qMax, maxCost = fixed + variable*qMax;
+      const yMax = Math.ceil(Math.max(maxRev, maxCost)*1.1/100)*100;
+      const frame = axisChartFrame(540,330,{xMin:0,xMax:qMax,yMin:0,yMax});
+      const revPath = `M ${frame.x(0)} ${frame.y(0)} L ${frame.x(qMax)} ${frame.y(maxRev)}`;
+      const costPath = `M ${frame.x(0)} ${frame.y(fixed)} L ${frame.x(qMax)} ${frame.y(maxCost)}`;
+      const breakQ = Math.round(fixed/(p-variable));
+      return `<div class="svg-wrap"><svg class="chart" viewBox="0 0 ${frame.w} ${frame.h}" width="${frame.w}" height="${frame.h}" role="img"><text class="chart-title" x="${frame.left}" y="25">TO-TK-grafiek</text>${svgAxes(frame,'Q','€',{x:[0,25,50,75,100],y:[0,Math.round(yMax/4),Math.round(yMax/2),Math.round(yMax*3/4),yMax]})}<path class="line-revenue" d="${revPath}"/><path class="line-cost" d="${costPath}"/><text class="label" x="${frame.x(qMax)-35}" y="${frame.y(maxRev)-8}">TO</text><text class="label" x="${frame.x(qMax)-35}" y="${frame.y(maxCost)+18}">TK</text><circle cx="${frame.x(breakQ)}" cy="${frame.y(p*breakQ)}" r="6" fill="#ffb020" stroke="white" stroke-width="3"/></svg></div>`;
+    }
+
+    function svgProfitRectangle(P, GTK, Q){
+      const frame = axisChartFrame(540,330,{xMin:0,xMax:100,yMin:0,yMax:100});
+      const xQ = frame.x(Q), yP = frame.y(P), yGTK = frame.y(GTK);
+      return `<div class="svg-wrap"><svg class="chart" viewBox="0 0 ${frame.w} ${frame.h}" width="${frame.w}" height="${frame.h}" role="img"><text class="chart-title" x="${frame.left}" y="25">Producentengrafiek</text>${svgAxes(frame,'Q','€',{x:[0,25,50,75,100],y:[0,25,50,75,100]})}<line x1="${frame.left}" y1="${yP}" x2="${frame.left+frame.plotW}" y2="${yP}" stroke="#315dff" stroke-width="4"/><path d="M ${frame.x(0)} ${frame.y(35)} C ${frame.x(25)} ${frame.y(25)}, ${frame.x(58)} ${frame.y(GTK)}, ${frame.x(100)} ${frame.y(72)}" fill="none" stroke="#ef476f" stroke-width="4"/><rect x="${frame.left}" y="${Math.min(yP,yGTK)}" width="${xQ-frame.left}" height="${Math.abs(yGTK-yP)}" fill="rgba(0,184,148,.22)" stroke="#00a878" stroke-width="2"/><line class="marker-line" x1="${xQ}" y1="${frame.top}" x2="${xQ}" y2="${frame.top+frame.plotH}"/><text class="label" x="${frame.left+frame.plotW-10}" y="${yP-8}" text-anchor="end">P</text><text class="label" x="${xQ+6}" y="${frame.top+15}">Q=${Q}</text><text class="label" x="${xQ-8}" y="${yGTK+18}" text-anchor="end">GTK</text></svg></div>`;
+    }
+
+    function makeNumeric(title, subtitle, skillsList, prompt, scenario, visual, expected, unit, steps, hint, rule, tolerance=0.15){
+      return {kind:'numeric', kindLabel:'rekenen', title, subtitle, skills:skillsList, prompt, scenario, visual, expected, unit, steps, hint, rule, tolerance,
+        evaluate(){
+          const raw = ($('#answerInput')?.value || '').replace(',', '.');
+          const val = Number(raw);
+          if(!Number.isFinite(val)) return {correct:false, note:'Vul een getal in. Gebruik eventueel één decimaal.', steps:this.steps};
+          const ok = Math.abs(val - this.expected) <= this.tolerance;
+          return {correct:ok, note: ok ? `Juist. Verwacht: ${round1(this.expected)} ${this.unit || ''}.` : `Jouw antwoord is ${round1(val)}. Het verwachte antwoord is ${round1(this.expected)} ${this.unit || ''}.`, steps:this.steps};
+        }};
+    }
+    function makeMC(title, subtitle, skillsList, prompt, scenario, visual, choices, correctIndex, steps, hint, rule){
+      return {kind:'mc', kindLabel:'meerkeuze', title, subtitle, skills:skillsList, prompt, scenario, visual, choices, correctIndex, steps, hint, rule,
+        evaluate(){
+          if(selectedChoice === null) return {correct:false, note:'Kies eerst één optie.', steps:[]};
+          const ok = selectedChoice === this.correctIndex;
+          return {correct:ok, note: ok ? 'Juist gekozen.' : `Niet juist. De juiste optie is: ${this.choices[this.correctIndex]}`, steps:this.steps};
+        }};
+    }
+    function makeGraphChoice(title, subtitle, skillsList, prompt, scenario, visual, choices, correctIndex, steps, hint, rule){
+      return {kind:'graphChoice', kindLabel:'grafiekkeuze', title, subtitle, skills:skillsList, prompt, scenario, visual, choices, correctIndex, steps, hint, rule,
+        evaluate(){
+          if(selectedChoice === null) return {correct:false, note:'Kies eerst één grafiek.', steps:[]};
+          const ok = selectedChoice === this.correctIndex;
+          return {correct:ok, note: ok ? 'Juist. De gekozen grafiek past bij de bronwaarden.' : `Niet juist. Kijk opnieuw naar de volgorde en hoogte van de waarden. De juiste optie is ${this.choices[this.correctIndex].label}.`, steps:this.steps};
+        }};
+    }
+    function makeSlider(title, subtitle, skillsList, prompt, scenario, visual, sliderHtml, getVal, expected, unit, steps, hint, rule, tolerance=1){
+      return {kind:'slider', kindLabel:'interactief', title, subtitle, skills:skillsList, prompt, scenario, visual, sliderHtml, getVal, expected, unit, steps, hint, rule, tolerance,
+        evaluate(){
+          const val = this.getVal();
+          const ok = Math.abs(val - this.expected) <= this.tolerance;
+          return {correct:ok, note: ok ? `Goed geplaatst: ongeveer ${round1(this.expected)} ${this.unit || ''}.` : `Je marker staat op ${round1(val)}. De juiste waarde is ongeveer ${round1(this.expected)} ${this.unit || ''}.`, steps:this.steps};
+        }};
+    }
+
+    function buildVerbalLineChallenge(){
+      const years = [2021, 2022, 2023, 2024];
+      const scenario = pick(['up','dip','peak','plateau']);
+      let data, correctText;
+      if(scenario === 'up'){
+        let v = rnd(80, 110);
+        data = [v];
+        for(let i=1; i<4; i++){ v += rnd(10, 22); data.push(v); }
+        correctText = 'De waarde stijgt elk jaar.';
+      } else if(scenario === 'dip'){
+        const k = rnd(0, 2);
+        let v = rnd(95, 125);
+        data = [v];
+        for(let i=1; i<4; i++){
+          v += (i === k+1) ? -rnd(10, 22) : rnd(8, 18);
+          data.push(v);
+        }
+        correctText = `De waarde daalt tussen ${years[k]} en ${years[k+1]}.`;
+      } else if(scenario === 'peak'){
+        const peakIdx = rnd(1, 2);
+        const peakValue = rnd(115, 145);
+        data = years.map((_, i) => {
+          if(i === peakIdx) return peakValue;
+          return peakValue - Math.abs(i - peakIdx) * rnd(10, 18);
+        });
+        correctText = `De hoogste waarde ligt in ${years[peakIdx]}.`;
+      } else {
+        let v = rnd(80, 100);
+        data = [v];
+        for(let i=1; i<3; i++){ v += rnd(8, 18); data.push(v); }
+        data.push(data[2]);
+        correctText = `Tussen ${years[2]} en ${years[3]} is er geen verandering.`;
+      }
+      const maxValue = Math.max(...data);
+      const maxYears = years.filter((_, i) => data[i] === maxValue);
+      const nonMaxYears = years.filter(y => !maxYears.includes(y));
+      const upPairs = [], changePairs = [];
+      for(let i=0; i<data.length-1; i++){
+        if(data[i+1] >= data[i]) upPairs.push([years[i], years[i+1]]);
+        if(data[i+1] !== data[i]) changePairs.push([years[i], years[i+1]]);
+      }
+      const distractors = [];
+      if(scenario !== 'up') distractors.push('De waarde stijgt elk jaar.');
+      if(upPairs.length){
+        const [y1,y2] = pick(upPairs);
+        distractors.push(`De waarde daalt tussen ${y1} en ${y2}.`);
+      }
+      if(nonMaxYears.length){
+        distractors.push(`De hoogste waarde ligt in ${pick(nonMaxYears)}.`);
+      }
+      if(changePairs.length){
+        const [y1,y2] = pick(changePairs);
+        distractors.push(`Tussen ${y1} en ${y2} is er geen verandering.`);
+      }
+      const filtered = distractors.filter(d => d !== correctText);
+      const chosen = shuffle(filtered).slice(0, 3);
+      const allChoices = shuffle([correctText, ...chosen]);
+      const correctIndex = allChoices.indexOf(correctText);
+      return {data, years, points: years.map((y,i) => ({x:y, y:data[i]})), correctText, choices: allChoices, correctIndex, scenario};
+    }
+
+    const generators = [
+      {id:'tablePct', required:['basis','pct','table','pctRepresent'], make:()=>{
+        const old = rnd(80,240), change = pick([-30,-25,-20,-15,15,20,25,30,40]);
+        const neu = Math.round(old*(1+change/100));
+        const item = pick(['omzet','afzet','kosten','bezoekers']);
+        const visual = `<table class="data-table"><tr><th>jaar</th><th>${item}</th></tr><tr><td>2024</td><td>${old}</td></tr><tr><td>2025</td><td>${neu}</td></tr></table>`;
+        return makeNumeric('Tabelmissie', 'Procentuele verandering uit een tabel', ['table','basis','pct','pctRepresent'], `Bereken de procentuele verandering van ${item} van 2024 naar 2025.`, 'De tabel geeft twee bronwaarden. Bepaal eerst oud en nieuw.', visual, change, '%', [`Oude waarde = ${old}.`, `Nieuwe waarde = ${neu}.`, `Verandering = ${neu} − ${old} = ${neu-old}.`, `(${neu-old} / ${old}) × 100% = ${round1(change)}%.`], 'De oude waarde is de noemer.', 'Oud → nieuw → verschil → delen door oud.', 0.2);
+      }},
+      {id:'barPct', required:['bar','basis','pct','pctRepresent'], make:()=>{
+        const old = rnd(60,180), neu = old + pick([18,24,30,36,42,-18,-24,-30]);
+        const expected = (neu-old)/old*100;
+        const visual = svgBar([old, neu], ['vorig jaar','dit jaar'], {title:'Verkoop per jaar', yLabel:'aantal'});
+        return makeNumeric('Staafdiagrammissie', 'Berekenen na grafieklezen', ['bar','basis','pct','pctRepresent'], 'Lees de waarden uit het staafdiagram en bereken de procentuele verandering.', 'De staven tonen verkoop in twee jaren. Gebruik de hoogte op de as, niet alleen de visuele indruk.', visual, round1(expected), '%', [`Oude waarde = ${old}.`, `Nieuwe waarde = ${neu}.`, `Verandering = ${neu-old}.`, `(${neu-old} / ${old}) × 100% = ${round1(expected)}%.`], 'Lees beide staafwaarden eerst als getallen op.', 'Bij staafdiagrammen: schaal controleren, waarden noteren, dan rekenen.', 0.25);
+      }},
+      {id:'linePct', required:['line','basis','pct','pctRepresent'], make:()=>{
+        const start = rnd(90,160), mid = start + rnd(-15,25), end = mid + rnd(18,50);
+        const years = [2022,2023,2024];
+        const points = [{x:years[0],y:start},{x:years[1],y:mid},{x:years[2],y:end}];
+        const expected = (end-start)/start*100;
+        return makeNumeric('Lijngrafiekmissie', 'Ontwikkeling berekenen', ['line','basis','pct','pctRepresent'], 'Bereken de procentuele verandering tussen 2022 en 2024.', 'De lijngrafiek toont een ontwikkeling door de tijd. Je gebruikt het beginpunt en eindpunt.', svgLine(points,{title:'Prijsindex product X', yLabel:'index'}), round1(expected), '%', [`Waarde in 2022 = ${start}.`, `Waarde in 2024 = ${end}.`, `Verandering = ${end-start}.`, `(${end-start} / ${start}) × 100% = ${round1(expected)}%.`], 'Gebruik niet 2023 als basis: de vraag loopt van 2022 naar 2024.', 'Bij tijdreeksen: beginjaar en eindjaar vastzetten.', 0.25);
+      }},
+      {id:'piePoint', required:['pie','pp'], make:()=>{
+        const oldShare = pick([18,20,22,25,30,35]);
+        const newShare = oldShare + pick([4,5,6,8,10]);
+        const choices = shuffle([`${newShare-oldShare} procentpunt`, `${newShare-oldShare}%`, `${round1((newShare-oldShare)/oldShare*100)} procentpunt`, `${round1((newShare-oldShare)/newShare*100)}%`]);
+        const correctText = `${newShare-oldShare} procentpunt`;
+        const correctIndex = choices.indexOf(correctText);
+        const visual = `<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">${svgPie([oldShare,100-oldShare], ['fiets','overig'], {title:'2024'}).replace('viewBox="0 0 500 300" width="500" height="300"','viewBox="0 0 500 300" width="360" height="216"')}${svgPie([newShare,100-newShare], ['fiets','overig'], {title:'2025'}).replace('viewBox="0 0 500 300" width="500" height="300"','viewBox="0 0 500 300" width="360" height="216"')}</div>`;
+        return makeMC('Cirkeldiagrammissie', 'Procentpunt of procent?', ['pie','pp'], 'Met hoeveel procentpunt is het aandeel fiets gestegen?', 'De cirkeldiagrammen tonen aandelen, geen absolute aantallen.', visual, choices, correctIndex, [`Aandeel in 2024 = ${oldShare}%.`, `Aandeel in 2025 = ${newShare}%.`, `Percentagepuntverandering = ${newShare}% − ${oldShare}% = ${newShare-oldShare} procentpunt.`], 'Procentpunt betekent: percentages van elkaar aftrekken.', 'Aandelen vergelijken: eerst bepalen of de vraag procentpunt of procentuele verandering vraagt.');
+      }},
+      {id:'pieAbsolute', required:['pie','pct','pctRepresent'], make:()=>{
+        const totalOld = rnd(700,1200), totalNew = totalOld + rnd(80,260);
+        const shareOld = pick([20,25,30,35]), shareNew = shareOld + pick([5,10,15]);
+        const absOld = totalOld*shareOld/100, absNew = totalNew*shareNew/100;
+        const expected = (absNew-absOld)/absOld*100;
+        const visual = `<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px"><div>${svgPie([shareOld,100-shareOld], ['deelmarkt A','overig'], {title:'2024'}).replace('viewBox="0 0 500 300" width="500" height="300"','viewBox="0 0 500 300" width="360" height="216"')}<p class="chart-note">Totaal 2024: ${totalOld}</p></div><div>${svgPie([shareNew,100-shareNew], ['deelmarkt A','overig'], {title:'2025'}).replace('viewBox="0 0 500 300" width="500" height="300"','viewBox="0 0 500 300" width="360" height="216"')}<p class="chart-note">Totaal 2025: ${totalNew}</p></div></div>`;
+        return makeNumeric('Cirkeldiagram + berekening', 'Absolute waarde reconstrueren', ['pie','basis','pct','pctRepresent'], 'Bereken de procentuele verandering van het absolute aantal in deelmarkt A.', 'Let op: je moet eerst aandeel × totaal berekenen. Daarna pas procentuele verandering.', visual, round1(expected), '%', [`2024 absoluut = ${shareOld}% × ${totalOld} = ${round1(absOld)}.`, `2025 absoluut = ${shareNew}% × ${totalNew} = ${round1(absNew)}.`, `Verandering = ${round1(absNew-absOld)}.`, `(${round1(absNew-absOld)} / ${round1(absOld)}) × 100% = ${round1(expected)}%.`], 'Het aandeel zelf is niet het absolute aantal.', 'Cirkeldiagram: aandeel → absolute waarde → procentuele verandering.', 0.35);
+      }},
+      {id:'indexChange', required:['index'], make:()=>{
+        const oldIndex = pick([104,108,112,116,120]);
+        const newIndex = oldIndex + pick([4,6,8,10,12]);
+        const expected = (newIndex-oldIndex)/oldIndex*100;
+        const visual = `<table class="data-table"><tr><th>jaar</th><th>indexcijfer</th></tr><tr><td>2024</td><td>${oldIndex}</td></tr><tr><td>2025</td><td>${newIndex}</td></tr></table>`;
+        return makeNumeric('Indexmissie', 'Indexpunten zijn niet hetzelfde als procenten', ['index','basis','pct'], 'Bereken de procentuele verandering van het indexcijfer.', 'De stijging in indexpunten is niet automatisch de procentuele stijging.', visual, round1(expected), '%', [`Index 2024 = ${oldIndex}.`, `Index 2025 = ${newIndex}.`, `Indexpuntverschil = ${newIndex-oldIndex}.`, `(${newIndex-oldIndex} / ${oldIndex}) × 100% = ${round1(expected)}%.`], 'De oude index is de noemer.', 'Bij indexcijfers: puntenverschil en procentuele verandering scheiden.', 0.25);
+      }},
+      {id:'graphChoiceBar', required:['table','bar'], make:()=>{
+        const values = [rnd(30,60), rnd(65,90), rnd(45,75)];
+        const labels = ['A','B','C'];
+        const table = `<table class="data-table"><tr><th>product</th><th>verkoop</th></tr>${values.map((v,i)=>`<tr><td>${labels[i]}</td><td>${v}</td></tr>`).join('')}</table>`;
+        const wrong1 = [values[1],values[0],values[2]], wrong2 = [values[0],values[2],values[1]], wrong3 = values.map(v=>Math.max(10, v-rnd(8,15)));
+        const opts = shuffle([
+          {label:'Grafiek 1', svg:svgBar(values,labels,{title:'Optie', max:100}), correct:true},
+          {label:'Grafiek 2', svg:svgBar(wrong1,labels,{title:'Optie', max:100}), correct:false},
+          {label:'Grafiek 3', svg:svgBar(wrong2,labels,{title:'Optie', max:100}), correct:false},
+          {label:'Grafiek 4', svg:svgBar(wrong3,labels,{title:'Optie', max:100}), correct:false}
+        ]);
+        const correctIndex = opts.findIndex(o => o.correct);
+        return makeGraphChoice('Grafiekdetective', 'Welke grafiek hoort bij de tabel?', ['table','bar'], 'Kies de staafgrafiek die precies bij de tabel past.', 'Let op volgorde én hoogte.', table, opts, correctIndex, [`Product A = ${values[0]}.`, `Product B = ${values[1]}.`, `Product C = ${values[2]}.`, 'De juiste grafiek heeft dezelfde volgorde en waarden.'], 'Controleer eerst de hoogste staaf en daarna de volgorde.', 'Tabel naar grafiek: waarden en labels moeten allebei kloppen.');
+      }},
+      {id:'verbalLine', required:['line'], make:()=>{
+        const c = buildVerbalLineChallenge();
+        const trendLabel = (a, b) => b > a ? 'stijging' : (b < a ? 'daling' : 'gelijk');
+        const steps = [
+          `2021 → 2022: ${trendLabel(c.data[0], c.data[1])}.`,
+          `2022 → 2023: ${trendLabel(c.data[1], c.data[2])}.`,
+          `2023 → 2024: ${trendLabel(c.data[2], c.data[3])}.`,
+          `Daarom past de uitspraak: "${c.correctText}".`
+        ];
+        return makeMC('Grafiek naar conclusie', 'Verbaal interpreteren', ['line'], 'Welke uitspraak past bij de lijngrafiek?', 'Lees de ontwikkeling per jaar. Kies de uitspraak die door de grafiek wordt ondersteund.', svgLine(c.points,{title:'Aantal klanten', yLabel:'aantal'}), c.choices, c.correctIndex, steps, 'Kijk per jaarpaar of de waarde stijgt, daalt of gelijk blijft. Vergelijk dat met elke uitspraak apart.', 'Grafiek naar taal: beschrijf alleen wat de grafiek echt toont.');
+      }},
+      {id:'interactiveBar', required:['bar'], make:()=>{
+        // Doelwaarde op multiples van 10 zodat de y-as ze leesbaar markeert.
+        const target = pick([20, 30, 40, 50, 60, 70, 80, 90, 100]);
+        const visual = `<div id="interactiveBarVisual">${interactiveBarSvg(target, 20)}</div><p class="chart-note">Lees de doellijn af op de y-as. Sleep daarna je staaf op die hoogte.</p>`;
+        const sliderHtml = `<div class="answer-box"><label for="sliderAnswer"><b>Staafhoogte</b></label><input id="sliderAnswer" type="range" min="0" max="120" value="20" step="1"><span id="sliderValue" class="tag">20</span></div>`;
+        return makeSlider('Interactieve staaf', 'Doelwaarde aflezen op y-as', ['bar'], 'Zet je staaf op dezelfde hoogte als de gestreepte doellijn.', 'Je oefent de koppeling tussen aswaarde en staafhoogte. De doelwaarde staat niet in de tekst — je leest hem af op de y-as.', visual, sliderHtml, ()=>Number($('#sliderAnswer').value), target, '', [`Volg de gestreepte doellijn naar links tot de y-as.`, `Daar lees je af: doelwaarde = ${target}.`, 'Zet je staaf op die hoogte.'], 'Volg de gestreepte lijn naar de y-as om de doelwaarde af te lezen.', 'Interactieve grafiek: hoogte aflezen via de y-as.', 2);
+      }},
+      {id:'profitTable', required:['profitTable'], make:()=>{
+        const p = rnd(8,14), fixed = rnd(40,90), variable = rnd(3,6);
+        const qs = [0,10,20,30,40,50,60];
+        const rows = qs.map(q => ({q, TO:p*q, TK:fixed+variable*q, TW:p*q-(fixed+variable*q)}));
+        const maxRow = rows.reduce((best,r)=>r.TW>best.TW?r:best, rows[0]);
+        const visual = `<table class="data-table"><tr><th>Q</th><th>TO</th><th>TK</th><th>TW</th></tr>${rows.map(r=>`<tr><td>${r.q}</td><td>${r.TO}</td><td>${r.TK}</td><td>${r.TW}</td></tr>`).join('')}</table>`;
+        return makeNumeric('Producentenmissie', 'Maximale winst uit tabel', ['profitTable','table'], 'Bij welke hoeveelheid Q is de totale winst maximaal?', 'De tabel geeft TO, TK en TW. Kies de Q met de hoogste TW.', visual, maxRow.q, 'stuks', [`Vergelijk de TW-kolom.`, `De hoogste TW is ${maxRow.TW}.`, `Die hoort bij Q = ${maxRow.q}.`], 'Zoek de hoogste winst, niet de hoogste omzet.', 'Winst uit tabel: TO − TK en daarna vergelijken.', 0.1);
+      }},
+      {id:'profitGraph', required:['profitGraph'], make:()=>{
+        const P = pick([50,55,60,65,70]);
+        const GTK = P - pick([8,10,12,15]);
+        const Q = pick([40,50,60,70]);
+        const expected = (P-GTK)*Q;
+        return makeNumeric('Winstrechthoek', 'Bereken winst uit producentengrafiek', ['profitGraph'], 'Bereken de totale winst die bij de rechthoek hoort.', 'De hoogte van de rechthoek is P − GTK. De breedte is Q.', svgProfitRectangle(P,GTK,Q), expected, 'euro', [`P = ${P}.`, `GTK = ${GTK}.`, `Winst per stuk = ${P-GTK}.`, `Q = ${Q}.`, `Totale winst = ${P-GTK} × ${Q} = ${expected}.`], 'Hoogte × breedte: (P − GTK) × Q.', 'Producentengrafiek: afstand lezen, dan oppervlakte berekenen.', 0.1);
+      }},
+      {id:'breakEvenGraph', required:['profitGraph'], make:()=>{
+        const p = pick([10,12,15,18]), variable = pick([4,5,6,8]);
+        const fixed = pick([120,150,180,240]);
+        const q = Math.round(fixed/(p-variable));
+        return makeNumeric('Break-even scanner', 'TO-TK-grafiek aflezen', ['profitGraph','line'], 'Bij welke hoeveelheid ligt het break-evenpunt?', 'Break-even betekent: TO = TK. In de grafiek is dat het snijpunt van de lijnen.', svgToTkGraph(p,fixed,variable,100), q, 'stuks', [`TO = ${p} × Q.`, `TK = ${fixed} + ${variable} × Q.`, `Break-even: ${p}Q = ${fixed} + ${variable}Q.`, `${p-variable}Q = ${fixed}, dus Q = ${q}.`], 'Zoek het snijpunt van TO en TK.', 'Break-even: lijnen snijden elkaar, winst is nul.', 1);
+      }},
+      {id:'elasticityTable', required:['elasticity'], make:()=>{
+        const P1 = pick([10,12,15,20]), P2 = P1 + pick([2,3,4,5]);
+        const Q1 = rnd(100,180), Q2 = Math.round(Q1 * (1 - pick([0.12,0.18,0.25,0.32])));
+        const dQ = (Q2-Q1)/Q1*100, dP = (P2-P1)/P1*100;
+        const ev = dQ/dP;
+        const visual = `<table class="data-table"><tr><th></th><th>prijs</th><th>gevraagde hoeveelheid</th></tr><tr><td>oud</td><td>${P1}</td><td>${Q1}</td></tr><tr><td>nieuw</td><td>${P2}</td><td>${Q2}</td></tr></table>`;
+        return makeNumeric('Elasticiteitsmissie', 'Twee procentuele veranderingen combineren', ['elasticity','basis','pctRepresent'], 'Bereken de prijselasticiteit van de vraag.', 'Gebruik Ev = procentuele verandering Q / procentuele verandering P.', visual, round1(ev), '', [`%ΔQ = (${Q2} − ${Q1}) / ${Q1} × 100% = ${round1(dQ)}%.`, `%ΔP = (${P2} − ${P1}) / ${P1} × 100% = ${round1(dP)}%.`, `Ev = ${round1(dQ)} / ${round1(dP)} = ${round1(ev)}.`], 'Bereken eerst twee procentuele veranderingen apart.', 'Elasticiteit: bronwaarden selecteren voor P én Q.', 0.12);
+      }},
+      {id:'demandSlider', required:['marketGraph'], make:()=>{
+        const P = pick([20,30,40,50,60,70,80]);
+        const expected = 100 - P; // demand: P = 100 - Q ⇒ Q = 100 - P
+        const graph = svgPQGraph({demand:{q1:0,p1:100,q2:100,p2:0}, supply:null, markerP:P, title:`Vraagcurve: lees Q af bij P = ${P}`});
+        const sliderHtml = `<div class="answer-box"><label for="sliderAnswer"><b>Q-marker</b></label><input id="sliderAnswer" type="range" min="0" max="100" value="20" step="1"><span id="sliderValue" class="tag">20</span></div><div id="sliderGraphUpdate" class="work-area" style="margin-top:12px"></div>`;
+        return makeSlider('P-Q navigator', 'Vraagcurve aflezen', ['marketGraph','line'], `Sleep de Q-marker tot je op de vraaglijn uitkomt bij P = ${P}.`, 'Volg de horizontale P-lijn naar rechts tot je de vraaglijn raakt. Daarvandaan ga je omlaag naar de Q-as.', graph, sliderHtml, ()=>Number($('#sliderAnswer').value), expected, 'Q', [`Bij P = ${P} hoort op de vraaglijn Q = ${expected}.`, 'Lees horizontaal vanaf de P-lijn naar de vraagcurve, en daarna omlaag naar Q.'], 'Volg de horizontale lijn bij P naar de vraaglijn, daarna omlaag naar de Q-as.', 'P-Q grafiek: prijs verticaal, hoeveelheid horizontaal.', 4);
+      }},
+      {id:'equilibriumSlider', required:['marketGraph'], make:()=>{
+        // Gecureerde set: demand altijd P = 100 - Q, supply varieert. Alle eindpunten integer in [0,100].
+        // Het werkelijke snijpunt is wiskundig gegarandeerd op (Q*, P*).
+        const setups = [
+          {supply:{q1:0,p1:9, q2:100,p2:39}, P:30, Q:70},
+          {supply:{q1:0,p1:10,q2:100,p2:60}, P:40, Q:60},
+          {supply:{q1:0,p1:0, q2:100,p2:100}, P:50, Q:50},
+          {supply:{q1:0,p1:48,q2:100,p2:78}, P:60, Q:40},
+          {supply:{q1:0,p1:64,q2:100,p2:84}, P:70, Q:30}
+        ];
+        const setup = pick(setups);
+        const demand = {q1:0,p1:100,q2:100,p2:0};
+        const graph = svgPQGraph({demand, supply:setup.supply, title:'Evenwicht zoeken'});
+        const sliderHtml = `<div class="answer-box"><label for="sliderAnswer"><b>P-marker</b></label><input id="sliderAnswer" type="range" min="0" max="100" value="30" step="1"><span id="sliderValue" class="tag">30</span></div><div id="sliderGraphUpdate" class="work-area" style="margin-top:12px"></div>`;
+        const challenge = makeSlider('Evenwichtszoeker', 'Snijpunt manipuleren', ['marketGraph'], 'Sleep de prijsmarker naar de evenwichtsprijs (waar vraag en aanbod elkaar snijden).', 'Evenwicht ligt waar vraag en aanbod elkaar snijden. Lees waar de blauwe en groene lijn kruisen.', graph, sliderHtml, ()=>Number($('#sliderAnswer').value), setup.P, 'P', [`De vraaglijn loopt van (0, 100) naar (100, 0).`, `De aanbodlijn loopt van (0, ${setup.supply.p1}) naar (100, ${setup.supply.p2}).`, `Snijpunt: P = ${setup.P} en Q = ${setup.Q}.`], 'Het snijpunt is waar de blauwe en groene lijn elkaar kruisen.', 'Evenwicht: vraag = aanbod.', 4);
+        challenge.meta = {demand, supply:setup.supply};
+        return challenge;
+      }}
+    ];
+
+    function interactiveBarSvg(target, current){
+      // Tekent een staafdiagram met een gestreepte doellijn (geen numerieke target in titel,
+      // geen waardelabel boven de staaf). De leerling leest de doelwaarde af van de y-as.
+      const w=520, h=300, left=54, right=24, top=38, bottom=52;
+      const max = 120;
+      const plotW = w-left-right, plotH = h-top-bottom;
+      const y = v => top + (max-v)/max*plotH;
+      const ticks = [0, 20, 40, 60, 80, 100, 120];
+      const barW = 70;
+      const barX = left + (plotW - barW)/2;
+      const gridAndTicks = ticks.map(t =>
+        `<line class="grid" x1="${left}" y1="${y(t)}" x2="${left+plotW}" y2="${y(t)}"/>` +
+        `<text class="tick" x="${left-8}" y="${y(t)+4}" text-anchor="end">${t}</text>`
+      ).join('');
+      const targetLine =
+        `<line x1="${left}" y1="${y(target)}" x2="${left+plotW}" y2="${y(target)}" stroke="#ef476f" stroke-width="3" stroke-dasharray="8 5"/>` +
+        `<text x="${left+plotW-8}" y="${y(target)-7}" text-anchor="end" fill="#ef476f" font-size="12" font-weight="900">doellijn</text>`;
+      const barTop = y(current);
+      const barH = Math.max(0, top + plotH - barTop);
+      const studentBar = barH > 0
+        ? `<rect x="${barX}" y="${barTop}" width="${barW}" height="${barH}" rx="10" fill="#315dff"/>`
+        : '';
+      return `<div class="svg-wrap"><svg class="chart" viewBox="0 0 ${w} ${h}" width="${w}" height="${h}" role="img">` +
+        `<text class="chart-title" x="${left}" y="22">Zet je staaf op de doellijn</text>` +
+        gridAndTicks +
+        `<line class="axis" x1="${left}" y1="${top+plotH}" x2="${left+plotW}" y2="${top+plotH}"/>` +
+        `<line class="axis" x1="${left}" y1="${top+plotH}" x2="${left}" y2="${top}"/>` +
+        targetLine +
+        studentBar +
+        `<text class="label" x="${barX+barW/2}" y="${top+plotH+24}" text-anchor="middle">jouw staaf</text>` +
+        `<text class="label" x="${left-35}" y="${top+6}" text-anchor="middle">waarde</text>` +
+        `</svg></div>`;
+    }
+
+    function attachSliderBehavior(){
+      const slider = $('#sliderAnswer');
+      const value = $('#sliderValue');
+      if(!slider || !value) return;
+      const update = () => {
+        value.textContent = slider.value;
+        const updateBox = $('#sliderGraphUpdate');
+        const barBox = $('#interactiveBarVisual');
+        if(barBox && current){
+          barBox.innerHTML = interactiveBarSvg(Number(current.expected), Number(slider.value));
+        }
+        if(updateBox && current && current.title === 'P-Q navigator'){
+          updateBox.innerHTML = svgPQGraph({demand:{q1:0,p1:100,q2:100,p2:0}, supply:null, markerP:Number(current.prompt.match(/P = (\d+)/)?.[1] || 50), markerQ:Number(slider.value), title:'Jouw Q-marker'});
+        }
+        if(updateBox && current && current.title === 'Evenwichtszoeker'){
+          const supply = current.meta?.supply || {q1:0,p1:0,q2:100,p2:100};
+          const demand = current.meta?.demand || {q1:0,p1:100,q2:100,p2:0};
+          updateBox.innerHTML = svgPQGraph({demand, supply, markerP:Number(slider.value), title:'Jouw P-marker'});
+        }
+      };
+      slider.addEventListener('input', update);
+      update();
+    }
+
+    const originalRenderChallenge = renderChallenge;
+    renderChallenge = function(){
+      originalRenderChallenge();
+      attachSliderBehavior();
+    };
+
+    document.addEventListener('DOMContentLoaded', () => {
+      $('#startCampaignBtn').addEventListener('click', () => { state.mode='campaign'; saveState(); newChallenge(); toast('Campagne gestart.'); });
+      $('#startTrainingBtn').addEventListener('click', () => { state.mode='training'; saveState(); newChallenge(); toast('Vrij trainen gestart.'); });
+      $('#openCoachBtn').addEventListener('click', openGeneralCoach);
+      $('#checkBtn').addEventListener('click', checkAnswer);
+      $('#hintBtn').addEventListener('click', showHint);
+      $('#explainCurrentBtn').addEventListener('click', explainCurrent);
+      $('#nextBtn').addEventListener('click', newChallenge);
+      $('#resetBtn').addEventListener('click', resetProgress);
+      $('#closeModalBtn').addEventListener('click', closeModal);
+      $('#modalBackdrop').addEventListener('click', e => { if(e.target.id === 'modalBackdrop') closeModal(); });
+      document.addEventListener('keydown', e => { if(e.key === 'Escape') closeModal(); });
+      $$('#sideTabs .tab').forEach(t => t.addEventListener('click', () => { state.activeTab = t.dataset.tab; saveState(); renderSidePanel(); }));
+      newChallenge();
+      if(!state.seenIntro){
+        state.seenIntro = true; saveState();
+        setTimeout(()=>openGeneralCoach(), 600);
+      }
+    });
+  </script>
+</body>
+</html>
