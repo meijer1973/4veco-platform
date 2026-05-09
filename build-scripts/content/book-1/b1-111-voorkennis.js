@@ -486,6 +486,8 @@ children.push(p("In het staafdiagram hieronder zie je de winst per hectare voor 
 
 const figExImage = embedAssetImage(ASSETS_DIR, "1.1.1_ex_1_doc", 420, 270, "1.1.1_ex_1", ALT["1.1.1_ex_1"]);
 if (figExImage) children.push(figExImage);
+children.push(p("Figuur: winst per hectare voor tarwe (€500), maïs (€350) en zonnebloemen (€300). De alt-tekst van de afbeelding bevat dezelfde informatie als deze caption.", { italics: true, color: C.gray, size: 18 }));
+children.push(sp(40));
 children.push(p("Voorbeeld van aflezen: trek vanaf de top van de maïs-staaf een denkbeeldige horizontale lijn naar de y-as. Daar lees je de winst per hectare van maïs af. Doe hetzelfde voor tarwe en zonnebloemen, en je kunt direct zien welk gewas het meest oplevert per hectare.", { italics: true, color: C.gray }));
 
 children.push(tipBox("Lees de as-labels altijd vóórdat je naar de staven kijkt. Zonder te weten wát de staaf meet (euro’s? aantallen? procenten?), kun je geen zinnige conclusie trekken."));
