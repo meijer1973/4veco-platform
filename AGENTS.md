@@ -107,6 +107,18 @@ For companion artifact **authoring and regeneration**, use `skills/econ-companio
 
 For companion artifact **review**, use `agents/econ-companion-visual-review.md`. It checks the rendered student experience, not just source files: visual-text synchronization, procedure fidelity, affordance, cognitive load, accessibility, and source-output parity. A companion surface with missing visual variants, conflicting visual/text examples, broken procedure steps, debug labels, or no next-step routing is not done. The skill above and this agent are aligned: the skill is the authoring spec, the agent is the closure gate.
 
+### Quality control: Part A and Part B have separate review records (L1.5V Bucket F)
+
+Every paragraph carries TWO review records and ONE quality-ref:
+
+- `${parNr}-review.md` — Part A textbook review (output of `econ-paragraph-review` skill).
+- `${parNr}-companion-visual-review.md` — Part B companion review (output of `econ-companion-visual-review` agent).
+- `${parNr}-quality-ref.yaml` (`schema_version: 2`) — single file with `partA:` block (asset state, content presence, Part A review verdict) and `companion:` block (Part B review verdict, hard-fail count, procedure step count, alt-text + checklist-route + artifact-tool-render flags, surface-by-surface state).
+
+`scripts/validate-paragraph.js` reads each review file by EXACT name (no `endsWith` filename match) and parses verdicts structurally from the `## 2. Verdict` block. Modes: `--mode part-a` gates Part A review only; `--mode part-b` gates companion review only; `--mode complete` aggregates both. A FAIL verdict in either review fails the corresponding mode. Schema details: `docs/L1.5V/F-plan-part-a-b-separation.md` §4.3.
+
+Every skill in `skills/` carries a `pipeline:` frontmatter field (Part A producer / Part B producer / shared infrastructure / Part A reviewer / Part A assembler / Part A orchestrator / Part B producer (umbrella)) so a glance at frontmatter tells you which pipeline owns the skill's output and which gate runs against it.
+
 ## Architectural principles
 
 Three decisions that govern what lives in this platform and how it evolves. These are not style preferences — they determine which proposals fit the project and which are reasoning backwards into a dying direction.

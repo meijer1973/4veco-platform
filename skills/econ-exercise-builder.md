@@ -1,6 +1,7 @@
 ---
 name: econ-exercise-builder
 description: "Generates a complete exercise set with answer models for a single textbook paragraph, based on the course blueprint. Produces exercises.md and answers.md with worked examples, guided practice (dual coding fading), independent practice, interleaving exercises, the target exercise, and a verdiepingsopdracht. Total exercise time budget: 40-60 minutes of student work. Use this skill when the user provides a paragraph spec from the blueprint and wants exercises generated. Trigger when the user mentions oefeningen maken, opgavenset, antwoordmodel, doeloefening uitwerken, or exercise generation for a specific paragraph. Always use in combination with econ-didactiek (pedagogical principles) and economic-graph (for graph specifications within exercises)."
+pipeline: "Part A producer"
 ---
 
 # Economics Exercise Builder

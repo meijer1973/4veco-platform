@@ -1,6 +1,7 @@
 ---
 name: manage-references
 description: "Canonical policy + operations reference for the references/ folder — the platform's data backbone. Lists every rule that governs external/authored/machine files, every CLI script that edits or extracts them, and every refresh path. Trigger when the user mentions references, syllabus, eindtermen, catalog, unit-add, unit-update, unit-deprecate, exam_codes, aspects, terms, schema, micro-teaching-units, extract-eindtermen, derive-exam-codes, external/authored/machine, or asks any question about what rules govern data files under references/. This skill is the single authoritative home for policy; if a rule isn't here, it isn't policy — it's a local decision that needs lifting."
+pipeline: "shared infrastructure"
 ---
 
 # Manage-References Skill

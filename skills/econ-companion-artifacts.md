@@ -1,6 +1,7 @@
 ---
 name: econ-companion-artifacts
 description: "Authoring + regeneration spec for student-facing companion artifacts (uitleg voorkennis, uitleg vaardigheden, begeleide inoefening, stappenplan, instapquiz, redeneer-spel, nieuws-detective, differentiated exercise handouts, and matching DOCX/PPTX/PDF companion outputs). Defines the source-first rule, required pre-checks, procedure-fidelity rules, visual-as-instruction rules, dual coding, cognitive load, scaffold appropriateness, source-output parity, affordance/routing, terminology, and the self-review-before-delivery gate. ALWAYS use this skill when creating, regenerating, or fixing any companion artifact in the surface family above. Pair with the matching builder skill (`econ-explainer-docs`, `econ-exercise-builder`, `econ-pptx-templates`, `econ-word-templates`, `economic-graph`, `econ-nieuws-exercise`, etc.) and run `agents/econ-companion-visual-review.md` as the closure gate."
+pipeline: "Part B producer (umbrella; per-format Part B skills inherit; if a per-format skill conflicts on student-facing rules, this skill wins)"
 ---
 
 # Companion Learning Artifacts Skill

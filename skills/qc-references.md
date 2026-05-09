@@ -1,6 +1,7 @@
 ---
 name: qc-references
 description: Run the catalog quality-control pipeline against references/machine/micro-teaching-units.md. Spawns subagent tests defined in references/qc-prompts/, walks the resulting trees, writes a timestamped report under reports/qc/, and appends one row to reports/qc/SUMMARY.md. Trigger when the user invokes /qc-references, asks for a "QC run", "stress test the catalog", "audit the references folder", "check catalog quality", or wants to verify the references-data integrity beyond what the deterministic reports (dag-integrity, unresolved-refs, terminology-drift) cover.
+pipeline: "shared infrastructure"
 ---
 
 # qc-references — Catalog Quality-Control Pipeline

@@ -1,6 +1,7 @@
 ---
 name: econ-nieuws-exercise
 description: "Template and guidelines for creating 'nieuws met visual' exercises — short, motivating introductory assignments based on recent Dutch news for economics VWO lessons. Each document is a 2-page printable handout: page 1 has a headline, visual, article, and questions; page 2 has the answer key. Use this skill whenever creating a nieuws met visual docx, a news-based exercise, or an introductory assignment for an economics lesson."
+pipeline: "Part B producer"
 ---
 
 # Economics News Exercise Skill v1

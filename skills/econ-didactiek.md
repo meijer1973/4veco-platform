@@ -1,6 +1,7 @@
 ---
 name: econ-didactiek
 description: "General didactic skill for economics education (bovenbouw vwo/havo). Provides principles and decision rules for differentiation, scaffolding, cognitive load management, dual coding, interleaving, misconception handling, Bloom's taxonomy, and question design — independent of output format. Use this skill whenever making pedagogical choices about any economics material: worksheets, presentations, textbooks, games, quizzes, or assessments. Trigger when the user mentions didactiek, scaffolding, differentiatie, begeleide inoefening, verdieping, cognitieve belasting, dual coding, interleaving, misconceptions, Bloom, toetsmatrijs, or any pedagogical discussion about economics materials. This skill defines WHAT to teach and WHY; product-specific builder skills define HOW to package it."
+pipeline: "shared infrastructure"
 ---
 
 # Economie Didactiek Skill

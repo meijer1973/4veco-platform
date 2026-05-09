@@ -1,6 +1,7 @@
 ---
 name: econ-explainer-docs
 description: "Complete recipe for creating 'uitleg voorkennis' and 'uitleg vaardigheden' Word documents for economics education. Covers content architecture, section structure, domain assignment, content writing guidelines, and quality standards. Use this skill whenever building explainer documents for any paragraph. Always use together with econ-word-templates (for components) and economic-graph (for any embedded visuals)."
+pipeline: "Part B producer"
 ---
 
 # Explainer Word Documents Skill

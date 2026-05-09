@@ -1,6 +1,7 @@
 ---
 name: econ-book-builder
 description: "Assembles completed chapters (hoofdstuk.md + _assets/) from 4veco-lessen into a single printable textbook PDF with cover, colofon, voorwoord, volledige inhoudsopgave, begrippenlijst, and formuleoverzicht. Stitch-only: does not rebuild chapters. Fails clearly if a chapter is missing. Note: Boek N and Module N are completely different products (different repos, different freeze status); this skill builds books, not modules. Use this skill when the user wants to build a boek, leerboek, or textbook PDF. Trigger when the user mentions boek bouwen, book builder, boek samenstellen, Boek N, build-book, or assemble textbook. Always use in combination with econ-chapter-assembler (prerequisite) and econ-pdf-builder (styling)."
+pipeline: "Part A orchestrator"
 ---
 
 # Economics Book Builder

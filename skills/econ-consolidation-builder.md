@@ -1,6 +1,7 @@
 ---
 name: econ-consolidation-builder
 description: "Builds consolidation exercises and test exercises with source material (constructed contexts, data tables, graphs, flow diagrams, pay-off matrices) for economics education. Exercises combine multiple skills in exam-style opgaven: a single context with 4-6 escalating questions. Also reusable for building tests and test preparation chapters. Use this skill when the user mentions consolidatie, consolidation, bronmateriaal, exam-style, toetsoefeningen, toetsvoorbereiding, opgave ontwerpen, or when building exercises that integrate multiple skills around source material. Always use in combination with econ-didactiek (pedagogy), economic-graph (graphs), and econ-pdf-builder (PDF export)."
+pipeline: "Part A producer"
 ---
 
 # Economics Consolidation Builder

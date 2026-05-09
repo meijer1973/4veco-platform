@@ -1,6 +1,7 @@
 ---
 name: economic-graph
 description: "Technical specifications for creating economically correct, geometrically precise SVG graphs and visuals for economics education. Covers supply/demand diagrams, cost curves (MK/GTK/GVK), market equilibrium, surplus areas, tax/subsidy shifts, flowcharts, and infographics. Use this skill whenever a graph, diagram, or visual explanation is needed in presentations, Word documents, or HTML files for economics VWO lessons."
+pipeline: "shared infrastructure"
 ---
 
 # Economic Graph Skill v2
