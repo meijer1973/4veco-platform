@@ -622,7 +622,21 @@ def generate_html(data, para_number, para_name, asset_prefix="../_assets", share
         dcls = shared_domain_class(s['domain'])
 
         content_html = ''
+        list_buf = []
+
+        def _flush_list_buf():
+            nonlocal content_html, list_buf
+            if list_buf:
+                items = ''.join(f'          <li>{esc(it)}</li>\n' for it in list_buf)
+                content_html += f'        <ul class="section-list">\n{items}        </ul>\n'
+                list_buf = []
+
         for etype, edata in s['content']:
+            if etype == 'list_item':
+                list_buf.append(edata)
+                continue
+            # Any non-list element flushes the buffered list first.
+            _flush_list_buf()
             if etype == 'heading2':
                 content_html += f'        <h3 class="sub-heading">{esc(edata)}</h3>\n'
             elif etype == 'paragraph':
@@ -651,6 +665,9 @@ def generate_html(data, para_number, para_name, asset_prefix="../_assets", share
                 for label, value in edata:
                     content_html += f'            <tr><td>{esc(label)}</td><td>{esc(value)}</td></tr>\n'
                 content_html += '          </tbody>\n        </table>\n'
+
+        # Flush any list items that ended the section.
+        _flush_list_buf()
 
         sections_html += f'''
       <section class="section" id="sectie-{s['nr']}">
