@@ -616,7 +616,10 @@ def generate_html(data, para_number, para_name, asset_prefix="../_assets", share
       </section>
 '''
 
-    # Checklist
+    # Checklist + next-step routing.
+    # Per the econ-companion-artifacts skill: a checklist without next-step
+    # routing is incomplete. After the checklist, emit a "Wat nu?" block that
+    # routes the student to the next appropriate artifact.
     checklist_html = ''
     if checklist:
         items = ''
@@ -626,12 +629,23 @@ def generate_html(data, para_number, para_name, asset_prefix="../_assets", share
           <label for="check{i}">{esc(item)}</label>
         </div>
 '''
+        # Paragraph-local route targets. URL-encode spaces and the en-dash.
+        prefix = f'{para_number} {para_name}'.replace(' ', '%20').replace('–', '%E2%80%93')
+        href_vaardigheden = f'{prefix}%20%E2%80%93%20uitleg%20vaardigheden.html'
+        href_presentatie = f'{prefix}%20%E2%80%93%20presentatie.pptx'
+        href_instapquiz = f'{prefix}%20%E2%80%93%20instapquiz.html'
+        route_html = f'''        <div class="checklist-route">
+          <h3 class="route-title">Wat nu?</h3>
+          <p class="route-line route-yes"><strong>Alles afgevinkt?</strong> Ga verder naar <a href="{href_vaardigheden}">Uitleg vaardigheden</a> of bekijk de <a href="{href_presentatie}">Presentatie</a>.</p>
+          <p class="route-line route-no"><strong>Nog niet?</strong> Lees de relevante sectie hierboven opnieuw, doe daarna de <a href="{href_instapquiz}">Instapquiz</a>.</p>
+        </div>
+'''
         checklist_html = f'''
       <div class="checklist-section">
         <div class="checklist-title">Checklist voorkennis</div>
         <p class="checklist-sub">Controleer of je de volgende zaken beheerst voordat je aan de paragraaf begint:</p>
 {items}
-      </div>
+{route_html}      </div>
 '''
 
     # Grid columns for hero cards

@@ -1186,6 +1186,38 @@ html[data-theme="dark"] .section-num.bg-grafisch   { box-shadow: inset 0 0 0 1px
   margin-bottom: 12px;
 }
 
+/* ── Checklist routing block (Wat nu?) ─────────────────────────────── */
+.checklist-route {
+  margin-top: 20px;
+  padding: 16px 18px;
+  background: var(--bg-lift);
+  border-left: 3px solid var(--accent);
+  border-radius: 6px;
+}
+.checklist-route .route-title {
+  margin: 0 0 8px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: 0.4px;
+}
+.checklist-route .route-line {
+  margin: 4px 0;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--ink-soft);
+}
+.checklist-route .route-line a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.checklist-route .route-line a:hover {
+  text-decoration-thickness: 2px;
+}
+.checklist-route .route-yes strong { color: var(--ink); }
+.checklist-route .route-no strong { color: var(--ink); }
+
 /* ── Section list (worked-example steps, bullet scaffolds) ─────────── */
 .section-list {
   margin: 0 0 14px 22px;
