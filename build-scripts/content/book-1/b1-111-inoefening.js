@@ -423,7 +423,7 @@ const oefeningen = [
       {
         label: "Vraag 5b — Beste combinatie beredeneren",
         vraagText:
-          "Welke combinatie levert Luuk de hoogste totale waarde op? Laat je berekening zien en beargumenteer je keuze met de 3 stappen van economisch denken.",
+          "Welke combinatie levert Luuk de hoogste totale waarde op? Laat je berekening zien en beargumenteer je keuze met de 4 stappen van economisch denken (B02).",
         thinkingSteps: [
           "Stap 1: welke combinaties zijn haalbaar (binnen €30)?",
           "Stap 2: wat is de totale waarde van elke haalbare combinatie?",
@@ -454,7 +454,7 @@ const oefeningen = [
           [{ text: "Beste keuze: A + C + D (bioscoop + pizza + streaming).", bold: true }],
         ],
         explanation:
-          "Dit laat zien dat de schaarse middel (€30) niet één maar meerdere keuzes afdwingt. Je past dezelfde 3 stappen toe, maar nu op combinaties. De alternatieve kosten zijn de waarde van de best haalbare niet-gekozen combinatie (€38), niet de som van alle opties die je niet kiest.",
+          "Dit laat zien dat de schaarse middel (€30) niet één maar meerdere keuzes afdwingt. Je past dezelfde 4 stappen toe, maar nu op combinaties. De alternatieve kosten zijn de waarde van de best haalbare niet-gekozen combinatie (€38), niet de som van alle opties die je niet kiest.",
       },
     ],
   },

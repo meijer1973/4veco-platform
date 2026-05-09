@@ -7,7 +7,7 @@
  * progressive disclosure, speaker notes as content container).
  *
  * 9 slides: title · narratief (Lisa) · schaarste · alternatieve kosten ·
- * economisch denken (3 stappen) · uitgewerkt voorbeeld stap 2 ·
+ * economisch denken (4 stappen B02) · uitgewerkt voorbeeld stap 2 ·
  * uitgewerkt voorbeeld stap 3 · samenvatting · bridge-afsluiting.
  *
  * Speaker notes follow the Vraag / Uitleg / Pitfall / Overgang template.
@@ -258,54 +258,56 @@ async function build() {
       "          • Alternatieve kosten — het leesplezier dat ze laat liggen.\n" +
       "          Benadruk: niet het geldbedrag, maar wat ze misloopt.\n" +
       "Pitfall:  Alternatieve kosten ≠ de prijs die je betaalt. Dat is de gewone uitgave.\n" +
-      "Overgang: Hoe vind je bij élke keuze systematisch de alternatieve kosten? In drie stappen."
+      "Overgang: Hoe vind je bij élke keuze systematisch de alternatieve kosten? In vier stappen."
     );
   }
 
   // ────────────────────────────────────────────────────────────────────
-  // DIA 5 — Economisch denken: 3-stappen procedure + fig_3
+  // DIA 5 — Economisch denken: 4-stappen procedure (B02) + fig_3
   // ────────────────────────────────────────────────────────────────────
   {
     const s = editorialSlide(pres, {
       kicker: "Kernbegrip 3",
-      title: "Economisch denken in drie stappen",
+      title: "Economisch denken in vier stappen",
     });
     s.addNotes(
       "Vraag:    Als je voor een lastige keuze staat, waarmee begin je?\n" +
-      "Uitleg:   Drie stappen, altijd dezelfde volgorde: (1) welke opties, (2) wat levert elke optie op, (3) wat geef je op. " +
+      "Uitleg:   Vier stappen, altijd dezelfde volgorde: (1) benoem alternatieven, (2) bereken opbrengst per alternatief, " +
+      "(3) rangschik — beste niet-gekozen = alternatieve kosten, (4) bereken nettowaarde = opbrengst − alternatieve kosten. " +
       "Dit is het schema dat in elk tentamen en elke opgave terugkomt.\n" +
-      "Pitfall:  —\n" +
+      "Pitfall:  Stap 4 wordt vaak overgeslagen. Zonder stap 4 weet je wel de alternatieve kosten, maar niet of de keuze achteraf goed uitpakte.\n" +
       "Overgang: We passen het meteen toe op een boer met 10 hectare."
     );
 
-    // LEFT: drie stappen in genummerde blokken
+    // LEFT: vier stappen in genummerde blokken (compactere block-hoogte dan de eerdere 3-blok layout)
     const steps = [
-      { n: "01", kop: "Welke alternatieven zijn er?",         sub: "Welke opties heb je?" },
-      { n: "02", kop: "Wat levert elk alternatief op?",        sub: "Waarde of opbrengst per optie." },
-      { n: "03", kop: "Wat geef je op?",                       sub: "De alternatieve kosten van je keuze." },
+      { n: "01", kop: "Benoem alternatieven",     sub: "Welke opties heb je?" },
+      { n: "02", kop: "Bereken opbrengsten",      sub: "Wat levert elk alternatief op?" },
+      { n: "03", kop: "Rangschik (alt. kosten)",  sub: "Beste niet-gekozen = alternatieve kosten." },
+      { n: "04", kop: "Bereken nettowaarde",      sub: "Opbrengst − alternatieve kosten." },
     ];
     steps.forEach((st, i) => {
-      const y = 2.0 + i * 1.05;
-      s.addShape("rect", { x: 0.5, y, w: 5, h: 0.95,
+      const y = 1.85 + i * 0.78;
+      s.addShape("rect", { x: 0.5, y, w: 5, h: 0.72,
         fill: { color: PC.chalk }, line: { color: PC.indigo, width: 1 } });
-      s.addShape("rect", { x: 0.5, y, w: 0.08, h: 0.95, fill: { color: PC.coral } });
+      s.addShape("rect", { x: 0.5, y, w: 0.08, h: 0.72, fill: { color: PC.coral } });
       s.addText(st.n, {
-        x: 0.65, y: y + 0.15, w: 0.9, h: 0.65,
-        fontFace: FONT_DISPLAY, fontSize: 30, bold: true, color: PC.coral, charSpacing: -0.5,
+        x: 0.65, y: y + 0.08, w: 0.9, h: 0.55,
+        fontFace: FONT_DISPLAY, fontSize: 26, bold: true, color: PC.coral, charSpacing: -0.5,
       });
       s.addText(st.kop, {
-        x: 1.65, y: y + 0.1, w: 3.75, h: 0.4,
-        fontFace: FONT_DISPLAY, fontSize: 18, bold: true, color: PC.indigo, valign: "middle",
+        x: 1.65, y: y + 0.04, w: 3.75, h: 0.34,
+        fontFace: FONT_DISPLAY, fontSize: 16, bold: true, color: PC.indigo, valign: "middle",
       });
       s.addText(st.sub, {
-        x: 1.65, y: y + 0.5, w: 3.75, h: 0.4,
-        fontFace: FONT_SERIF, fontSize: 14, italic: true, color: PC.smoke, valign: "middle",
+        x: 1.65, y: y + 0.36, w: 3.75, h: 0.32,
+        fontFace: FONT_SERIF, fontSize: 12, italic: true, color: PC.smoke, valign: "middle",
       });
     });
 
-    // RIGHT: figuur 3
+    // RIGHT: figuur 3 (4-stappen flowchart)
     s.addImage({ data: imgs.fig3, x: 5.65, y: 2.0, w: 3.85, h: 2.6 });
-    s.addText("Figuur 3 · het keuzeproces in drie stappen", {
+    s.addText("Figuur 3 · het keuzeproces in vier stappen", {
       x: 5.65, y: 4.6, w: 3.85, h: 0.25,
       ...T.captionLight, fontSize: 10, align: "center",
     });
@@ -415,7 +417,7 @@ async function build() {
     const items = [
       { n: "01", t: "Schaarste ontstaat wanneer behoeften groter zijn dan middelen — daardoor moet je kiezen." },
       { n: "02", t: "Elke keuze heeft alternatieve kosten: de opbrengst van het beste alternatief dat je opgeeft." },
-      { n: "03", t: "Economisch denken = drie stappen: (1) alternatieven, (2) opbrengsten, (3) wat geef je op?" },
+      { n: "03", t: "Economisch denken = vier stappen: (1) alternatieven, (2) opbrengsten, (3) rangschik (alt. kosten), (4) nettowaarde." },
       { n: "04", t: "Alternatieve kosten ≠ de prijs die je betaalt — het gaat om wat je misloopt." },
       { n: "05", t: "Schaarste geldt voor iedereen: scholier, boer, overheid." },
     ];

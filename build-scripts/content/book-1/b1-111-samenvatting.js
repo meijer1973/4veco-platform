@@ -6,7 +6,7 @@
  *
  *   Rij 1 | Wat is schaarste? (def + fig_1)      | Schaarste in de praktijk
  *   Rij 2 | Alternatieve kosten (def + fig_2)    | Pitfalls (warning)
- *   Rij 3 | Economisch denken 3-stappen (fig_3)  | Mini-worked-example (we_1)
+ *   Rij 3 | Economisch denken 4 stappen B02 (fig_3)  | Mini-worked-example (we_1)
  *
  * Domain colours:
  *   - Row 1   teal   (economisch / schaarste-domein)
@@ -308,31 +308,37 @@ function cell_R2C2() {
   ]);
 }
 
-// ── Rij 3 · Kolom 1 — Economisch denken, 3-stappen (green + fig_3) ──
+// ── Rij 3 · Kolom 1 — Economisch denken, 4 stappen (B02, green + fig_3) ──
 function cell_R3C1() {
   return coloredCell(C.green, C.greenLt, [
-    heading("Economisch denken — 3 stappen", C.greenDk),
-    new Paragraph({ spacing: { after: 25 }, children: [
-      new TextRun({ text: "1.  ", font: "Arial", size: 17, bold: true, color: C.greenDk }),
-      new TextRun({ text: "Welke ", font: "Arial", size: 17, color: C.dark }),
-      new TextRun({ text: "alternatieven", font: "Arial", size: 17, bold: true, color: C.dark }),
-      new TextRun({ text: " zijn er?", font: "Arial", size: 17, color: C.dark }),
+    heading("Economisch denken — 4 stappen (B02)", C.greenDk),
+    new Paragraph({ spacing: { after: 18 }, children: [
+      new TextRun({ text: "1.  ", font: "Arial", size: 16, bold: true, color: C.greenDk }),
+      new TextRun({ text: "Benoem alle ", font: "Arial", size: 16, color: C.dark }),
+      new TextRun({ text: "alternatieven", font: "Arial", size: 16, bold: true, color: C.dark }),
+      new TextRun({ text: ".", font: "Arial", size: 16, color: C.dark }),
     ]}),
-    new Paragraph({ spacing: { after: 25 }, children: [
-      new TextRun({ text: "2.  ", font: "Arial", size: 17, bold: true, color: C.greenDk }),
-      new TextRun({ text: "Wat ", font: "Arial", size: 17, color: C.dark }),
-      new TextRun({ text: "levert", font: "Arial", size: 17, bold: true, color: C.dark }),
-      new TextRun({ text: " elk alternatief op?", font: "Arial", size: 17, color: C.dark }),
+    new Paragraph({ spacing: { after: 18 }, children: [
+      new TextRun({ text: "2.  ", font: "Arial", size: 16, bold: true, color: C.greenDk }),
+      new TextRun({ text: "Bereken de ", font: "Arial", size: 16, color: C.dark }),
+      new TextRun({ text: "opbrengst", font: "Arial", size: 16, bold: true, color: C.dark }),
+      new TextRun({ text: " per alternatief.", font: "Arial", size: 16, color: C.dark }),
     ]}),
-    new Paragraph({ spacing: { after: 40 }, children: [
-      new TextRun({ text: "3.  ", font: "Arial", size: 17, bold: true, color: C.greenDk }),
-      new TextRun({ text: "Wat ", font: "Arial", size: 17, color: C.dark }),
-      new TextRun({ text: "geef je op", font: "Arial", size: 17, bold: true, color: C.dark }),
-      new TextRun({ text: " als je kiest? (= alternatieve kosten)", font: "Arial", size: 17, color: C.dark }),
+    new Paragraph({ spacing: { after: 18 }, children: [
+      new TextRun({ text: "3.  ", font: "Arial", size: 16, bold: true, color: C.greenDk }),
+      new TextRun({ text: "Rangschik. Het beste niet-gekozen alternatief = ", font: "Arial", size: 16, color: C.dark }),
+      new TextRun({ text: "alternatieve kosten", font: "Arial", size: 16, bold: true, color: C.dark }),
+      new TextRun({ text: ".", font: "Arial", size: 16, color: C.dark }),
+    ]}),
+    new Paragraph({ spacing: { after: 30 }, children: [
+      new TextRun({ text: "4.  ", font: "Arial", size: 16, bold: true, color: C.greenDk }),
+      new TextRun({ text: "Vergelijk: ", font: "Arial", size: 16, color: C.dark }),
+      new TextRun({ text: "nettowaarde", font: "Arial", size: 16, bold: true, color: C.dark }),
+      new TextRun({ text: " = opbrengst − alternatieve kosten.", font: "Arial", size: 16, color: C.dark }),
     ]}),
     embeddedImage("1.1.1_fig_3_summary.png", 230, 133, "1.1.1_fig_3", ALT["1.1.1_fig_3"]),
-    bodyLine("Alternatieven → Opbrengsten → Wat geef je op?",
-      { size: 14, color: C.gray, italics: true, after: 0 }),
+    bodyLine("Alternatieven → Opbrengsten → Rangschik (alt. kosten) → Nettowaarde",
+      { size: 13, color: C.gray, italics: true, after: 0 }),
   ]);
 }
 
