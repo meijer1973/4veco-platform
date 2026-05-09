@@ -732,6 +732,11 @@ def generate_html(data, para_number, para_name, asset_prefix="../_assets", share
 '''
 
     # Checklist
+    # Checklist + next-step routing.
+    # Per the econ-companion-artifacts skill: a checklist without next-step
+    # routing is incomplete. After the checklist, emit a "Wat nu?" block that
+    # routes the student to the next appropriate artifact based on what they
+    # were unable to check.
     checklist_html = ''
     if checklist:
         items = ''
@@ -741,12 +746,27 @@ def generate_html(data, para_number, para_name, asset_prefix="../_assets", share
           <label for="check{i}">{esc(item)}</label>
         </div>
 '''
+        # Paragraph-local route targets per the skill's route table.
+        prefix = f'{para_number} {para_name}'.replace(' ', '%20').replace('–', '%E2%80%93')
+        href_stappenplan = f'{prefix}%20%E2%80%93%20stappenplan.html'
+        href_bi = f'{prefix}%20%E2%80%93%20begeleide%20inoefening.html'
+        href_basis = f'{prefix}%20%E2%80%93%20basis%20%E2%80%93%20vragen.docx'
+        href_midden = f'{prefix}%20%E2%80%93%20midden%20%E2%80%93%20vragen.docx'
+        href_verrijking = f'{prefix}%20%E2%80%93%20verrijking%20%E2%80%93%20vragen.docx'
+        route_html = f'''        <div class="checklist-route">
+          <h3 class="route-title">Wat nu?</h3>
+          <p class="route-line route-no"><strong>De stappen niet zelfstandig?</strong> Doorloop het <a href="{href_stappenplan}">Stappenplan</a> nog eens.</p>
+          <p class="route-line route-no"><strong>Voorbeeld lukt, zelfstandig nog niet?</strong> Werk de <a href="{href_bi}">Begeleide inoefening</a> door.</p>
+          <p class="route-line route-yes"><strong>Eenvoudige opgaven gaan goed?</strong> Pak de <a href="{href_basis}">Basisopgaven</a> en daarna de <a href="{href_midden}">Middenopgaven</a>.</p>
+          <p class="route-line route-yes"><strong>Alles afgevinkt en zelfstandig?</strong> Probeer de <a href="{href_verrijking}">Verrijkingsopgaven</a> voor meer uitdaging.</p>
+        </div>
+'''
         checklist_html = f'''
       <div class="checklist-section">
         <div class="checklist-title">Samenvatting checklist</div>
         <p class="checklist-sub">Controleer of je de volgende vaardigheden beheerst:</p>
 {items}
-      </div>
+{route_html}      </div>
 '''
 
     # Grid columns for hero cards

@@ -449,6 +449,7 @@ children.push(sp(60));
 // Visual — fig_1
 const fig1 = embedAssetImage("1.1.1_fig_1_doc", 500, 320, "1.1.1_fig_1", ALT["1.1.1_fig_1"]);
 if (fig1) children.push(fig1);
+children.push(p("Het diagram toont een breder voorbeeld waarin meerdere wensen tegelijk om hetzelfde budget concurreren — schaarste hoeft niet beperkt te blijven tot twee opties. In het werkbeeld hieronder beperken we ons tot een eenvoudige situatie met twee wensen, om de redenering compact te houden.", { italics: true, color: C.gray, size: 18 }));
 children.push(sp(60));
 
 // Voorbeeld
@@ -523,6 +524,19 @@ children.push(bullet("Tarwe: 10 ha × €500 = €5.000"));
 children.push(bullet("Maïs: 10 ha × €350 = €3.500"));
 children.push(p("Stap 3 — Rangschikken: beste niet-gekozen alternatief = maïs met €3.500. Dat zijn de alternatieve kosten.", { bold: true }));
 children.push(p("Stap 4 — Nettowaarde van de keuze: €5.000 − €3.500 = €1.500 voordeel door voor tarwe te kiezen.", { bold: true }));
+children.push(sp(40));
+
+// L1.5V Bucket C2: explicit calculation table in the verbal channel.
+// Mirrors the we_1 visual in text form so the student can reproduce the
+// answer without inferring missing arithmetic from the visual.
+children.push(p("Berekening op een rij:", { bold: true }));
+children.push(summarySchema([
+  ["Opbrengst tarwe (10 ha)",          "10 × €500/ha = €5.000"],
+  ["Opbrengst maïs (10 ha)",           "10 × €350/ha = €3.500"],
+  ["Beste niet-gekozen alternatief",   "maïs (€3.500)"],
+  ["Alternatieve kosten",              "€3.500"],
+  ["Nettowaarde",                      "€5.000 − €3.500 = €1.500 (voordeel tarwe)"],
+], DOMAINS.economischBlue.color));
 children.push(sp(40));
 
 // Visual — we_1 (worked example diagram — second of the DUAL CODING visuals)
