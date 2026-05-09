@@ -186,23 +186,23 @@ function barChartSvg(cfg, concept) {
       yLabel: "winst per hectare (euro)",
       max: 600,
       ticks: [0, 100, 200, 300, 400, 500, 600],
-      note: "Tarwe is 150 euro per hectare hoger dan Mais.",
+      note: "Tarwe is 150 euro per hectare hoger dan maïs.",
       data: [
         { label: "Tarwe", value: 500, color: t.blue },
-        { label: "Mais", value: 350, color: t.green },
+        { label: "maïs", value: 350, color: t.green },
         { label: "Zonnebloemen", value: 300, color: t.amber },
       ],
     },
     we1: {
-      title: "Tarwe versus Mais",
+      title: "Tarwe versus maïs",
       subtitle: "Vergelijk totale winst en benoem het beste niet-gekozen alternatief.",
       yLabel: "totale winst (euro)",
       max: 6000,
       ticks: [0, 1000, 2000, 3000, 4000, 5000, 6000],
-      note: "Alternatieve kosten bij tarwe = 3500 euro gemiste Maisopbrengst.",
+      note: "Alternatieve kosten bij tarwe = 3500 euro gemiste maïsopbrengst.",
       data: [
         { label: "Tarwe (10 ha)", value: 5000, color: t.blue, badge: "GEKOZEN" },
-        { label: "Mais (10 ha)", value: 3500, color: t.amber, dash: true, badge: "ALT. KOSTEN" },
+        { label: "maïs (10 ha)", value: 3500, color: t.amber, dash: true, badge: "ALT. KOSTEN" },
       ],
     },
   }[concept];

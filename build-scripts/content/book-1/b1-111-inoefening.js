@@ -574,7 +574,7 @@ const samenvattendSchema = [
   ["Geen som", "Alternatieve kosten zijn NOOIT de som van alle niet-gekozen opties — alleen de beste."],
   ["Opbrengst schaars middel", "TO = aantal eenheden × opbrengst per eenheid (q × o)."],
   ["Nettowaarde keuze", "opbrengst gekozen − alternatieve kosten. Positief = verstandige keuze."],
-  ["Procedure B02 (4 stappen)", "1) Alternatieven benoemen  2) Opbrengst per alt.  3) Beste niet-gekozen = alt. kosten  4) Nettowaarde bepalen."],
+  ["Procedure B02 (4 stappen)", "1) Alternatieven benoemen  2) Opbrengst per alternatief  3) Beste niet-gekozen = alternatieve kosten  4) Nettowaarde bepalen."],
 ];
 
 // ══════════════════════════════════════════════════════════════════════

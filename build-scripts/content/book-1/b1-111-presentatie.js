@@ -283,7 +283,7 @@ async function build() {
     const steps = [
       { n: "01", kop: "Benoem alternatieven",     sub: "Welke opties heb je?" },
       { n: "02", kop: "Bereken opbrengsten",      sub: "Wat levert elk alternatief op?" },
-      { n: "03", kop: "Rangschik (alt. kosten)",  sub: "Beste niet-gekozen = alternatieve kosten." },
+      { n: "03", kop: "Rangschik",                sub: "Beste niet-gekozen = alternatieve kosten." },
       { n: "04", kop: "Bereken nettowaarde",      sub: "Opbrengst − alternatieve kosten." },
     ];
     steps.forEach((st, i) => {
@@ -417,7 +417,7 @@ async function build() {
     const items = [
       { n: "01", t: "Schaarste ontstaat wanneer behoeften groter zijn dan middelen — daardoor moet je kiezen." },
       { n: "02", t: "Elke keuze heeft alternatieve kosten: de opbrengst van het beste alternatief dat je opgeeft." },
-      { n: "03", t: "Economisch denken = vier stappen: (1) alternatieven, (2) opbrengsten, (3) rangschik (alt. kosten), (4) nettowaarde." },
+      { n: "03", t: "Economisch denken = vier stappen: (1) alternatieven, (2) opbrengsten, (3) rangschik (= alternatieve kosten), (4) nettowaarde." },
       { n: "04", t: "Alternatieve kosten ≠ de prijs die je betaalt — het gaat om wat je misloopt." },
       { n: "05", t: "Schaarste geldt voor iedereen: scholier, boer, overheid." },
     ];

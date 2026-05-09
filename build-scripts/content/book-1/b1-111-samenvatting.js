@@ -337,7 +337,7 @@ function cell_R3C1() {
       new TextRun({ text: " = opbrengst − alternatieve kosten.", font: "Arial", size: 16, color: C.dark }),
     ]}),
     embeddedImage("1.1.1_fig_3_summary.png", 230, 133, "1.1.1_fig_3", ALT["1.1.1_fig_3"]),
-    bodyLine("Alternatieven → Opbrengsten → Rangschik (alt. kosten) → Nettowaarde",
+    bodyLine("Alternatieven → Opbrengsten → Rangschik (alternatieve kosten) → Nettowaarde",
       { size: 13, color: C.gray, italics: true, after: 0 }),
   ]);
 }

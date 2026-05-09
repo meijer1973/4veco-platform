@@ -591,9 +591,9 @@ children.push(summarySchema([
   ["Definitie", "Opbrengst van het beste niet-gekozen alternatief"],
   ["Stap 1", "Benoem alternatieven voor het schaarse middel"],
   ["Stap 2", "Bereken opbrengst per alternatief"],
-  ["Stap 3", "Rangschik — beste niet-gekozen = alt. kosten"],
-  ["Stap 4", "Nettowaarde = opbrengst keuze − alt. kosten"],
-  ["Valkuil", "Alt. kosten ≠ prijs; niet optellen"],
+  ["Stap 3", "Rangschik — beste niet-gekozen = alternatieve kosten"],
+  ["Stap 4", "Nettowaarde = opbrengst keuze − alternatieve kosten"],
+  ["Valkuil", "Alternatieve kosten ≠ prijs; niet optellen"],
   ["Canonical term", "“alternatieve kosten” (niet opportunity costs)"],
   ["Verband met", "← Vaardigheid 1 (schaarste als voorwaarde)"],
 ], DOMAINS.economischBlue.color));
