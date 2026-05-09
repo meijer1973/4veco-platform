@@ -394,12 +394,24 @@ def find_paragraph_info(folder_path):
 
 
 def process_paragraph(para_folder):
+    """Process a single paragraph folder.
+
+    Returns one of:
+      'ok'    — html generated successfully
+      'skip'  — no nieuws-met-visual.docx found, or no headline parsed
+      'error' — a parse/IO failure occurred; caller MUST surface as exit-1
+
+    The 'skip' vs 'error' distinction is load-bearing: skip means "this
+    paragraph doesn't carry this content type yet"; error means "the input
+    is malformed". Earlier versions returned False for both, which made
+    deploy.js silently count parse failures as OK.
+    """
     para_number, para_name = find_paragraph_info(para_folder)
     pattern = os.path.join(para_folder, '*nieuws met visual*.docx')
     found = glob.glob(pattern)
     if not found:
         print(f'  SKIP {para_number}: no nieuws-met-visual docx found')
-        return False
+        return 'skip'
     docx_path = found[0]
 
     asset_prefix = '_assets'
@@ -410,29 +422,32 @@ def process_paragraph(para_folder):
         data = build_data_from_doc(docx_path, para_number, para_name, assets_dir)
     except Exception as e:
         print(f'  ERROR {para_number}: {e}')
-        return False
+        return 'error'
 
     if not data['headline']:
         print(f'  SKIP {para_number}: no headline parsed from nieuws docx')
-        return False
+        return 'skip'
 
     web_variant_bases = find_web_variant_bases(assets_dir)
 
-    html_content = generate_html(
-        data, para_number, para_name,
-        asset_prefix=asset_prefix,
-        shared_prefix=shared_prefix,
-        web_variant_bases=web_variant_bases,
-    )
-
-    html_path = os.path.join(para_folder, f'{para_number} {para_name} – nieuws met visual.html')
-    with open(html_path, 'w', encoding='utf-8') as f:
-        f.write(html_content)
+    try:
+        html_content = generate_html(
+            data, para_number, para_name,
+            asset_prefix=asset_prefix,
+            shared_prefix=shared_prefix,
+            web_variant_bases=web_variant_bases,
+        )
+        html_path = os.path.join(para_folder, f'{para_number} {para_name} – nieuws met visual.html')
+        with open(html_path, 'w', encoding='utf-8') as f:
+            f.write(html_content)
+    except Exception as e:
+        print(f'  ERROR {para_number}: {e}')
+        return 'error'
 
     asset_label = data['visual_base'] or 'none'
     print(f'  OK {para_number} {para_name} ({len(data["questions"])} vragen, '
           f'{len(data["answers"])} antwoorden, asset={asset_label})')
-    return True
+    return 'ok'
 
 
 def main():
@@ -441,6 +456,7 @@ def main():
         print('Usage: python convert_nieuws.py [path] or --all')
         sys.exit(1)
 
+    had_error = False
     if args[0] == '--all':
         base = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
         siblings_root = os.path.dirname(base)
@@ -455,11 +471,18 @@ def main():
         print(f'Found {len(folders)} candidate paragraph folders')
         success = 0
         for folder in folders:
-            if process_paragraph(folder):
+            result = process_paragraph(folder)
+            if result == 'ok':
                 success += 1
+            elif result == 'error':
+                had_error = True
         print(f'\nDone: {success}/{len(folders)} converted')
     else:
-        process_paragraph(args[0])
+        result = process_paragraph(args[0])
+        if result == 'error':
+            had_error = True
+
+    sys.exit(1 if had_error else 0)
 
 
 if __name__ == '__main__':

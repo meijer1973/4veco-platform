@@ -397,13 +397,25 @@ def find_paragraph_info(folder_path):
 
 
 def process_paragraph(para_folder):
-    """Process a single paragraph folder."""
+    """Process a single paragraph folder.
+
+    Returns one of:
+      'ok'    — html generated successfully
+      'skip'  — no samenvatting.docx found, or the doc parsed to zero cells
+      'error' — a parse/IO failure occurred; caller MUST surface as exit-1
+
+    The 'skip' vs 'error' distinction is load-bearing for the deploy
+    pipeline: skip is "this paragraph doesn't carry this content type yet,
+    that's fine"; error is "the input is malformed, fail loudly". Earlier
+    versions returned False for both, which made deploy.js silently count
+    parse failures as OK.
+    """
     para_number, para_name = find_paragraph_info(para_folder)
     pattern = os.path.join(para_folder, '*samenvatting*.docx')
     found = glob.glob(pattern)
     if not found:
         print(f'  SKIP {para_number}: no samenvatting.docx found')
-        return False
+        return 'skip'
     docx_path = found[0]
 
     asset_prefix = '_assets'
@@ -413,28 +425,31 @@ def process_paragraph(para_folder):
         data = build_data_from_doc(docx_path, para_number, para_name)
     except Exception as e:
         print(f'  ERROR {para_number}: {e}')
-        return False
+        return 'error'
 
     if not data['sections']:
         print(f'  SKIP {para_number}: no cells found in samenvatting.docx')
-        return False
+        return 'skip'
 
     web_variant_bases = find_web_variant_bases(os.path.join(para_folder, '_assets'))
 
-    html_content = generate_html(
-        data, para_number, para_name,
-        asset_prefix=asset_prefix,
-        shared_prefix=shared_prefix,
-        web_variant_bases=web_variant_bases,
-    )
-
-    html_path = os.path.join(para_folder, f'{para_number} {para_name} – samenvatting.html')
-    with open(html_path, 'w', encoding='utf-8') as f:
-        f.write(html_content)
+    try:
+        html_content = generate_html(
+            data, para_number, para_name,
+            asset_prefix=asset_prefix,
+            shared_prefix=shared_prefix,
+            web_variant_bases=web_variant_bases,
+        )
+        html_path = os.path.join(para_folder, f'{para_number} {para_name} – samenvatting.html')
+        with open(html_path, 'w', encoding='utf-8') as f:
+            f.write(html_content)
+    except Exception as e:
+        print(f'  ERROR {para_number}: {e}')
+        return 'error'
 
     n_assets = sum(1 for s in data['sections'] for _ in s['assets'])
     print(f'  OK {para_number} {para_name} ({len(data["sections"])} cells, {n_assets} assets)')
-    return True
+    return 'ok'
 
 
 def main():
@@ -443,6 +458,7 @@ def main():
         print('Usage: python convert_samenvatting.py [path] or --all')
         sys.exit(1)
 
+    had_error = False
     if args[0] == '--all':
         # Walk Boek N directories beside the platform root.
         base = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -462,11 +478,18 @@ def main():
         print(f'Found {len(folders)} candidate paragraph folders')
         success = 0
         for folder in folders:
-            if process_paragraph(folder):
+            result = process_paragraph(folder)
+            if result == 'ok':
                 success += 1
+            elif result == 'error':
+                had_error = True
         print(f'\nDone: {success}/{len(folders)} converted')
     else:
-        process_paragraph(args[0])
+        result = process_paragraph(args[0])
+        if result == 'error':
+            had_error = True
+
+    sys.exit(1 if had_error else 0)
 
 
 if __name__ == '__main__':

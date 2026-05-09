@@ -260,25 +260,45 @@ function runDocxConverters() {
     for (const conv of converters) {
         let okCount = 0, skipCount = 0, errCount = 0;
         for (const para of paragraphFolders) {
+            // Output classification is defensive on two axes:
+            //  1. Exit code: a non-zero exit goes to the catch block as an error.
+            //  2. Output text: if the converter exits 0 but printed an
+            //     ERROR line (legacy converters that don't propagate exit
+            //     codes), we still count it as an error. Unknown output
+            //     (no OK/SKIP/ERROR line) is also treated as error \u2014 better
+            //     to fail loudly than silently miscount as OK.
+            let out = '';
+            let exitFailed = false;
             try {
-                const out = execSync(`${PYTHON} ${conv.script} "${para}"`, {
+                out = execSync(`${PYTHON} ${conv.script} "${para}"`, {
                     cwd: PLATFORM_ROOT,
                     env: { ...process.env, MODULE_ROOT },
                     encoding: 'utf8',
                 });
-                if (/^\s*OK\s/m.test(out)) okCount++;
-                else if (/^\s*SKIP\s/m.test(out)) skipCount++;
-                else okCount++;
             } catch (e) {
+                exitFailed = true;
+                out = (e.stdout ? e.stdout.toString() : '') + (e.stderr ? e.stderr.toString() : '');
+            }
+
+            if (exitFailed || /^\s*ERROR\s/m.test(out)) {
                 errCount++;
-                const stderr = (e.stderr ? e.stderr.toString() : '').trim();
-                if (stderr) console.warn(`      WARN ${conv.name} on ${path.basename(para)}: ${stderr.split('\n').pop()}`);
+                const errLine = (out.match(/^\s*ERROR\s.*/m) || [out.split('\n').filter(l => l.trim()).pop() || ''])[0].trim();
+                console.warn(`      \u2717 ${conv.name} on ${path.basename(para)}: ${errLine}`);
+            } else if (/^\s*OK\s/m.test(out)) {
+                okCount++;
+            } else if (/^\s*SKIP\s/m.test(out)) {
+                skipCount++;
+            } else {
+                // Unknown output with zero exit \u2014 treat as error rather than risk
+                // counting a malformed-output run as success.
+                errCount++;
+                console.warn(`      \u2717 ${conv.name} on ${path.basename(para)}: unrecognized output (no OK/SKIP/ERROR line)`);
             }
         }
         const summary = `${okCount} OK, ${skipCount} skipped${errCount ? `, ${errCount} errors` : ''}`;
-        console.log(`    \u2713 ${conv.name.padEnd(22)} ${summary}`);
+        console.log(`    ${errCount ? '\u2717' : '\u2713'} ${conv.name.padEnd(22)} ${summary}`);
         if (errCount > 0) {
-            console.error(`  \u2717 ${conv.name} hit ${errCount} errors \u2014 aborting deploy.`);
+            console.error(`  \u2717 ${conv.name} hit ${errCount} error${errCount === 1 ? '' : 's'} \u2014 aborting deploy.`);
             process.exit(1);
         }
     }
