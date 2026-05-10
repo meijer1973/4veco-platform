@@ -421,10 +421,16 @@ function validatePartBRecord() {
     } else if (verdict === null) {
       // Fall back: explicit verdict missing — surface plainly, don't guess.
       fail(`Companion review has no explicit Verdict section: ${reviewFile}`);
-    } else if (hfCount > 0 && verdict !== 'PASS WITH FLAGS' && verdict !== 'PASS') {
-      fail(`Companion review verdict ${verdict} but ${hfCount} HF section(s) present: ${reviewFile}`);
+    } else if (hfCount > 0) {
+      // Per agents/econ-companion-visual-review.md verdict rules: BOTH
+      // PASS and PASS WITH FLAGS require zero hard fails. If a verdict
+      // line says PASS / PASS WITH FLAGS but ### HF-N sections still
+      // appear in the document, the verdict is internally inconsistent —
+      // refuse to pass and require the reviewer to either close the HF
+      // sections or revise the verdict to FAIL.
+      fail(`Companion review verdict ${verdict} but ${hfCount} unresolved HF section(s) present: ${reviewFile}`);
     } else {
-      pass(`Companion review: ${reviewFile} (verdict ${verdict}${hfCount > 0 ? `, ${hfCount} HF noted` : ''})`);
+      pass(`Companion review: ${reviewFile} (verdict ${verdict})`);
     }
   }
 }
@@ -444,11 +450,21 @@ function validateQualityRef() {
 
   // Locate the partA: block if present; otherwise treat the whole file as
   // legacy top-level (schema_version 1). The block ends at the next non-
-  // indented top-level key (column 0).
+  // indented top-level key (column 0). Line-based extraction — JS regex
+  // has no `\Z` end-of-string anchor, and `$` with the m flag matches end
+  // of line, which trips order-dependent parses when partA: is the final
+  // top-level block.
   function blockOf(name) {
-    const re = new RegExp(`^${name}:\\s*\\n([\\s\\S]*?)(?=^[A-Za-z_][A-Za-z0-9_]*:\\s*$|\\Z)`, 'm');
-    const m = yaml.match(re);
-    return m ? m[1] : null;
+    const lines = yaml.split('\n');
+    const startRe = new RegExp(`^${name}:\\s*$`);
+    const topKeyRe = /^[A-Za-z_][A-Za-z0-9_]*:\s*$/;
+    const startIdx = lines.findIndex(l => startRe.test(l));
+    if (startIdx < 0) return null;
+    let endIdx = lines.length;
+    for (let i = startIdx + 1; i < lines.length; i++) {
+      if (topKeyRe.test(lines[i])) { endIdx = i; break; }
+    }
+    return lines.slice(startIdx + 1, endIdx).join('\n');
   }
   const partA = blockOf('partA') || yaml;
 

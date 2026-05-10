@@ -50,6 +50,15 @@ const FIXTURES = [
         file: '1.1.1 Schaarste en economisch denken – begeleide inoefening.html',
         minImgs: 3,
     },
+    // Nieuws-met-visual: post-PR-review fix. convert_nieuws.py now reads
+    // the docx image's `descr="asset-alt:<text>"` metadata and emits it
+    // as the rendered HTML alt. Pre-fix this file was skipped from the
+    // alt-text test because nieuws used a filename-glob asset-id alt.
+    {
+        label: 'nieuws met visual',
+        file: '1.1.1 Schaarste en economisch denken – nieuws met visual.html',
+        minImgs: 1,
+    },
 ];
 
 // Asset-id-shaped alt strings the test rejects: 1.1.1_fig_1, 1.1.1_ex_1,

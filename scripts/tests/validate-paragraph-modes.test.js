@@ -126,6 +126,36 @@ describe('validate-paragraph mode dispatch (L1.5V F2)', () => {
         expect(r.stdout).toMatch(/Companion review verdict is FAIL/);
     });
 
+    test('PR-review fix: PASS WITH FLAGS verdict + open HF section is rejected', () => {
+        // The reviewer of platform PR #4 caught a dead-condition bug: the
+        // pre-fix branch `hfCount > 0 && verdict !== 'PASS WITH FLAGS' &&
+        // verdict !== 'PASS'` was unreachable because the only verdict
+        // values left after FAIL/null are PASS and PASS WITH FLAGS, so
+        // the validator silently accepted PASS WITH FLAGS plus an open
+        // ### HF-1 section. The agent spec is explicit: PASS and PASS
+        // WITH FLAGS BOTH require zero hard fails. This test guards the
+        // post-fix behavior: any verdict + non-zero HF count must fail.
+        const folder = makeMinimalPartAFolder(tmpDir, '1.1.1', 'Test', {
+            partAVerdict: 'PASS',
+            companionVerdict: 'PASS WITH FLAGS',
+            companionHardFails: [1],
+        });
+        const r = runValidator(folder, 'complete');
+        expect(r.code).not.toBe(0);
+        expect(r.stdout).toMatch(/PASS WITH FLAGS but 1 unresolved HF section/);
+    });
+
+    test('PR-review fix: PASS verdict + open HF section is rejected', () => {
+        const folder = makeMinimalPartAFolder(tmpDir, '1.1.1', 'Test', {
+            partAVerdict: 'PASS',
+            companionVerdict: 'PASS',
+            companionHardFails: [1, 2],
+        });
+        const r = runValidator(folder, 'complete');
+        expect(r.code).not.toBe(0);
+        expect(r.stdout).toMatch(/PASS but 2 unresolved HF section/);
+    });
+
     test('exact filename match: `*-review.md` is matched only as `${parNr}-review.md`, not by endsWith', () => {
         // Pre-F2 the validator's endsWith('-review.md') matched both
         // 1.1.1-review.md AND 1.1.1-companion-visual-review.md and picked
