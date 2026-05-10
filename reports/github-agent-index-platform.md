@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-05-08T20:06:47.410Z
+Generated: 2026-05-10T08:02:05.340Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 1236
+Files indexed: 1247
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -28,14 +28,20 @@ Count: 11
 
 ## agents
 
-Count: 2
+Count: 8
 
+- agents/accessibility-agent.md
 - agents/econ-companion-visual-review.md
+- agents/lead-reviewer-agent.md
 - agents/README.md
+- agents/student-experience-review-agent.md
+- agents/teacher-learning-quality-review-agent.md
+- agents/testing-agent.md
+- agents/visual-qa-agent.md
 
 ## engines
 
-Count: 37
+Count: 38
 
 - engines/newsdetective-engine.js
 - engines/newsdetective-ui.js
@@ -57,6 +63,7 @@ Count: 37
 - engines/skilltree/explanations.js
 - engines/skilltree/generators.js
 - engines/tests/_wiskundevaardigheden-template.html
+- engines/tests/converter-error-exit.test.js
 - engines/tests/harness-skilltree-ui.html
 - engines/tests/micro-teaching-units.test.js
 - engines/tests/newsdetective-data.test.js
@@ -77,7 +84,7 @@ Count: 37
 
 ## build scripts
 
-Count: 227
+Count: 229
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -132,6 +139,8 @@ Count: 227
 - build-scripts/content/legacy-target/voorkennis-351-afsluiting.js
 - build-scripts/content/legacy-target/voorkennis-352-naar-het-examen.js
 - build-scripts/lib/convert_begeleide_inoefening.py
+- build-scripts/lib/convert_nieuws.py
+- build-scripts/lib/convert_samenvatting.py
 - build-scripts/lib/convert_vaardigheden.py
 - build-scripts/lib/convert_voorkennis.py
 - build-scripts/lib/lib-begeleide-inoefening.js
@@ -1193,7 +1202,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 178
+Count: 180
 
 - .gitignore
 - BUILD-CHAPTER.md
@@ -1309,6 +1318,7 @@ Count: 178
 - knowledge/Exercise schema and quality/summary-of-edits-head-of-engineering.md
 - knowledge/Exercise schema and quality/summary-of-suggested-changes-HCS.md
 - knowledge/Exercise schema and quality/summary-of-updated-roadmap-edits-and-motivation.md
+- knowledge/grafiekmeester_representatie_arena.html
 - knowledge/Improvement production pipeline/pipeline-coordination-handoff.md
 - knowledge/old/current-state-detailed-analysis.md
 - knowledge/old/green-gate-failing-commands.md
@@ -1320,6 +1330,7 @@ Count: 178
 - knowledge/old/prompt-youtube-videos.md
 - knowledge/old/reference-report-sanity.md
 - knowledge/old/three-month-roadmap.md
+- knowledge/redeneerketen-builder-v6.html
 - knowledge/three Year blue print.md
 - LICENSE
 - package-lock.json
@@ -1373,4 +1384,3 @@ Count: 178
 - tools/skill-tree-viewer/index.html
 - tools/skill-tree-viewer/README.md
 - tools/skill-tree-viewer/template.html
-

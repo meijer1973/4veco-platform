@@ -79,7 +79,13 @@ Human-readable:
 - `BUILD-CHAPTER.md`
 - `build-scripts/README.md`
 - `agents/README.md`
+- `agents/lead-reviewer-agent.md`
+- `agents/testing-agent.md`
+- `agents/accessibility-agent.md`
+- `agents/teacher-learning-quality-review-agent.md`
+- `agents/student-experience-review-agent.md`
 - `agents/econ-companion-visual-review.md`
+- `agents/visual-qa-agent.md`
 - `references/reference-team-roadmap.md`
 - `references/SOURCE_OF_TRUTH.md`
 - `knowledge/platform-team-roadmap.md`
@@ -113,7 +119,13 @@ entry_points (full URLs):
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/BUILD-CHAPTER.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/README.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/agents/README.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/agents/lead-reviewer-agent.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/agents/testing-agent.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/agents/accessibility-agent.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/agents/teacher-learning-quality-review-agent.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/agents/student-experience-review-agent.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/agents/econ-companion-visual-review.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/agents/visual-qa-agent.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/reference-team-roadmap.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/SOURCE_OF_TRUTH.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/knowledge/platform-team-roadmap.md
@@ -148,7 +160,13 @@ Use these anchors before free-form browsing.
   "build_script_guide": "build-scripts/README.md",
   "package_scripts": "package.json",
   "reference_map": "RESEARCH_AGENT_MAP_REFERENCES.md",
+  "lead_review_agent": "agents/lead-reviewer-agent.md",
+  "testing_agent": "agents/testing-agent.md",
+  "accessibility_agent": "agents/accessibility-agent.md",
+  "teacher_learning_quality_review_agent": "agents/teacher-learning-quality-review-agent.md",
+  "student_experience_review_agent": "agents/student-experience-review-agent.md",
   "companion_visual_review_agent": "agents/econ-companion-visual-review.md",
+  "visual_qa_agent": "agents/visual-qa-agent.md",
   "reference_team_plan": "references/reference-team-roadmap.md",
   "platform_roadmap": "knowledge/platform-team-roadmap.md",
   "dashboard_index": "reports/internal-dashboard/dashboard-data.json"
@@ -164,7 +182,13 @@ index_anchors (full URLs):
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/README.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/package.json
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/RESEARCH_AGENT_MAP_REFERENCES.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/agents/lead-reviewer-agent.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/agents/testing-agent.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/agents/accessibility-agent.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/agents/teacher-learning-quality-review-agent.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/agents/student-experience-review-agent.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/agents/econ-companion-visual-review.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/agents/visual-qa-agent.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/reference-team-roadmap.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/knowledge/platform-team-roadmap.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/internal-dashboard/dashboard-data.json
@@ -235,7 +259,13 @@ index_anchors (full URLs):
   ],
   "review_agent_paths": [
     "agents/README.md",
-    "agents/econ-companion-visual-review.md"
+    "agents/lead-reviewer-agent.md",
+    "agents/testing-agent.md",
+    "agents/accessibility-agent.md",
+    "agents/teacher-learning-quality-review-agent.md",
+    "agents/student-experience-review-agent.md",
+    "agents/econ-companion-visual-review.md",
+    "agents/visual-qa-agent.md"
   ],
   "reference_paths": [
     "RESEARCH_AGENT_MAP_REFERENCES.md",
@@ -300,14 +330,26 @@ build_pipeline_paths (full URLs):
 content_workflow_paths (full URLs):
 
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/agents/README.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/agents/lead-reviewer-agent.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/agents/testing-agent.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/agents/accessibility-agent.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/agents/teacher-learning-quality-review-agent.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/agents/student-experience-review-agent.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/agents/econ-companion-visual-review.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/agents/visual-qa-agent.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/BUILD-PARAGRAPH.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/BUILD-CHAPTER.md
 
 review_agent_paths (full URLs):
 
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/agents/README.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/agents/lead-reviewer-agent.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/agents/testing-agent.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/agents/accessibility-agent.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/agents/teacher-learning-quality-review-agent.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/agents/student-experience-review-agent.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/agents/econ-companion-visual-review.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/agents/visual-qa-agent.md
 
 reference_paths (full URLs):
 
@@ -348,7 +390,7 @@ reference_paths (full URLs):
   "agents": {
     "epistemic_role": "bounded reviewer-role protocols",
     "contains": "agent specifications with evidence hierarchy, hard gates, verdict rules, and report formats",
-    "preferred_use": "how to run specialized reviews such as companion visual review"
+    "preferred_use": "how to orchestrate review/testing and run specialized reviews such as accessibility, teacher learning quality, student experience, companion visual review, and specific visual QA"
   },
   "skills": {
     "epistemic_role": "content-production workflow layer",
@@ -389,8 +431,14 @@ Agents MUST follow this sequence:
    - report/dashboard quality
 4. Load the matching entry points:
    - reference task -> `RESEARCH_AGENT_MAP_REFERENCES.md` and `RESEARCH_AGENT_PROMPT_REFERENCES.md`
+   - multi-agent review orchestration -> `agents/lead-reviewer-agent.md` plus the relevant specialist agents and evidence surfaces
+   - testing or validation evidence -> `agents/testing-agent.md`, `package.json`, and the relevant test/validator scripts
+   - accessibility review -> `agents/accessibility-agent.md` plus rendered artifacts, screenshots, OCR/text evidence, and source semantics where relevant
+   - teacher learning-quality review -> `agents/teacher-learning-quality-review-agent.md` plus learning goals, paragraph plan, target exercise, formative checks, differentiation paths, and student-facing artifacts
+   - student-experience review -> `agents/student-experience-review-agent.md` plus rendered student-facing surfaces, screenshots, instructions, feedback states, progress cues, graphs, and text-visual links
    - paragraph production -> `BUILD-PARAGRAPH.md` plus relevant `skills/`
    - companion visual review -> `agents/econ-companion-visual-review.md`, `BUILD-PARAGRAPH.md`, rendered lesson artifacts, and the relevant source/generator files
+   - specific visual QA -> `agents/visual-qa-agent.md` plus screenshots, rendered output, SVG/PDF/slide exports, or the relevant visual artifact
    - chapter production -> `BUILD-CHAPTER.md` plus relevant `skills/`
    - build/deploy -> `build-scripts/README.md`, `scripts/deploy.js`, relevant `build-scripts/platform/*`
    - engine behavior -> relevant `engines/*` files and `engines/tests/*`
@@ -456,6 +504,53 @@ Rules:
     ".claude/commands",
     "references"
   ],
+  "review_orchestration": [
+    "agents/lead-reviewer-agent.md",
+    "agents",
+    "AGENTS.md",
+    "BUILD-PARAGRAPH.md",
+    "BUILD-CHAPTER.md",
+    "reports",
+    "references"
+  ],
+  "testing_validation": [
+    "agents/testing-agent.md",
+    "package.json",
+    "engines/tests",
+    "scripts/tests",
+    "scripts",
+    "build-scripts",
+    "reports"
+  ],
+  "accessibility_review": [
+    "agents/accessibility-agent.md",
+    "AGENTS.md",
+    "BUILD-PARAGRAPH.md",
+    "build-scripts/lib",
+    "build-scripts/content",
+    "engines"
+  ],
+  "teacher_learning_quality_review": [
+    "agents/teacher-learning-quality-review-agent.md",
+    "AGENTS.md",
+    "BUILD-PARAGRAPH.md",
+    "BUILD-CHAPTER.md",
+    "references",
+    "skills",
+    "build-scripts/content",
+    "engines"
+  ],
+  "student_experience_review": [
+    "agents/student-experience-review-agent.md",
+    "AGENTS.md",
+    "BUILD-PARAGRAPH.md",
+    "references",
+    "skills",
+    "build-scripts/content",
+    "build-scripts/lib",
+    "build-scripts/platform",
+    "engines"
+  ],
   "companion_visual_review": [
     "agents/econ-companion-visual-review.md",
     "BUILD-PARAGRAPH.md",
@@ -464,6 +559,14 @@ Rules:
     "build-scripts/content",
     "build-scripts/lib",
     "build-scripts/platform",
+    "engines"
+  ],
+  "specific_visual_qa": [
+    "agents/visual-qa-agent.md",
+    "AGENTS.md",
+    "BUILD-PARAGRAPH.md",
+    "build-scripts/lib",
+    "build-scripts/content",
     "engines"
   ],
   "report_dashboard": [

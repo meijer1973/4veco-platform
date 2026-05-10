@@ -132,6 +132,8 @@ This checks:
 
 **The chapter is not done until the validator passes with 0 errors.**
 
+For a command-by-command validation report, use `agents/testing-agent.md`. For coordinating chapter-level review outputs, validator evidence, accessibility review, visual QA, and any human-review packet into one go/no-go decision, use `agents/lead-reviewer-agent.md`.
+
 ## Phase 7: Final checklist
 
 | # | Check | Status |

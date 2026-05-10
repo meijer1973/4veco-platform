@@ -2,8 +2,8 @@
   "repo": "4veco-platform",
   "root": "C:\\Projects\\4veco\\4veco-platform",
   "available": true,
-  "generated_at": "2026-05-08T20:06:47.410Z",
-  "file_count": 1236,
+  "generated_at": "2026-05-10T08:02:05.340Z",
+  "file_count": 1247,
   "inventory_scope": "git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees",
   "skipped_directories": [
     ".cache",
@@ -34,8 +34,14 @@
       "RESEARCH_AGENT_PROMPT.md"
     ],
     "agents": [
+      "agents/accessibility-agent.md",
       "agents/econ-companion-visual-review.md",
-      "agents/README.md"
+      "agents/lead-reviewer-agent.md",
+      "agents/README.md",
+      "agents/student-experience-review-agent.md",
+      "agents/teacher-learning-quality-review-agent.md",
+      "agents/testing-agent.md",
+      "agents/visual-qa-agent.md"
     ],
     "engines": [
       "engines/newsdetective-engine.js",
@@ -58,6 +64,7 @@
       "engines/skilltree/explanations.js",
       "engines/skilltree/generators.js",
       "engines/tests/_wiskundevaardigheden-template.html",
+      "engines/tests/converter-error-exit.test.js",
       "engines/tests/harness-skilltree-ui.html",
       "engines/tests/micro-teaching-units.test.js",
       "engines/tests/newsdetective-data.test.js",
@@ -130,6 +137,8 @@
       "build-scripts/content/legacy-target/voorkennis-351-afsluiting.js",
       "build-scripts/content/legacy-target/voorkennis-352-naar-het-examen.js",
       "build-scripts/lib/convert_begeleide_inoefening.py",
+      "build-scripts/lib/convert_nieuws.py",
+      "build-scripts/lib/convert_samenvatting.py",
       "build-scripts/lib/convert_vaardigheden.py",
       "build-scripts/lib/convert_voorkennis.py",
       "build-scripts/lib/lib-begeleide-inoefening.js",
@@ -1277,6 +1286,7 @@
       "knowledge/Exercise schema and quality/summary-of-edits-head-of-engineering.md",
       "knowledge/Exercise schema and quality/summary-of-suggested-changes-HCS.md",
       "knowledge/Exercise schema and quality/summary-of-updated-roadmap-edits-and-motivation.md",
+      "knowledge/grafiekmeester_representatie_arena.html",
       "knowledge/Improvement production pipeline/pipeline-coordination-handoff.md",
       "knowledge/old/current-state-detailed-analysis.md",
       "knowledge/old/green-gate-failing-commands.md",
@@ -1288,6 +1298,7 @@
       "knowledge/old/prompt-youtube-videos.md",
       "knowledge/old/reference-report-sanity.md",
       "knowledge/old/three-month-roadmap.md",
+      "knowledge/redeneerketen-builder-v6.html",
       "knowledge/three Year blue print.md",
       "LICENSE",
       "package-lock.json",

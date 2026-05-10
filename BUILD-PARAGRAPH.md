@@ -392,6 +392,8 @@ Build all SVG graphics listed in the visuelen-plan, plus the surface variants li
 3. Optionally save the asset-builder script as `build-scripts/content/book-N/bN-XYZ-build-assets.js`
 4. Quality-check all PNGs before proceeding — verify economic correctness and readability
 
+For critical standalone visuals, screenshots, charts, diagrams, or rendered UI states, use `agents/visual-qa-agent.md` as the specific visual-item gate before embedding the item into companion outputs. Use `agents/econ-companion-visual-review.md` later for the complete rendered companion surface.
+
 #### Phase 4b — Build documents
 
 For each document type, copy the reference script, replace the content, run it. Each builder should:
@@ -447,6 +449,8 @@ Run `agents/econ-companion-visual-review.md` after Phase 6 when the generated HT
 
 Hard fails from this agent block completion. Fix the source, generator, CSS/JS, asset builder, or registry issue; regenerate; then rerun the companion review. Do not close a generated-output defect by hand-editing the generated lesson artifact unless the team explicitly requests a temporary patch.
 
+For broad QA coordination across companion visual review, specific visual QA, accessibility review, teacher learning-quality review, student-experience review, and test evidence, use `agents/lead-reviewer-agent.md`. Use `agents/teacher-learning-quality-review-agent.md` when a paragraph, companion set, activity, or gate claims classroom readiness or learning quality: it checks learning goals, prior knowledge, didactic sequence, formative feedback, differentiation, dual coding, transfer, and retention. Use `agents/student-experience-review-agent.md` when a student-facing surface claims student readiness: it checks orientation, next action, affordance, cognitive load, motivation, confusion risks, and whether visuals are understandable and linked to the text. Use `agents/accessibility-agent.md` when readability, contrast, alt text, OCR, semantic structure, keyboard access, or inclusive usability needs focused review. Use `agents/testing-agent.md` when the paragraph needs a command-by-command test/validator evidence report.
+
 ### B-verify: Part B checklist
 
 **Part A prerequisites (skip if running Part B only with existing content):**
@@ -468,6 +472,8 @@ Hard fails from this agent block completion. Fix the source, generator, CSS/JS, 
 - [ ] **Unified experience**: stappenplan game procedures use the same step labels and sequence as vaardigheden skills
 - [ ] **Visuelen-toewijzing**: every visual listed for a builder in the plan is actually embedded in that builder's output
 - [ ] `X.Y.Z-companion-visual-review.md` exists and has verdict PASS or PASS WITH FLAGS (no hard fails)
+- [ ] If the delivery is being marked classroom-ready, teacher learning-quality review has no FAIL verdict and any required didactic revisions are closed
+- [ ] If the delivery is being marked ready for students, student-experience review has no FAIL verdict and any required orientation, affordance, motivation, or text-visual-linking revisions are closed
 
 **Deployment:**
 - [ ] Browser: all 4 games load, all section cards appear in landing page

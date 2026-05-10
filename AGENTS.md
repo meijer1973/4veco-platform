@@ -105,6 +105,14 @@ A student working through all materials for one paragraph should feel like they'
 
 For companion artifact review, use `agents/econ-companion-visual-review.md`. It checks the rendered student experience, not just source files: visual-text synchronization, procedure fidelity, affordance, cognitive load, accessibility, and source-output parity. A companion surface with missing visual variants, conflicting visual/text examples, broken procedure steps, debug labels, or no next-step routing is not done.
 
+For a narrower review of a specific visual item, screenshot, rendered UI, graph, chart, diagram, or generated asset, use `agents/visual-qa-agent.md`. It is the conservative visual QA gate for clarity, legibility, hierarchy, affordance, accessibility, geometry, overflow, clipping, and production readiness.
+
+For learning-design and classroom-readiness review, use `agents/teacher-learning-quality-review-agent.md`. It checks whether learning goals, prior knowledge, didactic sequence, formative feedback, differentiation, dual coding, transfer, and retention make student learning likely. Visual polish, accessibility, and passing tests do not prove this.
+
+For lived student-experience review, use `agents/student-experience-review-agent.md`. It checks whether a typical 15-year-old 4 vwo economics student can orient, understand the next action, handle the cognitive load, stay motivated, and connect graphs or flow charts to the explanatory text. Teacher approval does not prove student usability.
+
+For multi-surface QA orchestration, use `agents/lead-reviewer-agent.md`; it routes work to the right specialist agents, verifies evidence completeness, and produces the consolidated go/no-go decision. Use `agents/testing-agent.md` for test command selection, exit-code evidence, validator results, and residual-risk reporting. Use `agents/accessibility-agent.md` for focused readability, contrast, alt-text, OCR, semantic, keyboard, and inclusive-usability review.
+
 ## Architectural principles
 
 Three decisions that govern what lives in this platform and how it evolves. These are not style preferences — they determine which proposals fit the project and which are reasoning backwards into a dying direction.
