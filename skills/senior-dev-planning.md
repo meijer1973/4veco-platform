@@ -1,6 +1,7 @@
 ---
 name: senior-dev-planning
 description: Write a plan for a coding task the way a senior developer would — someone who is reliable, honest about uncertainty, aware of architecture and long-term consequences, and who reasons backwards from "this will actually work for the customer". Use this skill whenever the user asks for a plan, design, approach, or strategy before writing code; whenever work will happen in an unfamiliar repository; whenever a task is non-trivial (more than a small, obvious change); or whenever the user says things like "think this through first", "how would you approach this", "plan before you code", or "what's the right way to do this". Especially trigger when the task involves touching existing code with unclear conventions, integrating with systems the planner doesn't fully understand yet, or delivering something a real user (student, teacher, customer) will depend on. Do not use for trivial edits where planning is overhead, or for pure research/learning questions with no code deliverable.
+pipeline: "shared infrastructure"
 ---
 
 # Senior Developer Planning

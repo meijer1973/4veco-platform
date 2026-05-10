@@ -338,36 +338,147 @@ function validateAssets(markdownFiles, options = {}) {
   pass(`_assets/: ${svgs.length} SVGs, ${pngs.length} PNGs`);
 }
 
-function validateReviewAndQualityRef() {
-  console.log('\n-- QC artifacts --');
-  const reviewFile = rootFiles.find(f => f === `${parNr}-review.md` || f.endsWith('-review.md'));
-  if (!reviewFile) {
-    fail('MISSING review report (X.Y.Z-review.md)');
-  } else {
-    const reviewContent = fs.readFileSync(path.join(PAR, reviewFile), 'utf8');
-    const failCount = (reviewContent.match(/\bFAIL\b/gi) || []).length;
-    if (failCount > 0) fail(`Review has ${failCount} unresolved FAIL item(s): ${reviewFile}`);
-    else pass(`Review: ${reviewFile} (no unresolved FAILs)`);
-  }
+/**
+ * Parse the verdict from a companion-style review file.
+ *
+ * The review files (X.Y.Z-review.md and X.Y.Z-companion-visual-review.md)
+ * declare an explicit verdict block, typically:
+ *
+ *   ## 2. Verdict
+ *
+ *   **FAIL**
+ *
+ * (or **PASS** / **PASS WITH FLAGS**). Pre-L1.5V/F2 the validator counted
+ * every `\bFAIL\b` token in the document, including FAIL-named hard-fail
+ * sub-headings (`### HF-1`-style entries also include the word FAIL in
+ * their explanation). That over-counted FAILs and used a flaky filename
+ * match. This parser is structured: it returns the explicit verdict.
+ *
+ * Returns one of: 'PASS' | 'PASS WITH FLAGS' | 'FAIL' | null.
+ */
+function parseReviewVerdict(content) {
+  // Look for "## ... Verdict" then the next non-empty line.
+  const re = /##\s*\d*\.?\s*Verdict[^\n]*\n+([^\n]+)/i;
+  const m = content.match(re);
+  if (!m) return null;
+  const line = m[1].trim().replace(/^\*+|\*+$/g, '').trim().toUpperCase();
+  if (line === 'PASS') return 'PASS';
+  if (line === 'PASS WITH FLAGS') return 'PASS WITH FLAGS';
+  if (line === 'FAIL') return 'FAIL';
+  return null;
+}
 
-  const qualityRef = rootFiles.find(f => f === `${parNr}-quality-ref.yaml` || f.endsWith('-quality-ref.yaml'));
-  if (!qualityRef) {
-    fail('MISSING quality_ref (X.Y.Z-quality-ref.yaml)');
+/** Count unresolved hard-fail sections (### HF-* headings) in a review. */
+function countHardFails(content) {
+  return (content.match(/^###\s*HF-\d+\b/gm) || []).length;
+}
+
+/**
+ * F2 / L1.5V: gate on the Part A textbook review file specifically.
+ * Uses an EXACT filename match (no flaky endsWith). The verdict is parsed
+ * structurally from the "## 2. Verdict" line.
+ */
+function validatePartARecord() {
+  console.log('\n-- Part A QC artifacts --');
+  const reviewFile = `${parNr}-review.md`;
+  if (!hasFile(reviewFile)) {
+    fail(`MISSING Part A review report (${reviewFile})`);
+  } else {
+    const content = fs.readFileSync(path.join(PAR, reviewFile), 'utf8');
+    const verdict = parseReviewVerdict(content);
+    if (verdict === 'FAIL') {
+      fail(`Part A review verdict is FAIL: ${reviewFile}`);
+    } else if (verdict === null) {
+      // No verdict block found — fall back to legacy FAIL-token count to
+      // avoid masking malformed reviews. Strict: any FAIL token fails.
+      const failTokens = (content.match(/^\*+FAIL\*+/gm) || []).length;
+      if (failTokens > 0) fail(`Part A review has ${failTokens} FAIL marker(s) (no explicit Verdict section): ${reviewFile}`);
+      else pass(`Part A review: ${reviewFile} (no explicit verdict, no FAIL markers)`);
+    } else {
+      pass(`Part A review: ${reviewFile} (verdict ${verdict})`);
+    }
+  }
+  validateQualityRef();
+}
+
+/**
+ * F2 / L1.5V Bucket A3+A4 (review-output) + B (procedure mismatch) gate.
+ * Reads X.Y.Z-companion-visual-review.md if present and FAILs when its
+ * verdict is FAIL. The companion review file is the closure proof for
+ * Part B; absence in --mode part-b or --mode complete is a hard fail.
+ */
+function validatePartBRecord() {
+  console.log('\n-- Part B QC artifacts --');
+  const reviewFile = `${parNr}-companion-visual-review.md`;
+  if (!hasFile(reviewFile)) {
+    fail(`MISSING companion visual review (${reviewFile}) — run agents/econ-companion-visual-review.md`);
+  } else {
+    const content = fs.readFileSync(path.join(PAR, reviewFile), 'utf8');
+    const verdict = parseReviewVerdict(content);
+    const hfCount = countHardFails(content);
+    if (verdict === 'FAIL') {
+      fail(`Companion review verdict is FAIL (${hfCount} hard-fail section(s)): ${reviewFile}`);
+    } else if (verdict === null) {
+      // Fall back: explicit verdict missing — surface plainly, don't guess.
+      fail(`Companion review has no explicit Verdict section: ${reviewFile}`);
+    } else if (hfCount > 0) {
+      // Per agents/econ-companion-visual-review.md verdict rules: BOTH
+      // PASS and PASS WITH FLAGS require zero hard fails. If a verdict
+      // line says PASS / PASS WITH FLAGS but ### HF-N sections still
+      // appear in the document, the verdict is internally inconsistent —
+      // refuse to pass and require the reviewer to either close the HF
+      // sections or revise the verdict to FAIL.
+      fail(`Companion review verdict ${verdict} but ${hfCount} unresolved HF section(s) present: ${reviewFile}`);
+    } else {
+      pass(`Companion review: ${reviewFile} (verdict ${verdict})`);
+    }
+  }
+}
+
+/**
+ * F3 / L1.5V: parse quality-ref.yaml respecting both schema_version 2
+ * (partA: + companion: blocks) and the legacy top-level layout.
+ */
+function validateQualityRef() {
+  const qualityRefName = `${parNr}-quality-ref.yaml`;
+  if (!hasFile(qualityRefName)) {
+    fail(`MISSING quality_ref (${qualityRefName})`);
     return;
   }
 
-  const yaml = fs.readFileSync(path.join(PAR, qualityRef), 'utf8');
-  const missingMatch = yaml.match(/missing:\s*\[([^\]]*)\]/);
+  const yaml = fs.readFileSync(path.join(PAR, qualityRefName), 'utf8');
+
+  // Locate the partA: block if present; otherwise treat the whole file as
+  // legacy top-level (schema_version 1). The block ends at the next non-
+  // indented top-level key (column 0). Line-based extraction — JS regex
+  // has no `\Z` end-of-string anchor, and `$` with the m flag matches end
+  // of line, which trips order-dependent parses when partA: is the final
+  // top-level block.
+  function blockOf(name) {
+    const lines = yaml.split('\n');
+    const startRe = new RegExp(`^${name}:\\s*$`);
+    const topKeyRe = /^[A-Za-z_][A-Za-z0-9_]*:\s*$/;
+    const startIdx = lines.findIndex(l => startRe.test(l));
+    if (startIdx < 0) return null;
+    let endIdx = lines.length;
+    for (let i = startIdx + 1; i < lines.length; i++) {
+      if (topKeyRe.test(lines[i])) { endIdx = i; break; }
+    }
+    return lines.slice(startIdx + 1, endIdx).join('\n');
+  }
+  const partA = blockOf('partA') || yaml;
+
+  const missingMatch = partA.match(/missing:\s*\[([^\]]*)\]/);
   const hasMissing = missingMatch && missingMatch[1].trim().length > 0;
-  const pairedMatch = yaml.match(/svgpng_paired:\s*(true|false)/);
+  const pairedMatch = partA.match(/svgpng_paired:\s*(true|false)/);
   const isPaired = !pairedMatch || pairedMatch[1] === 'true';
-  const namingMatch = yaml.match(/naming_compliant:\s*(true|false)/);
+  const namingMatch = partA.match(/naming_compliant:\s*(true|false)/);
   const isNaming = !namingMatch || namingMatch[1] === 'true';
 
-  if (hasMissing) fail(`quality_ref reports missing assets: ${qualityRef}`);
-  if (!isPaired) fail(`quality_ref reports unpaired SVG/PNG: ${qualityRef}`);
-  if (!isNaming) fail(`quality_ref reports naming non-compliance: ${qualityRef}`);
-  if (!hasMissing && isPaired && isNaming) pass(`Quality ref: ${qualityRef} (valid)`);
+  if (hasMissing) fail(`quality_ref reports missing assets: ${qualityRefName}`);
+  if (!isPaired) fail(`quality_ref reports unpaired SVG/PNG: ${qualityRefName}`);
+  if (!isNaming) fail(`quality_ref reports naming non-compliance: ${qualityRefName}`);
+  if (!hasMissing && isPaired && isNaming) pass(`Quality ref: ${qualityRefName} (valid)`);
 }
 
 function validatePartA() {
@@ -400,7 +511,7 @@ function validatePartA() {
 
   hasFile('build_pdf.py') ? pass('build_pdf.py') : fail('MISSING build_pdf.py');
   validateAssets(markdownFiles, { includePlannedAssets: mode === 'complete' });
-  validateReviewAndQualityRef();
+  validatePartARecord();
 }
 
 function validatePartB() {
@@ -501,6 +612,11 @@ console.log(`Mode: ${mode}${requestedMode === 'auto' ? ' (auto)' : ''}`);
 
 if (mode === 'part-a' || mode === 'complete') validatePartA();
 if (mode === 'part-b' || mode === 'complete') validatePartB();
+// L1.5V Bucket F2: companion-review gate is now mode-aware. `--mode part-b`
+// and `--mode complete` require X.Y.Z-companion-visual-review.md to exist
+// AND have a non-FAIL verdict. The Part A review file is checked inside
+// validatePartA() via validatePartARecord().
+if (mode === 'part-b' || mode === 'complete') validatePartBRecord();
 
 console.log('\n==========================================');
 if (errors === 0 && warnings === 0) {

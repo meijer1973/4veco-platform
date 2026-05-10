@@ -16,6 +16,21 @@ Agents in this folder are not generated lesson output, canonical curriculum data
 | `econ-companion-visual-review.md` | Reviewing generated companion artifacts where visuals, procedure fidelity, affordance, and rendered output parity matter | `X.Y.Z-companion-visual-review.md` in the paragraph folder, unless a gate plan specifies another report path |
 | `visual-qa-agent.md` | Reviewing a specific visual item, screenshot, rendered UI, graph, chart, diagram, or generated asset | `visual-qa-report.md` or the report path required by the task/gate |
 
+## Paired authoring spec
+
+Every companion artifact reviewed by `econ-companion-visual-review.md` must be authored against `skills/econ-companion-artifacts.md` (the platform-wide authoring + regeneration spec). The skill is the source rule set; this agent is the closure gate. Builder skills (`econ-explainer-docs`, `econ-exercise-builder`, `econ-pptx-templates`, etc.) inherit the rules from `econ-companion-artifacts`.
+
+## Pipeline ownership (Part A vs Part B reviewers)
+
+The two paragraph pipelines have separate review surfaces. The asymmetry is intentional:
+
+| Pipeline | Reviewer | Output file | Where to find it |
+|---|---|---|---|
+| Part A (textbook layer) | `econ-paragraph-review` SKILL | `${parNr}-review.md` | `skills/econ-paragraph-review.md` |
+| Part B (companion layer) | `econ-companion-visual-review` AGENT | `${parNr}-companion-visual-review.md` | this folder |
+
+Both verdicts feed `scripts/validate-paragraph.js` via the `partA:` and `companion:` blocks of `${parNr}-quality-ref.yaml` (schema_version 2). `--mode part-a` reads the Part A review only; `--mode part-b` reads the companion review only; `--mode complete` aggregates both — non-FAIL is required to pass.
+
 ## Operating rules
 
 - Load `AGENTS.md`, `BUILD-PARAGRAPH.md`, and the requested agent file before reviewing production lesson artifacts.

@@ -1,6 +1,7 @@
 ---
 name: econ-chapter-builder
 description: "End-to-end chapter production: reads the blueprint, plans paragraph progression, builds each paragraph via econ-textbook-paragraph, runs QC, and assembles into a chapter PDF via econ-chapter-assembler. Use when building a complete chapter from scratch. Trigger when the user mentions hoofdstuk bouwen, chapter build, build chapter, alle paragrafen maken, or complete chapter from blueprint. This is the top-level orchestrator — it calls econ-textbook-paragraph for each paragraph, econ-consolidation-builder for §4, and econ-chapter-assembler for final assembly."
+pipeline: "Part A orchestrator"
 ---
 
 # Economics Chapter Builder

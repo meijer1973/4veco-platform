@@ -40,15 +40,21 @@ const PARAGRAAF_DIR = path.resolve(
 const OUTPUT_DIR = PARAGRAAF_DIR;
 const ASSETS_DIR = path.join(PARAGRAAF_DIR, "_assets");
 
+// L1.5V Bucket A4: each image config carries an `altText` string for the
+// shared embedAssetFromPath() helper to emit as the docx descr.
+const ALT = require("./b1-111-alt-text");
+
 const IMG_FIG_2 = {
   path: path.join(ASSETS_DIR, "1.1.1_fig_2_doc.png"),
   assetName: "1.1.1_fig_2",
+  altText: ALT["1.1.1_fig_2"],
   width: 520,
   height: 333,
 };
 const IMG_WE_1 = {
   path: path.join(ASSETS_DIR, "1.1.1_we_1_doc.png"),
   assetName: "1.1.1_we_1",
+  altText: ALT["1.1.1_we_1"],
   width: 520,
   height: 333,
 };
@@ -417,7 +423,7 @@ const oefeningen = [
       {
         label: "Vraag 5b — Beste combinatie beredeneren",
         vraagText:
-          "Welke combinatie levert Luuk de hoogste totale waarde op? Laat je berekening zien en beargumenteer je keuze met de 3 stappen van economisch denken.",
+          "Welke combinatie levert Luuk de hoogste totale waarde op? Laat je berekening zien en beargumenteer je keuze met de 4 stappen van economisch denken (B02).",
         thinkingSteps: [
           "Stap 1: welke combinaties zijn haalbaar (binnen €30)?",
           "Stap 2: wat is de totale waarde van elke haalbare combinatie?",
@@ -448,7 +454,7 @@ const oefeningen = [
           [{ text: "Beste keuze: A + C + D (bioscoop + pizza + streaming).", bold: true }],
         ],
         explanation:
-          "Dit laat zien dat de schaarse middel (€30) niet één maar meerdere keuzes afdwingt. Je past dezelfde 3 stappen toe, maar nu op combinaties. De alternatieve kosten zijn de waarde van de best haalbare niet-gekozen combinatie (€38), niet de som van alle opties die je niet kiest.",
+          "Dit laat zien dat de schaarse middel (€30) niet één maar meerdere keuzes afdwingt. Je past dezelfde 4 stappen toe, maar nu op combinaties. De alternatieve kosten zijn de waarde van de best haalbare niet-gekozen combinatie (€38), niet de som van alle opties die je niet kiest.",
       },
     ],
   },
@@ -568,7 +574,7 @@ const samenvattendSchema = [
   ["Geen som", "Alternatieve kosten zijn NOOIT de som van alle niet-gekozen opties — alleen de beste."],
   ["Opbrengst schaars middel", "TO = aantal eenheden × opbrengst per eenheid (q × o)."],
   ["Nettowaarde keuze", "opbrengst gekozen − alternatieve kosten. Positief = verstandige keuze."],
-  ["Procedure B02 (4 stappen)", "1) Alternatieven benoemen  2) Opbrengst per alt.  3) Beste niet-gekozen = alt. kosten  4) Nettowaarde bepalen."],
+  ["Procedure B02 (4 stappen)", "1) Alternatieven benoemen  2) Opbrengst per alternatief  3) Beste niet-gekozen = alternatieve kosten  4) Nettowaarde bepalen."],
 ];
 
 // ══════════════════════════════════════════════════════════════════════

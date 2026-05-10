@@ -3,7 +3,7 @@
  * Generates 6 documents: vragen + antwoorden for basis, midden, verrijking.
  *
  * Basis (8): MC schaarste herkennen, term-matching, eenvoudige alternatieve kosten, pitfall.
- * Midden (6): 3+ alternatieven, winst op schaarse middelen, 3-stappen-procedure toepassen.
+ * Midden (6): 3+ alternatieven, winst op schaarse middelen, 4-stappen-procedure (B02) toepassen.
  * Verrijking (4): gemengde allocatie, gratis-is-niet-gratis, claim beoordelen, overheidskeuze.
  *
  * Output: flat layout at paragraph root.
@@ -361,7 +361,7 @@ function buildMidden(includeAnswers) {
 
   children.push(...titleBlock("1.1.1 Schaarste en economisch denken", includeAnswers ? "Middenopgaven — Antwoorden" : "Middenopgaven"));
   children.push(sp(200));
-  children.push(instructionBox("Deze opgaven vragen om volledige berekeningen met drie of meer alternatieven, winst bij inzet van een schaars middel en zelfstandig toepassen van de 3-stappen-procedure in nieuwe contexten."));
+  children.push(instructionBox("Deze opgaven vragen om volledige berekeningen met drie of meer alternatieven, winst bij inzet van een schaars middel en zelfstandig toepassen van de 4-stappen-procedure (B02) in nieuwe contexten."));
   children.push(sp(400));
   children.push(new Paragraph({ children: [new PageBreak()] }));
 
@@ -463,14 +463,14 @@ function buildMidden(includeAnswers) {
   }
   children.push(sp(160));
 
-  // ── 3-stappen-procedure in nieuwe context 1: scholier ──
+  // ── 4-stappen-procedure (B02) in nieuwe context 1: scholier ──
   children.push(h2d("Opgave 5 — Procedure toepassen: scholier", C.dTeal));
   children.push(p("Tom heeft in de zomervakantie 4 weken volledig vrij. Hij overweegt drie dingen:"));
   children.push(p("• Stage lopen bij een architectenbureau: €0 loon, maar ervaring (waarde €400)."));
   children.push(p("• Werken in een supermarkt: €800 verdienen."));
   children.push(p("• Op vakantie gaan: waarde €300 aan plezier."));
   children.push(sp(40));
-  children.push(question("", "Pas de 3-stappen-procedure toe. Adviseer Tom wat economisch de beste keuze is en bereken de alternatieve kosten van die keuze."));
+  children.push(question("", "Pas de 4-stappen-procedure (B02) toe. Adviseer Tom wat economisch de beste keuze is en bereken de alternatieve kosten van die keuze."));
   if (includeAnswers) {
     children.push(answerBox([
       "Stap 1 — Alternatieven: stage (€400), supermarkt (€800), vakantie (€300).",
@@ -485,14 +485,14 @@ function buildMidden(includeAnswers) {
   }
   children.push(sp(160));
 
-  // ── 3-stappen-procedure in nieuwe context 2: overheid ──
+  // ── 4-stappen-procedure (B02) in nieuwe context 2: overheid ──
   children.push(h2d("Opgave 6 — Procedure toepassen: overheid", C.dTeal));
   children.push(p("Een gemeente heeft een eenmalig budget van €500.000 over. Drie projecten dingen mee (elk kost exact €500.000):"));
   children.push(p("• Nieuwe speeltuin: geschatte maatschappelijke baten €750.000."));
   children.push(p("• Renovatie bibliotheek: geschatte maatschappelijke baten €620.000."));
   children.push(p("• Zonnepanelen op gemeentelijk dak: geschatte baten €840.000."));
   children.push(sp(40));
-  children.push(question("", "Pas de 3-stappen-procedure toe. Welk project moet de gemeente kiezen en wat zijn de alternatieve kosten van die keuze?"));
+  children.push(question("", "Pas de 4-stappen-procedure (B02) toe. Welk project moet de gemeente kiezen en wat zijn de alternatieve kosten van die keuze?"));
   if (includeAnswers) {
     children.push(answerBox([
       "Stap 1 — Alternatieven: speeltuin (€750.000), bibliotheek (€620.000), zonnepanelen (€840.000).",
@@ -602,7 +602,7 @@ function buildVerrijking(includeAnswers) {
   children.push(p("• Optie B — Isolatie van sociale huurwoningen: geschatte baten €310 miljoen (lagere energierekening + CO₂-reductie)."));
   children.push(p("• Optie C — Aanleg windmolenpark op zee: geschatte baten €280 miljoen."));
   children.push(sp(40));
-  children.push(question("a", "Welke optie kiest de overheid volgens de 3-stappen-procedure? Bereken ook de alternatieve kosten van die keuze."));
+  children.push(question("a", "Welke optie kiest de overheid volgens de 4-stappen-procedure (B02)? Bereken ook de alternatieve kosten van die keuze."));
   children.push(question("b", "Verwijs expliciet naar de 4-stappen-procedure voor alternatieve kosten (B02 uit het unit-register): (1) benoem alternatieven, (2) bereken opbrengst per alternatief, (3) rangschik — hoogste niet-gekozen = alternatieve kosten, (4) vergelijk gekozen alternatief met alternatieve kosten voor nettowaarde. Bereken de nettowaarde voor de aanbevolen keuze."));
   children.push(question("c", "Bedenk één niet-economisch argument dat de overheid zou kunnen doen besluiten om tóch niet voor de economisch beste optie te kiezen. Wat is het risico van dat argument?"));
   if (includeAnswers) {

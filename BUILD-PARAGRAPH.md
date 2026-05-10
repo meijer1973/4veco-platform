@@ -12,6 +12,31 @@ This document covers two pipelines that can run independently or together.
 
 ---
 
+# COMMON pre-conditions (read first, applies to BOTH pipelines)
+
+These four references frame every paragraph build, regardless of mode. Read them before touching either Part A or Part B.
+
+- **`AGENTS.md`** — architecture, deploy rules, design principles. Hoist of hard rules.
+- **`skills/econ-companion-artifacts.md`** — Part B authoring + regeneration spec. Required reading for any companion edit; per-format Part B skills inherit from it. Skill wins over per-format skill on student-facing rules.
+- **`agents/econ-companion-visual-review.md`** — the Part B closure gate. Companion edits ship only when this agent returns PASS or PASS WITH FLAGS.
+- **`_paragraph-plan.md`** (per paragraph) — the per-paragraph source of truth (concepts, terminology, visual-variants, procedure registry references). Both Part A and Part B builders read it.
+
+**Pipeline-aware validator:**
+
+```bash
+node scripts/validate-paragraph.js --mode part-a "<paragraph folder>"   # textbook layer only
+node scripts/validate-paragraph.js --mode part-b "<paragraph folder>"   # companion layer only
+node scripts/validate-paragraph.js --mode complete "<paragraph folder>" # aggregate
+```
+
+`--mode part-a` gates `${parNr}-review.md`. `--mode part-b` gates `${parNr}-companion-visual-review.md`. `--mode complete` aggregates both. Verdicts are parsed structurally from each file's `## 2. Verdict` block — non-FAIL is required to pass.
+
+**Quality records (single file, two blocks):**
+
+`${parNr}-quality-ref.yaml` is `schema_version: 2`. Carries a `partA:` block (asset state, content presence, Part A review verdict) and a `companion:` block (Part B review verdict, hard-fail count, procedure step count, alt-text + checklist-route + artifact-tool-render flags, surface-by-surface state). Defined in `skills/econ-quality-control` and in `docs/L1.5V/F-plan-part-a-b-separation.md` §4.3.
+
+---
+
 # PART A: TEXTBOOK BUILD (markdown → graphs → PDF)
 
 Produces the textbook paragraph: theory, exercises, answer models, graphs, and PDFs. Used by `econ-chapter-builder` for chapter assembly. Can run standalone.
@@ -443,7 +468,9 @@ This command writes to the target book. It is a build/deploy step, not a read-on
 
 ### Phase 6a: Companion visual review gate
 
-Run `agents/econ-companion-visual-review.md` after Phase 6 when the generated HTML/game shells and converted companion pages can be inspected as rendered output:
+Author/regenerate every student-facing companion against `skills/econ-companion-artifacts.md` (authoring spec for uitleg voorkennis, uitleg vaardigheden, begeleide inoefening, stappenplan, instapquiz, redeneer-spel, nieuws-detective, differentiated exercise handouts, and matched DOCX/PPTX/PDF outputs). Builder skills (`econ-explainer-docs`, `econ-exercise-builder`, `econ-pptx-templates`, etc.) inherit those rules.
+
+Then run `agents/econ-companion-visual-review.md` as the closure gate when the generated HTML/game shells and converted companion pages can be inspected as rendered output:
 
 > "You are the econ-companion-visual-review agent. Read `agents/econ-companion-visual-review.md`, `AGENTS.md`, and `BUILD-PARAGRAPH.md`. Review paragraph [path]. Inspect the available student-facing HTML, DOCX/PPTX/PDF companions, rendered browser/document views where possible, `_paragraph-plan.md`, `_assets/`, source builders, canonical units/procedures/terminology, and quality records. Return the required report format and save it as `X.Y.Z-companion-visual-review.md` in the paragraph folder."
 

@@ -131,37 +131,39 @@ function opportunitySvg(cfg) {
 function processSvg(cfg) {
   const { t, m, contentY, header } = frame(
     cfg,
-    "Economisch denken in stappen",
-    "Zelfde aanpak: alternatieven, opbrengsten, wat geef je op?",
+    "Economisch denken in vier stappen (B02)",
+    "Alternatieven benoemen, opbrengsten, rangschikken, nettowaarde beoordelen.",
     THEMES[cfg.theme].green
   );
   const top = contentY + 8;
-  const cardW = cfg.compact ? 205 : 250;
-  const cardH = cfg.compact ? 112 : 158;
-  const gap = (cfg.w - 2 * (m + 42) - 3 * cardW) / 2;
+  // Four canonical B02 steps. Card width recomputed for 4 cards instead of 3.
+  const cardW = cfg.compact ? 158 : 195;
+  const cardH = cfg.compact ? 116 : 162;
+  const gap = (cfg.w - 2 * (m + 42) - 4 * cardW) / 3;
   const x0 = m + 42;
   const steps = [
-    { nr: "1", title: "Alternatieven", lines: ["Welke opties", "heb je?"], example: "Tarwe of Mais", color: t.blue, soft: t.blueSoft },
-    { nr: "2", title: "Opbrengsten", lines: ["Wat levert", "elk op?"], example: "5000 vs 3500", color: t.green, soft: t.greenSoft },
-    { nr: "3", title: "Opgeven", lines: ["Wat mis je", "door te kiezen?"], example: "3500 gemist", color: t.amber, soft: t.amberSoft },
+    { nr: "1", title: "Alternatieven", lines: ["Welke opties", "heb je?"], example: "Tarwe of maïs", color: t.blue, soft: t.blueSoft },
+    { nr: "2", title: "Opbrengsten", lines: ["Wat levert", "elk op?"], example: "€5.000 vs €3.500", color: t.green, soft: t.greenSoft },
+    { nr: "3", title: "Rangschik", lines: ["Beste niet-", "gekozen = alt. kosten"], example: "alt. kosten €3.500", color: t.amber, soft: t.amberSoft },
+    { nr: "4", title: "Nettowaarde", lines: ["Opbrengst -", "alt. kosten"], example: "€5.000 - €3.500 = €1.500", color: t.green, soft: t.greenSoft },
   ];
   const stepSvg = steps.map((s, i) => {
     const x = x0 + i * (cardW + gap);
     const y = top;
     return `
       ${rect(x, y, cardW, cardH, s.soft, { stroke: s.color, sw: 2, rx: 20 })}
-      <circle cx="${x + 36}" cy="${y + 34}" r="${cfg.compact ? 18 : 22}" fill="${s.color}"/>
-      ${text(x + 36, y + (cfg.compact ? 41 : 42), s.nr, { anchor: "middle", size: cfg.compact ? 18 : 22, weight: 900, fill: cfg.theme === "dark" ? "#07100b" : "#ffffff" })}
-      ${text(x + cardW / 2 + 20, y + 40, s.title, { anchor: "middle", size: cfg.compact ? 16 : 21, weight: 900, fill: s.color })}
-      ${lineText(x + cardW / 2, y + (cfg.compact ? 70 : 88), s.lines, { anchor: "middle", size: cfg.compact ? 12 : 17, weight: 650, fill: t.ink, gap: cfg.compact ? 15 : 22 })}
-      ${cfg.compact ? "" : text(x + cardW / 2, y + cardH - 17, s.example, { anchor: "middle", size: 16, weight: 700, fill: t.muted, style: "italic" })}
+      <circle cx="${x + 30}" cy="${y + 34}" r="${cfg.compact ? 16 : 20}" fill="${s.color}"/>
+      ${text(x + 30, y + (cfg.compact ? 40 : 41), s.nr, { anchor: "middle", size: cfg.compact ? 16 : 20, weight: 900, fill: cfg.theme === "dark" ? "#07100b" : "#ffffff" })}
+      ${text(x + cardW / 2 + 14, y + 40, s.title, { anchor: "middle", size: cfg.compact ? 13 : 18, weight: 900, fill: s.color })}
+      ${lineText(x + cardW / 2, y + (cfg.compact ? 68 : 86), s.lines, { anchor: "middle", size: cfg.compact ? 11 : 15, weight: 650, fill: t.ink, gap: cfg.compact ? 14 : 20 })}
+      ${cfg.compact ? "" : text(x + cardW / 2, y + cardH - 15, s.example, { anchor: "middle", size: 13, weight: 700, fill: t.muted, style: "italic" })}
     `;
   }).join("");
-  const arrows = [0, 1].map((i) => {
-    const x1 = x0 + (i + 1) * cardW + i * gap + 12;
-    const x2 = x0 + (i + 1) * (cardW + gap) - 12;
+  const arrows = [0, 1, 2].map((i) => {
+    const x1 = x0 + (i + 1) * cardW + i * gap + 6;
+    const x2 = x0 + (i + 1) * (cardW + gap) - 6;
     const y = top + cardH / 2;
-    return `<line x1="${x1}" y1="${y}" x2="${x2}" y2="${y}" stroke="${t.muted}" stroke-width="3"/><polygon points="${x2},${y} ${x2 - 14},${y - 9} ${x2 - 14},${y + 9}" fill="${t.muted}"/>`;
+    return `<line x1="${x1}" y1="${y}" x2="${x2}" y2="${y}" stroke="${t.muted}" stroke-width="3"/><polygon points="${x2},${y} ${x2 - 12},${y - 8} ${x2 - 12},${y + 8}" fill="${t.muted}"/>`;
   }).join("");
   const bottomY = top + cardH + (cfg.compact ? 38 : 58);
 
@@ -171,7 +173,7 @@ function processSvg(cfg) {
     ${arrows}
     ${rect(m + 58, bottomY, cfg.w - 2 * m - 116, cfg.compact ? 74 : 94, t.noteBg, { stroke: t.border, sw: 1.3, rx: 18 })}
     ${text(cfg.w / 2, bottomY + (cfg.compact ? 28 : 35), "Voorbeeld boer met 10 hectare", { anchor: "middle", size: cfg.compact ? 16 : 21, weight: 900, fill: t.ink })}
-    ${text(cfg.w / 2, bottomY + (cfg.compact ? 55 : 68), "Tarwe kiezen -> 5000 euro opbrengst; Mais is het beste alternatief dat je opgeeft.", { anchor: "middle", size: cfg.compact ? 13 : 17, weight: 650, fill: t.soft })}
+    ${text(cfg.w / 2, bottomY + (cfg.compact ? 55 : 68), "Tarwe kiezen → opbrengst €5.000; alt. kosten €3.500 (maïs); nettowaarde €1.500.", { anchor: "middle", size: cfg.compact ? 13 : 17, weight: 650, fill: t.soft })}
   </svg>`;
 }
 
@@ -184,23 +186,23 @@ function barChartSvg(cfg, concept) {
       yLabel: "winst per hectare (euro)",
       max: 600,
       ticks: [0, 100, 200, 300, 400, 500, 600],
-      note: "Tarwe is 150 euro per hectare hoger dan Mais.",
+      note: "Tarwe is 150 euro per hectare hoger dan maïs.",
       data: [
         { label: "Tarwe", value: 500, color: t.blue },
-        { label: "Mais", value: 350, color: t.green },
+        { label: "maïs", value: 350, color: t.green },
         { label: "Zonnebloemen", value: 300, color: t.amber },
       ],
     },
     we1: {
-      title: "Tarwe versus Mais",
+      title: "Tarwe versus maïs",
       subtitle: "Vergelijk totale winst en benoem het beste niet-gekozen alternatief.",
       yLabel: "totale winst (euro)",
       max: 6000,
       ticks: [0, 1000, 2000, 3000, 4000, 5000, 6000],
-      note: "Alternatieve kosten bij tarwe = 3500 euro gemiste Maisopbrengst.",
+      note: "Alternatieve kosten bij tarwe = 3500 euro gemiste maïsopbrengst.",
       data: [
         { label: "Tarwe (10 ha)", value: 5000, color: t.blue, badge: "GEKOZEN" },
-        { label: "Mais (10 ha)", value: 3500, color: t.amber, dash: true, badge: "ALT. KOSTEN" },
+        { label: "maïs (10 ha)", value: 3500, color: t.amber, dash: true, badge: "ALT. KOSTEN" },
       ],
     },
   }[concept];

@@ -19,6 +19,8 @@ const path = require("path");
 const sharp = require("sharp");
 const { saveSvgFiles } = require("../../lib/lib-svg-save");
 const { SURFACES, THEMES } = require("../../lib/lib-visual-surfaces");
+// L1.5V Bucket A4: alt-text registry for §1.1.1 visuals.
+const ALT = require("./b1-111-alt-text");
 const {
   Document, Packer, Paragraph, TextRun, Table, TableRow, TableCell,
   ImageRun, Header, Footer, AlignmentType, BorderStyle, WidthType,
@@ -314,12 +316,23 @@ async function buildNieuws(doc, baseSvg) {
 
   const children = [];
   children.push(headlinePara(doc.headline));
+  // L1.5V Bucket A4: emit a meaningful descr / altText. The asset base
+  // matches the news visual filename (without _light/_dark suffix); we use
+  // the registry's alt-text. The convert_nieuws.py converter currently
+  // resolves the visual via filename glob, but the docx now carries
+  // accessible alt-text for screen readers in Word.
+  const NEWS_ASSET_BASE = "1.1.1_news_woningtekort";
+  const NEWS_ALT = ALT[NEWS_ASSET_BASE];
+  if (!NEWS_ALT || NEWS_ALT.length < 10) {
+    throw new Error(`b1-111-nieuws: ALT["${NEWS_ASSET_BASE}"] missing/too short`);
+  }
   children.push(new Paragraph({
     spacing: { before: 80, after: 160 },
     children: [new ImageRun({
       data: pngBuf,
       transformation: { width: IMG_WIDTH_PT, height: IMG_HEIGHT_PT },
       type: "png",
+      altText: { title: NEWS_ASSET_BASE, description: "asset-alt:" + NEWS_ALT, name: NEWS_ASSET_BASE },
     })],
   }));
   for (const p of doc.article) children.push(articlePara(p));

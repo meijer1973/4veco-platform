@@ -95,29 +95,43 @@ def find_web_variant_bases(assets_dir):
     return bases
 
 
-def render_asset_image(asset_prefix, asset_name, web_variant_bases):
-    """Render an asset image, using themed web variants when available."""
-    if asset_name in web_variant_bases:
-        light_src = f'{asset_prefix}/{esc(asset_name)}_web_light.svg'
-        dark_src = f'{asset_prefix}/{esc(asset_name)}_web_dark.svg'
-        fallback_src = f'{asset_prefix}/{esc(asset_name)}.svg'
+def render_asset_image(asset_prefix, payload, web_variant_bases):
+    """Render an asset image, using themed web variants when available.
+
+    L1.5V Bucket A4: payload is now {'base': str, 'alt': str}.
+    """
+    if isinstance(payload, dict):
+        base = payload['base']
+        alt = payload['alt']
+    else:
+        base = payload
+        alt = payload
+    if base in web_variant_bases:
+        light_src = f'{asset_prefix}/{esc(base)}_web_light.svg'
+        dark_src = f'{asset_prefix}/{esc(base)}_web_dark.svg'
+        fallback_src = f'{asset_prefix}/{esc(base)}.svg'
         return (
             '        <figure class="asset-figure">\n'
             f'          <img src="{light_src}" data-light-src="{light_src}" '
             f'data-dark-src="{dark_src}" data-fallback-src="{fallback_src}" '
-            f'alt="{esc(asset_name)}" class="asset-svg">\n'
+            f'alt="{esc(alt)}" class="asset-svg">\n'
             '        </figure>\n'
         )
     return (
         '        <figure class="asset-figure">\n'
-        f'          <img src="{asset_prefix}/{esc(asset_name)}.svg" '
-        f'alt="{esc(asset_name)}" class="asset-svg">\n'
+        f'          <img src="{asset_prefix}/{esc(base)}.svg" '
+        f'alt="{esc(alt)}" class="asset-svg">\n'
         '        </figure>\n'
     )
 
 
 def extract_assets_from_paragraph(p):
-    """Walk a paragraph for inline images carrying alt-text 'asset:NAME'."""
+    """Walk a paragraph for inline images carrying alt-text.
+
+    L1.5V Bucket A4: builders emit `descr="asset-alt:<text>"`. Returns a list
+    of {'base': str, 'alt': str} dicts; legacy `asset:<id>` returns
+    {'base': id, 'alt': id} with a stderr warning.
+    """
     out = []
     for run in p.runs:
         blips = run._element.findall('.//' + qn('a:blip'))
@@ -126,9 +140,19 @@ def extract_assets_from_paragraph(p):
             if drawing is not None:
                 docPr = drawing.find(qn('wp:docPr'))
                 if docPr is not None:
-                    descr = docPr.get('descr', '')
-                    if descr.startswith('asset:'):
-                        out.append(descr[6:])
+                    descr = docPr.get('descr', '') or ''
+                    title = docPr.get('title', '') or ''
+                    if descr.startswith('asset-alt:'):
+                        alt = descr[len('asset-alt:'):]
+                        base = title or alt[:30]
+                        out.append({'base': base, 'alt': alt})
+                    elif descr.startswith('asset:'):
+                        base = descr[len('asset:'):]
+                        sys.stderr.write(
+                            f"WARNING: legacy 'asset:' prefix for {base!r} in samenvatting "
+                            f"(migrate builder to pass altText).\n"
+                        )
+                        out.append({'base': base, 'alt': base})
     return out
 
 

@@ -279,7 +279,11 @@ def build_sections_from_doc(docx_path):
                 p = doc.paragraphs[para_index]
                 para_index += 1
 
-                # Dual coding: detect asset images via alt-text convention
+                # Dual coding: detect asset images via alt-text convention.
+                # L1.5V Bucket A4: builders now emit `asset-alt:<text>` so the
+                # rendered HTML and DOCX both carry meaningful alt-text.
+                # Legacy `asset:<id>` still parses for backward compat with
+                # paragraphs that haven't migrated; warn so omissions surface.
                 for run in p.runs:
                     blips = run._element.findall('.//' + qn('a:blip'))
                     if blips:
@@ -287,9 +291,19 @@ def build_sections_from_doc(docx_path):
                         if drawing is not None:
                             docPr = drawing.find(qn('wp:docPr'))
                             if docPr is not None:
-                                descr = docPr.get('descr', '')
-                                if descr.startswith('asset:'):
-                                    stream.append(('asset_image', descr[6:]))
+                                descr = docPr.get('descr', '') or ''
+                                title = docPr.get('title', '') or ''
+                                if descr.startswith('asset-alt:'):
+                                    alt = descr[len('asset-alt:'):]
+                                    base = title or alt[:30]
+                                    stream.append(('asset_image', {'base': base, 'alt': alt}))
+                                elif descr.startswith('asset:'):
+                                    base = descr[len('asset:'):]
+                                    sys.stderr.write(
+                                        f"WARNING: legacy 'asset:' prefix for {base!r} in voorkennis "
+                                        f"(migrate builder to pass altText).\n"
+                                    )
+                                    stream.append(('asset_image', {'base': base, 'alt': base}))
 
                 text = p.text.strip()
                 if not text:
@@ -551,7 +565,21 @@ def generate_html(data, para_number, para_name, asset_prefix="../_assets", share
         dcls = get_domain_info(s['domain'])[0]
 
         content_html = ''
+        list_buf = []
+
+        def _flush_list_buf():
+            nonlocal content_html, list_buf
+            if list_buf:
+                items = ''.join(f'          <li>{esc(it)}</li>\n' for it in list_buf)
+                content_html += f'        <ul class="section-list">\n{items}        </ul>\n'
+                list_buf = []
+
         for etype, edata in s['content']:
+            if etype == 'list_item':
+                list_buf.append(edata)
+                continue
+            # Any non-list element flushes the buffered list first.
+            _flush_list_buf()
             if etype == 'heading2':
                 content_html += f'        <h3 class="sub-heading">{esc(edata)}</h3>\n'
             elif etype == 'paragraph':
@@ -570,12 +598,17 @@ def generate_html(data, para_number, para_name, asset_prefix="../_assets", share
                 lines = edata.replace('\n', '<br>\n            ')
                 content_html += f'        <div class="formula-box">\n            {lines}\n        </div>\n'
             elif etype == 'asset_image':
-                if edata in web_variant_bases:
-                    light_src = f'{asset_prefix}/{edata}_web_light.svg'
-                    dark_src = f'{asset_prefix}/{edata}_web_dark.svg'
-                    content_html += f'        <figure class="asset-figure">\n          <img src="{light_src}" data-light-src="{light_src}" data-dark-src="{dark_src}" data-fallback-src="{asset_prefix}/{esc(edata)}.svg" alt="{esc(edata)}" class="asset-svg">\n        </figure>\n'
+                # L1.5V Bucket A4: edata is now {'base': str, 'alt': str}.
+                # `base` selects the SVG variant; `alt` becomes the meaningful
+                # screen-reader text on the rendered <img>.
+                base = edata['base']
+                alt = edata['alt']
+                if base in web_variant_bases:
+                    light_src = f'{asset_prefix}/{base}_web_light.svg'
+                    dark_src = f'{asset_prefix}/{base}_web_dark.svg'
+                    content_html += f'        <figure class="asset-figure">\n          <img src="{light_src}" data-light-src="{light_src}" data-dark-src="{dark_src}" data-fallback-src="{asset_prefix}/{esc(base)}.svg" alt="{esc(alt)}" class="asset-svg">\n        </figure>\n'
                 else:
-                    content_html += f'        <figure class="asset-figure">\n          <img src="{asset_prefix}/{esc(edata)}.svg" alt="{esc(edata)}" class="asset-svg">\n        </figure>\n'
+                    content_html += f'        <figure class="asset-figure">\n          <img src="{asset_prefix}/{esc(base)}.svg" alt="{esc(alt)}" class="asset-svg">\n        </figure>\n'
             elif etype in ('callout_kernregel', 'callout_letop', 'callout_controle', 'callout_tip'):
                 content_html += render_callout(etype, edata)
             elif etype == 'samenvatting':
@@ -585,6 +618,9 @@ def generate_html(data, para_number, para_name, asset_prefix="../_assets", share
                 for label, value in edata:
                     content_html += f'            <tr><td>{esc(label)}</td><td>{esc(value)}</td></tr>\n'
                 content_html += '          </tbody>\n        </table>\n'
+
+        # Flush any list items that ended the section.
+        _flush_list_buf()
 
         sections_html += f'''
       <section class="section" id="sectie-{s['nr']}">
@@ -599,7 +635,10 @@ def generate_html(data, para_number, para_name, asset_prefix="../_assets", share
       </section>
 '''
 
-    # Checklist
+    # Checklist + next-step routing.
+    # Per the econ-companion-artifacts skill: a checklist without next-step
+    # routing is incomplete. After the checklist, emit a "Wat nu?" block that
+    # routes the student to the next appropriate artifact.
     checklist_html = ''
     if checklist:
         items = ''
@@ -609,12 +648,23 @@ def generate_html(data, para_number, para_name, asset_prefix="../_assets", share
           <label for="check{i}">{esc(item)}</label>
         </div>
 '''
+        # Paragraph-local route targets. URL-encode spaces and the en-dash.
+        prefix = f'{para_number} {para_name}'.replace(' ', '%20').replace('–', '%E2%80%93')
+        href_vaardigheden = f'{prefix}%20%E2%80%93%20uitleg%20vaardigheden.html'
+        href_presentatie = f'{prefix}%20%E2%80%93%20presentatie.pptx'
+        href_instapquiz = f'{prefix}%20%E2%80%93%20instapquiz.html'
+        route_html = f'''        <div class="checklist-route">
+          <h3 class="route-title">Wat nu?</h3>
+          <p class="route-line route-yes"><strong>Alles afgevinkt?</strong> Ga verder naar <a href="{href_vaardigheden}">Uitleg vaardigheden</a> of bekijk de <a href="{href_presentatie}">Presentatie</a>.</p>
+          <p class="route-line route-no"><strong>Nog niet?</strong> Lees de relevante sectie hierboven opnieuw, doe daarna de <a href="{href_instapquiz}">Instapquiz</a>.</p>
+        </div>
+'''
         checklist_html = f'''
       <div class="checklist-section">
         <div class="checklist-title">Checklist voorkennis</div>
         <p class="checklist-sub">Controleer of je de volgende zaken beheerst voordat je aan de paragraaf begint:</p>
 {items}
-      </div>
+{route_html}      </div>
 '''
 
     # Grid columns for hero cards

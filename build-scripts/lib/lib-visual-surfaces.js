@@ -122,13 +122,11 @@ function frame(cfg, title, subtitle, accent) {
   }
 
   const titleSize = cfg.compact ? 25 : 34;
-  const labelSize = cfg.compact ? 13 : 18;
   const subtitleSize = cfg.compact ? 15 : 18;
   const contentY = cfg.compact ? 142 : 154;
   const header = `
     <rect width="${cfg.w}" height="${cfg.h}" rx="${cfg.compact ? 20 : 28}" fill="${t.bg}"/>
     ${rect(m, m, cfg.w - 2 * m, cfg.h - 2 * m, t.panel, { stroke: t.border, sw: 1.5, rx: cfg.compact ? 18 : 24 })}
-    ${text(m + 32, m + 42, "COMPANION VISUAL", { size: labelSize, weight: 800, fill: accent, spacing: 2 })}
     ${text(m + 32, m + 82, title, { size: titleSize, weight: 700, fill: t.ink, family: "Fraunces, Georgia, serif", style: "italic" })}
     ${text(m + 32, m + 114, subtitle, { size: subtitleSize, weight: 500, fill: t.soft })}
   `;

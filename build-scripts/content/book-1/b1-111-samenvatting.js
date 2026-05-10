@@ -6,7 +6,7 @@
  *
  *   Rij 1 | Wat is schaarste? (def + fig_1)      | Schaarste in de praktijk
  *   Rij 2 | Alternatieve kosten (def + fig_2)    | Pitfalls (warning)
- *   Rij 3 | Economisch denken 3-stappen (fig_3)  | Mini-worked-example (we_1)
+ *   Rij 3 | Economisch denken 4 stappen B02 (fig_3)  | Mini-worked-example (we_1)
  *
  * Domain colours:
  *   - Row 1   teal   (economisch / schaarste-domein)
@@ -84,7 +84,15 @@ const ASSETS_DIR = path.resolve(
   "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_assets"
 );
 
-function embeddedImage(filename, width, height, htmlAssetName = filename.replace(/\.png$/i, "")) {
+// L1.5V Bucket A4: altText required (>= 10 chars). descr prefix `asset-alt:`
+// is the convention recognised by convert_samenvatting.py for meaningful
+// alt-text passthrough. See b1-111-alt-text.js for the registry.
+const ALT = require("./b1-111-alt-text");
+
+function embeddedImage(filename, width, height, htmlAssetName, altText) {
+  if (!altText || altText.length < 10) {
+    throw new Error(`embeddedImage: altText required (>=10 chars) for ${htmlAssetName}, got: ${JSON.stringify(altText)}`);
+  }
   const buf = fs.readFileSync(path.join(ASSETS_DIR, filename));
   return new Paragraph({
     alignment: AlignmentType.CENTER,
@@ -93,7 +101,7 @@ function embeddedImage(filename, width, height, htmlAssetName = filename.replace
       data: buf,
       transformation: { width, height },
       type: "png",
-      altText: { title: htmlAssetName, description: "asset:" + htmlAssetName, name: htmlAssetName },
+      altText: { title: htmlAssetName, description: "asset-alt:" + altText, name: htmlAssetName },
     })],
   });
 }
@@ -191,7 +199,7 @@ function cell_R1C1() {
     ),
     bodyLine("→  Schaarste is het startpunt van elk economisch probleem.",
       { italics: true, color: C.tealDk, after: 40 }),
-    embeddedImage("1.1.1_fig_1_summary.png", 230, 133, "1.1.1_fig_1"),
+    embeddedImage("1.1.1_fig_1_summary.png", 230, 133, "1.1.1_fig_1", ALT["1.1.1_fig_1"]),
     bodyLine("Behoeften (onbegrensd) → schaarste-filter → keuze.",
       { size: 14, color: C.gray, italics: true, after: 0 }),
   ]);
@@ -263,7 +271,7 @@ function cell_R2C1() {
         font: "Consolas", size: 16, bold: true, color: C.blueDk,
       })],
     }),
-    embeddedImage("1.1.1_fig_2_summary.png", 230, 133, "1.1.1_fig_2"),
+    embeddedImage("1.1.1_fig_2_summary.png", 230, 133, "1.1.1_fig_2", ALT["1.1.1_fig_2"]),
     bodyLine("Twee alternatieven → pijl wijst het niet-gekozen alternatief aan.",
       { size: 14, color: C.gray, italics: true, after: 0 }),
   ]);
@@ -300,31 +308,37 @@ function cell_R2C2() {
   ]);
 }
 
-// ── Rij 3 · Kolom 1 — Economisch denken, 3-stappen (green + fig_3) ──
+// ── Rij 3 · Kolom 1 — Economisch denken, 4 stappen (B02, green + fig_3) ──
 function cell_R3C1() {
   return coloredCell(C.green, C.greenLt, [
-    heading("Economisch denken — 3 stappen", C.greenDk),
-    new Paragraph({ spacing: { after: 25 }, children: [
-      new TextRun({ text: "1.  ", font: "Arial", size: 17, bold: true, color: C.greenDk }),
-      new TextRun({ text: "Welke ", font: "Arial", size: 17, color: C.dark }),
-      new TextRun({ text: "alternatieven", font: "Arial", size: 17, bold: true, color: C.dark }),
-      new TextRun({ text: " zijn er?", font: "Arial", size: 17, color: C.dark }),
+    heading("Economisch denken — 4 stappen (B02)", C.greenDk),
+    new Paragraph({ spacing: { after: 18 }, children: [
+      new TextRun({ text: "1.  ", font: "Arial", size: 16, bold: true, color: C.greenDk }),
+      new TextRun({ text: "Benoem alle ", font: "Arial", size: 16, color: C.dark }),
+      new TextRun({ text: "alternatieven", font: "Arial", size: 16, bold: true, color: C.dark }),
+      new TextRun({ text: ".", font: "Arial", size: 16, color: C.dark }),
     ]}),
-    new Paragraph({ spacing: { after: 25 }, children: [
-      new TextRun({ text: "2.  ", font: "Arial", size: 17, bold: true, color: C.greenDk }),
-      new TextRun({ text: "Wat ", font: "Arial", size: 17, color: C.dark }),
-      new TextRun({ text: "levert", font: "Arial", size: 17, bold: true, color: C.dark }),
-      new TextRun({ text: " elk alternatief op?", font: "Arial", size: 17, color: C.dark }),
+    new Paragraph({ spacing: { after: 18 }, children: [
+      new TextRun({ text: "2.  ", font: "Arial", size: 16, bold: true, color: C.greenDk }),
+      new TextRun({ text: "Bereken de ", font: "Arial", size: 16, color: C.dark }),
+      new TextRun({ text: "opbrengst", font: "Arial", size: 16, bold: true, color: C.dark }),
+      new TextRun({ text: " per alternatief.", font: "Arial", size: 16, color: C.dark }),
     ]}),
-    new Paragraph({ spacing: { after: 40 }, children: [
-      new TextRun({ text: "3.  ", font: "Arial", size: 17, bold: true, color: C.greenDk }),
-      new TextRun({ text: "Wat ", font: "Arial", size: 17, color: C.dark }),
-      new TextRun({ text: "geef je op", font: "Arial", size: 17, bold: true, color: C.dark }),
-      new TextRun({ text: " als je kiest? (= alternatieve kosten)", font: "Arial", size: 17, color: C.dark }),
+    new Paragraph({ spacing: { after: 18 }, children: [
+      new TextRun({ text: "3.  ", font: "Arial", size: 16, bold: true, color: C.greenDk }),
+      new TextRun({ text: "Rangschik. Het beste niet-gekozen alternatief = ", font: "Arial", size: 16, color: C.dark }),
+      new TextRun({ text: "alternatieve kosten", font: "Arial", size: 16, bold: true, color: C.dark }),
+      new TextRun({ text: ".", font: "Arial", size: 16, color: C.dark }),
     ]}),
-    embeddedImage("1.1.1_fig_3_summary.png", 230, 133, "1.1.1_fig_3"),
-    bodyLine("Alternatieven → Opbrengsten → Wat geef je op?",
-      { size: 14, color: C.gray, italics: true, after: 0 }),
+    new Paragraph({ spacing: { after: 30 }, children: [
+      new TextRun({ text: "4.  ", font: "Arial", size: 16, bold: true, color: C.greenDk }),
+      new TextRun({ text: "Vergelijk: ", font: "Arial", size: 16, color: C.dark }),
+      new TextRun({ text: "nettowaarde", font: "Arial", size: 16, bold: true, color: C.dark }),
+      new TextRun({ text: " = opbrengst − alternatieve kosten.", font: "Arial", size: 16, color: C.dark }),
+    ]}),
+    embeddedImage("1.1.1_fig_3_summary.png", 230, 133, "1.1.1_fig_3", ALT["1.1.1_fig_3"]),
+    bodyLine("Alternatieven → Opbrengsten → Rangschik (alternatieve kosten) → Nettowaarde",
+      { size: 13, color: C.gray, italics: true, after: 0 }),
   ]);
 }
 
@@ -376,7 +390,7 @@ function cell_R3C2() {
       new TextRun({ text: "€ 3.500", font: "Consolas", size: 15, bold: true, color: C.greenDk }),
       new TextRun({ text: " (gemiste maïsopbrengst).", font: "Arial", size: 15, color: C.dark }),
     ]}),
-    embeddedImage("1.1.1_we_1_summary.png", 230, 133, "1.1.1_we_1"),
+    embeddedImage("1.1.1_we_1_summary.png", 230, 133, "1.1.1_we_1", ALT["1.1.1_we_1"]),
     bodyLine("Vergelijking tarwe vs maïs met alternatieve kosten-annotatie.",
       { size: 14, color: C.gray, italics: true, after: 0 }),
   ]);

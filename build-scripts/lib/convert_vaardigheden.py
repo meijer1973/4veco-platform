@@ -81,14 +81,26 @@ def find_web_variant_bases(assets_dir):
                 bases.add(base)
     return bases
 
-def render_asset_image(asset_prefix, asset_name, web_variant_bases):
-    """Render an asset image, using themed web variants when available."""
-    if asset_name in web_variant_bases:
-        light_src = f'{asset_prefix}/{esc(asset_name)}_web_light.svg'
-        dark_src = f'{asset_prefix}/{esc(asset_name)}_web_dark.svg'
-        fallback_src = f'{asset_prefix}/{esc(asset_name)}.svg'
-        return f'        <figure class="asset-figure">\n          <img src="{light_src}" data-light-src="{light_src}" data-dark-src="{dark_src}" data-fallback-src="{fallback_src}" alt="{esc(asset_name)}" class="asset-svg">\n        </figure>\n'
-    return f'        <figure class="asset-figure">\n          <img src="{asset_prefix}/{esc(asset_name)}.svg" alt="{esc(asset_name)}" class="asset-svg">\n        </figure>\n'
+def render_asset_image(asset_prefix, payload, web_variant_bases):
+    """Render an asset image, using themed web variants when available.
+
+    L1.5V Bucket A4: payload is now {'base': str, 'alt': str}. `base` selects
+    the SVG variant (web_light/web_dark or plain); `alt` becomes the
+    meaningful screen-reader text on the rendered <img>.
+    """
+    if isinstance(payload, dict):
+        base = payload['base']
+        alt = payload['alt']
+    else:
+        # Defensive: legacy callers may still pass a string.
+        base = payload
+        alt = payload
+    if base in web_variant_bases:
+        light_src = f'{asset_prefix}/{esc(base)}_web_light.svg'
+        dark_src = f'{asset_prefix}/{esc(base)}_web_dark.svg'
+        fallback_src = f'{asset_prefix}/{esc(base)}.svg'
+        return f'        <figure class="asset-figure">\n          <img src="{light_src}" data-light-src="{light_src}" data-dark-src="{dark_src}" data-fallback-src="{fallback_src}" alt="{esc(alt)}" class="asset-svg">\n        </figure>\n'
+    return f'        <figure class="asset-figure">\n          <img src="{asset_prefix}/{esc(base)}.svg" alt="{esc(alt)}" class="asset-svg">\n        </figure>\n'
 
 def parse_document(docx_path):
     """Parse a voorkennis .docx and return structured data."""
@@ -177,7 +189,9 @@ def parse_document(docx_path):
     from docx.oxml.ns import qn as _qn
     para_elements = []
     for p in doc.paragraphs:
-        # Check for embedded asset images (dual coding convention: descr="asset:<filename>")
+        # Check for embedded asset images (dual coding convention).
+        # L1.5V Bucket A4: builders emit `descr="asset-alt:<text>"`; legacy
+        # `asset:<id>` still parses for backward compat.
         for run in p.runs:
             blips = run._element.findall('.//' + _qn('a:blip'))
             if blips:
@@ -185,10 +199,19 @@ def parse_document(docx_path):
                 if drawing is not None:
                     docPr = drawing.find(_qn('wp:docPr'))
                     if docPr is not None:
-                        descr = docPr.get('descr', '')
-                        if descr.startswith('asset:'):
-                            asset_name = descr[6:]  # strip "asset:" prefix
-                            para_elements.append(('asset_image', asset_name))
+                        descr = docPr.get('descr', '') or ''
+                        title = docPr.get('title', '') or ''
+                        if descr.startswith('asset-alt:'):
+                            alt = descr[len('asset-alt:'):]
+                            base = title or alt[:30]
+                            para_elements.append(('asset_image', {'base': base, 'alt': alt}))
+                        elif descr.startswith('asset:'):
+                            base = descr[len('asset:'):]
+                            sys.stderr.write(
+                                f"WARNING: legacy 'asset:' prefix for {base!r} in vaardigheden "
+                                f"(migrate builder to pass altText).\n"
+                            )
+                            para_elements.append(('asset_image', {'base': base, 'alt': base}))
         text = p.text.strip()
         if not text:
             continue
@@ -332,7 +355,8 @@ def build_sections_from_doc(docx_path):
                 p = doc.paragraphs[para_index]
                 para_index += 1
 
-                # Dual coding: detect asset images via alt-text convention
+                # Dual coding: detect asset images via alt-text convention.
+                # L1.5V Bucket A4: see parse_document() for prefix semantics.
                 for run in p.runs:
                     blips = run._element.findall('.//' + _qn('a:blip'))
                     if blips:
@@ -340,9 +364,19 @@ def build_sections_from_doc(docx_path):
                         if drawing is not None:
                             docPr = drawing.find(_qn('wp:docPr'))
                             if docPr is not None:
-                                descr = docPr.get('descr', '')
-                                if descr.startswith('asset:'):
-                                    stream.append(('asset_image', descr[6:]))
+                                descr = docPr.get('descr', '') or ''
+                                title = docPr.get('title', '') or ''
+                                if descr.startswith('asset-alt:'):
+                                    alt = descr[len('asset-alt:'):]
+                                    base = title or alt[:30]
+                                    stream.append(('asset_image', {'base': base, 'alt': alt}))
+                                elif descr.startswith('asset:'):
+                                    base = descr[len('asset:'):]
+                                    sys.stderr.write(
+                                        f"WARNING: legacy 'asset:' prefix for {base!r} in vaardigheden "
+                                        f"(migrate builder to pass altText).\n"
+                                    )
+                                    stream.append(('asset_image', {'base': base, 'alt': base}))
 
                 text = p.text.strip()
                 if not text:
@@ -622,7 +656,21 @@ def generate_html(data, para_number, para_name, asset_prefix="../_assets", share
         dcls = shared_domain_class(s['domain'])
 
         content_html = ''
+        list_buf = []
+
+        def _flush_list_buf():
+            nonlocal content_html, list_buf
+            if list_buf:
+                items = ''.join(f'          <li>{esc(it)}</li>\n' for it in list_buf)
+                content_html += f'        <ul class="section-list">\n{items}        </ul>\n'
+                list_buf = []
+
         for etype, edata in s['content']:
+            if etype == 'list_item':
+                list_buf.append(edata)
+                continue
+            # Any non-list element flushes the buffered list first.
+            _flush_list_buf()
             if etype == 'heading2':
                 content_html += f'        <h3 class="sub-heading">{esc(edata)}</h3>\n'
             elif etype == 'paragraph':
@@ -651,6 +699,9 @@ def generate_html(data, para_number, para_name, asset_prefix="../_assets", share
                 for label, value in edata:
                     content_html += f'            <tr><td>{esc(label)}</td><td>{esc(value)}</td></tr>\n'
                 content_html += '          </tbody>\n        </table>\n'
+
+        # Flush any list items that ended the section.
+        _flush_list_buf()
 
         sections_html += f'''
       <section class="section" id="sectie-{s['nr']}">
@@ -681,6 +732,11 @@ def generate_html(data, para_number, para_name, asset_prefix="../_assets", share
 '''
 
     # Checklist
+    # Checklist + next-step routing.
+    # Per the econ-companion-artifacts skill: a checklist without next-step
+    # routing is incomplete. After the checklist, emit a "Wat nu?" block that
+    # routes the student to the next appropriate artifact based on what they
+    # were unable to check.
     checklist_html = ''
     if checklist:
         items = ''
@@ -690,12 +746,27 @@ def generate_html(data, para_number, para_name, asset_prefix="../_assets", share
           <label for="check{i}">{esc(item)}</label>
         </div>
 '''
+        # Paragraph-local route targets per the skill's route table.
+        prefix = f'{para_number} {para_name}'.replace(' ', '%20').replace('–', '%E2%80%93')
+        href_stappenplan = f'{prefix}%20%E2%80%93%20stappenplan.html'
+        href_bi = f'{prefix}%20%E2%80%93%20begeleide%20inoefening.html'
+        href_basis = f'{prefix}%20%E2%80%93%20basis%20%E2%80%93%20vragen.docx'
+        href_midden = f'{prefix}%20%E2%80%93%20midden%20%E2%80%93%20vragen.docx'
+        href_verrijking = f'{prefix}%20%E2%80%93%20verrijking%20%E2%80%93%20vragen.docx'
+        route_html = f'''        <div class="checklist-route">
+          <h3 class="route-title">Wat nu?</h3>
+          <p class="route-line route-no"><strong>De stappen niet zelfstandig?</strong> Doorloop het <a href="{href_stappenplan}">Stappenplan</a> nog eens.</p>
+          <p class="route-line route-no"><strong>Voorbeeld lukt, zelfstandig nog niet?</strong> Werk de <a href="{href_bi}">Begeleide inoefening</a> door.</p>
+          <p class="route-line route-yes"><strong>Eenvoudige opgaven gaan goed?</strong> Pak de <a href="{href_basis}">Basisopgaven</a> en daarna de <a href="{href_midden}">Middenopgaven</a>.</p>
+          <p class="route-line route-yes"><strong>Alles afgevinkt en zelfstandig?</strong> Probeer de <a href="{href_verrijking}">Verrijkingsopgaven</a> voor meer uitdaging.</p>
+        </div>
+'''
         checklist_html = f'''
       <div class="checklist-section">
         <div class="checklist-title">Samenvatting checklist</div>
         <p class="checklist-sub">Controleer of je de volgende vaardigheden beheerst:</p>
 {items}
-      </div>
+{route_html}      </div>
 '''
 
     # Grid columns for hero cards

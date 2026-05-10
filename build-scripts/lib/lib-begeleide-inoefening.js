@@ -312,18 +312,32 @@ function answerSpace(lineCount = 3) {
  * @param {string} assetName - Concept asset name for HTML converters
  * @returns {Paragraph|null} - Paragraph with embedded image, or null if file not found
  */
-function embedAssetFromPath(imgPath, width, height, assetName) {
+/**
+ * L1.5V Bucket A4: optional altText param. When provided (>=10 chars) it is
+ * embedded as `descr="asset-alt:<text>"` so converters can render meaningful
+ * HTML alt and DOCX descr. When missing, falls back to the legacy
+ * `asset:<id>` shape and warns to stderr — backward compat for paragraphs
+ * that haven't migrated yet. Per-paragraph builders that wrap this helper
+ * (or pass image configs through it) are expected to provide altText for
+ * §1.1.1; other paragraphs follow as they migrate.
+ */
+function embedAssetFromPath(imgPath, width, height, assetName, altText) {
   if (!fs.existsSync(imgPath)) return null;
   const buf = fs.readFileSync(imgPath);
   const ext = imgPath.split('.').pop();
   const fileName = imgPath.split(/[/\\]/).pop();
   const htmlAssetName = assetName || fileName.replace(/\.[^.]+$/, '');
+  const hasAlt = altText && altText.length >= 10;
+  if (!hasAlt) {
+    process.stderr.write(`WARNING: embedAssetFromPath missing altText for ${htmlAssetName} (${imgPath}); using legacy asset: prefix.\n`);
+  }
+  const description = hasAlt ? 'asset-alt:' + altText : 'asset:' + htmlAssetName;
   return new Paragraph({
     spacing: { before: 120, after: 120 },
     alignment: AlignmentType.CENTER,
     children: [new ImageRun({
       data: buf, transformation: { width, height }, type: ext === 'jpg' ? 'jpg' : 'png',
-      altText: { title: htmlAssetName, description: 'asset:' + htmlAssetName, name: fileName },
+      altText: { title: htmlAssetName, description, name: fileName },
     })],
   });
 }
@@ -572,7 +586,7 @@ async function buildBegeleideInoefening(paragraafNr, onderwerp, headerText, oefe
       // Dual coding: visual scaffolding image — shown in BOTH vragen and antwoorden
       // This helps weaker students by providing a visual anchor alongside the text scaffolding
       if (dv.scaffoldImage) {
-        const scaffImg = embedAssetFromPath(dv.scaffoldImage.path, dv.scaffoldImage.width, dv.scaffoldImage.height, dv.scaffoldImage.assetName);
+        const scaffImg = embedAssetFromPath(dv.scaffoldImage.path, dv.scaffoldImage.width, dv.scaffoldImage.height, dv.scaffoldImage.assetName, dv.scaffoldImage.altText);
         if (scaffImg) children.push(scaffImg);
         children.push(sp());
       }

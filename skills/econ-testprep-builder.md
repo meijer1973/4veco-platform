@@ -1,6 +1,7 @@
 ---
 name: econ-testprep-builder
 description: "Builds test preparation paragraphs for economics education (bovenbouw vwo): active summaries with MC questions, exam skills training, integration exercises, and timed practice tests. Each book's Chapter 5 contains these four paragraph types in a scaffolded progression from retrieval practice to exam simulation. No new theory is introduced. Use this skill when the user mentions toetsvoorbereiding, test preparation, actieve samenvatting, examenvaardigheden, integratieoefening, proeftoets, or when building Chapter 5 of any book. Always use in combination with econ-didactiek (pedagogy), economic-graph (graphs), and econ-pdf-builder (PDF export)."
+pipeline: "Part A producer"
 ---
 
 # Economics Test Preparation Builder

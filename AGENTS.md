@@ -103,7 +103,21 @@ A student working through all materials for one paragraph should feel like they'
 
 **How to enforce:** The `_paragraph-plan.md` contains a **procedure-stappen-plan** that defines the canonical step sequence for each skill. All builders — vaardigheden, stappenplan game, presentatie, inoefening — must follow these exact steps. A **visual-variants plan** maps each concept visual to its surface-specific files, and a **visuelen-toewijzing** table maps those variants to every builder that must embed them.
 
-For companion artifact review, use `agents/econ-companion-visual-review.md`. It checks the rendered student experience, not just source files: visual-text synchronization, procedure fidelity, affordance, cognitive load, accessibility, and source-output parity. A companion surface with missing visual variants, conflicting visual/text examples, broken procedure steps, debug labels, or no next-step routing is not done.
+For companion artifact **authoring and regeneration**, use `skills/econ-companion-artifacts.md`. It is the platform-wide standard for student-facing companion artifacts (uitleg voorkennis, uitleg vaardigheden, begeleide inoefening, stappenplan, instapquiz, redeneer-spel, nieuws-detective, differentiated exercise handouts, and matched DOCX/PPTX/PDF outputs). Builder skills (`econ-explainer-docs`, `econ-exercise-builder`, `econ-pptx-templates`, etc.) inherit those rules; if a builder skill conflicts, the companion-artifacts skill wins on student-facing rules.
+
+For companion artifact **review**, use `agents/econ-companion-visual-review.md`. It checks the rendered student experience, not just source files: visual-text synchronization, procedure fidelity, affordance, cognitive load, accessibility, and source-output parity. A companion surface with missing visual variants, conflicting visual/text examples, broken procedure steps, debug labels, or no next-step routing is not done. The skill above and this agent are aligned: the skill is the authoring spec, the agent is the closure gate.
+
+### Quality control: Part A and Part B have separate review records (L1.5V Bucket F)
+
+Every paragraph carries TWO review records and ONE quality-ref:
+
+- `${parNr}-review.md` — Part A textbook review (output of `econ-paragraph-review` skill).
+- `${parNr}-companion-visual-review.md` — Part B companion review (output of `econ-companion-visual-review` agent).
+- `${parNr}-quality-ref.yaml` (`schema_version: 2`) — single file with `partA:` block (asset state, content presence, Part A review verdict) and `companion:` block (Part B review verdict, hard-fail count, procedure step count, alt-text + checklist-route + artifact-tool-render flags, surface-by-surface state).
+
+`scripts/validate-paragraph.js` reads each review file by EXACT name (no `endsWith` filename match) and parses verdicts structurally from the `## 2. Verdict` block. Modes: `--mode part-a` gates Part A review only; `--mode part-b` gates companion review only; `--mode complete` aggregates both. A FAIL verdict in either review fails the corresponding mode. Schema details: `docs/L1.5V/F-plan-part-a-b-separation.md` §4.3.
+
+Every skill in `skills/` carries a `pipeline:` frontmatter field (Part A producer / Part B producer / shared infrastructure / Part A reviewer / Part A assembler / Part A orchestrator / Part B producer (umbrella)) so a glance at frontmatter tells you which pipeline owns the skill's output and which gate runs against it.
 
 For a narrower review of a specific visual item, screenshot, rendered UI, graph, chart, diagram, or generated asset, use `agents/visual-qa-agent.md`. It is the conservative visual QA gate for clarity, legibility, hierarchy, affordance, accessibility, geometry, overflow, clipping, and production readiness.
 

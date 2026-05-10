@@ -1,6 +1,7 @@
 ---
 name: aanpak-samenvattingen
 description: "Recipe for building chapter summary documents (hoofdstuksamenvattingen) for exam preparation. Covers the 9-section structure: title page, learning goals overview, terminology tables, formulas with worked examples, reasoning chains, graph overview, comparison tables, common mistakes, and study checklist. Trigger when creating a samenvatting.docx at chapter level (3.X [Naam] – samenvatting.docx)."
+pipeline: "Part A producer (chapter scope; paragraph-level samenvatting.docx is Part B file #10, built via reference scripts not this skill)"
 ---
 
 # Approach: Chapter Summaries for Exam Preparation

@@ -1,6 +1,7 @@
 ---
 name: econ-textbook-paragraph
 description: "Builds a complete textbook paragraph for economics education (bovenbouw vwo): theory explanation, worked example, exercises, and graphs — assembled into a markdown file with assets, then exported to PDF. Takes a blueprint paragraph spec and the exercise set from econ-exercise-builder as input. Use this skill when the user wants to create a textbook paragraph, lesinhoud, theorie-uitleg for the werkboek, or any textbook section. Trigger when the user mentions paragraaf schrijven, werkboek, tekstboek, theorie-uitleg schrijven, lesinhoud, or textbook paragraph. Always use in combination with econ-didactiek (pedagogy), econ-exercise-builder (exercises), and economic-graph (graphs)."
+pipeline: "Part A producer"
 ---
 
 # Economics Textbook Paragraph Builder

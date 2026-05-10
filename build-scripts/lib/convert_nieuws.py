@@ -95,9 +95,11 @@ def find_web_variant_bases(assets_dir):
 
 
 def find_news_visual_base(assets_dir):
-    """Locate the news visual asset base via filename glob.
-    The b1-111-nieuws.js builder doesn't emit asset:NAME alt-text, so
-    we infer from filename convention: <para>_news_<topic>_web_light.svg."""
+    """Fallback: locate the news visual asset base via filename glob.
+    Used only when the docx itself doesn't carry alt-text metadata
+    (legacy builders). Filename convention: <para>_news_<topic>_web_light.svg.
+    Post-L1.5V Bucket A4 the builder emits asset-alt:<text> in the
+    image's docPr descr, so this fallback is rarely hit on §1.1.1."""
     if not os.path.isdir(assets_dir):
         return None
     matches = sorted(glob.glob(os.path.join(assets_dir, '*_news_*_web_light.svg')))
@@ -106,22 +108,66 @@ def find_news_visual_base(assets_dir):
     return os.path.basename(matches[0]).replace('_web_light.svg', '')
 
 
-def render_asset_image(asset_prefix, asset_name, web_variant_bases):
-    if asset_name in web_variant_bases:
-        light_src = f'{asset_prefix}/{esc(asset_name)}_web_light.svg'
-        dark_src = f'{asset_prefix}/{esc(asset_name)}_web_dark.svg'
-        fallback_src = f'{asset_prefix}/{esc(asset_name)}.svg'
+def extract_news_visual_from_docx(doc):
+    """L1.5V Bucket A4 + post-PR-review fix: read the news visual's alt-text
+    out of the docx image's wp:docPr metadata. Returns
+    {'base': str, 'alt': str} when the builder emitted asset-alt:<text>
+    (canonical post-A4); returns {'base': str, 'alt': str-fallback} when
+    only the legacy asset:<id> prefix is present and warns to stderr;
+    returns None when no embedded image carries either prefix."""
+    for p in doc.paragraphs:
+        for run in p.runs:
+            blips = run._element.findall('.//' + qn('a:blip'))
+            if not blips:
+                continue
+            drawing = run._element.find('.//' + qn('wp:inline'))
+            if drawing is None:
+                continue
+            docPr = drawing.find(qn('wp:docPr'))
+            if docPr is None:
+                continue
+            descr = docPr.get('descr', '') or ''
+            title = docPr.get('title', '') or ''
+            if descr.startswith('asset-alt:'):
+                alt = descr[len('asset-alt:'):]
+                base = title or alt[:30]
+                return {'base': base, 'alt': alt}
+            if descr.startswith('asset:'):
+                base = descr[len('asset:'):]
+                sys.stderr.write(
+                    f"WARNING: legacy 'asset:' prefix for {base!r} in nieuws "
+                    f"(migrate builder to pass altText).\n"
+                )
+                return {'base': base, 'alt': base}
+    return None
+
+
+def render_asset_image(asset_prefix, payload, web_variant_bases):
+    """L1.5V Bucket A4 + post-PR-review: payload is now
+    {'base': str, 'alt': str} (or a bare asset id for the legacy filename-
+    glob fallback). `base` selects the SVG variant; `alt` becomes the
+    rendered <img alt>."""
+    if isinstance(payload, dict):
+        base = payload['base']
+        alt = payload['alt']
+    else:
+        base = payload
+        alt = payload
+    if base in web_variant_bases:
+        light_src = f'{asset_prefix}/{esc(base)}_web_light.svg'
+        dark_src = f'{asset_prefix}/{esc(base)}_web_dark.svg'
+        fallback_src = f'{asset_prefix}/{esc(base)}.svg'
         return (
             '        <figure class="asset-figure">\n'
             f'          <img src="{light_src}" data-light-src="{light_src}" '
             f'data-dark-src="{dark_src}" data-fallback-src="{fallback_src}" '
-            f'alt="{esc(asset_name)}" class="asset-svg">\n'
+            f'alt="{esc(alt)}" class="asset-svg">\n'
             '        </figure>\n'
         )
     return (
         '        <figure class="asset-figure">\n'
-        f'          <img src="{asset_prefix}/{esc(asset_name)}.svg" '
-        f'alt="{esc(asset_name)}" class="asset-svg">\n'
+        f'          <img src="{asset_prefix}/{esc(base)}.svg" '
+        f'alt="{esc(alt)}" class="asset-svg">\n'
         '        </figure>\n'
     )
 
@@ -215,13 +261,34 @@ def parse_document(docx_path):
 def build_data_from_doc(docx_path, para_number, para_name, assets_dir):
     parsed = parse_document(docx_path)
     domain = NIEUWS_DOMAIN
-    visual_base = find_news_visual_base(assets_dir)
+
+    # L1.5V Bucket A4 + post-PR-review: prefer the docx's embedded alt-text
+    # metadata over the filename-glob fallback. The visual payload is now
+    # a {'base': str, 'alt': str} dict so render_asset_image() can emit
+    # meaningful HTML alt text. Filename glob only fires when the docx has
+    # no asset-* descr at all (paragraphs that haven't migrated yet).
+    visual_payload = extract_news_visual_from_docx(Document(docx_path))
+    if visual_payload is None:
+        fallback_base = find_news_visual_base(assets_dir)
+        if fallback_base is None:
+            visual_payload = None
+        else:
+            visual_payload = {'base': fallback_base, 'alt': fallback_base}
+            sys.stderr.write(
+                f"WARNING: nieuws visual alt-text missing in {os.path.basename(docx_path)} "
+                f"— falling back to filename-glob asset id {fallback_base!r}. "
+                f"Migrate b1-XXX-nieuws.js to pass altText.\n"
+            )
+
     return {
         'number': para_number,
         'title': para_name,
         'domain': domain,
         'shared_domain': shared_domain_class(domain),
-        'visual_base': visual_base,
+        'visual_payload': visual_payload,
+        # Legacy alias kept for any consumer that still reads visual_base —
+        # may be removed in a future sprint.
+        'visual_base': visual_payload['base'] if visual_payload else None,
         **parsed,
     }
 
@@ -236,8 +303,8 @@ def render_questions_list(items):
 
 def render_article_html(data, asset_prefix, web_variant_bases):
     parts = []
-    if data['visual_base']:
-        parts.append(render_asset_image(asset_prefix, data['visual_base'], web_variant_bases))
+    if data.get('visual_payload'):
+        parts.append(render_asset_image(asset_prefix, data['visual_payload'], web_variant_bases))
     for para in data['article']:
         parts.append(f'        <p class="cell-para">{esc(para)}</p>')
     if data['source_text']:

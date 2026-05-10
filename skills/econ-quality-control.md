@@ -1,6 +1,7 @@
 ---
 name: econ-quality-control
 description: "Quality control system for economics education materials, aligned with the Dutch Onderwijsinspectie framework (onderzoekskader 2021/2025). Two functions: (1) generates compact quality_ref tags during the paragraph build process, and (2) produces on-demand quality reports at any scope (paragraph, chapter, module, course) and any dimension (curriculum alignment, differentiation, didactisch handelen, coherence, kwaliteitscyclus). Use this skill whenever the user asks for a quality report, kwaliteitsrapport, kwaliteitscontrole, verantwoording, inspectie-verantwoording, or quality reference for economics lesson materials. Also trigger when the user says 'generate quality ref', 'add quality tag', 'quality check', 'inspectie check', or asks how materials align with OP0, OP1, OP2, OP3, SKA, or BKA standards. Trigger during the build process when the user is finishing a paragraph and needs the quality_ref appended. Also trigger when the user asks about the onderwijsinspectie, onderzoekskader, waarderingskader, or wants to defend pedagogical choices in materials."
+pipeline: "shared infrastructure (governs the unified quality-ref schema with partA: + companion: blocks; consumed by validate-paragraph.js --mode part-a / part-b / complete)"
 ---
 
 # Economics Quality Control Skill v1

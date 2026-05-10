@@ -1,6 +1,7 @@
 ---
 name: econ-paragraph-review
 description: "Comprehensive review skill for economics textbook paragraphs (bovenbouw vwo/havo). Combines two review dimensions: (1) didactic architecture — dual coding, fading, scaffolding, exercise progression, cognitive load, misconception handling, and (2) mathematical/conceptual precision — slope directions, domain restrictions, graph accuracy, formula validity, terminology consistency. Use this skill whenever reviewing, auditing, or giving feedback on a draft textbook paragraph, exercise set, or lesson material. Trigger when the user uploads a paragraph PDF, asks for a review, mentions 'check this paragraph', 'review', 'audit', 'feedback', 'what can be improved', or any quality assurance discussion about lesson content. Also trigger when comparing output against the course blueprint."
+pipeline: "Part A reviewer"
 ---
 
 # Economics Paragraph Review Skill v1

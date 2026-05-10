@@ -42,8 +42,17 @@ const ASSETS_DIR = path.join(PARAGRAPH_DIR, "_assets");
 const OUT_DIR = PARAGRAPH_DIR; // flat layout at paragraph root
 const OUT_FILE = path.join(OUT_DIR, "1.1.1 Schaarste en economisch denken – uitleg vaardigheden.docx");
 
+// ─── Alt-text registry for §1.1.1 (L1.5V Bucket A4) ───
+const ALT = require("./b1-111-alt-text");
+
 // ─── Dual coding: embed adapted PNG variants from _assets/ ───
-function embedAssetImage(filename, width, height, htmlAssetName = filename) {
+// L1.5V Bucket A4: altText is required (>= 10 chars). Builder fails loudly
+// when missing. descr prefix `asset-alt:` is the convention recognised by
+// convert_vaardigheden.py for meaningful alt-text passthrough.
+function embedAssetImage(filename, width, height, htmlAssetName, altText) {
+  if (!altText || altText.length < 10) {
+    throw new Error(`embedAssetImage: altText required (>=10 chars) for ${htmlAssetName}, got: ${JSON.stringify(altText)}`);
+  }
   const imgPath = path.join(ASSETS_DIR, filename + ".png");
   if (!fs.existsSync(imgPath)) {
     console.warn("WARNING: asset missing:", imgPath);
@@ -55,7 +64,7 @@ function embedAssetImage(filename, width, height, htmlAssetName = filename) {
     alignment: AlignmentType.CENTER,
     children: [new ImageRun({
       data: buf, transformation: { width, height }, type: "png",
-      altText: { title: htmlAssetName, description: "asset:" + htmlAssetName, name: htmlAssetName },
+      altText: { title: htmlAssetName, description: "asset-alt:" + altText, name: htmlAssetName },
     })],
   });
 }
@@ -349,16 +358,12 @@ function domainLegend(domainSet = DOMAINS) {
 }
 
 // ─── DOC_STYLES ───
+// Run formatting + paragraph spacing for headings is set inline on every
+// Paragraph/TextRun. The custom paragraphStyles with id "Heading1"/"Heading2"
+// collided with Word's built-in style IDs and broke the artifact-tool renderer
+// (L1.5V QA-1). Removed; inline overrides preserve the rendered look.
 const DOC_STYLES = {
   default: { document: { run: { font: "Arial", size: 22 } } },
-  paragraphStyles: [
-    { id: "Heading1", name: "Heading 1", basedOn: "Normal", next: "Normal", quickFormat: true,
-      run: { size: 30, bold: true, font: "Arial", color: C.navy },
-      paragraph: { spacing: { before: 360, after: 200 }, outlineLevel: 0 } },
-    { id: "Heading2", name: "Heading 2", basedOn: "Normal", next: "Normal", quickFormat: true,
-      run: { size: 24, bold: true, font: "Arial", color: C.blue },
-      paragraph: { spacing: { before: 240, after: 120 }, outlineLevel: 1 } },
-  ],
 };
 
 // ─── Checklist numbering / item ───
@@ -442,8 +447,9 @@ children.push(p("Als het antwoord op check 1 en check 2 ja is, is er schaarste. 
 children.push(sp(60));
 
 // Visual — fig_1
-const fig1 = embedAssetImage("1.1.1_fig_1_doc", 500, 320, "1.1.1_fig_1");
+const fig1 = embedAssetImage("1.1.1_fig_1_doc", 500, 320, "1.1.1_fig_1", ALT["1.1.1_fig_1"]);
 if (fig1) children.push(fig1);
+children.push(p("Het diagram toont een breder voorbeeld waarin meerdere wensen tegelijk om hetzelfde budget concurreren — schaarste hoeft niet beperkt te blijven tot twee opties. In het werkbeeld hieronder beperken we ons tot een eenvoudige situatie met twee wensen, om de redenering compact te houden.", { italics: true, color: C.gray, size: 18 }));
 children.push(sp(60));
 
 // Voorbeeld
@@ -486,9 +492,25 @@ children.push(h2d("Waarom is dit belangrijk?", DOMAINS.economischBlue.color));
 children.push(p("Wie kiest, geeft iets op. Dat wat je opgeeft — de opbrengst van het beste niet-gekozen alternatief — zijn de alternatieve kosten van je keuze. Alternatieve kosten laten zien wat een beslissing je werkelijk kost, ook als er geen prijskaartje aan hangt. Zonder dit begrip onderschat je stelselmatig de kosten van gemaakte keuzes."));
 children.push(sp(40));
 
+// L1.5V Bucket C4: keuzekaart pre-organizer (Team B scaffold import).
+// Nested under skill 2 (B02), BEFORE the procedure, so students structure
+// the situation before they grab a bedrag. Per the econ-companion-artifacts
+// skill: scaffold appropriateness + cognitive load.
+children.push(h2d("Eerst structuur, daarna bedragen", DOMAINS.economischBlue.color));
+children.push(p("Veel fouten ontstaan doordat leerlingen te snel naar een bedrag zoeken. Begin eerst met de structuur van de keuze: welk middel is schaars, welke opties zijn er, en wat levert elke optie op? Daarna pas reken je."));
+children.push(sp(40));
+children.push(formulaBox([
+  "Maak eerst een keuzekaart:",
+  "• Middel:        wat is beperkt? (geld, tijd, hectare …)",
+  "• Alternatieven: welke opties sluiten elkaar uit?",
+  "• Opbrengst:     wat levert elk alternatief op?",
+  "• Keuze:         welk alternatief kies je daadwerkelijk?",
+], DOMAINS.economischBlue.color));
+children.push(sp(60));
+
 // Hoe — VERBATIM B02 procedure (4 steps)
 children.push(h2d("Hoe werkt het? (4 stappen)", DOMAINS.economischBlue.color));
-children.push(p("Deze vier stappen komen rechtstreeks uit het vaardighedenregister (unit B02) en zijn de standaardprocedure voor elke alternatieve-kosten-opgave:"));
+children.push(p("Met de keuzekaart als basis pas je vervolgens de canonical 4-stappenprocedure toe. Deze stappen komen rechtstreeks uit het vaardighedenregister (unit B02) en zijn de standaardprocedure voor elke alternatieve-kosten-opgave:"));
 children.push(sp(40));
 children.push(formulaBox([
   "Stap 1. " + B02_PROCEDURE[0],
@@ -499,11 +521,11 @@ children.push(formulaBox([
 children.push(sp(60));
 
 // Visual — fig_2 (procedure diagram)
-const fig3 = embedAssetImage("1.1.1_fig_3_doc", 500, 320, "1.1.1_fig_3");
+const fig3 = embedAssetImage("1.1.1_fig_3_doc", 500, 320, "1.1.1_fig_3", ALT["1.1.1_fig_3"]);
 if (fig3) children.push(fig3);
 children.push(sp(60));
 
-const fig2 = embedAssetImage("1.1.1_fig_2_doc", 500, 320, "1.1.1_fig_2");
+const fig2 = embedAssetImage("1.1.1_fig_2_doc", 500, 320, "1.1.1_fig_2", ALT["1.1.1_fig_2"]);
 if (fig2) children.push(fig2);
 children.push(sp(60));
 
@@ -520,14 +542,43 @@ children.push(p("Stap 3 — Rangschikken: beste niet-gekozen alternatief = maïs
 children.push(p("Stap 4 — Nettowaarde van de keuze: €5.000 − €3.500 = €1.500 voordeel door voor tarwe te kiezen.", { bold: true }));
 children.push(sp(40));
 
+// L1.5V Bucket C2: explicit calculation table in the verbal channel.
+// Mirrors the we_1 visual in text form so the student can reproduce the
+// answer without inferring missing arithmetic from the visual.
+children.push(p("Berekening op een rij:", { bold: true }));
+children.push(summarySchema([
+  ["Opbrengst tarwe (10 ha)",          "10 × €500/ha = €5.000"],
+  ["Opbrengst maïs (10 ha)",           "10 × €350/ha = €3.500"],
+  ["Beste niet-gekozen alternatief",   "maïs (€3.500)"],
+  ["Alternatieve kosten",              "€3.500"],
+  ["Nettowaarde",                      "€5.000 − €3.500 = €1.500 (voordeel tarwe)"],
+], DOMAINS.economischBlue.color));
+children.push(sp(40));
+
 // Visual — we_1 (worked example diagram — second of the DUAL CODING visuals)
-const we1 = embedAssetImage("1.1.1_we_1_doc", 520, 330, "1.1.1_we_1");
+const we1 = embedAssetImage("1.1.1_we_1_doc", 520, 330, "1.1.1_we_1", ALT["1.1.1_we_1"]);
 if (we1) children.push(we1);
 children.push(sp(60));
 
-// Tip — pitfalls from B02 registry
-children.push(tipBox("Alternatieve kosten zijn niet de prijs die je betaalt. Je betaalt €12 voor de bioscoop, maar je alternatieve kosten zijn de waarde van het boek dat je daardoor niet kunt kopen."));
+// L1.5V Bucket C4: prijs-vs-kosten pitfall block (Team B scaffold import,
+// expanded). The pitfall already lived as a one-line tip; now elevated to
+// a dedicated pitfall block under B02 with worked numbers, because this is
+// the single most common confusion students bring to alternatieve kosten.
+children.push(h2d("Pitfall: prijs en kosten uit elkaar houden", DOMAINS.economischBlue.color));
+children.push(p("De prijs die je betaalt en de alternatieve kosten van die keuze zijn twee verschillende dingen. Verwar ze niet."));
+children.push(sp(20));
+children.push(formulaBox([
+  "Prijs:                wat je in geld betaalt voor de gekozen optie",
+  "Alternatieve kosten:  de opbrengst van het beste niet-gekozen alternatief",
+], DOMAINS.economischBlue.color));
+children.push(sp(20));
+children.push(p("Voorbeeld bij Lisa (€20 budget, bioscoop €12 of boek €15):", { italics: true }));
+children.push(bullet("Prijs van bioscoop = €12 (dat geef je af aan de kassa)."));
+children.push(bullet("Alternatieve kosten van bioscoop = waarde van het boek dat ze daardoor niet kan kopen = €15."));
+children.push(p("De prijs zit in haar portemonnee, de alternatieve kosten in wat ze opgeeft.", { italics: true, color: C.gray }));
 children.push(sp(60));
+
+// Tip — pitfalls from B02 registry
 children.push(warningBox("Tel de niet-gekozen alternatieven niet bij elkaar op! Alternatieve kosten = alleen het béste niet-gekozen alternatief. Als er drie alternatieven zijn met opbrengsten €40, €30 en €15 en je kiest de eerste, dan zijn je alternatieve kosten €30 — niet €45."));
 children.push(sp(60));
 
@@ -540,9 +591,9 @@ children.push(summarySchema([
   ["Definitie", "Opbrengst van het beste niet-gekozen alternatief"],
   ["Stap 1", "Benoem alternatieven voor het schaarse middel"],
   ["Stap 2", "Bereken opbrengst per alternatief"],
-  ["Stap 3", "Rangschik — beste niet-gekozen = alt. kosten"],
-  ["Stap 4", "Nettowaarde = opbrengst keuze − alt. kosten"],
-  ["Valkuil", "Alt. kosten ≠ prijs; niet optellen"],
+  ["Stap 3", "Rangschik — beste niet-gekozen = alternatieve kosten"],
+  ["Stap 4", "Nettowaarde = opbrengst keuze − alternatieve kosten"],
+  ["Valkuil", "Alternatieve kosten ≠ prijs; niet optellen"],
   ["Canonical term", "“alternatieve kosten” (niet opportunity costs)"],
   ["Verband met", "← Vaardigheid 1 (schaarste als voorwaarde)"],
 ], DOMAINS.economischBlue.color));

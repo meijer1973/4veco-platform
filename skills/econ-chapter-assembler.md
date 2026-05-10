@@ -1,6 +1,7 @@
 ---
 name: econ-chapter-assembler
 description: "Assembles individual textbook paragraphs and consolidation exercises into a complete chapter PDF with a front page. The front page contains the chapter title, table of contents, lesson goals, and a short introduction. Use this skill when the user wants to combine paragraphs into a chapter, create a chapter PDF, build a hoofdstuk, or assemble lesmateriaal into a single document. Trigger when the user mentions hoofdstuk samenstellen, chapter assembler, paragrafen samenvoegen, or chapter PDF. Always use in combination with econ-pdf-builder (styling/export) and the paragraph/consolidation output files."
+pipeline: "Part A assembler"
 ---
 
 # Economics Chapter Assembler
