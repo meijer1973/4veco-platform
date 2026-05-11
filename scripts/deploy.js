@@ -273,6 +273,7 @@ function runDocxConverters() {
         { name: 'begeleide-inoefening', script: 'build-scripts/lib/convert_begeleide_inoefening.py' },
         { name: 'samenvatting',         script: 'build-scripts/lib/convert_samenvatting.py' },
         { name: 'nieuws',               script: 'build-scripts/lib/convert_nieuws.py' },
+        { name: 'presentatie',          script: 'build-scripts/lib/convert_presentatie.py' },
     ];
 
     console.log(`\n  \u25b6 Docx-as-web converters...`);

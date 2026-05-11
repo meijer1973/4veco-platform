@@ -172,6 +172,7 @@ function partBRequiredFiles() {
     { path: `${prefix} ${DASH} uitleg voorkennis.html`, type: 'html' },
     { path: 'Lees dit als je niet weet hoe je moet beginnen met deze les.docx', type: 'docx' },
     { path: `${prefix} ${DASH} presentatie.pptx`, type: 'pptx' },
+    { path: `${prefix} ${DASH} presentatie.html`, type: 'html' },
     { path: `${prefix} ${DASH} uitleg vaardigheden.docx`, type: 'docx' },
     { path: `${prefix} ${DASH} uitleg vaardigheden.html`, type: 'html' },
     { path: `${prefix} ${DASH} nieuws met visual.docx`, type: 'docx' },

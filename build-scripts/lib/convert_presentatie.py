@@ -301,42 +301,249 @@ def extract_slide(slide, slide_idx, assets_dir, image_cache, asset_prefix='_asse
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# T1 minimal renderer — single-column scroll, will be replaced in T2
+# T2 layout heuristics — kicker/title detection, card-cluster, pseudo-table
 # ─────────────────────────────────────────────────────────────────────────────
+
+# EMU constants. 1 inch = 914400 EMU. The thresholds below assume the
+# 10×5.625 inch CUSTOM_16x9 layout that the §1.1.1 builder uses; they
+# are wide enough to tolerate the pptxgenjs editorialSlide helper's
+# fixed top-offsets for kicker (~0.3") / title (~0.6").
+EMU_PER_INCH = 914400
+TOP_BAND_INCH = 1.7        # frames above this are kicker/title candidates
+KICKER_TOP_INCH = 0.65     # frames above this are kicker candidates
+ROW_TOLERANCE_PCT = 0.55   # two frames share a row when y-midpoints differ
+                           # less than this fraction of the shorter height
+
+
+def detect_kicker_and_title(frames):
+    """Pick kicker + title frames out of the slide's text frames.
+
+    Returns (kicker_frame_or_None, title_frame_or_None, remaining_frames).
+
+    Rules:
+    - kicker: all-caps, short (<80 chars), top above KICKER_TOP_INCH.
+    - title: tallest font in the top band (above TOP_BAND_INCH);
+      tie-break by earliest top, then leftmost left. The "tallest font"
+      restriction stops dramatic-display numbers in the slide body (e.g.
+      slide 7's 72pt €3.500) from stealing the title slot.
+    """
+    kicker = None
+    kicker_top_emu = KICKER_TOP_INCH * EMU_PER_INCH
+    top_band_emu = TOP_BAND_INCH * EMU_PER_INCH
+
+    for f in frames:
+        if f['all_caps'] and len(f['text']) < 80 and f['top_emu'] < kicker_top_emu:
+            kicker = f
+            break
+
+    title_candidates = [
+        f for f in frames
+        if f is not kicker and f['top_emu'] < top_band_emu
+    ]
+    title = None
+    if title_candidates:
+        title_candidates.sort(
+            key=lambda f: (-(f['max_font_pt'] or 0), f['top_emu'], f['left_emu']),
+        )
+        title = title_candidates[0]
+
+    remaining = [f for f in frames if f is not kicker and f is not title]
+    return kicker, title, remaining
+
+
+def group_rows(frames, tolerance_pct=ROW_TOLERANCE_PCT):
+    """Group frames into horizontal rows by y-midpoint proximity.
+
+    Returns a list of rows; each row is a list of frames sorted by left.
+    Two frames are in the same row when their y-midpoints differ by less
+    than tolerance_pct * min(height_a, height_b).
+    """
+    if not frames:
+        return []
+    sorted_frames = sorted(frames, key=lambda f: f['top_emu'])
+    rows = []
+    current = [sorted_frames[0]]
+    for f in sorted_frames[1:]:
+        prev = current[-1]
+        def mid(g):
+            return g['top_emu'] + g['height_emu'] / 2
+        h_min = max(1, min(prev['height_emu'], f['height_emu']))
+        if abs(mid(f) - mid(prev)) < tolerance_pct * h_min:
+            current.append(f)
+        else:
+            current.sort(key=lambda g: g['left_emu'])
+            rows.append(current)
+            current = [f]
+    current.sort(key=lambda g: g['left_emu'])
+    rows.append(current)
+    return rows
+
+
+_CARD_NUM_RE = re.compile(r'^\s*0?[0-9]{1,2}\s*$')
+
+
+def detect_card_stack(frames):
+    """Detect a vertically-stacked card cluster (e.g. slide 5's 4 steps).
+
+    Returns (cards, remaining_frames). cards is a list of
+    {'num': str, 'heading': str, 'subtitle': str} dicts.
+
+    Heuristic: rows of ≥2 frames where the leftmost frame is a short
+    numeric label (digit or 0-prefixed). At least 3 such consecutive
+    rows required to count as a card stack. Returns ([], frames) if no
+    match, so the caller falls through to pseudo-table / paragraphs.
+    """
+    rows = group_rows(frames)
+    card_rows = []
+    other_rows = []
+    seen_cards = False
+    for r in rows:
+        if len(r) < 2:
+            (card_rows if seen_cards and len(r) >= 2 else other_rows).append(r)
+            continue
+        first = r[0]['text'].strip()
+        if _CARD_NUM_RE.match(first):
+            card_rows.append(r)
+            seen_cards = True
+        else:
+            other_rows.append(r)
+
+    if len(card_rows) < 3:
+        return [], frames  # not enough cards — leave frames untouched
+
+    cards = []
+    matched_frames = set()
+    for r in card_rows:
+        num = r[0]['text'].strip()
+        heading = r[1]['text'].strip() if len(r) > 1 else ''
+        subtitle = ' '.join(f['text'].strip() for f in r[2:]) if len(r) > 2 else ''
+        cards.append({'num': num, 'heading': heading, 'subtitle': subtitle})
+        for f in r:
+            matched_frames.add(id(f))
+
+    remaining = [f for f in frames if id(f) not in matched_frames]
+    return cards, remaining
+
+
+def detect_pseudotable(frames):
+    """Detect a 3+ column pseudo-table (e.g. slide 6's tarwe/maïs grid).
+
+    Returns ({'header': [str], 'rows': [[str, ...]]} or None,
+             remaining_frames).
+
+    Heuristic: ≥3 rows that all have the same number of frames (≥3
+    columns). Header detection: first row is treated as header iff its
+    cells are all-caps OR all text frames in it share a top-band that
+    sits clearly above the data rows (≥0.2" gap).
+    """
+    rows = group_rows(frames)
+    # Find the longest run of consecutive rows with same column-count ≥3.
+    best_run = []
+    current_run = []
+    for r in rows:
+        if not current_run or len(r) == len(current_run[0]) and len(r) >= 3:
+            current_run.append(r)
+        else:
+            if len(current_run) >= 3:
+                if len(current_run) > len(best_run):
+                    best_run = current_run
+            current_run = [r] if len(r) >= 3 else []
+    if len(current_run) >= 3 and len(current_run) > len(best_run):
+        best_run = current_run
+
+    if len(best_run) < 3:
+        return None, frames
+
+    header = None
+    data_rows = best_run
+    # Detect header row by EITHER majority-all-caps in the first row, OR
+    # a clearly shorter row-height (column-header bands are typically
+    # ~0.4" tall vs ~0.6" for data rows in the pptx authoring template).
+    # The strict-all-caps rule misses cells like "TOTAAL (10 ha)" where
+    # a tiny lowercase segment slips in.
+    first = best_run[0]
+    if len(best_run) > 1:
+        caps_majority = sum(1 for f in first if f['all_caps']) * 2 >= len(first)
+        first_h = sum(f['height_emu'] for f in first) / max(1, len(first))
+        data_h  = sum(f['height_emu'] for r in best_run[1:] for f in r) / max(
+            1, sum(len(r) for r in best_run[1:])
+        )
+        shorter = first_h < 0.85 * data_h  # header band is visibly thinner
+        if caps_majority or shorter:
+            header = [f['text'].strip() for f in first]
+            data_rows = best_run[1:]
+
+    table = {
+        'header': header,
+        'rows': [[f['text'].strip() for f in r] for r in data_rows],
+    }
+
+    matched = set()
+    for r in best_run:
+        for f in r:
+            matched.add(id(f))
+    remaining = [f for f in frames if id(f) not in matched]
+    return table, remaining
+
+
+def render_card_stack(cards):
+    parts = ['    <div class="slide-cards">']
+    for c in cards:
+        parts.append(
+            '      <div class="slide-card">\n'
+            f'        <span class="card-num">{esc(c["num"])}</span>\n'
+            '        <div class="card-text">\n'
+            + (f'          <h3 class="card-heading">{esc(c["heading"])}</h3>\n'
+               if c['heading'] else '')
+            + (f'          <p class="card-subtitle">{esc(c["subtitle"])}</p>\n'
+               if c['subtitle'] else '')
+            + '        </div>\n'
+            '      </div>'
+        )
+    parts.append('    </div>')
+    return '\n'.join(parts)
+
+
+def render_pseudotable(table):
+    parts = ['    <table class="slide-pseudotable">']
+    if table['header']:
+        parts.append('      <thead>')
+        parts.append(
+            '        <tr>'
+            + ''.join(f'<th>{esc(c)}</th>' for c in table['header'])
+            + '</tr>'
+        )
+        parts.append('      </thead>')
+    parts.append('      <tbody>')
+    for row in table['rows']:
+        parts.append(
+            '        <tr>'
+            + ''.join(f'<td>{esc(c)}</td>' for c in row)
+            + '</tr>'
+        )
+    parts.append('      </tbody>')
+    parts.append('    </table>')
+    return '\n'.join(parts)
+
 
 def render_slide_body(slide):
     """Render the inner HTML of one <section class="slide">.
 
-    T1 implementation: flat output — kicker (longest ALL-CAPS short text
-    frame at the top), title (largest-font frame), remaining frames as
-    <p class="slide-text">, then images, then notes. T2 will replace
-    this with layout-aware emission (card clusters, pseudo-table,
-    sticky sidebar).
+    T2 implementation: kicker + title pulled out by position/font; the
+    remainder is passed through `detect_card_stack` and
+    `detect_pseudotable` so structured blocks (S5's 4-step process,
+    S6's tarwe/maïs grid) get semantic HTML. Whatever the detectors
+    don't claim becomes flat <p class="slide-text"> paragraphs.
     """
     frames = [f for f in slide['text_frames'] if not f['is_decorative_empty']]
 
-    # Title: largest max_font_pt; tie-break on earliest top.
-    title_frame = None
-    if frames:
-        candidates = sorted(
-            frames,
-            key=lambda f: (-(f['max_font_pt'] or 0), f['top_emu']),
-        )
-        title_frame = candidates[0]
+    kicker_frame, title_frame, body_frames = detect_kicker_and_title(frames)
 
-    # Kicker: short ALL-CAPS frame, top half of slide, NOT the title.
-    kicker_frame = None
-    for f in frames:
-        if f is title_frame:
-            continue
-        if f['all_caps'] and len(f['text']) < 80 and f['top_emu'] < 1500000:
-            kicker_frame = f
-            break
+    # Try card-stack first (more specific). Then pseudo-table on remainder.
+    cards, body_frames = detect_card_stack(body_frames)
+    table, body_frames = detect_pseudotable(body_frames)
 
-    # Body: every other frame, ordered (top, left).
-    body_frames = [
-        f for f in frames if f is not title_frame and f is not kicker_frame
-    ]
+    # Whatever survived: render in (top, left) reading order.
     body_frames.sort(key=lambda f: (f['top_emu'], f['left_emu']))
 
     parts = []
@@ -344,13 +551,19 @@ def render_slide_body(slide):
         parts.append(f'    <p class="slide-kicker">{esc(kicker_frame["text"])}</p>')
     if title_frame:
         parts.append(f'    <h2 class="slide-title">{esc(title_frame["text"])}</h2>')
+
+    if cards:
+        parts.append(render_card_stack(cards))
+    if table:
+        parts.append(render_pseudotable(table))
+
     if body_frames:
         parts.append('    <div class="slide-body">')
         for f in body_frames:
-            # Multi-paragraph frames: split on newlines, emit <p> per non-empty.
             for line in (ln for ln in f['text'].split('\n') if ln.strip()):
                 parts.append(f'      <p class="slide-text">{esc(line.strip())}</p>')
         parts.append('    </div>')
+
     for img in slide['images']:
         alt = img['alt'] or ''
         parts.append(

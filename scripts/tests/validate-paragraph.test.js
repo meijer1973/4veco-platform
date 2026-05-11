@@ -98,6 +98,7 @@ function setupPartB(folderName = '9.9.1 Theory', options = {}) {
     [`${prefix} ${DASH} uitleg voorkennis.html`, 'html'],
     ['Lees dit als je niet weet hoe je moet beginnen met deze les.docx', 'docx'],
     [`${prefix} ${DASH} presentatie.pptx`, 'pptx'],
+    [`${prefix} ${DASH} presentatie.html`, 'html'],
     [`${prefix} ${DASH} uitleg vaardigheden.docx`, 'docx'],
     [`${prefix} ${DASH} uitleg vaardigheden.html`, 'html'],
     [`${prefix} ${DASH} nieuws met visual.docx`, 'docx'],
@@ -189,11 +190,11 @@ describe('validate-paragraph.js', () => {
     expect(output).toContain('MISSING quality_ref');
   });
 
-  test('Part B mode validates the 24 flat companion root files', () => {
+  test('Part B mode validates the 25 flat companion root files', () => {
     const dir = setupPartB();
     const { exitCode, output } = run(dir, 'part-b');
     expect(exitCode).toBe(0);
-    expect(output).toContain('24/24 required Part B files present');
+    expect(output).toContain('25/25 required Part B files present');
     expect(output).toContain('PASSED all checks');
   });
 

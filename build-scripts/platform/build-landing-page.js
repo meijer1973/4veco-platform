@@ -117,7 +117,13 @@ function scanFiles(paragraafPath) {
   result.voorbereiden.leesdit         = find(/^Lees dit/i);
 
   // Leren
-  result.leren.presentatie   = find(/presentatie\.pptx$/i);
+  const findHtmlPptx = (htmlRe, pptxRe) => {
+    const html = files.find(f => htmlRe.test(f)) || null;
+    const pptx = files.find(f => pptxRe.test(f)) || null;
+    if (!html && !pptx) return null;
+    return { html, pptx };
+  };
+  result.leren.presentatie   = findHtmlPptx(/presentatie\.html$/i, /presentatie\.pptx$/i);
   result.leren.vaardigheden  = findHtmlDocx(/uitleg vaardigheden\.html$/i, /uitleg vaardigheden\.docx$/i);
   result.leren.stappenplan   = find(/stappenplan\.html$/i);
   result.leren.youtube       = find(/youtube.videos\.html$/i);
@@ -605,18 +611,22 @@ function renderParagraafPage(paragraaf, files, _resolvedMap) {
         </a>`;
   }
 
-  // Card for resources that have both an .html web companion and a .docx
-  // download. Primary action: open the HTML (whole card clickable via a
-  // cover-link). Secondary action: download the .docx (sub-link with a
-  // higher z-index so it's clickable independently of the cover).
-  // If only one format exists, falls through to the regular resourceCard.
+  // Card for resources that have both an .html web companion and an
+  // Office source download (.docx or .pptx). Primary action: open the
+  // HTML (whole card clickable via a cover-link). Secondary action:
+  // download the source file (sub-link with higher z-index so it's
+  // clickable independently of the cover). If only one format exists,
+  // falls through to the regular resourceCard.
   function resourceCardWithSource(pair, icon, title, desc) {
     if (!pair) return "";
-    if (pair.html && !pair.docx) return resourceCard(encPath([pair.html]), icon, title, desc, "html");
-    if (!pair.html && pair.docx) return resourceCard(encPath([pair.docx]), icon, title, desc, "docx");
-    // Both formats present — emit primary HTML cover-link + Word sub-link.
+    const source = pair.docx || pair.pptx || null;
+    const sourceLabel = pair.pptx ? "PowerPoint" : "Word";
+    const sourceType = pair.pptx ? "pptx" : "docx";
+    if (pair.html && !source) return resourceCard(encPath([pair.html]), icon, title, desc, "html");
+    if (!pair.html && source) return resourceCard(encPath([source]), icon, title, desc, sourceType);
+    // Both formats present — emit primary HTML cover-link + Office sub-link.
     const htmlHref = encPath([pair.html]);
-    const docxHref = encPath([pair.docx]);
+    const sourceHref = encPath([source]);
     return `
         <div class="resource-card resource-card-with-source">
           <a class="resource-card-cover-link" href="${htmlHref}" aria-label="${title} (web)"></a>
@@ -626,7 +636,7 @@ function renderParagraafPage(paragraaf, files, _resolvedMap) {
             <p>${desc}</p>
             <span class="resource-card-type">html</span>
             <div class="resource-sub-links">
-              <a class="resource-sub-link" href="${docxHref}" download>&darr; Download als Word</a>
+              <a class="resource-sub-link" href="${sourceHref}" download>&darr; Download als ${sourceLabel}</a>
             </div>
           </div>
         </div>`;
@@ -743,7 +753,7 @@ function renderParagraafPage(paragraaf, files, _resolvedMap) {
   ].filter(Boolean).join("\n");
 
   const lerenCards = [
-    files.leren.presentatie  ? resourceCard(encPath([files.leren.presentatie]),  ICONS.monitor,   "Presentatie",         "De les-presentatie met kernpunten", "pptx") : "",
+    files.leren.presentatie  ? resourceCardWithSource(files.leren.presentatie,   ICONS.monitor,   "Presentatie",         "De les-presentatie met kernpunten") : "",
     files.leren.vaardigheden ? resourceCardWithSource(files.leren.vaardigheden,  ICONS.doc,       "Uitleg vaardigheden", "Stap-voor-stap uitleg van de lesstof") : "",
     files.leren.stappenplan  ? resourceCard(encPath([files.leren.stappenplan]),  ICONS.steps,     "Stappenplan",         "Oefen de stappen van elke vaardigheid", "html") : "",
     files.leren.youtube      ? resourceCard(encPath([files.leren.youtube]),      ICONS.play,      "YouTube-video’s", "Video-uitleg bij de stof", "html") : "",
