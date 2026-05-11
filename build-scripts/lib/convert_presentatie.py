@@ -381,6 +381,14 @@ def group_rows(frames, tolerance_pct=ROW_TOLERANCE_PCT):
 
 _CARD_NUM_RE = re.compile(r'^\s*0?[0-9]{1,2}\s*$')
 
+# A frame counts as "in the same card column" as the card-num if its
+# left edge sits within this many inches to the right of the card-num.
+# §1.1.1 slide 5 places cards at x=0.5"-5.5" (card num at 0.5",
+# heading/subtitle at 1.65") and the Figure-3 caption at x=5.65" — well
+# beyond the card column. 4 inches is generous enough to cover any
+# in-card text frame but excludes side-by-side captions.
+CARD_COLUMN_MAX_INCHES = 4.0
+
 
 def detect_card_stack(frames):
     """Detect a vertically-stacked card cluster (e.g. slide 5's 4 steps).
@@ -389,37 +397,46 @@ def detect_card_stack(frames):
     {'num': str, 'heading': str, 'subtitle': str} dicts.
 
     Heuristic: rows of ≥2 frames where the leftmost frame is a short
-    numeric label (digit or 0-prefixed). At least 3 such consecutive
-    rows required to count as a card stack. Returns ([], frames) if no
-    match, so the caller falls through to pseudo-table / paragraphs.
+    numeric label (digit or 0-prefixed). Frames in those rows that sit
+    too far to the right of the card-num (CARD_COLUMN_MAX_INCHES) are
+    NOT absorbed into the card — they stay in the remainder so a
+    side-by-side caption / image label doesn't pollute the last card's
+    subtitle. At least 3 such consecutive rows required to count as a
+    card stack. Returns ([], frames) if no match, so the caller falls
+    through to pseudo-table / paragraphs.
     """
     rows = group_rows(frames)
-    card_rows = []
-    other_rows = []
+    card_rows_filtered = []  # rows trimmed to card-column frames
     seen_cards = False
+    matched_frames = set()
+    max_dx_emu = int(CARD_COLUMN_MAX_INCHES * EMU_PER_INCH)
+
     for r in rows:
         if len(r) < 2:
-            (card_rows if seen_cards and len(r) >= 2 else other_rows).append(r)
             continue
         first = r[0]['text'].strip()
-        if _CARD_NUM_RE.match(first):
-            card_rows.append(r)
-            seen_cards = True
-        else:
-            other_rows.append(r)
+        if not _CARD_NUM_RE.match(first):
+            continue
+        card_left = r[0]['left_emu']
+        # Keep only frames within the card's x-column.
+        in_card = [f for f in r if (f['left_emu'] - card_left) <= max_dx_emu]
+        if len(in_card) < 2:
+            # The card-num is alone in its column — not a real card row.
+            continue
+        card_rows_filtered.append(in_card)
+        seen_cards = True
+        for f in in_card:
+            matched_frames.add(id(f))
 
-    if len(card_rows) < 3:
+    if len(card_rows_filtered) < 3:
         return [], frames  # not enough cards — leave frames untouched
 
     cards = []
-    matched_frames = set()
-    for r in card_rows:
+    for r in card_rows_filtered:
         num = r[0]['text'].strip()
         heading = r[1]['text'].strip() if len(r) > 1 else ''
         subtitle = ' '.join(f['text'].strip() for f in r[2:]) if len(r) > 2 else ''
         cards.append({'num': num, 'heading': heading, 'subtitle': subtitle})
-        for f in r:
-            matched_frames.add(id(f))
 
     remaining = [f for f in frames if id(f) not in matched_frames]
     return cards, remaining
