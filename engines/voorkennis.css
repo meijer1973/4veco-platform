@@ -1846,7 +1846,10 @@ body[data-layout="nieuws-v1"] .nieuws-grid * { min-width: 0; }
 [data-layout="presentatie-v1"] .slide-title,
 [data-layout="presentatie-v1"] .card-heading,
 [data-layout="presentatie-v1"] .card-subtitle,
-[data-layout="presentatie-v1"] .slide-text {
+[data-layout="presentatie-v1"] .slide-text,
+[data-layout="presentatie-v1"] .slide--dark .slide-text,
+body[data-layout="samenvatting-v1"] .cell-title,
+body[data-layout="nieuws-v1"] .cell-title {
   overflow-wrap: anywhere;
   word-break: break-word;
   hyphens: auto;
