@@ -23,6 +23,25 @@
 const fs = require('fs');
 const path = require('path');
 
+/**
+ * Parse the explicit verdict block from a companion-style review file.
+ * Returns 'PASS' | 'PASS WITH FLAGS' | 'FAIL' | null. Matches the parser
+ * used by validate-paragraph.js (L1.5V Bucket F). Pre-L1.5V/B4 this
+ * validator counted every `\bFAIL\b` token in the document, which
+ * included historical hard-fail finding sub-headings (e.g. "HF-1 FAIL")
+ * and caused PASS WITH FLAGS reviews to fail the chapter health check.
+ */
+function parseReviewVerdict(content) {
+  const re = /##\s*\d*\.?\s*Verdict[^\n]*\n+([^\n]+)/i;
+  const m = content.match(re);
+  if (!m) return null;
+  const line = m[1].trim().replace(/^\*+|\*+$/g, '').trim().toUpperCase();
+  if (line === 'PASS') return 'PASS';
+  if (line === 'PASS WITH FLAGS') return 'PASS WITH FLAGS';
+  if (line === 'FAIL') return 'FAIL';
+  return null;
+}
+
 const chapterPath = process.argv[2];
 if (!chapterPath) {
   console.error('Usage: node scripts/validate-chapter.js <chapter-folder-path>');
@@ -244,19 +263,53 @@ function validateParagraph(folderName, paraType) {
     }
   }
 
-  // QC artifacts — required, not optional
-  const reviewFile = fs.readdirSync(folder).find(f => f.endsWith('-review.md'));
-  if (reviewFile) {
-    // Check for unresolved FAIL items
-    const reviewContent = fs.readFileSync(path.join(folder, reviewFile), 'utf-8');
-    const failCount = (reviewContent.match(/\bFAIL\b/gi) || []).length;
-    if (failCount > 0) {
-      fail(`Review has ${failCount} unresolved FAIL item(s): ${reviewFile}`);
-    } else {
-      pass(`Review: ${reviewFile} (no unresolved FAILs)`);
-    }
-  } else {
+  // QC artifacts — required, not optional. Inspect both the Part A
+  // review file and (if present) the Part B companion-visual-review
+  // file using the structured verdict parser. A historical FAIL token
+  // inside the body of a "PASS WITH FLAGS" review is not a sprint
+  // blocker — only an explicit "**FAIL**" verdict line is.
+  const reviewFiles = fs.readdirSync(folder).filter(f => f.endsWith('-review.md'));
+  // Part A review = `X.Y.Z-review.md` (without "companion" or other infix);
+  // Part B companion = `X.Y.Z-companion-visual-review.md`.
+  const partAReview = reviewFiles.find(f => /^\d+\.\d+\.\d+-review\.md$/.test(f));
+  const partBReview = reviewFiles.find(f => f.endsWith('-companion-visual-review.md'));
+
+  if (!partAReview) {
     fail('MISSING review report (X.Y.Z-review.md)');
+  } else {
+    const content = fs.readFileSync(path.join(folder, partAReview), 'utf-8');
+    const verdict = parseReviewVerdict(content);
+    if (verdict === 'FAIL') {
+      fail(`Part A review verdict is FAIL: ${partAReview}`);
+    } else if (verdict === null) {
+      // Legacy review without a Verdict section — fall back to checking
+      // for explicit **FAIL** markers (line-level, not any-substring).
+      const failTokens = (content.match(/^\*+FAIL\*+\s*$/gm) || []).length;
+      if (failTokens > 0) {
+        fail(`Part A review has ${failTokens} explicit FAIL marker(s) (no Verdict section): ${partAReview}`);
+      } else {
+        pass(`Part A review: ${partAReview} (no Verdict section, no FAIL markers)`);
+      }
+    } else {
+      pass(`Part A review: ${partAReview} (verdict ${verdict})`);
+    }
+  }
+
+  if (partBReview) {
+    const content = fs.readFileSync(path.join(folder, partBReview), 'utf-8');
+    const verdict = parseReviewVerdict(content);
+    if (verdict === 'FAIL') {
+      fail(`Part B companion review verdict is FAIL: ${partBReview}`);
+    } else if (verdict === null) {
+      const failTokens = (content.match(/^\*+FAIL\*+\s*$/gm) || []).length;
+      if (failTokens > 0) {
+        fail(`Part B companion review has ${failTokens} explicit FAIL marker(s) (no Verdict section): ${partBReview}`);
+      } else {
+        pass(`Part B companion review: ${partBReview} (no Verdict section, no FAIL markers)`);
+      }
+    } else {
+      pass(`Part B companion review: ${partBReview} (verdict ${verdict})`);
+    }
   }
 
   const qualityRef = fs.readdirSync(folder).find(f => f.endsWith('-quality-ref.yaml'));

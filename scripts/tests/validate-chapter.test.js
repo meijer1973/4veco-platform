@@ -160,20 +160,46 @@ describe('validate-chapter.js', () => {
     expect(output).toContain('quality_ref reports missing assets');
   });
 
-  test('fails when review has unresolved FAIL items', () => {
+  test('fails when review verdict is FAIL', () => {
     const dir = setupChapter('9.9 Hoofdstuk TestFail', [
       {
         folder: '9.9.1 Theory',
         mdFiles: ['9.9.1 Theory – paragraaf.md', '9.9.1 Theory – opgaven.md', '9.9.1 Theory – antwoorden.md'],
         pdfFiles: ['9.9.1 Theory – paragraaf.pdf', '9.9.1 Theory – opgaven.pdf', '9.9.1 Theory – antwoorden.pdf'],
         assets: ['9.9.1_fig_1.svg', '9.9.1_fig_1.png'],
-        review: { name: '9.9.1-review.md', content: '# Review\n0.1: FAIL — missing asset\n' },
+        // L1.5D v2 B4: validate-chapter.js now uses the structured
+        // verdict parser, matching validate-paragraph.js. An inline
+        // "FAIL" word in the review body is not a blocker — only an
+        // explicit "**FAIL**" verdict line is.
+        review: { name: '9.9.1-review.md', content: '# Review\n\n## 2. Verdict\n\n**FAIL**\n\n0.1: missing asset\n' },
         qualityRef: validQualityRef(),
       },
     ]);
     const { exitCode, output } = run(dir);
     expect(exitCode).not.toBe(0);
-    expect(output).toContain('unresolved FAIL');
+    expect(output).toContain('verdict is FAIL');
+  });
+
+  test('passes when review has FAIL word in body but verdict is PASS WITH FLAGS', () => {
+    // Regression for L1.5D v2 B4 — historical hard-fail findings
+    // inside the body of a PASS WITH FLAGS review should not block
+    // the chapter health check.
+    const dir = setupChapter('9.9 Hoofdstuk TestPassWithFlags', [
+      {
+        folder: '9.9.1 Theory',
+        mdFiles: ['9.9.1 Theory – paragraaf.md', '9.9.1 Theory – opgaven.md', '9.9.1 Theory – antwoorden.md'],
+        pdfFiles: ['9.9.1 Theory – paragraaf.pdf', '9.9.1 Theory – opgaven.pdf', '9.9.1 Theory – antwoorden.pdf'],
+        assets: ['9.9.1_fig_1.svg', '9.9.1_fig_1.png'],
+        review: {
+          name: '9.9.1-review.md',
+          content: '# Review\n\n## 2. Verdict\n\n**PASS WITH FLAGS**\n\n### HF-1\n\nFAIL: pre-fix label\n\n(resolved)\n',
+        },
+        qualityRef: validQualityRef(),
+      },
+    ]);
+    const { exitCode, output } = run(dir);
+    expect(exitCode).toBe(0);
+    expect(output).toContain('verdict PASS WITH FLAGS');
   });
 
   test.skip('fails on non-compliant asset naming', () => {
