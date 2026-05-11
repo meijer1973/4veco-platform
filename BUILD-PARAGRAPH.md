@@ -5,7 +5,7 @@ This document covers two pipelines that can run independently or together.
 | Mode | What it produces | When to use |
 |------|-----------------|-------------|
 | **Part A only** | Textbook paragraph: markdown + graphs + PDFs | Building chapters via `econ-chapter-builder` |
-| **Part B only** | Lessen paragraph companions: 24 root files including `index.html` (docx, pptx, HTML games, landing page) | Adding teacher-facing companions to a 4veco-lessen paragraph when textbook content (Part A) exists |
+| **Part B only** | Lessen paragraph companions: 27 root files including `index.html` (docx, pptx + .html web companions, HTML games, landing page) | Adding teacher-facing companions to a 4veco-lessen paragraph when textbook content (Part A) exists |
 | **Both (A → B)** | Complete paragraph: textbook + companions | Full production from scratch |
 
 > **Before you start:** Read the **Design Principles** section in [AGENTS.md](AGENTS.md#design-principles). Two principles govern everything: **Dual Coding** (every concept pairs text with a visual) and **Unified Student Experience** (same procedures and approaches across all formats). These are non-negotiable.
@@ -132,7 +132,7 @@ Generate `X.Y.Z-quality-ref.yaml` via a separate sub-agent:
 
 # PART B: LESSEN COMPANIONS (docx, pptx, html, landing page)
 
-Produces the teacher-facing companions for a lessen paragraph: 24 root files including presentations, Word documents, HTML games, and `index.html`. Part B can use `_assets/` graphs from Part A as source material, but must adapt visuals to the companion surface instead of copy-pasting textbook images.
+Produces the teacher-facing companions for a lessen paragraph: 27 root files including the .pptx presentation + its .html web rendering, Word documents + their .html conversions (voorkennis / vaardigheden / samenvatting / nieuws / begeleide-inoefening), HTML games, and `index.html`. Part B can use `_assets/` graphs from Part A as source material, but must adapt visuals to the companion surface instead of copy-pasting textbook images.
 
 **If Part A was run first:** the `_assets/` folder already contains textbook graphs. Part B builders (presentatie, voorkennis, vaardigheden, nieuws, samenvatting, begeleide inoefening) may derive from these graphs, but the preferred output is surface-specific variants: slide, docx, summary thumbnail, web-light, and web-dark where relevant. The economic data and reasoning should stay consistent; the layout, contrast, typography, proportions, annotations, and theme colors should be adapted.
 
@@ -142,7 +142,7 @@ Produces the teacher-facing companions for a lessen paragraph: 24 root files inc
 
 - **Target repo:** `C:\Projects\4veco\4veco-lessen`.
 - **Naming:** `Boek N - Title / N.X Hoofdstuk X - Name / N.X.Y [Naam]`. Books replace the old "Module N" level; chapters and paragraphs keep their two- and three-part numbering.
-- **Per-paragraph layout is flat.** All 24 Part B files, including `index.html`, sit directly in the paragraph folder alongside Part A outputs (`paragraaf.md`, `opgaven.md`, `antwoorden.md`, `_assets/`, PDFs, `build_pdf.py`, review.md, quality-ref.yaml). No `1. Voorbereiden/`, `2. Leren/`, `3. Oefenen/` subfolders.
+- **Per-paragraph layout is flat.** All 27 Part B files, including `index.html`, sit directly in the paragraph folder alongside Part A outputs (`paragraaf.md`, `opgaven.md`, `antwoorden.md`, `_assets/`, PDFs, `build_pdf.py`, review.md, quality-ref.yaml). No `1. Voorbereiden/`, `2. Leren/`, `3. Oefenen/` subfolders.
 - **Section labels** in tables below (Voorbereiden / Leren / Oefenen) identify the pedagogical role of a file, not a folder. Files are grouped by filename convention (`uitleg voorkennis`, `presentatie`, `begeleide inoefening –`, `basis –`, etc.).
 - **`shared/` lives at book root:** `4veco-lessen/Boek N - Title/shared/` holds engine JS/CSS and the game data files (`shared/questions/`, `shared/procedure/`, etc.).
 - **Legacy subfolder-layout references in older guides are legacy.** For new work, this spec supersedes them. The old game target stays on its subfolder layout until it retires in September 2026.
@@ -178,7 +178,7 @@ Important:
 
 ## B1. Definition of Done
 
-A complete Part B companion set has **24 required root files including `index.html`**. Every file listed below MUST exist before the companion paragraph is considered done.
+A complete Part B companion set has **27 required root files including `index.html`**. Every file listed below MUST exist before the companion paragraph is considered done.
 
 | # | File | Section | Required | Builder | Source input | Output type |
 |---|------|---------|----------|---------|--------------|-------------|
@@ -188,24 +188,27 @@ A complete Part B companion set has **24 required root files including `index.ht
 | 4 | `X.Y.Z [Naam] – uitleg voorkennis.html` | Voorbereiden | Yes | `convert_voorkennis.py` | File #3 (.docx) | Converted |
 | 5 | `Lees dit als je niet weet hoe je moet beginnen met deze les.docx` | Voorbereiden | Yes | Copy | Static file (identical in every paragraph) | Static |
 | 6 | `X.Y.Z [Naam] – presentatie.pptx` | Leren | Yes | Adapt `pptx-331-rol-overheid.js` (uses `lib-pptx.js`) | Book content + SVG graphs | Scripted-manual |
-| 7 | `X.Y.Z [Naam] – uitleg vaardigheden.docx` | Leren | Yes | Adapt `template-A_vaardigheden.js` | Book content + domain knowledge | Scripted-manual |
-| 8 | `X.Y.Z [Naam] – uitleg vaardigheden.html` | Leren | Yes | `convert_vaardigheden.py` | File #7 (.docx) | Converted |
-| 9 | `X.Y.Z [Naam] – nieuws met visual.docx` | Leren | Yes | Adapt `nieuws-351-352-afsluiting.js` | Recent Dutch news + SVG visual | Scripted-manual |
-| 10 | `X.Y.Z [Naam] – samenvatting.docx` | Leren | Yes | Adapt `samenvatting-351-352-rebuild.js` | Key concepts from paragraph | Scripted-manual |
-| 11 | `X.Y.Z [Naam] – youtube-videos.html` | Leren | Yes | Small per-paragraph generator (e.g. `b1-111-youtube-videos.js`) using shared voorkennis.css | 3 real YouTube video IDs | Scripted-manual |
-| 12 | `X.Y.Z [Naam] – stappenplan.html` | Leren | Yes | `build-procedure-shells.js` (auto) | `shared/procedure/X.Y.Z.js` | Generated |
-| 13 | `X.Y.Z [Naam] – redeneer-spel.html` | Oefenen | Yes | `build-reasoning-engine.js` (auto) | `shared/reasoning/X.Y.Z.js` | Generated |
-| 14 | `X.Y.Z [Naam] – wiskundevaardigheden.html` | Oefenen | Yes | `build-skilltree-shells.js` (auto) | `skilltree` field in book manifest | Generated |
-| 15 | `X.Y.Z [Naam] – begeleide inoefening – vragen.docx` | Oefenen/begeleide inoefening | Yes | Adapt `inoefening-351-afsluiting.js` | Exercises with scaffolding | Scripted-manual |
-| 16 | `X.Y.Z [Naam] – begeleide inoefening – antwoorden.docx` | Oefenen/begeleide inoefening | Yes | Same script as #15 | Same | Scripted-manual |
-| 17 | `X.Y.Z [Naam] – begeleide inoefening.html` | Oefenen/begeleide inoefening | Yes | `convert_begeleide_inoefening.py` | Files #15 + #16 | Converted |
-| 18 | `X.Y.Z [Naam] – basis – vragen.docx` | Oefenen/basisopgaven | Yes | Adapt `opgaven-351-afsluiting.js` | Exercises (8-10 questions) | Scripted-manual |
-| 19 | `X.Y.Z [Naam] – basis – antwoorden.docx` | Oefenen/basisopgaven | Yes | Same script as #18 | Same | Scripted-manual |
-| 20 | `X.Y.Z [Naam] – midden – vragen.docx` | Oefenen/middenopgaven | Yes | Same script as #18 | Exercises (6-8 questions) | Scripted-manual |
-| 21 | `X.Y.Z [Naam] – midden – antwoorden.docx` | Oefenen/middenopgaven | Yes | Same script as #18 | Same | Scripted-manual |
-| 22 | `X.Y.Z [Naam] – verrijking – vragen.docx` | Oefenen/verrijkingsopgaven | Yes | Same script as #18 | Exercises (4-6 questions) | Scripted-manual |
-| 23 | `X.Y.Z [Naam] – verrijking – antwoorden.docx` | Oefenen/verrijkingsopgaven | Yes | Same script as #18 | Same | Scripted-manual |
-| 24 | `index.html` | Root | Yes | `build-landing-page.js` (auto) | Scans folder contents | Generated |
+| 7 | `X.Y.Z [Naam] – presentatie.html` | Leren | Yes | `convert_presentatie.py` | File #6 (.pptx) | Converted |
+| 8 | `X.Y.Z [Naam] – uitleg vaardigheden.docx` | Leren | Yes | Adapt `template-A_vaardigheden.js` | Book content + domain knowledge | Scripted-manual |
+| 9 | `X.Y.Z [Naam] – uitleg vaardigheden.html` | Leren | Yes | `convert_vaardigheden.py` | File #8 (.docx) | Converted |
+| 10 | `X.Y.Z [Naam] – nieuws met visual.docx` | Leren | Yes | Adapt `nieuws-351-352-afsluiting.js` | Recent Dutch news + SVG visual | Scripted-manual |
+| 11 | `X.Y.Z [Naam] – nieuws met visual.html` | Leren | Yes | `convert_nieuws.py` | File #10 (.docx) | Converted |
+| 12 | `X.Y.Z [Naam] – samenvatting.docx` | Leren | Yes | Adapt `samenvatting-351-352-rebuild.js` | Key concepts from paragraph | Scripted-manual |
+| 13 | `X.Y.Z [Naam] – samenvatting.html` | Leren | Yes | `convert_samenvatting.py` | File #12 (.docx) | Converted |
+| 14 | `X.Y.Z [Naam] – youtube-videos.html` | Leren | Yes | Small per-paragraph generator (e.g. `b1-111-youtube-videos.js`) using shared voorkennis.css | 3 real YouTube video IDs | Scripted-manual |
+| 15 | `X.Y.Z [Naam] – stappenplan.html` | Leren | Yes | `build-procedure-shells.js` (auto) | `shared/procedure/X.Y.Z.js` | Generated |
+| 16 | `X.Y.Z [Naam] – redeneer-spel.html` | Oefenen | Yes | `build-reasoning-engine.js` (auto) | `shared/reasoning/X.Y.Z.js` | Generated |
+| 17 | `X.Y.Z [Naam] – wiskundevaardigheden.html` | Oefenen | Yes | `build-skilltree-shells.js` (auto) | `skilltree` field in book manifest | Generated |
+| 18 | `X.Y.Z [Naam] – begeleide inoefening – vragen.docx` | Oefenen/begeleide inoefening | Yes | Adapt `inoefening-351-afsluiting.js` | Exercises with scaffolding | Scripted-manual |
+| 19 | `X.Y.Z [Naam] – begeleide inoefening – antwoorden.docx` | Oefenen/begeleide inoefening | Yes | Same script as #18 | Same | Scripted-manual |
+| 20 | `X.Y.Z [Naam] – begeleide inoefening.html` | Oefenen/begeleide inoefening | Yes | `convert_begeleide_inoefening.py` | Files #18 + #19 | Converted |
+| 21 | `X.Y.Z [Naam] – basis – vragen.docx` | Oefenen/basisopgaven | Yes | Adapt `opgaven-351-afsluiting.js` | Exercises (8-10 questions) | Scripted-manual |
+| 22 | `X.Y.Z [Naam] – basis – antwoorden.docx` | Oefenen/basisopgaven | Yes | Same script as #21 | Same | Scripted-manual |
+| 23 | `X.Y.Z [Naam] – midden – vragen.docx` | Oefenen/middenopgaven | Yes | Same script as #21 | Exercises (6-8 questions) | Scripted-manual |
+| 24 | `X.Y.Z [Naam] – midden – antwoorden.docx` | Oefenen/middenopgaven | Yes | Same script as #21 | Same | Scripted-manual |
+| 25 | `X.Y.Z [Naam] – verrijking – vragen.docx` | Oefenen/verrijkingsopgaven | Yes | Same script as #21 | Exercises (4-6 questions) | Scripted-manual |
+| 26 | `X.Y.Z [Naam] – verrijking – antwoorden.docx` | Oefenen/verrijkingsopgaven | Yes | Same script as #21 | Same | Scripted-manual |
+| 27 | `index.html` | Root | Yes | `build-landing-page.js` (auto) | Scans folder contents | Generated |
 
 > **Flat-layout filename change:** in the retargeted Part B, opgavenset and begeleide-inoefening filenames keep the `X.Y.Z [Naam] –` prefix so they stay unique at the paragraph root (since there are no longer `basisopgaven/` or `begeleide inoefening/` subfolders to disambiguate them). Role labels in the Section column identify pedagogical role only, not folder paths.
 
@@ -333,7 +336,7 @@ chapter structure, paragraph metadata, and per-paragraph game config.
 |------|-------------|------|
 | Book manifest `paragraphs[]` | `{ id, name, chapter, domain, skilltree, kind? }` | Every new Part B/complete lessen paragraph |
 | Book manifest `chapters[]` | `{ id, folder, name, number, domain }` | Only for a new chapter |
-| Paragraph `skilltree` field | `{ skills: ["A01", ...] }` or `{ skills: null }` (all) | Required for every Part B/complete paragraph because wiskundevaardigheden is one of the 24 required files |
+| Paragraph `skilltree` field | `{ skills: ["A01", ...] }` or `{ skills: null }` (all) | Required for every Part B/complete paragraph because wiskundevaardigheden is one of the 27 required files |
 | `engines/theme.js` | DOMAIN_COLORS entry | Only for a brand-new domain name (teal/blue/amber/green/purple already exist) |
 
 Existing Part A-only textbook paragraphs may omit `skilltree` until companion production starts. A paragraph is not a complete Part B paragraph until the `skilltree` field is present and the wiskundevaardigheden shell/data have been generated.
@@ -359,7 +362,7 @@ BOOK="../4veco-lessen/Boek N - Title"
 PAR="$BOOK/N.X Hoofdstuk X - Name/N.X.Y [Naam]"
 mkdir -p "$PAR"
 # Flat layout: no 1. Voorbereiden / 2. Leren / 3. Oefenen subfolders.
-# Part A outputs and all 24 Part B files, including index.html, live at the paragraph root.
+# Part A outputs and all 27 Part B files, including index.html, live at the paragraph root.
 # Static "Lees dit..." file — copy from any existing lessen paragraph:
 cp "$BOOK/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/Lees dit als je niet weet hoe je moet beginnen met deze les.docx" "$PAR/" 2>/dev/null || echo "Seed the static file from a legacy source on first run."
 ```
@@ -486,7 +489,7 @@ For broad QA coordination across companion visual review, specific visual QA, ac
 **Platform files:**
 - [ ] `_paragraph-plan.md` exists and all sections are filled in
 - [ ] `_assets/` folder has SVG+PNG pairs matching every entry in the visuelen-plan and visual-variants-plan
-- [ ] File count: 24 required Part B root files, including index.html
+- [ ] File count: 27 required Part B root files, including index.html
 - [ ] All .docx/.pptx open in Word/PowerPoint without errors
 - [ ] Presentatie has ≥3 economic graphs, presents theory (no exercise instructions)
 - [ ] Nieuws met visual has embedded SVG→PNG chart, font sizes 16/11/9pt
@@ -605,7 +608,7 @@ Scripts built for specific paragraphs in earlier work. Useful as examples but no
 `validate-paragraph.js` should enforce the flat-layout contract in modes:
 
 - **Part A/textbook mode**: validates textbook files at the paragraph root. Theory paragraphs require paragraaf/opgaven/antwoorden markdown and PDFs. Consolidation paragraphs require opgaven/antwoorden markdown and PDFs; `paragraaf.md`/`paragraaf.pdf` are not required because consolidation has no theory section.
-- **Part B/companion mode**: validates the 24 required Part B root files listed in B1, including `index.html`. `_paragraph-plan.md` is required in this mode because it is the source of truth for companion builders.
+- **Part B/companion mode**: validates the 27 required Part B root files listed in B1, including `index.html`. `_paragraph-plan.md` is required in this mode because it is the source of truth for companion builders.
 - **Complete mode**: validates both Part A and Part B.
 
 For Part B/complete mode, game runtime data lives in `<book>/shared/`:
@@ -625,7 +628,7 @@ node scripts/validate-paragraph.js "<path-to-paragraph-folder>"
 ```
 
 This checks:
-- All 24 required Part B files exist at the paragraph root (flat layout), including `index.html`
+- All 27 required Part B files exist at the paragraph root (flat layout), including `index.html`
 - All .docx files are valid zip archives
 - Presentation > 100KB (has graphs)
 - All .html files have content (not empty shells)
