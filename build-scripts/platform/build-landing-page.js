@@ -83,6 +83,7 @@ function scanFiles(paragraafPath) {
     voorbereiden: { instapquiz: null, voorkennis: null, leesdit: null, nieuwsdetective: null },
     leren:        { presentatie: null, vaardigheden: null, stappenplan: null, youtube: null, nieuws: null, samenvatting: null },
     oefenen:      { redeneerSpel: null, wiskundevaardigheden: null, begeleide: null, basis: null, midden: null, verrijking: null },
+    lesboek:      { paragraaf: null, opgaven: null, antwoorden: null },
   };
   if (!fs.existsSync(paragraafPath)) return result;
 
@@ -156,6 +157,21 @@ function scanFiles(paragraafPath) {
   result.oefenen.basis      = findPair("basis");
   result.oefenen.midden     = findPair("midden");
   result.oefenen.verrijking = findPair("verrijking");
+
+  // Lesboek — the textbook source files that sit alongside companion artifacts.
+  // Each entry is {html, pdf} (either may be null) so the tile can offer a web
+  // view as primary and a PDF as the download option. Filenames match the
+  // Part A textbook convention: "<id> <name> – paragraaf.{html,pdf}", same
+  // for "– opgaven" and "– antwoorden".
+  const findHtmlPdf = (htmlRe, pdfRe) => {
+    const html = files.find(f => htmlRe.test(f)) || null;
+    const pdf  = files.find(f => pdfRe.test(f)) || null;
+    if (!html && !pdf) return null;
+    return { html, pdf };
+  };
+  result.lesboek.paragraaf  = findHtmlPdf(/– paragraaf\.html$/i,  /– paragraaf\.pdf$/i);
+  result.lesboek.opgaven    = findHtmlPdf(/– opgaven\.html$/i,    /– opgaven\.pdf$/i);
+  result.lesboek.antwoorden = findHtmlPdf(/– antwoorden\.html$/i, /– antwoorden\.pdf$/i);
 
   return result;
 }
@@ -664,6 +680,62 @@ function renderParagraafPage(paragraaf, files, _resolvedMap) {
         </div>`;
   }
 
+  // Lesboek tile: primary opens the textbook HTML; sub-link downloads the PDF.
+  // Mirrors resourceCardWithSource but the secondary surface is PDF, not DOCX,
+  // so this card does NOT enter the docx/pptx in-browser viewer.
+  function lesboekCard(pair, icon, title, desc) {
+    if (!pair) return "";
+    if (pair.html && !pair.pdf) return resourceCard(encPath([pair.html]), icon, title, desc, "html");
+    if (!pair.html && pair.pdf) return resourceCard(encPath([pair.pdf]),  icon, title, desc, "pdf");
+    const htmlHref = encPath([pair.html]);
+    const pdfHref  = encPath([pair.pdf]);
+    return `
+        <div class="resource-card resource-card-with-source">
+          <a class="resource-card-cover-link" href="${htmlHref}" aria-label="${title} (web)"></a>
+          <div class="resource-card-icon"><svg viewBox="0 0 24 24">${icon}</svg></div>
+          <div class="resource-card-body">
+            <h3>${title}</h3>
+            <p>${desc}</p>
+            <span class="resource-card-type">html</span>
+            <div class="resource-sub-links">
+              <a class="resource-sub-link" href="${pdfHref}" download>&darr; Download als PDF</a>
+            </div>
+          </div>
+        </div>`;
+  }
+
+  // Combined Lesboek tile for opgaven + antwoorden. Two HTML sub-links open
+  // the web views; two PDF sub-links download. No primary cover-link, since
+  // there is no single canonical destination for "exercises + answers".
+  function lesboekPairCard(opgaven, antwoorden, icon, title, desc) {
+    if (!opgaven && !antwoorden) return "";
+    const link = (pair, label, kind) => {
+      if (!pair) return "";
+      const file = pair[kind];
+      if (!file) return "";
+      const href = encPath([file]);
+      const dl = kind === "pdf" ? " download" : "";
+      const text = kind === "pdf" ? `&darr; ${label} (PDF)` : label;
+      return `<a class="resource-sub-link" href="${href}"${dl}>${text}</a>`;
+    };
+    const links = [
+      link(opgaven,    "Opgaven",    "html"),
+      link(antwoorden, "Antwoorden", "html"),
+      link(opgaven,    "Opgaven",    "pdf"),
+      link(antwoorden, "Antwoorden", "pdf"),
+    ].filter(Boolean).join("");
+    if (!links) return "";
+    return `
+        <div class="resource-card resource-card-pair">
+          <div class="resource-card-icon"><svg viewBox="0 0 24 24">${icon}</svg></div>
+          <div class="resource-card-body">
+            <h3>${title}</h3>
+            <p>${desc}</p>
+            <div class="resource-sub-links">${links}</div>
+          </div>
+        </div>`;
+  }
+
   const voorbereidenCards = [
     files.voorbereiden.instapquiz      ? resourceCard(encPath([files.voorbereiden.instapquiz]),      ICONS.quiz,   "Instapquiz",       "Test wat je al weet over deze stof", "html") : "",
     files.voorbereiden.voorkennis      ? resourceCardWithSource(files.voorbereiden.voorkennis,       ICONS.book,   "Voorkennis",       "Herhaal wat je nodig hebt voor deze les") : "",
@@ -692,10 +764,16 @@ function renderParagraafPage(paragraaf, files, _resolvedMap) {
     exercisePairCard(files.oefenen.verrijking, ICONS.star2, "Verrijkingsopgaven", "Extra uitdaging"),
   ].filter(Boolean).join("\n");
 
+  const lesboekCards = [
+    lesboekCard(files.lesboek.paragraaf, ICONS.book, "Lesboek – uitleg", "De volledige paragraaf uit het lesboek"),
+    lesboekPairCard(files.lesboek.opgaven, files.lesboek.antwoorden, ICONS.doc, "Lesboek – opgaven & antwoorden", "De opgaven en uitwerkingen uit het lesboek"),
+  ].filter(Boolean).join("\n");
+
   const hasV = voorbereidenCards.trim().length > 0;
   const hasO = oefenenCards.trim().length > 0;
   const hasL = lerenCards.trim().length > 0;
   const hasT = !HIDE_TASK_ROWS && taskCards.trim().length > 0;
+  const hasB = lesboekCards.trim().length > 0;
 
   // Per-section accent: the four section roles get distinct accents drawn
   // from the three shared tokens (economisch / wiskunde / grafisch) defined
@@ -706,6 +784,7 @@ function renderParagraafPage(paragraaf, files, _resolvedMap) {
     oefenen:      "economisch",
     leren:        "grafisch",
     opgaven:      "economisch",
+    lesboek:      "wiskunde",
   };
 
   const sections = [];
@@ -713,6 +792,7 @@ function renderParagraafPage(paragraaf, files, _resolvedMap) {
   if (hasO) sections.push({ id: "oefenen",      num: 2, title: "Oefenen",      hint: "Kies een interactieve oefening",               body: oefenenCards,      accent: SECTION_ACCENT.oefenen });
   if (hasL) sections.push({ id: "leren",        num: 3, title: "Leren",        hint: "De les doorwerken: presentatie, uitleg en video’s", body: lerenCards,        accent: SECTION_ACCENT.leren });
   if (hasT) sections.push({ id: "opgaven",      num: 4, title: "Opgaven",      hint: "Oefen op je eigen niveau",                     body: taskCards,         accent: SECTION_ACCENT.opgaven });
+  if (hasB) sections.push({ id: "lesboek",      num: sections.length + 1, title: "Lesboek", hint: "De originele teksten uit het lesboek", body: lesboekCards, accent: SECTION_ACCENT.lesboek });
 
   const sidebarItems = sections.map(s => `      <a class="nav-item domain-${s.accent}" href="#${s.id}" data-section="${s.id}">
         <span class="nav-number">${s.num}</span>
