@@ -27,6 +27,8 @@ const PptxGenJS = require("pptxgenjs");
 const fs = require("fs");
 const path = require("path");
 
+const ALT = require("./b1-111-alt-text");
+
 // ═══════════════════════════════════════════════════════════════════════════
 // PNG ASSET LOADER — slide variants are pre-rendered in _assets/
 // ═══════════════════════════════════════════════════════════════════════════
@@ -214,7 +216,7 @@ async function build() {
     );
 
     // Grote, gecentreerde visual — geen concurrerende tekstblokken
-    s.addImage({ data: imgs.fig1, x: 3.075, y: 2.75, w: 3.85, h: 2.6 });
+    s.addImage({ data: imgs.fig1, x: 3.075, y: 2.75, w: 3.85, h: 2.6, altText: ALT["1.1.1_fig_1"] });
 
     s.addNotes(
       "Vraag:    Wat heb jij deze week wel gewild en niet gekregen? Waardoor?\n" +
@@ -248,7 +250,7 @@ async function build() {
     );
 
     // Grote, gecentreerde visual
-    s.addImage({ data: imgs.fig2, x: 3.075, y: 2.75, w: 3.85, h: 2.6 });
+    s.addImage({ data: imgs.fig2, x: 3.075, y: 2.75, w: 3.85, h: 2.6, altText: ALT["1.1.1_fig_2"] });
 
     s.addNotes(
       "Vraag:    Lisa kiest de bioscoop. Wat kost haar dat — in euro's, en daarnaast?\n" +
@@ -306,7 +308,7 @@ async function build() {
     });
 
     // RIGHT: figuur 3 (4-stappen flowchart)
-    s.addImage({ data: imgs.fig3, x: 5.65, y: 2.0, w: 3.85, h: 2.6 });
+    s.addImage({ data: imgs.fig3, x: 5.65, y: 2.0, w: 3.85, h: 2.6, altText: ALT["1.1.1_fig_3"] });
     s.addText("Figuur 3 · het keuzeproces in vier stappen", {
       x: 5.65, y: 4.6, w: 3.85, h: 0.25,
       ...T.captionLight, fontSize: 10, align: "center",
@@ -351,7 +353,7 @@ async function build() {
     });
 
     // RIGHT: we_1 figuur — gecentreerd in de rechthelft
-    s.addImage({ data: imgs.we1, x: 5.65, y: 2.2, w: 3.85, h: 2.6 });
+    s.addImage({ data: imgs.we1, x: 5.65, y: 2.2, w: 3.85, h: 2.6, altText: ALT["1.1.1_we_1"] });
 
     s.addNotes(
       "Vraag:    Een boer heeft 10 hectare. Tarwe levert €500/ha op, maïs €350/ha. Wat verdient hij per gewas?\n" +
@@ -389,7 +391,7 @@ async function build() {
     });
 
     // RIGHT: dezelfde visual — herkenningspunt voor de leerling
-    s.addImage({ data: imgs.we1, x: 5.65, y: 2.2, w: 3.85, h: 2.6 });
+    s.addImage({ data: imgs.we1, x: 5.65, y: 2.2, w: 3.85, h: 2.6, altText: ALT["1.1.1_we_1"] });
 
     s.addNotes(
       "Vraag:    Hij kiest tarwe. Wat láát hij dan liggen?\n" +
