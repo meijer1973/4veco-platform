@@ -604,8 +604,21 @@ body[data-layout="samenvatting-v1"] .samenvatting-grid {
 }
 @media (max-width: 600px) {
   body[data-layout="samenvatting-v1"] .samenvatting-grid {
-    padding: 20px 16px 40px;
+    /* Collapse to a single column on narrow viewports — the auto-fit
+       minmax(360px, 1fr) above forces a 360px minimum which overflows
+       on 390px phones once the page padding is subtracted. The L1.5D
+       v2 review caught this as a right-edge overflow on samenvatting.html. */
+    grid-template-columns: 1fr;
+    padding: 20px 14px 40px;
     gap: 14px;
+  }
+  body[data-layout="samenvatting-v1"] .samenvatting-cell {
+    padding: 14px 16px;
+  }
+  body[data-layout="samenvatting-v1"] .cell-table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
   }
 }
 
@@ -765,8 +778,18 @@ body[data-layout="nieuws-v1"] .nieuws-grid {
 }
 @media (max-width: 600px) {
   body[data-layout="nieuws-v1"] .nieuws-grid {
-    padding: 20px 16px 40px;
+    padding: 20px 14px 40px;
     gap: 14px;
+  }
+  body[data-layout="nieuws-v1"] .samenvatting-cell {
+    /* Inherited card class — match samenvatting's mobile padding so
+       article + answers don't push off the right edge. */
+    padding: 14px 16px;
+  }
+  body[data-layout="nieuws-v1"] .cell-table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
   }
 }
 
@@ -1801,20 +1824,50 @@ html[data-theme="dark"] ::selection { background: rgba(45, 212, 191, 0.35); colo
   flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
 }
 
+/* Shrink-failure prevention: flex/grid descendants default to min-width
+   auto, which lets long word strings (URLs, alt-text, large numbers like
+   €5.000) push their parent wider than the viewport. Forcing min-width 0
+   on every descendant lets the wrap rules below actually take effect.
+   L1.5D v2 review caught the right-edge overflow this prevents. */
+body[data-layout="presentatie-v1"] .presentatie-grid *,
+body[data-layout="samenvatting-v1"] .samenvatting-grid *,
+body[data-layout="nieuws-v1"] .nieuws-grid * { min-width: 0; }
+
+[data-layout="presentatie-v1"] .slide-pseudotable {
+  /* Allow wide tables to scroll horizontally inside the slide instead
+     of overflowing the slide card and the viewport. */
+  display: block;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+[data-layout="presentatie-v1"] .slide-figure img {
+  display: block; max-width: 100%; height: auto;
+}
+[data-layout="presentatie-v1"] .slide-title,
+[data-layout="presentatie-v1"] .card-heading,
+[data-layout="presentatie-v1"] .card-subtitle,
+[data-layout="presentatie-v1"] .slide-text {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  hyphens: auto;
+}
+
 @media (max-width: 768px) {
   [data-layout="presentatie-v1"] .presentatie-grid {
-    padding: 1rem 1rem 3rem;
+    padding: 0.9rem 0.75rem 2.5rem;
+    gap: 0.75rem;
   }
   [data-layout="presentatie-v1"] .slide {
-    padding: 1.25rem 1.3rem 1.1rem;
+    padding: 1.1rem 1.05rem 1rem;
+    min-height: 22rem;
   }
   [data-layout="presentatie-v1"] .slide-title { font-size: 1.35rem; }
   [data-layout="presentatie-v1"] .slide-card {
-    grid-template-columns: 2.5rem 1fr;
-    gap: 0.65rem;
-    padding: 0.6rem 0.75rem;
+    grid-template-columns: 2.4rem 1fr;
+    gap: 0.55rem;
+    padding: 0.55rem 0.7rem;
   }
-  [data-layout="presentatie-v1"] .card-num { font-size: 1.4rem; }
+  [data-layout="presentatie-v1"] .card-num { font-size: 1.3rem; }
   [data-layout="presentatie-v1"] .slide-notes-list {
     grid-template-columns: 1fr;
     gap: 0.15rem 0;
@@ -1824,5 +1877,86 @@ html[data-theme="dark"] ::selection { background: rgba(45, 212, 191, 0.35); colo
   }
   [data-layout="presentatie-v1"] .slide-notes-key:first-child {
     margin-top: 0;
+  }
+  /* Wrap nav-bar so prev / counter / next stack when their natural row
+     width exceeds the viewport. Center for a tidy stacked look. */
+  [data-layout="presentatie-v1"] .slide-controls {
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 0.5rem;
+    padding: 0.55rem 0.7rem;
+  }
+  [data-layout="presentatie-v1"] .slide-controls button {
+    flex: 1 1 auto;
+    min-width: 7rem;
+    padding: 0.45rem 0.6rem;
+  }
+  [data-layout="presentatie-v1"] .slide-counter {
+    flex: 1 1 100%;
+    text-align: center;
+    order: -1;
+  }
+  /* Pseudo-table cells get tighter padding on phones. */
+  [data-layout="presentatie-v1"] .slide-pseudotable thead th,
+  [data-layout="presentatie-v1"] .slide-pseudotable tbody td {
+    padding: 0.5rem 0.6rem;
+  }
+}
+
+@media (max-width: 420px) {
+  /* Narrow-phone tightening (iPhone 13 mini, 390px etc.) — the
+     primary viewport the L1.5D v2 review flagged. */
+  [data-layout="presentatie-v1"] .presentatie-grid {
+    padding: 0.8rem 0.6rem 2rem;
+  }
+  [data-layout="presentatie-v1"] .slide {
+    padding: 0.95rem 0.85rem 0.9rem;
+    border-radius: 10px;
+  }
+  [data-layout="presentatie-v1"] .slide-title { font-size: 1.2rem; line-height: 1.25; }
+  [data-layout="presentatie-v1"] .slide-card {
+    grid-template-columns: 2rem 1fr;
+    gap: 0.5rem;
+  }
+  [data-layout="presentatie-v1"] .card-num { font-size: 1.15rem; }
+  [data-layout="presentatie-v1"] .card-heading { font-size: 0.95rem; }
+  [data-layout="presentatie-v1"] .card-subtitle { font-size: 0.83rem; }
+  [data-layout="presentatie-v1"] .slide-text { font-size: 0.95rem; }
+  /* Let the prev/next buttons shrink below the 7rem min-width set at
+     768px so "Volgende →" fits cleanly on a 390px viewport. */
+  [data-layout="presentatie-v1"] .slide-controls button {
+    min-width: 0;
+    flex: 1 1 0;
+    padding: 0.4rem 0.5rem;
+  }
+}
+
+/* Shared hero wrap (any L1.5D layout): keep long titles like
+   "Schaarste en economisch denken — Presentatie" from clipping past
+   the right edge. The L1.5D v2 review flagged the unwrapped trailing
+   em-dash on 390px viewports. */
+@media (max-width: 600px) {
+  body[data-layout="presentatie-v1"] .hero h1,
+  body[data-layout="samenvatting-v1"] .hero h1,
+  body[data-layout="nieuws-v1"] .hero h1 {
+    font-size: 1.55rem;
+    line-height: 1.18;
+    overflow-wrap: anywhere;
+    word-break: normal;
+    hyphens: auto;
+  }
+  /* Belt-and-suspenders: ensure the content column never produces a
+     horizontal scrollbar on narrow viewports. If any descendant
+     produces a stubborn overflow (long heading, fixed-width SVG,
+     unbreakable URL), clip it inside the column rather than letting
+     it scroll the whole page. The wrap rules above are still the
+     primary fix; this is the safety net. */
+  body[data-layout="presentatie-v1"],
+  body[data-layout="samenvatting-v1"],
+  body[data-layout="nieuws-v1"],
+  body[data-layout="presentatie-v1"] .content,
+  body[data-layout="samenvatting-v1"] .content,
+  body[data-layout="nieuws-v1"] .content {
+    overflow-x: hidden;
   }
 }
