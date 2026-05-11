@@ -84,6 +84,34 @@ def esc(text):
     return html_mod.escape(text)
 
 
+def paragraph_to_inline_html(p):
+    """Render a python-docx Paragraph as inline HTML, preserving run-level
+    bold and italic formatting. Used for article/question/answer paragraphs
+    in convert_nieuws.py so that authored emphasis (currently expressed in
+    source as `**bold**` markers that the builder turns into bold TextRuns)
+    survives into the converted HTML as `<strong>` / `<em>`. Falls back to
+    plain escaped text when the paragraph carries no run-level emphasis.
+
+    Pre-L1.5W: convert_nieuws.py read `p.text` only, dropping bold/italic
+    formatting and (worse, before the builder fix) leaking literal `**`
+    markers into the rendered HTML. Lead-reviewer flagged this as REVISE.
+    """
+    parts = []
+    for run in p.runs:
+        t = run.text
+        if not t:
+            continue
+        html = esc(t)
+        if run.bold:
+            html = f'<strong>{html}</strong>'
+        if run.italic:
+            html = f'<em>{html}</em>'
+        parts.append(html)
+    if not parts:
+        return esc(p.text)
+    return ''.join(parts)
+
+
 def find_web_variant_bases(assets_dir):
     bases = set()
     if os.path.isdir(assets_dir):
@@ -236,17 +264,38 @@ def parse_document(docx_path):
             if not headline:
                 headline = text
             else:
-                article.append(text)
+                # Capture inline HTML (preserves <strong>/<em> from bold/italic
+                # runs in the source docx). The plain `text` form is also kept
+                # for cases where downstream needs unstyled comparison.
+                article.append({'text': text, 'html': paragraph_to_inline_html(p)})
         elif t0_pos < body_pos < t1_pos:
             # Questions zone.
             m = LETTER_PREFIX.match(text)
             if m:
-                questions.append(m.group(2).strip())
+                full_html = paragraph_to_inline_html(p)
+                # Strip the leading "a) " label from the inline html. The
+                # label is plain text so a literal prefix strip works; if
+                # the label happened to fall inside a run boundary the
+                # escaped form would still match the leading characters.
+                prefix = m.group(0)[:len(m.group(0)) - len(m.group(2))]
+                stripped = full_html
+                if stripped.startswith(esc(prefix)):
+                    stripped = stripped[len(esc(prefix)):]
+                elif stripped.startswith(prefix):
+                    stripped = stripped[len(prefix):]
+                questions.append({'text': m.group(2).strip(), 'html': stripped.strip()})
         elif body_pos > t1_pos:
             # Answers zone.
             m = LETTER_PREFIX.match(text)
             if m:
-                answers.append(m.group(2).strip())
+                full_html = paragraph_to_inline_html(p)
+                prefix = m.group(0)[:len(m.group(0)) - len(m.group(2))]
+                stripped = full_html
+                if stripped.startswith(esc(prefix)):
+                    stripped = stripped[len(esc(prefix)):]
+                elif stripped.startswith(prefix):
+                    stripped = stripped[len(prefix):]
+                answers.append({'text': m.group(2).strip(), 'html': stripped.strip()})
 
     return {
         'headline': headline,
@@ -294,9 +343,15 @@ def build_data_from_doc(docx_path, para_number, para_name, assets_dir):
 
 
 def render_questions_list(items):
+    """Items may be plain strings (legacy) or dicts {'text': str, 'html': str}
+    where html already carries inline <strong>/<em> from the source DOCX's
+    bold/italic runs (post-L1.5W emphasis-preservation fix)."""
     parts = ['        <ol class="nieuws-q-list">']
     for q in items:
-        parts.append(f'          <li>{esc(q)}</li>')
+        if isinstance(q, dict):
+            parts.append(f'          <li>{q["html"]}</li>')
+        else:
+            parts.append(f'          <li>{esc(q)}</li>')
     parts.append('        </ol>')
     return '\n'.join(parts) + '\n'
 
@@ -306,7 +361,13 @@ def render_article_html(data, asset_prefix, web_variant_bases):
     if data.get('visual_payload'):
         parts.append(render_asset_image(asset_prefix, data['visual_payload'], web_variant_bases))
     for para in data['article']:
-        parts.append(f'        <p class="cell-para">{esc(para)}</p>')
+        # Article paragraphs are now {'text': str, 'html': str} dicts so
+        # inline <strong>/<em> from bold/italic source-runs survives. Legacy
+        # plain-string items still render via esc() for backward compat.
+        if isinstance(para, dict):
+            parts.append(f'        <p class="cell-para">{para["html"]}</p>')
+        else:
+            parts.append(f'        <p class="cell-para">{esc(para)}</p>')
     if data['source_text']:
         if data['source_url']:
             label = data['source_text'].replace(data['source_url'], '').strip().rstrip('—').strip()

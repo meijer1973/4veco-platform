@@ -93,12 +93,32 @@ function headlinePara(text) {
   });
 }
 
+/**
+ * Split a string on Markdown `**emphasis**` markers and return an array of
+ * TextRun objects styled per the base options, with `bold: true` applied to
+ * the segments that were wrapped in `**`. Pre-L1.5W: the author used `**...**`
+ * to mark emphasis in article/question/answer copy, but the previous helpers
+ * emitted a single TextRun with the raw string — the literal `**` markers
+ * leaked into both the rendered DOCX and the converted HTML. Lead-reviewer
+ * flagged this as a REVISE blocker on the nieuws surface.
+ */
+function emphasisRuns(text, baseRunOpts) {
+  const parts = String(text).split(/\*\*(.+?)\*\*/g);
+  const runs = [];
+  for (let i = 0; i < parts.length; i++) {
+    const segment = parts[i];
+    if (segment === "") continue;
+    const isBold = (i % 2) === 1; // odd indices are inside **...**
+    runs.push(new TextRun({ ...baseRunOpts, text: segment, bold: isBold || !!baseRunOpts.bold }));
+  }
+  if (runs.length === 0) runs.push(new TextRun({ ...baseRunOpts, text: "" }));
+  return runs;
+}
+
 function articlePara(text) {
   return new Paragraph({
     spacing: { before: 80, after: 80 },
-    children: [new TextRun({
-      text, size: 22, font: "Arial", color: C.dark,
-    })],
+    children: emphasisRuns(text, { size: 22, font: "Arial", color: C.dark }),
   });
 }
 
@@ -116,19 +136,25 @@ function questionPara(label, text) {
     spacing: { before: 60, after: 60 },
     children: [
       new TextRun({ text: label + "  ", bold: true, size: 22, font: "Arial", color: C.accent }),
-      new TextRun({ text, size: 22, font: "Arial", color: C.dark }),
+      ...emphasisRuns(text, { size: 22, font: "Arial", color: C.dark }),
     ],
   });
 }
 
 function answerPara(label, text) {
+  // Mirror the questionPara pattern: emphasisRuns parses **markers** into bold runs.
   return new Paragraph({
     spacing: { before: 60, after: 60 },
     children: [
       new TextRun({ text: label + "  ", bold: true, size: 22, font: "Arial", color: C.accent }),
-      new TextRun({ text, size: 22, font: "Arial", color: C.dark }),
+      ...emphasisRuns(text, { size: 22, font: "Arial", color: C.dark }),
     ],
   });
+}
+
+// (legacy answerPara stub removed — emphasisRuns flow above replaces it)
+function _unused_legacy_answerPara_stub() {
+  return null;
 }
 
 function spacer(twips = 120) {
@@ -243,8 +269,8 @@ const DOC = {
     "Omdat niet iedereen tegelijk een woning kan krijgen, moeten er keuzes worden gemaakt. Gemeenten geven voorrang aan bepaalde groepen (statushouders, mantelzorgers, mensen met medische urgentie) en de overheid moet kiezen waar zij haar geld aan besteedt: meer nieuwbouw, hogere huurtoeslag, of andere maatschappelijke uitgaven zoals onderwijs. Elke euro die naar wonen gaat, kan niet meer naar iets anders — dat zijn de **alternatieve kosten** van het beleid.",
     "Ook individuele woningzoekenden maken voortdurend keuzes: blijven wachten op een goedkope huurwoning, duurder particulier huren, of langer bij ouders blijven wonen. Elke optie heeft zijn eigen opbrengst en zijn eigen alternatieve kosten.",
   ],
-  source:  "Bron: NOS, 2024 — https://nos.nl/collectie/13871-wonen-crisis",
-  sourceUrl: "https://nos.nl/collectie/13871-wonen-crisis",
+  source:  "Bron: NOS, 2024 — https://nos.nl/collectie/13877-wooncrisis",
+  sourceUrl: "https://nos.nl/collectie/13877-wooncrisis",
   questions: [
     "Lees de eerste alinea en bekijk de visual. Wat is in dit nieuwsbericht het schaarse middel, en welke twee groepen hebben er behoefte aan?",
     "Gebruik de cijfers uit de visual (×1.000). Hoeveel mensen staan er meer op de wachtlijst dan er jaarlijks woningen vrijkomen? Hoeveel jaar wachten zou dit gemiddeld opleveren als alle wachtenden in de rij blijven en er niemand bijkomt?",
