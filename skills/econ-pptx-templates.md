@@ -45,6 +45,12 @@ Eight rules. Non-negotiable for new builders; existing builders are migrated as 
    ```
    The **Uitleg** block carries the explanation weight that used to sit on the slide. **Pitfall** replaces on-slide VALKUIL callouts.
 6. **Typography as structure.** Use the `T` presets from `lib-pptx.js` (`displayLight`, `headlineLight`, `bodyLight`, `heroDark`, …). Stop redefining `fontSize` inline per call — presets already encode the ≥18pt body / ≥28pt title / ≥40pt hero contract.
+
+   **Accessibility floor (L1.5D v2 B8 — non-negotiable):**
+   - **Body / explanatory text: ≥ 18 pt.**
+   - **Kicker eyebrows / labels / footers: ≥ 14 pt.** Sub-14pt is not acceptable anywhere on a student-facing slide. `T.labelUpper` defaults to 14pt; do NOT pass a `fontSize:` override that drops below 14.
+   - **Speaker notes: ≥ 14 pt.** pptxgenjs has no per-run notes-styling API, so the build pipeline must call `fixNotesFontSize(outPath, 14)` after `roundtripWithLibreOffice(outPath)` to stamp the floor. The LO roundtrip must happen first — running the notes fix before LO causes LO to drop the notes entirely.
+   - **Color tokens forbidden as small-text foregrounds on light backgrounds (paper / chalk):** `PC.coral` (3.0:1), `PC.amberDeep` (2.84:1), `PC.teal` (2.74:1), `PC.ash` (3.3:1). Use `PC.coralDeep` (4.57:1), `PC.amberInk` (4.93:1), `PC.tealDeep` (5.0:1), `PC.smoke` (~11:1) instead. The brighter accent colors are fine for graphical elements (rect fills, accent stripes, large display numerals at ≥18pt bold where the AA-large 3.0:1 threshold applies) — just not for small text.
 7. **Signaling.** Color, arrows, and weight cue the currently-discussed element. Everything else stays neutral. If a graph has three curves, only the one being discussed is colored; the others fade to ash.
 8. **Dual coding is a teacher + slide duet**, not a slide-internal pattern. Visual on slide, verbal from teacher. AGENTS.md's *Dual Coding* principle still holds — the pairing just lives across two channels, not both crammed onto one screen.
 
@@ -61,10 +67,11 @@ Raw PptxGenJS output opens with a "Found a problem with content" repair dialog i
 After every `await pres.writeFile(...)`:
 
 ```js
-const { fixPptxFile, roundtripWithLibreOffice } = require("./lib-pptx.js");
+const { fixPptxFile, fixNotesFontSize, roundtripWithLibreOffice } = require("./lib-pptx.js");
 await pres.writeFile({ fileName: outPath });
-await fixPptxFile(outPath);         // cheap cleanup
-roundtripWithLibreOffice(outPath);  // THE fix (shells to soffice --headless --convert-to pptx)
+await fixPptxFile(outPath);              // cheap cleanup
+roundtripWithLibreOffice(outPath);       // THE PowerPoint-compat fix (soffice --headless --convert-to pptx)
+await fixNotesFontSize(outPath, 14);     // L1.5D v2 B8 — bump notes to 14pt AFTER LO roundtrip
 ```
 
 `roundtripWithLibreOffice` hardcodes the Windows path to `soffice.exe`. Project is Windows-only per root CLAUDE.md.

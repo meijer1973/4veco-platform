@@ -20,7 +20,7 @@ const {
   PC, SC, T, FONT_SANS, FONT_DISPLAY, FONT_SERIF,
   defineMasters, softShadow, tightShadow,
   ICON, placeIcon,
-  fixPptxFile, roundtripWithLibreOffice,
+  fixPptxFile, fixNotesFontSize, roundtripWithLibreOffice,
 } = require("../../lib/lib-pptx.js");
 
 const PptxGenJS = require("pptxgenjs");
@@ -43,9 +43,11 @@ function loadPngAsBase64(p) {
 function editorialSlide(pres, { kicker, title, subtitle, notes }) {
   const s = pres.addSlide({ masterName: "LIGHT_ED" });
   if (kicker) {
+    // L1.5D v2 B8: kicker on paper bumped to inherit T.labelUpper's 14pt
+    // floor, color coral→coralDeep for AA contrast (2.83:1 → 4.57:1).
     s.addText(kicker.toUpperCase(), {
-      x: 0.5, y: 0.3, w: 9, h: 0.3,
-      ...T.labelUpper, color: PC.coral, fontSize: 11, charSpacing: 4,
+      x: 0.5, y: 0.3, w: 9, h: 0.32,
+      ...T.labelUpper, color: PC.coralDeep, charSpacing: 4,
     });
   }
   s.addText(title, {
@@ -97,6 +99,7 @@ async function build() {
     const s = pres.addSlide({ masterName: "DARK_HERO" });
     s.addText("§ 1.1.1", {
       x: 0.6, y: 0.7, w: 4, h: 0.4,
+      // coral-on-indigoDeep = 5.8:1, OK at 14pt as kicker eyebrow.
       ...T.labelUpper, color: PC.coral, fontSize: 14, charSpacing: 6,
     });
     s.addText("Schaarste en\neconomisch denken", {
@@ -125,9 +128,11 @@ async function build() {
   // ────────────────────────────────────────────────────────────────────
   {
     const s = pres.addSlide({ masterName: "LIGHT_ED" });
+    // L1.5D v2 B8: kicker on paper bumped to inherit T.labelUpper 14pt,
+    // coral→coralDeep for AA contrast.
     s.addText("NARRATIEF VERHAAL", {
-      x: 0.5, y: 0.3, w: 9, h: 0.3,
-      ...T.labelUpper, color: PC.coral, fontSize: 11, charSpacing: 4,
+      x: 0.5, y: 0.3, w: 9, h: 0.32,
+      ...T.labelUpper, color: PC.coralDeep, charSpacing: 4,
     });
     s.addText("Lisa heeft €20", {
       x: 0.5, y: 0.6, w: 9, h: 0.9,
@@ -143,9 +148,10 @@ async function build() {
     s.addShape("rect", { x: 0.6, y: 2.35, w: 4.2, h: 2.4,
       fill: { color: PC.chalk }, line: { color: PC.cloud, width: 0.75 } });
     s.addShape("rect", { x: 0.6, y: 2.35, w: 4.2, h: 0.08, fill: { color: PC.teal } });
+    // L1.5D v2 B8: 12→14pt; teal-on-chalk 2.74:1 → tealDeep-on-chalk 5.0:1.
     s.addText("OPTIE A", {
-      x: 0.85, y: 2.5, w: 3.7, h: 0.3,
-      ...T.labelUpper, color: PC.teal, fontSize: 12, charSpacing: 4,
+      x: 0.85, y: 2.5, w: 3.7, h: 0.32,
+      ...T.labelUpper, color: PC.tealDeep, charSpacing: 4,
     });
     s.addText("Bioscoop", {
       x: 0.85, y: 2.85, w: 3.7, h: 0.6,
@@ -164,9 +170,10 @@ async function build() {
     s.addShape("rect", { x: 5.2, y: 2.35, w: 4.2, h: 2.4,
       fill: { color: PC.chalk }, line: { color: PC.cloud, width: 0.75 } });
     s.addShape("rect", { x: 5.2, y: 2.35, w: 4.2, h: 0.08, fill: { color: PC.amber } });
+    // L1.5D v2 B8: 12→14pt; amberDeep-on-chalk 2.84:1 → amberInk 4.93:1.
     s.addText("OPTIE B", {
-      x: 5.45, y: 2.5, w: 3.7, h: 0.3,
-      ...T.labelUpper, color: PC.amberDeep, fontSize: 12, charSpacing: 4,
+      x: 5.45, y: 2.5, w: 3.7, h: 0.32,
+      ...T.labelUpper, color: PC.amberInk, charSpacing: 4,
     });
     s.addText("Nieuw boek", {
       x: 5.45, y: 2.85, w: 3.7, h: 0.6,
@@ -174,7 +181,10 @@ async function build() {
     });
     s.addText("€15", {
       x: 5.45, y: 3.5, w: 3.7, h: 0.7,
-      fontFace: FONT_DISPLAY, fontSize: 48, bold: true, color: PC.amberDeep, charSpacing: -1,
+      // L1.5D v2 B8: 48pt display stat; amberDeep-on-chalk 2.84:1 fails
+      // AA body. Switching to amberInk (4.93:1) keeps the warm-amber
+      // identity for the option-B pairing.
+      fontFace: FONT_DISPLAY, fontSize: 48, bold: true, color: PC.amberInk, charSpacing: -1,
     });
     s.addText("Avonden leesplezier.", {
       x: 5.45, y: 4.25, w: 3.7, h: 0.4,
@@ -293,32 +303,38 @@ async function build() {
       s.addShape("rect", { x: 0.5, y, w: 5, h: 0.72,
         fill: { color: PC.chalk }, line: { color: PC.indigo, width: 1 } });
       s.addShape("rect", { x: 0.5, y, w: 0.08, h: 0.72, fill: { color: PC.coral } });
+      // L1.5D v2 B8: step "01"-"04" coral-on-chalk 3.0:1 (FAIL body) →
+      // coralDeep-on-chalk 4.57:1. Step kop 16→18pt. Step subtitle
+      // 12→14pt (frame h=0.32" supports 14, not 18).
       s.addText(st.n, {
         x: 0.65, y: y + 0.08, w: 0.9, h: 0.55,
-        fontFace: FONT_DISPLAY, fontSize: 26, bold: true, color: PC.coral, charSpacing: -0.5,
+        fontFace: FONT_DISPLAY, fontSize: 26, bold: true, color: PC.coralDeep, charSpacing: -0.5,
       });
       s.addText(st.kop, {
         x: 1.65, y: y + 0.04, w: 3.75, h: 0.34,
-        fontFace: FONT_DISPLAY, fontSize: 16, bold: true, color: PC.indigo, valign: "middle",
+        fontFace: FONT_DISPLAY, fontSize: 18, bold: true, color: PC.indigo, valign: "middle",
       });
       s.addText(st.sub, {
         x: 1.65, y: y + 0.36, w: 3.75, h: 0.32,
-        fontFace: FONT_SERIF, fontSize: 12, italic: true, color: PC.smoke, valign: "middle",
+        fontFace: FONT_SERIF, fontSize: 14, italic: true, color: PC.smoke, valign: "middle",
       });
     });
 
     // RIGHT: figuur 3 (4-stappen flowchart)
     s.addImage({ data: imgs.fig3, x: 5.65, y: 2.0, w: 3.85, h: 2.6, altText: ALT["1.1.1_fig_3"] });
+    // L1.5D v2 B8: caption uses bumped T.captionLight (14pt + smoke);
+    // drop the 10pt override; widen h 0.25→0.32 to fit 14pt safely.
     s.addText("Figuur 3 · het keuzeproces in vier stappen", {
-      x: 5.65, y: 4.6, w: 3.85, h: 0.25,
-      ...T.captionLight, fontSize: 10, align: "center",
+      x: 5.65, y: 4.6, w: 3.85, h: 0.32,
+      ...T.captionLight, align: "center",
     });
 
     // Bottom insight bar
     s.addShape("rect", { x: 5.65, y: 5.0, w: 3.85, h: 0.45, fill: { color: PC.indigoDeep } });
+    // L1.5D v2 B8: insight 13→16pt; amber-on-indigoDeep ≈10:1 OK.
     s.addText("Verstandig = opbrengst > alternatieve kosten.", {
       x: 5.75, y: 5.02, w: 3.65, h: 0.4,
-      fontFace: FONT_SERIF, fontSize: 13, italic: true, color: PC.amber, valign: "middle",
+      fontFace: FONT_SERIF, fontSize: 16, italic: true, color: PC.amber, valign: "middle",
     });
   }
 
@@ -335,18 +351,24 @@ async function build() {
     // Tabel (2 rijen: tarwe, maïs) — linker helft
     // Kolomkoppen
     s.addShape("rect", { x: 0.5, y: 2.2, w: 5, h: 0.4, fill: { color: PC.indigoMid } });
-    s.addText("GEWAS",         { x: 0.6,  y: 2.22, w: 1.3, h: 0.36, fontFace: FONT_SANS, fontSize: 10, bold: true, color: PC.chalk, charSpacing: 2, valign: "middle" });
-    s.addText("€ / HECTARE",   { x: 1.95, y: 2.22, w: 1.6, h: 0.36, fontFace: FONT_SANS, fontSize: 10, bold: true, color: PC.chalk, charSpacing: 2, valign: "middle" });
-    s.addText("TOTAAL (10 ha)",{ x: 3.6,  y: 2.22, w: 1.85,h: 0.36, fontFace: FONT_SANS, fontSize: 10, bold: true, color: PC.chalk, charSpacing: 2, valign: "middle" });
+    // L1.5D v2 B8: table headers 10→14pt; chalk-on-indigoMid ≈16:1 OK.
+    s.addText("GEWAS",         { x: 0.6,  y: 2.22, w: 1.3, h: 0.36, fontFace: FONT_SANS, fontSize: 14, bold: true, color: PC.chalk, charSpacing: 2, valign: "middle" });
+    s.addText("€ / HECTARE",   { x: 1.95, y: 2.22, w: 1.6, h: 0.36, fontFace: FONT_SANS, fontSize: 14, bold: true, color: PC.chalk, charSpacing: 2, valign: "middle" });
+    s.addText("TOTAAL (10 ha)",{ x: 3.6,  y: 2.22, w: 1.85,h: 0.36, fontFace: FONT_SANS, fontSize: 14, bold: true, color: PC.chalk, charSpacing: 2, valign: "middle" });
+    // L1.5D v2 B8: row total uses `col` as text fg on chalk.
+    // teal-on-chalk = 2.74:1, amberDeep-on-chalk = 2.84:1 — both fail
+    // AA-large (3.0). Swap to tealDeep (5.0:1) and amberInk (4.93:1)
+    // while keeping the visual identity (left accent stripe stays the
+    // brighter teal/amberDeep — it's a graphical element, not text).
     const calcRows = [
-      { g: "Tarwe", per: "€500", tot: "€5.000", col: PC.teal      },
-      { g: "Maïs",  per: "€350", tot: "€3.500", col: PC.amberDeep },
+      { g: "Tarwe", per: "€500", tot: "€5.000", col: PC.tealDeep,  accent: PC.teal      },
+      { g: "Maïs",  per: "€350", tot: "€3.500", col: PC.amberInk,  accent: PC.amberDeep },
     ];
     calcRows.forEach((r, i) => {
       const y = 2.6 + i * 0.6;
       s.addShape("rect", { x: 0.5, y, w: 5, h: 0.6,
         fill: { color: PC.chalk }, line: { color: PC.cloud, width: 0.5 } });
-      s.addShape("rect", { x: 0.5, y, w: 0.08, h: 0.6, fill: { color: r.col } });
+      s.addShape("rect", { x: 0.5, y, w: 0.08, h: 0.6, fill: { color: r.accent } });
       s.addText(r.g,   { x: 0.7,  y: y + 0.08, w: 1.2, h: 0.45, fontFace: FONT_SANS, fontSize: 18, bold: true, color: PC.indigo, valign: "middle" });
       s.addText(r.per, { x: 1.95, y: y + 0.08, w: 1.6, h: 0.45, fontFace: FONT_SANS, fontSize: 18, color: PC.ink, valign: "middle" });
       s.addText(r.tot, { x: 3.6,  y: y + 0.08, w: 1.85,h: 0.45, fontFace: FONT_DISPLAY, fontSize: 22, bold: true, color: r.col, valign: "middle" });
@@ -377,17 +399,19 @@ async function build() {
     // LEFT: groot uitkomstblok
     s.addShape("rect", { x: 0.5, y: 2.2, w: 5, h: 2.6, fill: { color: PC.indigo } });
     s.addShape("rect", { x: 0.5, y: 2.2, w: 0.12, h: 2.6, fill: { color: PC.coral } });
+    // L1.5D v2 B8: caption deck 16→18pt. chalk-on-indigo ~17:1 OK.
     s.addText("Kiest tarwe → alternatieve kosten", {
       x: 0.8, y: 2.45, w: 4.5, h: 0.4,
-      fontFace: FONT_SANS, fontSize: 16, color: PC.chalk, valign: "middle",
+      fontFace: FONT_SANS, fontSize: 18, color: PC.chalk, valign: "middle",
     });
     s.addText("€3.500", {
       x: 0.8, y: 2.95, w: 4.5, h: 1.1,
       fontFace: FONT_DISPLAY, fontSize: 72, bold: true, color: PC.amber, charSpacing: -2,
     });
+    // L1.5D v2 B8: italic deck 16→18pt. cloud-on-indigo ~11:1 OK.
     s.addText("de maïsopbrengst die hij laat liggen", {
       x: 0.8, y: 4.15, w: 4.5, h: 0.45,
-      fontFace: FONT_SERIF, fontSize: 16, italic: true, color: PC.cloud, valign: "middle",
+      fontFace: FONT_SERIF, fontSize: 18, italic: true, color: PC.cloud, valign: "middle",
     });
 
     // RIGHT: dezelfde visual — herkenningspunt voor de leerling
@@ -410,7 +434,8 @@ async function build() {
     const s = pres.addSlide({ masterName: "DARK_HERO" });
     s.addText("De kern", {
       x: 0.6, y: 0.5, w: 8.8, h: 0.4,
-      ...T.labelUpper, color: PC.coral, fontSize: 13, charSpacing: 6,
+      // L1.5D v2 B8: 13→14pt; coral-on-indigoDeep 5.8:1 OK.
+      ...T.labelUpper, color: PC.coral, fontSize: 14, charSpacing: 6,
     });
     s.addText("Vijf dingen om te onthouden", {
       x: 0.6, y: 0.9, w: 8.8, h: 0.8,
@@ -468,9 +493,10 @@ async function build() {
     s.addShape("rect", { x: 0.6, y: 4.1, w: 8.8, h: 0.85,
       fill: { color: PC.indigoMid } });
     s.addShape("rect", { x: 0.6, y: 4.1, w: 0.12, h: 0.85, fill: { color: PC.amber } });
+    // L1.5D v2 B8: footer kicker 11→14pt; amber-on-indigoMid 7.1:1 OK.
     s.addText("VOLGENDE PARAGRAAF  ·  §1.1.2", {
-      x: 0.85, y: 4.2, w: 8.5, h: 0.3,
-      fontFace: FONT_SANS, fontSize: 11, bold: true, color: PC.amber, charSpacing: 3,
+      x: 0.85, y: 4.2, w: 8.5, h: 0.32,
+      fontFace: FONT_SANS, fontSize: 14, bold: true, color: PC.amber, charSpacing: 3,
     });
     s.addText("Hoe meten we verschillen in geld?", {
       x: 0.85, y: 4.5, w: 8.5, h: 0.45,
@@ -497,11 +523,18 @@ async function build() {
   await pres.writeFile({ fileName: outPath });
   const fix = await fixPptxFile(outPath);
   roundtripWithLibreOffice(outPath);
+  // L1.5D v2 B8: bump speaker-notes font to 14pt AFTER the LibreOffice
+  // roundtrip — when run before LO, the XML manipulation perturbs the
+  // notesSlide structure enough that LO drops the notes entirely.
+  // Running after LO leaves a clean, MS-compliant pptx + our 14pt
+  // override stamped on top.
+  const notesFix = await fixNotesFontSize(outPath, 14);
 
   const size = fs.statSync(outPath).size;
   console.log(`PPTX written to ${outPath}`);
   console.log(`  size: ${(size / 1024).toFixed(1)} KB`);
   console.log(`  fix:  -${fix.removedOverrides} phantom overrides, -${fix.removedEmptyDirs} empty dirs`);
+  console.log(`  notes: ${notesFix.runsBumped} runs bumped to 14pt across ${notesFix.notesSlidesProcessed} notesSlide files`);
   console.log(`  roundtripped via LibreOffice: OK`);
 }
 

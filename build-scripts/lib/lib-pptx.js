@@ -58,6 +58,13 @@ const HEX = {
   warnInk:      "8A5A0E",
   badBg:        "FBEAE6",
   badInk:       "8B2A20",
+
+  // Editorial alias — L1.5D v2 B8 PPTX accessibility fix. amberDeep on
+  // chalk = 2.84:1 (FAILS AA body). amberInk = warnInk (8A5A0E) on
+  // chalk = ~4.93:1 (PASSES AA body) while keeping the warm-amber
+  // identity. Use amberInk anywhere amberDeep would be a small-text
+  // foreground on chalk/paper.
+  amberInk:     "8A5A0E",
 };
 
 // PptxGenJS variant — bare hex
@@ -82,7 +89,8 @@ const T = {
   headlineDark: { fontFace: FONT_DISPLAY, fontSize: 30, bold: true,  color: PC.chalk    },
   subheadDark:  { fontFace: FONT_SANS,    fontSize: 18,              color: PC.cloud    },
   bodyDark:     { fontFace: FONT_SANS,    fontSize: 16,              color: PC.paperMid },
-  captionDark:  { fontFace: FONT_SANS,    fontSize: 12,              color: PC.cloud    },
+  // L1.5D v2 B8: captionDark 12→14 (AA-large floor); color OK at cloud-on-dark (11:1+).
+  captionDark:  { fontFace: FONT_SANS,    fontSize: 14,              color: PC.cloud    },
 
   // Light backgrounds
   heroLight:    { fontFace: FONT_DISPLAY, fontSize: 64, bold: true,  color: PC.indigo,     charSpacing: -2 },
@@ -90,7 +98,10 @@ const T = {
   headlineLight:{ fontFace: FONT_DISPLAY, fontSize: 28, bold: true,  color: PC.indigo     },
   subheadLight: { fontFace: FONT_SANS,    fontSize: 17,              color: PC.smoke      },
   bodyLight:    { fontFace: FONT_SANS,    fontSize: 15,              color: PC.ink        },
-  captionLight: { fontFace: FONT_SANS,    fontSize: 11, italic: true,color: PC.ash        },
+  // L1.5D v2 B8: captionLight 11→14 (AA-large floor); ash→smoke for AA
+  // body contrast on chalk/paper. ash-on-paper = 3.3:1 (FAIL AA body),
+  // smoke-on-paper = ~11:1 (PASS).
+  captionLight: { fontFace: FONT_SANS,    fontSize: 14, italic: true,color: PC.smoke      },
 
   // Accent / serif pull quotes
   pullQuote:    { fontFace: FONT_SERIF,   fontSize: 28, italic: true,color: PC.indigo,    charSpacing: -1 },
@@ -101,7 +112,11 @@ const T = {
   statSmall:    { fontFace: FONT_DISPLAY, fontSize: 48,  bold: true, color: PC.indigo,    charSpacing: -2 },
 
   // UI
-  labelUpper:   { fontFace: FONT_SANS,    fontSize: 10, bold: true,  color: PC.ash,       charSpacing: 2 },
+  // L1.5D v2 B8: labelUpper 10→14 (AA-large floor for kicker eyebrows);
+  // ash→smoke. Slide callers that want the coral / coralDeep eyebrow
+  // tint must pass `color: PC.coralDeep` explicitly (coral-on-paper is
+  // 2.83:1 FAIL; coralDeep-on-paper is 4.57:1 PASS).
+  labelUpper:   { fontFace: FONT_SANS,    fontSize: 14, bold: true,  color: PC.smoke,     charSpacing: 2 },
   kicker:       { fontFace: FONT_SANS,    fontSize: 11, bold: true,  color: PC.coral,     charSpacing: 3 },
 
   // Code / formulas
@@ -123,11 +138,14 @@ function defineMasters(pres, opts = {}) {
     objects: [
       // Thin coral accent line along the top
       { rect: { x: 0, y: 0, w: 10, h: 0.03, fill: { color: PC.coral } } },
-      // Subtle watermark-style paragraph id (bottom-left)
+      // Subtle watermark-style paragraph id (bottom-left).
+      // L1.5D v2 B8: 9pt indigoSoft on indigoDeep = ~3.3:1 (FAIL AA
+      // body). 12pt cloud-on-indigoDeep = ~13:1 (PASS) at AA-large for
+      // a footer eyebrow.
       { text: {
           text: darkLabel,
           options: { x: 0.4, y: 5.23, w: 4, h: 0.3,
-            fontFace: FONT_SANS, fontSize: 9, color: PC.indigoSoft,
+            fontFace: FONT_SANS, fontSize: 12, color: PC.cloud,
             charSpacing: 4, bold: true, margin: 0, valign: "middle" } } },
     ],
   });
@@ -139,11 +157,13 @@ function defineMasters(pres, opts = {}) {
     objects: [
       // Thin indigo hairline along the top
       { rect: { x: 0, y: 0, w: 10, h: 0.02, fill: { color: PC.indigo } } },
-      // Footer: paragraph id on left
+      // Footer: paragraph id on left.
+      // L1.5D v2 B8: 9pt ash on paper = ~3.3:1 (FAIL AA body). 12pt
+      // smoke-on-paper = ~11:1 (PASS).
       { text: {
           text: lightLabel,
           options: { x: 0.4, y: 5.28, w: 4, h: 0.3,
-            fontFace: FONT_SANS, fontSize: 9, color: PC.ash,
+            fontFace: FONT_SANS, fontSize: 12, color: PC.smoke,
             charSpacing: 3, bold: true, margin: 0, valign: "middle" } } },
     ],
   });
@@ -221,6 +241,65 @@ async function fixPptxFile(pptxPath) {
   });
   fs.writeFileSync(pptxPath, out);
   return { removedOverrides: removed, removedEmptyDirs: emptyDirs.length };
+}
+
+/**
+ * L1.5D v2 B8: bump speaker-notes font size in every notesSlide*.xml so
+ * teacher notes render at AA-large floor (14 pt by default) instead of
+ * pptxgenjs' default ~12 pt. pptxgenjs has no per-run notes-styling API
+ * (`addNotes(text)` is string-only), so this is a post-process: walk
+ * the OOXML, ensure every `<a:rPr ...>` inside notesSlide files carries
+ * `sz="1400"` (hundredths of a point). Existing explicit sz values are
+ * REPLACED so a smaller override doesn't override our floor.
+ *
+ * Call AFTER fixPptxFile and BEFORE roundtripWithLibreOffice so LO
+ * emits the override into its export. (If LO is observed to strip it,
+ * move to after LO.)
+ */
+async function fixNotesFontSize(pptxPath, sizePt = 14) {
+  const buf = fs.readFileSync(pptxPath);
+  const zip = await JSZip.loadAsync(buf);
+  const sizeHundredths = String(sizePt * 100);
+  let bumped = 0;
+
+  const notesPaths = [];
+  zip.forEach((p) => {
+    if (/^ppt\/notesSlides\/notesSlide\d+\.xml$/.test(p)) {
+      notesPaths.push(p);
+    }
+  });
+
+  for (const p of notesPaths) {
+    const xml = await zip.file(p).async("string");
+    // Match `<a:rPr ... />` and `<a:rPr ...>` (with content). Add or
+    // replace the sz attribute. The regex captures (open tag) + (attrs)
+    // + (self-close / open-close).
+    const re = /<a:rPr\b([^>]*)\/?>/g;
+    let updated = xml.replace(re, (full, attrs) => {
+      const hasSize = /\bsz="\d+"/.test(attrs);
+      let newAttrs = hasSize
+        ? attrs.replace(/\bsz="\d+"/, `sz="${sizeHundredths}"`)
+        : attrs + ` sz="${sizeHundredths}"`;
+      // Preserve the self-close vs open-close form.
+      const isSelfClose = /\/>$/.test(full);
+      bumped++;
+      return isSelfClose
+        ? `<a:rPr${newAttrs}/>`
+        : `<a:rPr${newAttrs}>`;
+    });
+    if (updated !== xml) {
+      zip.file(p, updated);
+    }
+  }
+
+  const out = await zip.generateAsync({
+    type: "nodebuffer",
+    compression: "DEFLATE",
+    compressionOptions: { level: 6 },
+    mimeType: "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+  });
+  fs.writeFileSync(pptxPath, out);
+  return { notesSlidesProcessed: notesPaths.length, runsBumped: bumped };
 }
 
 // Round-trip through python-pptx to produce strictly Microsoft-compliant OOXML.
@@ -418,5 +497,5 @@ module.exports = {
   ICON, placeIcon,
   lineParams, intersect,
   svgHeader, editorialTitle,
-  fixPptxFile, roundtripWithPythonPptx, roundtripWithLibreOffice,
+  fixPptxFile, fixNotesFontSize, roundtripWithPythonPptx, roundtripWithLibreOffice,
 };
