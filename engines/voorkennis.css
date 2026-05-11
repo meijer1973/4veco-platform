@@ -1531,17 +1531,71 @@ html[data-theme="dark"] ::selection { background: rgba(45, 212, 191, 0.35); colo
 
 [data-layout="presentatie-v1"] .presentatie-grid {
   display: flex; flex-direction: column;
-  gap: 1.5rem;
-  padding: 1.5rem 2rem 4rem;
+  gap: 1rem;
+  padding: 1.25rem 2rem 3rem;
   max-width: 980px;
+}
+[data-layout="presentatie-v1"] .presentatie-deck {
+  position: relative;
+  min-height: 28rem;
+}
+[data-layout="presentatie-v1"] .slide-controls {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 1rem;
+  padding: 0.6rem 0.9rem;
+  background: var(--bg-lift);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+}
+[data-layout="presentatie-v1"] .slide-controls button {
+  background: var(--bg-card);
+  color: var(--ink);
+  border: 1px solid var(--border-lift);
+  border-radius: 6px;
+  padding: 0.4rem 0.95rem;
+  font: inherit;
+  cursor: pointer;
+  transition: background 0.12s, border-color 0.12s, color 0.12s;
+}
+[data-layout="presentatie-v1"] .slide-controls button:hover:not([disabled]) {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-contrast, #fff);
+}
+[data-layout="presentatie-v1"] .slide-controls button[disabled] {
+  opacity: 0.4; cursor: not-allowed;
+}
+[data-layout="presentatie-v1"] .slide-counter {
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+[data-layout="presentatie-v1"] .slide-counter [data-slide-current] {
+  color: var(--accent);
+  font-size: 1rem;
 }
 [data-layout="presentatie-v1"] .slide {
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: 14px;
-  padding: 1.75rem 2rem 1.5rem;
+  padding: 2.25rem 2.5rem 2rem;
   box-shadow: var(--shadow-card);
-  scroll-margin-top: 1rem;
+  min-height: 28rem;
+}
+/* Hide non-active slides. JS removes [hidden] on the active one and
+   adds .is-active. Native [hidden] keeps things accessible if JS fails. */
+[data-layout="presentatie-v1"] .slide[hidden] { display: none; }
+[data-layout="presentatie-v1"] .slide.is-active { display: block; }
+/* Sidebar active-slide indicator */
+[data-layout="presentatie-v1"] .sidebar .nav-item.is-active {
+  background: var(--bg-lift);
+  color: var(--ink);
+  border-left-color: var(--accent);
+}
+[data-layout="presentatie-v1"] .sidebar .nav-item.is-active .nav-num {
+  color: var(--ink);
 }
 [data-layout="presentatie-v1"] .slide--dark {
   background: #1c2640;

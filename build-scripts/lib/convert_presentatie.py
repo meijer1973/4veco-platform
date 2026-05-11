@@ -617,7 +617,7 @@ def render_html(slides, para_number, para_name, shared_prefix='../../shared'):
         if len(label_short) > 32:
             label_short = label_short[:31] + '…'
         sidebar_items.append(
-            f'        <a class="nav-item" href="#slide-{s["idx"]}">'
+            f'        <a class="nav-item" href="#slide-{s["idx"]}" data-slide-link="{s["idx"]}">'
             f'<span class="nav-num">{s["idx"]:02d}</span>'
             f'<span class="nav-title">{esc(label_short)}</span></a>'
         )
@@ -636,14 +636,27 @@ def render_html(slides, para_number, para_name, shared_prefix='../../shared'):
     for s in slides:
         body = render_slide_body(s)
         section_blocks.append(
-            f'      <section class="slide {s["theme_class"]}" id="slide-{s["idx"]}" data-slide="{s["idx"]}">\n'
+            f'      <section class="slide {s["theme_class"]}" id="slide-{s["idx"]}" data-slide="{s["idx"]}" hidden>\n'
             f'{body}'
             f'      </section>'
         )
+
+    nav_bar = (
+        '    <div class="slide-controls" role="navigation" aria-label="Dia-navigatie">\n'
+        '      <button type="button" class="slide-prev" aria-label="Vorige dia" data-slide-prev>&larr; Vorige</button>\n'
+        f'      <span class="slide-counter"><span data-slide-current>1</span> / <span class="slide-total">{len(slides)}</span></span>\n'
+        '      <button type="button" class="slide-next" aria-label="Volgende dia" data-slide-next>Volgende &rarr;</button>\n'
+        '    </div>\n'
+    )
+
     main_grid = (
         '    <main class="presentatie-grid">\n'
+        + nav_bar
+        + '      <div class="presentatie-deck" data-slide-deck>\n'
         + '\n'.join(section_blocks) + '\n'
-        '    </main>\n'
+        + '      </div>\n'
+        + nav_bar
+        + '    </main>\n'
     )
 
     boot_script = (
@@ -654,6 +667,76 @@ def render_html(slides, para_number, para_name, shared_prefix='../../shared'):
         '}catch(e){}})();\n'
         '</script>'
     )
+
+    slide_nav_script = '''<script>
+(function(){
+  var deck = document.querySelector('[data-slide-deck]');
+  if (!deck) return;
+  var slides = Array.prototype.slice.call(deck.querySelectorAll('.slide'));
+  if (!slides.length) return;
+  var sidebarLinks = document.querySelectorAll('[data-slide-link]');
+  var counters = document.querySelectorAll('[data-slide-current]');
+  var prevButtons = document.querySelectorAll('[data-slide-prev]');
+  var nextButtons = document.querySelectorAll('[data-slide-next]');
+  var current = 0;
+
+  function show(idx){
+    if (idx < 0) idx = 0;
+    if (idx >= slides.length) idx = slides.length - 1;
+    slides.forEach(function(s, i){
+      if (i === idx) { s.hidden = false; s.classList.add('is-active'); }
+      else { s.hidden = true; s.classList.remove('is-active'); }
+    });
+    sidebarLinks.forEach(function(a){
+      var n = parseInt(a.getAttribute('data-slide-link'), 10);
+      if (n === idx + 1) a.classList.add('is-active');
+      else a.classList.remove('is-active');
+    });
+    counters.forEach(function(el){ el.textContent = String(idx + 1); });
+    prevButtons.forEach(function(b){ b.disabled = (idx === 0); });
+    nextButtons.forEach(function(b){ b.disabled = (idx === slides.length - 1); });
+    current = idx;
+    var slideId = slides[idx].id;
+    if (slideId && history.replaceState) {
+      history.replaceState(null, '', '#' + slideId);
+    }
+  }
+
+  function fromHash(){
+    var m = (location.hash || '').match(/^#slide-(\\d+)$/);
+    if (m) {
+      var n = parseInt(m[1], 10) - 1;
+      if (n >= 0 && n < slides.length) return n;
+    }
+    return 0;
+  }
+
+  prevButtons.forEach(function(b){ b.addEventListener('click', function(){ show(current - 1); }); });
+  nextButtons.forEach(function(b){ b.addEventListener('click', function(){ show(current + 1); }); });
+
+  sidebarLinks.forEach(function(a){
+    a.addEventListener('click', function(e){
+      var n = parseInt(a.getAttribute('data-slide-link'), 10);
+      if (!isNaN(n)) {
+        e.preventDefault();
+        show(n - 1);
+      }
+    });
+  });
+
+  document.addEventListener('keydown', function(e){
+    if (e.target && /^(INPUT|TEXTAREA|SELECT)$/.test(e.target.tagName)) return;
+    if (e.key === 'ArrowRight' || e.key === 'PageDown') { e.preventDefault(); show(current + 1); }
+    else if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); show(current - 1); }
+    else if (e.key === 'Home') { e.preventDefault(); show(0); }
+    else if (e.key === 'End') { e.preventDefault(); show(slides.length - 1); }
+  });
+
+  window.addEventListener('hashchange', function(){ show(fromHash()); });
+
+  show(fromHash());
+})();
+</script>'''
 
     return f'''<!doctype html>
 <html lang="nl" data-theme="light">
@@ -672,6 +755,7 @@ def render_html(slides, para_number, para_name, shared_prefix='../../shared'):
 {hero}{main_grid}  </div>
 </div>
 <script src="{shared_prefix}/voorkennis.js"></script>
+{slide_nav_script}
 </body>
 </html>
 '''
