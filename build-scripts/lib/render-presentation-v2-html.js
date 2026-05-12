@@ -15,6 +15,8 @@ function renderDeckHtml(deck, { cssHref = '../../shared/presentation-v2.css', js
     const n = String(index + 1).padStart(2, '0');
     return `<a class="pv2-nav-link" href="#${esc(slide.id)}" data-pv2-link="${index + 1}"><span>${n}</span>${esc(slide.navTitle)}</a>`;
   }).join('\n');
+  const titleLabel = deck.titleLabel || 'Presentatie v2 prototype';
+  const sideLabel = deck.sideLabel || 'prototype v2';
   const pptxLink = pptxHref
     ? `<a class="pv2-action pv2-action-primary" href="${esc(pptxHref)}" download>Download PowerPoint</a>`
     : '';
@@ -24,7 +26,7 @@ function renderDeckHtml(deck, { cssHref = '../../shared/presentation-v2.css', js
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>${esc(deck.paragraph.number)} ${esc(deck.paragraph.title)} — Presentatie v2 prototype</title>
+  <title>${esc(deck.paragraph.number)} ${esc(deck.paragraph.title)} — ${esc(titleLabel)}</title>
   <script>(function(){try{var m=localStorage.getItem('quizMode')||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',m);}catch(e){}})();</script>
   <link rel="stylesheet" href="${esc(cssHref)}">
 </head>
@@ -35,7 +37,7 @@ function renderDeckHtml(deck, { cssHref = '../../shared/presentation-v2.css', js
       <div class="pv2-sidebar-head">
         <p>${esc(deck.paragraph.number)}</p>
         <h1>${esc(deck.paragraph.title)}</h1>
-        <span>prototype v2</span>
+        <span>${esc(sideLabel)}</span>
       </div>
       <nav class="pv2-nav">${nav}</nav>
     </aside>
