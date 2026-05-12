@@ -35,8 +35,10 @@ const CONFIG = loadConfig(MODULE_BASE);
 const ONLY_ID = null;
 const DRY_RUN = false;
 
-// Temporarily hide the task rows (basisopgaven, middenopgaven, verrijkingsopgaven)
-const HIDE_TASK_ROWS = false;
+// Hide legacy Word-only task rows (basisopgaven, middenopgaven, verrijkingsopgaven)
+// from student-facing paragraph landing pages. Future paragraph builds should
+// route practice through web-first exercise surfaces.
+const HIDE_TASK_ROWS = true;
 
 console.log(`Target: ${CONFIG.displayLabel} (${CONFIG.moduleRoot})`);
 
@@ -612,18 +614,20 @@ function renderParagraafPage(paragraaf, files, _resolvedMap) {
   }
 
   // Card for resources that have both an .html web companion and an
-  // Office source download (.docx or .pptx). Primary action: open the
-  // HTML (whole card clickable via a cover-link). Secondary action:
-  // download the source file (sub-link with higher z-index so it's
-  // clickable independently of the cover). If only one format exists,
-  // falls through to the regular resourceCard.
+  // Office source file. Student-facing landing pages should prefer HTML and
+  // should not advertise Word downloads. PowerPoint remains available because
+  // it is a classroom presentation source, not a student worksheet route.
   function resourceCardWithSource(pair, icon, title, desc) {
     if (!pair) return "";
     const source = pair.docx || pair.pptx || null;
     const sourceLabel = pair.pptx ? "PowerPoint" : "Word";
     const sourceType = pair.pptx ? "pptx" : "docx";
     if (pair.html && !source) return resourceCard(encPath([pair.html]), icon, title, desc, "html");
-    if (!pair.html && source) return resourceCard(encPath([source]), icon, title, desc, sourceType);
+    if (!pair.html && source) {
+      if (pair.docx) return "";
+      return resourceCard(encPath([source]), icon, title, desc, sourceType);
+    }
+    if (pair.docx) return resourceCard(encPath([pair.html]), icon, title, desc, "html");
     // Both formats present — emit primary HTML cover-link + Office sub-link.
     const htmlHref = encPath([pair.html]);
     const sourceHref = encPath([source]);
@@ -676,8 +680,6 @@ function renderParagraafPage(paragraaf, files, _resolvedMap) {
     if (!data) return "";
     const links = [];
     if (data.interactief) links.push(`<a class="resource-sub-link" href="${encPath([data.interactief])}">Interactief</a>`);
-    if (data.vragen)      links.push(`<a class="resource-sub-link" href="${encPath([data.vragen])}">Vragen (docx)</a>`);
-    if (data.antwoorden)  links.push(`<a class="resource-sub-link" href="${encPath([data.antwoorden])}">Antwoorden (docx)</a>`);
     if (!links.length) return "";
     return `
         <div class="resource-card resource-card-interactive">
