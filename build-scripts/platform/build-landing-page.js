@@ -600,7 +600,7 @@ function renderParagraafPage(paragraaf, files, _resolvedMap) {
 
   const ext = (f) => f ? f.split(".").pop().toLowerCase() : "docx";
 
-  function resourceCard(href, icon, title, desc, fileType, extraClass = "") {
+  function resourceCard(href, icon, title, desc, _fileType, extraClass = "") {
     if (!href) return "";
     return `
         <a class="resource-card ${extraClass}" href="${href}">
@@ -608,7 +608,6 @@ function renderParagraafPage(paragraaf, files, _resolvedMap) {
           <div class="resource-card-body">
             <h3>${title}</h3>
             <p>${desc}</p>
-            <span class="resource-card-type">${fileType}</span>
           </div>
         </a>`;
   }
@@ -638,7 +637,6 @@ function renderParagraafPage(paragraaf, files, _resolvedMap) {
           <div class="resource-card-body">
             <h3>${title}</h3>
             <p>${desc}</p>
-            <span class="resource-card-type">html</span>
             <div class="resource-sub-links">
               <a class="resource-sub-link" href="${sourceHref}" download>&darr; Download als ${sourceLabel}</a>
             </div>
@@ -708,7 +706,6 @@ function renderParagraafPage(paragraaf, files, _resolvedMap) {
           <div class="resource-card-body">
             <h3>${title}</h3>
             <p>${desc}</p>
-            <span class="resource-card-type">html</span>
             <div class="resource-sub-links">
               <a class="resource-sub-link" href="${pdfHref}" download>&darr; Download als PDF</a>
             </div>
@@ -883,14 +880,6 @@ function renderParagraafPage(paragraaf, files, _resolvedMap) {
   .resource-card-body p {
     font-size: 0.82rem; color: var(--ink-soft);
     line-height: 1.45; margin: 0 0 0.45rem;
-  }
-  .resource-card-type {
-    display: inline-block;
-    font-size: 0.62rem; font-family: var(--mono, ui-monospace, monospace);
-    text-transform: uppercase; letter-spacing: 0.05em;
-    color: var(--ink-soft);
-    background: var(--bg); border: 1px solid var(--border);
-    padding: 0.1rem 0.45rem; border-radius: 3px;
   }
   .resource-card-action {
     display: inline-block;

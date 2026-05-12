@@ -68,6 +68,8 @@ describe('paragraph landing page student-web links', () => {
         expect(result.status).toBe(0);
         const html = fs.readFileSync(path.join(paragraph, 'index.html'), 'utf8');
         expect(html).not.toContain('Download als Word');
+        expect(html).not.toContain('resource-card-type');
+        expect(html).not.toMatch(/>html<\/span>/i);
         expect(html).not.toMatch(/href="[^"]+\.docx"/i);
         expect(html).not.toContain('Basisopgaven');
         expect(html).not.toContain('Middenopgaven');
