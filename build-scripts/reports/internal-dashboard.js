@@ -300,7 +300,7 @@ function buildData() {
         evidence: 'knowledge/platform-team-roadmap.md',
       },
       {
-        command: 'node scripts\\validate-paragraph.js --mode complete "<1.1.1-folder>"',
+        command: 'node scripts\\validate-paragraph.js --mode complete --profile student-web "<1.1.1-folder>"',
         lastKnown: 'passes',
         evidence: 'knowledge/platform-team-roadmap.md',
       },

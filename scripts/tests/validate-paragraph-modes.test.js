@@ -20,6 +20,7 @@ const { spawnSync } = require('child_process');
 
 const PLATFORM_ROOT = path.resolve(__dirname, '..', '..');
 const VALIDATOR = path.join(PLATFORM_ROOT, 'scripts', 'validate-paragraph.js');
+const DASH = '\u2013';
 
 function makeMinimalPartAFolder(tmpDir, parNr, parName, opts = {}) {
     const folder = path.join(tmpDir, `${parNr} ${parName}`);
@@ -36,6 +37,9 @@ function makeMinimalPartAFolder(tmpDir, parNr, parName, opts = {}) {
     fs.writeFileSync(path.join(folder, `${parNr} ${parName} – opgaven.pdf`), fakePdf);
     fs.writeFileSync(path.join(folder, `${parNr} ${parName} – antwoorden.pdf`), fakePdf);
     fs.writeFileSync(path.join(folder, 'build_pdf.py'), '# stub\n');
+    fs.writeFileSync(path.join(folder, `${parNr} ${parName} ${DASH} paragraaf.html`), '<!doctype html><html><body>stub</body></html>');
+    fs.writeFileSync(path.join(folder, `${parNr} ${parName} ${DASH} opgaven.html`), '<!doctype html><html><body>stub</body></html>');
+    fs.writeFileSync(path.join(folder, `${parNr} ${parName} ${DASH} antwoorden.html`), '<!doctype html><html><body>stub</body></html>');
     fs.writeFileSync(path.join(folder, `${parNr}-quality-ref.yaml`),
         'paragraph: "1.1.1"\nschema_version: 2\npartA:\n  assets:\n    missing: []\n    svgpng_paired: true\n    naming_compliant: true\n');
 

@@ -3,13 +3,19 @@
  * validate-paragraph.js - Verify one flat-layout 4veco-lessen paragraph.
  *
  * Usage:
- *   node scripts/validate-paragraph.js [--mode auto|part-a|part-b|complete] <paragraph-folder-path>
+ *   node scripts/validate-paragraph.js [--mode auto|part-a|part-b|complete] [--profile student-web|legacy-full|office|publisher-print] <paragraph-folder-path>
  *
  * Modes:
  *   auto      Validates Part A unless companion files are present.
  *   part-a    Textbook paragraph only.
  *   part-b    Companion paragraph only.
  *   complete  Part A + Part B.
+ *
+ * Profiles:
+ *   student-web      Default. Student-facing HTML/games/presentation; no DOCX or PDF requirement.
+ *   legacy-full      Previous full contract: Part A PDFs + all 27 Part B files.
+ *   office           Student web plus Office exports (.docx handouts).
+ *   publisher-print  Publisher/print gate: Part A PDFs required; Part B not required.
  */
 
 'use strict';
@@ -19,13 +25,15 @@ const path = require('path');
 
 const DASH = '\u2013';
 const VALID_MODES = new Set(['auto', 'part-a', 'part-b', 'complete']);
+const VALID_PROFILES = new Set(['student-web', 'legacy-full', 'office', 'publisher-print']);
 
 function usage() {
-  console.error('Usage: node scripts/validate-paragraph.js [--mode auto|part-a|part-b|complete] <paragraph-folder-path>');
+  console.error('Usage: node scripts/validate-paragraph.js [--mode auto|part-a|part-b|complete] [--profile student-web|legacy-full|office|publisher-print] <paragraph-folder-path>');
 }
 
 function parseArgs(argv) {
   let mode = 'auto';
+  let profile = process.env.PARAGRAPH_OUTPUT_PROFILE || 'student-web';
   let paragraphPath = null;
 
   for (let i = 0; i < argv.length; i++) {
@@ -34,6 +42,10 @@ function parseArgs(argv) {
       mode = argv[++i];
     } else if (arg.startsWith('--mode=')) {
       mode = arg.slice('--mode='.length);
+    } else if (arg === '--profile') {
+      profile = argv[++i];
+    } else if (arg.startsWith('--profile=')) {
+      profile = arg.slice('--profile='.length);
     } else if (arg === '--help' || arg === '-h') {
       usage();
       process.exit(0);
@@ -51,15 +63,20 @@ function parseArgs(argv) {
     usage();
     process.exit(1);
   }
+  if (!VALID_PROFILES.has(profile)) {
+    console.error(`Invalid profile: ${profile}`);
+    usage();
+    process.exit(1);
+  }
   if (!paragraphPath) {
     usage();
     process.exit(1);
   }
 
-  return { mode, paragraphPath };
+  return { mode, profile, paragraphPath };
 }
 
-const { mode: requestedMode, paragraphPath } = parseArgs(process.argv.slice(2));
+const { mode: requestedMode, profile, paragraphPath } = parseArgs(process.argv.slice(2));
 const PAR = path.resolve(paragraphPath);
 
 if (!fs.existsSync(PAR) || !fs.statSync(PAR).isDirectory()) {
@@ -164,41 +181,56 @@ function classifyParagraph(name) {
   return 'theory';
 }
 
-function partBRequiredFiles() {
+function studentWebPartBFiles() {
   return [
     { path: `${prefix} ${DASH} instapquiz.html`, type: 'html' },
     { path: `${prefix} ${DASH} nieuws-detective.html`, type: 'html' },
-    { path: `${prefix} ${DASH} uitleg voorkennis.docx`, type: 'docx' },
     { path: `${prefix} ${DASH} uitleg voorkennis.html`, type: 'html' },
-    { path: 'Lees dit als je niet weet hoe je moet beginnen met deze les.docx', type: 'docx' },
     { path: `${prefix} ${DASH} presentatie.pptx`, type: 'pptx' },
     { path: `${prefix} ${DASH} presentatie.html`, type: 'html' },
-    { path: `${prefix} ${DASH} uitleg vaardigheden.docx`, type: 'docx' },
     { path: `${prefix} ${DASH} uitleg vaardigheden.html`, type: 'html' },
-    { path: `${prefix} ${DASH} nieuws met visual.docx`, type: 'docx' },
     { path: `${prefix} ${DASH} nieuws met visual.html`, type: 'html' },
-    { path: `${prefix} ${DASH} samenvatting.docx`, type: 'docx' },
     { path: `${prefix} ${DASH} samenvatting.html`, type: 'html' },
     { path: `${prefix} ${DASH} youtube-videos.html`, type: 'html' },
     { path: `${prefix} ${DASH} stappenplan.html`, type: 'html' },
     { path: `${prefix} ${DASH} redeneer-spel.html`, type: 'html' },
     { path: `${prefix} ${DASH} wiskundevaardigheden.html`, type: 'html' },
+    { path: `${prefix} ${DASH} begeleide inoefening.html`, type: 'html' },
+    { path: 'index.html', type: 'html' },
+  ];
+}
+
+function officePartBFiles() {
+  return [
+    { path: `${prefix} ${DASH} uitleg voorkennis.docx`, type: 'docx' },
+    { path: 'Lees dit als je niet weet hoe je moet beginnen met deze les.docx', type: 'docx' },
+    { path: `${prefix} ${DASH} uitleg vaardigheden.docx`, type: 'docx' },
+    { path: `${prefix} ${DASH} nieuws met visual.docx`, type: 'docx' },
+    { path: `${prefix} ${DASH} samenvatting.docx`, type: 'docx' },
     { path: `${prefix} ${DASH} begeleide inoefening ${DASH} vragen.docx`, type: 'docx' },
     { path: `${prefix} ${DASH} begeleide inoefening ${DASH} antwoorden.docx`, type: 'docx' },
-    { path: `${prefix} ${DASH} begeleide inoefening.html`, type: 'html' },
     { path: `${prefix} ${DASH} basis ${DASH} vragen.docx`, type: 'docx' },
     { path: `${prefix} ${DASH} basis ${DASH} antwoorden.docx`, type: 'docx' },
     { path: `${prefix} ${DASH} midden ${DASH} vragen.docx`, type: 'docx' },
     { path: `${prefix} ${DASH} midden ${DASH} antwoorden.docx`, type: 'docx' },
     { path: `${prefix} ${DASH} verrijking ${DASH} vragen.docx`, type: 'docx' },
     { path: `${prefix} ${DASH} verrijking ${DASH} antwoorden.docx`, type: 'docx' },
-    { path: 'index.html', type: 'html' },
   ];
+}
+
+function partBRequiredFiles(activeProfile = profile) {
+  const webFiles = studentWebPartBFiles();
+  if (activeProfile === 'student-web' || activeProfile === 'publisher-print') return webFiles;
+  return [...webFiles, ...officePartBFiles()];
+}
+
+function allKnownPartBFiles() {
+  return partBRequiredFiles('legacy-full');
 }
 
 function hasPartBMarkers() {
   if (hasFile('_paragraph-plan.md')) return true;
-  return partBRequiredFiles()
+  return allKnownPartBFiles()
     .filter(f => f.path !== 'index.html')
     .some(f => hasFile(f.path));
 }
@@ -484,6 +516,78 @@ function validateQualityRef() {
   if (!hasMissing && isPaired && isNaming) pass(`Quality ref: ${qualityRefName} (valid)`);
 }
 
+function qualityRefContent() {
+  const qualityRefName = `${parNr}-quality-ref.yaml`;
+  const fullPath = path.join(PAR, qualityRefName);
+  if (!fs.existsSync(fullPath)) return '';
+  return fs.readFileSync(fullPath, 'utf8');
+}
+
+function declaredB02StepCount() {
+  const yaml = qualityRefContent();
+  const m = yaml.match(/procedure_b02_step_count:\s*(\d+)/);
+  return m ? Number(m[1]) : null;
+}
+
+function stripHtml(content) {
+  return content
+    .replace(/<script\b[\s\S]*?<\/script>/gi, ' ')
+    .replace(/<style\b[\s\S]*?<\/style>/gi, ' ')
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/&nbsp;/g, ' ')
+    .replace(/&middot;/g, ' · ')
+    .replace(/&mdash;/g, ' — ')
+    .replace(/&ndash;/g, ' – ');
+}
+
+function validateB02ProcedureParity() {
+  const expected = declaredB02StepCount();
+  if (expected !== 4) return;
+
+  console.log('\n-- B02 cross-surface procedure parity --');
+
+  const surfaces = [
+    { label: 'paragraaf.md', file: findRootFileBySuffix('paragraaf.md') },
+    { label: 'opgaven.md', file: findRootFileBySuffix('opgaven.md') },
+    { label: 'antwoorden.md', file: findRootFileBySuffix('antwoorden.md') },
+    { label: 'uitleg vaardigheden.html', file: findRootFileBySuffix('uitleg vaardigheden.html'), html: true },
+    { label: 'instapquiz.html', file: findRootFileBySuffix('instapquiz.html'), html: true },
+    { label: 'presentatie.html', file: findRootFileBySuffix('presentatie.html'), html: true },
+    { label: 'stappenplan procedure data', fullPath: path.join(bookRoot, 'shared', 'procedure', `${parNr}.js`) },
+    { label: 'begeleide inoefening.html', file: findRootFileBySuffix('begeleide inoefening.html'), html: true },
+    { label: 'samenvatting.html', file: findRootFileBySuffix('samenvatting.html'), html: true },
+    { label: 'youtube-videos.html', file: findRootFileBySuffix('youtube-videos.html'), html: true },
+  ];
+
+  let checked = 0;
+  for (const surface of surfaces) {
+    if (!surface.file && !surface.fullPath) continue;
+    const fullPath = surface.fullPath || path.join(PAR, surface.file);
+    if (!fs.existsSync(fullPath)) continue;
+    checked++;
+    const raw = fs.readFileSync(fullPath, 'utf8');
+    const text = surface.html ? stripHtml(raw) : raw;
+    const legacyThreeStep = /(?:drie|3)\s*[- ]?\s*stappen/i.test(text);
+    const hasFourthStep = /(?:vier|4)\s*[- ]?\s*stappen|Stap\s*4\b|\|\s*4\s*\||\b04\b/i.test(text);
+    const hasNetValue = /nettowaarde/i.test(text);
+
+    if (legacyThreeStep || !hasFourthStep || !hasNetValue) {
+      const reasons = [];
+      if (legacyThreeStep) reasons.push('contains legacy 3-step wording');
+      if (!hasFourthStep) reasons.push('missing visible fourth-step signal');
+      if (!hasNetValue) reasons.push('missing nettowaarde signal');
+      const displayPath = surface.file || path.relative(PAR, fullPath);
+      fail(`B02 procedure parity: ${surface.label} (${displayPath}) ${reasons.join('; ')}`);
+    }
+  }
+
+  if (checked === 0) {
+    warn('B02 procedure parity skipped: no tracked surfaces found');
+  } else {
+    pass(`B02 procedure parity checked ${checked} surface(s) against canonical 4-step procedure`);
+  }
+}
+
 function validatePartA() {
   const type = classifyParagraph(folderName);
   const spec = PARA_TYPES[type];
@@ -501,19 +605,46 @@ function validatePartA() {
     }
   }
 
-  for (const required of spec.requiredPdf) {
-    const file = findRootFileBySuffix(`${required}.pdf`);
-    if (!file) {
-      fail(`MISSING ${required}.pdf`);
-      continue;
+  const requireHtml = profile === 'student-web' || profile === 'office';
+  const requirePdf = profile === 'legacy-full' || profile === 'publisher-print';
+
+  if (requireHtml) {
+    for (const required of spec.requiredMd) {
+      const file = findRootFileBySuffix(`${required}.html`);
+      if (!file) {
+        fail(`MISSING ${required}.html (student-web profile)`);
+        continue;
+      }
+      const size = fileSize(file);
+      if (size < 500) warn(`HTML VERY SMALL: ${file} (${size} bytes)`);
+      else pass(`${file} (${(size / 1024).toFixed(1)} KB)`);
     }
-    const size = fileSize(file);
-    if (size < 10000) fail(`PDF too small: ${file} (${(size / 1024).toFixed(1)} KB)`);
-    else pass(`${file} (${(size / 1024).toFixed(0)} KB)`);
   }
 
-  hasFile('build_pdf.py') ? pass('build_pdf.py') : fail('MISSING build_pdf.py');
-  validateAssets(markdownFiles, { includePlannedAssets: mode === 'complete' });
+  if (requirePdf) {
+    for (const required of spec.requiredPdf) {
+      const file = findRootFileBySuffix(`${required}.pdf`);
+      if (!file) {
+        fail(`MISSING ${required}.pdf`);
+        continue;
+      }
+      const size = fileSize(file);
+      if (size < 10000) fail(`PDF too small: ${file} (${(size / 1024).toFixed(1)} KB)`);
+      else pass(`${file} (${(size / 1024).toFixed(0)} KB)`);
+    }
+  } else {
+    const pdfsPresent = spec.requiredPdf.filter(required => findRootFileBySuffix(`${required}.pdf`)).length;
+    if (pdfsPresent > 0) pass(`Publisher-print PDFs present but not required by ${profile} profile`);
+  }
+
+  if (requirePdf) {
+    hasFile('build_pdf.py') ? pass('build_pdf.py') : fail('MISSING build_pdf.py');
+  } else if (hasFile('build_pdf.py')) {
+    pass(`build_pdf.py present but not required by ${profile} profile`);
+  }
+  validateAssets(markdownFiles, {
+    includePlannedAssets: mode === 'complete' || profile === 'publisher-print',
+  });
   validatePartARecord();
 }
 
@@ -521,6 +652,7 @@ function validatePartB() {
   console.log('\n-- Part B companion files --');
 
   const required = partBRequiredFiles();
+  pass(`Output profile: ${profile} (${required.length} required Part B file(s))`);
   let present = 0;
   for (const file of required) {
     if (!hasFile(file.path)) {
@@ -541,7 +673,7 @@ function validatePartB() {
       else pass(`${file.path} (${(size / 1024).toFixed(1)} KB)`);
     }
   }
-  console.log(`  ${present}/${required.length} required Part B files present`);
+  console.log(`  ${present}/${required.length} required Part B files present (${profile})`);
 
   console.log('\n-- Part B plan and game data --');
   if (!hasFile('_paragraph-plan.md')) {
@@ -612,6 +744,7 @@ const mode = effectiveMode();
 console.log(`\nValidating paragraph ${parNr} "${parName}"`);
 console.log(`Path: ${PAR}`);
 console.log(`Mode: ${mode}${requestedMode === 'auto' ? ' (auto)' : ''}`);
+console.log(`Profile: ${profile}`);
 
 if (mode === 'part-a' || mode === 'complete') validatePartA();
 if (mode === 'part-b' || mode === 'complete') validatePartB();
@@ -620,6 +753,7 @@ if (mode === 'part-b' || mode === 'complete') validatePartB();
 // AND have a non-FAIL verdict. The Part A review file is checked inside
 // validatePartA() via validatePartARecord().
 if (mode === 'part-b' || mode === 'complete') validatePartBRecord();
+if (mode === 'complete') validateB02ProcedureParity();
 
 console.log('\n==========================================');
 if (errors === 0 && warnings === 0) {

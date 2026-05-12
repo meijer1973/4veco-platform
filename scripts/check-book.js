@@ -3,7 +3,7 @@
  * check-book.js - Run Green Gate validation for a target 4veco-lessen book.
  *
  * Usage:
- *   node scripts/check-book.js [--paragraph-mode auto|part-a|part-b|complete] [--verbose] <book-folder-path>
+ *   node scripts/check-book.js [--paragraph-mode auto|part-a|part-b|complete] [--paragraph-profile student-web|legacy-full|office|publisher-print] [--verbose] <book-folder-path>
  *
  * Default paragraph mode is `part-a`. Book health should stay anchored to the
  * textbook/chapter gate while companion MVP work is still in progress on
@@ -18,16 +18,18 @@ const path = require('path');
 const { spawnSync } = require('child_process');
 
 const VALID_PARAGRAPH_MODES = new Set(['auto', 'part-a', 'part-b', 'complete']);
+const VALID_PARAGRAPH_PROFILES = new Set(['student-web', 'legacy-full', 'office', 'publisher-print']);
 const REPO_ROOT = path.resolve(__dirname, '..');
 
 function usage() {
-  console.error('Usage: node scripts/check-book.js [--paragraph-mode auto|part-a|part-b|complete] [--skip-chapters] [--skip-paragraphs] [--verbose] <book-folder-path>');
+  console.error('Usage: node scripts/check-book.js [--paragraph-mode auto|part-a|part-b|complete] [--paragraph-profile student-web|legacy-full|office|publisher-print] [--skip-chapters] [--skip-paragraphs] [--verbose] <book-folder-path>');
 }
 
 function parseArgs(argv) {
   const options = {
     bookPath: null,
     paragraphMode: 'part-a',
+    paragraphProfile: 'publisher-print',
     skipChapters: false,
     skipParagraphs: false,
     verbose: false,
@@ -48,6 +50,10 @@ function parseArgs(argv) {
       options.paragraphMode = argv[++i];
     } else if (arg.startsWith('--paragraph-mode=')) {
       options.paragraphMode = arg.slice('--paragraph-mode='.length);
+    } else if (arg === '--paragraph-profile') {
+      options.paragraphProfile = argv[++i];
+    } else if (arg.startsWith('--paragraph-profile=')) {
+      options.paragraphProfile = arg.slice('--paragraph-profile='.length);
     } else if (arg.startsWith('--')) {
       console.error(`Unknown option: ${arg}`);
       usage();
@@ -67,6 +73,11 @@ function parseArgs(argv) {
   }
   if (!VALID_PARAGRAPH_MODES.has(options.paragraphMode)) {
     console.error(`Invalid paragraph mode: ${options.paragraphMode}`);
+    usage();
+    process.exit(1);
+  }
+  if (!VALID_PARAGRAPH_PROFILES.has(options.paragraphProfile)) {
+    console.error(`Invalid paragraph profile: ${options.paragraphProfile}`);
     usage();
     process.exit(1);
   }
@@ -126,7 +137,8 @@ function main() {
   const results = [];
   console.log(`\nBook health check: ${bookRoot}`);
   console.log(`Chapters found: ${chapters.length}`);
-  console.log(`Paragraph mode: ${options.paragraphMode}\n`);
+  console.log(`Paragraph mode: ${options.paragraphMode}`);
+  console.log(`Paragraph profile: ${options.paragraphProfile}\n`);
 
   if (!options.skipChapters) {
     console.log('-- Chapter validation --');
@@ -162,7 +174,7 @@ function main() {
         results.push(runNodeCheck(
           `paragraph ${paragraph.split(' ')[0]}`,
           'validate-paragraph.js',
-          ['--mode', options.paragraphMode, paragraphPath],
+          ['--mode', options.paragraphMode, '--profile', options.paragraphProfile, paragraphPath],
           options.verbose
         ));
       }

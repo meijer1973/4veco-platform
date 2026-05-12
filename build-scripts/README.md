@@ -25,6 +25,26 @@ Intermediate build artifacts (pptx, svg, png) go to `output/{paragraph-code}/` a
 
 ## Script Types
 
+## Output Profiles
+
+New paragraph work is web-first. Use the validator profiles instead of assuming
+every build must emit every Office or print artifact:
+
+```bash
+node scripts/validate-paragraph.js --mode complete --profile student-web "<paragraph>"
+node scripts/validate-paragraph.js --mode complete --profile legacy-full "<paragraph>"
+node scripts/validate-paragraph.js --mode complete --profile office "<paragraph>"
+node scripts/validate-paragraph.js --mode part-a --profile publisher-print "<paragraph>"
+```
+
+- `student-web` is the normal path for paragraph 1.1.2 and later: HTML
+  companions, games, presentation HTML/PPTX, source markdown, plans, reviews,
+  data, and assets.
+- `office` is opt-in when DOCX exports are explicitly requested.
+- `legacy-full` checks the older 27-file companion contract.
+- `publisher-print` checks the textbook PDFs for the separate publisher/print
+  pipeline.
+
 ### 1. Platform Generators — `platform/`
 
 Reusable scripts that generate the automated layer. These are what `scripts/deploy.js` invokes.

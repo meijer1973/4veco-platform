@@ -4,9 +4,28 @@ This document covers two pipelines that can run independently or together.
 
 | Mode | What it produces | When to use |
 |------|-----------------|-------------|
-| **Part A only** | Textbook paragraph: markdown + graphs + PDFs | Building chapters via `econ-chapter-builder` |
-| **Part B only** | Lessen paragraph companions: 27 root files including `index.html` (docx, pptx + .html web companions, HTML games, landing page) | Adding teacher-facing companions to a 4veco-lessen paragraph when textbook content (Part A) exists |
+| **Part A only** | Textbook source: markdown + graphs; publisher PDFs only in `--profile publisher-print` | Building source content or the publisher/print packet |
+| **Part B only** | Lessen paragraph companions. Default profile is student-facing HTML/games/presentation; DOCX exports are opt-in | Adding companions to a 4veco-lessen paragraph when textbook content exists |
 | **Both (A → B)** | Complete paragraph: textbook + companions | Full production from scratch |
+
+## Output profiles
+
+`validate-paragraph.js` separates routine student-web output from heavy export
+artifacts:
+
+```bash
+node scripts/validate-paragraph.js --mode complete --profile student-web "<paragraph>"
+node scripts/validate-paragraph.js --mode complete --profile legacy-full "<paragraph>"
+node scripts/validate-paragraph.js --mode complete --profile office "<paragraph>"
+node scripts/validate-paragraph.js --mode part-a --profile publisher-print "<paragraph>"
+```
+
+| Profile | Purpose | Default? |
+|---------|---------|----------|
+| `student-web` | Student-facing HTML, games, presentation HTML/PPTX, source markdown, plans, reviews, data, and assets. No DOCX or textbook PDF requirement. | Yes for direct `validate-paragraph.js` runs |
+| `legacy-full` | Previous 27-file Part B contract, including all DOCX files, for regression checks on older output. | No |
+| `office` | Student-web plus Office exports when editable/downloadable teacher files are explicitly requested. | No |
+| `publisher-print` | Textbook PDF packet for publisher/print handoff. This is a separate careful pipeline, not the fast student-web build. | `check-book.js` uses this for Part A book health |
 
 > **Before you start:** Read the **Design Principles** section in [AGENTS.md](AGENTS.md#design-principles). Two principles govern everything: **Dual Coding** (every concept pairs text with a visual) and **Unified Student Experience** (same procedures and approaches across all formats). These are non-negotiable.
 
@@ -37,9 +56,13 @@ node scripts/validate-paragraph.js --mode complete "<paragraph folder>" # aggreg
 
 ---
 
-# PART A: TEXTBOOK BUILD (markdown → graphs → PDF)
+# PART A: TEXTBOOK BUILD (markdown -> graphs -> web/print outputs)
 
-Produces the textbook paragraph: theory, exercises, answer models, graphs, and PDFs. Used by `econ-chapter-builder` for chapter assembly. Can run standalone.
+Produces the textbook paragraph: theory, exercises, answer models, and graphs.
+Student-web builds require the markdown source and web pages. The three PDFs
+(`paragraaf.pdf`, `opgaven.pdf`, `antwoorden.pdf`) are publisher-print outputs
+and are checked by `--profile publisher-print`, not by the default student-web
+profile.
 
 **Skills:** `econ-textbook-paragraph`, `econ-exercise-builder`, `economic-graph`, `econ-pdf-builder`
 
@@ -72,7 +95,7 @@ Follow `economic-graph` skill:
 4. Save both in `_assets/` with naming: `X.Y.Z_{type}_{number}.{svg|png}`
    - Types: `fig` (theory), `ex` (exercises), `we` (worked example)
 
-## A4: Build PDFs
+## A4: Build publisher PDFs
 
 1. Create `build_pdf.py` (adapt from existing template — `ASSET_DIR="_assets"`, strip Pandoc defaults, paragraph name in footer)
 2. Run to generate: paragraaf.pdf, opgaven.pdf, antwoorden.pdf (or opgaven.pdf + antwoorden.pdf for consolidation)
@@ -86,7 +109,7 @@ Before any review, verify:
 2. Every `.svg` has a matching `.png`
 3. Asset naming follows `X.Y.Z_{type}_{number}.{ext}`
 4. No orphaned assets (files in `_assets/` not referenced in any .md)
-5. All PDFs exist and are >10KB
+5. In `publisher-print` profile, all PDFs exist and are >10KB
 
 **If anything fails → go back and fix it. Cannot proceed with missing assets.**
 
@@ -130,9 +153,15 @@ Generate `X.Y.Z-quality-ref.yaml` via a separate sub-agent:
 
 ---
 
-# PART B: LESSEN COMPANIONS (docx, pptx, html, landing page)
+# PART B: LESSEN COMPANIONS (HTML-first, Office optional)
 
-Produces the teacher-facing companions for a lessen paragraph: 27 root files including the .pptx presentation + its .html web rendering, Word documents + their .html conversions (voorkennis / vaardigheden / samenvatting / nieuws / begeleide-inoefening), HTML games, and `index.html`. Part B can use `_assets/` graphs from Part A as source material, but must adapt visuals to the companion surface instead of copy-pasting textbook images.
+Produces the student-facing companion layer for a lessen paragraph. The default
+student-web profile requires HTML companions, HTML games, the presentation HTML
+plus editable PPTX, `index.html`, plans, reviews, shared game data, and assets.
+Word documents are optional Office exports and are not part of the default
+student-web completion gate. Part B can use `_assets/` graphs from Part A as
+source material, but must adapt visuals to the companion surface instead of
+copy-pasting textbook images.
 
 **If Part A was run first:** the `_assets/` folder already contains textbook graphs. Part B builders (presentatie, voorkennis, vaardigheden, nieuws, samenvatting, begeleide inoefening) may derive from these graphs, but the preferred output is surface-specific variants: slide, docx, summary thumbnail, web-light, and web-dark where relevant. The economic data and reasoning should stay consistent; the layout, contrast, typography, proportions, annotations, and theme colors should be adapted.
 
@@ -142,7 +171,7 @@ Produces the teacher-facing companions for a lessen paragraph: 27 root files inc
 
 - **Target repo:** `C:\Projects\4veco\4veco-lessen`.
 - **Naming:** `Boek N - Title / N.X Hoofdstuk X - Name / N.X.Y [Naam]`. Books replace the old "Module N" level; chapters and paragraphs keep their two- and three-part numbering.
-- **Per-paragraph layout is flat.** All 27 Part B files, including `index.html`, sit directly in the paragraph folder alongside Part A outputs (`paragraaf.md`, `opgaven.md`, `antwoorden.md`, `_assets/`, PDFs, `build_pdf.py`, review.md, quality-ref.yaml). No `1. Voorbereiden/`, `2. Leren/`, `3. Oefenen/` subfolders.
+- **Per-paragraph layout is flat.** All generated Part B files, including `index.html`, sit directly in the paragraph folder alongside Part A outputs (`paragraaf.md`, `opgaven.md`, `antwoorden.md`, `_assets/`, review.md, quality-ref.yaml, and any optional PDFs/Office exports). No `1. Voorbereiden/`, `2. Leren/`, `3. Oefenen/` subfolders.
 - **Section labels** in tables below (Voorbereiden / Leren / Oefenen) identify the pedagogical role of a file, not a folder. Files are grouped by filename convention (`uitleg voorkennis`, `presentatie`, `begeleide inoefening –`, `basis –`, etc.).
 - **`shared/` lives at book root:** `4veco-lessen/Boek N - Title/shared/` holds engine JS/CSS and the game data files (`shared/questions/`, `shared/procedure/`, etc.).
 - **Legacy subfolder-layout references in older guides are legacy.** For new work, this spec supersedes them. The old game target stays on its subfolder layout until it retires in September 2026.
@@ -178,7 +207,30 @@ Important:
 
 ## B1. Definition of Done
 
-A complete Part B companion set has **27 required root files including `index.html`**. Every file listed below MUST exist before the companion paragraph is considered done.
+For new paragraphs, the default Part B completion gate is the **student-web**
+profile. It has 14 required root files including `index.html`; Office exports
+are opt-in.
+
+Student-web required files:
+
+1. `X.Y.Z [Naam] – instapquiz.html`
+2. `X.Y.Z [Naam] – nieuws-detective.html`
+3. `X.Y.Z [Naam] – uitleg voorkennis.html`
+4. `X.Y.Z [Naam] – presentatie.pptx`
+5. `X.Y.Z [Naam] – presentatie.html`
+6. `X.Y.Z [Naam] – uitleg vaardigheden.html`
+7. `X.Y.Z [Naam] – nieuws met visual.html`
+8. `X.Y.Z [Naam] – samenvatting.html`
+9. `X.Y.Z [Naam] – youtube-videos.html`
+10. `X.Y.Z [Naam] – stappenplan.html`
+11. `X.Y.Z [Naam] – redeneer-spel.html`
+12. `X.Y.Z [Naam] – wiskundevaardigheden.html`
+13. `X.Y.Z [Naam] – begeleide inoefening.html`
+14. `index.html`
+
+The table below is the **legacy-full / office export matrix**. Use it only when
+the requested product explicitly includes Word handouts or when validating the
+old 27-file contract.
 
 | # | File | Section | Required | Builder | Source input | Output type |
 |---|------|---------|----------|---------|--------------|-------------|
@@ -576,6 +628,10 @@ Scripts built for specific paragraphs in earlier work. Useful as examples but no
 
 ## B5. What deploy.js does and does NOT do
 
+For `student-web`, skip the DOCX-only items in the manual layer below. They
+are retained as Office/export tasks for `office` and `legacy-full`, not as the
+default paragraph-2 path.
+
 ### deploy.js handles (automated layer):
 - Copy engine files (JS/CSS) from `engines/` → `<book>/shared/`
 - Generate skilltree data + HTML shells (flat output: shells land at paragraph root)
@@ -607,6 +663,10 @@ Scripts built for specific paragraphs in earlier work. Useful as examples but no
 
 `validate-paragraph.js` should enforce the flat-layout contract in modes:
 
+Validation is profile-aware. Use `student-web` for normal paragraph companion
+work, `office` or `legacy-full` only when Word exports are deliberately part of
+the requested product, and `publisher-print` for the separate PDF handoff.
+
 - **Part A/textbook mode**: validates textbook files at the paragraph root. Theory paragraphs require paragraaf/opgaven/antwoorden markdown and PDFs. Consolidation paragraphs require opgaven/antwoorden markdown and PDFs; `paragraaf.md`/`paragraaf.pdf` are not required because consolidation has no theory section.
 - **Part B/companion mode**: validates the 27 required Part B root files listed in B1, including `index.html`. `_paragraph-plan.md` is required in this mode because it is the source of truth for companion builders.
 - **Complete mode**: validates both Part A and Part B.
@@ -624,10 +684,12 @@ The raw reasoning CSV source is kept in `source-data/book-N/reasoning/X.Y.Z.csv`
 After building, run the paragraph validator:
 
 ```bash
-node scripts/validate-paragraph.js "<path-to-paragraph-folder>"
+node scripts/validate-paragraph.js --mode complete --profile student-web "<path-to-paragraph-folder>"
 ```
 
 This checks:
+For `student-web`, read the old "27 files" wording below as the legacy/full
+profile contract; the default required Part B count is 14 files.
 - All 27 required Part B files exist at the paragraph root (flat layout), including `index.html`
 - All .docx files are valid zip archives
 - Presentation > 100KB (has graphs)
