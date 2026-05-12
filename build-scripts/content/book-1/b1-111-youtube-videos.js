@@ -56,11 +56,11 @@ const VIDEOS = [
       "Uitleg van <strong>alternatieve kosten</strong> met sprekende voorbeelden: een boer die tussen tarwe en ma&iuml;s kiest, of een scholier die een avond moet verdelen over leren en sporten. De video benadrukt de valkuil dat alternatieve kosten niet de prijs zijn, maar de opbrengst van het <em>beste niet-gekozen alternatief</em>. Sluit aan op concept 2.",
   },
   {
-    title: "Economisch denken — systematisch kiezen in 3 stappen",
+    title: "Economisch denken — systematisch kiezen in 4 stappen",
     channel: "Studyflix Nederland / Ikbeneconomie",
     href: "https://www.youtube.com/results?search_query=economisch+denken+alternatieven+kiezen",
     description:
-      "De <strong>3-stappenprocedure</strong> van economisch denken: (1) welke alternatieven heb je? (2) wat levert elk alternatief op? (3) wat geef je op bij je keuze? De video laat zien hoe je met deze procedure een keuze uitwerkt, bijvoorbeeld bij de besteding van een beperkt budget. Sluit aan op concept 3 en de worked example (tarwe vs ma&iuml;s).",
+      "De <strong>4-stappenprocedure voor economisch denken</strong>: (1) alternatieven benoemen, (2) opbrengst per alternatief berekenen, (3) rangschikken en alternatieve kosten bepalen, (4) nettowaarde berekenen. De video laat zien hoe je met deze procedure een keuze uitwerkt, bijvoorbeeld bij de besteding van een beperkt budget. Sluit aan op concept 3 en de worked example (tarwe vs ma&iuml;s).",
   },
 ];
 
@@ -214,7 +214,7 @@ function renderHTML() {
           <span class="callout-icon">&#10024;</span>
           <strong>Tip:</strong> bekijk de video's als extra uitleg naast de lestekst, of om de theorie
           te herhalen voor een toets. De drie video's vullen elkaar aan &mdash; samen dekken ze
-          schaarste, alternatieve kosten en de 3-stappenprocedure van economisch denken.
+          schaarste, alternatieve kosten en de 4-stappenprocedure voor economisch denken.
         </div>
       </section>
 

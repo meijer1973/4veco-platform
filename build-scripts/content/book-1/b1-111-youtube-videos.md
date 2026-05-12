@@ -12,7 +12,7 @@ Manueel gemaakt (§B1-regel: geen build-script voor dit artefact). Structuur is 
 |---|-----------|-------------|------------------|
 | 1 | Schaarste — wat is het en waarom moeten we kiezen? | Schaarste (concept 1 van §1.1.1) | Ikbeneconomie |
 | 2 | Alternatieve kosten — wat geef je op als je kiest? | Alternatieve kosten (concept 2) | Havisten Economie / Peter Boerman |
-| 3 | Economisch denken — systematisch kiezen in 3 stappen | 3-stappenprocedure (concept 3) | Studyflix Nederland / Ikbeneconomie |
+| 3 | Economisch denken — systematisch kiezen in 4 stappen | 4-stappenprocedure voor economisch denken (concept 3) | Studyflix Nederland / Ikbeneconomie |
 
 De drie video's dekken samen de drie kernconcepten van paragraaf 1.1.1 (schaarste, alternatieve kosten, economisch denken). Ze vullen de theorie uit de paragraaf aan zonder opgave-instructies te bevatten (B9-regel).
 

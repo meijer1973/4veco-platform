@@ -90,6 +90,29 @@ describeOrSkip('§1.1.1 presentatie.html (L1.5D D2)', () => {
         expect(cardNums).toEqual(['01', '02', '03', '04']);
     });
 
+    test('sidebar uses explicit semantic nav labels instead of prominent numbers', () => {
+        expect(html).toMatch(/data-slide-link="2"[\s\S]{0,120}<span class="nav-title">Lisa moet kiezen<\/span>/);
+        expect(html).toMatch(/data-slide-link="7"[\s\S]{0,140}<span class="nav-title">Alternatieve kosten boer<\/span>/);
+        expect(html).not.toMatch(/<span class="nav-title">€12<\/span>/);
+        expect(html).not.toMatch(/<span class="nav-title">€3\.500<\/span>/);
+    });
+
+    test('slide 2 preserves the A/B option pairing as semantic option cards', () => {
+        const slide2 = html.match(
+            /<section class="slide [^"]+" id="slide-2"[\s\S]*?<\/section>/
+        );
+        expect(slide2).not.toBeNull();
+        expect(slide2[0]).toMatch(/<div class="slide-option-grid" role="list">/);
+        expect(slide2[0]).toMatch(/<article class="slide-option-card" role="listitem">[\s\S]*<p class="option-label">Optie A<\/p>[\s\S]*<h3 class="option-title">Bioscoop<\/h3>[\s\S]*<p class="option-value">€12<\/p>/);
+        expect(slide2[0]).toMatch(/<p class="option-label">Optie B<\/p>[\s\S]*<h3 class="option-title">Nieuw boek<\/h3>[\s\S]*<p class="option-value">€15<\/p>/);
+    });
+
+    test('teacher notes mode is explicit and nav metadata is not displayed as notes', () => {
+        expect(html).toMatch(/data-notes-toggle aria-pressed="false">Toon alle sprekersnotities<\/button>/);
+        expect(html).toMatch(/Verberg alle sprekersnotities/);
+        expect(html).not.toMatch(/NavTitle:/);
+    });
+
     test('slide 6 detects the tarwe/maïs pseudo-table with header', () => {
         const slide6 = html.match(
             /<section class="slide [^"]+" id="slide-6"[\s\S]*?<\/section>/

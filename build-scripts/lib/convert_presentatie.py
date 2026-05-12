@@ -91,6 +91,7 @@ def master_theme_class(master_name):
 # ─────────────────────────────────────────────────────────────────────────────
 
 NOTE_KEYS = ('Vraag', 'Uitleg', 'Pitfall', 'Overgang')
+_NAV_TITLE_RE = re.compile(r'^\s*NavTitle\s*:\s*(.+?)\s*$', re.MULTILINE | re.IGNORECASE)
 # Matches a key prefix at the start of any line. Supports "Vraag:" with
 # or without trailing whitespace. The first capture group is the key,
 # the rest of the line (and continuation lines until the next key) is
@@ -110,11 +111,23 @@ def parse_notes(text):
     Body text retains internal newlines; the renderer normalizes them.
     """
     if not text or not text.strip():
-        return {'structured': [], 'raw': ''}
+        return {'structured': [], 'raw': '', 'nav_title': ''}
+
+    nav_title = ''
+
+    def strip_nav_title(match):
+        nonlocal nav_title
+        if not nav_title:
+            nav_title = match.group(1).strip()
+        return ''
+
+    text = _NAV_TITLE_RE.sub(strip_nav_title, text).strip()
+    if not text:
+        return {'structured': [], 'raw': '', 'nav_title': nav_title}
 
     matches = list(_NOTE_KEY_RE.finditer(text))
     if not matches:
-        return {'structured': [], 'raw': text.strip()}
+        return {'structured': [], 'raw': text.strip(), 'nav_title': nav_title}
 
     structured = []
     for i, m in enumerate(matches):
@@ -126,7 +139,7 @@ def parse_notes(text):
         rest = text[body_start:body_end]
         body = (first_line + '\n' + rest).strip('\n').rstrip()
         structured.append((key, body))
-    return {'structured': structured, 'raw': text.strip()}
+    return {'structured': structured, 'raw': text.strip(), 'nav_title': nav_title}
 
 
 def render_notes(parsed):
@@ -150,7 +163,7 @@ def render_notes(parsed):
         )
     return (
         '    <details class="slide-notes">\n'
-        '      <summary>Docententoelichting (Vraag · Uitleg · Pitfall · Overgang)</summary>\n'
+        '      <summary>Sprekersnotities (Vraag · Uitleg · Pitfall · Overgang)</summary>\n'
         + '\n'.join(inner_parts) + '\n'
         '    </details>\n'
     )
@@ -216,7 +229,7 @@ def extract_slide(slide, slide_idx, assets_dir, image_cache, asset_prefix='_asse
                           'max_font_pt': int_or_None,
                           'all_caps': bool, 'is_decorative_empty': bool}],
         'images': [{'src': asset-relative path, 'alt': str}],
-        'notes': parsed-notes dict,
+        'notes': parsed-notes dict, including optional nav_title metadata,
       }
 
     image_cache is a dict {sha1: (relative_src_path, alt)} so the same image
@@ -380,6 +393,7 @@ def group_rows(frames, tolerance_pct=ROW_TOLERANCE_PCT):
 
 
 _CARD_NUM_RE = re.compile(r'^\s*0?[0-9]{1,2}\s*$')
+_OPTION_LABEL_RE = re.compile(r'^\s*OPTIE\s+([A-Z])\s*$', re.IGNORECASE)
 
 # A frame counts as "in the same card column" as the card-num if its
 # left edge sits within this many inches to the right of the card-num.
@@ -388,6 +402,12 @@ _CARD_NUM_RE = re.compile(r'^\s*0?[0-9]{1,2}\s*$')
 # beyond the card column. 4 inches is generous enough to cover any
 # in-card text frame but excludes side-by-side captions.
 CARD_COLUMN_MAX_INCHES = 4.0
+OPTION_CENTER_TOLERANCE_INCHES = 1.35
+OPTION_VERTICAL_WINDOW_INCHES = 2.45
+
+
+def _frame_center_x(frame):
+    return frame['left_emu'] + frame['width_emu'] / 2
 
 
 def detect_card_stack(frames):
@@ -440,6 +460,69 @@ def detect_card_stack(frames):
 
     remaining = [f for f in frames if id(f) not in matched_frames]
     return cards, remaining
+
+
+def detect_option_grid(frames):
+    """Detect side-by-side option cards (e.g. slide 2: Optie A/B).
+
+    PowerPoint stores each card fragment as a standalone text frame. This
+    detector reconstructs the A/B pairing so the HTML preserves the comparison
+    semantics instead of emitting a loose paragraph sequence.
+    """
+    labels = []
+    for f in frames:
+        m = _OPTION_LABEL_RE.match(f['text'].strip())
+        if m:
+            labels.append((m.group(1).upper(), f))
+    if len(labels) < 2:
+        return [], frames
+
+    labels.sort(key=lambda item: item[1]['left_emu'])
+    max_center_dx = int(OPTION_CENTER_TOLERANCE_INCHES * EMU_PER_INCH)
+    max_vertical = int(OPTION_VERTICAL_WINDOW_INCHES * EMU_PER_INCH)
+    matched = set()
+    options = []
+
+    for letter, label in labels:
+        label_center = _frame_center_x(label)
+        group = [
+            f for f in frames
+            if abs(_frame_center_x(f) - label_center) <= max_center_dx
+            and f['top_emu'] >= label['top_emu'] - int(0.15 * EMU_PER_INCH)
+            and f['top_emu'] <= label['top_emu'] + max_vertical
+        ]
+        group.sort(key=lambda f: (f['top_emu'], f['left_emu']))
+        for f in group:
+            matched.add(id(f))
+
+        title = ''
+        value = ''
+        note_parts = []
+        for f in group:
+            text = f['text'].strip()
+            if not text or id(f) == id(label):
+                continue
+            if not title:
+                title = text
+            elif not value and re.search(r'€|\d', text) and len(text) <= 24:
+                value = text
+            else:
+                note_parts.append(text)
+
+        options.append({
+            'letter': letter,
+            'label': f'Optie {letter}',
+            'title': title,
+            'value': value,
+            'note': ' '.join(note_parts),
+            'top_emu': label['top_emu'],
+        })
+
+    if sum(1 for o in options if o['title']) < 2:
+        return [], frames
+
+    remaining = [f for f in frames if id(f) not in matched]
+    return options, remaining
 
 
 def detect_pseudotable(frames):
@@ -521,6 +604,24 @@ def render_card_stack(cards):
     return '\n'.join(parts)
 
 
+def render_option_grid(options):
+    parts = ['    <div class="slide-option-grid" role="list">']
+    for opt in options:
+        parts.append(
+            '      <article class="slide-option-card" role="listitem">\n'
+            f'        <p class="option-label">{esc(opt["label"])}</p>\n'
+            + (f'        <h3 class="option-title">{esc(opt["title"])}</h3>\n'
+               if opt['title'] else '')
+            + (f'        <p class="option-value">{esc(opt["value"])}</p>\n'
+               if opt['value'] else '')
+            + (f'        <p class="option-note">{esc(opt["note"])}</p>\n'
+               if opt['note'] else '')
+            + '      </article>'
+        )
+    parts.append('    </div>')
+    return '\n'.join(parts)
+
+
 def render_pseudotable(table):
     parts = ['    <table class="slide-pseudotable">']
     if table['header']:
@@ -543,6 +644,18 @@ def render_pseudotable(table):
     return '\n'.join(parts)
 
 
+def render_text_frames(frames):
+    if not frames:
+        return ''
+    frames = sorted(frames, key=lambda f: (f['top_emu'], f['left_emu']))
+    parts = ['    <div class="slide-body">']
+    for f in frames:
+        for line in (ln for ln in f['text'].split('\n') if ln.strip()):
+            parts.append(f'      <p class="slide-text">{esc(line.strip())}</p>')
+    parts.append('    </div>')
+    return '\n'.join(parts)
+
+
 def render_slide_body(slide):
     """Render the inner HTML of one <section class="slide">.
 
@@ -556,7 +669,9 @@ def render_slide_body(slide):
 
     kicker_frame, title_frame, body_frames = detect_kicker_and_title(frames)
 
-    # Try card-stack first (more specific). Then pseudo-table on remainder.
+    # Try option cards/card-stack first (more specific). Then pseudo-table on
+    # the remainder.
+    options, body_frames = detect_option_grid(body_frames)
     cards, body_frames = detect_card_stack(body_frames)
     table, body_frames = detect_pseudotable(body_frames)
 
@@ -569,17 +684,22 @@ def render_slide_body(slide):
     if title_frame:
         parts.append(f'    <h2 class="slide-title">{esc(title_frame["text"])}</h2>')
 
+    if options:
+        option_top = min(o['top_emu'] for o in options)
+        pre_option = [f for f in body_frames if f['top_emu'] < option_top]
+        body_frames = [f for f in body_frames if f['top_emu'] >= option_top]
+        pre_html = render_text_frames(pre_option)
+        if pre_html:
+            parts.append(pre_html)
+        parts.append(render_option_grid(options))
     if cards:
         parts.append(render_card_stack(cards))
     if table:
         parts.append(render_pseudotable(table))
 
-    if body_frames:
-        parts.append('    <div class="slide-body">')
-        for f in body_frames:
-            for line in (ln for ln in f['text'].split('\n') if ln.strip()):
-                parts.append(f'      <p class="slide-text">{esc(line.strip())}</p>')
-        parts.append('    </div>')
+    body_html = render_text_frames(body_frames)
+    if body_html:
+        parts.append(body_html)
 
     for img in slide['images']:
         alt = img['alt'] or ''
@@ -606,6 +726,7 @@ def render_html(slides, para_number, para_name, shared_prefix='../../shared'):
         f'      <p class="hero-sub">{len(slides)} dia\'s &middot; les-presentatie met sprekersnotities</p>\n'
         '      <div class="hero-actions">\n'
         f'        <a class="hero-action" href="{esc(docx_filename)}" download>Download als PowerPoint</a>\n'
+        '        <button type="button" class="hero-action notes-mode-toggle" data-notes-toggle aria-pressed="false">Toon alle sprekersnotities</button>\n'
         '      </div>\n'
         '    </div>\n'
         '  </header>\n'
@@ -613,23 +734,24 @@ def render_html(slides, para_number, para_name, shared_prefix='../../shared'):
 
     sidebar_items = []
     for s in slides:
-        # Derive short label: largest-font text frame, truncated.
-        label = ''
-        for f in s['text_frames']:
-            if f['is_decorative_empty']:
-                continue
-            label = f['text']
-            break
-        # Prefer a title-like frame for the label.
-        title_candidates = [
-            f for f in s['text_frames']
-            if not f['is_decorative_empty'] and not f['all_caps']
-        ]
-        if title_candidates:
-            title_candidates.sort(
-                key=lambda f: (-(f['max_font_pt'] or 0), f['top_emu']),
-            )
-            label = title_candidates[0]['text']
+        # Prefer explicit slide-nav metadata from speaker notes. Fall back to
+        # the legacy title-like heuristic for older decks.
+        label = (s.get('notes') or {}).get('nav_title') or ''
+        if not label:
+            for f in s['text_frames']:
+                if f['is_decorative_empty']:
+                    continue
+                label = f['text']
+                break
+            title_candidates = [
+                f for f in s['text_frames']
+                if not f['is_decorative_empty'] and not f['all_caps']
+            ]
+            if title_candidates:
+                title_candidates.sort(
+                    key=lambda f: (-(f['max_font_pt'] or 0), f['top_emu']),
+                )
+                label = title_candidates[0]['text']
         label_short = (label or 'Dia').split('\n')[0]
         if len(label_short) > 32:
             label_short = label_short[:31] + '…'
@@ -695,6 +817,7 @@ def render_html(slides, para_number, para_name, shared_prefix='../../shared'):
   var counters = document.querySelectorAll('[data-slide-current]');
   var prevButtons = document.querySelectorAll('[data-slide-prev]');
   var nextButtons = document.querySelectorAll('[data-slide-next]');
+  var notesToggle = document.querySelector('[data-notes-toggle]');
   var current = 0;
 
   function show(idx){
@@ -740,6 +863,16 @@ def render_html(slides, para_number, para_name, shared_prefix='../../shared'):
       }
     });
   });
+
+  if (notesToggle) {
+    notesToggle.addEventListener('click', function(){
+      var details = Array.prototype.slice.call(document.querySelectorAll('details.slide-notes'));
+      var shouldOpen = details.some(function(d){ return !d.open; });
+      details.forEach(function(d){ d.open = shouldOpen; });
+      notesToggle.setAttribute('aria-pressed', shouldOpen ? 'true' : 'false');
+      notesToggle.textContent = shouldOpen ? 'Verberg alle sprekersnotities' : 'Toon alle sprekersnotities';
+    });
+  }
 
   document.addEventListener('keydown', function(e){
     if (e.target && /^(INPUT|TEXTAREA|SELECT)$/.test(e.target.tagName)) return;
@@ -790,8 +923,18 @@ def process_paragraph(para_folder):
     'error' means parse/IO failure — deploy.js must surface as exit 1.
     """
     para_number, para_name = find_paragraph_info(para_folder)
-    pattern = os.path.join(para_folder, '*presentatie*.pptx')
-    found = [f for f in glob.glob(pattern) if not os.path.basename(f).startswith('~$')]
+    exact_name = f'{para_number} {para_name} – presentatie.pptx'
+    exact_path = os.path.join(para_folder, exact_name)
+    if os.path.exists(exact_path):
+        found = [exact_path]
+    else:
+        pattern = os.path.join(para_folder, '*presentatie*.pptx')
+        found = [
+            f for f in glob.glob(pattern)
+            if not os.path.basename(f).startswith('~$')
+            and 'prototype' not in os.path.basename(f).lower()
+        ]
+        found.sort()
     if not found:
         print(f'  SKIP {para_number}: no presentatie.pptx found')
         return 'skip'

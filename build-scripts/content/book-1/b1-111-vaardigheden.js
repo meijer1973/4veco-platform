@@ -510,7 +510,7 @@ children.push(sp(60));
 
 // Hoe — VERBATIM B02 procedure (4 steps)
 children.push(h2d("Hoe werkt het? (4 stappen)", DOMAINS.economischBlue.color));
-children.push(p("Met de keuzekaart als basis pas je vervolgens de canonical 4-stappenprocedure toe. Deze stappen komen rechtstreeks uit het vaardighedenregister (unit B02) en zijn de standaardprocedure voor elke alternatieve-kosten-opgave:"));
+children.push(p("Met de keuzekaart als basis pas je vervolgens de vaste 4-stappenprocedure toe. Dit is de standaardaanpak voor elke opgave over alternatieve kosten:"));
 children.push(sp(40));
 children.push(formulaBox([
   "Stap 1. " + B02_PROCEDURE[0],
@@ -594,7 +594,7 @@ children.push(summarySchema([
   ["Stap 3", "Rangschik — beste niet-gekozen = alternatieve kosten"],
   ["Stap 4", "Nettowaarde = opbrengst keuze − alternatieve kosten"],
   ["Valkuil", "Alternatieve kosten ≠ prijs; niet optellen"],
-  ["Canonical term", "“alternatieve kosten” (niet opportunity costs)"],
+  ["Vaste term", "“alternatieve kosten” (niet opportunity costs)"],
   ["Verband met", "← Vaardigheid 1 (schaarste als voorwaarde)"],
 ], DOMAINS.economischBlue.color));
 
@@ -607,7 +607,7 @@ children.push(new Paragraph({
   spacing: { before: 0, after: 200 },
   children: [new TextRun({ text: "Veelvoorkomende valkuilen", bold: true, font: "Arial", size: 36, color: C.navy })],
 }));
-children.push(p("Let op deze veelgemaakte fouten bij het leren van deze paragraaf. De eerste twee horen bij schaarste (B01), de laatste twee bij alternatieve kosten (B02)."));
+children.push(p("Let op deze veelgemaakte fouten bij het leren van deze paragraaf. De eerste twee horen bij schaarste, de laatste twee bij alternatieve kosten."));
 children.push(sp(100));
 
 children.push(warningBox("“Schaarste = weinig” → Onjuist. Lucht is weinig schaars (er is heel veel van), zand op het strand is plaatselijk niet schaars. Wat telt is: beperkt ten opzichte van de vraag."));
@@ -616,7 +616,7 @@ children.push(warningBox("“Schaarste gaat alleen over geld” → Onjuist. Tij
 children.push(sp(80));
 children.push(warningBox("“Alle niet-gekozen alternatieven optellen” → Onjuist. Alternatieve kosten zijn alléén het beste niet-gekozen alternatief, niet de som van de rest."));
 children.push(sp(80));
-children.push(warningBox("“Opportunity costs” of “opportuniteitskosten” gebruiken → Vermijd. In Nederlandse economieteksten is de canonical term “alternatieve kosten”."));
+children.push(warningBox("“Opportunity costs” of “opportuniteitskosten” gebruiken → Vermijd. In Nederlandse economieteksten gebruiken we de vaste term “alternatieve kosten”."));
 
 // ════════════════════════════════════════════════════
 // SAMENVATTING CHECKLIST
@@ -633,7 +633,7 @@ children.push(sp(100));
 children.push(checklistItem("Ik kan de drie checks voor schaarste toepassen: behoeften > middelen, moet er gekozen worden, welk middel is schaars?"));
 children.push(checklistItem("Ik herken dat schaarste niet hetzelfde is als weinig — het gaat om de verhouding."));
 children.push(checklistItem("Ik weet wat alternatieve kosten zijn: de opbrengst van het beste niet-gekozen alternatief."));
-children.push(checklistItem("Ik kan de 4-stappenprocedure van B02 toepassen: alternatieven benoemen, opbrengsten berekenen, rangschikken, nettowaarde bepalen."));
+children.push(checklistItem("Ik kan de 4-stappenprocedure voor economisch denken toepassen: alternatieven benoemen, opbrengsten berekenen, rangschikken, nettowaarde bepalen."));
 children.push(checklistItem("Ik tel niet-gekozen alternatieven niet op — alleen het beste niet-gekozen telt."));
 children.push(checklistItem("Ik gebruik consequent de Nederlandse term “alternatieve kosten” (niet “opportunity costs”)."));
 

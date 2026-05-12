@@ -1,9 +1,9 @@
 /**
  * Visual variants for Book 1 paragraph 1.1.1.
  *
- * Builds companion-specific image variants from the textbook data. The Part A
- * SVGs remain source material for concepts and numbers; these outputs are
- * adapted for slides, Word documents, summary thumbnails, and themed web pages.
+ * Builds companion-specific image variants from the textbook data. When a
+ * legacy Part A visual has drifted from the canonical procedure, this script
+ * may also refresh that base SVG/PNG from the canonical doc surface.
  *
  * Run from 4veco-platform/:
  *   node build-scripts/content/book-1/b1-111-visual-variants.js
@@ -131,7 +131,7 @@ function opportunitySvg(cfg) {
 function processSvg(cfg) {
   const { t, m, contentY, header } = frame(
     cfg,
-    "Economisch denken in vier stappen (B02)",
+    "Economisch denken in vier stappen",
     "Alternatieven benoemen, opbrengsten, rangschikken, nettowaarde beoordelen.",
     THEMES[cfg.theme].green
   );
@@ -249,7 +249,7 @@ function barChartSvg(cfg, concept) {
 const VISUALS = {
   "1.1.1_fig_1": { surfaces: ["slide", "doc", "summary", "web_light", "web_dark"], render: scarcitySvg },
   "1.1.1_fig_2": { surfaces: ["slide", "doc", "summary", "web_light", "web_dark"], render: opportunitySvg },
-  "1.1.1_fig_3": { surfaces: ["slide", "doc", "summary", "web_light", "web_dark"], render: processSvg },
+  "1.1.1_fig_3": { surfaces: ["slide", "doc", "summary", "web_light", "web_dark"], baseSurface: "doc", render: processSvg },
   "1.1.1_we_1": { surfaces: ["slide", "doc", "summary", "web_light", "web_dark"], render: (cfg) => barChartSvg(cfg, "we1") },
   "1.1.1_ex_1": { surfaces: ["doc", "web_light", "web_dark"], render: (cfg) => barChartSvg(cfg, "ex1") },
 };
@@ -265,12 +265,24 @@ async function writeVariant(base, surfaceName) {
   console.log(`wrote ${path.basename(svgPath)} and ${path.basename(pngPath)}`);
 }
 
+async function writeBaseVisual(base, surfaceName) {
+  if (!surfaceName) return;
+  const surface = SURFACES[surfaceName];
+  const svg = VISUALS[base].render(surface);
+  const svgPath = path.join(ASSETS_DIR, `${base}.svg`);
+  const pngPath = path.join(ASSETS_DIR, `${base}.png`);
+  fs.writeFileSync(svgPath, svg, "utf8");
+  fs.writeFileSync(pngPath, await svgToPng(svg, surface.pngW));
+  console.log(`wrote ${path.basename(svgPath)} and ${path.basename(pngPath)}`);
+}
+
 (async () => {
   if (!fs.existsSync(ASSETS_DIR)) {
     throw new Error(`Assets directory does not exist: ${ASSETS_DIR}`);
   }
 
   for (const [base, entry] of Object.entries(VISUALS)) {
+    await writeBaseVisual(base, entry.baseSurface);
     for (const surfaceName of entry.surfaces) {
       await writeVariant(base, surfaceName);
     }

@@ -423,7 +423,7 @@ const oefeningen = [
       {
         label: "Vraag 5b — Beste combinatie beredeneren",
         vraagText:
-          "Welke combinatie levert Luuk de hoogste totale waarde op? Laat je berekening zien en beargumenteer je keuze met de 4 stappen van economisch denken (B02).",
+          "Welke combinatie levert Luuk de hoogste totale waarde op? Laat je berekening zien en beargumenteer je keuze met de 4 stappen van economisch denken.",
         thinkingSteps: [
           "Stap 1: welke combinaties zijn haalbaar (binnen €30)?",
           "Stap 2: wat is de totale waarde van elke haalbare combinatie?",
@@ -462,7 +462,7 @@ const oefeningen = [
   // ── Oefening 6: Verhaal-analyse — overheidskeuze bij budget ──
   {
     nr: 6,
-    title: "Overheidskeuze bij een schaars budget (volledige B02-procedure)",
+    title: "Overheidskeuze bij een schaars budget (volledige 4-stappenprocedure)",
     domain: "markt",
     introText:
       "Een gemeente heeft €2.000.000 (2 miljoen euro) beschikbaar voor één groot project. De wethouder overweegt drie plannen. Het ambtelijk apparaat heeft per plan de geschatte maatschappelijke opbrengst uitgerekend (in euro's, op basis van tijdsbesparing, veiligheid en gebruik).",
@@ -474,7 +474,7 @@ const oefeningen = [
     ],
     deelvragen: [
       {
-        label: "Vraag 6a — Stap 1 & 2 van B02",
+        label: "Vraag 6a — Stap 1 & 2 van economisch denken",
         vraagText:
           "Pas de eerste twee stappen van de procedure 'alternatieve kosten' toe: (1) benoem de alternatieven voor het schaarse middel; (2) bereken/benoem de opbrengst per alternatief.",
         thinkingSteps: [
@@ -495,7 +495,7 @@ const oefeningen = [
           "Stap 1 en 2 klinken simpel, maar worden vaak overgeslagen. Zonder expliciete alternatieven-lijst en opbrengsten kun je géén alternatieve kosten berekenen — dus zet ze altijd eerst op papier.",
       },
       {
-        label: "Vraag 6b — Stap 3 van B02: rangschik en bepaal alternatieve kosten",
+        label: "Vraag 6b — Stap 3 van economisch denken: rangschik en bepaal alternatieve kosten",
         vraagText:
           "Stel dat de gemeente kiest voor de schoolrenovatie. Rangschik de alternatieven, bepaal het beste niet-gekozen alternatief en benoem daarmee de alternatieve kosten.",
         thinkingSteps: [
@@ -522,7 +522,7 @@ const oefeningen = [
           "Niet optellen: de alternatieve kosten zijn NIET €2,8 + €2,5 mln. De gemeente kon immers maar één plan kiezen, dus ze mist maar één alternatief: het beste van de niet-gekozen plannen.",
       },
       {
-        label: "Vraag 6c — Stap 4 van B02: nettowaarde en advies",
+        label: "Vraag 6c — Stap 4 van economisch denken: nettowaarde en advies",
         vraagText:
           "Pas stap 4 toe: vergelijk de opbrengst van het gekozen alternatief met de alternatieve kosten. Wat is de nettowaarde van de keuze? En welk advies zou je de wethouder geven op basis van deze berekening?",
         thinkingSteps: [
@@ -574,7 +574,7 @@ const samenvattendSchema = [
   ["Geen som", "Alternatieve kosten zijn NOOIT de som van alle niet-gekozen opties — alleen de beste."],
   ["Opbrengst schaars middel", "TO = aantal eenheden × opbrengst per eenheid (q × o)."],
   ["Nettowaarde keuze", "opbrengst gekozen − alternatieve kosten. Positief = verstandige keuze."],
-  ["Procedure B02 (4 stappen)", "1) Alternatieven benoemen  2) Opbrengst per alternatief  3) Beste niet-gekozen = alternatieve kosten  4) Nettowaarde bepalen."],
+  ["Economisch denken (4 stappen)", "1) Alternatieven benoemen  2) Opbrengst per alternatief  3) Beste niet-gekozen = alternatieve kosten  4) Nettowaarde bepalen."],
 ];
 
 // ══════════════════════════════════════════════════════════════════════

@@ -311,7 +311,7 @@ function cell_R2C2() {
 // ── Rij 3 · Kolom 1 — Economisch denken, 4 stappen (B02, green + fig_3) ──
 function cell_R3C1() {
   return coloredCell(C.green, C.greenLt, [
-    heading("Economisch denken — 4 stappen (B02)", C.greenDk),
+    heading("Economisch denken — 4 stappen", C.greenDk),
     new Paragraph({ spacing: { after: 18 }, children: [
       new TextRun({ text: "1.  ", font: "Arial", size: 16, bold: true, color: C.greenDk }),
       new TextRun({ text: "Benoem alle ", font: "Arial", size: 16, color: C.dark }),

@@ -64,6 +64,7 @@ function copyEngines() {
         'newsdetective-engine.js', 'newsdetective-ui.js', 'newsdetective.css',
         'procedure-engine.js', 'procedure-ui.js', 'procedure.css',
         'voorkennis.css', 'voorkennis.js',
+        'presentation-v2.css', 'presentation-v2.js',
         'theme.js'
     ];
 

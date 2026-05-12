@@ -116,6 +116,7 @@ async function build() {
       fontFace: FONT_SANS, fontSize: 14, color: PC.cloud,
     });
     s.addNotes(
+      "NavTitle: Startvraag\n" +
       "Vraag:    Waarom kun je niet alles hebben? Laat de klas één antwoord roepen.\n" +
       "Uitleg:   Zeg dat deze paragraaf precies om die vraag draait. Nog niks uitleggen — alleen nieuwsgierigheid oprekken.\n" +
       "Pitfall:  —\n" +
@@ -141,6 +142,10 @@ async function build() {
     s.addText("Zaterdagmiddag. Twee verleidingen.", {
       x: 0.5, y: 1.45, w: 9, h: 0.5,
       fontFace: FONT_SERIF, fontSize: 20, italic: true, color: PC.smoke,
+    });
+    s.addText("Na deze les kun je: schaarste herkennen · alternatieve kosten bepalen · nettowaarde beoordelen.", {
+      x: 0.5, y: 1.95, w: 9, h: 0.32,
+      fontFace: FONT_SANS, fontSize: 14, color: PC.indigo, bold: true,
     });
 
     // Two-option cards
@@ -199,6 +204,7 @@ async function build() {
     });
 
     s.addNotes(
+      "NavTitle: Lisa moet kiezen\n" +
       "Vraag:    Welke zou jij kiezen, bioscoop of boek? Hand omhoog.\n" +
       "Uitleg:   Beide opties samen kosten €27, Lisa heeft €20. Kiezen is dus verplicht. Wat kost die keuze haar eigenlijk?\n" +
       "Pitfall:  —\n" +
@@ -229,6 +235,7 @@ async function build() {
     s.addImage({ data: imgs.fig1, x: 3.075, y: 2.75, w: 3.85, h: 2.6, altText: ALT["1.1.1_fig_1"] });
 
     s.addNotes(
+      "NavTitle: Schaarste herkennen\n" +
       "Vraag:    Wat heb jij deze week wel gewild en niet gekregen? Waardoor?\n" +
       "Uitleg:   Schaarste is de verhouding tussen wensen en middelen — niet een kwestie van zeldzaam zijn. " +
       "Schaarste geldt voor iedereen:\n" +
@@ -263,6 +270,7 @@ async function build() {
     s.addImage({ data: imgs.fig2, x: 3.075, y: 2.75, w: 3.85, h: 2.6, altText: ALT["1.1.1_fig_2"] });
 
     s.addNotes(
+      "NavTitle: Alternatieve kosten\n" +
       "Vraag:    Lisa kiest de bioscoop. Wat kost haar dat — in euro's, en daarnaast?\n" +
       "Uitleg:   Terug naar Lisa:\n" +
       "          • Gekozen — bioscoop (€12), het plezier van de film.\n" +
@@ -283,6 +291,7 @@ async function build() {
       title: "Economisch denken in vier stappen",
     });
     s.addNotes(
+      "NavTitle: Vier stappen\n" +
       "Vraag:    Als je voor een lastige keuze staat, waarmee begin je?\n" +
       "Uitleg:   Vier stappen, altijd dezelfde volgorde: (1) benoem alternatieven, (2) bereken opbrengst per alternatief, " +
       "(3) rangschik — beste niet-gekozen = alternatieve kosten, (4) bereken nettowaarde = opbrengst − alternatieve kosten. " +
@@ -332,7 +341,7 @@ async function build() {
     // Bottom insight bar
     s.addShape("rect", { x: 5.65, y: 5.0, w: 3.85, h: 0.45, fill: { color: PC.indigoDeep } });
     // L1.5D v2 B8: insight 13→16pt; amber-on-indigoDeep ≈10:1 OK.
-    s.addText("Verstandig = opbrengst > alternatieve kosten.", {
+    s.addText("Volgens deze maat: opbrengst > alternatieve kosten.", {
       x: 5.75, y: 5.02, w: 3.65, h: 0.4,
       fontFace: FONT_SERIF, fontSize: 16, italic: true, color: PC.amber, valign: "middle",
     });
@@ -345,7 +354,7 @@ async function build() {
   {
     const s = editorialSlide(pres, {
       kicker: "Uitgewerkt voorbeeld · Stap 2",
-      title: "Wat levert elk gewas op?",
+      title: "Wat is de totale winst?",
     });
 
     // Tabel (2 rijen: tarwe, maïs) — linker helft
@@ -353,7 +362,7 @@ async function build() {
     s.addShape("rect", { x: 0.5, y: 2.2, w: 5, h: 0.4, fill: { color: PC.indigoMid } });
     // L1.5D v2 B8: table headers 10→14pt; chalk-on-indigoMid ≈16:1 OK.
     s.addText("GEWAS",         { x: 0.6,  y: 2.22, w: 1.3, h: 0.36, fontFace: FONT_SANS, fontSize: 14, bold: true, color: PC.chalk, charSpacing: 2, valign: "middle" });
-    s.addText("€ / HECTARE",   { x: 1.95, y: 2.22, w: 1.6, h: 0.36, fontFace: FONT_SANS, fontSize: 14, bold: true, color: PC.chalk, charSpacing: 2, valign: "middle" });
+    s.addText("WINST / HA",    { x: 1.95, y: 2.22, w: 1.6, h: 0.36, fontFace: FONT_SANS, fontSize: 14, bold: true, color: PC.chalk, charSpacing: 2, valign: "middle" });
     s.addText("TOTAAL (10 ha)",{ x: 3.6,  y: 2.22, w: 1.85,h: 0.36, fontFace: FONT_SANS, fontSize: 14, bold: true, color: PC.chalk, charSpacing: 2, valign: "middle" });
     // L1.5D v2 B8: row total uses `col` as text fg on chalk.
     // teal-on-chalk = 2.74:1, amberDeep-on-chalk = 2.84:1 — both fail
@@ -378,9 +387,10 @@ async function build() {
     s.addImage({ data: imgs.we1, x: 5.65, y: 2.2, w: 3.85, h: 2.6, altText: ALT["1.1.1_we_1"] });
 
     s.addNotes(
+      "NavTitle: Winst boer berekenen\n" +
       "Vraag:    Een boer heeft 10 hectare. Tarwe levert €500/ha op, maïs €350/ha. Wat verdient hij per gewas?\n" +
       "Uitleg:   Snel voorrekenen: 10 × €500 = €5.000 voor tarwe; 10 × €350 = €3.500 voor maïs. " +
-      "We hebben nu de opbrengst van élke optie — dat was stap 2.\n" +
+      "We hebben nu de totale winst van élke optie — dat was stap 2.\n" +
       "Pitfall:  Niet meteen zeggen welke hij moet kiezen. We berekenen hier alleen.\n" +
       "Overgang: De getallen staan. Wat geeft hij op als hij tarwe kiest?"
     );
@@ -409,7 +419,7 @@ async function build() {
       fontFace: FONT_DISPLAY, fontSize: 72, bold: true, color: PC.amber, charSpacing: -2,
     });
     // L1.5D v2 B8: italic deck 16→18pt. cloud-on-indigo ~11:1 OK.
-    s.addText("de maïsopbrengst die hij laat liggen", {
+    s.addText("de totale winst met maïs die hij laat liggen", {
       x: 0.8, y: 4.15, w: 4.5, h: 0.45,
       fontFace: FONT_SERIF, fontSize: 18, italic: true, color: PC.cloud, valign: "middle",
     });
@@ -418,10 +428,11 @@ async function build() {
     s.addImage({ data: imgs.we1, x: 5.65, y: 2.2, w: 3.85, h: 2.6, altText: ALT["1.1.1_we_1"] });
 
     s.addNotes(
+      "NavTitle: Alternatieve kosten boer\n" +
       "Vraag:    Hij kiest tarwe. Wat láát hij dan liggen?\n" +
-      "Uitleg:   De maïsopbrengst van €3.500 — dát zijn zijn alternatieve kosten. " +
+      "Uitleg:   De totale winst met maïs van €3.500 — dát zijn zijn alternatieve kosten. " +
       "Niet de som van opties, niet de prijs die hij betaalt: het beste alternatief dat hij niet neemt.\n" +
-      "          Netto: €5.000 − €3.500 = €1.500 voordeel. Kiezen loont dus — zolang de opbrengst de alternatieve kosten overtreft.\n" +
+      "          Nettowaarde: €5.000 − €3.500 = €1.500 voordeel volgens deze opbrengstmaat.\n" +
       "Pitfall:  Alternatieve kosten optellen over alle niet-gekozen opties is fout. Het is altijd het BESTE alternatief.\n" +
       "Overgang: Even samenvatten: vijf dingen om vast te houden."
     );
@@ -444,7 +455,7 @@ async function build() {
     const items = [
       { n: "01", t: "Schaarste ontstaat wanneer behoeften groter zijn dan middelen — daardoor moet je kiezen." },
       { n: "02", t: "Elke keuze heeft alternatieve kosten: de opbrengst van het beste alternatief dat je opgeeft." },
-      { n: "03", t: "Economisch denken = vier stappen: (1) alternatieven, (2) opbrengsten, (3) rangschik (= alternatieve kosten), (4) nettowaarde." },
+      { n: "03", t: "Economisch denken in vier stappen: alternatieven, opbrengsten, rangschik, nettowaarde." },
       { n: "04", t: "Alternatieve kosten ≠ de prijs die je betaalt — het gaat om wat je misloopt." },
       { n: "05", t: "Schaarste geldt voor iedereen: scholier, boer, overheid." },
     ];
@@ -463,6 +474,7 @@ async function build() {
       }
     });
     s.addNotes(
+      "NavTitle: Vijf kernpunten\n" +
       "Vraag:    Welke van de vijf punten kun je uit je hoofd aan je buurman uitleggen?\n" +
       "Uitleg:   Retrieval-moment. Twee minuten: leerlingen leggen de vijf punten hardop aan elkaar uit, zonder op de dia te kijken.\n" +
       "Pitfall:  —\n" +
@@ -503,6 +515,7 @@ async function build() {
       fontFace: FONT_DISPLAY, fontSize: 22, bold: true, color: PC.chalk, valign: "middle",
     });
     s.addNotes(
+      "NavTitle: Brug naar §1.1.2\n" +
       "Vraag:    Hoe vergelijk je eigenlijk het plezier van een film met dat van een boek — of tarwe met maïs?\n" +
       "Uitleg:   Bridge-dia. Laat de vraag open. Nog geen inhoud uit §1.1.2 geven — alleen het vervolg aankondigen, zodat leerlingen geactiveerd blijven.\n" +
       "Pitfall:  —\n" +

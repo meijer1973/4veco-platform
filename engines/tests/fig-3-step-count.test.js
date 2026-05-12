@@ -23,10 +23,12 @@ const ASSETS_DIR = path.resolve(
     '_assets'
 );
 
-const SURFACES = ['doc', 'slide', 'summary', 'web_light', 'web_dark'];
+const SURFACES = ['base', 'doc', 'slide', 'summary', 'web_light', 'web_dark'];
 
 for (const surface of SURFACES) {
-    const svgPath = path.join(ASSETS_DIR, `1.1.1_fig_3_${surface}.svg`);
+    const svgPath = surface === 'base'
+        ? path.join(ASSETS_DIR, '1.1.1_fig_3.svg')
+        : path.join(ASSETS_DIR, `1.1.1_fig_3_${surface}.svg`);
     const exists = fs.existsSync(svgPath);
     const describeOrSkip = exists ? describe : describe.skip;
 

@@ -199,7 +199,7 @@ function buildBasis(includeAnswers) {
 
   children.push(...titleBlock("1.1.1 Schaarste en economisch denken", includeAnswers ? "Basisopgaven — Antwoorden" : "Basisopgaven"));
   children.push(sp(200));
-  children.push(instructionBox("Deze opgavenset oefent de kernbegrippen: schaarste herkennen, canonical termen, en eenvoudige berekeningen van alternatieve kosten bij twee alternatieven. Gebruik de samenvatting als naslag."));
+  children.push(instructionBox("Deze opgavenset oefent de kernbegrippen: schaarste herkennen, vaste begrippen gebruiken, en eenvoudige berekeningen van alternatieve kosten bij twee alternatieven. Gebruik de samenvatting als naslag."));
   children.push(sp(400));
   children.push(new Paragraph({ children: [new PageBreak()] }));
 
@@ -276,7 +276,7 @@ function buildBasis(includeAnswers) {
   if (includeAnswers) {
     children.push(answerBox([
       "Juiste antwoord: C — beste.",
-      "Canonical definitie: alternatieve kosten = de opbrengst van het BESTE niet-gekozen alternatief. Niet de som, niet het gemiddelde, niet het goedkoopste.",
+      "Vaste definitie: alternatieve kosten = de opbrengst van het BESTE niet-gekozen alternatief. Niet de som, niet het gemiddelde, niet het goedkoopste.",
     ]));
   } else {
     children.push(...answerSpace(2));
@@ -285,7 +285,7 @@ function buildBasis(includeAnswers) {
 
   // ── MC 5: canonical term matching ──
   children.push(h2d("Opgave 5 — Begrippen", C.dTeal));
-  children.push(p("Welke uitspraak past bij de canonical definitie van schaarste?"));
+  children.push(p("Welke uitspraak past bij de vaste definitie van schaarste?"));
   children.push(...mcOptions([
     "Schaarste betekent dat iets zeldzaam is.",
     "Schaarste betekent dat er een tekort is omdat iets duur is.",
@@ -361,7 +361,7 @@ function buildMidden(includeAnswers) {
 
   children.push(...titleBlock("1.1.1 Schaarste en economisch denken", includeAnswers ? "Middenopgaven — Antwoorden" : "Middenopgaven"));
   children.push(sp(200));
-  children.push(instructionBox("Deze opgaven vragen om volledige berekeningen met drie of meer alternatieven, winst bij inzet van een schaars middel en zelfstandig toepassen van de 4-stappen-procedure (B02) in nieuwe contexten."));
+  children.push(instructionBox("Deze opgaven vragen om volledige berekeningen met drie of meer alternatieven, winst bij inzet van een schaars middel en zelfstandig toepassen van de 4-stappenprocedure voor economisch denken in nieuwe contexten."));
   children.push(sp(400));
   children.push(new Paragraph({ children: [new PageBreak()] }));
 
@@ -470,7 +470,7 @@ function buildMidden(includeAnswers) {
   children.push(p("• Werken in een supermarkt: €800 verdienen."));
   children.push(p("• Op vakantie gaan: waarde €300 aan plezier."));
   children.push(sp(40));
-  children.push(question("", "Pas de 4-stappen-procedure (B02) toe. Adviseer Tom wat economisch de beste keuze is en bereken de alternatieve kosten van die keuze."));
+  children.push(question("", "Pas de 4-stappenprocedure voor economisch denken toe. Adviseer Tom wat economisch de beste keuze is en bereken de alternatieve kosten van die keuze."));
   if (includeAnswers) {
     children.push(answerBox([
       "Stap 1 — Alternatieven: stage (€400), supermarkt (€800), vakantie (€300).",
@@ -492,7 +492,7 @@ function buildMidden(includeAnswers) {
   children.push(p("• Renovatie bibliotheek: geschatte maatschappelijke baten €620.000."));
   children.push(p("• Zonnepanelen op gemeentelijk dak: geschatte baten €840.000."));
   children.push(sp(40));
-  children.push(question("", "Pas de 4-stappen-procedure (B02) toe. Welk project moet de gemeente kiezen en wat zijn de alternatieve kosten van die keuze?"));
+  children.push(question("", "Pas de 4-stappenprocedure voor economisch denken toe. Welk project moet de gemeente kiezen en wat zijn de alternatieve kosten van die keuze?"));
   if (includeAnswers) {
     children.push(answerBox([
       "Stap 1 — Alternatieven: speeltuin (€750.000), bibliotheek (€620.000), zonnepanelen (€840.000).",
@@ -520,7 +520,7 @@ function buildVerrijking(includeAnswers) {
 
   children.push(...titleBlock("1.1.1 Schaarste en economisch denken", includeAnswers ? "Verrijkingsopgaven — Antwoorden" : "Verrijkingsopgaven"));
   children.push(sp(200));
-  children.push(instructionBox("Deze opgaven vragen om analyse en evaluatie. Je beoordeelt claims, combineert begrippen en beredeneert een oordeel. Baseer je antwoorden op de canonical definities uit de samenvatting."));
+  children.push(instructionBox("Deze opgaven vragen om analyse en evaluatie. Je beoordeelt claims, combineert begrippen en beredeneert een oordeel. Baseer je antwoorden op de vaste definities uit de samenvatting."));
   children.push(sp(400));
   children.push(new Paragraph({ children: [new PageBreak()] }));
 
@@ -577,12 +577,12 @@ function buildVerrijking(includeAnswers) {
   children.push(h2d("Opgave 3 — Schaarste-claim beoordelen", C.dTeal));
   children.push(p("Stelling: \"Er is schaarste aan drinkwater, want bij ons huis stroomt er alleen drinkwater uit de kraan als je hem opendraait.\""));
   children.push(sp(40));
-  children.push(question("", "Beoordeel deze stelling. Gebruik de canonical definitie van schaarste en leg uit welk denkfout er gemaakt wordt."));
+  children.push(question("", "Beoordeel deze stelling. Gebruik de vaste definitie van schaarste en leg uit welk denkfout er gemaakt wordt."));
   if (includeAnswers) {
     children.push(answerBox([
       "De stelling is onjuist — er wordt een denkfout gemaakt.",
       "",
-      "Canonical definitie: schaarste = behoeften groter dan beschikbare middelen.",
+      "Vaste definitie: schaarste = behoeften groter dan beschikbare middelen.",
       "",
       "Denkfout: \"moeten werken om iets te krijgen\" ≠ schaarste. Dat je de kraan moet opendraaien betekent niet dat er schaarste is. In Nederland is de waterlevering zo ruim dat alle huishoudens onbeperkt water kunnen tappen binnen normaal gebruik — de beschikbare middelen zijn (veel) groter dan de behoeften.",
       "",
@@ -602,8 +602,8 @@ function buildVerrijking(includeAnswers) {
   children.push(p("• Optie B — Isolatie van sociale huurwoningen: geschatte baten €310 miljoen (lagere energierekening + CO₂-reductie)."));
   children.push(p("• Optie C — Aanleg windmolenpark op zee: geschatte baten €280 miljoen."));
   children.push(sp(40));
-  children.push(question("a", "Welke optie kiest de overheid volgens de 4-stappen-procedure (B02)? Bereken ook de alternatieve kosten van die keuze."));
-  children.push(question("b", "Verwijs expliciet naar de 4-stappen-procedure voor alternatieve kosten (B02 uit het unit-register): (1) benoem alternatieven, (2) bereken opbrengst per alternatief, (3) rangschik — hoogste niet-gekozen = alternatieve kosten, (4) vergelijk gekozen alternatief met alternatieve kosten voor nettowaarde. Bereken de nettowaarde voor de aanbevolen keuze."));
+  children.push(question("a", "Welke optie kiest de overheid volgens de 4-stappenprocedure voor economisch denken? Bereken ook de alternatieve kosten van die keuze."));
+  children.push(question("b", "Verwijs expliciet naar de 4-stappenprocedure voor economisch denken: (1) benoem alternatieven, (2) bereken opbrengst per alternatief, (3) rangschik — hoogste niet-gekozen = alternatieve kosten, (4) vergelijk gekozen alternatief met alternatieve kosten voor nettowaarde. Bereken de nettowaarde voor de aanbevolen keuze."));
   children.push(question("c", "Bedenk één niet-economisch argument dat de overheid zou kunnen doen besluiten om tóch niet voor de economisch beste optie te kiezen. Wat is het risico van dat argument?"));
   if (includeAnswers) {
     children.push(answerBox([
@@ -613,7 +613,7 @@ function buildVerrijking(includeAnswers) {
       "   Beste niet-gekozen alternatief: C (€280 mln).",
       "   Alternatieve kosten = €280 miljoen.",
       "",
-      "b) Volgens de canonical B02-procedure (uit het unit-register):",
+      "b) Volgens de 4-stappenprocedure voor economisch denken:",
       "   Stap 1 — Alternatieven voor het schaarse middel (€200 mln budget): A, B, C.",
       "   Stap 2 — Opbrengst per alternatief: A=€240 mln, B=€310 mln, C=€280 mln.",
       "   Stap 3 — Rangschikking + alternatieve kosten: keuze B. Beste niet-gekozen = C. Alternatieve kosten = €280 mln.",

@@ -80,6 +80,7 @@ function checkReachability() {
         const name = path.basename(f);
         // Skip index.html files and navigation pages
         if (name === 'index.html') return false;
+        if (/\bprototype\.html$/i.test(name) || /-prototype\.html$/i.test(name)) return false;
         if (/\blayout test v\d+\.html$/i.test(name)) return false;
         if (nonInteractiveSuffixes.some(suffix => name.endsWith(suffix))) return false;
         // Only check files inside numbered paragraph folders (e.g. "3.1.1 ...")
