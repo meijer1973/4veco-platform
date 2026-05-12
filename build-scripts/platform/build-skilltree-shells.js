@@ -8,7 +8,8 @@
  * A paragraph participates iff it carries a `skilltree` object in the
  * manifest (deploy-config.json):
  *   { "id": "1.1.1", ..., "skilltree": { "skills": ["A01","A02","A03"] } }
- * Use `"skills": null` to mean "all skills visible".
+ * Use `"skills": null` only when all skills should be visible in paragraph mode.
+ * Optional `"chapterSkills"` drives the broader Hoofdstuk toggle.
  *
  * Shells are written to the paragraph root (flat layout); the data file
  * lives in <MODULE_ROOT>/shared/skilltree/<parNr>.js.
@@ -49,8 +50,11 @@ function computeNewSkills(participants) {
 
 function generateDataFile(par) {
     const activeSkills = par._activeSkills ? JSON.stringify(par._activeSkills) : 'null';
+    const chapterSkills = par.skilltree && par.skilltree.chapterSkills
+        ? JSON.stringify(par.skilltree.chapterSkills)
+        : activeSkills;
     const newSkills = JSON.stringify(par._newSkills || []);
-    return `/**\n * Skill Tree data for ${par.id} ${par.name}\n * activeSkills: null = all skills visible\n */\nwindow.SKILL_TREE_DATA = {\n    parNr: "${par.id}",\n    parName: "${par.name}",\n    activeSkills: ${activeSkills},\n    newSkills: ${newSkills}\n};\n`;
+    return `/**\n * Skill Tree data for ${par.id} ${par.name}\n * activeSkills: null = all skills visible\n */\nwindow.SKILL_TREE_DATA = {\n    parNr: "${par.id}",\n    parName: "${par.name}",\n    activeSkills: ${activeSkills},\n    chapterSkills: ${chapterSkills},\n    newSkills: ${newSkills}\n};\n`;
 }
 
 // ── HTML shell ──────────────────────────────────────────────────────

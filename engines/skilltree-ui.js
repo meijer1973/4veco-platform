@@ -88,6 +88,10 @@
         for (var i = 0; i < all.length; i++) if (all[i].id === id) return all[i];
         return null;
     }
+    function skillDisplayName(id) {
+        var skill = findSkill(id);
+        return skill ? skill.name : id;
+    }
     function clearAutoAdvance() {
         if (!uiState.exercise.autoAdvanceId) return;
         clearTimeout(uiState.exercise.autoAdvanceId);
@@ -150,9 +154,19 @@
         if (els.statTotal) els.statTotal.textContent = String(p.total);
         if (els.statStars) els.statStars.textContent = String(p.totalStars);
         if (els.statMaxStars) els.statMaxStars.textContent = String(p.maxStars);
-        if (els.viewToggle) els.viewToggle.innerHTML = engine.getViewMode() === 'module' ? '\u29E6 Module' : '\u00A7 Paragraaf';
+        if (els.viewToggle) els.viewToggle.innerHTML = viewModeLabel(engine.getViewMode());
         renderGoalBanner();
         renderLayers();
+    }
+    function viewModeLabel(mode) {
+        if (mode === 'chapter') return 'Hoofdstuk';
+        if (mode === 'module') return 'Alles';
+        return '\u00A7 Paragraaf';
+    }
+    function nextViewMode(mode) {
+        if (mode === 'paragraph') return 'chapter';
+        if (mode === 'chapter') return 'module';
+        return 'paragraph';
     }
     function renderGoalBanner() {
         var g = engine.getGoals(), h = '';
@@ -169,7 +183,7 @@
         }
         if (!noAchieved) for (var j = 0; j < g.achieved.length; j++) {
             var ag = g.achieved[j], sk = findSkill(ag.id);
-            h += '<div class="st-goal-card-achieved"><span class="st-goal-achieved-text">\u2713 Doel behaald:</span> <strong>' + esc(ag.id) + '</strong> &middot; ' + esc(sk ? sk.name : ag.id) + '</div>';
+            h += '<div class="st-goal-card-achieved"><span class="st-goal-achieved-text">\u2713 Doel behaald:</span> <strong>' + esc(sk ? sk.name : ag.id) + '</strong></div>';
         }
         h += '</div>';
         els.goalBannerSlot.innerHTML = h;
@@ -180,13 +194,14 @@
             var s = p[i], cls = 'st-goal-step';
             if (s.done) cls += ' st-goal-step-done';
             else if (s.actionable) cls += ' st-goal-step-actionable';
+            var stepName = skillDisplayName(s.id);
             var data = (s.actionable && !s.done) ? ' data-goal-step="' + esc(s.id) + '"' : '';
-            steps += '<span class="' + cls + '"' + data + '><span class="st-goal-step-id">' + esc(s.id) + '</span>'
+            steps += '<span class="' + cls + '"' + data + ' title="' + esc(stepName) + '"><span class="st-goal-step-id">' + (i + 1) + '</span>'
                    + (s.done ? '<span class="st-goal-step-check">\u2713</span>' : '') + '</span>';
             if (i < p.length - 1) steps += '<span class="st-goal-step-arrow">\u203A</span>';
         }
         return '<div class="st-goal-card">'
-             + '<div class="st-goal-name"><span class="st-goal-name-id">' + esc(goalId) + '</span>' + esc(path.goalName || goalId) + '</div>'
+             + '<div class="st-goal-name">' + esc(path.goalName || skillDisplayName(goalId)) + '</div>'
              + '<div class="st-goal-path">' + steps + '</div>'
              + '<button class="st-goal-remove" type="button" data-goal-remove="' + esc(goalId) + '" title="Doel verwijderen"><i class="fa-solid fa-xmark"></i></button>'
              + '</div>';
@@ -233,14 +248,14 @@
         // separately by checking the .st-locked class in the delegation.
         var ariaDis = (locked || !hasGen) ? ' aria-disabled="true"' : '';
         var h = '<button class="' + cls + '" data-layer="' + skill.layer + '" data-skill="' + esc(skill.id) + '" type="button"' + ariaDis + '>';
-        h += '<div class="st-skill-id"><span>' + esc(skill.id) + '</span><span class="st-skill-icons">'
+        h += '<div class="st-skill-id"><span>Vaardigheid</span><span class="st-skill-icons">'
            + '<span class="st-info-btn" data-info="' + esc(skill.id) + '" title="Info"><i class="fa-solid fa-circle-info"></i></span>'
            + '<span class="st-dep-btn" data-dep="' + esc(skill.id) + '" title="Afhankelijkheden"><i class="fa-solid fa-sitemap"></i></span>'
            + '</span></div>';
         h += '<div>' + esc(skill.name) + (isGoal ? ' <span class="st-goal-icon" title="Jouw doel"></span>' : '') + '</div>';
         if (locked) {
             var ms = engine.getMissingPrereqs(skill.id);
-            if (ms && ms.length) h += '<div class="st-prereq-hint">Eerst: ' + esc(ms.join(', ')) + '</div>';
+            if (ms && ms.length) h += '<div class="st-prereq-hint">Eerst: ' + esc(ms.map(skillDisplayName).join(', ')) + '</div>';
         } else if (sc === 0 && hasGen) {
             h += '<div class="st-tap-hint">tik om te oefenen</div>';
         }
@@ -255,7 +270,7 @@
         clearAutoAdvance();
         var sk = findSkill(skillId);
         if (els.exercise) els.exercise.setAttribute('data-layer', sk ? String(sk.layer) : '0');
-        if (els.exSkillId) els.exSkillId.textContent = skillId;
+        if (els.exSkillId) els.exSkillId.textContent = 'Oefening';
         if (els.exSkillName) els.exSkillName.textContent = state.skillName;
         if (els.exContext) els.exContext.innerHTML = fmt(state.context || '');
         if (els.exStepSlot) els.exStepSlot.hidden = false;
@@ -532,7 +547,7 @@
               + '<div class="st-goal-bar"><div class="st-goal-bar-fill" style="width:' + pct + '%"></div></div>'
               + '<div class="st-goal-info"><span>' + done + ' / ' + total + ' beheerst</span><span>' + pct + '%</span></div>';
         if (path.nextActionable && path.nextActionable.length > 0 && !path.complete) {
-            h += '<div class="st-result-goal-next">Volgende stap: <strong>' + esc(path.nextActionable[0]) + '</strong></div>';
+            h += '<div class="st-result-goal-next">Volgende stap: <strong>' + esc(skillDisplayName(path.nextActionable[0])) + '</strong></div>';
         }
         return h + '</div>';
     }
@@ -561,7 +576,7 @@
         var desc = engine.getSkillDescription(skillId) || '';
         var prev = engine.generatePreview(skillId);
         var sc = engine.getStars()[skillId] || 0;
-        els.infoHeader.innerHTML = '<span class="st-info-skill-id">' + esc(skillId) + '</span>'
+        els.infoHeader.innerHTML = '<span class="st-info-skill-id">Vaardigheid</span>'
             + '<span>' + esc(skill.name) + '</span>'
             + '<button class="st-info-close" type="button" data-info-close="1" aria-label="Sluiten">\u00D7</button>';
         els.infoDesc.innerHTML = fmt(desc);
@@ -735,7 +750,7 @@
     function wireListeners() {
         if (els.themeToggle) els.themeToggle.addEventListener('click', toggleTheme);
         if (els.viewToggle) els.viewToggle.addEventListener('click', function () {
-            engine.setViewMode(engine.getViewMode() === 'module' ? 'paragraph' : 'module');
+            engine.setViewMode(nextViewMode(engine.getViewMode()));
             renderTree();
         });
         if (els.resetBtn) els.resetBtn.addEventListener('click', function () {

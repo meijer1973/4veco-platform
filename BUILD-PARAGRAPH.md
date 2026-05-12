@@ -203,6 +203,7 @@ The static helper file `Lees dit als je niet weet hoe je moet beginnen met deze 
 Important:
 
 - `scripts/deploy.js` is **not** a read-only probe. It writes engine files and generated shells into the target book.
+- For normal `student-web` builds, deploy skips DOCX-to-HTML converters. Set `RUN_DOCX_CONVERTERS=1` only for Office/legacy builds that intentionally use Word sources.
 - Do not use deploy as a harmless existence check.
 
 ## B1. Definition of Done
@@ -228,6 +229,14 @@ Student-web required files:
 13. `X.Y.Z [Naam] – begeleide inoefening.html`
 14. `index.html`
 
+Student-web is not a minimal shell contract. For a new scaling paragraph, the
+rich HTML companions (`uitleg voorkennis`, `uitleg vaardigheden`,
+`samenvatting`, `nieuws met visual`, `youtube-videos`, and
+`begeleide inoefening`) must be reviewable as the intended end product:
+shared `voorkennis.css` layout, left navigation, hero cards, clear route
+affordances, light/dark theme support, and no student-facing internal unit
+codes. Use native HTML directly only when it preserves this shared structure.
+
 The table below is the **legacy-full / office export matrix**. Use it only when
 the requested product explicitly includes Word handouts or when validating the
 old 27-file contract.
@@ -236,30 +245,30 @@ old 27-file contract.
 |---|------|---------|----------|---------|--------------|-------------|
 | 1 | `X.Y.Z [Naam] – instapquiz.html` | Voorbereiden | Yes | `generate-quiz-shells.js` (auto) | `shared/questions/X.Y.Z.js` | Generated |
 | 2 | `X.Y.Z [Naam] – nieuws-detective.html` | Voorbereiden | Yes | `build-newsdetective-shells.js` (auto) | `shared/newsdetective/X.Y.Z.js` | Generated |
-| 3 | `X.Y.Z [Naam] – uitleg voorkennis.docx` | Voorbereiden | Yes | Adapt `template-B_voorkennis.js` | Book content + domain knowledge | Scripted-manual |
-| 4 | `X.Y.Z [Naam] – uitleg voorkennis.html` | Voorbereiden | Yes | `convert_voorkennis.py` | File #3 (.docx) | Converted |
-| 5 | `Lees dit als je niet weet hoe je moet beginnen met deze les.docx` | Voorbereiden | Yes | Copy | Static file (identical in every paragraph) | Static |
+| 3 | `X.Y.Z [Naam] – uitleg voorkennis.docx` | Voorbereiden | Office/legacy only | Adapt `template-B_voorkennis.js` only if Word is requested | Book content + domain knowledge | Optional Office export |
+| 4 | `X.Y.Z [Naam] – uitleg voorkennis.html` | Voorbereiden | Yes | Native HTML generator preferred; converter allowed for Office/legacy | Book content + domain knowledge | Generated/converted |
+| 5 | `Lees dit als je niet weet hoe je moet beginnen met deze les.docx` | Voorbereiden | Office/legacy only | Copy only for Office package | Static file (identical in every paragraph) | Optional Office export |
 | 6 | `X.Y.Z [Naam] – presentatie.pptx` | Leren | Yes | Adapt `pptx-331-rol-overheid.js` (uses `lib-pptx.js`) | Book content + SVG graphs | Scripted-manual |
 | 7 | `X.Y.Z [Naam] – presentatie.html` | Leren | Yes | `convert_presentatie.py` | File #6 (.pptx) | Converted |
-| 8 | `X.Y.Z [Naam] – uitleg vaardigheden.docx` | Leren | Yes | Adapt `template-A_vaardigheden.js` | Book content + domain knowledge | Scripted-manual |
-| 9 | `X.Y.Z [Naam] – uitleg vaardigheden.html` | Leren | Yes | `convert_vaardigheden.py` | File #8 (.docx) | Converted |
-| 10 | `X.Y.Z [Naam] – nieuws met visual.docx` | Leren | Yes | Adapt `nieuws-351-352-afsluiting.js` | Recent Dutch news + SVG visual | Scripted-manual |
-| 11 | `X.Y.Z [Naam] – nieuws met visual.html` | Leren | Yes | `convert_nieuws.py` | File #10 (.docx) | Converted |
-| 12 | `X.Y.Z [Naam] – samenvatting.docx` | Leren | Yes | Adapt `samenvatting-351-352-rebuild.js` | Key concepts from paragraph | Scripted-manual |
-| 13 | `X.Y.Z [Naam] – samenvatting.html` | Leren | Yes | `convert_samenvatting.py` | File #12 (.docx) | Converted |
+| 8 | `X.Y.Z [Naam] – uitleg vaardigheden.docx` | Leren | Office/legacy only | Adapt `template-A_vaardigheden.js` only if Word is requested | Book content + domain knowledge | Optional Office export |
+| 9 | `X.Y.Z [Naam] – uitleg vaardigheden.html` | Leren | Yes | Native HTML generator preferred; converter allowed for Office/legacy | Book content + domain knowledge | Generated/converted |
+| 10 | `X.Y.Z [Naam] – nieuws met visual.docx` | Leren | Office/legacy only | Adapt `nieuws-351-352-afsluiting.js` only if Word is requested | Recent Dutch news + SVG visual | Optional Office export |
+| 11 | `X.Y.Z [Naam] – nieuws met visual.html` | Leren | Yes | Native HTML generator preferred; converter allowed for Office/legacy | Recent Dutch news + SVG visual | Generated/converted |
+| 12 | `X.Y.Z [Naam] – samenvatting.docx` | Leren | Office/legacy only | Adapt `samenvatting-351-352-rebuild.js` only if Word is requested | Key concepts from paragraph | Optional Office export |
+| 13 | `X.Y.Z [Naam] – samenvatting.html` | Leren | Yes | Native HTML generator preferred; converter allowed for Office/legacy | Key concepts from paragraph | Generated/converted |
 | 14 | `X.Y.Z [Naam] – youtube-videos.html` | Leren | Yes | Small per-paragraph generator (e.g. `b1-111-youtube-videos.js`) using shared voorkennis.css | 3 real YouTube video IDs | Scripted-manual |
 | 15 | `X.Y.Z [Naam] – stappenplan.html` | Leren | Yes | `build-procedure-shells.js` (auto) | `shared/procedure/X.Y.Z.js` | Generated |
 | 16 | `X.Y.Z [Naam] – redeneer-spel.html` | Oefenen | Yes | `build-reasoning-engine.js` (auto) | `shared/reasoning/X.Y.Z.js` | Generated |
 | 17 | `X.Y.Z [Naam] – wiskundevaardigheden.html` | Oefenen | Yes | `build-skilltree-shells.js` (auto) | `skilltree` field in book manifest | Generated |
-| 18 | `X.Y.Z [Naam] – begeleide inoefening – vragen.docx` | Oefenen/begeleide inoefening | Yes | Adapt `inoefening-351-afsluiting.js` | Exercises with scaffolding | Scripted-manual |
-| 19 | `X.Y.Z [Naam] – begeleide inoefening – antwoorden.docx` | Oefenen/begeleide inoefening | Yes | Same script as #18 | Same | Scripted-manual |
-| 20 | `X.Y.Z [Naam] – begeleide inoefening.html` | Oefenen/begeleide inoefening | Yes | `convert_begeleide_inoefening.py` | Files #18 + #19 | Converted |
-| 21 | `X.Y.Z [Naam] – basis – vragen.docx` | Oefenen/basisopgaven | Yes | Adapt `opgaven-351-afsluiting.js` | Exercises (8-10 questions) | Scripted-manual |
-| 22 | `X.Y.Z [Naam] – basis – antwoorden.docx` | Oefenen/basisopgaven | Yes | Same script as #21 | Same | Scripted-manual |
-| 23 | `X.Y.Z [Naam] – midden – vragen.docx` | Oefenen/middenopgaven | Yes | Same script as #21 | Exercises (6-8 questions) | Scripted-manual |
-| 24 | `X.Y.Z [Naam] – midden – antwoorden.docx` | Oefenen/middenopgaven | Yes | Same script as #21 | Same | Scripted-manual |
-| 25 | `X.Y.Z [Naam] – verrijking – vragen.docx` | Oefenen/verrijkingsopgaven | Yes | Same script as #21 | Exercises (4-6 questions) | Scripted-manual |
-| 26 | `X.Y.Z [Naam] – verrijking – antwoorden.docx` | Oefenen/verrijkingsopgaven | Yes | Same script as #21 | Same | Scripted-manual |
+| 18 | `X.Y.Z [Naam] – begeleide inoefening – vragen.docx` | Oefenen/begeleide inoefening | Office/legacy only | Adapt `inoefening-351-afsluiting.js` only if Word is requested | Exercises with scaffolding | Optional Office export |
+| 19 | `X.Y.Z [Naam] – begeleide inoefening – antwoorden.docx` | Oefenen/begeleide inoefening | Office/legacy only | Same script as #18 | Same | Optional Office export |
+| 20 | `X.Y.Z [Naam] – begeleide inoefening.html` | Oefenen/begeleide inoefening | Yes | Native HTML generator preferred; converter allowed for Office/legacy | Textbook opgaven + answer model | Generated/converted |
+| 21 | `X.Y.Z [Naam] – basis – vragen.docx` | Oefenen/basisopgaven | Deprecated/Office only | Do not build for student-web | Legacy three-track exercises | Optional legacy export |
+| 22 | `X.Y.Z [Naam] – basis – antwoorden.docx` | Oefenen/basisopgaven | Deprecated/Office only | Do not build for student-web | Legacy three-track exercises | Optional legacy export |
+| 23 | `X.Y.Z [Naam] – midden – vragen.docx` | Oefenen/middenopgaven | Deprecated/Office only | Do not build for student-web | Legacy three-track exercises | Optional legacy export |
+| 24 | `X.Y.Z [Naam] – midden – antwoorden.docx` | Oefenen/middenopgaven | Deprecated/Office only | Do not build for student-web | Legacy three-track exercises | Optional legacy export |
+| 25 | `X.Y.Z [Naam] – verrijking – vragen.docx` | Oefenen/verrijkingsopgaven | Deprecated/Office only | Do not build for student-web | Legacy three-track exercises | Optional legacy export |
+| 26 | `X.Y.Z [Naam] – verrijking – antwoorden.docx` | Oefenen/verrijkingsopgaven | Deprecated/Office only | Do not build for student-web | Legacy three-track exercises | Optional legacy export |
 | 27 | `index.html` | Root | Yes | `build-landing-page.js` (auto) | Scans folder contents | Generated |
 
 > **Flat-layout filename change:** in the retargeted Part B, opgavenset and begeleide-inoefening filenames keep the `X.Y.Z [Naam] –` prefix so they stay unique at the paragraph root (since there are no longer `basisopgaven/` or `begeleide inoefening/` subfolders to disambiguate them). Role labels in the Section column identify pedagogical role only, not folder paths.
@@ -288,7 +297,7 @@ These are the raw inputs needed to build one paragraph. They must exist BEFORE r
 | Reasoning questions | `source-data/book-N/reasoning/X.Y.Z.csv` | Semicolon-delimited CSV, 15 rows, 5 modes | Agent writes CSV, then runs `build-reasoning-questions.js` to produce `shared/reasoning/X.Y.Z.js`. |
 | Newsdetective data | `shared/newsdetective/X.Y.Z.js` | JS: `var NEWS_DETECTIVE_DATA = { meta, article, rounds }` | Agent writes the JS file. Real Dutch news, 4 rounds. |
 | Procedure data | `shared/procedure/X.Y.Z.js` | JS: `var PROCEDURE_DATA = { meta, procedures }` | Agent writes the JS file. Steps aligned with uitleg vaardigheden. |
-| Skilltree config | `skilltree` field in the book manifest paragraph entry | JSON: `{ "skills": ["A01", ...] }` or `{ "skills": null }` (all) | Agent adds to manifest. Data file auto-generated in `shared/skilltree/`. |
+| Skilltree config | `skilltree` field in the book manifest paragraph entry | JSON: `{ "skills": ["A38", ...], "chapterSkills": ["A38", ...] }`; use `{ "skills": null }` only when paragraph mode should deliberately expose all skills | Agent adds to manifest. Data file auto-generated in `shared/skilltree/`. |
 
 ### B. Rich document content — per-asset production specs
 
@@ -351,12 +360,13 @@ Each scripted-manual asset follows the same pattern: **read source → write bui
 | | |
 |---|---|
 | **Raw input** | Textbook exercises for this paragraph + worked solutions from the answer key docx. Extract any textbook graphs for reuse. |
-| **Agent process** | Select 6-8 exercises. For each: write the question, add scaffolding (denkstappen, hints, formule-herinneringen), write the full solution. **Critical: add visual scaffolding (scaffoldImage) for exercises involving graphs, budget lines, or other visual concepts.** This document is used heavily by students who find the material difficult — graphical support is essential, not optional. |
+| **Agent process** | Start from the textbook opgaven and answer model. Cover every source opgave/subquestion unless the sprint plan explicitly scopes an item out. For each: write the question, add scaffolding (denkstappen, hints, formule-herinneringen), and write the full solution. **Critical: add visual scaffolding (scaffoldImage) for exercises involving graphs, budget lines, or other visual concepts.** This document is used heavily by students who find the material difficult — graphical support is essential, not optional. |
 | **Reference script** | `inoefening-351-afsluiting.js` — copy, replace exercise content. |
 | **Reusable** | `lib-begeleide-inoefening.js` library (import, don't copy) + script scaffold. Supports `scaffoldImage` (shown in both vragen and antwoorden) and `afterAnswerImage` (shown in antwoorden only). |
 | **Custom** | Exercise questions, scaffolding text, worked solutions, scaffold images from `_assets/`. |
 | **Skills** | `econ-word-templates` + `econ-didactiek` |
 | **Hard rule** | Every exercise that asks students to draw, describe, or interpret a graph MUST have a `scaffoldImage` from `_assets/`. This is dual coding applied to scaffolding — weaker students need visual anchors alongside text-based denkstappen. |
+| **HTML-first rule** | In the student-web profile, the HTML version may be authored natively instead of converted from DOCX, but it must still cover the actual textbook opgaven and answer model. Each source subquestion needs a visible prompt plus revealable denkstappen, hint, answer, and explanation unless the sprint plan documents an intentional scope exception. |
 
 #### Opgavensets — basis, midden, verrijking (6 .docx files)
 | | |
@@ -388,7 +398,7 @@ chapter structure, paragraph metadata, and per-paragraph game config.
 |------|-------------|------|
 | Book manifest `paragraphs[]` | `{ id, name, chapter, domain, skilltree, kind? }` | Every new Part B/complete lessen paragraph |
 | Book manifest `chapters[]` | `{ id, folder, name, number, domain }` | Only for a new chapter |
-| Paragraph `skilltree` field | `{ skills: ["A01", ...] }` or `{ skills: null }` (all) | Required for every Part B/complete paragraph because wiskundevaardigheden is one of the 27 required files |
+| Paragraph `skilltree` field | `{ skills: ["A38", ...], chapterSkills: ["A38", ...] }`; `{ skills: null }` only for a deliberate all-skills paragraph view | Required for every Part B/complete paragraph because wiskundevaardigheden is one of the student-web required files |
 | `engines/theme.js` | DOMAIN_COLORS entry | Only for a brand-new domain name (teal/blue/amber/green/purple already exist) |
 
 Existing Part A-only textbook paragraphs may omit `skilltree` until companion production starts. A paragraph is not a complete Part B paragraph until the `skilltree` field is present and the wiskundevaardigheden shell/data have been generated.
@@ -404,7 +414,7 @@ This is the production sequence for one paragraph. Follow in order.
 
 ### Phase 1: Register (2 min)
 1. Open the book's `deploy-config.json` manifest.
-2. Add an entry to `paragraphs[]`: `{ "id": "X.Y.Z", "name": "...", "chapter": "X.Y", "domain": "<teal|blue|amber|green|purple>", "skilltree": { "skills": [...] } }`. Use `"skilltree": { "skills": null }` when all math skills should be visible.
+2. Add an entry to `paragraphs[]`: `{ "id": "X.Y.Z", "name": "...", "chapter": "X.Y", "domain": "<teal|blue|amber|green|purple>", "skilltree": { "skills": [...], "chapterSkills": [...] } }`. Use `"skilltree": { "skills": null }` only when all math skills should be visible in paragraph mode. For normal paragraphs, `skills` is the paragraph-relevant subset; `chapterSkills` is the broader chapter subset; the runtime also offers an all-skills view.
 3. If this is the first paragraph in a new chapter, add an entry to `chapters[]` first.
 4. For a new domain (beyond teal/blue/amber/green/purple), add it to `engines/theme.js` — otherwise nothing else to touch.
 
@@ -520,6 +530,9 @@ node scripts/deploy.js "$BOOK"
 `$BOOK` points at a lessen book root (e.g. `../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod`); `shared/` lives directly under it. This runs ONLY the automated layer: engine copy, game shell generation (flat output into each paragraph root), landing pages, link check, data tests. It does NOT build rich documents.
 
 This command writes to the target book. It is a build/deploy step, not a read-only validation probe.
+In the default student-web profile, deploy skips DOCX-to-HTML converters. Use
+`RUN_DOCX_CONVERTERS=1 node scripts/deploy.js "$BOOK"` only for an Office or
+legacy-full run where `.docx` sources are deliberately part of the product.
 
 ### Phase 6a: Companion visual review gate
 
@@ -642,6 +655,8 @@ default paragraph-2 path.
 - Rebuild all landing pages (index.html at paragraph/chapter/book level)
 - Run link checker
 - Run data validation tests
+- Skip DOCX-to-HTML converters by default for student-web builds; converters
+  run only when `RUN_DOCX_CONVERTERS=1` or `BUILD_PROFILE=office|legacy-full`
 
 ### deploy.js does NOT handle (manual layer):
 - Presentatie (.pptx) — must run paragraph-specific pptx script

@@ -1159,7 +1159,7 @@
             context: 'Een boodschappenmand kost in het basisjaar ' + basePrice + '. In het doeljaar kost dezelfde mand ' + currentPrice + '.',
             steps: [
                 { q: 'Bereken de prijsindex van het doeljaar.', a: index, hint: 'Index = mandprijs doeljaar / mandprijs basisjaar x 100.', expl: 'Index = ' + currentPrice + ' / ' + basePrice + ' x 100 = ' + index + '.' },
-                { q: 'Als de vorige index ' + previousIndex + ' was, hoeveel procent inflatie is er dan?', a: inflation, hint: 'Gebruik A38 op de indexwaarden.', expl: 'Inflatie = (' + index + ' - ' + previousIndex + ') / ' + previousIndex + ' x 100 = ' + inflation + '%.' },
+                { q: 'Als de vorige index ' + previousIndex + ' was, hoeveel procent inflatie is er dan?', a: inflation, hint: 'Gebruik de aanpak voor procentuele verandering op de indexwaarden.', expl: 'Inflatie = (' + index + ' - ' + previousIndex + ') / ' + previousIndex + ' x 100 = ' + inflation + '%.' },
                 mcStep(
                     'Wat betekent een index van ' + index + '?',
                     index > 100 ? 'de mand is duurder dan in het basisjaar' : 'de mand is goedkoper dan in het basisjaar',

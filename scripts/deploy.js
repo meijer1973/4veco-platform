@@ -335,9 +335,16 @@ function runBuildScripts() {
     const env = { ...process.env, MODULE_ROOT };
     const opts = { cwd: PLATFORM_ROOT, env, stdio: 'inherit' };
 
-    // Run docx-to-web converters first so the resulting .html files are on
-    // disk when the landing-page builder scans paragraph dirs.
-    runDocxConverters();
+    // Student-web is HTML-first; DOCX conversions are an opt-in Office/legacy
+    // step so deploy stays light for new paragraph builds.
+    const runConverters = process.env.RUN_DOCX_CONVERTERS === '1'
+        || process.env.BUILD_PROFILE === 'office'
+        || process.env.BUILD_PROFILE === 'legacy-full';
+    if (runConverters) {
+        runDocxConverters();
+    } else {
+        console.log('  → Skipping docx-as-web converters (set RUN_DOCX_CONVERTERS=1 for Office/legacy builds).');
+    }
 
     const scripts = [
         { name: 'Skilltree shells + data', cmd: 'node build-scripts/platform/build-skilltree-shells.js' },

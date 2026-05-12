@@ -79,8 +79,7 @@
 
     // ── Visible skills ────────────────────────────────────────
 
-    SkillTreeEngine.prototype._computeVisibleSkills = function () {
-        var active = this._data.activeSkills;
+    SkillTreeEngine.prototype._filterSkills = function (active) {
         if (!active) return this._elements.SKILLS.slice(); // null = all
 
         var activeSet = {};
@@ -104,6 +103,16 @@
             }
         }
         return filtered;
+    };
+
+    SkillTreeEngine.prototype._computeVisibleSkills = function () {
+        return this._filterSkills(this._data.activeSkills);
+    };
+
+    SkillTreeEngine.prototype._computeChapterSkills = function () {
+        var chapter = this._data.chapterSkills;
+        if (chapter === undefined) chapter = this._data.activeSkills;
+        return this._filterSkills(chapter);
     };
 
     SkillTreeEngine.prototype.getVisibleSkills = function () {
@@ -208,11 +217,14 @@
     };
 
     SkillTreeEngine.prototype.setViewMode = function (mode) {
-        // 'paragraph' = filtered by activeSkills, 'module' = all skills
+        // 'paragraph' = activeSkills, 'chapter' = chapterSkills, 'module' = all skills
         if (mode === 'module') {
             this._visibleSkills = this._elements.SKILLS.slice();
+        } else if (mode === 'chapter') {
+            this._visibleSkills = this._computeChapterSkills();
         } else {
             this._visibleSkills = this._computeVisibleSkills();
+            mode = 'paragraph';
         }
         this._viewMode = mode;
     };

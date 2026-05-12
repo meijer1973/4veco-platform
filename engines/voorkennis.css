@@ -1162,7 +1162,10 @@ html[data-theme="dark"] .section-num.bg-grafisch   { box-shadow: inset 0 0 0 1px
   border-bottom: 1px solid var(--border) !important;
 }
 
-.section-title-group { flex: 1; }
+.section-title-group {
+  flex: 1;
+  min-width: 0;
+}
 .section-title {
   font-family: var(--heading-font);
   font-weight: var(--heading-weight);
@@ -1174,9 +1177,14 @@ html[data-theme="dark"] .section-num.bg-grafisch   { box-shadow: inset 0 0 0 1px
   order: 2;
   margin-top: 2px;
 }
-.section-title-group { display: flex; flex-direction: column; }
+.section-title-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
 .section-badge {
-  display: inline-block;
+  display: block;
   order: 1;
   font-family: var(--mono);
   font-size: 10px;
@@ -1186,7 +1194,11 @@ html[data-theme="dark"] .section-num.bg-grafisch   { box-shadow: inset 0 0 0 1px
   padding: 0;
   margin: 0 0 3px;
   background: transparent !important;
-  align-self: flex-start;
+  align-self: stretch;
+  max-width: 100%;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+  word-break: normal;
 }
 .badge-economisch { color: var(--economisch) !important; }
 .badge-wiskunde   { color: var(--wiskundig) !important; }
@@ -1517,9 +1529,90 @@ html[data-theme="dark"] .samenvatting-table caption.caption-grafisch {
   .sidebar-toggle { display: flex; }
   .sidebar-overlay.show { display: block; }
   .hero { padding: 22px 18px 10px; }
+  .back-to-overview,
+  .back-link {
+    display: flex;
+    margin-left: 40px;
+    max-width: calc(100% - 40px);
+    line-height: 1.35;
+  }
+  .hero-badge {
+    display: table;
+    max-width: 100%;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    line-height: 1.35;
+  }
+  .hero-inner,
+  .hero-sub {
+    width: calc(100vw - 36px) !important;
+    max-width: calc(100vw - 36px) !important;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
   .hero h1 { font-size: 1.75rem; }
-  .hero-cards { grid-template-columns: 1fr 1fr; }
+  .hero-cards {
+    grid-template-columns: 1fr 1fr;
+    width: calc(100vw - 36px) !important;
+    max-width: calc(100vw - 36px) !important;
+    overflow-x: hidden;
+    justify-items: start;
+  }
+  .hero-card {
+    min-width: 0;
+    width: calc(100vw - 36px) !important;
+    max-width: calc(100vw - 36px) !important;
+    overflow-x: hidden;
+  }
   main { padding: 18px 18px 32px; }
+  .page-layout,
+  .content,
+  main,
+  .section,
+  .section-header,
+  .resource-grid,
+  .resource-card {
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+  .section-header {
+    display: grid;
+    grid-template-columns: 38px minmax(0, 1fr);
+    align-items: start;
+    width: calc(100vw - 36px);
+  }
+  .resource-grid {
+    width: calc(100vw - 36px);
+  }
+  .section-title-group {
+    width: 100%;
+    overflow: hidden;
+  }
+  .section-badge,
+  .section-title {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+  .resource-card {
+    min-width: 0;
+    width: calc(100vw - 36px) !important;
+    max-width: calc(100vw - 36px) !important;
+  }
+  .resource-card-body {
+    min-width: 0;
+    max-width: calc(100vw - 120px);
+  }
+  .resource-card-body h3,
+  .resource-card-body p {
+    display: block;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+  body[data-layout="paragraaf-v1"] .section-badge {
+    display: none;
+  }
   .section-title { font-size: 1.15rem; }
   .opgave-title { font-size: 1.15rem; }
   .question-header,
@@ -1532,7 +1625,7 @@ html[data-theme="dark"] .samenvatting-table caption.caption-grafisch {
   }
   .theme-toggle { position: static; margin-top: 8px; }
 }
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   .hero-cards { grid-template-columns: 1fr; }
 }
 

@@ -153,6 +153,9 @@ For a **skills explanation page** (uitleg voorkennis, uitleg vaardigheden):
 
 For an **exercise or fading-stage artifact** (begeleide inoefening, basisopgaven, middenopgaven, verrijking):
 
+- start from the paragraph's textbook opgaven and answer model;
+- cover every source opgave/subquestion unless the sprint plan explicitly scopes an item out;
+- for begeleide inoefening, every source subquestion needs a prompt plus revealable denkstappen, hint, answer, and explanation;
 - remove scaffolds only when the fading sequence requires it;
 - do not leave full support in a stage that should be independent;
 - do not remove visual/procedural support too early.
@@ -175,6 +178,8 @@ After generation, inspect the rendered artifact and verify that these survived:
 - route links;
 - light/dark visual switching;
 - alt text.
+- left navigation and hero-card route structure for rich HTML companion pages;
+- no student-facing internal unit codes.
 
 If the source is correct but the rendered output loses content, **treat that as a platform/generator issue, not as an acceptable artifact**. Fix the converter/template, not the rendered file.
 

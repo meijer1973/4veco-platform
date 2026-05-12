@@ -153,8 +153,8 @@ function writeParagraphPlan() {
   writeFile(path.join(PAR_DIR, "_paragraph-plan.md"), `# Paragraph Plan - ${PAR_NR} ${PAR_NAME}
 
 Generated: 2026-05-12  
-Sprint: L1.4 student-web companion build  
-Profile: student-web, no default Word exports
+Sprint: L1.4 student-web companion rebuild  
+Profile: polished student-web baseline, no default Word exports
 
 ## Learning Goals
 
@@ -174,7 +174,7 @@ The lesson starts from Sanne's smartphone price change from EUR 600 to EUR 648. 
 - Instapquiz: checks percentage change, index numbers, and index-point misconceptions
 - Uitleg voorkennis: old/new/base value, fractions, tables, and rounding
 - Uitleg vaardigheden: percentage change, index numbers, index points versus percentages
-- Begeleide inoefening: scaffolded problems with revealable answers
+- Begeleide inoefening: textbook opgaven transformed into guided questions with denkstappen, hints, and revealable answers
 - Nieuws met visual: CBS April 2026 inflation quick estimate as current data context
 - Nieuws-detective: interactive current-affairs reasoning game
 - Presentatie: short classroom deck with speaker notes for future TTS/video use
@@ -222,9 +222,13 @@ Student-facing copy uses the full skill names, not internal unit codes. Procedur
 
 - Part A publisher-print validator remains green.
 - Complete student-web validator passes.
+- Voorkennis, vaardigheden, samenvatting, nieuws, video, and begeleide inoefening use the established shared page layout with left navigation.
+- Begeleide inoefening covers every textbook opgave and subquestion, unless a written plan explicitly scopes an opgave out.
+- Light and dark modes both use the shared 4veco theme tokens and keep charts/tables readable.
 - Landing page shows student-facing tile labels and no "HTML" badges.
 - Landing page does not expose Word download options by default.
 - No student-facing internal unit codes are present.
+- Wiskundevaardigheden paragraph mode shows only paragraph-relevant skills, with broader Hoofdstuk and Alles toggles.
 - Presentation web page has semantic slide labels and speaker notes.
 `);
 }
@@ -399,6 +403,800 @@ function exercise(title, prompt, answer) {
   return `<details class="lesson-card"><summary>${esc(title)}</summary><p>${esc(prompt)}</p><p class="callout">${esc(answer)}</p></details>`;
 }
 
+const POLISHED_PAGE_CSS = `
+  .concept-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:16px 0}
+  .concept-grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .concept-card{background:var(--bg-card);border:1px solid var(--border);border-radius:8px;padding:14px 16px;box-shadow:var(--shadow-card)}
+  .concept-card h4{margin:0 0 6px;font-family:var(--heading-font);font-style:var(--heading-style);font-weight:var(--heading-weight);letter-spacing:var(--heading-letter);font-size:1.05rem;color:var(--ink)}
+  .concept-card p{margin:0;color:var(--ink-soft);font-size:.92rem}
+  .concept-card strong{color:var(--ink)}
+  .value-strip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:14px 0}
+  .value-tile{border:1px solid var(--border);border-radius:8px;background:var(--bg-lift);padding:12px}
+  .value-label{font-family:var(--mono);font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--ink-muted);font-weight:700}
+  .value-number{display:block;margin-top:4px;font-size:1.45rem;line-height:1.1;font-weight:800;color:var(--ink)}
+  .value-caption{display:block;margin-top:4px;color:var(--ink-soft);font-size:.84rem}
+  .bar-visual{display:grid;gap:10px;margin:16px 0;padding:14px;border:1px solid var(--border);border-radius:8px;background:var(--bg-lift)}
+  .bar-item{display:grid;grid-template-columns:104px minmax(0,1fr) 64px;gap:10px;align-items:center;font-size:.9rem;color:var(--ink-soft)}
+  .bar-track{height:18px;background:var(--bg-inset);border:1px solid var(--border);border-radius:999px;overflow:hidden}
+  .bar-fill{height:100%;width:var(--w);background:linear-gradient(90deg,var(--accent),color-mix(in oklab,var(--accent) 70%,var(--grafisch)));border-radius:999px}
+  .step-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:15px 0}
+  .step-tile{position:relative;background:var(--bg-card);border:1px solid var(--border);border-top:3px solid var(--accent);border-radius:8px;padding:13px 12px 12px;min-height:128px}
+  .step-num{font-family:var(--mono);font-size:10px;font-weight:800;color:var(--accent);letter-spacing:1px;text-transform:uppercase}
+  .step-tile h4{margin:6px 0 5px;font-size:.98rem;line-height:1.25;color:var(--ink)}
+  .step-tile p{margin:0;color:var(--ink-soft);font-size:.86rem;line-height:1.42}
+  .route-panel{border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:8px;background:var(--bg-card);padding:14px 16px;margin:16px 0}
+  .route-panel h3{margin-top:0}
+  .answer-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:10px}
+  .answer-box,.uitleg-box{border-radius:8px;padding:12px 14px;background:var(--bg-lift);border:1px solid var(--border)}
+  .answer-box{border-left:3px solid var(--accent)}
+  .uitleg-box{border-left:3px solid var(--grafisch)}
+  .source-note{font-size:.82rem;color:var(--ink-muted);margin-top:8px}
+  .video-list{display:grid;gap:12px}
+  .video-card{display:block;border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:8px;background:var(--bg-card);padding:14px 16px;color:inherit;text-decoration:none}
+  .video-card:hover{box-shadow:var(--shadow-lift);transform:translateY(-1px)}
+  .video-card h3{margin-top:0}
+  .video-card p{margin-bottom:0;color:var(--ink-soft)}
+  @media(max-width:900px){.concept-grid,.concept-grid.three,.value-strip,.step-grid,.answer-grid{grid-template-columns:1fr}.bar-item{grid-template-columns:86px minmax(0,1fr) 54px}}
+`;
+
+const COMPANION_SURFACES = [
+  ["uitleg voorkennis", "Voorkennis"],
+  ["uitleg vaardigheden", "Vaardigheden"],
+  ["samenvatting", "Samenvatting"],
+  ["begeleide inoefening", "Begeleide inoefening"],
+  ["nieuws met visual", "Nieuws"],
+  ["youtube-videos", "Video's"],
+];
+
+function richPage({ title, surface, layout = "voorkennis-v1", accent = "wiskunde", heroSub, sidebar, heroCards, main }) {
+  return `<!DOCTYPE html>
+<html lang="nl" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>(function(){try{var m=localStorage.getItem('quizMode')||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',m);}catch(e){}})();</script>
+<title>${PAR_NR} ${PAR_NAME} – ${esc(title)}</title>
+<link rel="stylesheet" href="../../shared/voorkennis.css">
+<style>${POLISHED_PAGE_CSS}</style>
+</head>
+<body data-layout="${esc(layout)}" data-accent-domain="${esc(accent)}">
+<button class="sidebar-toggle" id="sidebarToggle" aria-label="Menu openen">
+  <svg viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+</button>
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+<div class="page-layout">
+  <nav class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <h2>${PAR_NR} ${PAR_NAME}</h2>
+      <p>${esc(title)}</p>
+    </div>
+${sidebar}
+  </nav>
+  <div class="content">
+    <header class="hero">
+      <div class="hero-inner">
+        <a class="back-link" href="index.html"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg> Terug naar paragraaf</a>
+        <span class="hero-badge">${PAR_NR} · ${esc(surface)}</span>
+        <h1>${PAR_NAME} — ${esc(title)}</h1>
+        <p class="hero-sub">${esc(heroSub)}</p>
+        <div class="hero-cards">
+${heroCards}
+        </div>
+      </div>
+    </header>
+    <main>
+${main}
+    </main>
+  </div>
+</div>
+<script src="../../shared/voorkennis.js"></script>
+</body>
+</html>
+`;
+}
+
+function navItems(items) {
+  return items.map((item, idx) => `    <a class="nav-item domain-${item.domain}" href="#${item.id}" data-section="${item.id}">
+      <span class="nav-number">${idx + 1}</span>
+      <span class="nav-text">
+        <span class="nav-title">${item.title}</span>
+        <span class="nav-badge">${item.badge}</span>
+      </span>
+    </a>`).join("\n");
+}
+
+function heroCards(items) {
+  return items.map((item, idx) => `          <div class="hero-card card-${item.domain}" data-target="${item.id}">
+            <div class="hero-card-num">${String(idx + 1).padStart(2, "0")}</div>
+            <div class="hero-card-title">${item.title}</div>
+            <span class="hero-card-domain">${item.badge}</span>
+          </div>`).join("\n");
+}
+
+function sectionBlock({ id, nr, title, badge, domain, html }) {
+  return `      <section class="section" id="${id}">
+        <div class="section-header border-${domain}">
+          <span class="section-num bg-${domain}">${nr}</span>
+          <div class="section-title-group">
+            <div class="section-title">${title}</div>
+            <span class="section-badge badge-${domain}">${badge}</span>
+          </div>
+        </div>
+${html}
+      </section>`;
+}
+
+function callout(type, label, text) {
+  return `        <div class="callout callout-${type}">
+          <span class="callout-icon">${type === "letop" ? "!" : type === "controle" ? "✓" : "*"}</span>
+          <div><strong>${label}</strong> ${text}</div>
+        </div>`;
+}
+
+function barVisual(rows) {
+  return `        <div class="bar-visual">
+${rows.map((row) => `          <div class="bar-item"><strong>${row.label}</strong><span class="bar-track"><span class="bar-fill" style="--w:${row.width}%"></span></span><span>${row.value}</span></div>`).join("\n")}
+        </div>`;
+}
+
+function routeBlock() {
+  return `      <section class="checklist-section">
+        <h2 class="checklist-title">Klaar om verder te gaan?</h2>
+        <p class="checklist-sub">Vink af wat je beheerst. Gebruik daarna de route eronder.</p>
+        <label class="checklist-item"><input type="checkbox"><span>Ik kan oude waarde, nieuwe waarde en verschil aanwijzen.</span></label>
+        <label class="checklist-item"><input type="checkbox"><span>Ik weet dat de oude waarde onder de breukstreep staat.</span></label>
+        <label class="checklist-item"><input type="checkbox"><span>Ik kan indexpunten en procentuele verandering uit elkaar houden.</span></label>
+        <div class="checklist-route">
+          <div class="route-title">Wat nu?</div>
+          <p class="route-line route-yes"><strong>Dit lukt:</strong> ga naar <a href="${fileName("begeleide inoefening")}">begeleide inoefening</a>.</p>
+          <p class="route-line route-no"><strong>Dit hapert:</strong> open <a href="${fileName("stappenplan")}">het stappenplan</a> of <a href="${fileName("wiskundevaardigheden")}">wiskundevaardigheden</a>.</p>
+        </div>
+      </section>`;
+}
+
+function stepGrid(steps) {
+  return `        <div class="step-grid">
+${steps.map((step, idx) => `          <div class="step-tile">
+            <span class="step-num">Stap ${idx + 1}</span>
+            <h4>${step.title}</h4>
+            <p>${step.text}</p>
+          </div>`).join("\n")}
+        </div>`;
+}
+
+function writeRichPagesPolished() {
+  writeVoorkennisPage();
+  writeVaardighedenPage();
+  writeSamenvattingPage();
+  writeGuidedPracticePage();
+  writeNewsPage();
+  writeYouTubePage();
+}
+
+function writeVoorkennisPage() {
+  const items = [
+    { id: "sectie-1", title: "Oud, nieuw en verschil", badge: "Wiskundig", domain: "wiskunde" },
+    { id: "sectie-2", title: "Procenten als verhouding", badge: "Wiskundig", domain: "wiskunde" },
+    { id: "sectie-3", title: "Basisjaar en index 100", badge: "Grafisch", domain: "grafisch" },
+    { id: "sectie-4", title: "Economische taal", badge: "Economisch", domain: "economisch" },
+  ];
+
+  const main = [
+    sectionBlock({
+      id: "sectie-1",
+      nr: 1,
+      title: "Oud, nieuw en verschil",
+      badge: "Wiskundig",
+      domain: "wiskunde",
+      html: `        <p class="intro-text">Een procentuele verandering begint niet met de formule. Eerst lees je de situatie en wijs je drie getallen aan: de oude waarde, de nieuwe waarde en het verschil.</p>
+        <div class="value-strip">
+          <div class="value-tile"><span class="value-label">oude waarde</span><span class="value-number">€600</span><span class="value-caption">de basis waarmee je vergelijkt</span></div>
+          <div class="value-tile"><span class="value-label">nieuwe waarde</span><span class="value-number">€648</span><span class="value-caption">de waarde na de verandering</span></div>
+          <div class="value-tile"><span class="value-label">verschil</span><span class="value-number">€48</span><span class="value-caption">nieuw min oud</span></div>
+        </div>
+        ${barVisual([{ label: "Oud", width: 92.6, value: "600" }, { label: "Nieuw", width: 100, value: "648" }])}
+        ${callout("controle", "Controle:", "Kun je bij elke zin aanwijzen wat oud en nieuw is voordat je begint te rekenen?")}`
+    }),
+    sectionBlock({
+      id: "sectie-2",
+      nr: 2,
+      title: "Procenten als verhouding",
+      badge: "Wiskundig",
+      domain: "wiskunde",
+      html: `        <p class="intro-text">Een percentage vertelt hoe groot een verschil is ten opzichte van een basis. Daarom is hetzelfde eurobedrag niet altijd even groot in procenten.</p>
+        <div class="formula-box">(nieuw - oud) / oud x 100%</div>
+        <div class="concept-grid">
+          <div class="concept-card"><h4>€48 op €600</h4><p>48 / 600 x 100% = <strong>8%</strong>. Bij een telefoon is €48 een beperkte stijging.</p></div>
+          <div class="concept-card"><h4>€48 op €120</h4><p>48 / 120 x 100% = <strong>40%</strong>. Bij een kleiner bedrag is dezelfde €48 veel groter.</p></div>
+        </div>
+        ${callout("letop", "Let op:", "De oude waarde staat onder de breukstreep. Bij een daling gebruik je dus de prijs vóór de daling.")}`
+    }),
+    sectionBlock({
+      id: "sectie-3",
+      nr: 3,
+      title: "Basisjaar en index 100",
+      badge: "Grafisch",
+      domain: "grafisch",
+      html: `        <p class="intro-text">Een indexcijfer maakt een reeks overzichtelijk. Je kiest één basisjaar. Dat jaar krijgt index 100. Andere jaren vergelijk je met dat basisjaar.</p>
+        <table class="samenvatting-table">
+          <caption class="caption-grafisch">Voorbeeld: boodschappenmandje</caption>
+          <tbody>
+            <tr><td>2023</td><td>€150</td><td>Index 100</td></tr>
+            <tr><td>2024</td><td>€156</td><td>156 / 150 x 100 = 104</td></tr>
+            <tr><td>2025</td><td>€162</td><td>162 / 150 x 100 = 108</td></tr>
+          </tbody>
+        </table>
+        ${barVisual([{ label: "2023", width: 92.6, value: "100" }, { label: "2024", width: 96.3, value: "104" }, { label: "2025", width: 100, value: "108" }])}
+        ${callout("tip", "Tip:", "Index 108 betekent 8% hoger dan het basisjaar. Het betekent niet dat de prijs €108 is.")}`
+    }),
+    sectionBlock({
+      id: "sectie-4",
+      nr: 4,
+      title: "Economische taal",
+      badge: "Economisch",
+      domain: "economisch",
+      html: `        <p class="intro-text">Bij percentages in economie gaat het niet alleen om het antwoord, maar ook om de juiste woorden. Schrijf altijd op wat je percentage betekent.</p>
+        <table class="begrippen-table">
+          <thead><tr><th>Woord</th><th>Betekenis</th><th>Voorbeeldzin</th></tr></thead>
+          <tbody>
+            <tr><td>Prijsstijging</td><td>De prijs wordt hoger.</td><td>De fiets is 15% duurder geworden.</td></tr>
+            <tr><td>Prijsdaling</td><td>De prijs wordt lager.</td><td>De benzineprijs daalt met 4,5%.</td></tr>
+            <tr><td>Inflatie</td><td>Het algemene prijspeil stijgt.</td><td>De inflatie is 3,7%.</td></tr>
+            <tr><td>Deflatie</td><td>Het algemene prijspeil daalt.</td><td>Het prijspeil daalt met 2,6%.</td></tr>
+            <tr><td>Indexpunt</td><td>Het verschil tussen twee indexcijfers.</td><td>112 - 108 = 4 indexpunten.</td></tr>
+          </tbody>
+        </table>
+        ${callout("kernregel", "Kernregel:", "Noem de eenheid: procent, procentpunt of indexpunt. Die drie zijn niet hetzelfde.")}`
+    }),
+    routeBlock(),
+  ].join("\n");
+
+  writeFile(path.join(PAR_DIR, fileName("uitleg voorkennis")), richPage({
+    title: "Uitleg voorkennis",
+    surface: "Voorkennis",
+    layout: "voorkennis-v1",
+    accent: "wiskunde",
+    heroSub: "Herhaal de basis die je nodig hebt om percentages en indexcijfers zonder gokwerk te lezen.",
+    sidebar: navItems(items),
+    heroCards: heroCards(items),
+    main,
+  }));
+}
+
+function writeVaardighedenPage() {
+  const items = [
+    { id: "sectie-1", title: "Procentuele verandering", badge: "Wiskundig", domain: "wiskunde" },
+    { id: "sectie-2", title: "Indexcijfer berekenen", badge: "Grafisch", domain: "grafisch" },
+    { id: "sectie-3", title: "Index naar procent", badge: "Wiskundig", domain: "wiskunde" },
+    { id: "sectie-4", title: "Koopkracht beoordelen", badge: "Economisch", domain: "economisch" },
+  ];
+  const main = [
+    sectionBlock({
+      id: "sectie-1",
+      nr: 1,
+      title: "Procentuele verandering berekenen",
+      badge: "Wiskundig",
+      domain: "wiskunde",
+      html: `        <p class="intro-text">Gebruik deze aanpak bij een verandering van één waarde naar een andere waarde: prijs, loon, omzet, kosten of hoeveelheid.</p>
+${stepGrid([
+  { title: "Bepaal oud en nieuw", text: "Schrijf eerst het startpunt en eindpunt op." },
+  { title: "Bereken het verschil", text: "Nieuwe waarde min oude waarde." },
+  { title: "Deel door oud", text: "Verschil / oude waarde x 100%." },
+  { title: "Interpreteer", text: "Positief is stijging, negatief is daling." },
+])}
+        <div class="formula-box">Voorbeeld: (920 - 800) / 800 x 100% = 15%. De fiets is 15% duurder.</div>
+        ${callout("letop", "Valkuil:", "Bij een daling van €920 naar €800 deel je door €920, niet door €800. Daarom is de daling 13,0% en niet 15%.")}`
+    }),
+    sectionBlock({
+      id: "sectie-2",
+      nr: 2,
+      title: "Indexcijfer berekenen",
+      badge: "Grafisch",
+      domain: "grafisch",
+      html: `        <p class="intro-text">Een indexcijfer zet een waarde om naar een getal ten opzichte van een basisjaar. Het basisjaar krijgt index 100.</p>
+${stepGrid([
+  { title: "Kies de basis", text: "Het basisjaar of de basiswaarde krijgt 100." },
+  { title: "Neem de doelwaarde", text: "Dat is de waarde in het jaar dat je wilt berekenen." },
+  { title: "Deel door de basis", text: "Doelwaarde / basiswaarde x 100." },
+  { title: "Leg uit", text: "Index 104 betekent 4% hoger dan de basis." },
+])}
+        <table class="samenvatting-table">
+          <caption class="caption-grafisch">Boodschappenmandje, basisjaar 2023 = 100</caption>
+          <tbody>
+            <tr><td>2024</td><td>156 / 150 x 100</td><td>104</td></tr>
+            <tr><td>2025</td><td>162 / 150 x 100</td><td>108</td></tr>
+          </tbody>
+        </table>`
+    }),
+    sectionBlock({
+      id: "sectie-3",
+      nr: 3,
+      title: "Van indexcijfers naar procentuele verandering",
+      badge: "Wiskundig",
+      domain: "wiskunde",
+      html: `        <p class="intro-text">Als je twee indexcijfers vergelijkt, bereken je opnieuw een procentuele verandering. Het oude indexcijfer is dan de basis.</p>
+${stepGrid([
+  { title: "Oude index", text: "Bijvoorbeeld 108." },
+  { title: "Nieuwe index", text: "Bijvoorbeeld 112." },
+  { title: "Puntenverschil", text: "112 - 108 = 4 indexpunten." },
+  { title: "Procent", text: "4 / 108 x 100% = 3,7%." },
+])}
+        ${callout("kernregel", "Kernregel:", "Van 108 naar 112 is 4 indexpunten, maar 3,7% stijging. Het puntenverschil en het percentage zijn verschillende antwoorden.")}`
+    }),
+    sectionBlock({
+      id: "sectie-4",
+      nr: 4,
+      title: "Koopkracht beoordelen",
+      badge: "Economisch",
+      domain: "economisch",
+      html: `        <p class="intro-text">Bij koopkracht vergelijk je hoeveel het loon stijgt met hoeveel de prijzen stijgen. Een loonstijging kan dus toch koopkrachtverlies betekenen.</p>
+        <div class="concept-grid">
+          <div class="concept-card"><h4>Loon</h4><p>€3.000 naar €3.240 is <strong>8%</strong> stijging. Het loonindexcijfer is 108.</p></div>
+          <div class="concept-card"><h4>Prijzen</h4><p>Prijsindex 112 betekent dat prijzen <strong>12%</strong> hoger liggen dan in het basisjaar.</p></div>
+        </div>
+        <div class="route-panel">
+          <h3>Conclusie</h3>
+          <p>Het loon stijgt minder hard dan de prijzen. De werknemer kan minder kopen dan eerst: de koopkracht is gedaald.</p>
+        </div>`
+    }),
+    routeBlock(),
+  ].join("\n");
+
+  writeFile(path.join(PAR_DIR, fileName("uitleg vaardigheden")), richPage({
+    title: "Uitleg vaardigheden",
+    surface: "Vaardigheden",
+    layout: "voorkennis-v1",
+    accent: "wiskunde",
+    heroSub: "De vaste aanpak voor procentuele verandering, indexcijfers, indexpunten en koopkracht.",
+    sidebar: navItems(items),
+    heroCards: heroCards(items),
+    main,
+  }));
+}
+
+function writeSamenvattingPage() {
+  const items = [
+    { id: "sectie-1", title: "Welke route kies je?", badge: "Route", domain: "wiskunde" },
+    { id: "sectie-2", title: "Formules", badge: "Schema", domain: "grafisch" },
+    { id: "sectie-3", title: "Valkuilen", badge: "Controle", domain: "economisch" },
+  ];
+  const main = [
+    sectionBlock({
+      id: "sectie-1",
+      nr: 1,
+      title: "Welke route kies je?",
+      badge: "Route",
+      domain: "wiskunde",
+      html: `        <table class="samenvatting-table">
+          <caption class="caption-wiskunde">Vraagtype herkennen</caption>
+          <tbody>
+            <tr><td>Oud bedrag → nieuw bedrag</td><td>Bereken procentuele verandering.</td></tr>
+            <tr><td>Waarde in basisjaar → waarde in doeljaar</td><td>Bereken het indexcijfer.</td></tr>
+            <tr><td>Oude index → nieuwe index</td><td>Bereken eerst indexpunten, daarna procentuele verandering.</td></tr>
+            <tr><td>Loon en prijsindex</td><td>Vergelijk loonstijging met prijsstijging.</td></tr>
+          </tbody>
+        </table>`
+    }),
+    sectionBlock({
+      id: "sectie-2",
+      nr: 2,
+      title: "Formules",
+      badge: "Schema",
+      domain: "grafisch",
+      html: `        <div class="concept-grid">
+          <div class="concept-card"><h4>Procentuele verandering</h4><p class="formula-box">(nieuw - oud) / oud x 100%</p></div>
+          <div class="concept-card"><h4>Indexcijfer</h4><p class="formula-box">waarde doeljaar / waarde basisjaar x 100</p></div>
+          <div class="concept-card"><h4>Index naar procent</h4><p class="formula-box">(nieuwe index - oude index) / oude index x 100%</p></div>
+          <div class="concept-card"><h4>Koopkracht</h4><p class="formula-box">loonindex vergelijken met prijsindex</p></div>
+        </div>`
+    }),
+    sectionBlock({
+      id: "sectie-3",
+      nr: 3,
+      title: "Valkuilen",
+      badge: "Controle",
+      domain: "economisch",
+      html: `        <table class="begrippen-table">
+          <thead><tr><th>Fout</th><th>Waarom fout?</th><th>Goede check</th></tr></thead>
+          <tbody>
+            <tr><td>Delen door nieuw</td><td>Je gebruikt de verkeerde basis.</td><td>Bij procentuele verandering staat oud onder de breukstreep.</td></tr>
+            <tr><td>Index 108 = €108</td><td>Een index is geen eurobedrag.</td><td>Index 108 betekent 8% hoger dan het basisjaar.</td></tr>
+            <tr><td>108 naar 112 = 4%</td><td>Dat zijn 4 indexpunten.</td><td>4 / 108 x 100% = 3,7%.</td></tr>
+            <tr><td>20% erbij en 20% eraf is nul</td><td>De basis verandert.</td><td>€100 → €120 → €96.</td></tr>
+          </tbody>
+        </table>`
+    }),
+    routeBlock(),
+  ].join("\n");
+
+  writeFile(path.join(PAR_DIR, fileName("samenvatting")), richPage({
+    title: "Samenvatting",
+    surface: "Samenvatting",
+    layout: "samenvatting-v1",
+    accent: "wiskunde",
+    heroSub: "Een compacte routekaart met formules, betekenis en veelgemaakte fouten.",
+    sidebar: navItems(items),
+    heroCards: heroCards(items),
+    main,
+  }));
+}
+
+function guidedSidebar(opgaven) {
+  return opgaven.map((opgave, idx) => `    <div class="nav-opgave${idx === 0 ? " expanded" : ""}">
+      <div class="nav-opgave-title" data-toggle="opgave" data-scroll="${opgave.id}">
+        <span class="nav-dot"></span>
+        <span class="nav-opgave-label" title="${esc(opgave.title)}">${idx + 1} · ${esc(opgave.title)}</span>
+        <svg class="nav-arrow" viewBox="0 0 14 14"><polyline points="3 5 7 9 11 5"/></svg>
+      </div>
+      <div class="nav-questions">
+${opgave.questions.map((q) => `        <a class="nav-q" href="#${q.id}" data-q="${q.id}">${q.label}</a>`).join("\n")}
+      </div>
+    </div>`).join("\n");
+}
+
+function guidedHeroCards(opgaven) {
+  return opgaven.map((opgave, idx) => `          <div class="hero-card" data-target="${opgave.id}">
+            <div class="hero-card-num">Opgave ${idx + 1}</div>
+            <div class="hero-card-title">${esc(opgave.title)}</div>
+            <div class="hero-card-count">${opgave.questions.length} deelvragen</div>
+          </div>`).join("\n");
+}
+
+function guidedQuestion(q) {
+  return `        <div class="question-card" id="${q.id}">
+          <div class="question-header">
+            <div class="question-label">${q.label}</div>
+            <div class="question-text">${q.question}</div>
+          </div>
+          <div class="helper-section">
+            <details class="helper-denkstappen">
+              <summary>Denkstappen</summary>
+              <div class="detail-content">${q.steps}</div>
+            </details>
+            <details class="helper-hint">
+              <summary>Hint</summary>
+              <div class="detail-content">${q.hint}</div>
+            </details>
+          </div>
+          <details class="answer-toggle">
+            <summary>Toon antwoord</summary>
+            <div class="answer-content">
+              <div class="answer-grid">
+                <div class="answer-box">${q.answer}</div>
+                <div class="uitleg-box"><strong>Uitleg:</strong> ${q.explanation}</div>
+              </div>
+            </div>
+          </details>
+        </div>`;
+}
+
+function guidedSection(opgave, idx) {
+  return `      <section class="opgave-section" id="${opgave.id}">
+        <div class="opgave-header">
+          <span class="opgave-num">${idx + 1}</span>
+          <div class="opgave-title-group">
+            <div class="opgave-title">${esc(opgave.title)}</div>
+            <span class="opgave-badge">${esc(opgave.badge)}</span>
+          </div>
+        </div>
+        <p class="opgave-intro">${opgave.intro}</p>
+${opgave.questions.map(guidedQuestion).join("\n")}
+      </section>`;
+}
+
+function writeGuidedPracticePage() {
+  const opgaven = [
+    {
+      id: "opgave-1",
+      title: "Fietsprijs omhoog en omlaag",
+      badge: "Procentuele verandering",
+      intro: "Deze opgave komt uit het lesboek. Je oefent vooral het verschil tussen dezelfde absolute verandering en een andere procentuele verandering.",
+      questions: [
+        {
+          id: "q1a",
+          label: "1a · Prijsstijging",
+          question: "De prijs van een fiets stijgt van €800 naar €920. Bereken de procentuele prijsstijging.",
+          steps: "1. Oud = €800, nieuw = €920.<br>2. Verschil = 920 - 800.<br>3. Deel het verschil door oud: verschil / 800 x 100%.<br>4. Benoem stijging of daling.",
+          hint: "Het absolute verschil is €120. De oude prijs is de noemer.",
+          answer: "(920 - 800) / 800 x 100% = 120 / 800 x 100% = <strong>15%</strong>.",
+          explanation: "De uitkomst is positief, dus de fiets is 15% duurder geworden."
+        },
+        {
+          id: "q1b",
+          label: "1b · Prijsdaling",
+          question: "Stel dat de prijs daarna daalt van €920 naar €800. Bereken de procentuele prijsdaling. Leg uit waarom dit percentage anders is dan je antwoord bij 1a.",
+          steps: "1. Oud = €920, nieuw = €800.<br>2. Verschil = 800 - 920 = -120.<br>3. Deel door de oude waarde van deze daling: 920.<br>4. Vergelijk met vraag 1a.",
+          hint: "Bij de daling is €920 de oude waarde. Dat maakt de noemer groter dan bij de stijging.",
+          answer: "(800 - 920) / 920 x 100% = -120 / 920 x 100% = <strong>-13,0%</strong>.",
+          explanation: "Hetzelfde bedrag van €120 is een kleiner percentage van €920 dan van €800. Daarom zijn +15% en -13,0% niet elkaars spiegelbeeld."
+        },
+      ],
+    },
+    {
+      id: "opgave-2",
+      title: "Boodschappenmandje als index",
+      badge: "Indexcijfers",
+      intro: "Je zet eurobedragen om naar indexcijfers en gebruikt daarna indexcijfers om een procentuele verandering te berekenen.",
+      questions: [
+        {
+          id: "q2a",
+          label: "2a · Index 2024",
+          question: "In 2023 kost een standaard boodschappenmandje €150. In 2024 kost hetzelfde mandje €156. Het basisjaar is 2023 (index = 100). Bereken het indexcijfer voor 2024.",
+          steps: "1. Basiswaarde = €150.<br>2. Doelwaarde = €156.<br>3. Gebruik: doelwaarde / basiswaarde x 100.<br>4. Interpreteer de uitkomst.",
+          hint: "Omdat 2023 het basisjaar is, deel je door 150.",
+          answer: "156 / 150 x 100 = <strong>104</strong>.",
+          explanation: "Index 104 betekent dat het mandje 4% duurder is dan in het basisjaar 2023."
+        },
+        {
+          id: "q2b",
+          label: "2b · Index 2025",
+          question: "In 2025 kost hetzelfde mandje €162. Bereken het indexcijfer voor 2025 met 2023 als basisjaar.",
+          steps: "1. Basiswaarde blijft €150.<br>2. Doelwaarde = €162.<br>3. Deel 162 door 150 en vermenigvuldig met 100.",
+          hint: "Het basisjaar verandert niet als je naar 2025 gaat.",
+          answer: "162 / 150 x 100 = <strong>108</strong>.",
+          explanation: "Index 108 betekent dat het mandje 8% duurder is dan in 2023."
+        },
+        {
+          id: "q2c",
+          label: "2c · Van 2024 naar 2025",
+          question: "Bereken de procentuele prijsstijging van 2024 naar 2025 met behulp van de indexcijfers.",
+          steps: "1. Oude index = 104.<br>2. Nieuwe index = 108.<br>3. Verschil = 4 indexpunten.<br>4. Procentuele verandering = 4 / 104 x 100%.",
+          hint: "Gebruik de oude index 104 als noemer, niet 100.",
+          answer: "(108 - 104) / 104 x 100% = 4 / 104 x 100% = <strong>3,8%</strong>.",
+          explanation: "Het verschil is 4 indexpunten, maar de prijsstijging van 2024 naar 2025 is 3,8%."
+        },
+      ],
+    },
+    {
+      id: "opgave-3",
+      title: "Loon en koopkracht",
+      badge: "Economische interpretatie",
+      intro: "Hier gebruik je percentages en indexcijfers om te beoordelen of iemand echt beter af is.",
+      questions: [
+        {
+          id: "q3a",
+          label: "3a · Loonstijging",
+          question: "Een werknemer verdient in 2022 een bruto maandloon van €3.000. In 2024 is zijn loon gestegen naar €3.240. Bereken de procentuele loonstijging.",
+          steps: "1. Oud = €3.000, nieuw = €3.240.<br>2. Verschil = 240.<br>3. Deel door 3.000 en vermenigvuldig met 100%.",
+          hint: "€240 is 8% van €3.000.",
+          answer: "(3.240 - 3.000) / 3.000 x 100% = 240 / 3.000 x 100% = <strong>8%</strong>.",
+          explanation: "Het loon is nominaal met 8% gestegen."
+        },
+        {
+          id: "q3b",
+          label: "3b · Loon voor gelijke koopkracht",
+          question: "Het prijsindexcijfer (basisjaar 2022 = 100) is in 2024 gelijk aan 112. Bereken hoeveel het loon in 2024 had moeten zijn om dezelfde koopkracht te behouden als in 2022.",
+          steps: "1. Prijsindex 112 betekent: prijzen zijn 12% hoger.<br>2. Voor dezelfde koopkracht moet het loon ook index 112 krijgen.<br>3. Bereken €3.000 x 112 / 100.",
+          hint: "Vermenigvuldig met 1,12.",
+          answer: "€3.000 x 1,12 = <strong>€3.360</strong>.",
+          explanation: "Bij €3.360 stijgt het loon even hard als het prijspeil."
+        },
+        {
+          id: "q3c",
+          label: "3c · Koopkracht beoordelen",
+          question: "Beoordeel: is de koopkracht van de werknemer gestegen of gedaald? Licht je antwoord toe met een berekening.",
+          steps: "1. Feitelijk loon in 2024 = €3.240.<br>2. Benodigd loon voor gelijke koopkracht = €3.360.<br>3. Vergelijk loonindex 108 met prijsindex 112.",
+          hint: "Als prijzen harder stijgen dan het loon, kan iemand minder kopen.",
+          answer: "De koopkracht is <strong>gedaald</strong>. Het loonindexcijfer is 108, maar het prijsindexcijfer is 112.",
+          explanation: "Het feitelijke loon (€3.240) is lager dan het benodigde loon (€3.360). De werknemer kan minder goederen en diensten kopen dan in 2022."
+        },
+      ],
+    },
+    {
+      id: "opgave-4",
+      title: "CPI-tabel lezen",
+      badge: "Indexpunten en inflatie",
+      intro: "Deze opgave traint precies de valkuil waar veel leerlingen de fout ingaan: indexpunten zijn geen procenten.",
+      questions: [
+        {
+          id: "q4a",
+          label: "4a · Inflatie 2023-2024",
+          question: "Het CBS publiceert CPI-indexcijfers met basisjaar 2020 = 100: 2023 = 108 en 2024 = 112. Bereken de procentuele prijsstijging van 2023 naar 2024.",
+          steps: "1. Oude index = 108.<br>2. Nieuwe index = 112.<br>3. Verschil = 4 indexpunten.<br>4. Deel door 108 en vermenigvuldig met 100%.",
+          hint: "Je vergelijkt met 2023, dus 108 is de noemer.",
+          answer: "(112 - 108) / 108 x 100% = <strong>3,7%</strong>.",
+          explanation: "De inflatie tussen 2023 en 2024 is 3,7%."
+        },
+        {
+          id: "q4b",
+          label: "4b · Foute redenering",
+          question: "Een leerling beweert: 'Het indexcijfer ging van 108 naar 112, dus de inflatie is 4%.' Leg uit waarom dit niet klopt en bereken het juiste inflatiepercentage.",
+          steps: "1. Benoem wat 112 - 108 is.<br>2. Leg uit dat procentuele verandering altijd een noemer heeft.<br>3. Bereken 4 / 108 x 100%.",
+          hint: "4 is het puntenverschil, niet automatisch het percentage.",
+          answer: "Het verschil is <strong>4 indexpunten</strong>. Het juiste percentage is 4 / 108 x 100% = <strong>3,7%</strong>.",
+          explanation: "Indexpunten zijn alleen toevallig gelijk aan procenten als de oude index precies 100 is."
+        },
+        {
+          id: "q4c",
+          label: "4c · Deflatie 2025-2026",
+          question: "De index daalt van 115 in 2025 naar 112 in 2026. Bereken de procentuele prijsverandering en geef aan wat dit economisch betekent.",
+          steps: "1. Oude index = 115.<br>2. Nieuwe index = 112.<br>3. Verschil = -3.<br>4. Bereken -3 / 115 x 100%.",
+          hint: "Een negatieve uitkomst betekent een daling van het prijspeil.",
+          answer: "(112 - 115) / 115 x 100% = <strong>-2,6%</strong>.",
+          explanation: "Het algemene prijspeil daalt. Dat heet deflatie."
+        },
+        {
+          id: "q4d",
+          label: "4d · Niveau vergelijken",
+          question: "Een politicus zegt: 'De prijzen in 2026 zijn weer op het niveau van 2024.' Klopt deze uitspraak? Leg uit.",
+          steps: "1. Zoek index 2024 op.<br>2. Zoek index 2026 op.<br>3. Vergelijk de twee indexcijfers, niet de tussenliggende jaren.",
+          hint: "2024 en 2026 hebben allebei index 112.",
+          answer: "<strong>Ja.</strong> In 2024 is de index 112 en in 2026 ook.",
+          explanation: "Het prijspeil steeg eerst naar 115 in 2025 en daalde daarna terug naar 112. Daarmee ligt 2026 op hetzelfde prijsniveau als 2024."
+        },
+      ],
+    },
+    {
+      id: "opgave-5",
+      title: "20% erbij en 20% eraf",
+      badge: "Denkertje",
+      intro: "Deze opgave laat zien waarom percentages altijd een basis nodig hebben. De basis verandert na de prijsverhoging.",
+      questions: [
+        {
+          id: "q5a",
+          label: "5a · Rekenvoorbeeld",
+          question: "Een winkelier verhoogt zijn prijzen met 20% en geeft daarna 20% korting op de nieuwe prijs. Laat met een startprijs van €100 zien of je weer terug bij af bent.",
+          steps: "1. Start met €100.<br>2. Verhoog met 20%: vermenigvuldig met 1,20.<br>3. Geef daarna 20% korting: vermenigvuldig met 0,80.<br>4. Vergelijk met €100.",
+          hint: "De korting wordt berekend over €120, niet over €100.",
+          answer: "€100 x 1,20 = €120. Daarna: €120 x 0,80 = <strong>€96</strong>.",
+          explanation: "Je komt niet terug bij €100. De klant betaalt €4 minder dan de oorspronkelijke prijs."
+        },
+        {
+          id: "q5b",
+          label: "5b · Waarom lager?",
+          question: "Leg uit waarom het kortingspercentage lager moet zijn dan 20% om weer precies op de oude prijs uit te komen.",
+          steps: "1. De verhoging is €20 op de oude prijs van €100.<br>2. De korting moet ook €20 zijn om terug te komen op €100.<br>3. Maar die €20 korting wordt berekend op de nieuwe prijs van €120.<br>4. Bereken welk percentage €20 van €120 is.",
+          hint: "Omdat de kortingsbasis groter is, hoort bij hetzelfde eurobedrag een lager percentage.",
+          answer: "De korting moet €20 zijn. €20 / €120 x 100% = <strong>16,7%</strong>.",
+          explanation: "20% korting op €120 is €24 en brengt de prijs naar €96. Om precies naar €100 terug te gaan, is dus geen hogere korting nodig, maar een lagere korting van 16,7%."
+        },
+        {
+          id: "q5c",
+          label: "5c · Kortingspercentage",
+          question: "Bereken welk kortingspercentage op de verhoogde prijs nodig is om precies terug te keren naar de oorspronkelijke prijs van €100.",
+          steps: "1. Verhoogde prijs = €120.<br>2. Gewenste prijs = €100.<br>3. Benodigde daling = €20.<br>4. Bereken 20 / 120 x 100%.",
+          hint: "De noemer is de verhoogde prijs.",
+          answer: "20 / 120 x 100% = <strong>16,7%</strong>.",
+          explanation: "Controle: €120 x (1 - 0,167) ≈ €100."
+        },
+      ],
+    },
+  ];
+
+  const main = opgaven.map(guidedSection).join("\n") + "\n" + `      <section class="checklist-section">
+        <h2 class="checklist-title">Na deze inoefening</h2>
+        <p class="checklist-sub">Als je deze vijf opgaven kunt uitleggen, beheers je de kern van de paragraaf.</p>
+        <label class="checklist-item"><input type="checkbox"><span>Ik gebruik bij procentuele verandering steeds de oude waarde als basis.</span></label>
+        <label class="checklist-item"><input type="checkbox"><span>Ik kan een indexcijfer berekenen en interpreteren.</span></label>
+        <label class="checklist-item"><input type="checkbox"><span>Ik verwar indexpunten niet met procenten.</span></label>
+        <div class="checklist-route">
+          <div class="route-title">Volgende stap</div>
+          <p class="route-line route-yes"><strong>Dit lukt:</strong> oefen verder met <a href="${fileName("stappenplan")}">het stappenplan</a> of het <a href="${fileName("redeneer-spel")}">redeneer-spel</a>.</p>
+          <p class="route-line route-no"><strong>Dit hapert:</strong> lees <a href="${fileName("uitleg vaardigheden")}">uitleg vaardigheden</a> opnieuw en maak daarna alleen de vragen die fout gingen.</p>
+        </div>
+      </section>`;
+
+  writeFile(path.join(PAR_DIR, fileName("begeleide inoefening")), richPage({
+    title: "Begeleide inoefening",
+    surface: "Begeleide inoefening",
+    layout: "begeleide-inoefening-v1",
+    accent: "wiskunde",
+    heroSub: "De lesboekopgaven opnieuw opgebouwd met denkstappen, hints en uitwerkingen.",
+    sidebar: guidedSidebar(opgaven),
+    heroCards: guidedHeroCards(opgaven),
+    main,
+  }));
+}
+
+function writeNewsPage() {
+  const items = [
+    { id: "sectie-1", title: "Nieuwsfeit", badge: "CBS", domain: "economisch" },
+    { id: "sectie-2", title: "Visual lezen", badge: "Grafisch", domain: "grafisch" },
+    { id: "sectie-3", title: "Rekenvragen", badge: "Toepassen", domain: "wiskunde" },
+  ];
+  const main = [
+    sectionBlock({
+      id: "sectie-1",
+      nr: 1,
+      title: "Inflatie in april 2026",
+      badge: "CBS",
+      domain: "economisch",
+      html: `        <p class="intro-text">Het CBS meldde op 30 april 2026 in een snelle raming dat de inflatie in april 2026 uitkwam op 2,8%. In maart was dat 2,7%. Consumentenprijzen waren volgens dezelfde raming 1,1% hoger dan in maart.</p>
+        <p class="source-note">Bron: CBS, "Inflatie in april 2,8 procent bij snelle raming", 30 april 2026.</p>
+        ${callout("kernregel", "Leesregel:", "Vraag altijd: met welke periode wordt vergeleken? Jaar-op-jaar inflatie en maand-op-maand prijsstijging zijn niet hetzelfde.")}`
+    }),
+    sectionBlock({
+      id: "sectie-2",
+      nr: 2,
+      title: "Productgroepen vergelijken",
+      badge: "Grafisch",
+      domain: "grafisch",
+      html: `        <p class="intro-text">In nieuwsberichten zie je vaak meerdere productgroepen naast elkaar. De hoogste balk hoeft niet te betekenen dat alles even hard stijgt.</p>
+${barVisual([{ label: "Totaal", width: 36, value: "2,8%" }, { label: "Energie", width: 100, value: "7,8%" }, { label: "Diensten", width: 46, value: "3,6%" }, { label: "Voeding", width: 19, value: "1,5%" }])}
+        ${callout("letop", "Let op:", "Een stijging van 2,7% naar 2,8% is 0,1 procentpunt. Dat is iets anders dan dat alle prijzen met 0,1% stijgen.")}`
+    }),
+    sectionBlock({
+      id: "sectie-3",
+      nr: 3,
+      title: "Rekenvragen bij het nieuws",
+      badge: "Toepassen",
+      domain: "wiskunde",
+      html: `        <div class="question-card" id="news-q1">
+          <div class="question-header">
+            <div class="question-label">Vraag 1 — procentpunt of procent?</div>
+            <div class="question-text">De inflatie stijgt van 2,7% naar 2,8%. Hoeveel procentpunt is dat?</div>
+          </div>
+          <details class="answer-toggle"><summary>Toon antwoord</summary><div class="answer-content"><div class="answer-box">2,8 - 2,7 = <strong>0,1 procentpunt</strong>.</div></div></details>
+        </div>
+        <div class="question-card" id="news-q2">
+          <div class="question-header">
+            <div class="question-label">Vraag 2 — maand-op-maand</div>
+            <div class="question-text">Consumentenprijzen zijn in april 1,1% hoger dan in maart. Wat is hier de basis?</div>
+          </div>
+          <details class="answer-toggle"><summary>Toon antwoord</summary><div class="answer-content"><div class="answer-box">De basis is het prijsniveau in <strong>maart 2026</strong>.</div></div></details>
+        </div>`
+    }),
+  ].join("\n");
+
+  writeFile(path.join(PAR_DIR, fileName("nieuws met visual")), richPage({
+    title: "Nieuws met visual",
+    surface: "Nieuws",
+    layout: "nieuws-v1",
+    accent: "economisch",
+    heroSub: "Gebruik actueel inflatienieuws om percentages, procentpunten en indexdenken te oefenen.",
+    sidebar: navItems(items),
+    heroCards: heroCards(items),
+    main,
+  }));
+}
+
+function writeYouTubePage() {
+  const items = [
+    { id: "sectie-1", title: "Kijkroute", badge: "Video", domain: "grafisch" },
+    { id: "sectie-2", title: "Kijkvragen", badge: "Actief kijken", domain: "wiskunde" },
+  ];
+  const main = [
+    sectionBlock({
+      id: "sectie-1",
+      nr: 1,
+      title: "Kijkroute",
+      badge: "Video",
+      domain: "grafisch",
+      html: `        <p class="intro-text">Gebruik video's gericht: kijk niet alles, maar zoek precies de uitleg die je nodig hebt. De links hieronder openen zoekresultaten met de juiste Nederlandse zoektermen.</p>
+        <div class="video-list">
+          <a class="video-card" href="https://www.youtube.com/results?search_query=procentuele+verandering+berekenen+economie"><h3>Procentuele verandering berekenen</h3><p>Kijk of de uitleg steeds oud, nieuw en verschil benoemt.</p></a>
+          <a class="video-card" href="https://www.youtube.com/results?search_query=indexcijfers+berekenen+economie"><h3>Indexcijfers berekenen</h3><p>Let op basisjaar = 100 en doeljaar / basisjaar x 100.</p></a>
+          <a class="video-card" href="https://www.youtube.com/results?search_query=indexpunten+procenten+verschil+economie"><h3>Indexpunten en procenten</h3><p>Gebruik dit als je 108 naar 112 nog als 4% leest.</p></a>
+        </div>`
+    }),
+    sectionBlock({
+      id: "sectie-2",
+      nr: 2,
+      title: "Kijkvragen",
+      badge: "Actief kijken",
+      domain: "wiskunde",
+      html: `        <ul class="section-list">
+          <li>Welke waarde staat onder de breukstreep bij procentuele verandering?</li>
+          <li>Hoe legt de video uit wat index 100 betekent?</li>
+          <li>Maakt de uitleg onderscheid tussen indexpunten en procenten?</li>
+          <li>Kun je na het kijken opgave 4b zonder hulp uitleggen?</li>
+        </ul>
+        ${callout("controle", "Controle:", "Een video is nuttig als je daarna een opgave beter kunt maken. Anders heb je gekeken, maar nog niet geleerd.")}`
+    }),
+  ].join("\n");
+
+  writeFile(path.join(PAR_DIR, fileName("youtube-videos")), richPage({
+    title: "Video's",
+    surface: "Video's",
+    layout: "voorkennis-v1",
+    accent: "grafisch",
+    heroSub: "Gerichte videozoekroute met kijkvragen, zodat video kijken ook echt oefenen wordt.",
+    sidebar: navItems(items),
+    heroCards: heroCards(items),
+    main,
+  }));
+}
+
 function writeQuizData() {
   const data = {
     meta: {
@@ -458,7 +1256,8 @@ function writeNewsDetectiveData() {
         options: [
           { text: "Procentuele verandering van de CPI ten opzichte van een jaar eerder", correct: true, feedback: "Juist. Inflatie is de procentuele verandering van de consumentenprijsindex ten opzichte van dezelfde maand een jaar eerder." },
           { text: "Indexpunten tussen twee willekeurige maanden", correct: false, feedback: "Indexpunten kunnen nuttig zijn, maar inflatie wordt als procentuele verandering gepubliceerd." },
-          { text: "Alleen het absolute prijsverschil in euro's", correct: false, feedback: "Absolute verschillen zijn niet vergelijkbaar tussen producten. Daarom gebruiken economen percentages en indexcijfers." }
+          { text: "Alleen het absolute prijsverschil in euro's", correct: false, feedback: "Absolute verschillen zijn niet vergelijkbaar tussen producten. Daarom gebruiken economen percentages en indexcijfers." },
+          { text: "De gemiddelde temperatuur in april", correct: false, feedback: "Temperatuur kan prijzen beïnvloeden, maar inflatie gaat over prijsverandering in de consumentenprijsindex." }
         ]
       },
       {
@@ -480,7 +1279,8 @@ function writeNewsDetectiveData() {
         question: "Welke aanpak past bij de uitspraak: prijzen waren 1,1 procent hoger dan in maart?",
         options: [
           { id: "procentuele-verandering", label: "Procentuele verandering berekenen", description: "Je vergelijkt april met maart en deelt het verschil door de oude waarde.", correct: true, feedback: "Ja. De oude waarde is maart, de nieuwe waarde is april." },
-          { id: "basisjaar", label: "Alleen een basisjaar kiezen", description: "Je zet een indexreeks op maar rekent geen verandering uit.", correct: false, feedback: "Een basisjaar is nodig voor indexcijfers, maar deze zin vraagt om een procentuele verandering tussen twee maanden." }
+          { id: "basisjaar", label: "Alleen een basisjaar kiezen", description: "Je zet een indexreeks op maar rekent geen verandering uit.", correct: false, feedback: "Een basisjaar is nodig voor indexcijfers, maar deze zin vraagt om een procentuele verandering tussen twee maanden." },
+          { id: "procentpunt", label: "Alleen procentpunten vergelijken", description: "Je noemt het verschil tussen 2,7 procent en 2,8 procent.", correct: false, feedback: "Dat verschil is 0,1 procentpunt. De maand-op-maand prijsverandering vraagt om een aparte procentuele vergelijking." }
         ]
       },
       {
@@ -690,7 +1490,7 @@ Reviewer: Codex main-agent verification
 
 PASS WITH FLAGS
 
-The 1.1.2 student-web companion surface is present and coherent enough for pipeline regression. The build intentionally uses native student-facing HTML for document-like companion pages and avoids generating new Word exports. The presentation remains available as PPTX plus web-rendered slides with speaker notes.
+The 1.1.2 student-web companion surface has been rebuilt as a polished scaling baseline, not a minimal technical probe. The rich HTML pages now use the established 1.1.1 shared layout pattern: left navigation, hero cards, source-aligned sections, checklist routing, shared light/dark theme tokens, and full student-facing skill names. The build intentionally avoids new Word exports; the publisher-print PDFs remain a separate Part A pipeline. The presentation remains available as PPTX plus web-rendered slides with speaker notes.
 
 ## Checks
 
@@ -698,15 +1498,18 @@ The 1.1.2 student-web companion surface is present and coherent enough for pipel
 - Shared data exists for quiz, news detective, reasoning, procedure, and skilltree.
 - Student-facing pages use full skill names rather than internal unit codes.
 - Procedures match the canonical lesson logic for percentage change, index numbers, and indexpoints versus percentage change.
+- Begeleide inoefening is rebuilt from the actual textbook opgaven and answer model, with denkstappen, hints, and revealable answers per subquestion.
+- Uitleg voorkennis and uitleg vaardigheden use the same left-navigation layout and theme behavior as the 1.1.1 baseline.
+- Wiskundevaardigheden supports paragraph, chapter, and all-skills view modes.
 - News context cites CBS April 2026 inflation quick estimate.
 - Presentation notes are written as teacher explanation text, suitable for a later TTS/video experiment.
 - Presentation-v2 automated screenshot QA passed across desktop, speaker-notes, fullscreen, dark, dark-notes, and mobile scenarios.
+- Browser screenshot QA was added for the non-presentation pages: index, voorkennis, begeleide inoefening, and wiskundevaardigheden were checked in wide/narrow and light/dark representative states.
 
 ## Flags
 
 - Formal teacher/student review has not yet been run.
-- Direct non-presentation HTML pages still need broader browser screenshot QA before being treated as a visual baseline for all future paragraphs.
-- Part A text uses a compressed three-step wording for percentage change; companion pages expand the same logic into four explicit steps for clarity. No contradiction was found, but future source cleanup could make the wording identical across surfaces.
+- Human review should now focus on classroom usefulness and student comprehension, not on missing baseline layout/build work.
 `);
 
   writeFile(path.join(PAR_DIR, `${PAR_NR}-quality-ref.yaml`), `# Quality Reference - ${PAR_NR} ${PAR_NAME}
@@ -1109,7 +1912,7 @@ async function main() {
     throw new Error("Paragraph folder not found: " + PAR_DIR);
   }
   writeParagraphPlan();
-  writeRichPages();
+  writeRichPagesPolished();
   writeQuizData();
   writeNewsDetectiveData();
   writeProcedureData();
