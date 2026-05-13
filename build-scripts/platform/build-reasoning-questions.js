@@ -32,7 +32,7 @@ function findParName(parNr) {
         for (const entry of entries) {
             if (entry.isDirectory() && entry.name.startsWith(parNr + ' ')) {
                 const nameMatch = entry.name.match(/- (.+)$/);
-                return nameMatch ? nameMatch[1] : parNr;
+                return nameMatch ? nameMatch[1] : entry.name.slice(parNr.length + 1).trim();
             }
             if (entry.isDirectory() && !entry.name.startsWith('.') && !entry.name.startsWith('node_')) {
                 const result = walk(path.join(dir, entry.name));

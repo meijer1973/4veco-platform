@@ -134,12 +134,13 @@ function renderOption(opt) {
 }
 
 function renderProcedureRoute(slide) {
+  const routeLabel = slide.routeLabel || `${slide.studentTitle || slide.teacherTitle || 'Procedure'} in ${slide.steps.length} stappen`;
   return `<div class="pv2-slide-head">
             <p class="pv2-eyebrow">${esc(slide.eyebrow)}</p>
             <h2 id="${esc(slide.id)}-title">${esc(slide.studentTitle)}</h2>
             <p>${esc(slide.lead)}</p>
           </div>
-          <ol class="pv2-route" aria-label="Alternatieve kosten in een keuze-situatie in vier stappen">
+          <ol class="pv2-route" aria-label="${esc(routeLabel)}">
             ${slide.steps.map(step => renderStep(step)).join('')}
           </ol>
           <p class="pv2-example">${esc(slide.example)}</p>`;

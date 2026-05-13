@@ -152,8 +152,8 @@ ${navHtml}
 function writeParagraphPlan() {
   writeFile(path.join(PAR_DIR, "_paragraph-plan.md"), `# Paragraph Plan - ${PAR_NR} ${PAR_NAME}
 
-Generated: 2026-05-12  
-Sprint: L1.4 student-web companion rebuild  
+Generated: 2026-05-13
+Sprint: L1.4-PARITY procedure and quality cleanup
 Profile: polished student-web baseline, no default Word exports
 
 ## Learning Goals
@@ -204,6 +204,17 @@ Student-facing copy uses the full skill names, not internal unit codes. Procedur
    - calculate the index-point difference
    - divide by the old index and multiply by 100
    - name index points and percentage change separately
+
+## Rounding Policy
+
+- Percentages are rounded to 1 decimal unless the question says otherwise.
+- Exact values may be shown next to the rounded answer when that clarifies a check.
+- Index numbers are written as whole numbers when the result is exact; otherwise round to 1 decimal.
+
+## Skilltree Mapping
+
+- A38 covers procentuele verandering berekenen.
+- A39 covers indexcijfer berekenen and includes the indexpoints/procenten distinction through index-change questions.
 
 ## Visuelen-Toewijzing
 
@@ -366,7 +377,7 @@ function writeRichPages() {
       <section class="main-flow">
         <article class="lesson-card">
           <h2>Inflatie in april 2026: 2,8% bij snelle raming</h2>
-          <p>Het CBS meldde op 30 april 2026 dat de inflatie in april 2026 uitkwam op 2,8% bij de snelle raming. In maart was dat 2,7%. Consumentenprijzen waren volgens die snelle raming 1,1% hoger dan in maart.</p>
+          <p>Het CBS meldde op 30 april 2026 dat de inflatie in april 2026 uitkwam op 2,8% bij de snelle raming. In maart was dat 2,7%. Consumentenprijzen waren volgens die snelle raming 1,1% hoger dan in maart. Gebruik dit als oefening met een voorlopige snelle raming, niet als definitief maandcijfer.</p>
           <p>Dit is precies het soort bericht waarvoor je procentuele verandering en indexcijfers nodig hebt: je moet weten wat de basis is, welke periode wordt vergeleken en of een getal een percentage of een indexpunt is.</p>
           <p><a href="https://www.cbs.nl/nl-nl/nieuws/2026/18/inflatie-in-april-2-8-procent-bij-snelle-raming">Bron: CBS, 30 april 2026</a></p>
         </article>
@@ -931,7 +942,7 @@ function writeGuidedPracticePage() {
           id: "q2b",
           label: "2b · Index 2025",
           question: "In 2025 kost hetzelfde mandje €162. Bereken het indexcijfer voor 2025 met 2023 als basisjaar.",
-          steps: "1. Basiswaarde blijft €150.<br>2. Doelwaarde = €162.<br>3. Deel 162 door 150 en vermenigvuldig met 100.",
+          steps: "1. Basiswaarde blijft €150.<br>2. Doelwaarde = €162.<br>3. Deel 162 door 150 en vermenigvuldig met 100.<br>4. Interpreteer de uitkomst.",
           hint: "Het basisjaar verandert niet als je naar 2025 gaat.",
           answer: "162 / 150 x 100 = <strong>108</strong>.",
           explanation: "Index 108 betekent dat het mandje 8% duurder is dan in 2023."
@@ -957,7 +968,7 @@ function writeGuidedPracticePage() {
           id: "q3a",
           label: "3a · Loonstijging",
           question: "Een werknemer verdient in 2022 een bruto maandloon van €3.000. In 2024 is zijn loon gestegen naar €3.240. Bereken de procentuele loonstijging.",
-          steps: "1. Oud = €3.000, nieuw = €3.240.<br>2. Verschil = 240.<br>3. Deel door 3.000 en vermenigvuldig met 100%.",
+          steps: "1. Oud = €3.000, nieuw = €3.240.<br>2. Verschil = 240.<br>3. Deel door 3.000 en vermenigvuldig met 100%.<br>4. Benoem stijging of daling.",
           hint: "€240 is 8% van €3.000.",
           answer: "(3.240 - 3.000) / 3.000 x 100% = 240 / 3.000 x 100% = <strong>8%</strong>.",
           explanation: "Het loon is nominaal met 8% gestegen."
@@ -1056,8 +1067,8 @@ function writeGuidedPracticePage() {
           question: "Bereken welk kortingspercentage op de verhoogde prijs nodig is om precies terug te keren naar de oorspronkelijke prijs van €100.",
           steps: "1. Verhoogde prijs = €120.<br>2. Gewenste prijs = €100.<br>3. Benodigde daling = €20.<br>4. Bereken 20 / 120 x 100%.",
           hint: "De noemer is de verhoogde prijs.",
-          answer: "20 / 120 x 100% = <strong>16,7%</strong>.",
-          explanation: "Controle: €120 x (1 - 0,167) ≈ €100."
+          answer: "20 / 120 x 100% = <strong>16,7%</strong> afgerond. Exact is dat <strong>16 2/3%</strong>.",
+          explanation: "Controle met de exacte waarde: €120 x (1 - 1/6) = €100. Met de afgeronde 16,7% kom je ongeveer op €100 uit."
         },
       ],
     },
@@ -1101,7 +1112,7 @@ function writeNewsPage() {
       title: "Inflatie in april 2026",
       badge: "CBS",
       domain: "economisch",
-      html: `        <p class="intro-text">Het CBS meldde op 30 april 2026 in een snelle raming dat de inflatie in april 2026 uitkwam op 2,8%. In maart was dat 2,7%. Consumentenprijzen waren volgens dezelfde raming 1,1% hoger dan in maart.</p>
+      html: `        <p class="intro-text">Het CBS meldde op 30 april 2026 in een snelle raming dat de inflatie in april 2026 uitkwam op 2,8%. In maart was dat 2,7%. Consumentenprijzen waren volgens dezelfde raming 1,1% hoger dan in maart. Dit is dus een oefening met een voorlopige snelle raming, niet met een definitief maandcijfer.</p>
         <p class="source-note">Bron: CBS, "Inflatie in april 2,8 procent bij snelle raming", 30 april 2026.</p>
         ${callout("kernregel", "Leesregel:", "Vraag altijd: met welke periode wordt vergeleken? Jaar-op-jaar inflatie en maand-op-maand prijsstijging zijn niet hetzelfde.")}`
     }),
@@ -1243,7 +1254,7 @@ function writeNewsDetectiveData() {
     meta: { parNr: PAR_NR, parName: PAR_NAME },
     article: {
       headline: "Inflatie in april 2026 naar 2,8 procent bij snelle raming",
-      body: "Het CBS meldde dat de inflatie in april 2026 2,8 procent was bij de snelle raming. In maart was dat 2,7 procent. Ten opzichte van maart lagen consumentenprijzen in april 1,1 procent hoger. Vanaf 2026 gebruikt de CPI het basisjaar 2025 = 100.",
+      body: "Het CBS meldde dat de inflatie in april 2026 2,8 procent was bij de snelle raming. In maart was dat 2,7 procent. Ten opzichte van maart lagen consumentenprijzen in april 1,1 procent hoger. Dit is een voorlopige snelle raming; de oefening gaat daarom over het lezen van zo'n raming. Vanaf 2026 gebruikt de CPI het basisjaar 2025 = 100.",
       source: "CBS",
       sourceDate: "30 april 2026",
       sourceUrl: "https://www.cbs.nl/nl-nl/nieuws/2026/18/inflatie-in-april-2-8-procent-bij-snelle-raming",
@@ -1338,8 +1349,7 @@ function writeProcedureData() {
           choose("Stap 1", "Bepaal het oude indexcijfer", ["Begin met index 100, ook als dat niet het oude jaar is", "Gebruik het hoogste indexcijfer"]),
           choose("Stap 2", "Bepaal het nieuwe indexcijfer", ["Gebruik het basisjaar in plaats van het nieuwe jaar", "Gebruik het gemiddelde van beide indexcijfers"]),
           choose("Stap 3", "Bereken het verschil in indexpunten", ["Noem dit verschil meteen procenten", "Deel eerst door 100"]),
-          choose("Stap 4", "Deel het verschil door het oude indexcijfer en vermenigvuldig met 100", ["Deel door het nieuwe indexcijfer", "Laat het verschil in punten staan"]),
-          choose("Stap 5", "Benoem indexpunten en procentuele verandering apart", ["Gebruik maar een van beide termen", "Schrijf indexpunten met een procentteken"]),
+          choose("Stap 4", "Deel door het oude indexcijfer, vermenigvuldig met 100 en benoem beide eenheden apart", ["Deel door het nieuwe indexcijfer", "Schrijf indexpunten met een procentteken"]),
           given("Resultaat", "Je kunt uitleggen waarom 125 naar 135 gelijk is aan 10 indexpunten maar 8 procent.")
         ]
       }
@@ -1482,26 +1492,28 @@ function csvCell(value) {
 function writeReviewAndQuality() {
   writeFile(path.join(PAR_DIR, `${PAR_NR}-companion-visual-review.md`), `# Companion Visual Review - ${PAR_NR} ${PAR_NAME}
 
-Date: 2026-05-12  
-Sprint: L1.4 student-web companion build  
+Date: 2026-05-13
+Sprint: L1.4-PARITY procedure and quality cleanup
 Reviewer: Codex main-agent verification
 
 ## Verdict
 
 PASS WITH FLAGS
 
-The 1.1.2 student-web companion surface has been rebuilt as a polished scaling baseline, not a minimal technical probe. The rich HTML pages now use the established 1.1.1 shared layout pattern: left navigation, hero cards, source-aligned sections, checklist routing, shared light/dark theme tokens, and full student-facing skill names. The build intentionally avoids new Word exports; the publisher-print PDFs remain a separate Part A pipeline. The presentation remains available as PPTX plus web-rendered slides with speaker notes.
+The 1.1.2 student-web companion surface has been rebuilt as a polished scaling baseline, not a minimal technical probe. The L1.4-PARITY cleanup aligns the companion layer with the refreshed Part A procedure model: percentage change, index-number calculation, and indexpoints versus percentage change now use the same four-step student-facing routes. The build intentionally avoids new Word exports; the publisher-print PDFs remain a separate Part A pipeline. The presentation remains available as PPTX plus web-rendered slides with speaker notes.
 
 ## Checks
 
 - Required companion outputs are generated at paragraph root.
 - Shared data exists for quiz, news detective, reasoning, procedure, and skilltree.
 - Student-facing pages use full skill names rather than internal unit codes.
-- Procedures match the canonical lesson logic for percentage change, index numbers, and indexpoints versus percentage change.
+- Procedures match the canonical four-step lesson logic for percentage change, index numbers, and indexpoints versus percentage change.
 - Begeleide inoefening is rebuilt from the actual textbook opgaven and answer model, with denkstappen, hints, and revealable answers per subquestion.
 - Uitleg voorkennis and uitleg vaardigheden use the same left-navigation layout and theme behavior as the 1.1.1 baseline.
 - Wiskundevaardigheden supports paragraph, chapter, and all-skills view modes.
 - News context cites CBS April 2026 inflation quick estimate.
+- News copy explicitly frames the CBS material as a snelle-raming exercise, not as a final monthly CPI publication.
+- Skilltree paragraph mode uses A38 and A39; A39 includes index-change interpretation, so no third active unit is added in this cleanup.
 - Presentation notes are written as teacher explanation text, suitable for a later TTS/video experiment.
 - Presentation-v2 automated screenshot QA passed across desktop, speaker-notes, fullscreen, dark, dark-notes, and mobile scenarios.
 - Browser screenshot QA was added for the non-presentation pages: index, voorkennis, begeleide inoefening, and wiskundevaardigheden were checked in wide/narrow and light/dark representative states.
@@ -1513,7 +1525,7 @@ The 1.1.2 student-web companion surface has been rebuilt as a polished scaling b
 `);
 
   writeFile(path.join(PAR_DIR, `${PAR_NR}-quality-ref.yaml`), `# Quality Reference - ${PAR_NR} ${PAR_NAME}
-# Refreshed: 2026-05-12 (L1.4 student-web companion build)
+# Refreshed: 2026-05-13 (L1.4-PARITY procedure and quality cleanup)
 
 paragraph: "${PAR_NR}"
 title: "${PAR_NAME}"
@@ -1539,19 +1551,23 @@ partA:
     file: "1.1.2-review.md"
     unresolved_fails: 0
     verdict: "PASS WITH FLAGS"
-    last_reviewed: "2026-04-14"
+    last_reviewed: "2026-05-13"
+    rounding_policy: "Percentages to 1 decimal unless instructed otherwise; exact value shown when needed for checks."
 
 companion:
   review_file: "1.1.2-companion-visual-review.md"
   review_verdict: "PASS WITH FLAGS"
-  last_reviewed: "2026-05-12"
+  last_reviewed: "2026-05-13"
   hard_fails_open: 0
   default_office_exports: false
   student_facing_internal_codes: false
   procedures:
     procentuele_verandering_step_count: 4
     indexcijfer_step_count: 4
-    indexpunten_procenten_step_count: 5
+    indexpunten_procenten_step_count: 4
+  skilltree_mapping:
+    active_skills: ["A38", "A39"]
+    coverage_note: "A39 covers indexcijfer berekenen and index-change interpretation; no separate third active skill is required for this paragraph."
   surfaces:
     voorkennis_html: clean
     vaardigheden_html: clean
@@ -1805,6 +1821,7 @@ function presentationV2Deck() {
         teacherTitle: "Procentuele verandering berekenen",
         studentTitle: "Van EUR 48 naar 8%",
         layout: "procedureRoute",
+        routeLabel: "Procentuele verandering berekenen in vier stappen",
         eyebrow: "Vaste aanpak",
         lead: "Gebruik deze route bij een verandering van bedrag naar bedrag.",
         steps: [
@@ -1846,6 +1863,7 @@ function presentationV2Deck() {
         teacherTitle: "Indexcijfer berekenen",
         studentTitle: "Basisjaar = 100",
         layout: "procedureRoute",
+        routeLabel: "Indexcijfer berekenen in vier stappen",
         eyebrow: "Vaste aanpak",
         lead: "Gebruik deze route bij een waarde ten opzichte van een basisjaar.",
         steps: [
@@ -1867,6 +1885,7 @@ function presentationV2Deck() {
         teacherTitle: "Indexpunten zijn geen procenten",
         studentTitle: "125 naar 135 is niet 10%",
         layout: "procedureRoute",
+        routeLabel: "Indexpunten en procentuele verandering onderscheiden in vier stappen",
         eyebrow: "Valkuil",
         lead: "Het verschil in punten is nog niet de procentuele verandering.",
         steps: [
@@ -1888,6 +1907,7 @@ function presentationV2Deck() {
         teacherTitle: "Welke route kies je?",
         studentTitle: "Drie routes",
         layout: "procedureRoute",
+        routeLabel: "Drie rekenroutes kiezen en eenheden controleren",
         eyebrow: "Afronding",
         lead: "Kies eerst het soort vraag, daarna de formule.",
         steps: [

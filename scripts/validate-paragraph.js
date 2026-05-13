@@ -529,6 +529,18 @@ function declaredB02StepCount() {
   return m ? Number(m[1]) : null;
 }
 
+function declaredProcedureStepCounts() {
+  const yaml = qualityRefContent();
+  const counts = [];
+  const re = /^\s+([a-z0-9_]+)_step_count:\s*(\d+)/gmi;
+  let m;
+  while ((m = re.exec(yaml)) !== null) {
+    if (m[1] === 'procedure_b02') continue;
+    counts.push({ key: m[1], expected: Number(m[2]) });
+  }
+  return counts;
+}
+
 function stripHtml(content) {
   return content
     .replace(/<script\b[\s\S]*?<\/script>/gi, ' ')
@@ -585,6 +597,75 @@ function validateB02ProcedureParity() {
     warn('B02 procedure parity skipped: no tracked surfaces found');
   } else {
     pass(`B02 procedure parity checked ${checked} surface(s) against canonical 4-step procedure`);
+  }
+}
+
+function normalizeProcedureKey(value) {
+  return String(value || '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '_')
+    .replace(/^_+|_+$/g, '');
+}
+
+function procedureAliases(key) {
+  const aliases = {
+    procentuele_verandering: ['procentuele_verandering', 'procentuele_verandering_berekenen'],
+    indexcijfer: ['indexcijfer', 'indexcijfer_berekenen'],
+    indexpunten_procenten: [
+      'indexpunten_procenten',
+      'indexpunten_en_procenten_onderscheiden',
+      'indexpunten_en_procentuele_verandering_onderscheiden',
+    ],
+  };
+  return aliases[key] || [key];
+}
+
+function validateDeclaredProcedureStepCounts() {
+  const declared = declaredProcedureStepCounts();
+  if (declared.length === 0) return;
+
+  console.log('\n-- Declared procedure step-count parity --');
+
+  const procedurePath = path.join(bookRoot, 'shared', 'procedure', `${parNr}.js`);
+  if (!fs.existsSync(procedurePath)) {
+    fail(`Procedure step-count parity: missing shared procedure data (${path.relative(PAR, procedurePath)})`);
+    return;
+  }
+
+  let data;
+  try {
+    const code = fs.readFileSync(procedurePath, 'utf8');
+    const fn = new Function(code + '\nreturn PROCEDURE_DATA;');
+    data = fn();
+  } catch (e) {
+    fail(`Procedure step-count parity: procedure data parse error: ${e.message}`);
+    return;
+  }
+
+  const procs = data.procedures || [];
+  let checked = 0;
+  for (const item of declared) {
+    const aliases = procedureAliases(item.key);
+    const proc = procs.find(p => {
+      const id = normalizeProcedureKey(p.id);
+      const title = normalizeProcedureKey(p.title);
+      return aliases.some(alias => id === alias || title.includes(alias));
+    });
+
+    if (!proc) {
+      fail(`Procedure step-count parity: no procedure data found for ${item.key}`);
+      continue;
+    }
+
+    checked++;
+    const chooseCount = (proc.steps || []).filter(step => step.type === 'choose').length;
+    if (chooseCount !== item.expected) {
+      fail(`Procedure step-count parity: ${item.key} declares ${item.expected} step(s), but procedure data has ${chooseCount}`);
+    }
+  }
+
+  if (checked > 0) {
+    pass(`Procedure step-count parity checked ${checked} declared procedure(s)`);
   }
 }
 
@@ -754,6 +835,7 @@ if (mode === 'part-b' || mode === 'complete') validatePartB();
 // validatePartA() via validatePartARecord().
 if (mode === 'part-b' || mode === 'complete') validatePartBRecord();
 if (mode === 'complete') validateB02ProcedureParity();
+if (mode === 'complete') validateDeclaredProcedureStepCounts();
 
 console.log('\n==========================================');
 if (errors === 0 && warnings === 0) {

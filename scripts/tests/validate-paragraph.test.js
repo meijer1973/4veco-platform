@@ -220,6 +220,41 @@ function seedB02ParitySurfaces(dir, options = {}) {
   );
 }
 
+function seedDeclaredProcedureCounts(dir, options = {}) {
+  const folderName = path.basename(dir);
+  const parNr = folderName.split(' ')[0];
+  const bookRoot = path.resolve(dir, '..', '..');
+  const declaredIndexpoints = options.declaredIndexpoints || 4;
+  writeText(
+    path.join(bookRoot, 'shared', 'procedure', `${parNr}.js`),
+    [
+      'var PROCEDURE_DATA = { procedures: [',
+      '  { id: "procentuele-verandering", title: "Procentuele verandering berekenen", steps: [{type:"given"}, {type:"choose"}, {type:"choose"}, {type:"choose"}, {type:"choose"}, {type:"given"}] },',
+      '  { id: "indexcijfer", title: "Indexcijfer berekenen", steps: [{type:"given"}, {type:"choose"}, {type:"choose"}, {type:"choose"}, {type:"choose"}, {type:"given"}] },',
+      '  { id: "indexpunten-procenten", title: "Indexpunten en procenten onderscheiden", steps: [{type:"given"}, {type:"choose"}, {type:"choose"}, {type:"choose"}, {type:"choose"}, {type:"given"}] }',
+      '] };',
+      '',
+    ].join('\n')
+  );
+
+  writeText(
+    path.join(dir, `${parNr}-quality-ref.yaml`),
+    [
+      'schema_version: 2',
+      'partA:',
+      '  assets:',
+      '    missing: []',
+      '    svgpng_paired: true',
+      '    naming_compliant: true',
+      'companion:',
+      '  procedures:',
+      '    procentuele_verandering_step_count: 4',
+      '    indexcijfer_step_count: 4',
+      `    indexpunten_procenten_step_count: ${declaredIndexpoints}`,
+    ].join('\n')
+  );
+}
+
 beforeEach(() => {
   fs.rmSync(TMP, { recursive: true, force: true });
   fs.mkdirSync(TMP, { recursive: true });
@@ -351,5 +386,25 @@ describe('validate-paragraph.js', () => {
     expect(exitCode).not.toBe(0);
     expect(output).toContain('B02 procedure parity: paragraaf.md');
     expect(output).toContain('contains legacy 3-step wording');
+  });
+
+  test('complete mode checks declared procedure step counts against procedure data', () => {
+    const dir = setupPartA('1.1.2 Percentages en indexcijfers');
+    setupPartB('1.1.2 Percentages en indexcijfers');
+    seedDeclaredProcedureCounts(dir);
+
+    const { exitCode, output } = run(dir, 'complete');
+    expect(exitCode).toBe(0);
+    expect(output).toContain('Procedure step-count parity checked 3 declared procedure(s)');
+  });
+
+  test('complete mode fails when declared procedure count drifts from procedure data', () => {
+    const dir = setupPartA('1.1.2 Percentages en indexcijfers');
+    setupPartB('1.1.2 Percentages en indexcijfers');
+    seedDeclaredProcedureCounts(dir, { declaredIndexpoints: 5 });
+
+    const { exitCode, output } = run(dir, 'complete');
+    expect(exitCode).not.toBe(0);
+    expect(output).toContain('indexpunten_procenten declares 5 step(s), but procedure data has 4');
   });
 });
