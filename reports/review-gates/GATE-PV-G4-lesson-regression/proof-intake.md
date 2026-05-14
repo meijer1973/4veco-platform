@@ -2,25 +2,22 @@
 
 Sprint: `PV-G4`
 Gate: `GATE-PV-G4-lesson-regression`
-Status: `blocked_pending_lesson_team_evidence`
+Status: `ready_for_hcs_review`
 
 ## Current Evidence
 
 - PV templates: 6
 - PV visual states: 6
 - PV unit-template links: 6
-- Recorded lesson-side PV regression proofs: 0/2
+- Recorded lesson-side PV regression proofs: 2/2
 
 ## Decision
 
-PV-G4 is not ready for closure. The references team can prepare the evidence intake packet, but the required proof must come from lesson-team-owned build or validation work.
+PV-G4 has enough recorded lesson-side evidence for HCS human review. This packet does not close the gate by itself.
 
 ## Missing Evidence
 
-- first lesson-team-owned PV regression proof
-- second lesson-team-owned PV regression proof
-- validation output for each proof
-- evidence that generated lesson output was not hand-patched
+- None for intake; HCS review still required.
 
 ## Required Proof Features
 

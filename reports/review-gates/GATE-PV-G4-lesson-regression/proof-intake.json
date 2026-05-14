@@ -3,9 +3,9 @@
   "report_id": "procedure-visual-lesson-regression-proof-intake",
   "sprint_id": "PV-G4",
   "gate_id": "GATE-PV-G4-lesson-regression",
-  "status": "blocked_pending_lesson_team_evidence",
+  "status": "ready_for_hcs_review",
   "generated_by": "build-scripts/references/build-procedure-visual-lesson-regression-proof-intake.js",
-  "generated_on": "2026-05-03T13:24:50.220Z",
+  "generated_on": "2026-05-14T07:40:29.350Z",
   "source_evidence": {
     "promotion_pipeline_design": "references/data/procedure-visual/promotion-pipeline-design.json",
     "promotion_pipeline_status": "design_only",
@@ -21,19 +21,208 @@
     "diagnostics_or_adaptive_use_authorized": false
   },
   "required_proof_count": 2,
-  "recorded_proof_count": 0,
-  "recorded_proofs": [],
-  "missing_evidence": [
-    "first lesson-team-owned PV regression proof",
-    "second lesson-team-owned PV regression proof",
-    "validation output for each proof",
-    "evidence that generated lesson output was not hand-patched"
+  "recorded_proof_count": 2,
+  "recorded_proofs": [
+    {
+      "proof_id": "PVG4-proof-001",
+      "lesson_repo_commit": "2d3327b878c7ad24d75198bde615154a110dcf25",
+      "lesson_worktree_dirty_at_generation": true,
+      "paragraph_or_surface": "1.1.1 Schaarste en economisch denken / procedure-game + answer-model parity",
+      "pv_records_used": {
+        "procedure_template_ids": [
+          "choose_by_opportunity_cost_flow"
+        ],
+        "visual_state_ids": [
+          "flowchart_opportunity_cost_choice"
+        ],
+        "unit_template_link_ids": [
+          "B02:choose_by_opportunity_cost_flow"
+        ]
+      },
+      "validation_commands": [
+        {
+          "command": "node scripts\\validate-procedure-contracts.js --book-root \"C:\\Projects\\4veco\\4veco-lessen\\Boek 1 - Grondslagen, vraag en aanbod\" --report \"C:\\Projects\\4veco\\4veco-lessen\\pv-g4-proof-records\\reports\\PVG4-proof-001-procedure-contract-report.json\"",
+          "status": "passed",
+          "output_tail": [
+            "OK Procedure contract validation passed (289 checks)"
+          ]
+        },
+        {
+          "command": "node scripts\\validate-paragraph.js --mode complete --profile student-web \"C:\\Projects\\4veco\\4veco-lessen\\Boek 1 - Grondslagen, vraag en aanbod\\1.1 Hoofdstuk Economisch denken en rekenen\\1.1.1 Schaarste en economisch denken\"",
+          "status": "passed",
+          "output_tail": [
+            "  14/14 required Part B files present (student-web)",
+            "",
+            "-- Part B plan and game data --",
+            "  OK _paragraph-plan.md",
+            "  OK shared/questions/1.1.1.js (10.7 KB)",
+            "  OK shared/newsdetective/1.1.1.js (5.6 KB)",
+            "  OK shared/reasoning/1.1.1.js (25.3 KB)",
+            "  OK shared/procedure/1.1.1.js (4.6 KB)",
+            "  OK shared/skilltree/1.1.1.js (0.5 KB)",
+            "  OK Quiz: 15 questions, 4 categories",
+            "  OK Stappenplan: 1 procedure(s) defined",
+            "",
+            "-- Part B QC artifacts --",
+            "  OK Companion review: 1.1.1-companion-visual-review.md (verdict PASS WITH FLAGS)",
+            "",
+            "-- B02 cross-surface procedure parity --",
+            "  OK B02 procedure parity checked 10 surface(s) against canonical 4-step procedure",
+            "",
+            "==========================================",
+            "OK Paragraph 1.1.1 \"Schaarste en economisch denken\" PASSED all checks."
+          ]
+        },
+        {
+          "command": "node scripts\\validate-paragraph.js --mode part-a --profile publisher-print \"C:\\Projects\\4veco\\4veco-lessen\\Boek 1 - Grondslagen, vraag en aanbod\\1.1 Hoofdstuk Economisch denken en rekenen\\1.1.1 Schaarste en economisch denken\"",
+          "status": "passed",
+          "output_tail": [
+            "  OK paragraaf.md: 1.1.1 Schaarste en economisch denken – paragraaf.md",
+            "  OK opgaven.md: 1.1.1 Schaarste en economisch denken – opgaven.md",
+            "  OK antwoorden.md: 1.1.1 Schaarste en economisch denken – antwoorden.md",
+            "  OK 1.1.1 Schaarste en economisch denken – paragraaf.pdf (378 KB)",
+            "  OK 1.1.1 Schaarste en economisch denken – opgaven.pdf (126 KB)",
+            "  OK 1.1.1 Schaarste en economisch denken – antwoorden.pdf (25 KB)",
+            "  OK build_pdf.py",
+            "",
+            "-- Asset integrity --",
+            "  OK 6 web_light/web_dark variant pair(s) symmetric",
+            "  OK 5 image refs all resolve",
+            "  OK 32 companion asset(s) declared in _paragraph-plan.md",
+            "  OK _assets/: 32 SVGs, 36 PNGs",
+            "",
+            "-- Part A QC artifacts --",
+            "  OK Part A review: 1.1.1-review.md (verdict PASS WITH FLAGS)",
+            "  OK Quality ref: 1.1.1-quality-ref.yaml (valid)",
+            "",
+            "==========================================",
+            "OK Paragraph 1.1.1 \"Schaarste en economisch denken\" PASSED all checks."
+          ]
+        },
+        {
+          "command": "node scripts\\validate-paragraph.js --mode complete --profile student-web \"C:\\Projects\\4veco\\4veco-lessen\\Boek 1 - Grondslagen, vraag en aanbod\\1.1 Hoofdstuk Economisch denken en rekenen\\1.1.2 Percentages en indexcijfers\"",
+          "status": "passed",
+          "output_tail": [
+            "  14/14 required Part B files present (student-web)",
+            "",
+            "-- Part B plan and game data --",
+            "  OK _paragraph-plan.md",
+            "  OK shared/questions/1.1.2.js (5.4 KB)",
+            "  OK shared/newsdetective/1.1.2.js (4.7 KB)",
+            "  OK shared/reasoning/1.1.2.js (6.7 KB)",
+            "  OK shared/procedure/1.1.2.js (10.3 KB)",
+            "  OK shared/skilltree/1.1.2.js (0.3 KB)",
+            "  OK Quiz: 12 questions, 4 categories",
+            "  OK Stappenplan: 3 procedure(s) defined",
+            "",
+            "-- Part B QC artifacts --",
+            "  OK Companion review: 1.1.2-companion-visual-review.md (verdict PASS WITH FLAGS)",
+            "",
+            "-- Declared procedure step-count parity --",
+            "  OK Procedure step-count parity checked 3 declared procedure(s)",
+            "",
+            "==========================================",
+            "OK Paragraph 1.1.2 \"Percentages en indexcijfers\" PASSED all checks."
+          ]
+        },
+        {
+          "command": "npm.cmd run check:book -- \"C:\\Projects\\4veco\\4veco-lessen\\Boek 1 - Grondslagen, vraag en aanbod\"",
+          "status": "passed",
+          "output_tail": [
+            "OK paragraph 1.2.1",
+            "OK paragraph 1.2.2",
+            "OK paragraph 1.2.3",
+            "OK paragraph 1.2.4",
+            "OK paragraph 1.3.1",
+            "OK paragraph 1.3.2",
+            "OK paragraph 1.3.3",
+            "OK paragraph 1.3.4",
+            "OK paragraph 1.4.1",
+            "OK paragraph 1.4.2",
+            "OK paragraph 1.4.3",
+            "OK paragraph 1.4.4",
+            "OK paragraph 1.4.5",
+            "OK paragraph 1.5.1",
+            "OK paragraph 1.5.2",
+            "OK paragraph 1.5.3",
+            "OK paragraph 1.5.4",
+            "",
+            "==========================================",
+            "BOOK HEALTH CHECK PASSED: 26/26 checks passed."
+          ]
+        }
+      ],
+      "generated_output_touched": true,
+      "hand_patch_absent": true,
+      "hand_patch_absent_evidence": [
+        "Generated lesson-target procedure data is produced by platform script b1-111-procedure-data.js.",
+        "Proof records and pilot surfaces are lesson-owned proof artifacts, not generated student output.",
+        "PV records remain in references/data/procedure-visual; no references/machine PV registry is created."
+      ],
+      "proof_artifacts": [
+        "pv-g4-proof-records/reports/PVG4-proof-001-procedure-contract-report.json",
+        "pv-g4-proof-records/PVG4-proof-001.json"
+      ],
+      "owner": "lesson_team",
+      "review_status": "submitted_for_pv_g4_review",
+      "notes": "Proof 001 validates that the 1.1.1 procedure-game data maps to formal B02/PV steps and that lesson surfaces no longer drift to the old three-step route.",
+      "proof_record_path": "../4veco-lessen/pv-g4-proof-records/PVG4-proof-001.json",
+      "intake_validation": {
+        "missing_required_fields": [],
+        "failed_validation_command_count": 0,
+        "validation_command_count": 5
+      }
+    },
+    {
+      "proof_id": "PVG4-proof-002",
+      "lesson_repo_commit": "2d3327b878c7ad24d75198bde615154a110dcf25",
+      "lesson_worktree_dirty_at_generation": true,
+      "paragraph_or_surface": "Bounded lesson-owned A61 table-trace pilot surface",
+      "pv_records_used": {
+        "procedure_template_ids": [
+          "select_table_values_trace"
+        ],
+        "visual_state_ids": [
+          "table_trace_source_values_selected"
+        ],
+        "unit_template_link_ids": [
+          "A61:select_table_values_trace"
+        ]
+      },
+      "validation_commands": [
+        {
+          "command": "node build-scripts\\references\\build-pv-g4-lesson-proof-records.js (A61 pilot validation stage)",
+          "status": "passed",
+          "evidence_artifact": "pv-g4-proof-records/reports/PVG4-proof-002-a61-table-trace-report.json"
+        }
+      ],
+      "generated_output_touched": false,
+      "hand_patch_absent": true,
+      "hand_patch_absent_evidence": [
+        "Generated lesson-target procedure data is produced by platform script b1-111-procedure-data.js.",
+        "Proof records and pilot surfaces are lesson-owned proof artifacts, not generated student output.",
+        "PV records remain in references/data/procedure-visual; no references/machine PV registry is created."
+      ],
+      "proof_artifacts": [
+        "pv-g4-proof-records/pilot-surfaces/a61-table-trace-pilot.json",
+        "pv-g4-proof-records/reports/PVG4-proof-002-a61-table-trace-report.json",
+        "pv-g4-proof-records/PVG4-proof-002.json"
+      ],
+      "owner": "lesson_team",
+      "review_status": "submitted_for_pv_g4_review",
+      "notes": "Proof 002 uses a different PV template and validates A61 table-trace step order without student-facing PV projection.",
+      "proof_record_path": "../4veco-lessen/pv-g4-proof-records/PVG4-proof-002.json",
+      "intake_validation": {
+        "missing_required_fields": [],
+        "failed_validation_command_count": 0,
+        "validation_command_count": 1
+      }
+    }
   ],
+  "missing_evidence": [],
   "next_action_for_lesson_team": [
-    "Choose two fresh paragraph or pilot surfaces that can use or validate existing PV records.",
-    "Run the lesson-side build and validation commands in the lesson-team workflow.",
-    "Commit lesson-side changes in the lesson team repository only.",
-    "Return proof records using the PV-G4 proof template."
+    "Submit the HCS PV-G4 lesson-regression review packet for human gate review.",
+    "Do not treat PV-G4 as closed until HCS records a gate decision."
   ],
   "proof_requirements": {
     "schema_version": 1,
@@ -42,7 +231,7 @@
     "gate_id": "GATE-PV-G4-lesson-regression",
     "status": "evidence_intake_prepared",
     "generated_by": "build-scripts/references/build-procedure-visual-lesson-regression-proof-intake.js",
-    "generated_on": "2026-05-03T13:24:50.218Z",
+    "generated_on": "2026-05-14T07:40:29.348Z",
     "policy": {
       "references_machine_write_authorized": false,
       "references_external_write_authorized": false,
@@ -96,9 +285,19 @@
   "forbidden_machine_files_found": [],
   "checks": [
     {
-      "id": "required_proof_count_not_met",
+      "id": "required_proof_count_met",
       "status": "passed",
-      "detail": "0 of 2 required lesson-side PV regression proofs are recorded."
+      "detail": "2 of 2 required lesson-side PV regression proofs are recorded."
+    },
+    {
+      "id": "proof_records_complete",
+      "status": "passed",
+      "detail": "Recorded proof records contain the required PV-G4 template fields."
+    },
+    {
+      "id": "proof_validation_commands_passed",
+      "status": "passed",
+      "detail": "Recorded proof validation commands are marked passed."
     },
     {
       "id": "no_forbidden_machine_files",
@@ -117,8 +316,8 @@
     }
   ],
   "gate_recommendation": {
-    "ready_for_hcs_closure": false,
-    "recommended_status_now": "hold_pending_lesson_evidence",
-    "reason": "PV-G4 requires at least two lesson-side regression proofs before HCS can close the gate."
+    "ready_for_hcs_closure": true,
+    "recommended_status_now": "submit_for_hcs_review",
+    "reason": "PV-G4 has two recorded lesson-side regression proofs with passing validation commands; HCS still must review and decide."
   }
 }

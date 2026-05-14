@@ -1,9 +1,9 @@
 # GATE-PV-G4 Lesson Regression: Evidence Intake Packet
 
 Sprint: `PV-G4`
-Status: `evidence_intake_prepared_not_ready_for_closure`
+Status: `evidence_ready_for_hcs_review`
 
-This packet prepares the PV-G4 evidence request. It does not close the gate because no lesson-side PV regression proofs are recorded yet.
+This packet records two lesson-side PV regression proofs for HCS human review. It does not close the gate by itself.
 
 ## Context
 
@@ -11,7 +11,7 @@ PV.7 and PV.8 require at least two lesson-side PV regression proofs before any s
 
 ## Current Proof Count
 
-Recorded proofs: `0/2`
+Recorded proofs: `2/2`
 
 ## Required Lesson-Team Evidence
 
@@ -28,19 +28,19 @@ Recorded proofs: `0/2`
 
 Are at least two lesson-side PV regression proofs recorded and owned by the lesson team?
 
-Recommended answer now: B. No, hold until proof records exist.
+Recommended answer now: A. Yes, two proof records are recorded.
 
 ### PVG4-Q2
 
 Does each proof show PV data being used or validated in a fresh paragraph or pilot surface without hand-built generated-output patching?
 
-Recommended answer now: B. Not yet assessable.
+Recommended answer now: A. Yes, inspect proof artifacts and validation commands.
 
 ### PVG4-Q3
 
 Did complete paragraph validation and Book 1 checks pass where applicable?
 
-Recommended answer now: B. Not yet assessable.
+Recommended answer now: A. Yes, commands are recorded as passed in the intake.
 
 ### PVG4-Q4
 
@@ -52,7 +52,7 @@ Recommended answer: A. No.
 
 What gate status should `GATE-PV-G4-lesson-regression` receive?
 
-Recommended answer now: `hold_pending_lesson_evidence`.
+Recommended answer now: `human_review_required`.
 
 ## Required Conditions Before Closure
 
