@@ -66,6 +66,72 @@ const DOMAIN_SHARED_TOKEN = {
   purple: "economisch",
 };
 
+const DOMAIN_LABELS = {
+  economisch: "Economisch",
+  wiskunde: "Rekenen",
+  grafisch: "Grafisch",
+};
+
+function escapeHtml(value) {
+  return String(value == null ? "" : value)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
+function domainToken(domain) {
+  return DOMAIN_SHARED_TOKEN[domain] || "economisch";
+}
+
+function domainLabel(token) {
+  return DOMAIN_LABELS[token] || "Les";
+}
+
+function landingMeta(item) {
+  return item && item.landing && typeof item.landing === "object" ? item.landing : {};
+}
+
+function textList(value) {
+  if (!value) return [];
+  const raw = Array.isArray(value) ? value : [value];
+  return raw
+    .map(item => String(item == null ? "" : item).trim())
+    .filter(Boolean);
+}
+
+function cardPitfalls(item) {
+  const meta = landingMeta(item);
+  return textList(meta.pitfalls || item.pitfalls || meta.misconceptions || item.misconceptions).slice(0, 2);
+}
+
+function renderCardPitfalls(item) {
+  const pitfalls = cardPitfalls(item);
+  if (!pitfalls.length) return "";
+  return `
+    <div class="card-pitfalls" aria-label="Veelgemaakte valkuilen">
+      <span class="card-pitfalls-label">Let op</span>
+      ${pitfalls.map(p => `<span class="card-pitfall">${escapeHtml(p)}</span>`).join("\n      ")}
+    </div>`;
+}
+
+function sectionAvailability(files) {
+  if (!files) return [];
+  const hasGroup = (group) => Object.values(group || {}).some(Boolean);
+  const labels = [];
+  if (hasGroup(files.voorbereiden)) labels.push("Voorbereiden");
+  if (files.oefenen && (
+    files.oefenen.redeneerSpel ||
+    files.oefenen.wiskundevaardigheden ||
+    files.oefenen.begeleide ||
+    (!HIDE_TASK_ROWS && (files.oefenen.basis || files.oefenen.midden || files.oefenen.verrijking))
+  )) labels.push("Oefenen");
+  if (hasGroup(files.leren)) labels.push("Leren");
+  if (hasGroup(files.lesboek)) labels.push("Lesboek");
+  return labels;
+}
+
 // ═══════════════════════════════════════════════════════════════════════════
 // SECTION RULES — filename → section mapping (flat layout)
 // ═══════════════════════════════════════════════════════════════════════════
@@ -320,56 +386,242 @@ function sharedCSS() {
     border-left-color: var(--ch-color); background: var(--bg-lift);
   }
 
+  body[data-layout="landing-book-v1"],
+  body[data-layout="landing-chapter-v1"] {
+    --content-max: 1040px;
+  }
+  body[data-layout="landing-book-v1"] main,
+  body[data-layout="landing-chapter-v1"] main {
+    display: grid;
+    gap: 1rem;
+  }
+
   /* Chapter card (book page) */
   .chapter-card {
-    display: block; background: var(--bg-card); border-radius: 10px;
+    position: relative; overflow: hidden;
+    display: grid; gap: 0.9rem;
+    min-width: 0;
+    background: var(--bg-card); border-radius: 8px;
+    border: 1px solid var(--border);
     border-left: 5px solid var(--ch-color, var(--accent));
-    box-shadow: var(--shadow-card); padding: 1.5rem 1.8rem;
-    margin-bottom: 1.2rem;
+    box-shadow: var(--shadow-card); padding: 1.35rem 1.5rem;
     transition: transform 0.15s ease, box-shadow 0.15s ease;
     text-decoration: none; color: inherit;
   }
+  .chapter-card::before,
+  .para-card::before {
+    content: ""; position: absolute; inset: 0 0 auto 0; height: 3px;
+    background: linear-gradient(90deg, var(--ch-color, var(--accent)), transparent);
+    opacity: 0.75;
+  }
   .chapter-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-lift); }
+  .chapter-card-header {
+    display: flex; align-items: flex-start; justify-content: space-between;
+    gap: 1rem;
+  }
   .chapter-card h3 {
     font-family: var(--heading-font); font-weight: var(--heading-weight); font-style: var(--heading-style);
-    font-size: 1.3rem; color: var(--ink); margin-bottom: 0.75rem;
+    font-size: 1.25rem; color: var(--ink); margin: 0;
+    line-height: 1.25; letter-spacing: 0;
   }
   .chapter-card h3 .ch-num { color: var(--ch-color, var(--accent)); margin-right: 0.3rem; }
-  .chapter-card-count { font-size: 0.8rem; color: var(--ink-soft); margin-bottom: 0.75rem; }
+  .chapter-card-count {
+    flex-shrink: 0;
+    font-family: var(--mono);
+    font-size: 0.72rem; font-weight: 700;
+    color: var(--ch-color, var(--accent));
+    background: color-mix(in oklab, var(--ch-color, var(--accent)) 12%, var(--bg-lift));
+    border: 1px solid color-mix(in oklab, var(--ch-color, var(--accent)) 30%, var(--border));
+    border-radius: 999px;
+    padding: 0.25rem 0.65rem;
+    letter-spacing: 0;
+    white-space: nowrap;
+  }
+  .chapter-card-summary {
+    max-width: 72ch;
+    margin: -0.15rem 0 0;
+    color: var(--ink-soft);
+    font-size: 0.86rem;
+    line-height: 1.45;
+    overflow-wrap: anywhere;
+    word-break: normal;
+  }
   .chapter-card-items { display: flex; flex-wrap: wrap; gap: 0.45rem; }
   .chapter-card-item {
     font-size: 0.75rem; padding: 0.3rem 0.75rem; border-radius: 5px;
     background: var(--bg-lift); color: var(--ink);
     border: 1px solid var(--border);
+    min-width: 0;
+    max-width: 100%;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+  .chapter-card-domain,
+  .para-card-domain {
+    display: inline-flex; align-items: center;
+    font-family: var(--mono); font-size: 0.68rem; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.08em;
+    color: var(--ch-color, var(--accent));
   }
 
   /* Paragraaf card (chapter page) */
   .para-card {
-    display: flex; align-items: center; gap: 1rem;
-    background: var(--bg-card); border-radius: 10px;
+    position: relative; overflow: hidden;
+    display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 1rem;
+    min-width: 0;
+    background: var(--bg-card); border-radius: 8px;
+    border: 1px solid var(--border);
     border-left: 5px solid var(--ch-color, var(--accent));
-    box-shadow: var(--shadow-card); padding: 1.2rem 1.5rem;
-    margin-bottom: 0.75rem;
+    box-shadow: var(--shadow-card); padding: 1.05rem 1.25rem;
     transition: transform 0.15s ease, box-shadow 0.15s ease;
     text-decoration: none; color: inherit;
   }
   .para-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-lift); }
   .para-num {
-    flex-shrink: 0; width: 44px; height: 44px; border-radius: 10px;
-    background: var(--ch-color, var(--accent)); color: #fff;
+    flex-shrink: 0; min-width: 4rem; height: 2.75rem; border-radius: 8px;
+    background: var(--ch-color, var(--accent)); color: var(--bg);
     display: flex; align-items: center; justify-content: center;
     font-size: 0.85rem; font-weight: 700;
+    font-family: var(--mono);
+  }
+  .para-info { min-width: 0; display: grid; gap: 0.35rem; }
+  .para-info > * {
+    min-width: 0;
+    max-width: 100%;
   }
   .para-info h3 {
     font-family: var(--heading-font); font-weight: var(--heading-weight); font-style: var(--heading-style);
-    font-size: 1.1rem; color: var(--ink); margin-bottom: 0.15rem;
+    font-size: 1.08rem; color: var(--ink); margin: 0;
+    line-height: 1.25; letter-spacing: 0;
+    overflow-wrap: anywhere;
   }
-  .para-info p { font-size: 0.8rem; color: var(--ink-soft); }
+  .para-info p {
+    font-size: 0.8rem; color: var(--ink-soft); margin: 0; line-height: 1.45;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    word-break: normal;
+  }
+  .para-card-topline {
+    display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap;
+  }
+  .para-card-tags {
+    display: flex; flex-wrap: wrap; gap: 0.35rem;
+  }
+  .para-card-tag {
+    display: inline-flex; align-items: center;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 0.15rem 0.55rem;
+    background: var(--bg-lift);
+    color: var(--ink-soft);
+    font-size: 0.7rem;
+    font-weight: 600;
+  }
+  .card-pitfalls {
+    display: flex; flex-wrap: wrap; gap: 0.35rem 0.45rem;
+    align-items: center;
+  }
+  .card-pitfalls-label {
+    font-family: var(--mono); font-size: 0.66rem; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.08em;
+    color: var(--letop-ink);
+  }
+  .card-pitfall {
+    font-size: 0.74rem;
+    color: var(--ink-soft);
+    background: color-mix(in oklab, var(--letop-ink) 10%, var(--bg-lift));
+    border: 1px solid color-mix(in oklab, var(--letop-ink) 25%, var(--border));
+    border-radius: 6px;
+    padding: 0.2rem 0.55rem;
+  }
+  html[data-theme="dark"] .chapter-card-count,
+  html[data-theme="dark"] .chapter-card-item,
+  html[data-theme="dark"] .para-card-tag,
+  html[data-theme="dark"] .card-pitfall {
+    background: color-mix(in oklab, var(--ch-color, var(--accent)) 10%, var(--bg-lift));
+  }
+
+  @media (max-width: 640px) {
+    body[data-layout="landing-book-v1"] .content,
+    body[data-layout="landing-chapter-v1"] .content {
+      width: 100vw;
+      max-width: 100vw;
+      overflow-x: hidden;
+    }
+    body[data-layout="landing-book-v1"] main,
+    body[data-layout="landing-chapter-v1"] main {
+      width: 100vw;
+      max-width: 100vw;
+      margin: 0;
+      padding-left: 18px; padding-right: 18px;
+      overflow-x: hidden;
+    }
+    body[data-layout="landing-book-v1"] .hero h1,
+    body[data-layout="landing-chapter-v1"] .hero h1 {
+      font-size: 1.45rem;
+      line-height: 1.18;
+      max-width: calc(100vw - 36px);
+      white-space: normal;
+      overflow-wrap: anywhere;
+    }
+    .chapter-card,
+    .para-card {
+      width: calc(100vw - 36px);
+      max-width: calc(100vw - 36px);
+      margin: 0;
+    }
+    .chapter-card { padding: 1.1rem 1rem; }
+    .chapter-card-header { display: grid; gap: 0.5rem; }
+    .chapter-card-count { justify-self: start; }
+    .chapter-card-items {
+      display: grid;
+      grid-template-columns: 1fr;
+      justify-items: start;
+      width: 100%;
+      max-width: calc(100vw - 72px);
+    }
+    .chapter-card-item {
+      width: max-content;
+      max-width: 100%;
+    }
+    .para-card {
+      grid-template-columns: 1fr;
+      padding: 1rem;
+    }
+    .para-info,
+    .para-info h3,
+    .para-info p,
+    .para-card-tags {
+      width: 100%;
+      max-width: calc(100vw - 72px);
+      overflow-wrap: anywhere;
+    }
+    .para-info > p {
+      max-width: min(32ch, calc(100vw - 72px));
+      white-space: normal !important;
+      word-break: break-word;
+    }
+    .para-num { width: max-content; min-width: 0; padding: 0 0.7rem; }
+  }
 
   /* Footer */
   footer {
     text-align: center; padding: 1.5rem 2rem; font-size: 0.75rem;
     color: var(--ink-soft); border-top: 1px solid var(--border);
+    overflow-wrap: anywhere;
+  }
+  @media (max-width: 640px) {
+    footer {
+      width: min(30ch, calc(100vw - 36px));
+      max-width: min(30ch, calc(100vw - 36px));
+      margin: 0 auto;
+      padding-left: 0;
+      padding-right: 0;
+      font-size: 0.7rem;
+      line-height: 1.45;
+      white-space: normal;
+      word-break: break-word;
+    }
   }
 
   /* Document viewer (chapter page docx/pptx in-browser preview) */
@@ -527,14 +779,24 @@ function renderBookPage(resolvedMap) {
     const paragrafen = CONFIG.paragraphs.filter(p => p.chapter === ch.id && !CONFIG.isHidden(p.id));
     if (!paragrafen.length) continue;
     const dc2 = DOMAIN_COLORS[ch.domain];
+    const token = domainToken(ch.domain);
+    const meta = landingMeta(ch);
+    const summary = meta.summary || ch.summary || `${paragrafen.length} paragrafen met lesmateriaal, oefenroutes en lesboekbestanden.`;
     const chFolder = encodeURIComponent(ch.folder);
+    const pitfallHTML = renderCardPitfalls(ch);
 
     bodyHTML += `
-  <a class="chapter-card" href="${chFolder}/index.html" style="--ch-color: ${dc2.main}">
-    <h3><span class="ch-num">H${ch.number}</span>${ch.name}</h3>
-    <div class="chapter-card-count">${paragrafen.length} paragrafen</div>
+  <a class="chapter-card domain-${token}" data-domain="${token}" data-chapter-id="${escapeHtml(ch.id)}" href="${chFolder}/index.html" style="--ch-color: ${dc2.main}">
+    <div class="chapter-card-header">
+      <div>
+        <span class="chapter-card-domain">${domainLabel(token)}</span>
+        <h3><span class="ch-num">H${ch.number}</span>${escapeHtml(ch.name)}</h3>
+      </div>
+      <div class="chapter-card-count">${paragrafen.length} paragrafen</div>
+    </div>
+    <p class="chapter-card-summary">${escapeHtml(summary)}</p>${pitfallHTML ? `\n    ${pitfallHTML}` : ""}
     <div class="chapter-card-items">
-      ${paragrafen.map(p => `<span class="chapter-card-item">${p.id} ${p.name}</span>`).join("\n      ")}
+      ${paragrafen.map(p => `<span class="chapter-card-item">${escapeHtml(p.id)} ${escapeHtml(p.name)}</span>`).join("\n      ")}
     </div>
   </a>`;
   }
@@ -572,12 +834,24 @@ function renderChapterPage(chapterId, resolvedMap) {
     if (!resolved) continue;
     const pFolder = encodeURIComponent(resolved.folderName);
     const pNum = p.id.split(".").pop();
+    const token = domainToken(p.domain || ch.domain);
+    const meta = landingMeta(p);
+    const summary = meta.summary || p.summary || "Open de webpagina's, oefeningen en lesboekbronnen voor deze paragraaf.";
+    const availability = sectionAvailability(scanFiles(resolved.fullPath));
+    const availabilityHTML = availability.length
+      ? `<div class="para-card-tags">${availability.map(label => `<span class="para-card-tag">${escapeHtml(label)}</span>`).join("")}</div>`
+      : "";
+    const pitfallHTML = renderCardPitfalls(p);
     bodyHTML += `
-  <a class="para-card" href="${pFolder}/index.html" style="--ch-color: ${dc.main}">
+  <a class="para-card domain-${token}" data-domain="${token}" data-paragraph-id="${escapeHtml(p.id)}" href="${pFolder}/index.html" style="--ch-color: ${dc.main}">
     <div class="para-num">${p.id}</div>
     <div class="para-info">
-      <h3>${p.name}</h3>
-      <p>Paragraaf ${pNum}</p>
+      <div class="para-card-topline">
+        <span class="para-card-domain">${domainLabel(token)}</span>
+        <p>Paragraaf ${pNum}</p>
+      </div>
+      <h3>${escapeHtml(p.name)}</h3>
+      <p>${escapeHtml(summary)}</p>${availabilityHTML ? `\n      ${availabilityHTML}` : ""}${pitfallHTML ? `\n      ${pitfallHTML}` : ""}
     </div>
   </a>`;
   }

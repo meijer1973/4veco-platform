@@ -424,6 +424,11 @@ html[data-theme="dark"] .theme-toggle .ring svg { color: var(--wiskundig); }
   line-height: 1.08;
   color: var(--ink);
   margin: 14px 0 8px;
+  max-width: 100%;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: normal;
+  hyphens: auto;
 }
 
 .hero-sub {
@@ -1550,7 +1555,16 @@ html[data-theme="dark"] .samenvatting-table caption.caption-grafisch {
     overflow-wrap: anywhere;
     word-break: break-word;
   }
-  .hero h1 { font-size: 1.75rem; }
+  .hero h1 {
+    font-size: 1.45rem;
+    line-height: 1.18;
+    width: calc(100vw - 36px) !important;
+    max-width: calc(100vw - 36px) !important;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: normal;
+    hyphens: auto;
+  }
   .hero-cards {
     grid-template-columns: 1fr 1fr;
     width: calc(100vw - 36px) !important;

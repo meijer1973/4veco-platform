@@ -22,10 +22,29 @@ describe('paragraph landing page student-web links', () => {
             nr: 9,
             name: 'Fixture',
             chapters: [
-                { id: '1.1', folder: '1.1 Hoofdstuk Test', name: 'Test', number: '1', domain: 'amber' },
+                {
+                    id: '1.1',
+                    folder: '1.1 Hoofdstuk Test',
+                    name: 'Test',
+                    number: '1',
+                    domain: 'amber',
+                    landing: {
+                        summary: 'Korte route door de teststof.',
+                        pitfalls: ['Verwar oefenen niet met nakijken.'],
+                    },
+                },
             ],
             paragraphs: [
-                { id: '1.1.1', name: 'Testparagraaf', chapter: '1.1', domain: 'amber' },
+                {
+                    id: '1.1.1',
+                    name: 'Testparagraaf',
+                    chapter: '1.1',
+                    domain: 'amber',
+                    landing: {
+                        summary: 'Web-first lesmateriaal voor deze paragraaf.',
+                        pitfalls: ['Gebruik de oude waarde als basis.'],
+                    },
+                },
             ],
         }, null, 2));
     });
@@ -78,5 +97,20 @@ describe('paragraph landing page student-web links', () => {
         expect(html).not.toContain('Antwoorden (docx)');
         expect(html).toContain('Download als PowerPoint');
         expect(html).toContain('begeleide%20inoefening.html');
+
+        const bookHtml = fs.readFileSync(path.join(tmpDir, 'index.html'), 'utf8');
+        const chapterHtml = fs.readFileSync(path.join(tmpDir, '1.1 Hoofdstuk Test', 'index.html'), 'utf8');
+        expect(bookHtml).toContain('class="chapter-card domain-economisch"');
+        expect(bookHtml).toContain('data-domain="economisch"');
+        expect(bookHtml).toContain('Korte route door de teststof.');
+        expect(bookHtml).toContain('Verwar oefenen niet met nakijken.');
+        expect(chapterHtml).toContain('class="para-card domain-economisch"');
+        expect(chapterHtml).toContain('data-domain="economisch"');
+        expect(chapterHtml).toContain('Web-first lesmateriaal voor deze paragraaf.');
+        expect(chapterHtml).toContain('Gebruik de oude waarde als basis.');
+        expect(chapterHtml).toContain('Voorbereiden');
+        expect(chapterHtml).toContain('Oefenen');
+        expect(chapterHtml).toContain('Leren');
+        expect(chapterHtml).not.toContain('Valkuilen en misvattingen');
     });
 });
