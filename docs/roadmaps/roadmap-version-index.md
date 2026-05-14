@@ -12,7 +12,7 @@ docs/roadmaps/roadmap-version-index.json
 
 | Roadmap | Version | Path | Notes |
 |---|---|---|---|
-| References Team Roadmap | `v2.40-pvg4-proof-intake-prepared` | `references/reference-team-roadmap.md` | Current operating roadmap after preparing PV-G4 proof intake; PV-G4 remains blocked pending two lesson-team-owned PV regression proofs and no PV machine promotion is authorized yet. |
+| References Team Roadmap | `v2.41-pvg4-pass-with-conditions` | `references/reference-team-roadmap.md` | Current operating roadmap after HCS closed PV-G4 as `pass_with_conditions`; two reconciled lesson-team proofs are recorded, while PV machine promotion and student-facing PV projection remain blocked. |
 
 ## Outdated Archive
 

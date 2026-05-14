@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_on": "2026-05-03",
+  "updated_on": "2026-05-14",
   "generated_by": "manual-roadmap-versioning",
   "canonical_archive_directory": "docs/roadmaps/outdated",
   "current_operational_roadmaps": [
@@ -15,12 +15,12 @@
   "roadmaps": [
     {
       "roadmap_id": "references-team-roadmap",
-      "version": "v2.40-pvg4-proof-intake-prepared",
+      "version": "v2.41-pvg4-pass-with-conditions",
       "title": "References Team Roadmap",
       "status": "active",
       "path": "references/reference-team-roadmap.md",
       "owner": "references_team",
-      "updated_on": "2026-05-03",
+      "updated_on": "2026-05-14",
       "supersedes": [
         "docs/roadmaps/outdated/reference-team-roadmap-v2.39-pv8-promotion-pipeline-design.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.38-pv7-gate-closed.md",
@@ -62,7 +62,7 @@
         "knowledge/Exercise schema and quality/reference-team-roadmap Live version 28 April.md",
         "knowledge/Exercise schema and quality/roadmap-updated-repository-checked.md"
       ],
-      "notes": "Current operating roadmap after preparing PV-G4 proof intake; PV-G4 remains blocked pending two lesson-team-owned PV regression proofs and no PV machine promotion is authorized yet."
+      "notes": "Current operating roadmap after HCS closed PV-G4 as pass_with_conditions; two reconciled lesson-team proofs are recorded, while PV machine promotion and student-facing PV projection remain blocked."
     },
     {
       "roadmap_id": "references-team-roadmap-v2.39",

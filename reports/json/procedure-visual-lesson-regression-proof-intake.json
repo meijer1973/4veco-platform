@@ -5,7 +5,7 @@
   "gate_id": "GATE-PV-G4-lesson-regression",
   "status": "ready_for_hcs_review",
   "generated_by": "build-scripts/references/build-procedure-visual-lesson-regression-proof-intake.js",
-  "generated_on": "2026-05-14T07:40:29.350Z",
+  "generated_on": "2026-05-14T14:13:17.556Z",
   "source_evidence": {
     "promotion_pipeline_design": "references/data/procedure-visual/promotion-pipeline-design.json",
     "promotion_pipeline_status": "design_only",
@@ -25,8 +25,8 @@
   "recorded_proofs": [
     {
       "proof_id": "PVG4-proof-001",
-      "lesson_repo_commit": "2d3327b878c7ad24d75198bde615154a110dcf25",
-      "lesson_worktree_dirty_at_generation": true,
+      "lesson_repo_commit": "7ab984512178249fe39e0c7ade56da0b8acc212f",
+      "lesson_worktree_dirty_at_generation": false,
       "paragraph_or_surface": "1.1.1 Schaarste en economisch denken / procedure-game + answer-model parity",
       "pv_records_used": {
         "procedure_template_ids": [
@@ -175,8 +175,8 @@
     },
     {
       "proof_id": "PVG4-proof-002",
-      "lesson_repo_commit": "2d3327b878c7ad24d75198bde615154a110dcf25",
-      "lesson_worktree_dirty_at_generation": true,
+      "lesson_repo_commit": "7ab984512178249fe39e0c7ade56da0b8acc212f",
+      "lesson_worktree_dirty_at_generation": false,
       "paragraph_or_surface": "Bounded lesson-owned A61 table-trace pilot surface",
       "pv_records_used": {
         "procedure_template_ids": [
@@ -231,7 +231,7 @@
     "gate_id": "GATE-PV-G4-lesson-regression",
     "status": "evidence_intake_prepared",
     "generated_by": "build-scripts/references/build-procedure-visual-lesson-regression-proof-intake.js",
-    "generated_on": "2026-05-14T07:40:29.348Z",
+    "generated_on": "2026-05-14T14:13:17.551Z",
     "policy": {
       "references_machine_write_authorized": false,
       "references_external_write_authorized": false,
