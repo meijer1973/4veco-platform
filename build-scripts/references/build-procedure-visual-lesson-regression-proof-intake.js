@@ -15,6 +15,7 @@ const paths = {
   reportJson: 'reports/json/procedure-visual-lesson-regression-proof-intake.json',
   reportMd: 'reports/markdown/procedure-visual-lesson-regression-proof-intake.md',
   gateDir: `reports/review-gates/${GATE_ID}`,
+  lessonProofDir: process.env.LESSON_PV_G4_PROOF_DIR || path.resolve('..', '4veco-lessen', 'pv-g4-proof-records'),
 };
 
 const forbiddenMachineFiles = [
@@ -47,6 +48,31 @@ function writeMarkdown(file, lines) {
 
 function countItems(record, field) {
   return Array.isArray(record[field]) ? record[field].length : 0;
+}
+
+function loadRecordedProofs(requirements) {
+  if (!fs.existsSync(paths.lessonProofDir)) return [];
+  const requiredFields = requirements.proof_record_required_fields || [];
+  return fs.readdirSync(paths.lessonProofDir)
+    .filter((file) => /^PVG4-proof-\d+\.json$/.test(file))
+    .sort()
+    .map((file) => {
+      const proofPath = path.join(paths.lessonProofDir, file);
+      const proof = readJson(proofPath);
+      const missingFields = requiredFields.filter((field) => !Object.prototype.hasOwnProperty.call(proof, field));
+      const failedCommands = Array.isArray(proof.validation_commands)
+        ? proof.validation_commands.filter((cmd) => cmd && cmd.status !== 'passed')
+        : ['validation_commands_missing'];
+      return {
+        ...proof,
+        proof_record_path: path.relative(process.cwd(), proofPath).replace(/\\/g, '/'),
+        intake_validation: {
+          missing_required_fields: missingFields,
+          failed_validation_command_count: failedCommands.length,
+          validation_command_count: Array.isArray(proof.validation_commands) ? proof.validation_commands.length : 0,
+        },
+      };
+    });
 }
 
 function buildRequirements() {
@@ -108,13 +134,31 @@ function buildReport(requirements) {
   const links = readJson(paths.links);
   const promotionDesign = readJson(paths.promotionDesign);
   const forbiddenMachineFilesFound = forbiddenMachineFiles.filter((file) => fs.existsSync(file));
-  const recordedProofs = [];
+  const recordedProofs = loadRecordedProofs(requirements);
+  const enoughProofs = recordedProofs.length >= requirements.required_proof_count;
+  const proofRecordsComplete = recordedProofs.every((proof) => proof.intake_validation.missing_required_fields.length === 0);
+  const proofCommandsPassed = recordedProofs.every((proof) => proof.intake_validation.failed_validation_command_count === 0);
+  const readyForHcsReview = enoughProofs && proofRecordsComplete && proofCommandsPassed && forbiddenMachineFilesFound.length === 0;
 
   const checks = [
     {
-      id: 'required_proof_count_not_met',
-      status: recordedProofs.length >= requirements.required_proof_count ? 'failed' : 'passed',
+      id: 'required_proof_count_met',
+      status: enoughProofs ? 'passed' : 'failed',
       detail: `${recordedProofs.length} of ${requirements.required_proof_count} required lesson-side PV regression proofs are recorded.`,
+    },
+    {
+      id: 'proof_records_complete',
+      status: proofRecordsComplete && recordedProofs.length > 0 ? 'passed' : 'failed',
+      detail: proofRecordsComplete
+        ? 'Recorded proof records contain the required PV-G4 template fields.'
+        : 'One or more proof records are missing required fields.',
+    },
+    {
+      id: 'proof_validation_commands_passed',
+      status: proofCommandsPassed && recordedProofs.length > 0 ? 'passed' : 'failed',
+      detail: proofCommandsPassed
+        ? 'Recorded proof validation commands are marked passed.'
+        : 'One or more proof validation commands are missing or failed.',
     },
     {
       id: 'no_forbidden_machine_files',
@@ -138,7 +182,7 @@ function buildReport(requirements) {
     report_id: 'procedure-visual-lesson-regression-proof-intake',
     sprint_id: SPRINT_ID,
     gate_id: GATE_ID,
-    status: 'blocked_pending_lesson_team_evidence',
+    status: readyForHcsReview ? 'ready_for_hcs_review' : 'blocked_pending_lesson_team_evidence',
     generated_by: SCRIPT,
     generated_on: new Date().toISOString(),
     source_evidence: {
@@ -152,26 +196,33 @@ function buildReport(requirements) {
     required_proof_count: requirements.required_proof_count,
     recorded_proof_count: recordedProofs.length,
     recorded_proofs: recordedProofs,
-    missing_evidence: [
-      'first lesson-team-owned PV regression proof',
-      'second lesson-team-owned PV regression proof',
-      'validation output for each proof',
-      'evidence that generated lesson output was not hand-patched',
+    missing_evidence: readyForHcsReview ? [] : [
+      ...(!enoughProofs ? ['two lesson-team-owned PV regression proofs'] : []),
+      ...(!proofRecordsComplete ? ['complete PV-G4 proof-template fields for each proof'] : []),
+      ...(!proofCommandsPassed ? ['passing validation output for each proof'] : []),
+      ...(forbiddenMachineFilesFound.length > 0 ? ['removal of forbidden PV machine registry files'] : []),
     ],
-    next_action_for_lesson_team: [
-      'Choose two fresh paragraph or pilot surfaces that can use or validate existing PV records.',
-      'Run the lesson-side build and validation commands in the lesson-team workflow.',
-      'Commit lesson-side changes in the lesson team repository only.',
-      'Return proof records using the PV-G4 proof template.',
-    ],
+    next_action_for_lesson_team: readyForHcsReview
+      ? [
+        'Submit the HCS PV-G4 lesson-regression review packet for human gate review.',
+        'Do not treat PV-G4 as closed until HCS records a gate decision.',
+      ]
+      : [
+        'Choose two fresh paragraph or pilot surfaces that can use or validate existing PV records.',
+        'Run the lesson-side build and validation commands in the lesson-team workflow.',
+        'Commit lesson-side changes in the lesson team repository only.',
+        'Return proof records using the PV-G4 proof template.',
+      ],
     proof_requirements: requirements,
     forbidden_machine_files_checked: forbiddenMachineFiles,
     forbidden_machine_files_found: forbiddenMachineFilesFound,
     checks,
     gate_recommendation: {
-      ready_for_hcs_closure: false,
-      recommended_status_now: 'hold_pending_lesson_evidence',
-      reason: 'PV-G4 requires at least two lesson-side regression proofs before HCS can close the gate.',
+      ready_for_hcs_closure: readyForHcsReview,
+      recommended_status_now: readyForHcsReview ? 'submit_for_hcs_review' : 'hold_pending_lesson_evidence',
+      reason: readyForHcsReview
+        ? 'PV-G4 has two recorded lesson-side regression proofs with passing validation commands; HCS still must review and decide.'
+        : 'PV-G4 requires at least two complete lesson-side regression proofs before HCS can review the gate.',
     },
   };
 }
@@ -221,11 +272,13 @@ function markdownReport(report) {
     '',
     '## Decision',
     '',
-    'PV-G4 is not ready for closure. The references team can prepare the evidence intake packet, but the required proof must come from lesson-team-owned build or validation work.',
+    report.gate_recommendation.ready_for_hcs_closure
+      ? 'PV-G4 has enough recorded lesson-side evidence for HCS human review. This packet does not close the gate by itself.'
+      : 'PV-G4 is not ready for closure. The references team can prepare the evidence intake packet, but the required proof must come from lesson-team-owned build or validation work.',
     '',
     '## Missing Evidence',
     '',
-    ...report.missing_evidence.map((item) => `- ${item}`),
+    ...(report.missing_evidence.length ? report.missing_evidence.map((item) => `- ${item}`) : ['- None for intake; HCS review still required.']),
     '',
     '## Required Proof Features',
     '',
@@ -254,13 +307,16 @@ function markdownProofTemplate(template) {
 }
 
 function reviewPacket(report) {
+  const ready = report.gate_recommendation.ready_for_hcs_closure;
   return [
     '# GATE-PV-G4 Lesson Regression: Evidence Intake Packet',
     '',
     `Sprint: \`${SPRINT_ID}\``,
-    'Status: `evidence_intake_prepared_not_ready_for_closure`',
+    `Status: \`${ready ? 'evidence_ready_for_hcs_review' : 'evidence_intake_prepared_not_ready_for_closure'}\``,
     '',
-    'This packet prepares the PV-G4 evidence request. It does not close the gate because no lesson-side PV regression proofs are recorded yet.',
+    ready
+      ? 'This packet records two lesson-side PV regression proofs for HCS human review. It does not close the gate by itself.'
+      : 'This packet prepares the PV-G4 evidence request. It does not close the gate because lesson-side PV regression proof evidence is incomplete.',
     '',
     '## Context',
     '',
@@ -280,19 +336,19 @@ function reviewPacket(report) {
     '',
     'Are at least two lesson-side PV regression proofs recorded and owned by the lesson team?',
     '',
-    'Recommended answer now: B. No, hold until proof records exist.',
+    ready ? 'Recommended answer now: A. Yes, two proof records are recorded.' : 'Recommended answer now: B. No, hold until proof records exist.',
     '',
     '### PVG4-Q2',
     '',
     'Does each proof show PV data being used or validated in a fresh paragraph or pilot surface without hand-built generated-output patching?',
     '',
-    'Recommended answer now: B. Not yet assessable.',
+    ready ? 'Recommended answer now: A. Yes, inspect proof artifacts and validation commands.' : 'Recommended answer now: B. Not yet assessable.',
     '',
     '### PVG4-Q3',
     '',
     'Did complete paragraph validation and Book 1 checks pass where applicable?',
     '',
-    'Recommended answer now: B. Not yet assessable.',
+    ready ? 'Recommended answer now: A. Yes, commands are recorded as passed in the intake.' : 'Recommended answer now: B. Not yet assessable.',
     '',
     '### PVG4-Q4',
     '',
@@ -304,7 +360,7 @@ function reviewPacket(report) {
     '',
     'What gate status should `GATE-PV-G4-lesson-regression` receive?',
     '',
-    'Recommended answer now: `hold_pending_lesson_evidence`.',
+    ready ? 'Recommended answer now: `human_review_required`.' : 'Recommended answer now: `hold_pending_lesson_evidence`.',
     '',
     '## Required Conditions Before Closure',
     '',
@@ -320,6 +376,7 @@ function main() {
   const requirements = buildRequirements();
   const report = buildReport(requirements);
   const template = buildProofTemplate();
+  const ready = report.gate_recommendation.ready_for_hcs_closure;
 
   writeJson(paths.requirements, requirements);
   writeJson(paths.reportJson, report);
@@ -331,11 +388,11 @@ function main() {
   writeJson(path.join(paths.gateDir, 'review-packet.json'), {
     gate_id: GATE_ID,
     sprint_id: SPRINT_ID,
-    status: 'evidence_intake_prepared_not_ready_for_closure',
+    status: ready ? 'evidence_ready_for_hcs_review' : 'evidence_intake_prepared_not_ready_for_closure',
     recorded_proof_count: report.recorded_proof_count,
     required_proof_count: report.required_proof_count,
-    ready_for_hcs_closure: false,
-    recommended_status_now: 'hold_pending_lesson_evidence',
+    ready_for_hcs_closure: ready,
+    recommended_status_now: ready ? 'human_review_required' : 'hold_pending_lesson_evidence',
     machine_promotion_authorized: false,
     student_facing_projection_authorized: false,
   });

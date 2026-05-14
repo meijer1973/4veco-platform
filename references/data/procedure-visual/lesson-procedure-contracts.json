@@ -1,0 +1,236 @@
+{
+  "schema_version": 1,
+  "contract_set_id": "lesson-procedure-contracts",
+  "created_for_sprint": "L-PV1",
+  "default_book_root": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod",
+  "contracts": [
+    {
+      "contract_id": "1.1.1-altkosten-b02",
+      "par_nr": "1.1.1",
+      "par_name": "Schaarste en economisch denken",
+      "paragraph_dir": "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken",
+      "procedure_id": "altkosten-berekenen",
+      "procedure_template_id": "choose_by_opportunity_cost_flow",
+      "visual_state_id": "flowchart_opportunity_cost_choice",
+      "unit_template_link_id": "B02:choose_by_opportunity_cost_flow",
+      "quality_ref_key": "procedure_b02_step_count",
+      "canonical_step_count": 4,
+      "formal_step_ids_required": true,
+      "steps": [
+        {
+          "formal_step_id": "list_alternatives",
+          "student_label": "Benoem alternatieven",
+          "required_surface_keywords": ["alternatieven"]
+        },
+        {
+          "formal_step_id": "calculate_payoffs",
+          "student_label": "Bereken opbrengsten",
+          "required_surface_keywords": ["opbrengst", "opbrengsten"]
+        },
+        {
+          "formal_step_id": "rank_not_chosen",
+          "student_label": "Rangschik en bepaal de alternatieve kosten",
+          "required_surface_keywords": ["beste niet-gekozen", "alternatieve kosten", "rangschik"]
+        },
+        {
+          "formal_step_id": "interpret_net_choice_value",
+          "student_label": "Bereken nettowaarde",
+          "required_surface_keywords": ["nettowaarde"]
+        }
+      ],
+      "required_surfaces": [
+        {
+          "id": "paragraph_plan",
+          "path": "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_paragraph-plan.md",
+          "student_facing": false,
+          "require_step_keywords": true,
+          "scan_legacy": true
+        },
+        {
+          "id": "part_a_paragraaf_md",
+          "path": "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – paragraaf.md",
+          "student_facing": true,
+          "require_step_keywords": true,
+          "scan_legacy": true
+        },
+        {
+          "id": "part_a_opgaven_md",
+          "path": "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – opgaven.md",
+          "student_facing": true,
+          "require_step_keywords": true,
+          "scan_legacy": true
+        },
+        {
+          "id": "part_a_antwoorden_md",
+          "path": "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – antwoorden.md",
+          "student_facing": true,
+          "require_step_keywords": true,
+          "scan_legacy": true
+        },
+        {
+          "id": "uitleg_vaardigheden",
+          "path": "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – uitleg vaardigheden.html",
+          "student_facing": true,
+          "require_step_keywords": true,
+          "scan_legacy": true
+        },
+        {
+          "id": "begeleide_inoefening",
+          "path": "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – begeleide inoefening.html",
+          "student_facing": true,
+          "require_step_keywords": true,
+          "scan_legacy": true
+        },
+        {
+          "id": "presentation",
+          "path": "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – presentatie.html",
+          "student_facing": true,
+          "require_step_keywords": true,
+          "scan_legacy": true
+        },
+        {
+          "id": "procedure_game_data",
+          "path": "shared/procedure/1.1.1.js",
+          "student_facing": true,
+          "procedure_data": true,
+          "scan_legacy": true
+        },
+        {
+          "id": "quality_ref",
+          "path": "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1-quality-ref.yaml",
+          "student_facing": false,
+          "quality_ref": true
+        },
+        {
+          "id": "chapter_plan",
+          "path": "1.1 Hoofdstuk Economisch denken en rekenen/_chapter-plan.md",
+          "student_facing": false,
+          "require_step_keywords": true,
+          "scan_legacy": true
+        },
+        {
+          "id": "chapter_aggregate_md",
+          "path": "1.1 Hoofdstuk Economisch denken en rekenen/1.1 Economisch denken en rekenen – hoofdstuk.md",
+          "student_facing": true,
+          "require_step_keywords": true,
+          "scan_legacy": true
+        },
+        {
+          "id": "book_aggregate_md",
+          "path": "Boek 1 Grondslagen, vraag en aanbod – boek.md",
+          "student_facing": true,
+          "require_step_keywords": true,
+          "scan_legacy": true
+        },
+        {
+          "id": "testprep_summary_md",
+          "path": "1.5 Hoofdstuk Toetsvoorbereiding/1.5.1 Actieve samenvatting/1.5.1 Actieve samenvatting – samenvatting.md",
+          "student_facing": true,
+          "scan_legacy": true
+        },
+        {
+          "id": "testprep_exam_md",
+          "path": "1.5 Hoofdstuk Toetsvoorbereiding/1.5.4 Proeftoets/1.5.4 Proeftoets – toets.md",
+          "student_facing": true,
+          "scan_legacy": true
+        },
+        {
+          "id": "testprep_exam_answers_md",
+          "path": "1.5 Hoofdstuk Toetsvoorbereiding/1.5.4 Proeftoets/1.5.4 Proeftoets – antwoorden.md",
+          "student_facing": true,
+          "scan_legacy": true
+        }
+      ],
+      "student_facing_forbidden_codes": ["B02"],
+      "forbidden_legacy_patterns": [
+        "Je berekent ze in drie stappen",
+        "Figuur 3: Economisch denken — het keuzeproces in drie stappen",
+        "Figuur 3: Economisch denken - het keuzeproces in drie stappen",
+        "Noem de drie stappen van economisch denken",
+        "De drie stappen van economisch denken zijn"
+      ]
+    },
+    {
+      "contract_id": "1.1.2-procentuele-verandering",
+      "par_nr": "1.1.2",
+      "par_name": "Percentages en indexcijfers",
+      "paragraph_dir": "1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers",
+      "procedure_id": "procentuele-verandering",
+      "quality_ref_key": "procentuele_verandering_step_count",
+      "canonical_step_count": 4,
+      "formal_step_ids_required": true,
+      "steps": [
+        { "formal_step_id": "identify_old_new_values", "student_label": "Bepaal oude en nieuwe waarde", "required_surface_keywords": ["oude waarde", "nieuwe waarde", "old and new value", "old/new"] },
+        { "formal_step_id": "calculate_difference", "student_label": "Bereken het verschil", "required_surface_keywords": ["verschil", "nieuw min oud", "absolute difference", "difference"] },
+        { "formal_step_id": "divide_by_old_value", "student_label": "Deel door de oude waarde", "required_surface_keywords": ["oude waarde", "vermenigvuldig met 100", "old value and multiply by 100", "keer honderd"] },
+        { "formal_step_id": "interpret_sign", "student_label": "Benoem stijging of daling", "required_surface_keywords": ["stijging", "daling", "increase or decrease"] }
+      ],
+      "required_surfaces": [
+        { "id": "paragraph_plan", "path": "1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/_paragraph-plan.md", "student_facing": false, "require_step_keywords": true, "scan_legacy": true },
+        { "id": "part_a_paragraaf_md", "path": "1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – paragraaf.md", "student_facing": true, "require_step_keywords": true, "scan_legacy": true },
+        { "id": "uitleg_vaardigheden", "path": "1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – uitleg vaardigheden.html", "student_facing": true, "require_step_keywords": true, "scan_legacy": true },
+        { "id": "begeleide_inoefening", "path": "1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – begeleide inoefening.html", "student_facing": true, "require_step_keywords": true, "scan_legacy": true },
+        { "id": "presentation", "path": "1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – presentatie.html", "student_facing": true, "require_step_keywords": true, "scan_legacy": true },
+        { "id": "procedure_game_data", "path": "shared/procedure/1.1.2.js", "student_facing": true, "procedure_data": true, "scan_legacy": true },
+        { "id": "quality_ref", "path": "1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2-quality-ref.yaml", "student_facing": false, "quality_ref": true },
+        { "id": "chapter_plan", "path": "1.1 Hoofdstuk Economisch denken en rekenen/_chapter-plan.md", "student_facing": false, "require_step_keywords": true, "scan_legacy": true }
+      ],
+      "forbidden_legacy_patterns": ["Procentuele verandering berekenen in drie stappen"]
+    },
+    {
+      "contract_id": "1.1.2-indexcijfer",
+      "par_nr": "1.1.2",
+      "par_name": "Percentages en indexcijfers",
+      "paragraph_dir": "1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers",
+      "procedure_id": "indexcijfer",
+      "quality_ref_key": "indexcijfer_step_count",
+      "canonical_step_count": 4,
+      "formal_step_ids_required": true,
+      "steps": [
+        { "formal_step_id": "choose_base_year", "student_label": "Kies het basisjaar", "required_surface_keywords": ["basisjaar", "base year", "100"] },
+        { "formal_step_id": "identify_target_value", "student_label": "Bepaal de doeljaarwaarde", "required_surface_keywords": ["doeljaar", "doelwaarde", "target year", "target value", "waarde"] },
+        { "formal_step_id": "calculate_index_number", "student_label": "Bereken het indexcijfer", "required_surface_keywords": ["basisjaarwaarde", "basiswaarde", "vermenigvuldig met 100", "multiply by 100", "keer honderd", "x 100"] },
+        { "formal_step_id": "interpret_index_number", "student_label": "Interpreteer ten opzichte van 100", "required_surface_keywords": ["ten opzichte van 100", "relative to the base year", "ten opzichte van dat basisjaar", "hoger", "lager"] }
+      ],
+      "required_surfaces": [
+        { "id": "paragraph_plan", "path": "1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/_paragraph-plan.md", "student_facing": false, "require_step_keywords": true, "scan_legacy": true },
+        { "id": "part_a_paragraaf_md", "path": "1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – paragraaf.md", "student_facing": true, "require_step_keywords": true, "scan_legacy": true },
+        { "id": "uitleg_vaardigheden", "path": "1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – uitleg vaardigheden.html", "student_facing": true, "require_step_keywords": true, "scan_legacy": true },
+        { "id": "presentation", "path": "1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – presentatie.html", "student_facing": true, "require_step_keywords": true, "scan_legacy": true },
+        { "id": "procedure_game_data", "path": "shared/procedure/1.1.2.js", "student_facing": true, "procedure_data": true, "scan_legacy": true },
+        { "id": "quality_ref", "path": "1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2-quality-ref.yaml", "student_facing": false, "quality_ref": true },
+        { "id": "chapter_plan", "path": "1.1 Hoofdstuk Economisch denken en rekenen/_chapter-plan.md", "student_facing": false, "require_step_keywords": true, "scan_legacy": true }
+      ],
+      "forbidden_legacy_patterns": ["Indexcijfer berekenen in drie stappen"]
+    },
+    {
+      "contract_id": "1.1.2-indexpunten-procenten",
+      "par_nr": "1.1.2",
+      "par_name": "Percentages en indexcijfers",
+      "paragraph_dir": "1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers",
+      "procedure_id": "indexpunten-procenten",
+      "quality_ref_key": "indexpunten_procenten_step_count",
+      "canonical_step_count": 4,
+      "formal_step_ids_required": true,
+      "steps": [
+        { "formal_step_id": "identify_old_index", "student_label": "Bepaal het oude indexcijfer", "required_surface_keywords": ["oude indexcijfer", "oude index", "old index"] },
+        { "formal_step_id": "identify_new_index", "student_label": "Bepaal het nieuwe indexcijfer", "required_surface_keywords": ["nieuwe indexcijfer", "nieuwe index", "new index"] },
+        { "formal_step_id": "calculate_index_point_difference", "student_label": "Bereken het verschil in indexpunten", "required_surface_keywords": ["indexpunten", "index-point difference"] },
+        { "formal_step_id": "convert_index_difference_to_percent", "student_label": "Bereken procentuele verandering en benoem eenheden", "required_surface_keywords": ["oude indexcijfer", "oude index", "vermenigvuldig met 100", "x 100", "eenheden", "separately"] }
+      ],
+      "required_surfaces": [
+        { "id": "paragraph_plan", "path": "1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/_paragraph-plan.md", "student_facing": false, "require_step_keywords": true, "scan_legacy": true },
+        { "id": "part_a_paragraaf_md", "path": "1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – paragraaf.md", "student_facing": true, "require_step_keywords": true, "scan_legacy": true },
+        { "id": "uitleg_vaardigheden", "path": "1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – uitleg vaardigheden.html", "student_facing": true, "require_step_keywords": true, "scan_legacy": true },
+        { "id": "presentation", "path": "1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – presentatie.html", "student_facing": true, "require_step_keywords": true, "scan_legacy": true },
+        { "id": "procedure_game_data", "path": "shared/procedure/1.1.2.js", "student_facing": true, "procedure_data": true, "scan_legacy": true },
+        { "id": "quality_ref", "path": "1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2-quality-ref.yaml", "student_facing": false, "quality_ref": true },
+        { "id": "chapter_plan", "path": "1.1 Hoofdstuk Economisch denken en rekenen/_chapter-plan.md", "student_facing": false, "require_step_keywords": true, "scan_legacy": true }
+      ],
+      "forbidden_legacy_patterns": [
+        "Indexpunten en procenten onderscheiden in vijf stappen",
+        "indexpunten_procenten_step_count: 5"
+      ]
+    }
+  ]
+}

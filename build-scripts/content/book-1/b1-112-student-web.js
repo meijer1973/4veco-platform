@@ -1318,10 +1318,10 @@ function writeProcedureData() {
         description: "Bereken hoeveel een waarde stijgt of daalt ten opzichte van de oude waarde.",
         steps: [
           given("Gegeven", "Een oude waarde en een nieuwe waarde."),
-          choose("Stap 1", "Bepaal de oude waarde en de nieuwe waarde", ["Begin met de nieuwe waarde als basis", "Tel oud en nieuw bij elkaar op"]),
-          choose("Stap 2", "Bereken het verschil: nieuw min oud", ["Deel nieuw direct door oud", "Gebruik alleen het hoogste getal"]),
-          choose("Stap 3", "Deel het verschil door de oude waarde en vermenigvuldig met 100", ["Deel door de nieuwe waarde", "Laat x 100 weg"]),
-          choose("Stap 4", "Benoem stijging of daling op basis van het teken", ["Rond altijd af naar een positief getal", "Noem elk verschil indexpunten"]),
+          choose("Stap 1", "identify_old_new_values", "Bepaal de oude waarde en de nieuwe waarde", ["Begin met de nieuwe waarde als basis", "Tel oud en nieuw bij elkaar op"]),
+          choose("Stap 2", "calculate_difference", "Bereken het verschil: nieuw min oud", ["Deel nieuw direct door oud", "Gebruik alleen het hoogste getal"]),
+          choose("Stap 3", "divide_by_old_value", "Deel het verschil door de oude waarde en vermenigvuldig met 100", ["Deel door de nieuwe waarde", "Laat x 100 weg"]),
+          choose("Stap 4", "interpret_sign", "Benoem stijging of daling op basis van het teken", ["Rond altijd af naar een positief getal", "Noem elk verschil indexpunten"]),
           given("Resultaat", "Je hebt de procentuele stijging of daling berekend.")
         ]
       },
@@ -1332,10 +1332,10 @@ function writeProcedureData() {
         description: "Zet een waarde om naar een index met basisjaar 100.",
         steps: [
           given("Gegeven", "Een basisjaar en een waarde in een doeljaar."),
-          choose("Stap 1", "Kies het basisjaar en geef dit index 100", ["Kies automatisch het hoogste jaar", "Kies het jaar met de hoogste prijs"]),
-          choose("Stap 2", "Bepaal de waarde in het doeljaar", ["Gebruik het gemiddelde van alle jaren", "Gebruik alleen het verschil in euro's"]),
-          choose("Stap 3", "Deel de doeljaarwaarde door de basisjaarwaarde en vermenigvuldig met 100", ["Deel de basis door het doeljaar", "Trek 100 af voordat je deelt"]),
-          choose("Stap 4", "Interpreteer het indexcijfer ten opzichte van 100", ["Lees het indexcijfer als eurobedrag", "Noem elk indexcijfer automatisch inflatie"]),
+          choose("Stap 1", "choose_base_year", "Kies het basisjaar en geef dit index 100", ["Kies automatisch het hoogste jaar", "Kies het jaar met de hoogste prijs"]),
+          choose("Stap 2", "identify_target_value", "Bepaal de waarde in het doeljaar", ["Gebruik het gemiddelde van alle jaren", "Gebruik alleen het verschil in euro's"]),
+          choose("Stap 3", "calculate_index_number", "Deel de doeljaarwaarde door de basisjaarwaarde en vermenigvuldig met 100", ["Deel de basis door het doeljaar", "Trek 100 af voordat je deelt"]),
+          choose("Stap 4", "interpret_index_number", "Interpreteer het indexcijfer ten opzichte van 100", ["Lees het indexcijfer als eurobedrag", "Noem elk indexcijfer automatisch inflatie"]),
           given("Resultaat", "Je ziet hoeveel hoger of lager de waarde is dan in het basisjaar.")
         ]
       },
@@ -1346,10 +1346,10 @@ function writeProcedureData() {
         description: "Voorkom dat je indexpunten verwart met procentuele verandering.",
         steps: [
           given("Gegeven", "Een oud indexcijfer en een nieuw indexcijfer."),
-          choose("Stap 1", "Bepaal het oude indexcijfer", ["Begin met index 100, ook als dat niet het oude jaar is", "Gebruik het hoogste indexcijfer"]),
-          choose("Stap 2", "Bepaal het nieuwe indexcijfer", ["Gebruik het basisjaar in plaats van het nieuwe jaar", "Gebruik het gemiddelde van beide indexcijfers"]),
-          choose("Stap 3", "Bereken het verschil in indexpunten", ["Noem dit verschil meteen procenten", "Deel eerst door 100"]),
-          choose("Stap 4", "Deel door het oude indexcijfer, vermenigvuldig met 100 en benoem beide eenheden apart", ["Deel door het nieuwe indexcijfer", "Schrijf indexpunten met een procentteken"]),
+          choose("Stap 1", "identify_old_index", "Bepaal het oude indexcijfer", ["Begin met index 100, ook als dat niet het oude jaar is", "Gebruik het hoogste indexcijfer"]),
+          choose("Stap 2", "identify_new_index", "Bepaal het nieuwe indexcijfer", ["Gebruik het basisjaar in plaats van het nieuwe jaar", "Gebruik het gemiddelde van beide indexcijfers"]),
+          choose("Stap 3", "calculate_index_point_difference", "Bereken het verschil in indexpunten", ["Noem dit verschil meteen procenten", "Deel eerst door 100"]),
+          choose("Stap 4", "convert_index_difference_to_percent", "Deel door het oude indexcijfer, vermenigvuldig met 100 en benoem beide eenheden apart", ["Deel door het nieuwe indexcijfer", "Schrijf indexpunten met een procentteken"]),
           given("Resultaat", "Je kunt uitleggen waarom 125 naar 135 gelijk is aan 10 indexpunten maar 8 procent.")
         ]
       }
@@ -1362,10 +1362,11 @@ function given(label, text) {
   return { type: "given", label, text };
 }
 
-function choose(label, correct, wrongs) {
+function choose(label, formalStepId, correct, wrongs) {
   return {
     type: "choose",
     label,
+    formal_step_id: formalStepId,
     options: [
       { text: correct, correct: true },
       { text: wrongs[0], correct: false, feedback: "Dit verandert de basis van de berekening en levert een verkeerd antwoord op." },
