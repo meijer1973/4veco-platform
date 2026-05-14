@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "sprint_id": "S8",
+  "name": "Misconception Registry MVP",
+  "status": "planned",
+  "planned_on": "2026-05-14",
+  "plan": "docs/sprints/S8-plan.md",
+  "protected_reference_data_changes_allowed": false,
+  "protected_reference_data_change_mode": "none; internal diagnostic overlay only",
+  "human_review_required": false,
+  "scope": [
+    "tighten existing misconception schema",
+    "seed a small misconception registry",
+    "add read-only validator",
+    "add JSON/Markdown report hook",
+    "add reference-health and RAG diagnostic hooks"
+  ],
+  "blocked_scope": [
+    "references/machine mutation",
+    "references/external mutation",
+    "PV machine promotion",
+    "student-facing PV projection",
+    "lesson output generation or patching",
+    "student diagnostics",
+    "adaptive routing",
+    "mastery decisions",
+    "automatic sequencing",
+    "student-facing AI",
+    "summative decisions",
+    "misconceptions as primary evidence",
+    "misconceptions as curriculum authority"
+  ],
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js docs/sprints/S8-plan.md",
+    "node build-scripts/sprints/check-sprint-bundle.js S8",
+    "node build-scripts/references/check-misconceptions.js",
+    "node build-scripts/references/validate-core-schemas.js",
+    "node build-scripts/reports/generate-all.js",
+    "node build-scripts/reports/validate-report-json.js",
+    "node build-scripts/reports/generate-reference-health.js",
+    "node build-scripts/reports/check-reference-health.js",
+    "node build-scripts/rag/build-chunks.js",
+    "node build-scripts/rag/validate-chunks.js",
+    "node build-scripts/rag/run-retrieval-evals.js",
+    "node build-scripts/rag/validate-retrieval-eval-results.js",
+    "node build-scripts/references/check-roadmap-version-index.js",
+    "node build-scripts/references/check-source-manifest.js",
+    "node build-scripts/references/check-document-inventory.js",
+    "node build-scripts/sprints/emit-url-index.js --check",
+    "node build-scripts/sprints/check-sprint-bundle.js S8 --complete"
+  ]
+}
