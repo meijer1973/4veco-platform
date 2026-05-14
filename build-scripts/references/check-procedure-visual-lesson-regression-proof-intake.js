@@ -35,15 +35,31 @@ const report = readJson(reportPath);
 const requirements = readJson(requirementsPath);
 const packet = readJson(path.join(gateDir, 'review-packet.json'));
 const template = readJson(path.join(gateDir, 'proof-template.json'));
+const gateClosurePath = path.join(gateDir, 'gate-closure.json');
+const gateClosure = fs.existsSync(gateClosurePath) ? readJson(gateClosurePath) : null;
 
 assert(report.sprint_id === 'PV-G4', 'report must use sprint_id PV-G4');
 assert(report.gate_id === 'GATE-PV-G4-lesson-regression', 'report must use PV-G4 gate id');
 assert(
-  report.status === 'blocked_pending_lesson_team_evidence' || report.status === 'ready_for_hcs_review',
-  'report must be blocked or ready for HCS review'
+  report.status === 'blocked_pending_lesson_team_evidence' ||
+    report.status === 'ready_for_hcs_review' ||
+    (gateClosure && report.status === gateClosure.status),
+  'report must be blocked, ready for HCS review, or match recorded gate closure'
 );
 assert(report.required_proof_count === 2, 'report must require two proofs');
-if (report.recorded_proof_count >= report.required_proof_count) {
+if (gateClosure) {
+  assert(gateClosure.gate_id === 'GATE-PV-G4-lesson-regression', 'gate closure must use PV-G4 gate id');
+  assert(report.status === gateClosure.status, 'closed intake status must match gate closure status');
+  assert(report.gate_closure && report.gate_closure.status === gateClosure.status, 'closed intake must embed gate closure status');
+  assert(report.gate_recommendation.gate_closed === true, 'closed intake must mark gate_closed true');
+  assert(report.gate_recommendation.ready_for_hcs_closure === false, 'closed intake must not request HCS closure review');
+  assert(packet.gate_closed === true, 'closed review packet must mark gate_closed true');
+  assert(packet.status === gateClosure.status, 'closed review packet status must match gate closure');
+  assert(report.recorded_proof_count >= report.required_proof_count, 'closed gate must retain required proofs');
+  assert(report.missing_evidence.length === 0, 'closed gate intake must not list missing evidence');
+}
+
+if (!gateClosure && report.recorded_proof_count >= report.required_proof_count) {
   assert(report.status === 'ready_for_hcs_review', 'two recorded proofs should move intake to ready_for_hcs_review');
   assert(report.missing_evidence.length === 0, 'ready intake must not list missing evidence');
   assert(report.recorded_proofs.length >= report.required_proof_count, 'ready intake must include proof records');
@@ -54,7 +70,7 @@ if (report.recorded_proof_count >= report.required_proof_count) {
     assert(proof.intake_validation.missing_required_fields.length === 0, `recorded proof ${proof.proof_id} missing required fields`);
     assert(proof.intake_validation.failed_validation_command_count === 0, `recorded proof ${proof.proof_id} has failed validation commands`);
   }
-} else {
+} else if (!gateClosure) {
   assert(report.status === 'blocked_pending_lesson_team_evidence', 'incomplete intake must remain blocked');
 }
 assert(report.policy.references_machine_write_authorized === false, 'machine writes must be blocked');

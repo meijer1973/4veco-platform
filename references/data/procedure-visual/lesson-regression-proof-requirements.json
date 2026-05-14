@@ -5,7 +5,7 @@
   "gate_id": "GATE-PV-G4-lesson-regression",
   "status": "evidence_intake_prepared",
   "generated_by": "build-scripts/references/build-procedure-visual-lesson-regression-proof-intake.js",
-  "generated_on": "2026-05-14T14:13:17.551Z",
+  "generated_on": "2026-05-14T18:36:05.779Z",
   "policy": {
     "references_machine_write_authorized": false,
     "references_external_write_authorized": false,

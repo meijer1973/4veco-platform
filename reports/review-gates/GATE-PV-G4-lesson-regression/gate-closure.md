@@ -10,7 +10,7 @@ PV-G4 is closed as `pass_with_conditions`.
 
 Two lesson-owned PV regression proofs are recorded and reconciled. The platform
 proof intake now cites lesson commit
-`7ab984512178249fe39e0c7ade56da0b8acc212f` with
+`52f9237de9e465e7f75483f6feac4e80241e8631` with
 `lesson_worktree_dirty_at_generation: false`, and the proof-intake checker
 passes.
 

@@ -1,11 +1,12 @@
 {
   "gate_id": "GATE-PV-G4-lesson-regression",
   "sprint_id": "PV-G4",
-  "status": "evidence_ready_for_hcs_review",
+  "status": "pass_with_conditions",
   "recorded_proof_count": 2,
   "required_proof_count": 2,
-  "ready_for_hcs_closure": true,
-  "recommended_status_now": "human_review_required",
+  "gate_closed": true,
+  "ready_for_hcs_closure": false,
+  "recommended_status_now": "pass_with_conditions",
   "machine_promotion_authorized": false,
   "student_facing_projection_authorized": false
 }

@@ -3,9 +3,9 @@
   "report_id": "procedure-visual-lesson-regression-proof-intake",
   "sprint_id": "PV-G4",
   "gate_id": "GATE-PV-G4-lesson-regression",
-  "status": "ready_for_hcs_review",
+  "status": "pass_with_conditions",
   "generated_by": "build-scripts/references/build-procedure-visual-lesson-regression-proof-intake.js",
-  "generated_on": "2026-05-14T14:13:17.556Z",
+  "generated_on": "2026-05-14T18:36:05.782Z",
   "source_evidence": {
     "promotion_pipeline_design": "references/data/procedure-visual/promotion-pipeline-design.json",
     "promotion_pipeline_status": "design_only",
@@ -25,7 +25,7 @@
   "recorded_proofs": [
     {
       "proof_id": "PVG4-proof-001",
-      "lesson_repo_commit": "7ab984512178249fe39e0c7ade56da0b8acc212f",
+      "lesson_repo_commit": "52f9237de9e465e7f75483f6feac4e80241e8631",
       "lesson_worktree_dirty_at_generation": false,
       "paragraph_or_surface": "1.1.1 Schaarste en economisch denken / procedure-game + answer-model parity",
       "pv_records_used": {
@@ -175,7 +175,7 @@
     },
     {
       "proof_id": "PVG4-proof-002",
-      "lesson_repo_commit": "7ab984512178249fe39e0c7ade56da0b8acc212f",
+      "lesson_repo_commit": "52f9237de9e465e7f75483f6feac4e80241e8631",
       "lesson_worktree_dirty_at_generation": false,
       "paragraph_or_surface": "Bounded lesson-owned A61 table-trace pilot surface",
       "pv_records_used": {
@@ -219,10 +219,31 @@
       }
     }
   ],
+  "gate_closure": {
+    "status": "pass_with_conditions",
+    "closed_on": "2026-05-14",
+    "closure_confirmed_by_human": true,
+    "closure_path": "reports/review-gates/GATE-PV-G4-lesson-regression/gate-closure.json",
+    "conditions": [
+      "Proof 002 is accepted only as bounded proof diversity; it is not a completed student-facing paragraph, published 1.1.3 surface, or classroom-ready A61 route.",
+      "Keep all PV records under references/data/procedure-visual unless a later promotion gate explicitly authorizes otherwise.",
+      "Do not authorize student-facing PV projection through PV-G4.",
+      "Do not authorize diagnostics, adaptive routing, mastery, sequencing, AI, or summative use through PV-G4.",
+      "Do not treat generated lesson-output hand patches as proof in future PV-dependent sprints."
+    ],
+    "blocked_outcomes": [
+      "references/machine Procedure-Visual registry creation",
+      "student-facing PV projection",
+      "adaptive or diagnostic PV use",
+      "mastery, sequencing, AI, or summative PV use",
+      "claiming the A61 pilot is a student-ready route"
+    ]
+  },
   "missing_evidence": [],
   "next_action_for_lesson_team": [
-    "Submit the HCS PV-G4 lesson-regression review packet for human gate review.",
-    "Do not treat PV-G4 as closed until HCS records a gate decision."
+    "Carry the PV-G4 pass-with-conditions boundary into L1.5B, L1.5G, L1.6, and later PV-dependent work.",
+    "Keep Proof 002 bounded as non-student-facing A61 proof diversity; do not treat it as a classroom-ready route.",
+    "Do not authorize PV machine promotion, student-facing PV projection, diagnostics, adaptive routing, mastery, sequencing, AI, or summative use through this gate."
   ],
   "proof_requirements": {
     "schema_version": 1,
@@ -231,7 +252,7 @@
     "gate_id": "GATE-PV-G4-lesson-regression",
     "status": "evidence_intake_prepared",
     "generated_by": "build-scripts/references/build-procedure-visual-lesson-regression-proof-intake.js",
-    "generated_on": "2026-05-14T14:13:17.551Z",
+    "generated_on": "2026-05-14T18:36:05.779Z",
     "policy": {
       "references_machine_write_authorized": false,
       "references_external_write_authorized": false,
@@ -316,8 +337,9 @@
     }
   ],
   "gate_recommendation": {
-    "ready_for_hcs_closure": true,
-    "recommended_status_now": "submit_for_hcs_review",
-    "reason": "PV-G4 has two recorded lesson-side regression proofs with passing validation commands; HCS still must review and decide."
+    "gate_closed": true,
+    "ready_for_hcs_closure": false,
+    "recommended_status_now": "pass_with_conditions",
+    "reason": "HCS has recorded pass_with_conditions; carry forward the gate conditions."
   }
 }

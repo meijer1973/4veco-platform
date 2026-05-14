@@ -1,13 +1,13 @@
 # GATE-PV-G4 Lesson Regression: Evidence Intake Packet
 
 Sprint: `PV-G4`
-Status: `evidence_ready_for_hcs_review`
+Status: `pass_with_conditions`
 
-This packet records two lesson-side PV regression proofs for HCS human review. It does not close the gate by itself.
+This packet records PV-G4 closure as `pass_with_conditions`. It preserves the proof evidence and conditions; it does not authorize blocked PV uses.
 
 ## Context
 
-PV.7 and PV.8 require at least two lesson-side PV regression proofs before any student-facing or machine-authoritative PV promotion can reopen. The current platform-side PV overlay is mature enough for proof intake, but the lesson-side evidence is still absent.
+PV-G4 now supplies the lesson-regression evidence that PV.7 and PV.8 required before any later promotion discussion can reopen. Machine-authoritative and student-facing PV promotion still remain blocked until later CLI, mutation-log, validator, and human promotion gates authorize them.
 
 ## Current Proof Count
 
@@ -28,19 +28,19 @@ Recorded proofs: `2/2`
 
 Are at least two lesson-side PV regression proofs recorded and owned by the lesson team?
 
-Recommended answer now: A. Yes, two proof records are recorded.
+Recorded outcome: A. Yes, two proof records are recorded and HCS accepted them with conditions.
 
 ### PVG4-Q2
 
 Does each proof show PV data being used or validated in a fresh paragraph or pilot surface without hand-built generated-output patching?
 
-Recommended answer now: A. Yes, inspect proof artifacts and validation commands.
+Recorded outcome: A. Yes, with Proof 002 bounded as non-student-facing proof diversity.
 
 ### PVG4-Q3
 
 Did complete paragraph validation and Book 1 checks pass where applicable?
 
-Recommended answer now: A. Yes, commands are recorded as passed in the intake.
+Recorded outcome: A. Yes, commands are recorded as passed in the intake.
 
 ### PVG4-Q4
 
@@ -52,9 +52,17 @@ Recommended answer: A. No.
 
 What gate status should `GATE-PV-G4-lesson-regression` receive?
 
-Recommended answer now: `human_review_required`.
+Recorded answer: `pass_with_conditions`.
 
-## Required Conditions Before Closure
+## Conditions Carried Forward
+
+- Proof 002 is accepted only as bounded proof diversity; it is not a completed student-facing paragraph, published 1.1.3 surface, or classroom-ready A61 route.
+- Keep all PV records under references/data/procedure-visual unless a later promotion gate explicitly authorizes otherwise.
+- Do not authorize student-facing PV projection through PV-G4.
+- Do not authorize diagnostics, adaptive routing, mastery, sequencing, AI, or summative use through PV-G4.
+- Do not treat generated lesson-output hand patches as proof in future PV-dependent sprints.
+
+## Closure Evidence Requirements
 
 - Record two lesson-team-owned proof records.
 - Include reproducible validation commands and outputs.

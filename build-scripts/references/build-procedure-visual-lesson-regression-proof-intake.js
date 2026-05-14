@@ -75,6 +75,19 @@ function loadRecordedProofs(requirements) {
     });
 }
 
+function loadGateClosure() {
+  const closurePath = path.join(paths.gateDir, 'gate-closure.json');
+  if (!fs.existsSync(closurePath)) return null;
+  const closure = readJson(closurePath);
+  if (closure.gate_id !== GATE_ID) {
+    throw new Error(`Gate closure ${closurePath} has unexpected gate_id ${closure.gate_id}`);
+  }
+  return {
+    ...closure,
+    closure_path: closurePath.replace(/\\/g, '/'),
+  };
+}
+
 function buildRequirements() {
   return {
     schema_version: 1,
@@ -135,10 +148,12 @@ function buildReport(requirements) {
   const promotionDesign = readJson(paths.promotionDesign);
   const forbiddenMachineFilesFound = forbiddenMachineFiles.filter((file) => fs.existsSync(file));
   const recordedProofs = loadRecordedProofs(requirements);
+  const gateClosure = loadGateClosure();
   const enoughProofs = recordedProofs.length >= requirements.required_proof_count;
   const proofRecordsComplete = recordedProofs.every((proof) => proof.intake_validation.missing_required_fields.length === 0);
   const proofCommandsPassed = recordedProofs.every((proof) => proof.intake_validation.failed_validation_command_count === 0);
   const readyForHcsReview = enoughProofs && proofRecordsComplete && proofCommandsPassed && forbiddenMachineFilesFound.length === 0;
+  const status = gateClosure ? gateClosure.status : (readyForHcsReview ? 'ready_for_hcs_review' : 'blocked_pending_lesson_team_evidence');
 
   const checks = [
     {
@@ -182,7 +197,7 @@ function buildReport(requirements) {
     report_id: 'procedure-visual-lesson-regression-proof-intake',
     sprint_id: SPRINT_ID,
     gate_id: GATE_ID,
-    status: readyForHcsReview ? 'ready_for_hcs_review' : 'blocked_pending_lesson_team_evidence',
+    status,
     generated_by: SCRIPT,
     generated_on: new Date().toISOString(),
     source_evidence: {
@@ -196,13 +211,27 @@ function buildReport(requirements) {
     required_proof_count: requirements.required_proof_count,
     recorded_proof_count: recordedProofs.length,
     recorded_proofs: recordedProofs,
+    gate_closure: gateClosure ? {
+      status: gateClosure.status,
+      closed_on: gateClosure.closed_on,
+      closure_confirmed_by_human: gateClosure.closure_confirmed_by_human,
+      closure_path: gateClosure.closure_path,
+      conditions: gateClosure.conditions || [],
+      blocked_outcomes: gateClosure.blocked_outcomes || [],
+    } : null,
     missing_evidence: readyForHcsReview ? [] : [
       ...(!enoughProofs ? ['two lesson-team-owned PV regression proofs'] : []),
       ...(!proofRecordsComplete ? ['complete PV-G4 proof-template fields for each proof'] : []),
       ...(!proofCommandsPassed ? ['passing validation output for each proof'] : []),
       ...(forbiddenMachineFilesFound.length > 0 ? ['removal of forbidden PV machine registry files'] : []),
     ],
-    next_action_for_lesson_team: readyForHcsReview
+    next_action_for_lesson_team: gateClosure
+      ? [
+        'Carry the PV-G4 pass-with-conditions boundary into L1.5B, L1.5G, L1.6, and later PV-dependent work.',
+        'Keep Proof 002 bounded as non-student-facing A61 proof diversity; do not treat it as a classroom-ready route.',
+        'Do not authorize PV machine promotion, student-facing PV projection, diagnostics, adaptive routing, mastery, sequencing, AI, or summative use through this gate.',
+      ]
+      : readyForHcsReview
       ? [
         'Submit the HCS PV-G4 lesson-regression review packet for human gate review.',
         'Do not treat PV-G4 as closed until HCS records a gate decision.',
@@ -218,9 +247,12 @@ function buildReport(requirements) {
     forbidden_machine_files_found: forbiddenMachineFilesFound,
     checks,
     gate_recommendation: {
-      ready_for_hcs_closure: readyForHcsReview,
-      recommended_status_now: readyForHcsReview ? 'submit_for_hcs_review' : 'hold_pending_lesson_evidence',
-      reason: readyForHcsReview
+      gate_closed: Boolean(gateClosure),
+      ready_for_hcs_closure: !gateClosure && readyForHcsReview,
+      recommended_status_now: gateClosure ? gateClosure.status : (readyForHcsReview ? 'submit_for_hcs_review' : 'hold_pending_lesson_evidence'),
+      reason: gateClosure
+        ? `HCS has recorded ${gateClosure.status}; carry forward the gate conditions.`
+        : readyForHcsReview
         ? 'PV-G4 has two recorded lesson-side regression proofs with passing validation commands; HCS still must review and decide.'
         : 'PV-G4 requires at least two complete lesson-side regression proofs before HCS can review the gate.',
     },
@@ -272,13 +304,21 @@ function markdownReport(report) {
     '',
     '## Decision',
     '',
-    report.gate_recommendation.ready_for_hcs_closure
+    report.gate_recommendation.gate_closed
+      ? `PV-G4 is closed as \`${report.status}\`. This intake is retained as the proof evidence record and carries the gate conditions forward.`
+      : report.gate_recommendation.ready_for_hcs_closure
       ? 'PV-G4 has enough recorded lesson-side evidence for HCS human review. This packet does not close the gate by itself.'
       : 'PV-G4 is not ready for closure. The references team can prepare the evidence intake packet, but the required proof must come from lesson-team-owned build or validation work.',
     '',
     '## Missing Evidence',
     '',
-    ...(report.missing_evidence.length ? report.missing_evidence.map((item) => `- ${item}`) : ['- None for intake; HCS review still required.']),
+    ...(report.missing_evidence.length ? report.missing_evidence.map((item) => `- ${item}`) : [report.gate_recommendation.gate_closed ? '- None. HCS gate closure is recorded.' : '- None for intake; HCS review still required.']),
+    ...(report.gate_closure ? [
+      '',
+      '## Gate Conditions',
+      '',
+      ...report.gate_closure.conditions.map((item) => `- ${item}`),
+    ] : []),
     '',
     '## Required Proof Features',
     '',
@@ -308,19 +348,24 @@ function markdownProofTemplate(template) {
 
 function reviewPacket(report) {
   const ready = report.gate_recommendation.ready_for_hcs_closure;
+  const closed = report.gate_recommendation.gate_closed;
   return [
     '# GATE-PV-G4 Lesson Regression: Evidence Intake Packet',
     '',
     `Sprint: \`${SPRINT_ID}\``,
-    `Status: \`${ready ? 'evidence_ready_for_hcs_review' : 'evidence_intake_prepared_not_ready_for_closure'}\``,
+    `Status: \`${closed ? report.status : (ready ? 'evidence_ready_for_hcs_review' : 'evidence_intake_prepared_not_ready_for_closure')}\``,
     '',
-    ready
+    closed
+      ? `This packet records PV-G4 closure as \`${report.status}\`. It preserves the proof evidence and conditions; it does not authorize blocked PV uses.`
+      : ready
       ? 'This packet records two lesson-side PV regression proofs for HCS human review. It does not close the gate by itself.'
       : 'This packet prepares the PV-G4 evidence request. It does not close the gate because lesson-side PV regression proof evidence is incomplete.',
     '',
     '## Context',
     '',
-    'PV.7 and PV.8 require at least two lesson-side PV regression proofs before any student-facing or machine-authoritative PV promotion can reopen. The current platform-side PV overlay is mature enough for proof intake, but the lesson-side evidence is still absent.',
+    closed
+      ? 'PV-G4 now supplies the lesson-regression evidence that PV.7 and PV.8 required before any later promotion discussion can reopen. Machine-authoritative and student-facing PV promotion still remain blocked until later CLI, mutation-log, validator, and human promotion gates authorize them.'
+      : 'PV.7 and PV.8 require at least two lesson-side PV regression proofs before any student-facing or machine-authoritative PV promotion can reopen. The current platform-side PV overlay is mature enough for proof intake, but the lesson-side evidence is still absent.',
     '',
     '## Current Proof Count',
     '',
@@ -336,19 +381,19 @@ function reviewPacket(report) {
     '',
     'Are at least two lesson-side PV regression proofs recorded and owned by the lesson team?',
     '',
-    ready ? 'Recommended answer now: A. Yes, two proof records are recorded.' : 'Recommended answer now: B. No, hold until proof records exist.',
+    closed ? 'Recorded outcome: A. Yes, two proof records are recorded and HCS accepted them with conditions.' : ready ? 'Recommended answer now: A. Yes, two proof records are recorded.' : 'Recommended answer now: B. No, hold until proof records exist.',
     '',
     '### PVG4-Q2',
     '',
     'Does each proof show PV data being used or validated in a fresh paragraph or pilot surface without hand-built generated-output patching?',
     '',
-    ready ? 'Recommended answer now: A. Yes, inspect proof artifacts and validation commands.' : 'Recommended answer now: B. Not yet assessable.',
+    closed ? 'Recorded outcome: A. Yes, with Proof 002 bounded as non-student-facing proof diversity.' : ready ? 'Recommended answer now: A. Yes, inspect proof artifacts and validation commands.' : 'Recommended answer now: B. Not yet assessable.',
     '',
     '### PVG4-Q3',
     '',
     'Did complete paragraph validation and Book 1 checks pass where applicable?',
     '',
-    ready ? 'Recommended answer now: A. Yes, commands are recorded as passed in the intake.' : 'Recommended answer now: B. Not yet assessable.',
+    closed ? 'Recorded outcome: A. Yes, commands are recorded as passed in the intake.' : ready ? 'Recommended answer now: A. Yes, commands are recorded as passed in the intake.' : 'Recommended answer now: B. Not yet assessable.',
     '',
     '### PVG4-Q4',
     '',
@@ -360,10 +405,19 @@ function reviewPacket(report) {
     '',
     'What gate status should `GATE-PV-G4-lesson-regression` receive?',
     '',
-    ready ? 'Recommended answer now: `human_review_required`.' : 'Recommended answer now: `hold_pending_lesson_evidence`.',
+    closed ? `Recorded answer: \`${report.status}\`.` : ready ? 'Recommended answer now: `human_review_required`.' : 'Recommended answer now: `hold_pending_lesson_evidence`.',
     '',
-    '## Required Conditions Before Closure',
-    '',
+    ...(closed ? [
+      '## Conditions Carried Forward',
+      '',
+      ...report.gate_closure.conditions.map((item) => `- ${item}`),
+      '',
+      '## Closure Evidence Requirements',
+      '',
+    ] : [
+      '## Required Conditions Before Closure',
+      '',
+    ]),
     '- Record two lesson-team-owned proof records.',
     '- Include reproducible validation commands and outputs.',
     '- Confirm no generated lesson output was hand-patched.',
@@ -388,11 +442,12 @@ function main() {
   writeJson(path.join(paths.gateDir, 'review-packet.json'), {
     gate_id: GATE_ID,
     sprint_id: SPRINT_ID,
-    status: ready ? 'evidence_ready_for_hcs_review' : 'evidence_intake_prepared_not_ready_for_closure',
+    status: report.gate_recommendation.gate_closed ? report.status : (ready ? 'evidence_ready_for_hcs_review' : 'evidence_intake_prepared_not_ready_for_closure'),
     recorded_proof_count: report.recorded_proof_count,
     required_proof_count: report.required_proof_count,
-    ready_for_hcs_closure: ready,
-    recommended_status_now: ready ? 'human_review_required' : 'hold_pending_lesson_evidence',
+    gate_closed: report.gate_recommendation.gate_closed,
+    ready_for_hcs_closure: report.gate_recommendation.ready_for_hcs_closure,
+    recommended_status_now: report.gate_recommendation.gate_closed ? report.status : (ready ? 'human_review_required' : 'hold_pending_lesson_evidence'),
     machine_promotion_authorized: false,
     student_facing_projection_authorized: false,
   });

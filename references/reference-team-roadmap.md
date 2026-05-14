@@ -71,7 +71,7 @@ Update 2026-05-03: `PV.8 Promotion Pipeline Design` is completed as a design-onl
 
 Update 2026-05-03: `PV-G4 Lesson Regression Proof` evidence intake is prepared. The new proof template and review packet define the two required lesson-team-owned PV regression proofs, validation expectations, and no-hand-patch requirement. PV-G4 is not closed: there are currently 0/2 recorded lesson-side proofs, no lesson-team output was committed by the references team, and PV machine promotion plus student-facing PV projection remain blocked.
 
-Update 2026-05-14: `PV-G4 Lesson Regression Proof` received lesson-team proof records and HCS lead review returned `pass_with_conditions`. The platform proof intake now records `2/2` proofs from lesson commit `7ab984512178249fe39e0c7ade56da0b8acc212f` with clean-worktree metadata, and the proof-intake checker passes. Conditions remain active: Proof 002 is bounded non-student-facing A61 proof diversity only, and PV machine promotion, student-facing PV projection, diagnostics, adaptive routing, mastery, sequencing, AI, and summative use remain blocked.
+Update 2026-05-14: `PV-G4 Lesson Regression Proof` received lesson-team proof records and HCS lead review returned `pass_with_conditions`. The platform proof intake now records `2/2` proofs from lesson commit `52f9237de9e465e7f75483f6feac4e80241e8631` with clean-worktree metadata, and the proof-intake checker passes. A post-closure report-state cleanup made the intake generator closure-aware, so current intake reports `pass_with_conditions` instead of `ready_for_hcs_review`. Conditions remain active: Proof 002 is bounded non-student-facing A61 proof diversity only, and PV machine promotion, student-facing PV projection, diagnostics, adaptive routing, mastery, sequencing, AI, and summative use remain blocked.
 
 Compatibility decisions:
 
@@ -1218,7 +1218,7 @@ Stop condition: the references team must not commit lesson-team output unless ex
 
 Preparation: proof intake prepared on 2026-05-03. `GATE-PV-G4-lesson-regression` now has a proof template, proof-intake report, and evidence review packet. Initial proof count was 0/2, so the gate remained blocked pending lesson-team-owned regression evidence.
 
-Completion: closed on 2026-05-14 as `pass_with_conditions` after lesson-team L-PV0 through L-PV5. The platform intake now records 2/2 lesson-owned proofs and embeds the reconciled lesson commit `7ab984512178249fe39e0c7ade56da0b8acc212f` with `lesson_worktree_dirty_at_generation: false`; `check-procedure-visual-lesson-regression-proof-intake.js` passes. Conditions remain active: Proof 002 is only bounded, non-student-facing A61 proof diversity, and no PV machine promotion, student-facing PV projection, diagnostics, adaptive routing, mastery, sequencing, AI, or summative use is authorized.
+Completion: closed on 2026-05-14 as `pass_with_conditions` after lesson-team L-PV0 through L-PV5. The platform intake now records 2/2 lesson-owned proofs and embeds the reconciled lesson commit `52f9237de9e465e7f75483f6feac4e80241e8631` with `lesson_worktree_dirty_at_generation: false`; `check-procedure-visual-lesson-regression-proof-intake.js` passes. Post-closure report-state cleanup made the intake and review packet closure-aware. Conditions remain active: Proof 002 is only bounded, non-student-facing A61 proof diversity, and no PV machine promotion, student-facing PV projection, diagnostics, adaptive routing, mastery, sequencing, AI, or summative use is authorized.
 
 ### Sprint 8 Misconception Registry MVP
 

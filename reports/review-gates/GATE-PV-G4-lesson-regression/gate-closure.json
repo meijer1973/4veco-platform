@@ -12,7 +12,7 @@
   "summary": "PV-G4 is closed as pass_with_conditions. Two lesson-owned PV regression proofs are recorded and reconciled; no PV machine promotion, student-facing projection, diagnostics, adaptive use, mastery, sequencing, AI, or summative use is authorized.",
   "required_proof_count": 2,
   "recorded_proof_count": 2,
-  "reconciled_lesson_commit": "7ab984512178249fe39e0c7ade56da0b8acc212f",
+  "reconciled_lesson_commit": "52f9237de9e465e7f75483f6feac4e80241e8631",
   "lesson_worktree_dirty_at_generation": false,
   "protected_reference_data_changed": false,
   "machine_promotion_authorized": false,
