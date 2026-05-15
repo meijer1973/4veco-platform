@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "generated_by": "build-scripts/reports/generate-reference-health.js",
-  "generated_on": "2026-05-03T09:58:23.667Z",
+  "generated_on": "2026-05-15T08:58:11.599Z",
   "source_files": [
     "references/machine/micro-teaching-units.json",
     "references/machine/begrippen.json",
@@ -10,6 +10,8 @@
     "references/data/alignment-graph.json",
     "reports/review-gates/GATE-R5-alignment-graph/gate-closure.json",
     "reports/review-gates/GATE-R7-rag/gate-closure.json",
+    "references/data/misconceptions/misconception-registry.json",
+    "reports/json/misconception-registry.json",
     "reports/json/procedure-visual-coverage.json",
     "reports/json/skilltree-generator-readiness.json",
     "reports/json/*.json"
@@ -66,13 +68,14 @@
   },
   "unresolved_refs": {
     "status": "warn",
-    "issues": 81
+    "issues": 103
   },
   "qc_findings": {
-    "report_count": 15,
-    "total_issues": 448,
-    "high_or_critical_issues": 10,
+    "report_count": 16,
+    "total_issues": 474,
+    "high_or_critical_issues": 14,
     "by_report_status": {
+      "info": 1,
       "pass": 6,
       "passed": 2,
       "warn": 7
@@ -105,6 +108,36 @@
     "curriculum_authority": false,
     "student_facing_exposure": false,
     "primary_evidence": false
+  },
+  "misconception_registry": {
+    "source": "references/data/misconceptions/misconception-registry.json",
+    "report": "reports/json/misconception-registry.json",
+    "status": "info",
+    "registry_status": "active_internal_diagnostic",
+    "record_count": 4,
+    "active_record_count": 4,
+    "by_status": {
+      "active": 4
+    },
+    "by_severity": {
+      "high": 4
+    },
+    "internal_only": true,
+    "diagnostic_design_context": true,
+    "primary_evidence": false,
+    "curriculum_authority": false,
+    "exam_authority": false,
+    "scoring_rule": false,
+    "student_facing_diagnosis": false,
+    "student_facing_exposure": false,
+    "adaptive_routing": false,
+    "mastery_decision": false,
+    "automatic_sequencing": false,
+    "student_facing_ai": false,
+    "summative_use": false,
+    "pv_projection": false,
+    "pv_machine_promotion": false,
+    "machine_registry_authority": false
   },
   "procedure_visual_backbone": {
     "source": "reports/json/procedure-visual-coverage.json",

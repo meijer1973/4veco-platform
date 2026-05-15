@@ -1,6 +1,6 @@
 # Roadmap Version Index
 
-Updated: 2026-05-03
+Updated: 2026-05-15
 
 The JSON file is canonical for tooling:
 
@@ -12,12 +12,13 @@ docs/roadmaps/roadmap-version-index.json
 
 | Roadmap | Version | Path | Notes |
 |---|---|---|---|
-| References Team Roadmap | `v2.41-pvg4-pass-with-conditions` | `references/reference-team-roadmap.md` | Current operating roadmap after HCS closed PV-G4 as `pass_with_conditions`; two reconciled lesson-team proofs are recorded, while PV machine promotion and student-facing PV projection remain blocked. |
+| References Team Roadmap | `v2.42-s8-misconception-registry` | `references/reference-team-roadmap.md` | Current operating roadmap after completing S8 misconception registry as an internal-only diagnostic overlay; Sprint 9 is the next planned reference sprint. |
 
 ## Outdated Archive
 
 | Roadmap | Version | Path | Superseded By |
 |---|---|---|---|
+| References Team Roadmap before S8 misconception registry completion | `v2.41-pvg4-pass-with-conditions` | `docs/roadmaps/outdated/reference-team-roadmap-v2.41-pvg4-pass-with-conditions.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before PV-G4 proof intake preparation | `v2.39-pv8-promotion-pipeline-design` | `docs/roadmaps/outdated/reference-team-roadmap-v2.39-pv8-promotion-pipeline-design.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before PV.8 promotion-pipeline design | `v2.38-pv7-gate-closed` | `docs/roadmaps/outdated/reference-team-roadmap-v2.38-pv7-gate-closed.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before PV.7 gate closure | `v2.37-pv7-machine-promotion-review-prepared` | `docs/roadmaps/outdated/reference-team-roadmap-v2.37-pv7-machine-promotion-review-prepared.md` | `references/reference-team-roadmap.md` |

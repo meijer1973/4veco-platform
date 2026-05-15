@@ -29,6 +29,7 @@ function main() {
     'unresolved_refs',
     'qc_findings',
     'quality_issue_model',
+    'misconception_registry',
     'procedure_visual_backbone',
     'skilltree_generator_readiness',
     'schema_validation_status',
@@ -54,6 +55,25 @@ function main() {
   if (qualityIssueModel.curriculum_authority !== false) errors.push('quality_issue_model.curriculum_authority must be false');
   if (qualityIssueModel.student_facing_exposure !== false) errors.push('quality_issue_model.student_facing_exposure must be false');
   if (qualityIssueModel.primary_evidence !== false) errors.push('quality_issue_model.primary_evidence must be false');
+
+  const misconceptionRegistry = data.misconception_registry || {};
+  if (misconceptionRegistry.internal_only !== true) errors.push('misconception_registry.internal_only must be true');
+  if (misconceptionRegistry.diagnostic_design_context !== true) errors.push('misconception_registry.diagnostic_design_context must be true');
+  if (misconceptionRegistry.primary_evidence !== false) errors.push('misconception_registry.primary_evidence must be false');
+  if (misconceptionRegistry.curriculum_authority !== false) errors.push('misconception_registry.curriculum_authority must be false');
+  if (misconceptionRegistry.exam_authority !== false) errors.push('misconception_registry.exam_authority must be false');
+  if (misconceptionRegistry.scoring_rule !== false) errors.push('misconception_registry.scoring_rule must be false');
+  if (misconceptionRegistry.student_facing_diagnosis !== false) errors.push('misconception_registry.student_facing_diagnosis must be false');
+  if (misconceptionRegistry.student_facing_exposure !== false) errors.push('misconception_registry.student_facing_exposure must be false');
+  if (misconceptionRegistry.adaptive_routing !== false) errors.push('misconception_registry.adaptive_routing must be false');
+  if (misconceptionRegistry.mastery_decision !== false) errors.push('misconception_registry.mastery_decision must be false');
+  if (misconceptionRegistry.automatic_sequencing !== false) errors.push('misconception_registry.automatic_sequencing must be false');
+  if (misconceptionRegistry.student_facing_ai !== false) errors.push('misconception_registry.student_facing_ai must be false');
+  if (misconceptionRegistry.summative_use !== false) errors.push('misconception_registry.summative_use must be false');
+  if (misconceptionRegistry.pv_projection !== false) errors.push('misconception_registry.pv_projection must be false');
+  if (misconceptionRegistry.pv_machine_promotion !== false) errors.push('misconception_registry.pv_machine_promotion must be false');
+  if (misconceptionRegistry.machine_registry_authority !== false) errors.push('misconception_registry.machine_registry_authority must be false');
+  if (!(misconceptionRegistry.active_record_count >= 4)) errors.push('misconception_registry.active_record_count must be at least 4');
 
   const pv = data.procedure_visual_backbone || {};
   if (pv.diagnostic_only !== true) errors.push('procedure_visual_backbone.diagnostic_only must be true');

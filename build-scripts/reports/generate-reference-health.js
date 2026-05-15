@@ -57,11 +57,12 @@ function main() {
     'dead-units',
     'begrippen-coverage',
     'empty-needs-audit-summary',
-    'alignment-graph-integrity',
-    'evidence-anchor-status',
-    'reference-quality-issues',
-    'procedure-visual-coverage',
-    'skilltree-generator-readiness',
+      'alignment-graph-integrity',
+      'evidence-anchor-status',
+      'reference-quality-issues',
+      'misconception-registry',
+      'procedure-visual-coverage',
+      'skilltree-generator-readiness',
   ].map(report);
 
   const issueCount = reports.reduce((sum, item) => sum + (item.issues || []).length, 0);
@@ -73,6 +74,7 @@ function main() {
   const examGaps = readJson('reports/json/exam-question-extraction-gaps.json', null);
   const retrievalEval = readJson('references/data/rag/retrieval_eval_results.json', null);
   const qualityIssueReport = report('reference-quality-issues');
+  const misconceptionReport = report('misconception-registry');
   const procedureVisualCoverage = report('procedure-visual-coverage');
   const skilltreeGeneratorReadiness = report('skilltree-generator-readiness');
   const qualityIssueLog = readJson('references/data/qc/reference-quality-issues.json', {
@@ -84,6 +86,28 @@ function main() {
     },
     issues: [],
   });
+  const misconceptionRegistry = readJson('references/data/misconceptions/misconception-registry.json', {
+    authority_flags: {
+      internal_only: true,
+      diagnostic_design_context: true,
+      primary_evidence: false,
+      curriculum_authority: false,
+      exam_authority: false,
+      scoring_rule: false,
+      student_facing_diagnosis: false,
+      student_facing_exposure: false,
+      adaptive_routing: false,
+      mastery_decision: false,
+      automatic_sequencing: false,
+      student_facing_ai: false,
+      summative_use: false,
+      pv_projection: false,
+      pv_machine_promotion: false,
+      machine_registry_authority: false,
+    },
+    records: [],
+  });
+  const misconceptionFlags = misconceptionRegistry.authority_flags || {};
 
   const state = {
     schema_version: 1,
@@ -97,6 +121,8 @@ function main() {
       'references/data/alignment-graph.json',
       'reports/review-gates/GATE-R5-alignment-graph/gate-closure.json',
       'reports/review-gates/GATE-R7-rag/gate-closure.json',
+      'references/data/misconceptions/misconception-registry.json',
+      'reports/json/misconception-registry.json',
       'reports/json/procedure-visual-coverage.json',
       'reports/json/skilltree-generator-readiness.json',
       'reports/json/*.json',
@@ -151,6 +177,34 @@ function main() {
       curriculum_authority: qualityIssueLog.authority_boundary && qualityIssueLog.authority_boundary.curriculum_authority === true,
       student_facing_exposure: qualityIssueLog.authority_boundary && qualityIssueLog.authority_boundary.student_facing_exposure === true,
       primary_evidence: qualityIssueLog.authority_boundary && qualityIssueLog.authority_boundary.primary_evidence === true,
+    },
+    misconception_registry: {
+      source: 'references/data/misconceptions/misconception-registry.json',
+      report: 'reports/json/misconception-registry.json',
+      status: misconceptionReport.status,
+      registry_status: misconceptionRegistry.status || 'unknown',
+      record_count: Array.isArray(misconceptionRegistry.records) ? misconceptionRegistry.records.length : 0,
+      active_record_count: Array.isArray(misconceptionRegistry.records)
+        ? misconceptionRegistry.records.filter((item) => item.status === 'active').length
+        : 0,
+      by_status: countBy(misconceptionRegistry.records || [], (item) => item.status),
+      by_severity: countBy(misconceptionRegistry.records || [], (item) => item.severity),
+      internal_only: misconceptionFlags.internal_only === true,
+      diagnostic_design_context: misconceptionFlags.diagnostic_design_context === true,
+      primary_evidence: misconceptionFlags.primary_evidence === true,
+      curriculum_authority: misconceptionFlags.curriculum_authority === true,
+      exam_authority: misconceptionFlags.exam_authority === true,
+      scoring_rule: misconceptionFlags.scoring_rule === true,
+      student_facing_diagnosis: misconceptionFlags.student_facing_diagnosis === true,
+      student_facing_exposure: misconceptionFlags.student_facing_exposure === true,
+      adaptive_routing: misconceptionFlags.adaptive_routing === true,
+      mastery_decision: misconceptionFlags.mastery_decision === true,
+      automatic_sequencing: misconceptionFlags.automatic_sequencing === true,
+      student_facing_ai: misconceptionFlags.student_facing_ai === true,
+      summative_use: misconceptionFlags.summative_use === true,
+      pv_projection: misconceptionFlags.pv_projection === true,
+      pv_machine_promotion: misconceptionFlags.pv_machine_promotion === true,
+      machine_registry_authority: misconceptionFlags.machine_registry_authority === true,
     },
     procedure_visual_backbone: {
       source: 'reports/json/procedure-visual-coverage.json',
@@ -274,6 +328,18 @@ function main() {
   lines.push(`- Internal only: ${state.quality_issue_model.internal_only}`);
   lines.push(`- Curriculum authority: ${state.quality_issue_model.curriculum_authority}`);
   lines.push(`- Student-facing exposure: ${state.quality_issue_model.student_facing_exposure}`);
+  lines.push('');
+  lines.push('## Misconception Registry');
+  lines.push('');
+  lines.push(`- Status: ${state.misconception_registry.status}`);
+  lines.push(`- Active records: ${state.misconception_registry.active_record_count}`);
+  lines.push(`- Internal only: ${state.misconception_registry.internal_only}`);
+  lines.push(`- Diagnostic design context: ${state.misconception_registry.diagnostic_design_context}`);
+  lines.push(`- Primary evidence: ${state.misconception_registry.primary_evidence}`);
+  lines.push(`- Curriculum authority: ${state.misconception_registry.curriculum_authority}`);
+  lines.push(`- Student-facing diagnosis: ${state.misconception_registry.student_facing_diagnosis}`);
+  lines.push(`- Adaptive routing: ${state.misconception_registry.adaptive_routing}`);
+  lines.push(`- Summative use: ${state.misconception_registry.summative_use}`);
   lines.push('');
   lines.push('## Procedure-Visual Backbone');
   lines.push('');

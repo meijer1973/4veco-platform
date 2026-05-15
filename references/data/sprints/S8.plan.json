@@ -15,6 +15,17 @@
     "add JSON/Markdown report hook",
     "add reference-health and RAG diagnostic hooks"
   ],
+  "generated_outputs": [
+    "reports/json/misconception-registry.json",
+    "reports/markdown/misconception-registry.md",
+    "reports/json/reference-health.json",
+    "reports/markdown/reference-health.md",
+    "references/data/rag/chunk_index.jsonl",
+    "references/data/source_manifest.json",
+    "references/data/document_inventory.json",
+    "reports/url-index.md",
+    "docs/roadmaps/roadmap-version-index.json"
+  ],
   "blocked_scope": [
     "references/machine mutation",
     "references/external mutation",

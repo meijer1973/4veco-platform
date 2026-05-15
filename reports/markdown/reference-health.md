@@ -1,6 +1,6 @@
 # Reference Health
 
-Generated: 2026-05-03T09:58:23.667Z
+Generated: 2026-05-15T08:58:11.599Z
 
 ## Unit Counts
 
@@ -18,9 +18,9 @@ Generated: 2026-05-03T09:58:23.667Z
 
 ## QC Findings
 
-- Reports: 15
-- Total issues: 448
-- High/critical issues: 10
+- Reports: 16
+- Total issues: 474
+- High/critical issues: 14
 
 ## Quality Issue Model
 
@@ -29,6 +29,18 @@ Generated: 2026-05-03T09:58:23.667Z
 - Internal only: true
 - Curriculum authority: false
 - Student-facing exposure: false
+
+## Misconception Registry
+
+- Status: info
+- Active records: 4
+- Internal only: true
+- Diagnostic design context: true
+- Primary evidence: false
+- Curriculum authority: false
+- Student-facing diagnosis: false
+- Adaptive routing: false
+- Summative use: false
 
 ## Procedure-Visual Backbone
 

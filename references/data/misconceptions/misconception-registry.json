@@ -1,0 +1,347 @@
+{
+  "schema_version": 1,
+  "registry_id": "misconception-registry",
+  "status": "active_internal_diagnostic",
+  "created_on": "2026-05-15",
+  "updated_on": "2026-05-15",
+  "source_schema": "references/schemas/misconception.schema.json",
+  "storage_decision": {
+    "registry_location": "references/data/misconceptions/misconception-registry.json",
+    "machine_registry_created": false,
+    "reason": "S8 creates a governed references/data overlay for internal authoring and review context only.",
+    "protected_surface_policy": "No hand edits to references/machine/ or references/external/."
+  },
+  "authority_flags": {
+    "internal_only": true,
+    "diagnostic_design_context": true,
+    "primary_evidence": false,
+    "curriculum_authority": false,
+    "exam_authority": false,
+    "scoring_rule": false,
+    "student_facing_diagnosis": false,
+    "student_facing_exposure": false,
+    "adaptive_routing": false,
+    "mastery_decision": false,
+    "automatic_sequencing": false,
+    "student_facing_ai": false,
+    "summative_use": false,
+    "pv_projection": false,
+    "pv_machine_promotion": false,
+    "machine_registry_authority": false
+  },
+  "allowed_downstream_uses": [
+    "internal_exercise_design_context",
+    "answer_model_review_context",
+    "internal_authoring_qc",
+    "rag_retrieval_with_diagnostic_warning"
+  ],
+  "blocked_downstream_uses": [
+    "student_diagnostics",
+    "adaptive_routing",
+    "automatic_mastery_decisions",
+    "automatic_lesson_sequencing",
+    "student_facing_ai",
+    "summative_assessment_decisions",
+    "student_facing_pv_projection",
+    "pv_machine_promotion",
+    "primary_curriculum_evidence",
+    "exam_authority",
+    "scoring_rule_authority",
+    "references_machine_registry"
+  ],
+  "summary": {
+    "record_count": 4,
+    "seed_policy": "small_high_value_evidence_backed_records_only",
+    "diagnostic_context_not_authority": true
+  },
+  "records": [
+    {
+      "misconception_id": "MIS-S8-001",
+      "title_nl": "Alternatieve kosten als betaalde prijs zien",
+      "misconception_statement_nl": "De leerling ziet alternatieve kosten als de prijs die iemand betaalt, of als nul wanneer iets financieel gratis is.",
+      "correct_conception_nl": "Alternatieve kosten zijn de opbrengst of waarde van het beste niet-gekozen alternatief, niet de betaalde prijs.",
+      "common_trigger_nl": "Keuzesituaties met een zichtbaar eurobedrag, gratis activiteit, ticketprijs of budgetbedrag.",
+      "linked_unit_ids": ["B02"],
+      "term_ids": ["alternatieve-kosten"],
+      "formal_step_refs": [
+        {
+          "template_id": "choose_by_opportunity_cost_flow",
+          "formal_step_id": "calculate_payoffs",
+          "role": "payoff_before_price_check"
+        },
+        {
+          "template_id": "choose_by_opportunity_cost_flow",
+          "formal_step_id": "rank_not_chosen",
+          "role": "best_not_chosen_anchor"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "source-data/book-1/reasoning/1.1.1.csv",
+          "role": "reasoning_source_item",
+          "note": "Rows for Lisa, Tom, and sunlight explicitly correct price/free confusion about alternatieve kosten."
+        },
+        {
+          "path": "references/machine/micro-teaching-units.json",
+          "role": "machine_unit_context",
+          "note": "B02 defines alternatieve kosten as the best non-chosen alternative and lists relevant pitfalls."
+        },
+        {
+          "path": "references/machine/begrippen.json",
+          "role": "machine_term_context",
+          "note": "The alternatieve-kosten term defines the concept and records the best-alternative pitfall."
+        }
+      ],
+      "affected_surfaces": [
+        "exercise_design",
+        "answer_model_review",
+        "teacher_explanation_review",
+        "reasoning_game_source",
+        "procedure_visual_review",
+        "rag_context"
+      ],
+      "status": "active",
+      "severity": "high",
+      "owner_team": "references_team",
+      "authoring_guidance_nl": "Laat een prijs of gratis activiteit niet de definitie dragen; dwing de vergelijking met het beste niet-gekozen alternatief af.",
+      "review_prompt_nl": "Controleer of het antwoordmodel alternatieve kosten niet laat samenvallen met betaalde prijs, budget of financieel gratis zijn.",
+      "authority_flags": {
+        "internal_only": true,
+        "diagnostic_design_context": true,
+        "primary_evidence": false,
+        "curriculum_authority": false,
+        "exam_authority": false,
+        "scoring_rule": false,
+        "student_facing_diagnosis": false,
+        "student_facing_exposure": false,
+        "adaptive_routing": false,
+        "mastery_decision": false,
+        "automatic_sequencing": false,
+        "student_facing_ai": false,
+        "summative_use": false,
+        "pv_projection": false,
+        "pv_machine_promotion": false,
+        "machine_registry_authority": false
+      },
+      "blocked_downstream_uses": [
+        "student_diagnostics",
+        "adaptive_routing",
+        "automatic_mastery_decisions",
+        "summative_assessment_decisions"
+      ],
+      "created_on": "2026-05-15",
+      "updated_on": "2026-05-15"
+    },
+    {
+      "misconception_id": "MIS-S8-002",
+      "title_nl": "Alle niet-gekozen alternatieven optellen",
+      "misconception_statement_nl": "De leerling telt alle afgewezen alternatieven op en noemt die som de alternatieve kosten.",
+      "correct_conception_nl": "Omdat hetzelfde schaarse middel maar een keer kan worden ingezet, zijn alternatieve kosten alleen de opbrengst van het beste niet-gekozen alternatief.",
+      "common_trigger_nl": "Keuzesituaties met drie of meer alternatieven en opbrengsten voor elk alternatief.",
+      "linked_unit_ids": ["B02"],
+      "term_ids": ["alternatieve-kosten"],
+      "formal_step_refs": [
+        {
+          "template_id": "choose_by_opportunity_cost_flow",
+          "formal_step_id": "rank_not_chosen",
+          "role": "best_not_chosen_anchor"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "source-data/book-1/reasoning/1.1.1.csv",
+          "role": "reasoning_source_item",
+          "note": "Rows for Eva and the farmer explicitly include the summed-rejected-alternatives error."
+        },
+        {
+          "path": "references/machine/micro-teaching-units.json",
+          "role": "machine_unit_context",
+          "note": "B02 lists adding all non-chosen alternatives as a pitfall."
+        },
+        {
+          "path": "references/machine/begrippen.json",
+          "role": "machine_term_context",
+          "note": "The alternatieve-kosten term pitfall states that not all rejected alternatives are added."
+        }
+      ],
+      "affected_surfaces": [
+        "exercise_design",
+        "answer_model_review",
+        "teacher_explanation_review",
+        "reasoning_game_source",
+        "procedure_visual_review",
+        "rag_context"
+      ],
+      "status": "active",
+      "severity": "high",
+      "owner_team": "references_team",
+      "authoring_guidance_nl": "Gebruik bij drie alternatieven expliciet de rangorde: gekozen alternatief, beste niet-gekozen alternatief, overige niet-gekozen alternatieven.",
+      "review_prompt_nl": "Controleer of feedback de som-fout afwijst met de reden dat het schaarse middel niet tegelijk naar meerdere alternatieven kon gaan.",
+      "authority_flags": {
+        "internal_only": true,
+        "diagnostic_design_context": true,
+        "primary_evidence": false,
+        "curriculum_authority": false,
+        "exam_authority": false,
+        "scoring_rule": false,
+        "student_facing_diagnosis": false,
+        "student_facing_exposure": false,
+        "adaptive_routing": false,
+        "mastery_decision": false,
+        "automatic_sequencing": false,
+        "student_facing_ai": false,
+        "summative_use": false,
+        "pv_projection": false,
+        "pv_machine_promotion": false,
+        "machine_registry_authority": false
+      },
+      "blocked_downstream_uses": [
+        "student_diagnostics",
+        "adaptive_routing",
+        "automatic_mastery_decisions",
+        "summative_assessment_decisions"
+      ],
+      "created_on": "2026-05-15",
+      "updated_on": "2026-05-15"
+    },
+    {
+      "misconception_id": "MIS-S8-003",
+      "title_nl": "Nieuwe waarde als noemer gebruiken",
+      "misconception_statement_nl": "De leerling deelt de verandering door de nieuwe waarde in plaats van door de oude of basiswaarde.",
+      "correct_conception_nl": "Een procentuele verandering gebruikt de oude of basiswaarde als noemer: (nieuw min oud) gedeeld door oud maal 100.",
+      "common_trigger_nl": "Procentuele stijgingen en dalingen waarbij de nieuwe waarde prominenter in de tekst staat dan de oude waarde.",
+      "linked_unit_ids": ["A38", "A66", "A67"],
+      "operation_ids": [
+        "basiswaarde_en_vergelijkingswaarde_in_bron_bepalen",
+        "procentuele_verandering_berekenen_vanuit_tabel"
+      ],
+      "evidence_refs": [
+        {
+          "path": "source-data/book-1/reasoning/1.1.2.csv",
+          "role": "reasoning_source_item",
+          "note": "Rows 1 and 2 include distractors and feedback for dividing by the new value."
+        },
+        {
+          "path": "references/machine/micro-teaching-units.json",
+          "role": "machine_unit_context",
+          "note": "A38 and A66 define old/base value selection and list new-value denominator pitfalls."
+        },
+        {
+          "path": "reports/json/representation-operation-inventory.json",
+          "role": "generated_diagnostic_context",
+          "note": "The representation inventory records the new-value denominator pitfall for percentage-change source work."
+        }
+      ],
+      "affected_surfaces": [
+        "exercise_design",
+        "answer_model_review",
+        "teacher_explanation_review",
+        "reasoning_game_source",
+        "rag_context"
+      ],
+      "status": "active",
+      "severity": "high",
+      "owner_team": "references_team",
+      "authoring_guidance_nl": "Laat leerlingen eerst oud/basis en nieuw labelen voordat de breuk wordt ingevuld.",
+      "review_prompt_nl": "Controleer of antwoordmodellen de noemer expliciet als oude waarde of basiswaarde benoemen.",
+      "authority_flags": {
+        "internal_only": true,
+        "diagnostic_design_context": true,
+        "primary_evidence": false,
+        "curriculum_authority": false,
+        "exam_authority": false,
+        "scoring_rule": false,
+        "student_facing_diagnosis": false,
+        "student_facing_exposure": false,
+        "adaptive_routing": false,
+        "mastery_decision": false,
+        "automatic_sequencing": false,
+        "student_facing_ai": false,
+        "summative_use": false,
+        "pv_projection": false,
+        "pv_machine_promotion": false,
+        "machine_registry_authority": false
+      },
+      "blocked_downstream_uses": [
+        "student_diagnostics",
+        "adaptive_routing",
+        "automatic_mastery_decisions",
+        "summative_assessment_decisions"
+      ],
+      "created_on": "2026-05-15",
+      "updated_on": "2026-05-15"
+    },
+    {
+      "misconception_id": "MIS-S8-004",
+      "title_nl": "Indexpunten als procenten lezen",
+      "misconception_statement_nl": "De leerling trekt twee indexcijfers af en noemt het puntenverschil direct een procentuele verandering.",
+      "correct_conception_nl": "Een indexpuntverschil is een absoluut verschil tussen indexcijfers; een procentuele verandering deelt dat verschil door het oude indexcijfer.",
+      "common_trigger_nl": "Indexreeksen zoals 108 naar 112 of 125 naar 135 waarbij het puntenverschil rond lijkt op een percentage.",
+      "linked_unit_ids": ["A38", "A39", "A73", "A74", "D31"],
+      "operation_ids": [
+        "indexverandering_aflezen_uit_lijngrafiek",
+        "procentuele_verandering_berekenen_vanuit_indexcijfers"
+      ],
+      "evidence_refs": [
+        {
+          "path": "source-data/book-1/reasoning/1.1.2.csv",
+          "role": "reasoning_source_item",
+          "note": "Rows 5 and 6 explicitly correct index-point versus percentage-change confusion."
+        },
+        {
+          "path": "references/machine/micro-teaching-units.json",
+          "role": "machine_unit_context",
+          "note": "A73, A74, and D31 define index-point versus percentage-change handling and pitfalls."
+        },
+        {
+          "path": "reports/json/representation-operation-inventory.json",
+          "role": "generated_diagnostic_context",
+          "note": "The representation inventory records the 108-to-112 misconception as index-to-percentage-change evidence."
+        },
+        {
+          "path": "references/owned/course-blueprint-v4.md",
+          "role": "owned_course_design_context",
+          "note": "The blueprint identifies the 108-to-112 trap as a critical index-point versus percentage distinction."
+        }
+      ],
+      "affected_surfaces": [
+        "exercise_design",
+        "answer_model_review",
+        "teacher_explanation_review",
+        "reasoning_game_source",
+        "rag_context"
+      ],
+      "status": "active",
+      "severity": "high",
+      "owner_team": "references_team",
+      "authoring_guidance_nl": "Laat indexpunten en procentuele verandering als twee aparte labels naast elkaar verschijnen.",
+      "review_prompt_nl": "Controleer of feedback niet alleen 'fout' zegt, maar het onderscheid puntverschil versus relatieve verandering benoemt.",
+      "authority_flags": {
+        "internal_only": true,
+        "diagnostic_design_context": true,
+        "primary_evidence": false,
+        "curriculum_authority": false,
+        "exam_authority": false,
+        "scoring_rule": false,
+        "student_facing_diagnosis": false,
+        "student_facing_exposure": false,
+        "adaptive_routing": false,
+        "mastery_decision": false,
+        "automatic_sequencing": false,
+        "student_facing_ai": false,
+        "summative_use": false,
+        "pv_projection": false,
+        "pv_machine_promotion": false,
+        "machine_registry_authority": false
+      },
+      "blocked_downstream_uses": [
+        "student_diagnostics",
+        "adaptive_routing",
+        "automatic_mastery_decisions",
+        "summative_assessment_decisions"
+      ],
+      "created_on": "2026-05-15",
+      "updated_on": "2026-05-15"
+    }
+  ]
+}

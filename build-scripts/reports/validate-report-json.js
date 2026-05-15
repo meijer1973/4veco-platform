@@ -22,6 +22,7 @@ const REQUIRED = [
   'begrippen-coverage',
   'empty-needs-audit-summary',
   'reference-quality-issues',
+  'misconception-registry',
 ];
 const STATUSES = new Set(['pass', 'warn', 'fail', 'info']);
 const SEVERITIES = new Set(['info', 'low', 'medium', 'high', 'critical']);

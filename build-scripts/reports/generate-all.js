@@ -19,6 +19,7 @@ const EXAMS = 'references/external/exam-questions.json';
 const TARGETS = 'references/authored/course-target-exercises.json';
 const EMPTY_NEEDS = 'references/data/audits/empty-needs-audit.json';
 const QUALITY_ISSUES = 'references/data/qc/reference-quality-issues.json';
+const MISCONCEPTIONS = 'references/data/misconceptions/misconception-registry.json';
 
 function readJson(relPath, fallback) {
   const file = path.join(REPO_ROOT, relPath);
@@ -356,6 +357,47 @@ function buildReferenceQualityIssues(ctx) {
   });
 }
 
+function buildMisconceptionRegistry(ctx) {
+  const source = ctx.misconceptions || { records: [], authority_flags: {} };
+  const active = (source.records || []).filter((item) => item.status === 'active');
+  const issues = active.map((item, index) => issue(
+    'misconception-registry',
+    index + 1,
+    item.severity,
+    item.misconception_id,
+    'misconception_design_context',
+    (item.evidence_refs && item.evidence_refs[0] && item.evidence_refs[0].path) || MISCONCEPTIONS,
+    item.authoring_guidance_nl || 'Use this misconception as internal exercise-design and answer-model review context only.',
+    'Retire or revise the misconception record only after source evidence is superseded or a later sprint changes the internal registry scope.'
+  ));
+  const flags = source.authority_flags || {};
+  return makeReport('misconception-registry', [MISCONCEPTIONS], 'info', issues, {
+    registry_status: source.status || 'unknown',
+    record_count: (source.records || []).length,
+    active_records: active.length,
+    by_status: countBy(source.records || [], (item) => item.status),
+    by_severity: countBy(source.records || [], (item) => item.severity),
+    linked_unit_count: new Set((source.records || []).flatMap((item) => item.linked_unit_ids || [])).size,
+    affected_surfaces: countBy((source.records || []).flatMap((item) => item.affected_surfaces || []), (item) => item),
+    internal_only: flags.internal_only === true,
+    diagnostic_design_context: flags.diagnostic_design_context === true,
+    primary_evidence: flags.primary_evidence === true,
+    curriculum_authority: flags.curriculum_authority === true,
+    exam_authority: flags.exam_authority === true,
+    scoring_rule: flags.scoring_rule === true,
+    student_facing_diagnosis: flags.student_facing_diagnosis === true,
+    student_facing_exposure: flags.student_facing_exposure === true,
+    adaptive_routing: flags.adaptive_routing === true,
+    mastery_decision: flags.mastery_decision === true,
+    automatic_sequencing: flags.automatic_sequencing === true,
+    student_facing_ai: flags.student_facing_ai === true,
+    summative_use: flags.summative_use === true,
+    pv_projection: flags.pv_projection === true,
+    pv_machine_promotion: flags.pv_machine_promotion === true,
+    machine_registry_authority: flags.machine_registry_authority === true,
+  });
+}
+
 function main() {
   const ctx = {
     units: loadUnits(),
@@ -364,6 +406,7 @@ function main() {
     targets: readJson(TARGETS, {}),
     emptyNeeds: readJson(EMPTY_NEEDS, { entries: [], summary: {} }),
     qualityIssues: readJson(QUALITY_ISSUES, { issues: [] }),
+    misconceptions: readJson(MISCONCEPTIONS, { records: [], authority_flags: {} }),
   };
 
   const reports = [
@@ -378,6 +421,7 @@ function main() {
     buildBegrippenCoverage(ctx),
     buildEmptyNeedsAuditSummary(ctx),
     buildReferenceQualityIssues(ctx),
+    buildMisconceptionRegistry(ctx),
   ];
 
   for (const report of reports) writeReport(report);

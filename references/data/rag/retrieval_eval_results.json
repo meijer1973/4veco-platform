@@ -2,7 +2,7 @@
   "eval_set_id": "R7.3-retrieval-eval-set",
   "schema_version": 1,
   "generated_by": "build-scripts/rag/run-retrieval-evals.js",
-  "generated_on": "2026-05-02T07:11:50.857Z",
+  "generated_on": "2026-05-15T08:58:12.267Z",
   "source_files": [
     "references/data/rag/retrieval_eval_set.json",
     "references/data/rag/chunk_index.jsonl",
@@ -523,11 +523,11 @@
         "aspects-coverage",
         "begrippen-coverage",
         "dag-integrity",
+        "graph-skill-tree",
         "procedure-coverage",
+        "procedure-visual-coverage",
         "procedure-visual-inventory.json",
-        "representation-operation-inventory.json",
-        "source-document-registry.json",
-        "terms-coverage"
+        "procedure-visual-machine-promotion-readiness"
       ],
       "found_source_types": [
         "quality_report"
@@ -1024,13 +1024,13 @@
         "unresolved-refs",
         "aspects-coverage",
         "begrippen-coverage",
+        "graph-skill-tree",
         "needs-coverage",
         "procedure-coverage",
+        "procedure-visual-coverage",
         "procedure-visual-inventory.json",
-        "reference-cli-coverage.json",
-        "reference-quality-issues",
-        "source-document-registry.json",
-        "terms-coverage"
+        "procedure-visual-machine-promotion-readiness",
+        "reference-cli-coverage.json"
       ],
       "found_source_types": [
         "quality_report"
@@ -1103,7 +1103,7 @@
           "not_primary_evidence": true,
           "curriculum_authority": false,
           "allowed_for_public_citation": false,
-          "text_excerpt": "unresolved-refs: status warn; issues 79; summary {\"deprecated_units\":2,\"deprecated_citations\":79}; issue text unresolved-refs-0001 deprecated_reference D23 references/reference-team-roadmap.md Remove or migrate deprecated unit citation. No deprecated unit ID is cited from active docs/reports. unresolved-refs-0002 deprecated_reference H26 references/reference-team-roadmap.md Remove or migrate deprecated unit citation. No deprecated unit ID is cited from active docs/reports. unresolved-refs-0003 d"
+          "text_excerpt": "unresolved-refs: status warn; issues 103; summary {\"deprecated_units\":2,\"deprecated_citations\":103}; issue text unresolved-refs-0001 deprecated_reference D23 references/reference-team-roadmap.md Remove or migrate deprecated unit citation. No deprecated unit ID is cited from active docs/reports. unresolved-refs-0002 deprecated_reference H26 references/reference-team-roadmap.md Remove or migrate deprecated unit citation. No deprecated unit ID is cited from active docs/reports. unresolved-refs-0003"
         },
         {
           "chunk_id": "quality-report:aspects-coverage.json",

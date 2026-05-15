@@ -75,11 +75,11 @@ The first registry pass should be deliberately small and high-value. Good seed c
 - Tightened `misconception.schema.json` with explicit internal-only authority flags and links to units, terms, operations, evidence, procedure steps where available, and affected surfaces.
 - Small seed registry under `references/data/misconceptions/`.
 - Read-only misconception validator.
-- JSON-first misconception report and Markdown projection.
-- Reference-health hook that reports counts and boundary flags without turning misconceptions into gates.
-- RAG hook through generated report chunks with diagnostic/non-authority labels preserved.
+- JSON-first misconception report at `reports/json/misconception-registry.json` and Markdown projection at `reports/markdown/misconception-registry.md`.
+- Reference-health hook in `reports/json/reference-health.json` and `reports/markdown/reference-health.md` that reports counts and boundary flags without turning misconceptions into gates.
+- RAG hook through `references/data/rag/chunk_index.jsonl` generated report chunks with diagnostic/non-authority labels preserved.
 - Sprint plan, baseline, result, diff summary, and sprint metadata.
-- Roadmap/version-index update.
+- Regenerated source manifest at `references/data/source_manifest.json`, document inventory at `references/data/document_inventory.json`, URL index at `reports/url-index.md`, and roadmap/version-index update at `references/reference-team-roadmap.md` and `docs/roadmaps/roadmap-version-index.json`.
 
 ## Operationalized sprint procedure
 

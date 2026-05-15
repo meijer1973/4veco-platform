@@ -2,9 +2,9 @@
 
 Generated: 2026-04-23
 Adopted main roadmap: 2026-04-25
-Last strategic update: 2026-05-01
+Last strategic update: 2026-05-15
 Roadmap ID: `references-team-roadmap`
-Roadmap version: `v2.41-pvg4-pass-with-conditions`
+Roadmap version: `v2.42-s8-misconception-registry`
 Roadmap status: `active`
 Version index: `docs/roadmaps/roadmap-version-index.json`
 Scope: `references/`, `build-scripts/references/`, `build-scripts/reports/`, reference dashboards, and generated reference reports under `reports/`
@@ -75,6 +75,8 @@ Update 2026-05-14: `PV-G4 Lesson Regression Proof` received lesson-team proof re
 
 Update 2026-05-14: `S8 Misconception Registry MVP` is plan-ready as the next reference sprint after PV-G4 closure. The plan keeps Sprint 8 as an internal diagnostic overlay only: it may tighten the existing misconception schema, add a small `references/data/` registry, validator, report, reference-health hook, and RAG diagnostic hook, but it must not authorize student-facing diagnostics, adaptive routing, mastery, sequencing, AI, summative use, PV projection, or PV machine promotion.
 
+Update 2026-05-15: `S8 Misconception Registry MVP` is completed. The registry lives at `references/data/misconceptions/misconception-registry.json` as an internal diagnostic overlay with four evidence-backed seed records, a tightened `misconception.schema.json`, read-only validator, JSON/Markdown report, reference-health summary, and generated-report RAG chunk. It remains non-authoritative: not primary evidence, not curriculum or exam authority, not a scoring rule, not student-facing diagnosis, and not permission for adaptive routing, mastery, sequencing, AI, summative use, PV projection, or PV machine promotion.
+
 Compatibility decisions:
 
 - Sprint `R0.1` now means the sprint-execution scaffold.
@@ -100,7 +102,6 @@ Open items are listed first; completed items are kept below them.
 
 | Sprint | Name | Completed | Current State |
 |--------|------|-----------|---------------|
-| S8 | Misconception Registry MVP | no | Plan ready in `docs/sprints/S8-plan.md`. Compact ID for human-facing Sprint 8; internal diagnostic overlay only. Tighten existing misconception schema, add small `references/data/` registry, validator, report/RAG hook, and preserve all PV-G4 blocked-use conditions. |
 | Sprint 9 | Unit Design Status And D04 Resolution | no | Planned. Resolve D04 as retire/merge/redistribute/split and decide whether `unit_design_status` is derived overlay or CLI-backed machine-unit field. |
 | Content Track 1 | Year-1 Target Exercise Coverage | no | Planned content-track work. Produce Year-1 paragraph coverage and missing-target exercise status for CP-6. |
 | Content Track 2 | Year-1 Precision And Dual-Coding Audit | no | Planned content-track work. Record precision lint and dual-coding status for exercise surfaces where applicable. |
@@ -111,6 +112,7 @@ Open items are listed first; completed items are kept below them.
 | Sprint 13 | Composition Pattern Registry | no | Planned. Define reusable exercise-composition patterns for internal authoring support, not automatic student-facing publication. |
 | Sprint 14 | C-to-B Promotion Workflow | no | Planned only after schema audit, owned-source registry, exercise overlays, D04/unit-design status, R7.6, R14.1, and precision lint path are ready. |
 | Product Gate | Re-Evaluate R10-R13 Product Surfaces | no | Blocked. Diagnostics, adaptive routing, student-facing AI, teacher cockpit deployment, automatic sequencing, mastery, and summative uses remain out of scope until data-quality gates justify them. |
+| S8 | Misconception Registry MVP | yes | Completed. Added the internal-only `references/data/misconceptions/misconception-registry.json`, tightened `misconception.schema.json`, added `check-misconceptions.js`, generated `misconception-registry` JSON/Markdown reports, exposed safe reference-health/RAG labels, and preserved all PV-G4 blocked-use conditions. |
 | S7 | Skill And Operation Registry MVP | yes | Completed with `pass_with_conditions`. Generated `references/data/skill-operation-registry.json`, coexistence reports, and `GATE-CP4-skill-registry-coexistence` closure; `exercise_operations` remain provisional; no machine registry promotion or bulk backfill authorized. |
 | PV.0 | CP-4 Procedure-Visual Addendum | yes | Completed with CP-4. PV templates may reference provisional `exercise_operations` only with explicit provisional status and no operation promotion; no machine registry creation or student-facing PV projection is authorized. |
 | PV.1 | Procedure-Visual Inventory | yes | Completed. Generated `references/data/procedure-visual/inventory.json`, JSON/Markdown reports, and 12 ranked pilot templates spanning flowchart, formula trace, graph-stage, table-trace, and blocked generator/projection cases. |
@@ -1235,7 +1237,7 @@ Required work:
 
 Required output: misconception registry MVP, validator, and retrieval/report hook.
 
-Planning status: plan ready in `docs/sprints/S8-plan.md`; baseline recorded in `reports/sprints/S8-baseline.md`; sprint metadata recorded in `references/data/sprints/S8.plan.json`.
+Completion: completed on 2026-05-15. S8 tightened `references/schemas/misconception.schema.json`, created the internal seed registry at `references/data/misconceptions/misconception-registry.json`, added `build-scripts/references/check-misconceptions.js`, generated `reports/json/misconception-registry.json` and `reports/markdown/misconception-registry.md`, exposed a safe `misconception_registry` summary in reference health, and preserved the diagnostic/non-authority labels in generated RAG report chunks. No `references/machine/` or `references/external/` mutation occurred.
 
 Stop condition: do not treat misconception records as primary evidence. Also stop if implementation implies student-facing diagnostics, adaptive routing, mastery, sequencing, AI, summative use, PV projection, or PV machine promotion.
 
@@ -1627,7 +1629,7 @@ Sprints:
 
 - `R8.1` completed: scoped QC issue model.
 - `S6` completed: bronnen registry MVP under `references/data/`.
-- `S8 / Sprint 8` plan ready: misconception registry MVP as internal diagnostic overlay only.
+- `S8 / Sprint 8` completed: misconception registry MVP as internal diagnostic overlay only.
 - `Sprint 9` planned: unit design status and D04 resolution.
 
 ### Content Track: Year-1 Closeout And Year-2 Skeleton
@@ -1737,7 +1739,7 @@ RX.6 Skill-tree and generator integration
 PV.7 Machine-promotion review gate
 PV.8 Promotion pipeline design
 PV-G4 Lesson regression proof
-S8 / Sprint 8 Misconception registry MVP
+S8 / Sprint 8 Misconception registry MVP completed
 Sprint 9 Unit design status and D04 resolution (CP-5)
 Content Track 1 Year-1 target exercise coverage (CP-6)
 Content Track 2 Year-1 precision and dual-coding audit
@@ -1754,9 +1756,9 @@ Do not invert this order.
 
 ## Immediate Next Sprint
 
-Next action: execute `S8 Misconception Registry MVP` only under the PV-G4 conditions. PV-G4 now has two reconciled lesson-team proof records and HCS `pass_with_conditions`, but the references team must not commit lesson-side generated output, reopen PV machine promotion, expose PV student-facing projection, or start diagnostics/adaptive/mastery/sequencing/AI/summative product use.
+Next action: prepare and execute `Sprint 9 Unit Design Status And D04 Resolution` only as a bounded reference sprint. S8 is closed as an internal diagnostic overlay; Sprint 9 may not use misconception records as curriculum authority, exam authority, scoring rules, student diagnostics, adaptive routing, mastery, sequencing, AI, summative decisions, PV projection, or PV machine promotion.
 
-R4.5 has closed the bounded micro-unit mutation lane, CP-1 has closed the non-mutating schema audit gate as `pass_with_conditions`, CP-2 has closed the owned-source scope gate as `pass_with_conditions`, R9.1 has registered the owned-source surfaces, R9.2 has completed owned-content projection, S4/CP-3 has closed as `pass_with_conditions`, S4.1 has implemented the CP-3 condition artifacts, RX.1 has prepared the non-mutating representation-operation inventory, `GATE-RX1-representation-unit-scope` has closed as `pass_with_conditions`, RX.2/GATE-RX2 has added the bounded six-unit first lane through CLI-only mutation, RX.2b/GATE-RX2b has added the bounded seven-unit graphical foundation lane through CLI-only mutation while holding `A71`, R8.1 has added the scoped internal QC issue model, S6 has created the source-document registry MVP under `references/data/`, S7/CP-4 has closed as `pass_with_conditions`, RX.3a/RX.3b/RX.4 have applied producer and elasticity representation lanes through CLI-only mutation, PV.3 through PV.6 have completed pilot templates, projection proof, and coverage dashboards, RX.5 has added representation-operation reports, RX.6 has completed skill-tree generator readiness, PV.7 has closed the machine-promotion review gate without authorizing promotion, PV.8 has completed the promotion-pipeline design, and PV-G4 has closed as `pass_with_conditions` with two reconciled lesson-team proofs.
+R4.5 has closed the bounded micro-unit mutation lane, CP-1 has closed the non-mutating schema audit gate as `pass_with_conditions`, CP-2 has closed the owned-source scope gate as `pass_with_conditions`, R9.1 has registered the owned-source surfaces, R9.2 has completed owned-content projection, S4/CP-3 has closed as `pass_with_conditions`, S4.1 has implemented the CP-3 condition artifacts, RX.1 has prepared the non-mutating representation-operation inventory, `GATE-RX1-representation-unit-scope` has closed as `pass_with_conditions`, RX.2/GATE-RX2 has added the bounded six-unit first lane through CLI-only mutation, RX.2b/GATE-RX2b has added the bounded seven-unit graphical foundation lane through CLI-only mutation while holding `A71`, R8.1 has added the scoped internal QC issue model, S6 has created the source-document registry MVP under `references/data/`, S7/CP-4 has closed as `pass_with_conditions`, RX.3a/RX.3b/RX.4 have applied producer and elasticity representation lanes through CLI-only mutation, PV.3 through PV.6 have completed pilot templates, projection proof, and coverage dashboards, RX.5 has added representation-operation reports, RX.6 has completed skill-tree generator readiness, PV.7 has closed the machine-promotion review gate without authorizing promotion, PV.8 has completed the promotion-pipeline design, PV-G4 has closed as `pass_with_conditions` with two reconciled lesson-team proofs, and S8 has created the bounded internal misconception registry under `references/data/`.
 
 All active A-domain units without generators are now explicitly generator-blocked/non-interactive. The skill-tree currently has 44 generator-backed interactive A-domain units and 37 generator-blocked A-domain units. Blocked units must not be exposed in student-facing skill-tree or PV projection until their generators exist, validators pass, and a later sprint explicitly authorizes exposure.
 

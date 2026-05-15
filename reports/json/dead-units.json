@@ -1,7 +1,7 @@
 {
   "report_id": "dead-units",
   "generated_by": "build-scripts/reports/generate-all.js",
-  "generated_on": "2026-05-02T07:11:45.477Z",
+  "generated_on": "2026-05-15T08:58:11.455Z",
   "source_files": [
     "references/machine/micro-teaching-units.json",
     "references/external/exam-questions.json",
