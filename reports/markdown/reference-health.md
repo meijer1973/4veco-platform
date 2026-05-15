@@ -1,6 +1,6 @@
 # Reference Health
 
-Generated: 2026-05-15T08:58:11.599Z
+Generated: 2026-05-15T10:09:51.890Z
 
 ## Unit Counts
 
@@ -18,9 +18,9 @@ Generated: 2026-05-15T08:58:11.599Z
 
 ## QC Findings
 
-- Reports: 16
-- Total issues: 474
-- High/critical issues: 14
+- Reports: 17
+- Total issues: 475
+- High/critical issues: 15
 
 ## Quality Issue Model
 
@@ -41,6 +41,19 @@ Generated: 2026-05-15T08:58:11.599Z
 - Student-facing diagnosis: false
 - Adaptive routing: false
 - Summative use: false
+
+## Unit-Design Status
+
+- Status: warn
+- Records: 1
+- Promotion-blocked records: 1
+- Storage strategy: derived_overlay_first
+- Internal design status: true
+- Primary evidence: false
+- Curriculum authority: false
+- Student diagnostics: false
+- Adaptive routing: false
+- Protected reference mutation authorized: false
 
 ## Procedure-Visual Backbone
 

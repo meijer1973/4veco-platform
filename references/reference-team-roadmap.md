@@ -102,7 +102,7 @@ Open items are listed first; completed items are kept below them.
 
 | Sprint | Name | Completed | Current State |
 |--------|------|-----------|---------------|
-| Sprint 9 | Unit Design Status And D04 Resolution | no | Planned. Resolve D04 as retire/merge/redistribute/split and decide whether `unit_design_status` is derived overlay or CLI-backed machine-unit field. |
+| S9 | Unit Design Status And D04 Resolution | no | Plan ready in `docs/sprints/S9-plan.md`. Compact ID for human-facing Sprint 9; create a derived unit-design status overlay and CP-5 D04 review packet without protected machine mutation. |
 | Content Track 1 | Year-1 Target Exercise Coverage | no | Planned content-track work. Produce Year-1 paragraph coverage and missing-target exercise status for CP-6. |
 | Content Track 2 | Year-1 Precision And Dual-Coding Audit | no | Planned content-track work. Record precision lint and dual-coding status for exercise surfaces where applicable. |
 | Content Track 3 | Year-2 Skeleton | no | Planned parallel content-track work. Prepare Year-2 skeleton with CvTE-vwo anchor status and `concept_orphan` flags for CP-7; not an engineering Phase E blocker. |
@@ -1241,9 +1241,11 @@ Completion: completed on 2026-05-15. S8 tightened `references/schemas/misconcept
 
 Stop condition: do not treat misconception records as primary evidence. Also stop if implementation implies student-facing diagnostics, adaptive routing, mastery, sequencing, AI, summative use, PV projection, or PV machine promotion.
 
-### Sprint 9 Unit Design Status And D04 Resolution
+### S9 / Sprint 9 Unit Design Status And D04 Resolution
 
 Purpose: stop D04 and similar unstable units from silently supporting exercise promotion workflows.
+
+Planning status: plan ready in `docs/sprints/S9-plan.md`; baseline recorded in `reports/sprints/S9-baseline.md`; sprint metadata recorded in `references/data/sprints/S9.plan.json`.
 
 Required work:
 

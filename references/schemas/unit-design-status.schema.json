@@ -1,0 +1,142 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://4veco.local/schemas/unit-design-status.schema.json",
+  "title": "Unit Design Status Overlay",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "status",
+    "generated_by",
+    "generated_on",
+    "authority_boundary",
+    "storage_strategy",
+    "records"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": { "type": "integer", "const": 1 },
+    "status": { "type": "string" },
+    "generated_by": { "type": "string" },
+    "generated_on": { "type": "string" },
+    "authority_boundary": {
+      "type": "object",
+      "required": [
+        "internal_design_status",
+        "primary_evidence",
+        "curriculum_authority",
+        "exam_authority",
+        "scoring_rule",
+        "student_facing_exposure",
+        "student_diagnostics",
+        "adaptive_routing",
+        "mastery_decision",
+        "automatic_sequencing",
+        "student_facing_ai",
+        "summative_use",
+        "pv_projection",
+        "pv_machine_promotion",
+        "machine_field_migration",
+        "protected_reference_mutation_authorized"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "internal_design_status": { "type": "boolean", "const": true },
+        "primary_evidence": { "type": "boolean", "const": false },
+        "curriculum_authority": { "type": "boolean", "const": false },
+        "exam_authority": { "type": "boolean", "const": false },
+        "scoring_rule": { "type": "boolean", "const": false },
+        "student_facing_exposure": { "type": "boolean", "const": false },
+        "student_diagnostics": { "type": "boolean", "const": false },
+        "adaptive_routing": { "type": "boolean", "const": false },
+        "mastery_decision": { "type": "boolean", "const": false },
+        "automatic_sequencing": { "type": "boolean", "const": false },
+        "student_facing_ai": { "type": "boolean", "const": false },
+        "summative_use": { "type": "boolean", "const": false },
+        "pv_projection": { "type": "boolean", "const": false },
+        "pv_machine_promotion": { "type": "boolean", "const": false },
+        "machine_field_migration": { "type": "boolean", "const": false },
+        "protected_reference_mutation_authorized": { "type": "boolean", "const": false }
+      }
+    },
+    "storage_strategy": {
+      "type": "object",
+      "required": [
+        "strategy",
+        "machine_field_migration_ready",
+        "protected_reference_mutation_authorized",
+        "rationale"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "strategy": { "type": "string", "enum": ["derived_overlay_first"] },
+        "machine_field_migration_ready": { "type": "boolean", "const": false },
+        "protected_reference_mutation_authorized": { "type": "boolean", "const": false },
+        "rationale": { "type": "string" }
+      }
+    },
+    "records": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "unit_id",
+          "unit_name",
+          "status",
+          "review_status",
+          "gate_id",
+          "promotion_blocked",
+          "c_to_b_promotion_blocked",
+          "current_catalog_state",
+          "resolution_options",
+          "recommended_resolution",
+          "successor_unit_ids",
+          "affected_unit_ids",
+          "evidence_refs",
+          "blocked_downstream_uses",
+          "notes"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "unit_id": { "type": "string" },
+          "unit_name": { "type": "string" },
+          "status": { "type": "string", "enum": ["unstable_unit_design"] },
+          "review_status": { "type": "string", "enum": ["cp5_review_required", "cp5_closed"] },
+          "gate_id": { "type": "string" },
+          "promotion_blocked": { "type": "boolean", "const": true },
+          "c_to_b_promotion_blocked": { "type": "boolean", "const": true },
+          "current_catalog_state": {
+            "type": "object",
+            "required": ["needs", "terms", "exam_codes", "deprecated"],
+            "additionalProperties": false,
+            "properties": {
+              "needs": { "type": "array", "items": { "type": "string" } },
+              "terms": { "type": "array", "items": { "type": "string" } },
+              "exam_codes": { "type": "array", "items": { "type": "string" } },
+              "deprecated": { "type": "boolean" }
+            }
+          },
+          "resolution_options": { "type": "array", "items": { "type": "string" } },
+          "recommended_resolution": { "type": "string" },
+          "successor_unit_ids": { "type": "array", "items": { "type": "string" } },
+          "affected_unit_ids": { "type": "array", "items": { "type": "string" } },
+          "evidence_refs": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["kind", "path", "anchor", "supports"],
+              "additionalProperties": false,
+              "properties": {
+                "kind": { "type": "string" },
+                "path": { "type": "string" },
+                "anchor": { "type": "string" },
+                "supports": { "type": "string" }
+              }
+            }
+          },
+          "blocked_downstream_uses": { "type": "array", "items": { "type": "string" } },
+          "notes": { "type": "string" }
+        }
+      }
+    }
+  }
+}

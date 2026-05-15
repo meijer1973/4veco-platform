@@ -23,6 +23,7 @@ const REQUIRED = [
   'empty-needs-audit-summary',
   'reference-quality-issues',
   'misconception-registry',
+  'unit-design-status',
 ];
 const STATUSES = new Set(['pass', 'warn', 'fail', 'info']);
 const SEVERITIES = new Set(['info', 'low', 'medium', 'high', 'critical']);

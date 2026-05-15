@@ -1,7 +1,7 @@
 {
   "generated_by": "build-scripts/reports/generate-all.js",
-  "generated_on": "2026-05-15T08:58:11.476Z",
-  "report_count": 12,
+  "generated_on": "2026-05-15T10:09:45.511Z",
+  "report_count": 13,
   "reports": [
     {
       "report_id": "dag-integrity",
@@ -9,7 +9,7 @@
       "issue_count": 0,
       "json_path": "reports/json/dag-integrity.json",
       "markdown_path": "reports/markdown/dag-integrity.md",
-      "content_hash": "5d16ffe155096c6a6232263dc6d71548d5dc8d7ffa5cbf4fb8a380ad7889eee3"
+      "content_hash": "de512c6a6b5d8ff5da26eff4566986e3dec56e1edf6763913d6968a20c201f41"
     },
     {
       "report_id": "terminology-drift",
@@ -17,7 +17,7 @@
       "issue_count": 0,
       "json_path": "reports/json/terminology-drift.json",
       "markdown_path": "reports/markdown/terminology-drift.md",
-      "content_hash": "57e917449aae1e28b33f99b106265c19d149207f6fbfcbf9b477c667a08cd406"
+      "content_hash": "ee09266de1b7a9fce64a1f92dee9e4ebc05f68209cee7a348c15446aa9998116"
     },
     {
       "report_id": "unresolved-refs",
@@ -25,7 +25,7 @@
       "issue_count": 103,
       "json_path": "reports/json/unresolved-refs.json",
       "markdown_path": "reports/markdown/unresolved-refs.md",
-      "content_hash": "312c858c01b5997442407f20a89b7f8c072fc77084efebdf081fbd97ff23edae"
+      "content_hash": "f15390255a33474073ec989665f7c8609727aa9c0c0dcfb5c5726fe697c123b5"
     },
     {
       "report_id": "needs-coverage",
@@ -33,7 +33,7 @@
       "issue_count": 43,
       "json_path": "reports/json/needs-coverage.json",
       "markdown_path": "reports/markdown/needs-coverage.md",
-      "content_hash": "e4899cfa36f8e7df7e2299736cf95ffab1e323fb8ec963e2cc85b93ceb02554d"
+      "content_hash": "4a3635a9ea95fcd22338c8ef9ef2ae71e389ff648a21cdbe764574e26bf7877d"
     },
     {
       "report_id": "terms-coverage",
@@ -41,7 +41,7 @@
       "issue_count": 84,
       "json_path": "reports/json/terms-coverage.json",
       "markdown_path": "reports/markdown/terms-coverage.md",
-      "content_hash": "d4d0418c9e00304e0829fdd7c507f252ec8343b6f847279cb08c9805e61797b3"
+      "content_hash": "ad8ee136e50aef15d61da62e1c043bbad8b60d87fc125082ecddcb205558611d"
     },
     {
       "report_id": "procedure-coverage",
@@ -49,7 +49,7 @@
       "issue_count": 0,
       "json_path": "reports/json/procedure-coverage.json",
       "markdown_path": "reports/markdown/procedure-coverage.md",
-      "content_hash": "d6a0cd10e4fc4098e386c83ed72d961970de5f7d3ca99be0a0b1afa94a78e9d8"
+      "content_hash": "6977a9caa44cd3b4e8feb33d02233761d90a1d5b499e48a4cd64f3e927772583"
     },
     {
       "report_id": "aspects-coverage",
@@ -57,7 +57,7 @@
       "issue_count": 0,
       "json_path": "reports/json/aspects-coverage.json",
       "markdown_path": "reports/markdown/aspects-coverage.md",
-      "content_hash": "e3e78f82769bb1c2b246eea5369026ac2c55885cc318631566a781255619d8ce"
+      "content_hash": "fd4f04a3310a9919b78e3010ea29e5951577f0de8630d0712b7d95f8eb16bb8d"
     },
     {
       "report_id": "dead-units",
@@ -65,7 +65,7 @@
       "issue_count": 50,
       "json_path": "reports/json/dead-units.json",
       "markdown_path": "reports/markdown/dead-units.md",
-      "content_hash": "9c439d61df1486f57ab85fe898c0323b8bf72adab784847cc3a31b09e377f032"
+      "content_hash": "ca57bd823b73ca86cbd5370c78808de0c61484b1ca677bfdb73108a57172bd91"
     },
     {
       "report_id": "begrippen-coverage",
@@ -73,7 +73,7 @@
       "issue_count": 130,
       "json_path": "reports/json/begrippen-coverage.json",
       "markdown_path": "reports/markdown/begrippen-coverage.md",
-      "content_hash": "93db2346182a872437d46b2ee914c01de1b8e80e25dbb7b1cce8c20ba3638bcc"
+      "content_hash": "bdb827e1d7371b8f7c0a1071d141049ff3bef893b1c3433e614fc38accaf846c"
     },
     {
       "report_id": "empty-needs-audit-summary",
@@ -81,7 +81,7 @@
       "issue_count": 52,
       "json_path": "reports/json/empty-needs-audit-summary.json",
       "markdown_path": "reports/markdown/empty-needs-audit-summary.md",
-      "content_hash": "aa4a4e694ba9a7bc7045387dcc21d983c4414e261baab3b7ab826a6cc4fdf15b"
+      "content_hash": "61b135e58b10388e817ac28391135426e1039599508c419854e74b57b0c6d2f2"
     },
     {
       "report_id": "reference-quality-issues",
@@ -89,7 +89,7 @@
       "issue_count": 8,
       "json_path": "reports/json/reference-quality-issues.json",
       "markdown_path": "reports/markdown/reference-quality-issues.md",
-      "content_hash": "20ea1b91abc9267ec71a263bae2961cddb70dbebf117fb7474816fff8dbee10d"
+      "content_hash": "d88928af16e36ed93dd931438b93fb5690b9f42df56c565f0653e68404642cc5"
     },
     {
       "report_id": "misconception-registry",
@@ -97,7 +97,15 @@
       "issue_count": 4,
       "json_path": "reports/json/misconception-registry.json",
       "markdown_path": "reports/markdown/misconception-registry.md",
-      "content_hash": "a36ffa0620364ed84b847628b4926971a5d66fd487d320533462c300f330541a"
+      "content_hash": "669a31a0fe203b4a8b80758de50bdd3e44133b6d3c4f1aabd28c7c63f32c357d"
+    },
+    {
+      "report_id": "unit-design-status",
+      "status": "warn",
+      "issue_count": 1,
+      "json_path": "reports/json/unit-design-status.json",
+      "markdown_path": "reports/markdown/unit-design-status.md",
+      "content_hash": "c20c36fb9ba5c2838844c86bcdd497f18f6e0b59dbea0dd96513ec589f9336de"
     }
   ]
 }

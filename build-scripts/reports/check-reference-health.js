@@ -30,6 +30,7 @@ function main() {
     'qc_findings',
     'quality_issue_model',
     'misconception_registry',
+    'unit_design_status',
     'procedure_visual_backbone',
     'skilltree_generator_readiness',
     'schema_validation_status',
@@ -74,6 +75,26 @@ function main() {
   if (misconceptionRegistry.pv_machine_promotion !== false) errors.push('misconception_registry.pv_machine_promotion must be false');
   if (misconceptionRegistry.machine_registry_authority !== false) errors.push('misconception_registry.machine_registry_authority must be false');
   if (!(misconceptionRegistry.active_record_count >= 4)) errors.push('misconception_registry.active_record_count must be at least 4');
+
+  const unitDesignStatus = data.unit_design_status || {};
+  if (unitDesignStatus.internal_design_status !== true) errors.push('unit_design_status.internal_design_status must be true');
+  if (unitDesignStatus.primary_evidence !== false) errors.push('unit_design_status.primary_evidence must be false');
+  if (unitDesignStatus.curriculum_authority !== false) errors.push('unit_design_status.curriculum_authority must be false');
+  if (unitDesignStatus.exam_authority !== false) errors.push('unit_design_status.exam_authority must be false');
+  if (unitDesignStatus.scoring_rule !== false) errors.push('unit_design_status.scoring_rule must be false');
+  if (unitDesignStatus.student_facing_exposure !== false) errors.push('unit_design_status.student_facing_exposure must be false');
+  if (unitDesignStatus.student_diagnostics !== false) errors.push('unit_design_status.student_diagnostics must be false');
+  if (unitDesignStatus.adaptive_routing !== false) errors.push('unit_design_status.adaptive_routing must be false');
+  if (unitDesignStatus.mastery_decision !== false) errors.push('unit_design_status.mastery_decision must be false');
+  if (unitDesignStatus.automatic_sequencing !== false) errors.push('unit_design_status.automatic_sequencing must be false');
+  if (unitDesignStatus.student_facing_ai !== false) errors.push('unit_design_status.student_facing_ai must be false');
+  if (unitDesignStatus.summative_use !== false) errors.push('unit_design_status.summative_use must be false');
+  if (unitDesignStatus.pv_projection !== false) errors.push('unit_design_status.pv_projection must be false');
+  if (unitDesignStatus.pv_machine_promotion !== false) errors.push('unit_design_status.pv_machine_promotion must be false');
+  if (unitDesignStatus.machine_field_migration !== false) errors.push('unit_design_status.machine_field_migration must be false');
+  if (unitDesignStatus.protected_reference_mutation_authorized !== false) errors.push('unit_design_status.protected_reference_mutation_authorized must be false');
+  if (unitDesignStatus.storage_strategy !== 'derived_overlay_first') errors.push('unit_design_status.storage_strategy must be derived_overlay_first');
+  if (!(unitDesignStatus.promotion_blocked_count >= 1)) errors.push('unit_design_status.promotion_blocked_count must be at least 1');
 
   const pv = data.procedure_visual_backbone || {};
   if (pv.diagnostic_only !== true) errors.push('procedure_visual_backbone.diagnostic_only must be true');

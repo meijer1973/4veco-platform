@@ -1,30 +1,30 @@
 {
   "schema_version": "0.1",
-  "generated_at": "2026-05-15T09:02:59.667Z",
+  "generated_at": "2026-05-15T10:10:21.308Z",
   "sprint_id": "R0.2",
   "scope": "references/",
   "note": "Self-generated inventory files intentionally omit size and sha256 to avoid unstable self-checksums.",
   "summary": {
-    "file_count": 227,
+    "file_count": 230,
     "by_layer": {
       "authored_judgement": 7,
-      "governance_data": 151,
+      "governance_data": 153,
       "external_authority": 32,
       "machine_registry": 5,
       "owned_curriculum_design": 3,
       "quality_protocol": 5,
       "planning": 1,
-      "schema_contract": 22,
+      "schema_contract": 23,
       "governance_policy": 1
     },
     "by_edit_policy": {
       "human_reviewed_edit": 15,
-      "generated_by_inventory_script": 27,
-      "sprint_process": 123,
+      "generated_by_inventory_script": 28,
+      "sprint_process": 124,
       "external_refresh_only": 32,
       "cli_only": 5,
       "versioned_human_reviewed_edit": 3,
-      "code_review": 22
+      "code_review": 23
     }
   },
   "files": [
@@ -812,8 +812,8 @@
       "path": "references/data/rag/chunk_index.jsonl",
       "file_name": "chunk_index.jsonl",
       "extension": "jsonl",
-      "size_bytes": 4248641,
-      "sha256": "ac93f3c612cb5d69fa022f8884e65a57117bccf3c3e54fa178ba4a357e0cc65d",
+      "size_bytes": 4250317,
+      "sha256": "8a54c42a0c754d251ac07ebcb15a4820fdae25659477cdda3276871fc27f80c4",
       "layer": "governance_data",
       "authority_level": "generated_report",
       "source_type": "inventory",
@@ -3189,6 +3189,46 @@
       "self_generated_inventory_file": false
     },
     {
+      "path": "references/data/sprints/S9.plan.json",
+      "file_name": "S9.plan.json",
+      "extension": "json",
+      "size_bytes": 4228,
+      "sha256": "e8cbeaefa823498db56030333840e77363b9af8416174a57a8e340c3f42aaa40",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/data/unit-design-status/unit-design-status-overlay.json",
+      "file_name": "unit-design-status-overlay.json",
+      "extension": "json",
+      "size_bytes": 4681,
+      "sha256": "53a7306585a9e6d55d2a12af18b1b46a56ff675677ddb8de1aa6d82394c2611d",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "inventory",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "generated_by_inventory_script",
+      "owner": "references_team",
+      "refresh_policy": "regenerate",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
       "path": "references/external/amstelveencollege_quality_standards.md",
       "file_name": "amstelveencollege_quality_standards.md",
       "extension": "md",
@@ -4095,8 +4135,8 @@
       "path": "references/reference-team-roadmap.md",
       "file_name": "reference-team-roadmap.md",
       "extension": "md",
-      "size_bytes": 131576,
-      "sha256": "78e94a59f7fe6f5f9d488246ad96faadcd047a773d1623b51c6dbb56b8b7e9ad",
+      "size_bytes": 131794,
+      "sha256": "d5b7a70be2cfe7b33487394a7973cf718872a0be6eac03b6a28df842f0edf0aa",
       "layer": "planning",
       "authority_level": "authored_judgement",
       "source_type": "roadmap",
@@ -4515,6 +4555,27 @@
       "extension": "json",
       "size_bytes": 751,
       "sha256": "47fad9d2503c8f6a48754d4f439c7e8cda6197bb6704f71d35cee66cf1a2f9ba",
+      "layer": "schema_contract",
+      "authority_level": "machine_contract",
+      "source_type": "json_schema",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "owner": "references_team",
+      "refresh_policy": "schema_review",
+      "downstream_dependencies": [
+        "validators",
+        "reference-cli",
+        "reports",
+        "future-rag"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/schemas/unit-design-status.schema.json",
+      "file_name": "unit-design-status.schema.json",
+      "extension": "json",
+      "size_bytes": 5451,
+      "sha256": "14310c72be56976707003fddcfc7ae09b75871bed98032e06ea2b16ce4560e86",
       "layer": "schema_contract",
       "authority_level": "machine_contract",
       "source_type": "json_schema",

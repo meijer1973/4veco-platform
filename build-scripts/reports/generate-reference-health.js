@@ -61,6 +61,7 @@ function main() {
       'evidence-anchor-status',
       'reference-quality-issues',
       'misconception-registry',
+      'unit-design-status',
       'procedure-visual-coverage',
       'skilltree-generator-readiness',
   ].map(report);
@@ -75,6 +76,7 @@ function main() {
   const retrievalEval = readJson('references/data/rag/retrieval_eval_results.json', null);
   const qualityIssueReport = report('reference-quality-issues');
   const misconceptionReport = report('misconception-registry');
+  const unitDesignReport = report('unit-design-status');
   const procedureVisualCoverage = report('procedure-visual-coverage');
   const skilltreeGeneratorReadiness = report('skilltree-generator-readiness');
   const qualityIssueLog = readJson('references/data/qc/reference-quality-issues.json', {
@@ -108,6 +110,28 @@ function main() {
     records: [],
   });
   const misconceptionFlags = misconceptionRegistry.authority_flags || {};
+  const unitDesignOverlay = readJson('references/data/unit-design-status/unit-design-status-overlay.json', {
+    authority_boundary: {
+      internal_design_status: true,
+      primary_evidence: false,
+      curriculum_authority: false,
+      exam_authority: false,
+      scoring_rule: false,
+      student_facing_exposure: false,
+      student_diagnostics: false,
+      adaptive_routing: false,
+      mastery_decision: false,
+      automatic_sequencing: false,
+      student_facing_ai: false,
+      summative_use: false,
+      pv_projection: false,
+      pv_machine_promotion: false,
+      machine_field_migration: false,
+      protected_reference_mutation_authorized: false,
+    },
+    records: [],
+  });
+  const unitDesignFlags = unitDesignOverlay.authority_boundary || {};
 
   const state = {
     schema_version: 1,
@@ -123,6 +147,8 @@ function main() {
       'reports/review-gates/GATE-R7-rag/gate-closure.json',
       'references/data/misconceptions/misconception-registry.json',
       'reports/json/misconception-registry.json',
+      'references/data/unit-design-status/unit-design-status-overlay.json',
+      'reports/json/unit-design-status.json',
       'reports/json/procedure-visual-coverage.json',
       'reports/json/skilltree-generator-readiness.json',
       'reports/json/*.json',
@@ -205,6 +231,35 @@ function main() {
       pv_projection: misconceptionFlags.pv_projection === true,
       pv_machine_promotion: misconceptionFlags.pv_machine_promotion === true,
       machine_registry_authority: misconceptionFlags.machine_registry_authority === true,
+    },
+    unit_design_status: {
+      source: 'references/data/unit-design-status/unit-design-status-overlay.json',
+      report: 'reports/json/unit-design-status.json',
+      status: unitDesignReport.status,
+      overlay_status: unitDesignOverlay.status || 'unknown',
+      record_count: Array.isArray(unitDesignOverlay.records) ? unitDesignOverlay.records.length : 0,
+      promotion_blocked_count: Array.isArray(unitDesignOverlay.records)
+        ? unitDesignOverlay.records.filter((item) => item.promotion_blocked === true).length
+        : 0,
+      by_status: countBy(unitDesignOverlay.records || [], (item) => item.status),
+      gate_ids: [...new Set((unitDesignOverlay.records || []).map((item) => item.gate_id).filter(Boolean))].sort(),
+      storage_strategy: unitDesignOverlay.storage_strategy && unitDesignOverlay.storage_strategy.strategy || 'unknown',
+      internal_design_status: unitDesignFlags.internal_design_status === true,
+      primary_evidence: unitDesignFlags.primary_evidence === true,
+      curriculum_authority: unitDesignFlags.curriculum_authority === true,
+      exam_authority: unitDesignFlags.exam_authority === true,
+      scoring_rule: unitDesignFlags.scoring_rule === true,
+      student_facing_exposure: unitDesignFlags.student_facing_exposure === true,
+      student_diagnostics: unitDesignFlags.student_diagnostics === true,
+      adaptive_routing: unitDesignFlags.adaptive_routing === true,
+      mastery_decision: unitDesignFlags.mastery_decision === true,
+      automatic_sequencing: unitDesignFlags.automatic_sequencing === true,
+      student_facing_ai: unitDesignFlags.student_facing_ai === true,
+      summative_use: unitDesignFlags.summative_use === true,
+      pv_projection: unitDesignFlags.pv_projection === true,
+      pv_machine_promotion: unitDesignFlags.pv_machine_promotion === true,
+      machine_field_migration: unitDesignFlags.machine_field_migration === true,
+      protected_reference_mutation_authorized: unitDesignFlags.protected_reference_mutation_authorized === true,
     },
     procedure_visual_backbone: {
       source: 'reports/json/procedure-visual-coverage.json',
@@ -340,6 +395,19 @@ function main() {
   lines.push(`- Student-facing diagnosis: ${state.misconception_registry.student_facing_diagnosis}`);
   lines.push(`- Adaptive routing: ${state.misconception_registry.adaptive_routing}`);
   lines.push(`- Summative use: ${state.misconception_registry.summative_use}`);
+  lines.push('');
+  lines.push('## Unit-Design Status');
+  lines.push('');
+  lines.push(`- Status: ${state.unit_design_status.status}`);
+  lines.push(`- Records: ${state.unit_design_status.record_count}`);
+  lines.push(`- Promotion-blocked records: ${state.unit_design_status.promotion_blocked_count}`);
+  lines.push(`- Storage strategy: ${state.unit_design_status.storage_strategy}`);
+  lines.push(`- Internal design status: ${state.unit_design_status.internal_design_status}`);
+  lines.push(`- Primary evidence: ${state.unit_design_status.primary_evidence}`);
+  lines.push(`- Curriculum authority: ${state.unit_design_status.curriculum_authority}`);
+  lines.push(`- Student diagnostics: ${state.unit_design_status.student_diagnostics}`);
+  lines.push(`- Adaptive routing: ${state.unit_design_status.adaptive_routing}`);
+  lines.push(`- Protected reference mutation authorized: ${state.unit_design_status.protected_reference_mutation_authorized}`);
   lines.push('');
   lines.push('## Procedure-Visual Backbone');
   lines.push('');

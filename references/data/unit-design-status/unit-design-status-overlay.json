@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "status": "active_internal_overlay",
+  "generated_by": "build-scripts/references/build-unit-design-status-overlay.js",
+  "generated_on": "2026-05-15T10:08:35.133Z",
+  "authority_boundary": {
+    "internal_design_status": true,
+    "primary_evidence": false,
+    "curriculum_authority": false,
+    "exam_authority": false,
+    "scoring_rule": false,
+    "student_facing_exposure": false,
+    "student_diagnostics": false,
+    "adaptive_routing": false,
+    "mastery_decision": false,
+    "automatic_sequencing": false,
+    "student_facing_ai": false,
+    "summative_use": false,
+    "pv_projection": false,
+    "pv_machine_promotion": false,
+    "machine_field_migration": false,
+    "protected_reference_mutation_authorized": false
+  },
+  "storage_strategy": {
+    "strategy": "derived_overlay_first",
+    "machine_field_migration_ready": false,
+    "protected_reference_mutation_authorized": false,
+    "rationale": "Lifecycle CLIs exist, but unit_design_status is not yet a governed machine-unit field; CP-5 must close before any protected mutation lane."
+  },
+  "records": [
+    {
+      "unit_id": "D04",
+      "unit_name": "Elasticiteit en goederenclassificatie",
+      "status": "unstable_unit_design",
+      "review_status": "cp5_review_required",
+      "gate_id": "GATE-CP5-D04-resolution",
+      "promotion_blocked": true,
+      "c_to_b_promotion_blocked": true,
+      "current_catalog_state": {
+        "needs": [],
+        "terms": [
+          "inkomenselasticiteit"
+        ],
+        "exam_codes": [
+          "D1.7",
+          "D1.8"
+        ],
+        "deprecated": false
+      },
+      "resolution_options": [
+        "retire_standalone_unit",
+        "merge_into_successor_units",
+        "redistribute_content_to_successor_units",
+        "split_into_successor_units",
+        "hold_pending_more_evidence"
+      ],
+      "recommended_resolution": "redistribute_content_to_successor_units_then_retire_standalone_unit",
+      "successor_unit_ids": [
+        "A15",
+        "A16",
+        "A17",
+        "D06",
+        "D11",
+        "D12",
+        "D27"
+      ],
+      "affected_unit_ids": [
+        "D04",
+        "A15",
+        "A16",
+        "A17",
+        "D06",
+        "D11",
+        "D12",
+        "D27"
+      ],
+      "evidence_refs": [
+        {
+          "kind": "human_gate_decision",
+          "path": "reports/review-gates/GATE-R2-empty-needs/human-interview.md",
+          "anchor": "Question 5: D04 Elasticity And Goods Classification",
+          "supports": "Human reviewer said there is no need for a separate D04 unit; classifications should sit inside the relevant elasticity units."
+        },
+        {
+          "kind": "unit_design_packet",
+          "path": "reports/review-gates/GATE-R2-empty-needs/R2.4-evidence-unit-design-packet.json",
+          "anchor": "edge-D04-needs-A15 and unit_design_decisions[D04]",
+          "supports": "D04 is unit_design_required, not a D04 to A15 prerequisite-edge correction."
+        },
+        {
+          "kind": "gate_closure",
+          "path": "reports/review-gates/GATE-R5-alignment-graph/gate-closure.json",
+          "anchor": "conditions_to_reopen_or_pass",
+          "supports": "D04 must be represented as a unit-design issue, not as a simple prerequisite edge."
+        },
+        {
+          "kind": "quality_issue",
+          "path": "reports/json/reference-quality-issues.json",
+          "anchor": "R8-QC-007",
+          "supports": "D04 requires a decision record, dependent-unit audit, and VWO economics review outcome before C-to-B promotion depends on it."
+        },
+        {
+          "kind": "target_exercise",
+          "path": "references/authored/course-target-exercises.json",
+          "anchor": "2.1.3 Income elasticity and cross elasticity",
+          "supports": "Owned target exercise groups D04 with income and cross elasticity work rather than as a standalone exercise target."
+        },
+        {
+          "kind": "exam_question",
+          "path": "references/external/exam-questions.json",
+          "anchor": "ha-1022-a-25-2-o opgave 2 question 8",
+          "supports": "Exam extraction currently cites D04 for a goods-classification question tied to D1.7/D1.8."
+        }
+      ],
+      "blocked_downstream_uses": [
+        "exercise_promotion",
+        "student_diagnostics",
+        "adaptive_routing",
+        "mastery_decision",
+        "automatic_sequencing",
+        "student_facing_ai",
+        "summative_use",
+        "pv_projection",
+        "pv_machine_promotion"
+      ],
+      "notes": "S9 prepares CP-5 closure only. D04 lifecycle mutation requires a later CLI-only sprint after explicit human gate closure."
+    }
+  ]
+}

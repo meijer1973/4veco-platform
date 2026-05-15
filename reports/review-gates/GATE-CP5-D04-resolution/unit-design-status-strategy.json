@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "sprint_id": "S9",
+  "gate_id": "GATE-CP5-D04-resolution",
+  "generated_by": "build-scripts/references/build-unit-design-status-overlay.js",
+  "generated_on": "2026-05-15T10:08:35.157Z",
+  "strategy": "derived_overlay_first",
+  "protected_reference_data_changed": false,
+  "machine_field_migration_ready": false,
+  "rationale": "The roadmap prefers a derived overlay first unless CLI/schema migration is ready. Current CLI coverage can express deprecate, split, or merge after a decision, but there is no governed machine-unit unit_design_status field workflow yet.",
+  "accepted_now": [
+    "Create references/data/unit-design-status/unit-design-status-overlay.json.",
+    "Report D04 as unstable and promotion-blocked.",
+    "Prepare CP-5 decision record, dependent-unit audit, and human review packet."
+  ],
+  "blocked_now": [
+    "Do not edit references/machine/micro-teaching-units.json.",
+    "Do not run unit-deprecate.js, unit-merge.js, or unit-split.js in S9.",
+    "Do not add D04 -> A15.",
+    "Do not treat D04 as promotion-safe before CP-5 closure."
+  ],
+  "later_if_cp5_passes": [
+    "Plan a separate CLI-only mutation sprint with concrete target specs.",
+    "Use unit-deprecate.js, unit-merge.js, or unit-split.js only after explicit human authorization.",
+    "Regenerate machine projections, reports, RAG chunks, source manifest, and document inventory in that later sprint."
+  ]
+}

@@ -5,6 +5,7 @@ const path = require('path');
 const REPO_ROOT = path.resolve(__dirname, '..', '..');
 const FILE = path.join(REPO_ROOT, 'references/data/rag/chunk_index.jsonl');
 const MISCONCEPTION_REPORT = path.join(REPO_ROOT, 'reports/json/misconception-registry.json');
+const UNIT_DESIGN_REPORT = path.join(REPO_ROOT, 'reports/json/unit-design-status.json');
 const SOURCE_TYPES = new Set(['external_source', 'machine_unit', 'machine_term', 'exam_question', 'target_exercise', 'authored_reference', 'quality_report', 'alignment_edge', 'owned_content_edge', 'evidence_anchor']);
 const AUTHORITY = new Set(['external_primary', 'machine_registry', 'authored_judgement', 'generated_report', 'diagnostic']);
 
@@ -22,6 +23,7 @@ function main() {
   let previous = '';
   let generatedReportChunks = 0;
   let misconceptionReportChunk = null;
+  let unitDesignReportChunk = null;
   for (const [index, line] of lines.entries()) {
     let chunk;
     try {
@@ -51,6 +53,7 @@ function main() {
       if (chunk.curriculum_authority !== false) errors.push(`${chunk.chunk_id}: generated-report chunks must set curriculum_authority=false`);
     }
     if (chunk.chunk_id === 'quality-report:misconception-registry.json') misconceptionReportChunk = chunk;
+    if (chunk.chunk_id === 'quality-report:unit-design-status.json') unitDesignReportChunk = chunk;
   }
   if (lines.length === 0) errors.push('chunk index must not be empty');
   if (generatedReportChunks === 0) errors.push('chunk index should include generated-report chunks marked non-authoritative');
@@ -69,6 +72,27 @@ function main() {
       }
       if (!/diagnostic_design_context/.test(misconceptionReportChunk.text)) {
         errors.push('misconception-registry report chunk must preserve diagnostic_design_context label');
+      }
+    }
+  }
+  if (fs.existsSync(UNIT_DESIGN_REPORT)) {
+    if (!unitDesignReportChunk) {
+      errors.push('chunk index should include generated unit-design-status report chunk');
+    } else {
+      if (unitDesignReportChunk.authority_level !== 'generated_report') {
+        errors.push('unit-design-status report chunk must be generated_report authority');
+      }
+      if (unitDesignReportChunk.primary_evidence !== false) {
+        errors.push('unit-design-status report chunk must set primary_evidence=false');
+      }
+      if (unitDesignReportChunk.curriculum_authority !== false) {
+        errors.push('unit-design-status report chunk must set curriculum_authority=false');
+      }
+      if (!/internal_design_status/.test(unitDesignReportChunk.text)) {
+        errors.push('unit-design-status report chunk must preserve internal_design_status label');
+      }
+      if (!/promotion_blocked_count/.test(unitDesignReportChunk.text)) {
+        errors.push('unit-design-status report chunk must preserve promotion_blocked_count label');
       }
     }
   }

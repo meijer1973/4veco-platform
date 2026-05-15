@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "sprint_id": "S9",
+  "gate_id": "GATE-CP5-D04-resolution",
+  "generated_by": "build-scripts/references/build-unit-design-status-overlay.js",
+  "generated_on": "2026-05-15T10:08:35.158Z",
+  "status": "ready_for_human_interview",
+  "protected_reference_data_changed": false,
+  "review_questions": [
+    {
+      "id": "q1_storage_strategy",
+      "question": "Should S9 keep unit_design_status as a derived references/data overlay for now, rather than adding a machine-unit field?",
+      "options": [
+        "A. Yes, derived overlay first.",
+        "B. No, prepare machine-field migration now.",
+        "C. Hold for more tooling evidence.",
+        "D. Open answer."
+      ],
+      "recommended": "A"
+    },
+    {
+      "id": "q2_d04_resolution",
+      "question": "What is the CP-5 lifecycle decision for D04 Elasticiteit en goederenclassificatie?",
+      "options": [
+        "A. Redistribute content to successor elasticity units and retire D04 later through CLI.",
+        "B. Merge D04 into one existing unit.",
+        "C. Split D04 into successor units.",
+        "D. Hold pending more evidence.",
+        "E. Open answer."
+      ],
+      "recommended": "A"
+    },
+    {
+      "id": "q3_successor_mapping",
+      "question": "Is the proposed successor mapping complete: A15/D06 for price elasticity, A17/D11 for income elasticity, and A16/D12/D27 for cross elasticity and substitutes/complements?",
+      "options": [
+        "A. Yes, mapping is complete enough for CP-5.",
+        "B. Mostly, but revise named units.",
+        "C. No, D04 should remain standalone.",
+        "D. Open answer."
+      ],
+      "recommended": "A"
+    },
+    {
+      "id": "q4_audit_completeness",
+      "question": "Is the dependent-unit audit complete enough for CP-5, covering D04, A15, A16, A17, D06, D11, D12, D27, target exercise 2.1.3, and exam ha-1022-a-25-2-o question 8?",
+      "options": [
+        "A. Yes, complete enough.",
+        "B. Needs another evidence source before closure.",
+        "C. Hold and expand audit scope.",
+        "D. Open answer."
+      ],
+      "recommended": "A"
+    },
+    {
+      "id": "q5_promotion_block",
+      "question": "Should D04 remain blocked for C-to-B promotion and student-facing projection until a later CLI-only mutation sprint applies the CP-5 decision?",
+      "options": [
+        "A. Yes, keep blocked until later CLI mutation.",
+        "B. Allow internal promotion once CP-5 closes.",
+        "C. Hold.",
+        "D. Open answer."
+      ],
+      "recommended": "A"
+    },
+    {
+      "id": "q6_gate_status",
+      "question": "What CP-5 gate status should close this review?",
+      "options": [
+        "A. pass_with_conditions: S9 closes but later CLI mutation is required.",
+        "B. pass: fully resolved without conditions.",
+        "C. hold: more review needed.",
+        "D. fail: packet is not fit for closure.",
+        "E. Open answer."
+      ],
+      "recommended": "A"
+    }
+  ],
+  "packet_summary": {
+    "recommended_resolution": "redistribute_content_to_successor_units_then_retire_standalone_unit",
+    "storage_strategy": "derived_overlay_first",
+    "audited_units": [
+      "D04",
+      "A15",
+      "A16",
+      "A17",
+      "D06",
+      "D11",
+      "D12",
+      "D27"
+    ],
+    "d04_target_exercise_citations": 1,
+    "d04_exam_question_citations": 1
+  },
+  "stop_conditions": [
+    "Stop if a reviewer asks for protected machine mutation inside S9.",
+    "Stop if D04 is treated as a simple prerequisite edge.",
+    "Stop if the successor-unit mapping omits a relevant elasticity lane.",
+    "Stop if gate closure lacks explicit human confirmation."
+  ]
+}

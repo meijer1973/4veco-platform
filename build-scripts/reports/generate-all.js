@@ -20,6 +20,7 @@ const TARGETS = 'references/authored/course-target-exercises.json';
 const EMPTY_NEEDS = 'references/data/audits/empty-needs-audit.json';
 const QUALITY_ISSUES = 'references/data/qc/reference-quality-issues.json';
 const MISCONCEPTIONS = 'references/data/misconceptions/misconception-registry.json';
+const UNIT_DESIGN_STATUS = 'references/data/unit-design-status/unit-design-status-overlay.json';
 
 function readJson(relPath, fallback) {
   const file = path.join(REPO_ROOT, relPath);
@@ -398,6 +399,47 @@ function buildMisconceptionRegistry(ctx) {
   });
 }
 
+function buildUnitDesignStatus(ctx) {
+  const source = ctx.unitDesignStatus || { records: [], authority_boundary: {} };
+  const records = source.records || [];
+  const issues = records.map((item, index) => issue(
+    'unit-design-status',
+    index + 1,
+    item.promotion_blocked ? 'high' : 'medium',
+    item.unit_id,
+    item.status || 'unit_design_status',
+    (item.evidence_refs && item.evidence_refs[0] && item.evidence_refs[0].path) || UNIT_DESIGN_STATUS,
+    `Keep ${item.unit_id} blocked for promotion until ${item.gate_id || 'the unit-design gate'} closes and any later CLI mutation executes.`,
+    'A human-reviewed unit-design decision record, dependent-unit audit, and later CLI-only mutation log exist if protected reference data changes.'
+  ));
+  const flags = source.authority_boundary || {};
+  return makeReport('unit-design-status', [UNIT_DESIGN_STATUS], records.length ? 'warn' : 'pass', issues, {
+    overlay_status: source.status || 'unknown',
+    record_count: records.length,
+    by_status: countBy(records, (item) => item.status),
+    promotion_blocked_count: records.filter((item) => item.promotion_blocked === true).length,
+    affected_unit_count: new Set(records.flatMap((item) => item.affected_unit_ids || [])).size,
+    gate_ids: [...new Set(records.map((item) => item.gate_id).filter(Boolean))].sort(),
+    storage_strategy: source.storage_strategy && source.storage_strategy.strategy || 'unknown',
+    internal_design_status: flags.internal_design_status === true,
+    primary_evidence: flags.primary_evidence === true,
+    curriculum_authority: flags.curriculum_authority === true,
+    exam_authority: flags.exam_authority === true,
+    scoring_rule: flags.scoring_rule === true,
+    student_facing_exposure: flags.student_facing_exposure === true,
+    student_diagnostics: flags.student_diagnostics === true,
+    adaptive_routing: flags.adaptive_routing === true,
+    mastery_decision: flags.mastery_decision === true,
+    automatic_sequencing: flags.automatic_sequencing === true,
+    student_facing_ai: flags.student_facing_ai === true,
+    summative_use: flags.summative_use === true,
+    pv_projection: flags.pv_projection === true,
+    pv_machine_promotion: flags.pv_machine_promotion === true,
+    machine_field_migration: flags.machine_field_migration === true,
+    protected_reference_mutation_authorized: flags.protected_reference_mutation_authorized === true,
+  });
+}
+
 function main() {
   const ctx = {
     units: loadUnits(),
@@ -407,6 +449,7 @@ function main() {
     emptyNeeds: readJson(EMPTY_NEEDS, { entries: [], summary: {} }),
     qualityIssues: readJson(QUALITY_ISSUES, { issues: [] }),
     misconceptions: readJson(MISCONCEPTIONS, { records: [], authority_flags: {} }),
+    unitDesignStatus: readJson(UNIT_DESIGN_STATUS, { records: [], authority_boundary: {} }),
   };
 
   const reports = [
@@ -422,6 +465,7 @@ function main() {
     buildEmptyNeedsAuditSummary(ctx),
     buildReferenceQualityIssues(ctx),
     buildMisconceptionRegistry(ctx),
+    buildUnitDesignStatus(ctx),
   ];
 
   for (const report of reports) writeReport(report);
