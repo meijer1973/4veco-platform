@@ -7,6 +7,7 @@ const OUT_DIR = path.join(REPO_ROOT, 'references', 'data', 'unit-design-status')
 const OUT_FILE = path.join(OUT_DIR, 'unit-design-status-overlay.json');
 const GATE_ID = 'GATE-CP5-D04-resolution';
 const GATE_DIR = path.join(REPO_ROOT, 'reports', 'review-gates', GATE_ID);
+const GATE_CLOSURE = path.join(GATE_DIR, 'gate-closure.json');
 const SPRINT_ID = 'S9';
 const REQUIRED_AUDIT_UNITS = ['D04', 'A15', 'A16', 'A17', 'D06', 'D11', 'D12', 'D27'];
 
@@ -137,9 +138,15 @@ function evidenceRefs() {
   ];
 }
 
-function buildOverlay(unitsById) {
+function readGateClosure() {
+  if (!fs.existsSync(GATE_CLOSURE)) return null;
+  return JSON.parse(fs.readFileSync(GATE_CLOSURE, 'utf8'));
+}
+
+function buildOverlay(unitsById, gateClosure) {
   const d04 = unitsById.get('D04');
   if (!d04) throw new Error('D04 missing from micro-teaching-units.json');
+  const gateClosed = Boolean(gateClosure && gateClosure.status);
   return {
     schema_version: 1,
     status: 'active_internal_overlay',
@@ -174,7 +181,7 @@ function buildOverlay(unitsById) {
         unit_id: 'D04',
         unit_name: unitName(d04),
         status: 'unstable_unit_design',
-        review_status: 'cp5_review_required',
+        review_status: gateClosed ? 'cp5_closed' : 'cp5_review_required',
         gate_id: GATE_ID,
         promotion_blocked: true,
         c_to_b_promotion_blocked: true,
@@ -241,14 +248,15 @@ function buildAudit(unitsById, targets, exams, triage) {
   };
 }
 
-function buildDecisionRecord(audit) {
+function buildDecisionRecord(audit, gateClosure) {
+  const gateClosed = Boolean(gateClosure && gateClosure.status);
   return {
     schema_version: 1,
     sprint_id: SPRINT_ID,
     gate_id: GATE_ID,
     generated_by: 'build-scripts/references/build-unit-design-status-overlay.js',
     generated_on: now(),
-    decision_status: 'review_packet_prepared_not_closed',
+    decision_status: gateClosed ? `gate_closed_${gateClosure.status}` : 'review_packet_prepared_not_closed',
     protected_reference_data_changed: false,
     subject_unit: 'D04',
     subject_unit_name: 'Elasticiteit en goederenclassificatie',
@@ -312,14 +320,15 @@ function buildStrategy() {
   };
 }
 
-function buildReviewPacket(decision, audit, strategy) {
+function buildReviewPacket(decision, audit, strategy, gateClosure) {
+  const gateClosed = Boolean(gateClosure && gateClosure.status);
   return {
     schema_version: 1,
     sprint_id: SPRINT_ID,
     gate_id: GATE_ID,
     generated_by: 'build-scripts/references/build-unit-design-status-overlay.js',
     generated_on: now(),
-    status: 'ready_for_human_interview',
+    status: gateClosed ? `gate_closed_${gateClosure.status}` : 'ready_for_human_interview',
     protected_reference_data_changed: false,
     review_questions: [
       {
@@ -392,7 +401,7 @@ function writeOverlayMarkdown(overlay) {
     '',
     `Sprint: ${SPRINT_ID}`,
     `Gate: ${GATE_ID}`,
-    'Status: review packet prepared, not closed',
+    `Status: ${record.review_status}`,
     '',
     '## Recommended Decision',
     '',
@@ -479,7 +488,7 @@ function writeReviewPacketMarkdown(packet) {
     '',
     `Sprint: ${SPRINT_ID}`,
     `Gate: ${GATE_ID}`,
-    'Status: ready for human interview',
+    `Status: ${packet.status}`,
     '',
     '## Scope',
     '',
@@ -509,12 +518,13 @@ function main() {
   const targets = readJson('references/authored/course-target-exercises.json', { exercises: [] });
   const exams = readJson('references/external/exam-questions.json', []);
   const triage = readJson('reports/json/blueprint-flag-triage.json', { triage_records: [] });
+  const gateClosure = readGateClosure();
 
-  const overlay = buildOverlay(unitsById);
+  const overlay = buildOverlay(unitsById, gateClosure);
   const audit = buildAudit(unitsById, targets, exams, triage);
-  const decision = buildDecisionRecord(audit);
+  const decision = buildDecisionRecord(audit, gateClosure);
   const strategy = buildStrategy();
-  const packet = buildReviewPacket(decision, audit, strategy);
+  const packet = buildReviewPacket(decision, audit, strategy, gateClosure);
 
   writeJson(OUT_FILE, overlay);
   writeJson(path.join(GATE_DIR, 'dependent-unit-audit.json'), audit);

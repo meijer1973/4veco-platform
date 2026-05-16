@@ -3,7 +3,7 @@
   "sprint_id": "S9",
   "gate_id": "GATE-CP5-D04-resolution",
   "generated_by": "build-scripts/references/build-unit-design-status-overlay.js",
-  "generated_on": "2026-05-15T10:08:35.157Z",
+  "generated_on": "2026-05-15T12:47:43.158Z",
   "protected_reference_data_changed": false,
   "audit_scope": [
     "D04",

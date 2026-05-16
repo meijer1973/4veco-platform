@@ -7,6 +7,10 @@ This file lists every artifact in this gate's bundle as a full raw-GitHub URL so
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-CP5-D04-resolution/d04-decision-record.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-CP5-D04-resolution/dependent-unit-audit.json
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-CP5-D04-resolution/dependent-unit-audit.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-CP5-D04-resolution/gate-closure.json
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-CP5-D04-resolution/gate-closure.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-CP5-D04-resolution/human-interview.json
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-CP5-D04-resolution/human-interview.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-CP5-D04-resolution/review-packet.json
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-CP5-D04-resolution/review-packet.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-CP5-D04-resolution/unit-design-status-strategy.json

@@ -2,7 +2,7 @@
 
 Sprint: S9
 Gate: GATE-CP5-D04-resolution
-Status: ready for human interview
+Status: gate_closed_pass_with_conditions
 
 ## Scope
 

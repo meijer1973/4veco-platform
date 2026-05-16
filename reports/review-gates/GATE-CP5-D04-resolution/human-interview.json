@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-CP5-D04-resolution",
+  "sprint_id": "S9",
+  "interview_date": "2026-05-15",
+  "mode": "batch_human_review_response_after_full_question_list",
+  "review_questions_shown_first": true,
+  "answers": [
+    {
+      "question_id": "q1_storage_strategy",
+      "answer": "A",
+      "decision": "Yes, derived overlay first.",
+      "rationale": "Lifecycle CLIs can express later deprecate/split/merge actions, but there is no governed machine-unit unit_design_status field workflow yet. S9 accepts a references/data overlay now and blocks protected machine edits and lifecycle CLI execution inside S9."
+    },
+    {
+      "question_id": "q2_d04_resolution",
+      "answer": "A",
+      "decision": "Redistribute content to successor elasticity units and retire D04 later through CLI.",
+      "rationale": "Earlier R2 human review concluded there is no need for a separate D04 unit. Goods classification belongs inside the relevant elasticity units. S9 recommends redistribution then retirement while authorizing no protected mutation."
+    },
+    {
+      "question_id": "q3_successor_mapping",
+      "answer": "A",
+      "decision": "The proposed successor mapping is complete enough for CP-5.",
+      "rationale": "A15/D06, A17/D11, and A16/D12/D27 cover the price, income, and cross-elasticity lanes for the decision gate. A later mutation sprint still needs exact operational targets."
+    },
+    {
+      "question_id": "q4_audit_completeness",
+      "answer": "A",
+      "decision": "The dependent-unit audit is complete enough for CP-5.",
+      "rationale": "The audit covers D04, A15, A16, A17, D06, D11, D12, D27, target exercise 2.1.3, and exam ha-1022-a-25-2-o question 8. It is sufficient for closure but not for direct mutation."
+    },
+    {
+      "question_id": "q5_promotion_block",
+      "answer": "A",
+      "decision": "Keep D04 blocked until later CLI mutation.",
+      "rationale": "The overlay marks D04 unstable and promotion-blocked, and blocks exercise promotion, diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, PV projection, and PV machine promotion."
+    },
+    {
+      "question_id": "q6_gate_status",
+      "answer": "A",
+      "decision": "Close as pass_with_conditions.",
+      "rationale": "S9 resolves the decision gate conditionally. Later CLI-only mutation is required, and S9 must not mutate protected machine references."
+    }
+  ],
+  "pattern_analysis": {
+    "consistent": true,
+    "targeted_followups_needed": false,
+    "summary": "Answers consistently preserve derived-overlay storage, D04 unit-design framing, promotion blocking, and protected-reference mutation boundaries."
+  },
+  "closure_proposal": {
+    "status": "pass_with_conditions",
+    "protected_reference_data_changed": false,
+    "later_cli_mutation_required": true
+  },
+  "explicit_human_confirmation": true,
+  "confirmed_on": "2026-05-15"
+}

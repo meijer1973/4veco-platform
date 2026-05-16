@@ -2,7 +2,7 @@
 
 Sprint: S9
 Gate: GATE-CP5-D04-resolution
-Status: review packet prepared, not closed
+Status: cp5_closed
 
 ## Recommended Decision
 

@@ -1,0 +1,78 @@
+{
+  "gate_id": "GATE-CP5-D04-resolution",
+  "sprint_id": "S9",
+  "status": "pass_with_conditions",
+  "closed_on": "2026-05-15",
+  "closure_confirmed_by_human": true,
+  "human_interview": "reports/review-gates/GATE-CP5-D04-resolution/human-interview.md",
+  "review_packet": "reports/review-gates/GATE-CP5-D04-resolution/review-packet.md",
+  "audit": "reports/review-gates/GATE-CP5-D04-resolution/dependent-unit-audit.md",
+  "summary": "CP-5 closes as pass_with_conditions. S9 resolves the D04 unit-design decision direction through a derived references/data overlay and review packet, but does not authorize or execute protected machine mutation.",
+  "protected_reference_data_changed": false,
+  "decision_scope": "decision_direction_only_no_protected_mutation",
+  "explicit_decisions": [
+    {
+      "topic": "storage strategy",
+      "decision": "Keep unit_design_status as a derived references/data overlay for now."
+    },
+    {
+      "topic": "D04 lifecycle",
+      "decision": "Redistribute D04 content to successor elasticity units and retire the standalone D04 unit later through CLI."
+    },
+    {
+      "topic": "successor mapping",
+      "decision": "Use A15/D06 for price elasticity, A17/D11 for income elasticity, and A16/D12/D27 for cross elasticity and substitutes/complements."
+    },
+    {
+      "topic": "promotion block",
+      "decision": "Keep D04 blocked for C-to-B promotion and student-facing projection until later CLI mutation."
+    },
+    {
+      "topic": "mutation boundary",
+      "decision": "No protected machine mutation is authorized in S9."
+    }
+  ],
+  "accepted_outcomes": [
+    "The derived overlay in references/data/unit-design-status/unit-design-status-overlay.json may remain the active internal unit-design-status surface.",
+    "The D04 decision direction is settled for CP-5: redistribute content to successor elasticity units and retire D04 later through CLI.",
+    "The dependent-unit audit is sufficient for CP-5 closure.",
+    "D04 remains blocked for promotion and student-facing projection until a later CLI-only mutation sprint executes the decision."
+  ],
+  "blocked_outcomes": [
+    "No hand edits to references/machine/.",
+    "No hand edits to references/external/.",
+    "No D04 -> A15 prerequisite edge.",
+    "No unit-deprecate.js, unit-merge.js, or unit-split.js execution in S9.",
+    "No machine-unit unit_design_status field migration in S9.",
+    "No exercise promotion relying on D04 before later CLI mutation.",
+    "No student diagnostics, adaptive routing, mastery decisions, automatic sequencing, student-facing AI, summative decisions, PV projection, or PV machine promotion."
+  ],
+  "allowed_downstream_uses": [
+    "internal_reference_health",
+    "internal_rag_context_with_non_authority_labels",
+    "future_cli_mutation_planning"
+  ],
+  "blocked_downstream_uses": [
+    "exercise_promotion_on_d04",
+    "student_diagnostics",
+    "adaptive_routing",
+    "mastery_decision",
+    "automatic_sequencing",
+    "student_facing_ai",
+    "summative_use",
+    "pv_projection",
+    "pv_machine_promotion"
+  ],
+  "conditions_to_reopen_or_pass": [
+    "A later CLI-only mutation sprint must specify the exact D04 mutation target: retire, merge, split, or redistribute concrete citations and references.",
+    "The later mutation sprint must include CLI command selection, mutation log, regenerated machine projections, reports, RAG chunks, source manifest, and document inventory.",
+    "The later mutation sprint must verify stale D04 references after mutation.",
+    "D04 remains an internal unit-design issue until the later sprint completes.",
+    "Generated reports and RAG chunks must continue to preserve non-authority and promotion-blocked labels."
+  ],
+  "later_required_work": [
+    "Create a D04 CLI-only mutation sprint.",
+    "Select unit-deprecate.js, unit-merge.js, or unit-split.js only after concrete target specs are written.",
+    "Record a mutation log and regenerate all affected reports and RAG surfaces."
+  ]
+}

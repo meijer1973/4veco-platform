@@ -81,7 +81,12 @@ function main() {
     errors.push('D04 record missing');
   } else {
     if (d04.status !== 'unstable_unit_design') errors.push('D04 status must be unstable_unit_design');
-    if (d04.review_status !== 'cp5_review_required') errors.push('D04 review_status must be cp5_review_required before gate closure');
+    const closureExists = fs.existsSync(path.join(GATE_DIR, 'gate-closure.json'));
+    if (!['cp5_review_required', 'cp5_closed'].includes(d04.review_status)) {
+      errors.push('D04 review_status must be cp5_review_required or cp5_closed');
+    }
+    if (closureExists && d04.review_status !== 'cp5_closed') errors.push('D04 review_status must be cp5_closed after gate closure');
+    if (!closureExists && d04.review_status !== 'cp5_review_required') errors.push('D04 review_status must be cp5_review_required before gate closure');
     if (d04.gate_id !== 'GATE-CP5-D04-resolution') errors.push('D04 gate_id must be GATE-CP5-D04-resolution');
     if (d04.promotion_blocked !== true) errors.push('D04 promotion_blocked must be true');
     if (d04.c_to_b_promotion_blocked !== true) errors.push('D04 c_to_b_promotion_blocked must be true');

@@ -2,7 +2,7 @@
   "schema_version": 1,
   "status": "active_internal_overlay",
   "generated_by": "build-scripts/references/build-unit-design-status-overlay.js",
-  "generated_on": "2026-05-15T10:08:35.133Z",
+  "generated_on": "2026-05-15T12:47:43.157Z",
   "authority_boundary": {
     "internal_design_status": true,
     "primary_evidence": false,
@@ -32,7 +32,7 @@
       "unit_id": "D04",
       "unit_name": "Elasticiteit en goederenclassificatie",
       "status": "unstable_unit_design",
-      "review_status": "cp5_review_required",
+      "review_status": "cp5_closed",
       "gate_id": "GATE-CP5-D04-resolution",
       "promotion_blocked": true,
       "c_to_b_promotion_blocked": true,
