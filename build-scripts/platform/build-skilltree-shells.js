@@ -187,6 +187,7 @@ function generateHTML(parNr, parName) {
     <script src="${sharedPath}/skilltree/base-elements.js"></script>
     <script src="${sharedPath}/skilltree/${parNr}.js"></script>
     <script src="${sharedPath}/skilltree/explanations.js"></script>
+    <script src="${sharedPath}/adaptive-seam.js"></script>
     <script src="${sharedPath}/skilltree-engine.js"></script>
     <script src="${sharedPath}/skilltree-ui.js"></script>
 </body>

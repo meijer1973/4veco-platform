@@ -10,9 +10,31 @@
 })(typeof self !== 'undefined' ? self : this, function () {
   "use strict";
 
+  function readAdaptivePayload(paragraphId, storage) {
+    var seam = null;
+    if (typeof globalThis !== 'undefined' && globalThis.AdaptiveSeam) {
+      seam = globalThis.AdaptiveSeam;
+    }
+    if (!seam && typeof require === 'function') {
+      try { seam = require('./adaptive-seam'); } catch (e) { seam = null; }
+    }
+    if (seam && typeof seam.readPayload === 'function') {
+      return seam.readPayload({ paragraphId: paragraphId || null, storage: storage });
+    }
+    return {
+      schema_version: 1,
+      paragraph_id: paragraphId || null,
+      focus_skills: [],
+      difficulty_hint: 'default',
+      allowed_hints: 'default',
+      source: 'none'
+    };
+  }
+
   function ProcedureEngine(config) {
     this.procedures = config.procedures || [];
     this.storageKey = "proc_" + (config.parNr || "0");
+    this.adaptivePayload = readAdaptivePayload(config.parNr || config.paragraphId, config.adaptiveStorage);
     this._loadScores();
     this.current = null;
     this.selections = [];
@@ -38,6 +60,10 @@
 
   ProcedureEngine.prototype.getBestScore = function (procedureId) {
     return this.scores[procedureId] || null;
+  };
+
+  ProcedureEngine.prototype.getAdaptivePayload = function () {
+    return JSON.parse(JSON.stringify(this.adaptivePayload));
   };
 
   // --- Procedure selection ---

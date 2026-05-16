@@ -101,6 +101,7 @@ function generateShell(parNr, parName) {
 <script src="${sharedPath}/theme.js"></script>
 <script src="${sharedPath}/reasoning/${parNr}.js"></script>
 <script src="${sharedPath}/reasoning/meta-categories.js"></script>
+<script src="${sharedPath}/adaptive-seam.js"></script>
 <script src="${sharedPath}/reasoning-engine.js"></script>
 <script src="${sharedPath}/reasoning-ui.js"></script>
 </body>

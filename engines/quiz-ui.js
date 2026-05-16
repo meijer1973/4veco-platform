@@ -56,6 +56,7 @@
     var engine = new QuizEngine({
         questions: data.questions,
         categories: data.categories,
+        parNr: data.meta && data.meta.parNr,
         maxQuestions: 10,
         streakToClose: 3
     });

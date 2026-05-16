@@ -93,6 +93,7 @@ function generateShell(parNr, parName) {
 </div>
 <script src="${sharedPath}/theme.js"></script>
 <script src="${sharedPath}/procedure/${parNr}.js"></script>
+<script src="${sharedPath}/adaptive-seam.js"></script>
 <script src="${sharedPath}/procedure-engine.js"></script>
 <script src="${sharedPath}/procedure-ui.js"></script>
 </body>

@@ -12,6 +12,27 @@
 })(typeof self !== 'undefined' ? self : this, function () {
     'use strict';
 
+    function readAdaptivePayload(paragraphId, storage) {
+        var seam = null;
+        if (typeof globalThis !== 'undefined' && globalThis.AdaptiveSeam) {
+            seam = globalThis.AdaptiveSeam;
+        }
+        if (!seam && typeof require === 'function') {
+            try { seam = require('./adaptive-seam'); } catch (e) { seam = null; }
+        }
+        if (seam && typeof seam.readPayload === 'function') {
+            return seam.readPayload({ paragraphId: paragraphId || null, storage: storage });
+        }
+        return {
+            schema_version: 1,
+            paragraph_id: paragraphId || null,
+            focus_skills: [],
+            difficulty_hint: 'default',
+            allowed_hints: 'default',
+            source: 'none'
+        };
+    }
+
     // ── Domain configurations ───────────────────────────────────────
 
     var DOMAINS = {
@@ -194,6 +215,10 @@
         this.domain = config.domain;
         this.domainConfig = DOMAINS[config.domain];
         this.roundsPerGame = config.roundsPerGame || 5;
+        this.adaptivePayload = readAdaptivePayload(
+            config.parNr || config.paragraphId,
+            config.adaptiveStorage
+        );
 
         // Parse CSV into problems
         var rows = parseCSV(config.csvString);
@@ -219,6 +244,10 @@
         this._answered = false;
         this._matchData = null;
     }
+
+    ReasoningEngine.prototype.getAdaptivePayload = function () {
+        return JSON.parse(JSON.stringify(this.adaptivePayload));
+    };
 
     // ── Session management ──────────────────────────────────────────
 

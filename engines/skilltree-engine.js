@@ -37,6 +37,27 @@
         '1.1.1','1.1.2','1.1.3'
     ];
 
+    function readAdaptivePayload(paragraphId, storage) {
+        var seam = null;
+        if (typeof globalThis !== 'undefined' && globalThis.AdaptiveSeam) {
+            seam = globalThis.AdaptiveSeam;
+        }
+        if (!seam && typeof require === 'function') {
+            try { seam = require('./adaptive-seam'); } catch (e) { seam = null; }
+        }
+        if (seam && typeof seam.readPayload === 'function') {
+            return seam.readPayload({ paragraphId: paragraphId || null, storage: storage });
+        }
+        return {
+            schema_version: 1,
+            paragraph_id: paragraphId || null,
+            focus_skills: [],
+            difficulty_hint: 'default',
+            allowed_hints: 'default',
+            source: 'none'
+        };
+    }
+
     /**
      * @param {Object} config
      * @param {Object} config.elements  — SKILL_TREE_ELEMENTS (from base-elements.js)
@@ -51,6 +72,10 @@
         this._data = config.data || { parNr: 'unknown', activeSkills: null };
         this._explanations = config.explanations || {};
         this._storage = config.storage || (typeof localStorage !== 'undefined' ? localStorage : null);
+        this.adaptivePayload = readAdaptivePayload(
+            this._data.parNr,
+            config.adaptiveStorage || this._storage
+        );
 
         // Build skill lookup
         this._skillMap = {};
@@ -76,6 +101,10 @@
         this._completedSteps = [];
         this._streak = 0;
     }
+
+    SkillTreeEngine.prototype.getAdaptivePayload = function () {
+        return JSON.parse(JSON.stringify(this.adaptivePayload));
+    };
 
     // ── Visible skills ────────────────────────────────────────
 

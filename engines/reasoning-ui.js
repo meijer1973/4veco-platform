@@ -26,6 +26,7 @@
     var engine = new ReasoningEngine({
         csvString: csv,
         domain: meta.domain,
+        parNr: meta.parNr,
         roundsPerGame: 5
     });
 

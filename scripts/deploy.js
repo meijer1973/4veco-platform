@@ -58,6 +58,7 @@ function copyEngines() {
 
     // Flat engine files (JS + CSS)
     const flatFiles = [
+        'adaptive-seam.js',
         'quiz-engine.js', 'quiz-ui.js', 'quiz.css',
         'reasoning-engine.js', 'reasoning-ui.js', 'reasoning.css',
         'skilltree-engine.js', 'skilltree-ui.js', 'skilltree.css',

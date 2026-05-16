@@ -41,6 +41,7 @@ function generateShell(parNr, parName) {
 
 <script src="${sharedPath}/theme.js"></script>
 <script src="${sharedPath}/newsdetective/${parNr}.js"></script>
+<script src="${sharedPath}/adaptive-seam.js"></script>
 <script src="${sharedPath}/newsdetective-engine.js"></script>
 <script src="${sharedPath}/newsdetective-ui.js"></script>
 </body>

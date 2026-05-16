@@ -18,6 +18,27 @@
 })(typeof self !== 'undefined' ? self : this, function () {
     'use strict';
 
+    function readAdaptivePayload(paragraphId, storage) {
+        var seam = null;
+        if (typeof globalThis !== 'undefined' && globalThis.AdaptiveSeam) {
+            seam = globalThis.AdaptiveSeam;
+        }
+        if (!seam && typeof require === 'function') {
+            try { seam = require('./adaptive-seam'); } catch (e) { seam = null; }
+        }
+        if (seam && typeof seam.readPayload === 'function') {
+            return seam.readPayload({ paragraphId: paragraphId || null, storage: storage });
+        }
+        return {
+            schema_version: 1,
+            paragraph_id: paragraphId || null,
+            focus_skills: [],
+            difficulty_hint: 'default',
+            allowed_hints: 'default',
+            source: 'none'
+        };
+    }
+
     /**
      * @param {Object} config
      * @param {Array}  config.questions      — [{category, difficulty, q, options, answer, rationale}]
@@ -34,6 +55,10 @@
         this.categories = config.categories;
         this.maxQuestions = config.maxQuestions || 10;
         this.streakToClose = config.streakToClose || 3;
+        this.adaptivePayload = readAdaptivePayload(
+            config.parNr || config.paragraphId || (config.meta && config.meta.parNr),
+            config.adaptiveStorage
+        );
 
         this._initProgress();
         this.score = 0;
@@ -58,6 +83,10 @@
                 };
             }
         }
+    };
+
+    QuizEngine.prototype.getAdaptivePayload = function () {
+        return JSON.parse(JSON.stringify(this.adaptivePayload));
     };
 
     // ── Session lifecycle ───────────────────────────────────────────
