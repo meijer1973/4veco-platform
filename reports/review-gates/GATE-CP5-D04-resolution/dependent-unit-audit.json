@@ -3,7 +3,7 @@
   "sprint_id": "S9",
   "gate_id": "GATE-CP5-D04-resolution",
   "generated_by": "build-scripts/references/build-unit-design-status-overlay.js",
-  "generated_on": "2026-05-15T12:47:43.158Z",
+  "generated_on": "2026-05-16T07:09:59.089Z",
   "protected_reference_data_changed": false,
   "audit_scope": [
     "D04",
@@ -27,7 +27,7 @@
         "D1.7",
         "D1.8"
       ],
-      "deprecated": false,
+      "deprecated": true,
       "mastery_target": "understand",
       "procedure_step_count": 0
     },
@@ -147,33 +147,7 @@
     }
   ],
   "d04_citations": {
-    "target_exercises": [
-      {
-        "id": "2.1.3",
-        "paragraph_title": "Income elasticity and cross elasticity",
-        "source_ref": "references/owned/course-blueprint-v4.md §2.1.3",
-        "required_skills": [
-          "A04",
-          "A16",
-          "A17",
-          "D04",
-          "D11",
-          "D12",
-          "D27"
-        ],
-        "new_skills_introduced": [
-          "A16",
-          "A17",
-          "D04",
-          "D11",
-          "D12"
-        ],
-        "prior_knowledge_assumed": [
-          "A04",
-          "D27"
-        ]
-      }
-    ],
+    "target_exercises": [],
     "exam_questions": [
       {
         "exam": "ha-1022-a-25-2-o",

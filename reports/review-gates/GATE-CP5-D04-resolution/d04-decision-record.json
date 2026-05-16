@@ -3,7 +3,7 @@
   "sprint_id": "S9",
   "gate_id": "GATE-CP5-D04-resolution",
   "generated_by": "build-scripts/references/build-unit-design-status-overlay.js",
-  "generated_on": "2026-05-15T12:47:43.159Z",
+  "generated_on": "2026-05-16T07:09:59.091Z",
   "decision_status": "gate_closed_pass_with_conditions",
   "protected_reference_data_changed": false,
   "subject_unit": "D04",
@@ -67,7 +67,7 @@
       "kind": "target_exercise",
       "path": "references/authored/course-target-exercises.json",
       "anchor": "2.1.3 Income elasticity and cross elasticity",
-      "supports": "Owned target exercise groups D04 with income and cross elasticity work rather than as a standalone exercise target."
+      "supports": "Owned target exercise evidence historically grouped D04 with income and cross elasticity work rather than as a standalone exercise target; S9a removes the active D04 citation after successor coverage is verified."
     },
     {
       "kind": "exam_question",
@@ -87,7 +87,7 @@
       "D12",
       "D27"
     ],
-    "target_exercise_citations": 1,
+    "target_exercise_citations": 0,
     "exam_question_citations": 1,
     "blueprint_triage_citations": 4
   }

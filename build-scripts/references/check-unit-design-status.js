@@ -7,6 +7,9 @@ const OVERLAY = path.join(REPO_ROOT, 'references', 'data', 'unit-design-status',
 const SCHEMA = path.join(REPO_ROOT, 'references', 'schemas', 'unit-design-status.schema.json');
 const GATE_DIR = path.join(REPO_ROOT, 'reports', 'review-gates', 'GATE-CP5-D04-resolution');
 const REQUIRED_AUDIT_UNITS = ['D04', 'A15', 'A16', 'A17', 'D06', 'D11', 'D12', 'D27'];
+const S9A_LOG = path.join(GATE_DIR, 'S9a-d04-mutation-log.json');
+const S9A_STALE_AUDIT = path.join(GATE_DIR, 'S9a-stale-reference-audit.json');
+const S9A_REPLACEMENTS = ['A15', 'D06', 'A17', 'D11', 'A16', 'D12', 'D27'];
 const REQUIRED_GATE_FILES = [
   'd04-decision-record.json',
   'd04-decision-record.md',
@@ -30,6 +33,10 @@ function readJson(file) {
 
 function existsRel(relPath) {
   return fs.existsSync(path.join(REPO_ROOT, relPath));
+}
+
+function sameArray(actual, expected) {
+  return JSON.stringify(actual || []) === JSON.stringify(expected || []);
 }
 
 function main() {
@@ -77,20 +84,32 @@ function main() {
   const ids = records.map((item) => item.unit_id);
   if (new Set(ids).size !== ids.length) errors.push('record unit IDs must be unique');
   const d04 = records.find((item) => item.unit_id === 'D04');
+  const s9aLogExists = fs.existsSync(S9A_LOG);
+  const s9aLog = s9aLogExists ? readJson(S9A_LOG) : null;
   if (!d04) {
     errors.push('D04 record missing');
   } else {
-    if (d04.status !== 'unstable_unit_design') errors.push('D04 status must be unstable_unit_design');
+    const expectedStatus = s9aLogExists ? 'retired_after_cli_mutation' : 'unstable_unit_design';
+    const expectedReviewStatus = s9aLogExists ? 's9a_cli_mutation_completed' : fs.existsSync(path.join(GATE_DIR, 'gate-closure.json')) ? 'cp5_closed' : 'cp5_review_required';
+    if (d04.status !== expectedStatus) errors.push(`D04 status must be ${expectedStatus}`);
     const closureExists = fs.existsSync(path.join(GATE_DIR, 'gate-closure.json'));
-    if (!['cp5_review_required', 'cp5_closed'].includes(d04.review_status)) {
-      errors.push('D04 review_status must be cp5_review_required or cp5_closed');
+    if (!['cp5_review_required', 'cp5_closed', 's9a_cli_mutation_completed'].includes(d04.review_status)) {
+      errors.push('D04 review_status must be cp5_review_required, cp5_closed, or s9a_cli_mutation_completed');
     }
-    if (closureExists && d04.review_status !== 'cp5_closed') errors.push('D04 review_status must be cp5_closed after gate closure');
-    if (!closureExists && d04.review_status !== 'cp5_review_required') errors.push('D04 review_status must be cp5_review_required before gate closure');
+    if (d04.review_status !== expectedReviewStatus) errors.push(`D04 review_status must be ${expectedReviewStatus}`);
     if (d04.gate_id !== 'GATE-CP5-D04-resolution') errors.push('D04 gate_id must be GATE-CP5-D04-resolution');
     if (d04.promotion_blocked !== true) errors.push('D04 promotion_blocked must be true');
     if (d04.c_to_b_promotion_blocked !== true) errors.push('D04 c_to_b_promotion_blocked must be true');
-    if ((d04.current_catalog_state.needs || []).length !== 0) errors.push('D04 current needs baseline should still be empty before protected mutation');
+    if ((d04.current_catalog_state.needs || []).length !== 0) errors.push('D04 current needs should remain empty; S9a must not add a D04 prerequisite edge');
+    if (s9aLogExists) {
+      if (d04.current_catalog_state.deprecated !== true) errors.push('D04 must be deprecated after S9a mutation');
+      if (!sameArray(d04.current_catalog_state.deprecated_in_favor_of, S9A_REPLACEMENTS)) errors.push('D04 deprecated_in_favor_of mismatch after S9a');
+      if (d04.mutation_log_ref !== 'reports/review-gates/GATE-CP5-D04-resolution/S9a-d04-mutation-log.json') errors.push('D04 mutation_log_ref must point at S9a log');
+      if (!s9aLog || s9aLog.status !== 'completed') errors.push('S9a mutation log must be completed');
+      if (s9aLog && !sameArray(s9aLog.applied && s9aLog.applied.deprecated_in_favor_of, S9A_REPLACEMENTS)) errors.push('S9a mutation log replacement IDs mismatch');
+    } else if (d04.current_catalog_state.deprecated !== false) {
+      errors.push('D04 should not be deprecated before S9a mutation log exists');
+    }
     for (const id of REQUIRED_AUDIT_UNITS) {
       if (!(d04.affected_unit_ids || []).includes(id)) errors.push(`D04 affected_unit_ids must include ${id}`);
     }
@@ -108,7 +127,14 @@ function main() {
     if (!(audit.audit_scope || []).includes(id)) errors.push(`dependent-unit audit_scope must include ${id}`);
     if (!(audit.units || []).some((unit) => unit.unit_id === id)) errors.push(`dependent-unit audit must include unit ${id}`);
   }
-  if (!(audit.d04_citations && audit.d04_citations.target_exercises && audit.d04_citations.target_exercises.length >= 1)) errors.push('audit must include at least one D04 target-exercise citation');
+  if (s9aLogExists) {
+    if (!(audit.d04_citations && Array.isArray(audit.d04_citations.target_exercises) && audit.d04_citations.target_exercises.length === 0)) {
+      errors.push('post-S9a audit must show zero active D04 target-exercise citations');
+    }
+    if (!fs.existsSync(S9A_STALE_AUDIT)) errors.push('S9a stale-reference audit must exist after mutation');
+  } else if (!(audit.d04_citations && audit.d04_citations.target_exercises && audit.d04_citations.target_exercises.length >= 1)) {
+    errors.push('audit must include at least one D04 target-exercise citation before S9a mutation');
+  }
   if (!(audit.d04_citations && audit.d04_citations.exam_questions && audit.d04_citations.exam_questions.length >= 1)) errors.push('audit must include at least one D04 exam-question citation');
   if (audit.conclusion && audit.conclusion.d04_is_prerequisite_edge_issue !== false) errors.push('audit must reject D04 prerequisite-edge framing');
   if (audit.conclusion && audit.conclusion.c_to_b_promotion_blocked_until_cp5 !== true) errors.push('audit must block C-to-B promotion until CP-5');

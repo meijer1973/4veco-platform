@@ -7,7 +7,7 @@ Gate: GATE-CP5-D04-resolution
 
 | Unit | Name | Needs | Terms | ExamCodes | Deprecated |
 | --- | --- | --- | --- | --- | --- |
-| D04 | Elasticiteit en goederenclassificatie | none | inkomenselasticiteit | D1.7, D1.8 | false |
+| D04 | Elasticiteit en goederenclassificatie | none | inkomenselasticiteit | D1.7, D1.8 | true |
 | A15 | Prijselasticiteit van de vraag | A04, A38 | prijselasticiteit-van-de-vraag | A2.4, A2.5 | false |
 | A16 | Kruiselasticiteit | A15 | none | A2.4, A2.5 | false |
 | A17 | Inkomenselasticiteit | A15 | inkomenselasticiteit | A2.4, A2.5 | false |
@@ -18,7 +18,7 @@ Gate: GATE-CP5-D04-resolution
 
 ## D04 Citations
 
-- Target exercises: 1
+- Target exercises: 0
 - Exam questions: 1
 - Blueprint triage records: 4
 

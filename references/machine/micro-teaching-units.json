@@ -2766,6 +2766,16 @@
     ],
     "terms": [
       "inkomenselasticiteit"
+    ],
+    "deprecated": true,
+    "deprecated_in_favor_of": [
+      "A15",
+      "D06",
+      "A17",
+      "D11",
+      "A16",
+      "D12",
+      "D27"
     ]
   },
   {

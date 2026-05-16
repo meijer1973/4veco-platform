@@ -1,7 +1,7 @@
 {
   "report_id": "misconception-registry",
   "generated_by": "build-scripts/reports/generate-all.js",
-  "generated_on": "2026-05-15T12:47:43.555Z",
+  "generated_on": "2026-05-16T07:10:06.180Z",
   "source_files": [
     "references/data/misconceptions/misconception-registry.json"
   ],

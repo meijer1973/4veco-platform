@@ -99,20 +99,21 @@
         "properties": {
           "unit_id": { "type": "string" },
           "unit_name": { "type": "string" },
-          "status": { "type": "string", "enum": ["unstable_unit_design"] },
-          "review_status": { "type": "string", "enum": ["cp5_review_required", "cp5_closed"] },
+          "status": { "type": "string", "enum": ["unstable_unit_design", "retired_after_cli_mutation"] },
+          "review_status": { "type": "string", "enum": ["cp5_review_required", "cp5_closed", "s9a_cli_mutation_completed"] },
           "gate_id": { "type": "string" },
           "promotion_blocked": { "type": "boolean", "const": true },
           "c_to_b_promotion_blocked": { "type": "boolean", "const": true },
           "current_catalog_state": {
             "type": "object",
-            "required": ["needs", "terms", "exam_codes", "deprecated"],
+            "required": ["needs", "terms", "exam_codes", "deprecated", "deprecated_in_favor_of"],
             "additionalProperties": false,
             "properties": {
               "needs": { "type": "array", "items": { "type": "string" } },
               "terms": { "type": "array", "items": { "type": "string" } },
               "exam_codes": { "type": "array", "items": { "type": "string" } },
-              "deprecated": { "type": "boolean" }
+              "deprecated": { "type": "boolean" },
+              "deprecated_in_favor_of": { "type": "array", "items": { "type": "string" } }
             }
           },
           "resolution_options": { "type": "array", "items": { "type": "string" } },
@@ -133,6 +134,8 @@
               }
             }
           },
+          "mutation_log_ref": { "type": ["string", "null"] },
+          "stale_reference_audit_ref": { "type": ["string", "null"] },
           "blocked_downstream_uses": { "type": "array", "items": { "type": "string" } },
           "notes": { "type": "string" }
         }

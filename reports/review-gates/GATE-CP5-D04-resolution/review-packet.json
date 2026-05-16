@@ -3,7 +3,7 @@
   "sprint_id": "S9",
   "gate_id": "GATE-CP5-D04-resolution",
   "generated_by": "build-scripts/references/build-unit-design-status-overlay.js",
-  "generated_on": "2026-05-15T12:47:43.159Z",
+  "generated_on": "2026-05-16T07:09:59.091Z",
   "status": "gate_closed_pass_with_conditions",
   "protected_reference_data_changed": false,
   "review_questions": [
@@ -89,7 +89,7 @@
       "D12",
       "D27"
     ],
-    "d04_target_exercise_citations": 1,
+    "d04_target_exercise_citations": 0,
     "d04_exam_question_citations": 1
   },
   "stop_conditions": [

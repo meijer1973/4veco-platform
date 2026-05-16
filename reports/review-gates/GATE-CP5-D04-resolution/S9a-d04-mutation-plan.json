@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "sprint_id": "S9a",
+  "gate_id": "GATE-CP5-D04-resolution",
+  "plan_id": "S9a-d04-cli-deprecation-plan",
+  "status": "ready_for_cli_execution",
+  "generated_on": "2026-05-16",
+  "decision_source": "reports/review-gates/GATE-CP5-D04-resolution/",
+  "decision_status_required": "pass_with_conditions",
+  "protected_reference_data_change_mode": "CLI-only",
+  "subject_unit": "D04",
+  "subject_unit_name": "Elasticiteit en goederenclassificatie",
+  "selected_cli_path": "unit-deprecate.js",
+  "selected_command": "node build-scripts/references/unit-deprecate.js --id D04 --replaced-by A15,D06,A17,D11,A16,D12,D27",
+  "rollback_command": "node build-scripts/references/unit-deprecate.js --id D04 --undo",
+  "replacement_unit_ids": [
+    "A15",
+    "D06",
+    "A17",
+    "D11",
+    "A16",
+    "D12",
+    "D27"
+  ],
+  "successor_mapping": [
+    {
+      "concept": "price-elasticity goods classification",
+      "successor_units": ["A15", "D06"]
+    },
+    {
+      "concept": "income-elasticity goods classification",
+      "successor_units": ["A17", "D11"]
+    },
+    {
+      "concept": "cross-elasticity substitutes/complements classification",
+      "successor_units": ["A16", "D12", "D27"]
+    }
+  ],
+  "pre_execution_checks": [
+    {
+      "check": "CP-5 closure exists and is human-confirmed",
+      "status": "passed",
+      "evidence": "S9 gate closure closed as pass_with_conditions with closure_confirmed_by_human true."
+    },
+    {
+      "check": "D04 is unit-design issue, not prerequisite-edge issue",
+      "status": "passed",
+      "evidence": "CP-5 and earlier R2/R5 records reject a D04 -> A15 edge."
+    },
+    {
+      "check": "successor units exist",
+      "status": "passed",
+      "evidence": "A15, D06, A17, D11, A16, D12, and D27 are live catalog units."
+    },
+    {
+      "check": "split not needed",
+      "status": "passed",
+      "evidence": "No new unit IDs are required; income and cross-elasticity classifications already exist in successor procedures."
+    },
+    {
+      "check": "merge not needed",
+      "status": "passed",
+      "evidence": "CP-5 chose redistribution to multiple successor units, not absorption into one survivor."
+    }
+  ],
+  "forbidden_actions": [
+    "Do not hand-edit references/machine/.",
+    "Do not hand-edit references/external/.",
+    "Do not add D04 -> A15.",
+    "Do not run unit-merge.js or unit-split.js without new human review.",
+    "Do not mutate external exam-question data.",
+    "Do not authorize exercise promotion, diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, PV projection, or PV machine promotion."
+  ]
+}

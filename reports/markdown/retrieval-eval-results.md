@@ -1,6 +1,6 @@
 # Retrieval Evaluation Results
 
-Generated on: 2026-05-15T08:58:12.267Z
+Generated on: 2026-05-16T07:10:17.947Z
 
 ## Summary
 
@@ -126,8 +126,8 @@ Top results:
 - quality-report:reference-quality-issues.json (quality_report, generated_report)
   - source: reports/json/reference-quality-issues.json
   - warnings: diagnostic_only, generated_report_warning, not_primary_evidence
-- quality-report:aspects-coverage.json (quality_report, generated_report)
-  - source: reports/json/aspects-coverage.json
+- quality-report:unit-design-status.json (quality_report, generated_report)
+  - source: reports/json/unit-design-status.json
   - warnings: diagnostic_only, generated_report_warning, not_primary_evidence
 
 ### rag-eval-005
@@ -198,14 +198,14 @@ Top results:
 - quality-report:dag-integrity.json (quality_report, generated_report)
   - source: reports/json/dag-integrity.json
   - warnings: diagnostic_only, generated_report_warning, not_primary_evidence
+- quality-report:unit-design-status.json (quality_report, generated_report)
+  - source: reports/json/unit-design-status.json
+  - warnings: diagnostic_only, generated_report_warning, not_primary_evidence
 - quality-report:unresolved-refs.json (quality_report, generated_report)
   - source: reports/json/unresolved-refs.json
   - warnings: diagnostic_only, generated_report_warning, not_primary_evidence
 - quality-report:aspects-coverage.json (quality_report, generated_report)
   - source: reports/json/aspects-coverage.json
-  - warnings: diagnostic_only, generated_report_warning, not_primary_evidence
-- quality-report:begrippen-coverage.json (quality_report, generated_report)
-  - source: reports/json/begrippen-coverage.json
   - warnings: diagnostic_only, generated_report_warning, not_primary_evidence
 
 ### rag-eval-008

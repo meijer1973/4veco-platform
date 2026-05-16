@@ -1,6 +1,6 @@
 # Roadmap Version Index
 
-Updated: 2026-05-15
+Updated: 2026-05-16
 
 The JSON file is canonical for tooling:
 
@@ -12,12 +12,13 @@ docs/roadmaps/roadmap-version-index.json
 
 | Roadmap | Version | Path | Notes |
 |---|---|---|---|
-| References Team Roadmap | `v2.43-s9-cp5-d04-closure` | `references/reference-team-roadmap.md` | Current operating roadmap after closing S9 / CP-5 D04 resolution as `pass_with_conditions`; S9a D04 CLI-only mutation is the next planned reference sprint. |
+| References Team Roadmap | `v2.44-s9a-d04-cli-mutation` | `references/reference-team-roadmap.md` | Current operating roadmap after completing S9a D04 CLI-only mutation; Content Track 1 Year-1 target exercise coverage is the next planned reference sprint. |
 
 ## Outdated Archive
 
 | Roadmap | Version | Path | Superseded By |
 |---|---|---|---|
+| References Team Roadmap before S9a D04 CLI-only mutation | `v2.43-s9-cp5-d04-closure` | `docs/roadmaps/outdated/reference-team-roadmap-v2.43-s9-cp5-d04-closure.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before S9 CP-5 D04 closure | `v2.42-s8-misconception-registry` | `docs/roadmaps/outdated/reference-team-roadmap-v2.42-s8-misconception-registry.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before S8 misconception registry completion | `v2.41-pvg4-pass-with-conditions` | `docs/roadmaps/outdated/reference-team-roadmap-v2.41-pvg4-pass-with-conditions.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before PV-G4 proof intake preparation | `v2.39-pv8-promotion-pipeline-design` | `docs/roadmaps/outdated/reference-team-roadmap-v2.39-pv8-promotion-pipeline-design.md` | `references/reference-team-roadmap.md` |

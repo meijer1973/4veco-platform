@@ -402,21 +402,27 @@ function buildMisconceptionRegistry(ctx) {
 function buildUnitDesignStatus(ctx) {
   const source = ctx.unitDesignStatus || { records: [], authority_boundary: {} };
   const records = source.records || [];
+  const unresolved = records.filter((item) => item.status !== 'retired_after_cli_mutation');
   const issues = records.map((item, index) => issue(
     'unit-design-status',
     index + 1,
-    item.promotion_blocked ? 'high' : 'medium',
+    item.status === 'retired_after_cli_mutation' ? 'info' : item.promotion_blocked ? 'high' : 'medium',
     item.unit_id,
     item.status || 'unit_design_status',
     (item.evidence_refs && item.evidence_refs[0] && item.evidence_refs[0].path) || UNIT_DESIGN_STATUS,
-    `Keep ${item.unit_id} blocked for promotion until ${item.gate_id || 'the unit-design gate'} closes and any later CLI mutation executes.`,
-    'A human-reviewed unit-design decision record, dependent-unit audit, and later CLI-only mutation log exist if protected reference data changes.'
+    item.status === 'retired_after_cli_mutation'
+      ? `Keep deprecated ${item.unit_id} out of active promotion dependencies and use successor units instead.`
+      : `Keep ${item.unit_id} blocked for promotion until ${item.gate_id || 'the unit-design gate'} closes and any later CLI mutation executes.`,
+    item.status === 'retired_after_cli_mutation'
+      ? 'CLI mutation log and stale-reference audit exist, and active target-exercise dependencies no longer cite the retired unit.'
+      : 'A human-reviewed unit-design decision record, dependent-unit audit, and later CLI-only mutation log exist if protected reference data changes.'
   ));
   const flags = source.authority_boundary || {};
-  return makeReport('unit-design-status', [UNIT_DESIGN_STATUS], records.length ? 'warn' : 'pass', issues, {
+  return makeReport('unit-design-status', [UNIT_DESIGN_STATUS], unresolved.length ? 'warn' : 'pass', issues, {
     overlay_status: source.status || 'unknown',
     record_count: records.length,
     by_status: countBy(records, (item) => item.status),
+    unresolved_record_count: unresolved.length,
     promotion_blocked_count: records.filter((item) => item.promotion_blocked === true).length,
     affected_unit_count: new Set(records.flatMap((item) => item.affected_unit_ids || [])).size,
     gate_ids: [...new Set(records.map((item) => item.gate_id).filter(Boolean))].sort(),

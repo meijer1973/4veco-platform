@@ -2,9 +2,9 @@
 
 Generated: 2026-04-23
 Adopted main roadmap: 2026-04-25
-Last strategic update: 2026-05-15
+Last strategic update: 2026-05-16
 Roadmap ID: `references-team-roadmap`
-Roadmap version: `v2.43-s9-cp5-d04-closure`
+Roadmap version: `v2.44-s9a-d04-cli-mutation`
 Roadmap status: `active`
 Version index: `docs/roadmaps/roadmap-version-index.json`
 Scope: `references/`, `build-scripts/references/`, `build-scripts/reports/`, reference dashboards, and generated reference reports under `reports/`
@@ -79,6 +79,8 @@ Update 2026-05-15: `S8 Misconception Registry MVP` is completed. The registry li
 
 Update 2026-05-15: `S9 Unit Design Status And D04 Resolution` is completed and `GATE-CP5-D04-resolution` closed as `pass_with_conditions`. S9 created a derived `references/data/unit-design-status/unit-design-status-overlay.json`, read-only validator, JSON/Markdown report, reference-health/RAG hooks, dependent-unit audit, D04 decision record, human interview, and gate closure. The CP-5 decision resolves direction only: D04 content should be redistributed to successor elasticity units and the standalone unit retired later through CLI. No protected machine mutation is authorized in S9; D04 remains promotion-blocked until a separate CLI-only mutation sprint executes the decision.
 
+Update 2026-05-16: `S9a D04 CLI-Only Mutation Sprint` is completed. S9a applied the CP-5 D04 decision through `unit-deprecate.js`, marking `D04` deprecated in favor of `A15`, `D06`, `A17`, `D11`, `A16`, `D12`, and `D27`; recorded a mutation plan, CLI mutation log, and stale-reference audit; removed the single active D04 citation from target exercise `2.1.3`; updated unit-design-status reports to `retired_after_cli_mutation`; and resolved QC issue `R8-QC-007`. No hand edits to `references/machine/` or `references/external/` occurred, no D04 prerequisite edge was added, and diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, PV projection, and PV machine promotion remain blocked.
+
 Compatibility decisions:
 
 - Sprint `R0.1` now means the sprint-execution scaffold.
@@ -104,7 +106,6 @@ Open items are listed first; completed items are kept below them.
 
 | Sprint | Name | Completed | Current State |
 |--------|------|-----------|---------------|
-| S9a | D04 CLI-Only Mutation Sprint | no | Planned. Apply the CP-5 D04 decision through governed CLI-only mutation with concrete target specs, mutation log, regenerated reports/RAG chunks, source manifest, and document inventory; still no hand edits to protected references. |
 | Content Track 1 | Year-1 Target Exercise Coverage | no | Planned content-track work. Produce Year-1 paragraph coverage and missing-target exercise status for CP-6. |
 | Content Track 2 | Year-1 Precision And Dual-Coding Audit | no | Planned content-track work. Record precision lint and dual-coding status for exercise surfaces where applicable. |
 | Content Track 3 | Year-2 Skeleton | no | Planned parallel content-track work. Prepare Year-2 skeleton with CvTE-vwo anchor status and `concept_orphan` flags for CP-7; not an engineering Phase E blocker. |
@@ -114,6 +115,7 @@ Open items are listed first; completed items are kept below them.
 | Sprint 13 | Composition Pattern Registry | no | Planned. Define reusable exercise-composition patterns for internal authoring support, not automatic student-facing publication. |
 | Sprint 14 | C-to-B Promotion Workflow | no | Planned only after schema audit, owned-source registry, exercise overlays, D04/unit-design status, R7.6, R14.1, and precision lint path are ready. |
 | Product Gate | Re-Evaluate R10-R13 Product Surfaces | no | Blocked. Diagnostics, adaptive routing, student-facing AI, teacher cockpit deployment, automatic sequencing, mastery, and summative uses remain out of scope until data-quality gates justify them. |
+| S9a | D04 CLI-Only Mutation Sprint | yes | Completed. Applied the CP-5 D04 decision through `unit-deprecate.js`, deprecated D04 with successor pointers to `A15`, `D06`, `A17`, `D11`, `A16`, `D12`, and `D27`, removed the single active target-exercise D04 citation, recorded mutation/stale-reference logs, regenerated reports/RAG/inventories, and preserved all blocked downstream uses. |
 | S9 | Unit Design Status And D04 Resolution | yes | Completed with `pass_with_conditions`. Added derived `unit-design-status` overlay, validator, JSON/Markdown report, reference-health/RAG labels, CP-5 decision record, dependent-unit audit, human interview, and gate closure; D04 remains promotion-blocked and no protected machine mutation occurred. |
 | S8 | Misconception Registry MVP | yes | Completed. Added the internal-only `references/data/misconceptions/misconception-registry.json`, tightened `misconception.schema.json`, added `check-misconceptions.js`, generated `misconception-registry` JSON/Markdown reports, exposed safe reference-health/RAG labels, and preserved all PV-G4 blocked-use conditions. |
 | S7 | Skill And Operation Registry MVP | yes | Completed with `pass_with_conditions`. Generated `references/data/skill-operation-registry.json`, coexistence reports, and `GATE-CP4-skill-registry-coexistence` closure; `exercise_operations` remain provisional; no machine registry promotion or bulk backfill authorized. |
@@ -1268,6 +1270,8 @@ Checkpoint: `GATE-CP5-D04-resolution`.
 
 Purpose: apply the CP-5 D04 decision through governed CLI mutation without hand-editing protected references.
 
+Completion: completed on 2026-05-16. S9a selected `unit-deprecate.js`, recorded a concrete mutation plan, deprecated `D04` in favor of `A15`, `D06`, `A17`, `D11`, `A16`, `D12`, and `D27`, removed the single active D04 target-exercise citation from `2.1.3`, recorded a CLI mutation log and stale-reference audit, regenerated reports/RAG/inventories, and updated unit-design-status reporting to `retired_after_cli_mutation`. D04 remains a deprecated historical/provenance record only; it is not an active promotion dependency. No `D04 -> A15` edge, external-source mutation, student-facing exposure, diagnostics, adaptive routing, mastery, sequencing, AI, summative use, PV projection, or PV machine promotion was authorized.
+
 Required work:
 
 - Convert the CP-5 decision into concrete mutation targets: D04 retirement or redistribution, citation/reference replacement, term movement, and stale-reference cleanup.
@@ -1652,7 +1656,7 @@ Sprints:
 - `S6` completed: bronnen registry MVP under `references/data/`.
 - `S8 / Sprint 8` completed: misconception registry MVP as internal diagnostic overlay only.
 - `S9 / Sprint 9` completed: unit design status and D04 decision gate closed as `pass_with_conditions`.
-- `S9a` planned: D04 CLI-only mutation sprint to apply the CP-5 decision.
+- `S9a` completed: D04 deprecated through CLI-only mutation with successor pointers, stale-reference audit, and active target-exercise cleanup.
 
 ### Content Track: Year-1 Closeout And Year-2 Skeleton
 
@@ -1763,7 +1767,7 @@ PV.8 Promotion pipeline design
 PV-G4 Lesson regression proof
 S8 / Sprint 8 Misconception registry MVP completed
 Sprint 9 Unit design status and D04 resolution (CP-5) completed
-S9a D04 CLI-only mutation sprint
+S9a D04 CLI-only mutation sprint completed
 Content Track 1 Year-1 target exercise coverage (CP-6)
 Content Track 2 Year-1 precision and dual-coding audit
 Content Track 3 Year-2 skeleton (CP-7, parallel content track)
@@ -1779,9 +1783,9 @@ Do not invert this order.
 
 ## Immediate Next Sprint
 
-Next action: prepare and execute `S9a D04 CLI-Only Mutation Sprint` only as a governed protected-reference mutation sprint. CP-5 is closed as `pass_with_conditions`, but S9 did not mutate `references/machine/` or `references/external/`; S9a must convert the CP-5 decision into exact CLI mutation targets, run only governed CLI scripts, record a mutation log, regenerate reports/RAG chunks/inventories, and preserve all blocked downstream uses until validation proves the mutation clean.
+Next action: prepare `Content Track 1 Year-1 Target Exercise Coverage` and its CP-6 review packet. S9a has applied the CP-5 D04 decision through governed CLI-only mutation, so the next reference-team work should move to Year-1 target-exercise coverage without weakening the remaining blocks on diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, PV projection, or PV machine promotion.
 
-R4.5 has closed the bounded micro-unit mutation lane, CP-1 has closed the non-mutating schema audit gate as `pass_with_conditions`, CP-2 has closed the owned-source scope gate as `pass_with_conditions`, R9.1 has registered the owned-source surfaces, R9.2 has completed owned-content projection, S4/CP-3 has closed as `pass_with_conditions`, S4.1 has implemented the CP-3 condition artifacts, RX.1 has prepared the non-mutating representation-operation inventory, `GATE-RX1-representation-unit-scope` has closed as `pass_with_conditions`, RX.2/GATE-RX2 has added the bounded six-unit first lane through CLI-only mutation, RX.2b/GATE-RX2b has added the bounded seven-unit graphical foundation lane through CLI-only mutation while holding `A71`, R8.1 has added the scoped internal QC issue model, S6 has created the source-document registry MVP under `references/data/`, S7/CP-4 has closed as `pass_with_conditions`, RX.3a/RX.3b/RX.4 have applied producer and elasticity representation lanes through CLI-only mutation, PV.3 through PV.6 have completed pilot templates, projection proof, and coverage dashboards, RX.5 has added representation-operation reports, RX.6 has completed skill-tree generator readiness, PV.7 has closed the machine-promotion review gate without authorizing promotion, PV.8 has completed the promotion-pipeline design, PV-G4 has closed as `pass_with_conditions` with two reconciled lesson-team proofs, S8 has created the bounded internal misconception registry under `references/data/`, and S9 has closed CP-5 as a D04 decision-only gate with later CLI mutation still required.
+R4.5 has closed the bounded micro-unit mutation lane, CP-1 has closed the non-mutating schema audit gate as `pass_with_conditions`, CP-2 has closed the owned-source scope gate as `pass_with_conditions`, R9.1 has registered the owned-source surfaces, R9.2 has completed owned-content projection, S4/CP-3 has closed as `pass_with_conditions`, S4.1 has implemented the CP-3 condition artifacts, RX.1 has prepared the non-mutating representation-operation inventory, `GATE-RX1-representation-unit-scope` has closed as `pass_with_conditions`, RX.2/GATE-RX2 has added the bounded six-unit first lane through CLI-only mutation, RX.2b/GATE-RX2b has added the bounded seven-unit graphical foundation lane through CLI-only mutation while holding `A71`, R8.1 has added the scoped internal QC issue model, S6 has created the source-document registry MVP under `references/data/`, S7/CP-4 has closed as `pass_with_conditions`, RX.3a/RX.3b/RX.4 have applied producer and elasticity representation lanes through CLI-only mutation, PV.3 through PV.6 have completed pilot templates, projection proof, and coverage dashboards, RX.5 has added representation-operation reports, RX.6 has completed skill-tree generator readiness, PV.7 has closed the machine-promotion review gate without authorizing promotion, PV.8 has completed the promotion-pipeline design, PV-G4 has closed as `pass_with_conditions` with two reconciled lesson-team proofs, S8 has created the bounded internal misconception registry under `references/data/`, S9 has closed CP-5 as a D04 decision-only gate, and S9a has applied the D04 retirement through CLI-only mutation.
 
 All active A-domain units without generators are now explicitly generator-blocked/non-interactive. The skill-tree currently has 44 generator-backed interactive A-domain units and 37 generator-blocked A-domain units. Blocked units must not be exposed in student-facing skill-tree or PV projection until their generators exist, validators pass, and a later sprint explicitly authorizes exposure.
 

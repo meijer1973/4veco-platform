@@ -249,9 +249,9 @@
     },
     {
       "issue_id": "R8-QC-007",
-      "title": "D04 unit-design decision remains unresolved before D-domain promotion",
+      "title": "D04 unit-design decision and CLI retirement completed",
       "quality_category": "unit_design",
-      "status": "deferred",
+      "status": "resolved",
       "severity": "medium",
       "owner_team": "content_strategy",
       "affected_surface": "references/machine/micro-teaching-units.json",
@@ -261,10 +261,20 @@
           "path": "references/reference-team-roadmap.md",
           "role": "roadmap",
           "note": "Sprint 9 and CP-5 retain D04 split/retire/redistribute review before D-domain promotion."
+        },
+        {
+          "path": "reports/review-gates/GATE-CP5-D04-resolution/gate-closure.json",
+          "role": "human_gate_closure",
+          "note": "CP-5 closed as pass_with_conditions with D04 redistribution and later CLI retirement direction."
+        },
+        {
+          "path": "reports/review-gates/GATE-CP5-D04-resolution/S9a-d04-mutation-log.json",
+          "role": "cli_mutation_log",
+          "note": "S9a deprecated D04 through unit-deprecate.js with successor replacement pointers."
         }
       ],
-      "next_action": "Resolve D04 through the planned D-domain unit-design review before any C-to-B promotion workflow depends on it.",
-      "proof_required_to_close": "A D04 decision record exists with dependent-unit audit and VWO economics review outcome.",
+      "next_action": "No further R8-QC-007 action; keep deprecated D04 out of active promotion dependencies.",
+      "proof_required_to_close": "CP-5 gate closure, S9a CLI mutation log, and stale-reference audit exist.",
       "authority_boundary": {
         "internal_only": true,
         "curriculum_authority": false,
@@ -272,7 +282,8 @@
         "primary_evidence": false
       },
       "created_on": "2026-04-29",
-      "updated_on": "2026-04-29",
+      "updated_on": "2026-05-16",
+      "closed_on": "2026-05-16",
       "blocked_downstream_uses": [
         "C-to-B promotion on D-domain units",
         "automatic_lesson_sequencing"

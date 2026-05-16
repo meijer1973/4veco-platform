@@ -1,15 +1,15 @@
 {
   "report_id": "needs-coverage",
   "generated_by": "build-scripts/reports/generate-all.js",
-  "generated_on": "2026-05-15T12:47:43.540Z",
+  "generated_on": "2026-05-16T07:10:06.164Z",
   "source_files": [
     "references/machine/micro-teaching-units.json"
   ],
   "schema_version": 1,
   "status": "warn",
   "summary": {
-    "live_units": 230,
-    "empty_needs": 43
+    "live_units": 229,
+    "empty_needs": 42
   },
   "issues": [
     {
@@ -141,7 +141,7 @@
     {
       "issue_id": "needs-coverage-0015",
       "severity": "medium",
-      "affected_entity": "D04",
+      "affected_entity": "D09",
       "category": "empty_needs:unclassified",
       "evidence_path": "references/machine/micro-teaching-units.json",
       "next_action": "Review whether this is true zero, underbouw assumed, or false zero.",
@@ -150,7 +150,7 @@
     {
       "issue_id": "needs-coverage-0016",
       "severity": "medium",
-      "affected_entity": "D09",
+      "affected_entity": "D15",
       "category": "empty_needs:unclassified",
       "evidence_path": "references/machine/micro-teaching-units.json",
       "next_action": "Review whether this is true zero, underbouw assumed, or false zero.",
@@ -159,7 +159,7 @@
     {
       "issue_id": "needs-coverage-0017",
       "severity": "medium",
-      "affected_entity": "D15",
+      "affected_entity": "D27",
       "category": "empty_needs:unclassified",
       "evidence_path": "references/machine/micro-teaching-units.json",
       "next_action": "Review whether this is true zero, underbouw assumed, or false zero.",
@@ -168,7 +168,7 @@
     {
       "issue_id": "needs-coverage-0018",
       "severity": "medium",
-      "affected_entity": "D27",
+      "affected_entity": "D32",
       "category": "empty_needs:unclassified",
       "evidence_path": "references/machine/micro-teaching-units.json",
       "next_action": "Review whether this is true zero, underbouw assumed, or false zero.",
@@ -177,7 +177,7 @@
     {
       "issue_id": "needs-coverage-0019",
       "severity": "medium",
-      "affected_entity": "D32",
+      "affected_entity": "D35",
       "category": "empty_needs:unclassified",
       "evidence_path": "references/machine/micro-teaching-units.json",
       "next_action": "Review whether this is true zero, underbouw assumed, or false zero.",
@@ -186,7 +186,7 @@
     {
       "issue_id": "needs-coverage-0020",
       "severity": "medium",
-      "affected_entity": "D35",
+      "affected_entity": "E02",
       "category": "empty_needs:unclassified",
       "evidence_path": "references/machine/micro-teaching-units.json",
       "next_action": "Review whether this is true zero, underbouw assumed, or false zero.",
@@ -195,7 +195,7 @@
     {
       "issue_id": "needs-coverage-0021",
       "severity": "medium",
-      "affected_entity": "E02",
+      "affected_entity": "E06",
       "category": "empty_needs:unclassified",
       "evidence_path": "references/machine/micro-teaching-units.json",
       "next_action": "Review whether this is true zero, underbouw assumed, or false zero.",
@@ -204,7 +204,7 @@
     {
       "issue_id": "needs-coverage-0022",
       "severity": "medium",
-      "affected_entity": "E06",
+      "affected_entity": "F01",
       "category": "empty_needs:unclassified",
       "evidence_path": "references/machine/micro-teaching-units.json",
       "next_action": "Review whether this is true zero, underbouw assumed, or false zero.",
@@ -213,7 +213,7 @@
     {
       "issue_id": "needs-coverage-0023",
       "severity": "medium",
-      "affected_entity": "F01",
+      "affected_entity": "F02",
       "category": "empty_needs:unclassified",
       "evidence_path": "references/machine/micro-teaching-units.json",
       "next_action": "Review whether this is true zero, underbouw assumed, or false zero.",
@@ -222,7 +222,7 @@
     {
       "issue_id": "needs-coverage-0024",
       "severity": "medium",
-      "affected_entity": "F02",
+      "affected_entity": "F03",
       "category": "empty_needs:unclassified",
       "evidence_path": "references/machine/micro-teaching-units.json",
       "next_action": "Review whether this is true zero, underbouw assumed, or false zero.",
@@ -231,7 +231,7 @@
     {
       "issue_id": "needs-coverage-0025",
       "severity": "medium",
-      "affected_entity": "F03",
+      "affected_entity": "F15",
       "category": "empty_needs:unclassified",
       "evidence_path": "references/machine/micro-teaching-units.json",
       "next_action": "Review whether this is true zero, underbouw assumed, or false zero.",
@@ -240,7 +240,7 @@
     {
       "issue_id": "needs-coverage-0026",
       "severity": "medium",
-      "affected_entity": "F15",
+      "affected_entity": "F16",
       "category": "empty_needs:unclassified",
       "evidence_path": "references/machine/micro-teaching-units.json",
       "next_action": "Review whether this is true zero, underbouw assumed, or false zero.",
@@ -249,7 +249,7 @@
     {
       "issue_id": "needs-coverage-0027",
       "severity": "medium",
-      "affected_entity": "F16",
+      "affected_entity": "G06",
       "category": "empty_needs:unclassified",
       "evidence_path": "references/machine/micro-teaching-units.json",
       "next_action": "Review whether this is true zero, underbouw assumed, or false zero.",
@@ -258,7 +258,7 @@
     {
       "issue_id": "needs-coverage-0028",
       "severity": "medium",
-      "affected_entity": "G06",
+      "affected_entity": "G07",
       "category": "empty_needs:unclassified",
       "evidence_path": "references/machine/micro-teaching-units.json",
       "next_action": "Review whether this is true zero, underbouw assumed, or false zero.",
@@ -267,7 +267,7 @@
     {
       "issue_id": "needs-coverage-0029",
       "severity": "medium",
-      "affected_entity": "G07",
+      "affected_entity": "G08",
       "category": "empty_needs:unclassified",
       "evidence_path": "references/machine/micro-teaching-units.json",
       "next_action": "Review whether this is true zero, underbouw assumed, or false zero.",
@@ -276,7 +276,7 @@
     {
       "issue_id": "needs-coverage-0030",
       "severity": "medium",
-      "affected_entity": "G08",
+      "affected_entity": "G10",
       "category": "empty_needs:unclassified",
       "evidence_path": "references/machine/micro-teaching-units.json",
       "next_action": "Review whether this is true zero, underbouw assumed, or false zero.",
@@ -285,7 +285,7 @@
     {
       "issue_id": "needs-coverage-0031",
       "severity": "medium",
-      "affected_entity": "G10",
+      "affected_entity": "G11",
       "category": "empty_needs:unclassified",
       "evidence_path": "references/machine/micro-teaching-units.json",
       "next_action": "Review whether this is true zero, underbouw assumed, or false zero.",
@@ -294,7 +294,7 @@
     {
       "issue_id": "needs-coverage-0032",
       "severity": "medium",
-      "affected_entity": "G11",
+      "affected_entity": "H05",
       "category": "empty_needs:unclassified",
       "evidence_path": "references/machine/micro-teaching-units.json",
       "next_action": "Review whether this is true zero, underbouw assumed, or false zero.",
@@ -303,7 +303,7 @@
     {
       "issue_id": "needs-coverage-0033",
       "severity": "medium",
-      "affected_entity": "H05",
+      "affected_entity": "H10",
       "category": "empty_needs:unclassified",
       "evidence_path": "references/machine/micro-teaching-units.json",
       "next_action": "Review whether this is true zero, underbouw assumed, or false zero.",
@@ -312,7 +312,7 @@
     {
       "issue_id": "needs-coverage-0034",
       "severity": "medium",
-      "affected_entity": "H10",
+      "affected_entity": "H16",
       "category": "empty_needs:unclassified",
       "evidence_path": "references/machine/micro-teaching-units.json",
       "next_action": "Review whether this is true zero, underbouw assumed, or false zero.",
@@ -321,7 +321,7 @@
     {
       "issue_id": "needs-coverage-0035",
       "severity": "medium",
-      "affected_entity": "H16",
+      "affected_entity": "H21",
       "category": "empty_needs:unclassified",
       "evidence_path": "references/machine/micro-teaching-units.json",
       "next_action": "Review whether this is true zero, underbouw assumed, or false zero.",
@@ -330,7 +330,7 @@
     {
       "issue_id": "needs-coverage-0036",
       "severity": "medium",
-      "affected_entity": "H21",
+      "affected_entity": "H29",
       "category": "empty_needs:unclassified",
       "evidence_path": "references/machine/micro-teaching-units.json",
       "next_action": "Review whether this is true zero, underbouw assumed, or false zero.",
@@ -339,7 +339,7 @@
     {
       "issue_id": "needs-coverage-0037",
       "severity": "medium",
-      "affected_entity": "H29",
+      "affected_entity": "I01",
       "category": "empty_needs:unclassified",
       "evidence_path": "references/machine/micro-teaching-units.json",
       "next_action": "Review whether this is true zero, underbouw assumed, or false zero.",
@@ -348,7 +348,7 @@
     {
       "issue_id": "needs-coverage-0038",
       "severity": "medium",
-      "affected_entity": "I01",
+      "affected_entity": "I06",
       "category": "empty_needs:unclassified",
       "evidence_path": "references/machine/micro-teaching-units.json",
       "next_action": "Review whether this is true zero, underbouw assumed, or false zero.",
@@ -357,7 +357,7 @@
     {
       "issue_id": "needs-coverage-0039",
       "severity": "medium",
-      "affected_entity": "I06",
+      "affected_entity": "I14",
       "category": "empty_needs:unclassified",
       "evidence_path": "references/machine/micro-teaching-units.json",
       "next_action": "Review whether this is true zero, underbouw assumed, or false zero.",
@@ -366,7 +366,7 @@
     {
       "issue_id": "needs-coverage-0040",
       "severity": "medium",
-      "affected_entity": "I14",
+      "affected_entity": "L01",
       "category": "empty_needs:unclassified",
       "evidence_path": "references/machine/micro-teaching-units.json",
       "next_action": "Review whether this is true zero, underbouw assumed, or false zero.",
@@ -375,15 +375,6 @@
     {
       "issue_id": "needs-coverage-0041",
       "severity": "medium",
-      "affected_entity": "L01",
-      "category": "empty_needs:unclassified",
-      "evidence_path": "references/machine/micro-teaching-units.json",
-      "next_action": "Review whether this is true zero, underbouw assumed, or false zero.",
-      "proof_required_to_close": "Unit has explicit zero-needs status or at least one validated prerequisite."
-    },
-    {
-      "issue_id": "needs-coverage-0042",
-      "severity": "medium",
       "affected_entity": "L03",
       "category": "empty_needs:unclassified",
       "evidence_path": "references/machine/micro-teaching-units.json",
@@ -391,7 +382,7 @@
       "proof_required_to_close": "Unit has explicit zero-needs status or at least one validated prerequisite."
     },
     {
-      "issue_id": "needs-coverage-0043",
+      "issue_id": "needs-coverage-0042",
       "severity": "medium",
       "affected_entity": "L05",
       "category": "empty_needs:unclassified",

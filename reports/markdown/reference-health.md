@@ -1,12 +1,12 @@
 # Reference Health
 
-Generated: 2026-05-15T12:47:43.744Z
+Generated: 2026-05-16T07:10:09.876Z
 
 ## Unit Counts
 
 - Total: 232
-- Live: 230
-- Deprecated: 2
+- Live: 229
+- Deprecated: 3
 
 ## Graph Authority
 
@@ -19,13 +19,13 @@ Generated: 2026-05-15T12:47:43.744Z
 ## QC Findings
 
 - Reports: 17
-- Total issues: 477
-- High/critical issues: 15
+- Total issues: 626
+- High/critical issues: 14
 
 ## Quality Issue Model
 
 - Status: warn
-- Active issues: 8
+- Active issues: 7
 - Internal only: true
 - Curriculum authority: false
 - Student-facing exposure: false
@@ -44,7 +44,7 @@ Generated: 2026-05-15T12:47:43.744Z
 
 ## Unit-Design Status
 
-- Status: warn
+- Status: pass
 - Records: 1
 - Promotion-blocked records: 1
 - Storage strategy: derived_overlay_first

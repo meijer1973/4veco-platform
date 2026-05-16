@@ -8,8 +8,11 @@ const OUT_FILE = path.join(OUT_DIR, 'unit-design-status-overlay.json');
 const GATE_ID = 'GATE-CP5-D04-resolution';
 const GATE_DIR = path.join(REPO_ROOT, 'reports', 'review-gates', GATE_ID);
 const GATE_CLOSURE = path.join(GATE_DIR, 'gate-closure.json');
+const S9A_MUTATION_LOG = path.join(GATE_DIR, 'S9a-d04-mutation-log.json');
+const S9A_STALE_AUDIT = path.join(GATE_DIR, 'S9a-stale-reference-audit.json');
 const SPRINT_ID = 'S9';
 const REQUIRED_AUDIT_UNITS = ['D04', 'A15', 'A16', 'A17', 'D06', 'D11', 'D12', 'D27'];
+const S9A_REPLACEMENTS = ['A15', 'D06', 'A17', 'D11', 'A16', 'D12', 'D27'];
 
 function readJson(relPath, fallback) {
   const file = path.join(REPO_ROOT, relPath);
@@ -127,7 +130,7 @@ function evidenceRefs() {
       kind: 'target_exercise',
       path: 'references/authored/course-target-exercises.json',
       anchor: '2.1.3 Income elasticity and cross elasticity',
-      supports: 'Owned target exercise groups D04 with income and cross elasticity work rather than as a standalone exercise target.',
+      supports: 'Owned target exercise evidence historically grouped D04 with income and cross elasticity work rather than as a standalone exercise target; S9a removes the active D04 citation after successor coverage is verified.',
     },
     {
       kind: 'exam_question',
@@ -143,10 +146,35 @@ function readGateClosure() {
   return JSON.parse(fs.readFileSync(GATE_CLOSURE, 'utf8'));
 }
 
-function buildOverlay(unitsById, gateClosure) {
+function readS9aMutationLog() {
+  if (!fs.existsSync(S9A_MUTATION_LOG)) return null;
+  return JSON.parse(fs.readFileSync(S9A_MUTATION_LOG, 'utf8'));
+}
+
+function readS9aStaleAudit() {
+  if (!fs.existsSync(S9A_STALE_AUDIT)) return null;
+  return JSON.parse(fs.readFileSync(S9A_STALE_AUDIT, 'utf8'));
+}
+
+function sameArray(actual, expected) {
+  return JSON.stringify(actual || []) === JSON.stringify(expected || []);
+}
+
+function s9aMutationCompleted(d04, mutationLog) {
+  return Boolean(
+    d04 &&
+    d04.deprecated === true &&
+    mutationLog &&
+    mutationLog.status === 'completed' &&
+    sameArray(mutationLog.applied && mutationLog.applied.deprecated_in_favor_of, S9A_REPLACEMENTS)
+  );
+}
+
+function buildOverlay(unitsById, gateClosure, mutationLog, staleAudit) {
   const d04 = unitsById.get('D04');
   if (!d04) throw new Error('D04 missing from micro-teaching-units.json');
   const gateClosed = Boolean(gateClosure && gateClosure.status);
+  const mutationCompleted = s9aMutationCompleted(d04, mutationLog);
   return {
     schema_version: 1,
     status: 'active_internal_overlay',
@@ -180,8 +208,8 @@ function buildOverlay(unitsById, gateClosure) {
       {
         unit_id: 'D04',
         unit_name: unitName(d04),
-        status: 'unstable_unit_design',
-        review_status: gateClosed ? 'cp5_closed' : 'cp5_review_required',
+        status: mutationCompleted ? 'retired_after_cli_mutation' : 'unstable_unit_design',
+        review_status: mutationCompleted ? 's9a_cli_mutation_completed' : gateClosed ? 'cp5_closed' : 'cp5_review_required',
         gate_id: GATE_ID,
         promotion_blocked: true,
         c_to_b_promotion_blocked: true,
@@ -190,6 +218,7 @@ function buildOverlay(unitsById, gateClosure) {
           terms: d04.terms || [],
           exam_codes: d04.exam_codes || [],
           deprecated: d04.deprecated === true,
+          deprecated_in_favor_of: d04.deprecated_in_favor_of || [],
         },
         resolution_options: [
           'retire_standalone_unit',
@@ -202,6 +231,8 @@ function buildOverlay(unitsById, gateClosure) {
         successor_unit_ids: ['A15', 'A16', 'A17', 'D06', 'D11', 'D12', 'D27'],
         affected_unit_ids: REQUIRED_AUDIT_UNITS,
         evidence_refs: evidenceRefs(),
+        mutation_log_ref: mutationCompleted ? 'reports/review-gates/GATE-CP5-D04-resolution/S9a-d04-mutation-log.json' : null,
+        stale_reference_audit_ref: staleAudit ? 'reports/review-gates/GATE-CP5-D04-resolution/S9a-stale-reference-audit.json' : null,
         blocked_downstream_uses: [
           'exercise_promotion',
           'student_diagnostics',
@@ -213,7 +244,9 @@ function buildOverlay(unitsById, gateClosure) {
           'pv_projection',
           'pv_machine_promotion',
         ],
-        notes: 'S9 prepares CP-5 closure only. D04 lifecycle mutation requires a later CLI-only sprint after explicit human gate closure.',
+        notes: mutationCompleted
+          ? 'S9a retired D04 through unit-deprecate.js. D04 remains blocked as a deprecated standalone unit and is no longer an active promotion dependency.'
+          : 'S9 prepares CP-5 closure only. D04 lifecycle mutation requires a later CLI-only sprint after explicit human gate closure.',
       },
     ],
   };
@@ -519,8 +552,10 @@ function main() {
   const exams = readJson('references/external/exam-questions.json', []);
   const triage = readJson('reports/json/blueprint-flag-triage.json', { triage_records: [] });
   const gateClosure = readGateClosure();
+  const mutationLog = readS9aMutationLog();
+  const staleAudit = readS9aStaleAudit();
 
-  const overlay = buildOverlay(unitsById, gateClosure);
+  const overlay = buildOverlay(unitsById, gateClosure, mutationLog, staleAudit);
   const audit = buildAudit(unitsById, targets, exams, triage);
   const decision = buildDecisionRecord(audit, gateClosure);
   const strategy = buildStrategy();

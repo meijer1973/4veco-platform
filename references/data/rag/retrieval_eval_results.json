@@ -2,7 +2,7 @@
   "eval_set_id": "R7.3-retrieval-eval-set",
   "schema_version": 1,
   "generated_by": "build-scripts/rag/run-retrieval-evals.js",
-  "generated_on": "2026-05-15T08:58:12.267Z",
+  "generated_on": "2026-05-16T07:10:17.947Z",
   "source_files": [
     "references/data/rag/retrieval_eval_set.json",
     "references/data/rag/chunk_index.jsonl",
@@ -399,7 +399,7 @@
           "not_primary_evidence": true,
           "curriculum_authority": false,
           "allowed_for_public_citation": false,
-          "text_excerpt": "terms-coverage: status warn; issues 84; summary {\"live_units\":230,\"units_without_terms\":84}; issue text terms-coverage-0001 missing_term_links A01 references/machine/micro-teaching-units.json Add canonical term slugs when this unit uses glossary concepts. Unit terms are either populated or explicitly marked not applicable. terms-coverage-0002 missing_term_links A02 references/machine/micro-teaching-units.json Add canonical term slugs when this unit uses glossary concepts. Unit terms are either p"
+          "text_excerpt": "terms-coverage: status warn; issues 84; summary {\"live_units\":229,\"units_without_terms\":84}; issue text terms-coverage-0001 missing_term_links A01 references/machine/micro-teaching-units.json Add canonical term slugs when this unit uses glossary concepts. Unit terms are either populated or explicitly marked not applicable. terms-coverage-0002 missing_term_links A02 references/machine/micro-teaching-units.json Add canonical term slugs when this unit uses glossary concepts. Unit terms are either p"
         },
         {
           "chunk_id": "quality-report:reference-quality-issues.json",
@@ -419,7 +419,7 @@
           "not_primary_evidence": true,
           "curriculum_authority": false,
           "allowed_for_public_citation": false,
-          "text_excerpt": "reference-quality-issues: status warn; issues 8; summary {\"issue_log_status\":\"active_internal_qc\",\"total_issues\":8,\"active_issues\":8,\"by_status\":{\"blocked\":2,\"deferred\":2,\"in_review\":1,\"open\":3},\"by_category\":{\"evidence_sufficiency\":1,\"extraction_integrity\":1,\"needs_gap\":1,\"production_readiness_warning\":1,\"report_drift\":1,\"source_version_drift\":1,\"term_link_gap\":1,\"unit_design\":1},\"by_severity\":{\"high\":3,\"low\":1,\"medium\":4},\"internal_only\":true,\"curriculum_authority\":false,\"student_facing_exposu"
+          "text_excerpt": "reference-quality-issues: status warn; issues 7; summary {\"issue_log_status\":\"active_internal_qc\",\"total_issues\":8,\"active_issues\":7,\"by_status\":{\"blocked\":2,\"deferred\":1,\"in_review\":1,\"open\":3,\"resolved\":1},\"by_category\":{\"evidence_sufficiency\":1,\"extraction_integrity\":1,\"needs_gap\":1,\"production_readiness_warning\":1,\"report_drift\":1,\"source_version_drift\":1,\"term_link_gap\":1,\"unit_design\":1},\"by_severity\":{\"high\":3,\"low\":1,\"medium\":4},\"internal_only\":true,\"curriculum_authority\":false,\"student_"
         },
         {
           "chunk_id": "quality-report:dead-units.json",
@@ -439,7 +439,7 @@
           "not_primary_evidence": true,
           "curriculum_authority": false,
           "allowed_for_public_citation": false,
-          "text_excerpt": "dead-units: status warn; issues 50; summary {\"live_units\":230,\"cited_live_units\":180,\"uncited_live_units\":50}; issue text dead-units-0001 uncited_live_unit A05 references/machine/micro-teaching-units.json Check whether this unit is future-needed, should be cited, or should be deprecated. Unit is cited by exam/target evidence or explicitly marked intentionally uncited. dead-units-0002 uncited_live_unit A09 references/machine/micro-teaching-units.json Check whether this unit is future-needed, shou"
+          "text_excerpt": "dead-units: status warn; issues 50; summary {\"live_units\":229,\"cited_live_units\":179,\"uncited_live_units\":50}; issue text dead-units-0001 uncited_live_unit A05 references/machine/micro-teaching-units.json Check whether this unit is future-needed, should be cited, or should be deprecated. Unit is cited by exam/target evidence or explicitly marked intentionally uncited. dead-units-0002 uncited_live_unit A09 references/machine/micro-teaching-units.json Check whether this unit is future-needed, shou"
         },
         {
           "chunk_id": "owned-content-edge:ocg-projected-unit-uses-term-unit-a06-term-evenwichtshoeveelheid-1.4.1-1.4.1-references-machine-micro-teaching-units.jso-288895008510",
@@ -520,14 +520,14 @@
         "needs-coverage",
         "dead-units",
         "reference-quality-issues",
+        "unit-design-status",
+        "unresolved-refs",
         "aspects-coverage",
         "begrippen-coverage",
         "dag-integrity",
         "graph-skill-tree",
         "procedure-coverage",
-        "procedure-visual-coverage",
-        "procedure-visual-inventory.json",
-        "procedure-visual-machine-promotion-readiness"
+        "procedure-visual-coverage"
       ],
       "found_source_types": [
         "quality_report"
@@ -580,7 +580,7 @@
           "not_primary_evidence": true,
           "curriculum_authority": false,
           "allowed_for_public_citation": false,
-          "text_excerpt": "needs-coverage: status warn; issues 43; summary {\"live_units\":230,\"empty_needs\":43}; issue text needs-coverage-0001 empty_needs:underbouw_assumed A01 references/machine/micro-teaching-units.json Review whether this is true zero, underbouw assumed, or false zero. Unit has explicit zero-needs status or at least one validated prerequisite. needs-coverage-0002 empty_needs:underbouw_assumed A02 references/machine/micro-teaching-units.json Review whether this is true zero, underbouw assumed, or false "
+          "text_excerpt": "needs-coverage: status warn; issues 42; summary {\"live_units\":229,\"empty_needs\":42}; issue text needs-coverage-0001 empty_needs:underbouw_assumed A01 references/machine/micro-teaching-units.json Review whether this is true zero, underbouw assumed, or false zero. Unit has explicit zero-needs status or at least one validated prerequisite. needs-coverage-0002 empty_needs:underbouw_assumed A02 references/machine/micro-teaching-units.json Review whether this is true zero, underbouw assumed, or false "
         },
         {
           "chunk_id": "quality-report:dead-units.json",
@@ -600,7 +600,7 @@
           "not_primary_evidence": true,
           "curriculum_authority": false,
           "allowed_for_public_citation": false,
-          "text_excerpt": "dead-units: status warn; issues 50; summary {\"live_units\":230,\"cited_live_units\":180,\"uncited_live_units\":50}; issue text dead-units-0001 uncited_live_unit A05 references/machine/micro-teaching-units.json Check whether this unit is future-needed, should be cited, or should be deprecated. Unit is cited by exam/target evidence or explicitly marked intentionally uncited. dead-units-0002 uncited_live_unit A09 references/machine/micro-teaching-units.json Check whether this unit is future-needed, shou"
+          "text_excerpt": "dead-units: status warn; issues 50; summary {\"live_units\":229,\"cited_live_units\":179,\"uncited_live_units\":50}; issue text dead-units-0001 uncited_live_unit A05 references/machine/micro-teaching-units.json Check whether this unit is future-needed, should be cited, or should be deprecated. Unit is cited by exam/target evidence or explicitly marked intentionally uncited. dead-units-0002 uncited_live_unit A09 references/machine/micro-teaching-units.json Check whether this unit is future-needed, shou"
         },
         {
           "chunk_id": "quality-report:reference-quality-issues.json",
@@ -620,16 +620,16 @@
           "not_primary_evidence": true,
           "curriculum_authority": false,
           "allowed_for_public_citation": false,
-          "text_excerpt": "reference-quality-issues: status warn; issues 8; summary {\"issue_log_status\":\"active_internal_qc\",\"total_issues\":8,\"active_issues\":8,\"by_status\":{\"blocked\":2,\"deferred\":2,\"in_review\":1,\"open\":3},\"by_category\":{\"evidence_sufficiency\":1,\"extraction_integrity\":1,\"needs_gap\":1,\"production_readiness_warning\":1,\"report_drift\":1,\"source_version_drift\":1,\"term_link_gap\":1,\"unit_design\":1},\"by_severity\":{\"high\":3,\"low\":1,\"medium\":4},\"internal_only\":true,\"curriculum_authority\":false,\"student_facing_exposu"
+          "text_excerpt": "reference-quality-issues: status warn; issues 7; summary {\"issue_log_status\":\"active_internal_qc\",\"total_issues\":8,\"active_issues\":7,\"by_status\":{\"blocked\":2,\"deferred\":1,\"in_review\":1,\"open\":3,\"resolved\":1},\"by_category\":{\"evidence_sufficiency\":1,\"extraction_integrity\":1,\"needs_gap\":1,\"production_readiness_warning\":1,\"report_drift\":1,\"source_version_drift\":1,\"term_link_gap\":1,\"unit_design\":1},\"by_severity\":{\"high\":3,\"low\":1,\"medium\":4},\"internal_only\":true,\"curriculum_authority\":false,\"student_"
         },
         {
-          "chunk_id": "quality-report:aspects-coverage.json",
-          "score": 28,
-          "source_path": "reports/json/aspects-coverage.json",
+          "chunk_id": "quality-report:unit-design-status.json",
+          "score": 36,
+          "source_path": "reports/json/unit-design-status.json",
           "source_type": "quality_report",
           "authority_level": "generated_report",
           "entity_ids": [
-            "aspects-coverage"
+            "unit-design-status"
           ],
           "evidence_ids": [],
           "edge_statuses": [],
@@ -640,7 +640,7 @@
           "not_primary_evidence": true,
           "curriculum_authority": false,
           "allowed_for_public_citation": false,
-          "text_excerpt": "aspects-coverage: status pass; issues 0; summary {\"live_units\":230,\"units_without_aspects\":0}; issue text"
+          "text_excerpt": "unit-design-status: status pass; issues 1; summary {\"overlay_status\":\"active_internal_overlay\",\"record_count\":1,\"by_status\":{\"retired_after_cli_mutation\":1},\"unresolved_record_count\":0,\"promotion_blocked_count\":1,\"affected_unit_count\":8,\"gate_ids\":[\"GATE-CP5-D04-resolution\"],\"storage_strategy\":\"derived_overlay_first\",\"internal_design_status\":true,\"primary_evidence\":false,\"curriculum_authority\":false,\"exam_authority\":false,\"scoring_rule\":false,\"student_facing_exposure\":false,\"student_diagnostics\""
         }
       ],
       "notes": "Checks that false_zero empty-needs status is visible as a generated diagnostic, not curriculum authority."
@@ -1021,6 +1021,7 @@
       "found_entities": [
         "dead-units",
         "dag-integrity",
+        "unit-design-status",
         "unresolved-refs",
         "aspects-coverage",
         "begrippen-coverage",
@@ -1029,8 +1030,7 @@
         "procedure-coverage",
         "procedure-visual-coverage",
         "procedure-visual-inventory.json",
-        "procedure-visual-machine-promotion-readiness",
-        "reference-cli-coverage.json"
+        "procedure-visual-machine-promotion-readiness"
       ],
       "found_source_types": [
         "quality_report"
@@ -1063,7 +1063,7 @@
           "not_primary_evidence": true,
           "curriculum_authority": false,
           "allowed_for_public_citation": false,
-          "text_excerpt": "dead-units: status warn; issues 50; summary {\"live_units\":230,\"cited_live_units\":180,\"uncited_live_units\":50}; issue text dead-units-0001 uncited_live_unit A05 references/machine/micro-teaching-units.json Check whether this unit is future-needed, should be cited, or should be deprecated. Unit is cited by exam/target evidence or explicitly marked intentionally uncited. dead-units-0002 uncited_live_unit A09 references/machine/micro-teaching-units.json Check whether this unit is future-needed, shou"
+          "text_excerpt": "dead-units: status warn; issues 50; summary {\"live_units\":229,\"cited_live_units\":179,\"uncited_live_units\":50}; issue text dead-units-0001 uncited_live_unit A05 references/machine/micro-teaching-units.json Check whether this unit is future-needed, should be cited, or should be deprecated. Unit is cited by exam/target evidence or explicitly marked intentionally uncited. dead-units-0002 uncited_live_unit A09 references/machine/micro-teaching-units.json Check whether this unit is future-needed, shou"
         },
         {
           "chunk_id": "quality-report:dag-integrity.json",
@@ -1083,7 +1083,27 @@
           "not_primary_evidence": true,
           "curriculum_authority": false,
           "allowed_for_public_citation": false,
-          "text_excerpt": "dag-integrity: status pass; issues 0; summary {\"units\":232,\"live_units\":230,\"deprecated_units\":2}; issue text"
+          "text_excerpt": "dag-integrity: status pass; issues 0; summary {\"units\":232,\"live_units\":229,\"deprecated_units\":3}; issue text"
+        },
+        {
+          "chunk_id": "quality-report:unit-design-status.json",
+          "score": 36,
+          "source_path": "reports/json/unit-design-status.json",
+          "source_type": "quality_report",
+          "authority_level": "generated_report",
+          "entity_ids": [
+            "unit-design-status"
+          ],
+          "evidence_ids": [],
+          "edge_statuses": [],
+          "diagnostic_only": true,
+          "pending_review": false,
+          "generated_report_warning": true,
+          "generated_artifact_warning": false,
+          "not_primary_evidence": true,
+          "curriculum_authority": false,
+          "allowed_for_public_citation": false,
+          "text_excerpt": "unit-design-status: status pass; issues 1; summary {\"overlay_status\":\"active_internal_overlay\",\"record_count\":1,\"by_status\":{\"retired_after_cli_mutation\":1},\"unresolved_record_count\":0,\"promotion_blocked_count\":1,\"affected_unit_count\":8,\"gate_ids\":[\"GATE-CP5-D04-resolution\"],\"storage_strategy\":\"derived_overlay_first\",\"internal_design_status\":true,\"primary_evidence\":false,\"curriculum_authority\":false,\"exam_authority\":false,\"scoring_rule\":false,\"student_facing_exposure\":false,\"student_diagnostics\""
         },
         {
           "chunk_id": "quality-report:unresolved-refs.json",
@@ -1103,7 +1123,7 @@
           "not_primary_evidence": true,
           "curriculum_authority": false,
           "allowed_for_public_citation": false,
-          "text_excerpt": "unresolved-refs: status warn; issues 103; summary {\"deprecated_units\":2,\"deprecated_citations\":103}; issue text unresolved-refs-0001 deprecated_reference D23 references/reference-team-roadmap.md Remove or migrate deprecated unit citation. No deprecated unit ID is cited from active docs/reports. unresolved-refs-0002 deprecated_reference H26 references/reference-team-roadmap.md Remove or migrate deprecated unit citation. No deprecated unit ID is cited from active docs/reports. unresolved-refs-0003"
+          "text_excerpt": "unresolved-refs: status warn; issues 256; summary {\"deprecated_units\":3,\"deprecated_citations\":256}; issue text unresolved-refs-0001 deprecated_reference D04 references/reference-team-roadmap.md Remove or migrate deprecated unit citation. No deprecated unit ID is cited from active docs/reports. unresolved-refs-0002 deprecated_reference D23 references/reference-team-roadmap.md Remove or migrate deprecated unit citation. No deprecated unit ID is cited from active docs/reports. unresolved-refs-0003"
         },
         {
           "chunk_id": "quality-report:aspects-coverage.json",
@@ -1123,27 +1143,7 @@
           "not_primary_evidence": true,
           "curriculum_authority": false,
           "allowed_for_public_citation": false,
-          "text_excerpt": "aspects-coverage: status pass; issues 0; summary {\"live_units\":230,\"units_without_aspects\":0}; issue text"
-        },
-        {
-          "chunk_id": "quality-report:begrippen-coverage.json",
-          "score": 28,
-          "source_path": "reports/json/begrippen-coverage.json",
-          "source_type": "quality_report",
-          "authority_level": "generated_report",
-          "entity_ids": [
-            "begrippen-coverage"
-          ],
-          "evidence_ids": [],
-          "edge_statuses": [],
-          "diagnostic_only": true,
-          "pending_review": false,
-          "generated_report_warning": true,
-          "generated_artifact_warning": false,
-          "not_primary_evidence": true,
-          "curriculum_authority": false,
-          "allowed_for_public_citation": false,
-          "text_excerpt": "begrippen-coverage: status warn; issues 130; summary {\"terms\":227,\"terms_without_teaching_units\":130}; issue text begrippen-coverage-0001 term_without_teaching_units aandelen references/machine/begrippen.json Link term to teaching units when used in production. Term has teaching_units or explicit orphan rationale. begrippen-coverage-0002 term_without_teaching_units accijnzen references/machine/begrippen.json Link term to teaching units when used in production. Term has teaching_units or explicit"
+          "text_excerpt": "aspects-coverage: status pass; issues 0; summary {\"live_units\":229,\"units_without_aspects\":0}; issue text"
         }
       ],
       "notes": "Checks deprecated/citation health surfacing as diagnostics."
@@ -1546,12 +1546,12 @@
         "owned-content-coverage",
         "owned-source-registry",
         "reference-quality-issues",
+        "unit-design-status",
         "unresolved-refs",
         "aspects-coverage",
         "begrippen-coverage",
         "blueprint-flag-triage.json",
-        "dag-integrity",
-        "dead-units"
+        "dag-integrity"
       ],
       "found_source_types": [
         "quality_report"

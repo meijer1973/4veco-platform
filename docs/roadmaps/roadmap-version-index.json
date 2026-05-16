@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_on": "2026-05-15",
+  "updated_on": "2026-05-16",
   "generated_by": "manual-roadmap-versioning",
   "canonical_archive_directory": "docs/roadmaps/outdated",
   "current_operational_roadmaps": [
@@ -15,13 +15,14 @@
   "roadmaps": [
     {
       "roadmap_id": "references-team-roadmap",
-      "version": "v2.43-s9-cp5-d04-closure",
+      "version": "v2.44-s9a-d04-cli-mutation",
       "title": "References Team Roadmap",
       "status": "active",
       "path": "references/reference-team-roadmap.md",
       "owner": "references_team",
-      "updated_on": "2026-05-15",
+      "updated_on": "2026-05-16",
       "supersedes": [
+        "docs/roadmaps/outdated/reference-team-roadmap-v2.43-s9-cp5-d04-closure.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.42-s8-misconception-registry.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.41-pvg4-pass-with-conditions.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.39-pv8-promotion-pipeline-design.md",
@@ -64,7 +65,18 @@
         "knowledge/Exercise schema and quality/reference-team-roadmap Live version 28 April.md",
         "knowledge/Exercise schema and quality/roadmap-updated-repository-checked.md"
       ],
-      "notes": "Current operating roadmap after closing S9 / CP-5 D04 resolution as pass_with_conditions; S9a D04 CLI-only mutation is the next planned reference sprint."
+      "notes": "Current operating roadmap after completing S9a D04 CLI-only mutation; Content Track 1 Year-1 target exercise coverage is the next planned reference sprint."
+    },
+    {
+      "roadmap_id": "references-team-roadmap-v2.43",
+      "version": "v2.43-s9-cp5-d04-closure",
+      "title": "References Team Roadmap before S9a D04 CLI-only mutation",
+      "status": "outdated",
+      "path": "docs/roadmaps/outdated/reference-team-roadmap-v2.43-s9-cp5-d04-closure.md",
+      "owner": "references_team",
+      "updated_on": "2026-05-15",
+      "superseded_by": "references/reference-team-roadmap.md",
+      "notes": "Snapshot archived before completing S9a D04 CLI-Only Mutation Sprint."
     },
     {
       "roadmap_id": "references-team-roadmap-v2.42",
