@@ -57,6 +57,7 @@ Reusable scripts that generate the automated layer. These are what `scripts/depl
 | `platform/build-reasoning-questions.js` | Reasoning CSV → `shared/reasoning/*.js` |
 | `platform/build-skilltree-shells.js` | Skilltree data + HTML shells |
 | `platform/build-procedure-shells.js` | Procedure HTML shells |
+| `platform/build-graphical-shells.js` | Graphical-game HTML shells |
 | `platform/build-landing-page.js` | `index.html` at paragraph/chapter/module level |
 | `platform/build-single-page-nav.js` | Single-page navigation for GitHub Pages |
 

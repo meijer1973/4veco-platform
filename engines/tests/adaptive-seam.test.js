@@ -4,6 +4,7 @@ const NewsDetectiveEngine = require('../newsdetective-engine');
 const ReasoningEngine = require('../reasoning-engine');
 const SkillTreeEngine = require('../skilltree-engine');
 const ProcedureEngine = require('../procedure-engine');
+const GraphicalEngine = require('../graphical-engine');
 
 function makeStorage(initial) {
     return {
@@ -93,6 +94,40 @@ function makeProcedureData() {
             ]
         }
     ];
+}
+
+function makeGraphicalData() {
+    return {
+        schema_version: 1,
+        meta: { parNr: '1.1.2', parName: 'Percentages en indexcijfers', title: 'Grafieken lezen' },
+        student_title: 'Grafieken lezen',
+        challenges: [
+            {
+                id: 'read-value',
+                type: 'bar_value_read',
+                title: 'Lees een waarde',
+                prompt: 'Lees 2024 af.',
+                target_label: '2024',
+                graph: {
+                    type: 'bar',
+                    title: 'Testgrafiek',
+                    x_label: 'jaar',
+                    y_label: 'waarde',
+                    unit: 'stuks',
+                    series: [
+                        { label: '2023', value: 10 },
+                        { label: '2024', value: 12 }
+                    ]
+                },
+                expected_answer: { kind: 'number', value: 12, unit: 'stuks', tolerance: 0 },
+                feedback_steps: [
+                    { label: 'Bron', text: 'Lees de grafiek.' },
+                    { label: 'Waarden', text: 'Kies 2024.' },
+                    { label: 'Berekening', text: 'Geen berekening nodig.' }
+                ]
+            }
+        ]
+    };
 }
 
 describe('AdaptiveSeam helper', () => {
@@ -192,5 +227,15 @@ describe('existing game engines read the inert seam without behavior changes', (
         expect(engine.getAdaptivePayload().paragraph_id).toBe('1.1.2');
         expect(engine.storageKey).toBe('proc_1.1.2');
         expect(engine.startProcedure(0).id).toBe('test-procedure');
+    });
+
+    test('graphical game stores the payload but keeps configured challenge order', () => {
+        const engine = new GraphicalEngine({
+            data: makeGraphicalData(),
+            adaptiveStorage: storageWithPayload(validPayload({ focus_skills: ['grafieken'] }))
+        });
+        expect(engine.getAdaptivePayload().source).toBe('test');
+        expect(engine.getProgress()).toEqual({ current: 1, total: 1, completed: 0 });
+        expect(engine.getCurrentChallenge().id).toBe('read-value');
     });
 });

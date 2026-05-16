@@ -64,6 +64,7 @@ function copyEngines() {
         'skilltree-engine.js', 'skilltree-ui.js', 'skilltree.css',
         'newsdetective-engine.js', 'newsdetective-ui.js', 'newsdetective.css',
         'procedure-engine.js', 'procedure-ui.js', 'procedure.css',
+        'graphical-engine.js', 'graphical-ui.js', 'graphical.css',
         'voorkennis.css', 'voorkennis.js',
         'presentation-v2.css', 'presentation-v2.js',
         'theme.js'
@@ -353,6 +354,7 @@ function runBuildScripts() {
         { name: 'Quiz shells', cmd: 'node build-scripts/platform/generate-quiz-shells.js' },
         { name: 'News detective shells', cmd: 'node build-scripts/platform/build-newsdetective-shells.js' },
         { name: 'Procedure shells', cmd: 'node build-scripts/platform/build-procedure-shells.js' },
+        { name: 'Graphical game shells', cmd: 'node build-scripts/platform/build-graphical-shells.js' },
         { name: 'Landing pages', cmd: 'node build-scripts/platform/build-landing-page.js' },
         // Idempotent: migrates any un-migrated `uitleg vaardigheden.html` files
         // to the shared voorkennis.css/js token system. Safe to re-run; already-

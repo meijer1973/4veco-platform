@@ -124,6 +124,7 @@ function sectionAvailability(files) {
   if (files.oefenen && (
     files.oefenen.redeneerSpel ||
     files.oefenen.wiskundevaardigheden ||
+    files.oefenen.grafiekenspel ||
     files.oefenen.begeleide ||
     (!HIDE_TASK_ROWS && (files.oefenen.basis || files.oefenen.midden || files.oefenen.verrijking))
   )) labels.push("Oefenen");
@@ -150,7 +151,7 @@ function scanFiles(paragraafPath) {
   const result = {
     voorbereiden: { instapquiz: null, voorkennis: null, leesdit: null, nieuwsdetective: null },
     leren:        { presentatie: null, vaardigheden: null, stappenplan: null, youtube: null, nieuws: null, samenvatting: null },
-    oefenen:      { redeneerSpel: null, wiskundevaardigheden: null, begeleide: null, basis: null, midden: null, verrijking: null },
+    oefenen:      { redeneerSpel: null, wiskundevaardigheden: null, grafiekenspel: null, begeleide: null, basis: null, midden: null, verrijking: null },
     lesboek:      { paragraaf: null, opgaven: null, antwoorden: null },
   };
   if (!fs.existsSync(paragraafPath)) return result;
@@ -203,6 +204,7 @@ function scanFiles(paragraafPath) {
   // infix. The interactive begeleide inoefening HTML has no infix before ".html".
   result.oefenen.redeneerSpel          = find(/redeneer-spel\.html$/i);
   result.oefenen.wiskundevaardigheden  = find(/wiskundevaardigheden\.html$/i);
+  result.oefenen.grafiekenspel         = find(/grafiekenspel\.html$/i);
 
   const findPair = (label) => {
     const esc = label.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
@@ -671,6 +673,7 @@ const ICONS = {
   hamburger: '<line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>',
   puzzle:    '<path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44A2.5 2.5 0 0 1 2 17.5v-1A2.5 2.5 0 0 1 6.44 14H12" fill="none" stroke="currentColor" stroke-width="2"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44A2.5 2.5 0 0 0 22 17.5v-1a2.5 2.5 0 0 0-4.44-2.5H12" fill="none" stroke="currentColor" stroke-width="2"/>',
   layers:    '<path d="M12 2L2 7l10 5 10-5-10-5z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M2 17l10 5 10-5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M2 12l10 5 10-5" fill="none" stroke="currentColor" stroke-width="2"/>',
+  chart:     '<line x1="4" y1="19" x2="20" y2="19"/><line x1="4" y1="19" x2="4" y2="5"/><polyline points="6 15 10 11 13 13 18 7"/><circle cx="10" cy="11" r="1" fill="currentColor" stroke="none"/><circle cx="18" cy="7" r="1" fill="currentColor" stroke="none"/>',
   steps:     '<line x1="12" y1="2" x2="12" y2="22"/><polyline points="8 6 12 2 16 6"/><circle cx="12" cy="8" r="2" fill="currentColor" stroke="none"/><circle cx="12" cy="14" r="2" fill="currentColor" stroke="none"/><circle cx="12" cy="20" r="2" fill="currentColor" stroke="none"/>',
 };
 
@@ -1037,6 +1040,7 @@ function renderParagraafPage(paragraaf, files, _resolvedMap) {
   const oefenenRow = [];
   if (files.oefenen.redeneerSpel)         oefenenRow.push(interactiveCard(encPath([files.oefenen.redeneerSpel]),         ICONS.puzzle, "Redeneer-spel",        "Train je redeneervaardigheid met 5 spelmodi"));
   if (files.oefenen.wiskundevaardigheden) oefenenRow.push(interactiveCard(encPath([files.oefenen.wiskundevaardigheden]), ICONS.layers, "Wiskunde vaardigheden", "Oefen de wiskunde vaardigheden voor deze paragraaf"));
+  if (files.oefenen.grafiekenspel)        oefenenRow.push(interactiveCard(encPath([files.oefenen.grafiekenspel]),        ICONS.chart,  "Grafiekenspel",        "Lees grafieken en gebruik de waarden in een berekening"));
   const begeleidHTML = begeleidCard(files.oefenen.begeleide);
   if (begeleidHTML) oefenenRow.push(begeleidHTML);
   const oefenenCards = oefenenRow.join("\n");
