@@ -72,6 +72,24 @@ const DOMAIN_LABELS = {
   grafisch: "Grafisch",
 };
 
+const GAME_ASPECTS = {
+  reasoning: {
+    label: "Redeneren",
+    token: "economisch",
+    summary: "Leg oorzaken, gevolgen en keuzes stap voor stap uit."
+  },
+  calculation: {
+    label: "Rekenen",
+    token: "wiskunde",
+    summary: "Train de berekeningen die je in deze paragraaf gebruikt."
+  },
+  graphical: {
+    label: "Grafieken",
+    token: "grafisch",
+    summary: "Lees waarden uit grafieken en reken ermee door."
+  }
+};
+
 function escapeHtml(value) {
   return String(value == null ? "" : value)
     .replace(/&/g, "&amp;")
@@ -951,6 +969,21 @@ function renderParagraafPage(paragraaf, files, _resolvedMap) {
         </a>`;
   }
 
+  function aspectRouteCard({ href, icon, title, desc, aspect }) {
+    const meta = GAME_ASPECTS[aspect];
+    if (!meta) return "";
+    return `
+        <a class="resource-card resource-card-interactive resource-card-aspect aspect-${meta.token}" data-learning-aspect="${aspect}" href="${href}">
+          <div class="resource-card-icon"><svg viewBox="0 0 24 24">${icon}</svg></div>
+          <div class="resource-card-body">
+            <span class="resource-aspect-label badge-${meta.token}">${meta.label}</span>
+            <h3>${title}</h3>
+            <p>${desc}</p>
+            <span class="resource-card-action">Oefenen &rarr;</span>
+          </div>
+        </a>`;
+  }
+
   function begeleidCard(data) {
     if (!data) return "";
     const links = [];
@@ -960,6 +993,7 @@ function renderParagraafPage(paragraaf, files, _resolvedMap) {
         <div class="resource-card resource-card-interactive">
           <div class="resource-card-icon"><svg viewBox="0 0 24 24">${ICONS.users}</svg></div>
           <div class="resource-card-body">
+            <span class="resource-aspect-label">Begeleid oefenen</span>
             <h3>Begeleide inoefening</h3>
             <p>Oefenen met denkstappen en hints</p>
             <div class="resource-sub-links">${links.join("")}</div>
@@ -1037,13 +1071,56 @@ function renderParagraafPage(paragraaf, files, _resolvedMap) {
     files.leren.samenvatting ? resourceCardWithSource(files.leren.samenvatting,  ICONS.check,     "Samenvatting",        "Overzicht van deze paragraaf") : "",
   ].filter(Boolean).join("\n");
 
-  const oefenenRow = [];
-  if (files.oefenen.redeneerSpel)         oefenenRow.push(interactiveCard(encPath([files.oefenen.redeneerSpel]),         ICONS.puzzle, "Redeneer-spel",        "Train je redeneervaardigheid met 5 spelmodi"));
-  if (files.oefenen.wiskundevaardigheden) oefenenRow.push(interactiveCard(encPath([files.oefenen.wiskundevaardigheden]), ICONS.layers, "Wiskunde vaardigheden", "Oefen de wiskunde vaardigheden voor deze paragraaf"));
-  if (files.oefenen.grafiekenspel)        oefenenRow.push(interactiveCard(encPath([files.oefenen.grafiekenspel]),        ICONS.chart,  "Grafiekenspel",        "Lees grafieken en gebruik de waarden in een berekening"));
+  const oefenenAspectRoutes = [];
+  if (files.oefenen.redeneerSpel) {
+    oefenenAspectRoutes.push(aspectRouteCard({
+      href: encPath([files.oefenen.redeneerSpel]),
+      icon: ICONS.puzzle,
+      title: "Redeneer-spel",
+      desc: GAME_ASPECTS.reasoning.summary,
+      aspect: "reasoning"
+    }));
+  }
+  if (files.oefenen.wiskundevaardigheden) {
+    oefenenAspectRoutes.push(aspectRouteCard({
+      href: encPath([files.oefenen.wiskundevaardigheden]),
+      icon: ICONS.layers,
+      title: "Wiskunde vaardigheden",
+      desc: GAME_ASPECTS.calculation.summary,
+      aspect: "calculation"
+    }));
+  }
+  if (files.oefenen.grafiekenspel) {
+    oefenenAspectRoutes.push(aspectRouteCard({
+      href: encPath([files.oefenen.grafiekenspel]),
+      icon: ICONS.chart,
+      title: "Grafiekenspel",
+      desc: GAME_ASPECTS.graphical.summary,
+      aspect: "graphical"
+    }));
+  }
   const begeleidHTML = begeleidCard(files.oefenen.begeleide);
-  if (begeleidHTML) oefenenRow.push(begeleidHTML);
-  const oefenenCards = oefenenRow.join("\n");
+  const aspectBlock = oefenenAspectRoutes.length ? `
+        <div class="learning-aspect-block">
+          <div class="learning-aspect-copy">
+            <span class="resource-aspect-label">Oefenroutes</span>
+            <h3>Kies wat je wilt trainen</h3>
+            <p>Elke route oefent een andere kant van economisch werken: redeneren, rekenen of grafieken lezen.</p>
+          </div>
+          <div class="resource-grid learning-aspect-grid">${oefenenAspectRoutes.join("\n")}
+          </div>
+        </div>` : "";
+  const begeleidBlock = begeleidHTML ? `
+        <div class="guided-practice-block">
+          <div class="learning-aspect-copy">
+            <span class="resource-aspect-label">Extra steun</span>
+            <h3>Stap voor stap oefenen</h3>
+            <p>Gebruik deze route als je eerst met meer begeleiding door de opgaven wilt.</p>
+          </div>
+          <div class="resource-grid">${begeleidHTML}
+          </div>
+        </div>` : "";
+  const oefenenCards = [aspectBlock, begeleidBlock].filter(Boolean).join("\n");
 
   const taskCards = [
     exercisePairCard(files.oefenen.basis,      ICONS.star0, "Basisopgaven",       "Standaard opgaven"),
@@ -1076,7 +1153,7 @@ function renderParagraafPage(paragraaf, files, _resolvedMap) {
 
   const sections = [];
   if (hasV) sections.push({ id: "voorbereiden", num: 1, title: "Voorbereiden", hint: "Check wat je al weet en wat je nog nodig hebt", body: voorbereidenCards, accent: SECTION_ACCENT.voorbereiden });
-  if (hasO) sections.push({ id: "oefenen",      num: 2, title: "Oefenen",      hint: "Kies een interactieve oefening",               body: oefenenCards,      accent: SECTION_ACCENT.oefenen });
+  if (hasO) sections.push({ id: "oefenen",      num: 2, title: "Oefenen",      hint: "Kies wat je wilt trainen",                     body: oefenenCards,      accent: SECTION_ACCENT.oefenen, layout: "custom" });
   if (hasL) sections.push({ id: "leren",        num: 3, title: "Leren",        hint: "De les doorwerken: presentatie, uitleg en video’s", body: lerenCards,        accent: SECTION_ACCENT.leren });
   if (hasT) sections.push({ id: "opgaven",      num: 4, title: "Opgaven",      hint: "Oefen op je eigen niveau",                     body: taskCards,         accent: SECTION_ACCENT.opgaven });
   if (hasB) sections.push({ id: "lesboek",      num: sections.length + 1, title: "Lesboek", hint: "De originele teksten uit het lesboek", body: lesboekCards, accent: SECTION_ACCENT.lesboek });
@@ -1089,7 +1166,10 @@ function renderParagraafPage(paragraaf, files, _resolvedMap) {
         </span>
       </a>`).join("\n");
 
-  const sectionsHTML = sections.map(s => `
+  const sectionsHTML = sections.map(s => {
+    const bodyHTML = s.layout === "custom" ? s.body : `<div class="resource-grid">${s.body}
+        </div>`;
+    return `
       <section class="section" id="${s.id}">
         <div class="section-header border-${s.accent}">
           <span class="section-num bg-${s.accent}">${s.num}</span>
@@ -1098,9 +1178,9 @@ function renderParagraafPage(paragraaf, files, _resolvedMap) {
             <span class="section-badge badge-${s.accent}">${s.hint}</span>
           </div>
         </div>
-        <div class="resource-grid">${s.body}
-        </div>
-      </section>`).join("\n");
+        ${bodyHTML}
+      </section>`;
+  }).join("\n");
 
   const chapterBackHref = "../index.html";
   const bookBackHref = "../../index.html";
@@ -1158,6 +1238,63 @@ function renderParagraafPage(paragraaf, files, _resolvedMap) {
   .resource-card-body p {
     font-size: 0.82rem; color: var(--ink-soft);
     line-height: 1.45; margin: 0 0 0.45rem;
+  }
+  .learning-aspect-block,
+  .guided-practice-block {
+    display: grid;
+    gap: 0.85rem;
+  }
+  .guided-practice-block {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+  }
+  .learning-aspect-copy {
+    max-width: 70ch;
+  }
+  .learning-aspect-copy h3 {
+    margin: 0.1rem 0 0.25rem;
+    font-size: 1rem;
+    color: var(--ink);
+  }
+  .learning-aspect-copy p {
+    margin: 0;
+    color: var(--ink-soft);
+    font-size: 0.84rem;
+    line-height: 1.45;
+  }
+  .resource-aspect-label {
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    margin: 0 0 0.35rem;
+    font-family: var(--mono);
+    font-size: 0.67rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--ink-soft);
+  }
+  .resource-card-aspect.aspect-economisch {
+    border-left-color: var(--economisch);
+  }
+  .resource-card-aspect.aspect-wiskunde {
+    border-left-color: var(--wiskundig);
+  }
+  .resource-card-aspect.aspect-grafisch {
+    border-left-color: var(--grafisch);
+  }
+  .resource-card-aspect.aspect-economisch .resource-card-icon {
+    color: var(--economisch);
+    background: var(--economisch-tint);
+  }
+  .resource-card-aspect.aspect-wiskunde .resource-card-icon {
+    color: var(--wiskundig);
+    background: var(--wiskundig-tint);
+  }
+  .resource-card-aspect.aspect-grafisch .resource-card-icon {
+    color: var(--grafisch);
+    background: var(--grafisch-tint);
   }
   .resource-card-action {
     display: inline-block;

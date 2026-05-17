@@ -68,6 +68,9 @@ describe('paragraph landing page student-web links', () => {
         writeFile(path.join(paragraph, `${prefix} ${DASH} samenvatting.docx`));
         writeFile(path.join(paragraph, `${prefix} ${DASH} presentatie.html`));
         writeFile(path.join(paragraph, `${prefix} ${DASH} presentatie.pptx`));
+        writeFile(path.join(paragraph, `${prefix} ${DASH} redeneer-spel.html`));
+        writeFile(path.join(paragraph, `${prefix} ${DASH} wiskundevaardigheden.html`));
+        writeFile(path.join(paragraph, `${prefix} ${DASH} grafiekenspel.html`));
         writeFile(path.join(paragraph, `${prefix} ${DASH} begeleide inoefening.html`));
         writeFile(path.join(paragraph, `${prefix} ${DASH} begeleide inoefening ${DASH} vragen.docx`));
         writeFile(path.join(paragraph, `${prefix} ${DASH} begeleide inoefening ${DASH} antwoorden.docx`));
@@ -97,6 +100,18 @@ describe('paragraph landing page student-web links', () => {
         expect(html).not.toContain('Antwoorden (docx)');
         expect(html).toContain('Download als PowerPoint');
         expect(html).toContain('begeleide%20inoefening.html');
+        expect(html).toContain('Kies wat je wilt trainen');
+        expect(html).toContain('data-learning-aspect="reasoning"');
+        expect(html).toContain('data-learning-aspect="calculation"');
+        expect(html).toContain('data-learning-aspect="graphical"');
+        expect(html).toContain('Redeneren');
+        expect(html).toContain('Rekenen');
+        expect(html).toContain('Grafieken');
+        expect(html).toContain('Redeneer-spel');
+        expect(html).toContain('Wiskunde vaardigheden');
+        expect(html).toContain('Grafiekenspel');
+        expect(html).toContain('Stap voor stap oefenen');
+        expect(html).not.toMatch(/\b(PV|A\d{2}|B\d{2}|adaptief|diagnostisch|diagnose|mastery|sequencing|summatief|AI)\b/i);
 
         const bookHtml = fs.readFileSync(path.join(tmpDir, 'index.html'), 'utf8');
         const chapterHtml = fs.readFileSync(path.join(tmpDir, '1.1 Hoofdstuk Test', 'index.html'), 'utf8');
