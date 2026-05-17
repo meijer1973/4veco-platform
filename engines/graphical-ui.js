@@ -44,17 +44,59 @@
     var values = graph.series.map(function (p) { return p.value; });
     var max = Math.max.apply(null, values.concat([1]));
     var min = Math.min.apply(null, values.concat([0]));
-    if (graph.type === "bar") return renderBarChart(graph, max);
-    return renderLineChart(graph, min, max);
+    var layout = getChartLayout();
+    if (graph.type === "bar") return renderBarChart(graph, max, layout);
+    return renderLineChart(graph, min, max, layout);
   }
 
-  function renderBarChart(graph, max) {
-    var width = 720;
-    var height = 360;
-    var left = 72;
-    var bottom = 292;
-    var chartW = 600;
-    var chartH = 220;
+  function getChartLayout() {
+    var compact = false;
+    try {
+      compact = window.matchMedia && window.matchMedia("(max-width: 620px)").matches;
+    } catch (e) {
+      compact = false;
+    }
+    if (compact) {
+      return {
+        width: 440,
+        height: 330,
+        left: 54,
+        bottom: 268,
+        chartW: 330,
+        chartH: 188,
+        titleX: 220,
+        titleY: 30,
+        labelY: 306,
+        yLabelX: 22,
+        yLabelY: 160,
+        barRadius: 5,
+        dotRadius: 6
+      };
+    }
+    return {
+      width: 720,
+      height: 360,
+      left: 72,
+      bottom: 292,
+      chartW: 600,
+      chartH: 220,
+      titleX: 360,
+      titleY: 32,
+      labelY: 326,
+      yLabelX: 26,
+      yLabelY: 176,
+      barRadius: 6,
+      dotRadius: 7
+    };
+  }
+
+  function renderBarChart(graph, max, layout) {
+    var width = layout.width;
+    var height = layout.height;
+    var left = layout.left;
+    var bottom = layout.bottom;
+    var chartW = layout.chartW;
+    var chartH = layout.chartH;
     var slot = chartW / graph.series.length;
     var bars = graph.series.map(function (point, idx) {
       var h = Math.max(8, (point.value / max) * chartH);
@@ -63,30 +105,30 @@
       var bw = slot * 0.56;
       return [
         '<g class="g-bar-item">',
-        '<rect class="g-bar" x="' + x + '" y="' + y + '" width="' + bw + '" height="' + h + '" rx="6"></rect>',
+        '<rect class="g-bar" x="' + x + '" y="' + y + '" width="' + bw + '" height="' + h + '" rx="' + layout.barRadius + '"></rect>',
         '<text class="g-chart-value" x="' + (x + bw / 2) + '" y="' + (y - 10) + '">' + escapeHtml(formatNumber(point.value)) + '</text>',
-        '<text class="g-chart-label" x="' + (x + bw / 2) + '" y="326">' + escapeHtml(point.label) + '</text>',
+        '<text class="g-chart-label" x="' + (x + bw / 2) + '" y="' + layout.labelY + '">' + escapeHtml(point.label) + '</text>',
         '</g>'
       ].join("");
     }).join("");
     return [
       '<svg class="g-chart-svg" viewBox="0 0 ' + width + ' ' + height + '" role="img" aria-label="' + escapeHtml(graph.title) + '">',
-      '<text class="g-chart-title" x="360" y="32">' + escapeHtml(graph.title) + '</text>',
+      '<text class="g-chart-title" x="' + layout.titleX + '" y="' + layout.titleY + '">' + escapeHtml(graph.title) + '</text>',
       '<line class="g-axis" x1="' + left + '" y1="' + bottom + '" x2="' + (left + chartW) + '" y2="' + bottom + '"></line>',
       '<line class="g-axis" x1="' + left + '" y1="' + (bottom - chartH) + '" x2="' + left + '" y2="' + bottom + '"></line>',
-      '<text class="g-axis-label g-y-label" x="26" y="176">' + escapeHtml(graph.unit) + '</text>',
+      '<text class="g-axis-label g-y-label" x="' + layout.yLabelX + '" y="' + layout.yLabelY + '">' + escapeHtml(graph.unit) + '</text>',
       bars,
       '</svg>'
     ].join("");
   }
 
-  function renderLineChart(graph, min, max) {
-    var width = 720;
-    var height = 360;
-    var left = 72;
-    var bottom = 292;
-    var chartW = 600;
-    var chartH = 220;
+  function renderLineChart(graph, min, max, layout) {
+    var width = layout.width;
+    var height = layout.height;
+    var left = layout.left;
+    var bottom = layout.bottom;
+    var chartW = layout.chartW;
+    var chartH = layout.chartH;
     var range = max - min || 1;
     var step = chartW / Math.max(1, graph.series.length - 1);
     var coords = graph.series.map(function (point, idx) {
@@ -98,18 +140,18 @@
     var dots = coords.map(function (c) {
       return [
         '<g class="g-line-point">',
-        '<circle class="g-dot" cx="' + c.x + '" cy="' + c.y + '" r="7"></circle>',
+        '<circle class="g-dot" cx="' + c.x + '" cy="' + c.y + '" r="' + layout.dotRadius + '"></circle>',
         '<text class="g-chart-value" x="' + c.x + '" y="' + (c.y - 14) + '">' + escapeHtml(formatNumber(c.point.value)) + '</text>',
-        '<text class="g-chart-label" x="' + c.x + '" y="326">' + escapeHtml(c.point.label) + '</text>',
+        '<text class="g-chart-label" x="' + c.x + '" y="' + layout.labelY + '">' + escapeHtml(c.point.label) + '</text>',
         '</g>'
       ].join("");
     }).join("");
     return [
       '<svg class="g-chart-svg" viewBox="0 0 ' + width + ' ' + height + '" role="img" aria-label="' + escapeHtml(graph.title) + '">',
-      '<text class="g-chart-title" x="360" y="32">' + escapeHtml(graph.title) + '</text>',
+      '<text class="g-chart-title" x="' + layout.titleX + '" y="' + layout.titleY + '">' + escapeHtml(graph.title) + '</text>',
       '<line class="g-axis" x1="' + left + '" y1="' + bottom + '" x2="' + (left + chartW) + '" y2="' + bottom + '"></line>',
       '<line class="g-axis" x1="' + left + '" y1="' + (bottom - chartH) + '" x2="' + left + '" y2="' + bottom + '"></line>',
-      '<text class="g-axis-label g-y-label" x="26" y="176">' + escapeHtml(graph.unit) + '</text>',
+      '<text class="g-axis-label g-y-label" x="' + layout.yLabelX + '" y="' + layout.yLabelY + '">' + escapeHtml(graph.unit) + '</text>',
       '<polyline class="g-line" points="' + poly + '"></polyline>',
       dots,
       '</svg>'
