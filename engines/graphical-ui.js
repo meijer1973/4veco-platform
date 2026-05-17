@@ -158,13 +158,34 @@
     ].join("");
   }
 
+  function renderChecklist(challenge) {
+    var steps = challenge.expected_answer.kind === "percentage_change"
+      ? [
+        "Kies de oude waarde.",
+        "Kies de nieuwe waarde.",
+        "Bereken verschil = nieuw - oud.",
+        "Deel door oud en vermenigvuldig met 100%."
+      ]
+      : [
+        "Lees de titel en de assen.",
+        "Zoek de gevraagde periode of waarde.",
+        "Lees de grafiekwaarde af.",
+        "Vul pas daarna je antwoord in."
+      ];
+    var items = steps.map(function (step) {
+      return '<li>' + escapeHtml(step) + '</li>';
+    }).join("");
+    return '<ol class="g-checklist" aria-label="Aanpak">' + items + '</ol>';
+  }
+
   function renderInputs(challenge) {
     if (challenge.expected_answer.kind === "number") {
       return [
+        renderChecklist(challenge),
         '<form class="g-answer-form" id="g-answer-form">',
         '<label for="g-number-answer">Waarde uit de grafiek</label>',
         '<div class="g-answer-row">',
-        '<input id="g-number-answer" inputmode="decimal" autocomplete="off" placeholder="Bijvoorbeeld ' + escapeHtml(formatNumber(challenge.expected_answer.value)) + '">',
+        '<input id="g-number-answer" inputmode="decimal" autocomplete="off" placeholder="Typ je antwoord">',
         '<span class="g-unit">' + escapeHtml(challenge.expected_answer.unit) + '</span>',
         '<button type="submit" class="g-btn">Controleer</button>',
         '</div>',
@@ -174,15 +195,18 @@
     var options = challenge.graph.series.map(function (point) {
       return '<option value="' + escapeHtml(point.label) + '">' + escapeHtml(point.label) + '</option>';
     }).join("");
+    var oldOptions = '<option value="" disabled selected>Kies oude waarde</option>' + options;
+    var newOptions = '<option value="" disabled selected>Kies nieuwe waarde</option>' + options;
     return [
+      renderChecklist(challenge),
       '<form class="g-answer-form" id="g-answer-form">',
       '<div class="g-select-grid">',
-      '<label>Oude waarde<select id="g-old-label">' + options + '</select></label>',
-      '<label>Nieuwe waarde<select id="g-new-label">' + options + '</select></label>',
+      '<label for="g-old-label">Oude waarde<select id="g-old-label" required>' + oldOptions + '</select></label>',
+      '<label for="g-new-label">Nieuwe waarde<select id="g-new-label" required>' + newOptions + '</select></label>',
       '</div>',
       '<label for="g-percent-answer">Procentuele verandering</label>',
       '<div class="g-answer-row">',
-      '<input id="g-percent-answer" inputmode="decimal" autocomplete="off" placeholder="Bijvoorbeeld ' + escapeHtml(formatNumber(challenge.expected_answer.value)) + '">',
+      '<input id="g-percent-answer" inputmode="decimal" autocomplete="off" placeholder="Typ je percentage">',
       '<span class="g-unit">%</span>',
       '<button type="submit" class="g-btn">Controleer</button>',
       '</div>',
@@ -190,15 +214,46 @@
     ].join("");
   }
 
+  function renderDiagnosticFeedback(result) {
+    if (!result || result.correct) return "";
+    var expected = result.expected || {};
+    var submitted = result.submitted || {};
+    var text = "";
+    if (expected.kind === "percentage_change") {
+      if (!submitted.old_label || !submitted.new_label) {
+        text = "Kies eerst de oude en de nieuwe waarde uit de grafiek.";
+      } else if (submitted.old_label !== expected.old_label || submitted.new_label !== expected.new_label) {
+        if (submitted.old_label !== expected.old_label && submitted.new_label !== expected.new_label) {
+          text = "Je koos niet de gevraagde oude en nieuwe waarde. De vraag vergelijkt " + expected.old_label + " met " + expected.new_label + ".";
+        } else if (submitted.old_label !== expected.old_label) {
+          text = "Je oude waarde klopt nog niet. Begin bij " + expected.old_label + ".";
+        } else {
+          text = "Je nieuwe waarde klopt nog niet. Vergelijk met " + expected.new_label + ".";
+        }
+      } else {
+        text = "Je koos de juiste waarden, maar de berekening klopt nog niet. Gebruik: (nieuw - oud) / oud x 100%.";
+      }
+    } else if (expected.kind === "number") {
+      if (submitted.value == null) {
+        text = "Vul een getal in voordat je controleert.";
+      } else {
+        text = "Zoek de gevraagde periode in de grafiek en neem de waarde over zonder de eenheid.";
+      }
+    }
+    return text ? '<p class="g-feedback-diagnosis">' + escapeHtml(text) + '</p>' : "";
+  }
+
   function renderFeedback(result) {
     if (!result) return "";
     var title = result.correct ? "Goed gelezen" : "Kijk nog eens naar de bron";
+    var diagnosis = renderDiagnosticFeedback(result);
     var steps = result.feedback_steps.map(function (step) {
       return '<li><strong>' + escapeHtml(step.label) + ':</strong> ' + escapeHtml(step.text) + '</li>';
     }).join("");
     return [
       '<section class="g-feedback ' + (result.correct ? 'is-correct' : 'is-wrong') + '" aria-live="polite">',
       '<h3>' + title + '</h3>',
+      diagnosis,
       '<ul>' + steps + '</ul>',
       '<button type="button" class="g-btn g-btn-secondary" id="g-next-btn">' + (engine.index === data.challenges.length - 1 ? 'Bekijk resultaat' : 'Volgende opgave') + '</button>',
       '</section>'
@@ -273,10 +328,7 @@
   function bindForm(challenge) {
     var form = document.getElementById("g-answer-form");
     if (!form) return;
-    if (challenge.expected_answer.kind === "percentage_change") {
-      document.getElementById("g-old-label").value = challenge.graph.series[0].label;
-      document.getElementById("g-new-label").value = challenge.graph.series[challenge.graph.series.length - 1].label;
-    }
+
     form.addEventListener("submit", function (event) {
       event.preventDefault();
       if (challenge.expected_answer.kind === "number") {

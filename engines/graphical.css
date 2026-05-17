@@ -247,6 +247,20 @@ p {
   text-anchor: middle;
 }
 
+.g-checklist {
+  margin: 0 0 18px;
+  padding: 14px 16px 14px 34px;
+  border: 1px solid var(--g-border);
+  border-radius: 8px;
+  background: var(--g-surface-2);
+  color: var(--g-text);
+  line-height: 1.45;
+}
+
+.g-checklist li + li {
+  margin-top: 5px;
+}
+
 .g-answer-form {
   display: grid;
   gap: 14px;
@@ -339,6 +353,13 @@ a:focus-visible {
 .g-feedback h3 {
   margin: 0 0 10px;
   font-size: 1.05rem;
+}
+
+.g-feedback-diagnosis {
+  margin: 0 0 12px;
+  color: var(--g-text);
+  font-weight: 700;
+  line-height: 1.45;
 }
 
 .g-feedback ul {
