@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-27T12:26:14.527Z",
+  "generatedAt": "2026-05-18T15:15:05.931Z",
   "internalOnly": true,
   "teams": [
     {
@@ -9,10 +9,10 @@
       "description": "Owns platform guardrails, validator and deploy health, architecture quality, year and multi-year planning, reporting, and cross-team visibility.",
       "roadmaps": [
         {
-          "label": "Platform roadmap",
-          "path": "knowledge/platform-team-roadmap.md",
+          "label": "Legacy platform roadmap",
+          "path": "knowledge/old/platform-team-roadmap.md",
           "exists": true,
-          "absolutePath": "C:/Projects/4veco/4veco-platform/knowledge/platform-team-roadmap.md",
+          "absolutePath": "C:/Projects/4veco/4veco-platform/knowledge/old/platform-team-roadmap.md",
           "generated": "2026-04-23",
           "updated": "2026-04-27 after splitting research-agent maps/prompts into full-repository and references-only versions",
           "scope": "",
@@ -84,7 +84,7 @@
           "completed": "no",
           "currentState": "Current platform priority; create the non-reference platform issue log by quality category and turn it into the next-period improvement plan.",
           "exitGate": "",
-          "roadmap": "Platform roadmap"
+          "roadmap": "Legacy platform roadmap"
         },
         {
           "sprint": "P1.5",
@@ -92,7 +92,7 @@
           "completed": "no",
           "currentState": "Planned; make routine health checks harder to skip.",
           "exitGate": "",
-          "roadmap": "Platform roadmap"
+          "roadmap": "Legacy platform roadmap"
         },
         {
           "sprint": "0.5",
@@ -100,7 +100,7 @@
           "completed": "yes",
           "currentState": "Signed off for Part A textbook/book production.",
           "exitGate": "",
-          "roadmap": "Platform roadmap"
+          "roadmap": "Legacy platform roadmap"
         },
         {
           "sprint": "P1.1",
@@ -108,7 +108,7 @@
           "completed": "yes",
           "currentState": "`1.1.1` companion path proven end-to-end.",
           "exitGate": "",
-          "roadmap": "Platform roadmap"
+          "roadmap": "Legacy platform roadmap"
         },
         {
           "sprint": "P1.2",
@@ -116,7 +116,7 @@
           "completed": "yes",
           "currentState": "`1.1.2` passed as a technical probe; its test materials were removed for didactic rebuild.",
           "exitGate": "",
-          "roadmap": "Platform roadmap"
+          "roadmap": "Legacy platform roadmap"
         },
         {
           "sprint": "P1.3",
@@ -124,7 +124,7 @@
           "completed": "yes",
           "currentState": "Internal three-team dashboard MVP generates from team roadmap sources and quality-gate issues.",
           "exitGate": "",
-          "roadmap": "Platform roadmap"
+          "roadmap": "Legacy platform roadmap"
         },
         {
           "sprint": "P1.3a",
@@ -132,7 +132,7 @@
           "completed": "yes",
           "currentState": "Reference planning moved to `references/reference-team-roadmap.md`; dashboard now has a dedicated References tab.",
           "exitGate": "",
-          "roadmap": "Platform roadmap"
+          "roadmap": "Legacy platform roadmap"
         },
         {
           "sprint": "P1.3b",
@@ -140,7 +140,7 @@
           "completed": "yes",
           "currentState": "Completed as a references map, then split on 2026-04-27 into full-repository and references-only map/prompt pairs.",
           "exitGate": "",
-          "roadmap": "Platform roadmap"
+          "roadmap": "Legacy platform roadmap"
         }
       ],
       "completedCount": 6,
@@ -160,41 +160,314 @@
           "generated": "2026-04-23",
           "updated": "",
           "scope": "`references/`, `build-scripts/references/`, `build-scripts/reports/`, reference dashboards, and generated reference reports under `reports/`",
-          "summary": "References Team Roadmap Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Scope: references/, build-scripts/references/, build-scripts/reports/, reference dashboards, and generated reference reports under reports/ Adoption Decision The handoff roadmap has been adopted as the main operating roadmap for the references team. No blocking incompatibility was found. The roadmap direction fits the repository: machine-edited references, evidence-first unit growth, JSON-first reports, review gates for pedagogical auth...",
+          "summary": "References Team Roadmap Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Last strategic update: 2026-05-18 Roadmap ID: references-team-roadmap Roadmap version: v2.45-post-l16-foundation-hardening Roadmap status: active Version index: docs/roadmaps/roadmap-version-index.json Scope: references/, build-scripts/references/, build-scripts/reports/, reference dashboards, and generated reference reports under reports/ Sprint Ledger The currently-active sprint sits at the top. Future sprints follow in sequence. Clos...",
           "sprints": [
             {
-              "sprint": "R9.1",
-              "name": "Owned Source Registry",
+              "sprint": "REF-CT0",
+              "name": "Three-Year Prototype Normalisation And MTU Classification",
               "completed": "no",
-              "currentState": "Next. Register owned book/source material as source surfaces so RAG can retrieve from actual lesson and blueprint material without treating exposition as authority.",
+              "currentState": "**ACTIVE / FOUNDATION-HARDENING SPRINT.** Convert `knowledge/three Year blue print.md` into a clean, explicitly non-authoritative, v5-aware planning prototype. Classify candidate units/paragraphs as Year 1 confirmed, Year 1 backfill, Year 2 skeleton, Year 3 skeleton, duplicate/merge/split, parked, or needs evidence. No `references/machine` mutation and no direct curriculum authority.",
               "exitGate": ""
             },
             {
-              "sprint": "R9.2",
-              "name": "Content Graph Projection",
+              "sprint": "REF-CT1",
+              "name": "Year-1 Target Exercise And MTU Coverage Baseline For v5",
               "completed": "no",
-              "currentState": "Planned next after R9.1. Project owned content to the reference graph using projection edges, not evidence edges.",
+              "currentState": "Planned after REF-CT0. Replaces the old broad `Content Track 1` framing. Use active v5, built evidence from `1.1.1` through `1.1.3`, and CT0 categories to produce Year-1 paragraph coverage, MTU gap classification, missing-target exercise status, and candidate review packet before any CLI mutation.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "Content Track 2",
+              "name": "Year-1 Precision And Dual-Coding Audit",
+              "completed": "no",
+              "currentState": "Planned content-track work. Record precision lint and dual-coding status for exercise surfaces where applicable.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "Content Track 3",
+              "name": "Year-2 Skeleton",
+              "completed": "no",
+              "currentState": "Planned after REF-CT0/REF-CT1 framing. Prepare Year-2 skeleton with CvTE-vwo anchor status and `concept_orphan` flags for CP-7; do not treat the rough three-year blueprint as authoritative.",
               "exitGate": ""
             },
             {
               "sprint": "R7.6",
               "name": "RAG Quality Hardening",
               "completed": "no",
-              "currentState": "Planned. Close R7.4 follow-ups, expand retrieval eval coverage, backfill evidence anchors, and improve approved/pending/diagnostic labels.",
-              "exitGate": ""
-            },
-            {
-              "sprint": "R8.1",
-              "name": "QC Issue Model",
-              "completed": "no",
-              "currentState": "Planned, scoped down. Define only the lightweight issue schema needed to expose evidence weakness, stale data, and proof-to-close in retrieval and reports.",
+              "currentState": "Planned. Close R7.4 follow-ups, split target-exercise chunks, expand retrieval eval coverage, backfill evidence anchors, and improve approved/pending/diagnostic labels.",
               "exitGate": ""
             },
             {
               "sprint": "R14.1",
               "name": "Curriculum Versioning",
               "completed": "no",
-              "currentState": "Planned, minimal. Track source/curriculum versions so retrieval does not silently mix syllabus or exam-program versions.",
+              "currentState": "Planned earlier in the sequence. Track active v5, archived v4, the non-authoritative three-year prototype, built lesson outputs, and migrated/not-final target exercises so reports and retrieval do not silently mix incompatible source states.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "Sprint 12",
+              "name": "Exam And Target Exercise Decomposition Backfill",
+              "completed": "no",
+              "currentState": "Planned after schema/overlay work. Backfill exercise metadata for the 349 exam questions and 49 target exercises through protected-source-safe overlays.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "Sprint 13",
+              "name": "Composition Pattern Registry",
+              "completed": "no",
+              "currentState": "Planned. Define reusable exercise-composition patterns for internal authoring support, not automatic student-facing publication.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "Sprint 14",
+              "name": "C-to-B Promotion Workflow",
+              "completed": "no",
+              "currentState": "Planned only after schema audit, owned-source registry, exercise overlays, D04/unit-design status, R7.6, R14.1, and precision lint path are ready.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "Product Gate",
+              "name": "Re-Evaluate R10-R13 Product Surfaces",
+              "completed": "no",
+              "currentState": "Blocked. Diagnostics, adaptive routing, student-facing AI, teacher cockpit deployment, automatic sequencing, mastery, and summative uses remain out of scope until data-quality gates justify them.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "SYNC-1",
+              "name": "Roadmap Reconciliation",
+              "completed": "yes",
+              "currentState": "Completed. Updated the references roadmap to v2.45 post-L1.6 state, updated the roadmap version index, and synchronized lesson/reference sequencing around foundation hardening instead of broad scaling.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "S9a",
+              "name": "D04 CLI-Only Mutation Sprint",
+              "completed": "yes",
+              "currentState": "Completed. Applied the CP-5 D04 decision through `unit-deprecate.js`, deprecated D04 with successor pointers to `A15`, `D06`, `A17`, `D11`, `A16`, `D12`, and `D27`, removed the single active target-exercise D04 citation, recorded mutation/stale-reference logs, regenerated reports/RAG/inventories, and preserved all blocked downstream uses.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "S9",
+              "name": "Unit Design Status And D04 Resolution",
+              "completed": "yes",
+              "currentState": "Completed with `pass_with_conditions`. Added derived `unit-design-status` overlay, validator, JSON/Markdown report, reference-health/RAG labels, CP-5 decision record, dependent-unit audit, human interview, and gate closure; D04 remains promotion-blocked and no protected machine mutation occurred.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "S8",
+              "name": "Misconception Registry MVP",
+              "completed": "yes",
+              "currentState": "Completed. Added the internal-only `references/data/misconceptions/misconception-registry.json`, tightened `misconception.schema.json`, added `check-misconceptions.js`, generated `misconception-registry` JSON/Markdown reports, exposed safe reference-health/RAG labels, and preserved all PV-G4 blocked-use conditions.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "S7",
+              "name": "Skill And Operation Registry MVP",
+              "completed": "yes",
+              "currentState": "Completed with `pass_with_conditions`. Generated `references/data/skill-operation-registry.json`, coexistence reports, and `GATE-CP4-skill-registry-coexistence` closure; `exercise_operations` remain provisional; no machine registry promotion or bulk backfill authorized.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "PV.0",
+              "name": "CP-4 Procedure-Visual Addendum",
+              "completed": "yes",
+              "currentState": "Completed with CP-4. PV templates may reference provisional `exercise_operations` only with explicit provisional status and no operation promotion; no machine registry creation or student-facing PV projection is authorized.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "PV.1",
+              "name": "Procedure-Visual Inventory",
+              "completed": "yes",
+              "currentState": "Completed. Generated `references/data/procedure-visual/inventory.json`, JSON/Markdown reports, and 12 ranked pilot templates spanning flowchart, formula trace, graph-stage, table-trace, and blocked generator/projection cases.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "PV.2",
+              "name": "Procedure-Visual Schema And Validator MVP",
+              "completed": "yes",
+              "currentState": "Completed. Added PV schema files, vocabulary, empty real overlay registries, validator, schema-status reports, and `GATE-PV-G1-schema` technical proof; real pilot templates wait for PV.3 and student-facing projection remains blocked.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "PV.3",
+              "name": "Pilot Procedure-Visual Templates",
+              "completed": "yes",
+              "currentState": "Completed. Added six pilot templates, six visual states, six unit-template links, and `GATE-PV-G2-pilot-content` technical proof; formula trace, graph-stage, table-trace, and flowchart-style coverage are present, while machine promotion and student-facing PV projection remain blocked.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "PV.4",
+              "name": "Procedure/Game Projection Contract",
+              "completed": "yes",
+              "currentState": "Completed. Added optional `formal_step_id` engine support, a procedure-game alignment fixture/report, and `GATE-PV4-procedure-game-contract` technical proof; mapped PV game records are now possible while legacy unmapped games remain valid and publication remains blocked.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "RX.5",
+              "name": "Representation Operation Registry And Reports",
+              "completed": "yes",
+              "currentState": "Completed as report-only bridge. Added representation-operation coverage, graph-skill-tree, and representation-transfer-gap reports; operation records remain provisional, stale/live status differences are explicit, held records stay held, and generator/PV publication blocks remain active.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "PV.5",
+              "name": "Visual Projection MVP",
+              "completed": "yes",
+              "currentState": "Completed. Added reusable report-side render/validation libraries for formula trace, flowchart, table trace, and static graph-stage PV visual states, generated SVG proof artifacts under `reports/`, and preserved publication, dynamic-graph, machine-promotion, and student-facing blocks.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "PV.6",
+              "name": "Coverage Reports And Dashboard Integration",
+              "completed": "yes",
+              "currentState": "Completed. Added `procedure-visual-coverage` reports and reference-health PV summary with diagnostic-only authority flags, surface/game/answer-model coverage, generator support, generator-block status, and blocker reasons; PV publication remains blocked.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "RX.6",
+              "name": "Skill-Tree And Generator Integration",
+              "completed": "yes",
+              "currentState": "Completed. Source and deployed skill-tree bundles now expose 44 generator-backed A-domain units as interactive and 37 missing-generator units as explicit generator-blocked/non-interactive rows; no student-facing skill-tree or PV exposure is authorized for blocked units.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "PV.7",
+              "name": "Machine-Promotion Review Gate",
+              "completed": "yes",
+              "currentState": "Closed as `pass_with_conditions`. No Procedure-Visual records may move to `references/machine` now; PV-G4 has now supplied the lesson-regression prerequisite, but future promotion still requires CLI implementation, validators, mutation logs, and a later human promotion gate.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "PV.8",
+              "name": "Promotion Pipeline Design",
+              "completed": "yes",
+              "currentState": "Completed as design-only. Defined proposed PV promotion plan/promote/rollback CLI contracts, mutation-log schema, validators, rollback expectations, and future unit-template-link promotion gate criteria; no machine promotion or CLI implementation occurred.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "PV-G4",
+              "name": "Lesson Regression Proof",
+              "completed": "yes",
+              "currentState": "Closed as `pass_with_conditions`. Lesson-team evidence records `2/2` proofs and HCS accepted them for the regression gate after freshness reconciliation. No PV machine promotion, student-facing PV projection, diagnostics, adaptive routing, mastery, sequencing, AI, or summative use is authorized. Proof 002 remains bounded A61 pilot evidence only.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "RX.3",
+              "name": "Producer Table And Graph Representation Review",
+              "completed": "yes",
+              "currentState": "Completed as non-mutating review. `GATE-RX3-producer-representation` closed as `pass_with_conditions`; A75/A76/A79 may enter first-lane mutation review; A77/A78 are later graph-lane candidates; A80/A81 and graphical MO=MK remain held.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "RX.3a",
+              "name": "Producer Table/Data First-Lane Mutation Review And CLI Execution",
+              "completed": "yes",
+              "currentState": "Completed. `GATE-RX3a-first-lane-mutation-review` closed as `pass_with_conditions`; `A75`, `A76`, and `A79` were added through `unit-add.js`; `A76` needs `A14`, `A04`, and `A61`; all three remain generator-blocked/non-interactive.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "RX.3b",
+              "name": "Producer TO-TK Graph-Lane Mutation Review And CLI Execution",
+              "completed": "yes",
+              "currentState": "Completed. `GATE-RX3b-producer-graph-lane-review` closed as `pass_with_conditions`; `A77` and `A78` were added through `unit-add.js`; `A78` needs `A63`, `A75`, and `A77`; both remain generator-blocked/non-interactive.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "RX.4",
+              "name": "Elasticity And Market Diagram Representation Review And CLI Execution",
+              "completed": "yes",
+              "currentState": "Completed. `GATE-RX4-elasticity-market-diagram-review` closed as `pass_with_conditions`; `A82`, `A84`, and `A83` were added through `unit-add.js`; `A83` uses the HCS-approved P-Q graph demand-elasticity scope; all three remain generator-blocked/non-interactive.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "S6",
+              "name": "Bronnen Registry MVP",
+              "completed": "yes",
+              "currentState": "Completed. Created the source-document schema/validator, generated `references/data/source-document-registry.json`, and emitted JSON/Markdown registry reports. The registry is a governed `references/data/` overlay, not a hand-maintained `references/machine/` registry.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "RX.2b",
+              "name": "Graphical Foundation Coverage And Mutation",
+              "completed": "yes",
+              "currentState": "Completed. `GATE-RX2b-graphical-foundation` closed as `pass_with_conditions`; `A62`, `A63`, `A64`, `A65`, `A68`, `A69`, and `A73` were added through `unit-add.js`; `A71` remains held/high-risk; all seven new A-units remain generator-blocked/non-interactive until generator implementation and validation.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "GATE-RX2b",
+              "name": "Graphical Foundation Review",
+              "completed": "yes",
+              "currentState": "Closed as `pass_with_conditions`. Authorized CLI-only mutation for the seven-unit graphical foundation lane, held `A71`, preserved ID gaps, and preserved student-facing/adaptive/product-use blocks.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "RX.2",
+              "name": "First-Lane Mutation Review And CLI Execution",
+              "completed": "yes",
+              "currentState": "Completed. `GATE-RX2-first-lane-mutation-review` closed as `pass_with_conditions`; `A61`, `A66`, `A67`, `A70`, `A72`, and `A74` were added through `unit-add.js`; all six remain generator-blocked/non-interactive until generator implementation and validation.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "GATE-RX2",
+              "name": "First-Lane Mutation Review",
+              "completed": "yes",
+              "currentState": "Closed as `pass_with_conditions`. Authorized CLI-only mutation for the six-unit first lane and preserved blocks on deferred candidates, generator exposure, and student-facing/adaptive/product uses.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "R8.1",
+              "name": "QC Issue Model",
+              "completed": "yes",
+              "currentState": "Completed. Created internal-only quality issue schema/log, validator, `reference-quality-issues` report, and reference-health/RAG data hook; QC issues remain diagnostic governance records, not curriculum authority.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "RX.1",
+              "name": "Representation-Operation Inventory",
+              "completed": "yes",
+              "currentState": "Completed through the non-mutating inventory/review-packet stop point. Prepared 29 operation records, 24 provisional candidates, 5 held duplicate/overlap records, and `GATE-RX1-representation-unit-scope`.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "GATE-RX1",
+              "name": "Representation Unit Scope Review",
+              "completed": "yes",
+              "currentState": "Closed as `pass_with_conditions`. RX.2 planning is authorized for the bounded first lane only; direct mutation remains blocked until explicit RX.2 mutation review and CLI-backed execution.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "S4.1",
+              "name": "Exercise Overlay Conditions And Calibration",
+              "completed": "yes",
+              "currentState": "Completed on 2026-04-29. Implemented CP-3 condition artifacts, source-annex gap tracker, scaffolding calibration, graph-spec representation plan, product-boundary warnings, condition validator, and condition reports. No bulk extension or source mutation authorized.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "R9.2",
+              "name": "Content Graph Projection",
+              "completed": "yes",
+              "currentState": "Completed. Created a separate owned-content projection graph with 1,464 typed edges, RAG owned-content chunks, coverage reports, and 10/10 retrieval eval pass state while preserving CP-2 evidence boundaries.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "S4",
+              "name": "Exercise Metadata Overlay MVP",
+              "completed": "yes",
+              "currentState": "Completed on 2026-04-29 with CP-3 status `pass_with_conditions`. Created overlay schema, one Tier A dry-run overlay, one Tier C dry-run overlay, validator, and CP-3 closure. No bulk extension or source mutation authorized.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "R9.1",
+              "name": "Owned Source Registry",
+              "completed": "yes",
+              "currentState": "Completed with `pass_with_conditions`. Registered owned-source surfaces, repaired blueprint refs, prepared CP-2, and authorized R9.2 with projection-edge defaults and evidence-boundary conditions.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "S1",
+              "name": "Schema Audit And Exercise Naming Contract",
+              "completed": "yes",
+              "currentState": "Completed. `GATE-CP1-schema-audit` closed as `pass_with_conditions`; naming contract, role split, scaffolding object, and overlay-first strategy are approved.",
               "exitGate": ""
             },
             {
@@ -286,6 +559,20 @@
               "name": "Blueprint Flag Triage",
               "completed": "yes",
               "currentState": "Completed. Triaged all 84 current raw target-exercise missing-unit flags into a curated backlog: 68 still needed, 4 existing-unit match candidates, 1 duplicate, and 11 deferred.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "R4.4",
+              "name": "Micro-Teaching Unit Quality Packet",
+              "completed": "yes",
+              "currentState": "Completed. Created non-mutating packet for 48 empty-needs units, 44 missing term-link units, 2 unresolved term strings, and 84 blueprint flags; R4.5 requires human review before mutation.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "R4.5",
+              "name": "Apply Reviewed Micro-Unit Corrections",
+              "completed": "yes",
+              "currentState": "Completed. Applied the bounded human-reviewed mutation set through CLI: 2 B-domain terms, 13 dependency edges, 19 micro-units, regenerated reports/RAG surfaces, and preserved held design-review items.",
               "exitGate": ""
             },
             {
@@ -405,18 +692,34 @@
       ],
       "sprints": [
         {
-          "sprint": "R9.1",
-          "name": "Owned Source Registry",
+          "sprint": "REF-CT0",
+          "name": "Three-Year Prototype Normalisation And MTU Classification",
           "completed": "no",
-          "currentState": "Next. Register owned book/source material as source surfaces so RAG can retrieve from actual lesson and blueprint material without treating exposition as authority.",
+          "currentState": "**ACTIVE / FOUNDATION-HARDENING SPRINT.** Convert `knowledge/three Year blue print.md` into a clean, explicitly non-authoritative, v5-aware planning prototype. Classify candidate units/paragraphs as Year 1 confirmed, Year 1 backfill, Year 2 skeleton, Year 3 skeleton, duplicate/merge/split, parked, or needs evidence. No `references/machine` mutation and no direct curriculum authority.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
         {
-          "sprint": "R9.2",
-          "name": "Content Graph Projection",
+          "sprint": "REF-CT1",
+          "name": "Year-1 Target Exercise And MTU Coverage Baseline For v5",
           "completed": "no",
-          "currentState": "Planned next after R9.1. Project owned content to the reference graph using projection edges, not evidence edges.",
+          "currentState": "Planned after REF-CT0. Replaces the old broad `Content Track 1` framing. Use active v5, built evidence from `1.1.1` through `1.1.3`, and CT0 categories to produce Year-1 paragraph coverage, MTU gap classification, missing-target exercise status, and candidate review packet before any CLI mutation.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "Content Track 2",
+          "name": "Year-1 Precision And Dual-Coding Audit",
+          "completed": "no",
+          "currentState": "Planned content-track work. Record precision lint and dual-coding status for exercise surfaces where applicable.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "Content Track 3",
+          "name": "Year-2 Skeleton",
+          "completed": "no",
+          "currentState": "Planned after REF-CT0/REF-CT1 framing. Prepare Year-2 skeleton with CvTE-vwo anchor status and `concept_orphan` flags for CP-7; do not treat the rough three-year blueprint as authoritative.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -424,15 +727,7 @@
           "sprint": "R7.6",
           "name": "RAG Quality Hardening",
           "completed": "no",
-          "currentState": "Planned. Close R7.4 follow-ups, expand retrieval eval coverage, backfill evidence anchors, and improve approved/pending/diagnostic labels.",
-          "exitGate": "",
-          "roadmap": "References roadmap"
-        },
-        {
-          "sprint": "R8.1",
-          "name": "QC Issue Model",
-          "completed": "no",
-          "currentState": "Planned, scoped down. Define only the lightweight issue schema needed to expose evidence weakness, stale data, and proof-to-close in retrieval and reports.",
+          "currentState": "Planned. Close R7.4 follow-ups, split target-exercise chunks, expand retrieval eval coverage, backfill evidence anchors, and improve approved/pending/diagnostic labels.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -440,7 +735,311 @@
           "sprint": "R14.1",
           "name": "Curriculum Versioning",
           "completed": "no",
-          "currentState": "Planned, minimal. Track source/curriculum versions so retrieval does not silently mix syllabus or exam-program versions.",
+          "currentState": "Planned earlier in the sequence. Track active v5, archived v4, the non-authoritative three-year prototype, built lesson outputs, and migrated/not-final target exercises so reports and retrieval do not silently mix incompatible source states.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "Sprint 12",
+          "name": "Exam And Target Exercise Decomposition Backfill",
+          "completed": "no",
+          "currentState": "Planned after schema/overlay work. Backfill exercise metadata for the 349 exam questions and 49 target exercises through protected-source-safe overlays.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "Sprint 13",
+          "name": "Composition Pattern Registry",
+          "completed": "no",
+          "currentState": "Planned. Define reusable exercise-composition patterns for internal authoring support, not automatic student-facing publication.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "Sprint 14",
+          "name": "C-to-B Promotion Workflow",
+          "completed": "no",
+          "currentState": "Planned only after schema audit, owned-source registry, exercise overlays, D04/unit-design status, R7.6, R14.1, and precision lint path are ready.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "Product Gate",
+          "name": "Re-Evaluate R10-R13 Product Surfaces",
+          "completed": "no",
+          "currentState": "Blocked. Diagnostics, adaptive routing, student-facing AI, teacher cockpit deployment, automatic sequencing, mastery, and summative uses remain out of scope until data-quality gates justify them.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "SYNC-1",
+          "name": "Roadmap Reconciliation",
+          "completed": "yes",
+          "currentState": "Completed. Updated the references roadmap to v2.45 post-L1.6 state, updated the roadmap version index, and synchronized lesson/reference sequencing around foundation hardening instead of broad scaling.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "S9a",
+          "name": "D04 CLI-Only Mutation Sprint",
+          "completed": "yes",
+          "currentState": "Completed. Applied the CP-5 D04 decision through `unit-deprecate.js`, deprecated D04 with successor pointers to `A15`, `D06`, `A17`, `D11`, `A16`, `D12`, and `D27`, removed the single active target-exercise D04 citation, recorded mutation/stale-reference logs, regenerated reports/RAG/inventories, and preserved all blocked downstream uses.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "S9",
+          "name": "Unit Design Status And D04 Resolution",
+          "completed": "yes",
+          "currentState": "Completed with `pass_with_conditions`. Added derived `unit-design-status` overlay, validator, JSON/Markdown report, reference-health/RAG labels, CP-5 decision record, dependent-unit audit, human interview, and gate closure; D04 remains promotion-blocked and no protected machine mutation occurred.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "S8",
+          "name": "Misconception Registry MVP",
+          "completed": "yes",
+          "currentState": "Completed. Added the internal-only `references/data/misconceptions/misconception-registry.json`, tightened `misconception.schema.json`, added `check-misconceptions.js`, generated `misconception-registry` JSON/Markdown reports, exposed safe reference-health/RAG labels, and preserved all PV-G4 blocked-use conditions.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "S7",
+          "name": "Skill And Operation Registry MVP",
+          "completed": "yes",
+          "currentState": "Completed with `pass_with_conditions`. Generated `references/data/skill-operation-registry.json`, coexistence reports, and `GATE-CP4-skill-registry-coexistence` closure; `exercise_operations` remain provisional; no machine registry promotion or bulk backfill authorized.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "PV.0",
+          "name": "CP-4 Procedure-Visual Addendum",
+          "completed": "yes",
+          "currentState": "Completed with CP-4. PV templates may reference provisional `exercise_operations` only with explicit provisional status and no operation promotion; no machine registry creation or student-facing PV projection is authorized.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "PV.1",
+          "name": "Procedure-Visual Inventory",
+          "completed": "yes",
+          "currentState": "Completed. Generated `references/data/procedure-visual/inventory.json`, JSON/Markdown reports, and 12 ranked pilot templates spanning flowchart, formula trace, graph-stage, table-trace, and blocked generator/projection cases.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "PV.2",
+          "name": "Procedure-Visual Schema And Validator MVP",
+          "completed": "yes",
+          "currentState": "Completed. Added PV schema files, vocabulary, empty real overlay registries, validator, schema-status reports, and `GATE-PV-G1-schema` technical proof; real pilot templates wait for PV.3 and student-facing projection remains blocked.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "PV.3",
+          "name": "Pilot Procedure-Visual Templates",
+          "completed": "yes",
+          "currentState": "Completed. Added six pilot templates, six visual states, six unit-template links, and `GATE-PV-G2-pilot-content` technical proof; formula trace, graph-stage, table-trace, and flowchart-style coverage are present, while machine promotion and student-facing PV projection remain blocked.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "PV.4",
+          "name": "Procedure/Game Projection Contract",
+          "completed": "yes",
+          "currentState": "Completed. Added optional `formal_step_id` engine support, a procedure-game alignment fixture/report, and `GATE-PV4-procedure-game-contract` technical proof; mapped PV game records are now possible while legacy unmapped games remain valid and publication remains blocked.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "RX.5",
+          "name": "Representation Operation Registry And Reports",
+          "completed": "yes",
+          "currentState": "Completed as report-only bridge. Added representation-operation coverage, graph-skill-tree, and representation-transfer-gap reports; operation records remain provisional, stale/live status differences are explicit, held records stay held, and generator/PV publication blocks remain active.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "PV.5",
+          "name": "Visual Projection MVP",
+          "completed": "yes",
+          "currentState": "Completed. Added reusable report-side render/validation libraries for formula trace, flowchart, table trace, and static graph-stage PV visual states, generated SVG proof artifacts under `reports/`, and preserved publication, dynamic-graph, machine-promotion, and student-facing blocks.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "PV.6",
+          "name": "Coverage Reports And Dashboard Integration",
+          "completed": "yes",
+          "currentState": "Completed. Added `procedure-visual-coverage` reports and reference-health PV summary with diagnostic-only authority flags, surface/game/answer-model coverage, generator support, generator-block status, and blocker reasons; PV publication remains blocked.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "RX.6",
+          "name": "Skill-Tree And Generator Integration",
+          "completed": "yes",
+          "currentState": "Completed. Source and deployed skill-tree bundles now expose 44 generator-backed A-domain units as interactive and 37 missing-generator units as explicit generator-blocked/non-interactive rows; no student-facing skill-tree or PV exposure is authorized for blocked units.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "PV.7",
+          "name": "Machine-Promotion Review Gate",
+          "completed": "yes",
+          "currentState": "Closed as `pass_with_conditions`. No Procedure-Visual records may move to `references/machine` now; PV-G4 has now supplied the lesson-regression prerequisite, but future promotion still requires CLI implementation, validators, mutation logs, and a later human promotion gate.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "PV.8",
+          "name": "Promotion Pipeline Design",
+          "completed": "yes",
+          "currentState": "Completed as design-only. Defined proposed PV promotion plan/promote/rollback CLI contracts, mutation-log schema, validators, rollback expectations, and future unit-template-link promotion gate criteria; no machine promotion or CLI implementation occurred.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "PV-G4",
+          "name": "Lesson Regression Proof",
+          "completed": "yes",
+          "currentState": "Closed as `pass_with_conditions`. Lesson-team evidence records `2/2` proofs and HCS accepted them for the regression gate after freshness reconciliation. No PV machine promotion, student-facing PV projection, diagnostics, adaptive routing, mastery, sequencing, AI, or summative use is authorized. Proof 002 remains bounded A61 pilot evidence only.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "RX.3",
+          "name": "Producer Table And Graph Representation Review",
+          "completed": "yes",
+          "currentState": "Completed as non-mutating review. `GATE-RX3-producer-representation` closed as `pass_with_conditions`; A75/A76/A79 may enter first-lane mutation review; A77/A78 are later graph-lane candidates; A80/A81 and graphical MO=MK remain held.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "RX.3a",
+          "name": "Producer Table/Data First-Lane Mutation Review And CLI Execution",
+          "completed": "yes",
+          "currentState": "Completed. `GATE-RX3a-first-lane-mutation-review` closed as `pass_with_conditions`; `A75`, `A76`, and `A79` were added through `unit-add.js`; `A76` needs `A14`, `A04`, and `A61`; all three remain generator-blocked/non-interactive.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "RX.3b",
+          "name": "Producer TO-TK Graph-Lane Mutation Review And CLI Execution",
+          "completed": "yes",
+          "currentState": "Completed. `GATE-RX3b-producer-graph-lane-review` closed as `pass_with_conditions`; `A77` and `A78` were added through `unit-add.js`; `A78` needs `A63`, `A75`, and `A77`; both remain generator-blocked/non-interactive.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "RX.4",
+          "name": "Elasticity And Market Diagram Representation Review And CLI Execution",
+          "completed": "yes",
+          "currentState": "Completed. `GATE-RX4-elasticity-market-diagram-review` closed as `pass_with_conditions`; `A82`, `A84`, and `A83` were added through `unit-add.js`; `A83` uses the HCS-approved P-Q graph demand-elasticity scope; all three remain generator-blocked/non-interactive.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "S6",
+          "name": "Bronnen Registry MVP",
+          "completed": "yes",
+          "currentState": "Completed. Created the source-document schema/validator, generated `references/data/source-document-registry.json`, and emitted JSON/Markdown registry reports. The registry is a governed `references/data/` overlay, not a hand-maintained `references/machine/` registry.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "RX.2b",
+          "name": "Graphical Foundation Coverage And Mutation",
+          "completed": "yes",
+          "currentState": "Completed. `GATE-RX2b-graphical-foundation` closed as `pass_with_conditions`; `A62`, `A63`, `A64`, `A65`, `A68`, `A69`, and `A73` were added through `unit-add.js`; `A71` remains held/high-risk; all seven new A-units remain generator-blocked/non-interactive until generator implementation and validation.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "GATE-RX2b",
+          "name": "Graphical Foundation Review",
+          "completed": "yes",
+          "currentState": "Closed as `pass_with_conditions`. Authorized CLI-only mutation for the seven-unit graphical foundation lane, held `A71`, preserved ID gaps, and preserved student-facing/adaptive/product-use blocks.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "RX.2",
+          "name": "First-Lane Mutation Review And CLI Execution",
+          "completed": "yes",
+          "currentState": "Completed. `GATE-RX2-first-lane-mutation-review` closed as `pass_with_conditions`; `A61`, `A66`, `A67`, `A70`, `A72`, and `A74` were added through `unit-add.js`; all six remain generator-blocked/non-interactive until generator implementation and validation.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "GATE-RX2",
+          "name": "First-Lane Mutation Review",
+          "completed": "yes",
+          "currentState": "Closed as `pass_with_conditions`. Authorized CLI-only mutation for the six-unit first lane and preserved blocks on deferred candidates, generator exposure, and student-facing/adaptive/product uses.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "R8.1",
+          "name": "QC Issue Model",
+          "completed": "yes",
+          "currentState": "Completed. Created internal-only quality issue schema/log, validator, `reference-quality-issues` report, and reference-health/RAG data hook; QC issues remain diagnostic governance records, not curriculum authority.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "RX.1",
+          "name": "Representation-Operation Inventory",
+          "completed": "yes",
+          "currentState": "Completed through the non-mutating inventory/review-packet stop point. Prepared 29 operation records, 24 provisional candidates, 5 held duplicate/overlap records, and `GATE-RX1-representation-unit-scope`.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "GATE-RX1",
+          "name": "Representation Unit Scope Review",
+          "completed": "yes",
+          "currentState": "Closed as `pass_with_conditions`. RX.2 planning is authorized for the bounded first lane only; direct mutation remains blocked until explicit RX.2 mutation review and CLI-backed execution.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "S4.1",
+          "name": "Exercise Overlay Conditions And Calibration",
+          "completed": "yes",
+          "currentState": "Completed on 2026-04-29. Implemented CP-3 condition artifacts, source-annex gap tracker, scaffolding calibration, graph-spec representation plan, product-boundary warnings, condition validator, and condition reports. No bulk extension or source mutation authorized.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "R9.2",
+          "name": "Content Graph Projection",
+          "completed": "yes",
+          "currentState": "Completed. Created a separate owned-content projection graph with 1,464 typed edges, RAG owned-content chunks, coverage reports, and 10/10 retrieval eval pass state while preserving CP-2 evidence boundaries.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "S4",
+          "name": "Exercise Metadata Overlay MVP",
+          "completed": "yes",
+          "currentState": "Completed on 2026-04-29 with CP-3 status `pass_with_conditions`. Created overlay schema, one Tier A dry-run overlay, one Tier C dry-run overlay, validator, and CP-3 closure. No bulk extension or source mutation authorized.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "R9.1",
+          "name": "Owned Source Registry",
+          "completed": "yes",
+          "currentState": "Completed with `pass_with_conditions`. Registered owned-source surfaces, repaired blueprint refs, prepared CP-2, and authorized R9.2 with projection-edge defaults and evidence-boundary conditions.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "S1",
+          "name": "Schema Audit And Exercise Naming Contract",
+          "completed": "yes",
+          "currentState": "Completed. `GATE-CP1-schema-audit` closed as `pass_with_conditions`; naming contract, role split, scaffolding object, and overlay-first strategy are approved.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -545,6 +1144,22 @@
           "name": "Blueprint Flag Triage",
           "completed": "yes",
           "currentState": "Completed. Triaged all 84 current raw target-exercise missing-unit flags into a curated backlog: 68 still needed, 4 existing-unit match candidates, 1 duplicate, and 11 deferred.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "R4.4",
+          "name": "Micro-Teaching Unit Quality Packet",
+          "completed": "yes",
+          "currentState": "Completed. Created non-mutating packet for 48 empty-needs units, 44 missing term-link units, 2 unresolved term strings, and 84 blueprint flags; R4.5 requires human review before mutation.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "R4.5",
+          "name": "Apply Reviewed Micro-Unit Corrections",
+          "completed": "yes",
+          "currentState": "Completed. Applied the bounded human-reviewed mutation set through CLI: 2 B-domain terms, 13 dependency edges, 19 micro-units, regenerated reports/RAG surfaces, and preserved held design-review items.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -677,8 +1292,8 @@
           "roadmap": "References roadmap"
         }
       ],
-      "completedCount": 29,
-      "openCount": 5
+      "completedCount": 65,
+      "openCount": 10
     },
     {
       "id": "lessen",
@@ -697,87 +1312,248 @@
           "summary": "Sprint 0.5 is signed off for Part A textbook/book production.",
           "sprints": [
             {
-              "sprint": "L0.5",
-              "name": "Green Gate Handoff",
+              "sprint": "SYNC-1",
+              "name": "Roadmap Reconciliation",
               "completed": "yes",
-              "currentState": "Book 1 Part A and the platform/book health routine are green.",
+              "currentState": "**CLOSED PASS.** Log: `SYNC-1-roadmap-reconciliation-log.md`. Joint roadmap sync after L1.5P/L1.5Q/L1.6. Lesson and reference roadmaps now agree that broad lesson scaling is not approved yet. Coming-period focus is foundation hardening: reconcile roadmap state, normalize the rough three-year blueprint as a non-authoritative planning prototype, classify MTU/target-exercise gaps, triage lesson-side flags, and decide controlled production only through a later Scale Gate.",
               "exitGate": ""
             },
             {
-              "sprint": "L1.1",
-              "name": "First Companion Technical Pilot",
-              "completed": "yes",
-              "currentState": "`1.1.1` passes the current complete technical gate.",
-              "exitGate": ""
-            },
-            {
-              "sprint": "L1.2",
-              "name": "Second Companion Technical Probe",
-              "completed": "yes",
-              "currentState": "`1.1.2` proved the technical pattern can repeat; probe materials were removed for didactic rebuild.",
-              "exitGate": ""
-            },
-            {
-              "sprint": "L1.3A",
-              "name": "Basic HTML Layout And Front-End Usability",
-              "completed": "yes",
-              "currentState": "Closed 2026-04-25. `1.1.1` companions on shared platform layout/theme; converters and landing-page generator landed in platform; browser smoke + technical gates green.",
-              "exitGate": ""
-            },
-            {
-              "sprint": "L1.3B",
-              "name": "Companion SVGs And Light/Dark Visual Variants",
-              "completed": "yes",
-              "currentState": "Closed 2026-04-25. `lib-visual-surfaces.js` is the shared SURFACES/THEMES module; light/dark symmetry validator enforced; news visual on the variant system; game-visuals decision recorded per paragraph.",
-              "exitGate": ""
-            },
-            {
-              "sprint": "L1.3C",
-              "name": "PowerPoint Presentation Improvement",
-              "completed": "yes",
-              "currentState": "Closed 2026-04-25. `1.1.1` PPTX regenerated with adapted slide visuals; teacher-supporting slide rules + read-through QA gate documented in `econ-pptx-templates`; LibreOffice roundtrip clean.",
-              "exitGate": ""
-            },
-            {
-              "sprint": "L1.4",
-              "name": "First Pipeline Regression Paragraph",
+              "sprint": "L1.7A",
+              "name": "Scaling Readiness And Flag Triage Gate",
               "completed": "no",
-              "currentState": "Active 2026-04-25. Building `1.1.2 Percentages en indexcijfers` end-to-end against the L1.3A-C platform state to prove the pipeline still works on fresh content.",
+              "currentState": "**NEXT / FOUNDATION-HARDENING DECISION SPRINT.** Replaces the old `L1.7 Post-Layout Scaling Decision` framing. Do not treat L1.6 as broad-scaling approval. Build a readiness matrix for Part A, landing pages, procedure contracts, presentation-v2, begeleide inoefening, graphical game, inert adaptive seam, target exercises, and PV/A61 boundaries. Classify flags as fix-now / carry-forward / defer. Expected decision: controlled next-step production may continue only if gates stay explicit; broad paragraph scaling remains paused until quality gates are cleaner.",
               "exitGate": ""
             },
             {
-              "sprint": "L1.5",
-              "name": "Layout Round 2",
+              "sprint": "L2.0",
+              "name": "Book 1 Flag Burn-down And House-Style Cleanup",
               "completed": "no",
-              "currentState": "Tighten layout/UI based on the L1.3A-C usability review and anything L1.4 surfaced. Platform-owned only.",
+              "currentState": "**FUTURE CLEANUP SPRINT BEFORE BROAD SCALING.** Clean easy visible flags and define the Book 1 student-web house-style baseline from `1.1.1` through `1.1.3`: figure numbering, duplicated worked-example policy, consistent quality-ref status language, operational meaning of PASS WITH FLAGS, and house-style notes for landing, presentation, guided practice, procedure contracts, and graphical MVP limits. No new features.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "Scale Gate 1",
+              "name": "Foundation Hardening Scale Gate",
+              "completed": "no",
+              "currentState": "**FUTURE JOINT DECISION.** After L1.7A, L2.0, REF-CT0/REF-CT1, and minimal curriculum-versioning readiness, decide controlled production versus more reference hardening. No adaptive diagnostics, mastery/sequencing, student-facing AI, summative use, PV projection, or PV machine promotion may be authorized by this gate.",
               "exitGate": ""
             },
             {
               "sprint": "L1.6",
               "name": "Second Pipeline Regression Paragraph",
-              "completed": "no",
-              "currentState": "Build one more Book 1 companion paragraph after L1.5 to confirm the layout changes did not break the pipeline.",
+              "completed": "yes",
+              "currentState": "**CLOSED PASS WITH FLAGS.** Sprint plan: `L1.6-sprint-plan.md`; review packet: `L1.6-human-review-packet.md`; QA: `L1.6-technical-qa-report.md`; review records: `L1.6-student-experience-review.md`, `L1.6-teacher-learning-quality-review.md`, `L1.6-human-review-record.md`, `L1.6-lead-review-summary.md`; closure log: `L1.6-closure-log.md`. Initial human review returned REVISE because the `1.1.3` graphical-game P-Q line chart ordered quantity labels backwards left-to-right, and because one presentation speaker note used meta/internal-code wording. Platform source fixed both issues, regenerated generated lesson output, and `1.1.3-quality-ref.yaml` now records `pass_with_flags`. Focused re-review accepted the correction and closed L1.6 as PASS WITH FLAGS. Green gates: deploy link/data checks, focused graphical/adaptive Jest 30/30, `1.1.3` complete student-web validation, `1.1.3` publisher-print Part A validation, procedure-contract validator 341 checks, Book 1 health 26/26, full platform Jest 510 passed / 8 skipped, presentation-v2 screenshot QA, and landing/game desktop/mobile light/dark screenshot QA. Flags: graphical MVP is still scaffolded; harder graph-reading variants remain later work; `1.1.3` v5 target exercise remains migrated/not final-reviewed; existing Part A flags remain non-blocking; PV-G4 boundaries remain active.",
               "exitGate": ""
             },
             {
-              "sprint": "L1.7",
-              "name": "Post-Layout Scaling Decision",
-              "completed": "no",
-              "currentState": "Decide whether to expand broadly after L1.3A-C + L1.4-L1.6 prove the layout survives two independent paragraph builds.",
+              "sprint": "L1.5Q",
+              "name": "Course Blueprint v5 + Four Test-Week Book Plan",
+              "completed": "yes",
+              "currentState": "**CLOSED PASS WITH FLAGS.** Created the active v5 curriculum-source baseline for the four-book/four-test-week model. Active target-exercise registry now points to v5 with 54 count-bearing records and exact counts 12/12/14/16; v4 registry is archived, v4 blueprint/meta are superseded, v5 owned blueprint/meta exist, v5 validator checks counts, web-only test-prep, placeholder semantics, and blueprint anchors. Phase B upgraded `course_blueprint_v5.md` from scaffold to curriculum-source prose and closed with regenerated owned-source, owned-content, source-document, inventory, and URL-index artifacts. Flags: migrated target exercises and gemengde-opgaven placeholders are not reviewed final; L2.4-TEA remains the later target-exercise distribution audit. Log: `L1.5Q-closure-log.md`.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "L1.5P",
+              "name": "Boek 1 Print-Edition Cut + 2026/27 12-Paragraph Scope",
+              "completed": "yes",
+              "currentState": "**CLOSED PASS AFTER LEAD-REVIEW CORRECTION.** Printed Book 1 is generated through the platform book workflow from a 12-paragraph print manifest: chapters 1.1 and 1.2 plus a composed print chapter 1.3 (`Aanbod en marktevenwicht`). Test preparation is website-only; cost/revenue/marginal-analysis material remains online/parked for later migration. Independent lead review found duplicate opgaven and excluded body/glossary leakage after the first close; corrections are now platform-owned and regenerated. Green gates: strengthened print-scope checker 12/12, `check:book` 26/26, focused print-scope Jest 5/5, full platform Jest 502 passed / 8 skipped, markdown/PDF excluded-term scans clean, PDF generated. Logs: `L1.5P-sprint-plan.md`, `L1.5P-cut-survival-map.md`, `L1.5P-closure-log.md`, `L1.5P-lead-review-record.md`.",
               "exitGate": ""
             },
             {
               "sprint": "L2.1",
               "name": "Book 1 Release Polish",
               "completed": "no",
-              "currentState": "Teacher-facing polish continues under the Book 1 health gate.",
+              "currentState": "Teacher-facing polish continues under the Book 1 health gate after the print scope is stable.",
               "exitGate": ""
             },
             {
               "sprint": "L2.2",
               "name": "Book 2 Part A Textbook Layer",
               "completed": "no",
-              "currentState": "Start Book 2 Part A only under the chapter/paragraph hard gates.",
+              "currentState": "Start Book 2 Part A only after foundation-hardening gates say the v5/MTU/target-exercise path is stable enough. Do not start Book 2 full production merely because L1.5Q made v5 active.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "L2.4-TEA",
+              "name": "Target Exercise Distribution Audit",
+              "completed": "no",
+              "currentState": "**FUTURE QUALITY SPRINT.** Do not execute until the micro-teaching-unit layer and companion-quality instruments are mature enough. Evaluate target exercises across the new book structure using MTU dependencies, teacher-learning-quality review, student-experience review, and built paragraph evidence.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "L-PV0",
+              "name": "PV-G4 Lesson Proof Track Planning",
+              "completed": "yes",
+              "currentState": "**CLOSED PASS.** Operational proof plan added in `L-PV0-proof-track-plan.md`. Current repos were checked first: PV-G4 intake was `0/2`, `shared/procedure/1.1.1.js` still exposed `(unit B02)`, and chapter/book aggregates still carried stale three-step wording. Candidate 1 selected `1.1.1`/B02; candidate 2 selected a bounded A61 table-trace pilot.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "L-PV1",
+              "name": "Procedure Contract Hardening",
+              "completed": "yes",
+              "currentState": "**CLOSED PASS.** Platform now has a lesson procedure-contract registry and `validate-procedure-contracts.js`. The validator checks counts, formal step IDs, order, keywords, surface coverage, stale legacy wording, and student-facing internal-code leakage. Negative Jest fixtures prove wrong order, internal-code leakage, and old three-step language fail.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "L-PV2",
+              "name": "Proof 001 - 1.1.1 B02 Procedure Mapping",
+              "completed": "yes",
+              "currentState": "**CLOSED PASS.** `PVG4-proof-001` prepared for `1.1.1 Schaarste en economisch denken`, mapping the procedure game and answer/surface parity to `choose_by_opportunity_cost_flow`. `shared/procedure/1.1.1.js` is generated by platform source, carries formal step IDs, and no longer exposes `B02` in student-facing description/data. Stale chapter/book/test-prep three-step surfaces were refreshed through existing build scripts.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "L-PV3",
+              "name": "Proof 002 - Fresh PV-Validated Surface",
+              "completed": "yes",
+              "currentState": "**CLOSED PASS WITH HCS CONDITION.** `PVG4-proof-002` prepared from a bounded lesson-owned A61 table-trace pilot surface. It validates `select_table_values_trace` step order and visual anchors without claiming student-facing PV publication. HCS accepted it as proof diversity only; it is not a classroom-ready or student-facing A61 route.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "L-PV4",
+              "name": "PV-G4 Intake Closure Packet",
+              "completed": "yes",
+              "currentState": "**CLOSED / HCS PACKAGE SUBMITTED.** Two lesson-owned proof records exist under `pv-g4-proof-records/`; platform proof intake records `2/2` and the checker passes. HCS review packet was prepared and then reviewed in L-PV5. This package does not authorize PV machine promotion, student-facing PV projection, diagnostics, adaptive use, AI, sequencing, mastery, or summative use.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "L-PV5",
+              "name": "Roadmap Sync After PV-G4",
+              "completed": "yes",
+              "currentState": "**CLOSED PASS WITH CONDITIONS LOGGED.** HCS lead review returned `PASS WITH CONDITIONS`. The evidence-freshness condition was reconciled by regenerating the lesson proof records and platform intake: both now cite lesson commit `52f9237de9e465e7f75483f6feac4e80241e8631` with `lesson_worktree_dirty_at_generation: false`, and the platform intake checker passes. A post-closure report-state cleanup made the intake and lesson HCS packet closure-aware. Proof 002 remains a bounded, non-student-facing A61 pilot only. Log: `L-PV5-roadmap-sync-log.md`.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "L1.5B",
+              "name": "Layout Round 2 - Generator Items",
+              "completed": "yes",
+              "currentState": "**CLOSED PASS.** Platform `cb216ed160a9298f7f4393034b6c1d842a387ff9` shipped generator-owned landing/index polish: domain hooks, stronger book/chapter card hierarchy, availability chips, structured per-card pitfall support, and mobile/dark wrapping fixes. Book 1 landing/index output was regenerated through `deploy.js`. Green gates: landing generator Jest, procedure-contract validator (289 checks), `1.1.1` and `1.1.2` complete student-web validation, Book 1 health 26/26, diff hygiene, and desktop/mobile light/dark screenshot QA. Closure log: `L1.5B-closure-log.md`.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "L1.5G-A",
+              "name": "Graphical Game Scope Cut And Prototype Audit",
+              "completed": "yes",
+              "currentState": "**CLOSED PASS.** Split the oversized L1.5G into L1.5G-A through L1.5G-E after checking `knowledge/grafiekmeester_representatie_arena.html`. GrafiekMeester is an 87 KB standalone product prototype with UI, state, XP, skill tree, badges, localStorage progress, and broad graph domains, so it is a design reference rather than a direct port. MVP cut: bar/line graph reading plus old/new value selection before percentage change; technical target `1.1.2` or sandbox, fresh production proof in L1.6/`1.1.3`. Artifacts: `L1.5G-A-graphical-game-scope-plan.md`, `L1.5G-A-prototype-extraction-matrix.md`, `L1.5G-A-mvp-data-model-sketch.md`.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "L1.5G-B",
+              "name": "Adaptive Input Seam Contract",
+              "completed": "yes",
+              "currentState": "**CLOSED PASS.** Platform `9014a50eb85ccbd48c0770bf677b36d75455aa48` added an inert `adaptive-seam.js` helper with localStorage key `4veco.adaptivePayload.v1`, wired quiz/newsdetective/reasoning/skilltree/procedure engines to read and store the normalized payload without using it for gameplay, added focused seam tests, updated shell builders and deploy copy list, and regenerated Book 1 game shells through `deploy.js`. Green gates: focused seam Jest 8/8, deploy link/data checks, procedure-contract validator 289 checks, `1.1.1` + `1.1.2` complete student-web validation, Book 1 health 26/26, full platform Jest 488 passed / 7 skipped. No advisor, diagnostics, adaptive routing, mastery, sequencing, AI, summative use, PV projection, or PV machine promotion. Closure log: `L1.5G-B-closure-log.md`.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "L1.5G-C",
+              "name": "Graphical Game MVP Engine",
+              "completed": "yes",
+              "currentState": "**CLOSED PASS.** Platform `042d7aea4f4cfbe5cd026a3a29cbb57891f795be` added the sixth game as a narrow graphical MVP: engine/UI/CSS, shell generator, data builder, tests, deploy wiring, landing-card detection, and explicit `1.1.2` pilot data. Generated output was rebuilt through `deploy.js`: `shared/graphical/1.1.2.js`, shared graphical engine files, `1.1.2 ... – grafiekenspel.html`, and the `1.1.2` landing page. Green gates: focused graphical/adaptive Jest 20/20, deploy link/data checks, `1.1.2` complete student-web validation, procedure-contract validator 289 checks, Book 1 health 26/26, platform Jest 494 passed / 8 skipped, desktop/mobile Chrome screenshot smoke. No PV projection, adaptive behavior, diagnostics, mastery, sequencing, AI, or summative use. Closure log: `L1.5G-C-closure-log.md`.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "L1.5G-D",
+              "name": "Three-Aspect Game Routing",
+              "completed": "yes",
+              "currentState": "**CLOSED PASS.** Platform `84ed88e78791203db779a4daecbc02589c99ed1d` added a generated three-aspect game routing layer to paragraph landing pages: `Redeneren`, `Rekenen`, and `Grafieken`, with stable `data-learning-aspect` metadata and student-facing copy. `Begeleide inoefening` is now visually separated as `Extra steun`, not treated as a fourth aspect. Generated output was rebuilt through `deploy.js` for chapter 1.1 landing pages. Green gates: landing generator Jest, deploy link/data checks, `1.1.1` + `1.1.2` complete student-web validation, procedure-contract validator 289 checks, Book 1 health 26/26, platform Jest 494 passed / 8 skipped, desktop/mobile Chrome screenshot smoke. No PV projection, adaptive behavior, diagnostics, mastery, sequencing, AI, or summative use. Closure log: `L1.5G-D-closure-log.md`.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "L1.5G-E",
+              "name": "Integration, QA, And Review Gate",
+              "completed": "yes",
+              "currentState": "**CLOSED PASS WITH FLAGS.** Human review first returned REVISE for answer-revealing placeholders, unsafe old/new defaults, missing checklist scaffolding, generic feedback, and quality-ref bookkeeping; focused re-review then returned REVISE because the final challenge skipped feedback and jumped to summary. Platform source fixed both rounds, generated lesson output was rebuilt through `deploy.js`, `1.1.2-quality-ref.yaml` now marks `grafiekenspel: pass_with_flags`, and screenshots confirm neutral placeholders, explicit old/new selectors, checklist, diagnostic feedback, and final-challenge feedback before summary. Green gates: graphical/adaptive Jest 23/23, deploy link/data checks 160/160, `1.1.1` + `1.1.2` complete student-web validation, procedure-contract validator 289 checks, Book 1 health 26/26, platform Jest 497 passed / 8 skipped, blocked-word search, and rendered final-feedback screenshot proof. Closure log: `L1.5G-E-closure-log.md`. Flags: L1.6 must prove the graphical game/adaptive seam on a fresh paragraph; later graphical variants should reduce direct value labels; PV-G4 boundaries remain in force.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "L1.4-PARITY",
+              "name": "1.1.2 Procedure And Quality Cleanup",
+              "completed": "yes",
+              "currentState": "**CLOSED 2026-05-13 PASS WITH FLAGS.** Narrow follow-up after the post-L1.4 review. Canonicalized §1.1.2 to four-step student-facing procedures across Part A, companion pages, presentation-v2, procedure game, paragraph plan, quality-ref, and chapter plan; added an explicit 1-decimal rounding rule; fixed opgave 5c so rounded `16,7%` is not treated as exact; framed CBS April 2026 as a `snelle raming` exercise; corrected presentation-v2 route aria labels and reasoning metadata title discovery; documented skilltree A38/A39 coverage. Added validator parity gate comparing declared procedure step counts in `quality-ref.yaml` with shared procedure data. Green gates: complete student-web validation, publisher-print Part A validation, focused Jest, full `check:book`, deploy link/data checks, and presentation-v2 automated screenshot QA. Plan: `L1.4-PARITY-sprint-plan.md`. Remaining flag: formal teacher/student review still required before final house-style promotion.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "L1.5D-B02",
+              "name": "1.1.1 Cross-Surface Parity + Bookkeeping Fix",
+              "completed": "yes",
+              "currentState": "**CLOSED 2026-05-12 PASS**. Narrow follow-up after the second web-PowerPoint review. Fixed the §1.1.1 Part A / Part B drift to the four-step economisch-denken procedure with nettowaarde, removed student-facing `B02` unit-code labels from generated/student pages, regenerated Part A HTML/PDF + companion DOCX-derived HTML + presentation PPTX/HTML + quiz/YouTube/shared CSS through the platform workflow, fixed `convert_presentatie.py` so the official `presentatie.pptx` is selected instead of local prototype decks, and taught the link checker to ignore `*-prototype.html` baselines as non-navigation artifacts. Completion log: `L1.5D-b02-cross-surface-parity-plan.md`; refreshed Part A review: `1.1.1-review.md`.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "L1.5O",
+              "name": "Output Profile Simplification",
+              "completed": "yes",
+              "currentState": "**CLOSED 2026-05-12 PASS**. Inserted before L1.4 to stop carrying Office documents through the default paragraph build. Platform validator now has explicit profiles: `student-web` (default; 14 web-first Part B files, no DOCX/PDF requirement), `legacy-full` (old 27-file contract), `office` (student-web plus DOCX exports), and `publisher-print` (the three textbook PDFs + `build_pdf.py`). `check-book.js` keeps Part A book health on `publisher-print`; paragraph 1.1.2 should use `--mode complete --profile student-web` unless Office exports are explicitly requested. Evidence: focused Jest 21/21 plus 1.1.1 validation green in `student-web`, `legacy-full`, and `publisher-print`.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "L1.5D",
+              "name": "Authored Content As Web",
+              "completed": "yes",
+              "currentState": "**CLOSED 2026-05-11 PASS WITH FLAGS**. D1 (DOCX-as-web for samenvatting + nieuws) and D2 (PPTX-as-web for presentatie) both shipped. v2 lead review returned FAIL with eight blockers (B1–B8); remediation cycle closed all eight: B1+B2 mobile responsive CSS at 390px (platform `362f0e2`), B7 detect_card_stack x-column filter (platform `6646bec`), B5+B6 validator gates D1 web outputs + BUILD-PARAGRAPH.md 24→27 contract (platform `b90b918`), B4 validate-chapter.js structured verdict parser (platform `e04d160`), B8 PPTX accessibility — 14pt floor across deck + speaker notes + AA contrast tokens (platform `830ebf4`). Selector-presence regression test added (`l1-5d-v2-mobile-fixes.test.js`). v3 lead review returned **PASS WITH FLAGS**: validators 27/27 + 26/26 + 454/0/7 jest + audit 0 sub-14pt + 0 contrast violations all green. Two non-blocking flags remain: long Dutch compound nouns on slide 1's dark-hero body line and nieuws cell-title still wrap with mid-word breaks at 390px (logged as platform follow-up, not reopening the sprint).",
+              "exitGate": ""
+            },
+            {
+              "sprint": "L1.5V",
+              "name": "Companion Quality Polish + Pilot Lock-in for 1.1.1",
+              "completed": "yes",
+              "currentState": "**CLOSED 2026-05-09**. 17 platform commits on `content/1.1.1-companion-quality` + 2 lessen commits on `main`. All 4 hard fails + QA-1 from the original `1.1.1-companion-visual-review.md` resolved; verification sub-agent verdict **PASS WITH FLAGS** (3 non-blocking flags: visual-internal `alt. kosten` shorthand documented as scope decision, Team B reference HTMLs untracked-by-design, optional CSS polish on vaardigheden checklist trailer). Buckets A+B+C+D+E+F all closed. Validator `--mode complete` flips green: `OK Paragraph 1.1.1 PASSED all checks`. Jest 441/0/7 (69 new regression tests vs baseline). Pilot lock-in delivered: `BUILD-PARAGRAPH.md` carries Common pre-conditions section + clean Part A / Part B split, every skill in `skills/` has a `pipeline:` frontmatter label, `validate-paragraph.js` has F2 fixes (split Part A / Part B review gates, structured verdict parser, schema_version 2 awareness), `1.1.1-quality-ref.yaml` migrated to schema_version 2 with `partA:` + `companion:` blocks. L1.4 unblocked.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "L1.4",
+              "name": "First Pipeline Regression Paragraph",
+              "completed": "yes",
+              "currentState": "**CLOSED 2026-05-12 PASS WITH FLAGS.** Built and then polished `1.1.2 Percentages en indexcijfers` through the platform-owned `student-web` profile after L1.5O. Delivered native student-facing HTML companions, source-aligned begeleide inoefening, interactive shared data, skilltree paragraph/chapter/all toggles, shell pages, PPTX + semantic presentation-v2 web deck, companion review, quality-ref refresh, and `_paragraph-plan.md`; no new Word exports were generated. Validation green: `validate-paragraph --mode complete --profile student-web`, `validate-paragraph --mode part-a --profile publisher-print`, local link checker/deploy data tests, focused skilltree Jest, full `check:book`, and browser screenshot QA for index, voorkennis, begeleide inoefening, wiskundevaardigheden, and presentation surfaces in representative light/dark and wide/narrow states. Flag: formal teacher/student review still needs a separate review gate before declaring this the final scaling house style. Sprint plan: `L1.4-sprint-plan.md`.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "L1.5A",
+              "name": "Easy Layout Round 2",
+              "completed": "no",
+              "currentState": "",
+              "exitGate": ""
+            },
+            {
+              "sprint": "L1.3C",
+              "name": "PowerPoint Presentation Improvement",
+              "completed": "no",
+              "currentState": "",
+              "exitGate": ""
+            },
+            {
+              "sprint": "L1.3B",
+              "name": "Companion SVGs And Light/Dark Visual Variants",
+              "completed": "no",
+              "currentState": "",
+              "exitGate": ""
+            },
+            {
+              "sprint": "L1.3A",
+              "name": "Basic HTML Layout And Front-End Usability",
+              "completed": "no",
+              "currentState": "",
+              "exitGate": ""
+            },
+            {
+              "sprint": "L1.2",
+              "name": "Second Companion Technical Probe",
+              "completed": "no",
+              "currentState": "",
+              "exitGate": ""
+            },
+            {
+              "sprint": "L1.1",
+              "name": "First Companion Technical Pilot",
+              "completed": "no",
+              "currentState": "",
+              "exitGate": ""
+            },
+            {
+              "sprint": "L0.5",
+              "name": "Green Gate Handoff",
+              "completed": "no",
+              "currentState": "",
               "exitGate": ""
             }
           ]
@@ -785,34 +1561,26 @@
       ],
       "sprints": [
         {
-          "sprint": "L1.4",
-          "name": "First Pipeline Regression Paragraph",
+          "sprint": "L1.7A",
+          "name": "Scaling Readiness And Flag Triage Gate",
           "completed": "no",
-          "currentState": "Active 2026-04-25. Building `1.1.2 Percentages en indexcijfers` end-to-end against the L1.3A-C platform state to prove the pipeline still works on fresh content.",
+          "currentState": "**NEXT / FOUNDATION-HARDENING DECISION SPRINT.** Replaces the old `L1.7 Post-Layout Scaling Decision` framing. Do not treat L1.6 as broad-scaling approval. Build a readiness matrix for Part A, landing pages, procedure contracts, presentation-v2, begeleide inoefening, graphical game, inert adaptive seam, target exercises, and PV/A61 boundaries. Classify flags as fix-now / carry-forward / defer. Expected decision: controlled next-step production may continue only if gates stay explicit; broad paragraph scaling remains paused until quality gates are cleaner.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
         {
-          "sprint": "L1.5",
-          "name": "Layout Round 2",
+          "sprint": "L2.0",
+          "name": "Book 1 Flag Burn-down And House-Style Cleanup",
           "completed": "no",
-          "currentState": "Tighten layout/UI based on the L1.3A-C usability review and anything L1.4 surfaced. Platform-owned only.",
+          "currentState": "**FUTURE CLEANUP SPRINT BEFORE BROAD SCALING.** Clean easy visible flags and define the Book 1 student-web house-style baseline from `1.1.1` through `1.1.3`: figure numbering, duplicated worked-example policy, consistent quality-ref status language, operational meaning of PASS WITH FLAGS, and house-style notes for landing, presentation, guided practice, procedure contracts, and graphical MVP limits. No new features.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
         {
-          "sprint": "L1.6",
-          "name": "Second Pipeline Regression Paragraph",
+          "sprint": "Scale Gate 1",
+          "name": "Foundation Hardening Scale Gate",
           "completed": "no",
-          "currentState": "Build one more Book 1 companion paragraph after L1.5 to confirm the layout changes did not break the pipeline.",
-          "exitGate": "",
-          "roadmap": "Lessen roadmap"
-        },
-        {
-          "sprint": "L1.7",
-          "name": "Post-Layout Scaling Decision",
-          "completed": "no",
-          "currentState": "Decide whether to expand broadly after L1.3A-C + L1.4-L1.6 prove the layout survives two independent paragraph builds.",
+          "currentState": "**FUTURE JOINT DECISION.** After L1.7A, L2.0, REF-CT0/REF-CT1, and minimal curriculum-versioning readiness, decide controlled production versus more reference hardening. No adaptive diagnostics, mastery/sequencing, student-facing AI, summative use, PV projection, or PV machine promotion may be authorized by this gate.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
@@ -820,7 +1588,7 @@
           "sprint": "L2.1",
           "name": "Book 1 Release Polish",
           "completed": "no",
-          "currentState": "Teacher-facing polish continues under the Book 1 health gate.",
+          "currentState": "Teacher-facing polish continues under the Book 1 health gate after the print scope is stable.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
@@ -828,61 +1596,253 @@
           "sprint": "L2.2",
           "name": "Book 2 Part A Textbook Layer",
           "completed": "no",
-          "currentState": "Start Book 2 Part A only under the chapter/paragraph hard gates.",
+          "currentState": "Start Book 2 Part A only after foundation-hardening gates say the v5/MTU/target-exercise path is stable enough. Do not start Book 2 full production merely because L1.5Q made v5 active.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
         {
-          "sprint": "L0.5",
-          "name": "Green Gate Handoff",
-          "completed": "yes",
-          "currentState": "Book 1 Part A and the platform/book health routine are green.",
+          "sprint": "L2.4-TEA",
+          "name": "Target Exercise Distribution Audit",
+          "completed": "no",
+          "currentState": "**FUTURE QUALITY SPRINT.** Do not execute until the micro-teaching-unit layer and companion-quality instruments are mature enough. Evaluate target exercises across the new book structure using MTU dependencies, teacher-learning-quality review, student-experience review, and built paragraph evidence.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
         {
-          "sprint": "L1.1",
-          "name": "First Companion Technical Pilot",
-          "completed": "yes",
-          "currentState": "`1.1.1` passes the current complete technical gate.",
-          "exitGate": "",
-          "roadmap": "Lessen roadmap"
-        },
-        {
-          "sprint": "L1.2",
-          "name": "Second Companion Technical Probe",
-          "completed": "yes",
-          "currentState": "`1.1.2` proved the technical pattern can repeat; probe materials were removed for didactic rebuild.",
-          "exitGate": "",
-          "roadmap": "Lessen roadmap"
-        },
-        {
-          "sprint": "L1.3A",
-          "name": "Basic HTML Layout And Front-End Usability",
-          "completed": "yes",
-          "currentState": "Closed 2026-04-25. `1.1.1` companions on shared platform layout/theme; converters and landing-page generator landed in platform; browser smoke + technical gates green.",
-          "exitGate": "",
-          "roadmap": "Lessen roadmap"
-        },
-        {
-          "sprint": "L1.3B",
-          "name": "Companion SVGs And Light/Dark Visual Variants",
-          "completed": "yes",
-          "currentState": "Closed 2026-04-25. `lib-visual-surfaces.js` is the shared SURFACES/THEMES module; light/dark symmetry validator enforced; news visual on the variant system; game-visuals decision recorded per paragraph.",
+          "sprint": "L1.5A",
+          "name": "Easy Layout Round 2",
+          "completed": "no",
+          "currentState": "",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
         {
           "sprint": "L1.3C",
           "name": "PowerPoint Presentation Improvement",
+          "completed": "no",
+          "currentState": "",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "L1.3B",
+          "name": "Companion SVGs And Light/Dark Visual Variants",
+          "completed": "no",
+          "currentState": "",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "L1.3A",
+          "name": "Basic HTML Layout And Front-End Usability",
+          "completed": "no",
+          "currentState": "",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "L1.2",
+          "name": "Second Companion Technical Probe",
+          "completed": "no",
+          "currentState": "",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "L1.1",
+          "name": "First Companion Technical Pilot",
+          "completed": "no",
+          "currentState": "",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "L0.5",
+          "name": "Green Gate Handoff",
+          "completed": "no",
+          "currentState": "",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "SYNC-1",
+          "name": "Roadmap Reconciliation",
           "completed": "yes",
-          "currentState": "Closed 2026-04-25. `1.1.1` PPTX regenerated with adapted slide visuals; teacher-supporting slide rules + read-through QA gate documented in `econ-pptx-templates`; LibreOffice roundtrip clean.",
+          "currentState": "**CLOSED PASS.** Log: `SYNC-1-roadmap-reconciliation-log.md`. Joint roadmap sync after L1.5P/L1.5Q/L1.6. Lesson and reference roadmaps now agree that broad lesson scaling is not approved yet. Coming-period focus is foundation hardening: reconcile roadmap state, normalize the rough three-year blueprint as a non-authoritative planning prototype, classify MTU/target-exercise gaps, triage lesson-side flags, and decide controlled production only through a later Scale Gate.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "L1.6",
+          "name": "Second Pipeline Regression Paragraph",
+          "completed": "yes",
+          "currentState": "**CLOSED PASS WITH FLAGS.** Sprint plan: `L1.6-sprint-plan.md`; review packet: `L1.6-human-review-packet.md`; QA: `L1.6-technical-qa-report.md`; review records: `L1.6-student-experience-review.md`, `L1.6-teacher-learning-quality-review.md`, `L1.6-human-review-record.md`, `L1.6-lead-review-summary.md`; closure log: `L1.6-closure-log.md`. Initial human review returned REVISE because the `1.1.3` graphical-game P-Q line chart ordered quantity labels backwards left-to-right, and because one presentation speaker note used meta/internal-code wording. Platform source fixed both issues, regenerated generated lesson output, and `1.1.3-quality-ref.yaml` now records `pass_with_flags`. Focused re-review accepted the correction and closed L1.6 as PASS WITH FLAGS. Green gates: deploy link/data checks, focused graphical/adaptive Jest 30/30, `1.1.3` complete student-web validation, `1.1.3` publisher-print Part A validation, procedure-contract validator 341 checks, Book 1 health 26/26, full platform Jest 510 passed / 8 skipped, presentation-v2 screenshot QA, and landing/game desktop/mobile light/dark screenshot QA. Flags: graphical MVP is still scaffolded; harder graph-reading variants remain later work; `1.1.3` v5 target exercise remains migrated/not final-reviewed; existing Part A flags remain non-blocking; PV-G4 boundaries remain active.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "L1.5Q",
+          "name": "Course Blueprint v5 + Four Test-Week Book Plan",
+          "completed": "yes",
+          "currentState": "**CLOSED PASS WITH FLAGS.** Created the active v5 curriculum-source baseline for the four-book/four-test-week model. Active target-exercise registry now points to v5 with 54 count-bearing records and exact counts 12/12/14/16; v4 registry is archived, v4 blueprint/meta are superseded, v5 owned blueprint/meta exist, v5 validator checks counts, web-only test-prep, placeholder semantics, and blueprint anchors. Phase B upgraded `course_blueprint_v5.md` from scaffold to curriculum-source prose and closed with regenerated owned-source, owned-content, source-document, inventory, and URL-index artifacts. Flags: migrated target exercises and gemengde-opgaven placeholders are not reviewed final; L2.4-TEA remains the later target-exercise distribution audit. Log: `L1.5Q-closure-log.md`.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "L1.5P",
+          "name": "Boek 1 Print-Edition Cut + 2026/27 12-Paragraph Scope",
+          "completed": "yes",
+          "currentState": "**CLOSED PASS AFTER LEAD-REVIEW CORRECTION.** Printed Book 1 is generated through the platform book workflow from a 12-paragraph print manifest: chapters 1.1 and 1.2 plus a composed print chapter 1.3 (`Aanbod en marktevenwicht`). Test preparation is website-only; cost/revenue/marginal-analysis material remains online/parked for later migration. Independent lead review found duplicate opgaven and excluded body/glossary leakage after the first close; corrections are now platform-owned and regenerated. Green gates: strengthened print-scope checker 12/12, `check:book` 26/26, focused print-scope Jest 5/5, full platform Jest 502 passed / 8 skipped, markdown/PDF excluded-term scans clean, PDF generated. Logs: `L1.5P-sprint-plan.md`, `L1.5P-cut-survival-map.md`, `L1.5P-closure-log.md`, `L1.5P-lead-review-record.md`.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "L-PV0",
+          "name": "PV-G4 Lesson Proof Track Planning",
+          "completed": "yes",
+          "currentState": "**CLOSED PASS.** Operational proof plan added in `L-PV0-proof-track-plan.md`. Current repos were checked first: PV-G4 intake was `0/2`, `shared/procedure/1.1.1.js` still exposed `(unit B02)`, and chapter/book aggregates still carried stale three-step wording. Candidate 1 selected `1.1.1`/B02; candidate 2 selected a bounded A61 table-trace pilot.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "L-PV1",
+          "name": "Procedure Contract Hardening",
+          "completed": "yes",
+          "currentState": "**CLOSED PASS.** Platform now has a lesson procedure-contract registry and `validate-procedure-contracts.js`. The validator checks counts, formal step IDs, order, keywords, surface coverage, stale legacy wording, and student-facing internal-code leakage. Negative Jest fixtures prove wrong order, internal-code leakage, and old three-step language fail.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "L-PV2",
+          "name": "Proof 001 - 1.1.1 B02 Procedure Mapping",
+          "completed": "yes",
+          "currentState": "**CLOSED PASS.** `PVG4-proof-001` prepared for `1.1.1 Schaarste en economisch denken`, mapping the procedure game and answer/surface parity to `choose_by_opportunity_cost_flow`. `shared/procedure/1.1.1.js` is generated by platform source, carries formal step IDs, and no longer exposes `B02` in student-facing description/data. Stale chapter/book/test-prep three-step surfaces were refreshed through existing build scripts.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "L-PV3",
+          "name": "Proof 002 - Fresh PV-Validated Surface",
+          "completed": "yes",
+          "currentState": "**CLOSED PASS WITH HCS CONDITION.** `PVG4-proof-002` prepared from a bounded lesson-owned A61 table-trace pilot surface. It validates `select_table_values_trace` step order and visual anchors without claiming student-facing PV publication. HCS accepted it as proof diversity only; it is not a classroom-ready or student-facing A61 route.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "L-PV4",
+          "name": "PV-G4 Intake Closure Packet",
+          "completed": "yes",
+          "currentState": "**CLOSED / HCS PACKAGE SUBMITTED.** Two lesson-owned proof records exist under `pv-g4-proof-records/`; platform proof intake records `2/2` and the checker passes. HCS review packet was prepared and then reviewed in L-PV5. This package does not authorize PV machine promotion, student-facing PV projection, diagnostics, adaptive use, AI, sequencing, mastery, or summative use.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "L-PV5",
+          "name": "Roadmap Sync After PV-G4",
+          "completed": "yes",
+          "currentState": "**CLOSED PASS WITH CONDITIONS LOGGED.** HCS lead review returned `PASS WITH CONDITIONS`. The evidence-freshness condition was reconciled by regenerating the lesson proof records and platform intake: both now cite lesson commit `52f9237de9e465e7f75483f6feac4e80241e8631` with `lesson_worktree_dirty_at_generation: false`, and the platform intake checker passes. A post-closure report-state cleanup made the intake and lesson HCS packet closure-aware. Proof 002 remains a bounded, non-student-facing A61 pilot only. Log: `L-PV5-roadmap-sync-log.md`.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "L1.5B",
+          "name": "Layout Round 2 - Generator Items",
+          "completed": "yes",
+          "currentState": "**CLOSED PASS.** Platform `cb216ed160a9298f7f4393034b6c1d842a387ff9` shipped generator-owned landing/index polish: domain hooks, stronger book/chapter card hierarchy, availability chips, structured per-card pitfall support, and mobile/dark wrapping fixes. Book 1 landing/index output was regenerated through `deploy.js`. Green gates: landing generator Jest, procedure-contract validator (289 checks), `1.1.1` and `1.1.2` complete student-web validation, Book 1 health 26/26, diff hygiene, and desktop/mobile light/dark screenshot QA. Closure log: `L1.5B-closure-log.md`.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "L1.5G-A",
+          "name": "Graphical Game Scope Cut And Prototype Audit",
+          "completed": "yes",
+          "currentState": "**CLOSED PASS.** Split the oversized L1.5G into L1.5G-A through L1.5G-E after checking `knowledge/grafiekmeester_representatie_arena.html`. GrafiekMeester is an 87 KB standalone product prototype with UI, state, XP, skill tree, badges, localStorage progress, and broad graph domains, so it is a design reference rather than a direct port. MVP cut: bar/line graph reading plus old/new value selection before percentage change; technical target `1.1.2` or sandbox, fresh production proof in L1.6/`1.1.3`. Artifacts: `L1.5G-A-graphical-game-scope-plan.md`, `L1.5G-A-prototype-extraction-matrix.md`, `L1.5G-A-mvp-data-model-sketch.md`.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "L1.5G-B",
+          "name": "Adaptive Input Seam Contract",
+          "completed": "yes",
+          "currentState": "**CLOSED PASS.** Platform `9014a50eb85ccbd48c0770bf677b36d75455aa48` added an inert `adaptive-seam.js` helper with localStorage key `4veco.adaptivePayload.v1`, wired quiz/newsdetective/reasoning/skilltree/procedure engines to read and store the normalized payload without using it for gameplay, added focused seam tests, updated shell builders and deploy copy list, and regenerated Book 1 game shells through `deploy.js`. Green gates: focused seam Jest 8/8, deploy link/data checks, procedure-contract validator 289 checks, `1.1.1` + `1.1.2` complete student-web validation, Book 1 health 26/26, full platform Jest 488 passed / 7 skipped. No advisor, diagnostics, adaptive routing, mastery, sequencing, AI, summative use, PV projection, or PV machine promotion. Closure log: `L1.5G-B-closure-log.md`.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "L1.5G-C",
+          "name": "Graphical Game MVP Engine",
+          "completed": "yes",
+          "currentState": "**CLOSED PASS.** Platform `042d7aea4f4cfbe5cd026a3a29cbb57891f795be` added the sixth game as a narrow graphical MVP: engine/UI/CSS, shell generator, data builder, tests, deploy wiring, landing-card detection, and explicit `1.1.2` pilot data. Generated output was rebuilt through `deploy.js`: `shared/graphical/1.1.2.js`, shared graphical engine files, `1.1.2 ... – grafiekenspel.html`, and the `1.1.2` landing page. Green gates: focused graphical/adaptive Jest 20/20, deploy link/data checks, `1.1.2` complete student-web validation, procedure-contract validator 289 checks, Book 1 health 26/26, platform Jest 494 passed / 8 skipped, desktop/mobile Chrome screenshot smoke. No PV projection, adaptive behavior, diagnostics, mastery, sequencing, AI, or summative use. Closure log: `L1.5G-C-closure-log.md`.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "L1.5G-D",
+          "name": "Three-Aspect Game Routing",
+          "completed": "yes",
+          "currentState": "**CLOSED PASS.** Platform `84ed88e78791203db779a4daecbc02589c99ed1d` added a generated three-aspect game routing layer to paragraph landing pages: `Redeneren`, `Rekenen`, and `Grafieken`, with stable `data-learning-aspect` metadata and student-facing copy. `Begeleide inoefening` is now visually separated as `Extra steun`, not treated as a fourth aspect. Generated output was rebuilt through `deploy.js` for chapter 1.1 landing pages. Green gates: landing generator Jest, deploy link/data checks, `1.1.1` + `1.1.2` complete student-web validation, procedure-contract validator 289 checks, Book 1 health 26/26, platform Jest 494 passed / 8 skipped, desktop/mobile Chrome screenshot smoke. No PV projection, adaptive behavior, diagnostics, mastery, sequencing, AI, or summative use. Closure log: `L1.5G-D-closure-log.md`.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "L1.5G-E",
+          "name": "Integration, QA, And Review Gate",
+          "completed": "yes",
+          "currentState": "**CLOSED PASS WITH FLAGS.** Human review first returned REVISE for answer-revealing placeholders, unsafe old/new defaults, missing checklist scaffolding, generic feedback, and quality-ref bookkeeping; focused re-review then returned REVISE because the final challenge skipped feedback and jumped to summary. Platform source fixed both rounds, generated lesson output was rebuilt through `deploy.js`, `1.1.2-quality-ref.yaml` now marks `grafiekenspel: pass_with_flags`, and screenshots confirm neutral placeholders, explicit old/new selectors, checklist, diagnostic feedback, and final-challenge feedback before summary. Green gates: graphical/adaptive Jest 23/23, deploy link/data checks 160/160, `1.1.1` + `1.1.2` complete student-web validation, procedure-contract validator 289 checks, Book 1 health 26/26, platform Jest 497 passed / 8 skipped, blocked-word search, and rendered final-feedback screenshot proof. Closure log: `L1.5G-E-closure-log.md`. Flags: L1.6 must prove the graphical game/adaptive seam on a fresh paragraph; later graphical variants should reduce direct value labels; PV-G4 boundaries remain in force.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "L1.4-PARITY",
+          "name": "1.1.2 Procedure And Quality Cleanup",
+          "completed": "yes",
+          "currentState": "**CLOSED 2026-05-13 PASS WITH FLAGS.** Narrow follow-up after the post-L1.4 review. Canonicalized §1.1.2 to four-step student-facing procedures across Part A, companion pages, presentation-v2, procedure game, paragraph plan, quality-ref, and chapter plan; added an explicit 1-decimal rounding rule; fixed opgave 5c so rounded `16,7%` is not treated as exact; framed CBS April 2026 as a `snelle raming` exercise; corrected presentation-v2 route aria labels and reasoning metadata title discovery; documented skilltree A38/A39 coverage. Added validator parity gate comparing declared procedure step counts in `quality-ref.yaml` with shared procedure data. Green gates: complete student-web validation, publisher-print Part A validation, focused Jest, full `check:book`, deploy link/data checks, and presentation-v2 automated screenshot QA. Plan: `L1.4-PARITY-sprint-plan.md`. Remaining flag: formal teacher/student review still required before final house-style promotion.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "L1.5D-B02",
+          "name": "1.1.1 Cross-Surface Parity + Bookkeeping Fix",
+          "completed": "yes",
+          "currentState": "**CLOSED 2026-05-12 PASS**. Narrow follow-up after the second web-PowerPoint review. Fixed the §1.1.1 Part A / Part B drift to the four-step economisch-denken procedure with nettowaarde, removed student-facing `B02` unit-code labels from generated/student pages, regenerated Part A HTML/PDF + companion DOCX-derived HTML + presentation PPTX/HTML + quiz/YouTube/shared CSS through the platform workflow, fixed `convert_presentatie.py` so the official `presentatie.pptx` is selected instead of local prototype decks, and taught the link checker to ignore `*-prototype.html` baselines as non-navigation artifacts. Completion log: `L1.5D-b02-cross-surface-parity-plan.md`; refreshed Part A review: `1.1.1-review.md`.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "L1.5O",
+          "name": "Output Profile Simplification",
+          "completed": "yes",
+          "currentState": "**CLOSED 2026-05-12 PASS**. Inserted before L1.4 to stop carrying Office documents through the default paragraph build. Platform validator now has explicit profiles: `student-web` (default; 14 web-first Part B files, no DOCX/PDF requirement), `legacy-full` (old 27-file contract), `office` (student-web plus DOCX exports), and `publisher-print` (the three textbook PDFs + `build_pdf.py`). `check-book.js` keeps Part A book health on `publisher-print`; paragraph 1.1.2 should use `--mode complete --profile student-web` unless Office exports are explicitly requested. Evidence: focused Jest 21/21 plus 1.1.1 validation green in `student-web`, `legacy-full`, and `publisher-print`.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "L1.5D",
+          "name": "Authored Content As Web",
+          "completed": "yes",
+          "currentState": "**CLOSED 2026-05-11 PASS WITH FLAGS**. D1 (DOCX-as-web for samenvatting + nieuws) and D2 (PPTX-as-web for presentatie) both shipped. v2 lead review returned FAIL with eight blockers (B1–B8); remediation cycle closed all eight: B1+B2 mobile responsive CSS at 390px (platform `362f0e2`), B7 detect_card_stack x-column filter (platform `6646bec`), B5+B6 validator gates D1 web outputs + BUILD-PARAGRAPH.md 24→27 contract (platform `b90b918`), B4 validate-chapter.js structured verdict parser (platform `e04d160`), B8 PPTX accessibility — 14pt floor across deck + speaker notes + AA contrast tokens (platform `830ebf4`). Selector-presence regression test added (`l1-5d-v2-mobile-fixes.test.js`). v3 lead review returned **PASS WITH FLAGS**: validators 27/27 + 26/26 + 454/0/7 jest + audit 0 sub-14pt + 0 contrast violations all green. Two non-blocking flags remain: long Dutch compound nouns on slide 1's dark-hero body line and nieuws cell-title still wrap with mid-word breaks at 390px (logged as platform follow-up, not reopening the sprint).",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "L1.5V",
+          "name": "Companion Quality Polish + Pilot Lock-in for 1.1.1",
+          "completed": "yes",
+          "currentState": "**CLOSED 2026-05-09**. 17 platform commits on `content/1.1.1-companion-quality` + 2 lessen commits on `main`. All 4 hard fails + QA-1 from the original `1.1.1-companion-visual-review.md` resolved; verification sub-agent verdict **PASS WITH FLAGS** (3 non-blocking flags: visual-internal `alt. kosten` shorthand documented as scope decision, Team B reference HTMLs untracked-by-design, optional CSS polish on vaardigheden checklist trailer). Buckets A+B+C+D+E+F all closed. Validator `--mode complete` flips green: `OK Paragraph 1.1.1 PASSED all checks`. Jest 441/0/7 (69 new regression tests vs baseline). Pilot lock-in delivered: `BUILD-PARAGRAPH.md` carries Common pre-conditions section + clean Part A / Part B split, every skill in `skills/` has a `pipeline:` frontmatter label, `validate-paragraph.js` has F2 fixes (split Part A / Part B review gates, structured verdict parser, schema_version 2 awareness), `1.1.1-quality-ref.yaml` migrated to schema_version 2 with `partA:` + `companion:` blocks. L1.4 unblocked.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "L1.4",
+          "name": "First Pipeline Regression Paragraph",
+          "completed": "yes",
+          "currentState": "**CLOSED 2026-05-12 PASS WITH FLAGS.** Built and then polished `1.1.2 Percentages en indexcijfers` through the platform-owned `student-web` profile after L1.5O. Delivered native student-facing HTML companions, source-aligned begeleide inoefening, interactive shared data, skilltree paragraph/chapter/all toggles, shell pages, PPTX + semantic presentation-v2 web deck, companion review, quality-ref refresh, and `_paragraph-plan.md`; no new Word exports were generated. Validation green: `validate-paragraph --mode complete --profile student-web`, `validate-paragraph --mode part-a --profile publisher-print`, local link checker/deploy data tests, focused skilltree Jest, full `check:book`, and browser screenshot QA for index, voorkennis, begeleide inoefening, wiskundevaardigheden, and presentation surfaces in representative light/dark and wide/narrow states. Flag: formal teacher/student review still needs a separate review gate before declaring this the final scaling house style. Sprint plan: `L1.4-sprint-plan.md`.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         }
       ],
-      "completedCount": 6,
-      "openCount": 6
+      "completedCount": 22,
+      "openCount": 13
     },
     {
       "id": "innovation",
@@ -1226,25 +2186,25 @@
       "id": "inspection_accountability",
       "label": "Inspection And Accountability",
       "description": "Evidence, traceability, coverage, and proof that materials meet school, inspection, and exam-program expectations.",
-      "count": 1
+      "count": 0
     },
     {
       "id": "reference_quality",
       "label": "Reference Quality",
       "description": "Correctness, freshness, deduplication, source validity, unit quality, term quality, and exam-code links.",
-      "count": 1
+      "count": 0
     },
     {
       "id": "didactic_quality",
       "label": "Didactic Quality",
       "description": "Whether the right skills, complexes, goals, sequence, cognitive load, and misconceptions are handled efficiently.",
-      "count": 1
+      "count": 0
     },
     {
       "id": "assessment_exam_fit",
       "label": "Assessment And Exam Fit",
       "description": "Alignment with CvTE-style demands, question types, answer models, target skills, and exam realism.",
-      "count": 1
+      "count": 0
     },
     {
       "id": "student_teacher_experience",
@@ -1256,13 +2216,13 @@
       "id": "platform_reliability",
       "label": "Platform Reliability",
       "description": "Repeatability and trustworthiness of generators, validators, deploys, links, tests, and reporting routines.",
-      "count": 1
+      "count": 0
     },
     {
       "id": "production_readiness",
       "label": "Production Readiness",
       "description": "Release and scaling blockers: incomplete artifacts, unresolved flags, manual steps, rebuild gaps, and known risks.",
-      "count": 1
+      "count": 0
     },
     {
       "id": "innovation_transfer",
@@ -1271,53 +2231,22 @@
       "count": 0
     }
   ],
-  "issues": [
-    {
-      "title": "News source URLs are not truly validated",
-      "category": "reference_quality",
-      "source": "knowledge/platform-team-companion-quality-gate-review.md"
-    },
-    {
-      "title": "Complete-mode quality refs can be stale",
-      "category": "inspection_accountability",
-      "source": "knowledge/platform-team-companion-quality-gate-review.md"
-    },
-    {
-      "title": "Review flags are not surfaced as scale blockers",
-      "category": "production_readiness",
-      "source": "knowledge/platform-team-companion-quality-gate-review.md"
-    },
-    {
-      "title": "Plan-to-output alignment is not enforced",
-      "category": "didactic_quality",
-      "source": "knowledge/platform-team-companion-quality-gate-review.md"
-    },
-    {
-      "title": "Browser smoke checks are not part of the repeatable gate",
-      "category": "platform_reliability",
-      "source": "knowledge/platform-team-companion-quality-gate-review.md"
-    },
-    {
-      "title": "Game-data tests are structural, not content-quality checks",
-      "category": "assessment_exam_fit",
-      "source": "knowledge/platform-team-companion-quality-gate-review.md"
-    }
-  ],
+  "issues": [],
   "greenGate": [
     {
       "command": "npm.cmd run check:platform",
       "lastKnown": "passes",
-      "evidence": "knowledge/platform-team-roadmap.md"
+      "evidence": "knowledge/old/platform-team-roadmap.md"
     },
     {
       "command": "npm.cmd run check:book -- \"..\\4veco-lessen\\Boek 1 - Grondslagen, vraag en aanbod\"",
       "lastKnown": "passes",
-      "evidence": "knowledge/platform-team-roadmap.md"
+      "evidence": "knowledge/old/platform-team-roadmap.md"
     },
     {
-      "command": "node scripts\\validate-paragraph.js --mode complete \"<1.1.1-folder>\"",
+      "command": "node scripts\\validate-paragraph.js --mode complete --profile student-web \"<1.1.1-folder>\"",
       "lastKnown": "passes",
-      "evidence": "knowledge/platform-team-roadmap.md"
+      "evidence": "knowledge/old/platform-team-roadmap.md"
     }
   ],
   "companionPipeline": [

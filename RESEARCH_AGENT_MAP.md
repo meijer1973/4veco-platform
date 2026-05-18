@@ -87,9 +87,10 @@ Human-readable:
 - `agents/econ-companion-visual-review.md`
 - `agents/visual-qa-agent.md`
 - `references/reference-team-roadmap.md`
+- `docs/roadmaps/roadmap-version-index.json`
 - `references/SOURCE_OF_TRUTH.md`
-- `knowledge/platform-team-roadmap.md`
-- `knowledge/three-month-roadmap.md`
+- `knowledge/old/platform-team-roadmap.md`
+- `knowledge/old/three-month-roadmap.md`
 
 Machine-readable:
 
@@ -100,8 +101,9 @@ Machine-readable:
     "references/machine/micro-teaching-units.json",
     "references/machine/begrippen.json",
     "references/external/exam-questions.json",
-    "references/owned/course-blueprint-v4.meta.json",
+    "references/owned/course-blueprint-v5.meta.json",
     "references/authored/course-target-exercises.json",
+    "docs/roadmaps/roadmap-version-index.json",
     "reports/internal-dashboard/dashboard-data.json"
   ]
 }
@@ -127,15 +129,17 @@ entry_points (full URLs):
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/agents/econ-companion-visual-review.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/agents/visual-qa-agent.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/reference-team-roadmap.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/roadmaps/roadmap-version-index.json
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/SOURCE_OF_TRUTH.md
-- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/knowledge/platform-team-roadmap.md
-- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/knowledge/three-month-roadmap.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/knowledge/old/platform-team-roadmap.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/knowledge/old/three-month-roadmap.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/package.json
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/machine/micro-teaching-units.json
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/machine/begrippen.json
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/external/exam-questions.json
-- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/owned/course-blueprint-v4.meta.json
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/owned/course-blueprint-v5.meta.json
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/authored/course-target-exercises.json
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/roadmaps/roadmap-version-index.json
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/internal-dashboard/dashboard-data.json
 
 Cross-repo entry point (4veco-lessen):
@@ -168,7 +172,8 @@ Use these anchors before free-form browsing.
   "companion_visual_review_agent": "agents/econ-companion-visual-review.md",
   "visual_qa_agent": "agents/visual-qa-agent.md",
   "reference_team_plan": "references/reference-team-roadmap.md",
-  "platform_roadmap": "knowledge/platform-team-roadmap.md",
+  "roadmap_version_index": "docs/roadmaps/roadmap-version-index.json",
+  "platform_roadmap": "knowledge/old/platform-team-roadmap.md",
   "dashboard_index": "reports/internal-dashboard/dashboard-data.json"
 }
 ```
@@ -190,7 +195,8 @@ index_anchors (full URLs):
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/agents/econ-companion-visual-review.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/agents/visual-qa-agent.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/reference-team-roadmap.md
-- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/knowledge/platform-team-roadmap.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/roadmaps/roadmap-version-index.json
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/knowledge/old/platform-team-roadmap.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/internal-dashboard/dashboard-data.json
 
 ## Path Registry
@@ -224,9 +230,9 @@ index_anchors (full URLs):
   ],
   "roadmap_paths": [
     "references/reference-team-roadmap.md",
-    "knowledge/platform-team-roadmap.md",
-    "knowledge/three-month-roadmap.md",
-    "docs/roadmaps"
+    "docs/roadmaps/roadmap-version-index.json",
+    "knowledge/old/platform-team-roadmap.md",
+    "knowledge/old/three-month-roadmap.md"
   ],
   "engine_paths": [
     "engines/quiz-engine.js",
@@ -304,8 +310,9 @@ root_policy_paths (full URLs):
 roadmap_paths (full URLs):
 
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/reference-team-roadmap.md
-- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/knowledge/platform-team-roadmap.md
-- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/knowledge/three-month-roadmap.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/roadmaps/roadmap-version-index.json
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/knowledge/old/platform-team-roadmap.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/knowledge/old/three-month-roadmap.md
 
 engine_paths (full URLs):
 
@@ -442,7 +449,7 @@ Agents MUST follow this sequence:
    - chapter production -> `BUILD-CHAPTER.md` plus relevant `skills/`
    - build/deploy -> `build-scripts/README.md`, `scripts/deploy.js`, relevant `build-scripts/platform/*`
    - engine behavior -> relevant `engines/*` files and `engines/tests/*`
-   - roadmap -> `knowledge/platform-team-roadmap.md`, `references/reference-team-roadmap.md`, and dashboard data
+   - roadmap -> `docs/roadmaps/roadmap-version-index.json`, `references/reference-team-roadmap.md`, legacy `knowledge/old/platform-team-roadmap.md`, and dashboard data
 5. Search declared namespaces only after loading relevant guides and indexes.
 6. Distinguish source files, generated files, and deploy/build targets before making conclusions.
 7. Label every conclusion as one of:
@@ -575,8 +582,8 @@ Rules:
     "reports/internal-dashboard/dashboard-data.json"
   ],
   "roadmap_implications": [
-    "knowledge/platform-team-roadmap.md",
-    "knowledge/three-month-roadmap.md",
+    "knowledge/old/platform-team-roadmap.md",
+    "knowledge/old/three-month-roadmap.md",
     "references/reference-team-roadmap.md",
     "reports/internal-dashboard/dashboard-data.json"
   ]

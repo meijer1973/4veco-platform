@@ -23,7 +23,7 @@ const TEAM_TABS = [
     description:
       'Owns platform guardrails, validator and deploy health, architecture quality, year and multi-year planning, reporting, and cross-team visibility.',
     roadmaps: [
-      { label: 'Platform roadmap', path: 'knowledge/platform-team-roadmap.md' },
+      { label: 'Legacy platform roadmap', path: 'knowledge/old/platform-team-roadmap.md' },
     ],
   },
   {
@@ -173,25 +173,45 @@ function parseMarkdownTable(lines, startIndex) {
   });
 }
 
-function parseSprintLedger(markdown) {
-  const lines = markdown.split(/\r?\n/);
-  const headingIndex = lines.findIndex((line) => /^## Sprint Ledger\s*$/.test(line.trim()));
+function parseSprintTableAfterHeading(lines, heading) {
+  const escaped = heading.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const headingPattern = new RegExp(`^##\\s+${escaped}\\s*$`);
+  const headingIndex = lines.findIndex((line) => headingPattern.test(line.trim()));
   if (headingIndex === -1) return [];
 
   const firstTableLine = lines.findIndex((line, index) => index > headingIndex && line.trim().startsWith('|'));
   if (firstTableLine === -1) return [];
 
-  return parseMarkdownTable(lines, firstTableLine).map((row) => ({
+  return parseMarkdownTable(lines, firstTableLine);
+}
+
+function parseSprintLedger(markdown) {
+  const lines = markdown.split(/\r?\n/);
+  const rows = [
+    ...parseSprintTableAfterHeading(lines, 'Sprint Ledger'),
+    ...parseSprintTableAfterHeading(lines, 'Closed Sprints'),
+  ];
+  const seen = new Set();
+
+  return rows.map((row) => ({
     sprint: row.sprint || '',
     name: row.name || row.phase || '',
     completed: normalizeCompleted(row.completed || row.status || ''),
     currentState: row['current state'] || row['primary question'] || '',
     exitGate: row['exit gate'] || '',
-  }));
+  })).filter((row) => {
+    const key = `${row.sprint}\u0000${row.name}`;
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
 }
 
 function normalizeCompleted(value) {
-  const normalized = value.trim().toLowerCase();
+  const normalized = value.trim().replace(/\*/g, '').toLowerCase();
+  if (/^\d{4}-\d{2}-\d{2}$/.test(normalized)) {
+    return 'yes';
+  }
   if (normalized === 'yes' || normalized === 'done' || normalized === 'complete' || normalized === 'completed') {
     return 'yes';
   }
@@ -292,17 +312,17 @@ function buildData() {
       {
         command: 'npm.cmd run check:platform',
         lastKnown: 'passes',
-        evidence: 'knowledge/platform-team-roadmap.md',
+        evidence: 'knowledge/old/platform-team-roadmap.md',
       },
       {
         command: 'npm.cmd run check:book -- "..\\4veco-lessen\\Boek 1 - Grondslagen, vraag en aanbod"',
         lastKnown: 'passes',
-        evidence: 'knowledge/platform-team-roadmap.md',
+        evidence: 'knowledge/old/platform-team-roadmap.md',
       },
       {
         command: 'node scripts\\validate-paragraph.js --mode complete --profile student-web "<1.1.1-folder>"',
         lastKnown: 'passes',
-        evidence: 'knowledge/platform-team-roadmap.md',
+        evidence: 'knowledge/old/platform-team-roadmap.md',
       },
     ],
     companionPipeline: [

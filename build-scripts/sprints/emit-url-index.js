@@ -80,8 +80,9 @@ function buildBody(branch) {
   lines.push('## Roadmaps');
   lines.push('');
   lines.push(`- ${platform('references/reference-team-roadmap.md')}`);
-  lines.push(`- ${platform('knowledge/platform-team-roadmap.md')}`);
-  lines.push(`- ${platform('knowledge/three-month-roadmap.md')}`);
+  lines.push(`- ${platform('docs/roadmaps/roadmap-version-index.json')}`);
+  lines.push(`- ${platform('knowledge/old/platform-team-roadmap.md')}`);
+  lines.push(`- ${platform('knowledge/old/three-month-roadmap.md')}`);
   lines.push(`- ${lessen('lessen-team-roadmap.md')}`);
   lines.push('');
 

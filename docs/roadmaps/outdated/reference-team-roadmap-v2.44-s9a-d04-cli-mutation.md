@@ -2,36 +2,119 @@
 
 Generated: 2026-04-23
 Adopted main roadmap: 2026-04-25
-Last strategic update: 2026-05-18
+Last strategic update: 2026-05-16
 Roadmap ID: `references-team-roadmap`
-Roadmap version: `v2.45-post-l16-foundation-hardening`
+Roadmap version: `v2.44-s9a-d04-cli-mutation`
 Roadmap status: `active`
 Version index: `docs/roadmaps/roadmap-version-index.json`
 Scope: `references/`, `build-scripts/references/`, `build-scripts/reports/`, reference dashboards, and generated reference reports under `reports/`
 
+## Adoption Decision
+
+The handoff roadmap has been adopted as the main operating roadmap for the references team.
+
+No blocking incompatibility was found. The roadmap direction fits the repository: machine-edited references, evidence-first unit growth, JSON-first reports, review gates for pedagogical authority, and bounded later AI.
+
+Update 2026-04-29: R8.1 Scoped QC Issue Model is completed. The roadmap now has an internal-only quality issue layer under `references/data/qc/`, generated `reference-quality-issues` report output, and a reference-health/RAG data hook. QC issues are diagnostic governance records, not curriculum authority or student-facing material.
+
+Update 2026-04-30: HCS approved inserting `RX.2b Graphical Foundation Coverage And Mutation` before `RX.3`. RX.2 was a safe table/index first lane, not a full graphical-foundation completion. RX.2b must cover the missing bar-chart, line-graph, pie-chart, visual percentage-change, and visual index foundations before producer/profit graph units proceed.
+
+Update 2026-04-30: The Sprint Ledger was moved near the top of the roadmap, immediately after adoption and compatibility decisions, so agents see current/open work before detailed operating rules and phase background.
+
+Update 2026-04-30: RX.2b closed `GATE-RX2b-graphical-foundation` as `pass_with_conditions` and added `A62`, `A63`, `A64`, `A65`, `A68`, `A69`, and `A73` through `unit-add.js`. `A71` remains held/high-risk. All seven new graphical-foundation units remain generator-blocked and non-interactive until generator implementation and validation.
+
+Update 2026-04-30: `S6 Bronnen Registry MVP` is completed. The first source-document registry implementation lives under `references/data/source-document-registry.json` as a governed overlay, not under `references/machine/`. It records source type, authority level, source version, status, owner, citation policy, and public-citation policy while preserving external/machine protected-surface boundaries.
+
+Update 2026-04-30: `S7 Skill And Operation Registry MVP` is prepared for `GATE-CP4-skill-registry-coexistence` review. The registry remains a `references/data/` overlay and keeps `required_units`, provisional `exercise_operations`, and `skill_tags` separate while preserving `required_skills` as legacy/source-only.
+
+Update 2026-05-01: Leadership approved the Procedure-Visual Backbone as a formal PV track. PV starts as a governed `references/data/procedure-visual/` overlay, not a `references/machine/` registry. PV.0/PV.1/PV.2 are inserted after S7/CP-4 and before large RX.3/RX.4 mutation work so producer graphs, elasticity diagrams, market diagrams, procedure games, and surface-specific visuals share one student-visible reasoning model.
+
+Update 2026-05-01: `GATE-CP4-skill-registry-coexistence` closed as `pass_with_conditions`. S7 is completed as a governed `references/data/` overlay. `exercise_operations` remain provisional, Dutch broad `skill_tags` are accepted as v1 with alias/naming follow-up, English dry-run `skill_tags` remain provisional aliases/sub-tags, and no machine registry or bulk backfill is authorized. PV.0 is completed: PV templates may reference provisional `exercise_operations` only with explicit provisional status and no operation promotion.
+
+Update 2026-05-01: `PV.1 Procedure-Visual Inventory` is completed. The inventory now lives at `references/data/procedure-visual/inventory.json` with 12 ranked pilot templates, runtime-surface findings, provisional operation-reference status, generator/projection blockers, and PV.2 schema requirements. No `references/machine/` or `references/external/` mutation occurred, and no student-facing PV projection is authorized.
+
+Update 2026-05-01: `PV.2 Procedure-Visual Schema And Validator MVP` is completed. The PV overlay now has strict schema files, vocabulary, empty real registries, a read-only validator, schema-status reports, and `GATE-PV-G1-schema` technical proof artifacts. Real templates and visual states remain deferred to PV.3, no PV `references/machine/` registry exists, and student-facing PV projection remains blocked.
+
+Update 2026-05-01: `RX.3 Producer Table And Graph Representation Units` is prepared for `GATE-RX3-producer-representation` human review. The packet splits the producer table/data lane (`A75`, `A76`, `A79`) from the producer graph lane (`A77`, `A78`, `A80`, `A81`), keeps graphical MO=MK held, applies PV.2 visual-state constraints, and authorizes no mutation before HCS decision.
+
+Update 2026-05-01: `GATE-RX3-producer-representation` closed as `pass_with_conditions`. RX.3 is completed as a non-mutating review sprint. The next allowed step is `RX.3a` bounded first-lane mutation review for `A75`, `A76`, and `A79`; `A76` must include `A14`, `A04`, and `A61` as needs. `A77`/`A78` may proceed later after `A75`, while `A80`, `A81`, and graphical MO=MK remain held.
+
+Update 2026-05-01: `RX.3a Producer Table/Data First-Lane Mutation Review` is prepared for `GATE-RX3a-first-lane-mutation-review`. Candidate specs, CLI mutation plan, and generator-block records are ready for `A75`, `A76`, and `A79`; execution is still blocked until HCS explicitly authorizes CLI mutation.
+
+Update 2026-05-01: `GATE-RX3a-first-lane-mutation-review` closed as `pass_with_conditions` and RX.3a applied the authorized producer table/data lane through `unit-add.js`. `A75`, `A76`, and `A79` are now live catalog units; `A76` includes `A14`, `A04`, and `A61` as required needs. All three remain generator-blocked/non-interactive. `A77`/`A78` move to a later graph-lane review, while `A80`, `A81`, and graphical MO=MK remain held.
+
+Update 2026-05-01: `RX.3b Producer TO-TK Graph-Lane Mutation Review` is prepared for `GATE-RX3b-producer-graph-lane-review`. Candidate specs and a blocked CLI plan are ready for `A77` and `A78`; the packet records PV graph-stage constraints and asks HCS whether `A78` should add `A77` as a dependency. No mutation is authorized before HCS decision. `A80`, `A81`, and graphical MO=MK remain held.
+
+Update 2026-05-01: `GATE-RX3b-producer-graph-lane-review` closed as `pass_with_conditions` and RX.3b applied the authorized TO-TK graph lane through `unit-add.js`. `A77` and `A78` are now live catalog units; `A78` includes `A63`, `A75`, and `A77` as required needs. Both remain generator-blocked/non-interactive. `A80`, `A81`, graphical MO=MK, real PV producer-graph templates, and student-facing PV projection remain blocked.
+
+Update 2026-05-01: `RX.4 Elasticity And Market Diagram Representation Units` is prepared for `GATE-RX4-elasticity-market-diagram-review` human review. The packet treats `A82` and `A84` as the lower-risk elasticity table/source lane, keeps `A83` conditional on the demand-graph versus P-Q graph evidence/naming decision, and holds new market/welfare/surplus/intervention graph units that overlap `A19`, `A32`, `A40`, `D39`, `D40`, `A51`, `A56`, or `A59`. No mutation is authorized before HCS decision.
+
+Update 2026-05-02: `GATE-RX4-elasticity-market-diagram-review` closed as `pass_with_conditions` and RX.4 applied the approved elasticity representation lane through `unit-add.js`. `A82`, `A84`, and conditionally approved `A83` are now live catalog units; `A83` uses the HCS-approved name `Prijselasticiteit van de vraag berekenen uit P-Q-grafiek`. All three remain generator-blocked/non-interactive. Market/welfare duplicate areas, student-facing skill-tree use, PV projection, diagnostics, adaptive routing, AI, sequencing, mastery, and summative use remain blocked.
+
+Update 2026-05-02: `PV.3 Pilot Procedure-Visual Templates` is completed. The PV overlay now contains six pilot procedure templates, six pilot visual states, and six unit-template links under `references/data/procedure-visual/`, with PV-G2 technical proof for formula trace, graph-stage, table-trace, and flowchart-style coverage. No PV `references/machine/` registry exists, all PV records block student-facing projection, and PV.4 is the next sprint.
+
+Update 2026-05-02: `PV.4 Procedure/Game Projection Contract` is completed. The procedure engine now supports optional `formal_step_id` alignment reporting without changing legacy gameplay, and `procedure-game-template-alignment` proves one B02 pilot maps every game step to a PV template while a legacy unmapped fixture remains valid. No forced procedure-game migration, student-facing PV projection, or PV machine registry is authorized.
+
+Update 2026-05-02: `RX.5 Representation Operation Registry And Reports` is completed as a report-only bridge. New representation-operation coverage, graph-skill-tree, and representation-transfer-gap reports distinguish live units, stale provisional registry statuses, held/high-risk records, generator-blocked live units, and PV pilot links without creating a `references/machine/` operation registry or authorizing student-facing use.
+
+Update 2026-05-02: `PV.5 Visual Projection MVP` is completed. The platform now has report-side PV renderer libraries for formula trace, flowchart, table trace, and static graph-stage visual states, plus 28 SVG proof artifacts under `reports/procedure-visual-projections/`. These are validation/proof outputs only: no lesson target writes, dynamic graph manipulation, PV machine promotion, or student-facing PV projection is authorized.
+
+Update 2026-05-02: `PV.6 Coverage Reports And Dashboard Integration` is completed. The new `procedure-visual-coverage` report and `reference-health` PV summary show PV-linked units, templates, visual states, surface variants, game mapping, answer-model step order, generator support, generator blocks, and blocker reasons while preserving diagnostic-only, non-authoritative, non-student-facing PV boundaries.
+
+Update 2026-05-03: `RX.6 Skill-Tree And Generator Integration` is completed. Source and deployed skill-tree base elements now expose only generator-backed active A-domain units as interactive skill-tree nodes. The 37 active A-domain units without generators are explicitly recorded as generator-blocked/non-interactive, including older R4.5 units `A45` through `A60` that predated the generator-block convention. Student-facing skill-tree exposure, PV projection, diagnostics, adaptive routing, AI, sequencing, mastery, and summative use remain blocked for generator-blocked units.
+
+Update 2026-05-03: `PV.7 Machine-Promotion Review Gate` is prepared for HCS review. The readiness report shows PV has schemas, validator, six pilot templates, six visual states, six unit-template links, projection proof, and coverage reports, but lacks a PV machine-edit CLI, machine-promotion mutation logs, and two lesson-side PV regression proofs. The packet recommends no `references/machine/` PV promotion in PV.7; all PV records should remain under `references/data/procedure-visual/` unless HCS explicitly decides otherwise.
+
+Update 2026-05-03: `GATE-PV7-machine-promotion-review` closed as `pass_with_conditions`. No Procedure-Visual records may move to `references/machine/` now. HCS confirmed that `unit-template-links` are the safest future first candidate only after CLI, validators, mutation logs, and lesson-regression proof exist. `PV.8 Promotion Pipeline Design` is inserted before any future promotion attempt, and PV-G4 lesson-regression proof remains required before reopening machine promotion.
+
+Update 2026-05-03: `PV.8 Promotion Pipeline Design` is completed as a design-only technical sprint. It defines the future unit-template-link-first promotion path, proposed CLI contracts, mutation-log schema, rollback expectations, validators, and future gate questions. No PV promotion CLI was implemented, no mutation log was created, no PV `references/machine/` registry was created, and no student-facing PV projection is authorized. PV-G4 lesson-regression proof is now the next required step before any future promotion attempt.
+
+Update 2026-05-03: `PV-G4 Lesson Regression Proof` evidence intake is prepared. The new proof template and review packet define the two required lesson-team-owned PV regression proofs, validation expectations, and no-hand-patch requirement. PV-G4 is not closed: there are currently 0/2 recorded lesson-side proofs, no lesson-team output was committed by the references team, and PV machine promotion plus student-facing PV projection remain blocked.
+
+Update 2026-05-14: `PV-G4 Lesson Regression Proof` received lesson-team proof records and HCS lead review returned `pass_with_conditions`. The platform proof intake now records `2/2` proofs from lesson commit `52f9237de9e465e7f75483f6feac4e80241e8631` with clean-worktree metadata, and the proof-intake checker passes. A post-closure report-state cleanup made the intake generator closure-aware, so current intake reports `pass_with_conditions` instead of `ready_for_hcs_review`. Conditions remain active: Proof 002 is bounded non-student-facing A61 proof diversity only, and PV machine promotion, student-facing PV projection, diagnostics, adaptive routing, mastery, sequencing, AI, and summative use remain blocked.
+
+Update 2026-05-14: `S8 Misconception Registry MVP` is plan-ready as the next reference sprint after PV-G4 closure. The plan keeps Sprint 8 as an internal diagnostic overlay only: it may tighten the existing misconception schema, add a small `references/data/` registry, validator, report, reference-health hook, and RAG diagnostic hook, but it must not authorize student-facing diagnostics, adaptive routing, mastery, sequencing, AI, summative use, PV projection, or PV machine promotion.
+
+Update 2026-05-15: `S8 Misconception Registry MVP` is completed. The registry lives at `references/data/misconceptions/misconception-registry.json` as an internal diagnostic overlay with four evidence-backed seed records, a tightened `misconception.schema.json`, read-only validator, JSON/Markdown report, reference-health summary, and generated-report RAG chunk. It remains non-authoritative: not primary evidence, not curriculum or exam authority, not a scoring rule, not student-facing diagnosis, and not permission for adaptive routing, mastery, sequencing, AI, summative use, PV projection, or PV machine promotion.
+
+Update 2026-05-15: `S9 Unit Design Status And D04 Resolution` is completed and `GATE-CP5-D04-resolution` closed as `pass_with_conditions`. S9 created a derived `references/data/unit-design-status/unit-design-status-overlay.json`, read-only validator, JSON/Markdown report, reference-health/RAG hooks, dependent-unit audit, D04 decision record, human interview, and gate closure. The CP-5 decision resolves direction only: D04 content should be redistributed to successor elasticity units and the standalone unit retired later through CLI. No protected machine mutation is authorized in S9; D04 remains promotion-blocked until a separate CLI-only mutation sprint executes the decision.
+
+Update 2026-05-16: `S9a D04 CLI-Only Mutation Sprint` is completed. S9a applied the CP-5 D04 decision through `unit-deprecate.js`, marking `D04` deprecated in favor of `A15`, `D06`, `A17`, `D11`, `A16`, `D12`, and `D27`; recorded a mutation plan, CLI mutation log, and stale-reference audit; removed the single active D04 citation from target exercise `2.1.3`; updated unit-design-status reports to `retired_after_cli_mutation`; and resolved QC issue `R8-QC-007`. No hand edits to `references/machine/` or `references/external/` occurred, no D04 prerequisite edge was added, and diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, PV projection, and PV machine promotion remain blocked.
+
+Compatibility decisions:
+
+- Sprint `R0.1` now means the sprint-execution scaffold.
+- The older local `R0.1` / `R0.2` history is preserved as completed historical `H0.x` work, not as active roadmap numbering.
+- `R0.1 Sprint Execution Scaffold` is completed.
+- `R2.3 Human Review And Gate Closure` is completed with `GATE-R2-empty-needs` status `hold`.
+- `R2.4 Evidence And Unit-Design Cleanup` is completed as a non-mutating review packet.
+- `R3.2 Apply Reviewed Empty-Needs Corrections` is completed; the approved mutation set was applied through CLI.
+- Current catalog metrics reflect the post-merge `main` state after R7.5 validation.
+- `R3.1 Reference CLI And Documentation Completion` is completed. CLI documentation and command coverage now distinguish ready mutation paths from remaining blockers.
+- The active roadmap is narrowed to reference and RAG data quality. Delayed product surfaces such as diagnostics, adaptive routing, teacher cockpit, student-facing AI, games, simulations, privacy deployment, accessibility deployment, and continuous-improvement claims are intentionally out of scope for this roadmap until the data foundation is stronger.
+- The exercise-schema roadmap restores the HCS two-axis role model (`instructional_role`, `assessment_role`), the four-field `scaffolding` object, and CP-1 through CP-8 cross-team checkpoints.
+- New registries under `references/machine/` remain future end states only. They require schema, CLI, validators, and mutation logs before machine files are created or changed.
+- `R9.2 Content Graph Projection` is completed. Owned-source content is queryable through a separate projection graph without changing R5 alignment authority.
+- `Phase RX Representation-Sensitive Micro-Unit Decomposition` is adopted as a dedicated reference-team phase. RX.1, GATE-RX2, and GATE-RX2b closed as `pass_with_conditions`; RX.2 and RX.2b applied bounded lanes through CLI-only mutation and now block student-facing use through explicit generator-block tracking.
+- `R8.1 Scoped QC Issue Model` is completed. Quality issues are internal-only governance signals with proof-to-close fields, exposed to dashboards and RAG as diagnostic generated-report context only.
+- `RX.2b Graphical Foundation Coverage And Mutation` is completed before RX.3. Producer/profit graph work may now proceed only with the RX.2b dependencies live or explicitly held; `A71` remains held/high-risk.
+- `S6 Bronnen Registry MVP` is completed as a `references/data/` registry overlay. No hand-maintained `references/machine/` source-document registry was created.
+
 ## Sprint Ledger
 
-The currently-active sprint sits at the top. Future sprints follow in sequence.
-Closed sprints are recorded separately in the "Closed Sprints" section below.
+Open items are listed first; completed items are kept below them.
 
 | Sprint | Name | Completed | Current State |
 |--------|------|-----------|---------------|
-| REF-CT0 | Three-Year Prototype Normalisation And MTU Classification | no | **ACTIVE / FOUNDATION-HARDENING SPRINT.** Convert `knowledge/three Year blue print.md` into a clean, explicitly non-authoritative, v5-aware planning prototype. Classify candidate units/paragraphs as Year 1 confirmed, Year 1 backfill, Year 2 skeleton, Year 3 skeleton, duplicate/merge/split, parked, or needs evidence. No `references/machine` mutation and no direct curriculum authority. |
-| REF-CT1 | Year-1 Target Exercise And MTU Coverage Baseline For v5 | no | Planned after REF-CT0. Replaces the old broad `Content Track 1` framing. Use active v5, built evidence from `1.1.1` through `1.1.3`, and CT0 categories to produce Year-1 paragraph coverage, MTU gap classification, missing-target exercise status, and candidate review packet before any CLI mutation. |
+| Content Track 1 | Year-1 Target Exercise Coverage | no | Planned content-track work. Produce Year-1 paragraph coverage and missing-target exercise status for CP-6. |
 | Content Track 2 | Year-1 Precision And Dual-Coding Audit | no | Planned content-track work. Record precision lint and dual-coding status for exercise surfaces where applicable. |
-| Content Track 3 | Year-2 Skeleton | no | Planned after REF-CT0/REF-CT1 framing. Prepare Year-2 skeleton with CvTE-vwo anchor status and `concept_orphan` flags for CP-7; do not treat the rough three-year blueprint as authoritative. |
+| Content Track 3 | Year-2 Skeleton | no | Planned parallel content-track work. Prepare Year-2 skeleton with CvTE-vwo anchor status and `concept_orphan` flags for CP-7; not an engineering Phase E blocker. |
 | R7.6 | RAG Quality Hardening | no | Planned. Close R7.4 follow-ups, split target-exercise chunks, expand retrieval eval coverage, backfill evidence anchors, and improve approved/pending/diagnostic labels. |
-| R14.1 | Curriculum Versioning | no | Planned earlier in the sequence. Track active v5, archived v4, the non-authoritative three-year prototype, built lesson outputs, and migrated/not-final target exercises so reports and retrieval do not silently mix incompatible source states. |
+| R14.1 | Curriculum Versioning | no | Planned, minimal. Track source/curriculum versions so retrieval does not silently mix syllabus, exam-program, blueprint, or owned-source versions. |
 | Sprint 12 | Exam And Target Exercise Decomposition Backfill | no | Planned after schema/overlay work. Backfill exercise metadata for the 349 exam questions and 49 target exercises through protected-source-safe overlays. |
 | Sprint 13 | Composition Pattern Registry | no | Planned. Define reusable exercise-composition patterns for internal authoring support, not automatic student-facing publication. |
 | Sprint 14 | C-to-B Promotion Workflow | no | Planned only after schema audit, owned-source registry, exercise overlays, D04/unit-design status, R7.6, R14.1, and precision lint path are ready. |
 | Product Gate | Re-Evaluate R10-R13 Product Surfaces | no | Blocked. Diagnostics, adaptive routing, student-facing AI, teacher cockpit deployment, automatic sequencing, mastery, and summative uses remain out of scope until data-quality gates justify them. |
-
-## Closed Sprints
-
-| Sprint | Name | Completed | Current State |
-|--------|------|-----------|---------------|
-| SYNC-1 | Roadmap Reconciliation | yes | Completed. Updated the references roadmap to v2.45 post-L1.6 state, updated the roadmap version index, and synchronized lesson/reference sequencing around foundation hardening instead of broad scaling. |
 | S9a | D04 CLI-Only Mutation Sprint | yes | Completed. Applied the CP-5 D04 decision through `unit-deprecate.js`, deprecated D04 with successor pointers to `A15`, `D06`, `A17`, `D11`, `A16`, `D12`, and `D27`, removed the single active target-exercise D04 citation, recorded mutation/stale-reference logs, regenerated reports/RAG/inventories, and preserved all blocked downstream uses. |
 | S9 | Unit Design Status And D04 Resolution | yes | Completed with `pass_with_conditions`. Added derived `unit-design-status` overlay, validator, JSON/Markdown report, reference-health/RAG labels, CP-5 decision record, dependent-unit audit, human interview, and gate closure; D04 remains promotion-blocked and no protected machine mutation occurred. |
 | S8 | Misconception Registry MVP | yes | Completed. Added the internal-only `references/data/misconceptions/misconception-registry.json`, tightened `misconception.schema.json`, added `check-misconceptions.js`, generated `misconception-registry` JSON/Markdown reports, exposed safe reference-health/RAG labels, and preserved all PV-G4 blocked-use conditions. |
@@ -96,102 +179,6 @@ Closed sprints are recorded separately in the "Closed Sprints" section below.
 | H0.1 | A-Domain Skilltree Consistency | yes | Historical completed work. `A38` through `A44` implemented; A-domain skilltree coverage matches the catalog. |
 | H0.2 | Reference Report Regeneration | yes | Historical completed work. Core reports regenerated and aligned with the catalog. |
 | H0.3 | Labor-Market Unit And Dependency Patch | yes | Historical branch work. Not present in the current 190-live-unit catalog; labor-market/unemployment sequencing is reopened under R2.4. |
-
-## Adoption Decision
-
-The handoff roadmap has been adopted as the main operating roadmap for the references team.
-
-No blocking incompatibility was found. The roadmap direction fits the repository: machine-edited references, evidence-first unit growth, JSON-first reports, review gates for pedagogical authority, and bounded later AI.
-
-Update 2026-04-29: R8.1 Scoped QC Issue Model is completed. The roadmap now has an internal-only quality issue layer under `references/data/qc/`, generated `reference-quality-issues` report output, and a reference-health/RAG data hook. QC issues are diagnostic governance records, not curriculum authority or student-facing material.
-
-Update 2026-04-30: HCS approved inserting `RX.2b Graphical Foundation Coverage And Mutation` before `RX.3`. RX.2 was a safe table/index first lane, not a full graphical-foundation completion. RX.2b must cover the missing bar-chart, line-graph, pie-chart, visual percentage-change, and visual index foundations before producer/profit graph units proceed.
-
-Update 2026-04-30: The Sprint Ledger was first moved near the top of the roadmap so agents saw current/open work before detailed operating rules and phase background.
-
-Update 2026-04-30: RX.2b closed `GATE-RX2b-graphical-foundation` as `pass_with_conditions` and added `A62`, `A63`, `A64`, `A65`, `A68`, `A69`, and `A73` through `unit-add.js`. `A71` remains held/high-risk. All seven new graphical-foundation units remain generator-blocked and non-interactive until generator implementation and validation.
-
-Update 2026-04-30: `S6 Bronnen Registry MVP` is completed. The first source-document registry implementation lives under `references/data/source-document-registry.json` as a governed overlay, not under `references/machine/`. It records source type, authority level, source version, status, owner, citation policy, and public-citation policy while preserving external/machine protected-surface boundaries.
-
-Update 2026-04-30: `S7 Skill And Operation Registry MVP` is prepared for `GATE-CP4-skill-registry-coexistence` review. The registry remains a `references/data/` overlay and keeps `required_units`, provisional `exercise_operations`, and `skill_tags` separate while preserving `required_skills` as legacy/source-only.
-
-Update 2026-05-01: Leadership approved the Procedure-Visual Backbone as a formal PV track. PV starts as a governed `references/data/procedure-visual/` overlay, not a `references/machine/` registry. PV.0/PV.1/PV.2 are inserted after S7/CP-4 and before large RX.3/RX.4 mutation work so producer graphs, elasticity diagrams, market diagrams, procedure games, and surface-specific visuals share one student-visible reasoning model.
-
-Update 2026-05-01: `GATE-CP4-skill-registry-coexistence` closed as `pass_with_conditions`. S7 is completed as a governed `references/data/` overlay. `exercise_operations` remain provisional, Dutch broad `skill_tags` are accepted as v1 with alias/naming follow-up, English dry-run `skill_tags` remain provisional aliases/sub-tags, and no machine registry or bulk backfill is authorized. PV.0 is completed: PV templates may reference provisional `exercise_operations` only with explicit provisional status and no operation promotion.
-
-Update 2026-05-01: `PV.1 Procedure-Visual Inventory` is completed. The inventory now lives at `references/data/procedure-visual/inventory.json` with 12 ranked pilot templates, runtime-surface findings, provisional operation-reference status, generator/projection blockers, and PV.2 schema requirements. No `references/machine/` or `references/external/` mutation occurred, and no student-facing PV projection is authorized.
-
-Update 2026-05-01: `PV.2 Procedure-Visual Schema And Validator MVP` is completed. The PV overlay now has strict schema files, vocabulary, empty real registries, a read-only validator, schema-status reports, and `GATE-PV-G1-schema` technical proof artifacts. Real templates and visual states remain deferred to PV.3, no PV `references/machine/` registry exists, and student-facing PV projection remains blocked.
-
-Update 2026-05-01: `RX.3 Producer Table And Graph Representation Units` is prepared for `GATE-RX3-producer-representation` human review. The packet splits the producer table/data lane (`A75`, `A76`, `A79`) from the producer graph lane (`A77`, `A78`, `A80`, `A81`), keeps graphical MO=MK held, applies PV.2 visual-state constraints, and authorizes no mutation before HCS decision.
-
-Update 2026-05-01: `GATE-RX3-producer-representation` closed as `pass_with_conditions`. RX.3 is completed as a non-mutating review sprint. The next allowed step is `RX.3a` bounded first-lane mutation review for `A75`, `A76`, and `A79`; `A76` must include `A14`, `A04`, and `A61` as needs. `A77`/`A78` may proceed later after `A75`, while `A80`, `A81`, and graphical MO=MK remain held.
-
-Update 2026-05-01: `RX.3a Producer Table/Data First-Lane Mutation Review` is prepared for `GATE-RX3a-first-lane-mutation-review`. Candidate specs, CLI mutation plan, and generator-block records are ready for `A75`, `A76`, and `A79`; execution is still blocked until HCS explicitly authorizes CLI mutation.
-
-Update 2026-05-01: `GATE-RX3a-first-lane-mutation-review` closed as `pass_with_conditions` and RX.3a applied the authorized producer table/data lane through `unit-add.js`. `A75`, `A76`, and `A79` are now live catalog units; `A76` includes `A14`, `A04`, and `A61` as required needs. All three remain generator-blocked/non-interactive. `A77`/`A78` move to a later graph-lane review, while `A80`, `A81`, and graphical MO=MK remain held.
-
-Update 2026-05-01: `RX.3b Producer TO-TK Graph-Lane Mutation Review` is prepared for `GATE-RX3b-producer-graph-lane-review`. Candidate specs and a blocked CLI plan are ready for `A77` and `A78`; the packet records PV graph-stage constraints and asks HCS whether `A78` should add `A77` as a dependency. No mutation is authorized before HCS decision. `A80`, `A81`, and graphical MO=MK remain held.
-
-Update 2026-05-01: `GATE-RX3b-producer-graph-lane-review` closed as `pass_with_conditions` and RX.3b applied the authorized TO-TK graph lane through `unit-add.js`. `A77` and `A78` are now live catalog units; `A78` includes `A63`, `A75`, and `A77` as required needs. Both remain generator-blocked/non-interactive. `A80`, `A81`, graphical MO=MK, real PV producer-graph templates, and student-facing PV projection remain blocked.
-
-Update 2026-05-01: `RX.4 Elasticity And Market Diagram Representation Units` is prepared for `GATE-RX4-elasticity-market-diagram-review` human review. The packet treats `A82` and `A84` as the lower-risk elasticity table/source lane, keeps `A83` conditional on the demand-graph versus P-Q graph evidence/naming decision, and holds new market/welfare/surplus/intervention graph units that overlap `A19`, `A32`, `A40`, `D39`, `D40`, `A51`, `A56`, or `A59`. No mutation is authorized before HCS decision.
-
-Update 2026-05-02: `GATE-RX4-elasticity-market-diagram-review` closed as `pass_with_conditions` and RX.4 applied the approved elasticity representation lane through `unit-add.js`. `A82`, `A84`, and conditionally approved `A83` are now live catalog units; `A83` uses the HCS-approved name `Prijselasticiteit van de vraag berekenen uit P-Q-grafiek`. All three remain generator-blocked/non-interactive. Market/welfare duplicate areas, student-facing skill-tree use, PV projection, diagnostics, adaptive routing, AI, sequencing, mastery, and summative use remain blocked.
-
-Update 2026-05-02: `PV.3 Pilot Procedure-Visual Templates` is completed. The PV overlay now contains six pilot procedure templates, six pilot visual states, and six unit-template links under `references/data/procedure-visual/`, with PV-G2 technical proof for formula trace, graph-stage, table-trace, and flowchart-style coverage. No PV `references/machine/` registry exists, all PV records block student-facing projection, and PV.4 is the next sprint.
-
-Update 2026-05-02: `PV.4 Procedure/Game Projection Contract` is completed. The procedure engine now supports optional `formal_step_id` alignment reporting without changing legacy gameplay, and `procedure-game-template-alignment` proves one B02 pilot maps every game step to a PV template while a legacy unmapped fixture remains valid. No forced procedure-game migration, student-facing PV projection, or PV machine registry is authorized.
-
-Update 2026-05-02: `RX.5 Representation Operation Registry And Reports` is completed as a report-only bridge. New representation-operation coverage, graph-skill-tree, and representation-transfer-gap reports distinguish live units, stale provisional registry statuses, held/high-risk records, generator-blocked live units, and PV pilot links without creating a `references/machine/` operation registry or authorizing student-facing use.
-
-Update 2026-05-02: `PV.5 Visual Projection MVP` is completed. The platform now has report-side PV renderer libraries for formula trace, flowchart, table trace, and static graph-stage visual states, plus 28 SVG proof artifacts under `reports/procedure-visual-projections/`. These are validation/proof outputs only: no lesson target writes, dynamic graph manipulation, PV machine promotion, or student-facing PV projection is authorized.
-
-Update 2026-05-02: `PV.6 Coverage Reports And Dashboard Integration` is completed. The new `procedure-visual-coverage` report and `reference-health` PV summary show PV-linked units, templates, visual states, surface variants, game mapping, answer-model step order, generator support, generator blocks, and blocker reasons while preserving diagnostic-only, non-authoritative, non-student-facing PV boundaries.
-
-Update 2026-05-03: `RX.6 Skill-Tree And Generator Integration` is completed. Source and deployed skill-tree base elements now expose only generator-backed active A-domain units as interactive skill-tree nodes. The 37 active A-domain units without generators are explicitly recorded as generator-blocked/non-interactive, including older R4.5 units `A45` through `A60` that predated the generator-block convention. Student-facing skill-tree exposure, PV projection, diagnostics, adaptive routing, AI, sequencing, mastery, and summative use remain blocked for generator-blocked units.
-
-Update 2026-05-03: `PV.7 Machine-Promotion Review Gate` is prepared for HCS review. The readiness report shows PV has schemas, validator, six pilot templates, six visual states, six unit-template links, projection proof, and coverage reports, but lacks a PV machine-edit CLI, machine-promotion mutation logs, and two lesson-side PV regression proofs. The packet recommends no `references/machine/` PV promotion in PV.7; all PV records should remain under `references/data/procedure-visual/` unless HCS explicitly decides otherwise.
-
-Update 2026-05-03: `GATE-PV7-machine-promotion-review` closed as `pass_with_conditions`. No Procedure-Visual records may move to `references/machine/` now. HCS confirmed that `unit-template-links` are the safest future first candidate only after CLI, validators, mutation logs, and lesson-regression proof exist. `PV.8 Promotion Pipeline Design` is inserted before any future promotion attempt, and PV-G4 lesson-regression proof remains required before reopening machine promotion.
-
-Update 2026-05-03: `PV.8 Promotion Pipeline Design` is completed as a design-only technical sprint. It defines the future unit-template-link-first promotion path, proposed CLI contracts, mutation-log schema, rollback expectations, validators, and future gate questions. No PV promotion CLI was implemented, no mutation log was created, no PV `references/machine/` registry was created, and no student-facing PV projection is authorized. PV-G4 lesson-regression proof is now the next required step before any future promotion attempt.
-
-Update 2026-05-03: `PV-G4 Lesson Regression Proof` evidence intake is prepared. The new proof template and review packet define the two required lesson-team-owned PV regression proofs, validation expectations, and no-hand-patch requirement. PV-G4 is not closed: there are currently 0/2 recorded lesson-side proofs, no lesson-team output was committed by the references team, and PV machine promotion plus student-facing PV projection remain blocked.
-
-Update 2026-05-14: `PV-G4 Lesson Regression Proof` received lesson-team proof records and HCS lead review returned `pass_with_conditions`. The platform proof intake now records `2/2` proofs from lesson commit `52f9237de9e465e7f75483f6feac4e80241e8631` with clean-worktree metadata, and the proof-intake checker passes. A post-closure report-state cleanup made the intake generator closure-aware, so current intake reports `pass_with_conditions` instead of `ready_for_hcs_review`. Conditions remain active: Proof 002 is bounded non-student-facing A61 proof diversity only, and PV machine promotion, student-facing PV projection, diagnostics, adaptive routing, mastery, sequencing, AI, and summative use remain blocked.
-
-Update 2026-05-14: `S8 Misconception Registry MVP` is plan-ready as the next reference sprint after PV-G4 closure. The plan keeps Sprint 8 as an internal diagnostic overlay only: it may tighten the existing misconception schema, add a small `references/data/` registry, validator, report, reference-health hook, and RAG diagnostic hook, but it must not authorize student-facing diagnostics, adaptive routing, mastery, sequencing, AI, summative use, PV projection, or PV machine promotion.
-
-Update 2026-05-15: `S8 Misconception Registry MVP` is completed. The registry lives at `references/data/misconceptions/misconception-registry.json` as an internal diagnostic overlay with four evidence-backed seed records, a tightened `misconception.schema.json`, read-only validator, JSON/Markdown report, reference-health summary, and generated-report RAG chunk. It remains non-authoritative: not primary evidence, not curriculum or exam authority, not a scoring rule, not student-facing diagnosis, and not permission for adaptive routing, mastery, sequencing, AI, summative use, PV projection, or PV machine promotion.
-
-Update 2026-05-15: `S9 Unit Design Status And D04 Resolution` is completed and `GATE-CP5-D04-resolution` closed as `pass_with_conditions`. S9 created a derived `references/data/unit-design-status/unit-design-status-overlay.json`, read-only validator, JSON/Markdown report, reference-health/RAG hooks, dependent-unit audit, D04 decision record, human interview, and gate closure. The CP-5 decision resolves direction only: D04 content should be redistributed to successor elasticity units and the standalone unit retired later through CLI. No protected machine mutation is authorized in S9; D04 remains promotion-blocked until a separate CLI-only mutation sprint executes the decision.
-
-Update 2026-05-16: `S9a D04 CLI-Only Mutation Sprint` is completed. S9a applied the CP-5 D04 decision through `unit-deprecate.js`, marking `D04` deprecated in favor of `A15`, `D06`, `A17`, `D11`, `A16`, `D12`, and `D27`; recorded a mutation plan, CLI mutation log, and stale-reference audit; removed the single active D04 citation from target exercise `2.1.3`; updated unit-design-status reports to `retired_after_cli_mutation`; and resolved QC issue `R8-QC-007`. No hand edits to `references/machine/` or `references/external/` occurred, no D04 prerequisite edge was added, and diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, PV projection, and PV machine promotion remain blocked.
-
-Update 2026-05-18: `SYNC-1 Roadmap Reconciliation` is completed. The reference roadmap now reflects the lesson-side May 18 closures: L1.5P corrected the Book 1 12-paragraph print scope, L1.5Q made v5 the active 54-record curriculum-source baseline, and L1.6 closed PASS WITH FLAGS after proving fresh paragraph transfer for `1.1.3`. This evidence does not approve broad lesson scaling. The coming period is a foundation-hardening phase: normalize the rough three-year blueprint as a non-authoritative v5-aware planning prototype, classify MTU and target-exercise gaps before mutation, keep migrated target exercises visibly non-final, and preserve blocks on diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, PV projection, and PV machine promotion.
-
-Update 2026-05-18: The Sprint Ledger now sits at the top of the roadmap, directly after metadata. The currently-active sprint sits first, future sprints follow in sequence, and closed sprints are archived in a separate `Closed Sprints` section.
-
-Compatibility decisions:
-
-- Sprint `R0.1` now means the sprint-execution scaffold.
-- The older local `R0.1` / `R0.2` history is preserved as completed historical `H0.x` work, not as active roadmap numbering.
-- `R0.1 Sprint Execution Scaffold` is completed.
-- `R2.3 Human Review And Gate Closure` is completed with `GATE-R2-empty-needs` status `hold`.
-- `R2.4 Evidence And Unit-Design Cleanup` is completed as a non-mutating review packet.
-- `R3.2 Apply Reviewed Empty-Needs Corrections` is completed; the approved mutation set was applied through CLI.
-- Current catalog metrics reflect the post-merge `main` state after R7.5 validation.
-- `R3.1 Reference CLI And Documentation Completion` is completed. CLI documentation and command coverage now distinguish ready mutation paths from remaining blockers.
-- The active roadmap is narrowed to reference and RAG data quality. Delayed product surfaces such as diagnostics, adaptive routing, teacher cockpit, student-facing AI, games, simulations, privacy deployment, accessibility deployment, and continuous-improvement claims are intentionally out of scope for this roadmap until the data foundation is stronger.
-- The exercise-schema roadmap restores the HCS two-axis role model (`instructional_role`, `assessment_role`), the four-field `scaffolding` object, and CP-1 through CP-8 cross-team checkpoints.
-- New registries under `references/machine/` remain future end states only. They require schema, CLI, validators, and mutation logs before machine files are created or changed.
-- `R9.2 Content Graph Projection` is completed. Owned-source content is queryable through a separate projection graph without changing R5 alignment authority.
-- `Phase RX Representation-Sensitive Micro-Unit Decomposition` is adopted as a dedicated reference-team phase. RX.1, GATE-RX2, and GATE-RX2b closed as `pass_with_conditions`; RX.2 and RX.2b applied bounded lanes through CLI-only mutation and now block student-facing use through explicit generator-block tracking.
-- `R8.1 Scoped QC Issue Model` is completed. Quality issues are internal-only governance signals with proof-to-close fields, exposed to dashboards and RAG as diagnostic generated-report context only.
-- `RX.2b Graphical Foundation Coverage And Mutation` is completed before RX.3. Producer/profit graph work may now proceed only with the RX.2b dependencies live or explicitly held; `A71` remains held/high-risk.
-- `S6 Bronnen Registry MVP` is completed as a `references/data/` registry overlay. No hand-maintained `references/machine/` source-document registry was created.
-
 
 ## Operating Rule
 
@@ -1297,71 +1284,18 @@ Required output: mutation plan, CLI mutation log, regenerated reports/RAG chunks
 
 Stop condition: do not hand-edit `references/machine/` or `references/external/`; do not mutate without exact target specs; do not authorize student-facing diagnostics, adaptive routing, mastery, sequencing, AI, summative decisions, PV projection, or PV machine promotion.
 
-### SYNC-1 Roadmap Reconciliation
+### Content Track 1 Year-1 Target Exercise Coverage
 
-Completion: completed on 2026-05-18. SYNC-1 reconciled the reference and
-lesson roadmaps after the lesson-side May 18 closures. It records that L1.5P,
-L1.5Q, and L1.6 materially improved the foundation, but did not approve broad
-lesson scaling. It also moves the next reference content work from immediate
-Year-1 coverage to a non-mutating three-year prototype normalization step.
-
-Required output: updated `references/reference-team-roadmap.md`, updated
-roadmap version index, and matching lesson roadmap sequencing.
-
-Stop condition preserved: do not authorize broad lesson scaling, PV machine
-promotion, student-facing PV projection, diagnostics, adaptive routing, mastery,
-sequencing, student-facing AI, or summative use from this roadmap sync.
-
-### REF-CT0 Three-Year Prototype Normalisation And MTU Classification
-
-Purpose: turn `knowledge/three Year blue print.md` into a clean planning
-prototype without making it a curriculum source of truth.
+Purpose: close the current partial-year course-design backbone.
 
 Required work:
 
-- Treat the rough three-year blueprint as a concept scaffold only.
-- Rewrite or derive a v5-aware non-authoritative prototype that reflects the
-  active four-book/four-test-week v5 baseline.
-- Classify units and paragraph candidates into:
-  - Year 1 confirmed
-  - Year 1 backfill candidate
-  - Year 2 skeleton candidate
-  - Year 3 skeleton candidate
-  - duplicate/merge/split candidate
-  - parked
-  - needs evidence
-- Preserve evidence-first ordering: exam questions and target exercises before
-  machine registry interpretation, syllabus grouping, or generated reports.
-- Produce a candidate-review packet for later MTU/target-exercise work.
-
-Required output: non-authoritative three-year planning prototype, MTU
-classification table, candidate-review packet, and explicit source/authority
-boundary note.
-
-Stop condition: do not mutate `references/machine/`; do not promote the rough
-three-year blueprint into the owned curriculum source; do not treat migrated v5
-target exercises as final-reviewed.
-
-### REF-CT1 Year-1 Target Exercise And MTU Coverage Baseline For v5
-
-Purpose: close the v5 Year-1 course-design coverage baseline after REF-CT0 has
-classified the three-year prototype and MTU gaps.
-
-Required work:
-
-- Use active v5, not v4.
-- Include built lesson evidence from `1.1.1`, `1.1.2`, and `1.1.3`.
-- Identify Year-1 count-bearing paragraphs with no target exercise or only a
-  placeholder target exercise.
+- Identify Year-1 paragraphs with no target exercise.
 - Separate missing target exercises from deliberately deferred paragraphs.
-- Connect target exercises to owned blueprint source, unit IDs, MTU
-  classifications, and evidence status.
-- Classify missing MTUs as backfill, future-year, duplicate, parked, or needs
-  evidence.
-- Produce a review packet before any CLI mutation.
+- Connect target exercises to owned blueprint source, unit IDs, and evidence status.
+- Produce `reports/blueprint-coverage.md`.
 
-Required output: Year-1 target-exercise/MTU coverage report and CP-6 review
-packet.
+Required output: Year-1 coverage report and CP-6 review packet.
 
 Stop condition: Year-1 does not close while target-exercise coverage or precision status is not acceptable.
 
@@ -1425,12 +1359,7 @@ Purpose: track curriculum/source versions and migrations so retrieval cannot sil
 
 Required work:
 
-- Record versioned exam programs, syllabi, owned source versions, rough planning
-  prototypes, built lesson output baselines, and migration status.
-- Distinguish archived v4, active v5, and non-authoritative three-year
-  prototypes.
-- Tag migrated/not-final-reviewed v5 target exercises distinctly from reviewed
-  final target exercises.
+- Record versioned exam programs, syllabi, owned source versions, and migration status.
 - Make stale references visible.
 - Link version changes to affected units, terms, and evidence anchors.
 - Keep the first pass minimal: enough to tag current external, machine, authored, and owned-source surfaces with version provenance.
@@ -1446,8 +1375,7 @@ Purpose: apply the audited schema and overlay model to the existing exam-questio
 Required work:
 
 - Backfill protected-source-safe metadata for the 349 exam-question records.
-- Backfill metadata for the active v5 target-exercise registry, currently 54
-  count-bearing records.
+- Backfill metadata for the 49 current target exercises.
 - Close known exam-question extraction gaps through overlays or refresh scripts, not hand edits to `references/external/`.
 - Record role, authority, Bloom level, instruction word, exercise operations, evidence status, and source version where approved by CP-1/CP-3.
 
@@ -1567,9 +1495,8 @@ Current generated reports:
 
 ### Owned Sources
 
-- `references/owned/course-blueprint-v5.md`: active owned curriculum-design baseline after L1.5Q. It mirrors the lesson-side `course_blueprint_v5.md`, uses the 12/12/14/16 four-book structure, and carries metadata in `references/owned/course-blueprint-v5.meta.json`.
-- `references/owned/course-blueprint-v4.md`: archived owned course-design baseline retained for historical comparison only.
-- Blueprint target exercises and sequencing are strong owned course-design signals, but migrated v5 target exercises remain non-final until the later target-exercise/MTU coverage and distribution audits.
+- `references/owned/course-blueprint-v4.md`: canonical owned curriculum-design blueprint for the currently designed year. It is partial (`year 1 of 3`) and carries metadata in `references/owned/course-blueprint-v4.meta.json`.
+- Blueprint target exercises and sequencing are strong owned course-design signals.
 - Blueprint prose is contextual/design rationale and cannot by itself mint or mutate machine units.
 
 ## Roadmap Phases
@@ -1731,20 +1658,15 @@ Sprints:
 - `S9 / Sprint 9` completed: unit design status and D04 decision gate closed as `pass_with_conditions`.
 - `S9a` completed: D04 deprecated through CLI-only mutation with successor pointers, stale-reference audit, and active target-exercise cleanup.
 
-### Content Track: Foundation Hardening Before Scale
+### Content Track: Year-1 Closeout And Year-2 Skeleton
 
-Goal: stabilize the v5/three-year planning model and MTU/target-exercise
-coverage before broader lesson production or protected registry mutation.
+Goal: let content coverage work proceed in parallel with engineering, while keeping promotion and authority gates explicit.
 
 Sprints:
 
-- `REF-CT0` planned next: normalize the rough three-year blueprint as a
-  non-authoritative v5-aware prototype and classify MTU gaps.
-- `REF-CT1` planned after REF-CT0: Year-1 target-exercise and MTU coverage
-  baseline for v5, with `GATE-CP6-year-1-paragraph-coverage`.
+- `Content Track 1` planned: Year-1 target-exercise coverage and `GATE-CP6-year-1-paragraph-coverage`.
 - `Content Track 2` planned: Year-1 precision and dual-coding audit.
-- `Content Track 3` planned: Year-2 skeleton and `GATE-CP7-year-2-anchoring`,
-  after the three-year prototype is cleaned enough to guide skeleton work.
+- `Content Track 3` planned: Year-2 skeleton and `GATE-CP7-year-2-anchoring`.
 
 ### Phase R14: Minimal Curriculum Versioning
 
@@ -1846,11 +1768,9 @@ PV-G4 Lesson regression proof
 S8 / Sprint 8 Misconception registry MVP completed
 Sprint 9 Unit design status and D04 resolution (CP-5) completed
 S9a D04 CLI-only mutation sprint completed
-SYNC-1 Roadmap reconciliation completed
-REF-CT0 Three-year prototype normalization and MTU classification
-REF-CT1 Year-1 target exercise and MTU coverage baseline for v5 (CP-6)
+Content Track 1 Year-1 target exercise coverage (CP-6)
 Content Track 2 Year-1 precision and dual-coding audit
-Content Track 3 Year-2 skeleton (CP-7)
+Content Track 3 Year-2 skeleton (CP-7, parallel content track)
 R7.6 RAG quality hardening
 R14.1 Minimal curriculum versioning
 Sprint 12 Exam and target exercise decomposition backfill
@@ -1863,7 +1783,7 @@ Do not invert this order.
 
 ## Immediate Next Sprint
 
-Next action: prepare `REF-CT0 Three-Year Prototype Normalisation And MTU Classification`. S9a has applied the CP-5 D04 decision through governed CLI-only mutation, and the lesson side has now closed L1.5P, L1.5Q, and L1.6, but that evidence supports foundation hardening rather than broad scaling. REF-CT0 must cleanly label the rough three-year blueprint as non-authoritative, make it v5-aware, classify MTU gaps, and prepare the ground for REF-CT1 without weakening the remaining blocks on diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, PV projection, or PV machine promotion.
+Next action: prepare `Content Track 1 Year-1 Target Exercise Coverage` and its CP-6 review packet. S9a has applied the CP-5 D04 decision through governed CLI-only mutation, so the next reference-team work should move to Year-1 target-exercise coverage without weakening the remaining blocks on diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, PV projection, or PV machine promotion.
 
 R4.5 has closed the bounded micro-unit mutation lane, CP-1 has closed the non-mutating schema audit gate as `pass_with_conditions`, CP-2 has closed the owned-source scope gate as `pass_with_conditions`, R9.1 has registered the owned-source surfaces, R9.2 has completed owned-content projection, S4/CP-3 has closed as `pass_with_conditions`, S4.1 has implemented the CP-3 condition artifacts, RX.1 has prepared the non-mutating representation-operation inventory, `GATE-RX1-representation-unit-scope` has closed as `pass_with_conditions`, RX.2/GATE-RX2 has added the bounded six-unit first lane through CLI-only mutation, RX.2b/GATE-RX2b has added the bounded seven-unit graphical foundation lane through CLI-only mutation while holding `A71`, R8.1 has added the scoped internal QC issue model, S6 has created the source-document registry MVP under `references/data/`, S7/CP-4 has closed as `pass_with_conditions`, RX.3a/RX.3b/RX.4 have applied producer and elasticity representation lanes through CLI-only mutation, PV.3 through PV.6 have completed pilot templates, projection proof, and coverage dashboards, RX.5 has added representation-operation reports, RX.6 has completed skill-tree generator readiness, PV.7 has closed the machine-promotion review gate without authorizing promotion, PV.8 has completed the promotion-pipeline design, PV-G4 has closed as `pass_with_conditions` with two reconciled lesson-team proofs, S8 has created the bounded internal misconception registry under `references/data/`, S9 has closed CP-5 as a D04 decision-only gate, and S9a has applied the D04 retirement through CLI-only mutation.
 

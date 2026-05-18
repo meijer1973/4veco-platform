@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_on": "2026-05-16",
+  "updated_on": "2026-05-18",
   "generated_by": "manual-roadmap-versioning",
   "canonical_archive_directory": "docs/roadmaps/outdated",
   "current_operational_roadmaps": [
@@ -15,13 +15,14 @@
   "roadmaps": [
     {
       "roadmap_id": "references-team-roadmap",
-      "version": "v2.44-s9a-d04-cli-mutation",
+      "version": "v2.45-post-l16-foundation-hardening",
       "title": "References Team Roadmap",
       "status": "active",
       "path": "references/reference-team-roadmap.md",
       "owner": "references_team",
-      "updated_on": "2026-05-16",
+      "updated_on": "2026-05-18",
       "supersedes": [
+        "docs/roadmaps/outdated/reference-team-roadmap-v2.44-s9a-d04-cli-mutation.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.43-s9-cp5-d04-closure.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.42-s8-misconception-registry.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.41-pvg4-pass-with-conditions.md",
@@ -65,7 +66,18 @@
         "knowledge/Exercise schema and quality/reference-team-roadmap Live version 28 April.md",
         "knowledge/Exercise schema and quality/roadmap-updated-repository-checked.md"
       ],
-      "notes": "Current operating roadmap after completing S9a D04 CLI-only mutation; Content Track 1 Year-1 target exercise coverage is the next planned reference sprint."
+      "notes": "Current operating roadmap after SYNC-1 post-L1.6 reconciliation; REF-CT0 three-year prototype normalisation and MTU classification is the next planned reference sprint, with broad lesson scaling not yet approved."
+    },
+    {
+      "roadmap_id": "references-team-roadmap-v2.44",
+      "version": "v2.44-s9a-d04-cli-mutation",
+      "title": "References Team Roadmap before post-L1.6 foundation hardening",
+      "status": "outdated",
+      "path": "docs/roadmaps/outdated/reference-team-roadmap-v2.44-s9a-d04-cli-mutation.md",
+      "owner": "references_team",
+      "updated_on": "2026-05-16",
+      "superseded_by": "references/reference-team-roadmap.md",
+      "notes": "Snapshot archived before SYNC-1 updated the roadmap to v2.45 with L1.5P/L1.5Q/L1.6 implications, REF-CT0 sequencing, and foundation-hardening before broad scaling."
     },
     {
       "roadmap_id": "references-team-roadmap-v2.43",
