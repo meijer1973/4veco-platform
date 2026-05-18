@@ -29,6 +29,18 @@ For any non-trivial sprint, roadmap, gate, reference-system, production, or arch
 - when blockers, evidence gaps, planning contradictions, or architectural uncertainty appear, say so plainly at the end and recommend the strategic pause or roadmap adjustment needed before continuing
 - do not leave the user to infer the next step from a status summary; the final paragraph must make the operational next action explicit
 
+### Remote publication and repository maps
+
+Off-site reviewers use GitHub as their working surface. A local commit is not complete until the remote branch and repository maps are current enough for those reviewers to inspect the work.
+
+Normal closure for non-trivial work now includes:
+
+- run `git fetch --prune origin` before final commit/push and resolve any behind/diverged state explicitly
+- refresh repository maps and GitHub-facing indexes whenever paths, roadmaps, generated reports, agents, skills, or review surfaces change: `npm.cmd run agent:index`, `node build-scripts/sprints/emit-url-index.js`, and `npm.cmd run dashboard:internal` when dashboard or roadmap state changes
+- keep `RESEARCH_AGENT_MAP.md`, `RESEARCH_AGENT_MAP_REFERENCES.md`, `AGENT_GITHUB_ENTRY.md`, `reports/url-index.md`, and `reports/github-agent-index-*.md` aligned with the real repository layout
+- after validation and commit, push to the normal remote branch unless the user explicitly asks to keep work local
+- report both the local commit hash and whether it has been pushed
+
 Human-review gates require actual review artifacts. Do not treat a casual "OK", "continue", or inferred approval as a completed human review when the plan requires an interview, decision record, or gate-closure file. 
 All other requirements for sprints are also  required for the Human review. So a checkable plan is made beforehand and that plan is tested afterwards. That will make sure that there is an actual log of the interview. 
 

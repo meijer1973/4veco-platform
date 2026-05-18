@@ -1920,9 +1920,12 @@ Plan
 -> Verify
 -> Review gate if needed
 -> Deterministic bundle check
+-> Fetch/prune remote and resolve behind/diverged state
+-> Refresh repository maps and GitHub-facing indexes
 -> Commit
+-> Push
 -> Tag
 -> Proceed only to the allowed next sprint
 ```
 
-Subagents find and frame issues. Humans make pedagogical decisions. Validators enforce completeness. Git records the state.
+Subagents find and frame issues. Humans make pedagogical decisions. Validators enforce completeness. GitHub is the review surface for off-site reviewers, so pushed remote state and current repository maps are part of done.

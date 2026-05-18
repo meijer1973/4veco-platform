@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-lessen
 
-Generated: 2026-05-08T20:06:47.437Z
+Generated: 2026-05-18T15:22:38.650Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-lessen`
-Files indexed: 1032
+Files indexed: 1208
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -27,18 +27,22 @@ _No files indexed in this group._
 
 ## engines
 
-Count: 30
+Count: 37
 
 - Boek 1 - Grondslagen, vraag en aanbod/shared/newsdetective-engine.js
 - Boek 1 - Grondslagen, vraag en aanbod/shared/newsdetective-ui.js
 - Boek 1 - Grondslagen, vraag en aanbod/shared/newsdetective.css
 - Boek 1 - Grondslagen, vraag en aanbod/shared/newsdetective/.gitkeep
 - Boek 1 - Grondslagen, vraag en aanbod/shared/newsdetective/1.1.1.js
+- Boek 1 - Grondslagen, vraag en aanbod/shared/newsdetective/1.1.2.js
+- Boek 1 - Grondslagen, vraag en aanbod/shared/newsdetective/1.1.3.js
 - Boek 1 - Grondslagen, vraag en aanbod/shared/procedure-engine.js
 - Boek 1 - Grondslagen, vraag en aanbod/shared/procedure-ui.js
 - Boek 1 - Grondslagen, vraag en aanbod/shared/procedure.css
 - Boek 1 - Grondslagen, vraag en aanbod/shared/procedure/.gitkeep
 - Boek 1 - Grondslagen, vraag en aanbod/shared/procedure/1.1.1.js
+- Boek 1 - Grondslagen, vraag en aanbod/shared/procedure/1.1.2.js
+- Boek 1 - Grondslagen, vraag en aanbod/shared/procedure/1.1.3.js
 - Boek 1 - Grondslagen, vraag en aanbod/shared/quiz-engine.js
 - Boek 1 - Grondslagen, vraag en aanbod/shared/quiz-ui.js
 - Boek 1 - Grondslagen, vraag en aanbod/shared/quiz.css
@@ -47,6 +51,8 @@ Count: 30
 - Boek 1 - Grondslagen, vraag en aanbod/shared/reasoning.css
 - Boek 1 - Grondslagen, vraag en aanbod/shared/reasoning/.gitkeep
 - Boek 1 - Grondslagen, vraag en aanbod/shared/reasoning/1.1.1.js
+- Boek 1 - Grondslagen, vraag en aanbod/shared/reasoning/1.1.2.js
+- Boek 1 - Grondslagen, vraag en aanbod/shared/reasoning/1.1.3.js
 - Boek 1 - Grondslagen, vraag en aanbod/shared/reasoning/meta-categories.js
 - Boek 1 - Grondslagen, vraag en aanbod/shared/skilltree-engine.js
 - Boek 1 - Grondslagen, vraag en aanbod/shared/skilltree-ui.js
@@ -54,6 +60,7 @@ Count: 30
 - Boek 1 - Grondslagen, vraag en aanbod/shared/skilltree/.gitkeep
 - Boek 1 - Grondslagen, vraag en aanbod/shared/skilltree/1.1.1.js
 - Boek 1 - Grondslagen, vraag en aanbod/shared/skilltree/1.1.2.js
+- Boek 1 - Grondslagen, vraag en aanbod/shared/skilltree/1.1.3.js
 - Boek 1 - Grondslagen, vraag en aanbod/shared/skilltree/base-elements.js
 - Boek 1 - Grondslagen, vraag en aanbod/shared/skilltree/explanations.js
 - Boek 1 - Grondslagen, vraag en aanbod/shared/theme.js
@@ -92,7 +99,7 @@ _No files indexed in this group._
 
 ## book folders
 
-Count: 805
+Count: 838
 
 - Boek 1 - Grondslagen, vraag en aanbod/_assets/1.1.1_ex_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/_assets/1.1.1_ex_1.svg
@@ -403,9 +410,21 @@ Count: 805
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_assets/1.1.1_we_1_web_light.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_assets/1.1.1_we_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_assets/1.1.1_we_1.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_assets/presentatie-slide3-img-14fd6f67e28c.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_assets/presentatie-slide4-img-69532d597fca.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_assets/presentatie-slide5-img-db6ea92cebd7.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_assets/presentatie-slide6-img-a0d089c4fdbb.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_paragraph-plan.md
+- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1-begeleide-inoefening-lead-review-v1.md
+- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1-companion-visual-review.md
+- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1-nieuws-met-visual-lead-review-v1.md
+- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1-presentatie-lead-review-v1.md
+- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1-presentatie-web-lead-review-v1.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1-quality-ref.yaml
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1-review.md
+- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1-samenvatting-lead-review-v1.md
+- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1-uitleg-vaardigheden-lead-review-v1.md
+- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1-uitleg-voorkennis-lead-review.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/build_pdf.py
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/index.html
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/Lees dit als je niet weet hoe je moet beginnen met deze les.docx
@@ -418,6 +437,8 @@ Count: 805
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/_assets/1.1.2_fig_3.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/_assets/1.1.2_we_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/_assets/1.1.2_we_1.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/_paragraph-plan.md
+- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2-companion-visual-review.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2-quality-ref.yaml
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2-review.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/build_pdf.py
@@ -434,6 +455,8 @@ Count: 805
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/_assets/1.1.3_fig_3.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/_assets/1.1.3_we_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/_assets/1.1.3_we_1.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/_paragraph-plan.md
+- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3-companion-visual-review.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3-quality-ref.yaml
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3-review.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/build_pdf.py
@@ -867,18 +890,32 @@ Count: 805
 - Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/build_chapter.py
 - Boek 1 - Grondslagen, vraag en aanbod/deploy-config.json
 - Boek 1 - Grondslagen, vraag en aanbod/index.html
+- Boek 1 - Grondslagen, vraag en aanbod/shared/adaptive-seam.js
+- Boek 1 - Grondslagen, vraag en aanbod/shared/graphical-engine.js
+- Boek 1 - Grondslagen, vraag en aanbod/shared/graphical-ui.js
+- Boek 1 - Grondslagen, vraag en aanbod/shared/graphical.css
+- Boek 1 - Grondslagen, vraag en aanbod/shared/graphical/1.1.2.js
+- Boek 1 - Grondslagen, vraag en aanbod/shared/graphical/1.1.3.js
 - Boek 1 - Grondslagen, vraag en aanbod/shared/newsdetective-engine.js
 - Boek 1 - Grondslagen, vraag en aanbod/shared/newsdetective-ui.js
 - Boek 1 - Grondslagen, vraag en aanbod/shared/newsdetective.css
 - Boek 1 - Grondslagen, vraag en aanbod/shared/newsdetective/.gitkeep
 - Boek 1 - Grondslagen, vraag en aanbod/shared/newsdetective/1.1.1.js
+- Boek 1 - Grondslagen, vraag en aanbod/shared/newsdetective/1.1.2.js
+- Boek 1 - Grondslagen, vraag en aanbod/shared/newsdetective/1.1.3.js
+- Boek 1 - Grondslagen, vraag en aanbod/shared/presentation-v2.css
+- Boek 1 - Grondslagen, vraag en aanbod/shared/presentation-v2.js
 - Boek 1 - Grondslagen, vraag en aanbod/shared/procedure-engine.js
 - Boek 1 - Grondslagen, vraag en aanbod/shared/procedure-ui.js
 - Boek 1 - Grondslagen, vraag en aanbod/shared/procedure.css
 - Boek 1 - Grondslagen, vraag en aanbod/shared/procedure/.gitkeep
 - Boek 1 - Grondslagen, vraag en aanbod/shared/procedure/1.1.1.js
+- Boek 1 - Grondslagen, vraag en aanbod/shared/procedure/1.1.2.js
+- Boek 1 - Grondslagen, vraag en aanbod/shared/procedure/1.1.3.js
 - Boek 1 - Grondslagen, vraag en aanbod/shared/questions/.gitkeep
 - Boek 1 - Grondslagen, vraag en aanbod/shared/questions/1.1.1.js
+- Boek 1 - Grondslagen, vraag en aanbod/shared/questions/1.1.2.js
+- Boek 1 - Grondslagen, vraag en aanbod/shared/questions/1.1.3.js
 - Boek 1 - Grondslagen, vraag en aanbod/shared/quiz-engine.js
 - Boek 1 - Grondslagen, vraag en aanbod/shared/quiz-ui.js
 - Boek 1 - Grondslagen, vraag en aanbod/shared/quiz.css
@@ -887,6 +924,8 @@ Count: 805
 - Boek 1 - Grondslagen, vraag en aanbod/shared/reasoning.css
 - Boek 1 - Grondslagen, vraag en aanbod/shared/reasoning/.gitkeep
 - Boek 1 - Grondslagen, vraag en aanbod/shared/reasoning/1.1.1.js
+- Boek 1 - Grondslagen, vraag en aanbod/shared/reasoning/1.1.2.js
+- Boek 1 - Grondslagen, vraag en aanbod/shared/reasoning/1.1.3.js
 - Boek 1 - Grondslagen, vraag en aanbod/shared/reasoning/meta-categories.js
 - Boek 1 - Grondslagen, vraag en aanbod/shared/skilltree-engine.js
 - Boek 1 - Grondslagen, vraag en aanbod/shared/skilltree-ui.js
@@ -894,6 +933,7 @@ Count: 805
 - Boek 1 - Grondslagen, vraag en aanbod/shared/skilltree/.gitkeep
 - Boek 1 - Grondslagen, vraag en aanbod/shared/skilltree/1.1.1.js
 - Boek 1 - Grondslagen, vraag en aanbod/shared/skilltree/1.1.2.js
+- Boek 1 - Grondslagen, vraag en aanbod/shared/skilltree/1.1.3.js
 - Boek 1 - Grondslagen, vraag en aanbod/shared/skilltree/base-elements.js
 - Boek 1 - Grondslagen, vraag en aanbod/shared/skilltree/explanations.js
 - Boek 1 - Grondslagen, vraag en aanbod/shared/theme.js
@@ -902,7 +942,7 @@ Count: 805
 
 ## paragraph folders
 
-Count: 518
+Count: 565
 
 - "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken \342\200\223 antwoorden.html"
 - "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken \342\200\223 antwoorden.md"
@@ -916,6 +956,7 @@ Count: 518
 - "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken \342\200\223 midden \342\200\223 antwoorden.docx"
 - "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken \342\200\223 midden \342\200\223 vragen.docx"
 - "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken \342\200\223 nieuws met visual.docx"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken \342\200\223 nieuws met visual.html"
 - "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken \342\200\223 nieuws-detective.html"
 - "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken \342\200\223 opgaven.html"
 - "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken \342\200\223 opgaven.md"
@@ -923,13 +964,16 @@ Count: 518
 - "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken \342\200\223 paragraaf.html"
 - "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken \342\200\223 paragraaf.md"
 - "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken \342\200\223 paragraaf.pdf"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken \342\200\223 presentatie-v2-prototype.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken \342\200\223 presentatie-v2-prototype.pptx"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken \342\200\223 presentatie.html"
 - "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken \342\200\223 presentatie.pptx"
 - "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken \342\200\223 redeneer-spel.html"
 - "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken \342\200\223 samenvatting.docx"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken \342\200\223 samenvatting.html"
 - "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken \342\200\223 stappenplan.html"
 - "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken \342\200\223 uitleg vaardigheden.docx"
 - "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken \342\200\223 uitleg vaardigheden.html"
-- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken \342\200\223 uitleg voorkennis - layout test v1.html"
 - "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken \342\200\223 uitleg voorkennis.docx"
 - "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken \342\200\223 uitleg voorkennis.html"
 - "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken \342\200\223 verrijking \342\200\223 antwoorden.docx"
@@ -939,22 +983,49 @@ Count: 518
 - "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers \342\200\223 antwoorden.html"
 - "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers \342\200\223 antwoorden.md"
 - "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers \342\200\223 antwoorden.pdf"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers \342\200\223 begeleide inoefening.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers \342\200\223 grafiekenspel.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers \342\200\223 instapquiz.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers \342\200\223 nieuws met visual.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers \342\200\223 nieuws-detective.html"
 - "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers \342\200\223 opgaven.html"
 - "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers \342\200\223 opgaven.md"
 - "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers \342\200\223 opgaven.pdf"
 - "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers \342\200\223 paragraaf.html"
 - "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers \342\200\223 paragraaf.md"
 - "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers \342\200\223 paragraaf.pdf"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers \342\200\223 presentatie.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers \342\200\223 presentatie.pptx"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers \342\200\223 redeneer-spel.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers \342\200\223 samenvatting.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers \342\200\223 stappenplan.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers \342\200\223 uitleg vaardigheden.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers \342\200\223 uitleg voorkennis.html"
 - "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers \342\200\223 wiskundevaardigheden.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers \342\200\223 youtube-videos.html"
 - "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen \342\200\223 antwoorden.html"
 - "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen \342\200\223 antwoorden.md"
 - "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen \342\200\223 antwoorden.pdf"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen \342\200\223 begeleide inoefening.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen \342\200\223 grafiekenspel.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen \342\200\223 instapquiz.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen \342\200\223 nieuws met visual.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen \342\200\223 nieuws-detective.html"
 - "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen \342\200\223 opgaven.html"
 - "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen \342\200\223 opgaven.md"
 - "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen \342\200\223 opgaven.pdf"
 - "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen \342\200\223 paragraaf.html"
 - "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen \342\200\223 paragraaf.md"
 - "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen \342\200\223 paragraaf.pdf"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen \342\200\223 presentatie.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen \342\200\223 presentatie.pptx"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen \342\200\223 redeneer-spel.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen \342\200\223 samenvatting.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen \342\200\223 stappenplan.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen \342\200\223 uitleg vaardigheden.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen \342\200\223 uitleg voorkennis.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen \342\200\223 wiskundevaardigheden.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen \342\200\223 youtube-videos.html"
 - "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.4 Gemengde opgaven/1.1.4 Gemengde opgaven \342\200\223 antwoorden.html"
 - "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.4 Gemengde opgaven/1.1.4 Gemengde opgaven \342\200\223 antwoorden.md"
 - "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.4 Gemengde opgaven/1.1.4 Gemengde opgaven \342\200\223 antwoorden.pdf"
@@ -1150,9 +1221,21 @@ Count: 518
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_assets/1.1.1_we_1_web_light.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_assets/1.1.1_we_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_assets/1.1.1_we_1.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_assets/presentatie-slide3-img-14fd6f67e28c.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_assets/presentatie-slide4-img-69532d597fca.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_assets/presentatie-slide5-img-db6ea92cebd7.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_assets/presentatie-slide6-img-a0d089c4fdbb.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_paragraph-plan.md
+- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1-begeleide-inoefening-lead-review-v1.md
+- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1-companion-visual-review.md
+- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1-nieuws-met-visual-lead-review-v1.md
+- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1-presentatie-lead-review-v1.md
+- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1-presentatie-web-lead-review-v1.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1-quality-ref.yaml
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1-review.md
+- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1-samenvatting-lead-review-v1.md
+- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1-uitleg-vaardigheden-lead-review-v1.md
+- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1-uitleg-voorkennis-lead-review.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/build_pdf.py
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/index.html
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/Lees dit als je niet weet hoe je moet beginnen met deze les.docx
@@ -1165,6 +1248,8 @@ Count: 518
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/_assets/1.1.2_fig_3.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/_assets/1.1.2_we_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/_assets/1.1.2_we_1.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/_paragraph-plan.md
+- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2-companion-visual-review.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2-quality-ref.yaml
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2-review.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/build_pdf.py
@@ -1181,6 +1266,8 @@ Count: 518
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/_assets/1.1.3_fig_3.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/_assets/1.1.3_we_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/_assets/1.1.3_we_1.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/_paragraph-plan.md
+- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3-companion-visual-review.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3-quality-ref.yaml
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3-review.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/build_pdf.py
@@ -1425,7 +1512,7 @@ Count: 518
 
 ## generated artifacts
 
-Count: 760
+Count: 785
 
 - Boek 1 - Grondslagen, vraag en aanbod/_assets/1.1.1_ex_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/_assets/1.1.1_ex_1.svg
@@ -1736,9 +1823,21 @@ Count: 760
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_assets/1.1.1_we_1_web_light.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_assets/1.1.1_we_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_assets/1.1.1_we_1.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_assets/presentatie-slide3-img-14fd6f67e28c.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_assets/presentatie-slide4-img-69532d597fca.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_assets/presentatie-slide5-img-db6ea92cebd7.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_assets/presentatie-slide6-img-a0d089c4fdbb.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_paragraph-plan.md
+- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1-begeleide-inoefening-lead-review-v1.md
+- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1-companion-visual-review.md
+- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1-nieuws-met-visual-lead-review-v1.md
+- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1-presentatie-lead-review-v1.md
+- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1-presentatie-web-lead-review-v1.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1-quality-ref.yaml
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1-review.md
+- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1-samenvatting-lead-review-v1.md
+- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1-uitleg-vaardigheden-lead-review-v1.md
+- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1-uitleg-voorkennis-lead-review.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/index.html
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/Lees dit als je niet weet hoe je moet beginnen met deze les.docx
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/svg/1.1.1-nieuws-visual.svg
@@ -1750,6 +1849,8 @@ Count: 760
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/_assets/1.1.2_fig_3.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/_assets/1.1.2_we_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/_assets/1.1.2_we_1.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/_paragraph-plan.md
+- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2-companion-visual-review.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2-quality-ref.yaml
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2-review.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/index.html
@@ -1765,6 +1866,8 @@ Count: 760
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/_assets/1.1.3_fig_3.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/_assets/1.1.3_we_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/_assets/1.1.3_we_1.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/_paragraph-plan.md
+- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3-companion-visual-review.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3-quality-ref.yaml
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3-review.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/index.html
@@ -2175,23 +2278,34 @@ Count: 760
 - Boek 1 - Grondslagen, vraag en aanbod/index.html
 - Boek 1 - Grondslagen, vraag en aanbod/shared/newsdetective/.gitkeep
 - Boek 1 - Grondslagen, vraag en aanbod/shared/newsdetective/1.1.1.js
+- Boek 1 - Grondslagen, vraag en aanbod/shared/newsdetective/1.1.2.js
+- Boek 1 - Grondslagen, vraag en aanbod/shared/newsdetective/1.1.3.js
 - Boek 1 - Grondslagen, vraag en aanbod/shared/procedure/.gitkeep
 - Boek 1 - Grondslagen, vraag en aanbod/shared/procedure/1.1.1.js
+- Boek 1 - Grondslagen, vraag en aanbod/shared/procedure/1.1.2.js
+- Boek 1 - Grondslagen, vraag en aanbod/shared/procedure/1.1.3.js
 - Boek 1 - Grondslagen, vraag en aanbod/shared/questions/.gitkeep
 - Boek 1 - Grondslagen, vraag en aanbod/shared/questions/1.1.1.js
+- Boek 1 - Grondslagen, vraag en aanbod/shared/questions/1.1.2.js
+- Boek 1 - Grondslagen, vraag en aanbod/shared/questions/1.1.3.js
 - Boek 1 - Grondslagen, vraag en aanbod/shared/reasoning/.gitkeep
 - Boek 1 - Grondslagen, vraag en aanbod/shared/reasoning/1.1.1.js
+- Boek 1 - Grondslagen, vraag en aanbod/shared/reasoning/1.1.2.js
+- Boek 1 - Grondslagen, vraag en aanbod/shared/reasoning/1.1.3.js
 - Boek 1 - Grondslagen, vraag en aanbod/shared/reasoning/meta-categories.js
 - Boek 1 - Grondslagen, vraag en aanbod/shared/skilltree/.gitkeep
 - Boek 1 - Grondslagen, vraag en aanbod/shared/skilltree/1.1.1.js
 - Boek 1 - Grondslagen, vraag en aanbod/shared/skilltree/1.1.2.js
+- Boek 1 - Grondslagen, vraag en aanbod/shared/skilltree/1.1.3.js
 - Boek 1 - Grondslagen, vraag en aanbod/shared/skilltree/base-elements.js
 - Boek 1 - Grondslagen, vraag en aanbod/shared/skilltree/explanations.js
 
 ## other
 
-Count: 41
+Count: 153
 
+- _team-b-reference/1.1.1/uitleg vaardigheden team b.html
+- _team-b-reference/1.1.1/uitleg voorkennis team b.html
 - .gitattributes
 - .gitignore
 - .nojekyll
@@ -2229,8 +2343,117 @@ Count: 41
 - "Boek 1 - Grondslagen, vraag en aanbod/Boek 1 Grondslagen, vraag en aanbod \342\200\223 boek.md"
 - "Boek 1 - Grondslagen, vraag en aanbod/Boek 1 Grondslagen, vraag en aanbod \342\200\223 boek.pdf"
 - course_blueprint_v4.md
+- course_blueprint_v5.md
 - index.html
+- knowledge/handoff-presentation-method-to-lessons-team.md
+- L-PV0-proof-track-plan.md
+- L-PV1-L-PV4-proof-track-execution-log.md
+- L-PV5-roadmap-sync-log.md
+- L1.4-PARITY-sprint-plan.md
+- L1.4-sprint-plan.md
+- L1.5B-closure-log.md
+- L1.5B-sprint-plan.md
+- L1.5D-b02-cross-surface-parity-plan.md
+- L1.5D-presentation-reset-plan.md
+- L1.5D-sprint-review-v1.md
+- L1.5D-sprint-review-v2.md
+- L1.5D-sprint-review-v3.md
+- L1.5G-A-graphical-game-scope-plan.md
+- L1.5G-A-mvp-data-model-sketch.md
+- L1.5G-A-prototype-extraction-matrix.md
+- L1.5G-B-adaptive-seam-plan.md
+- L1.5G-B-closure-log.md
+- L1.5G-C-closure-log.md
+- L1.5G-C-graphical-game-mvp-plan.md
+- L1.5G-D-closure-log.md
+- L1.5G-D-three-aspect-routing-plan.md
+- L1.5G-E-closure-log.md
+- L1.5G-E-human-review-packet.md
+- L1.5G-E-human-review-record.md
+- L1.5G-E-integration-qa-review-gate-plan.md
+- L1.5G-E-lead-review-summary.md
+- L1.5G-E-screenshots/graphical-desktop-dark.png
+- L1.5G-E-screenshots/graphical-desktop-light.png
+- L1.5G-E-screenshots/graphical-diagnostic-feedback-desktop-light.png
+- L1.5G-E-screenshots/graphical-final-feedback-desktop-light.png
+- L1.5G-E-screenshots/graphical-final-feedback-mobile-390x1280-light.png
+- L1.5G-E-screenshots/graphical-mobile-390x1280-dark.png
+- L1.5G-E-screenshots/graphical-mobile-390x1280-light.png
+- L1.5G-E-screenshots/graphical-percentage-selectors-mobile-390x1280-light.png
+- L1.5G-E-screenshots/landing-desktop-dark.png
+- L1.5G-E-screenshots/landing-desktop-light.png
+- L1.5G-E-screenshots/landing-mobile-390x1280-dark.png
+- L1.5G-E-screenshots/landing-mobile-390x1280-light.png
+- L1.5G-E-student-experience-review.md
+- L1.5G-E-teacher-learning-quality-review.md
+- L1.5G-E-technical-qa-report.md
+- L1.5O-output-profile-simplification-plan.md
+- L1.5P-closure-log.md
+- L1.5P-cut-survival-map.md
+- L1.5P-lead-review-record.md
+- L1.5P-sprint-plan.md
+- L1.5Q-closure-log.md
+- L1.5Q-migration-table.md
+- L1.5Q-phase-a-source-of-truth-log.md
+- L1.5Q-sprint-plan.md
+- L1.5Q-target-exercise-source-path.md
+- L1.6-closure-log.md
+- L1.6-human-review-packet.md
+- L1.6-human-review-record.md
+- L1.6-lead-review-summary.md
+- L1.6-screenshots/presentation/dark-notes-slide-1.png
+- L1.6-screenshots/presentation/dark-notes-slide-2.png
+- L1.6-screenshots/presentation/dark-notes-slide-3.png
+- L1.6-screenshots/presentation/dark-notes-slide-4.png
+- L1.6-screenshots/presentation/dark-notes-slide-5.png
+- L1.6-screenshots/presentation/dark-slide-1.png
+- L1.6-screenshots/presentation/dark-slide-2.png
+- L1.6-screenshots/presentation/dark-slide-3.png
+- L1.6-screenshots/presentation/dark-slide-4.png
+- L1.6-screenshots/presentation/dark-slide-5.png
+- L1.6-screenshots/presentation/desktop-slide-1.png
+- L1.6-screenshots/presentation/desktop-slide-2.png
+- L1.6-screenshots/presentation/desktop-slide-3.png
+- L1.6-screenshots/presentation/desktop-slide-4.png
+- L1.6-screenshots/presentation/desktop-slide-5.png
+- L1.6-screenshots/presentation/fullscreen-slide-1.png
+- L1.6-screenshots/presentation/fullscreen-slide-2.png
+- L1.6-screenshots/presentation/fullscreen-slide-3.png
+- L1.6-screenshots/presentation/fullscreen-slide-4.png
+- L1.6-screenshots/presentation/fullscreen-slide-5.png
+- L1.6-screenshots/presentation/mobile-slide-1.png
+- L1.6-screenshots/presentation/mobile-slide-2.png
+- L1.6-screenshots/presentation/mobile-slide-3.png
+- L1.6-screenshots/presentation/mobile-slide-4.png
+- L1.6-screenshots/presentation/mobile-slide-5.png
+- L1.6-screenshots/presentation/wide-notes-slide-1.png
+- L1.6-screenshots/presentation/wide-notes-slide-2.png
+- L1.6-screenshots/presentation/wide-notes-slide-3.png
+- L1.6-screenshots/presentation/wide-notes-slide-4.png
+- L1.6-screenshots/presentation/wide-notes-slide-5.png
+- L1.6-screenshots/student-web/1-1-3-grafieken-en-tabellen-grafiekenspel-desktop-dark.png
+- L1.6-screenshots/student-web/1-1-3-grafieken-en-tabellen-grafiekenspel-desktop-light.png
+- L1.6-screenshots/student-web/1-1-3-grafieken-en-tabellen-grafiekenspel-mobile-dark.png
+- L1.6-screenshots/student-web/1-1-3-grafieken-en-tabellen-grafiekenspel-mobile-light.png
+- L1.6-screenshots/student-web/index-desktop-dark.png
+- L1.6-screenshots/student-web/index-desktop-light.png
+- L1.6-screenshots/student-web/index-mobile-dark.png
+- L1.6-screenshots/student-web/index-mobile-light.png
+- L1.6-sprint-plan.md
+- L1.6-student-experience-review.md
+- L1.6-teacher-learning-quality-review.md
+- L1.6-technical-qa-report.md
+- L1.6-verification-report.md
 - lessen-team-roadmap.md
 - plan-1.1.1-part-b-clarity-audit.md
+- plan-l1.5v-companion-quality.md
+- pv-g4-proof-records/HCS-PV-G4-lead-review-plan.md
+- pv-g4-proof-records/HCS-PV-G4-lead-review-record.md
+- pv-g4-proof-records/HCS-PV-G4-lead-review-verification.md
+- pv-g4-proof-records/HCS-PV-G4-lesson-regression-review-packet.md
+- pv-g4-proof-records/pilot-surfaces/a61-table-trace-pilot.json
+- pv-g4-proof-records/PVG4-proof-001.json
+- pv-g4-proof-records/PVG4-proof-002.json
+- pv-g4-proof-records/reports/PVG4-proof-001-procedure-contract-report.json
+- pv-g4-proof-records/reports/PVG4-proof-002-a61-table-trace-report.json
 - vw-1022-a-25-1-o.pdf
-

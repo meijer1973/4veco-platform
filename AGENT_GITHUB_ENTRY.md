@@ -9,6 +9,7 @@ Path reliability:
 - Use exact paths from `RESEARCH_AGENT_MAP.md` or this file when possible.
 - Use `reports/github-agent-index-platform.md` and `reports/github-agent-index-lessen.md` for existence checks.
 - Use GitHub search mainly for discovery, not proof; confirm search hits through exact paths or the generated inventory.
+- These GitHub-facing maps must be refreshed and pushed whenever repository paths, roadmaps, generated reports, review packets, agents, skills, or source surfaces change.
 
 | Question type | Inspect first |
 |---|---|
@@ -50,4 +51,4 @@ Useful entry points:
 - `agents/student-experience-review-agent.md`
 - `agents/econ-companion-visual-review.md`
 - `agents/visual-qa-agent.md`
-- `reports/github-agent-index-platform.md` after running `npm run agent:index`
+- `reports/github-agent-index-platform.md` after running `npm.cmd run agent:index`

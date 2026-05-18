@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-05-10T08:02:05.340Z
+Generated: 2026-05-18T15:22:38.611Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 1247
+Files indexed: 1358
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -41,11 +41,17 @@ Count: 8
 
 ## engines
 
-Count: 38
+Count: 58
 
+- engines/adaptive-seam.js
+- engines/graphical-engine.js
+- engines/graphical-ui.js
+- engines/graphical.css
 - engines/newsdetective-engine.js
 - engines/newsdetective-ui.js
 - engines/newsdetective.css
+- engines/presentation-v2.css
+- engines/presentation-v2.js
 - engines/procedure-engine.js
 - engines/procedure-ui.js
 - engines/procedure.css
@@ -63,11 +69,24 @@ Count: 38
 - engines/skilltree/explanations.js
 - engines/skilltree/generators.js
 - engines/tests/_wiskundevaardigheden-template.html
+- engines/tests/adaptive-seam.test.js
+- engines/tests/companion-alt-text-meaningful.test.js
+- engines/tests/companion-html-checklist-routes.test.js
+- engines/tests/companion-html-list-rendering.test.js
+- engines/tests/companion-terminology.test.js
 - engines/tests/converter-error-exit.test.js
+- engines/tests/docx-style-ids-unique.test.js
+- engines/tests/fig-3-step-count.test.js
+- engines/tests/graphical-data.test.js
+- engines/tests/graphical-engine.test.js
+- engines/tests/graphical-ui.test.js
 - engines/tests/harness-skilltree-ui.html
+- engines/tests/l1-5d-v2-mobile-fixes.test.js
 - engines/tests/micro-teaching-units.test.js
 - engines/tests/newsdetective-data.test.js
 - engines/tests/newsdetective-engine.test.js
+- engines/tests/presentatie-html-shape.test.js
+- engines/tests/presentation-v2-prototype.test.js
 - engines/tests/procedure-data-formal-step.test.js
 - engines/tests/procedure-data.test.js
 - engines/tests/procedure-engine.test.js
@@ -78,13 +97,14 @@ Count: 38
 - engines/tests/REFACTOR-NOTES.md
 - engines/tests/skilltree-data.test.js
 - engines/tests/skilltree-engine.test.js
+- engines/tests/visual-surfaces-no-prod-label.test.js
 - engines/theme.js
 - engines/voorkennis.css
 - engines/voorkennis.js
 
 ## build scripts
 
-Count: 229
+Count: 260
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -92,21 +112,30 @@ Count: 229
 - build-scripts/archive/README.md
 - build-scripts/archive/restyle-instapquiz.js
 - build-scripts/archive/roundtrip-pptx.py
+- build-scripts/books/book-manifests/book-1-print-1.3.4-gemengde-opgaven.md
 - build-scripts/books/book-manifests/book-1-voorwoord.md
 - build-scripts/books/book-manifests/book-1.json
 - build-scripts/books/build-book.py
 - build-scripts/books/lib_book.py
 - build-scripts/books/README.md
+- build-scripts/content/book-1/b1-111-alt-text.js
 - build-scripts/content/book-1/b1-111-inoefening.js
 - build-scripts/content/book-1/b1-111-nieuws.js
 - build-scripts/content/book-1/b1-111-opgaven.js
 - build-scripts/content/book-1/b1-111-presentatie.js
+- build-scripts/content/book-1/b1-111-presentation-v2-model.js
+- build-scripts/content/book-1/b1-111-presentation-v2-prototype.js
+- build-scripts/content/book-1/b1-111-procedure-data.js
 - build-scripts/content/book-1/b1-111-samenvatting.js
 - build-scripts/content/book-1/b1-111-vaardigheden.js
 - build-scripts/content/book-1/b1-111-visual-variants.js
 - build-scripts/content/book-1/b1-111-voorkennis.js
 - build-scripts/content/book-1/b1-111-youtube-videos.js
 - build-scripts/content/book-1/b1-111-youtube-videos.md
+- build-scripts/content/book-1/b1-112-graphical-data.js
+- build-scripts/content/book-1/b1-112-student-web.js
+- build-scripts/content/book-1/b1-113-graphical-data.js
+- build-scripts/content/book-1/b1-113-student-web.js
 - build-scripts/content/book-1/README.md
 - build-scripts/content/legacy-target/build-311-basisopgaven.js
 - build-scripts/content/legacy-target/build-infographic-311.js
@@ -140,6 +169,7 @@ Count: 229
 - build-scripts/content/legacy-target/voorkennis-352-naar-het-examen.js
 - build-scripts/lib/convert_begeleide_inoefening.py
 - build-scripts/lib/convert_nieuws.py
+- build-scripts/lib/convert_presentatie.py
 - build-scripts/lib/convert_samenvatting.py
 - build-scripts/lib/convert_vaardigheden.py
 - build-scripts/lib/convert_voorkennis.py
@@ -155,7 +185,10 @@ Count: 229
 - build-scripts/lib/lib-table-trace-renderer.js
 - build-scripts/lib/lib-visual-state-renderer.js
 - build-scripts/lib/lib-visual-surfaces.js
+- build-scripts/lib/render-presentation-v2-html.js
+- build-scripts/lib/render-presentation-v2-pptx.js
 - build-scripts/lib/verify_svg_geometry.py
+- build-scripts/platform/build-graphical-shells.js
 - build-scripts/platform/build-landing-page.js
 - build-scripts/platform/build-newsdetective-shells.js
 - build-scripts/platform/build-procedure-shells.js
@@ -191,6 +224,7 @@ Count: 229
 - build-scripts/references/build-procedure-visual-projection-mvp.js
 - build-scripts/references/build-procedure-visual-promotion-pipeline-design.js
 - build-scripts/references/build-procedure-visual-schema-status.js
+- build-scripts/references/build-pv-g4-lesson-proof-records.js
 - build-scripts/references/build-reference-inventory.js
 - build-scripts/references/build-representation-operation-coverage.js
 - build-scripts/references/build-representation-operation-inventory.js
@@ -199,6 +233,7 @@ Count: 229
 - build-scripts/references/build-skill-operation-registry.js
 - build-scripts/references/build-skilltree-generator-readiness.js
 - build-scripts/references/build-source-document-registry.js
+- build-scripts/references/build-unit-design-status-overlay.js
 - build-scripts/references/build-unit-index.js
 - build-scripts/references/check-alignment-graph.js
 - build-scripts/references/check-document-inventory.js
@@ -207,6 +242,7 @@ Count: 229
 - build-scripts/references/check-evidence-anchors.js
 - build-scripts/references/check-exercise-overlay-conditions.js
 - build-scripts/references/check-exercise-overlays.js
+- build-scripts/references/check-misconceptions.js
 - build-scripts/references/check-owned-content-graph.js
 - build-scripts/references/check-owned-source-registry.js
 - build-scripts/references/check-procedure-visual-coverage.js
@@ -231,23 +267,27 @@ Count: 229
 - build-scripts/references/check-rx3b-producer-graph-lane-review.js
 - build-scripts/references/check-rx4-elasticity-market-diagram-mutations.js
 - build-scripts/references/check-rx4-elasticity-market-diagram-review.js
+- build-scripts/references/check-s9a-d04-cli-mutation.js
 - build-scripts/references/check-skill-operation-registry.js
 - build-scripts/references/check-skilltree-generator-readiness.js
 - build-scripts/references/check-source-document-registry.js
 - build-scripts/references/check-source-manifest.js
 - build-scripts/references/check-source-of-truth.js
 - build-scripts/references/check-target-exercise-flags.js
+- build-scripts/references/check-unit-design-status.js
 - build-scripts/references/close-and-apply-rx2-first-lane.js
 - build-scripts/references/close-and-apply-rx2b-graphical-foundation.js
 - build-scripts/references/close-and-apply-rx3a-first-lane.js
 - build-scripts/references/close-and-apply-rx3b-producer-graph-lane.js
 - build-scripts/references/close-and-apply-rx4-elasticity-market-diagram.js
+- build-scripts/references/course-blueprint-active.js
 - build-scripts/references/derive-exam-codes.js
 - build-scripts/references/download-exams.js
 - build-scripts/references/exam-question-gap-audit.js
 - build-scripts/references/extract-eindtermen.js
 - build-scripts/references/extract-exam-questions.js
 - build-scripts/references/math-migration-map.json
+- build-scripts/references/migrate-course-target-exercises-v5.js
 - build-scripts/references/migrate-l0-to-l1-economic.js
 - build-scripts/references/migrate-paths.js
 - build-scripts/references/prepare-empty-needs-review.js
@@ -304,26 +344,38 @@ Count: 229
 - build-scripts/templates/template-B_voorkennis.js
 - build-scripts/templates/template-paragraph-plan.md
 - build-scripts/tools/build-skill-tree-viewer.js
+- scripts/audit-pptx-accessibility.py
+- scripts/check-book-print-scope.js
 - scripts/check-book.js
+- scripts/check-course-target-exercises-v5.js
 - scripts/check-links.js
 - scripts/deploy.js
 - scripts/post-push-hook.js
 - scripts/pre-push-hook.js
+- scripts/qa-presentation-v2-html.js
+- scripts/qa-student-web-pages.js
+- scripts/tests/build-landing-page.test.js
+- scripts/tests/check-book-print-scope.test.js
 - scripts/tests/check-book.test.js
+- scripts/tests/check-course-target-exercises-v5.test.js
+- scripts/tests/procedure-contracts.test.js
 - scripts/tests/validate-chapter.test.js
+- scripts/tests/validate-paragraph-modes.test.js
 - scripts/tests/validate-paragraph.test.js
 - scripts/validate-chapter.js
 - scripts/validate-paragraph.js
+- scripts/validate-procedure-contracts.js
 - scripts/verify-deployment.sh
 
 ## skills
 
-Count: 40
+Count: 42
 
 - .claude/commands/aanpak-samenvattingen.md
 - .claude/commands/econ-book-builder.md
 - .claude/commands/econ-chapter-assembler.md
 - .claude/commands/econ-chapter-builder.md
+- .claude/commands/econ-companion-artifacts.md
 - .claude/commands/econ-consolidation-builder.md
 - .claude/commands/econ-didactiek.md
 - .claude/commands/econ-exercise-builder.md
@@ -344,6 +396,7 @@ Count: 40
 - skills/econ-book-builder.md
 - skills/econ-chapter-assembler.md
 - skills/econ-chapter-builder.md
+- skills/econ-companion-artifacts.md
 - skills/econ-consolidation-builder.md
 - skills/econ-didactiek.md
 - skills/econ-exercise-builder.md
@@ -363,7 +416,7 @@ Count: 40
 
 ## validators
 
-Count: 61
+Count: 70
 
 - build-scripts/rag/validate-chunks.js
 - build-scripts/rag/validate-query-output.js
@@ -375,6 +428,7 @@ Count: 61
 - build-scripts/references/check-evidence-anchors.js
 - build-scripts/references/check-exercise-overlay-conditions.js
 - build-scripts/references/check-exercise-overlays.js
+- build-scripts/references/check-misconceptions.js
 - build-scripts/references/check-owned-content-graph.js
 - build-scripts/references/check-owned-source-registry.js
 - build-scripts/references/check-procedure-visual-coverage.js
@@ -399,12 +453,14 @@ Count: 61
 - build-scripts/references/check-rx3b-producer-graph-lane-review.js
 - build-scripts/references/check-rx4-elasticity-market-diagram-mutations.js
 - build-scripts/references/check-rx4-elasticity-market-diagram-review.js
+- build-scripts/references/check-s9a-d04-cli-mutation.js
 - build-scripts/references/check-skill-operation-registry.js
 - build-scripts/references/check-skilltree-generator-readiness.js
 - build-scripts/references/check-source-document-registry.js
 - build-scripts/references/check-source-manifest.js
 - build-scripts/references/check-source-of-truth.js
 - build-scripts/references/check-target-exercise-flags.js
+- build-scripts/references/check-unit-design-status.js
 - build-scripts/references/validate-alignment-graph.js
 - build-scripts/references/validate-core-schemas.js
 - build-scripts/references/validate-prior-knowledge-schema.js
@@ -419,18 +475,25 @@ Count: 61
 - build-scripts/sprints/check-sprint-plan.js
 - build-scripts/sprints/check-sprint-result.js
 - docs/roadmaps/outdated/reference-team-roadmap-v2.22-pv2-procedure-visual-schema-validator.md
+- scripts/check-book-print-scope.js
 - scripts/check-book.js
+- scripts/check-course-target-exercises-v5.js
 - scripts/check-links.js
+- scripts/tests/check-book-print-scope.test.js
 - scripts/tests/check-book.test.js
+- scripts/tests/check-course-target-exercises-v5.test.js
 - scripts/tests/validate-chapter.test.js
+- scripts/tests/validate-paragraph-modes.test.js
 - scripts/tests/validate-paragraph.test.js
 - scripts/validate-chapter.js
 - scripts/validate-paragraph.js
+- scripts/validate-procedure-contracts.js
 
 ## references
 
-Count: 223
+Count: 236
 
+- references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
 - references/authored/didactiek-principes.md
 - references/authored/economic_mathematical_precision_reference.md
@@ -453,9 +516,11 @@ Count: 223
 - references/data/exercises/source-annex-gap-log.json
 - references/data/exercises/source-annex-gap-log.md
 - references/data/exercises/target-exercise-overlays.json
+- references/data/misconceptions/misconception-registry.json
 - references/data/owned-content-graph.json
 - references/data/owned-source-registry.json
 - references/data/procedure-visual/inventory.json
+- references/data/procedure-visual/lesson-procedure-contracts.json
 - references/data/procedure-visual/lesson-regression-proof-requirements.json
 - references/data/procedure-visual/procedure-game-alignment-pilots.json
 - references/data/procedure-visual/procedure-template.schema.json
@@ -585,6 +650,13 @@ Count: 223
 - references/data/sprints/S6.plan.json
 - references/data/sprints/S6.result.json
 - references/data/sprints/S7.plan.json
+- references/data/sprints/S8.plan.json
+- references/data/sprints/S8.result.json
+- references/data/sprints/S9.plan.json
+- references/data/sprints/S9.result.json
+- references/data/sprints/S9a.plan.json
+- references/data/sprints/S9a.result.json
+- references/data/unit-design-status/unit-design-status-overlay.json
 - references/external/amstelveencollege_quality_standards.md
 - references/external/exam-questions.json
 - references/external/exams/ha-1022-a-23-1-c.pdf
@@ -624,6 +696,8 @@ Count: 223
 - references/machine/README.md
 - references/owned/course-blueprint-v4.md
 - references/owned/course-blueprint-v4.meta.json
+- references/owned/course-blueprint-v5.md
+- references/owned/course-blueprint-v5.meta.json
 - references/owned/README.md
 - references/qc-prompts/exam-derived-skills.md
 - references/qc-prompts/foundation-audit.md
@@ -651,13 +725,14 @@ Count: 223
 - references/schemas/syllabus-code.schema.json
 - references/schemas/target-exercise.schema.json
 - references/schemas/term.schema.json
+- references/schemas/unit-design-status.schema.json
 - references/schemas/unit.schema.json
 - references/schemas/worked-example.schema.json
 - references/SOURCE_OF_TRUTH.md
 
 ## reports
 
-Count: 522
+Count: 557
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -687,6 +762,7 @@ Count: 522
 - reports/json/exercise-overlay-conditions.json
 - reports/json/graph-skill-tree.json
 - reports/json/graphical-foundation-coverage.json
+- reports/json/misconception-registry.json
 - reports/json/needs-coverage.json
 - reports/json/owned-content-coverage.json
 - reports/json/owned-source-registry.json
@@ -712,6 +788,7 @@ Count: 522
 - reports/json/source-document-registry.json
 - reports/json/terminology-drift.json
 - reports/json/terms-coverage.json
+- reports/json/unit-design-status.json
 - reports/json/unit-term-slug-migration.json
 - reports/json/unresolved-refs.json
 - reports/markdown/aspects-coverage.md
@@ -722,6 +799,7 @@ Count: 522
 - reports/markdown/exercise-overlay-conditions.md
 - reports/markdown/graph-skill-tree.md
 - reports/markdown/graphical-foundation-coverage.md
+- reports/markdown/misconception-registry.md
 - reports/markdown/needs-coverage.md
 - reports/markdown/procedure-coverage.md
 - reports/markdown/procedure-game-template-alignment.md
@@ -744,6 +822,7 @@ Count: 522
 - reports/markdown/source-document-registry.md
 - reports/markdown/terminology-drift.md
 - reports/markdown/terms-coverage.md
+- reports/markdown/unit-design-status.md
 - reports/markdown/unresolved-refs.md
 - reports/merge-review/R0.2-R7.4-merge-readiness.json
 - reports/merge-review/R0.2-R7.4-merge-readiness.md
@@ -830,6 +909,25 @@ Count: 522
 - reports/review-gates/GATE-CP4-skill-registry-coexistence/pv-addendum.md
 - reports/review-gates/GATE-CP4-skill-registry-coexistence/review-packet.json
 - reports/review-gates/GATE-CP4-skill-registry-coexistence/review-packet.md
+- reports/review-gates/GATE-CP5-D04-resolution/bundle-urls.md
+- reports/review-gates/GATE-CP5-D04-resolution/d04-decision-record.json
+- reports/review-gates/GATE-CP5-D04-resolution/d04-decision-record.md
+- reports/review-gates/GATE-CP5-D04-resolution/dependent-unit-audit.json
+- reports/review-gates/GATE-CP5-D04-resolution/dependent-unit-audit.md
+- reports/review-gates/GATE-CP5-D04-resolution/gate-closure.json
+- reports/review-gates/GATE-CP5-D04-resolution/gate-closure.md
+- reports/review-gates/GATE-CP5-D04-resolution/human-interview.json
+- reports/review-gates/GATE-CP5-D04-resolution/human-interview.md
+- reports/review-gates/GATE-CP5-D04-resolution/review-packet.json
+- reports/review-gates/GATE-CP5-D04-resolution/review-packet.md
+- reports/review-gates/GATE-CP5-D04-resolution/S9a-d04-mutation-log.json
+- reports/review-gates/GATE-CP5-D04-resolution/S9a-d04-mutation-log.md
+- reports/review-gates/GATE-CP5-D04-resolution/S9a-d04-mutation-plan.json
+- reports/review-gates/GATE-CP5-D04-resolution/S9a-d04-mutation-plan.md
+- reports/review-gates/GATE-CP5-D04-resolution/S9a-stale-reference-audit.json
+- reports/review-gates/GATE-CP5-D04-resolution/S9a-stale-reference-audit.md
+- reports/review-gates/GATE-CP5-D04-resolution/unit-design-status-strategy.json
+- reports/review-gates/GATE-CP5-D04-resolution/unit-design-status-strategy.md
 - reports/review-gates/GATE-PV-G1-schema/bundle-urls.md
 - reports/review-gates/GATE-PV-G1-schema/review-packet.json
 - reports/review-gates/GATE-PV-G1-schema/review-packet.md
@@ -841,10 +939,13 @@ Count: 522
 - reports/review-gates/GATE-PV-G2-pilot-content/technical-closure.json
 - reports/review-gates/GATE-PV-G2-pilot-content/technical-closure.md
 - reports/review-gates/GATE-PV-G4-lesson-regression/bundle-urls.md
+- reports/review-gates/GATE-PV-G4-lesson-regression/gate-closure.json
+- reports/review-gates/GATE-PV-G4-lesson-regression/gate-closure.md
 - reports/review-gates/GATE-PV-G4-lesson-regression/proof-intake.json
 - reports/review-gates/GATE-PV-G4-lesson-regression/proof-intake.md
 - reports/review-gates/GATE-PV-G4-lesson-regression/proof-template.json
 - reports/review-gates/GATE-PV-G4-lesson-regression/proof-template.md
+- reports/review-gates/GATE-PV-G4-lesson-regression/report-state-cleanup.md
 - reports/review-gates/GATE-PV-G4-lesson-regression/review-packet.json
 - reports/review-gates/GATE-PV-G4-lesson-regression/review-packet.md
 - reports/review-gates/GATE-PV4-procedure-game-contract/bundle-urls.md
@@ -1176,6 +1277,15 @@ Count: 522
 - reports/sprints/S6-diff-summary.md
 - reports/sprints/S6-result.md
 - reports/sprints/S7-baseline.md
+- reports/sprints/S8-baseline.md
+- reports/sprints/S8-diff-summary.md
+- reports/sprints/S8-result.md
+- reports/sprints/S9-baseline.md
+- reports/sprints/S9-diff-summary.md
+- reports/sprints/S9-result.md
+- reports/sprints/S9a-baseline.md
+- reports/sprints/S9a-diff-summary.md
+- reports/sprints/S9a-result.md
 - reports/terminology-drift.md
 - reports/terms-coverage.md
 - reports/unit-term-slug-migration.md
@@ -1202,12 +1312,14 @@ _No files indexed in this group._
 
 ## other
 
-Count: 180
+Count: 190
 
 - .gitignore
 - BUILD-CHAPTER.md
 - BUILD-PARAGRAPH.md
 - CLAUDE.md
+- docs/L1.5V/A4-alt-text-infrastructure.md
+- docs/L1.5V/F-plan-part-a-b-separation.md
 - docs/roadmaps/final-codex-handoff-roadmap-original.md
 - docs/roadmaps/outdated/final-codex-handoff-roadmap-original.md
 - docs/roadmaps/outdated/README.md
@@ -1241,6 +1353,10 @@ Count: 180
 - docs/roadmaps/outdated/reference-team-roadmap-v2.38-pv7-gate-closed.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.39-pv8-promotion-pipeline-design.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.4-r9.2-plus-cp1-cautions.md
+- docs/roadmaps/outdated/reference-team-roadmap-v2.41-pvg4-pass-with-conditions.md
+- docs/roadmaps/outdated/reference-team-roadmap-v2.42-s8-misconception-registry.md
+- docs/roadmaps/outdated/reference-team-roadmap-v2.43-s9-cp5-d04-closure.md
+- docs/roadmaps/outdated/reference-team-roadmap-v2.44-s9a-d04-cli-mutation.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.5-representation-sensitive-phase.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.6-s4-cp3-dry-run.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.7-cp3-closed.md
@@ -1304,6 +1420,9 @@ Count: 180
 - docs/sprints/S4.1-plan.md
 - docs/sprints/S6-plan.md
 - docs/sprints/S7-plan.md
+- docs/sprints/S8-plan.md
+- docs/sprints/S9-plan.md
+- docs/sprints/S9a-plan.md
 - knowledge/course_blueprint_v4.md
 - knowledge/Exercise schema and quality/ChatGPT Image Apr 28, 2026, 10_35_18 PM.png
 - knowledge/Exercise schema and quality/feedback-to-engineering-HCS.md
@@ -1336,6 +1455,7 @@ Count: 180
 - package-lock.json
 - package.json
 - source-data/book-1/reasoning/1.1.1.csv
+- source-data/book-1/reasoning/1.1.2.csv
 - source-data/book-1/reasoning/README.md
 - source-data/legacy-target/reasoning/3.1.1.csv
 - source-data/legacy-target/reasoning/3.1.2.csv

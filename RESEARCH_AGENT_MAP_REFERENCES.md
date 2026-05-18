@@ -4,6 +4,8 @@ Agent-executable access and traversal specification for the `4veco-platform` ref
 
 This file is for remote research agents. It is not just a repository orientation note: every path below is intended to be fetchable through raw GitHub URL construction or readable through a GitHub connector.
 
+Freshness rule: this map, `RESEARCH_AGENT_MAP.md`, `AGENT_GITHUB_ENTRY.md`, `reports/url-index.md`, and `reports/github-agent-index-*.md` must be refreshed and pushed whenever reference paths, roadmaps, generated reports, review packets, agents, skills, or source surfaces change. Off-site reviewers work from GitHub, so unpushed local map updates are not done.
+
 ## Minimal Research Guidance
 
 The reference corpus answers:

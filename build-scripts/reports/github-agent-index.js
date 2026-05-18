@@ -169,6 +169,13 @@ function writeJson(fileName, data) {
   fs.writeFileSync(path.join(reportsDir, fileName), `${JSON.stringify(data, null, 2)}\n`);
 }
 
+function writeMarkdownLines(fileName, lines) {
+  while (lines.length > 0 && lines[lines.length - 1] === "") {
+    lines.pop();
+  }
+  fs.writeFileSync(path.join(reportsDir, fileName), `${lines.join("\n")}\n`);
+}
+
 function writeMarkdown(fileName, data) {
   const lines = [];
   lines.push(`# GitHub Agent File Index - ${data.repo}`);
@@ -181,7 +188,7 @@ function writeMarkdown(fileName, data) {
   if (!data.available) {
     lines.push(`Unavailable: ${data.note}`);
     lines.push("");
-    fs.writeFileSync(path.join(reportsDir, fileName), `${lines.join("\n")}\n`);
+    writeMarkdownLines(fileName, lines);
     return;
   }
 
@@ -211,7 +218,7 @@ function writeMarkdown(fileName, data) {
     lines.push("");
   }
 
-  fs.writeFileSync(path.join(reportsDir, fileName), `${lines.join("\n")}\n`);
+  writeMarkdownLines(fileName, lines);
 }
 
 function main() {
