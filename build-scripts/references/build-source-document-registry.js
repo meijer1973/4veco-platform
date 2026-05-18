@@ -27,12 +27,15 @@ const SELF_OUTPUTS = new Set([
 
 const EXPLICIT_DOCUMENT_IDS = {
   'references/SOURCE_OF_TRUTH.md': 'source-of-truth',
-  'references/authored/course-target-exercises.json': 'course-target-exercises-v4',
+  'references/authored/course-target-exercises.json': 'course-target-exercises-v5',
+  'references/authored/archive/course-target-exercises-v4.json': 'course-target-exercises-v4',
   'references/machine/micro-teaching-units.json': 'micro-teaching-units',
   'references/machine/begrippen.json': 'begrippen',
   'references/external/exam-questions.json': 'exam-questions',
   'reports/review-gates/GATE-R2-empty-needs/human-interview.md': 'gate-r2-human-interview',
   'reports/json/exam-question-extraction-gaps.json': 'r4.2-exam-question-extraction-gaps',
+  'references/owned/course-blueprint-v5.md': 'course-blueprint-v5',
+  'references/owned/course-blueprint-v5.meta.json': 'course-blueprint-v5-meta',
   'references/owned/course-blueprint-v4.md': 'course-blueprint-v4',
   'references/owned/course-blueprint-v4.meta.json': 'course-blueprint-v4-meta',
   'references/external/syllabus-economie-vwo-2026-versie-2.pdf': 'syllabus-economie-vwo-2026-versie-2',
@@ -44,12 +47,15 @@ const EXPLICIT_DOCUMENT_IDS = {
 
 const EXPLICIT_TITLES = {
   'source-of-truth': 'References Source Of Truth',
-  'course-target-exercises-v4': 'Course Target Exercises v4',
+  'course-target-exercises-v5': 'Course Target Exercises v5',
+  'course-target-exercises-v4': 'Course Target Exercises v4 Archive',
   'micro-teaching-units': 'Micro Teaching Units',
   begrippen: 'Begrippen Registry',
   'exam-questions': 'Extracted Exam Questions',
   'gate-r2-human-interview': 'R2 Empty Needs Human Interview',
   'r4.2-exam-question-extraction-gaps': 'R4.2 Exam Question Extraction Gaps',
+  'course-blueprint-v5': 'Course Blueprint v5',
+  'course-blueprint-v5-meta': 'Course Blueprint v5 Metadata',
   'course-blueprint-v4': 'Course Blueprint v4',
   'course-blueprint-v4-meta': 'Course Blueprint v4 Metadata',
 };
@@ -120,6 +126,8 @@ function by(items, field) {
 function sourceVersionFor(entry) {
   const relPath = entry.path;
   const hash = entry.sha256 ? `sha256:${entry.sha256}` : 'version:unhashed-generated-inventory';
+  if (relPath === 'references/owned/course-blueprint-v5.md') return 'owned:course-blueprint-v5';
+  if (relPath === 'references/owned/course-blueprint-v5.meta.json') return 'owned:course-blueprint-v5-meta';
   if (relPath === 'references/owned/course-blueprint-v4.md') return 'owned:course-blueprint-v4';
   if (relPath === 'references/owned/course-blueprint-v4.meta.json') return 'owned:course-blueprint-v4-meta';
   if (relPath === 'references/external/syllabus-economie-vwo-2026-versie-2.pdf') return 'CvTE:syllabus-economie-vwo-2026-v2';
@@ -128,6 +136,8 @@ function sourceVersionFor(entry) {
 }
 
 function statusFor(entry) {
+  if (entry.path === 'references/authored/archive/course-target-exercises-v4.json') return 'archived';
+  if (entry.path === 'references/owned/course-blueprint-v4.md' || entry.path === 'references/owned/course-blueprint-v4.meta.json') return 'superseded';
   if (entry.path === 'references/external/README.md' || entry.path === 'references/external/exams/README.md') return 'active';
   if (entry.path.startsWith('references/external/exams/') || entry.path.endsWith('.pdf') && entry.path.startsWith('references/external/')) return 'mirrored';
   if (entry.path === 'references/external/exam-questions.json' || entry.source_type === 'external_reference') return 'extracted';
@@ -214,6 +224,8 @@ function blockedUsesFor(authorityLevel, status) {
 
 function notesFor(entry, authorityLevel, status) {
   const notes = [];
+  if (status === 'archived') notes.push('Archived historical source retained for evidence anchors and migration traceability; not the active source.');
+  if (status === 'superseded') notes.push('Superseded by the active v5 blueprint; retained for historical comparison only.');
   if (status === 'generated_diagnostic') notes.push('Generated diagnostics are not primary evidence.');
   if (entry.path.startsWith('references/machine/')) notes.push('Machine registry records must be changed through reference CLI scripts.');
   if (entry.path.startsWith('references/external/')) notes.push('External references must be refreshed or extracted from outside authority; do not hand-edit.');
@@ -408,6 +420,8 @@ function markdownReport(registry) {
     record.evidence_anchor_ids.length > 0 ||
     record.authority_level === 'external_primary' ||
     record.authority_level === 'machine_registry' ||
+    record.path === 'references/owned/course-blueprint-v5.md' ||
+    record.path === 'references/authored/course-target-exercises.json' ||
     record.path === 'references/owned/course-blueprint-v4.md'
   ));
   for (const record of critical) {

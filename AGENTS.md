@@ -137,11 +137,11 @@ Lesson goals and the micro-teaching-units catalog derive from target exercises �
 
 **Ground-truth hierarchy (strongest to weakest):**
 1. Real CvTE exam questions from past havo/vwo papers
-2. Blueprint target exercises in `references/owned/course-blueprint-v4.md` (each lesson anchored by one)
+2. Blueprint target exercises in `references/authored/course-target-exercises.json`, currently backed by the active owned blueprint declared in that registry
 3. Target exercises already built in the platform (paragraph-level)
 4. Proeftoets-eindbazen and consolidation exercises
 5. Syllabus eindtermen — for grouping and coverage reporting only, never for minting
-6. Blueprint prose in `references/owned/course-blueprint-v4.md` — descriptive context for the target exercises above
+6. Blueprint prose in the active `references/owned/course-blueprint-v*.md` source — descriptive context for the target exercises above
 
 **How to apply:**
 - When creating an exercise or analyzing an exam question, check every required skill. Missing units are minted via CLI (`build-scripts/references/unit-add.js`) with exam_codes and needs populated.

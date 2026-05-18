@@ -10,6 +10,7 @@
 const crypto = require('crypto');
 const fs = require('fs');
 const path = require('path');
+const { activeBlueprintInfo } = require('./course-blueprint-active');
 
 const REPO_ROOT = path.resolve(__dirname, '..', '..');
 const GRAPH_PATH = 'references/data/owned-content-graph.json';
@@ -19,7 +20,6 @@ const REGISTRY_PATH = 'references/data/owned-source-registry.json';
 const TARGETS_PATH = 'references/authored/course-target-exercises.json';
 const UNITS_PATH = 'references/machine/micro-teaching-units.json';
 const TERMS_PATH = 'references/machine/begrippen.json';
-const BLUEPRINT_PATH = 'references/owned/course-blueprint-v4.md';
 const CP2_CLOSURE_PATH = 'reports/review-gates/GATE-CP2-owned-source-scope/gate-closure.json';
 
 function repoPath(relPath) {
@@ -256,6 +256,7 @@ function termNodeId(id) {
 
 function buildGraph() {
   const generatedOn = new Date().toISOString().replace(/\.\d{3}Z$/, 'Z');
+  const activeBlueprint = activeBlueprintInfo(REPO_ROOT);
   const registry = readJson(REGISTRY_PATH);
   const targets = readJson(TARGETS_PATH);
   const units = readJson(UNITS_PATH);
@@ -277,7 +278,8 @@ function buildGraph() {
     if (!nodes.has(id)) nodes.set(id, { node_id: id, node_type: type, label, ...attrs });
   }
 
-  node('blueprint:course-blueprint-v4', 'course_blueprint', 'Course Blueprint v4', { source_path: BLUEPRINT_PATH });
+  const blueprintNodeId = `blueprint:course-blueprint-${activeBlueprint.versionSlug}`;
+  node(blueprintNodeId, 'course_blueprint', activeBlueprint.title, { source_path: activeBlueprint.blueprintPath });
 
   for (const exercise of targets.exercises || []) {
     const paragraphId = exercise.id;
@@ -298,11 +300,11 @@ function buildGraph() {
     });
 
     addEdge(edges, baseEdge({
-      from: 'blueprint:course-blueprint-v4',
+      from: blueprintNodeId,
       to: chapterId,
       relation: 'blueprint_projects_to_chapter',
       edgeType: 'projection',
-      sourcePath: BLUEPRINT_PATH,
+      sourcePath: activeBlueprint.blueprintPath,
       sourceSurfaceType: 'course_blueprint',
       sourceStatus: 'authored_source',
       authorityLevel: 'owned_curriculum_design',
@@ -319,7 +321,7 @@ function buildGraph() {
       to: paragraphNode,
       relation: 'chapter_projects_to_paragraph',
       edgeType: 'projection',
-      sourcePath: BLUEPRINT_PATH,
+      sourcePath: activeBlueprint.blueprintPath,
       sourceSurfaceType: 'course_blueprint',
       sourceStatus: 'authored_source',
       authorityLevel: 'owned_curriculum_design',
@@ -477,7 +479,7 @@ function buildGraph() {
     source_files: [
       REGISTRY_PATH,
       TARGETS_PATH,
-      BLUEPRINT_PATH,
+      activeBlueprint.blueprintPath,
       UNITS_PATH,
       TERMS_PATH,
       CP2_CLOSURE_PATH,

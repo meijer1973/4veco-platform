@@ -19,7 +19,8 @@ Human-authored references that the platform still hand-edits. This is the **lega
 | `skill-categories.md` | partly absorbed into `vraagtypen-en-opgaveontwerp.md` and `micro-teaching-units.md`; may be deprecated |
 | `economic_mathematical_precision_reference.md` | likely stays `authored/` (expert precision judgement) |
 | `didactiek-principes.md` | likely stays `authored/` (pedagogical philosophy) |
-| `course_blueprint_v4.md` | `machine/` once the blueprint-generation pipeline exists (target exercises become first-class machine-edited entries) |
+| `course-target-exercises.json` | Active authored target-exercise registry; currently v5. Long-term path is `machine/` once target exercises become first-class machine-edited entries. |
+| `archive/course-target-exercises-v4.json` | Historical v4 registry archive retained for evidence anchors and migration traceability. |
 
 ## What belongs here vs. elsewhere
 

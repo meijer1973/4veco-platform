@@ -15,5 +15,7 @@ Do not use owned prose alone to mint machine units. New units still require exer
 
 Current owned sources:
 
-- `course-blueprint-v4.md` - partial course blueprint for the current designed year, copied from `knowledge/course_blueprint_v4.md` as the reference-facing owned curriculum-design source.
-- `course-blueprint-v4.meta.json` - metadata and authority constraints for the blueprint.
+- `course-blueprint-v5.md` - active v5 curriculum-source scaffold for the 12/12/14/16 four-test-week model.
+- `course-blueprint-v5.meta.json` - metadata and authority constraints for the active v5 blueprint.
+- `course-blueprint-v4.md` - superseded v4 blueprint retained for historical comparison and migration traceability.
+- `course-blueprint-v4.meta.json` - superseded v4 metadata retained for historical comparison and migration traceability.

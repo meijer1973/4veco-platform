@@ -1,26 +1,26 @@
 {
   "schema_version": 1,
-  "blueprint_version": "v5",
-  "blueprint_source": "references/owned/course-blueprint-v5.md",
-  "expected_count_bearing_paragraphs": {
-    "1": 12,
-    "2": 12,
-    "3": 14,
-    "4": 16
-  },
-  "total_count_bearing_paragraphs": 54,
-  "test_preparation_policy": {
-    "status": "web_only",
-    "count_bearing": false,
-    "printed_chapter": false,
-    "formal_test_scope": "one formal test week per book"
-  },
-  "archive_of_previous_active_registry": "references/authored/archive/course-target-exercises-v4.json",
+  "blueprint_version": "v4",
+  "blueprint_source": "references/owned/course-blueprint-v4.md",
   "_schema_doc": {
-    "paragraph_kind": "theory or gemengde_opgaven. Gemengde-opgaven records are count-bearing but introduce no new theory.",
-    "introduces_new_theory": "False for gemengde_opgaven; true for theory paragraphs unless a future review says otherwise.",
-    "record_status": "reviewed_final, migrated_from_v4_needs_v5_review, or placeholder_needs_review.",
-    "placeholder_rule": "Placeholders are valid for Phase A source-of-truth migration but cannot be treated as final reviewed target exercises."
+    "id": "Stable identifier '<module>.<chapter>.<paragraph>' (matches platform folder convention 3.1.1). Permanent once minted.",
+    "module": "1-4 (the platform's top-level unit; equals 'Module N' in the blueprint)",
+    "chapter": "1-5 (5 = test prep)",
+    "paragraph": "1-5 (last is consolidation in theory chapters)",
+    "paragraph_title": "Verbatim from blueprint header (without difficulty marker).",
+    "difficulty": "LIGHT | MEDIUM | HEAVY — from blueprint marker.",
+    "target_exercise": {
+      "context": "Brief framing sentence(s) the student reads first.",
+      "subquestions": "Array of {label, prompt}. Labels are blueprint letters ('a', 'b', ...). Prompts are verbatim from blueprint."
+    },
+    "lesson_goals": "Array of strings, verbatim from blueprint.",
+    "required_skills": "Unit IDs (from references/machine/micro-teaching-units.json) the student must wield to do this exercise. Must include both prior_knowledge_assumed and new_skills_introduced.",
+    "prior_knowledge_assumed": "Subset of required_skills the student should already have from earlier paragraphs.",
+    "new_skills_introduced": "Subset of required_skills this lesson is responsible for teaching.",
+    "missing_units_flagged": "Array of free-text descriptions of skills that should be units in the registry but aren't yet. Phase-2 backlog.",
+    "exam_codes": "CvTE eindterm codes — derived in a later pass from required_skills' exam_codes union (per the exam-questions.json convention).",
+    "difficulty_notes": "Verbatim from blueprint.",
+    "source_ref": "Pointer back to the blueprint section."
   },
   "exercises": [
     {
@@ -28,7 +28,7 @@
       "module": 1,
       "chapter": 1,
       "paragraph": 1,
-      "paragraph_title": "Schaarste en economisch denken",
+      "paragraph_title": "Scarcity, opportunity cost, economic thinking",
       "difficulty": "LIGHT",
       "target_exercise": {
         "context": "A farmer has 10 hectares of land. He can grow wheat (profit €500/ha) or corn (profit €350/ha). He decides to grow wheat on all 10 hectares.",
@@ -67,23 +67,14 @@
       "missing_units_flagged": [],
       "exam_codes": [],
       "difficulty_notes": "Intuitive concepts, concrete examples. Students engage well. No calculation barriers. One lesson is comfortable with time for class discussion.",
-      "source_ref": "references/owned/course-blueprint-v5.md §1.1.1",
-      "paragraph_kind": "theory",
-      "introduces_new_theory": true,
-      "record_status": "migrated_from_v4_needs_v5_review",
-      "v5_migration": {
-        "source_status": "migrated_from_v4_needs_v5_review",
-        "from_v4_id": "1.1.1",
-        "related_v4_ids": [],
-        "review_required_before_final": true
-      }
+      "source_ref": "references/owned/course-blueprint-v4.md §1.1.1"
     },
     {
       "id": "1.1.2",
       "module": 1,
       "chapter": 1,
       "paragraph": 2,
-      "paragraph_title": "Percentages en indexcijfers",
+      "paragraph_title": "Percentages, percentage changes, index numbers",
       "difficulty": "MEDIUM",
       "target_exercise": {
         "context": "Practice with percentage changes and index numbers across price data.",
@@ -126,23 +117,14 @@
       "missing_units_flagged": [],
       "exam_codes": [],
       "difficulty_notes": "Students are weaker at percentage calculations than teachers expect. The index-point vs percentage trap (exercise d) is a classic exam mistake. This paragraph lays the foundation for ALL later calculations (elasticities, inflation, real/nominal). Worth investing time. One lesson is tight — assign exercise (d) type problems as homework.",
-      "source_ref": "references/owned/course-blueprint-v5.md §1.1.2",
-      "paragraph_kind": "theory",
-      "introduces_new_theory": true,
-      "record_status": "migrated_from_v4_needs_v5_review",
-      "v5_migration": {
-        "source_status": "migrated_from_v4_needs_v5_review",
-        "from_v4_id": "1.1.2",
-        "related_v4_ids": [],
-        "review_required_before_final": true
-      }
+      "source_ref": "references/owned/course-blueprint-v4.md §1.1.2"
     },
     {
       "id": "1.1.3",
       "module": 1,
       "chapter": 1,
       "paragraph": 3,
-      "paragraph_title": "Grafieken en tabellen",
+      "paragraph_title": "Reading and drawing graphs, interpreting tables",
       "difficulty": "LIGHT",
       "target_exercise": {
         "context": "The table below shows the number of ice creams sold at different prices: P=€1.00→Q=500, €1.50→400, €2.00→300, €2.50→200, €3.00→100.",
@@ -180,63 +162,14 @@
       ],
       "exam_codes": [],
       "difficulty_notes": "Skill-based, hands-on. Students enjoy the concreteness. The main pitfall is putting axes wrong (price on horizontal instead of vertical). One lesson comfortable.",
-      "source_ref": "references/owned/course-blueprint-v5.md §1.1.3",
-      "paragraph_kind": "theory",
-      "introduces_new_theory": true,
-      "record_status": "migrated_from_v4_needs_v5_review",
-      "v5_migration": {
-        "source_status": "migrated_from_v4_needs_v5_review",
-        "from_v4_id": "1.1.3",
-        "related_v4_ids": [],
-        "review_required_before_final": true
-      }
-    },
-    {
-      "difficulty": "MIXED",
-      "target_exercise": {
-        "placeholder": true,
-        "context": "Placeholder for 1.1.4: integrated practice across this chapter. It consolidates earlier theory and introduces no new theory.",
-        "subquestions": [
-          {
-            "label": "a",
-            "prompt": "Combine at least two earlier skills from this chapter in one exam-style context."
-          }
-        ]
-      },
-      "lesson_goals": [
-        "Consolidate and transfer the chapter skills for Gemengde opgaven: economisch denken en rekenen."
-      ],
-      "required_skills": [],
-      "prior_knowledge_assumed": [],
-      "new_skills_introduced": [],
-      "missing_units_flagged": [
-        "v5_placeholder_needs_review"
-      ],
-      "exam_codes": [],
-      "difficulty_notes": "Count-bearing consolidation paragraph. It introduces no new theory and needs a reviewed integration target exercise.",
-      "id": "1.1.4",
-      "module": 1,
-      "chapter": 1,
-      "paragraph": 4,
-      "paragraph_title": "Gemengde opgaven: economisch denken en rekenen",
-      "paragraph_kind": "gemengde_opgaven",
-      "introduces_new_theory": false,
-      "record_status": "placeholder_needs_review",
-      "placeholder_reason": "Gemengde-opgaven target exercise must be designed as integration/transfer practice.",
-      "source_ref": "references/owned/course-blueprint-v5.md §1.1.4",
-      "v5_migration": {
-        "source_status": "placeholder_needs_review",
-        "from_v4_id": null,
-        "related_v4_ids": [],
-        "review_required_before_final": true
-      }
+      "source_ref": "references/owned/course-blueprint-v4.md §1.1.3"
     },
     {
       "id": "1.2.1",
       "module": 1,
       "chapter": 2,
       "paragraph": 1,
-      "paragraph_title": "Individuele vraag",
+      "paragraph_title": "Individual demand, betalingsbereidheid, demand curve",
       "difficulty": "LIGHT",
       "target_exercise": {
         "context": "Lisa loves pizza. She is willing to pay €8 for her first pizza, €6 for the second, €4 for the third, and €1.50 for the fourth.",
@@ -281,23 +214,14 @@
       "missing_units_flagged": [],
       "exam_codes": [],
       "difficulty_notes": "Very intuitive. Pizza/real-life examples work well. Step functions are visual and concrete. One lesson comfortable — use the extra time for a good class discussion about what determines betalingsbereidheid.",
-      "source_ref": "references/owned/course-blueprint-v5.md §1.2.1",
-      "paragraph_kind": "theory",
-      "introduces_new_theory": true,
-      "record_status": "migrated_from_v4_needs_v5_review",
-      "v5_migration": {
-        "source_status": "migrated_from_v4_needs_v5_review",
-        "from_v4_id": "1.2.1",
-        "related_v4_ids": [],
-        "review_required_before_final": true
-      }
+      "source_ref": "references/owned/course-blueprint-v4.md §1.2.1"
     },
     {
       "id": "1.2.2",
       "module": 1,
       "chapter": 2,
       "paragraph": 2,
-      "paragraph_title": "Vraagfactoren",
+      "paragraph_title": "Demand factors, shifts vs movements along the curve",
       "difficulty": "MEDIUM",
       "target_exercise": {
         "context": "The market for butter is in equilibrium at P = €2 and Q = 1000.",
@@ -346,23 +270,14 @@
         "D1.9"
       ],
       "difficulty_notes": "The shift vs movement distinction is the single most common error in all of microeconomics. Students confuse these for months. The lesson must hammer this with at least 4–5 examples. One lesson is tight but essential — this concept returns in every subsequent chapter.",
-      "source_ref": "references/owned/course-blueprint-v5.md §1.2.2",
-      "paragraph_kind": "theory",
-      "introduces_new_theory": true,
-      "record_status": "migrated_from_v4_needs_v5_review",
-      "v5_migration": {
-        "source_status": "migrated_from_v4_needs_v5_review",
-        "from_v4_id": "1.2.2",
-        "related_v4_ids": [],
-        "review_required_before_final": true
-      }
+      "source_ref": "references/owned/course-blueprint-v4.md §1.2.2"
     },
     {
       "id": "1.2.3",
       "module": 1,
       "chapter": 2,
       "paragraph": 3,
-      "paragraph_title": "Van individuele naar collectieve vraag",
+      "paragraph_title": "From individual to collective demand",
       "difficulty": "MEDIUM",
       "target_exercise": {
         "context": "There are only two consumers on the market for lemonade: Anna and Ben. Anna's Qd: P=€1→5, €2→3, €3→1, €4→0. Ben's Qd: P=€1→8, €2→5, €3→2, €4→1.",
@@ -407,63 +322,14 @@
         "A2.9"
       ],
       "difficulty_notes": "The horizontal addition (adding Q's, not P's) is counter-intuitive for some students. The algebraic derivation (exercise c) requires comfort with linear equations. One lesson works if algebra skills from §1.1 are solid. The kink (exercise d) can be mentioned but is not essential.",
-      "source_ref": "references/owned/course-blueprint-v5.md §1.2.3",
-      "paragraph_kind": "theory",
-      "introduces_new_theory": true,
-      "record_status": "migrated_from_v4_needs_v5_review",
-      "v5_migration": {
-        "source_status": "migrated_from_v4_needs_v5_review",
-        "from_v4_id": "1.2.3",
-        "related_v4_ids": [],
-        "review_required_before_final": true
-      }
-    },
-    {
-      "difficulty": "MIXED",
-      "target_exercise": {
-        "placeholder": true,
-        "context": "Placeholder for 1.2.4: integrated practice across this chapter. It consolidates earlier theory and introduces no new theory.",
-        "subquestions": [
-          {
-            "label": "a",
-            "prompt": "Combine at least two earlier skills from this chapter in one exam-style context."
-          }
-        ]
-      },
-      "lesson_goals": [
-        "Consolidate and transfer the chapter skills for Gemengde opgaven: vraag."
-      ],
-      "required_skills": [],
-      "prior_knowledge_assumed": [],
-      "new_skills_introduced": [],
-      "missing_units_flagged": [
-        "v5_placeholder_needs_review"
-      ],
-      "exam_codes": [],
-      "difficulty_notes": "Count-bearing consolidation paragraph. It introduces no new theory and needs a reviewed integration target exercise.",
-      "id": "1.2.4",
-      "module": 1,
-      "chapter": 2,
-      "paragraph": 4,
-      "paragraph_title": "Gemengde opgaven: vraag",
-      "paragraph_kind": "gemengde_opgaven",
-      "introduces_new_theory": false,
-      "record_status": "placeholder_needs_review",
-      "placeholder_reason": "Gemengde-opgaven target exercise must be designed as integration/transfer practice.",
-      "source_ref": "references/owned/course-blueprint-v5.md §1.2.4",
-      "v5_migration": {
-        "source_status": "placeholder_needs_review",
-        "from_v4_id": null,
-        "related_v4_ids": [],
-        "review_required_before_final": true
-      }
+      "source_ref": "references/owned/course-blueprint-v4.md §1.2.3"
     },
     {
       "id": "1.3.1",
       "module": 1,
       "chapter": 3,
       "paragraph": 1,
-      "paragraph_title": "Aanbod",
+      "paragraph_title": "Supply curve, supply factors, shifts",
       "difficulty": "MEDIUM",
       "target_exercise": {
         "context": "Supply-side mirror of §1.2.2: how own-price vs other factors move a supply curve.",
@@ -512,205 +378,14 @@
         "D1.24"
       ],
       "difficulty_notes": "Mirror of §1.2.2. Students pick this up faster because they have the demand framework. The shift/movement distinction gets reinforced. Exercise (c) deliberately does not give away the answer about own price — if a student lists 'own price' as a shift factor, it reveals they have not grasped the distinction between movement and shift. This diagnostic value is important. One lesson comfortable.",
-      "source_ref": "references/owned/course-blueprint-v5.md §1.3.1",
-      "paragraph_kind": "theory",
-      "introduces_new_theory": true,
-      "record_status": "migrated_from_v4_needs_v5_review",
-      "v5_migration": {
-        "source_status": "migrated_from_v4_needs_v5_review",
-        "from_v4_id": "1.3.1",
-        "related_v4_ids": [],
-        "review_required_before_final": true
-      }
+      "source_ref": "references/owned/course-blueprint-v4.md §1.3.1"
     },
     {
       "id": "1.3.2",
       "module": 1,
       "chapter": 3,
       "paragraph": 2,
-      "paragraph_title": "Marktevenwicht",
-      "difficulty": "MEDIUM",
-      "target_exercise": {
-        "context": "On the market for notebooks: Qv = −2P + 100 and Qa = 3P − 25.",
-        "subquestions": [
-          {
-            "label": "a",
-            "prompt": "Calculate the equilibrium price and equilibrium quantity."
-          },
-          {
-            "label": "b",
-            "prompt": "Check your answer by substituting back into both equations."
-          },
-          {
-            "label": "c",
-            "prompt": "Draw both curves in a graph and mark the equilibrium point."
-          },
-          {
-            "label": "d",
-            "prompt": "At a price of €30, is there a surplus (aanbodoverschot) or a shortage (vraagoverschot)? Calculate its size."
-          }
-        ]
-      },
-      "lesson_goals": [
-        "Set Qa = Qv and solve for P (equilibrium price)",
-        "Substitute back to find equilibrium quantity",
-        "Draw demand and supply curves and locate equilibrium graphically",
-        "Determine surplus or shortage at a given price"
-      ],
-      "required_skills": [
-        "A02",
-        "A04",
-        "A06"
-      ],
-      "prior_knowledge_assumed": [
-        "A02"
-      ],
-      "new_skills_introduced": [
-        "A04",
-        "A06"
-      ],
-      "missing_units_flagged": [
-        "Determine surplus (aanbodoverschot) vs shortage (vraagoverschot) at a non-equilibrium price and calculate its size (A-domain candidate, prerequisite for government price interventions in §2.4)"
-      ],
-      "exam_codes": [
-        "A2.10",
-        "A2.12",
-        "A2.15"
-      ],
-      "difficulty_notes": "First real algebraic challenge. Students who struggle with rearranging equations need support. Exercise (b) — checking the answer — builds good habits. Exercise (d) bridges to government intervention (Module 2). One lesson is tight if algebra is weak — provide a worked example first, then let students practice.",
-      "source_ref": "references/owned/course-blueprint-v5.md §1.3.2",
-      "paragraph_kind": "theory",
-      "introduces_new_theory": true,
-      "record_status": "migrated_from_v4_needs_v5_review",
-      "v5_migration": {
-        "source_status": "migrated_from_v4_needs_v5_review",
-        "from_v4_id": "1.4.1",
-        "related_v4_ids": [],
-        "review_required_before_final": true
-      }
-    },
-    {
-      "id": "1.3.3",
-      "module": 1,
-      "chapter": 3,
-      "paragraph": 3,
-      "paragraph_title": "Verschuivingen en nieuw evenwicht",
-      "difficulty": "MEDIUM",
-      "target_exercise": {
-        "context": "Starting from the notebook market (Qv = −2P + 100, Qa = 3P − 25, equilibrium P* = 25, Q* = 50).",
-        "subquestions": [
-          {
-            "label": "a",
-            "prompt": "A new factory opens. The new supply function is Qa = 3P − 10. Calculate the new equilibrium price and quantity."
-          },
-          {
-            "label": "b",
-            "prompt": "Compare with the old equilibrium: what happened to price? To quantity? Is this logical?"
-          },
-          {
-            "label": "c",
-            "prompt": "Now suppose student income rises. The new demand function is Qv = −2P + 120 (supply back to original). Calculate the new equilibrium."
-          },
-          {
-            "label": "d",
-            "prompt": "Draw a graph showing both changes (one at a time). Use arrows to show the direction of shifts."
-          },
-          {
-            "label": "e",
-            "prompt": "Now suppose BOTH changes happen at the same time: supply shifts to Qa = 3P − 10 AND demand shifts to Qv = −2P + 120. Calculate the new equilibrium. What happened to quantity? What happened to price? Could you have predicted the direction of the price change without calculating? Explain."
-          }
-        ]
-      },
-      "lesson_goals": [
-        "Calculate a new equilibrium after a supply or demand shift",
-        "Compare old and new equilibrium: predict direction of price and quantity change",
-        "Connect shifts to the demand/supply factors from §1.2 and §1.3",
-        "Show shifts graphically with clear before/after",
-        "Analyse simultaneous shifts: quantity effect is clear (both increase Q), but price effect is ambiguous (one pushes up, the other pushes down)"
-      ],
-      "required_skills": [
-        "A02",
-        "A04",
-        "A06",
-        "A42",
-        "D13"
-      ],
-      "prior_knowledge_assumed": [
-        "A02",
-        "A04",
-        "A06",
-        "A42",
-        "D13"
-      ],
-      "new_skills_introduced": [],
-      "missing_units_flagged": [
-        "Reason about simultaneous supply+demand shifts: determinate Q-direction but ambiguous P-direction (concept-level, diagnostic checkpoint)"
-      ],
-      "exam_codes": [
-        "A2.10",
-        "A2.12",
-        "A2.15",
-        "D1.12",
-        "D1.24"
-      ],
-      "difficulty_notes": "Exercise (e) is the key diagnostic question. When both curves shift right, quantity unambiguously increases, but the price change depends on the relative size of the shifts — it could go up, down, or stay the same. Students who understand the model grasp this; students who are just plugging numbers are surprised. This is an important conceptual checkpoint. One lesson works — the algebra is revision from §1.4.1, the challenge is the reasoning in (e).",
-      "source_ref": "references/owned/course-blueprint-v5.md §1.3.3",
-      "paragraph_kind": "theory",
-      "introduces_new_theory": true,
-      "record_status": "migrated_from_v4_needs_v5_review",
-      "v5_migration": {
-        "source_status": "migrated_from_v4_needs_v5_review",
-        "from_v4_id": "1.4.2",
-        "related_v4_ids": [],
-        "review_required_before_final": true
-      }
-    },
-    {
-      "difficulty": "MIXED",
-      "target_exercise": {
-        "placeholder": true,
-        "context": "Placeholder for 1.3.4: integrated practice across this chapter. It consolidates earlier theory and introduces no new theory.",
-        "subquestions": [
-          {
-            "label": "a",
-            "prompt": "Combine at least two earlier skills from this chapter in one exam-style context."
-          }
-        ]
-      },
-      "lesson_goals": [
-        "Consolidate and transfer the chapter skills for Gemengde opgaven: aanbod en marktevenwicht."
-      ],
-      "required_skills": [],
-      "prior_knowledge_assumed": [],
-      "new_skills_introduced": [],
-      "missing_units_flagged": [
-        "v5_placeholder_needs_review"
-      ],
-      "exam_codes": [],
-      "difficulty_notes": "Count-bearing consolidation paragraph. It introduces no new theory and needs a reviewed integration target exercise.",
-      "id": "1.3.4",
-      "module": 1,
-      "chapter": 3,
-      "paragraph": 4,
-      "paragraph_title": "Gemengde opgaven: aanbod en marktevenwicht",
-      "paragraph_kind": "gemengde_opgaven",
-      "introduces_new_theory": false,
-      "record_status": "placeholder_needs_review",
-      "placeholder_reason": "Gemengde-opgaven target exercise must be designed as integration/transfer practice.",
-      "source_ref": "references/owned/course-blueprint-v5.md §1.3.4",
-      "v5_migration": {
-        "source_status": "placeholder_needs_review",
-        "from_v4_id": null,
-        "related_v4_ids": [],
-        "review_required_before_final": true
-      }
-    },
-    {
-      "id": "2.1.1",
-      "module": 2,
-      "chapter": 1,
-      "paragraph": 1,
-      "paragraph_title": "Kostenstructuren",
+      "paragraph_title": "Cost structures: TK, VK, CK, GTK, GVK, GCK",
       "difficulty": "MEDIUM",
       "target_exercise": {
         "context": "A bakery has fixed costs (constante kosten) of €500 per month (rent, insurance). Each loaf of bread costs €0.80 in ingredients and energy (variabele kosten per stuk).",
@@ -769,23 +444,14 @@
         "A2.15"
       ],
       "difficulty_notes": "Seven cost concepts is a lot of terminology. The key insight (GTK falls because fixed costs spread) is intuitive. Exercises (d) and (e) test conceptual understanding, not just calculation. One lesson works because the formulas are all simple divisions — the challenge is keeping the abbreviations straight. Recommend a summary card students keep in their notebook.",
-      "source_ref": "references/owned/course-blueprint-v5.md §2.1.1",
-      "paragraph_kind": "theory",
-      "introduces_new_theory": true,
-      "record_status": "migrated_from_v4_needs_v5_review",
-      "v5_migration": {
-        "source_status": "migrated_from_v4_needs_v5_review",
-        "from_v4_id": "1.3.2",
-        "related_v4_ids": [],
-        "review_required_before_final": true
-      }
+      "source_ref": "references/owned/course-blueprint-v4.md §1.3.2"
     },
     {
-      "id": "2.1.2",
-      "module": 2,
-      "chapter": 1,
-      "paragraph": 2,
-      "paragraph_title": "Opbrengsten, winst en break-even",
+      "id": "1.3.3",
+      "module": 1,
+      "chapter": 3,
+      "paragraph": 3,
+      "paragraph_title": "Revenue: TO, GO, winst, break-even",
       "difficulty": "LIGHT",
       "target_exercise": {
         "context": "The bakery from §1.3.2 sells bread at €1.50 per loaf.",
@@ -848,23 +514,138 @@
         "A2.15"
       ],
       "difficulty_notes": "Lighter than §1.3.2 because fewer new concepts. The break-even calculation is straightforward algebra. The graph (exercise e) bridges to visual analysis. One lesson comfortable — good opportunity to check that §1.3.2's cost concepts stuck.",
-      "source_ref": "references/owned/course-blueprint-v5.md §2.1.2",
-      "paragraph_kind": "theory",
-      "introduces_new_theory": true,
-      "record_status": "migrated_from_v4_needs_v5_review",
-      "v5_migration": {
-        "source_status": "migrated_from_v4_needs_v5_review",
-        "from_v4_id": "1.3.3",
-        "related_v4_ids": [],
-        "review_required_before_final": true
-      }
+      "source_ref": "references/owned/course-blueprint-v4.md §1.3.3"
     },
     {
-      "id": "2.1.3",
-      "module": 2,
-      "chapter": 1,
+      "id": "1.4.1",
+      "module": 1,
+      "chapter": 4,
+      "paragraph": 1,
+      "paragraph_title": "Equilibrium: solving Qa = Qv",
+      "difficulty": "MEDIUM",
+      "target_exercise": {
+        "context": "On the market for notebooks: Qv = −2P + 100 and Qa = 3P − 25.",
+        "subquestions": [
+          {
+            "label": "a",
+            "prompt": "Calculate the equilibrium price and equilibrium quantity."
+          },
+          {
+            "label": "b",
+            "prompt": "Check your answer by substituting back into both equations."
+          },
+          {
+            "label": "c",
+            "prompt": "Draw both curves in a graph and mark the equilibrium point."
+          },
+          {
+            "label": "d",
+            "prompt": "At a price of €30, is there a surplus (aanbodoverschot) or a shortage (vraagoverschot)? Calculate its size."
+          }
+        ]
+      },
+      "lesson_goals": [
+        "Set Qa = Qv and solve for P (equilibrium price)",
+        "Substitute back to find equilibrium quantity",
+        "Draw demand and supply curves and locate equilibrium graphically",
+        "Determine surplus or shortage at a given price"
+      ],
+      "required_skills": [
+        "A02",
+        "A04",
+        "A06"
+      ],
+      "prior_knowledge_assumed": [
+        "A02"
+      ],
+      "new_skills_introduced": [
+        "A04",
+        "A06"
+      ],
+      "missing_units_flagged": [
+        "Determine surplus (aanbodoverschot) vs shortage (vraagoverschot) at a non-equilibrium price and calculate its size (A-domain candidate, prerequisite for government price interventions in §2.4)"
+      ],
+      "exam_codes": [
+        "A2.10",
+        "A2.12",
+        "A2.15"
+      ],
+      "difficulty_notes": "First real algebraic challenge. Students who struggle with rearranging equations need support. Exercise (b) — checking the answer — builds good habits. Exercise (d) bridges to government intervention (Module 2). One lesson is tight if algebra is weak — provide a worked example first, then let students practice.",
+      "source_ref": "references/owned/course-blueprint-v4.md §1.4.1"
+    },
+    {
+      "id": "1.4.2",
+      "module": 1,
+      "chapter": 4,
+      "paragraph": 2,
+      "paragraph_title": "Shifts in supply and demand, new equilibria",
+      "difficulty": "MEDIUM",
+      "target_exercise": {
+        "context": "Starting from the notebook market (Qv = −2P + 100, Qa = 3P − 25, equilibrium P* = 25, Q* = 50).",
+        "subquestions": [
+          {
+            "label": "a",
+            "prompt": "A new factory opens. The new supply function is Qa = 3P − 10. Calculate the new equilibrium price and quantity."
+          },
+          {
+            "label": "b",
+            "prompt": "Compare with the old equilibrium: what happened to price? To quantity? Is this logical?"
+          },
+          {
+            "label": "c",
+            "prompt": "Now suppose student income rises. The new demand function is Qv = −2P + 120 (supply back to original). Calculate the new equilibrium."
+          },
+          {
+            "label": "d",
+            "prompt": "Draw a graph showing both changes (one at a time). Use arrows to show the direction of shifts."
+          },
+          {
+            "label": "e",
+            "prompt": "Now suppose BOTH changes happen at the same time: supply shifts to Qa = 3P − 10 AND demand shifts to Qv = −2P + 120. Calculate the new equilibrium. What happened to quantity? What happened to price? Could you have predicted the direction of the price change without calculating? Explain."
+          }
+        ]
+      },
+      "lesson_goals": [
+        "Calculate a new equilibrium after a supply or demand shift",
+        "Compare old and new equilibrium: predict direction of price and quantity change",
+        "Connect shifts to the demand/supply factors from §1.2 and §1.3",
+        "Show shifts graphically with clear before/after",
+        "Analyse simultaneous shifts: quantity effect is clear (both increase Q), but price effect is ambiguous (one pushes up, the other pushes down)"
+      ],
+      "required_skills": [
+        "A02",
+        "A04",
+        "A06",
+        "A42",
+        "D13"
+      ],
+      "prior_knowledge_assumed": [
+        "A02",
+        "A04",
+        "A06",
+        "A42",
+        "D13"
+      ],
+      "new_skills_introduced": [],
+      "missing_units_flagged": [
+        "Reason about simultaneous supply+demand shifts: determinate Q-direction but ambiguous P-direction (concept-level, diagnostic checkpoint)"
+      ],
+      "exam_codes": [
+        "A2.10",
+        "A2.12",
+        "A2.15",
+        "D1.12",
+        "D1.24"
+      ],
+      "difficulty_notes": "Exercise (e) is the key diagnostic question. When both curves shift right, quantity unambiguously increases, but the price change depends on the relative size of the shifts — it could go up, down, or stay the same. Students who understand the model grasp this; students who are just plugging numbers are surprised. This is an important conceptual checkpoint. One lesson works — the algebra is revision from §1.4.1, the challenge is the reasoning in (e).",
+      "source_ref": "references/owned/course-blueprint-v4.md §1.4.2"
+    },
+    {
+      "id": "1.4.3",
+      "module": 1,
+      "chapter": 4,
       "paragraph": 3,
-      "paragraph_title": "Marginale kosten en marginale opbrengsten",
+      "paragraph_title": "Marginal concepts: MK and MO",
       "difficulty": "MEDIUM",
       "target_exercise": {
         "context": "A firm has TK = 200 + 3Q (costs in €, Q in units) and sells at a fixed price of €8 per unit, so TO = 8Q. Students build a Q/TK/TO/Winst/MK/MO table and discover patterns.",
@@ -926,63 +707,86 @@
         "D1.21"
       ],
       "difficulty_notes": "This paragraph introduces the concepts and calculation only — NOT yet the profit maximisation rule. Students work with tables and subtraction, discovering patterns. No differentiation yet. The quadratic cost function in exercise (d) prepares students for rising MK, which they will encounter later in the producer and market-power sequence. One lesson works well because the focus is on understanding, not on a complex procedure.",
-      "source_ref": "references/owned/course-blueprint-v5.md §2.1.3",
-      "paragraph_kind": "theory",
-      "introduces_new_theory": true,
-      "record_status": "migrated_from_v4_needs_v5_review",
-      "v5_migration": {
-        "source_status": "migrated_from_v4_needs_v5_review",
-        "from_v4_id": "1.4.3",
-        "related_v4_ids": [],
-        "review_required_before_final": true
-      }
+      "source_ref": "references/owned/course-blueprint-v4.md §1.4.3"
     },
     {
-      "difficulty": "MIXED",
+      "id": "1.4.4",
+      "module": 1,
+      "chapter": 4,
+      "paragraph": 4,
+      "paragraph_title": "Profit maximisation: the MO = MK rule",
+      "difficulty": "MEDIUM",
       "target_exercise": {
-        "placeholder": true,
-        "context": "Placeholder for 2.1.4: integrated practice across this chapter. It consolidates earlier theory and introduces no new theory.",
+        "context": "Using Firm 2 from §1.4.3 (TK = 100 + Q², TO = 30Q). Students discover MO = MK from the table, then apply it algebraically with an approximate MK.",
         "subquestions": [
           {
             "label": "a",
-            "prompt": "Combine at least two earlier skills from this chapter in one exam-style context."
+            "prompt": "Extend your table from §1.4.3(d) and add a column for winst at each Q."
+          },
+          {
+            "label": "b",
+            "prompt": "At which Q is winst highest?"
+          },
+          {
+            "label": "c",
+            "prompt": "Look at your MK and MO columns. At the profit-maximising Q, what is true about MK and MO?"
+          },
+          {
+            "label": "d",
+            "prompt": "Explain the rule: 'produce as long as MO ≥ MK, stop when MO = MK.'"
+          },
+          {
+            "label": "e",
+            "prompt": "A third firm has TK = 50 + 2Q² and sells at P = 40. Using the rule MO = MK, calculate the profit-maximising Q WITHOUT making a full table. (Hint: MK = ΔTK/ΔQ. For TK = 50 + 2Q², each extra unit costs approximately 4Q. So set 4Q = 40.)"
+          },
+          {
+            "label": "f",
+            "prompt": "Verify your answer from (e) by calculating winst at Q−1, Q, and Q+1. Is winst indeed highest at your answer?"
           }
         ]
       },
       "lesson_goals": [
-        "Consolidate and transfer the chapter skills for Gemengde opgaven: kosten en opbrengsten."
+        "Discover through the table that winst is maximised where MO = MK",
+        "State the profit maximisation rule: produce where MO = MK",
+        "Understand why: if MO > MK, one more unit adds to profit; if MO < MK, it subtracts",
+        "Apply the rule directly (without a full table) by setting MO = MK as an equation",
+        "Verify the solution by checking profit at nearby quantities"
       ],
-      "required_skills": [],
-      "prior_knowledge_assumed": [],
-      "new_skills_introduced": [],
+      "required_skills": [
+        "A12",
+        "A13",
+        "A20",
+        "A21",
+        "D30"
+      ],
+      "prior_knowledge_assumed": [
+        "A12",
+        "A13",
+        "A21"
+      ],
+      "new_skills_introduced": [
+        "A20",
+        "D30"
+      ],
       "missing_units_flagged": [
-        "v5_placeholder_needs_review"
+        "Approximate MK from TK = a + bQ² as 2bQ without formal differentiation (early pre-calculus bridge; a distinct unit from A11 'Afgeleide bepalen')",
+        "Verify a profit optimum by checking winst at Q−1, Q, Q+1 (A-domain candidate, good-habits-building step)"
       ],
-      "exam_codes": [],
-      "difficulty_notes": "Count-bearing consolidation paragraph. It introduces no new theory and needs a reviewed integration target exercise.",
-      "id": "2.1.4",
-      "module": 2,
-      "chapter": 1,
-      "paragraph": 4,
-      "paragraph_title": "Gemengde opgaven: kosten en opbrengsten",
-      "paragraph_kind": "gemengde_opgaven",
-      "introduces_new_theory": false,
-      "record_status": "placeholder_needs_review",
-      "placeholder_reason": "Gemengde-opgaven target exercise must be designed as integration/transfer practice.",
-      "source_ref": "references/owned/course-blueprint-v5.md §2.1.4",
-      "v5_migration": {
-        "source_status": "placeholder_needs_review",
-        "from_v4_id": null,
-        "related_v4_ids": [],
-        "review_required_before_final": true
-      }
+      "exam_codes": [
+        "A2.10",
+        "A2.11",
+        "A2.12",
+        "D1.21"
+      ],
+      "difficulty_notes": "Exercise (e) is the bridge to algebraic application. The hint deliberately uses an approximate MK ('each extra unit costs approximately 4Q') rather than formal differentiation — the formal calculus technique comes later in the producer and market-power sequence. Students learn the logic of the rule here; the calculus technique comes later. Exercise (f) builds verification habits. One lesson works because the rule emerges naturally from the table work in §1.4.3.",
+      "source_ref": "references/owned/course-blueprint-v4.md §1.4.4"
     },
     {
-      "id": "2.2.1",
+      "id": "2.1.1",
       "module": 2,
-      "chapter": 2,
+      "chapter": 1,
       "paragraph": 1,
-      "paragraph_title": "Prijselasticiteit",
+      "paragraph_title": "Price elasticity: concept and calculation",
       "difficulty": "MEDIUM",
       "target_exercise": {
         "context": "A cinema raises ticket prices from €10.00 to €12.00. The number of visitors drops from 500 to 420 per week.",
@@ -1034,23 +838,14 @@
         "D1.3"
       ],
       "difficulty_notes": "The formula itself is simple, but students make errors in the percentage calculation (using new instead of old as base, forgetting the sign). Exercise (e) provides immediate contrast — elastic vs inelastic — which cements understanding. One lesson is doable if the percentage skill from §1.1.2 is solid. If not, this spills.",
-      "source_ref": "references/owned/course-blueprint-v5.md §2.2.1",
-      "paragraph_kind": "theory",
-      "introduces_new_theory": true,
-      "record_status": "migrated_from_v4_needs_v5_review",
-      "v5_migration": {
-        "source_status": "migrated_from_v4_needs_v5_review",
-        "from_v4_id": "2.1.1",
-        "related_v4_ids": [],
-        "review_required_before_final": true
-      }
+      "source_ref": "references/owned/course-blueprint-v4.md §2.1.1"
     },
     {
-      "id": "2.2.2",
+      "id": "2.1.2",
       "module": 2,
-      "chapter": 2,
+      "chapter": 1,
       "paragraph": 2,
-      "paragraph_title": "Elasticiteit en omzet",
+      "paragraph_title": "Elastic vs inelastic: the connection to omzet (revenue)",
       "difficulty": "MEDIUM",
       "target_exercise": {
         "context": "Uses the cinema and petrol cases from §2.1.1 to discover the Ev↔omzet rule.",
@@ -1103,23 +898,14 @@
         "D1.15"
       ],
       "difficulty_notes": "This is where elasticity becomes meaningful — students see why businesses care. Note that the formula omzet = P × Q (total revenue) is used here for the first time this year in a formal way. Students have an intuitive notion of revenue, but this is the first time they apply the formula systematically and connect it to a concept (elasticity). The rule 'elastic → price up means omzet down' is counterintuitive for some. One lesson works — the calculations are simple repetitions of §2.1.1, the new element is the interpretation.",
-      "source_ref": "references/owned/course-blueprint-v5.md §2.2.2",
-      "paragraph_kind": "theory",
-      "introduces_new_theory": true,
-      "record_status": "migrated_from_v4_needs_v5_review",
-      "v5_migration": {
-        "source_status": "migrated_from_v4_needs_v5_review",
-        "from_v4_id": "2.1.2",
-        "related_v4_ids": [],
-        "review_required_before_final": true
-      }
+      "source_ref": "references/owned/course-blueprint-v4.md §2.1.2"
     },
     {
-      "id": "2.2.3",
+      "id": "2.1.3",
       "module": 2,
-      "chapter": 2,
+      "chapter": 1,
       "paragraph": 3,
-      "paragraph_title": "Inkomenselasticiteit en kruiselingse elasticiteit",
+      "paragraph_title": "Income elasticity and cross elasticity",
       "difficulty": "MEDIUM",
       "target_exercise": {
         "context": "Income elasticity (Ei), cross elasticity (Ek), and multi-variable demand functions. Part C introduces Qx = 100 − 2Px + 0.5Py + 0.01Y as a realistic exam-style demand function.",
@@ -1181,63 +967,14 @@
         "D1.9"
       ],
       "difficulty_notes": "Parts A and B use the same formula structure as Ev — same skill, different variables. Students who mastered §2.1.1 handle this quickly. Part C introduces multi-variable demand functions, which appear in exam questions. Students must be comfortable substituting multiple values and holding other variables constant (ceteris paribus in action). This is the most novel element. One lesson works because parts A and B are fast; part C takes more time but is essential for exam preparation.",
-      "source_ref": "references/owned/course-blueprint-v5.md §2.2.3",
-      "paragraph_kind": "theory",
-      "introduces_new_theory": true,
-      "record_status": "migrated_from_v4_needs_v5_review",
-      "v5_migration": {
-        "source_status": "migrated_from_v4_needs_v5_review",
-        "from_v4_id": "2.1.3",
-        "related_v4_ids": [],
-        "review_required_before_final": true
-      }
+      "source_ref": "references/owned/course-blueprint-v4.md §2.1.3"
     },
     {
-      "difficulty": "MIXED",
-      "target_exercise": {
-        "placeholder": true,
-        "context": "Placeholder for 2.2.4: integrated practice across this chapter. It consolidates earlier theory and introduces no new theory.",
-        "subquestions": [
-          {
-            "label": "a",
-            "prompt": "Combine at least two earlier skills from this chapter in one exam-style context."
-          }
-        ]
-      },
-      "lesson_goals": [
-        "Consolidate and transfer the chapter skills for Gemengde opgaven: elasticiteit."
-      ],
-      "required_skills": [],
-      "prior_knowledge_assumed": [],
-      "new_skills_introduced": [],
-      "missing_units_flagged": [
-        "v5_placeholder_needs_review"
-      ],
-      "exam_codes": [],
-      "difficulty_notes": "Count-bearing consolidation paragraph. It introduces no new theory and needs a reviewed integration target exercise.",
-      "id": "2.2.4",
+      "id": "2.2.1",
       "module": 2,
       "chapter": 2,
-      "paragraph": 4,
-      "paragraph_title": "Gemengde opgaven: elasticiteit",
-      "paragraph_kind": "gemengde_opgaven",
-      "introduces_new_theory": false,
-      "record_status": "placeholder_needs_review",
-      "placeholder_reason": "Gemengde-opgaven target exercise must be designed as integration/transfer practice.",
-      "source_ref": "references/owned/course-blueprint-v5.md §2.2.4",
-      "v5_migration": {
-        "source_status": "placeholder_needs_review",
-        "from_v4_id": null,
-        "related_v4_ids": [],
-        "review_required_before_final": true
-      }
-    },
-    {
-      "id": "2.3.1",
-      "module": 2,
-      "chapter": 3,
       "paragraph": 1,
-      "paragraph_title": "Consumentensurplus",
+      "paragraph_title": "Consumer surplus",
       "difficulty": "MEDIUM",
       "target_exercise": {
         "context": "The demand curve for concert tickets is P = 50 − 0.5Q (P in €, Q in tickets). The market price is €20.",
@@ -1291,23 +1028,14 @@
         "D3.1"
       ],
       "difficulty_notes": "The concept is visual and concrete. The calculation (triangle area) is simple geometry. The main stumbling block is correctly identifying which triangle — students sometimes shade the wrong area. One lesson comfortable.",
-      "source_ref": "references/owned/course-blueprint-v5.md §2.3.1",
-      "paragraph_kind": "theory",
-      "introduces_new_theory": true,
-      "record_status": "migrated_from_v4_needs_v5_review",
-      "v5_migration": {
-        "source_status": "migrated_from_v4_needs_v5_review",
-        "from_v4_id": "2.2.1",
-        "related_v4_ids": [],
-        "review_required_before_final": true
-      }
+      "source_ref": "references/owned/course-blueprint-v4.md §2.2.1"
     },
     {
-      "id": "2.3.2",
+      "id": "2.2.2",
       "module": 2,
-      "chapter": 3,
+      "chapter": 2,
       "paragraph": 2,
-      "paragraph_title": "Producentensurplus en totaal surplus",
+      "paragraph_title": "Producer surplus, total surplus, and the link to marginal cost",
       "difficulty": "MEDIUM",
       "target_exercise": {
         "context": "The supply curve for concert tickets is P = 5 + 0.25Q. The demand curve is P = 50 − 0.5Q.",
@@ -1370,23 +1098,14 @@
         "D3.1"
       ],
       "difficulty_notes": "The graphical work for PS mirrors CS — students pick it up quickly. The challenging element is exercise (e): connecting PS to marginal cost. The supply curve has been treated as 'willingness to sell' so far; now students must see it as the MC curve. This dual interpretation (supply = MC) is critical for later welfare effects of monopoly and market-power analysis. Spend time on this connection — it is more important than the triangle calculation itself. One lesson works if you prioritise the MC connection over drilling calculations.",
-      "source_ref": "references/owned/course-blueprint-v5.md §2.3.2",
-      "paragraph_kind": "theory",
-      "introduces_new_theory": true,
-      "record_status": "migrated_from_v4_needs_v5_review",
-      "v5_migration": {
-        "source_status": "migrated_from_v4_needs_v5_review",
-        "from_v4_id": "2.2.2",
-        "related_v4_ids": [],
-        "review_required_before_final": true
-      }
+      "source_ref": "references/owned/course-blueprint-v4.md §2.2.2"
     },
     {
-      "id": "2.3.3",
+      "id": "2.2.3",
       "module": 2,
-      "chapter": 3,
+      "chapter": 2,
       "paragraph": 3,
-      "paragraph_title": "Pareto-efficientie en welvaartsverlies",
+      "paragraph_title": "Pareto-efficiency and deadweight loss introduction",
       "difficulty": "MEDIUM",
       "target_exercise": {
         "context": "Using the market from §2.2.2 (equilibrium P = €20, Q = 60, TS = 1350): a forced price of €30 creates a welfare loss that students calculate and interpret.",
@@ -1444,63 +1163,14 @@
         "D3.5"
       ],
       "difficulty_notes": "The Pareto concept is abstract but exercise (e) makes it concrete: 'can you improve someone's position without hurting another?' The deadweight loss calculation is straightforward (it's another triangle). The conceptual challenge is that students must see why transactions are 'lost.' One lesson works because the math is revision — the new element is the interpretation.",
-      "source_ref": "references/owned/course-blueprint-v5.md §2.3.3",
-      "paragraph_kind": "theory",
-      "introduces_new_theory": true,
-      "record_status": "migrated_from_v4_needs_v5_review",
-      "v5_migration": {
-        "source_status": "migrated_from_v4_needs_v5_review",
-        "from_v4_id": "2.2.3",
-        "related_v4_ids": [],
-        "review_required_before_final": true
-      }
+      "source_ref": "references/owned/course-blueprint-v4.md §2.2.3"
     },
     {
-      "difficulty": "MIXED",
-      "target_exercise": {
-        "placeholder": true,
-        "context": "Placeholder for 2.3.4: integrated practice across this chapter. It consolidates earlier theory and introduces no new theory.",
-        "subquestions": [
-          {
-            "label": "a",
-            "prompt": "Combine at least two earlier skills from this chapter in one exam-style context."
-          }
-        ]
-      },
-      "lesson_goals": [
-        "Consolidate and transfer the chapter skills for Gemengde opgaven: surplus en welvaart."
-      ],
-      "required_skills": [],
-      "prior_knowledge_assumed": [],
-      "new_skills_introduced": [],
-      "missing_units_flagged": [
-        "v5_placeholder_needs_review"
-      ],
-      "exam_codes": [],
-      "difficulty_notes": "Count-bearing consolidation paragraph. It introduces no new theory and needs a reviewed integration target exercise.",
-      "id": "2.3.4",
+      "id": "2.3.1",
       "module": 2,
       "chapter": 3,
-      "paragraph": 4,
-      "paragraph_title": "Gemengde opgaven: surplus en welvaart",
-      "paragraph_kind": "gemengde_opgaven",
-      "introduces_new_theory": false,
-      "record_status": "placeholder_needs_review",
-      "placeholder_reason": "Gemengde-opgaven target exercise must be designed as integration/transfer practice.",
-      "source_ref": "references/owned/course-blueprint-v5.md §2.3.4",
-      "v5_migration": {
-        "source_status": "placeholder_needs_review",
-        "from_v4_id": null,
-        "related_v4_ids": [],
-        "review_required_before_final": true
-      }
-    },
-    {
-      "id": "3.1.1",
-      "module": 3,
-      "chapter": 1,
       "paragraph": 1,
-      "paragraph_title": "Belastingen: wig en nieuw evenwicht",
+      "paragraph_title": "Taxes: the wedge and the new equilibrium",
       "difficulty": "MEDIUM",
       "target_exercise": {
         "context": "Market: Qv = −2P + 20 and Qa = P − 1. The government introduces a tax of €3 per unit, paid by the producer.",
@@ -1556,23 +1226,14 @@
         "D1.24"
       ],
       "difficulty_notes": "The concept of 'the supply curve shifts up by the tax amount' is often taught but rarely understood. Students confuse 'upward shift = less supply.' Exercise (d) is essential — the graph makes the wedge visible. One lesson works if you focus on the mechanics (how to calculate) and save the welfare analysis for §2.3.2.",
-      "source_ref": "references/owned/course-blueprint-v5.md §3.1.1",
-      "paragraph_kind": "theory",
-      "introduces_new_theory": true,
-      "record_status": "migrated_from_v4_needs_v5_review",
-      "v5_migration": {
-        "source_status": "migrated_from_v4_needs_v5_review",
-        "from_v4_id": "2.3.1",
-        "related_v4_ids": [],
-        "review_required_before_final": true
-      }
+      "source_ref": "references/owned/course-blueprint-v4.md §2.3.1"
     },
     {
-      "id": "3.1.2",
-      "module": 3,
-      "chapter": 1,
+      "id": "2.3.2",
+      "module": 2,
+      "chapter": 3,
       "paragraph": 2,
-      "paragraph_title": "Belastingdruk en welvaartsverlies",
+      "paragraph_title": "Taxes: burden sharing, afwenteling and welfare loss",
       "difficulty": "MEDIUM",
       "target_exercise": {
         "context": "Using the market from §2.3.1 (original: P* = 7, Q* = 6; after tax €3: Pc = 8, Pp = 5, Qt = 3).",
@@ -1641,23 +1302,14 @@
         "D3.9"
       ],
       "difficulty_notes": "This is a calculation-heavy lesson with 5–6 separate computations. The key insight — 'not all lost CS and PS goes to the government; some is simply lost' — is the deadweight loss. Students need the graph from §2.3.1 in front of them. One lesson is tight. Recommend: do exercises (a–d) in class, assign (e–f) as homework.",
-      "source_ref": "references/owned/course-blueprint-v5.md §3.1.2",
-      "paragraph_kind": "theory",
-      "introduces_new_theory": true,
-      "record_status": "migrated_from_v4_needs_v5_review",
-      "v5_migration": {
-        "source_status": "migrated_from_v4_needs_v5_review",
-        "from_v4_id": "2.3.2",
-        "related_v4_ids": [],
-        "review_required_before_final": true
-      }
+      "source_ref": "references/owned/course-blueprint-v4.md §2.3.2"
     },
     {
-      "id": "3.1.3",
-      "module": 3,
-      "chapter": 1,
+      "id": "2.3.3",
+      "module": 2,
+      "chapter": 3,
       "paragraph": 3,
-      "paragraph_title": "Subsidies",
+      "paragraph_title": "Subsidies: mirror of taxes",
       "difficulty": "MEDIUM",
       "target_exercise": {
         "context": "Market: Qv = −4P + 40 and Qa = 2P − 2. The government gives a subsidy of €3 per unit to producers.",
@@ -1729,23 +1381,14 @@
         "D3.9"
       ],
       "difficulty_notes": "If students understood §2.3.1 and §2.3.2, this is mechanical transfer — same skills, different direction. The surprise is that subsidies also cause DWL (students assume subsidies are 'purely good'). One lesson works because the method is identical to taxes.",
-      "source_ref": "references/owned/course-blueprint-v5.md §3.1.3",
-      "paragraph_kind": "theory",
-      "introduces_new_theory": true,
-      "record_status": "migrated_from_v4_needs_v5_review",
-      "v5_migration": {
-        "source_status": "migrated_from_v4_needs_v5_review",
-        "from_v4_id": "2.3.3",
-        "related_v4_ids": [],
-        "review_required_before_final": true
-      }
+      "source_ref": "references/owned/course-blueprint-v4.md §2.3.3"
     },
     {
-      "id": "3.1.4",
-      "module": 3,
-      "chapter": 1,
-      "paragraph": 4,
-      "paragraph_title": "Maximumprijs",
+      "id": "2.4.1",
+      "module": 2,
+      "chapter": 4,
+      "paragraph": 1,
+      "paragraph_title": "Maximum price (prijsplafond)",
       "difficulty": "MEDIUM",
       "target_exercise": {
         "context": "The market for rental housing: Qv = −5P + 6000 and Qa = 3P − 1600 (P in €/month, Q in apartments). The government sets a maximum rent of €800/month.",
@@ -1811,23 +1454,14 @@
         "D3.9"
       ],
       "difficulty_notes": "The welfare analysis here is more nuanced than taxes: some consumers gain, others lose access entirely. Exercise (f) forces critical thinking. One lesson works — the graph is similar to §2.2.3 (forced price deviation), so students recognise the pattern.",
-      "source_ref": "references/owned/course-blueprint-v5.md §3.1.4",
-      "paragraph_kind": "theory",
-      "introduces_new_theory": true,
-      "record_status": "migrated_from_v4_needs_v5_review",
-      "v5_migration": {
-        "source_status": "migrated_from_v4_needs_v5_review",
-        "from_v4_id": "2.4.1",
-        "related_v4_ids": [],
-        "review_required_before_final": true
-      }
+      "source_ref": "references/owned/course-blueprint-v4.md §2.4.1"
     },
     {
-      "id": "3.1.5",
-      "module": 3,
-      "chapter": 1,
-      "paragraph": 5,
-      "paragraph_title": "Minimumprijs en quota",
+      "id": "2.4.2",
+      "module": 2,
+      "chapter": 4,
+      "paragraph": 2,
+      "paragraph_title": "Minimum price (minimumprijs/garantieprijs)",
       "difficulty": "MEDIUM",
       "target_exercise": {
         "context": "The EU sets a minimum price for butter at €6/kg. The market: Qv = −10P + 100 and Qa = 5P − 5 (Q in millions of kg).",
@@ -1890,66 +1524,86 @@
         "D3.9"
       ],
       "difficulty_notes": "Mirror of §2.4.1. Students who understood maximum price handle this quickly. The surplus (aanbodoverschot) vs shortage distinction is important to drill. The EU butter/milk example makes it concrete. One lesson comfortable.",
-      "source_ref": "references/owned/course-blueprint-v5.md §3.1.5",
-      "paragraph_kind": "theory",
-      "introduces_new_theory": true,
-      "record_status": "migrated_from_v4_needs_v5_review",
-      "placeholder_reason": "Merged or related v4 records require review: 2.4.3.",
-      "v5_migration": {
-        "source_status": "migrated_from_v4_needs_v5_review",
-        "from_v4_id": "2.4.2",
-        "related_v4_ids": [
-          "2.4.3"
-        ],
-        "review_required_before_final": true
-      }
+      "source_ref": "references/owned/course-blueprint-v4.md §2.4.2"
     },
     {
-      "difficulty": "MIXED",
+      "id": "2.4.3",
+      "module": 2,
+      "chapter": 4,
+      "paragraph": 3,
+      "paragraph_title": "Production quotas",
+      "difficulty": "MEDIUM",
       "target_exercise": {
-        "placeholder": true,
-        "context": "Placeholder for 3.1.6: integrated practice across this chapter. It consolidates earlier theory and introduces no new theory.",
+        "context": "The milk market: Qv = −2P + 200 and Qa = P − 10 (Q in million litres). The government introduces a production quota of 50 million litres.",
         "subquestions": [
           {
             "label": "a",
-            "prompt": "Combine at least two earlier skills from this chapter in one exam-style context."
+            "prompt": "Calculate the free market equilibrium (P and Q)."
+          },
+          {
+            "label": "b",
+            "prompt": "The government introduces a production quota of 50 million litres. At this quantity, what price are consumers willing to pay? (Read from the demand curve.)"
+          },
+          {
+            "label": "c",
+            "prompt": "Calculate CS and PS at the quota. Compare with free market TS."
+          },
+          {
+            "label": "d",
+            "prompt": "Calculate the deadweight loss."
+          },
+          {
+            "label": "e",
+            "prompt": "Compare the quota with a minimum price that achieves the same producer price. Which policy creates less deadweight loss?"
+          },
+          {
+            "label": "f",
+            "prompt": "Why might producers actually prefer a quota? Think about certainty of income."
           }
         ]
       },
       "lesson_goals": [
-        "Consolidate and transfer the chapter skills for Gemengde opgaven: overheidsingrijpen."
+        "Understand that a quota restricts output directly (instead of manipulating price)",
+        "Calculate the new market price by substituting the quota quantity into the demand function",
+        "Calculate welfare effects of a quota",
+        "Compare quotas with other policy instruments (minimum price, tax)",
+        "Understand that producers may gain from restricted supply (higher price per unit)"
       ],
-      "required_skills": [],
-      "prior_knowledge_assumed": [],
+      "required_skills": [
+        "A04",
+        "A06",
+        "A10",
+        "A19",
+        "A32"
+      ],
+      "prior_knowledge_assumed": [
+        "A04",
+        "A06",
+        "A10",
+        "A19",
+        "A32"
+      ],
       "new_skills_introduced": [],
       "missing_units_flagged": [
-        "v5_placeholder_needs_review"
+        "Invert the demand function to read price from a given quota quantity (A-domain candidate; bridges to §3.2 monopoly mechanics)",
+        "Compare welfare effects of quota vs minimum price vs tax for the same producer-price target (concept-level + analytical; exam-integration skill)",
+        "Explain why producers can prefer a quota to free-market output (concept-level, income-certainty argument)"
       ],
-      "exam_codes": [],
-      "difficulty_notes": "Count-bearing consolidation paragraph. It introduces no new theory and needs a reviewed integration target exercise.",
-      "id": "3.1.6",
-      "module": 3,
-      "chapter": 1,
-      "paragraph": 6,
-      "paragraph_title": "Gemengde opgaven: overheidsingrijpen",
-      "paragraph_kind": "gemengde_opgaven",
-      "introduces_new_theory": false,
-      "record_status": "placeholder_needs_review",
-      "placeholder_reason": "Gemengde-opgaven target exercise must be designed as integration/transfer practice.",
-      "source_ref": "references/owned/course-blueprint-v5.md §3.1.6",
-      "v5_migration": {
-        "source_status": "placeholder_needs_review",
-        "from_v4_id": null,
-        "related_v4_ids": [],
-        "review_required_before_final": true
-      }
+      "exam_codes": [
+        "A2.15",
+        "A2.16",
+        "D3.10",
+        "D3.9"
+      ],
+      "difficulty_notes": "Slightly more complex than §2.4.1 and §2.4.2 because the mechanism is different: quantity is fixed, price adjusts via demand curve. Exercise (e) is the integrative challenge — comparing instruments. This is valuable exam preparation. One lesson works because students now have the surplus analysis routine down.",
+      "source_ref": "references/owned/course-blueprint-v4.md §2.4.3"
     },
     {
-      "id": "3.2.1",
+      "id": "3.1.1",
       "module": 3,
-      "chapter": 2,
+      "chapter": 1,
       "paragraph": 1,
-      "paragraph_title": "Volkomen concurrentie: kenmerken",
+      "paragraph_title": "Characteristics of volkomen concurrentie",
       "difficulty": "LIGHT",
       "target_exercise": {
         "context": "A wheat farmer sells wheat at the market price of €200 per ton. He cannot influence this price.",
@@ -1996,23 +1650,14 @@
         "D2.1"
       ],
       "difficulty_notes": "Conceptual lesson. The P = GO = MO equality is stated and understood visually, not derived mathematically. Students find this intuitive ('if you always get the same price, each extra unit brings in that price'). One lesson comfortable — use the extra time for real-world examples (commodity markets, agriculture).",
-      "source_ref": "references/owned/course-blueprint-v5.md §3.2.1",
-      "paragraph_kind": "theory",
-      "introduces_new_theory": true,
-      "record_status": "migrated_from_v4_needs_v5_review",
-      "v5_migration": {
-        "source_status": "migrated_from_v4_needs_v5_review",
-        "from_v4_id": "3.1.1",
-        "related_v4_ids": [],
-        "review_required_before_final": true
-      }
+      "source_ref": "references/owned/course-blueprint-v4.md §3.1.1"
     },
     {
-      "id": "3.2.2",
+      "id": "3.1.2",
       "module": 3,
-      "chapter": 2,
+      "chapter": 1,
       "paragraph": 2,
-      "paragraph_title": "Winstmaximalisatie bij volkomen concurrentie",
+      "paragraph_title": "Profit maximisation: MO = MK at volkomen concurrentie",
       "difficulty": "MEDIUM",
       "target_exercise": {
         "context": "The wheat farmer's costs are TK = 0.5Q² + 10Q + 500 (Q in tons). Market price is €200/ton. First use of the differentiation power rule on a quadratic TK.",
@@ -2081,26 +1726,14 @@
         "D1.21"
       ],
       "difficulty_notes": "This is where differentiation enters the course. The power rule on a quadratic is simple ('multiply by 2, drop the Q's power by 1'). Students need to see it as a recipe. The conceptual link ('marginal cost tells you what one more ton costs') was established in §1.4.3–§4. Exercise (f) tests whether they understand the rule, not just apply it. One lesson is tight — spend the first 15 minutes on the differentiation technique, then apply it. An algebra bridge at the end of the lesson previews GTK = TK/Q term-by-term for §3.1.3.",
-      "source_ref": "references/owned/course-blueprint-v5.md §3.2.2",
-      "paragraph_kind": "theory",
-      "introduces_new_theory": true,
-      "record_status": "migrated_from_v4_needs_v5_review",
-      "placeholder_reason": "Merged or related v4 records require review: 1.4.4.",
-      "v5_migration": {
-        "source_status": "migrated_from_v4_needs_v5_review",
-        "from_v4_id": "3.1.2",
-        "related_v4_ids": [
-          "1.4.4"
-        ],
-        "review_required_before_final": true
-      }
+      "source_ref": "references/owned/course-blueprint-v4.md §3.1.2"
     },
     {
-      "id": "3.2.3",
+      "id": "3.1.3",
       "module": 3,
-      "chapter": 2,
+      "chapter": 1,
       "paragraph": 3,
-      "paragraph_title": "Langetermijnevenwicht",
+      "paragraph_title": "Long-run equilibrium: entry and exit",
       "difficulty": "MEDIUM",
       "target_exercise": {
         "context": "The wheat farmer from §3.1.2 makes a profit. Students walk the long-run dynamics: entry → supply shifts → price falls → profit erodes → zero-profit equilibrium at P = min GTK = MK.",
@@ -2174,63 +1807,14 @@
         "D1.21"
       ],
       "difficulty_notes": "Conceptual reasoning about dynamics plus a meaningful calculation. Exercises (d1)/(d2) are the key new skill: herleiden van GTK en vervolgens GTK = MK oplossen. The 500/Q term is demanding; the scaffold (d1→d2) and the algebra bridge at the end of §3.1.2 are cruciaal — zonder die stappen wordt deze paragraaf overweldigend voor de onderkant van de klas.",
-      "source_ref": "references/owned/course-blueprint-v5.md §3.2.3",
-      "paragraph_kind": "theory",
-      "introduces_new_theory": true,
-      "record_status": "migrated_from_v4_needs_v5_review",
-      "v5_migration": {
-        "source_status": "migrated_from_v4_needs_v5_review",
-        "from_v4_id": "3.1.3",
-        "related_v4_ids": [],
-        "review_required_before_final": true
-      }
+      "source_ref": "references/owned/course-blueprint-v4.md §3.1.3"
     },
     {
-      "difficulty": "MIXED",
-      "target_exercise": {
-        "placeholder": true,
-        "context": "Placeholder for 3.2.4: integrated practice across this chapter. It consolidates earlier theory and introduces no new theory.",
-        "subquestions": [
-          {
-            "label": "a",
-            "prompt": "Combine at least two earlier skills from this chapter in one exam-style context."
-          }
-        ]
-      },
-      "lesson_goals": [
-        "Consolidate and transfer the chapter skills for Gemengde opgaven: volkomen concurrentie."
-      ],
-      "required_skills": [],
-      "prior_knowledge_assumed": [],
-      "new_skills_introduced": [],
-      "missing_units_flagged": [
-        "v5_placeholder_needs_review"
-      ],
-      "exam_codes": [],
-      "difficulty_notes": "Count-bearing consolidation paragraph. It introduces no new theory and needs a reviewed integration target exercise.",
-      "id": "3.2.4",
+      "id": "3.2.1",
       "module": 3,
       "chapter": 2,
-      "paragraph": 4,
-      "paragraph_title": "Gemengde opgaven: volkomen concurrentie",
-      "paragraph_kind": "gemengde_opgaven",
-      "introduces_new_theory": false,
-      "record_status": "placeholder_needs_review",
-      "placeholder_reason": "Gemengde-opgaven target exercise must be designed as integration/transfer practice.",
-      "source_ref": "references/owned/course-blueprint-v5.md §3.2.4",
-      "v5_migration": {
-        "source_status": "placeholder_needs_review",
-        "from_v4_id": null,
-        "related_v4_ids": [],
-        "review_required_before_final": true
-      }
-    },
-    {
-      "id": "3.3.1",
-      "module": 3,
-      "chapter": 3,
       "paragraph": 1,
-      "paragraph_title": "Monopolie: kenmerken",
+      "paragraph_title": "Characteristics of monopoly",
       "difficulty": "MEDIUM",
       "target_exercise": {
         "context": "The NS (Dutch Railways) is the only provider of train services on most routes. Students map causes of monopoly, the prijszetter role, and compare with volkomen concurrentie.",
@@ -2277,23 +1861,14 @@
         "D2.2"
       ],
       "difficulty_notes": "Conceptual lesson with no calculations. Exercise (d) is a discussion-starter — Apple has market power but isn't a pure monopolist (substitutes exist). This nuance engages students. One lesson comfortable.",
-      "source_ref": "references/owned/course-blueprint-v5.md §3.3.1",
-      "paragraph_kind": "theory",
-      "introduces_new_theory": true,
-      "record_status": "migrated_from_v4_needs_v5_review",
-      "v5_migration": {
-        "source_status": "migrated_from_v4_needs_v5_review",
-        "from_v4_id": "3.2.1",
-        "related_v4_ids": [],
-        "review_required_before_final": true
-      }
+      "source_ref": "references/owned/course-blueprint-v4.md §3.2.1"
     },
     {
-      "id": "3.3.2",
+      "id": "3.2.2",
       "module": 3,
-      "chapter": 3,
+      "chapter": 2,
       "paragraph": 2,
-      "paragraph_title": "Marginale opbrengst bij monopolie",
+      "paragraph_title": "MO at monopoly: understanding the declining MO curve",
       "difficulty": "MEDIUM",
       "target_exercise": {
         "context": "A monopolist faces demand Qv = 100 − 2P, or equivalently P = 50 − 0.5Q. Students build the Q/P/TO/MO table, then verify with differentiation.",
@@ -2351,23 +1926,14 @@
         "A2.11"
       ],
       "difficulty_notes": "This is the key preparation lesson for §3.2.3. The table method (exercises a–c) builds intuition BEFORE the algebra (exercise e). Students see the pattern in the numbers first, then verify with calculus. The differentiation in (e) uses the same power rule from §3.1.2. One lesson works IF you do the table first — don't start with algebra.",
-      "source_ref": "references/owned/course-blueprint-v5.md §3.3.2",
-      "paragraph_kind": "theory",
-      "introduces_new_theory": true,
-      "record_status": "migrated_from_v4_needs_v5_review",
-      "v5_migration": {
-        "source_status": "migrated_from_v4_needs_v5_review",
-        "from_v4_id": "3.2.2",
-        "related_v4_ids": [],
-        "review_required_before_final": true
-      }
+      "source_ref": "references/owned/course-blueprint-v4.md §3.2.2"
     },
     {
-      "id": "3.3.3",
+      "id": "3.2.3",
       "module": 3,
-      "chapter": 3,
+      "chapter": 2,
       "paragraph": 3,
-      "paragraph_title": "Winstmaximalisatie bij monopolie",
+      "paragraph_title": "Profit maximisation at monopoly: full calculation",
       "difficulty": "HEAVY",
       "target_exercise": {
         "context": "The monopolist from §3.2.2 has demand P = 50 − 0.5Q and costs TK = 0.25Q² + 5Q + 100. The hardest single lesson in the course: the full 6-step monopoly procedure from demand to P*, Q*, winst and graph.",
@@ -2449,63 +2015,14 @@
         "D2.2"
       ],
       "difficulty_notes": "The most demanding lesson in the course. 6 algebraic steps plus a graph. However, students have been prepared: MK differentiation (§3.1.2), MO table and differentiation (§3.2.2), MO = MK rule (§1.4.3–§4). The exercise is scaffolded step-by-step. In class: work through steps (a–f) together as guided practice, assign (g–h) as homework. One lesson is tight but feasible with this scaffolding.",
-      "source_ref": "references/owned/course-blueprint-v5.md §3.3.3",
-      "paragraph_kind": "theory",
-      "introduces_new_theory": true,
-      "record_status": "migrated_from_v4_needs_v5_review",
-      "v5_migration": {
-        "source_status": "migrated_from_v4_needs_v5_review",
-        "from_v4_id": "3.2.3",
-        "related_v4_ids": [],
-        "review_required_before_final": true
-      }
+      "source_ref": "references/owned/course-blueprint-v4.md §3.2.3"
     },
     {
-      "difficulty": "MIXED",
-      "target_exercise": {
-        "placeholder": true,
-        "context": "Placeholder for 3.3.4: integrated practice across this chapter. It consolidates earlier theory and introduces no new theory.",
-        "subquestions": [
-          {
-            "label": "a",
-            "prompt": "Combine at least two earlier skills from this chapter in one exam-style context."
-          }
-        ]
-      },
-      "lesson_goals": [
-        "Consolidate and transfer the chapter skills for Gemengde opgaven: monopolie."
-      ],
-      "required_skills": [],
-      "prior_knowledge_assumed": [],
-      "new_skills_introduced": [],
-      "missing_units_flagged": [
-        "v5_placeholder_needs_review"
-      ],
-      "exam_codes": [],
-      "difficulty_notes": "Count-bearing consolidation paragraph. It introduces no new theory and needs a reviewed integration target exercise.",
-      "id": "3.3.4",
+      "id": "3.3.1",
       "module": 3,
       "chapter": 3,
-      "paragraph": 4,
-      "paragraph_title": "Gemengde opgaven: monopolie",
-      "paragraph_kind": "gemengde_opgaven",
-      "introduces_new_theory": false,
-      "record_status": "placeholder_needs_review",
-      "placeholder_reason": "Gemengde-opgaven target exercise must be designed as integration/transfer practice.",
-      "source_ref": "references/owned/course-blueprint-v5.md §3.3.4",
-      "v5_migration": {
-        "source_status": "placeholder_needs_review",
-        "from_v4_id": null,
-        "related_v4_ids": [],
-        "review_required_before_final": true
-      }
-    },
-    {
-      "id": "4.1.1",
-      "module": 4,
-      "chapter": 1,
       "paragraph": 1,
-      "paragraph_title": "Welvaartseffecten van monopolie",
+      "paragraph_title": "Welfare effects of monopoly: surplus and Harberger triangle",
       "difficulty": "MEDIUM",
       "target_exercise": {
         "context": "Using the monopolist from §3.2.3 (optimal P = €30, Q = 40, demand P = 50 − 0.5Q, MK = 0.5Q + 5). Compare monopoly welfare to the competitive benchmark (P = MK) and compute the Harberger triangle.",
@@ -2568,23 +2085,14 @@
         "D3.1"
       ],
       "difficulty_notes": "Builds directly on §2.2 (surplus analysis) and §3.2.3 (monopoly mechanics). The calculation involves finding the competitive equilibrium (demand = supply/MK) — which is revision of earlier competitive-equilibrium work. The new element is the comparison. One lesson works because students already have all the component skills.",
-      "source_ref": "references/owned/course-blueprint-v5.md §4.1.1",
-      "paragraph_kind": "theory",
-      "introduces_new_theory": true,
-      "record_status": "migrated_from_v4_needs_v5_review",
-      "v5_migration": {
-        "source_status": "migrated_from_v4_needs_v5_review",
-        "from_v4_id": "3.3.1",
-        "related_v4_ids": [],
-        "review_required_before_final": true
-      }
+      "source_ref": "references/owned/course-blueprint-v4.md §3.3.1"
     },
     {
-      "id": "4.1.2",
-      "module": 4,
-      "chapter": 1,
+      "id": "3.3.2",
+      "module": 3,
+      "chapter": 3,
       "paragraph": 2,
-      "paragraph_title": "Prijsdiscriminatie",
+      "paragraph_title": "Price discrimination",
       "difficulty": "MEDIUM",
       "target_exercise": {
         "context": "A theme park faces two groups: adults (Qv = −5P + 300) and children (Qv = −10P + 300). MK = €10 (constant). Combined demand is given as Qv = −15P + 600.",
@@ -2651,23 +2159,14 @@
         "D2.3"
       ],
       "difficulty_notes": "The combined demand curve is provided in exercise (a) to avoid the aggregation complexity. Exercise (b) applies the MO = MK procedure twice (once per group), which is repetitive but reinforcing. One lesson works with this simplification.",
-      "source_ref": "references/owned/course-blueprint-v5.md §4.1.2",
-      "paragraph_kind": "theory",
-      "introduces_new_theory": true,
-      "record_status": "migrated_from_v4_needs_v5_review",
-      "v5_migration": {
-        "source_status": "migrated_from_v4_needs_v5_review",
-        "from_v4_id": "3.3.2",
-        "related_v4_ids": [],
-        "review_required_before_final": true
-      }
+      "source_ref": "references/owned/course-blueprint-v4.md §3.3.2"
     },
     {
-      "id": "4.1.3",
-      "module": 4,
-      "chapter": 1,
+      "id": "3.3.3",
+      "module": 3,
+      "chapter": 3,
       "paragraph": 3,
-      "paragraph_title": "Marktvormen vergelijken",
+      "paragraph_title": "Overview of all market structures",
       "difficulty": "MEDIUM",
       "target_exercise": {
         "context": "Descriptive/comparative lesson: build the 4-structure comparison table and classify real-world markets.",
@@ -2718,23 +2217,14 @@
         "D2.1"
       ],
       "difficulty_notes": "Descriptive/comparative lesson. The table is a study tool students can use for revision. Exercise (e) bridges to game theory (which is covered elsewhere in the full VWO program). One lesson comfortable — good opportunity for class discussion about real-world examples.",
-      "source_ref": "references/owned/course-blueprint-v5.md §4.1.3",
-      "paragraph_kind": "theory",
-      "introduces_new_theory": true,
-      "record_status": "migrated_from_v4_needs_v5_review",
-      "v5_migration": {
-        "source_status": "migrated_from_v4_needs_v5_review",
-        "from_v4_id": "3.3.3",
-        "related_v4_ids": [],
-        "review_required_before_final": true
-      }
+      "source_ref": "references/owned/course-blueprint-v4.md §3.3.3"
     },
     {
-      "id": "4.1.4",
-      "module": 4,
-      "chapter": 1,
-      "paragraph": 4,
-      "paragraph_title": "Negatieve externe effecten",
+      "id": "3.4.1",
+      "module": 3,
+      "chapter": 4,
+      "paragraph": 1,
+      "paragraph_title": "Negative external effects",
       "difficulty": "MEDIUM",
       "target_exercise": {
         "context": "A factory produces chemicals. Private marginal costs are MPC = 2Q. Production causes water pollution costing fishermen €4 per unit, so MSC = 2Q + 4. Demand P = 20 − Q.",
@@ -2795,23 +2285,14 @@
         "A2.17"
       ],
       "difficulty_notes": "New graph type: two supply curves (MPC and MSC). Students must understand why the market uses MPC (because firms don't pay for pollution) while society should use MSC. The math is straightforward — it's the same equilibrium calculation introduced earlier, just done twice. One lesson works.",
-      "source_ref": "references/owned/course-blueprint-v5.md §4.1.4",
-      "paragraph_kind": "theory",
-      "introduces_new_theory": true,
-      "record_status": "migrated_from_v4_needs_v5_review",
-      "v5_migration": {
-        "source_status": "migrated_from_v4_needs_v5_review",
-        "from_v4_id": "3.4.1",
-        "related_v4_ids": [],
-        "review_required_before_final": true
-      }
+      "source_ref": "references/owned/course-blueprint-v4.md §3.4.1"
     },
     {
-      "id": "4.1.5",
-      "module": 4,
-      "chapter": 1,
-      "paragraph": 5,
-      "paragraph_title": "Positieve externe effecten",
+      "id": "3.4.2",
+      "module": 3,
+      "chapter": 4,
+      "paragraph": 2,
+      "paragraph_title": "Positive external effects",
       "difficulty": "MEDIUM",
       "target_exercise": {
         "context": "Vaccinations have positive external effects. MPB curve (private benefit) P = 30 − Q; MSB = MPB + €5 = 35 − Q. Supply (= MC) P = Q.",
@@ -2869,23 +2350,14 @@
         "A2.16"
       ],
       "difficulty_notes": "Mirror of §3.4.1 — if students understood negative externalities, this is the same logic reversed. The policy suggestion (exercise e) connects back to §2.3 (subsidies). One lesson comfortable.",
-      "source_ref": "references/owned/course-blueprint-v5.md §4.1.5",
-      "paragraph_kind": "theory",
-      "introduces_new_theory": true,
-      "record_status": "migrated_from_v4_needs_v5_review",
-      "v5_migration": {
-        "source_status": "migrated_from_v4_needs_v5_review",
-        "from_v4_id": "3.4.2",
-        "related_v4_ids": [],
-        "review_required_before_final": true
-      }
+      "source_ref": "references/owned/course-blueprint-v4.md §3.4.2"
     },
     {
-      "id": "4.1.6",
-      "module": 4,
-      "chapter": 1,
-      "paragraph": 6,
-      "paragraph_title": "Overheidsingrijpen bij marktfalen",
+      "id": "3.4.3",
+      "module": 3,
+      "chapter": 4,
+      "paragraph": 3,
+      "paragraph_title": "Government correction of market failure",
       "difficulty": "MEDIUM",
       "target_exercise": {
         "context": "Using the factory from §3.4.1 (MPC = 2Q, MSC = 2Q + 4, demand P = 20 − Q). Students derive the Pigouvian tax, meet Coase, and revisit patents as a dual-edged tool.",
@@ -2947,63 +2419,14 @@
         "D3.9"
       ],
       "difficulty_notes": "Mix of calculation (a–b) and conceptual reasoning (c–e). The Coase theorem can be kept light — just the basic idea, not formal proof. Exercise (d) is an excellent integrative question connecting market failure to monopoly. One lesson works — the calculation is revision, the new elements are Coase and policy instruments.",
-      "source_ref": "references/owned/course-blueprint-v5.md §4.1.6",
-      "paragraph_kind": "theory",
-      "introduces_new_theory": true,
-      "record_status": "migrated_from_v4_needs_v5_review",
-      "v5_migration": {
-        "source_status": "migrated_from_v4_needs_v5_review",
-        "from_v4_id": "3.4.3",
-        "related_v4_ids": [],
-        "review_required_before_final": true
-      }
+      "source_ref": "references/owned/course-blueprint-v4.md §3.4.3"
     },
     {
-      "difficulty": "MIXED",
-      "target_exercise": {
-        "placeholder": true,
-        "context": "Placeholder for 4.1.7: integrated practice across this chapter. It consolidates earlier theory and introduces no new theory.",
-        "subquestions": [
-          {
-            "label": "a",
-            "prompt": "Combine at least two earlier skills from this chapter in one exam-style context."
-          }
-        ]
-      },
-      "lesson_goals": [
-        "Consolidate and transfer the chapter skills for Gemengde opgaven: marktvormen en marktfalen."
-      ],
-      "required_skills": [],
-      "prior_knowledge_assumed": [],
-      "new_skills_introduced": [],
-      "missing_units_flagged": [
-        "v5_placeholder_needs_review"
-      ],
-      "exam_codes": [],
-      "difficulty_notes": "Count-bearing consolidation paragraph. It introduces no new theory and needs a reviewed integration target exercise.",
-      "id": "4.1.7",
+      "id": "4.1.1",
       "module": 4,
       "chapter": 1,
-      "paragraph": 7,
-      "paragraph_title": "Gemengde opgaven: marktvormen en marktfalen",
-      "paragraph_kind": "gemengde_opgaven",
-      "introduces_new_theory": false,
-      "record_status": "placeholder_needs_review",
-      "placeholder_reason": "Gemengde-opgaven target exercise must be designed as integration/transfer practice.",
-      "source_ref": "references/owned/course-blueprint-v5.md §4.1.7",
-      "v5_migration": {
-        "source_status": "placeholder_needs_review",
-        "from_v4_id": null,
-        "related_v4_ids": [],
-        "review_required_before_final": true
-      }
-    },
-    {
-      "id": "4.2.1",
-      "module": 4,
-      "chapter": 2,
       "paragraph": 1,
-      "paragraph_title": "Arbeidsvraag",
+      "paragraph_title": "Labor demand: derived demand and marginal productivity",
       "difficulty": "LIGHT",
       "target_exercise": {
         "context": "A restaurant hires waiters. Marginal product falls: 1st=50 extra meals, 2nd=45, 3rd=35, 4th=25, 5th=15. Revenue is €15 per meal. Students compute VMP and apply the hiring rule VMP ≥ W.",
@@ -3053,23 +2476,14 @@
       "missing_units_flagged": [],
       "exam_codes": [],
       "difficulty_notes": "Connects directly to earlier marginal-analysis units (MO = MK is analogous to VMP = W). Students find the restaurant context engaging. The diminishing marginal product is intuitive ('the kitchen gets crowded'). One lesson comfortable.",
-      "source_ref": "references/owned/course-blueprint-v5.md §4.2.1",
-      "paragraph_kind": "theory",
-      "introduces_new_theory": true,
-      "record_status": "migrated_from_v4_needs_v5_review",
-      "v5_migration": {
-        "source_status": "migrated_from_v4_needs_v5_review",
-        "from_v4_id": "4.1.1",
-        "related_v4_ids": [],
-        "review_required_before_final": true
-      }
+      "source_ref": "references/owned/course-blueprint-v4.md §4.1.1"
     },
     {
-      "id": "4.2.2",
+      "id": "4.1.2",
       "module": 4,
-      "chapter": 2,
+      "chapter": 1,
       "paragraph": 2,
-      "paragraph_title": "Arbeidsaanbod en participatie",
+      "paragraph_title": "Labor supply and participation rate",
       "difficulty": "MEDIUM",
       "target_exercise": {
         "context": "Country X: population 15–75 = 12 million; beroepsbevolking = 9 million; werkloze beroepsbevolking = 540,000.",
@@ -3119,23 +2533,14 @@
       "missing_units_flagged": [],
       "exam_codes": [],
       "difficulty_notes": "The terminology (beroepsbevolking vs niet-beroepsbevolking) is the main challenge — students mix up 'not working' with 'unemployed.' Exercise (c) directly addresses this confusion. The formulas are simple. One lesson works with clear emphasis on definitions.",
-      "source_ref": "references/owned/course-blueprint-v5.md §4.2.2",
-      "paragraph_kind": "theory",
-      "introduces_new_theory": true,
-      "record_status": "migrated_from_v4_needs_v5_review",
-      "v5_migration": {
-        "source_status": "migrated_from_v4_needs_v5_review",
-        "from_v4_id": "4.1.2",
-        "related_v4_ids": [],
-        "review_required_before_final": true
-      }
+      "source_ref": "references/owned/course-blueprint-v4.md §4.1.2"
     },
     {
-      "id": "4.2.3",
+      "id": "4.1.3",
       "module": 4,
-      "chapter": 2,
+      "chapter": 1,
       "paragraph": 3,
-      "paragraph_title": "Evenwicht op de arbeidsmarkt",
+      "paragraph_title": "Labor market equilibrium",
       "difficulty": "LIGHT",
       "target_exercise": {
         "context": "The labor market for IT workers: Qd = −200W + 5000 and Qs = 300W − 1000 (W = wage €/hour, Q = number of workers).",
@@ -3193,23 +2598,14 @@
         "A2.15"
       ],
       "difficulty_notes": "Direct transfer from §1.4 — same math, different context. Students recognise the framework. Exercise (e) mirrors §1.4.2. One lesson comfortable. This is a confidence-building lesson.",
-      "source_ref": "references/owned/course-blueprint-v5.md §4.2.3",
-      "paragraph_kind": "theory",
-      "introduces_new_theory": true,
-      "record_status": "migrated_from_v4_needs_v5_review",
-      "v5_migration": {
-        "source_status": "migrated_from_v4_needs_v5_review",
-        "from_v4_id": "4.1.3",
-        "related_v4_ids": [],
-        "review_required_before_final": true
-      }
+      "source_ref": "references/owned/course-blueprint-v4.md §4.1.3"
     },
     {
-      "id": "4.2.4",
+      "id": "4.2.1",
       "module": 4,
       "chapter": 2,
-      "paragraph": 4,
-      "paragraph_title": "Werkloosheid",
+      "paragraph": 1,
+      "paragraph_title": "Types of unemployment",
       "difficulty": "MEDIUM",
       "target_exercise": {
         "context": "Classify five real-world cases as conjuncturele werkloosheid, structurele werkloosheid, or frictiewerkloosheid and propose policy responses.",
@@ -3265,23 +2661,14 @@
       "missing_units_flagged": [],
       "exam_codes": [],
       "difficulty_notes": "Definitional lesson. The classification can be ambiguous (is the coal miner structural or frictional?) — this makes for good discussion. Exercise (f) requires policy thinking. One lesson works.",
-      "source_ref": "references/owned/course-blueprint-v5.md §4.2.4",
-      "paragraph_kind": "theory",
-      "introduces_new_theory": true,
-      "record_status": "migrated_from_v4_needs_v5_review",
-      "v5_migration": {
-        "source_status": "migrated_from_v4_needs_v5_review",
-        "from_v4_id": "4.2.1",
-        "related_v4_ids": [],
-        "review_required_before_final": true
-      }
+      "source_ref": "references/owned/course-blueprint-v4.md §4.2.1"
     },
     {
-      "id": "4.2.5",
+      "id": "4.2.2",
       "module": 4,
       "chapter": 2,
-      "paragraph": 5,
-      "paragraph_title": "Minimumloon",
+      "paragraph": 2,
+      "paragraph_title": "Minimum wage: welfare effects on the labor market",
       "difficulty": "MEDIUM",
       "target_exercise": {
         "context": "IT labor market from §4.1.3 (Qd = −200W + 5000, Qs = 300W − 1000, W* = €12, Q* = 2600). Government sets a minimum wage of €15/hour.",
@@ -3359,23 +2746,14 @@
         "H5.2"
       ],
       "difficulty_notes": "This is a direct transfer from Module 2 (minimumprijs). Students should recognise the framework: a minimum wage IS a minimum price on labor. The welfare calculation is identical. The new element is exercise (f) — a balanced evaluation — which is an exam skill (standpuntbepaling). One lesson works. If there is a long time gap between Module 2 and this lesson, start with a 10-minute revision of minimum price mechanics.",
-      "source_ref": "references/owned/course-blueprint-v5.md §4.2.5",
-      "paragraph_kind": "theory",
-      "introduces_new_theory": true,
-      "record_status": "migrated_from_v4_needs_v5_review",
-      "v5_migration": {
-        "source_status": "migrated_from_v4_needs_v5_review",
-        "from_v4_id": "4.2.2",
-        "related_v4_ids": [],
-        "review_required_before_final": true
-      }
+      "source_ref": "references/owned/course-blueprint-v4.md §4.2.2"
     },
     {
-      "id": "4.2.6",
+      "id": "4.2.3",
       "module": 4,
       "chapter": 2,
-      "paragraph": 6,
-      "paragraph_title": "Vakbonden, cao en arbeidsmarktbeleid",
+      "paragraph": 3,
+      "paragraph_title": "Unions, CAO, and labor policy",
       "difficulty": "MEDIUM",
       "target_exercise": {
         "context": "CAO wage-setting, unions, loonstarheid, and labor market policy in the Dutch institutional context.",
@@ -3429,63 +2807,14 @@
       "missing_units_flagged": [],
       "exam_codes": [],
       "difficulty_notes": "Mostly conceptual/institutional. The link to minimum wage analysis (§2.4.2) makes the economic reasoning familiar. The new element is loonstarheid as a market imperfection. Exercise (e) connects theory to Dutch reality. One lesson comfortable.",
-      "source_ref": "references/owned/course-blueprint-v5.md §4.2.6",
-      "paragraph_kind": "theory",
-      "introduces_new_theory": true,
-      "record_status": "migrated_from_v4_needs_v5_review",
-      "v5_migration": {
-        "source_status": "migrated_from_v4_needs_v5_review",
-        "from_v4_id": "4.2.3",
-        "related_v4_ids": [],
-        "review_required_before_final": true
-      }
-    },
-    {
-      "difficulty": "MIXED",
-      "target_exercise": {
-        "placeholder": true,
-        "context": "Placeholder for 4.2.7: integrated practice across this chapter. It consolidates earlier theory and introduces no new theory.",
-        "subquestions": [
-          {
-            "label": "a",
-            "prompt": "Combine at least two earlier skills from this chapter in one exam-style context."
-          }
-        ]
-      },
-      "lesson_goals": [
-        "Consolidate and transfer the chapter skills for Gemengde opgaven: arbeidsmarkt."
-      ],
-      "required_skills": [],
-      "prior_knowledge_assumed": [],
-      "new_skills_introduced": [],
-      "missing_units_flagged": [
-        "v5_placeholder_needs_review"
-      ],
-      "exam_codes": [],
-      "difficulty_notes": "Count-bearing consolidation paragraph. It introduces no new theory and needs a reviewed integration target exercise.",
-      "id": "4.2.7",
-      "module": 4,
-      "chapter": 2,
-      "paragraph": 7,
-      "paragraph_title": "Gemengde opgaven: arbeidsmarkt",
-      "paragraph_kind": "gemengde_opgaven",
-      "introduces_new_theory": false,
-      "record_status": "placeholder_needs_review",
-      "placeholder_reason": "Gemengde-opgaven target exercise must be designed as integration/transfer practice.",
-      "source_ref": "references/owned/course-blueprint-v5.md §4.2.7",
-      "v5_migration": {
-        "source_status": "placeholder_needs_review",
-        "from_v4_id": null,
-        "related_v4_ids": [],
-        "review_required_before_final": true
-      }
+      "source_ref": "references/owned/course-blueprint-v4.md §4.2.3"
     },
     {
       "id": "4.3.1",
       "module": 4,
       "chapter": 3,
       "paragraph": 1,
-      "paragraph_title": "Absolute en comparatieve voordelen",
+      "paragraph_title": "Absolute and comparative advantage",
       "difficulty": "MEDIUM",
       "target_exercise": {
         "context": "Two countries A and B produce cars and grain. A: 100 hours/car, 10 hours/ton grain. B: 150 hours/car, 30 hours/ton grain.",
@@ -3535,23 +2864,14 @@
         "A4.3"
       ],
       "difficulty_notes": "The opportunity cost calculation is the tricky part — students must think in terms of 'what you give up.' The counterintuitive result (B can have a comparative advantage despite being worse at everything) is why the concept is hard. One lesson is tight — allocate time for the 'aha moment.'",
-      "source_ref": "references/owned/course-blueprint-v5.md §4.3.1",
-      "paragraph_kind": "theory",
-      "introduces_new_theory": true,
-      "record_status": "migrated_from_v4_needs_v5_review",
-      "v5_migration": {
-        "source_status": "migrated_from_v4_needs_v5_review",
-        "from_v4_id": "4.3.1",
-        "related_v4_ids": [],
-        "review_required_before_final": true
-      }
+      "source_ref": "references/owned/course-blueprint-v4.md §4.3.1"
     },
     {
       "id": "4.3.2",
       "module": 4,
       "chapter": 3,
       "paragraph": 2,
-      "paragraph_title": "Ruilwinst en ruilvoet",
+      "paragraph_title": "Gains from trade, terms of trade",
       "difficulty": "MEDIUM",
       "target_exercise": {
         "context": "Countries A and B from §4.3.1 each have 3000 labor hours, split evenly before trade. Terms of trade proposed: 1 car = 8 tons of grain.",
@@ -3602,16 +2922,251 @@
         "A4.3"
       ],
       "difficulty_notes": "Lots of arithmetic but conceptually straightforward once comparative advantage is understood. Exercise (e) requires connecting back to opportunity costs — elegant but potentially confusing. One lesson works if §4.3.1 was solid. If not, this spills.",
-      "source_ref": "references/owned/course-blueprint-v5.md §4.3.2",
-      "paragraph_kind": "theory",
-      "introduces_new_theory": true,
-      "record_status": "migrated_from_v4_needs_v5_review",
-      "v5_migration": {
-        "source_status": "migrated_from_v4_needs_v5_review",
-        "from_v4_id": "4.3.2",
-        "related_v4_ids": [],
-        "review_required_before_final": true
-      }
+      "source_ref": "references/owned/course-blueprint-v4.md §4.3.2"
+    },
+    {
+      "id": "4.3.3",
+      "module": 4,
+      "chapter": 3,
+      "paragraph": 3,
+      "paragraph_title": "Protectionism and trade policy",
+      "difficulty": "MEDIUM",
+      "target_exercise": {
+        "context": "Domestic market: Qv = −2P + 200, Qa = P − 10 (P in €, Q in thousands of units). World price €40. Government imposes a €10 tariff raising the import price to €50.",
+        "subquestions": [
+          {
+            "label": "a",
+            "prompt": "At free trade: calculate domestic Qd, domestic Qa, and imports (Qd − Qa)."
+          },
+          {
+            "label": "b",
+            "prompt": "The government imposes a tariff of €10. The new import price is €50. Calculate the new domestic Qd, Qa, and imports."
+          },
+          {
+            "label": "c",
+            "prompt": "Calculate the tariff revenue for the government."
+          },
+          {
+            "label": "d",
+            "prompt": "Draw the free-trade and post-tariff situations. Shade the two deadweight loss triangles."
+          },
+          {
+            "label": "e",
+            "prompt": "Who benefits from the tariff? Who loses? Evaluate: 'Tariffs protect domestic jobs.'"
+          }
+        ]
+      },
+      "lesson_goals": [
+        "Calculate import quantity under free trade (domestic demand − domestic supply at world price)",
+        "Analyse the effect of a tariff: higher price, lower imports, higher domestic production",
+        "Calculate tariff revenue",
+        "Identify welfare effects: domestic producers gain, consumers lose, government gains revenue, net DWL",
+        "Evaluate protectionist arguments critically"
+      ],
+      "required_skills": [
+        "A04",
+        "A10",
+        "A34",
+        "A40",
+        "H09"
+      ],
+      "prior_knowledge_assumed": [
+        "A04",
+        "A10",
+        "A40"
+      ],
+      "new_skills_introduced": [
+        "A34",
+        "H09"
+      ],
+      "missing_units_flagged": [
+        "Compute imports = domestic Qd − domestic Qa at a given world price (A-domain candidate; the free-trade baseline calculation)",
+        "Critically evaluate 'tariffs protect domestic jobs' using winners-vs-losers surplus accounting (concept-level + verbal; exam standpuntbepaling)"
+      ],
+      "exam_codes": [
+        "A2.16",
+        "A2.17",
+        "A4.3"
+      ],
+      "difficulty_notes": "The graph has two DWL triangles (production inefficiency + consumption loss) — this is more complex than the single DWL triangle from taxes. However, the calculation itself is straightforward (just reading off demand and supply at two prices). The welfare analysis connects directly to Module 2's tax analysis. One lesson works because it's application, not new methodology.",
+      "source_ref": "references/owned/course-blueprint-v4.md §4.3.3"
+    },
+    {
+      "id": "4.4.1",
+      "module": 4,
+      "chapter": 4,
+      "paragraph": 1,
+      "paragraph_title": "Inflation, CPI, and price indices",
+      "difficulty": "MEDIUM",
+      "target_exercise": {
+        "context": "A shopping basket costs €150 in 2023 (base year, index = 100) and €162 in 2025. In 2026 the CPI is 112. A worker's nominal wage rises from €3000/month in 2023 to €3200 in 2025.",
+        "subquestions": [
+          {
+            "label": "a",
+            "prompt": "Calculate the CPI for 2025."
+          },
+          {
+            "label": "b",
+            "prompt": "Calculate the inflation rate from 2023 to 2025."
+          },
+          {
+            "label": "c",
+            "prompt": "In 2026, the CPI is 112. Calculate the inflation from 2025 to 2026. (Watch out: not 4%!)"
+          },
+          {
+            "label": "d",
+            "prompt": "A worker's nominal wage rises from €3000/month in 2023 to €3200 in 2025. Calculate the real wage change. Did the worker's purchasing power increase or decrease?"
+          },
+          {
+            "label": "e",
+            "prompt": "Explain the difference between nominal and real values. Why do economists prefer to use real values?"
+          }
+        ]
+      },
+      "lesson_goals": [
+        "Calculate CPI = (basket cost in year t / basket cost in base year) × 100",
+        "Calculate inflation rate from CPI values",
+        "Distinguish between index point changes and percentage changes (critical exam skill!)",
+        "Calculate real values: real wage = nominal wage / CPI × 100",
+        "Explain why real values correct for inflation"
+      ],
+      "required_skills": [
+        "A38",
+        "A39",
+        "D31",
+        "I09"
+      ],
+      "prior_knowledge_assumed": [
+        "A38",
+        "A39",
+        "D31"
+      ],
+      "new_skills_introduced": [
+        "I09"
+      ],
+      "missing_units_flagged": [
+        "Compute real wage = nominal wage / CPI × 100 and interpret the direction (A-domain candidate; I09 is close but macro-framed)",
+        "Explain why economists prefer real values (concept-level, mastery_target understand)"
+      ],
+      "exam_codes": [],
+      "difficulty_notes": "Exercise (c) is the classic trap — students think '108 to 112 = 4% inflation' when it's actually (112−108)/108 = 3.7%. This connects directly to §1.1.2 (percentage changes). The real vs nominal distinction is conceptually important but mathematically simple. One lesson works.",
+      "source_ref": "references/owned/course-blueprint-v4.md §4.4.1"
+    },
+    {
+      "id": "4.4.2",
+      "module": 4,
+      "chapter": 4,
+      "paragraph": 2,
+      "paragraph_title": "Purchasing power and indexering",
+      "difficulty": "MEDIUM",
+      "target_exercise": {
+        "context": "A pension of €1500/month. Inflation 4%, average wage growth 6%. Students compare three indexering regimes: waardevast, welvaartsvast, bevroren.",
+        "subquestions": [
+          {
+            "label": "a",
+            "prompt": "The pension is waardevast (indexed to inflation). Calculate the new pension."
+          },
+          {
+            "label": "b",
+            "prompt": "The pension is welvaartsvast (indexed to wage growth). Calculate the new pension."
+          },
+          {
+            "label": "c",
+            "prompt": "The pension is bevroren (frozen). Calculate the real purchasing power loss in euros per month."
+          },
+          {
+            "label": "d",
+            "prompt": "Which indexering method is best for the pensioner? Which is cheapest for the pension fund? Explain the trade-off."
+          },
+          {
+            "label": "e",
+            "prompt": "A country experiences 2% deflation. What happens to the purchasing power of a frozen pension? Is this good or bad for the pensioner?"
+          }
+        ]
+      },
+      "lesson_goals": [
+        "Define waardevast (indexed to CPI/inflation) vs welvaartsvast (indexed to wages)",
+        "Calculate pensions/wages after indexering",
+        "Calculate purchasing power changes when pensions are frozen",
+        "Understand the trade-off between protecting pensioners and pension fund sustainability",
+        "Apply concepts to deflation (reverse situation)"
+      ],
+      "required_skills": [
+        "I09"
+      ],
+      "prior_knowledge_assumed": [
+        "I09"
+      ],
+      "new_skills_introduced": [],
+      "missing_units_flagged": [
+        "Define waardevast (indexed to inflation) vs welvaartsvast (indexed to wage growth) vs bevroren (no indexering) — pensioen-indexering vocab (concept-level, mastery_target understand)",
+        "Compute the new pension under each of the three indexering regimes and compute the real purchasing-power loss under bevroren (A-domain candidate)",
+        "Evaluate the pensioner-vs-fund trade-off across the three regimes (concept-level + verbal; exam standpuntbepaling prep)",
+        "Apply the purchasing-power logic under deflation (concept-level; reversed-sign case, good diagnostic)"
+      ],
+      "exam_codes": [],
+      "difficulty_notes": "The terminology (waardevast, welvaartsvast, bevroren) is confusing because the words sound similar. Exercises (a–c) force precise calculation for each case. Exercise (e) tests deeper understanding. One lesson works — the math is arithmetic, the challenge is keeping the definitions straight.",
+      "source_ref": "references/owned/course-blueprint-v4.md §4.4.2"
+    },
+    {
+      "id": "4.4.3",
+      "module": 4,
+      "chapter": 4,
+      "paragraph": 3,
+      "paragraph_title": "Real vs nominal: integration and application",
+      "difficulty": "MEDIUM",
+      "target_exercise": {
+        "context": "Integration lesson applying the real vs nominal distinction to interest rates, GDP growth, wages, and central bank policy.",
+        "subquestions": [
+          {
+            "label": "a",
+            "prompt": "The nominal interest rate on a savings account is 5%. Inflation is 3%. Calculate the real interest rate (use: real ≈ nominal − inflation). If you save €10,000, how much more can you actually buy after one year?"
+          },
+          {
+            "label": "b",
+            "prompt": "Country X's nominal GDP grew from €800 billion to €840 billion. The GDP deflator rose from 100 to 103. Calculate real GDP growth. Did the country produce more goods and services, or did prices just rise?"
+          },
+          {
+            "label": "c",
+            "prompt": "A worker's nominal wage rises from €2500 to €2600 (4% increase). Inflation is 5%. Calculate the real wage change. Is this worker better or worse off?"
+          },
+          {
+            "label": "d",
+            "prompt": "In the 1970s, inflation in the Netherlands was 10% and nominal wages rose by 8%. Explain what happened to workers' purchasing power. How might this affect consumption?"
+          },
+          {
+            "label": "e",
+            "prompt": "Combine your knowledge: explain why a central bank targets low inflation (around 2%). Use the concepts real interest rate, purchasing power, and wage earners in your answer."
+          }
+        ]
+      },
+      "lesson_goals": [
+        "Calculate real interest rate ≈ nominal interest rate − inflation",
+        "Calculate real GDP growth using the GDP deflator",
+        "Apply the real vs nominal framework to wages, interest rates, and GDP",
+        "Understand why persistent inflation erodes purchasing power",
+        "Explain why central banks target low inflation (integration question)"
+      ],
+      "required_skills": [
+        "H15",
+        "I09",
+        "I18"
+      ],
+      "prior_knowledge_assumed": [
+        "I09"
+      ],
+      "new_skills_introduced": [
+        "H15",
+        "I18"
+      ],
+      "missing_units_flagged": [
+        "Compute real interest rate ≈ nominal − inflation and interpret purchasing-power effect on savings (concept-level + reken; partial overlap with H15 which is macro-framed)",
+        "Compute real GDP growth from nominal GDP change and GDP deflator change (A-domain candidate; the deflator-adjustment mechanic)",
+        "Explain why central banks target ~2% inflation, connecting real interest rate, purchasing power, and wage-earners (concept-level + verbal; exam integration question — the §4.4.3 payoff)"
+      ],
+      "exam_codes": [],
+      "difficulty_notes": "This is an integration lesson — no new concepts, just applying the real/nominal distinction from §4.4.1 and the indexering concepts from §4.4.2 to different economic variables. Exercise (e) is a synthesis question that prepares for exam-style evaluative answers. One lesson comfortable.",
+      "source_ref": "references/owned/course-blueprint-v4.md §4.4.3"
     }
   ]
 }

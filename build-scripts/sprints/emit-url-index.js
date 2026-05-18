@@ -87,6 +87,13 @@ function buildBody(branch) {
 
   lines.push('## Owned Course Design');
   lines.push('');
+  lines.push(`- ${platform('references/owned/course-blueprint-v5.md')}`);
+  lines.push(`- ${platform('references/owned/course-blueprint-v5.meta.json')}`);
+  lines.push(`- ${lessen('course_blueprint_v5.md')}`);
+  lines.push('');
+
+  lines.push('## Archived Owned Course Design');
+  lines.push('');
   lines.push(`- ${platform('references/owned/course-blueprint-v4.md')}`);
   lines.push(`- ${platform('references/owned/course-blueprint-v4.meta.json')}`);
   lines.push(`- ${lessen('course_blueprint_v4.md')}`);

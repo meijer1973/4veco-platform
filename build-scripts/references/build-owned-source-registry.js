@@ -10,6 +10,11 @@
 const crypto = require('crypto');
 const fs = require('fs');
 const path = require('path');
+const {
+  TARGET_EXERCISES_PATH,
+  activeBlueprintInfo,
+  countStaleBlueprintReferences,
+} = require('./course-blueprint-active');
 
 const REPO_ROOT = path.resolve(__dirname, '..', '..');
 const REGISTRY_PATH = 'references/data/owned-source-registry.json';
@@ -27,10 +32,6 @@ const LESSON_ROOTS = [
     curriculum_version: 'owned-book-1-current',
   },
 ];
-
-const OWNED_BLUEPRINT_PATH = 'references/owned/course-blueprint-v4.md';
-const OWNED_BLUEPRINT_META_PATH = 'references/owned/course-blueprint-v4.meta.json';
-const TARGET_EXERCISES_PATH = 'references/authored/course-target-exercises.json';
 
 function slashPath(filePath) {
   return filePath.replace(/\\/g, '/');
@@ -304,33 +305,34 @@ function sourceHashRel(relPath) {
 
 function buildRegistry() {
   const generatedOn = new Date().toISOString().replace(/\.\d{3}Z$/, 'Z');
-  const blueprintMeta = readJson(OWNED_BLUEPRINT_META_PATH);
-  const targetExercises = readJson(TARGET_EXERCISES_PATH);
+  const activeBlueprint = activeBlueprintInfo(REPO_ROOT);
+  const blueprintMeta = readJson(activeBlueprint.metaPath);
+  const targetExercises = activeBlueprint.targetExercises;
   const lessonRoots = LESSON_ROOTS.map(summarizeLessonRoot);
 
   const sourceSurfaces = [
     {
-      surface_id: 'owned:course-blueprint-v4',
-      title: 'Course Blueprint v4',
-      path: OWNED_BLUEPRINT_PATH,
+      surface_id: activeBlueprint.surfaceId,
+      title: activeBlueprint.title,
+      path: activeBlueprint.blueprintPath,
       source_surface_type: 'course_blueprint',
-      exists: existsRel(OWNED_BLUEPRINT_PATH),
-      source_hash: sourceHashRel(OWNED_BLUEPRINT_PATH),
+      exists: existsRel(activeBlueprint.blueprintPath),
+      source_hash: sourceHashRel(activeBlueprint.blueprintPath),
       completion_status: blueprintMeta.completion_status || 'unknown',
-      curriculum_version: blueprintMeta.source_id || 'owned:course-blueprint-v4',
+      curriculum_version: blueprintMeta.source_id || activeBlueprint.surfaceId,
       notes: blueprintMeta.authority_notes || [],
       ...SURFACE_POLICY.course_blueprint,
       projection_policy: 'May create owned-source projection edges in R9.2; blueprint prose is not a direct evidence edge.',
     },
     {
-      surface_id: 'owned:course-blueprint-v4-meta',
-      title: 'Course Blueprint v4 metadata',
-      path: OWNED_BLUEPRINT_META_PATH,
+      surface_id: activeBlueprint.metaSurfaceId,
+      title: activeBlueprint.metaTitle,
+      path: activeBlueprint.metaPath,
       source_surface_type: 'course_blueprint_metadata',
-      exists: existsRel(OWNED_BLUEPRINT_META_PATH),
-      source_hash: sourceHashRel(OWNED_BLUEPRINT_META_PATH),
+      exists: existsRel(activeBlueprint.metaPath),
+      source_hash: sourceHashRel(activeBlueprint.metaPath),
       completion_status: blueprintMeta.completion_status || 'unknown',
-      curriculum_version: blueprintMeta.source_id || 'owned:course-blueprint-v4',
+      curriculum_version: blueprintMeta.source_id || activeBlueprint.metaSurfaceId,
       notes: blueprintMeta.authority_notes || [],
       ...SURFACE_POLICY.course_blueprint_metadata,
       projection_policy: 'Metadata informs authority and completion labels only.',
@@ -343,8 +345,9 @@ function buildRegistry() {
       exists: existsRel(TARGET_EXERCISES_PATH),
       source_hash: sourceHashRel(TARGET_EXERCISES_PATH),
       record_count: (targetExercises.exercises || []).length,
+      active_blueprint_version: targetExercises.blueprint_version,
       blueprint_source: targetExercises.blueprint_source,
-      stale_blueprint_reference_count: JSON.stringify(targetExercises).split('knowledge/course_blueprint_v4.md').length - 1,
+      stale_blueprint_reference_count: countStaleBlueprintReferences(targetExercises, activeBlueprint.blueprintPath),
       ...SURFACE_POLICY.target_exercise_index,
       projection_policy: 'Target exercises may support unit-gap discovery; content graph links must be projection/evidence typed explicitly.',
     },
@@ -422,8 +425,8 @@ function buildRegistry() {
     generated_by: 'build-scripts/references/build-owned-source-registry.js',
     generated_on: generatedOn,
     source_files: [
-      OWNED_BLUEPRINT_PATH,
-      OWNED_BLUEPRINT_META_PATH,
+      activeBlueprint.blueprintPath,
+      activeBlueprint.metaPath,
       TARGET_EXERCISES_PATH,
       ...LESSON_ROOTS.map((root) => root.path),
     ],

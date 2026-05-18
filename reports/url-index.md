@@ -31,6 +31,12 @@ Single-fetch entry point for external research agents (notably planning Claude i
 
 ## Owned Course Design
 
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/owned/course-blueprint-v5.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/owned/course-blueprint-v5.meta.json
+- https://raw.githubusercontent.com/meijer1973/4veco-lessen/main/course_blueprint_v5.md
+
+## Archived Owned Course Design
+
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/owned/course-blueprint-v4.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/owned/course-blueprint-v4.meta.json
 - https://raw.githubusercontent.com/meijer1973/4veco-lessen/main/course_blueprint_v4.md

@@ -7,19 +7,14 @@
 
 const fs = require('fs');
 const path = require('path');
+const {
+  TARGET_EXERCISES_PATH,
+  activeBlueprintInfo,
+  countStaleBlueprintReferences,
+} = require('./course-blueprint-active');
 
 const REPO_ROOT = path.resolve(__dirname, '..', '..');
 const REGISTRY_PATH = 'references/data/owned-source-registry.json';
-const TARGET_EXERCISES_PATH = 'references/authored/course-target-exercises.json';
-const OLD_BLUEPRINT = 'knowledge/course_blueprint_v4.md';
-const NEW_BLUEPRINT = 'references/owned/course-blueprint-v4.md';
-
-const REQUIRED_SURFACES = [
-  'owned:course-blueprint-v4',
-  'owned:course-blueprint-v4-meta',
-  'authored:course-target-exercises',
-  'lesson-root:book-1',
-];
 
 const REQUIRED_SURFACE_TYPES = [
   'course_blueprint',
@@ -57,6 +52,13 @@ function countString(value, needle) {
 function main() {
   if (!fs.existsSync(repoPath(REGISTRY_PATH))) fail(`missing ${REGISTRY_PATH}`);
   const registry = readJson(REGISTRY_PATH);
+  const activeBlueprint = activeBlueprintInfo(REPO_ROOT);
+  const requiredSurfaces = [
+    activeBlueprint.surfaceId,
+    activeBlueprint.metaSurfaceId,
+    'authored:course-target-exercises',
+    'lesson-root:book-1',
+  ];
 
   if (registry.schema_version !== 1) fail('schema_version must be 1');
   if (registry.registry_id !== 'owned-source-registry') fail('registry_id must be owned-source-registry');
@@ -67,7 +69,7 @@ function main() {
   }
 
   const surfaces = new Map(registry.source_surfaces.map((surface) => [surface.surface_id, surface]));
-  for (const surfaceId of REQUIRED_SURFACES) {
+  for (const surfaceId of requiredSurfaces) {
     if (!surfaces.has(surfaceId)) fail(`missing required surface ${surfaceId}`);
   }
 
@@ -108,14 +110,19 @@ function main() {
   }
 
   const targetText = fs.readFileSync(repoPath(TARGET_EXERCISES_PATH), 'utf8');
-  const oldCount = countString(targetText, OLD_BLUEPRINT);
-  const newCount = countString(targetText, NEW_BLUEPRINT);
-  if (oldCount !== 0) fail(`${TARGET_EXERCISES_PATH} still contains ${oldCount} stale blueprint references`);
-  if (newCount < 50) fail(`${TARGET_EXERCISES_PATH} should contain repaired blueprint references; found ${newCount}`);
+  const staleCount = countStaleBlueprintReferences(activeBlueprint.targetExercises, activeBlueprint.blueprintPath);
+  const activeCount = countString(targetText, activeBlueprint.blueprintPath);
+  if (staleCount !== 0) fail(`${TARGET_EXERCISES_PATH} still contains ${staleCount} stale blueprint references`);
+  if (activeCount < (activeBlueprint.targetExercises.exercises || []).length + 1) {
+    fail(`${TARGET_EXERCISES_PATH} should contain active blueprint references; found ${activeCount}`);
+  }
 
   const targetSurface = surfaces.get('authored:course-target-exercises');
   if (targetSurface.stale_blueprint_reference_count !== 0) {
     fail('target exercise registry surface still reports stale blueprint references');
+  }
+  if (targetSurface.blueprint_source !== activeBlueprint.blueprintPath) {
+    fail(`target exercise registry surface points to ${targetSurface.blueprint_source}, expected ${activeBlueprint.blueprintPath}`);
   }
 
   console.log(`OK owned source registry: ${registry.source_surfaces.length} surfaces, ${registry.companion_artifact_types.length} artifact types`);

@@ -1,55 +1,55 @@
 # Owned Content Coverage
 
-Generated: 2026-04-29T09:49:02Z
+Generated: 2026-05-18T11:05:05Z
 Status: INFO
 
 ## Summary
 
-- Nodes: 1065
-- Edges: 1464
-- Paragraphs linked: 49
-- Units linked: 110
-- Terms linked: 50
-- Owned exercise evidence edges: 332
-- Generated-artifact warning edges: 630
+- Nodes: 907
+- Edges: 1272
+- Paragraphs linked: 54
+- Units linked: 104
+- Terms linked: 45
+- Owned exercise evidence edges: 292
+- Generated-artifact warning edges: 553
 - Generated artifacts are primary evidence: false
 
 ## By Edge Type
 
-- implementation_trace: 437
-- owned_exercise_evidence: 332
-- projection: 695
+- implementation_trace: 385
+- owned_exercise_evidence: 292
+- projection: 595
 
 ## By Source Surface Type
 
-- answer_model_html: 11
-- answer_model_markdown: 13
-- answer_model_pdf: 13
+- answer_model_html: 12
+- answer_model_markdown: 12
+- answer_model_pdf: 12
 - companion_docx: 7
-- course_blueprint: 98
-- generated_html_surface: 6
-- guided_practice_surface: 3
-- local_build_helper: 13
-- machine_unit_term_projection: 193
-- nieuws_met_visual: 3
-- opgaven_html: 11
-- opgaven_markdown: 60
-- opgaven_pdf: 13
+- course_blueprint: 108
+- generated_html_surface: 11
+- guided_practice_surface: 5
+- local_build_helper: 12
+- machine_unit_term_projection: 168
+- nieuws_met_visual: 7
+- opgaven_html: 12
+- opgaven_markdown: 39
+- opgaven_pdf: 12
 - other_owned_lesson_file: 2
-- owned_markdown_surface: 1
-- paragraph_html: 11
-- paragraph_markdown: 13
-- paragraph_pdf: 13
-- presentation_surface: 1
-- quality_reference_yaml: 13
-- review_note: 13
-- summary_surface: 1
-- target_exercise_index: 356
-- vaardigheden_surface: 4
-- visual_png_projection: 294
-- visual_svg_source: 294
+- owned_markdown_surface: 2
+- paragraph_html: 9
+- paragraph_markdown: 9
+- paragraph_pdf: 9
+- presentation_surface: 12
+- quality_reference_yaml: 12
+- review_note: 15
+- summary_surface: 4
+- target_exercise_index: 332
+- vaardigheden_surface: 6
+- visual_png_projection: 219
+- visual_svg_source: 219
 - voorkennis_surface: 3
-- youtube_videos: 1
+- youtube_videos: 2
 
 ## Authority Boundary
 

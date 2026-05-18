@@ -2,10 +2,10 @@
   "schema_version": 1,
   "registry_id": "owned-source-registry",
   "generated_by": "build-scripts/references/build-owned-source-registry.js",
-  "generated_on": "2026-04-29T09:38:58Z",
+  "generated_on": "2026-05-18T11:10:18Z",
   "source_files": [
-    "references/owned/course-blueprint-v4.md",
-    "references/owned/course-blueprint-v4.meta.json",
+    "references/owned/course-blueprint-v5.md",
+    "references/owned/course-blueprint-v5.meta.json",
     "references/authored/course-target-exercises.json",
     "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod"
   ],
@@ -38,56 +38,56 @@
       "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod",
       "title": "Boek 1 - Grondslagen, vraag en aanbod",
       "exists": true,
-      "file_count": 1022,
+      "file_count": 1064,
       "paragraph_directory_count": 21,
       "by_extension": {
+        ".png": 349,
         ".svg": 346,
-        ".png": 345,
-        ".md": 94,
-        ".html": 74,
+        ".md": 104,
+        ".html": 89,
         ".pdf": 67,
+        ".js": 30,
         ".py": 26,
-        ".js": 21,
         ".yaml": 21,
         ".docx": 13,
-        ".css": 6,
+        ".css": 8,
         "<none>": 5,
+        ".pptx": 3,
         ".pyc": 2,
-        ".json": 1,
-        ".pptx": 1
+        ".json": 1
       },
       "by_type": {
         "visual_svg_source": 346,
         "visual_png_projection": 345,
+        "generated_js_surface": 29,
         "answer_model_markdown": 26,
         "answer_model_pdf": 26,
         "local_build_helper": 26,
+        "review_note": 24,
         "answer_model_html": 22,
         "quality_reference_yaml": 21,
-        "review_note": 21,
-        "generated_js_surface": 20,
+        "generated_html_surface": 20,
         "opgaven_markdown": 19,
         "opgaven_pdf": 19,
         "opgaven_html": 15,
+        "other_owned_lesson_file": 14,
         "paragraph_markdown": 13,
         "paragraph_pdf": 13,
-        "generated_html_surface": 12,
-        "other_owned_lesson_file": 12,
+        "presentation_surface": 12,
         "paragraph_html": 11,
+        "owned_markdown_surface": 10,
         "companion_docx": 8,
-        "owned_markdown_surface": 8,
         "generated_pdf_surface": 7,
+        "summary_surface": 7,
         "generated_navigation_html": 6,
+        "vaardigheden_surface": 6,
         "chapter_plan": 5,
+        "guided_practice_surface": 5,
         "voorkennis_surface": 5,
-        "summary_surface": 4,
-        "vaardigheden_surface": 4,
-        "guided_practice_surface": 3,
         "book_html": 1,
         "book_markdown": 1,
         "book_pdf": 1,
-        "deployment_config": 1,
-        "presentation_surface": 1
+        "deployment_config": 1
       }
     }
   ],
@@ -95,7 +95,7 @@
     {
       "source_surface_type": "active_lesson_root",
       "surface_count": 1,
-      "observed_count": 1022,
+      "observed_count": 1064,
       "authority_levels": [
         "owned_lesson_exposition"
       ],
@@ -215,7 +215,7 @@
     {
       "source_surface_type": "generated_html_surface",
       "surface_count": 1,
-      "observed_count": 12,
+      "observed_count": 20,
       "authority_levels": [
         "generated_projection"
       ],
@@ -227,7 +227,7 @@
     {
       "source_surface_type": "generated_js_surface",
       "surface_count": 1,
-      "observed_count": 20,
+      "observed_count": 29,
       "authority_levels": [
         "generated_projection"
       ],
@@ -263,7 +263,7 @@
     {
       "source_surface_type": "guided_practice_surface",
       "surface_count": 1,
-      "observed_count": 3,
+      "observed_count": 5,
       "authority_levels": [
         "generated_projection"
       ],
@@ -323,7 +323,7 @@
     {
       "source_surface_type": "other_owned_lesson_file",
       "surface_count": 1,
-      "observed_count": 12,
+      "observed_count": 14,
       "authority_levels": [
         "generated_projection"
       ],
@@ -335,7 +335,7 @@
     {
       "source_surface_type": "owned_markdown_surface",
       "surface_count": 1,
-      "observed_count": 8,
+      "observed_count": 10,
       "authority_levels": [
         "generated_projection"
       ],
@@ -383,7 +383,7 @@
     {
       "source_surface_type": "presentation_surface",
       "surface_count": 1,
-      "observed_count": 1,
+      "observed_count": 12,
       "authority_levels": [
         "generated_projection"
       ],
@@ -407,7 +407,7 @@
     {
       "source_surface_type": "review_note",
       "surface_count": 1,
-      "observed_count": 21,
+      "observed_count": 24,
       "authority_levels": [
         "generated_projection"
       ],
@@ -419,7 +419,7 @@
     {
       "source_surface_type": "summary_surface",
       "surface_count": 1,
-      "observed_count": 4,
+      "observed_count": 7,
       "authority_levels": [
         "generated_projection"
       ],
@@ -431,7 +431,7 @@
     {
       "source_surface_type": "target_exercise_index",
       "surface_count": 1,
-      "observed_count": 49,
+      "observed_count": 54,
       "authority_levels": [
         "owned_curriculum_design"
       ],
@@ -443,7 +443,7 @@
     {
       "source_surface_type": "vaardigheden_surface",
       "surface_count": 1,
-      "observed_count": 4,
+      "observed_count": 6,
       "authority_levels": [
         "generated_projection"
       ],
@@ -491,18 +491,19 @@
   ],
   "source_surfaces": [
     {
-      "surface_id": "owned:course-blueprint-v4",
-      "title": "Course Blueprint v4",
-      "path": "references/owned/course-blueprint-v4.md",
+      "surface_id": "owned:course-blueprint-v5",
+      "title": "Course Blueprint V5",
+      "path": "references/owned/course-blueprint-v5.md",
       "source_surface_type": "course_blueprint",
       "exists": true,
-      "source_hash": "b775eeca5c1108a83ebedcc20fcd9df603009cd9b76689f2e4f57c242401e158",
-      "completion_status": "partial_year_1_of_3",
-      "curriculum_version": "owned:course-blueprint-v4",
+      "source_hash": "c53535cb56d9f880c4d98b71cef5393432a0b81a0e301d30ce00924ebf8b355d",
+      "completion_status": "phase_a_source_of_truth_scaffold",
+      "curriculum_version": "owned:course-blueprint-v5",
       "notes": [
-        "Target exercises in the blueprint are strong owned curriculum-design evidence.",
+        "v5 is the active curriculum source after L1.5Q Phase A.",
+        "Target exercises are the active exercise-first source of truth.",
         "Blueprint prose is contextual and design-oriented; it is not sufficient by itself to mint or mutate machine units.",
-        "The blueprint currently covers only part of the intended multi-year course and must carry version/completion metadata in retrieval."
+        "Placeholder records are explicit and must not be treated as reviewed final target exercises."
       ],
       "source_status": "authored_source",
       "authority_level": "owned_curriculum_design",
@@ -523,18 +524,19 @@
       "projection_policy": "May create owned-source projection edges in R9.2; blueprint prose is not a direct evidence edge."
     },
     {
-      "surface_id": "owned:course-blueprint-v4-meta",
-      "title": "Course Blueprint v4 metadata",
-      "path": "references/owned/course-blueprint-v4.meta.json",
+      "surface_id": "owned:course-blueprint-v5-meta",
+      "title": "Course Blueprint V5 metadata",
+      "path": "references/owned/course-blueprint-v5.meta.json",
       "source_surface_type": "course_blueprint_metadata",
       "exists": true,
-      "source_hash": "0d68b549b2368e6250b9f2f3f8ea854ab3588854ef47f65fc363d38173c12216",
-      "completion_status": "partial_year_1_of_3",
-      "curriculum_version": "owned:course-blueprint-v4",
+      "source_hash": "99d710665fe988e4766159386ffc292d6e381be1883ca6d03c0fee356807b0d5",
+      "completion_status": "phase_a_source_of_truth_scaffold",
+      "curriculum_version": "owned:course-blueprint-v5",
       "notes": [
-        "Target exercises in the blueprint are strong owned curriculum-design evidence.",
+        "v5 is the active curriculum source after L1.5Q Phase A.",
+        "Target exercises are the active exercise-first source of truth.",
         "Blueprint prose is contextual and design-oriented; it is not sufficient by itself to mint or mutate machine units.",
-        "The blueprint currently covers only part of the intended multi-year course and must carry version/completion metadata in retrieval."
+        "Placeholder records are explicit and must not be treated as reviewed final target exercises."
       ],
       "source_status": "planning_artifact",
       "authority_level": "owned_curriculum_design",
@@ -557,9 +559,10 @@
       "path": "references/authored/course-target-exercises.json",
       "source_surface_type": "target_exercise_index",
       "exists": true,
-      "source_hash": "86a93a48344728cdf2fa01685673315e64087c7cf0c5ec8ceb9b17fe99a398e3",
-      "record_count": 49,
-      "blueprint_source": "references/owned/course-blueprint-v4.md",
+      "source_hash": "7a906b1dec81934eeb72bce88815a387a05e4bddac61dcc709ae41967f3ea109",
+      "record_count": 54,
+      "active_blueprint_version": "v5",
+      "blueprint_source": "references/owned/course-blueprint-v5.md",
       "stale_blueprint_reference_count": 0,
       "source_status": "exercise_evidence",
       "authority_level": "owned_curriculum_design",
@@ -584,7 +587,7 @@
       "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod",
       "source_surface_type": "active_lesson_root",
       "exists": true,
-      "file_count": 1022,
+      "file_count": 1064,
       "paragraph_directory_count": 21,
       "source_status": "owned_lesson_surface",
       "authority_level": "owned_lesson_exposition",
@@ -854,13 +857,13 @@
       "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod",
       "source_surface_type": "generated_html_surface",
       "exists": true,
-      "observed_count": 12,
+      "observed_count": 20,
       "example_paths": [
         "1.1 Hoofdstuk Economisch denken en rekenen/1.1 Economisch denken en rekenen – hoofdstuk.html",
         "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – instapquiz.html",
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – nieuws met visual.html",
         "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – nieuws-detective.html",
-        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – redeneer-spel.html",
-        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – stappenplan.html"
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – redeneer-spel.html"
       ],
       "source_status": "generated_projection",
       "authority_level": "generated_projection",
@@ -883,13 +886,13 @@
       "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod",
       "source_surface_type": "generated_js_surface",
       "exists": true,
-      "observed_count": 20,
+      "observed_count": 29,
       "example_paths": [
-        "shared/newsdetective-engine.js",
-        "shared/newsdetective-ui.js",
-        "shared/newsdetective/1.1.1.js",
-        "shared/procedure-engine.js",
-        "shared/procedure-ui.js"
+        "shared/adaptive-seam.js",
+        "shared/graphical-engine.js",
+        "shared/graphical-ui.js",
+        "shared/graphical/1.1.2.js",
+        "shared/newsdetective-engine.js"
       ],
       "source_status": "generated_projection",
       "authority_level": "generated_projection",
@@ -970,11 +973,13 @@
       "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod",
       "source_surface_type": "guided_practice_surface",
       "exists": true,
-      "observed_count": 3,
+      "observed_count": 5,
       "example_paths": [
         "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – begeleide inoefening – antwoorden.docx",
         "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – begeleide inoefening – vragen.docx",
-        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – begeleide inoefening.html"
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – begeleide inoefening.html",
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1-begeleide-inoefening-lead-review-v1.md",
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – begeleide inoefening.html"
       ],
       "source_status": "generated_projection",
       "authority_level": "generated_projection",
@@ -1113,13 +1118,13 @@
       "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod",
       "source_surface_type": "other_owned_lesson_file",
       "exists": true,
-      "observed_count": 12,
+      "observed_count": 14,
       "example_paths": [
         "1.2 Hoofdstuk Vraag/1.2.2 Vraagfactoren/__pycache__/build_pdf.cpython-314.pyc",
         "1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/__pycache__/build_pdf.cpython-314.pyc",
+        "shared/graphical.css",
         "shared/newsdetective.css",
-        "shared/newsdetective/.gitkeep",
-        "shared/procedure.css"
+        "shared/newsdetective/.gitkeep"
       ],
       "source_status": "generated_projection",
       "authority_level": "generated_projection",
@@ -1142,13 +1147,13 @@
       "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod",
       "source_surface_type": "owned_markdown_surface",
       "exists": true,
-      "observed_count": 8,
+      "observed_count": 10,
       "example_paths": [
         "1.1 Hoofdstuk Economisch denken en rekenen/1.1 Economisch denken en rekenen – hoofdstuk.md",
         "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_paragraph-plan.md",
-        "1.2 Hoofdstuk Vraag/1.2 Vraag – hoofdstuk.md",
-        "1.3 Hoofdstuk Aanbod en kosten/1.3 Aanbod en kosten – hoofdstuk.md",
-        "1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4 Marktevenwicht en marginale analyse – hoofdstuk.md"
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1-nieuws-met-visual-lead-review-v1.md",
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/_paragraph-plan.md",
+        "1.2 Hoofdstuk Vraag/1.2 Vraag – hoofdstuk.md"
       ],
       "source_status": "generated_projection",
       "authority_level": "generated_projection",
@@ -1259,9 +1264,13 @@
       "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod",
       "source_surface_type": "presentation_surface",
       "exists": true,
-      "observed_count": 1,
+      "observed_count": 12,
       "example_paths": [
-        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – presentatie.pptx"
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_assets/presentatie-slide3-img-14fd6f67e28c.png",
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_assets/presentatie-slide4-img-69532d597fca.png",
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_assets/presentatie-slide5-img-db6ea92cebd7.png",
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_assets/presentatie-slide6-img-a0d089c4fdbb.png",
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – presentatie-v2-prototype.html"
       ],
       "source_status": "generated_projection",
       "authority_level": "generated_projection",
@@ -1313,13 +1322,13 @@
       "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod",
       "source_surface_type": "review_note",
       "exists": true,
-      "observed_count": 21,
+      "observed_count": 24,
       "example_paths": [
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1-companion-visual-review.md",
         "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1-review.md",
-        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2-review.md",
-        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3-review.md",
-        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.4 Gemengde opgaven/1.1.4-review.md",
-        "1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/1.2.1-review.md"
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1-uitleg-voorkennis-lead-review.md",
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2-companion-visual-review.md",
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2-review.md"
       ],
       "source_status": "generated_projection",
       "authority_level": "generated_projection",
@@ -1342,12 +1351,13 @@
       "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod",
       "source_surface_type": "summary_surface",
       "exists": true,
-      "observed_count": 4,
+      "observed_count": 7,
       "example_paths": [
         "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – samenvatting.docx",
-        "1.5 Hoofdstuk Toetsvoorbereiding/1.5.1 Actieve samenvatting/1.5.1 Actieve samenvatting – samenvatting.html",
-        "1.5 Hoofdstuk Toetsvoorbereiding/1.5.1 Actieve samenvatting/1.5.1 Actieve samenvatting – samenvatting.md",
-        "1.5 Hoofdstuk Toetsvoorbereiding/1.5.1 Actieve samenvatting/1.5.1 Actieve samenvatting – samenvatting.pdf"
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – samenvatting.html",
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1-samenvatting-lead-review-v1.md",
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – samenvatting.html",
+        "1.5 Hoofdstuk Toetsvoorbereiding/1.5.1 Actieve samenvatting/1.5.1 Actieve samenvatting – samenvatting.html"
       ],
       "source_status": "generated_projection",
       "authority_level": "generated_projection",
@@ -1370,12 +1380,13 @@
       "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod",
       "source_surface_type": "vaardigheden_surface",
       "exists": true,
-      "observed_count": 4,
+      "observed_count": 6,
       "example_paths": [
         "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – uitleg vaardigheden.docx",
         "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – uitleg vaardigheden.html",
         "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – wiskundevaardigheden.html",
-        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – wiskundevaardigheden.html"
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1-uitleg-vaardigheden-lead-review-v1.md",
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – uitleg vaardigheden.html"
       ],
       "source_status": "generated_projection",
       "authority_level": "generated_projection",
@@ -1458,9 +1469,9 @@
       "exists": true,
       "observed_count": 5,
       "example_paths": [
-        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – uitleg voorkennis - layout test v1.html",
         "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – uitleg voorkennis.docx",
         "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – uitleg voorkennis.html",
+        "1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – uitleg voorkennis.html",
         "shared/voorkennis.css",
         "shared/voorkennis.js"
       ],
