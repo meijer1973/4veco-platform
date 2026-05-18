@@ -1171,6 +1171,110 @@
         };
     };
 
+    GEN.A61 = function () {
+        var oldValue = pick([120, 160, 200, 400, 500]);
+        var change = pick([-80, -60, -40, 40, 60, 80]);
+        var newValue = oldValue + change;
+        var row = pick(['januari', 'maart', 'juni', 'week 1']);
+        var nextRow = pick(['juni', 'week 2', 'september', 'december']);
+        return {
+            context: 'Een tabel toont verkoop per periode.\n' + row + ': ' + oldValue + ' stuks.\n' + nextRow + ': ' + newValue + ' stuks.\nSelecteer de bronwaarden voor een berekening.',
+            steps: [
+                mcStep(
+                    'Wat moet je eerst uit de vraag halen?',
+                    'welke perioden en welke grootheid nodig zijn',
+                    ['het grootste getal', 'de kleur van de tabel', 'alle getallen in de bron'],
+                    'Lees eerst de vraag, niet meteen de getallen.',
+                    'Je bepaalt eerst welke periode, rij, kolom of grootheid nodig is.'
+                ),
+                {
+                    q: 'Welke oude waarde hoort bij ' + row + '?',
+                    a: oldValue,
+                    hint: 'Kijk naar de rij of kolom met label ' + row + '.',
+                    expl: row + ' is de oude situatie: ' + oldValue + ' stuks.'
+                },
+                {
+                    q: 'Welke nieuwe waarde hoort bij ' + nextRow + '?',
+                    a: newValue,
+                    hint: 'Kijk naar de rij of kolom met label ' + nextRow + '.',
+                    expl: nextRow + ' is de nieuwe situatie: ' + newValue + ' stuks.'
+                },
+                mcStep(
+                    'Waarom noteer je de labels oud en nieuw bij de waarden?',
+                    'dan is de berekening controleerbaar',
+                    ['dan wordt het antwoord altijd positief', 'dan hoef je geen eenheid te gebruiken', 'dan kun je de tabel overslaan'],
+                    'Een los getal heeft weinig betekenis.',
+                    'Met labels zoals oud = ' + oldValue + ' en nieuw = ' + newValue + ' is duidelijk wat je berekent.'
+                )
+            ]
+        };
+    };
+
+    GEN.A62 = function () {
+        var labels = ['A', 'B', 'C', 'D'];
+        var values = labels.map(function(_, i) { return 40 + i * 20 + ri(0, 3) * 5; });
+        var idx = ri(0, labels.length - 1);
+        return {
+            context: 'Een staafdiagram toont aantallen per categorie:\n' + labels.map(function(label, i) { return label + ': ' + values[i]; }).join(', ') + '.\nLees de gevraagde staaf af.',
+            steps: [
+                mcStep(
+                    'Wat controleer je voordat je de staafhoogte leest?',
+                    'titel, eenheid en categorie-label',
+                    ['alleen de hoogste staaf', 'alleen de kleur', 'alleen het aantal staven'],
+                    'Een staaf heeft pas betekenis met label en eenheid.',
+                    'Je controleert titel, eenheid en categorie-label voordat je leest.'
+                ),
+                {
+                    q: 'Welke waarde hoort bij categorie ' + labels[idx] + '?',
+                    a: values[idx],
+                    hint: 'Zoek categorie ' + labels[idx] + ' en lees de hoogte af.',
+                    expl: 'Categorie ' + labels[idx] + ' heeft waarde ' + values[idx] + '.'
+                },
+                mcStep(
+                    'Waarom kijk je naar de schaal van de as?',
+                    'om te zien hoe grote stappen tussen de lijnen zijn',
+                    ['om de titel te vervangen', 'om de categorie te raden', 'om alle waarden gelijk te maken'],
+                    'De schaal bepaalt hoe je tussen lijnen leest.',
+                    'De schaal vertelt of een afstand bijvoorbeeld 10, 20 of 100 eenheden betekent.'
+                )
+            ]
+        };
+    };
+
+    GEN.A63 = function () {
+        var first = ri(80, 140);
+        var second = first + pick([-30, -20, 20, 30]);
+        var third = second + pick([-20, 20, 40]);
+        var years = ['2023', '2024', '2025'];
+        var values = [first, second, third];
+        var idx = ri(0, 2);
+        return {
+            context: 'Een lijngrafiek toont waarden per jaar:\n2023: ' + first + ', 2024: ' + second + ', 2025: ' + third + '.\nLees het gevraagde punt af.',
+            steps: [
+                mcStep(
+                    'Wat lees je eerst bij een lijngrafiek?',
+                    'titel, assen, eenheden en meetpunten',
+                    ['alleen de stijging', 'alleen het laatste punt', 'alleen de lijnkleur'],
+                    'De lijn verbindt meetpunten; eerst moet je weten wat ze voorstellen.',
+                    'Titel, assen, eenheden en meetpunten geven de betekenis.'
+                ),
+                {
+                    q: 'Welke waarde hoort bij ' + years[idx] + '?',
+                    a: values[idx],
+                    hint: 'Zoek het jaar ' + years[idx] + ' en lees het punt op de verticale schaal.',
+                    expl: 'Bij ' + years[idx] + ' hoort waarde ' + values[idx] + '.'
+                },
+                mcStep(
+                    'Wanneer gebruik je interpolatie?',
+                    'als de gevraagde waarde tussen twee bekende punten ligt',
+                    ['als de waarde exact als punt getekend is', 'als je de aslabels overslaat', 'als de grafiek daalt'],
+                    'Interpoleren betekent schatten tussen bekende punten.',
+                    'Je gebruikt interpolatie alleen tussen twee bekende punten.'
+                )
+            ]
+        };
+    };
+
     GEN.A40 = function () {
         var kind = pick(['consumentensurplus', 'producentensurplus', 'belastingopbrengst', 'welvaartsverlies']);
         var correctRegion = {

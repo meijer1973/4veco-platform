@@ -1,9 +1,11 @@
 /**
  * Optional Procedure-Visual formal step ID checks for procedure data.
  *
- * Existing procedure-game data may remain legacy_unmapped. When a file opts
- * into formal_step_id, the fields must be strings and every procedure-level
- * procedure_template_id must also be a string.
+ * Existing procedure-game data may remain legacy_unmapped. When a procedure
+ * opts into formal_step_id, the fields must be strings and all actionable
+ * choose steps must be mapped. A procedure_template_id is required only when
+ * the procedure claims a formal PV/reference template mapping; lesson-local
+ * contracts may still expose formal_step_id without such a template.
  */
 const fs = require('fs');
 const path = require('path');
@@ -30,7 +32,8 @@ describeOrSkip('procedure formal_step_id optional contract', () => {
     test.each(allData)('$parNr optional formal fields are well-formed', ({ data }) => {
         for (const proc of data.procedures || []) {
             const steps = proc.steps || [];
-            const mappedStepCount = steps.filter((step) => step.formal_step_id !== undefined).length;
+            const chooseSteps = steps.filter((step) => step.type === 'choose');
+            const mappedStepCount = chooseSteps.filter((step) => step.formal_step_id !== undefined).length;
 
             if (proc.procedure_template_id !== undefined) {
                 expect(typeof proc.procedure_template_id).toBe('string');
@@ -45,8 +48,7 @@ describeOrSkip('procedure formal_step_id optional contract', () => {
             }
 
             if (mappedStepCount > 0) {
-                expect(typeof proc.procedure_template_id).toBe('string');
-                expect(mappedStepCount).toBe(steps.length);
+                expect(mappedStepCount).toBe(chooseSteps.length);
             }
         }
     });

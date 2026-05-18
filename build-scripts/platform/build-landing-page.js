@@ -1178,7 +1178,7 @@ function renderParagraafPage(paragraaf, files, _resolvedMap) {
             <span class="section-badge badge-${s.accent}">${s.hint}</span>
           </div>
         </div>
-        ${bodyHTML}
+${bodyHTML}
       </section>`;
   }).join("\n");
 

@@ -231,6 +231,90 @@
         "Indexpunten en procenten onderscheiden in vijf stappen",
         "indexpunten_procenten_step_count: 5"
       ]
+    },
+    {
+      "contract_id": "1.1.3-tabelwaarden-selecteren",
+      "par_nr": "1.1.3",
+      "par_name": "Grafieken en tabellen",
+      "paragraph_dir": "1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen",
+      "procedure_id": "tabelwaarden-selecteren",
+      "procedure_template_id": "select_table_values_trace",
+      "visual_state_id": "table_trace_source_values_selected",
+      "unit_template_link_id": "A61:select_table_values_trace",
+      "quality_ref_key": "tabelwaarden_selecteren_step_count",
+      "canonical_step_count": 4,
+      "formal_step_ids_required": true,
+      "steps": [
+        {
+          "formal_step_id": "read_question_target",
+          "student_label": "Lees de vraag",
+          "required_surface_keywords": ["Lees de vraag", "grootheid", "periode", "rij", "kolom"]
+        },
+        {
+          "formal_step_id": "check_table_headers_units",
+          "student_label": "Controleer tabelkop en eenheid",
+          "required_surface_keywords": ["tabelkop", "rijlabel", "kolomlabel", "eenheid", "bron"]
+        },
+        {
+          "formal_step_id": "select_needed_values",
+          "student_label": "Selecteer de waarden",
+          "required_surface_keywords": ["Selecteer", "oude waarde", "nieuwe waarde", "gevraagde waarde"]
+        },
+        {
+          "formal_step_id": "label_selected_values",
+          "student_label": "Label de gekozen waarden",
+          "required_surface_keywords": ["label", "labels", "controleerbaar", "gekozen waarden"]
+        }
+      ],
+      "required_surfaces": [
+        {
+          "id": "paragraph_plan",
+          "path": "1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/_paragraph-plan.md",
+          "student_facing": false,
+          "require_step_keywords": true,
+          "scan_legacy": true
+        },
+        {
+          "id": "uitleg_vaardigheden",
+          "path": "1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen \u2013 uitleg vaardigheden.html",
+          "student_facing": true,
+          "require_step_keywords": true,
+          "scan_legacy": true
+        },
+        {
+          "id": "begeleide_inoefening",
+          "path": "1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen \u2013 begeleide inoefening.html",
+          "student_facing": true,
+          "require_step_keywords": true,
+          "scan_legacy": true
+        },
+        {
+          "id": "presentation",
+          "path": "1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen \u2013 presentatie.html",
+          "student_facing": true,
+          "require_step_keywords": true,
+          "scan_legacy": true
+        },
+        {
+          "id": "procedure_game_data",
+          "path": "shared/procedure/1.1.3.js",
+          "student_facing": true,
+          "procedure_data": true,
+          "scan_legacy": true
+        },
+        {
+          "id": "quality_ref",
+          "path": "1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3-quality-ref.yaml",
+          "student_facing": false,
+          "quality_ref": true
+        }
+      ],
+      "student_facing_forbidden_codes": ["A61"],
+      "forbidden_legacy_patterns": [
+        "PV projection",
+        "student-facing PV",
+        "student facing PV"
+      ]
     }
   ]
 }
