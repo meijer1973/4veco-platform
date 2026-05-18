@@ -2,7 +2,7 @@
   "gate_id": "GATE-CP2-owned-source-scope",
   "sprint_id": "R9.1",
   "status": "review_packet_prepared",
-  "generated_on": "2026-05-18T11:10:18Z",
+  "generated_on": "2026-05-18T11:26:22Z",
   "registry": "references/data/owned-source-registry.json",
   "registry_report": "reports/owned-source-registry.md",
   "calibration_questions": [

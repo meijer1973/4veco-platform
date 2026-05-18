@@ -216,9 +216,13 @@ function buildBlueprintMarkdown() {
   const lines = [];
   lines.push('# Course Blueprint v5 - Four Test-Week Book Plan');
   lines.push('');
-  lines.push('Status: L1.5Q Phase A source-of-truth scaffold');
+  lines.push('Status: L1.5Q Phase B curriculum-source version');
   lines.push('Version: v5');
   lines.push('Active target-exercise registry: `references/authored/course-target-exercises.json`');
+  lines.push('');
+  lines.push('## Purpose');
+  lines.push('');
+  lines.push('This blueprint is the active curriculum-source document for the 2026/27 planning model. It replaces the v4 assumption that each book has four theory chapters plus a printed test-preparation chapter. The target-exercise registry remains the stronger exercise-first source of truth; this prose explains the book structure, test-week model, migration decisions, and boundaries for future production.');
   lines.push('');
   lines.push('## Core Decisions');
   lines.push('');
@@ -228,6 +232,17 @@ function buildBlueprintMarkdown() {
   lines.push('- Optional mid-book checks may exist as formative web diagnostics or quizzes.');
   lines.push('- Count-bearing paragraphs include theory paragraphs and gemengde-opgaven paragraphs.');
   lines.push('- Gemengde-opgaven paragraphs introduce no new theory; they consolidate and transfer.');
+  lines.push('- Target-exercise placeholders are allowed during migration, but they are not reviewed-final learning-quality evidence.');
+  lines.push('');
+  lines.push('## What Changed From v4');
+  lines.push('');
+  lines.push('| v4 assumption | v5 decision |');
+  lines.push('| --- | --- |');
+  lines.push('| Every book has a printed Chapter 5 for test preparation. | Test preparation is web-only and outside the printed paragraph count. |');
+  lines.push('| Each book has two formal test moments. | Each formal test week maps to exactly one book. Optional checks are formative only. |');
+  lines.push('| Book 1 included costs, revenue, marginal analysis, and test preparation. | Book 1 print scope is 12 paragraphs: foundations, demand, supply, equilibrium, shifts. |');
+  lines.push('| Consolidation/gemengde-opgaven paragraphs were not target-exercise records. | They are count-bearing v5 curriculum units with explicit no-new-theory records. |');
+  lines.push('| v4 target-exercise registry had 49 records. | v5 target-exercise registry has 54 count-bearing records. |');
   lines.push('');
   lines.push('## Book Counts');
   lines.push('');
@@ -238,12 +253,43 @@ function buildBlueprintMarkdown() {
   lines.push('| Book 3 | 14 | Test week 3: Book 3 |');
   lines.push('| Book 4 | 16 | Test week 4: Book 4 |');
   lines.push('');
+  lines.push('These counts are guarded by `scripts/check-course-target-exercises-v5.js`. The checker also verifies that test preparation is web-only and that placeholders are visibly non-final.');
+  lines.push('');
+  lines.push('## Book-Level Intent');
+  lines.push('');
+  lines.push('### Book 1 - Grondslagen, vraag en aanbod');
+  lines.push('');
+  lines.push('Book 1 becomes the lean opening book for the first formal test week. It teaches economic thinking, percentages/index numbers, graph/table reading, demand, supply, equilibrium, and shifts. Costs, revenue, and marginal analysis are deliberately excluded from the printed Book 1 scope so the first book is realistic for the publisher and the classroom calendar.');
+  lines.push('');
+  lines.push('### Book 2 - Kosten, opbrengsten, elasticiteit en surplus');
+  lines.push('');
+  lines.push('Book 2 absorbs the Book 1 production material that was cut from print: costs, revenue, break-even, and marginal concepts. It then moves into elasticity and surplus/welfare foundations. This preserves prerequisite order before government intervention and market structures.');
+  lines.push('');
+  lines.push('### Book 3 - Overheidsingrijpen en marktvormen');
+  lines.push('');
+  lines.push('Book 3 carries taxes, subsidies, price controls, quotas, volkomen concurrentie, and monopoly. It is the main procedural/diagrammatic book after students have the calculation and surplus foundations from Book 2.');
+  lines.push('');
+  lines.push('### Book 4 - Marktfalen, arbeidsmarkt en internationale handel');
+  lines.push('');
+  lines.push('Book 4 contains market-failure extensions, labour-market material, and a limited trade block. Inflation/CPI and late macro content are parked for a later-year macro scope and are not count-bearing in v5.');
+  lines.push('');
   lines.push('## Migration Notes');
   lines.push('');
   lines.push('- Book 1 follows the L1.5P print scope: 12 paragraphs, no printed test-preparation chapter.');
   lines.push('- Book 1 cost, revenue, and marginal-analysis material is moved to later books rather than deleted.');
   lines.push('- Government intervention, monopoly, and market failure are shifted forward.');
   lines.push('- Inflation and late macro material are parked for a later year and are not count-bearing in v5.');
+  lines.push('- Protectionism beyond the two retained trade paragraphs is parked until the trade/macro boundary is reviewed.');
+  lines.push('');
+  lines.push('## Target-Exercise Record Status');
+  lines.push('');
+  lines.push('| Status | Meaning | Closure boundary |');
+  lines.push('| --- | --- | --- |');
+  lines.push('| `migrated_from_v4_needs_v5_review` | Existing v4 target exercise reused or renumbered into v5. | Valid migration evidence; not yet a final v5 quality review. |');
+  lines.push('| `placeholder_needs_review` | New or consolidation record created so the count-bearing unit is explicit. | Cannot be treated as reviewed final; needs future teacher-learning-quality review. |');
+  lines.push('| `reviewed_final` | Reserved for target exercises that pass a later quality review. | Not used by this migration unless explicitly reviewed. |');
+  lines.push('');
+  lines.push('The full target-exercise distribution audit is deferred to L2.4-TEA. L1.5Q may close with placeholders only because the placeholders are visible and mechanically checked.');
   lines.push('');
   lines.push('## Table Of Contents');
   lines.push('');
@@ -263,12 +309,12 @@ function buildBlueprintMarkdown() {
   lines.push('## Paragraph Anchors');
   lines.push('');
   for (const item of V5_PLAN) {
-    lines.push(`### §${item.id} - ${item.title}`);
+    lines.push(`### \u00a7${item.id} - ${item.title}`);
     lines.push('');
     if (item.kind === 'gemengde_opgaven') {
       lines.push('Count-bearing gemengde-opgaven paragraph. Introduces no new theory; requires a reviewed integration target exercise before final curriculum-quality claims.');
     } else if (item.from) {
-      lines.push(`Migrated from v4 target exercise §${item.from}. Needs v5 review before it can be marked reviewed_final.`);
+      lines.push(`Migrated from v4 target exercise \u00a7${item.from}. Needs v5 review before it can be marked reviewed_final.`);
     } else {
       lines.push('Placeholder paragraph. Needs v5 review before it can be marked reviewed_final.');
     }
@@ -276,7 +322,13 @@ function buildBlueprintMarkdown() {
   }
   lines.push('## Web-Only Test Preparation');
   lines.push('');
-  lines.push('Test preparation remains available online as a package per book. It is not a printed chapter and does not count toward 12/12/14/16.');
+  lines.push('Test preparation remains available online as a package per book. It is not a printed chapter and does not count toward 12/12/14/16. The printed student message should remain simple: the formal test is about this book.');
+  lines.push('');
+  lines.push('## Future Quality Work');
+  lines.push('');
+  lines.push('- L1.6 should use this v5 source path when proving the next fresh paragraph pipeline.');
+  lines.push('- Book 2 Part A should not start until this v5 source path is accepted as the active curriculum baseline.');
+  lines.push('- L2.4-TEA remains the later target-exercise distribution audit after MTU quality and companion-review instruments mature.');
   lines.push('');
   return `${lines.join('\n')}`;
 }
@@ -288,7 +340,7 @@ function buildMeta() {
     path: PLATFORM_BLUEPRINT_PATH,
     source_type: 'course_blueprint',
     authority_level: 'owned_curriculum_design',
-    completion_status: 'phase_a_source_of_truth_scaffold',
+    completion_status: 'phase_b_curriculum_source',
     canonical_owned_source: true,
     supersedes: 'owned:course-blueprint-v4',
     origin_path: 'course_blueprint_v4.md',
@@ -315,7 +367,7 @@ function buildMeta() {
       'treating_placeholders_as_reviewed_final',
     ],
     authority_notes: [
-      'v5 is the active curriculum source after L1.5Q Phase A.',
+      'v5 is the active curriculum source after L1.5Q.',
       'Target exercises are the active exercise-first source of truth.',
       'Blueprint prose is contextual and design-oriented; it is not sufficient by itself to mint or mutate machine units.',
       'Placeholder records are explicit and must not be treated as reviewed final target exercises.',

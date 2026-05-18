@@ -3,7 +3,7 @@
   "graph_id": "owned-content-graph",
   "sprint_id": "R9.2",
   "generated_by": "build-scripts/references/build-owned-content-graph.js",
-  "generated_on": "2026-05-18T11:05:05Z",
+  "generated_on": "2026-05-18T11:26:22Z",
   "source_files": [
     "references/data/owned-source-registry.json",
     "references/authored/course-target-exercises.json",

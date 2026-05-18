@@ -2,7 +2,7 @@
   "schema_version": 1,
   "registry_id": "owned-source-registry",
   "generated_by": "build-scripts/references/build-owned-source-registry.js",
-  "generated_on": "2026-05-18T11:10:18Z",
+  "generated_on": "2026-05-18T11:26:22Z",
   "source_files": [
     "references/owned/course-blueprint-v5.md",
     "references/owned/course-blueprint-v5.meta.json",
@@ -496,11 +496,11 @@
       "path": "references/owned/course-blueprint-v5.md",
       "source_surface_type": "course_blueprint",
       "exists": true,
-      "source_hash": "c53535cb56d9f880c4d98b71cef5393432a0b81a0e301d30ce00924ebf8b355d",
-      "completion_status": "phase_a_source_of_truth_scaffold",
+      "source_hash": "c0ed01ff70cee1710aefae5c3d47671039bdae325f27aee59c3291192bded888",
+      "completion_status": "phase_b_curriculum_source",
       "curriculum_version": "owned:course-blueprint-v5",
       "notes": [
-        "v5 is the active curriculum source after L1.5Q Phase A.",
+        "v5 is the active curriculum source after L1.5Q.",
         "Target exercises are the active exercise-first source of truth.",
         "Blueprint prose is contextual and design-oriented; it is not sufficient by itself to mint or mutate machine units.",
         "Placeholder records are explicit and must not be treated as reviewed final target exercises."
@@ -529,11 +529,11 @@
       "path": "references/owned/course-blueprint-v5.meta.json",
       "source_surface_type": "course_blueprint_metadata",
       "exists": true,
-      "source_hash": "99d710665fe988e4766159386ffc292d6e381be1883ca6d03c0fee356807b0d5",
-      "completion_status": "phase_a_source_of_truth_scaffold",
+      "source_hash": "e9c70cfae544de1b23ff8a76974f7aafae755901446b1a6a444f39ef1f48631b",
+      "completion_status": "phase_b_curriculum_source",
       "curriculum_version": "owned:course-blueprint-v5",
       "notes": [
-        "v5 is the active curriculum source after L1.5Q Phase A.",
+        "v5 is the active curriculum source after L1.5Q.",
         "Target exercises are the active exercise-first source of truth.",
         "Blueprint prose is contextual and design-oriented; it is not sufficient by itself to mint or mutate machine units.",
         "Placeholder records are explicit and must not be treated as reviewed final target exercises."

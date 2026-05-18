@@ -32,6 +32,10 @@ function readJson(relPath) {
   return JSON.parse(fs.readFileSync(repoPath(relPath), 'utf8'));
 }
 
+function readText(relPath) {
+  return fs.readFileSync(repoPath(relPath), 'utf8');
+}
+
 function countByBook(exercises) {
   const counts = {};
   for (const exercise of exercises) {
@@ -54,6 +58,14 @@ function validate(data) {
   }
   if (data.test_preparation_policy && data.test_preparation_policy.status !== 'web_only') {
     errors.push('test_preparation_policy.status must be web_only');
+  }
+  const blueprintPath = data.blueprint_source || EXPECTED_SOURCE;
+  if (!fs.existsSync(repoPath(blueprintPath))) {
+    errors.push(`missing active blueprint source ${blueprintPath}`);
+  }
+  const blueprintText = fs.existsSync(repoPath(blueprintPath)) ? readText(blueprintPath) : '';
+  if (blueprintText.includes('Phase A source-of-truth scaffold')) {
+    errors.push('active v5 blueprint still says Phase A source-of-truth scaffold');
   }
   if (!Array.isArray(exercises)) errors.push('exercises must be an array');
   if (exercises.length !== EXPECTED_TOTAL) {
@@ -87,6 +99,9 @@ function validate(data) {
     }
     if (!String(exercise.source_ref || '').startsWith(`${EXPECTED_SOURCE} §${exercise.id}`)) {
       errors.push(`${label}: source_ref must point to ${EXPECTED_SOURCE} §${exercise.id}`);
+    }
+    if (blueprintText && !blueprintText.includes(`§${exercise.id} -`)) {
+      errors.push(`${label}: active blueprint missing paragraph anchor`);
     }
     if (String(exercise.source_ref || '').includes('course-blueprint-v4.md') || String(exercise.source_ref || '').includes('knowledge/course_blueprint_v4.md')) {
       errors.push(`${label}: stale v4 source_ref`);

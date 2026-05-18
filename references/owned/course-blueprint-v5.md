@@ -1,8 +1,12 @@
 # Course Blueprint v5 - Four Test-Week Book Plan
 
-Status: L1.5Q Phase A source-of-truth scaffold
+Status: L1.5Q Phase B curriculum-source version
 Version: v5
 Active target-exercise registry: `references/authored/course-target-exercises.json`
+
+## Purpose
+
+This blueprint is the active curriculum-source document for the 2026/27 planning model. It replaces the v4 assumption that each book has four theory chapters plus a printed test-preparation chapter. The target-exercise registry remains the stronger exercise-first source of truth; this prose explains the book structure, test-week model, migration decisions, and boundaries for future production.
 
 ## Core Decisions
 
@@ -12,6 +16,17 @@ Active target-exercise registry: `references/authored/course-target-exercises.js
 - Optional mid-book checks may exist as formative web diagnostics or quizzes.
 - Count-bearing paragraphs include theory paragraphs and gemengde-opgaven paragraphs.
 - Gemengde-opgaven paragraphs introduce no new theory; they consolidate and transfer.
+- Target-exercise placeholders are allowed during migration, but they are not reviewed-final learning-quality evidence.
+
+## What Changed From v4
+
+| v4 assumption | v5 decision |
+| --- | --- |
+| Every book has a printed Chapter 5 for test preparation. | Test preparation is web-only and outside the printed paragraph count. |
+| Each book has two formal test moments. | Each formal test week maps to exactly one book. Optional checks are formative only. |
+| Book 1 included costs, revenue, marginal analysis, and test preparation. | Book 1 print scope is 12 paragraphs: foundations, demand, supply, equilibrium, shifts. |
+| Consolidation/gemengde-opgaven paragraphs were not target-exercise records. | They are count-bearing v5 curriculum units with explicit no-new-theory records. |
+| v4 target-exercise registry had 49 records. | v5 target-exercise registry has 54 count-bearing records. |
 
 ## Book Counts
 
@@ -22,12 +37,43 @@ Active target-exercise registry: `references/authored/course-target-exercises.js
 | Book 3 | 14 | Test week 3: Book 3 |
 | Book 4 | 16 | Test week 4: Book 4 |
 
+These counts are guarded by `scripts/check-course-target-exercises-v5.js`. The checker also verifies that test preparation is web-only and that placeholders are visibly non-final.
+
+## Book-Level Intent
+
+### Book 1 - Grondslagen, vraag en aanbod
+
+Book 1 becomes the lean opening book for the first formal test week. It teaches economic thinking, percentages/index numbers, graph/table reading, demand, supply, equilibrium, and shifts. Costs, revenue, and marginal analysis are deliberately excluded from the printed Book 1 scope so the first book is realistic for the publisher and the classroom calendar.
+
+### Book 2 - Kosten, opbrengsten, elasticiteit en surplus
+
+Book 2 absorbs the Book 1 production material that was cut from print: costs, revenue, break-even, and marginal concepts. It then moves into elasticity and surplus/welfare foundations. This preserves prerequisite order before government intervention and market structures.
+
+### Book 3 - Overheidsingrijpen en marktvormen
+
+Book 3 carries taxes, subsidies, price controls, quotas, volkomen concurrentie, and monopoly. It is the main procedural/diagrammatic book after students have the calculation and surplus foundations from Book 2.
+
+### Book 4 - Marktfalen, arbeidsmarkt en internationale handel
+
+Book 4 contains market-failure extensions, labour-market material, and a limited trade block. Inflation/CPI and late macro content are parked for a later-year macro scope and are not count-bearing in v5.
+
 ## Migration Notes
 
 - Book 1 follows the L1.5P print scope: 12 paragraphs, no printed test-preparation chapter.
 - Book 1 cost, revenue, and marginal-analysis material is moved to later books rather than deleted.
 - Government intervention, monopoly, and market failure are shifted forward.
 - Inflation and late macro material are parked for a later year and are not count-bearing in v5.
+- Protectionism beyond the two retained trade paragraphs is parked until the trade/macro boundary is reviewed.
+
+## Target-Exercise Record Status
+
+| Status | Meaning | Closure boundary |
+| --- | --- | --- |
+| `migrated_from_v4_needs_v5_review` | Existing v4 target exercise reused or renumbered into v5. | Valid migration evidence; not yet a final v5 quality review. |
+| `placeholder_needs_review` | New or consolidation record created so the count-bearing unit is explicit. | Cannot be treated as reviewed final; needs future teacher-learning-quality review. |
+| `reviewed_final` | Reserved for target exercises that pass a later quality review. | Not used by this migration unless explicitly reviewed. |
+
+The full target-exercise distribution audit is deferred to L2.4-TEA. L1.5Q may close with placeholders only because the placeholders are visible and mechanically checked.
 
 ## Table Of Contents
 
@@ -325,4 +371,10 @@ Migrated from v4 target exercise §4.3.2. Needs v5 review before it can be marke
 
 ## Web-Only Test Preparation
 
-Test preparation remains available online as a package per book. It is not a printed chapter and does not count toward 12/12/14/16.
+Test preparation remains available online as a package per book. It is not a printed chapter and does not count toward 12/12/14/16. The printed student message should remain simple: the formal test is about this book.
+
+## Future Quality Work
+
+- L1.6 should use this v5 source path when proving the next fresh paragraph pipeline.
+- Book 2 Part A should not start until this v5 source path is accepted as the active curriculum baseline.
+- L2.4-TEA remains the later target-exercise distribution audit after MTU quality and companion-review instruments mature.

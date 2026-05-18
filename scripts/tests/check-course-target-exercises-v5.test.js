@@ -78,4 +78,12 @@ describe('check-course-target-exercises-v5', () => {
     expect(errors).toContain('expected 54 count-bearing records, got 53');
     expect(errors).toContain('Book 4 expected 16 records, got 15');
   });
+
+  test('rejects missing blueprint anchors', () => {
+    const data = validData();
+    data.exercises[0].id = '9.9.9';
+    data.exercises[0].source_ref = 'references/owned/course-blueprint-v5.md §9.9.9';
+    const errors = validate(data).join('\n');
+    expect(errors).toContain('9.9.9: active blueprint missing paragraph anchor');
+  });
 });
