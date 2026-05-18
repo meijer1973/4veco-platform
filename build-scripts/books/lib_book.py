@@ -44,6 +44,21 @@ def load_manifest(path: Path) -> dict:
             raise ValueError(f"Manifest missing colofon.{k}")
     if not isinstance(manifest["chapters"], list) or not manifest["chapters"]:
         raise ValueError("Manifest 'chapters' must be a non-empty list")
+    for chapter in manifest["chapters"]:
+        if isinstance(chapter, str):
+            continue
+        if not isinstance(chapter, dict):
+            raise ValueError("Manifest chapters must be strings or objects")
+        if "nr" not in chapter:
+            raise ValueError("Manifest chapter object missing 'nr'")
+        mode = chapter.get("mode", "assembled")
+        if mode not in ("assembled", "composed"):
+            raise ValueError(f"Unsupported chapter mode for {chapter['nr']}: {mode}")
+        if mode == "composed":
+            if not chapter.get("title"):
+                raise ValueError(f"Composed chapter {chapter['nr']} missing title")
+            if not isinstance(chapter.get("paragraphs"), list) or not chapter["paragraphs"]:
+                raise ValueError(f"Composed chapter {chapter['nr']} missing paragraphs")
     return manifest
 
 # ---------------------------------------------------------------------------
@@ -76,6 +91,147 @@ def find_chapter_md(chapter_dir: Path) -> Path:
     if len(candidates) > 1:
         raise ValueError(f"Multiple hoofdstuk.md in {chapter_dir}")
     return candidates[0]
+
+def find_single_file(folder: Path, suffix: str) -> Path:
+    candidates = sorted(p for p in folder.glob(f"*{suffix}") if p.is_file())
+    if not candidates:
+        raise FileNotFoundError(f"No '*{suffix}' file found in {folder}")
+    if len(candidates) > 1:
+        raise ValueError(f"Multiple '*{suffix}' files found in {folder}")
+    return candidates[0]
+
+def write_text_lf(path: Path, text: str) -> None:
+    normalized = text.replace("\r\n", "\n").replace("\r", "\n")
+    normalized = "\n".join(line.rstrip() for line in normalized.split("\n"))
+    with path.open("w", encoding="utf-8", newline="\n") as f:
+        f.write(normalized)
+
+def strip_first_h1(md_text: str) -> str:
+    lines = md_text.splitlines()
+    for idx, line in enumerate(lines):
+        if not line.strip():
+            continue
+        if line.startswith("# "):
+            return "\n".join(lines[:idx] + lines[idx + 1:]).strip()
+        return md_text.strip()
+    return md_text.strip()
+
+def renumber_visible_refs(md_text: str, source_nr: str, target_nr: str) -> str:
+    """Renumber visible paragraph references without rewriting asset filenames."""
+    if not source_nr or source_nr == target_nr:
+        return md_text
+    pattern = re.compile(rf"(?<!_assets/)\b{re.escape(source_nr)}\b")
+    return pattern.sub(target_nr, md_text)
+
+def apply_visible_renumbering(md_text: str, renumber_map: dict[str, str]) -> str:
+    result = md_text
+    for source_nr in sorted(renumber_map, key=len, reverse=True):
+        result = renumber_visible_refs(result, source_nr, renumber_map[source_nr])
+    return result
+
+def apply_text_replacements(md_text: str, replacements: dict[str, str]) -> str:
+    result = md_text
+    for old, new in replacements.items():
+        result = result.replace(old, new)
+    return result
+
+def render_composed_chapter_front_html(chapter_spec: dict) -> str:
+    chapter_nr = str(chapter_spec["nr"])
+    chapter_label = chapter_spec.get("chapter_label") or chapter_nr.split(".")[-1]
+    title = chapter_spec["title"]
+    rows = []
+    for paragraph in chapter_spec.get("paragraphs", []):
+        nr = paragraph["nr"]
+        p_title = paragraph["title"]
+        rows.append(f"<tr><td>{html_escape(nr)}</td><td>{html_escape(p_title)}</td></tr>")
+    goals = "\n".join(
+        f"<li>{html_escape(goal)}</li>"
+        for goal in chapter_spec.get("learning_goals", [])
+    )
+    intro_title = chapter_spec.get("intro_title", title)
+    intro_text = chapter_spec.get("intro_text", "")
+    return f"""<div class="chapter-front">
+
+<h1>Hoofdstuk {html_escape(str(chapter_label))} - {html_escape(title)}</h1>
+
+<h2>Inhoud</h2>
+
+<table>
+<thead><tr><th>§</th><th>Onderwerp</th></tr></thead>
+<tbody>
+{chr(10).join(rows)}
+</tbody>
+</table>
+
+<h2>Leerdoelen</h2>
+
+<p>Na dit hoofdstuk kun je:</p>
+
+<ul>
+{goals}
+</ul>
+
+<h2>{html_escape(intro_title)}</h2>
+
+<p>{html_escape(intro_text)}</p>
+
+</div>
+"""
+
+def load_composed_paragraph_md(paragraph_spec: dict, book_output_dir: Path, platform_root: Path) -> tuple[str, list[Path]]:
+    target_nr = paragraph_spec["nr"]
+    title = paragraph_spec["title"]
+    asset_sources: list[Path] = []
+
+    if paragraph_spec.get("source_md"):
+        source_md = platform_root / paragraph_spec["source_md"]
+        if not source_md.exists():
+            raise FileNotFoundError(f"Composed paragraph source not found: {source_md}")
+        return source_md.read_text(encoding="utf-8"), asset_sources
+
+    source_dir = book_output_dir / paragraph_spec["source_dir"]
+    if not source_dir.is_dir():
+        raise FileNotFoundError(f"Composed paragraph source folder not found: {source_dir}")
+    asset_sources.append(source_dir)
+
+    source_nr = paragraph_spec.get("source_nr", target_nr)
+    renumber_map = paragraph_spec.get("renumber_refs") or {source_nr: target_nr}
+    text_replacements = paragraph_spec.get("text_replacements") or {}
+    include = paragraph_spec.get("include", ["paragraaf", "opgaven"])
+    parts: list[str] = []
+
+    if "paragraaf" in include:
+        paragraaf = find_single_file(source_dir, "paragraaf.md")
+        text = paragraaf.read_text(encoding="utf-8")
+        text = apply_visible_renumbering(text, renumber_map)
+        text = apply_text_replacements(text, text_replacements)
+        parts.append(text.strip())
+
+    if "opgaven" in include:
+        opgaven = find_single_file(source_dir, "opgaven.md")
+        text = strip_first_h1(opgaven.read_text(encoding="utf-8"))
+        text = apply_visible_renumbering(text, renumber_map)
+        text = apply_text_replacements(text, text_replacements)
+        parts.append(f"## Opgaven\n\n{text}".strip())
+
+    if not parts:
+        raise ValueError(f"Composed paragraph {target_nr} has no included content")
+
+    if not parts[0].lstrip().startswith("# "):
+        parts.insert(0, f"# {target_nr} {title}")
+
+    return "\n\n".join(parts), asset_sources
+
+def compose_chapter_md(chapter_spec: dict, book_output_dir: Path, platform_root: Path) -> tuple[str, list[Path], str]:
+    front = render_composed_chapter_front_html(chapter_spec)
+    body_parts = [front]
+    asset_sources: list[Path] = []
+    for paragraph in chapter_spec.get("paragraphs", []):
+        paragraph_md, paragraph_assets = load_composed_paragraph_md(paragraph, book_output_dir, platform_root)
+        body_parts.append('<div style="break-before: page;"></div>')
+        body_parts.append(paragraph_md)
+        asset_sources.extend(paragraph_assets)
+    return "\n\n".join(body_parts), asset_sources, chapter_spec["title"]
 
 # ---------------------------------------------------------------------------
 # Front matter (raw HTML)
@@ -159,11 +315,11 @@ def extract_chapter_toc_rows(chapter_md_text: str) -> list[dict]:
         for nr, title in TOC_ROW_RE.findall(chapter_md_text)
     ]
 
-def build_toc_entries(chapter_pairs: list[tuple[str, Path, str]]) -> list[dict]:
-    """chapter_pairs: [(chapter_nr, chapter_dir, hoofdstuk_md_text)]"""
+def build_toc_entries(chapter_pairs: list[tuple[str, Path, str, str]]) -> list[dict]:
+    """chapter_pairs: [(chapter_nr, chapter_dir, hoofdstuk_md_text, fallback_title)]"""
     entries = []
-    for chapter_nr, chapter_dir, md_text in chapter_pairs:
-        title = extract_chapter_title(md_text, fallback=chapter_dir.name)
+    for chapter_nr, chapter_dir, md_text, fallback_title in chapter_pairs:
+        title = extract_chapter_title(md_text, fallback=fallback_title)
         paragraphs = extract_chapter_toc_rows(md_text)
         entries.append({
             "chapter_nr": chapter_nr,
@@ -843,15 +999,44 @@ def assemble_book_md(manifest: dict, lessen_root: Path, platform_root: Path):
     book_output_dir = lessen_root / f"Boek {book['nr']} - {book_title}"
 
     # 1. Locate chapters inside the book folder + load hoofdstuk.md
-    chapter_data: list[tuple[str, Path, str]] = []
-    chapter_dirs: list[Path] = []
-    for chapter_nr in manifest["chapters"]:
-        chapter_dir = find_chapter_folder(book_output_dir, chapter_nr)
-        md_path = find_chapter_md(chapter_dir)
-        md_text = md_path.read_text(encoding="utf-8")
-        chapter_data.append((chapter_nr, chapter_dir, md_text))
-        chapter_dirs.append(chapter_dir)
-        print(f"  Loaded chapter {chapter_nr}: {chapter_dir.name}")
+    chapter_data: list[tuple[str, Path, str, str]] = []
+    asset_sources: list[Path] = []
+    for chapter_spec in manifest["chapters"]:
+        if isinstance(chapter_spec, str):
+            chapter_nr = chapter_spec
+            chapter_dir = find_chapter_folder(book_output_dir, chapter_nr)
+            md_path = find_chapter_md(chapter_dir)
+            md_text = md_path.read_text(encoding="utf-8")
+            chapter_data.append((chapter_nr, chapter_dir, md_text, chapter_dir.name))
+            asset_sources.append(chapter_dir)
+            print(f"  Loaded chapter {chapter_nr}: {chapter_dir.name}")
+        else:
+            chapter_nr = str(chapter_spec["nr"])
+            mode = chapter_spec.get("mode", "assembled")
+            if mode == "assembled":
+                folder = chapter_spec.get("folder")
+                chapter_dir = (
+                    book_output_dir / folder
+                    if folder
+                    else find_chapter_folder(book_output_dir, chapter_nr)
+                )
+                md_path = find_chapter_md(chapter_dir)
+                md_text = md_path.read_text(encoding="utf-8")
+                fallback_title = chapter_spec.get("title") or chapter_dir.name
+                chapter_data.append((chapter_nr, chapter_dir, md_text, fallback_title))
+                asset_sources.append(chapter_dir)
+                print(f"  Loaded chapter {chapter_nr}: {chapter_dir.name}")
+            elif mode == "composed":
+                md_text, composed_asset_sources, fallback_title = compose_chapter_md(
+                    chapter_spec,
+                    book_output_dir,
+                    platform_root,
+                )
+                chapter_data.append((chapter_nr, book_output_dir, md_text, fallback_title))
+                asset_sources.extend(composed_asset_sources)
+                print(f"  Composed chapter {chapter_nr}: {fallback_title}")
+            else:
+                raise ValueError(f"Unsupported chapter mode for {chapter_nr}: {mode}")
 
     # 2. Front matter
     toc_entries = build_toc_entries(chapter_data)
@@ -865,14 +1050,14 @@ def assemble_book_md(manifest: dict, lessen_root: Path, platform_root: Path):
 
     # 3. Body: chapter markdowns with rewritten asset paths
     body_parts: list[str] = [BOOK_CONTENT_START]
-    for chapter_nr, chapter_dir, md_text in chapter_data:
+    for chapter_nr, chapter_dir, md_text, fallback_title in chapter_data:
         body_parts.append('<div style="break-before: page;"></div>')
         body_parts.append(rewrite_chapter_asset_paths(md_text))
     body_parts.append(BOOK_CONTENT_END)
 
     # 4. Back matter needs the assembled book text to know which terms to include
     # Build a "raw body" (with asset paths) for term scanning.
-    raw_body = "\n\n".join(md for _, _, md in chapter_data)
+    raw_body = "\n\n".join(md for _, _, md, _ in chapter_data)
 
     begrippen_json_path = platform_root / "references" / "machine" / "begrippen.json"
     if begrippen_json_path.exists():
@@ -885,7 +1070,7 @@ def assemble_book_md(manifest: dict, lessen_root: Path, platform_root: Path):
     glossary_html = render_begrippenlijst_html(begrippen)
 
     per_chapter_formules = []
-    for (chapter_nr, chapter_dir, md_text), entry in zip(chapter_data, toc_entries):
+    for (chapter_nr, chapter_dir, md_text, fallback_title), entry in zip(chapter_data, toc_entries):
         per_chapter_formules.append({
             "chapter_nr": chapter_nr,
             "chapter_title": entry["chapter_title"],
@@ -910,7 +1095,7 @@ def assemble_book_md(manifest: dict, lessen_root: Path, platform_root: Path):
         formulas_html,
     ])
 
-    return book_md, chapter_dirs, book_title_full, book_output_dir, book
+    return book_md, asset_sources, book_title_full, book_output_dir, book
 
 def md_to_pdf(book_md: str, book_output_dir: Path, book_title_full: str, book: dict):
     book_output_dir.mkdir(parents=True, exist_ok=True)
@@ -952,7 +1137,7 @@ def md_to_pdf(book_md: str, book_output_dir: Path, book_title_full: str, book: d
     )
 
     html_path = book_output_dir / f"{book_title_full} – boek.html"
-    html_path.write_text(html, encoding="utf-8")
+    write_text_lf(html_path, html)
     print(f"HTML saved: {html_path.name}")
 
     pdf_path = book_output_dir / f"{book_title_full} – boek.pdf"
@@ -991,13 +1176,13 @@ def build_book(manifest_path: Path, lessen_root: Path, platform_root: Path):
     manifest = load_manifest(manifest_path)
 
     print(f"\n=== Assembling book ===")
-    book_md, chapter_dirs, book_title_full, book_output_dir, book = assemble_book_md(
+    book_md, asset_sources, book_title_full, book_output_dir, book = assemble_book_md(
         manifest, lessen_root, platform_root
     )
 
     print(f"\n=== Collecting assets into {book_output_dir.name}/_assets/ ===")
     book_output_dir.mkdir(parents=True, exist_ok=True)
-    copied = collect_assets(chapter_dirs, book_output_dir / "_assets")
+    copied = collect_assets(asset_sources, book_output_dir / "_assets")
     print(f"  Copied {copied} new assets")
 
     missing = verify_asset_refs(book_md, book_output_dir / "_assets")
@@ -1008,7 +1193,7 @@ def build_book(manifest_path: Path, lessen_root: Path, platform_root: Path):
         sys.exit(1)
 
     md_path = book_output_dir / f"{book_title_full} – boek.md"
-    md_path.write_text(book_md, encoding="utf-8")
+    write_text_lf(md_path, book_md)
     print(f"\nMarkdown saved: {md_path.name}")
 
     print(f"\n=== Building PDF ===")

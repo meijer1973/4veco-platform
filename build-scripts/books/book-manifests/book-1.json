@@ -5,7 +5,100 @@
     "edition": "1e editie",
     "year": 2026
   },
-  "chapters": ["1.1", "1.2", "1.3", "1.4", "1.5"],
+  "print_scope": {
+    "school_year": "2026/27",
+    "count_bearing_paragraphs": 12,
+    "test_preparation": "website-only",
+    "excluded_print_chapters": ["1.4", "1.5"],
+    "excluded_print_material": [
+      {
+        "source": "1.3.2 Kostenstructuren",
+        "survival_route": "parked for Book 2 migration; existing source/output remains reachable online"
+      },
+      {
+        "source": "1.3.3 Opbrengsten",
+        "survival_route": "parked for Book 2 migration; existing source/output remains reachable online"
+      },
+      {
+        "source": "1.4.3 Marginale kosten en marginale opbrengsten",
+        "survival_route": "parked for Book 2 migration; existing source/output remains reachable online"
+      },
+      {
+        "source": "1.4.4 Winstmaximalisatie",
+        "survival_route": "parked for Book 3 migration; existing source/output remains reachable online"
+      },
+      {
+        "source": "1.4.5 Gemengde opgaven",
+        "survival_route": "partial source for later reuse; not included as-is"
+      },
+      {
+        "source": "1.5 Toetsvoorbereiding",
+        "survival_route": "website-only"
+      }
+    ]
+  },
+  "chapters": [
+    "1.1",
+    "1.2",
+    {
+      "nr": "1.3",
+      "mode": "composed",
+      "title": "Aanbod en marktevenwicht",
+      "chapter_label": "3",
+      "intro_title": "Vraag en aanbod komen samen",
+      "intro_text": "In dit hoofdstuk kijk je eerst naar de aanbodkant van de markt. Daarna breng je vraag en aanbod samen: je berekent het marktevenwicht en onderzoekt wat er gebeurt als vraag of aanbod verschuift. Kosten, opbrengsten en marginale analyse horen niet meer bij de gedrukte versie van Boek 1; die stof komt later terug.",
+      "learning_goals": [
+        "Een aanbodlijn tekenen en interpreteren",
+        "Het verschil uitleggen tussen een beweging langs de aanbodlijn en een verschuiving van de aanbodlijn",
+        "Aanbodfactoren benoemen en gebruiken om verschuivingen te verklaren",
+        "Het marktevenwicht berekenen door Qv = Qa op te lossen",
+        "Een aanbodoverschot of vraagoverschot herkennen en berekenen",
+        "Een nieuw evenwicht berekenen na een verschuiving van vraag of aanbod",
+        "Uitleggen wanneer een prijs- of hoeveelheidsverandering eenduidig of onzeker is"
+      ],
+      "paragraphs": [
+        {
+          "nr": "1.3.1",
+          "title": "Aanbod",
+          "source_dir": "1.3 Hoofdstuk Aanbod en kosten/1.3.1 Aanbod",
+          "source_nr": "1.3.1",
+          "renumber_refs": {
+            "1.3.1": "1.3.1"
+          },
+          "include": ["paragraaf", "opgaven"]
+        },
+        {
+          "nr": "1.3.2",
+          "title": "Marktevenwicht",
+          "source_dir": "1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.1 Marktevenwicht",
+          "source_nr": "1.4.1",
+          "renumber_refs": {
+            "1.4.1": "1.3.2"
+          },
+          "include": ["paragraaf", "opgaven"]
+        },
+        {
+          "nr": "1.3.3",
+          "title": "Verschuivingen en nieuw evenwicht",
+          "source_dir": "1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.2 Verschuivingen",
+          "source_nr": "1.4.2",
+          "renumber_refs": {
+            "1.4.1": "1.3.2",
+            "1.4.2": "1.3.3"
+          },
+          "text_replacements": {
+            "Kostenstructuren bepalen de positie van de aanbodlijn.": "Productiekosten bepalen de positie van de aanbodlijn."
+          },
+          "include": ["paragraaf", "opgaven"]
+        },
+        {
+          "nr": "1.3.4",
+          "title": "Gemengde opgaven",
+          "source_md": "build-scripts/books/book-manifests/book-1-print-1.3.4-gemengde-opgaven.md"
+        }
+      ]
+    }
+  ],
   "voorwoord": "build-scripts/books/book-manifests/book-1-voorwoord.md",
   "colofon": {
     "jaar": 2026,

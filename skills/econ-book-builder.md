@@ -90,6 +90,12 @@ One JSON file per book, at `build-scripts/books/book-manifests/book-N.json`:
 
 The builder validates the manifest and refuses to run if required fields are missing.
 
+For print-edition cuts, a manifest chapter entry may be an object with
+`"mode": "composed"`. This is used when the printed book needs a curated
+chapter assembled from existing paragraph markdown plus print-only material
+without deleting, renaming, or hand-patching the broader online lesson tree.
+After using a print-cut manifest, run the matching print-scope validator.
+
 ### 2.2 Chapter outputs (prerequisite)
 
 Chapters belonging to Boek N live **inside** the book folder at
