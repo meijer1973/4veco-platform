@@ -135,6 +135,27 @@ def apply_text_replacements(md_text: str, replacements: dict[str, str]) -> str:
         result = result.replace(old, new)
     return result
 
+def apply_text_removals(md_text: str, removals: list[dict]) -> str:
+    result = md_text
+    for removal in removals:
+        start = removal.get("start")
+        end = removal.get("end")
+        if not start:
+            continue
+        start_idx = result.find(start)
+        if start_idx < 0:
+            raise ValueError(f"Configured print removal start not found: {start}")
+        if end:
+            end_idx = result.find(end, start_idx + len(start))
+            if end_idx < 0:
+                raise ValueError(f"Configured print removal end not found after {start}: {end}")
+            if removal.get("include_end", True):
+                end_idx += len(end)
+        else:
+            end_idx = start_idx + len(start)
+        result = result[:start_idx].rstrip() + "\n\n" + result[end_idx:].lstrip()
+    return result
+
 def render_composed_chapter_front_html(chapter_spec: dict) -> str:
     chapter_nr = str(chapter_spec["nr"])
     chapter_label = chapter_spec.get("chapter_label") or chapter_nr.split(".")[-1]
@@ -197,6 +218,7 @@ def load_composed_paragraph_md(paragraph_spec: dict, book_output_dir: Path, plat
     source_nr = paragraph_spec.get("source_nr", target_nr)
     renumber_map = paragraph_spec.get("renumber_refs") or {source_nr: target_nr}
     text_replacements = paragraph_spec.get("text_replacements") or {}
+    text_removals = paragraph_spec.get("text_removals") or []
     include = paragraph_spec.get("include", ["paragraaf", "opgaven"])
     parts: list[str] = []
 
@@ -205,6 +227,7 @@ def load_composed_paragraph_md(paragraph_spec: dict, book_output_dir: Path, plat
         text = paragraaf.read_text(encoding="utf-8")
         text = apply_visible_renumbering(text, renumber_map)
         text = apply_text_replacements(text, text_replacements)
+        text = apply_text_removals(text, text_removals)
         parts.append(text.strip())
 
     if "opgaven" in include:
@@ -212,6 +235,7 @@ def load_composed_paragraph_md(paragraph_spec: dict, book_output_dir: Path, plat
         text = strip_first_h1(opgaven.read_text(encoding="utf-8"))
         text = apply_visible_renumbering(text, renumber_map)
         text = apply_text_replacements(text, text_replacements)
+        text = apply_text_removals(text, text_removals)
         parts.append(f"## Opgaven\n\n{text}".strip())
 
     if not parts:
@@ -1063,6 +1087,16 @@ def assemble_book_md(manifest: dict, lessen_root: Path, platform_root: Path):
     if begrippen_json_path.exists():
         registry = load_begrippen(begrippen_json_path)
         begrippen = extract_begrippen(raw_body, registry)
+        excluded_glossary_terms = {
+            str(term).strip().lower()
+            for term in manifest.get("glossary_exclude_terms", [])
+        }
+        if excluded_glossary_terms:
+            begrippen = [
+                b for b in begrippen
+                if str(b.get("id", "")).strip().lower() not in excluded_glossary_terms
+                and str(b.get("term_nl", "")).strip().lower() not in excluded_glossary_terms
+            ]
     else:
         print(f"  Warning: begrippen registry not found at {begrippen_json_path}",
               file=sys.stderr)

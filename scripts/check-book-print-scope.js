@@ -5,7 +5,8 @@
  * Focused L1.5P guard for the printed Book 1 scope. This does not replace
  * check-book.js; it verifies the assembled book output follows the print
  * manifest: exactly 12 count-bearing paragraphs, no printed test-prep chapter,
- * and no excluded cost/revenue/marginal-analysis TOC rows.
+ * no visible old paragraph numbering, no excluded cost/revenue/marginal content,
+ * and no duplicate exercise sections inside composed paragraphs.
  */
 
 'use strict';
@@ -39,6 +40,24 @@ const FORBIDDEN_TOC_PATTERNS = [
   /Winstmaximalisatie/i,
 ];
 
+const FORBIDDEN_VISIBLE_PATTERNS = [
+  { pattern: /\b1\.4\.\d\b/, label: 'old visible 1.4.x paragraph reference' },
+  { pattern: /\b1\.5\.\d\b/, label: 'old visible 1.5.x paragraph reference' },
+  { pattern: /kostenstructuren?/i, label: 'excluded cost-structure wording' },
+  { pattern: /constante kosten/i, label: 'excluded constant-cost wording' },
+  { pattern: /variabele kosten/i, label: 'excluded variable-cost wording' },
+  { pattern: /gemiddelde totale kosten/i, label: 'excluded average-total-cost wording' },
+  { pattern: /\bGTK\b/, label: 'excluded GTK abbreviation' },
+  { pattern: /marginale kosten/i, label: 'excluded marginal-cost wording' },
+  { pattern: /marginale opbrengsten/i, label: 'excluded marginal-revenue wording' },
+  { pattern: /\bTO\s*=\s*P\b/i, label: 'excluded total-revenue formula' },
+  { pattern: /winst\s*=\s*TO\b/i, label: 'excluded formal profit formula' },
+  { pattern: /\bMO\s*=\s*MK\b/i, label: 'excluded profit-maximisation formula' },
+  { pattern: /winstmaximalisatie/i, label: 'excluded profit-maximisation wording' },
+  { pattern: /producentensurplus/i, label: 'excluded producer-surplus wording' },
+  { pattern: /welvaart op de markt/i, label: 'stale welfare-forward-reference wording' },
+];
+
 function usage() {
   console.error('Usage: node scripts/check-book-print-scope.js <book-folder-path>');
 }
@@ -67,19 +86,46 @@ function extractBookToc(md) {
 
 function extractParagraphNumbers(tocHtml) {
   const numbers = [];
-  const rowRe = /<tr class="toc-paragraph">[\s\S]*?<td class="toc-nr">§?([^<]+)<\/td>/g;
+  const rowRe = /<tr class="toc-paragraph">[\s\S]*?<td class="toc-nr">([^<]+)<\/td>/g;
   let match;
   while ((match = rowRe.exec(tocHtml)) !== null) {
-    numbers.push(match[1].trim());
+    const nrMatch = match[1].match(/\d+\.\d+\.\d+/);
+    if (nrMatch) numbers.push(nrMatch[0]);
   }
   return numbers;
+}
+
+function visibleMarkdown(md) {
+  return md
+    .replace(/]\(_assets\/[^)]+\)/g, ']()')
+    .replace(/_assets\/[^\s)<>]+/g, '_assets/')
+    .replace(/<!--[\s\S]*?-->/g, '');
+}
+
+function extractParagraphBodies(md) {
+  const headingRe = /^#\s+.*?(\d+\.\d+\.\d+)\b.*$/gm;
+  const headings = [];
+  let match;
+  while ((match = headingRe.exec(md)) !== null) {
+    headings.push({ nr: match[1], index: match.index });
+  }
+  const bodies = new Map();
+  for (let i = 0; i < headings.length; i += 1) {
+    const current = headings[i];
+    const next = headings[i + 1];
+    const end = next ? next.index : md.length;
+    bodies.set(current.nr, md.slice(current.index, end));
+  }
+  return bodies;
 }
 
 function assertBookPrintScope(bookRoot) {
   const bookMd = findBookMd(bookRoot);
   const md = fs.readFileSync(bookMd, 'utf8');
+  const visible = visibleMarkdown(md);
   const toc = extractBookToc(md);
   const numbers = extractParagraphNumbers(toc);
+  const paragraphBodies = extractParagraphBodies(visible);
   const errors = [];
 
   if (numbers.length !== REQUIRED_PARAGRAPHS.length) {
@@ -89,6 +135,9 @@ function assertBookPrintScope(bookRoot) {
   for (const nr of REQUIRED_PARAGRAPHS) {
     if (!numbers.includes(nr)) {
       errors.push(`Missing print paragraph ${nr}`);
+    }
+    if (!paragraphBodies.has(nr)) {
+      errors.push(`Missing visible body heading for print paragraph ${nr}`);
     }
   }
 
@@ -101,6 +150,19 @@ function assertBookPrintScope(bookRoot) {
   for (const pattern of FORBIDDEN_TOC_PATTERNS) {
     if (pattern.test(toc)) {
       errors.push(`Forbidden print TOC content matched ${pattern}`);
+    }
+  }
+
+  for (const { pattern, label } of FORBIDDEN_VISIBLE_PATTERNS) {
+    if (pattern.test(visible)) {
+      errors.push(`Forbidden visible print content: ${label}`);
+    }
+  }
+
+  for (const [nr, body] of paragraphBodies.entries()) {
+    const opgavenCount = (body.match(/^##\s+Opgaven\b/gm) || []).length;
+    if (opgavenCount > 1) {
+      errors.push(`Paragraph ${nr} has duplicate Opgaven sections (${opgavenCount})`);
     }
   }
 
@@ -154,5 +216,7 @@ module.exports = {
   REQUIRED_PARAGRAPHS,
   assertBookPrintScope,
   extractBookToc,
+  extractParagraphBodies,
   extractParagraphNumbers,
+  visibleMarkdown,
 };

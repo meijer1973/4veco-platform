@@ -12,6 +12,12 @@ const CHECK = path.resolve(__dirname, '..', 'check-book-print-scope.js');
 const TMP = path.resolve(__dirname, '..', '..', 'tmp', 'test-check-book-print-scope');
 const DASH = '\u2013';
 
+const REQUIRED = [
+  '1.1.1', '1.1.2', '1.1.3', '1.1.4',
+  '1.2.1', '1.2.2', '1.2.3', '1.2.4',
+  '1.3.1', '1.3.2', '1.3.3', '1.3.4',
+];
+
 function run(args) {
   const result = spawnSync(process.execPath, [CHECK, ...args], {
     encoding: 'utf8',
@@ -24,21 +30,34 @@ function run(args) {
   };
 }
 
-function writeBook(numbers, extraToc = '', voorwoord = '') {
+function defaultBody(numbers) {
+  return numbers.map(nr => [
+    `# ${nr} Titel`,
+    '',
+    'Kerntekst.',
+    '',
+    '## Opgaven',
+    '',
+    'Oefenopgave.',
+  ].join('\n')).join('\n\n');
+}
+
+function writeBook(numbers, options = {}) {
   const book = path.join(TMP, 'Boek 1 - Test');
   fs.mkdirSync(book, { recursive: true });
   const rows = numbers.map(nr => (
-    `<tr class="toc-paragraph"><td class="toc-nr">§${nr}</td><td class="toc-title">Titel ${nr}</td></tr>`
+    `<tr class="toc-paragraph"><td class="toc-nr">${nr}</td><td class="toc-title">Titel ${nr}</td></tr>`
   )).join('\n');
   const md = [
     '<div class="book-voorwoord">',
-    voorwoord || '<p>De toets gaat over Boek 1. De toetsvoorbereiding staat op de website.</p>',
+    options.voorwoord || '<p>De toets gaat over Boek 1. De toetsvoorbereiding staat op de website.</p>',
     '</div>',
     '<div class="book-toc">',
     '<h1>Inhoudsopgave</h1>',
     rows,
-    extraToc,
+    options.extraToc || '',
     '</div>',
+    options.body || defaultBody(numbers),
   ].join('\n');
   fs.writeFileSync(path.join(book, `Boek 1 Test ${DASH} boek.md`), md, 'utf8');
   return book;
@@ -55,11 +74,7 @@ afterAll(() => {
 
 describe('check-book-print-scope.js', () => {
   test('passes a 12-paragraph Book 1 print scope', () => {
-    const book = writeBook([
-      '1.1.1', '1.1.2', '1.1.3', '1.1.4',
-      '1.2.1', '1.2.2', '1.2.3', '1.2.4',
-      '1.3.1', '1.3.2', '1.3.3', '1.3.4',
-    ]);
+    const book = writeBook(REQUIRED);
     const { exitCode, output } = run([book]);
     expect(exitCode).toBe(0);
     expect(output).toContain('OK Book print scope');
@@ -78,13 +93,32 @@ describe('check-book-print-scope.js', () => {
   });
 
   test('fails when the old preface language remains', () => {
-    const book = writeBook([
-      '1.1.1', '1.1.2', '1.1.3', '1.1.4',
-      '1.2.1', '1.2.2', '1.2.3', '1.2.4',
-      '1.3.1', '1.3.2', '1.3.3', '1.3.4',
-    ], '', '<p>Het boek bestaat uit vijf hoofdstukken. Het laatste hoofdstuk is bedoeld voor toetsvoorbereiding.</p>');
+    const book = writeBook(REQUIRED, {
+      voorwoord: '<p>Het boek bestaat uit vijf hoofdstukken. Het laatste hoofdstuk is bedoeld voor toetsvoorbereiding.</p>',
+    });
     const { exitCode, output } = run([book]);
     expect(exitCode).not.toBe(0);
     expect(output).toContain('vijf hoofdstukken');
+  });
+
+  test('fails when forbidden old-scope body content remains', () => {
+    const body = `${defaultBody(REQUIRED)}\n\n# Bijlage\n\nDeze paragraaf oefent gemiddelde totale kosten, marginale opbrengsten en TO = P x Q.`;
+    const book = writeBook(REQUIRED, { body });
+    const { exitCode, output } = run([book]);
+    expect(exitCode).not.toBe(0);
+    expect(output).toContain('average-total-cost');
+    expect(output).toContain('marginal-revenue');
+    expect(output).toContain('total-revenue formula');
+  });
+
+  test('fails when a paragraph has duplicate Opgaven sections', () => {
+    const body = defaultBody(REQUIRED).replace(
+      '# 1.3.2 Titel\n\nKerntekst.\n\n## Opgaven\n\nOefenopgave.',
+      '# 1.3.2 Titel\n\nKerntekst.\n\n## Opgaven\n\nEerste blok.\n\n## Opgaven\n\nTweede blok.',
+    );
+    const book = writeBook(REQUIRED, { body });
+    const { exitCode, output } = run([book]);
+    expect(exitCode).not.toBe(0);
+    expect(output).toContain('Paragraph 1.3.2 has duplicate Opgaven sections');
   });
 });
