@@ -275,7 +275,7 @@
   }
 
   function render() {
-    if (engine.isComplete()) {
+    if (engine.isComplete() && !lastResult) {
       rootEl.innerHTML = renderSummary();
       document.getElementById("g-restart-btn").addEventListener("click", function () {
         engine = new GraphicalEngine({ data: data });

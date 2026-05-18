@@ -22,4 +22,10 @@ describe('graphical ui safeguards', () => {
         expect(source).not.toContain('document.getElementById("g-old-label").value = challenge.graph.series[0].label');
         expect(source).not.toContain('document.getElementById("g-new-label").value = challenge.graph.series[challenge.graph.series.length - 1].label');
     });
+
+    test('final challenge feedback renders before the summary screen', () => {
+        expect(source).toContain('if (engine.isComplete() && !lastResult)');
+        expect(source).not.toContain('if (engine.isComplete()) {');
+        expect(source).toContain("engine.index === data.challenges.length - 1 ? 'Bekijk resultaat'");
+    });
 });
