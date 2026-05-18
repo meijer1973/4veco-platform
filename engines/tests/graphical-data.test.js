@@ -46,6 +46,11 @@ function collectStudentStrings(data) {
     return strings;
 }
 
+function numericPrefix(label) {
+    const match = String(label || '').replace(',', '.').match(/-?\d+(?:\.\d+)?/);
+    return match ? Number(match[0]) : null;
+}
+
 const allData = loadAllData();
 const describeOrSkip = allData.length > 0 ? describe : describe.skip;
 
@@ -87,5 +92,19 @@ if (allData.length > 0) describe.each(allData)('$parNr ($file)', ({ parNr, data 
         const blocked = /\b(?:PV|A\d{2}|B\d{2}|adaptief|diagnostisch|diagnose|mastery|sequencing|summatief|AI)\b/i;
         const offender = collectStudentStrings(data).find(text => blocked.test(text));
         expect(offender || null).toBeNull();
+    });
+
+    test('quantity line charts increase left-to-right', () => {
+        for (const challenge of data.challenges) {
+            const graph = challenge.graph || {};
+            if (graph.type !== 'line') continue;
+            if (!/\bhoeveelheid\b|\bquantity\b/i.test(String(graph.x_label || ''))) continue;
+
+            const xValues = graph.series.map(point => numericPrefix(point.label));
+            expect(xValues.every(value => Number.isFinite(value))).toBe(true);
+            for (let i = 1; i < xValues.length; i += 1) {
+                expect(xValues[i]).toBeGreaterThanOrEqual(xValues[i - 1]);
+            }
+        }
     });
 });

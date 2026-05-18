@@ -729,7 +729,7 @@ companion:
   review_verdict: "PASS WITH FLAGS"
   last_reviewed: "2026-05-18"
   hard_fails_open: 0
-  human_review_status: "technical_qa_pass_pending_human_review"
+  human_review_status: "revise_addressed_pending_focused_recheck"
   default_office_exports: false
   student_facing_internal_codes: false
   procedures:
@@ -739,21 +739,21 @@ companion:
     active_skills: ["A61", "A62", "A63", "A38", "A39"]
     coverage_note: "A61/A62/A63 cover table and graph reading; A38/A39 support percentage and index use with graph/table values."
   surfaces:
-    voorkennis_html: technical_qa_pass_pending_human_review
-    vaardigheden_html: technical_qa_pass_pending_human_review
-    presentatie_pptx: technical_qa_pass_pending_human_review
-    presentatie_html: technical_qa_pass_pending_human_review
-    nieuws_html: technical_qa_pass_pending_human_review
-    samenvatting_html: technical_qa_pass_pending_human_review
-    begeleide_inoefening_html: technical_qa_pass_pending_human_review
-    youtube_videos_html: technical_qa_pass_pending_human_review
+    voorkennis_html: revise_addressed_pending_focused_recheck
+    vaardigheden_html: revise_addressed_pending_focused_recheck
+    presentatie_pptx: revise_addressed_pending_focused_recheck
+    presentatie_html: revise_addressed_pending_focused_recheck
+    nieuws_html: revise_addressed_pending_focused_recheck
+    samenvatting_html: revise_addressed_pending_focused_recheck
+    begeleide_inoefening_html: revise_addressed_pending_focused_recheck
+    youtube_videos_html: revise_addressed_pending_focused_recheck
     games:
-      instapquiz: technical_qa_pass_pending_human_review
-      nieuws_detective: technical_qa_pass_pending_human_review
-      stappenplan: technical_qa_pass_pending_human_review
-      redeneer_spel: technical_qa_pass_pending_human_review
-      wiskundevaardigheden: technical_qa_pass_pending_human_review
-      grafiekenspel: technical_qa_pass_pending_human_review
+      instapquiz: revise_addressed_pending_focused_recheck
+      nieuws_detective: revise_addressed_pending_focused_recheck
+      stappenplan: revise_addressed_pending_focused_recheck
+      redeneer_spel: revise_addressed_pending_focused_recheck
+      wiskundevaardigheden: revise_addressed_pending_focused_recheck
+      grafiekenspel: revise_addressed_pending_focused_recheck
 `);
 }
 
@@ -862,7 +862,7 @@ function presentationV2Deck() {
         ["02", "Controleer labels", "Tabelkop, rijlabel, kolomlabel en eenheid."],
         ["03", "Selecteer waarden", "Kies oud, nieuw of de gevraagde waarde."],
         ["04", "Label je waarden", "Schrijf bijvoorbeeld oud = 500 ijsjes."]
-      ], "Gebruik deze route voordat je gaat rekenen met procenten of indexcijfers.", notes("Dit is de belangrijkste broncontrole. Leerlingen moeten leren dat het getal pas betekenis heeft met label en eenheid.", "Noem geen interne codes; dit is gewoon de vaardigheid tabelwaarden selecteren."))
+      ], "Gebruik deze route voordat je gaat rekenen met procenten of indexcijfers.", notes("Dit is de belangrijkste broncontrole. Leerlingen moeten leren dat het getal pas betekenis heeft met label en eenheid.", "Gebruik de gewone leerlingnaam: tabelwaarden selecteren voor een berekening."))
       ,
       procedureSlide("assen", "Assen", "Grafiek tekenen van tabeldata", [
         ["01", "Bepaal variabelen", "Prijs en hoeveelheid."],

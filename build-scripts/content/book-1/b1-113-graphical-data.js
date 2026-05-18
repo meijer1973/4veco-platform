@@ -89,11 +89,11 @@ const data = {
         y_label: 'prijs',
         unit: 'euro',
         series: [
-          { label: '300 broodjes', value: 2.00 },
-          { label: '250 broodjes', value: 2.50 },
-          { label: '200 broodjes', value: 3.00 },
+          { label: '100 broodjes', value: 4.00 },
           { label: '150 broodjes', value: 3.50 },
-          { label: '100 broodjes', value: 4.00 }
+          { label: '200 broodjes', value: 3.00 },
+          { label: '250 broodjes', value: 2.50 },
+          { label: '300 broodjes', value: 2.00 }
         ]
       },
       expected_answer: { kind: 'number', value: 3.5, unit: 'euro', tolerance: 0.05 },
