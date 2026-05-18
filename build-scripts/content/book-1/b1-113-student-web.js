@@ -729,7 +729,7 @@ companion:
   review_verdict: "PASS WITH FLAGS"
   last_reviewed: "2026-05-18"
   hard_fails_open: 0
-  human_review_status: "revise_addressed_pending_focused_recheck"
+  human_review_status: "pass_with_flags"
   default_office_exports: false
   student_facing_internal_codes: false
   procedures:
@@ -739,21 +739,21 @@ companion:
     active_skills: ["A61", "A62", "A63", "A38", "A39"]
     coverage_note: "A61/A62/A63 cover table and graph reading; A38/A39 support percentage and index use with graph/table values."
   surfaces:
-    voorkennis_html: revise_addressed_pending_focused_recheck
-    vaardigheden_html: revise_addressed_pending_focused_recheck
-    presentatie_pptx: revise_addressed_pending_focused_recheck
-    presentatie_html: revise_addressed_pending_focused_recheck
-    nieuws_html: revise_addressed_pending_focused_recheck
-    samenvatting_html: revise_addressed_pending_focused_recheck
-    begeleide_inoefening_html: revise_addressed_pending_focused_recheck
-    youtube_videos_html: revise_addressed_pending_focused_recheck
+    voorkennis_html: pass_with_flags
+    vaardigheden_html: pass_with_flags
+    presentatie_pptx: pass_with_flags
+    presentatie_html: pass_with_flags
+    nieuws_html: pass_with_flags
+    samenvatting_html: pass_with_flags
+    begeleide_inoefening_html: pass_with_flags
+    youtube_videos_html: pass_with_flags
     games:
-      instapquiz: revise_addressed_pending_focused_recheck
-      nieuws_detective: revise_addressed_pending_focused_recheck
-      stappenplan: revise_addressed_pending_focused_recheck
-      redeneer_spel: revise_addressed_pending_focused_recheck
-      wiskundevaardigheden: revise_addressed_pending_focused_recheck
-      grafiekenspel: revise_addressed_pending_focused_recheck
+      instapquiz: pass_with_flags
+      nieuws_detective: pass_with_flags
+      stappenplan: pass_with_flags
+      redeneer_spel: pass_with_flags
+      wiskundevaardigheden: pass_with_flags
+      grafiekenspel: pass_with_flags
 `);
 }
 
