@@ -15,13 +15,14 @@
   "roadmaps": [
     {
       "roadmap_id": "references-team-roadmap",
-      "version": "v2.50-ref-ct2-precision-dual-coding-audit",
+      "version": "v2.51-ref-cp6-remediation-readiness",
       "title": "References Team Roadmap",
       "status": "active",
       "path": "references/reference-team-roadmap.md",
       "owner": "references_team",
       "updated_on": "2026-05-19",
       "supersedes": [
+        "docs/roadmaps/outdated/reference-team-roadmap-v2.50-ref-ct2-precision-dual-coding-audit.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.49-ref-ct1-year1-coverage-baseline.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.48-l16r-dual-coding-incident.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.47-sprint-log-and-lead-review-procedure.md",
@@ -71,7 +72,18 @@
         "knowledge/Exercise schema and quality/reference-team-roadmap Live version 28 April.md",
         "knowledge/Exercise schema and quality/roadmap-updated-repository-checked.md"
       ],
-      "notes": "Current operating roadmap after REF-CT2 completed the non-mutating Year-1 precision and dual-coding audit, left CP-6 and Year 1 blocked, and inserted REF-CP6 remediation/readiness before Year-2 skeleton work."
+      "notes": "Current operating roadmap after REF-CP6 completed the non-mutating Year-1 CP-6 remediation/readiness packet and moved the formal CP-6 human-review gate to the active row."
+    },
+    {
+      "roadmap_id": "references-team-roadmap-v2.50",
+      "version": "v2.50-ref-ct2-precision-dual-coding-audit",
+      "title": "References Team Roadmap before REF-CP6 remediation/readiness completion",
+      "status": "outdated",
+      "path": "docs/roadmaps/outdated/reference-team-roadmap-v2.50-ref-ct2-precision-dual-coding-audit.md",
+      "owner": "references_team",
+      "updated_on": "2026-05-19",
+      "superseded_by": "references/reference-team-roadmap.md",
+      "notes": "Snapshot archived before REF-CP6 completed the non-mutating CP-6 remediation/readiness packet and moved the formal CP-6 human-review gate to the active roadmap row."
     },
     {
       "roadmap_id": "references-team-roadmap-v2.49",

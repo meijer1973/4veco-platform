@@ -1,14 +1,14 @@
 {
   "schema_version": "0.1",
-  "generated_at": "2026-05-19T11:49:36.862Z",
+  "generated_at": "2026-05-19T12:27:34.104Z",
   "sprint_id": "R0.2",
   "scope": "references/",
   "note": "Self-generated inventory files intentionally omit size and sha256 to avoid unstable self-checksums.",
   "summary": {
-    "file_count": 245,
+    "file_count": 248,
     "by_layer": {
       "authored_judgement": 8,
-      "governance_data": 165,
+      "governance_data": 168,
       "external_authority": 32,
       "machine_registry": 5,
       "owned_curriculum_design": 5,
@@ -20,7 +20,7 @@
     "by_edit_policy": {
       "human_reviewed_edit": 16,
       "generated_by_inventory_script": 28,
-      "sprint_process": 136,
+      "sprint_process": 139,
       "external_refresh_only": 32,
       "cli_only": 5,
       "versioned_human_reviewed_edit": 5,
@@ -2509,6 +2509,66 @@
       "self_generated_inventory_file": false
     },
     {
+      "path": "references/data/sprints/REF-CP6-remediation-readiness.json",
+      "file_name": "REF-CP6-remediation-readiness.json",
+      "extension": "json",
+      "size_bytes": 47390,
+      "sha256": "3bc1e83042ec94c0d85f479784258bf7fe9ffffe92271a789ae57c072c621acb",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/data/sprints/REF-CP6.plan.json",
+      "file_name": "REF-CP6.plan.json",
+      "extension": "json",
+      "size_bytes": 3479,
+      "sha256": "abe1b0c86fcfecc2c1e3f1f08ed4d71e1f8c2a054b65b57aa94ca2b657de6e3b",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/data/sprints/REF-CP6.result.json",
+      "file_name": "REF-CP6.result.json",
+      "extension": "json",
+      "size_bytes": 4648,
+      "sha256": "2c04659aeb97ff05f2b9075b69452ef7b46bd3fd3e05c5cbe8c77ef3b53345f0",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
       "path": "references/data/sprints/REF-CT0-mtu-classification.json",
       "file_name": "REF-CT0-mtu-classification.json",
       "extension": "json",
@@ -4437,8 +4497,8 @@
       "path": "references/reference-team-roadmap.md",
       "file_name": "reference-team-roadmap.md",
       "extension": "md",
-      "size_bytes": 146860,
-      "sha256": "adba9bab4e6482b42e58e612b04c4ee4fcbde056c9290fa0a750b548feb80ef1",
+      "size_bytes": 148283,
+      "sha256": "f0e08475c50903e3c009850cf5ae860ccf44f26d6a976af5efecfa65b5017771",
       "layer": "planning",
       "authority_level": "authored_judgement",
       "source_type": "roadmap",

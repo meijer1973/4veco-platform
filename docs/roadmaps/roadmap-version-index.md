@@ -12,12 +12,13 @@ docs/roadmaps/roadmap-version-index.json
 
 | Roadmap | Version | Path | Notes |
 |---|---|---|---|
-| References Team Roadmap | `v2.50-ref-ct2-precision-dual-coding-audit` | `references/reference-team-roadmap.md` | Current operating roadmap after REF-CT2 completed the non-mutating Year-1 precision and dual-coding audit, left CP-6 and Year 1 blocked, and inserted REF-CP6 remediation/readiness before Year-2 skeleton work. |
+| References Team Roadmap | `v2.51-ref-cp6-remediation-readiness` | `references/reference-team-roadmap.md` | Current operating roadmap after REF-CP6 completed the non-mutating Year-1 CP-6 remediation/readiness packet and moved the formal CP-6 human-review gate to the active row. |
 
 ## Outdated Archive
 
 | Roadmap | Version | Path | Superseded By |
 |---|---|---|---|
+| References Team Roadmap before REF-CP6 remediation/readiness completion | `v2.50-ref-ct2-precision-dual-coding-audit` | `docs/roadmaps/outdated/reference-team-roadmap-v2.50-ref-ct2-precision-dual-coding-audit.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before REF-CT2 precision and dual-coding audit completion | `v2.49-ref-ct1-year1-coverage-baseline` | `docs/roadmaps/outdated/reference-team-roadmap-v2.49-ref-ct1-year1-coverage-baseline.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before REF-CT1 Year-1 coverage baseline completion | `v2.48-l16r-dual-coding-incident` | `docs/roadmaps/outdated/reference-team-roadmap-v2.48-l16r-dual-coding-incident.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before L1.6R dual-coding incident update | `v2.47-sprint-log-and-lead-review-procedure` | `docs/roadmaps/outdated/reference-team-roadmap-v2.47-sprint-log-and-lead-review-procedure.md` | `references/reference-team-roadmap.md` |

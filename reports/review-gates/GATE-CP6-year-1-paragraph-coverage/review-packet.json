@@ -1,0 +1,148 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-CP6-year-1-paragraph-coverage",
+  "sprint_id": "REF-CP6",
+  "status": "review_packet_ready_not_closed",
+  "generated_on": "2026-05-19",
+  "protected_reference_data_changed": false,
+  "lesson_output_changed": false,
+  "human_interview_completed": false,
+  "gate_closure_completed": false,
+  "source_readiness_json": "references/data/sprints/REF-CP6-remediation-readiness.json",
+  "evidence_inputs": [
+    "references/data/sprints/REF-CT1-year1-coverage.json",
+    "references/data/sprints/REF-CT2-precision-dual-coding-audit.json",
+    "references/authored/course-target-exercises.json",
+    "references/owned/course-blueprint-v5.md",
+    "references/reference-team-roadmap.md",
+    "reports/reference-planning/REF-CT1-cp6-review-packet.md",
+    "reports/reference-planning/REF-CT2-cp6-status-update.md"
+  ],
+  "review_questions": [
+    {
+      "id": "CP6-Q1",
+      "topic": "Source/lesson alignment",
+      "question": "For 1.3.2 and 1.3.3, active v5 names market-equilibrium topics while the built lesson-side directories currently show Kostenstructuren and Opbrengsten. Which authority should drive remediation?",
+      "options": [
+        "Treat active v5 as the intended source and require lesson-side remediation before CP-6 can close.",
+        "Treat the built lesson-side sequence as evidence of a needed v5 source correction, requiring a later protected source-update path.",
+        "Hold both records until a curriculum-owner decision resolves the sequencing."
+      ],
+      "open_answer_allowed": true
+    },
+    {
+      "id": "CP6-Q2",
+      "topic": "Placeholder target exercises",
+      "question": "For 1.1.4, 1.2.4, and 1.3.4, should each placeholder be replaced by a reviewed integration/transfer target exercise before any Year-1 final coverage claim?",
+      "options": [
+        "Yes, all three need reviewed integration target exercises before final coverage.",
+        "Only some need replacement; name which ones and why.",
+        "No, placeholders may remain if they are explicitly excluded from final coverage."
+      ],
+      "open_answer_allowed": true
+    },
+    {
+      "id": "CP6-Q3",
+      "topic": "Backfill candidates",
+      "question": "The nine Year-1 backfill candidates include graph drawing, interpolation, demand aggregation, surplus/shortage, and simultaneous-shift reasoning. How should they be classified before any CLI-backed mutation lane?",
+      "options": [
+        "Review each as true missing unit, existing-unit mapping, merge candidate, or defer candidate.",
+        "Hold all nine until target exercises are reviewed-final.",
+        "Authorize a later bounded review/mutation sprint for only the high-confidence candidates."
+      ],
+      "open_answer_allowed": true
+    },
+    {
+      "id": "CP6-Q4",
+      "topic": "1.1.3 remaining Part A FLAG",
+      "question": "Does the remaining 1.1.3 Part A FLAG block CP-6 closure even though L1.6R dual-coding remediation is currently pass_with_flags?",
+      "options": [
+        "Yes, CP-6 cannot close while Part A remains FLAG.",
+        "No, L1.6R pass_with_flags is sufficient if the flag is explicitly carried forward.",
+        "Hold until a focused Part A re-review is recorded."
+      ],
+      "open_answer_allowed": true
+    },
+    {
+      "id": "CP6-Q5",
+      "topic": "Legacy quality-ref evidence",
+      "question": "For graph-heavy 1.2 and 1.3 records that still rely on legacy quality-ref evidence, what review evidence is required before CP-6 closure?",
+      "options": [
+        "Require upgraded Part A/Part B review records for each graph-heavy record.",
+        "Allow legacy evidence only for non-mismatched paragraphs, with explicit flags.",
+        "Hold all legacy-evidence records until companion visual review is complete."
+      ],
+      "open_answer_allowed": true
+    },
+    {
+      "id": "CP6-Q6",
+      "topic": "Migrated target-exercise final review",
+      "question": "Can any of the nine migrated Book 1 target-exercise records be promoted to reviewed_final from current evidence, or do they all require a later target-exercise review artifact?",
+      "options": [
+        "None may be promoted from current evidence; all need later review artifacts.",
+        "Only 1.1.1 and 1.1.2 are candidates for final review now.",
+        "A subset may proceed; name the records and required proof."
+      ],
+      "open_answer_allowed": true
+    },
+    {
+      "id": "CP6-Q7",
+      "topic": "Minimum CP-6 closure package",
+      "question": "What is the minimum remediation package required before a later CP-6 closure proposal can be responsibly drafted?",
+      "options": [
+        "Resolve source/lesson mismatch, replace placeholders, classify backfills, upgrade graph-heavy review evidence, and clear 1.1.3 Part A.",
+        "Allow CP-6 to close with explicit conditions and route the remaining items to post-closure sprints.",
+        "Hold CP-6 until all Year-1 Book 1 records are reviewed_final."
+      ],
+      "open_answer_allowed": true
+    },
+    {
+      "id": "CP6-Q8",
+      "topic": "Protected mutation authority",
+      "question": "Does this review authorize protected reference mutation, lesson-output mutation, target-exercise promotion, placeholder replacement, unit minting, or CP-6/Year-1 closure now?",
+      "options": [
+        "No, this gate may only authorize later bounded sprints.",
+        "Yes, but only for explicitly named low-risk items.",
+        "Hold; authority cannot be decided until more evidence is gathered."
+      ],
+      "open_answer_allowed": true
+    },
+    {
+      "id": "CP6-Q9",
+      "topic": "Next sprint routing",
+      "question": "What should be the next operational step after the CP-6 review packet: a human gate, a lesson-side remediation sprint, a target-exercise design sprint, an MTU backfill review sprint, or a strategic pause?",
+      "options": [
+        "Run the formal CP-6 human gate first.",
+        "Resolve source/lesson alignment before the human gate.",
+        "Split into separate remediation lanes before any gate."
+      ],
+      "open_answer_allowed": true
+    }
+  ],
+  "future_interview_protocol": [
+    "Show the full question list before starting.",
+    "Ask one question at a time.",
+    "Record each answer before asking the next question.",
+    "Run pattern analysis after initial answers.",
+    "Ask targeted follow-ups for ambiguity or conflicting authority.",
+    "Draft a closure proposal only after evidence is complete.",
+    "Require explicit human confirmation before writing a closure record."
+  ],
+  "recommended_gate_status_before_interview": "hold_until_reviewed",
+  "blocked_outcomes": [
+    "CP-6 closure",
+    "Year-1 closure",
+    "target-exercise promotion",
+    "placeholder finalization",
+    "unit minting",
+    "lesson output mutation",
+    "student diagnostics",
+    "adaptive routing",
+    "mastery decisions",
+    "automatic sequencing",
+    "student-facing AI",
+    "summative use",
+    "PV projection",
+    "PV machine promotion"
+  ]
+}

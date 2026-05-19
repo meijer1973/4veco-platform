@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-05-19T11:49:30.730Z
+Generated: 2026-05-19T12:27:30.731Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 1397
+Files indexed: 1432
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -105,7 +105,7 @@ Count: 59
 
 ## build scripts
 
-Count: 264
+Count: 268
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -226,8 +226,10 @@ Count: 264
 - build-scripts/references/build-procedure-visual-promotion-pipeline-design.js
 - build-scripts/references/build-procedure-visual-schema-status.js
 - build-scripts/references/build-pv-g4-lesson-proof-records.js
+- build-scripts/references/build-ref-cp6-remediation-readiness.js
 - build-scripts/references/build-ref-ct0-planning-artifacts.js
 - build-scripts/references/build-ref-ct1-coverage-artifacts.js
+- build-scripts/references/build-ref-ct2-precision-dual-coding-audit.js
 - build-scripts/references/build-reference-inventory.js
 - build-scripts/references/build-representation-operation-coverage.js
 - build-scripts/references/build-representation-operation-inventory.js
@@ -255,8 +257,10 @@ Count: 264
 - build-scripts/references/check-procedure-visual-projection-mvp.js
 - build-scripts/references/check-procedure-visual-promotion-pipeline-design.js
 - build-scripts/references/check-quality-issues.js
+- build-scripts/references/check-ref-cp6-remediation-readiness.js
 - build-scripts/references/check-ref-ct0-planning-artifacts.js
 - build-scripts/references/check-ref-ct1-coverage-artifacts.js
+- build-scripts/references/check-ref-ct2-precision-dual-coding-audit.js
 - build-scripts/references/check-reference-cli-coverage.js
 - build-scripts/references/check-representation-operation-coverage.js
 - build-scripts/references/check-representation-operation-inventory.js
@@ -421,7 +425,7 @@ Count: 42
 
 ## validators
 
-Count: 72
+Count: 74
 
 - build-scripts/rag/validate-chunks.js
 - build-scripts/rag/validate-query-output.js
@@ -443,8 +447,10 @@ Count: 72
 - build-scripts/references/check-procedure-visual-projection-mvp.js
 - build-scripts/references/check-procedure-visual-promotion-pipeline-design.js
 - build-scripts/references/check-quality-issues.js
+- build-scripts/references/check-ref-cp6-remediation-readiness.js
 - build-scripts/references/check-ref-ct0-planning-artifacts.js
 - build-scripts/references/check-ref-ct1-coverage-artifacts.js
+- build-scripts/references/check-ref-ct2-precision-dual-coding-audit.js
 - build-scripts/references/check-reference-cli-coverage.js
 - build-scripts/references/check-representation-operation-coverage.js
 - build-scripts/references/check-representation-operation-inventory.js
@@ -498,7 +504,7 @@ Count: 72
 
 ## references
 
-Count: 242
+Count: 248
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -624,12 +630,18 @@ Count: 242
 - references/data/sprints/R9.1.result.json
 - references/data/sprints/R9.2.plan.json
 - references/data/sprints/R9.2.result.json
+- references/data/sprints/REF-CP6-remediation-readiness.json
+- references/data/sprints/REF-CP6.plan.json
+- references/data/sprints/REF-CP6.result.json
 - references/data/sprints/REF-CT0-mtu-classification.json
 - references/data/sprints/REF-CT0.plan.json
 - references/data/sprints/REF-CT0.result.json
 - references/data/sprints/REF-CT1-year1-coverage.json
 - references/data/sprints/REF-CT1.plan.json
 - references/data/sprints/REF-CT1.result.json
+- references/data/sprints/REF-CT2-precision-dual-coding-audit.json
+- references/data/sprints/REF-CT2.plan.json
+- references/data/sprints/REF-CT2.result.json
 - references/data/sprints/RX.1-representation-operation-inventory.json
 - references/data/sprints/RX.1.plan.json
 - references/data/sprints/RX.1.result.json
@@ -745,7 +757,7 @@ Count: 242
 
 ## reports
 
-Count: 581
+Count: 604
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -880,6 +892,8 @@ Count: 581
 - reports/README.md
 - reports/reference-audits/empty-needs-audit.md
 - reports/reference-cli-coverage.md
+- reports/reference-planning/REF-CP6-blocker-routing.md
+- reports/reference-planning/REF-CP6-remediation-readiness.md
 - reports/reference-planning/REF-CT0-candidate-review-packet.md
 - reports/reference-planning/REF-CT0-mtu-classification.md
 - reports/reference-planning/REF-CT0-source-authority-boundary.md
@@ -887,6 +901,9 @@ Count: 581
 - reports/reference-planning/REF-CT1-cp6-review-packet.md
 - reports/reference-planning/REF-CT1-mtu-gap-classification.md
 - reports/reference-planning/REF-CT1-year1-coverage.md
+- reports/reference-planning/REF-CT2-cp6-status-update.md
+- reports/reference-planning/REF-CT2-graph-visual-surface-evidence.md
+- reports/reference-planning/REF-CT2-precision-dual-coding-audit.md
 - reports/representation-operation-coverage.md
 - reports/representation-transfer-gaps.md
 - reports/review-gates/GATE-CP1-schema-audit/bundle-urls.md
@@ -948,6 +965,8 @@ Count: 581
 - reports/review-gates/GATE-CP5-D04-resolution/S9a-stale-reference-audit.md
 - reports/review-gates/GATE-CP5-D04-resolution/unit-design-status-strategy.json
 - reports/review-gates/GATE-CP5-D04-resolution/unit-design-status-strategy.md
+- reports/review-gates/GATE-CP6-year-1-paragraph-coverage/review-packet.json
+- reports/review-gates/GATE-CP6-year-1-paragraph-coverage/review-packet.md
 - reports/review-gates/GATE-PV-G1-schema/bundle-urls.md
 - reports/review-gates/GATE-PV-G1-schema/review-packet.json
 - reports/review-gates/GATE-PV-G1-schema/review-packet.md
@@ -1258,6 +1277,14 @@ Count: 581
 - reports/sprints/R9.2-diff-summary.md
 - reports/sprints/R9.2-result.md
 - reports/sprints/README.md
+- reports/sprints/REF-CP6-baseline.md
+- reports/sprints/REF-CP6-diff-summary.md
+- reports/sprints/REF-CP6-lead-review-assignment.md
+- reports/sprints/REF-CP6-lead-review-corrections.md
+- reports/sprints/REF-CP6-lead-review-round1.md
+- reports/sprints/REF-CP6-lead-review-round2.md
+- reports/sprints/REF-CP6-plan.md
+- reports/sprints/REF-CP6-result.md
 - reports/sprints/REF-CT0-baseline.md
 - reports/sprints/REF-CT0-diff-summary.md
 - reports/sprints/REF-CT0-lead-review-assignment.md
@@ -1274,6 +1301,14 @@ Count: 581
 - reports/sprints/REF-CT1-lead-review-round2.md
 - reports/sprints/REF-CT1-plan.md
 - reports/sprints/REF-CT1-result.md
+- reports/sprints/REF-CT2-baseline.md
+- reports/sprints/REF-CT2-diff-summary.md
+- reports/sprints/REF-CT2-lead-review-assignment.md
+- reports/sprints/REF-CT2-lead-review-corrections.md
+- reports/sprints/REF-CT2-lead-review-round1.md
+- reports/sprints/REF-CT2-lead-review-round2.md
+- reports/sprints/REF-CT2-plan.md
+- reports/sprints/REF-CT2-result.md
 - reports/sprints/RX.1-baseline.md
 - reports/sprints/RX.1-diff-summary.md
 - reports/sprints/RX.1-result.md
@@ -1349,7 +1384,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 194
+Count: 196
 
 - .gitignore
 - BUILD-CHAPTER.md
@@ -1398,7 +1433,9 @@ Count: 194
 - docs/roadmaps/outdated/reference-team-roadmap-v2.46-ref-ct0-prototype-classification.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.47-sprint-log-and-lead-review-procedure.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.48-l16r-dual-coding-incident.md
+- docs/roadmaps/outdated/reference-team-roadmap-v2.49-ref-ct1-year1-coverage-baseline.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.5-representation-sensitive-phase.md
+- docs/roadmaps/outdated/reference-team-roadmap-v2.50-ref-ct2-precision-dual-coding-audit.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.6-s4-cp3-dry-run.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.7-cp3-closed.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.8-s4.1-conditions-calibrated.md

@@ -1,0 +1,987 @@
+{
+  "schema_version": 1,
+  "sprint_id": "REF-CP6",
+  "generated_on": "2026-05-19",
+  "generated_by": "build-scripts/references/build-ref-cp6-remediation-readiness.js",
+  "authority_level": "non_mutating_cp6_review_readiness",
+  "gate_id": "GATE-CP6-year-1-paragraph-coverage",
+  "protected_reference_data_changed": false,
+  "lesson_output_changed": false,
+  "no_cli_mutation_authorized": true,
+  "no_cp6_closure_authorized": true,
+  "human_gate_completed": false,
+  "source_paths": {
+    "refCt1Coverage": "references/data/sprints/REF-CT1-year1-coverage.json",
+    "refCt2Audit": "references/data/sprints/REF-CT2-precision-dual-coding-audit.json",
+    "targetExercises": "references/authored/course-target-exercises.json",
+    "blueprint": "references/owned/course-blueprint-v5.md",
+    "roadmap": "references/reference-team-roadmap.md",
+    "refCt1ReviewPacket": "reports/reference-planning/REF-CT1-cp6-review-packet.md",
+    "refCt2Cp6Status": "reports/reference-planning/REF-CT2-cp6-status-update.md",
+    "lessonRoot": "../4veco-lessen"
+  },
+  "repository_state": {
+    "platform_commit": "3d0698105ad6c82cd273d7b00afed5a3b944124a",
+    "lesson_commit": "8ea857ac7aec04ad7da6c6830e1d951b046f037d",
+    "lesson_status": "## main...origin/main",
+    "active_roadmap_version_at_plan": "v2.51-ref-cp6-remediation-readiness"
+  },
+  "summary": {
+    "active_v5_paragraph_count": 12,
+    "cp6_quality_ready_count": 0,
+    "records_with_blockers_count": 12,
+    "placeholder_count": 3,
+    "source_lesson_mismatch_count": 2,
+    "backfill_candidate_count": 9,
+    "legacy_quality_ref_count": 9,
+    "part_a_flag_count": 1,
+    "migrated_needs_final_review_count": 9,
+    "decision_lane_count": 7,
+    "planned_review_question_count": 9,
+    "cp6_closure_status": "blocked_not_ready_for_closure",
+    "cp6_human_review_status": "packet_ready_not_closed",
+    "final_year1_closure_status": "blocked_pending_cp6_human_review_and_remediation"
+  },
+  "cp6_decision": {
+    "status": "packet_ready_not_closed",
+    "recommendation": "Run the formal CP-6 human gate next. Do not close CP-6 or Year 1 from REF-CP6 alone.",
+    "allowed_next_sprint": "GATE-CP6",
+    "blocked_closure_reasons": [
+      "Resolve or formally accept the 1.3.2 and 1.3.3 source/lesson topic mismatch through an authorized roadmap path.",
+      "Keep the L1.6R pass-with-flags evidence visible and resolve the remaining 1.1.3 Part A FLAG status before final closure.",
+      "Replace or review the three placeholder target-exercise records.",
+      "Review the nine Year-1 backfill candidates before CLI mutation.",
+      "Upgrade graph-heavy legacy quality refs to current Part A/Part B review evidence where needed.",
+      "Run a formal CP-6 human-review gate before any Year-1 closure claim."
+    ]
+  },
+  "decision_lanes": [
+    {
+      "lane_id": "source_lesson_alignment",
+      "title": "Resolve or formally route active-v5 versus lesson-side topic mismatch",
+      "status": "human_decision_required",
+      "item_count": 2,
+      "items": [
+        {
+          "paragraph_id": "1.3.2",
+          "target_title": "Marktevenwicht",
+          "lesson_title": "Kostenstructuren",
+          "target_record_status": "migrated_from_v4_needs_v5_review",
+          "source_lesson_alignment": "topic_mismatch",
+          "dual_coding_status": "blocked_source_lesson_mismatch",
+          "precision_lint_status": "blocked_source_lesson_mismatch",
+          "blockers": [
+            "Active-v5 target title and built lesson-side title do not describe the same topic.",
+            "1 REF-CT1 missing-flag/backfill candidate(s) still need review.",
+            "Graph/visual evidence is from legacy quality-ref shape without companion visual-review closure.",
+            "Target-exercise record status is migrated_from_v4_needs_v5_review, not reviewed_final."
+          ]
+        },
+        {
+          "paragraph_id": "1.3.3",
+          "target_title": "Verschuivingen en nieuw evenwicht",
+          "lesson_title": "Opbrengsten",
+          "target_record_status": "migrated_from_v4_needs_v5_review",
+          "source_lesson_alignment": "topic_mismatch",
+          "dual_coding_status": "blocked_source_lesson_mismatch",
+          "precision_lint_status": "blocked_source_lesson_mismatch",
+          "blockers": [
+            "Active-v5 target title and built lesson-side title do not describe the same topic.",
+            "1 REF-CT1 missing-flag/backfill candidate(s) still need review.",
+            "Graph/visual evidence is from legacy quality-ref shape without companion visual-review closure.",
+            "Target-exercise record status is migrated_from_v4_needs_v5_review, not reviewed_final."
+          ]
+        }
+      ],
+      "required_evidence": [
+        "Active v5 target titles",
+        "Lesson-side paragraph titles",
+        "Curriculum-owner decision on source versus lesson remediation"
+      ],
+      "authority_required": "Formal CP-6 human review, then a later bounded source/lesson remediation sprint if authorized",
+      "allowed_next_action": "Prepare the mismatch decision for the CP-6 human gate.",
+      "blocked_action": "Silent source edit, silent lesson edit, or final coverage claim for mismatched records.",
+      "stop_condition": "Stop CP-6 closure while any source/lesson topic mismatch remains unresolved or unaccepted."
+    },
+    {
+      "lane_id": "placeholder_target_exercises",
+      "title": "Replace or explicitly hold placeholder target exercises",
+      "status": "target_exercise_design_review_required",
+      "item_count": 3,
+      "items": [
+        {
+          "paragraph_id": "1.1.4",
+          "target_title": "Gemengde opgaven: economisch denken en rekenen",
+          "lesson_title": "Gemengde opgaven",
+          "target_record_status": "placeholder_needs_review",
+          "source_lesson_alignment": "placeholder_title_aligned",
+          "dual_coding_status": "not_auditable_placeholder",
+          "precision_lint_status": "not_auditable_placeholder",
+          "blockers": [
+            "Placeholder target-exercise record: no reviewed integration target exercise.",
+            "Existing quality reference contains FLAG/blocker language.",
+            "Target-exercise record status is placeholder_needs_review, not reviewed_final."
+          ]
+        },
+        {
+          "paragraph_id": "1.2.4",
+          "target_title": "Gemengde opgaven: vraag",
+          "lesson_title": "Gemengde opgaven",
+          "target_record_status": "placeholder_needs_review",
+          "source_lesson_alignment": "placeholder_title_aligned",
+          "dual_coding_status": "not_auditable_placeholder",
+          "precision_lint_status": "not_auditable_placeholder",
+          "blockers": [
+            "Placeholder target-exercise record: no reviewed integration target exercise.",
+            "Target-exercise record status is placeholder_needs_review, not reviewed_final."
+          ]
+        },
+        {
+          "paragraph_id": "1.3.4",
+          "target_title": "Gemengde opgaven: aanbod en marktevenwicht",
+          "lesson_title": "Gemengde opgaven",
+          "target_record_status": "placeholder_needs_review",
+          "source_lesson_alignment": "placeholder_title_aligned",
+          "dual_coding_status": "not_auditable_placeholder",
+          "precision_lint_status": "not_auditable_placeholder",
+          "blockers": [
+            "Placeholder target-exercise record: no reviewed integration target exercise.",
+            "Target-exercise record status is placeholder_needs_review, not reviewed_final."
+          ]
+        }
+      ],
+      "required_evidence": [
+        "Reviewed integration/transfer target exercise design for each placeholder paragraph",
+        "Teacher-learning-quality review before final coverage"
+      ],
+      "authority_required": "Formal CP-6 human review, then later target-exercise design review",
+      "allowed_next_action": "Use the packet to decide whether placeholders block closure or route to a design sprint.",
+      "blocked_action": "Counting placeholder target exercises as reviewed_final coverage.",
+      "stop_condition": "Stop final coverage while placeholders are unresolved or counted as final."
+    },
+    {
+      "lane_id": "backfill_candidates",
+      "title": "Classify Year-1 MTU backfill candidates before mutation",
+      "status": "mtu_backfill_review_required",
+      "item_count": 9,
+      "items": [
+        {
+          "paragraph_id": "1.1.3",
+          "label": "1.1.3 Grafieken en tabellen",
+          "flag": "Draw a (P,Q) graph from a table with the economist's axis convention (P vertical, Q horizontal) (A-domain candidate)",
+          "classification": "year_1_backfill_candidate",
+          "current_status": "migrated_from_v4_needs_v5_review",
+          "required_skills": [
+            "A38"
+          ],
+          "next_review_action": "Review against existing live units first; only later use CLI mutation if human review confirms a missing MTU."
+        },
+        {
+          "paragraph_id": "1.1.3",
+          "label": "1.1.3 Grafieken en tabellen",
+          "flag": "Read values from a (P,Q) graph; interpolate between data points (A-domain candidate)",
+          "classification": "year_1_backfill_candidate",
+          "current_status": "migrated_from_v4_needs_v5_review",
+          "required_skills": [
+            "A38"
+          ],
+          "next_review_action": "Review against existing live units first; only later use CLI mutation if human review confirms a missing MTU."
+        },
+        {
+          "paragraph_id": "1.2.2",
+          "label": "1.2.2 Vraagfactoren",
+          "flag": "Classify a normal vs inferior good response to an income change (concept-level, prerequisite for D11 inkomenselasticiteit)",
+          "classification": "year_1_backfill_candidate",
+          "current_status": "migrated_from_v4_needs_v5_review",
+          "required_skills": [
+            "A42",
+            "D27",
+            "D32",
+            "D33"
+          ],
+          "next_review_action": "Review against existing live units first; only later use CLI mutation if human review confirms a missing MTU."
+        },
+        {
+          "paragraph_id": "1.2.3",
+          "label": "1.2.3 Van individuele naar collectieve vraag",
+          "flag": "Horizontal sum: aggregate individual demand tables into collective demand (A-domain candidate, mirror of A31 for aanbod)",
+          "classification": "year_1_backfill_candidate",
+          "current_status": "migrated_from_v4_needs_v5_review",
+          "required_skills": [
+            "A01"
+          ],
+          "next_review_action": "Review against existing live units first; only later use CLI mutation if human review confirms a missing MTU."
+        },
+        {
+          "paragraph_id": "1.2.3",
+          "label": "1.2.3 Van individuele naar collectieve vraag",
+          "flag": "Algebraic horizontal sum of linear demand functions (A-domain candidate, Q-at-equal-P)",
+          "classification": "year_1_backfill_candidate",
+          "current_status": "migrated_from_v4_needs_v5_review",
+          "required_skills": [
+            "A01"
+          ],
+          "next_review_action": "Review against existing live units first; only later use CLI mutation if human review confirms a missing MTU."
+        },
+        {
+          "paragraph_id": "1.2.3",
+          "label": "1.2.3 Van individuele naar collectieve vraag",
+          "flag": "Recognise the kink in collective demand when one consumer exits (concept-level)",
+          "classification": "year_1_backfill_candidate",
+          "current_status": "migrated_from_v4_needs_v5_review",
+          "required_skills": [
+            "A01"
+          ],
+          "next_review_action": "Review against existing live units first; only later use CLI mutation if human review confirms a missing MTU."
+        },
+        {
+          "paragraph_id": "1.3.1",
+          "label": "1.3.1 Aanbod",
+          "flag": "Draw an upward-sloping supply curve with correct economist axes (A-domain candidate)",
+          "classification": "year_1_backfill_candidate",
+          "current_status": "migrated_from_v4_needs_v5_review",
+          "required_skills": [
+            "D13",
+            "D32",
+            "D33"
+          ],
+          "next_review_action": "Review against existing live units first; only later use CLI mutation if human review confirms a missing MTU."
+        },
+        {
+          "paragraph_id": "1.3.2",
+          "label": "1.3.2 Marktevenwicht",
+          "flag": "Determine surplus (aanbodoverschot) vs shortage (vraagoverschot) at a non-equilibrium price and calculate its size (A-domain candidate, prerequisite for government price interventions in §2.4)",
+          "classification": "year_1_backfill_candidate",
+          "current_status": "migrated_from_v4_needs_v5_review",
+          "required_skills": [
+            "A02",
+            "A04",
+            "A06"
+          ],
+          "next_review_action": "Review against existing live units first; only later use CLI mutation if human review confirms a missing MTU."
+        },
+        {
+          "paragraph_id": "1.3.3",
+          "label": "1.3.3 Verschuivingen en nieuw evenwicht",
+          "flag": "Reason about simultaneous supply+demand shifts: determinate Q-direction but ambiguous P-direction (concept-level, diagnostic checkpoint)",
+          "classification": "year_1_backfill_candidate",
+          "current_status": "migrated_from_v4_needs_v5_review",
+          "required_skills": [
+            "A02",
+            "A04",
+            "A06",
+            "A42",
+            "D13"
+          ],
+          "next_review_action": "Review against existing live units first; only later use CLI mutation if human review confirms a missing MTU."
+        }
+      ],
+      "required_evidence": [
+        "Candidate label",
+        "Existing unit mapping check",
+        "Merge/defer/true-missing decision",
+        "Later CLI mutation plan if approved"
+      ],
+      "authority_required": "Formal CP-6 human review, then later CLI-backed mutation sprint only if authorized",
+      "allowed_next_action": "Classify each candidate as true missing, existing-unit mapping, merge, defer, or hold.",
+      "blocked_action": "Minting units or editing machine references from REF-CP6.",
+      "stop_condition": "Stop mutation while candidates remain unreviewed."
+    },
+    {
+      "lane_id": "legacy_review_evidence",
+      "title": "Upgrade legacy graph-heavy review evidence",
+      "status": "current_review_evidence_required",
+      "item_count": 9,
+      "items": [
+        {
+          "paragraph_id": "1.1.4",
+          "target_title": "Gemengde opgaven: economisch denken en rekenen",
+          "lesson_title": "Gemengde opgaven",
+          "target_record_status": "placeholder_needs_review",
+          "source_lesson_alignment": "placeholder_title_aligned",
+          "dual_coding_status": "not_auditable_placeholder",
+          "precision_lint_status": "not_auditable_placeholder",
+          "blockers": [
+            "Placeholder target-exercise record: no reviewed integration target exercise.",
+            "Existing quality reference contains FLAG/blocker language.",
+            "Target-exercise record status is placeholder_needs_review, not reviewed_final."
+          ]
+        },
+        {
+          "paragraph_id": "1.2.1",
+          "target_title": "Individuele vraag",
+          "lesson_title": "Individuele vraag",
+          "target_record_status": "migrated_from_v4_needs_v5_review",
+          "source_lesson_alignment": "aligned",
+          "dual_coding_status": "legacy_evidence_needs_companion_review",
+          "precision_lint_status": "evidence_present_legacy_review_needed",
+          "blockers": [
+            "Graph/visual evidence is from legacy quality-ref shape without companion visual-review closure.",
+            "Target-exercise record status is migrated_from_v4_needs_v5_review, not reviewed_final."
+          ]
+        },
+        {
+          "paragraph_id": "1.2.2",
+          "target_title": "Vraagfactoren",
+          "lesson_title": "Vraagfactoren",
+          "target_record_status": "migrated_from_v4_needs_v5_review",
+          "source_lesson_alignment": "aligned",
+          "dual_coding_status": "legacy_evidence_needs_companion_review",
+          "precision_lint_status": "needs_review_missing_unit_flags",
+          "blockers": [
+            "1 REF-CT1 missing-flag/backfill candidate(s) still need review.",
+            "Graph/visual evidence is from legacy quality-ref shape without companion visual-review closure.",
+            "Target-exercise record status is migrated_from_v4_needs_v5_review, not reviewed_final."
+          ]
+        },
+        {
+          "paragraph_id": "1.2.3",
+          "target_title": "Van individuele naar collectieve vraag",
+          "lesson_title": "Van individuele naar collectieve vraag",
+          "target_record_status": "migrated_from_v4_needs_v5_review",
+          "source_lesson_alignment": "aligned",
+          "dual_coding_status": "blocked_existing_quality_flag",
+          "precision_lint_status": "blocked_existing_quality_flag",
+          "blockers": [
+            "Existing quality reference contains FLAG/blocker language.",
+            "3 REF-CT1 missing-flag/backfill candidate(s) still need review.",
+            "Graph/visual evidence is from legacy quality-ref shape without companion visual-review closure.",
+            "Target-exercise record status is migrated_from_v4_needs_v5_review, not reviewed_final."
+          ]
+        },
+        {
+          "paragraph_id": "1.2.4",
+          "target_title": "Gemengde opgaven: vraag",
+          "lesson_title": "Gemengde opgaven",
+          "target_record_status": "placeholder_needs_review",
+          "source_lesson_alignment": "placeholder_title_aligned",
+          "dual_coding_status": "not_auditable_placeholder",
+          "precision_lint_status": "not_auditable_placeholder",
+          "blockers": [
+            "Placeholder target-exercise record: no reviewed integration target exercise.",
+            "Target-exercise record status is placeholder_needs_review, not reviewed_final."
+          ]
+        },
+        {
+          "paragraph_id": "1.3.1",
+          "target_title": "Aanbod",
+          "lesson_title": "Aanbod",
+          "target_record_status": "migrated_from_v4_needs_v5_review",
+          "source_lesson_alignment": "aligned",
+          "dual_coding_status": "blocked_existing_quality_flag",
+          "precision_lint_status": "blocked_existing_quality_flag",
+          "blockers": [
+            "Existing quality reference contains FLAG/blocker language.",
+            "1 REF-CT1 missing-flag/backfill candidate(s) still need review.",
+            "Graph/visual evidence is from legacy quality-ref shape without companion visual-review closure.",
+            "Target-exercise record status is migrated_from_v4_needs_v5_review, not reviewed_final."
+          ]
+        },
+        {
+          "paragraph_id": "1.3.2",
+          "target_title": "Marktevenwicht",
+          "lesson_title": "Kostenstructuren",
+          "target_record_status": "migrated_from_v4_needs_v5_review",
+          "source_lesson_alignment": "topic_mismatch",
+          "dual_coding_status": "blocked_source_lesson_mismatch",
+          "precision_lint_status": "blocked_source_lesson_mismatch",
+          "blockers": [
+            "Active-v5 target title and built lesson-side title do not describe the same topic.",
+            "1 REF-CT1 missing-flag/backfill candidate(s) still need review.",
+            "Graph/visual evidence is from legacy quality-ref shape without companion visual-review closure.",
+            "Target-exercise record status is migrated_from_v4_needs_v5_review, not reviewed_final."
+          ]
+        },
+        {
+          "paragraph_id": "1.3.3",
+          "target_title": "Verschuivingen en nieuw evenwicht",
+          "lesson_title": "Opbrengsten",
+          "target_record_status": "migrated_from_v4_needs_v5_review",
+          "source_lesson_alignment": "topic_mismatch",
+          "dual_coding_status": "blocked_source_lesson_mismatch",
+          "precision_lint_status": "blocked_source_lesson_mismatch",
+          "blockers": [
+            "Active-v5 target title and built lesson-side title do not describe the same topic.",
+            "1 REF-CT1 missing-flag/backfill candidate(s) still need review.",
+            "Graph/visual evidence is from legacy quality-ref shape without companion visual-review closure.",
+            "Target-exercise record status is migrated_from_v4_needs_v5_review, not reviewed_final."
+          ]
+        },
+        {
+          "paragraph_id": "1.3.4",
+          "target_title": "Gemengde opgaven: aanbod en marktevenwicht",
+          "lesson_title": "Gemengde opgaven",
+          "target_record_status": "placeholder_needs_review",
+          "source_lesson_alignment": "placeholder_title_aligned",
+          "dual_coding_status": "not_auditable_placeholder",
+          "precision_lint_status": "not_auditable_placeholder",
+          "blockers": [
+            "Placeholder target-exercise record: no reviewed integration target exercise.",
+            "Target-exercise record status is placeholder_needs_review, not reviewed_final."
+          ]
+        }
+      ],
+      "required_evidence": [
+        "Current Part A review",
+        "Current Part B companion visual-review evidence where graph-heavy",
+        "Rendered/surface evidence for graph/table learning objects"
+      ],
+      "authority_required": "Formal CP-6 human review, then lesson-side review/remediation sprint if authorized",
+      "allowed_next_action": "Name which legacy-evidence paragraphs need upgraded review before closure.",
+      "blocked_action": "Treating legacy quality-ref shape or asset counts as closure-ready.",
+      "stop_condition": "Stop CP-6 closure while graph-heavy records lack current review evidence."
+    },
+    {
+      "lane_id": "part_a_l16r_flag",
+      "title": "Resolve remaining 1.1.3 Part A FLAG while preserving L1.6R pass-with-flags evidence",
+      "status": "part_a_review_required",
+      "item_count": 1,
+      "items": [
+        {
+          "paragraph_id": "1.1.3",
+          "target_title": "Grafieken en tabellen",
+          "lesson_title": "Grafieken en tabellen",
+          "target_record_status": "migrated_from_v4_needs_v5_review",
+          "source_lesson_alignment": "aligned",
+          "dual_coding_status": "blocked_existing_quality_flag",
+          "precision_lint_status": "blocked_existing_quality_flag",
+          "blockers": [
+            "Existing quality reference contains FLAG/blocker language.",
+            "2 REF-CT1 missing-flag/backfill candidate(s) still need review.",
+            "Target-exercise record status is migrated_from_v4_needs_v5_review, not reviewed_final."
+          ]
+        }
+      ],
+      "required_evidence": [
+        "Current 1.1.3 quality-ref",
+        "L1.6R incident and semantic visual QA record",
+        "Focused Part A re-review or explicit hold decision"
+      ],
+      "authority_required": "Formal CP-6 human review, then focused Part A re-review if authorized",
+      "allowed_next_action": "Keep L1.6R pass-with-flags visible without collapsing the remaining Part A FLAG.",
+      "blocked_action": "Closing CP-6 while the Part A FLAG is hidden or ignored.",
+      "stop_condition": "Stop final Year-1 closure while 1.1.3 Part A remains FLAG unless a human gate explicitly accepts a conditioned hold."
+    },
+    {
+      "lane_id": "target_exercise_final_review",
+      "title": "Review migrated target-exercise records before reviewed_final promotion",
+      "status": "target_exercise_review_required",
+      "item_count": 9,
+      "items": [
+        {
+          "paragraph_id": "1.1.1",
+          "target_title": "Schaarste en economisch denken",
+          "lesson_title": "Schaarste en economisch denken",
+          "target_record_status": "migrated_from_v4_needs_v5_review",
+          "source_lesson_alignment": "aligned",
+          "dual_coding_status": "semantic_evidence_present_not_final",
+          "precision_lint_status": "evidence_present_not_final",
+          "blockers": [
+            "Target-exercise record status is migrated_from_v4_needs_v5_review, not reviewed_final."
+          ]
+        },
+        {
+          "paragraph_id": "1.1.2",
+          "target_title": "Percentages en indexcijfers",
+          "lesson_title": "Percentages en indexcijfers",
+          "target_record_status": "migrated_from_v4_needs_v5_review",
+          "source_lesson_alignment": "aligned",
+          "dual_coding_status": "semantic_evidence_present_not_final",
+          "precision_lint_status": "evidence_present_not_final",
+          "blockers": [
+            "Target-exercise record status is migrated_from_v4_needs_v5_review, not reviewed_final."
+          ]
+        },
+        {
+          "paragraph_id": "1.1.3",
+          "target_title": "Grafieken en tabellen",
+          "lesson_title": "Grafieken en tabellen",
+          "target_record_status": "migrated_from_v4_needs_v5_review",
+          "source_lesson_alignment": "aligned",
+          "dual_coding_status": "blocked_existing_quality_flag",
+          "precision_lint_status": "blocked_existing_quality_flag",
+          "blockers": [
+            "Existing quality reference contains FLAG/blocker language.",
+            "2 REF-CT1 missing-flag/backfill candidate(s) still need review.",
+            "Target-exercise record status is migrated_from_v4_needs_v5_review, not reviewed_final."
+          ]
+        },
+        {
+          "paragraph_id": "1.2.1",
+          "target_title": "Individuele vraag",
+          "lesson_title": "Individuele vraag",
+          "target_record_status": "migrated_from_v4_needs_v5_review",
+          "source_lesson_alignment": "aligned",
+          "dual_coding_status": "legacy_evidence_needs_companion_review",
+          "precision_lint_status": "evidence_present_legacy_review_needed",
+          "blockers": [
+            "Graph/visual evidence is from legacy quality-ref shape without companion visual-review closure.",
+            "Target-exercise record status is migrated_from_v4_needs_v5_review, not reviewed_final."
+          ]
+        },
+        {
+          "paragraph_id": "1.2.2",
+          "target_title": "Vraagfactoren",
+          "lesson_title": "Vraagfactoren",
+          "target_record_status": "migrated_from_v4_needs_v5_review",
+          "source_lesson_alignment": "aligned",
+          "dual_coding_status": "legacy_evidence_needs_companion_review",
+          "precision_lint_status": "needs_review_missing_unit_flags",
+          "blockers": [
+            "1 REF-CT1 missing-flag/backfill candidate(s) still need review.",
+            "Graph/visual evidence is from legacy quality-ref shape without companion visual-review closure.",
+            "Target-exercise record status is migrated_from_v4_needs_v5_review, not reviewed_final."
+          ]
+        },
+        {
+          "paragraph_id": "1.2.3",
+          "target_title": "Van individuele naar collectieve vraag",
+          "lesson_title": "Van individuele naar collectieve vraag",
+          "target_record_status": "migrated_from_v4_needs_v5_review",
+          "source_lesson_alignment": "aligned",
+          "dual_coding_status": "blocked_existing_quality_flag",
+          "precision_lint_status": "blocked_existing_quality_flag",
+          "blockers": [
+            "Existing quality reference contains FLAG/blocker language.",
+            "3 REF-CT1 missing-flag/backfill candidate(s) still need review.",
+            "Graph/visual evidence is from legacy quality-ref shape without companion visual-review closure.",
+            "Target-exercise record status is migrated_from_v4_needs_v5_review, not reviewed_final."
+          ]
+        },
+        {
+          "paragraph_id": "1.3.1",
+          "target_title": "Aanbod",
+          "lesson_title": "Aanbod",
+          "target_record_status": "migrated_from_v4_needs_v5_review",
+          "source_lesson_alignment": "aligned",
+          "dual_coding_status": "blocked_existing_quality_flag",
+          "precision_lint_status": "blocked_existing_quality_flag",
+          "blockers": [
+            "Existing quality reference contains FLAG/blocker language.",
+            "1 REF-CT1 missing-flag/backfill candidate(s) still need review.",
+            "Graph/visual evidence is from legacy quality-ref shape without companion visual-review closure.",
+            "Target-exercise record status is migrated_from_v4_needs_v5_review, not reviewed_final."
+          ]
+        },
+        {
+          "paragraph_id": "1.3.2",
+          "target_title": "Marktevenwicht",
+          "lesson_title": "Kostenstructuren",
+          "target_record_status": "migrated_from_v4_needs_v5_review",
+          "source_lesson_alignment": "topic_mismatch",
+          "dual_coding_status": "blocked_source_lesson_mismatch",
+          "precision_lint_status": "blocked_source_lesson_mismatch",
+          "blockers": [
+            "Active-v5 target title and built lesson-side title do not describe the same topic.",
+            "1 REF-CT1 missing-flag/backfill candidate(s) still need review.",
+            "Graph/visual evidence is from legacy quality-ref shape without companion visual-review closure.",
+            "Target-exercise record status is migrated_from_v4_needs_v5_review, not reviewed_final."
+          ]
+        },
+        {
+          "paragraph_id": "1.3.3",
+          "target_title": "Verschuivingen en nieuw evenwicht",
+          "lesson_title": "Opbrengsten",
+          "target_record_status": "migrated_from_v4_needs_v5_review",
+          "source_lesson_alignment": "topic_mismatch",
+          "dual_coding_status": "blocked_source_lesson_mismatch",
+          "precision_lint_status": "blocked_source_lesson_mismatch",
+          "blockers": [
+            "Active-v5 target title and built lesson-side title do not describe the same topic.",
+            "1 REF-CT1 missing-flag/backfill candidate(s) still need review.",
+            "Graph/visual evidence is from legacy quality-ref shape without companion visual-review closure.",
+            "Target-exercise record status is migrated_from_v4_needs_v5_review, not reviewed_final."
+          ]
+        }
+      ],
+      "required_evidence": [
+        "Target exercise content",
+        "Required units and missing flags",
+        "Current lesson evidence",
+        "Teacher-learning-quality review"
+      ],
+      "authority_required": "Formal CP-6 human review, then later target-exercise review/mutation sprint",
+      "allowed_next_action": "Decide which migrated records can enter final review and what proof they need.",
+      "blocked_action": "Promoting migrated records to reviewed_final from REF-CP6 alone.",
+      "stop_condition": "Stop target-exercise promotion while final review artifacts are missing."
+    },
+    {
+      "lane_id": "formal_cp6_human_gate",
+      "title": "Run formal CP-6 human review before any closure claim",
+      "status": "packet_ready_not_closed",
+      "item_count": 1,
+      "items": [
+        {
+          "gate_id": "GATE-CP6-year-1-paragraph-coverage",
+          "review_packet": "reports/review-gates/GATE-CP6-year-1-paragraph-coverage/review-packet.md"
+        }
+      ],
+      "required_evidence": [
+        "Review packet",
+        "Question list",
+        "Future one-question-at-a-time interview log",
+        "Future closure confirmation"
+      ],
+      "authority_required": "Human reviewer in the formal CP-6 gate sprint",
+      "allowed_next_action": "Use this packet as input to the future CP-6 human gate.",
+      "blocked_action": "Writing closure or mutation authority inside REF-CP6.",
+      "stop_condition": "Stop if human review has not recorded answers and explicit closure confirmation."
+    }
+  ],
+  "paragraph_routes": [
+    {
+      "paragraph_id": "1.1.1",
+      "target_title": "Schaarste en economisch denken",
+      "lesson_title": "Schaarste en economisch denken",
+      "target_record_status": "migrated_from_v4_needs_v5_review",
+      "source_lesson_alignment": "aligned",
+      "dual_coding_status": "semantic_evidence_present_not_final",
+      "precision_lint_status": "evidence_present_not_final",
+      "blockers": [
+        "Target-exercise record status is migrated_from_v4_needs_v5_review, not reviewed_final."
+      ],
+      "routed_lanes": [
+        "target_exercise_final_review"
+      ],
+      "closure_ready": false
+    },
+    {
+      "paragraph_id": "1.1.2",
+      "target_title": "Percentages en indexcijfers",
+      "lesson_title": "Percentages en indexcijfers",
+      "target_record_status": "migrated_from_v4_needs_v5_review",
+      "source_lesson_alignment": "aligned",
+      "dual_coding_status": "semantic_evidence_present_not_final",
+      "precision_lint_status": "evidence_present_not_final",
+      "blockers": [
+        "Target-exercise record status is migrated_from_v4_needs_v5_review, not reviewed_final."
+      ],
+      "routed_lanes": [
+        "target_exercise_final_review"
+      ],
+      "closure_ready": false
+    },
+    {
+      "paragraph_id": "1.1.3",
+      "target_title": "Grafieken en tabellen",
+      "lesson_title": "Grafieken en tabellen",
+      "target_record_status": "migrated_from_v4_needs_v5_review",
+      "source_lesson_alignment": "aligned",
+      "dual_coding_status": "blocked_existing_quality_flag",
+      "precision_lint_status": "blocked_existing_quality_flag",
+      "blockers": [
+        "Existing quality reference contains FLAG/blocker language.",
+        "2 REF-CT1 missing-flag/backfill candidate(s) still need review.",
+        "Target-exercise record status is migrated_from_v4_needs_v5_review, not reviewed_final."
+      ],
+      "routed_lanes": [
+        "backfill_candidates",
+        "part_a_l16r_flag",
+        "target_exercise_final_review"
+      ],
+      "closure_ready": false
+    },
+    {
+      "paragraph_id": "1.1.4",
+      "target_title": "Gemengde opgaven: economisch denken en rekenen",
+      "lesson_title": "Gemengde opgaven",
+      "target_record_status": "placeholder_needs_review",
+      "source_lesson_alignment": "placeholder_title_aligned",
+      "dual_coding_status": "not_auditable_placeholder",
+      "precision_lint_status": "not_auditable_placeholder",
+      "blockers": [
+        "Placeholder target-exercise record: no reviewed integration target exercise.",
+        "Existing quality reference contains FLAG/blocker language.",
+        "Target-exercise record status is placeholder_needs_review, not reviewed_final."
+      ],
+      "routed_lanes": [
+        "placeholder_target_exercises",
+        "legacy_review_evidence"
+      ],
+      "closure_ready": false
+    },
+    {
+      "paragraph_id": "1.2.1",
+      "target_title": "Individuele vraag",
+      "lesson_title": "Individuele vraag",
+      "target_record_status": "migrated_from_v4_needs_v5_review",
+      "source_lesson_alignment": "aligned",
+      "dual_coding_status": "legacy_evidence_needs_companion_review",
+      "precision_lint_status": "evidence_present_legacy_review_needed",
+      "blockers": [
+        "Graph/visual evidence is from legacy quality-ref shape without companion visual-review closure.",
+        "Target-exercise record status is migrated_from_v4_needs_v5_review, not reviewed_final."
+      ],
+      "routed_lanes": [
+        "legacy_review_evidence",
+        "target_exercise_final_review"
+      ],
+      "closure_ready": false
+    },
+    {
+      "paragraph_id": "1.2.2",
+      "target_title": "Vraagfactoren",
+      "lesson_title": "Vraagfactoren",
+      "target_record_status": "migrated_from_v4_needs_v5_review",
+      "source_lesson_alignment": "aligned",
+      "dual_coding_status": "legacy_evidence_needs_companion_review",
+      "precision_lint_status": "needs_review_missing_unit_flags",
+      "blockers": [
+        "1 REF-CT1 missing-flag/backfill candidate(s) still need review.",
+        "Graph/visual evidence is from legacy quality-ref shape without companion visual-review closure.",
+        "Target-exercise record status is migrated_from_v4_needs_v5_review, not reviewed_final."
+      ],
+      "routed_lanes": [
+        "backfill_candidates",
+        "legacy_review_evidence",
+        "target_exercise_final_review"
+      ],
+      "closure_ready": false
+    },
+    {
+      "paragraph_id": "1.2.3",
+      "target_title": "Van individuele naar collectieve vraag",
+      "lesson_title": "Van individuele naar collectieve vraag",
+      "target_record_status": "migrated_from_v4_needs_v5_review",
+      "source_lesson_alignment": "aligned",
+      "dual_coding_status": "blocked_existing_quality_flag",
+      "precision_lint_status": "blocked_existing_quality_flag",
+      "blockers": [
+        "Existing quality reference contains FLAG/blocker language.",
+        "3 REF-CT1 missing-flag/backfill candidate(s) still need review.",
+        "Graph/visual evidence is from legacy quality-ref shape without companion visual-review closure.",
+        "Target-exercise record status is migrated_from_v4_needs_v5_review, not reviewed_final."
+      ],
+      "routed_lanes": [
+        "backfill_candidates",
+        "legacy_review_evidence",
+        "target_exercise_final_review"
+      ],
+      "closure_ready": false
+    },
+    {
+      "paragraph_id": "1.2.4",
+      "target_title": "Gemengde opgaven: vraag",
+      "lesson_title": "Gemengde opgaven",
+      "target_record_status": "placeholder_needs_review",
+      "source_lesson_alignment": "placeholder_title_aligned",
+      "dual_coding_status": "not_auditable_placeholder",
+      "precision_lint_status": "not_auditable_placeholder",
+      "blockers": [
+        "Placeholder target-exercise record: no reviewed integration target exercise.",
+        "Target-exercise record status is placeholder_needs_review, not reviewed_final."
+      ],
+      "routed_lanes": [
+        "placeholder_target_exercises",
+        "legacy_review_evidence"
+      ],
+      "closure_ready": false
+    },
+    {
+      "paragraph_id": "1.3.1",
+      "target_title": "Aanbod",
+      "lesson_title": "Aanbod",
+      "target_record_status": "migrated_from_v4_needs_v5_review",
+      "source_lesson_alignment": "aligned",
+      "dual_coding_status": "blocked_existing_quality_flag",
+      "precision_lint_status": "blocked_existing_quality_flag",
+      "blockers": [
+        "Existing quality reference contains FLAG/blocker language.",
+        "1 REF-CT1 missing-flag/backfill candidate(s) still need review.",
+        "Graph/visual evidence is from legacy quality-ref shape without companion visual-review closure.",
+        "Target-exercise record status is migrated_from_v4_needs_v5_review, not reviewed_final."
+      ],
+      "routed_lanes": [
+        "backfill_candidates",
+        "legacy_review_evidence",
+        "target_exercise_final_review"
+      ],
+      "closure_ready": false
+    },
+    {
+      "paragraph_id": "1.3.2",
+      "target_title": "Marktevenwicht",
+      "lesson_title": "Kostenstructuren",
+      "target_record_status": "migrated_from_v4_needs_v5_review",
+      "source_lesson_alignment": "topic_mismatch",
+      "dual_coding_status": "blocked_source_lesson_mismatch",
+      "precision_lint_status": "blocked_source_lesson_mismatch",
+      "blockers": [
+        "Active-v5 target title and built lesson-side title do not describe the same topic.",
+        "1 REF-CT1 missing-flag/backfill candidate(s) still need review.",
+        "Graph/visual evidence is from legacy quality-ref shape without companion visual-review closure.",
+        "Target-exercise record status is migrated_from_v4_needs_v5_review, not reviewed_final."
+      ],
+      "routed_lanes": [
+        "source_lesson_alignment",
+        "backfill_candidates",
+        "legacy_review_evidence",
+        "target_exercise_final_review"
+      ],
+      "closure_ready": false
+    },
+    {
+      "paragraph_id": "1.3.3",
+      "target_title": "Verschuivingen en nieuw evenwicht",
+      "lesson_title": "Opbrengsten",
+      "target_record_status": "migrated_from_v4_needs_v5_review",
+      "source_lesson_alignment": "topic_mismatch",
+      "dual_coding_status": "blocked_source_lesson_mismatch",
+      "precision_lint_status": "blocked_source_lesson_mismatch",
+      "blockers": [
+        "Active-v5 target title and built lesson-side title do not describe the same topic.",
+        "1 REF-CT1 missing-flag/backfill candidate(s) still need review.",
+        "Graph/visual evidence is from legacy quality-ref shape without companion visual-review closure.",
+        "Target-exercise record status is migrated_from_v4_needs_v5_review, not reviewed_final."
+      ],
+      "routed_lanes": [
+        "source_lesson_alignment",
+        "backfill_candidates",
+        "legacy_review_evidence",
+        "target_exercise_final_review"
+      ],
+      "closure_ready": false
+    },
+    {
+      "paragraph_id": "1.3.4",
+      "target_title": "Gemengde opgaven: aanbod en marktevenwicht",
+      "lesson_title": "Gemengde opgaven",
+      "target_record_status": "placeholder_needs_review",
+      "source_lesson_alignment": "placeholder_title_aligned",
+      "dual_coding_status": "not_auditable_placeholder",
+      "precision_lint_status": "not_auditable_placeholder",
+      "blockers": [
+        "Placeholder target-exercise record: no reviewed integration target exercise.",
+        "Target-exercise record status is placeholder_needs_review, not reviewed_final."
+      ],
+      "routed_lanes": [
+        "placeholder_target_exercises",
+        "legacy_review_evidence"
+      ],
+      "closure_ready": false
+    }
+  ],
+  "planned_review_questions": [
+    {
+      "id": "CP6-Q1",
+      "topic": "Source/lesson alignment",
+      "question": "For 1.3.2 and 1.3.3, active v5 names market-equilibrium topics while the built lesson-side directories currently show Kostenstructuren and Opbrengsten. Which authority should drive remediation?",
+      "options": [
+        "Treat active v5 as the intended source and require lesson-side remediation before CP-6 can close.",
+        "Treat the built lesson-side sequence as evidence of a needed v5 source correction, requiring a later protected source-update path.",
+        "Hold both records until a curriculum-owner decision resolves the sequencing."
+      ],
+      "open_answer_allowed": true
+    },
+    {
+      "id": "CP6-Q2",
+      "topic": "Placeholder target exercises",
+      "question": "For 1.1.4, 1.2.4, and 1.3.4, should each placeholder be replaced by a reviewed integration/transfer target exercise before any Year-1 final coverage claim?",
+      "options": [
+        "Yes, all three need reviewed integration target exercises before final coverage.",
+        "Only some need replacement; name which ones and why.",
+        "No, placeholders may remain if they are explicitly excluded from final coverage."
+      ],
+      "open_answer_allowed": true
+    },
+    {
+      "id": "CP6-Q3",
+      "topic": "Backfill candidates",
+      "question": "The nine Year-1 backfill candidates include graph drawing, interpolation, demand aggregation, surplus/shortage, and simultaneous-shift reasoning. How should they be classified before any CLI-backed mutation lane?",
+      "options": [
+        "Review each as true missing unit, existing-unit mapping, merge candidate, or defer candidate.",
+        "Hold all nine until target exercises are reviewed-final.",
+        "Authorize a later bounded review/mutation sprint for only the high-confidence candidates."
+      ],
+      "open_answer_allowed": true
+    },
+    {
+      "id": "CP6-Q4",
+      "topic": "1.1.3 remaining Part A FLAG",
+      "question": "Does the remaining 1.1.3 Part A FLAG block CP-6 closure even though L1.6R dual-coding remediation is currently pass_with_flags?",
+      "options": [
+        "Yes, CP-6 cannot close while Part A remains FLAG.",
+        "No, L1.6R pass_with_flags is sufficient if the flag is explicitly carried forward.",
+        "Hold until a focused Part A re-review is recorded."
+      ],
+      "open_answer_allowed": true
+    },
+    {
+      "id": "CP6-Q5",
+      "topic": "Legacy quality-ref evidence",
+      "question": "For graph-heavy 1.2 and 1.3 records that still rely on legacy quality-ref evidence, what review evidence is required before CP-6 closure?",
+      "options": [
+        "Require upgraded Part A/Part B review records for each graph-heavy record.",
+        "Allow legacy evidence only for non-mismatched paragraphs, with explicit flags.",
+        "Hold all legacy-evidence records until companion visual review is complete."
+      ],
+      "open_answer_allowed": true
+    },
+    {
+      "id": "CP6-Q6",
+      "topic": "Migrated target-exercise final review",
+      "question": "Can any of the nine migrated Book 1 target-exercise records be promoted to reviewed_final from current evidence, or do they all require a later target-exercise review artifact?",
+      "options": [
+        "None may be promoted from current evidence; all need later review artifacts.",
+        "Only 1.1.1 and 1.1.2 are candidates for final review now.",
+        "A subset may proceed; name the records and required proof."
+      ],
+      "open_answer_allowed": true
+    },
+    {
+      "id": "CP6-Q7",
+      "topic": "Minimum CP-6 closure package",
+      "question": "What is the minimum remediation package required before a later CP-6 closure proposal can be responsibly drafted?",
+      "options": [
+        "Resolve source/lesson mismatch, replace placeholders, classify backfills, upgrade graph-heavy review evidence, and clear 1.1.3 Part A.",
+        "Allow CP-6 to close with explicit conditions and route the remaining items to post-closure sprints.",
+        "Hold CP-6 until all Year-1 Book 1 records are reviewed_final."
+      ],
+      "open_answer_allowed": true
+    },
+    {
+      "id": "CP6-Q8",
+      "topic": "Protected mutation authority",
+      "question": "Does this review authorize protected reference mutation, lesson-output mutation, target-exercise promotion, placeholder replacement, unit minting, or CP-6/Year-1 closure now?",
+      "options": [
+        "No, this gate may only authorize later bounded sprints.",
+        "Yes, but only for explicitly named low-risk items.",
+        "Hold; authority cannot be decided until more evidence is gathered."
+      ],
+      "open_answer_allowed": true
+    },
+    {
+      "id": "CP6-Q9",
+      "topic": "Next sprint routing",
+      "question": "What should be the next operational step after the CP-6 review packet: a human gate, a lesson-side remediation sprint, a target-exercise design sprint, an MTU backfill review sprint, or a strategic pause?",
+      "options": [
+        "Run the formal CP-6 human gate first.",
+        "Resolve source/lesson alignment before the human gate.",
+        "Split into separate remediation lanes before any gate."
+      ],
+      "open_answer_allowed": true
+    }
+  ],
+  "allowed_use": [
+    "formal CP-6 human-review preparation",
+    "Year-1 blocker routing",
+    "planning later remediation or protected mutation lanes"
+  ],
+  "not_allowed_use": [
+    "CP-6 closure",
+    "Year-1 closure",
+    "target-exercise promotion",
+    "placeholder finalization",
+    "unit minting",
+    "lesson output mutation",
+    "student diagnostics",
+    "adaptive routing",
+    "mastery decisions",
+    "automatic sequencing",
+    "student-facing AI",
+    "summative use",
+    "PV projection",
+    "PV machine promotion"
+  ],
+  "target_registry_total_count_bearing_paragraphs": 54
+}
