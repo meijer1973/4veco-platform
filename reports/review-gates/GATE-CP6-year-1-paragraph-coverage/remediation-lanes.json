@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-CP6-year-1-paragraph-coverage",
+  "sprint_id": "GATE-CP6",
+  "generated_on": "2026-05-19",
+  "status": "remediation_lanes_opened_not_closed",
+  "cp6_closed": false,
+  "year1_closed": false,
+  "protected_reference_data_changed": false,
+  "lesson_output_changed": false,
+  "lanes": [
+    {
+      "lane_id": "lesson_side_alignment",
+      "sprint_id": "CP.6a",
+      "name": "Book 1 Chapter 1.3 Lesson-Side Alignment",
+      "scope": "Align Book 1 Chapter 1.3 lesson-side sequence with active v5 for 1.3.2 and 1.3.3.",
+      "allowed_action": "Produce a bounded plan and evidence packet for lesson-side alignment.",
+      "blocked_action": "Direct lesson-output mutation inside GATE-CP6, protected v5 mutation, or CP-6 closure.",
+      "mutate_now": false,
+      "protected_reference_mutation_authorized": false,
+      "lesson_output_mutation_authorized": false,
+      "items": [
+        "1.3.2",
+        "1.3.3"
+      ],
+      "stop_condition": "Stop CP-6 closure while source/lesson mismatch remains unresolved or unaccepted."
+    },
+    {
+      "lane_id": "target_exercise_review",
+      "sprint_id": "CP.6b",
+      "name": "Year-1 Target-Exercise Review",
+      "scope": "Review nine migrated Book 1 target exercises and design/review three gemengde-opgaven integration target exercises.",
+      "allowed_action": "Prepare and run bounded target-exercise review/design work.",
+      "blocked_action": "Target-exercise promotion, placeholder finalization, or protected reference mutation inside GATE-CP6.",
+      "mutate_now": false,
+      "protected_reference_mutation_authorized": false,
+      "lesson_output_mutation_authorized": false,
+      "items": [
+        "1.1.1",
+        "1.1.2",
+        "1.1.3",
+        "1.1.4",
+        "1.2.1",
+        "1.2.2",
+        "1.2.3",
+        "1.2.4",
+        "1.3.1",
+        "1.3.2",
+        "1.3.3",
+        "1.3.4"
+      ],
+      "stop_condition": "Stop final coverage while placeholders or migrated records lack review artifacts."
+    },
+    {
+      "lane_id": "mtu_backfill_classification",
+      "sprint_id": "CP.6c",
+      "name": "Year-1 MTU Backfill Classification",
+      "scope": "Classify nine Year-1 backfill candidates before any CLI-backed mutation lane.",
+      "allowed_action": "Classify each candidate as true missing unit, existing-unit mapping, merge candidate, or defer candidate.",
+      "blocked_action": "Unit minting or editing references/machine inside GATE-CP6.",
+      "mutate_now": false,
+      "protected_reference_mutation_authorized": false,
+      "lesson_output_mutation_authorized": false,
+      "item_count": 9,
+      "stop_condition": "Stop protected mutation while candidates remain unreviewed."
+    },
+    {
+      "lane_id": "graph_heavy_evidence",
+      "sprint_id": "CP.6d",
+      "name": "Book 1 Graph-Heavy Evidence Upgrade",
+      "scope": "Upgrade current Part A/Part B evidence where graph-heavy records are used for CP-6 evidence.",
+      "allowed_action": "Identify and upgrade current review evidence needed for graph-heavy Book 1 records.",
+      "blocked_action": "Treating legacy quality-ref evidence as enough for CP-6 closure.",
+      "mutate_now": false,
+      "protected_reference_mutation_authorized": false,
+      "lesson_output_mutation_authorized": false,
+      "items": [
+        "1.2.1",
+        "1.2.2",
+        "1.2.3",
+        "1.3.1",
+        "1.3.2",
+        "1.3.3"
+      ],
+      "stop_condition": "Stop closure while graph-heavy records lack current review evidence."
+    },
+    {
+      "lane_id": "part_a_113_review",
+      "sprint_id": "CP.6e",
+      "name": "Focused 1.1.3 Part A Re-Review",
+      "scope": "Re-review 1.1.3 Part A and clear or explicitly fail the remaining FLAG.",
+      "allowed_action": "Perform a focused Part A re-review of 1.1.3 Grafieken en tabellen.",
+      "blocked_action": "Treating L1.6R pass_with_flags as enough for unconditioned CP-6 closure.",
+      "mutate_now": false,
+      "protected_reference_mutation_authorized": false,
+      "lesson_output_mutation_authorized": false,
+      "items": [
+        "1.1.3"
+      ],
+      "stop_condition": "Stop unconditioned CP-6 closure while 1.1.3 Part A remains FLAG."
+    }
+  ],
+  "blocked_outcomes": [
+    "CP-6 closure",
+    "Year-1 closure",
+    "protected reference mutation",
+    "lesson output mutation",
+    "target-exercise promotion",
+    "placeholder finalization",
+    "unit minting",
+    "student diagnostics",
+    "adaptive routing",
+    "mastery decisions",
+    "automatic sequencing",
+    "student-facing AI",
+    "summative use",
+    "PV projection",
+    "PV machine promotion",
+    "student-facing generated output"
+  ]
+}

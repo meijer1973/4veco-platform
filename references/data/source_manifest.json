@@ -1,14 +1,14 @@
 {
   "schema_version": "0.1",
-  "generated_at": "2026-05-19T12:27:34.104Z",
+  "generated_at": "2026-05-19T13:50:51.843Z",
   "sprint_id": "R0.2",
   "scope": "references/",
   "note": "Self-generated inventory files intentionally omit size and sha256 to avoid unstable self-checksums.",
   "summary": {
-    "file_count": 248,
+    "file_count": 250,
     "by_layer": {
       "authored_judgement": 8,
-      "governance_data": 168,
+      "governance_data": 170,
       "external_authority": 32,
       "machine_registry": 5,
       "owned_curriculum_design": 5,
@@ -20,7 +20,7 @@
     "by_edit_policy": {
       "human_reviewed_edit": 16,
       "generated_by_inventory_script": 28,
-      "sprint_process": 139,
+      "sprint_process": 141,
       "external_refresh_only": 32,
       "cli_only": 5,
       "versioned_human_reviewed_edit": 5,
@@ -941,6 +941,46 @@
       "edit_policy": "generated_by_inventory_script",
       "owner": "references_team",
       "refresh_policy": "regenerate",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/data/sprints/GATE-CP6.plan.json",
+      "file_name": "GATE-CP6.plan.json",
+      "extension": "json",
+      "size_bytes": 3877,
+      "sha256": "614e65e2a268d127e238777c21332574dc69efca15a39620fc754ebaa99dd0e8",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/data/sprints/GATE-CP6.result.json",
+      "file_name": "GATE-CP6.result.json",
+      "extension": "json",
+      "size_bytes": 3777,
+      "sha256": "f27eee8cb670a84521299972b1a9836531338a0a1d86014051d4abd477d61448",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
       "downstream_dependencies": [
         "roadmap",
         "dashboards",
@@ -4497,8 +4537,8 @@
       "path": "references/reference-team-roadmap.md",
       "file_name": "reference-team-roadmap.md",
       "extension": "md",
-      "size_bytes": 148283,
-      "sha256": "f0e08475c50903e3c009850cf5ae860ccf44f26d6a976af5efecfa65b5017771",
+      "size_bytes": 151516,
+      "sha256": "d28be1b6decc3556bace378a92d26dbec0d795c3791e6ff687ab2f4bcea788bf",
       "layer": "planning",
       "authority_level": "authored_judgement",
       "source_type": "roadmap",

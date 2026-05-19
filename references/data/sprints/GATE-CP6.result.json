@@ -1,0 +1,112 @@
+{
+  "sprint_id": "GATE-CP6",
+  "name": "Year-1 Paragraph Coverage Routing Decision",
+  "status": "completed",
+  "completed_on": "2026-05-19",
+  "plan": "reports/sprints/GATE-CP6-plan.md",
+  "baseline": "reports/sprints/GATE-CP6-baseline.md",
+  "result": "reports/sprints/GATE-CP6-result.md",
+  "diff_summary": "reports/sprints/GATE-CP6-diff-summary.md",
+  "protected_reference_data_changed": false,
+  "lesson_output_changed": false,
+  "human_review_required": true,
+  "human_review": {
+    "gate_id": "GATE-CP6-year-1-paragraph-coverage",
+    "status": "routing_decision_recorded_not_closed",
+    "interview": "reports/review-gates/GATE-CP6-year-1-paragraph-coverage/human-interview.md",
+    "routing_decision": "reports/review-gates/GATE-CP6-year-1-paragraph-coverage/gate-routing-decision.md",
+    "cp6_closed": false,
+    "year1_closed": false
+  },
+  "lead_review_required": true,
+  "lead_review": {
+    "assignment": "reports/sprints/GATE-CP6-lead-review-assignment.md",
+    "round1": "reports/sprints/GATE-CP6-lead-review-round1.md",
+    "corrections": "reports/sprints/GATE-CP6-lead-review-corrections.md",
+    "round2": "reports/sprints/GATE-CP6-lead-review-round2.md",
+    "final_verdict": "PASS WITH FLAGS",
+    "final_verdict_reason": "Routing-only closure is accepted. Flags carry forward that CP-6 and Year 1 remain open, no closure proposal or closure record exists, and CP.6a is the next remediation lane."
+  },
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/GATE-CP6-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js GATE-CP6",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/review-gates/check-gate-cp6-routing-decision.js",
+      "status": "passed"
+    },
+    {
+      "command": "node scripts/check-course-target-exercises-v5.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/validate-core-schemas.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/validate-report-json.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/generate-all.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/validate-report-json.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/generate-reference-health.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/check-reference-health.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run agent:index",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-gate-bundle-urls.js GATE-CP6-year-1-paragraph-coverage",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js --check",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/build-reference-inventory.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-roadmap-version-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-source-manifest.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-document-inventory.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-result.js reports/sprints/GATE-CP6-result.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js GATE-CP6 --complete",
+      "status": "passed"
+    }
+  ]
+}

@@ -4,7 +4,7 @@ Generated: 2026-04-23
 Adopted main roadmap: 2026-04-25
 Last strategic update: 2026-05-19
 Roadmap ID: `references-team-roadmap`
-Roadmap version: `v2.52-gate-cp6-routing-decision`
+Roadmap version: `v2.51-ref-cp6-remediation-readiness`
 Roadmap status: `active`
 Version index: `docs/roadmaps/roadmap-version-index.json`
 Scope: `references/`, `build-scripts/references/`, `build-scripts/reports/`, reference dashboards, and generated reference reports under `reports/`
@@ -19,12 +19,8 @@ legacy bundles only.
 
 | Sprint | Name | Completed | Current State |
 |--------|------|-----------|---------------|
-| CP.6a | Book 1 Chapter 1.3 Lesson-Side Alignment | no | **ACTIVE / REMEDIATION LANE 1 OPENED BY GATE-CP6.** Plan a bounded lesson-side alignment sprint for the `1.3.2`/`1.3.3` mismatch against active v5. This lane may prepare evidence and an authorized remediation path, but it must not hand-edit lesson output, mutate v5, close CP-6, close Year 1, promote target exercises, finalize placeholders, or mint units. |
-| CP.6b | Year-1 Target-Exercise Review | no | Planned after CP.6a unless deliberately resequenced. Review the nine migrated Book 1 target exercises and design/review the three gemengde-opgaven integration target exercises before any `reviewed_final` or final-coverage claim. No protected mutation in the planning/review lane. |
-| CP.6c | Year-1 MTU Backfill Classification | no | Planned after CP.6b. Classify the nine Year-1 backfill candidates as true missing unit, existing-unit mapping, merge candidate, or defer candidate before any CLI-backed mutation sprint. |
-| CP.6d | Book 1 Graph-Heavy Evidence Upgrade | no | Planned after CP.6c. Upgrade current Part A evidence for graph-heavy records, and Part B evidence where companion material exists, is used as evidence, or is in sprint scope. Legacy quality-ref alone is not enough for CP-6 closure. |
-| CP.6e | Focused 1.1.3 Part A Re-Review | no | Planned after CP.6d. Re-review `1.1.3` Part A and clear or explicitly fail the remaining `FLAG`; unconditioned CP-6 closure remains blocked while the flag remains open. |
-| REF-CT3 | Year-2 Skeleton | no | Planned after the CP.6a-CP.6e remediation lanes produce enough evidence for a responsible CP-6 closure proposal or explicit hold. Prepare Year-2 skeleton with CvTE-vwo anchor status and `concept_orphan` flags for CP-7; do not treat the rough three-year blueprint as authoritative. |
+| GATE-CP6 | Year-1 Paragraph Coverage Human Review | no | **ACTIVE / HUMAN REVIEW GATE PREPARED BY REF-CP6.** Run the formal one-question-at-a-time CP-6 review using `reports/review-gates/GATE-CP6-year-1-paragraph-coverage/review-packet.md`. The gate must decide how to route the `1.3.2`/`1.3.3` source-lesson mismatch, three placeholders, nine backfill candidates, legacy review evidence, and remaining `1.1.3` Part A `FLAG`. No protected mutation, target-exercise promotion, placeholder finalization, CP-6 closure, or Year-1 closure without recorded interview answers and explicit human confirmation. |
+| REF-CT3 | Year-2 Skeleton | no | Planned after REF-CT0/REF-CT1/REF-CT2 framing and the REF-CP6/GATE-CP6 readiness decision. Prepare Year-2 skeleton with CvTE-vwo anchor status and `concept_orphan` flags for CP-7; do not treat the rough three-year blueprint as authoritative. |
 | R7.6 | RAG Quality Hardening | no | Planned. Close R7.4 follow-ups, split target-exercise chunks, expand retrieval eval coverage, backfill evidence anchors, and improve approved/pending/diagnostic labels. |
 | R14.1 | Curriculum Versioning | no | Planned earlier in the sequence. Track active v5, archived v4, the non-authoritative three-year prototype, built lesson outputs, and migrated/not-final target exercises so reports and retrieval do not silently mix incompatible source states. |
 | Sprint 12 | Exam And Target Exercise Decomposition Backfill | no | Planned after schema/overlay work. Backfill exercise metadata for the 349 exam questions and 49 target exercises through protected-source-safe overlays. |
@@ -36,7 +32,6 @@ legacy bundles only.
 
 | Sprint | Name | Completed | Current State |
 |--------|------|-----------|---------------|
-| GATE-CP6 | Year-1 Paragraph Coverage Human Review | yes | Completed as a non-closing human routing gate. Recorded all nine CP-6 answers in `reports/review-gates/GATE-CP6-year-1-paragraph-coverage/human-interview.md`, produced `gate-routing-decision.*`, and opened five bounded remediation lanes: CP.6a lesson-side alignment, CP.6b target-exercise review, CP.6c MTU backfill classification, CP.6d graph-heavy evidence upgrade, and CP.6e focused `1.1.3` Part A re-review. CP-6 and Year 1 remain open; no protected mutation, lesson-output mutation, target-exercise promotion, placeholder finalization, unit minting, closure proposal, or closure record was authorized. |
 | REF-CP6 | Year-1 CP-6 Remediation And Review Readiness | yes | Completed as a non-mutating review-readiness sprint. Routed all REF-CT2 blockers into explicit decision lanes, preserved 12 active-v5 Book 1 records with 0 CP-6 quality-ready records, 3 placeholders, 2 source/lesson topic mismatches, 9 Year-1 backfill candidates, 9 legacy quality-ref records, 1 remaining `1.1.3` Part A `FLAG`, and 9 migrated target-exercise records needing final review. Prepared `GATE-CP6-year-1-paragraph-coverage` review packet with nine planned questions and a future interview protocol. CP-6 and Year 1 remain open; no human interview, gate closure, protected mutation, lesson-output mutation, target-exercise promotion, or placeholder finalization was authorized. |
 | REF-CT2 | Year-1 Precision And Dual-Coding Audit | yes | Completed as a non-mutating audit sprint. Audited the 12 active-v5 Book 1 records for precision-lint and semantic dual-coding evidence. Found 9 visual/graph-heavy records, semantic evidence present across the inspected surfaces, 3 placeholders, 2 source/lesson topic mismatches (`1.3.2`, `1.3.3`), 1 L1.6R pass-with-flags record with remaining Part A `FLAG`, 9 legacy quality-ref records, and 0 CP-6 quality-ready records. CP-6 and Year 1 remain blocked; no CLI mutation, lesson-output mutation, target-exercise promotion, placeholder finalization, or protected reference mutation was authorized. |
 | REF-CT1 | Year-1 Target Exercise And MTU Coverage Baseline For v5 | yes | Completed as a non-mutating baseline/reporting sprint. Produced the 12-record Book 1 coverage JSON/report, MTU gap-classification report, and CP-6 review packet. Recorded 9 migrated records needing v5 review, 3 placeholders needing evidence, 0 reviewed-final records, 19 confirmed Book 1 MTUs, 9 Year-1 backfill candidates, and `1.1.3` L1.6R/Part A closure blockers. CP-6 and Year 1 remain not closed; no CLI mutation or protected reference mutation was authorized. |
@@ -190,8 +185,6 @@ Update 2026-05-19: L1.6R reopened the lesson-side `1.1.3` companion quality verd
 Update 2026-05-19: `REF-CT2 Year-1 Precision And Dual-Coding Audit` completed as a non-mutating audit sprint. It preserved the L1.6R calibration rule, recorded current lesson-side `1.1.3` L1.6R status as `pass_with_flags` while keeping the remaining Part A `FLAG`, identified `1.3.2` and `1.3.3` source/lesson topic mismatches, and left CP-6/Year 1 blocked with 0 CP-6 quality-ready records. A new `REF-CP6 Year-1 CP-6 Remediation And Review Readiness` sprint is inserted before Year-2 skeleton work.
 
 Update 2026-05-19: `REF-CP6 Year-1 CP-6 Remediation And Review Readiness` completed as a non-mutating review-readiness sprint. It created the `GATE-CP6-year-1-paragraph-coverage` review packet, routed all REF-CT2 blockers into seven decision lanes, and kept CP-6/Year 1 open. The next active step is the formal CP-6 human-review gate or an explicitly inserted narrower remediation sprint if the reviewer chooses not to run the gate yet.
-
-Update 2026-05-19: `GATE-CP6 Year-1 Paragraph Coverage Human Review` completed as a non-closing routing gate. The human answer set keeps CP-6 and Year 1 open, treats active v5 as the intended source for `1.3.2`/`1.3.3`, requires reviewed integration/transfer target exercises for `1.1.4`, `1.2.4`, and `1.3.4`, requires classification of nine backfill candidates before mutation, keeps the remaining `1.1.3` Part A `FLAG` blocking unconditioned closure, requires current graph-heavy review evidence, and forbids protected mutation or closure now. The roadmap now opens five bounded remediation lanes: CP.6a lesson-side alignment, CP.6b target-exercise review, CP.6c MTU backfill classification, CP.6d graph-heavy evidence upgrade, and CP.6e focused `1.1.3` Part A re-review.
 
 Compatibility decisions:
 
@@ -1780,18 +1773,11 @@ Sprints:
 
 - `REF-CT0` completed: normalized the rough three-year blueprint as a
   non-authoritative v5-aware prototype and classified MTU gaps.
-- `REF-CT1` completed: Year-1 target-exercise and MTU coverage baseline for
+- `REF-CT1` active next: Year-1 target-exercise and MTU coverage baseline for
   v5, with `GATE-CP6-year-1-paragraph-coverage`.
-- `REF-CT2` completed: Year-1 precision and dual-coding audit.
-- `REF-CP6` completed: CP-6 remediation/readiness packet.
-- `GATE-CP6` completed: human routing decision recorded, no closure or mutation authorized.
-- `CP.6a` active next: Book 1 Chapter 1.3 lesson-side alignment for `1.3.2` and `1.3.3`.
-- `CP.6b` planned: Year-1 target-exercise review and gemengde-opgaven integration design/review.
-- `CP.6c` planned: Year-1 MTU backfill classification before mutation.
-- `CP.6d` planned: Book 1 graph-heavy evidence upgrade.
-- `CP.6e` planned: focused `1.1.3` Part A re-review.
+- `Content Track 2` planned: Year-1 precision and dual-coding audit.
 - `Content Track 3` planned: Year-2 skeleton and `GATE-CP7-year-2-anchoring`,
-  after CP-6 remediation evidence makes the Year-1 hold explicit enough to guide skeleton work.
+  after the three-year prototype is cleaned enough to guide skeleton work.
 
 ### Phase R14: Minimal Curriculum Versioning
 
@@ -1898,12 +1884,7 @@ REF-CT0 Three-year prototype normalization and MTU classification completed
 REF-CT1 Year-1 target exercise and MTU coverage baseline for v5 (CP-6)
 REF-CT2 Year-1 precision and dual-coding audit
 REF-CP6 Year-1 CP-6 remediation and review readiness
-GATE-CP6 Year-1 paragraph coverage human review completed as routing decision
-CP.6a Book 1 Chapter 1.3 lesson-side alignment
-CP.6b Year-1 target-exercise review
-CP.6c Year-1 MTU backfill classification
-CP.6d Book 1 graph-heavy evidence upgrade
-CP.6e Focused 1.1.3 Part A re-review
+GATE-CP6 Year-1 paragraph coverage human review
 REF-CT3 Year-2 skeleton (CP-7)
 R7.6 RAG quality hardening
 R14.1 Minimal curriculum versioning
@@ -1917,7 +1898,7 @@ Do not invert this order.
 
 ## Immediate Next Sprint
 
-Next action: run `CP.6a Book 1 Chapter 1.3 Lesson-Side Alignment`. GATE-CP6 recorded the formal CP-6 human answer set as a routing decision, not a closure record. CP.6a may prepare the bounded lesson-side alignment path for the `1.3.2`/`1.3.3` mismatch against active v5, but it must not hand-edit lesson output, mutate v5, close CP-6, close Year 1, promote target exercises, finalize placeholders, or mint units. The remaining CP-6 lanes are CP.6b target-exercise review, CP.6c MTU backfill classification, CP.6d graph-heavy evidence upgrade, and CP.6e focused `1.1.3` Part A re-review. The remaining blocks on diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, PV projection, and PV machine promotion remain in force.
+Next action: run `GATE-CP6 Year-1 Paragraph Coverage Human Review` using `reports/review-gates/GATE-CP6-year-1-paragraph-coverage/review-packet.md`, or deliberately insert a narrower remediation sprint before the gate. REF-CP6 prepared the packet but did not close CP-6 or Year 1. The gate must record formal interview answers before any closure proposal, protected mutation, target-exercise promotion, placeholder finalization, lesson-output remediation, or Year-1 closure claim. The remaining blocks on diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, PV projection, and PV machine promotion remain in force.
 
 R4.5 has closed the bounded micro-unit mutation lane, CP-1 has closed the non-mutating schema audit gate as `pass_with_conditions`, CP-2 has closed the owned-source scope gate as `pass_with_conditions`, R9.1 has registered the owned-source surfaces, R9.2 has completed owned-content projection, S4/CP-3 has closed as `pass_with_conditions`, S4.1 has implemented the CP-3 condition artifacts, RX.1 has prepared the non-mutating representation-operation inventory, `GATE-RX1-representation-unit-scope` has closed as `pass_with_conditions`, RX.2/GATE-RX2 has added the bounded six-unit first lane through CLI-only mutation, RX.2b/GATE-RX2b has added the bounded seven-unit graphical foundation lane through CLI-only mutation while holding `A71`, R8.1 has added the scoped internal QC issue model, S6 has created the source-document registry MVP under `references/data/`, S7/CP-4 has closed as `pass_with_conditions`, RX.3a/RX.3b/RX.4 have applied producer and elasticity representation lanes through CLI-only mutation, PV.3 through PV.6 have completed pilot templates, projection proof, and coverage dashboards, RX.5 has added representation-operation reports, RX.6 has completed skill-tree generator readiness, PV.7 has closed the machine-promotion review gate without authorizing promotion, PV.8 has completed the promotion-pipeline design, PV-G4 has closed as `pass_with_conditions` with two reconciled lesson-team proofs, S8 has created the bounded internal misconception registry under `references/data/`, S9 has closed CP-5 as a D04 decision-only gate, and S9a has applied the D04 retirement through CLI-only mutation.
 

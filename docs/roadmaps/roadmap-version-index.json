@@ -15,13 +15,14 @@
   "roadmaps": [
     {
       "roadmap_id": "references-team-roadmap",
-      "version": "v2.51-ref-cp6-remediation-readiness",
+      "version": "v2.52-gate-cp6-routing-decision",
       "title": "References Team Roadmap",
       "status": "active",
       "path": "references/reference-team-roadmap.md",
       "owner": "references_team",
       "updated_on": "2026-05-19",
       "supersedes": [
+        "docs/roadmaps/outdated/reference-team-roadmap-v2.51-ref-cp6-remediation-readiness.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.50-ref-ct2-precision-dual-coding-audit.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.49-ref-ct1-year1-coverage-baseline.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.48-l16r-dual-coding-incident.md",
@@ -72,7 +73,18 @@
         "knowledge/Exercise schema and quality/reference-team-roadmap Live version 28 April.md",
         "knowledge/Exercise schema and quality/roadmap-updated-repository-checked.md"
       ],
-      "notes": "Current operating roadmap after REF-CP6 completed the non-mutating Year-1 CP-6 remediation/readiness packet and moved the formal CP-6 human-review gate to the active row."
+      "notes": "Current operating roadmap after GATE-CP6 recorded the human routing decision and opened the CP.6a-CP.6e remediation lanes without closing CP-6 or Year 1."
+    },
+    {
+      "roadmap_id": "references-team-roadmap-v2.51",
+      "version": "v2.51-ref-cp6-remediation-readiness",
+      "title": "References Team Roadmap before GATE-CP6 routing decision",
+      "status": "outdated",
+      "path": "docs/roadmaps/outdated/reference-team-roadmap-v2.51-ref-cp6-remediation-readiness.md",
+      "owner": "references_team",
+      "updated_on": "2026-05-19",
+      "superseded_by": "references/reference-team-roadmap.md",
+      "notes": "Snapshot archived before GATE-CP6 recorded the CP-6 human answer set as a non-closing routing decision and opened CP.6a through CP.6e remediation lanes."
     },
     {
       "roadmap_id": "references-team-roadmap-v2.50",
