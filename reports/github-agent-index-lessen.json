@@ -2,8 +2,8 @@
   "repo": "4veco-lessen",
   "root": "C:\\Projects\\4veco\\4veco-lessen",
   "available": true,
-  "generated_at": "2026-05-19T14:14:51.721Z",
-  "file_count": 1272,
+  "generated_at": "2026-05-19T14:26:32.684Z",
+  "file_count": 1273,
   "inventory_scope": "git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees",
   "skipped_directories": [
     ".cache",
@@ -2473,6 +2473,7 @@
       "index.html",
       "knowledge/handoff-presentation-method-to-lessons-team.md",
       "lessen-team-roadmap.md",
+      "lesson-ticket-L-CP6A-book1-chapter13-v5-alignment.md",
       "pv-g4-proof-records/HCS-PV-G4-lead-review-plan.md",
       "pv-g4-proof-records/HCS-PV-G4-lead-review-record.md",
       "pv-g4-proof-records/HCS-PV-G4-lead-review-verification.md",

@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-05-19T14:14:51.687Z
+Generated: 2026-05-19T14:26:32.646Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 1451
+Files indexed: 1466
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -105,7 +105,7 @@ Count: 59
 
 ## build scripts
 
-Count: 269
+Count: 270
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -340,6 +340,7 @@ Count: 269
 - build-scripts/reports/terms-coverage.js
 - build-scripts/reports/unresolved-refs.js
 - build-scripts/reports/validate-report-json.js
+- build-scripts/review-gates/check-cp6a-lesson-side-alignment.js
 - build-scripts/review-gates/check-gate-cp6-routing-decision.js
 - build-scripts/review-gates/check-r2-4-packet.js
 - build-scripts/review-gates/validate-gate.js
@@ -426,7 +427,7 @@ Count: 42
 
 ## validators
 
-Count: 75
+Count: 76
 
 - build-scripts/rag/validate-chunks.js
 - build-scripts/rag/validate-query-output.js
@@ -481,6 +482,7 @@ Count: 75
 - build-scripts/references/validate-procedure-visual-registry.js
 - build-scripts/reports/check-reference-health.js
 - build-scripts/reports/validate-report-json.js
+- build-scripts/review-gates/check-cp6a-lesson-side-alignment.js
 - build-scripts/review-gates/check-gate-cp6-routing-decision.js
 - build-scripts/review-gates/check-r2-4-packet.js
 - build-scripts/review-gates/validate-gate.js
@@ -506,7 +508,7 @@ Count: 75
 
 ## references
 
-Count: 250
+Count: 253
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -554,6 +556,9 @@ Count: 250
 - references/data/skill-operation-registry.json
 - references/data/source_manifest.json
 - references/data/source-document-registry.json
+- references/data/sprints/CP.6a-lesson-side-alignment.json
+- references/data/sprints/CP.6a.plan.json
+- references/data/sprints/CP.6a.result.json
 - references/data/sprints/GATE-CP6.plan.json
 - references/data/sprints/GATE-CP6.result.json
 - references/data/sprints/PV-G4.plan.json
@@ -761,7 +766,7 @@ Count: 250
 
 ## reports
 
-Count: 619
+Count: 629
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -896,6 +901,7 @@ Count: 619
 - reports/README.md
 - reports/reference-audits/empty-needs-audit.md
 - reports/reference-cli-coverage.md
+- reports/reference-planning/CP.6a-lesson-side-alignment.md
 - reports/reference-planning/REF-CP6-blocker-routing.md
 - reports/reference-planning/REF-CP6-remediation-readiness.md
 - reports/reference-planning/REF-CT0-candidate-review-packet.md
@@ -1171,6 +1177,15 @@ Count: 619
 - reports/review-gates/GATE-RX6-skilltree-generator-integration/review-packet.md
 - reports/review-gates/GATE-RX6-skilltree-generator-integration/technical-closure.json
 - reports/review-gates/GATE-RX6-skilltree-generator-integration/technical-closure.md
+- reports/sprints/CP.6a-baseline.md
+- reports/sprints/CP.6a-diff-summary.md
+- reports/sprints/CP.6a-lead-review-assignment.md
+- reports/sprints/CP.6a-lead-review-corrections.md
+- reports/sprints/CP.6a-lead-review-round1.md
+- reports/sprints/CP.6a-lead-review-round2.md
+- reports/sprints/CP.6a-plan.md
+- reports/sprints/CP.6a-planning-review.md
+- reports/sprints/CP.6a-result.md
 - reports/sprints/example-result.md
 - reports/sprints/GATE-CP6-baseline.md
 - reports/sprints/GATE-CP6-diff-summary.md
@@ -1403,7 +1418,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 197
+Count: 198
 
 - .gitignore
 - BUILD-CHAPTER.md
@@ -1456,6 +1471,7 @@ Count: 197
 - docs/roadmaps/outdated/reference-team-roadmap-v2.5-representation-sensitive-phase.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.50-ref-ct2-precision-dual-coding-audit.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.51-ref-cp6-remediation-readiness.md
+- docs/roadmaps/outdated/reference-team-roadmap-v2.52-gate-cp6-routing-decision.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.6-s4-cp3-dry-run.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.7-cp3-closed.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.8-s4.1-conditions-calibrated.md
