@@ -15,13 +15,14 @@
   "roadmaps": [
     {
       "roadmap_id": "references-team-roadmap",
-      "version": "v2.47-sprint-log-and-lead-review-procedure",
+      "version": "v2.48-l16r-dual-coding-incident",
       "title": "References Team Roadmap",
       "status": "active",
       "path": "references/reference-team-roadmap.md",
       "owner": "references_team",
       "updated_on": "2026-05-19",
       "supersedes": [
+        "docs/roadmaps/outdated/reference-team-roadmap-v2.47-sprint-log-and-lead-review-procedure.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.46-ref-ct0-prototype-classification.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.45-post-l16-foundation-hardening.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.44-s9a-d04-cli-mutation.md",
@@ -68,7 +69,18 @@
         "knowledge/Exercise schema and quality/reference-team-roadmap Live version 28 April.md",
         "knowledge/Exercise schema and quality/roadmap-updated-repository-checked.md"
       ],
-      "notes": "Current operating roadmap after sprint logs were consolidated under reports/sprints for new/current bundles and lead-review assignment, correction, and recheck logs became structural sprint-closure requirements."
+      "notes": "Current operating roadmap after the L1.6R dual-coding incident reopened lesson-side 1.1.3 companion quality and sharpened Content Track 2 semantic dual-coding requirements."
+    },
+    {
+      "roadmap_id": "references-team-roadmap-v2.47",
+      "version": "v2.47-sprint-log-and-lead-review-procedure",
+      "title": "References Team Roadmap before L1.6R dual-coding incident update",
+      "status": "outdated",
+      "path": "docs/roadmaps/outdated/reference-team-roadmap-v2.47-sprint-log-and-lead-review-procedure.md",
+      "owner": "references_team",
+      "updated_on": "2026-05-19",
+      "superseded_by": "references/reference-team-roadmap.md",
+      "notes": "Snapshot archived before L1.6R reopened the lesson-side 1.1.3 companion quality verdict and Content Track 2 was sharpened around semantic dual-coding evidence."
     },
     {
       "roadmap_id": "references-team-roadmap-v2.46",

@@ -399,6 +399,63 @@ html[data-theme="dark"] .pv2-option p {
   align-items: start;
 }
 
+.pv2-cover-grid-visual {
+  grid-template-columns: minmax(0, 0.9fr) minmax(280px, 0.85fr);
+  gap: clamp(16px, 2.6vw, 34px);
+  align-items: start;
+}
+
+.pv2-cover-grid-visual h2 {
+  font-size: clamp(2.45rem, 5.2cqw, 4.05rem);
+  max-width: 11ch;
+}
+
+.pv2-cover-grid-visual .pv2-thesis {
+  margin-top: clamp(8px, 1.4cqw, 12px);
+  font-size: clamp(0.86rem, 1.45cqw, 0.98rem);
+}
+
+.pv2-cover-grid-visual .pv2-prompt {
+  margin-top: clamp(14px, 2.3cqw, 20px);
+  font-size: clamp(0.86rem, 1.45cqw, 0.98rem);
+}
+
+.pv2-cover-visual-stack {
+  min-width: 0;
+}
+
+.pv2-cover-visual-stack .pv2-visual-combo {
+  grid-template-columns: 1fr;
+  gap: 0.42rem;
+  margin-top: 0;
+}
+
+.pv2-cover-visual-stack .pv2-visual-panel {
+  padding: clamp(0.42rem, 1.2cqw, 0.58rem);
+}
+
+.pv2-cover-visual-stack .pv2-visual-panel figcaption {
+  margin-bottom: 0.22rem;
+}
+
+.pv2-cover-visual-stack .pv2-data-table {
+  font-size: clamp(0.56rem, 1.16cqw, 0.66rem);
+}
+
+.pv2-cover-visual-stack .pv2-data-table th,
+.pv2-cover-visual-stack .pv2-data-table td {
+  padding: 0.18rem 0.24rem;
+}
+
+.pv2-cover-visual-stack .pv2-inline-graph {
+  max-height: 6.1rem;
+}
+
+.pv2-cover-visual-stack .pv2-visual-panel p {
+  margin-top: 0.24rem;
+  font-size: clamp(0.58rem, 1.14cqw, 0.68rem);
+}
+
 .pv2-thesis {
   max-width: 32rem;
   margin: clamp(12px, 2.1cqw, 20px) 0 0;
@@ -630,6 +687,181 @@ html[data-theme="dark"] .pv2-option p {
   color: var(--pv2-indigo);
 }
 
+.pv2-route-with-visual {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  gap: clamp(0.7rem, 2cqw, 1rem);
+  align-items: stretch;
+  min-height: 0;
+}
+
+.pv2-route-with-visual .pv2-route {
+  margin: 0;
+}
+
+.pv2-visual-panel {
+  margin: 0;
+  padding: clamp(0.7rem, 1.8cqw, 0.95rem);
+  border: 1px solid var(--pv2-border);
+  border-radius: 16px;
+  background: color-mix(in oklab, var(--pv2-paper-2) 74%, var(--pv2-slide-bg));
+  min-width: 0;
+}
+
+.pv2-cover-grid + .pv2-visual-panel {
+  margin-top: clamp(0.65rem, 1.8cqw, 0.9rem);
+}
+
+.pv2-cover-grid + .pv2-visual-combo {
+  gap: 0.55rem;
+  margin-top: clamp(0.45rem, 1.4cqw, 0.65rem);
+}
+
+.pv2-cover-grid + .pv2-visual-combo .pv2-visual-panel {
+  padding: clamp(0.5rem, 1.4cqw, 0.7rem);
+}
+
+.pv2-cover-grid + .pv2-visual-combo .pv2-visual-panel figcaption {
+  margin-bottom: 0.28rem;
+}
+
+.pv2-cover-grid + .pv2-visual-combo .pv2-data-table {
+  font-size: clamp(0.58rem, 1.25cqw, 0.7rem);
+}
+
+.pv2-cover-grid + .pv2-visual-combo .pv2-data-table th,
+.pv2-cover-grid + .pv2-visual-combo .pv2-data-table td {
+  padding: 0.22rem 0.28rem;
+}
+
+.pv2-cover-grid + .pv2-visual-combo .pv2-inline-graph {
+  max-height: 7.4rem;
+}
+
+.pv2-visual-combo {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.7rem;
+  margin-top: clamp(0.65rem, 1.8cqw, 0.9rem);
+}
+
+.pv2-visual-combo .pv2-visual-panel {
+  min-height: 0;
+}
+
+.pv2-visual-panel figcaption {
+  margin-bottom: 0.45rem;
+  color: var(--pv2-indigo);
+  font-weight: 900;
+}
+
+.pv2-visual-panel p {
+  margin: 0.45rem 0 0;
+  color: var(--pv2-muted);
+  font-size: clamp(0.72rem, 1.45cqw, 0.82rem);
+  line-height: 1.35;
+}
+
+.pv2-data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: clamp(0.68rem, 1.5cqw, 0.8rem);
+}
+
+.pv2-data-table th,
+.pv2-data-table td {
+  border: 1px solid var(--pv2-border);
+  padding: 0.34rem 0.42rem;
+  text-align: left;
+}
+
+.pv2-data-table th {
+  background: color-mix(in oklab, var(--pv2-green) 14%, var(--pv2-paper-2));
+}
+
+.pv2-data-table .is-highlighted {
+  background: color-mix(in oklab, var(--pv2-amber) 24%, var(--pv2-paper-2));
+  font-weight: 900;
+}
+
+.pv2-inline-graph {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 10.5rem;
+}
+
+.pv2-inline-graph line {
+  stroke: var(--pv2-indigo);
+  stroke-width: 2;
+}
+
+.pv2-inline-graph .guide {
+  stroke: var(--pv2-coral);
+  stroke-dasharray: 5 5;
+}
+
+.pv2-inline-graph polyline {
+  fill: none;
+  stroke: var(--pv2-green);
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.pv2-inline-graph circle {
+  fill: var(--pv2-amber);
+  stroke: var(--pv2-slide-bg);
+  stroke-width: 2;
+}
+
+.pv2-inline-graph text {
+  fill: var(--pv2-muted);
+  font: 700 13px 'Inter', sans-serif;
+}
+
+.pv2-axis-compare {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.55rem;
+}
+
+.pv2-axis-compare section {
+  display: grid;
+  align-items: end;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.35rem;
+  min-height: 8rem;
+  padding: 0.6rem;
+  border: 1px solid var(--pv2-border);
+  border-radius: 12px;
+}
+
+.pv2-axis-compare section > strong {
+  grid-column: 1 / -1;
+  align-self: start;
+  font-size: 0.75rem;
+}
+
+.pv2-mini-bar {
+  display: grid;
+  grid-template-rows: 1fr auto auto;
+  justify-items: center;
+  align-items: end;
+  min-height: 6rem;
+  color: var(--pv2-muted);
+  font-size: 0.68rem;
+  font-weight: 800;
+}
+
+.pv2-mini-bar i {
+  display: block;
+  width: 70%;
+  min-height: 0.35rem;
+  border-radius: 999px 999px 0 0;
+  background: var(--pv2-green);
+}
+
 .pv2-slide-choiceComparison .pv2-slide-canvas,
 .pv2-slide-procedureRoute .pv2-slide-canvas {
   display: flex;
@@ -727,6 +959,13 @@ html[data-theme="dark"] .pv2-option p {
   .pv2-speaker-notes-open .pv2-slide.is-active .pv2-notes {
     align-self: stretch;
     margin-top: 0;
+  }
+}
+
+@media (max-width: 760px) {
+  .pv2-route-with-visual,
+  .pv2-visual-combo {
+    grid-template-columns: 1fr;
   }
 }
 

@@ -4,7 +4,7 @@ Generated: 2026-04-23
 Adopted main roadmap: 2026-04-25
 Last strategic update: 2026-05-19
 Roadmap ID: `references-team-roadmap`
-Roadmap version: `v2.48-l16r-dual-coding-incident`
+Roadmap version: `v2.47-sprint-log-and-lead-review-procedure`
 Roadmap status: `active`
 Version index: `docs/roadmaps/roadmap-version-index.json`
 Scope: `references/`, `build-scripts/references/`, `build-scripts/reports/`, reference dashboards, and generated reference reports under `reports/`
@@ -20,7 +20,7 @@ legacy bundles only.
 | Sprint | Name | Completed | Current State |
 |--------|------|-----------|---------------|
 | REF-CT1 | Year-1 Target Exercise And MTU Coverage Baseline For v5 | no | **ACTIVE / FOUNDATION-HARDENING SPRINT.** Use active v5, built evidence from `1.1.1` through `1.1.3`, and REF-CT0 categories to produce Year-1 paragraph coverage, MTU gap classification, missing-target exercise status, placeholder status, and candidate review packet before any CLI mutation. |
-| Content Track 2 | Year-1 Precision And Dual-Coding Audit | no | Planned content-track work, now sharpened by the L1.6R dual-coding incident. Record precision lint and semantic dual-coding status for graph/table exercise surfaces. Treat "procedure is correct but the learning object is absent" as a quality failure, not a flag. |
+| Content Track 2 | Year-1 Precision And Dual-Coding Audit | no | Planned content-track work. Record precision lint and dual-coding status for exercise surfaces where applicable. |
 | Content Track 3 | Year-2 Skeleton | no | Planned after REF-CT0/REF-CT1 framing. Prepare Year-2 skeleton with CvTE-vwo anchor status and `concept_orphan` flags for CP-7; do not treat the rough three-year blueprint as authoritative. |
 | R7.6 | RAG Quality Hardening | no | Planned. Close R7.4 follow-ups, split target-exercise chunks, expand retrieval eval coverage, backfill evidence anchors, and improve approved/pending/diagnostic labels. |
 | R14.1 | Curriculum Versioning | no | Planned earlier in the sequence. Track active v5, archived v4, the non-authoritative three-year prototype, built lesson outputs, and migrated/not-final target exercises so reports and retrieval do not silently mix incompatible source states. |
@@ -177,8 +177,6 @@ Update 2026-05-18: `SYNC-1 Roadmap Reconciliation` is completed. The reference r
 Update 2026-05-18: The Sprint Ledger now sits at the top of the roadmap, directly after metadata. The currently-active sprint sits first, future sprints follow in sequence, and closed sprints are archived in a separate `Closed Sprints` section.
 
 Update 2026-05-19: Sprint log procedure now co-locates new and currently-active sprint plans with baseline, result, diff, and review logs under `reports/sprints/`. Sprint closure now includes a structural lead-review assignment, round-1 review log, correction log, and round-2 recheck log; if the recheck is not `PASS` or `PASS WITH FLAGS`, agents must stop and report back instead of closing.
-
-Update 2026-05-19: L1.6R reopened the lesson-side `1.1.3` companion quality verdict for dual-coding failure. The L1.6 fresh-build and procedure-contract proof remains useful, but broad scaling is still blocked because the main graph/table explanation surfaces did not consistently show the table/graph learning objects. Reference-side Content Track 2 must treat semantic dual-coding as an evidence-backed quality gate: a correct procedure without the visible learning object is a failure, not a non-blocking flag.
 
 Compatibility decisions:
 
@@ -1396,18 +1394,11 @@ Required work:
 - Audit graph-based and visual reasoning exercises.
 - Record precision lint status where the verifier applies.
 - Record `dual_coding_present` for relevant guided-practice and scaffolded surfaces.
-- Use the L1.6R incident as the calibration example: a procedure can be
-  consistent and still fail if the graph/table object is absent.
-- Require semantic evidence, not just a boolean: table, graph, axis, point,
-  guide line, scale comparison, or other learning object must be inspectable in
-  the generated surface being reviewed.
 - Record `not_applicable` or equivalent where no graph/visual precision check applies.
 
 Required output: precision and dual-coding audit report.
 
-Stop condition: do not mark graph-heavy guided practice as quality-ready if
-`dual_coding_present` cannot be established with visible learning-object
-evidence.
+Stop condition: do not mark graph-heavy guided practice as quality-ready if `dual_coding_present` cannot be established.
 
 ### Content Track 3 Year-2 Skeleton
 

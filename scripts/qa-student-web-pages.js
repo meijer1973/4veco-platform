@@ -215,7 +215,7 @@ async function runPage(cdp, file, scenario) {
   const isGraphical = /grafiekenspel/i.test(path.basename(file));
   await waitFor(cdp, isGraphical
     ? 'Boolean(document.querySelector("#g-app svg.g-chart-svg"))'
-    : 'Boolean(document.querySelector(".resource-grid"))');
+    : 'Boolean(document.querySelector(".resource-grid, .lesson-shell, main"))');
   await sleep(250);
 
   const checks = await evaluate(cdp, `(() => {
@@ -226,9 +226,12 @@ async function runPage(cdp, file, scenario) {
       textLength: text.trim().length,
       rootTheme,
       horizontalOverflow,
+      hasResourceGrid: Boolean(document.querySelector(".resource-grid")),
+      hasLessonShell: Boolean(document.querySelector(".lesson-shell")),
       hasThreeRoutes: /Redeneren/.test(text) && /Rekenen/.test(text) && /Grafieken/.test(text),
       hasGrafiekenspel: /Grafiekenspel/.test(text),
       hasControl: /Controleer/.test(text),
+      visualObjectCount: document.querySelectorAll(".visual-object, .dual-card, .guided-source, .axis-compare").length,
       svgCount: document.querySelectorAll('svg.g-chart-svg').length,
       chartSpills: []
     };
@@ -290,7 +293,9 @@ async function main() {
       if (result.checks.rootTheme !== result.theme) return true;
       if (result.checks.horizontalOverflow) return true;
       if (isGraphical && (!result.checks.hasControl || result.checks.svgCount < 1 || result.checks.chartSpills.length)) return true;
-      if (!isGraphical && (!result.checks.hasThreeRoutes || !result.checks.hasGrafiekenspel)) return true;
+      if (!isGraphical && result.checks.hasResourceGrid && (!result.checks.hasThreeRoutes || !result.checks.hasGrafiekenspel)) return true;
+      if (!isGraphical && result.checks.hasLessonShell && result.checks.visualObjectCount < 1) return true;
+      if (!isGraphical && !result.checks.hasResourceGrid && !result.checks.hasLessonShell) return true;
       return false;
     });
 

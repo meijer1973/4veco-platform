@@ -115,12 +115,30 @@ function pageTemplate({ title, subtitle, active, body, accent = "grafisch" }) {
     .formula{font-family:var(--mono);background:var(--bg-lift);border-radius:8px;padding:12px;overflow:auto}
     .callout{border-left:5px solid var(--accent);background:var(--accent-soft);padding:14px 16px;border-radius:8px}
     .warning{border-left-color:var(--letop-ink);background:var(--letop-bg)}
+    .dual-card{display:grid;grid-template-columns:minmax(280px,.95fr) minmax(0,1.05fr);gap:16px;align-items:start}
+    .visual-object{border:1px solid var(--border);border-radius:8px;padding:12px;background:var(--bg);min-width:0}
+    .visual-object h3{margin:0 0 8px;font-size:1rem}
+    .visual-object p{margin:8px 0 0;color:var(--ink-soft);font-size:.92rem;line-height:1.45}
+    .source-table td.is-highlighted,.source-table th.is-highlighted{background:color-mix(in oklab,var(--accent) 22%,var(--bg-lift));font-weight:900}
+    .inline-graph{display:block;width:100%;height:auto;max-height:300px}
+    .inline-graph .axis{stroke:var(--ink);stroke-width:2}
+    .inline-graph .grid{stroke:var(--border);stroke-width:1}
+    .inline-graph .curve{fill:none;stroke:var(--accent);stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
+    .inline-graph .guide{stroke:var(--letop-ink);stroke-width:2;stroke-dasharray:6 5}
+    .inline-graph .point{fill:var(--economisch);stroke:var(--bg-card);stroke-width:2}
+    .inline-graph text{fill:var(--ink-soft);font:700 13px system-ui,sans-serif}
+    .axis-compare{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+    .axis-panel{border:1px solid var(--border);border-radius:8px;padding:10px;background:var(--bg)}
+    .axis-bars{height:150px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;align-items:end;border-left:2px solid var(--ink);border-bottom:2px solid var(--ink);padding:10px 10px 0;margin-top:8px}
+    .axis-bar{display:grid;align-items:end;justify-items:center;gap:4px;height:100%;font-size:.8rem;font-weight:800;color:var(--ink-soft)}
+    .axis-bar span:nth-child(2){width:46px;border-radius:6px 6px 0 0;background:var(--accent);display:block}
+    .guided-source{margin-top:12px}
     .mini-chart{display:grid;gap:10px}
     .bar-row{display:grid;grid-template-columns:96px 1fr 62px;gap:10px;align-items:center}
     .bar-track{height:18px;border-radius:999px;background:color-mix(in oklab,var(--accent) 14%,var(--bg-lift));overflow:hidden}
     .bar-fill{height:100%;border-radius:999px;background:var(--accent)}
     details.lesson-card summary{cursor:pointer;font-weight:800}
-    @media(max-width:980px){.content-grid{grid-template-columns:1fr}.side-note{position:static}.triple-grid,.card-grid{grid-template-columns:1fr}}
+    @media(max-width:980px){.content-grid{grid-template-columns:1fr}.side-note{position:static}.triple-grid,.card-grid,.dual-card,.axis-compare{grid-template-columns:1fr}}
   </style>
 </head>
 <body data-accent-domain="${esc(accent)}">
@@ -145,11 +163,108 @@ ${navHtml}
 </html>`;
 }
 
+function dualCard(visual, stepsHtml) {
+  return `<div class="dual-card">${visual}<div>${stepsHtml}</div></div>`;
+}
+
+function ijsTableVisual() {
+  const rows = [
+    ["EUR 1,00", "500 ijsjes"],
+    ["EUR 1,50", "400 ijsjes"],
+    ["EUR 2,00", "300 ijsjes"],
+    ["EUR 2,50", "200 ijsjes"],
+    ["EUR 3,00", "100 ijsjes"],
+  ];
+  return `<figure class="visual-object" data-visual-id="ice_table">
+    <h3>IJsjesverkoop: brongegevens</h3>
+    <table class="data-table source-table">
+      <thead><tr><th class="is-highlighted">Prijs per ijsje</th><th class="is-highlighted">Aantal verkocht</th></tr></thead>
+      <tbody>
+        ${rows.map(([p, q], i) => `<tr><td class="${i === 0 || i === 2 ? "is-highlighted" : ""}">${p}</td><td class="${i === 0 || i === 2 ? "is-highlighted" : ""}">${q}</td></tr>`).join("")}
+      </tbody>
+    </table>
+    <p>Lees eerst kop, rij en eenheid. Pas daarna kies je waarden voor een berekening.</p>
+  </figure>`;
+}
+
+function pqGraphVisual({ id = "pq_graph", title = "P-Q-grafiek", interpolation = false, caption = "Prijs staat verticaal; hoeveelheid staat horizontaal." } = {}) {
+  const points = [
+    [112, 60, "500;1,00"],
+    [172, 95, "400;1,50"],
+    [232, 130, "300;2,00"],
+    [292, 165, "200;2,50"],
+    [352, 200, "100;3,00"],
+  ];
+  const interpolationMarkup = interpolation
+    ? `\n      <line class="guide" x1="68" y1="112" x2="262" y2="112"></line><line class="guide" x1="262" y1="112" x2="262" y2="220"></line><circle class="point" cx="262" cy="112" r="6"></circle><text x="78" y="104">EUR 1,75</text><text x="270" y="214">ongeveer 350</text>`
+    : "";
+  return `<figure class="visual-object" data-visual-id="${esc(id)}">
+    <h3>${esc(title)}</h3>
+    <svg class="inline-graph" viewBox="0 0 430 270" role="img" aria-label="${esc(title)} met prijs op de verticale as en hoeveelheid op de horizontale as">
+      <line class="axis" x1="68" y1="220" x2="386" y2="220"></line>
+      <line class="axis" x1="68" y1="220" x2="68" y2="36"></line>
+      <line class="grid" x1="68" y1="164" x2="386" y2="164"></line>
+      <line class="grid" x1="68" y1="108" x2="386" y2="108"></line>
+      <text x="360" y="248">Q</text>
+      <text x="18" y="50">P</text>
+      <text x="40" y="64">EUR 1</text>
+      <text x="40" y="134">EUR 2</text>
+      <text x="40" y="204">EUR 3</text>
+      <text x="108" y="246">500</text>
+      <text x="228" y="246">300</text>
+      <text x="348" y="246">100</text>
+      <polyline class="curve" points="${points.map(([x, y]) => `${x},${y}`).join(" ")}"></polyline>
+      ${points.map(([x, y, label], i) => `<circle class="point" cx="${x}" cy="${y}" r="5"></circle>${i === 2 ? `<text x="${x + 8}" y="${y - 8}">(${label})</text>` : ""}`).join("")}${interpolationMarkup}
+    </svg>
+    <p>${esc(caption)}</p>
+  </figure>`;
+}
+
+function blankAxesVisual() {
+  return `<figure class="visual-object" data-visual-id="blank_axes_template">
+    <h3>Assen-template voor tekenen</h3>
+    <svg class="inline-graph" viewBox="0 0 430 270" role="img" aria-label="Lege P-Q assen om punten uit een tabel te tekenen">
+      <line class="axis" x1="68" y1="220" x2="386" y2="220"></line>
+      <line class="axis" x1="68" y1="220" x2="68" y2="36"></line>
+      <line class="grid" x1="68" y1="164" x2="386" y2="164"></line>
+      <line class="grid" x1="68" y1="108" x2="386" y2="108"></line>
+      <text x="360" y="248">Q</text>
+      <text x="18" y="50">P</text>
+      <circle class="point" cx="118" cy="188" r="5"></circle><text x="126" y="180">(40;3,00)</text>
+      <circle class="point" cx="352" cy="76" r="5"></circle><text x="250" y="68">(200;1,00)</text>
+    </svg>
+    <p>Zet punten uit als (Q; P), dus hoeveelheid eerst en prijs daarna.</p>
+  </figure>`;
+}
+
+function axisComparisonVisual() {
+  return `<figure class="visual-object" data-visual-id="misleading_axis_comparison">
+    <h3>Zelfde data, andere schaal</h3>
+    <div class="axis-compare">
+      <section class="axis-panel">
+        <strong>Y-as vanaf 0</strong>
+        <div class="axis-bars">
+          <div class="axis-bar"><span>Week 1</span><span style="height:96%"></span><b>520</b></div>
+          <div class="axis-bar"><span>Week 2</span><span style="height:92%"></span><b>500</b></div>
+        </div>
+      </section>
+      <section class="axis-panel">
+        <strong>Y-as vanaf 490</strong>
+        <div class="axis-bars">
+          <div class="axis-bar"><span>Week 1</span><span style="height:96%"></span><b>520</b></div>
+          <div class="axis-bar"><span>Week 2</span><span style="height:34%"></span><b>500</b></div>
+        </div>
+      </section>
+    </div>
+    <p>De waarden zijn gelijk, maar de ingezoomde as maakt het verschil groter.</p>
+  </figure>`;
+}
+
 function writeParagraphPlan() {
   writeFile(path.join(PAR_DIR, "_paragraph-plan.md"), `# Paragraph Plan - ${PAR_NR} ${PAR_NAME}
 
-Generated: 2026-05-18
-Sprint: L1.6 Second Pipeline Regression Paragraph
+Generated: 2026-05-19
+Sprint: L1.6R Dual-Coding Remediation
 Profile: student-web, no default Word exports
 
 ## Learning Goals
@@ -217,6 +332,35 @@ language; no internal unit code or PV label is shown.
 - Nieuwsvisual: askeuze en afgesneden assen als bron van misleiding.
 - Grafiekenspel: dezelfde tabel/grafiekvaardigheden als interactieve oefenroute.
 
+## Dual-Coding Contract
+
+Required learning objects:
+
+- ice_table:
+  - type: table
+  - must appear in: uitleg vaardigheden, presentatie, begeleide inoefening
+  - semantic anchors: prijs per ijsje, aantal verkocht, EUR 1,00, EUR 2,00,
+    500 ijsjes, 300 ijsjes
+- pq_graph:
+  - type: graph
+  - must appear in: uitleg voorkennis, uitleg vaardigheden, presentatie,
+    samenvatting
+  - semantic anchors: P vertical, Q horizontal, (300; 2,00)
+- interpolation_graph:
+  - type: graph
+  - must appear in: uitleg vaardigheden, presentatie, begeleide inoefening
+  - semantic anchors: EUR 1,75, ongeveer 350, guide lines
+- misleading_axis_comparison:
+  - type: graph_pair
+  - must appear in: uitleg vaardigheden, presentatie, nieuws met visual,
+    samenvatting, begeleide inoefening
+  - semantic anchors: y-axis from 0, y-axis from 490, same data different scale
+
+Closure rule:
+
+For this paragraph, a procedure route without the required visual learning
+object is a companion hard fail, even if procedure-contract validation passes.
+
 ## Terminologie
 
 - tabelkop, rijlabel, kolomlabel en eenheid
@@ -249,6 +393,8 @@ sprint does not mark it final-reviewed.
 - Part A publisher-print validator remains green.
 - Graphical-game data validates and renders on desktop/mobile in light/dark.
 - Procedure-contract validator passes, including the 1.1.3 table-value route.
+- Semantic visual QA confirms required graph/table learning objects are present
+  in the generated companion surfaces.
 - No student-facing internal code or blocked-use claim appears.
 - Student-experience and teacher-learning-quality review records exist before closure.
 `);
@@ -275,8 +421,12 @@ function writeRichPages() {
         </article>
         <article class="lesson-card">
           <h2>2. Coördinaten lezen</h2>
-          <p>Een punt in een economische P-Q grafiek schrijf je vaak als <strong>(Q; P)</strong>: hoeveelheid horizontaal, prijs verticaal.</p>
-          <div class="callout">Voorbeeld: (300; 2,00) betekent 300 ijsjes bij een prijs van EUR 2,00.</div>
+          ${dualCard(pqGraphVisual({
+            id: "voorkennis_pq_point",
+            title: "Punt in een P-Q-grafiek",
+            caption: "(300; 2,00) betekent 300 ijsjes bij een prijs van EUR 2,00."
+          }), `<p>Een punt in een economische P-Q grafiek schrijf je vaak als <strong>(Q; P)</strong>: hoeveelheid horizontaal, prijs verticaal.</p>
+          <div class="callout">Voorbeeld: (300; 2,00) betekent 300 ijsjes bij een prijs van EUR 2,00.</div>`)}
         </article>
         <article class="lesson-card">
           <h2>3. Herhaling uit percentages en indexcijfers</h2>
@@ -304,34 +454,39 @@ function writeRichPages() {
       <section class="main-flow">
         <article class="lesson-card">
           <h2>Tabelwaarden selecteren voor een berekening</h2>
-          <ol class="step-list">
+          ${dualCard(ijsTableVisual(), `<ol class="step-list">
             <li><strong>Lees de vraag.</strong> Bepaal welke grootheid, periode, rij of kolom nodig is.</li>
             <li><strong>Controleer de bron.</strong> Kijk naar tabelkop, rijlabel, kolomlabel en eenheid.</li>
             <li><strong>Selecteer de waarden.</strong> Kies de oude waarde, nieuwe waarde of gevraagde waarde voordat je rekent.</li>
             <li><strong>Label je waarden.</strong> Noteer bijvoorbeeld: oud = 500 ijsjes, nieuw = 300 ijsjes.</li>
-          </ol>
+          </ol>`)}
         </article>
         <article class="lesson-card">
           <h2>Grafiek tekenen van tabeldata</h2>
-          <ol class="step-list">
+          ${dualCard(pqGraphVisual({ id: "vaardigheden_pq_graph", title: "Tabelpunten als P-Q-grafiek" }), `<ol class="step-list">
             <li>Bepaal welke variabelen in de tabel staan.</li>
             <li>Zet in economie de prijs op de verticale as en hoeveelheid op de horizontale as.</li>
             <li>Kies een schaalverdeling die alle punten netjes laat passen.</li>
             <li>Zet de punten uit en verbind ze passend.</li>
-          </ol>
+          </ol>`)}
         </article>
         <article class="lesson-card">
           <h2>Waarden aflezen en interpoleren</h2>
-          <ol class="step-list">
+          ${dualCard(pqGraphVisual({
+            id: "vaardigheden_interpolation_graph",
+            title: "Interpoleren bij EUR 1,75",
+            interpolation: true,
+            caption: "Gebruik hulplijnen: van prijs naar grafiek, daarna naar hoeveelheid."
+          }), `<ol class="step-list">
             <li>Lees titel, assen en eenheden.</li>
             <li>Zoek de gevraagde waarde op de juiste as.</li>
             <li>Lees de bijbehorende waarde op de andere as.</li>
             <li>Schat tussen twee bekende punten als de waarde niet exact in de tabel staat.</li>
-          </ol>
+          </ol>`)}
         </article>
         <article class="lesson-card warning">
           <h2>Valkuil</h2>
-          <p>Een grafiek kan een verschil groter laten lijken door de as niet bij nul te laten beginnen. Kijk daarom altijd naar de schaal voordat je een conclusie trekt.</p>
+          ${dualCard(axisComparisonVisual(), `<p>Een grafiek kan een verschil groter laten lijken door de as niet bij nul te laten beginnen. Kijk daarom altijd naar de schaal voordat je een conclusie trekt.</p>`)}
         </article>
       </section>
       <aside class="side-note">
@@ -354,6 +509,10 @@ function writeRichPages() {
           <div class="step-card"><h3>Tabel</h3><p>Lees kolomkoppen, rijlabels en eenheden voordat je een getal kiest.</p></div>
           <div class="step-card"><h3>Grafiek</h3><p>In economie staat prijs op de verticale as en hoeveelheid op de horizontale as.</p></div>
           <div class="step-card"><h3>Claim</h3><p>Vraag bij elk percentage: vergeleken met wat?</p></div>
+        </div>
+        <div class="card-grid" style="margin-top:14px">
+          ${pqGraphVisual({ id: "summary_pq_graph", title: "P-Q herinnering", caption: "P verticaal, Q horizontaal." })}
+          ${axisComparisonVisual()}
         </div>
       </article>
       <article class="lesson-card">
@@ -384,27 +543,41 @@ function writeRichPages() {
           <li>Label de gekozen waarden zodat je berekening controleerbaar blijft.</li>
         </ol>
       </article>
-      ${guidedExercise("Opgave 1 - Broodjesgrafiek", [
+      ${guidedExercise("Opgave 1 - Broodjesgrafiek", pqGraphVisual({
+        id: "guided_bread_graph",
+        title: "Broodjesverkoop: bron-grafiek",
+        caption: "Lees prijs op de verticale as en hoeveelheid op de horizontale as."
+      }), [
         "Zoek eerst de prijs op de verticale as.",
         "Ga horizontaal naar de lijn en daarna verticaal naar de hoeveelheid.",
         "Beschrijf daarna het verband in woorden."
       ], "Bij EUR 3,00 worden 200 broodjes verkocht. Bij 150 broodjes hoort EUR 3,50. Het verband is negatief: hogere prijs, lagere verkoop.")}
-      ${guidedExercise("Opgave 2 - Koffie tekenen", [
+      ${guidedExercise("Opgave 2 - Koffie tekenen", `${ijsTableVisual()}<div class="guided-source">${blankAxesVisual()}</div>`, [
         "Zet hoeveelheid op de horizontale as en prijs op de verticale as.",
         "Kies een schaal die 40 tot 200 bekers en EUR 1,00 tot EUR 3,00 laat passen.",
         "Zet de punten uit als (Q; P), bijvoorbeeld (200; 1,00)."
       ], "De grafiek is een dalende rechte lijn. Bij elke prijsstijging van EUR 0,50 daalt de verkoop met 40 bekers.")}
-      ${guidedExercise("Opgave 3 - Bioscoop interpoleren", [
+      ${guidedExercise("Opgave 3 - Bioscoop interpoleren", pqGraphVisual({
+        id: "guided_cinema_interpolation",
+        title: "Bioscoopbezoekers interpoleren",
+        interpolation: true,
+        caption: "Gebruik hulplijnen om een tussenliggende prijs af te lezen."
+      }), [
         "Lees EUR 9,00 direct af.",
         "EUR 11,00 ligt midden tussen EUR 10,00 en EUR 12,00.",
         "Voor de procentuele verandering gebruik je de oude waarde als basis."
       ], "Bij EUR 9,00 komen 500 bezoekers. Bij EUR 11,00 ongeveer 300 bezoekers. Van 600 naar 200 is -66,7%.")}
-      ${guidedExercise("Opgave 4 - Water en index", [
+      ${guidedExercise("Opgave 4 - Water en index", pqGraphVisual({
+        id: "guided_water_two_point",
+        title: "Waterverkoop: twee punten",
+        interpolation: true,
+        caption: "Twee punten geven genoeg steun om ongeveer af te lezen."
+      }), [
         "Teken de twee punten (500; 0,80) en (350; 1,20).",
         "EUR 1,00 ligt midden tussen beide prijzen.",
         "Gebruik januari als basis voor het indexcijfer."
       ], "Bij EUR 1,00 lees je 425 flesjes af. Index juni = 350 / 500 x 100 = 70. De daling is 30%, niet een derde.")}
-      ${guidedExercise("Opgave 5 - Misleidende assen", [
+      ${guidedExercise("Opgave 5 - Misleidende assen", axisComparisonVisual(), [
         "Vergelijk een grafiek die bij nul start met een ingezoomde as.",
         "Let op hoe steil of dramatisch de daling lijkt.",
         "Noem in je antwoord altijd de schaalkeuze."
@@ -421,10 +594,7 @@ function writeRichPages() {
         <article class="lesson-card">
           <h2>Kop: verkoop lijkt plotseling ingestort</h2>
           <p>Stel dat een bericht laat zien dat de verkoop van een product van 520 naar 500 daalt. In een grafiek die bij 0 begint is dat een kleine daling. In een grafiek die bij 490 begint lijkt dezelfde daling groot.</p>
-          <div class="mini-chart" aria-label="Twee eenvoudige staafvergelijkingen">
-            <div class="bar-row"><strong>Week 1</strong><span class="bar-track"><span class="bar-fill" style="width:96%"></span></span><span>520</span></div>
-            <div class="bar-row"><strong>Week 2</strong><span class="bar-track"><span class="bar-fill" style="width:92%"></span></span><span>500</span></div>
-          </div>
+          ${axisComparisonVisual()}
         </article>
         <article class="lesson-card warning">
           <h2>Controleer de schaal</h2>
@@ -463,9 +633,10 @@ function writeRichPages() {
   }));
 }
 
-function guidedExercise(title, steps, answer) {
+function guidedExercise(title, visual, steps, answer) {
   return `<details class="lesson-card">
     <summary>${esc(title)}</summary>
+    <div class="guided-source">${visual}</div>
     <ol>${steps.map(step => `<li>${esc(step)}</li>`).join("")}</ol>
     <div class="callout"><strong>Controle:</strong> ${esc(answer)}</div>
   </details>`;
@@ -661,8 +832,8 @@ var REASONING_META = {
 function writeReviewAndQuality() {
   writeFile(path.join(PAR_DIR, "1.1.3-companion-visual-review.md"), `# Companion Visual Review - 1.1.3 Grafieken en tabellen
 
-Date: 2026-05-18
-Sprint: L1.6
+Date: 2026-05-19
+Sprint: L1.6R
 
 ## Verdict
 
@@ -670,30 +841,44 @@ PASS WITH FLAGS
 
 ## Scope
 
-Reviewed generated student-web companion surfaces for layout intent, graph/table
-alignment, dark-mode readiness, and game coverage. This is a pre-human-review
-record; student-experience and teacher-learning-quality records are still
-required before L1.6 closure.
+Reviewed generated student-web companion surfaces after the L1.6R dual-coding
+remediation. This is a companion visual review record; L1.6R still requires
+student-experience, teacher-learning-quality, and lead-review records before
+closure.
 
 ## Current Judgment
 
-- Landing route should expose Redeneren, Rekenen and Grafieken after deploy.
-- Grafiekenspel is required for this paragraph and must be screenshot-checked.
+- Presentation, vaardigheden, begeleide inoefening, voorkennis, samenvatting,
+  and nieuws met visual now show concrete graph/table learning objects.
+- Each core procedure is paired with a worked visual example and a student
+  action route.
 - The A61-style table-value route uses ordinary student language and avoids
   internal code exposure.
+- Grafiekenspel remains graph-based and still carries the MVP/scaffolded flag.
 - The v5 target exercise remains migrated and requires later v5 quality review.
 
-## Flags To Check During QA
+## Semantic Visual Evidence
 
-- Mobile graph charts must not clip.
-- The economics axis convention must stay visible in vaardigheden, presentation
-  and guided practice.
-- Graph values are still scaffolded; harder unlabeled graph-reading variants
-  can be deferred to L1.7 or later.
+- ice_table appears in vaardigheden, presentation, and begeleide inoefening.
+- pq_graph appears in voorkennis, vaardigheden, presentation, and samenvatting.
+- interpolation_graph appears in vaardigheden, presentation, and begeleide
+  inoefening.
+- misleading_axis_comparison appears in vaardigheden, presentation,
+  nieuws met visual, samenvatting, and begeleide inoefening.
+
+## Remaining Flags
+
+- The graphical game and several visuals are still scaffolded MVP surfaces.
+- Harder unlabeled graph-reading variants remain later work.
+- Rendered screenshot QA passed after remediation: presentation-v2
+  desktop/fullscreen/notes/mobile/dark scenarios and rich student-web page
+  desktop/mobile light/dark scenarios.
+- L1.6R still needs student-experience, teacher-learning-quality, and lead
+  human review before closure.
 `);
 
   writeFile(path.join(PAR_DIR, "1.1.3-quality-ref.yaml"), `# Quality Reference - 1.1.3 Grafieken en tabellen
-# Refreshed: 2026-05-18 (L1.6 active)
+# Refreshed: 2026-05-19 (L1.6R dual-coding remediation)
 
 paragraph: "1.1.3"
 title: "Grafieken en tabellen"
@@ -727,11 +912,19 @@ partA:
 companion:
   review_file: "1.1.3-companion-visual-review.md"
   review_verdict: "PASS WITH FLAGS"
-  last_reviewed: "2026-05-18"
+  last_reviewed: "2026-05-19"
   hard_fails_open: 0
-  human_review_status: "pass_with_flags"
+  human_review_status: "l16r_visual_remediated_pending_human_review"
   default_office_exports: false
   student_facing_internal_codes: false
+  l16r_dual_coding:
+    status: "visual_remediated_pending_human_review"
+    required_objects_present:
+      ice_table: true
+      pq_graph: true
+      interpolation_graph: true
+      misleading_axis_comparison: true
+    closure_note: "Procedure parity is not treated as sufficient without visible learning objects."
   procedures:
     tabelwaarden_selecteren_step_count: 4
     grafiek_aflezen_step_count: 4
@@ -739,13 +932,13 @@ companion:
     active_skills: ["A61", "A62", "A63", "A38", "A39"]
     coverage_note: "A61/A62/A63 cover table and graph reading; A38/A39 support percentage and index use with graph/table values."
   surfaces:
-    voorkennis_html: pass_with_flags
-    vaardigheden_html: pass_with_flags
+    voorkennis_html: l16r_visual_remediated_pending_human_review
+    vaardigheden_html: l16r_visual_remediated_pending_human_review
     presentatie_pptx: pass_with_flags
-    presentatie_html: pass_with_flags
-    nieuws_html: pass_with_flags
-    samenvatting_html: pass_with_flags
-    begeleide_inoefening_html: pass_with_flags
+    presentatie_html: l16r_visual_remediated_pending_human_review
+    nieuws_html: l16r_visual_remediated_pending_human_review
+    samenvatting_html: l16r_visual_remediated_pending_human_review
+    begeleide_inoefening_html: l16r_visual_remediated_pending_human_review
     youtube_videos_html: pass_with_flags
     games:
       instapquiz: pass_with_flags
@@ -772,46 +965,101 @@ async function writePresentation() {
   };
   pptx.defineLayout({ name: "LAYOUT_WIDE", width: 13.333, height: 7.5 });
 
-  const colors = { ink: "102A43", teal: "0F766E", pale: "ECFEFF", amber: "B45309", white: "FFFFFF" };
-  function slide(title, subtitle, bullets, notes) {
+  const colors = { ink: "102A43", teal: "0F766E", pale: "ECFEFF", amber: "B45309", green: "2F7D4A", coral: "8A2D0E", white: "FFFFFF" };
+  function visualSlide(title, subtitle, bullets, notes, drawVisual) {
     const s = pptx.addSlide();
     s.background = { color: "F8FAFC" };
     s.addText(`\u00A7${PAR_NR}`, { x: 0.7, y: 0.35, w: 1.2, h: 0.25, fontSize: 12, bold: true, color: colors.teal, margin: 0 });
     s.addText(title, { x: 0.7, y: 0.8, w: 11.8, h: 0.55, fontSize: 30, bold: true, color: colors.ink, margin: 0, fit: "shrink" });
     s.addText(subtitle, { x: 0.72, y: 1.43, w: 10.8, h: 0.35, fontSize: 15, color: "52606D", margin: 0 });
+    drawVisual(s);
     bullets.forEach((b, i) => {
-      const y = 2.15 + i * 0.78;
-      s.addShape(pptx.ShapeType.roundRect, { x: 1.0, y, w: 11.0, h: 0.5, rectRadius: 0.08, fill: { color: i % 2 ? "FFFFFF" : colors.pale }, line: { color: "BAE6FD" } });
-      s.addText(b, { x: 1.25, y: y + 0.13, w: 10.4, h: 0.2, fontSize: 15, color: colors.ink, margin: 0, fit: "shrink" });
+      const y = 4.9 + i * 0.56;
+      s.addShape(pptx.ShapeType.roundRect, { x: 0.85, y, w: 11.7, h: 0.42, rectRadius: 0.06, fill: { color: i % 2 ? "FFFFFF" : colors.pale }, line: { color: "BAE6FD" } });
+      s.addText(b, { x: 1.1, y: y + 0.1, w: 11.1, h: 0.18, fontSize: 12.5, color: colors.ink, margin: 0, fit: "shrink" });
     });
     s.addNotes(notes);
   }
 
-  slide("Van tabel naar verhaal", "Eerst de bron lezen, daarna pas tekenen of rekenen.", [
+  function addIceTable(s, x, y, w, h) {
+    const rows = [["Prijs", "Verkoop"], ["EUR 1,00", "500"], ["EUR 1,50", "400"], ["EUR 2,00", "300"], ["EUR 2,50", "200"], ["EUR 3,00", "100"]];
+    const rowH = h / rows.length;
+    const colW = w / 2;
+    rows.forEach((row, ri) => row.forEach((cell, ci) => {
+      const fill = ri === 0 || ri === 1 || ri === 3 ? (ri === 0 ? "DDF7EF" : "FFF4CC") : "FFFFFF";
+      s.addShape(pptx.ShapeType.rect, { x: x + ci * colW, y: y + ri * rowH, w: colW, h: rowH, fill: { color: fill }, line: { color: "CBD5E1" } });
+      s.addText(cell, { x: x + ci * colW + 0.06, y: y + ri * rowH + 0.07, w: colW - 0.12, h: rowH - 0.08, fontSize: ri === 0 ? 11 : 10, bold: ri === 0 || ri === 1 || ri === 3, color: colors.ink, margin: 0, fit: "shrink" });
+    }));
+  }
+
+  function addPqGraph(s, x, y, w, h, interpolation = false) {
+    s.addShape(pptx.ShapeType.rect, { x, y, w, h, fill: { color: "FFFFFF" }, line: { color: "CBD5E1" } });
+    s.addShape(pptx.ShapeType.line, { x: x + 0.55, y: y + h - 0.45, w: w - 0.85, h: 0, line: { color: colors.ink, width: 1.4 } });
+    s.addShape(pptx.ShapeType.line, { x: x + 0.55, y: y + h - 0.45, w: 0, h: -h + 0.75, line: { color: colors.ink, width: 1.4 } });
+    s.addText("P", { x: x + 0.15, y: y + 0.16, w: 0.25, h: 0.2, fontSize: 12, bold: true, color: colors.ink, margin: 0 });
+    s.addText("Q", { x: x + w - 0.42, y: y + h - 0.28, w: 0.25, h: 0.2, fontSize: 12, bold: true, color: colors.ink, margin: 0 });
+    const pts = [
+      [x + 0.98, y + 0.62],
+      [x + 1.88, y + 1.02],
+      [x + 2.78, y + 1.42],
+      [x + 3.68, y + 1.82],
+      [x + 4.58, y + 2.22],
+    ];
+    for (let i = 0; i < pts.length - 1; i++) {
+      s.addShape(pptx.ShapeType.line, { x: pts[i][0], y: pts[i][1], w: pts[i + 1][0] - pts[i][0], h: pts[i + 1][1] - pts[i][1], line: { color: colors.green, width: 2.4 } });
+    }
+    pts.forEach(([px, py], i) => {
+      s.addShape(pptx.ShapeType.ellipse, { x: px - 0.045, y: py - 0.045, w: 0.09, h: 0.09, fill: { color: colors.amber }, line: { color: colors.white } });
+      if (i === 2) s.addText("(300; 2,00)", { x: px + 0.12, y: py - 0.2, w: 1.2, h: 0.2, fontSize: 9, color: colors.ink, margin: 0 });
+    });
+    if (interpolation) {
+      const gx = x + 3.18;
+      const gy = y + 1.26;
+      s.addShape(pptx.ShapeType.line, { x: x + 0.55, y: gy, w: gx - (x + 0.55), h: 0, line: { color: colors.coral, width: 1.6, dash: "dash" } });
+      s.addShape(pptx.ShapeType.line, { x: gx, y: gy, w: 0, h: y + h - 0.45 - gy, line: { color: colors.coral, width: 1.6, dash: "dash" } });
+      s.addText("EUR 1,75", { x: x + 0.7, y: gy - 0.24, w: 0.9, h: 0.18, fontSize: 8.5, color: colors.coral, margin: 0 });
+      s.addText("Q ~ 350", { x: gx + 0.08, y: y + h - 0.68, w: 0.9, h: 0.18, fontSize: 8.5, color: colors.coral, margin: 0 });
+    }
+  }
+
+  function addAxisComparison(s, x, y, w, h) {
+    [["as vanaf 0", 0.92, 0.88], ["as vanaf 490", 0.92, 0.34]].forEach(([title, a, b], idx) => {
+      const px = x + idx * (w / 2 + 0.12);
+      const pw = w / 2 - 0.12;
+      s.addShape(pptx.ShapeType.rect, { x: px, y, w: pw, h, fill: { color: "FFFFFF" }, line: { color: "CBD5E1" } });
+      s.addText(title, { x: px + 0.12, y: y + 0.12, w: pw - 0.24, h: 0.2, fontSize: 10, bold: true, color: colors.ink, margin: 0 });
+      [[0.38, a, "520"], [1.23, b, "500"]].forEach(([off, height, label]) => {
+        s.addShape(pptx.ShapeType.rect, { x: px + off, y: y + h - 0.35 - height * 1.5, w: 0.46, h: height * 1.5, fill: { color: colors.green }, line: { color: colors.green } });
+        s.addText(label, { x: px + off - 0.03, y: y + h - 0.26, w: 0.55, h: 0.16, fontSize: 8.5, color: colors.ink, margin: 0 });
+      });
+    });
+  }
+
+  visualSlide("Van tabel naar verhaal", "Eerst de bron lezen, daarna pas tekenen of rekenen.", [
     "Prijs en aantal verkochte ijsjes staan in verschillende kolommen.",
     "Een tabel ordent de data; een grafiek maakt het verband zichtbaar.",
     "De eerste vraag is steeds: wat betekenen deze getallen?"
-  ], "Start met de ijskraam. Laat leerlingen hardop noemen wat de twee kolommen betekenen. Maak duidelijk dat een grafiek pas betrouwbaar is als de bron goed gelezen is.");
-  slide("Tabelwaarden kiezen", "Kies niet zomaar een zichtbaar getal.", [
+  ], "Start met de ijskraam. Laat leerlingen hardop noemen wat de twee kolommen betekenen. Maak duidelijk dat een grafiek pas betrouwbaar is als de bron goed gelezen is.", (s) => { addIceTable(s, 0.9, 2.05, 4.4, 2.45); addPqGraph(s, 6.2, 2.05, 5.5, 2.45); });
+  visualSlide("Tabelwaarden kiezen", "Kies niet zomaar een zichtbaar getal.", [
     "Lees de vraag: welke rij, kolom of periode heb je nodig?",
     "Controleer tabelkop, rijlabel, kolomlabel en eenheid.",
     "Label je waarden: oud = 500 ijsjes, nieuw = 300 ijsjes."
-  ], "Dit is de bronwaarde-route. De kern is dat leerlingen eerst labelen. Zonder labels zijn latere berekeningen moeilijk te controleren.");
-  slide("De economie-conventie", "In P-Q grafieken staat prijs verticaal.", [
+  ], "Dit is de bronwaarde-route. De kern is dat leerlingen eerst labelen. Zonder labels zijn latere berekeningen moeilijk te controleren.", (s) => addIceTable(s, 3.2, 2.0, 6.4, 2.55));
+  visualSlide("De economie-conventie", "In P-Q grafieken staat prijs verticaal.", [
     "P staat op de verticale as.",
     "Q staat op de horizontale as.",
     "Een punt schrijf je als (Q; P), bijvoorbeeld (300; 2,00)."
-  ], "Benadruk dat dit anders voelt dan bij wiskunde, maar in economie heel bewust gebeurt. Laat leerlingen de assen aanwijzen voordat ze een punt tekenen.");
-  slide("Interpoleren", "Schatten tussen twee bekende punten.", [
+  ], "Benadruk dat dit anders voelt dan bij wiskunde, maar in economie heel bewust gebeurt. Laat leerlingen de assen aanwijzen voordat ze een punt tekenen.", (s) => addPqGraph(s, 3.4, 2.0, 6.2, 2.6));
+  visualSlide("Interpoleren", "Schatten tussen twee bekende punten.", [
     "Zoek EUR 1,75 op de prijsas.",
     "Trek een lijn naar de grafiek en lees Q af.",
     "Tussen 400 en 300 ligt ongeveer 350."
-  ], "Interpoleren is hier niet gokken. Het is schatten met informatie: de prijs ligt in het midden, dus bij een rechte lijn ligt de hoeveelheid ook in het midden.");
-  slide("Kritisch kijken", "Een grafiek kan sturen hoe groot een verschil voelt.", [
+  ], "Interpoleren is hier niet gokken. Het is schatten met informatie: de prijs ligt in het midden, dus bij een rechte lijn ligt de hoeveelheid ook in het midden.", (s) => addPqGraph(s, 3.4, 2.0, 6.2, 2.6, true));
+  visualSlide("Kritisch kijken", "Een grafiek kan sturen hoe groot een verschil voelt.", [
     "Controleer altijd of de as bij nul begint.",
     "Vraag welke twee waarden worden vergeleken.",
     "Een kop met procenten klopt alleen met de juiste basis."
-  ], "Sluit af met grafiekgeletterdheid. Een schaalkeuze kan een klein verschil dramatischer laten lijken. Dat maakt de broncheck economisch belangrijk.");
+  ], "Sluit af met grafiekgeletterdheid. Een schaalkeuze kan een klein verschil dramatischer laten lijken. Dat maakt de broncheck economisch belangrijk.", (s) => addAxisComparison(s, 2.0, 2.05, 8.9, 2.45));
 
   const pptxPath = path.join(PAR_DIR, fileName("presentatie", "pptx"));
   await pptx.writeFile({ fileName: pptxPath });
@@ -828,6 +1076,51 @@ async function writePresentation() {
 
 function presentationV2Deck() {
   const notes = (...script) => ({ script });
+  const tableVisual = {
+    type: "table",
+    id: "slide_ice_table",
+    title: "IJsjesverkoop",
+    headers: ["Prijs", "Aantal verkocht"],
+    rows: [
+      [{ text: "EUR 1,00", highlight: true }, { text: "500 ijsjes", highlight: true }],
+      ["EUR 1,50", "400 ijsjes"],
+      [{ text: "EUR 2,00", highlight: true }, { text: "300 ijsjes", highlight: true }],
+      ["EUR 2,50", "200 ijsjes"],
+      ["EUR 3,00", "100 ijsjes"],
+    ],
+    caption: "De geselecteerde waarden krijgen pas betekenis met label en eenheid."
+  };
+  const pqVisual = {
+    type: "pqGraph",
+    id: "slide_pq_graph",
+    title: "P-Q-grafiek",
+    alt: "P-Q-grafiek met prijs verticaal en hoeveelheid horizontaal",
+    points: [
+      { x: 330, y: 62, label: "" },
+      { x: 275, y: 94, label: "" },
+      { x: 220, y: 126, label: "(300;2,00)" },
+      { x: 165, y: 158, label: "" },
+      { x: 110, y: 190, label: "" }
+    ],
+    caption: "Prijs staat verticaal; hoeveelheid staat horizontaal."
+  };
+  const interpolationVisual = {
+    ...pqVisual,
+    id: "slide_interpolation_graph",
+    title: "Interpoleren bij EUR 1,75",
+    guides: { x: 248, y: 112, xLabel: "Q ~ 350", yLabel: "EUR 1,75" },
+    caption: "Hulplijnen maken de schatting controleerbaar."
+  };
+  const axisVisual = {
+    type: "axisComparison",
+    id: "slide_misleading_axis_comparison",
+    title: "Zelfde data, andere schaal",
+    panels: [
+      { title: "Y-as vanaf 0", values: [{ label: "Week 1", height: 96, value: "520" }, { label: "Week 2", height: 92, value: "500" }] },
+      { title: "Y-as vanaf 490", values: [{ label: "Week 1", height: 96, value: "520" }, { label: "Week 2", height: 34, value: "500" }] }
+    ],
+    caption: "De ingezoomde as maakt dezelfde daling dramatischer."
+  };
   return {
     version: "presentation-v2",
     titleLabel: "Presentatie",
@@ -851,6 +1144,7 @@ function presentationV2Deck() {
           wanted: { label: "verkoop", value: "500" },
           gap: { label: "hoge prijs", value: "EUR 3,00 -> 100" }
         },
+        visual: { type: "combo", id: "slide_start_table_graph", items: [tableVisual, pqVisual] },
         paths: [
           { label: "tabel", text: "rijen en kolommen" },
           { label: "grafiek", text: "verband in beeld" }
@@ -862,21 +1156,21 @@ function presentationV2Deck() {
         ["02", "Controleer labels", "Tabelkop, rijlabel, kolomlabel en eenheid."],
         ["03", "Selecteer waarden", "Kies oud, nieuw of de gevraagde waarde."],
         ["04", "Label je waarden", "Schrijf bijvoorbeeld oud = 500 ijsjes."]
-      ], "Gebruik deze route voordat je gaat rekenen met procenten of indexcijfers.", notes("Dit is de belangrijkste broncontrole. Leerlingen moeten leren dat het getal pas betekenis heeft met label en eenheid.", "Gebruik de gewone leerlingnaam: tabelwaarden selecteren voor een berekening."))
+      ], "Gebruik deze route voordat je gaat rekenen met procenten of indexcijfers.", notes("Dit is de belangrijkste broncontrole. Leerlingen moeten leren dat het getal pas betekenis heeft met label en eenheid.", "Gebruik de gewone leerlingnaam: tabelwaarden selecteren voor een berekening."), tableVisual)
       ,
       procedureSlide("assen", "Assen", "Grafiek tekenen van tabeldata", [
         ["01", "Bepaal variabelen", "Prijs en hoeveelheid."],
         ["02", "Kies assen", "Prijs verticaal, hoeveelheid horizontaal."],
         ["03", "Kies schaal", "Alle punten moeten passen."],
         ["04", "Zet punten uit", "Verbind ze passend."]
-      ], "In economie staat P op de verticale as en Q op de horizontale as.", notes("Dit is de dia waarop je de economie-conventie stevig neerzet. Laat leerlingen een punt als (Q; P) uitspreken.", "De valkuil is dat leerlingen vanuit wiskunde automatisch prijs horizontaal zetten."))
+      ], "In economie staat P op de verticale as en Q op de horizontale as.", notes("Dit is de dia waarop je de economie-conventie stevig neerzet. Laat leerlingen een punt als (Q; P) uitspreken.", "De valkuil is dat leerlingen vanuit wiskunde automatisch prijs horizontaal zetten."), pqVisual)
       ,
       procedureSlide("aflezen", "Aflezen", "Waarden aflezen en interpoleren", [
         ["01", "Lees titel en assen", "Wat meet de grafiek?"],
         ["02", "Zoek de waarde", "Bijvoorbeeld EUR 1,75 op de prijsas."],
         ["03", "Trek hulplijnen", "Naar de grafiek en dan naar de andere as."],
         ["04", "Schat netjes", "Tussen 400 en 300 ligt ongeveer 350."]
-      ], "Interpoleren is schatten tussen bekende punten.", notes("Maak duidelijk dat interpoleren een beredeneerde schatting is. Het ligt tussen twee bekende punten en gebruikt de schaal van de grafiek."))
+      ], "Interpoleren is schatten tussen bekende punten.", notes("Maak duidelijk dat interpoleren een beredeneerde schatting is. Het ligt tussen twee bekende punten en gebruikt de schaal van de grafiek."), interpolationVisual)
       ,
       {
         id: "kritisch",
@@ -893,6 +1187,7 @@ function presentationV2Deck() {
           { number: "03", title: "Lees waarden", prompt: "Welke getallen worden vergeleken?", accent: "amber" },
           { number: "04", title: "Check basis", prompt: "Past het percentage bij die basis?", accent: "coral" }
         ],
+        visual: axisVisual,
         example: "Een ingezoomde as kan een kleine daling dramatisch maken.",
         speakerNotes: notes("Hier komt de kritische datahouding binnen. Grafieken zijn niet verdacht, maar je moet wel weten welke keuzes het beeld sturen.", "Laat leerlingen altijd de as en de vergelijking noemen voordat ze de conclusie overnemen.")
       }
@@ -900,7 +1195,7 @@ function presentationV2Deck() {
   };
 }
 
-function procedureSlide(id, navTitle, routeLabel, rows, example, speakerNotes) {
+function procedureSlide(id, navTitle, routeLabel, rows, example, speakerNotes, visual) {
   return {
     id,
     navTitle,
@@ -916,6 +1211,7 @@ function procedureSlide(id, navTitle, routeLabel, rows, example, speakerNotes) {
       prompt,
       accent: ["teal", "green", "amber", "coral"][i] || "teal"
     })),
+    visual,
     example,
     speakerNotes
   };

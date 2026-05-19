@@ -87,6 +87,23 @@ function renderSlideInner(slide) {
 }
 
 function renderCover(slide) {
+  const visual = renderVisual(slide.visual);
+  if (visual) {
+    return `<div class="pv2-cover-grid pv2-cover-grid-visual">
+              <div class="pv2-cover-copy">
+                <p class="pv2-eyebrow">${esc(slide.eyebrow)}</p>
+                <h2 id="${esc(slide.id)}-title">${esc(slide.studentTitle)}</h2>
+                <p class="pv2-thesis">${esc(slide.thesis)}</p>
+                <p class="pv2-prompt">${esc(slide.prompt)}</p>
+              </div>
+              <div class="pv2-cover-visual-stack">
+                ${visual}
+              </div>
+            </div>`;
+  }
+  const pathStrip = visual ? '' : `<div class="pv2-path-strip" aria-label="Keuzepaden">
+            ${slide.paths.map((p, i) => `<div class="pv2-path pv2-path-${i + 1}"><span>${esc(p.label)}</span><strong>${esc(p.text)}</strong></div>`).join('')}
+          </div>`;
   return `<div class="pv2-cover-grid">
             <div class="pv2-cover-copy">
               <p class="pv2-eyebrow">${esc(slide.eyebrow)}</p>
@@ -100,9 +117,8 @@ function renderCover(slide) {
               ${renderTensionMetric(slide.tension.gap)}
             </div>
           </div>
-          <div class="pv2-path-strip" aria-label="Keuzepaden">
-            ${slide.paths.map((p, i) => `<div class="pv2-path pv2-path-${i + 1}"><span>${esc(p.label)}</span><strong>${esc(p.text)}</strong></div>`).join('')}
-          </div>`;
+          ${visual}
+          ${pathStrip}`;
 }
 
 function renderTensionMetric(metric) {
@@ -135,14 +151,18 @@ function renderOption(opt) {
 
 function renderProcedureRoute(slide) {
   const routeLabel = slide.routeLabel || `${slide.studentTitle || slide.teacherTitle || 'Procedure'} in ${slide.steps.length} stappen`;
+  const visual = renderVisual(slide.visual);
   return `<div class="pv2-slide-head">
             <p class="pv2-eyebrow">${esc(slide.eyebrow)}</p>
             <h2 id="${esc(slide.id)}-title">${esc(slide.studentTitle)}</h2>
             <p>${esc(slide.lead)}</p>
           </div>
-          <ol class="pv2-route" aria-label="${esc(routeLabel)}">
-            ${slide.steps.map(step => renderStep(step)).join('')}
-          </ol>
+          <div class="pv2-route-with-visual">
+            ${visual}
+            <ol class="pv2-route" aria-label="${esc(routeLabel)}">
+              ${slide.steps.map(step => renderStep(step)).join('')}
+            </ol>
+          </div>
           <p class="pv2-example">${esc(slide.example)}</p>`;
 }
 
@@ -152,6 +172,56 @@ function renderStep(step) {
             <strong>${esc(step.title)}</strong>
             <em>${esc(step.prompt)}</em>
           </li>`;
+}
+
+function renderVisual(visual) {
+  if (!visual) return '';
+  if (visual.type === 'combo') {
+    return `<div class="pv2-visual-combo" data-visual-id="${esc(visual.id)}">
+      ${(visual.items || []).map((item) => renderVisual(item)).join('')}
+    </div>`;
+  }
+  if (visual.type === 'table') {
+    return `<figure class="pv2-visual-panel" data-visual-id="${esc(visual.id)}">
+      <figcaption>${esc(visual.title)}</figcaption>
+      <table class="pv2-data-table">
+        <thead><tr>${visual.headers.map((header) => `<th>${esc(header)}</th>`).join('')}</tr></thead>
+        <tbody>
+          ${visual.rows.map((row) => `<tr>${row.map((cell) => `<td class="${cell.highlight ? 'is-highlighted' : ''}">${esc(cell.text ?? cell)}</td>`).join('')}</tr>`).join('')}
+        </tbody>
+      </table>
+      ${visual.caption ? `<p>${esc(visual.caption)}</p>` : ''}
+    </figure>`;
+  }
+  if (visual.type === 'pqGraph') {
+    const points = visual.points || [];
+    const plotted = points.map((point) => `${point.x},${point.y}`).join(' ');
+    const guideMarkup = visual.guides
+      ? `\n        <line class="guide" x1="${esc(visual.guides.x)}" y1="${esc(visual.guides.y)}" x2="${esc(visual.guides.x)}" y2="206"></line><line class="guide" x1="58" y1="${esc(visual.guides.y)}" x2="${esc(visual.guides.x)}" y2="${esc(visual.guides.y)}"></line><text x="${esc(visual.guides.x + 8)}" y="198">${esc(visual.guides.xLabel)}</text><text x="66" y="${esc(visual.guides.y - 8)}">${esc(visual.guides.yLabel)}</text>`
+      : '';
+    return `<figure class="pv2-visual-panel" data-visual-id="${esc(visual.id)}">
+      <figcaption>${esc(visual.title)}</figcaption>
+      <svg class="pv2-inline-graph" viewBox="0 0 420 250" role="img" aria-label="${esc(visual.alt || visual.title)}">
+        <line x1="58" y1="206" x2="374" y2="206"></line>
+        <line x1="58" y1="206" x2="58" y2="34"></line>
+        <text x="342" y="232">Q</text>
+        <text x="22" y="48">P</text>
+        <polyline points="${esc(plotted)}"></polyline>
+        ${points.map((point) => `<circle cx="${esc(point.x)}" cy="${esc(point.y)}" r="4"></circle><text x="${esc(point.x + 6)}" y="${esc(point.y - 6)}">${esc(point.label)}</text>`).join('')}${guideMarkup}
+      </svg>
+      ${visual.caption ? `<p>${esc(visual.caption)}</p>` : ''}
+    </figure>`;
+  }
+  if (visual.type === 'axisComparison') {
+    return `<figure class="pv2-visual-panel" data-visual-id="${esc(visual.id)}">
+      <figcaption>${esc(visual.title)}</figcaption>
+      <div class="pv2-axis-compare">
+        ${visual.panels.map((panel) => `<section><strong>${esc(panel.title)}</strong>${panel.values.map((value) => `<div class="pv2-mini-bar"><span>${esc(value.label)}</span><i style="height:${esc(value.height)}%"></i><b>${esc(value.value)}</b></div>`).join('')}</section>`).join('')}
+      </div>
+      ${visual.caption ? `<p>${esc(visual.caption)}</p>` : ''}
+    </figure>`;
+  }
+  return '';
 }
 
 function renderNotes(notes) {
