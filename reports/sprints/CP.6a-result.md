@@ -108,8 +108,8 @@ CP.6a does not authorize CP-6 closure, Year-1 closure, diagnostics, adaptive rou
 ## Open follow-ups
 
 - Run `CP.6b Year-1 Target-Exercise Review`.
-- Keep the `1.3.2`/`1.3.3` source/lesson mismatch open until a later authorized lesson-side regeneration/remediation sprint executes and validates the alignment.
-- Do not draft a CP-6 closure proposal until CP.6b, CP.6c, CP.6d, CP.6e, and the later lesson-side regeneration evidence exist.
+- Post-closure update: lesson-team `L-CP6A` executed the authorized lesson-side remediation and references recheck now records the `1.3.2`/`1.3.3` source/lesson mismatch as fixed with carried conditions in `references/data/sprints/CP.6a-lesson-side-recheck.json` and `reports/reference-planning/CP.6a-lesson-side-recheck.md`.
+- Do not draft a CP-6 closure proposal until CP.6b, CP.6c, CP.6d, and CP.6e evidence exists.
 
 ## Rollback instructions
 

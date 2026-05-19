@@ -2,8 +2,8 @@
   "repo": "4veco-platform",
   "root": "C:\\Projects\\4veco\\4veco-platform",
   "available": true,
-  "generated_at": "2026-05-19T14:48:17.664Z",
-  "file_count": 1466,
+  "generated_at": "2026-05-19T15:02:39.394Z",
+  "file_count": 1467,
   "inventory_scope": "git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees",
   "skipped_directories": [
     ".cache",
@@ -349,6 +349,7 @@
       "build-scripts/sprints/check-sprint-result.js",
       "build-scripts/sprints/emit-gate-bundle-urls.js",
       "build-scripts/sprints/emit-url-index.js",
+      "build-scripts/sprints/l-cp6a-remediate-book1-chapter13.js",
       "build-scripts/templates/template-A_vaardigheden.js",
       "build-scripts/templates/template-B_voorkennis.js",
       "build-scripts/templates/template-paragraph-plan.md",

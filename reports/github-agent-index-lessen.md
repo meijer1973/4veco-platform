@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-lessen
 
-Generated: 2026-05-19T14:48:17.703Z
+Generated: 2026-05-19T15:02:39.433Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-lessen`
-Files indexed: 1273
+Files indexed: 1344
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -99,7 +99,7 @@ _No files indexed in this group._
 
 ## book folders
 
-Count: 838
+Count: 832
 
 - Boek 1 - Grondslagen, vraag en aanbod/_assets/1.1.1_ex_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/_assets/1.1.1_ex_1.svg
@@ -207,6 +207,8 @@ Count: 838
 - Boek 1 - Grondslagen, vraag en aanbod/_assets/1.3.2_fig_2.svg
 - Boek 1 - Grondslagen, vraag en aanbod/_assets/1.3.2_fig_3.png
 - Boek 1 - Grondslagen, vraag en aanbod/_assets/1.3.2_fig_3.svg
+- Boek 1 - Grondslagen, vraag en aanbod/_assets/1.3.2_fig_4.png
+- Boek 1 - Grondslagen, vraag en aanbod/_assets/1.3.2_fig_4.svg
 - Boek 1 - Grondslagen, vraag en aanbod/_assets/1.3.2_we_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/_assets/1.3.2_we_1.svg
 - Boek 1 - Grondslagen, vraag en aanbod/_assets/1.3.3_ex_1.png
@@ -583,112 +585,104 @@ Count: 838
 - Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.4 Gemengde opgaven/1.2.4-review.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.4 Gemengde opgaven/build_pdf.py
 - Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/build_chapter.py
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.1_ex_1.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.1_ex_1.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.1_ex_2.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.1_ex_2.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.1_fig_1.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.1_fig_1.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.1_fig_2.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.1_fig_2.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.1_fig_3.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.1_fig_3.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.1_fig_4.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.1_fig_4.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.1_fig_5.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.1_fig_5.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.2_ex_1.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.2_ex_1.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.2_ex_2.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.2_ex_2.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.2_fig_1.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.2_fig_1.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.2_fig_2.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.2_fig_2.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.2_fig_3.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.2_fig_3.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.2_we_1.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.2_we_1.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.3_ex_1.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.3_ex_1.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.3_ex_2.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.3_ex_2.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.3_ex_3.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.3_ex_3.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.3_fig_1.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.3_fig_1.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.3_fig_2.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.3_fig_2.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.3_fig_3.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.3_fig_3.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.3_fig_4.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.3_fig_4.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.3_fig_5.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.3_fig_5.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.3_we_1.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.3_we_1.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.4_ex_1.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.4_ex_1.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_chapter-plan.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.1 Aanbod/_assets/1.3.1_ex_1.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.1 Aanbod/_assets/1.3.1_ex_1.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.1 Aanbod/_assets/1.3.1_ex_2.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.1 Aanbod/_assets/1.3.1_ex_2.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.1 Aanbod/_assets/1.3.1_fig_1.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.1 Aanbod/_assets/1.3.1_fig_1.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.1 Aanbod/_assets/1.3.1_fig_2.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.1 Aanbod/_assets/1.3.1_fig_2.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.1 Aanbod/_assets/1.3.1_fig_3.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.1 Aanbod/_assets/1.3.1_fig_3.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.1 Aanbod/_assets/1.3.1_fig_4.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.1 Aanbod/_assets/1.3.1_fig_4.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.1 Aanbod/_assets/1.3.1_fig_5.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.1 Aanbod/_assets/1.3.1_fig_5.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.1 Aanbod/1.3.1-quality-ref.yaml
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.1 Aanbod/1.3.1-review.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.1 Aanbod/build_pdf.py
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.2 Kostenstructuren/_assets/1.3.2_ex_1.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.2 Kostenstructuren/_assets/1.3.2_ex_1.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.2 Kostenstructuren/_assets/1.3.2_ex_2.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.2 Kostenstructuren/_assets/1.3.2_ex_2.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.2 Kostenstructuren/_assets/1.3.2_fig_1.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.2 Kostenstructuren/_assets/1.3.2_fig_1.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.2 Kostenstructuren/_assets/1.3.2_fig_2.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.2 Kostenstructuren/_assets/1.3.2_fig_2.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.2 Kostenstructuren/_assets/1.3.2_fig_3.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.2 Kostenstructuren/_assets/1.3.2_fig_3.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.2 Kostenstructuren/_assets/1.3.2_we_1.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.2 Kostenstructuren/_assets/1.3.2_we_1.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.2 Kostenstructuren/1.3.2-quality-ref.yaml
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.2 Kostenstructuren/1.3.2-review.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.2 Kostenstructuren/build_pdf.py
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.3 Opbrengsten/_assets/1.3.3_ex_1.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.3 Opbrengsten/_assets/1.3.3_ex_1.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.3 Opbrengsten/_assets/1.3.3_ex_2.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.3 Opbrengsten/_assets/1.3.3_ex_2.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.3 Opbrengsten/_assets/1.3.3_ex_3.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.3 Opbrengsten/_assets/1.3.3_ex_3.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.3 Opbrengsten/_assets/1.3.3_fig_1.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.3 Opbrengsten/_assets/1.3.3_fig_1.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.3 Opbrengsten/_assets/1.3.3_fig_2.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.3 Opbrengsten/_assets/1.3.3_fig_2.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.3 Opbrengsten/_assets/1.3.3_fig_3.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.3 Opbrengsten/_assets/1.3.3_fig_3.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.3 Opbrengsten/_assets/1.3.3_fig_4.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.3 Opbrengsten/_assets/1.3.3_fig_4.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.3 Opbrengsten/_assets/1.3.3_fig_5.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.3 Opbrengsten/_assets/1.3.3_fig_5.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.3 Opbrengsten/_assets/1.3.3_we_1.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.3 Opbrengsten/_assets/1.3.3_we_1.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.3 Opbrengsten/1.3.3-quality-ref.yaml
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.3 Opbrengsten/1.3.3-review.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.3 Opbrengsten/build_pdf.py
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.4 Gemengde opgaven/_assets/1.3.4_ex_1.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.4 Gemengde opgaven/_assets/1.3.4_ex_1.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.4 Gemengde opgaven/1.3.4-quality-ref.yaml
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.4 Gemengde opgaven/1.3.4-review.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.4 Gemengde opgaven/build_pdf.py
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/build_chapter.py
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.1_ex_1.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.1_ex_1.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.1_ex_2.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.1_ex_2.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.1_fig_1.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.1_fig_1.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.1_fig_2.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.1_fig_2.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.1_fig_3.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.1_fig_3.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.1_fig_4.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.1_fig_4.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.1_fig_5.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.1_fig_5.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.2_ex_1.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.2_ex_1.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.2_fig_1.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.2_fig_1.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.2_fig_2.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.2_fig_2.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.2_fig_3.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.2_fig_3.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.2_fig_4.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.2_fig_4.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.2_we_1.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.2_we_1.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.3_ex_1.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.3_ex_1.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.3_ex_2.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.3_ex_2.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.3_fig_1.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.3_fig_1.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.3_fig_2.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.3_fig_2.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.3_fig_3.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.3_fig_3.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.3_fig_4.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.3_fig_4.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.3_fig_5.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.3_fig_5.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.3_we_1.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.3_we_1.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_chapter-plan.md
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/_assets/1.3.1_ex_1.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/_assets/1.3.1_ex_1.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/_assets/1.3.1_ex_2.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/_assets/1.3.1_ex_2.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/_assets/1.3.1_fig_1.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/_assets/1.3.1_fig_1.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/_assets/1.3.1_fig_2.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/_assets/1.3.1_fig_2.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/_assets/1.3.1_fig_3.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/_assets/1.3.1_fig_3.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/_assets/1.3.1_fig_4.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/_assets/1.3.1_fig_4.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/_assets/1.3.1_fig_5.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/_assets/1.3.1_fig_5.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/1.3.1-quality-ref.yaml
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/1.3.1-review.md
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/build_pdf.py
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/_assets/1.3.2_ex_1.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/_assets/1.3.2_ex_1.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/_assets/1.3.2_fig_1.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/_assets/1.3.2_fig_1.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/_assets/1.3.2_fig_2.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/_assets/1.3.2_fig_2.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/_assets/1.3.2_fig_3.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/_assets/1.3.2_fig_3.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/_assets/1.3.2_fig_4.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/_assets/1.3.2_fig_4.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/_assets/1.3.2_we_1.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/_assets/1.3.2_we_1.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2-quality-ref.yaml
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2-review.md
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/build_pdf.py
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/_assets/1.3.3_ex_1.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/_assets/1.3.3_ex_1.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/_assets/1.3.3_ex_2.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/_assets/1.3.3_ex_2.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/_assets/1.3.3_fig_1.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/_assets/1.3.3_fig_1.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/_assets/1.3.3_fig_2.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/_assets/1.3.3_fig_2.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/_assets/1.3.3_fig_3.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/_assets/1.3.3_fig_3.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/_assets/1.3.3_fig_4.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/_assets/1.3.3_fig_4.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/_assets/1.3.3_fig_5.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/_assets/1.3.3_fig_5.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/_assets/1.3.3_we_1.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/_assets/1.3.3_we_1.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/1.3.3-quality-ref.yaml
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/1.3.3-review.md
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/build_pdf.py
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.4 Gemengde opgaven/1.3.4-quality-ref.yaml
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.4 Gemengde opgaven/1.3.4-review.md
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.4 Gemengde opgaven/build_pdf.py
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/build_chapter.py
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/_assets/1.4.1_ex_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/_assets/1.4.1_ex_1.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/_assets/1.4.1_fig_1.png
@@ -942,8 +936,32 @@ Count: 838
 
 ## paragraph folders
 
-Count: 565
+Count: 626
 
+- "archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/1.3.2 Kostenstructuren \342\200\223 antwoorden.html"
+- "archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/1.3.2 Kostenstructuren \342\200\223 antwoorden.md"
+- "archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/1.3.2 Kostenstructuren \342\200\223 antwoorden.pdf"
+- "archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/1.3.2 Kostenstructuren \342\200\223 opgaven.html"
+- "archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/1.3.2 Kostenstructuren \342\200\223 opgaven.md"
+- "archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/1.3.2 Kostenstructuren \342\200\223 opgaven.pdf"
+- "archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/1.3.2 Kostenstructuren \342\200\223 paragraaf.html"
+- "archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/1.3.2 Kostenstructuren \342\200\223 paragraaf.md"
+- "archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/1.3.2 Kostenstructuren \342\200\223 paragraaf.pdf"
+- "archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/1.3.3 Opbrengsten \342\200\223 antwoorden.html"
+- "archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/1.3.3 Opbrengsten \342\200\223 antwoorden.md"
+- "archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/1.3.3 Opbrengsten \342\200\223 antwoorden.pdf"
+- "archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/1.3.3 Opbrengsten \342\200\223 opgaven.html"
+- "archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/1.3.3 Opbrengsten \342\200\223 opgaven.md"
+- "archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/1.3.3 Opbrengsten \342\200\223 opgaven.pdf"
+- "archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/1.3.3 Opbrengsten \342\200\223 paragraaf.html"
+- "archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/1.3.3 Opbrengsten \342\200\223 paragraaf.md"
+- "archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/1.3.3 Opbrengsten \342\200\223 paragraaf.pdf"
+- "archive/sprints/L-CP6A/displaced-book2-material/1.3.4 Gemengde opgaven/1.3.4 Gemengde opgaven \342\200\223 antwoorden.html"
+- "archive/sprints/L-CP6A/displaced-book2-material/1.3.4 Gemengde opgaven/1.3.4 Gemengde opgaven \342\200\223 antwoorden.md"
+- "archive/sprints/L-CP6A/displaced-book2-material/1.3.4 Gemengde opgaven/1.3.4 Gemengde opgaven \342\200\223 antwoorden.pdf"
+- "archive/sprints/L-CP6A/displaced-book2-material/1.3.4 Gemengde opgaven/1.3.4 Gemengde opgaven \342\200\223 opgaven.html"
+- "archive/sprints/L-CP6A/displaced-book2-material/1.3.4 Gemengde opgaven/1.3.4 Gemengde opgaven \342\200\223 opgaven.md"
+- "archive/sprints/L-CP6A/displaced-book2-material/1.3.4 Gemengde opgaven/1.3.4 Gemengde opgaven \342\200\223 opgaven.pdf"
 - "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken \342\200\223 antwoorden.html"
 - "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken \342\200\223 antwoorden.md"
 - "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken \342\200\223 antwoorden.pdf"
@@ -1065,39 +1083,39 @@ Count: 565
 - "Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.4 Gemengde opgaven/1.2.4 Gemengde opgaven \342\200\223 opgaven.html"
 - "Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.4 Gemengde opgaven/1.2.4 Gemengde opgaven \342\200\223 opgaven.md"
 - "Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.4 Gemengde opgaven/1.2.4 Gemengde opgaven \342\200\223 opgaven.pdf"
-- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.1 Aanbod/1.3.1 Aanbod \342\200\223 antwoorden.html"
-- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.1 Aanbod/1.3.1 Aanbod \342\200\223 antwoorden.md"
-- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.1 Aanbod/1.3.1 Aanbod \342\200\223 antwoorden.pdf"
-- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.1 Aanbod/1.3.1 Aanbod \342\200\223 opgaven.html"
-- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.1 Aanbod/1.3.1 Aanbod \342\200\223 opgaven.md"
-- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.1 Aanbod/1.3.1 Aanbod \342\200\223 opgaven.pdf"
-- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.1 Aanbod/1.3.1 Aanbod \342\200\223 paragraaf.html"
-- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.1 Aanbod/1.3.1 Aanbod \342\200\223 paragraaf.md"
-- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.1 Aanbod/1.3.1 Aanbod \342\200\223 paragraaf.pdf"
-- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.2 Kostenstructuren/1.3.2 Kostenstructuren \342\200\223 antwoorden.html"
-- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.2 Kostenstructuren/1.3.2 Kostenstructuren \342\200\223 antwoorden.md"
-- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.2 Kostenstructuren/1.3.2 Kostenstructuren \342\200\223 antwoorden.pdf"
-- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.2 Kostenstructuren/1.3.2 Kostenstructuren \342\200\223 opgaven.html"
-- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.2 Kostenstructuren/1.3.2 Kostenstructuren \342\200\223 opgaven.md"
-- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.2 Kostenstructuren/1.3.2 Kostenstructuren \342\200\223 opgaven.pdf"
-- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.2 Kostenstructuren/1.3.2 Kostenstructuren \342\200\223 paragraaf.html"
-- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.2 Kostenstructuren/1.3.2 Kostenstructuren \342\200\223 paragraaf.md"
-- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.2 Kostenstructuren/1.3.2 Kostenstructuren \342\200\223 paragraaf.pdf"
-- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.3 Opbrengsten/1.3.3 Opbrengsten \342\200\223 antwoorden.html"
-- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.3 Opbrengsten/1.3.3 Opbrengsten \342\200\223 antwoorden.md"
-- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.3 Opbrengsten/1.3.3 Opbrengsten \342\200\223 antwoorden.pdf"
-- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.3 Opbrengsten/1.3.3 Opbrengsten \342\200\223 opgaven.html"
-- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.3 Opbrengsten/1.3.3 Opbrengsten \342\200\223 opgaven.md"
-- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.3 Opbrengsten/1.3.3 Opbrengsten \342\200\223 opgaven.pdf"
-- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.3 Opbrengsten/1.3.3 Opbrengsten \342\200\223 paragraaf.html"
-- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.3 Opbrengsten/1.3.3 Opbrengsten \342\200\223 paragraaf.md"
-- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.3 Opbrengsten/1.3.3 Opbrengsten \342\200\223 paragraaf.pdf"
-- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.4 Gemengde opgaven/1.3.4 Gemengde opgaven \342\200\223 antwoorden.html"
-- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.4 Gemengde opgaven/1.3.4 Gemengde opgaven \342\200\223 antwoorden.md"
-- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.4 Gemengde opgaven/1.3.4 Gemengde opgaven \342\200\223 antwoorden.pdf"
-- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.4 Gemengde opgaven/1.3.4 Gemengde opgaven \342\200\223 opgaven.html"
-- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.4 Gemengde opgaven/1.3.4 Gemengde opgaven \342\200\223 opgaven.md"
-- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.4 Gemengde opgaven/1.3.4 Gemengde opgaven \342\200\223 opgaven.pdf"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/1.3.1 Aanbod \342\200\223 antwoorden.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/1.3.1 Aanbod \342\200\223 antwoorden.md"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/1.3.1 Aanbod \342\200\223 antwoorden.pdf"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/1.3.1 Aanbod \342\200\223 opgaven.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/1.3.1 Aanbod \342\200\223 opgaven.md"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/1.3.1 Aanbod \342\200\223 opgaven.pdf"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/1.3.1 Aanbod \342\200\223 paragraaf.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/1.3.1 Aanbod \342\200\223 paragraaf.md"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/1.3.1 Aanbod \342\200\223 paragraaf.pdf"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2 Marktevenwicht \342\200\223 antwoorden.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2 Marktevenwicht \342\200\223 antwoorden.md"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2 Marktevenwicht \342\200\223 antwoorden.pdf"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2 Marktevenwicht \342\200\223 opgaven.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2 Marktevenwicht \342\200\223 opgaven.md"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2 Marktevenwicht \342\200\223 opgaven.pdf"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2 Marktevenwicht \342\200\223 paragraaf.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2 Marktevenwicht \342\200\223 paragraaf.md"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2 Marktevenwicht \342\200\223 paragraaf.pdf"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/1.3.3 Verschuivingen en nieuw evenwicht \342\200\223 antwoorden.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/1.3.3 Verschuivingen en nieuw evenwicht \342\200\223 antwoorden.md"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/1.3.3 Verschuivingen en nieuw evenwicht \342\200\223 antwoorden.pdf"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/1.3.3 Verschuivingen en nieuw evenwicht \342\200\223 opgaven.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/1.3.3 Verschuivingen en nieuw evenwicht \342\200\223 opgaven.md"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/1.3.3 Verschuivingen en nieuw evenwicht \342\200\223 opgaven.pdf"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/1.3.3 Verschuivingen en nieuw evenwicht \342\200\223 paragraaf.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/1.3.3 Verschuivingen en nieuw evenwicht \342\200\223 paragraaf.md"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/1.3.3 Verschuivingen en nieuw evenwicht \342\200\223 paragraaf.pdf"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.4 Gemengde opgaven/1.3.4 Gemengde opgaven \342\200\223 antwoorden.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.4 Gemengde opgaven/1.3.4 Gemengde opgaven \342\200\223 antwoorden.md"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.4 Gemengde opgaven/1.3.4 Gemengde opgaven \342\200\223 antwoorden.pdf"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.4 Gemengde opgaven/1.3.4 Gemengde opgaven \342\200\223 opgaven.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.4 Gemengde opgaven/1.3.4 Gemengde opgaven \342\200\223 opgaven.md"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.4 Gemengde opgaven/1.3.4 Gemengde opgaven \342\200\223 opgaven.pdf"
 - "Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.1 Marktevenwicht/1.4.1 Marktevenwicht \342\200\223 antwoorden.md"
 - "Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.1 Marktevenwicht/1.4.1 Marktevenwicht \342\200\223 antwoorden.pdf"
 - "Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.1 Marktevenwicht/1.4.1 Marktevenwicht \342\200\223 opgaven.md"
@@ -1157,6 +1175,47 @@ Count: 565
 - "Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.4 Proeftoets/1.5.4 Proeftoets \342\200\223 toetsmatrijs.html"
 - "Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.4 Proeftoets/1.5.4 Proeftoets \342\200\223 toetsmatrijs.md"
 - "Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.4 Proeftoets/1.5.4 Proeftoets \342\200\223 toetsmatrijs.pdf"
+- archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/_assets/1.3.2_ex_1.png
+- archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/_assets/1.3.2_ex_1.svg
+- archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/_assets/1.3.2_ex_2.png
+- archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/_assets/1.3.2_ex_2.svg
+- archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/_assets/1.3.2_fig_1.png
+- archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/_assets/1.3.2_fig_1.svg
+- archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/_assets/1.3.2_fig_2.png
+- archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/_assets/1.3.2_fig_2.svg
+- archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/_assets/1.3.2_fig_3.png
+- archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/_assets/1.3.2_fig_3.svg
+- archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/_assets/1.3.2_we_1.png
+- archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/_assets/1.3.2_we_1.svg
+- archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/1.3.2-quality-ref.yaml
+- archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/1.3.2-review.md
+- archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/build_pdf.py
+- archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/_assets/1.3.3_ex_1.png
+- archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/_assets/1.3.3_ex_1.svg
+- archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/_assets/1.3.3_ex_2.png
+- archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/_assets/1.3.3_ex_2.svg
+- archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/_assets/1.3.3_ex_3.png
+- archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/_assets/1.3.3_ex_3.svg
+- archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/_assets/1.3.3_fig_1.png
+- archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/_assets/1.3.3_fig_1.svg
+- archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/_assets/1.3.3_fig_2.png
+- archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/_assets/1.3.3_fig_2.svg
+- archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/_assets/1.3.3_fig_3.png
+- archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/_assets/1.3.3_fig_3.svg
+- archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/_assets/1.3.3_fig_4.png
+- archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/_assets/1.3.3_fig_4.svg
+- archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/_assets/1.3.3_fig_5.png
+- archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/_assets/1.3.3_fig_5.svg
+- archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/_assets/1.3.3_we_1.png
+- archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/_assets/1.3.3_we_1.svg
+- archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/1.3.3-quality-ref.yaml
+- archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/1.3.3-review.md
+- archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/build_pdf.py
+- archive/sprints/L-CP6A/displaced-book2-material/1.3.4 Gemengde opgaven/_assets/1.3.4_ex_1.png
+- archive/sprints/L-CP6A/displaced-book2-material/1.3.4 Gemengde opgaven/_assets/1.3.4_ex_1.svg
+- archive/sprints/L-CP6A/displaced-book2-material/1.3.4 Gemengde opgaven/1.3.4-quality-ref.yaml
+- archive/sprints/L-CP6A/displaced-book2-material/1.3.4 Gemengde opgaven/1.3.4-review.md
+- archive/sprints/L-CP6A/displaced-book2-material/1.3.4 Gemengde opgaven/build_pdf.py
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_assets/1.1.1_ex_1_doc.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_assets/1.1.1_ex_1_doc.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_assets/1.1.1_ex_1_web_dark.png
@@ -1340,64 +1399,60 @@ Count: 565
 - Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.4 Gemengde opgaven/1.2.4-quality-ref.yaml
 - Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.4 Gemengde opgaven/1.2.4-review.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.4 Gemengde opgaven/build_pdf.py
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.1 Aanbod/_assets/1.3.1_ex_1.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.1 Aanbod/_assets/1.3.1_ex_1.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.1 Aanbod/_assets/1.3.1_ex_2.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.1 Aanbod/_assets/1.3.1_ex_2.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.1 Aanbod/_assets/1.3.1_fig_1.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.1 Aanbod/_assets/1.3.1_fig_1.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.1 Aanbod/_assets/1.3.1_fig_2.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.1 Aanbod/_assets/1.3.1_fig_2.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.1 Aanbod/_assets/1.3.1_fig_3.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.1 Aanbod/_assets/1.3.1_fig_3.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.1 Aanbod/_assets/1.3.1_fig_4.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.1 Aanbod/_assets/1.3.1_fig_4.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.1 Aanbod/_assets/1.3.1_fig_5.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.1 Aanbod/_assets/1.3.1_fig_5.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.1 Aanbod/1.3.1-quality-ref.yaml
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.1 Aanbod/1.3.1-review.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.1 Aanbod/build_pdf.py
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.2 Kostenstructuren/_assets/1.3.2_ex_1.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.2 Kostenstructuren/_assets/1.3.2_ex_1.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.2 Kostenstructuren/_assets/1.3.2_ex_2.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.2 Kostenstructuren/_assets/1.3.2_ex_2.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.2 Kostenstructuren/_assets/1.3.2_fig_1.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.2 Kostenstructuren/_assets/1.3.2_fig_1.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.2 Kostenstructuren/_assets/1.3.2_fig_2.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.2 Kostenstructuren/_assets/1.3.2_fig_2.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.2 Kostenstructuren/_assets/1.3.2_fig_3.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.2 Kostenstructuren/_assets/1.3.2_fig_3.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.2 Kostenstructuren/_assets/1.3.2_we_1.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.2 Kostenstructuren/_assets/1.3.2_we_1.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.2 Kostenstructuren/1.3.2-quality-ref.yaml
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.2 Kostenstructuren/1.3.2-review.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.2 Kostenstructuren/build_pdf.py
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.3 Opbrengsten/_assets/1.3.3_ex_1.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.3 Opbrengsten/_assets/1.3.3_ex_1.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.3 Opbrengsten/_assets/1.3.3_ex_2.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.3 Opbrengsten/_assets/1.3.3_ex_2.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.3 Opbrengsten/_assets/1.3.3_ex_3.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.3 Opbrengsten/_assets/1.3.3_ex_3.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.3 Opbrengsten/_assets/1.3.3_fig_1.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.3 Opbrengsten/_assets/1.3.3_fig_1.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.3 Opbrengsten/_assets/1.3.3_fig_2.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.3 Opbrengsten/_assets/1.3.3_fig_2.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.3 Opbrengsten/_assets/1.3.3_fig_3.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.3 Opbrengsten/_assets/1.3.3_fig_3.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.3 Opbrengsten/_assets/1.3.3_fig_4.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.3 Opbrengsten/_assets/1.3.3_fig_4.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.3 Opbrengsten/_assets/1.3.3_fig_5.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.3 Opbrengsten/_assets/1.3.3_fig_5.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.3 Opbrengsten/_assets/1.3.3_we_1.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.3 Opbrengsten/_assets/1.3.3_we_1.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.3 Opbrengsten/1.3.3-quality-ref.yaml
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.3 Opbrengsten/1.3.3-review.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.3 Opbrengsten/build_pdf.py
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.4 Gemengde opgaven/_assets/1.3.4_ex_1.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.4 Gemengde opgaven/_assets/1.3.4_ex_1.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.4 Gemengde opgaven/1.3.4-quality-ref.yaml
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.4 Gemengde opgaven/1.3.4-review.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.4 Gemengde opgaven/build_pdf.py
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/_assets/1.3.1_ex_1.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/_assets/1.3.1_ex_1.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/_assets/1.3.1_ex_2.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/_assets/1.3.1_ex_2.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/_assets/1.3.1_fig_1.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/_assets/1.3.1_fig_1.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/_assets/1.3.1_fig_2.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/_assets/1.3.1_fig_2.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/_assets/1.3.1_fig_3.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/_assets/1.3.1_fig_3.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/_assets/1.3.1_fig_4.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/_assets/1.3.1_fig_4.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/_assets/1.3.1_fig_5.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/_assets/1.3.1_fig_5.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/1.3.1-quality-ref.yaml
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/1.3.1-review.md
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/build_pdf.py
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/_assets/1.3.2_ex_1.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/_assets/1.3.2_ex_1.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/_assets/1.3.2_fig_1.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/_assets/1.3.2_fig_1.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/_assets/1.3.2_fig_2.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/_assets/1.3.2_fig_2.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/_assets/1.3.2_fig_3.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/_assets/1.3.2_fig_3.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/_assets/1.3.2_fig_4.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/_assets/1.3.2_fig_4.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/_assets/1.3.2_we_1.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/_assets/1.3.2_we_1.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2-quality-ref.yaml
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2-review.md
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/build_pdf.py
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/_assets/1.3.3_ex_1.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/_assets/1.3.3_ex_1.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/_assets/1.3.3_ex_2.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/_assets/1.3.3_ex_2.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/_assets/1.3.3_fig_1.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/_assets/1.3.3_fig_1.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/_assets/1.3.3_fig_2.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/_assets/1.3.3_fig_2.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/_assets/1.3.3_fig_3.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/_assets/1.3.3_fig_3.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/_assets/1.3.3_fig_4.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/_assets/1.3.3_fig_4.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/_assets/1.3.3_fig_5.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/_assets/1.3.3_fig_5.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/_assets/1.3.3_we_1.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/_assets/1.3.3_we_1.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/1.3.3-quality-ref.yaml
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/1.3.3-review.md
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/build_pdf.py
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.4 Gemengde opgaven/1.3.4-quality-ref.yaml
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.4 Gemengde opgaven/1.3.4-review.md
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.4 Gemengde opgaven/build_pdf.py
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.1 Marktevenwicht/_assets/1.4.1_ex_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.1 Marktevenwicht/_assets/1.4.1_ex_1.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.1 Marktevenwicht/_assets/1.4.1_fig_1.png
@@ -1512,8 +1567,46 @@ Count: 565
 
 ## generated artifacts
 
-Count: 785
+Count: 817
 
+- archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/_assets/1.3.2_ex_1.png
+- archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/_assets/1.3.2_ex_1.svg
+- archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/_assets/1.3.2_ex_2.png
+- archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/_assets/1.3.2_ex_2.svg
+- archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/_assets/1.3.2_fig_1.png
+- archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/_assets/1.3.2_fig_1.svg
+- archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/_assets/1.3.2_fig_2.png
+- archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/_assets/1.3.2_fig_2.svg
+- archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/_assets/1.3.2_fig_3.png
+- archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/_assets/1.3.2_fig_3.svg
+- archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/_assets/1.3.2_we_1.png
+- archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/_assets/1.3.2_we_1.svg
+- archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/1.3.2-quality-ref.yaml
+- archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/1.3.2-review.md
+- archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/_assets/1.3.3_ex_1.png
+- archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/_assets/1.3.3_ex_1.svg
+- archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/_assets/1.3.3_ex_2.png
+- archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/_assets/1.3.3_ex_2.svg
+- archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/_assets/1.3.3_ex_3.png
+- archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/_assets/1.3.3_ex_3.svg
+- archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/_assets/1.3.3_fig_1.png
+- archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/_assets/1.3.3_fig_1.svg
+- archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/_assets/1.3.3_fig_2.png
+- archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/_assets/1.3.3_fig_2.svg
+- archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/_assets/1.3.3_fig_3.png
+- archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/_assets/1.3.3_fig_3.svg
+- archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/_assets/1.3.3_fig_4.png
+- archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/_assets/1.3.3_fig_4.svg
+- archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/_assets/1.3.3_fig_5.png
+- archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/_assets/1.3.3_fig_5.svg
+- archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/_assets/1.3.3_we_1.png
+- archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/_assets/1.3.3_we_1.svg
+- archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/1.3.3-quality-ref.yaml
+- archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/1.3.3-review.md
+- archive/sprints/L-CP6A/displaced-book2-material/1.3.4 Gemengde opgaven/_assets/1.3.4_ex_1.png
+- archive/sprints/L-CP6A/displaced-book2-material/1.3.4 Gemengde opgaven/_assets/1.3.4_ex_1.svg
+- archive/sprints/L-CP6A/displaced-book2-material/1.3.4 Gemengde opgaven/1.3.4-quality-ref.yaml
+- archive/sprints/L-CP6A/displaced-book2-material/1.3.4 Gemengde opgaven/1.3.4-review.md
 - Boek 1 - Grondslagen, vraag en aanbod/_assets/1.1.1_ex_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/_assets/1.1.1_ex_1.svg
 - Boek 1 - Grondslagen, vraag en aanbod/_assets/1.1.1_fig_1.png
@@ -1620,6 +1713,8 @@ Count: 785
 - Boek 1 - Grondslagen, vraag en aanbod/_assets/1.3.2_fig_2.svg
 - Boek 1 - Grondslagen, vraag en aanbod/_assets/1.3.2_fig_3.png
 - Boek 1 - Grondslagen, vraag en aanbod/_assets/1.3.2_fig_3.svg
+- Boek 1 - Grondslagen, vraag en aanbod/_assets/1.3.2_fig_4.png
+- Boek 1 - Grondslagen, vraag en aanbod/_assets/1.3.2_fig_4.svg
 - Boek 1 - Grondslagen, vraag en aanbod/_assets/1.3.2_we_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/_assets/1.3.2_we_1.svg
 - Boek 1 - Grondslagen, vraag en aanbod/_assets/1.3.3_ex_1.png
@@ -1986,107 +2081,99 @@ Count: 785
 - Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.4 Gemengde opgaven/_assets/1.2.4_ex_1.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.4 Gemengde opgaven/1.2.4-quality-ref.yaml
 - Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.4 Gemengde opgaven/1.2.4-review.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.1_ex_1.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.1_ex_1.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.1_ex_2.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.1_ex_2.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.1_fig_1.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.1_fig_1.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.1_fig_2.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.1_fig_2.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.1_fig_3.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.1_fig_3.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.1_fig_4.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.1_fig_4.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.1_fig_5.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.1_fig_5.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.2_ex_1.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.2_ex_1.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.2_ex_2.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.2_ex_2.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.2_fig_1.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.2_fig_1.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.2_fig_2.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.2_fig_2.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.2_fig_3.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.2_fig_3.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.2_we_1.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.2_we_1.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.3_ex_1.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.3_ex_1.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.3_ex_2.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.3_ex_2.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.3_ex_3.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.3_ex_3.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.3_fig_1.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.3_fig_1.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.3_fig_2.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.3_fig_2.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.3_fig_3.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.3_fig_3.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.3_fig_4.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.3_fig_4.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.3_fig_5.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.3_fig_5.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.3_we_1.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.3_we_1.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.4_ex_1.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_assets/1.3.4_ex_1.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/_chapter-plan.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.1 Aanbod/_assets/1.3.1_ex_1.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.1 Aanbod/_assets/1.3.1_ex_1.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.1 Aanbod/_assets/1.3.1_ex_2.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.1 Aanbod/_assets/1.3.1_ex_2.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.1 Aanbod/_assets/1.3.1_fig_1.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.1 Aanbod/_assets/1.3.1_fig_1.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.1 Aanbod/_assets/1.3.1_fig_2.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.1 Aanbod/_assets/1.3.1_fig_2.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.1 Aanbod/_assets/1.3.1_fig_3.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.1 Aanbod/_assets/1.3.1_fig_3.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.1 Aanbod/_assets/1.3.1_fig_4.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.1 Aanbod/_assets/1.3.1_fig_4.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.1 Aanbod/_assets/1.3.1_fig_5.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.1 Aanbod/_assets/1.3.1_fig_5.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.1 Aanbod/1.3.1-quality-ref.yaml
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.1 Aanbod/1.3.1-review.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.2 Kostenstructuren/_assets/1.3.2_ex_1.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.2 Kostenstructuren/_assets/1.3.2_ex_1.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.2 Kostenstructuren/_assets/1.3.2_ex_2.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.2 Kostenstructuren/_assets/1.3.2_ex_2.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.2 Kostenstructuren/_assets/1.3.2_fig_1.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.2 Kostenstructuren/_assets/1.3.2_fig_1.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.2 Kostenstructuren/_assets/1.3.2_fig_2.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.2 Kostenstructuren/_assets/1.3.2_fig_2.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.2 Kostenstructuren/_assets/1.3.2_fig_3.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.2 Kostenstructuren/_assets/1.3.2_fig_3.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.2 Kostenstructuren/_assets/1.3.2_we_1.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.2 Kostenstructuren/_assets/1.3.2_we_1.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.2 Kostenstructuren/1.3.2-quality-ref.yaml
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.2 Kostenstructuren/1.3.2-review.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.3 Opbrengsten/_assets/1.3.3_ex_1.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.3 Opbrengsten/_assets/1.3.3_ex_1.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.3 Opbrengsten/_assets/1.3.3_ex_2.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.3 Opbrengsten/_assets/1.3.3_ex_2.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.3 Opbrengsten/_assets/1.3.3_ex_3.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.3 Opbrengsten/_assets/1.3.3_ex_3.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.3 Opbrengsten/_assets/1.3.3_fig_1.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.3 Opbrengsten/_assets/1.3.3_fig_1.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.3 Opbrengsten/_assets/1.3.3_fig_2.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.3 Opbrengsten/_assets/1.3.3_fig_2.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.3 Opbrengsten/_assets/1.3.3_fig_3.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.3 Opbrengsten/_assets/1.3.3_fig_3.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.3 Opbrengsten/_assets/1.3.3_fig_4.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.3 Opbrengsten/_assets/1.3.3_fig_4.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.3 Opbrengsten/_assets/1.3.3_fig_5.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.3 Opbrengsten/_assets/1.3.3_fig_5.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.3 Opbrengsten/_assets/1.3.3_we_1.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.3 Opbrengsten/_assets/1.3.3_we_1.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.3 Opbrengsten/1.3.3-quality-ref.yaml
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.3 Opbrengsten/1.3.3-review.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.4 Gemengde opgaven/_assets/1.3.4_ex_1.png
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.4 Gemengde opgaven/_assets/1.3.4_ex_1.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.4 Gemengde opgaven/1.3.4-quality-ref.yaml
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3.4 Gemengde opgaven/1.3.4-review.md
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.1_ex_1.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.1_ex_1.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.1_ex_2.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.1_ex_2.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.1_fig_1.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.1_fig_1.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.1_fig_2.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.1_fig_2.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.1_fig_3.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.1_fig_3.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.1_fig_4.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.1_fig_4.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.1_fig_5.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.1_fig_5.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.2_ex_1.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.2_ex_1.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.2_fig_1.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.2_fig_1.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.2_fig_2.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.2_fig_2.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.2_fig_3.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.2_fig_3.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.2_fig_4.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.2_fig_4.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.2_we_1.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.2_we_1.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.3_ex_1.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.3_ex_1.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.3_ex_2.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.3_ex_2.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.3_fig_1.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.3_fig_1.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.3_fig_2.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.3_fig_2.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.3_fig_3.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.3_fig_3.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.3_fig_4.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.3_fig_4.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.3_fig_5.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.3_fig_5.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.3_we_1.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.3_we_1.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_chapter-plan.md
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/_assets/1.3.1_ex_1.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/_assets/1.3.1_ex_1.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/_assets/1.3.1_ex_2.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/_assets/1.3.1_ex_2.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/_assets/1.3.1_fig_1.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/_assets/1.3.1_fig_1.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/_assets/1.3.1_fig_2.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/_assets/1.3.1_fig_2.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/_assets/1.3.1_fig_3.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/_assets/1.3.1_fig_3.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/_assets/1.3.1_fig_4.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/_assets/1.3.1_fig_4.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/_assets/1.3.1_fig_5.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/_assets/1.3.1_fig_5.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/1.3.1-quality-ref.yaml
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/1.3.1-review.md
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/_assets/1.3.2_ex_1.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/_assets/1.3.2_ex_1.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/_assets/1.3.2_fig_1.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/_assets/1.3.2_fig_1.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/_assets/1.3.2_fig_2.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/_assets/1.3.2_fig_2.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/_assets/1.3.2_fig_3.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/_assets/1.3.2_fig_3.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/_assets/1.3.2_fig_4.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/_assets/1.3.2_fig_4.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/_assets/1.3.2_we_1.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/_assets/1.3.2_we_1.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2-quality-ref.yaml
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2-review.md
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/_assets/1.3.3_ex_1.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/_assets/1.3.3_ex_1.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/_assets/1.3.3_ex_2.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/_assets/1.3.3_ex_2.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/_assets/1.3.3_fig_1.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/_assets/1.3.3_fig_1.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/_assets/1.3.3_fig_2.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/_assets/1.3.3_fig_2.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/_assets/1.3.3_fig_3.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/_assets/1.3.3_fig_3.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/_assets/1.3.3_fig_4.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/_assets/1.3.3_fig_4.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/_assets/1.3.3_fig_5.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/_assets/1.3.3_fig_5.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/_assets/1.3.3_we_1.png
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/_assets/1.3.3_we_1.svg
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/1.3.3-quality-ref.yaml
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/1.3.3-review.md
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.4 Gemengde opgaven/1.3.4-quality-ref.yaml
+- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.4 Gemengde opgaven/1.3.4-review.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/_assets/1.4.1_ex_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/_assets/1.4.1_ex_1.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/_assets/1.4.1_fig_1.png
@@ -2302,13 +2389,19 @@ Count: 785
 
 ## other
 
-Count: 218
+Count: 230
 
 - _team-b-reference/1.1.1/uitleg vaardigheden team b.html
 - _team-b-reference/1.1.1/uitleg voorkennis team b.html
 - .gitattributes
 - .gitignore
 - .nojekyll
+- "archive/sprints/L-CP6A/old-chapter13-assembly/1.3 Aanbod en kosten \342\200\223 antwoorden.html"
+- "archive/sprints/L-CP6A/old-chapter13-assembly/1.3 Aanbod en kosten \342\200\223 antwoorden.md"
+- "archive/sprints/L-CP6A/old-chapter13-assembly/1.3 Aanbod en kosten \342\200\223 antwoorden.pdf"
+- "archive/sprints/L-CP6A/old-chapter13-assembly/1.3 Aanbod en kosten \342\200\223 hoofdstuk.html"
+- "archive/sprints/L-CP6A/old-chapter13-assembly/1.3 Aanbod en kosten \342\200\223 hoofdstuk.md"
+- "archive/sprints/L-CP6A/old-chapter13-assembly/1.3 Aanbod en kosten \342\200\223 hoofdstuk.pdf"
 - "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1 Economisch denken en rekenen \342\200\223 antwoorden.html"
 - "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1 Economisch denken en rekenen \342\200\223 antwoorden.md"
 - "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1 Economisch denken en rekenen \342\200\223 antwoorden.pdf"
@@ -2321,12 +2414,12 @@ Count: 218
 - "Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2 Vraag \342\200\223 hoofdstuk.html"
 - "Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2 Vraag \342\200\223 hoofdstuk.md"
 - "Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2 Vraag \342\200\223 hoofdstuk.pdf"
-- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3 Aanbod en kosten \342\200\223 antwoorden.html"
-- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3 Aanbod en kosten \342\200\223 antwoorden.md"
-- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3 Aanbod en kosten \342\200\223 antwoorden.pdf"
-- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3 Aanbod en kosten \342\200\223 hoofdstuk.html"
-- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3 Aanbod en kosten \342\200\223 hoofdstuk.md"
-- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en kosten/1.3 Aanbod en kosten \342\200\223 hoofdstuk.pdf"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3 Aanbod en marktevenwicht \342\200\223 antwoorden.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3 Aanbod en marktevenwicht \342\200\223 antwoorden.md"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3 Aanbod en marktevenwicht \342\200\223 antwoorden.pdf"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3 Aanbod en marktevenwicht \342\200\223 hoofdstuk.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3 Aanbod en marktevenwicht \342\200\223 hoofdstuk.md"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3 Aanbod en marktevenwicht \342\200\223 hoofdstuk.pdf"
 - "Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4 Marktevenwicht en marginale analyse \342\200\223 antwoorden.html"
 - "Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4 Marktevenwicht en marginale analyse \342\200\223 antwoorden.md"
 - "Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4 Marktevenwicht en marginale analyse \342\200\223 antwoorden.pdf"
@@ -2344,6 +2437,12 @@ Count: 218
 - "Boek 1 - Grondslagen, vraag en aanbod/Boek 1 Grondslagen, vraag en aanbod \342\200\223 boek.pdf"
 - archive/planning/plan-1.1.1-part-b-clarity-audit.md
 - archive/README.md
+- archive/sprints/L-CP6A/L-CP6A-closure-log.md
+- archive/sprints/L-CP6A/L-CP6A-handoff-to-references.md
+- archive/sprints/L-CP6A/L-CP6A-remediation-report.md
+- archive/sprints/L-CP6A/L-CP6A-sprint-plan.md
+- archive/sprints/L-CP6A/L-CP6A-survival-map.md
+- archive/sprints/L-CP6A/L-CP6A-technical-qa-report.md
 - archive/sprints/L-PV0/L-PV0-proof-track-plan.md
 - archive/sprints/L-PV1-L-PV4/L-PV1-L-PV4-proof-track-execution-log.md
 - archive/sprints/L-PV5/L-PV5-roadmap-sync-log.md

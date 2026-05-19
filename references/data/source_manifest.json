@@ -1,14 +1,14 @@
 {
   "schema_version": "0.1",
-  "generated_at": "2026-05-19T14:26:39.960Z",
+  "generated_at": "2026-05-19T15:02:43.216Z",
   "sprint_id": "R0.2",
   "scope": "references/",
   "note": "Self-generated inventory files intentionally omit size and sha256 to avoid unstable self-checksums.",
   "summary": {
-    "file_count": 253,
+    "file_count": 254,
     "by_layer": {
       "authored_judgement": 8,
-      "governance_data": 173,
+      "governance_data": 174,
       "external_authority": 32,
       "machine_registry": 5,
       "owned_curriculum_design": 5,
@@ -20,7 +20,7 @@
     "by_edit_policy": {
       "human_reviewed_edit": 16,
       "generated_by_inventory_script": 28,
-      "sprint_process": 144,
+      "sprint_process": 145,
       "external_refresh_only": 32,
       "cli_only": 5,
       "versioned_human_reviewed_edit": 5,
@@ -969,6 +969,26 @@
       "self_generated_inventory_file": false
     },
     {
+      "path": "references/data/sprints/CP.6a-lesson-side-recheck.json",
+      "file_name": "CP.6a-lesson-side-recheck.json",
+      "extension": "json",
+      "size_bytes": 5417,
+      "sha256": "be3f8d9174c24891f91adb7aff45ae7870c7cc48b6d1d161bde4b20db70a3dd0",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
       "path": "references/data/sprints/CP.6a.plan.json",
       "file_name": "CP.6a.plan.json",
       "extension": "json",
@@ -992,8 +1012,8 @@
       "path": "references/data/sprints/CP.6a.result.json",
       "file_name": "CP.6a.result.json",
       "extension": "json",
-      "size_bytes": 3486,
-      "sha256": "7214b10e576289bfd5618e84cca4ce84e9e327fc1952bdf1a07938204b5e73a6",
+      "size_bytes": 4067,
+      "sha256": "6dff9fa7f98631a5289310b91aa34e91a7eef2f3c11b93599f9ebef871f50115",
       "layer": "governance_data",
       "authority_level": "generated_report",
       "source_type": "sprint_metadata",
@@ -4597,8 +4617,8 @@
       "path": "references/reference-team-roadmap.md",
       "file_name": "reference-team-roadmap.md",
       "extension": "md",
-      "size_bytes": 152900,
-      "sha256": "5f9904e6ed7b145822efb6fd734a0ef15f662373cb7f48cb04de7d22fabdb354",
+      "size_bytes": 153943,
+      "sha256": "7d64ae4f687d42d0d48a848ed8be24aede31c6dc73ce5178269324349d2897fd",
       "layer": "planning",
       "authority_level": "authored_judgement",
       "source_type": "roadmap",

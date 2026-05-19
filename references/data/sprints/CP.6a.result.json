@@ -28,6 +28,17 @@
     "year1_closed": false,
     "next_operational_sprint": "CP.6b"
   },
+  "post_closure_lesson_side_recheck": {
+    "status": "lesson_side_mismatch_fixed_with_carried_conditions",
+    "recorded_on": "2026-05-19",
+    "recheck_json": "references/data/sprints/CP.6a-lesson-side-recheck.json",
+    "recheck_report": "reports/reference-planning/CP.6a-lesson-side-recheck.md",
+    "lesson_ticket": "../4veco-lessen/lesson-ticket-L-CP6A-book1-chapter13-v5-alignment.md",
+    "lesson_commit": "1aa63e4f0968c39141c1a04809f6410b5435ee34",
+    "platform_commit": "6e2c06684e0c9b782cf005027a3b2ef3fd9fd230",
+    "cp6_closed": false,
+    "year1_closed": false
+  },
   "acceptance_tests": [
     {
       "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/CP.6a-plan.md",
