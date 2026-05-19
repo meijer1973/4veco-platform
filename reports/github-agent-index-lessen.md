@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-lessen
 
-Generated: 2026-05-19T09:38:54.139Z
+Generated: 2026-05-19T11:49:30.757Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-lessen`
-Files indexed: 1267
+Files indexed: 1272
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -2302,7 +2302,7 @@ Count: 785
 
 ## other
 
-Count: 212
+Count: 217
 
 - _team-b-reference/1.1.1/uitleg vaardigheden team b.html
 - _team-b-reference/1.1.1/uitleg voorkennis team b.html
@@ -2443,68 +2443,73 @@ Count: 212
 - archive/sprints/L1.6/L1.6-teacher-learning-quality-review.md
 - archive/sprints/L1.6/L1.6-technical-qa-report.md
 - archive/sprints/L1.6/L1.6-verification-report.md
+- archive/sprints/L1.6R/L1.6R-baseline.md
+- archive/sprints/L1.6R/L1.6R-closure-log.md
+- archive/sprints/L1.6R/L1.6R-diff-summary.md
+- archive/sprints/L1.6R/L1.6R-dual-coding-incident-record.md
+- archive/sprints/L1.6R/L1.6R-dual-coding-remediation-plan.md
+- archive/sprints/L1.6R/L1.6R-human-review-packet.md
+- archive/sprints/L1.6R/L1.6R-human-review-record.md
+- archive/sprints/L1.6R/L1.6R-lead-review-summary.md
+- archive/sprints/L1.6R/L1.6R-screenshots/presentation/dark-notes-slide-1.png
+- archive/sprints/L1.6R/L1.6R-screenshots/presentation/dark-notes-slide-2.png
+- archive/sprints/L1.6R/L1.6R-screenshots/presentation/dark-notes-slide-3.png
+- archive/sprints/L1.6R/L1.6R-screenshots/presentation/dark-notes-slide-4.png
+- archive/sprints/L1.6R/L1.6R-screenshots/presentation/dark-notes-slide-5.png
+- archive/sprints/L1.6R/L1.6R-screenshots/presentation/dark-slide-1.png
+- archive/sprints/L1.6R/L1.6R-screenshots/presentation/dark-slide-2.png
+- archive/sprints/L1.6R/L1.6R-screenshots/presentation/dark-slide-3.png
+- archive/sprints/L1.6R/L1.6R-screenshots/presentation/dark-slide-4.png
+- archive/sprints/L1.6R/L1.6R-screenshots/presentation/dark-slide-5.png
+- archive/sprints/L1.6R/L1.6R-screenshots/presentation/desktop-slide-1.png
+- archive/sprints/L1.6R/L1.6R-screenshots/presentation/desktop-slide-2.png
+- archive/sprints/L1.6R/L1.6R-screenshots/presentation/desktop-slide-3.png
+- archive/sprints/L1.6R/L1.6R-screenshots/presentation/desktop-slide-4.png
+- archive/sprints/L1.6R/L1.6R-screenshots/presentation/desktop-slide-5.png
+- archive/sprints/L1.6R/L1.6R-screenshots/presentation/fullscreen-slide-1.png
+- archive/sprints/L1.6R/L1.6R-screenshots/presentation/fullscreen-slide-2.png
+- archive/sprints/L1.6R/L1.6R-screenshots/presentation/fullscreen-slide-3.png
+- archive/sprints/L1.6R/L1.6R-screenshots/presentation/fullscreen-slide-4.png
+- archive/sprints/L1.6R/L1.6R-screenshots/presentation/fullscreen-slide-5.png
+- archive/sprints/L1.6R/L1.6R-screenshots/presentation/mobile-slide-1.png
+- archive/sprints/L1.6R/L1.6R-screenshots/presentation/mobile-slide-2.png
+- archive/sprints/L1.6R/L1.6R-screenshots/presentation/mobile-slide-3.png
+- archive/sprints/L1.6R/L1.6R-screenshots/presentation/mobile-slide-4.png
+- archive/sprints/L1.6R/L1.6R-screenshots/presentation/mobile-slide-5.png
+- archive/sprints/L1.6R/L1.6R-screenshots/presentation/wide-notes-slide-1.png
+- archive/sprints/L1.6R/L1.6R-screenshots/presentation/wide-notes-slide-2.png
+- archive/sprints/L1.6R/L1.6R-screenshots/presentation/wide-notes-slide-3.png
+- archive/sprints/L1.6R/L1.6R-screenshots/presentation/wide-notes-slide-4.png
+- archive/sprints/L1.6R/L1.6R-screenshots/presentation/wide-notes-slide-5.png
+- archive/sprints/L1.6R/L1.6R-screenshots/student-web/1-1-3-grafieken-en-tabellen-begeleide-inoefening-desktop-dark.png
+- archive/sprints/L1.6R/L1.6R-screenshots/student-web/1-1-3-grafieken-en-tabellen-begeleide-inoefening-desktop-light.png
+- archive/sprints/L1.6R/L1.6R-screenshots/student-web/1-1-3-grafieken-en-tabellen-begeleide-inoefening-mobile-dark.png
+- archive/sprints/L1.6R/L1.6R-screenshots/student-web/1-1-3-grafieken-en-tabellen-begeleide-inoefening-mobile-light.png
+- archive/sprints/L1.6R/L1.6R-screenshots/student-web/1-1-3-grafieken-en-tabellen-nieuws-met-visual-desktop-dark.png
+- archive/sprints/L1.6R/L1.6R-screenshots/student-web/1-1-3-grafieken-en-tabellen-nieuws-met-visual-desktop-light.png
+- archive/sprints/L1.6R/L1.6R-screenshots/student-web/1-1-3-grafieken-en-tabellen-nieuws-met-visual-mobile-dark.png
+- archive/sprints/L1.6R/L1.6R-screenshots/student-web/1-1-3-grafieken-en-tabellen-nieuws-met-visual-mobile-light.png
+- archive/sprints/L1.6R/L1.6R-screenshots/student-web/1-1-3-grafieken-en-tabellen-samenvatting-desktop-dark.png
+- archive/sprints/L1.6R/L1.6R-screenshots/student-web/1-1-3-grafieken-en-tabellen-samenvatting-desktop-light.png
+- archive/sprints/L1.6R/L1.6R-screenshots/student-web/1-1-3-grafieken-en-tabellen-samenvatting-mobile-dark.png
+- archive/sprints/L1.6R/L1.6R-screenshots/student-web/1-1-3-grafieken-en-tabellen-samenvatting-mobile-light.png
+- archive/sprints/L1.6R/L1.6R-screenshots/student-web/1-1-3-grafieken-en-tabellen-uitleg-vaardigheden-desktop-dark.png
+- archive/sprints/L1.6R/L1.6R-screenshots/student-web/1-1-3-grafieken-en-tabellen-uitleg-vaardigheden-desktop-light.png
+- archive/sprints/L1.6R/L1.6R-screenshots/student-web/1-1-3-grafieken-en-tabellen-uitleg-vaardigheden-mobile-dark.png
+- archive/sprints/L1.6R/L1.6R-screenshots/student-web/1-1-3-grafieken-en-tabellen-uitleg-vaardigheden-mobile-light.png
+- archive/sprints/L1.6R/L1.6R-screenshots/student-web/1-1-3-grafieken-en-tabellen-uitleg-voorkennis-desktop-dark.png
+- archive/sprints/L1.6R/L1.6R-screenshots/student-web/1-1-3-grafieken-en-tabellen-uitleg-voorkennis-desktop-light.png
+- archive/sprints/L1.6R/L1.6R-screenshots/student-web/1-1-3-grafieken-en-tabellen-uitleg-voorkennis-mobile-dark.png
+- archive/sprints/L1.6R/L1.6R-screenshots/student-web/1-1-3-grafieken-en-tabellen-uitleg-voorkennis-mobile-light.png
+- archive/sprints/L1.6R/L1.6R-semantic-visual-qa-report.md
+- archive/sprints/L1.6R/L1.6R-student-experience-review.md
+- archive/sprints/L1.6R/L1.6R-teacher-learning-quality-review.md
+- archive/sprints/L1.6R/L1.6R-technical-qa-report.md
 - archive/sprints/SYNC-1/SYNC-1-roadmap-reconciliation-log.md
 - course_blueprint_v4.md
 - course_blueprint_v5.md
 - index.html
 - knowledge/handoff-presentation-method-to-lessons-team.md
-- L1.6R-baseline.md
-- L1.6R-diff-summary.md
-- L1.6R-dual-coding-incident-record.md
-- L1.6R-dual-coding-remediation-plan.md
-- L1.6R-human-review-packet.md
-- L1.6R-screenshots/presentation/dark-notes-slide-1.png
-- L1.6R-screenshots/presentation/dark-notes-slide-2.png
-- L1.6R-screenshots/presentation/dark-notes-slide-3.png
-- L1.6R-screenshots/presentation/dark-notes-slide-4.png
-- L1.6R-screenshots/presentation/dark-notes-slide-5.png
-- L1.6R-screenshots/presentation/dark-slide-1.png
-- L1.6R-screenshots/presentation/dark-slide-2.png
-- L1.6R-screenshots/presentation/dark-slide-3.png
-- L1.6R-screenshots/presentation/dark-slide-4.png
-- L1.6R-screenshots/presentation/dark-slide-5.png
-- L1.6R-screenshots/presentation/desktop-slide-1.png
-- L1.6R-screenshots/presentation/desktop-slide-2.png
-- L1.6R-screenshots/presentation/desktop-slide-3.png
-- L1.6R-screenshots/presentation/desktop-slide-4.png
-- L1.6R-screenshots/presentation/desktop-slide-5.png
-- L1.6R-screenshots/presentation/fullscreen-slide-1.png
-- L1.6R-screenshots/presentation/fullscreen-slide-2.png
-- L1.6R-screenshots/presentation/fullscreen-slide-3.png
-- L1.6R-screenshots/presentation/fullscreen-slide-4.png
-- L1.6R-screenshots/presentation/fullscreen-slide-5.png
-- L1.6R-screenshots/presentation/mobile-slide-1.png
-- L1.6R-screenshots/presentation/mobile-slide-2.png
-- L1.6R-screenshots/presentation/mobile-slide-3.png
-- L1.6R-screenshots/presentation/mobile-slide-4.png
-- L1.6R-screenshots/presentation/mobile-slide-5.png
-- L1.6R-screenshots/presentation/wide-notes-slide-1.png
-- L1.6R-screenshots/presentation/wide-notes-slide-2.png
-- L1.6R-screenshots/presentation/wide-notes-slide-3.png
-- L1.6R-screenshots/presentation/wide-notes-slide-4.png
-- L1.6R-screenshots/presentation/wide-notes-slide-5.png
-- L1.6R-screenshots/student-web/1-1-3-grafieken-en-tabellen-begeleide-inoefening-desktop-dark.png
-- L1.6R-screenshots/student-web/1-1-3-grafieken-en-tabellen-begeleide-inoefening-desktop-light.png
-- L1.6R-screenshots/student-web/1-1-3-grafieken-en-tabellen-begeleide-inoefening-mobile-dark.png
-- L1.6R-screenshots/student-web/1-1-3-grafieken-en-tabellen-begeleide-inoefening-mobile-light.png
-- L1.6R-screenshots/student-web/1-1-3-grafieken-en-tabellen-nieuws-met-visual-desktop-dark.png
-- L1.6R-screenshots/student-web/1-1-3-grafieken-en-tabellen-nieuws-met-visual-desktop-light.png
-- L1.6R-screenshots/student-web/1-1-3-grafieken-en-tabellen-nieuws-met-visual-mobile-dark.png
-- L1.6R-screenshots/student-web/1-1-3-grafieken-en-tabellen-nieuws-met-visual-mobile-light.png
-- L1.6R-screenshots/student-web/1-1-3-grafieken-en-tabellen-samenvatting-desktop-dark.png
-- L1.6R-screenshots/student-web/1-1-3-grafieken-en-tabellen-samenvatting-desktop-light.png
-- L1.6R-screenshots/student-web/1-1-3-grafieken-en-tabellen-samenvatting-mobile-dark.png
-- L1.6R-screenshots/student-web/1-1-3-grafieken-en-tabellen-samenvatting-mobile-light.png
-- L1.6R-screenshots/student-web/1-1-3-grafieken-en-tabellen-uitleg-vaardigheden-desktop-dark.png
-- L1.6R-screenshots/student-web/1-1-3-grafieken-en-tabellen-uitleg-vaardigheden-desktop-light.png
-- L1.6R-screenshots/student-web/1-1-3-grafieken-en-tabellen-uitleg-vaardigheden-mobile-dark.png
-- L1.6R-screenshots/student-web/1-1-3-grafieken-en-tabellen-uitleg-vaardigheden-mobile-light.png
-- L1.6R-screenshots/student-web/1-1-3-grafieken-en-tabellen-uitleg-voorkennis-desktop-dark.png
-- L1.6R-screenshots/student-web/1-1-3-grafieken-en-tabellen-uitleg-voorkennis-desktop-light.png
-- L1.6R-screenshots/student-web/1-1-3-grafieken-en-tabellen-uitleg-voorkennis-mobile-dark.png
-- L1.6R-screenshots/student-web/1-1-3-grafieken-en-tabellen-uitleg-voorkennis-mobile-light.png
-- L1.6R-semantic-visual-qa-report.md
-- L1.6R-technical-qa-report.md
 - lessen-team-roadmap.md
 - pv-g4-proof-records/HCS-PV-G4-lead-review-plan.md
 - pv-g4-proof-records/HCS-PV-G4-lead-review-record.md

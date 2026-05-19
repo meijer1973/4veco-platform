@@ -12,12 +12,13 @@ docs/roadmaps/roadmap-version-index.json
 
 | Roadmap | Version | Path | Notes |
 |---|---|---|---|
-| References Team Roadmap | `v2.49-ref-ct1-year1-coverage-baseline` | `references/reference-team-roadmap.md` | Current operating roadmap after REF-CT1 completed the non-mutating Year-1 target-exercise and MTU coverage baseline, produced the CP-6 packet, and moved Content Track 2 to active precision and semantic dual-coding audit work while keeping CP-6 and Year 1 not closed. |
+| References Team Roadmap | `v2.50-ref-ct2-precision-dual-coding-audit` | `references/reference-team-roadmap.md` | Current operating roadmap after REF-CT2 completed the non-mutating Year-1 precision and dual-coding audit, left CP-6 and Year 1 blocked, and inserted REF-CP6 remediation/readiness before Year-2 skeleton work. |
 
 ## Outdated Archive
 
 | Roadmap | Version | Path | Superseded By |
 |---|---|---|---|
+| References Team Roadmap before REF-CT2 precision and dual-coding audit completion | `v2.49-ref-ct1-year1-coverage-baseline` | `docs/roadmaps/outdated/reference-team-roadmap-v2.49-ref-ct1-year1-coverage-baseline.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before REF-CT1 Year-1 coverage baseline completion | `v2.48-l16r-dual-coding-incident` | `docs/roadmaps/outdated/reference-team-roadmap-v2.48-l16r-dual-coding-incident.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before L1.6R dual-coding incident update | `v2.47-sprint-log-and-lead-review-procedure` | `docs/roadmaps/outdated/reference-team-roadmap-v2.47-sprint-log-and-lead-review-procedure.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before sprint-log and lead-review procedure update | `v2.46-ref-ct0-prototype-classification` | `docs/roadmaps/outdated/reference-team-roadmap-v2.46-ref-ct0-prototype-classification.md` | `references/reference-team-roadmap.md` |

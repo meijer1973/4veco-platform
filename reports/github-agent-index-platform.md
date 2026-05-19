@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-05-19T09:38:54.106Z
+Generated: 2026-05-19T11:49:30.730Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 1380
+Files indexed: 1397
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -105,7 +105,7 @@ Count: 59
 
 ## build scripts
 
-Count: 262
+Count: 264
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -227,6 +227,7 @@ Count: 262
 - build-scripts/references/build-procedure-visual-schema-status.js
 - build-scripts/references/build-pv-g4-lesson-proof-records.js
 - build-scripts/references/build-ref-ct0-planning-artifacts.js
+- build-scripts/references/build-ref-ct1-coverage-artifacts.js
 - build-scripts/references/build-reference-inventory.js
 - build-scripts/references/build-representation-operation-coverage.js
 - build-scripts/references/build-representation-operation-inventory.js
@@ -255,6 +256,7 @@ Count: 262
 - build-scripts/references/check-procedure-visual-promotion-pipeline-design.js
 - build-scripts/references/check-quality-issues.js
 - build-scripts/references/check-ref-ct0-planning-artifacts.js
+- build-scripts/references/check-ref-ct1-coverage-artifacts.js
 - build-scripts/references/check-reference-cli-coverage.js
 - build-scripts/references/check-representation-operation-coverage.js
 - build-scripts/references/check-representation-operation-inventory.js
@@ -419,7 +421,7 @@ Count: 42
 
 ## validators
 
-Count: 71
+Count: 72
 
 - build-scripts/rag/validate-chunks.js
 - build-scripts/rag/validate-query-output.js
@@ -442,6 +444,7 @@ Count: 71
 - build-scripts/references/check-procedure-visual-promotion-pipeline-design.js
 - build-scripts/references/check-quality-issues.js
 - build-scripts/references/check-ref-ct0-planning-artifacts.js
+- build-scripts/references/check-ref-ct1-coverage-artifacts.js
 - build-scripts/references/check-reference-cli-coverage.js
 - build-scripts/references/check-representation-operation-coverage.js
 - build-scripts/references/check-representation-operation-inventory.js
@@ -495,7 +498,7 @@ Count: 71
 
 ## references
 
-Count: 239
+Count: 242
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -624,6 +627,9 @@ Count: 239
 - references/data/sprints/REF-CT0-mtu-classification.json
 - references/data/sprints/REF-CT0.plan.json
 - references/data/sprints/REF-CT0.result.json
+- references/data/sprints/REF-CT1-year1-coverage.json
+- references/data/sprints/REF-CT1.plan.json
+- references/data/sprints/REF-CT1.result.json
 - references/data/sprints/RX.1-representation-operation-inventory.json
 - references/data/sprints/RX.1.plan.json
 - references/data/sprints/RX.1.result.json
@@ -739,7 +745,7 @@ Count: 239
 
 ## reports
 
-Count: 570
+Count: 581
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -878,6 +884,9 @@ Count: 570
 - reports/reference-planning/REF-CT0-mtu-classification.md
 - reports/reference-planning/REF-CT0-source-authority-boundary.md
 - reports/reference-planning/REF-CT0-three-year-prototype.md
+- reports/reference-planning/REF-CT1-cp6-review-packet.md
+- reports/reference-planning/REF-CT1-mtu-gap-classification.md
+- reports/reference-planning/REF-CT1-year1-coverage.md
 - reports/representation-operation-coverage.md
 - reports/representation-transfer-gaps.md
 - reports/review-gates/GATE-CP1-schema-audit/bundle-urls.md
@@ -1257,6 +1266,14 @@ Count: 570
 - reports/sprints/REF-CT0-lead-review-round2.md
 - reports/sprints/REF-CT0-plan.md
 - reports/sprints/REF-CT0-result.md
+- reports/sprints/REF-CT1-baseline.md
+- reports/sprints/REF-CT1-diff-summary.md
+- reports/sprints/REF-CT1-lead-review-assignment.md
+- reports/sprints/REF-CT1-lead-review-corrections.md
+- reports/sprints/REF-CT1-lead-review-round1.md
+- reports/sprints/REF-CT1-lead-review-round2.md
+- reports/sprints/REF-CT1-plan.md
+- reports/sprints/REF-CT1-result.md
 - reports/sprints/RX.1-baseline.md
 - reports/sprints/RX.1-diff-summary.md
 - reports/sprints/RX.1-result.md
@@ -1332,7 +1349,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 193
+Count: 194
 
 - .gitignore
 - BUILD-CHAPTER.md
@@ -1380,6 +1397,7 @@ Count: 193
 - docs/roadmaps/outdated/reference-team-roadmap-v2.45-post-l16-foundation-hardening.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.46-ref-ct0-prototype-classification.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.47-sprint-log-and-lead-review-procedure.md
+- docs/roadmaps/outdated/reference-team-roadmap-v2.48-l16r-dual-coding-incident.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.5-representation-sensitive-phase.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.6-s4-cp3-dry-run.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.7-cp3-closed.md

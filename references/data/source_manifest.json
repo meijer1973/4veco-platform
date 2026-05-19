@@ -1,14 +1,14 @@
 {
   "schema_version": "0.1",
-  "generated_at": "2026-05-19T09:39:02.501Z",
+  "generated_at": "2026-05-19T11:49:36.862Z",
   "sprint_id": "R0.2",
   "scope": "references/",
   "note": "Self-generated inventory files intentionally omit size and sha256 to avoid unstable self-checksums.",
   "summary": {
-    "file_count": 242,
+    "file_count": 245,
     "by_layer": {
       "authored_judgement": 8,
-      "governance_data": 162,
+      "governance_data": 165,
       "external_authority": 32,
       "machine_registry": 5,
       "owned_curriculum_design": 5,
@@ -20,7 +20,7 @@
     "by_edit_policy": {
       "human_reviewed_edit": 16,
       "generated_by_inventory_script": 28,
-      "sprint_process": 133,
+      "sprint_process": 136,
       "external_refresh_only": 32,
       "cli_only": 5,
       "versioned_human_reviewed_edit": 5,
@@ -2629,6 +2629,66 @@
       "self_generated_inventory_file": false
     },
     {
+      "path": "references/data/sprints/REF-CT2-precision-dual-coding-audit.json",
+      "file_name": "REF-CT2-precision-dual-coding-audit.json",
+      "extension": "json",
+      "size_bytes": 66286,
+      "sha256": "7893a45d237693ae79f6dcdf3e2ef25f67da3833b8e61248deed4d4d42c7e728",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/data/sprints/REF-CT2.plan.json",
+      "file_name": "REF-CT2.plan.json",
+      "extension": "json",
+      "size_bytes": 3372,
+      "sha256": "813fac0ee6612e00ec9e179c4dbbaba10ea6c39d81fe5c65f1143c8c76b35d42",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/data/sprints/REF-CT2.result.json",
+      "file_name": "REF-CT2.result.json",
+      "extension": "json",
+      "size_bytes": 4426,
+      "sha256": "b03b809bd12c2f9016f565b516ca81038795825536e16495a3a2e875fb148a58",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
       "path": "references/data/sprints/RX.1-representation-operation-inventory.json",
       "file_name": "RX.1-representation-operation-inventory.json",
       "extension": "json",
@@ -4377,8 +4437,8 @@
       "path": "references/reference-team-roadmap.md",
       "file_name": "reference-team-roadmap.md",
       "extension": "md",
-      "size_bytes": 145614,
-      "sha256": "9af624cc3575f4996c770e1d2b0435bff174ded681651ee9c119e28478409779",
+      "size_bytes": 146860,
+      "sha256": "adba9bab4e6482b42e58e612b04c4ee4fcbde056c9290fa0a750b548feb80ef1",
       "layer": "planning",
       "authority_level": "authored_judgement",
       "source_type": "roadmap",
