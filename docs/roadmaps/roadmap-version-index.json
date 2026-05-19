@@ -15,13 +15,14 @@
   "roadmaps": [
     {
       "roadmap_id": "references-team-roadmap",
-      "version": "v2.52-gate-cp6-routing-decision",
+      "version": "v2.53-cp6a-lesson-side-alignment",
       "title": "References Team Roadmap",
       "status": "active",
       "path": "references/reference-team-roadmap.md",
       "owner": "references_team",
       "updated_on": "2026-05-19",
       "supersedes": [
+        "docs/roadmaps/outdated/reference-team-roadmap-v2.52-gate-cp6-routing-decision.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.51-ref-cp6-remediation-readiness.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.50-ref-ct2-precision-dual-coding-audit.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.49-ref-ct1-year1-coverage-baseline.md",
@@ -73,7 +74,18 @@
         "knowledge/Exercise schema and quality/reference-team-roadmap Live version 28 April.md",
         "knowledge/Exercise schema and quality/roadmap-updated-repository-checked.md"
       ],
-      "notes": "Current operating roadmap after GATE-CP6 recorded the human routing decision and opened the CP.6a-CP.6e remediation lanes without closing CP-6 or Year 1."
+      "notes": "Current operating roadmap after CP.6a completed the non-mutating Book 1 Chapter 1.3 lesson-side alignment plan and moved CP.6b target-exercise review to the active row."
+    },
+    {
+      "roadmap_id": "references-team-roadmap-v2.52",
+      "version": "v2.52-gate-cp6-routing-decision",
+      "title": "References Team Roadmap before CP.6a lesson-side alignment",
+      "status": "outdated",
+      "path": "docs/roadmaps/outdated/reference-team-roadmap-v2.52-gate-cp6-routing-decision.md",
+      "owner": "references_team",
+      "updated_on": "2026-05-19",
+      "superseded_by": "references/reference-team-roadmap.md",
+      "notes": "Snapshot archived before CP.6a recorded the non-mutating lesson-side alignment plan and moved CP.6b to the active roadmap row."
     },
     {
       "roadmap_id": "references-team-roadmap-v2.51",

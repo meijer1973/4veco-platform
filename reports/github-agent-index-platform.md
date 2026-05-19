@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-05-19T13:49:51.694Z
+Generated: 2026-05-19T14:14:51.687Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 1432
+Files indexed: 1451
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -105,7 +105,7 @@ Count: 59
 
 ## build scripts
 
-Count: 268
+Count: 269
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -340,6 +340,7 @@ Count: 268
 - build-scripts/reports/terms-coverage.js
 - build-scripts/reports/unresolved-refs.js
 - build-scripts/reports/validate-report-json.js
+- build-scripts/review-gates/check-gate-cp6-routing-decision.js
 - build-scripts/review-gates/check-r2-4-packet.js
 - build-scripts/review-gates/validate-gate.js
 - build-scripts/review-gates/validate-rag-review-packet.js
@@ -425,7 +426,7 @@ Count: 42
 
 ## validators
 
-Count: 74
+Count: 75
 
 - build-scripts/rag/validate-chunks.js
 - build-scripts/rag/validate-query-output.js
@@ -480,6 +481,7 @@ Count: 74
 - build-scripts/references/validate-procedure-visual-registry.js
 - build-scripts/reports/check-reference-health.js
 - build-scripts/reports/validate-report-json.js
+- build-scripts/review-gates/check-gate-cp6-routing-decision.js
 - build-scripts/review-gates/check-r2-4-packet.js
 - build-scripts/review-gates/validate-gate.js
 - build-scripts/review-gates/validate-rag-review-packet.js
@@ -504,7 +506,7 @@ Count: 74
 
 ## references
 
-Count: 248
+Count: 250
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -552,6 +554,8 @@ Count: 248
 - references/data/skill-operation-registry.json
 - references/data/source_manifest.json
 - references/data/source-document-registry.json
+- references/data/sprints/GATE-CP6.plan.json
+- references/data/sprints/GATE-CP6.result.json
 - references/data/sprints/PV-G4.plan.json
 - references/data/sprints/PV.1.plan.json
 - references/data/sprints/PV.1.result.json
@@ -757,7 +761,7 @@ Count: 248
 
 ## reports
 
-Count: 604
+Count: 619
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -965,6 +969,13 @@ Count: 604
 - reports/review-gates/GATE-CP5-D04-resolution/S9a-stale-reference-audit.md
 - reports/review-gates/GATE-CP5-D04-resolution/unit-design-status-strategy.json
 - reports/review-gates/GATE-CP5-D04-resolution/unit-design-status-strategy.md
+- reports/review-gates/GATE-CP6-year-1-paragraph-coverage/bundle-urls.md
+- reports/review-gates/GATE-CP6-year-1-paragraph-coverage/gate-routing-decision.json
+- reports/review-gates/GATE-CP6-year-1-paragraph-coverage/gate-routing-decision.md
+- reports/review-gates/GATE-CP6-year-1-paragraph-coverage/human-interview.json
+- reports/review-gates/GATE-CP6-year-1-paragraph-coverage/human-interview.md
+- reports/review-gates/GATE-CP6-year-1-paragraph-coverage/remediation-lanes.json
+- reports/review-gates/GATE-CP6-year-1-paragraph-coverage/remediation-lanes.md
 - reports/review-gates/GATE-CP6-year-1-paragraph-coverage/review-packet.json
 - reports/review-gates/GATE-CP6-year-1-paragraph-coverage/review-packet.md
 - reports/review-gates/GATE-PV-G1-schema/bundle-urls.md
@@ -1161,6 +1172,14 @@ Count: 604
 - reports/review-gates/GATE-RX6-skilltree-generator-integration/technical-closure.json
 - reports/review-gates/GATE-RX6-skilltree-generator-integration/technical-closure.md
 - reports/sprints/example-result.md
+- reports/sprints/GATE-CP6-baseline.md
+- reports/sprints/GATE-CP6-diff-summary.md
+- reports/sprints/GATE-CP6-lead-review-assignment.md
+- reports/sprints/GATE-CP6-lead-review-corrections.md
+- reports/sprints/GATE-CP6-lead-review-round1.md
+- reports/sprints/GATE-CP6-lead-review-round2.md
+- reports/sprints/GATE-CP6-plan.md
+- reports/sprints/GATE-CP6-result.md
 - reports/sprints/PV-G4-baseline.md
 - reports/sprints/PV.1-baseline.md
 - reports/sprints/PV.1-diff-summary.md
@@ -1384,7 +1403,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 196
+Count: 197
 
 - .gitignore
 - BUILD-CHAPTER.md
@@ -1436,6 +1455,7 @@ Count: 196
 - docs/roadmaps/outdated/reference-team-roadmap-v2.49-ref-ct1-year1-coverage-baseline.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.5-representation-sensitive-phase.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.50-ref-ct2-precision-dual-coding-audit.md
+- docs/roadmaps/outdated/reference-team-roadmap-v2.51-ref-cp6-remediation-readiness.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.6-s4-cp3-dry-run.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.7-cp3-closed.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.8-s4.1-conditions-calibrated.md

@@ -1,14 +1,14 @@
 {
   "schema_version": "0.1",
-  "generated_at": "2026-05-19T13:50:51.843Z",
+  "generated_at": "2026-05-19T14:14:54.401Z",
   "sprint_id": "R0.2",
   "scope": "references/",
   "note": "Self-generated inventory files intentionally omit size and sha256 to avoid unstable self-checksums.",
   "summary": {
-    "file_count": 250,
+    "file_count": 253,
     "by_layer": {
       "authored_judgement": 8,
-      "governance_data": 170,
+      "governance_data": 173,
       "external_authority": 32,
       "machine_registry": 5,
       "owned_curriculum_design": 5,
@@ -20,7 +20,7 @@
     "by_edit_policy": {
       "human_reviewed_edit": 16,
       "generated_by_inventory_script": 28,
-      "sprint_process": 141,
+      "sprint_process": 144,
       "external_refresh_only": 32,
       "cli_only": 5,
       "versioned_human_reviewed_edit": 5,
@@ -941,6 +941,66 @@
       "edit_policy": "generated_by_inventory_script",
       "owner": "references_team",
       "refresh_policy": "regenerate",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/data/sprints/CP.6a-lesson-side-alignment.json",
+      "file_name": "CP.6a-lesson-side-alignment.json",
+      "extension": "json",
+      "size_bytes": 9196,
+      "sha256": "8fcf3bf9c1d598cac5cd9524cca88024ef0f1f431e4264f69d26645d85fcb972",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/data/sprints/CP.6a.plan.json",
+      "file_name": "CP.6a.plan.json",
+      "extension": "json",
+      "size_bytes": 3162,
+      "sha256": "208fc2d99be8551e5bb92a1b5b1c28ff4178255acad3e42b801100e82f1d35f0",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/data/sprints/CP.6a.result.json",
+      "file_name": "CP.6a.result.json",
+      "extension": "json",
+      "size_bytes": 3486,
+      "sha256": "7214b10e576289bfd5618e84cca4ce84e9e327fc1952bdf1a07938204b5e73a6",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
       "downstream_dependencies": [
         "roadmap",
         "dashboards",
@@ -4537,8 +4597,8 @@
       "path": "references/reference-team-roadmap.md",
       "file_name": "reference-team-roadmap.md",
       "extension": "md",
-      "size_bytes": 151516,
-      "sha256": "d28be1b6decc3556bace378a92d26dbec0d795c3791e6ff687ab2f4bcea788bf",
+      "size_bytes": 152900,
+      "sha256": "5f9904e6ed7b145822efb6fd734a0ef15f662373cb7f48cb04de7d22fabdb354",
       "layer": "planning",
       "authority_level": "authored_judgement",
       "source_type": "roadmap",

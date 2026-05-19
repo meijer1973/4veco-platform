@@ -12,12 +12,13 @@ docs/roadmaps/roadmap-version-index.json
 
 | Roadmap | Version | Path | Notes |
 |---|---|---|---|
-| References Team Roadmap | `v2.52-gate-cp6-routing-decision` | `references/reference-team-roadmap.md` | Current operating roadmap after GATE-CP6 recorded the human routing decision and opened the CP.6a-CP.6e remediation lanes without closing CP-6 or Year 1. |
+| References Team Roadmap | `v2.53-cp6a-lesson-side-alignment` | `references/reference-team-roadmap.md` | Current operating roadmap after CP.6a completed the non-mutating Book 1 Chapter 1.3 lesson-side alignment plan and moved CP.6b target-exercise review to the active row. |
 
 ## Outdated Archive
 
 | Roadmap | Version | Path | Superseded By |
 |---|---|---|---|
+| References Team Roadmap before CP.6a lesson-side alignment | `v2.52-gate-cp6-routing-decision` | `docs/roadmaps/outdated/reference-team-roadmap-v2.52-gate-cp6-routing-decision.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before GATE-CP6 routing decision | `v2.51-ref-cp6-remediation-readiness` | `docs/roadmaps/outdated/reference-team-roadmap-v2.51-ref-cp6-remediation-readiness.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before REF-CP6 remediation/readiness completion | `v2.50-ref-ct2-precision-dual-coding-audit` | `docs/roadmaps/outdated/reference-team-roadmap-v2.50-ref-ct2-precision-dual-coding-audit.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before REF-CT2 precision and dual-coding audit completion | `v2.49-ref-ct1-year1-coverage-baseline` | `docs/roadmaps/outdated/reference-team-roadmap-v2.49-ref-ct1-year1-coverage-baseline.md` | `references/reference-team-roadmap.md` |
