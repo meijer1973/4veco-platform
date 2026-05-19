@@ -3,12 +3,15 @@
   "name": "Three-Year Prototype Normalisation And MTU Classification",
   "status": "planned",
   "planned_on": "2026-05-19",
-  "plan": "docs/sprints/REF-CT0-plan.md",
+  "plan": "reports/sprints/REF-CT0-plan.md",
   "protected_reference_data_changes_allowed": false,
   "protected_reference_data_change_mode": "none",
   "human_review_required": false,
+  "lead_review_required": true,
   "authority_level": "non_authoritative_planning_prototype",
   "allowed_outputs": [
+    "reports/sprints/REF-CT0-plan.md",
+    "reports/sprints/REF-CT0-baseline.md",
     "references/data/sprints/REF-CT0.result.json",
     "references/data/sprints/REF-CT0-mtu-classification.json",
     "reports/reference-planning/REF-CT0-source-authority-boundary.md",
@@ -18,6 +21,10 @@
     "build-scripts/references/build-ref-ct0-planning-artifacts.js",
     "reports/sprints/REF-CT0-result.md",
     "reports/sprints/REF-CT0-diff-summary.md",
+    "reports/sprints/REF-CT0-lead-review-assignment.md",
+    "reports/sprints/REF-CT0-lead-review-round1.md",
+    "reports/sprints/REF-CT0-lead-review-corrections.md",
+    "reports/sprints/REF-CT0-lead-review-round2.md",
     "build-scripts/references/check-ref-ct0-planning-artifacts.js"
   ],
   "blocked_scope": [
@@ -47,7 +54,7 @@
     "needs_evidence"
   ],
   "acceptance_tests": [
-    "node build-scripts/sprints/check-sprint-plan.js docs/sprints/REF-CT0-plan.md",
+    "node build-scripts/sprints/check-sprint-plan.js reports/sprints/REF-CT0-plan.md",
     "node build-scripts/sprints/check-sprint-bundle.js REF-CT0",
     "node scripts/check-course-target-exercises-v5.js",
     "node build-scripts/references/validate-core-schemas.js",

@@ -15,13 +15,14 @@
   "roadmaps": [
     {
       "roadmap_id": "references-team-roadmap",
-      "version": "v2.46-ref-ct0-prototype-classification",
+      "version": "v2.47-sprint-log-and-lead-review-procedure",
       "title": "References Team Roadmap",
       "status": "active",
       "path": "references/reference-team-roadmap.md",
       "owner": "references_team",
       "updated_on": "2026-05-19",
       "supersedes": [
+        "docs/roadmaps/outdated/reference-team-roadmap-v2.46-ref-ct0-prototype-classification.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.45-post-l16-foundation-hardening.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.44-s9a-d04-cli-mutation.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.43-s9-cp5-d04-closure.md",
@@ -67,7 +68,18 @@
         "knowledge/Exercise schema and quality/reference-team-roadmap Live version 28 April.md",
         "knowledge/Exercise schema and quality/roadmap-updated-repository-checked.md"
       ],
-      "notes": "Current operating roadmap after REF-CT0 completed the non-authoritative v5-aware three-year prototype, MTU classification, and candidate-review packet; REF-CT1 Year-1 target-exercise and MTU coverage baseline is now active."
+      "notes": "Current operating roadmap after sprint logs were consolidated under reports/sprints for new/current bundles and lead-review assignment, correction, and recheck logs became structural sprint-closure requirements."
+    },
+    {
+      "roadmap_id": "references-team-roadmap-v2.46",
+      "version": "v2.46-ref-ct0-prototype-classification",
+      "title": "References Team Roadmap before sprint-log and lead-review procedure update",
+      "status": "outdated",
+      "path": "docs/roadmaps/outdated/reference-team-roadmap-v2.46-ref-ct0-prototype-classification.md",
+      "owner": "references_team",
+      "updated_on": "2026-05-19",
+      "superseded_by": "references/reference-team-roadmap.md",
+      "notes": "Snapshot archived after REF-CT0 completed the non-authoritative v5-aware three-year prototype, MTU classification, and candidate-review packet, before sprint logs were consolidated and lead-review logs became structural closure requirements."
     },
     {
       "roadmap_id": "references-team-roadmap-v2.45",

@@ -24,13 +24,17 @@ Generated reports are diagnostics, not primary authority.
 
 ## Allowed paths
 
-- `docs/sprints/REF-CT0-plan.md`
+- `reports/sprints/REF-CT0-plan.md`
 - `references/data/sprints/REF-CT0.plan.json`
 - `references/data/sprints/REF-CT0.result.json`
 - `references/data/sprints/REF-CT0-mtu-classification.json`
 - `reports/sprints/REF-CT0-baseline.md`
 - `reports/sprints/REF-CT0-result.md`
 - `reports/sprints/REF-CT0-diff-summary.md`
+- `reports/sprints/REF-CT0-lead-review-assignment.md`
+- `reports/sprints/REF-CT0-lead-review-round1.md`
+- `reports/sprints/REF-CT0-lead-review-corrections.md`
+- `reports/sprints/REF-CT0-lead-review-round2.md`
 - `reports/reference-planning/REF-CT0-source-authority-boundary.md`
 - `reports/reference-planning/REF-CT0-three-year-prototype.md`
 - `reports/reference-planning/REF-CT0-mtu-classification.md`
@@ -76,7 +80,7 @@ Generated reports are diagnostics, not primary authority.
 
 ## Outputs
 
-- SPRINT bundle: plan, plan metadata, baseline, result, diff summary, and result metadata.
+- SPRINT bundle under `reports/sprints/`: plan, baseline, result, diff summary, lead-review assignment, round-1 lead-review log, corrections log, round-2 lead-review log, plus metadata under `references/data/sprints/`.
 - A source/authority boundary note that states what the prototype may and may not be used for.
 - A non-authoritative v5-aware three-year planning prototype.
 - An MTU classification table with these categories: `year_1_confirmed`, `year_1_backfill_candidate`, `year_2_skeleton_candidate`, `year_3_skeleton_candidate`, `duplicate_merge_split_candidate`, `parked`, and `needs_evidence`.
@@ -102,12 +106,15 @@ Generated reports are diagnostics, not primary authority.
 6. Produce the candidate-review packet. It must tell REF-CT1 exactly what to review first, especially Year 1 confirmed coverage, backfill candidates, placeholders, stale rough-source assumptions, and blocked mutation lanes.
 7. Add or run the read-only REF-CT0 validator. Stop if any artifact promotes the prototype to owned/machine authority, claims placeholder records are reviewed final, omits required categories, or implies protected mutation.
 8. Run the acceptance tests, regenerate normal reports/indexes when needed, and record result/diff artifacts.
-9. Mark REF-CT0 complete in the roadmap only after the complete sprint bundle and REF-CT0 validator pass. Move REF-CT1 to the active top ledger row, preserve all product-use blocks, refresh maps and indexes, fetch/prune remote, commit, push, and report the pushed hash.
+9. Assign the completed sprint bundle to the lead reviewer agent. Log the round-1 review in `reports/sprints/REF-CT0-lead-review-round1.md`.
+10. Apply the required corrections or record explicitly that no correction was needed. Log the correction pass in `reports/sprints/REF-CT0-lead-review-corrections.md`.
+11. Send the corrected bundle back to the lead reviewer for one recheck. Log the round-2 review in `reports/sprints/REF-CT0-lead-review-round2.md`. Stop and report back if the recheck verdict is not `PASS` or `PASS WITH FLAGS`.
+12. Mark REF-CT0 complete in the roadmap only after the complete sprint bundle, REF-CT0 validator, and lead-review cycle pass. Move REF-CT1 to the active top ledger row, preserve all product-use blocks, refresh maps and indexes, fetch/prune remote, commit, push, and report the pushed hash.
 
 ## Acceptance tests
 
 ```bash
-node build-scripts/sprints/check-sprint-plan.js docs/sprints/REF-CT0-plan.md
+node build-scripts/sprints/check-sprint-plan.js reports/sprints/REF-CT0-plan.md
 node build-scripts/sprints/check-sprint-bundle.js REF-CT0
 node scripts/check-course-target-exercises-v5.js
 node build-scripts/references/validate-core-schemas.js
@@ -136,5 +143,7 @@ If the sprint bundle tooling id-pattern update causes an unexpected regression, 
 ## Human review required
 
 No new human review gate is required for REF-CT0 because it is a non-mutating planning and classification sprint.
+
+The structural lead-review cycle is still required for sprint closure. It is an internal review/recheck procedure and does not replace a formal human review gate when one is required by a later mutation, promotion, or production sprint.
 
 Human review becomes required before any later sprint uses REF-CT0 to mint units, edit target exercises, close CP-6, promote target-exercise records to `reviewed_final`, change the owned blueprint, change machine registries, or authorize any student-facing/product use.

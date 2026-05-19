@@ -1,7 +1,7 @@
 {
   "report_id": "terms-coverage",
   "generated_by": "build-scripts/reports/generate-all.js",
-  "generated_on": "2026-05-19T07:22:06.147Z",
+  "generated_on": "2026-05-19T08:04:29.227Z",
   "source_files": [
     "references/machine/micro-teaching-units.json",
     "references/machine/begrippen.json"

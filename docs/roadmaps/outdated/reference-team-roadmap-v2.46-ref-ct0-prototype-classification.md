@@ -4,7 +4,7 @@ Generated: 2026-04-23
 Adopted main roadmap: 2026-04-25
 Last strategic update: 2026-05-19
 Roadmap ID: `references-team-roadmap`
-Roadmap version: `v2.47-sprint-log-and-lead-review-procedure`
+Roadmap version: `v2.46-ref-ct0-prototype-classification`
 Roadmap status: `active`
 Version index: `docs/roadmaps/roadmap-version-index.json`
 Scope: `references/`, `build-scripts/references/`, `build-scripts/reports/`, reference dashboards, and generated reference reports under `reports/`
@@ -13,9 +13,6 @@ Scope: `references/`, `build-scripts/references/`, `build-scripts/reports/`, ref
 
 The currently-active sprint sits at the top. Future sprints follow in sequence.
 Closed sprints are recorded separately in the "Closed Sprints" section below.
-New and currently-active sprint plans live beside their sprint logs under
-`reports/sprints/`. Archived plans under `docs/sprints/` remain valid for
-legacy bundles only.
 
 | Sprint | Name | Completed | Current State |
 |--------|------|-----------|---------------|
@@ -33,7 +30,7 @@ legacy bundles only.
 
 | Sprint | Name | Completed | Current State |
 |--------|------|-----------|---------------|
-| REF-CT0 | Three-Year Prototype Normalisation And MTU Classification | yes | Completed. Produced a non-authoritative v5-aware three-year prototype, source/authority boundary note, MTU classification JSON/Markdown, and REF-CT1 candidate-review packet. Classified 104 active v5-confirmed MTU ids, 44 live Year-1 backfill MTU ids plus 68 active v5 missing-flag records, 57 Year-2 skeleton ids, 20 Year-3 skeleton ids, 4 duplicate/merge/split records, 3 parked records, and 11 placeholder needs-evidence records. No `references/machine` or `references/external` mutation occurred. Post-closure lead-review logs are required in the sprint bundle. |
+| REF-CT0 | Three-Year Prototype Normalisation And MTU Classification | yes | Completed. Produced a non-authoritative v5-aware three-year prototype, source/authority boundary note, MTU classification JSON/Markdown, and REF-CT1 candidate-review packet. Classified 104 active v5-confirmed MTU ids, 44 live Year-1 backfill MTU ids plus 68 active v5 missing-flag records, 57 Year-2 skeleton ids, 20 Year-3 skeleton ids, 4 duplicate/merge/split records, 3 parked records, and 11 placeholder needs-evidence records. No `references/machine` or `references/external` mutation occurred. |
 | SYNC-1 | Roadmap Reconciliation | yes | Completed. Updated the references roadmap to v2.45 post-L1.6 state, updated the roadmap version index, and synchronized lesson/reference sequencing around foundation hardening instead of broad scaling. |
 | S9a | D04 CLI-Only Mutation Sprint | yes | Completed. Applied the CP-5 D04 decision through `unit-deprecate.js`, deprecated D04 with successor pointers to `A15`, `D06`, `A17`, `D11`, `A16`, `D12`, and `D27`, removed the single active target-exercise D04 citation, recorded mutation/stale-reference logs, regenerated reports/RAG/inventories, and preserved all blocked downstream uses. |
 | S9 | Unit Design Status And D04 Resolution | yes | Completed with `pass_with_conditions`. Added derived `unit-design-status` overlay, validator, JSON/Markdown report, reference-health/RAG labels, CP-5 decision record, dependent-unit audit, human interview, and gate closure; D04 remains promotion-blocked and no protected machine mutation occurred. |
@@ -175,8 +172,6 @@ Update 2026-05-16: `S9a D04 CLI-Only Mutation Sprint` is completed. S9a applied 
 Update 2026-05-18: `SYNC-1 Roadmap Reconciliation` is completed. The reference roadmap now reflects the lesson-side May 18 closures: L1.5P corrected the Book 1 12-paragraph print scope, L1.5Q made v5 the active 54-record curriculum-source baseline, and L1.6 closed PASS WITH FLAGS after proving fresh paragraph transfer for `1.1.3`. This evidence does not approve broad lesson scaling. The coming period is a foundation-hardening phase: normalize the rough three-year blueprint as a non-authoritative v5-aware planning prototype, classify MTU and target-exercise gaps before mutation, keep migrated target exercises visibly non-final, and preserve blocks on diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, PV projection, and PV machine promotion.
 
 Update 2026-05-18: The Sprint Ledger now sits at the top of the roadmap, directly after metadata. The currently-active sprint sits first, future sprints follow in sequence, and closed sprints are archived in a separate `Closed Sprints` section.
-
-Update 2026-05-19: Sprint log procedure now co-locates new and currently-active sprint plans with baseline, result, diff, and review logs under `reports/sprints/`. Sprint closure now includes a structural lead-review assignment, round-1 review log, correction log, and round-2 recheck log; if the recheck is not `PASS` or `PASS WITH FLAGS`, agents must stop and report back instead of closing.
 
 Compatibility decisions:
 
@@ -1932,13 +1927,10 @@ CP-2 decisions now in force:
 Use this sequence:
 
 ```text
-Plan in reports/sprints with sprint logs
+Plan
 -> Baseline
 -> Execute
 -> Verify
--> Lead-review assignment and round-1 review log
--> Correction pass and correction log
--> Lead-review recheck and round-2 review log
 -> Review gate if needed
 -> Deterministic bundle check
 -> Fetch/prune remote and resolve behind/diverged state
@@ -1949,4 +1941,4 @@ Plan in reports/sprints with sprint logs
 -> Proceed only to the allowed next sprint
 ```
 
-Subagents find and frame issues. The lead reviewer must review each completed sprint once, the executor must make or explicitly log the correction pass, and the lead reviewer must recheck once. Humans make pedagogical decisions. Validators enforce completeness. GitHub is the review surface for off-site reviewers, so pushed remote state and current repository maps are part of done.
+Subagents find and frame issues. Humans make pedagogical decisions. Validators enforce completeness. GitHub is the review surface for off-site reviewers, so pushed remote state and current repository maps are part of done.

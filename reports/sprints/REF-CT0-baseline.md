@@ -2,7 +2,7 @@
 
 ## Plan reference
 
-`docs/sprints/REF-CT0-plan.md`
+`reports/sprints/REF-CT0-plan.md`
 
 ## Current state
 

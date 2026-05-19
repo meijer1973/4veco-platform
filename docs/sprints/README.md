@@ -1,15 +1,26 @@
-# Sprint Records
+# Legacy Sprint Plans
 
-This folder stores sprint plans for reference/platform infrastructure work.
+This folder stores legacy sprint plans for reference/platform infrastructure work.
+New and currently-active sprint plans should live beside their sprint logs under
+`reports/sprints/`.
 
-Each sprint should have:
+New sprint bundles should have:
 
-- `docs/sprints/<sprint-id>-plan.md`
+- `reports/sprints/<sprint-id>-plan.md`
 - `references/data/sprints/<sprint-id>.plan.json`
 - `reports/sprints/<sprint-id>-baseline.md`
 - `reports/sprints/<sprint-id>-result.md`
 - `reports/sprints/<sprint-id>-diff-summary.md`
+- `reports/sprints/<sprint-id>-lead-review-assignment.md`
+- `reports/sprints/<sprint-id>-lead-review-round1.md`
+- `reports/sprints/<sprint-id>-lead-review-corrections.md`
+- `reports/sprints/<sprint-id>-lead-review-round2.md`
 - `references/data/sprints/<sprint-id>.result.json`
+
+Archived plans already stored in `docs/sprints/` remain valid for historical
+bundles. The deterministic bundle checker prefers the co-located
+`reports/sprints/<sprint-id>-plan.md` path and falls back to this folder for
+legacy records.
 
 ## Planning Standard
 
@@ -62,8 +73,11 @@ The bundle checker verifies the mechanical evidence trail. It does not replace h
 3. Implement only the declared allowed paths.
 4. Run the acceptance tests named in the plan.
 5. Record result and diff summary.
-6. Run `node build-scripts/sprints/check-sprint-bundle.js <sprint-id> --complete`.
-7. Commit only the sprint files and scoped implementation changes.
-8. Tag completed sprint checkpoints as `refsprint-<sprint-id>-complete` when the user asks for a release-style checkpoint.
+6. Assign the finished bundle to the lead reviewer agent and record round 1.
+7. Apply required corrections or record that no correction was required.
+8. Send the corrected bundle for one lead-review recheck and record round 2.
+9. Run `node build-scripts/sprints/check-sprint-bundle.js <sprint-id> --complete`.
+10. Commit only the sprint files and scoped implementation changes.
+11. Push and tag completed sprint checkpoints when a checkpoint tag is part of the roadmap/final-rule flow.
 
 Do not use sprint records to bypass protected reference surfaces. `references/machine/` and `references/external/` remain read-only except through their intended CLI or refresh workflows.

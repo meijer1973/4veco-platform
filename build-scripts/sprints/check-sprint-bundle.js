@@ -36,6 +36,27 @@ function runNode(script, target) {
   }
 }
 
+function toPosix(file) {
+  return file.replace(/\\/g, '/');
+}
+
+function resolvePlanPath(sprintId) {
+  const coLocatedPlanPath = path.join('reports', 'sprints', `${sprintId}-plan.md`);
+  const legacyPlanPath = path.join('docs', 'sprints', `${sprintId}-plan.md`);
+  if (fs.existsSync(coLocatedPlanPath)) return coLocatedPlanPath;
+  if (fs.existsSync(legacyPlanPath)) return legacyPlanPath;
+  return coLocatedPlanPath;
+}
+
+function leadReviewPaths(sprintId) {
+  return {
+    assignment: path.join('reports', 'sprints', `${sprintId}-lead-review-assignment.md`),
+    round1: path.join('reports', 'sprints', `${sprintId}-lead-review-round1.md`),
+    corrections: path.join('reports', 'sprints', `${sprintId}-lead-review-corrections.md`),
+    round2: path.join('reports', 'sprints', `${sprintId}-lead-review-round2.md`),
+  };
+}
+
 function requireBacktickedPath(markdown, sectionHeading, expectedPath) {
   const pattern = new RegExp(`## ${sectionHeading}\\s+([\\s\\S]*?)(?=\\n## |$)`);
   const match = markdown.match(pattern);
@@ -54,7 +75,7 @@ if (!/^(?:[A-Z]\d+(?:\.\d+)?[a-z]?|[A-Z]{2,}\.\d+[a-z]?|[A-Z]{2,}-[A-Z]+\d+)$/.t
   fail(`unexpected sprint id format: ${sprintId}`);
 }
 
-const planPath = path.join('docs', 'sprints', `${sprintId}-plan.md`);
+const planPath = resolvePlanPath(sprintId);
 const planJsonPath = path.join('references', 'data', 'sprints', `${sprintId}.plan.json`);
 const baselinePath = path.join('reports', 'sprints', `${sprintId}-baseline.md`);
 const resultPath = path.join('reports', 'sprints', `${sprintId}-result.md`);
@@ -69,7 +90,7 @@ runNode(path.join('build-scripts', 'sprints', 'check-sprint-plan.js'), planPath)
 
 const planJson = readJson(planJsonPath);
 if (planJson.sprint_id !== sprintId) fail(`${planJsonPath} has wrong sprint_id`);
-if (planJson.plan !== planPath.replace(/\\/g, '/')) fail(`${planJsonPath} must point to ${planPath}`);
+if (planJson.plan !== toPosix(planPath)) fail(`${planJsonPath} must point to ${planPath}`);
 if (!Array.isArray(planJson.acceptance_tests) || planJson.acceptance_tests.length === 0) {
   fail(`${planJsonPath} must include acceptance_tests`);
 }
@@ -89,7 +110,7 @@ const baseline = readMarkdown(baselinePath);
 if (!new RegExp(`# Sprint ${sprintId}: Baseline`).test(baseline)) {
   fail(`${baselinePath} must start with "# Sprint ${sprintId}: Baseline"`);
 }
-requireBacktickedPath(baseline, 'Plan reference', planPath.replace(/\\/g, '/'));
+requireBacktickedPath(baseline, 'Plan reference', toPosix(planPath));
 if (!/## Data integrity notes/.test(baseline)) fail(`${baselinePath} must include Data integrity notes`);
 if (!/references\/machine\/|references\/external\/|protected reference data/i.test(baseline)) {
   fail(`${baselinePath} must mention protected reference data status`);
@@ -105,10 +126,10 @@ if (requireComplete) {
   const resultJson = readJson(resultJsonPath);
   if (resultJson.sprint_id !== sprintId) fail(`${resultJsonPath} has wrong sprint_id`);
   if (resultJson.status !== 'completed') fail(`${resultJsonPath} must have status "completed"`);
-  if (resultJson.plan !== planPath.replace(/\\/g, '/')) fail(`${resultJsonPath} must point to ${planPath}`);
-  if (resultJson.baseline !== baselinePath.replace(/\\/g, '/')) fail(`${resultJsonPath} must point to ${baselinePath}`);
-  if (resultJson.result !== resultPath.replace(/\\/g, '/')) fail(`${resultJsonPath} must point to ${resultPath}`);
-  if (resultJson.diff_summary !== diffPath.replace(/\\/g, '/')) fail(`${resultJsonPath} must point to ${diffPath}`);
+  if (resultJson.plan !== toPosix(planPath)) fail(`${resultJsonPath} must point to ${planPath}`);
+  if (resultJson.baseline !== toPosix(baselinePath)) fail(`${resultJsonPath} must point to ${baselinePath}`);
+  if (resultJson.result !== toPosix(resultPath)) fail(`${resultJsonPath} must point to ${resultPath}`);
+  if (resultJson.diff_summary !== toPosix(diffPath)) fail(`${resultJsonPath} must point to ${diffPath}`);
   if (!Array.isArray(resultJson.acceptance_tests) || resultJson.acceptance_tests.length === 0) {
     fail(`${resultJsonPath} must include acceptance_tests`);
   }
@@ -122,6 +143,27 @@ if (requireComplete) {
   }
   if (typeof resultJson.protected_reference_data_changed !== 'boolean') {
     fail(`${resultJsonPath} must declare protected_reference_data_changed`);
+  }
+
+  const leadReviewRequired =
+    planJson.lead_review_required === true ||
+    resultJson.lead_review_required === true ||
+    Boolean(resultJson.lead_review);
+  if (leadReviewRequired) {
+    const expected = leadReviewPaths(sprintId);
+    const leadReview = resultJson.lead_review;
+    if (!leadReview || typeof leadReview !== 'object') {
+      fail(`${resultJsonPath} must include lead_review when lead review is required`);
+    }
+    for (const [key, file] of Object.entries(expected)) {
+      exists(file, `lead review ${key}`);
+      if (leadReview[key] !== toPosix(file)) {
+        fail(`${resultJsonPath} lead_review.${key} must point to ${toPosix(file)}`);
+      }
+    }
+    if (!['PASS', 'PASS WITH FLAGS'].includes(leadReview.final_verdict)) {
+      fail(`${resultJsonPath} lead_review.final_verdict must be PASS or PASS WITH FLAGS`);
+    }
   }
 
   const diff = readMarkdown(diffPath);

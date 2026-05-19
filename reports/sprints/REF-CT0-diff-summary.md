@@ -12,13 +12,15 @@ No protected surfaces changed. `references/machine/` and `references/external/` 
 
 New report-side artifacts under `reports/reference-planning/` record the source boundary, three-year prototype, MTU classification, and REF-CT1 candidate-review packet. The JSON mirror under `references/data/sprints/` records 311 classification records with `authority_level: non_authoritative_planning_prototype` and `protected_reference_data_changed: false`.
 
+The REF-CT0 plan is now co-located with its sprint log files under `reports/sprints/`. Its lead-review assignment, round-1 review, correction log, and round-2 recheck are also recorded there.
+
 ## Tooling
 
-Added a report-side REF-CT0 artifact builder and read-only validator. The sprint bundle checker now accepts the official `REF-CT0` sprint id shape.
+Added a report-side REF-CT0 artifact builder and read-only validator. The sprint bundle checker now accepts the official `REF-CT0` sprint id shape, prefers co-located sprint plans under `reports/sprints/`, and enforces required lead-review logs for completed bundles that opt into `lead_review_required`.
 
 ## Roadmap and maps
 
-The live roadmap is now v2.46, REF-CT0 is in Closed Sprints, REF-CT1 is the active top ledger row, and the v2.45 roadmap snapshot is archived. Repository maps and GitHub-facing indexes were refreshed.
+The live roadmap is now v2.47, REF-CT0 is in Closed Sprints, REF-CT1 is the active top ledger row, and the v2.46 roadmap snapshot is archived. Repository maps and GitHub-facing indexes were refreshed.
 
 ## Boundaries
 

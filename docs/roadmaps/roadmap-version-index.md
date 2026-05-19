@@ -12,12 +12,13 @@ docs/roadmaps/roadmap-version-index.json
 
 | Roadmap | Version | Path | Notes |
 |---|---|---|---|
-| References Team Roadmap | `v2.46-ref-ct0-prototype-classification` | `references/reference-team-roadmap.md` | Current operating roadmap after REF-CT0 completed the non-authoritative v5-aware three-year prototype, MTU classification, and candidate-review packet; REF-CT1 Year-1 target-exercise and MTU coverage baseline is now active. |
+| References Team Roadmap | `v2.47-sprint-log-and-lead-review-procedure` | `references/reference-team-roadmap.md` | Current operating roadmap after sprint logs were consolidated under `reports/sprints/` for new/current bundles and lead-review assignment, correction, and recheck logs became structural sprint-closure requirements. |
 
 ## Outdated Archive
 
 | Roadmap | Version | Path | Superseded By |
 |---|---|---|---|
+| References Team Roadmap before sprint-log and lead-review procedure update | `v2.46-ref-ct0-prototype-classification` | `docs/roadmaps/outdated/reference-team-roadmap-v2.46-ref-ct0-prototype-classification.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before REF-CT0 completion | `v2.45-post-l16-foundation-hardening` | `docs/roadmaps/outdated/reference-team-roadmap-v2.45-post-l16-foundation-hardening.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before post-L1.6 foundation hardening | `v2.44-s9a-d04-cli-mutation` | `docs/roadmaps/outdated/reference-team-roadmap-v2.44-s9a-d04-cli-mutation.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before S9a D04 CLI-only mutation | `v2.43-s9-cp5-d04-closure` | `docs/roadmaps/outdated/reference-team-roadmap-v2.43-s9-cp5-d04-closure.md` | `references/reference-team-roadmap.md` |
