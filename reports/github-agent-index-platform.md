@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-05-19T08:04:35.744Z
+Generated: 2026-05-19T09:38:54.106Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 1372
+Files indexed: 1380
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -41,7 +41,7 @@ Count: 8
 
 ## engines
 
-Count: 58
+Count: 59
 
 - engines/adaptive-seam.js
 - engines/graphical-engine.js
@@ -82,6 +82,7 @@ Count: 58
 - engines/tests/graphical-ui.test.js
 - engines/tests/harness-skilltree-ui.html
 - engines/tests/l1-5d-v2-mobile-fixes.test.js
+- engines/tests/l1-6r-dual-coding.test.js
 - engines/tests/micro-teaching-units.test.js
 - engines/tests/newsdetective-data.test.js
 - engines/tests/newsdetective-engine.test.js
@@ -738,7 +739,7 @@ Count: 239
 
 ## reports
 
-Count: 565
+Count: 570
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1247,8 +1248,13 @@ Count: 565
 - reports/sprints/R9.2-baseline.md
 - reports/sprints/R9.2-diff-summary.md
 - reports/sprints/R9.2-result.md
+- reports/sprints/README.md
 - reports/sprints/REF-CT0-baseline.md
 - reports/sprints/REF-CT0-diff-summary.md
+- reports/sprints/REF-CT0-lead-review-assignment.md
+- reports/sprints/REF-CT0-lead-review-corrections.md
+- reports/sprints/REF-CT0-lead-review-round1.md
+- reports/sprints/REF-CT0-lead-review-round2.md
 - reports/sprints/REF-CT0-plan.md
 - reports/sprints/REF-CT0-result.md
 - reports/sprints/RX.1-baseline.md
@@ -1326,7 +1332,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 191
+Count: 193
 
 - .gitignore
 - BUILD-CHAPTER.md
@@ -1372,6 +1378,8 @@ Count: 191
 - docs/roadmaps/outdated/reference-team-roadmap-v2.43-s9-cp5-d04-closure.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.44-s9a-d04-cli-mutation.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.45-post-l16-foundation-hardening.md
+- docs/roadmaps/outdated/reference-team-roadmap-v2.46-ref-ct0-prototype-classification.md
+- docs/roadmaps/outdated/reference-team-roadmap-v2.47-sprint-log-and-lead-review-procedure.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.5-representation-sensitive-phase.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.6-s4-cp3-dry-run.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.7-cp3-closed.md

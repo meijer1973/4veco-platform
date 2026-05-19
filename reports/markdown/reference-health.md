@@ -1,6 +1,6 @@
 # Reference Health
 
-Generated: 2026-05-19T08:04:32.173Z
+Generated: 2026-05-19T09:36:54.945Z
 
 ## Unit Counts
 
@@ -19,7 +19,7 @@ Generated: 2026-05-19T08:04:32.173Z
 ## QC Findings
 
 - Reports: 17
-- Total issues: 650
+- Total issues: 656
 - High/critical issues: 14
 
 ## Quality Issue Model

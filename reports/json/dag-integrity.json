@@ -1,7 +1,7 @@
 {
   "report_id": "dag-integrity",
   "generated_by": "build-scripts/reports/generate-all.js",
-  "generated_on": "2026-05-19T08:04:29.101Z",
+  "generated_on": "2026-05-19T09:36:40.662Z",
   "source_files": [
     "references/machine/micro-teaching-units.json"
   ],

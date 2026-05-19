@@ -4,7 +4,7 @@ Generated: 2026-04-23
 Adopted main roadmap: 2026-04-25
 Last strategic update: 2026-05-19
 Roadmap ID: `references-team-roadmap`
-Roadmap version: `v2.49-ref-ct1-year1-coverage-baseline`
+Roadmap version: `v2.48-l16r-dual-coding-incident`
 Roadmap status: `active`
 Version index: `docs/roadmaps/roadmap-version-index.json`
 Scope: `references/`, `build-scripts/references/`, `build-scripts/reports/`, reference dashboards, and generated reference reports under `reports/`
@@ -19,7 +19,8 @@ legacy bundles only.
 
 | Sprint | Name | Completed | Current State |
 |--------|------|-----------|---------------|
-| Content Track 2 | Year-1 Precision And Dual-Coding Audit | no | **ACTIVE / PRECISION AND DUAL-CODING AUDIT.** Use the REF-CT1 Year-1 coverage baseline and CP-6 packet, keep `1.1.3` L1.6R human-review status visible, and record precision lint plus semantic dual-coding status for graph/table exercise surfaces. Treat "procedure is correct but the learning object is absent" as a quality failure, not a flag. |
+| REF-CT1 | Year-1 Target Exercise And MTU Coverage Baseline For v5 | no | **ACTIVE / FOUNDATION-HARDENING SPRINT.** Use active v5, built evidence from `1.1.1` through `1.1.3`, and REF-CT0 categories to produce Year-1 paragraph coverage, MTU gap classification, missing-target exercise status, placeholder status, and candidate review packet before any CLI mutation. |
+| Content Track 2 | Year-1 Precision And Dual-Coding Audit | no | Planned content-track work, now sharpened by the L1.6R dual-coding incident. Record precision lint and semantic dual-coding status for graph/table exercise surfaces. Treat "procedure is correct but the learning object is absent" as a quality failure, not a flag. |
 | Content Track 3 | Year-2 Skeleton | no | Planned after REF-CT0/REF-CT1 framing. Prepare Year-2 skeleton with CvTE-vwo anchor status and `concept_orphan` flags for CP-7; do not treat the rough three-year blueprint as authoritative. |
 | R7.6 | RAG Quality Hardening | no | Planned. Close R7.4 follow-ups, split target-exercise chunks, expand retrieval eval coverage, backfill evidence anchors, and improve approved/pending/diagnostic labels. |
 | R14.1 | Curriculum Versioning | no | Planned earlier in the sequence. Track active v5, archived v4, the non-authoritative three-year prototype, built lesson outputs, and migrated/not-final target exercises so reports and retrieval do not silently mix incompatible source states. |
@@ -32,7 +33,6 @@ legacy bundles only.
 
 | Sprint | Name | Completed | Current State |
 |--------|------|-----------|---------------|
-| REF-CT1 | Year-1 Target Exercise And MTU Coverage Baseline For v5 | yes | Completed as a non-mutating baseline/reporting sprint. Produced the 12-record Book 1 coverage JSON/report, MTU gap-classification report, and CP-6 review packet. Recorded 9 migrated records needing v5 review, 3 placeholders needing evidence, 0 reviewed-final records, 19 confirmed Book 1 MTUs, 9 Year-1 backfill candidates, and `1.1.3` L1.6R/Part A closure blockers. CP-6 and Year 1 remain not closed; no CLI mutation or protected reference mutation was authorized. |
 | REF-CT0 | Three-Year Prototype Normalisation And MTU Classification | yes | Completed. Produced a non-authoritative v5-aware three-year prototype, source/authority boundary note, MTU classification JSON/Markdown, and REF-CT1 candidate-review packet. Classified 104 active v5-confirmed MTU ids, 44 live Year-1 backfill MTU ids plus 68 active v5 missing-flag records, 57 Year-2 skeleton ids, 20 Year-3 skeleton ids, 4 duplicate/merge/split records, 3 parked records, and 11 placeholder needs-evidence records. No `references/machine` or `references/external` mutation occurred. Post-closure lead-review logs are required in the sprint bundle. |
 | SYNC-1 | Roadmap Reconciliation | yes | Completed. Updated the references roadmap to v2.45 post-L1.6 state, updated the roadmap version index, and synchronized lesson/reference sequencing around foundation hardening instead of broad scaling. |
 | S9a | D04 CLI-Only Mutation Sprint | yes | Completed. Applied the CP-5 D04 decision through `unit-deprecate.js`, deprecated D04 with successor pointers to `A15`, `D06`, `A17`, `D11`, `A16`, `D12`, and `D27`, removed the single active target-exercise D04 citation, recorded mutation/stale-reference logs, regenerated reports/RAG/inventories, and preserved all blocked downstream uses. |

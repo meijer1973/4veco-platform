@@ -1,0 +1,1320 @@
+{
+  "schema_version": 1,
+  "sprint_id": "REF-CT1",
+  "generated_on": "2026-05-19",
+  "generated_by": "build-scripts/references/build-ref-ct1-coverage-artifacts.js",
+  "authority_level": "non_mutating_year1_coverage_baseline",
+  "protected_reference_data_changed": false,
+  "no_cli_mutation_authorized": true,
+  "allowed_use": [
+    "CP-6 review preparation",
+    "Year-1 coverage baseline reporting",
+    "backfill candidate triage before protected reference mutation"
+  ],
+  "not_allowed_use": [
+    "Year-1 final closure",
+    "CP-6 closure",
+    "target-exercise promotion",
+    "placeholder finalization",
+    "unit minting",
+    "student diagnostics",
+    "adaptive routing",
+    "mastery decisions",
+    "student-facing AI",
+    "summative use",
+    "PV projection"
+  ],
+  "source_paths": {
+    "targetExercises": "references/authored/course-target-exercises.json",
+    "blueprint": "references/owned/course-blueprint-v5.md",
+    "blueprintMeta": "references/owned/course-blueprint-v5.meta.json",
+    "ct0Classification": "references/data/sprints/REF-CT0-mtu-classification.json",
+    "lessonRoot": "../4veco-lessen"
+  },
+  "repository_state": {
+    "platform_commit": "8cf0b787cb69cf894a6bf4230b2a06e8efd097a1",
+    "lesson_commit": "f16918d669b663c7038d52a29802055041155fea",
+    "lesson_status": "## main...origin/main",
+    "active_roadmap_version": "v2.48-l16r-dual-coding-incident"
+  },
+  "summary": {
+    "book": 1,
+    "expected_count_bearing_paragraphs": 12,
+    "book1_count_bearing_paragraphs": 12,
+    "migrated_needs_review_count": 9,
+    "placeholder_needs_review_count": 3,
+    "reviewed_final_count": 0,
+    "year1_confirmed_unit_count": 19,
+    "book1_missing_flag_count": 9,
+    "placeholder_needs_evidence_count": 3,
+    "required_built_evidence_paragraphs": [
+      "1.1.1",
+      "1.1.2",
+      "1.1.3"
+    ],
+    "built_evidence_present_count": 3,
+    "final_coverage_claim_count": 0
+  },
+  "coverage_decision": {
+    "cp6_status": "review_packet_ready_not_closed",
+    "final_year1_closure_status": "blocked_pending_cp6_human_review",
+    "may_mutate_protected_references": false,
+    "blockers": [
+      "3 Book 1 placeholder target-exercise records still need reviewed integration target exercises.",
+      "9 migrated Book 1 target-exercise records still need v5 final review before reviewed_final claims.",
+      "9 Book 1 missing-flag records remain Year-1 backfill candidates, not mutation authority.",
+      "1.1.3 remains pending L1.6R human review and has Part A FLAG status."
+    ],
+    "next_operational_action": "Run the next precision/coverage audit and CP-6 human-review path before any Year-1 closure or CLI mutation."
+  },
+  "lesson_evidence": [
+    {
+      "paragraph_id": "1.1.1",
+      "present": true,
+      "quality_ref_path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1-quality-ref.yaml",
+      "partA_verdict": "PASS WITH FLAGS",
+      "partA_last_reviewed": "2026-05-12",
+      "companion_verdict": "PASS WITH FLAGS",
+      "companion_last_reviewed": "2026-05-09",
+      "companion_human_review_status": null,
+      "l16r_dual_coding_status": null,
+      "l16r_required_objects_present": {},
+      "status_note": "read-only lesson evidence"
+    },
+    {
+      "paragraph_id": "1.1.2",
+      "present": true,
+      "quality_ref_path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2-quality-ref.yaml",
+      "partA_verdict": "PASS WITH FLAGS",
+      "partA_last_reviewed": "2026-05-13",
+      "companion_verdict": "PASS WITH FLAGS",
+      "companion_last_reviewed": "2026-05-18",
+      "companion_human_review_status": null,
+      "l16r_dual_coding_status": null,
+      "l16r_required_objects_present": {},
+      "status_note": "read-only lesson evidence"
+    },
+    {
+      "paragraph_id": "1.1.3",
+      "present": true,
+      "quality_ref_path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3-quality-ref.yaml",
+      "partA_verdict": "FLAG",
+      "partA_last_reviewed": "2026-04-14",
+      "companion_verdict": "PASS WITH FLAGS",
+      "companion_last_reviewed": "2026-05-19",
+      "companion_human_review_status": "l16r_visual_remediated_pending_human_review",
+      "l16r_dual_coding_status": "visual_remediated_pending_human_review",
+      "l16r_required_objects_present": {
+        "ice_table": true,
+        "pq_graph": true,
+        "interpolation_graph": true,
+        "misleading_axis_comparison": true
+      },
+      "status_note": "read-only lesson evidence"
+    }
+  ],
+  "confirmed_units": [
+    {
+      "unit_id": "A01",
+      "label": "Lineaire functie opstellen",
+      "domain": "A",
+      "classification": "year_1_confirmed",
+      "evidence_strength": "target_exercise_backed",
+      "active_v5_paragraphs": [
+        "1.2.3"
+      ],
+      "active_v5_roles": [
+        "assumed",
+        "required"
+      ],
+      "target_record_statuses": [
+        "migrated_from_v4_needs_v5_review"
+      ]
+    },
+    {
+      "unit_id": "A02",
+      "label": "Vergelijking oplossen",
+      "domain": "A",
+      "classification": "year_1_confirmed",
+      "evidence_strength": "target_exercise_backed",
+      "active_v5_paragraphs": [
+        "1.3.2",
+        "1.3.3"
+      ],
+      "active_v5_roles": [
+        "assumed",
+        "required"
+      ],
+      "target_record_statuses": [
+        "migrated_from_v4_needs_v5_review"
+      ]
+    },
+    {
+      "unit_id": "A04",
+      "label": "Substitueren",
+      "domain": "A",
+      "classification": "year_1_confirmed",
+      "evidence_strength": "target_exercise_backed",
+      "active_v5_paragraphs": [
+        "1.3.2",
+        "1.3.3"
+      ],
+      "active_v5_roles": [
+        "assumed",
+        "introduced",
+        "required"
+      ],
+      "target_record_statuses": [
+        "migrated_from_v4_needs_v5_review"
+      ]
+    },
+    {
+      "unit_id": "A06",
+      "label": "Evenwichtsprijs & -hoeveelheid",
+      "domain": "A",
+      "classification": "year_1_confirmed",
+      "evidence_strength": "target_exercise_backed",
+      "active_v5_paragraphs": [
+        "1.3.2",
+        "1.3.3"
+      ],
+      "active_v5_roles": [
+        "assumed",
+        "introduced",
+        "required"
+      ],
+      "target_record_statuses": [
+        "migrated_from_v4_needs_v5_review"
+      ]
+    },
+    {
+      "unit_id": "A38",
+      "label": "Procentuele verandering berekenen",
+      "domain": "A",
+      "classification": "year_1_confirmed",
+      "evidence_strength": "target_exercise_backed",
+      "active_v5_paragraphs": [
+        "1.1.2",
+        "1.1.3"
+      ],
+      "active_v5_roles": [
+        "assumed",
+        "introduced",
+        "required"
+      ],
+      "target_record_statuses": [
+        "migrated_from_v4_needs_v5_review"
+      ]
+    },
+    {
+      "unit_id": "A39",
+      "label": "Prijsindex (CPI) berekenen",
+      "domain": "A",
+      "classification": "year_1_confirmed",
+      "evidence_strength": "target_exercise_backed",
+      "active_v5_paragraphs": [
+        "1.1.2"
+      ],
+      "active_v5_roles": [
+        "introduced",
+        "required"
+      ],
+      "target_record_statuses": [
+        "migrated_from_v4_needs_v5_review"
+      ]
+    },
+    {
+      "unit_id": "A42",
+      "label": "Grafische verschuiving met voor-en-na pijlen",
+      "domain": "A",
+      "classification": "year_1_confirmed",
+      "evidence_strength": "target_exercise_backed",
+      "active_v5_paragraphs": [
+        "1.2.2",
+        "1.3.3"
+      ],
+      "active_v5_roles": [
+        "assumed",
+        "introduced",
+        "required"
+      ],
+      "target_record_statuses": [
+        "migrated_from_v4_needs_v5_review"
+      ]
+    },
+    {
+      "unit_id": "A43",
+      "label": "Totale winst uit gemengde allocatie berekenen",
+      "domain": "A",
+      "classification": "year_1_confirmed",
+      "evidence_strength": "target_exercise_backed",
+      "active_v5_paragraphs": [
+        "1.1.1"
+      ],
+      "active_v5_roles": [
+        "introduced",
+        "required"
+      ],
+      "target_record_statuses": [
+        "migrated_from_v4_needs_v5_review"
+      ]
+    },
+    {
+      "unit_id": "A44",
+      "label": "Individuele stapfunctie-vraagcurve tekenen uit betalingsbereidheid",
+      "domain": "A",
+      "classification": "year_1_confirmed",
+      "evidence_strength": "target_exercise_backed",
+      "active_v5_paragraphs": [
+        "1.2.1"
+      ],
+      "active_v5_roles": [
+        "introduced",
+        "required"
+      ],
+      "target_record_statuses": [
+        "migrated_from_v4_needs_v5_review"
+      ]
+    },
+    {
+      "unit_id": "B01",
+      "label": "Schaarste als kerneconomisch probleem",
+      "domain": "B",
+      "classification": "year_1_confirmed",
+      "evidence_strength": "target_exercise_backed",
+      "active_v5_paragraphs": [
+        "1.1.1"
+      ],
+      "active_v5_roles": [
+        "introduced",
+        "required"
+      ],
+      "target_record_statuses": [
+        "migrated_from_v4_needs_v5_review"
+      ]
+    },
+    {
+      "unit_id": "B02",
+      "label": "Alternatieve kosten in een keuze-situatie",
+      "domain": "B",
+      "classification": "year_1_confirmed",
+      "evidence_strength": "target_exercise_backed",
+      "active_v5_paragraphs": [
+        "1.1.1"
+      ],
+      "active_v5_roles": [
+        "introduced",
+        "required"
+      ],
+      "target_record_statuses": [
+        "migrated_from_v4_needs_v5_review"
+      ]
+    },
+    {
+      "unit_id": "D13",
+      "label": "Kostenstijging en aanbodverschuiving",
+      "domain": "D",
+      "classification": "year_1_confirmed",
+      "evidence_strength": "target_exercise_backed",
+      "active_v5_paragraphs": [
+        "1.3.1",
+        "1.3.3"
+      ],
+      "active_v5_roles": [
+        "assumed",
+        "introduced",
+        "required"
+      ],
+      "target_record_statuses": [
+        "migrated_from_v4_needs_v5_review"
+      ]
+    },
+    {
+      "unit_id": "D27",
+      "label": "Substituten en complementen",
+      "domain": "D",
+      "classification": "year_1_confirmed",
+      "evidence_strength": "target_exercise_backed",
+      "active_v5_paragraphs": [
+        "1.2.2"
+      ],
+      "active_v5_roles": [
+        "assumed",
+        "introduced",
+        "required"
+      ],
+      "target_record_statuses": [
+        "migrated_from_v4_needs_v5_review"
+      ]
+    },
+    {
+      "unit_id": "D31",
+      "label": "Indexpunt versus procentuele verandering",
+      "domain": "D",
+      "classification": "year_1_confirmed",
+      "evidence_strength": "target_exercise_backed",
+      "active_v5_paragraphs": [
+        "1.1.2"
+      ],
+      "active_v5_roles": [
+        "introduced",
+        "required"
+      ],
+      "target_record_statuses": [
+        "migrated_from_v4_needs_v5_review"
+      ]
+    },
+    {
+      "unit_id": "D32",
+      "label": "Verschuiving versus beweging langs de curve",
+      "domain": "D",
+      "classification": "year_1_confirmed",
+      "evidence_strength": "target_exercise_backed",
+      "active_v5_paragraphs": [
+        "1.2.2",
+        "1.3.1"
+      ],
+      "active_v5_roles": [
+        "assumed",
+        "introduced",
+        "required"
+      ],
+      "target_record_statuses": [
+        "migrated_from_v4_needs_v5_review"
+      ]
+    },
+    {
+      "unit_id": "D33",
+      "label": "Vraag- en aanbodverschuivingsfactoren benoemen",
+      "domain": "D",
+      "classification": "year_1_confirmed",
+      "evidence_strength": "target_exercise_backed",
+      "active_v5_paragraphs": [
+        "1.2.2",
+        "1.3.1"
+      ],
+      "active_v5_roles": [
+        "assumed",
+        "introduced",
+        "required"
+      ],
+      "target_record_statuses": [
+        "migrated_from_v4_needs_v5_review"
+      ]
+    },
+    {
+      "unit_id": "D35",
+      "label": "Betalingsbereidheid definiëren",
+      "domain": "D",
+      "classification": "year_1_confirmed",
+      "evidence_strength": "target_exercise_backed",
+      "active_v5_paragraphs": [
+        "1.2.1"
+      ],
+      "active_v5_roles": [
+        "introduced",
+        "required"
+      ],
+      "target_record_statuses": [
+        "migrated_from_v4_needs_v5_review"
+      ]
+    },
+    {
+      "unit_id": "D36",
+      "label": "Beslisregel: koop als P ≤ betalingsbereidheid",
+      "domain": "D",
+      "classification": "year_1_confirmed",
+      "evidence_strength": "target_exercise_backed",
+      "active_v5_paragraphs": [
+        "1.2.1"
+      ],
+      "active_v5_roles": [
+        "introduced",
+        "required"
+      ],
+      "target_record_statuses": [
+        "migrated_from_v4_needs_v5_review"
+      ]
+    },
+    {
+      "unit_id": "D37",
+      "label": "Wet van de vraag verbaal uitleggen",
+      "domain": "D",
+      "classification": "year_1_confirmed",
+      "evidence_strength": "target_exercise_backed",
+      "active_v5_paragraphs": [
+        "1.2.1"
+      ],
+      "active_v5_roles": [
+        "introduced",
+        "required"
+      ],
+      "target_record_statuses": [
+        "migrated_from_v4_needs_v5_review"
+      ]
+    }
+  ],
+  "missing_flags": [
+    {
+      "record_id": "missing_flag:1.1.3:1",
+      "paragraph_id": "1.1.3",
+      "label": "1.1.3 Grafieken en tabellen",
+      "classification": "year_1_backfill_candidate",
+      "current_status": "migrated_from_v4_needs_v5_review",
+      "evidence_strength": "target_exercise_flag",
+      "flag": "Draw a (P,Q) graph from a table with the economist's axis convention (P vertical, Q horizontal) (A-domain candidate)",
+      "required_skills": [
+        "A38"
+      ],
+      "next_review_action": "Review against existing live units first; only later use CLI mutation if human review confirms a missing MTU."
+    },
+    {
+      "record_id": "missing_flag:1.1.3:2",
+      "paragraph_id": "1.1.3",
+      "label": "1.1.3 Grafieken en tabellen",
+      "classification": "year_1_backfill_candidate",
+      "current_status": "migrated_from_v4_needs_v5_review",
+      "evidence_strength": "target_exercise_flag",
+      "flag": "Read values from a (P,Q) graph; interpolate between data points (A-domain candidate)",
+      "required_skills": [
+        "A38"
+      ],
+      "next_review_action": "Review against existing live units first; only later use CLI mutation if human review confirms a missing MTU."
+    },
+    {
+      "record_id": "missing_flag:1.2.2:1",
+      "paragraph_id": "1.2.2",
+      "label": "1.2.2 Vraagfactoren",
+      "classification": "year_1_backfill_candidate",
+      "current_status": "migrated_from_v4_needs_v5_review",
+      "evidence_strength": "target_exercise_flag",
+      "flag": "Classify a normal vs inferior good response to an income change (concept-level, prerequisite for D11 inkomenselasticiteit)",
+      "required_skills": [
+        "A42",
+        "D27",
+        "D32",
+        "D33"
+      ],
+      "next_review_action": "Review against existing live units first; only later use CLI mutation if human review confirms a missing MTU."
+    },
+    {
+      "record_id": "missing_flag:1.2.3:1",
+      "paragraph_id": "1.2.3",
+      "label": "1.2.3 Van individuele naar collectieve vraag",
+      "classification": "year_1_backfill_candidate",
+      "current_status": "migrated_from_v4_needs_v5_review",
+      "evidence_strength": "target_exercise_flag",
+      "flag": "Horizontal sum: aggregate individual demand tables into collective demand (A-domain candidate, mirror of A31 for aanbod)",
+      "required_skills": [
+        "A01"
+      ],
+      "next_review_action": "Review against existing live units first; only later use CLI mutation if human review confirms a missing MTU."
+    },
+    {
+      "record_id": "missing_flag:1.2.3:2",
+      "paragraph_id": "1.2.3",
+      "label": "1.2.3 Van individuele naar collectieve vraag",
+      "classification": "year_1_backfill_candidate",
+      "current_status": "migrated_from_v4_needs_v5_review",
+      "evidence_strength": "target_exercise_flag",
+      "flag": "Algebraic horizontal sum of linear demand functions (A-domain candidate, Q-at-equal-P)",
+      "required_skills": [
+        "A01"
+      ],
+      "next_review_action": "Review against existing live units first; only later use CLI mutation if human review confirms a missing MTU."
+    },
+    {
+      "record_id": "missing_flag:1.2.3:3",
+      "paragraph_id": "1.2.3",
+      "label": "1.2.3 Van individuele naar collectieve vraag",
+      "classification": "year_1_backfill_candidate",
+      "current_status": "migrated_from_v4_needs_v5_review",
+      "evidence_strength": "target_exercise_flag",
+      "flag": "Recognise the kink in collective demand when one consumer exits (concept-level)",
+      "required_skills": [
+        "A01"
+      ],
+      "next_review_action": "Review against existing live units first; only later use CLI mutation if human review confirms a missing MTU."
+    },
+    {
+      "record_id": "missing_flag:1.3.1:1",
+      "paragraph_id": "1.3.1",
+      "label": "1.3.1 Aanbod",
+      "classification": "year_1_backfill_candidate",
+      "current_status": "migrated_from_v4_needs_v5_review",
+      "evidence_strength": "target_exercise_flag",
+      "flag": "Draw an upward-sloping supply curve with correct economist axes (A-domain candidate)",
+      "required_skills": [
+        "D13",
+        "D32",
+        "D33"
+      ],
+      "next_review_action": "Review against existing live units first; only later use CLI mutation if human review confirms a missing MTU."
+    },
+    {
+      "record_id": "missing_flag:1.3.2:1",
+      "paragraph_id": "1.3.2",
+      "label": "1.3.2 Marktevenwicht",
+      "classification": "year_1_backfill_candidate",
+      "current_status": "migrated_from_v4_needs_v5_review",
+      "evidence_strength": "target_exercise_flag",
+      "flag": "Determine surplus (aanbodoverschot) vs shortage (vraagoverschot) at a non-equilibrium price and calculate its size (A-domain candidate, prerequisite for government price interventions in §2.4)",
+      "required_skills": [
+        "A02",
+        "A04",
+        "A06"
+      ],
+      "next_review_action": "Review against existing live units first; only later use CLI mutation if human review confirms a missing MTU."
+    },
+    {
+      "record_id": "missing_flag:1.3.3:1",
+      "paragraph_id": "1.3.3",
+      "label": "1.3.3 Verschuivingen en nieuw evenwicht",
+      "classification": "year_1_backfill_candidate",
+      "current_status": "migrated_from_v4_needs_v5_review",
+      "evidence_strength": "target_exercise_flag",
+      "flag": "Reason about simultaneous supply+demand shifts: determinate Q-direction but ambiguous P-direction (concept-level, diagnostic checkpoint)",
+      "required_skills": [
+        "A02",
+        "A04",
+        "A06",
+        "A42",
+        "D13"
+      ],
+      "next_review_action": "Review against existing live units first; only later use CLI mutation if human review confirms a missing MTU."
+    }
+  ],
+  "placeholders": [
+    {
+      "record_id": "missing_flag:1.1.4:1",
+      "paragraph_id": "1.1.4",
+      "label": "1.1.4 Gemengde opgaven: economisch denken en rekenen",
+      "classification": "needs_evidence",
+      "current_status": "placeholder_needs_review",
+      "evidence_strength": "placeholder_only",
+      "flag": "v5_placeholder_needs_review",
+      "next_review_action": "REF-CT1 should record placeholder coverage status and route it to target-exercise review before final claims.",
+      "may_count_as_final_coverage_claim": false
+    },
+    {
+      "record_id": "missing_flag:1.2.4:1",
+      "paragraph_id": "1.2.4",
+      "label": "1.2.4 Gemengde opgaven: vraag",
+      "classification": "needs_evidence",
+      "current_status": "placeholder_needs_review",
+      "evidence_strength": "placeholder_only",
+      "flag": "v5_placeholder_needs_review",
+      "next_review_action": "REF-CT1 should record placeholder coverage status and route it to target-exercise review before final claims.",
+      "may_count_as_final_coverage_claim": false
+    },
+    {
+      "record_id": "missing_flag:1.3.4:1",
+      "paragraph_id": "1.3.4",
+      "label": "1.3.4 Gemengde opgaven: aanbod en marktevenwicht",
+      "classification": "needs_evidence",
+      "current_status": "placeholder_needs_review",
+      "evidence_strength": "placeholder_only",
+      "flag": "v5_placeholder_needs_review",
+      "next_review_action": "REF-CT1 should record placeholder coverage status and route it to target-exercise review before final claims.",
+      "may_count_as_final_coverage_claim": false
+    }
+  ],
+  "paragraphs": [
+    {
+      "paragraph_id": "1.1.1",
+      "module": 1,
+      "chapter": 1,
+      "paragraph": 1,
+      "title": "Schaarste en economisch denken",
+      "paragraph_kind": "theory",
+      "introduces_new_theory": true,
+      "source_ref": "references/owned/course-blueprint-v5.md §1.1.1",
+      "record_status": "migrated_from_v4_needs_v5_review",
+      "target_exercise_present": true,
+      "target_exercise_placeholder": false,
+      "may_count_as_final_coverage_claim": false,
+      "coverage_status": "migrated_needs_v5_review",
+      "lesson_goals": [
+        "Define scarcity as the core economic problem",
+        "Explain that every choice has an opportunity cost",
+        "Calculate opportunity costs in simple scenarios",
+        "Recognise trade-offs in everyday decisions"
+      ],
+      "units": [
+        {
+          "unit_id": "A43",
+          "label": "Totale winst uit gemengde allocatie berekenen",
+          "classification": "year_1_confirmed",
+          "roles": [
+            "required",
+            "introduced"
+          ],
+          "evidence_strength": "target_exercise_backed"
+        },
+        {
+          "unit_id": "B01",
+          "label": "Schaarste als kerneconomisch probleem",
+          "classification": "year_1_confirmed",
+          "roles": [
+            "required",
+            "introduced"
+          ],
+          "evidence_strength": "target_exercise_backed"
+        },
+        {
+          "unit_id": "B02",
+          "label": "Alternatieve kosten in een keuze-situatie",
+          "classification": "year_1_confirmed",
+          "roles": [
+            "required",
+            "introduced"
+          ],
+          "evidence_strength": "target_exercise_backed"
+        }
+      ],
+      "missing_flags": [],
+      "placeholder_record": null,
+      "lesson_evidence": {
+        "paragraph_id": "1.1.1",
+        "present": true,
+        "quality_ref_path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1-quality-ref.yaml",
+        "partA_verdict": "PASS WITH FLAGS",
+        "partA_last_reviewed": "2026-05-12",
+        "companion_verdict": "PASS WITH FLAGS",
+        "companion_last_reviewed": "2026-05-09",
+        "companion_human_review_status": null,
+        "l16r_dual_coding_status": null,
+        "l16r_required_objects_present": {},
+        "status_note": "read-only lesson evidence"
+      }
+    },
+    {
+      "paragraph_id": "1.1.2",
+      "module": 1,
+      "chapter": 1,
+      "paragraph": 2,
+      "title": "Percentages en indexcijfers",
+      "paragraph_kind": "theory",
+      "introduces_new_theory": true,
+      "source_ref": "references/owned/course-blueprint-v5.md §1.1.2",
+      "record_status": "migrated_from_v4_needs_v5_review",
+      "target_exercise_present": true,
+      "target_exercise_placeholder": false,
+      "may_count_as_final_coverage_claim": false,
+      "coverage_status": "migrated_needs_v5_review",
+      "lesson_goals": [
+        "Calculate percentage changes using (new − old) / old × 100",
+        "Calculate and interpret index numbers",
+        "Distinguish between index point change and percentage change",
+        "Apply these skills to economic data (prices, wages, production)"
+      ],
+      "units": [
+        {
+          "unit_id": "A38",
+          "label": "Procentuele verandering berekenen",
+          "classification": "year_1_confirmed",
+          "roles": [
+            "required",
+            "introduced"
+          ],
+          "evidence_strength": "target_exercise_backed"
+        },
+        {
+          "unit_id": "A39",
+          "label": "Prijsindex (CPI) berekenen",
+          "classification": "year_1_confirmed",
+          "roles": [
+            "required",
+            "introduced"
+          ],
+          "evidence_strength": "target_exercise_backed"
+        },
+        {
+          "unit_id": "D31",
+          "label": "Indexpunt versus procentuele verandering",
+          "classification": "year_1_confirmed",
+          "roles": [
+            "required",
+            "introduced"
+          ],
+          "evidence_strength": "target_exercise_backed"
+        }
+      ],
+      "missing_flags": [],
+      "placeholder_record": null,
+      "lesson_evidence": {
+        "paragraph_id": "1.1.2",
+        "present": true,
+        "quality_ref_path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2-quality-ref.yaml",
+        "partA_verdict": "PASS WITH FLAGS",
+        "partA_last_reviewed": "2026-05-13",
+        "companion_verdict": "PASS WITH FLAGS",
+        "companion_last_reviewed": "2026-05-18",
+        "companion_human_review_status": null,
+        "l16r_dual_coding_status": null,
+        "l16r_required_objects_present": {},
+        "status_note": "read-only lesson evidence"
+      }
+    },
+    {
+      "paragraph_id": "1.1.3",
+      "module": 1,
+      "chapter": 1,
+      "paragraph": 3,
+      "title": "Grafieken en tabellen",
+      "paragraph_kind": "theory",
+      "introduces_new_theory": true,
+      "source_ref": "references/owned/course-blueprint-v5.md §1.1.3",
+      "record_status": "migrated_from_v4_needs_v5_review",
+      "target_exercise_present": true,
+      "target_exercise_placeholder": false,
+      "may_count_as_final_coverage_claim": false,
+      "coverage_status": "migrated_needs_v5_review",
+      "lesson_goals": [
+        "Read values from graphs and tables",
+        "Draw a graph from tabular data with correct axes",
+        "Interpolate between data points",
+        "Critically interpret claims using data"
+      ],
+      "units": [
+        {
+          "unit_id": "A38",
+          "label": "Procentuele verandering berekenen",
+          "classification": "year_1_confirmed",
+          "roles": [
+            "required",
+            "assumed"
+          ],
+          "evidence_strength": "target_exercise_backed"
+        }
+      ],
+      "missing_flags": [
+        {
+          "record_id": "missing_flag:1.1.3:1",
+          "classification": "year_1_backfill_candidate",
+          "flag": "Draw a (P,Q) graph from a table with the economist's axis convention (P vertical, Q horizontal) (A-domain candidate)",
+          "evidence_strength": "target_exercise_flag",
+          "next_review_action": "Review against existing live units first; only later use CLI mutation if human review confirms a missing MTU."
+        },
+        {
+          "record_id": "missing_flag:1.1.3:2",
+          "classification": "year_1_backfill_candidate",
+          "flag": "Read values from a (P,Q) graph; interpolate between data points (A-domain candidate)",
+          "evidence_strength": "target_exercise_flag",
+          "next_review_action": "Review against existing live units first; only later use CLI mutation if human review confirms a missing MTU."
+        }
+      ],
+      "placeholder_record": null,
+      "lesson_evidence": {
+        "paragraph_id": "1.1.3",
+        "present": true,
+        "quality_ref_path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3-quality-ref.yaml",
+        "partA_verdict": "FLAG",
+        "partA_last_reviewed": "2026-04-14",
+        "companion_verdict": "PASS WITH FLAGS",
+        "companion_last_reviewed": "2026-05-19",
+        "companion_human_review_status": "l16r_visual_remediated_pending_human_review",
+        "l16r_dual_coding_status": "visual_remediated_pending_human_review",
+        "l16r_required_objects_present": {
+          "ice_table": true,
+          "pq_graph": true,
+          "interpolation_graph": true,
+          "misleading_axis_comparison": true
+        },
+        "status_note": "read-only lesson evidence"
+      }
+    },
+    {
+      "paragraph_id": "1.1.4",
+      "module": 1,
+      "chapter": 1,
+      "paragraph": 4,
+      "title": "Gemengde opgaven: economisch denken en rekenen",
+      "paragraph_kind": "gemengde_opgaven",
+      "introduces_new_theory": false,
+      "source_ref": "references/owned/course-blueprint-v5.md §1.1.4",
+      "record_status": "placeholder_needs_review",
+      "target_exercise_present": true,
+      "target_exercise_placeholder": true,
+      "may_count_as_final_coverage_claim": false,
+      "coverage_status": "placeholder_needs_evidence",
+      "lesson_goals": [
+        "Consolidate and transfer the chapter skills for Gemengde opgaven: economisch denken en rekenen."
+      ],
+      "units": [],
+      "missing_flags": [],
+      "placeholder_record": {
+        "record_id": "missing_flag:1.1.4:1",
+        "classification": "needs_evidence",
+        "flag": "v5_placeholder_needs_review",
+        "next_review_action": "REF-CT1 should record placeholder coverage status and route it to target-exercise review before final claims."
+      },
+      "lesson_evidence": null
+    },
+    {
+      "paragraph_id": "1.2.1",
+      "module": 1,
+      "chapter": 2,
+      "paragraph": 1,
+      "title": "Individuele vraag",
+      "paragraph_kind": "theory",
+      "introduces_new_theory": true,
+      "source_ref": "references/owned/course-blueprint-v5.md §1.2.1",
+      "record_status": "migrated_from_v4_needs_v5_review",
+      "target_exercise_present": true,
+      "target_exercise_placeholder": false,
+      "may_count_as_final_coverage_claim": false,
+      "coverage_status": "migrated_needs_v5_review",
+      "lesson_goals": [
+        "Define betalingsbereidheid (willingness to pay)",
+        "Explain the relationship between price and quantity demanded",
+        "Draw an individual demand curve from willingness-to-pay data",
+        "Explain the law of demand"
+      ],
+      "units": [
+        {
+          "unit_id": "A44",
+          "label": "Individuele stapfunctie-vraagcurve tekenen uit betalingsbereidheid",
+          "classification": "year_1_confirmed",
+          "roles": [
+            "required",
+            "introduced"
+          ],
+          "evidence_strength": "target_exercise_backed"
+        },
+        {
+          "unit_id": "D35",
+          "label": "Betalingsbereidheid definiëren",
+          "classification": "year_1_confirmed",
+          "roles": [
+            "required",
+            "introduced"
+          ],
+          "evidence_strength": "target_exercise_backed"
+        },
+        {
+          "unit_id": "D36",
+          "label": "Beslisregel: koop als P ≤ betalingsbereidheid",
+          "classification": "year_1_confirmed",
+          "roles": [
+            "required",
+            "introduced"
+          ],
+          "evidence_strength": "target_exercise_backed"
+        },
+        {
+          "unit_id": "D37",
+          "label": "Wet van de vraag verbaal uitleggen",
+          "classification": "year_1_confirmed",
+          "roles": [
+            "required",
+            "introduced"
+          ],
+          "evidence_strength": "target_exercise_backed"
+        }
+      ],
+      "missing_flags": [],
+      "placeholder_record": null,
+      "lesson_evidence": null
+    },
+    {
+      "paragraph_id": "1.2.2",
+      "module": 1,
+      "chapter": 2,
+      "paragraph": 2,
+      "title": "Vraagfactoren",
+      "paragraph_kind": "theory",
+      "introduces_new_theory": true,
+      "source_ref": "references/owned/course-blueprint-v5.md §1.2.2",
+      "record_status": "migrated_from_v4_needs_v5_review",
+      "target_exercise_present": true,
+      "target_exercise_placeholder": false,
+      "may_count_as_final_coverage_claim": false,
+      "coverage_status": "migrated_needs_v5_review",
+      "lesson_goals": [
+        "Distinguish between a movement along the demand curve (caused by own price change) and a shift of the demand curve (caused by other factors)",
+        "Name and explain demand factors: income, preferences, price of substitutes/complements, expectations",
+        "Show shifts graphically (left/right)",
+        "Classify goods as substitutes or complements based on context"
+      ],
+      "units": [
+        {
+          "unit_id": "A42",
+          "label": "Grafische verschuiving met voor-en-na pijlen",
+          "classification": "year_1_confirmed",
+          "roles": [
+            "required",
+            "introduced"
+          ],
+          "evidence_strength": "target_exercise_backed"
+        },
+        {
+          "unit_id": "D27",
+          "label": "Substituten en complementen",
+          "classification": "year_1_confirmed",
+          "roles": [
+            "required",
+            "introduced"
+          ],
+          "evidence_strength": "target_exercise_backed"
+        },
+        {
+          "unit_id": "D32",
+          "label": "Verschuiving versus beweging langs de curve",
+          "classification": "year_1_confirmed",
+          "roles": [
+            "required",
+            "introduced"
+          ],
+          "evidence_strength": "target_exercise_backed"
+        },
+        {
+          "unit_id": "D33",
+          "label": "Vraag- en aanbodverschuivingsfactoren benoemen",
+          "classification": "year_1_confirmed",
+          "roles": [
+            "required",
+            "introduced"
+          ],
+          "evidence_strength": "target_exercise_backed"
+        }
+      ],
+      "missing_flags": [
+        {
+          "record_id": "missing_flag:1.2.2:1",
+          "classification": "year_1_backfill_candidate",
+          "flag": "Classify a normal vs inferior good response to an income change (concept-level, prerequisite for D11 inkomenselasticiteit)",
+          "evidence_strength": "target_exercise_flag",
+          "next_review_action": "Review against existing live units first; only later use CLI mutation if human review confirms a missing MTU."
+        }
+      ],
+      "placeholder_record": null,
+      "lesson_evidence": null
+    },
+    {
+      "paragraph_id": "1.2.3",
+      "module": 1,
+      "chapter": 2,
+      "paragraph": 3,
+      "title": "Van individuele naar collectieve vraag",
+      "paragraph_kind": "theory",
+      "introduces_new_theory": true,
+      "source_ref": "references/owned/course-blueprint-v5.md §1.2.3",
+      "record_status": "migrated_from_v4_needs_v5_review",
+      "target_exercise_present": true,
+      "target_exercise_placeholder": false,
+      "may_count_as_final_coverage_claim": false,
+      "coverage_status": "migrated_needs_v5_review",
+      "lesson_goals": [
+        "Explain that collective demand is the horizontal sum of individual demand curves",
+        "Calculate collective demand from individual data (table method)",
+        "Derive collective demand algebraically (adding Q's at equal P)",
+        "Recognise the kink in the collective curve when one consumer drops out"
+      ],
+      "units": [
+        {
+          "unit_id": "A01",
+          "label": "Lineaire functie opstellen",
+          "classification": "year_1_confirmed",
+          "roles": [
+            "required",
+            "assumed"
+          ],
+          "evidence_strength": "target_exercise_backed"
+        }
+      ],
+      "missing_flags": [
+        {
+          "record_id": "missing_flag:1.2.3:1",
+          "classification": "year_1_backfill_candidate",
+          "flag": "Horizontal sum: aggregate individual demand tables into collective demand (A-domain candidate, mirror of A31 for aanbod)",
+          "evidence_strength": "target_exercise_flag",
+          "next_review_action": "Review against existing live units first; only later use CLI mutation if human review confirms a missing MTU."
+        },
+        {
+          "record_id": "missing_flag:1.2.3:2",
+          "classification": "year_1_backfill_candidate",
+          "flag": "Algebraic horizontal sum of linear demand functions (A-domain candidate, Q-at-equal-P)",
+          "evidence_strength": "target_exercise_flag",
+          "next_review_action": "Review against existing live units first; only later use CLI mutation if human review confirms a missing MTU."
+        },
+        {
+          "record_id": "missing_flag:1.2.3:3",
+          "classification": "year_1_backfill_candidate",
+          "flag": "Recognise the kink in collective demand when one consumer exits (concept-level)",
+          "evidence_strength": "target_exercise_flag",
+          "next_review_action": "Review against existing live units first; only later use CLI mutation if human review confirms a missing MTU."
+        }
+      ],
+      "placeholder_record": null,
+      "lesson_evidence": null
+    },
+    {
+      "paragraph_id": "1.2.4",
+      "module": 1,
+      "chapter": 2,
+      "paragraph": 4,
+      "title": "Gemengde opgaven: vraag",
+      "paragraph_kind": "gemengde_opgaven",
+      "introduces_new_theory": false,
+      "source_ref": "references/owned/course-blueprint-v5.md §1.2.4",
+      "record_status": "placeholder_needs_review",
+      "target_exercise_present": true,
+      "target_exercise_placeholder": true,
+      "may_count_as_final_coverage_claim": false,
+      "coverage_status": "placeholder_needs_evidence",
+      "lesson_goals": [
+        "Consolidate and transfer the chapter skills for Gemengde opgaven: vraag."
+      ],
+      "units": [],
+      "missing_flags": [],
+      "placeholder_record": {
+        "record_id": "missing_flag:1.2.4:1",
+        "classification": "needs_evidence",
+        "flag": "v5_placeholder_needs_review",
+        "next_review_action": "REF-CT1 should record placeholder coverage status and route it to target-exercise review before final claims."
+      },
+      "lesson_evidence": null
+    },
+    {
+      "paragraph_id": "1.3.1",
+      "module": 1,
+      "chapter": 3,
+      "paragraph": 1,
+      "title": "Aanbod",
+      "paragraph_kind": "theory",
+      "introduces_new_theory": true,
+      "source_ref": "references/owned/course-blueprint-v5.md §1.3.1",
+      "record_status": "migrated_from_v4_needs_v5_review",
+      "target_exercise_present": true,
+      "target_exercise_placeholder": false,
+      "may_count_as_final_coverage_claim": false,
+      "coverage_status": "migrated_needs_v5_review",
+      "lesson_goals": [
+        "Draw and interpret a supply curve (upward sloping)",
+        "Name supply factors: input prices, technology, number of suppliers, expectations, government policy",
+        "Distinguish between shifts and movements along the supply curve",
+        "Show supply shifts graphically"
+      ],
+      "units": [
+        {
+          "unit_id": "D13",
+          "label": "Kostenstijging en aanbodverschuiving",
+          "classification": "year_1_confirmed",
+          "roles": [
+            "required",
+            "introduced"
+          ],
+          "evidence_strength": "target_exercise_backed"
+        },
+        {
+          "unit_id": "D32",
+          "label": "Verschuiving versus beweging langs de curve",
+          "classification": "year_1_confirmed",
+          "roles": [
+            "required",
+            "assumed"
+          ],
+          "evidence_strength": "target_exercise_backed"
+        },
+        {
+          "unit_id": "D33",
+          "label": "Vraag- en aanbodverschuivingsfactoren benoemen",
+          "classification": "year_1_confirmed",
+          "roles": [
+            "required",
+            "assumed"
+          ],
+          "evidence_strength": "target_exercise_backed"
+        }
+      ],
+      "missing_flags": [
+        {
+          "record_id": "missing_flag:1.3.1:1",
+          "classification": "year_1_backfill_candidate",
+          "flag": "Draw an upward-sloping supply curve with correct economist axes (A-domain candidate)",
+          "evidence_strength": "target_exercise_flag",
+          "next_review_action": "Review against existing live units first; only later use CLI mutation if human review confirms a missing MTU."
+        }
+      ],
+      "placeholder_record": null,
+      "lesson_evidence": null
+    },
+    {
+      "paragraph_id": "1.3.2",
+      "module": 1,
+      "chapter": 3,
+      "paragraph": 2,
+      "title": "Marktevenwicht",
+      "paragraph_kind": "theory",
+      "introduces_new_theory": true,
+      "source_ref": "references/owned/course-blueprint-v5.md §1.3.2",
+      "record_status": "migrated_from_v4_needs_v5_review",
+      "target_exercise_present": true,
+      "target_exercise_placeholder": false,
+      "may_count_as_final_coverage_claim": false,
+      "coverage_status": "migrated_needs_v5_review",
+      "lesson_goals": [
+        "Set Qa = Qv and solve for P (equilibrium price)",
+        "Substitute back to find equilibrium quantity",
+        "Draw demand and supply curves and locate equilibrium graphically",
+        "Determine surplus or shortage at a given price"
+      ],
+      "units": [
+        {
+          "unit_id": "A02",
+          "label": "Vergelijking oplossen",
+          "classification": "year_1_confirmed",
+          "roles": [
+            "required",
+            "assumed"
+          ],
+          "evidence_strength": "target_exercise_backed"
+        },
+        {
+          "unit_id": "A04",
+          "label": "Substitueren",
+          "classification": "year_1_confirmed",
+          "roles": [
+            "required",
+            "introduced"
+          ],
+          "evidence_strength": "target_exercise_backed"
+        },
+        {
+          "unit_id": "A06",
+          "label": "Evenwichtsprijs & -hoeveelheid",
+          "classification": "year_1_confirmed",
+          "roles": [
+            "required",
+            "introduced"
+          ],
+          "evidence_strength": "target_exercise_backed"
+        }
+      ],
+      "missing_flags": [
+        {
+          "record_id": "missing_flag:1.3.2:1",
+          "classification": "year_1_backfill_candidate",
+          "flag": "Determine surplus (aanbodoverschot) vs shortage (vraagoverschot) at a non-equilibrium price and calculate its size (A-domain candidate, prerequisite for government price interventions in §2.4)",
+          "evidence_strength": "target_exercise_flag",
+          "next_review_action": "Review against existing live units first; only later use CLI mutation if human review confirms a missing MTU."
+        }
+      ],
+      "placeholder_record": null,
+      "lesson_evidence": null
+    },
+    {
+      "paragraph_id": "1.3.3",
+      "module": 1,
+      "chapter": 3,
+      "paragraph": 3,
+      "title": "Verschuivingen en nieuw evenwicht",
+      "paragraph_kind": "theory",
+      "introduces_new_theory": true,
+      "source_ref": "references/owned/course-blueprint-v5.md §1.3.3",
+      "record_status": "migrated_from_v4_needs_v5_review",
+      "target_exercise_present": true,
+      "target_exercise_placeholder": false,
+      "may_count_as_final_coverage_claim": false,
+      "coverage_status": "migrated_needs_v5_review",
+      "lesson_goals": [
+        "Calculate a new equilibrium after a supply or demand shift",
+        "Compare old and new equilibrium: predict direction of price and quantity change",
+        "Connect shifts to the demand/supply factors from §1.2 and §1.3",
+        "Show shifts graphically with clear before/after",
+        "Analyse simultaneous shifts: quantity effect is clear (both increase Q), but price effect is ambiguous (one pushes up, the other pushes down)"
+      ],
+      "units": [
+        {
+          "unit_id": "A02",
+          "label": "Vergelijking oplossen",
+          "classification": "year_1_confirmed",
+          "roles": [
+            "required",
+            "assumed"
+          ],
+          "evidence_strength": "target_exercise_backed"
+        },
+        {
+          "unit_id": "A04",
+          "label": "Substitueren",
+          "classification": "year_1_confirmed",
+          "roles": [
+            "required",
+            "assumed"
+          ],
+          "evidence_strength": "target_exercise_backed"
+        },
+        {
+          "unit_id": "A06",
+          "label": "Evenwichtsprijs & -hoeveelheid",
+          "classification": "year_1_confirmed",
+          "roles": [
+            "required",
+            "assumed"
+          ],
+          "evidence_strength": "target_exercise_backed"
+        },
+        {
+          "unit_id": "A42",
+          "label": "Grafische verschuiving met voor-en-na pijlen",
+          "classification": "year_1_confirmed",
+          "roles": [
+            "required",
+            "assumed"
+          ],
+          "evidence_strength": "target_exercise_backed"
+        },
+        {
+          "unit_id": "D13",
+          "label": "Kostenstijging en aanbodverschuiving",
+          "classification": "year_1_confirmed",
+          "roles": [
+            "required",
+            "assumed"
+          ],
+          "evidence_strength": "target_exercise_backed"
+        }
+      ],
+      "missing_flags": [
+        {
+          "record_id": "missing_flag:1.3.3:1",
+          "classification": "year_1_backfill_candidate",
+          "flag": "Reason about simultaneous supply+demand shifts: determinate Q-direction but ambiguous P-direction (concept-level, diagnostic checkpoint)",
+          "evidence_strength": "target_exercise_flag",
+          "next_review_action": "Review against existing live units first; only later use CLI mutation if human review confirms a missing MTU."
+        }
+      ],
+      "placeholder_record": null,
+      "lesson_evidence": null
+    },
+    {
+      "paragraph_id": "1.3.4",
+      "module": 1,
+      "chapter": 3,
+      "paragraph": 4,
+      "title": "Gemengde opgaven: aanbod en marktevenwicht",
+      "paragraph_kind": "gemengde_opgaven",
+      "introduces_new_theory": false,
+      "source_ref": "references/owned/course-blueprint-v5.md §1.3.4",
+      "record_status": "placeholder_needs_review",
+      "target_exercise_present": true,
+      "target_exercise_placeholder": true,
+      "may_count_as_final_coverage_claim": false,
+      "coverage_status": "placeholder_needs_evidence",
+      "lesson_goals": [
+        "Consolidate and transfer the chapter skills for Gemengde opgaven: aanbod en marktevenwicht."
+      ],
+      "units": [],
+      "missing_flags": [],
+      "placeholder_record": {
+        "record_id": "missing_flag:1.3.4:1",
+        "classification": "needs_evidence",
+        "flag": "v5_placeholder_needs_review",
+        "next_review_action": "REF-CT1 should record placeholder coverage status and route it to target-exercise review before final claims."
+      },
+      "lesson_evidence": null
+    }
+  ]
+}

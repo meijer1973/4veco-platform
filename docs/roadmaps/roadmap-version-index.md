@@ -12,12 +12,14 @@ docs/roadmaps/roadmap-version-index.json
 
 | Roadmap | Version | Path | Notes |
 |---|---|---|---|
-| References Team Roadmap | `v2.47-sprint-log-and-lead-review-procedure` | `references/reference-team-roadmap.md` | Current operating roadmap after sprint logs were consolidated under `reports/sprints/` for new/current bundles and lead-review assignment, correction, and recheck logs became structural sprint-closure requirements. |
+| References Team Roadmap | `v2.49-ref-ct1-year1-coverage-baseline` | `references/reference-team-roadmap.md` | Current operating roadmap after REF-CT1 completed the non-mutating Year-1 target-exercise and MTU coverage baseline, produced the CP-6 packet, and moved Content Track 2 to active precision and semantic dual-coding audit work while keeping CP-6 and Year 1 not closed. |
 
 ## Outdated Archive
 
 | Roadmap | Version | Path | Superseded By |
 |---|---|---|---|
+| References Team Roadmap before REF-CT1 Year-1 coverage baseline completion | `v2.48-l16r-dual-coding-incident` | `docs/roadmaps/outdated/reference-team-roadmap-v2.48-l16r-dual-coding-incident.md` | `references/reference-team-roadmap.md` |
+| References Team Roadmap before L1.6R dual-coding incident update | `v2.47-sprint-log-and-lead-review-procedure` | `docs/roadmaps/outdated/reference-team-roadmap-v2.47-sprint-log-and-lead-review-procedure.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before sprint-log and lead-review procedure update | `v2.46-ref-ct0-prototype-classification` | `docs/roadmaps/outdated/reference-team-roadmap-v2.46-ref-ct0-prototype-classification.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before REF-CT0 completion | `v2.45-post-l16-foundation-hardening` | `docs/roadmaps/outdated/reference-team-roadmap-v2.45-post-l16-foundation-hardening.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before post-L1.6 foundation hardening | `v2.44-s9a-d04-cli-mutation` | `docs/roadmaps/outdated/reference-team-roadmap-v2.44-s9a-d04-cli-mutation.md` | `references/reference-team-roadmap.md` |
