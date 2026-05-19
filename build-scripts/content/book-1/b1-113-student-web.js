@@ -896,9 +896,8 @@ PASS WITH FLAGS
 ## Scope
 
 Reviewed generated student-web companion surfaces after the L1.6R dual-coding
-remediation. This is a companion visual review record; L1.6R still requires
-student-experience, teacher-learning-quality, and lead-review records before
-closure.
+remediation and focused visual-value concordance correction. L1.6R is closed
+PASS WITH FLAGS after human review accepted the correction.
 
 ## Current Judgment
 
@@ -935,8 +934,8 @@ closure.
 - Rendered screenshot QA passed after remediation: presentation-v2
   desktop/fullscreen/notes/mobile/dark scenarios and rich student-web page
   desktop/mobile light/dark scenarios.
-- L1.6R still needs student-experience, teacher-learning-quality, and lead
-  human review before closure.
+- Human review accepted the remediation and focused concordance correction.
+  L1.6R closes PASS WITH FLAGS.
 `);
 
   writeFile(path.join(PAR_DIR, "1.1.3-quality-ref.yaml"), `# Quality Reference - 1.1.3 Grafieken en tabellen
@@ -976,11 +975,11 @@ companion:
   review_verdict: "PASS WITH FLAGS"
   last_reviewed: "2026-05-19"
   hard_fails_open: 0
-  human_review_status: "l16r_guided_concordance_revised_pending_human_review"
+  human_review_status: "pass_with_flags"
   default_office_exports: false
   student_facing_internal_codes: false
   l16r_dual_coding:
-    status: "guided_concordance_revised_pending_human_review"
+    status: "pass_with_flags"
     required_objects_present:
       ice_table: true
       pq_graph: true
@@ -1000,13 +999,13 @@ companion:
     active_skills: ["A61", "A62", "A63", "A38", "A39"]
     coverage_note: "A61/A62/A63 cover table and graph reading; A38/A39 support percentage and index use with graph/table values."
   surfaces:
-    voorkennis_html: l16r_guided_concordance_revised_pending_human_review
-    vaardigheden_html: l16r_guided_concordance_revised_pending_human_review
+    voorkennis_html: pass_with_flags
+    vaardigheden_html: pass_with_flags
     presentatie_pptx: pass_with_flags
-    presentatie_html: l16r_guided_concordance_revised_pending_human_review
-    nieuws_html: l16r_guided_concordance_revised_pending_human_review
-    samenvatting_html: l16r_guided_concordance_revised_pending_human_review
-    begeleide_inoefening_html: l16r_guided_concordance_revised_pending_human_review
+    presentatie_html: pass_with_flags
+    nieuws_html: pass_with_flags
+    samenvatting_html: pass_with_flags
+    begeleide_inoefening_html: pass_with_flags
     youtube_videos_html: pass_with_flags
     games:
       instapquiz: pass_with_flags

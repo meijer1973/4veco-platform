@@ -110,7 +110,7 @@ describeOrSkip('L1.6R §1.1.3 semantic dual-coding surfaces', () => {
     const qualityRef = read('1.1.3-quality-ref.yaml');
     expect(review).toMatch(/## Verdict\s+PASS WITH FLAGS/);
     expect(review).not.toMatch(/^###\s*HF-\d+\b/m);
-    expect(qualityRef).toContain('human_review_status: "l16r_guided_concordance_revised_pending_human_review"');
+    expect(qualityRef).toContain('human_review_status: "pass_with_flags"');
     expect(qualityRef).toContain('required_objects_present:');
     expect(qualityRef).toContain('guided_visual_concordance:');
   });
