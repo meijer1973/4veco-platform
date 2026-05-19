@@ -1,14 +1,14 @@
 {
   "schema_version": "0.1",
-  "generated_at": "2026-05-18T11:26:33.389Z",
+  "generated_at": "2026-05-19T07:27:26.622Z",
   "sprint_id": "R0.2",
   "scope": "references/",
   "note": "Self-generated inventory files intentionally omit size and sha256 to avoid unstable self-checksums.",
   "summary": {
-    "file_count": 236,
+    "file_count": 239,
     "by_layer": {
       "authored_judgement": 8,
-      "governance_data": 156,
+      "governance_data": 159,
       "external_authority": 32,
       "machine_registry": 5,
       "owned_curriculum_design": 5,
@@ -20,7 +20,7 @@
     "by_edit_policy": {
       "human_reviewed_edit": 16,
       "generated_by_inventory_script": 28,
-      "sprint_process": 127,
+      "sprint_process": 130,
       "external_refresh_only": 32,
       "cli_only": 5,
       "versioned_human_reviewed_edit": 5,
@@ -572,8 +572,8 @@
       "path": "references/data/procedure-visual/lesson-procedure-contracts.json",
       "file_name": "lesson-procedure-contracts.json",
       "extension": "json",
-      "size_bytes": 15200,
-      "sha256": "ba29dd234d057bc614400b75bc13aef2a1f6f903548bda1a0b8c452faa0f3a1c",
+      "size_bytes": 18593,
+      "sha256": "2a15015f396efe1d73c4ea17f376db3b7d29fa8187a688f5fd6d3f8d84287599",
       "layer": "governance_data",
       "authority_level": "generated_report",
       "source_type": "inventory",
@@ -2509,6 +2509,66 @@
       "self_generated_inventory_file": false
     },
     {
+      "path": "references/data/sprints/REF-CT0-mtu-classification.json",
+      "file_name": "REF-CT0-mtu-classification.json",
+      "extension": "json",
+      "size_bytes": 320555,
+      "sha256": "e49c925b73beb2d9942f77d0525b713ba0e414da612de9cb1f42ef95e8e00273",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/data/sprints/REF-CT0.plan.json",
+      "file_name": "REF-CT0.plan.json",
+      "extension": "json",
+      "size_bytes": 2944,
+      "sha256": "a04f2a828f486e5c7e2738b9e1703a874ddbaf0034712e9c75306ccceb54ea94",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/data/sprints/REF-CT0.result.json",
+      "file_name": "REF-CT0.result.json",
+      "extension": "json",
+      "size_bytes": 3754,
+      "sha256": "f7353716bb3a48abeb6aac1ac3369cbb127bfaf0888b2ef1b41e0f7f82f7ad2d",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
       "path": "references/data/sprints/RX.1-representation-operation-inventory.json",
       "file_name": "RX.1-representation-operation-inventory.json",
       "extension": "json",
@@ -4257,8 +4317,8 @@
       "path": "references/reference-team-roadmap.md",
       "file_name": "reference-team-roadmap.md",
       "extension": "md",
-      "size_bytes": 136523,
-      "sha256": "4c69970d6a273d25274f64075927d3aa1e46e8ac58d9c334ef9fef4b7a69189b",
+      "size_bytes": 143368,
+      "sha256": "c302f2a8c09db2feccd7202c77eb2273afff247c17bd3c1508d94405957dd8ee",
       "layer": "planning",
       "authority_level": "authored_judgement",
       "source_type": "roadmap",

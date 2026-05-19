@@ -1,6 +1,6 @@
 # Roadmap Version Index
 
-Updated: 2026-05-18
+Updated: 2026-05-19
 
 The JSON file is canonical for tooling:
 
@@ -12,12 +12,13 @@ docs/roadmaps/roadmap-version-index.json
 
 | Roadmap | Version | Path | Notes |
 |---|---|---|---|
-| References Team Roadmap | `v2.45-post-l16-foundation-hardening` | `references/reference-team-roadmap.md` | Current operating roadmap after SYNC-1 post-L1.6 reconciliation; REF-CT0 three-year prototype normalisation and MTU classification is the next planned reference sprint, with broad lesson scaling not yet approved. |
+| References Team Roadmap | `v2.46-ref-ct0-prototype-classification` | `references/reference-team-roadmap.md` | Current operating roadmap after REF-CT0 completed the non-authoritative v5-aware three-year prototype, MTU classification, and candidate-review packet; REF-CT1 Year-1 target-exercise and MTU coverage baseline is now active. |
 
 ## Outdated Archive
 
 | Roadmap | Version | Path | Superseded By |
 |---|---|---|---|
+| References Team Roadmap before REF-CT0 completion | `v2.45-post-l16-foundation-hardening` | `docs/roadmaps/outdated/reference-team-roadmap-v2.45-post-l16-foundation-hardening.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before post-L1.6 foundation hardening | `v2.44-s9a-d04-cli-mutation` | `docs/roadmaps/outdated/reference-team-roadmap-v2.44-s9a-d04-cli-mutation.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before S9a D04 CLI-only mutation | `v2.43-s9-cp5-d04-closure` | `docs/roadmaps/outdated/reference-team-roadmap-v2.43-s9-cp5-d04-closure.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before S9 CP-5 D04 closure | `v2.42-s8-misconception-registry` | `docs/roadmaps/outdated/reference-team-roadmap-v2.42-s8-misconception-registry.md` | `references/reference-team-roadmap.md` |

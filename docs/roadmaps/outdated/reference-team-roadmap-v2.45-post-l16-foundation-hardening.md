@@ -2,9 +2,9 @@
 
 Generated: 2026-04-23
 Adopted main roadmap: 2026-04-25
-Last strategic update: 2026-05-19
+Last strategic update: 2026-05-18
 Roadmap ID: `references-team-roadmap`
-Roadmap version: `v2.46-ref-ct0-prototype-classification`
+Roadmap version: `v2.45-post-l16-foundation-hardening`
 Roadmap status: `active`
 Version index: `docs/roadmaps/roadmap-version-index.json`
 Scope: `references/`, `build-scripts/references/`, `build-scripts/reports/`, reference dashboards, and generated reference reports under `reports/`
@@ -16,7 +16,8 @@ Closed sprints are recorded separately in the "Closed Sprints" section below.
 
 | Sprint | Name | Completed | Current State |
 |--------|------|-----------|---------------|
-| REF-CT1 | Year-1 Target Exercise And MTU Coverage Baseline For v5 | no | **ACTIVE / FOUNDATION-HARDENING SPRINT.** Use active v5, built evidence from `1.1.1` through `1.1.3`, and REF-CT0 categories to produce Year-1 paragraph coverage, MTU gap classification, missing-target exercise status, placeholder status, and candidate review packet before any CLI mutation. |
+| REF-CT0 | Three-Year Prototype Normalisation And MTU Classification | no | **ACTIVE / FOUNDATION-HARDENING SPRINT.** Convert `knowledge/three Year blue print.md` into a clean, explicitly non-authoritative, v5-aware planning prototype. Classify candidate units/paragraphs as Year 1 confirmed, Year 1 backfill, Year 2 skeleton, Year 3 skeleton, duplicate/merge/split, parked, or needs evidence. No `references/machine` mutation and no direct curriculum authority. |
+| REF-CT1 | Year-1 Target Exercise And MTU Coverage Baseline For v5 | no | Planned after REF-CT0. Replaces the old broad `Content Track 1` framing. Use active v5, built evidence from `1.1.1` through `1.1.3`, and CT0 categories to produce Year-1 paragraph coverage, MTU gap classification, missing-target exercise status, and candidate review packet before any CLI mutation. |
 | Content Track 2 | Year-1 Precision And Dual-Coding Audit | no | Planned content-track work. Record precision lint and dual-coding status for exercise surfaces where applicable. |
 | Content Track 3 | Year-2 Skeleton | no | Planned after REF-CT0/REF-CT1 framing. Prepare Year-2 skeleton with CvTE-vwo anchor status and `concept_orphan` flags for CP-7; do not treat the rough three-year blueprint as authoritative. |
 | R7.6 | RAG Quality Hardening | no | Planned. Close R7.4 follow-ups, split target-exercise chunks, expand retrieval eval coverage, backfill evidence anchors, and improve approved/pending/diagnostic labels. |
@@ -30,7 +31,6 @@ Closed sprints are recorded separately in the "Closed Sprints" section below.
 
 | Sprint | Name | Completed | Current State |
 |--------|------|-----------|---------------|
-| REF-CT0 | Three-Year Prototype Normalisation And MTU Classification | yes | Completed. Produced a non-authoritative v5-aware three-year prototype, source/authority boundary note, MTU classification JSON/Markdown, and REF-CT1 candidate-review packet. Classified 104 active v5-confirmed MTU ids, 44 live Year-1 backfill MTU ids plus 68 active v5 missing-flag records, 57 Year-2 skeleton ids, 20 Year-3 skeleton ids, 4 duplicate/merge/split records, 3 parked records, and 11 placeholder needs-evidence records. No `references/machine` or `references/external` mutation occurred. |
 | SYNC-1 | Roadmap Reconciliation | yes | Completed. Updated the references roadmap to v2.45 post-L1.6 state, updated the roadmap version index, and synchronized lesson/reference sequencing around foundation hardening instead of broad scaling. |
 | S9a | D04 CLI-Only Mutation Sprint | yes | Completed. Applied the CP-5 D04 decision through `unit-deprecate.js`, deprecated D04 with successor pointers to `A15`, `D06`, `A17`, `D11`, `A16`, `D12`, and `D27`, removed the single active target-exercise D04 citation, recorded mutation/stale-reference logs, regenerated reports/RAG/inventories, and preserved all blocked downstream uses. |
 | S9 | Unit Design Status And D04 Resolution | yes | Completed with `pass_with_conditions`. Added derived `unit-design-status` overlay, validator, JSON/Markdown report, reference-health/RAG labels, CP-5 decision record, dependent-unit audit, human interview, and gate closure; D04 remains promotion-blocked and no protected machine mutation occurred. |
@@ -1314,14 +1314,6 @@ sequencing, student-facing AI, or summative use from this roadmap sync.
 
 ### REF-CT0 Three-Year Prototype Normalisation And MTU Classification
 
-Status: completed. Outputs are recorded in:
-
-- `reports/reference-planning/REF-CT0-source-authority-boundary.md`
-- `reports/reference-planning/REF-CT0-three-year-prototype.md`
-- `reports/reference-planning/REF-CT0-mtu-classification.md`
-- `reports/reference-planning/REF-CT0-candidate-review-packet.md`
-- `references/data/sprints/REF-CT0-mtu-classification.json`
-
 Purpose: turn `knowledge/three Year blue print.md` into a clean planning
 prototype without making it a curriculum source of truth.
 
@@ -1349,11 +1341,6 @@ boundary note.
 Stop condition: do not mutate `references/machine/`; do not promote the rough
 three-year blueprint into the owned curriculum source; do not treat migrated v5
 target exercises as final-reviewed.
-
-Completion note: REF-CT0 preserved all stop conditions. It did not mutate
-`references/machine/` or `references/external/`, did not promote the rough
-three-year blueprint into `references/owned/`, and did not treat migrated or
-placeholder v5 target-exercise records as final-reviewed.
 
 ### REF-CT1 Year-1 Target Exercise And MTU Coverage Baseline For v5
 
@@ -1751,10 +1738,10 @@ coverage before broader lesson production or protected registry mutation.
 
 Sprints:
 
-- `REF-CT0` completed: normalized the rough three-year blueprint as a
-  non-authoritative v5-aware prototype and classified MTU gaps.
-- `REF-CT1` active next: Year-1 target-exercise and MTU coverage baseline for
-  v5, with `GATE-CP6-year-1-paragraph-coverage`.
+- `REF-CT0` planned next: normalize the rough three-year blueprint as a
+  non-authoritative v5-aware prototype and classify MTU gaps.
+- `REF-CT1` planned after REF-CT0: Year-1 target-exercise and MTU coverage
+  baseline for v5, with `GATE-CP6-year-1-paragraph-coverage`.
 - `Content Track 2` planned: Year-1 precision and dual-coding audit.
 - `Content Track 3` planned: Year-2 skeleton and `GATE-CP7-year-2-anchoring`,
   after the three-year prototype is cleaned enough to guide skeleton work.
@@ -1860,7 +1847,7 @@ S8 / Sprint 8 Misconception registry MVP completed
 Sprint 9 Unit design status and D04 resolution (CP-5) completed
 S9a D04 CLI-only mutation sprint completed
 SYNC-1 Roadmap reconciliation completed
-REF-CT0 Three-year prototype normalization and MTU classification completed
+REF-CT0 Three-year prototype normalization and MTU classification
 REF-CT1 Year-1 target exercise and MTU coverage baseline for v5 (CP-6)
 Content Track 2 Year-1 precision and dual-coding audit
 Content Track 3 Year-2 skeleton (CP-7)
@@ -1876,7 +1863,7 @@ Do not invert this order.
 
 ## Immediate Next Sprint
 
-Next action: prepare `REF-CT1 Year-1 Target Exercise And MTU Coverage Baseline For v5`. REF-CT0 has converted the rough three-year blueprint into non-authoritative v5-aware planning artifacts and a candidate-review packet. REF-CT1 must now use active v5, built evidence from `1.1.1` through `1.1.3`, and REF-CT0 categories to produce Year-1 paragraph coverage, MTU gap classification, missing-target exercise status, placeholder status, and a CP-6 review packet before any CLI mutation. The remaining blocks on diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, PV projection, and PV machine promotion remain in force.
+Next action: prepare `REF-CT0 Three-Year Prototype Normalisation And MTU Classification`. S9a has applied the CP-5 D04 decision through governed CLI-only mutation, and the lesson side has now closed L1.5P, L1.5Q, and L1.6, but that evidence supports foundation hardening rather than broad scaling. REF-CT0 must cleanly label the rough three-year blueprint as non-authoritative, make it v5-aware, classify MTU gaps, and prepare the ground for REF-CT1 without weakening the remaining blocks on diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, PV projection, or PV machine promotion.
 
 R4.5 has closed the bounded micro-unit mutation lane, CP-1 has closed the non-mutating schema audit gate as `pass_with_conditions`, CP-2 has closed the owned-source scope gate as `pass_with_conditions`, R9.1 has registered the owned-source surfaces, R9.2 has completed owned-content projection, S4/CP-3 has closed as `pass_with_conditions`, S4.1 has implemented the CP-3 condition artifacts, RX.1 has prepared the non-mutating representation-operation inventory, `GATE-RX1-representation-unit-scope` has closed as `pass_with_conditions`, RX.2/GATE-RX2 has added the bounded six-unit first lane through CLI-only mutation, RX.2b/GATE-RX2b has added the bounded seven-unit graphical foundation lane through CLI-only mutation while holding `A71`, R8.1 has added the scoped internal QC issue model, S6 has created the source-document registry MVP under `references/data/`, S7/CP-4 has closed as `pass_with_conditions`, RX.3a/RX.3b/RX.4 have applied producer and elasticity representation lanes through CLI-only mutation, PV.3 through PV.6 have completed pilot templates, projection proof, and coverage dashboards, RX.5 has added representation-operation reports, RX.6 has completed skill-tree generator readiness, PV.7 has closed the machine-promotion review gate without authorizing promotion, PV.8 has completed the promotion-pipeline design, PV-G4 has closed as `pass_with_conditions` with two reconciled lesson-team proofs, S8 has created the bounded internal misconception registry under `references/data/`, S9 has closed CP-5 as a D04 decision-only gate, and S9a has applied the D04 retirement through CLI-only mutation.
 
