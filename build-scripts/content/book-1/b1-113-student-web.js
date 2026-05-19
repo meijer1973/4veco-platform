@@ -119,6 +119,7 @@ function pageTemplate({ title, subtitle, active, body, accent = "grafisch" }) {
     .visual-object{border:1px solid var(--border);border-radius:8px;padding:12px;background:var(--bg);min-width:0}
     .visual-object h3{margin:0 0 8px;font-size:1rem}
     .visual-object p{margin:8px 0 0;color:var(--ink-soft);font-size:.92rem;line-height:1.45}
+    .visual-object img{display:block;width:100%;height:auto;max-height:360px;object-fit:contain;border:1px solid var(--border);border-radius:8px;background:#fff}
     .source-table td.is-highlighted,.source-table th.is-highlighted{background:color-mix(in oklab,var(--accent) 22%,var(--bg-lift));font-weight:900}
     .inline-graph{display:block;width:100%;height:auto;max-height:300px}
     .inline-graph .axis{stroke:var(--ink);stroke-width:2}
@@ -187,6 +188,34 @@ function ijsTableVisual() {
   </figure>`;
 }
 
+function assetSourceVisual({ id, title, asset, caption, alt }) {
+  return `<figure class="visual-object" data-visual-id="${esc(id)}" data-source-asset="${esc(asset)}">
+    <h3>${esc(title)}</h3>
+    <img src="_assets/${esc(asset)}" alt="${esc(alt || title)}">
+    <p>${esc(caption)}</p>
+  </figure>`;
+}
+
+function coffeeTableVisual() {
+  const rows = [
+    ["EUR 1,00", "200 bekers"],
+    ["EUR 1,50", "160 bekers"],
+    ["EUR 2,00", "120 bekers"],
+    ["EUR 2,50", "80 bekers"],
+    ["EUR 3,00", "40 bekers"],
+  ];
+  return `<figure class="visual-object" data-visual-id="guided_coffee_table">
+    <h3>Koffieverkoop: bron-tabel</h3>
+    <table class="data-table source-table">
+      <thead><tr><th class="is-highlighted">Prijs per beker</th><th class="is-highlighted">Verkocht per dag</th></tr></thead>
+      <tbody>
+        ${rows.map(([p, q]) => `<tr><td>${p}</td><td>${q}</td></tr>`).join("")}
+      </tbody>
+    </table>
+    <p>Gebruik deze tabel voor Opgave 2: punten als (200; 1,00), (160; 1,50), (120; 2,00), (80; 2,50), (40; 3,00).</p>
+  </figure>`;
+}
+
 function pqGraphVisual({ id = "pq_graph", title = "P-Q-grafiek", interpolation = false, caption = "Prijs staat verticaal; hoeveelheid staat horizontaal." } = {}) {
   const points = [
     [112, 60, "500;1,00"],
@@ -217,6 +246,33 @@ function pqGraphVisual({ id = "pq_graph", title = "P-Q-grafiek", interpolation =
       ${points.map(([x, y, label], i) => `<circle class="point" cx="${x}" cy="${y}" r="5"></circle>${i === 2 ? `<text x="${x + 8}" y="${y - 8}">(${label})</text>` : ""}`).join("")}${interpolationMarkup}
     </svg>
     <p>${esc(caption)}</p>
+  </figure>`;
+}
+
+function waterGraphVisual() {
+  return `<figure class="visual-object" data-visual-id="guided_water_two_point">
+    <h3>Waterverkoop: twee punten en interpolatie</h3>
+    <svg class="inline-graph" viewBox="0 0 430 270" role="img" aria-label="Waterverkoop met punten januari en juni en interpolatie bij EUR 1,00">
+      <line class="axis" x1="68" y1="220" x2="386" y2="220"></line>
+      <line class="axis" x1="68" y1="220" x2="68" y2="36"></line>
+      <line class="grid" x1="68" y1="188" x2="386" y2="188"></line>
+      <line class="grid" x1="68" y1="126" x2="386" y2="126"></line>
+      <line class="grid" x1="68" y1="64" x2="386" y2="64"></line>
+      <text x="360" y="248">Q</text>
+      <text x="18" y="50">P</text>
+      <text x="31" y="192">EUR 0,80</text>
+      <text x="31" y="130">EUR 1,00</text>
+      <text x="31" y="68">EUR 1,20</text>
+      <text x="142" y="246">350</text>
+      <text x="232" y="246">425</text>
+      <text x="322" y="246">500</text>
+      <polyline class="curve" points="328,188 148,64"></polyline>
+      <circle class="point" cx="328" cy="188" r="6"></circle><text x="230" y="181">(500; 0,80)</text>
+      <circle class="point" cx="148" cy="64" r="6"></circle><text x="156" y="57">(350; 1,20)</text>
+      <line class="guide" x1="68" y1="126" x2="238" y2="126"></line><line class="guide" x1="238" y1="126" x2="238" y2="220"></line>
+      <circle class="point" cx="238" cy="126" r="6"></circle><text x="246" y="119">EUR 1,00 -> 425</text>
+    </svg>
+    <p>Deze visual hoort bij Opgave 4: januari 500 bij EUR 0,80, juni 350 bij EUR 1,20, en bij EUR 1,00 lees je ongeveer 425 flesjes af.</p>
   </figure>`;
 }
 
@@ -543,36 +599,34 @@ function writeRichPages() {
           <li>Label de gekozen waarden zodat je berekening controleerbaar blijft.</li>
         </ol>
       </article>
-      ${guidedExercise("Opgave 1 - Broodjesgrafiek", pqGraphVisual({
+      ${guidedExercise("Opgave 1 - Broodjesgrafiek", assetSourceVisual({
         id: "guided_bread_graph",
         title: "Broodjesverkoop: bron-grafiek",
-        caption: "Lees prijs op de verticale as en hoeveelheid op de horizontale as."
+        asset: "1.1.3_ex_1.svg",
+        alt: "Broodjesgrafiek met prijs op de verticale as en hoeveelheid broodjes op de horizontale as",
+        caption: "Gebruik deze bron bij Opgave 1: EUR 3,00 hoort bij 200 broodjes; 150 broodjes hoort bij EUR 3,50."
       }), [
         "Zoek eerst de prijs op de verticale as.",
         "Ga horizontaal naar de lijn en daarna verticaal naar de hoeveelheid.",
         "Beschrijf daarna het verband in woorden."
       ], "Bij EUR 3,00 worden 200 broodjes verkocht. Bij 150 broodjes hoort EUR 3,50. Het verband is negatief: hogere prijs, lagere verkoop.")}
-      ${guidedExercise("Opgave 2 - Koffie tekenen", `${ijsTableVisual()}<div class="guided-source">${blankAxesVisual()}</div>`, [
+      ${guidedExercise("Opgave 2 - Koffie tekenen", `${coffeeTableVisual()}<div class="guided-source">${blankAxesVisual()}</div>`, [
         "Zet hoeveelheid op de horizontale as en prijs op de verticale as.",
         "Kies een schaal die 40 tot 200 bekers en EUR 1,00 tot EUR 3,00 laat passen.",
         "Zet de punten uit als (Q; P), bijvoorbeeld (200; 1,00)."
       ], "De grafiek is een dalende rechte lijn. Bij elke prijsstijging van EUR 0,50 daalt de verkoop met 40 bekers.")}
-      ${guidedExercise("Opgave 3 - Bioscoop interpoleren", pqGraphVisual({
+      ${guidedExercise("Opgave 3 - Bioscoop interpoleren", assetSourceVisual({
         id: "guided_cinema_interpolation",
         title: "Bioscoopbezoekers interpoleren",
-        interpolation: true,
-        caption: "Gebruik hulplijnen om een tussenliggende prijs af te lezen."
+        asset: "1.1.3_ex_2.svg",
+        alt: "Bioscoopgrafiek met bezoekers op de horizontale as en prijs op de verticale as",
+        caption: "Gebruik deze bron bij Opgave 3: EUR 9,00 hoort bij 500 bezoekers; EUR 11,00 ligt tussen EUR 10,00 en EUR 12,00 en hoort bij ongeveer 300 bezoekers."
       }), [
         "Lees EUR 9,00 direct af.",
         "EUR 11,00 ligt midden tussen EUR 10,00 en EUR 12,00.",
         "Voor de procentuele verandering gebruik je de oude waarde als basis."
       ], "Bij EUR 9,00 komen 500 bezoekers. Bij EUR 11,00 ongeveer 300 bezoekers. Van 600 naar 200 is -66,7%.")}
-      ${guidedExercise("Opgave 4 - Water en index", pqGraphVisual({
-        id: "guided_water_two_point",
-        title: "Waterverkoop: twee punten",
-        interpolation: true,
-        caption: "Twee punten geven genoeg steun om ongeveer af te lezen."
-      }), [
+      ${guidedExercise("Opgave 4 - Water en index", waterGraphVisual(), [
         "Teken de twee punten (500; 0,80) en (350; 1,20).",
         "EUR 1,00 ligt midden tussen beide prijzen.",
         "Gebruik januari als basis voor het indexcijfer."
@@ -852,6 +906,8 @@ closure.
   and nieuws met visual now show concrete graph/table learning objects.
 - Each core procedure is paired with a worked visual example and a student
   action route.
+- The guided-practice source visuals now match the exercise-specific values,
+  labels, and answer routes instead of reusing generic graph examples.
 - The A61-style table-value route uses ordinary student language and avoids
   internal code exposure.
 - Grafiekenspel remains graph-based and still carries the MVP/scaffolded flag.
@@ -865,6 +921,12 @@ closure.
   inoefening.
 - misleading_axis_comparison appears in vaardigheden, presentation,
   nieuws met visual, samenvatting, and begeleide inoefening.
+- Guided-practice source concordance:
+  - Opgave 1 uses the actual broodjesverkoop source asset.
+  - Opgave 2 uses the coffee table with 200, 160, 120, 80 and 40 bekers.
+  - Opgave 3 uses the actual bioscoopbezoekers source asset.
+  - Opgave 4 uses a water graph with 500, 350, EUR 0,80, EUR 1,20,
+    EUR 1,00 and 425.
 
 ## Remaining Flags
 
@@ -878,7 +940,7 @@ closure.
 `);
 
   writeFile(path.join(PAR_DIR, "1.1.3-quality-ref.yaml"), `# Quality Reference - 1.1.3 Grafieken en tabellen
-# Refreshed: 2026-05-19 (L1.6R dual-coding remediation)
+# Refreshed: 2026-05-19 (L1.6R guided-visual concordance revision)
 
 paragraph: "1.1.3"
 title: "Grafieken en tabellen"
@@ -914,16 +976,22 @@ companion:
   review_verdict: "PASS WITH FLAGS"
   last_reviewed: "2026-05-19"
   hard_fails_open: 0
-  human_review_status: "l16r_visual_remediated_pending_human_review"
+  human_review_status: "l16r_guided_concordance_revised_pending_human_review"
   default_office_exports: false
   student_facing_internal_codes: false
   l16r_dual_coding:
-    status: "visual_remediated_pending_human_review"
+    status: "guided_concordance_revised_pending_human_review"
     required_objects_present:
       ice_table: true
       pq_graph: true
       interpolation_graph: true
       misleading_axis_comparison: true
+    guided_visual_concordance:
+      opgave_1_broodjes: true
+      opgave_2_koffie: true
+      opgave_3_bioscoop: true
+      opgave_4_water: true
+      opgave_5_misleidende_assen: true
     closure_note: "Procedure parity is not treated as sufficient without visible learning objects."
   procedures:
     tabelwaarden_selecteren_step_count: 4
@@ -932,13 +1000,13 @@ companion:
     active_skills: ["A61", "A62", "A63", "A38", "A39"]
     coverage_note: "A61/A62/A63 cover table and graph reading; A38/A39 support percentage and index use with graph/table values."
   surfaces:
-    voorkennis_html: l16r_visual_remediated_pending_human_review
-    vaardigheden_html: l16r_visual_remediated_pending_human_review
+    voorkennis_html: l16r_guided_concordance_revised_pending_human_review
+    vaardigheden_html: l16r_guided_concordance_revised_pending_human_review
     presentatie_pptx: pass_with_flags
-    presentatie_html: l16r_visual_remediated_pending_human_review
-    nieuws_html: l16r_visual_remediated_pending_human_review
-    samenvatting_html: l16r_visual_remediated_pending_human_review
-    begeleide_inoefening_html: l16r_visual_remediated_pending_human_review
+    presentatie_html: l16r_guided_concordance_revised_pending_human_review
+    nieuws_html: l16r_guided_concordance_revised_pending_human_review
+    samenvatting_html: l16r_guided_concordance_revised_pending_human_review
+    begeleide_inoefening_html: l16r_guided_concordance_revised_pending_human_review
     youtube_videos_html: pass_with_flags
     games:
       instapquiz: pass_with_flags
