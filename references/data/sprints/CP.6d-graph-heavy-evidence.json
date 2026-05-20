@@ -1,0 +1,766 @@
+{
+  "schema_version": 1,
+  "sprint_id": "CP.6d",
+  "generated_on": "2026-05-20",
+  "generated_by": "build-scripts/references/build-cp6d-graph-heavy-evidence.js",
+  "status": "graph_heavy_evidence_ledger_upgraded_not_closing",
+  "authority_level": "non_mutating_graph_heavy_evidence_upgrade",
+  "cp6_closed": false,
+  "year1_closed": false,
+  "protected_reference_data_changed": false,
+  "lesson_output_changed": false,
+  "lesson_quality_ref_hand_patch": false,
+  "companion_review_fabrication": false,
+  "target_exercise_promotions": false,
+  "placeholder_finalization": false,
+  "unit_minting": false,
+  "student_diagnostics_authorized": false,
+  "adaptive_routing_authorized": false,
+  "mastery_decisions_authorized": false,
+  "automatic_sequencing_authorized": false,
+  "student_facing_ai_authorized": false,
+  "summative_use_authorized": false,
+  "pv_projection_authorized": false,
+  "pv_machine_promotion_authorized": false,
+  "student_facing_output_authorized": false,
+  "no_protected_mutation_authorized": true,
+  "no_lesson_output_mutation_authorized": true,
+  "no_lesson_quality_ref_hand_patch_authorized": true,
+  "no_companion_review_fabrication_authorized": true,
+  "no_target_exercise_promotion_authorized": true,
+  "no_placeholder_finalization_authorized": true,
+  "no_unit_minting_authorized": true,
+  "no_cp6_closure_authorized": true,
+  "no_year1_closure_authorized": true,
+  "source_paths": {
+    "target_exercises": "references/authored/course-target-exercises.json",
+    "ref_ct2": "references/data/sprints/REF-CT2-precision-dual-coding-audit.json",
+    "cp6b": "references/data/sprints/CP.6b-target-exercise-review.json",
+    "cp6c": "references/data/sprints/CP.6c-mtu-backfill-classification.json",
+    "lesson_book_root": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod",
+    "l_cp6a_handoff": "../4veco-lessen/archive/sprints/L-CP6A/L-CP6A-handoff-to-references.md",
+    "l_cp6a_closure_log": "../4veco-lessen/archive/sprints/L-CP6A/L-CP6A-closure-log.md"
+  },
+  "repository_state": {
+    "platform_head_at_generation": "f45889697238bccb352f2492b5086255a9895166",
+    "platform_status_at_generation": "## main...origin/main\n M docs/roadmaps/roadmap-version-index.json\n M docs/roadmaps/roadmap-version-index.md\n M references/data/document_inventory.json\n M references/data/source-document-registry.json\n M references/data/source_manifest.json\n M references/reference-team-roadmap.md\n M reports/github-agent-index-lessen.json\n M reports/github-agent-index-lessen.md\n M reports/github-agent-index-platform.json\n M reports/github-agent-index-platform.md\n M reports/internal-dashboard/dashboard-data.json\n M reports/internal-dashboard/index.html\n M reports/json/aspects-coverage.json\n M reports/json/begrippen-coverage.json\n M reports/json/dag-integrity.json\n M reports/json/dead-units.json\n M reports/json/empty-needs-audit-summary.json\n M reports/json/misconception-registry.json\n M reports/json/needs-coverage.json\n M reports/json/procedure-coverage.json\n M reports/json/reference-health.json\n M reports/json/reference-quality-issues.json\n M reports/json/report-manifest.json\n M reports/json/source-document-registry.json\n M reports/json/terminology-drift.json\n M reports/json/terms-coverage.json\n M reports/json/unit-design-status.json\n M reports/json/unresolved-refs.json\n M reports/markdown/aspects-coverage.md\n M reports/markdown/begrippen-coverage.md\n M reports/markdown/dag-integrity.md\n M reports/markdown/dead-units.md\n M reports/markdown/empty-needs-audit-summary.md\n M reports/markdown/misconception-registry.md\n M reports/markdown/needs-coverage.md\n M reports/markdown/procedure-coverage.md\n M reports/markdown/reference-health.md\n M reports/markdown/reference-quality-issues.md\n M reports/markdown/source-document-registry.md\n M reports/markdown/terminology-drift.md\n M reports/markdown/terms-coverage.md\n M reports/markdown/unit-design-status.md\n M reports/markdown/unresolved-refs.md\n?? build-scripts/references/build-cp6d-graph-heavy-evidence.js\n?? build-scripts/review-gates/check-cp6d-graph-heavy-evidence.js\n?? docs/roadmaps/outdated/reference-team-roadmap-v2.57-cp6c-mtu-backfill-classification.md\n?? references/data/sprints/CP.6d-graph-heavy-evidence.json\n?? references/data/sprints/CP.6d.plan.json\n?? references/data/sprints/CP.6d.result.json\n?? reports/reference-planning/CP.6d-graph-heavy-evidence.md\n?? reports/sprints/CP.6d-baseline.md\n?? reports/sprints/CP.6d-diff-summary.md\n?? reports/sprints/CP.6d-lead-review-assignment.md\n?? reports/sprints/CP.6d-lead-review-corrections.md\n?? reports/sprints/CP.6d-lead-review-round1.md\n?? reports/sprints/CP.6d-lead-review-round2.md\n?? reports/sprints/CP.6d-plan.md\n?? reports/sprints/CP.6d-planning-review.md\n?? reports/sprints/CP.6d-result.md",
+    "lesson_head_at_generation": "918398305d6b285f3f9ca87db1050dbb91fe2c6b",
+    "lesson_status_at_generation": "## main...origin/main"
+  },
+  "ref_ct2_diagnostic_context": {
+    "generated_on": "2026-05-19",
+    "stale_for_chapter13_after_l_cp6a": true,
+    "previous_source_lesson_mismatch_count": 2,
+    "previous_legacy_quality_ref_count": 9
+  },
+  "cp6c_context": {
+    "mtu_backfill_classification_status": "mtu_backfill_classification_recorded_not_mutating",
+    "later_cli_mutation_candidate_count": 1
+  },
+  "graph_heavy_paragraph_ids": [
+    "1.1.1",
+    "1.1.2",
+    "1.1.3",
+    "1.2.1",
+    "1.2.2",
+    "1.2.3",
+    "1.3.1",
+    "1.3.2",
+    "1.3.3"
+  ],
+  "records": [
+    {
+      "paragraph_id": "1.1.1",
+      "paragraph_title": "Schaarste en economisch denken",
+      "graph_heavy": true,
+      "lesson_path": "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken",
+      "source_lesson_alignment_status": "aligned_or_not_chapter13_mismatch_scope",
+      "target_exercise_status": "migrated_from_v4_needs_v5_review",
+      "target_exercise_review_outcome": "valid_migration_evidence_not_reviewed_final",
+      "file_counts": {
+        "markdown": 0,
+        "html": 17,
+        "pdf": 3,
+        "svg": 33,
+        "png": 36,
+        "docx": 13,
+        "pptx": 2
+      },
+      "companion_material": {
+        "companion_material_exists": true,
+        "companion_material_file_count": 28,
+        "sample_files": [
+          "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – begeleide inoefening – antwoorden.docx",
+          "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – begeleide inoefening – vragen.docx",
+          "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – begeleide inoefening.html",
+          "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – instapquiz.html",
+          "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – nieuws met visual.docx",
+          "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – nieuws met visual.html",
+          "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – nieuws-detective.html",
+          "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – presentatie-v2-prototype.html"
+        ]
+      },
+      "quality_ref": {
+        "present": true,
+        "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1-quality-ref.yaml",
+        "schema_version": "2",
+        "shape": "schema_version_2",
+        "has_part_a_block": true,
+        "has_companion_block": true,
+        "title": "Schaarste en economisch denken",
+        "chapter": null,
+        "target_exercise_status": null,
+        "cp6_quality_ready": null,
+        "verdicts": [
+          "PASS WITH FLAGS"
+        ],
+        "review_verdicts": [
+          "PASS WITH FLAGS"
+        ],
+        "first_verdict": "PASS WITH FLAGS",
+        "flags_count": 0
+      },
+      "part_a_review": {
+        "present": true,
+        "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1-review.md",
+        "structural_verdict": "PASS WITH FLAGS",
+        "quality_ref_verdict": "PASS WITH FLAGS",
+        "evidence_verdict": "PASS WITH FLAGS",
+        "verdict_source": "quality_ref",
+        "flag_mentions": 0,
+        "fail_mentions": 0,
+        "legacy_unstructured": false
+      },
+      "companion_review": {
+        "present": true,
+        "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1-companion-visual-review.md",
+        "structural_verdict": "PASS WITH FLAGS",
+        "required_now": true,
+        "status": "current_companion_visual_review_present"
+      },
+      "may_count_as_cp6_closure_evidence_now": false,
+      "protected_reference_mutation_authorized_now": false,
+      "lesson_output_mutation_authorized_now": false,
+      "target_exercise_promotion_authorized_now": false,
+      "placeholder_finalization_authorized_now": false,
+      "unit_minting_authorized_now": false,
+      "cp6d_evidence_status": "current_graph_evidence_present_target_exercise_not_final",
+      "blockers": [
+        "Target-exercise status is migrated_from_v4_needs_v5_review, not reviewed_final.",
+        "CP-6 closure also remains blocked by CP.6e and the non-final target-exercise lane."
+      ]
+    },
+    {
+      "paragraph_id": "1.1.2",
+      "paragraph_title": "Percentages en indexcijfers",
+      "graph_heavy": true,
+      "lesson_path": "1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers",
+      "source_lesson_alignment_status": "aligned_or_not_chapter13_mismatch_scope",
+      "target_exercise_status": "migrated_from_v4_needs_v5_review",
+      "target_exercise_review_outcome": "valid_migration_evidence_not_reviewed_final",
+      "file_counts": {
+        "markdown": 0,
+        "html": 17,
+        "pdf": 3,
+        "svg": 4,
+        "png": 4,
+        "docx": 0,
+        "pptx": 1
+      },
+      "companion_material": {
+        "companion_material_exists": true,
+        "companion_material_file_count": 12,
+        "sample_files": [
+          "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – begeleide inoefening.html",
+          "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – grafiekenspel.html",
+          "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – instapquiz.html",
+          "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – nieuws met visual.html",
+          "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – nieuws-detective.html",
+          "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – presentatie.html",
+          "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – presentatie.pptx",
+          "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – samenvatting.html"
+        ]
+      },
+      "quality_ref": {
+        "present": true,
+        "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2-quality-ref.yaml",
+        "schema_version": "2",
+        "shape": "schema_version_2",
+        "has_part_a_block": true,
+        "has_companion_block": true,
+        "title": "Percentages en indexcijfers",
+        "chapter": null,
+        "target_exercise_status": null,
+        "cp6_quality_ready": null,
+        "verdicts": [
+          "PASS WITH FLAGS"
+        ],
+        "review_verdicts": [
+          "PASS WITH FLAGS"
+        ],
+        "first_verdict": "PASS WITH FLAGS",
+        "flags_count": 0
+      },
+      "part_a_review": {
+        "present": true,
+        "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2-review.md",
+        "structural_verdict": null,
+        "quality_ref_verdict": "PASS WITH FLAGS",
+        "evidence_verdict": "PASS WITH FLAGS",
+        "verdict_source": "quality_ref",
+        "flag_mentions": 0,
+        "fail_mentions": 0,
+        "legacy_unstructured": false
+      },
+      "companion_review": {
+        "present": true,
+        "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2-companion-visual-review.md",
+        "structural_verdict": "PASS WITH FLAGS",
+        "required_now": true,
+        "status": "current_companion_visual_review_present"
+      },
+      "may_count_as_cp6_closure_evidence_now": false,
+      "protected_reference_mutation_authorized_now": false,
+      "lesson_output_mutation_authorized_now": false,
+      "target_exercise_promotion_authorized_now": false,
+      "placeholder_finalization_authorized_now": false,
+      "unit_minting_authorized_now": false,
+      "cp6d_evidence_status": "current_graph_evidence_present_target_exercise_not_final",
+      "blockers": [
+        "Target-exercise status is migrated_from_v4_needs_v5_review, not reviewed_final.",
+        "CP-6 closure also remains blocked by CP.6e and the non-final target-exercise lane."
+      ]
+    },
+    {
+      "paragraph_id": "1.1.3",
+      "paragraph_title": "Grafieken en tabellen",
+      "graph_heavy": true,
+      "lesson_path": "1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen",
+      "source_lesson_alignment_status": "aligned_or_not_chapter13_mismatch_scope",
+      "target_exercise_status": "migrated_from_v4_needs_v5_review",
+      "target_exercise_review_outcome": "valid_migration_evidence_not_reviewed_final",
+      "file_counts": {
+        "markdown": 0,
+        "html": 17,
+        "pdf": 3,
+        "svg": 6,
+        "png": 6,
+        "docx": 0,
+        "pptx": 1
+      },
+      "companion_material": {
+        "companion_material_exists": true,
+        "companion_material_file_count": 12,
+        "sample_files": [
+          "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – begeleide inoefening.html",
+          "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – grafiekenspel.html",
+          "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – instapquiz.html",
+          "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – nieuws met visual.html",
+          "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – nieuws-detective.html",
+          "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – presentatie.html",
+          "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – presentatie.pptx",
+          "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – samenvatting.html"
+        ]
+      },
+      "quality_ref": {
+        "present": true,
+        "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3-quality-ref.yaml",
+        "schema_version": "2",
+        "shape": "schema_version_2",
+        "has_part_a_block": true,
+        "has_companion_block": true,
+        "title": "Grafieken en tabellen",
+        "chapter": null,
+        "target_exercise_status": null,
+        "cp6_quality_ready": null,
+        "verdicts": [
+          "FLAG"
+        ],
+        "review_verdicts": [
+          "PASS WITH FLAGS"
+        ],
+        "first_verdict": "FLAG",
+        "flags_count": 2
+      },
+      "part_a_review": {
+        "present": true,
+        "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3-review.md",
+        "structural_verdict": null,
+        "quality_ref_verdict": "FLAG",
+        "evidence_verdict": "FLAG",
+        "verdict_source": "quality_ref",
+        "flag_mentions": 8,
+        "fail_mentions": 0,
+        "legacy_unstructured": false
+      },
+      "companion_review": {
+        "present": true,
+        "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3-companion-visual-review.md",
+        "structural_verdict": "PASS WITH FLAGS",
+        "required_now": true,
+        "status": "current_companion_visual_review_present"
+      },
+      "may_count_as_cp6_closure_evidence_now": false,
+      "protected_reference_mutation_authorized_now": false,
+      "lesson_output_mutation_authorized_now": false,
+      "target_exercise_promotion_authorized_now": false,
+      "placeholder_finalization_authorized_now": false,
+      "unit_minting_authorized_now": false,
+      "cp6d_evidence_status": "blocked_cp6e_part_a_flag_open",
+      "blockers": [
+        "1.1.3 Part A quality-ref verdict remains FLAG; CP.6e is required.",
+        "Target-exercise status is migrated_from_v4_needs_v5_review, not reviewed_final.",
+        "CP-6 closure also remains blocked by CP.6e and the non-final target-exercise lane."
+      ]
+    },
+    {
+      "paragraph_id": "1.2.1",
+      "paragraph_title": "Individuele vraag",
+      "graph_heavy": true,
+      "lesson_path": "1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag",
+      "source_lesson_alignment_status": "aligned_or_not_chapter13_mismatch_scope",
+      "target_exercise_status": "migrated_from_v4_needs_v5_review",
+      "target_exercise_review_outcome": "valid_migration_evidence_not_reviewed_final",
+      "file_counts": {
+        "markdown": 0,
+        "html": 3,
+        "pdf": 3,
+        "svg": 9,
+        "png": 9,
+        "docx": 0,
+        "pptx": 0
+      },
+      "companion_material": {
+        "companion_material_exists": false,
+        "companion_material_file_count": 0,
+        "sample_files": []
+      },
+      "quality_ref": {
+        "present": true,
+        "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/1.2.1-quality-ref.yaml",
+        "schema_version": null,
+        "shape": "legacy_or_pre_schema",
+        "has_part_a_block": false,
+        "has_companion_block": false,
+        "title": null,
+        "chapter": "1.2 Hoofdstuk Vraag",
+        "target_exercise_status": null,
+        "cp6_quality_ready": null,
+        "verdicts": [],
+        "review_verdicts": [],
+        "first_verdict": null,
+        "flags_count": 0
+      },
+      "part_a_review": {
+        "present": true,
+        "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/1.2.1-review.md",
+        "structural_verdict": null,
+        "quality_ref_verdict": null,
+        "evidence_verdict": "LEGACY REVIEW TEXT WITH FLAG MENTIONS",
+        "verdict_source": "legacy_review_text",
+        "flag_mentions": 4,
+        "fail_mentions": 0,
+        "legacy_unstructured": true
+      },
+      "companion_review": {
+        "present": false,
+        "path": null,
+        "structural_verdict": null,
+        "required_now": false,
+        "status": "not_required_no_companion_material_detected"
+      },
+      "may_count_as_cp6_closure_evidence_now": false,
+      "protected_reference_mutation_authorized_now": false,
+      "lesson_output_mutation_authorized_now": false,
+      "target_exercise_promotion_authorized_now": false,
+      "placeholder_finalization_authorized_now": false,
+      "unit_minting_authorized_now": false,
+      "cp6d_evidence_status": "current_part_a_present_quality_ref_upgrade_needed",
+      "blockers": [
+        "Quality-ref is legacy/pre-schema rather than schema_version 2.",
+        "Part A review file lacks a structural top-level verdict.",
+        "Target-exercise status is migrated_from_v4_needs_v5_review, not reviewed_final.",
+        "CP-6 closure also remains blocked by CP.6e and the non-final target-exercise lane."
+      ]
+    },
+    {
+      "paragraph_id": "1.2.2",
+      "paragraph_title": "Vraagfactoren",
+      "graph_heavy": true,
+      "lesson_path": "1.2 Hoofdstuk Vraag/1.2.2 Vraagfactoren",
+      "source_lesson_alignment_status": "aligned_or_not_chapter13_mismatch_scope",
+      "target_exercise_status": "migrated_from_v4_needs_v5_review",
+      "target_exercise_review_outcome": "valid_migration_evidence_not_reviewed_final",
+      "file_counts": {
+        "markdown": 0,
+        "html": 3,
+        "pdf": 3,
+        "svg": 7,
+        "png": 7,
+        "docx": 0,
+        "pptx": 0
+      },
+      "companion_material": {
+        "companion_material_exists": false,
+        "companion_material_file_count": 0,
+        "sample_files": []
+      },
+      "quality_ref": {
+        "present": true,
+        "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.2 Vraagfactoren/1.2.2-quality-ref.yaml",
+        "schema_version": null,
+        "shape": "legacy_or_pre_schema",
+        "has_part_a_block": false,
+        "has_companion_block": false,
+        "title": null,
+        "chapter": "1.2 Hoofdstuk Vraag",
+        "target_exercise_status": null,
+        "cp6_quality_ready": null,
+        "verdicts": [],
+        "review_verdicts": [],
+        "first_verdict": null,
+        "flags_count": 0
+      },
+      "part_a_review": {
+        "present": true,
+        "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.2 Vraagfactoren/1.2.2-review.md",
+        "structural_verdict": null,
+        "quality_ref_verdict": null,
+        "evidence_verdict": "LEGACY REVIEW TEXT WITH FLAG MENTIONS",
+        "verdict_source": "legacy_review_text",
+        "flag_mentions": 5,
+        "fail_mentions": 0,
+        "legacy_unstructured": true
+      },
+      "companion_review": {
+        "present": false,
+        "path": null,
+        "structural_verdict": null,
+        "required_now": false,
+        "status": "not_required_no_companion_material_detected"
+      },
+      "may_count_as_cp6_closure_evidence_now": false,
+      "protected_reference_mutation_authorized_now": false,
+      "lesson_output_mutation_authorized_now": false,
+      "target_exercise_promotion_authorized_now": false,
+      "placeholder_finalization_authorized_now": false,
+      "unit_minting_authorized_now": false,
+      "cp6d_evidence_status": "current_part_a_present_quality_ref_upgrade_needed",
+      "blockers": [
+        "Quality-ref is legacy/pre-schema rather than schema_version 2.",
+        "Part A review file lacks a structural top-level verdict.",
+        "Target-exercise status is migrated_from_v4_needs_v5_review, not reviewed_final.",
+        "CP-6 closure also remains blocked by CP.6e and the non-final target-exercise lane."
+      ]
+    },
+    {
+      "paragraph_id": "1.2.3",
+      "paragraph_title": "Van individuele naar collectieve vraag",
+      "graph_heavy": true,
+      "lesson_path": "1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag",
+      "source_lesson_alignment_status": "aligned_or_not_chapter13_mismatch_scope",
+      "target_exercise_status": "migrated_from_v4_needs_v5_review",
+      "target_exercise_review_outcome": "valid_migration_evidence_not_reviewed_final",
+      "file_counts": {
+        "markdown": 0,
+        "html": 3,
+        "pdf": 3,
+        "svg": 8,
+        "png": 8,
+        "docx": 0,
+        "pptx": 0
+      },
+      "companion_material": {
+        "companion_material_exists": false,
+        "companion_material_file_count": 0,
+        "sample_files": []
+      },
+      "quality_ref": {
+        "present": true,
+        "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/1.2.3-quality-ref.yaml",
+        "schema_version": null,
+        "shape": "legacy_or_pre_schema",
+        "has_part_a_block": false,
+        "has_companion_block": false,
+        "title": null,
+        "chapter": "1.2 Hoofdstuk Vraag",
+        "target_exercise_status": null,
+        "cp6_quality_ready": null,
+        "verdicts": [],
+        "review_verdicts": [],
+        "first_verdict": null,
+        "flags_count": 0
+      },
+      "part_a_review": {
+        "present": true,
+        "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/1.2.3-review.md",
+        "structural_verdict": null,
+        "quality_ref_verdict": null,
+        "evidence_verdict": "LEGACY REVIEW TEXT WITH FLAG MENTIONS",
+        "verdict_source": "legacy_review_text",
+        "flag_mentions": 4,
+        "fail_mentions": 0,
+        "legacy_unstructured": true
+      },
+      "companion_review": {
+        "present": false,
+        "path": null,
+        "structural_verdict": null,
+        "required_now": false,
+        "status": "not_required_no_companion_material_detected"
+      },
+      "may_count_as_cp6_closure_evidence_now": false,
+      "protected_reference_mutation_authorized_now": false,
+      "lesson_output_mutation_authorized_now": false,
+      "target_exercise_promotion_authorized_now": false,
+      "placeholder_finalization_authorized_now": false,
+      "unit_minting_authorized_now": false,
+      "cp6d_evidence_status": "current_part_a_present_quality_ref_upgrade_needed",
+      "blockers": [
+        "Quality-ref is legacy/pre-schema rather than schema_version 2.",
+        "Part A review file lacks a structural top-level verdict.",
+        "Target-exercise status is migrated_from_v4_needs_v5_review, not reviewed_final.",
+        "CP-6 closure also remains blocked by CP.6e and the non-final target-exercise lane."
+      ]
+    },
+    {
+      "paragraph_id": "1.3.1",
+      "paragraph_title": "Aanbod",
+      "graph_heavy": true,
+      "lesson_path": "1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod",
+      "source_lesson_alignment_status": "aligned_or_not_chapter13_mismatch_scope",
+      "target_exercise_status": "migrated_from_v4_needs_v5_review",
+      "target_exercise_review_outcome": "valid_migration_evidence_not_reviewed_final",
+      "file_counts": {
+        "markdown": 0,
+        "html": 3,
+        "pdf": 3,
+        "svg": 7,
+        "png": 7,
+        "docx": 0,
+        "pptx": 0
+      },
+      "companion_material": {
+        "companion_material_exists": false,
+        "companion_material_file_count": 0,
+        "sample_files": []
+      },
+      "quality_ref": {
+        "present": true,
+        "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/1.3.1-quality-ref.yaml",
+        "schema_version": null,
+        "shape": "legacy_or_pre_schema",
+        "has_part_a_block": false,
+        "has_companion_block": false,
+        "title": null,
+        "chapter": "1.3 Aanbod en marktevenwicht",
+        "target_exercise_status": null,
+        "cp6_quality_ready": null,
+        "verdicts": [],
+        "review_verdicts": [],
+        "first_verdict": null,
+        "flags_count": 0
+      },
+      "part_a_review": {
+        "present": true,
+        "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/1.3.1-review.md",
+        "structural_verdict": null,
+        "quality_ref_verdict": null,
+        "evidence_verdict": "LEGACY REVIEW TEXT WITH FLAG MENTIONS",
+        "verdict_source": "legacy_review_text",
+        "flag_mentions": 2,
+        "fail_mentions": 0,
+        "legacy_unstructured": true
+      },
+      "companion_review": {
+        "present": false,
+        "path": null,
+        "structural_verdict": null,
+        "required_now": false,
+        "status": "not_required_no_companion_material_detected"
+      },
+      "may_count_as_cp6_closure_evidence_now": false,
+      "protected_reference_mutation_authorized_now": false,
+      "lesson_output_mutation_authorized_now": false,
+      "target_exercise_promotion_authorized_now": false,
+      "placeholder_finalization_authorized_now": false,
+      "unit_minting_authorized_now": false,
+      "cp6d_evidence_status": "current_part_a_present_quality_ref_upgrade_needed",
+      "blockers": [
+        "Quality-ref is legacy/pre-schema rather than schema_version 2.",
+        "Part A review file lacks a structural top-level verdict.",
+        "Target-exercise status is migrated_from_v4_needs_v5_review, not reviewed_final.",
+        "CP-6 closure also remains blocked by CP.6e and the non-final target-exercise lane."
+      ]
+    },
+    {
+      "paragraph_id": "1.3.2",
+      "paragraph_title": "Marktevenwicht",
+      "graph_heavy": true,
+      "lesson_path": "1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht",
+      "source_lesson_alignment_status": "aligned_after_l_cp6a_with_carried_conditions",
+      "target_exercise_status": "migrated_from_v4_needs_v5_review",
+      "target_exercise_review_outcome": "valid_migration_evidence_not_reviewed_final",
+      "file_counts": {
+        "markdown": 0,
+        "html": 3,
+        "pdf": 3,
+        "svg": 6,
+        "png": 6,
+        "docx": 0,
+        "pptx": 0
+      },
+      "companion_material": {
+        "companion_material_exists": false,
+        "companion_material_file_count": 0,
+        "sample_files": []
+      },
+      "quality_ref": {
+        "present": true,
+        "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2-quality-ref.yaml",
+        "schema_version": null,
+        "shape": "legacy_or_pre_schema",
+        "has_part_a_block": false,
+        "has_companion_block": false,
+        "title": "Marktevenwicht",
+        "chapter": "1.3 Aanbod en marktevenwicht",
+        "target_exercise_status": "migrated_from_v4_needs_v5_review",
+        "cp6_quality_ready": "false",
+        "verdicts": [
+          "PASS WITH FLAGS"
+        ],
+        "review_verdicts": [],
+        "first_verdict": "PASS WITH FLAGS",
+        "flags_count": 1
+      },
+      "part_a_review": {
+        "present": true,
+        "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2-review.md",
+        "structural_verdict": "PASS WITH FLAGS",
+        "quality_ref_verdict": "PASS WITH FLAGS",
+        "evidence_verdict": "PASS WITH FLAGS",
+        "verdict_source": "quality_ref",
+        "flag_mentions": 1,
+        "fail_mentions": 0,
+        "legacy_unstructured": false
+      },
+      "companion_review": {
+        "present": false,
+        "path": null,
+        "structural_verdict": null,
+        "required_now": false,
+        "status": "not_required_no_companion_material_detected"
+      },
+      "may_count_as_cp6_closure_evidence_now": false,
+      "protected_reference_mutation_authorized_now": false,
+      "lesson_output_mutation_authorized_now": false,
+      "target_exercise_promotion_authorized_now": false,
+      "placeholder_finalization_authorized_now": false,
+      "unit_minting_authorized_now": false,
+      "cp6d_evidence_status": "current_part_a_present_quality_ref_upgrade_needed",
+      "blockers": [
+        "Quality-ref is legacy/pre-schema rather than schema_version 2.",
+        "Target-exercise status is migrated_from_v4_needs_v5_review, not reviewed_final.",
+        "CP-6 closure also remains blocked by CP.6e and the non-final target-exercise lane."
+      ]
+    },
+    {
+      "paragraph_id": "1.3.3",
+      "paragraph_title": "Verschuivingen en nieuw evenwicht",
+      "graph_heavy": true,
+      "lesson_path": "1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht",
+      "source_lesson_alignment_status": "aligned_after_l_cp6a_with_carried_conditions",
+      "target_exercise_status": "migrated_from_v4_needs_v5_review",
+      "target_exercise_review_outcome": "valid_migration_evidence_not_reviewed_final",
+      "file_counts": {
+        "markdown": 0,
+        "html": 3,
+        "pdf": 3,
+        "svg": 8,
+        "png": 8,
+        "docx": 0,
+        "pptx": 0
+      },
+      "companion_material": {
+        "companion_material_exists": false,
+        "companion_material_file_count": 0,
+        "sample_files": []
+      },
+      "quality_ref": {
+        "present": true,
+        "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/1.3.3-quality-ref.yaml",
+        "schema_version": null,
+        "shape": "legacy_or_pre_schema",
+        "has_part_a_block": false,
+        "has_companion_block": false,
+        "title": "Verschuivingen en nieuw evenwicht",
+        "chapter": "1.3 Aanbod en marktevenwicht",
+        "target_exercise_status": "migrated_from_v4_needs_v5_review",
+        "cp6_quality_ready": "false",
+        "verdicts": [
+          "PASS WITH FLAGS"
+        ],
+        "review_verdicts": [],
+        "first_verdict": "PASS WITH FLAGS",
+        "flags_count": 1
+      },
+      "part_a_review": {
+        "present": true,
+        "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/1.3.3-review.md",
+        "structural_verdict": "PASS WITH FLAGS",
+        "quality_ref_verdict": "PASS WITH FLAGS",
+        "evidence_verdict": "PASS WITH FLAGS",
+        "verdict_source": "quality_ref",
+        "flag_mentions": 1,
+        "fail_mentions": 0,
+        "legacy_unstructured": false
+      },
+      "companion_review": {
+        "present": false,
+        "path": null,
+        "structural_verdict": null,
+        "required_now": false,
+        "status": "not_required_no_companion_material_detected"
+      },
+      "may_count_as_cp6_closure_evidence_now": false,
+      "protected_reference_mutation_authorized_now": false,
+      "lesson_output_mutation_authorized_now": false,
+      "target_exercise_promotion_authorized_now": false,
+      "placeholder_finalization_authorized_now": false,
+      "unit_minting_authorized_now": false,
+      "cp6d_evidence_status": "current_part_a_present_quality_ref_upgrade_needed",
+      "blockers": [
+        "Quality-ref is legacy/pre-schema rather than schema_version 2.",
+        "Target-exercise status is migrated_from_v4_needs_v5_review, not reviewed_final.",
+        "CP-6 closure also remains blocked by CP.6e and the non-final target-exercise lane."
+      ]
+    }
+  ],
+  "summary": {
+    "graph_heavy_record_count": 9,
+    "current_part_a_review_present_count": 9,
+    "current_companion_review_present_count": 3,
+    "companion_review_required_now_count": 3,
+    "companion_review_required_and_present_count": 3,
+    "quality_ref_schema2_count": 3,
+    "legacy_quality_ref_count": 6,
+    "structural_part_a_verdict_present_count": 3,
+    "part_a_legacy_unstructured_count": 4,
+    "part_a_flag_open_count": 1,
+    "source_lesson_mismatch_count": 0,
+    "cp6_closure_ready_count": 0,
+    "records_by_status": {
+      "current_graph_evidence_present_target_exercise_not_final": 2,
+      "blocked_cp6e_part_a_flag_open": 1,
+      "current_part_a_present_quality_ref_upgrade_needed": 6
+    }
+  },
+  "decision": {
+    "status": "evidence_status_upgraded_not_closure_ready",
+    "final_year1_coverage_allowed_now": false,
+    "cp6_closure_allowed_now": false,
+    "registry_mutation_allowed_now": false,
+    "lesson_mutation_allowed_now": false,
+    "note": "Current live lesson evidence is now recorded for graph-heavy Book 1 records. CP-6 closure remains blocked by CP.6e, non-final target exercises, and remaining quality-ref/review workflow gaps."
+  }
+}

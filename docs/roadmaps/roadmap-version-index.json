@@ -15,13 +15,14 @@
   "roadmaps": [
     {
       "roadmap_id": "references-team-roadmap",
-      "version": "v2.57-cp6c-mtu-backfill-classification",
+      "version": "v2.58-cp6d-graph-heavy-evidence-upgrade",
       "title": "References Team Roadmap",
       "status": "active",
       "path": "references/reference-team-roadmap.md",
       "owner": "references_team",
       "updated_on": "2026-05-20",
       "supersedes": [
+        "docs/roadmaps/outdated/reference-team-roadmap-v2.57-cp6c-mtu-backfill-classification.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.56-cp6b-target-exercise-review.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.55-exam-ingestion-north-star.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.54-cp6a-lesson-side-recheck.md",
@@ -78,7 +79,18 @@
         "knowledge/Exercise schema and quality/reference-team-roadmap Live version 28 April.md",
         "knowledge/Exercise schema and quality/roadmap-updated-repository-checked.md"
       ],
-      "notes": "Current operating roadmap after CP.6c classified the nine Year-1 MTU backfill candidates and moved CP.6d graph-heavy evidence upgrade to the active row."
+      "notes": "Current operating roadmap after CP.6d upgraded the graph-heavy evidence ledger and moved CP.6e focused 1.1.3 Part A re-review to the active row."
+    },
+    {
+      "roadmap_id": "references-team-roadmap-v2.57",
+      "version": "v2.57-cp6c-mtu-backfill-classification",
+      "title": "References Team Roadmap before CP.6d graph-heavy evidence upgrade",
+      "status": "outdated",
+      "path": "docs/roadmaps/outdated/reference-team-roadmap-v2.57-cp6c-mtu-backfill-classification.md",
+      "owner": "references_team",
+      "updated_on": "2026-05-20",
+      "superseded_by": "references/reference-team-roadmap.md",
+      "notes": "Snapshot archived before CP.6d upgraded graph-heavy Book 1 evidence against the live post-L-CP6A lesson repo and moved CP.6e to the active roadmap row."
     },
     {
       "roadmap_id": "references-team-roadmap-v2.56",

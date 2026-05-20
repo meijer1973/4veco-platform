@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-20T16:19:06.095Z",
+  "generatedAt": "2026-05-20T18:27:33.211Z",
   "internalOnly": true,
   "teams": [
     {
@@ -160,20 +160,13 @@
           "generated": "2026-04-23",
           "updated": "",
           "scope": "`references/`, `build-scripts/references/`, `build-scripts/reports/`, reference dashboards, and generated reference reports under `reports/`",
-          "summary": "References Team Roadmap Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Last strategic update: 2026-05-20 Roadmap ID: references-team-roadmap Roadmap version: v2.57-cp6c-mtu-backfill-classification Roadmap status: active Version index: docs/roadmaps/roadmap-version-index.json Scope: references/, build-scripts/references/, build-scripts/reports/, reference dashboards, and generated reference reports under reports/ Exam Ingestion North Star The long-term reference-platform goal is that a new official CvTE eco...",
+          "summary": "References Team Roadmap Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Last strategic update: 2026-05-20 Roadmap ID: references-team-roadmap Roadmap version: v2.58-cp6d-graph-heavy-evidence-upgrade Roadmap status: active Version index: docs/roadmaps/roadmap-version-index.json Scope: references/, build-scripts/references/, build-scripts/reports/, reference dashboards, and generated reference reports under reports/ Exam Ingestion North Star The long-term reference-platform goal is that a new official CvTE ec...",
           "sprints": [
-            {
-              "sprint": "CP.6d",
-              "name": "Book 1 Graph-Heavy Evidence Upgrade",
-              "completed": "no",
-              "currentState": "**ACTIVE / REMEDIATION LANE 4 AFTER CP.6c.** CP.6c classified the nine Year-1 MTU backfill candidates against the current live registry: six existing-unit mappings, one merge/design candidate around the retired D04 successor cluster, one defer candidate, and one true missing simultaneous-shift operation for later review. Upgrade current Part A evidence for graph-heavy records, and Part B evidence where companion material exists, is used as evidence, or is in sprint scope. Legacy quality-ref alone is not enough for CP-6 closure.",
-              "exitGate": ""
-            },
             {
               "sprint": "CP.6e",
               "name": "Focused 1.1.3 Part A Re-Review",
               "completed": "no",
-              "currentState": "Planned after CP.6d. Re-review `1.1.3` Part A and clear or explicitly fail the remaining `FLAG`; unconditioned CP-6 closure remains blocked while the flag remains open.",
+              "currentState": "**ACTIVE / REMEDIATION LANE 5 AFTER CP.6d.** CP.6d upgraded the graph-heavy evidence ledger against the live post-L-CP6A lesson repo: 9 graph-heavy records checked, 9 current Part A review files found, 3 companion-review-required records with current companion reviews, 6 legacy/pre-schema quality refs still needing later quality workflow, 0 active `1.3.2`/`1.3.3` source/lesson mismatches, and 0 records allowed as CP-6 closure evidence now. Re-review `1.1.3` Part A and clear or explicitly fail the remaining `FLAG`; unconditioned CP-6 closure remains blocked while the flag remains open.",
               "exitGate": ""
             },
             {
@@ -261,17 +254,24 @@
               "exitGate": ""
             },
             {
+              "sprint": "CP.6d",
+              "name": "Book 1 Graph-Heavy Evidence Upgrade",
+              "completed": "yes",
+              "currentState": "Completed as a non-mutating graph-heavy evidence ledger upgrade. Checked the live post-L-CP6A lesson repo, not stale REF-CT2 paths: active `1.3.2` is `Marktevenwicht`, active `1.3.3` is `Verschuivingen en nieuw evenwicht`, and active Chapter 1.3 has 0 current source/lesson mismatches. Recorded 9 graph-heavy active-v5 Book 1 records, 9 current Part A review files, 3 companion-review-required records with current companion visual reviews, 3 `schema_version: 2` quality refs, 6 legacy/pre-schema quality refs needing later quality workflow, 1 open `1.1.3` Part A `FLAG`, and 0 records allowed as CP-6 closure evidence now. Output: `references/data/sprints/CP.6d-graph-heavy-evidence.json` and `reports/reference-planning/CP.6d-graph-heavy-evidence.md`. No protected mutation, lesson-output mutation, lesson quality-ref hand patching, companion review fabrication, target-exercise promotion, placeholder finalization, unit minting, CP-6 closure, or Year-1 closure was authorized. CP.6e focused `1.1.3` Part A re-review remains required.",
+              "exitGate": ""
+            },
+            {
               "sprint": "CP.6c",
               "name": "Year-1 MTU Backfill Classification",
               "completed": "yes",
-              "currentState": "Completed as a non-mutating MTU backfill classification sprint. Classified the nine REF-CT1 Year-1 candidates against the current live registry: existing-unit mappings to `A45`, `A46`, `A47`, `A48`, `A49`, and `A51`; one merge/design candidate for normal/inferior goods around successor units `A17`/`D11`/`D33` with deprecated `D04` retained only as historical context; one deferred kink-in-collective-demand candidate; and one true missing simultaneous-shift reasoning operation for later governed review. Output: `references/data/sprints/CP.6c-mtu-backfill-classification.json` and `reports/reference-planning/CP.6c-mtu-backfill-classification.md`. No protected mutation, unit minting, target-exercise promotion, placeholder finalization, CP-6 closure, or Year-1 closure was authorized. CP.6d graph-heavy evidence upgrade and CP.6e focused `1.1.3` Part A re-review remain required.",
+              "currentState": "Completed as a non-mutating MTU backfill classification sprint. Classified the nine REF-CT1 Year-1 candidates against the current live registry: existing-unit mappings to `A45`, `A46`, `A47`, `A48`, `A49`, and `A51`; one merge/design candidate for normal/inferior goods around successor units `A17`/`D11`/`D33` with deprecated `D04` retained only as historical context; one deferred kink-in-collective-demand candidate; and one true missing simultaneous-shift reasoning operation for later governed review. Output: `references/data/sprints/CP.6c-mtu-backfill-classification.json` and `reports/reference-planning/CP.6c-mtu-backfill-classification.md`. No protected mutation, unit minting, target-exercise promotion, placeholder finalization, CP-6 closure, or Year-1 closure was authorized. CP.6d is now complete; CP.6e focused `1.1.3` Part A re-review remains required.",
               "exitGate": ""
             },
             {
               "sprint": "CP.6b",
               "name": "Year-1 Target-Exercise Review",
               "completed": "yes",
-              "currentState": "Completed as a non-mutating target-exercise review/design sprint. Recorded 12 active-v5 Book 1 target-exercise records, 9 migrated records needing explicit v5 review artifacts, 3 placeholder records with draft gemengde-opgaven integration designs, 0 reviewed-final records, 0 target-exercise promotions, and 0 placeholder finalizations. Output: `references/data/sprints/CP.6b-target-exercise-review.json` and `reports/reference-planning/CP.6b-target-exercise-review.md`. CP-6 and Year 1 remain open; CP.6d graph-heavy evidence upgrade and CP.6e focused `1.1.3` Part A re-review remain required before any responsible closure proposal.",
+              "currentState": "Completed as a non-mutating target-exercise review/design sprint. Recorded 12 active-v5 Book 1 target-exercise records, 9 migrated records needing explicit v5 review artifacts, 3 placeholder records with draft gemengde-opgaven integration designs, 0 reviewed-final records, 0 target-exercise promotions, and 0 placeholder finalizations. Output: `references/data/sprints/CP.6b-target-exercise-review.json` and `reports/reference-planning/CP.6b-target-exercise-review.md`. CP-6 and Year 1 remain open; CP.6d is now complete and CP.6e focused `1.1.3` Part A re-review remains required before any responsible closure proposal.",
               "exitGate": ""
             },
             {
@@ -783,18 +783,10 @@
       ],
       "sprints": [
         {
-          "sprint": "CP.6d",
-          "name": "Book 1 Graph-Heavy Evidence Upgrade",
-          "completed": "no",
-          "currentState": "**ACTIVE / REMEDIATION LANE 4 AFTER CP.6c.** CP.6c classified the nine Year-1 MTU backfill candidates against the current live registry: six existing-unit mappings, one merge/design candidate around the retired D04 successor cluster, one defer candidate, and one true missing simultaneous-shift operation for later review. Upgrade current Part A evidence for graph-heavy records, and Part B evidence where companion material exists, is used as evidence, or is in sprint scope. Legacy quality-ref alone is not enough for CP-6 closure.",
-          "exitGate": "",
-          "roadmap": "References roadmap"
-        },
-        {
           "sprint": "CP.6e",
           "name": "Focused 1.1.3 Part A Re-Review",
           "completed": "no",
-          "currentState": "Planned after CP.6d. Re-review `1.1.3` Part A and clear or explicitly fail the remaining `FLAG`; unconditioned CP-6 closure remains blocked while the flag remains open.",
+          "currentState": "**ACTIVE / REMEDIATION LANE 5 AFTER CP.6d.** CP.6d upgraded the graph-heavy evidence ledger against the live post-L-CP6A lesson repo: 9 graph-heavy records checked, 9 current Part A review files found, 3 companion-review-required records with current companion reviews, 6 legacy/pre-schema quality refs still needing later quality workflow, 0 active `1.3.2`/`1.3.3` source/lesson mismatches, and 0 records allowed as CP-6 closure evidence now. Re-review `1.1.3` Part A and clear or explicitly fail the remaining `FLAG`; unconditioned CP-6 closure remains blocked while the flag remains open.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -895,10 +887,18 @@
           "roadmap": "References roadmap"
         },
         {
+          "sprint": "CP.6d",
+          "name": "Book 1 Graph-Heavy Evidence Upgrade",
+          "completed": "yes",
+          "currentState": "Completed as a non-mutating graph-heavy evidence ledger upgrade. Checked the live post-L-CP6A lesson repo, not stale REF-CT2 paths: active `1.3.2` is `Marktevenwicht`, active `1.3.3` is `Verschuivingen en nieuw evenwicht`, and active Chapter 1.3 has 0 current source/lesson mismatches. Recorded 9 graph-heavy active-v5 Book 1 records, 9 current Part A review files, 3 companion-review-required records with current companion visual reviews, 3 `schema_version: 2` quality refs, 6 legacy/pre-schema quality refs needing later quality workflow, 1 open `1.1.3` Part A `FLAG`, and 0 records allowed as CP-6 closure evidence now. Output: `references/data/sprints/CP.6d-graph-heavy-evidence.json` and `reports/reference-planning/CP.6d-graph-heavy-evidence.md`. No protected mutation, lesson-output mutation, lesson quality-ref hand patching, companion review fabrication, target-exercise promotion, placeholder finalization, unit minting, CP-6 closure, or Year-1 closure was authorized. CP.6e focused `1.1.3` Part A re-review remains required.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
           "sprint": "CP.6c",
           "name": "Year-1 MTU Backfill Classification",
           "completed": "yes",
-          "currentState": "Completed as a non-mutating MTU backfill classification sprint. Classified the nine REF-CT1 Year-1 candidates against the current live registry: existing-unit mappings to `A45`, `A46`, `A47`, `A48`, `A49`, and `A51`; one merge/design candidate for normal/inferior goods around successor units `A17`/`D11`/`D33` with deprecated `D04` retained only as historical context; one deferred kink-in-collective-demand candidate; and one true missing simultaneous-shift reasoning operation for later governed review. Output: `references/data/sprints/CP.6c-mtu-backfill-classification.json` and `reports/reference-planning/CP.6c-mtu-backfill-classification.md`. No protected mutation, unit minting, target-exercise promotion, placeholder finalization, CP-6 closure, or Year-1 closure was authorized. CP.6d graph-heavy evidence upgrade and CP.6e focused `1.1.3` Part A re-review remain required.",
+          "currentState": "Completed as a non-mutating MTU backfill classification sprint. Classified the nine REF-CT1 Year-1 candidates against the current live registry: existing-unit mappings to `A45`, `A46`, `A47`, `A48`, `A49`, and `A51`; one merge/design candidate for normal/inferior goods around successor units `A17`/`D11`/`D33` with deprecated `D04` retained only as historical context; one deferred kink-in-collective-demand candidate; and one true missing simultaneous-shift reasoning operation for later governed review. Output: `references/data/sprints/CP.6c-mtu-backfill-classification.json` and `reports/reference-planning/CP.6c-mtu-backfill-classification.md`. No protected mutation, unit minting, target-exercise promotion, placeholder finalization, CP-6 closure, or Year-1 closure was authorized. CP.6d is now complete; CP.6e focused `1.1.3` Part A re-review remains required.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -906,7 +906,7 @@
           "sprint": "CP.6b",
           "name": "Year-1 Target-Exercise Review",
           "completed": "yes",
-          "currentState": "Completed as a non-mutating target-exercise review/design sprint. Recorded 12 active-v5 Book 1 target-exercise records, 9 migrated records needing explicit v5 review artifacts, 3 placeholder records with draft gemengde-opgaven integration designs, 0 reviewed-final records, 0 target-exercise promotions, and 0 placeholder finalizations. Output: `references/data/sprints/CP.6b-target-exercise-review.json` and `reports/reference-planning/CP.6b-target-exercise-review.md`. CP-6 and Year 1 remain open; CP.6d graph-heavy evidence upgrade and CP.6e focused `1.1.3` Part A re-review remain required before any responsible closure proposal.",
+          "currentState": "Completed as a non-mutating target-exercise review/design sprint. Recorded 12 active-v5 Book 1 target-exercise records, 9 migrated records needing explicit v5 review artifacts, 3 placeholder records with draft gemengde-opgaven integration designs, 0 reviewed-final records, 0 target-exercise promotions, and 0 placeholder finalizations. Output: `references/data/sprints/CP.6b-target-exercise-review.json` and `reports/reference-planning/CP.6b-target-exercise-review.md`. CP-6 and Year 1 remain open; CP.6d is now complete and CP.6e focused `1.1.3` Part A re-review remains required before any responsible closure proposal.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -1487,8 +1487,8 @@
           "roadmap": "References roadmap"
         }
       ],
-      "completedCount": 74,
-      "openCount": 14
+      "completedCount": 75,
+      "openCount": 13
     },
     {
       "id": "lessen",
