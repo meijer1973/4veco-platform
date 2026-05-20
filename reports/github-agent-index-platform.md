@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-05-20T14:41:09.280Z
+Generated: 2026-05-20T16:19:08.770Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 1482
+Files indexed: 1498
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -105,7 +105,7 @@ Count: 59
 
 ## build scripts
 
-Count: 272
+Count: 274
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -213,6 +213,7 @@ Count: 272
 - build-scripts/references/audit-exercise-schema-contract.js
 - build-scripts/references/build-alignment-graph.js
 - build-scripts/references/build-begrippen-index.js
+- build-scripts/references/build-cp6b-target-exercise-review.js
 - build-scripts/references/build-micro-unit-quality-packet.js
 - build-scripts/references/build-owned-content-graph.js
 - build-scripts/references/build-owned-source-registry.js
@@ -342,6 +343,7 @@ Count: 272
 - build-scripts/reports/validate-report-json.js
 - build-scripts/review-gates/check-cp6a-lesson-side-alignment.js
 - build-scripts/review-gates/check-cp6a-lesson-side-recheck.js
+- build-scripts/review-gates/check-cp6b-target-exercise-review.js
 - build-scripts/review-gates/check-gate-cp6-routing-decision.js
 - build-scripts/review-gates/check-r2-4-packet.js
 - build-scripts/review-gates/validate-gate.js
@@ -429,7 +431,7 @@ Count: 42
 
 ## validators
 
-Count: 77
+Count: 78
 
 - build-scripts/rag/validate-chunks.js
 - build-scripts/rag/validate-query-output.js
@@ -486,6 +488,7 @@ Count: 77
 - build-scripts/reports/validate-report-json.js
 - build-scripts/review-gates/check-cp6a-lesson-side-alignment.js
 - build-scripts/review-gates/check-cp6a-lesson-side-recheck.js
+- build-scripts/review-gates/check-cp6b-target-exercise-review.js
 - build-scripts/review-gates/check-gate-cp6-routing-decision.js
 - build-scripts/review-gates/check-r2-4-packet.js
 - build-scripts/review-gates/validate-gate.js
@@ -511,7 +514,7 @@ Count: 77
 
 ## references
 
-Count: 256
+Count: 259
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -563,6 +566,9 @@ Count: 256
 - references/data/sprints/CP.6a-lesson-side-recheck.json
 - references/data/sprints/CP.6a.plan.json
 - references/data/sprints/CP.6a.result.json
+- references/data/sprints/CP.6b-target-exercise-review.json
+- references/data/sprints/CP.6b.plan.json
+- references/data/sprints/CP.6b.result.json
 - references/data/sprints/EX-NS0.plan.json
 - references/data/sprints/EX-NS0.result.json
 - references/data/sprints/GATE-CP6.plan.json
@@ -772,7 +778,7 @@ Count: 256
 
 ## reports
 
-Count: 638
+Count: 648
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -909,6 +915,7 @@ Count: 638
 - reports/reference-cli-coverage.md
 - reports/reference-planning/CP.6a-lesson-side-alignment.md
 - reports/reference-planning/CP.6a-lesson-side-recheck.md
+- reports/reference-planning/CP.6b-target-exercise-review.md
 - reports/reference-planning/REF-CP6-blocker-routing.md
 - reports/reference-planning/REF-CP6-remediation-readiness.md
 - reports/reference-planning/REF-CT0-candidate-review-packet.md
@@ -1193,6 +1200,15 @@ Count: 638
 - reports/sprints/CP.6a-plan.md
 - reports/sprints/CP.6a-planning-review.md
 - reports/sprints/CP.6a-result.md
+- reports/sprints/CP.6b-baseline.md
+- reports/sprints/CP.6b-diff-summary.md
+- reports/sprints/CP.6b-lead-review-assignment.md
+- reports/sprints/CP.6b-lead-review-corrections.md
+- reports/sprints/CP.6b-lead-review-round1.md
+- reports/sprints/CP.6b-lead-review-round2.md
+- reports/sprints/CP.6b-plan.md
+- reports/sprints/CP.6b-planning-review.md
+- reports/sprints/CP.6b-result.md
 - reports/sprints/EX-NS0-baseline.md
 - reports/sprints/EX-NS0-diff-summary.md
 - reports/sprints/EX-NS0-lead-review-assignment.md
@@ -1433,7 +1449,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 200
+Count: 201
 
 - .gitignore
 - BUILD-CHAPTER.md
@@ -1489,6 +1505,7 @@ Count: 200
 - docs/roadmaps/outdated/reference-team-roadmap-v2.52-gate-cp6-routing-decision.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.53-cp6a-lesson-side-alignment.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.54-cp6a-lesson-side-recheck.md
+- docs/roadmaps/outdated/reference-team-roadmap-v2.55-exam-ingestion-north-star.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.6-s4-cp3-dry-run.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.7-cp3-closed.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.8-s4.1-conditions-calibrated.md

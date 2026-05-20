@@ -1,0 +1,736 @@
+{
+  "schema_version": 1,
+  "sprint_id": "CP.6c",
+  "generated_on": "2026-05-20",
+  "generated_by": "build-scripts/references/build-cp6c-mtu-backfill-classification.js",
+  "status": "mtu_backfill_classification_recorded_not_mutating",
+  "authority_level": "non_mutating_year1_mtu_backfill_classification",
+  "cp6_closed": false,
+  "year1_closed": false,
+  "protected_reference_data_changed": false,
+  "lesson_output_changed": false,
+  "target_exercise_promotions": false,
+  "placeholder_finalization": false,
+  "unit_minting": false,
+  "machine_registry_mutation": false,
+  "no_protected_mutation_authorized": true,
+  "no_lesson_output_mutation_authorized": true,
+  "no_target_exercise_promotion_authorized": true,
+  "no_placeholder_finalization_authorized": true,
+  "no_unit_minting_authorized": true,
+  "no_cli_mutation_authorized": true,
+  "source_paths": {
+    "ref_ct1": "references/data/sprints/REF-CT1-year1-coverage.json",
+    "cp6b": "references/data/sprints/CP.6b-target-exercise-review.json",
+    "units": "references/machine/micro-teaching-units.json",
+    "d04_status": "references/data/unit-design-status/unit-design-status-overlay.json"
+  },
+  "repository_state": {
+    "platform_head_before_cp6c_commit": "cdbac590e32c5dd5d9235e4be2e4d97cdcf4432a",
+    "lesson_head_at_generation": "918398305d6b285f3f9ca87db1050dbb91fe2c6b"
+  },
+  "source_evidence": {
+    "ref_ct1_missing_flag_count": 9,
+    "cp6b_next_operational_sprint": "CP.6c",
+    "d04_status_records_seen": 1
+  },
+  "summary": {
+    "candidate_count": 9,
+    "by_classification": {
+      "existing_unit_mapping": 6,
+      "merge_candidate": 1,
+      "defer_candidate": 1,
+      "true_missing_unit": 1
+    },
+    "mutations_authorized_now_count": 0,
+    "later_cli_mutation_candidate_count": 1,
+    "existing_live_unit_mapping_count": 6
+  },
+  "classifications": [
+    {
+      "record_id": "missing_flag:1.1.3:1",
+      "paragraph_id": "1.1.3",
+      "paragraph_label": "1.1.3 Grafieken en tabellen",
+      "source_flag": "Draw a (P,Q) graph from a table with the economist's axis convention (P vertical, Q horizontal) (A-domain candidate)",
+      "source_required_skills": [
+        "A38"
+      ],
+      "source_classification": "year_1_backfill_candidate",
+      "cp6c_classification": "existing_unit_mapping",
+      "mapped_unit_ids": [
+        "A45"
+      ],
+      "supporting_unit_ids": [
+        "A38"
+      ],
+      "deprecated_context_unit_ids": [],
+      "mapped_units": [
+        {
+          "id": "A45",
+          "name": "P-Q grafiek tekenen uit tabel",
+          "deprecated": false,
+          "deprecated_in_favor_of": [],
+          "needs": [],
+          "mastery_target": "apply",
+          "aspects": [
+            "grafisch"
+          ],
+          "kern": "Teken een prijs-hoeveelheidsgrafiek uit tabelwaarden met prijs op de verticale as en hoeveelheid op de horizontale as."
+        }
+      ],
+      "supporting_units": [
+        {
+          "id": "A38",
+          "name": "Procentuele verandering berekenen",
+          "deprecated": false,
+          "deprecated_in_favor_of": [],
+          "needs": [],
+          "mastery_target": "apply",
+          "aspects": [
+            "rekenen"
+          ],
+          "kern": "Bereken de procentuele verandering met %Δ = (nieuw − oud) / oud × 100, en pas dit toe op prijzen, hoeveelheden, indexcijfers en reële variabelen."
+        }
+      ],
+      "deprecated_context_units": [],
+      "candidate_future_unit_concept": null,
+      "rationale": "The live registry already contains A45, whose kern and procedure exactly cover drawing a P-Q graph from table values with P vertical and Q horizontal.",
+      "next_action": "Use A45 as the mapping during later target-exercise review. CP.6d/CP.6e still need graph-heavy evidence and Part A closure before CP-6 closure.",
+      "mutation_authorized_now": false,
+      "protected_reference_mutation_authorized_now": false,
+      "later_cli_mutation_candidate": false,
+      "may_count_as_cp6_closure_evidence_now": false
+    },
+    {
+      "record_id": "missing_flag:1.1.3:2",
+      "paragraph_id": "1.1.3",
+      "paragraph_label": "1.1.3 Grafieken en tabellen",
+      "source_flag": "Read values from a (P,Q) graph; interpolate between data points (A-domain candidate)",
+      "source_required_skills": [
+        "A38"
+      ],
+      "source_classification": "year_1_backfill_candidate",
+      "cp6c_classification": "existing_unit_mapping",
+      "mapped_unit_ids": [
+        "A46"
+      ],
+      "supporting_unit_ids": [
+        "A45",
+        "A38"
+      ],
+      "deprecated_context_unit_ids": [],
+      "mapped_units": [
+        {
+          "id": "A46",
+          "name": "Waarden aflezen en interpoleren in P-Q grafiek",
+          "deprecated": false,
+          "deprecated_in_favor_of": [],
+          "needs": [
+            "A45"
+          ],
+          "mastery_target": "apply",
+          "aspects": [
+            "grafisch",
+            "rekenen"
+          ],
+          "kern": "Lees prijs- en hoeveelheidswaarden af uit een P-Q grafiek en schat tussenliggende waarden door interpolatie."
+        }
+      ],
+      "supporting_units": [
+        {
+          "id": "A45",
+          "name": "P-Q grafiek tekenen uit tabel",
+          "deprecated": false,
+          "deprecated_in_favor_of": [],
+          "needs": [],
+          "mastery_target": "apply",
+          "aspects": [
+            "grafisch"
+          ],
+          "kern": "Teken een prijs-hoeveelheidsgrafiek uit tabelwaarden met prijs op de verticale as en hoeveelheid op de horizontale as."
+        },
+        {
+          "id": "A38",
+          "name": "Procentuele verandering berekenen",
+          "deprecated": false,
+          "deprecated_in_favor_of": [],
+          "needs": [],
+          "mastery_target": "apply",
+          "aspects": [
+            "rekenen"
+          ],
+          "kern": "Bereken de procentuele verandering met %Δ = (nieuw − oud) / oud × 100, en pas dit toe op prijzen, hoeveelheden, indexcijfers en reële variabelen."
+        }
+      ],
+      "deprecated_context_units": [],
+      "candidate_future_unit_concept": null,
+      "rationale": "The live registry already contains A46 for reading values and interpolating in a P-Q graph, with A45 as the graph-construction prerequisite.",
+      "next_action": "Use A46 as the mapping during later target-exercise review. CP.6e still needs to clear or explicitly fail the 1.1.3 Part A flag.",
+      "mutation_authorized_now": false,
+      "protected_reference_mutation_authorized_now": false,
+      "later_cli_mutation_candidate": false,
+      "may_count_as_cp6_closure_evidence_now": false
+    },
+    {
+      "record_id": "missing_flag:1.2.2:1",
+      "paragraph_id": "1.2.2",
+      "paragraph_label": "1.2.2 Vraagfactoren",
+      "source_flag": "Classify a normal vs inferior good response to an income change (concept-level, prerequisite for D11 inkomenselasticiteit)",
+      "source_required_skills": [
+        "A42",
+        "D27",
+        "D32",
+        "D33"
+      ],
+      "source_classification": "year_1_backfill_candidate",
+      "cp6c_classification": "merge_candidate",
+      "mapped_unit_ids": [],
+      "supporting_unit_ids": [
+        "A17",
+        "D11",
+        "D33"
+      ],
+      "deprecated_context_unit_ids": [
+        "D04"
+      ],
+      "mapped_units": [],
+      "supporting_units": [
+        {
+          "id": "A17",
+          "name": "Inkomenselasticiteit",
+          "deprecated": false,
+          "deprecated_in_favor_of": [],
+          "needs": [
+            "A15"
+          ],
+          "mastery_target": "apply",
+          "aspects": [
+            "rekenen"
+          ],
+          "kern": "Bereken de inkomenselasticiteit: Ei = %ΔQ / %ΔY. Bepaal of een goed normaal, inferieur of luxe is."
+        },
+        {
+          "id": "D11",
+          "name": "Inkomenselasticiteit berekenen en interpreteren",
+          "deprecated": false,
+          "deprecated_in_favor_of": [],
+          "needs": [
+            "A17"
+          ],
+          "mastery_target": "apply",
+          "aspects": [
+            "rekenen",
+            "verbaal"
+          ],
+          "kern": "Bereken Ei uit twee waarnemingen en interpreteer de uitkomst in de context van het goed."
+        },
+        {
+          "id": "D33",
+          "name": "Vraag- en aanbodverschuivingsfactoren benoemen",
+          "deprecated": false,
+          "deprecated_in_favor_of": [],
+          "needs": [
+            "D32"
+          ],
+          "mastery_target": "understand",
+          "aspects": [
+            "verbaal"
+          ],
+          "kern": "Noem en herken de standaard verschuivingsfactoren: voor vraag (inkomen, voorkeuren, prijzen substituten/complementen, verwachtingen) en voor aanbod (inputprijzen, technologie, aantal aanbieders, verwachtingen, overheidsbeleid)."
+        }
+      ],
+      "deprecated_context_units": [
+        {
+          "id": "D04",
+          "name": "Elasticiteit en goederenclassificatie",
+          "deprecated": true,
+          "deprecated_in_favor_of": [
+            "A15",
+            "D06",
+            "A17",
+            "D11",
+            "A16",
+            "D12",
+            "D27"
+          ],
+          "needs": [],
+          "mastery_target": "understand",
+          "aspects": [
+            "verbaal"
+          ],
+          "kern": "Gebruik inkomenselasticiteit om goederen te classificeren als inferieur, normaal of luxe."
+        }
+      ],
+      "candidate_future_unit_concept": null,
+      "rationale": "The concept is present in successor income-elasticity units A17 and D11, while D33 covers demand-shift factors. The old standalone D04 record is deprecated and must not be revived. A later design review should decide whether the Year-1 pre-elasticity version is handled by successor-unit wording, a paragraph-level note, or a governed split.",
+      "next_action": "Route to target-exercise and unit-design review if final Year-1 coverage keeps normal/inferior goods before formal income elasticity. Do not add a D04 edge or revive D04.",
+      "mutation_authorized_now": false,
+      "protected_reference_mutation_authorized_now": false,
+      "later_cli_mutation_candidate": false,
+      "may_count_as_cp6_closure_evidence_now": false
+    },
+    {
+      "record_id": "missing_flag:1.2.3:1",
+      "paragraph_id": "1.2.3",
+      "paragraph_label": "1.2.3 Van individuele naar collectieve vraag",
+      "source_flag": "Horizontal sum: aggregate individual demand tables into collective demand (A-domain candidate, mirror of A31 for aanbod)",
+      "source_required_skills": [
+        "A01"
+      ],
+      "source_classification": "year_1_backfill_candidate",
+      "cp6c_classification": "existing_unit_mapping",
+      "mapped_unit_ids": [
+        "A47"
+      ],
+      "supporting_unit_ids": [
+        "A46"
+      ],
+      "deprecated_context_unit_ids": [],
+      "mapped_units": [
+        {
+          "id": "A47",
+          "name": "Collectieve vraag uit tabellen optellen",
+          "deprecated": false,
+          "deprecated_in_favor_of": [],
+          "needs": [
+            "A46"
+          ],
+          "mastery_target": "apply",
+          "aspects": [
+            "rekenen",
+            "grafisch"
+          ],
+          "kern": "Bereken collectieve vraag door individuele gevraagde hoeveelheden bij dezelfde prijs op te tellen."
+        }
+      ],
+      "supporting_units": [
+        {
+          "id": "A46",
+          "name": "Waarden aflezen en interpoleren in P-Q grafiek",
+          "deprecated": false,
+          "deprecated_in_favor_of": [],
+          "needs": [
+            "A45"
+          ],
+          "mastery_target": "apply",
+          "aspects": [
+            "grafisch",
+            "rekenen"
+          ],
+          "kern": "Lees prijs- en hoeveelheidswaarden af uit een P-Q grafiek en schat tussenliggende waarden door interpolatie."
+        }
+      ],
+      "deprecated_context_units": [],
+      "candidate_future_unit_concept": null,
+      "rationale": "The live registry already contains A47 for calculating collective demand by adding individual demanded quantities at the same price.",
+      "next_action": "Use A47 as the mapping during later target-exercise review and CP.6d graph-heavy evidence upgrade.",
+      "mutation_authorized_now": false,
+      "protected_reference_mutation_authorized_now": false,
+      "later_cli_mutation_candidate": false,
+      "may_count_as_cp6_closure_evidence_now": false
+    },
+    {
+      "record_id": "missing_flag:1.2.3:2",
+      "paragraph_id": "1.2.3",
+      "paragraph_label": "1.2.3 Van individuele naar collectieve vraag",
+      "source_flag": "Algebraic horizontal sum of linear demand functions (A-domain candidate, Q-at-equal-P)",
+      "source_required_skills": [
+        "A01"
+      ],
+      "source_classification": "year_1_backfill_candidate",
+      "cp6c_classification": "existing_unit_mapping",
+      "mapped_unit_ids": [
+        "A48"
+      ],
+      "supporting_unit_ids": [
+        "A03",
+        "A47"
+      ],
+      "deprecated_context_unit_ids": [],
+      "mapped_units": [
+        {
+          "id": "A48",
+          "name": "Collectieve vraagfunctie algebraisch optellen",
+          "deprecated": false,
+          "deprecated_in_favor_of": [],
+          "needs": [
+            "A03",
+            "A47"
+          ],
+          "mastery_target": "apply",
+          "aspects": [
+            "rekenen",
+            "grafisch"
+          ],
+          "kern": "Tel lineaire individuele vraagfuncties horizontaal op door bij dezelfde prijs de gevraagde hoeveelheden te sommeren."
+        }
+      ],
+      "supporting_units": [
+        {
+          "id": "A03",
+          "name": "Functie omschrijven (P↔Q)",
+          "deprecated": false,
+          "deprecated_in_favor_of": [],
+          "needs": [],
+          "mastery_target": "apply",
+          "aspects": [
+            "rekenen"
+          ],
+          "kern": "Schrijf een functie om van P als functie van Q naar Q als functie van P, of andersom."
+        },
+        {
+          "id": "A47",
+          "name": "Collectieve vraag uit tabellen optellen",
+          "deprecated": false,
+          "deprecated_in_favor_of": [],
+          "needs": [
+            "A46"
+          ],
+          "mastery_target": "apply",
+          "aspects": [
+            "rekenen",
+            "grafisch"
+          ],
+          "kern": "Bereken collectieve vraag door individuele gevraagde hoeveelheden bij dezelfde prijs op te tellen."
+        }
+      ],
+      "deprecated_context_units": [],
+      "candidate_future_unit_concept": null,
+      "rationale": "The live registry already contains A48 for algebraic horizontal summation of linear individual demand functions at equal price.",
+      "next_action": "Use A48 as the mapping during later target-exercise review and CP.6d graph-heavy evidence upgrade.",
+      "mutation_authorized_now": false,
+      "protected_reference_mutation_authorized_now": false,
+      "later_cli_mutation_candidate": false,
+      "may_count_as_cp6_closure_evidence_now": false
+    },
+    {
+      "record_id": "missing_flag:1.2.3:3",
+      "paragraph_id": "1.2.3",
+      "paragraph_label": "1.2.3 Van individuele naar collectieve vraag",
+      "source_flag": "Recognise the kink in collective demand when one consumer exits (concept-level)",
+      "source_required_skills": [
+        "A01"
+      ],
+      "source_classification": "year_1_backfill_candidate",
+      "cp6c_classification": "defer_candidate",
+      "mapped_unit_ids": [],
+      "supporting_unit_ids": [
+        "A47",
+        "A48"
+      ],
+      "deprecated_context_unit_ids": [],
+      "mapped_units": [],
+      "supporting_units": [
+        {
+          "id": "A47",
+          "name": "Collectieve vraag uit tabellen optellen",
+          "deprecated": false,
+          "deprecated_in_favor_of": [],
+          "needs": [
+            "A46"
+          ],
+          "mastery_target": "apply",
+          "aspects": [
+            "rekenen",
+            "grafisch"
+          ],
+          "kern": "Bereken collectieve vraag door individuele gevraagde hoeveelheden bij dezelfde prijs op te tellen."
+        },
+        {
+          "id": "A48",
+          "name": "Collectieve vraagfunctie algebraisch optellen",
+          "deprecated": false,
+          "deprecated_in_favor_of": [],
+          "needs": [
+            "A03",
+            "A47"
+          ],
+          "mastery_target": "apply",
+          "aspects": [
+            "rekenen",
+            "grafisch"
+          ],
+          "kern": "Tel lineaire individuele vraagfuncties horizontaal op door bij dezelfde prijs de gevraagde hoeveelheden te sommeren."
+        }
+      ],
+      "deprecated_context_units": [],
+      "candidate_future_unit_concept": null,
+      "rationale": "The active target-exercise difficulty note says the kink can be mentioned but is not essential. A47/A48 cover the main horizontal-sum operation; the kink/price-range edge case should not force immediate unit mutation before a final target-exercise review decides whether to retain it.",
+      "next_action": "Defer. If later reviewed target exercises retain the kink as required performance, review whether A48 needs a governed procedure refinement for valid price ranges or piecewise demand.",
+      "mutation_authorized_now": false,
+      "protected_reference_mutation_authorized_now": false,
+      "later_cli_mutation_candidate": false,
+      "may_count_as_cp6_closure_evidence_now": false
+    },
+    {
+      "record_id": "missing_flag:1.3.1:1",
+      "paragraph_id": "1.3.1",
+      "paragraph_label": "1.3.1 Aanbod",
+      "source_flag": "Draw an upward-sloping supply curve with correct economist axes (A-domain candidate)",
+      "source_required_skills": [
+        "D13",
+        "D32",
+        "D33"
+      ],
+      "source_classification": "year_1_backfill_candidate",
+      "cp6c_classification": "existing_unit_mapping",
+      "mapped_unit_ids": [
+        "A49"
+      ],
+      "supporting_unit_ids": [
+        "A45"
+      ],
+      "deprecated_context_unit_ids": [],
+      "mapped_units": [
+        {
+          "id": "A49",
+          "name": "Aanbodcurve tekenen met economenassen",
+          "deprecated": false,
+          "deprecated_in_favor_of": [],
+          "needs": [
+            "A45"
+          ],
+          "mastery_target": "apply",
+          "aspects": [
+            "grafisch"
+          ],
+          "kern": "Teken een stijgende aanbodcurve met prijs op de verticale as en aangeboden hoeveelheid op de horizontale as."
+        }
+      ],
+      "supporting_units": [
+        {
+          "id": "A45",
+          "name": "P-Q grafiek tekenen uit tabel",
+          "deprecated": false,
+          "deprecated_in_favor_of": [],
+          "needs": [],
+          "mastery_target": "apply",
+          "aspects": [
+            "grafisch"
+          ],
+          "kern": "Teken een prijs-hoeveelheidsgrafiek uit tabelwaarden met prijs op de verticale as en hoeveelheid op de horizontale as."
+        }
+      ],
+      "deprecated_context_units": [],
+      "candidate_future_unit_concept": null,
+      "rationale": "The live registry already contains A49 for drawing an upward-sloping supply curve with economist axes and a supply/S label.",
+      "next_action": "Use A49 as the mapping during later target-exercise review and CP.6d graph-heavy evidence upgrade.",
+      "mutation_authorized_now": false,
+      "protected_reference_mutation_authorized_now": false,
+      "later_cli_mutation_candidate": false,
+      "may_count_as_cp6_closure_evidence_now": false
+    },
+    {
+      "record_id": "missing_flag:1.3.2:1",
+      "paragraph_id": "1.3.2",
+      "paragraph_label": "1.3.2 Marktevenwicht",
+      "source_flag": "Determine surplus (aanbodoverschot) vs shortage (vraagoverschot) at a non-equilibrium price and calculate its size (A-domain candidate, prerequisite for government price interventions in §2.4)",
+      "source_required_skills": [
+        "A02",
+        "A04",
+        "A06"
+      ],
+      "source_classification": "year_1_backfill_candidate",
+      "cp6c_classification": "existing_unit_mapping",
+      "mapped_unit_ids": [
+        "A51"
+      ],
+      "supporting_unit_ids": [
+        "A06"
+      ],
+      "deprecated_context_unit_ids": [],
+      "mapped_units": [
+        {
+          "id": "A51",
+          "name": "Overschot en tekort bij niet-evenwichtsprijs berekenen",
+          "deprecated": false,
+          "deprecated_in_favor_of": [],
+          "needs": [
+            "A06"
+          ],
+          "mastery_target": "apply",
+          "aspects": [
+            "grafisch",
+            "rekenen"
+          ],
+          "kern": "Bepaal bij een opgelegde prijs of er een overschot of tekort ontstaat en bereken de omvang als verschil tussen Qa en Qv."
+        }
+      ],
+      "supporting_units": [
+        {
+          "id": "A06",
+          "name": "Evenwichtsprijs & -hoeveelheid",
+          "deprecated": false,
+          "deprecated_in_favor_of": [],
+          "needs": [
+            "A01",
+            "A02"
+          ],
+          "mastery_target": "apply",
+          "aspects": [
+            "rekenen",
+            "verbaal"
+          ],
+          "kern": "Bereken de evenwichtsprijs en -hoeveelheid door vraag en aanbod aan elkaar gelijk te stellen."
+        }
+      ],
+      "deprecated_context_units": [],
+      "candidate_future_unit_concept": null,
+      "rationale": "The live registry already contains A51 for determining overschot/tekort at a non-equilibrium price and calculating the difference between Qa and Qv.",
+      "next_action": "Use A51 as the mapping during later target-exercise review and CP.6d graph-heavy evidence upgrade.",
+      "mutation_authorized_now": false,
+      "protected_reference_mutation_authorized_now": false,
+      "later_cli_mutation_candidate": false,
+      "may_count_as_cp6_closure_evidence_now": false
+    },
+    {
+      "record_id": "missing_flag:1.3.3:1",
+      "paragraph_id": "1.3.3",
+      "paragraph_label": "1.3.3 Verschuivingen en nieuw evenwicht",
+      "source_flag": "Reason about simultaneous supply+demand shifts: determinate Q-direction but ambiguous P-direction (concept-level, diagnostic checkpoint)",
+      "source_required_skills": [
+        "A02",
+        "A04",
+        "A06",
+        "A42",
+        "D13"
+      ],
+      "source_classification": "year_1_backfill_candidate",
+      "cp6c_classification": "true_missing_unit",
+      "mapped_unit_ids": [],
+      "supporting_unit_ids": [
+        "A06",
+        "A42",
+        "D10",
+        "D13",
+        "D32",
+        "D33"
+      ],
+      "deprecated_context_unit_ids": [],
+      "mapped_units": [],
+      "supporting_units": [
+        {
+          "id": "A06",
+          "name": "Evenwichtsprijs & -hoeveelheid",
+          "deprecated": false,
+          "deprecated_in_favor_of": [],
+          "needs": [
+            "A01",
+            "A02"
+          ],
+          "mastery_target": "apply",
+          "aspects": [
+            "rekenen",
+            "verbaal"
+          ],
+          "kern": "Bereken de evenwichtsprijs en -hoeveelheid door vraag en aanbod aan elkaar gelijk te stellen."
+        },
+        {
+          "id": "A42",
+          "name": "Grafische verschuiving met voor-en-na pijlen",
+          "deprecated": false,
+          "deprecated_in_favor_of": [],
+          "needs": [],
+          "mastery_target": "apply",
+          "aspects": [
+            "grafisch"
+          ],
+          "kern": "Teken een grafische verschuiving (vraag- of aanbodcurve) met zowel de oude als de nieuwe curve, gelabeld D / D' of S / S', en geef de richting aan met pijlen tussen de oude en nieuwe positie."
+        },
+        {
+          "id": "D10",
+          "name": "Vraag/aanbod-verschuiving bij conjunctuurschok",
+          "deprecated": false,
+          "deprecated_in_favor_of": [],
+          "needs": [
+            "A06",
+            "D33"
+          ],
+          "mastery_target": "analyze",
+          "aspects": [
+            "verbaal"
+          ],
+          "kern": "Analyseer hoe een conjunctuurschok de collectieve vraaglijn of aanbodlijn verschuift en wat dit doet met evenwichtsprijs en -hoeveelheid."
+        },
+        {
+          "id": "D13",
+          "name": "Kostenstijging en aanbodverschuiving",
+          "deprecated": false,
+          "deprecated_in_favor_of": [],
+          "needs": [
+            "A06",
+            "D33"
+          ],
+          "mastery_target": "analyze",
+          "aspects": [
+            "verbaal"
+          ],
+          "kern": "Analyseer hoe een stijging van productiekosten (zoals loon per eenheid product) de collectieve aanbodlijn verschuift en doorwerkt in evenwichtsprijs."
+        },
+        {
+          "id": "D32",
+          "name": "Verschuiving versus beweging langs de curve",
+          "deprecated": false,
+          "deprecated_in_favor_of": [],
+          "needs": [],
+          "mastery_target": "understand",
+          "aspects": [
+            "verbaal",
+            "grafisch"
+          ],
+          "kern": "Onderscheid een beweging langs de vraag- of aanbodcurve (veroorzaakt door eigen-prijsverandering) van een verschuiving van de curve (veroorzaakt door een andere factor dan eigen prijs)."
+        },
+        {
+          "id": "D33",
+          "name": "Vraag- en aanbodverschuivingsfactoren benoemen",
+          "deprecated": false,
+          "deprecated_in_favor_of": [],
+          "needs": [
+            "D32"
+          ],
+          "mastery_target": "understand",
+          "aspects": [
+            "verbaal"
+          ],
+          "kern": "Noem en herken de standaard verschuivingsfactoren: voor vraag (inkomen, voorkeuren, prijzen substituten/complementen, verwachtingen) en voor aanbod (inputprijzen, technologie, aantal aanbieders, verwachtingen, overheidsbeleid)."
+        }
+      ],
+      "deprecated_context_units": [],
+      "candidate_future_unit_concept": "Reason about simultaneous demand and supply shifts, distinguishing determinate and ambiguous effects on equilibrium price and quantity.",
+      "rationale": "Existing units cover equilibrium solving, single-curve shifts, and specific supply/demand shock reasoning, but no live unit explicitly teaches the simultaneous-shift answer operation where one equilibrium direction is determinate and the other is ambiguous without magnitudes.",
+      "next_action": "Prepare a later bounded review before any CLI mutation. If confirmed, mint or adjust the operation through governed scripts only; CP.6c does not authorize that mutation.",
+      "mutation_authorized_now": false,
+      "protected_reference_mutation_authorized_now": false,
+      "later_cli_mutation_candidate": true,
+      "may_count_as_cp6_closure_evidence_now": false
+    }
+  ],
+  "remaining_blockers": [
+    "CP.6d must upgrade graph-heavy evidence before graph/table-heavy records support CP-6 closure.",
+    "CP.6e must clear or explicitly fail the remaining 1.1.3 Part A FLAG before unconditioned CP-6 closure.",
+    "CP.6b target-exercise records remain non-final until later teacher/review artifacts and governed registry procedures exist.",
+    "The simultaneous-shift true missing candidate needs later review before any CLI-backed mutation sprint."
+  ],
+  "blocked_outcomes": [
+    "protected reference mutation",
+    "lesson output mutation",
+    "target-exercise promotion",
+    "placeholder replacement",
+    "placeholder finalization",
+    "unit minting",
+    "machine registry mutation",
+    "CLI mutation authorization",
+    "CP-6 closure",
+    "Year-1 closure",
+    "student diagnostics",
+    "adaptive routing",
+    "mastery decisions",
+    "automatic sequencing",
+    "student-facing AI",
+    "summative use",
+    "PV projection",
+    "PV machine promotion",
+    "student-facing generated output"
+  ],
+  "next_operational_sprint": "CP.6d"
+}

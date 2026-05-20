@@ -15,13 +15,14 @@
   "roadmaps": [
     {
       "roadmap_id": "references-team-roadmap",
-      "version": "v2.56-cp6b-target-exercise-review",
+      "version": "v2.57-cp6c-mtu-backfill-classification",
       "title": "References Team Roadmap",
       "status": "active",
       "path": "references/reference-team-roadmap.md",
       "owner": "references_team",
       "updated_on": "2026-05-20",
       "supersedes": [
+        "docs/roadmaps/outdated/reference-team-roadmap-v2.56-cp6b-target-exercise-review.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.55-exam-ingestion-north-star.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.54-cp6a-lesson-side-recheck.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.53-cp6a-lesson-side-alignment.md",
@@ -77,7 +78,18 @@
         "knowledge/Exercise schema and quality/reference-team-roadmap Live version 28 April.md",
         "knowledge/Exercise schema and quality/roadmap-updated-repository-checked.md"
       ],
-      "notes": "Current operating roadmap after CP.6b recorded the non-final Year-1 target-exercise review/design packet and moved CP.6c MTU backfill classification to the active row."
+      "notes": "Current operating roadmap after CP.6c classified the nine Year-1 MTU backfill candidates and moved CP.6d graph-heavy evidence upgrade to the active row."
+    },
+    {
+      "roadmap_id": "references-team-roadmap-v2.56",
+      "version": "v2.56-cp6b-target-exercise-review",
+      "title": "References Team Roadmap before CP.6c MTU backfill classification",
+      "status": "outdated",
+      "path": "docs/roadmaps/outdated/reference-team-roadmap-v2.56-cp6b-target-exercise-review.md",
+      "owner": "references_team",
+      "updated_on": "2026-05-20",
+      "superseded_by": "references/reference-team-roadmap.md",
+      "notes": "Snapshot archived before CP.6c classified the Year-1 MTU backfill candidates and moved CP.6d to the active roadmap row."
     },
     {
       "roadmap_id": "references-team-roadmap-v2.55",

@@ -12,12 +12,13 @@ docs/roadmaps/roadmap-version-index.json
 
 | Roadmap | Version | Path | Notes |
 |---|---|---|---|
-| References Team Roadmap | `v2.56-cp6b-target-exercise-review` | `references/reference-team-roadmap.md` | Current operating roadmap after CP.6b recorded the non-final Year-1 target-exercise review/design packet and moved CP.6c MTU backfill classification to the active row. |
+| References Team Roadmap | `v2.57-cp6c-mtu-backfill-classification` | `references/reference-team-roadmap.md` | Current operating roadmap after CP.6c classified the nine Year-1 MTU backfill candidates and moved CP.6d graph-heavy evidence upgrade to the active row. |
 
 ## Outdated Archive
 
 | Roadmap | Version | Path | Superseded By |
 |---|---|---|---|
+| References Team Roadmap before CP.6c MTU backfill classification | `v2.56-cp6b-target-exercise-review` | `docs/roadmaps/outdated/reference-team-roadmap-v2.56-cp6b-target-exercise-review.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before CP.6b target-exercise review | `v2.55-exam-ingestion-north-star` | `docs/roadmaps/outdated/reference-team-roadmap-v2.55-exam-ingestion-north-star.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before exam-ingestion north-star update | `v2.54-cp6a-lesson-side-recheck` | `docs/roadmaps/outdated/reference-team-roadmap-v2.54-cp6a-lesson-side-recheck.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before CP.6a lesson-side recheck | `v2.53-cp6a-lesson-side-alignment` | `docs/roadmaps/outdated/reference-team-roadmap-v2.53-cp6a-lesson-side-alignment.md` | `references/reference-team-roadmap.md` |
