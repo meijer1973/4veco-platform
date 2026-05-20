@@ -72,6 +72,45 @@ profile.
 - **Shared conventions** — from `_chapter-plan.md` if building as part of a chapter (notation, colours, shared contexts, interleaving targets)
 - **Prior paragraph context** — if this paragraph depends on an earlier one (key formulas, terminology)
 
+## Exam-target paragraph input contract
+
+When the target exercise is an official exam question, the paragraph plan must
+include an exam-target decomposition table. Every official answer-model step
+must be traceable to one of:
+
+- taught explicitly in Part A;
+- practised in textbook opgaven;
+- scaffolded in begeleide inoefening;
+- repeated in a companion/game surface;
+- assumed as prior knowledge with MTU evidence;
+- deliberately out of scope, with reason.
+
+A paragraph cannot receive an exam-target PASS if students are asked to perform
+an answer-model operation that is not taught, practised, scaffolded, or
+justified as prior knowledge.
+
+Required `_paragraph-plan.md` section for exam-target paragraphs:
+
+```md
+## Exam-target exercise decomposition
+
+Source:
+- official exam:
+- year / tijdvak:
+- opgave:
+- question(s):
+- official correction model:
+- source annexes / figures / tables:
+
+Target answer requirements:
+| Answer-model step | Points | Required concept | Required calculation | Required visual/source operation | Required answer wording |
+|---|---:|---|---|---|---|
+
+Paragraph build implications:
+| Required exam operation | Where taught in Part A | Where practised in opgaven | Where scaffolded in begeleide inoefening | Where repeated in game/companion |
+|---|---|---|---|---|
+```
+
 ## A2: Build content
 
 Follow `econ-textbook-paragraph` skill exactly:

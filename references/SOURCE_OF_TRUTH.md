@@ -33,6 +33,19 @@ This document defines which reference surfaces are canonical, which are generate
 6. Sprint metadata records process state. It does not make a pedagogical claim true.
 7. Future JSON reports should become the machine-readable report layer; Markdown should become a human projection.
 
+## Official Exam Correction Models
+
+Official correction models / correctievoorschriften belong to
+`references/external/` and are canonical for what answer performance is
+rewarded. They are not the same as exam-question prompts. Exam-question prompt,
+source annex, and correction model should remain separately traceable.
+
+Derived overlays may decompose answer-model steps, point rules, accepted
+alternatives, precision requirements, graph requirements, and answer-writing
+operations under `references/data/`, but they must not overwrite the external
+source record or become unit-minting authority without a later reviewed gate and
+CLI-backed mutation path.
+
 ## Protected Surfaces
 
 These surfaces must not be hand-edited:

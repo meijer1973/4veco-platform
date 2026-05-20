@@ -139,6 +139,28 @@ For lived student-experience review, use `agents/student-experience-review-agent
 
 For multi-surface QA orchestration, use `agents/lead-reviewer-agent.md`; it routes work to the right specialist agents, verifies evidence completeness, and produces the consolidated go/no-go decision. Use `agents/testing-agent.md` for test command selection, exit-code evidence, validator results, and residual-risk reporting. Use `agents/accessibility-agent.md` for focused readability, contrast, alt-text, OCR, semantic, keyboard, and inclusive-usability review.
 
+## Exam Ingestion End-State
+
+This repository is being hardened toward official-exam-question ingestion.
+
+A successful platform reference layer must be able to ingest a new official
+CvTE economics exam question, including source annexes and the official
+correction model, and decompose it into:
+
+- content concepts;
+- calculation operations;
+- graph/table/source-reading operations;
+- reasoning operations;
+- answer-writing and correction-model operations;
+- required micro-teaching units;
+- missing or weak MTU candidates;
+- lesson-build implications.
+
+Real exam questions and official correction models are stronger evidence than
+syllabus prose. Do not mint units from syllabus text alone. Use official exam
+evidence, reviewed target exercises, and human-reviewed gate decisions before
+protected reference mutation.
+
 ## Architectural principles
 
 Three decisions that govern what lives in this platform and how it evolves. These are not style preferences — they determine which proposals fit the project and which are reasoning backwards into a dying direction.

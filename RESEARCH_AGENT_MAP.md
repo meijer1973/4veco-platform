@@ -14,6 +14,7 @@ The full repository answers:
 - where a task belongs: platform code, reference corpus, lesson-build workflow, reports, or roadmap planning
 - which files should be inspected before making architecture, production, or quality conclusions
 - which surfaces are generated, protected, or deploy targets
+- how official exam-question ingestion should eventually separate prompt, source annex, official correction model, operation decomposition, MTU mapping, and lesson-build handoff
 
 Repository boundary:
 
@@ -26,6 +27,14 @@ Repository boundary:
   - `4veco-lessen/RESEARCH_AGENT_MAP.md`
 
 The platform repository does not contain final student-facing book output. Student-facing markdown/PDF output is built in sibling targets such as `../4veco-lessen/`; legacy deploy output lives outside this repo.
+
+Exam-ingestion north star: a new official CvTE economics exam question should
+eventually be ingestible as an external exercise record with prompt, source
+material, figures/tables/graphs, official correction model, point allocation,
+and answer-construction requirements kept separately traceable. Current exam
+question records and overlays are not yet the full ingestion object; use
+`references/reference-team-roadmap.md` for the planned EX-0 and EX-1 design
+sequence before assuming broad ingestion support.
 
 ## Access Layer
 
@@ -492,6 +501,15 @@ Rules:
     "references/reference-team-roadmap.md",
     "references/SOURCE_OF_TRUTH.md",
     "references"
+  ],
+  "exam_ingestion_research": [
+    "AGENTS.md",
+    "RESEARCH_AGENT_MAP_REFERENCES.md",
+    "references/SOURCE_OF_TRUTH.md",
+    "references/data/exercises/README.md",
+    "references/external/exam-questions.json",
+    "references/external/exams",
+    "references/reference-team-roadmap.md"
   ],
   "engine_behavior": [
     "engines",

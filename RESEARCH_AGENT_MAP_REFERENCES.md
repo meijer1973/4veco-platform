@@ -14,12 +14,20 @@ The reference corpus answers:
 - why it should teach it
 - which owned course-design sources define intended lesson structure
 - which evidence proves exam, inspection, and school alignment
+- how future official exam-question ingestion should separate prompt, source annex, official correction model, scoring rules, operation decomposition, MTU mapping, and lesson-build implications
 - which machine registries the platform consumes
 - which reference-quality issues remain open
 
 The core research surface is the full `references/` folder.
 
 Generated reports under `reports/` are useful derived evidence, but reports do not replace source inspection. When a report and a reference source disagree, inspect the reference source and the report generator before drawing a conclusion.
+
+Exam-ingestion note: current `references/external/exam-questions.json` records
+exam-question metadata and extracted prompt content, but the roadmaped
+end-state also requires source annexes and official correction models to be
+first-class, separately traceable evidence. Do not treat a prompt-only record as
+fully ingestible until source material and correction-model steps are present
+or explicitly marked as gaps.
 
 ## Access Layer
 
@@ -476,6 +484,13 @@ Rules:
     "references/owned/course-blueprint-v5.md",
     "references/authored/vraagtypen-en-opgaveontwerp.md",
     "references/authored/course-target-exercises.json"
+  ],
+  "exam_ingestion_contract": [
+    "references/SOURCE_OF_TRUTH.md",
+    "references/data/exercises/README.md",
+    "references/external/exam-questions.json",
+    "references/external/exams",
+    "references/reference-team-roadmap.md"
   ],
   "inspection_and_accountability": [
     "references/external/inspectie-standaarden.md",

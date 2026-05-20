@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "sprint_id": "EX-NS0",
+  "name": "Exam Ingestion North-Star Guidance",
+  "status": "planned",
+  "created_on": "2026-05-20",
+  "plan": "reports/sprints/EX-NS0-plan.md",
+  "baseline": "reports/sprints/EX-NS0-baseline.md",
+  "protected_reference_data_changes_allowed": false,
+  "lesson_output_mutation_allowed": false,
+  "human_review_required": false,
+  "lead_review_required": true,
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js reports/sprints/EX-NS0-plan.md",
+    "node build-scripts/sprints/check-sprint-bundle.js EX-NS0",
+    "node build-scripts/references/check-roadmap-version-index.js",
+    "node build-scripts/reports/validate-report-json.js",
+    "node build-scripts/sprints/check-sprint-bundle.js EX-NS0 --complete"
+  ],
+  "blocked_actions": [
+    "protected reference mutation",
+    "exam-ingestion overlay creation",
+    "lesson output mutation",
+    "target-exercise promotion",
+    "placeholder finalization",
+    "unit minting",
+    "CP-6 closure",
+    "Year-1 closure",
+    "student diagnostics",
+    "adaptive routing",
+    "mastery decisions",
+    "automatic sequencing",
+    "student-facing AI",
+    "summative use",
+    "PV projection",
+    "PV machine promotion"
+  ]
+}

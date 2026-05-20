@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-05-19T15:02:39.394Z
+Generated: 2026-05-20T14:16:31.208Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 1467
+Files indexed: 1471
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -105,7 +105,7 @@ Count: 59
 
 ## build scripts
 
-Count: 271
+Count: 272
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -341,6 +341,7 @@ Count: 271
 - build-scripts/reports/unresolved-refs.js
 - build-scripts/reports/validate-report-json.js
 - build-scripts/review-gates/check-cp6a-lesson-side-alignment.js
+- build-scripts/review-gates/check-cp6a-lesson-side-recheck.js
 - build-scripts/review-gates/check-gate-cp6-routing-decision.js
 - build-scripts/review-gates/check-r2-4-packet.js
 - build-scripts/review-gates/validate-gate.js
@@ -428,7 +429,7 @@ Count: 42
 
 ## validators
 
-Count: 76
+Count: 77
 
 - build-scripts/rag/validate-chunks.js
 - build-scripts/rag/validate-query-output.js
@@ -484,6 +485,7 @@ Count: 76
 - build-scripts/reports/check-reference-health.js
 - build-scripts/reports/validate-report-json.js
 - build-scripts/review-gates/check-cp6a-lesson-side-alignment.js
+- build-scripts/review-gates/check-cp6a-lesson-side-recheck.js
 - build-scripts/review-gates/check-gate-cp6-routing-decision.js
 - build-scripts/review-gates/check-r2-4-packet.js
 - build-scripts/review-gates/validate-gate.js
@@ -509,7 +511,7 @@ Count: 76
 
 ## references
 
-Count: 253
+Count: 254
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -558,6 +560,7 @@ Count: 253
 - references/data/source_manifest.json
 - references/data/source-document-registry.json
 - references/data/sprints/CP.6a-lesson-side-alignment.json
+- references/data/sprints/CP.6a-lesson-side-recheck.json
 - references/data/sprints/CP.6a.plan.json
 - references/data/sprints/CP.6a.result.json
 - references/data/sprints/GATE-CP6.plan.json
@@ -767,7 +770,7 @@ Count: 253
 
 ## reports
 
-Count: 629
+Count: 630
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -903,6 +906,7 @@ Count: 629
 - reports/reference-audits/empty-needs-audit.md
 - reports/reference-cli-coverage.md
 - reports/reference-planning/CP.6a-lesson-side-alignment.md
+- reports/reference-planning/CP.6a-lesson-side-recheck.md
 - reports/reference-planning/REF-CP6-blocker-routing.md
 - reports/reference-planning/REF-CP6-remediation-readiness.md
 - reports/reference-planning/REF-CT0-candidate-review-packet.md
@@ -1419,7 +1423,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 198
+Count: 199
 
 - .gitignore
 - BUILD-CHAPTER.md
@@ -1473,6 +1477,7 @@ Count: 198
 - docs/roadmaps/outdated/reference-team-roadmap-v2.50-ref-ct2-precision-dual-coding-audit.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.51-ref-cp6-remediation-readiness.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.52-gate-cp6-routing-decision.md
+- docs/roadmaps/outdated/reference-team-roadmap-v2.53-cp6a-lesson-side-alignment.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.6-s4-cp3-dry-run.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.7-cp3-closed.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.8-s4.1-conditions-calibrated.md

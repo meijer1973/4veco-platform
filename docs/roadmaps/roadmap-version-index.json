@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_on": "2026-05-19",
+  "updated_on": "2026-05-20",
   "generated_by": "manual-roadmap-versioning",
   "canonical_archive_directory": "docs/roadmaps/outdated",
   "current_operational_roadmaps": [
@@ -15,13 +15,14 @@
   "roadmaps": [
     {
       "roadmap_id": "references-team-roadmap",
-      "version": "v2.54-cp6a-lesson-side-recheck",
+      "version": "v2.55-exam-ingestion-north-star",
       "title": "References Team Roadmap",
       "status": "active",
       "path": "references/reference-team-roadmap.md",
       "owner": "references_team",
-      "updated_on": "2026-05-19",
+      "updated_on": "2026-05-20",
       "supersedes": [
+        "docs/roadmaps/outdated/reference-team-roadmap-v2.54-cp6a-lesson-side-recheck.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.53-cp6a-lesson-side-alignment.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.52-gate-cp6-routing-decision.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.51-ref-cp6-remediation-readiness.md",
@@ -75,7 +76,18 @@
         "knowledge/Exercise schema and quality/reference-team-roadmap Live version 28 April.md",
         "knowledge/Exercise schema and quality/roadmap-updated-repository-checked.md"
       ],
-      "notes": "Current operating roadmap after lesson-team L-CP6A fixed the CP.6a source/lesson mismatch with carried conditions and references recheck kept CP.6b target-exercise review as the active row."
+      "notes": "Current operating roadmap after adding official exam-question ingestion as the explicit cross-repo north star while keeping CP.6b target-exercise review as the active row."
+    },
+    {
+      "roadmap_id": "references-team-roadmap-v2.54",
+      "version": "v2.54-cp6a-lesson-side-recheck",
+      "title": "References Team Roadmap before exam-ingestion north-star update",
+      "status": "outdated",
+      "path": "docs/roadmaps/outdated/reference-team-roadmap-v2.54-cp6a-lesson-side-recheck.md",
+      "owner": "references_team",
+      "updated_on": "2026-05-20",
+      "superseded_by": "references/reference-team-roadmap.md",
+      "notes": "Snapshot archived before EX-NS0 made official exam-question ingestion and correction-model traceability explicit across platform and lesson guidance."
     },
     {
       "roadmap_id": "references-team-roadmap-v2.53",

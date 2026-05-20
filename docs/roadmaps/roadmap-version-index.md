@@ -1,6 +1,6 @@
 # Roadmap Version Index
 
-Updated: 2026-05-19
+Updated: 2026-05-20
 
 The JSON file is canonical for tooling:
 
@@ -12,12 +12,13 @@ docs/roadmaps/roadmap-version-index.json
 
 | Roadmap | Version | Path | Notes |
 |---|---|---|---|
-| References Team Roadmap | `v2.54-cp6a-lesson-side-recheck` | `references/reference-team-roadmap.md` | Current operating roadmap after lesson-team L-CP6A fixed the CP.6a source/lesson mismatch with carried conditions and references recheck kept CP.6b target-exercise review as the active row. |
+| References Team Roadmap | `v2.55-exam-ingestion-north-star` | `references/reference-team-roadmap.md` | Current operating roadmap after adding official exam-question ingestion as the explicit cross-repo north star while keeping CP.6b target-exercise review as the active row. |
 
 ## Outdated Archive
 
 | Roadmap | Version | Path | Superseded By |
 |---|---|---|---|
+| References Team Roadmap before exam-ingestion north-star update | `v2.54-cp6a-lesson-side-recheck` | `docs/roadmaps/outdated/reference-team-roadmap-v2.54-cp6a-lesson-side-recheck.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before CP.6a lesson-side recheck | `v2.53-cp6a-lesson-side-alignment` | `docs/roadmaps/outdated/reference-team-roadmap-v2.53-cp6a-lesson-side-alignment.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before CP.6a lesson-side alignment | `v2.52-gate-cp6-routing-decision` | `docs/roadmaps/outdated/reference-team-roadmap-v2.52-gate-cp6-routing-decision.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before GATE-CP6 routing decision | `v2.51-ref-cp6-remediation-readiness` | `docs/roadmaps/outdated/reference-team-roadmap-v2.51-ref-cp6-remediation-readiness.md` | `references/reference-team-roadmap.md` |

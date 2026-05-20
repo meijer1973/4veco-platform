@@ -2,37 +2,12 @@
 
 Generated: 2026-04-23
 Adopted main roadmap: 2026-04-25
-Last strategic update: 2026-05-20
+Last strategic update: 2026-05-19
 Roadmap ID: `references-team-roadmap`
-Roadmap version: `v2.55-exam-ingestion-north-star`
+Roadmap version: `v2.54-cp6a-lesson-side-recheck`
 Roadmap status: `active`
 Version index: `docs/roadmaps/roadmap-version-index.json`
 Scope: `references/`, `build-scripts/references/`, `build-scripts/reports/`, reference dashboards, and generated reference reports under `reports/`
-
-## Exam Ingestion North Star
-
-The long-term reference-platform goal is that a new official CvTE economics
-exam question can be ingested as an authoritative external exercise record,
-including prompt, source material, figures/tables/graphs, official correction
-model, point allocation, and answer-construction requirements.
-
-For each ingested exam question, the platform must be able to:
-
-1. decompose the question into required micro-teaching units;
-2. distinguish content concepts, calculation operations, graphical operations,
-   source-reading operations, reasoning operations, and answer-writing
-   operations;
-3. compare those requirements against the existing MTU registry and
-   procedure/visual registry;
-4. classify gaps as existing-unit mapping, missing unit, merge/split candidate,
-   source-annex extraction gap, answer-model extraction gap, or defer;
-5. produce a lesson-build handoff showing what a paragraph must teach for
-   students to answer the exam question according to the official correction
-   model.
-
-Do not mint units from syllabus prose alone. Exam questions, official
-correction models, and reviewed target exercises are stronger evidence than
-abstract syllabus descriptions.
 
 ## Sprint Ledger
 
@@ -48,12 +23,7 @@ legacy bundles only.
 | CP.6c | Year-1 MTU Backfill Classification | no | Planned after CP.6b. Classify the nine Year-1 backfill candidates as true missing unit, existing-unit mapping, merge candidate, or defer candidate before any CLI-backed mutation sprint. |
 | CP.6d | Book 1 Graph-Heavy Evidence Upgrade | no | Planned after CP.6c. Upgrade current Part A evidence for graph-heavy records, and Part B evidence where companion material exists, is used as evidence, or is in sprint scope. Legacy quality-ref alone is not enough for CP-6 closure. |
 | CP.6e | Focused 1.1.3 Part A Re-Review | no | Planned after CP.6d. Re-review `1.1.3` Part A and clear or explicitly fail the remaining `FLAG`; unconditioned CP-6 closure remains blocked while the flag remains open. |
-| EX-0 | Exam Ingestion Contract Design | no | FUTURE DESIGN SPRINT after CP.6e. Define overlay-first schema and review procedure for official exam question, source annex, official answer model, scoring rules, MTU decomposition, graph/source operations, and answer-writing operations. No protected mutation, no external-source mutation, no unit minting, and no student/product authorization. |
-| EX-1 | Exam Source Annex And Answer Model Pilot | no | FUTURE PILOT after EX-0. Ingest three VWO exam-question overlays as a bounded pilot: one calculation-heavy, one graph/source-heavy, and one reasoning/answer-model-heavy. Mark source-annex and answer-model gaps explicitly. |
-| EX-2 | Exam-to-MTU Mapping Review Gate | no | FUTURE REVIEW GATE after EX-1. Classify every pilot exam requirement as existing MTU, weak MTU, missing MTU, merge/split candidate, operation-registry need, PV/graph need, answer-skill need, source-annex gap, answer-model extraction gap, or defer. No mutation before human review. |
-| EX-3 | Exam Coverage Dashboard | no | FUTURE REPORTING SPRINT after EX-2. Add JSON/Markdown coverage views for exam-ingestion state: prompt/source/correction-model coverage, graph/table/figure coverage, MTU coverage, answer-operation coverage, target-exercise candidates, blockers, and proof required to close. |
-| EX-4 | CLI-Backed MTU / Operation / Answer-Skill Mutation | no | FUTURE MUTATION SPRINT after EX-2/EX-3 evidence and explicit human authorization. Add only reviewed MTUs, operation-registry entries, or answer-skill records through governed CLI scripts with mutation logs and validators. |
-| REF-CT3 | Year-2 Skeleton | no | Planned after the CP.6a-CP.6e remediation lanes and the bounded EX-0/EX-1/EX-2 exam-ingestion pilot track produce enough evidence for a responsible CP-6 closure proposal, explicit hold, or Year-2 anchoring handoff. Prepare Year-2 skeleton with CvTE-vwo anchor status and `concept_orphan` flags for CP-7; do not treat the rough three-year blueprint as authoritative. |
+| REF-CT3 | Year-2 Skeleton | no | Planned after the CP.6a-CP.6e remediation lanes produce enough evidence for a responsible CP-6 closure proposal or explicit hold. Prepare Year-2 skeleton with CvTE-vwo anchor status and `concept_orphan` flags for CP-7; do not treat the rough three-year blueprint as authoritative. |
 | R7.6 | RAG Quality Hardening | no | Planned. Close R7.4 follow-ups, split target-exercise chunks, expand retrieval eval coverage, backfill evidence anchors, and improve approved/pending/diagnostic labels. |
 | R14.1 | Curriculum Versioning | no | Planned earlier in the sequence. Track active v5, archived v4, the non-authoritative three-year prototype, built lesson outputs, and migrated/not-final target exercises so reports and retrieval do not silently mix incompatible source states. |
 | Sprint 12 | Exam And Target Exercise Decomposition Backfill | no | Planned after schema/overlay work. Backfill exercise metadata for the 349 exam questions and 49 target exercises through protected-source-safe overlays. |
@@ -65,7 +35,6 @@ legacy bundles only.
 
 | Sprint | Name | Completed | Current State |
 |--------|------|-----------|---------------|
-| EX-NS0 | Exam Ingestion North-Star Guidance | yes | Completed as a cross-repo guidance and roadmap update. Added the official exam-question ingestion north star to platform guidance, source-of-truth rules, exercise-overlay policy, paragraph-build guidance, platform/lesson maps, and both roadmaps. Inserted future EX-0 through EX-4 reference lanes and L-EX0/L-EX1 lesson lanes without changing protected references, creating exam-ingestion overlays, mutating lesson output, minting units, promoting target exercises, closing CP-6, or closing Year 1. |
 | CP.6a | Book 1 Chapter 1.3 Lesson-Side Alignment | yes | Completed as a non-mutating alignment-plan sprint, then rechecked after lesson-team `L-CP6A`. Initial CP.6a recorded that active v5 `1.3.2 Marktevenwicht` and `1.3.3 Verschuivingen en nieuw evenwicht` did not match then-current lesson-side `1.3.2 Kostenstructuren` and `1.3.3 Opbrengsten`; L-CP6A lesson commit `1aa63e4f0968c39141c1a04809f6410b5435ee34` and platform commit `6e2c06684e0c9b782cf005027a3b2ef3fd9fd230` now fix that source/lesson mismatch with carried conditions. Recheck evidence: `references/data/sprints/CP.6a-lesson-side-recheck.json` and `reports/reference-planning/CP.6a-lesson-side-recheck.md`. Costs/revenue material is preserved for Book 2 survival, target exercises remain migrated/placeholders, and CP-6/Year 1 remain open. No protected mutation, target-exercise promotion, placeholder finalization, unit minting, CP-6 closure, or Year-1 closure was authorized. |
 | GATE-CP6 | Year-1 Paragraph Coverage Human Review | yes | Completed as a non-closing human routing gate. Recorded all nine CP-6 answers in `reports/review-gates/GATE-CP6-year-1-paragraph-coverage/human-interview.md`, produced `gate-routing-decision.*`, and opened five bounded remediation lanes: CP.6a lesson-side alignment, CP.6b target-exercise review, CP.6c MTU backfill classification, CP.6d graph-heavy evidence upgrade, and CP.6e focused `1.1.3` Part A re-review. CP-6 and Year 1 remain open; no protected mutation, lesson-output mutation, target-exercise promotion, placeholder finalization, unit minting, closure proposal, or closure record was authorized. |
 | REF-CP6 | Year-1 CP-6 Remediation And Review Readiness | yes | Completed as a non-mutating review-readiness sprint. Routed all REF-CT2 blockers into explicit decision lanes, preserved 12 active-v5 Book 1 records with 0 CP-6 quality-ready records, 3 placeholders, 2 source/lesson topic mismatches, 9 Year-1 backfill candidates, 9 legacy quality-ref records, 1 remaining `1.1.3` Part A `FLAG`, and 9 migrated target-exercise records needing final review. Prepared `GATE-CP6-year-1-paragraph-coverage` review packet with nine planned questions and a future interview protocol. CP-6 and Year 1 remain open; no human interview, gate closure, protected mutation, lesson-output mutation, target-exercise promotion, or placeholder finalization was authorized. |
@@ -227,8 +196,6 @@ Update 2026-05-19: `GATE-CP6 Year-1 Paragraph Coverage Human Review` completed a
 Update 2026-05-19: `CP.6a Book 1 Chapter 1.3 Lesson-Side Alignment` completed as a non-mutating alignment-plan sprint. It records the exact active-v5 mismatch, identifies existing lesson-side `1.4.1`/`1.4.2` material as the likely equivalent for active-v5 `1.3.2`/`1.3.3` while carrying forward its `PASS WITH FLAGS` state, and records that current Book 1 `Kostenstructuren`/`Opbrengsten` belong to active-v5 Book 2. The source/lesson mismatch is not resolved yet; it requires a later authorized lesson-side regeneration/remediation sprint before CP-6 closure can count it as fixed. The next active remediation lane is CP.6b target-exercise review.
 
 Update 2026-05-19: Lesson team completed `L-CP6A Book 1 Chapter 1.3 v5 Alignment Remediation` and pushed lesson commit `1aa63e4f0968c39141c1a04809f6410b5435ee34` with platform commit `6e2c06684e0c9b782cf005027a3b2ef3fd9fd230`. References recheck records the CP.6a source/lesson mismatch as fixed with carried conditions: active Chapter 1.3 now contains `1.3.2 Marktevenwicht`, `1.3.3 Verschuivingen en nieuw evenwicht`, and a rescoped `1.3.4 Gemengde opgaven`; costs/revenue material is archived for Book 2 survival. Local recheck passed Chapter 1.3 validation, Book 1 health `26/26`, print scope `12/12`, and v5 target-exercise count `54` with `12/12/14/16`. CP-6 and Year 1 remain open; CP.6b, CP.6c, CP.6d, and CP.6e remain required before any closure proposal.
-
-Update 2026-05-20: `EX-NS0 Exam Ingestion North-Star Guidance` completed as a cross-repo roadmap/guidance update. Official exam-question ingestion is now explicit as the shared end-state: prompt, source annexes, official correction model, point allocation, answer-construction requirements, operation decomposition, MTU mapping, and lesson-build handoff must become separately traceable. Future reference work now inserts EX-0 through EX-4 after CP.6e and before REF-CT3; lesson work now inserts L-EX0/L-EX1 before L2.4-TEA. This update authorizes no protected reference mutation, no exam-ingestion overlay creation, no lesson-output mutation, no target-exercise promotion, no unit minting, no CP-6 closure, and no Year-1 closure.
 
 Compatibility decisions:
 
@@ -1827,18 +1794,8 @@ Sprints:
 - `CP.6c` planned: Year-1 MTU backfill classification before mutation.
 - `CP.6d` planned: Book 1 graph-heavy evidence upgrade.
 - `CP.6e` planned: focused `1.1.3` Part A re-review.
-- `EX-0` planned after CP.6e: exam-ingestion contract design for prompt,
-  source-annex, answer-model, scoring-rule, operation, MTU, and lesson-build
-  handoff overlays.
-- `EX-1` planned after EX-0: three-question source-annex and answer-model
-  extraction pilot.
-- `EX-2` planned after EX-1: human-reviewed exam-to-MTU mapping gate before
-  any mutation.
-- `EX-3` and `EX-4` planned after the pilot/review evidence: coverage
-  dashboards first, CLI-backed mutation only after explicit review authority.
 - `Content Track 3` planned: Year-2 skeleton and `GATE-CP7-year-2-anchoring`,
-  after CP-6 remediation and the bounded exam-ingestion pilot track make the
-  Year-1 hold explicit enough to guide skeleton work.
+  after CP-6 remediation evidence makes the Year-1 hold explicit enough to guide skeleton work.
 
 ### Phase R14: Minimal Curriculum Versioning
 
@@ -1951,11 +1908,6 @@ CP.6b Year-1 target-exercise review
 CP.6c Year-1 MTU backfill classification
 CP.6d Book 1 graph-heavy evidence upgrade
 CP.6e Focused 1.1.3 Part A re-review
-EX-0 Exam ingestion contract design
-EX-1 Exam source annex and answer model pilot
-EX-2 Exam-to-MTU mapping review gate
-EX-3 Exam coverage dashboard
-EX-4 CLI-backed MTU / operation / answer-skill mutation, only after explicit review authority
 REF-CT3 Year-2 skeleton (CP-7)
 R7.6 RAG quality hardening
 R14.1 Minimal curriculum versioning
@@ -1969,7 +1921,7 @@ Do not invert this order.
 
 ## Immediate Next Sprint
 
-Next action: run `CP.6b Year-1 Target-Exercise Review`. CP.6a plus lesson-team L-CP6A now clears the `1.3.2`/`1.3.3` source/lesson mismatch with carried conditions, but CP-6 cannot close from that evidence alone. CP.6b must review the nine migrated Book 1 target-exercise records and design/review the three gemengde-opgaven integration target exercises before any `reviewed_final` or final-coverage claim. It must not mutate protected references, promote target exercises, finalize placeholders, close CP-6, close Year 1, or mint units. The remaining CP-6 lanes after CP.6b are CP.6c MTU backfill classification, CP.6d graph-heavy evidence upgrade, and CP.6e focused `1.1.3` Part A re-review. After CP.6e, the next inserted strategic lane is EX-0 through EX-2: design and pilot official exam-question ingestion with source-annex and answer-model traceability before Year-2 skeleton work depends on exam-operation claims. The remaining blocks on diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, PV projection, and PV machine promotion remain in force.
+Next action: run `CP.6b Year-1 Target-Exercise Review`. CP.6a plus lesson-team L-CP6A now clears the `1.3.2`/`1.3.3` source/lesson mismatch with carried conditions, but CP-6 cannot close from that evidence alone. CP.6b must review the nine migrated Book 1 target-exercise records and design/review the three gemengde-opgaven integration target exercises before any `reviewed_final` or final-coverage claim. It must not mutate protected references, promote target exercises, finalize placeholders, close CP-6, close Year 1, or mint units. The remaining CP-6 lanes after CP.6b are CP.6c MTU backfill classification, CP.6d graph-heavy evidence upgrade, and CP.6e focused `1.1.3` Part A re-review. The remaining blocks on diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, PV projection, and PV machine promotion remain in force.
 
 R4.5 has closed the bounded micro-unit mutation lane, CP-1 has closed the non-mutating schema audit gate as `pass_with_conditions`, CP-2 has closed the owned-source scope gate as `pass_with_conditions`, R9.1 has registered the owned-source surfaces, R9.2 has completed owned-content projection, S4/CP-3 has closed as `pass_with_conditions`, S4.1 has implemented the CP-3 condition artifacts, RX.1 has prepared the non-mutating representation-operation inventory, `GATE-RX1-representation-unit-scope` has closed as `pass_with_conditions`, RX.2/GATE-RX2 has added the bounded six-unit first lane through CLI-only mutation, RX.2b/GATE-RX2b has added the bounded seven-unit graphical foundation lane through CLI-only mutation while holding `A71`, R8.1 has added the scoped internal QC issue model, S6 has created the source-document registry MVP under `references/data/`, S7/CP-4 has closed as `pass_with_conditions`, RX.3a/RX.3b/RX.4 have applied producer and elasticity representation lanes through CLI-only mutation, PV.3 through PV.6 have completed pilot templates, projection proof, and coverage dashboards, RX.5 has added representation-operation reports, RX.6 has completed skill-tree generator readiness, PV.7 has closed the machine-promotion review gate without authorizing promotion, PV.8 has completed the promotion-pipeline design, PV-G4 has closed as `pass_with_conditions` with two reconciled lesson-team proofs, S8 has created the bounded internal misconception registry under `references/data/`, S9 has closed CP-5 as a D04 decision-only gate, and S9a has applied the D04 retirement through CLI-only mutation.
 

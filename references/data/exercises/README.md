@@ -21,3 +21,14 @@ Rules:
 - Source annex gaps must be tracked in `source-annex-gap-log.json` before any broad Tier A overlay backfill.
 - Use `scaffolding-calibration.md` when assigning `verbal_level`, `visual_stage`, `fading_position`, and `dual_coding_present`.
 - Product-boundary warnings are mandatory in every overlay record.
+
+Exam-question overlays must distinguish prompt metadata from answer-model
+metadata. A question is not fully ingestible until source annexes and official
+correction-model steps are represented or explicitly marked as gaps.
+
+For future exam-ingestion overlays, keep the prompt, source material, figures,
+tables, graph objects, official answer model, point rules, accepted
+alternatives, precision/unit requirements, and answer-writing operations
+separately traceable. Overlay records may classify gaps, but they do not mutate
+`references/external/`, mint MTUs, promote target exercises, or authorize
+student diagnostics/adaptive/summative use.

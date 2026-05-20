@@ -27,6 +27,7 @@ Path reliability:
 | Which book/chapter/paragraph files are published now? | `4veco-lessen` |
 | Are references, validators, roadmaps, or sprint reports current? | `4veco-platform` |
 | Is a copied `shared/` engine file authoritative? | `4veco-platform` |
+| How should official exam-question ingestion, source annexes, correction models, or answer-model decomposition be handled? | `AGENTS.md`, `references/SOURCE_OF_TRUTH.md`, `references/data/exercises/README.md`, `references/reference-team-roadmap.md` |
 
 Common mistakes:
 
@@ -35,6 +36,7 @@ Common mistakes:
 - Treating generated or copied `shared/` files in `4veco-lessen` as the source of truth for engine code.
 - Treating platform templates, source data, or roadmap entries as proof that student-facing output has been generated.
 - Building a Book 1-specific status system instead of using repository maps and the generated file inventory.
+- Treating an exam prompt as fully ingested before source annexes and the official correction model are separately traceable.
 
 Useful entry points:
 
