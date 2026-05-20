@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-05-20T14:16:31.208Z
+Generated: 2026-05-20T14:41:09.280Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 1471
+Files indexed: 1482
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -511,7 +511,7 @@ Count: 77
 
 ## references
 
-Count: 254
+Count: 256
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -563,6 +563,8 @@ Count: 254
 - references/data/sprints/CP.6a-lesson-side-recheck.json
 - references/data/sprints/CP.6a.plan.json
 - references/data/sprints/CP.6a.result.json
+- references/data/sprints/EX-NS0.plan.json
+- references/data/sprints/EX-NS0.result.json
 - references/data/sprints/GATE-CP6.plan.json
 - references/data/sprints/GATE-CP6.result.json
 - references/data/sprints/PV-G4.plan.json
@@ -770,7 +772,7 @@ Count: 254
 
 ## reports
 
-Count: 630
+Count: 638
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1191,6 +1193,14 @@ Count: 630
 - reports/sprints/CP.6a-plan.md
 - reports/sprints/CP.6a-planning-review.md
 - reports/sprints/CP.6a-result.md
+- reports/sprints/EX-NS0-baseline.md
+- reports/sprints/EX-NS0-diff-summary.md
+- reports/sprints/EX-NS0-lead-review-assignment.md
+- reports/sprints/EX-NS0-lead-review-corrections.md
+- reports/sprints/EX-NS0-lead-review-round1.md
+- reports/sprints/EX-NS0-lead-review-round2.md
+- reports/sprints/EX-NS0-plan.md
+- reports/sprints/EX-NS0-result.md
 - reports/sprints/example-result.md
 - reports/sprints/GATE-CP6-baseline.md
 - reports/sprints/GATE-CP6-diff-summary.md
@@ -1423,7 +1433,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 199
+Count: 200
 
 - .gitignore
 - BUILD-CHAPTER.md
@@ -1478,6 +1488,7 @@ Count: 199
 - docs/roadmaps/outdated/reference-team-roadmap-v2.51-ref-cp6-remediation-readiness.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.52-gate-cp6-routing-decision.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.53-cp6a-lesson-side-alignment.md
+- docs/roadmaps/outdated/reference-team-roadmap-v2.54-cp6a-lesson-side-recheck.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.6-s4-cp3-dry-run.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.7-cp3-closed.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.8-s4.1-conditions-calibrated.md

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-20T14:15:08.294Z",
+  "generatedAt": "2026-05-20T14:41:09.247Z",
   "internalOnly": true,
   "teams": [
     {
@@ -160,20 +160,13 @@
           "generated": "2026-04-23",
           "updated": "",
           "scope": "`references/`, `build-scripts/references/`, `build-scripts/reports/`, reference dashboards, and generated reference reports under `reports/`",
-          "summary": "References Team Roadmap Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Last strategic update: 2026-05-20 Roadmap ID: references-team-roadmap Roadmap version: v2.55-exam-ingestion-north-star Roadmap status: active Version index: docs/roadmaps/roadmap-version-index.json Scope: references/, build-scripts/references/, build-scripts/reports/, reference dashboards, and generated reference reports under reports/ Exam Ingestion North Star The long-term reference-platform goal is that a new official CvTE economics...",
+          "summary": "References Team Roadmap Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Last strategic update: 2026-05-20 Roadmap ID: references-team-roadmap Roadmap version: v2.56-cp6b-target-exercise-review Roadmap status: active Version index: docs/roadmaps/roadmap-version-index.json Scope: references/, build-scripts/references/, build-scripts/reports/, reference dashboards, and generated reference reports under reports/ Exam Ingestion North Star The long-term reference-platform goal is that a new official CvTE economic...",
           "sprints": [
-            {
-              "sprint": "CP.6b",
-              "name": "Year-1 Target-Exercise Review",
-              "completed": "no",
-              "currentState": "**ACTIVE / REMEDIATION LANE 2 AFTER CP.6a RECHECK.** Lesson-side L-CP6A fixed the `1.3.2`/`1.3.3` source/lesson mismatch with carried conditions, but target-exercise evidence is still open. Review the nine migrated Book 1 target exercises and design/review the three gemengde-opgaven integration target exercises before any `reviewed_final` or final-coverage claim. No protected mutation, target-exercise promotion, placeholder finalization, CP-6 closure, or Year-1 closure in this planning/review lane.",
-              "exitGate": ""
-            },
             {
               "sprint": "CP.6c",
               "name": "Year-1 MTU Backfill Classification",
               "completed": "no",
-              "currentState": "Planned after CP.6b. Classify the nine Year-1 backfill candidates as true missing unit, existing-unit mapping, merge candidate, or defer candidate before any CLI-backed mutation sprint.",
+              "currentState": "**ACTIVE / REMEDIATION LANE 3 AFTER CP.6b.** CP.6b recorded the non-final target-exercise review/design packet: nine migrated records remain non-final, three gemengde-opgaven draft designs need later teacher-learning-quality review, and no registry mutation or placeholder finalization occurred. Classify the nine Year-1 backfill candidates as true missing unit, existing-unit mapping, merge candidate, or defer candidate before any CLI-backed mutation sprint.",
               "exitGate": ""
             },
             {
@@ -272,6 +265,13 @@
               "name": "Re-Evaluate R10-R13 Product Surfaces",
               "completed": "no",
               "currentState": "Blocked. Diagnostics, adaptive routing, student-facing AI, teacher cockpit deployment, automatic sequencing, mastery, and summative uses remain out of scope until data-quality gates justify them.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "CP.6b",
+              "name": "Year-1 Target-Exercise Review",
+              "completed": "yes",
+              "currentState": "Completed as a non-mutating target-exercise review/design sprint. Recorded 12 active-v5 Book 1 target-exercise records, 9 migrated records needing explicit v5 review artifacts, 3 placeholder records with draft gemengde-opgaven integration designs, 0 reviewed-final records, 0 target-exercise promotions, and 0 placeholder finalizations. Output: `references/data/sprints/CP.6b-target-exercise-review.json` and `reports/reference-planning/CP.6b-target-exercise-review.md`. CP-6 and Year 1 remain open; CP.6c MTU backfill classification, CP.6d graph-heavy evidence upgrade, and CP.6e focused `1.1.3` Part A re-review remain required before any responsible closure proposal.",
               "exitGate": ""
             },
             {
@@ -783,18 +783,10 @@
       ],
       "sprints": [
         {
-          "sprint": "CP.6b",
-          "name": "Year-1 Target-Exercise Review",
-          "completed": "no",
-          "currentState": "**ACTIVE / REMEDIATION LANE 2 AFTER CP.6a RECHECK.** Lesson-side L-CP6A fixed the `1.3.2`/`1.3.3` source/lesson mismatch with carried conditions, but target-exercise evidence is still open. Review the nine migrated Book 1 target exercises and design/review the three gemengde-opgaven integration target exercises before any `reviewed_final` or final-coverage claim. No protected mutation, target-exercise promotion, placeholder finalization, CP-6 closure, or Year-1 closure in this planning/review lane.",
-          "exitGate": "",
-          "roadmap": "References roadmap"
-        },
-        {
           "sprint": "CP.6c",
           "name": "Year-1 MTU Backfill Classification",
           "completed": "no",
-          "currentState": "Planned after CP.6b. Classify the nine Year-1 backfill candidates as true missing unit, existing-unit mapping, merge candidate, or defer candidate before any CLI-backed mutation sprint.",
+          "currentState": "**ACTIVE / REMEDIATION LANE 3 AFTER CP.6b.** CP.6b recorded the non-final target-exercise review/design packet: nine migrated records remain non-final, three gemengde-opgaven draft designs need later teacher-learning-quality review, and no registry mutation or placeholder finalization occurred. Classify the nine Year-1 backfill candidates as true missing unit, existing-unit mapping, merge candidate, or defer candidate before any CLI-backed mutation sprint.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -907,6 +899,14 @@
           "name": "Re-Evaluate R10-R13 Product Surfaces",
           "completed": "no",
           "currentState": "Blocked. Diagnostics, adaptive routing, student-facing AI, teacher cockpit deployment, automatic sequencing, mastery, and summative uses remain out of scope until data-quality gates justify them.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "CP.6b",
+          "name": "Year-1 Target-Exercise Review",
+          "completed": "yes",
+          "currentState": "Completed as a non-mutating target-exercise review/design sprint. Recorded 12 active-v5 Book 1 target-exercise records, 9 migrated records needing explicit v5 review artifacts, 3 placeholder records with draft gemengde-opgaven integration designs, 0 reviewed-final records, 0 target-exercise promotions, and 0 placeholder finalizations. Output: `references/data/sprints/CP.6b-target-exercise-review.json` and `reports/reference-planning/CP.6b-target-exercise-review.md`. CP-6 and Year 1 remain open; CP.6c MTU backfill classification, CP.6d graph-heavy evidence upgrade, and CP.6e focused `1.1.3` Part A re-review remain required before any responsible closure proposal.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -1487,8 +1487,8 @@
           "roadmap": "References roadmap"
         }
       ],
-      "completedCount": 72,
-      "openCount": 16
+      "completedCount": 73,
+      "openCount": 15
     },
     {
       "id": "lessen",

@@ -1,0 +1,925 @@
+{
+  "schema_version": 1,
+  "sprint_id": "CP.6b",
+  "generated_on": "2026-05-20",
+  "generated_by": "build-scripts/references/build-cp6b-target-exercise-review.js",
+  "status": "target_exercise_review_recorded_not_final",
+  "authority_level": "non_mutating_year1_target_exercise_review",
+  "cp6_closed": false,
+  "year1_closed": false,
+  "protected_reference_data_changed": false,
+  "lesson_output_changed": false,
+  "target_exercise_promotions": false,
+  "placeholder_finalization": false,
+  "unit_minting": false,
+  "no_protected_mutation_authorized": true,
+  "no_lesson_output_mutation_authorized": true,
+  "no_target_exercise_promotion_authorized": true,
+  "no_placeholder_finalization_authorized": true,
+  "no_unit_minting_authorized": true,
+  "source_paths": {
+    "target_exercises": "references/authored/course-target-exercises.json",
+    "blueprint": "references/owned/course-blueprint-v5.md",
+    "ref_ct1": "references/data/sprints/REF-CT1-year1-coverage.json",
+    "ref_ct2": "references/data/sprints/REF-CT2-precision-dual-coding-audit.json",
+    "cp6a_recheck": "references/data/sprints/CP.6a-lesson-side-recheck.json"
+  },
+  "repository_state": {
+    "platform_head_before_cp6b_commit": "624c02c38ebd4380b2c1a95f02c34b5e83170a5e",
+    "lesson_head_at_generation": "918398305d6b285f3f9ca87db1050dbb91fe2c6b"
+  },
+  "summary": {
+    "book1_record_count": 12,
+    "migrated_needs_review_count": 9,
+    "placeholder_needs_review_count": 3,
+    "reviewed_final_count": 0,
+    "integration_design_count": 3,
+    "records_promoted_count": 0,
+    "placeholders_finalized_count": 0,
+    "ref_ct1_missing_flag_count": 9,
+    "ref_ct2_cp6_quality_ready_count": 0,
+    "cp6a_lesson_mismatch_resolved": true
+  },
+  "decision": {
+    "status": "non_final_review_packet_ready",
+    "final_year1_coverage_allowed_now": false,
+    "cp6_closure_allowed_now": false,
+    "registry_mutation_allowed_now": false,
+    "note": "CP.6b records review/design evidence only; later review and governed mutation are required before any reviewed_final or final coverage claim."
+  },
+  "migrated_records": [
+    {
+      "paragraph_id": "1.1.1",
+      "paragraph_title": "Schaarste en economisch denken",
+      "paragraph_kind": "theory",
+      "source_ref": "references/owned/course-blueprint-v5.md §1.1.1",
+      "current_record_status": "migrated_from_v4_needs_v5_review",
+      "v5_migration": {
+        "source_status": "migrated_from_v4_needs_v5_review",
+        "from_v4_id": "1.1.1",
+        "related_v4_ids": [],
+        "review_required_before_final": true
+      },
+      "target_exercise": {
+        "context": "A farmer has 10 hectares of land. He can grow wheat (profit €500/ha) or corn (profit €350/ha). He decides to grow wheat on all 10 hectares.",
+        "subquestions": [
+          {
+            "label": "a",
+            "prompt": "What is his revenue from wheat?"
+          },
+          {
+            "label": "b",
+            "prompt": "What are his opportunity costs?"
+          },
+          {
+            "label": "c",
+            "prompt": "A neighbour uses 10 hectares for both: 6 ha wheat and 4 ha corn. Calculate her total profit. Did she make a better choice? Explain using the concept of scarcity."
+          }
+        ]
+      },
+      "lesson_goals": [
+        "Define scarcity as the core economic problem",
+        "Explain that every choice has an opportunity cost",
+        "Calculate opportunity costs in simple scenarios",
+        "Recognise trade-offs in everyday decisions"
+      ],
+      "required_skills": [
+        "A43",
+        "B01",
+        "B02"
+      ],
+      "prior_knowledge_assumed": [],
+      "new_skills_introduced": [
+        "A43",
+        "B01",
+        "B02"
+      ],
+      "missing_units_flagged": [],
+      "exam_codes": [],
+      "review_outcome": "valid_migration_evidence_not_reviewed_final",
+      "may_promote_to_reviewed_final_now": false,
+      "may_count_as_final_coverage_claim_now": false,
+      "registry_mutation_authorized": false,
+      "required_future_artifacts": [
+        "teacher-learning-quality review of the target exercise against active-v5 lesson goals",
+        "operation decomposition into content, calculation, graph/source-reading, reasoning, and answer-writing requirements",
+        "required-unit check against the current MTU registry",
+        "explicit review artifact before any reviewed_final promotion proposal"
+      ],
+      "review_notes": [
+        "Current registry required_skills: A43, B01, B02.",
+        "Introduces units: A43, B01, B02."
+      ]
+    },
+    {
+      "paragraph_id": "1.1.2",
+      "paragraph_title": "Percentages en indexcijfers",
+      "paragraph_kind": "theory",
+      "source_ref": "references/owned/course-blueprint-v5.md §1.1.2",
+      "current_record_status": "migrated_from_v4_needs_v5_review",
+      "v5_migration": {
+        "source_status": "migrated_from_v4_needs_v5_review",
+        "from_v4_id": "1.1.2",
+        "related_v4_ids": [],
+        "review_required_before_final": true
+      },
+      "target_exercise": {
+        "context": "Practice with percentage changes and index numbers across price data.",
+        "subquestions": [
+          {
+            "label": "a",
+            "prompt": "The price of a bicycle rises from €800 to €920. Calculate the percentage change."
+          },
+          {
+            "label": "b",
+            "prompt": "In 2023, a standard shopping basket costs €150. In 2025 the same basket costs €162. The base year is 2023 (index = 100). Calculate the price index for 2025."
+          },
+          {
+            "label": "c",
+            "prompt": "In 2026 the index rises to 112. Calculate the price increase from 2025 to 2026 in percent."
+          },
+          {
+            "label": "d",
+            "prompt": "A student claims: 'The index went from 108 to 112, so inflation is 4%.' Explain why this is wrong and calculate the correct figure."
+          }
+        ]
+      },
+      "lesson_goals": [
+        "Calculate percentage changes using (new − old) / old × 100",
+        "Calculate and interpret index numbers",
+        "Distinguish between index point change and percentage change",
+        "Apply these skills to economic data (prices, wages, production)"
+      ],
+      "required_skills": [
+        "A38",
+        "A39",
+        "D31"
+      ],
+      "prior_knowledge_assumed": [],
+      "new_skills_introduced": [
+        "A38",
+        "A39",
+        "D31"
+      ],
+      "missing_units_flagged": [],
+      "exam_codes": [],
+      "review_outcome": "valid_migration_evidence_not_reviewed_final",
+      "may_promote_to_reviewed_final_now": false,
+      "may_count_as_final_coverage_claim_now": false,
+      "registry_mutation_authorized": false,
+      "required_future_artifacts": [
+        "teacher-learning-quality review of the target exercise against active-v5 lesson goals",
+        "operation decomposition into content, calculation, graph/source-reading, reasoning, and answer-writing requirements",
+        "required-unit check against the current MTU registry",
+        "explicit review artifact before any reviewed_final promotion proposal"
+      ],
+      "review_notes": [
+        "Current registry required_skills: A38, A39, D31.",
+        "Introduces units: A38, A39, D31."
+      ]
+    },
+    {
+      "paragraph_id": "1.1.3",
+      "paragraph_title": "Grafieken en tabellen",
+      "paragraph_kind": "theory",
+      "source_ref": "references/owned/course-blueprint-v5.md §1.1.3",
+      "current_record_status": "migrated_from_v4_needs_v5_review",
+      "v5_migration": {
+        "source_status": "migrated_from_v4_needs_v5_review",
+        "from_v4_id": "1.1.3",
+        "related_v4_ids": [],
+        "review_required_before_final": true
+      },
+      "target_exercise": {
+        "context": "The table below shows the number of ice creams sold at different prices: P=€1.00→Q=500, €1.50→400, €2.00→300, €2.50→200, €3.00→100.",
+        "subquestions": [
+          {
+            "label": "a",
+            "prompt": "Draw this as a graph with price on the vertical axis and quantity on the horizontal axis."
+          },
+          {
+            "label": "b",
+            "prompt": "Read from your graph: how many ice creams are sold at €1.75?"
+          },
+          {
+            "label": "c",
+            "prompt": "A newspaper writes: 'Ice cream sales dropped by 50%.' Looking at the table, between which two prices could this have happened? Explain."
+          }
+        ]
+      },
+      "lesson_goals": [
+        "Read values from graphs and tables",
+        "Draw a graph from tabular data with correct axes",
+        "Interpolate between data points",
+        "Critically interpret claims using data"
+      ],
+      "required_skills": [
+        "A38"
+      ],
+      "prior_knowledge_assumed": [
+        "A38"
+      ],
+      "new_skills_introduced": [],
+      "missing_units_flagged": [
+        "Draw a (P,Q) graph from a table with the economist's axis convention (P vertical, Q horizontal) (A-domain candidate)",
+        "Read values from a (P,Q) graph; interpolate between data points (A-domain candidate)"
+      ],
+      "exam_codes": [],
+      "review_outcome": "valid_migration_evidence_not_reviewed_final",
+      "may_promote_to_reviewed_final_now": false,
+      "may_count_as_final_coverage_claim_now": false,
+      "registry_mutation_authorized": false,
+      "required_future_artifacts": [
+        "teacher-learning-quality review of the target exercise against active-v5 lesson goals",
+        "operation decomposition into content, calculation, graph/source-reading, reasoning, and answer-writing requirements",
+        "required-unit check against the current MTU registry",
+        "explicit review artifact before any reviewed_final promotion proposal",
+        "CP.6c classification of missing_units_flagged before final target-exercise closure",
+        "CP.6e focused Part A re-review because the paragraph still carries the graph/table Part A flag"
+      ],
+      "review_notes": [
+        "Contains missing-unit flags; CP.6c must classify them before final coverage can be claimed.",
+        "Current registry required_skills: A38.",
+        "Assumes prior units: A38.",
+        "Graph/table foundation remains coupled to the CP.6e Part A flag."
+      ]
+    },
+    {
+      "paragraph_id": "1.2.1",
+      "paragraph_title": "Individuele vraag",
+      "paragraph_kind": "theory",
+      "source_ref": "references/owned/course-blueprint-v5.md §1.2.1",
+      "current_record_status": "migrated_from_v4_needs_v5_review",
+      "v5_migration": {
+        "source_status": "migrated_from_v4_needs_v5_review",
+        "from_v4_id": "1.2.1",
+        "related_v4_ids": [],
+        "review_required_before_final": true
+      },
+      "target_exercise": {
+        "context": "Lisa loves pizza. She is willing to pay €8 for her first pizza, €6 for the second, €4 for the third, and €1.50 for the fourth.",
+        "subquestions": [
+          {
+            "label": "a",
+            "prompt": "Draw Lisa's individual demand curve (step function) with price on the vertical axis."
+          },
+          {
+            "label": "b",
+            "prompt": "The market price is €5. How many pizzas does Lisa buy? Explain using the concept of betalingsbereidheid."
+          },
+          {
+            "label": "c",
+            "prompt": "The price drops to €3. How many does she buy now?"
+          },
+          {
+            "label": "d",
+            "prompt": "Explain in your own words why the demand curve slopes downward."
+          }
+        ]
+      },
+      "lesson_goals": [
+        "Define betalingsbereidheid (willingness to pay)",
+        "Explain the relationship between price and quantity demanded",
+        "Draw an individual demand curve from willingness-to-pay data",
+        "Explain the law of demand"
+      ],
+      "required_skills": [
+        "A44",
+        "D35",
+        "D36",
+        "D37"
+      ],
+      "prior_knowledge_assumed": [],
+      "new_skills_introduced": [
+        "A44",
+        "D35",
+        "D36",
+        "D37"
+      ],
+      "missing_units_flagged": [],
+      "exam_codes": [],
+      "review_outcome": "valid_migration_evidence_not_reviewed_final",
+      "may_promote_to_reviewed_final_now": false,
+      "may_count_as_final_coverage_claim_now": false,
+      "registry_mutation_authorized": false,
+      "required_future_artifacts": [
+        "teacher-learning-quality review of the target exercise against active-v5 lesson goals",
+        "operation decomposition into content, calculation, graph/source-reading, reasoning, and answer-writing requirements",
+        "required-unit check against the current MTU registry",
+        "explicit review artifact before any reviewed_final promotion proposal",
+        "CP.6d graph-heavy evidence upgrade where the target exercise relies on graph/table reasoning"
+      ],
+      "review_notes": [
+        "Current registry required_skills: A44, D35, D36, D37.",
+        "Introduces units: A44, D35, D36, D37."
+      ]
+    },
+    {
+      "paragraph_id": "1.2.2",
+      "paragraph_title": "Vraagfactoren",
+      "paragraph_kind": "theory",
+      "source_ref": "references/owned/course-blueprint-v5.md §1.2.2",
+      "current_record_status": "migrated_from_v4_needs_v5_review",
+      "v5_migration": {
+        "source_status": "migrated_from_v4_needs_v5_review",
+        "from_v4_id": "1.2.2",
+        "related_v4_ids": [],
+        "review_required_before_final": true
+      },
+      "target_exercise": {
+        "context": "The market for butter is in equilibrium at P = €2 and Q = 1000.",
+        "subquestions": [
+          {
+            "label": "a",
+            "prompt": "The price of butter rises to €2.50. Show in a graph what happens to the quantity demanded. Is this a shift of the demand curve or a movement along it?"
+          },
+          {
+            "label": "b",
+            "prompt": "A health report claims that margarine is unhealthy. Show in a graph what happens to the demand for butter. Is this a shift or a movement?"
+          },
+          {
+            "label": "c",
+            "prompt": "Average income in the country rises by 5%. Butter is a normal good. Show the effect on the demand curve."
+          },
+          {
+            "label": "d",
+            "prompt": "Name four factors that cause the demand curve to shift and give an example for each."
+          }
+        ]
+      },
+      "lesson_goals": [
+        "Distinguish between a movement along the demand curve (caused by own price change) and a shift of the demand curve (caused by other factors)",
+        "Name and explain demand factors: income, preferences, price of substitutes/complements, expectations",
+        "Show shifts graphically (left/right)",
+        "Classify goods as substitutes or complements based on context"
+      ],
+      "required_skills": [
+        "A42",
+        "D27",
+        "D32",
+        "D33"
+      ],
+      "prior_knowledge_assumed": [],
+      "new_skills_introduced": [
+        "A42",
+        "D27",
+        "D32",
+        "D33"
+      ],
+      "missing_units_flagged": [
+        "Classify a normal vs inferior good response to an income change (concept-level, prerequisite for D11 inkomenselasticiteit)"
+      ],
+      "exam_codes": [
+        "D1.9"
+      ],
+      "review_outcome": "valid_migration_evidence_not_reviewed_final",
+      "may_promote_to_reviewed_final_now": false,
+      "may_count_as_final_coverage_claim_now": false,
+      "registry_mutation_authorized": false,
+      "required_future_artifacts": [
+        "teacher-learning-quality review of the target exercise against active-v5 lesson goals",
+        "operation decomposition into content, calculation, graph/source-reading, reasoning, and answer-writing requirements",
+        "required-unit check against the current MTU registry",
+        "explicit review artifact before any reviewed_final promotion proposal",
+        "CP.6c classification of missing_units_flagged before final target-exercise closure",
+        "CP.6d graph-heavy evidence upgrade where the target exercise relies on graph/table reasoning"
+      ],
+      "review_notes": [
+        "Contains missing-unit flags; CP.6c must classify them before final coverage can be claimed.",
+        "Current registry required_skills: A42, D27, D32, D33.",
+        "Introduces units: A42, D27, D32, D33."
+      ]
+    },
+    {
+      "paragraph_id": "1.2.3",
+      "paragraph_title": "Van individuele naar collectieve vraag",
+      "paragraph_kind": "theory",
+      "source_ref": "references/owned/course-blueprint-v5.md §1.2.3",
+      "current_record_status": "migrated_from_v4_needs_v5_review",
+      "v5_migration": {
+        "source_status": "migrated_from_v4_needs_v5_review",
+        "from_v4_id": "1.2.3",
+        "related_v4_ids": [],
+        "review_required_before_final": true
+      },
+      "target_exercise": {
+        "context": "There are only two consumers on the market for lemonade: Anna and Ben. Anna's Qd: P=€1→5, €2→3, €3→1, €4→0. Ben's Qd: P=€1→8, €2→5, €3→2, €4→1.",
+        "subquestions": [
+          {
+            "label": "a",
+            "prompt": "Calculate the collective demand at each price."
+          },
+          {
+            "label": "b",
+            "prompt": "Draw the individual demand curves and the collective demand curve in the same graph."
+          },
+          {
+            "label": "c",
+            "prompt": "Anna's demand function is Qd = −2P + 7, Ben's is Qd = −3P + 11. Derive the collective demand function algebraically."
+          },
+          {
+            "label": "d",
+            "prompt": "At which price does Anna leave the market entirely? What happens to the collective demand curve at that point?"
+          }
+        ]
+      },
+      "lesson_goals": [
+        "Explain that collective demand is the horizontal sum of individual demand curves",
+        "Calculate collective demand from individual data (table method)",
+        "Derive collective demand algebraically (adding Q's at equal P)",
+        "Recognise the kink in the collective curve when one consumer drops out"
+      ],
+      "required_skills": [
+        "A01"
+      ],
+      "prior_knowledge_assumed": [
+        "A01"
+      ],
+      "new_skills_introduced": [],
+      "missing_units_flagged": [
+        "Horizontal sum: aggregate individual demand tables into collective demand (A-domain candidate, mirror of A31 for aanbod)",
+        "Algebraic horizontal sum of linear demand functions (A-domain candidate, Q-at-equal-P)",
+        "Recognise the kink in collective demand when one consumer exits (concept-level)"
+      ],
+      "exam_codes": [
+        "A2.9"
+      ],
+      "review_outcome": "valid_migration_evidence_not_reviewed_final",
+      "may_promote_to_reviewed_final_now": false,
+      "may_count_as_final_coverage_claim_now": false,
+      "registry_mutation_authorized": false,
+      "required_future_artifacts": [
+        "teacher-learning-quality review of the target exercise against active-v5 lesson goals",
+        "operation decomposition into content, calculation, graph/source-reading, reasoning, and answer-writing requirements",
+        "required-unit check against the current MTU registry",
+        "explicit review artifact before any reviewed_final promotion proposal",
+        "CP.6c classification of missing_units_flagged before final target-exercise closure",
+        "CP.6d graph-heavy evidence upgrade where the target exercise relies on graph/table reasoning"
+      ],
+      "review_notes": [
+        "Contains missing-unit flags; CP.6c must classify them before final coverage can be claimed.",
+        "Current registry required_skills: A01.",
+        "Assumes prior units: A01."
+      ]
+    },
+    {
+      "paragraph_id": "1.3.1",
+      "paragraph_title": "Aanbod",
+      "paragraph_kind": "theory",
+      "source_ref": "references/owned/course-blueprint-v5.md §1.3.1",
+      "current_record_status": "migrated_from_v4_needs_v5_review",
+      "v5_migration": {
+        "source_status": "migrated_from_v4_needs_v5_review",
+        "from_v4_id": "1.3.1",
+        "related_v4_ids": [],
+        "review_required_before_final": true
+      },
+      "target_exercise": {
+        "context": "Supply-side mirror of §1.2.2: how own-price vs other factors move a supply curve.",
+        "subquestions": [
+          {
+            "label": "a",
+            "prompt": "A manufacturer of solar panels faces higher silicon prices. Show in a graph what happens to the supply curve for solar panels. Explain."
+          },
+          {
+            "label": "b",
+            "prompt": "The government introduces a subsidy for solar panel production. Show the effect on the supply curve."
+          },
+          {
+            "label": "c",
+            "prompt": "Name three factors that cause the supply curve to shift and give an example for each."
+          },
+          {
+            "label": "d",
+            "prompt": "Draw a supply curve. Mark a movement along the curve and a shift of the curve. Label clearly which is which."
+          }
+        ]
+      },
+      "lesson_goals": [
+        "Draw and interpret a supply curve (upward sloping)",
+        "Name supply factors: input prices, technology, number of suppliers, expectations, government policy",
+        "Distinguish between shifts and movements along the supply curve",
+        "Show supply shifts graphically"
+      ],
+      "required_skills": [
+        "D13",
+        "D32",
+        "D33"
+      ],
+      "prior_knowledge_assumed": [
+        "D32",
+        "D33"
+      ],
+      "new_skills_introduced": [
+        "D13"
+      ],
+      "missing_units_flagged": [
+        "Draw an upward-sloping supply curve with correct economist axes (A-domain candidate)"
+      ],
+      "exam_codes": [
+        "D1.12",
+        "D1.24"
+      ],
+      "review_outcome": "valid_migration_evidence_not_reviewed_final",
+      "may_promote_to_reviewed_final_now": false,
+      "may_count_as_final_coverage_claim_now": false,
+      "registry_mutation_authorized": false,
+      "required_future_artifacts": [
+        "teacher-learning-quality review of the target exercise against active-v5 lesson goals",
+        "operation decomposition into content, calculation, graph/source-reading, reasoning, and answer-writing requirements",
+        "required-unit check against the current MTU registry",
+        "explicit review artifact before any reviewed_final promotion proposal",
+        "CP.6c classification of missing_units_flagged before final target-exercise closure",
+        "CP.6d graph-heavy evidence upgrade where the target exercise relies on graph/table reasoning"
+      ],
+      "review_notes": [
+        "Contains missing-unit flags; CP.6c must classify them before final coverage can be claimed.",
+        "Current registry required_skills: D13, D32, D33.",
+        "Assumes prior units: D32, D33.",
+        "Introduces units: D13."
+      ]
+    },
+    {
+      "paragraph_id": "1.3.2",
+      "paragraph_title": "Marktevenwicht",
+      "paragraph_kind": "theory",
+      "source_ref": "references/owned/course-blueprint-v5.md §1.3.2",
+      "current_record_status": "migrated_from_v4_needs_v5_review",
+      "v5_migration": {
+        "source_status": "migrated_from_v4_needs_v5_review",
+        "from_v4_id": "1.4.1",
+        "related_v4_ids": [],
+        "review_required_before_final": true
+      },
+      "target_exercise": {
+        "context": "On the market for notebooks: Qv = −2P + 100 and Qa = 3P − 25.",
+        "subquestions": [
+          {
+            "label": "a",
+            "prompt": "Calculate the equilibrium price and equilibrium quantity."
+          },
+          {
+            "label": "b",
+            "prompt": "Check your answer by substituting back into both equations."
+          },
+          {
+            "label": "c",
+            "prompt": "Draw both curves in a graph and mark the equilibrium point."
+          },
+          {
+            "label": "d",
+            "prompt": "At a price of €30, is there a surplus (aanbodoverschot) or a shortage (vraagoverschot)? Calculate its size."
+          }
+        ]
+      },
+      "lesson_goals": [
+        "Set Qa = Qv and solve for P (equilibrium price)",
+        "Substitute back to find equilibrium quantity",
+        "Draw demand and supply curves and locate equilibrium graphically",
+        "Determine surplus or shortage at a given price"
+      ],
+      "required_skills": [
+        "A02",
+        "A04",
+        "A06"
+      ],
+      "prior_knowledge_assumed": [
+        "A02"
+      ],
+      "new_skills_introduced": [
+        "A04",
+        "A06"
+      ],
+      "missing_units_flagged": [
+        "Determine surplus (aanbodoverschot) vs shortage (vraagoverschot) at a non-equilibrium price and calculate its size (A-domain candidate, prerequisite for government price interventions in §2.4)"
+      ],
+      "exam_codes": [
+        "A2.10",
+        "A2.12",
+        "A2.15"
+      ],
+      "review_outcome": "valid_migration_evidence_not_reviewed_final",
+      "may_promote_to_reviewed_final_now": false,
+      "may_count_as_final_coverage_claim_now": false,
+      "registry_mutation_authorized": false,
+      "required_future_artifacts": [
+        "teacher-learning-quality review of the target exercise against active-v5 lesson goals",
+        "operation decomposition into content, calculation, graph/source-reading, reasoning, and answer-writing requirements",
+        "required-unit check against the current MTU registry",
+        "explicit review artifact before any reviewed_final promotion proposal",
+        "CP.6c classification of missing_units_flagged before final target-exercise closure",
+        "CP.6d graph-heavy evidence upgrade where the target exercise relies on graph/table reasoning",
+        "post-L-CP6A check that carried lesson-side flags remain visible during any final review"
+      ],
+      "review_notes": [
+        "Contains missing-unit flags; CP.6c must classify them before final coverage can be claimed.",
+        "Current registry required_skills: A02, A04, A06.",
+        "Assumes prior units: A02.",
+        "Introduces units: A04, A06.",
+        "Lesson-side topic alignment is fixed by L-CP6A, but this does not promote the target exercise."
+      ]
+    },
+    {
+      "paragraph_id": "1.3.3",
+      "paragraph_title": "Verschuivingen en nieuw evenwicht",
+      "paragraph_kind": "theory",
+      "source_ref": "references/owned/course-blueprint-v5.md §1.3.3",
+      "current_record_status": "migrated_from_v4_needs_v5_review",
+      "v5_migration": {
+        "source_status": "migrated_from_v4_needs_v5_review",
+        "from_v4_id": "1.4.2",
+        "related_v4_ids": [],
+        "review_required_before_final": true
+      },
+      "target_exercise": {
+        "context": "Starting from the notebook market (Qv = −2P + 100, Qa = 3P − 25, equilibrium P* = 25, Q* = 50).",
+        "subquestions": [
+          {
+            "label": "a",
+            "prompt": "A new factory opens. The new supply function is Qa = 3P − 10. Calculate the new equilibrium price and quantity."
+          },
+          {
+            "label": "b",
+            "prompt": "Compare with the old equilibrium: what happened to price? To quantity? Is this logical?"
+          },
+          {
+            "label": "c",
+            "prompt": "Now suppose student income rises. The new demand function is Qv = −2P + 120 (supply back to original). Calculate the new equilibrium."
+          },
+          {
+            "label": "d",
+            "prompt": "Draw a graph showing both changes (one at a time). Use arrows to show the direction of shifts."
+          },
+          {
+            "label": "e",
+            "prompt": "Now suppose BOTH changes happen at the same time: supply shifts to Qa = 3P − 10 AND demand shifts to Qv = −2P + 120. Calculate the new equilibrium. What happened to quantity? What happened to price? Could you have predicted the direction of the price change without calculating? Explain."
+          }
+        ]
+      },
+      "lesson_goals": [
+        "Calculate a new equilibrium after a supply or demand shift",
+        "Compare old and new equilibrium: predict direction of price and quantity change",
+        "Connect shifts to the demand/supply factors from §1.2 and §1.3",
+        "Show shifts graphically with clear before/after",
+        "Analyse simultaneous shifts: quantity effect is clear (both increase Q), but price effect is ambiguous (one pushes up, the other pushes down)"
+      ],
+      "required_skills": [
+        "A02",
+        "A04",
+        "A06",
+        "A42",
+        "D13"
+      ],
+      "prior_knowledge_assumed": [
+        "A02",
+        "A04",
+        "A06",
+        "A42",
+        "D13"
+      ],
+      "new_skills_introduced": [],
+      "missing_units_flagged": [
+        "Reason about simultaneous supply+demand shifts: determinate Q-direction but ambiguous P-direction (concept-level, diagnostic checkpoint)"
+      ],
+      "exam_codes": [
+        "A2.10",
+        "A2.12",
+        "A2.15",
+        "D1.12",
+        "D1.24"
+      ],
+      "review_outcome": "valid_migration_evidence_not_reviewed_final",
+      "may_promote_to_reviewed_final_now": false,
+      "may_count_as_final_coverage_claim_now": false,
+      "registry_mutation_authorized": false,
+      "required_future_artifacts": [
+        "teacher-learning-quality review of the target exercise against active-v5 lesson goals",
+        "operation decomposition into content, calculation, graph/source-reading, reasoning, and answer-writing requirements",
+        "required-unit check against the current MTU registry",
+        "explicit review artifact before any reviewed_final promotion proposal",
+        "CP.6c classification of missing_units_flagged before final target-exercise closure",
+        "CP.6d graph-heavy evidence upgrade where the target exercise relies on graph/table reasoning",
+        "post-L-CP6A check that carried lesson-side flags remain visible during any final review"
+      ],
+      "review_notes": [
+        "Contains missing-unit flags; CP.6c must classify them before final coverage can be claimed.",
+        "Current registry required_skills: A02, A04, A06, A42, D13.",
+        "Assumes prior units: A02, A04, A06, A42, D13.",
+        "Lesson-side topic alignment is fixed by L-CP6A, but this does not promote the target exercise."
+      ]
+    }
+  ],
+  "integration_target_exercise_designs": [
+    {
+      "source_placeholder_record": {
+        "paragraph_id": "1.1.4",
+        "paragraph_title": "Gemengde opgaven: economisch denken en rekenen",
+        "current_record_status": "placeholder_needs_review",
+        "placeholder_reason": "Gemengde-opgaven target exercise must be designed as integration/transfer practice.",
+        "source_ref": "references/owned/course-blueprint-v5.md §1.1.4",
+        "target_exercise_placeholder": true
+      },
+      "design_id": "CP.6b-design-1.1.4",
+      "status": "draft_integration_design_ready_for_later_teacher_review_not_final",
+      "paragraph_id": "1.1.4",
+      "paragraph_title": "Gemengde opgaven: economisch denken en rekenen",
+      "introduces_new_theory": false,
+      "placeholder_finalized": false,
+      "registry_mutation_authorized": false,
+      "integrated_prior_paragraphs": [
+        "1.1.1",
+        "1.1.2",
+        "1.1.3"
+      ],
+      "integrated_skills_or_operations": [
+        "scarcity and opportunity-cost reasoning",
+        "percentage-change and index-number calculation",
+        "P-Q table reading and graph drawing",
+        "data-claim evaluation"
+      ],
+      "target_exercise": {
+        "context": "A school fundraiser sells healthy lunch boxes. At different prices the expected quantity sold is P=EUR 4 -> Q=180, EUR 5 -> 150, EUR 6 -> 120, EUR 7 -> 90. The student council must choose one price and has only one stand, so choosing one price means giving up the next-best alternative.",
+        "subquestions": [
+          {
+            "label": "a",
+            "prompt": "Draw the price-quantity table as a graph with price on the vertical axis and quantity on the horizontal axis."
+          },
+          {
+            "label": "b",
+            "prompt": "Read or interpolate from your graph: about how many lunch boxes would be sold at EUR 5.50?"
+          },
+          {
+            "label": "c",
+            "prompt": "Calculate the percentage change in quantity sold when the price rises from EUR 4 to EUR 6."
+          },
+          {
+            "label": "d",
+            "prompt": "The council chooses EUR 6. Explain the opportunity cost of not choosing EUR 5, using the table and your calculation."
+          },
+          {
+            "label": "e",
+            "prompt": "A poster claims: \"A EUR 2 price increase halves sales.\" Use the table to decide whether that claim is correct."
+          }
+        ]
+      },
+      "review_conditions_before_final": [
+        "teacher review checks that no new theory beyond 1.1.1-1.1.3 is introduced",
+        "answer model makes opportunity cost explicit without introducing revenue/profit theory",
+        "graph/table operations are checked against CP.6c/CP.6e outcomes before final registry mutation"
+      ],
+      "review_outcome": "draft_design_not_reviewed_final",
+      "may_promote_to_reviewed_final_now": false,
+      "may_count_as_final_coverage_claim_now": false
+    },
+    {
+      "source_placeholder_record": {
+        "paragraph_id": "1.2.4",
+        "paragraph_title": "Gemengde opgaven: vraag",
+        "current_record_status": "placeholder_needs_review",
+        "placeholder_reason": "Gemengde-opgaven target exercise must be designed as integration/transfer practice.",
+        "source_ref": "references/owned/course-blueprint-v5.md §1.2.4",
+        "target_exercise_placeholder": true
+      },
+      "design_id": "CP.6b-design-1.2.4",
+      "status": "draft_integration_design_ready_for_later_teacher_review_not_final",
+      "paragraph_id": "1.2.4",
+      "paragraph_title": "Gemengde opgaven: vraag",
+      "introduces_new_theory": false,
+      "placeholder_finalized": false,
+      "registry_mutation_authorized": false,
+      "integrated_prior_paragraphs": [
+        "1.2.1",
+        "1.2.2",
+        "1.2.3"
+      ],
+      "integrated_skills_or_operations": [
+        "individual willingness-to-pay demand",
+        "movement along demand versus demand shift",
+        "substitute/complement and normal-good reasoning",
+        "horizontal aggregation of individual demand"
+      ],
+      "target_exercise": {
+        "context": "Three students buy smoothies at school. Their maximum willingness to pay differs. At P=EUR 2, Ana wants 3, Bo wants 2, and Cem wants 4 smoothies per week. At P=EUR 3, Ana wants 2, Bo wants 1, and Cem wants 3. At P=EUR 4, Ana wants 1, Bo wants 0, and Cem wants 2.",
+        "subquestions": [
+          {
+            "label": "a",
+            "prompt": "Calculate collective demand at each listed price by adding quantities at the same price."
+          },
+          {
+            "label": "b",
+            "prompt": "Draw the collective demand curve and explain why you add quantities rather than prices."
+          },
+          {
+            "label": "c",
+            "prompt": "The smoothie price rises from EUR 3 to EUR 4. Is this a movement along the demand curve or a shift? Explain."
+          },
+          {
+            "label": "d",
+            "prompt": "A nearby juice bar lowers its price. Is that likely to shift demand for school smoothies left or right? Explain with substitute reasoning."
+          },
+          {
+            "label": "e",
+            "prompt": "Students receive more pocket money and smoothies are treated as a normal good. Show and explain the demand effect."
+          }
+        ]
+      },
+      "review_conditions_before_final": [
+        "teacher review checks that the aggregate-demand table is solvable for 4-vwo students",
+        "CP.6c classifies horizontal-aggregation missing flags before final coverage is claimed",
+        "graph-heavy evidence is routed to CP.6d where visual closure is required"
+      ],
+      "review_outcome": "draft_design_not_reviewed_final",
+      "may_promote_to_reviewed_final_now": false,
+      "may_count_as_final_coverage_claim_now": false
+    },
+    {
+      "source_placeholder_record": {
+        "paragraph_id": "1.3.4",
+        "paragraph_title": "Gemengde opgaven: aanbod en marktevenwicht",
+        "current_record_status": "placeholder_needs_review",
+        "placeholder_reason": "Gemengde-opgaven target exercise must be designed as integration/transfer practice.",
+        "source_ref": "references/owned/course-blueprint-v5.md §1.3.4",
+        "target_exercise_placeholder": true
+      },
+      "design_id": "CP.6b-design-1.3.4",
+      "status": "draft_integration_design_ready_for_later_teacher_review_not_final",
+      "paragraph_id": "1.3.4",
+      "paragraph_title": "Gemengde opgaven: aanbod en marktevenwicht",
+      "introduces_new_theory": false,
+      "placeholder_finalized": false,
+      "registry_mutation_authorized": false,
+      "integrated_prior_paragraphs": [
+        "1.3.1",
+        "1.3.2",
+        "1.3.3"
+      ],
+      "integrated_skills_or_operations": [
+        "supply factor and supply-shift reasoning",
+        "equilibrium calculation by setting demand equal to supply",
+        "surplus/shortage reasoning at a non-equilibrium price",
+        "new-equilibrium comparison after one or two curve shifts"
+      ],
+      "target_exercise": {
+        "context": "In the market for notebooks, demand is Qv = -2P + 120 and supply is Qa = 3P - 30. A new printing machine increases supply to Qa = 3P - 15. Later, a school campaign also raises demand to Qv = -2P + 140.",
+        "subquestions": [
+          {
+            "label": "a",
+            "prompt": "Calculate the original equilibrium price and quantity and mark the point in a graph."
+          },
+          {
+            "label": "b",
+            "prompt": "At P=EUR 35, determine whether there is a surplus or shortage and calculate its size."
+          },
+          {
+            "label": "c",
+            "prompt": "Calculate the new equilibrium after only the supply increase. Explain the direction of the shift."
+          },
+          {
+            "label": "d",
+            "prompt": "Calculate the equilibrium when both the supply increase and demand increase happen."
+          },
+          {
+            "label": "e",
+            "prompt": "Explain which direction quantity changes in the simultaneous-shift case, and why the price direction cannot always be predicted without the numbers."
+          }
+        ]
+      },
+      "review_conditions_before_final": [
+        "teacher review checks that the target stays within supply, demand, equilibrium, and shifts",
+        "costs/revenue/marginal-analysis theory remains out of active-v5 Book 1",
+        "CP.6c classifies surplus/shortage and simultaneous-shift missing flags before final coverage is claimed",
+        "CP.6d graph-heavy evidence is required before CP-6 closure uses this record"
+      ],
+      "review_outcome": "draft_design_not_reviewed_final",
+      "may_promote_to_reviewed_final_now": false,
+      "may_count_as_final_coverage_claim_now": false
+    }
+  ],
+  "remaining_blockers": [
+    "Nine migrated Book 1 target-exercise records still need explicit v5 review artifacts before any reviewed_final promotion proposal.",
+    "Three gemengde-opgaven draft designs still need teacher-learning-quality review and governed registry-update procedure before placeholders can be replaced.",
+    "CP.6c must classify the nine Year-1 MTU backfill candidates before any unit mutation or final target-exercise closure uses them.",
+    "CP.6d must upgrade graph-heavy evidence where graph/table-heavy records are used for CP-6 closure evidence.",
+    "CP.6e must clear or explicitly fail the remaining 1.1.3 Part A FLAG before unconditioned CP-6 closure."
+  ],
+  "blocked_outcomes": [
+    "protected reference mutation",
+    "lesson output mutation",
+    "target-exercise promotion",
+    "placeholder replacement",
+    "placeholder finalization",
+    "unit minting",
+    "CP-6 closure",
+    "Year-1 closure",
+    "student diagnostics",
+    "adaptive routing",
+    "mastery decisions",
+    "automatic sequencing",
+    "student-facing AI",
+    "summative use",
+    "PV projection",
+    "PV machine promotion",
+    "student-facing generated output"
+  ],
+  "next_operational_sprint": "CP.6c"
+}

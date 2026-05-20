@@ -12,12 +12,13 @@ docs/roadmaps/roadmap-version-index.json
 
 | Roadmap | Version | Path | Notes |
 |---|---|---|---|
-| References Team Roadmap | `v2.55-exam-ingestion-north-star` | `references/reference-team-roadmap.md` | Current operating roadmap after adding official exam-question ingestion as the explicit cross-repo north star while keeping CP.6b target-exercise review as the active row. |
+| References Team Roadmap | `v2.56-cp6b-target-exercise-review` | `references/reference-team-roadmap.md` | Current operating roadmap after CP.6b recorded the non-final Year-1 target-exercise review/design packet and moved CP.6c MTU backfill classification to the active row. |
 
 ## Outdated Archive
 
 | Roadmap | Version | Path | Superseded By |
 |---|---|---|---|
+| References Team Roadmap before CP.6b target-exercise review | `v2.55-exam-ingestion-north-star` | `docs/roadmaps/outdated/reference-team-roadmap-v2.55-exam-ingestion-north-star.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before exam-ingestion north-star update | `v2.54-cp6a-lesson-side-recheck` | `docs/roadmaps/outdated/reference-team-roadmap-v2.54-cp6a-lesson-side-recheck.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before CP.6a lesson-side recheck | `v2.53-cp6a-lesson-side-alignment` | `docs/roadmaps/outdated/reference-team-roadmap-v2.53-cp6a-lesson-side-alignment.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before CP.6a lesson-side alignment | `v2.52-gate-cp6-routing-decision` | `docs/roadmaps/outdated/reference-team-roadmap-v2.52-gate-cp6-routing-decision.md` | `references/reference-team-roadmap.md` |
