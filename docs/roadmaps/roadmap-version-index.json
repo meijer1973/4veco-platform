@@ -15,13 +15,14 @@
   "roadmaps": [
     {
       "roadmap_id": "references-team-roadmap",
-      "version": "v2.59-cp6e-113-part-a-failed-clearance",
+      "version": "v2.60-cp6f-113-part-a-cleared",
       "title": "References Team Roadmap",
       "status": "active",
       "path": "references/reference-team-roadmap.md",
       "owner": "references_team",
       "updated_on": "2026-05-21",
       "supersedes": [
+        "docs/roadmaps/outdated/reference-team-roadmap-v2.59-cp6e-113-part-a-failed-clearance.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.58-cp6d-graph-heavy-evidence-upgrade.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.57-cp6c-mtu-backfill-classification.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.56-cp6b-target-exercise-review.md",
@@ -80,7 +81,18 @@
         "knowledge/Exercise schema and quality/reference-team-roadmap Live version 28 April.md",
         "knowledge/Exercise schema and quality/roadmap-updated-repository-checked.md"
       ],
-      "notes": "Current operating roadmap after CP.6e failed clearance of the 1.1.3 Part A figure-numbering flag and made CP.6f remediation recheck the active route."
+      "notes": "Current operating roadmap after CP.6f cleared the focused 1.1.3 Part A figure-numbering blocker and made EX-0 exam ingestion contract design the active route."
+    },
+    {
+      "roadmap_id": "references-team-roadmap-v2.59",
+      "version": "v2.59-cp6e-113-part-a-failed-clearance",
+      "title": "References Team Roadmap before CP.6f focused 1.1.3 Part A remediation recheck",
+      "status": "outdated",
+      "path": "docs/roadmaps/outdated/reference-team-roadmap-v2.59-cp6e-113-part-a-failed-clearance.md",
+      "owner": "references_team",
+      "updated_on": "2026-05-21",
+      "superseded_by": "references/reference-team-roadmap.md",
+      "notes": "Snapshot archived before CP.6f cleared the focused 1.1.3 Part A figure-numbering blocker after lesson-team L-CP6E."
     },
     {
       "roadmap_id": "references-team-roadmap-v2.58",

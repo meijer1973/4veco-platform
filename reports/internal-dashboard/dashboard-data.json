@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-21T06:22:37.236Z",
+  "generatedAt": "2026-05-21T09:21:50.831Z",
   "internalOnly": true,
   "teams": [
     {
@@ -160,20 +160,13 @@
           "generated": "2026-04-23",
           "updated": "",
           "scope": "`references/`, `build-scripts/references/`, `build-scripts/reports/`, reference dashboards, and generated reference reports under `reports/`",
-          "summary": "References Team Roadmap Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Last strategic update: 2026-05-20 Roadmap ID: references-team-roadmap Roadmap version: v2.59-cp6e-113-part-a-failed-clearance Roadmap status: active Version index: docs/roadmaps/roadmap-version-index.json Scope: references/, build-scripts/references/, build-scripts/reports/, reference dashboards, and generated reference reports under reports/ Exam Ingestion North Star The long-term reference-platform goal is that a new official CvTE eco...",
+          "summary": "References Team Roadmap Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Last strategic update: 2026-05-20 Roadmap ID: references-team-roadmap Roadmap version: v2.60-cp6f-113-part-a-cleared Roadmap status: active Version index: docs/roadmaps/roadmap-version-index.json Scope: references/, build-scripts/references/, build-scripts/reports/, reference dashboards, and generated reference reports under reports/ Exam Ingestion North Star The long-term reference-platform goal is that a new official CvTE economics ex...",
           "sprints": [
-            {
-              "sprint": "CP.6f",
-              "name": "1.1.3 Part A Remediation Recheck",
-              "completed": "no",
-              "currentState": "**ACTIVE / BLOCKED ON LESSON-SIDE REMEDIATION AFTER CP.6e.** CP.6e failed to clear the `1.1.3` Part A flag because the live paragraph still introduces figures in the order `1 -> 3 -> 2` rather than `1 -> 2 -> 3`. Route lesson-side remediation/regeneration for figure numbering, then run a focused references-side recheck before any unconditioned CP-6 closure proposal. No lesson-output hand patching, protected mutation, target-exercise promotion, CP-6 closure, or Year-1 closure is authorized.",
-              "exitGate": ""
-            },
             {
               "sprint": "EX-0",
               "name": "Exam Ingestion Contract Design",
               "completed": "no",
-              "currentState": "FUTURE DESIGN SPRINT after CP.6f recheck or an explicit human-approved hold on the remaining `1.1.3` Part A blocker. Define overlay-first schema and review procedure for official exam question, source annex, official answer model, scoring rules, MTU decomposition, graph/source operations, and answer-writing operations. No protected mutation, no external-source mutation, no unit minting, and no student/product authorization.",
+              "currentState": "**ACTIVE / DESIGN SPRINT.** CP.6f cleared the focused `1.1.3` Part A figure-numbering blocker, so the next strategic lane is to define the overlay-first schema and review procedure for official exam question, source annex, official answer model, scoring rules, MTU decomposition, graph/source operations, and answer-writing operations. No protected mutation, no external-source mutation, no unit minting, no CP-6 closure, no Year-1 closure, and no student/product authorization.",
               "exitGate": ""
             },
             {
@@ -254,31 +247,38 @@
               "exitGate": ""
             },
             {
+              "sprint": "CP.6f",
+              "name": "1.1.3 Part A Remediation Recheck",
+              "completed": "yes",
+              "currentState": "Completed as a non-mutating focused recheck after lesson-team `L-CP6E`. The live `1.1.3` Part A markdown, regenerated HTML, and regenerated PDF now first mention figures in order `1 -> 2 -> 3`; `1.1.3-quality-ref.yaml` records Part A `PASS WITH FLAGS` with the figure-order flag fixed and the repeated worked example carried as accepted non-blocking scaffolding. Lesson evidence commit: `a31f2e11320035f6a616f899fe91a68d8a204c01`; platform index/handoff commit at lesson handoff: `e7163e8df17bea35961c0df93f964038749d304a`. Recheck output: `references/data/sprints/CP.6f-113-part-a-recheck.json` and `reports/reference-planning/CP.6f-113-part-a-recheck.md`. CP.6f clears only the focused `1.1.3` Part A blocker; it does not close CP-6 or Year 1, promote target exercises, finalize placeholders, mint units, or authorize protected mutation or student/product use.",
+              "exitGate": ""
+            },
+            {
               "sprint": "CP.6e",
               "name": "Focused 1.1.3 Part A Re-Review",
               "completed": "yes",
-              "currentState": "Completed as a non-mutating focused Part A re-review with `failed_clearance`. The current live `1.1.3 Grafieken en tabellen – paragraaf.md` still introduces figures in first-use order `1 -> 3 -> 2` instead of `1 -> 2 -> 3`, so the remaining Part A figure-numbering flag is not cleared. The repeated worked example in `opgaven.md` is recorded as accepted standalone-exercise scaffolding, not the remaining hard blocker. Output: `references/data/sprints/CP.6e-113-part-a-rereview.json`, `reports/reference-planning/CP.6e-113-part-a-rereview.md`, and `reports/reference-planning/CP.6e-113-part-a-remediation-handoff.md`. No protected mutation, lesson-output mutation, lesson review/quality-ref hand patching, target-exercise promotion, placeholder finalization, unit minting, CP-6 closure, or Year-1 closure was authorized. CP-6 remains blocked pending lesson-side remediation/regeneration and references-side recheck.",
+              "currentState": "Completed as a non-mutating focused Part A re-review with `failed_clearance`. The then-live `1.1.3 Grafieken en tabellen – paragraaf.md` still introduced figures in first-use order `1 -> 3 -> 2` instead of `1 -> 2 -> 3`, so the remaining Part A figure-numbering flag was not cleared. The repeated worked example in `opgaven.md` was recorded as accepted standalone-exercise scaffolding, not the remaining hard blocker. Output: `references/data/sprints/CP.6e-113-part-a-rereview.json`, `reports/reference-planning/CP.6e-113-part-a-rereview.md`, and `reports/reference-planning/CP.6e-113-part-a-remediation-handoff.md`. No protected mutation, lesson-output mutation, lesson review/quality-ref hand patching, target-exercise promotion, placeholder finalization, unit minting, CP-6 closure, or Year-1 closure was authorized. Lesson-team `L-CP6E` and references sprint CP.6f have since cleared this focused figure-numbering blocker.",
               "exitGate": ""
             },
             {
               "sprint": "CP.6d",
               "name": "Book 1 Graph-Heavy Evidence Upgrade",
               "completed": "yes",
-              "currentState": "Completed as a non-mutating graph-heavy evidence ledger upgrade. Checked the live post-L-CP6A lesson repo, not stale REF-CT2 paths: active `1.3.2` is `Marktevenwicht`, active `1.3.3` is `Verschuivingen en nieuw evenwicht`, and active Chapter 1.3 has 0 current source/lesson mismatches. Recorded 9 graph-heavy active-v5 Book 1 records, 9 current Part A review files, 3 companion-review-required records with current companion visual reviews, 3 `schema_version: 2` quality refs, 6 legacy/pre-schema quality refs needing later quality workflow, 1 open `1.1.3` Part A `FLAG`, and 0 records allowed as CP-6 closure evidence now. Output: `references/data/sprints/CP.6d-graph-heavy-evidence.json` and `reports/reference-planning/CP.6d-graph-heavy-evidence.md`. No protected mutation, lesson-output mutation, lesson quality-ref hand patching, companion review fabrication, target-exercise promotion, placeholder finalization, unit minting, CP-6 closure, or Year-1 closure was authorized. CP.6e has now failed clearance, so CP-6 remains blocked pending lesson-side remediation and CP.6f recheck.",
+              "currentState": "Completed as a non-mutating graph-heavy evidence ledger upgrade. Checked the live post-L-CP6A lesson repo, not stale REF-CT2 paths: active `1.3.2` is `Marktevenwicht`, active `1.3.3` is `Verschuivingen en nieuw evenwicht`, and active Chapter 1.3 has 0 current source/lesson mismatches. Recorded 9 graph-heavy active-v5 Book 1 records, 9 current Part A review files, 3 companion-review-required records with current companion visual reviews, 3 `schema_version: 2` quality refs, 6 legacy/pre-schema quality refs needing later quality workflow, 1 then-open `1.1.3` Part A `FLAG`, and 0 records allowed as CP-6 closure evidence now. Output: `references/data/sprints/CP.6d-graph-heavy-evidence.json` and `reports/reference-planning/CP.6d-graph-heavy-evidence.md`. No protected mutation, lesson-output mutation, lesson quality-ref hand patching, companion review fabrication, target-exercise promotion, placeholder finalization, unit minting, CP-6 closure, or Year-1 closure was authorized. CP.6f has since cleared the focused `1.1.3` figure-numbering blocker, while CP-6 and Year 1 remain open for remaining non-final evidence and later human-confirmed closure.",
               "exitGate": ""
             },
             {
               "sprint": "CP.6c",
               "name": "Year-1 MTU Backfill Classification",
               "completed": "yes",
-              "currentState": "Completed as a non-mutating MTU backfill classification sprint. Classified the nine REF-CT1 Year-1 candidates against the current live registry: existing-unit mappings to `A45`, `A46`, `A47`, `A48`, `A49`, and `A51`; one merge/design candidate for normal/inferior goods around successor units `A17`/`D11`/`D33` with deprecated `D04` retained only as historical context; one deferred kink-in-collective-demand candidate; and one true missing simultaneous-shift reasoning operation for later governed review. Output: `references/data/sprints/CP.6c-mtu-backfill-classification.json` and `reports/reference-planning/CP.6c-mtu-backfill-classification.md`. No protected mutation, unit minting, target-exercise promotion, placeholder finalization, CP-6 closure, or Year-1 closure was authorized. CP.6d is complete; CP.6e failed clearance; CP.6f recheck remains required after lesson-side remediation.",
+              "currentState": "Completed as a non-mutating MTU backfill classification sprint. Classified the nine REF-CT1 Year-1 candidates against the current live registry: existing-unit mappings to `A45`, `A46`, `A47`, `A48`, `A49`, and `A51`; one merge/design candidate for normal/inferior goods around successor units `A17`/`D11`/`D33` with deprecated `D04` retained only as historical context; one deferred kink-in-collective-demand candidate; and one true missing simultaneous-shift reasoning operation for later governed review. Output: `references/data/sprints/CP.6c-mtu-backfill-classification.json` and `reports/reference-planning/CP.6c-mtu-backfill-classification.md`. No protected mutation, unit minting, target-exercise promotion, placeholder finalization, CP-6 closure, or Year-1 closure was authorized. CP.6f has since cleared the focused `1.1.3` figure-numbering blocker; the simultaneous-shift true missing operation remains a later governed review/mutation question.",
               "exitGate": ""
             },
             {
               "sprint": "CP.6b",
               "name": "Year-1 Target-Exercise Review",
               "completed": "yes",
-              "currentState": "Completed as a non-mutating target-exercise review/design sprint. Recorded 12 active-v5 Book 1 target-exercise records, 9 migrated records needing explicit v5 review artifacts, 3 placeholder records with draft gemengde-opgaven integration designs, 0 reviewed-final records, 0 target-exercise promotions, and 0 placeholder finalizations. Output: `references/data/sprints/CP.6b-target-exercise-review.json` and `reports/reference-planning/CP.6b-target-exercise-review.md`. CP-6 and Year 1 remain open; CP.6d is complete, CP.6e failed clearance, and CP.6f recheck remains required before any responsible closure proposal.",
+              "currentState": "Completed as a non-mutating target-exercise review/design sprint. Recorded 12 active-v5 Book 1 target-exercise records, 9 migrated records needing explicit v5 review artifacts, 3 placeholder records with draft gemengde-opgaven integration designs, 0 reviewed-final records, 0 target-exercise promotions, and 0 placeholder finalizations. Output: `references/data/sprints/CP.6b-target-exercise-review.json` and `reports/reference-planning/CP.6b-target-exercise-review.md`. CP-6 and Year 1 remain open; CP.6f has since cleared the focused `1.1.3` figure-numbering blocker, but target exercises remain non-final and no placeholder finalization is authorized.",
               "exitGate": ""
             },
             {
@@ -790,18 +790,10 @@
       ],
       "sprints": [
         {
-          "sprint": "CP.6f",
-          "name": "1.1.3 Part A Remediation Recheck",
-          "completed": "no",
-          "currentState": "**ACTIVE / BLOCKED ON LESSON-SIDE REMEDIATION AFTER CP.6e.** CP.6e failed to clear the `1.1.3` Part A flag because the live paragraph still introduces figures in the order `1 -> 3 -> 2` rather than `1 -> 2 -> 3`. Route lesson-side remediation/regeneration for figure numbering, then run a focused references-side recheck before any unconditioned CP-6 closure proposal. No lesson-output hand patching, protected mutation, target-exercise promotion, CP-6 closure, or Year-1 closure is authorized.",
-          "exitGate": "",
-          "roadmap": "References roadmap"
-        },
-        {
           "sprint": "EX-0",
           "name": "Exam Ingestion Contract Design",
           "completed": "no",
-          "currentState": "FUTURE DESIGN SPRINT after CP.6f recheck or an explicit human-approved hold on the remaining `1.1.3` Part A blocker. Define overlay-first schema and review procedure for official exam question, source annex, official answer model, scoring rules, MTU decomposition, graph/source operations, and answer-writing operations. No protected mutation, no external-source mutation, no unit minting, and no student/product authorization.",
+          "currentState": "**ACTIVE / DESIGN SPRINT.** CP.6f cleared the focused `1.1.3` Part A figure-numbering blocker, so the next strategic lane is to define the overlay-first schema and review procedure for official exam question, source annex, official answer model, scoring rules, MTU decomposition, graph/source operations, and answer-writing operations. No protected mutation, no external-source mutation, no unit minting, no CP-6 closure, no Year-1 closure, and no student/product authorization.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -894,10 +886,18 @@
           "roadmap": "References roadmap"
         },
         {
+          "sprint": "CP.6f",
+          "name": "1.1.3 Part A Remediation Recheck",
+          "completed": "yes",
+          "currentState": "Completed as a non-mutating focused recheck after lesson-team `L-CP6E`. The live `1.1.3` Part A markdown, regenerated HTML, and regenerated PDF now first mention figures in order `1 -> 2 -> 3`; `1.1.3-quality-ref.yaml` records Part A `PASS WITH FLAGS` with the figure-order flag fixed and the repeated worked example carried as accepted non-blocking scaffolding. Lesson evidence commit: `a31f2e11320035f6a616f899fe91a68d8a204c01`; platform index/handoff commit at lesson handoff: `e7163e8df17bea35961c0df93f964038749d304a`. Recheck output: `references/data/sprints/CP.6f-113-part-a-recheck.json` and `reports/reference-planning/CP.6f-113-part-a-recheck.md`. CP.6f clears only the focused `1.1.3` Part A blocker; it does not close CP-6 or Year 1, promote target exercises, finalize placeholders, mint units, or authorize protected mutation or student/product use.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
           "sprint": "CP.6e",
           "name": "Focused 1.1.3 Part A Re-Review",
           "completed": "yes",
-          "currentState": "Completed as a non-mutating focused Part A re-review with `failed_clearance`. The current live `1.1.3 Grafieken en tabellen – paragraaf.md` still introduces figures in first-use order `1 -> 3 -> 2` instead of `1 -> 2 -> 3`, so the remaining Part A figure-numbering flag is not cleared. The repeated worked example in `opgaven.md` is recorded as accepted standalone-exercise scaffolding, not the remaining hard blocker. Output: `references/data/sprints/CP.6e-113-part-a-rereview.json`, `reports/reference-planning/CP.6e-113-part-a-rereview.md`, and `reports/reference-planning/CP.6e-113-part-a-remediation-handoff.md`. No protected mutation, lesson-output mutation, lesson review/quality-ref hand patching, target-exercise promotion, placeholder finalization, unit minting, CP-6 closure, or Year-1 closure was authorized. CP-6 remains blocked pending lesson-side remediation/regeneration and references-side recheck.",
+          "currentState": "Completed as a non-mutating focused Part A re-review with `failed_clearance`. The then-live `1.1.3 Grafieken en tabellen – paragraaf.md` still introduced figures in first-use order `1 -> 3 -> 2` instead of `1 -> 2 -> 3`, so the remaining Part A figure-numbering flag was not cleared. The repeated worked example in `opgaven.md` was recorded as accepted standalone-exercise scaffolding, not the remaining hard blocker. Output: `references/data/sprints/CP.6e-113-part-a-rereview.json`, `reports/reference-planning/CP.6e-113-part-a-rereview.md`, and `reports/reference-planning/CP.6e-113-part-a-remediation-handoff.md`. No protected mutation, lesson-output mutation, lesson review/quality-ref hand patching, target-exercise promotion, placeholder finalization, unit minting, CP-6 closure, or Year-1 closure was authorized. Lesson-team `L-CP6E` and references sprint CP.6f have since cleared this focused figure-numbering blocker.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -905,7 +905,7 @@
           "sprint": "CP.6d",
           "name": "Book 1 Graph-Heavy Evidence Upgrade",
           "completed": "yes",
-          "currentState": "Completed as a non-mutating graph-heavy evidence ledger upgrade. Checked the live post-L-CP6A lesson repo, not stale REF-CT2 paths: active `1.3.2` is `Marktevenwicht`, active `1.3.3` is `Verschuivingen en nieuw evenwicht`, and active Chapter 1.3 has 0 current source/lesson mismatches. Recorded 9 graph-heavy active-v5 Book 1 records, 9 current Part A review files, 3 companion-review-required records with current companion visual reviews, 3 `schema_version: 2` quality refs, 6 legacy/pre-schema quality refs needing later quality workflow, 1 open `1.1.3` Part A `FLAG`, and 0 records allowed as CP-6 closure evidence now. Output: `references/data/sprints/CP.6d-graph-heavy-evidence.json` and `reports/reference-planning/CP.6d-graph-heavy-evidence.md`. No protected mutation, lesson-output mutation, lesson quality-ref hand patching, companion review fabrication, target-exercise promotion, placeholder finalization, unit minting, CP-6 closure, or Year-1 closure was authorized. CP.6e has now failed clearance, so CP-6 remains blocked pending lesson-side remediation and CP.6f recheck.",
+          "currentState": "Completed as a non-mutating graph-heavy evidence ledger upgrade. Checked the live post-L-CP6A lesson repo, not stale REF-CT2 paths: active `1.3.2` is `Marktevenwicht`, active `1.3.3` is `Verschuivingen en nieuw evenwicht`, and active Chapter 1.3 has 0 current source/lesson mismatches. Recorded 9 graph-heavy active-v5 Book 1 records, 9 current Part A review files, 3 companion-review-required records with current companion visual reviews, 3 `schema_version: 2` quality refs, 6 legacy/pre-schema quality refs needing later quality workflow, 1 then-open `1.1.3` Part A `FLAG`, and 0 records allowed as CP-6 closure evidence now. Output: `references/data/sprints/CP.6d-graph-heavy-evidence.json` and `reports/reference-planning/CP.6d-graph-heavy-evidence.md`. No protected mutation, lesson-output mutation, lesson quality-ref hand patching, companion review fabrication, target-exercise promotion, placeholder finalization, unit minting, CP-6 closure, or Year-1 closure was authorized. CP.6f has since cleared the focused `1.1.3` figure-numbering blocker, while CP-6 and Year 1 remain open for remaining non-final evidence and later human-confirmed closure.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -913,7 +913,7 @@
           "sprint": "CP.6c",
           "name": "Year-1 MTU Backfill Classification",
           "completed": "yes",
-          "currentState": "Completed as a non-mutating MTU backfill classification sprint. Classified the nine REF-CT1 Year-1 candidates against the current live registry: existing-unit mappings to `A45`, `A46`, `A47`, `A48`, `A49`, and `A51`; one merge/design candidate for normal/inferior goods around successor units `A17`/`D11`/`D33` with deprecated `D04` retained only as historical context; one deferred kink-in-collective-demand candidate; and one true missing simultaneous-shift reasoning operation for later governed review. Output: `references/data/sprints/CP.6c-mtu-backfill-classification.json` and `reports/reference-planning/CP.6c-mtu-backfill-classification.md`. No protected mutation, unit minting, target-exercise promotion, placeholder finalization, CP-6 closure, or Year-1 closure was authorized. CP.6d is complete; CP.6e failed clearance; CP.6f recheck remains required after lesson-side remediation.",
+          "currentState": "Completed as a non-mutating MTU backfill classification sprint. Classified the nine REF-CT1 Year-1 candidates against the current live registry: existing-unit mappings to `A45`, `A46`, `A47`, `A48`, `A49`, and `A51`; one merge/design candidate for normal/inferior goods around successor units `A17`/`D11`/`D33` with deprecated `D04` retained only as historical context; one deferred kink-in-collective-demand candidate; and one true missing simultaneous-shift reasoning operation for later governed review. Output: `references/data/sprints/CP.6c-mtu-backfill-classification.json` and `reports/reference-planning/CP.6c-mtu-backfill-classification.md`. No protected mutation, unit minting, target-exercise promotion, placeholder finalization, CP-6 closure, or Year-1 closure was authorized. CP.6f has since cleared the focused `1.1.3` figure-numbering blocker; the simultaneous-shift true missing operation remains a later governed review/mutation question.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -921,7 +921,7 @@
           "sprint": "CP.6b",
           "name": "Year-1 Target-Exercise Review",
           "completed": "yes",
-          "currentState": "Completed as a non-mutating target-exercise review/design sprint. Recorded 12 active-v5 Book 1 target-exercise records, 9 migrated records needing explicit v5 review artifacts, 3 placeholder records with draft gemengde-opgaven integration designs, 0 reviewed-final records, 0 target-exercise promotions, and 0 placeholder finalizations. Output: `references/data/sprints/CP.6b-target-exercise-review.json` and `reports/reference-planning/CP.6b-target-exercise-review.md`. CP-6 and Year 1 remain open; CP.6d is complete, CP.6e failed clearance, and CP.6f recheck remains required before any responsible closure proposal.",
+          "currentState": "Completed as a non-mutating target-exercise review/design sprint. Recorded 12 active-v5 Book 1 target-exercise records, 9 migrated records needing explicit v5 review artifacts, 3 placeholder records with draft gemengde-opgaven integration designs, 0 reviewed-final records, 0 target-exercise promotions, and 0 placeholder finalizations. Output: `references/data/sprints/CP.6b-target-exercise-review.json` and `reports/reference-planning/CP.6b-target-exercise-review.md`. CP-6 and Year 1 remain open; CP.6f has since cleared the focused `1.1.3` figure-numbering blocker, but target exercises remain non-final and no placeholder finalization is authorized.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -1502,8 +1502,8 @@
           "roadmap": "References roadmap"
         }
       ],
-      "completedCount": 76,
-      "openCount": 13
+      "completedCount": 77,
+      "openCount": 12
     },
     {
       "id": "lessen",

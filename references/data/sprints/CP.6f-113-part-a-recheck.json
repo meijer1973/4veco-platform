@@ -1,0 +1,187 @@
+{
+  "schema_version": 1,
+  "sprint_id": "CP.6f",
+  "status": "focused_lesson_remediation_recheck_recorded_not_closing",
+  "authority_level": "non_mutating_lesson_remediation_recheck",
+  "generated_on": "2026-05-21",
+  "focused_paragraph": {
+    "paragraph_id": "1.1.3",
+    "title": "Grafieken en tabellen",
+    "blocker": "Part A figure-numbering first-use order"
+  },
+  "lesson_handoff_sprint": "L-CP6E",
+  "platform_repo": {
+    "commit": "e7163e8df17bea35961c0df93f964038749d304a",
+    "working_tree_note": "CP.6f generates platform-side evidence artifacts during this recheck; final commit cleanliness is checked separately."
+  },
+  "lesson_repo": {
+    "commit": "a31f2e11320035f6a616f899fe91a68d8a204c01",
+    "dirty": false
+  },
+  "files": {
+    "review": {
+      "file_name": "1.1.3-review.md",
+      "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3-review.md",
+      "exists": true
+    },
+    "quality_ref": {
+      "file_name": "1.1.3-quality-ref.yaml",
+      "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3-quality-ref.yaml",
+      "exists": true
+    },
+    "paragraaf_md": {
+      "file_name": "1.1.3 Grafieken en tabellen – paragraaf.md",
+      "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – paragraaf.md",
+      "exists": true
+    },
+    "paragraaf_html": {
+      "file_name": "1.1.3 Grafieken en tabellen – paragraaf.html",
+      "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – paragraaf.html",
+      "exists": true
+    },
+    "paragraaf_pdf": {
+      "file_name": "1.1.3 Grafieken en tabellen – paragraaf.pdf",
+      "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – paragraaf.pdf",
+      "exists": true
+    },
+    "opgaven_md": {
+      "file_name": "1.1.3 Grafieken en tabellen – opgaven.md",
+      "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – opgaven.md",
+      "exists": true
+    }
+  },
+  "lesson_archive": {
+    "plan": {
+      "file_name": "L-CP6E-sprint-plan.md",
+      "path": "../4veco-lessen/archive/sprints/L-CP6E/L-CP6E-sprint-plan.md",
+      "exists": true
+    },
+    "technical_qa": {
+      "file_name": "L-CP6E-technical-qa-report.md",
+      "path": "../4veco-lessen/archive/sprints/L-CP6E/L-CP6E-technical-qa-report.md",
+      "exists": true
+    },
+    "closure_log": {
+      "file_name": "L-CP6E-closure-log.md",
+      "path": "../4veco-lessen/archive/sprints/L-CP6E/L-CP6E-closure-log.md",
+      "exists": true
+    },
+    "handoff": {
+      "file_name": "L-CP6E-handoff-to-references.md",
+      "path": "../4veco-lessen/archive/sprints/L-CP6E/L-CP6E-handoff-to-references.md",
+      "exists": true
+    }
+  },
+  "quality_ref": {
+    "schema_version": "2",
+    "part_a_verdict": "PASS WITH FLAGS",
+    "part_a_last_reviewed": "2026-05-21",
+    "flags": [
+      "Opgaven.md repeats the worked example for standalone exercise use; CP.6e accepts this as non-blocking standalone-exercise scaffolding."
+    ],
+    "fixed_flags": [
+      "L-CP6E fixed Part A figure first-use order to Figuur 1 -> Figuur 2 -> Figuur 3."
+    ],
+    "open_figure_flag": false,
+    "fixed_figure_flag": true
+  },
+  "review": {
+    "overall_verdict": "PASS WITH FLAGS",
+    "focused_update": "2026-05-21, L-CP6E figure-numbering remediation",
+    "figure_numbering_result": "PASS",
+    "figure_numbering_note": "L-CP6E hernummerde de eerste drie theoriefiguren zodat de eerste verschijning nu Figuur 1 -> Figuur 2 -> Figuur 3 is.",
+    "action_items": [
+      "FIXED — Spelfout \"bioscookaartje\" gecorrigeerd naar \"bioscoopkaartje\" in beide bestanden. PDFs herbouwd.",
+      "FIXED — Figuur-nummering is in L-CP6E hersteld: de tekst en figuurcaptions lopen nu van Figuur 1 naar Figuur 2 naar Figuur 3.",
+      "**FLAG / accepted non-blocking** — Opgaven.md bevat een volledige kopie van het uitgewerkt voorbeeld uit paragraaf.md. CP.6e accepteert dit als standalone-opgavensteun; niet de resterende CP-6 blocker."
+    ],
+    "unresolved_figure_numbering_action": false
+  },
+  "checks": {
+    "required_live_files_present": true,
+    "lesson_archive_present": true,
+    "markdown_figure_sequence": {
+      "all_mentions_count": 5,
+      "first_seen_sequence": [
+        1,
+        2,
+        3
+      ],
+      "expected_sequence": [
+        1,
+        2,
+        3
+      ],
+      "sequential_first_use": true,
+      "exactly_1_2_3": true
+    },
+    "html_figure_sequence": {
+      "all_mentions_count": 5,
+      "first_seen_sequence": [
+        1,
+        2,
+        3
+      ],
+      "expected_sequence": [
+        1,
+        2,
+        3
+      ],
+      "sequential_first_use": true,
+      "exactly_1_2_3": true
+    },
+    "pdf_figure_sequence": {
+      "all_mentions_count": 5,
+      "first_seen_sequence": [
+        1,
+        2,
+        3
+      ],
+      "expected_sequence": [
+        1,
+        2,
+        3
+      ],
+      "sequential_first_use": true,
+      "exactly_1_2_3": true
+    },
+    "repeated_worked_example_accepted_non_blocking": true,
+    "l_cp6e_handoff_ready": true,
+    "l_cp6e_closed_pass_with_flags": true
+  },
+  "decision": {
+    "status": "cleared",
+    "part_a_blocker_cleared": true,
+    "cp6_unconditioned_closure_blocked_by_113_part_a": false,
+    "reason": "The live Part A markdown, HTML, and PDF first mention figures in order 1 -> 2 -> 3, and the updated review/quality-ref evidence no longer carries the figure-numbering blocker."
+  },
+  "cp6_closed": false,
+  "year1_closed": false,
+  "cp6_closure_allowed_now": false,
+  "year1_closure_allowed_now": false,
+  "protected_reference_data_changed": false,
+  "lesson_output_changed": false,
+  "lesson_quality_ref_hand_patch": false,
+  "target_exercise_promotions": false,
+  "placeholder_finalization": false,
+  "unit_minting": false,
+  "machine_registry_mutation": false,
+  "student_diagnostics_authorized": false,
+  "adaptive_routing_authorized": false,
+  "mastery_decisions_authorized": false,
+  "automatic_sequencing_authorized": false,
+  "student_facing_ai_authorized": false,
+  "summative_use_authorized": false,
+  "pv_projection_authorized": false,
+  "pv_machine_promotion_authorized": false,
+  "student_facing_output_authorized": false,
+  "no_protected_mutation_authorized": true,
+  "no_lesson_output_mutation_authorized": true,
+  "no_lesson_quality_ref_hand_patch_authorized": true,
+  "no_target_exercise_promotion_authorized": true,
+  "no_placeholder_finalization_authorized": true,
+  "no_unit_minting_authorized": true,
+  "no_cp6_closure_authorized": true,
+  "no_year1_closure_authorized": true,
+  "next_action": "Close CP.6f as a focused clearance record, keep CP-6 and Year 1 open, and move EX-0 Exam Ingestion Contract Design to the active roadmap row."
+}
