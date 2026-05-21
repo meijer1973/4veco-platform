@@ -1,17 +1,17 @@
 {
   "generated_by": "build-scripts/references/build-source-document-registry.js",
-  "generated_on": "2026-05-20T18:27:27.989Z",
+  "generated_on": "2026-05-21T05:58:08.560Z",
   "status": "pass",
   "summary": {
-    "record_count": 262,
-    "source_manifest_file_count": 265,
+    "record_count": 264,
+    "source_manifest_file_count": 267,
     "by_authority_level": {
       "external_primary": 30,
       "machine_registry": 5,
       "owned_curriculum_design": 5,
       "authored_judgement": 9,
       "generated_report": 2,
-      "governance_data": 182,
+      "governance_data": 184,
       "quality_protocol": 5,
       "planning": 1,
       "machine_contract": 23
@@ -28,7 +28,7 @@
       "inventory": 27,
       "exercise_metadata_overlay": 6,
       "exercise_overlay_readme": 1,
-      "sprint_metadata": 146,
+      "sprint_metadata": 148,
       "machine_projection": 3,
       "owned_source_readme": 1,
       "qc_prompt": 5,
@@ -44,7 +44,7 @@
       "archived": 1,
       "generated_diagnostic": 2,
       "mirrored": 25,
-      "governance_data": 180,
+      "governance_data": 182,
       "planning": 1,
       "schema_contract": 23
     },
@@ -52,7 +52,7 @@
       "public_citation_allowed_with_source_name": 30,
       "internal_only": 19,
       "internal_diagnostic_only": 2,
-      "not_public_citation_source": 211
+      "not_public_citation_source": 213
     },
     "evidence_anchor_coverage": {
       "required_document_ids": [
@@ -2988,6 +2988,82 @@
       "refresh_policy": "sprint_lifecycle",
       "source_hash": "b63534280ba21e59afc38ee5a1c127f5417912b7858f57c8bed7280d63d6be10",
       "size_bytes": 5328,
+      "primary_evidence": false,
+      "curriculum_authority": false,
+      "allowed_downstream_uses": [
+        "internal_reference_context",
+        "rag_retrieval_with_authority_label"
+      ],
+      "blocked_downstream_uses": [
+        "student_diagnostics",
+        "adaptive_routing",
+        "student_facing_ai",
+        "automatic_lesson_sequencing",
+        "automatic_mastery_decisions",
+        "summative_assessment_decisions",
+        "external_authority",
+        "override_machine_registry"
+      ],
+      "evidence_anchor_ids": [],
+      "notes": [
+        "Governance data is canonical only for its declared governance artifact."
+      ]
+    },
+    {
+      "document_id": "path-references-data-sprints-cp-6e-113-part-a-rereview",
+      "path": "references/data/sprints/CP.6e-113-part-a-rereview.json",
+      "title": "CP.6e 113 Part A Rereview",
+      "source_type": "sprint_metadata",
+      "authority_level": "governance_data",
+      "source_version": "sha256:50ed142164d65dc06e1a40f26bf514f2295fc55c27abf0501c768cc8712d7d61",
+      "status": "governance_data",
+      "owner": "references_team",
+      "citation_policy": "cite_as_governance_record_only",
+      "public_citation_policy": "not_public_citation_source",
+      "layer": "governance_data",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "refresh_policy": "sprint_lifecycle",
+      "source_hash": "50ed142164d65dc06e1a40f26bf514f2295fc55c27abf0501c768cc8712d7d61",
+      "size_bytes": 6932,
+      "primary_evidence": false,
+      "curriculum_authority": false,
+      "allowed_downstream_uses": [
+        "internal_reference_context",
+        "rag_retrieval_with_authority_label"
+      ],
+      "blocked_downstream_uses": [
+        "student_diagnostics",
+        "adaptive_routing",
+        "student_facing_ai",
+        "automatic_lesson_sequencing",
+        "automatic_mastery_decisions",
+        "summative_assessment_decisions",
+        "external_authority",
+        "override_machine_registry"
+      ],
+      "evidence_anchor_ids": [],
+      "notes": [
+        "Governance data is canonical only for its declared governance artifact."
+      ]
+    },
+    {
+      "document_id": "path-references-data-sprints-cp-6e-plan",
+      "path": "references/data/sprints/CP.6e.plan.json",
+      "title": "CP.6e.Plan",
+      "source_type": "sprint_metadata",
+      "authority_level": "governance_data",
+      "source_version": "sha256:316851b4d1913722f1a7caef5c25f994ba2a91133faf95bb809c19b8ba11aaa5",
+      "status": "governance_data",
+      "owner": "references_team",
+      "citation_policy": "cite_as_governance_record_only",
+      "public_citation_policy": "not_public_citation_source",
+      "layer": "governance_data",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "refresh_policy": "sprint_lifecycle",
+      "source_hash": "316851b4d1913722f1a7caef5c25f994ba2a91133faf95bb809c19b8ba11aaa5",
+      "size_bytes": 3819,
       "primary_evidence": false,
       "curriculum_authority": false,
       "allowed_downstream_uses": [

@@ -1,0 +1,174 @@
+{
+  "schema_version": 1,
+  "sprint_id": "CP.6e",
+  "generated_on": "2026-05-21",
+  "generated_by": "build-scripts/references/build-cp6e-113-part-a-rereview.js",
+  "status": "focused_part_a_rereview_recorded_not_closing",
+  "authority_level": "non_mutating_focused_part_a_rereview",
+  "cp6_closed": false,
+  "year1_closed": false,
+  "cp6_closure_allowed_now": false,
+  "year1_closure_allowed_now": false,
+  "protected_reference_data_changed": false,
+  "lesson_output_changed": false,
+  "lesson_quality_ref_hand_patch": false,
+  "target_exercise_promotions": false,
+  "placeholder_finalization": false,
+  "unit_minting": false,
+  "student_diagnostics_authorized": false,
+  "adaptive_routing_authorized": false,
+  "mastery_decisions_authorized": false,
+  "automatic_sequencing_authorized": false,
+  "student_facing_ai_authorized": false,
+  "summative_use_authorized": false,
+  "pv_projection_authorized": false,
+  "pv_machine_promotion_authorized": false,
+  "student_facing_output_authorized": false,
+  "no_protected_mutation_authorized": true,
+  "no_lesson_output_mutation_authorized": true,
+  "no_lesson_quality_ref_hand_patch_authorized": true,
+  "no_target_exercise_promotion_authorized": true,
+  "no_placeholder_finalization_authorized": true,
+  "no_unit_minting_authorized": true,
+  "no_cp6_closure_authorized": true,
+  "no_year1_closure_authorized": true,
+  "focused_paragraph": {
+    "paragraph_id": "1.1.3",
+    "title": "Grafieken en tabellen",
+    "lesson_path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen"
+  },
+  "source_paths": {
+    "cp6d": "references/data/sprints/CP.6d-graph-heavy-evidence.json",
+    "review": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3-review.md",
+    "quality_ref": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3-quality-ref.yaml",
+    "paragraaf": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – paragraaf.md",
+    "opgaven": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – opgaven.md",
+    "antwoorden": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – antwoorden.md"
+  },
+  "repository_state": {
+    "platform_head_at_generation": "f49fd8c92c538794f0529a12e3b89121ee4d3cb5",
+    "platform_status_at_generation": "## main...origin/main\n?? build-scripts/references/build-cp6e-113-part-a-rereview.js\n?? build-scripts/review-gates/check-cp6e-113-part-a-rereview.js\n?? references/data/sprints/CP.6e.plan.json\n?? reports/sprints/CP.6e-baseline.md\n?? reports/sprints/CP.6e-plan.md\n?? reports/sprints/CP.6e-planning-review.md",
+    "lesson_head_at_generation": "918398305d6b285f3f9ca87db1050dbb91fe2c6b",
+    "lesson_status_at_generation": "## main...origin/main"
+  },
+  "cp6d_context": {
+    "status": "graph_heavy_evidence_ledger_upgraded_not_closing",
+    "cp6d_part_a_status": "blocked_cp6e_part_a_flag_open"
+  },
+  "quality_ref": {
+    "schema_version": "2",
+    "part_a_verdict": "FLAG",
+    "part_a_last_reviewed": "2026-04-14",
+    "flags": [
+      "Figure numbering in Part A is non-sequential.",
+      "Opgaven.md repeats the worked example for standalone exercise use."
+    ]
+  },
+  "review": {
+    "overall_verdict": "FLAG",
+    "action_items": [
+      "FIXED — Spelfout \"bioscookaartje\" gecorrigeerd naar \"bioscoopkaartje\" in beide bestanden. PDFs herbouwd.",
+      "**FLAG** — Figuur-nummering niet sequentieel: Figuur 3 verschijnt voor Figuur 2 in de tekst. Hernummer zodat de volgorde in de tekst overeenkomt met de figuurnummers.",
+      "**FLAG** — Opgaven.md bevat een volledige kopie van het uitgewerkt voorbeeld uit paragraaf.md. Overweeg of dit nodig is of tot verwarring leidt."
+    ],
+    "flag_count": 8,
+    "fail_count": 0
+  },
+  "checks": {
+    "required_files_present": true,
+    "figure_sequence": {
+      "all_mentions": [
+        1,
+        1,
+        3,
+        3,
+        2
+      ],
+      "first_seen_sequence": [
+        1,
+        3,
+        2
+      ],
+      "expected_sequence": [
+        1,
+        2,
+        3
+      ],
+      "sequential_first_use": false,
+      "non_sequential_pairs": [
+        {
+          "number": 3,
+          "expected_at_position": 2,
+          "position": 2
+        },
+        {
+          "number": 2,
+          "expected_at_position": 3,
+          "position": 3
+        }
+      ]
+    },
+    "paragraaf_image_refs": [
+      {
+        "index": 1,
+        "alt": "Figuur 1: Prijs-hoeveelheid grafiek van ijsjesverkoop",
+        "target": "_assets/1.1.3_fig_1.svg"
+      },
+      {
+        "index": 2,
+        "alt": "Figuur 3: Links de economie-conventie (correct), rechts de wiskundeconventie (niet gebruiken)",
+        "target": "_assets/1.1.3_fig_3.svg"
+      },
+      {
+        "index": 3,
+        "alt": "Figuur 2: Interpolatie — aflezen bij P = €1,75",
+        "target": "_assets/1.1.3_fig_2.svg"
+      },
+      {
+        "index": 4,
+        "alt": "Uitgewerkt voorbeeld: limonadeverkoop",
+        "target": "_assets/1.1.3_we_1.svg"
+      },
+      {
+        "index": 5,
+        "alt": "Opgave 1: Broodjesverkoop",
+        "target": "_assets/1.1.3_ex_1.svg"
+      },
+      {
+        "index": 6,
+        "alt": "Opgave 3: Bioscoopbezoekers",
+        "target": "_assets/1.1.3_ex_2.svg"
+      }
+    ],
+    "opgaven_image_refs": [
+      {
+        "index": 1,
+        "alt": "Uitgewerkt voorbeeld: limonadeverkoop",
+        "target": "_assets/1.1.3_we_1.svg"
+      },
+      {
+        "index": 2,
+        "alt": "Opgave 1: Broodjesverkoop",
+        "target": "_assets/1.1.3_ex_1.svg"
+      },
+      {
+        "index": 3,
+        "alt": "Opgave 3: Bioscoopbezoekers",
+        "target": "_assets/1.1.3_ex_2.svg"
+      }
+    ],
+    "repeated_worked_example": {
+      "present": true,
+      "accepted_as_non_blocking": true,
+      "is_blocking": false,
+      "rationale": "The previous review already identified this as likely intentional standalone-exercise scaffolding; CP.6e does not treat it as the remaining hard blocker unless a later lesson-quality gate changes that policy."
+    }
+  },
+  "decision": {
+    "status": "failed_clearance",
+    "part_a_flag_cleared": false,
+    "cp6_unconditioned_closure_blocked_by_113_part_a": true,
+    "reason": "Current paragraaf.md still references Figuur 3 before Figuur 2, so the Part A figure-numbering flag is not cleared."
+  },
+  "next_action": "Route lesson-side remediation/regeneration for the remaining 1.1.3 Part A figure-numbering flag before any unconditioned CP-6 closure proposal."
+}

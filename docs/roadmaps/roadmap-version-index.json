@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_on": "2026-05-20",
+  "updated_on": "2026-05-21",
   "generated_by": "manual-roadmap-versioning",
   "canonical_archive_directory": "docs/roadmaps/outdated",
   "current_operational_roadmaps": [
@@ -15,13 +15,14 @@
   "roadmaps": [
     {
       "roadmap_id": "references-team-roadmap",
-      "version": "v2.58-cp6d-graph-heavy-evidence-upgrade",
+      "version": "v2.59-cp6e-113-part-a-failed-clearance",
       "title": "References Team Roadmap",
       "status": "active",
       "path": "references/reference-team-roadmap.md",
       "owner": "references_team",
-      "updated_on": "2026-05-20",
+      "updated_on": "2026-05-21",
       "supersedes": [
+        "docs/roadmaps/outdated/reference-team-roadmap-v2.58-cp6d-graph-heavy-evidence-upgrade.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.57-cp6c-mtu-backfill-classification.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.56-cp6b-target-exercise-review.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.55-exam-ingestion-north-star.md",
@@ -79,7 +80,18 @@
         "knowledge/Exercise schema and quality/reference-team-roadmap Live version 28 April.md",
         "knowledge/Exercise schema and quality/roadmap-updated-repository-checked.md"
       ],
-      "notes": "Current operating roadmap after CP.6d upgraded the graph-heavy evidence ledger and moved CP.6e focused 1.1.3 Part A re-review to the active row."
+      "notes": "Current operating roadmap after CP.6e failed clearance of the 1.1.3 Part A figure-numbering flag and made CP.6f remediation recheck the active route."
+    },
+    {
+      "roadmap_id": "references-team-roadmap-v2.58",
+      "version": "v2.58-cp6d-graph-heavy-evidence-upgrade",
+      "title": "References Team Roadmap before CP.6e focused 1.1.3 Part A re-review",
+      "status": "outdated",
+      "path": "docs/roadmaps/outdated/reference-team-roadmap-v2.58-cp6d-graph-heavy-evidence-upgrade.md",
+      "owner": "references_team",
+      "updated_on": "2026-05-21",
+      "superseded_by": "references/reference-team-roadmap.md",
+      "notes": "Snapshot archived before CP.6e recorded failed clearance for the 1.1.3 Part A figure-numbering flag and routed lesson-side remediation/recheck."
     },
     {
       "roadmap_id": "references-team-roadmap-v2.57",

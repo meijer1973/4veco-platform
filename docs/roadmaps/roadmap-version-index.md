@@ -1,6 +1,6 @@
 # Roadmap Version Index
 
-Updated: 2026-05-20
+Updated: 2026-05-21
 
 The JSON file is canonical for tooling:
 
@@ -12,12 +12,13 @@ docs/roadmaps/roadmap-version-index.json
 
 | Roadmap | Version | Path | Notes |
 |---|---|---|---|
-| References Team Roadmap | `v2.58-cp6d-graph-heavy-evidence-upgrade` | `references/reference-team-roadmap.md` | Current operating roadmap after CP.6d upgraded the graph-heavy evidence ledger and moved CP.6e focused 1.1.3 Part A re-review to the active row. |
+| References Team Roadmap | `v2.59-cp6e-113-part-a-failed-clearance` | `references/reference-team-roadmap.md` | Current operating roadmap after CP.6e failed clearance of the 1.1.3 Part A figure-numbering flag and made CP.6f remediation recheck the active route. |
 
 ## Outdated Archive
 
 | Roadmap | Version | Path | Superseded By |
 |---|---|---|---|
+| References Team Roadmap before CP.6e focused 1.1.3 Part A re-review | `v2.58-cp6d-graph-heavy-evidence-upgrade` | `docs/roadmaps/outdated/reference-team-roadmap-v2.58-cp6d-graph-heavy-evidence-upgrade.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before CP.6d graph-heavy evidence upgrade | `v2.57-cp6c-mtu-backfill-classification` | `docs/roadmaps/outdated/reference-team-roadmap-v2.57-cp6c-mtu-backfill-classification.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before CP.6c MTU backfill classification | `v2.56-cp6b-target-exercise-review` | `docs/roadmaps/outdated/reference-team-roadmap-v2.56-cp6b-target-exercise-review.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before CP.6b target-exercise review | `v2.55-exam-ingestion-north-star` | `docs/roadmaps/outdated/reference-team-roadmap-v2.55-exam-ingestion-north-star.md` | `references/reference-team-roadmap.md` |
