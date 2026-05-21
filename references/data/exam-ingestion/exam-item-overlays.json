@@ -1,0 +1,802 @@
+{
+  "schema_version": 1,
+  "overlay_id": "EX-1-exam-item-overlays",
+  "overlay_status": "pilot",
+  "generated_by": "EX-1 Exam Source Annex And Answer Model Pilot",
+  "generated_on": "2026-05-21T00:00:00.000Z",
+  "source_files": [
+    "references/external/exam-questions.json",
+    "references/external/exams/vw-1022-a-25-1-o.pdf",
+    "references/external/exams/vw-1022-a-25-1-c.pdf",
+    "reports/review-gates/GATE-EX0-exam-ingestion-contract/gate-closure.json"
+  ],
+  "authority_boundary": {
+    "external_source_mutated": false,
+    "machine_reference_mutated": false,
+    "unit_minting_authorized": false,
+    "student_product_use_authorized": false,
+    "notes": [
+      "EX-1 creates non-mutating pilot overlays only.",
+      "Official PDFs and mirrored external question records remain unchanged.",
+      "MTU classifications are pilot evidence for EX-2 review, not mutation authority."
+    ]
+  },
+  "records": [
+    {
+      "exam_item_id": "vw-1022-a-25-1-o:opgave-1:question-3",
+      "source_authority": "external_primary",
+      "source_path": "references/external/exam-questions.json",
+      "source_record_locator": {
+        "exam": "vw-1022-a-25-1-o",
+        "level": "vwo",
+        "year": 2025,
+        "timevak": 1,
+        "opgave_num": 1,
+        "question_num": 3
+      },
+      "source_version": "local-official-pdf-set-2026-05-21",
+      "curriculum_version": "v5",
+      "ingestion_status": "extracted_pending_review",
+      "prompt_metadata": {
+        "points": 2,
+        "instruction_word": "bereken",
+        "question_type": "berekenen",
+        "answer_format": "calculation",
+        "exam_codes": ["A2.4", "A2.5"]
+      },
+      "prompt": {
+        "text": "Bereken tot welk bedrag aan zorgkosten per jaar het voor een jongere voordeliger is om een verhoogd eigen risico te nemen.",
+        "prompt_status": "extracted"
+      },
+      "source_material": {
+        "source_material_status": "extracted_pending_review",
+        "source_material_refs": ["table-1-zoohee-zorgverzekering"],
+        "tables": [
+          {
+            "source_material_id": "table-1-zoohee-zorgverzekering",
+            "title": "Zoohee zorgverzekering",
+            "columns": ["variant", "eigen_risico_per_jaar_eur", "premie_per_maand_eur"],
+            "rows": [
+              ["wettelijk eigen risico", 385, 108.25],
+              ["verhoogd eigen risico", 885, 86.25]
+            ],
+            "extraction_status": "extracted_pending_review"
+          }
+        ],
+        "figures": [],
+        "graphs": [],
+        "uitwerkbijlagen": [],
+        "gaps": []
+      },
+      "question_classification": {
+        "content_domains": ["insurance", "cost comparison", "pilot:calculation_heavy"],
+        "calculation_required": true,
+        "graph_required": false,
+        "source_reading_required": true,
+        "reasoning_required": true,
+        "answer_writing_required": true
+      },
+      "official_answer_model": {
+        "answer_model_status": "extracted_pending_review",
+        "source_ref": "references/external/exams/vw-1022-a-25-1-c.pdf#question-3",
+        "total_points": 2,
+        "answer_steps": [
+          {
+            "step_id": "q3-step-1",
+            "description": "Compute the annual maximum relevant cost for the statutory-risk option, combining twelve monthly premiums and the statutory deductible.",
+            "points": 1,
+            "required_concepts": ["premium", "deductible", "annual total cost"],
+            "required_operations": ["multiply monthly premium by 12", "add deductible exposure"],
+            "required_wording": ["statutory-risk option annual cost"],
+            "source_refs": ["references/external/exams/vw-1022-a-25-1-c.pdf#question-3"]
+          },
+          {
+            "step_id": "q3-step-2",
+            "description": "Compute the enhanced-risk annual premium and derive the equal-cost threshold; conclude that the enhanced deductible is cheaper up to EUR 649 in care costs per year.",
+            "points": 1,
+            "required_concepts": ["equal-cost threshold", "enhanced deductible"],
+            "required_operations": ["multiply monthly premium by 12", "subtract enhanced annual premium from statutory annual cost", "state threshold conclusion"],
+            "required_wording": ["up to EUR 649 per year"],
+            "source_refs": ["references/external/exams/vw-1022-a-25-1-c.pdf#question-3"]
+          }
+        ],
+        "point_rules": [
+          {
+            "rule_id": "q3-pr-1",
+            "points": 1,
+            "condition": "Award for a correct intermediate annual-cost comparison using the premium and deductible table.",
+            "source_ref": "references/external/exams/vw-1022-a-25-1-c.pdf#question-3"
+          },
+          {
+            "rule_id": "q3-pr-2",
+            "points": 1,
+            "condition": "Award for deriving the EUR 649 threshold and concluding the enhanced deductible is cheaper up to that annual care-cost amount.",
+            "source_ref": "references/external/exams/vw-1022-a-25-1-c.pdf#question-3"
+          }
+        ],
+        "mandatory_terms": ["eigen risico", "premie", "zorgkosten per jaar"],
+        "accepted_alternatives": [
+          {
+            "alternative_id": "q3-alt-1",
+            "description": "Equivalent calculation routes are acceptable when they compare annual premiums and deductible exposure and reach the same threshold.",
+            "applies_to_step_ids": ["q3-step-1", "q3-step-2"]
+          }
+        ],
+        "partial_credit_rules": [
+          {
+            "rule_id": "q3-pc-1",
+            "description": "One point remains possible for a correct annual premium/deductible intermediate value even if the final threshold conclusion is missing or incorrect.",
+            "max_points": 1
+          }
+        ],
+        "calculation_precision": {
+          "status": "extracted",
+          "rounding": "whole euros in the correction-model threshold",
+          "tolerance": "equivalent exact euro calculation acceptable",
+          "decimal_places": 0
+        },
+        "unit_requirements": ["EUR per year"],
+        "graph_requirements": [],
+        "answer_model_gaps": []
+      },
+      "skill_decomposition": {
+        "content_units": [
+          {
+            "item_id": "q3-content-1",
+            "label": "Understand deductible and premium as components of annual expected private cost.",
+            "status": "missing_unit_candidate",
+            "evidence_refs": ["references/external/exams/vw-1022-a-25-1-o.pdf#question-3"],
+            "candidate_unit_ids": []
+          }
+        ],
+        "calculation_operations": [
+          {
+            "item_id": "q3-calc-1",
+            "label": "Compare two annual cost structures and solve an equal-cost threshold.",
+            "status": "operation_registry_need",
+            "evidence_refs": ["references/external/exams/vw-1022-a-25-1-c.pdf#question-3"],
+            "candidate_unit_ids": ["A15"]
+          }
+        ],
+        "graph_operations": [],
+        "source_reading_operations": [
+          {
+            "item_id": "q3-source-1",
+            "label": "Extract monthly premium and annual deductible values from a two-column insurance table.",
+            "status": "existing_unit_but_procedure_weak",
+            "evidence_refs": ["references/external/exams/vw-1022-a-25-1-o.pdf#question-3"],
+            "candidate_unit_ids": ["A15"]
+          }
+        ],
+        "reasoning_operations": [
+          {
+            "item_id": "q3-reason-1",
+            "label": "Translate the equal-cost threshold into a cheaper-option conclusion.",
+            "status": "answer_skill_need",
+            "evidence_refs": ["references/external/exams/vw-1022-a-25-1-c.pdf#question-3"],
+            "candidate_unit_ids": []
+          }
+        ],
+        "answer_writing_operations": [
+          {
+            "item_id": "q3-answer-1",
+            "label": "State a threshold answer with a clear unit and direction.",
+            "status": "answer_skill_need",
+            "evidence_refs": ["references/external/exams/vw-1022-a-25-1-c.pdf#question-3"],
+            "candidate_unit_ids": []
+          }
+        ]
+      },
+      "mtu_gap_classification": [
+        {
+          "requirement_id": "q3-calc-1",
+          "classification": "operation_registry_need",
+          "candidate_unit_ids": ["A15"],
+          "rationale": "The mirrored source record lists A15, but the live A15 procedure is price-elasticity calculation, while this item asks for an annual cost threshold. EX-2 must decide whether this maps to an existing arithmetic procedure, a weak A15 source mapping, or a missing operation.",
+          "mutation_authorized": false
+        },
+        {
+          "requirement_id": "q3-answer-1",
+          "classification": "answer_skill_need",
+          "candidate_unit_ids": [],
+          "rationale": "The answer requires a threshold conclusion with units and direction. This is recorded as an answer-construction requirement only; no unit is minted in EX-1.",
+          "mutation_authorized": false
+        }
+      ],
+      "lesson_build_handoff": {
+        "handoff_status": "ready_with_gaps",
+        "target_paragraph_candidate": "future exam-target paragraph candidate after EX-2 mapping review",
+        "required_teaching_moves": [
+          "Teach annualization of monthly premium.",
+          "Teach equal-cost threshold comparison between two payment structures."
+        ],
+        "required_practice_moves": [
+          "Practice extracting premiums and deductibles from a table.",
+          "Practice stating cheaper-option thresholds with units."
+        ],
+        "required_visuals": [
+          "Two-option cost comparison table or number line."
+        ],
+        "required_answer_model_scaffolds": [
+          "Break the correction model into annual-cost intermediate value and threshold conclusion."
+        ],
+        "blocked_until": [
+          "EX-2 mapping review decides whether A15 is a stale source mapping or a weak existing-unit route.",
+          "No lesson build before L-EX0 paragraph-plan contract."
+        ]
+      },
+      "review_state": {
+        "human_review_status": "not_reviewed",
+        "review_artifacts": ["reports/reference-planning/EX-1-exam-ingestion-pilot.md"],
+        "review_notes": [
+          "Pilot role: calculation-heavy.",
+          "This is extraction evidence only and awaits EX-2 mapping review."
+        ],
+        "contract_decision": "ready_for_ex1_pilot_with_gaps"
+      },
+      "product_boundary": {
+        "student_diagnostics_authorized": false,
+        "adaptive_routing_authorized": false,
+        "mastery_decisions_authorized": false,
+        "automatic_sequencing_authorized": false,
+        "student_facing_ai_authorized": false,
+        "summative_use_authorized": false,
+        "pv_projection_authorized": false,
+        "pv_machine_promotion_authorized": false,
+        "student_facing_output_authorized": false,
+        "warning_label": "Internal EX-1 pilot evidence only; no student or product use."
+      },
+      "unresolved_questions": [
+        "Does the mirrored required_skills value A15 represent a stale extraction, a weak current-unit route, or a missing annual-cost-threshold operation?"
+      ]
+    },
+    {
+      "exam_item_id": "vw-1022-a-25-1-o:opgave-4:question-19",
+      "source_authority": "external_primary",
+      "source_path": "references/external/exam-questions.json",
+      "source_record_locator": {
+        "exam": "vw-1022-a-25-1-o",
+        "level": "vwo",
+        "year": 2025,
+        "timevak": 1,
+        "opgave_num": 4,
+        "question_num": 19
+      },
+      "source_version": "local-official-pdf-set-2026-05-21",
+      "curriculum_version": "v5",
+      "ingestion_status": "reviewed_with_gaps",
+      "prompt_metadata": {
+        "points": 2,
+        "instruction_word": "teken",
+        "question_type": "teken",
+        "answer_format": "mixed",
+        "exam_codes": []
+      },
+      "prompt": {
+        "text": "Teken in de uitwerkbijlage hoe een stijgende arbeidsvraag in Curacao doorwerkt in de Curacaose arbeidsmarkt, de Curacaose goederen- en dienstenmarkt, en de Arubaanse goederen- en dienstenmarkt; geef ook aan of de evenwichtsprijzen stijgen of dalen.",
+        "prompt_status": "extracted"
+      },
+      "source_material": {
+        "source_material_status": "partially_extracted",
+        "source_material_refs": [
+          "figuur-1-factoren-curacao-arubaanse-economie",
+          "uitwerkbijlage-vraag-19"
+        ],
+        "tables": [],
+        "figures": [
+          {
+            "source_material_id": "figuur-1-factoren-curacao-arubaanse-economie",
+            "title": "Factoren beinvloeding Curacaose en Arubaanse economie",
+            "description": "The PDF text layer exposes the title but not the full figure/diagram geometry or values needed for reconstruction.",
+            "extraction_status": "gap"
+          }
+        ],
+        "graphs": [
+          {
+            "source_material_id": "q19-curacao-labor-market-graph",
+            "graph_type": "p_q_graph",
+            "axes": ["unknown from mirrored text"],
+            "series": ["vraaglijn/aanbodlijn geometry not reconstructed"],
+            "extraction_status": "gap"
+          },
+          {
+            "source_material_id": "q19-curacao-goods-market-graph",
+            "graph_type": "p_q_graph",
+            "axes": ["unknown from mirrored text"],
+            "series": ["vraaglijn/aanbodlijn geometry not reconstructed"],
+            "extraction_status": "gap"
+          },
+          {
+            "source_material_id": "q19-aruba-goods-market-graph",
+            "graph_type": "p_q_graph",
+            "axes": ["unknown from mirrored text"],
+            "series": ["vraaglijn/aanbodlijn geometry not reconstructed"],
+            "extraction_status": "gap"
+          }
+        ],
+        "uitwerkbijlagen": [
+          {
+            "source_material_id": "uitwerkbijlage-vraag-19",
+            "annex_type": "uitwerkbijlage",
+            "description": "The answer worksheet layout is required to verify the drawn shifts, but it is not reconstructable from the current mirrored question text.",
+            "extraction_status": "gap"
+          }
+        ],
+        "gaps": [
+          {
+            "gap_id": "q19-source-annex-gap",
+            "gap_type": "source_annex_gap",
+            "severity": "blocking",
+            "description": "The required uitwerkbijlage layout is not reconstructed, so a reviewer cannot fully verify the drawing task from the overlay alone.",
+            "blocks": ["full_exam_reconstruction", "mtu_mapping", "lesson_build_handoff", "human_review"]
+          },
+          {
+            "gap_id": "q19-graph-object-gap",
+            "gap_type": "graph_object_gap",
+            "severity": "blocking",
+            "description": "The figure and market graph objects expose only titles/context in the text layer; axes, lines, geometry, and source locator details remain missing.",
+            "blocks": ["full_exam_reconstruction", "mtu_mapping", "lesson_build_handoff", "human_review"]
+          }
+        ]
+      },
+      "question_classification": {
+        "content_domains": ["market shifts", "international spillover", "pilot:graph_source_heavy"],
+        "calculation_required": false,
+        "graph_required": true,
+        "source_reading_required": true,
+        "reasoning_required": true,
+        "answer_writing_required": true
+      },
+      "official_answer_model": {
+        "answer_model_status": "extracted_pending_review",
+        "source_ref": "references/external/exams/vw-1022-a-25-1-c.pdf#question-19",
+        "total_points": 2,
+        "answer_steps": [
+          {
+            "step_id": "q19-step-1",
+            "description": "Draw a rightward demand shift on the Curacao labor market and conclude that the wage level rises.",
+            "points": 0.67,
+            "required_concepts": ["labor demand", "wage level"],
+            "required_operations": ["draw demand curve shift right", "infer new equilibrium price/wage direction"],
+            "required_wording": ["loonniveau stijgt"],
+            "source_refs": ["references/external/exams/vw-1022-a-25-1-c.pdf#question-19"]
+          },
+          {
+            "step_id": "q19-step-2",
+            "description": "Draw a rightward demand shift on the Curacao goods and services market and conclude that inflation in Curacao rises.",
+            "points": 0.67,
+            "required_concepts": ["aggregate demand", "inflation"],
+            "required_operations": ["draw demand curve shift right", "infer price-level direction"],
+            "required_wording": ["inflatie op Curacao stijgt"],
+            "source_refs": ["references/external/exams/vw-1022-a-25-1-c.pdf#question-19"]
+          },
+          {
+            "step_id": "q19-step-3",
+            "description": "Draw a rightward demand shift on the Aruban goods and services market and conclude that inflation in Aruba rises.",
+            "points": 0.66,
+            "required_concepts": ["foreign demand spillover", "inflation"],
+            "required_operations": ["draw demand curve shift right", "infer price-level direction"],
+            "required_wording": ["inflatie op Aruba stijgt"],
+            "source_refs": ["references/external/exams/vw-1022-a-25-1-c.pdf#question-19"]
+          }
+        ],
+        "point_rules": [
+          {
+            "rule_id": "q19-pr-1",
+            "points": 2,
+            "condition": "Award full credit when all three market-shift elements and price/wage conclusions are correct.",
+            "source_ref": "references/external/exams/vw-1022-a-25-1-c.pdf#question-19"
+          },
+          {
+            "rule_id": "q19-pr-2",
+            "points": 1,
+            "condition": "Award partial credit when two of the three required market-shift elements are correct.",
+            "source_ref": "references/external/exams/vw-1022-a-25-1-c.pdf#question-19"
+          },
+          {
+            "rule_id": "q19-pr-3",
+            "points": 0,
+            "condition": "Award no credit when at most one required market-shift element is correct.",
+            "source_ref": "references/external/exams/vw-1022-a-25-1-c.pdf#question-19"
+          }
+        ],
+        "mandatory_terms": ["vraaglijn naar rechts", "loonniveau stijgt", "inflatie stijgt"],
+        "accepted_alternatives": [
+          {
+            "alternative_id": "q19-alt-1",
+            "description": "The correction model permits correct aggregate-supply shifts instead of or in combination with the second and third demand-shift elements.",
+            "applies_to_step_ids": ["q19-step-2", "q19-step-3"]
+          }
+        ],
+        "partial_credit_rules": [
+          {
+            "rule_id": "q19-pc-1",
+            "description": "Three correct elements yield 2 points; two correct elements yield 1 point; one or zero correct elements yield 0 points.",
+            "max_points": 2
+          }
+        ],
+        "calculation_precision": {
+          "status": "not_applicable",
+          "rounding": "",
+          "tolerance": "",
+          "decimal_places": null
+        },
+        "unit_requirements": [],
+        "graph_requirements": [
+          {
+            "requirement_id": "q19-graph-1",
+            "description": "Demand curve shifts right on Curacao labor market.",
+            "graph_type": "p_q_graph",
+            "source_refs": ["uitwerkbijlage-vraag-19"]
+          },
+          {
+            "requirement_id": "q19-graph-2",
+            "description": "Demand curve shifts right on Curacao goods and services market.",
+            "graph_type": "p_q_graph",
+            "source_refs": ["uitwerkbijlage-vraag-19"]
+          },
+          {
+            "requirement_id": "q19-graph-3",
+            "description": "Demand curve shifts right on Aruban goods and services market.",
+            "graph_type": "p_q_graph",
+            "source_refs": ["uitwerkbijlage-vraag-19"]
+          }
+        ],
+        "answer_model_gaps": []
+      },
+      "skill_decomposition": {
+        "content_units": [
+          {
+            "item_id": "q19-content-1",
+            "label": "Market equilibrium response to demand shifts across linked markets.",
+            "status": "operation_registry_need",
+            "evidence_refs": ["references/external/exams/vw-1022-a-25-1-o.pdf#question-19"],
+            "candidate_unit_ids": ["D10", "D13"]
+          }
+        ],
+        "calculation_operations": [],
+        "graph_operations": [
+          {
+            "item_id": "q19-graph-op-1",
+            "label": "Draw rightward demand shifts and associated equilibrium-price directions in three market diagrams.",
+            "status": "source_annex_gap",
+            "evidence_refs": ["references/external/exams/vw-1022-a-25-1-o.pdf#question-19"],
+            "candidate_unit_ids": ["A45", "D10"]
+          }
+        ],
+        "source_reading_operations": [
+          {
+            "item_id": "q19-source-1",
+            "label": "Read a multi-market causal figure and transfer its structure to a worksheet.",
+            "status": "source_annex_gap",
+            "evidence_refs": ["references/external/exams/vw-1022-a-25-1-o.pdf#question-19"],
+            "candidate_unit_ids": []
+          }
+        ],
+        "reasoning_operations": [
+          {
+            "item_id": "q19-reason-1",
+            "label": "Reason from higher labor demand to wages, production costs or demand spillovers, and inflation effects across islands.",
+            "status": "operation_registry_need",
+            "evidence_refs": ["references/external/exams/vw-1022-a-25-1-c.pdf#question-19"],
+            "candidate_unit_ids": ["D10", "D13"]
+          }
+        ],
+        "answer_writing_operations": [
+          {
+            "item_id": "q19-answer-1",
+            "label": "Pair each graph shift with an explicit price or wage direction.",
+            "status": "answer_skill_need",
+            "evidence_refs": ["references/external/exams/vw-1022-a-25-1-c.pdf#question-19"],
+            "candidate_unit_ids": []
+          }
+        ]
+      },
+      "mtu_gap_classification": [
+        {
+          "requirement_id": "q19-source-annex-gap",
+          "classification": "source_annex_gap",
+          "candidate_unit_ids": [],
+          "rationale": "The uitwerkbijlage and full source figure are required for reconstruction and are not currently represented with enough geometry or values.",
+          "mutation_authorized": false
+        },
+        {
+          "requirement_id": "q19-graph-op-1",
+          "classification": "pv_graph_need",
+          "candidate_unit_ids": ["A45", "D10"],
+          "rationale": "The item requires repeated P-Q style demand-shift drawings. The current overlay cannot verify exact graph geometry, so this remains a PV/graph need plus source-annex gap for EX-2 review.",
+          "mutation_authorized": false
+        },
+        {
+          "requirement_id": "q19-reason-1",
+          "classification": "operation_registry_need",
+          "candidate_unit_ids": ["D10", "D13"],
+          "rationale": "The operation combines market-shift reasoning across linked markets. EX-2 should decide whether existing D10/D13 procedures are sufficient or whether a split/merge/missing operation is needed.",
+          "mutation_authorized": false
+        }
+      ],
+      "lesson_build_handoff": {
+        "handoff_status": "not_ready",
+        "target_paragraph_candidate": "blocked graph/source-heavy pilot candidate",
+        "required_teaching_moves": [
+          "Teach how to identify the affected market in a multi-market causal diagram.",
+          "Teach how to connect a rightward demand shift to price or wage direction."
+        ],
+        "required_practice_moves": [
+          "Practice three-market shift tracing with visible diagrams.",
+          "Practice pairing each drawn shift with an equilibrium-price conclusion."
+        ],
+        "required_visuals": [
+          "Reconstructable multi-market source figure.",
+          "Reconstructable uitwerkbijlage with three market diagrams."
+        ],
+        "required_answer_model_scaffolds": [
+          "Checklist for the three required market-shift elements and their price/wage conclusions."
+        ],
+        "blocked_until": [
+          "Blocking source_annex_gap resolved or explicitly accepted by human review.",
+          "Blocking graph_object_gap resolved or explicitly accepted by human review.",
+          "EX-2 mapping review decides D10/D13/PV graph sufficiency.",
+          "No lesson build before L-EX0 paragraph-plan contract."
+        ]
+      },
+      "review_state": {
+        "human_review_status": "pass_with_gaps",
+        "review_artifacts": ["reports/reference-planning/EX-1-exam-ingestion-pilot.md"],
+        "review_notes": [
+          "Pilot role: graph/source-heavy.",
+          "GATE-EX0 condition is enforced: this item is not marked reviewed_ready_for_mapping and carries blocking source and graph gaps."
+        ],
+        "contract_decision": "ready_for_ex1_pilot_with_gaps"
+      },
+      "product_boundary": {
+        "student_diagnostics_authorized": false,
+        "adaptive_routing_authorized": false,
+        "mastery_decisions_authorized": false,
+        "automatic_sequencing_authorized": false,
+        "student_facing_ai_authorized": false,
+        "summative_use_authorized": false,
+        "pv_projection_authorized": false,
+        "pv_machine_promotion_authorized": false,
+        "student_facing_output_authorized": false,
+        "warning_label": "Internal EX-1 pilot evidence only; no student or product use."
+      },
+      "unresolved_questions": [
+        "Can the official uitwerkbijlage and source figure be extracted with enough geometry to reconstruct the answer task?",
+        "Should the repeated market-shift operation map to D10/D13, a PV graph template, or a later missing operation?"
+      ]
+    },
+    {
+      "exam_item_id": "vw-1022-a-25-1-o:opgave-3:question-15",
+      "source_authority": "external_primary",
+      "source_path": "references/external/exam-questions.json",
+      "source_record_locator": {
+        "exam": "vw-1022-a-25-1-o",
+        "level": "vwo",
+        "year": 2025,
+        "timevak": 1,
+        "opgave_num": 3,
+        "question_num": 15
+      },
+      "source_version": "local-official-pdf-set-2026-05-21",
+      "curriculum_version": "v5",
+      "ingestion_status": "extracted_pending_review",
+      "prompt_metadata": {
+        "points": 2,
+        "instruction_word": "leg uit",
+        "question_type": "uitleg_dat",
+        "answer_format": "causal_chain",
+        "exam_codes": ["D1.9"]
+      },
+      "prompt": {
+        "text": "Leg uit dat Guarda en Orso Bianco in een gevangenendilemma kunnen belanden als consumenten de ijsjes als perfecte substituten zien.",
+        "prompt_status": "extracted"
+      },
+      "source_material": {
+        "source_material_status": "extracted_pending_review",
+        "source_material_refs": ["question-context-page-7"],
+        "tables": [],
+        "figures": [],
+        "graphs": [],
+        "uitwerkbijlagen": [
+          {
+            "source_material_id": "question-context-page-7",
+            "annex_type": "source_text",
+            "description": "Context states that Orso Bianco enters with a lower price, both firms have the same production costs, and consumers view the ice creams as perfect substitutes.",
+            "extraction_status": "extracted_pending_review"
+          }
+        ],
+        "gaps": []
+      },
+      "question_classification": {
+        "content_domains": ["game theory", "perfect substitutes", "pilot:reasoning_answer_model_heavy"],
+        "calculation_required": false,
+        "graph_required": false,
+        "source_reading_required": true,
+        "reasoning_required": true,
+        "answer_writing_required": true
+      },
+      "official_answer_model": {
+        "answer_model_status": "extracted_pending_review",
+        "source_ref": "references/external/exams/vw-1022-a-25-1-c.pdf#question-15",
+        "total_points": 2,
+        "answer_steps": [
+          {
+            "step_id": "q15-step-1",
+            "description": "Explain that when consumers see the products as perfect substitutes, each ice cream seller has a dominant strategy to lower price or undercut the rival.",
+            "points": 1,
+            "required_concepts": ["perfect substitutes", "dominant strategy"],
+            "required_operations": ["link consumer price focus to undercutting incentive", "identify dominant strategy for both firms"],
+            "required_wording": ["dominante strategie", "prijs verlagen"],
+            "source_refs": ["references/external/exams/vw-1022-a-25-1-c.pdf#question-15"]
+          },
+          {
+            "step_id": "q15-step-2",
+            "description": "Explain that the outcome is suboptimal because both firms end with lower revenue or profit, so the situation is a prisoner dilemma.",
+            "points": 1,
+            "required_concepts": ["suboptimal outcome", "prisoner dilemma", "profit or revenue decline"],
+            "required_operations": ["compare individual incentives with joint outcome", "name the dilemma"],
+            "required_wording": ["gevangenendilemma", "lagere omzet of winst"],
+            "source_refs": ["references/external/exams/vw-1022-a-25-1-c.pdf#question-15"]
+          }
+        ],
+        "point_rules": [
+          {
+            "rule_id": "q15-pr-1",
+            "points": 1,
+            "condition": "Award for explaining that both ice cream sellers have a dominant strategy to lower price.",
+            "source_ref": "references/external/exams/vw-1022-a-25-1-c.pdf#question-15"
+          },
+          {
+            "rule_id": "q15-pr-2",
+            "points": 1,
+            "condition": "Award for explaining that both firms' revenue or profit falls and that this creates a prisoner dilemma.",
+            "source_ref": "references/external/exams/vw-1022-a-25-1-c.pdf#question-15"
+          }
+        ],
+        "mandatory_terms": ["perfecte substituten", "dominante strategie", "gevangenendilemma", "omzet of winst"],
+        "accepted_alternatives": [
+          {
+            "alternative_id": "q15-alt-1",
+            "description": "A student may describe undercutting as pricing just below the competitor rather than using the word undercutting, if the dominant-strategy logic is clear.",
+            "applies_to_step_ids": ["q15-step-1"]
+          }
+        ],
+        "partial_credit_rules": [
+          {
+            "rule_id": "q15-pc-1",
+            "description": "The correction model separates the dominant-strategy explanation from the suboptimal-outcome/prisoner-dilemma conclusion; either can earn one point.",
+            "max_points": 1
+          }
+        ],
+        "calculation_precision": {
+          "status": "not_applicable",
+          "rounding": "",
+          "tolerance": "",
+          "decimal_places": null
+        },
+        "unit_requirements": [],
+        "graph_requirements": [],
+        "answer_model_gaps": []
+      },
+      "skill_decomposition": {
+        "content_units": [
+          {
+            "item_id": "q15-content-1",
+            "label": "Recognize perfect substitutes as a context for price-focused consumer choice.",
+            "status": "existing_unit",
+            "evidence_refs": ["references/machine/micro-teaching-units.md#D27"],
+            "candidate_unit_ids": ["D27"]
+          },
+          {
+            "item_id": "q15-content-2",
+            "label": "Recognize dominant strategy and prisoner dilemma logic.",
+            "status": "existing_unit",
+            "evidence_refs": ["references/machine/micro-teaching-units.md#F03", "references/machine/micro-teaching-units.md#F09"],
+            "candidate_unit_ids": ["F03", "F09"]
+          }
+        ],
+        "calculation_operations": [],
+        "graph_operations": [],
+        "source_reading_operations": [
+          {
+            "item_id": "q15-source-1",
+            "label": "Use context statements about costs, entry price, and substitutability to set up the game-theory explanation.",
+            "status": "existing_unit",
+            "evidence_refs": ["references/external/exams/vw-1022-a-25-1-o.pdf#question-15"],
+            "candidate_unit_ids": ["D27"]
+          }
+        ],
+        "reasoning_operations": [
+          {
+            "item_id": "q15-reason-1",
+            "label": "Build a two-step explanation from individual undercutting incentive to collectively worse outcome.",
+            "status": "existing_unit",
+            "evidence_refs": ["references/machine/micro-teaching-units.md#F03", "references/machine/micro-teaching-units.md#F09"],
+            "candidate_unit_ids": ["F03", "F09"]
+          }
+        ],
+        "answer_writing_operations": [
+          {
+            "item_id": "q15-answer-1",
+            "label": "Write a rewarded causal chain that explicitly names dominant strategy and prisoner dilemma.",
+            "status": "answer_skill_need",
+            "evidence_refs": ["references/external/exams/vw-1022-a-25-1-c.pdf#question-15"],
+            "candidate_unit_ids": ["F03", "F09"]
+          }
+        ]
+      },
+      "mtu_gap_classification": [
+        {
+          "requirement_id": "q15-content-1",
+          "classification": "existing_mtu",
+          "candidate_unit_ids": ["D27"],
+          "rationale": "D27 covers substitutes/complements at concept level and is the closest existing context unit for perfect substitutes.",
+          "mutation_authorized": false
+        },
+        {
+          "requirement_id": "q15-content-2",
+          "classification": "existing_mtu",
+          "candidate_unit_ids": ["F03", "F09"],
+          "rationale": "F03 and F09 directly cover dominant strategy and prisoner-dilemma concepts.",
+          "mutation_authorized": false
+        },
+        {
+          "requirement_id": "q15-answer-1",
+          "classification": "answer_skill_need",
+          "candidate_unit_ids": ["F03", "F09"],
+          "rationale": "The correction model rewards a specific two-step explanation. EX-2 should decide whether existing F03/F09 procedures sufficiently teach the answer construction.",
+          "mutation_authorized": false
+        }
+      ],
+      "lesson_build_handoff": {
+        "handoff_status": "ready_with_gaps",
+        "target_paragraph_candidate": "future exam-target game-theory paragraph candidate after EX-2 mapping review",
+        "required_teaching_moves": [
+          "Teach perfect-substitute price competition as an entry context.",
+          "Teach dominant strategy before naming prisoner dilemma.",
+          "Teach suboptimal joint outcome as the reason the dilemma label applies."
+        ],
+        "required_practice_moves": [
+          "Practice identifying undercutting incentives from short market contexts.",
+          "Practice writing the two-part correction-model explanation."
+        ],
+        "required_visuals": [
+          "Optional payoff or strategy table showing undercutting incentives; no official graph is required for this item."
+        ],
+        "required_answer_model_scaffolds": [
+          "Step 1: name the dominant strategy to lower price for both firms.",
+          "Step 2: explain lower revenue/profit and prisoner-dilemma outcome."
+        ],
+        "blocked_until": [
+          "EX-2 mapping review verifies F03/F09/D27 sufficiency.",
+          "No lesson build before L-EX0 paragraph-plan contract."
+        ]
+      },
+      "review_state": {
+        "human_review_status": "not_reviewed",
+        "review_artifacts": ["reports/reference-planning/EX-1-exam-ingestion-pilot.md"],
+        "review_notes": [
+          "Pilot role: reasoning/answer-model-heavy.",
+          "This is extraction evidence only and awaits EX-2 mapping review."
+        ],
+        "contract_decision": "ready_for_ex1_pilot_with_gaps"
+      },
+      "product_boundary": {
+        "student_diagnostics_authorized": false,
+        "adaptive_routing_authorized": false,
+        "mastery_decisions_authorized": false,
+        "automatic_sequencing_authorized": false,
+        "student_facing_ai_authorized": false,
+        "summative_use_authorized": false,
+        "pv_projection_authorized": false,
+        "pv_machine_promotion_authorized": false,
+        "student_facing_output_authorized": false,
+        "warning_label": "Internal EX-1 pilot evidence only; no student or product use."
+      },
+      "unresolved_questions": [
+        "Should the answer-writing requirement become a separate answer-skill unit later, or should it remain a reviewed procedure inside F03/F09 lesson work?"
+      ]
+    }
+  ]
+}

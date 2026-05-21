@@ -1,0 +1,167 @@
+{
+  "sprint_id": "EX-1",
+  "name": "Exam Source Annex And Answer Model Pilot",
+  "status": "completed",
+  "completed_on": "2026-05-21",
+  "plan": "reports/sprints/EX-1-plan.md",
+  "baseline": "reports/sprints/EX-1-baseline.md",
+  "result": "reports/sprints/EX-1-result.md",
+  "diff_summary": "reports/sprints/EX-1-diff-summary.md",
+  "authority_level": "non_mutating_exam_ingestion_pilot",
+  "authorizing_gate": "reports/review-gates/GATE-EX0-exam-ingestion-contract/gate-closure.json",
+  "protected_reference_data_changed": false,
+  "external_source_mutation_authorized": false,
+  "real_exam_ingestion_overlay_records_created": true,
+  "lesson_output_changed": false,
+  "target_exercise_promotions": false,
+  "placeholder_finalization": false,
+  "unit_minting": false,
+  "machine_registry_mutation": false,
+  "cp6_closed": false,
+  "year1_closed": false,
+  "lead_review_required": true,
+  "lead_review": {
+    "assignment": "reports/sprints/EX-1-lead-review-assignment.md",
+    "round1": "reports/sprints/EX-1-lead-review-round1.md",
+    "corrections": "reports/sprints/EX-1-lead-review-corrections.md",
+    "round2": "reports/sprints/EX-1-lead-review-round2.md",
+    "round1_verdict": "PASS WITH FLAGS",
+    "correction_summary": "No content corrections required; round-1 review and procedural correction pass recorded.",
+    "round2_verdict": "PASS WITH FLAGS",
+    "final_verdict": "PASS WITH FLAGS",
+    "notes": "Round 1 and round 2 both returned PASS WITH FLAGS. Flags carried forward: keep q19 source/graph gaps blocking, keep the pilot validator paired with the EX-0 contract checker, and route EX-2 as a human-reviewed mapping gate before mutation."
+  },
+  "primary_outputs": [
+    "references/data/exam-ingestion/exam-item-overlays.json",
+    "references/data/exam-ingestion/exam-answer-model-overlays.json",
+    "references/data/exam-ingestion/exam-source-annex-overlays.json",
+    "build-scripts/references/check-exam-ingestion-pilots.js",
+    "reports/reference-planning/EX-1-exam-ingestion-pilot.md"
+  ],
+  "summary": {
+    "pilot_item_count": 3,
+    "calculation_heavy": "vw-1022-a-25-1-o:opgave-1:question-3",
+    "graph_source_heavy": "vw-1022-a-25-1-o:opgave-4:question-19",
+    "reasoning_answer_model_heavy": "vw-1022-a-25-1-o:opgave-3:question-15",
+    "graph_source_blocking_gaps": [
+      "q19-source-annex-gap",
+      "q19-graph-object-gap"
+    ],
+    "next_operational_action": "lead review, then EX-2 human-reviewed exam-to-MTU mapping gate"
+  },
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/EX-1-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js EX-1",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-exam-ingestion-contract.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-exam-ingestion-pilots.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/validate-core-schemas.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/validate-report-json.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/generate-all.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/validate-report-json.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/generate-reference-health.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/check-reference-health.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run dashboard:internal",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run agent:index",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js --check",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/build-reference-inventory.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/build-source-document-registry.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-source-document-registry.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-source-manifest.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-document-inventory.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-roadmap-version-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-result.js reports/sprints/EX-1-result.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js EX-1 --complete",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd test",
+      "status": "passed"
+    }
+  ],
+  "blocked_outcomes": [
+    "protected reference mutation",
+    "external-source mutation",
+    "target-exercise promotion",
+    "placeholder finalization",
+    "unit minting",
+    "machine registry mutation",
+    "lesson-output mutation",
+    "CP-6 closure",
+    "Year-1 closure",
+    "student diagnostics",
+    "adaptive routing",
+    "mastery decisions",
+    "automatic sequencing",
+    "student-facing AI",
+    "summative use",
+    "PV projection",
+    "PV machine promotion",
+    "student-facing generated output"
+  ],
+  "next_operational_action": "Start EX-2 as the human-reviewed exam-to-MTU mapping gate."
+}

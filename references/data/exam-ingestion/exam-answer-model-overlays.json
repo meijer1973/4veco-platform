@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "overlay_id": "EX-1-exam-answer-model-overlays",
+  "overlay_status": "pilot",
+  "generated_by": "EX-1 Exam Source Annex And Answer Model Pilot",
+  "generated_on": "2026-05-21T00:00:00.000Z",
+  "source_files": [
+    "references/external/exams/vw-1022-a-25-1-c.pdf",
+    "references/data/exam-ingestion/exam-item-overlays.json"
+  ],
+  "authority_boundary": {
+    "external_source_mutated": false,
+    "machine_reference_mutated": false,
+    "unit_minting_authorized": false,
+    "student_product_use_authorized": false,
+    "notes": [
+      "This file mirrors the correction-model portion of the EX-1 item overlays for review convenience.",
+      "Correction-model text is paraphrased into structured steps and point rules; the official PDF remains the source of authority."
+    ]
+  },
+  "records": [
+    {
+      "exam_item_id": "vw-1022-a-25-1-o:opgave-1:question-3",
+      "pilot_role": "calculation_heavy",
+      "source_ref": "references/external/exams/vw-1022-a-25-1-c.pdf#question-3",
+      "official_answer_model": {
+        "answer_model_status": "extracted_pending_review",
+        "total_points": 2,
+        "answer_step_ids": ["q3-step-1", "q3-step-2"],
+        "point_rule_ids": ["q3-pr-1", "q3-pr-2"],
+        "blocking_gaps": []
+      }
+    },
+    {
+      "exam_item_id": "vw-1022-a-25-1-o:opgave-4:question-19",
+      "pilot_role": "graph_source_heavy",
+      "source_ref": "references/external/exams/vw-1022-a-25-1-c.pdf#question-19",
+      "official_answer_model": {
+        "answer_model_status": "extracted_pending_review",
+        "total_points": 2,
+        "answer_step_ids": ["q19-step-1", "q19-step-2", "q19-step-3"],
+        "point_rule_ids": ["q19-pr-1", "q19-pr-2", "q19-pr-3"],
+        "blocking_gaps": []
+      }
+    },
+    {
+      "exam_item_id": "vw-1022-a-25-1-o:opgave-3:question-15",
+      "pilot_role": "reasoning_answer_model_heavy",
+      "source_ref": "references/external/exams/vw-1022-a-25-1-c.pdf#question-15",
+      "official_answer_model": {
+        "answer_model_status": "extracted_pending_review",
+        "total_points": 2,
+        "answer_step_ids": ["q15-step-1", "q15-step-2"],
+        "point_rule_ids": ["q15-pr-1", "q15-pr-2"],
+        "blocking_gaps": []
+      }
+    }
+  ]
+}

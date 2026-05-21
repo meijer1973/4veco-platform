@@ -15,13 +15,14 @@
   "roadmaps": [
     {
       "roadmap_id": "references-team-roadmap",
-      "version": "v2.62-gate-ex0-pass-with-conditions",
+      "version": "v2.63-ex1-exam-ingestion-pilot",
       "title": "References Team Roadmap",
       "status": "active",
       "path": "references/reference-team-roadmap.md",
       "owner": "references_team",
       "updated_on": "2026-05-21",
       "supersedes": [
+        "docs/roadmaps/outdated/reference-team-roadmap-v2.62-gate-ex0-pass-with-conditions.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.61-ex0-exam-ingestion-contract.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.60-cp6f-113-part-a-cleared.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.59-cp6e-113-part-a-failed-clearance.md",

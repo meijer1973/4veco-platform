@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-21T12:53:19.648Z",
+  "generatedAt": "2026-05-21T13:24:01.305Z",
   "internalOnly": true,
   "teams": [
     {
@@ -160,20 +160,13 @@
           "generated": "2026-04-23",
           "updated": "",
           "scope": "`references/`, `build-scripts/references/`, `build-scripts/reports/`, reference dashboards, and generated reference reports under `reports/`",
-          "summary": "References Team Roadmap Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Last strategic update: 2026-05-21 Roadmap ID: references-team-roadmap Roadmap version: v2.62-gate-ex0-pass-with-conditions Roadmap status: active Version index: docs/roadmaps/roadmap-version-index.json Scope: references/, build-scripts/references/, build-scripts/reports/, reference dashboards, and generated reference reports under reports/ Exam Ingestion North Star The long-term reference-platform goal is that a new official CvTE econom...",
+          "summary": "References Team Roadmap Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Last strategic update: 2026-05-21 Roadmap ID: references-team-roadmap Roadmap version: v2.63-ex1-exam-ingestion-pilot Roadmap status: active Version index: docs/roadmaps/roadmap-version-index.json Scope: references/, build-scripts/references/, build-scripts/reports/, reference dashboards, and generated reference reports under reports/ Exam Ingestion North Star The long-term reference-platform goal is that a new official CvTE economics e...",
           "sprints": [
-            {
-              "sprint": "EX-1",
-              "name": "Exam Source Annex And Answer Model Pilot",
-              "completed": "no",
-              "currentState": "**ACTIVE / PILOT AUTHORIZED WITH CONDITIONS.** GATE-EX0 closed as `pass_with_conditions` and authorizes EX-1 to create three non-mutating `references/data/` pilot exam-ingestion overlays: one calculation-heavy, one graph/source-heavy, and one reasoning/answer-model-heavy. EX-1 must add a pilot-overlay validator, keep graph/source reconstruction gaps blocking and visible, preserve prompt/source/correction-model traceability, and repeat all no-mutation/no-product boundaries. No protected mutation, external-source mutation, unit minting, target-exercise promotion, CP-6 closure, Year-1 closure, lesson-output mutation, or student/product authorization.",
-              "exitGate": ""
-            },
             {
               "sprint": "EX-2",
               "name": "Exam-to-MTU Mapping Review Gate",
               "completed": "no",
-              "currentState": "FUTURE REVIEW GATE after EX-1. Classify every pilot exam requirement as existing MTU, weak MTU, missing MTU, merge/split candidate, operation-registry need, PV/graph need, answer-skill need, source-annex gap, answer-model extraction gap, or defer. No mutation before human review.",
+              "currentState": "**ACTIVE / HUMAN REVIEW GATE NEXT.** EX-1 created three bounded non-mutating pilot exam-ingestion overlays and a pilot validator. EX-2 must review the pilot requirements and classify them as existing MTU, weak MTU, missing MTU, merge/split candidate, operation-registry need, PV/graph need, answer-skill need, source-annex gap, answer-model extraction gap, or defer. No mutation before human review; no CP-6/Year-1 closure or student/product use.",
               "exitGate": ""
             },
             {
@@ -237,6 +230,13 @@
               "name": "Re-Evaluate R10-R13 Product Surfaces",
               "completed": "no",
               "currentState": "Blocked. Diagnostics, adaptive routing, student-facing AI, teacher cockpit deployment, automatic sequencing, mastery, and summative uses remain out of scope until data-quality gates justify them.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "EX-1",
+              "name": "Exam Source Annex And Answer Model Pilot",
+              "completed": "yes",
+              "currentState": "Completed as a bounded non-mutating pilot under the closed `GATE-EX0` conditions. Created exactly three pilot overlay families under `references/data/exam-ingestion/`: `exam-item-overlays.json`, `exam-answer-model-overlays.json`, and `exam-source-annex-overlays.json`, covering q3 calculation-heavy, q19 graph/source-heavy, and q15 reasoning/answer-model-heavy official VWO 2025 tijdvak 1 items. Added `build-scripts/references/check-exam-ingestion-pilots.js` and a gate-aware EX-0 contract-check update. q19 remains blocked with visible `q19-source-annex-gap` and `q19-graph-object-gap`; it is not `reviewed_ready_for_mapping`. No protected mutation, external-source mutation, unit minting, target-exercise promotion, CP-6 closure, Year-1 closure, lesson-output mutation, diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student-facing output was authorized.",
               "exitGate": ""
             },
             {
@@ -797,18 +797,10 @@
       ],
       "sprints": [
         {
-          "sprint": "EX-1",
-          "name": "Exam Source Annex And Answer Model Pilot",
-          "completed": "no",
-          "currentState": "**ACTIVE / PILOT AUTHORIZED WITH CONDITIONS.** GATE-EX0 closed as `pass_with_conditions` and authorizes EX-1 to create three non-mutating `references/data/` pilot exam-ingestion overlays: one calculation-heavy, one graph/source-heavy, and one reasoning/answer-model-heavy. EX-1 must add a pilot-overlay validator, keep graph/source reconstruction gaps blocking and visible, preserve prompt/source/correction-model traceability, and repeat all no-mutation/no-product boundaries. No protected mutation, external-source mutation, unit minting, target-exercise promotion, CP-6 closure, Year-1 closure, lesson-output mutation, or student/product authorization.",
-          "exitGate": "",
-          "roadmap": "References roadmap"
-        },
-        {
           "sprint": "EX-2",
           "name": "Exam-to-MTU Mapping Review Gate",
           "completed": "no",
-          "currentState": "FUTURE REVIEW GATE after EX-1. Classify every pilot exam requirement as existing MTU, weak MTU, missing MTU, merge/split candidate, operation-registry need, PV/graph need, answer-skill need, source-annex gap, answer-model extraction gap, or defer. No mutation before human review.",
+          "currentState": "**ACTIVE / HUMAN REVIEW GATE NEXT.** EX-1 created three bounded non-mutating pilot exam-ingestion overlays and a pilot validator. EX-2 must review the pilot requirements and classify them as existing MTU, weak MTU, missing MTU, merge/split candidate, operation-registry need, PV/graph need, answer-skill need, source-annex gap, answer-model extraction gap, or defer. No mutation before human review; no CP-6/Year-1 closure or student/product use.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -881,6 +873,14 @@
           "name": "Re-Evaluate R10-R13 Product Surfaces",
           "completed": "no",
           "currentState": "Blocked. Diagnostics, adaptive routing, student-facing AI, teacher cockpit deployment, automatic sequencing, mastery, and summative uses remain out of scope until data-quality gates justify them.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "EX-1",
+          "name": "Exam Source Annex And Answer Model Pilot",
+          "completed": "yes",
+          "currentState": "Completed as a bounded non-mutating pilot under the closed `GATE-EX0` conditions. Created exactly three pilot overlay families under `references/data/exam-ingestion/`: `exam-item-overlays.json`, `exam-answer-model-overlays.json`, and `exam-source-annex-overlays.json`, covering q3 calculation-heavy, q19 graph/source-heavy, and q15 reasoning/answer-model-heavy official VWO 2025 tijdvak 1 items. Added `build-scripts/references/check-exam-ingestion-pilots.js` and a gate-aware EX-0 contract-check update. q19 remains blocked with visible `q19-source-annex-gap` and `q19-graph-object-gap`; it is not `reviewed_ready_for_mapping`. No protected mutation, external-source mutation, unit minting, target-exercise promotion, CP-6 closure, Year-1 closure, lesson-output mutation, diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student-facing output was authorized.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -1517,8 +1517,8 @@
           "roadmap": "References roadmap"
         }
       ],
-      "completedCount": 79,
-      "openCount": 11
+      "completedCount": 80,
+      "openCount": 10
     },
     {
       "id": "lessen",

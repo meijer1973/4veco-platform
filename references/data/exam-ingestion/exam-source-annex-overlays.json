@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "overlay_id": "EX-1-exam-source-annex-overlays",
+  "overlay_status": "pilot",
+  "generated_by": "EX-1 Exam Source Annex And Answer Model Pilot",
+  "generated_on": "2026-05-21T00:00:00.000Z",
+  "source_files": [
+    "references/external/exams/vw-1022-a-25-1-o.pdf",
+    "references/data/exam-ingestion/exam-item-overlays.json"
+  ],
+  "authority_boundary": {
+    "external_source_mutated": false,
+    "machine_reference_mutated": false,
+    "unit_minting_authorized": false,
+    "student_product_use_authorized": false,
+    "notes": [
+      "This file mirrors the source-material portion of the EX-1 item overlays for review convenience.",
+      "Missing graph and worksheet reconstruction evidence remains visible and blocking."
+    ]
+  },
+  "records": [
+    {
+      "exam_item_id": "vw-1022-a-25-1-o:opgave-1:question-3",
+      "pilot_role": "calculation_heavy",
+      "source_material_status": "extracted_pending_review",
+      "source_material_refs": ["table-1-zoohee-zorgverzekering"],
+      "blocking_gaps": []
+    },
+    {
+      "exam_item_id": "vw-1022-a-25-1-o:opgave-4:question-19",
+      "pilot_role": "graph_source_heavy",
+      "source_material_status": "partially_extracted",
+      "source_material_refs": [
+        "figuur-1-factoren-curacao-arubaanse-economie",
+        "uitwerkbijlage-vraag-19"
+      ],
+      "blocking_gaps": [
+        "q19-source-annex-gap",
+        "q19-graph-object-gap"
+      ]
+    },
+    {
+      "exam_item_id": "vw-1022-a-25-1-o:opgave-3:question-15",
+      "pilot_role": "reasoning_answer_model_heavy",
+      "source_material_status": "extracted_pending_review",
+      "source_material_refs": ["question-context-page-7"],
+      "blocking_gaps": []
+    }
+  ]
+}

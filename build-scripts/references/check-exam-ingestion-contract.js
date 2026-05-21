@@ -5,7 +5,8 @@
  * HOW TO ADAPT:
  * - Keep this checker read-only.
  * - It validates the EX-0 contract, not future EX-1 pilot overlay records.
- * - When EX-1 creates real overlays, add a separate pilot-overlay validator
+ * - When EX-1 creates real overlays, this checker verifies the closed GATE-EX0
+ *   authorization and the existence of the separate pilot-overlay validator
  *   rather than weakening this contract check.
  */
 
@@ -19,6 +20,8 @@ const README = 'references/data/exam-ingestion/README.md';
 const PROCEDURE = 'references/data/exam-ingestion/review-procedure.md';
 const PACKET_MD = 'reports/review-gates/GATE-EX0-exam-ingestion-contract/review-packet.md';
 const PACKET_JSON = 'reports/review-gates/GATE-EX0-exam-ingestion-contract/review-packet.json';
+const GATE_CLOSURE = 'reports/review-gates/GATE-EX0-exam-ingestion-contract/gate-closure.json';
+const PILOT_VALIDATOR = 'build-scripts/references/check-exam-ingestion-pilots.js';
 
 const FORBIDDEN_PILOT_FILES = [
   'references/data/exam-ingestion/exam-item-overlays.json',
@@ -238,9 +241,26 @@ function checkReviewPacket() {
   assertIncludes(markdown, 'Run the formal GATE-EX0 human review', 'review packet markdown');
 }
 
-function checkNoPilotData() {
-  for (const relPath of FORBIDDEN_PILOT_FILES) {
-    assert(!fs.existsSync(file(relPath)), `EX-0 must not create pilot overlay data: ${relPath}`);
+function checkPilotDataAuthorization() {
+  const existing = FORBIDDEN_PILOT_FILES.filter((relPath) => fs.existsSync(file(relPath)));
+  if (existing.length === 0) return;
+
+  assert(
+    existing.length === FORBIDDEN_PILOT_FILES.length,
+    `authorized EX-1 pilot data must be complete; found only ${existing.join(', ')}`
+  );
+  assert(fs.existsSync(file(GATE_CLOSURE)), `pilot overlay data requires closed gate: ${GATE_CLOSURE}`);
+  assert(fs.existsSync(file(PILOT_VALIDATOR)), `pilot overlay data requires validator: ${PILOT_VALIDATOR}`);
+
+  const closure = readJson(GATE_CLOSURE);
+  assert(closure.status === 'pass_with_conditions', 'GATE-EX0 must be pass_with_conditions before pilot overlays exist');
+  assert(closure.allowed_next_sprint === 'EX-1', 'GATE-EX0 must authorize EX-1 before pilot overlays exist');
+  assert(Array.isArray(closure.allowed_next_sprint_scope), 'GATE-EX0 must carry allowed_next_sprint_scope');
+  for (const scope of [
+    'three bounded exam-ingestion pilot overlays under references/data',
+    'pilot-overlay validator for real EX-1 records',
+  ]) {
+    assert(closure.allowed_next_sprint_scope.includes(scope), `GATE-EX0 missing EX-1 allowed scope: ${scope}`);
   }
 }
 
@@ -248,7 +268,7 @@ function main() {
   checkSchema();
   checkDocs();
   checkReviewPacket();
-  checkNoPilotData();
+  checkPilotDataAuthorization();
   console.log('OK exam-ingestion contract: schema, procedure, packet, and boundaries validated.');
 }
 

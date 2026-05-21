@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-05-21T12:53:24.089Z
+Generated: 2026-05-21T13:24:01.342Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 1586
+Files indexed: 1591
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -812,7 +812,7 @@ Count: 276
 
 ## reports
 
-Count: 705
+Count: 709
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1038,6 +1038,10 @@ Count: 705
 - reports/review-gates/GATE-CP6-year-1-paragraph-coverage/review-packet.json
 - reports/review-gates/GATE-CP6-year-1-paragraph-coverage/review-packet.md
 - reports/review-gates/GATE-EX0-exam-ingestion-contract/bundle-urls.md
+- reports/review-gates/GATE-EX0-exam-ingestion-contract/gate-closure.json
+- reports/review-gates/GATE-EX0-exam-ingestion-contract/gate-closure.md
+- reports/review-gates/GATE-EX0-exam-ingestion-contract/human-interview.json
+- reports/review-gates/GATE-EX0-exam-ingestion-contract/human-interview.md
 - reports/review-gates/GATE-EX0-exam-ingestion-contract/review-packet.json
 - reports/review-gates/GATE-EX0-exam-ingestion-contract/review-packet.md
 - reports/review-gates/GATE-PV-G1-schema/bundle-urls.md
@@ -1540,7 +1544,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 206
+Count: 207
 
 - .gitignore
 - BUILD-CHAPTER.md
@@ -1603,6 +1607,7 @@ Count: 206
 - docs/roadmaps/outdated/reference-team-roadmap-v2.59-cp6e-113-part-a-failed-clearance.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.6-s4-cp3-dry-run.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.60-cp6f-113-part-a-cleared.md
+- docs/roadmaps/outdated/reference-team-roadmap-v2.61-ex0-exam-ingestion-contract.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.7-cp3-closed.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.8-s4.1-conditions-calibrated.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.9-rx1-inventory-prepared.md

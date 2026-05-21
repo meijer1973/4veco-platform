@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "sprint_id": "EX-1",
+  "title": "Exam Source Annex And Answer Model Pilot",
+  "plan": "reports/sprints/EX-1-plan.md",
+  "status": "planned",
+  "created": "2026-05-21",
+  "authority_level": "non_mutating_exam_ingestion_pilot",
+  "active_roadmap_expected": true,
+  "protected_reference_data_changes_allowed": false,
+  "human_review_required": false,
+  "lead_review_required": true,
+  "authorizing_gate": "reports/review-gates/GATE-EX0-exam-ingestion-contract/gate-closure.json",
+  "goal": "Create three bounded non-mutating official-exam pilot overlays with separately traceable prompt, source, answer-model, skill-decomposition, MTU-gap, and lesson-handoff evidence.",
+  "pilot_items": [
+    {
+      "exam_item_id": "vw-1022-a-25-1-o:opgave-1:question-3",
+      "role": "calculation_heavy"
+    },
+    {
+      "exam_item_id": "vw-1022-a-25-1-o:opgave-4:question-19",
+      "role": "graph_source_heavy"
+    },
+    {
+      "exam_item_id": "vw-1022-a-25-1-o:opgave-3:question-15",
+      "role": "reasoning_answer_model_heavy"
+    }
+  ],
+  "outputs": [
+    "reports/sprints/EX-1-plan.md",
+    "references/data/sprints/EX-1.plan.json",
+    "reports/sprints/EX-1-baseline.md",
+    "reports/sprints/EX-1-planning-review.md",
+    "references/data/exam-ingestion/exam-item-overlays.json",
+    "references/data/exam-ingestion/exam-answer-model-overlays.json",
+    "references/data/exam-ingestion/exam-source-annex-overlays.json",
+    "build-scripts/references/check-exam-ingestion-pilots.js",
+    "build-scripts/references/check-exam-ingestion-contract.js",
+    "reports/reference-planning/EX-1-exam-ingestion-pilot.md",
+    "references/data/sprints/EX-1.result.json",
+    "reports/sprints/EX-1-result.md",
+    "reports/sprints/EX-1-diff-summary.md",
+    "reports/sprints/EX-1-lead-review-assignment.md",
+    "reports/sprints/EX-1-lead-review-round1.md",
+    "reports/sprints/EX-1-lead-review-corrections.md",
+    "reports/sprints/EX-1-lead-review-round2.md"
+  ],
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js reports/sprints/EX-1-plan.md",
+    "node build-scripts/sprints/check-sprint-bundle.js EX-1",
+    "node build-scripts/references/check-exam-ingestion-contract.js",
+    "node build-scripts/references/check-exam-ingestion-pilots.js",
+    "node build-scripts/references/validate-core-schemas.js",
+    "node build-scripts/reports/validate-report-json.js",
+    "node build-scripts/reports/generate-all.js",
+    "node build-scripts/reports/validate-report-json.js",
+    "node build-scripts/reports/generate-reference-health.js",
+    "node build-scripts/reports/check-reference-health.js",
+    "npm.cmd run dashboard:internal",
+    "npm.cmd run agent:index",
+    "node build-scripts/sprints/emit-url-index.js",
+    "node build-scripts/sprints/emit-url-index.js --check",
+    "node build-scripts/references/build-reference-inventory.js",
+    "node build-scripts/references/build-source-document-registry.js",
+    "node build-scripts/references/check-source-document-registry.js",
+    "node build-scripts/references/check-source-manifest.js",
+    "node build-scripts/references/check-document-inventory.js",
+    "node build-scripts/references/check-roadmap-version-index.js",
+    "node build-scripts/sprints/check-sprint-result.js reports/sprints/EX-1-result.md",
+    "node build-scripts/sprints/check-sprint-bundle.js EX-1 --complete",
+    "npm.cmd test"
+  ],
+  "non_authorizations": {
+    "protected_reference_mutation": false,
+    "external_source_mutation": false,
+    "machine_registry_mutation": false,
+    "unit_minting": false,
+    "target_exercise_promotion": false,
+    "placeholder_finalization": false,
+    "cp6_closure": false,
+    "year1_closure": false,
+    "lesson_output_mutation": false,
+    "student_diagnostics": false,
+    "adaptive_routing": false,
+    "mastery_decisions": false,
+    "automatic_sequencing": false,
+    "student_facing_ai": false,
+    "summative_use": false,
+    "pv_projection": false,
+    "pv_machine_promotion": false,
+    "student_facing_output": false
+  }
+}
