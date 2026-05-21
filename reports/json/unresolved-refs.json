@@ -1,7 +1,7 @@
 {
   "report_id": "unresolved-refs",
   "generated_by": "build-scripts/reports/generate-all.js",
-  "generated_on": "2026-05-21T13:24:01.145Z",
+  "generated_on": "2026-05-21T14:08:39.439Z",
   "source_files": [
     "references/machine/micro-teaching-units.json",
     "references/",

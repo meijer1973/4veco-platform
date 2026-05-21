@@ -1,0 +1,172 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-EX2-exam-to-mtu-mapping",
+  "sprint_id": "EX-2",
+  "status": "candidate_mapping_for_human_review",
+  "generated_on": "2026-05-21",
+  "protected_reference_data_changed": false,
+  "mutation_authorized": false,
+  "source_files": [
+    "references/data/exam-ingestion/exam-item-overlays.json",
+    "references/data/exam-ingestion/exam-answer-model-overlays.json",
+    "references/data/exam-ingestion/exam-source-annex-overlays.json",
+    "references/machine/micro-teaching-units.md",
+    "reports/reference-planning/CP.6c-mtu-backfill-classification.md"
+  ],
+  "records": [
+    {
+      "exam_item_id": "vw-1022-a-25-1-o:opgave-1:question-3",
+      "pilot_role": "calculation_heavy",
+      "review_focus": "Annual insurance cost threshold from table values.",
+      "candidate_requirements": [
+        {
+          "requirement_id": "q3-calc-1",
+          "label": "Compare two annual cost structures and solve an equal-cost threshold.",
+          "ex1_classification": "operation_registry_need",
+          "candidate_unit_ids": ["A15"],
+          "recommended_review_route": "Treat the mirrored A15 source mapping as weak or stale; review as operation-registry need unless a better existing arithmetic unit is named.",
+          "review_options": [
+            "existing_mtu_but_procedure_too_weak",
+            "operation_registry_need",
+            "missing_mtu",
+            "defer"
+          ],
+          "mutation_authorized": false
+        },
+        {
+          "requirement_id": "q3-answer-1",
+          "label": "State a threshold answer with a clear unit and direction.",
+          "ex1_classification": "answer_skill_need",
+          "candidate_unit_ids": [],
+          "recommended_review_route": "Classify as answer-skill need unless the reviewer decides the existing calculation procedure should carry the wording requirement.",
+          "review_options": [
+            "answer_skill_need",
+            "existing_mtu",
+            "defer"
+          ],
+          "mutation_authorized": false
+        }
+      ],
+      "blocking_gaps": [],
+      "recommended_gate_question_ids": ["EX2-Q1", "EX2-Q2"]
+    },
+    {
+      "exam_item_id": "vw-1022-a-25-1-o:opgave-4:question-19",
+      "pilot_role": "graph_source_heavy",
+      "review_focus": "Three-market graph/source task with source figure and uitwerkbijlage gaps.",
+      "candidate_requirements": [
+        {
+          "requirement_id": "q19-source-annex-gap",
+          "label": "The official source figure and worksheet layout are required for full reconstruction.",
+          "ex1_classification": "source_annex_gap",
+          "candidate_unit_ids": [],
+          "recommended_review_route": "Keep the source-annex and graph-object gaps blocking until extraction or explicit human acceptance.",
+          "review_options": [
+            "source_annex_gap",
+            "graph_object_gap",
+            "defer"
+          ],
+          "mutation_authorized": false
+        },
+        {
+          "requirement_id": "q19-graph-op-1",
+          "label": "Draw rightward demand shifts and associated equilibrium-price directions in three market diagrams.",
+          "ex1_classification": "pv_graph_need",
+          "candidate_unit_ids": ["A45", "D10"],
+          "recommended_review_route": "Keep as PV/graph need plus source-annex gap until the graph objects are reconstructable.",
+          "review_options": [
+            "pv_graph_need",
+            "existing_mtu_but_procedure_too_weak",
+            "missing_mtu",
+            "source_annex_gap",
+            "defer"
+          ],
+          "mutation_authorized": false
+        },
+        {
+          "requirement_id": "q19-reason-1",
+          "label": "Reason from labor-demand change to wages, linked goods markets, and inflation effects.",
+          "ex1_classification": "operation_registry_need",
+          "candidate_unit_ids": ["D10", "D13"],
+          "recommended_review_route": "Review whether D10/D13 cover the linked-market reasoning or whether a missing/merge-split operation is needed.",
+          "review_options": [
+            "existing_mtu",
+            "existing_mtu_but_procedure_too_weak",
+            "merge_split_candidate",
+            "operation_registry_need",
+            "missing_mtu",
+            "defer"
+          ],
+          "mutation_authorized": false
+        }
+      ],
+      "blocking_gaps": [
+        "q19-source-annex-gap",
+        "q19-graph-object-gap"
+      ],
+      "recommended_gate_question_ids": ["EX2-Q3", "EX2-Q4"]
+    },
+    {
+      "exam_item_id": "vw-1022-a-25-1-o:opgave-3:question-15",
+      "pilot_role": "reasoning_answer_model_heavy",
+      "review_focus": "Dominant-strategy and prisoner-dilemma explanation with correction-model wording.",
+      "candidate_requirements": [
+        {
+          "requirement_id": "q15-content-1",
+          "label": "Recognize perfect substitutes as price-focused consumer-choice context.",
+          "ex1_classification": "existing_mtu",
+          "candidate_unit_ids": ["D27"],
+          "recommended_review_route": "Accept D27 as the existing MTU if the reviewer agrees the perfect-substitute context is sufficient.",
+          "review_options": [
+            "existing_mtu",
+            "existing_mtu_but_procedure_too_weak",
+            "defer"
+          ],
+          "mutation_authorized": false
+        },
+        {
+          "requirement_id": "q15-content-2",
+          "label": "Recognize dominant strategy and prisoner-dilemma concepts.",
+          "ex1_classification": "existing_mtu",
+          "candidate_unit_ids": ["F03", "F09"],
+          "recommended_review_route": "Accept F03/F09 as the existing MTU route if the reviewer agrees they cover the concept chain.",
+          "review_options": [
+            "existing_mtu",
+            "existing_mtu_but_procedure_too_weak",
+            "merge_split_candidate",
+            "defer"
+          ],
+          "mutation_authorized": false
+        },
+        {
+          "requirement_id": "q15-answer-1",
+          "label": "Write a two-step correction-model explanation from undercutting incentive to worse joint outcome.",
+          "ex1_classification": "answer_skill_need",
+          "candidate_unit_ids": ["F03", "F09"],
+          "recommended_review_route": "Classify as answer-skill need unless the reviewer decides F03/F09 procedures already carry the answer-construction requirement.",
+          "review_options": [
+            "answer_skill_need",
+            "existing_mtu_but_procedure_too_weak",
+            "operation_registry_need",
+            "defer"
+          ],
+          "mutation_authorized": false
+        }
+      ],
+      "blocking_gaps": [],
+      "recommended_gate_question_ids": ["EX2-Q5", "EX2-Q6"]
+    }
+  ],
+  "cross_cutting_review": [
+    {
+      "topic": "lesson-build handoff",
+      "recommended_gate_question_id": "EX2-Q7",
+      "decision_needed": "Decide which pilot items are ready for lesson-design handoff after EX-2 and which remain blocked."
+    },
+    {
+      "topic": "mutation authority",
+      "recommended_gate_question_id": "EX2-Q8",
+      "decision_needed": "Confirm that EX-2 authorizes no protected mutation and only routes later bounded work."
+    }
+  ]
+}

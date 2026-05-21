@@ -1,0 +1,153 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-EX2-exam-to-mtu-mapping",
+  "sprint_id": "EX-2",
+  "status": "review_packet_ready_not_closed",
+  "generated_on": "2026-05-21",
+  "protected_reference_data_changed": false,
+  "external_source_mutation_authorized": false,
+  "unit_minting_authorized": false,
+  "operation_registry_mutation_authorized": false,
+  "answer_skill_mutation_authorized": false,
+  "target_exercise_promotion_authorized": false,
+  "lesson_output_mutation_authorized": false,
+  "cp6_closed": false,
+  "year1_closed": false,
+  "human_interview_completed": false,
+  "gate_closure_completed": false,
+  "evidence_inputs": [
+    "references/data/exam-ingestion/exam-item-overlays.json",
+    "references/data/exam-ingestion/exam-answer-model-overlays.json",
+    "references/data/exam-ingestion/exam-source-annex-overlays.json",
+    "reports/reference-planning/EX-1-exam-ingestion-pilot.md",
+    "reports/review-gates/GATE-EX2-exam-to-mtu-mapping/mapping-candidates.md",
+    "reports/review-gates/GATE-EX2-exam-to-mtu-mapping/mapping-candidates.json",
+    "references/machine/micro-teaching-units.md",
+    "reports/reference-planning/CP.6c-mtu-backfill-classification.md",
+    "references/reference-team-roadmap.md"
+  ],
+  "review_questions": [
+    {
+      "id": "EX2-Q1",
+      "topic": "q3 annual cost threshold",
+      "question": "For q3, how should the annual insurance cost-threshold calculation requirement q3-calc-1 be classified, given that the mirrored source record lists A15 but live A15 is price elasticity?",
+      "options": [
+        "Classify as operation_registry_need; treat the A15 mirror mapping as weak/stale until EX-2 names a better route.",
+        "Classify as existing_mtu_but_procedure_too_weak; name the existing unit(s) to strengthen.",
+        "Classify as missing_mtu for later governed review/mutation.",
+        "Defer until a broader arithmetic/procedure audit names the right existing route."
+      ],
+      "open_answer_allowed": true
+    },
+    {
+      "id": "EX2-Q2",
+      "topic": "q3 answer wording",
+      "question": "For q3, how should the threshold conclusion with unit and direction be classified?",
+      "options": [
+        "Classify as answer_skill_need; later work should model threshold-conclusion wording explicitly.",
+        "Treat it as part of the same calculation/procedure requirement from EX2-Q1.",
+        "Defer answer-skill classification until an answer-writing registry exists."
+      ],
+      "open_answer_allowed": true
+    },
+    {
+      "id": "EX2-Q3",
+      "topic": "q19 source and graph reconstruction gaps",
+      "question": "For q19, should the blocking q19-source-annex-gap and q19-graph-object-gap block full MTU mapping and lesson handoff?",
+      "options": [
+        "Yes, keep both gaps blocking full reconstruction, MTU mapping, lesson handoff, and human review until source extraction improves.",
+        "Allow provisional MTU mapping while keeping lesson handoff blocked.",
+        "Accept the current extraction as enough for mapping, but keep graph/PV work blocked."
+      ],
+      "open_answer_allowed": true
+    },
+    {
+      "id": "EX2-Q4",
+      "topic": "q19 market-shift operation",
+      "question": "For q19, how should the three-market graph-shift operation and linked-market reasoning be routed?",
+      "options": [
+        "Classify as existing MTUs but procedure too weak; review D10/D13/PV graph support later.",
+        "Classify as operation_registry_need plus pv_graph_need; no mutation now.",
+        "Classify as missing_mtu or merge_split_candidate; name what is missing or should be split/merged.",
+        "Defer until q19 source/graph gaps are resolved."
+      ],
+      "open_answer_allowed": true
+    },
+    {
+      "id": "EX2-Q5",
+      "topic": "q15 content MTU mapping",
+      "question": "For q15, is the D27/F03/F09 content mapping sufficient?",
+      "options": [
+        "Yes, classify D27, F03, and F09 as existing MTUs for content coverage.",
+        "Partly; classify one or more as existing but procedure too weak, naming which.",
+        "No; route one or more requirements as missing MTU or merge/split candidate."
+      ],
+      "open_answer_allowed": true
+    },
+    {
+      "id": "EX2-Q6",
+      "topic": "q15 answer-model operation",
+      "question": "For q15, how should the two-step correction-model explanation requirement q15-answer-1 be classified?",
+      "options": [
+        "Classify as answer_skill_need; later work should model correction-model explanation structure explicitly.",
+        "Treat it as covered by existing F03/F09 procedures if those are strengthened later.",
+        "Classify as operation_registry_need rather than answer-skill need.",
+        "Defer until an answer-writing registry exists."
+      ],
+      "open_answer_allowed": true
+    },
+    {
+      "id": "EX2-Q7",
+      "topic": "Lesson-build handoff readiness",
+      "question": "After EX-2 classification, which pilot items may be considered ready for later lesson-design handoff, and which must remain blocked?",
+      "options": [
+        "q3 and q15 may proceed to later L-EX0/L-EX1 coordination with gaps; q19 remains blocked by source/graph reconstruction.",
+        "All three remain blocked until EX-3/EX-4 reporting and mutation routes are clearer.",
+        "q15 only may proceed; q3 and q19 need further mapping/source work."
+      ],
+      "open_answer_allowed": true
+    },
+    {
+      "id": "EX2-Q8",
+      "topic": "Mutation and next-sprint authority",
+      "question": "Does this gate authorize protected reference mutation, external-source mutation, unit minting, operation-registry mutation, answer-skill mutation, target-exercise promotion, lesson-output mutation, CP-6 closure, Year-1 closure, or student/product use now?",
+      "options": [
+        "No. EX-2 may only record classifications and authorize later bounded sprints such as EX-3 dashboards or EX-4 mutation planning.",
+        "Yes, but only for explicitly named low-risk items after a separate CLI-governed mutation plan.",
+        "Hold; authority cannot be decided until source/graph gaps and answer-skill policy are reviewed."
+      ],
+      "open_answer_allowed": true
+    }
+  ],
+  "future_interview_protocol": [
+    "Show the full question list before starting.",
+    "Ask one question at a time.",
+    "Record each answer before asking the next question.",
+    "Run pattern analysis after initial answers.",
+    "Ask targeted follow-ups for ambiguity or conflicting authority.",
+    "Draft a gate decision only after evidence is complete.",
+    "Require explicit human confirmation before writing a gate closure record or authorizing downstream sprint scope."
+  ],
+  "recommended_gate_status_before_interview": "hold_until_reviewed",
+  "blocked_outcomes": [
+    "protected reference mutation",
+    "external-source mutation",
+    "unit minting",
+    "operation-registry mutation",
+    "answer-skill mutation",
+    "target-exercise promotion",
+    "placeholder finalization",
+    "lesson-output mutation",
+    "CP-6 closure",
+    "Year-1 closure",
+    "student diagnostics",
+    "adaptive routing",
+    "mastery decisions",
+    "automatic sequencing",
+    "student-facing AI",
+    "summative use",
+    "PV projection",
+    "PV machine promotion",
+    "student-facing output"
+  ]
+}
