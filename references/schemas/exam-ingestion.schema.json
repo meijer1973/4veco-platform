@@ -1,0 +1,768 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://4veco.local/references/schemas/exam-ingestion.schema.json",
+  "title": "Exam Ingestion Overlay Package",
+  "description": "Protected-source-safe contract for official CvTE exam-question ingestion overlays. External source records remain unchanged.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "overlay_id",
+    "overlay_status",
+    "generated_by",
+    "generated_on",
+    "source_files",
+    "authority_boundary",
+    "records"
+  ],
+  "properties": {
+    "schema_version": { "const": 1 },
+    "overlay_id": { "type": "string", "minLength": 1 },
+    "overlay_status": {
+      "type": "string",
+      "enum": ["design_draft", "pilot", "active", "deprecated"]
+    },
+    "generated_by": { "type": "string", "minLength": 1 },
+    "generated_on": { "type": "string", "format": "date-time" },
+    "source_files": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "minItems": 1
+    },
+    "authority_boundary": {
+      "type": "object",
+      "required": [
+        "external_source_mutated",
+        "machine_reference_mutated",
+        "unit_minting_authorized",
+        "student_product_use_authorized",
+        "notes"
+      ],
+      "properties": {
+        "external_source_mutated": { "const": false },
+        "machine_reference_mutated": { "const": false },
+        "unit_minting_authorized": { "const": false },
+        "student_product_use_authorized": { "const": false },
+        "notes": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        }
+      },
+      "additionalProperties": false
+    },
+    "records": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/exam_ingestion_record" }
+    }
+  },
+  "$defs": {
+    "exam_ingestion_record": {
+      "type": "object",
+      "required": [
+        "exam_item_id",
+        "source_authority",
+        "source_path",
+        "source_record_locator",
+        "source_version",
+        "curriculum_version",
+        "ingestion_status",
+        "prompt_metadata",
+        "prompt",
+        "source_material",
+        "question_classification",
+        "official_answer_model",
+        "skill_decomposition",
+        "mtu_gap_classification",
+        "lesson_build_handoff",
+        "review_state",
+        "product_boundary",
+        "unresolved_questions"
+      ],
+      "properties": {
+        "exam_item_id": { "type": "string", "minLength": 1 },
+        "source_authority": { "const": "external_primary" },
+        "source_path": { "const": "references/external/exam-questions.json" },
+        "source_record_locator": {
+          "type": "object",
+          "required": ["exam", "opgave_num", "question_num"],
+          "properties": {
+            "exam": { "type": "string", "minLength": 1 },
+            "level": { "type": "string", "enum": ["vwo", "havo", "unknown"] },
+            "year": { "type": ["integer", "string"] },
+            "timevak": { "type": ["integer", "string"] },
+            "opgave_num": { "type": ["integer", "string"] },
+            "question_num": { "type": ["integer", "string"] }
+          },
+          "additionalProperties": false
+        },
+        "source_version": { "type": "string", "minLength": 1 },
+        "curriculum_version": { "type": "string", "minLength": 1 },
+        "ingestion_status": {
+          "type": "string",
+          "enum": [
+            "design_only",
+            "extracted_pending_review",
+            "reviewed_with_gaps",
+            "reviewed_ready_for_mapping",
+            "deprecated"
+          ]
+        },
+        "prompt_metadata": {
+          "type": "object",
+          "required": [
+            "points",
+            "instruction_word",
+            "question_type",
+            "answer_format",
+            "exam_codes"
+          ],
+          "properties": {
+            "points": { "type": "integer", "minimum": 0 },
+            "instruction_word": { "type": "string", "minLength": 1 },
+            "question_type": {
+              "type": "string",
+              "enum": [
+                "berekenen",
+                "uitleggen",
+                "uitleg_dat",
+                "verklaren",
+                "analyseer",
+                "vergelijk",
+                "teken",
+                "toon_aan",
+                "beredeneer",
+                "mixed",
+                "unknown"
+              ]
+            },
+            "answer_format": {
+              "type": "string",
+              "enum": [
+                "calculation",
+                "graph",
+                "table",
+                "short_explanation",
+                "causal_chain",
+                "comparison",
+                "mixed",
+                "unknown"
+              ]
+            },
+            "exam_codes": {
+              "type": "array",
+              "items": { "type": "string", "minLength": 1 }
+            }
+          },
+          "additionalProperties": false
+        },
+        "prompt": {
+          "type": "object",
+          "required": ["text", "prompt_status"],
+          "properties": {
+            "text": { "type": "string" },
+            "prompt_status": {
+              "type": "string",
+              "enum": ["not_extracted", "extracted", "redacted", "gap"]
+            },
+            "prompt_gap_reason": { "type": "string" }
+          },
+          "additionalProperties": false
+        },
+        "source_material": {
+          "type": "object",
+          "required": [
+            "source_material_status",
+            "source_material_refs",
+            "tables",
+            "figures",
+            "graphs",
+            "uitwerkbijlagen",
+            "gaps"
+          ],
+          "properties": {
+            "source_material_status": {
+              "type": "string",
+              "enum": [
+                "not_required",
+                "not_extracted",
+                "partially_extracted",
+                "extracted_pending_review",
+                "reviewed"
+              ]
+            },
+            "source_material_refs": {
+              "type": "array",
+              "items": { "type": "string", "minLength": 1 }
+            },
+            "tables": {
+              "type": "array",
+              "items": { "$ref": "#/$defs/source_table" }
+            },
+            "figures": {
+              "type": "array",
+              "items": { "$ref": "#/$defs/source_figure" }
+            },
+            "graphs": {
+              "type": "array",
+              "items": { "$ref": "#/$defs/source_graph" }
+            },
+            "uitwerkbijlagen": {
+              "type": "array",
+              "items": { "$ref": "#/$defs/source_annex" }
+            },
+            "gaps": {
+              "type": "array",
+              "items": { "$ref": "#/$defs/extraction_gap" }
+            }
+          },
+          "additionalProperties": false
+        },
+        "question_classification": {
+          "type": "object",
+          "required": [
+            "content_domains",
+            "calculation_required",
+            "graph_required",
+            "source_reading_required",
+            "reasoning_required",
+            "answer_writing_required"
+          ],
+          "properties": {
+            "content_domains": {
+              "type": "array",
+              "items": { "type": "string", "minLength": 1 }
+            },
+            "calculation_required": { "type": "boolean" },
+            "graph_required": { "type": "boolean" },
+            "source_reading_required": { "type": "boolean" },
+            "reasoning_required": { "type": "boolean" },
+            "answer_writing_required": { "type": "boolean" }
+          },
+          "additionalProperties": false
+        },
+        "official_answer_model": {
+          "type": "object",
+          "required": [
+            "answer_model_status",
+            "source_ref",
+            "total_points",
+            "answer_steps",
+            "point_rules",
+            "mandatory_terms",
+            "accepted_alternatives",
+            "partial_credit_rules",
+            "calculation_precision",
+            "unit_requirements",
+            "graph_requirements",
+            "answer_model_gaps"
+          ],
+          "properties": {
+            "answer_model_status": {
+              "type": "string",
+              "enum": [
+                "not_extracted",
+                "partially_extracted",
+                "extracted_pending_review",
+                "reviewed_with_gaps",
+                "reviewed"
+              ]
+            },
+            "source_ref": { "type": "string", "minLength": 1 },
+            "total_points": { "type": "integer", "minimum": 0 },
+            "answer_steps": {
+              "type": "array",
+              "items": { "$ref": "#/$defs/answer_step" }
+            },
+            "point_rules": {
+              "type": "array",
+              "items": { "$ref": "#/$defs/point_rule" }
+            },
+            "mandatory_terms": {
+              "type": "array",
+              "items": { "type": "string", "minLength": 1 }
+            },
+            "accepted_alternatives": {
+              "type": "array",
+              "items": { "$ref": "#/$defs/accepted_alternative" }
+            },
+            "partial_credit_rules": {
+              "type": "array",
+              "items": { "$ref": "#/$defs/partial_credit_rule" }
+            },
+            "calculation_precision": {
+              "type": "object",
+              "required": ["status", "rounding", "tolerance", "decimal_places"],
+              "properties": {
+                "status": {
+                  "type": "string",
+                  "enum": ["not_applicable", "not_extracted", "extracted", "reviewed"]
+                },
+                "rounding": { "type": "string" },
+                "tolerance": { "type": "string" },
+                "decimal_places": { "type": ["integer", "null"], "minimum": 0 }
+              },
+              "additionalProperties": false
+            },
+            "unit_requirements": {
+              "type": "array",
+              "items": { "type": "string", "minLength": 1 }
+            },
+            "graph_requirements": {
+              "type": "array",
+              "items": { "$ref": "#/$defs/graph_requirement" }
+            },
+            "answer_model_gaps": {
+              "type": "array",
+              "items": { "$ref": "#/$defs/extraction_gap" }
+            }
+          },
+          "additionalProperties": false
+        },
+        "skill_decomposition": {
+          "type": "object",
+          "required": [
+            "content_units",
+            "calculation_operations",
+            "graph_operations",
+            "source_reading_operations",
+            "reasoning_operations",
+            "answer_writing_operations"
+          ],
+          "properties": {
+            "content_units": {
+              "type": "array",
+              "items": { "$ref": "#/$defs/decomposition_item" }
+            },
+            "calculation_operations": {
+              "type": "array",
+              "items": { "$ref": "#/$defs/decomposition_item" }
+            },
+            "graph_operations": {
+              "type": "array",
+              "items": { "$ref": "#/$defs/decomposition_item" }
+            },
+            "source_reading_operations": {
+              "type": "array",
+              "items": { "$ref": "#/$defs/decomposition_item" }
+            },
+            "reasoning_operations": {
+              "type": "array",
+              "items": { "$ref": "#/$defs/decomposition_item" }
+            },
+            "answer_writing_operations": {
+              "type": "array",
+              "items": { "$ref": "#/$defs/decomposition_item" }
+            }
+          },
+          "additionalProperties": false
+        },
+        "mtu_gap_classification": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/mtu_gap_classification" }
+        },
+        "lesson_build_handoff": {
+          "type": "object",
+          "required": [
+            "handoff_status",
+            "target_paragraph_candidate",
+            "required_teaching_moves",
+            "required_practice_moves",
+            "required_visuals",
+            "required_answer_model_scaffolds",
+            "blocked_until"
+          ],
+          "properties": {
+            "handoff_status": {
+              "type": "string",
+              "enum": ["not_ready", "ready_with_gaps", "ready_for_lesson_design_review"]
+            },
+            "target_paragraph_candidate": { "type": "string" },
+            "required_teaching_moves": {
+              "type": "array",
+              "items": { "type": "string", "minLength": 1 }
+            },
+            "required_practice_moves": {
+              "type": "array",
+              "items": { "type": "string", "minLength": 1 }
+            },
+            "required_visuals": {
+              "type": "array",
+              "items": { "type": "string", "minLength": 1 }
+            },
+            "required_answer_model_scaffolds": {
+              "type": "array",
+              "items": { "type": "string", "minLength": 1 }
+            },
+            "blocked_until": {
+              "type": "array",
+              "items": { "type": "string", "minLength": 1 }
+            }
+          },
+          "additionalProperties": false
+        },
+        "review_state": {
+          "type": "object",
+          "required": [
+            "human_review_status",
+            "review_artifacts",
+            "review_notes",
+            "contract_decision"
+          ],
+          "properties": {
+            "human_review_status": {
+              "type": "string",
+              "enum": ["not_reviewed", "needs_revision", "pass_with_gaps", "pass"]
+            },
+            "review_artifacts": {
+              "type": "array",
+              "items": { "type": "string", "minLength": 1 }
+            },
+            "review_notes": {
+              "type": "array",
+              "items": { "type": "string", "minLength": 1 }
+            },
+            "contract_decision": {
+              "type": "string",
+              "enum": [
+                "not_ready_for_ex1",
+                "ready_for_ex1_pilot_with_gaps",
+                "ready_for_ex1_pilot"
+              ]
+            }
+          },
+          "additionalProperties": false
+        },
+        "product_boundary": {
+          "type": "object",
+          "required": [
+            "student_diagnostics_authorized",
+            "adaptive_routing_authorized",
+            "mastery_decisions_authorized",
+            "automatic_sequencing_authorized",
+            "student_facing_ai_authorized",
+            "summative_use_authorized",
+            "pv_projection_authorized",
+            "pv_machine_promotion_authorized",
+            "student_facing_output_authorized",
+            "warning_label"
+          ],
+          "properties": {
+            "student_diagnostics_authorized": { "const": false },
+            "adaptive_routing_authorized": { "const": false },
+            "mastery_decisions_authorized": { "const": false },
+            "automatic_sequencing_authorized": { "const": false },
+            "student_facing_ai_authorized": { "const": false },
+            "summative_use_authorized": { "const": false },
+            "pv_projection_authorized": { "const": false },
+            "pv_machine_promotion_authorized": { "const": false },
+            "student_facing_output_authorized": { "const": false },
+            "warning_label": { "type": "string", "minLength": 1 }
+          },
+          "additionalProperties": false
+        },
+        "unresolved_questions": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        }
+      },
+      "additionalProperties": false
+    },
+    "source_table": {
+      "type": "object",
+      "required": ["source_material_id", "title", "columns", "rows", "extraction_status"],
+      "properties": {
+        "source_material_id": { "type": "string", "minLength": 1 },
+        "title": { "type": "string" },
+        "columns": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "rows": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": { "type": ["string", "number", "null"] }
+          }
+        },
+        "extraction_status": {
+          "type": "string",
+          "enum": ["not_extracted", "extracted_pending_review", "reviewed", "gap"]
+        }
+      },
+      "additionalProperties": false
+    },
+    "source_figure": {
+      "type": "object",
+      "required": ["source_material_id", "title", "description", "extraction_status"],
+      "properties": {
+        "source_material_id": { "type": "string", "minLength": 1 },
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "extraction_status": {
+          "type": "string",
+          "enum": ["not_extracted", "extracted_pending_review", "reviewed", "gap"]
+        }
+      },
+      "additionalProperties": false
+    },
+    "source_graph": {
+      "type": "object",
+      "required": [
+        "source_material_id",
+        "graph_type",
+        "axes",
+        "series",
+        "extraction_status"
+      ],
+      "properties": {
+        "source_material_id": { "type": "string", "minLength": 1 },
+        "graph_type": {
+          "type": "string",
+          "enum": [
+            "bar_chart",
+            "line_chart",
+            "pie_chart",
+            "p_q_graph",
+            "producer_graph",
+            "other",
+            "unknown"
+          ]
+        },
+        "axes": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "series": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "extraction_status": {
+          "type": "string",
+          "enum": ["not_extracted", "extracted_pending_review", "reviewed", "gap"]
+        }
+      },
+      "additionalProperties": false
+    },
+    "source_annex": {
+      "type": "object",
+      "required": ["source_material_id", "annex_type", "description", "extraction_status"],
+      "properties": {
+        "source_material_id": { "type": "string", "minLength": 1 },
+        "annex_type": {
+          "type": "string",
+          "enum": ["uitwerkbijlage", "bijlage", "source_text", "other"]
+        },
+        "description": { "type": "string" },
+        "extraction_status": {
+          "type": "string",
+          "enum": ["not_extracted", "extracted_pending_review", "reviewed", "gap"]
+        }
+      },
+      "additionalProperties": false
+    },
+    "extraction_gap": {
+      "type": "object",
+      "required": ["gap_id", "gap_type", "severity", "description", "blocks"],
+      "properties": {
+        "gap_id": { "type": "string", "minLength": 1 },
+        "gap_type": {
+          "type": "string",
+          "enum": [
+            "prompt_gap",
+            "source_annex_gap",
+            "answer_model_gap",
+            "point_rule_gap",
+            "graph_object_gap",
+            "precision_gap",
+            "unit_requirement_gap",
+            "other"
+          ]
+        },
+        "severity": {
+          "type": "string",
+          "enum": ["low", "medium", "high", "blocking"]
+        },
+        "description": { "type": "string", "minLength": 1 },
+        "blocks": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "full_exam_reconstruction",
+              "answer_model_reconstruction",
+              "mtu_mapping",
+              "lesson_build_handoff",
+              "human_review",
+              "none"
+            ]
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "answer_step": {
+      "type": "object",
+      "required": [
+        "step_id",
+        "description",
+        "points",
+        "required_concepts",
+        "required_operations",
+        "required_wording",
+        "source_refs"
+      ],
+      "properties": {
+        "step_id": { "type": "string", "minLength": 1 },
+        "description": { "type": "string", "minLength": 1 },
+        "points": { "type": "number", "minimum": 0 },
+        "required_concepts": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "required_operations": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "required_wording": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "source_refs": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        }
+      },
+      "additionalProperties": false
+    },
+    "point_rule": {
+      "type": "object",
+      "required": ["rule_id", "points", "condition", "source_ref"],
+      "properties": {
+        "rule_id": { "type": "string", "minLength": 1 },
+        "points": { "type": "number", "minimum": 0 },
+        "condition": { "type": "string", "minLength": 1 },
+        "source_ref": { "type": "string", "minLength": 1 }
+      },
+      "additionalProperties": false
+    },
+    "accepted_alternative": {
+      "type": "object",
+      "required": ["alternative_id", "description", "applies_to_step_ids"],
+      "properties": {
+        "alternative_id": { "type": "string", "minLength": 1 },
+        "description": { "type": "string", "minLength": 1 },
+        "applies_to_step_ids": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        }
+      },
+      "additionalProperties": false
+    },
+    "partial_credit_rule": {
+      "type": "object",
+      "required": ["rule_id", "description", "max_points"],
+      "properties": {
+        "rule_id": { "type": "string", "minLength": 1 },
+        "description": { "type": "string", "minLength": 1 },
+        "max_points": { "type": "number", "minimum": 0 }
+      },
+      "additionalProperties": false
+    },
+    "graph_requirement": {
+      "type": "object",
+      "required": ["requirement_id", "description", "graph_type", "source_refs"],
+      "properties": {
+        "requirement_id": { "type": "string", "minLength": 1 },
+        "description": { "type": "string", "minLength": 1 },
+        "graph_type": {
+          "type": "string",
+          "enum": [
+            "bar_chart",
+            "line_chart",
+            "pie_chart",
+            "p_q_graph",
+            "producer_graph",
+            "table",
+            "other"
+          ]
+        },
+        "source_refs": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        }
+      },
+      "additionalProperties": false
+    },
+    "decomposition_item": {
+      "type": "object",
+      "required": [
+        "item_id",
+        "label",
+        "status",
+        "evidence_refs",
+        "candidate_unit_ids"
+      ],
+      "properties": {
+        "item_id": { "type": "string", "minLength": 1 },
+        "label": { "type": "string", "minLength": 1 },
+        "status": {
+          "type": "string",
+          "enum": [
+            "existing_unit",
+            "existing_unit_but_procedure_weak",
+            "missing_unit_candidate",
+            "operation_registry_need",
+            "answer_skill_need",
+            "source_annex_gap",
+            "answer_model_extraction_gap",
+            "defer"
+          ]
+        },
+        "evidence_refs": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "candidate_unit_ids": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^[A-Z][0-9]{2}$" }
+        }
+      },
+      "additionalProperties": false
+    },
+    "mtu_gap_classification": {
+      "type": "object",
+      "required": [
+        "requirement_id",
+        "classification",
+        "candidate_unit_ids",
+        "rationale",
+        "mutation_authorized"
+      ],
+      "properties": {
+        "requirement_id": { "type": "string", "minLength": 1 },
+        "classification": {
+          "type": "string",
+          "enum": [
+            "existing_mtu",
+            "existing_mtu_but_procedure_too_weak",
+            "missing_mtu",
+            "merge_split_candidate",
+            "operation_registry_need",
+            "pv_graph_need",
+            "answer_skill_need",
+            "source_annex_gap",
+            "answer_model_extraction_gap",
+            "defer"
+          ]
+        },
+        "candidate_unit_ids": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^[A-Z][0-9]{2}$" }
+        },
+        "rationale": { "type": "string", "minLength": 1 },
+        "mutation_authorized": { "const": false }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

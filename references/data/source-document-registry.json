@@ -2,7 +2,7 @@
   "schema_version": 1,
   "registry_id": "source-document-registry",
   "generated_by": "build-scripts/references/build-source-document-registry.js",
-  "generated_on": "2026-05-21T09:21:51.644Z",
+  "generated_on": "2026-05-21T10:16:38.306Z",
   "storage_decision": {
     "registry_location": "references/data/source-document-registry.json",
     "machine_registry_created": false,
@@ -16,18 +16,18 @@
     "references/SOURCE_OF_TRUTH.md"
   ],
   "summary": {
-    "record_count": 268,
-    "source_manifest_file_count": 271,
+    "record_count": 273,
+    "source_manifest_file_count": 276,
     "by_authority_level": {
       "external_primary": 30,
       "machine_registry": 5,
       "owned_curriculum_design": 5,
       "authored_judgement": 9,
       "generated_report": 2,
-      "governance_data": 188,
+      "governance_data": 192,
       "quality_protocol": 5,
       "planning": 1,
-      "machine_contract": 23
+      "machine_contract": 24
     },
     "by_source_type": {
       "external_reference": 7,
@@ -38,15 +38,15 @@
       "report_md": 1,
       "external_pdf": 25,
       "authored_markdown": 6,
-      "inventory": 27,
+      "inventory": 29,
       "exercise_metadata_overlay": 6,
       "exercise_overlay_readme": 1,
-      "sprint_metadata": 152,
+      "sprint_metadata": 154,
       "machine_projection": 3,
       "owned_source_readme": 1,
       "qc_prompt": 5,
       "roadmap": 1,
-      "json_schema": 23,
+      "json_schema": 24,
       "report_json": 1,
       "source_of_truth_policy": 1
     },
@@ -57,15 +57,15 @@
       "archived": 1,
       "generated_diagnostic": 2,
       "mirrored": 25,
-      "governance_data": 186,
+      "governance_data": 190,
       "planning": 1,
-      "schema_contract": 23
+      "schema_contract": 24
     },
     "by_public_citation_policy": {
       "public_citation_allowed_with_source_name": 30,
       "internal_only": 19,
       "internal_diagnostic_only": 2,
-      "not_public_citation_source": 217
+      "not_public_citation_source": 222
     },
     "evidence_anchor_coverage": {
       "required_document_ids": [
@@ -1399,6 +1399,82 @@
       "refresh_policy": "regenerate",
       "source_hash": "e3c64a2a4951a3016bf3e8ab243681bd71cb88b74cf13727ac6783f1c6edc951",
       "size_bytes": 18700,
+      "primary_evidence": false,
+      "curriculum_authority": false,
+      "allowed_downstream_uses": [
+        "internal_reference_context",
+        "rag_retrieval_with_authority_label"
+      ],
+      "blocked_downstream_uses": [
+        "student_diagnostics",
+        "adaptive_routing",
+        "student_facing_ai",
+        "automatic_lesson_sequencing",
+        "automatic_mastery_decisions",
+        "summative_assessment_decisions",
+        "external_authority",
+        "override_machine_registry"
+      ],
+      "evidence_anchor_ids": [],
+      "notes": [
+        "Governance data is canonical only for its declared governance artifact."
+      ]
+    },
+    {
+      "document_id": "path-references-data-exam-ingestion-readme",
+      "path": "references/data/exam-ingestion/README.md",
+      "title": "README",
+      "source_type": "inventory",
+      "authority_level": "governance_data",
+      "source_version": "sha256:bf2fa73dc1c674d9a2242e648e260ebb51bbd4fd7db96ae37a05cc5526283bfa",
+      "status": "governance_data",
+      "owner": "references_team",
+      "citation_policy": "cite_as_governance_record_only",
+      "public_citation_policy": "not_public_citation_source",
+      "layer": "governance_data",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "generated_by_inventory_script",
+      "refresh_policy": "regenerate",
+      "source_hash": "bf2fa73dc1c674d9a2242e648e260ebb51bbd4fd7db96ae37a05cc5526283bfa",
+      "size_bytes": 3470,
+      "primary_evidence": false,
+      "curriculum_authority": false,
+      "allowed_downstream_uses": [
+        "internal_reference_context",
+        "rag_retrieval_with_authority_label"
+      ],
+      "blocked_downstream_uses": [
+        "student_diagnostics",
+        "adaptive_routing",
+        "student_facing_ai",
+        "automatic_lesson_sequencing",
+        "automatic_mastery_decisions",
+        "summative_assessment_decisions",
+        "external_authority",
+        "override_machine_registry"
+      ],
+      "evidence_anchor_ids": [],
+      "notes": [
+        "Governance data is canonical only for its declared governance artifact."
+      ]
+    },
+    {
+      "document_id": "path-references-data-exam-ingestion-review-procedure",
+      "path": "references/data/exam-ingestion/review-procedure.md",
+      "title": "Review Procedure",
+      "source_type": "inventory",
+      "authority_level": "governance_data",
+      "source_version": "sha256:3fb925afc0ba4336bf82d229db7c3c2ac86301dd3d525899b2719b546b899f9a",
+      "status": "governance_data",
+      "owner": "references_team",
+      "citation_policy": "cite_as_governance_record_only",
+      "public_citation_policy": "not_public_citation_source",
+      "layer": "governance_data",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "generated_by_inventory_script",
+      "refresh_policy": "regenerate",
+      "source_hash": "3fb925afc0ba4336bf82d229db7c3c2ac86301dd3d525899b2719b546b899f9a",
+      "size_bytes": 3285,
       "primary_evidence": false,
       "curriculum_authority": false,
       "allowed_downstream_uses": [
@@ -3223,6 +3299,82 @@
       "refresh_policy": "sprint_lifecycle",
       "source_hash": "1f58ba80141a8763a550d52db22437edc2cc475cb10c28ae73db6e69e4a9ef2c",
       "size_bytes": 6013,
+      "primary_evidence": false,
+      "curriculum_authority": false,
+      "allowed_downstream_uses": [
+        "internal_reference_context",
+        "rag_retrieval_with_authority_label"
+      ],
+      "blocked_downstream_uses": [
+        "student_diagnostics",
+        "adaptive_routing",
+        "student_facing_ai",
+        "automatic_lesson_sequencing",
+        "automatic_mastery_decisions",
+        "summative_assessment_decisions",
+        "external_authority",
+        "override_machine_registry"
+      ],
+      "evidence_anchor_ids": [],
+      "notes": [
+        "Governance data is canonical only for its declared governance artifact."
+      ]
+    },
+    {
+      "document_id": "path-references-data-sprints-ex-0-plan",
+      "path": "references/data/sprints/EX-0.plan.json",
+      "title": "EX 0.Plan",
+      "source_type": "sprint_metadata",
+      "authority_level": "governance_data",
+      "source_version": "sha256:147ed83746de0a3d958febb51bc09e2c576132a817188df0fc9a97c0b8930702",
+      "status": "governance_data",
+      "owner": "references_team",
+      "citation_policy": "cite_as_governance_record_only",
+      "public_citation_policy": "not_public_citation_source",
+      "layer": "governance_data",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "refresh_policy": "sprint_lifecycle",
+      "source_hash": "147ed83746de0a3d958febb51bc09e2c576132a817188df0fc9a97c0b8930702",
+      "size_bytes": 3703,
+      "primary_evidence": false,
+      "curriculum_authority": false,
+      "allowed_downstream_uses": [
+        "internal_reference_context",
+        "rag_retrieval_with_authority_label"
+      ],
+      "blocked_downstream_uses": [
+        "student_diagnostics",
+        "adaptive_routing",
+        "student_facing_ai",
+        "automatic_lesson_sequencing",
+        "automatic_mastery_decisions",
+        "summative_assessment_decisions",
+        "external_authority",
+        "override_machine_registry"
+      ],
+      "evidence_anchor_ids": [],
+      "notes": [
+        "Governance data is canonical only for its declared governance artifact."
+      ]
+    },
+    {
+      "document_id": "path-references-data-sprints-ex-0-result",
+      "path": "references/data/sprints/EX-0.result.json",
+      "title": "EX 0.Result",
+      "source_type": "sprint_metadata",
+      "authority_level": "governance_data",
+      "source_version": "sha256:44032a1ade66cb0c18c7dc54400edb90171c5ed70eba705f816a089ccc5e2449",
+      "status": "governance_data",
+      "owner": "references_team",
+      "citation_policy": "cite_as_governance_record_only",
+      "public_citation_policy": "not_public_citation_source",
+      "layer": "governance_data",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "refresh_policy": "sprint_lifecycle",
+      "source_hash": "44032a1ade66cb0c18c7dc54400edb90171c5ed70eba705f816a089ccc5e2449",
+      "size_bytes": 5494,
       "primary_evidence": false,
       "curriculum_authority": false,
       "allowed_downstream_uses": [
@@ -8758,7 +8910,7 @@
       "title": "Reference Team Roadmap",
       "source_type": "roadmap",
       "authority_level": "planning",
-      "source_version": "sha256:ba08d3f97354a2b558b2e3c21ebfdda7fbd904c6664c27204e04bca2fe599685",
+      "source_version": "sha256:206d8453263330d7587df84999008f7b521a39dcfb8375135f83eebea95f4d5e",
       "status": "planning",
       "owner": "references_team",
       "citation_policy": "citation_requires_review",
@@ -8767,8 +8919,8 @@
       "generated_status": "manual_source",
       "edit_policy": "human_reviewed_edit",
       "refresh_policy": "roadmap_update",
-      "source_hash": "ba08d3f97354a2b558b2e3c21ebfdda7fbd904c6664c27204e04bca2fe599685",
-      "size_bytes": 166164,
+      "source_hash": "206d8453263330d7587df84999008f7b521a39dcfb8375135f83eebea95f4d5e",
+      "size_bytes": 168330,
       "primary_evidence": false,
       "curriculum_authority": false,
       "allowed_downstream_uses": [
@@ -8877,6 +9029,42 @@
       "refresh_policy": "schema_review",
       "source_hash": "68f37684170400a17ab0ddbcaedd2125974579eeab689bdce09d67bbbf24f16e",
       "size_bytes": 1514,
+      "primary_evidence": false,
+      "curriculum_authority": false,
+      "allowed_downstream_uses": [
+        "internal_reference_context",
+        "rag_retrieval_with_authority_label"
+      ],
+      "blocked_downstream_uses": [
+        "student_diagnostics",
+        "adaptive_routing",
+        "student_facing_ai",
+        "automatic_lesson_sequencing",
+        "automatic_mastery_decisions",
+        "summative_assessment_decisions",
+        "external_authority",
+        "override_machine_registry"
+      ],
+      "evidence_anchor_ids": [],
+      "notes": []
+    },
+    {
+      "document_id": "path-references-schemas-exam-ingestion-schema",
+      "path": "references/schemas/exam-ingestion.schema.json",
+      "title": "Exam Ingestion.Schema",
+      "source_type": "json_schema",
+      "authority_level": "machine_contract",
+      "source_version": "sha256:60bb4f326160a34daae9ae6c71983e1cbba0ff97d1b693625d099d7c47a30601",
+      "status": "schema_contract",
+      "owner": "references_team",
+      "citation_policy": "cite_as_implementation_contract_not_curriculum_evidence",
+      "public_citation_policy": "not_public_citation_source",
+      "layer": "schema_contract",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "refresh_policy": "schema_review",
+      "source_hash": "60bb4f326160a34daae9ae6c71983e1cbba0ff97d1b693625d099d7c47a30601",
+      "size_bytes": 24726,
       "primary_evidence": false,
       "curriculum_authority": false,
       "allowed_downstream_uses": [

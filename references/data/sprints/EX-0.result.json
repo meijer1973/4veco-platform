@@ -1,0 +1,162 @@
+{
+  "sprint_id": "EX-0",
+  "name": "Exam Ingestion Contract Design",
+  "status": "completed",
+  "completed_on": "2026-05-21",
+  "plan": "reports/sprints/EX-0-plan.md",
+  "baseline": "reports/sprints/EX-0-baseline.md",
+  "result": "reports/sprints/EX-0-result.md",
+  "diff_summary": "reports/sprints/EX-0-diff-summary.md",
+  "authority_level": "non_mutating_exam_ingestion_contract_design",
+  "protected_reference_data_changed": false,
+  "external_source_mutation_authorized": false,
+  "real_exam_ingestion_overlay_records_created": false,
+  "lesson_output_changed": false,
+  "target_exercise_promotions": false,
+  "placeholder_finalization": false,
+  "unit_minting": false,
+  "machine_registry_mutation": false,
+  "cp6_closed": false,
+  "year1_closed": false,
+  "lead_review_required": true,
+  "lead_review": {
+    "assignment": "reports/sprints/EX-0-lead-review-assignment.md",
+    "round1": "reports/sprints/EX-0-lead-review-round1.md",
+    "corrections": "reports/sprints/EX-0-lead-review-corrections.md",
+    "round2": "reports/sprints/EX-0-lead-review-round2.md",
+    "extra_recheck": "reports/sprints/EX-0-lead-review-extra-recheck.md",
+    "final_verdict": "PASS WITH FLAGS",
+    "notes": "Round 1 and round 2 both returned REVISE. The user authorized one extra correction/recheck cycle on 2026-05-21. The extra recheck returned PASS WITH FLAGS with finalization chores only; this metadata records those chores after completion."
+  },
+  "primary_outputs": [
+    "references/schemas/exam-ingestion.schema.json",
+    "references/data/exam-ingestion/README.md",
+    "references/data/exam-ingestion/review-procedure.md",
+    "build-scripts/references/check-exam-ingestion-contract.js",
+    "reports/review-gates/GATE-EX0-exam-ingestion-contract/review-packet.md",
+    "reports/review-gates/GATE-EX0-exam-ingestion-contract/review-packet.json"
+  ],
+  "summary": {
+    "contract_status": "designed_pending_gate_review",
+    "gate_prepared": "GATE-EX0-exam-ingestion-contract",
+    "schema": "references/schemas/exam-ingestion.schema.json",
+    "review_procedure": "references/data/exam-ingestion/review-procedure.md",
+    "pilot_overlay_data_created": false,
+    "next_operational_action": "GATE-EX0 human review before EX-1 pilot overlays"
+  },
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/EX-0-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js EX-0",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-exam-ingestion-contract.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/validate-core-schemas.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/validate-report-json.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/generate-all.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/validate-report-json.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/generate-reference-health.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/check-reference-health.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run dashboard:internal",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run agent:index",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-gate-bundle-urls.js GATE-EX0-exam-ingestion-contract",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js --check",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/build-reference-inventory.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/build-source-document-registry.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-source-document-registry.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-source-manifest.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-document-inventory.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-roadmap-version-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-result.js reports/sprints/EX-0-result.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js EX-0 --complete",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd test",
+      "status": "passed"
+    }
+  ],
+  "blocked_outcomes": [
+    "protected reference mutation",
+    "external-source mutation",
+    "real exam-ingestion overlay pilot data",
+    "target-exercise promotion",
+    "placeholder finalization",
+    "unit minting",
+    "machine registry mutation",
+    "CP-6 closure",
+    "Year-1 closure",
+    "student diagnostics",
+    "adaptive routing",
+    "mastery decisions",
+    "automatic sequencing",
+    "student-facing AI",
+    "summative use",
+    "PV projection",
+    "PV machine promotion",
+    "student-facing generated output"
+  ],
+  "next_operational_action": "GATE-EX0 human review before EX-1 pilot overlays"
+}

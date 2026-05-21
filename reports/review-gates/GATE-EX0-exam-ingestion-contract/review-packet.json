@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-EX0-exam-ingestion-contract",
+  "sprint_id": "EX-0",
+  "status": "review_packet_ready_not_closed",
+  "generated_on": "2026-05-21",
+  "protected_reference_data_changed": false,
+  "external_source_mutation_authorized": false,
+  "unit_minting_authorized": false,
+  "target_exercise_promotion_authorized": false,
+  "cp6_closed": false,
+  "year1_closed": false,
+  "human_interview_completed": false,
+  "gate_closure_completed": false,
+  "evidence_inputs": [
+    "references/schemas/exam-ingestion.schema.json",
+    "references/data/exam-ingestion/README.md",
+    "references/data/exam-ingestion/review-procedure.md",
+    "references/data/exercises/README.md",
+    "references/schemas/exercise-metadata-overlay.schema.json",
+    "references/schemas/exam-question.schema.json",
+    "references/reference-team-roadmap.md"
+  ],
+  "review_questions": [
+    {
+      "id": "EX0-Q1",
+      "topic": "Overlay family",
+      "question": "Does the EX-0 contract correctly keep official exam prompts, source material, official correction models, point rules, decomposition, and gap classifications as governed references/data overlays rather than mutations to references/external?",
+      "options": [
+        "Yes, keep the overlay-first design and forbid external-source mutation.",
+        "Revise the storage split before EX-1.",
+        "Hold until source-refresh tooling is designed."
+      ],
+      "open_answer_allowed": true
+    },
+    {
+      "id": "EX0-Q2",
+      "topic": "Prompt/source/answer-model separation",
+      "question": "Does the schema separate prompt metadata, source annexes, graphs/tables/figures, and official answer-model requirements enough for a human to reconstruct the exam task?",
+      "options": [
+        "Yes, the separation is sufficient for a pilot.",
+        "Revise; name missing fields.",
+        "Hold until a real question dry-run proves the split."
+      ],
+      "open_answer_allowed": true
+    },
+    {
+      "id": "EX0-Q3",
+      "topic": "Official correction-model contract",
+      "question": "Are answer steps, point rules, mandatory terms, accepted alternatives, partial-credit rules, precision/unit requirements, and graph requirements the right minimum correction-model fields?",
+      "options": [
+        "Yes, this is the minimum EX-1 contract.",
+        "Add or remove fields before EX-1.",
+        "Hold until correction-model extraction tooling is drafted."
+      ],
+      "open_answer_allowed": true
+    },
+    {
+      "id": "EX0-Q4",
+      "topic": "Source-annex gaps",
+      "question": "Are source-annex, graph-object, precision, and answer-model gap statuses explicit enough to block downstream mapping or lesson handoff when evidence is incomplete?",
+      "options": [
+        "Yes, gaps are explicit enough.",
+        "Revise severity/blocking semantics.",
+        "Hold until a graph/source-heavy pilot question is selected."
+      ],
+      "open_answer_allowed": true
+    },
+    {
+      "id": "EX0-Q5",
+      "topic": "MTU and operation classification",
+      "question": "Is the EX-0 classification taxonomy sufficient for EX-2 mapping: existing MTU, weak MTU, missing MTU, merge/split candidate, operation-registry need, PV/graph need, answer-skill need, source-annex gap, answer-model extraction gap, or defer?",
+      "options": [
+        "Yes, use this taxonomy for EX-1/EX-2.",
+        "Revise the taxonomy before pilot work.",
+        "Hold until CP-6 closure-readiness work is complete."
+      ],
+      "open_answer_allowed": true
+    },
+    {
+      "id": "EX0-Q6",
+      "topic": "Lesson-build handoff",
+      "question": "Does the lesson-build handoff contract capture what a paragraph must teach, practice, scaffold, assume, or block before an official exam question can become a target exercise?",
+      "options": [
+        "Yes, sufficient for L-EX0 coordination.",
+        "Revise handoff fields before lesson-team use.",
+        "Hold until the lesson team reviews the contract."
+      ],
+      "open_answer_allowed": true
+    },
+    {
+      "id": "EX0-Q7",
+      "topic": "Product boundaries",
+      "question": "Does EX-0 correctly block diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, PV projection, PV machine promotion, and student-facing output?",
+      "options": [
+        "Yes, all product boundaries must remain false.",
+        "Revise boundary fields before EX-1.",
+        "Hold until product governance reviews the list."
+      ],
+      "open_answer_allowed": true
+    },
+    {
+      "id": "EX0-Q8",
+      "topic": "Next sprint authorization",
+      "question": "Does this gate authorize EX-1 to create three bounded pilot exam-ingestion overlays after human review, or should EX-0 be revised first?",
+      "options": [
+        "Authorize EX-1 pilot overlays after the gate closes, with no mutation.",
+        "Revise EX-0 contract before any pilot overlays.",
+        "Hold EX-1 until CP-6/Year-1 closure strategy is decided."
+      ],
+      "open_answer_allowed": true
+    }
+  ],
+  "future_interview_protocol": [
+    "Show the full question list before starting.",
+    "Ask one question at a time.",
+    "Record each answer before asking the next question.",
+    "Run pattern analysis after initial answers.",
+    "Ask targeted follow-ups for ambiguity or conflicting authority.",
+    "Draft a gate decision only after evidence is complete.",
+    "Require explicit human confirmation before writing a gate closure record or authorizing EX-1 pilot data."
+  ],
+  "recommended_gate_status_before_interview": "hold_until_reviewed",
+  "blocked_outcomes": [
+    "protected reference mutation",
+    "external-source mutation",
+    "unit minting",
+    "target-exercise promotion",
+    "placeholder finalization",
+    "CP-6 closure",
+    "Year-1 closure",
+    "student diagnostics",
+    "adaptive routing",
+    "mastery decisions",
+    "automatic sequencing",
+    "student-facing AI",
+    "summative use",
+    "PV projection",
+    "PV machine promotion",
+    "student-facing output"
+  ]
+}

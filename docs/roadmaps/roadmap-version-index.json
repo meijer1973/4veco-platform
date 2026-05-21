@@ -15,13 +15,14 @@
   "roadmaps": [
     {
       "roadmap_id": "references-team-roadmap",
-      "version": "v2.60-cp6f-113-part-a-cleared",
+      "version": "v2.61-ex0-exam-ingestion-contract",
       "title": "References Team Roadmap",
       "status": "active",
       "path": "references/reference-team-roadmap.md",
       "owner": "references_team",
       "updated_on": "2026-05-21",
       "supersedes": [
+        "docs/roadmaps/outdated/reference-team-roadmap-v2.60-cp6f-113-part-a-cleared.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.59-cp6e-113-part-a-failed-clearance.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.58-cp6d-graph-heavy-evidence-upgrade.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.57-cp6c-mtu-backfill-classification.md",
@@ -81,7 +82,18 @@
         "knowledge/Exercise schema and quality/reference-team-roadmap Live version 28 April.md",
         "knowledge/Exercise schema and quality/roadmap-updated-repository-checked.md"
       ],
-      "notes": "Current operating roadmap after CP.6f cleared the focused 1.1.3 Part A figure-numbering blocker and made EX-0 exam ingestion contract design the active route."
+      "notes": "Current operating roadmap after EX-0 defined the exam-ingestion contract and made EX-1 pilot preparation the active route after GATE-EX0 review authorization."
+    },
+    {
+      "roadmap_id": "references-team-roadmap-v2.60",
+      "version": "v2.60-cp6f-113-part-a-cleared",
+      "title": "References Team Roadmap before EX-0 exam-ingestion contract design",
+      "status": "outdated",
+      "path": "docs/roadmaps/outdated/reference-team-roadmap-v2.60-cp6f-113-part-a-cleared.md",
+      "owner": "references_team",
+      "updated_on": "2026-05-21",
+      "superseded_by": "references/reference-team-roadmap.md",
+      "notes": "Snapshot archived before EX-0 defined the exam-ingestion contract and prepared GATE-EX0."
     },
     {
       "roadmap_id": "references-team-roadmap-v2.59",
