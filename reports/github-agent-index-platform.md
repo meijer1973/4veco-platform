@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-05-21T05:58:04.490Z
+Generated: 2026-05-21T06:10:05.826Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 1530
+Files indexed: 1548
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -105,7 +105,7 @@ Count: 59
 
 ## build scripts
 
-Count: 278
+Count: 280
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -216,6 +216,7 @@ Count: 278
 - build-scripts/references/build-cp6b-target-exercise-review.js
 - build-scripts/references/build-cp6c-mtu-backfill-classification.js
 - build-scripts/references/build-cp6d-graph-heavy-evidence.js
+- build-scripts/references/build-cp6e-113-part-a-rereview.js
 - build-scripts/references/build-micro-unit-quality-packet.js
 - build-scripts/references/build-owned-content-graph.js
 - build-scripts/references/build-owned-source-registry.js
@@ -348,6 +349,7 @@ Count: 278
 - build-scripts/review-gates/check-cp6b-target-exercise-review.js
 - build-scripts/review-gates/check-cp6c-mtu-backfill-classification.js
 - build-scripts/review-gates/check-cp6d-graph-heavy-evidence.js
+- build-scripts/review-gates/check-cp6e-113-part-a-rereview.js
 - build-scripts/review-gates/check-gate-cp6-routing-decision.js
 - build-scripts/review-gates/check-r2-4-packet.js
 - build-scripts/review-gates/validate-gate.js
@@ -435,7 +437,7 @@ Count: 42
 
 ## validators
 
-Count: 80
+Count: 82
 
 - build-scripts/rag/validate-chunks.js
 - build-scripts/rag/validate-query-output.js
@@ -495,6 +497,7 @@ Count: 80
 - build-scripts/review-gates/check-cp6b-target-exercise-review.js
 - build-scripts/review-gates/check-cp6c-mtu-backfill-classification.js
 - build-scripts/review-gates/check-cp6d-graph-heavy-evidence.js
+- build-scripts/review-gates/check-cp6e-113-part-a-rereview.js
 - build-scripts/review-gates/check-gate-cp6-routing-decision.js
 - build-scripts/review-gates/check-r2-4-packet.js
 - build-scripts/review-gates/validate-gate.js
@@ -504,6 +507,7 @@ Count: 80
 - build-scripts/sprints/check-sprint-plan.js
 - build-scripts/sprints/check-sprint-result.js
 - docs/roadmaps/outdated/reference-team-roadmap-v2.22-pv2-procedure-visual-schema-validator.md
+- reports/sprints/CP.6e-validation-log.md
 - scripts/check-book-print-scope.js
 - scripts/check-book.js
 - scripts/check-course-target-exercises-v5.js
@@ -520,7 +524,7 @@ Count: 80
 
 ## references
 
-Count: 265
+Count: 268
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -581,6 +585,9 @@ Count: 265
 - references/data/sprints/CP.6d-graph-heavy-evidence.json
 - references/data/sprints/CP.6d.plan.json
 - references/data/sprints/CP.6d.result.json
+- references/data/sprints/CP.6e-113-part-a-rereview.json
+- references/data/sprints/CP.6e.plan.json
+- references/data/sprints/CP.6e.result.json
 - references/data/sprints/EX-NS0.plan.json
 - references/data/sprints/EX-NS0.result.json
 - references/data/sprints/GATE-CP6.plan.json
@@ -790,7 +797,7 @@ Count: 265
 
 ## reports
 
-Count: 668
+Count: 680
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -930,6 +937,8 @@ Count: 668
 - reports/reference-planning/CP.6b-target-exercise-review.md
 - reports/reference-planning/CP.6c-mtu-backfill-classification.md
 - reports/reference-planning/CP.6d-graph-heavy-evidence.md
+- reports/reference-planning/CP.6e-113-part-a-remediation-handoff.md
+- reports/reference-planning/CP.6e-113-part-a-rereview.md
 - reports/reference-planning/REF-CP6-blocker-routing.md
 - reports/reference-planning/REF-CP6-remediation-readiness.md
 - reports/reference-planning/REF-CT0-candidate-review-packet.md
@@ -1241,6 +1250,16 @@ Count: 668
 - reports/sprints/CP.6d-plan.md
 - reports/sprints/CP.6d-planning-review.md
 - reports/sprints/CP.6d-result.md
+- reports/sprints/CP.6e-baseline.md
+- reports/sprints/CP.6e-diff-summary.md
+- reports/sprints/CP.6e-lead-review-assignment.md
+- reports/sprints/CP.6e-lead-review-corrections.md
+- reports/sprints/CP.6e-lead-review-round1.md
+- reports/sprints/CP.6e-lead-review-round2.md
+- reports/sprints/CP.6e-plan.md
+- reports/sprints/CP.6e-planning-review.md
+- reports/sprints/CP.6e-result.md
+- reports/sprints/CP.6e-validation-log.md
 - reports/sprints/EX-NS0-baseline.md
 - reports/sprints/EX-NS0-diff-summary.md
 - reports/sprints/EX-NS0-lead-review-assignment.md
@@ -1481,7 +1500,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 203
+Count: 204
 
 - .gitignore
 - BUILD-CHAPTER.md
@@ -1540,6 +1559,7 @@ Count: 203
 - docs/roadmaps/outdated/reference-team-roadmap-v2.55-exam-ingestion-north-star.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.56-cp6b-target-exercise-review.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.57-cp6c-mtu-backfill-classification.md
+- docs/roadmaps/outdated/reference-team-roadmap-v2.58-cp6d-graph-heavy-evidence-upgrade.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.6-s4-cp3-dry-run.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.7-cp3-closed.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.8-s4.1-conditions-calibrated.md
