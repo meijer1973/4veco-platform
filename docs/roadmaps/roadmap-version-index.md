@@ -12,12 +12,13 @@ docs/roadmaps/roadmap-version-index.json
 
 | Roadmap | Version | Path | Notes |
 |---|---|---|---|
-| References Team Roadmap | `v2.61-ex0-exam-ingestion-contract` | `references/reference-team-roadmap.md` | Current operating roadmap after EX-0 defined the exam-ingestion contract and made EX-1 pilot preparation the active route after GATE-EX0 review authorization. |
+| References Team Roadmap | `v2.62-gate-ex0-pass-with-conditions` | `references/reference-team-roadmap.md` | Current operating roadmap after GATE-EX0 closed as pass_with_conditions and authorized EX-1 as a bounded non-mutating pilot under graph/source reconstruction, pilot-validator, lesson-handoff, and no-hidden-gap conditions. |
 
 ## Outdated Archive
 
 | Roadmap | Version | Path | Superseded By |
 |---|---|---|---|
+| References Team Roadmap before GATE-EX0 closure | `v2.61-ex0-exam-ingestion-contract` | `docs/roadmaps/outdated/reference-team-roadmap-v2.61-ex0-exam-ingestion-contract.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before EX-0 exam-ingestion contract design | `v2.60-cp6f-113-part-a-cleared` | `docs/roadmaps/outdated/reference-team-roadmap-v2.60-cp6f-113-part-a-cleared.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before CP.6f focused 1.1.3 Part A remediation recheck | `v2.59-cp6e-113-part-a-failed-clearance` | `docs/roadmaps/outdated/reference-team-roadmap-v2.59-cp6e-113-part-a-failed-clearance.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before CP.6e focused 1.1.3 Part A re-review | `v2.58-cp6d-graph-heavy-evidence-upgrade` | `docs/roadmaps/outdated/reference-team-roadmap-v2.58-cp6d-graph-heavy-evidence-upgrade.md` | `references/reference-team-roadmap.md` |

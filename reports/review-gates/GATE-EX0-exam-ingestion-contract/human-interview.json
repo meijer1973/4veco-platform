@@ -1,0 +1,67 @@
+{
+  "gate_id": "GATE-EX0-exam-ingestion-contract",
+  "sprint_id": "EX-0",
+  "recorded_on": "2026-05-21",
+  "reviewer_role": "human reviewer",
+  "decision": "pass_with_conditions",
+  "closure_authorized": true,
+  "ex1_pilot_authorized": true,
+  "protected_reference_mutation_authorized": false,
+  "external_source_mutation_authorized": false,
+  "unit_minting_authorized": false,
+  "target_exercise_promotion_authorized": false,
+  "cp6_closure_authorized": false,
+  "year1_closure_authorized": false,
+  "student_product_use_authorized": false,
+  "answers": [
+    {
+      "id": "EX0-Q1",
+      "answer": "Yes, keep the overlay-first design and forbid external-source mutation.",
+      "decision": "Retain governed references/data overlays and forbid references/external mutation."
+    },
+    {
+      "id": "EX0-Q2",
+      "answer": "Yes for a bounded pilot, with one condition.",
+      "decision": "Approve prompt/source/answer-model separation for EX-1 if graph/source-heavy pilot records either reconstruct needed values or carry blocking graph/source gaps."
+    },
+    {
+      "id": "EX0-Q3",
+      "answer": "Yes, this is the minimum EX-1 contract.",
+      "decision": "Approve answer steps, point rules, mandatory terms, accepted alternatives, partial-credit rules, precision/unit requirements, and graph requirements as the minimum correction-model fields."
+    },
+    {
+      "id": "EX0-Q4",
+      "answer": "Yes, gaps are explicit enough, but EX-1 needs an actual pilot-overlay validator.",
+      "decision": "Accept gap semantics and require a separate EX-1 validator for real pilot overlay records."
+    },
+    {
+      "id": "EX0-Q5",
+      "answer": "Yes, use this taxonomy for EX-1/EX-2.",
+      "decision": "Use the EX-0 MTU/operation classification taxonomy for EX-1 and EX-2, with mutation_authorized remaining false."
+    },
+    {
+      "id": "EX0-Q6",
+      "answer": "Sufficient for L-EX0 coordination, but not yet sufficient as the final lesson-build contract.",
+      "decision": "Approve handoff for L-EX0 coordination and require explicit lesson-plan fields for assumed prior knowledge with MTU evidence and deliberately out of scope with reason."
+    },
+    {
+      "id": "EX0-Q7",
+      "answer": "Yes, all product boundaries must remain false.",
+      "decision": "Keep all diagnostics, adaptive, mastery, sequencing, student-facing AI, summative, PV projection, PV machine promotion, and student-facing output flags false."
+    },
+    {
+      "id": "EX0-Q8",
+      "answer": "Authorize EX-1 pilot overlays after the gate closes, with no mutation.",
+      "decision": "Close GATE-EX0 as pass_with_conditions and authorize EX-1 to create three bounded non-mutating pilot overlays under references/data."
+    }
+  ],
+  "pattern_analysis": "The answers approve EX-0 as a contract for a bounded EX-1 pilot while preserving strict no-mutation, no-closure, and no-product-use boundaries. Graph/source reconstruction gaps, pilot-overlay validation, and lesson-handoff traceability become explicit conditions.",
+  "targeted_followups_required": true,
+  "targeted_followups": [
+    "EX-1 must not mark graph/source-heavy pilot items reviewed_ready_for_mapping unless required graph/table/source values are reconstructable or blocking gaps are carried.",
+    "EX-1 must add a pilot-overlay validator for real pilot overlay records.",
+    "L-EX0 should add explicit paragraph-plan fields for assumed prior knowledge with MTU evidence and deliberately out of scope with reason.",
+    "pass_with_gaps may be used only when named gaps remain visible downstream and block affected use."
+  ],
+  "plain_pass_authorized": false
+}

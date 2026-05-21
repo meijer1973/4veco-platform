@@ -1,7 +1,7 @@
 {
   "report_id": "unresolved-refs",
   "generated_by": "build-scripts/reports/generate-all.js",
-  "generated_on": "2026-05-21T10:15:36.475Z",
+  "generated_on": "2026-05-21T12:53:08.359Z",
   "source_files": [
     "references/machine/micro-teaching-units.json",
     "references/",
@@ -13,7 +13,7 @@
   "status": "warn",
   "summary": {
     "deprecated_units": 3,
-    "deprecated_citations": 331
+    "deprecated_citations": 334
   },
   "issues": [
     {
@@ -2919,7 +2919,7 @@
       "severity": "low",
       "affected_entity": "D04",
       "category": "deprecated_reference",
-      "evidence_path": "docs/roadmaps/outdated/reference-team-roadmap-v2.7-cp3-closed.md",
+      "evidence_path": "docs/roadmaps/outdated/reference-team-roadmap-v2.61-ex0-exam-ingestion-contract.md",
       "next_action": "Remove or migrate deprecated unit citation.",
       "proof_required_to_close": "No deprecated unit ID is cited from active docs/reports."
     },
@@ -2928,7 +2928,7 @@
       "severity": "low",
       "affected_entity": "D23",
       "category": "deprecated_reference",
-      "evidence_path": "docs/roadmaps/outdated/reference-team-roadmap-v2.7-cp3-closed.md",
+      "evidence_path": "docs/roadmaps/outdated/reference-team-roadmap-v2.61-ex0-exam-ingestion-contract.md",
       "next_action": "Remove or migrate deprecated unit citation.",
       "proof_required_to_close": "No deprecated unit ID is cited from active docs/reports."
     },
@@ -2937,7 +2937,7 @@
       "severity": "low",
       "affected_entity": "H26",
       "category": "deprecated_reference",
-      "evidence_path": "docs/roadmaps/outdated/reference-team-roadmap-v2.7-cp3-closed.md",
+      "evidence_path": "docs/roadmaps/outdated/reference-team-roadmap-v2.61-ex0-exam-ingestion-contract.md",
       "next_action": "Remove or migrate deprecated unit citation.",
       "proof_required_to_close": "No deprecated unit ID is cited from active docs/reports."
     },
@@ -2946,7 +2946,7 @@
       "severity": "low",
       "affected_entity": "D04",
       "category": "deprecated_reference",
-      "evidence_path": "docs/roadmaps/outdated/reference-team-roadmap-v2.8-s4.1-conditions-calibrated.md",
+      "evidence_path": "docs/roadmaps/outdated/reference-team-roadmap-v2.7-cp3-closed.md",
       "next_action": "Remove or migrate deprecated unit citation.",
       "proof_required_to_close": "No deprecated unit ID is cited from active docs/reports."
     },
@@ -2955,7 +2955,7 @@
       "severity": "low",
       "affected_entity": "D23",
       "category": "deprecated_reference",
-      "evidence_path": "docs/roadmaps/outdated/reference-team-roadmap-v2.8-s4.1-conditions-calibrated.md",
+      "evidence_path": "docs/roadmaps/outdated/reference-team-roadmap-v2.7-cp3-closed.md",
       "next_action": "Remove or migrate deprecated unit citation.",
       "proof_required_to_close": "No deprecated unit ID is cited from active docs/reports."
     },
@@ -2964,7 +2964,7 @@
       "severity": "low",
       "affected_entity": "H26",
       "category": "deprecated_reference",
-      "evidence_path": "docs/roadmaps/outdated/reference-team-roadmap-v2.8-s4.1-conditions-calibrated.md",
+      "evidence_path": "docs/roadmaps/outdated/reference-team-roadmap-v2.7-cp3-closed.md",
       "next_action": "Remove or migrate deprecated unit citation.",
       "proof_required_to_close": "No deprecated unit ID is cited from active docs/reports."
     },
@@ -2973,7 +2973,7 @@
       "severity": "low",
       "affected_entity": "D04",
       "category": "deprecated_reference",
-      "evidence_path": "docs/roadmaps/outdated/reference-team-roadmap-v2.9-rx1-inventory-prepared.md",
+      "evidence_path": "docs/roadmaps/outdated/reference-team-roadmap-v2.8-s4.1-conditions-calibrated.md",
       "next_action": "Remove or migrate deprecated unit citation.",
       "proof_required_to_close": "No deprecated unit ID is cited from active docs/reports."
     },
@@ -2982,12 +2982,39 @@
       "severity": "low",
       "affected_entity": "D23",
       "category": "deprecated_reference",
-      "evidence_path": "docs/roadmaps/outdated/reference-team-roadmap-v2.9-rx1-inventory-prepared.md",
+      "evidence_path": "docs/roadmaps/outdated/reference-team-roadmap-v2.8-s4.1-conditions-calibrated.md",
       "next_action": "Remove or migrate deprecated unit citation.",
       "proof_required_to_close": "No deprecated unit ID is cited from active docs/reports."
     },
     {
       "issue_id": "unresolved-refs-0331",
+      "severity": "low",
+      "affected_entity": "H26",
+      "category": "deprecated_reference",
+      "evidence_path": "docs/roadmaps/outdated/reference-team-roadmap-v2.8-s4.1-conditions-calibrated.md",
+      "next_action": "Remove or migrate deprecated unit citation.",
+      "proof_required_to_close": "No deprecated unit ID is cited from active docs/reports."
+    },
+    {
+      "issue_id": "unresolved-refs-0332",
+      "severity": "low",
+      "affected_entity": "D04",
+      "category": "deprecated_reference",
+      "evidence_path": "docs/roadmaps/outdated/reference-team-roadmap-v2.9-rx1-inventory-prepared.md",
+      "next_action": "Remove or migrate deprecated unit citation.",
+      "proof_required_to_close": "No deprecated unit ID is cited from active docs/reports."
+    },
+    {
+      "issue_id": "unresolved-refs-0333",
+      "severity": "low",
+      "affected_entity": "D23",
+      "category": "deprecated_reference",
+      "evidence_path": "docs/roadmaps/outdated/reference-team-roadmap-v2.9-rx1-inventory-prepared.md",
+      "next_action": "Remove or migrate deprecated unit citation.",
+      "proof_required_to_close": "No deprecated unit ID is cited from active docs/reports."
+    },
+    {
+      "issue_id": "unresolved-refs-0334",
       "severity": "low",
       "affected_entity": "H26",
       "category": "deprecated_reference",

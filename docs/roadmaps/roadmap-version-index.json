@@ -15,13 +15,14 @@
   "roadmaps": [
     {
       "roadmap_id": "references-team-roadmap",
-      "version": "v2.61-ex0-exam-ingestion-contract",
+      "version": "v2.62-gate-ex0-pass-with-conditions",
       "title": "References Team Roadmap",
       "status": "active",
       "path": "references/reference-team-roadmap.md",
       "owner": "references_team",
       "updated_on": "2026-05-21",
       "supersedes": [
+        "docs/roadmaps/outdated/reference-team-roadmap-v2.61-ex0-exam-ingestion-contract.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.60-cp6f-113-part-a-cleared.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.59-cp6e-113-part-a-failed-clearance.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.58-cp6d-graph-heavy-evidence-upgrade.md",
@@ -82,7 +83,18 @@
         "knowledge/Exercise schema and quality/reference-team-roadmap Live version 28 April.md",
         "knowledge/Exercise schema and quality/roadmap-updated-repository-checked.md"
       ],
-      "notes": "Current operating roadmap after EX-0 defined the exam-ingestion contract and made EX-1 pilot preparation the active route after GATE-EX0 review authorization."
+      "notes": "Current operating roadmap after GATE-EX0 closed as pass_with_conditions and authorized EX-1 as a bounded non-mutating pilot under graph/source reconstruction, pilot-validator, lesson-handoff, and no-hidden-gap conditions."
+    },
+    {
+      "roadmap_id": "references-team-roadmap-v2.61",
+      "version": "v2.61-ex0-exam-ingestion-contract",
+      "title": "References Team Roadmap before GATE-EX0 closure",
+      "status": "outdated",
+      "path": "docs/roadmaps/outdated/reference-team-roadmap-v2.61-ex0-exam-ingestion-contract.md",
+      "owner": "references_team",
+      "updated_on": "2026-05-21",
+      "superseded_by": "references/reference-team-roadmap.md",
+      "notes": "Snapshot archived before GATE-EX0 closed as pass_with_conditions and authorized the bounded EX-1 pilot."
     },
     {
       "roadmap_id": "references-team-roadmap-v2.60",

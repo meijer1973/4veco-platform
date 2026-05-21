@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-05-21T10:15:49.235Z
+Generated: 2026-05-21T12:53:24.089Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 1565
+Files indexed: 1586
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -105,7 +105,7 @@ Count: 59
 
 ## build scripts
 
-Count: 282
+Count: 283
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -250,6 +250,7 @@ Count: 282
 - build-scripts/references/check-empty-needs-audit.js
 - build-scripts/references/check-empty-needs-review.js
 - build-scripts/references/check-evidence-anchors.js
+- build-scripts/references/check-exam-ingestion-contract.js
 - build-scripts/references/check-exercise-overlay-conditions.js
 - build-scripts/references/check-exercise-overlays.js
 - build-scripts/references/check-misconceptions.js
@@ -439,7 +440,7 @@ Count: 42
 
 ## validators
 
-Count: 84
+Count: 86
 
 - build-scripts/rag/validate-chunks.js
 - build-scripts/rag/validate-query-output.js
@@ -449,6 +450,7 @@ Count: 84
 - build-scripts/references/check-empty-needs-audit.js
 - build-scripts/references/check-empty-needs-review.js
 - build-scripts/references/check-evidence-anchors.js
+- build-scripts/references/check-exam-ingestion-contract.js
 - build-scripts/references/check-exercise-overlay-conditions.js
 - build-scripts/references/check-exercise-overlays.js
 - build-scripts/references/check-misconceptions.js
@@ -512,6 +514,7 @@ Count: 84
 - docs/roadmaps/outdated/reference-team-roadmap-v2.22-pv2-procedure-visual-schema-validator.md
 - reports/sprints/CP.6e-validation-log.md
 - reports/sprints/CP.6f-validation-log.md
+- reports/sprints/EX-0-validation-log.md
 - scripts/check-book-print-scope.js
 - scripts/check-book.js
 - scripts/check-course-target-exercises-v5.js
@@ -528,7 +531,7 @@ Count: 84
 
 ## references
 
-Count: 271
+Count: 276
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -542,6 +545,8 @@ Count: 271
 - references/data/audits/empty-needs-audit.json
 - references/data/document_inventory.json
 - references/data/evidence-anchors.json
+- references/data/exam-ingestion/README.md
+- references/data/exam-ingestion/review-procedure.md
 - references/data/exercises/exam-question-overlays.json
 - references/data/exercises/graph-spec-representation-plan.json
 - references/data/exercises/graph-spec-representation-plan.md
@@ -595,6 +600,8 @@ Count: 271
 - references/data/sprints/CP.6f-113-part-a-recheck.json
 - references/data/sprints/CP.6f.plan.json
 - references/data/sprints/CP.6f.result.json
+- references/data/sprints/EX-0.plan.json
+- references/data/sprints/EX-0.result.json
 - references/data/sprints/EX-NS0.plan.json
 - references/data/sprints/EX-NS0.result.json
 - references/data/sprints/GATE-CP6.plan.json
@@ -780,6 +787,7 @@ Count: 271
 - references/schemas/alignment-edge.schema.json
 - references/schemas/claim.schema.json
 - references/schemas/evidence-anchor.schema.json
+- references/schemas/exam-ingestion.schema.json
 - references/schemas/exam-question.schema.json
 - references/schemas/exercise-metadata-overlay.schema.json
 - references/schemas/feedback.schema.json
@@ -804,7 +812,7 @@ Count: 271
 
 ## reports
 
-Count: 691
+Count: 705
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1029,6 +1037,9 @@ Count: 691
 - reports/review-gates/GATE-CP6-year-1-paragraph-coverage/remediation-lanes.md
 - reports/review-gates/GATE-CP6-year-1-paragraph-coverage/review-packet.json
 - reports/review-gates/GATE-CP6-year-1-paragraph-coverage/review-packet.md
+- reports/review-gates/GATE-EX0-exam-ingestion-contract/bundle-urls.md
+- reports/review-gates/GATE-EX0-exam-ingestion-contract/review-packet.json
+- reports/review-gates/GATE-EX0-exam-ingestion-contract/review-packet.md
 - reports/review-gates/GATE-PV-G1-schema/bundle-urls.md
 - reports/review-gates/GATE-PV-G1-schema/review-packet.json
 - reports/review-gates/GATE-PV-G1-schema/review-packet.md
@@ -1278,6 +1289,17 @@ Count: 691
 - reports/sprints/CP.6f-planning-review.md
 - reports/sprints/CP.6f-result.md
 - reports/sprints/CP.6f-validation-log.md
+- reports/sprints/EX-0-baseline.md
+- reports/sprints/EX-0-diff-summary.md
+- reports/sprints/EX-0-lead-review-assignment.md
+- reports/sprints/EX-0-lead-review-corrections.md
+- reports/sprints/EX-0-lead-review-extra-recheck.md
+- reports/sprints/EX-0-lead-review-round1.md
+- reports/sprints/EX-0-lead-review-round2.md
+- reports/sprints/EX-0-plan.md
+- reports/sprints/EX-0-planning-review.md
+- reports/sprints/EX-0-result.md
+- reports/sprints/EX-0-validation-log.md
 - reports/sprints/EX-NS0-baseline.md
 - reports/sprints/EX-NS0-diff-summary.md
 - reports/sprints/EX-NS0-lead-review-assignment.md
@@ -1518,7 +1540,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 205
+Count: 206
 
 - .gitignore
 - BUILD-CHAPTER.md
@@ -1580,6 +1602,7 @@ Count: 205
 - docs/roadmaps/outdated/reference-team-roadmap-v2.58-cp6d-graph-heavy-evidence-upgrade.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.59-cp6e-113-part-a-failed-clearance.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.6-s4-cp3-dry-run.md
+- docs/roadmaps/outdated/reference-team-roadmap-v2.60-cp6f-113-part-a-cleared.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.7-cp3-closed.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.8-s4.1-conditions-calibrated.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.9-rx1-inventory-prepared.md

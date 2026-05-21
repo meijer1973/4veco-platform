@@ -1,0 +1,108 @@
+{
+  "gate_id": "GATE-EX0-exam-ingestion-contract",
+  "sprint_id": "EX-0",
+  "status": "pass_with_conditions",
+  "closed_on": "2026-05-21",
+  "closure_confirmed_by_human": true,
+  "human_interview": "reports/review-gates/GATE-EX0-exam-ingestion-contract/human-interview.md",
+  "review_packet": "reports/review-gates/GATE-EX0-exam-ingestion-contract/review-packet.md",
+  "summary": "GATE-EX0 closes as pass_with_conditions. The EX-0 exam-ingestion contract is adequate to authorize EX-1 as a bounded non-mutating pilot that may create three references/data pilot overlays, while preserving all protected mutation, closure, and student/product-use blocks.",
+  "protected_reference_data_changed": false,
+  "decision_scope": "bounded_ex1_pilot_authorization_no_mutation",
+  "explicit_decisions": [
+    {
+      "topic": "gate status",
+      "decision": "Close GATE-EX0 as pass_with_conditions."
+    },
+    {
+      "topic": "EX-1 authorization",
+      "decision": "Authorize EX-1 to create three bounded non-mutating pilot exam-ingestion overlays under references/data after gate closure."
+    },
+    {
+      "topic": "overlay family",
+      "decision": "Keep official exam prompts, source material, official correction models, point rules, decomposition, and gap classifications as governed references/data overlays."
+    },
+    {
+      "topic": "external source boundary",
+      "decision": "No references/external mutation is authorized."
+    },
+    {
+      "topic": "graph/source reconstruction",
+      "decision": "Graph/source-heavy pilot items may not be marked reviewed_ready_for_mapping unless required graph/table/source values are reconstructable or blocking gaps are carried."
+    },
+    {
+      "topic": "pilot validator",
+      "decision": "EX-1 must add a separate validator for real pilot overlay records."
+    },
+    {
+      "topic": "lesson handoff",
+      "decision": "L-EX0 should make assumed prior knowledge with MTU evidence and deliberately out of scope with reason explicit in the paragraph-plan contract."
+    },
+    {
+      "topic": "product boundaries",
+      "decision": "Diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, PV projection, PV machine promotion, and student-facing output remain blocked."
+    }
+  ],
+  "accepted_outcomes": [
+    "The EX-0 contract is adequate for a bounded EX-1 pilot.",
+    "EX-1 may create three pilot exam-ingestion overlays under references/data.",
+    "The overlay-first design is accepted for prompt, source, correction-model, decomposition, and gap-classification records.",
+    "Prompt metadata, source annexes, graph/table/figure objects, official answer-model requirements, skill decomposition, MTU classification, and lesson handoff are sufficiently separated for pilot use.",
+    "The correction-model fields are the minimum EX-1 contract.",
+    "The EX-0 MTU and operation classification taxonomy is accepted for EX-1 and EX-2.",
+    "pass_with_gaps is allowed only when named gaps remain visible downstream and block affected use."
+  ],
+  "blocked_outcomes": [
+    "No protected reference mutation is authorized.",
+    "No external-source mutation is authorized.",
+    "Do not hand-edit references/external/.",
+    "Do not hand-edit references/machine/.",
+    "No unit minting is authorized.",
+    "No target-exercise promotion is authorized.",
+    "No placeholder finalization is authorized.",
+    "No CP-6 closure is authorized.",
+    "No Year-1 closure is authorized.",
+    "Do not treat prompt-only extraction as full exam ingestion.",
+    "Do not hide source-annex or answer-model gaps downstream.",
+    "No diagnostics, adaptive routing, mastery decisions, automatic sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student-facing output is authorized."
+  ],
+  "conditions_to_reopen_or_pass": [
+    "A graph/source-heavy pilot item may not be marked reviewed_ready_for_mapping unless graph/table/source values needed by the official question are reconstructable, or a blocking graph_object_gap or source_annex_gap is carried.",
+    "EX-1 must add a separate validator for real pilot overlay records.",
+    "L-EX0 should add explicit paragraph-plan fields for assumed prior knowledge with MTU evidence and deliberately out of scope with reason.",
+    "pass_with_gaps may be used only when named gaps remain visible downstream and block affected use.",
+    "EX-1 planning must repeat that GATE-EX0 authorizes only non-mutating pilot overlays and no protected mutation or student/product use."
+  ],
+  "allowed_next_sprint": "EX-1",
+  "allowed_next_sprint_scope": [
+    "three bounded exam-ingestion pilot overlays under references/data",
+    "one calculation-heavy official VWO question",
+    "one graph/source-heavy official VWO question",
+    "one reasoning/answer-model-heavy official VWO question",
+    "separate prompt/source/correction-model provenance",
+    "explicit source-annex, graph-object, answer-model, precision, unit, and handoff gaps",
+    "pilot-overlay validator for real EX-1 records"
+  ],
+  "blocked_next_sprint_scope": [
+    "protected reference mutation",
+    "external-source mutation",
+    "machine registry mutation",
+    "unit minting",
+    "target-exercise promotion",
+    "placeholder finalization",
+    "CP-6 closure",
+    "Year-1 closure",
+    "lesson-output mutation",
+    "prompt-only ingestion as full ingestion",
+    "hidden graph/source/answer-model gaps",
+    "diagnostics",
+    "adaptive routing",
+    "mastery decisions",
+    "automatic sequencing",
+    "student-facing AI",
+    "summative use",
+    "PV projection",
+    "PV machine promotion",
+    "student-facing generated output"
+  ]
+}

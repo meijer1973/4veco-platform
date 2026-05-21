@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-21T10:15:46.016Z",
+  "generatedAt": "2026-05-21T12:53:19.648Z",
   "internalOnly": true,
   "teams": [
     {
@@ -160,13 +160,13 @@
           "generated": "2026-04-23",
           "updated": "",
           "scope": "`references/`, `build-scripts/references/`, `build-scripts/reports/`, reference dashboards, and generated reference reports under `reports/`",
-          "summary": "References Team Roadmap Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Last strategic update: 2026-05-20 Roadmap ID: references-team-roadmap Roadmap version: v2.61-ex0-exam-ingestion-contract Roadmap status: active Version index: docs/roadmaps/roadmap-version-index.json Scope: references/, build-scripts/references/, build-scripts/reports/, reference dashboards, and generated reference reports under reports/ Exam Ingestion North Star The long-term reference-platform goal is that a new official CvTE economic...",
+          "summary": "References Team Roadmap Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Last strategic update: 2026-05-21 Roadmap ID: references-team-roadmap Roadmap version: v2.62-gate-ex0-pass-with-conditions Roadmap status: active Version index: docs/roadmaps/roadmap-version-index.json Scope: references/, build-scripts/references/, build-scripts/reports/, reference dashboards, and generated reference reports under reports/ Exam Ingestion North Star The long-term reference-platform goal is that a new official CvTE econom...",
           "sprints": [
             {
               "sprint": "EX-1",
               "name": "Exam Source Annex And Answer Model Pilot",
               "completed": "no",
-              "currentState": "**ACTIVE / PILOT PREPARATION AFTER EX-0.** EX-0 defined the schema, review procedure, validator, and GATE-EX0 contract packet. Next step is to run the formal GATE-EX0 human review and then, only if authorized, ingest three VWO exam-question overlays as a bounded pilot: one calculation-heavy, one graph/source-heavy, and one reasoning/answer-model-heavy. Mark source-annex and answer-model gaps explicitly. No protected mutation, no external-source mutation, no unit minting, no CP-6 closure, no Year-1 closure, and no student/product authorization.",
+              "currentState": "**ACTIVE / PILOT AUTHORIZED WITH CONDITIONS.** GATE-EX0 closed as `pass_with_conditions` and authorizes EX-1 to create three non-mutating `references/data/` pilot exam-ingestion overlays: one calculation-heavy, one graph/source-heavy, and one reasoning/answer-model-heavy. EX-1 must add a pilot-overlay validator, keep graph/source reconstruction gaps blocking and visible, preserve prompt/source/correction-model traceability, and repeat all no-mutation/no-product boundaries. No protected mutation, external-source mutation, unit minting, target-exercise promotion, CP-6 closure, Year-1 closure, lesson-output mutation, or student/product authorization.",
               "exitGate": ""
             },
             {
@@ -240,10 +240,17 @@
               "exitGate": ""
             },
             {
+              "sprint": "GATE-EX0",
+              "name": "Exam Ingestion Contract Human Review",
+              "completed": "yes",
+              "currentState": "Closed as `pass_with_conditions`. The gate authorizes EX-1 as a bounded, non-mutating pilot to create three `references/data/` exam-ingestion overlays only. Conditions: graph/source-heavy pilot items may not be marked `reviewed_ready_for_mapping` unless required graph/table/source values are reconstructable or blocking gaps are carried; EX-1 must add a real pilot-overlay validator; L-EX0 should make assumed prior knowledge with MTU evidence and deliberately out of scope with reason explicit; `pass_with_gaps` may be used only when named gaps remain visible downstream. No protected mutation, external-source mutation, unit minting, target-exercise promotion, CP-6 closure, Year-1 closure, lesson-output mutation, diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student-facing output was authorized.",
+              "exitGate": ""
+            },
+            {
               "sprint": "EX-0",
               "name": "Exam Ingestion Contract Design",
               "completed": "yes",
-              "currentState": "Completed as a non-mutating contract-design sprint. Added `references/schemas/exam-ingestion.schema.json`, `references/data/exam-ingestion/README.md`, `references/data/exam-ingestion/review-procedure.md`, `build-scripts/references/check-exam-ingestion-contract.js`, and `reports/review-gates/GATE-EX0-exam-ingestion-contract/review-packet.*`. The contract keeps prompt metadata, source annexes, graph/table/figure objects, official correction-model steps, point rules, accepted alternatives, precision/unit requirements, skill decomposition, MTU gap classification, and lesson-build handoff separately traceable. It creates no pilot overlay records and authorizes no protected mutation, external-source mutation, unit minting, target-exercise promotion, CP-6 closure, Year-1 closure, diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student-facing output. GATE-EX0 human review is required before EX-1 pilot overlay data is treated as accepted contract evidence.",
+              "currentState": "Completed as a non-mutating contract-design sprint. Added `references/schemas/exam-ingestion.schema.json`, `references/data/exam-ingestion/README.md`, `references/data/exam-ingestion/review-procedure.md`, `build-scripts/references/check-exam-ingestion-contract.js`, and `reports/review-gates/GATE-EX0-exam-ingestion-contract/review-packet.*`. The contract keeps prompt metadata, source annexes, graph/table/figure objects, official correction-model steps, point rules, accepted alternatives, precision/unit requirements, skill decomposition, MTU gap classification, and lesson-build handoff separately traceable. It creates no pilot overlay records and authorizes no protected mutation, external-source mutation, unit minting, target-exercise promotion, CP-6 closure, Year-1 closure, diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student-facing output. GATE-EX0 has since closed as `pass_with_conditions`, authorizing only the bounded non-mutating EX-1 pilot overlays under the recorded gate conditions.",
               "exitGate": ""
             },
             {
@@ -793,7 +800,7 @@
           "sprint": "EX-1",
           "name": "Exam Source Annex And Answer Model Pilot",
           "completed": "no",
-          "currentState": "**ACTIVE / PILOT PREPARATION AFTER EX-0.** EX-0 defined the schema, review procedure, validator, and GATE-EX0 contract packet. Next step is to run the formal GATE-EX0 human review and then, only if authorized, ingest three VWO exam-question overlays as a bounded pilot: one calculation-heavy, one graph/source-heavy, and one reasoning/answer-model-heavy. Mark source-annex and answer-model gaps explicitly. No protected mutation, no external-source mutation, no unit minting, no CP-6 closure, no Year-1 closure, and no student/product authorization.",
+          "currentState": "**ACTIVE / PILOT AUTHORIZED WITH CONDITIONS.** GATE-EX0 closed as `pass_with_conditions` and authorizes EX-1 to create three non-mutating `references/data/` pilot exam-ingestion overlays: one calculation-heavy, one graph/source-heavy, and one reasoning/answer-model-heavy. EX-1 must add a pilot-overlay validator, keep graph/source reconstruction gaps blocking and visible, preserve prompt/source/correction-model traceability, and repeat all no-mutation/no-product boundaries. No protected mutation, external-source mutation, unit minting, target-exercise promotion, CP-6 closure, Year-1 closure, lesson-output mutation, or student/product authorization.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -878,10 +885,18 @@
           "roadmap": "References roadmap"
         },
         {
+          "sprint": "GATE-EX0",
+          "name": "Exam Ingestion Contract Human Review",
+          "completed": "yes",
+          "currentState": "Closed as `pass_with_conditions`. The gate authorizes EX-1 as a bounded, non-mutating pilot to create three `references/data/` exam-ingestion overlays only. Conditions: graph/source-heavy pilot items may not be marked `reviewed_ready_for_mapping` unless required graph/table/source values are reconstructable or blocking gaps are carried; EX-1 must add a real pilot-overlay validator; L-EX0 should make assumed prior knowledge with MTU evidence and deliberately out of scope with reason explicit; `pass_with_gaps` may be used only when named gaps remain visible downstream. No protected mutation, external-source mutation, unit minting, target-exercise promotion, CP-6 closure, Year-1 closure, lesson-output mutation, diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student-facing output was authorized.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
           "sprint": "EX-0",
           "name": "Exam Ingestion Contract Design",
           "completed": "yes",
-          "currentState": "Completed as a non-mutating contract-design sprint. Added `references/schemas/exam-ingestion.schema.json`, `references/data/exam-ingestion/README.md`, `references/data/exam-ingestion/review-procedure.md`, `build-scripts/references/check-exam-ingestion-contract.js`, and `reports/review-gates/GATE-EX0-exam-ingestion-contract/review-packet.*`. The contract keeps prompt metadata, source annexes, graph/table/figure objects, official correction-model steps, point rules, accepted alternatives, precision/unit requirements, skill decomposition, MTU gap classification, and lesson-build handoff separately traceable. It creates no pilot overlay records and authorizes no protected mutation, external-source mutation, unit minting, target-exercise promotion, CP-6 closure, Year-1 closure, diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student-facing output. GATE-EX0 human review is required before EX-1 pilot overlay data is treated as accepted contract evidence.",
+          "currentState": "Completed as a non-mutating contract-design sprint. Added `references/schemas/exam-ingestion.schema.json`, `references/data/exam-ingestion/README.md`, `references/data/exam-ingestion/review-procedure.md`, `build-scripts/references/check-exam-ingestion-contract.js`, and `reports/review-gates/GATE-EX0-exam-ingestion-contract/review-packet.*`. The contract keeps prompt metadata, source annexes, graph/table/figure objects, official correction-model steps, point rules, accepted alternatives, precision/unit requirements, skill decomposition, MTU gap classification, and lesson-build handoff separately traceable. It creates no pilot overlay records and authorizes no protected mutation, external-source mutation, unit minting, target-exercise promotion, CP-6 closure, Year-1 closure, diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student-facing output. GATE-EX0 has since closed as `pass_with_conditions`, authorizing only the bounded non-mutating EX-1 pilot overlays under the recorded gate conditions.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -1502,7 +1517,7 @@
           "roadmap": "References roadmap"
         }
       ],
-      "completedCount": 78,
+      "completedCount": 79,
       "openCount": 11
     },
     {
