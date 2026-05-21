@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-21T05:58:04.426Z",
+  "generatedAt": "2026-05-21T06:22:37.236Z",
   "internalOnly": true,
   "teams": [
     {
@@ -1557,6 +1557,13 @@
               "exitGate": ""
             },
             {
+              "sprint": "L-CP6E",
+              "name": "1.1.3 Part A Figure Numbering Remediation",
+              "completed": "yes",
+              "currentState": "**CLOSED PASS WITH FLAGS.** Fixed the CP.6e lesson-side blocker for `1.1.3 Grafieken en tabellen`: Part A now introduces figures in first-use order `1 -> 2 -> 3` across markdown, regenerated HTML, and regenerated PDF. The axis-convention figure is now `Figuur 2`; interpolation is now `Figuur 3`; affected paragraph, Chapter 1.1, and Book 1 publisher-print outputs were rebuilt through existing build scripts. Green gates: focused markdown/HTML/PDF figure-order check, `1.1.3` Part A publisher-print validation, Chapter 1.1 validation, Book 1 health 26/26, print scope 12/12, and v5 target-exercise count 54 with 12/12/14/16. Records: `archive/sprints/L-CP6E/L-CP6E-sprint-plan.md`, `archive/sprints/L-CP6E/L-CP6E-technical-qa-report.md`, `archive/sprints/L-CP6E/L-CP6E-closure-log.md`, `archive/sprints/L-CP6E/L-CP6E-handoff-to-references.md`. Flags: repeated worked-example scaffolding in `opgaven.md` remains accepted/non-blocking; CP.6f must recheck before references-side closure reliance.",
+              "exitGate": ""
+            },
+            {
               "sprint": "Scale Gate 1",
               "name": "Foundation Hardening Scale Gate",
               "completed": "no",
@@ -1927,6 +1934,14 @@
           "roadmap": "Lessen roadmap"
         },
         {
+          "sprint": "L-CP6E",
+          "name": "1.1.3 Part A Figure Numbering Remediation",
+          "completed": "yes",
+          "currentState": "**CLOSED PASS WITH FLAGS.** Fixed the CP.6e lesson-side blocker for `1.1.3 Grafieken en tabellen`: Part A now introduces figures in first-use order `1 -> 2 -> 3` across markdown, regenerated HTML, and regenerated PDF. The axis-convention figure is now `Figuur 2`; interpolation is now `Figuur 3`; affected paragraph, Chapter 1.1, and Book 1 publisher-print outputs were rebuilt through existing build scripts. Green gates: focused markdown/HTML/PDF figure-order check, `1.1.3` Part A publisher-print validation, Chapter 1.1 validation, Book 1 health 26/26, print scope 12/12, and v5 target-exercise count 54 with 12/12/14/16. Records: `archive/sprints/L-CP6E/L-CP6E-sprint-plan.md`, `archive/sprints/L-CP6E/L-CP6E-technical-qa-report.md`, `archive/sprints/L-CP6E/L-CP6E-closure-log.md`, `archive/sprints/L-CP6E/L-CP6E-handoff-to-references.md`. Flags: repeated worked-example scaffolding in `opgaven.md` remains accepted/non-blocking; CP.6f must recheck before references-side closure reliance.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
+        },
+        {
           "sprint": "SYNC-1",
           "name": "Roadmap Reconciliation",
           "completed": "yes",
@@ -2111,7 +2126,7 @@
           "roadmap": "Lessen roadmap"
         }
       ],
-      "completedCount": 24,
+      "completedCount": 25,
       "openCount": 15
     },
     {
