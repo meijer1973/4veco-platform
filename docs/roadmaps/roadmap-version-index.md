@@ -12,12 +12,13 @@ docs/roadmaps/roadmap-version-index.json
 
 | Roadmap | Version | Path | Notes |
 |---|---|---|---|
-| References Team Roadmap | `v2.64-gate-ex2-pass-with-conditions` | `references/reference-team-roadmap.md` | Current operating roadmap after GATE-EX2 closed as pass_with_conditions for classification and routing only, with EX-3 as the active dashboard/reporting sprint. |
+| References Team Roadmap | `v2.65-lesson-companion-pre-scale-gates` | `references/reference-team-roadmap.md` | Current operating roadmap after adding lesson companion pre-scale gate tracking: L1.7A-D and L2.0 must define readiness, exit-ticket role, game-row quality, landing-page IA, and house-style policy before broad companion scaling. |
 
 ## Outdated Archive
 
 | Roadmap | Version | Path | Superseded By |
 |---|---|---|---|
+| References Team Roadmap before lesson companion pre-scale gate tracking | `v2.64-gate-ex2-pass-with-conditions` | `docs/roadmaps/outdated/reference-team-roadmap-v2.64-gate-ex2-pass-with-conditions.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before GATE-EX2 closure | `v2.63-ex1-exam-ingestion-pilot` | `docs/roadmaps/outdated/reference-team-roadmap-v2.63-ex1-exam-ingestion-pilot.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before EX-1 exam-ingestion pilot completion | `v2.62-gate-ex0-pass-with-conditions` | `docs/roadmaps/outdated/reference-team-roadmap-v2.62-gate-ex0-pass-with-conditions.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before GATE-EX0 closure | `v2.61-ex0-exam-ingestion-contract` | `docs/roadmaps/outdated/reference-team-roadmap-v2.61-ex0-exam-ingestion-contract.md` | `references/reference-team-roadmap.md` |

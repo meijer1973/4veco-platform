@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-05-22T12:45:53.147Z
+Generated: 2026-05-22T13:01:34.772Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 1618
+Files indexed: 1630
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -535,7 +535,7 @@ Count: 88
 
 ## references
 
-Count: 282
+Count: 283
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -612,6 +612,7 @@ Count: 282
 - references/data/sprints/EX-1.plan.json
 - references/data/sprints/EX-1.result.json
 - references/data/sprints/EX-2.plan.json
+- references/data/sprints/EX-2.result.json
 - references/data/sprints/EX-NS0.plan.json
 - references/data/sprints/EX-NS0.result.json
 - references/data/sprints/GATE-CP6.plan.json
@@ -822,7 +823,7 @@ Count: 282
 
 ## reports
 
-Count: 727
+Count: 737
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1056,6 +1057,10 @@ Count: 727
 - reports/review-gates/GATE-EX0-exam-ingestion-contract/review-packet.json
 - reports/review-gates/GATE-EX0-exam-ingestion-contract/review-packet.md
 - reports/review-gates/GATE-EX2-exam-to-mtu-mapping/bundle-urls.md
+- reports/review-gates/GATE-EX2-exam-to-mtu-mapping/gate-closure.json
+- reports/review-gates/GATE-EX2-exam-to-mtu-mapping/gate-closure.md
+- reports/review-gates/GATE-EX2-exam-to-mtu-mapping/human-interview.json
+- reports/review-gates/GATE-EX2-exam-to-mtu-mapping/human-interview.md
 - reports/review-gates/GATE-EX2-exam-to-mtu-mapping/mapping-candidates.json
 - reports/review-gates/GATE-EX2-exam-to-mtu-mapping/mapping-candidates.md
 - reports/review-gates/GATE-EX2-exam-to-mtu-mapping/review-packet.json
@@ -1330,8 +1335,14 @@ Count: 727
 - reports/sprints/EX-1-planning-review.md
 - reports/sprints/EX-1-result.md
 - reports/sprints/EX-2-baseline.md
+- reports/sprints/EX-2-diff-summary.md
+- reports/sprints/EX-2-lead-review-assignment.md
+- reports/sprints/EX-2-lead-review-corrections.md
+- reports/sprints/EX-2-lead-review-round1.md
+- reports/sprints/EX-2-lead-review-round2.md
 - reports/sprints/EX-2-plan.md
 - reports/sprints/EX-2-planning-review.md
+- reports/sprints/EX-2-result.md
 - reports/sprints/EX-NS0-baseline.md
 - reports/sprints/EX-NS0-diff-summary.md
 - reports/sprints/EX-NS0-lead-review-assignment.md
@@ -1572,7 +1583,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 208
+Count: 209
 
 - .gitignore
 - BUILD-CHAPTER.md
@@ -1637,6 +1648,7 @@ Count: 208
 - docs/roadmaps/outdated/reference-team-roadmap-v2.60-cp6f-113-part-a-cleared.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.61-ex0-exam-ingestion-contract.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.62-gate-ex0-pass-with-conditions.md
+- docs/roadmaps/outdated/reference-team-roadmap-v2.63-ex1-exam-ingestion-pilot.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.7-cp3-closed.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.8-s4.1-conditions-calibrated.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.9-rx1-inventory-prepared.md

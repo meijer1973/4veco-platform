@@ -15,13 +15,14 @@
   "roadmaps": [
     {
       "roadmap_id": "references-team-roadmap",
-      "version": "v2.64-gate-ex2-pass-with-conditions",
+      "version": "v2.65-lesson-companion-pre-scale-gates",
       "title": "References Team Roadmap",
       "status": "active",
       "path": "references/reference-team-roadmap.md",
       "owner": "references_team",
       "updated_on": "2026-05-22",
       "supersedes": [
+        "docs/roadmaps/outdated/reference-team-roadmap-v2.64-gate-ex2-pass-with-conditions.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.63-ex1-exam-ingestion-pilot.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.62-gate-ex0-pass-with-conditions.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.61-ex0-exam-ingestion-contract.md",
@@ -85,7 +86,18 @@
         "knowledge/Exercise schema and quality/reference-team-roadmap Live version 28 April.md",
         "knowledge/Exercise schema and quality/roadmap-updated-repository-checked.md"
       ],
-      "notes": "Current operating roadmap after GATE-EX2 closed as pass_with_conditions for classification and routing only, with EX-3 as the active dashboard/reporting sprint."
+      "notes": "Current operating roadmap after adding lesson companion pre-scale gate tracking: L1.7A-D and L2.0 must define readiness, exit-ticket role, game-row quality, landing-page IA, and house-style policy before broad companion scaling."
+    },
+    {
+      "roadmap_id": "references-team-roadmap-v2.64",
+      "version": "v2.64-gate-ex2-pass-with-conditions",
+      "title": "References Team Roadmap before lesson companion pre-scale gate tracking",
+      "status": "outdated",
+      "path": "docs/roadmaps/outdated/reference-team-roadmap-v2.64-gate-ex2-pass-with-conditions.md",
+      "owner": "references_team",
+      "updated_on": "2026-05-22",
+      "superseded_by": "references/reference-team-roadmap.md",
+      "notes": "Snapshot archived before the reference roadmap added LESSON-SCALE-1 tracking for lesson L1.7A-D, L2.0, exit-ticket scope, game-row quality, and landing-page information architecture before broad companion scaling."
     },
     {
       "roadmap_id": "references-team-roadmap-v2.63",
