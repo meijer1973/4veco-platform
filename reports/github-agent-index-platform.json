@@ -2,8 +2,8 @@
   "repo": "4veco-platform",
   "root": "C:\\Projects\\4veco\\4veco-platform",
   "available": true,
-  "generated_at": "2026-05-22T13:01:34.772Z",
-  "file_count": 1630,
+  "generated_at": "2026-05-22T13:25:24.311Z",
+  "file_count": 1631,
   "inventory_scope": "git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees",
   "skipped_directories": [
     ".cache",
@@ -1617,6 +1617,7 @@
       "docs/roadmaps/outdated/reference-team-roadmap-v2.61-ex0-exam-ingestion-contract.md",
       "docs/roadmaps/outdated/reference-team-roadmap-v2.62-gate-ex0-pass-with-conditions.md",
       "docs/roadmaps/outdated/reference-team-roadmap-v2.63-ex1-exam-ingestion-pilot.md",
+      "docs/roadmaps/outdated/reference-team-roadmap-v2.64-gate-ex2-pass-with-conditions.md",
       "docs/roadmaps/outdated/reference-team-roadmap-v2.7-cp3-closed.md",
       "docs/roadmaps/outdated/reference-team-roadmap-v2.8-s4.1-conditions-calibrated.md",
       "docs/roadmaps/outdated/reference-team-roadmap-v2.9-rx1-inventory-prepared.md",

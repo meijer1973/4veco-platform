@@ -15,13 +15,14 @@
   "roadmaps": [
     {
       "roadmap_id": "references-team-roadmap",
-      "version": "v2.65-lesson-companion-pre-scale-gates",
+      "version": "v2.66-shared-skill-map-engine-tracking",
       "title": "References Team Roadmap",
       "status": "active",
       "path": "references/reference-team-roadmap.md",
       "owner": "references_team",
       "updated_on": "2026-05-22",
       "supersedes": [
+        "docs/roadmaps/outdated/reference-team-roadmap-v2.65-lesson-companion-pre-scale-gates.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.64-gate-ex2-pass-with-conditions.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.63-ex1-exam-ingestion-pilot.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.62-gate-ex0-pass-with-conditions.md",
@@ -86,7 +87,18 @@
         "knowledge/Exercise schema and quality/reference-team-roadmap Live version 28 April.md",
         "knowledge/Exercise schema and quality/roadmap-updated-repository-checked.md"
       ],
-      "notes": "Current operating roadmap after adding lesson companion pre-scale gate tracking: L1.7A-D and L2.0 must define readiness, exit-ticket role, game-row quality, landing-page IA, and house-style policy before broad companion scaling."
+      "notes": "Current operating roadmap after adding shared skill-map engine tracking: L1.7A, L1.7B, L1.7C-0, L1.7C, L1.7D, and L2.0 must define readiness, exit-ticket role, shared skill-map architecture, game-row quality, landing-page IA, and house-style policy before broad companion scaling."
+    },
+    {
+      "roadmap_id": "references-team-roadmap-v2.65",
+      "version": "v2.65-lesson-companion-pre-scale-gates",
+      "title": "References Team Roadmap before shared skill-map engine tracking",
+      "status": "outdated",
+      "path": "docs/roadmaps/outdated/reference-team-roadmap-v2.65-lesson-companion-pre-scale-gates.md",
+      "owner": "references_team",
+      "updated_on": "2026-05-22",
+      "superseded_by": "references/reference-team-roadmap.md",
+      "notes": "Snapshot archived before the reference roadmap added GAME-UX-1 and lesson L1.7C-0 tracking for the shared skill-map engine architecture."
     },
     {
       "roadmap_id": "references-team-roadmap-v2.64",
