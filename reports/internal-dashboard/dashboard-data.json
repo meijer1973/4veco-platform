@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-21T14:08:39.652Z",
+  "generatedAt": "2026-05-22T12:45:49.706Z",
   "internalOnly": true,
   "teams": [
     {
@@ -160,20 +160,13 @@
           "generated": "2026-04-23",
           "updated": "",
           "scope": "`references/`, `build-scripts/references/`, `build-scripts/reports/`, reference dashboards, and generated reference reports under `reports/`",
-          "summary": "References Team Roadmap Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Last strategic update: 2026-05-21 Roadmap ID: references-team-roadmap Roadmap version: v2.63-ex1-exam-ingestion-pilot Roadmap status: active Version index: docs/roadmaps/roadmap-version-index.json Scope: references/, build-scripts/references/, build-scripts/reports/, reference dashboards, and generated reference reports under reports/ Exam Ingestion North Star The long-term reference-platform goal is that a new official CvTE economics e...",
+          "summary": "References Team Roadmap Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Last strategic update: 2026-05-22 Roadmap ID: references-team-roadmap Roadmap version: v2.64-gate-ex2-pass-with-conditions Roadmap status: active Version index: docs/roadmaps/roadmap-version-index.json Scope: references/, build-scripts/references/, build-scripts/reports/, reference dashboards, and generated reference reports under reports/ Exam Ingestion North Star The long-term reference-platform goal is that a new official CvTE econom...",
           "sprints": [
-            {
-              "sprint": "EX-2",
-              "name": "Exam-to-MTU Mapping Review Gate",
-              "completed": "no",
-              "currentState": "**ACTIVE / HUMAN REVIEW GATE NEXT.** EX-1 created three bounded non-mutating pilot exam-ingestion overlays and a pilot validator. EX-2 must review the pilot requirements and classify them as existing MTU, weak MTU, missing MTU, merge/split candidate, operation-registry need, PV/graph need, answer-skill need, source-annex gap, answer-model extraction gap, or defer. No mutation before human review; no CP-6/Year-1 closure or student/product use.",
-              "exitGate": ""
-            },
             {
               "sprint": "EX-3",
               "name": "Exam Coverage Dashboard",
               "completed": "no",
-              "currentState": "FUTURE REPORTING SPRINT after EX-2. Add JSON/Markdown coverage views for exam-ingestion state: prompt/source/correction-model coverage, graph/table/figure coverage, MTU coverage, answer-operation coverage, target-exercise candidates, blockers, and proof required to close.",
+              "currentState": "**ACTIVE / REPORTING SPRINT NEXT.** GATE-EX2 closed as `pass_with_conditions` for classification and routing only. EX-3 must add JSON/Markdown coverage views for exam-ingestion state and record the reviewed EX-2 classifications: q3 `A61` support with `q3-calc-1` still `operation_registry_need`, q3/q15 `answer_skill_need`, q19 `A42` graph-shift candidate with `A45` weak support, and q19 source/graph gaps still blocking. No mutation, lesson output, CP-6/Year-1 closure, or student/product use.",
               "exitGate": ""
             },
             {
@@ -230,6 +223,13 @@
               "name": "Re-Evaluate R10-R13 Product Surfaces",
               "completed": "no",
               "currentState": "Blocked. Diagnostics, adaptive routing, student-facing AI, teacher cockpit deployment, automatic sequencing, mastery, and summative uses remain out of scope until data-quality gates justify them.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "EX-2",
+              "name": "Exam-to-MTU Mapping Review Gate",
+              "completed": "yes",
+              "currentState": "Closed as `pass_with_conditions` for classification and routing only. Accepted reviewed classifications for the EX-1 pilot items: q3 `q3-calc-1` remains `operation_registry_need` with `A61` support and stale/incorrect `A15`; q3 and q15 answer-model wording remain `answer_skill_need`; q19 remains blocked by `q19-source-annex-gap` and `q19-graph-object-gap`; q19 graph routing adds `A42` and `D10` while downgrading `A45` to weak support; q15 content maps to `D27`, `F03`, and `F09` for content coverage only. EX-2 authorizes EX-3 dashboard/reporting work only. No protected mutation, external-source mutation, unit minting, operation-registry mutation, answer-skill mutation, target-exercise promotion, lesson-output mutation, CP-6 closure, Year-1 closure, diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student-facing output was authorized.",
               "exitGate": ""
             },
             {
@@ -797,18 +797,10 @@
       ],
       "sprints": [
         {
-          "sprint": "EX-2",
-          "name": "Exam-to-MTU Mapping Review Gate",
-          "completed": "no",
-          "currentState": "**ACTIVE / HUMAN REVIEW GATE NEXT.** EX-1 created three bounded non-mutating pilot exam-ingestion overlays and a pilot validator. EX-2 must review the pilot requirements and classify them as existing MTU, weak MTU, missing MTU, merge/split candidate, operation-registry need, PV/graph need, answer-skill need, source-annex gap, answer-model extraction gap, or defer. No mutation before human review; no CP-6/Year-1 closure or student/product use.",
-          "exitGate": "",
-          "roadmap": "References roadmap"
-        },
-        {
           "sprint": "EX-3",
           "name": "Exam Coverage Dashboard",
           "completed": "no",
-          "currentState": "FUTURE REPORTING SPRINT after EX-2. Add JSON/Markdown coverage views for exam-ingestion state: prompt/source/correction-model coverage, graph/table/figure coverage, MTU coverage, answer-operation coverage, target-exercise candidates, blockers, and proof required to close.",
+          "currentState": "**ACTIVE / REPORTING SPRINT NEXT.** GATE-EX2 closed as `pass_with_conditions` for classification and routing only. EX-3 must add JSON/Markdown coverage views for exam-ingestion state and record the reviewed EX-2 classifications: q3 `A61` support with `q3-calc-1` still `operation_registry_need`, q3/q15 `answer_skill_need`, q19 `A42` graph-shift candidate with `A45` weak support, and q19 source/graph gaps still blocking. No mutation, lesson output, CP-6/Year-1 closure, or student/product use.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -873,6 +865,14 @@
           "name": "Re-Evaluate R10-R13 Product Surfaces",
           "completed": "no",
           "currentState": "Blocked. Diagnostics, adaptive routing, student-facing AI, teacher cockpit deployment, automatic sequencing, mastery, and summative uses remain out of scope until data-quality gates justify them.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "EX-2",
+          "name": "Exam-to-MTU Mapping Review Gate",
+          "completed": "yes",
+          "currentState": "Closed as `pass_with_conditions` for classification and routing only. Accepted reviewed classifications for the EX-1 pilot items: q3 `q3-calc-1` remains `operation_registry_need` with `A61` support and stale/incorrect `A15`; q3 and q15 answer-model wording remain `answer_skill_need`; q19 remains blocked by `q19-source-annex-gap` and `q19-graph-object-gap`; q19 graph routing adds `A42` and `D10` while downgrading `A45` to weak support; q15 content maps to `D27`, `F03`, and `F09` for content coverage only. EX-2 authorizes EX-3 dashboard/reporting work only. No protected mutation, external-source mutation, unit minting, operation-registry mutation, answer-skill mutation, target-exercise promotion, lesson-output mutation, CP-6 closure, Year-1 closure, diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student-facing output was authorized.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -1517,8 +1517,8 @@
           "roadmap": "References roadmap"
         }
       ],
-      "completedCount": 80,
-      "openCount": 10
+      "completedCount": 81,
+      "openCount": 9
     },
     {
       "id": "lessen",

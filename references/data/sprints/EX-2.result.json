@@ -1,0 +1,186 @@
+{
+  "sprint_id": "EX-2",
+  "name": "Exam-to-MTU Mapping Review Gate",
+  "status": "completed",
+  "completed_on": "2026-05-22",
+  "plan": "reports/sprints/EX-2-plan.md",
+  "baseline": "reports/sprints/EX-2-baseline.md",
+  "result": "reports/sprints/EX-2-result.md",
+  "diff_summary": "reports/sprints/EX-2-diff-summary.md",
+  "authority_level": "human_review_gate_classification_and_routing_only",
+  "human_gate_closure": "reports/review-gates/GATE-EX2-exam-to-mtu-mapping/gate-closure.json",
+  "protected_reference_data_changed": false,
+  "external_source_mutation_authorized": false,
+  "lesson_output_changed": false,
+  "target_exercise_promotions": false,
+  "placeholder_finalization": false,
+  "unit_minting": false,
+  "machine_registry_mutation": false,
+  "operation_registry_mutation": false,
+  "answer_skill_mutation": false,
+  "cp6_closed": false,
+  "year1_closed": false,
+  "lead_review_required": true,
+  "lead_review": {
+    "assignment": "reports/sprints/EX-2-lead-review-assignment.md",
+    "round1": "reports/sprints/EX-2-lead-review-round1.md",
+    "corrections": "reports/sprints/EX-2-lead-review-corrections.md",
+    "round2": "reports/sprints/EX-2-lead-review-round2.md",
+    "round1_verdict": "PASS WITH FLAGS",
+    "correction_summary": "No content corrections required; round-1 procedural flags addressed by recording the review, setting pending_round2_review, and updating roadmap closure state before recheck.",
+    "round2_verdict": "PASS WITH FLAGS",
+    "final_verdict": "PASS WITH FLAGS",
+    "notes": "Round 1 and round 2 both returned PASS WITH FLAGS. Flags carried forward: keep q19 source/graph gaps blocking, keep q3/q15 answer-skill gaps visible, keep EX-3 reporting-only, and require separate governed authorization before EX-4 mutation planning mutates anything."
+  },
+  "primary_outputs": [
+    "reports/review-gates/GATE-EX2-exam-to-mtu-mapping/human-interview.md",
+    "reports/review-gates/GATE-EX2-exam-to-mtu-mapping/human-interview.json",
+    "reports/review-gates/GATE-EX2-exam-to-mtu-mapping/gate-closure.md",
+    "reports/review-gates/GATE-EX2-exam-to-mtu-mapping/gate-closure.json",
+    "build-scripts/references/check-exam-to-mtu-mapping-gate.js"
+  ],
+  "summary": {
+    "gate_status": "pass_with_conditions",
+    "decision_scope": "classification_and_routing_only",
+    "q3_calc_classification": "operation_registry_need",
+    "q3_support_unit": "A61",
+    "q3_stale_unit": "A15",
+    "q19_blocking_gaps": [
+      "q19-source-annex-gap",
+      "q19-graph-object-gap"
+    ],
+    "q19_graph_candidates": ["A42", "D10"],
+    "q15_content_units": ["D27", "F03", "F09"],
+    "answer_skill_needs": ["q3-answer-1", "q15-answer-1"],
+    "next_operational_action": "start EX-3 dashboard/reporting sprint after commit and push"
+  },
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/EX-2-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js EX-2",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-result.js reports/sprints/EX-2-result.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js EX-2 --complete",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-exam-ingestion-contract.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-exam-ingestion-pilots.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-exam-to-mtu-mapping-gate.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/validate-core-schemas.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/review-gates/validate-gate.js reports/review-gates/GATE-EX2-exam-to-mtu-mapping/gate-closure.json",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/validate-report-json.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/generate-all.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/validate-report-json.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/generate-reference-health.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/check-reference-health.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run dashboard:internal",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run agent:index",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-gate-bundle-urls.js GATE-EX2-exam-to-mtu-mapping",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js --check",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/build-reference-inventory.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/build-source-document-registry.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-source-document-registry.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-source-manifest.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-document-inventory.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-roadmap-version-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd test",
+      "status": "passed"
+    }
+  ],
+  "blocked_outcomes": [
+    "protected reference mutation",
+    "external-source mutation",
+    "target-exercise promotion",
+    "placeholder finalization",
+    "unit minting",
+    "machine registry mutation",
+    "operation-registry mutation",
+    "answer-skill mutation",
+    "lesson-output mutation",
+    "CP-6 closure",
+    "Year-1 closure",
+    "student diagnostics",
+    "adaptive routing",
+    "mastery decisions",
+    "automatic sequencing",
+    "student-facing AI",
+    "summative use",
+    "PV projection",
+    "PV machine promotion",
+    "student-facing generated output"
+  ],
+  "next_operational_action": "Start EX-3 as a bounded reporting sprint after commit and push."
+}

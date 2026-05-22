@@ -4,8 +4,9 @@
  *
  * HOW TO ADAPT:
  * - Keep this checker read-only.
- * - It validates review-packet readiness and no-mutation boundaries, not a
- *   future gate closure decision.
+ * - It validates review-packet readiness and no-mutation boundaries.
+ * - If gate closure artifacts exist, it also validates that EX-2 closed only
+ *   as a routing/classification gate.
  */
 
 const fs = require('fs');
@@ -18,6 +19,10 @@ const REVIEW_PACKET_MD = `${GATE_DIR}/review-packet.md`;
 const REVIEW_PACKET_JSON = `${GATE_DIR}/review-packet.json`;
 const MAPPING_MD = `${GATE_DIR}/mapping-candidates.md`;
 const MAPPING_JSON = `${GATE_DIR}/mapping-candidates.json`;
+const HUMAN_MD = `${GATE_DIR}/human-interview.md`;
+const HUMAN_JSON = `${GATE_DIR}/human-interview.json`;
+const CLOSURE_MD = `${GATE_DIR}/gate-closure.md`;
+const CLOSURE_JSON = `${GATE_DIR}/gate-closure.json`;
 const EX1_ITEMS = 'references/data/exam-ingestion/exam-item-overlays.json';
 const EX1_RESULT = 'references/data/sprints/EX-1.result.json';
 
@@ -172,10 +177,97 @@ function checkReviewPacket() {
   }
 }
 
+function checkGateClosureIfPresent() {
+  const closurePath = file(CLOSURE_JSON);
+  const humanPath = file(HUMAN_JSON);
+  if (!fs.existsSync(closurePath) && !fs.existsSync(humanPath)) return;
+  assert(fs.existsSync(closurePath), `missing ${CLOSURE_JSON}`);
+  assert(fs.existsSync(file(CLOSURE_MD)), `missing ${CLOSURE_MD}`);
+  assert(fs.existsSync(humanPath), `missing ${HUMAN_JSON}`);
+  assert(fs.existsSync(file(HUMAN_MD)), `missing ${HUMAN_MD}`);
+
+  const closure = readJson(CLOSURE_JSON);
+  const human = readJson(HUMAN_JSON);
+  const closureMarkdown = read(CLOSURE_MD);
+  const humanMarkdown = read(HUMAN_MD);
+
+  assert(closure.gate_id === 'GATE-EX2-exam-to-mtu-mapping', 'closure gate_id');
+  assert(closure.sprint_id === 'EX-2', 'closure sprint_id');
+  assert(closure.status === 'pass_with_conditions', 'closure status');
+  assert(closure.closure_confirmed_by_human === true, 'closure confirmation');
+  assert(closure.protected_reference_data_changed === false, 'closure protected_reference_data_changed');
+  assert(closure.decision_scope === 'classification_and_routing_only', 'closure decision_scope');
+  assert(closure.allowed_next_sprint === 'EX-3', 'closure allowed_next_sprint');
+  assertArray(closure.reviewed_classifications, 'closure reviewed_classifications');
+  assert(closure.reviewed_classifications.length >= 8, 'closure reviewed_classifications length');
+
+  const byRequirement = new Map(closure.reviewed_classifications.map((record) => [record.requirement_id, record]));
+  const q3Calc = byRequirement.get('q3-calc-1');
+  assert(q3Calc, 'closure q3-calc-1 classification missing');
+  assert(q3Calc.classification === 'operation_registry_need', 'q3-calc-1 classification');
+  assert((q3Calc.supporting_unit_ids || []).includes('A61'), 'q3-calc-1 must include A61 support');
+  assert((q3Calc.stale_or_weak_unit_ids || []).includes('A15'), 'q3-calc-1 must mark A15 stale/weak');
+
+  const q19Graph = byRequirement.get('q19-graph-op-1');
+  assert(q19Graph, 'closure q19-graph-op-1 classification missing');
+  assert((q19Graph.candidate_unit_ids || []).includes('A42'), 'q19-graph-op-1 must include A42');
+  assert((q19Graph.candidate_unit_ids || []).includes('D10'), 'q19-graph-op-1 must include D10');
+  assert((q19Graph.weak_or_prerequisite_unit_ids || []).includes('A45'), 'q19-graph-op-1 must downgrade A45');
+  assert((q19Graph.blocking_gaps || []).includes('q19-source-annex-gap'), 'q19 graph source gap must remain blocking');
+  assert((q19Graph.blocking_gaps || []).includes('q19-graph-object-gap'), 'q19 graph object gap must remain blocking');
+
+  for (const requirementId of ['q3-answer-1', 'q15-answer-1']) {
+    const record = byRequirement.get(requirementId);
+    assert(record, `closure ${requirementId} missing`);
+    assert(record.classification === 'answer_skill_need', `${requirementId} must remain answer_skill_need`);
+  }
+
+  const q15 = byRequirement.get('q15-content');
+  assert(q15, 'closure q15-content missing');
+  assert(q15.classification === 'existing_mtu', 'q15 content classification');
+  assertSameSet(q15.accepted_unit_ids || [], ['D27', 'F03', 'F09'], 'q15 accepted units');
+  assert(q15.coverage_scope === 'content_only', 'q15 coverage_scope');
+
+  for (const outcome of BLOCKED_OUTCOMES) {
+    assert(closure.blocked_outcomes.join('\n').includes(outcome), `closure blocked_outcomes missing ${outcome}`);
+  }
+  assert(closure.blocked_outcomes.join('\n').includes('operation-registry mutation'), 'closure must block operation-registry mutation');
+  assert(closure.blocked_outcomes.join('\n').includes('answer-skill mutation'), 'closure must block answer-skill mutation');
+  assert(closure.blocked_outcomes.join('\n').includes('student-facing output'), 'closure must block student-facing output');
+
+  assert(human.gate_id === closure.gate_id, 'human gate_id');
+  assert(human.status === 'pass_with_conditions_routing_only', 'human status');
+  assert(human.closure_confirmed_by_human === true, 'human closure confirmation');
+  assertArray(human.answers, 'human answers');
+  assert(human.answers.length === 8, 'human must record 8 answers');
+
+  for (const needle of [
+    'PASS WITH CONDITIONS - routing only',
+    'A61',
+    'A42',
+    'q19-source-annex-gap',
+    'answer_skill_need',
+    'No protected mutation',
+  ]) {
+    assertIncludes(humanMarkdown, needle, 'human interview markdown');
+  }
+  for (const needle of [
+    'Final Classification Table',
+    'A61',
+    'A42',
+    'q19-source-annex-gap',
+    'EX-3 Exam Coverage Dashboard',
+    'No mutation',
+  ]) {
+    assertIncludes(closureMarkdown, needle, 'gate closure markdown');
+  }
+}
+
 function main() {
   checkEx1Inputs();
   checkMappingCandidates();
   checkReviewPacket();
+  checkGateClosureIfPresent();
   console.log('OK exam-to-MTU mapping gate: EX-2 review packet and candidates validated.');
 }
 

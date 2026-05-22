@@ -1,0 +1,164 @@
+{
+  "gate_id": "GATE-EX2-exam-to-mtu-mapping",
+  "sprint_id": "EX-2",
+  "status": "pass_with_conditions",
+  "closed_on": "2026-05-22",
+  "closure_confirmed_by_human": true,
+  "human_interview": "reports/review-gates/GATE-EX2-exam-to-mtu-mapping/human-interview.md",
+  "review_packet": "reports/review-gates/GATE-EX2-exam-to-mtu-mapping/review-packet.md",
+  "summary": "GATE-EX2 closes as pass_with_conditions for classification and routing only. It accepts reviewed EX-1 pilot mapping classifications and authorizes EX-3 dashboard/reporting work, while preserving all protected mutation, closure, lesson-output, and student/product-use blocks.",
+  "protected_reference_data_changed": false,
+  "decision_scope": "classification_and_routing_only",
+  "explicit_decisions": [
+    {
+      "topic": "gate status",
+      "decision": "Close GATE-EX2 as pass_with_conditions - routing only."
+    },
+    {
+      "topic": "q3 calculation",
+      "decision": "Classify q3-calc-1 as operation_registry_need; treat A15 as stale/incorrect and add A61 as source-reading support."
+    },
+    {
+      "topic": "q3 answer wording",
+      "decision": "Classify q3-answer-1 as answer_skill_need."
+    },
+    {
+      "topic": "q19 source and graph gaps",
+      "decision": "Keep q19-source-annex-gap and q19-graph-object-gap blocking full reconstruction, accepted MTU mapping, lesson handoff, and closure."
+    },
+    {
+      "topic": "q19 graph operation",
+      "decision": "Classify q19-graph-op-1 provisionally as existing_mtu_but_procedure_too_weak plus pv_graph_need; add A42 and D10 as stronger candidates; downgrade A45 to weak support."
+    },
+    {
+      "topic": "q19 reasoning operation",
+      "decision": "Classify q19-reason-1 provisionally as operation_registry_need with D10/D13 as partial supports."
+    },
+    {
+      "topic": "q15 content",
+      "decision": "Accept D27, F03, and F09 as existing MTUs for content coverage only."
+    },
+    {
+      "topic": "q15 answer model",
+      "decision": "Classify q15-answer-1 as answer_skill_need."
+    },
+    {
+      "topic": "lesson handoff",
+      "decision": "Allow q3 and q15 only for later planning/dry-run lesson coordination with visible gaps; keep q19 blocked."
+    },
+    {
+      "topic": "mutation authority",
+      "decision": "No protected mutation, external-source mutation, unit minting, operation-registry mutation, answer-skill mutation, target-exercise promotion, lesson-output mutation, CP-6 closure, Year-1 closure, or student/product use is authorized."
+    }
+  ],
+  "accepted_outcomes": [
+    "EX-2 may close as a classification and routing gate.",
+    "Reviewed classifications may be used as EX-3 dashboard/reporting inputs.",
+    "q3 may proceed to later lesson-design coordination with visible operation_registry_need and answer_skill_need gaps.",
+    "q15 may proceed to later lesson-design coordination with visible answer_skill_need gap.",
+    "q19 may retain provisional routing notes only while blocking source/graph gaps remain visible."
+  ],
+  "blocked_outcomes": [
+    "No protected reference mutation is authorized.",
+    "No external-source mutation is authorized.",
+    "Do not hand-edit references/external/.",
+    "Do not hand-edit references/machine/.",
+    "No unit minting is authorized.",
+    "No operation-registry mutation is authorized.",
+    "No answer-skill mutation is authorized.",
+    "No target-exercise promotion is authorized.",
+    "No placeholder finalization is authorized.",
+    "No lesson-output mutation is authorized.",
+    "No CP-6 closure is authorized.",
+    "No Year-1 closure is authorized.",
+    "No student diagnostics, adaptive routing, mastery decisions, automatic sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student-facing output is authorized."
+  ],
+  "conditions_to_reopen_or_pass": [
+    "q3 source-reading support must be corrected from stale A15 to A61; q3-calc-1 remains operation_registry_need.",
+    "q3 threshold-conclusion wording remains answer_skill_need.",
+    "q19 graph-operation candidates must include A42 and D10; A45 is weak prerequisite/support only.",
+    "q19 remains blocked by q19-source-annex-gap and q19-graph-object-gap.",
+    "q15 content maps to D27, F03, and F09 only for content coverage; the correction-model explanation remains answer_skill_need.",
+    "q3 and q15 may proceed only to planning/dry-run lesson coordination with visible gaps.",
+    "EX-3 is reporting/dashboard work only unless a later explicit gate changes scope.",
+    "EX-4 may be planned later as governed mutation planning, but EX-2 itself does not authorize mutation."
+  ],
+  "reviewed_classifications": [
+    {
+      "requirement_id": "q3-calc-1",
+      "classification": "operation_registry_need",
+      "supporting_unit_ids": ["A61"],
+      "stale_or_weak_unit_ids": ["A15"],
+      "mutation_authorized": false
+    },
+    {
+      "requirement_id": "q3-answer-1",
+      "classification": "answer_skill_need",
+      "mutation_authorized": false
+    },
+    {
+      "requirement_id": "q19-source-annex-gap",
+      "classification": "source_annex_gap",
+      "blocking": true,
+      "mutation_authorized": false
+    },
+    {
+      "requirement_id": "q19-graph-object-gap",
+      "classification": "graph_object_gap",
+      "blocking": true,
+      "mutation_authorized": false
+    },
+    {
+      "requirement_id": "q19-graph-op-1",
+      "classification": "existing_mtu_but_procedure_too_weak_plus_pv_graph_need",
+      "candidate_unit_ids": ["A42", "D10"],
+      "weak_or_prerequisite_unit_ids": ["A45"],
+      "blocking_gaps": ["q19-source-annex-gap", "q19-graph-object-gap"],
+      "mutation_authorized": false
+    },
+    {
+      "requirement_id": "q19-reason-1",
+      "classification": "operation_registry_need",
+      "partial_support_unit_ids": ["D10", "D13"],
+      "blocking_gaps": ["q19-source-annex-gap", "q19-graph-object-gap"],
+      "mutation_authorized": false
+    },
+    {
+      "requirement_id": "q15-content",
+      "classification": "existing_mtu",
+      "accepted_unit_ids": ["D27", "F03", "F09"],
+      "coverage_scope": "content_only",
+      "mutation_authorized": false
+    },
+    {
+      "requirement_id": "q15-answer-1",
+      "classification": "answer_skill_need",
+      "mutation_authorized": false
+    }
+  ],
+  "allowed_next_sprint": "EX-3",
+  "allowed_next_sprint_scope": [
+    "exam-ingestion coverage dashboard/reporting",
+    "record reviewed EX-2 classifications",
+    "record q3 A61 correction and A15 stale/incorrect note",
+    "record q19 A42 correction and A45 weak-support note",
+    "keep q19 source/graph gaps visible and blocking",
+    "keep q3 and q15 answer-skill needs visible"
+  ],
+  "blocked_next_sprint_scope": [
+    "protected reference mutation",
+    "external-source mutation",
+    "machine registry mutation",
+    "unit minting",
+    "operation-registry mutation",
+    "answer-skill mutation",
+    "target-exercise promotion",
+    "placeholder finalization",
+    "CP-6 closure",
+    "Year-1 closure",
+    "lesson-output mutation",
+    "hidden q19 graph/source gaps",
+    "hidden q3 or q15 answer-skill gaps",
+    "student/product use"
+  ]
+}

@@ -1,6 +1,6 @@
 # Roadmap Version Index
 
-Updated: 2026-05-21
+Updated: 2026-05-22
 
 The JSON file is canonical for tooling:
 
@@ -12,12 +12,13 @@ docs/roadmaps/roadmap-version-index.json
 
 | Roadmap | Version | Path | Notes |
 |---|---|---|---|
-| References Team Roadmap | `v2.63-ex1-exam-ingestion-pilot` | `references/reference-team-roadmap.md` | Current operating roadmap after EX-1 created the three bounded non-mutating exam-ingestion pilot overlay families and routed EX-2 as the active human-reviewed mapping gate. |
+| References Team Roadmap | `v2.64-gate-ex2-pass-with-conditions` | `references/reference-team-roadmap.md` | Current operating roadmap after GATE-EX2 closed as pass_with_conditions for classification and routing only, with EX-3 as the active dashboard/reporting sprint. |
 
 ## Outdated Archive
 
 | Roadmap | Version | Path | Superseded By |
 |---|---|---|---|
+| References Team Roadmap before GATE-EX2 closure | `v2.63-ex1-exam-ingestion-pilot` | `docs/roadmaps/outdated/reference-team-roadmap-v2.63-ex1-exam-ingestion-pilot.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before EX-1 exam-ingestion pilot completion | `v2.62-gate-ex0-pass-with-conditions` | `docs/roadmaps/outdated/reference-team-roadmap-v2.62-gate-ex0-pass-with-conditions.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before GATE-EX0 closure | `v2.61-ex0-exam-ingestion-contract` | `docs/roadmaps/outdated/reference-team-roadmap-v2.61-ex0-exam-ingestion-contract.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before EX-0 exam-ingestion contract design | `v2.60-cp6f-113-part-a-cleared` | `docs/roadmaps/outdated/reference-team-roadmap-v2.60-cp6f-113-part-a-cleared.md` | `references/reference-team-roadmap.md` |

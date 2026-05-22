@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-05-21T14:08:46.188Z
+Generated: 2026-05-22T12:45:53.147Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 1608
+Files indexed: 1618
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -105,7 +105,7 @@ Count: 59
 
 ## build scripts
 
-Count: 284
+Count: 285
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -252,6 +252,7 @@ Count: 284
 - build-scripts/references/check-evidence-anchors.js
 - build-scripts/references/check-exam-ingestion-contract.js
 - build-scripts/references/check-exam-ingestion-pilots.js
+- build-scripts/references/check-exam-to-mtu-mapping-gate.js
 - build-scripts/references/check-exercise-overlay-conditions.js
 - build-scripts/references/check-exercise-overlays.js
 - build-scripts/references/check-misconceptions.js
@@ -441,7 +442,7 @@ Count: 42
 
 ## validators
 
-Count: 87
+Count: 88
 
 - build-scripts/rag/validate-chunks.js
 - build-scripts/rag/validate-query-output.js
@@ -453,6 +454,7 @@ Count: 87
 - build-scripts/references/check-evidence-anchors.js
 - build-scripts/references/check-exam-ingestion-contract.js
 - build-scripts/references/check-exam-ingestion-pilots.js
+- build-scripts/references/check-exam-to-mtu-mapping-gate.js
 - build-scripts/references/check-exercise-overlay-conditions.js
 - build-scripts/references/check-exercise-overlays.js
 - build-scripts/references/check-misconceptions.js
@@ -533,7 +535,7 @@ Count: 87
 
 ## references
 
-Count: 281
+Count: 282
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -609,6 +611,7 @@ Count: 281
 - references/data/sprints/EX-0.result.json
 - references/data/sprints/EX-1.plan.json
 - references/data/sprints/EX-1.result.json
+- references/data/sprints/EX-2.plan.json
 - references/data/sprints/EX-NS0.plan.json
 - references/data/sprints/EX-NS0.result.json
 - references/data/sprints/GATE-CP6.plan.json
@@ -819,7 +822,7 @@ Count: 281
 
 ## reports
 
-Count: 719
+Count: 727
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1052,6 +1055,11 @@ Count: 719
 - reports/review-gates/GATE-EX0-exam-ingestion-contract/human-interview.md
 - reports/review-gates/GATE-EX0-exam-ingestion-contract/review-packet.json
 - reports/review-gates/GATE-EX0-exam-ingestion-contract/review-packet.md
+- reports/review-gates/GATE-EX2-exam-to-mtu-mapping/bundle-urls.md
+- reports/review-gates/GATE-EX2-exam-to-mtu-mapping/mapping-candidates.json
+- reports/review-gates/GATE-EX2-exam-to-mtu-mapping/mapping-candidates.md
+- reports/review-gates/GATE-EX2-exam-to-mtu-mapping/review-packet.json
+- reports/review-gates/GATE-EX2-exam-to-mtu-mapping/review-packet.md
 - reports/review-gates/GATE-PV-G1-schema/bundle-urls.md
 - reports/review-gates/GATE-PV-G1-schema/review-packet.json
 - reports/review-gates/GATE-PV-G1-schema/review-packet.md
@@ -1321,6 +1329,9 @@ Count: 719
 - reports/sprints/EX-1-plan.md
 - reports/sprints/EX-1-planning-review.md
 - reports/sprints/EX-1-result.md
+- reports/sprints/EX-2-baseline.md
+- reports/sprints/EX-2-plan.md
+- reports/sprints/EX-2-planning-review.md
 - reports/sprints/EX-NS0-baseline.md
 - reports/sprints/EX-NS0-diff-summary.md
 - reports/sprints/EX-NS0-lead-review-assignment.md
