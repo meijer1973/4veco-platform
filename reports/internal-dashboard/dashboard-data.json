@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-22T18:50:49.367Z",
+  "generatedAt": "2026-05-22T19:33:36.341Z",
   "internalOnly": true,
   "teams": [
     {
@@ -160,13 +160,13 @@
           "generated": "2026-04-23",
           "updated": "",
           "scope": "`references/`, `build-scripts/references/`, `build-scripts/reports/`, reference dashboards, and generated reference reports under `reports/`",
-          "summary": "References Team Roadmap Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Last strategic update: 2026-05-22 Roadmap ID: references-team-roadmap Roadmap version: v2.67-ex3-exam-coverage-dashboard Roadmap status: active Version index: docs/roadmaps/roadmap-version-index.json Scope: references/, build-scripts/references/, build-scripts/reports/, reference dashboards, and generated reference reports under reports/ Exam Ingestion North Star The long-term reference-platform goal is that a new official CvTE economic...",
+          "summary": "References Team Roadmap Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Last strategic update: 2026-05-22 Roadmap ID: references-team-roadmap Roadmap version: v2.68-ex4-mutation-planning-packet Roadmap status: active Version index: docs/roadmaps/roadmap-version-index.json Scope: references/, build-scripts/references/, build-scripts/reports/, reference dashboards, and generated reference reports under reports/ Exam Ingestion North Star The long-term reference-platform goal is that a new official CvTE economi...",
           "sprints": [
             {
-              "sprint": "EX-4",
-              "name": "CLI-Backed MTU / Operation / Answer-Skill Mutation",
+              "sprint": "GATE-EX4",
+              "name": "Mutation Planning Human Review",
               "completed": "no",
-              "currentState": "**ACTIVE / GOVERNED MUTATION-PLANNING PREP ONLY.** EX-3 generated coverage evidence and kept q3/q15 answer-skill needs plus q19 source/graph blockers visible. EX-4 may now draft the governed mutation-planning packet and human-authorization questions for any MTU, operation, answer-skill, or PV/graph route. It must not execute mutation until explicit human authorization and CLI-backed validators exist.",
+              "currentState": "**ACTIVE / HUMAN REVIEW REQUIRED.** EX-4 prepared the mutation-candidate packet, disabled CLI/readiness plan, and GATE-EX4 review questions. The gate must decide only how to route later bounded work for q3 operation and answer-skill needs, q19 source/graph blockers, q19 graph/PV and chained-market reasoning, q15 answer-skill needs, and registry/CLI architecture. No protected mutation, external-source mutation, unit minting, operation-registry mutation, answer-skill mutation, target-exercise promotion, lesson-output mutation, CP-6 closure, Year-1 closure, or student/product use is authorized until a human gate explicitly closes with bounded scope and CLI/validator prerequisites.",
               "exitGate": ""
             },
             {
@@ -230,6 +230,13 @@
               "name": "Re-Evaluate R10-R13 Product Surfaces",
               "completed": "no",
               "currentState": "Blocked. Diagnostics, adaptive routing, student-facing AI, teacher cockpit deployment, automatic sequencing, mastery, and summative uses remain out of scope until data-quality gates justify them. Broad lesson-companion scaling also remains blocked until lesson L1.7A, L1.7B, L1.7C-0, L1.7C, L1.7D, and L2.0 establish the companion-set contract, shared skill-map architecture, game-row quality rubric, and landing-page information architecture.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "EX-4",
+              "name": "CLI-Backed MTU / Operation / Answer-Skill Mutation Planning",
+              "completed": "yes",
+              "currentState": "Completed as governed mutation-planning prep only. Added `reports/review-gates/GATE-EX4-mutation-planning/mutation-candidates.*`, `cli-readiness-plan.*`, `review-packet.*`, and `build-scripts/references/check-ex4-mutation-planning.js`. The packet routes q3 `q3-calc-1` as an operation candidate with `A61` support and stale `A15`, q3 `q3-answer-1` as an answer-skill candidate, q19 source/graph extraction as a blocker before graph/PV/reasoning or lesson handoff, q19 `q19-graph-op-1` with `A42`/`D10` support and weak `A45`, q19 `q19-reason-1` with `D10`/`D13` partial support, and q15 `q15-answer-1` as an answer-skill candidate while `D27`/`F03`/`F09` remain content-only coverage. EX-4 authorizes no protected mutation, external-source mutation, machine-reference mutation, unit minting, operation-registry mutation, answer-skill mutation, target-exercise promotion, lesson-output mutation, CP-6 closure, Year-1 closure, diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student-facing output.",
               "exitGate": ""
             },
             {
@@ -811,10 +818,10 @@
       ],
       "sprints": [
         {
-          "sprint": "EX-4",
-          "name": "CLI-Backed MTU / Operation / Answer-Skill Mutation",
+          "sprint": "GATE-EX4",
+          "name": "Mutation Planning Human Review",
           "completed": "no",
-          "currentState": "**ACTIVE / GOVERNED MUTATION-PLANNING PREP ONLY.** EX-3 generated coverage evidence and kept q3/q15 answer-skill needs plus q19 source/graph blockers visible. EX-4 may now draft the governed mutation-planning packet and human-authorization questions for any MTU, operation, answer-skill, or PV/graph route. It must not execute mutation until explicit human authorization and CLI-backed validators exist.",
+          "currentState": "**ACTIVE / HUMAN REVIEW REQUIRED.** EX-4 prepared the mutation-candidate packet, disabled CLI/readiness plan, and GATE-EX4 review questions. The gate must decide only how to route later bounded work for q3 operation and answer-skill needs, q19 source/graph blockers, q19 graph/PV and chained-market reasoning, q15 answer-skill needs, and registry/CLI architecture. No protected mutation, external-source mutation, unit minting, operation-registry mutation, answer-skill mutation, target-exercise promotion, lesson-output mutation, CP-6 closure, Year-1 closure, or student/product use is authorized until a human gate explicitly closes with bounded scope and CLI/validator prerequisites.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -887,6 +894,14 @@
           "name": "Re-Evaluate R10-R13 Product Surfaces",
           "completed": "no",
           "currentState": "Blocked. Diagnostics, adaptive routing, student-facing AI, teacher cockpit deployment, automatic sequencing, mastery, and summative uses remain out of scope until data-quality gates justify them. Broad lesson-companion scaling also remains blocked until lesson L1.7A, L1.7B, L1.7C-0, L1.7C, L1.7D, and L2.0 establish the companion-set contract, shared skill-map architecture, game-row quality rubric, and landing-page information architecture.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "EX-4",
+          "name": "CLI-Backed MTU / Operation / Answer-Skill Mutation Planning",
+          "completed": "yes",
+          "currentState": "Completed as governed mutation-planning prep only. Added `reports/review-gates/GATE-EX4-mutation-planning/mutation-candidates.*`, `cli-readiness-plan.*`, `review-packet.*`, and `build-scripts/references/check-ex4-mutation-planning.js`. The packet routes q3 `q3-calc-1` as an operation candidate with `A61` support and stale `A15`, q3 `q3-answer-1` as an answer-skill candidate, q19 source/graph extraction as a blocker before graph/PV/reasoning or lesson handoff, q19 `q19-graph-op-1` with `A42`/`D10` support and weak `A45`, q19 `q19-reason-1` with `D10`/`D13` partial support, and q15 `q15-answer-1` as an answer-skill candidate while `D27`/`F03`/`F09` remain content-only coverage. EX-4 authorizes no protected mutation, external-source mutation, machine-reference mutation, unit minting, operation-registry mutation, answer-skill mutation, target-exercise promotion, lesson-output mutation, CP-6 closure, Year-1 closure, diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student-facing output.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -1547,7 +1562,7 @@
           "roadmap": "References roadmap"
         }
       ],
-      "completedCount": 82,
+      "completedCount": 83,
       "openCount": 10
     },
     {

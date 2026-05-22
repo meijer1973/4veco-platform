@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "generated_by": "build-scripts/reports/generate-reference-health.js",
-  "generated_on": "2026-05-22T18:50:42.010Z",
+  "generated_on": "2026-05-22T19:33:36.030Z",
   "source_files": [
     "references/machine/micro-teaching-units.json",
     "references/machine/begrippen.json",
@@ -71,11 +71,11 @@
   },
   "unresolved_refs": {
     "status": "warn",
-    "issues": 349
+    "issues": 352
   },
   "qc_findings": {
     "report_count": 18,
-    "total_issues": 728,
+    "total_issues": 731,
     "high_or_critical_issues": 16,
     "by_report_status": {
       "info": 1,

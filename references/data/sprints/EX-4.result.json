@@ -1,0 +1,153 @@
+{
+  "schema_version": 1,
+  "sprint_id": "EX-4",
+  "title": "Governed Mutation Planning Prep",
+  "status": "completed",
+  "completed_on": "2026-05-22",
+  "plan": "reports/sprints/EX-4-plan.md",
+  "baseline": "reports/sprints/EX-4-baseline.md",
+  "result": "reports/sprints/EX-4-result.md",
+  "diff_summary": "reports/sprints/EX-4-diff-summary.md",
+  "planning_review": "reports/sprints/EX-4-planning-review.md",
+  "protected_reference_data_changed": false,
+  "external_source_mutation_authorized": false,
+  "machine_reference_mutation_authorized": false,
+  "unit_minting_authorized": false,
+  "operation_registry_mutation_authorized": false,
+  "answer_skill_mutation_authorized": false,
+  "target_exercise_promotion_authorized": false,
+  "lesson_output_mutation_authorized": false,
+  "cp6_closure_authorized": false,
+  "year1_closure_authorized": false,
+  "student_product_use_authorized": false,
+  "prepared_gate": "reports/review-gates/GATE-EX4-mutation-planning/review-packet.md",
+  "outputs": [
+    "reports/review-gates/GATE-EX4-mutation-planning/mutation-candidates.json",
+    "reports/review-gates/GATE-EX4-mutation-planning/mutation-candidates.md",
+    "reports/review-gates/GATE-EX4-mutation-planning/cli-readiness-plan.json",
+    "reports/review-gates/GATE-EX4-mutation-planning/cli-readiness-plan.md",
+    "reports/review-gates/GATE-EX4-mutation-planning/review-packet.json",
+    "reports/review-gates/GATE-EX4-mutation-planning/review-packet.md",
+    "reports/review-gates/GATE-EX4-mutation-planning/bundle-urls.md",
+    "build-scripts/references/check-ex4-mutation-planning.js"
+  ],
+  "lead_review_required": true,
+  "lead_review": {
+    "assignment": "reports/sprints/EX-4-lead-review-assignment.md",
+    "round1": "reports/sprints/EX-4-lead-review-round1.md",
+    "corrections": "reports/sprints/EX-4-lead-review-corrections.md",
+    "round2": "reports/sprints/EX-4-lead-review-round2.md",
+    "round1_verdict": "PASS WITH FLAGS",
+    "final_verdict": "PASS WITH FLAGS",
+    "flags_carried_forward": [
+      "GATE-EX4 human review remains future work.",
+      "No mutation, CLI execution, source extraction, product use, or lesson handoff is authorized until GATE-EX4 closes explicitly."
+    ]
+  },
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/EX-4-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js EX-4",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-exam-ingestion-contract.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-exam-ingestion-pilots.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-exam-to-mtu-mapping-gate.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-exam-ingestion-coverage.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-ex4-mutation-planning.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-skill-operation-registry.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/validate-core-schemas.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/generate-all.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/validate-report-json.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/generate-reference-health.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/check-reference-health.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run dashboard:internal",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run agent:index",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-gate-bundle-urls.js GATE-EX4-mutation-planning",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js --check",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/build-source-document-registry.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/build-reference-inventory.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-source-document-registry.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-source-manifest.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-document-inventory.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-roadmap-version-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd test",
+      "status": "passed"
+    }
+  ],
+  "next_action": "Run the formal GATE-EX4 human review before authorizing any mutation, CLI execution, source-annex extraction execution, or downstream lesson handoff.",
+  "excluded_preexisting_files": [
+    "knowledge/exit-ticket-game-1.1.1.zip"
+  ]
+}

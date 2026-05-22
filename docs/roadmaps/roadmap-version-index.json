@@ -15,13 +15,14 @@
   "roadmaps": [
     {
       "roadmap_id": "references-team-roadmap",
-      "version": "v2.67-ex3-exam-coverage-dashboard",
+      "version": "v2.68-ex4-mutation-planning-packet",
       "title": "References Team Roadmap",
       "status": "active",
       "path": "references/reference-team-roadmap.md",
       "owner": "references_team",
       "updated_on": "2026-05-22",
       "supersedes": [
+        "docs/roadmaps/outdated/reference-team-roadmap-v2.67-ex3-exam-coverage-dashboard.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.66-shared-skill-map-engine-tracking.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.65-lesson-companion-pre-scale-gates.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.64-gate-ex2-pass-with-conditions.md",
@@ -88,7 +89,18 @@
         "knowledge/Exercise schema and quality/reference-team-roadmap Live version 28 April.md",
         "knowledge/Exercise schema and quality/roadmap-updated-repository-checked.md"
       ],
-      "notes": "Current operating roadmap after closing EX-3 as a reporting-only exam-ingestion coverage dashboard and moving EX-4 to governed mutation-planning prep only; q19 source/graph gaps, q3/q15 answer-skill needs, and all no-mutation/student-use boundaries remain visible."
+      "notes": "Current operating roadmap after closing EX-4 as governed mutation-planning prep only and moving GATE-EX4 to active human review; q19 source/graph gaps, q3/q15 answer-skill needs, and all no-mutation/student-use boundaries remain visible."
+    },
+    {
+      "roadmap_id": "references-team-roadmap-v2.67",
+      "version": "v2.67-ex3-exam-coverage-dashboard",
+      "title": "References Team Roadmap before EX-4 mutation-planning packet",
+      "status": "outdated",
+      "path": "docs/roadmaps/outdated/reference-team-roadmap-v2.67-ex3-exam-coverage-dashboard.md",
+      "owner": "references_team",
+      "updated_on": "2026-05-22",
+      "superseded_by": "references/reference-team-roadmap.md",
+      "notes": "Snapshot archived before EX-4 prepared the governed mutation-planning packet and moved GATE-EX4 to active human review."
     },
     {
       "roadmap_id": "references-team-roadmap-v2.66",

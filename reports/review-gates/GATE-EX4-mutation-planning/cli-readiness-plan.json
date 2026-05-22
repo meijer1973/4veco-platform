@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-EX4-mutation-planning",
+  "sprint_id": "EX-4",
+  "artifact_id": "EX-4-cli-readiness-plan",
+  "status": "disabled_pending_human_authorization",
+  "generated_on": "2026-05-22",
+  "execution_authorized": false,
+  "cli_execution_authorized": false,
+  "protected_reference_data_changed": false,
+  "source_files": [
+    "reports/review-gates/GATE-EX4-mutation-planning/mutation-candidates.json",
+    "reports/json/exam-ingestion-coverage.json",
+    "references/data/skill-operation-registry.json"
+  ],
+  "preconditions_before_any_mutation": [
+    "GATE-EX4 must close with explicit human authorization for a named bounded lane.",
+    "The target storage surface must be named and must preserve source-of-truth boundaries.",
+    "A CLI or governed script must exist for the target mutation surface before any protected or registry write.",
+    "A validator must reject unauthorized mutation flags, hidden q19 gaps, hidden q3/q15 answer-skill gaps, and student/product-use authorization.",
+    "Mutation logs and rollback instructions must be drafted before execution.",
+    "q19 graph/PV or reasoning mutation must stay blocked until source-annex and graph-object extraction gaps are resolved or explicitly accepted by a later human gate."
+  ],
+  "current_cli_readiness": {
+    "mtu_unit_add_cli_exists": true,
+    "operation_registry_cli_exists": false,
+    "answer_skill_registry_cli_exists": false,
+    "source_annex_extraction_validator_exists_for_q19": false,
+    "pv_graph_mutation_cli_exists": false,
+    "lesson_output_mutation_allowed": false
+  },
+  "lane_readiness": [
+    {
+      "lane_id": "EX4-L1-q3-annual-threshold-operation",
+      "allowed_next_if_gate_passes": "operation/answer-skill registry contract or governed operation-overlay design; not direct mutation unless GATE-EX4 explicitly authorizes a named CLI path",
+      "current_execution_state": "blocked_pending_gate_and_cli"
+    },
+    {
+      "lane_id": "EX4-L2-q3-threshold-answer-skill",
+      "allowed_next_if_gate_passes": "answer-skill policy and storage design before any answer-skill mutation",
+      "current_execution_state": "blocked_pending_gate_and_cli"
+    },
+    {
+      "lane_id": "EX4-L3-q19-source-annex-extraction",
+      "allowed_next_if_gate_passes": "bounded source-annex/graph-object extraction sprint under references/data overlays",
+      "current_execution_state": "blocked_pending_gate_and_extraction_validator"
+    },
+    {
+      "lane_id": "EX4-L4-q19-graph-pv-route",
+      "allowed_next_if_gate_passes": "hold until q19 source/graph extraction is adequate; then plan PV/procedure route",
+      "current_execution_state": "blocked_by_q19_source_and_graph_gaps"
+    },
+    {
+      "lane_id": "EX4-L5-q19-chained-market-reasoning",
+      "allowed_next_if_gate_passes": "hold until q19 source/graph extraction is adequate; then plan operation route",
+      "current_execution_state": "blocked_by_q19_source_and_graph_gaps"
+    },
+    {
+      "lane_id": "EX4-L6-q15-two-step-answer-skill",
+      "allowed_next_if_gate_passes": "answer-skill policy and storage design before any answer-skill mutation",
+      "current_execution_state": "blocked_pending_gate_and_cli"
+    }
+  ],
+  "forbidden_execution": [
+    "Do not run unit-add.js from EX-4.",
+    "Do not create references/machine/exercise-operations.json.",
+    "Do not create references/machine/answer-skills.json.",
+    "Do not mutate references/data/skill-operation-registry.json.",
+    "Do not mutate references/external/.",
+    "Do not hand-edit references/machine/.",
+    "Do not mutate lesson output.",
+    "Do not authorize student/product use."
+  ]
+}

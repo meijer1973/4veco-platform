@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-05-22T18:50:52.350Z
+Generated: 2026-05-22T19:33:36.412Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 1632
+Files indexed: 1647
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -105,7 +105,7 @@ Count: 59
 
 ## build scripts
 
-Count: 285
+Count: 286
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -251,6 +251,7 @@ Count: 285
 - build-scripts/references/check-empty-needs-review.js
 - build-scripts/references/check-evidence-anchors.js
 - build-scripts/references/check-exam-ingestion-contract.js
+- build-scripts/references/check-exam-ingestion-coverage.js
 - build-scripts/references/check-exam-ingestion-pilots.js
 - build-scripts/references/check-exam-to-mtu-mapping-gate.js
 - build-scripts/references/check-exercise-overlay-conditions.js
@@ -442,7 +443,7 @@ Count: 42
 
 ## validators
 
-Count: 88
+Count: 89
 
 - build-scripts/rag/validate-chunks.js
 - build-scripts/rag/validate-query-output.js
@@ -453,6 +454,7 @@ Count: 88
 - build-scripts/references/check-empty-needs-review.js
 - build-scripts/references/check-evidence-anchors.js
 - build-scripts/references/check-exam-ingestion-contract.js
+- build-scripts/references/check-exam-ingestion-coverage.js
 - build-scripts/references/check-exam-ingestion-pilots.js
 - build-scripts/references/check-exam-to-mtu-mapping-gate.js
 - build-scripts/references/check-exercise-overlay-conditions.js
@@ -535,7 +537,7 @@ Count: 88
 
 ## references
 
-Count: 283
+Count: 285
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -613,6 +615,8 @@ Count: 283
 - references/data/sprints/EX-1.result.json
 - references/data/sprints/EX-2.plan.json
 - references/data/sprints/EX-2.result.json
+- references/data/sprints/EX-3.plan.json
+- references/data/sprints/EX-3.result.json
 - references/data/sprints/EX-NS0.plan.json
 - references/data/sprints/EX-NS0.result.json
 - references/data/sprints/GATE-CP6.plan.json
@@ -823,7 +827,7 @@ Count: 283
 
 ## reports
 
-Count: 737
+Count: 748
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -849,6 +853,7 @@ Count: 737
 - reports/json/dead-units.json
 - reports/json/empty-needs-audit-summary.json
 - reports/json/evidence-anchor-status.json
+- reports/json/exam-ingestion-coverage.json
 - reports/json/exam-question-extraction-gaps.json
 - reports/json/exercise-overlay-conditions.json
 - reports/json/graph-skill-tree.json
@@ -887,6 +892,7 @@ Count: 737
 - reports/markdown/dag-integrity.md
 - reports/markdown/dead-units.md
 - reports/markdown/empty-needs-audit-summary.md
+- reports/markdown/exam-ingestion-coverage.md
 - reports/markdown/exercise-overlay-conditions.md
 - reports/markdown/graph-skill-tree.md
 - reports/markdown/graphical-foundation-coverage.md
@@ -1343,6 +1349,15 @@ Count: 737
 - reports/sprints/EX-2-plan.md
 - reports/sprints/EX-2-planning-review.md
 - reports/sprints/EX-2-result.md
+- reports/sprints/EX-3-baseline.md
+- reports/sprints/EX-3-diff-summary.md
+- reports/sprints/EX-3-lead-review-assignment.md
+- reports/sprints/EX-3-lead-review-corrections.md
+- reports/sprints/EX-3-lead-review-round1.md
+- reports/sprints/EX-3-lead-review-round2.md
+- reports/sprints/EX-3-plan.md
+- reports/sprints/EX-3-planning-review.md
+- reports/sprints/EX-3-result.md
 - reports/sprints/EX-NS0-baseline.md
 - reports/sprints/EX-NS0-diff-summary.md
 - reports/sprints/EX-NS0-lead-review-assignment.md
@@ -1583,7 +1598,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 211
+Count: 212
 
 - .gitignore
 - BUILD-CHAPTER.md
@@ -1651,6 +1666,7 @@ Count: 211
 - docs/roadmaps/outdated/reference-team-roadmap-v2.63-ex1-exam-ingestion-pilot.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.64-gate-ex2-pass-with-conditions.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.65-lesson-companion-pre-scale-gates.md
+- docs/roadmaps/outdated/reference-team-roadmap-v2.66-shared-skill-map-engine-tracking.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.7-cp3-closed.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.8-s4.1-conditions-calibrated.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.9-rx1-inventory-prepared.md
