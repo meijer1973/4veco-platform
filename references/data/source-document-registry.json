@@ -2,7 +2,7 @@
   "schema_version": 1,
   "registry_id": "source-document-registry",
   "generated_by": "build-scripts/references/build-source-document-registry.js",
-  "generated_on": "2026-05-22T12:47:14.543Z",
+  "generated_on": "2026-05-22T18:51:00.696Z",
   "storage_decision": {
     "registry_location": "references/data/source-document-registry.json",
     "machine_registry_created": false,
@@ -16,15 +16,15 @@
     "references/SOURCE_OF_TRUTH.md"
   ],
   "summary": {
-    "record_count": 280,
-    "source_manifest_file_count": 283,
+    "record_count": 281,
+    "source_manifest_file_count": 284,
     "by_authority_level": {
       "external_primary": 30,
       "machine_registry": 5,
       "owned_curriculum_design": 5,
       "authored_judgement": 9,
       "generated_report": 2,
-      "governance_data": 199,
+      "governance_data": 200,
       "quality_protocol": 5,
       "planning": 1,
       "machine_contract": 24
@@ -41,7 +41,7 @@
       "inventory": 32,
       "exercise_metadata_overlay": 6,
       "exercise_overlay_readme": 1,
-      "sprint_metadata": 158,
+      "sprint_metadata": 159,
       "machine_projection": 3,
       "owned_source_readme": 1,
       "qc_prompt": 5,
@@ -57,7 +57,7 @@
       "archived": 1,
       "generated_diagnostic": 2,
       "mirrored": 25,
-      "governance_data": 197,
+      "governance_data": 198,
       "planning": 1,
       "schema_contract": 24
     },
@@ -65,7 +65,7 @@
       "public_citation_allowed_with_source_name": 30,
       "internal_only": 19,
       "internal_diagnostic_only": 2,
-      "not_public_citation_source": 229
+      "not_public_citation_source": 230
     },
     "evidence_anchor_coverage": {
       "required_document_ids": [
@@ -3641,6 +3641,44 @@
       "refresh_policy": "sprint_lifecycle",
       "source_hash": "a393a5eed456aee7a040b93ba710c327015e26d2e0e4be83984ccef513ec624f",
       "size_bytes": 6492,
+      "primary_evidence": false,
+      "curriculum_authority": false,
+      "allowed_downstream_uses": [
+        "internal_reference_context",
+        "rag_retrieval_with_authority_label"
+      ],
+      "blocked_downstream_uses": [
+        "student_diagnostics",
+        "adaptive_routing",
+        "student_facing_ai",
+        "automatic_lesson_sequencing",
+        "automatic_mastery_decisions",
+        "summative_assessment_decisions",
+        "external_authority",
+        "override_machine_registry"
+      ],
+      "evidence_anchor_ids": [],
+      "notes": [
+        "Governance data is canonical only for its declared governance artifact."
+      ]
+    },
+    {
+      "document_id": "path-references-data-sprints-ex-3-plan",
+      "path": "references/data/sprints/EX-3.plan.json",
+      "title": "EX 3.Plan",
+      "source_type": "sprint_metadata",
+      "authority_level": "governance_data",
+      "source_version": "sha256:e0e5745571615f98bfacab822501d81ce40e52e1b183f1eeece7484c6a7bfe6c",
+      "status": "governance_data",
+      "owner": "references_team",
+      "citation_policy": "cite_as_governance_record_only",
+      "public_citation_policy": "not_public_citation_source",
+      "layer": "governance_data",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "refresh_policy": "sprint_lifecycle",
+      "source_hash": "e0e5745571615f98bfacab822501d81ce40e52e1b183f1eeece7484c6a7bfe6c",
+      "size_bytes": 3809,
       "primary_evidence": false,
       "curriculum_authority": false,
       "allowed_downstream_uses": [
@@ -9176,7 +9214,7 @@
       "title": "Reference Team Roadmap",
       "source_type": "roadmap",
       "authority_level": "planning",
-      "source_version": "sha256:f8da1ad5df21375822cb95941d668c8438a09b0941c3a95cc72a86056e6bc81b",
+      "source_version": "sha256:262eecda2fa5e40e576f315952438c7c683d1e5264b16059db899305467af68c",
       "status": "planning",
       "owner": "references_team",
       "citation_policy": "citation_requires_review",
@@ -9185,8 +9223,8 @@
       "generated_status": "manual_source",
       "edit_policy": "human_reviewed_edit",
       "refresh_policy": "roadmap_update",
-      "source_hash": "f8da1ad5df21375822cb95941d668c8438a09b0941c3a95cc72a86056e6bc81b",
-      "size_bytes": 175057,
+      "source_hash": "262eecda2fa5e40e576f315952438c7c683d1e5264b16059db899305467af68c",
+      "size_bytes": 179404,
       "primary_evidence": false,
       "curriculum_authority": false,
       "allowed_downstream_uses": [

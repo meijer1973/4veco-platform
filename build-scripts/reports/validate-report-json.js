@@ -24,6 +24,7 @@ const REQUIRED = [
   'reference-quality-issues',
   'misconception-registry',
   'unit-design-status',
+  'exam-ingestion-coverage',
 ];
 const STATUSES = new Set(['pass', 'warn', 'fail', 'info']);
 const SEVERITIES = new Set(['info', 'low', 'medium', 'high', 'critical']);

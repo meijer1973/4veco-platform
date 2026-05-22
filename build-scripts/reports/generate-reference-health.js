@@ -64,6 +64,7 @@ function main() {
       'unit-design-status',
       'procedure-visual-coverage',
       'skilltree-generator-readiness',
+      'exam-ingestion-coverage',
   ].map(report);
 
   const issueCount = reports.reduce((sum, item) => sum + (item.issues || []).length, 0);
@@ -79,6 +80,7 @@ function main() {
   const unitDesignReport = report('unit-design-status');
   const procedureVisualCoverage = report('procedure-visual-coverage');
   const skilltreeGeneratorReadiness = report('skilltree-generator-readiness');
+  const examIngestionCoverage = report('exam-ingestion-coverage');
   const qualityIssueLog = readJson('references/data/qc/reference-quality-issues.json', {
     authority_boundary: {
       internal_only: true,
@@ -151,6 +153,7 @@ function main() {
       'reports/json/unit-design-status.json',
       'reports/json/procedure-visual-coverage.json',
       'reports/json/skilltree-generator-readiness.json',
+      'reports/json/exam-ingestion-coverage.json',
       'reports/json/*.json',
     ],
     unit_counts: {
@@ -295,6 +298,24 @@ function main() {
       untracked_missing_generator_count: skilltreeGeneratorReadiness.summary && skilltreeGeneratorReadiness.summary.untracked_missing_generator_count || 0,
       blocked_interactive_leak_count: skilltreeGeneratorReadiness.summary && skilltreeGeneratorReadiness.summary.blocked_interactive_leak_count || 0,
     },
+    exam_ingestion_coverage: {
+      source: 'reports/json/exam-ingestion-coverage.json',
+      status: examIngestionCoverage.status,
+      pilot_item_count: examIngestionCoverage.summary && examIngestionCoverage.summary.pilot_item_count || 0,
+      reviewed_classification_count: examIngestionCoverage.summary && examIngestionCoverage.summary.reviewed_classification_count || 0,
+      blocked_item_count: examIngestionCoverage.summary && examIngestionCoverage.summary.blocked_item_count || 0,
+      blocking_gap_count: examIngestionCoverage.summary && examIngestionCoverage.summary.blocking_gap_count || 0,
+      answer_skill_need_count: examIngestionCoverage.summary && examIngestionCoverage.summary.classification_counts && examIngestionCoverage.summary.classification_counts.answer_skill_need || 0,
+      operation_registry_need_count: examIngestionCoverage.summary && examIngestionCoverage.summary.classification_counts && examIngestionCoverage.summary.classification_counts.operation_registry_need || 0,
+      all_product_boundaries_false: examIngestionCoverage.summary && examIngestionCoverage.summary.all_product_boundaries_false === true,
+      protected_reference_mutation_authorized: examIngestionCoverage.summary && examIngestionCoverage.summary.protected_reference_mutation_authorized === true,
+      external_source_mutation_authorized: examIngestionCoverage.summary && examIngestionCoverage.summary.external_source_mutation_authorized === true,
+      unit_minting_authorized: examIngestionCoverage.summary && examIngestionCoverage.summary.unit_minting_authorized === true,
+      operation_registry_mutation_authorized: examIngestionCoverage.summary && examIngestionCoverage.summary.operation_registry_mutation_authorized === true,
+      answer_skill_mutation_authorized: examIngestionCoverage.summary && examIngestionCoverage.summary.answer_skill_mutation_authorized === true,
+      lesson_output_mutation_authorized: examIngestionCoverage.summary && examIngestionCoverage.summary.lesson_output_mutation_authorized === true,
+      student_facing_output_authorized: examIngestionCoverage.summary && examIngestionCoverage.summary.student_facing_output_authorized === true,
+    },
     schema_validation_status: {
       report_json_contract: 'pass',
       alignment_graph: report('alignment-graph-integrity').status,
@@ -430,6 +451,18 @@ function main() {
   lines.push(`- Interactive units: ${state.skilltree_generator_readiness.interactive_skill_count}`);
   lines.push(`- Generator-blocked units: ${state.skilltree_generator_readiness.generator_blocked_count}`);
   lines.push(`- Untracked missing generators: ${state.skilltree_generator_readiness.untracked_missing_generator_count}`);
+  lines.push('');
+  lines.push('## Exam Ingestion Coverage');
+  lines.push('');
+  lines.push(`- Status: ${state.exam_ingestion_coverage.status}`);
+  lines.push(`- Pilot items: ${state.exam_ingestion_coverage.pilot_item_count}`);
+  lines.push(`- Reviewed classifications: ${state.exam_ingestion_coverage.reviewed_classification_count}`);
+  lines.push(`- Blocking gaps: ${state.exam_ingestion_coverage.blocking_gap_count}`);
+  lines.push(`- Blocked items: ${state.exam_ingestion_coverage.blocked_item_count}`);
+  lines.push(`- Answer-skill needs: ${state.exam_ingestion_coverage.answer_skill_need_count}`);
+  lines.push(`- Operation-registry needs: ${state.exam_ingestion_coverage.operation_registry_need_count}`);
+  lines.push(`- Protected reference mutation authorized: ${state.exam_ingestion_coverage.protected_reference_mutation_authorized}`);
+  lines.push(`- Student-facing output authorized: ${state.exam_ingestion_coverage.student_facing_output_authorized}`);
   lines.push('');
   lines.push('## Retrieval Evaluation');
   lines.push('');

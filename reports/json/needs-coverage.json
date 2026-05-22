@@ -1,7 +1,7 @@
 {
   "report_id": "needs-coverage",
   "generated_by": "build-scripts/reports/generate-all.js",
-  "generated_on": "2026-05-22T12:45:39.118Z",
+  "generated_on": "2026-05-22T18:50:36.362Z",
   "source_files": [
     "references/machine/micro-teaching-units.json"
   ],

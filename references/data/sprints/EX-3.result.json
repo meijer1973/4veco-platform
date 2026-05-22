@@ -1,0 +1,181 @@
+{
+  "sprint_id": "EX-3",
+  "name": "Exam Coverage Dashboard",
+  "status": "completed",
+  "completed_on": "2026-05-22",
+  "plan": "reports/sprints/EX-3-plan.md",
+  "baseline": "reports/sprints/EX-3-baseline.md",
+  "result": "reports/sprints/EX-3-result.md",
+  "diff_summary": "reports/sprints/EX-3-diff-summary.md",
+  "authority_level": "internal_reference_reporting_only",
+  "protected_reference_data_changed": false,
+  "external_source_mutation_authorized": false,
+  "lesson_output_changed": false,
+  "target_exercise_promotions": false,
+  "placeholder_finalization": false,
+  "unit_minting": false,
+  "machine_registry_mutation": false,
+  "operation_registry_mutation": false,
+  "answer_skill_mutation": false,
+  "cp6_closed": false,
+  "year1_closed": false,
+  "lead_review_required": true,
+  "lead_review": {
+    "assignment": "reports/sprints/EX-3-lead-review-assignment.md",
+    "round1": "reports/sprints/EX-3-lead-review-round1.md",
+    "corrections": "reports/sprints/EX-3-lead-review-corrections.md",
+    "round2": "reports/sprints/EX-3-lead-review-round2.md",
+    "round1_verdict": "PASS WITH FLAGS",
+    "correction_summary": "No content corrections required; procedural closure logs were recorded and the unrelated zip remains untouched.",
+    "round2_verdict": "PASS WITH FLAGS",
+    "final_verdict": "PASS WITH FLAGS",
+    "notes": "Round 1 and round 2 both returned PASS WITH FLAGS. Flags carried forward: keep the unrelated zip untouched, keep q19 source/graph gaps blocking, keep q3/q15 answer-skill needs visible, and require later explicit human authorization plus governed CLI validators before any EX-4 mutation execution."
+  },
+  "primary_outputs": [
+    "reports/json/exam-ingestion-coverage.json",
+    "reports/markdown/exam-ingestion-coverage.md",
+    "build-scripts/references/check-exam-ingestion-coverage.js"
+  ],
+  "summary": {
+    "report_status": "warn",
+    "pilot_item_count": 3,
+    "reviewed_classification_count": 8,
+    "blocking_gap_count": 2,
+    "blocked_item_count": 1,
+    "q3_support_unit": "A61",
+    "q3_stale_unit": "A15",
+    "q19_graph_candidates": ["A42", "D10"],
+    "q19_weak_support": ["A45"],
+    "q19_blocking_gaps": [
+      "q19-source-annex-gap",
+      "q19-graph-object-gap"
+    ],
+    "answer_skill_needs": ["q3-answer-1", "q15-answer-1"],
+    "next_operational_action": "Commit, tag, and push EX-3. Then start EX-4 only as governed mutation-planning prep; do not execute mutation without later explicit human authorization."
+  },
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/EX-3-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js EX-3",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-result.js reports/sprints/EX-3-result.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js EX-3 --complete",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-exam-ingestion-contract.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-exam-ingestion-pilots.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-exam-to-mtu-mapping-gate.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-exam-ingestion-coverage.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/validate-core-schemas.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/validate-report-json.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/generate-all.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/validate-report-json.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/generate-reference-health.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/check-reference-health.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run dashboard:internal",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run agent:index",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js --check",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/build-reference-inventory.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/build-source-document-registry.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-source-document-registry.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-source-manifest.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-document-inventory.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-roadmap-version-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd test",
+      "status": "passed"
+    }
+  ],
+  "blocked_outcomes": [
+    "protected reference mutation",
+    "external-source mutation",
+    "target-exercise promotion",
+    "placeholder finalization",
+    "unit minting",
+    "machine registry mutation",
+    "operation-registry mutation",
+    "answer-skill mutation",
+    "lesson-output mutation",
+    "CP-6 closure",
+    "Year-1 closure",
+    "student diagnostics",
+    "adaptive routing",
+    "mastery decisions",
+    "automatic sequencing",
+    "student-facing AI",
+    "summative use",
+    "PV projection",
+    "PV machine promotion",
+    "student-facing generated output"
+  ],
+  "next_operational_action": "Commit, tag, and push EX-3. Then start EX-4 only as governed mutation-planning prep; do not execute mutation without later explicit human authorization."
+}

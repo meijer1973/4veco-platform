@@ -15,13 +15,14 @@
   "roadmaps": [
     {
       "roadmap_id": "references-team-roadmap",
-      "version": "v2.66-shared-skill-map-engine-tracking",
+      "version": "v2.67-ex3-exam-coverage-dashboard",
       "title": "References Team Roadmap",
       "status": "active",
       "path": "references/reference-team-roadmap.md",
       "owner": "references_team",
       "updated_on": "2026-05-22",
       "supersedes": [
+        "docs/roadmaps/outdated/reference-team-roadmap-v2.66-shared-skill-map-engine-tracking.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.65-lesson-companion-pre-scale-gates.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.64-gate-ex2-pass-with-conditions.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.63-ex1-exam-ingestion-pilot.md",
@@ -87,7 +88,18 @@
         "knowledge/Exercise schema and quality/reference-team-roadmap Live version 28 April.md",
         "knowledge/Exercise schema and quality/roadmap-updated-repository-checked.md"
       ],
-      "notes": "Current operating roadmap after adding shared skill-map engine tracking: L1.7A, L1.7B, L1.7C-0, L1.7C, L1.7D, and L2.0 must define readiness, exit-ticket role, shared skill-map architecture, game-row quality, landing-page IA, and house-style policy before broad companion scaling."
+      "notes": "Current operating roadmap after closing EX-3 as a reporting-only exam-ingestion coverage dashboard and moving EX-4 to governed mutation-planning prep only; q19 source/graph gaps, q3/q15 answer-skill needs, and all no-mutation/student-use boundaries remain visible."
+    },
+    {
+      "roadmap_id": "references-team-roadmap-v2.66",
+      "version": "v2.66-shared-skill-map-engine-tracking",
+      "title": "References Team Roadmap before EX-3 exam coverage dashboard closure",
+      "status": "outdated",
+      "path": "docs/roadmaps/outdated/reference-team-roadmap-v2.66-shared-skill-map-engine-tracking.md",
+      "owner": "references_team",
+      "updated_on": "2026-05-22",
+      "superseded_by": "references/reference-team-roadmap.md",
+      "notes": "Snapshot archived before EX-3 generated exam-ingestion coverage reports, wired them into reference-health, and moved EX-4 to governed mutation-planning prep only."
     },
     {
       "roadmap_id": "references-team-roadmap-v2.65",

@@ -12,12 +12,13 @@ docs/roadmaps/roadmap-version-index.json
 
 | Roadmap | Version | Path | Notes |
 |---|---|---|---|
-| References Team Roadmap | `v2.66-shared-skill-map-engine-tracking` | `references/reference-team-roadmap.md` | Current operating roadmap after adding shared skill-map engine tracking: L1.7A, L1.7B, L1.7C-0, L1.7C, L1.7D, and L2.0 must define readiness, exit-ticket role, shared skill-map architecture, game-row quality, landing-page IA, and house-style policy before broad companion scaling. |
+| References Team Roadmap | `v2.67-ex3-exam-coverage-dashboard` | `references/reference-team-roadmap.md` | Current operating roadmap after closing EX-3 as a reporting-only exam-ingestion coverage dashboard and moving EX-4 to governed mutation-planning prep only; q19 source/graph gaps, q3/q15 answer-skill needs, and all no-mutation/student-use boundaries remain visible. |
 
 ## Outdated Archive
 
 | Roadmap | Version | Path | Superseded By |
 |---|---|---|---|
+| References Team Roadmap before EX-3 exam coverage dashboard closure | `v2.66-shared-skill-map-engine-tracking` | `docs/roadmaps/outdated/reference-team-roadmap-v2.66-shared-skill-map-engine-tracking.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before shared skill-map engine tracking | `v2.65-lesson-companion-pre-scale-gates` | `docs/roadmaps/outdated/reference-team-roadmap-v2.65-lesson-companion-pre-scale-gates.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before lesson companion pre-scale gate tracking | `v2.64-gate-ex2-pass-with-conditions` | `docs/roadmaps/outdated/reference-team-roadmap-v2.64-gate-ex2-pass-with-conditions.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before GATE-EX2 closure | `v2.63-ex1-exam-ingestion-pilot` | `docs/roadmaps/outdated/reference-team-roadmap-v2.63-ex1-exam-ingestion-pilot.md` | `references/reference-team-roadmap.md` |

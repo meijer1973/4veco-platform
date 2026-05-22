@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-22T13:25:20.861Z",
+  "generatedAt": "2026-05-22T18:50:49.367Z",
   "internalOnly": true,
   "teams": [
     {
@@ -160,20 +160,13 @@
           "generated": "2026-04-23",
           "updated": "",
           "scope": "`references/`, `build-scripts/references/`, `build-scripts/reports/`, reference dashboards, and generated reference reports under `reports/`",
-          "summary": "References Team Roadmap Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Last strategic update: 2026-05-22 Roadmap ID: references-team-roadmap Roadmap version: v2.66-shared-skill-map-engine-tracking Roadmap status: active Version index: docs/roadmaps/roadmap-version-index.json Scope: references/, build-scripts/references/, build-scripts/reports/, reference dashboards, and generated reference reports under reports/ Exam Ingestion North Star The long-term reference-platform goal is that a new official CvTE eco...",
+          "summary": "References Team Roadmap Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Last strategic update: 2026-05-22 Roadmap ID: references-team-roadmap Roadmap version: v2.67-ex3-exam-coverage-dashboard Roadmap status: active Version index: docs/roadmaps/roadmap-version-index.json Scope: references/, build-scripts/references/, build-scripts/reports/, reference dashboards, and generated reference reports under reports/ Exam Ingestion North Star The long-term reference-platform goal is that a new official CvTE economic...",
           "sprints": [
-            {
-              "sprint": "EX-3",
-              "name": "Exam Coverage Dashboard",
-              "completed": "no",
-              "currentState": "**ACTIVE / REPORTING SPRINT NEXT.** GATE-EX2 closed as `pass_with_conditions` for classification and routing only. EX-3 must add JSON/Markdown coverage views for exam-ingestion state and record the reviewed EX-2 classifications: q3 `A61` support with `q3-calc-1` still `operation_registry_need`, q3/q15 `answer_skill_need`, q19 `A42` graph-shift candidate with `A45` weak support, and q19 source/graph gaps still blocking. No mutation, lesson output, CP-6/Year-1 closure, or student/product use.",
-              "exitGate": ""
-            },
             {
               "sprint": "EX-4",
               "name": "CLI-Backed MTU / Operation / Answer-Skill Mutation",
               "completed": "no",
-              "currentState": "FUTURE MUTATION SPRINT after EX-2/EX-3 evidence and explicit human authorization. Add only reviewed MTUs, operation-registry entries, or answer-skill records through governed CLI scripts with mutation logs and validators.",
+              "currentState": "**ACTIVE / GOVERNED MUTATION-PLANNING PREP ONLY.** EX-3 generated coverage evidence and kept q3/q15 answer-skill needs plus q19 source/graph blockers visible. EX-4 may now draft the governed mutation-planning packet and human-authorization questions for any MTU, operation, answer-skill, or PV/graph route. It must not execute mutation until explicit human authorization and CLI-backed validators exist.",
               "exitGate": ""
             },
             {
@@ -237,6 +230,13 @@
               "name": "Re-Evaluate R10-R13 Product Surfaces",
               "completed": "no",
               "currentState": "Blocked. Diagnostics, adaptive routing, student-facing AI, teacher cockpit deployment, automatic sequencing, mastery, and summative uses remain out of scope until data-quality gates justify them. Broad lesson-companion scaling also remains blocked until lesson L1.7A, L1.7B, L1.7C-0, L1.7C, L1.7D, and L2.0 establish the companion-set contract, shared skill-map architecture, game-row quality rubric, and landing-page information architecture.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "EX-3",
+              "name": "Exam Coverage Dashboard",
+              "completed": "yes",
+              "currentState": "Completed as a reporting-only dashboard sprint. Added generated `reports/json/exam-ingestion-coverage.json` and `reports/markdown/exam-ingestion-coverage.md`, plus `build-scripts/references/check-exam-ingestion-coverage.js`, report-contract wiring, and reference-health summary fields. The report records 3 EX-1 pilot items, 8 reviewed GATE-EX2 classifications, 2 blocking q19 gaps, q3 `A61` support with stale/weak `A15`, q19 `A42`/`D10` support with weak `A45`, q3/q15 `answer_skill_need`, and q19 blocked lesson-handoff status. No protected mutation, external-source mutation, unit minting, operation-registry mutation, answer-skill mutation, target-exercise promotion, lesson-output mutation, CP-6 closure, Year-1 closure, diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student-facing output was authorized.",
               "exitGate": ""
             },
             {
@@ -811,18 +811,10 @@
       ],
       "sprints": [
         {
-          "sprint": "EX-3",
-          "name": "Exam Coverage Dashboard",
-          "completed": "no",
-          "currentState": "**ACTIVE / REPORTING SPRINT NEXT.** GATE-EX2 closed as `pass_with_conditions` for classification and routing only. EX-3 must add JSON/Markdown coverage views for exam-ingestion state and record the reviewed EX-2 classifications: q3 `A61` support with `q3-calc-1` still `operation_registry_need`, q3/q15 `answer_skill_need`, q19 `A42` graph-shift candidate with `A45` weak support, and q19 source/graph gaps still blocking. No mutation, lesson output, CP-6/Year-1 closure, or student/product use.",
-          "exitGate": "",
-          "roadmap": "References roadmap"
-        },
-        {
           "sprint": "EX-4",
           "name": "CLI-Backed MTU / Operation / Answer-Skill Mutation",
           "completed": "no",
-          "currentState": "FUTURE MUTATION SPRINT after EX-2/EX-3 evidence and explicit human authorization. Add only reviewed MTUs, operation-registry entries, or answer-skill records through governed CLI scripts with mutation logs and validators.",
+          "currentState": "**ACTIVE / GOVERNED MUTATION-PLANNING PREP ONLY.** EX-3 generated coverage evidence and kept q3/q15 answer-skill needs plus q19 source/graph blockers visible. EX-4 may now draft the governed mutation-planning packet and human-authorization questions for any MTU, operation, answer-skill, or PV/graph route. It must not execute mutation until explicit human authorization and CLI-backed validators exist.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -895,6 +887,14 @@
           "name": "Re-Evaluate R10-R13 Product Surfaces",
           "completed": "no",
           "currentState": "Blocked. Diagnostics, adaptive routing, student-facing AI, teacher cockpit deployment, automatic sequencing, mastery, and summative uses remain out of scope until data-quality gates justify them. Broad lesson-companion scaling also remains blocked until lesson L1.7A, L1.7B, L1.7C-0, L1.7C, L1.7D, and L2.0 establish the companion-set contract, shared skill-map architecture, game-row quality rubric, and landing-page information architecture.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "EX-3",
+          "name": "Exam Coverage Dashboard",
+          "completed": "yes",
+          "currentState": "Completed as a reporting-only dashboard sprint. Added generated `reports/json/exam-ingestion-coverage.json` and `reports/markdown/exam-ingestion-coverage.md`, plus `build-scripts/references/check-exam-ingestion-coverage.js`, report-contract wiring, and reference-health summary fields. The report records 3 EX-1 pilot items, 8 reviewed GATE-EX2 classifications, 2 blocking q19 gaps, q3 `A61` support with stale/weak `A15`, q19 `A42`/`D10` support with weak `A45`, q3/q15 `answer_skill_need`, and q19 blocked lesson-handoff status. No protected mutation, external-source mutation, unit minting, operation-registry mutation, answer-skill mutation, target-exercise promotion, lesson-output mutation, CP-6 closure, Year-1 closure, diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student-facing output was authorized.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -1547,8 +1547,8 @@
           "roadmap": "References roadmap"
         }
       ],
-      "completedCount": 81,
-      "openCount": 11
+      "completedCount": 82,
+      "openCount": 10
     },
     {
       "id": "lessen",

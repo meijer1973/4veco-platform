@@ -1,6 +1,6 @@
 # Reference Health
 
-Generated: 2026-05-22T12:45:44.748Z
+Generated: 2026-05-22T18:50:42.010Z
 
 ## Unit Counts
 
@@ -18,9 +18,9 @@ Generated: 2026-05-22T12:45:44.748Z
 
 ## QC Findings
 
-- Reports: 17
-- Total issues: 712
-- High/critical issues: 14
+- Reports: 18
+- Total issues: 728
+- High/critical issues: 16
 
 ## Quality Issue Model
 
@@ -76,6 +76,18 @@ Generated: 2026-05-22T12:45:44.748Z
 - Interactive units: 44
 - Generator-blocked units: 37
 - Untracked missing generators: 0
+
+## Exam Ingestion Coverage
+
+- Status: warn
+- Pilot items: 3
+- Reviewed classifications: 8
+- Blocking gaps: 2
+- Blocked items: 1
+- Answer-skill needs: 2
+- Operation-registry needs: 2
+- Protected reference mutation authorized: false
+- Student-facing output authorized: false
 
 ## Retrieval Evaluation
 

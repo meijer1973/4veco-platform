@@ -33,6 +33,7 @@ function main() {
     'unit_design_status',
     'procedure_visual_backbone',
     'skilltree_generator_readiness',
+    'exam_ingestion_coverage',
     'schema_validation_status',
     'alignment_graph_status',
     'r5_3_gate_status',
@@ -118,6 +119,22 @@ function main() {
   if (!(skilltree.generator_blocked_count >= 1)) errors.push('skilltree_generator_readiness.generator_blocked_count must be at least 1');
   if (skilltree.untracked_missing_generator_count !== 0) errors.push('skilltree_generator_readiness.untracked_missing_generator_count must be 0');
   if (skilltree.blocked_interactive_leak_count !== 0) errors.push('skilltree_generator_readiness.blocked_interactive_leak_count must be 0');
+
+  const examIngestion = data.exam_ingestion_coverage || {};
+  if (!(examIngestion.pilot_item_count >= 3)) errors.push('exam_ingestion_coverage.pilot_item_count must be at least 3');
+  if (!(examIngestion.reviewed_classification_count >= 8)) errors.push('exam_ingestion_coverage.reviewed_classification_count must be at least 8');
+  if (!(examIngestion.blocking_gap_count >= 2)) errors.push('exam_ingestion_coverage.blocking_gap_count must be at least 2');
+  if (!(examIngestion.blocked_item_count >= 1)) errors.push('exam_ingestion_coverage.blocked_item_count must be at least 1');
+  if (!(examIngestion.answer_skill_need_count >= 2)) errors.push('exam_ingestion_coverage.answer_skill_need_count must be at least 2');
+  if (!(examIngestion.operation_registry_need_count >= 2)) errors.push('exam_ingestion_coverage.operation_registry_need_count must be at least 2');
+  if (examIngestion.all_product_boundaries_false !== true) errors.push('exam_ingestion_coverage.all_product_boundaries_false must be true');
+  if (examIngestion.protected_reference_mutation_authorized !== false) errors.push('exam_ingestion_coverage.protected_reference_mutation_authorized must be false');
+  if (examIngestion.external_source_mutation_authorized !== false) errors.push('exam_ingestion_coverage.external_source_mutation_authorized must be false');
+  if (examIngestion.unit_minting_authorized !== false) errors.push('exam_ingestion_coverage.unit_minting_authorized must be false');
+  if (examIngestion.operation_registry_mutation_authorized !== false) errors.push('exam_ingestion_coverage.operation_registry_mutation_authorized must be false');
+  if (examIngestion.answer_skill_mutation_authorized !== false) errors.push('exam_ingestion_coverage.answer_skill_mutation_authorized must be false');
+  if (examIngestion.lesson_output_mutation_authorized !== false) errors.push('exam_ingestion_coverage.lesson_output_mutation_authorized must be false');
+  if (examIngestion.student_facing_output_authorized !== false) errors.push('exam_ingestion_coverage.student_facing_output_authorized must be false');
 
   for (const blocked of ['student_diagnostics', 'adaptive_routing', 'student_facing_ai']) {
     if (!Array.isArray(data.blocked_downstream_uses) || !data.blocked_downstream_uses.includes(blocked)) {
