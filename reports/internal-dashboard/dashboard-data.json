@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-23T06:57:53.855Z",
+  "generatedAt": "2026-05-23T07:19:00.612Z",
   "internalOnly": true,
   "teams": [
     {
@@ -160,7 +160,7 @@
           "generated": "2026-04-23",
           "updated": "",
           "scope": "`references/`, `build-scripts/references/`, `build-scripts/reports/`, reference dashboards, and generated reference reports under `reports/`",
-          "summary": "References Team Roadmap Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Last strategic update: 2026-05-23 Roadmap ID: references-team-roadmap Roadmap version: v2.69-gate-ex4-pass-with-conditions Roadmap status: active Version index: docs/roadmaps/roadmap-version-index.json Scope: references/, build-scripts/references/, build-scripts/reports/, reference dashboards, and generated reference reports under reports/ Exam Ingestion North Star The long-term reference-platform goal is that a new official CvTE econom...",
+          "summary": "References Team Roadmap Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Last strategic update: 2026-05-23 Roadmap ID: references-team-roadmap Roadmap version: v2.70-l17a-readiness-decision Roadmap status: active Version index: docs/roadmaps/roadmap-version-index.json Scope: references/, build-scripts/references/, build-scripts/reports/, reference dashboards, and generated reference reports under reports/ Exam Ingestion North Star The long-term reference-platform goal is that a new official CvTE economics ex...",
           "sprints": [
             {
               "sprint": "EX-5",
@@ -173,7 +173,7 @@
               "sprint": "LESSON-SCALE-1",
               "name": "Lesson Companion Pre-Scale Gates Tracking",
               "completed": "no",
-              "currentState": "**TRACKING DEPENDENCY, NOT A REFERENCE EXECUTION SPRINT.** Lesson roadmap now requires L1.7A, L1.7B, L1.7C-0, L1.7C, L1.7D, and L2.0 before broad companion scaling: scaling-readiness review, exit-ticket/companion-completion contract, shared skill-map engine contract, three-aspect game quality upgrade, landing-page information architecture cleanup, and Book 1 house-style burn-down. Reference/product planning must not treat the lesson companion pipeline as scale-approved until those lesson-side gates exist and preserve blocks on diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, and PV machine promotion.",
+              "currentState": "**TRACKING DEPENDENCY, NOT A REFERENCE EXECUTION SPRINT.** Lesson L1.7A closed PASS WITH FLAGS and rejected broad companion scaling. Lesson roadmap still requires L1.7B, L1.7C-0, L1.7C, L1.7D, and L2.0 before any Scale Gate: exit-ticket/companion-completion contract, shared skill-map engine contract, three-aspect game quality upgrade, landing-page information architecture cleanup, and Book 1 house-style burn-down. Reference/product planning must not treat the lesson companion pipeline as scale-approved until those lesson-side gates exist and preserve blocks on diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, and PV machine promotion.",
               "exitGate": ""
             },
             {
@@ -229,7 +229,7 @@
               "sprint": "Product Gate",
               "name": "Re-Evaluate R10-R13 Product Surfaces",
               "completed": "no",
-              "currentState": "Blocked. Diagnostics, adaptive routing, student-facing AI, teacher cockpit deployment, automatic sequencing, mastery, and summative uses remain out of scope until data-quality gates justify them. Broad lesson-companion scaling also remains blocked until lesson L1.7A, L1.7B, L1.7C-0, L1.7C, L1.7D, and L2.0 establish the companion-set contract, shared skill-map architecture, game-row quality rubric, and landing-page information architecture.",
+              "currentState": "Blocked. Diagnostics, adaptive routing, student-facing AI, teacher cockpit deployment, automatic sequencing, mastery, and summative uses remain out of scope until data-quality gates justify them. Lesson L1.7A explicitly rejected broad companion scaling; broad lesson-companion scaling remains blocked until L1.7B, L1.7C-0, L1.7C, L1.7D, and L2.0 establish the companion-set contract, shared skill-map architecture, game-row quality rubric, and landing-page information architecture.",
               "exitGate": ""
             },
             {
@@ -836,7 +836,7 @@
           "sprint": "LESSON-SCALE-1",
           "name": "Lesson Companion Pre-Scale Gates Tracking",
           "completed": "no",
-          "currentState": "**TRACKING DEPENDENCY, NOT A REFERENCE EXECUTION SPRINT.** Lesson roadmap now requires L1.7A, L1.7B, L1.7C-0, L1.7C, L1.7D, and L2.0 before broad companion scaling: scaling-readiness review, exit-ticket/companion-completion contract, shared skill-map engine contract, three-aspect game quality upgrade, landing-page information architecture cleanup, and Book 1 house-style burn-down. Reference/product planning must not treat the lesson companion pipeline as scale-approved until those lesson-side gates exist and preserve blocks on diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, and PV machine promotion.",
+          "currentState": "**TRACKING DEPENDENCY, NOT A REFERENCE EXECUTION SPRINT.** Lesson L1.7A closed PASS WITH FLAGS and rejected broad companion scaling. Lesson roadmap still requires L1.7B, L1.7C-0, L1.7C, L1.7D, and L2.0 before any Scale Gate: exit-ticket/companion-completion contract, shared skill-map engine contract, three-aspect game quality upgrade, landing-page information architecture cleanup, and Book 1 house-style burn-down. Reference/product planning must not treat the lesson companion pipeline as scale-approved until those lesson-side gates exist and preserve blocks on diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, and PV machine promotion.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -900,7 +900,7 @@
           "sprint": "Product Gate",
           "name": "Re-Evaluate R10-R13 Product Surfaces",
           "completed": "no",
-          "currentState": "Blocked. Diagnostics, adaptive routing, student-facing AI, teacher cockpit deployment, automatic sequencing, mastery, and summative uses remain out of scope until data-quality gates justify them. Broad lesson-companion scaling also remains blocked until lesson L1.7A, L1.7B, L1.7C-0, L1.7C, L1.7D, and L2.0 establish the companion-set contract, shared skill-map architecture, game-row quality rubric, and landing-page information architecture.",
+          "currentState": "Blocked. Diagnostics, adaptive routing, student-facing AI, teacher cockpit deployment, automatic sequencing, mastery, and summative uses remain out of scope until data-quality gates justify them. Lesson L1.7A explicitly rejected broad companion scaling; broad lesson-companion scaling remains blocked until L1.7B, L1.7C-0, L1.7C, L1.7D, and L2.0 establish the companion-set contract, shared skill-map architecture, game-row quality rubric, and landing-page information architecture.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -1597,17 +1597,10 @@
           "summary": "Sprint 0.5 is signed off for Part A textbook/book production.",
           "sprints": [
             {
-              "sprint": "L1.7A",
-              "name": "Scaling Readiness And Modality Gate Review",
-              "completed": "no",
-              "currentState": "**ACTIVE / FOUNDATION-HARDENING DECISION SPRINT.** Replaces the old `L1.7 Post-Layout Scaling Decision` framing. Do not treat L1.6 or L1.6R as broad-scaling approval. Build a readiness matrix for Part A, landing pages, procedure contracts, semantic visual adequacy, presentation-v2, begeleide inoefening, graphical game, inert adaptive seam, target exercises, and PV/A61 boundaries. Classify flags as fix-now / carry-forward / defer. Expected decision: controlled next-step production may continue only if modality gates stay explicit; broad paragraph scaling remains paused until quality gates are cleaner.",
-              "exitGate": ""
-            },
-            {
               "sprint": "L1.7B",
               "name": "Exit Ticket Game MVP + Companion Completion Contract",
               "completed": "no",
-              "currentState": "**NEW / REQUIRED BEFORE SCALE GATE.** Inventory the existing exit-ticket prototype, including the current local untracked candidate `../4veco-platform/knowledge/exit-ticket-game-1.1.1.zip`, and decide whether it becomes the final companion-set completion surface. If no repository-tracked prototype exists, record that as a source-control gap before implementation. Define the complete paragraph companion set: preparation, explanation, guided practice, three-aspect games, summary/news/presentation, textbook/download surfaces, and exit ticket. Build a narrow non-summative retrieval/checkpoint MVP on one already-built paragraph. The exit ticket should consume the shared skill-map engine from L1.7C-0 in compact checkpoint mode: it may show which paragraph target skills were touched and suggest which practice game to use next, but it must not authorize grading, mastery, diagnostics, adaptive routing, sequencing, AI, summative use, PV projection, or PV machine promotion. Require student-experience and teacher-learning-quality review before adding exit ticket to the scalable paragraph contract.",
+              "currentState": "**ACTIVE / REQUIRED BEFORE SCALE GATE.** L1.7A rejected broad companion scaling and selected this as the next foundation-hardening sprint. Inventory the existing exit-ticket prototype, including the current local untracked candidate `../4veco-platform/knowledge/exit-ticket-game-1.1.1.zip`, and decide whether it becomes the final companion-set completion surface. If no repository-tracked prototype exists, record that as a source-control gap before implementation. Define the complete paragraph companion set: preparation, explanation, guided practice, three-aspect games, summary/news/presentation, textbook/download surfaces, and exit ticket. Build a narrow non-summative retrieval/checkpoint MVP on one already-built paragraph. The exit ticket should consume the shared skill-map engine from L1.7C-0 in compact checkpoint mode: it may show which paragraph target skills were touched and suggest which practice game to use next, but it must not authorize grading, mastery, diagnostics, adaptive routing, sequencing, AI, summative use, PV projection, or PV machine promotion. Require student-experience and teacher-learning-quality review before adding exit ticket to the scalable paragraph contract.",
               "exitGate": ""
             },
             {
@@ -1650,6 +1643,13 @@
               "name": "Exam-Target Paragraph Pilot",
               "completed": "no",
               "currentState": "**FUTURE CONTROLLED PILOT.** Build one paragraph around a real official exam question using platform exam-ingestion data, source annexes, answer-model decomposition, MTU mapping, and companion visual/answer-model gates. No broad companion scaling or generated-output hand patching.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "L1.7A",
+              "name": "Scaling Readiness And Modality Gate Review",
+              "completed": "yes",
+              "currentState": "**CLOSED PASS WITH FLAGS.** Decision sprint, not production. Green current gates: `1.1.1`/`1.1.2`/`1.1.3` complete student-web validation, the same three Part A publisher-print validations, procedure-contract validation 341 checks, Book 1 health 26/26, print scope 12/12, and v5 target-exercise count 54 with 12/12/14/16. Decision: broad companion scaling is rejected. Controlled foundation hardening may continue through L1.7B, L1.7C-0, L1.7C, L1.7D, L2.0, then Scale Gate 1. Records: `archive/sprints/L1.7A/L1.7A-sprint-plan.md`, `archive/sprints/L1.7A/L1.7A-evidence-inventory.md`, `archive/sprints/L1.7A/L1.7A-readiness-matrix.md`, `archive/sprints/L1.7A/L1.7A-flag-triage.md`, `archive/sprints/L1.7A/L1.7A-decision-record.md`, `archive/sprints/L1.7A/L1.7A-validation-log.md`, `archive/sprints/L1.7A/L1.7A-closure-log.md`.",
               "exitGate": ""
             },
             {
@@ -1909,18 +1909,10 @@
       ],
       "sprints": [
         {
-          "sprint": "L1.7A",
-          "name": "Scaling Readiness And Modality Gate Review",
-          "completed": "no",
-          "currentState": "**ACTIVE / FOUNDATION-HARDENING DECISION SPRINT.** Replaces the old `L1.7 Post-Layout Scaling Decision` framing. Do not treat L1.6 or L1.6R as broad-scaling approval. Build a readiness matrix for Part A, landing pages, procedure contracts, semantic visual adequacy, presentation-v2, begeleide inoefening, graphical game, inert adaptive seam, target exercises, and PV/A61 boundaries. Classify flags as fix-now / carry-forward / defer. Expected decision: controlled next-step production may continue only if modality gates stay explicit; broad paragraph scaling remains paused until quality gates are cleaner.",
-          "exitGate": "",
-          "roadmap": "Lessen roadmap"
-        },
-        {
           "sprint": "L1.7B",
           "name": "Exit Ticket Game MVP + Companion Completion Contract",
           "completed": "no",
-          "currentState": "**NEW / REQUIRED BEFORE SCALE GATE.** Inventory the existing exit-ticket prototype, including the current local untracked candidate `../4veco-platform/knowledge/exit-ticket-game-1.1.1.zip`, and decide whether it becomes the final companion-set completion surface. If no repository-tracked prototype exists, record that as a source-control gap before implementation. Define the complete paragraph companion set: preparation, explanation, guided practice, three-aspect games, summary/news/presentation, textbook/download surfaces, and exit ticket. Build a narrow non-summative retrieval/checkpoint MVP on one already-built paragraph. The exit ticket should consume the shared skill-map engine from L1.7C-0 in compact checkpoint mode: it may show which paragraph target skills were touched and suggest which practice game to use next, but it must not authorize grading, mastery, diagnostics, adaptive routing, sequencing, AI, summative use, PV projection, or PV machine promotion. Require student-experience and teacher-learning-quality review before adding exit ticket to the scalable paragraph contract.",
+          "currentState": "**ACTIVE / REQUIRED BEFORE SCALE GATE.** L1.7A rejected broad companion scaling and selected this as the next foundation-hardening sprint. Inventory the existing exit-ticket prototype, including the current local untracked candidate `../4veco-platform/knowledge/exit-ticket-game-1.1.1.zip`, and decide whether it becomes the final companion-set completion surface. If no repository-tracked prototype exists, record that as a source-control gap before implementation. Define the complete paragraph companion set: preparation, explanation, guided practice, three-aspect games, summary/news/presentation, textbook/download surfaces, and exit ticket. Build a narrow non-summative retrieval/checkpoint MVP on one already-built paragraph. The exit ticket should consume the shared skill-map engine from L1.7C-0 in compact checkpoint mode: it may show which paragraph target skills were touched and suggest which practice game to use next, but it must not authorize grading, mastery, diagnostics, adaptive routing, sequencing, AI, summative use, PV projection, or PV machine promotion. Require student-experience and teacher-learning-quality review before adding exit ticket to the scalable paragraph contract.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
@@ -2057,6 +2049,14 @@
           "name": "Green Gate Handoff",
           "completed": "no",
           "currentState": "",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "L1.7A",
+          "name": "Scaling Readiness And Modality Gate Review",
+          "completed": "yes",
+          "currentState": "**CLOSED PASS WITH FLAGS.** Decision sprint, not production. Green current gates: `1.1.1`/`1.1.2`/`1.1.3` complete student-web validation, the same three Part A publisher-print validations, procedure-contract validation 341 checks, Book 1 health 26/26, print scope 12/12, and v5 target-exercise count 54 with 12/12/14/16. Decision: broad companion scaling is rejected. Controlled foundation hardening may continue through L1.7B, L1.7C-0, L1.7C, L1.7D, L2.0, then Scale Gate 1. Records: `archive/sprints/L1.7A/L1.7A-sprint-plan.md`, `archive/sprints/L1.7A/L1.7A-evidence-inventory.md`, `archive/sprints/L1.7A/L1.7A-readiness-matrix.md`, `archive/sprints/L1.7A/L1.7A-flag-triage.md`, `archive/sprints/L1.7A/L1.7A-decision-record.md`, `archive/sprints/L1.7A/L1.7A-validation-log.md`, `archive/sprints/L1.7A/L1.7A-closure-log.md`.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
@@ -2261,8 +2261,8 @@
           "roadmap": "Lessen roadmap"
         }
       ],
-      "completedCount": 25,
-      "openCount": 19
+      "completedCount": 26,
+      "openCount": 18
     },
     {
       "id": "innovation",

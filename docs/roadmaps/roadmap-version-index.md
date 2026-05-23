@@ -12,12 +12,13 @@ docs/roadmaps/roadmap-version-index.json
 
 | Roadmap | Version | Path | Notes |
 |---|---|---|---|
-| References Team Roadmap | `v2.69-gate-ex4-pass-with-conditions` | `references/reference-team-roadmap.md` | Current operating roadmap after closing GATE-EX4 as pass_with_conditions for routing/design only and moving EX-5 to active tooling/design; q19 source/graph gaps, q3/q15 answer-skill needs, and all no-mutation/student-use boundaries remain visible. |
+| References Team Roadmap | `v2.70-l17a-readiness-decision` | `references/reference-team-roadmap.md` | Current operating roadmap after lesson L1.7A closed PASS WITH FLAGS and rejected broad companion scaling; EX-5 remains active tooling/design and lesson-side L1.7B/L1.7C-0/L1.7C/L1.7D/L2.0 remain required before any scale gate. |
 
 ## Outdated Archive
 
 | Roadmap | Version | Path | Superseded By |
 |---|---|---|---|
+| References Team Roadmap before L1.7A readiness decision | `v2.69-gate-ex4-pass-with-conditions` | `docs/roadmaps/outdated/reference-team-roadmap-v2.69-gate-ex4-pass-with-conditions.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before GATE-EX4 closure | `v2.68-ex4-mutation-planning-packet` | `docs/roadmaps/outdated/reference-team-roadmap-v2.68-ex4-mutation-planning-packet.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before EX-4 mutation-planning packet | `v2.67-ex3-exam-coverage-dashboard` | `docs/roadmaps/outdated/reference-team-roadmap-v2.67-ex3-exam-coverage-dashboard.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before EX-3 exam coverage dashboard closure | `v2.66-shared-skill-map-engine-tracking` | `docs/roadmaps/outdated/reference-team-roadmap-v2.66-shared-skill-map-engine-tracking.md` | `references/reference-team-roadmap.md` |

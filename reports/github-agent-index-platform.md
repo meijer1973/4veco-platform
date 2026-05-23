@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-05-23T06:57:53.893Z
+Generated: 2026-05-23T07:19:00.952Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 1667
+Files indexed: 1672
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -831,7 +831,7 @@ Count: 287
 
 ## reports
 
-Count: 764
+Count: 768
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1078,6 +1078,10 @@ Count: 764
 - reports/review-gates/GATE-EX4-mutation-planning/bundle-urls.md
 - reports/review-gates/GATE-EX4-mutation-planning/cli-readiness-plan.json
 - reports/review-gates/GATE-EX4-mutation-planning/cli-readiness-plan.md
+- reports/review-gates/GATE-EX4-mutation-planning/gate-closure.json
+- reports/review-gates/GATE-EX4-mutation-planning/gate-closure.md
+- reports/review-gates/GATE-EX4-mutation-planning/human-interview.json
+- reports/review-gates/GATE-EX4-mutation-planning/human-interview.md
 - reports/review-gates/GATE-EX4-mutation-planning/mutation-candidates.json
 - reports/review-gates/GATE-EX4-mutation-planning/mutation-candidates.md
 - reports/review-gates/GATE-EX4-mutation-planning/review-packet.json
@@ -1618,7 +1622,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 213
+Count: 214
 
 - .gitignore
 - BUILD-CHAPTER.md
@@ -1688,6 +1692,7 @@ Count: 213
 - docs/roadmaps/outdated/reference-team-roadmap-v2.65-lesson-companion-pre-scale-gates.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.66-shared-skill-map-engine-tracking.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.67-ex3-exam-coverage-dashboard.md
+- docs/roadmaps/outdated/reference-team-roadmap-v2.68-ex4-mutation-planning-packet.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.7-cp3-closed.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.8-s4.1-conditions-calibrated.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.9-rx1-inventory-prepared.md

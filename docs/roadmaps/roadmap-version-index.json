@@ -15,13 +15,14 @@
   "roadmaps": [
     {
       "roadmap_id": "references-team-roadmap",
-      "version": "v2.69-gate-ex4-pass-with-conditions",
+      "version": "v2.70-l17a-readiness-decision",
       "title": "References Team Roadmap",
       "status": "active",
       "path": "references/reference-team-roadmap.md",
       "owner": "references_team",
       "updated_on": "2026-05-23",
       "supersedes": [
+        "docs/roadmaps/outdated/reference-team-roadmap-v2.69-gate-ex4-pass-with-conditions.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.68-ex4-mutation-planning-packet.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.67-ex3-exam-coverage-dashboard.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.66-shared-skill-map-engine-tracking.md",
@@ -90,7 +91,18 @@
         "knowledge/Exercise schema and quality/reference-team-roadmap Live version 28 April.md",
         "knowledge/Exercise schema and quality/roadmap-updated-repository-checked.md"
       ],
-      "notes": "Current operating roadmap after closing GATE-EX4 as pass_with_conditions for routing/design only and moving EX-5 to active tooling/design; q19 source/graph gaps, q3/q15 answer-skill needs, and all no-mutation/student-use boundaries remain visible."
+      "notes": "Current operating roadmap after lesson L1.7A closed PASS WITH FLAGS and rejected broad companion scaling; EX-5 remains active tooling/design and lesson-side L1.7B/L1.7C-0/L1.7C/L1.7D/L2.0 remain required before any scale gate."
+    },
+    {
+      "roadmap_id": "references-team-roadmap-v2.69",
+      "version": "v2.69-gate-ex4-pass-with-conditions",
+      "title": "References Team Roadmap before L1.7A readiness decision",
+      "status": "outdated",
+      "path": "docs/roadmaps/outdated/reference-team-roadmap-v2.69-gate-ex4-pass-with-conditions.md",
+      "owner": "references_team",
+      "updated_on": "2026-05-23",
+      "superseded_by": "references/reference-team-roadmap.md",
+      "notes": "Snapshot archived before the reference roadmap recorded lesson L1.7A closure and the explicit no-broad-scaling readiness decision."
     },
     {
       "roadmap_id": "references-team-roadmap-v2.68",
