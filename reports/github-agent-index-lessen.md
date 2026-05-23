@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-lessen
 
-Generated: 2026-05-23T07:19:00.984Z
+Generated: 2026-05-23T07:43:21.451Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-lessen`
-Files indexed: 1352
+Files indexed: 1359
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -81,9 +81,9 @@ _No files indexed in this group._
 
 ## validators
 
-Count: 0
+Count: 1
 
-_No files indexed in this group._
+- archive/sprints/L1.7A/L1.7A-validation-log.md
 
 ## references
 
@@ -2389,7 +2389,7 @@ Count: 817
 
 ## other
 
-Count: 238
+Count: 244
 
 - _team-b-reference/1.1.1/uitleg vaardigheden team b.html
 - _team-b-reference/1.1.1/uitleg voorkennis team b.html
@@ -2609,6 +2609,12 @@ Count: 238
 - archive/sprints/L1.6R/L1.6R-student-experience-review.md
 - archive/sprints/L1.6R/L1.6R-teacher-learning-quality-review.md
 - archive/sprints/L1.6R/L1.6R-technical-qa-report.md
+- archive/sprints/L1.7A/L1.7A-closure-log.md
+- archive/sprints/L1.7A/L1.7A-decision-record.md
+- archive/sprints/L1.7A/L1.7A-evidence-inventory.md
+- archive/sprints/L1.7A/L1.7A-flag-triage.md
+- archive/sprints/L1.7A/L1.7A-readiness-matrix.md
+- archive/sprints/L1.7A/L1.7A-sprint-plan.md
 - archive/sprints/SYNC-1/SYNC-1-roadmap-reconciliation-log.md
 - archive/sprints/SYNC-2/SYNC-2-companion-pre-scale-roadmap-update.md
 - archive/sprints/SYNC-3/SYNC-3-shared-skill-map-roadmap-update.md

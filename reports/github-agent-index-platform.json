@@ -2,8 +2,8 @@
   "repo": "4veco-platform",
   "root": "C:\\Projects\\4veco\\4veco-platform",
   "available": true,
-  "generated_at": "2026-05-23T07:19:00.952Z",
-  "file_count": 1672,
+  "generated_at": "2026-05-23T07:43:21.415Z",
+  "file_count": 1673,
   "inventory_scope": "git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees",
   "skipped_directories": [
     ".cache",
@@ -1661,6 +1661,7 @@
       "docs/roadmaps/outdated/reference-team-roadmap-v2.66-shared-skill-map-engine-tracking.md",
       "docs/roadmaps/outdated/reference-team-roadmap-v2.67-ex3-exam-coverage-dashboard.md",
       "docs/roadmaps/outdated/reference-team-roadmap-v2.68-ex4-mutation-planning-packet.md",
+      "docs/roadmaps/outdated/reference-team-roadmap-v2.69-gate-ex4-pass-with-conditions.md",
       "docs/roadmaps/outdated/reference-team-roadmap-v2.7-cp3-closed.md",
       "docs/roadmaps/outdated/reference-team-roadmap-v2.8-s4.1-conditions-calibrated.md",
       "docs/roadmaps/outdated/reference-team-roadmap-v2.9-rx1-inventory-prepared.md",

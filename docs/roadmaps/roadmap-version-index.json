@@ -15,13 +15,14 @@
   "roadmaps": [
     {
       "roadmap_id": "references-team-roadmap",
-      "version": "v2.70-l17a-readiness-decision",
+      "version": "v2.71-l17b-contract-stop",
       "title": "References Team Roadmap",
       "status": "active",
       "path": "references/reference-team-roadmap.md",
       "owner": "references_team",
       "updated_on": "2026-05-23",
       "supersedes": [
+        "docs/roadmaps/outdated/reference-team-roadmap-v2.70-l17a-readiness-decision.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.69-gate-ex4-pass-with-conditions.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.68-ex4-mutation-planning-packet.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.67-ex3-exam-coverage-dashboard.md",
@@ -91,7 +92,18 @@
         "knowledge/Exercise schema and quality/reference-team-roadmap Live version 28 April.md",
         "knowledge/Exercise schema and quality/roadmap-updated-repository-checked.md"
       ],
-      "notes": "Current operating roadmap after lesson L1.7A closed PASS WITH FLAGS and rejected broad companion scaling; EX-5 remains active tooling/design and lesson-side L1.7B/L1.7C-0/L1.7C/L1.7D/L2.0 remain required before any scale gate."
+      "notes": "Current operating roadmap after lesson L1.7B recorded the exit-ticket companion contract and paused MVP implementation behind source-control, product-boundary, and shared-skill-map blockers; EX-5 remains active tooling/design and lesson-side L1.7C-0/L1.7C/L1.7D/L2.0 plus a resumed boundary-safe exit-ticket MVP remain required before any scale gate."
+    },
+    {
+      "roadmap_id": "references-team-roadmap-v2.70",
+      "version": "v2.70-l17a-readiness-decision",
+      "title": "References Team Roadmap before L1.7B contract-and-stop decision",
+      "status": "outdated",
+      "path": "docs/roadmaps/outdated/reference-team-roadmap-v2.70-l17a-readiness-decision.md",
+      "owner": "references_team",
+      "updated_on": "2026-05-23",
+      "superseded_by": "references/reference-team-roadmap.md",
+      "notes": "Snapshot archived before the reference roadmap recorded lesson L1.7B's exit-ticket companion contract, prototype source-control/product-boundary stop decision, and L1.7C-0 as the active lesson dependency."
     },
     {
       "roadmap_id": "references-team-roadmap-v2.69",
