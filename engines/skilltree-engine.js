@@ -37,6 +37,16 @@
         '1.1.1','1.1.2','1.1.3'
     ];
 
+    function loadSkillMapEngine() {
+        if (typeof globalThis !== 'undefined' && globalThis.SkillMapEngine) {
+            return globalThis.SkillMapEngine;
+        }
+        if (typeof require === 'function') {
+            try { return require('./skill-map-engine'); } catch (e) { return null; }
+        }
+        return null;
+    }
+
     function readAdaptivePayload(paragraphId, storage) {
         var seam = null;
         if (typeof globalThis !== 'undefined' && globalThis.AdaptiveSeam) {
@@ -72,6 +82,7 @@
         this._data = config.data || { parNr: 'unknown', activeSkills: null };
         this._explanations = config.explanations || {};
         this._storage = config.storage || (typeof localStorage !== 'undefined' ? localStorage : null);
+        this._SkillMapEngine = config.SkillMapEngine || loadSkillMapEngine();
         this.adaptivePayload = readAdaptivePayload(
             this._data.parNr,
             config.adaptiveStorage || this._storage
@@ -127,7 +138,9 @@
                     id: s.id,
                     name: s.name,
                     layer: s.layer,
-                    needs: filteredNeeds
+                    needs: filteredNeeds,
+                    aspects: Array.isArray(s.aspects) ? s.aspects.slice() : [],
+                    desc: s.desc || ''
                 });
             }
         }
@@ -135,7 +148,24 @@
     };
 
     SkillTreeEngine.prototype._computeVisibleSkills = function () {
+        if (this._data.activeSkills === null && this._data.skillMapDefaults) {
+            var defaultSkills = this._computeDefaultSkillMapSkills();
+            if (defaultSkills) return defaultSkills;
+        }
         return this._filterSkills(this._data.activeSkills);
+    };
+
+    SkillTreeEngine.prototype._computeDefaultSkillMapSkills = function () {
+        if (!this._SkillMapEngine) return null;
+        if (this._data.skillMapDefaults && this._data.skillMapDefaults.mode === 'full') return null;
+        var skillMap = new this._SkillMapEngine({
+            elements: this._elements,
+            data: this._data,
+            stars: {}
+        });
+        var view = skillMap.buildView(this._data.skillMapDefaults || {});
+        if (!view || !Array.isArray(view.visibleSkills) || view.visibleSkills.length === 0) return null;
+        return this._filterSkills(view.visibleSkills.map(function (skill) { return skill.id; }));
     };
 
     SkillTreeEngine.prototype._computeChapterSkills = function () {
@@ -264,6 +294,16 @@
 
     SkillTreeEngine.prototype.getAllSkills = function () {
         return this._elements.SKILLS;
+    };
+
+    SkillTreeEngine.prototype.getSkillMapView = function (request) {
+        if (!this._SkillMapEngine) return null;
+        var skillMap = new this._SkillMapEngine({
+            elements: this._elements,
+            data: this._data,
+            stars: this.getStars()
+        });
+        return skillMap.buildView(request || this._data.skillMapDefaults || {});
     };
 
     SkillTreeEngine.prototype.getLayerNames = function () {

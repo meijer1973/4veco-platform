@@ -2,8 +2,8 @@
   "repo": "4veco-platform",
   "root": "C:\\Projects\\4veco\\4veco-platform",
   "available": true,
-  "generated_at": "2026-05-23T08:11:34.587Z",
-  "file_count": 1674,
+  "generated_at": "2026-05-23T08:34:51.202Z",
+  "file_count": 1675,
   "inventory_scope": "git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees",
   "skipped_directories": [
     ".cache",
@@ -1664,6 +1664,7 @@
       "docs/roadmaps/outdated/reference-team-roadmap-v2.69-gate-ex4-pass-with-conditions.md",
       "docs/roadmaps/outdated/reference-team-roadmap-v2.7-cp3-closed.md",
       "docs/roadmaps/outdated/reference-team-roadmap-v2.70-l17a-readiness-decision.md",
+      "docs/roadmaps/outdated/reference-team-roadmap-v2.71-l17b-contract-stop.md",
       "docs/roadmaps/outdated/reference-team-roadmap-v2.8-s4.1-conditions-calibrated.md",
       "docs/roadmaps/outdated/reference-team-roadmap-v2.9-rx1-inventory-prepared.md",
       "docs/roadmaps/README.md",

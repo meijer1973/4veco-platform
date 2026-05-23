@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-lessen
 
-Generated: 2026-05-23T08:11:34.616Z
+Generated: 2026-05-23T08:34:51.229Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-lessen`
-Files indexed: 1365
+Files indexed: 1371
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -81,10 +81,11 @@ _No files indexed in this group._
 
 ## validators
 
-Count: 2
+Count: 3
 
 - archive/sprints/L1.7A/L1.7A-validation-log.md
 - archive/sprints/L1.7B/L1.7B-validation-log.md
+- archive/sprints/L1.7C-0/L1.7C-0-validation-log.md
 
 ## references
 
@@ -2390,7 +2391,7 @@ Count: 817
 
 ## other
 
-Count: 249
+Count: 254
 
 - _team-b-reference/1.1.1/uitleg vaardigheden team b.html
 - _team-b-reference/1.1.1/uitleg voorkennis team b.html
@@ -2621,6 +2622,11 @@ Count: 249
 - archive/sprints/L1.7B/L1.7B-prototype-inventory.md
 - archive/sprints/L1.7B/L1.7B-sprint-plan.md
 - archive/sprints/L1.7B/L1.7B-stop-decision.md
+- archive/sprints/L1.7C-0/L1.7C-0-closure-log.md
+- archive/sprints/L1.7C-0/L1.7C-0-current-state-audit.md
+- archive/sprints/L1.7C-0/L1.7C-0-handoff-to-platform.md
+- archive/sprints/L1.7C-0/L1.7C-0-shared-skill-map-contract.md
+- archive/sprints/L1.7C-0/L1.7C-0-sprint-plan.md
 - archive/sprints/SYNC-1/SYNC-1-roadmap-reconciliation-log.md
 - archive/sprints/SYNC-2/SYNC-2-companion-pre-scale-roadmap-update.md
 - archive/sprints/SYNC-3/SYNC-3-shared-skill-map-roadmap-update.md

@@ -1,0 +1,144 @@
+{
+  "schema_version": 1,
+  "sprint_id": "GAME-UX-1",
+  "title": "Shared Skill-Map Engine Architecture",
+  "status": "completed",
+  "completed_on": "2026-05-23",
+  "plan": "reports/sprints/GAME-UX-1-plan.md",
+  "baseline": "reports/sprints/GAME-UX-1-baseline.md",
+  "planning_review": "reports/sprints/GAME-UX-1-planning-review.md",
+  "result": "reports/sprints/GAME-UX-1-result.md",
+  "diff_summary": "reports/sprints/GAME-UX-1-diff-summary.md",
+  "protected_reference_data_changed": false,
+  "external_source_mutation_authorized": false,
+  "machine_reference_mutation_authorized": false,
+  "unit_minting_authorized": false,
+  "target_exercise_promotion_authorized": false,
+  "lesson_output_mutation_authorized": false,
+  "exit_ticket_prototype_import_authorized": false,
+  "cp6_closure_authorized": false,
+  "year1_closure_authorized": false,
+  "student_product_use_authorized": false,
+  "outputs": [
+    "engines/skill-map-engine.js",
+    "engines/skilltree/base-elements.js",
+    "engines/skilltree-engine.js",
+    "engines/skilltree-ui.js",
+    "engines/reasoning-engine.js",
+    "engines/procedure-engine.js",
+    "engines/graphical-engine.js",
+    "scripts/deploy.js",
+    "build-scripts/platform/build-skilltree-shells.js",
+    "build-scripts/sprints/check-sprint-bundle.js",
+    "engines/tests/skill-map-engine.test.js",
+    "engines/tests/skilltree-visible-copy.test.js",
+    "engines/tests/skilltree-data.test.js",
+    "engines/tests/skilltree-engine.test.js",
+    "reports/sprints/GAME-UX-1-plan.md",
+    "references/data/sprints/GAME-UX-1.plan.json",
+    "reports/sprints/GAME-UX-1-baseline.md",
+    "reports/sprints/GAME-UX-1-planning-review.md",
+    "reports/sprints/GAME-UX-1-result.md",
+    "reports/sprints/GAME-UX-1-diff-summary.md",
+    "reports/sprints/GAME-UX-1-lead-review-assignment.md",
+    "reports/sprints/GAME-UX-1-lead-review-round1.md",
+    "reports/sprints/GAME-UX-1-lead-review-corrections.md",
+    "reports/sprints/GAME-UX-1-lead-review-round2.md",
+    "references/data/sprints/GAME-UX-1.result.json"
+  ],
+  "lead_review_required": true,
+  "lead_review": {
+    "assignment": "reports/sprints/GAME-UX-1-lead-review-assignment.md",
+    "round1": "reports/sprints/GAME-UX-1-lead-review-round1.md",
+    "corrections": "reports/sprints/GAME-UX-1-lead-review-corrections.md",
+    "round2": "reports/sprints/GAME-UX-1-lead-review-round2.md",
+    "round1_verdict": "FAIL",
+    "final_verdict": "PASS WITH FLAGS",
+    "flags_carried_forward": [
+      "Mobile, dark-mode, screenshot, and keyboard focus-order evidence is deferred to lesson L1.7C or the first lesson-side regeneration/inspection sprint that consumes this runtime.",
+      "GAME-UX-1 generated no lesson output and authorizes no product use."
+    ]
+  },
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/GAME-UX-1-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js GAME-UX-1",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd test -- --runInBand engines/tests/skill-map-engine.test.js engines/tests/skilltree-visible-copy.test.js engines/tests/skilltree-engine.test.js engines/tests/skilltree-data.test.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd test -- --runInBand engines/tests/reasoning-engine.test.js engines/tests/procedure-engine.test.js engines/tests/graphical-engine.test.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/validate-report-json.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/generate-all.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/generate-reference-health.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/check-reference-health.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run dashboard:internal",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run agent:index",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js --check",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/build-source-document-registry.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/build-reference-inventory.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-source-document-registry.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-source-manifest.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-document-inventory.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-roadmap-version-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd test",
+      "status": "passed"
+    }
+  ],
+  "next_action": "Proceed to lesson L1.7C game-row quality review using the shared skill-map contract, while the platform reference roadmap returns to EX-5 as the next bounded tooling/design sprint.",
+  "excluded_preexisting_files": [
+    "knowledge/exit-ticket-game-1.1.1.zip"
+  ]
+}

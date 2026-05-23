@@ -31,10 +31,44 @@
     };
   }
 
+  function buildSkillMapRequest(surface, aspectFilter, paragraphId, options) {
+    options = options || {};
+    var engine = null;
+    if (typeof globalThis !== 'undefined' && globalThis.SkillMapEngine) engine = globalThis.SkillMapEngine;
+    if (!engine && typeof require === 'function') {
+      try { engine = require('./skill-map-engine'); } catch (e) { engine = null; }
+    }
+    if (engine && typeof engine.createRequest === 'function') {
+      return engine.createRequest(surface, Object.assign({ paragraph: paragraphId, aspectFilter: aspectFilter }, options));
+    }
+    return {
+      paragraph: paragraphId || null,
+      surface: surface,
+      mode: options.mode || 'route',
+      aspectFilter: aspectFilter,
+      skillScope: Array.isArray(options.skillScope) ? options.skillScope.slice() : null,
+      targetSkills: Array.isArray(options.targetSkills) ? options.targetSkills.slice() : [],
+      maxVisibleAvailable: options.maxVisibleAvailable || 4,
+      allowFullView: false,
+      boundaryFlags: {
+        diagnostics: false,
+        adaptiveRouting: false,
+        masteryDecisions: false,
+        automaticSequencing: false,
+        studentFacingAI: false,
+        summativeUse: false,
+        pvProjection: false,
+        pvMachinePromotion: false,
+        studentFacingOutput: false
+      }
+    };
+  }
+
   function ProcedureEngine(config) {
     this.procedures = config.procedures || [];
-    this.storageKey = "proc_" + (config.parNr || "0");
-    this.adaptivePayload = readAdaptivePayload(config.parNr || config.paragraphId, config.adaptiveStorage);
+    this.paragraphId = config.parNr || config.paragraphId || null;
+    this.storageKey = "proc_" + (this.paragraphId || "0");
+    this.adaptivePayload = readAdaptivePayload(this.paragraphId, config.adaptiveStorage);
     this._loadScores();
     this.current = null;
     this.selections = [];
@@ -64,6 +98,10 @@
 
   ProcedureEngine.prototype.getAdaptivePayload = function () {
     return JSON.parse(JSON.stringify(this.adaptivePayload));
+  };
+
+  ProcedureEngine.prototype.getSkillMapRequest = function (options) {
+    return buildSkillMapRequest('calculation-game', 'calculation', this.paragraphId, options);
   };
 
   // --- Procedure selection ---

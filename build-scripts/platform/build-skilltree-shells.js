@@ -26,6 +26,12 @@ const MODULE_ROOT = process.env.MODULE_ROOT
     ? path.resolve(process.env.MODULE_ROOT)
     : path.resolve(__dirname, '../..');
 const CONFIG = loadConfig(MODULE_ROOT);
+const DEFAULT_SKILL_MAP_REQUEST = {
+    mode: 'compact',
+    aspectFilter: 'mixed',
+    maxVisibleAvailable: 4,
+    allowFullView: false
+};
 
 // ── Compute newSkills per paragraph (in manifest order) ──────────────
 
@@ -53,8 +59,12 @@ function generateDataFile(par) {
     const chapterSkills = par.skilltree && par.skilltree.chapterSkills
         ? JSON.stringify(par.skilltree.chapterSkills)
         : activeSkills;
+    const skillMapDefaults = JSON.stringify({
+        ...DEFAULT_SKILL_MAP_REQUEST,
+        ...(par.skilltree && par.skilltree.skillMapDefaults ? par.skilltree.skillMapDefaults : {})
+    }, null, 4).replace(/\n/g, '\n    ');
     const newSkills = JSON.stringify(par._newSkills || []);
-    return `/**\n * Skill Tree data for ${par.id} ${par.name}\n * activeSkills: null = all skills visible\n */\nwindow.SKILL_TREE_DATA = {\n    parNr: "${par.id}",\n    parName: "${par.name}",\n    activeSkills: ${activeSkills},\n    chapterSkills: ${chapterSkills},\n    newSkills: ${newSkills}\n};\n`;
+    return `/**\n * Skill Tree data for ${par.id} ${par.name}\n * activeSkills: null = full catalog source, not the default student route\n */\nwindow.SKILL_TREE_DATA = {\n    parNr: "${par.id}",\n    parName: "${par.name}",\n    activeSkills: ${activeSkills},\n    chapterSkills: ${chapterSkills},\n    newSkills: ${newSkills},\n    skillMapDefaults: ${skillMapDefaults}\n};\n`;
 }
 
 // ── HTML shell ──────────────────────────────────────────────────────
@@ -102,7 +112,7 @@ function generateHTML(parNr, parName) {
                     <span class="st-stat-tile">
                         <span class="ico" style="color:var(--green)">&#x25CF;</span>
                         <span class="num"><span id="st-stat-mastered-val">0</span><span class="muted">/<span id="st-stat-total-val">0</span></span></span>
-                        <span class="lbl">Voltooid</span>
+                        <span class="lbl">Geoefend</span>
                     </span>
                     <span class="st-stat-tile">
                         <span class="ico" style="color:var(--gold)">&#x2605;</span>
@@ -133,7 +143,7 @@ function generateHTML(parNr, parName) {
             <footer class="st-view-deps-footer">
                 <div id="st-deps-goal-btn-slot"></div>
                 <div class="st-dep-legend">
-                    <span>— <span style="color:var(--green)">groen</span> = beheerst</span>
+                    <span>— <span style="color:var(--green)">groen</span> = geoefend</span>
                     <span>— <span style="color:var(--red)">rood</span> = nog te oefenen</span>
                     <span>Tap = oefenen · <i class="fa-solid fa-sitemap"></i> = afhankelijkheden</span>
                 </div>
@@ -188,6 +198,7 @@ function generateHTML(parNr, parName) {
     <script src="${sharedPath}/skilltree/${parNr}.js"></script>
     <script src="${sharedPath}/skilltree/explanations.js"></script>
     <script src="${sharedPath}/adaptive-seam.js"></script>
+    <script src="${sharedPath}/skill-map-engine.js"></script>
     <script src="${sharedPath}/skilltree-engine.js"></script>
     <script src="${sharedPath}/skilltree-ui.js"></script>
 </body>

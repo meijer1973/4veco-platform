@@ -61,6 +61,7 @@ function copyEngines() {
         'adaptive-seam.js',
         'quiz-engine.js', 'quiz-ui.js', 'quiz.css',
         'reasoning-engine.js', 'reasoning-ui.js', 'reasoning.css',
+        'skill-map-engine.js',
         'skilltree-engine.js', 'skilltree-ui.js', 'skilltree.css',
         'newsdetective-engine.js', 'newsdetective-ui.js', 'newsdetective.css',
         'procedure-engine.js', 'procedure-ui.js', 'procedure.css',
@@ -134,6 +135,7 @@ function buildSkilltreeBundleData(units, generatorMap) {
             name: u.name,
             layer: u.layer,
             needs: (u.needs || []).filter(id => interactiveSkillIds.has(id)),
+            aspects: Array.isArray(u.aspects) ? u.aspects.slice() : [],
             desc: u.kern || (u.procedure && u.procedure[0]) || ''
         }));
     const generatorBlockedSkills = activeUnits

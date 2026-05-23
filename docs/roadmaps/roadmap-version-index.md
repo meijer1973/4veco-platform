@@ -12,12 +12,15 @@ docs/roadmaps/roadmap-version-index.json
 
 | Roadmap | Version | Path | Notes |
 |---|---|---|---|
-| References Team Roadmap | `v2.70-l17a-readiness-decision` | `references/reference-team-roadmap.md` | Current operating roadmap after lesson L1.7A closed PASS WITH FLAGS and rejected broad companion scaling; EX-5 remains active tooling/design and lesson-side L1.7B/L1.7C-0/L1.7C/L1.7D/L2.0 remain required before any scale gate. |
+| References Team Roadmap | `v2.73-game-ux1-shared-skill-map-engine` | `references/reference-team-roadmap.md` | Current operating roadmap after GAME-UX-1 implemented shared skill-map runtime support for the closed lesson L1.7C-0 contract; EX-5 remains active tooling/design and lesson-side L1.7C/L1.7D/L2.0 plus a resumed boundary-safe exit-ticket MVP remain required before any scale gate. |
 
 ## Outdated Archive
 
 | Roadmap | Version | Path | Superseded By |
 |---|---|---|---|
+| References Team Roadmap before GAME-UX-1 shared skill-map implementation | `v2.72-l17c0-skill-map-contract` | `docs/roadmaps/outdated/reference-team-roadmap-v2.72-l17c0-skill-map-contract.md` | `references/reference-team-roadmap.md` |
+| References Team Roadmap before L1.7C-0 shared skill-map contract | `v2.71-l17b-contract-stop` | `docs/roadmaps/outdated/reference-team-roadmap-v2.71-l17b-contract-stop.md` | `references/reference-team-roadmap.md` |
+| References Team Roadmap before L1.7B contract-and-stop decision | `v2.70-l17a-readiness-decision` | `docs/roadmaps/outdated/reference-team-roadmap-v2.70-l17a-readiness-decision.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before L1.7A readiness decision | `v2.69-gate-ex4-pass-with-conditions` | `docs/roadmaps/outdated/reference-team-roadmap-v2.69-gate-ex4-pass-with-conditions.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before GATE-EX4 closure | `v2.68-ex4-mutation-planning-packet` | `docs/roadmaps/outdated/reference-team-roadmap-v2.68-ex4-mutation-planning-packet.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before EX-4 mutation-planning packet | `v2.67-ex3-exam-coverage-dashboard` | `docs/roadmaps/outdated/reference-team-roadmap-v2.67-ex3-exam-coverage-dashboard.md` | `references/reference-team-roadmap.md` |

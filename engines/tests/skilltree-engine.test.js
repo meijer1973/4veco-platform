@@ -61,6 +61,25 @@ describe('getVisibleSkills', () => {
         expect(engine.getVisibleSkills()).toHaveLength(elements.SKILLS.length);
     });
 
+    test('uses compact skill-map defaults instead of full catalog when activeSkills is null', () => {
+        const engine = createEngine({
+            data: {
+                parNr: '1.1.1',
+                activeSkills: null,
+                skillMapDefaults: {
+                    mode: 'compact',
+                    aspectFilter: 'mixed',
+                    maxVisibleAvailable: 4,
+                    allowFullView: false
+                }
+            }
+        });
+        const visible = engine.getVisibleSkills();
+        expect(visible.length).toBeGreaterThan(0);
+        expect(visible.length).toBeLessThanOrEqual(4);
+        expect(visible.length).toBeLessThan(elements.SKILLS.length);
+    });
+
     test('filters prerequisites to only include visible skills', () => {
         // A06 normally needs A01 and A02; if only A06 and A01 are active, A02 should be removed from needs
         const engine = createEngine({
@@ -68,6 +87,39 @@ describe('getVisibleSkills', () => {
         });
         const b1 = engine.getVisibleSkills().find(s => s.id === 'A06');
         expect(b1.needs).toEqual(['A01']); // A02 filtered out
+    });
+});
+
+describe('getSkillMapView', () => {
+    test('returns a shared skill-map view model for compact checkpoint mode', () => {
+        const engine = createEngine({
+            data: {
+                parNr: '1.1.3',
+                activeSkills: ['A61', 'A62', 'A63', 'A38', 'A39'],
+                skillMapDefaults: {
+                    mode: 'compact',
+                    aspectFilter: 'mixed',
+                    maxVisibleAvailable: 3,
+                    allowFullView: false
+                }
+            }
+        });
+
+        const view = engine.getSkillMapView();
+        expect(view.mode).toBe('compact');
+        expect(view.aspectFilter).toBe('mixed');
+        expect(view.visibleSkills.length).toBeLessThanOrEqual(3);
+        expect(view.boundaryFlags.diagnostics).toBe(false);
+    });
+
+    test('blocks full skill-map view unless explicitly allowed', () => {
+        const engine = createEngine({
+            data: { parNr: '1.1.3', activeSkills: ['A61', 'A62', 'A63'] }
+        });
+
+        const view = engine.getSkillMapView({ mode: 'full', allowFullView: false });
+        expect(view.mode).toBe('route');
+        expect(view.fullViewAvailable).toBe(false);
     });
 });
 

@@ -94,7 +94,16 @@ describe('base-elements', () => {
             expect(skill.name).toBeTruthy();
             expect(typeof skill.layer).toBe('number');
             expect(Array.isArray(skill.needs)).toBe(true);
+            expect(Array.isArray(skill.aspects)).toBe(true);
+            expect(skill.aspects.length).toBeGreaterThanOrEqual(1);
             expect(skill.desc).toBeTruthy();
+        }
+    });
+
+    test('exports MTU aspects for every interactive skill', () => {
+        const catalogById = new Map(catalog.map(unit => [unit.id, unit]));
+        for (const skill of elements.SKILLS) {
+            expect(skill.aspects).toEqual(catalogById.get(skill.id).aspects || []);
         }
     });
 
@@ -141,6 +150,14 @@ describe('base-elements', () => {
             counts[s.layer]++;
         }
         expect(counts.reduce((sum, count) => sum + count, 0)).toBe(elements.SKILLS.length);
+    });
+
+    test('deployed browser bundle preserves MTU aspects', () => {
+        const bundleData = buildSkilltreeBundleData(catalog, elements.GEN);
+        const bundleById = new Map(bundleData.skills.map(skill => [skill.id, skill]));
+        for (const skill of elements.SKILLS) {
+            expect(bundleById.get(skill.id).aspects).toEqual(skill.aspects);
+        }
     });
 });
 

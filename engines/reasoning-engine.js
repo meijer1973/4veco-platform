@@ -33,6 +33,39 @@
         };
     }
 
+    function buildSkillMapRequest(surface, aspectFilter, paragraphId, options) {
+        options = options || {};
+        var engine = null;
+        if (typeof globalThis !== 'undefined' && globalThis.SkillMapEngine) engine = globalThis.SkillMapEngine;
+        if (!engine && typeof require === 'function') {
+            try { engine = require('./skill-map-engine'); } catch (e) { engine = null; }
+        }
+        if (engine && typeof engine.createRequest === 'function') {
+            return engine.createRequest(surface, Object.assign({ paragraph: paragraphId, aspectFilter: aspectFilter }, options));
+        }
+        return {
+            paragraph: paragraphId || null,
+            surface: surface,
+            mode: options.mode || 'route',
+            aspectFilter: aspectFilter,
+            skillScope: Array.isArray(options.skillScope) ? options.skillScope.slice() : null,
+            targetSkills: Array.isArray(options.targetSkills) ? options.targetSkills.slice() : [],
+            maxVisibleAvailable: options.maxVisibleAvailable || 4,
+            allowFullView: false,
+            boundaryFlags: {
+                diagnostics: false,
+                adaptiveRouting: false,
+                masteryDecisions: false,
+                automaticSequencing: false,
+                studentFacingAI: false,
+                summativeUse: false,
+                pvProjection: false,
+                pvMachinePromotion: false,
+                studentFacingOutput: false
+            }
+        };
+    }
+
     // ── Domain configurations ───────────────────────────────────────
 
     var DOMAINS = {
@@ -215,8 +248,9 @@
         this.domain = config.domain;
         this.domainConfig = DOMAINS[config.domain];
         this.roundsPerGame = config.roundsPerGame || 5;
+        this.paragraphId = config.parNr || config.paragraphId || null;
         this.adaptivePayload = readAdaptivePayload(
-            config.parNr || config.paragraphId,
+            this.paragraphId,
             config.adaptiveStorage
         );
 
@@ -247,6 +281,10 @@
 
     ReasoningEngine.prototype.getAdaptivePayload = function () {
         return JSON.parse(JSON.stringify(this.adaptivePayload));
+    };
+
+    ReasoningEngine.prototype.getSkillMapRequest = function (options) {
+        return buildSkillMapRequest('reasoning-game', 'reasoning', this.paragraphId, options);
     };
 
     // ── Session management ──────────────────────────────────────────

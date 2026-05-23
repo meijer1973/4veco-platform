@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-23T08:11:32.362Z",
+  "generatedAt": "2026-05-23T08:34:49.163Z",
   "internalOnly": true,
   "teams": [
     {
@@ -160,7 +160,7 @@
           "generated": "2026-04-23",
           "updated": "",
           "scope": "`references/`, `build-scripts/references/`, `build-scripts/reports/`, reference dashboards, and generated reference reports under `reports/`",
-          "summary": "References Team Roadmap Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Last strategic update: 2026-05-23 Roadmap ID: references-team-roadmap Roadmap version: v2.72-l17c0-skill-map-contract Roadmap status: active Version index: docs/roadmaps/roadmap-version-index.json Scope: references/, build-scripts/references/, build-scripts/reports/, reference dashboards, and generated reference reports under reports/ Exam Ingestion North Star The long-term reference-platform goal is that a new official CvTE economics e...",
+          "summary": "References Team Roadmap Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Last strategic update: 2026-05-23 Roadmap ID: references-team-roadmap Roadmap version: v2.73-game-ux1-shared-skill-map-engine Roadmap status: active Version index: docs/roadmaps/roadmap-version-index.json Scope: references/, build-scripts/references/, build-scripts/reports/, reference dashboards, and generated reference reports under reports/ Exam Ingestion North Star The long-term reference-platform goal is that a new official CvTE eco...",
           "sprints": [
             {
               "sprint": "EX-5",
@@ -173,14 +173,7 @@
               "sprint": "LESSON-SCALE-1",
               "name": "Lesson Companion Pre-Scale Gates Tracking",
               "completed": "no",
-              "currentState": "**TRACKING DEPENDENCY, NOT A REFERENCE EXECUTION SPRINT.** Lesson L1.7A closed PASS WITH FLAGS and rejected broad companion scaling. Lesson L1.7B recorded the exit-ticket companion-completion contract and paused MVP implementation behind source-control/product-boundary/shared-skill-map blockers. Lesson L1.7C-0 then closed the shared skill-map engine contract: three separate practice engines consume one shared route/progression layer with aspect filters, compact/route/restricted-full modes, and non-mastery progress language. Lesson L1.7C is now active for game-row quality review, followed by L1.7D, L2.0, a resumed boundary-safe exit-ticket MVP when ready, and Scale Gate 1. Reference/product planning must not treat the lesson companion pipeline as scale-approved until those lesson-side gates exist and preserve blocks on diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, and PV machine promotion.",
-              "exitGate": ""
-            },
-            {
-              "sprint": "GAME-UX-1",
-              "name": "Shared Skill-Map Engine Architecture",
-              "completed": "no",
-              "currentState": "**PLATFORM SUPPORT FOR CLOSED LESSON CONTRACT L1.7C-0.** Lesson L1.7C-0 accepted the shared skill-map contract and handed implementation to this platform lane. Build or refactor one shared skill-map engine consumed by the reasoning, calculation, and graphical practice engines, plus compact checkpoint mode for the later exit-ticket surface and compact route previews for landing pages. It must expose MTU aspects through skill data, aspect-filtered skill subsets, recommended-next-skill logic, non-mastery state/progress labels, prerequisite path rendering, compact/route/restricted-full display modes, and progress/stars display. It must avoid unfiltered all-skill views by default and must not authorize adaptive diagnostics, mastery, automatic sequencing, student-facing AI, summative use, PV projection, or PV machine promotion.",
+              "currentState": "**TRACKING DEPENDENCY, NOT A REFERENCE EXECUTION SPRINT.** Lesson L1.7A closed PASS WITH FLAGS and rejected broad companion scaling. Lesson L1.7B recorded the exit-ticket companion-completion contract and paused MVP implementation behind source-control/product-boundary/shared-skill-map blockers. Lesson L1.7C-0 then closed the shared skill-map engine contract, and platform `GAME-UX-1` implemented the shared skill-map runtime support: three separate practice engines can now request one shared route/progression layer with aspect filters, compact/route/restricted-full modes, and non-mastery progress language. Lesson L1.7C is now active for game-row quality review, followed by L1.7D, L2.0, a resumed boundary-safe exit-ticket MVP when ready, and Scale Gate 1. Reference/product planning must not treat the lesson companion pipeline as scale-approved until those lesson-side gates exist and preserve blocks on diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, and PV machine promotion.",
               "exitGate": ""
             },
             {
@@ -229,7 +222,14 @@
               "sprint": "Product Gate",
               "name": "Re-Evaluate R10-R13 Product Surfaces",
               "completed": "no",
-              "currentState": "Blocked. Diagnostics, adaptive routing, student-facing AI, teacher cockpit deployment, automatic sequencing, mastery, and summative uses remain out of scope until data-quality gates justify them. Lesson L1.7A explicitly rejected broad companion scaling; L1.7B recorded the companion-set contract but paused exit-ticket MVP implementation; L1.7C-0 closed the shared skill-map contract while leaving platform implementation to `GAME-UX-1`. Broad lesson-companion scaling remains blocked until L1.7C, L1.7D, L2.0, the resumed boundary-safe exit-ticket MVP, `GAME-UX-1`, and Scale Gate 1 establish real shared skill-map behavior, game-row quality rubric, landing-page information architecture, and checkpoint review evidence.",
+              "currentState": "Blocked. Diagnostics, adaptive routing, student-facing AI, teacher cockpit deployment, automatic sequencing, mastery, and summative uses remain out of scope until data-quality gates justify them. Lesson L1.7A explicitly rejected broad companion scaling; L1.7B recorded the companion-set contract but paused exit-ticket MVP implementation; L1.7C-0 closed the shared skill-map contract; and platform `GAME-UX-1` implemented the shared route/view-model support without authorizing product use. Broad lesson-companion scaling remains blocked until L1.7C, L1.7D, L2.0, the resumed boundary-safe exit-ticket MVP, and Scale Gate 1 establish game-row quality rubric, landing-page information architecture, checkpoint review evidence, and real lesson-side consumption of the shared skill-map behavior.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "GAME-UX-1",
+              "name": "Shared Skill-Map Engine Architecture",
+              "completed": "yes",
+              "currentState": "Completed as platform runtime support for the closed lesson `L1.7C-0` contract. Added `engines/skill-map-engine.js` as the shared compact/route/restricted-full view-model engine; exposed MTU `aspects` through skill-tree base data and deploy bundle data; added scoped route request hooks for reasoning, calculation/procedure, graphical, exit-ticket checkpoint, and landing-preview consumers; made future generated skill-tree data carry compact `skillMapDefaults` so `activeSkills: null` is no longer a default all-skill student route; and changed visible skill-tree progress copy from mastery language to practice language. No lesson output was generated, no exit-ticket prototype was imported, and no protected reference mutation, machine-reference mutation, unit minting, target-exercise promotion, CP-6 closure, Year-1 closure, diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student-facing product use was authorized.",
               "exitGate": ""
             },
             {
@@ -836,15 +836,7 @@
           "sprint": "LESSON-SCALE-1",
           "name": "Lesson Companion Pre-Scale Gates Tracking",
           "completed": "no",
-          "currentState": "**TRACKING DEPENDENCY, NOT A REFERENCE EXECUTION SPRINT.** Lesson L1.7A closed PASS WITH FLAGS and rejected broad companion scaling. Lesson L1.7B recorded the exit-ticket companion-completion contract and paused MVP implementation behind source-control/product-boundary/shared-skill-map blockers. Lesson L1.7C-0 then closed the shared skill-map engine contract: three separate practice engines consume one shared route/progression layer with aspect filters, compact/route/restricted-full modes, and non-mastery progress language. Lesson L1.7C is now active for game-row quality review, followed by L1.7D, L2.0, a resumed boundary-safe exit-ticket MVP when ready, and Scale Gate 1. Reference/product planning must not treat the lesson companion pipeline as scale-approved until those lesson-side gates exist and preserve blocks on diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, and PV machine promotion.",
-          "exitGate": "",
-          "roadmap": "References roadmap"
-        },
-        {
-          "sprint": "GAME-UX-1",
-          "name": "Shared Skill-Map Engine Architecture",
-          "completed": "no",
-          "currentState": "**PLATFORM SUPPORT FOR CLOSED LESSON CONTRACT L1.7C-0.** Lesson L1.7C-0 accepted the shared skill-map contract and handed implementation to this platform lane. Build or refactor one shared skill-map engine consumed by the reasoning, calculation, and graphical practice engines, plus compact checkpoint mode for the later exit-ticket surface and compact route previews for landing pages. It must expose MTU aspects through skill data, aspect-filtered skill subsets, recommended-next-skill logic, non-mastery state/progress labels, prerequisite path rendering, compact/route/restricted-full display modes, and progress/stars display. It must avoid unfiltered all-skill views by default and must not authorize adaptive diagnostics, mastery, automatic sequencing, student-facing AI, summative use, PV projection, or PV machine promotion.",
+          "currentState": "**TRACKING DEPENDENCY, NOT A REFERENCE EXECUTION SPRINT.** Lesson L1.7A closed PASS WITH FLAGS and rejected broad companion scaling. Lesson L1.7B recorded the exit-ticket companion-completion contract and paused MVP implementation behind source-control/product-boundary/shared-skill-map blockers. Lesson L1.7C-0 then closed the shared skill-map engine contract, and platform `GAME-UX-1` implemented the shared skill-map runtime support: three separate practice engines can now request one shared route/progression layer with aspect filters, compact/route/restricted-full modes, and non-mastery progress language. Lesson L1.7C is now active for game-row quality review, followed by L1.7D, L2.0, a resumed boundary-safe exit-ticket MVP when ready, and Scale Gate 1. Reference/product planning must not treat the lesson companion pipeline as scale-approved until those lesson-side gates exist and preserve blocks on diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, and PV machine promotion.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -900,7 +892,15 @@
           "sprint": "Product Gate",
           "name": "Re-Evaluate R10-R13 Product Surfaces",
           "completed": "no",
-          "currentState": "Blocked. Diagnostics, adaptive routing, student-facing AI, teacher cockpit deployment, automatic sequencing, mastery, and summative uses remain out of scope until data-quality gates justify them. Lesson L1.7A explicitly rejected broad companion scaling; L1.7B recorded the companion-set contract but paused exit-ticket MVP implementation; L1.7C-0 closed the shared skill-map contract while leaving platform implementation to `GAME-UX-1`. Broad lesson-companion scaling remains blocked until L1.7C, L1.7D, L2.0, the resumed boundary-safe exit-ticket MVP, `GAME-UX-1`, and Scale Gate 1 establish real shared skill-map behavior, game-row quality rubric, landing-page information architecture, and checkpoint review evidence.",
+          "currentState": "Blocked. Diagnostics, adaptive routing, student-facing AI, teacher cockpit deployment, automatic sequencing, mastery, and summative uses remain out of scope until data-quality gates justify them. Lesson L1.7A explicitly rejected broad companion scaling; L1.7B recorded the companion-set contract but paused exit-ticket MVP implementation; L1.7C-0 closed the shared skill-map contract; and platform `GAME-UX-1` implemented the shared route/view-model support without authorizing product use. Broad lesson-companion scaling remains blocked until L1.7C, L1.7D, L2.0, the resumed boundary-safe exit-ticket MVP, and Scale Gate 1 establish game-row quality rubric, landing-page information architecture, checkpoint review evidence, and real lesson-side consumption of the shared skill-map behavior.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "GAME-UX-1",
+          "name": "Shared Skill-Map Engine Architecture",
+          "completed": "yes",
+          "currentState": "Completed as platform runtime support for the closed lesson `L1.7C-0` contract. Added `engines/skill-map-engine.js` as the shared compact/route/restricted-full view-model engine; exposed MTU `aspects` through skill-tree base data and deploy bundle data; added scoped route request hooks for reasoning, calculation/procedure, graphical, exit-ticket checkpoint, and landing-preview consumers; made future generated skill-tree data carry compact `skillMapDefaults` so `activeSkills: null` is no longer a default all-skill student route; and changed visible skill-tree progress copy from mastery language to practice language. No lesson output was generated, no exit-ticket prototype was imported, and no protected reference mutation, machine-reference mutation, unit minting, target-exercise promotion, CP-6 closure, Year-1 closure, diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student-facing product use was authorized.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -1577,8 +1577,8 @@
           "roadmap": "References roadmap"
         }
       ],
-      "completedCount": 84,
-      "openCount": 10
+      "completedCount": 85,
+      "openCount": 9
     },
     {
       "id": "lessen",

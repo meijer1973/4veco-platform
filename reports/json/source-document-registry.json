@@ -1,17 +1,17 @@
 {
   "generated_by": "build-scripts/references/build-source-document-registry.js",
-  "generated_on": "2026-05-23T06:57:48.762Z",
+  "generated_on": "2026-05-23T08:34:58.776Z",
   "status": "pass",
   "summary": {
-    "record_count": 284,
-    "source_manifest_file_count": 287,
+    "record_count": 285,
+    "source_manifest_file_count": 288,
     "by_authority_level": {
       "external_primary": 30,
       "machine_registry": 5,
       "owned_curriculum_design": 5,
       "authored_judgement": 9,
       "generated_report": 2,
-      "governance_data": 203,
+      "governance_data": 204,
       "quality_protocol": 5,
       "planning": 1,
       "machine_contract": 24
@@ -28,7 +28,7 @@
       "inventory": 32,
       "exercise_metadata_overlay": 6,
       "exercise_overlay_readme": 1,
-      "sprint_metadata": 162,
+      "sprint_metadata": 163,
       "machine_projection": 3,
       "owned_source_readme": 1,
       "qc_prompt": 5,
@@ -44,7 +44,7 @@
       "archived": 1,
       "generated_diagnostic": 2,
       "mirrored": 25,
-      "governance_data": 201,
+      "governance_data": 202,
       "planning": 1,
       "schema_contract": 24
     },
@@ -52,7 +52,7 @@
       "public_citation_allowed_with_source_name": 30,
       "internal_only": 19,
       "internal_diagnostic_only": 2,
-      "not_public_citation_source": 233
+      "not_public_citation_source": 234
     },
     "evidence_anchor_coverage": {
       "required_document_ids": [
@@ -3862,6 +3862,44 @@
       "refresh_policy": "sprint_lifecycle",
       "source_hash": "31528a46edac2183f4a133d322f44b8d4b0f2056b3b05a4c0672028d61105ed4",
       "size_bytes": 3315,
+      "primary_evidence": false,
+      "curriculum_authority": false,
+      "allowed_downstream_uses": [
+        "internal_reference_context",
+        "rag_retrieval_with_authority_label"
+      ],
+      "blocked_downstream_uses": [
+        "student_diagnostics",
+        "adaptive_routing",
+        "student_facing_ai",
+        "automatic_lesson_sequencing",
+        "automatic_mastery_decisions",
+        "summative_assessment_decisions",
+        "external_authority",
+        "override_machine_registry"
+      ],
+      "evidence_anchor_ids": [],
+      "notes": [
+        "Governance data is canonical only for its declared governance artifact."
+      ]
+    },
+    {
+      "document_id": "path-references-data-sprints-game-ux-1-plan",
+      "path": "references/data/sprints/GAME-UX-1.plan.json",
+      "title": "GAME UX 1.Plan",
+      "source_type": "sprint_metadata",
+      "authority_level": "governance_data",
+      "source_version": "sha256:f2030efacb5547b1fea93c0170b9966fb4a53797465d8a18f8844813b060b877",
+      "status": "governance_data",
+      "owner": "references_team",
+      "citation_policy": "cite_as_governance_record_only",
+      "public_citation_policy": "not_public_citation_source",
+      "layer": "governance_data",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "refresh_policy": "sprint_lifecycle",
+      "source_hash": "f2030efacb5547b1fea93c0170b9966fb4a53797465d8a18f8844813b060b877",
+      "size_bytes": 4040,
       "primary_evidence": false,
       "curriculum_authority": false,
       "allowed_downstream_uses": [
@@ -9321,7 +9359,7 @@
       "title": "Reference Team Roadmap",
       "source_type": "roadmap",
       "authority_level": "planning",
-      "source_version": "sha256:b7760203b5f45edb0482d950f7a8892aeb88d7b544d090ed50cc17f57506ab64",
+      "source_version": "sha256:d10ccd56d5961853c00f68e2ce118fd8fbd574c9c895283ffe2d7bc97a7fbaae",
       "status": "planning",
       "owner": "references_team",
       "citation_policy": "citation_requires_review",
@@ -9330,8 +9368,8 @@
       "generated_status": "manual_source",
       "edit_policy": "human_reviewed_edit",
       "refresh_policy": "roadmap_update",
-      "source_hash": "b7760203b5f45edb0482d950f7a8892aeb88d7b544d090ed50cc17f57506ab64",
-      "size_bytes": 182928,
+      "source_hash": "d10ccd56d5961853c00f68e2ce118fd8fbd574c9c895283ffe2d7bc97a7fbaae",
+      "size_bytes": 191454,
       "primary_evidence": false,
       "curriculum_authority": false,
       "allowed_downstream_uses": [

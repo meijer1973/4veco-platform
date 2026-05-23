@@ -65,6 +65,7 @@
             name: u.name,
             layer: u.layer,
             needs: needs,
+            aspects: Array.isArray(u.aspects) ? u.aspects.slice() : [],
             desc: u.kern || (u.procedure && u.procedure[0]) || ''
         });
     }

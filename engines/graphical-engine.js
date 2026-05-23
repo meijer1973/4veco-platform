@@ -37,6 +37,39 @@
     };
   }
 
+  function buildSkillMapRequest(surface, aspectFilter, paragraphId, options) {
+    options = options || {};
+    var engine = null;
+    if (typeof globalThis !== 'undefined' && globalThis.SkillMapEngine) engine = globalThis.SkillMapEngine;
+    if (!engine && typeof require === 'function') {
+      try { engine = require('./skill-map-engine'); } catch (e) { engine = null; }
+    }
+    if (engine && typeof engine.createRequest === 'function') {
+      return engine.createRequest(surface, Object.assign({ paragraph: paragraphId, aspectFilter: aspectFilter }, options));
+    }
+    return {
+      paragraph: paragraphId || null,
+      surface: surface,
+      mode: options.mode || 'route',
+      aspectFilter: aspectFilter,
+      skillScope: Array.isArray(options.skillScope) ? options.skillScope.slice() : null,
+      targetSkills: Array.isArray(options.targetSkills) ? options.targetSkills.slice() : [],
+      maxVisibleAvailable: options.maxVisibleAvailable || 4,
+      allowFullView: false,
+      boundaryFlags: {
+        diagnostics: false,
+        adaptiveRouting: false,
+        masteryDecisions: false,
+        automaticSequencing: false,
+        studentFacingAI: false,
+        summativeUse: false,
+        pvProjection: false,
+        pvMachinePromotion: false,
+        studentFacingOutput: false
+      }
+    };
+  }
+
   function clone(obj) {
     return JSON.parse(JSON.stringify(obj));
   }
@@ -171,7 +204,8 @@
     this.data = clone(data);
     this.index = 0;
     this.results = [];
-    this.adaptivePayload = readAdaptivePayload(this.data.meta.parNr, config.adaptiveStorage);
+    this.paragraphId = this.data.meta.parNr;
+    this.adaptivePayload = readAdaptivePayload(this.paragraphId, config.adaptiveStorage);
   }
 
   GraphicalEngine.validateData = validateData;
@@ -180,6 +214,10 @@
 
   GraphicalEngine.prototype.getAdaptivePayload = function () {
     return clone(this.adaptivePayload);
+  };
+
+  GraphicalEngine.prototype.getSkillMapRequest = function (options) {
+    return buildSkillMapRequest('graphical-game', 'graphical', this.paragraphId, options);
   };
 
   GraphicalEngine.prototype.getCurrentChallenge = function () {

@@ -183,7 +183,7 @@
         }
         if (!noAchieved) for (var j = 0; j < g.achieved.length; j++) {
             var ag = g.achieved[j], sk = findSkill(ag.id);
-            h += '<div class="st-goal-card-achieved"><span class="st-goal-achieved-text">\u2713 Doel behaald:</span> <strong>' + esc(sk ? sk.name : ag.id) + '</strong></div>';
+            h += '<div class="st-goal-card-achieved"><span class="st-goal-achieved-text">\u2713 Route geoefend:</span> <strong>' + esc(sk ? sk.name : ag.id) + '</strong></div>';
         }
         h += '</div>';
         els.goalBannerSlot.innerHTML = h;
@@ -490,7 +490,7 @@
         for (var a = 0; a < achievedIds.length; a++) if (achievedIds[a] === skillId) goalAchieved = true;
         var cardCls = 'st-result-card' + ((mastered && finish.improved) ? ' st-mastery-card' : '');
         var msg;
-        if (finish.newTotal >= 5) msg = 'Meesterschap!';
+        if (finish.newTotal >= 5) msg = 'Mooi geoefend!';
         else if (finish.newTotal >= 3) msg = 'Goed gedaan!';
         else if (finish.improved) msg = 'Mooi, je bent vooruit!';
         else msg = 'Probeer nog een keer voor meer sterren.';
@@ -512,7 +512,7 @@
         h += '</div>';
         if (goalAchieved) {
             var gsk = findSkill(skillId);
-            h += '<div class="st-goal-achieved-card"><div class="st-goal-achieved-title">\uD83C\uDFAF Doel behaald!</div>'
+            h += '<div class="st-goal-achieved-card"><div class="st-goal-achieved-title">\uD83C\uDFAF Route geoefend!</div>'
                + '<div class="st-goal-achieved-name">' + esc(gsk ? gsk.name : skillId) + '</div></div>';
         }
         h += '</div>';
@@ -543,9 +543,9 @@
     function renderGoalProgress(path) {
         var done = path.fullyMastered, total = path.totalPrereqs;
         var pct = total > 0 ? Math.round((done / total) * 100) : 0;
-        var h = '<div class="st-result-goal"><div class="st-result-goal-title">Doel: ' + esc(path.goalName) + '</div>'
+        var h = '<div class="st-result-goal"><div class="st-result-goal-title">Oefenroute: ' + esc(path.goalName) + '</div>'
               + '<div class="st-goal-bar"><div class="st-goal-bar-fill" style="width:' + pct + '%"></div></div>'
-              + '<div class="st-goal-info"><span>' + done + ' / ' + total + ' beheerst</span><span>' + pct + '%</span></div>';
+              + '<div class="st-goal-info"><span>' + done + ' / ' + total + ' geoefend</span><span>' + pct + '%</span></div>';
         if (path.nextActionable && path.nextActionable.length > 0 && !path.complete) {
             h += '<div class="st-result-goal-next">Volgende stap: <strong>' + esc(skillDisplayName(path.nextActionable[0])) + '</strong></div>';
         }
@@ -624,7 +624,7 @@
         var goals = engine.getGoals();
         var full = goals.active.length >= 2 && !isGoal;
         var dis = isGoal || isAch || full;
-        var lbl = isAch ? 'Doel al behaald' : isGoal ? 'Al ingesteld als doel' : full ? 'Max 2 doelen actief' : 'Stel in als doel';
+        var lbl = isAch ? 'Route al geoefend' : isGoal ? 'Al gekozen als route' : full ? 'Max 2 routes actief' : 'Kies als oefenroute';
         els.depsGoalBtnSlot.innerHTML = '<button class="st-goal-set-btn" id="st-set-goal" type="button"' + (dis ? ' disabled' : '') + '><i class="fa-solid fa-bullseye"></i> ' + esc(lbl) + '</button>';
     }
     function buildDepsSvg(sg) {
