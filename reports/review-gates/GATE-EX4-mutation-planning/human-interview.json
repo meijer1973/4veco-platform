@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-EX4-mutation-planning",
+  "sprint_id": "EX-4",
+  "recorded_on": "2026-05-23",
+  "mode": "batch_human_review_response_after_full_question_list_was_shown",
+  "status": "pass_with_conditions_routing_design_only",
+  "review_packet": "reports/review-gates/GATE-EX4-mutation-planning/review-packet.md",
+  "closure_confirmed_by_human": true,
+  "protected_reference_data_changed": false,
+  "answers": [
+    {
+      "question_id": "EX4-Q1",
+      "topic": "q3 annual threshold operation route",
+      "classification": "operation_registry_candidate_for_later_design",
+      "decision": "Keep q3-calc-1 as an operation-registry design candidate; A61 is supporting table-value-selection evidence only and A15 remains stale or incorrect for this task.",
+      "supporting_units": ["A61"],
+      "stale_or_rejected_units": ["A15"],
+      "mutation_authorized": false
+    },
+    {
+      "question_id": "EX4-Q2",
+      "topic": "q3 threshold answer wording",
+      "classification": "answer_skill_candidate",
+      "decision": "Keep q3-answer-1 as a separate answer-skill candidate until an answer-skill registry or governed equivalent exists.",
+      "mutation_authorized": false
+    },
+    {
+      "question_id": "EX4-Q3",
+      "topic": "q19 source and graph blocker",
+      "classification": "blocking_prerequisite_lane",
+      "decision": "Route q19 source-annex and graph-object extraction first; keep graph/PV, reasoning, lesson handoff, PV projection, and student-facing use blocked while q19-source-annex-gap and q19-graph-object-gap remain unresolved.",
+      "blocking_gaps": ["q19-source-annex-gap", "q19-graph-object-gap"],
+      "mutation_authorized": false
+    },
+    {
+      "question_id": "EX4-Q4",
+      "topic": "q19 graph/PV route",
+      "classification": "held_graph_pv_route",
+      "decision": "Hold graph/PV execution until q19 extraction improves; carry A42 and D10 as candidates and A45 as weak support only.",
+      "candidate_units": ["A42", "D10"],
+      "weak_or_prerequisite_support": ["A45"],
+      "blocking_gaps": ["q19-source-annex-gap", "q19-graph-object-gap"],
+      "mutation_authorized": false
+    },
+    {
+      "question_id": "EX4-Q5",
+      "topic": "q19 chained-market reasoning",
+      "classification": "provisional_operation_registry_candidate_blocked",
+      "decision": "Keep q19-reason-1 as a provisional operation-registry candidate with D10 and D13 partial support; keep it blocked until q19 is reconstructable.",
+      "partial_support_units": ["D10", "D13"],
+      "blocking_gaps": ["q19-source-annex-gap", "q19-graph-object-gap"],
+      "mutation_authorized": false
+    },
+    {
+      "question_id": "EX4-Q6",
+      "topic": "q15 two-step answer skill",
+      "classification": "answer_skill_candidate",
+      "decision": "Keep q15-answer-1 as an answer-skill candidate; D27, F03, and F09 cover content only.",
+      "content_support_units": ["D27", "F03", "F09"],
+      "mutation_authorized": false
+    },
+    {
+      "question_id": "EX4-Q7",
+      "topic": "registry and CLI architecture",
+      "classification": "registry_contract_and_validator_design_required",
+      "decision": "Design operation and answer-skill storage contracts and validators first. Use overlay-first storage under references/data unless a future gate explicitly promotes a machine-registry route.",
+      "mutation_authorized": false
+    },
+    {
+      "question_id": "EX4-Q8",
+      "topic": "later sprint routing",
+      "classification": "tooling_design_sprint_authorized",
+      "decision": "Authorize a bounded tooling/design sprint only. It should define operation and answer-skill storage, validators, q19 extraction contract and validator, rollback, audit evidence, and stop conditions.",
+      "mutation_authorized": false,
+      "allowed_next_sprint": "EX-5"
+    },
+    {
+      "question_id": "EX4-Q9",
+      "topic": "mutation authority now",
+      "classification": "no_mutation_authority",
+      "decision": "GATE-EX4 does not authorize protected reference mutation, external-source mutation, machine-reference mutation, unit minting, operation-registry mutation, answer-skill mutation, PV/graph mutation, target-exercise promotion, lesson-output mutation, CP-6 closure, Year-1 closure, or student/product use."
+    },
+    {
+      "question_id": "EX4-Q10",
+      "topic": "product boundaries",
+      "classification": "product_boundaries_false",
+      "decision": "Diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, PV projection, PV machine promotion, and student-facing output remain blocked."
+    }
+  ],
+  "pattern_analysis": [
+    "GATE-EX4 closes as routing and design authority only.",
+    "q3 annual threshold calculation is a valid operation-registry design candidate, but no mutation is authorized.",
+    "q3 threshold wording and q15 two-step correction-model explanation remain visible answer-skill candidates.",
+    "q19 source-annex and graph-object extraction are blocking prerequisites before graph/PV, reasoning, lesson handoff, PV projection, or student-facing use.",
+    "q19 graph/PV routing carries A42 and D10 as candidates and A45 as weak support only.",
+    "q19 chained-market reasoning remains provisional and blocked by q19 evidence gaps.",
+    "Operation and answer-skill storage, schemas, validators, rollback, and audit evidence must be designed before any registry mutation.",
+    "All product boundaries remain false."
+  ],
+  "conditions_carried_forward": [
+    "No mutation from EX-4 or GATE-EX4.",
+    "Operation and answer-skill storage must be named, schema-defined, validator-backed, and rollback-aware before candidate writes.",
+    "q19 source-annex and graph-object extraction needs a contract and validator before execution.",
+    "q19 graph/PV and reasoning remain blocked while q19 source/graph gaps remain unresolved.",
+    "q3 and q15 answer-skill gaps must remain visible downstream.",
+    "Diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, PV projection, PV machine promotion, and student-facing output remain blocked."
+  ],
+  "closure_proposal": {
+    "status": "pass_with_conditions",
+    "decision_scope": "routing_and_design_only",
+    "allowed_next_sprint": "EX-5"
+  }
+}

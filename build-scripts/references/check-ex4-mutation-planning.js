@@ -23,6 +23,10 @@ const CLI_JSON = `${GATE_DIR}/cli-readiness-plan.json`;
 const CLI_MD = `${GATE_DIR}/cli-readiness-plan.md`;
 const REVIEW_JSON = `${GATE_DIR}/review-packet.json`;
 const REVIEW_MD = `${GATE_DIR}/review-packet.md`;
+const HUMAN_JSON = `${GATE_DIR}/human-interview.json`;
+const HUMAN_MD = `${GATE_DIR}/human-interview.md`;
+const CLOSURE_JSON = `${GATE_DIR}/gate-closure.json`;
+const CLOSURE_MD = `${GATE_DIR}/gate-closure.md`;
 const COVERAGE_JSON = 'reports/json/exam-ingestion-coverage.json';
 const EX2_CLOSURE_JSON = 'reports/review-gates/GATE-EX2-exam-to-mtu-mapping/gate-closure.json';
 
@@ -33,6 +37,7 @@ const BLOCKED_OUTCOMES = [
   'unit minting',
   'operation-registry mutation',
   'answer-skill mutation',
+  'PV/graph mutation',
   'target-exercise promotion',
   'lesson-output mutation',
   'CP-6 closure',
@@ -276,6 +281,117 @@ function checkReviewPacket() {
   }
 }
 
+function checkGateClosureIfPresent() {
+  const closurePath = file(CLOSURE_JSON);
+  const humanPath = file(HUMAN_JSON);
+  if (!fs.existsSync(closurePath) && !fs.existsSync(humanPath)) return;
+
+  assert(fs.existsSync(closurePath), `missing ${CLOSURE_JSON}`);
+  assert(fs.existsSync(file(CLOSURE_MD)), `missing ${CLOSURE_MD}`);
+  assert(fs.existsSync(humanPath), `missing ${HUMAN_JSON}`);
+  assert(fs.existsSync(file(HUMAN_MD)), `missing ${HUMAN_MD}`);
+
+  const closure = readJson(CLOSURE_JSON);
+  const human = readJson(HUMAN_JSON);
+  const closureMarkdown = read(CLOSURE_MD);
+  const humanMarkdown = read(HUMAN_MD);
+
+  assert(closure.gate_id === 'GATE-EX4-mutation-planning', 'closure gate_id');
+  assert(closure.sprint_id === 'EX-4', 'closure sprint_id');
+  assert(closure.status === 'pass_with_conditions', 'closure status');
+  assert(closure.closure_confirmed_by_human === true, 'closure confirmation');
+  assert(closure.protected_reference_data_changed === false, 'closure protected_reference_data_changed');
+  assert(closure.decision_scope === 'routing_and_design_only', 'closure decision_scope');
+  assert(closure.allowed_next_sprint === 'EX-5', 'closure allowed_next_sprint');
+  assert(closure.allowed_next_sprint_name === 'Operation And Answer-Skill Registry Contract', 'closure allowed_next_sprint_name');
+  assertArray(closure.reviewed_classifications, 'closure reviewed_classifications');
+
+  const byRequirement = new Map(closure.reviewed_classifications.map((record) => [record.requirement_id, record]));
+  const q3Calc = byRequirement.get('q3-calc-1');
+  assert(q3Calc, 'closure q3-calc-1 missing');
+  assert(q3Calc.classification === 'operation_registry_candidate_for_later_design', 'closure q3-calc-1 classification');
+  assertIncludes(q3Calc.supporting_unit_ids, ['A61'], 'closure q3-calc-1 supporting units');
+  assertIncludes(q3Calc.stale_or_rejected_unit_ids, ['A15'], 'closure q3-calc-1 stale units');
+  assert(q3Calc.mutation_authorized === false, 'closure q3-calc-1 mutation_authorized');
+
+  const q3Answer = byRequirement.get('q3-answer-1');
+  assert(q3Answer, 'closure q3-answer-1 missing');
+  assert(q3Answer.classification === 'answer_skill_candidate', 'closure q3-answer-1 classification');
+  assert(q3Answer.mutation_authorized === false, 'closure q3-answer-1 mutation_authorized');
+
+  const q19Source = byRequirement.get('q19-source-annex-gap');
+  const q19GraphGap = byRequirement.get('q19-graph-object-gap');
+  assert(q19Source && q19Source.blocking === true, 'closure q19 source gap blocking');
+  assert(q19GraphGap && q19GraphGap.blocking === true, 'closure q19 graph gap blocking');
+
+  const q19Graph = byRequirement.get('q19-graph-op-1');
+  assert(q19Graph, 'closure q19-graph-op-1 missing');
+  assert(q19Graph.classification === 'held_graph_pv_route', 'closure q19 graph classification');
+  assertIncludes(q19Graph.candidate_unit_ids, ['A42', 'D10'], 'closure q19 graph candidates');
+  assertIncludes(q19Graph.weak_or_prerequisite_unit_ids, ['A45'], 'closure q19 graph weak support');
+  assertIncludes(q19Graph.blocking_gaps, ['q19-source-annex-gap', 'q19-graph-object-gap'], 'closure q19 graph blocking gaps');
+  assert(q19Graph.mutation_authorized === false, 'closure q19 graph mutation_authorized');
+
+  const q19Reason = byRequirement.get('q19-reason-1');
+  assert(q19Reason, 'closure q19-reason-1 missing');
+  assert(q19Reason.classification === 'provisional_operation_registry_candidate_blocked', 'closure q19 reason classification');
+  assertIncludes(q19Reason.partial_support_unit_ids, ['D10', 'D13'], 'closure q19 reason support');
+  assertIncludes(q19Reason.blocking_gaps, ['q19-source-annex-gap', 'q19-graph-object-gap'], 'closure q19 reason blocking gaps');
+  assert(q19Reason.mutation_authorized === false, 'closure q19 reason mutation_authorized');
+
+  const q15Answer = byRequirement.get('q15-answer-1');
+  assert(q15Answer, 'closure q15-answer-1 missing');
+  assert(q15Answer.classification === 'answer_skill_candidate', 'closure q15-answer-1 classification');
+  assertIncludes(q15Answer.content_support_unit_ids, ['D27', 'F03', 'F09'], 'closure q15 answer content support');
+  assert(q15Answer.mutation_authorized === false, 'closure q15 answer mutation_authorized');
+
+  const blockedText = (closure.blocked_outcomes || []).join('\n');
+  for (const outcome of BLOCKED_OUTCOMES) {
+    assert(blockedText.includes(outcome), `closure blocked_outcomes missing ${outcome}`);
+  }
+  assert(blockedText.includes('external-source mutation'), 'closure must block external-source mutation');
+  assert(blockedText.includes('machine-reference mutation'), 'closure must block machine-reference mutation');
+  assert(blockedText.includes('PV/graph mutation'), 'closure must block PV/graph mutation');
+  assert(blockedText.includes('student-facing output'), 'closure must block student-facing output');
+
+  assert(human.gate_id === closure.gate_id, 'human gate_id');
+  assert(human.status === 'pass_with_conditions_routing_design_only', 'human status');
+  assert(human.closure_confirmed_by_human === true, 'human closure confirmation');
+  assertArray(human.answers, 'human answers');
+  assert(human.answers.length === 10, 'human must record 10 answers');
+  assert(human.closure_proposal.allowed_next_sprint === 'EX-5', 'human allowed_next_sprint');
+
+  for (const answer of human.answers) {
+    if ('mutation_authorized' in answer) {
+      assert(answer.mutation_authorized === false, `${answer.question_id} mutation_authorized`);
+    }
+  }
+
+  for (const needle of [
+    'PASS WITH CONDITIONS - routing and design only',
+    'A61',
+    'A15',
+    'A42',
+    'A45',
+    'q19-source-annex-gap',
+    'q15-answer-1',
+    'No mutation',
+  ]) {
+    assertTextIncludes(humanMarkdown, needle, 'human interview markdown');
+  }
+  for (const needle of [
+    'Final Routing Table',
+    'EX-5 Operation And Answer-Skill Registry Contract',
+    'A61',
+    'A42',
+    'q19-source-annex-gap',
+    'PV/graph mutation',
+    'No mutation',
+  ]) {
+    assertTextIncludes(closureMarkdown, needle, 'closure markdown');
+  }
+}
+
 function checkUpstreamEvidence() {
   const coverage = readJson(COVERAGE_JSON);
   const ex2 = readJson(EX2_CLOSURE_JSON);
@@ -295,6 +411,7 @@ function main() {
   checkCandidates();
   checkCliPlan();
   checkReviewPacket();
+  checkGateClosureIfPresent();
   console.log('OK EX-4 mutation-planning packet');
 }
 

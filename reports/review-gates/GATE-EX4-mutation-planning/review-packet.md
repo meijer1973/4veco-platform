@@ -7,8 +7,9 @@ Status: review packet ready, no mutation authorized.
 No protected reference mutation authorized. No external-source mutation
 authorized. No machine-reference mutation authorized. No unit minting
 authorized. No operation-registry mutation authorized. No answer-skill mutation
-authorized. No target-exercise promotion authorized. No lesson-output mutation
-authorized. No CP-6 or Year-1 closure authorized.
+authorized. No PV/graph mutation authorized. No target-exercise promotion
+authorized. No lesson-output mutation authorized. No CP-6 or Year-1 closure
+authorized.
 
 ## Review Scope
 
@@ -201,7 +202,7 @@ Options:
 - Stop if any answer authorizes protected reference mutation, external-source
   mutation, machine-reference mutation, unit minting, operation-registry
   mutation, answer-skill mutation, target-exercise promotion, lesson-output
-  mutation, CP-6 closure, or Year-1 closure now.
+  mutation, PV/graph mutation, CP-6 closure, or Year-1 closure now.
 - Stop if any answer authorizes q19 graph/PV, reasoning, lesson-handoff, PV
   projection, or student-facing use while `q19-source-annex-gap` or
   `q19-graph-object-gap` remains unresolved.

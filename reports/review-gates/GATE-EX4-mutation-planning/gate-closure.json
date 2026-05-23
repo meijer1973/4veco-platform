@@ -1,0 +1,164 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-EX4-mutation-planning",
+  "sprint_id": "EX-4",
+  "status": "pass_with_conditions",
+  "closed_on": "2026-05-23",
+  "closure_confirmed_by_human": true,
+  "human_interview": "reports/review-gates/GATE-EX4-mutation-planning/human-interview.md",
+  "review_packet": "reports/review-gates/GATE-EX4-mutation-planning/review-packet.md",
+  "summary": "GATE-EX4 closes as pass_with_conditions for routing and design authority only. It authorizes a later bounded tooling/design sprint for operation and answer-skill storage contracts, validators, q19 extraction contract/validator, rollback, and audit evidence, while preserving all protected mutation, lesson-output, closure, and student/product-use blocks.",
+  "protected_reference_data_changed": false,
+  "decision_scope": "routing_and_design_only",
+  "explicit_decisions": [
+    {
+      "topic": "gate status",
+      "decision": "Close GATE-EX4 as pass_with_conditions - routing/design only."
+    },
+    {
+      "topic": "q3 calculation",
+      "decision": "Keep q3-calc-1 as an operation-registry design candidate; A61 is support only and A15 remains stale or incorrect for this task."
+    },
+    {
+      "topic": "q3 answer wording",
+      "decision": "Keep q3-answer-1 as a separate answer-skill candidate until an answer-skill registry or governed equivalent exists."
+    },
+    {
+      "topic": "q19 source and graph extraction",
+      "decision": "q19 source-annex and graph-object extraction must be resolved or explicitly carried as blocking before graph/PV, reasoning, lesson handoff, PV projection, or student-facing use."
+    },
+    {
+      "topic": "q19 graph/PV route",
+      "decision": "Hold graph/PV execution; carry A42 and D10 as candidates and A45 as weak support only."
+    },
+    {
+      "topic": "q19 chained-market reasoning",
+      "decision": "Keep q19-reason-1 as a provisional operation-registry candidate blocked by q19 source/graph gaps, with D10 and D13 as partial support."
+    },
+    {
+      "topic": "q15 answer model",
+      "decision": "Keep q15-answer-1 as an answer-skill candidate; D27, F03, and F09 cover content only."
+    },
+    {
+      "topic": "registry and CLI architecture",
+      "decision": "Design operation and answer-skill storage contracts, schemas, validators, rollback, and audit evidence before any registry mutation."
+    },
+    {
+      "topic": "later sprint routing",
+      "decision": "Authorize a bounded tooling/design sprint only, with no mutation execution."
+    },
+    {
+      "topic": "mutation and product authority",
+      "decision": "No protected mutation, external-source mutation, machine-reference mutation, unit minting, operation-registry mutation, answer-skill mutation, PV/graph mutation, target-exercise promotion, lesson-output mutation, CP-6 closure, Year-1 closure, diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student-facing output is authorized."
+    }
+  ],
+  "accepted_outcomes": [
+    "GATE-EX4 may close as a routing and design gate.",
+    "A later bounded tooling/design sprint may define operation-registry storage contract, answer-skill storage contract, validators, q19 extraction contract and validator, rollback, audit evidence, and stop conditions.",
+    "q3-calc-1 may enter later operation-registry design as an annual cost-threshold comparison candidate.",
+    "q3-answer-1 remains a separate answer-skill candidate.",
+    "q19 source-annex and graph-object extraction is the prerequisite lane before graph/PV, reasoning, lesson handoff, PV projection, or student-facing use.",
+    "q19-graph-op-1 carries A42 and D10 as candidates, with A45 weak support only.",
+    "q19-reason-1 remains a provisional operation-registry candidate blocked by q19 source/graph gaps.",
+    "q15-answer-1 remains a separate answer-skill candidate; D27, F03, and F09 cover content only."
+  ],
+  "blocked_outcomes": [
+    "No protected reference mutation is authorized.",
+    "No external-source mutation is authorized.",
+    "No machine-reference mutation is authorized.",
+    "Do not hand-edit references/external/.",
+    "Do not hand-edit references/machine/.",
+    "No unit minting is authorized.",
+    "No operation-registry mutation is authorized.",
+    "No answer-skill mutation is authorized.",
+    "No PV/graph mutation is authorized.",
+    "No target-exercise promotion is authorized.",
+    "No lesson-output mutation is authorized.",
+    "No CP-6 closure is authorized.",
+    "No Year-1 closure is authorized.",
+    "No student diagnostics, adaptive routing, mastery decisions, automatic sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student-facing output is authorized."
+  ],
+  "conditions_to_reopen_or_pass": [
+    "No mutation from EX-4 or GATE-EX4.",
+    "Operation and answer-skill storage must be named, schema-defined, validator-backed, rollback-aware, and audit-log-aware before candidate writes.",
+    "q19 source-annex and graph-object extraction needs a contract and validator before execution.",
+    "q19 graph/PV and reasoning remain blocked while q19 source/graph gaps remain unresolved.",
+    "q3 and q15 answer-skill gaps must remain visible downstream.",
+    "Product boundaries remain false."
+  ],
+  "reviewed_classifications": [
+    {
+      "requirement_id": "q3-calc-1",
+      "classification": "operation_registry_candidate_for_later_design",
+      "supporting_unit_ids": ["A61"],
+      "stale_or_rejected_unit_ids": ["A15"],
+      "mutation_authorized": false
+    },
+    {
+      "requirement_id": "q3-answer-1",
+      "classification": "answer_skill_candidate",
+      "mutation_authorized": false
+    },
+    {
+      "requirement_id": "q19-source-annex-gap",
+      "classification": "blocking_source_annex_gap",
+      "blocking": true,
+      "mutation_authorized": false
+    },
+    {
+      "requirement_id": "q19-graph-object-gap",
+      "classification": "blocking_graph_object_gap",
+      "blocking": true,
+      "mutation_authorized": false
+    },
+    {
+      "requirement_id": "q19-graph-op-1",
+      "classification": "held_graph_pv_route",
+      "candidate_unit_ids": ["A42", "D10"],
+      "weak_or_prerequisite_unit_ids": ["A45"],
+      "blocking_gaps": ["q19-source-annex-gap", "q19-graph-object-gap"],
+      "mutation_authorized": false
+    },
+    {
+      "requirement_id": "q19-reason-1",
+      "classification": "provisional_operation_registry_candidate_blocked",
+      "partial_support_unit_ids": ["D10", "D13"],
+      "blocking_gaps": ["q19-source-annex-gap", "q19-graph-object-gap"],
+      "mutation_authorized": false
+    },
+    {
+      "requirement_id": "q15-answer-1",
+      "classification": "answer_skill_candidate",
+      "content_support_unit_ids": ["D27", "F03", "F09"],
+      "coverage_scope": "content_only_support",
+      "mutation_authorized": false
+    }
+  ],
+  "allowed_next_sprint": "EX-5",
+  "allowed_next_sprint_name": "Operation And Answer-Skill Registry Contract",
+  "allowed_next_sprint_scope": [
+    "operation-registry storage contract",
+    "answer-skill storage contract",
+    "validators for operation and answer-skill records",
+    "q19 source-annex/graph-object extraction contract and validator",
+    "rollback and audit-log requirements",
+    "stop conditions for hidden q19 gaps and hidden q3/q15 answer-skill gaps"
+  ],
+  "blocked_next_sprint_scope": [
+    "protected reference mutation",
+    "external-source mutation",
+    "machine registry mutation",
+    "unit minting",
+    "operation-registry mutation",
+    "answer-skill mutation",
+    "PV/graph mutation",
+    "target-exercise promotion",
+    "CP-6 closure",
+    "Year-1 closure",
+    "lesson-output mutation",
+    "q19 extraction execution before validator",
+    "hidden q19 graph/source gaps",
+    "hidden q3 or q15 answer-skill gaps",
+    "student/product use"
+  ]
+}

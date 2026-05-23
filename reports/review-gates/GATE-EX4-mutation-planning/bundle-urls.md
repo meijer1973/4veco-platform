@@ -5,6 +5,10 @@ This file lists every artifact in this gate's bundle as a full raw-GitHub URL so
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-EX4-mutation-planning/bundle-urls.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-EX4-mutation-planning/cli-readiness-plan.json
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-EX4-mutation-planning/cli-readiness-plan.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-EX4-mutation-planning/gate-closure.json
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-EX4-mutation-planning/gate-closure.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-EX4-mutation-planning/human-interview.json
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-EX4-mutation-planning/human-interview.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-EX4-mutation-planning/mutation-candidates.json
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-EX4-mutation-planning/mutation-candidates.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-EX4-mutation-planning/review-packet.json

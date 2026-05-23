@@ -1,6 +1,6 @@
 # Roadmap Version Index
 
-Updated: 2026-05-22
+Updated: 2026-05-23
 
 The JSON file is canonical for tooling:
 
@@ -12,12 +12,13 @@ docs/roadmaps/roadmap-version-index.json
 
 | Roadmap | Version | Path | Notes |
 |---|---|---|---|
-| References Team Roadmap | `v2.68-ex4-mutation-planning-packet` | `references/reference-team-roadmap.md` | Current operating roadmap after closing EX-4 as governed mutation-planning prep only and moving GATE-EX4 to active human review; q19 source/graph gaps, q3/q15 answer-skill needs, and all no-mutation/student-use boundaries remain visible. |
+| References Team Roadmap | `v2.69-gate-ex4-pass-with-conditions` | `references/reference-team-roadmap.md` | Current operating roadmap after closing GATE-EX4 as pass_with_conditions for routing/design only and moving EX-5 to active tooling/design; q19 source/graph gaps, q3/q15 answer-skill needs, and all no-mutation/student-use boundaries remain visible. |
 
 ## Outdated Archive
 
 | Roadmap | Version | Path | Superseded By |
 |---|---|---|---|
+| References Team Roadmap before GATE-EX4 closure | `v2.68-ex4-mutation-planning-packet` | `docs/roadmaps/outdated/reference-team-roadmap-v2.68-ex4-mutation-planning-packet.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before EX-4 mutation-planning packet | `v2.67-ex3-exam-coverage-dashboard` | `docs/roadmaps/outdated/reference-team-roadmap-v2.67-ex3-exam-coverage-dashboard.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before EX-3 exam coverage dashboard closure | `v2.66-shared-skill-map-engine-tracking` | `docs/roadmaps/outdated/reference-team-roadmap-v2.66-shared-skill-map-engine-tracking.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before shared skill-map engine tracking | `v2.65-lesson-companion-pre-scale-gates` | `docs/roadmaps/outdated/reference-team-roadmap-v2.65-lesson-companion-pre-scale-gates.md` | `references/reference-team-roadmap.md` |
