@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-05-23T09:05:22.105Z
+Generated: 2026-05-23T13:34:30.920Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 1690
+Files indexed: 1694
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -41,7 +41,7 @@ Count: 8
 
 ## engines
 
-Count: 62
+Count: 65
 
 - engines/adaptive-seam.js
 - engines/graphical-engine.js
@@ -62,6 +62,8 @@ Count: 62
 - engines/reasoning-ui.js
 - engines/reasoning.css
 - engines/skill-map-engine.js
+- engines/skill-map-route-ui.js
+- engines/skill-map-route.css
 - engines/skilltree-engine.js
 - engines/skilltree-ui.js
 - engines/skilltree-ui.legacy.js
@@ -98,6 +100,7 @@ Count: 62
 - engines/tests/reasoning-engine.test.js
 - engines/tests/REFACTOR-NOTES.md
 - engines/tests/skill-map-engine.test.js
+- engines/tests/skill-map-route-ui.test.js
 - engines/tests/skilltree-data.test.js
 - engines/tests/skilltree-engine.test.js
 - engines/tests/skilltree-visible-copy.test.js
@@ -836,7 +839,7 @@ Count: 289
 
 ## reports
 
-Count: 777
+Count: 778
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1413,6 +1416,7 @@ Count: 777
 - reports/sprints/GATE-CP6-lead-review-round2.md
 - reports/sprints/GATE-CP6-plan.md
 - reports/sprints/GATE-CP6-result.md
+- reports/sprints/L1.7C-platform-support-result.md
 - reports/sprints/PV-G4-baseline.md
 - reports/sprints/PV.1-baseline.md
 - reports/sprints/PV.1-diff-summary.md

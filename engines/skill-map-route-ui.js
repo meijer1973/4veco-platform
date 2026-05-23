@@ -72,6 +72,16 @@
     return value + '/3';
   }
 
+  function recommendedSkillLabel(view, visibleSkills) {
+    if (!view || !view.recommendedSkillId) return null;
+    for (var i = 0; i < visibleSkills.length; i++) {
+      if (visibleSkills[i].id === view.recommendedSkillId) {
+        return visibleSkills[i].label || null;
+      }
+    }
+    return null;
+  }
+
   function buildView(config) {
     config = config || {};
     var root = getGlobalRoot();
@@ -115,6 +125,7 @@
     if (!items) {
       items = '<li class="skill-map-route-item is-later"><span class="skill-map-route-name">Deze route is nog niet gevuld.</span></li>';
     }
+    var nextFocusLabel = recommendedSkillLabel(view, visible);
 
     var hiddenCount = 0;
     if (view.collapsedCounts) {
@@ -134,7 +145,7 @@
       '</div>',
       '<div class="skill-map-route-primary">',
       '<span class="skill-map-route-action">' + escapeHtml(view.primaryAction && view.primaryAction.label || 'Start oefenen') + '</span>',
-      view.recommendedSkillId ? '<span class="skill-map-route-next">Volgende focus: ' + escapeHtml(view.recommendedSkillId) + '</span>' : '',
+      nextFocusLabel ? '<span class="skill-map-route-next">Focus: ' + escapeHtml(nextFocusLabel) + '</span>' : '',
       '</div>',
       '<ul class="skill-map-route-list">',
       items,

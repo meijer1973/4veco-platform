@@ -28,14 +28,18 @@ body {
   color: var(--p-text);
   line-height: 1.55;
   min-height: 100vh;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 h1, h2, h3 { font-family: 'Poppins', Arial, sans-serif; }
 
 /* --- App Container --- */
 .p-app {
-  max-width: 1200px;
+  width: 100%;
+  max-width: min(1200px, 100vw);
   margin: 0 auto;
   min-height: 100vh;
+  min-width: 0;
   background: #fff;
   box-shadow: 0 0 40px rgba(0,0,0,0.06);
 }
@@ -50,10 +54,13 @@ h1, h2, h3 { font-family: 'Poppins', Arial, sans-serif; }
   color: #fff;
   font-size: 22px;
   font-weight: 700;
-  display: flex;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
   align-items: center;
   gap: 10px;
-  flex-wrap: wrap;
+  max-width: 100%;
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 .par-badge {
   display: inline-block;
@@ -68,6 +75,7 @@ h1, h2, h3 { font-family: 'Poppins', Arial, sans-serif; }
 /* --- Content Layout --- */
 .p-content-layout {
   display: flex;
+  min-width: 0;
   min-height: calc(100vh - 72px);
 }
 .p-content-layout.p-no-sidebar .p-sidebar { display: none; }
@@ -80,6 +88,7 @@ h1, h2, h3 { font-family: 'Poppins', Arial, sans-serif; }
 .p-sidebar {
   width: 260px;
   flex-shrink: 0;
+  min-width: 0;
   background: #f8fafc;
   border-left: 1px solid var(--p-border);
   padding: 24px 20px;
@@ -96,7 +105,7 @@ h1, h2, h3 { font-family: 'Poppins', Arial, sans-serif; }
 .p-sidebar-title i { color: var(--p-primary); }
 
 /* --- Screens --- */
-.p-screen { display: none; animation: p-fadeIn 0.35s ease; }
+.p-screen { display: none; animation: p-fadeIn 0.35s ease; max-width: 100%; min-width: 0; overflow-wrap: anywhere; }
 .p-screen.active { display: block; }
 
 @keyframes p-fadeIn {
@@ -115,10 +124,11 @@ h1, h2, h3 { font-family: 'Poppins', Arial, sans-serif; }
   font-size: 15px;
   color: var(--p-gray);
   margin-bottom: 28px;
+  overflow-wrap: anywhere;
 }
 .p-procedure-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(280px, 100%), 1fr));
   gap: 16px;
 }
 .p-procedure-card {
@@ -130,6 +140,7 @@ h1, h2, h3 { font-family: 'Poppins', Arial, sans-serif; }
   transition: all 0.2s ease;
   position: relative;
   overflow: hidden;
+  min-width: 0;
 }
 .p-procedure-card:hover {
   border-color: var(--p-primary);
@@ -158,6 +169,7 @@ h1, h2, h3 { font-family: 'Poppins', Arial, sans-serif; }
   font-size: 13px;
   color: var(--p-gray);
   line-height: 1.45;
+  overflow-wrap: anywhere;
 }
 .p-procedure-card-steps {
   display: inline-flex;
@@ -588,6 +600,7 @@ h1, h2, h3 { font-family: 'Poppins', Arial, sans-serif; }
 }
 
 @media (max-width: 480px) {
+  .p-app * { min-width: 0; }
   .p-main-area { padding: 14px; }
   .p-step-options { flex-direction: column; }
   .p-option-card { max-width: 100%; min-width: 0; }

@@ -15,7 +15,7 @@
   "roadmaps": [
     {
       "roadmap_id": "references-team-roadmap",
-      "version": "v2.73-game-ux1-shared-skill-map-engine",
+      "version": "v2.73a-l17c-route-label-recheck",
       "title": "References Team Roadmap",
       "status": "active",
       "path": "references/reference-team-roadmap.md",
@@ -94,7 +94,7 @@
         "knowledge/Exercise schema and quality/reference-team-roadmap Live version 28 April.md",
         "knowledge/Exercise schema and quality/roadmap-updated-repository-checked.md"
       ],
-      "notes": "Current operating roadmap after GAME-UX-1 implemented the shared skill-map runtime support for the closed lesson L1.7C-0 contract; EX-5 remains active tooling/design and lesson-side L1.7C/L1.7D/L2.0 plus a resumed boundary-safe exit-ticket MVP remain required before any scale gate."
+      "notes": "Current operating roadmap after GAME-UX-1 implemented the shared skill-map runtime support for the closed lesson L1.7C-0 contract and after targeted L1.7C route-panel support fixed student-facing internal skill ID leakage for focused lesson recheck; EX-5 remains active tooling/design and lesson-side L1.7C/L1.7D/L2.0 plus a resumed boundary-safe exit-ticket MVP remain required before any scale gate."
     },
     {
       "roadmap_id": "references-team-roadmap-v2.72",

@@ -1100,12 +1100,19 @@ function renderParagraafPage(paragraaf, files, _resolvedMap) {
     }));
   }
   const begeleidHTML = begeleidCard(files.oefenen.begeleide);
+  const routeNames = [];
+  if (files.oefenen.redeneerSpel) routeNames.push("redeneren");
+  if (files.oefenen.wiskundevaardigheden) routeNames.push("rekenen");
+  if (files.oefenen.grafiekenspel) routeNames.push("grafieken lezen");
+  const routeIntro = routeNames.length
+    ? `Deze routes oefenen ${routeNames.join(", ").replace(/, ([^,]*)$/, " en $1")}.`
+    : "Kies een oefenroute die past bij deze paragraaf.";
   const aspectBlock = oefenenAspectRoutes.length ? `
         <div class="learning-aspect-block">
           <div class="learning-aspect-copy">
             <span class="resource-aspect-label">Oefenroutes</span>
             <h3>Kies wat je wilt trainen</h3>
-            <p>Elke route oefent een andere kant van economisch werken: redeneren, rekenen of grafieken lezen.</p>
+            <p>${routeIntro}</p>
           </div>
           <div class="resource-grid learning-aspect-grid">${oefenenAspectRoutes.join("\n")}
           </div>

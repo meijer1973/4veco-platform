@@ -2,8 +2,8 @@
   "repo": "4veco-lessen",
   "root": "C:\\Projects\\4veco\\4veco-lessen",
   "available": true,
-  "generated_at": "2026-05-23T09:05:22.139Z",
-  "file_count": 1371,
+  "generated_at": "2026-05-23T13:34:30.973Z",
+  "file_count": 1381,
   "inventory_scope": "git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees",
   "skipped_directories": [
     ".cache",
@@ -71,7 +71,8 @@
     "validators": [
       "archive/sprints/L1.7A/L1.7A-validation-log.md",
       "archive/sprints/L1.7B/L1.7B-validation-log.md",
-      "archive/sprints/L1.7C-0/L1.7C-0-validation-log.md"
+      "archive/sprints/L1.7C-0/L1.7C-0-validation-log.md",
+      "archive/sprints/L1.7C/L1.7C-validation-log.md"
     ],
     "references": [],
     "reports": [],
@@ -896,6 +897,9 @@
       "Boek 1 - Grondslagen, vraag en aanbod/shared/reasoning/1.1.2.js",
       "Boek 1 - Grondslagen, vraag en aanbod/shared/reasoning/1.1.3.js",
       "Boek 1 - Grondslagen, vraag en aanbod/shared/reasoning/meta-categories.js",
+      "Boek 1 - Grondslagen, vraag en aanbod/shared/skill-map-engine.js",
+      "Boek 1 - Grondslagen, vraag en aanbod/shared/skill-map-route-ui.js",
+      "Boek 1 - Grondslagen, vraag en aanbod/shared/skill-map-route.css",
       "Boek 1 - Grondslagen, vraag en aanbod/shared/skilltree-engine.js",
       "Boek 1 - Grondslagen, vraag en aanbod/shared/skilltree-ui.js",
       "Boek 1 - Grondslagen, vraag en aanbod/shared/skilltree.css",
@@ -2591,6 +2595,12 @@
       "archive/sprints/L1.7C-0/L1.7C-0-handoff-to-platform.md",
       "archive/sprints/L1.7C-0/L1.7C-0-shared-skill-map-contract.md",
       "archive/sprints/L1.7C-0/L1.7C-0-sprint-plan.md",
+      "archive/sprints/L1.7C/L1.7C-game-row-baseline-audit.md",
+      "archive/sprints/L1.7C/L1.7C-game-row-quality-matrix.md",
+      "archive/sprints/L1.7C/L1.7C-game-row-quality-rubric.md",
+      "archive/sprints/L1.7C/L1.7C-human-review-packet.md",
+      "archive/sprints/L1.7C/L1.7C-sprint-plan.md",
+      "archive/sprints/L1.7C/L1.7C-technical-qa-report.md",
       "archive/sprints/SYNC-1/SYNC-1-roadmap-reconciliation-log.md",
       "archive/sprints/SYNC-2/SYNC-2-companion-pre-scale-roadmap-update.md",
       "archive/sprints/SYNC-3/SYNC-3-shared-skill-map-roadmap-update.md",

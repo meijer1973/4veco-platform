@@ -40,6 +40,27 @@ describe('SkillMapRouteUI', () => {
         expect(html).not.toMatch(/beheerst|meesterschap|summatief|student-facing AI/i);
     });
 
+    test('renders recommended focus as a student-facing label, not an internal skill ID', () => {
+        const request = SkillMapEngine.createRequest('calculation-game', {
+            paragraph: '1.1.3',
+            mode: 'compact',
+            aspectFilter: 'calculation',
+            skillScope: ['A61', 'A62'],
+            maxVisibleAvailable: 3
+        });
+
+        const html = SkillMapRouteUI.renderRequest(request, {
+            elements,
+            data: makeData(),
+            stars: {},
+            title: 'Oefenroute Rekenen'
+        });
+        const visibleText = html.replace(/<[^>]+>/g, ' ');
+
+        expect(visibleText).toContain('Focus: Tabelwaarden selecteren voor berekening');
+        expect(visibleText).not.toMatch(/\bA61\b/);
+    });
+
     test('shell generators load shared route UI for all three practice games', () => {
         const files = [
             'build-scripts/platform/build-reasoning-engine.js',

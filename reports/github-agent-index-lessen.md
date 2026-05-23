@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-lessen
 
-Generated: 2026-05-23T09:05:22.139Z
+Generated: 2026-05-23T13:34:30.973Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-lessen`
-Files indexed: 1371
+Files indexed: 1381
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -81,11 +81,12 @@ _No files indexed in this group._
 
 ## validators
 
-Count: 3
+Count: 4
 
 - archive/sprints/L1.7A/L1.7A-validation-log.md
 - archive/sprints/L1.7B/L1.7B-validation-log.md
 - archive/sprints/L1.7C-0/L1.7C-0-validation-log.md
+- archive/sprints/L1.7C/L1.7C-validation-log.md
 
 ## references
 
@@ -101,7 +102,7 @@ _No files indexed in this group._
 
 ## book folders
 
-Count: 832
+Count: 835
 
 - Boek 1 - Grondslagen, vraag en aanbod/_assets/1.1.1_ex_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/_assets/1.1.1_ex_1.svg
@@ -923,6 +924,9 @@ Count: 832
 - Boek 1 - Grondslagen, vraag en aanbod/shared/reasoning/1.1.2.js
 - Boek 1 - Grondslagen, vraag en aanbod/shared/reasoning/1.1.3.js
 - Boek 1 - Grondslagen, vraag en aanbod/shared/reasoning/meta-categories.js
+- Boek 1 - Grondslagen, vraag en aanbod/shared/skill-map-engine.js
+- Boek 1 - Grondslagen, vraag en aanbod/shared/skill-map-route-ui.js
+- Boek 1 - Grondslagen, vraag en aanbod/shared/skill-map-route.css
 - Boek 1 - Grondslagen, vraag en aanbod/shared/skilltree-engine.js
 - Boek 1 - Grondslagen, vraag en aanbod/shared/skilltree-ui.js
 - Boek 1 - Grondslagen, vraag en aanbod/shared/skilltree.css
@@ -2391,7 +2395,7 @@ Count: 817
 
 ## other
 
-Count: 254
+Count: 260
 
 - _team-b-reference/1.1.1/uitleg vaardigheden team b.html
 - _team-b-reference/1.1.1/uitleg voorkennis team b.html
@@ -2627,6 +2631,12 @@ Count: 254
 - archive/sprints/L1.7C-0/L1.7C-0-handoff-to-platform.md
 - archive/sprints/L1.7C-0/L1.7C-0-shared-skill-map-contract.md
 - archive/sprints/L1.7C-0/L1.7C-0-sprint-plan.md
+- archive/sprints/L1.7C/L1.7C-game-row-baseline-audit.md
+- archive/sprints/L1.7C/L1.7C-game-row-quality-matrix.md
+- archive/sprints/L1.7C/L1.7C-game-row-quality-rubric.md
+- archive/sprints/L1.7C/L1.7C-human-review-packet.md
+- archive/sprints/L1.7C/L1.7C-sprint-plan.md
+- archive/sprints/L1.7C/L1.7C-technical-qa-report.md
 - archive/sprints/SYNC-1/SYNC-1-roadmap-reconciliation-log.md
 - archive/sprints/SYNC-2/SYNC-2-companion-pre-scale-roadmap-update.md
 - archive/sprints/SYNC-3/SYNC-3-shared-skill-map-roadmap-update.md
