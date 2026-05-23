@@ -2,8 +2,8 @@
   "repo": "4veco-lessen",
   "root": "C:\\Projects\\4veco\\4veco-lessen",
   "available": true,
-  "generated_at": "2026-05-23T07:43:21.451Z",
-  "file_count": 1359,
+  "generated_at": "2026-05-23T08:11:34.616Z",
+  "file_count": 1365,
   "inventory_scope": "git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees",
   "skipped_directories": [
     ".cache",
@@ -69,7 +69,8 @@
     "build scripts": [],
     "skills": [],
     "validators": [
-      "archive/sprints/L1.7A/L1.7A-validation-log.md"
+      "archive/sprints/L1.7A/L1.7A-validation-log.md",
+      "archive/sprints/L1.7B/L1.7B-validation-log.md"
     ],
     "references": [],
     "reports": [],
@@ -2579,6 +2580,11 @@
       "archive/sprints/L1.7A/L1.7A-flag-triage.md",
       "archive/sprints/L1.7A/L1.7A-readiness-matrix.md",
       "archive/sprints/L1.7A/L1.7A-sprint-plan.md",
+      "archive/sprints/L1.7B/L1.7B-companion-completion-contract.md",
+      "archive/sprints/L1.7B/L1.7B-exit-ticket-mvp-scope.md",
+      "archive/sprints/L1.7B/L1.7B-prototype-inventory.md",
+      "archive/sprints/L1.7B/L1.7B-sprint-plan.md",
+      "archive/sprints/L1.7B/L1.7B-stop-decision.md",
       "archive/sprints/SYNC-1/SYNC-1-roadmap-reconciliation-log.md",
       "archive/sprints/SYNC-2/SYNC-2-companion-pre-scale-roadmap-update.md",
       "archive/sprints/SYNC-3/SYNC-3-shared-skill-map-roadmap-update.md",

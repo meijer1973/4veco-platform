@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-23T07:43:21.372Z",
+  "generatedAt": "2026-05-23T08:11:32.362Z",
   "internalOnly": true,
   "teams": [
     {
@@ -160,7 +160,7 @@
           "generated": "2026-04-23",
           "updated": "",
           "scope": "`references/`, `build-scripts/references/`, `build-scripts/reports/`, reference dashboards, and generated reference reports under `reports/`",
-          "summary": "References Team Roadmap Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Last strategic update: 2026-05-23 Roadmap ID: references-team-roadmap Roadmap version: v2.71-l17b-contract-stop Roadmap status: active Version index: docs/roadmaps/roadmap-version-index.json Scope: references/, build-scripts/references/, build-scripts/reports/, reference dashboards, and generated reference reports under reports/ Exam Ingestion North Star The long-term reference-platform goal is that a new official CvTE economics exam qu...",
+          "summary": "References Team Roadmap Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Last strategic update: 2026-05-23 Roadmap ID: references-team-roadmap Roadmap version: v2.72-l17c0-skill-map-contract Roadmap status: active Version index: docs/roadmaps/roadmap-version-index.json Scope: references/, build-scripts/references/, build-scripts/reports/, reference dashboards, and generated reference reports under reports/ Exam Ingestion North Star The long-term reference-platform goal is that a new official CvTE economics e...",
           "sprints": [
             {
               "sprint": "EX-5",
@@ -173,14 +173,14 @@
               "sprint": "LESSON-SCALE-1",
               "name": "Lesson Companion Pre-Scale Gates Tracking",
               "completed": "no",
-              "currentState": "**TRACKING DEPENDENCY, NOT A REFERENCE EXECUTION SPRINT.** Lesson L1.7A closed PASS WITH FLAGS and rejected broad companion scaling. Lesson L1.7B then recorded the exit-ticket companion-completion contract, inspected the untracked `knowledge/exit-ticket-game-1.1.1.zip` prototype as design evidence only, and paused MVP implementation because the prototype is not source-controlled and uses mastery/score/pass/evidence/adaptive-focus semantics. Lesson roadmap now makes L1.7C-0 the active dependency before any exit-ticket MVP implementation, followed by L1.7C, L1.7D, L2.0, and Scale Gate 1. Reference/product planning must not treat the lesson companion pipeline as scale-approved until those lesson-side gates exist and preserve blocks on diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, and PV machine promotion.",
+              "currentState": "**TRACKING DEPENDENCY, NOT A REFERENCE EXECUTION SPRINT.** Lesson L1.7A closed PASS WITH FLAGS and rejected broad companion scaling. Lesson L1.7B recorded the exit-ticket companion-completion contract and paused MVP implementation behind source-control/product-boundary/shared-skill-map blockers. Lesson L1.7C-0 then closed the shared skill-map engine contract: three separate practice engines consume one shared route/progression layer with aspect filters, compact/route/restricted-full modes, and non-mastery progress language. Lesson L1.7C is now active for game-row quality review, followed by L1.7D, L2.0, a resumed boundary-safe exit-ticket MVP when ready, and Scale Gate 1. Reference/product planning must not treat the lesson companion pipeline as scale-approved until those lesson-side gates exist and preserve blocks on diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, and PV machine promotion.",
               "exitGate": ""
             },
             {
               "sprint": "GAME-UX-1",
               "name": "Shared Skill-Map Engine Architecture",
               "completed": "no",
-              "currentState": "**PLATFORM SUPPORT FOR LESSON L1.7C-0.** L1.7B confirmed that exit-ticket MVP implementation depends on this architecture. Build or refactor one shared skill-map engine consumed by the reasoning, calculation, and graphical practice engines, and define compact checkpoint mode for the later exit-ticket surface. It must expose aspect-filtered skill subsets, recommended-next-skill logic, locked/open/completed state, prerequisite path rendering, compact/route/full display modes, and progress/stars display. It must avoid unfiltered all-skill views by default and must not authorize adaptive diagnostics, mastery, automatic sequencing, student-facing AI, summative use, PV projection, or PV machine promotion.",
+              "currentState": "**PLATFORM SUPPORT FOR CLOSED LESSON CONTRACT L1.7C-0.** Lesson L1.7C-0 accepted the shared skill-map contract and handed implementation to this platform lane. Build or refactor one shared skill-map engine consumed by the reasoning, calculation, and graphical practice engines, plus compact checkpoint mode for the later exit-ticket surface and compact route previews for landing pages. It must expose MTU aspects through skill data, aspect-filtered skill subsets, recommended-next-skill logic, non-mastery state/progress labels, prerequisite path rendering, compact/route/restricted-full display modes, and progress/stars display. It must avoid unfiltered all-skill views by default and must not authorize adaptive diagnostics, mastery, automatic sequencing, student-facing AI, summative use, PV projection, or PV machine promotion.",
               "exitGate": ""
             },
             {
@@ -229,7 +229,7 @@
               "sprint": "Product Gate",
               "name": "Re-Evaluate R10-R13 Product Surfaces",
               "completed": "no",
-              "currentState": "Blocked. Diagnostics, adaptive routing, student-facing AI, teacher cockpit deployment, automatic sequencing, mastery, and summative uses remain out of scope until data-quality gates justify them. Lesson L1.7A explicitly rejected broad companion scaling; L1.7B recorded the companion-set contract but paused exit-ticket MVP implementation. Broad lesson-companion scaling remains blocked until L1.7C-0, L1.7C, L1.7D, L2.0, the resumed boundary-safe exit-ticket MVP, and Scale Gate 1 establish the shared skill-map architecture, game-row quality rubric, landing-page information architecture, and checkpoint review evidence.",
+              "currentState": "Blocked. Diagnostics, adaptive routing, student-facing AI, teacher cockpit deployment, automatic sequencing, mastery, and summative uses remain out of scope until data-quality gates justify them. Lesson L1.7A explicitly rejected broad companion scaling; L1.7B recorded the companion-set contract but paused exit-ticket MVP implementation; L1.7C-0 closed the shared skill-map contract while leaving platform implementation to `GAME-UX-1`. Broad lesson-companion scaling remains blocked until L1.7C, L1.7D, L2.0, the resumed boundary-safe exit-ticket MVP, `GAME-UX-1`, and Scale Gate 1 establish real shared skill-map behavior, game-row quality rubric, landing-page information architecture, and checkpoint review evidence.",
               "exitGate": ""
             },
             {
@@ -836,7 +836,7 @@
           "sprint": "LESSON-SCALE-1",
           "name": "Lesson Companion Pre-Scale Gates Tracking",
           "completed": "no",
-          "currentState": "**TRACKING DEPENDENCY, NOT A REFERENCE EXECUTION SPRINT.** Lesson L1.7A closed PASS WITH FLAGS and rejected broad companion scaling. Lesson L1.7B then recorded the exit-ticket companion-completion contract, inspected the untracked `knowledge/exit-ticket-game-1.1.1.zip` prototype as design evidence only, and paused MVP implementation because the prototype is not source-controlled and uses mastery/score/pass/evidence/adaptive-focus semantics. Lesson roadmap now makes L1.7C-0 the active dependency before any exit-ticket MVP implementation, followed by L1.7C, L1.7D, L2.0, and Scale Gate 1. Reference/product planning must not treat the lesson companion pipeline as scale-approved until those lesson-side gates exist and preserve blocks on diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, and PV machine promotion.",
+          "currentState": "**TRACKING DEPENDENCY, NOT A REFERENCE EXECUTION SPRINT.** Lesson L1.7A closed PASS WITH FLAGS and rejected broad companion scaling. Lesson L1.7B recorded the exit-ticket companion-completion contract and paused MVP implementation behind source-control/product-boundary/shared-skill-map blockers. Lesson L1.7C-0 then closed the shared skill-map engine contract: three separate practice engines consume one shared route/progression layer with aspect filters, compact/route/restricted-full modes, and non-mastery progress language. Lesson L1.7C is now active for game-row quality review, followed by L1.7D, L2.0, a resumed boundary-safe exit-ticket MVP when ready, and Scale Gate 1. Reference/product planning must not treat the lesson companion pipeline as scale-approved until those lesson-side gates exist and preserve blocks on diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, and PV machine promotion.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -844,7 +844,7 @@
           "sprint": "GAME-UX-1",
           "name": "Shared Skill-Map Engine Architecture",
           "completed": "no",
-          "currentState": "**PLATFORM SUPPORT FOR LESSON L1.7C-0.** L1.7B confirmed that exit-ticket MVP implementation depends on this architecture. Build or refactor one shared skill-map engine consumed by the reasoning, calculation, and graphical practice engines, and define compact checkpoint mode for the later exit-ticket surface. It must expose aspect-filtered skill subsets, recommended-next-skill logic, locked/open/completed state, prerequisite path rendering, compact/route/full display modes, and progress/stars display. It must avoid unfiltered all-skill views by default and must not authorize adaptive diagnostics, mastery, automatic sequencing, student-facing AI, summative use, PV projection, or PV machine promotion.",
+          "currentState": "**PLATFORM SUPPORT FOR CLOSED LESSON CONTRACT L1.7C-0.** Lesson L1.7C-0 accepted the shared skill-map contract and handed implementation to this platform lane. Build or refactor one shared skill-map engine consumed by the reasoning, calculation, and graphical practice engines, plus compact checkpoint mode for the later exit-ticket surface and compact route previews for landing pages. It must expose MTU aspects through skill data, aspect-filtered skill subsets, recommended-next-skill logic, non-mastery state/progress labels, prerequisite path rendering, compact/route/restricted-full display modes, and progress/stars display. It must avoid unfiltered all-skill views by default and must not authorize adaptive diagnostics, mastery, automatic sequencing, student-facing AI, summative use, PV projection, or PV machine promotion.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -900,7 +900,7 @@
           "sprint": "Product Gate",
           "name": "Re-Evaluate R10-R13 Product Surfaces",
           "completed": "no",
-          "currentState": "Blocked. Diagnostics, adaptive routing, student-facing AI, teacher cockpit deployment, automatic sequencing, mastery, and summative uses remain out of scope until data-quality gates justify them. Lesson L1.7A explicitly rejected broad companion scaling; L1.7B recorded the companion-set contract but paused exit-ticket MVP implementation. Broad lesson-companion scaling remains blocked until L1.7C-0, L1.7C, L1.7D, L2.0, the resumed boundary-safe exit-ticket MVP, and Scale Gate 1 establish the shared skill-map architecture, game-row quality rubric, landing-page information architecture, and checkpoint review evidence.",
+          "currentState": "Blocked. Diagnostics, adaptive routing, student-facing AI, teacher cockpit deployment, automatic sequencing, mastery, and summative uses remain out of scope until data-quality gates justify them. Lesson L1.7A explicitly rejected broad companion scaling; L1.7B recorded the companion-set contract but paused exit-ticket MVP implementation; L1.7C-0 closed the shared skill-map contract while leaving platform implementation to `GAME-UX-1`. Broad lesson-companion scaling remains blocked until L1.7C, L1.7D, L2.0, the resumed boundary-safe exit-ticket MVP, `GAME-UX-1`, and Scale Gate 1 establish real shared skill-map behavior, game-row quality rubric, landing-page information architecture, and checkpoint review evidence.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -1597,10 +1597,17 @@
           "summary": "Sprint 0.5 is signed off for Part A textbook/book production.",
           "sprints": [
             {
+              "sprint": "L1.7C",
+              "name": "Three-Aspect Game Quality Upgrade",
+              "completed": "no",
+              "currentState": "**ACTIVE / CONTRACT READY, REQUIRED BEFORE BROAD GAME SCALING.** L1.7C-0 closed the shared skill-map engine contract and handed platform support to `GAME-UX-1`. Upgrade `Redeneren`, `Rekenen`, and `Grafieken` as separate core second-row skill-practice engines that consume the shared skill-map contract. Each game receives a scoped skill route: reasoning/verbal only, calculation only, or graph/table/visual only. Produce a reusable game-row quality rubric covering student experience, teacher-learning quality, feedback, scaffolding, final-challenge behavior, mobile/dark rendering, replay value, success states, skill-map clarity, and MTU/procedure/visual alignment where available. Remove answer-revealing defaults, generic feedback, unsafe auto-correct behavior, unclear success states, and unfiltered all-skill views. Graph game needs at least one harder less-labelled variant; calculation game needs calculation field, answer field, and unit where relevant; reasoning game must test causal/procedural reasoning, not only recognition. Stop if meaningful game-row review requires the platform implementation before proceeding. No adaptive diagnostics, mastery, sequencing, AI, summative use, PV projection, or PV machine promotion.",
+              "exitGate": ""
+            },
+            {
               "sprint": "L1.7C-0",
               "name": "Shared Skill-Map Engine Contract",
-              "completed": "no",
-              "currentState": "**ACTIVE / REQUIRED BEFORE THREE-ASPECT GAME UPGRADE AND EXIT-TICKET MVP IMPLEMENTATION.** L1.7B completed the companion-set contract and recorded a stop decision: the current exit-ticket prototype is useful design evidence but is untracked and uses mastery/score/evidence/adaptive-focus semantics that cannot be imported as-is. Define one shared skill-map / skill-tree engine used by the three second-row practice games: `Redeneren`, `Rekenen`, and `Grafieken`, and compact checkpoint mode for the later exit ticket. The shared engine must support aspect filters: reasoning/verbal, calculation, graphical, and mixed only when explicitly requested. It must avoid showing all skills by default. Primary affordance: `Start oefenen` / `Ga verder`. Secondary affordances: skill info, dependency route, goal path, and full tree view. No adaptive diagnostics, mastery decisions, automatic sequencing, student-facing AI, summative use, PV projection, or PV machine promotion.",
+              "completed": "yes",
+              "currentState": "**CLOSED PASS WITH FLAGS.** Defined one shared skill-map / skill-tree engine contract for the three second-row practice games and compact checkpoint mode for the later exit ticket. Contract defines aspect filters (`reasoning`, `calculation`, `graphical`, explicit `mixed`), modes (`compact`, `route`, restricted `full`), state/progress language, game consumers, landing-page preview use, exit-ticket compact use, accessibility expectations, and product-use boundaries. Platform implementation remains a `GAME-UX-1` dependency before real shared route UI exists. Records: `archive/sprints/L1.7C-0/L1.7C-0-sprint-plan.md`, `archive/sprints/L1.7C-0/L1.7C-0-current-state-audit.md`, `archive/sprints/L1.7C-0/L1.7C-0-shared-skill-map-contract.md`, `archive/sprints/L1.7C-0/L1.7C-0-handoff-to-platform.md`, `archive/sprints/L1.7C-0/L1.7C-0-validation-log.md`, `archive/sprints/L1.7C-0/L1.7C-0-closure-log.md`.",
               "exitGate": ""
             },
             {
@@ -1608,13 +1615,6 @@
               "name": "Exit Ticket Game MVP + Companion Completion Contract",
               "completed": "no",
               "currentState": "**PAUSED AFTER CONTRACT-AND-STOP DECISION.** L1.7B inspected the untracked prototype `../4veco-platform/knowledge/exit-ticket-game-1.1.1.zip`, ran its own prototype unit test successfully, and recorded it as design evidence only. The companion-completion contract and future MVP scope now exist, but implementation is paused because the prototype is not source-controlled, uses mastery/score/pass/evidence/adaptive-focus language, and depends on compact checkpoint-mode skill-map behavior that L1.7C-0 must define first. Records: `archive/sprints/L1.7B/L1.7B-sprint-plan.md`, `archive/sprints/L1.7B/L1.7B-prototype-inventory.md`, `archive/sprints/L1.7B/L1.7B-companion-completion-contract.md`, `archive/sprints/L1.7B/L1.7B-exit-ticket-mvp-scope.md`, `archive/sprints/L1.7B/L1.7B-stop-decision.md`, `archive/sprints/L1.7B/L1.7B-validation-log.md`.",
-              "exitGate": ""
-            },
-            {
-              "sprint": "L1.7C",
-              "name": "Three-Aspect Game Quality Upgrade",
-              "completed": "no",
-              "currentState": "**REQUIRES L1.7C-0 / REQUIRED BEFORE BROAD GAME SCALING.** Upgrade `Redeneren`, `Rekenen`, and `Grafieken` as separate core second-row skill-practice engines that consume the shared skill-map engine. Each game receives a scoped skill route: reasoning/verbal only, calculation only, or graph/table/visual only. Produce a reusable game-row quality rubric covering student experience, teacher-learning quality, feedback, scaffolding, final-challenge behavior, mobile/dark rendering, replay value, success states, skill-map clarity, and MTU/procedure/visual alignment where available. Remove answer-revealing defaults, generic feedback, unsafe auto-correct behavior, unclear success states, and unfiltered all-skill views. Graph game needs at least one harder less-labelled variant; calculation game needs calculation field, answer field, and unit where relevant; reasoning game must test causal/procedural reasoning, not only recognition. No adaptive diagnostics, mastery, sequencing, AI, summative use, PV projection, or PV machine promotion.",
               "exitGate": ""
             },
             {
@@ -1909,10 +1909,10 @@
       ],
       "sprints": [
         {
-          "sprint": "L1.7C-0",
-          "name": "Shared Skill-Map Engine Contract",
+          "sprint": "L1.7C",
+          "name": "Three-Aspect Game Quality Upgrade",
           "completed": "no",
-          "currentState": "**ACTIVE / REQUIRED BEFORE THREE-ASPECT GAME UPGRADE AND EXIT-TICKET MVP IMPLEMENTATION.** L1.7B completed the companion-set contract and recorded a stop decision: the current exit-ticket prototype is useful design evidence but is untracked and uses mastery/score/evidence/adaptive-focus semantics that cannot be imported as-is. Define one shared skill-map / skill-tree engine used by the three second-row practice games: `Redeneren`, `Rekenen`, and `Grafieken`, and compact checkpoint mode for the later exit ticket. The shared engine must support aspect filters: reasoning/verbal, calculation, graphical, and mixed only when explicitly requested. It must avoid showing all skills by default. Primary affordance: `Start oefenen` / `Ga verder`. Secondary affordances: skill info, dependency route, goal path, and full tree view. No adaptive diagnostics, mastery decisions, automatic sequencing, student-facing AI, summative use, PV projection, or PV machine promotion.",
+          "currentState": "**ACTIVE / CONTRACT READY, REQUIRED BEFORE BROAD GAME SCALING.** L1.7C-0 closed the shared skill-map engine contract and handed platform support to `GAME-UX-1`. Upgrade `Redeneren`, `Rekenen`, and `Grafieken` as separate core second-row skill-practice engines that consume the shared skill-map contract. Each game receives a scoped skill route: reasoning/verbal only, calculation only, or graph/table/visual only. Produce a reusable game-row quality rubric covering student experience, teacher-learning quality, feedback, scaffolding, final-challenge behavior, mobile/dark rendering, replay value, success states, skill-map clarity, and MTU/procedure/visual alignment where available. Remove answer-revealing defaults, generic feedback, unsafe auto-correct behavior, unclear success states, and unfiltered all-skill views. Graph game needs at least one harder less-labelled variant; calculation game needs calculation field, answer field, and unit where relevant; reasoning game must test causal/procedural reasoning, not only recognition. Stop if meaningful game-row review requires the platform implementation before proceeding. No adaptive diagnostics, mastery, sequencing, AI, summative use, PV projection, or PV machine promotion.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
@@ -1921,14 +1921,6 @@
           "name": "Exit Ticket Game MVP + Companion Completion Contract",
           "completed": "no",
           "currentState": "**PAUSED AFTER CONTRACT-AND-STOP DECISION.** L1.7B inspected the untracked prototype `../4veco-platform/knowledge/exit-ticket-game-1.1.1.zip`, ran its own prototype unit test successfully, and recorded it as design evidence only. The companion-completion contract and future MVP scope now exist, but implementation is paused because the prototype is not source-controlled, uses mastery/score/pass/evidence/adaptive-focus language, and depends on compact checkpoint-mode skill-map behavior that L1.7C-0 must define first. Records: `archive/sprints/L1.7B/L1.7B-sprint-plan.md`, `archive/sprints/L1.7B/L1.7B-prototype-inventory.md`, `archive/sprints/L1.7B/L1.7B-companion-completion-contract.md`, `archive/sprints/L1.7B/L1.7B-exit-ticket-mvp-scope.md`, `archive/sprints/L1.7B/L1.7B-stop-decision.md`, `archive/sprints/L1.7B/L1.7B-validation-log.md`.",
-          "exitGate": "",
-          "roadmap": "Lessen roadmap"
-        },
-        {
-          "sprint": "L1.7C",
-          "name": "Three-Aspect Game Quality Upgrade",
-          "completed": "no",
-          "currentState": "**REQUIRES L1.7C-0 / REQUIRED BEFORE BROAD GAME SCALING.** Upgrade `Redeneren`, `Rekenen`, and `Grafieken` as separate core second-row skill-practice engines that consume the shared skill-map engine. Each game receives a scoped skill route: reasoning/verbal only, calculation only, or graph/table/visual only. Produce a reusable game-row quality rubric covering student experience, teacher-learning quality, feedback, scaffolding, final-challenge behavior, mobile/dark rendering, replay value, success states, skill-map clarity, and MTU/procedure/visual alignment where available. Remove answer-revealing defaults, generic feedback, unsafe auto-correct behavior, unclear success states, and unfiltered all-skill views. Graph game needs at least one harder less-labelled variant; calculation game needs calculation field, answer field, and unit where relevant; reasoning game must test causal/procedural reasoning, not only recognition. No adaptive diagnostics, mastery, sequencing, AI, summative use, PV projection, or PV machine promotion.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
@@ -2049,6 +2041,14 @@
           "name": "Green Gate Handoff",
           "completed": "no",
           "currentState": "",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "L1.7C-0",
+          "name": "Shared Skill-Map Engine Contract",
+          "completed": "yes",
+          "currentState": "**CLOSED PASS WITH FLAGS.** Defined one shared skill-map / skill-tree engine contract for the three second-row practice games and compact checkpoint mode for the later exit ticket. Contract defines aspect filters (`reasoning`, `calculation`, `graphical`, explicit `mixed`), modes (`compact`, `route`, restricted `full`), state/progress language, game consumers, landing-page preview use, exit-ticket compact use, accessibility expectations, and product-use boundaries. Platform implementation remains a `GAME-UX-1` dependency before real shared route UI exists. Records: `archive/sprints/L1.7C-0/L1.7C-0-sprint-plan.md`, `archive/sprints/L1.7C-0/L1.7C-0-current-state-audit.md`, `archive/sprints/L1.7C-0/L1.7C-0-shared-skill-map-contract.md`, `archive/sprints/L1.7C-0/L1.7C-0-handoff-to-platform.md`, `archive/sprints/L1.7C-0/L1.7C-0-validation-log.md`, `archive/sprints/L1.7C-0/L1.7C-0-closure-log.md`.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
@@ -2261,8 +2261,8 @@
           "roadmap": "Lessen roadmap"
         }
       ],
-      "completedCount": 26,
-      "openCount": 18
+      "completedCount": 27,
+      "openCount": 17
     },
     {
       "id": "innovation",

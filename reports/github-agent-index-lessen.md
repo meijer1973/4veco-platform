@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-lessen
 
-Generated: 2026-05-23T07:43:21.451Z
+Generated: 2026-05-23T08:11:34.616Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-lessen`
-Files indexed: 1359
+Files indexed: 1365
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -81,9 +81,10 @@ _No files indexed in this group._
 
 ## validators
 
-Count: 1
+Count: 2
 
 - archive/sprints/L1.7A/L1.7A-validation-log.md
+- archive/sprints/L1.7B/L1.7B-validation-log.md
 
 ## references
 
@@ -2389,7 +2390,7 @@ Count: 817
 
 ## other
 
-Count: 244
+Count: 249
 
 - _team-b-reference/1.1.1/uitleg vaardigheden team b.html
 - _team-b-reference/1.1.1/uitleg voorkennis team b.html
@@ -2615,6 +2616,11 @@ Count: 244
 - archive/sprints/L1.7A/L1.7A-flag-triage.md
 - archive/sprints/L1.7A/L1.7A-readiness-matrix.md
 - archive/sprints/L1.7A/L1.7A-sprint-plan.md
+- archive/sprints/L1.7B/L1.7B-companion-completion-contract.md
+- archive/sprints/L1.7B/L1.7B-exit-ticket-mvp-scope.md
+- archive/sprints/L1.7B/L1.7B-prototype-inventory.md
+- archive/sprints/L1.7B/L1.7B-sprint-plan.md
+- archive/sprints/L1.7B/L1.7B-stop-decision.md
 - archive/sprints/SYNC-1/SYNC-1-roadmap-reconciliation-log.md
 - archive/sprints/SYNC-2/SYNC-2-companion-pre-scale-roadmap-update.md
 - archive/sprints/SYNC-3/SYNC-3-shared-skill-map-roadmap-update.md
