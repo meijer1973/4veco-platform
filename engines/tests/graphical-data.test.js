@@ -107,4 +107,15 @@ if (allData.length > 0) describe.each(allData)('$parNr ($file)', ({ parNr, data 
             }
         }
     });
+
+    test('graphical MVP includes at least one less-labelled readable variant', () => {
+        if (parNr !== '1.1.3') return;
+        const lessLabelled = data.challenges.filter(challenge => {
+            const graph = challenge.graph || {};
+            return graph.show_value_labels === false
+                && Array.isArray(graph.y_ticks)
+                && graph.y_ticks.length >= 2;
+        });
+        expect(lessLabelled.length).toBeGreaterThanOrEqual(1);
+    });
 });

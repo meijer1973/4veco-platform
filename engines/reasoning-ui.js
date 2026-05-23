@@ -58,10 +58,10 @@
     }
 
     function getMasteryLevel(correct) {
-        if (correct >= 10) return { label: 'Expert', color: '#f59e0b' };
-        if (correct >= 6)  return { label: 'Gevorderd', color: '#22c55e' };
-        if (correct >= 3)  return { label: 'Onderweg', color: '#3b82f6' };
-        return { label: 'Beginner', color: '#94a3b8' };
+        if (correct >= 10) return { label: 'Veel geoefend', color: '#f59e0b' };
+        if (correct >= 6)  return { label: 'Goed op weg', color: '#22c55e' };
+        if (correct >= 3)  return { label: 'Gestart', color: '#3b82f6' };
+        return { label: 'Nog starten', color: '#94a3b8' };
     }
 
     function getCategoryId(parNr, structureType) {
@@ -86,6 +86,21 @@
 
     // ── Sidebar reference ────────────────────────────────────────────
     var sidebarEl = document.getElementById('r-sidebar');
+
+    function renderSkillMapRoute() {
+        if (!sidebarEl || !window.SkillMapRouteUI || typeof engine.getSkillMapRequest !== 'function') return;
+        var host = document.getElementById('r-skill-route');
+        if (!host) {
+            host = document.createElement('div');
+            host.id = 'r-skill-route';
+            sidebarEl.insertBefore(host, sidebarEl.firstChild);
+        }
+        window.SkillMapRouteUI.renderInto(
+            host,
+            engine.getSkillMapRequest({ mode: 'compact', maxVisibleAvailable: 3 }),
+            { title: 'Oefenroute Redeneren' }
+        );
+    }
 
     // ── Mode icons and descriptions ─────────────────────────────────
     var MODE_ICONS = ['\uD83D\uDD22', '\u2753', '\uD83D\uDD0D', '\uD83D\uDCC8', '\uD83E\uDDE9'];
@@ -257,6 +272,7 @@
     // ── Sidebar: all 8 categories ──────────────────────────────────
 
     function renderSidebar() {
+        renderSkillMapRoute();
         var dashEl = document.getElementById('r-progress-dashboard');
         if (!dashEl || !catData || !sidebarEl) return;
 

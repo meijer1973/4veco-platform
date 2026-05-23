@@ -35,6 +35,7 @@ function generateShell(parNr, parName) {
     <title>${escapeHtml(parName)} – Stappenplan</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="${sharedPath}/skill-map-route.css">
     <link rel="stylesheet" href="${sharedPath}/procedure.css">
 </head>
 <body>
@@ -85,6 +86,7 @@ function generateShell(parNr, parName) {
     </div><!-- /p-main-area -->
 
     <div class="p-sidebar">
+        <div id="p-skill-route"></div>
         <h3 class="p-sidebar-title"><i class="fa-solid fa-list-check"></i> Stappenplannen</h3>
         <ul class="p-sidebar-list" id="p-sidebar-list"></ul>
     </div>
@@ -92,6 +94,10 @@ function generateShell(parNr, parName) {
     </div><!-- /p-content-layout -->
 </div>
 <script src="${sharedPath}/theme.js"></script>
+<script src="${sharedPath}/skill-map-engine.js"></script>
+<script src="${sharedPath}/skilltree/base-elements.js"></script>
+<script src="${sharedPath}/skilltree/${parNr}.js"></script>
+<script src="${sharedPath}/skill-map-route-ui.js"></script>
 <script src="${sharedPath}/procedure/${parNr}.js"></script>
 <script src="${sharedPath}/adaptive-seam.js"></script>
 <script src="${sharedPath}/procedure-engine.js"></script>

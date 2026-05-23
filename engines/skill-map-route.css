@@ -1,0 +1,150 @@
+/* Shared compact skill-route preview for practice games. */
+.skill-map-route {
+  border: 1px solid rgba(30, 41, 59, 0.12);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.92);
+  color: #1e293b;
+  padding: 14px;
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.08);
+}
+
+[data-theme="dark"] .skill-map-route {
+  background: rgba(15, 23, 42, 0.88);
+  color: #e2e8f0;
+  border-color: rgba(148, 163, 184, 0.28);
+}
+
+.skill-map-route-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.skill-map-route-kicker {
+  margin: 0;
+  color: #64748b;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+[data-theme="dark"] .skill-map-route-kicker {
+  color: #94a3b8;
+}
+
+.skill-map-route h2 {
+  margin: 2px 0 0;
+  font-size: 1rem;
+  line-height: 1.25;
+}
+
+.skill-map-route-primary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.skill-map-route-action,
+.skill-map-route-next {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.skill-map-route-action {
+  background: #0f766e;
+  color: #fff;
+}
+
+.skill-map-route-next {
+  background: #e0f2fe;
+  color: #075985;
+}
+
+[data-theme="dark"] .skill-map-route-next {
+  background: rgba(14, 165, 233, 0.18);
+  color: #bae6fd;
+}
+
+.skill-map-route-list {
+  display: grid;
+  gap: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.skill-map-route-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 4px 8px;
+  align-items: center;
+  border: 1px solid rgba(148, 163, 184, 0.28);
+  border-radius: 8px;
+  background: #f8fafc;
+  padding: 9px 10px;
+}
+
+[data-theme="dark"] .skill-map-route-item {
+  background: rgba(30, 41, 59, 0.72);
+}
+
+.skill-map-route-item.is-recommended {
+  border-color: #0f766e;
+  box-shadow: inset 4px 0 0 #0f766e;
+}
+
+.skill-map-route-name {
+  min-width: 0;
+  font-size: 0.9rem;
+  font-weight: 800;
+  overflow-wrap: anywhere;
+}
+
+.skill-map-route-state {
+  grid-column: 1;
+  color: #64748b;
+  font-size: 0.75rem;
+}
+
+[data-theme="dark"] .skill-map-route-state {
+  color: #cbd5e1;
+}
+
+.skill-map-route-stars {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  border-radius: 999px;
+  background: #fff7ed;
+  color: #9a3412;
+  padding: 3px 8px;
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+[data-theme="dark"] .skill-map-route-stars {
+  background: rgba(251, 146, 60, 0.18);
+  color: #fed7aa;
+}
+
+.skill-map-route-note,
+.skill-map-route-boundary {
+  margin: 10px 0 0;
+  color: #64748b;
+  font-size: 0.75rem;
+  line-height: 1.35;
+}
+
+[data-theme="dark"] .skill-map-route-note,
+[data-theme="dark"] .skill-map-route-boundary {
+  color: #94a3b8;
+}

@@ -204,6 +204,12 @@ p {
   stroke-width: 2;
 }
 
+.g-grid-line {
+  stroke: rgba(100, 116, 139, 0.22);
+  stroke-dasharray: 4 6;
+  stroke-width: 1;
+}
+
 .g-bar {
   fill: var(--g-primary);
 }
@@ -231,7 +237,8 @@ p {
 
 .g-chart-label,
 .g-chart-value,
-.g-axis-label {
+.g-axis-label,
+.g-axis-tick {
   fill: var(--g-text);
   font-size: 16px;
   font-weight: 700;
@@ -240,6 +247,12 @@ p {
 
 .g-chart-value {
   fill: var(--g-primary);
+}
+
+.g-axis-tick {
+  fill: var(--g-muted);
+  font-size: 12px;
+  text-anchor: end;
 }
 
 .g-y-label {
@@ -427,7 +440,8 @@ a:focus-visible {
 
   .g-chart-label,
   .g-chart-value,
-  .g-axis-label {
+  .g-axis-label,
+  .g-axis-tick {
     font-size: 13px;
   }
 

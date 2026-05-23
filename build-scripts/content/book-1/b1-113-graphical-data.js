@@ -88,6 +88,8 @@ const data = {
         x_label: 'hoeveelheid',
         y_label: 'prijs',
         unit: 'euro',
+        show_value_labels: false,
+        y_ticks: [2, 2.5, 3, 3.5, 4],
         series: [
           { label: '100 broodjes', value: 4.00 },
           { label: '150 broodjes', value: 3.50 },

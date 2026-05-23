@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-05-23T08:34:51.202Z
+Generated: 2026-05-23T09:05:22.105Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 1675
+Files indexed: 1690
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -41,7 +41,7 @@ Count: 8
 
 ## engines
 
-Count: 59
+Count: 62
 
 - engines/adaptive-seam.js
 - engines/graphical-engine.js
@@ -61,6 +61,7 @@ Count: 59
 - engines/reasoning-engine.js
 - engines/reasoning-ui.js
 - engines/reasoning.css
+- engines/skill-map-engine.js
 - engines/skilltree-engine.js
 - engines/skilltree-ui.js
 - engines/skilltree-ui.legacy.js
@@ -96,8 +97,10 @@ Count: 59
 - engines/tests/reasoning-data.test.js
 - engines/tests/reasoning-engine.test.js
 - engines/tests/REFACTOR-NOTES.md
+- engines/tests/skill-map-engine.test.js
 - engines/tests/skilltree-data.test.js
 - engines/tests/skilltree-engine.test.js
+- engines/tests/skilltree-visible-copy.test.js
 - engines/tests/visual-surfaces-no-prod-label.test.js
 - engines/theme.js
 - engines/voorkennis.css
@@ -539,7 +542,7 @@ Count: 90
 
 ## references
 
-Count: 287
+Count: 289
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -623,6 +626,8 @@ Count: 287
 - references/data/sprints/EX-4.result.json
 - references/data/sprints/EX-NS0.plan.json
 - references/data/sprints/EX-NS0.result.json
+- references/data/sprints/GAME-UX-1.plan.json
+- references/data/sprints/GAME-UX-1.result.json
 - references/data/sprints/GATE-CP6.plan.json
 - references/data/sprints/GATE-CP6.result.json
 - references/data/sprints/PV-G4.plan.json
@@ -831,7 +836,7 @@ Count: 287
 
 ## reports
 
-Count: 768
+Count: 777
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1391,6 +1396,15 @@ Count: 768
 - reports/sprints/EX-NS0-plan.md
 - reports/sprints/EX-NS0-result.md
 - reports/sprints/example-result.md
+- reports/sprints/GAME-UX-1-baseline.md
+- reports/sprints/GAME-UX-1-diff-summary.md
+- reports/sprints/GAME-UX-1-lead-review-assignment.md
+- reports/sprints/GAME-UX-1-lead-review-corrections.md
+- reports/sprints/GAME-UX-1-lead-review-round1.md
+- reports/sprints/GAME-UX-1-lead-review-round2.md
+- reports/sprints/GAME-UX-1-plan.md
+- reports/sprints/GAME-UX-1-planning-review.md
+- reports/sprints/GAME-UX-1-result.md
 - reports/sprints/GATE-CP6-baseline.md
 - reports/sprints/GATE-CP6-diff-summary.md
 - reports/sprints/GATE-CP6-lead-review-assignment.md
@@ -1622,7 +1636,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 217
+Count: 218
 
 - .gitignore
 - BUILD-CHAPTER.md
@@ -1697,6 +1711,7 @@ Count: 217
 - docs/roadmaps/outdated/reference-team-roadmap-v2.7-cp3-closed.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.70-l17a-readiness-decision.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.71-l17b-contract-stop.md
+- docs/roadmaps/outdated/reference-team-roadmap-v2.72-l17c0-skill-map-contract.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.8-s4.1-conditions-calibrated.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.9-rx1-inventory-prepared.md
 - docs/roadmaps/README.md

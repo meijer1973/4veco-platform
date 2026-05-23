@@ -48,6 +48,23 @@
     sidebarList:   document.getElementById("p-sidebar-list")
   };
 
+  function renderSkillMapRoute() {
+    if (!window.SkillMapRouteUI || typeof engine.getSkillMapRequest !== "function") return;
+    var sidebar = document.querySelector(".p-sidebar");
+    if (!sidebar) return;
+    var host = document.getElementById("p-skill-route");
+    if (!host) {
+      host = document.createElement("div");
+      host.id = "p-skill-route";
+      sidebar.insertBefore(host, sidebar.firstChild);
+    }
+    window.SkillMapRouteUI.renderInto(
+      host,
+      engine.getSkillMapRequest({ mode: "compact", maxVisibleAvailable: 3 }),
+      { title: "Oefenroute Rekenen" }
+    );
+  }
+
   // --- Screen management ---
   function showScreen(screen) {
     [els.menuScreen, els.gameScreen, els.resultsScreen].forEach(function (s) {
@@ -86,6 +103,7 @@
 
   // --- Sidebar ---
   function renderSidebar(activeId) {
+    renderSkillMapRoute();
     var html = "";
     data.procedures.forEach(function (proc) {
       var best = engine.getBestScore(proc.id);
@@ -134,7 +152,7 @@
       var bestHtml = "";
       if (best) {
         if (best.correct === best.total) {
-          bestHtml = '<span class="p-procedure-card-best p-best-perfect"><i class="fa-solid fa-star"></i> Perfect</span>';
+          bestHtml = '<span class="p-procedure-card-best p-best-perfect"><i class="fa-solid fa-star"></i> Alles goed</span>';
         } else {
           bestHtml = '<span class="p-procedure-card-best p-best-partial">' + best.correct + '/' + best.total + '</span>';
         }
@@ -309,7 +327,7 @@
     var perfect = best.correct === best.total;
 
     els.resultsEmoji.textContent = perfect ? "\ud83c\udf1f" : (pct >= 60 ? "\ud83d\udcaa" : "\ud83d\udca1");
-    els.resultsTitle.textContent = perfect ? "Perfect!" : (pct >= 60 ? "Goed bezig!" : "Blijf oefenen!");
+    els.resultsTitle.textContent = perfect ? "Alles goed!" : (pct >= 60 ? "Goed bezig!" : "Blijf oefenen!");
     els.resultsScore.textContent = best.correct + " van " + best.total + " stappen goed (" + pct + "%)";
 
     // Animate progress bar

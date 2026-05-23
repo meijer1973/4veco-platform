@@ -39,6 +39,47 @@
     return String(Math.round(value * 10) / 10).replace(".", ",");
   }
 
+  function showValueLabels(graph) {
+    return graph.show_value_labels !== false;
+  }
+
+  function getYAxisTicks(graph, min, max) {
+    if (Array.isArray(graph.y_ticks) && graph.y_ticks.length >= 2) {
+      return graph.y_ticks.filter(function (tick) {
+        return typeof tick === "number" && isFinite(tick);
+      });
+    }
+    var count = 4;
+    var range = max - min || 1;
+    var ticks = [];
+    for (var i = 0; i <= count; i++) {
+      ticks.push(min + (range * i / count));
+    }
+    return ticks;
+  }
+
+  function renderYAxisTicks(graph, min, max, layout) {
+    if (graph.show_y_ticks !== true && graph.show_value_labels !== false) return "";
+    var range = max - min || 1;
+    return getYAxisTicks(graph, min, max).map(function (tick) {
+      var y = layout.bottom - ((tick - min) / range) * layout.chartH;
+      return [
+        '<g class="g-axis-tick-row">',
+        '<line class="g-grid-line" x1="' + layout.left + '" y1="' + y + '" x2="' + (layout.left + layout.chartW) + '" y2="' + y + '"></line>',
+        '<text class="g-axis-tick" x="' + (layout.left - 10) + '" y="' + (y + 4) + '">' + escapeHtml(formatNumber(tick)) + '</text>',
+        '</g>'
+      ].join("");
+    }).join("");
+  }
+
+  function renderSkillMapRoute() {
+    if (!window.SkillMapRouteUI || typeof engine.getSkillMapRequest !== "function") return "";
+    return window.SkillMapRouteUI.renderRequest(
+      engine.getSkillMapRequest({ mode: "compact", maxVisibleAvailable: 3 }),
+      { title: "Oefenroute Grafieken" }
+    );
+  }
+
   function renderChart(challenge) {
     var graph = challenge.graph;
     var values = graph.series.map(function (p) { return p.value; });
@@ -106,7 +147,7 @@
       return [
         '<g class="g-bar-item">',
         '<rect class="g-bar" x="' + x + '" y="' + y + '" width="' + bw + '" height="' + h + '" rx="' + layout.barRadius + '"></rect>',
-        '<text class="g-chart-value" x="' + (x + bw / 2) + '" y="' + (y - 10) + '">' + escapeHtml(formatNumber(point.value)) + '</text>',
+        showValueLabels(graph) ? '<text class="g-chart-value" x="' + (x + bw / 2) + '" y="' + (y - 10) + '">' + escapeHtml(formatNumber(point.value)) + '</text>' : '',
         '<text class="g-chart-label" x="' + (x + bw / 2) + '" y="' + layout.labelY + '">' + escapeHtml(point.label) + '</text>',
         '</g>'
       ].join("");
@@ -117,6 +158,7 @@
       '<line class="g-axis" x1="' + left + '" y1="' + bottom + '" x2="' + (left + chartW) + '" y2="' + bottom + '"></line>',
       '<line class="g-axis" x1="' + left + '" y1="' + (bottom - chartH) + '" x2="' + left + '" y2="' + bottom + '"></line>',
       '<text class="g-axis-label g-y-label" x="' + layout.yLabelX + '" y="' + layout.yLabelY + '">' + escapeHtml(graph.unit) + '</text>',
+      renderYAxisTicks(graph, 0, max, layout),
       bars,
       '</svg>'
     ].join("");
@@ -141,7 +183,7 @@
       return [
         '<g class="g-line-point">',
         '<circle class="g-dot" cx="' + c.x + '" cy="' + c.y + '" r="' + layout.dotRadius + '"></circle>',
-        '<text class="g-chart-value" x="' + c.x + '" y="' + (c.y - 14) + '">' + escapeHtml(formatNumber(c.point.value)) + '</text>',
+        showValueLabels(graph) ? '<text class="g-chart-value" x="' + c.x + '" y="' + (c.y - 14) + '">' + escapeHtml(formatNumber(c.point.value)) + '</text>' : '',
         '<text class="g-chart-label" x="' + c.x + '" y="' + layout.labelY + '">' + escapeHtml(c.point.label) + '</text>',
         '</g>'
       ].join("");
@@ -152,6 +194,7 @@
       '<line class="g-axis" x1="' + left + '" y1="' + bottom + '" x2="' + (left + chartW) + '" y2="' + bottom + '"></line>',
       '<line class="g-axis" x1="' + left + '" y1="' + (bottom - chartH) + '" x2="' + left + '" y2="' + bottom + '"></line>',
       '<text class="g-axis-label g-y-label" x="' + layout.yLabelX + '" y="' + layout.yLabelY + '">' + escapeHtml(graph.unit) + '</text>',
+      renderYAxisTicks(graph, min, max, layout),
       '<polyline class="g-line" points="' + poly + '"></polyline>',
       dots,
       '</svg>'
@@ -307,6 +350,7 @@
       '<div class="g-chart-wrap">' + renderChart(challenge) + '</div>',
       '</article>',
       '<aside class="g-panel g-work-panel">',
+      renderSkillMapRoute(),
       renderInputs(challenge),
       renderFeedback(lastResult),
       '</aside>',

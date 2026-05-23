@@ -3,7 +3,11 @@ const path = require('path');
 
 const FILES = [
     'engines/skilltree-ui.js',
+    'engines/skill-map-route-ui.js',
     'build-scripts/platform/build-skilltree-shells.js',
+    'build-scripts/platform/build-reasoning-engine.js',
+    'build-scripts/platform/build-procedure-shells.js',
+    'build-scripts/platform/build-graphical-shells.js',
     'engines/tests/harness-skilltree-ui.html',
     'engines/tests/_wiskundevaardigheden-template.html'
 ];

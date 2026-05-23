@@ -28,4 +28,11 @@ describe('graphical ui safeguards', () => {
         expect(source).not.toContain('if (engine.isComplete()) {');
         expect(source).toContain("engine.index === data.challenges.length - 1 ? 'Bekijk resultaat'");
     });
+
+    test('supports a shared skill-map route and less-labelled graph variants', () => {
+        expect(source).toContain('SkillMapRouteUI.renderRequest');
+        expect(source).toContain('Oefenroute Grafieken');
+        expect(source).toContain('graph.show_value_labels !== false');
+        expect(source).toContain('renderYAxisTicks');
+    });
 });

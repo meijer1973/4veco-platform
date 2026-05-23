@@ -61,7 +61,7 @@ function copyEngines() {
         'adaptive-seam.js',
         'quiz-engine.js', 'quiz-ui.js', 'quiz.css',
         'reasoning-engine.js', 'reasoning-ui.js', 'reasoning.css',
-        'skill-map-engine.js',
+        'skill-map-engine.js', 'skill-map-route-ui.js', 'skill-map-route.css',
         'skilltree-engine.js', 'skilltree-ui.js', 'skilltree.css',
         'newsdetective-engine.js', 'newsdetective-ui.js', 'newsdetective.css',
         'procedure-engine.js', 'procedure-ui.js', 'procedure.css',
