@@ -15,13 +15,14 @@
   "roadmaps": [
     {
       "roadmap_id": "references-team-roadmap",
-      "version": "v2.74-l17d-landing-ia-ready",
+      "version": "v2.75-l17d-closed-pass-with-flags",
       "title": "References Team Roadmap",
       "status": "active",
       "path": "references/reference-team-roadmap.md",
       "owner": "references_team",
       "updated_on": "2026-05-24",
       "supersedes": [
+        "docs/roadmaps/outdated/reference-team-roadmap-v2.74-l17d-landing-ia-ready.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.73b-l17c-closed-pass-with-flags.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.72-l17c0-skill-map-contract.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.71-l17b-contract-stop.md",
@@ -95,7 +96,18 @@
         "knowledge/Exercise schema and quality/reference-team-roadmap Live version 28 April.md",
         "knowledge/Exercise schema and quality/roadmap-updated-repository-checked.md"
       ],
-      "notes": "Current operating roadmap after lesson L1.7D reached technical QA green / ready for human review with generator-owned landing-page route IA; EX-5 remains active tooling/design and lesson-side L1.7D human review, L2.0, plus a resumed boundary-safe exit-ticket MVP remain required before any scale gate."
+      "notes": "Current operating roadmap after lesson L1.7D closed PASS WITH FLAGS and L2.0 became the active lesson foundation-hardening sprint; EX-5 remains active tooling/design and L2.0, a resumed boundary-safe exit-ticket MVP, plus Scale Gate 1 remain required before broad companion scaling."
+    },
+    {
+      "roadmap_id": "references-team-roadmap-v2.74",
+      "version": "v2.74-l17d-landing-ia-ready",
+      "title": "References Team Roadmap before L1.7D human-review closure",
+      "status": "outdated",
+      "path": "docs/roadmaps/outdated/reference-team-roadmap-v2.74-l17d-landing-ia-ready.md",
+      "owner": "references_team",
+      "updated_on": "2026-05-24",
+      "superseded_by": "references/reference-team-roadmap.md",
+      "notes": "Snapshot archived before lesson L1.7D closed PASS WITH FLAGS after human review and lesson L2.0 became active."
     },
     {
       "roadmap_id": "references-team-roadmap-v2.73b",

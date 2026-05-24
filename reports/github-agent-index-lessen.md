@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-lessen
 
-Generated: 2026-05-24T08:48:42.353Z
+Generated: 2026-05-24T20:01:29.392Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-lessen`
-Files indexed: 1395
+Files indexed: 1409
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -81,12 +81,13 @@ _No files indexed in this group._
 
 ## validators
 
-Count: 4
+Count: 5
 
 - archive/sprints/L1.7A/L1.7A-validation-log.md
 - archive/sprints/L1.7B/L1.7B-validation-log.md
 - archive/sprints/L1.7C-0/L1.7C-0-validation-log.md
 - archive/sprints/L1.7C/L1.7C-validation-log.md
+- archive/sprints/L1.7D/L1.7D-validation-log.md
 
 ## references
 
@@ -2395,7 +2396,7 @@ Count: 817
 
 ## other
 
-Count: 274
+Count: 287
 
 - _team-b-reference/1.1.1/uitleg vaardigheden team b.html
 - _team-b-reference/1.1.1/uitleg voorkennis team b.html
@@ -2651,6 +2652,19 @@ Count: 274
 - archive/sprints/L1.7C/L1.7C-student-experience-review.md
 - archive/sprints/L1.7C/L1.7C-teacher-learning-quality-review.md
 - archive/sprints/L1.7C/L1.7C-technical-qa-report.md
+- archive/sprints/L1.7D/L1.7D-baseline-audit.md
+- archive/sprints/L1.7D/L1.7D-human-review-packet.md
+- archive/sprints/L1.7D/L1.7D-landing-ia-contract.md
+- archive/sprints/L1.7D/L1.7D-screenshots/1.1.1/index-desktop-dark.png
+- archive/sprints/L1.7D/L1.7D-screenshots/1.1.1/index-desktop-light.png
+- archive/sprints/L1.7D/L1.7D-screenshots/1.1.1/index-mobile-dark.png
+- archive/sprints/L1.7D/L1.7D-screenshots/1.1.1/index-mobile-light.png
+- archive/sprints/L1.7D/L1.7D-screenshots/1.1.3/index-desktop-dark.png
+- archive/sprints/L1.7D/L1.7D-screenshots/1.1.3/index-desktop-light.png
+- archive/sprints/L1.7D/L1.7D-screenshots/1.1.3/index-mobile-dark.png
+- archive/sprints/L1.7D/L1.7D-screenshots/1.1.3/index-mobile-light.png
+- archive/sprints/L1.7D/L1.7D-sprint-plan.md
+- archive/sprints/L1.7D/L1.7D-technical-qa-report.md
 - archive/sprints/SYNC-1/SYNC-1-roadmap-reconciliation-log.md
 - archive/sprints/SYNC-2/SYNC-2-companion-pre-scale-roadmap-update.md
 - archive/sprints/SYNC-3/SYNC-3-shared-skill-map-roadmap-update.md
