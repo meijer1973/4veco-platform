@@ -137,17 +137,29 @@ function renderCardPitfalls(item) {
 function sectionAvailability(files) {
   if (!files) return [];
   const hasGroup = (group) => Object.values(group || {}).some(Boolean);
-  const labels = [];
-  if (hasGroup(files.voorbereiden)) labels.push("Voorbereiden");
-  if (files.oefenen && (
+  const hasPractice = files.oefenen && (
     files.oefenen.redeneerSpel ||
+    files.oefenen.stappenplan ||
     files.oefenen.wiskundevaardigheden ||
     files.oefenen.grafiekenspel ||
     files.oefenen.begeleide ||
     (!HIDE_TASK_ROWS && (files.oefenen.basis || files.oefenen.midden || files.oefenen.verrijking))
-  )) labels.push("Oefenen");
-  if (hasGroup(files.leren)) labels.push("Leren");
-  if (hasGroup(files.lesboek)) labels.push("Lesboek");
+  );
+  const hasDeepen = (files.voorbereiden && files.voorbereiden.nieuwsdetective)
+    || (files.leren && (
+      files.leren.presentatie ||
+      files.leren.youtube ||
+      files.leren.nieuws ||
+      files.leren.samenvatting
+    ))
+    || (files.oefenen && files.oefenen.wiskundevaardigheden)
+    || hasGroup(files.lesboek);
+  const labels = [];
+  if (files.voorbereiden && (files.voorbereiden.instapquiz || files.voorbereiden.voorkennis)) labels.push("Start");
+  if (files.leren && files.leren.vaardigheden) labels.push("Leer");
+  if (hasPractice) labels.push("Oefen");
+  if (files.check && files.check.exitTicket) labels.push("Check");
+  if (hasDeepen) labels.push("Verdiep");
   return labels;
 }
 
@@ -169,7 +181,8 @@ function scanFiles(paragraafPath) {
   const result = {
     voorbereiden: { instapquiz: null, voorkennis: null, leesdit: null, nieuwsdetective: null },
     leren:        { presentatie: null, vaardigheden: null, stappenplan: null, youtube: null, nieuws: null, samenvatting: null },
-    oefenen:      { redeneerSpel: null, wiskundevaardigheden: null, grafiekenspel: null, begeleide: null, basis: null, midden: null, verrijking: null },
+    oefenen:      { redeneerSpel: null, stappenplan: null, wiskundevaardigheden: null, grafiekenspel: null, begeleide: null, basis: null, midden: null, verrijking: null },
+    check:        { exitTicket: null },
     lesboek:      { paragraaf: null, opgaven: null, antwoorden: null },
   };
   if (!fs.existsSync(paragraafPath)) return result;
@@ -221,8 +234,12 @@ function scanFiles(paragraafPath) {
   // with "– basis –", "– midden –", "– verrijking –", "– begeleide inoefening –"
   // infix. The interactive begeleide inoefening HTML has no infix before ".html".
   result.oefenen.redeneerSpel          = find(/redeneer-spel\.html$/i);
+  result.oefenen.stappenplan           = result.leren.stappenplan;
   result.oefenen.wiskundevaardigheden  = find(/wiskundevaardigheden\.html$/i);
   result.oefenen.grafiekenspel         = find(/grafiekenspel\.html$/i);
+
+  // Future L1.7B exit-ticket MVP. Hidden unless a real generated surface exists.
+  result.check.exitTicket = find(/(?:exit[- ]?ticket|afsluit(?:ing)?[- ]?check)\.html$/i);
 
   const findPair = (label) => {
     const esc = label.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
@@ -1056,7 +1073,7 @@ function renderParagraafPage(paragraaf, files, _resolvedMap) {
         </div>`;
   }
 
-  const voorbereidenCards = [
+  const startCardsOld = [
     files.voorbereiden.instapquiz      ? resourceCard(encPath([files.voorbereiden.instapquiz]),      ICONS.quiz,   "Instapquiz",       "Test wat je al weet over deze stof", "html") : "",
     files.voorbereiden.voorkennis      ? resourceCardWithSource(files.voorbereiden.voorkennis,       ICONS.book,   "Voorkennis",       "Herhaal wat je nodig hebt voor deze les") : "",
     files.voorbereiden.nieuwsdetective ? resourceCard(encPath([files.voorbereiden.nieuwsdetective]), ICONS.search, "Nieuws-detective", "Ontdek de economie achter het nieuws", "html") : "",
@@ -1140,32 +1157,138 @@ function renderParagraafPage(paragraaf, files, _resolvedMap) {
     lesboekPairCard(files.lesboek.opgaven, files.lesboek.antwoorden, ICONS.doc, "Lesboek – opgaven & antwoorden", "De opgaven en uitwerkingen uit het lesboek"),
   ].filter(Boolean).join("\n");
 
-  const hasV = voorbereidenCards.trim().length > 0;
-  const hasO = oefenenCards.trim().length > 0;
-  const hasL = lerenCards.trim().length > 0;
-  const hasT = !HIDE_TASK_ROWS && taskCards.trim().length > 0;
-  const hasB = lesboekCards.trim().length > 0;
+  function secondaryGroup(id, title, desc, body) {
+    if (!body || !body.trim()) return "";
+    return `
+        <details class="route-secondary-group" data-route-secondary="${id}">
+          <summary>
+            <span class="route-secondary-title">${title}</span>
+            <span class="route-secondary-desc">${desc}</span>
+          </summary>
+          <div class="resource-grid route-secondary-grid">${body}
+          </div>
+        </details>`;
+  }
+
+  const startCards = [
+    files.voorbereiden.instapquiz ? resourceCard(encPath([files.voorbereiden.instapquiz]), ICONS.quiz, "Instapquiz", "Check snel wat je al weet", "html") : "",
+    files.voorbereiden.voorkennis ? resourceCardWithSource(files.voorbereiden.voorkennis, ICONS.book, "Voorkennis", "Herhaal wat je nodig hebt voor deze les") : "",
+  ].filter(Boolean).join("\n");
+
+  const leerCards = [
+    files.leren.vaardigheden ? resourceCardWithSource(files.leren.vaardigheden, ICONS.doc, "Uitleg vaardigheden", "Leer de kernstappen met voorbeelden") : "",
+  ].filter(Boolean).join("\n");
+
+  const practiceRoutes = [];
+  if (files.oefenen.redeneerSpel) {
+    practiceRoutes.push(aspectRouteCard({
+      href: encPath([files.oefenen.redeneerSpel]),
+      icon: ICONS.puzzle,
+      title: "Redeneren",
+      desc: GAME_ASPECTS.reasoning.summary,
+      aspect: "reasoning"
+    }));
+  }
+  const calculationRoute = files.oefenen.stappenplan || files.oefenen.wiskundevaardigheden;
+  if (calculationRoute) {
+    practiceRoutes.push(aspectRouteCard({
+      href: encPath([calculationRoute]),
+      icon: ICONS.steps,
+      title: files.oefenen.stappenplan ? "Rekenen / stappenplan" : "Rekenen",
+      desc: files.oefenen.stappenplan
+        ? "Oefen de reken- en procedureregels stap voor stap."
+        : GAME_ASPECTS.calculation.summary,
+      aspect: "calculation"
+    }));
+  }
+  if (files.oefenen.grafiekenspel) {
+    practiceRoutes.push(aspectRouteCard({
+      href: encPath([files.oefenen.grafiekenspel]),
+      icon: ICONS.chart,
+      title: "Grafieken",
+      desc: GAME_ASPECTS.graphical.summary,
+      aspect: "graphical"
+    }));
+  }
+
+  const practiceRouteNames = [];
+  if (files.oefenen.redeneerSpel) practiceRouteNames.push("redeneren");
+  if (calculationRoute) practiceRouteNames.push("rekenen");
+  if (files.oefenen.grafiekenspel) practiceRouteNames.push("grafieken lezen");
+  const practiceIntro = practiceRouteNames.length
+    ? `Kies een oefenroute voor ${practiceRouteNames.join(", ").replace(/, ([^,]*)$/, " of $1")}.`
+    : "Kies een oefenroute die past bij deze paragraaf.";
+  const practiceRouteBlock = practiceRoutes.length ? `
+        <div class="learning-aspect-block">
+          <div class="learning-aspect-copy">
+            <span class="resource-aspect-label">Oefenroutes</span>
+            <h3>Kies wat je wilt trainen</h3>
+            <p>${practiceIntro}</p>
+          </div>
+          <div class="resource-grid learning-aspect-grid">${practiceRoutes.join("\n")}
+          </div>
+        </div>` : "";
+  const guidedPracticeBlock = begeleidHTML ? `
+        <div class="guided-practice-block">
+          <div class="learning-aspect-copy">
+            <span class="resource-aspect-label">Eerst steun nodig?</span>
+            <h3>Begeleide inoefening</h3>
+            <p>Werk met hints en denkstappen voordat je zelfstandig oefent.</p>
+          </div>
+          <div class="resource-grid">${begeleidHTML}
+          </div>
+        </div>` : "";
+  const oefenRouteCards = [guidedPracticeBlock, practiceRouteBlock].filter(Boolean).join("\n");
+
+  const checkCards = files.check && files.check.exitTicket
+    ? resourceCard(encPath([files.check.exitTicket]), ICONS.check, "Exit ticket", "Korte check om te zien wat je nog wilt oefenen", "html")
+    : "";
+
+  const deepenCards = [
+    files.leren.samenvatting ? resourceCardWithSource(files.leren.samenvatting, ICONS.check, "Samenvatting", "Overzicht van deze paragraaf") : "",
+    files.leren.nieuws ? resourceCardWithSource(files.leren.nieuws, ICONS.newspaper, "Nieuws met visual", "Context en grafiek bij de stof") : "",
+    files.voorbereiden.nieuwsdetective ? resourceCard(encPath([files.voorbereiden.nieuwsdetective]), ICONS.search, "Nieuws-detective", "Ontdek de economie achter het nieuws", "html") : "",
+    files.leren.youtube ? resourceCard(encPath([files.leren.youtube]), ICONS.play, "YouTube-video's", "Video-uitleg bij de stof", "html") : "",
+  ].filter(Boolean).join("\n");
+  const fullSkillMapCard = files.oefenen.wiskundevaardigheden && files.oefenen.stappenplan
+    ? resourceCard(encPath([files.oefenen.wiskundevaardigheden]), ICONS.layers, "Volledige vaardigheidskaart", "Open de volledige kaart alleen als je breder wilt kijken", "html")
+    : "";
+  const sourceCards = [
+    files.leren.presentatie ? resourceCardWithSource(files.leren.presentatie, ICONS.monitor, "Presentatie", "De les-presentatie en PowerPoint") : "",
+    lesboekCards,
+    fullSkillMapCard,
+  ].filter(Boolean).join("\n");
+  const verdiepenCards = [
+    secondaryGroup("deepen", "Verdiep je begrip", "Samenvatting, context en extra uitleg", deepenCards),
+    secondaryGroup("sources", "Lesboek en downloads", "Bronnen, presentatie en volledige vaardigheidskaart", sourceCards),
+  ].filter(Boolean).join("\n");
+
+  const hasS = startCards.trim().length > 0;
+  const hasLeer = leerCards.trim().length > 0;
+  const hasO = oefenRouteCards.trim().length > 0;
+  const hasC = checkCards.trim().length > 0;
+  const hasD = verdiepenCards.trim().length > 0;
 
   // Per-section accent: the four section roles get distinct accents drawn
   // from the three shared tokens (economisch / wiskunde / grafisch) defined
   // in engines/voorkennis.css. The hero gradient and back-link continue to
   // use the paragraph-level accentToken; only the section chrome rotates.
   const SECTION_ACCENT = {
-    voorbereiden: "wiskunde",
-    oefenen:      "economisch",
-    leren:        "grafisch",
-    opgaven:      "economisch",
-    lesboek:      "wiskunde",
+    start:   "wiskunde",
+    leer:    "grafisch",
+    oefen:   "economisch",
+    check:   "wiskunde",
+    verdiep: "grafisch",
   };
 
   const sections = [];
-  if (hasV) sections.push({ id: "voorbereiden", num: 1, title: "Voorbereiden", hint: "Check wat je al weet en wat je nog nodig hebt", body: voorbereidenCards, accent: SECTION_ACCENT.voorbereiden });
-  if (hasO) sections.push({ id: "oefenen",      num: 2, title: "Oefenen",      hint: "Kies wat je wilt trainen",                     body: oefenenCards,      accent: SECTION_ACCENT.oefenen, layout: "custom" });
-  if (hasL) sections.push({ id: "leren",        num: 3, title: "Leren",        hint: "De les doorwerken: presentatie, uitleg en video’s", body: lerenCards,        accent: SECTION_ACCENT.leren });
-  if (hasT) sections.push({ id: "opgaven",      num: 4, title: "Opgaven",      hint: "Oefen op je eigen niveau",                     body: taskCards,         accent: SECTION_ACCENT.opgaven });
-  if (hasB) sections.push({ id: "lesboek",      num: sections.length + 1, title: "Lesboek", hint: "De originele teksten uit het lesboek", body: lesboekCards, accent: SECTION_ACCENT.lesboek });
+  if (hasS) sections.push({ id: "start", num: 1, title: "Start", hint: "Orienteer en haal voorkennis op", body: startCards, accent: SECTION_ACCENT.start, routeLayer: "start" });
+  if (hasLeer) sections.push({ id: "leer", num: 2, title: "Leer", hint: "Leer de kernstappen", body: leerCards, accent: SECTION_ACCENT.leer, routeLayer: "learn" });
+  if (hasO) sections.push({ id: "oefen", num: 3, title: "Oefen", hint: "Kies steun of een oefenroute", body: oefenRouteCards, accent: SECTION_ACCENT.oefen, layout: "custom", routeLayer: "practice" });
+  if (hasC) sections.push({ id: "check", num: 4, title: "Check", hint: "Korte niet-summatieve check", body: checkCards, accent: SECTION_ACCENT.check, routeLayer: "check" });
+  if (hasD) sections.push({ id: "verdiep", num: sections.length + 1, title: "Verdiep", hint: "Extra context, bronnen en downloads", body: verdiepenCards, accent: SECTION_ACCENT.verdiep, layout: "custom", routeLayer: "deepen" });
 
-  const sidebarItems = sections.map(s => `      <a class="nav-item domain-${s.accent}" href="#${s.id}" data-section="${s.id}">
+  const sidebarItems = sections.map(s => `      <a class="nav-item domain-${s.accent}" href="#${s.id}" data-section="${s.id}" data-route-layer="${s.routeLayer || s.id}">
         <span class="nav-number">${s.num}</span>
         <span class="nav-text">
           <span class="nav-title">${s.title}</span>
@@ -1177,7 +1300,7 @@ function renderParagraafPage(paragraaf, files, _resolvedMap) {
     const bodyHTML = s.layout === "custom" ? s.body : `<div class="resource-grid">${s.body}
         </div>`;
     return `
-      <section class="section" id="${s.id}">
+      <section class="section route-section" id="${s.id}" data-route-layer="${s.routeLayer || s.id}">
         <div class="section-header border-${s.accent}">
           <span class="section-num bg-${s.accent}">${s.num}</span>
           <div class="section-title-group">
@@ -1340,9 +1463,49 @@ ${bodyHTML}
   .resource-card-with-source > .resource-card-icon,
   .resource-card-with-source > .resource-card-body { position: relative; z-index: 0; pointer-events: none; }
   .resource-card-with-source .resource-sub-links { position: relative; z-index: 2; pointer-events: auto; }
+  .route-secondary-group {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--bg-lift);
+    margin-bottom: 0.75rem;
+    overflow: hidden;
+  }
+  .route-secondary-group summary {
+    position: relative;
+    cursor: pointer;
+    display: grid;
+    gap: 0.18rem;
+    padding: 0.9rem 1rem;
+    list-style: none;
+  }
+  .route-secondary-group summary::-webkit-details-marker { display: none; }
+  .route-secondary-group summary::after {
+    content: "+";
+    position: absolute;
+    right: 1rem;
+    margin-top: 0.05rem;
+    color: var(--accent);
+    font-weight: 800;
+  }
+  .route-secondary-group[open] summary::after { content: "-"; }
+  .route-secondary-title {
+    font-weight: 700;
+    color: var(--ink);
+    padding-right: 2rem;
+  }
+  .route-secondary-desc {
+    color: var(--ink-soft);
+    font-size: 0.82rem;
+    line-height: 1.35;
+    padding-right: 2rem;
+  }
+  .route-secondary-grid {
+    padding: 0 1rem 1rem;
+  }
 
   @media (max-width: 640px) {
     .resource-grid { grid-template-columns: 1fr; }
+    .route-secondary-group summary { padding-right: 0.85rem; }
   }
 
   /* Document viewer (docx/pptx) */
@@ -1371,7 +1534,7 @@ ${bodyHTML}
   .viewer-frame { flex: 1; border: none; width: 100%; background: #fff; }
 </style>
 </head>
-<body data-layout="paragraaf-v1" data-accent-domain="${accentToken}">
+<body data-layout="paragraaf-v2" data-accent-domain="${accentToken}">
 
 <button class="sidebar-toggle" id="sidebarToggle" aria-label="Menu openen">
   <svg viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>

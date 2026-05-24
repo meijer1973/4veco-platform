@@ -15,13 +15,14 @@
   "roadmaps": [
     {
       "roadmap_id": "references-team-roadmap",
-      "version": "v2.73b-l17c-closed-pass-with-flags",
+      "version": "v2.74-l17d-landing-ia-ready",
       "title": "References Team Roadmap",
       "status": "active",
       "path": "references/reference-team-roadmap.md",
       "owner": "references_team",
       "updated_on": "2026-05-24",
       "supersedes": [
+        "docs/roadmaps/outdated/reference-team-roadmap-v2.73b-l17c-closed-pass-with-flags.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.72-l17c0-skill-map-contract.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.71-l17b-contract-stop.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.70-l17a-readiness-decision.md",
@@ -94,7 +95,18 @@
         "knowledge/Exercise schema and quality/reference-team-roadmap Live version 28 April.md",
         "knowledge/Exercise schema and quality/roadmap-updated-repository-checked.md"
       ],
-      "notes": "Current operating roadmap after GAME-UX-1 implemented the shared skill-map runtime support for the closed lesson L1.7C-0 contract, targeted L1.7C route-panel support fixed student-facing internal skill ID leakage, and lesson L1.7C closed PASS WITH FLAGS after focused human recheck; EX-5 remains active tooling/design and lesson-side L1.7D/L2.0 plus a resumed boundary-safe exit-ticket MVP remain required before any scale gate."
+      "notes": "Current operating roadmap after lesson L1.7D reached technical QA green / ready for human review with generator-owned landing-page route IA; EX-5 remains active tooling/design and lesson-side L1.7D human review, L2.0, plus a resumed boundary-safe exit-ticket MVP remain required before any scale gate."
+    },
+    {
+      "roadmap_id": "references-team-roadmap-v2.73b",
+      "version": "v2.73b-l17c-closed-pass-with-flags",
+      "title": "References Team Roadmap before L1.7D landing IA technical QA",
+      "status": "outdated",
+      "path": "docs/roadmaps/outdated/reference-team-roadmap-v2.73b-l17c-closed-pass-with-flags.md",
+      "owner": "references_team",
+      "updated_on": "2026-05-24",
+      "superseded_by": "references/reference-team-roadmap.md",
+      "notes": "Snapshot archived before lesson L1.7D regenerated paragraph landing pages as Start/Leer/Oefen/optional Check/Verdiep and reached technical QA green / ready for human review."
     },
     {
       "roadmap_id": "references-team-roadmap-v2.72",

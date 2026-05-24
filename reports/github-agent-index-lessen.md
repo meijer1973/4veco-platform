@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-lessen
 
-Generated: 2026-05-24T07:26:07.518Z
+Generated: 2026-05-24T08:48:42.353Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-lessen`
-Files indexed: 1394
+Files indexed: 1395
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -2395,7 +2395,7 @@ Count: 817
 
 ## other
 
-Count: 273
+Count: 274
 
 - _team-b-reference/1.1.1/uitleg vaardigheden team b.html
 - _team-b-reference/1.1.1/uitleg voorkennis team b.html
@@ -2631,6 +2631,7 @@ Count: 273
 - archive/sprints/L1.7C-0/L1.7C-0-handoff-to-platform.md
 - archive/sprints/L1.7C-0/L1.7C-0-shared-skill-map-contract.md
 - archive/sprints/L1.7C-0/L1.7C-0-sprint-plan.md
+- archive/sprints/L1.7C/L1.7C-closure-log.md
 - archive/sprints/L1.7C/L1.7C-game-row-baseline-audit.md
 - archive/sprints/L1.7C/L1.7C-game-row-quality-matrix.md
 - archive/sprints/L1.7C/L1.7C-game-row-quality-rubric.md
