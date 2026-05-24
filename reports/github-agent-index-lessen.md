@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-lessen
 
-Generated: 2026-05-23T13:34:30.973Z
+Generated: 2026-05-24T07:26:07.518Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-lessen`
-Files indexed: 1381
+Files indexed: 1394
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -2395,7 +2395,7 @@ Count: 817
 
 ## other
 
-Count: 260
+Count: 273
 
 - _team-b-reference/1.1.1/uitleg vaardigheden team b.html
 - _team-b-reference/1.1.1/uitleg voorkennis team b.html
@@ -2635,7 +2635,20 @@ Count: 260
 - archive/sprints/L1.7C/L1.7C-game-row-quality-matrix.md
 - archive/sprints/L1.7C/L1.7C-game-row-quality-rubric.md
 - archive/sprints/L1.7C/L1.7C-human-review-packet.md
+- archive/sprints/L1.7C/L1.7C-human-review-record.md
+- archive/sprints/L1.7C/L1.7C-lead-review-summary.md
+- archive/sprints/L1.7C/L1.7C-screenshots/113-grafieken-desktop.png
+- archive/sprints/L1.7C/L1.7C-screenshots/113-grafieken-mobile-route.png
+- archive/sprints/L1.7C/L1.7C-screenshots/113-grafieken-mobile.png
+- archive/sprints/L1.7C/L1.7C-screenshots/113-redeneren-desktop.png
+- archive/sprints/L1.7C/L1.7C-screenshots/113-redeneren-mobile-route.png
+- archive/sprints/L1.7C/L1.7C-screenshots/113-redeneren-mobile.png
+- archive/sprints/L1.7C/L1.7C-screenshots/113-stappenplan-desktop.png
+- archive/sprints/L1.7C/L1.7C-screenshots/113-stappenplan-mobile-route.png
+- archive/sprints/L1.7C/L1.7C-screenshots/113-stappenplan-mobile.png
 - archive/sprints/L1.7C/L1.7C-sprint-plan.md
+- archive/sprints/L1.7C/L1.7C-student-experience-review.md
+- archive/sprints/L1.7C/L1.7C-teacher-learning-quality-review.md
 - archive/sprints/L1.7C/L1.7C-technical-qa-report.md
 - archive/sprints/SYNC-1/SYNC-1-roadmap-reconciliation-log.md
 - archive/sprints/SYNC-2/SYNC-2-companion-pre-scale-roadmap-update.md

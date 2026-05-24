@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-23T13:34:46.055Z",
+  "generatedAt": "2026-05-24T07:26:07.442Z",
   "internalOnly": true,
   "teams": [
     {
@@ -173,7 +173,7 @@
               "sprint": "LESSON-SCALE-1",
               "name": "Lesson Companion Pre-Scale Gates Tracking",
               "completed": "no",
-              "currentState": "**TRACKING DEPENDENCY, NOT A REFERENCE EXECUTION SPRINT.** Lesson L1.7A closed PASS WITH FLAGS and rejected broad companion scaling. Lesson L1.7B recorded the exit-ticket companion-completion contract and paused MVP implementation behind source-control/product-boundary/shared-skill-map blockers. Lesson L1.7C-0 then closed the shared skill-map engine contract, and platform `GAME-UX-1` implemented the shared skill-map runtime support: three separate practice engines can now request one shared route/progression layer with aspect filters, compact/route/restricted-full modes, and non-mastery progress language. Lesson L1.7C first human review returned REVISE because the route panel could expose internal skill IDs; the targeted platform/lesson fix now renders student-facing labels and is ready for focused human recheck, not closed. L1.7D, L2.0, a resumed boundary-safe exit-ticket MVP when ready, and Scale Gate 1 remain after L1.7C. Reference/product planning must not treat the lesson companion pipeline as scale-approved until those lesson-side gates exist and preserve blocks on diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, and PV machine promotion.",
+              "currentState": "**TRACKING DEPENDENCY, NOT A REFERENCE EXECUTION SPRINT.** Lesson L1.7A closed PASS WITH FLAGS and rejected broad companion scaling. Lesson L1.7B recorded the exit-ticket companion-completion contract and paused MVP implementation behind source-control/product-boundary/shared-skill-map blockers. Lesson L1.7C-0 then closed the shared skill-map engine contract, and platform `GAME-UX-1` implemented the shared skill-map runtime support: three separate practice engines can now request one shared route/progression layer with aspect filters, compact/route/restricted-full modes, and non-mastery progress language. Lesson L1.7C first human review returned REVISE because the route panel could expose internal skill IDs; the targeted platform/lesson fix now renders student-facing labels, focused human recheck accepted the fix, and L1.7C closed PASS WITH FLAGS. L1.7D is now the active lesson-side landing information-architecture gate; L2.0, a resumed boundary-safe exit-ticket MVP when ready, and Scale Gate 1 remain after it. Reference/product planning must not treat the lesson companion pipeline as scale-approved until those lesson-side gates exist and preserve blocks on diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, and PV machine promotion.",
               "exitGate": ""
             },
             {
@@ -222,7 +222,7 @@
               "sprint": "Product Gate",
               "name": "Re-Evaluate R10-R13 Product Surfaces",
               "completed": "no",
-              "currentState": "Blocked. Diagnostics, adaptive routing, student-facing AI, teacher cockpit deployment, automatic sequencing, mastery, and summative uses remain out of scope until data-quality gates justify them. Lesson L1.7A explicitly rejected broad companion scaling; L1.7B recorded the companion-set contract but paused exit-ticket MVP implementation; L1.7C-0 closed the shared skill-map contract; and platform `GAME-UX-1` implemented the shared route/view-model support without authorizing product use. Broad lesson-companion scaling remains blocked until L1.7C, L1.7D, L2.0, the resumed boundary-safe exit-ticket MVP, and Scale Gate 1 establish game-row quality rubric, landing-page information architecture, checkpoint review evidence, and real lesson-side consumption of the shared skill-map behavior.",
+              "currentState": "Blocked. Diagnostics, adaptive routing, student-facing AI, teacher cockpit deployment, automatic sequencing, mastery, and summative uses remain out of scope until data-quality gates justify them. Lesson L1.7A explicitly rejected broad companion scaling; L1.7B recorded the companion-set contract but paused exit-ticket MVP implementation; L1.7C-0 closed the shared skill-map contract; platform `GAME-UX-1` implemented the shared route/view-model support without authorizing product use; and lesson L1.7C closed PASS WITH FLAGS after consuming that shared route in the game row. Broad lesson-companion scaling remains blocked until L1.7D, L2.0, the resumed boundary-safe exit-ticket MVP, and Scale Gate 1 establish landing-page information architecture, house-style policy, checkpoint review evidence, and remaining game-row scaling quality.",
               "exitGate": ""
             },
             {
@@ -836,7 +836,7 @@
           "sprint": "LESSON-SCALE-1",
           "name": "Lesson Companion Pre-Scale Gates Tracking",
           "completed": "no",
-          "currentState": "**TRACKING DEPENDENCY, NOT A REFERENCE EXECUTION SPRINT.** Lesson L1.7A closed PASS WITH FLAGS and rejected broad companion scaling. Lesson L1.7B recorded the exit-ticket companion-completion contract and paused MVP implementation behind source-control/product-boundary/shared-skill-map blockers. Lesson L1.7C-0 then closed the shared skill-map engine contract, and platform `GAME-UX-1` implemented the shared skill-map runtime support: three separate practice engines can now request one shared route/progression layer with aspect filters, compact/route/restricted-full modes, and non-mastery progress language. Lesson L1.7C first human review returned REVISE because the route panel could expose internal skill IDs; the targeted platform/lesson fix now renders student-facing labels and is ready for focused human recheck, not closed. L1.7D, L2.0, a resumed boundary-safe exit-ticket MVP when ready, and Scale Gate 1 remain after L1.7C. Reference/product planning must not treat the lesson companion pipeline as scale-approved until those lesson-side gates exist and preserve blocks on diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, and PV machine promotion.",
+          "currentState": "**TRACKING DEPENDENCY, NOT A REFERENCE EXECUTION SPRINT.** Lesson L1.7A closed PASS WITH FLAGS and rejected broad companion scaling. Lesson L1.7B recorded the exit-ticket companion-completion contract and paused MVP implementation behind source-control/product-boundary/shared-skill-map blockers. Lesson L1.7C-0 then closed the shared skill-map engine contract, and platform `GAME-UX-1` implemented the shared skill-map runtime support: three separate practice engines can now request one shared route/progression layer with aspect filters, compact/route/restricted-full modes, and non-mastery progress language. Lesson L1.7C first human review returned REVISE because the route panel could expose internal skill IDs; the targeted platform/lesson fix now renders student-facing labels, focused human recheck accepted the fix, and L1.7C closed PASS WITH FLAGS. L1.7D is now the active lesson-side landing information-architecture gate; L2.0, a resumed boundary-safe exit-ticket MVP when ready, and Scale Gate 1 remain after it. Reference/product planning must not treat the lesson companion pipeline as scale-approved until those lesson-side gates exist and preserve blocks on diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, and PV machine promotion.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -892,7 +892,7 @@
           "sprint": "Product Gate",
           "name": "Re-Evaluate R10-R13 Product Surfaces",
           "completed": "no",
-          "currentState": "Blocked. Diagnostics, adaptive routing, student-facing AI, teacher cockpit deployment, automatic sequencing, mastery, and summative uses remain out of scope until data-quality gates justify them. Lesson L1.7A explicitly rejected broad companion scaling; L1.7B recorded the companion-set contract but paused exit-ticket MVP implementation; L1.7C-0 closed the shared skill-map contract; and platform `GAME-UX-1` implemented the shared route/view-model support without authorizing product use. Broad lesson-companion scaling remains blocked until L1.7C, L1.7D, L2.0, the resumed boundary-safe exit-ticket MVP, and Scale Gate 1 establish game-row quality rubric, landing-page information architecture, checkpoint review evidence, and real lesson-side consumption of the shared skill-map behavior.",
+          "currentState": "Blocked. Diagnostics, adaptive routing, student-facing AI, teacher cockpit deployment, automatic sequencing, mastery, and summative uses remain out of scope until data-quality gates justify them. Lesson L1.7A explicitly rejected broad companion scaling; L1.7B recorded the companion-set contract but paused exit-ticket MVP implementation; L1.7C-0 closed the shared skill-map contract; platform `GAME-UX-1` implemented the shared route/view-model support without authorizing product use; and lesson L1.7C closed PASS WITH FLAGS after consuming that shared route in the game row. Broad lesson-companion scaling remains blocked until L1.7D, L2.0, the resumed boundary-safe exit-ticket MVP, and Scale Gate 1 establish landing-page information architecture, house-style policy, checkpoint review evidence, and remaining game-row scaling quality.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -1597,10 +1597,17 @@
           "summary": "Sprint 0.5 is signed off for Part A textbook/book production.",
           "sprints": [
             {
+              "sprint": "L1.7D",
+              "name": "Paragraph Landing Page Information Architecture Cleanup",
+              "completed": "no",
+              "currentState": "**ACTIVE / REQUIRED BEFORE SCALE GATE.** Redesign the paragraph landing page as a controlled learning route rather than a file/card dump. Define primary, secondary, collapsed, advanced, teacher-facing, and download-only surfaces. Landing cleanup must consume the shared skill-map/game architecture from L1.7C-0/L1.7C so the second-row games expose a consistent scoped skill route instead of three separate skill-tree UIs or a full unfiltered catalog. Default visible route should support `Start`, `Leer`, `Oefen`, `Check`, and `Verdiep` without showing every artifact as a peer card. Demote redundant surfaces before scaling so clutter is not repeated across future paragraphs. Implement only through platform generator changes, not hand patches. Validate desktop/mobile, light/dark, keyboard navigation, and student cognitive-load clarity.",
+              "exitGate": ""
+            },
+            {
               "sprint": "L1.7C",
               "name": "Three-Aspect Game Quality Upgrade",
-              "completed": "no",
-              "currentState": "**REVISE ADDRESSED / FOCUSED RECHECK READY, NOT CLOSED.** First human review returned student-experience REVISE, teacher-learning-quality PASS WITH FLAGS, lead-review REVISE because the shared route panel could expose internal skill IDs such as `A61` in visible focus text. The targeted platform fix now renders the recommended focus as the student-facing skill label, adds an `A61` regression test, refreshes landing copy so `1.1.1` does not promise a graph route, and records route-panel screenshots under `archive/sprints/L1.7C/L1.7C-screenshots/`. Focused route tests and deploy/link/data checks are green. Focused human recheck must decide closure; expected final state is PASS WITH FLAGS if the fix is accepted. No adaptive diagnostics, mastery, sequencing, AI, summative use, PV projection, or PV machine promotion. Records: `archive/sprints/L1.7C/`.",
+              "completed": "yes",
+              "currentState": "**CLOSED PASS WITH FLAGS.** L1.7C consumed platform `GAME-UX-1` shared skill-map runtime and regenerated Book 1 through the platform workflow so `Redeneren`, `Rekenen/Stappenplan`, and `Grafieken` consume one shared compact route panel. First human review returned REVISE because the route panel could expose internal skill IDs such as `A61`; focused revision fixed the label, added an `A61` regression test, corrected `1.1.1` landing copy, and added route-panel screenshots. Focused human recheck closed PASS WITH FLAGS. Carried flags: `Rekenen` is not yet a full numeric calculation engine, `Grafieken` has only one less-labelled variant, `Redeneren` needs richer variants/replay value, and game screenshot QA should mature. No adaptive diagnostics, mastery, sequencing, AI, summative use, PV projection, or PV machine promotion. Records: `archive/sprints/L1.7C/`.",
               "exitGate": ""
             },
             {
@@ -1615,13 +1622,6 @@
               "name": "Exit Ticket Game MVP + Companion Completion Contract",
               "completed": "no",
               "currentState": "**PAUSED AFTER CONTRACT-AND-STOP DECISION.** L1.7B inspected the untracked prototype `../4veco-platform/knowledge/exit-ticket-game-1.1.1.zip`, ran its own prototype unit test successfully, and recorded it as design evidence only. The companion-completion contract and future MVP scope now exist, but implementation is paused because the prototype is not source-controlled, uses mastery/score/pass/evidence/adaptive-focus language, and depends on compact checkpoint-mode skill-map behavior that L1.7C-0 must define first. Records: `archive/sprints/L1.7B/L1.7B-sprint-plan.md`, `archive/sprints/L1.7B/L1.7B-prototype-inventory.md`, `archive/sprints/L1.7B/L1.7B-companion-completion-contract.md`, `archive/sprints/L1.7B/L1.7B-exit-ticket-mvp-scope.md`, `archive/sprints/L1.7B/L1.7B-stop-decision.md`, `archive/sprints/L1.7B/L1.7B-validation-log.md`.",
-              "exitGate": ""
-            },
-            {
-              "sprint": "L1.7D",
-              "name": "Paragraph Landing Page Information Architecture Cleanup",
-              "completed": "no",
-              "currentState": "**NEW / REQUIRED BEFORE SCALE GATE.** Redesign the paragraph landing page as a controlled learning route rather than a file/card dump. Define primary, secondary, collapsed, advanced, teacher-facing, and download-only surfaces. Landing cleanup must consume the shared skill-map/game architecture from L1.7C-0 so the second-row games expose a consistent scoped skill route instead of three separate skill-tree UIs or a full unfiltered catalog. Default visible route should support `Start`, `Leer`, `Oefen`, `Check`, and `Verdiep` without showing every artifact as a peer card. Demote redundant surfaces before scaling so clutter is not repeated across future paragraphs. Implement only through platform generator changes, not hand patches. Validate desktop/mobile, light/dark, keyboard navigation, and student cognitive-load clarity.",
               "exitGate": ""
             },
             {
@@ -1909,10 +1909,10 @@
       ],
       "sprints": [
         {
-          "sprint": "L1.7C",
-          "name": "Three-Aspect Game Quality Upgrade",
+          "sprint": "L1.7D",
+          "name": "Paragraph Landing Page Information Architecture Cleanup",
           "completed": "no",
-          "currentState": "**REVISE ADDRESSED / FOCUSED RECHECK READY, NOT CLOSED.** First human review returned student-experience REVISE, teacher-learning-quality PASS WITH FLAGS, lead-review REVISE because the shared route panel could expose internal skill IDs such as `A61` in visible focus text. The targeted platform fix now renders the recommended focus as the student-facing skill label, adds an `A61` regression test, refreshes landing copy so `1.1.1` does not promise a graph route, and records route-panel screenshots under `archive/sprints/L1.7C/L1.7C-screenshots/`. Focused route tests and deploy/link/data checks are green. Focused human recheck must decide closure; expected final state is PASS WITH FLAGS if the fix is accepted. No adaptive diagnostics, mastery, sequencing, AI, summative use, PV projection, or PV machine promotion. Records: `archive/sprints/L1.7C/`.",
+          "currentState": "**ACTIVE / REQUIRED BEFORE SCALE GATE.** Redesign the paragraph landing page as a controlled learning route rather than a file/card dump. Define primary, secondary, collapsed, advanced, teacher-facing, and download-only surfaces. Landing cleanup must consume the shared skill-map/game architecture from L1.7C-0/L1.7C so the second-row games expose a consistent scoped skill route instead of three separate skill-tree UIs or a full unfiltered catalog. Default visible route should support `Start`, `Leer`, `Oefen`, `Check`, and `Verdiep` without showing every artifact as a peer card. Demote redundant surfaces before scaling so clutter is not repeated across future paragraphs. Implement only through platform generator changes, not hand patches. Validate desktop/mobile, light/dark, keyboard navigation, and student cognitive-load clarity.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
@@ -1921,14 +1921,6 @@
           "name": "Exit Ticket Game MVP + Companion Completion Contract",
           "completed": "no",
           "currentState": "**PAUSED AFTER CONTRACT-AND-STOP DECISION.** L1.7B inspected the untracked prototype `../4veco-platform/knowledge/exit-ticket-game-1.1.1.zip`, ran its own prototype unit test successfully, and recorded it as design evidence only. The companion-completion contract and future MVP scope now exist, but implementation is paused because the prototype is not source-controlled, uses mastery/score/pass/evidence/adaptive-focus language, and depends on compact checkpoint-mode skill-map behavior that L1.7C-0 must define first. Records: `archive/sprints/L1.7B/L1.7B-sprint-plan.md`, `archive/sprints/L1.7B/L1.7B-prototype-inventory.md`, `archive/sprints/L1.7B/L1.7B-companion-completion-contract.md`, `archive/sprints/L1.7B/L1.7B-exit-ticket-mvp-scope.md`, `archive/sprints/L1.7B/L1.7B-stop-decision.md`, `archive/sprints/L1.7B/L1.7B-validation-log.md`.",
-          "exitGate": "",
-          "roadmap": "Lessen roadmap"
-        },
-        {
-          "sprint": "L1.7D",
-          "name": "Paragraph Landing Page Information Architecture Cleanup",
-          "completed": "no",
-          "currentState": "**NEW / REQUIRED BEFORE SCALE GATE.** Redesign the paragraph landing page as a controlled learning route rather than a file/card dump. Define primary, secondary, collapsed, advanced, teacher-facing, and download-only surfaces. Landing cleanup must consume the shared skill-map/game architecture from L1.7C-0 so the second-row games expose a consistent scoped skill route instead of three separate skill-tree UIs or a full unfiltered catalog. Default visible route should support `Start`, `Leer`, `Oefen`, `Check`, and `Verdiep` without showing every artifact as a peer card. Demote redundant surfaces before scaling so clutter is not repeated across future paragraphs. Implement only through platform generator changes, not hand patches. Validate desktop/mobile, light/dark, keyboard navigation, and student cognitive-load clarity.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
@@ -2041,6 +2033,14 @@
           "name": "Green Gate Handoff",
           "completed": "no",
           "currentState": "",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "L1.7C",
+          "name": "Three-Aspect Game Quality Upgrade",
+          "completed": "yes",
+          "currentState": "**CLOSED PASS WITH FLAGS.** L1.7C consumed platform `GAME-UX-1` shared skill-map runtime and regenerated Book 1 through the platform workflow so `Redeneren`, `Rekenen/Stappenplan`, and `Grafieken` consume one shared compact route panel. First human review returned REVISE because the route panel could expose internal skill IDs such as `A61`; focused revision fixed the label, added an `A61` regression test, corrected `1.1.1` landing copy, and added route-panel screenshots. Focused human recheck closed PASS WITH FLAGS. Carried flags: `Rekenen` is not yet a full numeric calculation engine, `Grafieken` has only one less-labelled variant, `Redeneren` needs richer variants/replay value, and game screenshot QA should mature. No adaptive diagnostics, mastery, sequencing, AI, summative use, PV projection, or PV machine promotion. Records: `archive/sprints/L1.7C/`.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
@@ -2261,8 +2261,8 @@
           "roadmap": "Lessen roadmap"
         }
       ],
-      "completedCount": 27,
-      "openCount": 17
+      "completedCount": 28,
+      "openCount": 16
     },
     {
       "id": "innovation",
