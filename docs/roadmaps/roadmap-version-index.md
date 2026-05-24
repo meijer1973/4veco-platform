@@ -1,6 +1,6 @@
 # Roadmap Version Index
 
-Updated: 2026-05-23
+Updated: 2026-05-24
 
 The JSON file is canonical for tooling:
 
@@ -12,12 +12,15 @@ docs/roadmaps/roadmap-version-index.json
 
 | Roadmap | Version | Path | Notes |
 |---|---|---|---|
-| References Team Roadmap | `v2.73-game-ux1-shared-skill-map-engine` | `references/reference-team-roadmap.md` | Current operating roadmap after GAME-UX-1 implemented shared skill-map runtime support for the closed lesson L1.7C-0 contract; EX-5 remains active tooling/design and lesson-side L1.7C/L1.7D/L2.0 plus a resumed boundary-safe exit-ticket MVP remain required before any scale gate. |
+| References Team Roadmap | `v2.76-ex5-operation-answer-skill-contract` | `references/reference-team-roadmap.md` | Current operating roadmap after EX-5 completed the operation/answer-skill/q19 extraction design contract and GATE-EX5 became the active human review gate; L2.0, a resumed boundary-safe exit-ticket MVP, plus Scale Gate 1 remain required before broad companion scaling. |
 
 ## Outdated Archive
 
 | Roadmap | Version | Path | Superseded By |
 |---|---|---|---|
+| References Team Roadmap before EX-5 operation/answer-skill contract | `v2.75-l17d-closed-pass-with-flags` | `docs/roadmaps/outdated/reference-team-roadmap-v2.75-l17d-closed-pass-with-flags.md` | `references/reference-team-roadmap.md` |
+| References Team Roadmap before L1.7D human-review closure | `v2.74-l17d-landing-ia-ready` | `docs/roadmaps/outdated/reference-team-roadmap-v2.74-l17d-landing-ia-ready.md` | `references/reference-team-roadmap.md` |
+| References Team Roadmap before L1.7D landing IA technical QA | `v2.73b-l17c-closed-pass-with-flags` | `docs/roadmaps/outdated/reference-team-roadmap-v2.73b-l17c-closed-pass-with-flags.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before GAME-UX-1 shared skill-map implementation | `v2.72-l17c0-skill-map-contract` | `docs/roadmaps/outdated/reference-team-roadmap-v2.72-l17c0-skill-map-contract.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before L1.7C-0 shared skill-map contract | `v2.71-l17b-contract-stop` | `docs/roadmaps/outdated/reference-team-roadmap-v2.71-l17b-contract-stop.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before L1.7B contract-and-stop decision | `v2.70-l17a-readiness-decision` | `docs/roadmaps/outdated/reference-team-roadmap-v2.70-l17a-readiness-decision.md` | `references/reference-team-roadmap.md` |

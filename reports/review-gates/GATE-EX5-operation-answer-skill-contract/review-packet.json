@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-EX5-operation-answer-skill-contract",
+  "sprint_id": "EX-5",
+  "status": "review_packet_ready_no_mutation_authorized",
+  "generated_on": "2026-05-24",
+  "review_scope": "Decide whether the EX-5 operation/answer-skill/q19 extraction contract is adequate for later bounded tooling or extraction-planning work. Do not authorize mutation directly.",
+  "evidence_base": [
+    "references/data/exam-ingestion/operation-answer-skill-contract.json",
+    "references/data/exam-ingestion/operation-answer-skill-contract.md",
+    "references/schemas/operation-answer-skill-contract.schema.json",
+    "build-scripts/references/check-ex5-operation-answer-skill-contract.js",
+    "reports/review-gates/GATE-EX4-mutation-planning/gate-closure.json",
+    "reports/review-gates/GATE-EX4-mutation-planning/cli-readiness-plan.json",
+    "reports/review-gates/GATE-EX4-mutation-planning/mutation-candidates.json",
+    "reports/json/exam-ingestion-coverage.json"
+  ],
+  "authority_boundary": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_mutation_authorized": false,
+    "source_annex_extraction_execution_authorized": false,
+    "pv_graph_mutation_authorized": false,
+    "target_exercise_promotion_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "cp6_closure_authorized": false,
+    "year1_closure_authorized": false,
+    "student_product_use_authorized": false
+  },
+  "human_interview_completed": false,
+  "gate_closure_completed": false,
+  "calibration_questions": [
+    {
+      "id": "EX5-CAL-1",
+      "question": "Do you confirm this gate is reviewing a design contract only, not authorizing candidate writes, q19 extraction execution, or student/product use?",
+      "required_answer": "yes"
+    },
+    {
+      "id": "EX5-CAL-2",
+      "question": "Do you confirm q19 remains blocked while source-annex and graph-object gaps are unresolved?",
+      "required_answer": "yes"
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "EX5-Q1",
+      "topic": "storage split",
+      "question": "Should future operation candidates, answer-skill candidates, and source-annex extraction overlays stay under governed references/data exam-ingestion overlay paths before any machine promotion?",
+      "options": [
+        "Yes, keep the proposed overlay-first storage split.",
+        "Revise the storage paths before any tooling sprint.",
+        "Hold until a broader registry architecture review decides storage.",
+        "Open answer / other, with rationale."
+      ],
+      "open_answer_allowed": true
+    },
+    {
+      "id": "EX5-Q2",
+      "topic": "operation fields",
+      "question": "Are the proposed operation-candidate fields sufficient to represent q3 annual threshold comparison and later operation candidates without hiding supporting, weak, rejected, or blocking-gap evidence?",
+      "options": [
+        "Yes, the operation fields are sufficient for a later tooling sprint.",
+        "Revise; name the missing or excessive fields.",
+        "Hold operation storage until a real dry-run record is drafted.",
+        "Open answer / other, with rationale."
+      ],
+      "open_answer_allowed": true
+    },
+    {
+      "id": "EX5-Q3",
+      "topic": "answer-skill fields",
+      "question": "Are the proposed answer-skill fields sufficient to keep q3 threshold wording and q15 two-step correction-model explanation visible as answer-construction needs?",
+      "options": [
+        "Yes, the answer-skill fields are sufficient for a later tooling sprint.",
+        "Revise; name the missing or excessive fields.",
+        "Hold until a broader answer-writing policy is drafted.",
+        "Open answer / other, with rationale."
+      ],
+      "open_answer_allowed": true
+    },
+    {
+      "id": "EX5-Q4",
+      "topic": "q19 extraction fields",
+      "question": "Are the q19 graph/source extraction fields sufficient to prevent q19 from being treated as reconstructable unless axis labels, units, scale/ticks, geometry, legend, worksheet regions, and review state are explicit?",
+      "options": [
+        "Yes, use these q19 extraction fields before any extraction execution.",
+        "Revise; name the missing source/graph fields.",
+        "Hold q19 until a separate source-extraction architecture sprint.",
+        "Open answer / other, with rationale."
+      ],
+      "open_answer_allowed": true
+    },
+    {
+      "id": "EX5-Q5",
+      "topic": "validator and CLI preconditions",
+      "question": "Are the validator and CLI preconditions sufficient before later writes: schema validation, dry-run mode, mutation log, rollback, source evidence refs, review refs, and rejection of hidden gaps/product flags?",
+      "options": [
+        "Yes, sufficient for a later tooling implementation sprint.",
+        "Revise validator/CLI preconditions before proceeding.",
+        "Hold until existing reference CLI architecture is reviewed in more detail.",
+        "Open answer / other, with rationale."
+      ],
+      "open_answer_allowed": true
+    },
+    {
+      "id": "EX5-Q6",
+      "topic": "routing facts",
+      "question": "Does the contract correctly preserve GATE-EX4 routing facts: q3 A61 support with A15 rejected, q19 A42/D10 support with A45 weak, q19 gaps blocking, and q3/q15 answer-skill needs visible?",
+      "options": [
+        "Yes, preserve these routing facts.",
+        "Revise one or more routing facts; name the correction.",
+        "Hold until EX-4/GATE-EX4 evidence is rechecked.",
+        "Open answer / other, with rationale."
+      ],
+      "open_answer_allowed": true
+    },
+    {
+      "id": "EX5-Q7",
+      "topic": "next sprint routing",
+      "question": "If GATE-EX5 closes, what later bounded sprint should be allowed next?",
+      "options": [
+        "Authorize a validator/CLI implementation planning sprint only, with no candidate writes.",
+        "Authorize q19 extraction tooling design first, still with no extraction execution.",
+        "Hold all downstream work until storage and field questions are revised.",
+        "Open answer / other, with rationale."
+      ],
+      "open_answer_allowed": true
+    },
+    {
+      "id": "EX5-Q8",
+      "topic": "mutation authority",
+      "question": "Does GATE-EX5 authorize protected reference mutation, external-source mutation, machine-reference mutation, unit minting, operation-registry mutation, answer-skill mutation, q19 extraction execution, PV/graph mutation, lesson-output mutation, CP-6 closure, Year-1 closure, or student/product use now?",
+      "options": [
+        "No, this gate may only authorize later bounded tooling/design routing.",
+        "Yes, but only for explicitly named low-risk lanes after separate CLI planning.",
+        "Hold; authority cannot be decided until the contract is revised.",
+        "Open answer / other, with rationale."
+      ],
+      "open_answer_allowed": true
+    },
+    {
+      "id": "EX5-Q9",
+      "topic": "product boundaries",
+      "question": "Must diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, PV projection, PV machine promotion, and student-facing output remain blocked?",
+      "options": [
+        "Yes, all product boundaries remain false.",
+        "Revise the product-boundary list before any downstream sprint.",
+        "Hold for product governance review.",
+        "Open answer / other, with rationale."
+      ],
+      "open_answer_allowed": true
+    }
+  ],
+  "future_interview_protocol": [
+    "Show the full question list before starting.",
+    "Ask calibration questions before taking binding answers.",
+    "Ask one question at a time.",
+    "Record each answer before asking the next question.",
+    "Run pattern analysis after initial answers.",
+    "Ask targeted follow-ups for ambiguity or conflicting authority.",
+    "Draft a closure proposal only after evidence is complete.",
+    "Require explicit human confirmation before writing a gate closure record or authorizing downstream sprint scope."
+  ],
+  "blocked_outcomes": [
+    "protected reference mutation",
+    "external-source mutation",
+    "machine-reference mutation",
+    "unit minting",
+    "operation-registry mutation",
+    "answer-skill mutation",
+    "q19 source-annex extraction execution",
+    "PV/graph mutation",
+    "target-exercise promotion",
+    "lesson-output mutation",
+    "CP-6 closure",
+    "Year-1 closure",
+    "student diagnostics",
+    "adaptive routing",
+    "mastery decisions",
+    "automatic sequencing",
+    "student-facing AI",
+    "summative use",
+    "PV projection",
+    "PV machine promotion",
+    "student-facing output"
+  ],
+  "recommended_next_action": "Run the formal GATE-EX5 human review before any later validator/CLI implementation, candidate writes, q19 extraction execution, lesson handoff, PV projection, or student-facing use."
+}

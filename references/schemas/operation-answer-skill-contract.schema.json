@@ -1,0 +1,275 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://4veco.local/references/schemas/operation-answer-skill-contract.schema.json",
+  "title": "OperationAnswerSkillContract",
+  "description": "Design-only contract for future exam-operation, answer-skill, and source-annex extraction storage. This schema does not authorize mutation.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "contract_id",
+    "sprint_id",
+    "status",
+    "generated_on",
+    "source_files",
+    "authority_boundary",
+    "storage_contracts",
+    "q19_extraction_contract",
+    "validator_cli_contract",
+    "rollback_contract",
+    "audit_contract",
+    "candidate_routing_facts",
+    "gate_review_requirements",
+    "blocked_outcomes",
+    "next_allowed_actions"
+  ],
+  "properties": {
+    "schema_version": { "const": 1 },
+    "contract_id": { "const": "operation-answer-skill-contract" },
+    "sprint_id": { "const": "EX-5" },
+    "status": { "const": "design_contract_pending_gate_review" },
+    "generated_on": { "type": "string", "format": "date-time" },
+    "source_files": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "minItems": 1
+    },
+    "authority_boundary": { "$ref": "#/$defs/authority_boundary" },
+    "storage_contracts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["operation_candidates", "answer_skill_candidates"],
+      "properties": {
+        "operation_candidates": { "$ref": "#/$defs/storage_contract" },
+        "answer_skill_candidates": { "$ref": "#/$defs/storage_contract" }
+      }
+    },
+    "q19_extraction_contract": { "$ref": "#/$defs/q19_extraction_contract" },
+    "validator_cli_contract": { "$ref": "#/$defs/validator_cli_contract" },
+    "rollback_contract": { "$ref": "#/$defs/rollback_contract" },
+    "audit_contract": { "$ref": "#/$defs/audit_contract" },
+    "candidate_routing_facts": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/routing_fact" },
+      "minItems": 1
+    },
+    "gate_review_requirements": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "minItems": 1
+    },
+    "blocked_outcomes": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "minItems": 1
+    },
+    "next_allowed_actions": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "minItems": 1
+    }
+  },
+  "$defs": {
+    "authority_boundary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "protected_reference_mutation_authorized",
+        "external_source_mutation_authorized",
+        "machine_reference_mutation_authorized",
+        "unit_minting_authorized",
+        "operation_registry_mutation_authorized",
+        "answer_skill_mutation_authorized",
+        "source_annex_extraction_execution_authorized",
+        "pv_graph_mutation_authorized",
+        "target_exercise_promotion_authorized",
+        "lesson_output_mutation_authorized",
+        "cp6_closure_authorized",
+        "year1_closure_authorized",
+        "student_product_use_authorized"
+      ],
+      "properties": {
+        "protected_reference_mutation_authorized": { "const": false },
+        "external_source_mutation_authorized": { "const": false },
+        "machine_reference_mutation_authorized": { "const": false },
+        "unit_minting_authorized": { "const": false },
+        "operation_registry_mutation_authorized": { "const": false },
+        "answer_skill_mutation_authorized": { "const": false },
+        "source_annex_extraction_execution_authorized": { "const": false },
+        "pv_graph_mutation_authorized": { "const": false },
+        "target_exercise_promotion_authorized": { "const": false },
+        "lesson_output_mutation_authorized": { "const": false },
+        "cp6_closure_authorized": { "const": false },
+        "year1_closure_authorized": { "const": false },
+        "student_product_use_authorized": { "const": false }
+      }
+    },
+    "storage_contract": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "storage_path",
+        "storage_status",
+        "creation_authorized_now",
+        "write_authorized_now",
+        "schema_required_before_write",
+        "validator_required_before_write",
+        "cli_required_before_write",
+        "rollback_required_before_write",
+        "audit_log_required_before_write",
+        "required_record_fields",
+        "forbidden_record_fields"
+      ],
+      "properties": {
+        "storage_path": { "type": "string", "minLength": 1 },
+        "storage_status": { "const": "future_storage_not_created" },
+        "creation_authorized_now": { "const": false },
+        "write_authorized_now": { "const": false },
+        "schema_required_before_write": { "const": true },
+        "validator_required_before_write": { "const": true },
+        "cli_required_before_write": { "const": true },
+        "rollback_required_before_write": { "const": true },
+        "audit_log_required_before_write": { "const": true },
+        "required_record_fields": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 },
+          "minItems": 1
+        },
+        "forbidden_record_fields": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 },
+          "minItems": 1
+        }
+      }
+    },
+    "q19_extraction_contract": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "storage_path",
+        "storage_status",
+        "execution_authorized_now",
+        "source_exam_item_id",
+        "required_graph_fields",
+        "required_source_annex_fields",
+        "blocking_gap_ids",
+        "blocked_downstream_uses"
+      ],
+      "properties": {
+        "storage_path": { "type": "string", "minLength": 1 },
+        "storage_status": { "const": "future_storage_not_created" },
+        "execution_authorized_now": { "const": false },
+        "source_exam_item_id": { "type": "string", "minLength": 1 },
+        "required_graph_fields": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 },
+          "minItems": 1
+        },
+        "required_source_annex_fields": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 },
+          "minItems": 1
+        },
+        "blocking_gap_ids": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 },
+          "minItems": 1
+        },
+        "blocked_downstream_uses": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 },
+          "minItems": 1
+        }
+      }
+    },
+    "validator_cli_contract": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "implementation_authorized_now",
+        "future_validator_paths",
+        "future_cli_paths",
+        "validator_must_reject",
+        "cli_must_require"
+      ],
+      "properties": {
+        "implementation_authorized_now": { "const": false },
+        "future_validator_paths": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "future_cli_paths": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "validator_must_reject": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "cli_must_require": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "rollback_contract": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["required_before_any_write", "requirements"],
+      "properties": {
+        "required_before_any_write": { "const": true },
+        "requirements": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 },
+          "minItems": 1
+        }
+      }
+    },
+    "audit_contract": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["required_before_any_write", "requirements"],
+      "properties": {
+        "required_before_any_write": { "const": true },
+        "requirements": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 },
+          "minItems": 1
+        }
+      }
+    },
+    "routing_fact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "requirement_id",
+        "classification",
+        "source_exam_item_id",
+        "mutation_authorized",
+        "student_product_use_authorized",
+        "notes"
+      ],
+      "properties": {
+        "requirement_id": { "type": "string", "minLength": 1 },
+        "classification": { "type": "string", "minLength": 1 },
+        "source_exam_item_id": { "type": "string", "minLength": 1 },
+        "candidate_record_id": { "type": "string" },
+        "supporting_unit_ids": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "rejected_or_weak_unit_ids": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "blocking_gap_ids": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "mutation_authorized": { "const": false },
+        "student_product_use_authorized": { "const": false },
+        "notes": { "type": "string", "minLength": 1 }
+      }
+    }
+  }
+}

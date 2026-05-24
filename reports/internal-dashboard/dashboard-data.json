@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-24T20:01:32.057Z",
+  "generatedAt": "2026-05-24T20:31:10.801Z",
   "internalOnly": true,
   "teams": [
     {
@@ -160,13 +160,13 @@
           "generated": "2026-04-23",
           "updated": "",
           "scope": "`references/`, `build-scripts/references/`, `build-scripts/reports/`, reference dashboards, and generated reference reports under `reports/`",
-          "summary": "References Team Roadmap Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Last strategic update: 2026-05-24 Roadmap ID: references-team-roadmap Roadmap version: v2.75-l17d-closed-pass-with-flags Roadmap status: active Version index: docs/roadmaps/roadmap-version-index.json Scope: references/, build-scripts/references/, build-scripts/reports/, reference dashboards, and generated reference reports under reports/ Exam Ingestion North Star The long-term reference-platform goal is that a new official CvTE economic...",
+          "summary": "References Team Roadmap Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Last strategic update: 2026-05-24 Roadmap ID: references-team-roadmap Roadmap version: v2.76-ex5-operation-answer-skill-contract Roadmap status: active Version index: docs/roadmaps/roadmap-version-index.json Scope: references/, build-scripts/references/, build-scripts/reports/, reference dashboards, and generated reference reports under reports/ Exam Ingestion North Star The long-term reference-platform goal is that a new official CvTE...",
           "sprints": [
             {
-              "sprint": "EX-5",
-              "name": "Operation And Answer-Skill Registry Contract",
+              "sprint": "GATE-EX5",
+              "name": "Operation And Answer-Skill Contract Human Review",
               "completed": "no",
-              "currentState": "**ACTIVE / TOOLING-DESIGN ONLY.** GATE-EX4 closed as `pass_with_conditions` and authorizes a bounded tooling/design sprint only. EX-5 may define operation-registry storage, answer-skill storage, schemas, validators, q19 source-annex/graph-object extraction contract and validator, rollback, audit evidence, and stop conditions for hidden q19 gaps or hidden q3/q15 answer-skill gaps. EX-5 must not execute protected mutation, external-source mutation, machine-reference mutation, unit minting, operation-registry mutation, answer-skill mutation, PV/graph mutation, target-exercise promotion, lesson-output mutation, CP-6 closure, Year-1 closure, q19 extraction execution, diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student-facing output.",
+              "currentState": "**ACTIVE HUMAN REVIEW GATE.** EX-5 completed the design-only operation/answer-skill/q19 extraction contract and prepared `reports/review-gates/GATE-EX5-operation-answer-skill-contract/review-packet.md`. The gate must decide whether the proposed `references/data/exam-ingestion/` overlay storage paths, operation-candidate fields, answer-skill fields, q19 source-annex/graph-object extraction fields, validator/CLI preconditions, rollback, audit evidence, and routing facts are adequate for a later bounded tooling or extraction-planning sprint. GATE-EX5 must not authorize protected mutation, external-source mutation, machine-reference mutation, unit minting, operation-registry mutation, answer-skill mutation, q19 extraction execution, PV/graph mutation, target-exercise promotion, lesson-output mutation, CP-6 closure, Year-1 closure, diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student-facing output.",
               "exitGate": ""
             },
             {
@@ -223,6 +223,13 @@
               "name": "Re-Evaluate R10-R13 Product Surfaces",
               "completed": "no",
               "currentState": "Blocked. Diagnostics, adaptive routing, student-facing AI, teacher cockpit deployment, automatic sequencing, mastery, and summative uses remain out of scope until data-quality gates justify them. Lesson L1.7A explicitly rejected broad companion scaling; L1.7B recorded the companion-set contract but paused exit-ticket MVP implementation; L1.7C-0 closed the shared skill-map contract; platform `GAME-UX-1` implemented the shared route/view-model support without authorizing product use; lesson L1.7C closed PASS WITH FLAGS after consuming that shared route in the game row; and lesson L1.7D closed PASS WITH FLAGS after generator-owned landing IA cleanup. Broad lesson-companion scaling remains blocked until L2.0 closes, the resumed boundary-safe exit-ticket MVP has checkpoint review evidence, and Scale Gate 1 establishes remaining house-style and game-row scaling quality.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "EX-5",
+              "name": "Operation And Answer-Skill Registry Contract",
+              "completed": "yes",
+              "currentState": "Completed as a design-only contract sprint after GATE-EX4. Added `references/schemas/operation-answer-skill-contract.schema.json`, `references/data/exam-ingestion/operation-answer-skill-contract.*`, `build-scripts/references/check-ex5-operation-answer-skill-contract.js`, and the `GATE-EX5-operation-answer-skill-contract` review packet. The contract defines future overlay-first operation-candidate, answer-skill-candidate, and q19 source-annex extraction storage; required operation/answer-skill fields; q19 graph/source reconstruction fields; validator/CLI prerequisites; rollback; audit evidence; and stop conditions preserving q19 blockers and q3/q15 answer-skill visibility. EX-5 created no candidate-storage files, did not execute q19 extraction, and authorized no protected mutation, external-source mutation, machine-reference mutation, unit minting, operation-registry mutation, answer-skill mutation, PV/graph mutation, target-exercise promotion, lesson-output mutation, CP-6 closure, Year-1 closure, diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student-facing output.",
               "exitGate": ""
             },
             {
@@ -825,10 +832,10 @@
       ],
       "sprints": [
         {
-          "sprint": "EX-5",
-          "name": "Operation And Answer-Skill Registry Contract",
+          "sprint": "GATE-EX5",
+          "name": "Operation And Answer-Skill Contract Human Review",
           "completed": "no",
-          "currentState": "**ACTIVE / TOOLING-DESIGN ONLY.** GATE-EX4 closed as `pass_with_conditions` and authorizes a bounded tooling/design sprint only. EX-5 may define operation-registry storage, answer-skill storage, schemas, validators, q19 source-annex/graph-object extraction contract and validator, rollback, audit evidence, and stop conditions for hidden q19 gaps or hidden q3/q15 answer-skill gaps. EX-5 must not execute protected mutation, external-source mutation, machine-reference mutation, unit minting, operation-registry mutation, answer-skill mutation, PV/graph mutation, target-exercise promotion, lesson-output mutation, CP-6 closure, Year-1 closure, q19 extraction execution, diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student-facing output.",
+          "currentState": "**ACTIVE HUMAN REVIEW GATE.** EX-5 completed the design-only operation/answer-skill/q19 extraction contract and prepared `reports/review-gates/GATE-EX5-operation-answer-skill-contract/review-packet.md`. The gate must decide whether the proposed `references/data/exam-ingestion/` overlay storage paths, operation-candidate fields, answer-skill fields, q19 source-annex/graph-object extraction fields, validator/CLI preconditions, rollback, audit evidence, and routing facts are adequate for a later bounded tooling or extraction-planning sprint. GATE-EX5 must not authorize protected mutation, external-source mutation, machine-reference mutation, unit minting, operation-registry mutation, answer-skill mutation, q19 extraction execution, PV/graph mutation, target-exercise promotion, lesson-output mutation, CP-6 closure, Year-1 closure, diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student-facing output.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -893,6 +900,14 @@
           "name": "Re-Evaluate R10-R13 Product Surfaces",
           "completed": "no",
           "currentState": "Blocked. Diagnostics, adaptive routing, student-facing AI, teacher cockpit deployment, automatic sequencing, mastery, and summative uses remain out of scope until data-quality gates justify them. Lesson L1.7A explicitly rejected broad companion scaling; L1.7B recorded the companion-set contract but paused exit-ticket MVP implementation; L1.7C-0 closed the shared skill-map contract; platform `GAME-UX-1` implemented the shared route/view-model support without authorizing product use; lesson L1.7C closed PASS WITH FLAGS after consuming that shared route in the game row; and lesson L1.7D closed PASS WITH FLAGS after generator-owned landing IA cleanup. Broad lesson-companion scaling remains blocked until L2.0 closes, the resumed boundary-safe exit-ticket MVP has checkpoint review evidence, and Scale Gate 1 establishes remaining house-style and game-row scaling quality.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "EX-5",
+          "name": "Operation And Answer-Skill Registry Contract",
+          "completed": "yes",
+          "currentState": "Completed as a design-only contract sprint after GATE-EX4. Added `references/schemas/operation-answer-skill-contract.schema.json`, `references/data/exam-ingestion/operation-answer-skill-contract.*`, `build-scripts/references/check-ex5-operation-answer-skill-contract.js`, and the `GATE-EX5-operation-answer-skill-contract` review packet. The contract defines future overlay-first operation-candidate, answer-skill-candidate, and q19 source-annex extraction storage; required operation/answer-skill fields; q19 graph/source reconstruction fields; validator/CLI prerequisites; rollback; audit evidence; and stop conditions preserving q19 blockers and q3/q15 answer-skill visibility. EX-5 created no candidate-storage files, did not execute q19 extraction, and authorized no protected mutation, external-source mutation, machine-reference mutation, unit minting, operation-registry mutation, answer-skill mutation, PV/graph mutation, target-exercise promotion, lesson-output mutation, CP-6 closure, Year-1 closure, diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student-facing output.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -1577,7 +1592,7 @@
           "roadmap": "References roadmap"
         }
       ],
-      "completedCount": 85,
+      "completedCount": 86,
       "openCount": 9
     },
     {

@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-lessen
 
-Generated: 2026-05-24T20:01:29.392Z
+Generated: 2026-05-24T20:31:14.057Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-lessen`
-Files indexed: 1409
+Files indexed: 1414
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -2396,7 +2396,7 @@ Count: 817
 
 ## other
 
-Count: 287
+Count: 292
 
 - _team-b-reference/1.1.1/uitleg vaardigheden team b.html
 - _team-b-reference/1.1.1/uitleg voorkennis team b.html
@@ -2653,8 +2653,11 @@ Count: 287
 - archive/sprints/L1.7C/L1.7C-teacher-learning-quality-review.md
 - archive/sprints/L1.7C/L1.7C-technical-qa-report.md
 - archive/sprints/L1.7D/L1.7D-baseline-audit.md
+- archive/sprints/L1.7D/L1.7D-closure-log.md
 - archive/sprints/L1.7D/L1.7D-human-review-packet.md
+- archive/sprints/L1.7D/L1.7D-human-review-record.md
 - archive/sprints/L1.7D/L1.7D-landing-ia-contract.md
+- archive/sprints/L1.7D/L1.7D-lead-review-summary.md
 - archive/sprints/L1.7D/L1.7D-screenshots/1.1.1/index-desktop-dark.png
 - archive/sprints/L1.7D/L1.7D-screenshots/1.1.1/index-desktop-light.png
 - archive/sprints/L1.7D/L1.7D-screenshots/1.1.1/index-mobile-dark.png
@@ -2664,6 +2667,8 @@ Count: 287
 - archive/sprints/L1.7D/L1.7D-screenshots/1.1.3/index-mobile-dark.png
 - archive/sprints/L1.7D/L1.7D-screenshots/1.1.3/index-mobile-light.png
 - archive/sprints/L1.7D/L1.7D-sprint-plan.md
+- archive/sprints/L1.7D/L1.7D-student-experience-review.md
+- archive/sprints/L1.7D/L1.7D-teacher-learning-quality-review.md
 - archive/sprints/L1.7D/L1.7D-technical-qa-report.md
 - archive/sprints/SYNC-1/SYNC-1-roadmap-reconciliation-log.md
 - archive/sprints/SYNC-2/SYNC-2-companion-pre-scale-roadmap-update.md

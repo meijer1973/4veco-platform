@@ -1,0 +1,329 @@
+{
+  "schema_version": 1,
+  "contract_id": "operation-answer-skill-contract",
+  "sprint_id": "EX-5",
+  "status": "design_contract_pending_gate_review",
+  "generated_on": "2026-05-24T00:00:00.000Z",
+  "source_files": [
+    "reports/review-gates/GATE-EX4-mutation-planning/gate-closure.json",
+    "reports/review-gates/GATE-EX4-mutation-planning/cli-readiness-plan.json",
+    "reports/review-gates/GATE-EX4-mutation-planning/mutation-candidates.json",
+    "reports/json/exam-ingestion-coverage.json",
+    "references/data/skill-operation-registry.json",
+    "references/data/exam-ingestion/exam-item-overlays.json",
+    "references/data/exam-ingestion/exam-answer-model-overlays.json",
+    "references/data/exam-ingestion/exam-source-annex-overlays.json"
+  ],
+  "authority_boundary": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_mutation_authorized": false,
+    "source_annex_extraction_execution_authorized": false,
+    "pv_graph_mutation_authorized": false,
+    "target_exercise_promotion_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "cp6_closure_authorized": false,
+    "year1_closure_authorized": false,
+    "student_product_use_authorized": false
+  },
+  "storage_contracts": {
+    "operation_candidates": {
+      "storage_path": "references/data/exam-ingestion/operation-candidates.json",
+      "storage_status": "future_storage_not_created",
+      "creation_authorized_now": false,
+      "write_authorized_now": false,
+      "schema_required_before_write": true,
+      "validator_required_before_write": true,
+      "cli_required_before_write": true,
+      "rollback_required_before_write": true,
+      "audit_log_required_before_write": true,
+      "required_record_fields": [
+        "operation_id",
+        "operation_status",
+        "label_nl",
+        "operation_family",
+        "source_exam_item_ids",
+        "source_requirement_ids",
+        "evidence_refs",
+        "answer_model_refs",
+        "input_objects",
+        "output_expectation",
+        "required_steps",
+        "supporting_unit_ids",
+        "weak_or_rejected_unit_ids",
+        "blocking_gap_ids",
+        "review_state",
+        "mutation_authorized",
+        "student_product_use_authorized"
+      ],
+      "forbidden_record_fields": [
+        "mastery_decision",
+        "adaptive_route",
+        "summative_score",
+        "student_diagnostic",
+        "pv_projection_authorized",
+        "machine_promotion_authorized"
+      ]
+    },
+    "answer_skill_candidates": {
+      "storage_path": "references/data/exam-ingestion/answer-skill-candidates.json",
+      "storage_status": "future_storage_not_created",
+      "creation_authorized_now": false,
+      "write_authorized_now": false,
+      "schema_required_before_write": true,
+      "validator_required_before_write": true,
+      "cli_required_before_write": true,
+      "rollback_required_before_write": true,
+      "audit_log_required_before_write": true,
+      "required_record_fields": [
+        "answer_skill_id",
+        "answer_skill_status",
+        "label_nl",
+        "answer_format",
+        "source_exam_item_ids",
+        "source_requirement_ids",
+        "correction_model_step_refs",
+        "point_rule_refs",
+        "rewarded_wording",
+        "required_terms",
+        "accepted_alternatives",
+        "content_support_unit_ids",
+        "operation_support_ids",
+        "blocking_gap_ids",
+        "review_state",
+        "mutation_authorized",
+        "student_product_use_authorized"
+      ],
+      "forbidden_record_fields": [
+        "mastery_decision",
+        "adaptive_route",
+        "summative_score",
+        "student_diagnostic",
+        "automatic_feedback_authorized",
+        "student_facing_ai_authorized"
+      ]
+    }
+  },
+  "q19_extraction_contract": {
+    "storage_path": "references/data/exam-ingestion/source-annex-extraction-overlays.json",
+    "storage_status": "future_storage_not_created",
+    "execution_authorized_now": false,
+    "source_exam_item_id": "vw-1022-a-25-1-o:opgave-4:question-19",
+    "required_graph_fields": [
+      "source_material_id",
+      "source_page_or_locator",
+      "graph_type",
+      "axis_labels",
+      "axis_units",
+      "scale_or_tick_marks",
+      "curve_or_series_labels",
+      "coordinates_or_reconstructable_geometry",
+      "legend_mapping",
+      "student_action_regions",
+      "extraction_status",
+      "review_state",
+      "blocking_gap_ids"
+    ],
+    "required_source_annex_fields": [
+      "source_material_id",
+      "annex_type",
+      "source_page_or_locator",
+      "prompt_ref",
+      "worksheet_regions",
+      "required_student_marks",
+      "extraction_status",
+      "review_state",
+      "blocking_gap_ids"
+    ],
+    "blocking_gap_ids": [
+      "q19-source-annex-gap",
+      "q19-graph-object-gap"
+    ],
+    "blocked_downstream_uses": [
+      "full_exam_reconstruction",
+      "accepted_mtu_mapping",
+      "graph_pv_route_execution",
+      "chained_reasoning_operation_execution",
+      "lesson_build_handoff",
+      "pv_projection",
+      "student_facing_output"
+    ]
+  },
+  "validator_cli_contract": {
+    "implementation_authorized_now": false,
+    "future_validator_paths": [
+      "build-scripts/references/check-operation-answer-skill-candidates.js",
+      "build-scripts/references/check-source-annex-extraction-overlays.js"
+    ],
+    "future_cli_paths": [
+      "build-scripts/references/operation-candidate-add.js",
+      "build-scripts/references/answer-skill-candidate-add.js",
+      "build-scripts/references/source-annex-extraction-add.js"
+    ],
+    "validator_must_reject": [
+      "unauthorized mutation flags",
+      "candidate records without source exam item and requirement provenance",
+      "q19 graph/PV or reasoning records while q19 blocking gaps remain unresolved",
+      "hidden q3 or q15 answer-skill needs",
+      "A15 reused as q3 annual threshold support",
+      "A45 treated as primary q19 graph-shift support",
+      "product-use flags set to true",
+      "student-facing output authorization"
+    ],
+    "cli_must_require": [
+      "closed human gate naming the exact lane",
+      "schema validation before write",
+      "read-only dry-run mode",
+      "mutation log entry",
+      "rollback instructions",
+      "source evidence refs",
+      "review artifact refs"
+    ]
+  },
+  "rollback_contract": {
+    "required_before_any_write": true,
+    "requirements": [
+      "Every future write must have a mutation log with previous record state or explicit new-record marker.",
+      "Every future CLI must support a dry-run mode before write.",
+      "Every future candidate-storage write must be reversible without hand-editing references/machine or references/external.",
+      "Rollback must preserve external-source provenance and must not delete original exam-ingestion overlays.",
+      "Rollback cannot be used to claim CP-6 closure, Year-1 closure, lesson-output mutation, or product-use authorization."
+    ]
+  },
+  "audit_contract": {
+    "required_before_any_write": true,
+    "requirements": [
+      "Record the gate id, sprint id, command, operator, timestamp, input artifact, and output artifact for every future write.",
+      "Record all source exam item ids and source requirement ids touched by a future write.",
+      "Record all supporting, weak, rejected, and blocking-gap ids used in the decision.",
+      "Record explicit false flags for protected mutation, product use, CP-6 closure, and Year-1 closure unless a later gate changes them.",
+      "Record validation command outputs before and after any future write."
+    ]
+  },
+  "candidate_routing_facts": [
+    {
+      "requirement_id": "q3-calc-1",
+      "classification": "operation_registry_design_candidate",
+      "source_exam_item_id": "vw-1022-a-25-1-o:opgave-1:question-3",
+      "candidate_record_id": "EX_OP_ANNUAL_COST_THRESHOLD_COMPARISON",
+      "supporting_unit_ids": ["A61"],
+      "rejected_or_weak_unit_ids": ["A15"],
+      "blocking_gap_ids": [],
+      "mutation_authorized": false,
+      "student_product_use_authorized": false,
+      "notes": "A61 supports table-value selection only; the annual threshold comparison remains a future operation candidate."
+    },
+    {
+      "requirement_id": "q3-answer-1",
+      "classification": "answer_skill_design_candidate",
+      "source_exam_item_id": "vw-1022-a-25-1-o:opgave-1:question-3",
+      "candidate_record_id": "EX_ANS_THRESHOLD_CONCLUSION_UNIT_DIRECTION",
+      "supporting_unit_ids": [],
+      "rejected_or_weak_unit_ids": [],
+      "blocking_gap_ids": [],
+      "mutation_authorized": false,
+      "student_product_use_authorized": false,
+      "notes": "The threshold conclusion with unit and direction remains visible as a separate answer-skill need."
+    },
+    {
+      "requirement_id": "q19-source-annex-gap",
+      "classification": "blocking_source_annex_extraction_gap",
+      "source_exam_item_id": "vw-1022-a-25-1-o:opgave-4:question-19",
+      "candidate_record_id": "EX_SRC_Q19_MARKET_DIAGRAM_WORKSHEET_EXTRACTION",
+      "supporting_unit_ids": [],
+      "rejected_or_weak_unit_ids": [],
+      "blocking_gap_ids": ["q19-source-annex-gap"],
+      "mutation_authorized": false,
+      "student_product_use_authorized": false,
+      "notes": "q19 source-annex extraction needs a future contract-backed extraction lane before execution."
+    },
+    {
+      "requirement_id": "q19-graph-object-gap",
+      "classification": "blocking_graph_object_extraction_gap",
+      "source_exam_item_id": "vw-1022-a-25-1-o:opgave-4:question-19",
+      "candidate_record_id": "EX_SRC_Q19_MARKET_DIAGRAM_WORKSHEET_EXTRACTION",
+      "supporting_unit_ids": [],
+      "rejected_or_weak_unit_ids": [],
+      "blocking_gap_ids": ["q19-graph-object-gap"],
+      "mutation_authorized": false,
+      "student_product_use_authorized": false,
+      "notes": "q19 graph-object extraction must expose geometry/source details or keep the blocking gap visible."
+    },
+    {
+      "requirement_id": "q19-graph-op-1",
+      "classification": "held_graph_pv_route_candidate",
+      "source_exam_item_id": "vw-1022-a-25-1-o:opgave-4:question-19",
+      "candidate_record_id": "EX_PV_Q19_THREE_MARKET_DEMAND_SHIFT",
+      "supporting_unit_ids": ["A42", "D10"],
+      "rejected_or_weak_unit_ids": ["A45"],
+      "blocking_gap_ids": ["q19-source-annex-gap", "q19-graph-object-gap"],
+      "mutation_authorized": false,
+      "student_product_use_authorized": false,
+      "notes": "A42 and D10 are candidates; A45 is weak prerequisite support only. Execution remains blocked by q19 gaps."
+    },
+    {
+      "requirement_id": "q19-reason-1",
+      "classification": "provisional_operation_design_candidate_blocked",
+      "source_exam_item_id": "vw-1022-a-25-1-o:opgave-4:question-19",
+      "candidate_record_id": "EX_OP_CHAINED_MULTI_MARKET_SHIFT_REASONING",
+      "supporting_unit_ids": ["D10", "D13"],
+      "rejected_or_weak_unit_ids": [],
+      "blocking_gap_ids": ["q19-source-annex-gap", "q19-graph-object-gap"],
+      "mutation_authorized": false,
+      "student_product_use_authorized": false,
+      "notes": "D10 and D13 partially support the reasoning; full operation design remains blocked by q19 source/graph gaps."
+    },
+    {
+      "requirement_id": "q15-answer-1",
+      "classification": "answer_skill_design_candidate",
+      "source_exam_item_id": "vw-1022-a-25-1-o:opgave-3:question-15",
+      "candidate_record_id": "EX_ANS_TWO_STEP_CORRECTION_MODEL_EXPLANATION",
+      "supporting_unit_ids": ["D27", "F03", "F09"],
+      "rejected_or_weak_unit_ids": [],
+      "blocking_gap_ids": [],
+      "mutation_authorized": false,
+      "student_product_use_authorized": false,
+      "notes": "D27/F03/F09 cover content only; the two-step correction-model explanation remains a separate answer-skill need."
+    }
+  ],
+  "gate_review_requirements": [
+    "GATE-EX5 must decide whether operation and answer-skill candidate storage should remain in references/data/exam-ingestion or move to another governed data overlay path before any write.",
+    "GATE-EX5 must decide whether the operation and answer-skill required fields are sufficient for a later CLI/validator implementation sprint.",
+    "GATE-EX5 must decide whether q19 source-annex and graph-object extraction fields are sufficient before any extraction execution.",
+    "GATE-EX5 must decide the next bounded sprint: validator/CLI design, q19 extraction-contract implementation, or hold.",
+    "GATE-EX5 must preserve explicit no-mutation and no-product-use boundaries unless a later separate gate changes them."
+  ],
+  "blocked_outcomes": [
+    "protected reference mutation",
+    "external-source mutation",
+    "machine-reference mutation",
+    "unit minting",
+    "operation-registry mutation",
+    "answer-skill mutation",
+    "q19 source-annex extraction execution",
+    "PV/graph mutation",
+    "target-exercise promotion",
+    "lesson-output mutation",
+    "CP-6 closure",
+    "Year-1 closure",
+    "student diagnostics",
+    "adaptive routing",
+    "mastery decisions",
+    "automatic sequencing",
+    "student-facing AI",
+    "summative use",
+    "PV projection",
+    "PV machine promotion",
+    "student-facing output"
+  ],
+  "next_allowed_actions": [
+    "Run GATE-EX5 human review.",
+    "After GATE-EX5 only, plan a bounded validator/CLI implementation sprint if authorized.",
+    "After GATE-EX5 only, plan q19 source-annex/graph-object extraction tooling if authorized.",
+    "Keep q19 graph/PV, q19 reasoning, lesson handoff, PV projection, and student-facing use blocked while q19 gaps remain unresolved.",
+    "Keep q3 and q15 answer-skill needs visible downstream."
+  ]
+}

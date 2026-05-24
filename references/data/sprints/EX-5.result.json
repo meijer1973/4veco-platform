@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "sprint_id": "EX-5",
+  "name": "Operation And Answer-Skill Registry Contract",
+  "status": "completed",
+  "completed_on": "2026-05-24",
+  "plan": "reports/sprints/EX-5-plan.md",
+  "baseline": "reports/sprints/EX-5-baseline.md",
+  "planning_review": "reports/sprints/EX-5-planning-review.md",
+  "result": "reports/sprints/EX-5-result.md",
+  "diff_summary": "reports/sprints/EX-5-diff-summary.md",
+  "protected_reference_data_changed": false,
+  "external_source_mutation_authorized": false,
+  "machine_reference_mutation_authorized": false,
+  "operation_registry_mutation_authorized": false,
+  "answer_skill_mutation_authorized": false,
+  "q19_extraction_execution_authorized": false,
+  "lesson_output_mutation_authorized": false,
+  "student_product_use_authorized": false,
+  "lead_review_required": true,
+  "lead_review": {
+    "assignment": "reports/sprints/EX-5-lead-review-assignment.md",
+    "round1": "reports/sprints/EX-5-lead-review-round1.md",
+    "corrections": "reports/sprints/EX-5-lead-review-corrections.md",
+    "round2": "reports/sprints/EX-5-lead-review-round2.md",
+    "final_verdict": "PASS WITH FLAGS"
+  },
+  "primary_outputs": [
+    "references/schemas/operation-answer-skill-contract.schema.json",
+    "references/data/exam-ingestion/operation-answer-skill-contract.json",
+    "references/data/exam-ingestion/operation-answer-skill-contract.md",
+    "build-scripts/references/check-ex5-operation-answer-skill-contract.js",
+    "reports/review-gates/GATE-EX5-operation-answer-skill-contract/review-packet.json",
+    "reports/review-gates/GATE-EX5-operation-answer-skill-contract/review-packet.md",
+    "reports/review-gates/GATE-EX5-operation-answer-skill-contract/bundle-urls.md"
+  ],
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/EX-5-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js EX-5",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-ex4-mutation-planning.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-exam-ingestion-contract.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-exam-ingestion-pilots.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-exam-ingestion-coverage.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-ex5-operation-answer-skill-contract.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-skill-operation-registry.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/validate-core-schemas.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/generate-all.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/validate-report-json.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/generate-reference-health.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/check-reference-health.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run dashboard:internal",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run agent:index",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-gate-bundle-urls.js GATE-EX5-operation-answer-skill-contract",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js --check",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/build-source-document-registry.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/build-reference-inventory.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-source-document-registry.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-source-manifest.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-document-inventory.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-roadmap-version-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd test",
+      "status": "passed"
+    }
+  ],
+  "next_action": "Run GATE-EX5 Operation And Answer-Skill Contract Human Review before any later validator/CLI implementation, candidate writes, q19 extraction execution, lesson handoff, PV projection, or student-facing use."
+}
