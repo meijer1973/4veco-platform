@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-lessen
 
-Generated: 2026-05-25T11:56:20.951Z
+Generated: 2026-05-25T19:57:17.091Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-lessen`
-Files indexed: 1426
+Files indexed: 1436
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -81,9 +81,10 @@ _No files indexed in this group._
 
 ## validators
 
-Count: 6
+Count: 7
 
 - archive/sprints/L1.7A/L1.7A-validation-log.md
+- archive/sprints/L1.7B-R/L1.7B-R-validation-log.md
 - archive/sprints/L1.7B/L1.7B-validation-log.md
 - archive/sprints/L1.7C-0/L1.7C-0-validation-log.md
 - archive/sprints/L1.7C/L1.7C-validation-log.md
@@ -2397,7 +2398,7 @@ Count: 817
 
 ## other
 
-Count: 303
+Count: 312
 
 - _team-b-reference/1.1.1/uitleg vaardigheden team b.html
 - _team-b-reference/1.1.1/uitleg voorkennis team b.html
@@ -2623,6 +2624,10 @@ Count: 303
 - archive/sprints/L1.7A/L1.7A-flag-triage.md
 - archive/sprints/L1.7A/L1.7A-readiness-matrix.md
 - archive/sprints/L1.7A/L1.7A-sprint-plan.md
+- archive/sprints/L1.7B-R/L1.7B-R-baseline-audit.md
+- archive/sprints/L1.7B-R/L1.7B-R-platform-support-request.md
+- archive/sprints/L1.7B-R/L1.7B-R-sprint-plan.md
+- archive/sprints/L1.7B-R/L1.7B-R-stop-decision.md
 - archive/sprints/L1.7B/L1.7B-companion-completion-contract.md
 - archive/sprints/L1.7B/L1.7B-exit-ticket-mvp-scope.md
 - archive/sprints/L1.7B/L1.7B-prototype-inventory.md
@@ -2672,15 +2677,20 @@ Count: 303
 - archive/sprints/L1.7D/L1.7D-teacher-learning-quality-review.md
 - archive/sprints/L1.7D/L1.7D-technical-qa-report.md
 - archive/sprints/L2.0/L2.0-baseline-audit.md
+- archive/sprints/L2.0/L2.0-closure-log.md
 - archive/sprints/L2.0/L2.0-flag-disposition.md
 - archive/sprints/L2.0/L2.0-house-style-baseline.md
 - archive/sprints/L2.0/L2.0-human-review-packet.md
+- archive/sprints/L2.0/L2.0-human-review-record.md
+- archive/sprints/L2.0/L2.0-lead-review-summary.md
 - archive/sprints/L2.0/L2.0-quality-ref-status-standard.md
 - archive/sprints/L2.0/L2.0-screenshots/1.1.4/index-desktop-dark.png
 - archive/sprints/L2.0/L2.0-screenshots/1.1.4/index-desktop-light.png
 - archive/sprints/L2.0/L2.0-screenshots/1.1.4/index-mobile-dark.png
 - archive/sprints/L2.0/L2.0-screenshots/1.1.4/index-mobile-light.png
 - archive/sprints/L2.0/L2.0-sprint-plan.md
+- archive/sprints/L2.0/L2.0-student-experience-review.md
+- archive/sprints/L2.0/L2.0-teacher-learning-quality-review.md
 - archive/sprints/L2.0/L2.0-technical-qa-report.md
 - archive/sprints/SYNC-1/SYNC-1-roadmap-reconciliation-log.md
 - archive/sprints/SYNC-2/SYNC-2-companion-pre-scale-roadmap-update.md

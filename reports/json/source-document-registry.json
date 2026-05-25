@@ -1,17 +1,17 @@
 {
   "generated_by": "build-scripts/references/build-source-document-registry.js",
-  "generated_on": "2026-05-25T09:05:40.927Z",
+  "generated_on": "2026-05-25T19:57:19.705Z",
   "status": "pass",
   "summary": {
-    "record_count": 290,
-    "source_manifest_file_count": 294,
+    "record_count": 292,
+    "source_manifest_file_count": 296,
     "by_authority_level": {
       "external_primary": 30,
       "machine_registry": 5,
       "owned_curriculum_design": 5,
       "authored_judgement": 9,
       "generated_report": 2,
-      "governance_data": 208,
+      "governance_data": 210,
       "quality_protocol": 5,
       "planning": 1,
       "machine_contract": 25
@@ -28,7 +28,7 @@
       "inventory": 33,
       "exercise_metadata_overlay": 6,
       "exercise_overlay_readme": 1,
-      "sprint_metadata": 166,
+      "sprint_metadata": 168,
       "machine_projection": 3,
       "owned_source_readme": 1,
       "qc_prompt": 5,
@@ -44,7 +44,7 @@
       "archived": 1,
       "generated_diagnostic": 2,
       "mirrored": 25,
-      "governance_data": 206,
+      "governance_data": 208,
       "planning": 1,
       "schema_contract": 25
     },
@@ -52,7 +52,7 @@
       "public_citation_allowed_with_source_name": 30,
       "internal_only": 19,
       "internal_diagnostic_only": 2,
-      "not_public_citation_source": 239
+      "not_public_citation_source": 241
     },
     "evidence_anchor_coverage": {
       "required_document_ids": [
@@ -9052,6 +9052,82 @@
       ]
     },
     {
+      "document_id": "path-references-data-sprints-sync-2-plan",
+      "path": "references/data/sprints/SYNC-2.plan.json",
+      "title": "SYNC 2.Plan",
+      "source_type": "sprint_metadata",
+      "authority_level": "governance_data",
+      "source_version": "sha256:e5fdbc1fbe297e007e968e62e7823e289493d1cc9a4e7e7fad3c8b8d956ff775",
+      "status": "governance_data",
+      "owner": "references_team",
+      "citation_policy": "cite_as_governance_record_only",
+      "public_citation_policy": "not_public_citation_source",
+      "layer": "governance_data",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "refresh_policy": "sprint_lifecycle",
+      "source_hash": "e5fdbc1fbe297e007e968e62e7823e289493d1cc9a4e7e7fad3c8b8d956ff775",
+      "size_bytes": 1346,
+      "primary_evidence": false,
+      "curriculum_authority": false,
+      "allowed_downstream_uses": [
+        "internal_reference_context",
+        "rag_retrieval_with_authority_label"
+      ],
+      "blocked_downstream_uses": [
+        "student_diagnostics",
+        "adaptive_routing",
+        "student_facing_ai",
+        "automatic_lesson_sequencing",
+        "automatic_mastery_decisions",
+        "summative_assessment_decisions",
+        "external_authority",
+        "override_machine_registry"
+      ],
+      "evidence_anchor_ids": [],
+      "notes": [
+        "Governance data is canonical only for its declared governance artifact."
+      ]
+    },
+    {
+      "document_id": "path-references-data-sprints-sync-2-result",
+      "path": "references/data/sprints/SYNC-2.result.json",
+      "title": "SYNC 2.Result",
+      "source_type": "sprint_metadata",
+      "authority_level": "governance_data",
+      "source_version": "sha256:9949c80ed161aa23d27873cc0ce1c093bf0031832dc76c0b9b489f092f3e4f48",
+      "status": "governance_data",
+      "owner": "references_team",
+      "citation_policy": "cite_as_governance_record_only",
+      "public_citation_policy": "not_public_citation_source",
+      "layer": "governance_data",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "refresh_policy": "sprint_lifecycle",
+      "source_hash": "9949c80ed161aa23d27873cc0ce1c093bf0031832dc76c0b9b489f092f3e4f48",
+      "size_bytes": 2393,
+      "primary_evidence": false,
+      "curriculum_authority": false,
+      "allowed_downstream_uses": [
+        "internal_reference_context",
+        "rag_retrieval_with_authority_label"
+      ],
+      "blocked_downstream_uses": [
+        "student_diagnostics",
+        "adaptive_routing",
+        "student_facing_ai",
+        "automatic_lesson_sequencing",
+        "automatic_mastery_decisions",
+        "summative_assessment_decisions",
+        "external_authority",
+        "override_machine_registry"
+      ],
+      "evidence_anchor_ids": [],
+      "notes": [
+        "Governance data is canonical only for its declared governance artifact."
+      ]
+    },
+    {
       "document_id": "path-references-data-unit-design-status-unit-design-status-overlay",
       "path": "references/data/unit-design-status/unit-design-status-overlay.json",
       "title": "Unit Design Status Overlay",
@@ -9511,7 +9587,7 @@
       "title": "Reference Team Roadmap",
       "source_type": "roadmap",
       "authority_level": "planning",
-      "source_version": "sha256:c94b1c36e8b5634490f09ea1db2b2033b2082a85be8f4673a5fa1a0f25b908c1",
+      "source_version": "sha256:759ce4ee6246292451c33cc79e640e620861336e317c96555bc3a4a09fa53115",
       "status": "planning",
       "owner": "references_team",
       "citation_policy": "citation_requires_review",
@@ -9520,8 +9596,8 @@
       "generated_status": "manual_source",
       "edit_policy": "human_reviewed_edit",
       "refresh_policy": "roadmap_update",
-      "source_hash": "c94b1c36e8b5634490f09ea1db2b2033b2082a85be8f4673a5fa1a0f25b908c1",
-      "size_bytes": 197895,
+      "source_hash": "759ce4ee6246292451c33cc79e640e620861336e317c96555bc3a4a09fa53115",
+      "size_bytes": 204040,
       "primary_evidence": false,
       "curriculum_authority": false,
       "allowed_downstream_uses": [

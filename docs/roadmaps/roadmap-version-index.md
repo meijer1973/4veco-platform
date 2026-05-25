@@ -12,12 +12,15 @@ docs/roadmaps/roadmap-version-index.json
 
 | Roadmap | Version | Path | Notes |
 |---|---|---|---|
-| References Team Roadmap | `v2.77-exit-ticket-scale-gate-precision` | `references/reference-team-roadmap.md` | Current operating roadmap after SYNC-2 split the lesson exit-ticket path into L1.7B-C contract-only and L1.7B-R future MVP resume, added GATE-L1.7B and GAME-UX-2, and made Scale Gate 1 prerequisites explicit while GATE-EX5 remains the active human review gate. |
+| References Team Roadmap | `v2.80-gate-ex5-pass-with-conditions` | `references/reference-team-roadmap.md` | Current operating roadmap after GATE-EX5 closed as `pass_with_conditions` for design-contract review only. EX-6 validator/CLI implementation planning is the active reference lane with no candidate writes or q19 extraction execution. |
 
 ## Outdated Archive
 
 | Roadmap | Version | Path | Superseded By |
 |---|---|---|---|
+| References Team Roadmap before GATE-EX5 human-review closure | `v2.79-l20-closed-pass-with-flags` | `docs/roadmaps/outdated/reference-team-roadmap-v2.79-l20-closed-pass-with-flags.md` | `references/reference-team-roadmap.md` |
+| References Team Roadmap before L2.0 human-review closure | `v2.78-l20-technical-qa-ready` | `docs/roadmaps/outdated/reference-team-roadmap-v2.78-l20-technical-qa-ready.md` | `references/reference-team-roadmap.md` |
+| References Team Roadmap before L2.0 technical QA readiness | `v2.77-exit-ticket-scale-gate-precision` | `docs/roadmaps/outdated/reference-team-roadmap-v2.77-exit-ticket-scale-gate-precision.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before exit-ticket scale-gate precision | `v2.76-ex5-operation-answer-skill-contract` | `docs/roadmaps/outdated/reference-team-roadmap-v2.76-ex5-operation-answer-skill-contract.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before EX-5 operation/answer-skill contract | `v2.75-l17d-closed-pass-with-flags` | `docs/roadmaps/outdated/reference-team-roadmap-v2.75-l17d-closed-pass-with-flags.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before L1.7D human-review closure | `v2.74-l17d-landing-ia-ready` | `docs/roadmaps/outdated/reference-team-roadmap-v2.74-l17d-landing-ia-ready.md` | `references/reference-team-roadmap.md` |

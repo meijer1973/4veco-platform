@@ -1,0 +1,164 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-EX5-operation-answer-skill-contract",
+  "sprint_id": "EX-5",
+  "status": "pass_with_conditions",
+  "closed_on": "2026-05-25",
+  "closure_confirmed_by_human": true,
+  "human_interview": "reports/review-gates/GATE-EX5-operation-answer-skill-contract/human-interview.md",
+  "review_packet": "reports/review-gates/GATE-EX5-operation-answer-skill-contract/review-packet.md",
+  "summary": "GATE-EX5 closes as pass_with_conditions for design-contract review only. It accepts the EX-5 operation/answer-skill/q19 extraction contract as adequate for later bounded validator/CLI planning, while preserving all candidate-write, q19 extraction execution, protected mutation, lesson-output, CP-6/Year-1 closure, and student/product-use blocks.",
+  "protected_reference_data_changed": false,
+  "decision_scope": "design_contract_review_only",
+  "candidate_storage_authorized": false,
+  "q19_extraction_execution_authorized": false,
+  "explicit_decisions": [
+    {
+      "topic": "gate status",
+      "decision": "Close GATE-EX5 as pass_with_conditions - design-contract review only."
+    },
+    {
+      "topic": "storage split",
+      "decision": "Keep future operation candidates, answer-skill candidates, and source-annex extraction overlays under governed references/data/exam-ingestion overlay paths before any machine promotion."
+    },
+    {
+      "topic": "operation fields",
+      "decision": "Accept the operation-candidate fields as sufficient for later validator/CLI planning; dry-run EX_OP_ANNUAL_COST_THRESHOLD_COMPARISON before real candidate writes."
+    },
+    {
+      "topic": "answer-skill fields",
+      "decision": "Accept the answer-skill fields as sufficient to keep q3 threshold wording and q15 two-step correction-model explanation visible as answer-construction needs."
+    },
+    {
+      "topic": "q19 extraction fields",
+      "decision": "Accept q19 graph/source extraction fields as sufficient preconditions; source_page_or_locator must be precise for q19."
+    },
+    {
+      "topic": "validator and CLI preconditions",
+      "decision": "Accept validator/CLI preconditions for later planning; validators must reject unauthorized mutation flags, hidden gaps, invalid A15/A45 support, product-use flags, and student-facing output authorization."
+    },
+    {
+      "topic": "routing facts",
+      "decision": "Preserve q3 A61 support with A15 rejected, q19 A42/D10 support with A45 weak, q19 gaps blocking, and q3/q15 answer-skill needs visible."
+    },
+    {
+      "topic": "next sprint routing",
+      "decision": "Authorize EX-6 Validator And CLI Implementation Planning only, with no candidate writes and no q19 extraction execution."
+    },
+    {
+      "topic": "mutation and product authority",
+      "decision": "No protected reference mutation, external-source mutation, machine-reference mutation, unit minting, operation-registry mutation, answer-skill mutation, q19 extraction execution, PV/graph mutation, lesson-output mutation, CP-6 closure, Year-1 closure, diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student-facing output is authorized."
+    }
+  ],
+  "accepted_outcomes": [
+    "GATE-EX5 may close as a design-contract review gate.",
+    "Future operation candidates, answer-skill candidates, and source-annex extraction overlays remain overlay-first under references/data/exam-ingestion/.",
+    "Operation-candidate fields are sufficient for later validator/CLI planning.",
+    "Answer-skill fields are sufficient to keep q3 and q15 correction-model answer needs visible.",
+    "q19 extraction fields are sufficient as a precondition for any later extraction execution.",
+    "Validator/CLI preconditions are sufficient for a later implementation-planning sprint.",
+    "GATE-EX4 routing facts are preserved: q3 A61 support with A15 rejected; q19 A42/D10 support with A45 weak; q19 gaps blocking; q3/q15 answer-skill needs visible.",
+    "A bounded EX-6 validator/CLI implementation planning sprint may follow, with no candidate writes and no q19 extraction execution."
+  ],
+  "blocked_outcomes": [
+    "No protected reference mutation is authorized.",
+    "No external-source mutation is authorized.",
+    "No machine-reference mutation is authorized.",
+    "Do not hand-edit references/external/.",
+    "Do not hand-edit references/machine/.",
+    "No unit minting is authorized.",
+    "No operation-registry mutation is authorized.",
+    "No answer-skill mutation is authorized.",
+    "No q19 source-annex extraction execution is authorized.",
+    "No q19 graph-object extraction execution is authorized.",
+    "No PV/graph mutation is authorized.",
+    "No target-exercise promotion is authorized.",
+    "No lesson-output mutation is authorized.",
+    "No CP-6 closure is authorized.",
+    "No Year-1 closure is authorized.",
+    "No student diagnostics, adaptive routing, mastery decisions, automatic sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student-facing output is authorized."
+  ],
+  "conditions_to_reopen_or_pass": [
+    "No candidate writes from GATE-EX5.",
+    "q19 remains blocked while q19-source-annex-gap and q19-graph-object-gap are unresolved.",
+    "The next sprint should test schemas and validators against dry-run fixtures before any persistent candidate-storage path exists.",
+    "Validators must reject A15 as q3 annual-threshold support and A45 as the primary q19 graph-shift support.",
+    "q3 threshold wording and q15 two-step correction-model explanation must remain visible downstream as answer-skill needs.",
+    "Product boundaries remain false."
+  ],
+  "reviewed_routing_facts": [
+    {
+      "requirement_id": "q3-calc-1",
+      "classification": "operation_design_candidate",
+      "supporting_unit_ids": ["A61"],
+      "rejected_or_weak_unit_ids": ["A15"],
+      "candidate_storage_write_authorized": false
+    },
+    {
+      "requirement_id": "q3-answer-1",
+      "classification": "answer_skill_candidate",
+      "candidate_storage_write_authorized": false
+    },
+    {
+      "requirement_id": "q19-source-annex-gap",
+      "classification": "blocking_extraction_prerequisite",
+      "blocking": true,
+      "source_annex_extraction_execution_authorized": false
+    },
+    {
+      "requirement_id": "q19-graph-object-gap",
+      "classification": "blocking_extraction_prerequisite",
+      "blocking": true,
+      "source_annex_extraction_execution_authorized": false
+    },
+    {
+      "requirement_id": "q19-graph-op-1",
+      "classification": "held_graph_pv_route",
+      "candidate_unit_ids": ["A42", "D10"],
+      "weak_or_prerequisite_unit_ids": ["A45"],
+      "blocking_gaps": ["q19-source-annex-gap", "q19-graph-object-gap"],
+      "mutation_authorized": false
+    },
+    {
+      "requirement_id": "q19-reason-1",
+      "classification": "provisional_operation_candidate_blocked",
+      "partial_support_unit_ids": ["D10", "D13"],
+      "blocking_gaps": ["q19-source-annex-gap", "q19-graph-object-gap"],
+      "mutation_authorized": false
+    },
+    {
+      "requirement_id": "q15-answer-1",
+      "classification": "answer_skill_candidate",
+      "content_support_unit_ids": ["D27", "F03", "F09"],
+      "coverage_scope": "content_only_support",
+      "mutation_authorized": false
+    }
+  ],
+  "allowed_next_sprint": "EX-6",
+  "allowed_next_sprint_name": "Validator And CLI Implementation Planning",
+  "allowed_next_sprint_scope": [
+    "design candidate schemas",
+    "design validators",
+    "design dry-run CLIs",
+    "design mutation log and rollback format",
+    "design q19 extraction overlay validator",
+    "create dry-run fixtures only if explicitly non-persistent and test-only"
+  ],
+  "blocked_next_sprint_scope": [
+    "persistent candidate-storage writes",
+    "q19 extraction execution",
+    "protected reference mutation",
+    "external-source mutation",
+    "machine-reference mutation",
+    "unit minting",
+    "operation-registry mutation",
+    "answer-skill mutation",
+    "PV/graph mutation",
+    "target-exercise promotion",
+    "lesson handoff",
+    "lesson-output mutation",
+    "CP-6 closure",
+    "Year-1 closure",
+    "student/product use"
+  ]
+}

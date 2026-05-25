@@ -1,0 +1,149 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-EX5-operation-answer-skill-contract",
+  "sprint_id": "EX-5",
+  "recorded_on": "2026-05-25",
+  "mode": "batch_human_review_response_after_full_question_list_was_shown",
+  "status": "pass_with_conditions_design_contract_review_only",
+  "review_packet": "reports/review-gates/GATE-EX5-operation-answer-skill-contract/review-packet.md",
+  "closure_confirmed_by_human": true,
+  "protected_reference_data_changed": false,
+  "calibration_answers": [
+    {
+      "question_id": "EX5-CAL-1",
+      "topic": "design-contract review only",
+      "answer": "yes",
+      "decision": "This gate reviews a design contract only and does not authorize candidate writes, q19 extraction execution, or student/product use."
+    },
+    {
+      "question_id": "EX5-CAL-2",
+      "topic": "q19 remains blocked",
+      "answer": "yes",
+      "decision": "q19 remains blocked while q19-source-annex-gap and q19-graph-object-gap are unresolved."
+    }
+  ],
+  "answers": [
+    {
+      "question_id": "EX5-Q1",
+      "topic": "storage split",
+      "classification": "overlay_first_storage_preserved",
+      "decision": "Future operation candidates, answer-skill candidates, and source-annex extraction overlays stay under governed references/data/exam-ingestion overlay paths before any machine promotion.",
+      "future_storage_paths": [
+        "references/data/exam-ingestion/operation-candidates.json",
+        "references/data/exam-ingestion/answer-skill-candidates.json",
+        "references/data/exam-ingestion/source-annex-extraction-overlays.json"
+      ],
+      "candidate_storage_write_authorized": false
+    },
+    {
+      "question_id": "EX5-Q2",
+      "topic": "operation fields",
+      "classification": "operation_fields_sufficient_for_later_planning",
+      "decision": "The operation-candidate fields are sufficient for later validator/CLI planning. A later implementation sprint should dry-run EX_OP_ANNUAL_COST_THRESHOLD_COMPARISON before real candidate writes.",
+      "sample_dry_run_candidate": "EX_OP_ANNUAL_COST_THRESHOLD_COMPARISON",
+      "candidate_storage_write_authorized": false
+    },
+    {
+      "question_id": "EX5-Q3",
+      "topic": "answer-skill fields",
+      "classification": "answer_skill_fields_sufficient_for_later_planning",
+      "decision": "The answer-skill fields are sufficient to keep q3 threshold wording and q15 two-step correction-model explanation visible as answer-construction needs.",
+      "answer_skill_mutation_authorized": false
+    },
+    {
+      "question_id": "EX5-Q4",
+      "topic": "q19 extraction fields",
+      "classification": "q19_extraction_fields_sufficient_before_execution",
+      "decision": "Use the q19 extraction fields before any extraction execution. source_page_or_locator must be precise for q19, not a loose document reference.",
+      "blocking_gaps": ["q19-source-annex-gap", "q19-graph-object-gap"],
+      "source_annex_extraction_execution_authorized": false
+    },
+    {
+      "question_id": "EX5-Q5",
+      "topic": "validator and CLI preconditions",
+      "classification": "validator_cli_preconditions_sufficient_for_later_planning",
+      "decision": "The validator and CLI preconditions are sufficient for a later planning sprint. Future validators must reject hidden gaps, invalid A15/A45 support, mutation flags, product-use flags, and student-facing output authorization.",
+      "cli_write_authorized": false
+    },
+    {
+      "question_id": "EX5-Q6",
+      "topic": "routing facts",
+      "classification": "ex4_routing_facts_preserved",
+      "decision": "Preserve q3 A61 support with A15 rejected, q19 A42/D10 support with A45 weak, q19 gaps blocking, and q3/q15 answer-skill needs visible.",
+      "routing_facts": [
+        {
+          "requirement_id": "q3-calc-1",
+          "routing_fact": "operation design candidate; A61 support only; A15 rejected"
+        },
+        {
+          "requirement_id": "q3-answer-1",
+          "routing_fact": "answer-skill candidate; threshold conclusion with unit and direction remains visible"
+        },
+        {
+          "requirement_id": "q19-source-annex-gap",
+          "routing_fact": "blocking extraction prerequisite"
+        },
+        {
+          "requirement_id": "q19-graph-object-gap",
+          "routing_fact": "blocking extraction prerequisite"
+        },
+        {
+          "requirement_id": "q19-graph-op-1",
+          "routing_fact": "held graph/PV route; A42 and D10 candidates; A45 weak support"
+        },
+        {
+          "requirement_id": "q19-reason-1",
+          "routing_fact": "provisional operation candidate; D10/D13 partial support; blocked by q19 gaps"
+        },
+        {
+          "requirement_id": "q15-answer-1",
+          "routing_fact": "answer-skill candidate; D27/F03/F09 content only"
+        }
+      ],
+      "mutation_authorized": false
+    },
+    {
+      "question_id": "EX5-Q7",
+      "topic": "next sprint routing",
+      "classification": "validator_cli_planning_sprint_only",
+      "decision": "Authorize EX-6 Validator And CLI Implementation Planning only, with no candidate writes and no q19 extraction execution.",
+      "allowed_next_sprint": "EX-6",
+      "candidate_storage_write_authorized": false,
+      "source_annex_extraction_execution_authorized": false
+    },
+    {
+      "question_id": "EX5-Q8",
+      "topic": "mutation authority",
+      "classification": "no_mutation_authority",
+      "decision": "GATE-EX5 does not authorize protected reference mutation, external-source mutation, machine-reference mutation, unit minting, operation-registry mutation, answer-skill mutation, q19 extraction execution, PV/graph mutation, lesson-output mutation, CP-6 closure, Year-1 closure, or student/product use."
+    },
+    {
+      "question_id": "EX5-Q9",
+      "topic": "product boundaries",
+      "classification": "product_boundaries_false",
+      "decision": "Diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, PV projection, PV machine promotion, and student-facing output remain blocked."
+    }
+  ],
+  "pattern_analysis": [
+    "GATE-EX5 closes as design-contract review only.",
+    "Future operation candidates, answer-skill candidates, and q19 extraction overlays remain overlay-first under references/data/exam-ingestion.",
+    "Operation and answer-skill fields are adequate for later validator/CLI planning.",
+    "q19 extraction fields are adequate as preconditions, but q19 remains blocked until extraction is reviewed.",
+    "q3 A61 support with A15 rejected, q19 A42/D10 support with A45 weak, q19 blockers, and q3/q15 answer-skill visibility are preserved.",
+    "The only authorized next lane is validator/CLI implementation planning.",
+    "Candidate writes, q19 extraction execution, protected mutation, lesson-output mutation, CP-6/Year-1 closure, and student/product use remain blocked."
+  ],
+  "conditions_carried_forward": [
+    "No candidate writes from GATE-EX5.",
+    "q19 remains blocked.",
+    "Dry-run first.",
+    "A15/A45 guardrails stay hard.",
+    "q3 and q15 answer-skill visibility remains hard.",
+    "Product boundaries remain false."
+  ],
+  "closure_proposal": {
+    "status": "pass_with_conditions",
+    "decision_scope": "design_contract_review_only",
+    "allowed_next_sprint": "EX-6"
+  }
+}
