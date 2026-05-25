@@ -140,4 +140,48 @@ describe('paragraph landing page student-web links', () => {
         expect(chapterHtml).toContain('Verdiep');
         expect(chapterHtml).not.toContain('Valkuilen en misvattingen');
     });
+
+    test('routes consolidation pages to mixed practice instead of Verdiep-only', () => {
+        const configPath = path.join(tmpDir, 'deploy-config.json');
+        const config = JSON.parse(fs.readFileSync(configPath, 'utf8'));
+        config.paragraphs = [
+            {
+                id: '1.1.4',
+                name: 'Gemengde opgaven',
+                chapter: '1.1',
+                domain: 'teal',
+            },
+        ];
+        fs.writeFileSync(configPath, JSON.stringify(config, null, 2));
+
+        const paragraph = path.join(tmpDir, '1.1 Hoofdstuk Test', '1.1.4 Gemengde opgaven');
+        fs.mkdirSync(paragraph, { recursive: true });
+        const prefix = '1.1.4 Gemengde opgaven';
+        writeFile(path.join(paragraph, `${prefix} ${DASH} opgaven.html`));
+        writeFile(path.join(paragraph, `${prefix} ${DASH} antwoorden.html`));
+        writeFile(path.join(paragraph, `${prefix} ${DASH} opgaven.pdf`));
+        writeFile(path.join(paragraph, `${prefix} ${DASH} antwoorden.pdf`));
+
+        const result = spawnSync(process.execPath, [BUILDER], {
+            cwd: PLATFORM_ROOT,
+            env: { ...process.env, MODULE_ROOT: tmpDir },
+            encoding: 'utf8',
+        });
+
+        expect(result.status).toBe(0);
+        const html = fs.readFileSync(path.join(paragraph, 'index.html'), 'utf8');
+        expect(html).toContain('data-layout="paragraaf-v2"');
+        expect(html).toContain('data-route-layer="practice"');
+        expect(html).toContain('data-consolidation-practice="true"');
+        expect(html).toContain('Oefen gemengd');
+        expect(html).toContain('Maak gemengde opgaven');
+        expect(html).toContain('Gemengde opgaven');
+        expect(html).not.toContain('data-route-layer="deepen"');
+        expect(html).not.toContain('Verdiep');
+        expect(html).not.toMatch(/\b(adaptief|diagnostisch|diagnose|mastery|sequencing|summatief|AI)\b/i);
+
+        const chapterHtml = fs.readFileSync(path.join(tmpDir, '1.1 Hoofdstuk Test', 'index.html'), 'utf8');
+        expect(chapterHtml).toContain('Oefen gemengd');
+        expect(chapterHtml).not.toContain('Verdiep</span>');
+    });
 });

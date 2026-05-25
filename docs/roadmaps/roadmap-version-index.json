@@ -15,13 +15,14 @@
   "roadmaps": [
     {
       "roadmap_id": "references-team-roadmap",
-      "version": "v2.77-exit-ticket-scale-gate-precision",
+      "version": "v2.78-l20-technical-qa-ready",
       "title": "References Team Roadmap",
       "status": "active",
       "path": "references/reference-team-roadmap.md",
       "owner": "references_team",
       "updated_on": "2026-05-25",
       "supersedes": [
+        "docs/roadmaps/outdated/reference-team-roadmap-v2.77-exit-ticket-scale-gate-precision.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.76-ex5-operation-answer-skill-contract.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.75-l17d-closed-pass-with-flags.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.74-l17d-landing-ia-ready.md",
@@ -98,7 +99,18 @@
         "knowledge/Exercise schema and quality/reference-team-roadmap Live version 28 April.md",
         "knowledge/Exercise schema and quality/roadmap-updated-repository-checked.md"
       ],
-      "notes": "Current operating roadmap after SYNC-2 split the lesson exit-ticket path into L1.7B-C contract-only and L1.7B-R future MVP resume, added GATE-L1.7B and GAME-UX-2, and made Scale Gate 1 prerequisites explicit while GATE-EX5 remains the active human review gate."
+      "notes": "Current operating roadmap after lesson L2.0 reached technical QA green / ready for human review, platform support added the 1.1.4 consolidation landing route, and GATE-EX5 remains the active human review gate. Broad companion/product scaling remains blocked until L2.0, L1.7B-R, GATE-L1.7B, and Scale Gate 1 close."
+    },
+    {
+      "roadmap_id": "references-team-roadmap-v2.77",
+      "version": "v2.77-exit-ticket-scale-gate-precision",
+      "title": "References Team Roadmap before L2.0 technical QA readiness",
+      "status": "outdated",
+      "path": "docs/roadmaps/outdated/reference-team-roadmap-v2.77-exit-ticket-scale-gate-precision.md",
+      "owner": "references_team",
+      "updated_on": "2026-05-25",
+      "superseded_by": "references/reference-team-roadmap.md",
+      "notes": "Snapshot archived before lesson L2.0 reached technical QA green / ready for human review and platform support added the consolidation landing route."
     },
     {
       "roadmap_id": "references-team-roadmap-v2.76",

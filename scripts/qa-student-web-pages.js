@@ -235,6 +235,11 @@ async function runPage(cdp, file, scenario) {
         document.querySelector('[data-route-layer="practice"]') &&
         document.querySelector('[data-route-layer="deepen"]')
       ),
+      hasConsolidationPracticeRoute: Boolean(
+        document.querySelector('[data-route-layer="practice"]') &&
+        document.querySelector('[data-consolidation-practice="true"]') &&
+        /Oefen gemengd/.test(text)
+      ),
       hasLessonShell: Boolean(document.querySelector(".lesson-shell")),
       hasThreeRoutes: /Redeneren/.test(text) && /Rekenen/.test(text) && /Grafieken/.test(text),
       hasGrafiekenspel: /Grafiekenspel/.test(text),
@@ -301,7 +306,10 @@ async function main() {
       if (result.checks.rootTheme !== result.theme) return true;
       if (result.checks.horizontalOverflow) return true;
       if (isGraphical && (!result.checks.hasControl || result.checks.svgCount < 1 || result.checks.chartSpills.length)) return true;
-      if (!isGraphical && result.checks.isParagraphLanding && (!result.checks.hasRouteSection || !result.checks.hasPrimaryRouteLayers)) return true;
+      if (!isGraphical && result.checks.isParagraphLanding && (
+        !result.checks.hasRouteSection ||
+        (!result.checks.hasPrimaryRouteLayers && !result.checks.hasConsolidationPracticeRoute)
+      )) return true;
       if (!isGraphical && !result.checks.isParagraphLanding && result.checks.hasResourceGrid && (!result.checks.hasThreeRoutes || !result.checks.hasGrafiekenspel)) return true;
       if (!isGraphical && result.checks.hasLessonShell && result.checks.visualObjectCount < 1) return true;
       if (!isGraphical && !result.checks.hasResourceGrid && !result.checks.hasLessonShell) return true;

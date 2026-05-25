@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-05-25T09:05:46.577Z
+Generated: 2026-05-25T11:01:43.482Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 1716
+Files indexed: 1728
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -547,7 +547,7 @@ Count: 91
 
 ## references
 
-Count: 294
+Count: 296
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -768,6 +768,8 @@ Count: 294
 - references/data/sprints/S9.result.json
 - references/data/sprints/S9a.plan.json
 - references/data/sprints/S9a.result.json
+- references/data/sprints/SYNC-2.plan.json
+- references/data/sprints/SYNC-2.result.json
 - references/data/unit-design-status/unit-design-status-overlay.json
 - references/external/amstelveencollege_quality_standards.md
 - references/external/exam-questions.json
@@ -846,7 +848,7 @@ Count: 294
 
 ## reports
 
-Count: 791
+Count: 800
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1634,6 +1636,15 @@ Count: 791
 - reports/sprints/S9a-baseline.md
 - reports/sprints/S9a-diff-summary.md
 - reports/sprints/S9a-result.md
+- reports/sprints/SYNC-2-baseline.md
+- reports/sprints/SYNC-2-diff-summary.md
+- reports/sprints/SYNC-2-lead-review-assignment.md
+- reports/sprints/SYNC-2-lead-review-corrections.md
+- reports/sprints/SYNC-2-lead-review-round1.md
+- reports/sprints/SYNC-2-lead-review-round2.md
+- reports/sprints/SYNC-2-plan.md
+- reports/sprints/SYNC-2-planning-review.md
+- reports/sprints/SYNC-2-result.md
 - reports/terminology-drift.md
 - reports/terms-coverage.md
 - reports/unit-term-slug-migration.md
@@ -1660,7 +1671,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 221
+Count: 222
 
 - .gitignore
 - BUILD-CHAPTER.md
@@ -1739,6 +1750,7 @@ Count: 221
 - docs/roadmaps/outdated/reference-team-roadmap-v2.73b-l17c-closed-pass-with-flags.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.74-l17d-landing-ia-ready.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.75-l17d-closed-pass-with-flags.md
+- docs/roadmaps/outdated/reference-team-roadmap-v2.76-ex5-operation-answer-skill-contract.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.8-s4.1-conditions-calibrated.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.9-rx1-inventory-prepared.md
 - docs/roadmaps/README.md

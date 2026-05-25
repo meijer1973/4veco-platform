@@ -4,7 +4,7 @@
  * Generates index.html at three levels:
  * - Book page      (overview of all chapters)
  * - Chapter pages  (overview of paragrafen in that chapter)
- * - Paragraaf pages (file dashboard with Voorbereiden / Oefenen / Leren)
+ * - Paragraaf pages (controlled route with Start / Leer / Oefen / Check / Verdiep)
  *
  * All pages include a left navigation sidebar showing the full book structure.
  *
@@ -119,6 +119,14 @@ function textList(value) {
     .filter(Boolean);
 }
 
+function isConsolidationParagraph(item) {
+  if (!item) return false;
+  const meta = landingMeta(item);
+  const type = String(item.type || item.paragraph_type || meta.type || "").toLowerCase();
+  const name = `${item.id || ""} ${item.name || ""} ${item.title || ""} ${meta.title || ""}`.toLowerCase();
+  return type === "consolidation" || name.includes("gemengde opgaven") || name.includes("consolidatie");
+}
+
 function cardPitfalls(item) {
   const meta = landingMeta(item);
   return textList(meta.pitfalls || item.pitfalls || meta.misconceptions || item.misconceptions).slice(0, 2);
@@ -134,15 +142,19 @@ function renderCardPitfalls(item) {
     </div>`;
 }
 
-function sectionAvailability(files) {
+function sectionAvailability(files, item = null) {
   if (!files) return [];
   const hasGroup = (group) => Object.values(group || {}).some(Boolean);
+  const isConsolidation = isConsolidationParagraph(item);
+  const hasMixedPractice = isConsolidation && files.lesboek && (files.lesboek.opgaven || files.lesboek.antwoorden);
+  const hasBookDeepen = hasGroup(files.lesboek) && !(hasMixedPractice && !files.lesboek.paragraaf);
   const hasPractice = files.oefenen && (
     files.oefenen.redeneerSpel ||
     files.oefenen.stappenplan ||
     files.oefenen.wiskundevaardigheden ||
     files.oefenen.grafiekenspel ||
     files.oefenen.begeleide ||
+    hasMixedPractice ||
     (!HIDE_TASK_ROWS && (files.oefenen.basis || files.oefenen.midden || files.oefenen.verrijking))
   );
   const hasDeepen = (files.voorbereiden && files.voorbereiden.nieuwsdetective)
@@ -153,11 +165,11 @@ function sectionAvailability(files) {
       files.leren.samenvatting
     ))
     || (files.oefenen && files.oefenen.wiskundevaardigheden)
-    || hasGroup(files.lesboek);
+    || hasBookDeepen;
   const labels = [];
   if (files.voorbereiden && (files.voorbereiden.instapquiz || files.voorbereiden.voorkennis)) labels.push("Start");
   if (files.leren && files.leren.vaardigheden) labels.push("Leer");
-  if (hasPractice) labels.push("Oefen");
+  if (hasPractice) labels.push(isConsolidation ? "Oefen gemengd" : "Oefen");
   if (files.check && files.check.exitTicket) labels.push("Check");
   if (hasDeepen) labels.push("Verdiep");
   return labels;
@@ -875,7 +887,7 @@ function renderChapterPage(chapterId, resolvedMap) {
     const token = domainToken(p.domain || ch.domain);
     const meta = landingMeta(p);
     const summary = meta.summary || p.summary || "Open de webpagina's, oefeningen en lesboekbronnen voor deze paragraaf.";
-    const availability = sectionAvailability(scanFiles(resolved.fullPath));
+    const availability = sectionAvailability(scanFiles(resolved.fullPath), p);
     const availabilityHTML = availability.length
       ? `<div class="para-card-tags">${availability.map(label => `<span class="para-card-tag">${escapeHtml(label)}</span>`).join("")}</div>`
       : "";
@@ -909,6 +921,7 @@ function renderChapterPage(chapterId, resolvedMap) {
 function renderParagraafPage(paragraaf, files, _resolvedMap) {
   const chapterFull = CONFIG.chapterFullLabel(paragraaf.chapter);
   const accentToken = DOMAIN_SHARED_TOKEN[paragraaf.domain] || "economisch";
+  const isConsolidation = isConsolidationParagraph(paragraaf);
 
   const ext = (f) => f ? f.split(".").pop().toLowerCase() : "docx";
 
@@ -1239,6 +1252,20 @@ function renderParagraafPage(paragraaf, files, _resolvedMap) {
           </div>
         </div>` : "";
   const oefenRouteCards = [guidedPracticeBlock, practiceRouteBlock].filter(Boolean).join("\n");
+  const consolidationPracticeCard = isConsolidation && (files.lesboek.opgaven || files.lesboek.antwoorden)
+    ? lesboekPairCard(files.lesboek.opgaven, files.lesboek.antwoorden, ICONS.doc, "Gemengde opgaven", "Maak de gemengde opgaven en controleer daarna je uitwerkingen")
+    : "";
+  const consolidationPracticeBlock = consolidationPracticeCard ? `
+        <div class="learning-aspect-block" data-consolidation-practice="true">
+          <div class="learning-aspect-copy">
+            <span class="resource-aspect-label">Gemengde opgaven</span>
+            <h3>Oefen gemengd</h3>
+            <p>Gebruik deze route om de vaardigheden uit het hoofdstuk door elkaar te oefenen.</p>
+          </div>
+          <div class="resource-grid">${consolidationPracticeCard}
+          </div>
+        </div>` : "";
+  const oefenCardsFinal = [consolidationPracticeBlock, oefenRouteCards].filter(Boolean).join("\n");
 
   const checkCards = files.check && files.check.exitTicket
     ? resourceCard(encPath([files.check.exitTicket]), ICONS.check, "Exit ticket", "Korte check om te zien wat je nog wilt oefenen", "html")
@@ -1253,9 +1280,12 @@ function renderParagraafPage(paragraaf, files, _resolvedMap) {
   const fullSkillMapCard = files.oefenen.wiskundevaardigheden && files.oefenen.stappenplan
     ? resourceCard(encPath([files.oefenen.wiskundevaardigheden]), ICONS.layers, "Volledige vaardigheidskaart", "Open de volledige kaart alleen als je breder wilt kijken", "html")
     : "";
+  const sourceLesboekCards = isConsolidation
+    ? [lesboekCard(files.lesboek.paragraaf, ICONS.book, "Lesboek - uitleg", "De volledige paragraaf uit het lesboek")].filter(Boolean).join("\n")
+    : lesboekCards;
   const sourceCards = [
     files.leren.presentatie ? resourceCardWithSource(files.leren.presentatie, ICONS.monitor, "Presentatie", "De les-presentatie en PowerPoint") : "",
-    lesboekCards,
+    sourceLesboekCards,
     fullSkillMapCard,
   ].filter(Boolean).join("\n");
   const verdiepenCards = [
@@ -1265,7 +1295,7 @@ function renderParagraafPage(paragraaf, files, _resolvedMap) {
 
   const hasS = startCards.trim().length > 0;
   const hasLeer = leerCards.trim().length > 0;
-  const hasO = oefenRouteCards.trim().length > 0;
+  const hasO = oefenCardsFinal.trim().length > 0;
   const hasC = checkCards.trim().length > 0;
   const hasD = verdiepenCards.trim().length > 0;
 
@@ -1284,7 +1314,16 @@ function renderParagraafPage(paragraaf, files, _resolvedMap) {
   const sections = [];
   if (hasS) sections.push({ id: "start", num: 1, title: "Start", hint: "Orienteer en haal voorkennis op", body: startCards, accent: SECTION_ACCENT.start, routeLayer: "start" });
   if (hasLeer) sections.push({ id: "leer", num: 2, title: "Leer", hint: "Leer de kernstappen", body: leerCards, accent: SECTION_ACCENT.leer, routeLayer: "learn" });
-  if (hasO) sections.push({ id: "oefen", num: 3, title: "Oefen", hint: "Kies steun of een oefenroute", body: oefenRouteCards, accent: SECTION_ACCENT.oefen, layout: "custom", routeLayer: "practice" });
+  if (hasO) sections.push({
+    id: "oefen",
+    num: sections.length + 1,
+    title: isConsolidation ? "Oefen gemengd" : "Oefen",
+    hint: isConsolidation ? "Maak gemengde opgaven" : "Kies steun of een oefenroute",
+    body: oefenCardsFinal,
+    accent: SECTION_ACCENT.oefen,
+    layout: "custom",
+    routeLayer: "practice"
+  });
   if (hasC) sections.push({ id: "check", num: 4, title: "Check", hint: "Korte niet-summatieve check", body: checkCards, accent: SECTION_ACCENT.check, routeLayer: "check" });
   if (hasD) sections.push({ id: "verdiep", num: sections.length + 1, title: "Verdiep", hint: "Extra context, bronnen en downloads", body: verdiepenCards, accent: SECTION_ACCENT.verdiep, layout: "custom", routeLayer: "deepen" });
 
