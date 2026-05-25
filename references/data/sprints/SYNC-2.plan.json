@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "sprint_id": "SYNC-2",
+  "name": "Exit-Ticket And Scale-Gate Roadmap Precision",
+  "status": "planned_active",
+  "plan": "reports/sprints/SYNC-2-plan.md",
+  "baseline": "reports/sprints/SYNC-2-baseline.md",
+  "planning_review": "reports/sprints/SYNC-2-planning-review.md",
+  "generated_output_statement": "SYNC-2 creates planning and roadmap records only. It generates no student-facing lesson output.",
+  "protected_reference_data_changes_allowed": false,
+  "protected_reference_data_changed": false,
+  "external_source_mutation_authorized": false,
+  "machine_reference_mutation_authorized": false,
+  "operation_registry_mutation_authorized": false,
+  "answer_skill_mutation_authorized": false,
+  "lesson_output_mutation_authorized": false,
+  "student_product_use_authorized": false,
+  "lead_review_required": true,
+  "human_review_required": false,
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js reports/sprints/SYNC-2-plan.md",
+    "node build-scripts/sprints/check-sprint-bundle.js SYNC-2",
+    "node build-scripts/sprints/check-sprint-bundle.js SYNC-2 --complete",
+    "node build-scripts/references/check-roadmap-version-index.js",
+    "git diff --check",
+    "rg -n \"L1\\.7B|after L1\\.7B|Scale Gate 1|GATE-L1\\.7B|GAME-UX-2\" lessen-team-roadmap.md",
+    "git diff --check"
+  ]
+}

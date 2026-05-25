@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "sprint_id": "SYNC-2",
+  "name": "Exit-Ticket And Scale-Gate Roadmap Precision",
+  "status": "completed",
+  "completed_on": "2026-05-25",
+  "plan": "reports/sprints/SYNC-2-plan.md",
+  "baseline": "reports/sprints/SYNC-2-baseline.md",
+  "planning_review": "reports/sprints/SYNC-2-planning-review.md",
+  "result": "reports/sprints/SYNC-2-result.md",
+  "diff_summary": "reports/sprints/SYNC-2-diff-summary.md",
+  "protected_reference_data_changed": false,
+  "external_source_mutation_authorized": false,
+  "machine_reference_mutation_authorized": false,
+  "operation_registry_mutation_authorized": false,
+  "answer_skill_mutation_authorized": false,
+  "lesson_output_mutation_authorized": false,
+  "student_product_use_authorized": false,
+  "lead_review_required": true,
+  "lead_review": {
+    "assignment": "reports/sprints/SYNC-2-lead-review-assignment.md",
+    "round1": "reports/sprints/SYNC-2-lead-review-round1.md",
+    "corrections": "reports/sprints/SYNC-2-lead-review-corrections.md",
+    "round2": "reports/sprints/SYNC-2-lead-review-round2.md",
+    "final_verdict": "PASS WITH FLAGS"
+  },
+  "primary_outputs": [
+    "references/reference-team-roadmap.md",
+    "docs/roadmaps/roadmap-version-index.json",
+    "docs/roadmaps/roadmap-version-index.md",
+    "docs/roadmaps/outdated/reference-team-roadmap-v2.76-ex5-operation-answer-skill-contract.md",
+    "../4veco-lessen/lessen-team-roadmap.md"
+  ],
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/SYNC-2-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js SYNC-2",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js SYNC-2 --complete",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-roadmap-version-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "git diff --check",
+      "status": "passed"
+    },
+    {
+      "command": "rg -n \"L1\\.7B|after L1\\.7B|Scale Gate 1|GATE-L1\\.7B|GAME-UX-2\" lessen-team-roadmap.md",
+      "status": "passed"
+    },
+    {
+      "command": "git diff --check",
+      "status": "passed"
+    }
+  ],
+  "next_action": "Run GATE-EX5 Operation And Answer-Skill Contract Human Review; continue lesson L2.0 before L1.7B-R and GATE-L1.7B."
+}

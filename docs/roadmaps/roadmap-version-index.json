@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_on": "2026-05-24",
+  "updated_on": "2026-05-25",
   "generated_by": "manual-roadmap-versioning",
   "canonical_archive_directory": "docs/roadmaps/outdated",
   "current_operational_roadmaps": [
@@ -15,13 +15,14 @@
   "roadmaps": [
     {
       "roadmap_id": "references-team-roadmap",
-      "version": "v2.76-ex5-operation-answer-skill-contract",
+      "version": "v2.77-exit-ticket-scale-gate-precision",
       "title": "References Team Roadmap",
       "status": "active",
       "path": "references/reference-team-roadmap.md",
       "owner": "references_team",
-      "updated_on": "2026-05-24",
+      "updated_on": "2026-05-25",
       "supersedes": [
+        "docs/roadmaps/outdated/reference-team-roadmap-v2.76-ex5-operation-answer-skill-contract.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.75-l17d-closed-pass-with-flags.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.74-l17d-landing-ia-ready.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.73b-l17c-closed-pass-with-flags.md",
@@ -97,7 +98,18 @@
         "knowledge/Exercise schema and quality/reference-team-roadmap Live version 28 April.md",
         "knowledge/Exercise schema and quality/roadmap-updated-repository-checked.md"
       ],
-      "notes": "Current operating roadmap after EX-5 completed the operation/answer-skill/q19 extraction design contract and GATE-EX5 became the active human review gate; L2.0, a resumed boundary-safe exit-ticket MVP, plus Scale Gate 1 remain required before broad companion scaling."
+      "notes": "Current operating roadmap after SYNC-2 split the lesson exit-ticket path into L1.7B-C contract-only and L1.7B-R future MVP resume, added GATE-L1.7B and GAME-UX-2, and made Scale Gate 1 prerequisites explicit while GATE-EX5 remains the active human review gate."
+    },
+    {
+      "roadmap_id": "references-team-roadmap-v2.76",
+      "version": "v2.76-ex5-operation-answer-skill-contract",
+      "title": "References Team Roadmap before exit-ticket scale-gate precision",
+      "status": "outdated",
+      "path": "docs/roadmaps/outdated/reference-team-roadmap-v2.76-ex5-operation-answer-skill-contract.md",
+      "owner": "references_team",
+      "updated_on": "2026-05-25",
+      "superseded_by": "references/reference-team-roadmap.md",
+      "notes": "Snapshot archived before SYNC-2 split the lesson exit-ticket path into L1.7B-C/L1.7B-R, added GATE-L1.7B and GAME-UX-2, and clarified Scale Gate 1 prerequisites."
     },
     {
       "roadmap_id": "references-team-roadmap-v2.75",

@@ -1,6 +1,6 @@
 # Roadmap Version Index
 
-Updated: 2026-05-24
+Updated: 2026-05-25
 
 The JSON file is canonical for tooling:
 
@@ -12,12 +12,13 @@ docs/roadmaps/roadmap-version-index.json
 
 | Roadmap | Version | Path | Notes |
 |---|---|---|---|
-| References Team Roadmap | `v2.76-ex5-operation-answer-skill-contract` | `references/reference-team-roadmap.md` | Current operating roadmap after EX-5 completed the operation/answer-skill/q19 extraction design contract and GATE-EX5 became the active human review gate; L2.0, a resumed boundary-safe exit-ticket MVP, plus Scale Gate 1 remain required before broad companion scaling. |
+| References Team Roadmap | `v2.77-exit-ticket-scale-gate-precision` | `references/reference-team-roadmap.md` | Current operating roadmap after SYNC-2 split the lesson exit-ticket path into L1.7B-C contract-only and L1.7B-R future MVP resume, added GATE-L1.7B and GAME-UX-2, and made Scale Gate 1 prerequisites explicit while GATE-EX5 remains the active human review gate. |
 
 ## Outdated Archive
 
 | Roadmap | Version | Path | Superseded By |
 |---|---|---|---|
+| References Team Roadmap before exit-ticket scale-gate precision | `v2.76-ex5-operation-answer-skill-contract` | `docs/roadmaps/outdated/reference-team-roadmap-v2.76-ex5-operation-answer-skill-contract.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before EX-5 operation/answer-skill contract | `v2.75-l17d-closed-pass-with-flags` | `docs/roadmaps/outdated/reference-team-roadmap-v2.75-l17d-closed-pass-with-flags.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before L1.7D human-review closure | `v2.74-l17d-landing-ia-ready` | `docs/roadmaps/outdated/reference-team-roadmap-v2.74-l17d-landing-ia-ready.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before L1.7D landing IA technical QA | `v2.73b-l17c-closed-pass-with-flags` | `docs/roadmaps/outdated/reference-team-roadmap-v2.73b-l17c-closed-pass-with-flags.md` | `references/reference-team-roadmap.md` |
