@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-05-25T11:01:43.482Z
+Generated: 2026-05-25T11:56:20.891Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 1728
+Files indexed: 1730
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -848,7 +848,7 @@ Count: 296
 
 ## reports
 
-Count: 800
+Count: 801
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1439,6 +1439,7 @@ Count: 800
 - reports/sprints/GATE-CP6-result.md
 - reports/sprints/L1.7C-platform-support-result.md
 - reports/sprints/L1.7D-platform-support-result.md
+- reports/sprints/L2.0-platform-support-result.md
 - reports/sprints/PV-G4-baseline.md
 - reports/sprints/PV.1-baseline.md
 - reports/sprints/PV.1-diff-summary.md
@@ -1671,7 +1672,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 222
+Count: 223
 
 - .gitignore
 - BUILD-CHAPTER.md
@@ -1751,6 +1752,7 @@ Count: 222
 - docs/roadmaps/outdated/reference-team-roadmap-v2.74-l17d-landing-ia-ready.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.75-l17d-closed-pass-with-flags.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.76-ex5-operation-answer-skill-contract.md
+- docs/roadmaps/outdated/reference-team-roadmap-v2.77-exit-ticket-scale-gate-precision.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.8-s4.1-conditions-calibrated.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.9-rx1-inventory-prepared.md
 - docs/roadmaps/README.md
