@@ -1,0 +1,208 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://4veco.local/references/schemas/operation-candidates.schema.json",
+  "title": "OperationCandidates",
+  "description": "Future overlay-first storage schema for exam-operation design candidates. This schema does not authorize candidate files, writes, machine-reference mutation, or student/product use.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "storage_id",
+    "storage_status",
+    "generated_on",
+    "source_files",
+    "authority_boundary",
+    "candidates"
+  ],
+  "properties": {
+    "schema_version": { "const": 1 },
+    "storage_id": { "const": "operation-candidates" },
+    "storage_status": { "const": "future_candidate_storage" },
+    "generated_on": { "type": "string", "format": "date-time" },
+    "source_files": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "minItems": 1
+    },
+    "authority_boundary": { "$ref": "#/$defs/authority_boundary" },
+    "candidates": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/operation_candidate" },
+      "uniqueItems": true
+    }
+  },
+  "$defs": {
+    "authority_boundary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "protected_reference_mutation_authorized",
+        "external_source_mutation_authorized",
+        "machine_reference_mutation_authorized",
+        "unit_minting_authorized",
+        "operation_registry_mutation_authorized",
+        "answer_skill_mutation_authorized",
+        "source_annex_extraction_execution_authorized",
+        "pv_graph_mutation_authorized",
+        "target_exercise_promotion_authorized",
+        "lesson_output_mutation_authorized",
+        "cp6_closure_authorized",
+        "year1_closure_authorized",
+        "student_product_use_authorized"
+      ],
+      "properties": {
+        "protected_reference_mutation_authorized": { "const": false },
+        "external_source_mutation_authorized": { "const": false },
+        "machine_reference_mutation_authorized": { "const": false },
+        "unit_minting_authorized": { "const": false },
+        "operation_registry_mutation_authorized": { "const": false },
+        "answer_skill_mutation_authorized": { "const": false },
+        "source_annex_extraction_execution_authorized": { "const": false },
+        "pv_graph_mutation_authorized": { "const": false },
+        "target_exercise_promotion_authorized": { "const": false },
+        "lesson_output_mutation_authorized": { "const": false },
+        "cp6_closure_authorized": { "const": false },
+        "year1_closure_authorized": { "const": false },
+        "student_product_use_authorized": { "const": false }
+      }
+    },
+    "operation_candidate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "operation_id",
+        "status",
+        "label_nl",
+        "operation_family",
+        "source_exam_item_ids",
+        "source_requirement_ids",
+        "evidence_refs",
+        "answer_model_refs",
+        "input_objects",
+        "output_expectation",
+        "required_steps",
+        "supporting_unit_ids",
+        "weak_or_rejected_unit_ids",
+        "blocking_gap_ids",
+        "review_state",
+        "authority_boundary",
+        "mutation_authorized",
+        "student_product_use_authorized"
+      ],
+      "properties": {
+        "operation_id": {
+          "type": "string",
+          "pattern": "^EX_OP_[A-Z0-9_]+$"
+        },
+        "status": {
+          "enum": [
+            "design_candidate",
+            "blocked_by_source_gap",
+            "reviewed_candidate",
+            "deferred"
+          ]
+        },
+        "label_nl": { "type": "string", "minLength": 1 },
+        "operation_family": {
+          "enum": [
+            "calculation",
+            "graphical",
+            "source_reading",
+            "reasoning",
+            "mixed"
+          ]
+        },
+        "source_exam_item_ids": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 },
+          "minItems": 1
+        },
+        "source_requirement_ids": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 },
+          "minItems": 1
+        },
+        "evidence_refs": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 },
+          "minItems": 1
+        },
+        "answer_model_refs": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "input_objects": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/operation_io_object" }
+        },
+        "output_expectation": { "type": "string", "minLength": 1 },
+        "required_steps": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/operation_step" },
+          "minItems": 1
+        },
+        "supporting_unit_ids": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "weak_or_rejected_unit_ids": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "blocking_gap_ids": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "review_state": {
+          "enum": [
+            "draft",
+            "needs_human_review",
+            "reviewed_ready_for_planning",
+            "blocked",
+            "deferred"
+          ]
+        },
+        "authority_boundary": { "$ref": "#/$defs/authority_boundary" },
+        "mutation_authorized": { "const": false },
+        "student_product_use_authorized": { "const": false }
+      }
+    },
+    "operation_io_object": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["object_type", "description"],
+      "properties": {
+        "object_type": {
+          "enum": [
+            "prompt_text",
+            "table_value",
+            "graph_object",
+            "source_annex",
+            "calculation_result",
+            "answer_model_step",
+            "other"
+          ]
+        },
+        "description": { "type": "string", "minLength": 1 },
+        "source_ref": { "type": "string" }
+      }
+    },
+    "operation_step": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["step_id", "description"],
+      "properties": {
+        "step_id": { "type": "string", "minLength": 1 },
+        "description": { "type": "string", "minLength": 1 },
+        "required_unit_ids": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "depends_on_step_ids": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        }
+      }
+    }
+  }
+}

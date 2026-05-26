@@ -1,0 +1,174 @@
+{
+  "schema_version": 1,
+  "plan_id": "validator-cli-implementation-plan",
+  "sprint_id": "EX-6",
+  "status": "planning_only_pending_gate_review",
+  "generated_on": "2026-05-26T09:00:00+02:00",
+  "source_files": [
+    "reports/review-gates/GATE-EX5-operation-answer-skill-contract/gate-closure.json",
+    "references/data/exam-ingestion/operation-answer-skill-contract.json",
+    "reports/sprints/EX-6-plan.md"
+  ],
+  "authority_boundary": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_mutation_authorized": false,
+    "source_annex_extraction_execution_authorized": false,
+    "pv_graph_mutation_authorized": false,
+    "target_exercise_promotion_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "cp6_closure_authorized": false,
+    "year1_closure_authorized": false,
+    "student_product_use_authorized": false
+  },
+  "schema_contracts": [
+    {
+      "storage_family": "operation_candidates",
+      "schema_path": "references/schemas/operation-candidates.schema.json",
+      "future_storage_path": "references/data/exam-ingestion/operation-candidates.json",
+      "future_storage_created_now": false,
+      "candidate_writes_authorized_now": false
+    },
+    {
+      "storage_family": "answer_skill_candidates",
+      "schema_path": "references/schemas/answer-skill-candidates.schema.json",
+      "future_storage_path": "references/data/exam-ingestion/answer-skill-candidates.json",
+      "future_storage_created_now": false,
+      "candidate_writes_authorized_now": false
+    },
+    {
+      "storage_family": "source_annex_extraction_overlays",
+      "schema_path": "references/schemas/source-annex-extraction-overlays.schema.json",
+      "future_storage_path": "references/data/exam-ingestion/source-annex-extraction-overlays.json",
+      "future_storage_created_now": false,
+      "candidate_writes_authorized_now": false,
+      "q19_extraction_execution_authorized_now": false
+    }
+  ],
+  "future_validators": [
+    {
+      "validator_id": "check-operation-answer-skill-candidates",
+      "future_path": "build-scripts/references/check-operation-answer-skill-candidates.js",
+      "created_now": false,
+      "purpose": "Validate operation and answer-skill candidate storage after a later gate authorizes implementation."
+    },
+    {
+      "validator_id": "check-source-annex-extraction-overlays",
+      "future_path": "build-scripts/references/check-source-annex-extraction-overlays.js",
+      "created_now": false,
+      "purpose": "Validate q19 and later source-annex or graph-object extraction overlays after a later gate authorizes implementation."
+    }
+  ],
+  "future_dry_run_clis": [
+    {
+      "cli_id": "operation-candidate-add",
+      "future_path": "build-scripts/references/operation-candidate-add.js",
+      "created_now": false,
+      "dry_run_required_before_write": true,
+      "persistent_write_authorized_now": false
+    },
+    {
+      "cli_id": "answer-skill-candidate-add",
+      "future_path": "build-scripts/references/answer-skill-candidate-add.js",
+      "created_now": false,
+      "dry_run_required_before_write": true,
+      "persistent_write_authorized_now": false
+    },
+    {
+      "cli_id": "source-annex-extraction-add",
+      "future_path": "build-scripts/references/source-annex-extraction-add.js",
+      "created_now": false,
+      "dry_run_required_before_write": true,
+      "persistent_write_authorized_now": false,
+      "q19_extraction_execution_authorized_now": false
+    }
+  ],
+  "validator_must_reject": [
+    "unauthorized protected-reference mutation flags",
+    "unauthorized external-source mutation flags",
+    "unauthorized machine-reference mutation flags",
+    "operation_registry_mutation_authorized=true",
+    "answer_skill_mutation_authorized=true",
+    "source_annex_extraction_execution_authorized=true before a later gate",
+    "product-use flags set true",
+    "student-facing output authorization",
+    "candidate records without source exam item IDs",
+    "candidate records without answer-model or evidence references where required",
+    "A15 reused as q3 annual threshold support",
+    "A45 treated as primary q19 graph-shift support",
+    "q19 graph/PV or reasoning records marked ready while q19-source-annex-gap or q19-graph-object-gap remains unresolved",
+    "q3 threshold wording hidden inside calculation procedure only",
+    "q15 two-step correction-model explanation hidden inside content MTUs only"
+  ],
+  "dry_run_fixture_policy": {
+    "non_persistent_only": true,
+    "test_only": true,
+    "allowed_location": "/tmp/Codex-work/EX-6/",
+    "forbidden_locations": [
+      "references/data/exam-ingestion/operation-candidates.json",
+      "references/data/exam-ingestion/answer-skill-candidates.json",
+      "references/data/exam-ingestion/source-annex-extraction-overlays.json"
+    ],
+    "fixture_records_must_carry_authority_flags_false": true
+  },
+  "rollback_contract": {
+    "required_before_any_future_write": true,
+    "requirements": [
+      "closed human gate naming the exact write lane",
+      "before and after file manifest",
+      "machine-readable mutation log entry",
+      "command line used for dry-run and write",
+      "rollback command or exact file restore route",
+      "validator output proving no hidden gaps or product-use flags"
+    ]
+  },
+  "audit_contract": {
+    "required_before_any_future_write": true,
+    "requirements": [
+      "gate closure path",
+      "source evidence refs",
+      "review artifact refs",
+      "validator output",
+      "dry-run transcript",
+      "mutation log path",
+      "rollback instructions"
+    ]
+  },
+  "routing_guardrails": [
+    {
+      "requirement_id": "q3-calc-1",
+      "guardrail": "Keep A61 as support for table-value selection only; reject A15 as q3 annual-threshold support."
+    },
+    {
+      "requirement_id": "q3-answer-1",
+      "guardrail": "Keep threshold conclusion with unit and direction visible as an answer-skill need."
+    },
+    {
+      "requirement_id": "q19-graph-op-1",
+      "guardrail": "Carry A42 and D10 as candidates; keep A45 weak support only; q19 remains blocked by source/graph gaps."
+    },
+    {
+      "requirement_id": "q19-reason-1",
+      "guardrail": "Keep chained-market reasoning provisional and blocked until q19 extraction is adequate."
+    },
+    {
+      "requirement_id": "q15-answer-1",
+      "guardrail": "Keep two-step correction-model explanation visible as an answer-skill need; D27/F03/F09 cover content only."
+    }
+  ],
+  "next_gate": {
+    "gate_id": "GATE-EX6-validator-cli-planning",
+    "required_before": [
+      "validator implementation",
+      "dry-run CLI implementation",
+      "candidate-storage creation",
+      "candidate writes",
+      "q19 extraction execution",
+      "lesson handoff",
+      "student/product use"
+    ]
+  }
+}

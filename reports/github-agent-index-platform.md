@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-05-25T19:57:17.050Z
+Generated: 2026-05-26T05:43:40.346Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 1731
+Files indexed: 1737
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -848,7 +848,7 @@ Count: 296
 
 ## reports
 
-Count: 801
+Count: 806
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1104,6 +1104,11 @@ Count: 801
 - reports/review-gates/GATE-EX4-mutation-planning/review-packet.json
 - reports/review-gates/GATE-EX4-mutation-planning/review-packet.md
 - reports/review-gates/GATE-EX5-operation-answer-skill-contract/bundle-urls.md
+- reports/review-gates/GATE-EX5-operation-answer-skill-contract/gate-closure-plan.md
+- reports/review-gates/GATE-EX5-operation-answer-skill-contract/gate-closure.json
+- reports/review-gates/GATE-EX5-operation-answer-skill-contract/gate-closure.md
+- reports/review-gates/GATE-EX5-operation-answer-skill-contract/human-interview.json
+- reports/review-gates/GATE-EX5-operation-answer-skill-contract/human-interview.md
 - reports/review-gates/GATE-EX5-operation-answer-skill-contract/review-packet.json
 - reports/review-gates/GATE-EX5-operation-answer-skill-contract/review-packet.md
 - reports/review-gates/GATE-PV-G1-schema/bundle-urls.md
@@ -1672,7 +1677,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 224
+Count: 225
 
 - .gitignore
 - BUILD-CHAPTER.md
@@ -1754,6 +1759,7 @@ Count: 224
 - docs/roadmaps/outdated/reference-team-roadmap-v2.76-ex5-operation-answer-skill-contract.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.77-exit-ticket-scale-gate-precision.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.78-l20-technical-qa-ready.md
+- docs/roadmaps/outdated/reference-team-roadmap-v2.79-l20-closed-pass-with-flags.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.8-s4.1-conditions-calibrated.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.9-rx1-inventory-prepared.md
 - docs/roadmaps/README.md

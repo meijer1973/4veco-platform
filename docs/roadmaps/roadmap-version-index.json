@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_on": "2026-05-25",
+  "updated_on": "2026-05-26",
   "generated_by": "manual-roadmap-versioning",
   "canonical_archive_directory": "docs/roadmaps/outdated",
   "current_operational_roadmaps": [
@@ -15,13 +15,14 @@
   "roadmaps": [
     {
       "roadmap_id": "references-team-roadmap",
-      "version": "v2.80-gate-ex5-pass-with-conditions",
+      "version": "v2.81-ex6-validator-cli-planning",
       "title": "References Team Roadmap",
       "status": "active",
       "path": "references/reference-team-roadmap.md",
       "owner": "references_team",
-      "updated_on": "2026-05-25",
+      "updated_on": "2026-05-26",
       "supersedes": [
+        "docs/roadmaps/outdated/reference-team-roadmap-v2.80-gate-ex5-pass-with-conditions.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.79-l20-closed-pass-with-flags.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.78-l20-technical-qa-ready.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.77-exit-ticket-scale-gate-precision.md",
@@ -101,7 +102,18 @@
         "knowledge/Exercise schema and quality/reference-team-roadmap Live version 28 April.md",
         "knowledge/Exercise schema and quality/roadmap-updated-repository-checked.md"
       ],
-      "notes": "Current operating roadmap after GATE-EX5 closed as pass_with_conditions for design-contract review only. EX-6 validator/CLI implementation planning is the active reference lane with no candidate writes or q19 extraction execution, and broad companion/product scaling remains blocked until L1.7B-R, GATE-L1.7B, EX-6 or an explicit waiver, and Scale Gate 1 close or are explicitly waived."
+      "notes": "Current operating roadmap after EX-6 completed validator/CLI implementation planning without candidate writes or q19 extraction execution. GATE-EX6 is the active human review gate, and broad companion/product scaling remains blocked until L1.7B-R, GATE-L1.7B, GATE-EX6 or an explicit waiver, and Scale Gate 1 close or are explicitly waived."
+    },
+    {
+      "roadmap_id": "references-team-roadmap-v2.80",
+      "version": "v2.80-gate-ex5-pass-with-conditions",
+      "title": "References Team Roadmap before EX-6 validator/CLI planning completion",
+      "status": "outdated",
+      "path": "docs/roadmaps/outdated/reference-team-roadmap-v2.80-gate-ex5-pass-with-conditions.md",
+      "owner": "references_team",
+      "updated_on": "2026-05-25",
+      "superseded_by": "references/reference-team-roadmap.md",
+      "notes": "Snapshot archived before EX-6 completed validator/CLI implementation planning and moved GATE-EX6 to the active human-review stop point."
     },
     {
       "roadmap_id": "references-team-roadmap-v2.79",

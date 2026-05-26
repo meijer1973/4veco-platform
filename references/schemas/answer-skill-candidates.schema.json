@@ -1,0 +1,176 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://4veco.local/references/schemas/answer-skill-candidates.schema.json",
+  "title": "AnswerSkillCandidates",
+  "description": "Future overlay-first storage schema for correction-model answer-skill design candidates. This schema does not authorize candidate files, writes, machine-reference mutation, or student/product use.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "storage_id",
+    "storage_status",
+    "generated_on",
+    "source_files",
+    "authority_boundary",
+    "candidates"
+  ],
+  "properties": {
+    "schema_version": { "const": 1 },
+    "storage_id": { "const": "answer-skill-candidates" },
+    "storage_status": { "const": "future_candidate_storage" },
+    "generated_on": { "type": "string", "format": "date-time" },
+    "source_files": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "minItems": 1
+    },
+    "authority_boundary": { "$ref": "#/$defs/authority_boundary" },
+    "candidates": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/answer_skill_candidate" },
+      "uniqueItems": true
+    }
+  },
+  "$defs": {
+    "authority_boundary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "protected_reference_mutation_authorized",
+        "external_source_mutation_authorized",
+        "machine_reference_mutation_authorized",
+        "unit_minting_authorized",
+        "operation_registry_mutation_authorized",
+        "answer_skill_mutation_authorized",
+        "source_annex_extraction_execution_authorized",
+        "pv_graph_mutation_authorized",
+        "target_exercise_promotion_authorized",
+        "lesson_output_mutation_authorized",
+        "cp6_closure_authorized",
+        "year1_closure_authorized",
+        "student_product_use_authorized"
+      ],
+      "properties": {
+        "protected_reference_mutation_authorized": { "const": false },
+        "external_source_mutation_authorized": { "const": false },
+        "machine_reference_mutation_authorized": { "const": false },
+        "unit_minting_authorized": { "const": false },
+        "operation_registry_mutation_authorized": { "const": false },
+        "answer_skill_mutation_authorized": { "const": false },
+        "source_annex_extraction_execution_authorized": { "const": false },
+        "pv_graph_mutation_authorized": { "const": false },
+        "target_exercise_promotion_authorized": { "const": false },
+        "lesson_output_mutation_authorized": { "const": false },
+        "cp6_closure_authorized": { "const": false },
+        "year1_closure_authorized": { "const": false },
+        "student_product_use_authorized": { "const": false }
+      }
+    },
+    "answer_skill_candidate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "answer_skill_id",
+        "status",
+        "label_nl",
+        "answer_format",
+        "source_exam_item_ids",
+        "source_requirement_ids",
+        "correction_model_step_refs",
+        "point_rule_refs",
+        "rewarded_wording",
+        "required_terms",
+        "accepted_alternatives",
+        "content_support_unit_ids",
+        "operation_support_ids",
+        "blocking_gap_ids",
+        "review_state",
+        "authority_boundary",
+        "mutation_authorized",
+        "student_product_use_authorized"
+      ],
+      "properties": {
+        "answer_skill_id": {
+          "type": "string",
+          "pattern": "^EX_ANS_[A-Z0-9_]+$"
+        },
+        "status": {
+          "enum": [
+            "design_candidate",
+            "reviewed_candidate",
+            "blocked_by_source_gap",
+            "deferred"
+          ]
+        },
+        "label_nl": { "type": "string", "minLength": 1 },
+        "answer_format": {
+          "enum": [
+            "threshold_conclusion",
+            "two_step_explanation",
+            "causal_chain",
+            "comparison",
+            "calculation_conclusion",
+            "graph_explanation",
+            "mixed"
+          ]
+        },
+        "source_exam_item_ids": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 },
+          "minItems": 1
+        },
+        "source_requirement_ids": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 },
+          "minItems": 1
+        },
+        "correction_model_step_refs": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 },
+          "minItems": 1
+        },
+        "point_rule_refs": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "rewarded_wording": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 },
+          "minItems": 1
+        },
+        "required_terms": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "accepted_alternatives": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "content_support_unit_ids": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "operation_support_ids": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "blocking_gap_ids": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "review_state": {
+          "enum": [
+            "draft",
+            "needs_human_review",
+            "reviewed_ready_for_planning",
+            "blocked",
+            "deferred"
+          ]
+        },
+        "authority_boundary": { "$ref": "#/$defs/authority_boundary" },
+        "mutation_authorized": { "const": false },
+        "student_product_use_authorized": { "const": false }
+      }
+    }
+  }
+}

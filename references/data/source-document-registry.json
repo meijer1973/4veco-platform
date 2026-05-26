@@ -2,7 +2,7 @@
   "schema_version": 1,
   "registry_id": "source-document-registry",
   "generated_by": "build-scripts/references/build-source-document-registry.js",
-  "generated_on": "2026-05-25T19:57:19.705Z",
+  "generated_on": "2026-05-26T05:43:35.622Z",
   "storage_decision": {
     "registry_location": "references/data/source-document-registry.json",
     "machine_registry_created": false,
@@ -16,18 +16,18 @@
     "references/SOURCE_OF_TRUTH.md"
   ],
   "summary": {
-    "record_count": 292,
-    "source_manifest_file_count": 296,
+    "record_count": 297,
+    "source_manifest_file_count": 302,
     "by_authority_level": {
       "external_primary": 30,
       "machine_registry": 5,
       "owned_curriculum_design": 5,
       "authored_judgement": 9,
       "generated_report": 2,
-      "governance_data": 210,
+      "governance_data": 212,
       "quality_protocol": 5,
       "planning": 1,
-      "machine_contract": 25
+      "machine_contract": 28
     },
     "by_source_type": {
       "external_reference": 7,
@@ -38,15 +38,15 @@
       "report_md": 1,
       "external_pdf": 25,
       "authored_markdown": 6,
-      "inventory": 33,
+      "inventory": 34,
       "exercise_metadata_overlay": 6,
       "exercise_overlay_readme": 1,
-      "sprint_metadata": 168,
+      "sprint_metadata": 169,
       "machine_projection": 3,
       "owned_source_readme": 1,
       "qc_prompt": 5,
       "roadmap": 1,
-      "json_schema": 25,
+      "json_schema": 28,
       "report_json": 1,
       "source_of_truth_policy": 1
     },
@@ -57,15 +57,15 @@
       "archived": 1,
       "generated_diagnostic": 2,
       "mirrored": 25,
-      "governance_data": 208,
+      "governance_data": 210,
       "planning": 1,
-      "schema_contract": 25
+      "schema_contract": 28
     },
     "by_public_citation_policy": {
       "public_citation_allowed_with_source_name": 30,
       "internal_only": 19,
       "internal_diagnostic_only": 2,
-      "not_public_citation_source": 241
+      "not_public_citation_source": 246
     },
     "evidence_anchor_coverage": {
       "required_document_ids": [
@@ -1627,6 +1627,44 @@
       "refresh_policy": "regenerate",
       "source_hash": "3fb925afc0ba4336bf82d229db7c3c2ac86301dd3d525899b2719b546b899f9a",
       "size_bytes": 3285,
+      "primary_evidence": false,
+      "curriculum_authority": false,
+      "allowed_downstream_uses": [
+        "internal_reference_context",
+        "rag_retrieval_with_authority_label"
+      ],
+      "blocked_downstream_uses": [
+        "student_diagnostics",
+        "adaptive_routing",
+        "student_facing_ai",
+        "automatic_lesson_sequencing",
+        "automatic_mastery_decisions",
+        "summative_assessment_decisions",
+        "external_authority",
+        "override_machine_registry"
+      ],
+      "evidence_anchor_ids": [],
+      "notes": [
+        "Governance data is canonical only for its declared governance artifact."
+      ]
+    },
+    {
+      "document_id": "path-references-data-exam-ingestion-validator-cli-implementation-plan",
+      "path": "references/data/exam-ingestion/validator-cli-implementation-plan.json",
+      "title": "Validator Cli Implementation Plan",
+      "source_type": "inventory",
+      "authority_level": "governance_data",
+      "source_version": "sha256:6c64248b5c5d2db31537c3bf8cebfc5f134a783a6621cd08d5e519f6a01a6890",
+      "status": "governance_data",
+      "owner": "references_team",
+      "citation_policy": "cite_as_governance_record_only",
+      "public_citation_policy": "not_public_citation_source",
+      "layer": "governance_data",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "generated_by_inventory_script",
+      "refresh_policy": "regenerate",
+      "source_hash": "6c64248b5c5d2db31537c3bf8cebfc5f134a783a6621cd08d5e519f6a01a6890",
+      "size_bytes": 6993,
       "primary_evidence": false,
       "curriculum_authority": false,
       "allowed_downstream_uses": [
@@ -3907,6 +3945,44 @@
       "refresh_policy": "sprint_lifecycle",
       "source_hash": "bbeda03131356e6bc5689b8331eff17fdc8129a842fc1dd6386237fa4cf98ca9",
       "size_bytes": 4835,
+      "primary_evidence": false,
+      "curriculum_authority": false,
+      "allowed_downstream_uses": [
+        "internal_reference_context",
+        "rag_retrieval_with_authority_label"
+      ],
+      "blocked_downstream_uses": [
+        "student_diagnostics",
+        "adaptive_routing",
+        "student_facing_ai",
+        "automatic_lesson_sequencing",
+        "automatic_mastery_decisions",
+        "summative_assessment_decisions",
+        "external_authority",
+        "override_machine_registry"
+      ],
+      "evidence_anchor_ids": [],
+      "notes": [
+        "Governance data is canonical only for its declared governance artifact."
+      ]
+    },
+    {
+      "document_id": "path-references-data-sprints-ex-6-plan",
+      "path": "references/data/sprints/EX-6.plan.json",
+      "title": "EX 6.Plan",
+      "source_type": "sprint_metadata",
+      "authority_level": "governance_data",
+      "source_version": "sha256:2e77c8c71706074721fdbc019921bd10baa20a1f26018b054f79e753ec1b5027",
+      "status": "governance_data",
+      "owner": "references_team",
+      "citation_policy": "cite_as_governance_record_only",
+      "public_citation_policy": "not_public_citation_source",
+      "layer": "governance_data",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "refresh_policy": "sprint_lifecycle",
+      "source_hash": "2e77c8c71706074721fdbc019921bd10baa20a1f26018b054f79e753ec1b5027",
+      "size_bytes": 2982,
       "primary_evidence": false,
       "curriculum_authority": false,
       "allowed_downstream_uses": [
@@ -9594,7 +9670,7 @@
       "title": "Reference Team Roadmap",
       "source_type": "roadmap",
       "authority_level": "planning",
-      "source_version": "sha256:759ce4ee6246292451c33cc79e640e620861336e317c96555bc3a4a09fa53115",
+      "source_version": "sha256:f3fe4187e7f52347268b267ae8c16e91dccc840a48eadef01c78711338bf1c00",
       "status": "planning",
       "owner": "references_team",
       "citation_policy": "citation_requires_review",
@@ -9603,8 +9679,8 @@
       "generated_status": "manual_source",
       "edit_policy": "human_reviewed_edit",
       "refresh_policy": "roadmap_update",
-      "source_hash": "759ce4ee6246292451c33cc79e640e620861336e317c96555bc3a4a09fa53115",
-      "size_bytes": 204040,
+      "source_hash": "f3fe4187e7f52347268b267ae8c16e91dccc840a48eadef01c78711338bf1c00",
+      "size_bytes": 211181,
       "primary_evidence": false,
       "curriculum_authority": false,
       "allowed_downstream_uses": [
@@ -9641,6 +9717,42 @@
       "refresh_policy": "schema_review",
       "source_hash": "e5fa3c299e0f0e228da61698102df5c61483b337bdce956207c14bc457f520e6",
       "size_bytes": 2325,
+      "primary_evidence": false,
+      "curriculum_authority": false,
+      "allowed_downstream_uses": [
+        "internal_reference_context",
+        "rag_retrieval_with_authority_label"
+      ],
+      "blocked_downstream_uses": [
+        "student_diagnostics",
+        "adaptive_routing",
+        "student_facing_ai",
+        "automatic_lesson_sequencing",
+        "automatic_mastery_decisions",
+        "summative_assessment_decisions",
+        "external_authority",
+        "override_machine_registry"
+      ],
+      "evidence_anchor_ids": [],
+      "notes": []
+    },
+    {
+      "document_id": "path-references-schemas-answer-skill-candidates-schema",
+      "path": "references/schemas/answer-skill-candidates.schema.json",
+      "title": "Answer Skill Candidates.Schema",
+      "source_type": "json_schema",
+      "authority_level": "machine_contract",
+      "source_version": "sha256:2d15a801278884dd57d829dcc3bc431a93fc5a2c8741b79b2fd60142da731197",
+      "status": "schema_contract",
+      "owner": "references_team",
+      "citation_policy": "cite_as_implementation_contract_not_curriculum_evidence",
+      "public_citation_policy": "not_public_citation_source",
+      "layer": "schema_contract",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "refresh_policy": "schema_review",
+      "source_hash": "2d15a801278884dd57d829dcc3bc431a93fc5a2c8741b79b2fd60142da731197",
+      "size_bytes": 5890,
       "primary_evidence": false,
       "curriculum_authority": false,
       "allowed_downstream_uses": [
@@ -9985,6 +10097,42 @@
       "notes": []
     },
     {
+      "document_id": "path-references-schemas-operation-candidates-schema",
+      "path": "references/schemas/operation-candidates.schema.json",
+      "title": "Operation Candidates.Schema",
+      "source_type": "json_schema",
+      "authority_level": "machine_contract",
+      "source_version": "sha256:2e80f696eb15511e30d9c1df3feb9a4e5f4e5693ff6e1e2f442de0cf05b3a74b",
+      "status": "schema_contract",
+      "owner": "references_team",
+      "citation_policy": "cite_as_implementation_contract_not_curriculum_evidence",
+      "public_citation_policy": "not_public_citation_source",
+      "layer": "schema_contract",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "refresh_policy": "schema_review",
+      "source_hash": "2e80f696eb15511e30d9c1df3feb9a4e5f4e5693ff6e1e2f442de0cf05b3a74b",
+      "size_bytes": 6764,
+      "primary_evidence": false,
+      "curriculum_authority": false,
+      "allowed_downstream_uses": [
+        "internal_reference_context",
+        "rag_retrieval_with_authority_label"
+      ],
+      "blocked_downstream_uses": [
+        "student_diagnostics",
+        "adaptive_routing",
+        "student_facing_ai",
+        "automatic_lesson_sequencing",
+        "automatic_mastery_decisions",
+        "summative_assessment_decisions",
+        "external_authority",
+        "override_machine_registry"
+      ],
+      "evidence_anchor_ids": [],
+      "notes": []
+    },
+    {
       "document_id": "path-references-schemas-owned-content-edge-schema",
       "path": "references/schemas/owned-content-edge.schema.json",
       "title": "Owned Content Edge.Schema",
@@ -10253,6 +10401,42 @@
       "refresh_policy": "schema_review",
       "source_hash": "f9d5fee3ab755e0b91be505ea52514237cb2e1312ca46440cd4548d337ce7d29",
       "size_bytes": 1783,
+      "primary_evidence": false,
+      "curriculum_authority": false,
+      "allowed_downstream_uses": [
+        "internal_reference_context",
+        "rag_retrieval_with_authority_label"
+      ],
+      "blocked_downstream_uses": [
+        "student_diagnostics",
+        "adaptive_routing",
+        "student_facing_ai",
+        "automatic_lesson_sequencing",
+        "automatic_mastery_decisions",
+        "summative_assessment_decisions",
+        "external_authority",
+        "override_machine_registry"
+      ],
+      "evidence_anchor_ids": [],
+      "notes": []
+    },
+    {
+      "document_id": "path-references-schemas-source-annex-extraction-overlays-schema",
+      "path": "references/schemas/source-annex-extraction-overlays.schema.json",
+      "title": "Source Annex Extraction Overlays.Schema",
+      "source_type": "json_schema",
+      "authority_level": "machine_contract",
+      "source_version": "sha256:95457a58c233fc0a010e022366412d195b71556e8fc1b89351776bf03e8b651d",
+      "status": "schema_contract",
+      "owner": "references_team",
+      "citation_policy": "cite_as_implementation_contract_not_curriculum_evidence",
+      "public_citation_policy": "not_public_citation_source",
+      "layer": "schema_contract",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "refresh_policy": "schema_review",
+      "source_hash": "95457a58c233fc0a010e022366412d195b71556e8fc1b89351776bf03e8b651d",
+      "size_bytes": 7520,
       "primary_evidence": false,
       "curriculum_authority": false,
       "allowed_downstream_uses": [

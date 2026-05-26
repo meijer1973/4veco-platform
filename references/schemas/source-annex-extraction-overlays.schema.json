@@ -1,0 +1,228 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://4veco.local/references/schemas/source-annex-extraction-overlays.schema.json",
+  "title": "SourceAnnexExtractionOverlays",
+  "description": "Future overlay-first storage schema for source-annex and graph-object extraction records. This schema does not authorize extraction execution, external-source mutation, lesson handoff, PV projection, or student/product use.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "storage_id",
+    "storage_status",
+    "generated_on",
+    "source_files",
+    "authority_boundary",
+    "graph_overlays",
+    "source_annex_overlays"
+  ],
+  "properties": {
+    "schema_version": { "const": 1 },
+    "storage_id": { "const": "source-annex-extraction-overlays" },
+    "storage_status": { "const": "future_candidate_storage" },
+    "generated_on": { "type": "string", "format": "date-time" },
+    "source_files": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "minItems": 1
+    },
+    "authority_boundary": { "$ref": "#/$defs/authority_boundary" },
+    "graph_overlays": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/graph_overlay" }
+    },
+    "source_annex_overlays": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/source_annex_overlay" }
+    }
+  },
+  "$defs": {
+    "authority_boundary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "protected_reference_mutation_authorized",
+        "external_source_mutation_authorized",
+        "machine_reference_mutation_authorized",
+        "unit_minting_authorized",
+        "operation_registry_mutation_authorized",
+        "answer_skill_mutation_authorized",
+        "source_annex_extraction_execution_authorized",
+        "pv_graph_mutation_authorized",
+        "target_exercise_promotion_authorized",
+        "lesson_output_mutation_authorized",
+        "cp6_closure_authorized",
+        "year1_closure_authorized",
+        "student_product_use_authorized"
+      ],
+      "properties": {
+        "protected_reference_mutation_authorized": { "const": false },
+        "external_source_mutation_authorized": { "const": false },
+        "machine_reference_mutation_authorized": { "const": false },
+        "unit_minting_authorized": { "const": false },
+        "operation_registry_mutation_authorized": { "const": false },
+        "answer_skill_mutation_authorized": { "const": false },
+        "source_annex_extraction_execution_authorized": { "const": false },
+        "pv_graph_mutation_authorized": { "const": false },
+        "target_exercise_promotion_authorized": { "const": false },
+        "lesson_output_mutation_authorized": { "const": false },
+        "cp6_closure_authorized": { "const": false },
+        "year1_closure_authorized": { "const": false },
+        "student_product_use_authorized": { "const": false }
+      }
+    },
+    "graph_overlay": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "extraction_id",
+        "source_exam_item_id",
+        "source_material_id",
+        "source_page_or_locator",
+        "graph_type",
+        "axis_labels",
+        "axis_units",
+        "scale_or_tick_marks",
+        "curve_or_series_labels",
+        "coordinates_or_reconstructable_geometry",
+        "legend_mapping",
+        "student_action_regions",
+        "extraction_status",
+        "review_state",
+        "blocking_gap_ids",
+        "authority_boundary"
+      ],
+      "properties": {
+        "extraction_id": {
+          "type": "string",
+          "pattern": "^EX_SRC_[A-Z0-9_]+$"
+        },
+        "source_exam_item_id": { "type": "string", "minLength": 1 },
+        "source_material_id": { "type": "string", "minLength": 1 },
+        "source_page_or_locator": { "type": "string", "minLength": 1 },
+        "graph_type": {
+          "enum": [
+            "market_diagram",
+            "line_graph",
+            "bar_chart",
+            "table_graph_combo",
+            "other"
+          ]
+        },
+        "axis_labels": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 },
+          "minItems": 1
+        },
+        "axis_units": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "scale_or_tick_marks": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "curve_or_series_labels": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "coordinates_or_reconstructable_geometry": { "type": "string", "minLength": 1 },
+        "legend_mapping": { "type": "string", "minLength": 1 },
+        "student_action_regions": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "extraction_status": {
+          "enum": [
+            "not_started",
+            "partial_with_blocking_gap",
+            "reconstructable_pending_review",
+            "reviewed_reconstructable",
+            "deferred"
+          ]
+        },
+        "review_state": {
+          "enum": [
+            "draft",
+            "needs_human_review",
+            "reviewed",
+            "blocked",
+            "deferred"
+          ]
+        },
+        "blocking_gap_ids": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "authority_boundary": { "$ref": "#/$defs/authority_boundary" }
+      }
+    },
+    "source_annex_overlay": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "extraction_id",
+        "source_exam_item_id",
+        "source_material_id",
+        "annex_type",
+        "source_page_or_locator",
+        "prompt_reference",
+        "worksheet_regions",
+        "required_student_marks",
+        "extraction_status",
+        "review_state",
+        "blocking_gap_ids",
+        "authority_boundary"
+      ],
+      "properties": {
+        "extraction_id": {
+          "type": "string",
+          "pattern": "^EX_SRC_[A-Z0-9_]+$"
+        },
+        "source_exam_item_id": { "type": "string", "minLength": 1 },
+        "source_material_id": { "type": "string", "minLength": 1 },
+        "annex_type": {
+          "enum": [
+            "source_text",
+            "source_table",
+            "source_figure",
+            "uitwerkbijlage",
+            "other"
+          ]
+        },
+        "source_page_or_locator": { "type": "string", "minLength": 1 },
+        "prompt_reference": { "type": "string", "minLength": 1 },
+        "worksheet_regions": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "required_student_marks": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "extraction_status": {
+          "enum": [
+            "not_started",
+            "partial_with_blocking_gap",
+            "reconstructable_pending_review",
+            "reviewed_reconstructable",
+            "deferred"
+          ]
+        },
+        "review_state": {
+          "enum": [
+            "draft",
+            "needs_human_review",
+            "reviewed",
+            "blocked",
+            "deferred"
+          ]
+        },
+        "blocking_gap_ids": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "authority_boundary": { "$ref": "#/$defs/authority_boundary" }
+      }
+    }
+  }
+}

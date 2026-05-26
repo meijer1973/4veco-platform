@@ -1,0 +1,133 @@
+{
+  "schema_version": 1,
+  "sprint_id": "EX-6",
+  "name": "Validator And CLI Implementation Planning",
+  "status": "completed",
+  "completed_on": "2026-05-26",
+  "plan": "reports/sprints/EX-6-plan.md",
+  "baseline": "reports/sprints/EX-6-baseline.md",
+  "result": "reports/sprints/EX-6-result.md",
+  "diff_summary": "reports/sprints/EX-6-diff-summary.md",
+  "protected_reference_data_changed": false,
+  "external_source_changed": false,
+  "machine_reference_changed": false,
+  "candidate_storage_created": false,
+  "candidate_writes_created": false,
+  "q19_extraction_executed": false,
+  "lesson_output_changed": false,
+  "student_product_use_authorized": false,
+  "human_review_required": true,
+  "gate_id": "GATE-EX6-validator-cli-planning",
+  "review_packet": "reports/review-gates/GATE-EX6-validator-cli-planning/review-packet.md",
+  "lead_review_required": true,
+  "lead_review": {
+    "assignment": "reports/sprints/EX-6-lead-review-assignment.md",
+    "round1": "reports/sprints/EX-6-lead-review-round1.md",
+    "corrections": "reports/sprints/EX-6-lead-review-corrections.md",
+    "round2": "reports/sprints/EX-6-lead-review-round2.md",
+    "final_verdict": "PASS"
+  },
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/EX-6-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js EX-6",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-ex5-operation-answer-skill-contract.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-ex6-validator-cli-planning.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-exam-ingestion-contract.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-exam-ingestion-pilots.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-exam-ingestion-coverage.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-skill-operation-registry.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/validate-core-schemas.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/generate-all.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/validate-report-json.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/generate-reference-health.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/check-reference-health.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run dashboard:internal",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run agent:index",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-gate-bundle-urls.js GATE-EX6-validator-cli-planning",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js --check",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/build-source-document-registry.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/build-reference-inventory.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-source-document-registry.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-source-manifest.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-document-inventory.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-roadmap-version-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd test",
+      "status": "passed"
+    }
+  ],
+  "next_action": "Run GATE-EX6 Validator And CLI Planning Human Review before any later validator implementation, dry-run CLI implementation, candidate storage creation, candidate writes, q19 extraction execution, lesson handoff, PV projection, or student/product use."
+}

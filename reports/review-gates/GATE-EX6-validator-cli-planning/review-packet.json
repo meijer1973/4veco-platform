@@ -1,0 +1,194 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-EX6-validator-cli-planning",
+  "sprint_id": "EX-6",
+  "generated_on": "2026-05-26",
+  "status": "review_packet_ready_no_implementation_authorized",
+  "human_interview_completed": false,
+  "gate_closure_completed": false,
+  "authority_boundary": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_mutation_authorized": false,
+    "source_annex_extraction_execution_authorized": false,
+    "pv_graph_mutation_authorized": false,
+    "target_exercise_promotion_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "cp6_closure_authorized": false,
+    "year1_closure_authorized": false,
+    "student_product_use_authorized": false
+  },
+  "review_scope": "Decide whether the EX-6 schemas and validator/CLI implementation plan are adequate to authorize a later bounded implementation sprint for validators and dry-run CLIs only.",
+  "evidence_base": [
+    "references/schemas/operation-candidates.schema.json",
+    "references/schemas/answer-skill-candidates.schema.json",
+    "references/schemas/source-annex-extraction-overlays.schema.json",
+    "references/data/exam-ingestion/validator-cli-implementation-plan.json",
+    "references/data/exam-ingestion/validator-cli-implementation-plan.md",
+    "build-scripts/references/check-ex6-validator-cli-planning.js",
+    "reports/review-gates/GATE-EX5-operation-answer-skill-contract/gate-closure.json",
+    "references/data/exam-ingestion/operation-answer-skill-contract.json",
+    "references/reference-team-roadmap.md"
+  ],
+  "calibration_questions": [
+    {
+      "id": "EX6-CAL-1",
+      "question": "Confirm that this gate reviews validator/CLI planning only and does not authorize candidate storage creation, candidate writes, q19 extraction execution, mutation, lesson output, or student/product use.",
+      "must_answer_yes_to_continue": true
+    },
+    {
+      "id": "EX6-CAL-2",
+      "question": "Confirm that any later implementation sprint must remain dry-run and validator focused unless a later gate explicitly authorizes persistent writes.",
+      "must_answer_yes_to_continue": true
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "EX6-Q1",
+      "title": "Schema split",
+      "question": "Are the three proposed schemas, operation candidates, answer-skill candidates, and source-annex extraction overlays, the right split for later validator and dry-run CLI implementation?",
+      "options": [
+        "Yes, use the three-schema split for later implementation.",
+        "Revise the schema split before any implementation sprint.",
+        "Hold until a broader registry architecture review is complete.",
+        "Open answer / other, with rationale."
+      ],
+      "open_answer_allowed": true
+    },
+    {
+      "id": "EX6-Q2",
+      "title": "Operation-candidate schema",
+      "question": "Does the operation-candidate schema capture the minimum fields needed for q3 annual cost-threshold comparison and future operation candidates without hiding supporting, weak, rejected, or blocking-gap evidence?",
+      "options": [
+        "Yes, the operation-candidate schema is sufficient for validator implementation.",
+        "Revise the operation fields before implementation.",
+        "Hold until a sample dry-run fixture is drafted.",
+        "Open answer / other, with rationale."
+      ],
+      "open_answer_allowed": true
+    },
+    {
+      "id": "EX6-Q3",
+      "title": "Answer-skill schema",
+      "question": "Does the answer-skill schema keep q3 threshold wording and q15 two-step correction-model explanation visible enough for later answer-skill validation?",
+      "options": [
+        "Yes, the answer-skill schema is sufficient for validator implementation.",
+        "Revise the answer-skill fields before implementation.",
+        "Hold until a broader answer-writing policy is complete.",
+        "Open answer / other, with rationale."
+      ],
+      "open_answer_allowed": true
+    },
+    {
+      "id": "EX6-Q4",
+      "title": "q19 extraction schema",
+      "question": "Does the source-annex extraction schema require enough graph and worksheet detail, including precise locator, axes, units, scale/ticks, geometry, legend, and student-action regions, before q19 can become reconstructable?",
+      "options": [
+        "Yes, the q19 extraction schema is sufficient for validator implementation.",
+        "Revise the q19 graph/source fields before implementation.",
+        "Hold q19 until a separate source-extraction architecture sprint.",
+        "Open answer / other, with rationale."
+      ],
+      "open_answer_allowed": true
+    },
+    {
+      "id": "EX6-Q5",
+      "title": "Validator rejection rules",
+      "question": "Are the planned validator rejection rules sufficient, including unauthorized mutation flags, product flags, A15 as q3 support, A45 as primary q19 support, unresolved q19 gaps, and hidden q3/q15 answer-skill needs?",
+      "options": [
+        "Yes, implement validators with these rejection rules.",
+        "Revise the rejection rules before implementation.",
+        "Hold until EX-5 or EX-4 evidence is rechecked.",
+        "Open answer / other, with rationale."
+      ],
+      "open_answer_allowed": true
+    },
+    {
+      "id": "EX6-Q6",
+      "title": "Dry-run CLI contract",
+      "question": "Is the dry-run CLI contract sufficient before any future write mode: closed gate, schema validation, read-only dry-run, mutation log, rollback route, source evidence, and review refs?",
+      "options": [
+        "Yes, use this dry-run CLI contract for later implementation.",
+        "Revise CLI preconditions before implementation.",
+        "Hold until existing reference CLI patterns are audited in more detail.",
+        "Open answer / other, with rationale."
+      ],
+      "open_answer_allowed": true
+    },
+    {
+      "id": "EX6-Q7",
+      "title": "Fixture policy",
+      "question": "Should later implementation use non-persistent test-only fixtures before any real candidate storage path is created?",
+      "options": [
+        "Yes, dry-run fixtures must remain non-persistent and test-only.",
+        "Allow persistent fixture files, but not candidate storage.",
+        "Hold fixture policy until implementation starts.",
+        "Open answer / other, with rationale."
+      ],
+      "open_answer_allowed": true
+    },
+    {
+      "id": "EX6-Q8",
+      "title": "Next sprint routing",
+      "question": "If GATE-EX6 closes, what bounded sprint should be authorized next?",
+      "options": [
+        "Authorize validator and dry-run CLI implementation only, with no candidate storage creation or writes.",
+        "Authorize q19 extraction tooling implementation only, with no extraction execution.",
+        "Hold all downstream work until schemas or rejection rules are revised.",
+        "Open answer / other, with rationale."
+      ],
+      "open_answer_allowed": true
+    },
+    {
+      "id": "EX6-Q9",
+      "title": "Mutation and product authority",
+      "question": "Does GATE-EX6 authorize protected reference mutation, external-source mutation, machine-reference mutation, unit minting, operation-registry mutation, answer-skill mutation, candidate writes, q19 extraction execution, lesson-output mutation, CP-6/Year-1 closure, or student/product use now?",
+      "options": [
+        "No, GATE-EX6 may only authorize later bounded implementation of validators and dry-run CLIs.",
+        "Yes, but only for explicitly named low-risk planning artifacts.",
+        "Hold; authority cannot be decided until the schemas are revised.",
+        "Open answer / other, with rationale."
+      ],
+      "open_answer_allowed": true
+    }
+  ],
+  "future_interview_protocol": [
+    "Show the full question list before starting.",
+    "Ask calibration questions before taking binding answers.",
+    "Ask one question at a time.",
+    "Record each answer before asking the next question.",
+    "Run pattern analysis after initial answers.",
+    "Ask targeted follow-ups for ambiguity or conflicting authority.",
+    "Draft a closure proposal only after evidence is complete.",
+    "Require explicit human confirmation before writing a gate closure record or authorizing downstream sprint scope."
+  ],
+  "blocked_outcomes": [
+    "candidate-storage creation",
+    "candidate writes",
+    "q19 extraction execution",
+    "protected reference mutation",
+    "external-source mutation",
+    "machine-reference mutation",
+    "unit minting",
+    "operation-registry mutation",
+    "answer-skill mutation",
+    "PV/graph mutation",
+    "target-exercise promotion",
+    "lesson-output mutation",
+    "CP-6 closure",
+    "Year-1 closure",
+    "diagnostics",
+    "adaptive routing",
+    "mastery",
+    "sequencing",
+    "student-facing AI",
+    "summative use",
+    "PV projection",
+    "PV machine promotion",
+    "student/product use"
+  ],
+  "recommended_next_action": "Run the formal GATE-EX6 human review before any later validator implementation, dry-run CLI implementation, candidate storage creation, candidate writes, q19 extraction execution, lesson handoff, PV projection, or student/product use."
+}
