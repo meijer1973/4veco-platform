@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-26T16:36:28.091Z",
+  "generatedAt": "2026-05-26T16:45:57.306Z",
   "internalOnly": true,
   "teams": [
     {
@@ -216,6 +216,13 @@
               "name": "Re-Evaluate R10-R13 Product Surfaces",
               "completed": "no",
               "currentState": "Blocked. Diagnostics, adaptive routing, student-facing AI, teacher cockpit deployment, automatic sequencing, mastery, and summative uses remain out of scope until data-quality gates justify them. Lesson L1.7A explicitly rejected broad companion scaling; L1.7B is split into closed contract-only `L1.7B-C` and implementation-resume `L1.7B-R`; L1.7C-0 closed the shared skill-map contract; platform `GAME-UX-1` implemented shared route/view-model support without authorizing product use; platform `GAME-UX-2` generated one bounded checkpoint surface for `1.1.1` without broad scaling or product-use authorization; lesson L1.7C closed PASS WITH FLAGS after consuming that shared route in the game row; lesson L1.7D closed PASS WITH FLAGS after generator-owned landing IA cleanup; lesson L2.0 closed PASS WITH FLAGS after defining house-style and fixing consolidation landing semantics; GATE-EX5 closed PASS WITH CONDITIONS as design-contract review only; EX-6 completed validator/CLI planning without candidate writes; GATE-EX6 closed PASS WITH CONDITIONS for validator/dry-run CLI implementation only; and EX-7 implemented validators and dry-run-only CLIs without candidate storage or writes. Broad lesson-companion scaling remains blocked until L1.7B-R reviews the generated checkpoint surface, GATE-L1.7B accepts its product boundaries, and Scale Gate 1 establishes remaining curriculum-versioning and game-row scaling quality.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "QUALITY-STD-1",
+              "name": "Planning Quality Standard Enforcement",
+              "completed": "yes",
+              "currentState": "Completed as a cross-repo governance hardening sprint. Added quality-driven execution language to both repo `AGENTS.md` files, inserted a Specification-Fulfilment Rule and Planning Quality Floor into the lesson companion specification, added paragraph-build quality-standard guidance, updated lead-reviewer instructions, and hardened `check-sprint-plan.js` so future platform sprint plans must include `Quality Standard`, `Specification Fulfilment Matrix`, `Quality Improvement Candidates`, and `Proof Required to Close`. Added focused tests and updated the current GAME-UX-2 plan so completed-bundle validation remains compatible with the stricter checker. No generated lesson output, protected reference mutation, target-exercise promotion, diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or product-use authorization.",
               "exitGate": ""
             },
             {
@@ -927,6 +934,14 @@
           "name": "Re-Evaluate R10-R13 Product Surfaces",
           "completed": "no",
           "currentState": "Blocked. Diagnostics, adaptive routing, student-facing AI, teacher cockpit deployment, automatic sequencing, mastery, and summative uses remain out of scope until data-quality gates justify them. Lesson L1.7A explicitly rejected broad companion scaling; L1.7B is split into closed contract-only `L1.7B-C` and implementation-resume `L1.7B-R`; L1.7C-0 closed the shared skill-map contract; platform `GAME-UX-1` implemented shared route/view-model support without authorizing product use; platform `GAME-UX-2` generated one bounded checkpoint surface for `1.1.1` without broad scaling or product-use authorization; lesson L1.7C closed PASS WITH FLAGS after consuming that shared route in the game row; lesson L1.7D closed PASS WITH FLAGS after generator-owned landing IA cleanup; lesson L2.0 closed PASS WITH FLAGS after defining house-style and fixing consolidation landing semantics; GATE-EX5 closed PASS WITH CONDITIONS as design-contract review only; EX-6 completed validator/CLI planning without candidate writes; GATE-EX6 closed PASS WITH CONDITIONS for validator/dry-run CLI implementation only; and EX-7 implemented validators and dry-run-only CLIs without candidate storage or writes. Broad lesson-companion scaling remains blocked until L1.7B-R reviews the generated checkpoint surface, GATE-L1.7B accepts its product boundaries, and Scale Gate 1 establishes remaining curriculum-versioning and game-row scaling quality.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "QUALITY-STD-1",
+          "name": "Planning Quality Standard Enforcement",
+          "completed": "yes",
+          "currentState": "Completed as a cross-repo governance hardening sprint. Added quality-driven execution language to both repo `AGENTS.md` files, inserted a Specification-Fulfilment Rule and Planning Quality Floor into the lesson companion specification, added paragraph-build quality-standard guidance, updated lead-reviewer instructions, and hardened `check-sprint-plan.js` so future platform sprint plans must include `Quality Standard`, `Specification Fulfilment Matrix`, `Quality Improvement Candidates`, and `Proof Required to Close`. Added focused tests and updated the current GAME-UX-2 plan so completed-bundle validation remains compatible with the stricter checker. No generated lesson output, protected reference mutation, target-exercise promotion, diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or product-use authorization.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -1667,7 +1682,7 @@
           "roadmap": "References roadmap"
         }
       ],
-      "completedCount": 92,
+      "completedCount": 93,
       "openCount": 8
     },
     {
@@ -1718,7 +1733,7 @@
               "sprint": "REV-STD-1",
               "name": "Core-Spec Review Standard Hardening",
               "completed": "no",
-              "currentState": "**REQUIRED BEFORE SCALE GATE 1.** Update review packets and lead-review rules so core specification failures cannot be carried as ordinary flags. Every review packet must include `specifications/product-end-state.md`, the original sprint specification, non-negotiable requirements, and a core-requirement checklist. PASS WITH FLAGS is allowed only for issues outside the sprint's core objective. Scope-language enforcement is handled by the closed `SCOPE-LANG-1` governance sprint; REV-STD-1 still owns the wider review-template and lead-review-rule hardening.",
+              "currentState": "**REQUIRED BEFORE SCALE GATE 1.** Update review packets and lead-review rules so core specification failures cannot be carried as ordinary flags. Every review packet must include `specifications/product-end-state.md`, the original sprint specification, non-negotiable requirements, and a core-requirement checklist. PASS WITH FLAGS is allowed only for issues outside the sprint's core objective. Scope-language enforcement is handled by closed `SCOPE-LANG-1`; plan-level quality-standard enforcement is handled by closed `QUALITY-STD-1`; REV-STD-1 still owns the wider review-template and lead-review-rule hardening.",
               "exitGate": ""
             },
             {
@@ -1736,10 +1751,17 @@
               "exitGate": ""
             },
             {
+              "sprint": "QUALITY-STD-1",
+              "name": "Planning Quality Standard Enforcement",
+              "completed": "yes",
+              "currentState": "**CLOSED PASS.** Added quality-driven execution language to both repo `AGENTS.md` files, inserted a Specification-Fulfilment Rule and Planning Quality Floor into `specifications/companion-core-specifications.md`, added paragraph-build quality-standard guidance, and hardened the platform sprint-plan checker so future non-trivial plans require `Quality Standard`, `Specification Fulfilment Matrix`, `Quality Improvement Candidates`, and `Proof Required to Close`. No lesson output was generated and no product-use boundary was loosened. Records: `archive/sprints/QUALITY-STD-1/`. If we continue after this governance sprint, the next step remains L1.7B-MAP human review.",
+              "exitGate": ""
+            },
+            {
               "sprint": "SCOPE-LANG-1",
               "name": "Scope-Language Discipline Enforcement",
               "completed": "yes",
-              "currentState": "**CLOSED PASS.** Tightened `specifications/companion-core-specifications.md`, renamed current active roadmap/version wording away from downscoping vocabulary, and added a platform checker that blocks unauthorized restricted scope terms in active sprint plans, roadmap rows, review packets, and agent plans. Bounded scope remains allowed only with full quality inside the scope and explicit follow-up or waiver for omitted specification requirements. No lesson output was generated and no product-use boundary was loosened. If we continue after this governance sprint, the next step remains L1.7B-MAP human review.",
+              "currentState": "**CLOSED PASS.** Tightened `specifications/companion-core-specifications.md`, renamed current active roadmap/version wording away from downscoping vocabulary, and added a platform checker that blocks unauthorized restricted scope terms in active sprint plans, roadmap rows, review packets, and agent plans. Bounded scope remains allowed only with full quality inside the scope and explicit follow-up or waiver for omitted specification requirements. No lesson output was generated and no product-use boundary was loosened. Records: `archive/sprints/SCOPE-LANG-1/`. If we continue after this governance sprint, the next step remains L1.7B-MAP human review.",
               "exitGate": ""
             },
             {
@@ -2104,7 +2126,7 @@
           "sprint": "REV-STD-1",
           "name": "Core-Spec Review Standard Hardening",
           "completed": "no",
-          "currentState": "**REQUIRED BEFORE SCALE GATE 1.** Update review packets and lead-review rules so core specification failures cannot be carried as ordinary flags. Every review packet must include `specifications/product-end-state.md`, the original sprint specification, non-negotiable requirements, and a core-requirement checklist. PASS WITH FLAGS is allowed only for issues outside the sprint's core objective. Scope-language enforcement is handled by the closed `SCOPE-LANG-1` governance sprint; REV-STD-1 still owns the wider review-template and lead-review-rule hardening.",
+          "currentState": "**REQUIRED BEFORE SCALE GATE 1.** Update review packets and lead-review rules so core specification failures cannot be carried as ordinary flags. Every review packet must include `specifications/product-end-state.md`, the original sprint specification, non-negotiable requirements, and a core-requirement checklist. PASS WITH FLAGS is allowed only for issues outside the sprint's core objective. Scope-language enforcement is handled by closed `SCOPE-LANG-1`; plan-level quality-standard enforcement is handled by closed `QUALITY-STD-1`; REV-STD-1 still owns the wider review-template and lead-review-rule hardening.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
@@ -2221,10 +2243,18 @@
           "roadmap": "Lessen roadmap"
         },
         {
+          "sprint": "QUALITY-STD-1",
+          "name": "Planning Quality Standard Enforcement",
+          "completed": "yes",
+          "currentState": "**CLOSED PASS.** Added quality-driven execution language to both repo `AGENTS.md` files, inserted a Specification-Fulfilment Rule and Planning Quality Floor into `specifications/companion-core-specifications.md`, added paragraph-build quality-standard guidance, and hardened the platform sprint-plan checker so future non-trivial plans require `Quality Standard`, `Specification Fulfilment Matrix`, `Quality Improvement Candidates`, and `Proof Required to Close`. No lesson output was generated and no product-use boundary was loosened. Records: `archive/sprints/QUALITY-STD-1/`. If we continue after this governance sprint, the next step remains L1.7B-MAP human review.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
+        },
+        {
           "sprint": "SCOPE-LANG-1",
           "name": "Scope-Language Discipline Enforcement",
           "completed": "yes",
-          "currentState": "**CLOSED PASS.** Tightened `specifications/companion-core-specifications.md`, renamed current active roadmap/version wording away from downscoping vocabulary, and added a platform checker that blocks unauthorized restricted scope terms in active sprint plans, roadmap rows, review packets, and agent plans. Bounded scope remains allowed only with full quality inside the scope and explicit follow-up or waiver for omitted specification requirements. No lesson output was generated and no product-use boundary was loosened. If we continue after this governance sprint, the next step remains L1.7B-MAP human review.",
+          "currentState": "**CLOSED PASS.** Tightened `specifications/companion-core-specifications.md`, renamed current active roadmap/version wording away from downscoping vocabulary, and added a platform checker that blocks unauthorized restricted scope terms in active sprint plans, roadmap rows, review packets, and agent plans. Bounded scope remains allowed only with full quality inside the scope and explicit follow-up or waiver for omitted specification requirements. No lesson output was generated and no product-use boundary was loosened. Records: `archive/sprints/SCOPE-LANG-1/`. If we continue after this governance sprint, the next step remains L1.7B-MAP human review.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
@@ -2501,7 +2531,7 @@
           "roadmap": "Lessen roadmap"
         }
       ],
-      "completedCount": 36,
+      "completedCount": 37,
       "openCount": 18
     },
     {

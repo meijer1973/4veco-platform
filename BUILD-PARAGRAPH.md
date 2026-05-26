@@ -35,6 +35,49 @@ node scripts/validate-paragraph.js --mode part-a --profile publisher-print "<par
 > concept pairs text with a visual) and **Unified Student Experience** (same
 > procedures and approaches across all formats). These are non-negotiable.
 
+## Quality Standard
+
+The expected outcome is not the smallest acceptable artifact. The expected
+outcome is a complete, coherent, student-usable implementation of the stated
+specification within the authorized scope.
+
+The work must meet the specification first. If the implementation scope is
+bounded, the quality bar inside that scope remains full quality. Missing parts
+of the full product must be named as follow-up work, blockers, or explicit
+human waivers.
+
+A result is not done because files exist, tests pass, or a surface renders. It
+is done only when the generated output matches the specification, supports the
+intended student action, preserves the canonical procedure and terminology,
+and has evidence from the relevant review gates.
+
+## Specification Fulfilment Matrix
+
+Before building or changing a paragraph, create or update the sprint or
+paragraph plan with a matrix like this:
+
+| Specification requirement | Implementation evidence required | Review/proof required | Status |
+|---|---|---|---|
+| Student knows current route | Rendered landing/page screenshot | Student-experience review | pending |
+| Procedure matches canonical steps | Source and rendered artifact comparison | Companion visual review | pending |
+| Visuals support the concept | Rendered HTML/DOCX/PPTX evidence | Visual/companion review | pending |
+| Target exercise skills are covered | Paragraph plan, tasks, and answer model | Teacher-learning-quality review | pending |
+| Feedback gives next step | Interaction/screenshot evidence | Student-experience review | pending |
+
+## Quality Improvement Candidates
+
+Planning may include improvements beyond the strict current specification, but
+they must be classified before implementation:
+
+| Candidate improvement | Classification | Reason |
+|---|---|---|
+| Improve button copy for next route | `include_now` | Directly improves student affordance. |
+| Add a second graph-reading variant | `defer_named_follow_up` | Useful, but only if the current sprint is not about graph variant breadth. |
+| Build automatic route decisions | `reject_scope_creep` | Not authorized and conflicts with current product boundaries. |
+
+Use this section to improve quality without letting helpful ideas blur the
+current specification.
+
 ---
 
 # COMMON pre-conditions (read first, applies to BOTH pipelines)

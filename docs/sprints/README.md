@@ -37,6 +37,20 @@ Every sprint plan must include an `Operationalized sprint procedure` section tha
 
 If a roadmap instruction is not represented in the sprint plan, the plan is incomplete. Fix the plan before executing the sprint.
 
+Every sprint plan must also include:
+
+- `Quality Standard`
+- `Specification Fulfilment Matrix`
+- `Quality Improvement Candidates`
+- `Proof Required to Close`
+
+The quality standard must state the quality floor, specification fulfilment
+expectation, rendered-output proof need, student-facing usefulness, follow-up
+handling, and closure proof. The fulfilment matrix must connect each
+specification requirement to implementation evidence and review/proof. Quality
+improvements may be included only when they improve the current specification
+without scope drift; otherwise they must be named follow-up work or rejected.
+
 ## Agent Structure
 
 Use separated review roles for substantial sprints:

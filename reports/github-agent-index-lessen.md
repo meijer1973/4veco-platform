@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-lessen
 
-Generated: 2026-05-26T16:37:57.993Z
+Generated: 2026-05-26T16:46:01.918Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-lessen`
-Files indexed: 1509
+Files indexed: 1512
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -81,7 +81,7 @@ _No files indexed in this group._
 
 ## validators
 
-Count: 11
+Count: 12
 
 - archive/sprints/GATE-L1.7B/GATE-L1.7B-validation-log.md
 - archive/sprints/L1.7A/L1.7A-validation-log.md
@@ -93,6 +93,7 @@ Count: 11
 - archive/sprints/L1.7C/L1.7C-validation-log.md
 - archive/sprints/L1.7D/L1.7D-validation-log.md
 - archive/sprints/L2.0/L2.0-validation-log.md
+- archive/sprints/SCOPE-LANG-1/SCOPE-LANG-1-validation-log.md
 - archive/sprints/SPEC-END-STATE/SPEC-END-STATE-validation-log.md
 
 ## references
@@ -2407,7 +2408,7 @@ Count: 817
 
 ## other
 
-Count: 376
+Count: 378
 
 - _team-b-reference/1.1.1/uitleg vaardigheden team b.html
 - _team-b-reference/1.1.1/uitleg voorkennis team b.html
@@ -2761,6 +2762,8 @@ Count: 376
 - archive/sprints/REV-STD-1/REV-STD-1-inherited-flag-table.md
 - archive/sprints/REV-STD-1/REV-STD-1-review-standard.md
 - archive/sprints/REV-STD-1/REV-STD-1-sprint-plan.md
+- archive/sprints/SCOPE-LANG-1/SCOPE-LANG-1-closure-log.md
+- archive/sprints/SCOPE-LANG-1/SCOPE-LANG-1-sprint-plan.md
 - archive/sprints/SPEC-END-STATE/SPEC-END-STATE-closure-log.md
 - archive/sprints/SPEC-END-STATE/SPEC-END-STATE-sprint-plan.md
 - archive/sprints/SYNC-1/SYNC-1-roadmap-reconciliation-log.md

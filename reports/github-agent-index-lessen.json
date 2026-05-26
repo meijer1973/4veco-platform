@@ -2,8 +2,8 @@
   "repo": "4veco-lessen",
   "root": "C:\\Projects\\4veco\\4veco-lessen",
   "available": true,
-  "generated_at": "2026-05-26T16:37:57.993Z",
-  "file_count": 1509,
+  "generated_at": "2026-05-26T16:46:01.918Z",
+  "file_count": 1512,
   "inventory_scope": "git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees",
   "skipped_directories": [
     ".cache",
@@ -79,6 +79,7 @@
       "archive/sprints/L1.7C/L1.7C-validation-log.md",
       "archive/sprints/L1.7D/L1.7D-validation-log.md",
       "archive/sprints/L2.0/L2.0-validation-log.md",
+      "archive/sprints/SCOPE-LANG-1/SCOPE-LANG-1-validation-log.md",
       "archive/sprints/SPEC-END-STATE/SPEC-END-STATE-validation-log.md"
     ],
     "references": [],
@@ -2725,6 +2726,8 @@
       "archive/sprints/REV-STD-1/REV-STD-1-inherited-flag-table.md",
       "archive/sprints/REV-STD-1/REV-STD-1-review-standard.md",
       "archive/sprints/REV-STD-1/REV-STD-1-sprint-plan.md",
+      "archive/sprints/SCOPE-LANG-1/SCOPE-LANG-1-closure-log.md",
+      "archive/sprints/SCOPE-LANG-1/SCOPE-LANG-1-sprint-plan.md",
       "archive/sprints/SPEC-END-STATE/SPEC-END-STATE-closure-log.md",
       "archive/sprints/SPEC-END-STATE/SPEC-END-STATE-sprint-plan.md",
       "archive/sprints/SYNC-1/SYNC-1-roadmap-reconciliation-log.md",

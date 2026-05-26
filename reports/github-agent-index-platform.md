@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-05-26T16:37:57.961Z
+Generated: 2026-05-26T16:46:01.889Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 1798
+Files indexed: 1800
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -117,7 +117,7 @@ Count: 71
 
 ## build scripts
 
-Count: 297
+Count: 299
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -384,6 +384,8 @@ Count: 297
 - build-scripts/review-gates/validate-gate.js
 - build-scripts/review-gates/validate-rag-review-packet.js
 - build-scripts/sprints/check-bundle-urls.js
+- build-scripts/sprints/check-scope-language.js
+- build-scripts/sprints/check-scope-language.test.js
 - build-scripts/sprints/check-sprint-bundle.js
 - build-scripts/sprints/check-sprint-plan.js
 - build-scripts/sprints/check-sprint-result.js
@@ -466,7 +468,7 @@ Count: 42
 
 ## validators
 
-Count: 105
+Count: 107
 
 - build-scripts/rag/validate-chunks.js
 - build-scripts/rag/validate-query-output.js
@@ -544,6 +546,8 @@ Count: 105
 - build-scripts/review-gates/validate-gate.js
 - build-scripts/review-gates/validate-rag-review-packet.js
 - build-scripts/sprints/check-bundle-urls.js
+- build-scripts/sprints/check-scope-language.js
+- build-scripts/sprints/check-scope-language.test.js
 - build-scripts/sprints/check-sprint-bundle.js
 - build-scripts/sprints/check-sprint-plan.js
 - build-scripts/sprints/check-sprint-result.js

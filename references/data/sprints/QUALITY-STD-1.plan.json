@@ -1,0 +1,17 @@
+{
+  "sprint_id": "QUALITY-STD-1",
+  "title": "Planning Quality Standard Enforcement",
+  "status": "planned",
+  "plan": "reports/sprints/QUALITY-STD-1-plan.md",
+  "human_review_required": false,
+  "protected_reference_data_changes_allowed": false,
+  "acceptance_tests": [
+    "npm.cmd test -- --runInBand build-scripts/sprints/check-sprint-plan.test.js",
+    "npm.cmd test -- --runInBand build-scripts/sprints/check-scope-language.test.js",
+    "node build-scripts/sprints/check-sprint-plan.js reports/sprints/GAME-UX-2-plan.md",
+    "node build-scripts/sprints/check-sprint-bundle.js GAME-UX-2 --complete",
+    "node build-scripts/sprints/check-sprint-bundle.js QUALITY-STD-1 --complete",
+    "npm.cmd run check:scope-language",
+    "npm.cmd test"
+  ]
+}

@@ -6,12 +6,16 @@ const { spawnSync } = require('child_process');
 const REQUIRED_HEADINGS = [
   '## Goal',
   '## Context',
+  '## Quality Standard',
+  '## Specification Fulfilment Matrix',
+  '## Quality Improvement Candidates',
   '## Allowed paths',
   '## Forbidden paths',
   '## Inputs',
   '## Outputs',
   '## Operationalized sprint procedure',
   '## Acceptance tests',
+  '## Proof Required to Close',
   '## Rollback plan',
   '## Human review required',
 ];
@@ -43,6 +47,46 @@ if (!/^# Sprint\s+\S+:/m.test(markdown)) {
 
 for (const heading of REQUIRED_HEADINGS) {
   if (!markdown.includes(heading)) fail(`missing required heading: ${heading}`);
+}
+
+function section(heading) {
+  const escaped = heading.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const match = markdown.match(new RegExp(`${escaped}\\s+([\\s\\S]*?)(?=\\n## |$)`));
+  return match ? match[1].trim() : '';
+}
+
+const qualitySection = section('## Quality Standard');
+for (const term of [
+  'specification',
+  'quality floor',
+  'rendered output',
+  'student-facing',
+  'proof',
+  'follow-up',
+]) {
+  if (!new RegExp(term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'i').test(qualitySection)) {
+    fail(`Quality Standard must mention ${term}`);
+  }
+}
+
+const fulfilmentMatrix = section('## Specification Fulfilment Matrix');
+if (!/\|\s*Specification requirement\s*\|\s*Implementation evidence required\s*\|\s*Review\/proof required\s*\|\s*Status\s*\|/i.test(fulfilmentMatrix)) {
+  fail('Specification Fulfilment Matrix must include requirement/evidence/review-proof/status columns');
+}
+if ((fulfilmentMatrix.match(/^\|/gm) || []).length < 3) {
+  fail('Specification Fulfilment Matrix must include at least one concrete requirement row');
+}
+
+const improvementSection = section('## Quality Improvement Candidates');
+for (const label of ['include_now', 'defer_named_follow_up', 'reject_scope_creep']) {
+  if (!improvementSection.includes(label)) {
+    fail(`Quality Improvement Candidates must classify ${label}`);
+  }
+}
+
+const proofSection = section('## Proof Required to Close');
+if (!/proof/i.test(proofSection) || !/close/i.test(proofSection) || !/review|validator|test/i.test(proofSection)) {
+  fail('Proof Required to Close must name closure proof and review/validator/test evidence');
 }
 
 if (!/```(?:bash)?[\s\S]*?node\s+build-scripts[\\/]sprints[\\/]check-sprint-/m.test(markdown)) {

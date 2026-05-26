@@ -50,6 +50,43 @@ The current workspace has one unrelated pre-existing untracked file:
 evidence if explicitly inspected, but must not import it wholesale, stage it,
 move it, edit it, or delete it.
 
+## Quality Standard
+
+The expected outcome is a complete, coherent, student-facing checkpoint
+implementation within the authorized one-paragraph scope, not merely a
+rendered page or a data file.
+
+The quality floor is that the platform-owned runtime, source data, generator,
+deploy integration, landing activation, and generated lesson output satisfy
+the L1.7B-R checkpoint specification while preserving all product boundaries.
+Rendered output must support the intended student action: open `Check`, answer
+short local-practice tasks, receive neutral feedback, and choose local
+follow-up practice without diagnostic, mastery, grade, or sequencing claims.
+
+Closure proof must show specification fulfilment, rendered output evidence,
+student-facing language safety, internal-code non-leakage, platform
+reproducibility, and named follow-up work for anything outside the current
+scope.
+
+## Specification Fulfilment Matrix
+
+| Specification requirement | Implementation evidence required | Review/proof required | Status |
+|---|---|---|---|
+| Source-controlled checkpoint runtime exists | `engines/exit-ticket-engine.js`, UI, CSS, and focused tests | Jest + sprint bundle evidence | complete |
+| Checkpoint output is generated, not hand-patched | deploy integration and generated Book 1 files | deploy log + lesson diff evidence | complete |
+| Student-facing copy is neutral and boundary-safe | task data, UI copy, blocked-term tests | focused tests + lesson L1.7B-R review | complete |
+| Internal IDs are not visible to students | generated data/UI and no-leak assertions | focused tests + screenshot QA | complete |
+| Landing `Check` appears only with generated output | landing generator output and tests | focused landing Jest + student-web validation | complete |
+| Missing target-exercise-readiness evidence is carried | L1.7B-R/GATE-L1.7B handoff and roadmap flags | lesson human review and later L1.7B-MAP/Q2 work | complete |
+
+## Quality Improvement Candidates
+
+| Candidate improvement | Classification | Reason |
+|---|---|---|
+| Add source-controlled screenshot QA support for checkpoint and landing states | `include_now` | Directly proves rendered-output quality for this checkpoint surface. |
+| Add metadata alignment from checkpoint skills to paragraph-plan skills | `defer_named_follow_up` | Important, but owned by L1.7B-MAP after the initial checkpoint surface exists. |
+| Add automatic student route decisions from checkpoint outcomes | `reject_scope_creep` | Not authorized and conflicts with product boundaries around sequencing and diagnostics. |
+
 ## Allowed paths
 
 - `reports/sprints/GAME-UX-2-plan.md`
@@ -229,6 +266,15 @@ the regenerated `1.1.1` landing page on desktop and mobile widths, in light and
 dark modes where supported. If automated screenshot tooling is unavailable,
 record the attempted command, failure, and residual risk in
 `reports/sprints/GAME-UX-2-qa.md`.
+
+## Proof Required to Close
+
+GAME-UX-2 can close only when the proof shows that the checkpoint surface is
+platform-generated, student-facing, rendered, and boundary-safe. Required close
+proof includes focused Jest, full Jest, deploy validation, paragraph validation,
+Book 1 checks, procedure-contract checks, target-exercise checks, screenshot or
+interaction QA, sprint-bundle validation, roadmap/index refresh, and a lesson
+handoff that names the remaining follow-up work for human review.
 
 ## Rollback plan
 

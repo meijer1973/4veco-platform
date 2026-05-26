@@ -18,6 +18,27 @@ Platform repo for generating lesson materials for VWO 4 economie. Contains game 
 
 Agents in this repository must behave like senior developers, not ticket closers.
 
+## Quality-Driven Execution
+
+Agents must optimize for specification fulfilment, not ticket closure.
+
+A completed task must satisfy the stated specification within the authorized
+scope. Passing tests, producing files, or avoiding forbidden claims is not
+sufficient when the student-facing route, learning design, rendered output, or
+review evidence remains weak.
+
+For every non-trivial task, the plan must state:
+
+1. the quality floor;
+2. the specification requirements being fulfilled;
+3. the evidence needed to prove fulfilment;
+4. the review gate that will judge student-facing quality;
+5. any higher-quality improvements that can be included without scope drift;
+6. any omitted requirements as named follow-up work or explicit blockers.
+
+If the plan cannot explain how the work will meet the specification, the plan
+is not ready.
+
 For any non-trivial sprint, roadmap, gate, reference-system, production, or architecture task:
 
 - read the relevant roadmap, sprint plan, source files, validators, and prior reports before acting

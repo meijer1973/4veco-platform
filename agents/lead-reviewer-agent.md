@@ -70,6 +70,28 @@ Classify the work:
 - Roadmap/review-gate packet.
 - Platform generator or engine change.
 
+### Pass 0.5 - Specification fulfilment check
+
+Before accepting the sprint framing, identify the original specification and
+the plan's quality floor. Review the output against the original specification
+first, then against the sprint plan. A sprint plan may narrow scope, but it may
+not lower the quality bar unless a human decision explicitly changed the
+specification.
+
+Classify every issue as:
+
+- `core_requirement_met`
+- `quality_improvement_available`
+- `minor_carry_flag`
+- `scale_blocker`
+- `core_spec_failure`
+
+A PASS or PASS WITH FLAGS is not allowed when a core specification requirement
+is missing. A file that exists, a test that passes, or a rendered page that
+loads is not enough if the student-facing route, learning design,
+source-output parity, procedure fidelity, or target-exercise alignment remains
+weak.
+
 ### Pass 1 - Required evidence plan
 
 List the evidence needed before any PASS can be issued:
