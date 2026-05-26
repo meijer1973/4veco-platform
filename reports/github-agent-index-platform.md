@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-05-26T05:43:40.346Z
+Generated: 2026-05-26T06:33:22.456Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 1737
+Files indexed: 1758
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -111,7 +111,7 @@ Count: 65
 
 ## build scripts
 
-Count: 288
+Count: 289
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -258,6 +258,7 @@ Count: 288
 - build-scripts/references/check-evidence-anchors.js
 - build-scripts/references/check-ex4-mutation-planning.js
 - build-scripts/references/check-ex5-operation-answer-skill-contract.js
+- build-scripts/references/check-ex6-validator-cli-planning.js
 - build-scripts/references/check-exam-ingestion-contract.js
 - build-scripts/references/check-exam-ingestion-coverage.js
 - build-scripts/references/check-exam-ingestion-pilots.js
@@ -451,7 +452,7 @@ Count: 42
 
 ## validators
 
-Count: 91
+Count: 97
 
 - build-scripts/rag/validate-chunks.js
 - build-scripts/rag/validate-query-output.js
@@ -463,6 +464,7 @@ Count: 91
 - build-scripts/references/check-evidence-anchors.js
 - build-scripts/references/check-ex4-mutation-planning.js
 - build-scripts/references/check-ex5-operation-answer-skill-contract.js
+- build-scripts/references/check-ex6-validator-cli-planning.js
 - build-scripts/references/check-exam-ingestion-contract.js
 - build-scripts/references/check-exam-ingestion-coverage.js
 - build-scripts/references/check-exam-ingestion-pilots.js
@@ -528,6 +530,11 @@ Count: 91
 - build-scripts/sprints/check-sprint-plan.js
 - build-scripts/sprints/check-sprint-result.js
 - docs/roadmaps/outdated/reference-team-roadmap-v2.22-pv2-procedure-visual-schema-validator.md
+- references/data/exam-ingestion/validator-cli-implementation-plan.json
+- references/data/exam-ingestion/validator-cli-implementation-plan.md
+- reports/review-gates/GATE-EX6-validator-cli-planning/bundle-urls.md
+- reports/review-gates/GATE-EX6-validator-cli-planning/review-packet.json
+- reports/review-gates/GATE-EX6-validator-cli-planning/review-packet.md
 - reports/sprints/CP.6e-validation-log.md
 - reports/sprints/CP.6f-validation-log.md
 - reports/sprints/EX-0-validation-log.md
@@ -547,7 +554,7 @@ Count: 91
 
 ## references
 
-Count: 296
+Count: 303
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -568,6 +575,8 @@ Count: 296
 - references/data/exam-ingestion/operation-answer-skill-contract.md
 - references/data/exam-ingestion/README.md
 - references/data/exam-ingestion/review-procedure.md
+- references/data/exam-ingestion/validator-cli-implementation-plan.json
+- references/data/exam-ingestion/validator-cli-implementation-plan.md
 - references/data/exercises/exam-question-overlays.json
 - references/data/exercises/graph-spec-representation-plan.json
 - references/data/exercises/graph-spec-representation-plan.md
@@ -633,6 +642,8 @@ Count: 296
 - references/data/sprints/EX-4.result.json
 - references/data/sprints/EX-5.plan.json
 - references/data/sprints/EX-5.result.json
+- references/data/sprints/EX-6.plan.json
+- references/data/sprints/EX-6.result.json
 - references/data/sprints/EX-NS0.plan.json
 - references/data/sprints/EX-NS0.result.json
 - references/data/sprints/GAME-UX-1.plan.json
@@ -820,6 +831,7 @@ Count: 296
 - references/qc-prompts/tree-integrity-audit.md
 - references/reference-team-roadmap.md
 - references/schemas/alignment-edge.schema.json
+- references/schemas/answer-skill-candidates.schema.json
 - references/schemas/claim.schema.json
 - references/schemas/evidence-anchor.schema.json
 - references/schemas/exam-ingestion.schema.json
@@ -829,6 +841,7 @@ Count: 296
 - references/schemas/game-item.schema.json
 - references/schemas/misconception.schema.json
 - references/schemas/operation-answer-skill-contract.schema.json
+- references/schemas/operation-candidates.schema.json
 - references/schemas/owned-content-edge.schema.json
 - references/schemas/owned-source-registry.schema.json
 - references/schemas/prior-knowledge-review.schema.json
@@ -837,6 +850,7 @@ Count: 296
 - references/schemas/report.schema.json
 - references/schemas/simulation.schema.json
 - references/schemas/skill-operation-registry.schema.json
+- references/schemas/source-annex-extraction-overlays.schema.json
 - references/schemas/source-document.schema.json
 - references/schemas/syllabus-code.schema.json
 - references/schemas/target-exercise.schema.json
@@ -848,7 +862,7 @@ Count: 296
 
 ## reports
 
-Count: 806
+Count: 818
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1111,6 +1125,9 @@ Count: 806
 - reports/review-gates/GATE-EX5-operation-answer-skill-contract/human-interview.md
 - reports/review-gates/GATE-EX5-operation-answer-skill-contract/review-packet.json
 - reports/review-gates/GATE-EX5-operation-answer-skill-contract/review-packet.md
+- reports/review-gates/GATE-EX6-validator-cli-planning/bundle-urls.md
+- reports/review-gates/GATE-EX6-validator-cli-planning/review-packet.json
+- reports/review-gates/GATE-EX6-validator-cli-planning/review-packet.md
 - reports/review-gates/GATE-PV-G1-schema/bundle-urls.md
 - reports/review-gates/GATE-PV-G1-schema/review-packet.json
 - reports/review-gates/GATE-PV-G1-schema/review-packet.md
@@ -1416,6 +1433,15 @@ Count: 806
 - reports/sprints/EX-5-plan.md
 - reports/sprints/EX-5-planning-review.md
 - reports/sprints/EX-5-result.md
+- reports/sprints/EX-6-baseline.md
+- reports/sprints/EX-6-diff-summary.md
+- reports/sprints/EX-6-lead-review-assignment.md
+- reports/sprints/EX-6-lead-review-corrections.md
+- reports/sprints/EX-6-lead-review-round1.md
+- reports/sprints/EX-6-lead-review-round2.md
+- reports/sprints/EX-6-plan.md
+- reports/sprints/EX-6-planning-review.md
+- reports/sprints/EX-6-result.md
 - reports/sprints/EX-NS0-baseline.md
 - reports/sprints/EX-NS0-diff-summary.md
 - reports/sprints/EX-NS0-lead-review-assignment.md
@@ -1677,7 +1703,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 225
+Count: 226
 
 - .gitignore
 - BUILD-CHAPTER.md
@@ -1761,6 +1787,7 @@ Count: 225
 - docs/roadmaps/outdated/reference-team-roadmap-v2.78-l20-technical-qa-ready.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.79-l20-closed-pass-with-flags.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.8-s4.1-conditions-calibrated.md
+- docs/roadmaps/outdated/reference-team-roadmap-v2.80-gate-ex5-pass-with-conditions.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.9-rx1-inventory-prepared.md
 - docs/roadmaps/README.md
 - docs/roadmaps/roadmap-version-index.json

@@ -2,7 +2,7 @@
   "schema_version": 1,
   "registry_id": "source-document-registry",
   "generated_by": "build-scripts/references/build-source-document-registry.js",
-  "generated_on": "2026-05-26T05:43:35.622Z",
+  "generated_on": "2026-05-26T06:33:15.426Z",
   "storage_decision": {
     "registry_location": "references/data/source-document-registry.json",
     "machine_registry_created": false,
@@ -16,15 +16,15 @@
     "references/SOURCE_OF_TRUTH.md"
   ],
   "summary": {
-    "record_count": 297,
-    "source_manifest_file_count": 302,
+    "record_count": 298,
+    "source_manifest_file_count": 303,
     "by_authority_level": {
       "external_primary": 30,
       "machine_registry": 5,
       "owned_curriculum_design": 5,
       "authored_judgement": 9,
       "generated_report": 2,
-      "governance_data": 212,
+      "governance_data": 213,
       "quality_protocol": 5,
       "planning": 1,
       "machine_contract": 28
@@ -41,7 +41,7 @@
       "inventory": 34,
       "exercise_metadata_overlay": 6,
       "exercise_overlay_readme": 1,
-      "sprint_metadata": 169,
+      "sprint_metadata": 170,
       "machine_projection": 3,
       "owned_source_readme": 1,
       "qc_prompt": 5,
@@ -57,7 +57,7 @@
       "archived": 1,
       "generated_diagnostic": 2,
       "mirrored": 25,
-      "governance_data": 210,
+      "governance_data": 211,
       "planning": 1,
       "schema_contract": 28
     },
@@ -65,7 +65,7 @@
       "public_citation_allowed_with_source_name": 30,
       "internal_only": 19,
       "internal_diagnostic_only": 2,
-      "not_public_citation_source": 246
+      "not_public_citation_source": 247
     },
     "evidence_anchor_coverage": {
       "required_document_ids": [
@@ -3983,6 +3983,44 @@
       "refresh_policy": "sprint_lifecycle",
       "source_hash": "2e77c8c71706074721fdbc019921bd10baa20a1f26018b054f79e753ec1b5027",
       "size_bytes": 2982,
+      "primary_evidence": false,
+      "curriculum_authority": false,
+      "allowed_downstream_uses": [
+        "internal_reference_context",
+        "rag_retrieval_with_authority_label"
+      ],
+      "blocked_downstream_uses": [
+        "student_diagnostics",
+        "adaptive_routing",
+        "student_facing_ai",
+        "automatic_lesson_sequencing",
+        "automatic_mastery_decisions",
+        "summative_assessment_decisions",
+        "external_authority",
+        "override_machine_registry"
+      ],
+      "evidence_anchor_ids": [],
+      "notes": [
+        "Governance data is canonical only for its declared governance artifact."
+      ]
+    },
+    {
+      "document_id": "path-references-data-sprints-ex-6-result",
+      "path": "references/data/sprints/EX-6.result.json",
+      "title": "EX 6.Result",
+      "source_type": "sprint_metadata",
+      "authority_level": "governance_data",
+      "source_version": "sha256:b30df58b0b362968652aea92babc34e293fa7b79042e0132cdadfb50098c8848",
+      "status": "governance_data",
+      "owner": "references_team",
+      "citation_policy": "cite_as_governance_record_only",
+      "public_citation_policy": "not_public_citation_source",
+      "layer": "governance_data",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "refresh_policy": "sprint_lifecycle",
+      "source_hash": "b30df58b0b362968652aea92babc34e293fa7b79042e0132cdadfb50098c8848",
+      "size_bytes": 4321,
       "primary_evidence": false,
       "curriculum_authority": false,
       "allowed_downstream_uses": [

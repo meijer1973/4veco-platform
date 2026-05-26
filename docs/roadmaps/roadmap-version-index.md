@@ -12,12 +12,13 @@ docs/roadmaps/roadmap-version-index.json
 
 | Roadmap | Version | Path | Notes |
 |---|---|---|---|
-| References Team Roadmap | `v2.81-ex6-validator-cli-planning` | `references/reference-team-roadmap.md` | Current operating roadmap after EX-6 completed validator/CLI implementation planning without candidate writes or q19 extraction execution. GATE-EX6 is the active human review gate. |
+| References Team Roadmap | `v2.82-gate-ex6-pass-with-conditions` | `references/reference-team-roadmap.md` | Current operating roadmap after GATE-EX6 closed as `pass_with_conditions` for validator/dry-run CLI implementation only. EX-7 is the active reference lane. |
 
 ## Outdated Archive
 
 | Roadmap | Version | Path | Superseded By |
 |---|---|---|---|
+| References Team Roadmap before GATE-EX6 closure | `v2.81-ex6-validator-cli-planning` | `docs/roadmaps/outdated/reference-team-roadmap-v2.81-ex6-validator-cli-planning.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before EX-6 validator/CLI planning completion | `v2.80-gate-ex5-pass-with-conditions` | `docs/roadmaps/outdated/reference-team-roadmap-v2.80-gate-ex5-pass-with-conditions.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before GATE-EX5 human-review closure | `v2.79-l20-closed-pass-with-flags` | `docs/roadmaps/outdated/reference-team-roadmap-v2.79-l20-closed-pass-with-flags.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before L2.0 human-review closure | `v2.78-l20-technical-qa-ready` | `docs/roadmaps/outdated/reference-team-roadmap-v2.78-l20-technical-qa-ready.md` | `references/reference-team-roadmap.md` |

@@ -1,0 +1,227 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-EX6-validator-cli-planning",
+  "sprint_id": "EX-6",
+  "status": "pass_with_conditions",
+  "closed_on": "2026-05-26",
+  "closure_confirmed_by_human": true,
+  "human_interview": "reports/review-gates/GATE-EX6-validator-cli-planning/human-interview.md",
+  "review_packet": "reports/review-gates/GATE-EX6-validator-cli-planning/review-packet.md",
+  "summary": "GATE-EX6 closes as pass_with_conditions for validator/dry-run CLI implementation only. It accepts the EX-6 schemas and validator/CLI implementation plan as adequate for a later bounded implementation sprint while preserving all candidate-storage, candidate-write, q19 extraction execution, protected mutation, lesson-output, CP-6/Year-1 closure, and student/product-use blocks.",
+  "protected_reference_data_changed": false,
+  "decision_scope": "validator_dry_run_cli_implementation_only",
+  "candidate_storage_authorized": false,
+  "candidate_writes_authorized": false,
+  "q19_extraction_execution_authorized": false,
+  "persistent_writes_authorized": false,
+  "student_product_use_authorized": false,
+  "explicit_decisions": [
+    {
+      "topic": "gate status",
+      "decision": "Close GATE-EX6 as pass_with_conditions - validator/dry-run CLI implementation only."
+    },
+    {
+      "topic": "schema split",
+      "decision": "Accept the three-schema split for operation candidates, answer-skill candidates, and source-annex extraction overlays."
+    },
+    {
+      "topic": "operation-candidate schema",
+      "decision": "Accept the operation-candidate schema for validator implementation, with a condition to distinguish weak and rejected unit evidence before persistent candidate writes."
+    },
+    {
+      "topic": "answer-skill schema",
+      "decision": "Accept the answer-skill schema as sufficient to keep q3 threshold wording and q15 two-step correction-model explanation visible."
+    },
+    {
+      "topic": "q19 extraction schema",
+      "decision": "Accept the q19 extraction schema for validator implementation, with conditional validation requiring substantive graph/source detail before reconstructable states."
+    },
+    {
+      "topic": "validator rejection rules",
+      "decision": "Accept rejection rules and add rules for empty/vague q19 reconstructability fields and ambiguous weak/rejected unit evidence."
+    },
+    {
+      "topic": "dry-run CLI contract",
+      "decision": "Accept the dry-run CLI contract; any future write branch must hard-fail without a later closed gate naming the exact write lane."
+    },
+    {
+      "topic": "fixture policy",
+      "decision": "Require non-persistent, test-only dry-run fixtures; do not commit realistic candidate records inside references/data/exam-ingestion/ as fixtures."
+    },
+    {
+      "topic": "next sprint routing",
+      "decision": "Authorize EX-7 Validator And Dry-Run CLI Implementation only, with no candidate-storage creation, no candidate writes, and no q19 extraction execution."
+    },
+    {
+      "topic": "mutation and product authority",
+      "decision": "No protected reference mutation, external-source mutation, machine-reference mutation, unit minting, operation-registry mutation, answer-skill mutation, candidate writes, q19 extraction execution, PV/graph mutation, lesson-output mutation, CP-6 closure, Year-1 closure, diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student-facing output is authorized."
+    }
+  ],
+  "accepted_outcomes": [
+    "GATE-EX6 may close as a planning review gate.",
+    "The three-schema split is accepted for later validator implementation.",
+    "The validator/CLI implementation plan is adequate for a bounded implementation sprint.",
+    "The next sprint may implement validators and dry-run CLIs only.",
+    "Dry-run fixtures may be used only as non-persistent, test-only artifacts.",
+    "GATE-EX5 routing facts remain binding: q3 A61 support with A15 rejected; q19 A42/D10 support with A45 weak; q19 gaps blocking; q3/q15 answer-skill needs visible."
+  ],
+  "blocked_outcomes": [
+    "No candidate-storage creation is authorized.",
+    "No candidate writes are authorized.",
+    "No q19 source-annex extraction execution is authorized.",
+    "No q19 graph-object extraction execution is authorized.",
+    "No protected reference mutation is authorized.",
+    "No external-source mutation is authorized.",
+    "No machine-reference mutation is authorized.",
+    "Do not hand-edit references/external/.",
+    "Do not hand-edit references/machine/.",
+    "No unit minting is authorized.",
+    "No operation-registry mutation is authorized.",
+    "No answer-skill mutation is authorized.",
+    "No PV/graph mutation is authorized.",
+    "No target-exercise promotion is authorized.",
+    "No lesson-output mutation is authorized.",
+    "No CP-6 closure is authorized.",
+    "No Year-1 closure is authorized.",
+    "No student diagnostics, adaptive routing, mastery decisions, automatic sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student-facing output is authorized."
+  ],
+  "conditions_to_reopen_or_pass": [
+    "The next sprint must not create operation-candidates.json, answer-skill-candidates.json, or source-annex-extraction-overlays.json.",
+    "The next sprint must not write candidate records.",
+    "The next sprint must not execute q19 source-annex or graph-object extraction.",
+    "Weak and rejected unit evidence must be distinguished before any persistent candidate write.",
+    "Validators must reject reconstructable q19 extraction states with empty or vague required graph/source detail fields.",
+    "Dry-run CLIs must not expose usable write mode under EX-6 authority.",
+    "A15 cannot be q3 annual-threshold support.",
+    "A45 cannot be primary q19 graph-shift support.",
+    "q3 threshold wording and q15 two-step correction-model explanation must remain visible as answer-skill needs.",
+    "Product boundaries remain false."
+  ],
+  "reviewed_routing_facts": [
+    {
+      "requirement_id": "q3-calc-1",
+      "classification": "operation_candidate_for_validator_dry_run_cli",
+      "supporting_unit_ids": ["A61"],
+      "rejected_unit_ids": ["A15"],
+      "candidate_storage_write_authorized": false
+    },
+    {
+      "requirement_id": "q3-answer-1",
+      "classification": "answer_skill_candidate_for_validator_dry_run_cli",
+      "candidate_storage_write_authorized": false
+    },
+    {
+      "requirement_id": "q19-source-annex-gap",
+      "classification": "blocking_extraction_prerequisite",
+      "blocking": true,
+      "source_annex_extraction_execution_authorized": false
+    },
+    {
+      "requirement_id": "q19-graph-object-gap",
+      "classification": "blocking_extraction_prerequisite",
+      "blocking": true,
+      "source_annex_extraction_execution_authorized": false
+    },
+    {
+      "requirement_id": "q19-graph-op-1",
+      "classification": "held_graph_pv_route",
+      "candidate_unit_ids": ["A42", "D10"],
+      "weak_or_prerequisite_unit_ids": ["A45"],
+      "blocking_gaps": ["q19-source-annex-gap", "q19-graph-object-gap"],
+      "mutation_authorized": false
+    },
+    {
+      "requirement_id": "q19-reason-1",
+      "classification": "provisional_operation_candidate_blocked",
+      "partial_support_unit_ids": ["D10", "D13"],
+      "blocking_gaps": ["q19-source-annex-gap", "q19-graph-object-gap"],
+      "mutation_authorized": false
+    },
+    {
+      "requirement_id": "q15-answer-1",
+      "classification": "answer_skill_candidate_for_validator_dry_run_cli",
+      "content_support_unit_ids": ["D27", "F03", "F09"],
+      "coverage_scope": "content_only_support",
+      "mutation_authorized": false
+    }
+  ],
+  "quality_log": [
+    {
+      "issue": "EX5/EX6 field-name mismatch",
+      "category": "schema-contract consistency",
+      "severity": "medium",
+      "next_action": "Choose one naming convention before validator implementation.",
+      "proof_required_to_close": "Schema, contract, validator, and dry-run fixture use the same field names."
+    },
+    {
+      "issue": "Weak and rejected unit evidence collapsed",
+      "category": "schema precision",
+      "severity": "medium-high",
+      "next_action": "Split weak/rejected fields or add typed support-assessment objects.",
+      "proof_required_to_close": "q3 A15 can be recorded as rejected while q19 A45 can be recorded as weak prerequisite support."
+    },
+    {
+      "issue": "q19 extraction arrays can be empty",
+      "category": "source/graph reconstruction integrity",
+      "severity": "high for q19",
+      "next_action": "Add conditional validator rules for reconstructable states.",
+      "proof_required_to_close": "Validator rejects reconstructable q19 records with empty units, scale/ticks, student-action regions, worksheet regions, or marks."
+    },
+    {
+      "issue": "Dry-run CLI filenames imply write intent",
+      "category": "tooling/authority clarity",
+      "severity": "medium",
+      "next_action": "Make scripts dry-run-only or hard-fail write mode unless later gate authorizes.",
+      "proof_required_to_close": "Running without dry-run cannot write; write mode requires later gate proof."
+    },
+    {
+      "issue": "Fixture path is environment-specific",
+      "category": "implementation portability",
+      "severity": "low-medium",
+      "next_action": "Use OS temp directory in implementation or document Codex-only assumption.",
+      "proof_required_to_close": "Tests pass cross-platform, or path is clearly scoped to Codex execution."
+    },
+    {
+      "issue": "q19 remains blocked across multiple gates",
+      "category": "evidence gap / source-annex extraction",
+      "severity": "high",
+      "next_action": "Keep q19 blocked; later create extraction validator before extraction execution.",
+      "proof_required_to_close": "q19 figure/worksheet graph objects are reconstructable and reviewed, or gaps remain blocking."
+    },
+    {
+      "issue": "Future storage paths are named but must not exist yet",
+      "category": "governance boundary",
+      "severity": "medium",
+      "next_action": "Implementation sprint must verify absence before and after.",
+      "proof_required_to_close": "Checker proves no candidate-storage files exist after sprint."
+    }
+  ],
+  "allowed_next_sprint": "EX-7",
+  "allowed_next_sprint_name": "Validator And Dry-Run CLI Implementation",
+  "allowed_next_sprint_scope": [
+    "implement operation-candidate validator",
+    "implement answer-skill candidate validator",
+    "implement source-annex extraction overlay validator",
+    "implement dry-run-only CLIs",
+    "create non-persistent test-only dry-run fixtures",
+    "add rejection tests for GATE-EX6 conditions"
+  ],
+  "blocked_next_sprint_scope": [
+    "candidate-storage creation",
+    "candidate writes",
+    "q19 extraction execution",
+    "protected reference mutation",
+    "external-source mutation",
+    "machine-reference mutation",
+    "unit minting",
+    "operation-registry mutation",
+    "answer-skill mutation",
+    "PV/graph mutation",
+    "target-exercise promotion",
+    "lesson handoff",
+    "lesson-output mutation",
+    "CP-6 closure",
+    "Year-1 closure",
+    "student/product use"
+  ]
+}
