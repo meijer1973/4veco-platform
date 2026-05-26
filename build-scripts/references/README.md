@@ -199,6 +199,44 @@ The readiness report is stored in:
 - `reports/json/reference-cli-coverage.json`
 - `reports/reference-cli-coverage.md`
 
+## EX-7 Exam-Ingestion Dry-Run Validators
+
+GATE-EX6 authorizes validator and dry-run CLI implementation only. These
+commands do not create candidate storage and do not write candidate records.
+
+Read-only validators:
+
+```powershell
+node build-scripts/references/check-operation-answer-skill-candidates.js
+node build-scripts/references/check-source-annex-extraction-overlays.js
+node build-scripts/references/check-ex7-dry-run-cli-implementation.js
+```
+
+Temporary fixture validation:
+
+```powershell
+node build-scripts/references/check-operation-answer-skill-candidates.js --operation-input <tmp-operation.json> --answer-input <tmp-answer.json>
+node build-scripts/references/check-source-annex-extraction-overlays.js --input <tmp-source-extraction.json>
+```
+
+Dry-run-only candidate checks:
+
+```powershell
+node build-scripts/references/operation-candidate-add.js --dry-run --spec-file <tmp-operation-candidate.json>
+node build-scripts/references/answer-skill-candidate-add.js --dry-run --spec-file <tmp-answer-skill-candidate.json>
+node build-scripts/references/source-annex-extraction-add.js --dry-run --kind graph --spec-file <tmp-graph-extraction.json>
+```
+
+Forbidden until a later human gate explicitly authorizes the exact lane:
+
+- creating `references/data/exam-ingestion/operation-candidates.json`
+- creating `references/data/exam-ingestion/answer-skill-candidates.json`
+- creating `references/data/exam-ingestion/source-annex-extraction-overlays.json`
+- candidate writes
+- q19 source-annex or graph-object extraction execution
+- operation-registry or answer-skill mutation
+- PV/graph mutation, lesson-output mutation, or student/product use
+
 ## Historical Utility Scripts
 
 Some scripts in this folder are one-shot or migration utilities rather than normal mutation commands.

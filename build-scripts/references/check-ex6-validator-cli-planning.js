@@ -9,8 +9,8 @@
  *
  * HOW TO ADAPT:
  * - Keep this checker strict while EX-6 remains planning-only.
- * - If a later gate authorizes implementation, create a separate checker for
- *   that gate instead of weakening the no-write assertions here.
+ * - After GATE-EX6 closes, this checker may allow the authorized EX-7 dry-run
+ *   validators and CLIs, but candidate storage must remain absent.
  */
 
 const fs = require('fs');
@@ -31,6 +31,7 @@ const EX5_CONTRACT = 'references/data/exam-ingestion/operation-answer-skill-cont
 const GATE_DIR = 'reports/review-gates/GATE-EX6-validator-cli-planning';
 const REVIEW_JSON = `${GATE_DIR}/review-packet.json`;
 const REVIEW_MD = `${GATE_DIR}/review-packet.md`;
+const GATE_EX6_CLOSURE = `${GATE_DIR}/gate-closure.json`;
 
 const FUTURE_STORAGE = [
   'references/data/exam-ingestion/operation-candidates.json',
@@ -126,6 +127,19 @@ function assertAbsent(relPaths, label) {
   assert(existing.length === 0, `${label} must not exist in EX-6: ${existing.join(', ')}`);
 }
 
+function hasGateEx6ImplementationAuthority() {
+  if (!fs.existsSync(file(GATE_EX6_CLOSURE))) return false;
+  const closure = readJson(GATE_EX6_CLOSURE);
+  return (
+    closure.status === 'pass_with_conditions' &&
+    closure.decision_scope === 'validator_dry_run_cli_implementation_only' &&
+    closure.allowed_next_sprint === 'EX-7' &&
+    closure.candidate_storage_authorized === false &&
+    closure.candidate_writes_authorized === false &&
+    closure.q19_extraction_execution_authorized === false
+  );
+}
+
 function checkGateAuthority() {
   const closure = readJson(EX5_CLOSURE);
   const contract = readJson(EX5_CONTRACT);
@@ -140,8 +154,13 @@ function checkGateAuthority() {
 
 function checkNoUnauthorizedArtifacts() {
   assertAbsent(FUTURE_STORAGE, 'future candidate storage');
-  assertAbsent(FUTURE_CLIS, 'future mutation CLIs');
-  assertAbsent(FUTURE_VALIDATORS, 'future candidate validators');
+  const implementationArtifacts = [...FUTURE_CLIS, ...FUTURE_VALIDATORS];
+  const existing = implementationArtifacts.filter((relPath) => fs.existsSync(file(relPath)));
+  if (existing.length === 0) return;
+  assert(
+    hasGateEx6ImplementationAuthority(),
+    `future dry-run validators/CLIs require closed GATE-EX6 authority: ${existing.join(', ')}`
+  );
 }
 
 function checkSchema(relPath) {

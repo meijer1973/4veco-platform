@@ -71,7 +71,7 @@
       "additionalProperties": false,
       "required": [
         "operation_id",
-        "status",
+        "operation_status",
         "label_nl",
         "operation_family",
         "source_exam_item_ids",
@@ -82,7 +82,7 @@
         "output_expectation",
         "required_steps",
         "supporting_unit_ids",
-        "weak_or_rejected_unit_ids",
+        "unit_support_assessments",
         "blocking_gap_ids",
         "review_state",
         "authority_boundary",
@@ -94,7 +94,7 @@
           "type": "string",
           "pattern": "^EX_OP_[A-Z0-9_]+$"
         },
-        "status": {
+        "operation_status": {
           "enum": [
             "design_candidate",
             "blocked_by_source_gap",
@@ -145,7 +145,13 @@
           "type": "array",
           "items": { "type": "string", "minLength": 1 }
         },
+        "unit_support_assessments": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/unit_support_assessment" },
+          "minItems": 1
+        },
         "weak_or_rejected_unit_ids": {
+          "description": "Deprecated compatibility field. Validators require typed unit_support_assessments so weak and rejected evidence cannot be collapsed.",
           "type": "array",
           "items": { "type": "string", "minLength": 1 }
         },
@@ -165,6 +171,22 @@
         "authority_boundary": { "$ref": "#/$defs/authority_boundary" },
         "mutation_authorized": { "const": false },
         "student_product_use_authorized": { "const": false }
+      }
+    },
+    "unit_support_assessment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["unit_id", "assessment", "rationale"],
+      "properties": {
+        "unit_id": { "type": "string", "minLength": 1 },
+        "assessment": {
+          "enum": [
+            "supporting",
+            "weak_prerequisite",
+            "rejected"
+          ]
+        },
+        "rationale": { "type": "string", "minLength": 1 }
       }
     },
     "operation_io_object": {

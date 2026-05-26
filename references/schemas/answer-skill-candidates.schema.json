@@ -71,7 +71,7 @@
       "additionalProperties": false,
       "required": [
         "answer_skill_id",
-        "status",
+        "answer_skill_status",
         "label_nl",
         "answer_format",
         "source_exam_item_ids",
@@ -94,7 +94,7 @@
           "type": "string",
           "pattern": "^EX_ANS_[A-Z0-9_]+$"
         },
-        "status": {
+        "answer_skill_status": {
           "enum": [
             "design_candidate",
             "reviewed_candidate",

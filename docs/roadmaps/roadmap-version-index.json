@@ -15,13 +15,14 @@
   "roadmaps": [
     {
       "roadmap_id": "references-team-roadmap",
-      "version": "v2.82-gate-ex6-pass-with-conditions",
+      "version": "v2.83-ex7-dry-run-cli-implementation",
       "title": "References Team Roadmap",
       "status": "active",
       "path": "references/reference-team-roadmap.md",
       "owner": "references_team",
       "updated_on": "2026-05-26",
       "supersedes": [
+        "docs/roadmaps/outdated/reference-team-roadmap-v2.82-gate-ex6-pass-with-conditions.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.81-ex6-validator-cli-planning.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.80-gate-ex5-pass-with-conditions.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.79-l20-closed-pass-with-flags.md",
@@ -103,7 +104,18 @@
         "knowledge/Exercise schema and quality/reference-team-roadmap Live version 28 April.md",
         "knowledge/Exercise schema and quality/roadmap-updated-repository-checked.md"
       ],
-      "notes": "Current operating roadmap after GATE-EX6 closed as pass_with_conditions for validator/dry-run CLI implementation only. EX-7 validator and dry-run CLI implementation is the active reference lane with no candidate storage, candidate writes, or q19 extraction execution, and broad companion/product scaling remains blocked until L1.7B-R, GATE-L1.7B, EX-7 or an explicit waiver, and Scale Gate 1 close or are explicitly waived."
+      "notes": "Current operating roadmap after EX-7 completed validator and dry-run CLI implementation without candidate storage, candidate writes, q19 extraction execution, protected mutation, lesson-output mutation, or student/product use. GAME-UX-2 is the next explicit platform start decision or waiver before Scale Gate 1."
+    },
+    {
+      "roadmap_id": "references-team-roadmap-v2.82",
+      "version": "v2.82-gate-ex6-pass-with-conditions",
+      "title": "References Team Roadmap before EX-7 completion",
+      "status": "outdated",
+      "path": "docs/roadmaps/outdated/reference-team-roadmap-v2.82-gate-ex6-pass-with-conditions.md",
+      "owner": "references_team",
+      "updated_on": "2026-05-26",
+      "superseded_by": "references/reference-team-roadmap.md",
+      "notes": "Snapshot archived before EX-7 implemented the validator/dry-run CLI layer."
     },
     {
       "roadmap_id": "references-team-roadmap-v2.81",

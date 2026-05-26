@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-05-26T06:33:22.456Z
+Generated: 2026-05-26T06:57:11.017Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 1758
+Files indexed: 1762
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -452,7 +452,7 @@ Count: 42
 
 ## validators
 
-Count: 97
+Count: 101
 
 - build-scripts/rag/validate-chunks.js
 - build-scripts/rag/validate-query-output.js
@@ -530,9 +530,13 @@ Count: 97
 - build-scripts/sprints/check-sprint-plan.js
 - build-scripts/sprints/check-sprint-result.js
 - docs/roadmaps/outdated/reference-team-roadmap-v2.22-pv2-procedure-visual-schema-validator.md
+- docs/roadmaps/outdated/reference-team-roadmap-v2.81-ex6-validator-cli-planning.md
 - references/data/exam-ingestion/validator-cli-implementation-plan.json
 - references/data/exam-ingestion/validator-cli-implementation-plan.md
 - reports/review-gates/GATE-EX6-validator-cli-planning/bundle-urls.md
+- reports/review-gates/GATE-EX6-validator-cli-planning/gate-closure.json
+- reports/review-gates/GATE-EX6-validator-cli-planning/gate-closure.md
+- reports/review-gates/GATE-EX6-validator-cli-planning/human-interview.md
 - reports/review-gates/GATE-EX6-validator-cli-planning/review-packet.json
 - reports/review-gates/GATE-EX6-validator-cli-planning/review-packet.md
 - reports/sprints/CP.6e-validation-log.md
@@ -862,7 +866,7 @@ Count: 303
 
 ## reports
 
-Count: 818
+Count: 821
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1126,6 +1130,9 @@ Count: 818
 - reports/review-gates/GATE-EX5-operation-answer-skill-contract/review-packet.json
 - reports/review-gates/GATE-EX5-operation-answer-skill-contract/review-packet.md
 - reports/review-gates/GATE-EX6-validator-cli-planning/bundle-urls.md
+- reports/review-gates/GATE-EX6-validator-cli-planning/gate-closure.json
+- reports/review-gates/GATE-EX6-validator-cli-planning/gate-closure.md
+- reports/review-gates/GATE-EX6-validator-cli-planning/human-interview.md
 - reports/review-gates/GATE-EX6-validator-cli-planning/review-packet.json
 - reports/review-gates/GATE-EX6-validator-cli-planning/review-packet.md
 - reports/review-gates/GATE-PV-G1-schema/bundle-urls.md
