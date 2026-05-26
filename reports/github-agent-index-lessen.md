@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-lessen
 
-Generated: 2026-05-26T13:39:47.212Z
+Generated: 2026-05-26T16:21:24.401Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-lessen`
-Files indexed: 1494
+Files indexed: 1509
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -81,10 +81,11 @@ _No files indexed in this group._
 
 ## validators
 
-Count: 9
+Count: 11
 
 - archive/sprints/GATE-L1.7B/GATE-L1.7B-validation-log.md
 - archive/sprints/L1.7A/L1.7A-validation-log.md
+- archive/sprints/L1.7B-MAP/L1.7B-MAP-validation-log.md
 - archive/sprints/L1.7B-R/L1.7B-R-validation-log.md
 - archive/sprints/L1.7B/L1.7B-validation-log.md
 - archive/sprints/L1.7C-0/L1.7C-0-validation-log.md
@@ -92,6 +93,7 @@ Count: 9
 - archive/sprints/L1.7C/L1.7C-validation-log.md
 - archive/sprints/L1.7D/L1.7D-validation-log.md
 - archive/sprints/L2.0/L2.0-validation-log.md
+- archive/sprints/SPEC-END-STATE/SPEC-END-STATE-validation-log.md
 
 ## references
 
@@ -2405,7 +2407,7 @@ Count: 817
 
 ## other
 
-Count: 363
+Count: 376
 
 - _team-b-reference/1.1.1/uitleg vaardigheden team b.html
 - _team-b-reference/1.1.1/uitleg voorkennis team b.html
@@ -2638,7 +2640,11 @@ Count: 363
 - archive/sprints/L1.7A/L1.7A-flag-triage.md
 - archive/sprints/L1.7A/L1.7A-readiness-matrix.md
 - archive/sprints/L1.7A/L1.7A-sprint-plan.md
+- archive/sprints/L1.7B-MAP/L1.7B-MAP-baseline-audit.md
+- archive/sprints/L1.7B-MAP/L1.7B-MAP-human-review-packet.md
+- archive/sprints/L1.7B-MAP/L1.7B-MAP-metadata-contract.md
 - archive/sprints/L1.7B-MAP/L1.7B-MAP-sprint-plan.md
+- archive/sprints/L1.7B-MAP/L1.7B-MAP-technical-qa-report.md
 - archive/sprints/L1.7B-P23/L1.7B-P23-sprint-plan.md
 - archive/sprints/L1.7B-Q2/L1.7B-Q2-sprint-plan.md
 - archive/sprints/L1.7B-R/L1.7B-R-baseline-audit.md
@@ -2671,14 +2677,18 @@ Count: 363
 - archive/sprints/L1.7C-0/L1.7C-0-handoff-to-platform.md
 - archive/sprints/L1.7C-0/L1.7C-0-shared-skill-map-contract.md
 - archive/sprints/L1.7C-0/L1.7C-0-sprint-plan.md
+- archive/sprints/L1.7C-MATH/L1.7C-MATH-closure-log.md
 - archive/sprints/L1.7C-MATH/L1.7C-MATH-history-audit.md
 - archive/sprints/L1.7C-MATH/L1.7C-MATH-human-review-packet.md
+- archive/sprints/L1.7C-MATH/L1.7C-MATH-human-review-record.md
+- archive/sprints/L1.7C-MATH/L1.7C-MATH-lead-review-summary.md
 - archive/sprints/L1.7C-MATH/L1.7C-MATH-platform-handoff.md
 - archive/sprints/L1.7C-MATH/L1.7C-MATH-screenshots/1-1-2-percentages-en-indexcijfers-redeneer-spel-desktop-dark.png
 - archive/sprints/L1.7C-MATH/L1.7C-MATH-screenshots/1-1-2-percentages-en-indexcijfers-redeneer-spel-desktop-light.png
 - archive/sprints/L1.7C-MATH/L1.7C-MATH-screenshots/1-1-2-percentages-en-indexcijfers-redeneer-spel-mobile-dark.png
 - archive/sprints/L1.7C-MATH/L1.7C-MATH-screenshots/1-1-2-percentages-en-indexcijfers-redeneer-spel-mobile-light.png
 - archive/sprints/L1.7C-MATH/L1.7C-MATH-screenshots/1-1-2-percentages-en-indexcijfers-wiskundevaardigheden-desktop-dark.png
+- archive/sprints/L1.7C-MATH/L1.7C-MATH-screenshots/1-1-2-percentages-en-indexcijfers-wiskundevaardigheden-desktop-light-result.png
 - archive/sprints/L1.7C-MATH/L1.7C-MATH-screenshots/1-1-2-percentages-en-indexcijfers-wiskundevaardigheden-desktop-light.png
 - archive/sprints/L1.7C-MATH/L1.7C-MATH-screenshots/1-1-2-percentages-en-indexcijfers-wiskundevaardigheden-mobile-dark.png
 - archive/sprints/L1.7C-MATH/L1.7C-MATH-screenshots/1-1-2-percentages-en-indexcijfers-wiskundevaardigheden-mobile-light.png
@@ -2691,6 +2701,8 @@ Count: 363
 - archive/sprints/L1.7C-MATH/L1.7C-MATH-screenshots/index-mobile-dark.png
 - archive/sprints/L1.7C-MATH/L1.7C-MATH-screenshots/index-mobile-light.png
 - archive/sprints/L1.7C-MATH/L1.7C-MATH-sprint-plan.md
+- archive/sprints/L1.7C-MATH/L1.7C-MATH-student-experience-review.md
+- archive/sprints/L1.7C-MATH/L1.7C-MATH-teacher-learning-quality-review.md
 - archive/sprints/L1.7C-MATH/L1.7C-MATH-technical-qa-report.md
 - archive/sprints/L1.7C/L1.7C-closure-log.md
 - archive/sprints/L1.7C/L1.7C-game-row-baseline-audit.md
@@ -2749,6 +2761,8 @@ Count: 363
 - archive/sprints/REV-STD-1/REV-STD-1-inherited-flag-table.md
 - archive/sprints/REV-STD-1/REV-STD-1-review-standard.md
 - archive/sprints/REV-STD-1/REV-STD-1-sprint-plan.md
+- archive/sprints/SPEC-END-STATE/SPEC-END-STATE-closure-log.md
+- archive/sprints/SPEC-END-STATE/SPEC-END-STATE-sprint-plan.md
 - archive/sprints/SYNC-1/SYNC-1-roadmap-reconciliation-log.md
 - archive/sprints/SYNC-2/SYNC-2-companion-pre-scale-roadmap-update.md
 - archive/sprints/SYNC-3/SYNC-3-shared-skill-map-roadmap-update.md
@@ -2769,4 +2783,5 @@ Count: 363
 - pv-g4-proof-records/reports/PVG4-proof-001-procedure-contract-report.json
 - pv-g4-proof-records/reports/PVG4-proof-002-a61-table-trace-report.json
 - specifications/companion-core-specifications.md
+- specifications/product-end-state.md
 - vw-1022-a-25-1-o.pdf

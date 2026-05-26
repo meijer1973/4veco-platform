@@ -2,8 +2,8 @@
   "repo": "4veco-platform",
   "root": "C:\\Projects\\4veco\\4veco-platform",
   "available": true,
-  "generated_at": "2026-05-26T13:39:47.175Z",
-  "file_count": 1797,
+  "generated_at": "2026-05-26T16:21:24.369Z",
+  "file_count": 1798,
   "inventory_scope": "git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees",
   "skipped_directories": [
     ".cache",
@@ -84,6 +84,7 @@
       "engines/tests/converter-error-exit.test.js",
       "engines/tests/docx-style-ids-unique.test.js",
       "engines/tests/exit-ticket-engine.test.js",
+      "engines/tests/exit-ticket-metadata-alignment.test.js",
       "engines/tests/exit-ticket-ui.test.js",
       "engines/tests/fig-3-step-count.test.js",
       "engines/tests/graphical-data.test.js",

@@ -27,7 +27,13 @@ node scripts/validate-paragraph.js --mode part-a --profile publisher-print "<par
 | `office` | Student-web plus Office exports when editable/downloadable teacher files are explicitly requested. | No |
 | `publisher-print` | Textbook PDF packet for publisher/print handoff. This is a separate careful pipeline, not the fast student-web build. | `check-book.js` uses this for Part A book health |
 
-> **Before you start:** Read the **Design Principles** section in [AGENTS.md](AGENTS.md#design-principles). Two principles govern everything: **Dual Coding** (every concept pairs text with a visual) and **Unified Student Experience** (same procedures and approaches across all formats). These are non-negotiable.
+> **Before you start:** Read the product end-state specification at
+> `../4veco-lessen/specifications/product-end-state.md` and the **Design
+> Principles** section in [AGENTS.md](AGENTS.md#design-principles). The product
+> north star is a visible route from current readiness to target-exercise
+> readiness. Two design principles govern every surface: **Dual Coding** (every
+> concept pairs text with a visual) and **Unified Student Experience** (same
+> procedures and approaches across all formats). These are non-negotiable.
 
 ---
 
@@ -36,6 +42,12 @@ node scripts/validate-paragraph.js --mode part-a --profile publisher-print "<par
 These four references frame every paragraph build, regardless of mode. Read them before touching either Part A or Part B.
 
 - **`AGENTS.md`** — architecture, deploy rules, design principles. Hoist of hard rules.
+- **`../4veco-lessen/specifications/product-end-state.md`** — canonical
+  end-state definition: every paragraph route moves from current readiness to
+  target-exercise readiness.
+- **`../4veco-lessen/specifications/companion-core-specifications.md`** —
+  stable companion-surface specifications for routes, game row, exit tickets,
+  review verdicts, and product-use boundaries.
 - **`skills/econ-companion-artifacts.md`** — Part B authoring + regeneration spec. Required reading for any companion edit; per-format Part B skills inherit from it. Skill wins over per-format skill on student-facing rules.
 - **`agents/econ-companion-visual-review.md`** — the Part B closure gate. Companion edits ship only when this agent returns PASS or PASS WITH FLAGS.
 - **`_paragraph-plan.md`** (per paragraph) — the per-paragraph source of truth (concepts, terminology, visual-variants, procedure registry references). Both Part A and Part B builders read it.

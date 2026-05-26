@@ -42,6 +42,8 @@ Useful entry points:
 
 - `RESEARCH_AGENT_MAP.md`
 - `AGENTS.md`
+- `4veco-lessen/specifications/product-end-state.md`
+- `4veco-lessen/specifications/companion-core-specifications.md`
 - `BUILD-PARAGRAPH.md`
 - `BUILD-CHAPTER.md`
 - `build-scripts/README.md`

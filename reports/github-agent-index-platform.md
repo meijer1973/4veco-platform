@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-05-26T13:39:47.175Z
+Generated: 2026-05-26T16:21:24.369Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 1797
+Files indexed: 1798
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -41,7 +41,7 @@ Count: 8
 
 ## engines
 
-Count: 70
+Count: 71
 
 - engines/adaptive-seam.js
 - engines/exit-ticket-engine.js
@@ -83,6 +83,7 @@ Count: 70
 - engines/tests/converter-error-exit.test.js
 - engines/tests/docx-style-ids-unique.test.js
 - engines/tests/exit-ticket-engine.test.js
+- engines/tests/exit-ticket-metadata-alignment.test.js
 - engines/tests/exit-ticket-ui.test.js
 - engines/tests/fig-3-step-count.test.js
 - engines/tests/graphical-data.test.js

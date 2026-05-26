@@ -28,6 +28,12 @@ Repository boundary:
 
 The platform repository does not contain final student-facing book output. Student-facing markdown/PDF output is built in sibling targets such as `../4veco-lessen/`; legacy deploy output lives outside this repo.
 
+Product end-state note: for paragraph-build, companion, exit-ticket,
+game-row, exam-ingestion, review-standard, or Scale Gate work, load
+`4veco-lessen/specifications/product-end-state.md`. It is the canonical
+definition of the generated route from current readiness to target-exercise
+readiness.
+
 Exam-ingestion north star: a new official CvTE economics exam question should
 eventually be ingestible as an external exercise record with prompt, source
 material, figures/tables/graphs, official correction model, point allocation,
@@ -157,6 +163,8 @@ Cross-repo entry point (4veco-lessen):
 
 - https://raw.githubusercontent.com/meijer1973/4veco-lessen/main/RESEARCH_AGENT_MAP.md
 - https://raw.githubusercontent.com/meijer1973/4veco-lessen/main/RESEARCH_AGENT_PROMPT.md
+- https://raw.githubusercontent.com/meijer1973/4veco-lessen/main/specifications/product-end-state.md
+- https://raw.githubusercontent.com/meijer1973/4veco-lessen/main/specifications/companion-core-specifications.md
 
 URL index (single fetch unlocks the rest of the surface):
 
@@ -438,7 +446,9 @@ reference_paths (full URLs):
 Agents MUST follow this sequence:
 
 1. Load this map.
-2. Load `AGENTS.md` and `CLAUDE.md`.
+2. Load `AGENTS.md`, `CLAUDE.md`, and for product/paragraph/companion/review
+   questions load the cross-repo product baseline:
+   `../4veco-lessen/specifications/product-end-state.md`.
 3. Classify the task:
    - repository orientation or architecture
    - platform generator/deploy behavior

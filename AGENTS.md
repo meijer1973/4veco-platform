@@ -7,6 +7,8 @@ Platform repo for generating lesson materials for VWO 4 economie. Contains game 
 ## Read first
 
 - Use `../CLAUDE.md` "Working agreement — how Claude operates in this repo" for the seven non-negotiable operating rules (read-first, sanity-check-plans, be-honest-about-mistakes, quality-over-patchwork). Applies to every task.
+- Use `../4veco-lessen/specifications/product-end-state.md` as the canonical product north star before roadmap, paragraph-build, companion, exit-ticket, exam-ingestion, or Scale Gate work.
+- Use `../4veco-lessen/specifications/companion-core-specifications.md` as the stable companion-surface specification.
 - Use [BUILD-PARAGRAPH.md](C:\Projects\4veco\4veco-platform\BUILD-PARAGRAPH.md) as the end-to-end guide for building a complete paragraph.
 - Use [BUILD-CHAPTER.md](C:\Projects\4veco\4veco-platform\BUILD-CHAPTER.md) as the end-to-end guide for assembling paragraphs into a chapter.
 - Use `AGENTS.md` for repo overview, architecture, deploy rules, and quality standards.
@@ -88,6 +90,14 @@ Still frozen separately:
 ## Design Principles
 
 These two principles are the DNA of every product this platform produces — lesson materials, textbooks, assessments, and any future format. Every builder, skill, and template must follow them.
+
+The product end state is defined in
+`../4veco-lessen/specifications/product-end-state.md`: every paragraph gives
+the student a visible route from current readiness to target-exercise
+readiness. Platform generators, engines, validators, and source-data contracts
+must support that route. A sprint may deliberately ship a smaller controlled
+step, but it must name the follow-up work needed to reach the full product
+state.
 
 ### 1. Dual Coding (Paivio/Mayer)
 
