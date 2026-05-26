@@ -184,4 +184,36 @@ describe('paragraph landing page student-web links', () => {
         expect(chapterHtml).toContain('Oefen gemengd');
         expect(chapterHtml).not.toContain('Verdiep</span>');
     });
+
+    test('shows Check only when a generated checkpoint page exists', () => {
+        const paragraph = path.join(tmpDir, '1.1 Hoofdstuk Test', '1.1.1 Testparagraaf');
+        fs.mkdirSync(paragraph, { recursive: true });
+        const prefix = '1.1.1 Testparagraaf';
+
+        writeFile(path.join(paragraph, `${prefix} ${DASH} uitleg vaardigheden.html`));
+        writeFile(path.join(paragraph, `${prefix} ${DASH} redeneer-spel.html`));
+
+        let result = spawnSync(process.execPath, [BUILDER], {
+            cwd: PLATFORM_ROOT,
+            env: { ...process.env, MODULE_ROOT: tmpDir },
+            encoding: 'utf8',
+        });
+        expect(result.status).toBe(0);
+        let html = fs.readFileSync(path.join(paragraph, 'index.html'), 'utf8');
+        expect(html).not.toContain('data-route-layer="check"');
+
+        writeFile(path.join(paragraph, `${prefix} ${DASH} exit-ticket.html`));
+        result = spawnSync(process.execPath, [BUILDER], {
+            cwd: PLATFORM_ROOT,
+            env: { ...process.env, MODULE_ROOT: tmpDir },
+            encoding: 'utf8',
+        });
+        expect(result.status).toBe(0);
+        html = fs.readFileSync(path.join(paragraph, 'index.html'), 'utf8');
+        expect(html).toContain('data-route-layer="check"');
+        expect(html).toContain('Korte check');
+        expect(html).toContain('Kies wat je nog wilt oefenen');
+        expect(html).toContain('Rond af met gerichte oefentips');
+        expect(html).not.toMatch(/\b(PV|A\d{2}|B\d{2}|adaptief|diagnostisch|diagnose|mastery|sequencing|summatief|summative|AI)\b/i);
+    });
 });

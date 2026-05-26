@@ -62,6 +62,7 @@ function copyEngines() {
         'quiz-engine.js', 'quiz-ui.js', 'quiz.css',
         'reasoning-engine.js', 'reasoning-ui.js', 'reasoning.css',
         'skill-map-engine.js', 'skill-map-route-ui.js', 'skill-map-route.css',
+        'exit-ticket-engine.js', 'exit-ticket-ui.js', 'exit-ticket.css',
         'skilltree-engine.js', 'skilltree-ui.js', 'skilltree.css',
         'newsdetective-engine.js', 'newsdetective-ui.js', 'newsdetective.css',
         'procedure-engine.js', 'procedure-ui.js', 'procedure.css',
@@ -357,6 +358,7 @@ function runBuildScripts() {
         { name: 'News detective shells', cmd: 'node build-scripts/platform/build-newsdetective-shells.js' },
         { name: 'Procedure shells', cmd: 'node build-scripts/platform/build-procedure-shells.js' },
         { name: 'Graphical game shells', cmd: 'node build-scripts/platform/build-graphical-shells.js' },
+        { name: 'Exit-ticket checkpoint shells', cmd: 'node build-scripts/platform/build-exit-ticket-shells.js' },
         { name: 'Landing pages', cmd: 'node build-scripts/platform/build-landing-page.js' },
         // Idempotent: migrates any un-migrated `uitleg vaardigheden.html` files
         // to the shared voorkennis.css/js token system. Safe to re-run; already-

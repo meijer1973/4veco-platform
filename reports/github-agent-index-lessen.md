@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-lessen
 
-Generated: 2026-05-26T06:57:11.052Z
+Generated: 2026-05-26T07:54:24.263Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-lessen`
-Files indexed: 1436
+Files indexed: 1441
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -105,7 +105,7 @@ _No files indexed in this group._
 
 ## book folders
 
-Count: 835
+Count: 839
 
 - Boek 1 - Grondslagen, vraag en aanbod/_assets/1.1.1_ex_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/_assets/1.1.1_ex_1.svg
@@ -891,6 +891,10 @@ Count: 835
 - Boek 1 - Grondslagen, vraag en aanbod/deploy-config.json
 - Boek 1 - Grondslagen, vraag en aanbod/index.html
 - Boek 1 - Grondslagen, vraag en aanbod/shared/adaptive-seam.js
+- Boek 1 - Grondslagen, vraag en aanbod/shared/exit-ticket-engine.js
+- Boek 1 - Grondslagen, vraag en aanbod/shared/exit-ticket-ui.js
+- Boek 1 - Grondslagen, vraag en aanbod/shared/exit-ticket.css
+- Boek 1 - Grondslagen, vraag en aanbod/shared/exit-ticket/1.1.1.js
 - Boek 1 - Grondslagen, vraag en aanbod/shared/graphical-engine.js
 - Boek 1 - Grondslagen, vraag en aanbod/shared/graphical-ui.js
 - Boek 1 - Grondslagen, vraag en aanbod/shared/graphical.css
@@ -945,7 +949,7 @@ Count: 835
 
 ## paragraph folders
 
-Count: 626
+Count: 627
 
 - "archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/1.3.2 Kostenstructuren \342\200\223 antwoorden.html"
 - "archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/1.3.2 Kostenstructuren \342\200\223 antwoorden.md"
@@ -979,6 +983,7 @@ Count: 626
 - "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken \342\200\223 begeleide inoefening \342\200\223 antwoorden.docx"
 - "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken \342\200\223 begeleide inoefening \342\200\223 vragen.docx"
 - "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken \342\200\223 begeleide inoefening.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken \342\200\223 exit-ticket.html"
 - "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken \342\200\223 instapquiz.html"
 - "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken \342\200\223 midden \342\200\223 antwoorden.docx"
 - "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken \342\200\223 midden \342\200\223 vragen.docx"

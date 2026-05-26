@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-05-26T06:57:11.017Z
+Generated: 2026-05-26T07:54:24.219Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 1762
+Files indexed: 1781
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -111,7 +111,7 @@ Count: 65
 
 ## build scripts
 
-Count: 289
+Count: 296
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -211,6 +211,7 @@ Count: 289
 - build-scripts/rag/validate-query-output.js
 - build-scripts/rag/validate-retrieval-eval-results.js
 - build-scripts/README.md
+- build-scripts/references/answer-skill-candidate-add.js
 - build-scripts/references/apply-audit.js
 - build-scripts/references/apply-r4.5-approved-mutations.js
 - build-scripts/references/audit-2023-2024.json
@@ -259,6 +260,7 @@ Count: 289
 - build-scripts/references/check-ex4-mutation-planning.js
 - build-scripts/references/check-ex5-operation-answer-skill-contract.js
 - build-scripts/references/check-ex6-validator-cli-planning.js
+- build-scripts/references/check-ex7-dry-run-cli-implementation.js
 - build-scripts/references/check-exam-ingestion-contract.js
 - build-scripts/references/check-exam-ingestion-coverage.js
 - build-scripts/references/check-exam-ingestion-pilots.js
@@ -266,6 +268,7 @@ Count: 289
 - build-scripts/references/check-exercise-overlay-conditions.js
 - build-scripts/references/check-exercise-overlays.js
 - build-scripts/references/check-misconceptions.js
+- build-scripts/references/check-operation-answer-skill-candidates.js
 - build-scripts/references/check-owned-content-graph.js
 - build-scripts/references/check-owned-source-registry.js
 - build-scripts/references/check-procedure-visual-coverage.js
@@ -297,6 +300,7 @@ Count: 289
 - build-scripts/references/check-s9a-d04-cli-mutation.js
 - build-scripts/references/check-skill-operation-registry.js
 - build-scripts/references/check-skilltree-generator-readiness.js
+- build-scripts/references/check-source-annex-extraction-overlays.js
 - build-scripts/references/check-source-document-registry.js
 - build-scripts/references/check-source-manifest.js
 - build-scripts/references/check-source-of-truth.js
@@ -313,10 +317,12 @@ Count: 289
 - build-scripts/references/exam-question-gap-audit.js
 - build-scripts/references/extract-eindtermen.js
 - build-scripts/references/extract-exam-questions.js
+- build-scripts/references/lib/exam-ingestion-candidate-validation.js
 - build-scripts/references/math-migration-map.json
 - build-scripts/references/migrate-course-target-exercises-v5.js
 - build-scripts/references/migrate-l0-to-l1-economic.js
 - build-scripts/references/migrate-paths.js
+- build-scripts/references/operation-candidate-add.js
 - build-scripts/references/prepare-empty-needs-review.js
 - build-scripts/references/README.md
 - build-scripts/references/refresh-math-procedures.js
@@ -325,6 +331,7 @@ Count: 289
 - build-scripts/references/rewrite-skilltree-test-ids.js
 - build-scripts/references/seed-begrippen.js
 - build-scripts/references/seed-math-units.js
+- build-scripts/references/source-annex-extraction-add.js
 - build-scripts/references/term-add.js
 - build-scripts/references/term-deprecate.js
 - build-scripts/references/term-lib.js
@@ -452,7 +459,7 @@ Count: 42
 
 ## validators
 
-Count: 101
+Count: 105
 
 - build-scripts/rag/validate-chunks.js
 - build-scripts/rag/validate-query-output.js
@@ -465,6 +472,7 @@ Count: 101
 - build-scripts/references/check-ex4-mutation-planning.js
 - build-scripts/references/check-ex5-operation-answer-skill-contract.js
 - build-scripts/references/check-ex6-validator-cli-planning.js
+- build-scripts/references/check-ex7-dry-run-cli-implementation.js
 - build-scripts/references/check-exam-ingestion-contract.js
 - build-scripts/references/check-exam-ingestion-coverage.js
 - build-scripts/references/check-exam-ingestion-pilots.js
@@ -472,6 +480,7 @@ Count: 101
 - build-scripts/references/check-exercise-overlay-conditions.js
 - build-scripts/references/check-exercise-overlays.js
 - build-scripts/references/check-misconceptions.js
+- build-scripts/references/check-operation-answer-skill-candidates.js
 - build-scripts/references/check-owned-content-graph.js
 - build-scripts/references/check-owned-source-registry.js
 - build-scripts/references/check-procedure-visual-coverage.js
@@ -503,11 +512,13 @@ Count: 101
 - build-scripts/references/check-s9a-d04-cli-mutation.js
 - build-scripts/references/check-skill-operation-registry.js
 - build-scripts/references/check-skilltree-generator-readiness.js
+- build-scripts/references/check-source-annex-extraction-overlays.js
 - build-scripts/references/check-source-document-registry.js
 - build-scripts/references/check-source-manifest.js
 - build-scripts/references/check-source-of-truth.js
 - build-scripts/references/check-target-exercise-flags.js
 - build-scripts/references/check-unit-design-status.js
+- build-scripts/references/lib/exam-ingestion-candidate-validation.js
 - build-scripts/references/validate-alignment-graph.js
 - build-scripts/references/validate-core-schemas.js
 - build-scripts/references/validate-prior-knowledge-schema.js
@@ -558,7 +569,7 @@ Count: 101
 
 ## references
 
-Count: 303
+Count: 305
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -648,6 +659,8 @@ Count: 303
 - references/data/sprints/EX-5.result.json
 - references/data/sprints/EX-6.plan.json
 - references/data/sprints/EX-6.result.json
+- references/data/sprints/EX-7.plan.json
+- references/data/sprints/EX-7.result.json
 - references/data/sprints/EX-NS0.plan.json
 - references/data/sprints/EX-NS0.result.json
 - references/data/sprints/GAME-UX-1.plan.json
@@ -866,7 +879,7 @@ Count: 303
 
 ## reports
 
-Count: 821
+Count: 830
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1449,6 +1462,15 @@ Count: 821
 - reports/sprints/EX-6-plan.md
 - reports/sprints/EX-6-planning-review.md
 - reports/sprints/EX-6-result.md
+- reports/sprints/EX-7-baseline.md
+- reports/sprints/EX-7-diff-summary.md
+- reports/sprints/EX-7-lead-review-assignment.md
+- reports/sprints/EX-7-lead-review-corrections.md
+- reports/sprints/EX-7-lead-review-round1.md
+- reports/sprints/EX-7-lead-review-round2.md
+- reports/sprints/EX-7-plan.md
+- reports/sprints/EX-7-planning-review.md
+- reports/sprints/EX-7-result.md
 - reports/sprints/EX-NS0-baseline.md
 - reports/sprints/EX-NS0-diff-summary.md
 - reports/sprints/EX-NS0-lead-review-assignment.md
@@ -1710,7 +1732,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 226
+Count: 227
 
 - .gitignore
 - BUILD-CHAPTER.md
@@ -1795,6 +1817,7 @@ Count: 226
 - docs/roadmaps/outdated/reference-team-roadmap-v2.79-l20-closed-pass-with-flags.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.8-s4.1-conditions-calibrated.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.80-gate-ex5-pass-with-conditions.md
+- docs/roadmaps/outdated/reference-team-roadmap-v2.82-gate-ex6-pass-with-conditions.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.9-rx1-inventory-prepared.md
 - docs/roadmaps/README.md
 - docs/roadmaps/roadmap-version-index.json

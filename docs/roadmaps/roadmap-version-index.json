@@ -15,13 +15,14 @@
   "roadmaps": [
     {
       "roadmap_id": "references-team-roadmap",
-      "version": "v2.83-ex7-dry-run-cli-implementation",
+      "version": "v2.84-game-ux2-exit-ticket-mvp",
       "title": "References Team Roadmap",
       "status": "active",
       "path": "references/reference-team-roadmap.md",
       "owner": "references_team",
       "updated_on": "2026-05-26",
       "supersedes": [
+        "docs/roadmaps/outdated/reference-team-roadmap-v2.83-ex7-dry-run-cli-implementation.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.82-gate-ex6-pass-with-conditions.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.81-ex6-validator-cli-planning.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.80-gate-ex5-pass-with-conditions.md",
@@ -104,7 +105,18 @@
         "knowledge/Exercise schema and quality/reference-team-roadmap Live version 28 April.md",
         "knowledge/Exercise schema and quality/roadmap-updated-repository-checked.md"
       ],
-      "notes": "Current operating roadmap after EX-7 completed validator and dry-run CLI implementation without candidate storage, candidate writes, q19 extraction execution, protected mutation, lesson-output mutation, or student/product use. GAME-UX-2 is the next explicit platform start decision or waiver before Scale Gate 1."
+      "notes": "Current operating roadmap after GAME-UX-2 completed a bounded source-controlled exit-ticket checkpoint MVP for 1.1.1 through platform scripts. Lesson L1.7B-R and GATE-L1.7B remain required before Scale Gate 1; no broad scaling or product-use lane is authorized."
+    },
+    {
+      "roadmap_id": "references-team-roadmap-v2.83",
+      "version": "v2.83-ex7-dry-run-cli-implementation",
+      "title": "References Team Roadmap before GAME-UX-2 checkpoint MVP",
+      "status": "outdated",
+      "path": "docs/roadmaps/outdated/reference-team-roadmap-v2.83-ex7-dry-run-cli-implementation.md",
+      "owner": "references_team",
+      "updated_on": "2026-05-26",
+      "superseded_by": "references/reference-team-roadmap.md",
+      "notes": "Snapshot archived before GAME-UX-2 generated the bounded 1.1.1 checkpoint MVP and moved the next action to lesson L1.7B-R review."
     },
     {
       "roadmap_id": "references-team-roadmap-v2.82",

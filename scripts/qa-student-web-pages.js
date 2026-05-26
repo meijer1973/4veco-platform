@@ -213,9 +213,12 @@ async function runPage(cdp, file, scenario) {
   }
 
   const isGraphical = /grafiekenspel/i.test(path.basename(file));
+  const isExitTicket = /exit[- ]?ticket/i.test(path.basename(file));
   await waitFor(cdp, isGraphical
     ? 'Boolean(document.querySelector("#g-app svg.g-chart-svg"))'
-    : 'Boolean(document.querySelector(".resource-grid, .lesson-shell, main"))');
+    : (isExitTicket
+      ? 'Boolean(document.querySelector("#exit-ticket-app .et-task"))'
+      : 'Boolean(document.querySelector(".resource-grid, .lesson-shell, main"))'));
   await sleep(250);
 
   const checks = await evaluate(cdp, `(() => {
@@ -241,6 +244,9 @@ async function runPage(cdp, file, scenario) {
         /Oefen gemengd/.test(text)
       ),
       hasLessonShell: Boolean(document.querySelector(".lesson-shell")),
+      hasExitTicket: Boolean(document.querySelector("#exit-ticket-app .et-task")),
+      hasExitTicketRoutes: document.querySelectorAll("#exit-ticket-app .et-route-card").length >= 1,
+      exitTicketTaskCount: document.querySelectorAll("#exit-ticket-app .et-task").length,
       hasThreeRoutes: /Redeneren/.test(text) && /Rekenen/.test(text) && /Grafieken/.test(text),
       hasGrafiekenspel: /Grafiekenspel/.test(text),
       hasControl: /Controleer/.test(text),
@@ -306,13 +312,18 @@ async function main() {
       if (result.checks.rootTheme !== result.theme) return true;
       if (result.checks.horizontalOverflow) return true;
       if (isGraphical && (!result.checks.hasControl || result.checks.svgCount < 1 || result.checks.chartSpills.length)) return true;
+      if (result.checks.hasExitTicket && (
+        result.checks.exitTicketTaskCount < 3 ||
+        result.checks.exitTicketTaskCount > 5 ||
+        !result.checks.hasExitTicketRoutes
+      )) return true;
       if (!isGraphical && result.checks.isParagraphLanding && (
         !result.checks.hasRouteSection ||
         (!result.checks.hasPrimaryRouteLayers && !result.checks.hasConsolidationPracticeRoute)
       )) return true;
       if (!isGraphical && !result.checks.isParagraphLanding && result.checks.hasResourceGrid && (!result.checks.hasThreeRoutes || !result.checks.hasGrafiekenspel)) return true;
       if (!isGraphical && result.checks.hasLessonShell && result.checks.visualObjectCount < 1) return true;
-      if (!isGraphical && !result.checks.hasResourceGrid && !result.checks.hasLessonShell) return true;
+      if (!isGraphical && !result.checks.hasResourceGrid && !result.checks.hasLessonShell && !result.checks.hasExitTicket) return true;
       return false;
     });
 

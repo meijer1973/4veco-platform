@@ -1268,7 +1268,7 @@ function renderParagraafPage(paragraaf, files, _resolvedMap) {
   const oefenCardsFinal = [consolidationPracticeBlock, oefenRouteCards].filter(Boolean).join("\n");
 
   const checkCards = files.check && files.check.exitTicket
-    ? resourceCard(encPath([files.check.exitTicket]), ICONS.check, "Exit ticket", "Korte check om te zien wat je nog wilt oefenen", "html")
+    ? resourceCard(encPath([files.check.exitTicket]), ICONS.check, "Korte check", "Kies wat je nog wilt oefenen", "html")
     : "";
 
   const deepenCards = [
@@ -1324,7 +1324,7 @@ function renderParagraafPage(paragraaf, files, _resolvedMap) {
     layout: "custom",
     routeLayer: "practice"
   });
-  if (hasC) sections.push({ id: "check", num: 4, title: "Check", hint: "Korte niet-summatieve check", body: checkCards, accent: SECTION_ACCENT.check, routeLayer: "check" });
+  if (hasC) sections.push({ id: "check", num: 4, title: "Check", hint: "Rond af met gerichte oefentips", body: checkCards, accent: SECTION_ACCENT.check, routeLayer: "check" });
   if (hasD) sections.push({ id: "verdiep", num: sections.length + 1, title: "Verdiep", hint: "Extra context, bronnen en downloads", body: verdiepenCards, accent: SECTION_ACCENT.verdiep, layout: "custom", routeLayer: "deepen" });
 
   const sidebarItems = sections.map(s => `      <a class="nav-item domain-${s.accent}" href="#${s.id}" data-section="${s.id}" data-route-layer="${s.routeLayer || s.id}">

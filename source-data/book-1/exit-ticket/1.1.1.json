@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "parNr": "1.1.1",
+  "parName": "Schaarste en economisch denken",
+  "title": "Korte check",
+  "intro": "Kies per vraag wat het beste past bij de uitleg. Gebruik de oefentip als je nog wilt oefenen.",
+  "targetSkillIds": ["A43", "A04"],
+  "skillScopeIds": ["A43", "A04"],
+  "skillMap": {
+    "title": "Oefenroute",
+    "routes": [
+      {
+        "label": "Schaarste herkennen",
+        "surface": "Redeneren",
+        "href": "1.1.1%20Schaarste%20en%20economisch%20denken%20%E2%80%93%20redeneer-spel.html"
+      },
+      {
+        "label": "Alternatieve kosten kiezen",
+        "surface": "Stappenplan",
+        "href": "1.1.1%20Schaarste%20en%20economisch%20denken%20%E2%80%93%20stappenplan.html"
+      }
+    ]
+  },
+  "tasks": [
+    {
+      "id": "schaarste-kern",
+      "type": "choice",
+      "skillLabel": "Schaarste herkennen",
+      "prompt": "Wanneer is er sprake van schaarste?",
+      "options": [
+        { "id": "a", "label": "Als iets bijna nergens voorkomt." },
+        { "id": "b", "label": "Als behoeften groter zijn dan de beschikbare middelen." },
+        { "id": "c", "label": "Als iedereen precies genoeg heeft." }
+      ],
+      "answer": "b",
+      "feedback": {
+        "matchTitle": "Dat past bij de uitleg",
+        "matchText": "Schaarste gaat om meer wensen dan middelen. Daardoor moet er gekozen worden.",
+        "retryTitle": "Kijk nog eens naar behoeften en middelen",
+        "retryText": "Vraag jezelf af of mensen meer willen dan er beschikbaar is."
+      },
+      "practiceRoute": {
+        "label": "Oefen dit nog met Redeneren",
+        "href": "1.1.1%20Schaarste%20en%20economisch%20denken%20%E2%80%93%20redeneer-spel.html"
+      }
+    },
+    {
+      "id": "middel-herkennen",
+      "type": "choice",
+      "skillLabel": "Schaarste herkennen",
+      "prompt": "Een gemeente heeft grond voor of een park of nieuwe woningen. Welk middel is hier schaars?",
+      "options": [
+        { "id": "a", "label": "Grond." },
+        { "id": "b", "label": "Alleen geld." },
+        { "id": "c", "label": "Alle woningen in Nederland." }
+      ],
+      "answer": "a",
+      "feedback": {
+        "matchTitle": "Goed gekeken naar het middel",
+        "matchText": "De keuze ontstaat doordat dezelfde grond niet tegelijk voor beide plannen kan worden gebruikt.",
+        "retryTitle": "Zoek het beperkte middel",
+        "retryText": "Kijk welk middel niet tegelijk voor alle wensen kan worden ingezet."
+      },
+      "practiceRoute": {
+        "label": "Lees de uitleg nog kort terug",
+        "href": "1.1.1%20Schaarste%20en%20economisch%20denken%20%E2%80%93%20uitleg%20vaardigheden.html"
+      }
+    },
+    {
+      "id": "alternatieve-kosten",
+      "type": "choice",
+      "skillLabel": "Alternatieve kosten kiezen",
+      "prompt": "Lisa kiest een bioscoopkaartje van 12 euro en laat een pizza van 9 euro liggen. Wat zijn de alternatieve kosten?",
+      "options": [
+        { "id": "a", "label": "12 euro, want dat betaalt Lisa." },
+        { "id": "b", "label": "9 euro, want dat is de opbrengst van het beste niet-gekozen alternatief." },
+        { "id": "c", "label": "21 euro, want je telt beide bedragen op." }
+      ],
+      "answer": "b",
+      "feedback": {
+        "matchTitle": "Het alternatief staat centraal",
+        "matchText": "Alternatieve kosten zijn de waarde van het beste alternatief dat je niet kiest.",
+        "retryTitle": "Kijk naar wat niet gekozen is",
+        "retryText": "Tel niet alles op. Zoek het beste alternatief dat Lisa laat liggen."
+      },
+      "practiceRoute": {
+        "label": "Oefen dit nog met het Stappenplan",
+        "href": "1.1.1%20Schaarste%20en%20economisch%20denken%20%E2%80%93%20stappenplan.html"
+      }
+    },
+    {
+      "id": "gratis-is-niet-gratis",
+      "type": "choice",
+      "skillLabel": "Economisch denken",
+      "prompt": "Waarom kan een gratis festivalkaartje toch met schaarste te maken hebben?",
+      "options": [
+        { "id": "a", "label": "Omdat tijd, plekken en aandacht ook beperkt kunnen zijn." },
+        { "id": "b", "label": "Omdat gratis altijd betekent dat niemand iets opgeeft." },
+        { "id": "c", "label": "Omdat alleen geld een schaars middel kan zijn." }
+      ],
+      "answer": "a",
+      "feedback": {
+        "matchTitle": "Breed naar middelen gekeken",
+        "matchText": "Ook zonder prijs kunnen tijd, ruimte of plekken beperkt zijn. Dan blijft kiezen nodig.",
+        "retryTitle": "Denk breder dan geld",
+        "retryText": "Schaarste kan ook gaan over tijd, ruimte, aandacht of beschikbare plekken."
+      },
+      "practiceRoute": {
+        "label": "Bekijk de kern nog in de samenvatting",
+        "href": "1.1.1%20Schaarste%20en%20economisch%20denken%20%E2%80%93%20samenvatting.html"
+      }
+    }
+  ],
+  "completion": {
+    "title": "Kies je volgende oefenstap",
+    "text": "Gebruik de reacties bij de vragen om te kiezen wat je nog even wilt oefenen."
+  }
+}
