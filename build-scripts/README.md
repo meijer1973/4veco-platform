@@ -10,6 +10,16 @@ paragraph route should move students from current readiness to target-exercise
 readiness. Generator, engine, and deploy changes should preserve that end
 state or name the follow-up sprint that restores it.
 
+Sprint plans and active roadmaps must also pass scope-language discipline:
+
+```bash
+node build-scripts/sprints/check-scope-language.js --active
+```
+
+Use bounded-scope wording by default. Restricted scope terms require an
+explicit authorization section that preserves the full quality floor and names
+the follow-up or waiver for any omitted specification requirement.
+
 ## Folder Layout
 
 ```

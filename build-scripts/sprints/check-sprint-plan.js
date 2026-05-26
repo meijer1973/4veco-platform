@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
+const { spawnSync } = require('child_process');
 
 const REQUIRED_HEADINGS = [
   '## Goal',
@@ -23,6 +24,17 @@ function fail(message) {
 const file = process.argv[2];
 if (!file) fail('missing plan path');
 if (!fs.existsSync(file)) fail(`file not found: ${file}`);
+
+const scopeLanguageResult = spawnSync(
+  process.execPath,
+  [path.join(__dirname, 'check-scope-language.js'), file],
+  { cwd: process.cwd(), encoding: 'utf8' }
+);
+if (scopeLanguageResult.status !== 0) {
+  process.stderr.write(scopeLanguageResult.stdout || '');
+  process.stderr.write(scopeLanguageResult.stderr || '');
+  fail('scope-language checker failed');
+}
 
 const markdown = fs.readFileSync(file, 'utf8');
 if (!/^# Sprint\s+\S+:/m.test(markdown)) {

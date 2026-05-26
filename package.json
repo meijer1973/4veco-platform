@@ -10,6 +10,7 @@
     "test": "jest",
     "check:platform": "jest --runInBand",
     "check:book": "node scripts/check-book.js",
+    "check:scope-language": "node build-scripts/sprints/check-scope-language.js --active",
     "dashboard:internal": "node build-scripts/reports/internal-dashboard.js",
     "agent:index": "node build-scripts/reports/github-agent-index.js",
     "deploy:legacy": "node scripts/deploy.js ../\"3. Module 3 - Markt en overheid\"",

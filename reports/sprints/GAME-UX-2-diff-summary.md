@@ -5,7 +5,7 @@ Date: 2026-05-26
 ## Platform changes
 
 - Added a source-controlled checkpoint engine, UI, and CSS under `engines/`.
-- Added source-controlled pilot checkpoint data for
+- Added source-controlled paragraph-limited checkpoint data for
   `1.1.1 Schaarste en economisch denken`.
 - Added `build-scripts/platform/build-exit-ticket-shells.js` to generate
   `shared/exit-ticket/*.js` data and paragraph-root checkpoint shells.
@@ -38,7 +38,7 @@ Lesson output commit: `5c47961`.
 No protected reference data changed. No hand edits were made to
 `references/machine/`, `references/external/`, or generated lesson output.
 
-The pre-existing untracked prototype zip
+The pre-existing untracked draft zip
 `knowledge/exit-ticket-game-1.1.1.zip` remains untracked and was not imported,
 staged, edited, moved, or deleted.
 

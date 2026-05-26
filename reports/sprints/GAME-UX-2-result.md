@@ -4,7 +4,7 @@ Date: 2026-05-26
 
 Status: completed
 
-Lesson output commit: `5c47961` (`4veco-lessen`, `Generate GAME-UX-2 exit ticket MVP`)
+Lesson output commit: `5c47961` (`4veco-lessen`)
 
 ## Plan reference
 
@@ -12,7 +12,7 @@ Plan: `reports/sprints/GAME-UX-2-plan.md`
 
 ## Summary
 
-GAME-UX-2 completed the platform-owned checkpoint MVP for
+GAME-UX-2 completed the platform-owned checkpoint surface for
 `1.1.1 Schaarste en economisch denken`.
 
 Implemented:
@@ -20,7 +20,7 @@ Implemented:
 - source-controlled checkpoint runtime:
   `engines/exit-ticket-engine.js`, `engines/exit-ticket-ui.js`,
   `engines/exit-ticket.css`;
-- source-controlled pilot data:
+- source-controlled paragraph-limited data:
   `source-data/book-1/exit-ticket/1.1.1.json`;
 - generator:
   `build-scripts/platform/build-exit-ticket-shells.js`;
@@ -32,7 +32,7 @@ Implemented:
 - student-web screenshot QA support for checkpoint pages;
 - generated lesson output through platform scripts only.
 
-The old untracked prototype zip was not imported, staged, edited, moved, or
+The old untracked draft zip was not imported, staged, edited, moved, or
 deleted.
 
 The generated checkpoint:
@@ -175,7 +175,7 @@ file was hand-edited.
 ## Rollback instructions
 
 Revert the platform GAME-UX-2 commit and the generated lesson commit
-`5c47961`. Rollback removes the checkpoint runtime, generator, pilot source
+`5c47961`. Rollback removes the checkpoint runtime, generator, paragraph-limited source
 data, focused tests, sprint logs, roadmap/index updates, and generated lesson
-checkpoint files. Do not touch the untracked prototype zip,
+checkpoint files. Do not touch the untracked draft zip,
 `references/machine/`, or `references/external/`.

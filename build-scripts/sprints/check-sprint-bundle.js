@@ -87,6 +87,7 @@ exists(planJsonPath, 'sprint plan JSON');
 exists(baselinePath, 'sprint baseline');
 
 runNode(path.join('build-scripts', 'sprints', 'check-sprint-plan.js'), planPath);
+runNode(path.join('build-scripts', 'sprints', 'check-scope-language.js'), planJsonPath);
 
 const planJson = readJson(planJsonPath);
 if (planJson.sprint_id !== sprintId) fail(`${planJsonPath} has wrong sprint_id`);

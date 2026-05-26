@@ -12,13 +12,13 @@ docs/roadmaps/roadmap-version-index.json
 
 | Roadmap | Version | Path | Notes |
 |---|---|---|---|
-| References Team Roadmap | `v2.84-game-ux2-exit-ticket-mvp` | `references/reference-team-roadmap.md` | Current operating roadmap after GAME-UX-2 generated the bounded 1.1.1 checkpoint MVP. Lesson L1.7B-R review and GATE-L1.7B remain required before Scale Gate 1. |
+| References Team Roadmap | `v2.84-game-ux2-exit-ticket-checkpoint` | `references/reference-team-roadmap.md` | Current operating roadmap after GAME-UX-2 generated the bounded 1.1.1 checkpoint. Lesson L1.7B-R review and GATE-L1.7B remain required before Scale Gate 1. |
 
 ## Outdated Archive
 
 | Roadmap | Version | Path | Superseded By |
 |---|---|---|---|
-| References Team Roadmap before GAME-UX-2 checkpoint MVP | `v2.83-ex7-dry-run-cli-implementation` | `docs/roadmaps/outdated/reference-team-roadmap-v2.83-ex7-dry-run-cli-implementation.md` | `references/reference-team-roadmap.md` |
+| References Team Roadmap before GAME-UX-2 checkpoint | `v2.83-ex7-dry-run-cli-implementation` | `docs/roadmaps/outdated/reference-team-roadmap-v2.83-ex7-dry-run-cli-implementation.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before EX-7 completion | `v2.82-gate-ex6-pass-with-conditions` | `docs/roadmaps/outdated/reference-team-roadmap-v2.82-gate-ex6-pass-with-conditions.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before GATE-EX6 closure | `v2.81-ex6-validator-cli-planning` | `docs/roadmaps/outdated/reference-team-roadmap-v2.81-ex6-validator-cli-planning.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before EX-6 validator/CLI planning completion | `v2.80-gate-ex5-pass-with-conditions` | `docs/roadmaps/outdated/reference-team-roadmap-v2.80-gate-ex5-pass-with-conditions.md` | `references/reference-team-roadmap.md` |

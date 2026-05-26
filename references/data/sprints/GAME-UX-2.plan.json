@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "sprint_id": "GAME-UX-2",
-  "title": "Exit Ticket Checkpoint Engine MVP",
+  "title": "Exit Ticket Checkpoint Engine",
   "plan": "reports/sprints/GAME-UX-2-plan.md",
   "status": "planned_platform_support_with_generated_lesson_output",
   "created": "2026-05-26",
@@ -16,7 +16,7 @@
     "../4veco-lessen/archive/sprints/L1.7B-R/L1.7B-R-stop-decision.md",
     "references/reference-team-roadmap.md"
   ],
-  "goal": "Implement a source-controlled, non-summative checkpoint engine and generated pilot output for paragraph 1.1.1 without broad scaling or product-use authorization.",
+  "goal": "Implement a source-controlled, non-summative checkpoint engine and reviewed generated output for paragraph 1.1.1 without broad scaling or product-use authorization.",
   "outputs": [
     "reports/sprints/GAME-UX-2-plan.md",
     "references/data/sprints/GAME-UX-2.plan.json",

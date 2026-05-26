@@ -1,13 +1,13 @@
-# Sprint GAME-UX-2: Exit Ticket Checkpoint Engine MVP
+# Sprint GAME-UX-2: Exit Ticket Checkpoint Engine
 
 ## Goal
 
 Implement the platform side of lesson `L1.7B-R`: a source-controlled,
-non-summative exit-ticket checkpoint engine/wrapper for one pilot paragraph,
-`1.1.1 Schaarste en economisch denken`.
+non-summative exit-ticket checkpoint engine/wrapper for one controlled
+paragraph-limited implementation, `1.1.1 Schaarste en economisch denken`.
 
 The sprint must build a reusable platform runtime, generator, source-data
-route, deploy integration, and tests. It must regenerate the pilot lesson
+route, deploy integration, and tests. It must regenerate the reviewed lesson
 output through platform scripts only, expose the landing-page `Check` route
 only for paragraphs with generated checkpoint output, and hand a bounded
 platform proof back to the lesson team for later `L1.7B-R` review and
@@ -22,7 +22,7 @@ machine promotion, or hand-patched generated lesson output.
 ## Context
 
 Lesson `L1.7B-C` closed the exit-ticket companion contract as contract-only
-work and paused the MVP because the prototype was untracked, used unsafe
+work and paused implementation because the old draft was untracked, used unsafe
 product-boundary language, read adaptive-focus payload keys, depended on
 compact checkpoint-mode skill-map behavior, and risked becoming a fourth
 isolated game UI.
@@ -32,7 +32,7 @@ resume:
 
 - source-controlled checkpoint runtime in `4veco-platform`;
 - shared `SkillMapEngine` compact checkpoint-mode use;
-- one non-summative pilot surface for `1.1.1 Schaarste en economisch denken`;
+- one non-summative checkpoint surface for `1.1.1 Schaarste en economisch denken`;
 - generated lesson output through platform scripts only;
 - generator-owned landing-page `Check` activation;
 - neutral feedback and retry/self-check guidance;
@@ -131,7 +131,7 @@ move it, edit it, or delete it.
 - Source-controlled exit-ticket runtime files:
   `engines/exit-ticket-engine.js`, `engines/exit-ticket-ui.js`, and
   `engines/exit-ticket.css`.
-- Source-controlled pilot data:
+- Source-controlled checkpoint data:
   `source-data/book-1/exit-ticket/1.1.1.json`.
 - A generator:
   `build-scripts/platform/build-exit-ticket-shells.js`.
@@ -165,9 +165,9 @@ by hand.
    validation commands.
 2. Inspect the lesson `L1.7B-R` handoff, the `1.1.1` paragraph plan, current
    shared skill-map runtime, deploy pipeline, and landing-page `Check`
-   behavior. Stop if the requested MVP would require lesson-side runtime work
+   behavior. Stop if the requested bounded implementation would require lesson-side runtime work
    or hand-patched generated output.
-3. Add source-controlled pilot checkpoint data for `1.1.1`, using only
+3. Add source-controlled paragraph-limited checkpoint data for `1.1.1`, using only
    paragraph target skills and student-facing labels. Stop if internal MTU IDs
    would need to appear in student-facing text.
 4. Implement the exit-ticket engine and UI. The runtime must use
@@ -175,7 +175,7 @@ by hand.
    mode, provide neutral immediate feedback, keep practice progress local to
    the surface, and avoid blocked product-boundary language.
 5. Add the exit-ticket shell generator and deploy integration. Stop if the
-   generator would import the untracked prototype zip, create an isolated game
+   generator would import the untracked draft zip, create an isolated game
    architecture, or bypass the platform deploy pipeline.
 6. Update landing-page `Check` route copy so it becomes visible only when the
    generated checkpoint shell exists and does not describe the surface as a
@@ -192,7 +192,7 @@ by hand.
    lesson team cannot tell exactly which platform and generated lesson files
    changed.
 10. Fetch/prune remote, commit, tag, and push the platform and generated lesson
-    output commits. Do not stage the unrelated prototype zip.
+    output commits. Do not stage the unrelated draft zip.
 
 ## Acceptance tests
 
@@ -234,9 +234,9 @@ record the attempted command, failure, and residual risk in
 
 Revert the GAME-UX-2 implementation commit in the platform repo and the
 corresponding generated-output commit in the lesson repo. Rollback removes the
-checkpoint runtime, generator, pilot source data, focused tests, sprint logs,
+checkpoint runtime, generator, paragraph-limited source data, focused tests, sprint logs,
 roadmap/index updates, and generated lesson checkpoint files. It must not touch
-the untracked prototype zip, `references/machine/`, or `references/external/`.
+the untracked draft zip, `references/machine/`, or `references/external/`.
 
 ## Human review required
 
