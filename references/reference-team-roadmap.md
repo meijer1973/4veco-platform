@@ -44,7 +44,7 @@ legacy bundles only.
 
 | Sprint | Name | Completed | Current State |
 |--------|------|-----------|---------------|
-| LESSON-SCALE-1 | Lesson Companion Pre-Scale Gates Tracking | no | **TRACKING DEPENDENCY, NOT A REFERENCE EXECUTION SPRINT.** Lesson L1.7A closed PASS WITH FLAGS and rejected broad companion scaling. Closed lesson prerequisites now include `L1.7B-C`, `L1.7B-R`, `GATE-L1.7B`, `L1.7C-0`, `L1.7C`, `L1.7D`, `L2.0`, `L1.7C-MATH`, and `L1.7B-MAP`. Platform `GAME-UX-1` supplied shared skill-map runtime support; platform `GAME-UX-2` supplied the source-controlled `1.1.1` checkpoint engine/output support. `L1.7C-MATH` restored the scoped skill-tree math game as primary `Rekenen`; `L1.7B-MAP` fixed checkpoint metadata scope to `B01/B02`, removed `A04`, recorded target-exercise skills as `A43/B01/B02`, and kept `targetReadinessEvidence: false`. EX-7 is resolved as a validator/dry-run CLI implementation only. Reference/product planning must not treat the lesson companion pipeline as scale-approved until lesson `L1.7B-P23`, `L1.7B-Q2`, `GATE-L1.7B-Q2`, `REV-STD-1`, minimal curriculum-versioning readiness, and Scale Gate 1 resolve or are explicitly waived while preserving blocks on diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, and PV machine promotion. |
+| LESSON-SCALE-1 | Lesson Companion Pre-Scale Gates Tracking | no | **TRACKING DEPENDENCY, NOT A REFERENCE EXECUTION SPRINT.** Lesson L1.7A closed PASS WITH FLAGS and rejected broad companion scaling. Closed lesson prerequisites now include `L1.7B-C`, `L1.7B-R`, `GATE-L1.7B`, `L1.7C-0`, `L1.7C`, `L1.7D`, `L2.0`, `L1.7C-MATH`, and `L1.7B-MAP`. Platform `GAME-UX-1` supplied shared skill-map runtime support; platform `GAME-UX-2` supplied the source-controlled `1.1.1` checkpoint engine/output support. `L1.7C-MATH` restored the scoped skill-tree math game as primary `Rekenen`; `L1.7B-MAP` fixed checkpoint metadata scope to `B01/B02`, removed `A04`, recorded target-exercise skills as `A43/B01/B02`, and kept `targetReadinessEvidence: false`. Lesson `L1.7B-P23` is ready for human review with a stop/handoff decision: current exit-ticket task types are choice-only and cannot honestly check `1.1.2` calculation/index or `1.1.3` graph/table operation chains. EX-7 is resolved as a validator/dry-run CLI implementation only. Reference/product planning must not treat the lesson companion pipeline as scale-approved until lesson `L1.7B-P23`, `L1.7B-Q2`, `GATE-L1.7B-Q2`, `REV-STD-1`, minimal curriculum-versioning readiness, and Scale Gate 1 resolve or are explicitly waived while preserving blocks on diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, and PV machine promotion. |
 | REF-CT3 | Year-2 Skeleton | no | Planned after the CP.6a-CP.6f remediation lanes and the bounded EX-0/EX-1/EX-2 exam-ingestion implementation track produce enough evidence for a responsible CP-6 closure proposal, explicit hold, or Year-2 anchoring handoff. Prepare Year-2 skeleton with CvTE-vwo anchor status and `concept_orphan` flags for CP-7; do not treat the rough three-year blueprint as authoritative. |
 | R7.6 | RAG Quality Hardening | no | Planned. Close R7.4 follow-ups, split target-exercise chunks, expand retrieval eval coverage, backfill evidence anchors, and improve approved/pending/diagnostic labels. |
 | R14.1 | Curriculum Versioning | no | Planned earlier in the sequence. Track active v5, archived v4, the non-authoritative three-year planning sketch, built lesson outputs, and migrated/not-final target exercises so reports and retrieval do not silently mix incompatible source states. |
@@ -428,6 +428,16 @@ target-exercise-readiness evidence, does not authorize scale reliance, and does
 not authorize diagnostics, adaptive routing, mastery/sequencing, student-facing
 AI, summative use, PV projection, or PV machine promotion. The next lesson-side
 work, if continued, is `L1.7B-P23`.
+
+Update 2026-05-26: Lesson `L1.7B-P23 Exit Ticket Target-Skill Checkpoint
+Designs For 1.1.2 And 1.1.3` is ready for human review with a stop/handoff
+decision. Operation-chain analysis shows `1.1.2` requires calculation/work
+fields, final answer entry, notation handling, and short explanation, while
+`1.1.3` requires table/graph handling, economic axis convention, graph drawing
+or point placement, interpolation, and short explanation. The current
+exit-ticket engine/UI supports only choice tasks, so no `1.1.2` or `1.1.3`
+checkpoint output was generated. Platform task-type support is required before
+these checkpoints can become target-exercise-readiness evidence.
 
 Compatibility decisions:
 
