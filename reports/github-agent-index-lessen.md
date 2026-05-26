@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-lessen
 
-Generated: 2026-05-26T13:12:00.822Z
+Generated: 2026-05-26T13:39:47.212Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-lessen`
-Files indexed: 1475
+Files indexed: 1494
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -81,13 +81,14 @@ _No files indexed in this group._
 
 ## validators
 
-Count: 8
+Count: 9
 
 - archive/sprints/GATE-L1.7B/GATE-L1.7B-validation-log.md
 - archive/sprints/L1.7A/L1.7A-validation-log.md
 - archive/sprints/L1.7B-R/L1.7B-R-validation-log.md
 - archive/sprints/L1.7B/L1.7B-validation-log.md
 - archive/sprints/L1.7C-0/L1.7C-0-validation-log.md
+- archive/sprints/L1.7C-MATH/L1.7C-MATH-validation-log.md
 - archive/sprints/L1.7C/L1.7C-validation-log.md
 - archive/sprints/L1.7D/L1.7D-validation-log.md
 - archive/sprints/L2.0/L2.0-validation-log.md
@@ -2404,7 +2405,7 @@ Count: 817
 
 ## other
 
-Count: 345
+Count: 363
 
 - _team-b-reference/1.1.1/uitleg vaardigheden team b.html
 - _team-b-reference/1.1.1/uitleg voorkennis team b.html
@@ -2671,8 +2672,26 @@ Count: 345
 - archive/sprints/L1.7C-0/L1.7C-0-shared-skill-map-contract.md
 - archive/sprints/L1.7C-0/L1.7C-0-sprint-plan.md
 - archive/sprints/L1.7C-MATH/L1.7C-MATH-history-audit.md
+- archive/sprints/L1.7C-MATH/L1.7C-MATH-human-review-packet.md
 - archive/sprints/L1.7C-MATH/L1.7C-MATH-platform-handoff.md
+- archive/sprints/L1.7C-MATH/L1.7C-MATH-screenshots/1-1-2-percentages-en-indexcijfers-redeneer-spel-desktop-dark.png
+- archive/sprints/L1.7C-MATH/L1.7C-MATH-screenshots/1-1-2-percentages-en-indexcijfers-redeneer-spel-desktop-light.png
+- archive/sprints/L1.7C-MATH/L1.7C-MATH-screenshots/1-1-2-percentages-en-indexcijfers-redeneer-spel-mobile-dark.png
+- archive/sprints/L1.7C-MATH/L1.7C-MATH-screenshots/1-1-2-percentages-en-indexcijfers-redeneer-spel-mobile-light.png
+- archive/sprints/L1.7C-MATH/L1.7C-MATH-screenshots/1-1-2-percentages-en-indexcijfers-wiskundevaardigheden-desktop-dark.png
+- archive/sprints/L1.7C-MATH/L1.7C-MATH-screenshots/1-1-2-percentages-en-indexcijfers-wiskundevaardigheden-desktop-light.png
+- archive/sprints/L1.7C-MATH/L1.7C-MATH-screenshots/1-1-2-percentages-en-indexcijfers-wiskundevaardigheden-mobile-dark.png
+- archive/sprints/L1.7C-MATH/L1.7C-MATH-screenshots/1-1-2-percentages-en-indexcijfers-wiskundevaardigheden-mobile-light.png
+- archive/sprints/L1.7C-MATH/L1.7C-MATH-screenshots/1-1-3-grafieken-en-tabellen-grafiekenspel-desktop-dark.png
+- archive/sprints/L1.7C-MATH/L1.7C-MATH-screenshots/1-1-3-grafieken-en-tabellen-grafiekenspel-desktop-light.png
+- archive/sprints/L1.7C-MATH/L1.7C-MATH-screenshots/1-1-3-grafieken-en-tabellen-grafiekenspel-mobile-dark.png
+- archive/sprints/L1.7C-MATH/L1.7C-MATH-screenshots/1-1-3-grafieken-en-tabellen-grafiekenspel-mobile-light.png
+- archive/sprints/L1.7C-MATH/L1.7C-MATH-screenshots/index-desktop-dark.png
+- archive/sprints/L1.7C-MATH/L1.7C-MATH-screenshots/index-desktop-light.png
+- archive/sprints/L1.7C-MATH/L1.7C-MATH-screenshots/index-mobile-dark.png
+- archive/sprints/L1.7C-MATH/L1.7C-MATH-screenshots/index-mobile-light.png
 - archive/sprints/L1.7C-MATH/L1.7C-MATH-sprint-plan.md
+- archive/sprints/L1.7C-MATH/L1.7C-MATH-technical-qa-report.md
 - archive/sprints/L1.7C/L1.7C-closure-log.md
 - archive/sprints/L1.7C/L1.7C-game-row-baseline-audit.md
 - archive/sprints/L1.7C/L1.7C-game-row-quality-matrix.md

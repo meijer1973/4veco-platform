@@ -29,4 +29,21 @@ describe('skilltree visible practice-copy boundary', () => {
             expect(text).not.toContain(phrase);
         }
     });
+
+    test('result next-step copy uses skill names instead of internal skill IDs', () => {
+        const filePath = path.resolve(__dirname, '..', 'skilltree-ui.js');
+        const text = fs.readFileSync(filePath, 'utf8');
+
+        expect(text).toContain('var nextLabel = skillDisplayName(next.id);');
+        expect(text).toContain('Volgende: \' + esc(nextLabel)');
+        expect(text).not.toContain('Volgende: \' + esc(next.id)');
+    });
+
+    test('dependency graph node captions do not render raw internal skill IDs as visible text', () => {
+        const filePath = path.resolve(__dirname, '..', 'skilltree-ui.js');
+        const text = fs.readFileSync(filePath, 'utf8');
+
+        expect(text).toContain('<text class="st-dep-node-id" x="8" y="14">Vaardigheid</text>');
+        expect(text).not.toMatch(/st-dep-node-id[^\\n]+esc\\(nd\\.id\\)/);
+    });
 });

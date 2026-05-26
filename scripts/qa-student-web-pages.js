@@ -197,6 +197,84 @@ function slugFor(file, scenario) {
   return `${base}-${scenario}.png`;
 }
 
+async function exerciseSkillTreeResult(cdp, file, scenario) {
+  const setup = await evaluate(cdp, `(() => {
+    const cards = Array.from(document.querySelectorAll('.st-skill-card[data-skill]'));
+    const first = cards.find(card => !card.classList.contains('st-locked') && card.getAttribute('aria-disabled') !== 'true');
+    if (!first) return { ok: false, error: 'no unlocked skill card' };
+    const skillId = first.getAttribute('data-skill');
+    const gen = window.SKILL_TREE_ELEMENTS && window.SKILL_TREE_ELEMENTS.GEN && window.SKILL_TREE_ELEMENTS.GEN[skillId];
+    if (typeof gen !== 'function') return { ok: false, error: 'no generator for ' + skillId };
+    window.__qaSkillTree = { skillId, exercise: null };
+    window.SKILL_TREE_ELEMENTS.GEN[skillId] = function () {
+      const ex = gen.apply(this, arguments);
+      window.__qaSkillTree.exercise = ex;
+      return ex;
+    };
+    first.click();
+    return { ok: true, skillId };
+  })()`);
+  if (!setup.ok) return { ok: false, error: setup.error || 'skilltree setup failed' };
+
+  await waitFor(cdp, 'Boolean(window.__qaSkillTree && window.__qaSkillTree.exercise && document.querySelector("#st-exercise:not([hidden])"))');
+
+  const result = await evaluate(cdp, `(async () => {
+    const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
+    const qa = window.__qaSkillTree;
+    const ex = qa && qa.exercise;
+    if (!ex || !Array.isArray(ex.steps)) return { ok: false, error: 'exercise not captured' };
+    function click(selector) {
+      const el = document.querySelector(selector);
+      if (!el) throw new Error('missing selector: ' + selector);
+      el.click();
+    }
+    function setNumeric(value) {
+      const input = document.querySelector('#st-numeric-input');
+      if (!input) throw new Error('missing numeric input');
+      input.value = String(value).replace('.', ',');
+      input.dispatchEvent(new Event('input', { bubbles: true }));
+      click('[data-action="check-numeric"]');
+    }
+    try {
+      for (let i = 0; i < ex.steps.length; i += 1) {
+        const step = ex.steps[i];
+        const mode = step.mode || 'numeric';
+        await delay(100);
+        if (mode === 'mc') {
+          click('[data-mc="' + step.correctIdx + '"]');
+        } else if (mode === 'order') {
+          for (const idx of step.correctOrder) {
+            click('[data-order-block="' + idx + '"]');
+            await delay(40);
+          }
+        } else if (mode === 'error') {
+          const idx = step.shownSteps.findIndex(item => item.isError);
+          click('[data-err="' + idx + '"]');
+        } else {
+          setNumeric(step.a);
+        }
+        await delay(i === ex.steps.length - 1 ? 1100 : 1350);
+      }
+      const slot = document.querySelector('#st-result-slot');
+      const resultText = slot ? slot.innerText : '';
+      const next = slot ? slot.querySelector('[data-result-action="next"]') : null;
+      return {
+        ok: Boolean(slot && !slot.hidden && resultText.trim()),
+        resultText,
+        nextText: next ? next.innerText : '',
+        hasInternalCode: /\\b[AB]\\d{2}\\b/.test(resultText)
+      };
+    } catch (err) {
+      return { ok: false, error: err.message || String(err) };
+    }
+  })()`);
+
+  const png = await cdp.send('Page.captureScreenshot', { format: 'png', fromSurface: true });
+  const screenshot = path.join(outDir, slugFor(file, `${scenario.name}-${scenario.theme}-result`));
+  fs.writeFileSync(screenshot, Buffer.from(png.data, 'base64'));
+  return { ...result, screenshot };
+}
+
 async function runPage(cdp, file, scenario) {
   await cdp.send('Emulation.setDeviceMetricsOverride', {
     width: scenario.width,
@@ -277,7 +355,17 @@ async function runPage(cdp, file, scenario) {
   const png = await cdp.send('Page.captureScreenshot', { format: 'png', fromSurface: true });
   const screenshot = path.join(outDir, slugFor(file, `${scenario.name}-${scenario.theme}`));
   fs.writeFileSync(screenshot, Buffer.from(png.data, 'base64'));
-  return { file, scenario: scenario.name, theme: scenario.theme, screenshot, checks };
+  const extraScreenshots = [];
+  if (checks.hasSkillTree && scenario.name === 'desktop' && scenario.theme === 'light') {
+    const resultQa = await exerciseSkillTreeResult(cdp, file, scenario);
+    checks.skillTreeResultChecked = true;
+    checks.skillTreeResultOk = Boolean(resultQa.ok);
+    checks.skillTreeResultHasInternalCode = Boolean(resultQa.hasInternalCode);
+    checks.skillTreeResultNextText = resultQa.nextText || '';
+    checks.skillTreeResultError = resultQa.error || null;
+    if (resultQa.screenshot) extraScreenshots.push(resultQa.screenshot);
+  }
+  return { file, scenario: scenario.name, theme: scenario.theme, screenshot, extraScreenshots, checks };
 }
 
 async function main() {
@@ -326,6 +414,10 @@ async function main() {
         !result.checks.hasExitTicketRoutes
       )) return true;
       if (result.checks.hasSkillTree && result.checks.skillTreeCardCount < 1) return true;
+      if (result.checks.skillTreeResultChecked && (
+        !result.checks.skillTreeResultOk ||
+        result.checks.skillTreeResultHasInternalCode
+      )) return true;
       if (result.checks.hasReasoningGame && (
         result.checks.reasoningModeCount < 1 ||
         !result.checks.hasReasoningRoutePanel

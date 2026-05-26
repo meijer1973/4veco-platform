@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-26T13:12:00.748Z",
+  "generatedAt": "2026-05-26T13:39:47.136Z",
   "internalOnly": true,
   "teams": [
     {
@@ -1690,7 +1690,7 @@
               "sprint": "L1.7C-MATH",
               "name": "Restore Skill-Tree Math Game + Four-Game Architecture Integrity",
               "completed": "no",
-              "currentState": "**TECHNICAL QA GREEN / READY FOR HUMAN REVIEW; NOT CLOSED.** Platform generator now restores scoped `wiskundevaardigheden.html` as the primary `Rekenen` route for `1.1.2` and `1.1.3`, keeps `stappenplan.html` visible as `Rekenstappen` support, and prevents the unscoped/full-catalog `1.1.1` skill tree from becoming the primary math route. Screenshot QA covers the restored landing, skill-tree math, reasoning, and graph surfaces. Human review must still decide whether the four-part architecture is restored before this blocker can close. Records: `archive/sprints/L1.7C-MATH/`.",
+              "currentState": "**REVISE ADDRESSED / FOCUSED RECHECK READY; NOT CLOSED.** First human review accepted the route restoration but returned REVISE because the restored math-game result state could show `Volgende: A39`. Targeted revision now renders the next action with student-facing skill names, replaces visible dependency-node IDs with `Vaardigheid`, adds focused source tests, and adds post-exercise screenshot QA showing `Volgende: Prijsindex (CPI) berekenen` with no internal `A##`/`B##` code. Focused human recheck must confirm the blocker is fixed before closure. Records: `archive/sprints/L1.7C-MATH/`.",
               "exitGate": ""
             },
             {
@@ -2058,7 +2058,7 @@
           "sprint": "L1.7C-MATH",
           "name": "Restore Skill-Tree Math Game + Four-Game Architecture Integrity",
           "completed": "no",
-          "currentState": "**TECHNICAL QA GREEN / READY FOR HUMAN REVIEW; NOT CLOSED.** Platform generator now restores scoped `wiskundevaardigheden.html` as the primary `Rekenen` route for `1.1.2` and `1.1.3`, keeps `stappenplan.html` visible as `Rekenstappen` support, and prevents the unscoped/full-catalog `1.1.1` skill tree from becoming the primary math route. Screenshot QA covers the restored landing, skill-tree math, reasoning, and graph surfaces. Human review must still decide whether the four-part architecture is restored before this blocker can close. Records: `archive/sprints/L1.7C-MATH/`.",
+          "currentState": "**REVISE ADDRESSED / FOCUSED RECHECK READY; NOT CLOSED.** First human review accepted the route restoration but returned REVISE because the restored math-game result state could show `Volgende: A39`. Targeted revision now renders the next action with student-facing skill names, replaces visible dependency-node IDs with `Vaardigheid`, adds focused source tests, and adds post-exercise screenshot QA showing `Volgende: Prijsindex (CPI) berekenen` with no internal `A##`/`B##` code. Focused human recheck must confirm the blocker is fixed before closure. Records: `archive/sprints/L1.7C-MATH/`.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },

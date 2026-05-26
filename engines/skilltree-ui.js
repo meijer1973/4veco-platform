@@ -183,7 +183,7 @@
         }
         if (!noAchieved) for (var j = 0; j < g.achieved.length; j++) {
             var ag = g.achieved[j], sk = findSkill(ag.id);
-            h += '<div class="st-goal-card-achieved"><span class="st-goal-achieved-text">\u2713 Route geoefend:</span> <strong>' + esc(sk ? sk.name : ag.id) + '</strong></div>';
+            h += '<div class="st-goal-card-achieved"><span class="st-goal-achieved-text">\u2713 Route geoefend:</span> <strong>' + esc(sk ? sk.name : skillDisplayName(ag.id)) + '</strong></div>';
         }
         h += '</div>';
         els.goalBannerSlot.innerHTML = h;
@@ -265,7 +265,7 @@
     /* ── 9. Exercise render ───────────────────────────────── */
     function mountExercise(skillId) {
         var state = engine.startExercise(skillId);
-        if (!state) { fatal('Geen oefening beschikbaar voor ' + skillId); return; }
+        if (!state) { fatal('Geen oefening beschikbaar voor deze vaardigheid.'); return; }
         resetStepUiState();
         clearAutoAdvance();
         var sk = findSkill(skillId);
@@ -508,12 +508,15 @@
         h += '<div class="st-result-buttons">'
            + '<button class="st-btn-back" type="button" data-result-action="back"><i class="fa-solid fa-arrow-left"></i> Terug</button>'
            + '<button class="st-btn-retry" type="button" data-result-action="retry"><i class="fa-solid fa-rotate-right"></i> Nog een keer</button>';
-        if (next) h += '<button class="st-btn-next" type="button" data-result-action="next" data-next="' + esc(next.id) + '">Volgende: ' + esc(next.id) + ' <i class="fa-solid fa-arrow-right"></i></button>';
+        if (next) {
+            var nextLabel = skillDisplayName(next.id);
+            h += '<button class="st-btn-next" type="button" data-result-action="next" data-next="' + esc(next.id) + '">Volgende: ' + esc(nextLabel) + ' <i class="fa-solid fa-arrow-right"></i></button>';
+        }
         h += '</div>';
         if (goalAchieved) {
             var gsk = findSkill(skillId);
             h += '<div class="st-goal-achieved-card"><div class="st-goal-achieved-title">\uD83C\uDFAF Route geoefend!</div>'
-               + '<div class="st-goal-achieved-name">' + esc(gsk ? gsk.name : skillId) + '</div></div>';
+               + '<div class="st-goal-achieved-name">' + esc(gsk ? gsk.name : skillDisplayName(skillId)) + '</div></div>';
         }
         h += '</div>';
         els.exResultSlot.setAttribute('data-result-skill', skillId);
@@ -701,7 +704,7 @@
             for (var ss = 0; ss < STAR_DISPLAY_COUNT; ss++) starStr += ss < sc ? '\u2605' : '\u2606';
             nodesSvg += '<g class="' + gcls + '" data-skill="' + esc(nd.id) + '" transform="translate(' + pos.x + ',' + pos.y + ')" data-layer="' + nd.layer + '">'
                 + '<rect class="st-dep-node-rect" width="' + NW + '" height="' + NH + '" rx="8" ry="8"/>'
-                + '<text class="st-dep-node-id" x="8" y="14">' + esc(nd.id) + '</text>'
+                + '<text class="st-dep-node-id" x="8" y="14">Vaardigheid</text>'
                 + '<text class="st-dep-node-name" x="8" y="30">' + esc(nm) + '</text>'
                 + '<text class="st-dep-node-stars" x="8" y="44">' + starStr + '</text>'
                 + '<g class="st-dep-info-btn" data-dep-info="' + esc(nd.id) + '" transform="translate(' + (NW - 34) + ',6)"><rect class="st-dep-node-iconbg" width="14" height="14" rx="3"/><text class="st-dep-node-iconfg" x="7" y="11" text-anchor="middle">i</text></g>'
