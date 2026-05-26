@@ -40,6 +40,9 @@ describe('paragraph landing page student-web links', () => {
                     name: 'Testparagraaf',
                     chapter: '1.1',
                     domain: 'amber',
+                    skilltree: {
+                        skills: ['A38', 'A39'],
+                    },
                     landing: {
                         summary: 'Web-first lesmateriaal voor deze paragraaf.',
                         pitfalls: ['Gebruik de oude waarde als basis.'],
@@ -116,10 +119,15 @@ describe('paragraph landing page student-web links', () => {
         expect(html).toContain('data-learning-aspect="calculation"');
         expect(html).toContain('data-learning-aspect="graphical"');
         expect(html).toContain('Redeneren');
-        expect(html).toContain('Rekenen / stappenplan');
+        expect(html).toContain('Rekenen');
         expect(html).toContain('Grafieken');
+        expect(html).toContain('wiskundevaardigheden.html');
         expect(html).toContain('stappenplan.html');
-        expect(html).toContain('Volledige vaardigheidskaart');
+        expect(html).toContain('Rekenstappen');
+        expect(html).not.toContain('Rekenen / stappenplan');
+        expect(html).not.toContain('Volledige vaardigheidskaart');
+        expect(html).not.toContain('volledige vaardigheidskaart');
+        expect(html.indexOf('wiskundevaardigheden.html')).toBeLessThan(html.indexOf('stappenplan.html'));
         expect(html).toContain('Begeleide inoefening');
         expect(html).toContain('route-secondary-group');
         expect(html).not.toMatch(/\b(PV|A\d{2}|B\d{2}|adaptief|diagnostisch|diagnose|mastery|sequencing|summatief|AI)\b/i);
@@ -139,6 +147,36 @@ describe('paragraph landing page student-web links', () => {
         expect(chapterHtml).toContain('Oefen');
         expect(chapterHtml).toContain('Verdiep');
         expect(chapterHtml).not.toContain('Valkuilen en misvattingen');
+    });
+
+    test('keeps an unscoped full-catalog skill tree out of the primary calculation route', () => {
+        const configPath = path.join(tmpDir, 'deploy-config.json');
+        const config = JSON.parse(fs.readFileSync(configPath, 'utf8'));
+        config.paragraphs[0].skilltree = { skills: null };
+        fs.writeFileSync(configPath, JSON.stringify(config, null, 2));
+
+        const paragraph = path.join(tmpDir, '1.1 Hoofdstuk Test', '1.1.1 Testparagraaf');
+        fs.mkdirSync(paragraph, { recursive: true });
+        const prefix = '1.1.1 Testparagraaf';
+
+        writeFile(path.join(paragraph, `${prefix} ${DASH} wiskundevaardigheden.html`));
+        writeFile(path.join(paragraph, `${prefix} ${DASH} stappenplan.html`));
+        writeFile(path.join(paragraph, `${prefix} ${DASH} redeneer-spel.html`));
+
+        const result = spawnSync(process.execPath, [BUILDER], {
+            cwd: PLATFORM_ROOT,
+            env: { ...process.env, MODULE_ROOT: tmpDir },
+            encoding: 'utf8',
+        });
+
+        expect(result.status).toBe(0);
+        const html = fs.readFileSync(path.join(paragraph, 'index.html'), 'utf8');
+        expect(html).toContain('Brede vaardigheidskaart');
+        expect(html).toContain('wiskundevaardigheden.html');
+        expect(html).toContain('Rekenstappen');
+        expect(html).toContain('stappenplan.html');
+        expect(html).not.toContain('data-learning-aspect="calculation"');
+        expect(html).not.toContain('Rekenen / stappenplan');
     });
 
     test('routes consolidation pages to mixed practice instead of Verdiep-only', () => {

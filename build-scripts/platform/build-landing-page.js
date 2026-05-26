@@ -164,7 +164,6 @@ function sectionAvailability(files, item = null) {
       files.leren.nieuws ||
       files.leren.samenvatting
     ))
-    || (files.oefenen && files.oefenen.wiskundevaardigheden)
     || hasBookDeepen;
   const labels = [];
   if (files.voorbereiden && (files.voorbereiden.instapquiz || files.voorbereiden.voorkennis)) labels.push("Start");
@@ -1202,15 +1201,24 @@ function renderParagraafPage(paragraaf, files, _resolvedMap) {
       aspect: "reasoning"
     }));
   }
-  const calculationRoute = files.oefenen.stappenplan || files.oefenen.wiskundevaardigheden;
+  const hasScopedMathSkillTree = Boolean(
+    files.oefenen.wiskundevaardigheden &&
+    paragraaf.skilltree &&
+    Array.isArray(paragraaf.skilltree.skills) &&
+    paragraaf.skilltree.skills.length > 0
+  );
+  const mathSkillTreeRoute = hasScopedMathSkillTree ? files.oefenen.wiskundevaardigheden : null;
+  const unscopedSkillTreeRoute = files.oefenen.wiskundevaardigheden && !hasScopedMathSkillTree
+    ? files.oefenen.wiskundevaardigheden
+    : null;
+  const procedureSupportRoute = files.oefenen.stappenplan;
+  const calculationRoute = mathSkillTreeRoute;
   if (calculationRoute) {
     practiceRoutes.push(aspectRouteCard({
       href: encPath([calculationRoute]),
-      icon: ICONS.steps,
-      title: files.oefenen.stappenplan ? "Rekenen / stappenplan" : "Rekenen",
-      desc: files.oefenen.stappenplan
-        ? "Oefen de reken- en procedureregels stap voor stap."
-        : GAME_ASPECTS.calculation.summary,
+      icon: ICONS.layers,
+      title: "Rekenen",
+      desc: GAME_ASPECTS.calculation.summary,
       aspect: "calculation"
     }));
   }
@@ -1241,17 +1249,21 @@ function renderParagraafPage(paragraaf, files, _resolvedMap) {
           <div class="resource-grid learning-aspect-grid">${practiceRoutes.join("\n")}
           </div>
         </div>` : "";
-  const guidedPracticeBlock = begeleidHTML ? `
+  const procedureSupportCard = procedureSupportRoute
+    ? resourceCard(encPath([procedureSupportRoute]), ICONS.steps, "Rekenstappen", "Gebruik extra steun om de procedure stap voor stap te oefenen", "html")
+    : "";
+  const supportCards = [procedureSupportCard, begeleidHTML].filter(Boolean).join("\n");
+  const guidedPracticeBlock = supportCards ? `
         <div class="guided-practice-block">
           <div class="learning-aspect-copy">
             <span class="resource-aspect-label">Eerst steun nodig?</span>
-            <h3>Begeleide inoefening</h3>
-            <p>Werk met hints en denkstappen voordat je zelfstandig oefent.</p>
+            <h3>Stap voor stap oefenen</h3>
+            <p>Gebruik extra steun voordat je zelfstandig oefent.</p>
           </div>
-          <div class="resource-grid">${begeleidHTML}
+          <div class="resource-grid">${supportCards}
           </div>
         </div>` : "";
-  const oefenRouteCards = [guidedPracticeBlock, practiceRouteBlock].filter(Boolean).join("\n");
+  const oefenRouteCards = [practiceRouteBlock, guidedPracticeBlock].filter(Boolean).join("\n");
   const consolidationPracticeCard = isConsolidation && (files.lesboek.opgaven || files.lesboek.antwoorden)
     ? lesboekPairCard(files.lesboek.opgaven, files.lesboek.antwoorden, ICONS.doc, "Gemengde opgaven", "Maak de gemengde opgaven en controleer daarna je uitwerkingen")
     : "";
@@ -1276,21 +1288,18 @@ function renderParagraafPage(paragraaf, files, _resolvedMap) {
     files.leren.nieuws ? resourceCardWithSource(files.leren.nieuws, ICONS.newspaper, "Nieuws met visual", "Context en grafiek bij de stof") : "",
     files.voorbereiden.nieuwsdetective ? resourceCard(encPath([files.voorbereiden.nieuwsdetective]), ICONS.search, "Nieuws-detective", "Ontdek de economie achter het nieuws", "html") : "",
     files.leren.youtube ? resourceCard(encPath([files.leren.youtube]), ICONS.play, "YouTube-video's", "Video-uitleg bij de stof", "html") : "",
+    unscopedSkillTreeRoute ? resourceCard(encPath([unscopedSkillTreeRoute]), ICONS.layers, "Brede vaardigheidskaart", "Extra overzicht; niet de start van deze oefenroute", "html") : "",
   ].filter(Boolean).join("\n");
-  const fullSkillMapCard = files.oefenen.wiskundevaardigheden && files.oefenen.stappenplan
-    ? resourceCard(encPath([files.oefenen.wiskundevaardigheden]), ICONS.layers, "Volledige vaardigheidskaart", "Open de volledige kaart alleen als je breder wilt kijken", "html")
-    : "";
   const sourceLesboekCards = isConsolidation
     ? [lesboekCard(files.lesboek.paragraaf, ICONS.book, "Lesboek - uitleg", "De volledige paragraaf uit het lesboek")].filter(Boolean).join("\n")
     : lesboekCards;
   const sourceCards = [
     files.leren.presentatie ? resourceCardWithSource(files.leren.presentatie, ICONS.monitor, "Presentatie", "De les-presentatie en PowerPoint") : "",
     sourceLesboekCards,
-    fullSkillMapCard,
   ].filter(Boolean).join("\n");
   const verdiepenCards = [
     secondaryGroup("deepen", "Verdiep je begrip", "Samenvatting, context en extra uitleg", deepenCards),
-    secondaryGroup("sources", "Lesboek en downloads", "Bronnen, presentatie en volledige vaardigheidskaart", sourceCards),
+    secondaryGroup("sources", "Lesboek en downloads", "Bronnen, presentatie en lesboek", sourceCards),
   ].filter(Boolean).join("\n");
 
   const hasS = startCards.trim().length > 0;

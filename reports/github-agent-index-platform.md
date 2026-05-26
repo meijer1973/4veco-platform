@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-05-26T07:54:24.219Z
+Generated: 2026-05-26T13:12:00.782Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 1781
+Files indexed: 1797
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -41,9 +41,12 @@ Count: 8
 
 ## engines
 
-Count: 65
+Count: 70
 
 - engines/adaptive-seam.js
+- engines/exit-ticket-engine.js
+- engines/exit-ticket-ui.js
+- engines/exit-ticket.css
 - engines/graphical-engine.js
 - engines/graphical-ui.js
 - engines/graphical.css
@@ -79,6 +82,8 @@ Count: 65
 - engines/tests/companion-terminology.test.js
 - engines/tests/converter-error-exit.test.js
 - engines/tests/docx-style-ids-unique.test.js
+- engines/tests/exit-ticket-engine.test.js
+- engines/tests/exit-ticket-ui.test.js
 - engines/tests/fig-3-step-count.test.js
 - engines/tests/graphical-data.test.js
 - engines/tests/graphical-engine.test.js
@@ -111,7 +116,7 @@ Count: 65
 
 ## build scripts
 
-Count: 296
+Count: 297
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -195,6 +200,7 @@ Count: 296
 - build-scripts/lib/render-presentation-v2-html.js
 - build-scripts/lib/render-presentation-v2-pptx.js
 - build-scripts/lib/verify_svg_geometry.py
+- build-scripts/platform/build-exit-ticket-shells.js
 - build-scripts/platform/build-graphical-shells.js
 - build-scripts/platform/build-landing-page.js
 - build-scripts/platform/build-newsdetective-shells.js
@@ -569,7 +575,7 @@ Count: 105
 
 ## references
 
-Count: 305
+Count: 307
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -665,6 +671,8 @@ Count: 305
 - references/data/sprints/EX-NS0.result.json
 - references/data/sprints/GAME-UX-1.plan.json
 - references/data/sprints/GAME-UX-1.result.json
+- references/data/sprints/GAME-UX-2.plan.json
+- references/data/sprints/GAME-UX-2.result.json
 - references/data/sprints/GATE-CP6.plan.json
 - references/data/sprints/GATE-CP6.result.json
 - references/data/sprints/PV-G4.plan.json
@@ -879,7 +887,7 @@ Count: 305
 
 ## reports
 
-Count: 830
+Count: 836
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1489,6 +1497,12 @@ Count: 830
 - reports/sprints/GAME-UX-1-plan.md
 - reports/sprints/GAME-UX-1-planning-review.md
 - reports/sprints/GAME-UX-1-result.md
+- reports/sprints/GAME-UX-2-baseline.md
+- reports/sprints/GAME-UX-2-diff-summary.md
+- reports/sprints/GAME-UX-2-plan.md
+- reports/sprints/GAME-UX-2-planning-review.md
+- reports/sprints/GAME-UX-2-qa.md
+- reports/sprints/GAME-UX-2-result.md
 - reports/sprints/GATE-CP6-baseline.md
 - reports/sprints/GATE-CP6-diff-summary.md
 - reports/sprints/GATE-CP6-lead-review-assignment.md
@@ -1732,7 +1746,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 227
+Count: 229
 
 - .gitignore
 - BUILD-CHAPTER.md
@@ -1818,6 +1832,7 @@ Count: 227
 - docs/roadmaps/outdated/reference-team-roadmap-v2.8-s4.1-conditions-calibrated.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.80-gate-ex5-pass-with-conditions.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.82-gate-ex6-pass-with-conditions.md
+- docs/roadmaps/outdated/reference-team-roadmap-v2.83-ex7-dry-run-cli-implementation.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.9-rx1-inventory-prepared.md
 - docs/roadmaps/README.md
 - docs/roadmaps/roadmap-version-index.json
@@ -1911,6 +1926,7 @@ Count: 227
 - LICENSE
 - package-lock.json
 - package.json
+- source-data/book-1/exit-ticket/1.1.1.json
 - source-data/book-1/reasoning/1.1.1.csv
 - source-data/book-1/reasoning/1.1.2.csv
 - source-data/book-1/reasoning/README.md

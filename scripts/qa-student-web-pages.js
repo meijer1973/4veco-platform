@@ -214,11 +214,14 @@ async function runPage(cdp, file, scenario) {
 
   const isGraphical = /grafiekenspel/i.test(path.basename(file));
   const isExitTicket = /exit[- ]?ticket/i.test(path.basename(file));
+  const isReasoning = /redeneer-spel/i.test(path.basename(file));
   await waitFor(cdp, isGraphical
     ? 'Boolean(document.querySelector("#g-app svg.g-chart-svg"))'
     : (isExitTicket
       ? 'Boolean(document.querySelector("#exit-ticket-app .et-task"))'
-      : 'Boolean(document.querySelector(".resource-grid, .lesson-shell, main"))'));
+      : (isReasoning
+        ? 'Boolean(document.querySelector(".r-app .r-mode-btn"))'
+        : 'Boolean(document.querySelector(".resource-grid, .lesson-shell, main, #skilltree-app"))')));
   await sleep(250);
 
   const checks = await evaluate(cdp, `(() => {
@@ -245,6 +248,11 @@ async function runPage(cdp, file, scenario) {
       ),
       hasLessonShell: Boolean(document.querySelector(".lesson-shell")),
       hasExitTicket: Boolean(document.querySelector("#exit-ticket-app .et-task")),
+      hasSkillTree: Boolean(document.querySelector("#skilltree-app")),
+      skillTreeCardCount: document.querySelectorAll(".st-skill-card").length,
+      hasReasoningGame: Boolean(document.querySelector(".r-app")),
+      reasoningModeCount: document.querySelectorAll(".r-mode-btn").length,
+      hasReasoningRoutePanel: Boolean(document.querySelector("#r-skill-route .skill-map-route")),
       hasExitTicketRoutes: document.querySelectorAll("#exit-ticket-app .et-route-card").length >= 1,
       exitTicketTaskCount: document.querySelectorAll("#exit-ticket-app .et-task").length,
       hasThreeRoutes: /Redeneren/.test(text) && /Rekenen/.test(text) && /Grafieken/.test(text),
@@ -317,13 +325,18 @@ async function main() {
         result.checks.exitTicketTaskCount > 5 ||
         !result.checks.hasExitTicketRoutes
       )) return true;
+      if (result.checks.hasSkillTree && result.checks.skillTreeCardCount < 1) return true;
+      if (result.checks.hasReasoningGame && (
+        result.checks.reasoningModeCount < 1 ||
+        !result.checks.hasReasoningRoutePanel
+      )) return true;
       if (!isGraphical && result.checks.isParagraphLanding && (
         !result.checks.hasRouteSection ||
         (!result.checks.hasPrimaryRouteLayers && !result.checks.hasConsolidationPracticeRoute)
       )) return true;
       if (!isGraphical && !result.checks.isParagraphLanding && result.checks.hasResourceGrid && (!result.checks.hasThreeRoutes || !result.checks.hasGrafiekenspel)) return true;
       if (!isGraphical && result.checks.hasLessonShell && result.checks.visualObjectCount < 1) return true;
-      if (!isGraphical && !result.checks.hasResourceGrid && !result.checks.hasLessonShell && !result.checks.hasExitTicket) return true;
+      if (!isGraphical && !result.checks.hasResourceGrid && !result.checks.hasLessonShell && !result.checks.hasExitTicket && !result.checks.hasSkillTree && !result.checks.hasReasoningGame) return true;
       return false;
     });
 

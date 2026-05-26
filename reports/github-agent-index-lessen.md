@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-lessen
 
-Generated: 2026-05-26T07:54:24.263Z
+Generated: 2026-05-26T13:12:00.822Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-lessen`
-Files indexed: 1441
+Files indexed: 1475
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -81,8 +81,9 @@ _No files indexed in this group._
 
 ## validators
 
-Count: 7
+Count: 8
 
+- archive/sprints/GATE-L1.7B/GATE-L1.7B-validation-log.md
 - archive/sprints/L1.7A/L1.7A-validation-log.md
 - archive/sprints/L1.7B-R/L1.7B-R-validation-log.md
 - archive/sprints/L1.7B/L1.7B-validation-log.md
@@ -2403,7 +2404,7 @@ Count: 817
 
 ## other
 
-Count: 312
+Count: 345
 
 - _team-b-reference/1.1.1/uitleg vaardigheden team b.html
 - _team-b-reference/1.1.1/uitleg voorkennis team b.html
@@ -2451,6 +2452,13 @@ Count: 312
 - "Boek 1 - Grondslagen, vraag en aanbod/Boek 1 Grondslagen, vraag en aanbod \342\200\223 boek.pdf"
 - archive/planning/plan-1.1.1-part-b-clarity-audit.md
 - archive/README.md
+- archive/sprints/GATE-L1.7B-Q2/GATE-L1.7B-Q2-sprint-plan.md
+- archive/sprints/GATE-L1.7B/GATE-L1.7B-closure-log.md
+- archive/sprints/GATE-L1.7B/GATE-L1.7B-human-review-packet.md
+- archive/sprints/GATE-L1.7B/GATE-L1.7B-human-review-record.md
+- archive/sprints/GATE-L1.7B/GATE-L1.7B-lead-review-summary.md
+- archive/sprints/GATE-L1.7B/GATE-L1.7B-product-boundary-review.md
+- archive/sprints/GATE-L1.7B/GATE-L1.7B-sprint-plan.md
 - archive/sprints/L-CP6A/L-CP6A-closure-log.md
 - archive/sprints/L-CP6A/L-CP6A-handoff-to-references.md
 - archive/sprints/L-CP6A/L-CP6A-remediation-report.md
@@ -2629,10 +2637,29 @@ Count: 312
 - archive/sprints/L1.7A/L1.7A-flag-triage.md
 - archive/sprints/L1.7A/L1.7A-readiness-matrix.md
 - archive/sprints/L1.7A/L1.7A-sprint-plan.md
+- archive/sprints/L1.7B-MAP/L1.7B-MAP-sprint-plan.md
+- archive/sprints/L1.7B-P23/L1.7B-P23-sprint-plan.md
+- archive/sprints/L1.7B-Q2/L1.7B-Q2-sprint-plan.md
 - archive/sprints/L1.7B-R/L1.7B-R-baseline-audit.md
+- archive/sprints/L1.7B-R/L1.7B-R-closure-log.md
+- archive/sprints/L1.7B-R/L1.7B-R-human-review-packet.md
+- archive/sprints/L1.7B-R/L1.7B-R-human-review-record.md
+- archive/sprints/L1.7B-R/L1.7B-R-lead-review-summary.md
+- archive/sprints/L1.7B-R/L1.7B-R-platform-response.md
 - archive/sprints/L1.7B-R/L1.7B-R-platform-support-request.md
+- archive/sprints/L1.7B-R/L1.7B-R-screenshots/1-1-1-schaarste-en-economisch-denken-exit-ticket-desktop-dark.png
+- archive/sprints/L1.7B-R/L1.7B-R-screenshots/1-1-1-schaarste-en-economisch-denken-exit-ticket-desktop-light.png
+- archive/sprints/L1.7B-R/L1.7B-R-screenshots/1-1-1-schaarste-en-economisch-denken-exit-ticket-mobile-dark.png
+- archive/sprints/L1.7B-R/L1.7B-R-screenshots/1-1-1-schaarste-en-economisch-denken-exit-ticket-mobile-light.png
+- archive/sprints/L1.7B-R/L1.7B-R-screenshots/index-desktop-dark.png
+- archive/sprints/L1.7B-R/L1.7B-R-screenshots/index-desktop-light.png
+- archive/sprints/L1.7B-R/L1.7B-R-screenshots/index-mobile-dark.png
+- archive/sprints/L1.7B-R/L1.7B-R-screenshots/index-mobile-light.png
 - archive/sprints/L1.7B-R/L1.7B-R-sprint-plan.md
 - archive/sprints/L1.7B-R/L1.7B-R-stop-decision.md
+- archive/sprints/L1.7B-R/L1.7B-R-student-experience-review.md
+- archive/sprints/L1.7B-R/L1.7B-R-teacher-learning-quality-review.md
+- archive/sprints/L1.7B-R/L1.7B-R-technical-qa-report.md
 - archive/sprints/L1.7B/L1.7B-companion-completion-contract.md
 - archive/sprints/L1.7B/L1.7B-exit-ticket-mvp-scope.md
 - archive/sprints/L1.7B/L1.7B-prototype-inventory.md
@@ -2643,6 +2670,9 @@ Count: 312
 - archive/sprints/L1.7C-0/L1.7C-0-handoff-to-platform.md
 - archive/sprints/L1.7C-0/L1.7C-0-shared-skill-map-contract.md
 - archive/sprints/L1.7C-0/L1.7C-0-sprint-plan.md
+- archive/sprints/L1.7C-MATH/L1.7C-MATH-history-audit.md
+- archive/sprints/L1.7C-MATH/L1.7C-MATH-platform-handoff.md
+- archive/sprints/L1.7C-MATH/L1.7C-MATH-sprint-plan.md
 - archive/sprints/L1.7C/L1.7C-closure-log.md
 - archive/sprints/L1.7C/L1.7C-game-row-baseline-audit.md
 - archive/sprints/L1.7C/L1.7C-game-row-quality-matrix.md
@@ -2697,6 +2727,9 @@ Count: 312
 - archive/sprints/L2.0/L2.0-student-experience-review.md
 - archive/sprints/L2.0/L2.0-teacher-learning-quality-review.md
 - archive/sprints/L2.0/L2.0-technical-qa-report.md
+- archive/sprints/REV-STD-1/REV-STD-1-inherited-flag-table.md
+- archive/sprints/REV-STD-1/REV-STD-1-review-standard.md
+- archive/sprints/REV-STD-1/REV-STD-1-sprint-plan.md
 - archive/sprints/SYNC-1/SYNC-1-roadmap-reconciliation-log.md
 - archive/sprints/SYNC-2/SYNC-2-companion-pre-scale-roadmap-update.md
 - archive/sprints/SYNC-3/SYNC-3-shared-skill-map-roadmap-update.md
@@ -2716,4 +2749,5 @@ Count: 312
 - pv-g4-proof-records/PVG4-proof-002.json
 - pv-g4-proof-records/reports/PVG4-proof-001-procedure-contract-report.json
 - pv-g4-proof-records/reports/PVG4-proof-002-a61-table-trace-report.json
+- specifications/companion-core-specifications.md
 - vw-1022-a-25-1-o.pdf
