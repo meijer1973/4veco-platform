@@ -4,8 +4,23 @@
   "parName": "Schaarste en economisch denken",
   "title": "Korte check",
   "intro": "Kies per vraag wat het beste past bij de uitleg. Gebruik de oefentip als je nog wilt oefenen.",
-  "targetSkillIds": ["A43", "A04"],
-  "skillScopeIds": ["A43", "A04"],
+  "targetSkillIds": ["B01", "B02"],
+  "skillScopeIds": ["B01", "B02"],
+  "metadataAlignment": {
+    "status": "paragraph_skill_aligned_not_target_readiness",
+    "paragraphSkillIds": ["B01", "B02"],
+    "targetExerciseSkillIds": ["A43", "B01", "B02"],
+    "targetReadinessEvidence": false,
+    "sourceRefs": {
+      "paragraphPlan": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_paragraph-plan.md",
+      "targetExerciseRegistry": "references/authored/course-target-exercises.json",
+      "unitRegistry": "references/machine/micro-teaching-units.json"
+    },
+    "notes": [
+      "This checkpoint samples B01/B02 paragraph concepts.",
+      "It does not yet cover the full A43 mixed-allocation calculation chain required for target-exercise-readiness evidence."
+    ]
+  },
   "skillMap": {
     "title": "Oefenroute",
     "routes": [

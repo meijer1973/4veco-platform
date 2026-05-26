@@ -12,6 +12,29 @@ describe('ExitTicketEngine', () => {
         expect(data.tasks.length).toBeLessThanOrEqual(5);
     });
 
+    test('declares B01/B02 as checkpoint-assessed skills without target-readiness claim', () => {
+        expect(data.targetSkillIds).toEqual(['B01', 'B02']);
+        expect(data.skillScopeIds).toEqual(['B01', 'B02']);
+        expect(data.metadataAlignment).toEqual(expect.objectContaining({
+            status: 'paragraph_skill_aligned_not_target_readiness',
+            paragraphSkillIds: ['B01', 'B02'],
+            targetExerciseSkillIds: ['A43', 'B01', 'B02'],
+            targetReadinessEvidence: false,
+        }));
+        expect(data.targetSkillIds).not.toContain('A04');
+        expect(data.skillScopeIds).not.toContain('A04');
+    });
+
+    test('rejects target-readiness claims when target exercise skills are not covered', () => {
+        const bad = clone(data);
+        bad.metadataAlignment = {
+            ...bad.metadataAlignment,
+            status: 'target_exercise_readiness_aligned',
+            targetReadinessEvidence: true,
+        };
+        expect(() => ExitTicketEngine.validateData(bad)).toThrow(/target-readiness evidence must cover all targetExerciseSkillIds/);
+    });
+
     test('keeps student-facing strings free of blocked terms and internal codes', () => {
         expect(ExitTicketEngine.findStudentTextViolations(data)).toEqual([]);
     });
@@ -57,6 +80,8 @@ describe('ExitTicketEngine', () => {
         expect(request.surface).toBe('exit-ticket');
         expect(request.mode).toBe('compact');
         expect(request.aspectFilter).toBe('mixed');
+        expect(request.skillScope).toEqual(['B01', 'B02']);
+        expect(request.targetSkills).toEqual(['B01', 'B02']);
         expect(request.boundaryFlags).toEqual(expect.objectContaining({
             diagnostics: false,
             adaptiveRouting: false,

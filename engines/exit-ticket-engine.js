@@ -50,6 +50,18 @@
     if (!condition) throw new Error(message);
   }
 
+  function isNonEmptyStringArray(value) {
+    return Array.isArray(value) && value.length > 0 && value.every(function (item) {
+      return typeof item === 'string' && item;
+    });
+  }
+
+  function includesAll(container, required) {
+    var set = {};
+    (container || []).forEach(function (item) { set[item] = true; });
+    return (required || []).every(function (item) { return set[item]; });
+  }
+
   function text(value) {
     return String(value == null ? '' : value);
   }
@@ -119,8 +131,9 @@
     assert(typeof data.parNr === 'string' && data.parNr, 'Exit-ticket data needs parNr');
     assert(typeof data.parName === 'string' && data.parName, 'Exit-ticket data needs parName');
     assert(typeof data.title === 'string' && data.title, 'Exit-ticket data needs title');
-    assert(Array.isArray(data.targetSkillIds) && data.targetSkillIds.length > 0, 'Exit-ticket data needs targetSkillIds');
-    assert(Array.isArray(data.skillScopeIds) && data.skillScopeIds.length > 0, 'Exit-ticket data needs skillScopeIds');
+    assert(isNonEmptyStringArray(data.targetSkillIds), 'Exit-ticket data needs targetSkillIds');
+    assert(isNonEmptyStringArray(data.skillScopeIds), 'Exit-ticket data needs skillScopeIds');
+    validateMetadataAlignment(data);
     assert(Array.isArray(data.tasks), 'Exit-ticket data needs tasks');
     assert(data.tasks.length >= 3 && data.tasks.length <= 5, 'Exit-ticket data must contain 3 to 5 tasks');
 
@@ -141,6 +154,24 @@
 
     var violations = findStudentTextViolations(data);
     assert(violations.length === 0, 'Student-facing checkpoint text has blocked terms or internal codes');
+    return true;
+  }
+
+  function validateMetadataAlignment(data) {
+    var meta = data.metadataAlignment;
+    assert(meta && typeof meta === 'object', 'Exit-ticket data needs metadataAlignment');
+    assert(typeof meta.status === 'string' && meta.status, 'metadataAlignment needs status');
+    assert(isNonEmptyStringArray(meta.paragraphSkillIds), 'metadataAlignment needs paragraphSkillIds');
+    assert(isNonEmptyStringArray(meta.targetExerciseSkillIds), 'metadataAlignment needs targetExerciseSkillIds');
+    assert(typeof meta.targetReadinessEvidence === 'boolean', 'metadataAlignment needs targetReadinessEvidence boolean');
+    assert(includesAll(data.targetSkillIds, meta.paragraphSkillIds), 'targetSkillIds must include paragraphSkillIds');
+    assert(includesAll(data.skillScopeIds, meta.paragraphSkillIds), 'skillScopeIds must include paragraphSkillIds');
+    if (meta.targetReadinessEvidence === true) {
+      assert(meta.status === 'target_exercise_readiness_aligned', 'target-readiness evidence requires aligned status');
+      assert(includesAll(data.targetSkillIds, meta.targetExerciseSkillIds), 'target-readiness evidence must cover all targetExerciseSkillIds');
+    } else {
+      assert(meta.status !== 'target_exercise_readiness_aligned', 'aligned target-readiness status requires targetReadinessEvidence true');
+    }
     return true;
   }
 
@@ -242,6 +273,7 @@
   };
 
   ExitTicketEngine.validateData = validateData;
+  ExitTicketEngine.validateMetadataAlignment = validateMetadataAlignment;
   ExitTicketEngine.collectStudentText = collectStudentText;
   ExitTicketEngine.findStudentTextViolations = findStudentTextViolations;
   ExitTicketEngine.BLOCKED_STUDENT_TERMS = BLOCKED_STUDENT_TERMS.slice();
