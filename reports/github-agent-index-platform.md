@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-05-26T16:46:01.889Z
+Generated: 2026-05-27T11:48:27.935Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 1800
+Files indexed: 1807
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -117,7 +117,7 @@ Count: 71
 
 ## build scripts
 
-Count: 299
+Count: 300
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -388,6 +388,7 @@ Count: 299
 - build-scripts/sprints/check-scope-language.test.js
 - build-scripts/sprints/check-sprint-bundle.js
 - build-scripts/sprints/check-sprint-plan.js
+- build-scripts/sprints/check-sprint-plan.test.js
 - build-scripts/sprints/check-sprint-result.js
 - build-scripts/sprints/emit-gate-bundle-urls.js
 - build-scripts/sprints/emit-url-index.js
@@ -468,7 +469,7 @@ Count: 42
 
 ## validators
 
-Count: 107
+Count: 108
 
 - build-scripts/rag/validate-chunks.js
 - build-scripts/rag/validate-query-output.js
@@ -550,6 +551,7 @@ Count: 107
 - build-scripts/sprints/check-scope-language.test.js
 - build-scripts/sprints/check-sprint-bundle.js
 - build-scripts/sprints/check-sprint-plan.js
+- build-scripts/sprints/check-sprint-plan.test.js
 - build-scripts/sprints/check-sprint-result.js
 - docs/roadmaps/outdated/reference-team-roadmap-v2.22-pv2-procedure-visual-schema-validator.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.81-ex6-validator-cli-planning.md
@@ -580,7 +582,7 @@ Count: 107
 
 ## references
 
-Count: 307
+Count: 309
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -697,6 +699,8 @@ Count: 307
 - references/data/sprints/PV.7.result.json
 - references/data/sprints/PV.8.plan.json
 - references/data/sprints/PV.8.result.json
+- references/data/sprints/QUALITY-STD-1.plan.json
+- references/data/sprints/QUALITY-STD-1.result.json
 - references/data/sprints/R0.2.plan.json
 - references/data/sprints/R0.2.result.json
 - references/data/sprints/R1.1.plan.json
@@ -892,7 +896,7 @@ Count: 307
 
 ## reports
 
-Count: 836
+Count: 840
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1544,6 +1548,10 @@ Count: 836
 - reports/sprints/PV.8-baseline.md
 - reports/sprints/PV.8-diff-summary.md
 - reports/sprints/PV.8-result.md
+- reports/sprints/QUALITY-STD-1-baseline.md
+- reports/sprints/QUALITY-STD-1-diff-summary.md
+- reports/sprints/QUALITY-STD-1-plan.md
+- reports/sprints/QUALITY-STD-1-result.md
 - reports/sprints/R0.2-baseline.md
 - reports/sprints/R0.2-diff-summary.md
 - reports/sprints/R0.2-result.md

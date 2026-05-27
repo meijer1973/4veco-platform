@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "sprint_id": "MTU-H1",
+  "title": "Operation Benchmark From Exam Questions",
+  "status": "completed",
+  "completed_on": "2026-05-27",
+  "plan": "reports/sprints/MTU-H1-plan.md",
+  "baseline": "reports/sprints/MTU-H1-baseline.md",
+  "result": "reports/sprints/MTU-H1-result.md",
+  "diff_summary": "reports/sprints/MTU-H1-diff-summary.md",
+  "lead_review_required": false,
+  "human_review_required": false,
+  "protected_reference_data_changed": false,
+  "external_source_changed": false,
+  "machine_reference_changed": false,
+  "unit_minting_performed": false,
+  "candidate_storage_created": false,
+  "candidate_writes_performed": false,
+  "lesson_output_changed": false,
+  "student_product_use_authorized": false,
+  "outputs": [
+    "reports/mtu-hardening/benchmark-sample-v1.json",
+    "reports/mtu-hardening/solo-q1-q3-operation-map.md",
+    "reports/mtu-hardening/failure-taxonomy-v1.md",
+    "build-scripts/references/check-mtu-hardening-benchmark.js",
+    "reports/sprints/MTU-H1-result.md",
+    "reports/sprints/MTU-H1-diff-summary.md",
+    "references/data/sprints/MTU-H1.result.json"
+  ],
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/MTU-H1-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js MTU-H1",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-mtu-hardening-benchmark.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/validate-report-json.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/generate-all.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/generate-reference-health.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/check-reference-health.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run dashboard:internal",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run agent:index",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js --check",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/build-source-document-registry.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/build-reference-inventory.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-source-document-registry.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-source-manifest.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-document-inventory.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-roadmap-version-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd test -- --runInBand",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js MTU-H1 --complete",
+      "status": "passed"
+    }
+  ],
+  "next_action": "Start MTU-H2 as a governed Solo q1-q3 canonical micro-case review and CLI-mutation planning lane before any registry changes."
+}

@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-lessen
 
-Generated: 2026-05-26T16:46:01.918Z
+Generated: 2026-05-27T11:48:27.972Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-lessen`
-Files indexed: 1512
+Files indexed: 1527
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -81,11 +81,12 @@ _No files indexed in this group._
 
 ## validators
 
-Count: 12
+Count: 14
 
 - archive/sprints/GATE-L1.7B/GATE-L1.7B-validation-log.md
 - archive/sprints/L1.7A/L1.7A-validation-log.md
 - archive/sprints/L1.7B-MAP/L1.7B-MAP-validation-log.md
+- archive/sprints/L1.7B-P23/L1.7B-P23-validation-log.md
 - archive/sprints/L1.7B-R/L1.7B-R-validation-log.md
 - archive/sprints/L1.7B/L1.7B-validation-log.md
 - archive/sprints/L1.7C-0/L1.7C-0-validation-log.md
@@ -93,6 +94,7 @@ Count: 12
 - archive/sprints/L1.7C/L1.7C-validation-log.md
 - archive/sprints/L1.7D/L1.7D-validation-log.md
 - archive/sprints/L2.0/L2.0-validation-log.md
+- archive/sprints/QUALITY-STD-1/QUALITY-STD-1-validation-log.md
 - archive/sprints/SCOPE-LANG-1/SCOPE-LANG-1-validation-log.md
 - archive/sprints/SPEC-END-STATE/SPEC-END-STATE-validation-log.md
 
@@ -2408,7 +2410,7 @@ Count: 817
 
 ## other
 
-Count: 378
+Count: 391
 
 - _team-b-reference/1.1.1/uitleg vaardigheden team b.html
 - _team-b-reference/1.1.1/uitleg voorkennis team b.html
@@ -2642,11 +2644,22 @@ Count: 378
 - archive/sprints/L1.7A/L1.7A-readiness-matrix.md
 - archive/sprints/L1.7A/L1.7A-sprint-plan.md
 - archive/sprints/L1.7B-MAP/L1.7B-MAP-baseline-audit.md
+- archive/sprints/L1.7B-MAP/L1.7B-MAP-closure-log.md
 - archive/sprints/L1.7B-MAP/L1.7B-MAP-human-review-packet.md
+- archive/sprints/L1.7B-MAP/L1.7B-MAP-human-review-record.md
+- archive/sprints/L1.7B-MAP/L1.7B-MAP-lead-review-summary.md
 - archive/sprints/L1.7B-MAP/L1.7B-MAP-metadata-contract.md
+- archive/sprints/L1.7B-MAP/L1.7B-MAP-metadata-review.md
 - archive/sprints/L1.7B-MAP/L1.7B-MAP-sprint-plan.md
+- archive/sprints/L1.7B-MAP/L1.7B-MAP-teacher-learning-quality-review.md
 - archive/sprints/L1.7B-MAP/L1.7B-MAP-technical-qa-report.md
+- archive/sprints/L1.7B-P23/L1.7B-P23-baseline-audit.md
+- archive/sprints/L1.7B-P23/L1.7B-P23-human-review-packet.md
+- archive/sprints/L1.7B-P23/L1.7B-P23-operation-chain-analysis.md
+- archive/sprints/L1.7B-P23/L1.7B-P23-platform-handoff.md
 - archive/sprints/L1.7B-P23/L1.7B-P23-sprint-plan.md
+- archive/sprints/L1.7B-P23/L1.7B-P23-stop-decision.md
+- archive/sprints/L1.7B-P23/L1.7B-P23-technical-qa-report.md
 - archive/sprints/L1.7B-Q2/L1.7B-Q2-sprint-plan.md
 - archive/sprints/L1.7B-R/L1.7B-R-baseline-audit.md
 - archive/sprints/L1.7B-R/L1.7B-R-closure-log.md
@@ -2759,6 +2772,8 @@ Count: 378
 - archive/sprints/L2.0/L2.0-student-experience-review.md
 - archive/sprints/L2.0/L2.0-teacher-learning-quality-review.md
 - archive/sprints/L2.0/L2.0-technical-qa-report.md
+- archive/sprints/QUALITY-STD-1/QUALITY-STD-1-closure-log.md
+- archive/sprints/QUALITY-STD-1/QUALITY-STD-1-sprint-plan.md
 - archive/sprints/REV-STD-1/REV-STD-1-inherited-flag-table.md
 - archive/sprints/REV-STD-1/REV-STD-1-review-standard.md
 - archive/sprints/REV-STD-1/REV-STD-1-sprint-plan.md

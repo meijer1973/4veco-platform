@@ -1,6 +1,6 @@
 # Exam Ingestion Coverage
 
-Generated: 2026-05-26T07:54:14.291Z
+Generated: 2026-05-27T11:49:07.616Z
 Status: warn
 
 Diagnostic EX-3 report. This report records reviewed EX-2 classifications for EX-1 pilot exam items. It does not authorize protected reference mutation, external-source mutation, unit minting, operation-registry mutation, answer-skill mutation, target-exercise promotion, lesson-output mutation, CP-6 closure, Year-1 closure, or student/product use.

@@ -1,0 +1,598 @@
+{
+  "schema_version": 1,
+  "benchmark_id": "MTU-H1-benchmark-sample-v1",
+  "sprint_id": "MTU-H1",
+  "created": "2026-05-27",
+  "status": "seed_benchmark_non_mutating",
+  "source_basis": {
+    "primary_evidence": "User-provided 2026 VWO economie Solo q1-q3 analysis and correction-model summary",
+    "official_source_refresh_performed": false,
+    "external_source_mutated": false,
+    "note": "MTU-H1 records the supplied analysis as benchmark evidence. It does not claim a new external-source extraction or refresh."
+  },
+  "authority_boundary": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_mutation_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "student_product_use_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false
+  },
+  "benchmark_policy": {
+    "anchor": "official_correction_model_operations",
+    "separate_layers": [
+      "content_mtus",
+      "calculation_graph_source_operation_mtus",
+      "answer_form_mtus",
+      "misconception_targets",
+      "missing_unit_flags",
+      "over_trigger_flags"
+    ],
+    "forbidden_shortcuts": [
+      "minting from syllabus prose",
+      "treating prompt verbs as metadata only",
+      "mapping broad concept units as full operation coverage",
+      "triggering derivative routes where the answer model does not require them",
+      "triggering full function construction where a point calculation is sufficient"
+    ]
+  },
+  "stratified_sample_slots": [
+    {
+      "slot_id": "sample-berekenen",
+      "question_type": "berekenen",
+      "status": "future_sample_required",
+      "required_layers": [
+        "content",
+        "calculation_operation",
+        "answer_form",
+        "unit_or_scale_handling"
+      ]
+    },
+    {
+      "slot_id": "sample-leg-uit",
+      "question_type": "leg_uit",
+      "status": "future_sample_required",
+      "required_layers": [
+        "content",
+        "reasoning_operation",
+        "answer_form",
+        "misconception_target"
+      ]
+    },
+    {
+      "slot_id": "sample-analyseer",
+      "question_type": "analyseer",
+      "status": "future_sample_required",
+      "required_layers": [
+        "content",
+        "multi_step_reasoning_operation",
+        "answer_form",
+        "old_new_comparison"
+      ]
+    },
+    {
+      "slot_id": "sample-arceer-grafisch",
+      "question_type": "arceer_grafisch",
+      "status": "future_sample_required",
+      "required_layers": [
+        "content",
+        "graph_operation",
+        "answer_form",
+        "area_or_label_boundary"
+      ]
+    },
+    {
+      "slot_id": "sample-bron",
+      "question_type": "bron",
+      "status": "future_sample_required",
+      "required_layers": [
+        "content",
+        "source_reading_operation",
+        "answer_form",
+        "source_locator"
+      ]
+    },
+    {
+      "slot_id": "sample-classificatie",
+      "question_type": "classificatie",
+      "status": "future_sample_required",
+      "required_layers": [
+        "content",
+        "classification_operation",
+        "answer_form",
+        "accepted_alternatives"
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "vwo-economie-2026-solo:q1",
+      "status": "seed_case_user_analysis",
+      "prompt_excerpt": "Explain that diesel creates maatschappelijke kosten and give an example.",
+      "answer_type": "leg_uit_met_voorbeeld",
+      "official_correction_model_operations": [
+        {
+          "operation_id": "q1-op-1",
+          "description": "Name or describe a context-specific social-cost example caused by diesel use.",
+          "layer": "reasoning_operation"
+        },
+        {
+          "operation_id": "q1-op-2",
+          "description": "Explain that the cost is borne by society or non-users and is not included in the direct user price.",
+          "layer": "reasoning_operation"
+        }
+      ],
+      "content_mtus": [
+        {
+          "unit_id": "F16",
+          "label": "MPC-MSC en MPB-MSB onderscheiden",
+          "fit": "partial_over_formal",
+          "rationale": "F16 is useful for formal externality machinery but over-triggers marginal-curve apparatus for this verbal exam item."
+        }
+      ],
+      "calculation_graph_source_operation_mtus": [],
+      "answer_form_mtus": [
+        {
+          "candidate_id": "A_ANSWER_LEG_UIT_WITH_EXAMPLE",
+          "status": "missing_answer_form_unit",
+          "core": "Give the requested example, explain why it fits the concept, and connect it to the context."
+        }
+      ],
+      "misconception_targets": [
+        {
+          "misconception_id": "external_cost_is_same_as_private_cost",
+          "description": "Student names a diesel cost but does not explain that society or third parties bear it."
+        },
+        {
+          "misconception_id": "concept_name_without_mechanism",
+          "description": "Student names maatschappelijke kosten without a causal mechanism or example."
+        }
+      ],
+      "missing_unit_flags": [
+        {
+          "candidate_id": "F_NEW_VERBAL_EXTERNAL_COST_RECOGNITION",
+          "category": "content_mtu",
+          "core": "Identify a cost caused by production or consumption that is not borne by the direct user or producer."
+        },
+        {
+          "candidate_id": "F_NEW_EXTERNAL_COST_EXAMPLE_EXPLANATION",
+          "category": "content_reasoning_mtu",
+          "core": "Give one context-specific example and explain why the cost is external or social."
+        },
+        {
+          "candidate_id": "A_ANSWER_LEG_UIT_WITH_EXAMPLE",
+          "category": "answer_form_mtu",
+          "core": "Answer a leg-uit-met-voorbeeld question with example plus causal explanation."
+        }
+      ],
+      "over_trigger_flags": [
+        {
+          "flag_id": "q1-F16-formal-mpc-msc-overtrigger",
+          "description": "Do not require full MPC/MSC apparatus where the correction model asks for verbal social-cost explanation."
+        },
+        {
+          "flag_id": "q1-welfare-loss-externality-overtrigger",
+          "description": "Do not require overproduction or welfare-loss diagram reasoning unless the official answer model asks for it."
+        }
+      ],
+      "mapping_verdict": "missing_answer_form_and_verbal_external_cost_units",
+      "mutation_authorized": false,
+      "student_product_use_authorized": false
+    },
+    {
+      "question_id": "vwo-economie-2026-solo:q2",
+      "status": "seed_case_user_analysis",
+      "prompt_excerpt": "Calculate fixed costs from known profit, price/output relation, revenue, and variable costs.",
+      "answer_type": "berekenen",
+      "official_correction_model_operations": [
+        {
+          "operation_id": "q2-op-1",
+          "description": "Solve 58 = -2Q + 100 to find Q = 21.",
+          "layer": "calculation_operation"
+        },
+        {
+          "operation_id": "q2-op-2",
+          "description": "Calculate TO = 58 x 21, respecting the exam scale.",
+          "layer": "calculation_operation"
+        },
+        {
+          "operation_id": "q2-op-3",
+          "description": "Calculate TVK = 16 x 21 from constant variable cost or constant MK.",
+          "layer": "calculation_operation"
+        },
+        {
+          "operation_id": "q2-op-4",
+          "description": "Solve W = TO - (TVK + TCK) for unknown TCK, giving 192,000.",
+          "layer": "calculation_operation"
+        }
+      ],
+      "content_mtus": [
+        {
+          "unit_id": "A21",
+          "label": "Winst = TO - TK",
+          "fit": "too_broad",
+          "rationale": "A21 names the profit relation but does not isolate the reverse fixed-cost calculation chain."
+        },
+        {
+          "unit_id": "D02",
+          "label": "Constante kosten en winst",
+          "fit": "conceptual_not_operational",
+          "rationale": "D02 is about constant costs in break-even or MO=MK context, not this unknown-TCK route."
+        }
+      ],
+      "calculation_graph_source_operation_mtus": [
+        {
+          "candidate_id": "A_NEW_TO_POINT_CALCULATION",
+          "status": "missing_operation_unit",
+          "core": "Calculate total revenue from one price and one quantity without constructing a full TO function."
+        },
+        {
+          "candidate_id": "A_NEW_TVK_CONSTANT_VARIABLE_COST",
+          "status": "missing_operation_unit",
+          "core": "Calculate TVK = v x Q when variable cost per unit is constant."
+        },
+        {
+          "candidate_id": "A_NEW_UNKNOWN_FIXED_COST_FROM_PROFIT",
+          "status": "missing_operation_unit",
+          "core": "Solve W = TO - (TVK + TCK) for TCK."
+        },
+        {
+          "candidate_id": "A_NEW_SCALE_FACTOR_UNIT_HANDLING",
+          "status": "missing_operation_unit",
+          "core": "Apply labels such as x 1,000 correctly in calculations and final answer units."
+        }
+      ],
+      "answer_form_mtus": [
+        {
+          "candidate_id": "A_ANSWER_BEREKEN_QUESTION",
+          "status": "missing_answer_form_unit",
+          "core": "Identify requested variable, write relation, substitute values, show intermediate calculation, and state final answer with unit."
+        }
+      ],
+      "misconception_targets": [
+        {
+          "misconception_id": "profit_relation_known_but_not_inverted",
+          "description": "Student knows W = TO - TK but cannot rearrange it to find fixed costs."
+        },
+        {
+          "misconception_id": "scale_factor_ignored",
+          "description": "Student computes the right numeric relation but omits or misapplies x 1,000."
+        },
+        {
+          "misconception_id": "full_function_needed_for_point_calculation",
+          "description": "Student or mapper over-builds a full TO function when the correction model only needs P x Q."
+        }
+      ],
+      "missing_unit_flags": [
+        {
+          "candidate_id": "A_NEW_TO_POINT_CALCULATION",
+          "category": "calculation_operation_mtu",
+          "core": "TO = P x Q for one point."
+        },
+        {
+          "candidate_id": "A_NEW_TVK_CONSTANT_VARIABLE_COST",
+          "category": "calculation_operation_mtu",
+          "core": "TVK = v x Q when v or constant MK is given."
+        },
+        {
+          "candidate_id": "A_NEW_UNKNOWN_FIXED_COST_FROM_PROFIT",
+          "category": "calculation_operation_mtu",
+          "core": "Known profit plus known TO and TVK to unknown TCK."
+        },
+        {
+          "candidate_id": "A_NEW_SCALE_FACTOR_UNIT_HANDLING",
+          "category": "calculation_reliability_mtu",
+          "core": "Correctly handle scale labels in exam figures and answer units."
+        },
+        {
+          "candidate_id": "A_ANSWER_BEREKEN_QUESTION",
+          "category": "answer_form_mtu",
+          "core": "Show formula, substitution, intermediate result, unit, and final conclusion."
+        }
+      ],
+      "over_trigger_flags": [
+        {
+          "flag_id": "q2-A21-too-broad-profit-concept",
+          "description": "Do not treat A21 as full coverage for reverse fixed-cost calculation."
+        },
+        {
+          "flag_id": "q2-TO-function-construction-overtrigger",
+          "description": "Do not require full TO-function construction when TO = P x Q at a point is enough."
+        },
+        {
+          "flag_id": "q2-break-even-D02-overtrigger",
+          "description": "Do not route the task through break-even or MO=MK constant-cost concepts."
+        }
+      ],
+      "mapping_verdict": "missing_reverse_fixed_cost_operation_chain",
+      "mutation_authorized": false,
+      "student_product_use_authorized": false
+    },
+    {
+      "question_id": "vwo-economie-2026-solo:q3",
+      "status": "seed_case_user_analysis",
+      "prompt_excerpt": "Derive marginal revenue from GO, set MO equal to new given MK, find Q, calculate new price, and calculate percentage price rise.",
+      "answer_type": "berekenen_met_economische_interpretatie",
+      "official_correction_model_operations": [
+        {
+          "operation_id": "q3-op-1",
+          "description": "Recognise GO as the monopolist's price or demand relation and derive TO and MO.",
+          "layer": "calculation_operation"
+        },
+        {
+          "operation_id": "q3-op-2",
+          "description": "Solve MO = given MKbio, where MKbio = 24 is already given.",
+          "layer": "calculation_operation"
+        },
+        {
+          "operation_id": "q3-op-3",
+          "description": "Substitute the new Q into GO(Q) to calculate the new price.",
+          "layer": "calculation_operation"
+        },
+        {
+          "operation_id": "q3-op-4",
+          "description": "Calculate percentage price rise using the old price as denominator.",
+          "layer": "calculation_operation"
+        }
+      ],
+      "content_mtus": [
+        {
+          "unit_id": "A20",
+          "label": "MO = MK oplossen",
+          "fit": "too_broad",
+          "rationale": "A20 covers the broad profit-maximisation condition but does not distinguish given-MK from derived-MK routes."
+        },
+        {
+          "unit_id": "A38",
+          "label": "Procentuele verandering berekenen",
+          "fit": "partial",
+          "rationale": "A38 supports percentage change, but not the distinction between price percentage change and pass-through share."
+        },
+        {
+          "unit_id": "D07",
+          "label": "Heffing doorberekenen in prijs",
+          "fit": "related_but_too_narrow",
+          "rationale": "D07 captures tax pass-through, but q3 exposes the broader cost-shock/incidence misconception family."
+        }
+      ],
+      "calculation_graph_source_operation_mtus": [
+        {
+          "candidate_id": "A_NEW_GO_AS_MONOPOLY_PRICE_DEMAND_RELATION",
+          "status": "missing_operation_unit",
+          "core": "Recognise GO/P(Q) as the price relation for monopoly calculation."
+        },
+        {
+          "candidate_id": "A_NEW_MO_WITHOUT_DERIVATIVES",
+          "status": "missing_operation_unit",
+          "core": "Determine or use marginal revenue through table, graph, or rule before calculus is introduced."
+        },
+        {
+          "candidate_id": "A_NEW_MO_WITH_DERIVATIVE",
+          "status": "missing_operation_unit",
+          "core": "Derive MO by differentiating TO as a later formal route."
+        },
+        {
+          "candidate_id": "A_NEW_MO_EQUALS_GIVEN_MK",
+          "status": "missing_operation_unit",
+          "core": "Solve MO = a given constant marginal cost."
+        },
+        {
+          "candidate_id": "A_NEW_MO_EQUALS_DERIVED_MK",
+          "status": "future_split_candidate",
+          "core": "Solve MO = MK when both functions must be derived first."
+        },
+        {
+          "candidate_id": "A_NEW_NEW_MONOPOLY_PRICE_AFTER_Q",
+          "status": "missing_operation_unit",
+          "core": "After finding Q*, substitute Q* into GO/P(Q) to determine price."
+        },
+        {
+          "candidate_id": "A_NEW_PERCENTAGE_PRICE_CHANGE_AFTER_COST_CHANGE",
+          "status": "missing_operation_unit",
+          "core": "Calculate price percentage change and distinguish it from incidence share."
+        }
+      ],
+      "answer_form_mtus": [
+        {
+          "candidate_id": "A_ANSWER_BEREKEN_QUESTION",
+          "status": "missing_answer_form_unit",
+          "core": "Show derivation, equation, substitution, percentage denominator, and final rounded percentage."
+        }
+      ],
+      "misconception_targets": [
+        {
+          "misconception_id": "given_mk_treated_as_derived_mk",
+          "description": "Student or mapper triggers MK derivation even though the marginal cost is already given."
+        },
+        {
+          "misconception_id": "calculus_route_required_too_early",
+          "description": "Student route assumes derivative-based MO before the non-calculus marginal-revenue route is taught."
+        },
+        {
+          "misconception_id": "price_change_equals_cost_change",
+          "description": "Student assumes an 8 cost increase must become an 8 price increase."
+        },
+        {
+          "misconception_id": "wrong_percentage_denominator",
+          "description": "Student uses the cost change or new price rather than the old price as the denominator."
+        }
+      ],
+      "missing_unit_flags": [
+        {
+          "candidate_id": "A_NEW_MO_WITHOUT_DERIVATIVES",
+          "category": "calculation_operation_mtu",
+          "core": "Non-calculus MO route for monopoly profit maximisation."
+        },
+        {
+          "candidate_id": "A_NEW_MO_WITH_DERIVATIVE",
+          "category": "calculation_operation_mtu",
+          "core": "Formal derivative route for MO."
+        },
+        {
+          "candidate_id": "A_NEW_MO_EQUALS_GIVEN_MK",
+          "category": "calculation_operation_mtu",
+          "core": "Solve MO against a given marginal-cost value."
+        },
+        {
+          "candidate_id": "A_NEW_NEW_MONOPOLY_PRICE_AFTER_Q",
+          "category": "calculation_operation_mtu",
+          "core": "Use Q* in GO/P(Q) to find price."
+        },
+        {
+          "candidate_id": "A_NEW_PERCENTAGE_PRICE_CHANGE_AFTER_COST_CHANGE",
+          "category": "calculation_operation_mtu",
+          "core": "Compute price percentage change and distinguish incidence share."
+        },
+        {
+          "candidate_id": "D07C_COST_SHOCK_PASS_THROUGH",
+          "category": "incidence_family_mtu",
+          "core": "Calculate how much of a per-unit cost increase appears as a higher consumer price."
+        },
+        {
+          "candidate_id": "D07D_INCIDENCE_AMOUNT_NOT_FULL_PRICE_CHANGE",
+          "category": "misconception_mtu",
+          "core": "Explain why a tax, subsidy, or cost amount does not automatically equal the consumer price change."
+        }
+      ],
+      "over_trigger_flags": [
+        {
+          "flag_id": "q3-A20-too-broad-mo-mk",
+          "description": "Do not let A20 hide the distinction between given-MK and derived-MK routes."
+        },
+        {
+          "flag_id": "q3-A13-mk-derivation-overtrigger",
+          "description": "Do not require MK derivation when MKbio is already given."
+        },
+        {
+          "flag_id": "q3-calculus-only-mo-route-overtrigger",
+          "description": "Do not make derivative-based MO the only teaching route."
+        },
+        {
+          "flag_id": "q3-pass-through-vs-price-percentage-confusion",
+          "description": "Do not confuse percentage price rise with pass-through share."
+        }
+      ],
+      "mapping_verdict": "missing_granular_mo_mk_and_pass_through_operations",
+      "mutation_authorized": false,
+      "student_product_use_authorized": false
+    }
+  ],
+  "future_sprint_routing": [
+    {
+      "sprint_id": "MTU-H2",
+      "name": "Solo q1-q3 Canonical Micro-Cases",
+      "route": "review CLI-governed MTU additions or refactors for the seed cases",
+      "mutation_authorized_by_mtu_h1": false
+    },
+    {
+      "sprint_id": "MTU-H3",
+      "name": "Incidence Pass-Through Skill Family",
+      "route": "review D07 split or generalisation into tax, subsidy, cost-shock, graphical, elasticity, and misconception units",
+      "mutation_authorized_by_mtu_h1": false
+    },
+    {
+      "sprint_id": "MTU-H4",
+      "name": "Answer-Form MTUs And Question-Type Mapping",
+      "route": "review answer-form units for bereken, leg uit, analyseer, arceer/grafisch, geef aan, and related verbs",
+      "mutation_authorized_by_mtu_h1": false
+    },
+    {
+      "sprint_id": "MTU-H5",
+      "name": "MTU Mapping Regression Validator",
+      "route": "build regression checks for missing MTUs, over-triggers, answer forms, scale factors, incidence, and misconception tags",
+      "mutation_authorized_by_mtu_h1": false
+    },
+    {
+      "sprint_id": "MTU-H6",
+      "name": "Hardened MTUs Into Student Routes",
+      "route": "feed reviewed registry decisions into exit tickets, skill-tree games, explanations, practice, and review gates",
+      "mutation_authorized_by_mtu_h1": false
+    }
+  ],
+  "quality_log": [
+    {
+      "issue_id": "MTU-H1-QLOG-001",
+      "issue": "Verbal external-cost MTU missing",
+      "category": "MTU granularity",
+      "severity": "medium",
+      "next_action": "Add verbal external-cost and leg-uit-with-example units in a later governed lane.",
+      "proof_to_close": "Solo q1 maps without over-triggering formal externality or welfare-loss machinery."
+    },
+    {
+      "issue_id": "MTU-H1-QLOG-002",
+      "issue": "A21 too broad for q2",
+      "category": "MTU dependency / operation gap",
+      "severity": "high",
+      "next_action": "Add unknown fixed-cost-from-profit unit and inversion support.",
+      "proof_to_close": "q2 maps to exact calculation chain."
+    },
+    {
+      "issue_id": "MTU-H1-QLOG-003",
+      "issue": "TO-function over-trigger",
+      "category": "MTU over-trigger",
+      "severity": "medium",
+      "next_action": "Split pointwise TO calculation from TO-function construction.",
+      "proof_to_close": "q2 no longer requires full TO-function construction."
+    },
+    {
+      "issue_id": "MTU-H1-QLOG-004",
+      "issue": "MO=MK path too derivative-heavy",
+      "category": "MTU sequencing",
+      "severity": "high",
+      "next_action": "Split non-calculus MO route from derivative route.",
+      "proof_to_close": "q3 can map to both teaching sequence and formal answer route."
+    },
+    {
+      "issue_id": "MTU-H1-QLOG-005",
+      "issue": "MO = given MK missing",
+      "category": "MTU dependency",
+      "severity": "medium",
+      "next_action": "Split A20 into given-MK and derived-MK variants.",
+      "proof_to_close": "q3 no longer triggers unnecessary MK derivation."
+    },
+    {
+      "issue_id": "MTU-H1-QLOG-006",
+      "issue": "Incidence/pass-through under-specified",
+      "category": "standard exam skill gap",
+      "severity": "high",
+      "next_action": "Refactor D07 into tax, subsidy, cost-shock, graphical, elasticity, and misconception family.",
+      "proof_to_close": "Tax/subsidy/pass-through sample maps directly to incidence units."
+    },
+    {
+      "issue_id": "MTU-H1-QLOG-007",
+      "issue": "Question words not taught as answer forms",
+      "category": "answer-construction gap",
+      "severity": "high",
+      "next_action": "Add answer-form MTUs and map from question_type.",
+      "proof_to_close": "Random sample has answer-form coverage."
+    },
+    {
+      "issue_id": "MTU-H1-QLOG-008",
+      "issue": "Scale factors weakly represented",
+      "category": "calculation reliability",
+      "severity": "medium",
+      "next_action": "Add scale-factor/unit MTU.",
+      "proof_to_close": "x 1,000 cases map consistently."
+    },
+    {
+      "issue_id": "MTU-H1-QLOG-009",
+      "issue": "Regression gate absent",
+      "category": "review-system gap",
+      "severity": "high",
+      "next_action": "Build MTU mapping benchmark and validator.",
+      "proof_to_close": "Fresh sample meets defect threshold with no repeated Solo q1-q3 defect class."
+    }
+  ]
+}

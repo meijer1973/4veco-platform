@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-26T16:45:57.306Z",
+  "generatedAt": "2026-05-27T11:48:27.895Z",
   "internalOnly": true,
   "teams": [
     {
@@ -160,13 +160,48 @@
           "generated": "2026-04-23",
           "updated": "",
           "scope": "`references/`, `build-scripts/references/`, `build-scripts/reports/`, reference dashboards, and generated reference reports under `reports/`",
-          "summary": "References Team Roadmap Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Last strategic update: 2026-05-26 Roadmap ID: references-team-roadmap Roadmap version: v2.84-game-ux2-exit-ticket-checkpoint Roadmap status: active Version index: docs/roadmaps/roadmap-version-index.json Scope: references/, build-scripts/references/, build-scripts/reports/, reference dashboards, and generated reference reports under reports/ Exam Ingestion North Star The long-term reference-platform goal is that a new official CvTE econ...",
+          "summary": "References Team Roadmap Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Last strategic update: 2026-05-27 Roadmap ID: references-team-roadmap Roadmap version: v2.85-mtu-h1-operation-benchmark Roadmap status: active Version index: docs/roadmaps/roadmap-version-index.json Scope: references/, build-scripts/references/, build-scripts/reports/, reference dashboards, and generated reference reports under reports/ Exam Ingestion North Star The long-term reference-platform goal is that a new official CvTE economics...",
           "sprints": [
             {
               "sprint": "LESSON-SCALE-1",
               "name": "Lesson Companion Pre-Scale Gates Tracking",
               "completed": "no",
-              "currentState": "**TRACKING DEPENDENCY, NOT A REFERENCE EXECUTION SPRINT.** Lesson L1.7A closed PASS WITH FLAGS and rejected broad companion scaling. Lesson `L1.7B-C` is the closed contract-only exit-ticket companion contract: the old untracked draft was inspected as design evidence, the companion-completion contract and future implementation scope were recorded, and implementation remained paused because of source-control/product-boundary/shared-skill-map blockers. Lesson `L1.7B-R` produced its operational resume plan, platform support request, and stop decision; platform `GAME-UX-2` has now generated a bounded, source-controlled, non-summative checkpoint surface for `1.1.1` through platform scripts. Lesson L1.7B-R may resume student-experience and teacher-learning-quality review, then `GATE-L1.7B` must review product boundaries before Scale Gate 1. Lesson L1.7C-0 closed the shared skill-map engine contract, and platform `GAME-UX-1` implemented the shared skill-map runtime support. Lesson L1.7C closed PASS WITH FLAGS after focused recheck. Lesson L1.7D closed PASS WITH FLAGS after generator-owned landing IA cleanup. Lesson L2.0 closed PASS WITH FLAGS after human review: it defined the house-style baseline, PASS WITH FLAGS meaning, quality-ref status standard, exit-ticket readiness checklist, screenshot/QA expectations, and game-row flag dispositions; platform support routes `1.1.4 Gemengde opgaven` to `Oefen gemengd` rather than a Verdiep-only landing. EX-7 is resolved as a validator/dry-run CLI implementation only; reference/product planning must not treat the lesson companion pipeline as scale-approved until L1.7B-R review, GATE-L1.7B, minimal curriculum-versioning readiness, and Scale Gate 1 resolve while preserving blocks on diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, and PV machine promotion.",
+              "currentState": "**TRACKING DEPENDENCY, NOT A REFERENCE EXECUTION SPRINT.** Lesson L1.7A closed PASS WITH FLAGS and rejected broad companion scaling. Closed lesson prerequisites now include `L1.7B-C`, `L1.7B-R`, `GATE-L1.7B`, `L1.7C-0`, `L1.7C`, `L1.7D`, `L2.0`, `L1.7C-MATH`, and `L1.7B-MAP`. Platform `GAME-UX-1` supplied shared skill-map runtime support; platform `GAME-UX-2` supplied the source-controlled `1.1.1` checkpoint engine/output support. `L1.7C-MATH` restored the scoped skill-tree math game as primary `Rekenen`; `L1.7B-MAP` fixed checkpoint metadata scope to `B01/B02`, removed `A04`, recorded target-exercise skills as `A43/B01/B02`, and kept `targetReadinessEvidence: false`. Lesson `L1.7B-P23` is ready for human review with a stop/handoff decision: current exit-ticket task types are choice-only and cannot honestly check `1.1.2` calculation/index or `1.1.3` graph/table operation chains. EX-7 is resolved as a validator/dry-run CLI implementation only. Reference/product planning must not treat the lesson companion pipeline as scale-approved until lesson `L1.7B-P23`, `L1.7B-Q2`, `GATE-L1.7B-Q2`, `REV-STD-1`, minimal curriculum-versioning readiness, and Scale Gate 1 resolve or are explicitly waived while preserving blocks on diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, and PV machine promotion.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "MTU-H2",
+              "name": "Solo q1-q3 Canonical Micro-Case Review",
+              "completed": "no",
+              "currentState": "**PLANNED AFTER MTU-H1.** Review the benchmarked Solo q1-q3 cases for possible CLI-governed MTU additions or refactors: verbal external-cost explanation, leg-uit-with-example answer form, pointwise TO, TVK from constant variable cost, unknown fixed costs from profit, scale-factor handling, granular MO routes, given-MK versus derived-MK, new monopoly price after Q*, and percentage price-change/pass-through distinction. MTU-H2 must prepare an explicit review/mutation plan before any `references/machine/` change; no direct mutation is authorized by MTU-H1.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "MTU-H3",
+              "name": "Incidence Pass-Through Skill Family Review",
+              "completed": "no",
+              "currentState": "Planned after MTU-H2 evidence or in parallel as a separate review lane if authorized. Review whether D07 should split or generalize into tax incidence, subsidy incidence, cost-shock pass-through, graphical wedge/area recognition, elasticity explanation, and misconception handling. No unit minting or D07 refactor is authorized until a human-reviewed CLI-governed lane names exact changes and rollback.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "MTU-H4",
+              "name": "Answer-Form MTUs And Question-Type Mapping",
+              "completed": "no",
+              "currentState": "Planned after MTU-H1. Define a governed answer-form route for `bereken`, `leg uit`, `leg uit met voorbeeld`, `analyseer`, `arceer/grafisch`, `geef aan`, and related exam verbs, and map them to existing `question_type` values. This row is contract/review work until a later CLI-governed mutation path is explicitly authorized.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "MTU-H5",
+              "name": "MTU Mapping Regression Validator",
+              "completed": "no",
+              "currentState": "Planned after MTU-H1/H2/H3/H4 produce enough reviewed mapping rules. Build a regression check for missing correction-model operations, over-triggered prerequisites, calculus/function-construction false positives, incidence questions without incidence MTUs, question words without answer-form MTUs, scale-factor gaps, and missing misconception tags. No candidate writes or protected mutation are authorized.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "MTU-H6",
+              "name": "Hardened MTUs Into Student Routes",
+              "completed": "no",
+              "currentState": "Planned only after the relevant MTU/answer-form/incidence decisions are reviewed and implemented through governed paths. Feed hardened operation chains into instapquiz routing, uitleg vaardigheden, skill-tree/procedure games, practice, exit-ticket coverage, answer-model generation, and review gates while preserving blocks on diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, and PV machine promotion.",
               "exitGate": ""
             },
             {
@@ -215,7 +250,14 @@
               "sprint": "Product Gate",
               "name": "Re-Evaluate R10-R13 Product Surfaces",
               "completed": "no",
-              "currentState": "Blocked. Diagnostics, adaptive routing, student-facing AI, teacher cockpit deployment, automatic sequencing, mastery, and summative uses remain out of scope until data-quality gates justify them. Lesson L1.7A explicitly rejected broad companion scaling; L1.7B is split into closed contract-only `L1.7B-C` and implementation-resume `L1.7B-R`; L1.7C-0 closed the shared skill-map contract; platform `GAME-UX-1` implemented shared route/view-model support without authorizing product use; platform `GAME-UX-2` generated one bounded checkpoint surface for `1.1.1` without broad scaling or product-use authorization; lesson L1.7C closed PASS WITH FLAGS after consuming that shared route in the game row; lesson L1.7D closed PASS WITH FLAGS after generator-owned landing IA cleanup; lesson L2.0 closed PASS WITH FLAGS after defining house-style and fixing consolidation landing semantics; GATE-EX5 closed PASS WITH CONDITIONS as design-contract review only; EX-6 completed validator/CLI planning without candidate writes; GATE-EX6 closed PASS WITH CONDITIONS for validator/dry-run CLI implementation only; and EX-7 implemented validators and dry-run-only CLIs without candidate storage or writes. Broad lesson-companion scaling remains blocked until L1.7B-R reviews the generated checkpoint surface, GATE-L1.7B accepts its product boundaries, and Scale Gate 1 establishes remaining curriculum-versioning and game-row scaling quality.",
+              "currentState": "Blocked. Diagnostics, adaptive routing, student-facing AI, teacher cockpit deployment, automatic sequencing, mastery, and summative uses remain out of scope until data-quality gates justify them. Lesson L1.7A explicitly rejected broad companion scaling; `L1.7B-R` and `GATE-L1.7B` accepted only the non-summative `1.1.1` checkpoint boundary; `L1.7C-MATH` restored the old skill-tree math route; `L1.7B-MAP` fixed checkpoint metadata alignment but kept `targetReadinessEvidence: false`. GATE-EX5 closed PASS WITH CONDITIONS as design-contract review only; EX-6 completed validator/CLI planning without candidate writes; GATE-EX6 closed PASS WITH CONDITIONS for validator/dry-run CLI implementation only; and EX-7 implemented validators and dry-run-only CLIs without candidate storage or writes. Broad lesson-companion scaling remains blocked until lesson `L1.7B-P23`, `L1.7B-Q2`, `GATE-L1.7B-Q2`, `REV-STD-1`, and Scale Gate 1 establish the remaining readiness, review-standard, curriculum-versioning, and game-row scaling quality.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "MTU-H1",
+              "name": "Operation Benchmark From Exam Questions",
+              "completed": "yes",
+              "currentState": "Completed as a non-mutating MTU-hardening benchmark sprint. Added `reports/mtu-hardening/benchmark-sample-v1.json`, `solo-q1-q3-operation-map.md`, `failure-taxonomy-v1.md`, and `build-scripts/references/check-mtu-hardening-benchmark.js`. The benchmark records the supplied 2026 VWO economie Solo q1-q3 analysis as structured evidence that separates content MTUs, calculation/graph/source operations, answer-form MTUs, misconception targets, missing-unit flags, and over-trigger flags. It routes later MTU-H2 through MTU-H6 work for canonical micro-cases, incidence/pass-through, answer-form units, regression validation, and student-route integration. MTU-H1 did not mutate `references/machine/` or `references/external/`, mint units, create candidate storage, write operation/answer-skill candidates, execute q19 extraction, mutate lesson output, close CP-6/Year-1, or authorize diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student-facing output.",
               "exitGate": ""
             },
             {
@@ -877,7 +919,47 @@
           "sprint": "LESSON-SCALE-1",
           "name": "Lesson Companion Pre-Scale Gates Tracking",
           "completed": "no",
-          "currentState": "**TRACKING DEPENDENCY, NOT A REFERENCE EXECUTION SPRINT.** Lesson L1.7A closed PASS WITH FLAGS and rejected broad companion scaling. Lesson `L1.7B-C` is the closed contract-only exit-ticket companion contract: the old untracked draft was inspected as design evidence, the companion-completion contract and future implementation scope were recorded, and implementation remained paused because of source-control/product-boundary/shared-skill-map blockers. Lesson `L1.7B-R` produced its operational resume plan, platform support request, and stop decision; platform `GAME-UX-2` has now generated a bounded, source-controlled, non-summative checkpoint surface for `1.1.1` through platform scripts. Lesson L1.7B-R may resume student-experience and teacher-learning-quality review, then `GATE-L1.7B` must review product boundaries before Scale Gate 1. Lesson L1.7C-0 closed the shared skill-map engine contract, and platform `GAME-UX-1` implemented the shared skill-map runtime support. Lesson L1.7C closed PASS WITH FLAGS after focused recheck. Lesson L1.7D closed PASS WITH FLAGS after generator-owned landing IA cleanup. Lesson L2.0 closed PASS WITH FLAGS after human review: it defined the house-style baseline, PASS WITH FLAGS meaning, quality-ref status standard, exit-ticket readiness checklist, screenshot/QA expectations, and game-row flag dispositions; platform support routes `1.1.4 Gemengde opgaven` to `Oefen gemengd` rather than a Verdiep-only landing. EX-7 is resolved as a validator/dry-run CLI implementation only; reference/product planning must not treat the lesson companion pipeline as scale-approved until L1.7B-R review, GATE-L1.7B, minimal curriculum-versioning readiness, and Scale Gate 1 resolve while preserving blocks on diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, and PV machine promotion.",
+          "currentState": "**TRACKING DEPENDENCY, NOT A REFERENCE EXECUTION SPRINT.** Lesson L1.7A closed PASS WITH FLAGS and rejected broad companion scaling. Closed lesson prerequisites now include `L1.7B-C`, `L1.7B-R`, `GATE-L1.7B`, `L1.7C-0`, `L1.7C`, `L1.7D`, `L2.0`, `L1.7C-MATH`, and `L1.7B-MAP`. Platform `GAME-UX-1` supplied shared skill-map runtime support; platform `GAME-UX-2` supplied the source-controlled `1.1.1` checkpoint engine/output support. `L1.7C-MATH` restored the scoped skill-tree math game as primary `Rekenen`; `L1.7B-MAP` fixed checkpoint metadata scope to `B01/B02`, removed `A04`, recorded target-exercise skills as `A43/B01/B02`, and kept `targetReadinessEvidence: false`. Lesson `L1.7B-P23` is ready for human review with a stop/handoff decision: current exit-ticket task types are choice-only and cannot honestly check `1.1.2` calculation/index or `1.1.3` graph/table operation chains. EX-7 is resolved as a validator/dry-run CLI implementation only. Reference/product planning must not treat the lesson companion pipeline as scale-approved until lesson `L1.7B-P23`, `L1.7B-Q2`, `GATE-L1.7B-Q2`, `REV-STD-1`, minimal curriculum-versioning readiness, and Scale Gate 1 resolve or are explicitly waived while preserving blocks on diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, and PV machine promotion.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "MTU-H2",
+          "name": "Solo q1-q3 Canonical Micro-Case Review",
+          "completed": "no",
+          "currentState": "**PLANNED AFTER MTU-H1.** Review the benchmarked Solo q1-q3 cases for possible CLI-governed MTU additions or refactors: verbal external-cost explanation, leg-uit-with-example answer form, pointwise TO, TVK from constant variable cost, unknown fixed costs from profit, scale-factor handling, granular MO routes, given-MK versus derived-MK, new monopoly price after Q*, and percentage price-change/pass-through distinction. MTU-H2 must prepare an explicit review/mutation plan before any `references/machine/` change; no direct mutation is authorized by MTU-H1.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "MTU-H3",
+          "name": "Incidence Pass-Through Skill Family Review",
+          "completed": "no",
+          "currentState": "Planned after MTU-H2 evidence or in parallel as a separate review lane if authorized. Review whether D07 should split or generalize into tax incidence, subsidy incidence, cost-shock pass-through, graphical wedge/area recognition, elasticity explanation, and misconception handling. No unit minting or D07 refactor is authorized until a human-reviewed CLI-governed lane names exact changes and rollback.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "MTU-H4",
+          "name": "Answer-Form MTUs And Question-Type Mapping",
+          "completed": "no",
+          "currentState": "Planned after MTU-H1. Define a governed answer-form route for `bereken`, `leg uit`, `leg uit met voorbeeld`, `analyseer`, `arceer/grafisch`, `geef aan`, and related exam verbs, and map them to existing `question_type` values. This row is contract/review work until a later CLI-governed mutation path is explicitly authorized.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "MTU-H5",
+          "name": "MTU Mapping Regression Validator",
+          "completed": "no",
+          "currentState": "Planned after MTU-H1/H2/H3/H4 produce enough reviewed mapping rules. Build a regression check for missing correction-model operations, over-triggered prerequisites, calculus/function-construction false positives, incidence questions without incidence MTUs, question words without answer-form MTUs, scale-factor gaps, and missing misconception tags. No candidate writes or protected mutation are authorized.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "MTU-H6",
+          "name": "Hardened MTUs Into Student Routes",
+          "completed": "no",
+          "currentState": "Planned only after the relevant MTU/answer-form/incidence decisions are reviewed and implemented through governed paths. Feed hardened operation chains into instapquiz routing, uitleg vaardigheden, skill-tree/procedure games, practice, exit-ticket coverage, answer-model generation, and review gates while preserving blocks on diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, and PV machine promotion.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -933,7 +1015,15 @@
           "sprint": "Product Gate",
           "name": "Re-Evaluate R10-R13 Product Surfaces",
           "completed": "no",
-          "currentState": "Blocked. Diagnostics, adaptive routing, student-facing AI, teacher cockpit deployment, automatic sequencing, mastery, and summative uses remain out of scope until data-quality gates justify them. Lesson L1.7A explicitly rejected broad companion scaling; L1.7B is split into closed contract-only `L1.7B-C` and implementation-resume `L1.7B-R`; L1.7C-0 closed the shared skill-map contract; platform `GAME-UX-1` implemented shared route/view-model support without authorizing product use; platform `GAME-UX-2` generated one bounded checkpoint surface for `1.1.1` without broad scaling or product-use authorization; lesson L1.7C closed PASS WITH FLAGS after consuming that shared route in the game row; lesson L1.7D closed PASS WITH FLAGS after generator-owned landing IA cleanup; lesson L2.0 closed PASS WITH FLAGS after defining house-style and fixing consolidation landing semantics; GATE-EX5 closed PASS WITH CONDITIONS as design-contract review only; EX-6 completed validator/CLI planning without candidate writes; GATE-EX6 closed PASS WITH CONDITIONS for validator/dry-run CLI implementation only; and EX-7 implemented validators and dry-run-only CLIs without candidate storage or writes. Broad lesson-companion scaling remains blocked until L1.7B-R reviews the generated checkpoint surface, GATE-L1.7B accepts its product boundaries, and Scale Gate 1 establishes remaining curriculum-versioning and game-row scaling quality.",
+          "currentState": "Blocked. Diagnostics, adaptive routing, student-facing AI, teacher cockpit deployment, automatic sequencing, mastery, and summative uses remain out of scope until data-quality gates justify them. Lesson L1.7A explicitly rejected broad companion scaling; `L1.7B-R` and `GATE-L1.7B` accepted only the non-summative `1.1.1` checkpoint boundary; `L1.7C-MATH` restored the old skill-tree math route; `L1.7B-MAP` fixed checkpoint metadata alignment but kept `targetReadinessEvidence: false`. GATE-EX5 closed PASS WITH CONDITIONS as design-contract review only; EX-6 completed validator/CLI planning without candidate writes; GATE-EX6 closed PASS WITH CONDITIONS for validator/dry-run CLI implementation only; and EX-7 implemented validators and dry-run-only CLIs without candidate storage or writes. Broad lesson-companion scaling remains blocked until lesson `L1.7B-P23`, `L1.7B-Q2`, `GATE-L1.7B-Q2`, `REV-STD-1`, and Scale Gate 1 establish the remaining readiness, review-standard, curriculum-versioning, and game-row scaling quality.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "MTU-H1",
+          "name": "Operation Benchmark From Exam Questions",
+          "completed": "yes",
+          "currentState": "Completed as a non-mutating MTU-hardening benchmark sprint. Added `reports/mtu-hardening/benchmark-sample-v1.json`, `solo-q1-q3-operation-map.md`, `failure-taxonomy-v1.md`, and `build-scripts/references/check-mtu-hardening-benchmark.js`. The benchmark records the supplied 2026 VWO economie Solo q1-q3 analysis as structured evidence that separates content MTUs, calculation/graph/source operations, answer-form MTUs, misconception targets, missing-unit flags, and over-trigger flags. It routes later MTU-H2 through MTU-H6 work for canonical micro-cases, incidence/pass-through, answer-form units, regression validation, and student-route integration. MTU-H1 did not mutate `references/machine/` or `references/external/`, mint units, create candidate storage, write operation/answer-skill candidates, execute q19 extraction, mutate lesson output, close CP-6/Year-1, or authorize diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student-facing output.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -1682,8 +1772,8 @@
           "roadmap": "References roadmap"
         }
       ],
-      "completedCount": 93,
-      "openCount": 8
+      "completedCount": 94,
+      "openCount": 13
     },
     {
       "id": "lessen",
@@ -1702,17 +1792,10 @@
           "summary": "Sprint 0.5 is signed off for Part A textbook/book production.",
           "sprints": [
             {
-              "sprint": "L1.7B-MAP",
-              "name": "Exit Ticket Skill-Metadata Alignment",
-              "completed": "no",
-              "currentState": "**READY FOR HUMAN REVIEW / REQUIRED BEFORE EXIT-TICKET EVIDENCE.** Technical implementation now changes the `1.1.1` checkpoint metadata from `A43/A04` to checkpoint-assessed `B01/B02`, removes `A04`, records the target-exercise skill set as `A43/B01/B02`, and sets `targetReadinessEvidence: false`. Platform validation now requires metadata alignment and rejects unsupported target-readiness claims; focused tests, deploy, `1.1.1` complete validation, Book 1 health, procedure contracts, target exercises, and full platform Jest are green. Human review must decide whether this resolves the carried metadata mismatch while preserving that the current checkpoint is not target-exercise-readiness or scale evidence. Until L1.7B-MAP closes, checkpoint metadata may not be used for diagnostics, mastery, sequencing, target-exercise promotion, CP-6/Year-1 reliance, PV use, Scale Gate 1 scale evidence, or broad exit-ticket scaling. If we continue from the current state, the next step is the L1.7B-MAP human review.",
-              "exitGate": ""
-            },
-            {
               "sprint": "L1.7B-P23",
               "name": "Exit Ticket Target-Skill Checkpoint Designs For 1.1.2 And 1.1.3",
               "completed": "no",
-              "currentState": "**REQUIRED BEFORE EXIT-TICKET GENERALIZATION.** Design reviewed exit-ticket checkpoint designs or stop/handoff decisions for `1.1.2 Percentages en indexcijfers` and `1.1.3 Grafieken en tabellen`. This sprint must cite `specifications/product-end-state.md` and may not turn the checkpoint designs into weak generic MC checks. These may not be MC-only unless the paragraph target exercise is MC-like. `1.1.2` must test percentage/index calculation with calculation field, final answer, and unit/percentage handling. `1.1.3` must test graph/table reading, axis conventions, interpolation, and at least one graph-specific interaction or constructed response. `Check` remains hidden until each paragraph has reviewed generated checkpoint output.",
+              "currentState": "**READY FOR HUMAN REVIEW / STOP-HANDOFF DECISION.** Operation-chain analysis shows `1.1.2` needs calculation/work fields, final answer entry, percentage/index notation, and short explanation, while `1.1.3` needs table/graph handling, economic axis convention, graph drawing or point placement, interpolation, and short explanation. The current exit-ticket engine/UI supports only choice tasks, so the sprint stopped instead of generating weak generic MC checks. `Check` remains hidden for `1.1.2` and `1.1.3`; no source data or generated exit-ticket output was created. Human review must decide whether the stop/handoff is accepted. If we continue from the current state, the next step is the L1.7B-P23 human review.",
               "exitGate": ""
             },
             {
@@ -1740,7 +1823,14 @@
               "sprint": "Scale Gate 1",
               "name": "Foundation Hardening Scale Gate",
               "completed": "no",
-              "currentState": "**BLOCKED.** `L1.7C-MATH` is closed, but Scale Gate 1 may not run until `L1.7B-MAP`, `L1.7B-P23`, `L1.7B-Q2`, `GATE-L1.7B-Q2`, and `REV-STD-1` are closed or explicitly waived by human decision with stated consequences. Scale Gate 1 must use `specifications/product-end-state.md` as the north-star baseline and may not treat exit-ticket output as scale or target-exercise-readiness evidence unless metadata alignment closes and either Q2 closes or the gate explicitly limits exit tickets to non-summative checkpoint status during controlled production. It may authorize controlled production only, not adaptive diagnostics, mastery/sequencing, student-facing AI, summative use, PV projection, or PV machine promotion.",
+              "currentState": "**BLOCKED.** `L1.7C-MATH` and `L1.7B-MAP` are closed, but Scale Gate 1 may not run until `L1.7B-P23`, `L1.7B-Q2`, `GATE-L1.7B-Q2`, and `REV-STD-1` are closed or explicitly waived by human decision with stated consequences. Scale Gate 1 must use `specifications/product-end-state.md` as the north-star baseline and may not treat exit-ticket output as scale or target-exercise-readiness evidence unless Q2 closes or the gate explicitly limits exit tickets to non-summative checkpoint status during controlled production. It may authorize controlled production only, not adaptive diagnostics, mastery/sequencing, student-facing AI, summative use, PV projection, or PV machine promotion.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "L1.7B-MAP",
+              "name": "Exit Ticket Skill-Metadata Alignment",
+              "completed": "yes",
+              "currentState": "**CLOSED PASS WITH FLAGS / READINESS FLAG CARRIER.** Human review accepted the metadata alignment: `1.1.1` checkpoint-assessed metadata now uses `B01/B02`, `A04` is removed from checkpoint target/scope metadata, `metadataAlignment.targetExerciseSkillIds` records `A43/B01/B02`, and `targetReadinessEvidence` remains `false`. The metadata mismatch is fixed for the checkpoint's current role, but the current checkpoint is not target-exercise-readiness evidence because it does not cover the full `A43` operation chain. Carried flags: readiness belongs to `L1.7B-Q2`, future checkpoint designs must use task forms appropriate to the target exercise, Scale Gate 1 may not rely on the current checkpoint as readiness evidence, and the `1.1.1` target-exercise registry record still needs its separate final review path. Records: `archive/sprints/L1.7B-MAP/`.",
               "exitGate": ""
             },
             {
@@ -1754,14 +1844,14 @@
               "sprint": "QUALITY-STD-1",
               "name": "Planning Quality Standard Enforcement",
               "completed": "yes",
-              "currentState": "**CLOSED PASS.** Added quality-driven execution language to both repo `AGENTS.md` files, inserted a Specification-Fulfilment Rule and Planning Quality Floor into `specifications/companion-core-specifications.md`, added paragraph-build quality-standard guidance, and hardened the platform sprint-plan checker so future non-trivial plans require `Quality Standard`, `Specification Fulfilment Matrix`, `Quality Improvement Candidates`, and `Proof Required to Close`. No lesson output was generated and no product-use boundary was loosened. Records: `archive/sprints/QUALITY-STD-1/`. If we continue after this governance sprint, the next step remains L1.7B-MAP human review.",
+              "currentState": "**CLOSED PASS.** Added quality-driven execution language to both repo `AGENTS.md` files, inserted a Specification-Fulfilment Rule and Planning Quality Floor into `specifications/companion-core-specifications.md`, added paragraph-build quality-standard guidance, and hardened the platform sprint-plan checker so future non-trivial plans require `Quality Standard`, `Specification Fulfilment Matrix`, `Quality Improvement Candidates`, and `Proof Required to Close`. No lesson output was generated and no product-use boundary was loosened. Records: `archive/sprints/QUALITY-STD-1/`.",
               "exitGate": ""
             },
             {
               "sprint": "SCOPE-LANG-1",
               "name": "Scope-Language Discipline Enforcement",
               "completed": "yes",
-              "currentState": "**CLOSED PASS.** Tightened `specifications/companion-core-specifications.md`, renamed current active roadmap/version wording away from downscoping vocabulary, and added a platform checker that blocks unauthorized restricted scope terms in active sprint plans, roadmap rows, review packets, and agent plans. Bounded scope remains allowed only with full quality inside the scope and explicit follow-up or waiver for omitted specification requirements. No lesson output was generated and no product-use boundary was loosened. Records: `archive/sprints/SCOPE-LANG-1/`. If we continue after this governance sprint, the next step remains L1.7B-MAP human review.",
+              "currentState": "**CLOSED PASS.** Tightened `specifications/companion-core-specifications.md`, renamed current active roadmap/version wording away from downscoping vocabulary, and added a platform checker that blocks unauthorized restricted scope terms in active sprint plans, roadmap rows, review packets, and agent plans. Bounded scope remains allowed only with full quality inside the scope and explicit follow-up or waiver for omitted specification requirements. No lesson output was generated and no product-use boundary was loosened. Records: `archive/sprints/SCOPE-LANG-1/`.",
               "exitGate": ""
             },
             {
@@ -1775,21 +1865,21 @@
               "sprint": "GATE-L1.7B",
               "name": "Exit Ticket Product-Boundary Review",
               "completed": "yes",
-              "currentState": "**CLOSED PASS WITH FLAGS.** The `1.1.1` checkpoint product boundary is accepted as a non-summative, practice-oriented controlled paragraph-limited `Check` surface. GATE-L1.7B does not authorize Scale Gate 1, broad scaling, CP-6/Year-1 closure, target-exercise promotion, diagnostics, mastery, sequencing, summative use, student-facing AI, PV projection, or PV machine promotion. Carried flag `GATE-L1.7B-CF1`: `A43`/`A04` metadata mismatch remains live and blocks metadata reliance for diagnostics, mastery, sequencing, target-exercise promotion, CP-6/Year-1, PV, Scale Gate 1 scale evidence, or broad exit-ticket scaling until platform B-unit scoping or a reviewed mapping layer exists. Records: `archive/sprints/GATE-L1.7B/`.",
+              "currentState": "**CLOSED PASS WITH FLAGS.** The `1.1.1` checkpoint product boundary is accepted as a non-summative, practice-oriented controlled paragraph-limited `Check` surface. GATE-L1.7B does not authorize Scale Gate 1, broad scaling, CP-6/Year-1 closure, target-exercise promotion, diagnostics, mastery, sequencing, summative use, student-facing AI, PV projection, or PV machine promotion. Carried flag `GATE-L1.7B-CF1` was later resolved for checkpoint metadata scope by `L1.7B-MAP`; Scale Gate 1 still may not treat the current checkpoint as target-exercise-readiness evidence because `A43` is not covered by the task chain. Records: `archive/sprints/GATE-L1.7B/`.",
               "exitGate": ""
             },
             {
               "sprint": "L1.7B-R",
               "name": "Boundary-Safe Exit Ticket Checkpoint Resume",
               "completed": "yes",
-              "currentState": "**CLOSED PASS WITH FLAGS.** Platform `GAME-UX-2` completed the source-controlled exit-ticket checkpoint engine and generated lesson output through platform scripts only. Lesson output commit `5c47961269096c21a7d50bbc97c71de7984ff6e1` contains the `1.1.1` checkpoint and landing `Check` activation; historical tag `checkpoint/GAME-UX-2-exit-ticket-mvp-lesson`. Human review accepted the checkpoint as a boundary-safe, non-summative controlled paragraph-limited checkpoint surface. Green checks: platform focused checkpoint/landing/skill-map tests, full platform Jest 554 passed / 8 skipped, deploy, `1.1.1` validation, Book 1 checks, procedure contracts, target exercises, sprint bundle, and checkpoint/landing desktop/mobile light/dark screenshot QA; local focused recheck 26/26 and `1.1.1` complete student-web validation passed. Carried flag `L1.7B-R-CF1`: checkpoint metadata uses `A43`/`A04`, while paragraph-plan skills are `B01`/`B02`; this may not be used for diagnostics, mastery, sequencing, target-exercise promotion, CP-6/Year-1, PV, Scale Gate 1, or broad-scaling evidence until fixed or mapped. Records: `archive/sprints/L1.7B-R/`. GATE-L1.7B remains required before Scale Gate 1.",
+              "currentState": "**CLOSED PASS WITH FLAGS.** Platform `GAME-UX-2` completed the source-controlled exit-ticket checkpoint engine and generated lesson output through platform scripts only. Lesson output commit `5c47961269096c21a7d50bbc97c71de7984ff6e1` contains the `1.1.1` checkpoint and landing `Check` activation; historical tag `checkpoint/GAME-UX-2-exit-ticket-mvp-lesson`. Human review accepted the checkpoint as a boundary-safe, non-summative controlled paragraph-limited checkpoint surface. Green checks: platform focused checkpoint/landing/skill-map tests, full platform Jest 554 passed / 8 skipped, deploy, `1.1.1` validation, Book 1 checks, procedure contracts, target exercises, sprint bundle, and checkpoint/landing desktop/mobile light/dark screenshot QA; local focused recheck 26/26 and `1.1.1` complete student-web validation passed. Carried flag `L1.7B-R-CF1` was later resolved for checkpoint metadata scope by `L1.7B-MAP`; the checkpoint still may not be used for target-exercise-readiness, diagnostics, mastery, sequencing, target-exercise promotion, CP-6/Year-1, PV, Scale Gate 1, or broad-scaling evidence. Records: `archive/sprints/L1.7B-R/`.",
               "exitGate": ""
             },
             {
               "sprint": "L2.0",
               "name": "Book 1 Flag Burn-down And House-Style Cleanup",
               "completed": "yes",
-              "currentState": "**CLOSED PASS WITH FLAGS.** L2.0 defined the Book 1 student-web house-style baseline, PASS WITH FLAGS operational meaning, flag dispositions, quality-ref status language, screenshot/QA expectations, exit-ticket readiness checklist, and consolidation/gemengde-opgaven landing rule. Platform generator routes `1.1.4 Gemengde opgaven` to primary `Oefen gemengd` instead of a weak `Verdiep`-only page; chapter landing tags also show `Oefen gemengd`. Human review closed PASS WITH FLAGS with no product blocker. Green gates: focused landing Jest 2/2, deploy link/data checks 460 refs + 221 data tests, complete student-web validation for `1.1.1`-`1.1.3`, `1.1.4` publisher-print validation, Book 1 health 26/26, procedure-contract validation 341 checks, v5 target-exercise validation 54 records with 12/12/14/16, `1.1.4` desktop/mobile light/dark screenshot QA, and full platform Jest 544 passed / 8 skipped. Carried flags: `1.1.4` remains legacy `FLAG`, graph-drawing consolidation and profit-formula framing need later content review, game-row variants remain limited-scope and not scale-approved, exit-ticket target-readiness remains future work under L1.7B-MAP/L1.7B-P23/L1.7B-Q2/GATE-L1.7B-Q2, and L1.7C-MATH has since corrected the primary math-game route with remaining scale flags. Records: `archive/sprints/L2.0/`.",
+              "currentState": "**CLOSED PASS WITH FLAGS.** L2.0 defined the Book 1 student-web house-style baseline, PASS WITH FLAGS operational meaning, flag dispositions, quality-ref status language, screenshot/QA expectations, exit-ticket readiness checklist, and consolidation/gemengde-opgaven landing rule. Platform generator routes `1.1.4 Gemengde opgaven` to primary `Oefen gemengd` instead of a weak `Verdiep`-only page; chapter landing tags also show `Oefen gemengd`. Human review closed PASS WITH FLAGS with no product blocker. Green gates: focused landing Jest 2/2, deploy link/data checks 460 refs + 221 data tests, complete student-web validation for `1.1.1`-`1.1.3`, `1.1.4` publisher-print validation, Book 1 health 26/26, procedure-contract validation 341 checks, v5 target-exercise validation 54 records with 12/12/14/16, `1.1.4` desktop/mobile light/dark screenshot QA, and full platform Jest 544 passed / 8 skipped. Carried flags: `1.1.4` remains legacy `FLAG`, graph-drawing consolidation and profit-formula framing need later content review, game-row variants remain limited-scope and not scale-approved, exit-ticket target-readiness remains future work under L1.7B-P23/L1.7B-Q2/GATE-L1.7B-Q2 after L1.7B-MAP metadata closure, and L1.7C-MATH has since corrected the primary math-game route with remaining scale flags. Records: `archive/sprints/L2.0/`.",
               "exitGate": ""
             },
             {
@@ -2091,18 +2181,10 @@
       ],
       "sprints": [
         {
-          "sprint": "L1.7B-MAP",
-          "name": "Exit Ticket Skill-Metadata Alignment",
-          "completed": "no",
-          "currentState": "**READY FOR HUMAN REVIEW / REQUIRED BEFORE EXIT-TICKET EVIDENCE.** Technical implementation now changes the `1.1.1` checkpoint metadata from `A43/A04` to checkpoint-assessed `B01/B02`, removes `A04`, records the target-exercise skill set as `A43/B01/B02`, and sets `targetReadinessEvidence: false`. Platform validation now requires metadata alignment and rejects unsupported target-readiness claims; focused tests, deploy, `1.1.1` complete validation, Book 1 health, procedure contracts, target exercises, and full platform Jest are green. Human review must decide whether this resolves the carried metadata mismatch while preserving that the current checkpoint is not target-exercise-readiness or scale evidence. Until L1.7B-MAP closes, checkpoint metadata may not be used for diagnostics, mastery, sequencing, target-exercise promotion, CP-6/Year-1 reliance, PV use, Scale Gate 1 scale evidence, or broad exit-ticket scaling. If we continue from the current state, the next step is the L1.7B-MAP human review.",
-          "exitGate": "",
-          "roadmap": "Lessen roadmap"
-        },
-        {
           "sprint": "L1.7B-P23",
           "name": "Exit Ticket Target-Skill Checkpoint Designs For 1.1.2 And 1.1.3",
           "completed": "no",
-          "currentState": "**REQUIRED BEFORE EXIT-TICKET GENERALIZATION.** Design reviewed exit-ticket checkpoint designs or stop/handoff decisions for `1.1.2 Percentages en indexcijfers` and `1.1.3 Grafieken en tabellen`. This sprint must cite `specifications/product-end-state.md` and may not turn the checkpoint designs into weak generic MC checks. These may not be MC-only unless the paragraph target exercise is MC-like. `1.1.2` must test percentage/index calculation with calculation field, final answer, and unit/percentage handling. `1.1.3` must test graph/table reading, axis conventions, interpolation, and at least one graph-specific interaction or constructed response. `Check` remains hidden until each paragraph has reviewed generated checkpoint output.",
+          "currentState": "**READY FOR HUMAN REVIEW / STOP-HANDOFF DECISION.** Operation-chain analysis shows `1.1.2` needs calculation/work fields, final answer entry, percentage/index notation, and short explanation, while `1.1.3` needs table/graph handling, economic axis convention, graph drawing or point placement, interpolation, and short explanation. The current exit-ticket engine/UI supports only choice tasks, so the sprint stopped instead of generating weak generic MC checks. `Check` remains hidden for `1.1.2` and `1.1.3`; no source data or generated exit-ticket output was created. Human review must decide whether the stop/handoff is accepted. If we continue from the current state, the next step is the L1.7B-P23 human review.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
@@ -2134,7 +2216,7 @@
           "sprint": "Scale Gate 1",
           "name": "Foundation Hardening Scale Gate",
           "completed": "no",
-          "currentState": "**BLOCKED.** `L1.7C-MATH` is closed, but Scale Gate 1 may not run until `L1.7B-MAP`, `L1.7B-P23`, `L1.7B-Q2`, `GATE-L1.7B-Q2`, and `REV-STD-1` are closed or explicitly waived by human decision with stated consequences. Scale Gate 1 must use `specifications/product-end-state.md` as the north-star baseline and may not treat exit-ticket output as scale or target-exercise-readiness evidence unless metadata alignment closes and either Q2 closes or the gate explicitly limits exit tickets to non-summative checkpoint status during controlled production. It may authorize controlled production only, not adaptive diagnostics, mastery/sequencing, student-facing AI, summative use, PV projection, or PV machine promotion.",
+          "currentState": "**BLOCKED.** `L1.7C-MATH` and `L1.7B-MAP` are closed, but Scale Gate 1 may not run until `L1.7B-P23`, `L1.7B-Q2`, `GATE-L1.7B-Q2`, and `REV-STD-1` are closed or explicitly waived by human decision with stated consequences. Scale Gate 1 must use `specifications/product-end-state.md` as the north-star baseline and may not treat exit-ticket output as scale or target-exercise-readiness evidence unless Q2 closes or the gate explicitly limits exit tickets to non-summative checkpoint status during controlled production. It may authorize controlled production only, not adaptive diagnostics, mastery/sequencing, student-facing AI, summative use, PV projection, or PV machine promotion.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
@@ -2235,6 +2317,14 @@
           "roadmap": "Lessen roadmap"
         },
         {
+          "sprint": "L1.7B-MAP",
+          "name": "Exit Ticket Skill-Metadata Alignment",
+          "completed": "yes",
+          "currentState": "**CLOSED PASS WITH FLAGS / READINESS FLAG CARRIER.** Human review accepted the metadata alignment: `1.1.1` checkpoint-assessed metadata now uses `B01/B02`, `A04` is removed from checkpoint target/scope metadata, `metadataAlignment.targetExerciseSkillIds` records `A43/B01/B02`, and `targetReadinessEvidence` remains `false`. The metadata mismatch is fixed for the checkpoint's current role, but the current checkpoint is not target-exercise-readiness evidence because it does not cover the full `A43` operation chain. Carried flags: readiness belongs to `L1.7B-Q2`, future checkpoint designs must use task forms appropriate to the target exercise, Scale Gate 1 may not rely on the current checkpoint as readiness evidence, and the `1.1.1` target-exercise registry record still needs its separate final review path. Records: `archive/sprints/L1.7B-MAP/`.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
+        },
+        {
           "sprint": "L1.7C-MATH",
           "name": "Restore Skill-Tree Math Game + Four-Game Architecture Integrity",
           "completed": "yes",
@@ -2246,7 +2336,7 @@
           "sprint": "QUALITY-STD-1",
           "name": "Planning Quality Standard Enforcement",
           "completed": "yes",
-          "currentState": "**CLOSED PASS.** Added quality-driven execution language to both repo `AGENTS.md` files, inserted a Specification-Fulfilment Rule and Planning Quality Floor into `specifications/companion-core-specifications.md`, added paragraph-build quality-standard guidance, and hardened the platform sprint-plan checker so future non-trivial plans require `Quality Standard`, `Specification Fulfilment Matrix`, `Quality Improvement Candidates`, and `Proof Required to Close`. No lesson output was generated and no product-use boundary was loosened. Records: `archive/sprints/QUALITY-STD-1/`. If we continue after this governance sprint, the next step remains L1.7B-MAP human review.",
+          "currentState": "**CLOSED PASS.** Added quality-driven execution language to both repo `AGENTS.md` files, inserted a Specification-Fulfilment Rule and Planning Quality Floor into `specifications/companion-core-specifications.md`, added paragraph-build quality-standard guidance, and hardened the platform sprint-plan checker so future non-trivial plans require `Quality Standard`, `Specification Fulfilment Matrix`, `Quality Improvement Candidates`, and `Proof Required to Close`. No lesson output was generated and no product-use boundary was loosened. Records: `archive/sprints/QUALITY-STD-1/`.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
@@ -2254,7 +2344,7 @@
           "sprint": "SCOPE-LANG-1",
           "name": "Scope-Language Discipline Enforcement",
           "completed": "yes",
-          "currentState": "**CLOSED PASS.** Tightened `specifications/companion-core-specifications.md`, renamed current active roadmap/version wording away from downscoping vocabulary, and added a platform checker that blocks unauthorized restricted scope terms in active sprint plans, roadmap rows, review packets, and agent plans. Bounded scope remains allowed only with full quality inside the scope and explicit follow-up or waiver for omitted specification requirements. No lesson output was generated and no product-use boundary was loosened. Records: `archive/sprints/SCOPE-LANG-1/`. If we continue after this governance sprint, the next step remains L1.7B-MAP human review.",
+          "currentState": "**CLOSED PASS.** Tightened `specifications/companion-core-specifications.md`, renamed current active roadmap/version wording away from downscoping vocabulary, and added a platform checker that blocks unauthorized restricted scope terms in active sprint plans, roadmap rows, review packets, and agent plans. Bounded scope remains allowed only with full quality inside the scope and explicit follow-up or waiver for omitted specification requirements. No lesson output was generated and no product-use boundary was loosened. Records: `archive/sprints/SCOPE-LANG-1/`.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
@@ -2270,7 +2360,7 @@
           "sprint": "GATE-L1.7B",
           "name": "Exit Ticket Product-Boundary Review",
           "completed": "yes",
-          "currentState": "**CLOSED PASS WITH FLAGS.** The `1.1.1` checkpoint product boundary is accepted as a non-summative, practice-oriented controlled paragraph-limited `Check` surface. GATE-L1.7B does not authorize Scale Gate 1, broad scaling, CP-6/Year-1 closure, target-exercise promotion, diagnostics, mastery, sequencing, summative use, student-facing AI, PV projection, or PV machine promotion. Carried flag `GATE-L1.7B-CF1`: `A43`/`A04` metadata mismatch remains live and blocks metadata reliance for diagnostics, mastery, sequencing, target-exercise promotion, CP-6/Year-1, PV, Scale Gate 1 scale evidence, or broad exit-ticket scaling until platform B-unit scoping or a reviewed mapping layer exists. Records: `archive/sprints/GATE-L1.7B/`.",
+          "currentState": "**CLOSED PASS WITH FLAGS.** The `1.1.1` checkpoint product boundary is accepted as a non-summative, practice-oriented controlled paragraph-limited `Check` surface. GATE-L1.7B does not authorize Scale Gate 1, broad scaling, CP-6/Year-1 closure, target-exercise promotion, diagnostics, mastery, sequencing, summative use, student-facing AI, PV projection, or PV machine promotion. Carried flag `GATE-L1.7B-CF1` was later resolved for checkpoint metadata scope by `L1.7B-MAP`; Scale Gate 1 still may not treat the current checkpoint as target-exercise-readiness evidence because `A43` is not covered by the task chain. Records: `archive/sprints/GATE-L1.7B/`.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
@@ -2278,7 +2368,7 @@
           "sprint": "L1.7B-R",
           "name": "Boundary-Safe Exit Ticket Checkpoint Resume",
           "completed": "yes",
-          "currentState": "**CLOSED PASS WITH FLAGS.** Platform `GAME-UX-2` completed the source-controlled exit-ticket checkpoint engine and generated lesson output through platform scripts only. Lesson output commit `5c47961269096c21a7d50bbc97c71de7984ff6e1` contains the `1.1.1` checkpoint and landing `Check` activation; historical tag `checkpoint/GAME-UX-2-exit-ticket-mvp-lesson`. Human review accepted the checkpoint as a boundary-safe, non-summative controlled paragraph-limited checkpoint surface. Green checks: platform focused checkpoint/landing/skill-map tests, full platform Jest 554 passed / 8 skipped, deploy, `1.1.1` validation, Book 1 checks, procedure contracts, target exercises, sprint bundle, and checkpoint/landing desktop/mobile light/dark screenshot QA; local focused recheck 26/26 and `1.1.1` complete student-web validation passed. Carried flag `L1.7B-R-CF1`: checkpoint metadata uses `A43`/`A04`, while paragraph-plan skills are `B01`/`B02`; this may not be used for diagnostics, mastery, sequencing, target-exercise promotion, CP-6/Year-1, PV, Scale Gate 1, or broad-scaling evidence until fixed or mapped. Records: `archive/sprints/L1.7B-R/`. GATE-L1.7B remains required before Scale Gate 1.",
+          "currentState": "**CLOSED PASS WITH FLAGS.** Platform `GAME-UX-2` completed the source-controlled exit-ticket checkpoint engine and generated lesson output through platform scripts only. Lesson output commit `5c47961269096c21a7d50bbc97c71de7984ff6e1` contains the `1.1.1` checkpoint and landing `Check` activation; historical tag `checkpoint/GAME-UX-2-exit-ticket-mvp-lesson`. Human review accepted the checkpoint as a boundary-safe, non-summative controlled paragraph-limited checkpoint surface. Green checks: platform focused checkpoint/landing/skill-map tests, full platform Jest 554 passed / 8 skipped, deploy, `1.1.1` validation, Book 1 checks, procedure contracts, target exercises, sprint bundle, and checkpoint/landing desktop/mobile light/dark screenshot QA; local focused recheck 26/26 and `1.1.1` complete student-web validation passed. Carried flag `L1.7B-R-CF1` was later resolved for checkpoint metadata scope by `L1.7B-MAP`; the checkpoint still may not be used for target-exercise-readiness, diagnostics, mastery, sequencing, target-exercise promotion, CP-6/Year-1, PV, Scale Gate 1, or broad-scaling evidence. Records: `archive/sprints/L1.7B-R/`.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
@@ -2286,7 +2376,7 @@
           "sprint": "L2.0",
           "name": "Book 1 Flag Burn-down And House-Style Cleanup",
           "completed": "yes",
-          "currentState": "**CLOSED PASS WITH FLAGS.** L2.0 defined the Book 1 student-web house-style baseline, PASS WITH FLAGS operational meaning, flag dispositions, quality-ref status language, screenshot/QA expectations, exit-ticket readiness checklist, and consolidation/gemengde-opgaven landing rule. Platform generator routes `1.1.4 Gemengde opgaven` to primary `Oefen gemengd` instead of a weak `Verdiep`-only page; chapter landing tags also show `Oefen gemengd`. Human review closed PASS WITH FLAGS with no product blocker. Green gates: focused landing Jest 2/2, deploy link/data checks 460 refs + 221 data tests, complete student-web validation for `1.1.1`-`1.1.3`, `1.1.4` publisher-print validation, Book 1 health 26/26, procedure-contract validation 341 checks, v5 target-exercise validation 54 records with 12/12/14/16, `1.1.4` desktop/mobile light/dark screenshot QA, and full platform Jest 544 passed / 8 skipped. Carried flags: `1.1.4` remains legacy `FLAG`, graph-drawing consolidation and profit-formula framing need later content review, game-row variants remain limited-scope and not scale-approved, exit-ticket target-readiness remains future work under L1.7B-MAP/L1.7B-P23/L1.7B-Q2/GATE-L1.7B-Q2, and L1.7C-MATH has since corrected the primary math-game route with remaining scale flags. Records: `archive/sprints/L2.0/`.",
+          "currentState": "**CLOSED PASS WITH FLAGS.** L2.0 defined the Book 1 student-web house-style baseline, PASS WITH FLAGS operational meaning, flag dispositions, quality-ref status language, screenshot/QA expectations, exit-ticket readiness checklist, and consolidation/gemengde-opgaven landing rule. Platform generator routes `1.1.4 Gemengde opgaven` to primary `Oefen gemengd` instead of a weak `Verdiep`-only page; chapter landing tags also show `Oefen gemengd`. Human review closed PASS WITH FLAGS with no product blocker. Green gates: focused landing Jest 2/2, deploy link/data checks 460 refs + 221 data tests, complete student-web validation for `1.1.1`-`1.1.3`, `1.1.4` publisher-print validation, Book 1 health 26/26, procedure-contract validation 341 checks, v5 target-exercise validation 54 records with 12/12/14/16, `1.1.4` desktop/mobile light/dark screenshot QA, and full platform Jest 544 passed / 8 skipped. Carried flags: `1.1.4` remains legacy `FLAG`, graph-drawing consolidation and profit-formula framing need later content review, game-row variants remain limited-scope and not scale-approved, exit-ticket target-readiness remains future work under L1.7B-P23/L1.7B-Q2/GATE-L1.7B-Q2 after L1.7B-MAP metadata closure, and L1.7C-MATH has since corrected the primary math-game route with remaining scale flags. Records: `archive/sprints/L2.0/`.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
@@ -2531,8 +2621,8 @@
           "roadmap": "Lessen roadmap"
         }
       ],
-      "completedCount": 37,
-      "openCount": 18
+      "completedCount": 38,
+      "openCount": 17
     },
     {
       "id": "innovation",
