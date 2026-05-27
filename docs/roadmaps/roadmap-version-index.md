@@ -12,12 +12,13 @@ docs/roadmaps/roadmap-version-index.json
 
 | Roadmap | Version | Path | Notes |
 |---|---|---|---|
-| References Team Roadmap | `v2.85-mtu-h1-operation-benchmark` | `references/reference-team-roadmap.md` | Current operating roadmap after MTU-H1 recorded the Solo q1-q3 MTU-hardening benchmark and routed MTU-H2 through MTU-H6 without protected reference mutation or product-use authorization. |
+| References Team Roadmap | `v2.86-mtu-h2-solo-micro-case-review` | `references/reference-team-roadmap.md` | Current operating roadmap after MTU-H2 prepared the Solo q1-q3 canonical micro-case review packet. Top operational next action is GATE-MTU-H2 human review; no protected reference mutation or product-use lane is authorized. |
 
 ## Outdated Archive
 
 | Roadmap | Version | Path | Superseded By |
 |---|---|---|---|
+| References Team Roadmap before MTU-H2 solo micro-case review | `v2.85-mtu-h1-operation-benchmark` | `docs/roadmaps/outdated/reference-team-roadmap-v2.85-mtu-h1-operation-benchmark.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before MTU-H1 operation benchmark | `v2.84-game-ux2-exit-ticket-checkpoint` | `docs/roadmaps/outdated/reference-team-roadmap-v2.84-game-ux2-exit-ticket-checkpoint.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before GAME-UX-2 checkpoint | `v2.83-ex7-dry-run-cli-implementation` | `docs/roadmaps/outdated/reference-team-roadmap-v2.83-ex7-dry-run-cli-implementation.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before EX-7 completion | `v2.82-gate-ex6-pass-with-conditions` | `docs/roadmaps/outdated/reference-team-roadmap-v2.82-gate-ex6-pass-with-conditions.md` | `references/reference-team-roadmap.md` |

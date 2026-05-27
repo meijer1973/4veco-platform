@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-MTU-H2",
+  "title": "Solo q1-q3 Micro-Case Review",
+  "generated": "2026-05-27",
+  "status": "review_packet_ready_no_mutation",
+  "review_scope": "Review Solo q1-q3 MTU candidate routing for later CLI-governed planning. Do not authorize direct mutation from this packet.",
+  "evidence_base": [
+    "reports/mtu-hardening/benchmark-sample-v1.json",
+    "reports/mtu-hardening/solo-q1-q3-operation-map.md",
+    "reports/mtu-hardening/failure-taxonomy-v1.md",
+    "reports/mtu-hardening/solo-q1-q3-canonical-cases.json",
+    "reports/mtu-hardening/solo-q1-q3-canonical-cases.md",
+    "references/machine/micro-teaching-units.md",
+    "references/reference-team-roadmap.md"
+  ],
+  "authority_boundary": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_mutation_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "cp6_closure_authorized": false,
+    "year1_closure_authorized": false,
+    "student_product_use_authorized": false
+  },
+  "product_boundaries": {
+    "diagnostics": false,
+    "adaptive_routing": false,
+    "mastery": false,
+    "sequencing": false,
+    "student_facing_ai": false,
+    "summative_use": false,
+    "pv_projection": false,
+    "pv_machine_promotion": false,
+    "student_facing_output": false
+  },
+  "calibration_questions": [
+    {
+      "id": "calibration-1",
+      "question": "This gate reviews Solo q1-q3 candidate routing only and does not authorize protected reference mutation, machine-reference mutation, unit minting, candidate writes, lesson output, or student/product use.",
+      "required_answer": "yes"
+    },
+    {
+      "id": "calibration-2",
+      "question": "Candidate lane IDs in the MTU-H2 package are review IDs, not live unit IDs, and any later registry change must use a separately authorized CLI-governed mutation lane.",
+      "required_answer": "yes"
+    }
+  ],
+  "planned_questions": [
+    {
+      "id": "MTUH2-Q1",
+      "topic": "q1 verbal external-cost content",
+      "recommended_option": "Approve both q1 content candidates for later mutation planning; decide later whether one combined unit or two units."
+    },
+    {
+      "id": "MTUH2-Q2",
+      "topic": "q1 answer-form route",
+      "recommended_option": "Defer to MTU-H4 while keeping q1's answer-form need visible."
+    },
+    {
+      "id": "MTUH2-Q3",
+      "topic": "q2 calculation-operation chain",
+      "recommended_option": "Route pointwise TO, TVK from constant variable cost, and unknown fixed costs from profit as distinct calculation-operation candidates."
+    },
+    {
+      "id": "MTUH2-Q4",
+      "topic": "q2 scale factor and bereken answer form",
+      "recommended_option": "Route scale-factor handling as an H2 candidate and defer bereken answer form to MTU-H4."
+    },
+    {
+      "id": "MTUH2-Q5",
+      "topic": "q3 MO route split",
+      "recommended_option": "Approve the split/supplement route for later mutation planning."
+    },
+    {
+      "id": "MTUH2-Q6",
+      "topic": "q3 price and percentage-change route",
+      "recommended_option": "Route both H2 candidates while sending broader pass-through/incidence family work to MTU-H3."
+    },
+    {
+      "id": "MTUH2-Q7",
+      "topic": "existing-unit guardrails",
+      "recommended_option": "Keep the guardrails binding for later planning."
+    },
+    {
+      "id": "MTUH2-Q8",
+      "topic": "next sprint authority",
+      "recommended_option": "Authorize only a later bounded CLI-mutation planning sprint for reviewed H2 lanes; no mutation execution yet."
+    },
+    {
+      "id": "MTUH2-Q9",
+      "topic": "mutation and product authority",
+      "recommended_option": "No mutation or product authority now."
+    }
+  ],
+  "stop_conditions": [
+    "stop if any answer authorizes hand edits to references/machine or references/external",
+    "stop if any answer authorizes protected reference mutation, external-source mutation, machine-reference mutation, unit minting, operation-registry mutation, answer-skill mutation, candidate writes, lesson-output mutation, CP-6 closure, or Year-1 closure now",
+    "stop if q1 is treated as requiring full MPC/MSC or welfare-loss machinery",
+    "stop if q2 is treated as requiring full TO-function construction",
+    "stop if q3 is treated as requiring MK derivation when MK is given or as requiring a calculus-only MO route",
+    "stop if answer-form needs are hidden downstream",
+    "stop if D07 broader incidence/pass-through work is mutated from this gate instead of routed to MTU-H3 or a later named lane",
+    "stop if any answer authorizes diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student/product use"
+  ],
+  "recommended_next_action": "Run the formal GATE-MTU-H2 human review before any later MTU-H2A mutation planning, CLI execution, candidate storage, lesson handoff, or student/product use."
+}

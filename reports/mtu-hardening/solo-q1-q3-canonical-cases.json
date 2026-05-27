@@ -1,0 +1,467 @@
+{
+  "schema_version": 1,
+  "sprint_id": "MTU-H2",
+  "gate_id": "GATE-MTU-H2",
+  "created": "2026-05-27",
+  "status": "review_packet_ready_no_mutation",
+  "source_basis": {
+    "benchmark": "reports/mtu-hardening/benchmark-sample-v1.json",
+    "operation_map": "reports/mtu-hardening/solo-q1-q3-operation-map.md",
+    "failure_taxonomy": "reports/mtu-hardening/failure-taxonomy-v1.md",
+    "official_source_refresh_performed": false,
+    "external_source_mutated": false,
+    "note": "MTU-H2 preserves the MTU-H1 source boundary: supplied Solo q1-q3 analysis is review evidence, not a new official-source extraction."
+  },
+  "authority_boundary": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "unit_update_authorized": false,
+    "unit_split_authorized": false,
+    "unit_merge_authorized": false,
+    "unit_deprecation_authorized": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_mutation_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "student_product_use_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false
+  },
+  "review_policy": {
+    "review_required_before_mutation": true,
+    "future_mutation_must_use_cli": true,
+    "candidate_ids_are_not_live_unit_ids": true,
+    "no_registry_write_from_mtu_h2": true,
+    "review_gate": "reports/review-gates/GATE-MTU-H2-solo-q1-q3-micro-cases/review-packet.md"
+  },
+  "canonical_cases": [
+    {
+      "question_id": "vwo-economie-2026-solo:q1",
+      "case_title": "verbal external-cost explanation",
+      "review_status": "ready_for_human_review",
+      "correction_model_operations": [
+        "give a context-specific example of maatschappelijke kosten caused by diesel use",
+        "explain that the costs are paid by society or non-users and are not included in the direct user price"
+      ],
+      "existing_unit_findings": [
+        {
+          "unit_id": "F16",
+          "fit": "partial_over_formal",
+          "review_routing": "support_only",
+          "guardrail": "Do not require full MPC/MSC apparatus or welfare-loss diagram reasoning for this verbal item."
+        }
+      ],
+      "candidate_lanes": [
+        {
+          "lane_id": "MTUH2-Q1-F-VERBAL-EXTERNAL-COST",
+          "layer": "content_mtu",
+          "recommended_action": "add_or_refactor_unit_after_gate",
+          "proposed_label_nl": "Maatschappelijke kosten / externe kosten verbaal herkennen",
+          "core": "Identify a cost caused by production or consumption that is not borne by the direct user or producer.",
+          "source_operations": [
+            "q1-op-2"
+          ],
+          "existing_units_to_reference": [
+            {
+              "unit_id": "F16",
+              "role": "formal support only"
+            }
+          ],
+          "suggested_later_cli_path": "unit-add.js or unit-update.js after GATE-MTU-H2",
+          "mutation_authorized": false
+        },
+        {
+          "lane_id": "MTUH2-Q1-F-EXTERNAL-COST-EXAMPLE",
+          "layer": "content_reasoning_mtu",
+          "recommended_action": "add_or_merge_with_verbal_external_cost_after_gate",
+          "proposed_label_nl": "Maatschappelijke kosten uitleggen met voorbeeld",
+          "core": "Give one context-specific example and explain why the cost is external or social.",
+          "source_operations": [
+            "q1-op-1",
+            "q1-op-2"
+          ],
+          "existing_units_to_reference": [
+            {
+              "unit_id": "F16",
+              "role": "formal support only"
+            }
+          ],
+          "suggested_later_cli_path": "unit-add.js or unit-merge design after GATE-MTU-H2",
+          "mutation_authorized": false
+        },
+        {
+          "lane_id": "MTUH2-Q1-A-LEG-UIT-WITH-EXAMPLE",
+          "layer": "answer_form_mtu",
+          "recommended_action": "route_to_MTU-H4_unless_gate_authorizes_bounded_answer_form",
+          "proposed_label_nl": "Leg-uit-vraag met voorbeeld beantwoorden",
+          "core": "Answer a leg-uit-met-voorbeeld question by giving the requested example and the causal mechanism.",
+          "source_operations": [
+            "q1-op-1",
+            "q1-op-2"
+          ],
+          "existing_units_to_reference": [],
+          "suggested_later_cli_path": "answer-form route design in MTU-H4 or bounded unit-add after GATE-MTU-H2",
+          "mutation_authorized": false
+        }
+      ],
+      "over_trigger_guardrails": [
+        "Do not require formal MPC/MSC curve apparatus.",
+        "Do not require welfare-loss or overproduction diagram reasoning.",
+        "Do not accept concept naming without example plus mechanism as full coverage."
+      ],
+      "held_dependencies": [
+        {
+          "dependency": "general answer-form policy",
+          "route": "MTU-H4"
+        }
+      ]
+    },
+    {
+      "question_id": "vwo-economie-2026-solo:q2",
+      "case_title": "unknown fixed costs from profit",
+      "review_status": "ready_for_human_review",
+      "correction_model_operations": [
+        "solve price/output relation for Q",
+        "calculate pointwise total revenue",
+        "calculate total variable costs from constant variable cost",
+        "solve the profit equation for unknown fixed costs",
+        "apply the exam scale factor in the final amount"
+      ],
+      "existing_unit_findings": [
+        {
+          "unit_id": "A21",
+          "fit": "too_broad",
+          "review_routing": "support_only",
+          "guardrail": "Do not treat W = TO - TK as full coverage for the reverse TCK route."
+        },
+        {
+          "unit_id": "D02",
+          "fit": "wrong_route_for_this_operation",
+          "review_routing": "not_primary",
+          "guardrail": "Do not route through break-even or MO=MK constant-cost concepts."
+        }
+      ],
+      "candidate_lanes": [
+        {
+          "lane_id": "MTUH2-Q2-A-TO-POINT-CALCULATION",
+          "layer": "calculation_operation_mtu",
+          "recommended_action": "add_unit_after_gate",
+          "proposed_label_nl": "Totale opbrengst puntberekening: TO = P x Q",
+          "core": "Calculate total revenue from one price and one quantity without requiring a full TO function.",
+          "source_operations": [
+            "q2-op-2"
+          ],
+          "existing_units_to_reference": [
+            {
+              "unit_id": "A21",
+              "role": "profit relation support only"
+            }
+          ],
+          "suggested_later_cli_path": "unit-add.js after GATE-MTU-H2",
+          "mutation_authorized": false
+        },
+        {
+          "lane_id": "MTUH2-Q2-A-TVK-CONSTANT-VARIABLE-COST",
+          "layer": "calculation_operation_mtu",
+          "recommended_action": "add_unit_after_gate",
+          "proposed_label_nl": "TVK berekenen uit constante variabele kosten",
+          "core": "When variable cost per unit is constant, calculate TVK = v x Q.",
+          "source_operations": [
+            "q2-op-3"
+          ],
+          "existing_units_to_reference": [
+            {
+              "unit_id": "D02",
+              "role": "conceptual support only"
+            }
+          ],
+          "suggested_later_cli_path": "unit-add.js after GATE-MTU-H2",
+          "mutation_authorized": false
+        },
+        {
+          "lane_id": "MTUH2-Q2-A-UNKNOWN-FIXED-COST-FROM-PROFIT",
+          "layer": "calculation_operation_mtu",
+          "recommended_action": "add_unit_after_gate",
+          "proposed_label_nl": "Onbekende vaste kosten berekenen uit winstvergelijking",
+          "core": "Solve W = TO - (TVK + TCK) for TCK.",
+          "source_operations": [
+            "q2-op-4"
+          ],
+          "existing_units_to_reference": [
+            {
+              "unit_id": "A21",
+              "role": "formula support only"
+            }
+          ],
+          "suggested_later_cli_path": "unit-add.js after GATE-MTU-H2",
+          "mutation_authorized": false
+        },
+        {
+          "lane_id": "MTUH2-Q2-A-SCALE-FACTOR-UNIT-HANDLING",
+          "layer": "calculation_reliability_mtu",
+          "recommended_action": "add_or_attach_after_gate",
+          "proposed_label_nl": "Schaalfactoren in examencijfers toepassen",
+          "core": "Handle scale labels such as x 1,000 correctly in formulas, graph labels, and final answer units.",
+          "source_operations": [
+            "q2-op-2",
+            "q2-op-4"
+          ],
+          "existing_units_to_reference": [],
+          "suggested_later_cli_path": "unit-add.js or unit-update.js after GATE-MTU-H2",
+          "mutation_authorized": false
+        },
+        {
+          "lane_id": "MTUH2-Q2-A-BEREKEN-ANSWER-FORM",
+          "layer": "answer_form_mtu",
+          "recommended_action": "route_to_MTU-H4_unless_gate_authorizes_bounded_answer_form",
+          "proposed_label_nl": "Bereken-vraag beantwoorden",
+          "core": "Show formula, substitution, intermediate calculation, unit, and final conclusion.",
+          "source_operations": [
+            "q2-op-1",
+            "q2-op-2",
+            "q2-op-3",
+            "q2-op-4"
+          ],
+          "existing_units_to_reference": [],
+          "suggested_later_cli_path": "answer-form route design in MTU-H4 or bounded unit-add after GATE-MTU-H2",
+          "mutation_authorized": false
+        }
+      ],
+      "over_trigger_guardrails": [
+        "Do not require full TO-function construction.",
+        "Do not route through break-even analysis.",
+        "Do not treat A21 alone as sufficient operation coverage.",
+        "Do not hide scale-factor handling."
+      ],
+      "held_dependencies": [
+        {
+          "dependency": "general bereken answer-form policy",
+          "route": "MTU-H4"
+        }
+      ]
+    },
+    {
+      "question_id": "vwo-economie-2026-solo:q3",
+      "case_title": "GO to MO, given MK, new price, and price rise",
+      "review_status": "ready_for_human_review",
+      "correction_model_operations": [
+        "recognise GO as the monopolist price/demand relation",
+        "derive or determine MO from GO/TO",
+        "solve MO = given MKbio",
+        "substitute Q into GO to determine new price",
+        "calculate percentage price rise using the old price denominator",
+        "preserve pass-through misconception distinction"
+      ],
+      "existing_unit_findings": [
+        {
+          "unit_id": "A20",
+          "fit": "too_broad",
+          "review_routing": "split_or_refactor_candidate",
+          "guardrail": "Do not let MO = MK hide given-MK versus derived-MK and non-calculus versus derivative routes."
+        },
+        {
+          "unit_id": "A38",
+          "fit": "partial",
+          "review_routing": "support_only",
+          "guardrail": "Do not treat generic percentage change as pass-through or incidence understanding."
+        },
+        {
+          "unit_id": "D07",
+          "fit": "related_but_too_narrow",
+          "review_routing": "route_to_MTU-H3",
+          "guardrail": "Do not make a tax-only incidence unit carry cost-shock and monopoly pass-through alone."
+        }
+      ],
+      "candidate_lanes": [
+        {
+          "lane_id": "MTUH2-Q3-A-GO-AS-MONOPOLY-PRICE-RELATION",
+          "layer": "calculation_operation_mtu",
+          "recommended_action": "add_or_attach_after_gate",
+          "proposed_label_nl": "GO herkennen als prijsfunctie van de monopolist",
+          "core": "Recognise GO/P(Q) as the price relation used after finding Q.",
+          "source_operations": [
+            "q3-op-1",
+            "q3-op-3"
+          ],
+          "existing_units_to_reference": [
+            {
+              "unit_id": "A20",
+              "role": "profit-maximisation support only"
+            }
+          ],
+          "suggested_later_cli_path": "unit-add.js or unit-update.js after GATE-MTU-H2",
+          "mutation_authorized": false
+        },
+        {
+          "lane_id": "MTUH2-Q3-A-MO-WITHOUT-DERIVATIVES",
+          "layer": "calculation_operation_mtu",
+          "recommended_action": "add_unit_after_gate",
+          "proposed_label_nl": "MO bepalen zonder afgeleiden",
+          "core": "Determine or use marginal revenue through table, graph, or rule before calculus is introduced.",
+          "source_operations": [
+            "q3-op-1"
+          ],
+          "existing_units_to_reference": [
+            {
+              "unit_id": "A20",
+              "role": "broad ancestor"
+            }
+          ],
+          "suggested_later_cli_path": "unit-add.js after GATE-MTU-H2",
+          "mutation_authorized": false
+        },
+        {
+          "lane_id": "MTUH2-Q3-A-MO-WITH-DERIVATIVE",
+          "layer": "calculation_operation_mtu",
+          "recommended_action": "add_or_split_route_after_gate",
+          "proposed_label_nl": "MO bepalen met afgeleide",
+          "core": "Derive MO by differentiating TO as the later formal route.",
+          "source_operations": [
+            "q3-op-1"
+          ],
+          "existing_units_to_reference": [
+            {
+              "unit_id": "A20",
+              "role": "broad ancestor"
+            }
+          ],
+          "suggested_later_cli_path": "unit-add.js or unit-split.js after GATE-MTU-H2",
+          "mutation_authorized": false
+        },
+        {
+          "lane_id": "MTUH2-Q3-A-MO-EQUALS-GIVEN-MK",
+          "layer": "calculation_operation_mtu",
+          "recommended_action": "add_unit_after_gate",
+          "proposed_label_nl": "MO = gegeven MK oplossen",
+          "core": "Solve MO = a given constant marginal-cost value.",
+          "source_operations": [
+            "q3-op-2"
+          ],
+          "existing_units_to_reference": [
+            {
+              "unit_id": "A20",
+              "role": "broad ancestor"
+            }
+          ],
+          "suggested_later_cli_path": "unit-add.js after GATE-MTU-H2",
+          "mutation_authorized": false
+        },
+        {
+          "lane_id": "MTUH2-Q3-A-MO-EQUALS-DERIVED-MK",
+          "layer": "calculation_operation_mtu",
+          "recommended_action": "split_or_hold_after_gate",
+          "proposed_label_nl": "MO = afgeleide MK oplossen",
+          "core": "Solve MO = MK when both functions must be derived first.",
+          "source_operations": [
+            "q3-overtrigger-guardrail"
+          ],
+          "existing_units_to_reference": [
+            {
+              "unit_id": "A20",
+              "role": "broad ancestor"
+            }
+          ],
+          "suggested_later_cli_path": "unit-add.js or unit-split.js after GATE-MTU-H2",
+          "mutation_authorized": false
+        },
+        {
+          "lane_id": "MTUH2-Q3-A-NEW-MONOPOLY-PRICE-AFTER-Q",
+          "layer": "calculation_operation_mtu",
+          "recommended_action": "add_unit_after_gate",
+          "proposed_label_nl": "Nieuwe prijs bepalen na winstmaximaliserende Q",
+          "core": "After finding Q*, substitute Q* into GO/P(Q) to determine the price.",
+          "source_operations": [
+            "q3-op-3"
+          ],
+          "existing_units_to_reference": [
+            {
+              "unit_id": "A20",
+              "role": "profit-maximisation support only"
+            }
+          ],
+          "suggested_later_cli_path": "unit-add.js after GATE-MTU-H2",
+          "mutation_authorized": false
+        },
+        {
+          "lane_id": "MTUH2-Q3-A-PERCENTAGE-PRICE-CHANGE-AFTER-COST-CHANGE",
+          "layer": "calculation_operation_mtu",
+          "recommended_action": "add_or_attach_after_gate",
+          "proposed_label_nl": "Procentuele prijsverandering na kostenverandering",
+          "core": "Calculate price percentage change with the correct denominator and distinguish it from pass-through share.",
+          "source_operations": [
+            "q3-op-4"
+          ],
+          "existing_units_to_reference": [
+            {
+              "unit_id": "A38",
+              "role": "generic percentage support only"
+            },
+            {
+              "unit_id": "D07",
+              "role": "incidence family dependency"
+            }
+          ],
+          "suggested_later_cli_path": "unit-add.js or route to MTU-H3 after GATE-MTU-H2",
+          "mutation_authorized": false
+        },
+        {
+          "lane_id": "MTUH2-Q3-D07-PASS-THROUGH-DEPENDENCY",
+          "layer": "incidence_family_dependency",
+          "recommended_action": "route_to_MTU-H3",
+          "proposed_label_nl": "Kostenstijging doorberekenen in prijs en incidence-misvatting",
+          "core": "Review D07 as a broader incidence/pass-through family rather than tax-only support.",
+          "source_operations": [
+            "q3-misconception-target"
+          ],
+          "existing_units_to_reference": [
+            {
+              "unit_id": "D07",
+              "role": "too narrow"
+            }
+          ],
+          "suggested_later_cli_path": "MTU-H3 review before any D07 family mutation",
+          "mutation_authorized": false
+        }
+      ],
+      "over_trigger_guardrails": [
+        "Do not require MK derivation when MK is given.",
+        "Do not make derivative-based MO the only route.",
+        "Do not hide GO-to-price substitution after Q*.",
+        "Do not confuse percentage price rise with pass-through share.",
+        "Do not make D07 tax-only content carry the full incidence family."
+      ],
+      "held_dependencies": [
+        {
+          "dependency": "incidence/pass-through family review",
+          "route": "MTU-H3"
+        },
+        {
+          "dependency": "general bereken answer-form policy",
+          "route": "MTU-H4"
+        }
+      ]
+    }
+  ],
+  "cross_case_guardrails": [
+    "Existing broad units may be used as support but not as full operation coverage when the correction model requires a narrower route.",
+    "Question verbs must stay visible as answer-form needs and must not be hidden inside content units.",
+    "Candidate lanes are review candidates only and are not live unit IDs.",
+    "Any later mutation must run through reference CLI commands after a closed human review names exact actions."
+  ],
+  "next_review": {
+    "gate_id": "GATE-MTU-H2",
+    "review_packet_md": "reports/review-gates/GATE-MTU-H2-solo-q1-q3-micro-cases/review-packet.md",
+    "review_packet_json": "reports/review-gates/GATE-MTU-H2-solo-q1-q3-micro-cases/review-packet.json",
+    "allowed_decision": "reviewed routing only",
+    "mutation_authorized_now": false
+  }
+}

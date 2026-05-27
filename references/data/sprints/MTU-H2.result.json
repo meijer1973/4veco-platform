@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "sprint_id": "MTU-H2",
+  "title": "Solo q1-q3 Canonical Micro-Case Review",
+  "status": "completed",
+  "completed_on": "2026-05-27",
+  "plan": "reports/sprints/MTU-H2-plan.md",
+  "baseline": "reports/sprints/MTU-H2-baseline.md",
+  "result": "reports/sprints/MTU-H2-result.md",
+  "diff_summary": "reports/sprints/MTU-H2-diff-summary.md",
+  "lead_review_required": false,
+  "human_review_required": false,
+  "protected_reference_data_changed": false,
+  "external_source_changed": false,
+  "machine_reference_changed": false,
+  "unit_minting_performed": false,
+  "candidate_storage_created": false,
+  "candidate_writes_performed": false,
+  "lesson_output_changed": false,
+  "student_product_use_authorized": false,
+  "outputs": [
+    "reports/mtu-hardening/solo-q1-q3-canonical-cases.json",
+    "reports/mtu-hardening/solo-q1-q3-canonical-cases.md",
+    "reports/review-gates/GATE-MTU-H2-solo-q1-q3-micro-cases/review-packet.md",
+    "reports/review-gates/GATE-MTU-H2-solo-q1-q3-micro-cases/review-packet.json",
+    "build-scripts/references/check-mtu-h2-solo-cases.js",
+    "reports/sprints/MTU-H2-result.md",
+    "reports/sprints/MTU-H2-diff-summary.md",
+    "references/data/sprints/MTU-H2.result.json"
+  ],
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/MTU-H2-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js MTU-H2",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-mtu-hardening-benchmark.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-mtu-h2-solo-cases.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/validate-report-json.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/generate-all.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/generate-reference-health.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/check-reference-health.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run dashboard:internal",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run agent:index",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js --check",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/build-source-document-registry.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/build-reference-inventory.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-source-document-registry.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-source-manifest.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-document-inventory.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-roadmap-version-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd test -- --runInBand",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js MTU-H2 --complete",
+      "status": "passed"
+    }
+  ],
+  "next_action": "Run GATE-MTU-H2 as an interactive human review before any mutation planning or CLI execution."
+}

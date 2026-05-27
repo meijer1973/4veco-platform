@@ -1,7 +1,7 @@
 {
   "report_id": "empty-needs-audit-summary",
   "generated_by": "build-scripts/reports/generate-all.js",
-  "generated_on": "2026-05-27T11:49:07.608Z",
+  "generated_on": "2026-05-27T12:12:47.877Z",
   "source_files": [
     "references/data/audits/empty-needs-audit.json"
   ],

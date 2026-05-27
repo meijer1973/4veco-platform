@@ -2,7 +2,7 @@
   "schema_version": 1,
   "registry_id": "source-document-registry",
   "generated_by": "build-scripts/references/build-source-document-registry.js",
-  "generated_on": "2026-05-27T11:48:27.558Z",
+  "generated_on": "2026-05-27T12:12:36.051Z",
   "storage_decision": {
     "registry_location": "references/data/source-document-registry.json",
     "machine_registry_created": false,
@@ -16,15 +16,15 @@
     "references/SOURCE_OF_TRUTH.md"
   ],
   "summary": {
-    "record_count": 305,
-    "source_manifest_file_count": 310,
+    "record_count": 306,
+    "source_manifest_file_count": 311,
     "by_authority_level": {
       "external_primary": 30,
       "machine_registry": 5,
       "owned_curriculum_design": 5,
       "authored_judgement": 9,
       "generated_report": 2,
-      "governance_data": 220,
+      "governance_data": 221,
       "quality_protocol": 5,
       "planning": 1,
       "machine_contract": 28
@@ -41,7 +41,7 @@
       "inventory": 34,
       "exercise_metadata_overlay": 6,
       "exercise_overlay_readme": 1,
-      "sprint_metadata": 177,
+      "sprint_metadata": 178,
       "machine_projection": 3,
       "owned_source_readme": 1,
       "qc_prompt": 5,
@@ -57,7 +57,7 @@
       "archived": 1,
       "generated_diagnostic": 2,
       "mirrored": 25,
-      "governance_data": 218,
+      "governance_data": 219,
       "planning": 1,
       "schema_contract": 28
     },
@@ -65,7 +65,7 @@
       "public_citation_allowed_with_source_name": 30,
       "internal_only": 19,
       "internal_diagnostic_only": 2,
-      "not_public_citation_source": 254
+      "not_public_citation_source": 255
     },
     "evidence_anchor_coverage": {
       "required_document_ids": [
@@ -4439,6 +4439,44 @@
       "refresh_policy": "sprint_lifecycle",
       "source_hash": "f2b4bb9dfe052d07bc73ca7c3369cbd4a64798fdbd4ee4ba0b68603d8df01637",
       "size_bytes": 3428,
+      "primary_evidence": false,
+      "curriculum_authority": false,
+      "allowed_downstream_uses": [
+        "internal_reference_context",
+        "rag_retrieval_with_authority_label"
+      ],
+      "blocked_downstream_uses": [
+        "student_diagnostics",
+        "adaptive_routing",
+        "student_facing_ai",
+        "automatic_lesson_sequencing",
+        "automatic_mastery_decisions",
+        "summative_assessment_decisions",
+        "external_authority",
+        "override_machine_registry"
+      ],
+      "evidence_anchor_ids": [],
+      "notes": [
+        "Governance data is canonical only for its declared governance artifact."
+      ]
+    },
+    {
+      "document_id": "path-references-data-sprints-mtu-h1-result",
+      "path": "references/data/sprints/MTU-H1.result.json",
+      "title": "MTU H1.Result",
+      "source_type": "sprint_metadata",
+      "authority_level": "governance_data",
+      "source_version": "sha256:86adb13f62a0d6ce56b5c9b89fdef067488c139d8a95874cc00cbeb1d70a85ea",
+      "status": "governance_data",
+      "owner": "references_team",
+      "citation_policy": "cite_as_governance_record_only",
+      "public_citation_policy": "not_public_citation_source",
+      "layer": "governance_data",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "refresh_policy": "sprint_lifecycle",
+      "source_hash": "86adb13f62a0d6ce56b5c9b89fdef067488c139d8a95874cc00cbeb1d70a85ea",
+      "size_bytes": 3412,
       "primary_evidence": false,
       "curriculum_authority": false,
       "allowed_downstream_uses": [
