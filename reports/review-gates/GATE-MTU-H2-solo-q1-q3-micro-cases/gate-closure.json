@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-MTU-H2",
+  "status": "pass_with_conditions",
+  "closed_on": "2026-05-27",
+  "closure_confirmed_by_human": true,
+  "human_interview": "reports/review-gates/GATE-MTU-H2-solo-q1-q3-micro-cases/human-interview.md",
+  "review_packet": "reports/review-gates/GATE-MTU-H2-solo-q1-q3-micro-cases/review-packet.md",
+  "summary": "GATE-MTU-H2 closes as pass_with_conditions for routing only. It accepts reviewed Solo q1-q3 candidate lanes for later bounded CLI-mutation planning while preserving all protected mutation, lesson-output, closure, and student/product-use blocks.",
+  "protected_reference_data_changed": false,
+  "decision_scope": "routing_only",
+  "allowed_next_sprint": "MTU-H2A",
+  "allowed_next_sprint_name": "CLI-Mutation Planning",
+  "allowed_next_sprint_scope": [
+    "plan exact live unit IDs or new unit IDs for reviewed H2 lanes",
+    "draft schema-valid CLI specs",
+    "draft CLI command sequence",
+    "draft rollback and audit-log evidence",
+    "define validators and proof required before mutation execution"
+  ],
+  "mutation_execution_authorized": false,
+  "candidate_storage_authorized": false,
+  "candidate_writes_authorized": false,
+  "student_product_use_authorized": false,
+  "explicit_decisions": [
+    {
+      "topic": "gate status",
+      "decision": "Close GATE-MTU-H2 as pass_with_conditions - routing only."
+    },
+    {
+      "topic": "q1 verbal external-cost content",
+      "decision": "Approve both q1 content candidates for later mutation planning; decide later whether they become one combined unit or two units."
+    },
+    {
+      "topic": "q1 answer-form route",
+      "decision": "Defer Leg-uit-vraag met voorbeeld beantwoorden to MTU-H4 while keeping q1 answer-form need visible."
+    },
+    {
+      "topic": "q2 calculation-operation chain",
+      "decision": "Route pointwise TO calculation, TVK from constant variable cost, and unknown fixed costs from profit as distinct calculation-operation candidates."
+    },
+    {
+      "topic": "q2 scale factor and bereken answer form",
+      "decision": "Route scale-factor handling as an H2 calculation-reliability candidate; defer Bereken-vraag beantwoorden to MTU-H4."
+    },
+    {
+      "topic": "q3 MO route split",
+      "decision": "Approve the split/supplement route for later mutation planning: non-calculus MO, derivative MO, MO = gegeven MK, and MO = afgeleide MK."
+    },
+    {
+      "topic": "q3 price and percentage-change route",
+      "decision": "Route new-price-after-Q* and percentage-price-change-after-cost-change as H2 candidates; send broader pass-through/incidence family work to MTU-H3."
+    },
+    {
+      "topic": "existing-unit guardrails",
+      "decision": "Keep guardrails binding. Refine q1 wording to: F16 may support q1, but q1 must not require full MPC/MSC machinery."
+    },
+    {
+      "topic": "next sprint authority",
+      "decision": "Authorize only a later bounded CLI-mutation planning sprint for reviewed H2 lanes; no mutation execution yet."
+    },
+    {
+      "topic": "mutation and product authority",
+      "decision": "No protected reference mutation, external-source mutation, machine-reference mutation, unit minting, operation-registry mutation, answer-skill mutation, candidate writes, lesson-output mutation, CP-6/Year-1 closure, diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student/product use is authorized."
+    }
+  ],
+  "approved_for_later_planning": [
+    "q1 verbal external-cost recognition",
+    "q1 external-cost explanation with example",
+    "q2 pointwise TO calculation",
+    "q2 TVK from constant variable cost",
+    "q2 unknown fixed costs from profit",
+    "q2 scale-factor handling",
+    "q3 non-calculus MO route",
+    "q3 derivative MO route",
+    "q3 MO = gegeven MK route",
+    "q3 MO = afgeleide MK route",
+    "q3 new price after Q*",
+    "q3 percentage price change after cost change"
+  ],
+  "deferred_but_visible": [
+    {
+      "candidate": "q1 Leg-uit-vraag met voorbeeld beantwoorden",
+      "route": "MTU-H4"
+    },
+    {
+      "candidate": "q2 Bereken-vraag beantwoorden",
+      "route": "MTU-H4"
+    },
+    {
+      "candidate": "broader tax/subsidy/cost-shock incidence and pass-through family",
+      "route": "MTU-H3"
+    }
+  ],
+  "conditions_to_reopen_or_pass": [
+    "GATE-MTU-H2 is a routing review only.",
+    "No protected mutation and no product use is authorized.",
+    "MTU-H2A is planning-only unless a later packet names exact unit IDs, schema-valid specs, CLI commands, rollback, audit log, and validation evidence.",
+    "q1 and q2 answer-form needs are deferred to MTU-H4 but remain visible.",
+    "D07 and broader pass-through/incidence work are routed to MTU-H3, not mutated from H2.",
+    "No full MPC/MSC requirement for q1.",
+    "No full TO-function requirement for q2.",
+    "No MK derivation or calculus-only MO route for q3."
+  ],
+  "blocked_outcomes": [
+    "No protected reference mutation is authorized.",
+    "No external-source mutation is authorized.",
+    "No machine-reference mutation is authorized.",
+    "Do not hand-edit references/machine/.",
+    "Do not hand-edit references/external/.",
+    "No unit minting is authorized.",
+    "No operation-registry mutation is authorized.",
+    "No answer-skill mutation is authorized.",
+    "No candidate writes are authorized.",
+    "No lesson-output mutation is authorized.",
+    "No target-exercise promotion is authorized.",
+    "No CP-6 closure is authorized.",
+    "No Year-1 closure is authorized.",
+    "No student diagnostics, adaptive routing, mastery decisions, automatic sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student/product use is authorized."
+  ]
+}

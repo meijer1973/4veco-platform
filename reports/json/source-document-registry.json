@@ -1,17 +1,17 @@
 {
   "generated_by": "build-scripts/references/build-source-document-registry.js",
-  "generated_on": "2026-05-27T12:12:36.051Z",
+  "generated_on": "2026-05-27T12:32:26.279Z",
   "status": "pass",
   "summary": {
-    "record_count": 306,
-    "source_manifest_file_count": 311,
+    "record_count": 308,
+    "source_manifest_file_count": 313,
     "by_authority_level": {
       "external_primary": 30,
       "machine_registry": 5,
       "owned_curriculum_design": 5,
       "authored_judgement": 9,
       "generated_report": 2,
-      "governance_data": 221,
+      "governance_data": 223,
       "quality_protocol": 5,
       "planning": 1,
       "machine_contract": 28
@@ -28,7 +28,7 @@
       "inventory": 34,
       "exercise_metadata_overlay": 6,
       "exercise_overlay_readme": 1,
-      "sprint_metadata": 178,
+      "sprint_metadata": 180,
       "machine_projection": 3,
       "owned_source_readme": 1,
       "qc_prompt": 5,
@@ -44,7 +44,7 @@
       "archived": 1,
       "generated_diagnostic": 2,
       "mirrored": 25,
-      "governance_data": 219,
+      "governance_data": 221,
       "planning": 1,
       "schema_contract": 28
     },
@@ -52,7 +52,7 @@
       "public_citation_allowed_with_source_name": 30,
       "internal_only": 19,
       "internal_diagnostic_only": 2,
-      "not_public_citation_source": 255
+      "not_public_citation_source": 257
     },
     "evidence_anchor_coverage": {
       "required_document_ids": [
@@ -4470,6 +4470,82 @@
       "refresh_policy": "sprint_lifecycle",
       "source_hash": "86adb13f62a0d6ce56b5c9b89fdef067488c139d8a95874cc00cbeb1d70a85ea",
       "size_bytes": 3412,
+      "primary_evidence": false,
+      "curriculum_authority": false,
+      "allowed_downstream_uses": [
+        "internal_reference_context",
+        "rag_retrieval_with_authority_label"
+      ],
+      "blocked_downstream_uses": [
+        "student_diagnostics",
+        "adaptive_routing",
+        "student_facing_ai",
+        "automatic_lesson_sequencing",
+        "automatic_mastery_decisions",
+        "summative_assessment_decisions",
+        "external_authority",
+        "override_machine_registry"
+      ],
+      "evidence_anchor_ids": [],
+      "notes": [
+        "Governance data is canonical only for its declared governance artifact."
+      ]
+    },
+    {
+      "document_id": "path-references-data-sprints-mtu-h2-plan",
+      "path": "references/data/sprints/MTU-H2.plan.json",
+      "title": "MTU H2.Plan",
+      "source_type": "sprint_metadata",
+      "authority_level": "governance_data",
+      "source_version": "sha256:0a47d09ce8b262cdf48c533728525fbfcbacbde8b3dee2c4a99def166223fb60",
+      "status": "governance_data",
+      "owner": "references_team",
+      "citation_policy": "cite_as_governance_record_only",
+      "public_citation_policy": "not_public_citation_source",
+      "layer": "governance_data",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "refresh_policy": "sprint_lifecycle",
+      "source_hash": "0a47d09ce8b262cdf48c533728525fbfcbacbde8b3dee2c4a99def166223fb60",
+      "size_bytes": 3543,
+      "primary_evidence": false,
+      "curriculum_authority": false,
+      "allowed_downstream_uses": [
+        "internal_reference_context",
+        "rag_retrieval_with_authority_label"
+      ],
+      "blocked_downstream_uses": [
+        "student_diagnostics",
+        "adaptive_routing",
+        "student_facing_ai",
+        "automatic_lesson_sequencing",
+        "automatic_mastery_decisions",
+        "summative_assessment_decisions",
+        "external_authority",
+        "override_machine_registry"
+      ],
+      "evidence_anchor_ids": [],
+      "notes": [
+        "Governance data is canonical only for its declared governance artifact."
+      ]
+    },
+    {
+      "document_id": "path-references-data-sprints-mtu-h2-result",
+      "path": "references/data/sprints/MTU-H2.result.json",
+      "title": "MTU H2.Result",
+      "source_type": "sprint_metadata",
+      "authority_level": "governance_data",
+      "source_version": "sha256:4435e41704b680f5bdb1ffde053171e33bc2f081a566e6c424cb78bf1dcc7ffa",
+      "status": "governance_data",
+      "owner": "references_team",
+      "citation_policy": "cite_as_governance_record_only",
+      "public_citation_policy": "not_public_citation_source",
+      "layer": "governance_data",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "refresh_policy": "sprint_lifecycle",
+      "source_hash": "4435e41704b680f5bdb1ffde053171e33bc2f081a566e6c424cb78bf1dcc7ffa",
+      "size_bytes": 3607,
       "primary_evidence": false,
       "curriculum_authority": false,
       "allowed_downstream_uses": [
@@ -10005,7 +10081,7 @@
       "title": "Reference Team Roadmap",
       "source_type": "roadmap",
       "authority_level": "planning",
-      "source_version": "sha256:082c7e8ac053c283230f810c884a7947a6ab9debb3ebbae266f1cdc9403c640a",
+      "source_version": "sha256:db6a3314c64ceb83539c2763cc72cd1a4c41c2297bb98817c83d8642d8e2f54d",
       "status": "planning",
       "owner": "references_team",
       "citation_policy": "citation_requires_review",
@@ -10014,8 +10090,8 @@
       "generated_status": "manual_source",
       "edit_policy": "human_reviewed_edit",
       "refresh_policy": "roadmap_update",
-      "source_hash": "082c7e8ac053c283230f810c884a7947a6ab9debb3ebbae266f1cdc9403c640a",
-      "size_bytes": 219948,
+      "source_hash": "db6a3314c64ceb83539c2763cc72cd1a4c41c2297bb98817c83d8642d8e2f54d",
+      "size_bytes": 221142,
       "primary_evidence": false,
       "curriculum_authority": false,
       "allowed_downstream_uses": [

@@ -15,13 +15,14 @@
   "roadmaps": [
     {
       "roadmap_id": "references-team-roadmap",
-      "version": "v2.86-mtu-h2-solo-micro-case-review",
+      "version": "v2.87-gate-mtu-h2-pass-with-conditions",
       "title": "References Team Roadmap",
       "status": "active",
       "path": "references/reference-team-roadmap.md",
       "owner": "references_team",
       "updated_on": "2026-05-27",
       "supersedes": [
+        "docs/roadmaps/outdated/reference-team-roadmap-v2.86-mtu-h2-solo-micro-case-review.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.85-mtu-h1-operation-benchmark.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.84-game-ux2-exit-ticket-checkpoint.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.83-ex7-dry-run-cli-implementation.md",
@@ -107,7 +108,18 @@
         "knowledge/Exercise schema and quality/reference-team-roadmap Live version 28 April.md",
         "knowledge/Exercise schema and quality/roadmap-updated-repository-checked.md"
       ],
-      "notes": "Current operating roadmap after MTU-H2 prepared the Solo q1-q3 canonical micro-case review packet. Top operational next action is GATE-MTU-H2 human review; no protected reference mutation or product-use lane is authorized."
+      "notes": "Current operating roadmap after GATE-MTU-H2 closed pass_with_conditions for routing only. Top operational next action is MTU-H2A CLI-mutation planning only; no mutation execution, protected reference mutation, or product-use lane is authorized."
+    },
+    {
+      "roadmap_id": "references-team-roadmap-v2.86",
+      "version": "v2.86-mtu-h2-solo-micro-case-review",
+      "title": "References Team Roadmap before GATE-MTU-H2 closure",
+      "status": "outdated",
+      "path": "docs/roadmaps/outdated/reference-team-roadmap-v2.86-mtu-h2-solo-micro-case-review.md",
+      "owner": "references_team",
+      "updated_on": "2026-05-27",
+      "superseded_by": "references/reference-team-roadmap.md",
+      "notes": "Snapshot archived before GATE-MTU-H2 closed as pass_with_conditions for routing only and moved the top operational next action to MTU-H2A CLI-mutation planning."
     },
     {
       "roadmap_id": "references-team-roadmap-v2.85",

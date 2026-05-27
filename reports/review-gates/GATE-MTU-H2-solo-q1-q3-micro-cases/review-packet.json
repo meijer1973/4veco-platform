@@ -39,6 +39,152 @@
     "pv_machine_promotion": false,
     "student_facing_output": false
   },
+  "candidate_lane_table": [
+    {
+      "candidate_lane_id": "MTUH2-Q1-F-VERBAL-EXTERNAL-COST",
+      "exam_question": "q1",
+      "operation_from_correction_model": "recognise that diesel creates costs not borne by the direct user",
+      "proposed_route": "verbal external-cost content candidate",
+      "existing_unit_relation": "F16 support only; no full MPC/MSC requirement",
+      "risk": ["missing", "over-trigger"],
+      "recommended_destination": "H2A"
+    },
+    {
+      "candidate_lane_id": "MTUH2-Q1-F-EXTERNAL-COST-EXAMPLE",
+      "exam_question": "q1",
+      "operation_from_correction_model": "give a context-specific example and explain why it is social or external",
+      "proposed_route": "explanation-with-example content candidate",
+      "existing_unit_relation": "F16 support only; no welfare-loss requirement",
+      "risk": ["missing", "answer-form-adjacent"],
+      "recommended_destination": "H2A"
+    },
+    {
+      "candidate_lane_id": "MTUH2-Q1-A-LEG-UIT-WITH-EXAMPLE",
+      "exam_question": "q1",
+      "operation_from_correction_model": "answer leg-uit-met-voorbeeld with example plus mechanism",
+      "proposed_route": "answer-form candidate",
+      "existing_unit_relation": "no live unit relation yet",
+      "risk": ["answer-form"],
+      "recommended_destination": "H4"
+    },
+    {
+      "candidate_lane_id": "MTUH2-Q2-A-TO-POINT-CALCULATION",
+      "exam_question": "q2",
+      "operation_from_correction_model": "calculate TO = P x Q from one price and one quantity",
+      "proposed_route": "calculation-operation candidate",
+      "existing_unit_relation": "A21 support only",
+      "risk": ["missing", "over-trigger"],
+      "recommended_destination": "H2A"
+    },
+    {
+      "candidate_lane_id": "MTUH2-Q2-A-TVK-CONSTANT-VARIABLE-COST",
+      "exam_question": "q2",
+      "operation_from_correction_model": "calculate TVK = v x Q from constant variable cost",
+      "proposed_route": "calculation-operation candidate",
+      "existing_unit_relation": "D02 not primary",
+      "risk": ["missing"],
+      "recommended_destination": "H2A"
+    },
+    {
+      "candidate_lane_id": "MTUH2-Q2-A-UNKNOWN-FIXED-COST-FROM-PROFIT",
+      "exam_question": "q2",
+      "operation_from_correction_model": "solve W = TO - (TVK + TCK) for TCK",
+      "proposed_route": "calculation-operation candidate",
+      "existing_unit_relation": "A21 formula support only",
+      "risk": ["missing"],
+      "recommended_destination": "H2A"
+    },
+    {
+      "candidate_lane_id": "MTUH2-Q2-A-SCALE-FACTOR-UNIT-HANDLING",
+      "exam_question": "q2",
+      "operation_from_correction_model": "apply exam scale in final amount",
+      "proposed_route": "calculation-reliability candidate",
+      "existing_unit_relation": "no live unit relation yet",
+      "risk": ["missing", "misconception"],
+      "recommended_destination": "H2A"
+    },
+    {
+      "candidate_lane_id": "MTUH2-Q2-A-BEREKEN-ANSWER-FORM",
+      "exam_question": "q2",
+      "operation_from_correction_model": "show formula, substitution, intermediate result, unit, conclusion",
+      "proposed_route": "answer-form candidate",
+      "existing_unit_relation": "no live unit relation yet",
+      "risk": ["answer-form"],
+      "recommended_destination": "H4"
+    },
+    {
+      "candidate_lane_id": "MTUH2-Q3-A-GO-AS-MONOPOLY-PRICE-RELATION",
+      "exam_question": "q3",
+      "operation_from_correction_model": "recognise GO/P(Q) as monopolist price relation",
+      "proposed_route": "calculation-operation candidate",
+      "existing_unit_relation": "A20 support only",
+      "risk": ["missing"],
+      "recommended_destination": "H2A"
+    },
+    {
+      "candidate_lane_id": "MTUH2-Q3-A-MO-WITHOUT-DERIVATIVES",
+      "exam_question": "q3",
+      "operation_from_correction_model": "determine or use MO without calculus route",
+      "proposed_route": "calculation-operation candidate",
+      "existing_unit_relation": "A20 broad ancestor",
+      "risk": ["missing", "sequencing"],
+      "recommended_destination": "H2A"
+    },
+    {
+      "candidate_lane_id": "MTUH2-Q3-A-MO-WITH-DERIVATIVE",
+      "exam_question": "q3",
+      "operation_from_correction_model": "derive MO by differentiating TO as later formal route",
+      "proposed_route": "calculation-operation candidate",
+      "existing_unit_relation": "A20 broad ancestor",
+      "risk": ["sequencing"],
+      "recommended_destination": "H2A"
+    },
+    {
+      "candidate_lane_id": "MTUH2-Q3-A-MO-EQUALS-GIVEN-MK",
+      "exam_question": "q3",
+      "operation_from_correction_model": "solve MO = MK where MK is already given",
+      "proposed_route": "calculation-operation candidate",
+      "existing_unit_relation": "A20 too broad",
+      "risk": ["missing", "over-trigger"],
+      "recommended_destination": "H2A"
+    },
+    {
+      "candidate_lane_id": "MTUH2-Q3-A-MO-EQUALS-DERIVED-MK",
+      "exam_question": "q3",
+      "operation_from_correction_model": "separate cases where MK must be derived first",
+      "proposed_route": "split/supplement candidate",
+      "existing_unit_relation": "A20 too broad",
+      "risk": ["over-trigger guardrail"],
+      "recommended_destination": "H2A"
+    },
+    {
+      "candidate_lane_id": "MTUH2-Q3-A-NEW-MONOPOLY-PRICE-AFTER-Q",
+      "exam_question": "q3",
+      "operation_from_correction_model": "substitute Q* into GO/P(Q) to find new price",
+      "proposed_route": "calculation-operation candidate",
+      "existing_unit_relation": "A20 support only",
+      "risk": ["missing"],
+      "recommended_destination": "H2A"
+    },
+    {
+      "candidate_lane_id": "MTUH2-Q3-A-PERCENTAGE-PRICE-CHANGE-AFTER-COST-CHANGE",
+      "exam_question": "q3",
+      "operation_from_correction_model": "calculate price percentage change with correct denominator",
+      "proposed_route": "calculation-operation candidate",
+      "existing_unit_relation": "A38 partial; D07 dependency",
+      "risk": ["missing", "misconception"],
+      "recommended_destination": "H2A with H3 dependency"
+    },
+    {
+      "candidate_lane_id": "MTUH2-Q3-D07-PASS-THROUGH-DEPENDENCY",
+      "exam_question": "q3",
+      "operation_from_correction_model": "keep price-change versus pass-through distinction visible",
+      "proposed_route": "incidence dependency",
+      "existing_unit_relation": "D07 too narrow",
+      "risk": ["misconception"],
+      "recommended_destination": "H3"
+    }
+  ],
   "calibration_questions": [
     {
       "id": "calibration-1",

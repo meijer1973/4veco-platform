@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-MTU-H2",
+  "status": "pass_with_conditions_routing_only",
+  "date": "2026-05-27",
+  "mode": "batch human review response after full question list was shown",
+  "closure_confirmed_by_human": true,
+  "overall_decision": "PASS WITH CONDITIONS - routing only",
+  "calibration_answers": [
+    {
+      "id": "calibration-1",
+      "answer": "yes",
+      "decision": "This gate reviews Solo q1-q3 candidate routing only and does not authorize protected reference mutation, machine-reference mutation, unit minting, candidate writes, lesson output, or student/product use."
+    },
+    {
+      "id": "calibration-2",
+      "answer": "yes",
+      "decision": "Candidate lane IDs are review IDs, not live unit IDs; any later registry change must use a separately authorized CLI-governed mutation lane."
+    }
+  ],
+  "answers": [
+    {
+      "question_id": "MTUH2-Q1",
+      "answer": "Approve both q1 content candidates for later mutation planning; decide later whether one combined unit or two units.",
+      "decision": "Route q1 verbal external-cost recognition and explanation with example to MTU-H2A planning."
+    },
+    {
+      "question_id": "MTUH2-Q2",
+      "answer": "Defer to MTU-H4 while keeping q1's answer-form need visible.",
+      "decision": "Defer q1 leg-uit-with-example answer form to MTU-H4."
+    },
+    {
+      "question_id": "MTUH2-Q3",
+      "answer": "Route all three as distinct calculation-operation candidates.",
+      "decision": "Route pointwise TO, TVK from constant variable cost, and unknown fixed costs from profit to MTU-H2A planning as distinct candidates."
+    },
+    {
+      "question_id": "MTUH2-Q4",
+      "answer": "Route scale-factor handling as an H2 calculation-reliability candidate and defer bereken answer form to MTU-H4.",
+      "decision": "Route scale-factor handling to MTU-H2A planning and defer bereken answer form to MTU-H4."
+    },
+    {
+      "question_id": "MTUH2-Q5",
+      "answer": "Approve the q3 MO split/supplement route for later mutation planning.",
+      "decision": "Route non-calculus MO, derivative MO, MO = given MK, and MO = derived MK distinction to MTU-H2A planning."
+    },
+    {
+      "question_id": "MTUH2-Q6",
+      "answer": "Route both q3 price candidates as H2 candidates while sending broader pass-through/incidence family work to MTU-H3.",
+      "decision": "Route q3 new-price-after-Q* and percentage-price-change-after-cost-change to MTU-H2A planning; route broader incidence/pass-through to MTU-H3."
+    },
+    {
+      "question_id": "MTUH2-Q7",
+      "answer": "Keep guardrails binding with one wording refinement.",
+      "decision": "Use refined guardrail: F16 may support q1, but q1 must not require full MPC/MSC machinery."
+    },
+    {
+      "question_id": "MTUH2-Q8",
+      "answer": "Authorize only a later bounded CLI-mutation planning sprint for reviewed H2 lanes; no mutation execution yet.",
+      "decision": "Authorize MTU-H2A planning-only."
+    },
+    {
+      "question_id": "MTUH2-Q9",
+      "answer": "No mutation or product authority now.",
+      "decision": "No protected reference mutation, external-source mutation, machine-reference mutation, unit minting, operation-registry mutation, answer-skill mutation, candidate writes, lesson-output mutation, CP-6/Year-1 closure, diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student/product use is authorized."
+    }
+  ],
+  "allowed_next_sprint": "MTU-H2A",
+  "allowed_next_sprint_scope": "CLI-mutation planning only",
+  "mutation_execution_authorized": false,
+  "student_product_use_authorized": false
+}

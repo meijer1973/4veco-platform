@@ -7,6 +7,10 @@ const CASES_PATH = path.join(ROOT, 'reports', 'mtu-hardening', 'solo-q1-q3-canon
 const CASES_MD_PATH = path.join(ROOT, 'reports', 'mtu-hardening', 'solo-q1-q3-canonical-cases.md');
 const PACKET_PATH = path.join(ROOT, 'reports', 'review-gates', 'GATE-MTU-H2-solo-q1-q3-micro-cases', 'review-packet.md');
 const PACKET_JSON_PATH = path.join(ROOT, 'reports', 'review-gates', 'GATE-MTU-H2-solo-q1-q3-micro-cases', 'review-packet.json');
+const HUMAN_INTERVIEW_PATH = path.join(ROOT, 'reports', 'review-gates', 'GATE-MTU-H2-solo-q1-q3-micro-cases', 'human-interview.md');
+const HUMAN_INTERVIEW_JSON_PATH = path.join(ROOT, 'reports', 'review-gates', 'GATE-MTU-H2-solo-q1-q3-micro-cases', 'human-interview.json');
+const GATE_CLOSURE_PATH = path.join(ROOT, 'reports', 'review-gates', 'GATE-MTU-H2-solo-q1-q3-micro-cases', 'gate-closure.md');
+const GATE_CLOSURE_JSON_PATH = path.join(ROOT, 'reports', 'review-gates', 'GATE-MTU-H2-solo-q1-q3-micro-cases', 'gate-closure.json');
 const ROADMAP_PATH = path.join(ROOT, 'references', 'reference-team-roadmap.md');
 
 function fail(message) {
@@ -49,6 +53,10 @@ const cases = readJson(CASES_PATH);
 const casesMarkdown = readText(CASES_MD_PATH);
 const packet = readText(PACKET_PATH);
 const packetJson = readJson(PACKET_JSON_PATH);
+const humanInterview = readText(HUMAN_INTERVIEW_PATH);
+const humanInterviewJson = readJson(HUMAN_INTERVIEW_JSON_PATH);
+const gateClosure = readText(GATE_CLOSURE_PATH);
+const gateClosureJson = readJson(GATE_CLOSURE_JSON_PATH);
 const roadmap = readText(ROADMAP_PATH);
 
 if (cases.schema_version !== 1) fail('cases schema_version must be 1');
@@ -124,6 +132,7 @@ requireIncludes(
     'MTUH2-Q2-A-UNKNOWN-FIXED-COST-FROM-PROFIT',
     'MTUH2-Q2-A-SCALE-FACTOR-UNIT-HANDLING',
     'MTUH2-Q2-A-BEREKEN-ANSWER-FORM',
+    'MTUH2-Q3-A-GO-AS-MONOPOLY-PRICE-RELATION',
     'MTUH2-Q3-A-MO-WITHOUT-DERIVATIVES',
     'MTUH2-Q3-A-MO-WITH-DERIVATIVE',
     'MTUH2-Q3-A-MO-EQUALS-GIVEN-MK',
@@ -145,6 +154,7 @@ for (const requiredText of [
 }
 
 for (const requiredText of [
+  'Candidate Lane Table',
   'Calibration Questions',
   'Full Planned Review Questions',
   'MTUH2-Q1',
@@ -156,6 +166,29 @@ for (const requiredText of [
 }
 
 if (packetJson.gate_id !== 'GATE-MTU-H2') fail('review packet JSON gate_id must be GATE-MTU-H2');
+const candidateLaneTable = requireArray(packetJson, 'candidate_lane_table', 'review packet JSON', 16);
+requireIncludes(
+  candidateLaneTable.map((item) => item.candidate_lane_id),
+  [
+    'MTUH2-Q1-F-VERBAL-EXTERNAL-COST',
+    'MTUH2-Q1-F-EXTERNAL-COST-EXAMPLE',
+    'MTUH2-Q1-A-LEG-UIT-WITH-EXAMPLE',
+    'MTUH2-Q2-A-TO-POINT-CALCULATION',
+    'MTUH2-Q2-A-TVK-CONSTANT-VARIABLE-COST',
+    'MTUH2-Q2-A-UNKNOWN-FIXED-COST-FROM-PROFIT',
+    'MTUH2-Q2-A-SCALE-FACTOR-UNIT-HANDLING',
+    'MTUH2-Q2-A-BEREKEN-ANSWER-FORM',
+    'MTUH2-Q3-A-GO-AS-MONOPOLY-PRICE-RELATION',
+    'MTUH2-Q3-A-MO-WITHOUT-DERIVATIVES',
+    'MTUH2-Q3-A-MO-WITH-DERIVATIVE',
+    'MTUH2-Q3-A-MO-EQUALS-GIVEN-MK',
+    'MTUH2-Q3-A-MO-EQUALS-DERIVED-MK',
+    'MTUH2-Q3-A-NEW-MONOPOLY-PRICE-AFTER-Q',
+    'MTUH2-Q3-A-PERCENTAGE-PRICE-CHANGE-AFTER-COST-CHANGE',
+    'MTUH2-Q3-D07-PASS-THROUGH-DEPENDENCY',
+  ],
+  'review packet candidate_lane_table.candidate_lane_id'
+);
 requireArray(packetJson, 'calibration_questions', 'review packet JSON', 2);
 requireArray(packetJson, 'planned_questions', 'review packet JSON', 9);
 requireArray(packetJson, 'stop_conditions', 'review packet JSON', 6);
@@ -184,11 +217,72 @@ for (const key of [
   requireFalse(packetJson.product_boundaries, key, 'review_packet.product_boundaries');
 }
 
+for (const requiredText of [
+  'PASS WITH CONDITIONS',
+  'routing only',
+  'MTU-H2A',
+  'No mutation execution',
+]) {
+  if (!humanInterview.includes(requiredText)) fail(`human interview Markdown must include "${requiredText}"`);
+}
+
+if (humanInterviewJson.gate_id !== 'GATE-MTU-H2') fail('human interview JSON gate_id must be GATE-MTU-H2');
+if (humanInterviewJson.status !== 'pass_with_conditions_routing_only') {
+  fail('human interview JSON status must be pass_with_conditions_routing_only');
+}
+if (humanInterviewJson.closure_confirmed_by_human !== true) {
+  fail('human interview JSON must record closure_confirmed_by_human true');
+}
+if (humanInterviewJson.allowed_next_sprint !== 'MTU-H2A') {
+  fail('human interview JSON allowed_next_sprint must be MTU-H2A');
+}
+requireFalse(humanInterviewJson, 'mutation_execution_authorized', 'human_interview');
+requireFalse(humanInterviewJson, 'student_product_use_authorized', 'human_interview');
+
+for (const requiredText of [
+  'PASS WITH CONDITIONS',
+  'routing only',
+  'MTU-H2A',
+  'No protected reference mutation',
+]) {
+  if (!gateClosure.includes(requiredText)) fail(`gate closure Markdown must include "${requiredText}"`);
+}
+
+if (gateClosureJson.gate_id !== 'GATE-MTU-H2') fail('gate closure JSON gate_id must be GATE-MTU-H2');
+if (gateClosureJson.status !== 'pass_with_conditions') {
+  fail('gate closure JSON status must be pass_with_conditions');
+}
+if (gateClosureJson.decision_scope !== 'routing_only') {
+  fail('gate closure JSON decision_scope must be routing_only');
+}
+if (gateClosureJson.closure_confirmed_by_human !== true) {
+  fail('gate closure JSON must record closure_confirmed_by_human true');
+}
+if (gateClosureJson.allowed_next_sprint !== 'MTU-H2A') {
+  fail('gate closure JSON allowed_next_sprint must be MTU-H2A');
+}
+requireFalse(gateClosureJson, 'mutation_execution_authorized', 'gate_closure');
+requireFalse(gateClosureJson, 'candidate_storage_authorized', 'gate_closure');
+requireFalse(gateClosureJson, 'candidate_writes_authorized', 'gate_closure');
+requireFalse(gateClosureJson, 'student_product_use_authorized', 'gate_closure');
+requireArray(gateClosureJson, 'approved_for_later_planning', 'gate closure JSON', 10);
+requireArray(gateClosureJson, 'deferred_but_visible', 'gate closure JSON', 3);
+requireArray(gateClosureJson, 'blocked_outcomes', 'gate closure JSON', 10);
+
 const sprintLedgerMatch = roadmap.match(/\| Sprint \| Name \| Completed \| Current State \|\s*\n\|[-|]+\|\s*\n(\|[^\n]+\|)/);
 if (!sprintLedgerMatch) fail('could not find first Sprint Ledger row in roadmap');
 const firstRow = sprintLedgerMatch[1];
-if (!/\| (MTU-H2|GATE-MTU-H2) \|/.test(firstRow)) {
-  fail('first Sprint Ledger row must be MTU-H2 while active or GATE-MTU-H2 after closure');
+if (!/\| MTU-H2A \|/.test(firstRow)) {
+  fail('first Sprint Ledger row must be MTU-H2A after GATE-MTU-H2 closure');
+}
+if (!firstRow.includes('ACTIVE OPERATIONAL NEXT ACTION')) {
+  fail('MTU-H2A first row must state ACTIVE OPERATIONAL NEXT ACTION');
+}
+if (!firstRow.includes('planning-only')) {
+  fail('MTU-H2A first row must state planning-only authority');
+}
+if (!roadmap.includes('| GATE-MTU-H2 | Solo q1-q3 Micro-Case Human Review | yes | Closed as `pass_with_conditions` for routing only.')) {
+  fail('roadmap Closed Sprints must include GATE-MTU-H2 closure row');
 }
 
 console.log('OK MTU-H2 solo cases: reports/mtu-hardening/solo-q1-q3-canonical-cases.json');

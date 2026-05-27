@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-27T12:12:53.156Z",
+  "generatedAt": "2026-05-27T12:32:21.906Z",
   "internalOnly": true,
   "teams": [
     {
@@ -160,13 +160,13 @@
           "generated": "2026-04-23",
           "updated": "",
           "scope": "`references/`, `build-scripts/references/`, `build-scripts/reports/`, reference dashboards, and generated reference reports under `reports/`",
-          "summary": "References Team Roadmap Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Last strategic update: 2026-05-27 Roadmap ID: references-team-roadmap Roadmap version: v2.86-mtu-h2-solo-micro-case-review Roadmap status: active Version index: docs/roadmaps/roadmap-version-index.json Scope: references/, build-scripts/references/, build-scripts/reports/, reference dashboards, and generated reference reports under reports/ Exam Ingestion North Star The long-term reference-platform goal is that a new official CvTE econom...",
+          "summary": "References Team Roadmap Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Last strategic update: 2026-05-27 Roadmap ID: references-team-roadmap Roadmap version: v2.87-gate-mtu-h2-pass-with-conditions Roadmap status: active Version index: docs/roadmaps/roadmap-version-index.json Scope: references/, build-scripts/references/, build-scripts/reports/, reference dashboards, and generated reference reports under reports/ Exam Ingestion North Star The long-term reference-platform goal is that a new official CvTE eco...",
           "sprints": [
             {
-              "sprint": "GATE-MTU-H2",
-              "name": "Solo q1-q3 Micro-Case Human Review",
+              "sprint": "MTU-H2A",
+              "name": "Solo q1-q3 CLI-Mutation Planning",
               "completed": "no",
-              "currentState": "**ACTIVE OPERATIONAL NEXT ACTION.** Run the formal human review for the MTU-H2 Solo q1-q3 canonical micro-case package before any mutation planning or CLI execution. Evidence: `reports/mtu-hardening/solo-q1-q3-canonical-cases.*` and `reports/review-gates/GATE-MTU-H2-solo-q1-q3-micro-cases/review-packet.*`. The gate may decide which q1/q2/q3 candidate lanes move to later bounded CLI-mutation planning, but it does not itself authorize hand edits to `references/machine/` or `references/external/`, unit minting, candidate writes, lesson-output mutation, CP-6/Year-1 closure, diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student-facing output.",
+              "currentState": "**ACTIVE OPERATIONAL NEXT ACTION.** Prepare a bounded planning packet for the GATE-MTU-H2-approved Solo q1-q3 lanes only. The plan must name exact live unit IDs or proposed new unit IDs, schema-valid CLI specs, proposed `unit-add` / `unit-update` / `unit-add-dep` / split-or-supplement command sequences, rollback and audit-log evidence, validation commands, and proof required before any execution gate. H2A is planning-only unless a later gate explicitly authorizes exact CLI execution; it must not hand-edit `references/machine/` or `references/external/`, mint units, write candidates, mutate lesson output, close CP-6/Year-1, authorize diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or authorize student-facing output.",
               "exitGate": ""
             },
             {
@@ -254,10 +254,17 @@
               "exitGate": ""
             },
             {
+              "sprint": "GATE-MTU-H2",
+              "name": "Solo q1-q3 Micro-Case Human Review",
+              "completed": "yes",
+              "currentState": "Closed as `pass_with_conditions` for routing only. Accepted the reviewed Solo q1-q3 candidate lanes for later bounded MTU-H2A CLI-mutation planning: q1 verbal external-cost recognition and explanation-with-example lanes; q2 pointwise TO, TVK from constant variable cost, unknown fixed costs from profit, and scale-factor handling lanes; q3 MO route split/supplement lanes and price-change lanes. Deferred q1 `leg uit met voorbeeld` and q2 `bereken` answer-form needs to MTU-H4 while keeping them visible, and routed broader D07/pass-through/incidence work to MTU-H3. Conditions preserve the guardrails: q1 must not require full MPC/MSC machinery, q2 must not require full TO-function construction, and q3 must not require MK derivation when MK is given or a calculus-only MO route. GATE-MTU-H2 authorized no mutation execution, protected/external/machine reference mutation, unit minting, candidate writes, lesson-output mutation, CP-6/Year-1 closure, diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student/product use.",
+              "exitGate": ""
+            },
+            {
               "sprint": "MTU-H2",
               "name": "Solo q1-q3 Canonical Micro-Case Review",
               "completed": "yes",
-              "currentState": "Completed as a non-mutating review-packet sprint. Added `reports/mtu-hardening/solo-q1-q3-canonical-cases.json`, `solo-q1-q3-canonical-cases.md`, `reports/review-gates/GATE-MTU-H2-solo-q1-q3-micro-cases/review-packet.*`, and `build-scripts/references/check-mtu-h2-solo-cases.js`. The package makes q1 verbal external-cost candidates, q2 reverse fixed-cost calculation candidates, q3 granular MO/MK and price-change candidates, existing-unit guardrails, MTU-H3 incidence dependencies, and MTU-H4 answer-form dependencies reviewable without mutating the live registry. MTU-H2 did not mutate `references/machine/` or `references/external/`, mint units, create candidate storage, write operation/answer-skill candidates, mutate lesson output, close CP-6/Year-1, or authorize diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student-facing output. Top operational next action is `GATE-MTU-H2`.",
+              "currentState": "Completed as a non-mutating review-packet sprint. Added `reports/mtu-hardening/solo-q1-q3-canonical-cases.json`, `solo-q1-q3-canonical-cases.md`, `reports/review-gates/GATE-MTU-H2-solo-q1-q3-micro-cases/review-packet.*`, and `build-scripts/references/check-mtu-h2-solo-cases.js`. The package makes q1 verbal external-cost candidates, q2 reverse fixed-cost calculation candidates, q3 granular MO/MK and price-change candidates, existing-unit guardrails, MTU-H3 incidence dependencies, and MTU-H4 answer-form dependencies reviewable without mutating the live registry. MTU-H2 did not mutate `references/machine/` or `references/external/`, mint units, create candidate storage, write operation/answer-skill candidates, mutate lesson output, close CP-6/Year-1, or authorize diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student-facing output. GATE-MTU-H2 has since closed and the top operational next action is `MTU-H2A`.",
               "exitGate": ""
             },
             {
@@ -923,10 +930,10 @@
       ],
       "sprints": [
         {
-          "sprint": "GATE-MTU-H2",
-          "name": "Solo q1-q3 Micro-Case Human Review",
+          "sprint": "MTU-H2A",
+          "name": "Solo q1-q3 CLI-Mutation Planning",
           "completed": "no",
-          "currentState": "**ACTIVE OPERATIONAL NEXT ACTION.** Run the formal human review for the MTU-H2 Solo q1-q3 canonical micro-case package before any mutation planning or CLI execution. Evidence: `reports/mtu-hardening/solo-q1-q3-canonical-cases.*` and `reports/review-gates/GATE-MTU-H2-solo-q1-q3-micro-cases/review-packet.*`. The gate may decide which q1/q2/q3 candidate lanes move to later bounded CLI-mutation planning, but it does not itself authorize hand edits to `references/machine/` or `references/external/`, unit minting, candidate writes, lesson-output mutation, CP-6/Year-1 closure, diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student-facing output.",
+          "currentState": "**ACTIVE OPERATIONAL NEXT ACTION.** Prepare a bounded planning packet for the GATE-MTU-H2-approved Solo q1-q3 lanes only. The plan must name exact live unit IDs or proposed new unit IDs, schema-valid CLI specs, proposed `unit-add` / `unit-update` / `unit-add-dep` / split-or-supplement command sequences, rollback and audit-log evidence, validation commands, and proof required before any execution gate. H2A is planning-only unless a later gate explicitly authorizes exact CLI execution; it must not hand-edit `references/machine/` or `references/external/`, mint units, write candidates, mutate lesson output, close CP-6/Year-1, authorize diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or authorize student-facing output.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -1027,10 +1034,18 @@
           "roadmap": "References roadmap"
         },
         {
+          "sprint": "GATE-MTU-H2",
+          "name": "Solo q1-q3 Micro-Case Human Review",
+          "completed": "yes",
+          "currentState": "Closed as `pass_with_conditions` for routing only. Accepted the reviewed Solo q1-q3 candidate lanes for later bounded MTU-H2A CLI-mutation planning: q1 verbal external-cost recognition and explanation-with-example lanes; q2 pointwise TO, TVK from constant variable cost, unknown fixed costs from profit, and scale-factor handling lanes; q3 MO route split/supplement lanes and price-change lanes. Deferred q1 `leg uit met voorbeeld` and q2 `bereken` answer-form needs to MTU-H4 while keeping them visible, and routed broader D07/pass-through/incidence work to MTU-H3. Conditions preserve the guardrails: q1 must not require full MPC/MSC machinery, q2 must not require full TO-function construction, and q3 must not require MK derivation when MK is given or a calculus-only MO route. GATE-MTU-H2 authorized no mutation execution, protected/external/machine reference mutation, unit minting, candidate writes, lesson-output mutation, CP-6/Year-1 closure, diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student/product use.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
           "sprint": "MTU-H2",
           "name": "Solo q1-q3 Canonical Micro-Case Review",
           "completed": "yes",
-          "currentState": "Completed as a non-mutating review-packet sprint. Added `reports/mtu-hardening/solo-q1-q3-canonical-cases.json`, `solo-q1-q3-canonical-cases.md`, `reports/review-gates/GATE-MTU-H2-solo-q1-q3-micro-cases/review-packet.*`, and `build-scripts/references/check-mtu-h2-solo-cases.js`. The package makes q1 verbal external-cost candidates, q2 reverse fixed-cost calculation candidates, q3 granular MO/MK and price-change candidates, existing-unit guardrails, MTU-H3 incidence dependencies, and MTU-H4 answer-form dependencies reviewable without mutating the live registry. MTU-H2 did not mutate `references/machine/` or `references/external/`, mint units, create candidate storage, write operation/answer-skill candidates, mutate lesson output, close CP-6/Year-1, or authorize diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student-facing output. Top operational next action is `GATE-MTU-H2`.",
+          "currentState": "Completed as a non-mutating review-packet sprint. Added `reports/mtu-hardening/solo-q1-q3-canonical-cases.json`, `solo-q1-q3-canonical-cases.md`, `reports/review-gates/GATE-MTU-H2-solo-q1-q3-micro-cases/review-packet.*`, and `build-scripts/references/check-mtu-h2-solo-cases.js`. The package makes q1 verbal external-cost candidates, q2 reverse fixed-cost calculation candidates, q3 granular MO/MK and price-change candidates, existing-unit guardrails, MTU-H3 incidence dependencies, and MTU-H4 answer-form dependencies reviewable without mutating the live registry. MTU-H2 did not mutate `references/machine/` or `references/external/`, mint units, create candidate storage, write operation/answer-skill candidates, mutate lesson output, close CP-6/Year-1, or authorize diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student-facing output. GATE-MTU-H2 has since closed and the top operational next action is `MTU-H2A`.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -1787,7 +1802,7 @@
           "roadmap": "References roadmap"
         }
       ],
-      "completedCount": 95,
+      "completedCount": 96,
       "openCount": 13
     },
     {

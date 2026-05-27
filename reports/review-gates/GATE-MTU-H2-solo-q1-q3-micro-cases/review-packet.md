@@ -29,6 +29,27 @@ Evidence base:
 - `references/machine/micro-teaching-units.md` as read-only context
 - `references/reference-team-roadmap.md`
 
+## Candidate Lane Table
+
+| Candidate lane ID | Exam question | Operation from correction model | Proposed route | Existing unit relation | Risk | Recommended destination |
+|---|---|---|---|---|---|---|
+| `MTUH2-Q1-F-VERBAL-EXTERNAL-COST` | q1 | recognise that diesel creates costs not borne by the direct user | verbal external-cost content candidate | `F16` support only; no full MPC/MSC requirement | missing / over-trigger | H2A |
+| `MTUH2-Q1-F-EXTERNAL-COST-EXAMPLE` | q1 | give a context-specific example and explain why it is social/external | explanation-with-example content candidate | `F16` support only; no welfare-loss requirement | missing / answer-form-adjacent | H2A |
+| `MTUH2-Q1-A-LEG-UIT-WITH-EXAMPLE` | q1 | answer "leg uit ... met voorbeeld" with example plus mechanism | answer-form candidate | no live unit relation yet | answer-form | H4 |
+| `MTUH2-Q2-A-TO-POINT-CALCULATION` | q2 | calculate `TO = P x Q` from one price and one quantity | calculation-operation candidate | `A21` support only | missing / over-trigger | H2A |
+| `MTUH2-Q2-A-TVK-CONSTANT-VARIABLE-COST` | q2 | calculate `TVK = v x Q` from constant variable cost | calculation-operation candidate | `D02` not primary | missing | H2A |
+| `MTUH2-Q2-A-UNKNOWN-FIXED-COST-FROM-PROFIT` | q2 | solve `W = TO - (TVK + TCK)` for `TCK` | calculation-operation candidate | `A21` formula support only | missing | H2A |
+| `MTUH2-Q2-A-SCALE-FACTOR-UNIT-HANDLING` | q2 | apply `(x 1.000)` or comparable exam scale in final amount | calculation-reliability candidate | no live unit relation yet | missing / misconception | H2A |
+| `MTUH2-Q2-A-BEREKEN-ANSWER-FORM` | q2 | show formula, substitution, intermediate result, unit, conclusion | answer-form candidate | no live unit relation yet | answer-form | H4 |
+| `MTUH2-Q3-A-GO-AS-MONOPOLY-PRICE-RELATION` | q3 | recognise GO/P(Q) as monopolist price relation | calculation-operation candidate | `A20` support only | missing | H2A |
+| `MTUH2-Q3-A-MO-WITHOUT-DERIVATIVES` | q3 | determine/use MO without calculus route | calculation-operation candidate | `A20` broad ancestor | missing / sequencing | H2A |
+| `MTUH2-Q3-A-MO-WITH-DERIVATIVE` | q3 | derive MO by differentiating TO as later formal route | calculation-operation candidate | `A20` broad ancestor | sequencing | H2A |
+| `MTUH2-Q3-A-MO-EQUALS-GIVEN-MK` | q3 | solve `MO = MK` where MK is already given | calculation-operation candidate | `A20` too broad | missing / over-trigger | H2A |
+| `MTUH2-Q3-A-MO-EQUALS-DERIVED-MK` | q3 | solve `MO = MK` when MK must be derived first | split/supplement candidate | `A20` too broad | over-trigger guardrail | H2A |
+| `MTUH2-Q3-A-NEW-MONOPOLY-PRICE-AFTER-Q` | q3 | substitute Q* into GO/P(Q) to find new price | calculation-operation candidate | `A20` support only | missing | H2A |
+| `MTUH2-Q3-A-PERCENTAGE-PRICE-CHANGE-AFTER-COST-CHANGE` | q3 | calculate price percentage change with correct denominator | calculation-operation candidate | `A38` partial; `D07` dependency | missing / misconception | H2A, with H3 dependency |
+| `MTUH2-Q3-D07-PASS-THROUGH-DEPENDENCY` | q3 | keep price-change versus pass-through distinction visible | incidence dependency | `D07` too narrow | misconception | H3 |
+
 ## Calibration Questions
 
 Before taking binding answers, confirm:

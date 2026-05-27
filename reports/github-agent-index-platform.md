@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-05-27T12:12:53.193Z
+Generated: 2026-05-27T12:32:21.956Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 1819
+Files indexed: 1832
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -117,7 +117,7 @@ Count: 71
 
 ## build scripts
 
-Count: 301
+Count: 302
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -275,6 +275,7 @@ Count: 301
 - build-scripts/references/check-exercise-overlay-conditions.js
 - build-scripts/references/check-exercise-overlays.js
 - build-scripts/references/check-misconceptions.js
+- build-scripts/references/check-mtu-h2-solo-cases.js
 - build-scripts/references/check-mtu-hardening-benchmark.js
 - build-scripts/references/check-operation-answer-skill-candidates.js
 - build-scripts/references/check-owned-content-graph.js
@@ -470,7 +471,7 @@ Count: 42
 
 ## validators
 
-Count: 109
+Count: 110
 
 - build-scripts/rag/validate-chunks.js
 - build-scripts/rag/validate-query-output.js
@@ -491,6 +492,7 @@ Count: 109
 - build-scripts/references/check-exercise-overlay-conditions.js
 - build-scripts/references/check-exercise-overlays.js
 - build-scripts/references/check-misconceptions.js
+- build-scripts/references/check-mtu-h2-solo-cases.js
 - build-scripts/references/check-mtu-hardening-benchmark.js
 - build-scripts/references/check-operation-answer-skill-candidates.js
 - build-scripts/references/check-owned-content-graph.js
@@ -584,7 +586,7 @@ Count: 109
 
 ## references
 
-Count: 311
+Count: 313
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -686,6 +688,8 @@ Count: 311
 - references/data/sprints/GATE-CP6.result.json
 - references/data/sprints/MTU-H1.plan.json
 - references/data/sprints/MTU-H1.result.json
+- references/data/sprints/MTU-H2.plan.json
+- references/data/sprints/MTU-H2.result.json
 - references/data/sprints/PV-G4.plan.json
 - references/data/sprints/PV.1.plan.json
 - references/data/sprints/PV.1.result.json
@@ -900,7 +904,7 @@ Count: 311
 
 ## reports
 
-Count: 848
+Count: 857
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1000,6 +1004,8 @@ Count: 848
 - reports/merge-review/R0.2-R7.5-post-merge-main.md
 - reports/mtu-hardening/benchmark-sample-v1.json
 - reports/mtu-hardening/failure-taxonomy-v1.md
+- reports/mtu-hardening/solo-q1-q3-canonical-cases.json
+- reports/mtu-hardening/solo-q1-q3-canonical-cases.md
 - reports/mtu-hardening/solo-q1-q3-operation-map.md
 - reports/needs-coverage.md
 - reports/owned-content-coverage.md
@@ -1172,6 +1178,8 @@ Count: 848
 - reports/review-gates/GATE-EX6-validator-cli-planning/human-interview.md
 - reports/review-gates/GATE-EX6-validator-cli-planning/review-packet.json
 - reports/review-gates/GATE-EX6-validator-cli-planning/review-packet.md
+- reports/review-gates/GATE-MTU-H2-solo-q1-q3-micro-cases/review-packet.json
+- reports/review-gates/GATE-MTU-H2-solo-q1-q3-micro-cases/review-packet.md
 - reports/review-gates/GATE-PV-G1-schema/bundle-urls.md
 - reports/review-gates/GATE-PV-G1-schema/review-packet.json
 - reports/review-gates/GATE-PV-G1-schema/review-packet.md
@@ -1535,6 +1543,11 @@ Count: 848
 - reports/sprints/MTU-H1-plan.md
 - reports/sprints/MTU-H1-planning-review.md
 - reports/sprints/MTU-H1-result.md
+- reports/sprints/MTU-H2-baseline.md
+- reports/sprints/MTU-H2-diff-summary.md
+- reports/sprints/MTU-H2-plan.md
+- reports/sprints/MTU-H2-planning-review.md
+- reports/sprints/MTU-H2-result.md
 - reports/sprints/PV-G4-baseline.md
 - reports/sprints/PV.1-baseline.md
 - reports/sprints/PV.1-diff-summary.md
@@ -1771,7 +1784,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 230
+Count: 231
 
 - .gitignore
 - BUILD-CHAPTER.md
@@ -1859,6 +1872,7 @@ Count: 230
 - docs/roadmaps/outdated/reference-team-roadmap-v2.82-gate-ex6-pass-with-conditions.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.83-ex7-dry-run-cli-implementation.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.84-game-ux2-exit-ticket-checkpoint.md
+- docs/roadmaps/outdated/reference-team-roadmap-v2.85-mtu-h1-operation-benchmark.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.9-rx1-inventory-prepared.md
 - docs/roadmaps/README.md
 - docs/roadmaps/roadmap-version-index.json
