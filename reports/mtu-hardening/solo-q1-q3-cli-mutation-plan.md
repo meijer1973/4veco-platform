@@ -29,6 +29,31 @@ Later review must decide whether direct CLI execution is acceptable after
 reviewing exact specs, or whether a dry-run wrapper is required before any
 write lane.
 
+## Execution-Gate Conditions Added By Human Review
+
+GATE-MTU-H2A review may close this packet only as execution-gate planning.
+Before any later CLI execution gate, the next packet must prove:
+
+- `F19`, `F20`, and `A85` through `A93` are unused in the live registry,
+  including deprecated or hidden units, and that the registry state has not
+  drifted since this packet was reviewed.
+- every new or updated unit has a schema-valid spec;
+- every proposed A-unit either includes a generator field or has explicit
+  validator proof that the downstream reports accept the planned addition;
+- every proposed term slug validates against the terminology registry;
+- all current `A20` usage is audited before narrowing `A20` to a derived-MK
+  route; if active uses rely on broad or given-MK meaning, a formal
+  split/deprecate/replacement route is required instead;
+- `A91` avoids an artificial OR-prerequisite problem: it must not depend on
+  both `A90` and `A12`; question-level operation maps may route either
+  `A90 -> A91` or `A12 -> A91`;
+- exact CLI commands, expected diff, rollback route, audit evidence, unit-index
+  validation, report generation, reference-health checks, and Jest proof are
+  named;
+- the post-execution diff proves there is no unintended lesson-output,
+  candidate-storage, `references/external/`, or unrelated protected-reference
+  mutation.
+
 ## Proposed New Unit IDs
 
 | Proposed ID | Proposed label | Source question | Route |
@@ -97,7 +122,16 @@ If a later gate authorizes execution, the execution sprint must record:
 - mutation/audit log evidence;
 - rollback instructions;
 - before/after git diff for `references/machine/micro-teaching-units.*`;
+- ID-collision proof for `F19`, `F20`, and `A85` through `A93`;
+- A-unit generator-field proof or explicit validator exception proof;
+- term-link validation proof;
+- `A20` usage impact-audit proof before updating or splitting `A20`;
+- explicit confirmation that `A91` does not require both `A90` and `A12`;
 - validation output for unit index, schemas, reports, reference health, and
   Jest;
+- proof that `A93` keeps price percentage change separate from
+  incidence/pass-through share;
+- proof that no lesson output, candidate storage, external-source mirror, or
+  unrelated protected reference changed;
 - explicit confirmation that no lesson output or student/product use was
   authorized.

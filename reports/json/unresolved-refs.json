@@ -1,7 +1,7 @@
 {
   "report_id": "unresolved-refs",
   "generated_by": "build-scripts/reports/generate-all.js",
-  "generated_on": "2026-05-27T13:05:47.907Z",
+  "generated_on": "2026-05-27T14:00:36.803Z",
   "source_files": [
     "references/machine/micro-teaching-units.json",
     "references/",
@@ -13,7 +13,7 @@
   "status": "warn",
   "summary": {
     "deprecated_units": 3,
-    "deprecated_citations": 412
+    "deprecated_citations": 415
   },
   "issues": [
     {
@@ -3702,7 +3702,7 @@
       "severity": "low",
       "affected_entity": "D04",
       "category": "deprecated_reference",
-      "evidence_path": "docs/roadmaps/outdated/reference-team-roadmap-v2.9-rx1-inventory-prepared.md",
+      "evidence_path": "docs/roadmaps/outdated/reference-team-roadmap-v2.88-mtu-h2a-cli-mutation-planning.md",
       "next_action": "Remove or migrate deprecated unit citation.",
       "proof_required_to_close": "No deprecated unit ID is cited from active docs/reports."
     },
@@ -3711,12 +3711,39 @@
       "severity": "low",
       "affected_entity": "D23",
       "category": "deprecated_reference",
-      "evidence_path": "docs/roadmaps/outdated/reference-team-roadmap-v2.9-rx1-inventory-prepared.md",
+      "evidence_path": "docs/roadmaps/outdated/reference-team-roadmap-v2.88-mtu-h2a-cli-mutation-planning.md",
       "next_action": "Remove or migrate deprecated unit citation.",
       "proof_required_to_close": "No deprecated unit ID is cited from active docs/reports."
     },
     {
       "issue_id": "unresolved-refs-0412",
+      "severity": "low",
+      "affected_entity": "H26",
+      "category": "deprecated_reference",
+      "evidence_path": "docs/roadmaps/outdated/reference-team-roadmap-v2.88-mtu-h2a-cli-mutation-planning.md",
+      "next_action": "Remove or migrate deprecated unit citation.",
+      "proof_required_to_close": "No deprecated unit ID is cited from active docs/reports."
+    },
+    {
+      "issue_id": "unresolved-refs-0413",
+      "severity": "low",
+      "affected_entity": "D04",
+      "category": "deprecated_reference",
+      "evidence_path": "docs/roadmaps/outdated/reference-team-roadmap-v2.9-rx1-inventory-prepared.md",
+      "next_action": "Remove or migrate deprecated unit citation.",
+      "proof_required_to_close": "No deprecated unit ID is cited from active docs/reports."
+    },
+    {
+      "issue_id": "unresolved-refs-0414",
+      "severity": "low",
+      "affected_entity": "D23",
+      "category": "deprecated_reference",
+      "evidence_path": "docs/roadmaps/outdated/reference-team-roadmap-v2.9-rx1-inventory-prepared.md",
+      "next_action": "Remove or migrate deprecated unit citation.",
+      "proof_required_to_close": "No deprecated unit ID is cited from active docs/reports."
+    },
+    {
+      "issue_id": "unresolved-refs-0415",
       "severity": "low",
       "affected_entity": "H26",
       "category": "deprecated_reference",

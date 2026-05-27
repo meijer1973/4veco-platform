@@ -1,7 +1,7 @@
 {
   "report_id": "unit-design-status",
   "generated_by": "build-scripts/reports/generate-all.js",
-  "generated_on": "2026-05-27T13:05:47.920Z",
+  "generated_on": "2026-05-27T14:00:36.816Z",
   "source_files": [
     "references/data/unit-design-status/unit-design-status-overlay.json"
   ],

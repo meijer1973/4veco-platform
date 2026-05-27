@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-MTU-H2A",
+  "date": "2026-05-27",
+  "status": "completed",
+  "decision": "pass_with_conditions_execution_gate_planning_only",
+  "calibration_answers": [
+    {
+      "id": "CAL-1",
+      "answer": "yes",
+      "summary": "This gate reviews exact ID and CLI-spec planning only and does not authorize mutation, lesson output, or product use."
+    },
+    {
+      "id": "CAL-2",
+      "answer": "yes",
+      "summary": "F19, F20, and A85 through A93 are planning IDs only until a later CLI execution gate explicitly authorizes them."
+    }
+  ],
+  "binding_answers": [
+    {
+      "id": "MTUH2A-Q1",
+      "decision": "approve_two_unit_q1_route_for_execution_gate_planning",
+      "summary": "Approve F19 and F20 with F16 support-only and no full MPC/MSC prerequisite."
+    },
+    {
+      "id": "MTUH2A-Q2",
+      "decision": "approve_a85_through_a88_as_separate_specs",
+      "summary": "Pointwise TO, TVK from constant variable cost, unknown fixed costs from profit, and scale-factor handling remain distinct."
+    },
+    {
+      "id": "MTUH2A-Q3",
+      "decision": "approve_q3_mo_route_with_a20_impact_audit",
+      "summary": "Approve A89/A90/A91 additions plus A12/A20 planning, but require an A20 usage impact audit before execution."
+    },
+    {
+      "id": "MTUH2A-Q4",
+      "decision": "approve_a92_and_a93_keep_incidence_in_mtu_h3",
+      "summary": "A93 must explicitly distinguish percentage price rise from the percentage of a cost shock passed on."
+    },
+    {
+      "id": "MTUH2A-Q5",
+      "decision": "dry_run_limitation_acceptable_for_planning_only",
+      "summary": "Later execution needs stricter preflight; any unit-split requires a dry-run wrapper/preflight fixture or explicit reviewed split diff."
+    },
+    {
+      "id": "MTUH2A-Q6",
+      "decision": "keep_guardrails_binding",
+      "summary": "No full MPC/MSC for q1, no full A07/A21 sufficiency for q2, no MK derivation or calculus-only MO route for q3, and D07 remains MTU-H3."
+    },
+    {
+      "id": "MTUH2A-Q7",
+      "decision": "add_execution_proof_requirements",
+      "summary": "Add ID collision proof, A20 usage audit, A-unit generator-field proof, term-link validation, and no unintended lesson/candidate/external-source diff proof."
+    },
+    {
+      "id": "MTUH2A-Q8",
+      "decision": "authorize_later_cli_execution_gate_packet_only",
+      "summary": "No execution yet."
+    },
+    {
+      "id": "MTUH2A-Q9",
+      "decision": "no_mutation_or_product_authority_now",
+      "summary": "All mutation and product boundaries remain false."
+    }
+  ],
+  "conditions": [
+    "id_collision_check",
+    "schema_valid_unit_specs",
+    "a_unit_generator_field_proof",
+    "term_link_validation",
+    "a20_usage_impact_audit",
+    "or_prerequisite_guardrail",
+    "exact_command_log_and_expected_diff",
+    "no_unintended_diff_proof"
+  ],
+  "authorized_next": "MTU-H2B bounded CLI execution gate packet only",
+  "mutation_authorized_now": false,
+  "student_product_use_authorized_now": false
+}

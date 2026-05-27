@@ -36,6 +36,56 @@
     "unit_split_has_dry_run": false,
     "planning_implication": "The later human gate must explicitly decide whether direct unit-add/update execution is acceptable after reviewing exact specs, or whether a dry-run wrapper is required before execution."
   },
+  "execution_gate_conditions": [
+    {
+      "condition_id": "id_collision_check",
+      "required_before": "any_cli_execution_gate",
+      "description": "Prove F19, F20, and A85 through A93 are unused in the live registry and that no deprecated or hidden units occupy those IDs.",
+      "proof_required": "Pre-execution registry-state evidence, including current commit/hash and an explicit unused-ID check."
+    },
+    {
+      "condition_id": "schema_valid_unit_specs",
+      "required_before": "any_cli_execution_gate",
+      "description": "Provide schema-valid specs for every new or updated unit named by this packet.",
+      "proof_required": "Validator output showing proposed specs and simulated post-plan catalog pass unit-index validation."
+    },
+    {
+      "condition_id": "a_unit_generator_field_proof",
+      "required_before": "any_cli_execution_gate",
+      "description": "Show generator fields for all proposed A-units or prove the validator and downstream reports accept the intended A-unit additions.",
+      "proof_required": "A85 through A93 include generator fields, or the execution packet explains the accepted validator exception."
+    },
+    {
+      "condition_id": "term_link_validation",
+      "required_before": "any_cli_execution_gate",
+      "description": "Validate all proposed term slugs before execution.",
+      "proof_required": "Terminology registry validation for every non-empty terms array; missing terms are either added through an authorized term CLI lane or logged as follow-up."
+    },
+    {
+      "condition_id": "a20_usage_impact_audit",
+      "required_before": "A20_update_or_split",
+      "description": "Audit all current A20 uses before narrowing A20 to the derived-MK route.",
+      "proof_required": "Classify each active A20 use as derived-MK required, given-MK required, generic/ambiguous, or stale/incorrect; use a split/deprecate/replacement plan if active broader/given-MK uses exist."
+    },
+    {
+      "condition_id": "or_prerequisite_guardrail",
+      "required_before": "A91_execution",
+      "description": "Avoid encoding an OR prerequisite as mandatory dependencies.",
+      "proof_required": "A91 must not depend on both A90 and A12; question-level operation maps may route either A90 -> A91 or A12 -> A91."
+    },
+    {
+      "condition_id": "exact_command_log_and_expected_diff",
+      "required_before": "any_cli_execution_gate",
+      "description": "Name exact CLI commands and expected file diffs before any execution.",
+      "proof_required": "Command log, expected before/after diff, rollback instructions, audit evidence, unit-index validation, report generation, reference-health checks, and Jest proof."
+    },
+    {
+      "condition_id": "no_unintended_diff_proof",
+      "required_before": "any_cli_execution_gate",
+      "description": "Prove the execution lane did not mutate external sources, candidate storage, lesson output, or unrelated files.",
+      "proof_required": "Post-execution git diff summary explicitly showing no unintended lesson-output, candidate-storage, references/external, or unrelated protected-reference diff."
+    }
+  ],
   "proposed_new_unit_ids": [
     "F19",
     "F20",
@@ -683,6 +733,7 @@
         "pitfalls": [
           "De kostenstijging als noemer gebruiken in plaats van de oude prijs.",
           "Procentuele prijsverandering verwarren met incidence of pass-through share.",
+          "De procentuele prijsstijging is niet hetzelfde als het percentage van de kostenstijging dat wordt doorberekend.",
           "De nieuwe prijs als basiswaarde gebruiken."
         ],
         "generator": "GEN_A93"

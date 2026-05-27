@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-MTU-H2A",
+  "sprint_id": "MTU-H2A",
+  "gate_directory": "reports/review-gates/GATE-MTU-H2A-cli-mutation-plan",
+  "date": "2026-05-27",
+  "closed_on": "2026-05-27",
+  "status": "pass_with_conditions",
+  "status_detail": "execution_gate_planning_only",
+  "decision": "PASS WITH CONDITIONS for CLI-execution-gate planning only",
+  "closure_confirmed_by_human": true,
+  "protected_reference_data_changed": false,
+  "human_interview": "reports/review-gates/GATE-MTU-H2A-cli-mutation-plan/human-interview.md",
+  "review_packet": "reports/review-gates/GATE-MTU-H2A-cli-mutation-plan/review-packet.md",
+  "audit": "reports/review-gates/GATE-MTU-H2A-cli-mutation-plan/bundle-urls.md",
+  "summary": "GATE-MTU-H2A accepted the exact Solo q1-q3 CLI-mutation planning route only for a later MTU-H2B execution-gate packet, with no mutation execution authorized.",
+  "accepted_outcomes": [
+    "F19 and F20 route approved for later execution-gate packet planning",
+    "A85 through A88 route approved as separate q2 calculation-operation specs",
+    "A89, A90, A91, A92, and A93 route approved for later execution-gate packet planning",
+    "A12 update route approved for later execution-gate packet planning",
+    "A20 update or split route approved only subject to A20 usage impact audit",
+    "MTU-H2B authorized as the next packet-preparation sprint only"
+  ],
+  "blocked_outcomes": [
+    "CLI execution from this gate",
+    "protected reference mutation",
+    "external-source mutation",
+    "machine-reference mutation",
+    "unit minting",
+    "unit update execution",
+    "unit split execution",
+    "candidate writes",
+    "lesson-output mutation",
+    "CP-6 closure",
+    "Year-1 closure",
+    "diagnostics",
+    "adaptive routing",
+    "mastery or sequencing",
+    "student-facing AI",
+    "summative use",
+    "PV projection",
+    "PV machine promotion",
+    "student/product use"
+  ],
+  "explicit_decisions": [
+    "q1 uses two proposed F-domain units, F19 and F20, with F16 support-only",
+    "q2 uses separate proposed calculation units A85 through A88",
+    "q3 uses A89, A90, A91, A92, and A93 plus A12 update and conditional A20 update or split",
+    "A93 must distinguish percentage price rise from the percentage of cost shock passed on",
+    "A91 must avoid requiring both A90 and A12 as mandatory dependencies",
+    "D07 broader incidence/pass-through work remains MTU-H3",
+    "q1 and q2 answer-form needs remain visible for MTU-H4"
+  ],
+  "conditions_to_reopen_or_pass": [
+    "Prove ID availability for F19, F20, and A85 through A93",
+    "Provide schema-valid specs for every new or updated unit",
+    "Include generator fields or validator proof for all new A-units",
+    "Validate all term links",
+    "Audit existing A20 usage before updating or splitting A20",
+    "Avoid OR-prerequisite over-requirement for A90/A12/A91",
+    "Provide exact command log, before/after diff, rollback instructions, audit evidence, unit-index validation, report generation, reference-health checks, Jest proof, and no unintended external/candidate/lesson-output diff proof"
+  ],
+  "accepted_for_later_execution_gate_packet": [
+    "F19",
+    "F20",
+    "A85",
+    "A86",
+    "A87",
+    "A88",
+    "A89",
+    "A90",
+    "A12_update",
+    "A91",
+    "A20_update_or_split_subject_to_a20_usage_audit",
+    "A92",
+    "A93"
+  ],
+  "conditions_before_execution": [
+    "id_collision_check",
+    "schema_valid_unit_specs",
+    "a_unit_generator_field_proof",
+    "term_link_validation",
+    "a20_usage_impact_audit",
+    "or_prerequisite_guardrail",
+    "exact_command_log_and_expected_diff",
+    "no_unintended_diff_proof"
+  ],
+  "deferred_or_routed_elsewhere": [
+    {
+      "item": "q1 Leg-uit-vraag met voorbeeld beantwoorden",
+      "route": "MTU-H4"
+    },
+    {
+      "item": "q2 Bereken-vraag beantwoorden",
+      "route": "MTU-H4"
+    },
+    {
+      "item": "broader tax/subsidy/cost-shock incidence and pass-through",
+      "route": "MTU-H3"
+    }
+  ],
+  "authority_boundary": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "unit_update_execution_authorized": false,
+    "unit_split_execution_authorized": false,
+    "candidate_writes_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "cp6_closure_authorized": false,
+    "year1_closure_authorized": false,
+    "student_product_use_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false
+  },
+  "authorized_next": {
+    "sprint_id": "MTU-H2B",
+    "name": "Solo q1-q3 CLI Execution Gate Packet",
+    "authority": "prepare exact execution-gate packet only; no CLI execution"
+  }
+}
