@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-MTU-H2A",
+  "title": "Solo q1-q3 CLI-Mutation Plan Review",
+  "status": "review_packet_ready_no_mutation",
+  "generated": "2026-05-27",
+  "review_scope": "Review exact IDs and CLI specs for a later bounded execution gate. Do not authorize mutation from this packet unless a later closure explicitly names exact commands, rollback, audit log, validation evidence, and execution authority.",
+  "evidence_base": [
+    "reports/mtu-hardening/solo-q1-q3-cli-mutation-plan.json",
+    "reports/mtu-hardening/solo-q1-q3-cli-mutation-plan.md",
+    "reports/mtu-hardening/solo-q1-q3-canonical-cases.json",
+    "reports/review-gates/GATE-MTU-H2-solo-q1-q3-micro-cases/gate-closure.json",
+    "references/machine/micro-teaching-units.json",
+    "build-scripts/references/unit-add.js",
+    "build-scripts/references/unit-update.js",
+    "references/reference-team-roadmap.md"
+  ],
+  "authority_boundary": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "unit_update_execution_authorized": false,
+    "unit_split_execution_authorized": false,
+    "candidate_writes_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "student_product_use_authorized": false
+  },
+  "product_boundaries": {
+    "diagnostics": false,
+    "adaptive_routing": false,
+    "mastery": false,
+    "sequencing": false,
+    "student_facing_ai": false,
+    "summative_use": false,
+    "pv_projection": false,
+    "pv_machine_promotion": false,
+    "student_facing_output": false
+  },
+  "calibration_questions": [
+    {
+      "id": "CAL-1",
+      "question": "This gate reviews exact ID and CLI-spec planning only and does not authorize protected reference mutation, machine-reference mutation, unit minting, unit update execution, lesson output, or student/product use.",
+      "required_answer": "yes"
+    },
+    {
+      "id": "CAL-2",
+      "question": "Proposed IDs F19, F20, and A85 through A93 are planning proposals, not live unit IDs, until a later explicitly authorized CLI execution sprint runs.",
+      "required_answer": "yes"
+    }
+  ],
+  "planned_questions": [
+    {
+      "id": "MTUH2A-Q1",
+      "topic": "q1 exact unit route",
+      "preferred_option": "approve F19 and F20 as two units for later execution-gate planning"
+    },
+    {
+      "id": "MTUH2A-Q2",
+      "topic": "q2 exact calculation-operation route",
+      "preferred_option": "approve A85 through A88 as separate later execution-gate specs"
+    },
+    {
+      "id": "MTUH2A-Q3",
+      "topic": "q3 MO route split/update",
+      "preferred_option": "approve A89/A90/A91 additions and A12/A20 updates for later execution-gate planning"
+    },
+    {
+      "id": "MTUH2A-Q4",
+      "topic": "q3 price and percentage-change route",
+      "preferred_option": "approve A92 and A93 while keeping D07 incidence in MTU-H3"
+    },
+    {
+      "id": "MTUH2A-Q5",
+      "topic": "CLI dry-run limitation",
+      "preferred_option": "decide whether direct unit-add execution is acceptable or dry-run wrapper is required"
+    },
+    {
+      "id": "MTUH2A-Q6",
+      "topic": "existing-unit guardrails",
+      "preferred_option": "keep GATE-MTU-H2 guardrails binding"
+    },
+    {
+      "id": "MTUH2A-Q7",
+      "topic": "rollback, audit, and validation evidence",
+      "preferred_option": "require command log, diff, rollback, audit, validators, reports, and Jest proof"
+    },
+    {
+      "id": "MTUH2A-Q8",
+      "topic": "next sprint authority",
+      "preferred_option": "authorize only a later bounded CLI execution gate packet unless exact execution authority is separately confirmed"
+    },
+    {
+      "id": "MTUH2A-Q9",
+      "topic": "mutation and product authority now",
+      "preferred_option": "no mutation or product authority now"
+    }
+  ],
+  "stop_conditions": [
+    "Stop if hand edits to references/machine/ or references/external/ are authorized.",
+    "Stop if mutation execution is authorized without exact command, rollback, audit, and validation authority.",
+    "Stop if q1 requires full MPC/MSC or welfare-loss machinery.",
+    "Stop if q2 requires full TO-function construction.",
+    "Stop if q3 requires MK derivation when MK is given or a calculus-only MO route.",
+    "Stop if q1 or q2 answer-form needs are hidden instead of routed to MTU-H4.",
+    "Stop if D07 broader incidence/pass-through work is mutated from this gate.",
+    "Stop if diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student/product use is authorized."
+  ],
+  "recommended_next_action": "Run the formal GATE-MTU-H2A human review before any later CLI execution packet, unit minting, unit update execution, candidate storage, lesson handoff, or student/product use."
+}

@@ -1,0 +1,758 @@
+{
+  "schema_version": 1,
+  "sprint_id": "MTU-H2A",
+  "gate_id": "GATE-MTU-H2A",
+  "created": "2026-05-27",
+  "status": "planning_packet_ready_no_mutation",
+  "source_gate": "reports/review-gates/GATE-MTU-H2-solo-q1-q3-micro-cases/gate-closure.json",
+  "source_cases": "reports/mtu-hardening/solo-q1-q3-canonical-cases.json",
+  "authority_boundary": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "unit_update_execution_authorized": false,
+    "unit_split_execution_authorized": false,
+    "unit_dependency_mutation_authorized": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_mutation_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "student_product_use_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false
+  },
+  "cli_surface_findings": {
+    "unit_add_has_dry_run": false,
+    "unit_update_has_dry_run": true,
+    "unit_add_dep_has_dry_run": true,
+    "unit_split_has_dry_run": false,
+    "planning_implication": "The later human gate must explicitly decide whether direct unit-add/update execution is acceptable after reviewing exact specs, or whether a dry-run wrapper is required before execution."
+  },
+  "proposed_new_unit_ids": [
+    "F19",
+    "F20",
+    "A85",
+    "A86",
+    "A87",
+    "A88",
+    "A89",
+    "A90",
+    "A91",
+    "A92",
+    "A93"
+  ],
+  "proposed_live_update_targets": [
+    "A12",
+    "A20"
+  ],
+  "mutation_lanes": [
+    {
+      "lane_id": "MTUH2A-Q1-F19-VERBAL-EXTERNAL-COST",
+      "source_candidate_lane_id": "MTUH2-Q1-F-VERBAL-EXTERNAL-COST",
+      "exam_question": "vwo-economie-2026-solo:q1",
+      "action_type": "unit_add",
+      "proposed_unit_id": "F19",
+      "status": "planned_for_gate_review_not_authorized",
+      "mutation_execution_authorized": false,
+      "cli_command_template": "node build-scripts/references/unit-add.js --spec '<proposed_spec>'",
+      "proposed_spec": {
+        "id": "F19",
+        "name": "Maatschappelijke kosten verbaal herkennen",
+        "kern": "Herken dat een keuze, productie of consumptie kosten veroorzaakt die niet door de directe gebruiker of producent worden gedragen.",
+        "needs": [],
+        "exam_codes": [
+          "F2.4"
+        ],
+        "mastery_target": "understand",
+        "prior_learning": "new_this_year",
+        "aspects": [
+          "verbaal"
+        ],
+        "terms": [],
+        "zero_needs_status": "true_zero",
+        "zero_needs_review": {
+          "reviewed_on": "2026-05-27",
+          "reviewer": "GATE-MTU-H2 routing review",
+          "rationale": "This is the first verbal external-cost recognition unit and must not depend on full MPC/MSC machinery.",
+          "recommended_needs": [],
+          "severity": "medium"
+        }
+      },
+      "existing_unit_relation": [
+        {
+          "unit_id": "F16",
+          "role": "support_only_not_prerequisite",
+          "guardrail": "Do not require full MPC/MSC machinery for q1."
+        }
+      ],
+      "rollback": "If later execution mints F19 incorrectly, run a reviewed rollback/deprecation lane or revert the exact mutation commit before further dependent units are minted.",
+      "audit_log_required": true
+    },
+    {
+      "lane_id": "MTUH2A-Q1-F20-EXTERNAL-COST-EXAMPLE",
+      "source_candidate_lane_id": "MTUH2-Q1-F-EXTERNAL-COST-EXAMPLE",
+      "exam_question": "vwo-economie-2026-solo:q1",
+      "action_type": "unit_add",
+      "proposed_unit_id": "F20",
+      "status": "planned_for_gate_review_not_authorized",
+      "mutation_execution_authorized": false,
+      "cli_command_template": "node build-scripts/references/unit-add.js --spec '<proposed_spec>'",
+      "proposed_spec": {
+        "id": "F20",
+        "name": "Maatschappelijke kosten uitleggen met voorbeeld",
+        "kern": "Geef een contextspecifiek voorbeeld van maatschappelijke of externe kosten en leg uit waarom die kosten bij anderen of de samenleving terechtkomen.",
+        "needs": [
+          "F19"
+        ],
+        "exam_codes": [
+          "F2.4"
+        ],
+        "mastery_target": "apply",
+        "prior_learning": "new_this_year",
+        "aspects": [
+          "verbaal"
+        ],
+        "terms": [],
+        "procedure": [
+          "Noem het concrete nadeel of de concrete schade uit de context.",
+          "Benoem wie de schade of kosten draagt.",
+          "Leg uit dat de directe gebruiker of producent deze kosten niet volledig betaalt.",
+          "Sluit af waarom dit maatschappelijke of externe kosten zijn."
+        ],
+        "pitfalls": [
+          "Alleen een voorbeeld noemen zonder uit te leggen waarom het extern is.",
+          "De schade behandelen als gewone private kosten voor de gebruiker."
+        ]
+      },
+      "existing_unit_relation": [
+        {
+          "unit_id": "F16",
+          "role": "formal_support_only",
+          "guardrail": "F16 may support q1, but q1 must not require full MPC/MSC machinery."
+        }
+      ],
+      "rollback": "If F20 is rejected after execution, revert the mutation commit or deprecate F20 through a reviewed CLI lane before dependent references are added.",
+      "audit_log_required": true
+    },
+    {
+      "lane_id": "MTUH2A-Q2-A85-TO-POINT-CALCULATION",
+      "source_candidate_lane_id": "MTUH2-Q2-A-TO-POINT-CALCULATION",
+      "exam_question": "vwo-economie-2026-solo:q2",
+      "action_type": "unit_add",
+      "proposed_unit_id": "A85",
+      "status": "planned_for_gate_review_not_authorized",
+      "mutation_execution_authorized": false,
+      "cli_command_template": "node build-scripts/references/unit-add.js --spec '<proposed_spec>'",
+      "proposed_spec": {
+        "id": "A85",
+        "name": "Totale opbrengst puntberekening: TO = P x Q",
+        "kern": "Bereken totale opbrengst uit een enkele prijs en hoeveelheid zonder eerst een volledige TO-functie op te stellen.",
+        "needs": [
+          "A04"
+        ],
+        "exam_codes": [
+          "A2.1"
+        ],
+        "mastery_target": "apply",
+        "prior_learning": "new_this_year",
+        "aspects": [
+          "rekenen",
+          "verbaal"
+        ],
+        "terms": [],
+        "procedure": [
+          "Bepaal de prijs P en hoeveelheid Q die bij dezelfde situatie horen.",
+          "Noteer TO = P x Q.",
+          "Vul P en Q in en bereken de totale opbrengst.",
+          "Controleer of aantallen, geldbedragen en schaalfactoren bij elkaar passen."
+        ],
+        "pitfalls": [
+          "Een volledige TO-functie opstellen terwijl alleen een puntberekening nodig is.",
+          "P en Q uit verschillende situaties combineren."
+        ],
+        "generator": "GEN_A85"
+      },
+      "existing_unit_relation": [
+        {
+          "unit_id": "A21",
+          "role": "profit_formula_support_only",
+          "guardrail": "Do not require A07 TO-function construction for q2 pointwise TO."
+        }
+      ],
+      "rollback": "Revert the minting commit before dependent units are used, or deprecate A85 through a later reviewed rollback lane.",
+      "audit_log_required": true
+    },
+    {
+      "lane_id": "MTUH2A-Q2-A86-TVK-CONSTANT-VARIABLE-COST",
+      "source_candidate_lane_id": "MTUH2-Q2-A-TVK-CONSTANT-VARIABLE-COST",
+      "exam_question": "vwo-economie-2026-solo:q2",
+      "action_type": "unit_add",
+      "proposed_unit_id": "A86",
+      "status": "planned_for_gate_review_not_authorized",
+      "mutation_execution_authorized": false,
+      "cli_command_template": "node build-scripts/references/unit-add.js --spec '<proposed_spec>'",
+      "proposed_spec": {
+        "id": "A86",
+        "name": "TVK berekenen uit constante variabele kosten",
+        "kern": "Bereken totale variabele kosten door constante variabele kosten per stuk met de hoeveelheid te vermenigvuldigen.",
+        "needs": [
+          "A04"
+        ],
+        "exam_codes": [
+          "A2.1",
+          "A2.11"
+        ],
+        "mastery_target": "apply",
+        "prior_learning": "new_this_year",
+        "aspects": [
+          "rekenen",
+          "verbaal"
+        ],
+        "terms": [
+          "variabele-kosten"
+        ],
+        "procedure": [
+          "Bepaal de variabele kosten per stuk of constante MK uit de opgave.",
+          "Bepaal de hoeveelheid Q.",
+          "Noteer TVK = variabele kosten per stuk x Q.",
+          "Bereken TVK en controleer schaal en eenheid."
+        ],
+        "pitfalls": [
+          "Variabele kosten per stuk behandelen als totale variabele kosten.",
+          "Constante kosten optellen voordat de vraag daarom vraagt."
+        ],
+        "generator": "GEN_A86"
+      },
+      "existing_unit_relation": [
+        {
+          "unit_id": "D02",
+          "role": "conceptual_support_only_not_primary",
+          "guardrail": "Do not route q2 through break-even or MO=MK constant-cost concepts."
+        }
+      ],
+      "rollback": "Revert the minting commit before dependent units are used, or deprecate A86 through a later reviewed rollback lane.",
+      "audit_log_required": true
+    },
+    {
+      "lane_id": "MTUH2A-Q2-A87-UNKNOWN-FIXED-COST-FROM-PROFIT",
+      "source_candidate_lane_id": "MTUH2-Q2-A-UNKNOWN-FIXED-COST-FROM-PROFIT",
+      "exam_question": "vwo-economie-2026-solo:q2",
+      "action_type": "unit_add",
+      "proposed_unit_id": "A87",
+      "status": "planned_for_gate_review_not_authorized",
+      "mutation_execution_authorized": false,
+      "cli_command_template": "node build-scripts/references/unit-add.js --spec '<proposed_spec>'",
+      "proposed_spec": {
+        "id": "A87",
+        "name": "Onbekende vaste kosten berekenen uit winstvergelijking",
+        "kern": "Los W = TO - (TVK + TCK) op naar de onbekende vaste kosten wanneer winst, opbrengst en variabele kosten bekend zijn.",
+        "needs": [
+          "A02",
+          "A85",
+          "A86"
+        ],
+        "exam_codes": [
+          "A2.1",
+          "A2.11"
+        ],
+        "mastery_target": "apply",
+        "prior_learning": "new_this_year",
+        "aspects": [
+          "rekenen",
+          "verbaal"
+        ],
+        "terms": [
+          "winst"
+        ],
+        "procedure": [
+          "Noteer de winstvergelijking W = TO - (TVK + TCK).",
+          "Vul W, TO en TVK in met dezelfde schaal en periode.",
+          "Herschrijf de vergelijking zodat TCK alleen staat.",
+          "Bereken TCK en geef de uitkomst met geldbedrag en schaalfactor."
+        ],
+        "pitfalls": [
+          "A21 als volledige route behandelen zonder de onbekende TCK te isoleren.",
+          "TVK en TCK verwisselen.",
+          "De schaalfactor pas na de laatste stap vergeten."
+        ],
+        "generator": "GEN_A87"
+      },
+      "existing_unit_relation": [
+        {
+          "unit_id": "A21",
+          "role": "formula_support_only",
+          "guardrail": "Do not make A21 full coverage for the reverse fixed-cost route."
+        }
+      ],
+      "rollback": "If A87 is wrong after execution, revert the minting commit or run a reviewed deprecation lane before it is cited.",
+      "audit_log_required": true
+    },
+    {
+      "lane_id": "MTUH2A-Q2-A88-SCALE-FACTOR-HANDLING",
+      "source_candidate_lane_id": "MTUH2-Q2-A-SCALE-FACTOR-UNIT-HANDLING",
+      "exam_question": "vwo-economie-2026-solo:q2",
+      "action_type": "unit_add",
+      "proposed_unit_id": "A88",
+      "status": "planned_for_gate_review_not_authorized",
+      "mutation_execution_authorized": false,
+      "cli_command_template": "node build-scripts/references/unit-add.js --spec '<proposed_spec>'",
+      "proposed_spec": {
+        "id": "A88",
+        "name": "Schaalfactoren in examencijfers toepassen",
+        "kern": "Gebruik schaalvermeldingen zoals x 1.000 correct in formules, tussenstappen, grafieklabels en eindantwoorden.",
+        "needs": [
+          "A61"
+        ],
+        "exam_codes": [
+          "A2.1",
+          "A2.4"
+        ],
+        "mastery_target": "apply",
+        "prior_learning": "new_this_year",
+        "aspects": [
+          "rekenen",
+          "verbaal",
+          "grafisch"
+        ],
+        "terms": [],
+        "procedure": [
+          "Zoek bij tabel, grafiek of formule of waarden een schaalvermelding hebben.",
+          "Noteer of je rekent in weergegeven eenheden of werkelijke eenheden.",
+          "Pas de schaalfactor consequent toe in tussenstappen.",
+          "Geef het eindantwoord met de juiste eenheid en eventuele vermenigvuldigingsfactor."
+        ],
+        "pitfalls": [
+          "Een waarde in duizenden als losse eenheden behandelen.",
+          "Schaalfactoren in tabellen en eindantwoord door elkaar gebruiken."
+        ],
+        "generator": "GEN_A88"
+      },
+      "existing_unit_relation": [],
+      "rollback": "Revert the minting commit before dependent units are used, or deprecate A88 through a later reviewed rollback lane.",
+      "audit_log_required": true
+    },
+    {
+      "lane_id": "MTUH2A-Q3-A89-GO-AS-PRICE-RELATION",
+      "source_candidate_lane_id": "MTUH2-Q3-A-GO-AS-MONOPOLY-PRICE-RELATION",
+      "exam_question": "vwo-economie-2026-solo:q3",
+      "action_type": "unit_add",
+      "proposed_unit_id": "A89",
+      "status": "planned_for_gate_review_not_authorized",
+      "mutation_execution_authorized": false,
+      "cli_command_template": "node build-scripts/references/unit-add.js --spec '<proposed_spec>'",
+      "proposed_spec": {
+        "id": "A89",
+        "name": "GO herkennen als prijsfunctie van de monopolist",
+        "kern": "Herken dat de GO- of vraagfunctie bij een monopolist de prijs P(Q) geeft die later met Q* moet worden gebruikt.",
+        "needs": [
+          "A04"
+        ],
+        "exam_codes": [
+          "A2.10"
+        ],
+        "mastery_target": "understand",
+        "prior_learning": "new_this_year",
+        "aspects": [
+          "rekenen",
+          "verbaal"
+        ],
+        "terms": [],
+        "generator": "GEN_A89"
+      },
+      "existing_unit_relation": [
+        {
+          "unit_id": "A20",
+          "role": "profit_maximisation_support_only",
+          "guardrail": "Do not use MO as the price."
+        },
+        {
+          "unit_id": "A35",
+          "role": "broader_monopoly_profit_support_only",
+          "guardrail": "Do not require full profit calculation when q3 asks for price change."
+        }
+      ],
+      "rollback": "Revert the minting commit before dependent units are used, or deprecate A89 through a later reviewed rollback lane.",
+      "audit_log_required": true
+    },
+    {
+      "lane_id": "MTUH2A-Q3-A90-MO-WITHOUT-DERIVATIVES",
+      "source_candidate_lane_id": "MTUH2-Q3-A-MO-WITHOUT-DERIVATIVES",
+      "exam_question": "vwo-economie-2026-solo:q3",
+      "action_type": "unit_add",
+      "proposed_unit_id": "A90",
+      "status": "planned_for_gate_review_not_authorized",
+      "mutation_execution_authorized": false,
+      "cli_command_template": "node build-scripts/references/unit-add.js --spec '<proposed_spec>'",
+      "proposed_spec": {
+        "id": "A90",
+        "name": "MO bepalen zonder afgeleiden",
+        "kern": "Bepaal of gebruik marginale opbrengst via tabel, grafiek of de lineaire MO-regel voordat de afgeleide route wordt gebruikt.",
+        "needs": [
+          "A01",
+          "A89"
+        ],
+        "exam_codes": [
+          "A2.10",
+          "A2.12"
+        ],
+        "mastery_target": "apply",
+        "prior_learning": "new_this_year",
+        "aspects": [
+          "rekenen",
+          "grafisch",
+          "verbaal"
+        ],
+        "terms": [],
+        "procedure": [
+          "Bepaal uit de bron of MO via tabel, grafiek of lineaire regel moet worden gebruikt.",
+          "Bij een lineaire prijsfunctie P = a - bQ: gebruik MO = a - 2bQ.",
+          "Bij een tabel: bepaal MO uit opeenvolgende opbrengstverschillen.",
+          "Controleer dat MO niet als prijs wordt gebruikt."
+        ],
+        "pitfalls": [
+          "Een afgeleide verplicht maken voordat die route is aangeleerd.",
+          "De GO-functie zelf als MO gebruiken.",
+          "MO verwarren met de prijs die uit GO/P(Q) komt."
+        ],
+        "generator": "GEN_A90"
+      },
+      "existing_unit_relation": [
+        {
+          "unit_id": "A12",
+          "role": "derivative_route_only_after_update",
+          "guardrail": "A12 must not be the only MO route."
+        },
+        {
+          "unit_id": "A20",
+          "role": "broad_ancestor",
+          "guardrail": "Do not make A20 a calculus-only prerequisite for q3."
+        }
+      ],
+      "rollback": "Revert the minting commit before dependent units are used, or deprecate A90 through a later reviewed rollback lane.",
+      "audit_log_required": true
+    },
+    {
+      "lane_id": "MTUH2A-Q3-A12-DERIVATIVE-MO-UPDATE",
+      "source_candidate_lane_id": "MTUH2-Q3-A-MO-WITH-DERIVATIVE",
+      "exam_question": "vwo-economie-2026-solo:q3",
+      "action_type": "unit_update",
+      "target_live_unit_id": "A12",
+      "status": "planned_for_gate_review_not_authorized",
+      "mutation_execution_authorized": false,
+      "cli_command_template": "node build-scripts/references/unit-update.js --id A12 --spec '<update_spec>'",
+      "update_spec": {
+        "name": "MO bepalen met afgeleide",
+        "kern": "Bepaal marginale opbrengst door eerst TO op te stellen en daarvan de afgeleide naar Q te nemen.",
+        "needs": [
+          "A11",
+          "A07"
+        ],
+        "exam_codes": [
+          "A2.10",
+          "A2.12"
+        ],
+        "mastery_target": "apply",
+        "prior_learning": "new_this_year",
+        "aspects": [
+          "grafisch",
+          "rekenen"
+        ],
+        "terms": [],
+        "procedure": [
+          "Stel de TO-functie op via TO = P x Q.",
+          "Bepaal MO als afgeleide van TO naar Q.",
+          "Controleer het type: bij volkomen concurrentie is MO = P, bij een lineaire monopolieprijsfunctie P = a - bQ is MO = a - 2bQ.",
+          "Gebruik deze MO-functie later in de passende MO = MK-route."
+        ],
+        "pitfalls": [
+          "Deze afgeleide route gebruiken als een niet-calculus MO-route genoeg is.",
+          "De MO-functie later als prijsfunctie gebruiken."
+        ],
+        "generator": "GEN_A12"
+      },
+      "existing_unit_relation": [
+        {
+          "unit_id": "A12",
+          "role": "live_target_update",
+          "guardrail": "Clarify derivative route without hiding A90 non-calculus route."
+        }
+      ],
+      "rollback": "Use the previous A12 JSON from git history and run a reviewed unit-update rollback if the later execution is rejected.",
+      "audit_log_required": true
+    },
+    {
+      "lane_id": "MTUH2A-Q3-A91-MO-EQUALS-GIVEN-MK",
+      "source_candidate_lane_id": "MTUH2-Q3-A-MO-EQUALS-GIVEN-MK",
+      "exam_question": "vwo-economie-2026-solo:q3",
+      "action_type": "unit_add",
+      "proposed_unit_id": "A91",
+      "status": "planned_for_gate_review_not_authorized",
+      "mutation_execution_authorized": false,
+      "cli_command_template": "node build-scripts/references/unit-add.js --spec '<proposed_spec>'",
+      "proposed_spec": {
+        "id": "A91",
+        "name": "MO = gegeven MK oplossen",
+        "kern": "Los MO = MK op wanneer de marginale kosten als constante of gegeven waarde in de opgave staan.",
+        "needs": [
+          "A02"
+        ],
+        "exam_codes": [
+          "A2.10",
+          "A2.12"
+        ],
+        "mastery_target": "apply",
+        "prior_learning": "new_this_year",
+        "aspects": [
+          "rekenen",
+          "verbaal"
+        ],
+        "terms": [
+          "marginale-kosten"
+        ],
+        "procedure": [
+          "Neem de MO-functie uit de voorafgaande stap.",
+          "Neem de gegeven MK-waarde uit de opgave.",
+          "Stel MO = gegeven MK.",
+          "Los de vergelijking op naar Q*.",
+          "Controleer dat je geen MK-functie afleidt als MK al gegeven is."
+        ],
+        "pitfalls": [
+          "Een MK-functie afleiden terwijl MK direct gegeven is.",
+          "De gegeven kostenstijging verwarren met de nieuwe MK.",
+          "MO = MK oplossen zonder daarna de prijs uit GO/P(Q) te halen."
+        ],
+        "generator": "GEN_A91"
+      },
+      "existing_unit_relation": [
+        {
+          "unit_id": "A20",
+          "role": "too_broad",
+          "guardrail": "Do not require A13 MK derivation for this route."
+        }
+      ],
+      "rollback": "Revert the minting commit before dependent units are used, or deprecate A91 through a later reviewed rollback lane.",
+      "audit_log_required": true
+    },
+    {
+      "lane_id": "MTUH2A-Q3-A20-DERIVED-MK-UPDATE",
+      "source_candidate_lane_id": "MTUH2-Q3-A-MO-EQUALS-DERIVED-MK",
+      "exam_question": "vwo-economie-2026-solo:q3",
+      "action_type": "unit_update",
+      "target_live_unit_id": "A20",
+      "status": "planned_for_gate_review_not_authorized",
+      "mutation_execution_authorized": false,
+      "cli_command_template": "node build-scripts/references/unit-update.js --id A20 --spec '<update_spec>'",
+      "update_spec": {
+        "name": "MO = afgeleide MK oplossen",
+        "kern": "Vind de winstmaximaliserende hoeveelheid wanneer zowel MO als MK als afgeleide functies moeten worden bepaald en daarna gelijkgesteld.",
+        "needs": [
+          "A12",
+          "A13",
+          "A02"
+        ],
+        "exam_codes": [
+          "A2.10",
+          "A2.12"
+        ],
+        "mastery_target": "apply",
+        "prior_learning": "new_this_year",
+        "aspects": [
+          "rekenen",
+          "verbaal"
+        ],
+        "terms": [
+          "marginale-kosten"
+        ],
+        "procedure": [
+          "Bepaal MO via de afgeleide route.",
+          "Bepaal MK als afgeleide van TK.",
+          "Stel MO = MK en los op voor Q*.",
+          "Controleer dat deze route alleen past wanneer MK niet direct gegeven is.",
+          "Gebruik Q* later om P* of winst te bepalen als de vraag daarom vraagt."
+        ],
+        "pitfalls": [
+          "Deze route gebruiken wanneer MK als getal gegeven is; gebruik dan A91.",
+          "MO als prijs gebruiken in plaats van Q* in GO/P(Q) in te vullen."
+        ],
+        "generator": "GEN_A20"
+      },
+      "existing_unit_relation": [
+        {
+          "unit_id": "A20",
+          "role": "live_target_update",
+          "guardrail": "A20 becomes the derived-MK route; A91 carries given-MK route."
+        }
+      ],
+      "rollback": "Use the previous A20 JSON from git history and run a reviewed unit-update rollback if the later execution is rejected.",
+      "audit_log_required": true
+    },
+    {
+      "lane_id": "MTUH2A-Q3-A92-NEW-PRICE-AFTER-Q",
+      "source_candidate_lane_id": "MTUH2-Q3-A-NEW-MONOPOLY-PRICE-AFTER-Q",
+      "exam_question": "vwo-economie-2026-solo:q3",
+      "action_type": "unit_add",
+      "proposed_unit_id": "A92",
+      "status": "planned_for_gate_review_not_authorized",
+      "mutation_execution_authorized": false,
+      "cli_command_template": "node build-scripts/references/unit-add.js --spec '<proposed_spec>'",
+      "proposed_spec": {
+        "id": "A92",
+        "name": "Nieuwe prijs bepalen na winstmaximaliserende Q",
+        "kern": "Bepaal na Q* de prijs door Q* in de GO- of prijsfunctie P(Q) in te vullen.",
+        "needs": [
+          "A04",
+          "A89"
+        ],
+        "exam_codes": [
+          "A2.10",
+          "A2.12"
+        ],
+        "mastery_target": "apply",
+        "prior_learning": "new_this_year",
+        "aspects": [
+          "rekenen",
+          "verbaal"
+        ],
+        "terms": [],
+        "procedure": [
+          "Neem de gevonden winstmaximaliserende hoeveelheid Q*.",
+          "Zoek de GO- of prijsfunctie P(Q), niet de MO-functie.",
+          "Vul Q* in de prijsfunctie in.",
+          "Bereken de prijs en controleer de eenheid."
+        ],
+        "pitfalls": [
+          "Q* in MO invullen en die uitkomst als prijs gebruiken.",
+          "De oude prijs gebruiken nadat de kosten of MK zijn veranderd."
+        ],
+        "generator": "GEN_A92"
+      },
+      "existing_unit_relation": [
+        {
+          "unit_id": "A35",
+          "role": "broader_support_only",
+          "guardrail": "Do not require full monopoly profit calculation."
+        }
+      ],
+      "rollback": "Revert the minting commit before dependent units are used, or deprecate A92 through a later reviewed rollback lane.",
+      "audit_log_required": true
+    },
+    {
+      "lane_id": "MTUH2A-Q3-A93-PERCENTAGE-PRICE-CHANGE-AFTER-COST-CHANGE",
+      "source_candidate_lane_id": "MTUH2-Q3-A-PERCENTAGE-PRICE-CHANGE-AFTER-COST-CHANGE",
+      "exam_question": "vwo-economie-2026-solo:q3",
+      "action_type": "unit_add",
+      "proposed_unit_id": "A93",
+      "status": "planned_for_gate_review_not_authorized",
+      "mutation_execution_authorized": false,
+      "cli_command_template": "node build-scripts/references/unit-add.js --spec '<proposed_spec>'",
+      "proposed_spec": {
+        "id": "A93",
+        "name": "Procentuele prijsverandering na kostenverandering",
+        "kern": "Bereken de procentuele verandering van de prijs na een kostenverandering met de oude prijs als noemer en onderscheid dit van pass-through.",
+        "needs": [
+          "A38",
+          "A66",
+          "A92"
+        ],
+        "exam_codes": [
+          "A2.4",
+          "A2.10",
+          "A2.12"
+        ],
+        "mastery_target": "apply",
+        "prior_learning": "new_this_year",
+        "aspects": [
+          "rekenen",
+          "verbaal"
+        ],
+        "terms": [],
+        "procedure": [
+          "Bepaal de oude prijs en nieuwe prijs.",
+          "Bereken de prijsverandering: nieuwe prijs min oude prijs.",
+          "Deel door de oude prijs en vermenigvuldig met 100 procent.",
+          "Controleer dat je de prijsverandering berekent, niet het doorberekende deel van de kostenstijging."
+        ],
+        "pitfalls": [
+          "De kostenstijging als noemer gebruiken in plaats van de oude prijs.",
+          "Procentuele prijsverandering verwarren met incidence of pass-through share.",
+          "De nieuwe prijs als basiswaarde gebruiken."
+        ],
+        "generator": "GEN_A93"
+      },
+      "existing_unit_relation": [
+        {
+          "unit_id": "A38",
+          "role": "generic_percentage_support",
+          "guardrail": "A38 is not enough because the cost-change and pass-through distinction must remain visible."
+        },
+        {
+          "unit_id": "D07",
+          "role": "deferred_incidence_family_dependency",
+          "guardrail": "Broader incidence/pass-through family remains MTU-H3."
+        }
+      ],
+      "rollback": "Revert the minting commit before dependent units are used, or deprecate A93 through a later reviewed rollback lane.",
+      "audit_log_required": true
+    }
+  ],
+  "deferred_visible_dependencies": [
+    {
+      "source_candidate_lane_id": "MTUH2-Q1-A-LEG-UIT-WITH-EXAMPLE",
+      "route": "MTU-H4",
+      "reason": "General answer-form unit; keep visible but do not mutate from H2A."
+    },
+    {
+      "source_candidate_lane_id": "MTUH2-Q2-A-BEREKEN-ANSWER-FORM",
+      "route": "MTU-H4",
+      "reason": "General bereken answer-form unit; keep visible but do not mutate from H2A."
+    },
+    {
+      "source_candidate_lane_id": "MTUH2-Q3-D07-PASS-THROUGH-DEPENDENCY",
+      "route": "MTU-H3",
+      "reason": "Broader tax/subsidy/cost-shock incidence family; do not mutate D07 from H2A."
+    }
+  ],
+  "command_sequence": [
+    "unit-add F19",
+    "unit-add F20",
+    "unit-add A85",
+    "unit-add A86",
+    "unit-add A87",
+    "unit-add A88",
+    "unit-add A89",
+    "unit-add A90",
+    "unit-update A12",
+    "unit-add A91",
+    "unit-update A20",
+    "unit-add A92",
+    "unit-add A93"
+  ],
+  "post_execution_validation_required_if_later_authorized": [
+    "node build-scripts/references/build-unit-index.js",
+    "node build-scripts/references/validate-core-schemas.js",
+    "node build-scripts/references/check-mtu-h2a-cli-mutation-plan.js",
+    "node build-scripts/reports/generate-all.js",
+    "node build-scripts/reports/validate-report-json.js",
+    "node build-scripts/reports/generate-reference-health.js",
+    "node build-scripts/reports/check-reference-health.js",
+    "npm.cmd test -- --runInBand"
+  ],
+  "guardrails": [
+    "F16 may support q1, but q1 must not require full MPC/MSC machinery.",
+    "q2 must not require full TO-function construction through A07.",
+    "q2 must not treat A21 alone as sufficient for reverse fixed-cost calculation.",
+    "q3 must not require MK derivation when MK is given.",
+    "q3 must not make the derivative MO route the only route.",
+    "q3 must not confuse price percentage change with pass-through share.",
+    "D07 broader incidence/pass-through work remains MTU-H3.",
+    "q1 and q2 answer-form needs remain visible for MTU-H4."
+  ]
+}

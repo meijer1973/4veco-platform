@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-27T12:32:21.906Z",
+  "generatedAt": "2026-05-27T13:05:58.806Z",
   "internalOnly": true,
   "teams": [
     {
@@ -160,13 +160,13 @@
           "generated": "2026-04-23",
           "updated": "",
           "scope": "`references/`, `build-scripts/references/`, `build-scripts/reports/`, reference dashboards, and generated reference reports under `reports/`",
-          "summary": "References Team Roadmap Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Last strategic update: 2026-05-27 Roadmap ID: references-team-roadmap Roadmap version: v2.87-gate-mtu-h2-pass-with-conditions Roadmap status: active Version index: docs/roadmaps/roadmap-version-index.json Scope: references/, build-scripts/references/, build-scripts/reports/, reference dashboards, and generated reference reports under reports/ Exam Ingestion North Star The long-term reference-platform goal is that a new official CvTE eco...",
+          "summary": "References Team Roadmap Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Last strategic update: 2026-05-27 Roadmap ID: references-team-roadmap Roadmap version: v2.88-mtu-h2a-cli-mutation-planning Roadmap status: active Version index: docs/roadmaps/roadmap-version-index.json Scope: references/, build-scripts/references/, build-scripts/reports/, reference dashboards, and generated reference reports under reports/ Exam Ingestion North Star The long-term reference-platform goal is that a new official CvTE econom...",
           "sprints": [
             {
-              "sprint": "MTU-H2A",
-              "name": "Solo q1-q3 CLI-Mutation Planning",
+              "sprint": "GATE-MTU-H2A",
+              "name": "Solo q1-q3 CLI-Mutation Plan Human Review",
               "completed": "no",
-              "currentState": "**ACTIVE OPERATIONAL NEXT ACTION.** Prepare a bounded planning packet for the GATE-MTU-H2-approved Solo q1-q3 lanes only. The plan must name exact live unit IDs or proposed new unit IDs, schema-valid CLI specs, proposed `unit-add` / `unit-update` / `unit-add-dep` / split-or-supplement command sequences, rollback and audit-log evidence, validation commands, and proof required before any execution gate. H2A is planning-only unless a later gate explicitly authorizes exact CLI execution; it must not hand-edit `references/machine/` or `references/external/`, mint units, write candidates, mutate lesson output, close CP-6/Year-1, authorize diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or authorize student-facing output.",
+              "currentState": "**ACTIVE OPERATIONAL NEXT ACTION.** Run the formal human review for the MTU-H2A exact ID and CLI-spec planning packet before any CLI execution or registry mutation. Evidence: `reports/mtu-hardening/solo-q1-q3-cli-mutation-plan.*` and `reports/review-gates/GATE-MTU-H2A-cli-mutation-plan/review-packet.*`. The gate must decide whether the proposed `F19/F20`, `A85-A93`, and `A12`/`A20` update plan is adequate, whether the current `unit-add` no-dry-run limitation is acceptable or needs a wrapper, and what later bounded execution packet may be prepared. The gate does not itself authorize hand edits to `references/machine/` or `references/external/`, unit minting, unit update execution, candidate writes, lesson-output mutation, CP-6/Year-1 closure, diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student-facing output.",
               "exitGate": ""
             },
             {
@@ -251,6 +251,13 @@
               "name": "Re-Evaluate R10-R13 Product Surfaces",
               "completed": "no",
               "currentState": "Blocked. Diagnostics, adaptive routing, student-facing AI, teacher cockpit deployment, automatic sequencing, mastery, and summative uses remain out of scope until data-quality gates justify them. Lesson L1.7A explicitly rejected broad companion scaling; `L1.7B-R` and `GATE-L1.7B` accepted only the non-summative `1.1.1` checkpoint boundary; `L1.7C-MATH` restored the old skill-tree math route; `L1.7B-MAP` fixed checkpoint metadata alignment but kept `targetReadinessEvidence: false`. GATE-EX5 closed PASS WITH CONDITIONS as design-contract review only; EX-6 completed validator/CLI planning without candidate writes; GATE-EX6 closed PASS WITH CONDITIONS for validator/dry-run CLI implementation only; and EX-7 implemented validators and dry-run-only CLIs without candidate storage or writes. Broad lesson-companion scaling remains blocked until lesson `L1.7B-P23`, `L1.7B-Q2`, `GATE-L1.7B-Q2`, `REV-STD-1`, and Scale Gate 1 establish the remaining readiness, review-standard, curriculum-versioning, and game-row scaling quality.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "MTU-H2A",
+              "name": "Solo q1-q3 CLI-Mutation Planning",
+              "completed": "yes",
+              "currentState": "Completed as a planning-only sprint. Added `reports/mtu-hardening/solo-q1-q3-cli-mutation-plan.*`, `reports/review-gates/GATE-MTU-H2A-cli-mutation-plan/review-packet.*`, sprint logs, and `build-scripts/references/check-mtu-h2a-cli-mutation-plan.js`. The packet proposes exact new IDs `F19`, `F20`, and `A85` through `A93`, plus live updates to `A12` and `A20`, with CLI specs, command order, rollback/audit expectations, validation proof, and guardrails. It keeps q1/q2 answer-form needs routed to MTU-H4 and D07 incidence/pass-through routed to MTU-H3. MTU-H2A did not mutate `references/machine/` or `references/external/`, mint units, execute unit updates, create candidate storage, write candidates, mutate lesson output, close CP-6/Year-1, or authorize diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student-facing output. Top operational next action is `GATE-MTU-H2A`.",
               "exitGate": ""
             },
             {
@@ -930,10 +937,10 @@
       ],
       "sprints": [
         {
-          "sprint": "MTU-H2A",
-          "name": "Solo q1-q3 CLI-Mutation Planning",
+          "sprint": "GATE-MTU-H2A",
+          "name": "Solo q1-q3 CLI-Mutation Plan Human Review",
           "completed": "no",
-          "currentState": "**ACTIVE OPERATIONAL NEXT ACTION.** Prepare a bounded planning packet for the GATE-MTU-H2-approved Solo q1-q3 lanes only. The plan must name exact live unit IDs or proposed new unit IDs, schema-valid CLI specs, proposed `unit-add` / `unit-update` / `unit-add-dep` / split-or-supplement command sequences, rollback and audit-log evidence, validation commands, and proof required before any execution gate. H2A is planning-only unless a later gate explicitly authorizes exact CLI execution; it must not hand-edit `references/machine/` or `references/external/`, mint units, write candidates, mutate lesson output, close CP-6/Year-1, authorize diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or authorize student-facing output.",
+          "currentState": "**ACTIVE OPERATIONAL NEXT ACTION.** Run the formal human review for the MTU-H2A exact ID and CLI-spec planning packet before any CLI execution or registry mutation. Evidence: `reports/mtu-hardening/solo-q1-q3-cli-mutation-plan.*` and `reports/review-gates/GATE-MTU-H2A-cli-mutation-plan/review-packet.*`. The gate must decide whether the proposed `F19/F20`, `A85-A93`, and `A12`/`A20` update plan is adequate, whether the current `unit-add` no-dry-run limitation is acceptable or needs a wrapper, and what later bounded execution packet may be prepared. The gate does not itself authorize hand edits to `references/machine/` or `references/external/`, unit minting, unit update execution, candidate writes, lesson-output mutation, CP-6/Year-1 closure, diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student-facing output.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -1030,6 +1037,14 @@
           "name": "Re-Evaluate R10-R13 Product Surfaces",
           "completed": "no",
           "currentState": "Blocked. Diagnostics, adaptive routing, student-facing AI, teacher cockpit deployment, automatic sequencing, mastery, and summative uses remain out of scope until data-quality gates justify them. Lesson L1.7A explicitly rejected broad companion scaling; `L1.7B-R` and `GATE-L1.7B` accepted only the non-summative `1.1.1` checkpoint boundary; `L1.7C-MATH` restored the old skill-tree math route; `L1.7B-MAP` fixed checkpoint metadata alignment but kept `targetReadinessEvidence: false`. GATE-EX5 closed PASS WITH CONDITIONS as design-contract review only; EX-6 completed validator/CLI planning without candidate writes; GATE-EX6 closed PASS WITH CONDITIONS for validator/dry-run CLI implementation only; and EX-7 implemented validators and dry-run-only CLIs without candidate storage or writes. Broad lesson-companion scaling remains blocked until lesson `L1.7B-P23`, `L1.7B-Q2`, `GATE-L1.7B-Q2`, `REV-STD-1`, and Scale Gate 1 establish the remaining readiness, review-standard, curriculum-versioning, and game-row scaling quality.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "MTU-H2A",
+          "name": "Solo q1-q3 CLI-Mutation Planning",
+          "completed": "yes",
+          "currentState": "Completed as a planning-only sprint. Added `reports/mtu-hardening/solo-q1-q3-cli-mutation-plan.*`, `reports/review-gates/GATE-MTU-H2A-cli-mutation-plan/review-packet.*`, sprint logs, and `build-scripts/references/check-mtu-h2a-cli-mutation-plan.js`. The packet proposes exact new IDs `F19`, `F20`, and `A85` through `A93`, plus live updates to `A12` and `A20`, with CLI specs, command order, rollback/audit expectations, validation proof, and guardrails. It keeps q1/q2 answer-form needs routed to MTU-H4 and D07 incidence/pass-through routed to MTU-H3. MTU-H2A did not mutate `references/machine/` or `references/external/`, mint units, execute unit updates, create candidate storage, write candidates, mutate lesson output, close CP-6/Year-1, or authorize diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student-facing output. Top operational next action is `GATE-MTU-H2A`.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -1802,7 +1817,7 @@
           "roadmap": "References roadmap"
         }
       ],
-      "completedCount": 96,
+      "completedCount": 97,
       "openCount": 13
     },
     {

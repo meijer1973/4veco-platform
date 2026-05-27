@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-05-27T12:32:21.956Z
+Generated: 2026-05-27T13:05:58.845Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 1832
+Files indexed: 1837
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -904,7 +904,7 @@ Count: 313
 
 ## reports
 
-Count: 857
+Count: 861
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1178,6 +1178,10 @@ Count: 857
 - reports/review-gates/GATE-EX6-validator-cli-planning/human-interview.md
 - reports/review-gates/GATE-EX6-validator-cli-planning/review-packet.json
 - reports/review-gates/GATE-EX6-validator-cli-planning/review-packet.md
+- reports/review-gates/GATE-MTU-H2-solo-q1-q3-micro-cases/gate-closure.json
+- reports/review-gates/GATE-MTU-H2-solo-q1-q3-micro-cases/gate-closure.md
+- reports/review-gates/GATE-MTU-H2-solo-q1-q3-micro-cases/human-interview.json
+- reports/review-gates/GATE-MTU-H2-solo-q1-q3-micro-cases/human-interview.md
 - reports/review-gates/GATE-MTU-H2-solo-q1-q3-micro-cases/review-packet.json
 - reports/review-gates/GATE-MTU-H2-solo-q1-q3-micro-cases/review-packet.md
 - reports/review-gates/GATE-PV-G1-schema/bundle-urls.md
@@ -1784,7 +1788,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 231
+Count: 232
 
 - .gitignore
 - BUILD-CHAPTER.md
@@ -1873,6 +1877,7 @@ Count: 231
 - docs/roadmaps/outdated/reference-team-roadmap-v2.83-ex7-dry-run-cli-implementation.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.84-game-ux2-exit-ticket-checkpoint.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.85-mtu-h1-operation-benchmark.md
+- docs/roadmaps/outdated/reference-team-roadmap-v2.86-mtu-h2-solo-micro-case-review.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.9-rx1-inventory-prepared.md
 - docs/roadmaps/README.md
 - docs/roadmaps/roadmap-version-index.json
