@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-05-28T09:13:11.501Z
+Generated: 2026-05-28T09:49:42.850Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 1904
+Files indexed: 1915
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -117,7 +117,7 @@ Count: 71
 
 ## build scripts
 
-Count: 305
+Count: 307
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -233,6 +233,7 @@ Count: 305
 - build-scripts/references/build-cp6e-113-part-a-rereview.js
 - build-scripts/references/build-cp6f-113-part-a-recheck.js
 - build-scripts/references/build-micro-unit-quality-packet.js
+- build-scripts/references/build-mtu-h2e-conditional-lane-execution-packet.js
 - build-scripts/references/build-owned-content-graph.js
 - build-scripts/references/build-owned-source-registry.js
 - build-scripts/references/build-procedure-game-template-alignment.js
@@ -279,6 +280,7 @@ Count: 305
 - build-scripts/references/check-mtu-h2a-cli-mutation-plan.js
 - build-scripts/references/check-mtu-h2b-cli-execution-gate-packet.js
 - build-scripts/references/check-mtu-h2d-held-conditional-resolution.js
+- build-scripts/references/check-mtu-h2e-conditional-lane-execution-packet.js
 - build-scripts/references/check-mtu-hardening-benchmark.js
 - build-scripts/references/check-operation-answer-skill-candidates.js
 - build-scripts/references/check-owned-content-graph.js
@@ -474,7 +476,7 @@ Count: 42
 
 ## validators
 
-Count: 113
+Count: 114
 
 - build-scripts/rag/validate-chunks.js
 - build-scripts/rag/validate-query-output.js
@@ -499,6 +501,7 @@ Count: 113
 - build-scripts/references/check-mtu-h2a-cli-mutation-plan.js
 - build-scripts/references/check-mtu-h2b-cli-execution-gate-packet.js
 - build-scripts/references/check-mtu-h2d-held-conditional-resolution.js
+- build-scripts/references/check-mtu-h2e-conditional-lane-execution-packet.js
 - build-scripts/references/check-mtu-hardening-benchmark.js
 - build-scripts/references/check-operation-answer-skill-candidates.js
 - build-scripts/references/check-owned-content-graph.js
@@ -592,7 +595,7 @@ Count: 113
 
 ## references
 
-Count: 322
+Count: 323
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -705,6 +708,7 @@ Count: 322
 - references/data/sprints/MTU-H2D.plan.json
 - references/data/sprints/MTU-H2D.result.json
 - references/data/sprints/MTU-H2E.plan.json
+- references/data/sprints/MTU-H2E.result.json
 - references/data/sprints/PV-G4.plan.json
 - references/data/sprints/PV.1.plan.json
 - references/data/sprints/PV.1.result.json
@@ -919,7 +923,7 @@ Count: 322
 
 ## reports
 
-Count: 909
+Count: 916
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1025,6 +1029,8 @@ Count: 909
 - reports/mtu-hardening/solo-q1-q3-cli-execution-gate-packet.md
 - reports/mtu-hardening/solo-q1-q3-cli-mutation-plan.json
 - reports/mtu-hardening/solo-q1-q3-cli-mutation-plan.md
+- reports/mtu-hardening/solo-q1-q3-conditional-lane-execution-packet.json
+- reports/mtu-hardening/solo-q1-q3-conditional-lane-execution-packet.md
 - reports/mtu-hardening/solo-q1-q3-held-conditional-resolution.json
 - reports/mtu-hardening/solo-q1-q3-held-conditional-resolution.md
 - reports/mtu-hardening/solo-q1-q3-operation-map.md
@@ -1225,6 +1231,9 @@ Count: 909
 - reports/review-gates/GATE-MTU-H2D-held-conditional-lanes/human-interview.md
 - reports/review-gates/GATE-MTU-H2D-held-conditional-lanes/review-packet.json
 - reports/review-gates/GATE-MTU-H2D-held-conditional-lanes/review-packet.md
+- reports/review-gates/GATE-MTU-H2E-conditional-lane-execution/bundle-urls.md
+- reports/review-gates/GATE-MTU-H2E-conditional-lane-execution/review-packet.json
+- reports/review-gates/GATE-MTU-H2E-conditional-lane-execution/review-packet.md
 - reports/review-gates/GATE-PV-G1-schema/bundle-urls.md
 - reports/review-gates/GATE-PV-G1-schema/review-packet.json
 - reports/review-gates/GATE-PV-G1-schema/review-packet.md
@@ -1614,7 +1623,9 @@ Count: 909
 - reports/sprints/MTU-H2D-plan.md
 - reports/sprints/MTU-H2D-result.md
 - reports/sprints/MTU-H2E-baseline.md
+- reports/sprints/MTU-H2E-diff-summary.md
 - reports/sprints/MTU-H2E-plan.md
+- reports/sprints/MTU-H2E-result.md
 - reports/sprints/PV-G4-baseline.md
 - reports/sprints/PV.1-baseline.md
 - reports/sprints/PV.1-diff-summary.md
@@ -1851,7 +1862,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 239
+Count: 240
 
 - .gitignore
 - BUILD-CHAPTER.md
@@ -1949,6 +1960,7 @@ Count: 239
 - docs/roadmaps/outdated/reference-team-roadmap-v2.91-gate-mtu-h2b-partial-pass.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.92-mtu-h2c-reduced-scope-cli-execution.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.93-mtu-h2d-held-conditional-resolution.md
+- docs/roadmaps/outdated/reference-team-roadmap-v2.94-gate-mtu-h2d-pass-with-conditions.md
 - docs/roadmaps/README.md
 - docs/roadmaps/roadmap-version-index.json
 - docs/roadmaps/roadmap-version-index.md

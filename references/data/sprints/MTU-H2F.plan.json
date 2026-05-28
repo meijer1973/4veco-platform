@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "sprint_id": "MTU-H2F",
+  "plan": "reports/sprints/MTU-H2F-plan.md",
+  "baseline": "reports/sprints/MTU-H2F-baseline.md",
+  "status": "planned",
+  "created": "2026-05-28",
+  "source_gate": "reports/review-gates/GATE-MTU-H2E-conditional-lane-execution/gate-closure.json",
+  "reviewed_remote_commit": "52ffc484b270182964283e20cd696aca6ce5f9e6",
+  "protected_reference_data_changes_allowed": true,
+  "protected_reference_change_method": "reference CLI only",
+  "execution_lanes": [
+    "A12",
+    "A88",
+    "A89",
+    "A90",
+    "A92",
+    "A93"
+  ],
+  "held_out_of_scope": [
+    "A20"
+  ],
+  "acceptance_tests": [
+    "node build-scripts/references/check-mtu-h2e-conditional-lane-execution-packet.js",
+    "node build-scripts/references/build-unit-index.js",
+    "node build-scripts/references/validate-core-schemas.js",
+    "node build-scripts/references/build-skilltree-generator-readiness.js",
+    "node build-scripts/references/check-skilltree-generator-readiness.js",
+    "node build-scripts/references/check-mtu-h2d-held-conditional-resolution.js",
+    "node build-scripts/sprints/check-sprint-plan.js reports/sprints/MTU-H2F-plan.md",
+    "node build-scripts/sprints/check-sprint-bundle.js MTU-H2F",
+    "node build-scripts/reports/validate-report-json.js",
+    "npm.cmd test -- --runInBand",
+    "git diff --check"
+  ],
+  "product_boundaries": {
+    "diagnostics": false,
+    "adaptive_routing": false,
+    "mastery": false,
+    "sequencing": false,
+    "student_facing_ai": false,
+    "summative_use": false,
+    "pv_projection": false,
+    "pv_machine_promotion": false,
+    "student_product_use": false
+  }
+}

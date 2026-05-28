@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-MTU-H2E",
+  "sprint_id": "MTU-H2E",
+  "date": "2026-05-28",
+  "reviewed_remote_commit": "52ffc484b270182964283e20cd696aca6ce5f9e6",
+  "remote_evidence_pushed": true,
+  "decision": "pass_with_conditions",
+  "decision_detail": "authorize_later_bounded_cli_execution_sprint_with_a20_held",
+  "mutation_authorized_now": false,
+  "student_product_use_authorized_now": false,
+  "calibration_answers": [
+    {
+      "id": "CAL-1",
+      "answer": "yes",
+      "summary": "This gate reviews H2E execution only and does not itself authorize protected reference mutation, unit minting, unit update execution, lesson output, or student/product use."
+    },
+    {
+      "id": "CAL-2",
+      "answer": "yes",
+      "summary": "The H2E packet and cited evidence were pushed to the normal remote branch before review, verified by remote fetchability."
+    },
+    {
+      "id": "CAL-3",
+      "answer": "yes",
+      "summary": "A20 remains out of scope and must stay held unless a separate split/deprecate/replacement packet handles affected mappings and generator behavior."
+    }
+  ],
+  "binding_answers": [
+    {
+      "id": "MTUH2E-Q1",
+      "decision": "accept_remote_preflight_with_stronger_closure_proof",
+      "summary": "Record reviewed remote commit/hash, require clean-worktree proof before execution, fresh ID absence for A88/A89/A90/A92/A93, and fresh A12/A20 presence checks."
+    },
+    {
+      "id": "MTUH2E-Q2",
+      "decision": "approve_a12_update_route_for_later_execution",
+      "summary": "A12 may be updated to derivative-MO wording while retaining A2.11, adding A2.10/A2.12, and reviewing existing GEN_A12 impact."
+    },
+    {
+      "id": "MTUH2E-Q3",
+      "decision": "approve_a88_a89_zero_needs",
+      "summary": "A88 and A89 zero-needs routes are accepted with explicit zero-needs rationale."
+    },
+    {
+      "id": "MTUH2E-Q4",
+      "decision": "approve_a90_linear_go_rule",
+      "summary": "A90 is accepted as the linear GO-rule MO route without derivatives; table/graph variants are deferred."
+    },
+    {
+      "id": "MTUH2E-Q5",
+      "decision": "approve_a92_a93_dependencies",
+      "summary": "A92 may depend on A04/A89; A93 may depend on A38/A92 only; broader incidence remains MTU-H3."
+    },
+    {
+      "id": "MTUH2E-Q6",
+      "decision": "accept_generator_blocked_handling_with_non_exposure_proof",
+      "summary": "A88/A89/A90/A92/A93 may be minted later as generator-blocked/not-yet-interactive, with generator-readiness refresh and no student-facing exposure."
+    },
+    {
+      "id": "MTUH2E-Q7",
+      "decision": "accept_command_rollback_validation_with_extracted_spec_logging",
+      "summary": "Each extracted JSON spec must be printed immediately before its CLI command and compared to the reviewed spec."
+    },
+    {
+      "id": "MTUH2E-Q8",
+      "decision": "keep_a20_held_and_separate",
+      "summary": "A20 remains held outside this execution packet and requires separate affected-mapping and generator-review handling."
+    },
+    {
+      "id": "MTUH2E-Q9",
+      "decision": "authorize_bounded_cli_execution_sprint",
+      "summary": "Next sprint may execute A12/A88/A89/A90/A92/A93 only, with A20 held."
+    },
+    {
+      "id": "MTUH2E-Q10",
+      "decision": "no_mutation_or_product_authority_now",
+      "summary": "This packet itself authorizes no mutation or product use."
+    }
+  ],
+  "conditions": [
+    "record_reviewed_remote_commit_hash",
+    "final_clean_worktree_or_explained_status_preflight",
+    "fresh_id_absence_check_for_a88_a89_a90_a92_a93",
+    "fresh_a12_a20_presence_check",
+    "print_and_compare_extracted_specs_before_execution",
+    "a12_dry_run_first_and_a2_11_retained",
+    "no_a20_command_execution",
+    "generator_blocked_or_implemented_status_for_a88_a89_a90_a92_a93",
+    "prove_no_student_facing_skilltree_or_pv_exposes_missing_generators",
+    "run_required_validation_stack",
+    "no_product_or_lesson_output_authority"
+  ],
+  "quality_log": [
+    {
+      "issue": "Remote publication status string is stale or ambiguous in the execution packet.",
+      "severity": "low-medium",
+      "resolution": "Closure records reviewed remote commit/hash 52ffc484b270182964283e20cd696aca6ce5f9e6 and confirms remote fetchability."
+    },
+    {
+      "issue": "New A-units lack generator implementations.",
+      "severity": "high_if_exposed",
+      "resolution": "Later execution must mark A88/A89/A90/A92/A93 generator-blocked/not-yet-interactive or implement generators, and prove no broken student-facing exposure."
+    },
+    {
+      "issue": "A20 remains unresolved.",
+      "severity": "high",
+      "resolution": "A20 is held for a separate split/deprecate/replacement and affected-mapping packet."
+    },
+    {
+      "issue": "A12 semantic update touches existing generator.",
+      "severity": "medium",
+      "resolution": "Later execution must record GEN_A12 impact review or compatibility proof."
+    }
+  ],
+  "authorized_next": {
+    "sprint_id": "MTU-H2F",
+    "name": "Conditional Solo q1-q3 CLI Execution",
+    "authority": "execute the reviewed CLI command set for A12/A88/A89/A90/A92/A93 only after final preflight and validation; keep A20 held"
+  }
+}

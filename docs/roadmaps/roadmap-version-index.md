@@ -12,12 +12,13 @@ docs/roadmaps/roadmap-version-index.json
 
 | Roadmap | Version | Path | Notes |
 |---|---|---|---|
-| References Team Roadmap | `v2.95-mtu-h2e-conditional-execution-packet` | `references/reference-team-roadmap.md` | Current operating roadmap after MTU-H2E prepared the conditional-lane execution packet. Top operational next action is GATE-MTU-H2E; the H2E review packet and cited evidence must be pushed before human review. |
+| References Team Roadmap | `v2.96-gate-mtu-h2e-pass-with-conditions` | `references/reference-team-roadmap.md` | Current operating roadmap after GATE-MTU-H2E closed as pass_with_conditions. Top operational next action is MTU-H2F conditional Solo q1-q3 CLI execution. |
 
 ## Outdated Archive
 
 | Roadmap | Version | Path | Superseded By |
 |---|---|---|---|
+| References Team Roadmap before GATE-MTU-H2E closure | `v2.95-mtu-h2e-conditional-execution-packet` | `docs/roadmaps/outdated/reference-team-roadmap-v2.95-mtu-h2e-conditional-execution-packet.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before MTU-H2E conditional execution packet | `v2.94-gate-mtu-h2d-pass-with-conditions` | `docs/roadmaps/outdated/reference-team-roadmap-v2.94-gate-mtu-h2d-pass-with-conditions.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before GATE-MTU-H2D closure | `v2.93-mtu-h2d-held-conditional-resolution` | `docs/roadmaps/outdated/reference-team-roadmap-v2.93-mtu-h2d-held-conditional-resolution.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before MTU-H2D held/conditional resolution | `v2.92-mtu-h2c-reduced-scope-cli-execution` | `docs/roadmaps/outdated/reference-team-roadmap-v2.92-mtu-h2c-reduced-scope-cli-execution.md` | `references/reference-team-roadmap.md` |

@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-MTU-H2E",
+  "sprint_id": "MTU-H2E",
+  "gate_directory": "reports/review-gates/GATE-MTU-H2E-conditional-lane-execution",
+  "date": "2026-05-28",
+  "closed_on": "2026-05-28",
+  "status": "pass_with_conditions",
+  "status_detail": "authorize_later_bounded_cli_execution_with_a20_held",
+  "decision": "PASS WITH CONDITIONS for authorizing a later bounded CLI execution sprint for A12/A88/A89/A90/A92/A93, with A20 held",
+  "closure_confirmed_by_human": true,
+  "reviewed_remote_commit": "52ffc484b270182964283e20cd696aca6ce5f9e6",
+  "remote_evidence_pushed_before_review": true,
+  "remote_publication_status_resolution": "reviewed packet was fetchable remotely; closure records reviewed commit hash",
+  "protected_reference_data_changed": false,
+  "human_interview": "reports/review-gates/GATE-MTU-H2E-conditional-lane-execution/human-interview.md",
+  "review_packet": "reports/review-gates/GATE-MTU-H2E-conditional-lane-execution/review-packet.md",
+  "execution_packet": "reports/mtu-hardening/solo-q1-q3-conditional-lane-execution-packet.json",
+  "summary": "GATE-MTU-H2E accepted the execution packet as sufficient to authorize a later bounded CLI execution sprint for A12/A88/A89/A90/A92/A93 only. A20 remains held. The packet itself authorizes no mutation or product use.",
+  "authorized_execution_lanes": [
+    {
+      "unit_id": "A12",
+      "action": "unit-update",
+      "condition": "retain A2.11 and review existing GEN_A12 impact"
+    },
+    {
+      "unit_id": "A88",
+      "action": "unit-add",
+      "condition": "zero-needs rationale retained; generator-blocked/not-yet-interactive unless GEN_A88 is implemented"
+    },
+    {
+      "unit_id": "A89",
+      "action": "unit-add",
+      "condition": "zero-needs rationale retained; generator-blocked/not-yet-interactive unless GEN_A89 is implemented"
+    },
+    {
+      "unit_id": "A90",
+      "action": "unit-add",
+      "condition": "linear GO-rule route only; table/graph non-calculus variants deferred; generator-blocked unless GEN_A90 is implemented"
+    },
+    {
+      "unit_id": "A92",
+      "action": "unit-add",
+      "condition": "depends on A04 and A89; generator-blocked unless GEN_A92 is implemented"
+    },
+    {
+      "unit_id": "A93",
+      "action": "unit-add",
+      "condition": "depends on A38 and A92 only; no A66; broader incidence remains MTU-H3; generator-blocked unless GEN_A93 is implemented"
+    }
+  ],
+  "held": [
+    {
+      "unit_id": "A20",
+      "reason": "Held for separate split/deprecate/replacement and affected-mapping/generator packet because active given-MK usage remains unresolved."
+    }
+  ],
+  "conditions": [
+    "record_reviewed_remote_commit_hash",
+    "final_clean_worktree_or_explained_status_preflight",
+    "fresh_id_absence_check_for_a88_a89_a90_a92_a93",
+    "fresh_a12_a20_presence_check",
+    "print_and_compare_extracted_specs_before_execution",
+    "a12_dry_run_first_and_a2_11_retained",
+    "no_a20_command_execution",
+    "generator_blocked_or_implemented_status_for_a88_a89_a90_a92_a93",
+    "prove_no_student_facing_skilltree_or_pv_exposes_missing_generators",
+    "run_required_validation_stack",
+    "no_product_or_lesson_output_authority"
+  ],
+  "authority_boundary": {
+    "protected_reference_mutation_authorized_by_this_packet": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized_by_this_packet": false,
+    "unit_minting_authorized_by_this_packet": false,
+    "unit_update_execution_authorized_by_this_packet": false,
+    "unit_split_execution_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "target_exercise_promotion_authorized": false,
+    "cp6_closure_authorized": false,
+    "year1_closure_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "student_product_use_authorized": false
+  },
+  "quality_log": [
+    {
+      "issue": "Remote publication status string is stale or ambiguous.",
+      "severity": "low-medium",
+      "resolution": "Closure records reviewed remote commit/hash 52ffc484b270182964283e20cd696aca6ce5f9e6."
+    },
+    {
+      "issue": "New A-units lack generator implementations.",
+      "severity": "high_if_exposed",
+      "resolution": "Later execution must mark A88/A89/A90/A92/A93 generator-blocked/not-yet-interactive or implement generators, and prove no broken student-facing exposure."
+    },
+    {
+      "issue": "A20 remains unresolved.",
+      "severity": "high",
+      "resolution": "A20 is held for a separate split/deprecate/replacement and affected-mapping packet."
+    },
+    {
+      "issue": "A12 semantic update touches existing generator.",
+      "severity": "medium",
+      "resolution": "Later execution must record GEN_A12 impact review or compatibility proof."
+    }
+  ],
+  "authorized_next": {
+    "sprint_id": "MTU-H2F",
+    "name": "Conditional Solo q1-q3 CLI Execution",
+    "authority": "execute reviewed CLI command set for A12/A88/A89/A90/A92/A93 only after final preflight and validation; keep A20 held"
+  }
+}
