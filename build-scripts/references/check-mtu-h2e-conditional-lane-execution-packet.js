@@ -351,8 +351,8 @@ for (const required of [
 const firstRowMatch = roadmap.match(/\| Sprint \| Name \| Completed \| Current State \|\s*\n\|[-|]+\|\s*\n(\|[^\n]+\|)/);
 if (!firstRowMatch) fail('could not find first Sprint Ledger row in roadmap');
 const firstRow = firstRowMatch[1];
-if (!/\| (MTU-H2G|MTU-H2F|GATE-MTU-H2E|MTU-H2E) \|/.test(firstRow)) {
-  fail('first Sprint Ledger row must be MTU-H2G, MTU-H2F, GATE-MTU-H2E, or MTU-H2E for H2E lifecycle');
+if (!/\| (GATE-MTU-H2G|MTU-H2G|MTU-H2F|GATE-MTU-H2E|MTU-H2E) \|/.test(firstRow)) {
+  fail('first Sprint Ledger row must be GATE-MTU-H2G, MTU-H2G, MTU-H2F, GATE-MTU-H2E, or MTU-H2E for H2E lifecycle');
 }
 if (!firstRow.includes('ACTIVE OPERATIONAL NEXT ACTION')) fail('first row must state ACTIVE OPERATIONAL NEXT ACTION');
 

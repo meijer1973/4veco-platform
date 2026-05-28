@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-05-28T10:02:39.563Z
+Generated: 2026-05-28T11:16:47.400Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 1924
+Files indexed: 1933
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -596,7 +596,7 @@ Count: 114
 
 ## references
 
-Count: 324
+Count: 326
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -711,6 +711,8 @@ Count: 324
 - references/data/sprints/MTU-H2E.plan.json
 - references/data/sprints/MTU-H2E.result.json
 - references/data/sprints/MTU-H2F.plan.json
+- references/data/sprints/MTU-H2F.result.json
+- references/data/sprints/MTU-H2G.plan.json
 - references/data/sprints/PV-G4.plan.json
 - references/data/sprints/PV.1.plan.json
 - references/data/sprints/PV.1.result.json
@@ -925,7 +927,7 @@ Count: 324
 
 ## reports
 
-Count: 922
+Count: 928
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1633,7 +1635,13 @@ Count: 922
 - reports/sprints/MTU-H2E-plan.md
 - reports/sprints/MTU-H2E-result.md
 - reports/sprints/MTU-H2F-baseline.md
+- reports/sprints/MTU-H2F-diff-summary.md
+- reports/sprints/MTU-H2F-execution-log.json
+- reports/sprints/MTU-H2F-execution-log.md
 - reports/sprints/MTU-H2F-plan.md
+- reports/sprints/MTU-H2F-result.md
+- reports/sprints/MTU-H2G-baseline.md
+- reports/sprints/MTU-H2G-plan.md
 - reports/sprints/PV-G4-baseline.md
 - reports/sprints/PV.1-baseline.md
 - reports/sprints/PV.1-diff-summary.md
@@ -1870,7 +1878,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 241
+Count: 242
 
 - .gitignore
 - BUILD-CHAPTER.md
@@ -1970,6 +1978,7 @@ Count: 241
 - docs/roadmaps/outdated/reference-team-roadmap-v2.93-mtu-h2d-held-conditional-resolution.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.94-gate-mtu-h2d-pass-with-conditions.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.95-mtu-h2e-conditional-execution-packet.md
+- docs/roadmaps/outdated/reference-team-roadmap-v2.96-gate-mtu-h2e-pass-with-conditions.md
 - docs/roadmaps/README.md
 - docs/roadmaps/roadmap-version-index.json
 - docs/roadmaps/roadmap-version-index.md

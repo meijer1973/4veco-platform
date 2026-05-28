@@ -1,17 +1,17 @@
 {
   "generated_by": "build-scripts/references/build-source-document-registry.js",
-  "generated_on": "2026-05-28T10:02:39.675Z",
+  "generated_on": "2026-05-28T11:16:47.099Z",
   "status": "pass",
   "summary": {
-    "record_count": 321,
-    "source_manifest_file_count": 326,
+    "record_count": 322,
+    "source_manifest_file_count": 327,
     "by_authority_level": {
       "external_primary": 30,
       "machine_registry": 5,
       "owned_curriculum_design": 5,
       "authored_judgement": 9,
       "generated_report": 2,
-      "governance_data": 236,
+      "governance_data": 237,
       "quality_protocol": 5,
       "planning": 1,
       "machine_contract": 28
@@ -28,7 +28,7 @@
       "inventory": 34,
       "exercise_metadata_overlay": 6,
       "exercise_overlay_readme": 1,
-      "sprint_metadata": 193,
+      "sprint_metadata": 194,
       "machine_projection": 3,
       "owned_source_readme": 1,
       "qc_prompt": 5,
@@ -44,7 +44,7 @@
       "archived": 1,
       "generated_diagnostic": 2,
       "mirrored": 25,
-      "governance_data": 234,
+      "governance_data": 235,
       "planning": 1,
       "schema_contract": 28
     },
@@ -52,7 +52,7 @@
       "public_citation_allowed_with_source_name": 30,
       "internal_only": 19,
       "internal_diagnostic_only": 2,
-      "not_public_citation_source": 270
+      "not_public_citation_source": 271
     },
     "evidence_anchor_coverage": {
       "required_document_ids": [
@@ -5029,7 +5029,7 @@
       "title": "MTU H2G.Plan",
       "source_type": "sprint_metadata",
       "authority_level": "governance_data",
-      "source_version": "sha256:1ff4d9fa8a540a5cc76b22579f73913667e7fa13520d3fc4c9ea3c2d1892a0b0",
+      "source_version": "sha256:e5a474f00f315fd55295b97e474295531a980eb4605f29baccabc9ab374dd4af",
       "status": "governance_data",
       "owner": "references_team",
       "citation_policy": "cite_as_governance_record_only",
@@ -5038,8 +5038,46 @@
       "generated_status": "generated_or_sprint_metadata",
       "edit_policy": "sprint_process",
       "refresh_policy": "sprint_lifecycle",
-      "source_hash": "1ff4d9fa8a540a5cc76b22579f73913667e7fa13520d3fc4c9ea3c2d1892a0b0",
-      "size_bytes": 1224,
+      "source_hash": "e5a474f00f315fd55295b97e474295531a980eb4605f29baccabc9ab374dd4af",
+      "size_bytes": 1999,
+      "primary_evidence": false,
+      "curriculum_authority": false,
+      "allowed_downstream_uses": [
+        "internal_reference_context",
+        "rag_retrieval_with_authority_label"
+      ],
+      "blocked_downstream_uses": [
+        "student_diagnostics",
+        "adaptive_routing",
+        "student_facing_ai",
+        "automatic_lesson_sequencing",
+        "automatic_mastery_decisions",
+        "summative_assessment_decisions",
+        "external_authority",
+        "override_machine_registry"
+      ],
+      "evidence_anchor_ids": [],
+      "notes": [
+        "Governance data is canonical only for its declared governance artifact."
+      ]
+    },
+    {
+      "document_id": "path-references-data-sprints-mtu-h2g-result",
+      "path": "references/data/sprints/MTU-H2G.result.json",
+      "title": "MTU H2G.Result",
+      "source_type": "sprint_metadata",
+      "authority_level": "governance_data",
+      "source_version": "sha256:8882cceb8cf1d7a3183d8def4ac903de22381eafba6e1c2d83d3e1092934577f",
+      "status": "governance_data",
+      "owner": "references_team",
+      "citation_policy": "cite_as_governance_record_only",
+      "public_citation_policy": "not_public_citation_source",
+      "layer": "governance_data",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "refresh_policy": "sprint_lifecycle",
+      "source_hash": "8882cceb8cf1d7a3183d8def4ac903de22381eafba6e1c2d83d3e1092934577f",
+      "size_bytes": 3749,
       "primary_evidence": false,
       "curriculum_authority": false,
       "allowed_downstream_uses": [
@@ -10575,7 +10613,7 @@
       "title": "Reference Team Roadmap",
       "source_type": "roadmap",
       "authority_level": "planning",
-      "source_version": "sha256:8c4140b6b7bd382fde9a215e2f3412ccc87db38e1808653f0b8fccdb131fe2ef",
+      "source_version": "sha256:b15927dcde66ee6171bf5b32ae81a64b927ab2869c7fc73f3b6c5664a170726f",
       "status": "planning",
       "owner": "references_team",
       "citation_policy": "citation_requires_review",
@@ -10584,8 +10622,8 @@
       "generated_status": "manual_source",
       "edit_policy": "human_reviewed_edit",
       "refresh_policy": "roadmap_update",
-      "source_hash": "8c4140b6b7bd382fde9a215e2f3412ccc87db38e1808653f0b8fccdb131fe2ef",
-      "size_bytes": 235660,
+      "source_hash": "b15927dcde66ee6171bf5b32ae81a64b927ab2869c7fc73f3b6c5664a170726f",
+      "size_bytes": 236629,
       "primary_evidence": false,
       "curriculum_authority": false,
       "allowed_downstream_uses": [

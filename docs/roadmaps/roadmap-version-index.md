@@ -12,12 +12,13 @@ docs/roadmaps/roadmap-version-index.json
 
 | Roadmap | Version | Path | Notes |
 |---|---|---|---|
-| References Team Roadmap | `v2.97-mtu-h2f-conditional-cli-execution` | `references/reference-team-roadmap.md` | Current operating roadmap after MTU-H2F executed the conditional Solo q1-q3 CLI lanes. Top operational next action is MTU-H2G A20 split/replacement and affected-mapping packet. |
+| References Team Roadmap | `v2.98-mtu-h2g-a20-split-packet` | `references/reference-team-roadmap.md` | Current operating roadmap after MTU-H2G prepared the non-mutating A20 split/replacement and affected-mapping packet. Top operational next action is GATE-MTU-H2G human review. |
 
 ## Outdated Archive
 
 | Roadmap | Version | Path | Superseded By |
 |---|---|---|---|
+| References Team Roadmap before MTU-H2G A20 split packet | `v2.97-mtu-h2f-conditional-cli-execution` | `docs/roadmaps/outdated/reference-team-roadmap-v2.97-mtu-h2f-conditional-cli-execution.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before MTU-H2F conditional CLI execution | `v2.96-gate-mtu-h2e-pass-with-conditions` | `docs/roadmaps/outdated/reference-team-roadmap-v2.96-gate-mtu-h2e-pass-with-conditions.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before GATE-MTU-H2E closure | `v2.95-mtu-h2e-conditional-execution-packet` | `docs/roadmaps/outdated/reference-team-roadmap-v2.95-mtu-h2e-conditional-execution-packet.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before MTU-H2E conditional execution packet | `v2.94-gate-mtu-h2d-pass-with-conditions` | `docs/roadmaps/outdated/reference-team-roadmap-v2.94-gate-mtu-h2d-pass-with-conditions.md` | `references/reference-team-roadmap.md` |

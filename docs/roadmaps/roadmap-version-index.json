@@ -15,13 +15,14 @@
   "roadmaps": [
     {
       "roadmap_id": "references-team-roadmap",
-      "version": "v2.97-mtu-h2f-conditional-cli-execution",
+      "version": "v2.98-mtu-h2g-a20-split-packet",
       "title": "References Team Roadmap",
       "status": "active",
       "path": "references/reference-team-roadmap.md",
       "owner": "references_team",
       "updated_on": "2026-05-28",
       "supersedes": [
+        "docs/roadmaps/outdated/reference-team-roadmap-v2.97-mtu-h2f-conditional-cli-execution.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.96-gate-mtu-h2e-pass-with-conditions.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.95-mtu-h2e-conditional-execution-packet.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.94-gate-mtu-h2d-pass-with-conditions.md",
@@ -118,7 +119,18 @@
         "knowledge/Exercise schema and quality/reference-team-roadmap Live version 28 April.md",
         "knowledge/Exercise schema and quality/roadmap-updated-repository-checked.md"
       ],
-      "notes": "Current operating roadmap after MTU-H2F executed the conditional Solo q1-q3 CLI lanes. Top operational next action is MTU-H2G A20 split/replacement and affected-mapping packet."
+      "notes": "Current operating roadmap after MTU-H2G prepared the non-mutating A20 split/replacement and affected-mapping packet. Top operational next action is GATE-MTU-H2G human review."
+    },
+    {
+      "roadmap_id": "references-team-roadmap-v2.97",
+      "version": "v2.97-mtu-h2f-conditional-cli-execution",
+      "title": "References Team Roadmap before MTU-H2G A20 split packet",
+      "status": "outdated",
+      "path": "docs/roadmaps/outdated/reference-team-roadmap-v2.97-mtu-h2f-conditional-cli-execution.md",
+      "owner": "references_team",
+      "updated_on": "2026-05-28",
+      "superseded_by": "references/reference-team-roadmap.md",
+      "notes": "Snapshot archived before MTU-H2G prepared the non-mutating A20 split/replacement and affected-mapping packet and moved the top operational next action to GATE-MTU-H2G."
     },
     {
       "roadmap_id": "references-team-roadmap-v2.96",

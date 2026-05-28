@@ -106,6 +106,7 @@ commands, rollback, validation, and affected-mapping updates.
 ```bash
 node build-scripts/sprints/check-sprint-plan.js reports/sprints/MTU-H2G-plan.md
 node build-scripts/sprints/check-sprint-bundle.js MTU-H2G
+node build-scripts/references/check-mtu-h2g-a20-split-packet.js
 node build-scripts/references/check-mtu-h2e-conditional-lane-execution-packet.js
 node build-scripts/references/check-mtu-h2d-held-conditional-resolution.js
 node build-scripts/references/build-unit-index.js
