@@ -1,0 +1,167 @@
+{
+  "schema_version": 1,
+  "sprint_id": "MTU-H3C",
+  "status": "completed",
+  "completed_on": "2026-05-28",
+  "plan": "reports/sprints/MTU-H3C-plan.md",
+  "baseline": "reports/sprints/MTU-H3C-baseline.md",
+  "result": "reports/sprints/MTU-H3C-result.md",
+  "diff_summary": "reports/sprints/MTU-H3C-diff-summary.md",
+  "execution_log": "reports/sprints/MTU-H3C-execution-log.json",
+  "source_gate": "reports/review-gates/GATE-MTU-H3B-incidence-cli-execution/gate-closure.json",
+  "reviewed_remote_commit": "ad7d69c3836176a10111384aeb640d49e93b705d",
+  "protected_reference_data_changed": true,
+  "protected_reference_change_method": "reference CLI only",
+  "machine_reference_mutation_executed": true,
+  "external_source_changed": false,
+  "external_source_mutated": false,
+  "authored_reference_mutation_executed": true,
+  "unit_minting_executed": true,
+  "unit_update_executed": true,
+  "unit_split_executed": false,
+  "generator_source_changed": false,
+  "generated_projection_refresh_executed": true,
+  "candidate_storage_created": false,
+  "candidate_writes": false,
+  "lesson_output_mutated": false,
+  "target_exercise_promoted": false,
+  "pv_projection_authorized": false,
+  "pv_machine_promotion_authorized": false,
+  "student_product_use_allowed": false,
+  "executed_lanes": [
+    "D41",
+    "D42",
+    "D43",
+    "D45",
+    "D46",
+    "D07",
+    "target-exercise-3.1.1",
+    "target-exercise-3.1.2",
+    "target-exercise-3.1.3"
+  ],
+  "held_lanes": [
+    "D44"
+  ],
+  "unchanged_boundaries": [
+    "A93"
+  ],
+  "student_facing_skilltree_use_authorized": false,
+  "product_boundaries": {
+    "diagnostics": false,
+    "adaptive_routing": false,
+    "mastery": false,
+    "sequencing": false,
+    "student_facing_ai": false,
+    "summative_use": false,
+    "pv_projection": false,
+    "pv_machine_promotion": false,
+    "student_product_use": false
+  },
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/references/check-mtu-h3c-incidence-cli-execution.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-mtu-h3b-incidence-cli-execution-packet.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-mtu-h3a-incidence-cli-mutation-plan.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-mtu-h3-incidence-pass-through-review.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/build-unit-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/validate-core-schemas.js",
+      "status": "passed"
+    },
+    {
+      "command": "node scripts/check-course-target-exercises-v5.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/build-owned-content-graph.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-owned-content-graph.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/rag/build-chunks.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/rag/validate-chunks.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/build-procedure-visual-inventory.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-procedure-visual-inventory.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/build-procedure-visual-coverage.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-procedure-visual-coverage.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/MTU-H3C-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js MTU-H3C --complete",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-roadmap-version-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-source-document-registry.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-source-manifest.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-document-inventory.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js --check",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/validate-report-json.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd test -- --runInBand",
+      "status": "passed"
+    },
+    {
+      "command": "git diff --check",
+      "status": "passed"
+    }
+  ],
+  "open_follow_ups": [
+    "Proceed to MTU-H4 answer-form MTUs and question-type mapping.",
+    "Keep D44 held until target evidence explicitly asks for subsidy benefit-sharing.",
+    "Add a separate numeric supply-elasticity unit only if later exam evidence requires it."
+  ]
+}

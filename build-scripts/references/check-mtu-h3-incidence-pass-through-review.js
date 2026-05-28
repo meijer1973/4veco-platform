@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 /**
  * HOW TO ADAPT
- * - Keep this checker non-mutating: it verifies review artifacts and current
- *   evidence only.
+ * - Keep this checker non-mutating: it verifies review artifacts and either
+ *   the pre-H3A planning evidence or post-H3C executed lifecycle evidence.
  * - If GATE-MTU-H3 closes with different accepted lane labels, update the
  *   planning-only candidate list here and in the packet together.
  * - Do not use this checker to write references/machine or references/external.
@@ -132,7 +132,16 @@ for (const id of ['D07', 'D05', 'A23', 'A41', 'A93', 'D19', 'D29']) {
   if (!unitMap.has(id)) fail(`live unit ${id} must exist`);
 }
 const d07 = unitMap.get('D07');
-if (!d07.needs.includes('D05') || !d07.needs.includes('A15')) fail('D07 baseline needs must include D05 and A15');
+const executedIds = ['D41', 'D42', 'D43', 'D45', 'D46'];
+const preH3APlanning = !['D41', 'D42', 'D43', 'D44', 'D45', 'D46'].some((id) => unitMap.has(id))
+  && d07.needs.includes('D05')
+  && d07.needs.includes('A15');
+const postH3CExecution = executedIds.every((id) => unitMap.has(id))
+  && !unitMap.has('D44')
+  && JSON.stringify(d07.needs) === JSON.stringify(['D42', 'A38']);
+if (!preH3APlanning && !postH3CExecution) {
+  fail('live catalog must be either pre-H3A planning evidence or post-H3C executed state');
+}
 if (!String(d07.kern).includes('percentage')) fail('D07 baseline kern must mention percentage');
 const a93 = unitMap.get('A93');
 if (!String(a93.kern).includes('onderscheid dit van pass-through')) {
@@ -140,20 +149,27 @@ if (!String(a93.kern).includes('onderscheid dit van pass-through')) {
 }
 
 for (const id of ['D41', 'D42', 'D43', 'D44', 'D45', 'D46']) {
-  if (unitMap.has(id)) fail(`${id} must remain planning-only and absent before later mutation planning`);
   const lane = packet.planning_only_candidate_lanes.find((item) => item.candidate_id === id);
   if (!lane) fail(`packet missing planning-only lane ${id}`);
   if (!String(lane.status).includes('planning_only_absent_id')) fail(`${id} lane must be marked planning-only absent`);
+  if (preH3APlanning && unitMap.has(id)) fail(`${id} must remain planning-only and absent before later mutation planning`);
 }
+if (postH3CExecution && unitMap.has('D44')) fail('D44 must remain held and absent after H3C execution');
 
 const exercises = targetData.exercises || targetData;
 const e311 = targetById(exercises, '3.1.1');
 const e312 = targetById(exercises, '3.1.2');
 const e313 = targetById(exercises, '3.1.3');
 const e416 = targetById(exercises, '4.1.6');
-if (!hasSkill(e311, 'D07')) fail('3.1.1 must still show current D07 over-trigger evidence');
-if (!hasSkill(e312, 'D07')) fail('3.1.2 must still show current D07 evidence');
-if (hasSkill(e313, 'D07')) fail('3.1.3 must not already use D07');
+if (preH3APlanning) {
+  if (!hasSkill(e311, 'D07')) fail('3.1.1 must still show current D07 over-trigger evidence');
+  if (!hasSkill(e312, 'D07')) fail('3.1.2 must still show current D07 evidence');
+  if (hasSkill(e313, 'D07')) fail('3.1.3 must not already use D07');
+} else {
+  if (!hasSkill(e311, 'D41') || hasSkill(e311, 'D07')) fail('3.1.1 must show post-H3C D41 route without D07');
+  if (!hasSkill(e312, 'D42') || !hasSkill(e312, 'D07')) fail('3.1.2 must show post-H3C D42 plus narrowed D07 route');
+  if (!hasSkill(e313, 'D43') || hasSkill(e313, 'D44')) fail('3.1.3 must show post-H3C D43 route with D44 held');
+}
 if (hasSkill(e416, 'D07')) fail('4.1.6 must not already use D07');
 
 const e311Evidence = packet.target_exercise_evidence.find((item) => item.record_id === '3.1.1');
@@ -175,7 +191,7 @@ requireIncludes(bundle, 'review-packet.json', 'bundle urls');
 requireIncludes(h2jResult, 'MTU-H3', 'H2J result');
 requireIncludes(roadmap, 'GATE-MTU-H3');
 requireIncludes(roadmap, 'MTU-H3 | Incidence Pass-Through Skill Family Review | yes');
-if (!/v3\.0[345678]-(?:mtu-h3-review-packet|gate-mtu-h3-pass-with-conditions|mtu-h3a-cli-mutation-plan|gate-mtu-h3a-pass-with-conditions|mtu-h3b-incidence-execution-packet|gate-mtu-h3b-pass-with-conditions)/.test(roadmap)) {
+if (!/v3\.0[3456789]-(?:mtu-h3-review-packet|gate-mtu-h3-pass-with-conditions|mtu-h3a-cli-mutation-plan|gate-mtu-h3a-pass-with-conditions|mtu-h3b-incidence-execution-packet|gate-mtu-h3b-pass-with-conditions|mtu-h3c-incidence-executed)/.test(roadmap)) {
   fail('roadmap must be in MTU-H3 review or post-GATE-MTU-H3 closure lifecycle state');
 }
 

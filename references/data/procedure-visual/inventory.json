@@ -4,7 +4,7 @@
   "sprint_id": "PV.1",
   "status": "completed_inventory",
   "generated_by": "build-scripts/references/build-procedure-visual-inventory.js",
-  "generated_on": "2026-05-28T13:54:11.519Z",
+  "generated_on": "2026-05-28T17:12:16.793Z",
   "storage_decision": {
     "inventory_location": "references/data/procedure-visual/inventory.json",
     "machine_registry_created": false,
@@ -69,15 +69,15 @@
     },
     "generator_blocked_pilot_count": 8,
     "provisional_operation_reference_count": 7,
-    "apply_units_with_procedure_count": 129,
-    "apply_units_with_procedure_not_ranked_count": 117,
+    "apply_units_with_procedure_count": 133,
+    "apply_units_with_procedure_not_ranked_count": 121,
     "source_data_book_1_file_count": 4,
     "source_data_book_1_procedure_data_file_count": 0
   },
   "runtime_surface_findings": {
     "micro_teaching_unit_procedures": {
       "status": "prose_procedure_steps_exist",
-      "live_apply_units_with_procedures": 129,
+      "live_apply_units_with_procedures": 133,
       "limitation": "Procedure steps are Dutch sentence strings, not formal actions with input/output refs or visual-state refs."
     },
     "skill_operation_registry": {

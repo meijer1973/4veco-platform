@@ -1535,7 +1535,7 @@
         "A23",
         "A41",
         "D05",
-        "D07"
+        "D41"
       ],
       "prior_knowledge_assumed": [
         "A06"
@@ -1544,11 +1544,9 @@
         "A23",
         "A41",
         "D05",
-        "D07"
+        "D41"
       ],
-      "missing_units_flagged": [
-        "Distinguish consumer price Pc vs producer price Pp and the tax wedge = Pc − Pp (concept-level + grafisch)"
-      ],
+      "missing_units_flagged": [],
       "exam_codes": [
         "A2.10",
         "A2.14",
@@ -1617,6 +1615,8 @@
         "A32",
         "A40",
         "D03",
+        "D41",
+        "D42",
         "D07"
       ],
       "prior_knowledge_assumed": [
@@ -1624,14 +1624,15 @@
         "A19",
         "A23",
         "A40",
-        "D07"
+        "D41"
       ],
       "new_skills_introduced": [
         "A32",
-        "D03"
+        "D03",
+        "D42",
+        "D07"
       ],
       "missing_units_flagged": [
-        "Compute afwentelingspercentage = (Pc − P*) / tax × 100 and interpret it (A-domain candidate; the consumer-burden metric)",
         "Apply the surplus-accounting identity: old TS = new CS + new PS + tax revenue + DWL (concept-level, completeness check)"
       ],
       "exam_codes": [
@@ -1705,7 +1706,8 @@
         "A27",
         "A41",
         "D19",
-        "D29"
+        "D29",
+        "D43"
       ],
       "prior_knowledge_assumed": [
         "A06",
@@ -1716,7 +1718,8 @@
       "new_skills_introduced": [
         "A27",
         "D19",
-        "D29"
+        "D29",
+        "D43"
       ],
       "missing_units_flagged": [
         "Explain that subsidies cause DWL via overproduction beyond the Pareto-efficient quantity (concept-level, counterintuitive to students)",

@@ -3,7 +3,7 @@
   "graph_id": "owned-content-graph",
   "sprint_id": "R9.2",
   "generated_by": "build-scripts/references/build-owned-content-graph.js",
-  "generated_on": "2026-05-28T13:54:00Z",
+  "generated_on": "2026-05-28T17:12:12Z",
   "source_files": [
     "references/data/owned-source-registry.json",
     "references/authored/course-target-exercises.json",
@@ -21,8 +21,8 @@
     "external_authority_edges_created": false,
     "student_facing_uses_blocked": true
   },
-  "node_count": 910,
-  "edge_count": 1286,
+  "node_count": 911,
+  "edge_count": 1292,
   "nodes": [
     {
       "node_id": "blueprint_chapter:1.1",
@@ -5692,21 +5692,9 @@
       "flag": "v5_placeholder_needs_review"
     },
     {
-      "node_id": "quality_issue:3.1.1:missing-unit-1",
-      "node_type": "quality_issue",
-      "label": "3.1.1 missing unit flag 1",
-      "flag": "Distinguish consumer price Pc vs producer price Pp and the tax wedge = Pc − Pp (concept-level + grafisch)"
-    },
-    {
       "node_id": "quality_issue:3.1.2:missing-unit-1",
       "node_type": "quality_issue",
       "label": "3.1.2 missing unit flag 1",
-      "flag": "Compute afwentelingspercentage = (Pc − P*) / tax × 100 and interpret it (A-domain candidate; the consumer-burden metric)"
-    },
-    {
-      "node_id": "quality_issue:3.1.2:missing-unit-2",
-      "node_type": "quality_issue",
-      "label": "3.1.2 missing unit flag 2",
       "flag": "Apply the surplus-accounting identity: old TS = new CS + new PS + tax revenue + DWL (concept-level, completeness check)"
     },
     {
@@ -6937,6 +6925,21 @@
       "label": "D37"
     },
     {
+      "node_id": "unit:D41",
+      "node_type": "unit",
+      "label": "D41"
+    },
+    {
+      "node_id": "unit:D42",
+      "node_type": "unit",
+      "label": "D42"
+    },
+    {
+      "node_id": "unit:D43",
+      "node_type": "unit",
+      "label": "D43"
+    },
+    {
       "node_id": "unit:F05",
       "node_type": "unit",
       "label": "F05"
@@ -7890,7 +7893,7 @@
         "A23",
         "A41",
         "D05",
-        "D07"
+        "D41"
       ],
       "term_ids": [
         "evenwichtshoeveelheid",
@@ -7907,7 +7910,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "75bcc1e167499fca8c6d84d5a2ac7a87852f56ea4f3ea3dbe80dd64eb8a5b363"
+      "source_hash": "0234f35994534d63030ba4b9f2288ba6834e6b5f4d3e572d94b0cddefdb23fe9"
     },
     {
       "edge_id": "OCG-BLUEPRINT-PROJECTS-TO-CHAPTER-BLUEPRINT-COURSE-BLUEPRINT-V5-BLUEPRINT-CHAPTER-3.1-3.1.2-3.1.2-REFERENCES-OWNED-COURSE-BLUEPRINT-V5.MD",
@@ -7929,7 +7932,9 @@
         "A32",
         "A40",
         "D03",
-        "D07"
+        "D07",
+        "D41",
+        "D42"
       ],
       "term_ids": [
         "consumentensurplus",
@@ -7947,7 +7952,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "8efca85060af784a8a1e11a7cdef7bcae46324c9d690fbd671defc2481fa9dc2"
+      "source_hash": "4e23585477940c82affea09637916b416c52dae8931ab4b3c637d99213fab25b"
     },
     {
       "edge_id": "OCG-BLUEPRINT-PROJECTS-TO-CHAPTER-BLUEPRINT-COURSE-BLUEPRINT-V5-BLUEPRINT-CHAPTER-3.1-3.1.3-3.1.3-REFERENCES-OWNED-COURSE-BLUEPRINT-V5.MD",
@@ -7969,7 +7974,8 @@
         "A27",
         "A41",
         "D19",
-        "D29"
+        "D29",
+        "D43"
       ],
       "term_ids": [
         "evenwichtshoeveelheid",
@@ -7989,7 +7995,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "635826df77de2c6cf61b765bf789d0bf3c87c1026e200ee86b3f2d921ed891c9"
+      "source_hash": "a304501f4ef8eb2a0283389078202f4c0538b444c17995a8ea7d81be1d18b7d2"
     },
     {
       "edge_id": "OCG-BLUEPRINT-PROJECTS-TO-CHAPTER-BLUEPRINT-COURSE-BLUEPRINT-V5-BLUEPRINT-CHAPTER-3.1-3.1.4-3.1.4-REFERENCES-OWNED-COURSE-BLUEPRINT-V5.MD",
@@ -9706,7 +9712,7 @@
         "A23",
         "A41",
         "D05",
-        "D07"
+        "D41"
       ],
       "term_ids": [
         "evenwichtshoeveelheid",
@@ -9723,7 +9729,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "95d8a41d6cb847c4671419c43bb077dae3c9107e8d79e97a951154525f5bafca"
+      "source_hash": "0cade720f8a7c30eeb30149d05ce10c16eb61afff15448d6b862d454bf9dd0b3"
     },
     {
       "edge_id": "OCG-CHAPTER-PROJECTS-TO-PARAGRAPH-BLUEPRINT-CHAPTER-3.1-PARAGRAPH-3.1.2-3.1.2-3.1.2-REFERENCES-OWNED-COURSE-BLUEPRINT-V5.MD",
@@ -9745,7 +9751,9 @@
         "A32",
         "A40",
         "D03",
-        "D07"
+        "D07",
+        "D41",
+        "D42"
       ],
       "term_ids": [
         "consumentensurplus",
@@ -9763,7 +9771,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "b7191b0b92dbb1dc851bf2a6af83d4744a1dcb69428c8b4071c2c907a3e0194e"
+      "source_hash": "e77329892fc6a6b289573354bb2e105fc59d8b5a05b05f990f891c3dd418c1da"
     },
     {
       "edge_id": "OCG-CHAPTER-PROJECTS-TO-PARAGRAPH-BLUEPRINT-CHAPTER-3.1-PARAGRAPH-3.1.3-3.1.3-3.1.3-REFERENCES-OWNED-COURSE-BLUEPRINT-V5.MD",
@@ -9785,7 +9793,8 @@
         "A27",
         "A41",
         "D19",
-        "D29"
+        "D29",
+        "D43"
       ],
       "term_ids": [
         "evenwichtshoeveelheid",
@@ -9805,7 +9814,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "40b81af9f1b12c093beb74a272f17aba97e4f0caa555db97342172983a46302a"
+      "source_hash": "d50320fdbcdf9792d82dfeec806896a85140e7f1a4e5becb7f1b27ab09b73be9"
     },
     {
       "edge_id": "OCG-CHAPTER-PROJECTS-TO-PARAGRAPH-BLUEPRINT-CHAPTER-3.1-PARAGRAPH-3.1.4-3.1.4-3.1.4-REFERENCES-OWNED-COURSE-BLUEPRINT-V5.MD",
@@ -32479,7 +32488,7 @@
         "A23",
         "A41",
         "D05",
-        "D07"
+        "D41"
       ],
       "term_ids": [
         "evenwichtshoeveelheid",
@@ -32496,7 +32505,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "1bb98b0b446fe56e204bfb05cee10a06a690c59f3e3a9a0d9583e81ff5df6c31"
+      "source_hash": "4ab771b3de98d30e09e68a972f9a4ac5c805ce0187f7822c9ed155701a796a68"
     },
     {
       "edge_id": "OCG-PARAGRAPH-HAS-TARGET-EXERCISE-PARAGRAPH-3.1.2-TARGET-EXERCISE-3.1.2-3.1.2-3.1.2-REFERENCES-AUTHORED-COURSE-TARGET-EXERCISES.JSON",
@@ -32518,7 +32527,9 @@
         "A32",
         "A40",
         "D03",
-        "D07"
+        "D07",
+        "D41",
+        "D42"
       ],
       "term_ids": [
         "consumentensurplus",
@@ -32536,7 +32547,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "88277f7bb089f5edec9c7c026a4e2a3aa8e7736f9520c39812b529cb3da8ded4"
+      "source_hash": "8b2ce385cd9afc0b7e9aec4d0f7e3e8bc0cd7534d3c6f150de21c8a75ea8660e"
     },
     {
       "edge_id": "OCG-PARAGRAPH-HAS-TARGET-EXERCISE-PARAGRAPH-3.1.3-TARGET-EXERCISE-3.1.3-3.1.3-3.1.3-REFERENCES-AUTHORED-COURSE-TARGET-EXERCISES.JSON",
@@ -32558,7 +32569,8 @@
         "A27",
         "A41",
         "D19",
-        "D29"
+        "D29",
+        "D43"
       ],
       "term_ids": [
         "evenwichtshoeveelheid",
@@ -32578,7 +32590,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "d6996c236368d5db24fdc72d52ed41dd57428d7c545eecf79affe090ead8da23"
+      "source_hash": "4fbccd0b64fb25a161b0421cb380d1052b0662b5a12f41dd9e14d9ae9cd09e4c"
     },
     {
       "edge_id": "OCG-PARAGRAPH-HAS-TARGET-EXERCISE-PARAGRAPH-3.1.4-TARGET-EXERCISE-3.1.4-3.1.4-3.1.4-REFERENCES-AUTHORED-COURSE-TARGET-EXERCISES.JSON",
@@ -36154,96 +36166,6 @@
       "source_hash": "e50b974174ccc6797949e81488f62b5ecec486d3a6590f818da20209969ec4bb"
     },
     {
-      "edge_id": "OCG-PROJECTED-UNIT-USES-TERM-UNIT-D07-TERM-EVENWICHTSPRIJS-3.1.1-3.1.1-REFERENCES-MACHINE-MICRO-TEACHING-UNITS.JSON",
-      "from": "unit:D07",
-      "to": "term:evenwichtsprijs",
-      "relation": "projected_unit_uses_term",
-      "edge_type": "projection",
-      "source_path": "references/machine/micro-teaching-units.json",
-      "source_surface_type": "machine_unit_term_projection",
-      "source_status": "generated_projection",
-      "authority_level": "machine_registry",
-      "authority_weight": 80,
-      "paragraph_id": "3.1.1",
-      "record_id": "3.1.1",
-      "unit_ids": [
-        "D07"
-      ],
-      "term_ids": [
-        "evenwichtsprijs"
-      ],
-      "primary_evidence": false,
-      "evidence_status": "projection_only",
-      "generated_artifact_warning": true,
-      "not_external_authority": true,
-      "not_machine_registry_authority": true,
-      "notes": "Term projection copied from machine unit metadata for owned-content navigation; not a new machine edit.",
-      "review_status": "projected",
-      "curriculum_authority": false,
-      "retrieval_authority": true,
-      "source_hash": "8d69bfc5d0a3a9d31e7caf1bf98cf7495993cc073c90496d94aa32ba7259d070"
-    },
-    {
-      "edge_id": "OCG-PROJECTED-UNIT-USES-TERM-UNIT-D07-TERM-EVENWICHTSPRIJS-3.1.2-3.1.2-REFERENCES-MACHINE-MICRO-TEACHING-UNITS.JSON",
-      "from": "unit:D07",
-      "to": "term:evenwichtsprijs",
-      "relation": "projected_unit_uses_term",
-      "edge_type": "projection",
-      "source_path": "references/machine/micro-teaching-units.json",
-      "source_surface_type": "machine_unit_term_projection",
-      "source_status": "generated_projection",
-      "authority_level": "machine_registry",
-      "authority_weight": 80,
-      "paragraph_id": "3.1.2",
-      "record_id": "3.1.2",
-      "unit_ids": [
-        "D07"
-      ],
-      "term_ids": [
-        "evenwichtsprijs"
-      ],
-      "primary_evidence": false,
-      "evidence_status": "projection_only",
-      "generated_artifact_warning": true,
-      "not_external_authority": true,
-      "not_machine_registry_authority": true,
-      "notes": "Term projection copied from machine unit metadata for owned-content navigation; not a new machine edit.",
-      "review_status": "projected",
-      "curriculum_authority": false,
-      "retrieval_authority": true,
-      "source_hash": "8d69bfc5d0a3a9d31e7caf1bf98cf7495993cc073c90496d94aa32ba7259d070"
-    },
-    {
-      "edge_id": "OCG-PROJECTED-UNIT-USES-TERM-UNIT-D07-TERM-HEFFINGEN-3.1.1-3.1.1-REFERENCES-MACHINE-MICRO-TEACHING-UNITS.JSON",
-      "from": "unit:D07",
-      "to": "term:heffingen",
-      "relation": "projected_unit_uses_term",
-      "edge_type": "projection",
-      "source_path": "references/machine/micro-teaching-units.json",
-      "source_surface_type": "machine_unit_term_projection",
-      "source_status": "generated_projection",
-      "authority_level": "machine_registry",
-      "authority_weight": 80,
-      "paragraph_id": "3.1.1",
-      "record_id": "3.1.1",
-      "unit_ids": [
-        "D07"
-      ],
-      "term_ids": [
-        "heffingen"
-      ],
-      "primary_evidence": false,
-      "evidence_status": "projection_only",
-      "generated_artifact_warning": true,
-      "not_external_authority": true,
-      "not_machine_registry_authority": true,
-      "notes": "Term projection copied from machine unit metadata for owned-content navigation; not a new machine edit.",
-      "review_status": "projected",
-      "curriculum_authority": false,
-      "retrieval_authority": true,
-      "source_hash": "30335ed1c55f6f700b50d1214d499c8c9da4f618009d20451f69342ca97db3cd"
-    },
-    {
       "edge_id": "OCG-PROJECTED-UNIT-USES-TERM-UNIT-D07-TERM-HEFFINGEN-3.1.2-3.1.2-REFERENCES-MACHINE-MICRO-TEACHING-UNITS.JSON",
       "from": "unit:D07",
       "to": "term:heffingen",
@@ -37652,6 +37574,246 @@
       "curriculum_authority": false,
       "retrieval_authority": true,
       "source_hash": "64cac35b56ebf1cf7fbfc0c4cf97c435dd6fe06e5b2526c612f12e46a4ff85f8"
+    },
+    {
+      "edge_id": "OCG-PROJECTED-UNIT-USES-TERM-UNIT-D41-TERM-EVENWICHTSPRIJS-3.1.1-3.1.1-REFERENCES-MACHINE-MICRO-TEACHING-UNITS.JSON",
+      "from": "unit:D41",
+      "to": "term:evenwichtsprijs",
+      "relation": "projected_unit_uses_term",
+      "edge_type": "projection",
+      "source_path": "references/machine/micro-teaching-units.json",
+      "source_surface_type": "machine_unit_term_projection",
+      "source_status": "generated_projection",
+      "authority_level": "machine_registry",
+      "authority_weight": 80,
+      "paragraph_id": "3.1.1",
+      "record_id": "3.1.1",
+      "unit_ids": [
+        "D41"
+      ],
+      "term_ids": [
+        "evenwichtsprijs"
+      ],
+      "primary_evidence": false,
+      "evidence_status": "projection_only",
+      "generated_artifact_warning": true,
+      "not_external_authority": true,
+      "not_machine_registry_authority": true,
+      "notes": "Term projection copied from machine unit metadata for owned-content navigation; not a new machine edit.",
+      "review_status": "projected",
+      "curriculum_authority": false,
+      "retrieval_authority": true,
+      "source_hash": "afff5ce6dc5502478c4cd1b5b0f0289a199b0e3bbc4832b1af852f2237853e38"
+    },
+    {
+      "edge_id": "OCG-PROJECTED-UNIT-USES-TERM-UNIT-D41-TERM-EVENWICHTSPRIJS-3.1.2-3.1.2-REFERENCES-MACHINE-MICRO-TEACHING-UNITS.JSON",
+      "from": "unit:D41",
+      "to": "term:evenwichtsprijs",
+      "relation": "projected_unit_uses_term",
+      "edge_type": "projection",
+      "source_path": "references/machine/micro-teaching-units.json",
+      "source_surface_type": "machine_unit_term_projection",
+      "source_status": "generated_projection",
+      "authority_level": "machine_registry",
+      "authority_weight": 80,
+      "paragraph_id": "3.1.2",
+      "record_id": "3.1.2",
+      "unit_ids": [
+        "D41"
+      ],
+      "term_ids": [
+        "evenwichtsprijs"
+      ],
+      "primary_evidence": false,
+      "evidence_status": "projection_only",
+      "generated_artifact_warning": true,
+      "not_external_authority": true,
+      "not_machine_registry_authority": true,
+      "notes": "Term projection copied from machine unit metadata for owned-content navigation; not a new machine edit.",
+      "review_status": "projected",
+      "curriculum_authority": false,
+      "retrieval_authority": true,
+      "source_hash": "afff5ce6dc5502478c4cd1b5b0f0289a199b0e3bbc4832b1af852f2237853e38"
+    },
+    {
+      "edge_id": "OCG-PROJECTED-UNIT-USES-TERM-UNIT-D41-TERM-HEFFINGEN-3.1.1-3.1.1-REFERENCES-MACHINE-MICRO-TEACHING-UNITS.JSON",
+      "from": "unit:D41",
+      "to": "term:heffingen",
+      "relation": "projected_unit_uses_term",
+      "edge_type": "projection",
+      "source_path": "references/machine/micro-teaching-units.json",
+      "source_surface_type": "machine_unit_term_projection",
+      "source_status": "generated_projection",
+      "authority_level": "machine_registry",
+      "authority_weight": 80,
+      "paragraph_id": "3.1.1",
+      "record_id": "3.1.1",
+      "unit_ids": [
+        "D41"
+      ],
+      "term_ids": [
+        "heffingen"
+      ],
+      "primary_evidence": false,
+      "evidence_status": "projection_only",
+      "generated_artifact_warning": true,
+      "not_external_authority": true,
+      "not_machine_registry_authority": true,
+      "notes": "Term projection copied from machine unit metadata for owned-content navigation; not a new machine edit.",
+      "review_status": "projected",
+      "curriculum_authority": false,
+      "retrieval_authority": true,
+      "source_hash": "aae26d0234c7a1088445dd1260aa0bd4dc25e6c719cb8a7b81e7760605c54164"
+    },
+    {
+      "edge_id": "OCG-PROJECTED-UNIT-USES-TERM-UNIT-D41-TERM-HEFFINGEN-3.1.2-3.1.2-REFERENCES-MACHINE-MICRO-TEACHING-UNITS.JSON",
+      "from": "unit:D41",
+      "to": "term:heffingen",
+      "relation": "projected_unit_uses_term",
+      "edge_type": "projection",
+      "source_path": "references/machine/micro-teaching-units.json",
+      "source_surface_type": "machine_unit_term_projection",
+      "source_status": "generated_projection",
+      "authority_level": "machine_registry",
+      "authority_weight": 80,
+      "paragraph_id": "3.1.2",
+      "record_id": "3.1.2",
+      "unit_ids": [
+        "D41"
+      ],
+      "term_ids": [
+        "heffingen"
+      ],
+      "primary_evidence": false,
+      "evidence_status": "projection_only",
+      "generated_artifact_warning": true,
+      "not_external_authority": true,
+      "not_machine_registry_authority": true,
+      "notes": "Term projection copied from machine unit metadata for owned-content navigation; not a new machine edit.",
+      "review_status": "projected",
+      "curriculum_authority": false,
+      "retrieval_authority": true,
+      "source_hash": "aae26d0234c7a1088445dd1260aa0bd4dc25e6c719cb8a7b81e7760605c54164"
+    },
+    {
+      "edge_id": "OCG-PROJECTED-UNIT-USES-TERM-UNIT-D42-TERM-EVENWICHTSPRIJS-3.1.2-3.1.2-REFERENCES-MACHINE-MICRO-TEACHING-UNITS.JSON",
+      "from": "unit:D42",
+      "to": "term:evenwichtsprijs",
+      "relation": "projected_unit_uses_term",
+      "edge_type": "projection",
+      "source_path": "references/machine/micro-teaching-units.json",
+      "source_surface_type": "machine_unit_term_projection",
+      "source_status": "generated_projection",
+      "authority_level": "machine_registry",
+      "authority_weight": 80,
+      "paragraph_id": "3.1.2",
+      "record_id": "3.1.2",
+      "unit_ids": [
+        "D42"
+      ],
+      "term_ids": [
+        "evenwichtsprijs"
+      ],
+      "primary_evidence": false,
+      "evidence_status": "projection_only",
+      "generated_artifact_warning": true,
+      "not_external_authority": true,
+      "not_machine_registry_authority": true,
+      "notes": "Term projection copied from machine unit metadata for owned-content navigation; not a new machine edit.",
+      "review_status": "projected",
+      "curriculum_authority": false,
+      "retrieval_authority": true,
+      "source_hash": "808f795948fb5fbc87ff06c1d00153139491e3579eef7b6496e98ac77f9fd327"
+    },
+    {
+      "edge_id": "OCG-PROJECTED-UNIT-USES-TERM-UNIT-D42-TERM-HEFFINGEN-3.1.2-3.1.2-REFERENCES-MACHINE-MICRO-TEACHING-UNITS.JSON",
+      "from": "unit:D42",
+      "to": "term:heffingen",
+      "relation": "projected_unit_uses_term",
+      "edge_type": "projection",
+      "source_path": "references/machine/micro-teaching-units.json",
+      "source_surface_type": "machine_unit_term_projection",
+      "source_status": "generated_projection",
+      "authority_level": "machine_registry",
+      "authority_weight": 80,
+      "paragraph_id": "3.1.2",
+      "record_id": "3.1.2",
+      "unit_ids": [
+        "D42"
+      ],
+      "term_ids": [
+        "heffingen"
+      ],
+      "primary_evidence": false,
+      "evidence_status": "projection_only",
+      "generated_artifact_warning": true,
+      "not_external_authority": true,
+      "not_machine_registry_authority": true,
+      "notes": "Term projection copied from machine unit metadata for owned-content navigation; not a new machine edit.",
+      "review_status": "projected",
+      "curriculum_authority": false,
+      "retrieval_authority": true,
+      "source_hash": "b1dd159006fe689f647a6d0856825bbf77d26d782b6fb3641f7f2c934b7b647a"
+    },
+    {
+      "edge_id": "OCG-PROJECTED-UNIT-USES-TERM-UNIT-D43-TERM-EVENWICHTSPRIJS-3.1.3-3.1.3-REFERENCES-MACHINE-MICRO-TEACHING-UNITS.JSON",
+      "from": "unit:D43",
+      "to": "term:evenwichtsprijs",
+      "relation": "projected_unit_uses_term",
+      "edge_type": "projection",
+      "source_path": "references/machine/micro-teaching-units.json",
+      "source_surface_type": "machine_unit_term_projection",
+      "source_status": "generated_projection",
+      "authority_level": "machine_registry",
+      "authority_weight": 80,
+      "paragraph_id": "3.1.3",
+      "record_id": "3.1.3",
+      "unit_ids": [
+        "D43"
+      ],
+      "term_ids": [
+        "evenwichtsprijs"
+      ],
+      "primary_evidence": false,
+      "evidence_status": "projection_only",
+      "generated_artifact_warning": true,
+      "not_external_authority": true,
+      "not_machine_registry_authority": true,
+      "notes": "Term projection copied from machine unit metadata for owned-content navigation; not a new machine edit.",
+      "review_status": "projected",
+      "curriculum_authority": false,
+      "retrieval_authority": true,
+      "source_hash": "63fce3a291551718a94301e1ca4e54e9f6ec7bacd1b9069de21d77122fbd3ab8"
+    },
+    {
+      "edge_id": "OCG-PROJECTED-UNIT-USES-TERM-UNIT-D43-TERM-SUBSIDIES-3.1.3-3.1.3-REFERENCES-MACHINE-MICRO-TEACHING-UNITS.JSON",
+      "from": "unit:D43",
+      "to": "term:subsidies",
+      "relation": "projected_unit_uses_term",
+      "edge_type": "projection",
+      "source_path": "references/machine/micro-teaching-units.json",
+      "source_surface_type": "machine_unit_term_projection",
+      "source_status": "generated_projection",
+      "authority_level": "machine_registry",
+      "authority_weight": 80,
+      "paragraph_id": "3.1.3",
+      "record_id": "3.1.3",
+      "unit_ids": [
+        "D43"
+      ],
+      "term_ids": [
+        "subsidies"
+      ],
+      "primary_evidence": false,
+      "evidence_status": "projection_only",
+      "generated_artifact_warning": true,
+      "not_external_authority": true,
+      "not_machine_registry_authority": true,
+      "notes": "Term projection copied from machine unit metadata for owned-content navigation; not a new machine edit.",
+      "review_status": "projected",
+      "curriculum_authority": false,
+      "retrieval_authority": true,
+      "source_hash": "5f1f866001ff269258d813f0da87f7b924c93eb34327f5047ea3454497b500d6"
     },
     {
       "edge_id": "OCG-PROJECTED-UNIT-USES-TERM-UNIT-F05-TERM-EXTERNE-EFFECTEN-4.1.6-4.1.6-REFERENCES-MACHINE-MICRO-TEACHING-UNITS.JSON",
@@ -40051,43 +40213,6 @@
       "source_hash": "986c8963fe69e7967e2d98c832df28ed405d0aefafb61a57baa3f89f527ba77f"
     },
     {
-      "edge_id": "OCG-TARGET-EXERCISE-HAS-MISSING-UNIT-FLAG-TARGET-EXERCISE-3.1.1-QUALITY-ISSUE-3.1.1-MISSING-UNIT-1-3.1.1-3.1.1-FLAG-1-REFERENCES-AUTHORED-COURSE-TARGET-EXERCISES.JSON",
-      "from": "target_exercise:3.1.1",
-      "to": "quality_issue:3.1.1:missing-unit-1",
-      "relation": "target_exercise_has_missing_unit_flag",
-      "edge_type": "projection",
-      "source_path": "references/authored/course-target-exercises.json",
-      "source_surface_type": "target_exercise_index",
-      "source_status": "exercise_evidence",
-      "authority_level": "owned_curriculum_design",
-      "authority_weight": 75,
-      "paragraph_id": "3.1.1",
-      "record_id": "3.1.1:flag-1",
-      "unit_ids": [
-        "A06",
-        "A23",
-        "A41",
-        "D05",
-        "D07"
-      ],
-      "term_ids": [
-        "evenwichtshoeveelheid",
-        "evenwichtsprijs",
-        "heffingen",
-        "marktevenwicht"
-      ],
-      "primary_evidence": false,
-      "evidence_status": "projection_only",
-      "generated_artifact_warning": false,
-      "not_external_authority": true,
-      "not_machine_registry_authority": true,
-      "notes": "Owned target exercise missing-unit flag: Distinguish consumer price Pc vs producer price Pp and the tax wedge = Pc − Pp (concept-level + grafisch)",
-      "review_status": "projected",
-      "curriculum_authority": false,
-      "retrieval_authority": true,
-      "source_hash": "3400d79fdde10caff1b870ad6e91883b899f4d07a74468ac7b615b5e135f32d1"
-    },
-    {
       "edge_id": "OCG-TARGET-EXERCISE-HAS-MISSING-UNIT-FLAG-TARGET-EXERCISE-3.1.2-QUALITY-ISSUE-3.1.2-MISSING-UNIT-1-3.1.2-3.1.2-FLAG-1-REFERENCES-AUTHORED-COURSE-TARGET-EXERCISES.JSON",
       "from": "target_exercise:3.1.2",
       "to": "quality_issue:3.1.2:missing-unit-1",
@@ -40107,47 +40232,9 @@
         "A32",
         "A40",
         "D03",
-        "D07"
-      ],
-      "term_ids": [
-        "consumentensurplus",
-        "evenwichtsprijs",
-        "heffingen",
-        "marktevenwicht",
-        "producentensurplus"
-      ],
-      "primary_evidence": false,
-      "evidence_status": "projection_only",
-      "generated_artifact_warning": false,
-      "not_external_authority": true,
-      "not_machine_registry_authority": true,
-      "notes": "Owned target exercise missing-unit flag: Compute afwentelingspercentage = (Pc − P*) / tax × 100 and interpret it (A-domain candidate; the consumer-burden metric)",
-      "review_status": "projected",
-      "curriculum_authority": false,
-      "retrieval_authority": true,
-      "source_hash": "848a8bfa58204ebc52d5e626b3715168482a5f45e9610e994191b93f7f23f182"
-    },
-    {
-      "edge_id": "OCG-TARGET-EXERCISE-HAS-MISSING-UNIT-FLAG-TARGET-EXERCISE-3.1.2-QUALITY-ISSUE-3.1.2-MISSING-UNIT-2-3.1.2-3.1.2-FLAG-2-REFERENCES-AUTHORED-COURSE-TARGET-EXERCISES.JSON",
-      "from": "target_exercise:3.1.2",
-      "to": "quality_issue:3.1.2:missing-unit-2",
-      "relation": "target_exercise_has_missing_unit_flag",
-      "edge_type": "projection",
-      "source_path": "references/authored/course-target-exercises.json",
-      "source_surface_type": "target_exercise_index",
-      "source_status": "exercise_evidence",
-      "authority_level": "owned_curriculum_design",
-      "authority_weight": 75,
-      "paragraph_id": "3.1.2",
-      "record_id": "3.1.2:flag-2",
-      "unit_ids": [
-        "A10",
-        "A19",
-        "A23",
-        "A32",
-        "A40",
-        "D03",
-        "D07"
+        "D07",
+        "D41",
+        "D42"
       ],
       "term_ids": [
         "consumentensurplus",
@@ -40165,7 +40252,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "9adbfd4e6b2567baa7c4b67091ddc5293f12b0d7cde153517e09406f1a3e6525"
+      "source_hash": "74ef6d7567c84f100f9207b0a07cddb6fa2599b15e120d174777749de83897c7"
     },
     {
       "edge_id": "OCG-TARGET-EXERCISE-HAS-MISSING-UNIT-FLAG-TARGET-EXERCISE-3.1.3-QUALITY-ISSUE-3.1.3-MISSING-UNIT-1-3.1.3-3.1.3-FLAG-1-REFERENCES-AUTHORED-COURSE-TARGET-EXERCISES.JSON",
@@ -40187,7 +40274,8 @@
         "A27",
         "A41",
         "D19",
-        "D29"
+        "D29",
+        "D43"
       ],
       "term_ids": [
         "evenwichtshoeveelheid",
@@ -40207,7 +40295,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "eeb4c35c8c85c3c6fbae48026e83810d29edfdac1d234417d422f3841abb851c"
+      "source_hash": "0551dc6d4591adfadba2e3e58d56ded8c90b104f1cbfe1eba2337b8ec026ca1e"
     },
     {
       "edge_id": "OCG-TARGET-EXERCISE-HAS-MISSING-UNIT-FLAG-TARGET-EXERCISE-3.1.3-QUALITY-ISSUE-3.1.3-MISSING-UNIT-2-3.1.3-3.1.3-FLAG-2-REFERENCES-AUTHORED-COURSE-TARGET-EXERCISES.JSON",
@@ -40229,7 +40317,8 @@
         "A27",
         "A41",
         "D19",
-        "D29"
+        "D29",
+        "D43"
       ],
       "term_ids": [
         "evenwichtshoeveelheid",
@@ -40249,7 +40338,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "1b59fa836ef65187dd85c0885efdeda5c43e598aedb786288ff11c3da7d422ce"
+      "source_hash": "95d94bed5c78d8c01f03d579030e717106f7cb84c853549aacfefde1dda6e386"
     },
     {
       "edge_id": "OCG-TARGET-EXERCISE-HAS-MISSING-UNIT-FLAG-TARGET-EXERCISE-3.1.4-QUALITY-ISSUE-3.1.4-MISSING-UNIT-1-3.1.4-3.1.4-FLAG-1-REFERENCES-AUTHORED-COURSE-TARGET-EXERCISES.JSON",
@@ -43739,9 +43828,9 @@
       "source_hash": "f5c51774666466206087409413749a8417431e08c4fdcbc1c6d55cbc0f6a74e7"
     },
     {
-      "edge_id": "OCG-TARGET-EXERCISE-REQUIRES-UNIT-TARGET-EXERCISE-3.1.1-UNIT-D07-3.1.1-3.1.1-REFERENCES-AUTHORED-COURSE-TARGET-EXERCISES.JSON",
+      "edge_id": "OCG-TARGET-EXERCISE-REQUIRES-UNIT-TARGET-EXERCISE-3.1.1-UNIT-D41-3.1.1-3.1.1-REFERENCES-AUTHORED-COURSE-TARGET-EXERCISES.JSON",
       "from": "target_exercise:3.1.1",
-      "to": "unit:D07",
+      "to": "unit:D41",
       "relation": "target_exercise_requires_unit",
       "edge_type": "owned_exercise_evidence",
       "source_path": "references/authored/course-target-exercises.json",
@@ -43752,7 +43841,7 @@
       "paragraph_id": "3.1.1",
       "record_id": "3.1.1",
       "unit_ids": [
-        "D07"
+        "D41"
       ],
       "term_ids": [
         "evenwichtsprijs",
@@ -43767,7 +43856,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "4333406610b3fdd2de7a9de24534f747f3b4a36da61d492d0fb5b5b8c0f577ad"
+      "source_hash": "38f2bf9f6c8626398ab698a03fb9868a16950c30401b2667f3eb630511892008"
     },
     {
       "edge_id": "OCG-TARGET-EXERCISE-REQUIRES-UNIT-TARGET-EXERCISE-3.1.2-UNIT-A10-3.1.2-3.1.2-REFERENCES-AUTHORED-COURSE-TARGET-EXERCISES.JSON",
@@ -43961,7 +44050,6 @@
         "D07"
       ],
       "term_ids": [
-        "evenwichtsprijs",
         "heffingen"
       ],
       "primary_evidence": true,
@@ -43974,6 +44062,68 @@
       "curriculum_authority": false,
       "retrieval_authority": true,
       "source_hash": "53ab124ce1416905565a76d44432371bac1d116d0e6f7a6065b77f0f36477321"
+    },
+    {
+      "edge_id": "OCG-TARGET-EXERCISE-REQUIRES-UNIT-TARGET-EXERCISE-3.1.2-UNIT-D41-3.1.2-3.1.2-REFERENCES-AUTHORED-COURSE-TARGET-EXERCISES.JSON",
+      "from": "target_exercise:3.1.2",
+      "to": "unit:D41",
+      "relation": "target_exercise_requires_unit",
+      "edge_type": "owned_exercise_evidence",
+      "source_path": "references/authored/course-target-exercises.json",
+      "source_surface_type": "target_exercise_index",
+      "source_status": "exercise_evidence",
+      "authority_level": "owned_curriculum_design",
+      "authority_weight": 75,
+      "paragraph_id": "3.1.2",
+      "record_id": "3.1.2",
+      "unit_ids": [
+        "D41"
+      ],
+      "term_ids": [
+        "evenwichtsprijs",
+        "heffingen"
+      ],
+      "primary_evidence": true,
+      "evidence_status": "explicit_owned_evidence",
+      "generated_artifact_warning": false,
+      "not_external_authority": true,
+      "not_machine_registry_authority": true,
+      "notes": "Owned target-exercise required unit; supports owned alignment, not external authority.",
+      "review_status": "projected",
+      "curriculum_authority": false,
+      "retrieval_authority": true,
+      "source_hash": "9972da3f9b4a0e822ae0ce67e98182a9715b76b90400b5283538de4fe3e7b42f"
+    },
+    {
+      "edge_id": "OCG-TARGET-EXERCISE-REQUIRES-UNIT-TARGET-EXERCISE-3.1.2-UNIT-D42-3.1.2-3.1.2-REFERENCES-AUTHORED-COURSE-TARGET-EXERCISES.JSON",
+      "from": "target_exercise:3.1.2",
+      "to": "unit:D42",
+      "relation": "target_exercise_requires_unit",
+      "edge_type": "owned_exercise_evidence",
+      "source_path": "references/authored/course-target-exercises.json",
+      "source_surface_type": "target_exercise_index",
+      "source_status": "exercise_evidence",
+      "authority_level": "owned_curriculum_design",
+      "authority_weight": 75,
+      "paragraph_id": "3.1.2",
+      "record_id": "3.1.2",
+      "unit_ids": [
+        "D42"
+      ],
+      "term_ids": [
+        "evenwichtsprijs",
+        "heffingen"
+      ],
+      "primary_evidence": true,
+      "evidence_status": "explicit_owned_evidence",
+      "generated_artifact_warning": false,
+      "not_external_authority": true,
+      "not_machine_registry_authority": true,
+      "notes": "Owned target-exercise required unit; supports owned alignment, not external authority.",
+      "review_status": "projected",
+      "curriculum_authority": false,
+      "retrieval_authority": true,
+      "source_hash": "5622b3d309c07f4a986c14f97509fdde92042de9ba7ccc7c4cadbc772ea3f637"
     },
     {
       "edge_id": "OCG-TARGET-EXERCISE-REQUIRES-UNIT-TARGET-EXERCISE-3.1.3-UNIT-A06-3.1.3-3.1.3-REFERENCES-AUTHORED-COURSE-TARGET-EXERCISES.JSON",
@@ -44183,6 +44333,37 @@
       "curriculum_authority": false,
       "retrieval_authority": true,
       "source_hash": "0e3c10a5526231e125b2196a1fe373ced3f4d26f91aee81d4e4ca66ea556a27a"
+    },
+    {
+      "edge_id": "OCG-TARGET-EXERCISE-REQUIRES-UNIT-TARGET-EXERCISE-3.1.3-UNIT-D43-3.1.3-3.1.3-REFERENCES-AUTHORED-COURSE-TARGET-EXERCISES.JSON",
+      "from": "target_exercise:3.1.3",
+      "to": "unit:D43",
+      "relation": "target_exercise_requires_unit",
+      "edge_type": "owned_exercise_evidence",
+      "source_path": "references/authored/course-target-exercises.json",
+      "source_surface_type": "target_exercise_index",
+      "source_status": "exercise_evidence",
+      "authority_level": "owned_curriculum_design",
+      "authority_weight": 75,
+      "paragraph_id": "3.1.3",
+      "record_id": "3.1.3",
+      "unit_ids": [
+        "D43"
+      ],
+      "term_ids": [
+        "evenwichtsprijs",
+        "subsidies"
+      ],
+      "primary_evidence": true,
+      "evidence_status": "explicit_owned_evidence",
+      "generated_artifact_warning": false,
+      "not_external_authority": true,
+      "not_machine_registry_authority": true,
+      "notes": "Owned target-exercise required unit; supports owned alignment, not external authority.",
+      "review_status": "projected",
+      "curriculum_authority": false,
+      "retrieval_authority": true,
+      "source_hash": "40e374dd1b63b7856d2c45838055d6be8381ca00e4e1561c0bccfd1586f401f3"
     },
     {
       "edge_id": "OCG-TARGET-EXERCISE-REQUIRES-UNIT-TARGET-EXERCISE-3.1.4-UNIT-A06-3.1.4-3.1.4-REFERENCES-AUTHORED-COURSE-TARGET-EXERCISES.JSON",

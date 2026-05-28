@@ -10,7 +10,7 @@ Ranked pilot templates: `12`
 Candidate units represented: `12`
 Generator-blocked pilot templates: `8`
 Provisional operation references: `7`
-Apply units with prose procedures: `129`
+Apply units with prose procedures: `133`
 
 ## Ranked Pilot Templates
 

@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-05-28T17:10:14.735Z
+Generated: 2026-05-28T17:18:33.849Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 2051
+Files indexed: 2053
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -117,7 +117,7 @@ Count: 71
 
 ## build scripts
 
-Count: 317
+Count: 319
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -289,6 +289,7 @@ Count: 317
 - build-scripts/references/check-mtu-h3-incidence-pass-through-review.js
 - build-scripts/references/check-mtu-h3a-incidence-cli-mutation-plan.js
 - build-scripts/references/check-mtu-h3b-incidence-cli-execution-packet.js
+- build-scripts/references/check-mtu-h3c-incidence-cli-execution.js
 - build-scripts/references/check-mtu-hardening-benchmark.js
 - build-scripts/references/check-operation-answer-skill-candidates.js
 - build-scripts/references/check-owned-content-graph.js
@@ -339,6 +340,7 @@ Count: 317
 - build-scripts/references/exam-question-gap-audit.js
 - build-scripts/references/execute-mtu-h2f-conditional-lanes.js
 - build-scripts/references/execute-mtu-h2j-a20-a94-a95.js
+- build-scripts/references/execute-mtu-h3c-incidence-cli.js
 - build-scripts/references/extract-eindtermen.js
 - build-scripts/references/extract-exam-questions.js
 - build-scripts/references/lib/exam-ingestion-candidate-validation.js
@@ -486,7 +488,7 @@ Count: 42
 
 ## validators
 
-Count: 121
+Count: 122
 
 - build-scripts/rag/validate-chunks.js
 - build-scripts/rag/validate-query-output.js
@@ -519,6 +521,7 @@ Count: 121
 - build-scripts/references/check-mtu-h3-incidence-pass-through-review.js
 - build-scripts/references/check-mtu-h3a-incidence-cli-mutation-plan.js
 - build-scripts/references/check-mtu-h3b-incidence-cli-execution-packet.js
+- build-scripts/references/check-mtu-h3c-incidence-cli-execution.js
 - build-scripts/references/check-mtu-hardening-benchmark.js
 - build-scripts/references/check-operation-answer-skill-candidates.js
 - build-scripts/references/check-owned-content-graph.js

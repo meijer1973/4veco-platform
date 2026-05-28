@@ -3,7 +3,7 @@
   "sprint_id": "PV.6",
   "gate_id": "GATE-PV6-coverage-dashboard",
   "generated_by": "build-scripts/references/build-procedure-visual-coverage.js",
-  "generated_on": "2026-05-28T13:54:16.852Z",
+  "generated_on": "2026-05-28T17:12:18.937Z",
   "status": "passed",
   "policy": {
     "diagnostic_only": true,
@@ -23,7 +23,7 @@
     "engines/skilltree/generators.js"
   ],
   "summary": {
-    "live_unit_count": 242,
+    "live_unit_count": 247,
     "pv_linked_unit_count": 6,
     "template_count": 6,
     "visual_state_count": 6,

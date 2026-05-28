@@ -12,12 +12,13 @@ docs/roadmaps/roadmap-version-index.json
 
 | Roadmap | Version | Path | Notes |
 |---|---|---|---|
-| References Team Roadmap | `v3.08-gate-mtu-h3b-pass-with-conditions` | `references/reference-team-roadmap.md` | Current operating roadmap after GATE-MTU-H3B closed pass_with_conditions and MTU-H3C became the active bounded execution sprint. |
+| References Team Roadmap | `v3.09-mtu-h3c-incidence-executed` | `references/reference-team-roadmap.md` | Current operating roadmap after MTU-H3C executed the H3B-authorized incidence/pass-through bounded CLI sprint and MTU-H4 became the active answer-form planning sprint. |
 
 ## Outdated Archive
 
 | Roadmap | Version | Path | Superseded By |
 |---|---|---|---|
+| References Team Roadmap before MTU-H3C incidence execution | `v3.08-gate-mtu-h3b-pass-with-conditions` | `docs/roadmaps/outdated/reference-team-roadmap-v3.08-gate-mtu-h3b-pass-with-conditions.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before GATE-MTU-H3B closure | `v3.07-mtu-h3b-incidence-execution-packet` | `docs/roadmaps/outdated/reference-team-roadmap-v3.07-mtu-h3b-incidence-execution-packet.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before MTU-H3B incidence execution packet | `v3.06-gate-mtu-h3a-pass-with-conditions` | `docs/roadmaps/outdated/reference-team-roadmap-v3.06-gate-mtu-h3a-pass-with-conditions.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before GATE-MTU-H3A closure | `v3.05-mtu-h3a-cli-mutation-plan` | `docs/roadmaps/outdated/reference-team-roadmap-v3.05-mtu-h3a-cli-mutation-plan.md` | `references/reference-team-roadmap.md` |

@@ -3230,13 +3230,13 @@
   },
   {
     "id": "D07",
-    "name": "Heffing doorberekenen in prijs",
+    "name": "Heffing afwentelingspercentage berekenen",
     "category": "markt",
-    "layer": 5,
-    "kern": "Bereken welk percentage van een heffing wordt doorberekend in de consumentenprijs via evenwichtsanalyse.",
+    "layer": 1,
+    "kern": "Bereken welk percentage van een heffing bij consumenten en producenten terechtkomt nadat de euro-bedragen van de belastingdruk bekend zijn.",
     "needs": [
-      "D05",
-      "A15"
+      "D42",
+      "A38"
     ],
     "exam_codes": [
       "D1.4a"
@@ -3244,18 +3244,23 @@
     "mastery_target": "apply",
     "prior_learning": "new_this_year",
     "aspects": [
-      "rekenen"
+      "rekenen",
+      "verbaal"
     ],
     "terms": [
-      "evenwichtsprijs",
       "heffingen"
     ],
     "procedure": [
-      "Bepaal de evenwichtsprijs zonder heffing (P0)",
-      "Bereken het nieuwe evenwicht met heffing t (zoals in D05): consumentenprijs Pc en producentenprijs Pp = Pc − t",
-      "Bereken doorberekening aan consument = (Pc − P0) / t × 100%",
-      "Het restant (100% − dit percentage) komt ten laste van de producent",
-      "Leg uit hoe de elasticiteit van vraag en aanbod de verdeling bepaalt"
+      "Gebruik de belastingdruk in euros: consumentenbedrag = Pc - P0 en producentenbedrag = P0 - Pp.",
+      "Deel het consumentenbedrag door de heffing t en vermenigvuldig met 100 procent.",
+      "Deel het producentenbedrag door t en vermenigvuldig met 100 procent, of gebruik 100 procent minus consumentenpercentage.",
+      "Controleer dat beide percentages samen 100 procent zijn.",
+      "Rond af zoals de vraag vraagt en benoem wie welk percentage draagt."
+    ],
+    "pitfalls": [
+      "De prijsverandering delen door de nieuwe prijs in plaats van door de heffing.",
+      "Alleen het consumentenpercentage geven wanneer de vraag beide partijen vraagt.",
+      "Elasticiteit uitleggen terwijl de vraag alleen om percentageberekening vraagt."
     ]
   },
   {
@@ -4094,6 +4099,200 @@
       "Noteer de nieuwe surplusdelen na de interventie.",
       "Voeg overheidsinkomsten of overheidsuitgaven toe.",
       "Controleer of het verschil overeenkomt met het verloren of gewonnen surplus."
+    ]
+  },
+  {
+    "id": "D41",
+    "name": "Belastingwig en Pc/Pp grafisch labelen",
+    "category": "markt",
+    "layer": 5,
+    "kern": "Label in een P-Q diagram de consumentenprijs Pc, producentenprijs Pp, belastingwig t = Pc - Pp en de verhandelde hoeveelheid Qt na een heffing.",
+    "needs": [
+      "D05"
+    ],
+    "exam_codes": [
+      "D1.13",
+      "D1.24"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "aspects": [
+      "grafisch",
+      "verbaal"
+    ],
+    "terms": [
+      "heffingen",
+      "evenwichtsprijs"
+    ],
+    "procedure": [
+      "Bepaal of gebruik het nieuwe evenwicht na heffing: consumentenprijs Pc en hoeveelheid Qt.",
+      "Bepaal de producentenprijs Pp als Pc - t.",
+      "Teken of label bij Qt de verticale afstand tussen Pc en Pp als belastingwig t.",
+      "Label Pc, Pp, Qt en de wig zonder welfare-gebieden te arceren.",
+      "Controleer dat Pc - Pp gelijk is aan het heffingsbedrag."
+    ],
+    "pitfalls": [
+      "De wig tekenen tussen vraag en aanbod bij de oude hoeveelheid in plaats van bij Qt.",
+      "Pp verwarren met de consumentenprijs Pc.",
+      "Welfare-gebieden arceren terwijl alleen de wig of prijzen gevraagd worden."
+    ]
+  },
+  {
+    "id": "D42",
+    "name": "Belastingdruk in eurobedragen berekenen",
+    "category": "markt",
+    "layer": 0,
+    "kern": "Bereken in euro per eenheid welk deel van een heffing door consument en producent wordt gedragen.",
+    "needs": [],
+    "exam_codes": [
+      "D1.4a"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "aspects": [
+      "rekenen",
+      "verbaal"
+    ],
+    "terms": [
+      "heffingen",
+      "evenwichtsprijs"
+    ],
+    "procedure": [
+      "Neem de oude evenwichtsprijs P0, de consumentenprijs Pc en de producentenprijs Pp na heffing.",
+      "Bereken consumentendruk = Pc - P0.",
+      "Bereken producentendruk = P0 - Pp.",
+      "Controleer dat consumentendruk + producentendruk gelijk is aan de heffing t.",
+      "Benoem de bedragen per eenheid en rond af zoals de vraag vraagt."
+    ],
+    "pitfalls": [
+      "Meteen percentages berekenen voordat de euro-bedragen duidelijk zijn.",
+      "Pc en Pp omwisselen.",
+      "Belastingopbrengst t x Q verwarren met belastingdruk per eenheid."
+    ],
+    "assumed_prior_knowledge": [
+      "P0",
+      "Pc",
+      "Pp en heffing t zijn gegeven",
+      "eerder berekend",
+      "of apart gemapt via D41/D05 wanneer de context dat vraagt."
+    ],
+    "zero_needs_status": "true_zero",
+    "zero_needs_review": {
+      "reviewed_on": "2026-05-28",
+      "reviewer": "GATE-MTU-H3B",
+      "rationale": "D42 is an economics-specific root operation from available P0/Pc/Pp/t values. It must not force graphical D41; graph contexts map D41 separately and calculation contexts can supply prices directly.",
+      "recommended_needs": [],
+      "severity": "medium",
+      "h3c_execution_decision": "fixed from underbouw_assumed to true_zero per GATE-MTU-H3B condition"
+    }
+  },
+  {
+    "id": "D43",
+    "name": "Subsidie-evenwicht en effectieve prijzen bepalen",
+    "category": "markt",
+    "layer": 2,
+    "kern": "Bepaal na een subsidie de consumentenprijs Pc, de effectieve producentenontvangst Pp en de nieuwe hoeveelheid.",
+    "needs": [
+      "A41"
+    ],
+    "exam_codes": [
+      "A2.15",
+      "D3.5"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "aspects": [
+      "rekenen",
+      "verbaal"
+    ],
+    "terms": [
+      "subsidies",
+      "evenwichtsprijs"
+    ],
+    "procedure": [
+      "Leid met A41 de aanbodfunctie na subsidie af of gebruik de gegeven na-subsidie aanbodlijn.",
+      "Los het nieuwe evenwicht op en bepaal consumentenprijs Pc en hoeveelheid Qs.",
+      "Bereken de producentenontvangst Pp als Pc + subsidie s.",
+      "Controleer dat Pp - Pc gelijk is aan het subsidiebedrag.",
+      "Benoem Pc, Pp en Qs expliciet."
+    ],
+    "pitfalls": [
+      "De subsidie optellen bij de consumentenprijs in plaats van bij de producentenontvangst.",
+      "De aanbodlijn in de verkeerde richting verschuiven.",
+      "Subsidiekosten of surplus berekenen terwijl alleen effectieve prijzen gevraagd zijn."
+    ]
+  },
+  {
+    "id": "D45",
+    "name": "Incidentie verklaren met relatieve elasticiteiten",
+    "category": "markt",
+    "layer": 2,
+    "kern": "Leg uit dat de relatief minder elastische kant van de markt meer belastingdruk draagt of meer subsidievoordeel ontvangt.",
+    "needs": [
+      "A15"
+    ],
+    "exam_codes": [
+      "D1.4a",
+      "D3.5"
+    ],
+    "mastery_target": "understand",
+    "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal",
+      "grafisch"
+    ],
+    "terms": [
+      "heffingen",
+      "subsidies",
+      "prijselasticiteit-van-de-vraag"
+    ],
+    "procedure": [
+      "Bepaal uit context of grafiek welke kant relatief minder elastisch reageert: vraag of aanbod.",
+      "Gebruik A15 voor vraagelasticiteit en benoem aanbodelasticiteit kwalitatief via helling of context wanneer geen aanbodelasticiteitsunit beschikbaar is.",
+      "Leg bij een heffing uit dat de relatief minder elastische kant meer belastingdruk draagt.",
+      "Leg bij een subsidie uit dat de relatief minder elastische kant relatief meer voordeel ontvangt.",
+      "Koppel de uitleg aan de berekende of getekende Pc/Pp-verdeling."
+    ],
+    "pitfalls": [
+      "Alleen vraagelasticiteit noemen terwijl aanbodelasticiteit ook bepalend is.",
+      "Steile lijn automatisch verwarren met inelastisch zonder op asdefinitie en context te letten.",
+      "Een percentageberekening geven terwijl de vraag om een verklaring vraagt."
+    ],
+    "assumed_prior_knowledge": [
+      "Aanbodelasticiteit wordt kwalitatief binnen deze unit behandeld via helling of context; er is geen aparte numerieke aanbodelasticiteitsberekening nodig."
+    ]
+  },
+  {
+    "id": "D46",
+    "name": "Kostenstijging doorberekenen als pass-through share",
+    "category": "markt",
+    "layer": 3,
+    "kern": "Bereken welk percentage van een kostenstijging in de prijs wordt doorberekend en houd dit gescheiden van de procentuele prijsverandering in A93.",
+    "needs": [
+      "A93"
+    ],
+    "exam_codes": [
+      "A2.4",
+      "A2.10"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "aspects": [
+      "rekenen",
+      "verbaal"
+    ],
+    "terms": [],
+    "procedure": [
+      "Bepaal de oude prijs en nieuwe prijs zoals in A93.",
+      "Bereken de prijsstijging in euro: nieuwe prijs - oude prijs.",
+      "Bepaal de kostenstijging per eenheid die als schok wordt gegeven.",
+      "Bereken pass-through share = prijsstijging / kostenstijging x 100 procent.",
+      "Controleer dat de noemer de kostenstijging is, niet de oude prijs."
+    ],
+    "pitfalls": [
+      "De oude prijs als noemer gebruiken; dat is A93 prijspercentage, geen pass-through share.",
+      "De volledige kostenstijging als doorberekend aannemen zonder de prijsverandering te berekenen.",
+      "Pass-through share verwarren met tax incidence zonder belastingwig of Pc/Pp."
     ]
   },
   {

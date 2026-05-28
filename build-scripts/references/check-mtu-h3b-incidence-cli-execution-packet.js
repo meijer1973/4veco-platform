@@ -2,7 +2,8 @@
 /**
  * HOW TO ADAPT
  * - Keep this checker non-mutating. It validates the H3B execution packet,
- *   review packet, and current baseline evidence only.
+ *   review packet, and either the pre-H3C baseline or post-H3C executed
+ *   lifecycle evidence.
  * - If reviewed lane IDs change, update the D41/D42/D43/D45/D46 lane set and
  *   mapping checks here and in the packet together.
  * - Do not use this checker to write references/machine or references/external.
@@ -161,13 +162,28 @@ for (const id of ['D07', 'D05', 'A38', 'A41', 'A93', 'A15']) {
   if (!unitMap.has(id)) fail(`${id} must be live in the baseline`);
 }
 const d07Live = unitMap.get('D07');
-arrayEqual(d07Live.needs, ['D05', 'A15'], 'live D07 baseline needs');
+const preH3BExecution = !EXECUTION_IDS.some((id) => unitMap.has(id))
+  && !unitMap.has('D44')
+  && JSON.stringify(d07Live.needs) === JSON.stringify(['D05', 'A15']);
+const postH3CExecution = EXECUTION_IDS.every((id) => unitMap.has(id))
+  && !unitMap.has('D44')
+  && JSON.stringify(d07Live.needs) === JSON.stringify(['D42', 'A38']);
+if (!preH3BExecution && !postH3CExecution) {
+  fail('live catalog must be either pre-H3B execution or post-H3C executed state');
+}
 if (!String(d07Live.kern || '').includes('percentage')) fail('live D07 must still provide percentage evidence');
 if (!String(unitMap.get('A93').kern || '').includes('onderscheid dit van pass-through')) {
   fail('A93 must preserve price-change/pass-through boundary');
 }
-for (const id of ['D41', 'D42', 'D43', 'D44', 'D45', 'D46']) {
-  if (unitMap.has(id)) fail(`${id} must be absent before H3B execution`);
+if (preH3BExecution) {
+  for (const id of ['D41', 'D42', 'D43', 'D44', 'D45', 'D46']) {
+    if (unitMap.has(id)) fail(`${id} must be absent before H3B execution`);
+  }
+} else {
+  for (const id of EXECUTION_IDS) {
+    if (!unitMap.has(id)) fail(`${id} must be live after H3C execution`);
+  }
+  if (unitMap.has('D44')) fail('D44 must remain absent after H3C execution');
 }
 
 if (packet.h3a_condition_resolution.d42_dependency_review.decision !== 'revise_D42_to_zero_needs_with_context_mapping') {
@@ -188,7 +204,8 @@ for (const id of EXECUTION_IDS) {
   if (lane.execution_authorized_by_packet !== false) fail(`${id} execution must not be authorized`);
   const spec = lane.reviewed_spec;
   if (spec.id !== id) fail(`${id} reviewed_spec.id mismatch`);
-  const errors = validateSpec(spec, new Set(units.map((unit) => unit.id)));
+  const existingIdsForSpec = new Set(units.filter((unit) => !EXECUTION_IDS.includes(unit.id)).map((unit) => unit.id));
+  const errors = validateSpec(spec, existingIdsForSpec);
   if (errors.length) fail(`${id} validateSpec errors: ${errors.join('; ')}`);
   additionSpecs.push(spec);
 }
@@ -245,7 +262,8 @@ if (!d07Cmd.dry_run_command.includes('--dry-run')) fail('D07 dry-run command mus
 if (!d07Cmd.execution_command.includes('unit-update.js --id D07')) fail('D07 execution command mismatch');
 arrayEqual(commandSpec(d07Cmd.dry_run_command).needs, ['D42', 'A38'], 'D07 dry-run command needs');
 
-const simulated = units.map((unit) => (unit.id === 'D07' ? { ...unit, ...d07Patch } : unit));
+const simulatedBase = units.filter((unit) => !EXECUTION_IDS.includes(unit.id));
+const simulated = simulatedBase.map((unit) => (unit.id === 'D07' ? { ...unit, ...d07Patch } : unit));
 for (const spec of additionSpecs) simulated.push(spec);
 const validation = validate(simulated, {
   terms: loadTerminology(),
@@ -261,19 +279,33 @@ const e312 = byId(exercises, '3.1.2', 'target exercise');
 const e313 = byId(exercises, '3.1.3', 'target exercise');
 
 const m311 = byId(packet.target_exercise_mapping_patch_plan, '3.1.1', 'mapping plan');
-arrayEqual(m311.before.required_skills, e311.required_skills, '3.1.1 before required');
-arrayEqual(m311.before.prior_knowledge_assumed, e311.prior_knowledge_assumed, '3.1.1 before prior');
-arrayEqual(m311.before.new_skills_introduced, e311.new_skills_introduced, '3.1.1 before new');
-arrayEqual(m311.before.missing_units_flagged, e311.missing_units_flagged, '3.1.1 before missing');
+if (preH3BExecution) {
+  arrayEqual(m311.before.required_skills, e311.required_skills, '3.1.1 before required');
+  arrayEqual(m311.before.prior_knowledge_assumed, e311.prior_knowledge_assumed, '3.1.1 before prior');
+  arrayEqual(m311.before.new_skills_introduced, e311.new_skills_introduced, '3.1.1 before new');
+  arrayEqual(m311.before.missing_units_flagged, e311.missing_units_flagged, '3.1.1 before missing');
+} else {
+  arrayEqual(m311.after.required_skills, e311.required_skills, '3.1.1 after required live');
+  arrayEqual(m311.after.prior_knowledge_assumed, e311.prior_knowledge_assumed, '3.1.1 after prior live');
+  arrayEqual(m311.after.new_skills_introduced, e311.new_skills_introduced, '3.1.1 after new live');
+  arrayEqual(m311.after.missing_units_flagged, e311.missing_units_flagged, '3.1.1 after missing live');
+}
 arrayEqual(m311.after.required_skills, ['A06', 'A23', 'A41', 'D05', 'D41'], '3.1.1 after required');
 arrayEqual(m311.after.new_skills_introduced, ['A23', 'A41', 'D05', 'D41'], '3.1.1 after new');
 arrayEqual(m311.after.missing_units_flagged, [], '3.1.1 after missing');
 
 const m312 = byId(packet.target_exercise_mapping_patch_plan, '3.1.2', 'mapping plan');
-arrayEqual(m312.before.required_skills, e312.required_skills, '3.1.2 before required');
-arrayEqual(m312.before.prior_knowledge_assumed, e312.prior_knowledge_assumed, '3.1.2 before prior');
-arrayEqual(m312.before.new_skills_introduced, e312.new_skills_introduced, '3.1.2 before new');
-arrayEqual(m312.before.missing_units_flagged, e312.missing_units_flagged, '3.1.2 before missing');
+if (preH3BExecution) {
+  arrayEqual(m312.before.required_skills, e312.required_skills, '3.1.2 before required');
+  arrayEqual(m312.before.prior_knowledge_assumed, e312.prior_knowledge_assumed, '3.1.2 before prior');
+  arrayEqual(m312.before.new_skills_introduced, e312.new_skills_introduced, '3.1.2 before new');
+  arrayEqual(m312.before.missing_units_flagged, e312.missing_units_flagged, '3.1.2 before missing');
+} else {
+  arrayEqual(m312.after.required_skills, e312.required_skills, '3.1.2 after required live');
+  arrayEqual(m312.after.prior_knowledge_assumed, e312.prior_knowledge_assumed, '3.1.2 after prior live');
+  arrayEqual(m312.after.new_skills_introduced, e312.new_skills_introduced, '3.1.2 after new live');
+  arrayEqual(m312.after.missing_units_flagged, e312.missing_units_flagged, '3.1.2 after missing live');
+}
 arrayEqual(m312.after.required_skills, ['A10', 'A19', 'A23', 'A32', 'A40', 'D03', 'D41', 'D42', 'D07'], '3.1.2 after required');
 arrayEqual(m312.after.prior_knowledge_assumed, ['A10', 'A19', 'A23', 'A40', 'D41'], '3.1.2 after prior');
 arrayEqual(m312.after.new_skills_introduced, ['A32', 'D03', 'D42', 'D07'], '3.1.2 after new');
@@ -283,10 +315,17 @@ if (!String(m312.execution_note || '').includes('D42 itself does not depend on D
 }
 
 const m313 = byId(packet.target_exercise_mapping_patch_plan, '3.1.3', 'mapping plan');
-arrayEqual(m313.before.required_skills, e313.required_skills, '3.1.3 before required');
-arrayEqual(m313.before.prior_knowledge_assumed, e313.prior_knowledge_assumed, '3.1.3 before prior');
-arrayEqual(m313.before.new_skills_introduced, e313.new_skills_introduced, '3.1.3 before new');
-arrayEqual(m313.before.missing_units_flagged, e313.missing_units_flagged, '3.1.3 before missing');
+if (preH3BExecution) {
+  arrayEqual(m313.before.required_skills, e313.required_skills, '3.1.3 before required');
+  arrayEqual(m313.before.prior_knowledge_assumed, e313.prior_knowledge_assumed, '3.1.3 before prior');
+  arrayEqual(m313.before.new_skills_introduced, e313.new_skills_introduced, '3.1.3 before new');
+  arrayEqual(m313.before.missing_units_flagged, e313.missing_units_flagged, '3.1.3 before missing');
+} else {
+  arrayEqual(m313.after.required_skills, e313.required_skills, '3.1.3 after required live');
+  arrayEqual(m313.after.prior_knowledge_assumed, e313.prior_knowledge_assumed, '3.1.3 after prior live');
+  arrayEqual(m313.after.new_skills_introduced, e313.new_skills_introduced, '3.1.3 after new live');
+  arrayEqual(m313.after.missing_units_flagged, e313.missing_units_flagged, '3.1.3 after missing live');
+}
 arrayEqual(m313.after.required_skills, ['A06', 'A10', 'A19', 'A27', 'A41', 'D19', 'D29', 'D43'], '3.1.3 after required');
 arrayEqual(m313.after.new_skills_introduced, ['A27', 'D19', 'D29', 'D43'], '3.1.3 after new');
 if (!m313.held_mapping || m313.held_mapping.unit_id !== 'D44') fail('3.1.3 must hold D44 mapping');
@@ -352,7 +391,7 @@ if (
 ) {
   fail('roadmap must include MTU-H3B/GATE-MTU-H3B lifecycle rows');
 }
-if (!/v3\.0[678]-(?:gate-mtu-h3a-pass-with-conditions|mtu-h3b-incidence-execution-packet|gate-mtu-h3b-pass-with-conditions)/.test(roadmap)) {
+if (!/v3\.0[6789]-(?:gate-mtu-h3a-pass-with-conditions|mtu-h3b-incidence-execution-packet|gate-mtu-h3b-pass-with-conditions|mtu-h3c-incidence-executed)/.test(roadmap)) {
   fail('roadmap must be in post-H3A or H3B execution-packet/closure lifecycle state');
 }
 
@@ -387,7 +426,12 @@ if (fs.existsSync(GATE_CLOSURE_JSON)) {
     fail('H3B closure must not authorize student/product use');
   }
   requireIncludes(roadmap, 'GATE-MTU-H3B | Incidence Pass-Through CLI Execution Human Review | yes');
-  requireIncludes(roadmap, 'MTU-H3C | Incidence Pass-Through Bounded CLI Execution | no');
+  if (
+    !roadmap.includes('MTU-H3C | Incidence Pass-Through Bounded CLI Execution | no') &&
+    !roadmap.includes('MTU-H3C | Incidence Pass-Through Bounded CLI Execution | yes')
+  ) {
+    fail('roadmap must include MTU-H3C execution sprint row');
+  }
 }
 
 console.log('OK MTU-H3B incidence CLI execution packet');

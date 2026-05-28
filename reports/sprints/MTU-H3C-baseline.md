@@ -2,6 +2,8 @@
 
 Generated: 2026-05-28
 
+## Plan reference
+
 Plan: `reports/sprints/MTU-H3C-plan.md`
 
 ## Remote And Worktree Baseline
@@ -77,6 +79,14 @@ Absent units before execution:
 All three records currently have `record_status:
 migrated_from_v4_needs_v5_review` and source refs tied to their same paragraph
 IDs. Those metadata fields must not change.
+
+## Data integrity notes
+
+Protected reference data under `references/machine/` may change only through
+the reference CLI. `references/external/` must not change. Authored
+target-exercise mapping changes are allowed only as exact reviewed array
+patches for `3.1.1`, `3.1.2`, and `3.1.3`; they must not alter status,
+source, placeholder, paragraph metadata, or promotion fields.
 
 ## Stop Conditions Carried Into H3C
 
