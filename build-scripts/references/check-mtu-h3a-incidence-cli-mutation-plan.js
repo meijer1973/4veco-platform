@@ -273,7 +273,7 @@ requireIncludes(reviewMd, 'Stop if the packet/evidence has not been pushed befor
 requireIncludes(reviewMd, 'D45', 'review markdown');
 requireIncludes(reviewMd, 'A93', 'review markdown');
 requireIncludes(roadmap, 'MTU-H3A | Incidence Pass-Through CLI-Mutation Planning Packet');
-if (!/v3\.0[567]-(?:mtu-h3a-cli-mutation-plan|gate-mtu-h3a-pass-with-conditions|mtu-h3b-incidence-execution-packet)/.test(roadmap)) {
+if (!/v3\.0[5678]-(?:mtu-h3a-cli-mutation-plan|gate-mtu-h3a-pass-with-conditions|mtu-h3b-incidence-execution-packet|gate-mtu-h3b-pass-with-conditions)/.test(roadmap)) {
   fail('roadmap must be in MTU-H3A planning or post-GATE-MTU-H3A closure lifecycle state');
 }
 

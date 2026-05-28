@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-MTU-H3B-incidence-cli-execution",
+  "date": "2026-05-28",
+  "reviewed_remote_commit": "ad7d69c3836176a10111384aeb640d49e93b705d",
+  "review_mode": "human_review_recorded_from_user_verdict",
+  "verdict": "pass_with_conditions_for_later_bounded_h3b_execution_sprint",
+  "calibration_answers": [
+    {
+      "id": "MTUH3B-CAL1",
+      "answer": "yes",
+      "notes": "Gate reviews H3B execution only and does not itself authorize protected reference mutation, D07 update, unit minting, target-exercise mutation, projection refresh, lesson output, or product use."
+    },
+    {
+      "id": "MTUH3B-CAL2",
+      "answer": "yes_with_closure_commit_hash",
+      "notes": "The H3B packet and evidence were fetchable remotely. Closure records reviewed commit ad7d69c3836176a10111384aeb640d49e93b705d as the satisfied remote proof."
+    },
+    {
+      "id": "MTUH3B-CAL3",
+      "answer": "yes",
+      "notes": "D44 remains held and absent from the H3B command set unless a later gate explicitly finds target evidence for subsidy benefit-sharing."
+    }
+  ],
+  "answers": [
+    {
+      "id": "MTUH3B-Q1",
+      "decision": "accept_remote_evidence_and_preflight",
+      "rationale": "The preflight requirements are strong: clean-worktree proof, commit/hash record, fresh ID checks, D07/A38/A41/A93/A15 presence, extracted-spec logging, D07 dry-run, exact mapping arrays, and projection-boundary checks."
+    },
+    {
+      "id": "MTUH3B-Q2",
+      "decision": "approve_d42_no_d41_dependency_with_wording_condition",
+      "rationale": "D42 no longer depends on D41, avoiding graphical over-trigger. The later execution spec should preferably use zero_needs_status true_zero, or explicitly justify underbouw_assumed."
+    },
+    {
+      "id": "MTUH3B-Q3",
+      "decision": "approve_d07_update_for_later_execution",
+      "rationale": "The D07 update depends on D42 and A38, removes A15, and removes hidden elasticity explanation."
+    },
+    {
+      "id": "MTUH3B-Q4",
+      "decision": "approve_d41_d43_mappings",
+      "rationale": "D41 handles tax wedge/Pc/Pp graphical labeling without importing welfare shading. D43 handles subsidy effective prices. The mapping directions for 3.1.1 and 3.1.3 are coherent."
+    },
+    {
+      "id": "MTUH3B-Q5",
+      "decision": "approve_d45_qualitative_supply_elasticity",
+      "rationale": "D45 names the supply-elasticity boundary explicitly and treats supply elasticity qualitatively via graph steepness or context."
+    },
+    {
+      "id": "MTUH3B-Q6",
+      "decision": "approve_d46_and_keep_a93_bounded",
+      "rationale": "D46 uses the cost shock as denominator; A93 remains old-price-denominator percentage change."
+    },
+    {
+      "id": "MTUH3B-Q7",
+      "decision": "approve_d44_held_lane",
+      "rationale": "Current 3.1.3 evidence does not explicitly ask for subsidy benefit-sharing. D44 remains held and unmapped until target evidence appears."
+    },
+    {
+      "id": "MTUH3B-Q8",
+      "decision": "accept_command_order_and_rollback",
+      "rationale": "Command order is sensible, rollback instructions are adequate, and hand-edit rollback remains forbidden."
+    },
+    {
+      "id": "MTUH3B-Q9",
+      "decision": "authorize_later_bounded_execution_sprint",
+      "rationale": "Scope is limited to D41, D42, D43, D45, D46, narrowed D07, exact mappings for 3.1.1/3.1.2/3.1.3, and generated projections only after source mutations."
+    },
+    {
+      "id": "MTUH3B-Q10",
+      "decision": "no_mutation_or_product_authority_now",
+      "rationale": "This review packet itself authorizes no mutation or product use. A closure may authorize only the named bounded execution sprint."
+    }
+  ],
+  "authorized_later_execution_scope": [
+    "unit-add D41",
+    "unit-add D42",
+    "unit-add D43",
+    "unit-add D45",
+    "unit-add D46",
+    "unit-update D07 after dry-run",
+    "exact authored mapping patches for 3.1.1, 3.1.2, and 3.1.3",
+    "generated projection refresh only after authorized source mutations"
+  ],
+  "held_lanes": [
+    {
+      "unit_id": "D44",
+      "status": "held_unmapped",
+      "reason": "No reviewed target evidence currently asks subsidy benefit-sharing."
+    }
+  ],
+  "execution_sprint_conditions": [
+    "Record reviewed remote commit/hash.",
+    "Run final clean-worktree or expected-local-files preflight.",
+    "Fresh-check D41, D42, D43, D45, and D46 absent.",
+    "Fresh-check D44 absent and absent from command set.",
+    "Fresh-check D07, D05, A38, A41, A93, and A15 present.",
+    "Print every extracted unit spec before command execution.",
+    "Run D07 dry-run and prove A15 is removed, no elasticity explanation remains in procedure, and D07 depends on D42 and A38.",
+    "Decide or fix D42 zero-needs label: preferably true_zero, or explicitly justify underbouw_assumed.",
+    "Print exact before/after mapping arrays for 3.1.1, 3.1.2, and 3.1.3.",
+    "Do not alter record_status, source_ref, placeholders, paragraph metadata, or promotion fields.",
+    "Refresh generated projections only after authorized source mutations.",
+    "Run full validation stack and no-unintended-diff proof."
+  ],
+  "quality_log": [
+    {
+      "issue": "Partial source/projection discipline risk.",
+      "severity": "high",
+      "next_action": "Execute D07 narrowing, D41/D42/D43/D45/D46 minting, target mappings, and downstream projections as a coupled sprint.",
+      "proof_required": "No stale D07 mapping, no premature projection refresh, and validation passes."
+    },
+    {
+      "issue": "D42 zero-needs wording is still ambiguous.",
+      "severity": "medium",
+      "next_action": "Prefer true_zero or explicitly justify underbouw_assumed before execution.",
+      "proof_required": "Execution log records the reviewed D42 zero-needs status."
+    },
+    {
+      "issue": "D07 must not retain hidden elasticity scope.",
+      "severity": "high",
+      "next_action": "Run D07 dry-run and inspect patch before execution.",
+      "proof_required": "D07 has D42/A38 needs, no A15, and no elasticity explanation in procedure."
+    },
+    {
+      "issue": "D44 lacks current target evidence.",
+      "severity": "medium_high",
+      "next_action": "Keep D44 held and unmapped.",
+      "proof_required": "No D44 command or mapping appears in H3B execution."
+    },
+    {
+      "issue": "A93 boundary risk.",
+      "severity": "high",
+      "next_action": "Keep A93 unchanged and use D46 only for cost-shock pass-through share.",
+      "proof_required": "No pass-through-share task maps to A93 alone."
+    }
+  ]
+}

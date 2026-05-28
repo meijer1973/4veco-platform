@@ -12,12 +12,13 @@ docs/roadmaps/roadmap-version-index.json
 
 | Roadmap | Version | Path | Notes |
 |---|---|---|---|
-| References Team Roadmap | `v3.07-mtu-h3b-incidence-execution-packet` | `references/reference-team-roadmap.md` | Current operating roadmap after MTU-H3B prepared the incidence/pass-through CLI execution packet and GATE-MTU-H3B became the active human-review lane. |
+| References Team Roadmap | `v3.08-gate-mtu-h3b-pass-with-conditions` | `references/reference-team-roadmap.md` | Current operating roadmap after GATE-MTU-H3B closed pass_with_conditions and MTU-H3C became the active bounded execution sprint. |
 
 ## Outdated Archive
 
 | Roadmap | Version | Path | Superseded By |
 |---|---|---|---|
+| References Team Roadmap before GATE-MTU-H3B closure | `v3.07-mtu-h3b-incidence-execution-packet` | `docs/roadmaps/outdated/reference-team-roadmap-v3.07-mtu-h3b-incidence-execution-packet.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before MTU-H3B incidence execution packet | `v3.06-gate-mtu-h3a-pass-with-conditions` | `docs/roadmaps/outdated/reference-team-roadmap-v3.06-gate-mtu-h3a-pass-with-conditions.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before GATE-MTU-H3A closure | `v3.05-mtu-h3a-cli-mutation-plan` | `docs/roadmaps/outdated/reference-team-roadmap-v3.05-mtu-h3a-cli-mutation-plan.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before MTU-H3A CLI-mutation planning packet | `v3.04-gate-mtu-h3-pass-with-conditions` | `docs/roadmaps/outdated/reference-team-roadmap-v3.04-gate-mtu-h3-pass-with-conditions.md` | `references/reference-team-roadmap.md` |

@@ -1,0 +1,174 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-MTU-H3B-incidence-cli-execution",
+  "sprint_id": "MTU-H3B",
+  "date": "2026-05-28",
+  "closed_on": "2026-05-28",
+  "status": "pass_with_conditions",
+  "status_detail": "authorize_later_bounded_execution_sprint",
+  "decision": "PASS WITH CONDITIONS for authorizing a later bounded H3B execution sprint",
+  "closure_confirmed_by_human": true,
+  "reviewed_remote_commit": "ad7d69c3836176a10111384aeb640d49e93b705d",
+  "remote_evidence_pushed_before_review": true,
+  "remote_publication_status_resolution": "reviewed packet was fetchable remotely; closure records reviewed commit hash",
+  "protected_reference_data_changed": false,
+  "human_interview": "reports/review-gates/GATE-MTU-H3B-incidence-cli-execution/human-interview.md",
+  "review_packet": "reports/review-gates/GATE-MTU-H3B-incidence-cli-execution/review-packet.md",
+  "execution_packet": "reports/mtu-hardening/mtu-h3b-incidence-cli-execution-packet.json",
+  "source_gate": "reports/review-gates/GATE-MTU-H3A-incidence-cli-mutation-plan/gate-closure.json",
+  "summary": "GATE-MTU-H3B accepted the H3B execution packet and authorized a later bounded execution sprint for narrowed D07, D41/D42/D43/D45/D46 unit additions, exact target-exercise mapping patches for 3.1.1/3.1.2/3.1.3, and generated projection refresh only after authorized source mutations. D44 remains held and unmapped. The review packet itself performs no mutation or product use.",
+  "accepted_for_later_execution": [
+    {
+      "lane": "D41",
+      "decision": "accept_for_execution",
+      "scope": "tax wedge and Pc/Pp graphical labeling",
+      "mapping_direction": "3.1.1 replaces D07 with D41"
+    },
+    {
+      "lane": "D42",
+      "decision": "accept_for_execution_with_zero_needs_wording_condition",
+      "scope": "tax burden amounts in euros",
+      "conditions": [
+        "must not depend on D41",
+        "prefer zero_needs_status true_zero, or explicitly justify underbouw_assumed"
+      ]
+    },
+    {
+      "lane": "D43",
+      "decision": "accept_for_execution",
+      "scope": "subsidy effective prices",
+      "mapping_direction": "3.1.3 adds D43"
+    },
+    {
+      "lane": "D45",
+      "decision": "accept_for_execution",
+      "scope": "relative elasticity explanation",
+      "conditions": [
+        "keep supply elasticity qualitative and visible",
+        "do not hide a numeric supply-elasticity prerequisite"
+      ]
+    },
+    {
+      "lane": "D46",
+      "decision": "accept_for_execution",
+      "scope": "cost-shock pass-through share",
+      "conditions": [
+        "A93 remains unchanged and bounded to price percentage change"
+      ]
+    },
+    {
+      "lane": "D07",
+      "decision": "accept_for_execution_after_dry_run",
+      "scope": "tax afwentelingspercentage / percentage burden calculation",
+      "conditions": [
+        "needs D42 and A38",
+        "remove A15",
+        "remove hidden elasticity explanation"
+      ]
+    },
+    {
+      "lane": "target-exercise-mapping",
+      "decision": "accept_for_execution",
+      "scope": "exact authored mapping patches for 3.1.1, 3.1.2, and 3.1.3",
+      "conditions": [
+        "do not alter record_status, source_ref, placeholders, paragraph metadata, or promotion fields"
+      ]
+    }
+  ],
+  "held_lanes": [
+    {
+      "lane": "D44",
+      "decision": "held_unmapped",
+      "reason": "current reviewed 3.1.3 evidence does not explicitly ask subsidy benefit-sharing",
+      "unit_minting_authorized": false,
+      "mapping_authorized": false
+    }
+  ],
+  "conditions": [
+    "record_reviewed_remote_commit_hash",
+    "run_clean_worktree_or_expected_local_files_preflight",
+    "fresh_check_d41_d42_d43_d45_d46_absent",
+    "fresh_check_d44_absent_and_absent_from_command_set",
+    "fresh_check_d07_d05_a38_a41_a93_a15_present",
+    "print_each_extracted_unit_spec_before_cli_execution",
+    "run_d07_dry_run_and_prove_a15_removed_no_elasticity_explanation_and_needs_d42_a38",
+    "decide_or_fix_d42_zero_needs_label_prefer_true_zero_or_justify_underbouw_assumed",
+    "print_exact_mapping_arrays_for_3_1_1_3_1_2_3_1_3_before_write",
+    "do_not_change_target_exercise_status_source_placeholder_paragraph_metadata_or_promotion_fields",
+    "refresh_generated_projections_only_after_authorized_source_mutations",
+    "run_full_validation_stack_and_no_unintended_diff_proof",
+    "no_product_or_lesson_output_authority"
+  ],
+  "authority_boundary": {
+    "direct_execution_from_review_packet_authorized": false,
+    "protected_reference_mutation_authorized_by_this_packet": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized_by_this_packet": false,
+    "d07_mutation_authorized_by_this_packet": false,
+    "unit_minting_authorized_by_this_packet": false,
+    "unit_update_execution_authorized_by_this_packet": false,
+    "unit_split_execution_authorized": false,
+    "unit_deprecation_authorized": false,
+    "target_exercise_mutation_authorized_by_this_packet": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "target_exercise_promotion_authorized": false,
+    "generated_projection_refresh_authorized_by_this_packet": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "student_product_use_authorized": false
+  },
+  "quality_log": [
+    {
+      "issue": "Partial source/projection discipline risk.",
+      "severity": "high",
+      "resolution": "Later execution sprint must keep D07 narrowing, D41/D42/D43/D45/D46 minting, target mappings, and downstream projections coupled or blocked together."
+    },
+    {
+      "issue": "D42 zero-needs wording is still ambiguous.",
+      "severity": "medium",
+      "resolution": "Later execution sprint must prefer true_zero or explicitly justify underbouw_assumed."
+    },
+    {
+      "issue": "D07 must not retain hidden elasticity scope.",
+      "severity": "high",
+      "resolution": "D07 dry-run must prove A15 removed, D42/A38 dependencies present, and no elasticity procedure remains."
+    },
+    {
+      "issue": "D44 lacks current target evidence.",
+      "severity": "medium-high",
+      "resolution": "Keep D44 held and unmapped until a later gate finds target evidence."
+    },
+    {
+      "issue": "A93 boundary risk.",
+      "severity": "high",
+      "resolution": "Keep A93 unchanged and use D46 only when denominator is the cost shock."
+    }
+  ],
+  "authorized_next": {
+    "sprint_id": "MTU-H3C",
+    "name": "Incidence Pass-Through Bounded CLI Execution",
+    "authority": "execute the reviewed H3B bounded command set with stated conditions",
+    "execution_authorized": true,
+    "scope": [
+      "unit-add D41",
+      "unit-add D42",
+      "unit-add D43",
+      "unit-add D45",
+      "unit-add D46",
+      "unit-update D07 after dry-run",
+      "exact authored mapping patches for 3.1.1, 3.1.2, and 3.1.3",
+      "generated projection refresh only after authorized source mutations"
+    ],
+    "held": [
+      "D44"
+    ]
+  }
+}

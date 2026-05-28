@@ -23,6 +23,8 @@ const PACKET_MD = path.join(ROOT, 'reports', 'mtu-hardening', 'mtu-h3b-incidence
 const REVIEW_JSON = path.join(ROOT, 'reports', 'review-gates', 'GATE-MTU-H3B-incidence-cli-execution', 'review-packet.json');
 const REVIEW_MD = path.join(ROOT, 'reports', 'review-gates', 'GATE-MTU-H3B-incidence-cli-execution', 'review-packet.md');
 const BUNDLE_URLS = path.join(ROOT, 'reports', 'review-gates', 'GATE-MTU-H3B-incidence-cli-execution', 'bundle-urls.md');
+const HUMAN_INTERVIEW_JSON = path.join(ROOT, 'reports', 'review-gates', 'GATE-MTU-H3B-incidence-cli-execution', 'human-interview.json');
+const GATE_CLOSURE_JSON = path.join(ROOT, 'reports', 'review-gates', 'GATE-MTU-H3B-incidence-cli-execution', 'gate-closure.json');
 const H3A_CLOSURE = path.join(ROOT, 'reports', 'review-gates', 'GATE-MTU-H3A-incidence-cli-mutation-plan', 'gate-closure.json');
 const H3A_PLAN = path.join(ROOT, 'reports', 'mtu-hardening', 'mtu-h3a-incidence-cli-mutation-plan.json');
 const UNITS_JSON = path.join(ROOT, 'references', 'machine', 'micro-teaching-units.json');
@@ -344,9 +346,48 @@ if (fs.existsSync(BUNDLE_URLS)) {
   requireIncludes(bundle, 'review-packet.json', 'bundle urls');
 }
 
-requireIncludes(roadmap, 'MTU-H3B | Incidence Pass-Through CLI Execution Packet');
-if (!/v3\.0[67]-(?:gate-mtu-h3a-pass-with-conditions|mtu-h3b-incidence-execution-packet)/.test(roadmap)) {
-  fail('roadmap must be in post-H3A or H3B execution-packet lifecycle state');
+if (
+  !roadmap.includes('MTU-H3B | Incidence Pass-Through CLI Execution Packet') &&
+  !roadmap.includes('GATE-MTU-H3B | Incidence Pass-Through CLI Execution Human Review')
+) {
+  fail('roadmap must include MTU-H3B/GATE-MTU-H3B lifecycle rows');
+}
+if (!/v3\.0[678]-(?:gate-mtu-h3a-pass-with-conditions|mtu-h3b-incidence-execution-packet|gate-mtu-h3b-pass-with-conditions)/.test(roadmap)) {
+  fail('roadmap must be in post-H3A or H3B execution-packet/closure lifecycle state');
+}
+
+if (fs.existsSync(GATE_CLOSURE_JSON)) {
+  const closure = readJson(GATE_CLOSURE_JSON);
+  const interview = readJson(HUMAN_INTERVIEW_JSON);
+  if (closure.status !== 'pass_with_conditions') fail('H3B closure status must be pass_with_conditions');
+  if (closure.status_detail !== 'authorize_later_bounded_execution_sprint') {
+    fail('H3B closure must authorize a later bounded execution sprint');
+  }
+  if (closure.reviewed_remote_commit !== 'ad7d69c3836176a10111384aeb640d49e93b705d') {
+    fail('H3B closure must record reviewed remote commit');
+  }
+  if (closure.authorized_next.sprint_id !== 'MTU-H3C') fail('H3B closure must authorize MTU-H3C next');
+  if (closure.authorized_next.execution_authorized !== true) fail('H3B closure must authorize later execution');
+  if (interview.verdict !== 'pass_with_conditions_for_later_bounded_h3b_execution_sprint') {
+    fail('H3B human interview verdict mismatch');
+  }
+  for (const lane of ['D07', 'D41', 'D42', 'D43', 'D45', 'D46']) {
+    if (!JSON.stringify(closure.accepted_for_later_execution).includes(lane)) {
+      fail(`H3B closure must mention ${lane}`);
+    }
+  }
+  if (!JSON.stringify(closure.held_lanes).includes('D44')) fail('H3B closure must keep D44 held');
+  if (!JSON.stringify(closure.conditions).includes('d42_zero_needs')) {
+    fail('H3B closure must require D42 zero-needs decision or justification');
+  }
+  if (closure.authority_boundary.direct_execution_from_review_packet_authorized !== false) {
+    fail('H3B closure must not authorize direct execution from the review packet itself');
+  }
+  if (closure.authority_boundary.student_product_use_authorized !== false) {
+    fail('H3B closure must not authorize student/product use');
+  }
+  requireIncludes(roadmap, 'GATE-MTU-H3B | Incidence Pass-Through CLI Execution Human Review | yes');
+  requireIncludes(roadmap, 'MTU-H3C | Incidence Pass-Through Bounded CLI Execution | no');
 }
 
 console.log('OK MTU-H3B incidence CLI execution packet');
