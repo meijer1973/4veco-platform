@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-05-28T15:45:00.554Z
+Generated: 2026-05-28T16:00:32.517Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 2025
+Files indexed: 2030
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -952,7 +952,7 @@ Count: 337
 
 ## reports
 
-Count: 993
+Count: 997
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1306,6 +1306,10 @@ Count: 993
 - reports/review-gates/GATE-MTU-H3-incidence-pass-through/review-packet.json
 - reports/review-gates/GATE-MTU-H3-incidence-pass-through/review-packet.md
 - reports/review-gates/GATE-MTU-H3A-incidence-cli-mutation-plan/bundle-urls.md
+- reports/review-gates/GATE-MTU-H3A-incidence-cli-mutation-plan/gate-closure.json
+- reports/review-gates/GATE-MTU-H3A-incidence-cli-mutation-plan/gate-closure.md
+- reports/review-gates/GATE-MTU-H3A-incidence-cli-mutation-plan/human-interview.json
+- reports/review-gates/GATE-MTU-H3A-incidence-cli-mutation-plan/human-interview.md
 - reports/review-gates/GATE-MTU-H3A-incidence-cli-mutation-plan/review-packet.json
 - reports/review-gates/GATE-MTU-H3A-incidence-cli-mutation-plan/review-packet.md
 - reports/review-gates/GATE-PV-G1-schema/bundle-urls.md
@@ -1968,7 +1972,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 250
+Count: 251
 
 - .gitignore
 - BUILD-CHAPTER.md
@@ -2077,6 +2081,7 @@ Count: 250
 - docs/roadmaps/outdated/reference-team-roadmap-v3.02-mtu-h2j-executed-mtu-h3-active.md
 - docs/roadmaps/outdated/reference-team-roadmap-v3.03-mtu-h3-review-packet.md
 - docs/roadmaps/outdated/reference-team-roadmap-v3.04-gate-mtu-h3-pass-with-conditions.md
+- docs/roadmaps/outdated/reference-team-roadmap-v3.05-mtu-h3a-cli-mutation-plan.md
 - docs/roadmaps/README.md
 - docs/roadmaps/roadmap-version-index.json
 - docs/roadmaps/roadmap-version-index.md

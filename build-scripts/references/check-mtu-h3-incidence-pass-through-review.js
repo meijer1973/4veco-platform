@@ -175,7 +175,7 @@ requireIncludes(bundle, 'review-packet.json', 'bundle urls');
 requireIncludes(h2jResult, 'MTU-H3', 'H2J result');
 requireIncludes(roadmap, 'GATE-MTU-H3');
 requireIncludes(roadmap, 'MTU-H3 | Incidence Pass-Through Skill Family Review | yes');
-if (!/v3\.0[3456]-(?:mtu-h3-review-packet|gate-mtu-h3-pass-with-conditions|mtu-h3a-cli-mutation-plan|gate-mtu-h3a-pass-with-conditions)/.test(roadmap)) {
+if (!/v3\.0[34567]-(?:mtu-h3-review-packet|gate-mtu-h3-pass-with-conditions|mtu-h3a-cli-mutation-plan|gate-mtu-h3a-pass-with-conditions|mtu-h3b-incidence-execution-packet)/.test(roadmap)) {
   fail('roadmap must be in MTU-H3 review or post-GATE-MTU-H3 closure lifecycle state');
 }
 

@@ -273,7 +273,7 @@ requireIncludes(reviewMd, 'Stop if the packet/evidence has not been pushed befor
 requireIncludes(reviewMd, 'D45', 'review markdown');
 requireIncludes(reviewMd, 'A93', 'review markdown');
 requireIncludes(roadmap, 'MTU-H3A | Incidence Pass-Through CLI-Mutation Planning Packet');
-if (!/v3\.0[56]-(?:mtu-h3a-cli-mutation-plan|gate-mtu-h3a-pass-with-conditions)/.test(roadmap)) {
+if (!/v3\.0[567]-(?:mtu-h3a-cli-mutation-plan|gate-mtu-h3a-pass-with-conditions|mtu-h3b-incidence-execution-packet)/.test(roadmap)) {
   fail('roadmap must be in MTU-H3A planning or post-GATE-MTU-H3A closure lifecycle state');
 }
 
@@ -308,7 +308,12 @@ if (fs.existsSync(GATE_CLOSURE_JSON)) {
     fail('H3A closure must not authorize target-exercise mutation');
   }
   requireIncludes(roadmap, 'GATE-MTU-H3A | Incidence Pass-Through CLI-Mutation Plan Human Review | yes');
-  requireIncludes(roadmap, 'MTU-H3B | Incidence Pass-Through CLI Execution Packet | no');
+  if (
+    !roadmap.includes('MTU-H3B | Incidence Pass-Through CLI Execution Packet | no') &&
+    !roadmap.includes('MTU-H3B | Incidence Pass-Through CLI Execution Packet | yes')
+  ) {
+    fail('roadmap must include MTU-H3B execution packet row');
+  }
 }
 
 console.log('OK MTU-H3A incidence CLI-mutation planning packet');
