@@ -1,0 +1,308 @@
+{
+  "schema_version": 1,
+  "sprint_id": "MTU-H4",
+  "gate_id": "GATE-MTU-H4-answer-form-question-type-routing",
+  "created": "2026-05-28",
+  "status": "routing_packet_ready_no_mutation",
+  "remote_publication_required_before_review": true,
+  "remote_publication_status": "must_commit_and_push_this_packet_before_human_review",
+  "source_roadmap_version": "v3.09-mtu-h3c-incidence-executed",
+  "source_files": [
+    "references/reference-team-roadmap.md",
+    "reports/sprints/MTU-H4-plan.md",
+    "reports/sprints/MTU-H4-baseline.md",
+    "reports/mtu-hardening/solo-q1-q3-operation-map.md",
+    "reports/review-gates/GATE-MTU-H2A-cli-mutation-plan/gate-closure.json",
+    "reports/json/exam-question-extraction-gaps.json",
+    "references/authored/vraagtypen-en-opgaveontwerp.md",
+    "references/authored/course-target-exercises.json",
+    "references/machine/micro-teaching-units.json",
+    "references/data/exam-ingestion/operation-answer-skill-contract.json",
+    "references/data/exam-ingestion/operation-answer-skill-contract.md",
+    "references/schemas/answer-skill-candidates.schema.json",
+    "build-scripts/references/answer-skill-candidate-add.js",
+    "build-scripts/references/check-operation-answer-skill-candidates.js"
+  ],
+  "authority_boundary": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "unit_update_execution_authorized": false,
+    "unit_split_execution_authorized": false,
+    "unit_deprecation_authorized": false,
+    "target_exercise_mutation_authorized": false,
+    "target_exercise_promotion_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_mutation_authorized": false,
+    "generated_projection_refresh_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "student_product_use_authorized": false
+  },
+  "baseline": {
+    "target_exercise_records": 54,
+    "target_exercise_question_type_or_answer_form_fields_present": false,
+    "answer_skill_candidate_storage_path": "references/data/exam-ingestion/answer-skill-candidates.json",
+    "answer_skill_candidate_storage_exists": false,
+    "answer_skill_candidate_cli_status": "dry_run_only_storage_absent",
+    "exam_question_type_counts": {
+      "uitleg_dat": 32,
+      "uitleg_of": 10,
+      "bron": 8,
+      "berekenen": 2,
+      "noem": 2
+    },
+    "h2_deferred_answer_form_needs": [
+      {
+        "source": "solo-q1",
+        "label": "A_ANSWER_LEG_UIT_WITH_EXAMPLE",
+        "route": "MTU-H4"
+      },
+      {
+        "source": "solo-q2",
+        "label": "A_ANSWER_BEREKEN_QUESTION",
+        "route": "MTU-H4"
+      }
+    ],
+    "ex_answer_skill_candidates_visible_not_written": [
+      "EX_ANS_THRESHOLD_CONCLUSION_UNIT_DIRECTION",
+      "EX_ANS_TWO_STEP_CORRECTION_MODEL_EXPLANATION"
+    ]
+  },
+  "routing_boundary": {
+    "recommended_architecture": "hybrid_reusable_answer_form_mtus_plus_exam_answer_skill_overlays",
+    "reusable_answer_form_mtu_route": "Use for broad, repeatable answer procedures that students must learn across many exercises, such as calculation answer layout, causal-chain explanation, source-use explanation, graph/area response, and concise identification.",
+    "exam_answer_skill_overlay_route": "Use for correction-model-specific answer-construction needs that depend on official answer-model wording, point rules, accepted alternatives, or item-specific threshold conclusions.",
+    "target_exercise_question_type_route": "Treat any future question_type or answer_form fields in course-target-exercises.json as authored-reference mutations requiring exact before/after diffs in a later packet.",
+    "current_packet_authorizes_writes": false
+  },
+  "reusable_answer_form_lane_candidates": [
+    {
+      "planning_label": "ANS_BEREKEN",
+      "live_unit_id": null,
+      "status": "planning_candidate",
+      "maps_question_types": ["berekenen"],
+      "source_evidence": [
+        "reports/mtu-hardening/solo-q1-q3-operation-map.md q2",
+        "references/authored/vraagtypen-en-opgaveontwerp.md Type 2"
+      ],
+      "core_answer_procedure": [
+        "Name the formula or relationship.",
+        "Substitute values from context, table, or graph.",
+        "Show intermediate calculation steps.",
+        "Give the final answer with units and rounding.",
+        "Add a short conclusion in the wording of the question when required."
+      ],
+      "mutation_authorized_now": false
+    },
+    {
+      "planning_label": "ANS_LEG_UIT_DAT",
+      "live_unit_id": null,
+      "status": "planning_candidate",
+      "maps_question_types": ["uitleg_dat"],
+      "source_evidence": [
+        "references/authored/vraagtypen-en-opgaveontwerp.md Type 1",
+        "reports/json/exam-question-extraction-gaps.json"
+      ],
+      "core_answer_procedure": [
+        "Treat the conclusion in the prompt as given.",
+        "Build the first causal link from the given situation.",
+        "Build the second causal link toward the required conclusion.",
+        "End by reconnecting to the given conclusion."
+      ],
+      "mutation_authorized_now": false
+    },
+    {
+      "planning_label": "ANS_LEG_UIT_OF",
+      "live_unit_id": null,
+      "status": "planning_candidate",
+      "maps_question_types": ["uitleg_of"],
+      "source_evidence": [
+        "references/authored/vraagtypen-en-opgaveontwerp.md Type 3",
+        "reports/json/exam-question-extraction-gaps.json"
+      ],
+      "core_answer_procedure": [
+        "First state the directional conclusion, such as stijgt, daalt, positief, or negatief.",
+        "Support the direction with the relevant economic mechanism.",
+        "Connect the mechanism to the context or source data.",
+        "Make the final answer unambiguous."
+      ],
+      "mutation_authorized_now": false
+    },
+    {
+      "planning_label": "ANS_LEG_UIT_MET_VOORBEELD",
+      "live_unit_id": null,
+      "status": "planning_candidate",
+      "maps_question_types": [],
+      "source_evidence": [
+        "reports/mtu-hardening/solo-q1-q3-operation-map.md q1",
+        "reports/review-gates/GATE-MTU-H2A-cli-mutation-plan/gate-closure.json"
+      ],
+      "core_answer_procedure": [
+        "Give one example that fits the requested category.",
+        "Explain why the example fits the economic concept.",
+        "Connect the example explicitly to the question context.",
+        "Avoid replacing the explanation with only a named example."
+      ],
+      "mutation_authorized_now": false
+    },
+    {
+      "planning_label": "ANS_NOEM_GEEF_AAN",
+      "live_unit_id": null,
+      "status": "planning_candidate",
+      "maps_question_types": ["noem"],
+      "source_evidence": [
+        "references/authored/vraagtypen-en-opgaveontwerp.md Type 7",
+        "reports/json/exam-question-extraction-gaps.json"
+      ],
+      "core_answer_procedure": [
+        "Identify exactly what the prompt asks for.",
+        "Give the required item, label, or term without unnecessary explanation.",
+        "Use syllabus terminology or the source label when the prompt requires it."
+      ],
+      "mutation_authorized_now": false
+    },
+    {
+      "planning_label": "ANS_BRON_GEBRUIKEN",
+      "live_unit_id": null,
+      "status": "planning_candidate",
+      "maps_question_types": ["bron"],
+      "source_evidence": [
+        "references/authored/vraagtypen-en-opgaveontwerp.md Type 6",
+        "reports/json/exam-question-extraction-gaps.json"
+      ],
+      "core_answer_procedure": [
+        "Start with an explicit source observation from a table, figure, graph, or text.",
+        "Use that observation as evidence inside the answer.",
+        "Complete the underlying answer form, such as explanation or calculation.",
+        "Do not cite the source without explaining what it proves."
+      ],
+      "mutation_authorized_now": false
+    },
+    {
+      "planning_label": "ANS_GRAFISCH_ARCEER_TEKEN",
+      "live_unit_id": null,
+      "status": "planning_candidate_needs_more_mapping_evidence",
+      "maps_question_types": [],
+      "source_evidence": [
+        "references/authored/vraagtypen-en-opgaveontwerp.md Type 5",
+        "references/reference-team-roadmap.md MTU-H4 row"
+      ],
+      "core_answer_procedure": [
+        "Determine whether the task asks for drawing, labeling, or shading.",
+        "Use the provided graph scale and existing labels.",
+        "Place the requested line, point, wedge, or area precisely.",
+        "Avoid adding welfare or curve-shift content unless the prompt asks for it."
+      ],
+      "mutation_authorized_now": false
+    },
+    {
+      "planning_label": "ANS_ANALYSEER_BEOORDEEL",
+      "live_unit_id": null,
+      "status": "held_for_later_evidence",
+      "maps_question_types": [],
+      "source_evidence": [
+        "references/authored/vraagtypen-en-opgaveontwerp.md Bloom and answer-structuring sections",
+        "references/reference-team-roadmap.md MTU-H4 row"
+      ],
+      "hold_reason": "Current extracted question_type inventory does not expose analyseer/beoordeel values; later evidence should decide whether this is one lane or multiple argument/evaluation lanes.",
+      "mutation_authorized_now": false
+    }
+  ],
+  "exam_answer_skill_overlay_lanes": [
+    {
+      "answer_skill_id": "EX_ANS_THRESHOLD_CONCLUSION_UNIT_DIRECTION",
+      "status": "keep_overlay_route_no_write",
+      "source_requirement_ids": ["q3-answer-1"],
+      "answer_format": "calculation_conclusion",
+      "reason": "This is correction-model-specific threshold conclusion wording with unit and direction, not merely the generic bereken answer form.",
+      "candidate_write_authorized_now": false
+    },
+    {
+      "answer_skill_id": "EX_ANS_TWO_STEP_CORRECTION_MODEL_EXPLANATION",
+      "status": "keep_overlay_route_no_write",
+      "source_requirement_ids": ["q15-answer-1"],
+      "answer_format": "two_step_explanation",
+      "reason": "D27/F03/F09 cover content only; the two-step answer construction should remain visible in the EX overlay route.",
+      "candidate_write_authorized_now": false
+    }
+  ],
+  "question_type_mapping_candidates": [
+    {
+      "question_type": "berekenen",
+      "current_count": 2,
+      "recommended_answer_form_lane": "ANS_BEREKEN",
+      "mapping_write_authorized_now": false
+    },
+    {
+      "question_type": "uitleg_dat",
+      "current_count": 32,
+      "recommended_answer_form_lane": "ANS_LEG_UIT_DAT",
+      "mapping_write_authorized_now": false
+    },
+    {
+      "question_type": "uitleg_of",
+      "current_count": 10,
+      "recommended_answer_form_lane": "ANS_LEG_UIT_OF",
+      "mapping_write_authorized_now": false
+    },
+    {
+      "question_type": "bron",
+      "current_count": 8,
+      "recommended_answer_form_lane": "ANS_BRON_GEBRUIKEN",
+      "mapping_write_authorized_now": false
+    },
+    {
+      "question_type": "noem",
+      "current_count": 2,
+      "recommended_answer_form_lane": "ANS_NOEM_GEEF_AAN",
+      "mapping_write_authorized_now": false
+    }
+  ],
+  "held_or_deferred_routes": [
+    {
+      "route": "target_exercise_question_type_fields",
+      "status": "deferred_to_later_exact_packet",
+      "reason": "Target-exercise question_type or answer_form fields are authored-reference mutations and need exact before/after diffs."
+    },
+    {
+      "route": "persistent_answer_skill_candidate_storage",
+      "status": "blocked_until_later_gate",
+      "reason": "EX-7 validator/CLI implementation is dry-run-only; answer-skill-candidates.json remains absent."
+    },
+    {
+      "route": "exact_mtu_unit_ids_for_answer_forms",
+      "status": "deferred_to_later_cli_mutation_packet",
+      "reason": "This packet uses planning labels only; live unit IDs and exact CLI specs require a later gate."
+    },
+    {
+      "route": "student_facing_answer_form_training",
+      "status": "blocked_until_after_source_mutation_and_product_gate",
+      "reason": "No lesson output or student/product use is authorized from H4."
+    }
+  ],
+  "recommended_next_gate": {
+    "gate_id": "GATE-MTU-H4-answer-form-question-type-routing",
+    "scope": "Review answer-form MTU versus EX answer-skill overlay boundary, current question_type mapping candidates, held lanes, future source mutation requirements, and no-product-use authority boundary.",
+    "not_authorized": [
+      "unit minting",
+      "unit update execution",
+      "candidate storage creation",
+      "candidate writes",
+      "target-exercise writes",
+      "projection refresh",
+      "lesson output",
+      "student/product use"
+    ]
+  }
+}

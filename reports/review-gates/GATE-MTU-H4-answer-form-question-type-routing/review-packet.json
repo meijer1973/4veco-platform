@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-MTU-H4-answer-form-question-type-routing",
+  "sprint_id": "MTU-H4",
+  "created": "2026-05-28",
+  "status": "review_packet_ready_no_mutation",
+  "source_packet": "reports/mtu-hardening/mtu-h4-answer-form-question-type-routing.json",
+  "remote_publication_required_before_review": true,
+  "remote_publication_status": "must_commit_and_push_this_packet_before_human_review",
+  "authority_boundary": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "unit_update_execution_authorized": false,
+    "unit_split_execution_authorized": false,
+    "unit_deprecation_authorized": false,
+    "target_exercise_mutation_authorized": false,
+    "target_exercise_promotion_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_mutation_authorized": false,
+    "generated_projection_refresh_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "student_product_use_authorized": false
+  },
+  "calibration_questions": [
+    "Confirm this gate reviews the H4 answer-form/question-type routing packet only and does not authorize protected reference mutation, unit minting, candidate storage, candidate writes, target-exercise mutation, projection refresh, lesson output, or student/product use.",
+    "Confirm the H4 packet, review packet, and cited evidence have been pushed to the normal remote branch before this review starts.",
+    "Confirm answer-skill candidate storage remains absent and no candidate writes may occur unless a later gate explicitly authorizes an exact lane."
+  ],
+  "planned_questions": [
+    {
+      "id": "MTUH4-Q1",
+      "title": "evidence baseline",
+      "question": "Is the H4 baseline sufficient: current target exercises have no question_type/answer_form fields, extraction evidence has question_type values, H2 deferred answer forms remain visible, and EX answer-skill storage is dry-run-only?"
+    },
+    {
+      "id": "MTUH4-Q2",
+      "title": "architecture boundary",
+      "question": "Should H4 use a hybrid architecture: reusable answer-form MTU lanes for broad student procedures and EX answer-skill overlays for correction-model-specific answer construction?"
+    },
+    {
+      "id": "MTUH4-Q3",
+      "title": "bereken lane",
+      "question": "Is ANS_BEREKEN acceptable as the reusable calculation-answer lane for formula, substitution, intermediate steps, units, and conclusion?"
+    },
+    {
+      "id": "MTUH4-Q4",
+      "title": "leg uit lanes",
+      "question": "Should uitleg_dat, uitleg_of, and leg-uit-met-voorbeeld be separate planning lanes rather than one broad leg-uit lane?"
+    },
+    {
+      "id": "MTUH4-Q5",
+      "title": "noem geef aan source",
+      "question": "Are ANS_NOEM_GEEF_AAN and ANS_BRON_GEBRUIKEN acceptable as separate lanes for concise identification and explicit source-use answers?"
+    },
+    {
+      "id": "MTUH4-Q6",
+      "title": "graph and analysis lanes",
+      "question": "Should graph/draw/shade answer forms be planned now while analyseer/beoordeel remains held until stronger evidence, or should both be held?"
+    },
+    {
+      "id": "MTUH4-Q7",
+      "title": "EX answer-skill overlays",
+      "question": "Should q3 threshold conclusion/unit-direction and q15 two-step correction-model explanation remain in the EX answer-skill overlay route with no candidate writes now?"
+    },
+    {
+      "id": "MTUH4-Q8",
+      "title": "question-type mappings",
+      "question": "Are the proposed mappings from current question_type values to answer-form lanes acceptable as later planning input, with target-exercise writes deferred?"
+    },
+    {
+      "id": "MTUH4-Q9",
+      "title": "next sprint authority",
+      "question": "If GATE-MTU-H4 closes, what should be authorized next: only a later bounded CLI-mutation planning packet, another routing packet, or a hold?"
+    },
+    {
+      "id": "MTUH4-Q10",
+      "title": "mutation and product authority now",
+      "question": "Does this review packet itself authorize protected reference mutation, unit minting, candidate storage, candidate writes, target-exercise mutation, projection refresh, lesson output, diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student/product use now?"
+    }
+  ]
+}

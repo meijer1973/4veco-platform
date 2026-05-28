@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-05-28T17:18:33.849Z
+Generated: 2026-05-28T17:35:16.116Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 2053
+Files indexed: 2059
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -615,7 +615,7 @@ Count: 122
 
 ## references
 
-Count: 340
+Count: 341
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -746,6 +746,7 @@ Count: 340
 - references/data/sprints/MTU-H3B.plan.json
 - references/data/sprints/MTU-H3B.result.json
 - references/data/sprints/MTU-H3C.plan.json
+- references/data/sprints/MTU-H3C.result.json
 - references/data/sprints/PV-G4.plan.json
 - references/data/sprints/PV.1.plan.json
 - references/data/sprints/PV.1.result.json
@@ -960,7 +961,7 @@ Count: 340
 
 ## reports
 
-Count: 1012
+Count: 1016
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1758,7 +1759,11 @@ Count: 1012
 - reports/sprints/MTU-H3B-plan.md
 - reports/sprints/MTU-H3B-result.md
 - reports/sprints/MTU-H3C-baseline.md
+- reports/sprints/MTU-H3C-diff-summary.md
+- reports/sprints/MTU-H3C-execution-log.json
+- reports/sprints/MTU-H3C-execution-log.md
 - reports/sprints/MTU-H3C-plan.md
+- reports/sprints/MTU-H3C-result.md
 - reports/sprints/PV-G4-baseline.md
 - reports/sprints/PV.1-baseline.md
 - reports/sprints/PV.1-diff-summary.md
@@ -1995,7 +2000,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 253
+Count: 254
 
 - .gitignore
 - BUILD-CHAPTER.md
@@ -2107,6 +2112,7 @@ Count: 253
 - docs/roadmaps/outdated/reference-team-roadmap-v3.05-mtu-h3a-cli-mutation-plan.md
 - docs/roadmaps/outdated/reference-team-roadmap-v3.06-gate-mtu-h3a-pass-with-conditions.md
 - docs/roadmaps/outdated/reference-team-roadmap-v3.07-mtu-h3b-incidence-execution-packet.md
+- docs/roadmaps/outdated/reference-team-roadmap-v3.08-gate-mtu-h3b-pass-with-conditions.md
 - docs/roadmaps/README.md
 - docs/roadmaps/roadmap-version-index.json
 - docs/roadmaps/roadmap-version-index.md

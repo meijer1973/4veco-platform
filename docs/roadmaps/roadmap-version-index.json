@@ -15,13 +15,14 @@
   "roadmaps": [
     {
       "roadmap_id": "references-team-roadmap",
-      "version": "v3.09-mtu-h3c-incidence-executed",
+      "version": "v3.10-mtu-h4-answer-form-routing-packet",
       "title": "References Team Roadmap",
       "status": "active",
       "path": "references/reference-team-roadmap.md",
       "owner": "references_team",
       "updated_on": "2026-05-28",
       "supersedes": [
+        "docs/roadmaps/outdated/reference-team-roadmap-v3.09-mtu-h3c-incidence-executed.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v3.08-gate-mtu-h3b-pass-with-conditions.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v3.07-mtu-h3b-incidence-execution-packet.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v3.06-gate-mtu-h3a-pass-with-conditions.md",
@@ -130,7 +131,17 @@
         "knowledge/Exercise schema and quality/reference-team-roadmap Live version 28 April.md",
         "knowledge/Exercise schema and quality/roadmap-updated-repository-checked.md"
       ],
-      "notes": "Current operating roadmap after MTU-H3C executed the H3B-authorized incidence/pass-through bounded CLI sprint and MTU-H4 became the active answer-form planning sprint."
+      "notes": "Current operating roadmap after MTU-H4 prepared the non-mutating answer-form/question-type routing packet and GATE-MTU-H4 became the active human-review sprint."
+    },
+    {
+      "roadmap_id": "references-team-roadmap",
+      "version": "v3.09-mtu-h3c-incidence-executed",
+      "title": "References Team Roadmap before MTU-H4 answer-form routing packet",
+      "status": "outdated",
+      "path": "docs/roadmaps/outdated/reference-team-roadmap-v3.09-mtu-h3c-incidence-executed.md",
+      "owner": "references_team",
+      "updated_on": "2026-05-28",
+      "superseded_by": "references/reference-team-roadmap.md"
     },
     {
       "roadmap_id": "references-team-roadmap-v3.08",
