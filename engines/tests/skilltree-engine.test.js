@@ -226,8 +226,10 @@ describe('getDependencySubgraph', () => {
         });
         const sg = engine.getDependencySubgraph('A35');
         expect(sg.root).toBe('A35');
-        // A35 has a deep tree: A35 -> A20,A21,A04 -> A12,A13,A02,A07,A08 -> A11,A01,A03
-        expect(sg.nodes.length).toBeGreaterThan(8);
+        // A20 is intentionally generator-blocked after the H2J split; A35 still
+        // keeps its interactive implemented prerequisite path through A21/A04.
+        expect(sg.nodes.map(n => n.id)).toEqual(expect.arrayContaining(['A35', 'A21', 'A04', 'A07', 'A08']));
+        expect(sg.nodes.map(n => n.id)).not.toContain('A20');
         // All nodes should be unique
         const ids = sg.nodes.map(n => n.id);
         expect(new Set(ids).size).toBe(ids.length);
@@ -584,7 +586,7 @@ describe('Goal management', () => {
     test('setGoal enforces max 2 goals', () => {
         const engine = createEngine({ data: { parNr: '3.2.7', activeSkills: null } });
         engine.setGoal('A35');
-        engine.setGoal('A20');
+        engine.setGoal('A95');
         expect(engine.setGoal('A29')).toBeNull();
         expect(engine.getGoals().active).toHaveLength(2);
     });
@@ -598,20 +600,20 @@ describe('Goal management', () => {
         const storage = makeStorage({
             'skilltree_goals': JSON.stringify({
                 active: [],
-                achieved: [{ id: 'A20', setAt: 1000, achievedAt: 2000 }]
+                achieved: [{ id: 'A95', setAt: 1000, achievedAt: 2000 }]
             })
         });
         const engine = createEngine({ data: { parNr: '3.2.7', activeSkills: null }, storage });
-        expect(engine.setGoal('A20')).toBeNull();
+        expect(engine.setGoal('A95')).toBeNull();
     });
 
     test('removeGoal removes a goal', () => {
         const engine = createEngine({ data: { parNr: '3.2.7', activeSkills: null } });
         engine.setGoal('A35');
-        engine.setGoal('A20');
+        engine.setGoal('A95');
         engine.removeGoal('A35');
         expect(engine.getGoals().active).toHaveLength(1);
-        expect(engine.getGoals().active[0].id).toBe('A20');
+        expect(engine.getGoals().active[0].id).toBe('A95');
     });
 
     test('removeGoal is a no-op for non-goal', () => {

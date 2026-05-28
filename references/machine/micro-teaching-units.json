@@ -672,11 +672,11 @@
   },
   {
     "id": "A20",
-    "name": "MO = MK oplossen",
+    "name": "Winstmaximum oplossen met afgeleide MO en MK",
     "category": "vaardigheden",
     "layer": 3,
     "duration_min": 5,
-    "kern": "Vind de winstmaximaliserende hoeveelheid door MO gelijk te stellen aan MK en op te lossen.",
+    "kern": "Los de winstmaximaliserende hoeveelheid op nadat MO uit TO en MK uit TK zijn afgeleid.",
     "needs": [
       "A12",
       "A13",
@@ -684,6 +684,7 @@
     ],
     "exam_codes": [
       "A2.10",
+      "A2.11",
       "A2.12"
     ],
     "mastery_target": "apply",
@@ -692,16 +693,20 @@
       "rekenen",
       "verbaal"
     ],
-    "terms": [],
+    "terms": [
+      "marginale-kosten"
+    ],
     "procedure": [
-      "Stel de MO-functie op (afgeleide van TO, zoals in A12).",
-      "Stel de MK-functie op (afgeleide van TK, zoals in A13).",
-      "Stel MO = MK en los op voor Q* (zoals in A02).",
-      "Controleer dat bij deze Q* geldt MO > MK voor kleinere Q en MO < MK voor grotere Q.",
-      "Gebruik Q* later om P* (via de vraaglijn) en de winst te bepalen."
+      "Bepaal MO via de afgeleide route uit TO.",
+      "Bepaal MK via de afgeleide route uit TK.",
+      "Stel MO = MK.",
+      "Los op naar Q*.",
+      "Gebruik Q* daarna in de passende prijs-, opbrengst- of winstroute."
     ],
     "pitfalls": [
-      "Verwar MO niet met de prijs!"
+      "Deze route gebruiken wanneer MK al als constante of functie is gegeven.",
+      "Deze route gebruiken wanneer MO bij volkomen concurrentie direct gelijk is aan P.",
+      "De MO- of MK-uitkomst als verkoopprijs behandelen."
     ],
     "generator": "GEN_A20"
   },
@@ -2933,6 +2938,80 @@
       "De nieuwe prijs als basiswaarde gebruiken."
     ],
     "generator": "GEN_A93"
+  },
+  {
+    "id": "A94",
+    "name": "MO = P en afgeleide MK oplossen",
+    "category": "vaardigheden",
+    "layer": 3,
+    "kern": "Los de winstmaximaliserende hoeveelheid op wanneer MO bij een prijsnemer gelijk is aan P en MK eerst uit TK moet worden afgeleid.",
+    "needs": [
+      "A13",
+      "A02"
+    ],
+    "exam_codes": [
+      "A2.10",
+      "A2.11",
+      "A2.12"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "aspects": [
+      "rekenen",
+      "verbaal"
+    ],
+    "terms": [
+      "marginale-kosten"
+    ],
+    "procedure": [
+      "Herken dat de aanbieder een prijsnemer is bij volkomen concurrentie.",
+      "Gebruik de regel: bij een prijsnemer geldt MO = marktprijs P.",
+      "Bepaal MK als afgeleide van TK.",
+      "Stel P = MK.",
+      "Los op naar Q*."
+    ],
+    "pitfalls": [
+      "A12 verplicht maken terwijl MO bij de prijsnemer direct gelijk is aan P.",
+      "MK overslaan terwijl TK moet worden gedifferentieerd.",
+      "De gevonden Q* verwarren met prijs of winst."
+    ],
+    "generator": "GEN_A94"
+  },
+  {
+    "id": "A95",
+    "name": "MO = gegeven MK-functie oplossen",
+    "category": "vaardigheden",
+    "layer": 1,
+    "kern": "Los MO = MK op wanneer de MK-functie in de opgave staat en niet uit TK hoeft te worden afgeleid.",
+    "needs": [
+      "A02"
+    ],
+    "exam_codes": [
+      "A2.10",
+      "A2.12"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "aspects": [
+      "rekenen",
+      "verbaal"
+    ],
+    "terms": [
+      "marginale-kosten"
+    ],
+    "procedure": [
+      "Neem de beschikbare MO-functie uit de voorafgaande stap of uit de opgave.",
+      "Neem de gegeven MK-functie uit de opgave.",
+      "Stel MO = MK.",
+      "Los de vergelijking op naar Q*.",
+      "Controleer dat je geen MK-functie afleidt als MK al gegeven is."
+    ],
+    "pitfalls": [
+      "De gegeven MK-functie opnieuw afleiden.",
+      "A91 gebruiken terwijl MK geen constante maar een functie is.",
+      "De gevonden Q* als prijs behandelen."
+    ],
+    "generator": "GEN_A95"
   },
   {
     "id": "B01",

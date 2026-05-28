@@ -500,7 +500,7 @@
         };
     };
 
-    GEN.A20 = function () {
+    GEN.A95 = function () {
         var bMO = ri(2, 6), bMK = ri(1, 4);
         var totalB = bMO + bMK;
         var Qs = ri(3, 15);

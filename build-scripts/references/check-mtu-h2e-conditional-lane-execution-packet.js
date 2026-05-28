@@ -175,6 +175,7 @@ for (const id of ['A12', 'A20', 'A38', 'A04']) {
 }
 const h2fPresentIds = NEW_IDS.filter((id) => unitMap.has(id));
 const h2fExecuted = h2fPresentIds.length === NEW_IDS.length;
+const h2jExecuted = unitMap.has('A94') && unitMap.has('A95') && generators.includes('GEN.A95 = function ()');
 if (h2fPresentIds.length && !h2fExecuted) {
   fail(`H2F execution state is partial; expected all or none of ${NEW_IDS.join(', ')} live`);
 }
@@ -185,7 +186,8 @@ if (!h2fExecuted) {
 }
 if (!(unitMap.get('A12').exam_codes || []).includes('A2.11')) fail('live A12 must retain A2.11');
 if (!generators.includes('GEN.A12')) fail('generators.js must contain GEN.A12');
-if (!generators.includes('GEN.A20')) fail('generators.js must contain GEN.A20');
+if (!h2jExecuted && !generators.includes('GEN.A20')) fail('generators.js must contain GEN.A20 before MTU-H2J execution');
+if (h2jExecuted && generators.includes('GEN.A20 = function ()')) fail('GEN.A20 implementation must be blocked after MTU-H2J execution');
 for (const generator of ['GEN.A88', 'GEN.A89', 'GEN.A90', 'GEN.A92', 'GEN.A93']) {
   if (generators.includes(generator)) fail(`${generator} must be absent in current baseline`);
 }

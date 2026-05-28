@@ -14,7 +14,7 @@
     "reports/markdown/reference-health.md"
   ],
   "summary": {
-    "live_unit_count": 230,
+    "live_unit_count": 242,
     "pv_linked_unit_count": 6,
     "template_count": 6,
     "visual_state_count": 6,
@@ -22,14 +22,14 @@
     "linked_units_with_surface_variants": 6,
     "linked_units_with_game_mapping": 1,
     "linked_units_with_answer_model_projection": 6,
-    "linked_units_with_generator_support": 1,
+    "linked_units_with_generator_support": 2,
     "linked_units_generator_blocked": 4,
     "linked_units_publication_allowed": 0,
     "render_proof_count": 28,
     "blocker_reason_counts": {
       "answer_model_projection_pending": 1,
       "generator_blocked_non_interactive": 4,
-      "generator_missing": 4,
+      "generator_missing": 3,
       "generator_support_pending": 4,
       "human_publication_gate_pending": 6,
       "operation_ids_provisional_until_registry_gate": 4,

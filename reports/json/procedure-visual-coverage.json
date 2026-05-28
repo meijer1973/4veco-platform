@@ -3,7 +3,7 @@
   "sprint_id": "PV.6",
   "gate_id": "GATE-PV6-coverage-dashboard",
   "generated_by": "build-scripts/references/build-procedure-visual-coverage.js",
-  "generated_on": "2026-05-03T09:58:23.454Z",
+  "generated_on": "2026-05-28T13:54:16.852Z",
   "status": "passed",
   "policy": {
     "diagnostic_only": true,
@@ -23,7 +23,7 @@
     "engines/skilltree/generators.js"
   ],
   "summary": {
-    "live_unit_count": 230,
+    "live_unit_count": 242,
     "pv_linked_unit_count": 6,
     "template_count": 6,
     "visual_state_count": 6,
@@ -31,14 +31,14 @@
     "linked_units_with_surface_variants": 6,
     "linked_units_with_game_mapping": 1,
     "linked_units_with_answer_model_projection": 6,
-    "linked_units_with_generator_support": 1,
+    "linked_units_with_generator_support": 2,
     "linked_units_generator_blocked": 4,
     "linked_units_publication_allowed": 0,
     "render_proof_count": 28,
     "blocker_reason_counts": {
       "answer_model_projection_pending": 1,
       "generator_blocked_non_interactive": 4,
-      "generator_missing": 4,
+      "generator_missing": 3,
       "generator_support_pending": 4,
       "human_publication_gate_pending": 6,
       "operation_ids_provisional_until_registry_gate": 4,
@@ -218,17 +218,15 @@
       "game_mapping_status": "not_mapped_or_not_applicable",
       "has_answer_model_projection": true,
       "answer_model_step_count": 4,
-      "has_generator_support": false,
-      "generator_status": "missing_or_blocked",
+      "has_generator_support": true,
+      "generator_status": "implemented",
       "generator_blocked": true,
       "generator_block_sources": [
-        "references/data/sprints/RX.2-generator-blocked-units.json",
-        "references/data/sprints/RX.6-generator-blocked-units.json"
+        "references/data/sprints/RX.2-generator-blocked-units.json"
       ],
       "publication_allowed": false,
       "blocker_reasons": [
         "generator_blocked_non_interactive",
-        "generator_missing",
         "generator_support_pending",
         "human_publication_gate_pending",
         "operation_ids_provisional_until_registry_gate",

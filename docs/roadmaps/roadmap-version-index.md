@@ -12,12 +12,13 @@ docs/roadmaps/roadmap-version-index.json
 
 | Roadmap | Version | Path | Notes |
 |---|---|---|---|
-| References Team Roadmap | `v3.01-mtu-h2j-a20-a94-a95-cli-execution` | `references/reference-team-roadmap.md` | Current operating roadmap after GATE-MTU-H2I closed pass-with-conditions and MTU-H2J became the active bounded A20/A94/A95 execution sprint. |
+| References Team Roadmap | `v3.02-mtu-h2j-executed-mtu-h3-active` | `references/reference-team-roadmap.md` | Current operating roadmap after MTU-H2J executed the bounded A20/A94/A95 lane and MTU-H3 became the active incidence/pass-through review lane. |
 
 ## Outdated Archive
 
 | Roadmap | Version | Path | Superseded By |
 |---|---|---|---|
+| References Team Roadmap before MTU-H2J bounded CLI execution | `v3.01-mtu-h2j-a20-a94-a95-cli-execution` | `docs/roadmaps/outdated/reference-team-roadmap-v3.01-mtu-h2j-a20-a94-a95-cli-execution.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before GATE-MTU-H2I closure and MTU-H2J execution | `v3.00-mtu-h2i-a20-cli-execution-packet` | `docs/roadmaps/outdated/reference-team-roadmap-v3.00-mtu-h2i-a20-cli-execution-packet.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before GATE-MTU-H2H closure and MTU-H2I execution packet | `v2.99-mtu-h2h-a20-cli-mutation-plan` | `docs/roadmaps/outdated/reference-team-roadmap-v2.99-mtu-h2h-a20-cli-mutation-plan.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before GATE-MTU-H2G closure and MTU-H2H planning | `v2.98-mtu-h2g-a20-split-packet` | `docs/roadmaps/outdated/reference-team-roadmap-v2.98-mtu-h2g-a20-split-packet.md` | `references/reference-team-roadmap.md` |

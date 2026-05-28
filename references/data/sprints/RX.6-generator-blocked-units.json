@@ -2,13 +2,14 @@
   "schema_version": 1,
   "sprint_id": "RX.6",
   "status": "active_block",
-  "generated_on": "2026-05-28T09:55:11.126Z",
+  "generated_on": "2026-05-28T13:53:54.630Z",
   "source_gate": "reports/review-gates/GATE-RX6-skilltree-generator-integration/technical-closure.json",
   "blocked_reason": "active A-domain catalog units without generator implementations must be non-interactive until a later generator sprint implements and validates them",
   "student_facing_skilltree_use_allowed": false,
   "pv_projection_allowed": false,
-  "unit_count": 43,
+  "unit_count": 45,
   "generator_blocked_units": [
+    "A20",
     "A45",
     "A46",
     "A47",
@@ -51,9 +52,26 @@
     "A90",
     "A91",
     "A92",
-    "A93"
+    "A93",
+    "A94"
   ],
   "units": [
+    {
+      "unit_id": "A20",
+      "name": "Winstmaximum oplossen met afgeleide MO en MK",
+      "generator": "GEN_A20",
+      "generator_implemented": false,
+      "generator_status": "missing_generator_implementation",
+      "student_facing_skilltree_use_allowed": false,
+      "pv_projection_allowed": false,
+      "non_interactive_until_generator_validates": true,
+      "proof_required_to_unblock": [
+        "GEN_A20 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "deployed browser bundle exports the unit as interactive",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
     {
       "unit_id": "A45",
       "name": "P-Q grafiek tekenen uit tabel",
@@ -737,6 +755,22 @@
       "non_interactive_until_generator_validates": true,
       "proof_required_to_unblock": [
         "GEN_A93 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "deployed browser bundle exports the unit as interactive",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A94",
+      "name": "MO = P en afgeleide MK oplossen",
+      "generator": "GEN_A94",
+      "generator_implemented": false,
+      "generator_status": "missing_generator_implementation",
+      "student_facing_skilltree_use_allowed": false,
+      "pv_projection_allowed": false,
+      "non_interactive_until_generator_validates": true,
+      "proof_required_to_unblock": [
+        "GEN_A94 implemented in the skill-tree generator layer",
         "generator coverage validator passes",
         "deployed browser bundle exports the unit as interactive",
         "student-facing skill-tree exposure is explicitly approved in a later sprint"

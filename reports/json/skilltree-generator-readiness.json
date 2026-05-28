@@ -4,7 +4,7 @@
   "sprint_id": "RX.6",
   "gate_id": "GATE-RX6-skilltree-generator-integration",
   "generated_by": "build-scripts/references/build-skilltree-generator-readiness.js",
-  "generated_on": "2026-05-28T09:55:11.146Z",
+  "generated_on": "2026-05-28T13:53:54.989Z",
   "status": "passed",
   "policy": {
     "diagnostic_only": true,
@@ -22,13 +22,13 @@
     "references/data/sprints/RX.6-generator-blocked-units.json"
   ],
   "summary": {
-    "active_a_domain_count": 90,
+    "active_a_domain_count": 92,
     "interactive_skill_count": 47,
-    "generator_blocked_count": 43,
-    "explicit_generator_block_count": 43,
+    "generator_blocked_count": 45,
+    "explicit_generator_block_count": 45,
     "untracked_missing_generator_count": 0,
     "deploy_interactive_skill_count": 47,
-    "deploy_generator_blocked_count": 43,
+    "deploy_generator_blocked_count": 45,
     "blocked_interactive_leak_count": 0
   },
   "rows": [
@@ -404,25 +404,27 @@
     },
     {
       "unit_id": "A20",
-      "name": "MO = MK oplossen",
+      "name": "Winstmaximum oplossen met afgeleide MO en MK",
       "aspects": [
         "rekenen",
         "verbaal"
       ],
       "declared_generator": "GEN_A20",
-      "generator_implemented": true,
-      "generator_blocked": false,
-      "generator_block_sources": [],
-      "interactive_skilltree_use_allowed": true,
-      "student_facing_skilltree_use_allowed": true,
-      "base_elements_export": "interactive",
-      "deploy_bundle_export": "interactive",
-      "needs_filtered_for_interactive_tree": [
-        "A12",
-        "A13",
-        "A02"
+      "generator_implemented": false,
+      "generator_blocked": true,
+      "generator_block_sources": [
+        "references/data/sprints/RX.6-generator-blocked-units.json"
       ],
-      "proof_required_to_unblock": []
+      "interactive_skilltree_use_allowed": false,
+      "student_facing_skilltree_use_allowed": false,
+      "base_elements_export": "generator_blocked",
+      "deploy_bundle_export": "generator_blocked",
+      "needs_filtered_for_interactive_tree": [],
+      "proof_required_to_unblock": [
+        "GEN_A20 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
     },
     {
       "unit_id": "A21",
@@ -730,7 +732,6 @@
       "base_elements_export": "interactive",
       "deploy_bundle_export": "interactive",
       "needs_filtered_for_interactive_tree": [
-        "A20",
         "A21",
         "A04"
       ],
@@ -751,7 +752,6 @@
       "base_elements_export": "interactive",
       "deploy_bundle_export": "interactive",
       "needs_filtered_for_interactive_tree": [
-        "A20",
         "A21"
       ],
       "proof_required_to_unblock": []
@@ -1999,23 +1999,67 @@
         "generator coverage validator passes",
         "student-facing skill-tree exposure is explicitly approved in a later sprint"
       ]
+    },
+    {
+      "unit_id": "A94",
+      "name": "MO = P en afgeleide MK oplossen",
+      "aspects": [
+        "rekenen",
+        "verbaal"
+      ],
+      "declared_generator": "GEN_A94",
+      "generator_implemented": false,
+      "generator_blocked": true,
+      "generator_block_sources": [
+        "references/data/sprints/RX.6-generator-blocked-units.json"
+      ],
+      "interactive_skilltree_use_allowed": false,
+      "student_facing_skilltree_use_allowed": false,
+      "base_elements_export": "generator_blocked",
+      "deploy_bundle_export": "generator_blocked",
+      "needs_filtered_for_interactive_tree": [],
+      "proof_required_to_unblock": [
+        "GEN_A94 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A95",
+      "name": "MO = gegeven MK-functie oplossen",
+      "aspects": [
+        "rekenen",
+        "verbaal"
+      ],
+      "declared_generator": "GEN_A95",
+      "generator_implemented": true,
+      "generator_blocked": false,
+      "generator_block_sources": [],
+      "interactive_skilltree_use_allowed": true,
+      "student_facing_skilltree_use_allowed": true,
+      "base_elements_export": "interactive",
+      "deploy_bundle_export": "interactive",
+      "needs_filtered_for_interactive_tree": [
+        "A02"
+      ],
+      "proof_required_to_unblock": []
     }
   ],
   "checks": [
     {
       "id": "source_base_elements_split_matches_generators",
       "status": "passed",
-      "detail": "47 interactive and 43 blocked rows in source base-elements."
+      "detail": "47 interactive and 45 blocked rows in source base-elements."
     },
     {
       "id": "deploy_bundle_split_matches_source",
       "status": "passed",
-      "detail": "47 interactive and 43 blocked rows in deploy bundle data."
+      "detail": "47 interactive and 45 blocked rows in deploy bundle data."
     },
     {
       "id": "blocked_units_have_explicit_noninteractive_status",
       "status": "passed",
-      "detail": "43/43 missing-generator units have explicit generator-block records."
+      "detail": "45/45 missing-generator units have explicit generator-block records."
     },
     {
       "id": "no_missing_generator_unit_is_interactive",
@@ -2030,7 +2074,7 @@
     {
       "id": "rx6_generator_block_file_written",
       "status": "passed",
-      "detail": "references/data/sprints/RX.6-generator-blocked-units.json records 43 blocked unit(s)."
+      "detail": "references/data/sprints/RX.6-generator-blocked-units.json records 45 blocked unit(s)."
     }
   ],
   "blocked_scope": [

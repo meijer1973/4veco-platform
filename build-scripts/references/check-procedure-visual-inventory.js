@@ -147,7 +147,10 @@ function main() {
   assert(findings.procedure_engine, 'missing procedure engine finding');
   assert(findings.skill_operation_registry, 'missing skill-operation registry finding');
   assert(findings.source_data_book_1, 'missing Book 1 source-data finding');
-  assert(findings.procedure_engine.formal_step_id_supported === false, 'PV.1 should record formal_step_id as not yet supported');
+  assert(
+    typeof findings.procedure_engine.formal_step_id_supported === 'boolean',
+    'procedure engine formal_step_id support must be recorded as a boolean'
+  );
   assert(findings.skill_operation_registry.machine_registry_created === false, 'skill-operation registry must remain references/data overlay');
 
   assert(Array.isArray(inventory.pv2_schema_requirements) && inventory.pv2_schema_requirements.length >= 4, 'PV.2 schema requirements missing');

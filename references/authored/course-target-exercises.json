@@ -2054,19 +2054,19 @@
       "required_skills": [
         "A11",
         "A13",
-        "A20",
+        "A94",
         "A21",
         "A33",
         "D30"
       ],
       "prior_knowledge_assumed": [
-        "A20",
         "A21",
         "D30"
       ],
       "new_skills_introduced": [
         "A11",
         "A13",
+        "A94",
         "A33"
       ],
       "missing_units_flagged": [
@@ -2620,7 +2620,7 @@
       ],
       "required_skills": [
         "A11",
-        "A20",
+        "A91",
         "A35",
         "A36",
         "D18",
@@ -2630,7 +2630,7 @@
       ],
       "prior_knowledge_assumed": [
         "A11",
-        "A20",
+        "A91",
         "A35"
       ],
       "new_skills_introduced": [

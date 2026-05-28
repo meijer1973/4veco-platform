@@ -4,7 +4,7 @@
   "sprint_id": "PV.1",
   "status": "completed_inventory",
   "generated_by": "build-scripts/references/build-procedure-visual-inventory.js",
-  "generated_on": "2026-05-01T09:14:15.112Z",
+  "generated_on": "2026-05-28T13:54:11.519Z",
   "storage_decision": {
     "inventory_location": "references/data/procedure-visual/inventory.json",
     "machine_registry_created": false,
@@ -67,17 +67,17 @@
       "table_trace_and_formula_trace": 1,
       "graph_stage_and_formula_trace": 2
     },
-    "generator_blocked_pilot_count": 7,
+    "generator_blocked_pilot_count": 8,
     "provisional_operation_reference_count": 7,
-    "apply_units_with_procedure_count": 110,
-    "apply_units_with_procedure_not_ranked_count": 98,
-    "source_data_book_1_file_count": 2,
+    "apply_units_with_procedure_count": 129,
+    "apply_units_with_procedure_not_ranked_count": 117,
+    "source_data_book_1_file_count": 4,
     "source_data_book_1_procedure_data_file_count": 0
   },
   "runtime_surface_findings": {
     "micro_teaching_unit_procedures": {
       "status": "prose_procedure_steps_exist",
-      "live_apply_units_with_procedures": 110,
+      "live_apply_units_with_procedures": 129,
       "limitation": "Procedure steps are Dutch sentence strings, not formal actions with input/output refs or visual-state refs."
     },
     "skill_operation_registry": {
@@ -93,7 +93,9 @@
     "source_data_book_1": {
       "path": "source-data/book-1",
       "files": [
+        "source-data/book-1/exit-ticket/1.1.1.json",
         "source-data/book-1/reasoning/1.1.1.csv",
+        "source-data/book-1/reasoning/1.1.2.csv",
         "source-data/book-1/reasoning/README.md"
       ],
       "procedure_data_files": [],
@@ -105,7 +107,7 @@
         "given",
         "choose"
       ],
-      "formal_step_id_supported": false,
+      "formal_step_id_supported": true,
       "target_data_source": "shared/procedure/<paragraph>.js files in a module/book target",
       "shell_builder_path": "build-scripts/platform/build-procedure-shells.js",
       "shell_builder_reads_target_shared_procedure": true
@@ -113,7 +115,7 @@
     "skilltree_shell_builder": {
       "path": "build-scripts/platform/build-skilltree-shells.js",
       "reads_canonical_catalog": true,
-      "generator_ids_implemented_count": 44,
+      "generator_ids_implemented_count": 47,
       "generator_block_records": 13
     },
     "didactic_constraints": [
@@ -256,7 +258,7 @@
         {
           "unit_id": "A12",
           "found": true,
-          "name": "MO bepalen",
+          "name": "MO bepalen met afgeleide",
           "mastery_target": "apply",
           "aspects": [
             "grafisch",
@@ -359,7 +361,7 @@
         {
           "unit_id": "A20",
           "found": true,
-          "name": "MO = MK oplossen",
+          "name": "Winstmaximum oplossen met afgeleide MO en MK",
           "mastery_target": "apply",
           "aspects": [
             "rekenen",
@@ -372,8 +374,8 @@
           ],
           "procedure_step_count": 5,
           "generator": "GEN_A20",
-          "generator_implemented": true,
-          "generator_blocked": false,
+          "generator_implemented": false,
+          "generator_blocked": true,
           "generator_block_source": null
         }
       ],
@@ -382,7 +384,8 @@
         "pv_schema_pending_pv2",
         "visual_renderer_pending",
         "procedure_game_mapping_pending",
-        "operation_ids_provisional_until_later_registry_gate"
+        "operation_ids_provisional_until_later_registry_gate",
+        "generator_or_projection_support_pending"
       ],
       "student_facing_projection_allowed": false
     },
@@ -422,7 +425,7 @@
           "needs": [],
           "procedure_step_count": 5,
           "generator": "GEN_A61",
-          "generator_implemented": false,
+          "generator_implemented": true,
           "generator_blocked": true,
           "generator_block_source": "references/data/sprints/RX.2-generator-blocked-units.json"
         }
@@ -485,7 +488,7 @@
           "needs": [],
           "procedure_step_count": 6,
           "generator": "GEN_A62",
-          "generator_implemented": false,
+          "generator_implemented": true,
           "generator_blocked": true,
           "generator_block_source": "references/data/sprints/RX.2b-generator-blocked-units.json"
         }
@@ -548,7 +551,7 @@
           "needs": [],
           "procedure_step_count": 6,
           "generator": "GEN_A63",
-          "generator_implemented": false,
+          "generator_implemented": true,
           "generator_blocked": true,
           "generator_block_source": "references/data/sprints/RX.2b-generator-blocked-units.json"
         }

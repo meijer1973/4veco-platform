@@ -188,6 +188,7 @@ if (!h2fExecuted) {
 for (const id of ['A12', 'A20']) {
   if (!byId.has(id)) fail(`${id} must remain live`);
 }
+const h2jExecuted = byId.has('A94') && byId.has('A95') && generators.includes('GEN.A95 = function ()');
 if (!(byId.get('A12').exam_codes || []).includes('A2.11')) fail('live A12 must still include A2.11');
 if (byId.get('A20').generator !== 'GEN_A20') fail('live A20 generator must remain GEN_A20');
 for (const file of resolution.post_h2c_registry_expectations.candidate_storage_must_not_exist || []) {
@@ -206,7 +207,10 @@ for (const expected of [
   )) {
     fail(`generator_implementation_status.implemented must include ${expected.registry_generator} as ${expected.skilltree_key}`);
   }
-  if (!generators.includes(expected.skilltree_key)) {
+  if (expected.registry_generator === 'GEN_A20' && h2jExecuted) {
+    if (generators.includes('GEN.A20 = function ()')) fail('GEN.A20 implementation must be blocked after MTU-H2J execution');
+    if (!generators.includes('GEN.A95 = function ()')) fail('GEN.A95 must exist after MTU-H2J execution');
+  } else if (!generators.includes(expected.skilltree_key)) {
     fail(`${expected.skilltree_key} must exist in generators.js`);
   }
 }
@@ -249,8 +253,12 @@ if (!a20.required_next_packet || a20.required_next_packet.must_not_execute_from_
 const target412 = (targetExercises.exercises || targetExercises).find((record) => record.id === '4.1.2');
 if (!target412) fail('target exercise 4.1.2 missing from authored target exercises');
 const target412Text = JSON.stringify(target412);
-if (!target412Text.includes('A20') || !target412Text.includes('MK')) {
+if (!h2jExecuted && (!target412Text.includes('A20') || !target412Text.includes('MK'))) {
   fail('target exercise 4.1.2 must still show A20 and MK evidence for the A20 hold');
+}
+if (h2jExecuted) {
+  if ((target412.required_skills || []).includes('A20')) fail('target exercise 4.1.2 must not retain A20 after MTU-H2J execution');
+  if (!(target412.required_skills || []).includes('A91')) fail('target exercise 4.1.2 must route given-MK equality solving to A91 after MTU-H2J execution');
 }
 
 const a88 = laneById(lanes, 'A88');

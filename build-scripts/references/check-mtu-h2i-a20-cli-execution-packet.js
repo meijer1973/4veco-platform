@@ -195,6 +195,10 @@ if (!String(a95.generator_status_after_execution_if_current_GEN_A20_moves || '')
 }
 
 const knownIds = new Set(units.map((unit) => unit.id));
+if (postH2J) {
+  knownIds.delete('A94');
+  knownIds.delete('A95');
+}
 for (const [id, spec] of [
   ['A94', a94.reviewed_spec],
   ['A95', a95.reviewed_spec],
@@ -204,7 +208,9 @@ for (const [id, spec] of [
   knownIds.add(id);
 }
 
-const simulated = units.map((unit) => ({ ...unit }));
+const simulated = units
+  .filter((unit) => !postH2J || !['A94', 'A95'].includes(unit.id))
+  .map((unit) => ({ ...unit }));
 Object.assign(simulated.find((unit) => unit.id === 'A20'), a20.reviewed_spec);
 simulated.push(a94.reviewed_spec, a95.reviewed_spec);
 const catalogErrors = validate(simulated, {
