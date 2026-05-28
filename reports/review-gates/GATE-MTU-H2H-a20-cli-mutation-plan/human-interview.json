@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-MTU-H2H-a20-cli-mutation-plan",
+  "date": "2026-05-28",
+  "reviewed_remote_commit": "d806903cb0072c38c265974642c1bc38fd1c0c69",
+  "review_mode": "human_review_recorded_from_user_verdict",
+  "verdict": "pass_with_conditions_execution_packet_preparation_only",
+  "calibration_answers": [
+    {
+      "id": "CAL-1",
+      "answer": "yes",
+      "notes": "Gate reviews H2H CLI-mutation planning only and authorizes no protected reference mutation, unit minting, unit update execution, target-exercise mutation, generator change, lesson output, or student/product use."
+    },
+    {
+      "id": "CAL-2",
+      "answer": "yes_with_closure_override",
+      "notes": "The H2H packet and cited evidence were fetchable remotely. The plan JSON still said must_commit_and_push_this_packet_before_human_review; closure records reviewed commit d806903cb0072c38c265974642c1bc38fd1c0c69 as the satisfied remote proof."
+    },
+    {
+      "id": "CAL-3",
+      "answer": "yes",
+      "notes": "Target-exercise mapping changes are authored-reference mutations and require exact before/after diffs, rollback, and validation before execution."
+    }
+  ],
+  "answers": [
+    {
+      "id": "MTUH2H-Q1",
+      "decision": "approve_a20_corrected_spec_for_later_execution_packet_planning",
+      "rationale": "The corrected A20 spec is coherent: Winstmaximum oplossen met afgeleide MO en MK, needs A12/A13/A02, and exam codes A2.10/A2.11/A2.12. It removes the generic MO = MK meaning."
+    },
+    {
+      "id": "MTUH2H-Q2",
+      "decision": "approve_a94_with_terminology_condition",
+      "rationale": "A94 handles price-taker MO = marktprijs P plus derived MK without forcing A12. Preserve wording that this is specifically for volkomen concurrentie / price-taking behaviour."
+    },
+    {
+      "id": "MTUH2H-Q3",
+      "decision": "approve_a95_given_mk_function_route",
+      "rationale": "A95 is distinct from A91: A91 covers given constant/value MK, while A95 covers a given MK-function. Current GEN.A20 behavior fits A95 better than narrowed A20."
+    },
+    {
+      "id": "MTUH2H-Q4",
+      "decision": "approve_mapping_diffs_for_later_execution_packet_planning",
+      "rationale": "3.2.2 replaces A20 with A94, 3.3.3 keeps A20, and 4.1.2 replaces A20 with A91. These require exact patch, rollback, and validation in a later execution packet."
+    },
+    {
+      "id": "MTUH2H-Q5",
+      "decision": "approve_preferred_gen_a20_route",
+      "rationale": "Move or recreate current GEN.A20 behavior under A95/equivalent, then rewrite or block GEN.A20 for the narrowed derived-route A20."
+    },
+    {
+      "id": "MTUH2H-Q6",
+      "decision": "accept_command_and_rollback_standard_with_exact_spec_logging",
+      "rationale": "A20 update must dry-run first, A94/A95 unit-add has no dry-run, mapping diffs must be logged before update, and generator-readiness/no-unintended-diff proof must be required."
+    },
+    {
+      "id": "MTUH2H-Q7",
+      "decision": "accept_projection_refresh_guardrails",
+      "rationale": "Owned-content graph, RAG chunks, blueprint flags, procedure/PV reports, and generator-readiness reports may refresh only after authorized source mutations. No PV projection or machine promotion now."
+    },
+    {
+      "id": "MTUH2H-Q8",
+      "decision": "authorize_later_bounded_execution_packet_only",
+      "rationale": "Next sprint may prepare exact commands, authored mapping patches, generator route, rollback, and validation evidence. It must not execute from H2H."
+    },
+    {
+      "id": "MTUH2H-Q9",
+      "decision": "mtu_h3_may_proceed_if_a20_execution_remains_tracked",
+      "rationale": "Incidence/pass-through work need not be blocked indefinitely if the A20 execution path remains explicitly tracked."
+    },
+    {
+      "id": "MTUH2H-Q10",
+      "decision": "no_mutation_or_product_authority_now",
+      "rationale": "This packet authorizes no protected reference mutation, unit minting, target-exercise writes, generator changes, projections, lesson output, or product use."
+    }
+  ],
+  "required_conditions_before_later_execution_packet": [
+    "Record the reviewed remote commit/hash and confirm remote evidence prerequisite was met.",
+    "Later execution packet must include exact CLI commands, exact unit specs, exact mapping before/after diffs, rollback, generator route, validation stack, and no-unintended-diff proof.",
+    "A20 mutation, A94/A95 minting, target-exercise mapping writes, generator changes, and projection refresh must not occur unless authorized together or explicitly blocked with non-exposure proof.",
+    "No target-exercise promotion, PV projection, PV machine promotion, lesson output, diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, or student/product use is authorized."
+  ],
+  "quality_log": [
+    {
+      "issue": "A20 still live as generic MO=MK route until execution",
+      "severity": "high",
+      "surface": "MTU registry",
+      "next_action": "Prepare later execution packet.",
+      "proof_required": "A20 renamed/narrowed or explicitly held."
+    },
+    {
+      "issue": "Target-exercise mappings need authored-source mutation",
+      "severity": "high",
+      "surface": "references/authored/course-target-exercises.json",
+      "next_action": "Exact before/after patch for 3.2.2, 3.3.3, and 4.1.2.",
+      "proof_required": "Validation shows intended mapping changes only."
+    },
+    {
+      "issue": "GEN.A20 mismatch after A20 narrowing",
+      "severity": "high_if_exposed",
+      "surface": "skill-tree generator",
+      "next_action": "Move current behavior to A95 or block/rewrite GEN.A20.",
+      "proof_required": "Generator-readiness proves no stale A20 exposure."
+    },
+    {
+      "issue": "A94/A95 lack live generator implementation until later work",
+      "severity": "medium_high",
+      "surface": "generator readiness",
+      "next_action": "Implement or mark generator-blocked.",
+      "proof_required": "New units do not appear in a broken student-facing route."
+    },
+    {
+      "issue": "Remote publication status field stale/ambiguous",
+      "severity": "low_medium",
+      "surface": "review governance",
+      "next_action": "Closure records actual commit/hash.",
+      "proof_required": "Evidence reproducible from remote."
+    }
+  ]
+}

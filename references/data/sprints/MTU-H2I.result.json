@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "sprint_id": "MTU-H2I",
+  "status": "completed",
+  "completed_on": "2026-05-28",
+  "plan": "reports/sprints/MTU-H2I-plan.md",
+  "baseline": "reports/sprints/MTU-H2I-baseline.md",
+  "result": "reports/sprints/MTU-H2I-result.md",
+  "diff_summary": "reports/sprints/MTU-H2I-diff-summary.md",
+  "source_gate": "reports/review-gates/GATE-MTU-H2H-a20-cli-mutation-plan/gate-closure.json",
+  "packet": "reports/mtu-hardening/solo-q1-q3-a20-cli-execution-packet.json",
+  "review_packet": "reports/review-gates/GATE-MTU-H2I-a20-cli-execution/review-packet.md",
+  "gate_id": "GATE-MTU-H2I-a20-cli-execution",
+  "remote_publication_required_before_review": true,
+  "protected_reference_data_changed": false,
+  "machine_reference_mutation_executed": false,
+  "external_source_mutated": false,
+  "unit_minting_executed": false,
+  "unit_update_executed": false,
+  "unit_split_executed": false,
+  "unit_deprecation_executed": false,
+  "target_exercise_mutated": false,
+  "generator_changed": false,
+  "candidate_storage_created": false,
+  "candidate_writes": false,
+  "lesson_output_mutated": false,
+  "target_exercise_promoted": false,
+  "generated_projection_refreshed_from_unexecuted_mutation": false,
+  "candidate_units": [
+    "A94",
+    "A95"
+  ],
+  "update_units": [
+    "A20"
+  ],
+  "review_gate_prepared": "GATE-MTU-H2I-a20-cli-execution",
+  "student_facing_skilltree_use_authorized": false,
+  "pv_projection_authorized": false,
+  "product_boundaries": {
+    "diagnostics": false,
+    "adaptive_routing": false,
+    "mastery": false,
+    "sequencing": false,
+    "student_facing_ai": false,
+    "summative_use": false,
+    "pv_projection": false,
+    "pv_machine_promotion": false,
+    "student_product_use": false
+  },
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/references/check-mtu-h2i-a20-cli-execution-packet.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-mtu-h2h-a20-cli-mutation-plan.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/MTU-H2I-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js MTU-H2I --complete",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/build-unit-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/validate-core-schemas.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-roadmap-version-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-source-document-registry.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-source-manifest.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-document-inventory.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js --check",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/validate-report-json.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd test -- --runInBand",
+      "status": "passed"
+    },
+    {
+      "command": "git diff --check",
+      "status": "passed"
+    }
+  ],
+  "open_follow_ups": [
+    "Commit and push the H2I packet and cited evidence before human review.",
+    "Run GATE-MTU-H2I before any A20 mutation, A94/A95 unit minting, target-exercise mapping update, generator change, or generated projection refresh.",
+    "Keep MTU-H3 sequencing explicit if incidence/pass-through proceeds before A20 execution."
+  ]
+}

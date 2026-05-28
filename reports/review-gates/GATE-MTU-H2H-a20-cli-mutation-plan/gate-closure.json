@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-MTU-H2H-a20-cli-mutation-plan",
+  "date": "2026-05-28",
+  "status": "pass_with_conditions",
+  "closure_type": "execution_packet_preparation_only",
+  "reviewed_remote_commit": "d806903cb0072c38c265974642c1bc38fd1c0c69",
+  "remote_publication_status": "satisfied_by_reviewed_remote_commit",
+  "source_review_packet": "reports/review-gates/GATE-MTU-H2H-a20-cli-mutation-plan/review-packet.md",
+  "human_interview": "reports/review-gates/GATE-MTU-H2H-a20-cli-mutation-plan/human-interview.md",
+  "verdict": "PASS WITH CONDITIONS for CLI-mutation planning only. Authorize only a later bounded execution packet; no execution authorized.",
+  "accepted": [
+    "A20 update to Winstmaximum oplossen met afgeleide MO en MK, with needs A12/A13/A02 and exam codes A2.10/A2.11/A2.12.",
+    "A94 as MO = P en afgeleide MK oplossen, including explicit price-taker MO = marktprijs P and volkomen concurrentie / price-taking wording.",
+    "A95 as MO = gegeven MK-functie oplossen, distinct from A91's given constant/value MK route.",
+    "Target-exercise mapping direction: 3.2.2 replaces A20 with A94 and removes A20 as prior; 3.3.3 keeps A20; 4.1.2 replaces A20 with A91.",
+    "Preferred generator direction: move current GEN.A20 behavior to A95/equivalent and rewrite or block GEN.A20 for narrowed A20.",
+    "MTU-H3 incidence/pass-through may proceed if A20 execution remains explicitly tracked separately."
+  ],
+  "conditions": [
+    "Record the reviewed remote commit/hash and confirm remote evidence prerequisite was met.",
+    "Later execution packet must include exact CLI commands, exact unit specs, exact mapping before/after diffs, rollback, generator route, validation stack, and no-unintended-diff proof.",
+    "A20 mutation, A94/A95 minting, target-exercise mapping writes, generator changes, and projection refresh must not occur unless authorized together or explicitly blocked with non-exposure proof.",
+    "No target-exercise promotion, PV projection, PV machine promotion, lesson output, diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, or student/product use is authorized."
+  ],
+  "authorized_next": {
+    "sprint_id": "MTU-H2I",
+    "name": "A20/A94/A95 CLI Execution Packet",
+    "scope": "Prepare a later bounded execution packet with exact A20/A94/A95 commands, target-exercise mapping patches, generator route, rollback, validation, and no-exposure proof.",
+    "execution_authorized": false
+  },
+  "authority_boundary": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "unit_update_execution_authorized": false,
+    "unit_split_execution_authorized": false,
+    "unit_deprecation_authorized": false,
+    "target_exercise_mutation_authorized": false,
+    "generator_change_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "target_exercise_promotion_authorized": false,
+    "cp6_closure_authorized": false,
+    "year1_closure_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "student_product_use_authorized": false
+  }
+}

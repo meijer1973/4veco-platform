@@ -1,0 +1,210 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-MTU-H2I-a20-cli-execution",
+  "sprint_id": "MTU-H2I",
+  "date": "2026-05-28",
+  "status": "review_packet_ready_no_mutation_authorized",
+  "review_scope": "Review the MTU-H2I A20/A94/A95 execution packet only. Decide whether a later bounded execution sprint may be authorized.",
+  "remote_evidence_prerequisite": "This review packet, the H2I execution packet, and all cited evidence must be committed and pushed to the normal remote branch before human review starts.",
+  "evidence_base": [
+    "reports/mtu-hardening/solo-q1-q3-a20-cli-execution-packet.json",
+    "reports/mtu-hardening/solo-q1-q3-a20-cli-execution-packet.md",
+    "reports/review-gates/GATE-MTU-H2H-a20-cli-mutation-plan/gate-closure.json",
+    "reports/mtu-hardening/solo-q1-q3-a20-cli-mutation-plan.json",
+    "references/machine/micro-teaching-units.json as read-only context",
+    "references/authored/course-target-exercises.json",
+    "engines/skilltree/generators.js",
+    "build-scripts/references/unit-update.js",
+    "build-scripts/references/unit-add.js",
+    "references/reference-team-roadmap.md"
+  ],
+  "planned_focus": [
+    {
+      "surface": "A20",
+      "finding": "unit-update command narrows A20 while retaining A2.11",
+      "review_issue": "approve or revise execution command"
+    },
+    {
+      "surface": "A94/A95",
+      "finding": "unit-add specs are exact and unit-add dry-run limitation is visible",
+      "review_issue": "approve or revise minting lanes"
+    },
+    {
+      "surface": "target mappings",
+      "finding": "exact authored mapping patches for 3.2.2 and 4.1.2, with 3.3.3 verified unchanged",
+      "review_issue": "approve or revise mapping write plan"
+    },
+    {
+      "surface": "GEN.A20/GEN.A95",
+      "finding": "current GEN.A20 behavior moves to GEN.A95 and GEN.A20 is blocked until narrowed generator exists",
+      "review_issue": "approve, revise, or require generator implementation first"
+    }
+  ],
+  "calibration_questions": [
+    {
+      "id": "CAL-1",
+      "question": "Confirm this gate reviews the H2I execution packet only and does not itself authorize protected reference mutation, unit minting, unit update execution, target-exercise mutation, generator changes, projection refresh, lesson output, or student/product use."
+    },
+    {
+      "id": "CAL-2",
+      "question": "Confirm the H2I packet and cited evidence have been pushed to the normal remote branch before this review starts."
+    },
+    {
+      "id": "CAL-3",
+      "question": "Confirm A20, A94/A95, target mappings, and generator behavior must be executed together or explicitly blocked together with no-exposure proof."
+    }
+  ],
+  "planned_questions": [
+    {
+      "id": "MTUH2I-Q1",
+      "topic": "remote evidence and preflight",
+      "question": "Is the remote-before-review rule and final pre-execution preflight sufficient for any later execution sprint?",
+      "options": [
+        "Yes, accept the remote/preflight requirements.",
+        "Add stronger remote hash, reviewed-spec comparison, or clean-worktree proof before execution.",
+        "Hold until the packet is regenerated from a newer base commit.",
+        "Open answer / other, with rationale."
+      ]
+    },
+    {
+      "id": "MTUH2I-Q2",
+      "topic": "A20 update command",
+      "question": "Should a later execution sprint run the A20 unit-update command after dry-run, retaining A2.11 and narrowing A20 to derived MO plus derived MK?",
+      "options": [
+        "Yes, approve the A20 update command for later execution.",
+        "Revise A20 fields or command before execution.",
+        "Hold A20 until generator implementation is designed differently.",
+        "Open answer / other, with rationale."
+      ]
+    },
+    {
+      "id": "MTUH2I-Q3",
+      "topic": "A94 and A95 unit-add commands",
+      "question": "Are the A94 and A95 unit-add specs acceptable, with A94 carrying the price-taker MO = P route and A95 carrying given MK-function solving?",
+      "options": [
+        "Yes, approve both unit-add commands for later execution with unit-add dry-run limitation visible.",
+        "Approve only one; name which and why.",
+        "Revise one or both specs before execution.",
+        "Open answer / other, with rationale."
+      ]
+    },
+    {
+      "id": "MTUH2I-Q4",
+      "topic": "target-exercise mapping patch",
+      "question": "Are the exact authored mapping patches acceptable: 3.2.2 replaces A20 with A94, 3.3.3 stays unchanged with A20, and 4.1.2 replaces A20 with A91?",
+      "options": [
+        "Yes, approve the mapping patch for later execution.",
+        "Revise one record or field; name it.",
+        "Hold mapping writes until broader target-exercise review.",
+        "Open answer / other, with rationale."
+      ]
+    },
+    {
+      "id": "MTUH2I-Q5",
+      "topic": "GEN.A20 and GEN.A95 route",
+      "question": "Is the generator route acceptable: move current GEN.A20 behavior to GEN.A95, block GEN.A20 until a narrowed derive-both generator exists, and keep A94 generator-blocked unless GEN.A94 is separately implemented?",
+      "options": [
+        "Yes, approve this generator route for later execution.",
+        "Require a new narrowed GEN.A20 implementation before A20 mutation.",
+        "Keep GEN.A20 unchanged and hold A20 mutation.",
+        "Open answer / other, with rationale."
+      ]
+    },
+    {
+      "id": "MTUH2I-Q6",
+      "topic": "generator readiness and non-exposure",
+      "question": "Are the generator-readiness and no-exposure requirements sufficient after the later execution?",
+      "options": [
+        "Yes, require refreshed generator readiness and no missing/stale interactive exposure.",
+        "Add more proof requirements before execution; name them.",
+        "Hold until generator/PV architecture is reviewed.",
+        "Open answer / other, with rationale."
+      ]
+    },
+    {
+      "id": "MTUH2I-Q7",
+      "topic": "command order and rollback",
+      "question": "Are the command order, extracted-spec logging, authored mapping before/after logs, generator patch summary, rollback route, and validation stack sufficient?",
+      "options": [
+        "Yes, accept the command/order/rollback/validation standard.",
+        "Add more proof requirements before execution; name them.",
+        "Hold until unit-add dry-run or authored-reference CLI exists.",
+        "Open answer / other, with rationale."
+      ]
+    },
+    {
+      "id": "MTUH2I-Q8",
+      "topic": "projection refresh",
+      "question": "Should generated projections refresh only after authorized unit, mapping, and generator source mutations?",
+      "options": [
+        "Yes, keep projection refresh after authorized source mutation only.",
+        "Add more generated surfaces before execution.",
+        "Hold until projection/PV architecture is reviewed.",
+        "Open answer / other, with rationale."
+      ]
+    },
+    {
+      "id": "MTUH2I-Q9",
+      "topic": "next sprint authority",
+      "question": "If GATE-MTU-H2I closes, what should be authorized next?",
+      "options": [
+        "Authorize a bounded execution sprint for A20/A94/A95, target mappings, and generator route only.",
+        "Authorize only generator implementation planning before execution.",
+        "Hold all downstream work and revise the H2I packet.",
+        "Open answer / other, with rationale."
+      ]
+    },
+    {
+      "id": "MTUH2I-Q10",
+      "topic": "mutation and product authority now",
+      "question": "Does this review packet itself authorize protected reference mutation, unit minting, unit updates, target-exercise mutation, generator changes, projection refresh, lesson output, diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student/product use now?",
+      "options": [
+        "No. This packet authorizes no mutation or product use; a closure may only authorize a named later sprint.",
+        "Yes, but only for explicitly named low-risk CLI lanes after exact proof is accepted.",
+        "Hold; authority cannot be decided until generator handling is revised.",
+        "Open answer / other, with rationale."
+      ]
+    }
+  ],
+  "stop_conditions": [
+    "Stop if the packet/evidence has not been pushed before review.",
+    "Stop if any answer authorizes hand edits to references/machine or references/external.",
+    "Stop if any answer authorizes direct execution from this review packet itself.",
+    "Stop if A20 removes A2.11.",
+    "Stop if A94 loses the price-taker MO = P / volkomen concurrentie step.",
+    "Stop if A95 collapses into A91 or no longer covers given MK-function solving.",
+    "Stop if target-exercise mapping writes are treated as generated projections or target-exercise promotion.",
+    "Stop if GEN.A20 stale exposure is hidden after A20 narrowing.",
+    "Stop if A94 missing-generator status is hidden.",
+    "Stop if generated projections are refreshed before authorized source mutations.",
+    "Stop if PV projection or PV machine promotion is authorized now.",
+    "Stop if candidate writes, lesson-output mutation, diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, or student/product use are authorized now."
+  ],
+  "authority_boundary": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "unit_update_execution_authorized": false,
+    "unit_split_execution_authorized": false,
+    "unit_deprecation_authorized": false,
+    "target_exercise_mutation_authorized": false,
+    "generator_change_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "target_exercise_promotion_authorized": false,
+    "cp6_closure_authorized": false,
+    "year1_closure_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "student_product_use_authorized": false
+  },
+  "recommended_next_action": "Commit and push this packet and cited evidence, then run GATE-MTU-H2I before any A20 mutation, A94/A95 unit minting, target-exercise mapping update, generator change, generated projection refresh, or student-facing exposure."
+}

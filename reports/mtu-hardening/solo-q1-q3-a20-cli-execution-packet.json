@@ -1,0 +1,486 @@
+{
+  "schema_version": 1,
+  "sprint_id": "MTU-H2I",
+  "gate_id": "GATE-MTU-H2I-a20-cli-execution",
+  "created": "2026-05-28",
+  "status": "execution_packet_ready_no_mutation",
+  "source_gate": "reports/review-gates/GATE-MTU-H2H-a20-cli-mutation-plan/gate-closure.json",
+  "source_plan": "reports/mtu-hardening/solo-q1-q3-a20-cli-mutation-plan.json",
+  "reviewed_h2h_remote_commit": "d806903cb0072c38c265974642c1bc38fd1c0c69",
+  "remote_publication_required_before_review": true,
+  "remote_publication_status": "must_commit_and_push_this_packet_before_human_review",
+  "h2h_closure_status": "pass_with_conditions",
+  "authority_boundary": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "unit_update_execution_authorized": false,
+    "unit_split_execution_authorized": false,
+    "unit_deprecation_authorized": false,
+    "target_exercise_mutation_authorized": false,
+    "generator_change_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "target_exercise_promotion_authorized": false,
+    "cp6_closure_authorized": false,
+    "year1_closure_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "student_product_use_authorized": false
+  },
+  "execution_scope": {
+    "reviewable_lanes": [
+      "A20",
+      "A94",
+      "A95",
+      "target-exercise-mapping",
+      "GEN.A20/GEN.A95 route"
+    ],
+    "no_direct_execution_from_h2i_packet": true,
+    "coupled_execution_required": true,
+    "coupling_rule": "A20 narrowing, A94/A95 minting, target-exercise mapping updates, and generator behavior must be executed together or blocked together with non-exposure proof."
+  },
+  "pre_execution_checks_required": [
+    "git status --short and clean-worktree proof or explicit expected local files",
+    "fresh ID absence check for A94 and A95",
+    "fresh confirmation that A20, A91, A12, A13, and A02 exist",
+    "fresh confirmation that GEN.A20 exists before the generator route is applied",
+    "print each extracted JSON spec before running its CLI command",
+    "run A20 unit-update --dry-run and prove A2.11 remains",
+    "print exact target-exercise before/after arrays before authored mapping updates",
+    "print exact generator patch summary before generator changes",
+    "confirm no target-exercise record_status, source_ref, placeholder, or promotion field changes"
+  ],
+  "unit_lanes": [
+    {
+      "unit_id": "A20",
+      "action": "unit-update",
+      "reviewed_spec": {
+        "name": "Winstmaximum oplossen met afgeleide MO en MK",
+        "kern": "Los de winstmaximaliserende hoeveelheid op nadat MO uit TO en MK uit TK zijn afgeleid.",
+        "needs": [
+          "A12",
+          "A13",
+          "A02"
+        ],
+        "exam_codes": [
+          "A2.10",
+          "A2.11",
+          "A2.12"
+        ],
+        "mastery_target": "apply",
+        "prior_learning": "new_this_year",
+        "aspects": [
+          "rekenen",
+          "verbaal"
+        ],
+        "terms": [
+          "marginale-kosten"
+        ],
+        "procedure": [
+          "Bepaal MO via de afgeleide route uit TO.",
+          "Bepaal MK via de afgeleide route uit TK.",
+          "Stel MO = MK.",
+          "Los op naar Q*.",
+          "Gebruik Q* daarna in de passende prijs-, opbrengst- of winstroute."
+        ],
+        "pitfalls": [
+          "Deze route gebruiken wanneer MK al als constante of functie is gegeven.",
+          "Deze route gebruiken wanneer MO bij volkomen concurrentie direct gelijk is aan P.",
+          "De MO- of MK-uitkomst als verkoopprijs behandelen."
+        ],
+        "generator": "GEN_A20"
+      },
+      "execution_authorized_by_packet": false,
+      "execution_condition": "Only execute with the target mapping updates and generator route reviewed in this packet or held with non-exposure proof."
+    },
+    {
+      "unit_id": "A94",
+      "action": "unit-add",
+      "reviewed_spec": {
+        "id": "A94",
+        "name": "MO = P en afgeleide MK oplossen",
+        "kern": "Los de winstmaximaliserende hoeveelheid op wanneer MO bij een prijsnemer gelijk is aan P en MK eerst uit TK moet worden afgeleid.",
+        "needs": [
+          "A13",
+          "A02"
+        ],
+        "exam_codes": [
+          "A2.10",
+          "A2.11",
+          "A2.12"
+        ],
+        "mastery_target": "apply",
+        "prior_learning": "new_this_year",
+        "aspects": [
+          "rekenen",
+          "verbaal"
+        ],
+        "terms": [
+          "marginale-kosten"
+        ],
+        "procedure": [
+          "Herken dat de aanbieder een prijsnemer is bij volkomen concurrentie.",
+          "Gebruik de regel: bij een prijsnemer geldt MO = marktprijs P.",
+          "Bepaal MK als afgeleide van TK.",
+          "Stel P = MK.",
+          "Los op naar Q*."
+        ],
+        "pitfalls": [
+          "A12 verplicht maken terwijl MO bij de prijsnemer direct gelijk is aan P.",
+          "MK overslaan terwijl TK moet worden gedifferentieerd.",
+          "De gevonden Q* verwarren met prijs of winst."
+        ],
+        "generator": "GEN_A94"
+      },
+      "execution_authorized_by_packet": false,
+      "generator_status_after_execution_if_no_generator_added": "generator_blocked_not_yet_interactive"
+    },
+    {
+      "unit_id": "A95",
+      "action": "unit-add",
+      "reviewed_spec": {
+        "id": "A95",
+        "name": "MO = gegeven MK-functie oplossen",
+        "kern": "Los MO = MK op wanneer de MK-functie in de opgave staat en niet uit TK hoeft te worden afgeleid.",
+        "needs": [
+          "A02"
+        ],
+        "exam_codes": [
+          "A2.10",
+          "A2.12"
+        ],
+        "mastery_target": "apply",
+        "prior_learning": "new_this_year",
+        "aspects": [
+          "rekenen",
+          "verbaal"
+        ],
+        "terms": [
+          "marginale-kosten"
+        ],
+        "procedure": [
+          "Neem de beschikbare MO-functie uit de voorafgaande stap of uit de opgave.",
+          "Neem de gegeven MK-functie uit de opgave.",
+          "Stel MO = MK.",
+          "Los de vergelijking op naar Q*.",
+          "Controleer dat je geen MK-functie afleidt als MK al gegeven is."
+        ],
+        "pitfalls": [
+          "De gegeven MK-functie opnieuw afleiden.",
+          "A91 gebruiken terwijl MK geen constante maar een functie is.",
+          "De gevonden Q* als prijs behandelen."
+        ],
+        "generator": "GEN_A95"
+      },
+      "execution_authorized_by_packet": false,
+      "generator_status_after_execution_if_current_GEN_A20_moves": "implemented_as_GEN.A95_using_current_GEN.A20_behavior"
+    }
+  ],
+  "exact_command_set": [
+    {
+      "unit_id": "A20",
+      "action": "unit-update",
+      "dry_run_command": "node build-scripts/references/unit-update.js --id A20 --spec '{\"name\":\"Winstmaximum oplossen met afgeleide MO en MK\",\"kern\":\"Los de winstmaximaliserende hoeveelheid op nadat MO uit TO en MK uit TK zijn afgeleid.\",\"needs\":[\"A12\",\"A13\",\"A02\"],\"exam_codes\":[\"A2.10\",\"A2.11\",\"A2.12\"],\"mastery_target\":\"apply\",\"prior_learning\":\"new_this_year\",\"aspects\":[\"rekenen\",\"verbaal\"],\"terms\":[\"marginale-kosten\"],\"procedure\":[\"Bepaal MO via de afgeleide route uit TO.\",\"Bepaal MK via de afgeleide route uit TK.\",\"Stel MO = MK.\",\"Los op naar Q*.\",\"Gebruik Q* daarna in de passende prijs-, opbrengst- of winstroute.\"],\"pitfalls\":[\"Deze route gebruiken wanneer MK al als constante of functie is gegeven.\",\"Deze route gebruiken wanneer MO bij volkomen concurrentie direct gelijk is aan P.\",\"De MO- of MK-uitkomst als verkoopprijs behandelen.\"],\"generator\":\"GEN_A20\"}' --dry-run",
+      "execution_command": "node build-scripts/references/unit-update.js --id A20 --spec '{\"name\":\"Winstmaximum oplossen met afgeleide MO en MK\",\"kern\":\"Los de winstmaximaliserende hoeveelheid op nadat MO uit TO en MK uit TK zijn afgeleid.\",\"needs\":[\"A12\",\"A13\",\"A02\"],\"exam_codes\":[\"A2.10\",\"A2.11\",\"A2.12\"],\"mastery_target\":\"apply\",\"prior_learning\":\"new_this_year\",\"aspects\":[\"rekenen\",\"verbaal\"],\"terms\":[\"marginale-kosten\"],\"procedure\":[\"Bepaal MO via de afgeleide route uit TO.\",\"Bepaal MK via de afgeleide route uit TK.\",\"Stel MO = MK.\",\"Los op naar Q*.\",\"Gebruik Q* daarna in de passende prijs-, opbrengst- of winstroute.\"],\"pitfalls\":[\"Deze route gebruiken wanneer MK al als constante of functie is gegeven.\",\"Deze route gebruiken wanneer MO bij volkomen concurrentie direct gelijk is aan P.\",\"De MO- of MK-uitkomst als verkoopprijs behandelen.\"],\"generator\":\"GEN_A20\"}'",
+      "extracted_spec_must_be_logged": true,
+      "dry_run_required_before_execution": true,
+      "execution_authorized_by_packet": false
+    },
+    {
+      "unit_id": "A94",
+      "action": "unit-add",
+      "dry_run_command": null,
+      "dry_run_limitation": "unit-add has no dry-run mode in the current CLI",
+      "execution_command": "node build-scripts/references/unit-add.js --spec '{\"id\":\"A94\",\"name\":\"MO = P en afgeleide MK oplossen\",\"kern\":\"Los de winstmaximaliserende hoeveelheid op wanneer MO bij een prijsnemer gelijk is aan P en MK eerst uit TK moet worden afgeleid.\",\"needs\":[\"A13\",\"A02\"],\"exam_codes\":[\"A2.10\",\"A2.11\",\"A2.12\"],\"mastery_target\":\"apply\",\"prior_learning\":\"new_this_year\",\"aspects\":[\"rekenen\",\"verbaal\"],\"terms\":[\"marginale-kosten\"],\"procedure\":[\"Herken dat de aanbieder een prijsnemer is bij volkomen concurrentie.\",\"Gebruik de regel: bij een prijsnemer geldt MO = marktprijs P.\",\"Bepaal MK als afgeleide van TK.\",\"Stel P = MK.\",\"Los op naar Q*.\"],\"pitfalls\":[\"A12 verplicht maken terwijl MO bij de prijsnemer direct gelijk is aan P.\",\"MK overslaan terwijl TK moet worden gedifferentieerd.\",\"De gevonden Q* verwarren met prijs of winst.\"],\"generator\":\"GEN_A94\"}'",
+      "extracted_spec_must_be_logged": true,
+      "execution_authorized_by_packet": false
+    },
+    {
+      "unit_id": "A95",
+      "action": "unit-add",
+      "dry_run_command": null,
+      "dry_run_limitation": "unit-add has no dry-run mode in the current CLI",
+      "execution_command": "node build-scripts/references/unit-add.js --spec '{\"id\":\"A95\",\"name\":\"MO = gegeven MK-functie oplossen\",\"kern\":\"Los MO = MK op wanneer de MK-functie in de opgave staat en niet uit TK hoeft te worden afgeleid.\",\"needs\":[\"A02\"],\"exam_codes\":[\"A2.10\",\"A2.12\"],\"mastery_target\":\"apply\",\"prior_learning\":\"new_this_year\",\"aspects\":[\"rekenen\",\"verbaal\"],\"terms\":[\"marginale-kosten\"],\"procedure\":[\"Neem de beschikbare MO-functie uit de voorafgaande stap of uit de opgave.\",\"Neem de gegeven MK-functie uit de opgave.\",\"Stel MO = MK.\",\"Los de vergelijking op naar Q*.\",\"Controleer dat je geen MK-functie afleidt als MK al gegeven is.\"],\"pitfalls\":[\"De gegeven MK-functie opnieuw afleiden.\",\"A91 gebruiken terwijl MK geen constante maar een functie is.\",\"De gevonden Q* als prijs behandelen.\"],\"generator\":\"GEN_A95\"}'",
+      "extracted_spec_must_be_logged": true,
+      "execution_authorized_by_packet": false
+    }
+  ],
+  "target_exercise_mapping_patch_plan": [
+    {
+      "record_id": "3.2.2",
+      "file": "references/authored/course-target-exercises.json",
+      "mutation_authorized_now": false,
+      "classification": "price_taker_mo_equals_p_plus_derived_mk",
+      "patch_fields": [
+        "required_skills",
+        "prior_knowledge_assumed",
+        "new_skills_introduced"
+      ],
+      "before": {
+        "required_skills": [
+          "A11",
+          "A13",
+          "A20",
+          "A21",
+          "A33",
+          "D30"
+        ],
+        "prior_knowledge_assumed": [
+          "A20",
+          "A21",
+          "D30"
+        ],
+        "new_skills_introduced": [
+          "A11",
+          "A13",
+          "A33"
+        ]
+      },
+      "after": {
+        "required_skills": [
+          "A11",
+          "A13",
+          "A94",
+          "A21",
+          "A33",
+          "D30"
+        ],
+        "prior_knowledge_assumed": [
+          "A21",
+          "D30"
+        ],
+        "new_skills_introduced": [
+          "A11",
+          "A13",
+          "A94",
+          "A33"
+        ]
+      },
+      "execution_note": "Apply exactly these array changes and do not change record_status, target_exercise, source_ref, paragraph metadata, or promotion fields."
+    },
+    {
+      "record_id": "3.3.3",
+      "file": "references/authored/course-target-exercises.json",
+      "mutation_authorized_now": false,
+      "classification": "derived_mo_plus_derived_mk",
+      "patch_fields": [],
+      "before": {
+        "required_skills": [
+          "A03",
+          "A07",
+          "A11",
+          "A12",
+          "A13",
+          "A20",
+          "A21",
+          "A35",
+          "A40",
+          "D30"
+        ],
+        "prior_knowledge_assumed": [
+          "A03",
+          "A07",
+          "A11",
+          "A12",
+          "A13",
+          "A20",
+          "A21",
+          "A40",
+          "D30"
+        ],
+        "new_skills_introduced": [
+          "A35"
+        ]
+      },
+      "after": {
+        "required_skills": [
+          "A03",
+          "A07",
+          "A11",
+          "A12",
+          "A13",
+          "A20",
+          "A21",
+          "A35",
+          "A40",
+          "D30"
+        ],
+        "prior_knowledge_assumed": [
+          "A03",
+          "A07",
+          "A11",
+          "A12",
+          "A13",
+          "A20",
+          "A21",
+          "A40",
+          "D30"
+        ],
+        "new_skills_introduced": [
+          "A35"
+        ]
+      },
+      "execution_note": "No authored mapping write expected; verify it remains the narrowed A20 canonical derived route."
+    },
+    {
+      "record_id": "4.1.2",
+      "file": "references/authored/course-target-exercises.json",
+      "mutation_authorized_now": false,
+      "classification": "given_constant_mk",
+      "patch_fields": [
+        "required_skills",
+        "prior_knowledge_assumed"
+      ],
+      "before": {
+        "required_skills": [
+          "A11",
+          "A20",
+          "A35",
+          "A36",
+          "D18",
+          "D21",
+          "D22",
+          "D24"
+        ],
+        "prior_knowledge_assumed": [
+          "A11",
+          "A20",
+          "A35"
+        ],
+        "new_skills_introduced": [
+          "A36",
+          "D18",
+          "D21",
+          "D22",
+          "D24"
+        ]
+      },
+      "after": {
+        "required_skills": [
+          "A11",
+          "A91",
+          "A35",
+          "A36",
+          "D18",
+          "D21",
+          "D22",
+          "D24"
+        ],
+        "prior_knowledge_assumed": [
+          "A11",
+          "A91",
+          "A35"
+        ],
+        "new_skills_introduced": [
+          "A36",
+          "D18",
+          "D21",
+          "D22",
+          "D24"
+        ]
+      },
+      "execution_note": "Apply exactly these array changes and do not change record_status, target_exercise, source_ref, paragraph metadata, or promotion fields."
+    }
+  ],
+  "generator_route": {
+    "mutation_authorized_now": false,
+    "preferred_execution_route": "move_current_GEN_A20_behavior_to_GEN_A95_and_block_GEN_A20_until_narrowed_generator_exists",
+    "current_GEN_A20_classification": "given_mo_function_plus_given_mk_function",
+    "exact_patch_intent": [
+      "Copy the current GEN.A20 function body to GEN.A95 so given MO and given MK-function solving remains available under A95.",
+      "Remove or disable GEN.A20 so narrowed A20 is generator-blocked/non-interactive until a derive-both generator is implemented.",
+      "Do not add GEN.A94 in this packet unless a later reviewer explicitly approves implementation; A94 may be minted as generator-blocked/not-yet-interactive.",
+      "Refresh skill-tree generator readiness after execution and prove no missing/stale generator leaks into interactive exports."
+    ],
+    "expected_generator_status_after_execution": [
+      {
+        "unit_id": "A20",
+        "expected_status": "generator_blocked_not_yet_interactive_until_narrowed_GEN_A20_exists",
+        "reason": "The existing GEN.A20 behavior does not match the narrowed derived-MO plus derived-MK A20 route."
+      },
+      {
+        "unit_id": "A94",
+        "expected_status": "generator_blocked_not_yet_interactive_unless_GEN_A94_is_separately_implemented",
+        "reason": "The A94 price-taker plus derived-MK route has no current generator implementation."
+      },
+      {
+        "unit_id": "A95",
+        "expected_status": "interactive_only_if_current_GEN_A20_behavior_is_moved_to_GEN_A95",
+        "reason": "Current GEN.A20 gives MO and MK functions directly, matching A95 better than narrowed A20."
+      }
+    ],
+    "student_facing_skilltree_use_authorized_now": false,
+    "pv_projection_authorized_now": false
+  },
+  "expected_diff_if_later_execution_is_authorized": [
+    "references/machine/micro-teaching-units.md",
+    "references/machine/micro-teaching-units.json",
+    "references/authored/course-target-exercises.json",
+    "engines/skilltree/generators.js if the GEN.A20/GEN.A95 route is implemented",
+    "references/data/sprints/RX.6-generator-blocked-units.json after generator-readiness rebuild",
+    "reports/json/skilltree-generator-readiness.json",
+    "reports/markdown/skilltree-generator-readiness.md",
+    "owned-content graph, RAG chunks, and procedure/PV reports only after authorized source mutations",
+    "sprint execution logs and validation evidence"
+  ],
+  "rollback_route": [
+    "Before execution, capture git status and exact pre-execution commit.",
+    "If a command fails before commit, restore only the affected CLI-generated and authored/generator diffs from the pre-execution commit.",
+    "If A20 update is rejected, rerun unit-update with the previous A20 JSON patch or revert the execution commit.",
+    "If A94 or A95 is rejected after minting, use a later reviewed unit-deprecate or revert lane rather than hand-editing references/machine.",
+    "Restore target-exercise arrays to the recorded before values for 3.2.2 and 4.1.2.",
+    "Restore the previous GEN.A20 body and remove GEN.A95 if the generator move is rejected before commit.",
+    "Never hand-edit references/machine or references/external as rollback."
+  ],
+  "validation_required_before_any_later_execution": [
+    "node build-scripts/references/check-mtu-h2i-a20-cli-execution-packet.js",
+    "node build-scripts/references/check-mtu-h2h-a20-cli-mutation-plan.js",
+    "node build-scripts/references/build-unit-index.js",
+    "node build-scripts/references/validate-core-schemas.js",
+    "node scripts/check-course-target-exercises-v5.js",
+    "node build-scripts/references/build-skilltree-generator-readiness.js after generator changes or new generator-blocked units",
+    "node build-scripts/references/check-skilltree-generator-readiness.js after generator-readiness rebuild",
+    "node build-scripts/references/build-owned-content-graph.js after authorized mapping mutation if projection refresh is included",
+    "node build-scripts/rag/build-chunks.js after authorized mapping mutation if RAG refresh is included",
+    "node build-scripts/reports/validate-report-json.js",
+    "npm.cmd test -- --runInBand",
+    "git diff --check"
+  ],
+  "projection_refresh_plan": {
+    "refresh_only_after_authorized_unit_mapping_and_generator_mutations": true,
+    "source_vs_projection_boundary": "references/authored/course-target-exercises.json is authored source; owned-content graph, RAG chunks, PV/procedure reports, and generator-readiness reports are generated projections.",
+    "surfaces": [
+      "references/data/owned-content-graph.json",
+      "references/data/rag/chunk_index.jsonl",
+      "reports/json/blueprint-flag-triage.json",
+      "reports/json/procedure-visual-inventory.json",
+      "reports/markdown/procedure-visual-inventory.md",
+      "reports/json/skilltree-generator-readiness.json",
+      "reports/markdown/skilltree-generator-readiness.md"
+    ],
+    "pv_projection_authorized_now": false,
+    "pv_machine_promotion_authorized_now": false
+  },
+  "recommended_next_gate": {
+    "gate_id": "GATE-MTU-H2I-a20-cli-execution",
+    "scope": "Review exact A20/A94/A95 execution packet, authored mapping patch, generator route, rollback, validation, and no-exposure proof before any execution sprint.",
+    "not_authorized": [
+      "A20 mutation",
+      "A94 or A95 unit minting",
+      "target-exercise mapping writes",
+      "generator changes",
+      "generated projection refresh",
+      "PV projection",
+      "student/product use"
+    ]
+  }
+}
