@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-05-28T13:54:44.872Z
+Generated: 2026-05-28T14:29:29.570Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 1988
+Files indexed: 1994
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -606,7 +606,7 @@ Count: 118
 
 ## references
 
-Count: 332
+Count: 333
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -729,6 +729,7 @@ Count: 332
 - references/data/sprints/MTU-H2I.plan.json
 - references/data/sprints/MTU-H2I.result.json
 - references/data/sprints/MTU-H2J.plan.json
+- references/data/sprints/MTU-H2J.result.json
 - references/data/sprints/PV-G4.plan.json
 - references/data/sprints/PV.1.plan.json
 - references/data/sprints/PV.1.result.json
@@ -943,7 +944,7 @@ Count: 332
 
 ## reports
 
-Count: 967
+Count: 971
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1696,7 +1697,11 @@ Count: 967
 - reports/sprints/MTU-H2I-plan.md
 - reports/sprints/MTU-H2I-result.md
 - reports/sprints/MTU-H2J-baseline.md
+- reports/sprints/MTU-H2J-diff-summary.md
+- reports/sprints/MTU-H2J-execution-log.json
+- reports/sprints/MTU-H2J-execution-log.md
 - reports/sprints/MTU-H2J-plan.md
+- reports/sprints/MTU-H2J-result.md
 - reports/sprints/PV-G4-baseline.md
 - reports/sprints/PV.1-baseline.md
 - reports/sprints/PV.1-diff-summary.md
@@ -1933,7 +1938,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 246
+Count: 247
 
 - .gitignore
 - BUILD-CHAPTER.md
@@ -2038,6 +2043,7 @@ Count: 246
 - docs/roadmaps/outdated/reference-team-roadmap-v2.98-mtu-h2g-a20-split-packet.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.99-mtu-h2h-a20-cli-mutation-plan.md
 - docs/roadmaps/outdated/reference-team-roadmap-v3.00-mtu-h2i-a20-cli-execution-packet.md
+- docs/roadmaps/outdated/reference-team-roadmap-v3.01-mtu-h2j-a20-a94-a95-cli-execution.md
 - docs/roadmaps/README.md
 - docs/roadmaps/roadmap-version-index.json
 - docs/roadmaps/roadmap-version-index.md

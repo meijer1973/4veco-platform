@@ -1,0 +1,159 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-MTU-H3-incidence-pass-through",
+  "sprint_id": "MTU-H3",
+  "generated_on": "2026-05-28",
+  "status": "review_packet_ready_no_mutation",
+  "source_packet": "reports/mtu-hardening/mtu-h3-incidence-pass-through-family-review.json",
+  "remote_publication_required_before_review": true,
+  "authority_boundary": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "unit_update_execution_authorized": false,
+    "unit_split_execution_authorized": false,
+    "unit_deprecation_authorized": false,
+    "target_exercise_mutation_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "target_exercise_promotion_authorized": false,
+    "generated_projection_refresh_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "student_product_use_authorized": false
+  },
+  "calibration_questions": [
+    {
+      "id": "MTUH3-C1",
+      "question": "Confirm this gate reviews incidence/pass-through skill-family routing only and does not itself authorize protected reference mutation, unit minting, D07 update, target-exercise mutation, generated projection refresh, lesson output, or student/product use."
+    },
+    {
+      "id": "MTUH3-C2",
+      "question": "Confirm the H3 packet and cited evidence have been pushed to the normal remote branch before this review starts."
+    },
+    {
+      "id": "MTUH3-C3",
+      "question": "Confirm A93 remains a percentage price-change unit, not a general incidence or pass-through-share unit, unless a later gate explicitly changes that boundary."
+    }
+  ],
+  "planned_questions": [
+    {
+      "id": "MTUH3-Q1",
+      "title": "D07 scope",
+      "question": "Should D07 be narrowed to tax afwentelingspercentage calculation, rather than remaining a broad tax incidence, burden, and elasticity unit?",
+      "options": [
+        "Yes, plan D07 as the tax afwentelingspercentage lane and route other operations separately.",
+        "Keep D07 broad and accept the mixed operation scope.",
+        "Hold D07 decisions until a broader tax/welfare review.",
+        "Open answer / other, with rationale."
+      ]
+    },
+    {
+      "id": "MTUH3-Q2",
+      "title": "3.1.1 D07 over-trigger",
+      "question": "Should target exercise 3.1.1 later route away from D07 toward a tax-wedge/Pc/Pp graphical-label lane such as D41/equivalent?",
+      "options": [
+        "Yes, plan a D41/equivalent lane for tax wedge and Pc/Pp labeling.",
+        "Keep D07 on 3.1.1 and accept the over-trigger risk.",
+        "Hold 3.1.1 mapping decisions until a broader target-exercise review.",
+        "Open answer / other, with rationale."
+      ]
+    },
+    {
+      "id": "MTUH3-Q3",
+      "title": "3.1.2 tax burden route",
+      "question": "For 3.1.2, should tax burden amounts and afwentelingspercentage be split into D42 plus narrowed D07, or remain one D07 route?",
+      "options": [
+        "Split amount and percentage: D42/equivalent for euro burden, D07 for percentage.",
+        "Keep amount and percentage together in D07.",
+        "Hold until surplus and welfare-loss sequencing is reviewed.",
+        "Open answer / other, with rationale."
+      ]
+    },
+    {
+      "id": "MTUH3-Q4",
+      "title": "Subsidy incidence",
+      "question": "Should subsidy incidence receive dedicated lanes such as D43 subsidy effective prices and D44 subsidy benefit-sharing?",
+      "options": [
+        "Yes, plan subsidy incidence lanes D43/D44 or equivalents.",
+        "Do not add subsidy incidence units; keep A41, D19, and D29 as sufficient.",
+        "Hold subsidy incidence until a broader subsidy/welfare review.",
+        "Open answer / other, with rationale."
+      ]
+    },
+    {
+      "id": "MTUH3-Q5",
+      "title": "A93 boundary",
+      "question": "Should A93 remain only percentage price change after a cost change, with any true cost-shock pass-through share handled by D46/equivalent?",
+      "options": [
+        "Yes, keep A93 bounded and plan D46/equivalent only if true pass-through share is needed.",
+        "Generalize A93 to cover cost-shock pass-through share too.",
+        "Hold cost-shock pass-through until monopoly/cost-shock review.",
+        "Open answer / other, with rationale."
+      ]
+    },
+    {
+      "id": "MTUH3-Q6",
+      "title": "Graphical wedge and welfare areas",
+      "question": "Are existing A40/A32/D29 welfare-area units enough, or is a separate tax-wedge graphical recognition lane needed?",
+      "options": [
+        "Add or plan D41/equivalent for tax wedge/Pc/Pp labeling; keep welfare areas separate.",
+        "Use existing A40/A32/D29 without a new graphical wedge unit.",
+        "Hold graphical routing until a representation-operation review.",
+        "Open answer / other, with rationale."
+      ]
+    },
+    {
+      "id": "MTUH3-Q7",
+      "title": "Elasticity explanation",
+      "question": "Should relative elasticity explanation move out of D07 into a separate conceptual lane such as D45/equivalent?",
+      "options": [
+        "Yes, plan D45/equivalent for relative elasticity explanation.",
+        "Keep elasticity explanation inside D07.",
+        "Hold until demand and supply elasticity units are jointly reviewed.",
+        "Open answer / other, with rationale."
+      ]
+    },
+    {
+      "id": "MTUH3-Q8",
+      "title": "Next sprint authority",
+      "question": "If GATE-MTU-H3 closes, what should be authorized next?",
+      "options": [
+        "Authorize only a later bounded CLI-mutation planning packet for accepted lanes; no execution yet.",
+        "Authorize direct execution only if exact commands, rollback, mapping diffs, and validation are named in the closure.",
+        "Hold all downstream incidence/pass-through work and revise the packet.",
+        "Open answer / other, with rationale."
+      ]
+    },
+    {
+      "id": "MTUH3-Q9",
+      "title": "Mapping and projection boundary",
+      "question": "Should later target-exercise mapping changes be treated as authored-reference mutations and generated projections refresh only after authorized source mutation?",
+      "options": [
+        "Yes, keep authored mapping writes and generated projection refresh behind later authorization.",
+        "Allow generated projection refresh during planning before source mutation.",
+        "Hold until projection/PV architecture is reviewed.",
+        "Open answer / other, with rationale."
+      ]
+    },
+    {
+      "id": "MTUH3-Q10",
+      "title": "Mutation and product authority now",
+      "question": "Does this review packet itself authorize protected reference mutation, unit minting, unit updates, target-exercise mutation, candidate writes, lesson output, diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student/product use now?",
+      "options": [
+        "No. This packet may only record reviewed routing decisions and authorize a named later planning sprint.",
+        "Yes, but only for explicitly named low-risk planning artifacts.",
+        "Hold; authority cannot be decided until D07 scope is revised.",
+        "Open answer / other, with rationale."
+      ]
+    }
+  ]
+}
