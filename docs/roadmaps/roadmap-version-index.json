@@ -15,13 +15,14 @@
   "roadmaps": [
     {
       "roadmap_id": "references-team-roadmap",
-      "version": "v3.00-mtu-h2i-a20-cli-execution-packet",
+      "version": "v3.01-mtu-h2j-a20-a94-a95-cli-execution",
       "title": "References Team Roadmap",
       "status": "active",
       "path": "references/reference-team-roadmap.md",
       "owner": "references_team",
       "updated_on": "2026-05-28",
       "supersedes": [
+        "docs/roadmaps/outdated/reference-team-roadmap-v3.00-mtu-h2i-a20-cli-execution-packet.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.99-mtu-h2h-a20-cli-mutation-plan.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.98-mtu-h2g-a20-split-packet.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.97-mtu-h2f-conditional-cli-execution.md",
@@ -121,7 +122,18 @@
         "knowledge/Exercise schema and quality/reference-team-roadmap Live version 28 April.md",
         "knowledge/Exercise schema and quality/roadmap-updated-repository-checked.md"
       ],
-      "notes": "Current operating roadmap after GATE-MTU-H2H closed planning-only and MTU-H2I prepared the non-mutating A20/A94/A95 execution packet. Top operational next action is GATE-MTU-H2I human review."
+      "notes": "Current operating roadmap after GATE-MTU-H2I closed pass-with-conditions and MTU-H2J became the active bounded A20/A94/A95 execution sprint."
+    },
+    {
+      "roadmap_id": "references-team-roadmap-v3.00",
+      "version": "v3.00-mtu-h2i-a20-cli-execution-packet",
+      "title": "References Team Roadmap before GATE-MTU-H2I closure and MTU-H2J execution",
+      "status": "outdated",
+      "path": "docs/roadmaps/outdated/reference-team-roadmap-v3.00-mtu-h2i-a20-cli-execution-packet.md",
+      "owner": "references_team",
+      "updated_on": "2026-05-28",
+      "superseded_by": "references/reference-team-roadmap.md",
+      "notes": "Superseded after GATE-MTU-H2I closed PASS WITH CONDITIONS and authorized MTU-H2J bounded execution."
     },
     {
       "roadmap_id": "references-team-roadmap-v2.99",

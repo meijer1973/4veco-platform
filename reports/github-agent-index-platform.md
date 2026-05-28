@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-05-28T13:07:02.427Z
+Generated: 2026-05-28T13:45:37.629Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 1960
+Files indexed: 1978
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -117,7 +117,7 @@ Count: 71
 
 ## build scripts
 
-Count: 310
+Count: 312
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -234,6 +234,7 @@ Count: 310
 - build-scripts/references/build-cp6f-113-part-a-recheck.js
 - build-scripts/references/build-micro-unit-quality-packet.js
 - build-scripts/references/build-mtu-h2e-conditional-lane-execution-packet.js
+- build-scripts/references/build-mtu-h2i-a20-cli-execution-packet.js
 - build-scripts/references/build-owned-content-graph.js
 - build-scripts/references/build-owned-source-registry.js
 - build-scripts/references/build-procedure-game-template-alignment.js
@@ -283,6 +284,7 @@ Count: 310
 - build-scripts/references/check-mtu-h2e-conditional-lane-execution-packet.js
 - build-scripts/references/check-mtu-h2g-a20-split-packet.js
 - build-scripts/references/check-mtu-h2h-a20-cli-mutation-plan.js
+- build-scripts/references/check-mtu-h2i-a20-cli-execution-packet.js
 - build-scripts/references/check-mtu-hardening-benchmark.js
 - build-scripts/references/check-operation-answer-skill-candidates.js
 - build-scripts/references/check-owned-content-graph.js
@@ -479,7 +481,7 @@ Count: 42
 
 ## validators
 
-Count: 116
+Count: 117
 
 - build-scripts/rag/validate-chunks.js
 - build-scripts/rag/validate-query-output.js
@@ -507,6 +509,7 @@ Count: 116
 - build-scripts/references/check-mtu-h2e-conditional-lane-execution-packet.js
 - build-scripts/references/check-mtu-h2g-a20-split-packet.js
 - build-scripts/references/check-mtu-h2h-a20-cli-mutation-plan.js
+- build-scripts/references/check-mtu-h2i-a20-cli-execution-packet.js
 - build-scripts/references/check-mtu-hardening-benchmark.js
 - build-scripts/references/check-operation-answer-skill-candidates.js
 - build-scripts/references/check-owned-content-graph.js
@@ -600,7 +603,7 @@ Count: 116
 
 ## references
 
-Count: 329
+Count: 331
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -720,6 +723,8 @@ Count: 329
 - references/data/sprints/MTU-H2G.result.json
 - references/data/sprints/MTU-H2H.plan.json
 - references/data/sprints/MTU-H2H.result.json
+- references/data/sprints/MTU-H2I.plan.json
+- references/data/sprints/MTU-H2I.result.json
 - references/data/sprints/PV-G4.plan.json
 - references/data/sprints/PV.1.plan.json
 - references/data/sprints/PV.1.result.json
@@ -934,7 +939,7 @@ Count: 329
 
 ## reports
 
-Count: 948
+Count: 961
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1034,6 +1039,8 @@ Count: 948
 - reports/merge-review/R0.2-R7.5-post-merge-main.md
 - reports/mtu-hardening/benchmark-sample-v1.json
 - reports/mtu-hardening/failure-taxonomy-v1.md
+- reports/mtu-hardening/solo-q1-q3-a20-cli-execution-packet.json
+- reports/mtu-hardening/solo-q1-q3-a20-cli-execution-packet.md
 - reports/mtu-hardening/solo-q1-q3-a20-cli-mutation-plan.json
 - reports/mtu-hardening/solo-q1-q3-a20-cli-mutation-plan.md
 - reports/mtu-hardening/solo-q1-q3-a20-split-replacement-packet.json
@@ -1261,8 +1268,15 @@ Count: 948
 - reports/review-gates/GATE-MTU-H2G-a20-split-replacement/review-packet.json
 - reports/review-gates/GATE-MTU-H2G-a20-split-replacement/review-packet.md
 - reports/review-gates/GATE-MTU-H2H-a20-cli-mutation-plan/bundle-urls.md
+- reports/review-gates/GATE-MTU-H2H-a20-cli-mutation-plan/gate-closure.json
+- reports/review-gates/GATE-MTU-H2H-a20-cli-mutation-plan/gate-closure.md
+- reports/review-gates/GATE-MTU-H2H-a20-cli-mutation-plan/human-interview.json
+- reports/review-gates/GATE-MTU-H2H-a20-cli-mutation-plan/human-interview.md
 - reports/review-gates/GATE-MTU-H2H-a20-cli-mutation-plan/review-packet.json
 - reports/review-gates/GATE-MTU-H2H-a20-cli-mutation-plan/review-packet.md
+- reports/review-gates/GATE-MTU-H2I-a20-cli-execution/bundle-urls.md
+- reports/review-gates/GATE-MTU-H2I-a20-cli-execution/review-packet.json
+- reports/review-gates/GATE-MTU-H2I-a20-cli-execution/review-packet.md
 - reports/review-gates/GATE-PV-G1-schema/bundle-urls.md
 - reports/review-gates/GATE-PV-G1-schema/review-packet.json
 - reports/review-gates/GATE-PV-G1-schema/review-packet.md
@@ -1669,6 +1683,10 @@ Count: 948
 - reports/sprints/MTU-H2H-diff-summary.md
 - reports/sprints/MTU-H2H-plan.md
 - reports/sprints/MTU-H2H-result.md
+- reports/sprints/MTU-H2I-baseline.md
+- reports/sprints/MTU-H2I-diff-summary.md
+- reports/sprints/MTU-H2I-plan.md
+- reports/sprints/MTU-H2I-result.md
 - reports/sprints/PV-G4-baseline.md
 - reports/sprints/PV.1-baseline.md
 - reports/sprints/PV.1-diff-summary.md
@@ -1905,7 +1923,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 244
+Count: 245
 
 - .gitignore
 - BUILD-CHAPTER.md
@@ -2008,6 +2026,7 @@ Count: 244
 - docs/roadmaps/outdated/reference-team-roadmap-v2.96-gate-mtu-h2e-pass-with-conditions.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.97-mtu-h2f-conditional-cli-execution.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.98-mtu-h2g-a20-split-packet.md
+- docs/roadmaps/outdated/reference-team-roadmap-v2.99-mtu-h2h-a20-cli-mutation-plan.md
 - docs/roadmaps/README.md
 - docs/roadmaps/roadmap-version-index.json
 - docs/roadmaps/roadmap-version-index.md

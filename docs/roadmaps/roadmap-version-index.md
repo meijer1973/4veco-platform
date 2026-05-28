@@ -12,12 +12,13 @@ docs/roadmaps/roadmap-version-index.json
 
 | Roadmap | Version | Path | Notes |
 |---|---|---|---|
-| References Team Roadmap | `v3.00-mtu-h2i-a20-cli-execution-packet` | `references/reference-team-roadmap.md` | Current operating roadmap after GATE-MTU-H2H closed planning-only and MTU-H2I prepared the non-mutating A20/A94/A95 execution packet. Top operational next action is GATE-MTU-H2I human review. |
+| References Team Roadmap | `v3.01-mtu-h2j-a20-a94-a95-cli-execution` | `references/reference-team-roadmap.md` | Current operating roadmap after GATE-MTU-H2I closed pass-with-conditions and MTU-H2J became the active bounded A20/A94/A95 execution sprint. |
 
 ## Outdated Archive
 
 | Roadmap | Version | Path | Superseded By |
 |---|---|---|---|
+| References Team Roadmap before GATE-MTU-H2I closure and MTU-H2J execution | `v3.00-mtu-h2i-a20-cli-execution-packet` | `docs/roadmaps/outdated/reference-team-roadmap-v3.00-mtu-h2i-a20-cli-execution-packet.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before GATE-MTU-H2H closure and MTU-H2I execution packet | `v2.99-mtu-h2h-a20-cli-mutation-plan` | `docs/roadmaps/outdated/reference-team-roadmap-v2.99-mtu-h2h-a20-cli-mutation-plan.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before GATE-MTU-H2G closure and MTU-H2H planning | `v2.98-mtu-h2g-a20-split-packet` | `docs/roadmaps/outdated/reference-team-roadmap-v2.98-mtu-h2g-a20-split-packet.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before MTU-H2G A20 split packet | `v2.97-mtu-h2f-conditional-cli-execution` | `docs/roadmaps/outdated/reference-team-roadmap-v2.97-mtu-h2f-conditional-cli-execution.md` | `references/reference-team-roadmap.md` |

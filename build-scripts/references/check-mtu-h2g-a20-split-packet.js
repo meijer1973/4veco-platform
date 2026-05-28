@@ -138,12 +138,19 @@ const unitMap = new Map(units.map((unit) => [unit.id, unit]));
 for (const id of ['A20', 'A91', 'A12', 'A13', 'A02']) {
   if (!unitMap.has(id)) fail(`live unit ${id} must exist`);
 }
-for (const id of ['A94', 'A95']) {
-  if (unitMap.has(id)) fail(`${id} must remain absent before H2G review`);
+const postH2J = unitMap.has('A94') || unitMap.has('A95') || generators.includes('GEN.A95');
+if (!postH2J) {
+  for (const id of ['A94', 'A95']) {
+    if (unitMap.has(id)) fail(`${id} must remain absent before H2G review`);
+  }
+} else {
+  for (const id of ['A94', 'A95']) {
+    if (!unitMap.has(id)) fail(`${id} must exist after MTU-H2J execution`);
+  }
 }
 
 const a20Live = unitMap.get('A20');
-if (a20Live.name !== packet.baseline.a20_current_summary.name) fail('packet A20 baseline name must match live A20');
+if (!postH2J && a20Live.name !== packet.baseline.a20_current_summary.name) fail('packet A20 baseline name must match live A20');
 sameArray(a20Live.needs, ['A12', 'A13', 'A02'], 'live A20 needs');
 sameArray(packet.baseline.a20_current_summary.needs, ['A12', 'A13', 'A02'], 'packet A20 baseline needs');
 if (a20Live.generator !== 'GEN_A20') fail('live A20 generator must be GEN_A20');
@@ -159,7 +166,7 @@ if (packet.baseline.a91_current_summary.generator !== 'GEN_A91') fail('packet A9
 
 const exercises = targetData.exercises || targetData;
 const activeA20Uses = exercises.filter((record) => containsSkill(record, 'A20')).map((record) => record.id).sort();
-sameArray(activeA20Uses, ['3.2.2', '3.3.3', '4.1.2'], 'active authored target-exercise A20 uses');
+sameArray(activeA20Uses, postH2J ? ['3.3.3'] : ['3.2.2', '3.3.3', '4.1.2'], 'active authored target-exercise A20 uses');
 
 const target322 = findTarget(exercises, '3.2.2');
 const target333 = findTarget(exercises, '3.3.3');
@@ -188,7 +195,9 @@ sameArray(useById.get('3.3.3').recommended_mapping_route, ['A12', 'A13', 'A20'],
 if (useById.get('4.1.2').classification !== 'given_constant_mk') fail('4.1.2 classification mismatch');
 sameArray(useById.get('4.1.2').recommended_mapping_route, ['A91'], '4.1.2 recommended route');
 
-if (!generators.includes('GEN.A20')) fail('generators.js must contain GEN.A20');
+if (!postH2J && !generators.includes('GEN.A20')) fail('generators.js must contain GEN.A20');
+if (postH2J && generators.includes('GEN.A20 = function ()')) fail('GEN.A20 implementation must be blocked after MTU-H2J execution');
+if (postH2J && !generators.includes('GEN.A95 = function ()')) fail('GEN.A95 must exist after MTU-H2J execution');
 if (!generators.includes('MO = ') || !generators.includes('MK = ')) fail('generators.js must include MO/MK generator evidence');
 const generatorAudit = packet.usage_audit.generator_use || {};
 if (generatorAudit.record_id !== 'GEN_A20') fail('generator audit record_id must be GEN_A20');
@@ -226,7 +235,7 @@ const a95Lane = findLane(packet, 'MTUH2G-A95-GIVEN-MK-FUNCTION');
 if (a95Lane.action_type !== 'unit_add') fail('A95 lane must be unit_add');
 if (a95Lane.proposed_unit_id !== 'A95') fail('A95 lane must propose A95');
 
-const knownIds = new Set(units.map((unit) => unit.id));
+const knownIds = new Set(units.map((unit) => unit.id).filter((id) => !['A94', 'A95'].includes(id)));
 for (const [id, spec] of [
   ['A94', a94Lane.proposed_spec],
   ['A95', a95Lane.proposed_spec],
@@ -240,7 +249,7 @@ for (const [id, spec] of [
 sameArray(a94Lane.proposed_spec.needs, ['A13', 'A02'], 'A94 needs');
 sameArray(a95Lane.proposed_spec.needs, ['A02'], 'A95 needs');
 
-const simulated = units.map((unit) => ({ ...unit }));
+const simulated = units.filter((unit) => !['A94', 'A95'].includes(unit.id)).map((unit) => ({ ...unit }));
 Object.assign(simulated.find((unit) => unit.id === 'A20'), a20Lane.update_spec);
 simulated.push(a94Lane.proposed_spec, a95Lane.proposed_spec);
 const catalogErrors = validate(simulated, {
@@ -340,8 +349,8 @@ for (const required of [
 const firstRowMatch = roadmap.match(/\| Sprint \| Name \| Completed \| Current State \|\s*\n\|[-|]+\|\s*\n(\|[^\n]+\|)/);
 if (!firstRowMatch) fail('could not find first Sprint Ledger row in roadmap');
 const firstRow = firstRowMatch[1];
-if (!/\| (GATE-MTU-H2I|MTU-H2I|GATE-MTU-H2H|MTU-H2H|GATE-MTU-H2G|MTU-H2G) \|/.test(firstRow)) {
-  fail('first Sprint Ledger row must be GATE-MTU-H2I, MTU-H2I, GATE-MTU-H2H, MTU-H2H, GATE-MTU-H2G, or MTU-H2G');
+if (!/\| (MTU-H3|MTU-H2J|GATE-MTU-H2I|MTU-H2I|GATE-MTU-H2H|MTU-H2H|GATE-MTU-H2G|MTU-H2G) \|/.test(firstRow)) {
+  fail('first Sprint Ledger row must be MTU-H3, MTU-H2J, GATE-MTU-H2I, MTU-H2I, GATE-MTU-H2H, MTU-H2H, GATE-MTU-H2G, or MTU-H2G');
 }
 if (!firstRow.includes('ACTIVE OPERATIONAL NEXT ACTION')) {
   fail('first Sprint Ledger row must state ACTIVE OPERATIONAL NEXT ACTION');

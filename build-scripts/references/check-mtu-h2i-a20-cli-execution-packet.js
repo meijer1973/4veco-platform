@@ -146,11 +146,20 @@ const unitMap = new Map(units.map((unit) => [unit.id, unit]));
 for (const id of ['A20', 'A91', 'A12', 'A13', 'A02']) {
   if (!unitMap.has(id)) fail(`live unit ${id} must exist`);
 }
-for (const id of ['A94', 'A95']) {
-  if (unitMap.has(id)) fail(`${id} must be absent before H2I execution`);
+const postH2J = unitMap.has('A94') || unitMap.has('A95') || generators.includes('GEN.A95');
+if (!postH2J) {
+  for (const id of ['A94', 'A95']) {
+    if (unitMap.has(id)) fail(`${id} must be absent before H2I execution`);
+  }
+  if (!generators.includes('GEN.A20')) fail('generators.js must contain current GEN.A20 before execution');
+  if (generators.includes('GEN.A95')) fail('GEN.A95 must not already exist before H2I execution packet review');
+} else {
+  for (const id of ['A94', 'A95']) {
+    if (!unitMap.has(id)) fail(`${id} must exist after MTU-H2J execution`);
+  }
+  if (generators.includes('GEN.A20 = function ()')) fail('GEN.A20 implementation must be blocked after MTU-H2J execution');
+  if (!generators.includes('GEN.A95 = function ()')) fail('GEN.A95 must exist after MTU-H2J execution');
 }
-if (!generators.includes('GEN.A20')) fail('generators.js must contain current GEN.A20 before execution');
-if (generators.includes('GEN.A95')) fail('GEN.A95 must not already exist before H2I execution packet review');
 
 const a20 = unitLane(packet, 'A20');
 if (a20.action !== 'unit-update') fail('A20 action must be unit-update');
@@ -223,9 +232,15 @@ const exercises = targetData.exercises || targetData;
 for (const id of ['3.2.2', '3.3.3', '4.1.2']) {
   const target = targetById(exercises, id);
   const patch = mappingPatch(packet, id);
-  sameArray(patch.before.required_skills, target.required_skills, `${id} before.required_skills`);
-  sameArray(patch.before.prior_knowledge_assumed, target.prior_knowledge_assumed, `${id} before.prior_knowledge_assumed`);
-  sameArray(patch.before.new_skills_introduced, target.new_skills_introduced, `${id} before.new_skills_introduced`);
+  if (!postH2J) {
+    sameArray(patch.before.required_skills, target.required_skills, `${id} before.required_skills`);
+    sameArray(patch.before.prior_knowledge_assumed, target.prior_knowledge_assumed, `${id} before.prior_knowledge_assumed`);
+    sameArray(patch.before.new_skills_introduced, target.new_skills_introduced, `${id} before.new_skills_introduced`);
+  } else {
+    sameArray(patch.after.required_skills, target.required_skills, `${id} after.required_skills`);
+    sameArray(patch.after.prior_knowledge_assumed, target.prior_knowledge_assumed, `${id} after.prior_knowledge_assumed`);
+    sameArray(patch.after.new_skills_introduced, target.new_skills_introduced, `${id} after.new_skills_introduced`);
+  }
   if (patch.mutation_authorized_now !== false) fail(`${id} mapping mutation_authorized_now must be false`);
 }
 sameArray(mappingPatch(packet, '3.2.2').after.required_skills, ['A11', 'A13', 'A94', 'A21', 'A33', 'D30'], '3.2.2 after.required_skills');
@@ -295,8 +310,8 @@ for (const required of [
 const firstRowMatch = roadmap.match(/\| Sprint \| Name \| Completed \| Current State \|\s*\n\|[-|]+\|\s*\n(\|[^\n]+\|)/);
 if (!firstRowMatch) fail('could not find first Sprint Ledger row in roadmap');
 const firstRow = firstRowMatch[1];
-if (!/\| (MTU-H2I|GATE-MTU-H2I) \|/.test(firstRow)) {
-  fail('first Sprint Ledger row must be MTU-H2I or GATE-MTU-H2I');
+if (!/\| (MTU-H3|MTU-H2J|GATE-MTU-H2I|MTU-H2I) \|/.test(firstRow)) {
+  fail('first Sprint Ledger row must be MTU-H3, MTU-H2J, GATE-MTU-H2I, or MTU-H2I');
 }
 if (!firstRow.includes('ACTIVE OPERATIONAL NEXT ACTION')) fail('first row must state ACTIVE OPERATIONAL NEXT ACTION');
 

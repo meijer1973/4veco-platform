@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-MTU-H2I-a20-cli-execution",
+  "date": "2026-05-28",
+  "reviewed_remote_commit": "1fb0b95fc6b031f37ff780fb3db063dd9deb7d25",
+  "review_mode": "human_review_recorded_from_user_verdict",
+  "verdict": "pass_with_conditions_authorize_later_bounded_execution_sprint",
+  "calibration_answers": [
+    {
+      "id": "CAL-1",
+      "answer": "yes",
+      "notes": "Gate reviews H2I execution only and does not itself authorize mutation or product use."
+    },
+    {
+      "id": "CAL-2",
+      "answer": "yes_with_closure_override",
+      "notes": "The H2I packet and cited evidence were fetchable remotely. The execution packet still said must_commit_and_push_this_packet_before_human_review; closure records reviewed commit 1fb0b95fc6b031f37ff780fb3db063dd9deb7d25 as the satisfied remote proof."
+    },
+    {
+      "id": "CAL-3",
+      "answer": "yes",
+      "notes": "A20, A94/A95, target mappings, and generator behavior must be executed together or explicitly blocked together with no-exposure proof."
+    }
+  ],
+  "answers": [
+    {
+      "id": "MTUH2I-Q1",
+      "decision": "accept_remote_evidence_and_preflight_with_commit_hash_proof",
+      "rationale": "The preflight list is strong: clean-worktree proof, fresh ID checks, live-unit checks, spec logging, A20 dry-run, mapping before/after logs, generator patch summary, and no promotion-field changes."
+    },
+    {
+      "id": "MTUH2I-Q2",
+      "decision": "approve_a20_update_command_for_later_execution",
+      "rationale": "A20 narrows to derived MO plus derived MK while retaining A2.11, resolving the earlier blocker."
+    },
+    {
+      "id": "MTUH2I-Q3",
+      "decision": "approve_a94_and_a95_unit_add_commands",
+      "rationale": "A94 carries the price-taker MO = P plus derived MK route without A12. A95 covers given MK-function solving and stays distinct from A91's given constant/value MK route."
+    },
+    {
+      "id": "MTUH2I-Q4",
+      "decision": "approve_target_exercise_mapping_patch",
+      "rationale": "3.2.2 replaces A20 with A94 and removes A20 from prior knowledge; 3.3.3 remains unchanged with A20; 4.1.2 replaces A20 with A91. No record status, source refs, paragraph metadata, or promotion fields may change."
+    },
+    {
+      "id": "MTUH2I-Q5",
+      "decision": "approve_gen_a20_gen_a95_route_with_exact_diff_condition",
+      "rationale": "Move current GEN.A20 behavior to GEN.A95, block GEN.A20 until a narrowed derive-both generator exists, and keep A94 generator-blocked unless separately implemented. The execution sprint must print or record the exact generator diff before applying it."
+    },
+    {
+      "id": "MTUH2I-Q6",
+      "decision": "approve_generator_readiness_and_non_exposure_requirements",
+      "rationale": "Require refreshed generator readiness and proof that no stale A20 or missing A94 generator leaks into interactive student-facing exports."
+    },
+    {
+      "id": "MTUH2I-Q7",
+      "decision": "approve_command_order_and_rollback_with_printed_specs_arrays_and_generator_patch",
+      "rationale": "Command/order/rollback standard is sufficient if the execution log prints every extracted spec, exact mapping arrays, and exact generator patch before mutation."
+    },
+    {
+      "id": "MTUH2I-Q8",
+      "decision": "approve_projection_refresh_after_authorized_source_mutation_only",
+      "rationale": "Owned-content graph, RAG chunks, procedure/PV reports, and generator-readiness reports refresh only after authorized source mutations."
+    },
+    {
+      "id": "MTUH2I-Q9",
+      "decision": "authorize_bounded_execution_sprint",
+      "rationale": "Scope is limited to A20/A94/A95, target mapping patches, generator route, and generated projection refresh caused by those source mutations."
+    },
+    {
+      "id": "MTUH2I-Q10",
+      "decision": "no_mutation_or_product_authority_from_packet_itself",
+      "rationale": "The packet itself authorizes no mutation. Only the closure may authorize the named execution sprint."
+    }
+  ],
+  "closure_conditions": [
+    "Record the reviewed remote commit/hash and confirm remote evidence was pushed before review.",
+    "Run final preflight: clean worktree, A94/A95 absent, A20/A91/A12/A13/A02 present, GEN.A20 present.",
+    "Print each extracted unit spec before CLI execution.",
+    "Run A20 unit-update --dry-run and prove A2.11 remains.",
+    "Print exact before/after target-exercise arrays before authored mapping updates.",
+    "Print exact generator patch/diff before generator mutation.",
+    "Prove no record_status, source_ref, placeholder, paragraph metadata, or promotion fields changed.",
+    "Refresh generator-readiness reports and prove no stale/missing interactive exposure.",
+    "Refresh generated projections only after authorized unit/mapping/generator source changes.",
+    "Run the full validation stack and git diff --check."
+  ],
+  "quality_log": [
+    {
+      "issue": "Remote status string still says must commit and push.",
+      "severity": "low_medium",
+      "next_action": "Closure records actual reviewed commit/hash.",
+      "proof_required": "Remote evidence reproducible."
+    },
+    {
+      "issue": "A20 narrowing can stale mappings if partial.",
+      "severity": "high",
+      "next_action": "Execute A20 and mappings together.",
+      "proof_required": "3.2.2 and 4.1.2 mappings updated and 3.3.3 verified unchanged."
+    },
+    {
+      "issue": "GEN.A20 stale after A20 narrowing.",
+      "severity": "high_if_exposed",
+      "next_action": "Move current behavior to GEN.A95 and block or rewrite GEN.A20.",
+      "proof_required": "Generator-readiness report proves no stale exposure."
+    },
+    {
+      "issue": "A94 lacks generator unless separately implemented.",
+      "severity": "medium_high",
+      "next_action": "Mark A94 generator-blocked/not-yet-interactive.",
+      "proof_required": "No missing-generator student route."
+    },
+    {
+      "issue": "Target mappings are authored-source changes.",
+      "severity": "high",
+      "next_action": "Treat as authored-reference mutation, not projection refresh.",
+      "proof_required": "Exact before/after arrays and rollback recorded."
+    }
+  ]
+}

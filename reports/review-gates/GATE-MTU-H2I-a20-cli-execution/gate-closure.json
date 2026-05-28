@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-MTU-H2I-a20-cli-execution",
+  "sprint_id": "MTU-H2I",
+  "date": "2026-05-28",
+  "closed_on": "2026-05-28",
+  "status": "pass_with_conditions",
+  "status_detail": "authorize_later_bounded_execution_sprint",
+  "decision": "PASS WITH CONDITIONS for authorizing a later bounded execution sprint for A20/A94/A95, target mappings, generator route, and generated projection refresh after source mutations",
+  "closure_confirmed_by_human": true,
+  "reviewed_remote_commit": "1fb0b95fc6b031f37ff780fb3db063dd9deb7d25",
+  "remote_evidence_pushed_before_review": true,
+  "remote_publication_status_resolution": "reviewed packet was fetchable remotely; closure records reviewed commit hash",
+  "protected_reference_data_changed": false,
+  "human_interview": "reports/review-gates/GATE-MTU-H2I-a20-cli-execution/human-interview.md",
+  "review_packet": "reports/review-gates/GATE-MTU-H2I-a20-cli-execution/review-packet.md",
+  "execution_packet": "reports/mtu-hardening/solo-q1-q3-a20-cli-execution-packet.json",
+  "summary": "GATE-MTU-H2I accepted the execution packet as sufficient to authorize a later bounded execution sprint for A20 update, A94/A95 unit-adds, exact target-exercise mapping patches, generator route, and generated projection refresh after source mutations. The packet itself authorized no mutation or product use.",
+  "authorized_execution_lanes": [
+    {
+      "surface": "A20",
+      "action": "unit-update",
+      "condition": "run unit-update --dry-run first, retain A2.11, and narrow A20 to derived MO plus derived MK"
+    },
+    {
+      "surface": "A94",
+      "action": "unit-add",
+      "condition": "price-taker MO = marktprijs P plus derived MK route, no A12 prerequisite, unit-add dry-run limitation visible"
+    },
+    {
+      "surface": "A95",
+      "action": "unit-add",
+      "condition": "given MK-function route distinct from A91 given constant/value MK"
+    },
+    {
+      "surface": "target-exercise mappings",
+      "action": "authored-reference update",
+      "condition": "3.2.2 replaces A20 with A94; 3.3.3 remains unchanged; 4.1.2 replaces A20 with A91; no record_status, source_ref, placeholder, paragraph metadata, or promotion fields change"
+    },
+    {
+      "surface": "GEN.A20/GEN.A95",
+      "action": "generator route",
+      "condition": "move current GEN.A20 behavior to GEN.A95; block or rewrite GEN.A20 for narrowed A20; keep A94 generator-blocked unless implemented"
+    },
+    {
+      "surface": "generated projections",
+      "action": "refresh after source mutations",
+      "condition": "owned-content graph, RAG chunks, procedure/PV reports, and generator readiness refresh only after authorized source changes"
+    }
+  ],
+  "conditions": [
+    "record_reviewed_remote_commit_hash",
+    "final_clean_worktree_or_explained_status_preflight",
+    "fresh_id_absence_check_for_a94_a95",
+    "fresh_presence_check_for_a20_a91_a12_a13_a02",
+    "fresh_confirmation_gen_a20_present_before_generator_route",
+    "print_each_extracted_unit_spec_before_cli_execution",
+    "run_a20_unit_update_dry_run_and_prove_a2_11_remains",
+    "print_exact_target_exercise_before_after_arrays_before_authored_mapping_updates",
+    "print_exact_generator_patch_or_diff_before_generator_mutation",
+    "prove_no_record_status_source_ref_placeholder_paragraph_metadata_or_promotion_field_changes",
+    "refresh_generator_readiness_and_prove_no_stale_or_missing_interactive_exposure",
+    "refresh_generated_projections_only_after_authorized_source_mutations",
+    "run_full_validation_stack_and_git_diff_check",
+    "no_product_or_lesson_output_authority"
+  ],
+  "authority_boundary": {
+    "protected_reference_mutation_authorized_by_this_packet": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized_by_this_packet": false,
+    "unit_minting_authorized_by_this_packet": false,
+    "unit_update_execution_authorized_by_this_packet": false,
+    "unit_split_execution_authorized": false,
+    "unit_deprecation_authorized": false,
+    "target_exercise_mutation_authorized_by_this_packet": false,
+    "generator_change_authorized_by_this_packet": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "target_exercise_promotion_authorized": false,
+    "cp6_closure_authorized": false,
+    "year1_closure_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "student_product_use_authorized": false
+  },
+  "quality_log": [
+    {
+      "issue": "Remote publication status string is stale or ambiguous.",
+      "severity": "low-medium",
+      "resolution": "Closure records reviewed remote commit/hash 1fb0b95fc6b031f37ff780fb3db063dd9deb7d25."
+    },
+    {
+      "issue": "A20 narrowing can stale mappings if partial.",
+      "severity": "high",
+      "resolution": "Authorized execution sprint must execute A20 and mapping changes together or block them together."
+    },
+    {
+      "issue": "GEN.A20 stale after A20 narrowing.",
+      "severity": "high_if_exposed",
+      "resolution": "Execution sprint must move current behavior to GEN.A95 and block or rewrite GEN.A20, with generator-readiness proof."
+    },
+    {
+      "issue": "A94 lacks generator unless separately implemented.",
+      "severity": "medium-high",
+      "resolution": "Execution sprint must mark A94 generator-blocked/not-yet-interactive or implement GEN.A94."
+    },
+    {
+      "issue": "Target mappings are authored-source changes.",
+      "severity": "high",
+      "resolution": "Execution sprint must treat mapping updates as authored-reference mutations with exact before/after arrays and rollback."
+    }
+  ],
+  "authorized_next": {
+    "sprint_id": "MTU-H2J",
+    "name": "A20/A94/A95 Bounded CLI Execution",
+    "authority": "execute the reviewed A20 unit-update, A94/A95 unit-adds, target-exercise mapping patches, generator route, and generated projection refresh after final preflight and validation",
+    "execution_authorized": true
+  }
+}

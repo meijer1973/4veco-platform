@@ -466,8 +466,8 @@ if (humanInterviewJson || gateClosureJson) {
 const firstRowMatch = roadmap.match(/\| Sprint \| Name \| Completed \| Current State \|\s*\n\|[-|]+\|\s*\n(\|[^\n]+\|)/);
 if (!firstRowMatch) fail('could not find first Sprint Ledger row in roadmap');
 const firstRow = firstRowMatch[1];
-if (!/\| (GATE-MTU-H2I|MTU-H2I|GATE-MTU-H2H|MTU-H2H|GATE-MTU-H2G|MTU-H2G|MTU-H2F|GATE-MTU-H2E|MTU-H2E|GATE-MTU-H2D|MTU-H2D|MTU-H2C|GATE-MTU-H2B|MTU-H2B) \|/.test(firstRow)) {
-  fail('first Sprint Ledger row must be GATE-MTU-H2I/MTU-H2I/GATE-MTU-H2H/MTU-H2H/GATE-MTU-H2G/MTU-H2G/MTU-H2F/GATE-MTU-H2E/MTU-H2E/GATE-MTU-H2D/MTU-H2D/MTU-H2C after gate closure, GATE-MTU-H2B while review is active, or MTU-H2B while packet preparation is active');
+if (!/\| (MTU-H3|MTU-H2J|GATE-MTU-H2I|MTU-H2I|GATE-MTU-H2H|MTU-H2H|GATE-MTU-H2G|MTU-H2G|MTU-H2F|GATE-MTU-H2E|MTU-H2E|GATE-MTU-H2D|MTU-H2D|MTU-H2C|GATE-MTU-H2B|MTU-H2B) \|/.test(firstRow)) {
+  fail('first Sprint Ledger row must be MTU-H3/MTU-H2J/GATE-MTU-H2I/MTU-H2I/GATE-MTU-H2H/MTU-H2H/GATE-MTU-H2G/MTU-H2G/MTU-H2F/GATE-MTU-H2E/MTU-H2E/GATE-MTU-H2D/MTU-H2D/MTU-H2C after gate closure, GATE-MTU-H2B while review is active, or MTU-H2B while packet preparation is active');
 }
 if (!firstRow.includes('ACTIVE OPERATIONAL NEXT ACTION')) {
   fail('first Sprint Ledger row must state ACTIVE OPERATIONAL NEXT ACTION');

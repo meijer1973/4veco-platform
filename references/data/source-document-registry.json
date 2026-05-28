@@ -2,7 +2,7 @@
   "schema_version": 1,
   "registry_id": "source-document-registry",
   "generated_by": "build-scripts/references/build-source-document-registry.js",
-  "generated_on": "2026-05-28T13:07:02.949Z",
+  "generated_on": "2026-05-28T13:46:50.813Z",
   "storage_decision": {
     "registry_location": "references/data/source-document-registry.json",
     "machine_registry_created": false,
@@ -16,15 +16,15 @@
     "references/SOURCE_OF_TRUTH.md"
   ],
   "summary": {
-    "record_count": 326,
-    "source_manifest_file_count": 331,
+    "record_count": 327,
+    "source_manifest_file_count": 332,
     "by_authority_level": {
       "external_primary": 30,
       "machine_registry": 5,
       "owned_curriculum_design": 5,
       "authored_judgement": 9,
       "generated_report": 2,
-      "governance_data": 241,
+      "governance_data": 242,
       "quality_protocol": 5,
       "planning": 1,
       "machine_contract": 28
@@ -41,7 +41,7 @@
       "inventory": 34,
       "exercise_metadata_overlay": 6,
       "exercise_overlay_readme": 1,
-      "sprint_metadata": 198,
+      "sprint_metadata": 199,
       "machine_projection": 3,
       "owned_source_readme": 1,
       "qc_prompt": 5,
@@ -57,7 +57,7 @@
       "archived": 1,
       "generated_diagnostic": 2,
       "mirrored": 25,
-      "governance_data": 239,
+      "governance_data": 240,
       "planning": 1,
       "schema_contract": 28
     },
@@ -65,7 +65,7 @@
       "public_citation_allowed_with_source_name": 30,
       "internal_only": 19,
       "internal_diagnostic_only": 2,
-      "not_public_citation_source": 275
+      "not_public_citation_source": 276
     },
     "evidence_anchor_coverage": {
       "required_document_ids": [
@@ -5237,6 +5237,44 @@
       "refresh_policy": "sprint_lifecycle",
       "source_hash": "2cb829e8fe1a74373e6e017b470d4a6c6f235442fc4d0b293882cdcce0925c68",
       "size_bytes": 3719,
+      "primary_evidence": false,
+      "curriculum_authority": false,
+      "allowed_downstream_uses": [
+        "internal_reference_context",
+        "rag_retrieval_with_authority_label"
+      ],
+      "blocked_downstream_uses": [
+        "student_diagnostics",
+        "adaptive_routing",
+        "student_facing_ai",
+        "automatic_lesson_sequencing",
+        "automatic_mastery_decisions",
+        "summative_assessment_decisions",
+        "external_authority",
+        "override_machine_registry"
+      ],
+      "evidence_anchor_ids": [],
+      "notes": [
+        "Governance data is canonical only for its declared governance artifact."
+      ]
+    },
+    {
+      "document_id": "path-references-data-sprints-mtu-h2j-plan",
+      "path": "references/data/sprints/MTU-H2J.plan.json",
+      "title": "MTU H2J.Plan",
+      "source_type": "sprint_metadata",
+      "authority_level": "governance_data",
+      "source_version": "sha256:a878db22662382feef94b05adc24042afb09e0376e4a84b77b4e70d6cbde820b",
+      "status": "governance_data",
+      "owner": "references_team",
+      "citation_policy": "cite_as_governance_record_only",
+      "public_citation_policy": "not_public_citation_source",
+      "layer": "governance_data",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "refresh_policy": "sprint_lifecycle",
+      "source_hash": "a878db22662382feef94b05adc24042afb09e0376e4a84b77b4e70d6cbde820b",
+      "size_bytes": 2801,
       "primary_evidence": false,
       "curriculum_authority": false,
       "allowed_downstream_uses": [
@@ -10772,7 +10810,7 @@
       "title": "Reference Team Roadmap",
       "source_type": "roadmap",
       "authority_level": "planning",
-      "source_version": "sha256:35e430c63ada78529522d9328c610e6c711981099d5f30f82094af41272ebcbd",
+      "source_version": "sha256:ff38f43397503ab64cd7629ee54f99725c07f8e3e1e7954d2a506955b0c77163",
       "status": "planning",
       "owner": "references_team",
       "citation_policy": "citation_requires_review",
@@ -10781,8 +10819,8 @@
       "generated_status": "manual_source",
       "edit_policy": "human_reviewed_edit",
       "refresh_policy": "roadmap_update",
-      "source_hash": "35e430c63ada78529522d9328c610e6c711981099d5f30f82094af41272ebcbd",
-      "size_bytes": 241177,
+      "source_hash": "ff38f43397503ab64cd7629ee54f99725c07f8e3e1e7954d2a506955b0c77163",
+      "size_bytes": 242007,
       "primary_evidence": false,
       "curriculum_authority": false,
       "allowed_downstream_uses": [

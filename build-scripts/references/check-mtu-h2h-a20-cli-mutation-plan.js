@@ -134,10 +134,19 @@ const unitMap = new Map(units.map((unit) => [unit.id, unit]));
 for (const id of packet.baseline.live_units_must_exist) {
   if (!unitMap.has(id)) fail(`live unit ${id} must exist`);
 }
-for (const id of packet.baseline.proposed_new_ids_must_be_absent) {
-  if (unitMap.has(id)) fail(`${id} must be absent before H2H execution`);
+const postH2J = unitMap.has('A94') || unitMap.has('A95') || generators.includes('GEN.A95');
+if (!postH2J) {
+  for (const id of packet.baseline.proposed_new_ids_must_be_absent) {
+    if (unitMap.has(id)) fail(`${id} must be absent before H2H execution`);
+  }
+  if (!generators.includes('GEN.A20')) fail('generators.js must contain current GEN.A20');
+} else {
+  for (const id of ['A94', 'A95']) {
+    if (!unitMap.has(id)) fail(`${id} must exist after MTU-H2J execution`);
+  }
+  if (generators.includes('GEN.A20 = function ()')) fail('GEN.A20 implementation must be blocked after MTU-H2J execution');
+  if (!generators.includes('GEN.A95 = function ()')) fail('GEN.A95 must exist after MTU-H2J execution');
 }
-if (!generators.includes('GEN.A20')) fail('generators.js must contain current GEN.A20');
 if (!generators.includes('MO = ') || !generators.includes('MK = ')) {
   fail('generators.js must include MO/MK evidence for current GEN.A20 classification');
 }
@@ -172,7 +181,7 @@ sameArray(a95.reviewed_spec.needs, ['A02'], 'A95 needs');
 sameArray(a95.reviewed_spec.exam_codes, ['A2.10', 'A2.12'], 'A95 exam_codes');
 if (!a95.generator_status.includes('GEN_A20')) fail('A95 generator status must mention current GEN_A20 behavior');
 
-const knownIds = new Set(units.map((unit) => unit.id));
+const knownIds = new Set(units.map((unit) => unit.id).filter((id) => !['A94', 'A95'].includes(id)));
 for (const [id, spec] of [
   ['A94', a94.reviewed_spec],
   ['A95', a95.reviewed_spec],
@@ -182,7 +191,7 @@ for (const [id, spec] of [
   knownIds.add(id);
 }
 
-const simulated = units.map((unit) => ({ ...unit }));
+const simulated = units.filter((unit) => !['A94', 'A95'].includes(unit.id)).map((unit) => ({ ...unit }));
 Object.assign(simulated.find((unit) => unit.id === 'A20'), a20.reviewed_spec);
 simulated.push(a94.reviewed_spec, a95.reviewed_spec);
 const catalogErrors = validate(simulated, {
@@ -196,17 +205,37 @@ const exercises = targetData.exercises || targetData;
 const t322 = targetById(exercises, '3.2.2');
 const t333 = targetById(exercises, '3.3.3');
 const t412 = targetById(exercises, '4.1.2');
-sameArray(t322.required_skills, mappingPlan(packet, '3.2.2').required_skills_before, '3.2.2 required_skills before');
-sameArray(t322.prior_knowledge_assumed, mappingPlan(packet, '3.2.2').prior_knowledge_assumed_before, '3.2.2 prior before');
-sameArray(t322.new_skills_introduced, mappingPlan(packet, '3.2.2').new_skills_introduced_before, '3.2.2 new before');
+sameArray(
+  t322.required_skills,
+  postH2J ? mappingPlan(packet, '3.2.2').required_skills_after : mappingPlan(packet, '3.2.2').required_skills_before,
+  postH2J ? '3.2.2 required_skills after' : '3.2.2 required_skills before'
+);
+sameArray(
+  t322.prior_knowledge_assumed,
+  postH2J ? mappingPlan(packet, '3.2.2').prior_knowledge_assumed_after : mappingPlan(packet, '3.2.2').prior_knowledge_assumed_before,
+  postH2J ? '3.2.2 prior after' : '3.2.2 prior before'
+);
+sameArray(
+  t322.new_skills_introduced,
+  postH2J ? mappingPlan(packet, '3.2.2').new_skills_introduced_after : mappingPlan(packet, '3.2.2').new_skills_introduced_before,
+  postH2J ? '3.2.2 new after' : '3.2.2 new before'
+);
 sameArray(mappingPlan(packet, '3.2.2').required_skills_after, ['A11', 'A13', 'A94', 'A21', 'A33', 'D30'], '3.2.2 required after');
 sameArray(mappingPlan(packet, '3.2.2').prior_knowledge_assumed_after, ['A21', 'D30'], '3.2.2 prior after');
 sameArray(mappingPlan(packet, '3.2.2').new_skills_introduced_after, ['A11', 'A13', 'A94', 'A33'], '3.2.2 new after');
 
 sameArray(t333.required_skills, mappingPlan(packet, '3.3.3').required_skills_before, '3.3.3 required before');
 sameArray(mappingPlan(packet, '3.3.3').required_skills_after, mappingPlan(packet, '3.3.3').required_skills_before, '3.3.3 required after');
-sameArray(t412.required_skills, mappingPlan(packet, '4.1.2').required_skills_before, '4.1.2 required before');
-sameArray(t412.prior_knowledge_assumed, mappingPlan(packet, '4.1.2').prior_knowledge_assumed_before, '4.1.2 prior before');
+sameArray(
+  t412.required_skills,
+  postH2J ? mappingPlan(packet, '4.1.2').required_skills_after : mappingPlan(packet, '4.1.2').required_skills_before,
+  postH2J ? '4.1.2 required after' : '4.1.2 required before'
+);
+sameArray(
+  t412.prior_knowledge_assumed,
+  postH2J ? mappingPlan(packet, '4.1.2').prior_knowledge_assumed_after : mappingPlan(packet, '4.1.2').prior_knowledge_assumed_before,
+  postH2J ? '4.1.2 prior after' : '4.1.2 prior before'
+);
 sameArray(mappingPlan(packet, '4.1.2').required_skills_after, ['A11', 'A91', 'A35', 'A36', 'D18', 'D21', 'D22', 'D24'], '4.1.2 required after');
 sameArray(mappingPlan(packet, '4.1.2').prior_knowledge_assumed_after, ['A11', 'A91', 'A35'], '4.1.2 prior after');
 for (const id of ['3.2.2', '3.3.3', '4.1.2']) {
@@ -281,8 +310,8 @@ for (const required of [
 const firstRowMatch = roadmap.match(/\| Sprint \| Name \| Completed \| Current State \|\s*\n\|[-|]+\|\s*\n(\|[^\n]+\|)/);
 if (!firstRowMatch) fail('could not find first Sprint Ledger row in roadmap');
 const firstRow = firstRowMatch[1];
-if (!/\| (GATE-MTU-H2I|MTU-H2I|MTU-H2H|GATE-MTU-H2H) \|/.test(firstRow)) {
-  fail('first Sprint Ledger row must be GATE-MTU-H2I, MTU-H2I, MTU-H2H, or GATE-MTU-H2H');
+if (!/\| (MTU-H3|MTU-H2J|GATE-MTU-H2I|MTU-H2I|MTU-H2H|GATE-MTU-H2H) \|/.test(firstRow)) {
+  fail('first Sprint Ledger row must be MTU-H3, MTU-H2J, GATE-MTU-H2I, MTU-H2I, MTU-H2H, or GATE-MTU-H2H');
 }
 if (!firstRow.includes('ACTIVE OPERATIONAL NEXT ACTION')) fail('first row must state ACTIVE OPERATIONAL NEXT ACTION');
 
