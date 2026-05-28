@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-MTU-H2D",
+  "sprint_id": "MTU-H2D",
+  "gate_directory": "reports/review-gates/GATE-MTU-H2D-held-conditional-lanes",
+  "date": "2026-05-28",
+  "closed_on": "2026-05-28",
+  "status": "pass_with_conditions",
+  "status_detail": "held_conditional_lane_routing_only",
+  "decision": "PASS WITH CONDITIONS for held/conditional lane routing only; no CLI mutation yet",
+  "closure_confirmed_by_human": true,
+  "remote_evidence_commit": "63c2e53731af3941d49183628f4ba5927f8ac551",
+  "remote_evidence_pushed_before_closure": true,
+  "protected_reference_data_changed": false,
+  "human_interview": "reports/review-gates/GATE-MTU-H2D-held-conditional-lanes/human-interview.md",
+  "review_packet": "reports/review-gates/GATE-MTU-H2D-held-conditional-lanes/review-packet.md",
+  "summary": "GATE-MTU-H2D accepted the held/conditional lane dispositions for routing only. It corrected the generator inventory, kept A20 held, accepted revised A12/A88/A89/A90/A92/A93 routes for later execution-packet preparation, and authorized no mutation.",
+  "accepted_dispositions": [
+    {
+      "unit_id": "A12",
+      "disposition": "may proceed to later execution packet only if A2.11 is retained; A2.10/A2.12 may be added if justified"
+    },
+    {
+      "unit_id": "A20",
+      "disposition": "held for separate split/deprecate/replacement and affected-mapping packet"
+    },
+    {
+      "unit_id": "A88",
+      "disposition": "revise to zero-needs scale-factor reliability unit, not A61-dependent"
+    },
+    {
+      "unit_id": "A89",
+      "disposition": "revise to zero-needs GO-as-price recognition unit; A92 carries substitution"
+    },
+    {
+      "unit_id": "A90",
+      "disposition": "narrow to linear GO-rule route; defer table/graph non-calculus MO variants"
+    },
+    {
+      "unit_id": "A92",
+      "disposition": "remain dependent on accepted/executed A89"
+    },
+    {
+      "unit_id": "A93",
+      "disposition": "drop A66, depend on A38 and A92, and route broader incidence/pass-through to MTU-H3"
+    }
+  ],
+  "conditions": [
+    "remote_evidence_pushed_before_closure",
+    "correct_generator_inventory_statement",
+    "a12_retain_a2_11",
+    "a20_held_for_separate_packet",
+    "a88_a89_zero_needs_review_rationale_required",
+    "a88_a89_a90_a92_a93_generator_implementation_or_blocked_status_required",
+    "no_mutation_from_gate"
+  ],
+  "corrected_generator_inventory": {
+    "implemented": [
+      {
+        "registry_generator": "GEN_A12",
+        "skilltree_key": "GEN.A12"
+      },
+      {
+        "registry_generator": "GEN_A20",
+        "skilltree_key": "GEN.A20"
+      }
+    ],
+    "not_implemented_current_baseline": [
+      "GEN_A88",
+      "GEN_A89",
+      "GEN_A90",
+      "GEN_A92",
+      "GEN_A93"
+    ]
+  },
+  "authority_boundary": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "unit_update_execution_authorized": false,
+    "unit_split_execution_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "target_exercise_promotion_authorized": false,
+    "cp6_closure_authorized": false,
+    "year1_closure_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "student_product_use_authorized": false
+  },
+  "authorized_next": {
+    "sprint_id": "MTU-H2E",
+    "name": "Solo q1-q3 Conditional Lane Execution Packet",
+    "authority": "prepare a later non-mutating execution packet for revised A12/A88/A89/A90/A92/A93 only; keep A20 separate"
+  }
+}

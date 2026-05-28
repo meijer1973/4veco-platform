@@ -9,6 +9,10 @@ const RESOLUTION_JSON_PATH = path.join(ROOT, 'reports', 'mtu-hardening', 'solo-q
 const RESOLUTION_MD_PATH = path.join(ROOT, 'reports', 'mtu-hardening', 'solo-q1-q3-held-conditional-resolution.md');
 const REVIEW_PACKET_JSON_PATH = path.join(ROOT, 'reports', 'review-gates', 'GATE-MTU-H2D-held-conditional-lanes', 'review-packet.json');
 const REVIEW_PACKET_MD_PATH = path.join(ROOT, 'reports', 'review-gates', 'GATE-MTU-H2D-held-conditional-lanes', 'review-packet.md');
+const HUMAN_INTERVIEW_JSON_PATH = path.join(ROOT, 'reports', 'review-gates', 'GATE-MTU-H2D-held-conditional-lanes', 'human-interview.json');
+const HUMAN_INTERVIEW_MD_PATH = path.join(ROOT, 'reports', 'review-gates', 'GATE-MTU-H2D-held-conditional-lanes', 'human-interview.md');
+const GATE_CLOSURE_JSON_PATH = path.join(ROOT, 'reports', 'review-gates', 'GATE-MTU-H2D-held-conditional-lanes', 'gate-closure.json');
+const GATE_CLOSURE_MD_PATH = path.join(ROOT, 'reports', 'review-gates', 'GATE-MTU-H2D-held-conditional-lanes', 'gate-closure.md');
 const H2C_RESULT_PATH = path.join(ROOT, 'reports', 'sprints', 'MTU-H2C-result.md');
 const UNITS_JSON_PATH = path.join(ROOT, 'references', 'machine', 'micro-teaching-units.json');
 const TARGET_EXERCISES_PATH = path.join(ROOT, 'references', 'authored', 'course-target-exercises.json');
@@ -73,6 +77,10 @@ const resolution = readJson(RESOLUTION_JSON_PATH);
 const resolutionMd = readText(RESOLUTION_MD_PATH);
 const reviewPacket = readJson(REVIEW_PACKET_JSON_PATH);
 const reviewPacketMd = readText(REVIEW_PACKET_MD_PATH);
+const humanInterview = fs.existsSync(HUMAN_INTERVIEW_MD_PATH) ? readText(HUMAN_INTERVIEW_MD_PATH) : null;
+const humanInterviewJson = fs.existsSync(HUMAN_INTERVIEW_JSON_PATH) ? readJson(HUMAN_INTERVIEW_JSON_PATH) : null;
+const gateClosure = fs.existsSync(GATE_CLOSURE_MD_PATH) ? readText(GATE_CLOSURE_MD_PATH) : null;
+const gateClosureJson = fs.existsSync(GATE_CLOSURE_JSON_PATH) ? readJson(GATE_CLOSURE_JSON_PATH) : null;
 const h2cResult = readText(H2C_RESULT_PATH);
 const units = readJson(UNITS_JSON_PATH);
 const targetExercises = readJson(TARGET_EXERCISES_PATH);
@@ -309,6 +317,143 @@ for (const requiredText of [
   if (!reviewPacketMd.includes(requiredText)) fail(`review packet Markdown must include "${requiredText}"`);
 }
 
+if (humanInterviewJson || gateClosureJson) {
+  if (!humanInterviewJson || !humanInterview) {
+    fail('human interview Markdown/JSON must both exist once GATE-MTU-H2D closure starts');
+  }
+  if (!gateClosureJson || !gateClosure) {
+    fail('gate closure Markdown/JSON must both exist once GATE-MTU-H2D closure starts');
+  }
+  if (humanInterviewJson.gate_id !== 'GATE-MTU-H2D') fail('human interview JSON gate_id must be GATE-MTU-H2D');
+  if (humanInterviewJson.decision !== 'pass_with_conditions') {
+    fail('human interview JSON decision must be pass_with_conditions');
+  }
+  if (humanInterviewJson.decision_detail !== 'held_conditional_lane_routing_only') {
+    fail('human interview JSON decision_detail must be held_conditional_lane_routing_only');
+  }
+  if (humanInterviewJson.remote_evidence_commit !== '63c2e53731af3941d49183628f4ba5927f8ac551') {
+    fail('human interview JSON must record the remote evidence commit pushed before review');
+  }
+  if (humanInterviewJson.remote_evidence_pushed !== true) {
+    fail('human interview JSON must record remote_evidence_pushed true');
+  }
+  requireArray(humanInterviewJson, 'calibration_answers', 'human interview JSON', 2);
+  requireArray(humanInterviewJson, 'binding_answers', 'human interview JSON', 9);
+  requireIncludes(humanInterviewJson.binding_answers.map((answer) => answer.id), [
+    'MTUH2D-Q1',
+    'MTUH2D-Q2',
+    'MTUH2D-Q3',
+    'MTUH2D-Q4',
+    'MTUH2D-Q5',
+    'MTUH2D-Q6',
+    'MTUH2D-Q7',
+    'MTUH2D-Q8',
+    'MTUH2D-Q9',
+  ], 'human_interview.binding_answers');
+  requireIncludes(humanInterviewJson.conditions || [], [
+    'remote_evidence_pushed_before_closure',
+    'generator_inventory_corrected',
+    'a12_retain_a2_11',
+    'a20_held_for_separate_split_replacement_packet',
+    'a88_a89_zero_needs_review_rationale_required',
+    'new_conditional_generators_must_be_implemented_or_blocked',
+    'no_mutation_from_this_gate',
+  ], 'human_interview.conditions');
+  if (!humanInterviewJson.authorized_next || humanInterviewJson.authorized_next.sprint_id !== 'MTU-H2E') {
+    fail('human interview JSON must authorize MTU-H2E as the next planning sprint');
+  }
+  for (const requiredText of [
+    'PASS WITH CONDITIONS',
+    'Remote Evidence',
+    'MTUH2D-Q1',
+    'MTUH2D-Q9',
+    'MTU-H2E',
+    'No mutation',
+  ]) {
+    if (!humanInterview.includes(requiredText)) fail(`human interview Markdown must include "${requiredText}"`);
+  }
+
+  if (gateClosureJson.gate_id !== 'GATE-MTU-H2D') fail('gate closure JSON gate_id must be GATE-MTU-H2D');
+  if (gateClosureJson.status !== 'pass_with_conditions') fail('gate closure status must be pass_with_conditions');
+  if (gateClosureJson.status_detail !== 'held_conditional_lane_routing_only') {
+    fail('gate closure status_detail must be held_conditional_lane_routing_only');
+  }
+  if (gateClosureJson.remote_evidence_commit !== '63c2e53731af3941d49183628f4ba5927f8ac551') {
+    fail('gate closure JSON must record the remote evidence commit pushed before review');
+  }
+  if (gateClosureJson.remote_evidence_pushed_before_closure !== true) {
+    fail('gate closure JSON must record remote_evidence_pushed_before_closure true');
+  }
+  if (gateClosureJson.closure_confirmed_by_human !== true) {
+    fail('gate closure JSON must record closure_confirmed_by_human true');
+  }
+  requireIncludes(gateClosureJson.conditions || [], [
+    'remote_evidence_pushed_before_closure',
+    'correct_generator_inventory_statement',
+    'a12_retain_a2_11',
+    'a20_held_for_separate_packet',
+    'a88_a89_zero_needs_review_rationale_required',
+    'a88_a89_a90_a92_a93_generator_implementation_or_blocked_status_required',
+    'no_mutation_from_gate',
+  ], 'gate_closure.conditions');
+  for (const expected of [
+    { registry_generator: 'GEN_A12', skilltree_key: 'GEN.A12' },
+    { registry_generator: 'GEN_A20', skilltree_key: 'GEN.A20' },
+  ]) {
+    if (!(gateClosureJson.corrected_generator_inventory.implemented || []).some((item) =>
+      item.registry_generator === expected.registry_generator &&
+      item.skilltree_key === expected.skilltree_key
+    )) {
+      fail(`gate closure corrected_generator_inventory must include ${expected.registry_generator}`);
+    }
+  }
+  requireIncludes(gateClosureJson.corrected_generator_inventory.not_implemented_current_baseline || [], [
+    'GEN_A88',
+    'GEN_A89',
+    'GEN_A90',
+    'GEN_A92',
+    'GEN_A93',
+  ], 'gate_closure.corrected_generator_inventory.not_implemented_current_baseline');
+  if (!gateClosureJson.authorized_next || gateClosureJson.authorized_next.sprint_id !== 'MTU-H2E') {
+    fail('gate closure must authorize MTU-H2E as next sprint');
+  }
+  for (const key of [
+    'protected_reference_mutation_authorized',
+    'external_source_mutation_authorized',
+    'machine_reference_mutation_authorized',
+    'unit_minting_authorized',
+    'unit_update_execution_authorized',
+    'unit_split_execution_authorized',
+    'candidate_storage_creation_authorized',
+    'candidate_writes_authorized',
+    'lesson_output_mutation_authorized',
+    'target_exercise_promotion_authorized',
+    'cp6_closure_authorized',
+    'year1_closure_authorized',
+    'diagnostics_authorized',
+    'adaptive_routing_authorized',
+    'mastery_authorized',
+    'sequencing_authorized',
+    'student_facing_ai_authorized',
+    'summative_use_authorized',
+    'pv_projection_authorized',
+    'pv_machine_promotion_authorized',
+    'student_product_use_authorized',
+  ]) {
+    requireFalse(gateClosureJson.authority_boundary, key, 'gate_closure.authority_boundary');
+  }
+  for (const requiredText of [
+    'PASS WITH CONDITIONS',
+    'Remote Evidence',
+    'Accepted Dispositions',
+    'Required Conditions',
+    'MTU-H2E',
+    'Not Authorized',
+  ]) {
+    if (!gateClosure.includes(requiredText)) fail(`gate closure Markdown must include "${requiredText}"`);
+  }
+}
+
 for (const requiredText of ['A12', 'A20', 'A88', 'A89', 'A90', 'A92', 'A93']) {
   if (!h2cResult.includes(requiredText)) fail(`MTU-H2C result must reference held/conditional lane ${requiredText}`);
 }
@@ -316,11 +461,14 @@ for (const requiredText of ['A12', 'A20', 'A88', 'A89', 'A90', 'A92', 'A93']) {
 const firstRowMatch = roadmap.match(/\| Sprint \| Name \| Completed \| Current State \|\s*\n\|[-|]+\|\s*\n(\|[^\n]+\|)/);
 if (!firstRowMatch) fail('could not find first Sprint Ledger row in roadmap');
 const firstRow = firstRowMatch[1];
-if (!/\| (MTU-H2D|GATE-MTU-H2D) \|/.test(firstRow)) {
-  fail('first Sprint Ledger row must be MTU-H2D or GATE-MTU-H2D for H2D lifecycle');
+if (!/\| (MTU-H2E|GATE-MTU-H2D|MTU-H2D) \|/.test(firstRow)) {
+  fail('first Sprint Ledger row must be MTU-H2E, GATE-MTU-H2D, or MTU-H2D for H2D lifecycle');
 }
 if (!firstRow.includes('ACTIVE OPERATIONAL NEXT ACTION')) {
   fail('first Sprint Ledger row must state ACTIVE OPERATIONAL NEXT ACTION');
+}
+if (gateClosureJson && !roadmap.includes('| GATE-MTU-H2D | Solo q1-q3 Held/Conditional Lane Human Review | yes |')) {
+  fail('roadmap Closed Sprints must include GATE-MTU-H2D closure row after gate closure');
 }
 
 console.log('OK MTU-H2D held/conditional resolution: reports/mtu-hardening/solo-q1-q3-held-conditional-resolution.json');

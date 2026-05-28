@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "sprint_id": "MTU-H2E",
+  "plan": "reports/sprints/MTU-H2E-plan.md",
+  "baseline": "reports/sprints/MTU-H2E-baseline.md",
+  "status": "planned",
+  "created": "2026-05-28",
+  "source_gate": "reports/review-gates/GATE-MTU-H2D-held-conditional-lanes/gate-closure.json",
+  "human_review_required": true,
+  "gate_id": "GATE-MTU-H2E-conditional-lane-execution",
+  "review_packet": "reports/review-gates/GATE-MTU-H2E-conditional-lane-execution/review-packet.md",
+  "valid_gate_statuses": [
+    "pass_with_conditions",
+    "partial_pass_with_conditions",
+    "hold"
+  ],
+  "remote_publication_required_before_review": true,
+  "protected_reference_data_changes_allowed": false,
+  "candidate_lanes": [
+    "A12",
+    "A88",
+    "A89",
+    "A90",
+    "A92",
+    "A93"
+  ],
+  "held_out_of_scope": [
+    "A20"
+  ],
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js reports/sprints/MTU-H2E-plan.md",
+    "node build-scripts/sprints/check-sprint-bundle.js MTU-H2E",
+    "node build-scripts/references/check-mtu-h2d-held-conditional-resolution.js",
+    "git diff --check"
+  ],
+  "product_boundaries": {
+    "diagnostics": false,
+    "adaptive_routing": false,
+    "mastery": false,
+    "sequencing": false,
+    "student_facing_ai": false,
+    "summative_use": false,
+    "pv_projection": false,
+    "pv_machine_promotion": false,
+    "student_product_use": false
+  }
+}

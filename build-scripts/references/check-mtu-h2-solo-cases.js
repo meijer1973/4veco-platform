@@ -272,8 +272,8 @@ requireArray(gateClosureJson, 'blocked_outcomes', 'gate closure JSON', 10);
 const sprintLedgerMatch = roadmap.match(/\| Sprint \| Name \| Completed \| Current State \|\s*\n\|[-|]+\|\s*\n(\|[^\n]+\|)/);
 if (!sprintLedgerMatch) fail('could not find first Sprint Ledger row in roadmap');
 const firstRow = sprintLedgerMatch[1];
-if (!/\| (GATE-MTU-H2D|MTU-H2D|MTU-H2C|GATE-MTU-H2B|MTU-H2B|MTU-H2A|GATE-MTU-H2A) \|/.test(firstRow)) {
-  fail('first Sprint Ledger row must be GATE-MTU-H2D/MTU-H2D/MTU-H2C/GATE-MTU-H2B/MTU-H2B after GATE-MTU-H2A closure, or MTU-H2A/GATE-MTU-H2A while active');
+if (!/\| (MTU-H2E|GATE-MTU-H2D|MTU-H2D|MTU-H2C|GATE-MTU-H2B|MTU-H2B|MTU-H2A|GATE-MTU-H2A) \|/.test(firstRow)) {
+  fail('first Sprint Ledger row must be MTU-H2E/GATE-MTU-H2D/MTU-H2D/MTU-H2C/GATE-MTU-H2B/MTU-H2B after GATE-MTU-H2A closure, or MTU-H2A/GATE-MTU-H2A while active');
 }
 if (!firstRow.includes('ACTIVE OPERATIONAL NEXT ACTION')) {
   fail('post-GATE-MTU-H2 first row must state ACTIVE OPERATIONAL NEXT ACTION');

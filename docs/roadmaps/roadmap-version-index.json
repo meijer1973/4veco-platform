@@ -15,13 +15,14 @@
   "roadmaps": [
     {
       "roadmap_id": "references-team-roadmap",
-      "version": "v2.93-mtu-h2d-held-conditional-resolution",
+      "version": "v2.94-gate-mtu-h2d-pass-with-conditions",
       "title": "References Team Roadmap",
       "status": "active",
       "path": "references/reference-team-roadmap.md",
       "owner": "references_team",
       "updated_on": "2026-05-28",
       "supersedes": [
+        "docs/roadmaps/outdated/reference-team-roadmap-v2.93-mtu-h2d-held-conditional-resolution.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.92-mtu-h2c-reduced-scope-cli-execution.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.91-gate-mtu-h2b-partial-pass.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.90-gate-mtu-h2b-cli-execution-review.md",
@@ -114,7 +115,18 @@
         "knowledge/Exercise schema and quality/reference-team-roadmap Live version 28 April.md",
         "knowledge/Exercise schema and quality/roadmap-updated-repository-checked.md"
       ],
-      "notes": "Current operating roadmap after MTU-H2D prepared the held/conditional Solo q1-q3 lane resolution packet. Top operational next action is GATE-MTU-H2D human review; no further Solo q1-q3 MTU execution is authorized until that gate closes."
+      "notes": "Current operating roadmap after GATE-MTU-H2D closed as pass_with_conditions for held/conditional lane routing only. Top operational next action is MTU-H2E; any H2E review packet and cited evidence must be pushed before human review."
+    },
+    {
+      "roadmap_id": "references-team-roadmap-v2.93",
+      "version": "v2.93-mtu-h2d-held-conditional-resolution",
+      "title": "References Team Roadmap before GATE-MTU-H2D closure",
+      "status": "outdated",
+      "path": "docs/roadmaps/outdated/reference-team-roadmap-v2.93-mtu-h2d-held-conditional-resolution.md",
+      "owner": "references_team",
+      "updated_on": "2026-05-28",
+      "superseded_by": "references/reference-team-roadmap.md",
+      "notes": "Snapshot archived before GATE-MTU-H2D closed as pass_with_conditions and moved the top operational next action to MTU-H2E."
     },
     {
       "roadmap_id": "references-team-roadmap-v2.92",

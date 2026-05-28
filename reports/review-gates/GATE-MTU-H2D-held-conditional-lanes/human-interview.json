@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-MTU-H2D",
+  "sprint_id": "MTU-H2D",
+  "date": "2026-05-28",
+  "remote_evidence_commit": "63c2e53731af3941d49183628f4ba5927f8ac551",
+  "remote_evidence_pushed": true,
+  "decision": "pass_with_conditions",
+  "decision_detail": "held_conditional_lane_routing_only",
+  "mutation_authorized_now": false,
+  "student_product_use_authorized_now": false,
+  "calibration_answers": [
+    {
+      "id": "CAL-1",
+      "answer": "yes",
+      "summary": "This gate reviews held/conditional lane resolution only and does not authorize mutation, unit minting, unit updates, lesson output, or product use."
+    },
+    {
+      "id": "CAL-2",
+      "answer": "yes",
+      "summary": "Later execution must be handled by a separate gate or execution packet with exact CLI commands, rollback, audit log, validation evidence, and no-unintended-diff proof."
+    }
+  ],
+  "binding_answers": [
+    {
+      "id": "MTUH2D-Q1",
+      "decision": "accept_revised_a12_with_a2_11_retained",
+      "summary": "A12 may proceed to later execution planning only if A2.11 is retained; A2.10/A2.12 may be added if justified by monopoly context."
+    },
+    {
+      "id": "MTUH2D-Q2",
+      "decision": "keep_a20_held_for_separate_split_replacement_packet",
+      "summary": "A20 remains held because target exercise 4.1.2 uses current A20 in a given-MK context; later work must include mapping and generator review."
+    },
+    {
+      "id": "MTUH2D-Q3",
+      "decision": "accept_a88_zero_needs",
+      "summary": "A88 should become a zero-needs scale-factor reliability unit with explicit zero-needs review rationale."
+    },
+    {
+      "id": "MTUH2D-Q4",
+      "decision": "accept_a89_zero_needs",
+      "summary": "A89 should become a zero-needs GO-as-price recognition unit; A92 carries substitution."
+    },
+    {
+      "id": "MTUH2D-Q5",
+      "decision": "accept_a90_linear_go_rule",
+      "summary": "A90 should be narrowed to the linear GO-rule route; table/graph non-calculus MO variants are deferred."
+    },
+    {
+      "id": "MTUH2D-Q6",
+      "decision": "keep_a92_after_a89",
+      "summary": "A92 remains dependent on accepted/executed A89."
+    },
+    {
+      "id": "MTUH2D-Q7",
+      "decision": "accept_a93_a38_a92_only",
+      "summary": "A93 should drop A66, depend on A38 and A92 only, and keep broader incidence/pass-through routed to MTU-H3."
+    },
+    {
+      "id": "MTUH2D-Q8",
+      "decision": "prepare_later_execution_packet_with_generator_requirements",
+      "summary": "Next sprint may prepare a later execution packet with generator requirements explicit, after correcting generator inventory."
+    },
+    {
+      "id": "MTUH2D-Q9",
+      "decision": "no_mutation_or_product_authority_now",
+      "summary": "GATE-MTU-H2D authorizes no protected mutation, unit minting, unit updates, unit splits, candidate writes, lesson output, diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student/product use."
+    }
+  ],
+  "conditions": [
+    "remote_evidence_pushed_before_closure",
+    "generator_inventory_corrected",
+    "a12_retain_a2_11",
+    "a20_held_for_separate_split_replacement_packet",
+    "a88_a89_zero_needs_review_rationale_required",
+    "new_conditional_generators_must_be_implemented_or_blocked",
+    "no_mutation_from_this_gate"
+  ],
+  "quality_log": [
+    {
+      "issue": "H2D evidence files were not fetchable from main during review.",
+      "severity": "medium",
+      "resolution": "Evidence was pushed before closure at commit 63c2e53731af3941d49183628f4ba5927f8ac551."
+    },
+    {
+      "issue": "Generator finding partly false for A12/A20.",
+      "severity": "medium-high",
+      "resolution": "Packet corrected: GEN_A12 and GEN_A20 are implemented as GEN.A12 and GEN.A20; absence applies to GEN_A88/GEN_A89/GEN_A90/GEN_A92/GEN_A93."
+    },
+    {
+      "issue": "A88/A89 zero-needs require explicit rationale.",
+      "severity": "medium",
+      "resolution": "H2D specs include zero_needs_status and zero_needs_review rationale; later execution packet must preserve them."
+    },
+    {
+      "issue": "A20 split/replacement unresolved.",
+      "severity": "high",
+      "resolution": "A20 is held for separate split/deprecate/replacement and affected-mapping packet."
+    }
+  ],
+  "authorized_next": {
+    "sprint_id": "MTU-H2E",
+    "name": "Solo q1-q3 Conditional Lane Execution Packet",
+    "authority": "prepare a non-mutating execution packet for accepted revised lanes A12/A88/A89/A90/A92/A93 only; keep A20 separate"
+  }
+}
